@@ -66,12 +66,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDeploymentVariableResponse res = new org.openapis.openapi.models.operations.CreateDeploymentVariableResponse() {{
+        org.openapis.openapi.models.operations.CreateDeploymentVariableResponse res = new org.openapis.openapi.models.operations.CreateDeploymentVariableResponse(contentType, httpRes.statusCode()) {{
             deploymentVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -274,7 +272,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreatePipelineForRepositoryResponse createPipelineForRepository(org.openapis.openapi.models.operations.CreatePipelineForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -291,12 +289,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePipelineForRepositoryResponse res = new org.openapis.openapi.models.operations.CreatePipelineForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.CreatePipelineForRepositoryResponse res = new org.openapis.openapi.models.operations.CreatePipelineForRepositoryResponse(contentType, httpRes.statusCode()) {{
             pipeline = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -326,10 +322,12 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreatePipelineVariableForTeamResponse createPipelineVariableForTeam(org.openapis.openapi.models.operations.CreatePipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -343,12 +341,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.CreatePipelineVariableForTeamResponse() {{
+        org.openapis.openapi.models.operations.CreatePipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.CreatePipelineVariableForTeamResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -378,10 +374,12 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreatePipelineVariableForUserResponse createPipelineVariableForUser(org.openapis.openapi.models.operations.CreatePipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -395,12 +393,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.CreatePipelineVariableForUserResponse() {{
+        org.openapis.openapi.models.operations.CreatePipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.CreatePipelineVariableForUserResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -446,12 +442,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -483,7 +477,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostResponse createRepositoryPipelineKnownHost(org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -500,12 +494,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostResponse() {{
+        org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostResponse(contentType, httpRes.statusCode()) {{
             pipelineKnownHost = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -537,7 +529,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleResponse createRepositoryPipelineSchedule(org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -554,12 +546,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleResponse() {{
+        org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleResponse(contentType, httpRes.statusCode()) {{
             pipelineSchedule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -589,7 +579,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableResponse createRepositoryPipelineVariable(org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -606,12 +596,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableResponse() {{
+        org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -655,11 +643,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDeploymentVariableResponse res = new org.openapis.openapi.models.operations.DeleteDeploymentVariableResponse() {{
+        org.openapis.openapi.models.operations.DeleteDeploymentVariableResponse res = new org.openapis.openapi.models.operations.DeleteDeploymentVariableResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -682,7 +668,9 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeletePipelineVariableForTeamResponse deletePipelineVariableForTeam(org.openapis.openapi.models.operations.DeletePipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, null);
@@ -697,11 +685,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.DeletePipelineVariableForTeamResponse() {{
+        org.openapis.openapi.models.operations.DeletePipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.DeletePipelineVariableForTeamResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -724,7 +710,9 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeletePipelineVariableForUserResponse deletePipelineVariableForUser(org.openapis.openapi.models.operations.DeletePipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, null);
@@ -739,11 +727,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.DeletePipelineVariableForUserResponse() {{
+        org.openapis.openapi.models.operations.DeletePipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.DeletePipelineVariableForUserResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -780,11 +766,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -821,11 +805,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryPipelineCacheResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineCacheResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryPipelineCacheResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineCacheResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -868,11 +850,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -909,11 +889,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -950,11 +928,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -991,11 +967,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineScheduleResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineScheduleResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1032,11 +1006,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariableResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariableResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1073,11 +1045,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeploymentVariablesResponse res = new org.openapis.openapi.models.operations.GetDeploymentVariablesResponse() {{
+        org.openapis.openapi.models.operations.GetDeploymentVariablesResponse res = new org.openapis.openapi.models.operations.GetDeploymentVariablesResponse(contentType, httpRes.statusCode()) {{
             paginatedDeploymentVariable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1112,11 +1082,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOIDCConfigurationResponse res = new org.openapis.openapi.models.operations.GetOIDCConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetOIDCConfigurationResponse res = new org.openapis.openapi.models.operations.GetOIDCConfigurationResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1153,11 +1121,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOIDCKeysResponse res = new org.openapis.openapi.models.operations.GetOIDCKeysResponse() {{
+        org.openapis.openapi.models.operations.GetOIDCKeysResponse res = new org.openapis.openapi.models.operations.GetOIDCKeysResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1196,11 +1162,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineContainerLogResponse res = new org.openapis.openapi.models.operations.GetPipelineContainerLogResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineContainerLogResponse res = new org.openapis.openapi.models.operations.GetPipelineContainerLogResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1236,12 +1200,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineForRepositoryResponse(contentType, httpRes.statusCode()) {{
             pipeline = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1283,12 +1245,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineStepForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineStepForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineStepForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineStepForRepositoryResponse(contentType, httpRes.statusCode()) {{
             pipelineStep = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1332,11 +1292,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1360,7 +1318,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryResponse getPipelineStepsForRepository(org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1372,11 +1330,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineSteps = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1410,11 +1366,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsResponse res = new org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsResponse res = new org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1450,11 +1404,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesResponse res = new org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesResponse res = new org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1490,11 +1442,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineTestReportsResponse res = new org.openapis.openapi.models.operations.GetPipelineTestReportsResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineTestReportsResponse res = new org.openapis.openapi.models.operations.GetPipelineTestReportsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1517,7 +1467,9 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetPipelineVariableForTeamResponse getPipelineVariableForTeam(org.openapis.openapi.models.operations.GetPipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, null);
@@ -1532,12 +1484,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.GetPipelineVariableForTeamResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.GetPipelineVariableForTeamResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1565,7 +1515,9 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetPipelineVariableForUserResponse getPipelineVariableForUser(org.openapis.openapi.models.operations.GetPipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, null);
@@ -1580,12 +1532,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.GetPipelineVariableForUserResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.GetPipelineVariableForUserResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1627,12 +1577,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetPipelineVariableForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetPipelineVariableForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1660,10 +1608,12 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetPipelineVariablesForTeamResponse getPipelineVariablesForTeam(org.openapis.openapi.models.operations.GetPipelineVariablesForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1675,11 +1625,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineVariablesForTeamResponse res = new org.openapis.openapi.models.operations.GetPipelineVariablesForTeamResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineVariablesForTeamResponse res = new org.openapis.openapi.models.operations.GetPipelineVariablesForTeamResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineVariables = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1700,10 +1648,12 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetPipelineVariablesForUserResponse getPipelineVariablesForUser(org.openapis.openapi.models.operations.GetPipelineVariablesForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1715,11 +1665,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineVariablesForUserResponse res = new org.openapis.openapi.models.operations.GetPipelineVariablesForUserResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineVariablesForUserResponse res = new org.openapis.openapi.models.operations.GetPipelineVariablesForUserResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineVariables = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1754,11 +1702,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspaceResponse res = new org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineVariables = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1781,7 +1727,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelinesForRepositoryResponse getPipelinesForRepository(org.openapis.openapi.models.operations.GetPipelinesForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelinesForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelinesForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1793,11 +1739,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPipelinesForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelinesForRepositoryResponse() {{
+        org.openapis.openapi.models.operations.GetPipelinesForRepositoryResponse res = new org.openapis.openapi.models.operations.GetPipelinesForRepositoryResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelines = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1832,12 +1776,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIResponse(contentType, httpRes.statusCode()) {{
             pipelineCacheContentUri = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1867,7 +1809,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineCachesResponse getRepositoryPipelineCaches(org.openapis.openapi.models.operations.GetRepositoryPipelineCachesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineCachesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineCachesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1879,12 +1821,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineCachesResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineCachesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineCachesResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineCachesResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineCaches = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1926,11 +1866,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineConfigResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineConfigResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineConfigResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineConfigResponse(contentType, httpRes.statusCode()) {{
             pipelinesConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1965,12 +1903,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostResponse(contentType, httpRes.statusCode()) {{
             pipelineKnownHost = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2000,7 +1936,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsResponse getRepositoryPipelineKnownHosts(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2012,11 +1948,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineKnownHosts = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2051,12 +1985,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleResponse(contentType, httpRes.statusCode()) {{
             pipelineSchedule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2086,7 +2018,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsResponse getRepositoryPipelineScheduleExecutions(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2098,12 +2030,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineScheduleExecutions = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2133,7 +2063,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesResponse getRepositoryPipelineSchedules(org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2145,12 +2075,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineSchedules = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2192,12 +2120,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairResponse(contentType, httpRes.statusCode()) {{
             pipelineSshKeyPair = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2239,12 +2165,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineVariableResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineVariableResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2274,7 +2198,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesResponse getRepositoryPipelineVariables(org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2286,11 +2210,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesResponse res = new org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesResponse(contentType, httpRes.statusCode()) {{
             paginatedPipelineVariables = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2325,11 +2247,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPipelineResponse res = new org.openapis.openapi.models.operations.StopPipelineResponse() {{
+        org.openapis.openapi.models.operations.StopPipelineResponse res = new org.openapis.openapi.models.operations.StopPipelineResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -2371,12 +2291,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDeploymentVariableResponse res = new org.openapis.openapi.models.operations.UpdateDeploymentVariableResponse() {{
+        org.openapis.openapi.models.operations.UpdateDeploymentVariableResponse res = new org.openapis.openapi.models.operations.UpdateDeploymentVariableResponse(contentType, httpRes.statusCode()) {{
             deploymentVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2404,7 +2322,9 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamResponse updatePipelineVariableForTeam(org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, null);
@@ -2424,12 +2344,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamResponse() {{
+        org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamResponse res = new org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2457,7 +2375,9 @@ public class Pipelines {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdatePipelineVariableForUserResponse updatePipelineVariableForUser(org.openapis.openapi.models.operations.UpdatePipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, null);
@@ -2477,12 +2397,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.UpdatePipelineVariableForUserResponse() {{
+        org.openapis.openapi.models.operations.UpdatePipelineVariableForUserResponse res = new org.openapis.openapi.models.operations.UpdatePipelineVariableForUserResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2529,12 +2447,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspaceResponse res = new org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2581,12 +2497,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberResponse(contentType, httpRes.statusCode()) {{
             pipelineBuildNumber = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2633,11 +2547,9 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigResponse(contentType, httpRes.statusCode()) {{
             pipelinesConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2677,12 +2589,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairResponse(contentType, httpRes.statusCode()) {{
             pipelineSshKeyPair = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2729,12 +2639,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostResponse(contentType, httpRes.statusCode()) {{
             pipelineKnownHost = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2781,12 +2689,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineScheduleResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryPipelineScheduleResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineScheduleResponse(contentType, httpRes.statusCode()) {{
             pipelineSchedule = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2833,12 +2739,10 @@ public class Pipelines {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariableResponse() {{
+        org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariableResponse res = new org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariableResponse(contentType, httpRes.statusCode()) {{
             pipelineVariable = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

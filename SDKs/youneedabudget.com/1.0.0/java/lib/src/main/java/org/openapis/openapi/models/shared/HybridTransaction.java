@@ -13,6 +13,7 @@ import java.time.LocalDate;
 public class HybridTransaction {
     @JsonProperty("account_id")
     public String accountId;
+
     public HybridTransaction withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -20,6 +21,7 @@ public class HybridTransaction {
     
     @JsonProperty("account_name")
     public String accountName;
+
     public HybridTransaction withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -30,6 +32,7 @@ public class HybridTransaction {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public HybridTransaction withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -40,6 +43,7 @@ public class HybridTransaction {
      */
     @JsonProperty("approved")
     public Boolean approved;
+
     public HybridTransaction withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -48,14 +52,19 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public String categoryId;
+
     public HybridTransaction withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
     
+    /**
+     * The name of the category.  If a split transaction, this will be 'Split'.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_name")
     public String categoryName;
+
     public HybridTransaction withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -66,6 +75,7 @@ public class HybridTransaction {
      */
     @JsonProperty("cleared")
     public HybridTransactionClearedEnum cleared;
+
     public HybridTransaction withCleared(HybridTransactionClearedEnum cleared) {
         this.cleared = cleared;
         return this;
@@ -77,6 +87,7 @@ public class HybridTransaction {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public HybridTransaction withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -88,6 +99,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debt_transaction_type")
     public HybridTransactionDebtTransactionTypeEnum debtTransactionType;
+
     public HybridTransaction withDebtTransactionType(HybridTransactionDebtTransactionTypeEnum debtTransactionType) {
         this.debtTransactionType = debtTransactionType;
         return this;
@@ -98,6 +110,7 @@ public class HybridTransaction {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public HybridTransaction withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -109,6 +122,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flag_color")
     public HybridTransactionFlagColorEnum flagColor;
+
     public HybridTransaction withFlagColor(HybridTransactionFlagColorEnum flagColor) {
         this.flagColor = flagColor;
         return this;
@@ -116,6 +130,7 @@ public class HybridTransaction {
     
     @JsonProperty("id")
     public String id;
+
     public HybridTransaction withId(String id) {
         this.id = id;
         return this;
@@ -127,6 +142,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("import_id")
     public String importId;
+
     public HybridTransaction withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -138,6 +154,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("import_payee_name")
     public String importPayeeName;
+
     public HybridTransaction withImportPayeeName(String importPayeeName) {
         this.importPayeeName = importPayeeName;
         return this;
@@ -149,6 +166,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("import_payee_name_original")
     public String importPayeeNameOriginal;
+
     public HybridTransaction withImportPayeeNameOriginal(String importPayeeNameOriginal) {
         this.importPayeeNameOriginal = importPayeeNameOriginal;
         return this;
@@ -160,6 +178,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matched_transaction_id")
     public String matchedTransactionId;
+
     public HybridTransaction withMatchedTransactionId(String matchedTransactionId) {
         this.matchedTransactionId = matchedTransactionId;
         return this;
@@ -168,6 +187,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public HybridTransaction withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -179,6 +199,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_transaction_id")
     public String parentTransactionId;
+
     public HybridTransaction withParentTransactionId(String parentTransactionId) {
         this.parentTransactionId = parentTransactionId;
         return this;
@@ -187,6 +208,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_id")
     public String payeeId;
+
     public HybridTransaction withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
@@ -195,6 +217,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_name")
     public String payeeName;
+
     public HybridTransaction withPayeeName(String payeeName) {
         this.payeeName = payeeName;
         return this;
@@ -206,6 +229,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer_account_id")
     public String transferAccountId;
+
     public HybridTransaction withTransferAccountId(String transferAccountId) {
         this.transferAccountId = transferAccountId;
         return this;
@@ -217,6 +241,7 @@ public class HybridTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer_transaction_id")
     public String transferTransactionId;
+
     public HybridTransaction withTransferTransactionId(String transferTransactionId) {
         this.transferTransactionId = transferTransactionId;
         return this;
@@ -227,9 +252,21 @@ public class HybridTransaction {
      */
     @JsonProperty("type")
     public HybridTransactionTypeEnum type;
+
     public HybridTransaction withType(HybridTransactionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public HybridTransaction(@JsonProperty("account_id") String accountId, @JsonProperty("account_name") String accountName, @JsonProperty("amount") Long amount, @JsonProperty("approved") Boolean approved, @JsonProperty("cleared") HybridTransactionClearedEnum cleared, @JsonProperty("date") LocalDate date, @JsonProperty("deleted") Boolean deleted, @JsonProperty("id") String id, @JsonProperty("type") HybridTransactionTypeEnum type) {
+        this.accountId = accountId;
+        this.accountName = accountName;
+        this.amount = amount;
+        this.approved = approved;
+        this.cleared = cleared;
+        this.date = date;
+        this.deleted = deleted;
+        this.id = id;
+        this.type = type;
+  }
 }

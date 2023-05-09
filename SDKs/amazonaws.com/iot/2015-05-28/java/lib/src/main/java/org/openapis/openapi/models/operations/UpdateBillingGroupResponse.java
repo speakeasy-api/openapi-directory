@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBillingGroupResponse {
     
     public String contentType;
+
     public UpdateBillingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateBillingGroupResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateBillingGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateBillingGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateBillingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateBillingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBillingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateBillingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBillingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBillingGroupResponse updateBillingGroupResponse;
+
     public UpdateBillingGroupResponse withUpdateBillingGroupResponse(org.openapis.openapi.models.shared.UpdateBillingGroupResponse updateBillingGroupResponse) {
         this.updateBillingGroupResponse = updateBillingGroupResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object versionConflictException;
+
     public UpdateBillingGroupResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public UpdateBillingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

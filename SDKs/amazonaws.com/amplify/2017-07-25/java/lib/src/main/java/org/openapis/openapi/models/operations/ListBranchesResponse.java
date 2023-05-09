@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBranchesResponse {
@@ -12,6 +13,7 @@ public class ListBranchesResponse {
      */
     
     public Object badRequestException;
+
     public ListBranchesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListBranchesResponse {
     
     
     public String contentType;
+
     public ListBranchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListBranchesResponse {
      */
     
     public Object internalFailureException;
+
     public ListBranchesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListBranchesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBranchesResult listBranchesResult;
+
     public ListBranchesResponse withListBranchesResult(org.openapis.openapi.models.shared.ListBranchesResult listBranchesResult) {
         this.listBranchesResult = listBranchesResult;
         return this;
@@ -46,6 +51,7 @@ public class ListBranchesResponse {
     
     
     public Integer statusCode;
+
     public ListBranchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBranchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBranchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListBranchesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListBranchesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListBranchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

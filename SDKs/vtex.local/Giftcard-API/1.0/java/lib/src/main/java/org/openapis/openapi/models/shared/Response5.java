@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Response5 {
     @JsonProperty("date")
     public String date;
+
     public Response5 withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +17,7 @@ public class Response5 {
     
     @JsonProperty("description")
     public String description;
+
     public Response5 withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class Response5 {
     
     @JsonProperty("redemptionMode")
     public String redemptionMode;
+
     public Response5 withRedemptionMode(String redemptionMode) {
         this.redemptionMode = redemptionMode;
         return this;
@@ -30,9 +33,16 @@ public class Response5 {
     
     @JsonProperty("value")
     public Double value;
+
     public Response5 withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Response5(@JsonProperty("date") String date, @JsonProperty("description") String description, @JsonProperty("redemptionMode") String redemptionMode, @JsonProperty("value") Double value) {
+        this.date = date;
+        this.description = description;
+        this.redemptionMode = redemptionMode;
+        this.value = value;
+  }
 }

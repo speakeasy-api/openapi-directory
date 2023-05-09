@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RetrieveEnvironmentInfoMessage - Request to download logs retrieved with &lt;a&gt;RequestEnvironmentInfo&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RetrieveEnvironmentInfoMessage {
     
     public String environmentId;
+
     public RetrieveEnvironmentInfoMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,6 +20,7 @@ public class RetrieveEnvironmentInfoMessage {
     
     
     public String environmentName;
+
     public RetrieveEnvironmentInfoMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,9 +28,13 @@ public class RetrieveEnvironmentInfoMessage {
     
     
     public EnvironmentInfoTypeEnum infoType;
+
     public RetrieveEnvironmentInfoMessage withInfoType(EnvironmentInfoTypeEnum infoType) {
         this.infoType = infoType;
         return this;
     }
     
+    public RetrieveEnvironmentInfoMessage(@JsonProperty("InfoType") EnvironmentInfoTypeEnum infoType) {
+        this.infoType = infoType;
+  }
 }

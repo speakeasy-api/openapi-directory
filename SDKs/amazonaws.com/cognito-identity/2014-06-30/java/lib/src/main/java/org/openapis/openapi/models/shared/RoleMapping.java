@@ -15,6 +15,7 @@ public class RoleMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmbiguousRoleResolution")
     public AmbiguousRoleResolutionTypeEnum ambiguousRoleResolution;
+
     public RoleMapping withAmbiguousRoleResolution(AmbiguousRoleResolutionTypeEnum ambiguousRoleResolution) {
         this.ambiguousRoleResolution = ambiguousRoleResolution;
         return this;
@@ -23,6 +24,7 @@ public class RoleMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesConfiguration")
     public RulesConfigurationType rulesConfiguration;
+
     public RoleMapping withRulesConfiguration(RulesConfigurationType rulesConfiguration) {
         this.rulesConfiguration = rulesConfiguration;
         return this;
@@ -30,9 +32,13 @@ public class RoleMapping {
     
     @JsonProperty("Type")
     public RoleMappingTypeEnum type;
+
     public RoleMapping withType(RoleMappingTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RoleMapping(@JsonProperty("Type") RoleMappingTypeEnum type) {
+        this.type = type;
+  }
 }

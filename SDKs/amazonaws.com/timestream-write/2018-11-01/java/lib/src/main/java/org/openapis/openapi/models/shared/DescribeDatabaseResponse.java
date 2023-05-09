@@ -15,9 +15,11 @@ public class DescribeDatabaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public Database database;
+
     public DescribeDatabaseResponse withDatabase(Database database) {
         this.database = database;
         return this;
     }
     
+    public DescribeDatabaseResponse(){}
 }

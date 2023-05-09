@@ -18,9 +18,11 @@ public class WaitOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public WaitOperationRequest withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public WaitOperationRequest(){}
 }

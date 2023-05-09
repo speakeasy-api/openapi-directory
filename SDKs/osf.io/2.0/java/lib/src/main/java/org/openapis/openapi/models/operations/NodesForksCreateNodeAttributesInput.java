@@ -17,6 +17,7 @@ public class NodesForksCreateNodeAttributesInput {
      */
     @JsonProperty("category")
     public NodesForksCreateNodeAttributesCategoryEnum category;
+
     public NodesForksCreateNodeAttributesInput withCategory(NodesForksCreateNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -28,6 +29,7 @@ public class NodesForksCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NodesForksCreateNodeAttributesInput withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class NodesForksCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_license")
     public String nodeLicense;
+
     public NodesForksCreateNodeAttributesInput withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -50,6 +53,7 @@ public class NodesForksCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public NodesForksCreateNodeAttributesInput withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -61,6 +65,7 @@ public class NodesForksCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public NodesForksCreateNodeAttributesInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -72,6 +77,7 @@ public class NodesForksCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template_from")
     public String templateFrom;
+
     public NodesForksCreateNodeAttributesInput withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -82,9 +88,14 @@ public class NodesForksCreateNodeAttributesInput {
      */
     @JsonProperty("title")
     public String title;
+
     public NodesForksCreateNodeAttributesInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NodesForksCreateNodeAttributesInput(@JsonProperty("category") NodesForksCreateNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

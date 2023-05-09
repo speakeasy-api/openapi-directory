@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteReadSetResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteReadSetResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDeleteReadSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDeleteReadSetResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteReadSetResponse batchDeleteReadSetResponse;
+
     public BatchDeleteReadSetResponse withBatchDeleteReadSetResponse(org.openapis.openapi.models.shared.BatchDeleteReadSetResponse batchDeleteReadSetResponse) {
         this.batchDeleteReadSetResponse = batchDeleteReadSetResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteReadSetResponse {
     
     
     public String contentType;
+
     public BatchDeleteReadSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteReadSetResponse {
      */
     
     public Object internalServerException;
+
     public BatchDeleteReadSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDeleteReadSetResponse {
      */
     
     public Object requestTimeoutException;
+
     public BatchDeleteReadSetResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class BatchDeleteReadSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDeleteReadSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class BatchDeleteReadSetResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteReadSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class BatchDeleteReadSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteReadSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class BatchDeleteReadSetResponse {
      */
     
     public Object throttlingException;
+
     public BatchDeleteReadSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class BatchDeleteReadSetResponse {
      */
     
     public Object validationException;
+
     public BatchDeleteReadSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDeleteReadSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

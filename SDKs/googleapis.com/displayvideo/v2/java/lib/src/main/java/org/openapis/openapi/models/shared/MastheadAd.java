@@ -18,6 +18,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoplayVideoDuration")
     public String autoplayVideoDuration;
+
     public MastheadAd withAutoplayVideoDuration(String autoplayVideoDuration) {
         this.autoplayVideoDuration = autoplayVideoDuration;
         return this;
@@ -29,6 +30,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoplayVideoStartMillisecond")
     public String autoplayVideoStartMillisecond;
+
     public MastheadAd withAutoplayVideoStartMillisecond(String autoplayVideoStartMillisecond) {
         this.autoplayVideoStartMillisecond = autoplayVideoStartMillisecond;
         return this;
@@ -40,6 +42,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callToActionButtonLabel")
     public String callToActionButtonLabel;
+
     public MastheadAd withCallToActionButtonLabel(String callToActionButtonLabel) {
         this.callToActionButtonLabel = callToActionButtonLabel;
         return this;
@@ -51,6 +54,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callToActionFinalUrl")
     public String callToActionFinalUrl;
+
     public MastheadAd withCallToActionFinalUrl(String callToActionFinalUrl) {
         this.callToActionFinalUrl = callToActionFinalUrl;
         return this;
@@ -62,6 +66,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callToActionTrackingUrl")
     public String callToActionTrackingUrl;
+
     public MastheadAd withCallToActionTrackingUrl(String callToActionTrackingUrl) {
         this.callToActionTrackingUrl = callToActionTrackingUrl;
         return this;
@@ -73,6 +78,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companionYoutubeVideos")
     public YoutubeVideoDetails[] companionYoutubeVideos;
+
     public MastheadAd withCompanionYoutubeVideos(YoutubeVideoDetails[] companionYoutubeVideos) {
         this.companionYoutubeVideos = companionYoutubeVideos;
         return this;
@@ -84,6 +90,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MastheadAd withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
     public String headline;
+
     public MastheadAd withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -106,6 +114,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showChannelArt")
     public Boolean showChannelArt;
+
     public MastheadAd withShowChannelArt(Boolean showChannelArt) {
         this.showChannelArt = showChannelArt;
         return this;
@@ -117,6 +126,7 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public YoutubeVideoDetails video;
+
     public MastheadAd withVideo(YoutubeVideoDetails video) {
         this.video = video;
         return this;
@@ -128,9 +138,11 @@ public class MastheadAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoAspectRatio")
     public MastheadAdVideoAspectRatioEnum videoAspectRatio;
+
     public MastheadAd withVideoAspectRatio(MastheadAdVideoAspectRatioEnum videoAspectRatio) {
         this.videoAspectRatio = videoAspectRatio;
         return this;
     }
     
+    public MastheadAd(){}
 }

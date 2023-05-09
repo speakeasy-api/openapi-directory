@@ -18,6 +18,7 @@ public class CategoryRatedAreasCategoryScoresShopping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("luxury")
     public Double luxury;
+
     public CategoryRatedAreasCategoryScoresShopping withLuxury(Double luxury) {
         this.luxury = luxury;
         return this;
@@ -29,9 +30,11 @@ public class CategoryRatedAreasCategoryScoresShopping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public Double overall;
+
     public CategoryRatedAreasCategoryScoresShopping withOverall(Double overall) {
         this.overall = overall;
         return this;
     }
     
+    public CategoryRatedAreasCategoryScoresShopping(){}
 }

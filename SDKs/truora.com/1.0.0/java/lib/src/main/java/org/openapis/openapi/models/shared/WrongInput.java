@@ -18,9 +18,11 @@ public class WrongInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public WrongInputInputEnum input;
+
     public WrongInput withInput(WrongInputInputEnum input) {
         this.input = input;
         return this;
     }
     
+    public WrongInput(){}
 }

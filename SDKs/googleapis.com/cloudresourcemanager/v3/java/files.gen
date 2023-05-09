@@ -100,6 +100,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTag
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysCreateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysCreateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysGetNamespacedSecurityOption1.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysGetNamespacedSecurityOption2.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysGetNamespacedSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysGetNamespacedRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysGetNamespacedResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysListSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysListSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagKeysListSecurity.java
@@ -118,6 +123,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTag
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetIamPolicySecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetIamPolicyResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetNamespacedSecurityOption1.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetNamespacedSecurityOption2.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetNamespacedSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetNamespacedRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesGetNamespacedResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesListSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesListSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudresourcemanagerTagValuesListSecurity.java
@@ -193,4 +203,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/TagHoldInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagHoldsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/effectivetags/README.md
+docs/folders/README.md
+docs/liens/README.md
+docs/organizations/README.md
+docs/projects/README.md
+docs/tagbindings/README.md
+docs/tagkeys/README.md
+docs/tagvalues/README.md
 USAGE.md

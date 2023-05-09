@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelDetectMitigationActionsTaskResponse {
@@ -12,6 +13,7 @@ public class CancelDetectMitigationActionsTaskResponse {
      */
     
     public java.util.Map<String, Object> cancelDetectMitigationActionsTaskResponse;
+
     public CancelDetectMitigationActionsTaskResponse withCancelDetectMitigationActionsTaskResponse(java.util.Map<String, Object> cancelDetectMitigationActionsTaskResponse) {
         this.cancelDetectMitigationActionsTaskResponse = cancelDetectMitigationActionsTaskResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelDetectMitigationActionsTaskResponse {
     
     
     public String contentType;
+
     public CancelDetectMitigationActionsTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelDetectMitigationActionsTaskResponse {
      */
     
     public Object internalFailureException;
+
     public CancelDetectMitigationActionsTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CancelDetectMitigationActionsTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public CancelDetectMitigationActionsTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CancelDetectMitigationActionsTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelDetectMitigationActionsTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelDetectMitigationActionsTaskResponse {
     
     
     public Integer statusCode;
+
     public CancelDetectMitigationActionsTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelDetectMitigationActionsTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelDetectMitigationActionsTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CancelDetectMitigationActionsTaskResponse {
      */
     
     public Object throttlingException;
+
     public CancelDetectMitigationActionsTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CancelDetectMitigationActionsTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

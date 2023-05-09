@@ -18,6 +18,7 @@ public class PrinterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PrinterModel withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class PrinterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("makeAndModel")
     public String makeAndModel;
+
     public PrinterModel withMakeAndModel(String makeAndModel) {
         this.makeAndModel = makeAndModel;
         return this;
@@ -40,9 +42,11 @@ public class PrinterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public PrinterModel withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
     }
     
+    public PrinterModel(){}
 }

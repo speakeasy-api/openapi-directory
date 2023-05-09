@@ -12,6 +12,7 @@ public class ReportByCommonResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableAllProducts")
     public LinksOptimiseAllLink disableAllProducts;
+
     public ReportByCommonResponseLinks withDisableAllProducts(LinksOptimiseAllLink disableAllProducts) {
         this.disableAllProducts = disableAllProducts;
         return this;
@@ -20,6 +21,7 @@ public class ReportByCommonResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableProducts")
     public LinksOptimiseLink disableProducts;
+
     public ReportByCommonResponseLinks withDisableProducts(LinksOptimiseLink disableProducts) {
         this.disableProducts = disableProducts;
         return this;
@@ -28,6 +30,7 @@ public class ReportByCommonResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAllProducts")
     public LinksOptimiseAllLink enableAllProducts;
+
     public ReportByCommonResponseLinks withEnableAllProducts(LinksOptimiseAllLink enableAllProducts) {
         this.enableAllProducts = enableAllProducts;
         return this;
@@ -36,9 +39,11 @@ public class ReportByCommonResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableProducts")
     public LinksOptimiseLink enableProducts;
+
     public ReportByCommonResponseLinks withEnableProducts(LinksOptimiseLink enableProducts) {
         this.enableProducts = enableProducts;
         return this;
     }
     
+    public ReportByCommonResponseLinks(){}
 }

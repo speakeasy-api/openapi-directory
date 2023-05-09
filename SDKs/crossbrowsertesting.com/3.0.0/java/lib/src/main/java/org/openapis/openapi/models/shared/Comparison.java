@@ -12,6 +12,7 @@ public class Comparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("differences")
     public Long differences;
+
     public Comparison withDifferences(Long differences) {
         this.differences = differences;
         return this;
@@ -20,6 +21,7 @@ public class Comparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public Element[] elements;
+
     public Comparison withElements(Element[] elements) {
         this.elements = elements;
         return this;
@@ -28,6 +30,7 @@ public class Comparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Boolean error;
+
     public Comparison withError(Boolean error) {
         this.error = error;
         return this;
@@ -36,6 +39,7 @@ public class Comparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Comparison withMessage(String message) {
         this.message = message;
         return this;
@@ -44,6 +48,7 @@ public class Comparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_comparisons_public_url")
     public String showComparisonsPublicUrl;
+
     public Comparison withShowComparisonsPublicUrl(String showComparisonsPublicUrl) {
         this.showComparisonsPublicUrl = showComparisonsPublicUrl;
         return this;
@@ -52,6 +57,7 @@ public class Comparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_comparisons_web_url")
     public String showComparisonsWebUrl;
+
     public Comparison withShowComparisonsWebUrl(String showComparisonsWebUrl) {
         this.showComparisonsWebUrl = showComparisonsWebUrl;
         return this;
@@ -60,9 +66,11 @@ public class Comparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tolerance")
     public Long tolerance;
+
     public Comparison withTolerance(Long tolerance) {
         this.tolerance = tolerance;
         return this;
     }
     
+    public Comparison(){}
 }

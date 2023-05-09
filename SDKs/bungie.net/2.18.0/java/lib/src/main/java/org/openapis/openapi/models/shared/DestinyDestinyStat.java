@@ -15,6 +15,7 @@ public class DestinyDestinyStat {
      */
     
     public Long statHash;
+
     public DestinyDestinyStat withStatHash(Long statHash) {
         this.statHash = statHash;
         return this;
@@ -25,9 +26,11 @@ public class DestinyDestinyStat {
      */
     
     public Integer value;
+
     public DestinyDestinyStat withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public DestinyDestinyStat(){}
 }

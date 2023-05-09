@@ -12,6 +12,7 @@ public class PreviewAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public PreviewAgentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class PreviewAgentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public PreviewAgentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class PreviewAgentsRequest {
     
     @JsonProperty("previewAgentsArn")
     public String previewAgentsArn;
+
     public PreviewAgentsRequest withPreviewAgentsArn(String previewAgentsArn) {
         this.previewAgentsArn = previewAgentsArn;
         return this;
     }
     
+    public PreviewAgentsRequest(@JsonProperty("previewAgentsArn") String previewAgentsArn) {
+        this.previewAgentsArn = previewAgentsArn;
+  }
 }

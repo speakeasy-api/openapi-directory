@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceEventWindowResultInstanceEventWindowAssociationTarget {
     
     public String[] dedicatedHostIds;
+
     public CreateInstanceEventWindowResultInstanceEventWindowAssociationTarget withDedicatedHostIds(String[] dedicatedHostIds) {
         this.dedicatedHostIds = dedicatedHostIds;
         return this;
@@ -19,6 +20,7 @@ public class CreateInstanceEventWindowResultInstanceEventWindowAssociationTarget
     
     
     public String[] instanceIds;
+
     public CreateInstanceEventWindowResultInstanceEventWindowAssociationTarget withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -26,9 +28,11 @@ public class CreateInstanceEventWindowResultInstanceEventWindowAssociationTarget
     
     
     public CreateInstanceEventWindowResultInstanceEventWindowAssociationTargetTags[] tags;
+
     public CreateInstanceEventWindowResultInstanceEventWindowAssociationTarget withTags(CreateInstanceEventWindowResultInstanceEventWindowAssociationTargetTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInstanceEventWindowResultInstanceEventWindowAssociationTarget(){}
 }

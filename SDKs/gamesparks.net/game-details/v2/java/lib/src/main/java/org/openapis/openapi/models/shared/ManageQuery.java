@@ -15,6 +15,7 @@ public class ManageQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("esRules")
     public String esRules;
+
     public ManageQuery withEsRules(String esRules) {
         this.esRules = esRules;
         return this;
@@ -23,6 +24,7 @@ public class ManageQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ManageQuery withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ManageQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qbRules")
     public String qbRules;
+
     public ManageQuery withQbRules(String qbRules) {
         this.qbRules = qbRules;
         return this;
@@ -39,9 +42,11 @@ public class ManageQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortCode")
     public String shortCode;
+
     public ManageQuery withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public ManageQuery(){}
 }

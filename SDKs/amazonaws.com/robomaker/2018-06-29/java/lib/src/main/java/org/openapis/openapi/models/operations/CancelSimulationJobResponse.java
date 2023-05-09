@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelSimulationJobResponse {
@@ -12,6 +13,7 @@ public class CancelSimulationJobResponse {
      */
     
     public java.util.Map<String, Object> cancelSimulationJobResponse;
+
     public CancelSimulationJobResponse withCancelSimulationJobResponse(java.util.Map<String, Object> cancelSimulationJobResponse) {
         this.cancelSimulationJobResponse = cancelSimulationJobResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelSimulationJobResponse {
     
     
     public String contentType;
+
     public CancelSimulationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelSimulationJobResponse {
      */
     
     public Object internalServerException;
+
     public CancelSimulationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CancelSimulationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelSimulationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CancelSimulationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelSimulationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelSimulationJobResponse {
     
     
     public Integer statusCode;
+
     public CancelSimulationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelSimulationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelSimulationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CancelSimulationJobResponse {
      */
     
     public Object throttlingException;
+
     public CancelSimulationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CancelSimulationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

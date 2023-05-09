@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse {
     
     public String contentType;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueMode
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse googleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse withGoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse(org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse googleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse) {
         this.googleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse = googleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueMode
     
     
     public Integer statusCode;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueMode
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListStackSetOperationResultsInput {
     
     public CallAsEnum callAs;
+
     public ListStackSetOperationResultsInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,6 +17,7 @@ public class ListStackSetOperationResultsInput {
     
     
     public OperationResultFilter[] filters;
+
     public ListStackSetOperationResultsInput withFilters(OperationResultFilter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class ListStackSetOperationResultsInput {
     
     
     public Long maxResults;
+
     public ListStackSetOperationResultsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class ListStackSetOperationResultsInput {
     
     
     public String nextToken;
+
     public ListStackSetOperationResultsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +41,7 @@ public class ListStackSetOperationResultsInput {
     
     
     public String operationId;
+
     public ListStackSetOperationResultsInput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -44,9 +49,14 @@ public class ListStackSetOperationResultsInput {
     
     
     public String stackSetName;
+
     public ListStackSetOperationResultsInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public ListStackSetOperationResultsInput(@JsonProperty("OperationId") String operationId, @JsonProperty("StackSetName") String stackSetName) {
+        this.operationId = operationId;
+        this.stackSetName = stackSetName;
+  }
 }

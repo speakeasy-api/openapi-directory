@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTrustStoreResponse {
     @JsonProperty("trustStoreArn")
     public String trustStoreArn;
+
     public UpdateTrustStoreResponse withTrustStoreArn(String trustStoreArn) {
         this.trustStoreArn = trustStoreArn;
         return this;
     }
     
+    public UpdateTrustStoreResponse(@JsonProperty("trustStoreArn") String trustStoreArn) {
+        this.trustStoreArn = trustStoreArn;
+  }
 }

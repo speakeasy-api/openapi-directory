@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1AdminReportsResponse {
@@ -12,6 +13,7 @@ public class GetApiV1AdminReportsResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminReport[] adminReports;
+
     public GetApiV1AdminReportsResponse withAdminReports(org.openapis.openapi.models.shared.AdminReport[] adminReports) {
         this.adminReports = adminReports;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1AdminReportsResponse {
     
     
     public String contentType;
+
     public GetApiV1AdminReportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetApiV1AdminReportsResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1AdminReportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetApiV1AdminReportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1AdminReportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1AdminReportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaPromotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionId")
     public String promotionId;
+
     public GoogleCloudRetailV2alphaPromotion withPromotionId(String promotionId) {
         this.promotionId = promotionId;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaPromotion(){}
 }

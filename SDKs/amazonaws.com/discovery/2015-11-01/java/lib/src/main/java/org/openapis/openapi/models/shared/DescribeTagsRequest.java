@@ -12,6 +12,7 @@ public class DescribeTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public TagFilter[] filters;
+
     public DescribeTagsRequest withFilters(TagFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeTagsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeTagsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeTagsRequest(){}
 }

@@ -15,6 +15,7 @@ public class ListAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationSummaries")
     public AssociationSummary[] associationSummaries;
+
     public ListAssociationsResponse withAssociationSummaries(AssociationSummary[] associationSummaries) {
         this.associationSummaries = associationSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociationsResponse(){}
 }

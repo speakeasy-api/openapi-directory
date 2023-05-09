@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeOrderableDBInstanceOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeOrderableDBInstanceOptionsActionEnum action;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withAction(GETDescribeOrderableDBInstanceOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceClass")
     public String dbInstanceClass;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
     public String engine;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -30,6 +34,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -37,6 +42,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LicenseModel")
     public String licenseModel;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -44,6 +50,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -51,6 +58,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -58,6 +66,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeOrderableDBInstanceOptionsVersionEnum version;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withVersion(GETDescribeOrderableDBInstanceOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -65,6 +74,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Vpc")
     public Boolean vpc;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withVpc(Boolean vpc) {
         this.vpc = vpc;
         return this;
@@ -72,6 +82,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -79,6 +90,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -86,6 +98,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -93,6 +106,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -100,6 +114,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -107,6 +122,7 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -114,9 +130,15 @@ public class GETDescribeOrderableDBInstanceOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeOrderableDBInstanceOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeOrderableDBInstanceOptionsRequest(@JsonProperty("Action") GETDescribeOrderableDBInstanceOptionsActionEnum action, @JsonProperty("Engine") String engine, @JsonProperty("Version") GETDescribeOrderableDBInstanceOptionsVersionEnum version) {
+        this.action = action;
+        this.engine = engine;
+        this.version = version;
+  }
 }

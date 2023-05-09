@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentReleaseRollbackResponse {
     
     public String contentType;
+
     public CodePushDeploymentReleaseRollbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentReleaseRollbackResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentReleaseRollbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentReleaseRollbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentReleaseRollbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushDeploymentReleaseRollbackResponse {
      */
     
     public CodePushDeploymentReleaseRollback201ApplicationJSON codePushDeploymentReleaseRollback201ApplicationJSONObject;
+
     public CodePushDeploymentReleaseRollbackResponse withCodePushDeploymentReleaseRollback201ApplicationJSONObject(CodePushDeploymentReleaseRollback201ApplicationJSON codePushDeploymentReleaseRollback201ApplicationJSONObject) {
         this.codePushDeploymentReleaseRollback201ApplicationJSONObject = codePushDeploymentReleaseRollback201ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CodePushDeploymentReleaseRollbackResponse {
      */
     
     public CodePushDeploymentReleaseRollbackDefaultApplicationJSON codePushDeploymentReleaseRollbackDefaultApplicationJSONObject;
+
     public CodePushDeploymentReleaseRollbackResponse withCodePushDeploymentReleaseRollbackDefaultApplicationJSONObject(CodePushDeploymentReleaseRollbackDefaultApplicationJSON codePushDeploymentReleaseRollbackDefaultApplicationJSONObject) {
         this.codePushDeploymentReleaseRollbackDefaultApplicationJSONObject = codePushDeploymentReleaseRollbackDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentReleaseRollbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

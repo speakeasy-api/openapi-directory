@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryDeleteApiSpecRequest {
@@ -12,6 +13,7 @@ public class RegistryDeleteApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryDeleteApiSpecRequest withApi(String api) {
         this.api = api;
         return this;
@@ -22,6 +24,7 @@ public class RegistryDeleteApiSpecRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
     public Boolean force;
+
     public RegistryDeleteApiSpecRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -32,6 +35,7 @@ public class RegistryDeleteApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryDeleteApiSpecRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -42,6 +46,7 @@ public class RegistryDeleteApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryDeleteApiSpecRequest withProject(String project) {
         this.project = project;
         return this;
@@ -52,6 +57,7 @@ public class RegistryDeleteApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
     public String spec;
+
     public RegistryDeleteApiSpecRequest withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -62,9 +68,17 @@ public class RegistryDeleteApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public RegistryDeleteApiSpecRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RegistryDeleteApiSpecRequest(@JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project, @JsonProperty("spec") String spec, @JsonProperty("version") String version) {
+        this.api = api;
+        this.location = location;
+        this.project = project;
+        this.spec = spec;
+        this.version = version;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Root200ApplicationJSONLinksSpec {
     @JsonProperty("href")
     public String href;
+
     public Root200ApplicationJSONLinksSpec withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public Root200ApplicationJSONLinksSpec(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

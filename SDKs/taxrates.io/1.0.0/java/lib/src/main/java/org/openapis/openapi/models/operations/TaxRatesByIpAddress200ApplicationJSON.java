@@ -12,6 +12,7 @@ public class TaxRatesByIpAddress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_name")
     public String countryName;
+
     public TaxRatesByIpAddress200ApplicationJSON withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -20,9 +21,11 @@ public class TaxRatesByIpAddress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public TaxRatesByIpAddress200ApplicationJSONTaxes[] taxes;
+
     public TaxRatesByIpAddress200ApplicationJSON withTaxes(TaxRatesByIpAddress200ApplicationJSONTaxes[] taxes) {
         this.taxes = taxes;
         return this;
     }
     
+    public TaxRatesByIpAddress200ApplicationJSON(){}
 }

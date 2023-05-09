@@ -57,11 +57,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingResponse res = new org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingResponse() {{
+        org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingResponse res = new org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingResponse(contentType, httpRes.statusCode()) {{
             notificationSetting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessnotificationsAccountsUpdateNotificationSettingResponse res = new org.openapis.openapi.models.operations.MybusinessnotificationsAccountsUpdateNotificationSettingResponse() {{
+        org.openapis.openapi.models.operations.MybusinessnotificationsAccountsUpdateNotificationSettingResponse res = new org.openapis.openapi.models.operations.MybusinessnotificationsAccountsUpdateNotificationSettingResponse(contentType, httpRes.statusCode()) {{
             notificationSetting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

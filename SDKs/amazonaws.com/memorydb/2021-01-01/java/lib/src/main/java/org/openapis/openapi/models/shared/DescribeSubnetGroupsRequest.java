@@ -12,6 +12,7 @@ public class DescribeSubnetGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeSubnetGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeSubnetGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSubnetGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeSubnetGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroupName")
     public String subnetGroupName;
+
     public DescribeSubnetGroupsRequest withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
     }
     
+    public DescribeSubnetGroupsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCollectionScoresRequest {
@@ -17,6 +18,7 @@ public class ListCollectionScoresRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public ListCollectionScoresRequest withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -27,6 +29,7 @@ public class ListCollectionScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public ListCollectionScoresDirectionEnum direction;
+
     public ListCollectionScoresRequest withDirection(ListCollectionScoresDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -37,6 +40,7 @@ public class ListCollectionScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListCollectionScoresRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -49,6 +53,7 @@ public class ListCollectionScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
     public String next;
+
     public ListCollectionScoresRequest withNext(String next) {
         this.next = next;
         return this;
@@ -61,6 +66,7 @@ public class ListCollectionScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
     public String previous;
+
     public ListCollectionScoresRequest withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -72,6 +78,7 @@ public class ListCollectionScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public ListCollectionScoresRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
@@ -82,9 +89,13 @@ public class ListCollectionScoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ListCollectionScoresSortEnum sort;
+
     public ListCollectionScoresRequest withSort(ListCollectionScoresSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListCollectionScoresRequest(@JsonProperty("collection") String collection) {
+        this.collection = collection;
+  }
 }

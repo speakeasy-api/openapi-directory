@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Spigot {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public Spigot withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -21,6 +22,7 @@ public class Spigot {
     
     @JsonProperty("Name")
     public String name;
+
     public Spigot withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class Spigot {
     
     @JsonProperty("Path")
     public String path;
+
     public Spigot withPath(String path) {
         this.path = path;
         return this;
@@ -36,6 +39,7 @@ public class Spigot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prob")
     public Double prob;
+
     public Spigot withProb(Double prob) {
         this.prob = prob;
         return this;
@@ -44,9 +48,15 @@ public class Spigot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Topk")
     public Long topk;
+
     public Spigot withTopk(Long topk) {
         this.topk = topk;
         return this;
     }
     
+    public Spigot(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Path") String path) {
+        this.inputs = inputs;
+        this.name = name;
+        this.path = path;
+  }
 }

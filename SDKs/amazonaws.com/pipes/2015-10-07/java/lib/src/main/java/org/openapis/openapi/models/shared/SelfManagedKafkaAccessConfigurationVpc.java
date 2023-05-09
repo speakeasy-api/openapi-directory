@@ -15,6 +15,7 @@ public class SelfManagedKafkaAccessConfigurationVpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroup")
     public String[] securityGroup;
+
     public SelfManagedKafkaAccessConfigurationVpc withSecurityGroup(String[] securityGroup) {
         this.securityGroup = securityGroup;
         return this;
@@ -23,9 +24,11 @@ public class SelfManagedKafkaAccessConfigurationVpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public SelfManagedKafkaAccessConfigurationVpc withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public SelfManagedKafkaAccessConfigurationVpc(){}
 }

@@ -15,6 +15,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adult")
     public Boolean adult;
+
     public Product200ApplicationJSONDataAgeBands withAdult(Boolean adult) {
         this.adult = adult;
         return this;
@@ -26,6 +27,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageFrom")
     public Long ageFrom;
+
     public Product200ApplicationJSONDataAgeBands withAgeFrom(Long ageFrom) {
         this.ageFrom = ageFrom;
         return this;
@@ -37,6 +39,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageTo")
     public Long ageTo;
+
     public Product200ApplicationJSONDataAgeBands withAgeTo(Long ageTo) {
         this.ageTo = ageTo;
         return this;
@@ -50,6 +53,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandId")
     public Long bandId;
+
     public Product200ApplicationJSONDataAgeBands withBandId(Long bandId) {
         this.bandId = bandId;
         return this;
@@ -61,6 +65,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Product200ApplicationJSONDataAgeBands withCount(Long count) {
         this.count = count;
         return this;
@@ -72,6 +77,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Product200ApplicationJSONDataAgeBands withDescription(String description) {
         this.description = description;
         return this;
@@ -83,6 +89,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pluralDescription")
     public String pluralDescription;
+
     public Product200ApplicationJSONDataAgeBands withPluralDescription(String pluralDescription) {
         this.pluralDescription = pluralDescription;
         return this;
@@ -94,6 +101,7 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public Product200ApplicationJSONDataAgeBands withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -105,9 +113,11 @@ public class Product200ApplicationJSONDataAgeBands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treatAsAdult")
     public Boolean treatAsAdult;
+
     public Product200ApplicationJSONDataAgeBands withTreatAsAdult(Boolean treatAsAdult) {
         this.treatAsAdult = treatAsAdult;
         return this;
     }
     
+    public Product200ApplicationJSONDataAgeBands(){}
 }

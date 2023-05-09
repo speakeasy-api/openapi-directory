@@ -18,6 +18,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public TableFieldSchema withField(String field) {
         this.field = field;
         return this;
@@ -29,6 +30,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public TableFieldSchema[] fields;
+
     public TableFieldSchema withFields(TableFieldSchema[] fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TableFieldSchema withMode(String mode) {
         this.mode = mode;
         return this;
@@ -51,9 +54,11 @@ public class TableFieldSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TableFieldSchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TableFieldSchema(){}
 }

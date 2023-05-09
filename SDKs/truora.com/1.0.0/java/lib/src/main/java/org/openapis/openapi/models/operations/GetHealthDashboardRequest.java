@@ -12,6 +12,7 @@ public class GetHealthDashboardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetHealthDashboardRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,6 +23,7 @@ public class GetHealthDashboardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unixTimestampSeconds")
     public String unixTimestampSeconds;
+
     public GetHealthDashboardRequest withUnixTimestampSeconds(String unixTimestampSeconds) {
         this.unixTimestampSeconds = unixTimestampSeconds;
         return this;
@@ -33,9 +35,11 @@ public class GetHealthDashboardRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unixtimezoneOffsetSeconds")
     public String unixtimezoneOffsetSeconds;
+
     public GetHealthDashboardRequest withUnixtimezoneOffsetSeconds(String unixtimezoneOffsetSeconds) {
         this.unixtimezoneOffsetSeconds = unixtimezoneOffsetSeconds;
         return this;
     }
     
+    public GetHealthDashboardRequest(){}
 }

@@ -15,6 +15,7 @@ public class ImageReplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public String failureCode;
+
     public ImageReplicationStatus withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -23,6 +24,7 @@ public class ImageReplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ImageReplicationStatus withRegion(String region) {
         this.region = region;
         return this;
@@ -31,6 +33,7 @@ public class ImageReplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public ImageReplicationStatus withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -39,9 +42,11 @@ public class ImageReplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReplicationStatusEnum status;
+
     public ImageReplicationStatus withStatus(ReplicationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ImageReplicationStatus(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestoreManagedPrefixListVersionResultPrefixListTags {
     
     public String key;
+
     public RestoreManagedPrefixListVersionResultPrefixListTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class RestoreManagedPrefixListVersionResultPrefixListTags {
     
     
     public String value;
+
     public RestoreManagedPrefixListVersionResultPrefixListTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RestoreManagedPrefixListVersionResultPrefixListTags(){}
 }

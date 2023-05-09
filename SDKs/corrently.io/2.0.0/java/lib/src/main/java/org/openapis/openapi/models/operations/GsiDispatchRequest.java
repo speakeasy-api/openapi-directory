@@ -12,6 +12,7 @@ public class GsiDispatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GsiDispatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -22,9 +23,11 @@ public class GsiDispatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String zip;
+
     public GsiDispatchRequest withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public GsiDispatchRequest(){}
 }

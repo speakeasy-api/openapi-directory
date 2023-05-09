@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFirewallRuleRequest {
     @JsonProperty("Action")
     public ActionEnum action;
+
     public CreateFirewallRuleRequest withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class CreateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideDnsType")
     public BlockOverrideDnsTypeEnum blockOverrideDnsType;
+
     public CreateFirewallRuleRequest withBlockOverrideDnsType(BlockOverrideDnsTypeEnum blockOverrideDnsType) {
         this.blockOverrideDnsType = blockOverrideDnsType;
         return this;
@@ -27,6 +29,7 @@ public class CreateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideDomain")
     public String blockOverrideDomain;
+
     public CreateFirewallRuleRequest withBlockOverrideDomain(String blockOverrideDomain) {
         this.blockOverrideDomain = blockOverrideDomain;
         return this;
@@ -35,6 +38,7 @@ public class CreateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideTtl")
     public Long blockOverrideTtl;
+
     public CreateFirewallRuleRequest withBlockOverrideTtl(Long blockOverrideTtl) {
         this.blockOverrideTtl = blockOverrideTtl;
         return this;
@@ -43,6 +47,7 @@ public class CreateFirewallRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockResponse")
     public BlockResponseEnum blockResponse;
+
     public CreateFirewallRuleRequest withBlockResponse(BlockResponseEnum blockResponse) {
         this.blockResponse = blockResponse;
         return this;
@@ -50,6 +55,7 @@ public class CreateFirewallRuleRequest {
     
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public CreateFirewallRuleRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -57,6 +63,7 @@ public class CreateFirewallRuleRequest {
     
     @JsonProperty("FirewallDomainListId")
     public String firewallDomainListId;
+
     public CreateFirewallRuleRequest withFirewallDomainListId(String firewallDomainListId) {
         this.firewallDomainListId = firewallDomainListId;
         return this;
@@ -64,6 +71,7 @@ public class CreateFirewallRuleRequest {
     
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public CreateFirewallRuleRequest withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
@@ -71,6 +79,7 @@ public class CreateFirewallRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateFirewallRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +87,18 @@ public class CreateFirewallRuleRequest {
     
     @JsonProperty("Priority")
     public Long priority;
+
     public CreateFirewallRuleRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public CreateFirewallRuleRequest(@JsonProperty("Action") ActionEnum action, @JsonProperty("CreatorRequestId") String creatorRequestId, @JsonProperty("FirewallDomainListId") String firewallDomainListId, @JsonProperty("FirewallRuleGroupId") String firewallRuleGroupId, @JsonProperty("Name") String name, @JsonProperty("Priority") Long priority) {
+        this.action = action;
+        this.creatorRequestId = creatorRequestId;
+        this.firewallDomainListId = firewallDomainListId;
+        this.firewallRuleGroupId = firewallRuleGroupId;
+        this.name = name;
+        this.priority = priority;
+  }
 }

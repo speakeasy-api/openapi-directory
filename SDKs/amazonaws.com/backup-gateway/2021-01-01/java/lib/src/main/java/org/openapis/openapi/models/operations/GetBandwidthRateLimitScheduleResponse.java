@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBandwidthRateLimitScheduleResponse {
     
     public String contentType;
+
     public GetBandwidthRateLimitScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBandwidthRateLimitScheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBandwidthRateLimitScheduleOutput getBandwidthRateLimitScheduleOutput;
+
     public GetBandwidthRateLimitScheduleResponse withGetBandwidthRateLimitScheduleOutput(org.openapis.openapi.models.shared.GetBandwidthRateLimitScheduleOutput getBandwidthRateLimitScheduleOutput) {
         this.getBandwidthRateLimitScheduleOutput = getBandwidthRateLimitScheduleOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetBandwidthRateLimitScheduleResponse {
      */
     
     public Object internalServerException;
+
     public GetBandwidthRateLimitScheduleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetBandwidthRateLimitScheduleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetBandwidthRateLimitScheduleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetBandwidthRateLimitScheduleResponse {
     
     
     public Integer statusCode;
+
     public GetBandwidthRateLimitScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetBandwidthRateLimitScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBandwidthRateLimitScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetBandwidthRateLimitScheduleResponse {
      */
     
     public Object throttlingException;
+
     public GetBandwidthRateLimitScheduleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetBandwidthRateLimitScheduleResponse {
      */
     
     public Object validationException;
+
     public GetBandwidthRateLimitScheduleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetBandwidthRateLimitScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

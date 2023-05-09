@@ -17,6 +17,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public AssessmentPendingSubmission withContent(String content) {
         this.content = content;
         return this;
@@ -25,6 +26,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public Document[] documents;
+
     public AssessmentPendingSubmission withDocuments(Document[] documents) {
         this.documents = documents;
         return this;
@@ -35,6 +37,7 @@ public class AssessmentPendingSubmission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dueDate")
     public OffsetDateTime dueDate;
+
     public AssessmentPendingSubmission withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -43,6 +46,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMinutes")
     public Integer durationMinutes;
+
     public AssessmentPendingSubmission withDurationMinutes(Integer durationMinutes) {
         this.durationMinutes = durationMinutes;
         return this;
@@ -51,6 +55,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public AssessmentPendingSubmission withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -59,6 +64,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public AssessmentPendingSubmission withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -67,6 +73,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentPendingSubmission withId(String id) {
         this.id = id;
         return this;
@@ -75,6 +82,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markNumber")
     public String markNumber;
+
     public AssessmentPendingSubmission withMarkNumber(String markNumber) {
         this.markNumber = markNumber;
         return this;
@@ -83,6 +91,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markType")
     public String markType;
+
     public AssessmentPendingSubmission withMarkType(String markType) {
         this.markType = markType;
         return this;
@@ -91,6 +100,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAttempts")
     public Integer maxAttempts;
+
     public AssessmentPendingSubmission withMaxAttempts(Integer maxAttempts) {
         this.maxAttempts = maxAttempts;
         return this;
@@ -99,6 +109,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringId")
     public String offeringId;
+
     public AssessmentPendingSubmission withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -107,6 +118,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringName")
     public String offeringName;
+
     public AssessmentPendingSubmission withOfferingName(String offeringName) {
         this.offeringName = offeringName;
         return this;
@@ -117,6 +129,7 @@ public class AssessmentPendingSubmission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("openDate")
     public OffsetDateTime openDate;
+
     public AssessmentPendingSubmission withOpenDate(OffsetDateTime openDate) {
         this.openDate = openDate;
         return this;
@@ -125,6 +138,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public AssessmentPendingSubmission withPid(String pid) {
         this.pid = pid;
         return this;
@@ -133,6 +147,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public String points;
+
     public AssessmentPendingSubmission withPoints(String points) {
         this.points = points;
         return this;
@@ -141,6 +156,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themes")
     public ThemeResponse[] themes;
+
     public AssessmentPendingSubmission withThemes(ThemeResponse[] themes) {
         this.themes = themes;
         return this;
@@ -149,6 +165,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AssessmentPendingSubmission withTitle(String title) {
         this.title = title;
         return this;
@@ -157,6 +174,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalQuestions")
     public Integer totalQuestions;
+
     public AssessmentPendingSubmission withTotalQuestions(Integer totalQuestions) {
         this.totalQuestions = totalQuestions;
         return this;
@@ -165,6 +183,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalThemes")
     public Integer totalThemes;
+
     public AssessmentPendingSubmission withTotalThemes(Integer totalThemes) {
         this.totalThemes = totalThemes;
         return this;
@@ -173,6 +192,7 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AssessmentPendingSubmission withType(String type) {
         this.type = type;
         return this;
@@ -181,9 +201,11 @@ public class AssessmentPendingSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public User[] users;
+
     public AssessmentPendingSubmission withUsers(User[] users) {
         this.users = users;
         return this;
     }
     
+    public AssessmentPendingSubmission(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBudgetResponse {
@@ -12,6 +13,7 @@ public class UpdateBudgetResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateBudgetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBudgetResponse {
     
     
     public String contentType;
+
     public UpdateBudgetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBudgetResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateBudgetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBudgetResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateBudgetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateBudgetResponse {
      */
     
     public Object notFoundException;
+
     public UpdateBudgetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateBudgetResponse {
     
     
     public Integer statusCode;
+
     public UpdateBudgetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBudgetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBudgetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBudgetResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBudgetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateBudgetResponse {
      */
     
     public java.util.Map<String, Object> updateBudgetResponse;
+
     public UpdateBudgetResponse withUpdateBudgetResponse(java.util.Map<String, Object> updateBudgetResponse) {
         this.updateBudgetResponse = updateBudgetResponse;
         return this;
     }
     
+    public UpdateBudgetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

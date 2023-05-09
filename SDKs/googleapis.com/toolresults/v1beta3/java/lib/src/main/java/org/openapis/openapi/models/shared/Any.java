@@ -18,6 +18,7 @@ public class Any {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeUrl")
     public String typeUrl;
+
     public Any withTypeUrl(String typeUrl) {
         this.typeUrl = typeUrl;
         return this;
@@ -29,9 +30,11 @@ public class Any {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Any withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Any(){}
 }

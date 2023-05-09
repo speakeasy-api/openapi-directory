@@ -15,6 +15,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public Session withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -23,6 +24,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamUrl")
     public String streamUrl;
+
     public Session withStreamUrl(String streamUrl) {
         this.streamUrl = streamUrl;
         return this;
@@ -31,9 +33,11 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenValue")
     public String tokenValue;
+
     public Session withTokenValue(String tokenValue) {
         this.tokenValue = tokenValue;
         return this;
     }
     
+    public Session(){}
 }

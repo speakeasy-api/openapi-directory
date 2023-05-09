@@ -12,6 +12,7 @@ public class PatientHealthResultResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public PatientHealthResultResourceAttributes attributes;
+
     public PatientHealthResultResource withAttributes(PatientHealthResultResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class PatientHealthResultResource {
     
     @JsonProperty("id")
     public String id;
+
     public PatientHealthResultResource withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class PatientHealthResultResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public PatientHealthResultResourceRelationships relationships;
+
     public PatientHealthResultResource withRelationships(PatientHealthResultResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +37,14 @@ public class PatientHealthResultResource {
     
     @JsonProperty("type")
     public String type;
+
     public PatientHealthResultResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PatientHealthResultResource(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

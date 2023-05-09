@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRuleGroupsNamespaceResponse {
@@ -12,6 +13,7 @@ public class DeleteRuleGroupsNamespaceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRuleGroupsNamespaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRuleGroupsNamespaceResponse {
      */
     
     public Object conflictException;
+
     public DeleteRuleGroupsNamespaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRuleGroupsNamespaceResponse {
     
     
     public String contentType;
+
     public DeleteRuleGroupsNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRuleGroupsNamespaceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRuleGroupsNamespaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRuleGroupsNamespaceResponse {
     
     
     public Integer statusCode;
+
     public DeleteRuleGroupsNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRuleGroupsNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRuleGroupsNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRuleGroupsNamespaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRuleGroupsNamespaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRuleGroupsNamespaceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRuleGroupsNamespaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteRuleGroupsNamespaceResponse {
      */
     
     public Object validationException;
+
     public DeleteRuleGroupsNamespaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRuleGroupsNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

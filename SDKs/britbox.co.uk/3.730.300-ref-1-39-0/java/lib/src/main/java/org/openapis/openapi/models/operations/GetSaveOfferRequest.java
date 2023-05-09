@@ -22,9 +22,11 @@ public class GetSaveOfferRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetSaveOfferRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetSaveOfferRequest(){}
 }

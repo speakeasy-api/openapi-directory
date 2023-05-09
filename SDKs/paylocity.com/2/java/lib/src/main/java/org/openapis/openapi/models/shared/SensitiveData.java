@@ -18,6 +18,7 @@ public class SensitiveData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disability")
     public SensitiveDataDisability disability;
+
     public SensitiveData withDisability(SensitiveDataDisability disability) {
         this.disability = disability;
         return this;
@@ -29,6 +30,7 @@ public class SensitiveData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicity")
     public SensitiveDataEthnicity ethnicity;
+
     public SensitiveData withEthnicity(SensitiveDataEthnicity ethnicity) {
         this.ethnicity = ethnicity;
         return this;
@@ -40,6 +42,7 @@ public class SensitiveData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public SensitiveDataGender gender;
+
     public SensitiveData withGender(SensitiveDataGender gender) {
         this.gender = gender;
         return this;
@@ -51,9 +54,11 @@ public class SensitiveData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("veteran")
     public SensitiveDataVeteran veteran;
+
     public SensitiveData withVeteran(SensitiveDataVeteran veteran) {
         this.veteran = veteran;
         return this;
     }
     
+    public SensitiveData(){}
 }

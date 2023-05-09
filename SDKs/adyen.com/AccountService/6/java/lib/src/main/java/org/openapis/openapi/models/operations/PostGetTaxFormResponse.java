@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostGetTaxFormResponse {
     
     public String contentType;
+
     public PostGetTaxFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostGetTaxFormResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTaxFormResponse getTaxFormResponse;
+
     public PostGetTaxFormResponse withGetTaxFormResponse(org.openapis.openapi.models.shared.GetTaxFormResponse getTaxFormResponse) {
         this.getTaxFormResponse = getTaxFormResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostGetTaxFormResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostGetTaxFormResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostGetTaxFormResponse {
     
     
     public Integer statusCode;
+
     public PostGetTaxFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostGetTaxFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostGetTaxFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostGetTaxFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

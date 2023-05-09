@@ -15,6 +15,7 @@ public class AboutQuotaBytesByService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesUsed")
     public String bytesUsed;
+
     public AboutQuotaBytesByService withBytesUsed(String bytesUsed) {
         this.bytesUsed = bytesUsed;
         return this;
@@ -26,9 +27,11 @@ public class AboutQuotaBytesByService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public AboutQuotaBytesByService withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public AboutQuotaBytesByService(){}
 }

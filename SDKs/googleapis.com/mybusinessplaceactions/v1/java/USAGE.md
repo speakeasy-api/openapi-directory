@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest;
 import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.PlaceActionLinkPlaceActionTypeEnum;
 import org.openapis.openapi.models.shared.PlaceActionLinkInput;
+import org.openapis.openapi.models.shared.PlaceActionLinkPlaceActionTypeEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -17,34 +16,35 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest req = new MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest() {{
-                dollarXgafv = "2";
+            MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest req = new MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 placeActionLinkInput = new PlaceActionLinkInput() {{
                     isPreferred = false;
-                    name = "provident";
-                    placeActionType = "FOOD_DELIVERY";
-                    uri = "https://outstanding-strait.name";
-                }};
-                accessToken = "illum";
-                alt = "media";
-                callback = "error";
-                fields = "deserunt";
-                key = "suscipit";
-                oauthToken = "iure";
-                parent = "magnam";
+                    name = "Ellis Mitchell";
+                    placeActionType = PlaceActionLinkPlaceActionTypeEnum.FOOD_TAKEOUT;
+                    uri = "http://physical-pegboard.info";
+                }};;
+                accessToken = "iure";
+                alt = AltEnum.JSON;
+                callback = "debitis";
+                fields = "ipsa";
+                key = "delectus";
+                oauthToken = "tempora";
                 prettyPrint = false;
-                quotaUser = "debitis";
-                uploadType = "ipsa";
-                uploadProtocol = "delectus";
-            }}            
+                quotaUser = "suscipit";
+                uploadType = "molestiae";
+                uploadProtocol = "minus";
+            }};            
 
             MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse res = sdk.locations.mybusinessplaceactionsLocationsPlaceActionLinksCreate(req);
 
-            if (res.placeActionLink.isPresent()) {
+            if (res.placeActionLink != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

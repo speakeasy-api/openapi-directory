@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetCleansessionRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetCleansessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetCleansessionRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetCleansessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cleanOrNot")
     public Integer cleanOrNot;
+
     public ProtocolMqttClientSetCleansessionRequest withCleanOrNot(Integer cleanOrNot) {
         this.cleanOrNot = cleanOrNot;
         return this;
     }
     
+    public ProtocolMqttClientSetCleansessionRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("cleanOrNot") Integer cleanOrNot) {
+        this.agentNum = agentNum;
+        this.cleanOrNot = cleanOrNot;
+  }
 }

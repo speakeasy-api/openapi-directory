@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoryRequest {
@@ -13,6 +14,7 @@ public class GetStoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetStoryRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +27,7 @@ public class GetStoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetStoryRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetStoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetStoryRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +52,7 @@ public class GetStoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetStoryRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,9 +63,13 @@ public class GetStoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_gid")
     public String storyGid;
+
     public GetStoryRequest withStoryGid(String storyGid) {
         this.storyGid = storyGid;
         return this;
     }
     
+    public GetStoryRequest(@JsonProperty("story_gid") String storyGid) {
+        this.storyGid = storyGid;
+  }
 }

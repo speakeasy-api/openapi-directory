@@ -37,4 +37,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/SubjectErasureResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceError.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubjectErasureByPspReferenceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

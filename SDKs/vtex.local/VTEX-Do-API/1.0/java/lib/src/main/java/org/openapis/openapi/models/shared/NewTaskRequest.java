@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NewTaskRequest {
     @JsonProperty("assignee")
     public Assignee assignee;
+
     public NewTaskRequest withAssignee(Assignee assignee) {
         this.assignee = assignee;
         return this;
@@ -16,6 +17,7 @@ public class NewTaskRequest {
     
     @JsonProperty("context")
     public String context;
+
     public NewTaskRequest withContext(String context) {
         this.context = context;
         return this;
@@ -23,6 +25,7 @@ public class NewTaskRequest {
     
     @JsonProperty("description")
     public String description;
+
     public NewTaskRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class NewTaskRequest {
     
     @JsonProperty("domain")
     public String domain;
+
     public NewTaskRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -37,6 +41,7 @@ public class NewTaskRequest {
     
     @JsonProperty("dueDate")
     public String dueDate;
+
     public NewTaskRequest withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -44,6 +49,7 @@ public class NewTaskRequest {
     
     @JsonProperty("followers")
     public Follower[] followers;
+
     public NewTaskRequest withFollowers(Follower[] followers) {
         this.followers = followers;
         return this;
@@ -51,6 +57,7 @@ public class NewTaskRequest {
     
     @JsonProperty("name")
     public String name;
+
     public NewTaskRequest withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +65,7 @@ public class NewTaskRequest {
     
     @JsonProperty("parentTaskId")
     public String parentTaskId;
+
     public NewTaskRequest withParentTaskId(String parentTaskId) {
         this.parentTaskId = parentTaskId;
         return this;
@@ -65,6 +73,7 @@ public class NewTaskRequest {
     
     @JsonProperty("priority")
     public String priority;
+
     public NewTaskRequest withPriority(String priority) {
         this.priority = priority;
         return this;
@@ -72,6 +81,7 @@ public class NewTaskRequest {
     
     @JsonProperty("surrogateKey")
     public String surrogateKey;
+
     public NewTaskRequest withSurrogateKey(String surrogateKey) {
         this.surrogateKey = surrogateKey;
         return this;
@@ -79,9 +89,23 @@ public class NewTaskRequest {
     
     @JsonProperty("target")
     public Target[] target;
+
     public NewTaskRequest withTarget(Target[] target) {
         this.target = target;
         return this;
     }
     
+    public NewTaskRequest(@JsonProperty("assignee") Assignee assignee, @JsonProperty("context") String context, @JsonProperty("description") String description, @JsonProperty("domain") String domain, @JsonProperty("dueDate") String dueDate, @JsonProperty("followers") Follower[] followers, @JsonProperty("name") String name, @JsonProperty("parentTaskId") String parentTaskId, @JsonProperty("priority") String priority, @JsonProperty("surrogateKey") String surrogateKey, @JsonProperty("target") Target[] target) {
+        this.assignee = assignee;
+        this.context = context;
+        this.description = description;
+        this.domain = domain;
+        this.dueDate = dueDate;
+        this.followers = followers;
+        this.name = name;
+        this.parentTaskId = parentTaskId;
+        this.priority = priority;
+        this.surrogateKey = surrogateKey;
+        this.target = target;
+  }
 }

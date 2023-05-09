@@ -12,9 +12,11 @@ public class DiskResourceStatusAsyncReplicationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DiskResourceStatusAsyncReplicationStatusStateEnum state;
+
     public DiskResourceStatusAsyncReplicationStatus withState(DiskResourceStatusAsyncReplicationStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DiskResourceStatusAsyncReplicationStatus(){}
 }

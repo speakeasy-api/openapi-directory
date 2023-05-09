@@ -18,6 +18,7 @@ public class GoogleDevtoolsArtifactregistryV1File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleDevtoolsArtifactregistryV1File withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDevtoolsArtifactregistryV1File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetchTime")
     public String fetchTime;
+
     public GoogleDevtoolsArtifactregistryV1File withFetchTime(String fetchTime) {
         this.fetchTime = fetchTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleDevtoolsArtifactregistryV1File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashes")
     public Hash[] hashes;
+
     public GoogleDevtoolsArtifactregistryV1File withHashes(Hash[] hashes) {
         this.hashes = hashes;
         return this;
@@ -51,6 +54,7 @@ public class GoogleDevtoolsArtifactregistryV1File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleDevtoolsArtifactregistryV1File withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleDevtoolsArtifactregistryV1File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public GoogleDevtoolsArtifactregistryV1File withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -73,6 +78,7 @@ public class GoogleDevtoolsArtifactregistryV1File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public String sizeBytes;
+
     public GoogleDevtoolsArtifactregistryV1File withSizeBytes(String sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -84,9 +90,11 @@ public class GoogleDevtoolsArtifactregistryV1File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleDevtoolsArtifactregistryV1File withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleDevtoolsArtifactregistryV1File(){}
 }

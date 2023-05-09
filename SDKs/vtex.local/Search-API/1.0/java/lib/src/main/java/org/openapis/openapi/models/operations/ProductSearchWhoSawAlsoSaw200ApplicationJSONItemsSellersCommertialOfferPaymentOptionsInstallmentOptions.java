@@ -12,6 +12,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("bin")
     public String bin;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withBin(String bin) {
         this.bin = bin;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("installments")
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments[] installments;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withInstallments(ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments[] installments) {
         this.installments = installments;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("paymentGroupName")
     public String paymentGroupName;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withPaymentGroupName(String paymentGroupName) {
         this.paymentGroupName = paymentGroupName;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("paymentName")
     public String paymentName;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withPaymentName(String paymentName) {
         this.paymentName = paymentName;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -62,9 +67,18 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("value")
     public Long value;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptions(@JsonProperty("bin") String bin, @JsonProperty("installments") ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments[] installments, @JsonProperty("paymentGroupName") String paymentGroupName, @JsonProperty("paymentName") String paymentName, @JsonProperty("paymentSystem") String paymentSystem, @JsonProperty("value") Long value) {
+        this.bin = bin;
+        this.installments = installments;
+        this.paymentGroupName = paymentGroupName;
+        this.paymentName = paymentName;
+        this.paymentSystem = paymentSystem;
+        this.value = value;
+  }
 }

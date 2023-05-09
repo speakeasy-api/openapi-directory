@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdcerResponse {
     
     public String contentType;
+
     public IdcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IdcerResponse {
     
     
     public Integer statusCode;
+
     public IdcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IdcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IdcerResponse {
      */
     
     public Idcer400ApplicationJSON idcer400ApplicationJSONObject;
+
     public IdcerResponse withIdcer400ApplicationJSONObject(Idcer400ApplicationJSON idcer400ApplicationJSONObject) {
         this.idcer400ApplicationJSONObject = idcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class IdcerResponse {
      */
     
     public Idcer401ApplicationJSON idcer401ApplicationJSONObject;
+
     public IdcerResponse withIdcer401ApplicationJSONObject(Idcer401ApplicationJSON idcer401ApplicationJSONObject) {
         this.idcer401ApplicationJSONObject = idcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class IdcerResponse {
      */
     
     public Idcer404ApplicationJSON idcer404ApplicationJSONObject;
+
     public IdcerResponse withIdcer404ApplicationJSONObject(Idcer404ApplicationJSON idcer404ApplicationJSONObject) {
         this.idcer404ApplicationJSONObject = idcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class IdcerResponse {
      */
     
     public Idcer500ApplicationJSON idcer500ApplicationJSONObject;
+
     public IdcerResponse withIdcer500ApplicationJSONObject(Idcer500ApplicationJSON idcer500ApplicationJSONObject) {
         this.idcer500ApplicationJSONObject = idcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class IdcerResponse {
      */
     
     public Idcer502ApplicationJSON idcer502ApplicationJSONObject;
+
     public IdcerResponse withIdcer502ApplicationJSONObject(Idcer502ApplicationJSON idcer502ApplicationJSONObject) {
         this.idcer502ApplicationJSONObject = idcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class IdcerResponse {
      */
     
     public Idcer503ApplicationJSON idcer503ApplicationJSONObject;
+
     public IdcerResponse withIdcer503ApplicationJSONObject(Idcer503ApplicationJSON idcer503ApplicationJSONObject) {
         this.idcer503ApplicationJSONObject = idcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class IdcerResponse {
      */
     
     public Idcer504ApplicationJSON idcer504ApplicationJSONObject;
+
     public IdcerResponse withIdcer504ApplicationJSONObject(Idcer504ApplicationJSON idcer504ApplicationJSONObject) {
         this.idcer504ApplicationJSONObject = idcer504ApplicationJSONObject;
         return this;
     }
     
+    public IdcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

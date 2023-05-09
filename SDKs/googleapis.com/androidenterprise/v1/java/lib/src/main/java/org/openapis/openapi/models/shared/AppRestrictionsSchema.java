@@ -18,6 +18,7 @@ public class AppRestrictionsSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AppRestrictionsSchema withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class AppRestrictionsSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public AppRestrictionsSchemaRestriction[] restrictions;
+
     public AppRestrictionsSchema withRestrictions(AppRestrictionsSchemaRestriction[] restrictions) {
         this.restrictions = restrictions;
         return this;
     }
     
+    public AppRestrictionsSchema(){}
 }

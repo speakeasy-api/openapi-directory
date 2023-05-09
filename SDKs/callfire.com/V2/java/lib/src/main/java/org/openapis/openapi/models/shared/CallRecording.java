@@ -18,6 +18,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callId")
     public Long callId;
+
     public CallRecording withCallId(Long callId) {
         this.callId = callId;
         return this;
@@ -29,6 +30,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public Long campaignId;
+
     public CallRecording withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -40,6 +42,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public CallRecording withCreated(Long created) {
         this.created = created;
         return this;
@@ -51,6 +54,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public CallRecording withHash(String hash) {
         this.hash = hash;
         return this;
@@ -62,6 +66,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CallRecording withId(Long id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthInBytes")
     public Long lengthInBytes;
+
     public CallRecording withLengthInBytes(Long lengthInBytes) {
         this.lengthInBytes = lengthInBytes;
         return this;
@@ -84,6 +90,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthInSeconds")
     public Integer lengthInSeconds;
+
     public CallRecording withLengthInSeconds(Integer lengthInSeconds) {
         this.lengthInSeconds = lengthInSeconds;
         return this;
@@ -95,6 +102,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mp3Url")
     public String mp3Url;
+
     public CallRecording withMp3Url(String mp3Url) {
         this.mp3Url = mp3Url;
         return this;
@@ -106,6 +114,7 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CallRecording withName(String name) {
         this.name = name;
         return this;
@@ -117,9 +126,11 @@ public class CallRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CallRecordingStateEnum state;
+
     public CallRecording withState(CallRecordingStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CallRecording(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckTokenResponse {
     
     public byte[] body;
+
     public CheckTokenResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CheckTokenResponse {
     
     
     public String contentType;
+
     public CheckTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CheckTokenResponse {
     
     
     public Integer statusCode;
+
     public CheckTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CheckTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class CheckTokenResponse {
      */
     
     public String checkToken400WildcardString;
+
     public CheckTokenResponse withCheckToken400WildcardString(String checkToken400WildcardString) {
         this.checkToken400WildcardString = checkToken400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class CheckTokenResponse {
      */
     
     public String checkToken401WildcardString;
+
     public CheckTokenResponse withCheckToken401WildcardString(String checkToken401WildcardString) {
         this.checkToken401WildcardString = checkToken401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class CheckTokenResponse {
      */
     
     public String checkToken404WildcardString;
+
     public CheckTokenResponse withCheckToken404WildcardString(String checkToken404WildcardString) {
         this.checkToken404WildcardString = checkToken404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class CheckTokenResponse {
      */
     
     public String checkToken409WildcardString;
+
     public CheckTokenResponse withCheckToken409WildcardString(String checkToken409WildcardString) {
         this.checkToken409WildcardString = checkToken409WildcardString;
         return this;
     }
     
+    public CheckTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

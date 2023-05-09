@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientCreateResourceInput {
     @JsonProperty("attributes")
     public PatientCreateResourceAttributesInput attributes;
+
     public PatientCreateResourceInput withAttributes(PatientCreateResourceAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -24,6 +25,7 @@ public class PatientCreateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PatientCreateResourceInput withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PatientCreateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public PatientCreateResourceRelationshipsInput relationships;
+
     public PatientCreateResourceInput withRelationships(PatientCreateResourceRelationshipsInput relationships) {
         this.relationships = relationships;
         return this;
@@ -39,9 +42,14 @@ public class PatientCreateResourceInput {
     
     @JsonProperty("type")
     public PatientCreateResourceTypeEnum type;
+
     public PatientCreateResourceInput withType(PatientCreateResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientCreateResourceInput(@JsonProperty("attributes") PatientCreateResourceAttributesInput attributes, @JsonProperty("type") PatientCreateResourceTypeEnum type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

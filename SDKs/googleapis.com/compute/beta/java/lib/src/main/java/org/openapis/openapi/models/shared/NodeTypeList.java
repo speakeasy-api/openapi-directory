@@ -18,6 +18,7 @@ public class NodeTypeList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeTypeList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class NodeTypeList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public NodeType[] items;
+
     public NodeTypeList withItems(NodeType[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class NodeTypeList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NodeTypeList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class NodeTypeList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public NodeTypeList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class NodeTypeList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NodeTypeList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class NodeTypeList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NodeTypeListWarning warning;
+
     public NodeTypeList withWarning(NodeTypeListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NodeTypeList(){}
 }

@@ -18,6 +18,7 @@ public class ListProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListProvidersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providers")
     public Provider[] providers;
+
     public ListProvidersResponse withProviders(Provider[] providers) {
         this.providers = providers;
         return this;
@@ -40,9 +42,11 @@ public class ListProvidersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListProvidersResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListProvidersResponse(){}
 }

@@ -15,6 +15,7 @@ public class AnalyticsCrashFreeDevicePercentages200ApplicationJSONDailyPercentag
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datetime")
     public String datetime;
+
     public AnalyticsCrashFreeDevicePercentages200ApplicationJSONDailyPercentages withDatetime(String datetime) {
         this.datetime = datetime;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsCrashFreeDevicePercentages200ApplicationJSONDailyPercentag
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public AnalyticsCrashFreeDevicePercentages200ApplicationJSONDailyPercentages withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public AnalyticsCrashFreeDevicePercentages200ApplicationJSONDailyPercentages(){}
 }

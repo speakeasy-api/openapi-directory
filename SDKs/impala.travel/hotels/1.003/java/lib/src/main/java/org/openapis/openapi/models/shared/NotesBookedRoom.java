@@ -16,6 +16,7 @@ public class NotesBookedRoom {
      */
     @JsonProperty("fromGuest")
     public String fromGuest;
+
     public NotesBookedRoom withFromGuest(String fromGuest) {
         this.fromGuest = fromGuest;
         return this;
@@ -26,9 +27,14 @@ public class NotesBookedRoom {
      */
     @JsonProperty("fromSeller")
     public String fromSeller;
+
     public NotesBookedRoom withFromSeller(String fromSeller) {
         this.fromSeller = fromSeller;
         return this;
     }
     
+    public NotesBookedRoom(@JsonProperty("fromGuest") String fromGuest, @JsonProperty("fromSeller") String fromSeller) {
+        this.fromGuest = fromGuest;
+        this.fromSeller = fromSeller;
+  }
 }

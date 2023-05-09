@@ -18,6 +18,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public String[] allowedValues;
+
     public DataSourceParameter withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -29,6 +30,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
+
     public DataSourceParameter withDeprecated(Boolean deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -40,6 +42,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DataSourceParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public DataSourceParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public DataSourceParameter[] fields;
+
     public DataSourceParameter withFields(DataSourceParameter[] fields) {
         this.fields = fields;
         return this;
@@ -73,6 +78,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("immutable")
     public Boolean immutable;
+
     public DataSourceParameter withImmutable(Boolean immutable) {
         this.immutable = immutable;
         return this;
@@ -84,6 +90,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public DataSourceParameter withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -95,6 +102,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Double minValue;
+
     public DataSourceParameter withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
@@ -106,6 +114,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paramId")
     public String paramId;
+
     public DataSourceParameter withParamId(String paramId) {
         this.paramId = paramId;
         return this;
@@ -117,6 +126,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurse")
     public Boolean recurse;
+
     public DataSourceParameter withRecurse(Boolean recurse) {
         this.recurse = recurse;
         return this;
@@ -128,6 +138,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeated")
     public Boolean repeated;
+
     public DataSourceParameter withRepeated(Boolean repeated) {
         this.repeated = repeated;
         return this;
@@ -139,6 +150,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public DataSourceParameter withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -150,6 +162,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DataSourceParameterTypeEnum type;
+
     public DataSourceParameter withType(DataSourceParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -161,6 +174,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationDescription")
     public String validationDescription;
+
     public DataSourceParameter withValidationDescription(String validationDescription) {
         this.validationDescription = validationDescription;
         return this;
@@ -172,6 +186,7 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationHelpUrl")
     public String validationHelpUrl;
+
     public DataSourceParameter withValidationHelpUrl(String validationHelpUrl) {
         this.validationHelpUrl = validationHelpUrl;
         return this;
@@ -183,9 +198,11 @@ public class DataSourceParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationRegex")
     public String validationRegex;
+
     public DataSourceParameter withValidationRegex(String validationRegex) {
         this.validationRegex = validationRegex;
         return this;
     }
     
+    public DataSourceParameter(){}
 }

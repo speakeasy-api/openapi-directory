@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSigninSigninIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Signin signin;
+
     public PutSigninSigninIdRequest withSignin(org.openapis.openapi.models.shared.Signin signin) {
         this.signin = signin;
         return this;
@@ -19,9 +21,13 @@ public class PutSigninSigninIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=signinId")
     public Long signinId;
+
     public PutSigninSigninIdRequest withSigninId(Long signinId) {
         this.signinId = signinId;
         return this;
     }
     
+    public PutSigninSigninIdRequest(@JsonProperty("signinId") Long signinId) {
+        this.signinId = signinId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRoutersGetNatMappingInfoResponse {
     
     public String contentType;
+
     public ComputeRoutersGetNatMappingInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeRoutersGetNatMappingInfoResponse {
     
     
     public Integer statusCode;
+
     public ComputeRoutersGetNatMappingInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeRoutersGetNatMappingInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRoutersGetNatMappingInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRoutersGetNatMappingInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.VmEndpointNatMappingsList vmEndpointNatMappingsList;
+
     public ComputeRoutersGetNatMappingInfoResponse withVmEndpointNatMappingsList(org.openapis.openapi.models.shared.VmEndpointNatMappingsList vmEndpointNatMappingsList) {
         this.vmEndpointNatMappingsList = vmEndpointNatMappingsList;
         return this;
     }
     
+    public ComputeRoutersGetNatMappingInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

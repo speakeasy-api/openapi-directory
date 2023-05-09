@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesRegisterUserForDeviceRequest {
@@ -12,6 +13,7 @@ public class DevicesRegisterUserForDeviceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DevicesRegisterUserForDeviceRequestBody requestBody;
+
     public DevicesRegisterUserForDeviceRequest withRequestBody(DevicesRegisterUserForDeviceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class DevicesRegisterUserForDeviceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public String userId;
+
     public DevicesRegisterUserForDeviceRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DevicesRegisterUserForDeviceRequest(@JsonProperty("RequestBody") DevicesRegisterUserForDeviceRequestBody requestBody, @JsonProperty("user_id") String userId) {
+        this.requestBody = requestBody;
+        this.userId = userId;
+  }
 }

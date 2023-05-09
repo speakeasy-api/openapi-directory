@@ -15,6 +15,7 @@ public class Search {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Displayable")
     public Boolean displayable;
+
     public Search withDisplayable(Boolean displayable) {
         this.displayable = displayable;
         return this;
@@ -23,6 +24,7 @@ public class Search {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Facetable")
     public Boolean facetable;
+
     public Search withFacetable(Boolean facetable) {
         this.facetable = facetable;
         return this;
@@ -31,6 +33,7 @@ public class Search {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Searchable")
     public Boolean searchable;
+
     public Search withSearchable(Boolean searchable) {
         this.searchable = searchable;
         return this;
@@ -39,9 +42,11 @@ public class Search {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sortable")
     public Boolean sortable;
+
     public Search withSortable(Boolean sortable) {
         this.sortable = sortable;
         return this;
     }
     
+    public Search(){}
 }

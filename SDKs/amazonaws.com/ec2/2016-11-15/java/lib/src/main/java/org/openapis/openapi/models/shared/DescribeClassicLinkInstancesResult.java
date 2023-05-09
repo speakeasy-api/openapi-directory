@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClassicLinkInstancesResult {
     
     public DescribeClassicLinkInstancesResultInstances[] instances;
+
     public DescribeClassicLinkInstancesResult withInstances(DescribeClassicLinkInstancesResultInstances[] instances) {
         this.instances = instances;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClassicLinkInstancesResult {
     
     
     public String nextToken;
+
     public DescribeClassicLinkInstancesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeClassicLinkInstancesResult(){}
 }

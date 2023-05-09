@@ -18,6 +18,7 @@ public class ListBiddersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidders")
     public Bidder[] bidders;
+
     public ListBiddersResponse withBidders(Bidder[] bidders) {
         this.bidders = bidders;
         return this;
@@ -29,9 +30,11 @@ public class ListBiddersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBiddersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBiddersResponse(){}
 }

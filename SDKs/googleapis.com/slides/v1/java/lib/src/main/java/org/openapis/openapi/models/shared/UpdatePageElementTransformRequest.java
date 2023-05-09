@@ -18,6 +18,7 @@ public class UpdatePageElementTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyMode")
     public UpdatePageElementTransformRequestApplyModeEnum applyMode;
+
     public UpdatePageElementTransformRequest withApplyMode(UpdatePageElementTransformRequestApplyModeEnum applyMode) {
         this.applyMode = applyMode;
         return this;
@@ -29,6 +30,7 @@ public class UpdatePageElementTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdatePageElementTransformRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class UpdatePageElementTransformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transform")
     public AffineTransform transform;
+
     public UpdatePageElementTransformRequest withTransform(AffineTransform transform) {
         this.transform = transform;
         return this;
     }
     
+    public UpdatePageElementTransformRequest(){}
 }

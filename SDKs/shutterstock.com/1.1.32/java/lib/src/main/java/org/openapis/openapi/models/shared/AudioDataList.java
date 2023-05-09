@@ -18,6 +18,7 @@ public class AudioDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Audio[] data;
+
     public AudioDataList withData(Audio[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class AudioDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public AudioDataList withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class AudioDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AudioDataList withMessage(String message) {
         this.message = message;
         return this;
@@ -51,6 +54,7 @@ public class AudioDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public AudioDataList withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +66,7 @@ public class AudioDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public AudioDataList withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,9 +78,11 @@ public class AudioDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public AudioDataList withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public AudioDataList(){}
 }

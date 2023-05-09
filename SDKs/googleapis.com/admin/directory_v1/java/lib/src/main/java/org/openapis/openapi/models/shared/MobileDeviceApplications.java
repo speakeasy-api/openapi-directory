@@ -15,6 +15,7 @@ public class MobileDeviceApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public MobileDeviceApplications withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,6 +27,7 @@ public class MobileDeviceApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public MobileDeviceApplications withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -37,6 +39,7 @@ public class MobileDeviceApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String[] permission;
+
     public MobileDeviceApplications withPermission(String[] permission) {
         this.permission = permission;
         return this;
@@ -48,6 +51,7 @@ public class MobileDeviceApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public Integer versionCode;
+
     public MobileDeviceApplications withVersionCode(Integer versionCode) {
         this.versionCode = versionCode;
         return this;
@@ -59,9 +63,11 @@ public class MobileDeviceApplications {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionName")
     public String versionName;
+
     public MobileDeviceApplications withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public MobileDeviceApplications(){}
 }

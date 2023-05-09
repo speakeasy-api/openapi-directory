@@ -15,6 +15,7 @@ public class RunPipelineActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logResult")
     public String logResult;
+
     public RunPipelineActivityResponse withLogResult(String logResult) {
         this.logResult = logResult;
         return this;
@@ -23,9 +24,11 @@ public class RunPipelineActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloads")
     public String[] payloads;
+
     public RunPipelineActivityResponse withPayloads(String[] payloads) {
         this.payloads = payloads;
         return this;
     }
     
+    public RunPipelineActivityResponse(){}
 }

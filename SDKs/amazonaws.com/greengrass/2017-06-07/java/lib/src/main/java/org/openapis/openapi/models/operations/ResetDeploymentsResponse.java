@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetDeploymentsResponse {
@@ -12,6 +13,7 @@ public class ResetDeploymentsResponse {
      */
     
     public Object badRequestException;
+
     public ResetDeploymentsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ResetDeploymentsResponse {
     
     
     public String contentType;
+
     public ResetDeploymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ResetDeploymentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ResetDeploymentsResponse resetDeploymentsResponse;
+
     public ResetDeploymentsResponse withResetDeploymentsResponse(org.openapis.openapi.models.shared.ResetDeploymentsResponse resetDeploymentsResponse) {
         this.resetDeploymentsResponse = resetDeploymentsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ResetDeploymentsResponse {
     
     
     public Integer statusCode;
+
     public ResetDeploymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ResetDeploymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetDeploymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResetDeploymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

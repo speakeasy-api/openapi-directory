@@ -12,6 +12,7 @@ public class CreateContractResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contracts")
     public LinksGetContractsLink contracts;
+
     public CreateContractResponseLinks withContracts(LinksGetContractsLink contracts) {
         this.contracts = contracts;
         return this;
@@ -20,9 +21,11 @@ public class CreateContractResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksCreateContractLink self;
+
     public CreateContractResponseLinks withSelf(LinksCreateContractLink self) {
         this.self = self;
         return this;
     }
     
+    public CreateContractResponseLinks(){}
 }

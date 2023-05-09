@@ -56,14 +56,12 @@ public class PropertyController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PropertyControllerGetPropertiesPhotosResponse res = new org.openapis.openapi.models.operations.PropertyControllerGetPropertiesPhotosResponse() {{
+        org.openapis.openapi.models.operations.PropertyControllerGetPropertiesPhotosResponse res = new org.openapis.openapi.models.operations.PropertyControllerGetPropertiesPhotosResponse(contentType, httpRes.statusCode()) {{
             landlordPhotoModelResults = null;
             landlordPhotoModelResults = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

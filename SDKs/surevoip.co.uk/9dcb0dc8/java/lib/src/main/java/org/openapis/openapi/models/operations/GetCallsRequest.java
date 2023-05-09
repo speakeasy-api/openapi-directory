@@ -12,9 +12,11 @@ public class GetCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validate")
     public Long validate;
+
     public GetCallsRequest withValidate(Long validate) {
         this.validate = validate;
         return this;
     }
     
+    public GetCallsRequest(){}
 }

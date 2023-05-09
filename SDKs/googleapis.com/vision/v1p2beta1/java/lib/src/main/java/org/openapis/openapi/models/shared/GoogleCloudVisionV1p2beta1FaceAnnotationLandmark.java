@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1FaceAnnotationLandmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public GoogleCloudVisionV1p2beta1Position position;
+
     public GoogleCloudVisionV1p2beta1FaceAnnotationLandmark withPosition(GoogleCloudVisionV1p2beta1Position position) {
         this.position = position;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p2beta1FaceAnnotationLandmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum type;
+
     public GoogleCloudVisionV1p2beta1FaceAnnotationLandmark withType(GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1FaceAnnotationLandmark(){}
 }

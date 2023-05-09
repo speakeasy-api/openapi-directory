@@ -12,9 +12,11 @@ public class GetApiV2ListMarketsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-RapidApi-Key")
     public String xRapidApiKey;
+
     public GetApiV2ListMarketsRequest withXRapidApiKey(String xRapidApiKey) {
         this.xRapidApiKey = xRapidApiKey;
         return this;
     }
     
+    public GetApiV2ListMarketsRequest(){}
 }

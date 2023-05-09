@@ -17,6 +17,7 @@ public class OBWriteDomesticResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteDomesticResponse5DataCharges[] charges;
+
     public OBWriteDomesticResponse5Data withCharges(OBWriteDomesticResponse5DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -27,6 +28,7 @@ public class OBWriteDomesticResponse5Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteDomesticResponse5Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -41,6 +43,7 @@ public class OBWriteDomesticResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteDomesticResponse5Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteDomesticResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteDomesticResponse5Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -62,6 +66,7 @@ public class OBWriteDomesticResponse5Data {
      */
     @JsonProperty("DomesticPaymentId")
     public String domesticPaymentId;
+
     public OBWriteDomesticResponse5Data withDomesticPaymentId(String domesticPaymentId) {
         this.domesticPaymentId = domesticPaymentId;
         return this;
@@ -77,6 +82,7 @@ public class OBWriteDomesticResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedExecutionDateTime")
     public OffsetDateTime expectedExecutionDateTime;
+
     public OBWriteDomesticResponse5Data withExpectedExecutionDateTime(OffsetDateTime expectedExecutionDateTime) {
         this.expectedExecutionDateTime = expectedExecutionDateTime;
         return this;
@@ -92,6 +98,7 @@ public class OBWriteDomesticResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedSettlementDateTime")
     public OffsetDateTime expectedSettlementDateTime;
+
     public OBWriteDomesticResponse5Data withExpectedSettlementDateTime(OffsetDateTime expectedSettlementDateTime) {
         this.expectedSettlementDateTime = expectedSettlementDateTime;
         return this;
@@ -102,6 +109,7 @@ public class OBWriteDomesticResponse5Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticResponse5DataInitiation initiation;
+
     public OBWriteDomesticResponse5Data withInitiation(OBWriteDomesticResponse5DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -113,6 +121,7 @@ public class OBWriteDomesticResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAuthorisation")
     public OBWriteDomesticResponse5DataMultiAuthorisation multiAuthorisation;
+
     public OBWriteDomesticResponse5Data withMultiAuthorisation(OBWriteDomesticResponse5DataMultiAuthorisation multiAuthorisation) {
         this.multiAuthorisation = multiAuthorisation;
         return this;
@@ -124,6 +133,7 @@ public class OBWriteDomesticResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Refund")
     public OBWriteDomesticResponse5DataRefund refund;
+
     public OBWriteDomesticResponse5Data withRefund(OBWriteDomesticResponse5DataRefund refund) {
         this.refund = refund;
         return this;
@@ -134,6 +144,7 @@ public class OBWriteDomesticResponse5Data {
      */
     @JsonProperty("Status")
     public OBWriteDomesticResponse5DataStatusEnum status;
+
     public OBWriteDomesticResponse5Data withStatus(OBWriteDomesticResponse5DataStatusEnum status) {
         this.status = status;
         return this;
@@ -148,9 +159,18 @@ public class OBWriteDomesticResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteDomesticResponse5Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteDomesticResponse5Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("DomesticPaymentId") String domesticPaymentId, @JsonProperty("Initiation") OBWriteDomesticResponse5DataInitiation initiation, @JsonProperty("Status") OBWriteDomesticResponse5DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.domesticPaymentId = domesticPaymentId;
+        this.initiation = initiation;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

@@ -15,6 +15,7 @@ public class ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportConfigType")
     public ReportExportConfigTypeEnum exportConfigType;
+
     public ReportExportConfig withExportConfigType(ReportExportConfigTypeEnum exportConfigType) {
         this.exportConfigType = exportConfigType;
         return this;
@@ -23,9 +24,11 @@ public class ReportExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Destination")
     public S3ReportExportConfig s3Destination;
+
     public ReportExportConfig withS3Destination(S3ReportExportConfig s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public ReportExportConfig(){}
 }

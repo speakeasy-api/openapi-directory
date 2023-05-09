@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrawlOrphanURLs {
     @JsonProperty("url")
     public String url;
+
     public CrawlOrphanURLs withUrl(String url) {
         this.url = url;
         return this;
@@ -16,9 +17,14 @@ public class CrawlOrphanURLs {
     
     @JsonProperty("visits")
     public Long visits;
+
     public CrawlOrphanURLs withVisits(Long visits) {
         this.visits = visits;
         return this;
     }
     
+    public CrawlOrphanURLs(@JsonProperty("url") String url, @JsonProperty("visits") Long visits) {
+        this.url = url;
+        this.visits = visits;
+  }
 }

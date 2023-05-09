@@ -15,6 +15,7 @@ public class GetPeopleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetPeopleRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -27,6 +28,7 @@ public class GetPeopleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetPeopleRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -39,6 +41,7 @@ public class GetPeopleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetPeopleRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -49,6 +52,7 @@ public class GetPeopleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetPeopleRequest withQ(String q) {
         this.q = q;
         return this;
@@ -61,9 +65,11 @@ public class GetPeopleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetPeopleSortEnum[] sort;
+
     public GetPeopleRequest withSort(GetPeopleSortEnum[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetPeopleRequest(){}
 }

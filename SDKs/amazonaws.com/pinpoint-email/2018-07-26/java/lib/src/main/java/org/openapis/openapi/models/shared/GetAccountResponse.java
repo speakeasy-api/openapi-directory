@@ -15,6 +15,7 @@ public class GetAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedIpAutoWarmupEnabled")
     public Boolean dedicatedIpAutoWarmupEnabled;
+
     public GetAccountResponse withDedicatedIpAutoWarmupEnabled(Boolean dedicatedIpAutoWarmupEnabled) {
         this.dedicatedIpAutoWarmupEnabled = dedicatedIpAutoWarmupEnabled;
         return this;
@@ -23,6 +24,7 @@ public class GetAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnforcementStatus")
     public String enforcementStatus;
+
     public GetAccountResponse withEnforcementStatus(String enforcementStatus) {
         this.enforcementStatus = enforcementStatus;
         return this;
@@ -31,6 +33,7 @@ public class GetAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductionAccessEnabled")
     public Boolean productionAccessEnabled;
+
     public GetAccountResponse withProductionAccessEnabled(Boolean productionAccessEnabled) {
         this.productionAccessEnabled = productionAccessEnabled;
         return this;
@@ -39,6 +42,7 @@ public class GetAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendQuota")
     public SendQuota sendQuota;
+
     public GetAccountResponse withSendQuota(SendQuota sendQuota) {
         this.sendQuota = sendQuota;
         return this;
@@ -47,9 +51,11 @@ public class GetAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingEnabled")
     public Boolean sendingEnabled;
+
     public GetAccountResponse withSendingEnabled(Boolean sendingEnabled) {
         this.sendingEnabled = sendingEnabled;
         return this;
     }
     
+    public GetAccountResponse(){}
 }

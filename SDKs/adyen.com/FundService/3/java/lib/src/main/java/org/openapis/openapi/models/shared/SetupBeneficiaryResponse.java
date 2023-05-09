@@ -18,6 +18,7 @@ public class SetupBeneficiaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public SetupBeneficiaryResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -29,6 +30,7 @@ public class SetupBeneficiaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public SetupBeneficiaryResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -42,9 +44,11 @@ public class SetupBeneficiaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public SetupBeneficiaryResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public SetupBeneficiaryResponse(){}
 }

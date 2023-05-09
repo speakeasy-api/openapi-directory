@@ -17,7 +17,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;note&gt; &lt;p&gt; &lt;b&gt;Amazon CodeCatalyst is in preview release and subject to change.&lt;/b&gt; &lt;/p&gt; &lt;/note&gt; &lt;p&gt;Welcome to the Amazon CodeCatalyst API reference. This reference provides descriptions of operations and data types for Amazon CodeCatalyst. You can use the Amazon CodeCatalyst API to work with the following objects. &lt;/p&gt; &lt;p&gt;Dev Environments and the Amazon Web Services Toolkits, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateAccessToken&lt;/a&gt;, which creates a personal access token (PAT) for the current user.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateDevEnvironment&lt;/a&gt;, which creates a Dev Environment, where you can quickly work on the code stored in the source repositories of your project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProject&lt;/a&gt; which creates a project in a specified space.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateSourceRepositoryBranch&lt;/a&gt;, which creates a branch in a specified repository where you can work on code.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteDevEnvironment&lt;/a&gt;, which deletes a Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetDevEnvironment&lt;/a&gt;, which returns information about a Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetProject&lt;/a&gt;, which returns information about a project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetSourceRepositoryCloneUrls&lt;/a&gt;, which returns information about the URLs that can be used with a Git client to clone a source repository.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetSubscription&lt;/a&gt;, which returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetUserDetails&lt;/a&gt;, which returns information about a user in Amazon CodeCatalyst.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListDevEnvironments&lt;/a&gt;, which retrives a list of Dev Environments in a project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListProjects&lt;/a&gt;, which retrieves a list of projects in a space.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListSourceRepositories&lt;/a&gt;, which retrieves a list of source repositories in a project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListSourceRepositoryBranches&lt;/a&gt;, which retrieves a list of branches in a source repository.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListSpaces&lt;/a&gt;, which retrieves a list of spaces.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StartDevEnvironment&lt;/a&gt;, which starts a specified Dev Environment and puts it into an active state.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StartDevEnvironmentSession&lt;/a&gt;, which starts a session to a specified Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StopDevEnvironment&lt;/a&gt;, which stops a specified Dev Environment and puts it into an stopped state.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StopDevEnvironmentSession&lt;/a&gt;, which stops a session for a specified Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UpdateDevEnvironment&lt;/a&gt;, which changes one or more values for a Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;VerifySession&lt;/a&gt;, which verifies whether the calling user has a valid Amazon CodeCatalyst login and session.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Security, activity, and resource management in Amazon CodeCatalyst, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteAccessToken&lt;/a&gt;, which deletes a specified personal access token (PAT).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListAccessTokens&lt;/a&gt;, which lists all personal access tokens (PATs) associated with a user.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListEventLogs&lt;/a&gt;, which retrieves a list of events that occurred during a specified time period in a space.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * &lt;p&gt;Welcome to the Amazon CodeCatalyst API reference. This reference provides descriptions of operations and data types for Amazon CodeCatalyst. You can use the Amazon CodeCatalyst API to work with the following objects. &lt;/p&gt; &lt;p&gt;Dev Environments and the Amazon Web Services Toolkits, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateAccessToken&lt;/a&gt;, which creates a personal access token (PAT) for the current user.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateDevEnvironment&lt;/a&gt;, which creates a Dev Environment, where you can quickly work on the code stored in the source repositories of your project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProject&lt;/a&gt; which creates a project in a specified space.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateSourceRepositoryBranch&lt;/a&gt;, which creates a branch in a specified repository where you can work on code.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteDevEnvironment&lt;/a&gt;, which deletes a Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetDevEnvironment&lt;/a&gt;, which returns information about a Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetProject&lt;/a&gt;, which returns information about a project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetSourceRepositoryCloneUrls&lt;/a&gt;, which returns information about the URLs that can be used with a Git client to clone a source repository.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetSpace&lt;/a&gt;, which returns information about a space.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetSubscription&lt;/a&gt;, which returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetUserDetails&lt;/a&gt;, which returns information about a user in Amazon CodeCatalyst.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListDevEnvironments&lt;/a&gt;, which retrieves a list of Dev Environments in a project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListProjects&lt;/a&gt;, which retrieves a list of projects in a space.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListSourceRepositories&lt;/a&gt;, which retrieves a list of source repositories in a project.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListSourceRepositoryBranches&lt;/a&gt;, which retrieves a list of branches in a source repository.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListSpaces&lt;/a&gt;, which retrieves a list of spaces.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StartDevEnvironment&lt;/a&gt;, which starts a specified Dev Environment and puts it into an active state.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StartDevEnvironmentSession&lt;/a&gt;, which starts a session to a specified Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StopDevEnvironment&lt;/a&gt;, which stops a specified Dev Environment and puts it into an stopped state.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;StopDevEnvironmentSession&lt;/a&gt;, which stops a session for a specified Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UpdateDevEnvironment&lt;/a&gt;, which changes one or more values for a Dev Environment.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;VerifySession&lt;/a&gt;, which verifies whether the calling user has a valid Amazon CodeCatalyst login and session.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Security, activity, and resource management in Amazon CodeCatalyst, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteAccessToken&lt;/a&gt;, which deletes a specified personal access token (PAT).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListAccessTokens&lt;/a&gt;, which lists all personal access tokens (PATs) associated with a user.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListEventLogs&lt;/a&gt;, which retrieves a list of events that occurred during a specified time period in a space.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;If you are using the Amazon CodeCatalyst APIs with an SDK or the CLI, you must configure your computer to work with Amazon CodeCatalyst and single sign-on (SSO). For more information, see &lt;a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/set-up-cli.html"&gt;Setting up to use the CLI with Amazon CodeCatalyst&lt;/a&gt; and the SSO documentation for your SDK.&lt;/p&gt; &lt;/note&gt;
  * https://docs.aws.amazon.com/codecatalyst/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -171,11 +171,16 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
     /**
-     * Creates a personal access token (PAT) for the current user. A personal access token (PAT) is similar to a password. It is associated with your user account. You use PATs to access Amazon CodeCatalyst resources such as source repositories from third-party applications like Git and integrated development environments (IDEs). For more information, see &lt;a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/ipa-tokens-keys.html"&gt;Managing personal access tokens in Amazon CodeCatalyst&lt;/a&gt;.
+     * Creates a personal access token (PAT) for the current user. A personal access token (PAT) is similar to a password. It is associated with your user identity for use across all spaces and projects in Amazon CodeCatalyst. You use PATs to access CodeCatalyst from resources that include integrated development environments (IDEs) and Git-based source repositories. PATs represent you in Amazon CodeCatalyst and you can manage them in your user settings.For more information, see &lt;a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/ipa-tokens-keys.html"&gt;Managing personal access tokens in Amazon CodeCatalyst&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -200,7 +205,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccessTokenResponse res = new org.openapis.openapi.models.operations.CreateAccessTokenResponse() {{
+        org.openapis.openapi.models.operations.CreateAccessTokenResponse res = new org.openapis.openapi.models.operations.CreateAccessTokenResponse(contentType, httpRes.statusCode()) {{
             createAccessTokenResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -209,8 +214,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -267,7 +270,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development Dev Environment that you can use to quickly work on the code stored in the source repositories of your project. &lt;/p&gt; &lt;note&gt; &lt;p&gt;When created in the Amazon CodeCatalyst console, by default a Dev Environment is configured to have a 2 core processor, 4GB of RAM, and 16GB of persistent storage. None of these defaults apply to a Dev Environment created programmatically.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development environment that you can use to quickly work on the code stored in the source repositories of your project. &lt;/p&gt; &lt;note&gt; &lt;p&gt;When created in the Amazon CodeCatalyst console, by default a Dev Environment is configured to have a 2 core processor, 4GB of RAM, and 16GB of persistent storage. None of these defaults apply to a Dev Environment created programmatically.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -292,7 +295,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDevEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateDevEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.CreateDevEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateDevEnvironmentResponse(contentType, httpRes.statusCode()) {{
             createDevEnvironmentResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -301,8 +304,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -384,7 +385,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectResponse() {{
+        org.openapis.openapi.models.operations.CreateProjectResponse res = new org.openapis.openapi.models.operations.CreateProjectResponse(contentType, httpRes.statusCode()) {{
             createProjectResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -393,8 +394,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -476,7 +475,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSourceRepositoryBranchResponse res = new org.openapis.openapi.models.operations.CreateSourceRepositoryBranchResponse() {{
+        org.openapis.openapi.models.operations.CreateSourceRepositoryBranchResponse res = new org.openapis.openapi.models.operations.CreateSourceRepositoryBranchResponse(contentType, httpRes.statusCode()) {{
             createSourceRepositoryBranchResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -485,8 +484,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -563,7 +560,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccessTokenResponse res = new org.openapis.openapi.models.operations.DeleteAccessTokenResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccessTokenResponse res = new org.openapis.openapi.models.operations.DeleteAccessTokenResponse(contentType, httpRes.statusCode()) {{
             deleteAccessTokenResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -572,8 +569,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -650,7 +645,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDevEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteDevEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.DeleteDevEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteDevEnvironmentResponse(contentType, httpRes.statusCode()) {{
             deleteDevEnvironmentResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -659,8 +654,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -737,7 +730,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDevEnvironmentResponse res = new org.openapis.openapi.models.operations.GetDevEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.GetDevEnvironmentResponse res = new org.openapis.openapi.models.operations.GetDevEnvironmentResponse(contentType, httpRes.statusCode()) {{
             getDevEnvironmentResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -746,8 +739,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -824,7 +815,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectResponse res = new org.openapis.openapi.models.operations.GetProjectResponse() {{
+        org.openapis.openapi.models.operations.GetProjectResponse res = new org.openapis.openapi.models.operations.GetProjectResponse(contentType, httpRes.statusCode()) {{
             getProjectResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -833,8 +824,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -911,7 +900,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSourceRepositoryCloneUrlsResponse res = new org.openapis.openapi.models.operations.GetSourceRepositoryCloneUrlsResponse() {{
+        org.openapis.openapi.models.operations.GetSourceRepositoryCloneUrlsResponse res = new org.openapis.openapi.models.operations.GetSourceRepositoryCloneUrlsResponse(contentType, httpRes.statusCode()) {{
             getSourceRepositoryCloneUrlsResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -920,8 +909,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -998,7 +985,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSpaceResponse res = new org.openapis.openapi.models.operations.GetSpaceResponse() {{
+        org.openapis.openapi.models.operations.GetSpaceResponse res = new org.openapis.openapi.models.operations.GetSpaceResponse(contentType, httpRes.statusCode()) {{
             getSpaceResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1007,8 +994,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1085,7 +1070,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionResponse res = new org.openapis.openapi.models.operations.GetSubscriptionResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionResponse res = new org.openapis.openapi.models.operations.GetSubscriptionResponse(contentType, httpRes.statusCode()) {{
             getSubscriptionResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1094,8 +1079,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1178,7 +1161,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserDetailsResponse res = new org.openapis.openapi.models.operations.GetUserDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetUserDetailsResponse res = new org.openapis.openapi.models.operations.GetUserDetailsResponse(contentType, httpRes.statusCode()) {{
             getUserDetailsResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1187,8 +1170,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1245,7 +1226,7 @@ public class SDK {
     }
 
     /**
-     * Lists all personal access tokens (PATs) associated with the user who calls the API. You can only list PATs associated with your user account.
+     * Lists all personal access tokens (PATs) associated with the user who calls the API. You can only list PATs associated with your Amazon Web Services Builder ID.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1276,7 +1257,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAccessTokensResponse res = new org.openapis.openapi.models.operations.ListAccessTokensResponse() {{
+        org.openapis.openapi.models.operations.ListAccessTokensResponse res = new org.openapis.openapi.models.operations.ListAccessTokensResponse(contentType, httpRes.statusCode()) {{
             listAccessTokensResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1285,8 +1266,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1343,7 +1322,7 @@ public class SDK {
     }
 
     /**
-     * Retrives a list of Dev Environments in a project.
+     * Retrieves a list of Dev Environments in a project.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1374,7 +1353,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDevEnvironmentsResponse res = new org.openapis.openapi.models.operations.ListDevEnvironmentsResponse() {{
+        org.openapis.openapi.models.operations.ListDevEnvironmentsResponse res = new org.openapis.openapi.models.operations.ListDevEnvironmentsResponse(contentType, httpRes.statusCode()) {{
             listDevEnvironmentsResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1383,8 +1362,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1472,7 +1449,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEventLogsResponse res = new org.openapis.openapi.models.operations.ListEventLogsResponse() {{
+        org.openapis.openapi.models.operations.ListEventLogsResponse res = new org.openapis.openapi.models.operations.ListEventLogsResponse(contentType, httpRes.statusCode()) {{
             listEventLogsResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1481,8 +1458,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1570,7 +1545,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListProjectsResponse res = new org.openapis.openapi.models.operations.ListProjectsResponse() {{
+        org.openapis.openapi.models.operations.ListProjectsResponse res = new org.openapis.openapi.models.operations.ListProjectsResponse(contentType, httpRes.statusCode()) {{
             listProjectsResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1579,8 +1554,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1668,7 +1641,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSourceRepositoriesResponse res = new org.openapis.openapi.models.operations.ListSourceRepositoriesResponse() {{
+        org.openapis.openapi.models.operations.ListSourceRepositoriesResponse res = new org.openapis.openapi.models.operations.ListSourceRepositoriesResponse(contentType, httpRes.statusCode()) {{
             listSourceRepositoriesResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1677,8 +1650,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1766,7 +1737,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSourceRepositoryBranchesResponse res = new org.openapis.openapi.models.operations.ListSourceRepositoryBranchesResponse() {{
+        org.openapis.openapi.models.operations.ListSourceRepositoryBranchesResponse res = new org.openapis.openapi.models.operations.ListSourceRepositoryBranchesResponse(contentType, httpRes.statusCode()) {{
             listSourceRepositoryBranchesResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1775,8 +1746,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1864,7 +1833,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSpacesResponse res = new org.openapis.openapi.models.operations.ListSpacesResponse() {{
+        org.openapis.openapi.models.operations.ListSpacesResponse res = new org.openapis.openapi.models.operations.ListSpacesResponse(contentType, httpRes.statusCode()) {{
             listSpacesResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1873,8 +1842,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1956,7 +1923,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartDevEnvironmentResponse res = new org.openapis.openapi.models.operations.StartDevEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.StartDevEnvironmentResponse res = new org.openapis.openapi.models.operations.StartDevEnvironmentResponse(contentType, httpRes.statusCode()) {{
             startDevEnvironmentResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -1965,8 +1932,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2048,7 +2013,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartDevEnvironmentSessionResponse res = new org.openapis.openapi.models.operations.StartDevEnvironmentSessionResponse() {{
+        org.openapis.openapi.models.operations.StartDevEnvironmentSessionResponse res = new org.openapis.openapi.models.operations.StartDevEnvironmentSessionResponse(contentType, httpRes.statusCode()) {{
             startDevEnvironmentSessionResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -2057,8 +2022,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2135,7 +2098,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopDevEnvironmentResponse res = new org.openapis.openapi.models.operations.StopDevEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.StopDevEnvironmentResponse res = new org.openapis.openapi.models.operations.StopDevEnvironmentResponse(contentType, httpRes.statusCode()) {{
             stopDevEnvironmentResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -2144,8 +2107,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2222,7 +2183,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopDevEnvironmentSessionResponse res = new org.openapis.openapi.models.operations.StopDevEnvironmentSessionResponse() {{
+        org.openapis.openapi.models.operations.StopDevEnvironmentSessionResponse res = new org.openapis.openapi.models.operations.StopDevEnvironmentSessionResponse(contentType, httpRes.statusCode()) {{
             stopDevEnvironmentSessionResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -2231,8 +2192,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2314,7 +2273,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDevEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateDevEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.UpdateDevEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateDevEnvironmentResponse(contentType, httpRes.statusCode()) {{
             updateDevEnvironmentResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -2323,8 +2282,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2400,7 +2357,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifySessionResponse res = new org.openapis.openapi.models.operations.VerifySessionResponse() {{
+        org.openapis.openapi.models.operations.VerifySessionResponse res = new org.openapis.openapi.models.operations.VerifySessionResponse(contentType, httpRes.statusCode()) {{
             verifySessionResponse = null;
             throttlingException = null;
             conflictException = null;
@@ -2409,8 +2366,6 @@ public class SDK {
             resourceNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

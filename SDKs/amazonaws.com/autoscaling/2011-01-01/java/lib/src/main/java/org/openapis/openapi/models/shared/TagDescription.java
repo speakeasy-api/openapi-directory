@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TagDescription {
     
     public String key;
+
     public TagDescription withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class TagDescription {
     
     
     public Boolean propagateAtLaunch;
+
     public TagDescription withPropagateAtLaunch(Boolean propagateAtLaunch) {
         this.propagateAtLaunch = propagateAtLaunch;
         return this;
@@ -26,6 +28,7 @@ public class TagDescription {
     
     
     public String resourceId;
+
     public TagDescription withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -33,6 +36,7 @@ public class TagDescription {
     
     
     public String resourceType;
+
     public TagDescription withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -40,9 +44,11 @@ public class TagDescription {
     
     
     public String value;
+
     public TagDescription withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TagDescription(){}
 }

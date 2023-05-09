@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInstanceCustomHealthStatusResponse {
     
     public String contentType;
+
     public UpdateInstanceCustomHealthStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateInstanceCustomHealthStatusResponse {
      */
     
     public Object customHealthNotFound;
+
     public UpdateInstanceCustomHealthStatusResponse withCustomHealthNotFound(Object customHealthNotFound) {
         this.customHealthNotFound = customHealthNotFound;
         return this;
@@ -29,6 +32,7 @@ public class UpdateInstanceCustomHealthStatusResponse {
      */
     
     public Object instanceNotFound;
+
     public UpdateInstanceCustomHealthStatusResponse withInstanceNotFound(Object instanceNotFound) {
         this.instanceNotFound = instanceNotFound;
         return this;
@@ -39,6 +43,7 @@ public class UpdateInstanceCustomHealthStatusResponse {
      */
     
     public Object invalidInput;
+
     public UpdateInstanceCustomHealthStatusResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -49,6 +54,7 @@ public class UpdateInstanceCustomHealthStatusResponse {
      */
     
     public Object serviceNotFound;
+
     public UpdateInstanceCustomHealthStatusResponse withServiceNotFound(Object serviceNotFound) {
         this.serviceNotFound = serviceNotFound;
         return this;
@@ -56,6 +62,7 @@ public class UpdateInstanceCustomHealthStatusResponse {
     
     
     public Integer statusCode;
+
     public UpdateInstanceCustomHealthStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class UpdateInstanceCustomHealthStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInstanceCustomHealthStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateInstanceCustomHealthStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

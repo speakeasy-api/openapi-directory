@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCustomRoutingAcceleratorResponse {
@@ -12,6 +13,7 @@ public class UpdateCustomRoutingAcceleratorResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public UpdateCustomRoutingAcceleratorResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCustomRoutingAcceleratorResponse {
     
     
     public String contentType;
+
     public UpdateCustomRoutingAcceleratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCustomRoutingAcceleratorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateCustomRoutingAcceleratorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCustomRoutingAcceleratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateCustomRoutingAcceleratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateCustomRoutingAcceleratorResponse {
     
     
     public Integer statusCode;
+
     public UpdateCustomRoutingAcceleratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCustomRoutingAcceleratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCustomRoutingAcceleratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCustomRoutingAcceleratorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCustomRoutingAcceleratorResponse updateCustomRoutingAcceleratorResponse;
+
     public UpdateCustomRoutingAcceleratorResponse withUpdateCustomRoutingAcceleratorResponse(org.openapis.openapi.models.shared.UpdateCustomRoutingAcceleratorResponse updateCustomRoutingAcceleratorResponse) {
         this.updateCustomRoutingAcceleratorResponse = updateCustomRoutingAcceleratorResponse;
         return this;
     }
     
+    public UpdateCustomRoutingAcceleratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

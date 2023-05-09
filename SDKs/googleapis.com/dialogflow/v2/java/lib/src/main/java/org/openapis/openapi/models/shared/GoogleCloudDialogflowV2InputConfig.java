@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudDialogflowV2GcsSources gcsSource;
+
     public GoogleCloudDialogflowV2InputConfig withGcsSource(GoogleCloudDialogflowV2GcsSources gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public GoogleCloudDialogflowV2InputConfig(){}
 }

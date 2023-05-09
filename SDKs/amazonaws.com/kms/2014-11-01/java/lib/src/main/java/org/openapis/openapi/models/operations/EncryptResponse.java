@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EncryptResponse {
     
     public String contentType;
+
     public EncryptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EncryptResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public EncryptResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class EncryptResponse {
      */
     
     public Object disabledException;
+
     public EncryptResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class EncryptResponse {
      */
     
     public org.openapis.openapi.models.shared.EncryptResponse encryptResponse;
+
     public EncryptResponse withEncryptResponse(org.openapis.openapi.models.shared.EncryptResponse encryptResponse) {
         this.encryptResponse = encryptResponse;
         return this;
@@ -49,6 +54,7 @@ public class EncryptResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public EncryptResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -59,6 +65,7 @@ public class EncryptResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public EncryptResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -69,6 +76,7 @@ public class EncryptResponse {
      */
     
     public Object kmsInternalException;
+
     public EncryptResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -79,6 +87,7 @@ public class EncryptResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public EncryptResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class EncryptResponse {
      */
     
     public Object keyUnavailableException;
+
     public EncryptResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class EncryptResponse {
      */
     
     public Object notFoundException;
+
     public EncryptResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class EncryptResponse {
     
     
     public Integer statusCode;
+
     public EncryptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class EncryptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EncryptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EncryptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

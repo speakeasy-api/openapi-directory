@@ -15,6 +15,7 @@ public class OperationErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorInfo")
     public ErrorInfo errorInfo;
+
     public OperationErrorErrorsErrorDetails withErrorInfo(ErrorInfo errorInfo) {
         this.errorInfo = errorInfo;
         return this;
@@ -26,6 +27,7 @@ public class OperationErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("help")
     public Help help;
+
     public OperationErrorErrorsErrorDetails withHelp(Help help) {
         this.help = help;
         return this;
@@ -37,6 +39,7 @@ public class OperationErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedMessage")
     public LocalizedMessage localizedMessage;
+
     public OperationErrorErrorsErrorDetails withLocalizedMessage(LocalizedMessage localizedMessage) {
         this.localizedMessage = localizedMessage;
         return this;
@@ -48,9 +51,11 @@ public class OperationErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaInfo")
     public QuotaExceededInfo quotaInfo;
+
     public OperationErrorErrorsErrorDetails withQuotaInfo(QuotaExceededInfo quotaInfo) {
         this.quotaInfo = quotaInfo;
         return this;
     }
     
+    public OperationErrorErrorsErrorDetails(){}
 }

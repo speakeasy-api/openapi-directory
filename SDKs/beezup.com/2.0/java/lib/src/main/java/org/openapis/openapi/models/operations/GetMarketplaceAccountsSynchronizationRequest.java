@@ -16,6 +16,7 @@ public class GetMarketplaceAccountsSynchronizationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetMarketplaceAccountsSynchronizationRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -26,9 +27,11 @@ public class GetMarketplaceAccountsSynchronizationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
     public String storeId;
+
     public GetMarketplaceAccountsSynchronizationRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetMarketplaceAccountsSynchronizationRequest(){}
 }

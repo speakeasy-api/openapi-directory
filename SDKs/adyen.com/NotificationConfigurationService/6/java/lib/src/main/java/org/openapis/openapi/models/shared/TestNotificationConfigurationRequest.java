@@ -16,6 +16,7 @@ public class TestNotificationConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTypes")
     public TestNotificationConfigurationRequestEventTypesEnum[] eventTypes;
+
     public TestNotificationConfigurationRequest withEventTypes(TestNotificationConfigurationRequestEventTypesEnum[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -26,9 +27,13 @@ public class TestNotificationConfigurationRequest {
      */
     @JsonProperty("notificationId")
     public Long notificationId;
+
     public TestNotificationConfigurationRequest withNotificationId(Long notificationId) {
         this.notificationId = notificationId;
         return this;
     }
     
+    public TestNotificationConfigurationRequest(@JsonProperty("notificationId") Long notificationId) {
+        this.notificationId = notificationId;
+  }
 }

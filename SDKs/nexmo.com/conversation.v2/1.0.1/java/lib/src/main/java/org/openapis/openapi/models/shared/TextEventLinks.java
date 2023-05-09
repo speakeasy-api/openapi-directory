@@ -12,9 +12,11 @@ public class TextEventLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public TextEventLinksSelf self;
+
     public TextEventLinks withSelf(TextEventLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public TextEventLinks(){}
 }

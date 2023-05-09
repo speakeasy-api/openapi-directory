@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetServiceInstanceInput {
     @JsonProperty("name")
     public String name;
+
     public GetServiceInstanceInput withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class GetServiceInstanceInput {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GetServiceInstanceInput withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public GetServiceInstanceInput(@JsonProperty("name") String name, @JsonProperty("serviceName") String serviceName) {
+        this.name = name;
+        this.serviceName = serviceName;
+  }
 }

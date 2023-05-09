@@ -15,9 +15,11 @@ public class DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLocation")
     public String dataLocation;
+
     public DataSource withDataLocation(String dataLocation) {
         this.dataLocation = dataLocation;
         return this;
     }
     
+    public DataSource(){}
 }

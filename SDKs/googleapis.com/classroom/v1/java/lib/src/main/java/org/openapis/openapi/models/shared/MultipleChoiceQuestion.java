@@ -18,9 +18,11 @@ public class MultipleChoiceQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choices")
     public String[] choices;
+
     public MultipleChoiceQuestion withChoices(String[] choices) {
         this.choices = choices;
         return this;
     }
     
+    public MultipleChoiceQuestion(){}
 }

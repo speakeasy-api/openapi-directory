@@ -46,10 +46,8 @@ public class Content {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContentAspectIdResponse res = new org.openapis.openapi.models.operations.GetContentAspectIdResponse() {{
+        org.openapis.openapi.models.operations.GetContentAspectIdResponse res = new org.openapis.openapi.models.operations.GetContentAspectIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -78,10 +76,8 @@ public class Content {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdResponse res = new org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdResponse() {{
+        org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdResponse res = new org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

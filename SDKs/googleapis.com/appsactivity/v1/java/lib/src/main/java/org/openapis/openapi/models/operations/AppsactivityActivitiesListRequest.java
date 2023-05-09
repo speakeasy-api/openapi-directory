@@ -12,6 +12,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppsactivityActivitiesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drive.ancestorId")
     public String driveAncestorId;
+
     public AppsactivityActivitiesListRequest withDriveAncestorId(String driveAncestorId) {
         this.driveAncestorId = driveAncestorId;
         return this;
@@ -32,6 +34,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drive.fileId")
     public String driveFileId;
+
     public AppsactivityActivitiesListRequest withDriveFileId(String driveFileId) {
         this.driveFileId = driveFileId;
         return this;
@@ -42,6 +45,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppsactivityActivitiesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +56,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupingStrategy")
     public AppsactivityActivitiesListGroupingStrategyEnum groupingStrategy;
+
     public AppsactivityActivitiesListRequest withGroupingStrategy(AppsactivityActivitiesListGroupingStrategyEnum groupingStrategy) {
         this.groupingStrategy = groupingStrategy;
         return this;
@@ -62,6 +67,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppsactivityActivitiesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppsactivityActivitiesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public AppsactivityActivitiesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,6 +100,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public AppsactivityActivitiesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +111,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppsactivityActivitiesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +122,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppsactivityActivitiesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -123,6 +134,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public AppsactivityActivitiesListRequest withSource(String source) {
         this.source = source;
         return this;
@@ -133,6 +145,7 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public AppsactivityActivitiesListRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -143,9 +156,11 @@ public class AppsactivityActivitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AppsactivityActivitiesListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AppsactivityActivitiesListRequest(){}
 }

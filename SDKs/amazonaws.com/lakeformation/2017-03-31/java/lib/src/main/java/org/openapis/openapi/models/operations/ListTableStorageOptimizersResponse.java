@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTableStorageOptimizersResponse {
@@ -12,6 +13,7 @@ public class ListTableStorageOptimizersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTableStorageOptimizersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTableStorageOptimizersResponse {
     
     
     public String contentType;
+
     public ListTableStorageOptimizersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTableStorageOptimizersResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListTableStorageOptimizersResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListTableStorageOptimizersResponse {
      */
     
     public Object internalServiceException;
+
     public ListTableStorageOptimizersResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListTableStorageOptimizersResponse {
      */
     
     public Object invalidInputException;
+
     public ListTableStorageOptimizersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListTableStorageOptimizersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTableStorageOptimizersResponse listTableStorageOptimizersResponse;
+
     public ListTableStorageOptimizersResponse withListTableStorageOptimizersResponse(org.openapis.openapi.models.shared.ListTableStorageOptimizersResponse listTableStorageOptimizersResponse) {
         this.listTableStorageOptimizersResponse = listTableStorageOptimizersResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListTableStorageOptimizersResponse {
     
     
     public Integer statusCode;
+
     public ListTableStorageOptimizersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListTableStorageOptimizersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTableStorageOptimizersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTableStorageOptimizersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

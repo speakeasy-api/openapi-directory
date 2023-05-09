@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY.
+ * BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
  */
 public enum BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum {
     DAY_OF_WEEK_UNSPECIFIED("DAY_OF_WEEK_UNSPECIFIED"),

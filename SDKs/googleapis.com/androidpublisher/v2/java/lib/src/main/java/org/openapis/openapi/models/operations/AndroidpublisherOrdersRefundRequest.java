@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherOrdersRefundRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherOrdersRefundRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherOrdersRefundRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherOrdersRefundRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherOrdersRefundRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public AndroidpublisherOrdersRefundRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherOrdersRefundRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherOrdersRefundRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherOrdersRefundRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revoke")
     public Boolean revoke;
+
     public AndroidpublisherOrdersRefundRequest withRevoke(Boolean revoke) {
         this.revoke = revoke;
         return this;
@@ -102,9 +112,14 @@ public class AndroidpublisherOrdersRefundRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherOrdersRefundRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherOrdersRefundRequest(@JsonProperty("orderId") String orderId, @JsonProperty("packageName") String packageName) {
+        this.orderId = orderId;
+        this.packageName = packageName;
+  }
 }

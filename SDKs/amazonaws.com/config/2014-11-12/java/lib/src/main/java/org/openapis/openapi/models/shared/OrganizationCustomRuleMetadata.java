@@ -15,6 +15,7 @@ public class OrganizationCustomRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public OrganizationCustomRuleMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class OrganizationCustomRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputParameters")
     public String inputParameters;
+
     public OrganizationCustomRuleMetadata withInputParameters(String inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -30,6 +32,7 @@ public class OrganizationCustomRuleMetadata {
     
     @JsonProperty("LambdaFunctionArn")
     public String lambdaFunctionArn;
+
     public OrganizationCustomRuleMetadata withLambdaFunctionArn(String lambdaFunctionArn) {
         this.lambdaFunctionArn = lambdaFunctionArn;
         return this;
@@ -38,6 +41,7 @@ public class OrganizationCustomRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumExecutionFrequency")
     public MaximumExecutionFrequencyEnum maximumExecutionFrequency;
+
     public OrganizationCustomRuleMetadata withMaximumExecutionFrequency(MaximumExecutionFrequencyEnum maximumExecutionFrequency) {
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         return this;
@@ -45,6 +49,7 @@ public class OrganizationCustomRuleMetadata {
     
     @JsonProperty("OrganizationConfigRuleTriggerTypes")
     public OrganizationConfigRuleTriggerTypeEnum[] organizationConfigRuleTriggerTypes;
+
     public OrganizationCustomRuleMetadata withOrganizationConfigRuleTriggerTypes(OrganizationConfigRuleTriggerTypeEnum[] organizationConfigRuleTriggerTypes) {
         this.organizationConfigRuleTriggerTypes = organizationConfigRuleTriggerTypes;
         return this;
@@ -53,6 +58,7 @@ public class OrganizationCustomRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdScope")
     public String resourceIdScope;
+
     public OrganizationCustomRuleMetadata withResourceIdScope(String resourceIdScope) {
         this.resourceIdScope = resourceIdScope;
         return this;
@@ -61,6 +67,7 @@ public class OrganizationCustomRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypesScope")
     public String[] resourceTypesScope;
+
     public OrganizationCustomRuleMetadata withResourceTypesScope(String[] resourceTypesScope) {
         this.resourceTypesScope = resourceTypesScope;
         return this;
@@ -69,6 +76,7 @@ public class OrganizationCustomRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeyScope")
     public String tagKeyScope;
+
     public OrganizationCustomRuleMetadata withTagKeyScope(String tagKeyScope) {
         this.tagKeyScope = tagKeyScope;
         return this;
@@ -77,9 +85,14 @@ public class OrganizationCustomRuleMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagValueScope")
     public String tagValueScope;
+
     public OrganizationCustomRuleMetadata withTagValueScope(String tagValueScope) {
         this.tagValueScope = tagValueScope;
         return this;
     }
     
+    public OrganizationCustomRuleMetadata(@JsonProperty("LambdaFunctionArn") String lambdaFunctionArn, @JsonProperty("OrganizationConfigRuleTriggerTypes") OrganizationConfigRuleTriggerTypeEnum[] organizationConfigRuleTriggerTypes) {
+        this.lambdaFunctionArn = lambdaFunctionArn;
+        this.organizationConfigRuleTriggerTypes = organizationConfigRuleTriggerTypes;
+  }
 }

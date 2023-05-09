@@ -18,9 +18,11 @@ public class ActivityContentDetailsUpload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoId")
     public String videoId;
+
     public ActivityContentDetailsUpload withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
     
+    public ActivityContentDetailsUpload(){}
 }

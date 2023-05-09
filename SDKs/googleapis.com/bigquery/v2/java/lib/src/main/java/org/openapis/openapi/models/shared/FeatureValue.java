@@ -18,6 +18,7 @@ public class FeatureValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoricalValue")
     public CategoricalValue categoricalValue;
+
     public FeatureValue withCategoricalValue(CategoricalValue categoricalValue) {
         this.categoricalValue = categoricalValue;
         return this;
@@ -29,6 +30,7 @@ public class FeatureValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureColumn")
     public String featureColumn;
+
     public FeatureValue withFeatureColumn(String featureColumn) {
         this.featureColumn = featureColumn;
         return this;
@@ -40,9 +42,11 @@ public class FeatureValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericalValue")
     public Double numericalValue;
+
     public FeatureValue withNumericalValue(Double numericalValue) {
         this.numericalValue = numericalValue;
         return this;
     }
     
+    public FeatureValue(){}
 }

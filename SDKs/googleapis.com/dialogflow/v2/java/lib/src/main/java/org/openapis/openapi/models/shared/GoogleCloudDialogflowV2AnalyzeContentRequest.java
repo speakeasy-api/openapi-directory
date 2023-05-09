@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assistQueryParams")
     public GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
+
     public GoogleCloudDialogflowV2AnalyzeContentRequest withAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
         this.assistQueryParams = assistQueryParams;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cxParameters")
     public java.util.Map<String, Object> cxParameters;
+
     public GoogleCloudDialogflowV2AnalyzeContentRequest withCxParameters(java.util.Map<String, Object> cxParameters) {
         this.cxParameters = cxParameters;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventInput")
     public GoogleCloudDialogflowV2EventInput eventInput;
+
     public GoogleCloudDialogflowV2AnalyzeContentRequest withEventInput(GoogleCloudDialogflowV2EventInput eventInput) {
         this.eventInput = eventInput;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public GoogleCloudDialogflowV2QueryParameters queryParams;
+
     public GoogleCloudDialogflowV2AnalyzeContentRequest withQueryParams(GoogleCloudDialogflowV2QueryParameters queryParams) {
         this.queryParams = queryParams;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyAudioConfig")
     public GoogleCloudDialogflowV2OutputAudioConfig replyAudioConfig;
+
     public GoogleCloudDialogflowV2AnalyzeContentRequest withReplyAudioConfig(GoogleCloudDialogflowV2OutputAudioConfig replyAudioConfig) {
         this.replyAudioConfig = replyAudioConfig;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudDialogflowV2AnalyzeContentRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowV2AnalyzeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textInput")
     public GoogleCloudDialogflowV2TextInput textInput;
+
     public GoogleCloudDialogflowV2AnalyzeContentRequest withTextInput(GoogleCloudDialogflowV2TextInput textInput) {
         this.textInput = textInput;
         return this;
     }
     
+    public GoogleCloudDialogflowV2AnalyzeContentRequest(){}
 }

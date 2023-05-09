@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ApplySecurityGroupsToLoadBalancerOutput {
     
     public String[] securityGroups;
+
     public ApplySecurityGroupsToLoadBalancerOutput withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
     
+    public ApplySecurityGroupsToLoadBalancerOutput(){}
 }

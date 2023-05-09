@@ -20,6 +20,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ContainerService withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerServiceName")
     public String containerServiceName;
+
     public ContainerService withContainerServiceName(String containerServiceName) {
         this.containerServiceName = containerServiceName;
         return this;
@@ -38,6 +40,7 @@ public class ContainerService {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ContainerService withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentDeployment")
     public ContainerServiceDeployment currentDeployment;
+
     public ContainerService withCurrentDeployment(ContainerServiceDeployment currentDeployment) {
         this.currentDeployment = currentDeployment;
         return this;
@@ -54,6 +58,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisabled")
     public Boolean isDisabled;
+
     public ContainerService withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -62,6 +67,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public ContainerService withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -70,6 +76,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextDeployment")
     public ContainerServiceDeployment nextDeployment;
+
     public ContainerService withNextDeployment(ContainerServiceDeployment nextDeployment) {
         this.nextDeployment = nextDeployment;
         return this;
@@ -78,6 +85,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("power")
     public ContainerServicePowerNameEnum power;
+
     public ContainerService withPower(ContainerServicePowerNameEnum power) {
         this.power = power;
         return this;
@@ -86,6 +94,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerId")
     public String powerId;
+
     public ContainerService withPowerId(String powerId) {
         this.powerId = powerId;
         return this;
@@ -94,6 +103,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalArn")
     public String principalArn;
+
     public ContainerService withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -102,6 +112,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateDomainName")
     public String privateDomainName;
+
     public ContainerService withPrivateDomainName(String privateDomainName) {
         this.privateDomainName = privateDomainName;
         return this;
@@ -110,6 +121,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateRegistryAccess")
     public PrivateRegistryAccess privateRegistryAccess;
+
     public ContainerService withPrivateRegistryAccess(PrivateRegistryAccess privateRegistryAccess) {
         this.privateRegistryAccess = privateRegistryAccess;
         return this;
@@ -118,6 +130,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicDomainNames")
     public java.util.Map<String, String[]> publicDomainNames;
+
     public ContainerService withPublicDomainNames(java.util.Map<String, String[]> publicDomainNames) {
         this.publicDomainNames = publicDomainNames;
         return this;
@@ -126,6 +139,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public ContainerService withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -134,6 +148,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Long scale;
+
     public ContainerService withScale(Long scale) {
         this.scale = scale;
         return this;
@@ -142,6 +157,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ContainerServiceStateEnum state;
+
     public ContainerService withState(ContainerServiceStateEnum state) {
         this.state = state;
         return this;
@@ -150,6 +166,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDetail")
     public ContainerServiceStateDetail stateDetail;
+
     public ContainerService withStateDetail(ContainerServiceStateDetail stateDetail) {
         this.stateDetail = stateDetail;
         return this;
@@ -158,6 +175,7 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ContainerService withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -166,9 +184,11 @@ public class ContainerService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ContainerService withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ContainerService(){}
 }

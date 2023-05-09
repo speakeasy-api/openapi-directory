@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProductRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProductCreateRequest productCreateRequest;
+
     public CreateProductRequest withProductCreateRequest(org.openapis.openapi.models.shared.ProductCreateRequest productCreateRequest) {
         this.productCreateRequest = productCreateRequest;
         return this;
@@ -16,6 +18,7 @@ public class CreateProductRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public CreateProductRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
@@ -23,9 +26,14 @@ public class CreateProductRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnEntity")
     public Boolean returnEntity;
+
     public CreateProductRequest withReturnEntity(Boolean returnEntity) {
         this.returnEntity = returnEntity;
         return this;
     }
     
+    public CreateProductRequest(@JsonProperty("ProductCreateRequest") org.openapis.openapi.models.shared.ProductCreateRequest productCreateRequest, @JsonProperty("organizationUuid") String organizationUuid) {
+        this.productCreateRequest = productCreateRequest;
+        this.organizationUuid = organizationUuid;
+  }
 }

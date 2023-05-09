@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoreReportByProductResponse {
@@ -12,6 +13,7 @@ public class GetStoreReportByProductResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetStoreReportByProductResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetStoreReportByProductResponse {
     
     
     public String contentType;
+
     public GetStoreReportByProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetStoreReportByProductResponse {
     
     
     public Integer statusCode;
+
     public GetStoreReportByProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetStoreReportByProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoreReportByProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetStoreReportByProductResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportByProductResponse reportByProductResponse;
+
     public GetStoreReportByProductResponse withReportByProductResponse(org.openapis.openapi.models.shared.ReportByProductResponse reportByProductResponse) {
         this.reportByProductResponse = reportByProductResponse;
         return this;
     }
     
+    public GetStoreReportByProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class CalculateRoutePostDataParametersAvoidAreas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rectangles")
     public CalculateRoutePostDataParametersAvoidAreasRectangles[] rectangles;
+
     public CalculateRoutePostDataParametersAvoidAreas withRectangles(CalculateRoutePostDataParametersAvoidAreasRectangles[] rectangles) {
         this.rectangles = rectangles;
         return this;
     }
     
+    public CalculateRoutePostDataParametersAvoidAreas(){}
 }

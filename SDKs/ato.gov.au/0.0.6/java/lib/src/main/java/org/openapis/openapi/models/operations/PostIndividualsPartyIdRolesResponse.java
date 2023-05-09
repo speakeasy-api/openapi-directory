@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostIndividualsPartyIdRolesResponse {
     
     public String contentType;
+
     public PostIndividualsPartyIdRolesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostIndividualsPartyIdRolesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostIndividualsPartyIdRolesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostIndividualsPartyIdRolesResponse {
     
     
     public Integer statusCode;
+
     public PostIndividualsPartyIdRolesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostIndividualsPartyIdRolesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostIndividualsPartyIdRolesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostIndividualsPartyIdRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PostIndividualsPartyIdRolesResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -50,6 +56,7 @@ public class PostIndividualsPartyIdRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.PartyRole partyRole;
+
     public PostIndividualsPartyIdRolesResponse withPartyRole(org.openapis.openapi.models.shared.PartyRole partyRole) {
         this.partyRole = partyRole;
         return this;
@@ -60,9 +67,14 @@ public class PostIndividualsPartyIdRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PostIndividualsPartyIdRolesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PostIndividualsPartyIdRolesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class PublishersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PublishersListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class PublishersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PublishersListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public PublishersListRequest(){}
 }

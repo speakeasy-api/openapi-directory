@@ -15,9 +15,11 @@ public class DescribeDevicePolicyConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceCaCertificate")
     public String deviceCaCertificate;
+
     public DescribeDevicePolicyConfigurationResponse withDeviceCaCertificate(String deviceCaCertificate) {
         this.deviceCaCertificate = deviceCaCertificate;
         return this;
     }
     
+    public DescribeDevicePolicyConfigurationResponse(){}
 }

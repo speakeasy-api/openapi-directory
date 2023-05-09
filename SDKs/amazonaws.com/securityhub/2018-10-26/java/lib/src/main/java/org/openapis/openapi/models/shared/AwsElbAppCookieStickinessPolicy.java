@@ -15,6 +15,7 @@ public class AwsElbAppCookieStickinessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CookieName")
     public String cookieName;
+
     public AwsElbAppCookieStickinessPolicy withCookieName(String cookieName) {
         this.cookieName = cookieName;
         return this;
@@ -23,9 +24,11 @@ public class AwsElbAppCookieStickinessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public AwsElbAppCookieStickinessPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public AwsElbAppCookieStickinessPolicy(){}
 }

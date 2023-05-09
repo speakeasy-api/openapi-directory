@@ -18,6 +18,7 @@ public class PartnerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Boolean error;
+
     public PartnerError withError(Boolean error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class PartnerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public PartnerError withField(String field) {
         this.field = field;
         return this;
@@ -40,9 +42,11 @@ public class PartnerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PartnerError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PartnerError(){}
 }

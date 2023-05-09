@@ -63,12 +63,10 @@ public class APICredentialsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsResponse(contentType, httpRes.statusCode()) {{
             listCompanyApiCredentialsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class APICredentialsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse() {{
+        org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse(contentType, httpRes.statusCode()) {{
             companyApiCredential = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,12 +165,10 @@ public class APICredentialsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse() {{
+        org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse res = new org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse(contentType, httpRes.statusCode()) {{
             companyApiCredential = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,12 +226,10 @@ public class APICredentialsCompanyLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsResponse res = new org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsResponse(contentType, httpRes.statusCode()) {{
             createCompanyApiCredentialResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

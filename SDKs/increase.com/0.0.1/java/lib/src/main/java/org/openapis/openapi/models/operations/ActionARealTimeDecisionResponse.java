@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionARealTimeDecisionResponse {
     
     public String contentType;
+
     public ActionARealTimeDecisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionARealTimeDecisionResponse {
     
     
     public Integer statusCode;
+
     public ActionARealTimeDecisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionARealTimeDecisionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionARealTimeDecisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionARealTimeDecisionResponse {
      */
     
     public Object error;
+
     public ActionARealTimeDecisionResponse withError(Object error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class ActionARealTimeDecisionResponse {
      */
     
     public org.openapis.openapi.models.shared.RealTimeDecision realTimeDecision;
+
     public ActionARealTimeDecisionResponse withRealTimeDecision(org.openapis.openapi.models.shared.RealTimeDecision realTimeDecision) {
         this.realTimeDecision = realTimeDecision;
         return this;
     }
     
+    public ActionARealTimeDecisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

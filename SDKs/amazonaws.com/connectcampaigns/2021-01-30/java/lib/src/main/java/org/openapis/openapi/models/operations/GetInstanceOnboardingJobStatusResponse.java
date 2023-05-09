@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstanceOnboardingJobStatusResponse {
@@ -12,6 +13,7 @@ public class GetInstanceOnboardingJobStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public GetInstanceOnboardingJobStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetInstanceOnboardingJobStatusResponse {
     
     
     public String contentType;
+
     public GetInstanceOnboardingJobStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetInstanceOnboardingJobStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstanceOnboardingJobStatusResponse getInstanceOnboardingJobStatusResponse;
+
     public GetInstanceOnboardingJobStatusResponse withGetInstanceOnboardingJobStatusResponse(org.openapis.openapi.models.shared.GetInstanceOnboardingJobStatusResponse getInstanceOnboardingJobStatusResponse) {
         this.getInstanceOnboardingJobStatusResponse = getInstanceOnboardingJobStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetInstanceOnboardingJobStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetInstanceOnboardingJobStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetInstanceOnboardingJobStatusResponse {
     
     
     public Integer statusCode;
+
     public GetInstanceOnboardingJobStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetInstanceOnboardingJobStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstanceOnboardingJobStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetInstanceOnboardingJobStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetInstanceOnboardingJobStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetInstanceOnboardingJobStatusResponse {
      */
     
     public Object validationException;
+
     public GetInstanceOnboardingJobStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetInstanceOnboardingJobStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

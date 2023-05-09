@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorldGenerationJobsResponse {
     
     public String contentType;
+
     public ListWorldGenerationJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWorldGenerationJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListWorldGenerationJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListWorldGenerationJobsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListWorldGenerationJobsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorldGenerationJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorldGenerationJobsResponse listWorldGenerationJobsResponse;
+
     public ListWorldGenerationJobsResponse withListWorldGenerationJobsResponse(org.openapis.openapi.models.shared.ListWorldGenerationJobsResponse listWorldGenerationJobsResponse) {
         this.listWorldGenerationJobsResponse = listWorldGenerationJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListWorldGenerationJobsResponse {
     
     
     public Integer statusCode;
+
     public ListWorldGenerationJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListWorldGenerationJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorldGenerationJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListWorldGenerationJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListWorldGenerationJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListWorldGenerationJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

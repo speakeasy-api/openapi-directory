@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETEnableFastLaunchSnapshotConfiguration {
     @SpeakeasyMetadata("queryParam:name=TargetResourceCount")
     public Long targetResourceCount;
+
     public GETEnableFastLaunchSnapshotConfiguration withTargetResourceCount(Long targetResourceCount) {
         this.targetResourceCount = targetResourceCount;
         return this;
     }
     
+    public GETEnableFastLaunchSnapshotConfiguration(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTargetGroupsOutput {
     
     public String nextMarker;
+
     public DescribeTargetGroupsOutput withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTargetGroupsOutput {
     
     
     public TargetGroup[] targetGroups;
+
     public DescribeTargetGroupsOutput withTargetGroups(TargetGroup[] targetGroups) {
         this.targetGroups = targetGroups;
         return this;
     }
     
+    public DescribeTargetGroupsOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelPipelineReprocessingRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CancelPipelineReprocessingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class CancelPipelineReprocessingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CancelPipelineReprocessingRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class CancelPipelineReprocessingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CancelPipelineReprocessingRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class CancelPipelineReprocessingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CancelPipelineReprocessingRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class CancelPipelineReprocessingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CancelPipelineReprocessingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class CancelPipelineReprocessingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CancelPipelineReprocessingRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class CancelPipelineReprocessingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CancelPipelineReprocessingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class CancelPipelineReprocessingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pipelineName")
     public String pipelineName;
+
     public CancelPipelineReprocessingRequest withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -71,9 +80,14 @@ public class CancelPipelineReprocessingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reprocessingId")
     public String reprocessingId;
+
     public CancelPipelineReprocessingRequest withReprocessingId(String reprocessingId) {
         this.reprocessingId = reprocessingId;
         return this;
     }
     
+    public CancelPipelineReprocessingRequest(@JsonProperty("pipelineName") String pipelineName, @JsonProperty("reprocessingId") String reprocessingId) {
+        this.pipelineName = pipelineName;
+        this.reprocessingId = reprocessingId;
+  }
 }

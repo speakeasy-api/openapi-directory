@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBehaviorsRequestBodyAttachmentFile {
     @SpeakeasyMetadata("multipartForm:name=attachment_file")
     public String attachmentFile;
+
     public PostBehaviorsRequestBodyAttachmentFile withAttachmentFile(String attachmentFile) {
         this.attachmentFile = attachmentFile;
         return this;
@@ -16,9 +18,14 @@ public class PostBehaviorsRequestBodyAttachmentFile {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public PostBehaviorsRequestBodyAttachmentFile withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public PostBehaviorsRequestBodyAttachmentFile(@JsonProperty("attachment_file") String attachmentFile, @JsonProperty("content") byte[] content) {
+        this.attachmentFile = attachmentFile;
+        this.content = content;
+  }
 }

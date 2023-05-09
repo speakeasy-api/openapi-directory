@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseSnmp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("community")
     public String community;
+
     public EnterpriseSettingsEnterpriseSnmp withCommunity(String community) {
         this.community = community;
         return this;
@@ -20,9 +21,11 @@ public class EnterpriseSettingsEnterpriseSnmp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterpriseSnmp withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseSnmp(){}
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListChangelogsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Agent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListContinuousTestResultsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListDeploymentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Experiment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListExperimentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Experiment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Experiment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListEnvironmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3LookupEnvironmentHistoryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Flow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,11 +740,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -816,11 +784,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListFlowsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,11 +874,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListPagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -958,11 +920,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1006,11 +966,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3TransitionRouteGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,11 +1010,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListTransitionRouteGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1056,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3FlowValidationResult = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,11 +1102,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3CompareVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1196,11 +1148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1242,11 +1192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1290,11 +1238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1338,11 +1284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Intent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1384,11 +1328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListIntentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1430,11 +1372,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListAgentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1478,11 +1418,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1526,11 +1464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3DetectIntentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1574,11 +1510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3SessionEntityType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1620,11 +1554,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListSessionEntityTypesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1668,11 +1600,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3FulfillIntentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1716,11 +1646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3MatchIntentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1764,11 +1692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1812,11 +1738,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1858,11 +1782,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3CalculateCoverageResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1906,11 +1828,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3TestCase = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1954,11 +1874,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2002,11 +1920,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2048,11 +1964,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListTestCasesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2094,11 +2008,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListTestCaseResultsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2142,11 +2054,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2190,11 +2100,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3Webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2236,11 +2144,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListWebhooksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2282,11 +2188,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudLocationListLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2330,11 +2234,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3SecuritySettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2376,11 +2278,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2422,11 +2322,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3ListSecuritySettingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2470,11 +2368,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudDialogflowCxV3SecuritySettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2516,11 +2412,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2562,11 +2456,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2608,11 +2500,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DialogflowProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DialogflowProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.DialogflowProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

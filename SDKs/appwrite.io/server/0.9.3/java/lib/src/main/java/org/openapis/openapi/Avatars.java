@@ -59,10 +59,8 @@ public class Avatars {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvatarsGetBrowserResponse res = new org.openapis.openapi.models.operations.AvatarsGetBrowserResponse() {{
+        org.openapis.openapi.models.operations.AvatarsGetBrowserResponse res = new org.openapis.openapi.models.operations.AvatarsGetBrowserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,10 +98,8 @@ public class Avatars {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvatarsGetCreditCardResponse res = new org.openapis.openapi.models.operations.AvatarsGetCreditCardResponse() {{
+        org.openapis.openapi.models.operations.AvatarsGetCreditCardResponse res = new org.openapis.openapi.models.operations.AvatarsGetCreditCardResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,10 +138,8 @@ public class Avatars {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvatarsGetFaviconResponse res = new org.openapis.openapi.models.operations.AvatarsGetFaviconResponse() {{
+        org.openapis.openapi.models.operations.AvatarsGetFaviconResponse res = new org.openapis.openapi.models.operations.AvatarsGetFaviconResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,10 +177,8 @@ public class Avatars {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvatarsGetFlagResponse res = new org.openapis.openapi.models.operations.AvatarsGetFlagResponse() {{
+        org.openapis.openapi.models.operations.AvatarsGetFlagResponse res = new org.openapis.openapi.models.operations.AvatarsGetFlagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,10 +216,8 @@ public class Avatars {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvatarsGetImageResponse res = new org.openapis.openapi.models.operations.AvatarsGetImageResponse() {{
+        org.openapis.openapi.models.operations.AvatarsGetImageResponse res = new org.openapis.openapi.models.operations.AvatarsGetImageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,10 +257,8 @@ public class Avatars {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvatarsGetInitialsResponse res = new org.openapis.openapi.models.operations.AvatarsGetInitialsResponse() {{
+        org.openapis.openapi.models.operations.AvatarsGetInitialsResponse res = new org.openapis.openapi.models.operations.AvatarsGetInitialsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,10 +296,8 @@ public class Avatars {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvatarsGetQRResponse res = new org.openapis.openapi.models.operations.AvatarsGetQRResponse() {{
+        org.openapis.openapi.models.operations.AvatarsGetQRResponse res = new org.openapis.openapi.models.operations.AvatarsGetQRResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

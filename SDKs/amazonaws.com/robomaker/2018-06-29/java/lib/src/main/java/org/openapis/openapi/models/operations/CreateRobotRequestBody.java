@@ -14,6 +14,7 @@ public class CreateRobotRequestBody {
      */
     @JsonProperty("architecture")
     public CreateRobotRequestBodyArchitectureEnum architecture;
+
     public CreateRobotRequestBody withArchitecture(CreateRobotRequestBodyArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -24,6 +25,7 @@ public class CreateRobotRequestBody {
      */
     @JsonProperty("greengrassGroupId")
     public String greengrassGroupId;
+
     public CreateRobotRequestBody withGreengrassGroupId(String greengrassGroupId) {
         this.greengrassGroupId = greengrassGroupId;
         return this;
@@ -34,6 +36,7 @@ public class CreateRobotRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateRobotRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,15 @@ public class CreateRobotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRobotRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRobotRequestBody(@JsonProperty("architecture") CreateRobotRequestBodyArchitectureEnum architecture, @JsonProperty("greengrassGroupId") String greengrassGroupId, @JsonProperty("name") String name) {
+        this.architecture = architecture;
+        this.greengrassGroupId = greengrassGroupId;
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class NotificationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NotificationSetting withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class NotificationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationTypes")
     public NotificationSettingNotificationTypesEnum[] notificationTypes;
+
     public NotificationSetting withNotificationTypes(NotificationSettingNotificationTypesEnum[] notificationTypes) {
         this.notificationTypes = notificationTypes;
         return this;
@@ -40,9 +42,11 @@ public class NotificationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public NotificationSetting withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
     }
     
+    public NotificationSetting(){}
 }

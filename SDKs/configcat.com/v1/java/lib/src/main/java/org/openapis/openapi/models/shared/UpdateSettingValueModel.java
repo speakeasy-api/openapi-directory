@@ -15,6 +15,7 @@ public class UpdateSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutPercentageItems")
     public RolloutPercentageItemModel[] rolloutPercentageItems;
+
     public UpdateSettingValueModel withRolloutPercentageItems(RolloutPercentageItemModel[] rolloutPercentageItems) {
         this.rolloutPercentageItems = rolloutPercentageItems;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutRules")
     public RolloutRuleModel[] rolloutRules;
+
     public UpdateSettingValueModel withRolloutRules(RolloutRuleModel[] rolloutRules) {
         this.rolloutRules = rolloutRules;
         return this;
@@ -37,9 +39,11 @@ public class UpdateSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public UpdateSettingValueModel withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public UpdateSettingValueModel(){}
 }

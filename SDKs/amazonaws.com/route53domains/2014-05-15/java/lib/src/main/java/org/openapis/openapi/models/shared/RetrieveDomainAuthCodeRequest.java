@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetrieveDomainAuthCodeRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public RetrieveDomainAuthCodeRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public RetrieveDomainAuthCodeRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

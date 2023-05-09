@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionOAuthClientRequestParameters {
     @JsonProperty("ClientID")
     public String clientID;
+
     public CreateConnectionOAuthClientRequestParameters withClientID(String clientID) {
         this.clientID = clientID;
         return this;
@@ -19,9 +20,14 @@ public class CreateConnectionOAuthClientRequestParameters {
     
     @JsonProperty("ClientSecret")
     public String clientSecret;
+
     public CreateConnectionOAuthClientRequestParameters withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public CreateConnectionOAuthClientRequestParameters(@JsonProperty("ClientID") String clientID, @JsonProperty("ClientSecret") String clientSecret) {
+        this.clientID = clientID;
+        this.clientSecret = clientSecret;
+  }
 }

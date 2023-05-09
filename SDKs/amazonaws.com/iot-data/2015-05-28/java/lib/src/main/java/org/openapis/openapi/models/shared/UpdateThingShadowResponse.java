@@ -15,9 +15,11 @@ public class UpdateThingShadowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public UpdateThingShadowResponse withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public UpdateThingShadowResponse(){}
 }

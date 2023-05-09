@@ -18,6 +18,7 @@ public class PatchInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all")
     public Boolean all;
+
     public PatchInstanceFilter withAll(Boolean all) {
         this.all = all;
         return this;
@@ -29,6 +30,7 @@ public class PatchInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupLabels")
     public PatchInstanceFilterGroupLabel[] groupLabels;
+
     public PatchInstanceFilter withGroupLabels(PatchInstanceFilterGroupLabel[] groupLabels) {
         this.groupLabels = groupLabels;
         return this;
@@ -40,6 +42,7 @@ public class PatchInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceNamePrefixes")
     public String[] instanceNamePrefixes;
+
     public PatchInstanceFilter withInstanceNamePrefixes(String[] instanceNamePrefixes) {
         this.instanceNamePrefixes = instanceNamePrefixes;
         return this;
@@ -51,6 +54,7 @@ public class PatchInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public PatchInstanceFilter withInstances(String[] instances) {
         this.instances = instances;
         return this;
@@ -62,9 +66,11 @@ public class PatchInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zones")
     public String[] zones;
+
     public PatchInstanceFilter withZones(String[] zones) {
         this.zones = zones;
         return this;
     }
     
+    public PatchInstanceFilter(){}
 }

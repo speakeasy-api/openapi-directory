@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PvcerResponse {
     
     public String contentType;
+
     public PvcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PvcerResponse {
     
     
     public Integer statusCode;
+
     public PvcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PvcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PvcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PvcerResponse {
      */
     
     public Pvcer400ApplicationJSON pvcer400ApplicationJSONObject;
+
     public PvcerResponse withPvcer400ApplicationJSONObject(Pvcer400ApplicationJSON pvcer400ApplicationJSONObject) {
         this.pvcer400ApplicationJSONObject = pvcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PvcerResponse {
      */
     
     public Pvcer401ApplicationJSON pvcer401ApplicationJSONObject;
+
     public PvcerResponse withPvcer401ApplicationJSONObject(Pvcer401ApplicationJSON pvcer401ApplicationJSONObject) {
         this.pvcer401ApplicationJSONObject = pvcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PvcerResponse {
      */
     
     public Pvcer404ApplicationJSON pvcer404ApplicationJSONObject;
+
     public PvcerResponse withPvcer404ApplicationJSONObject(Pvcer404ApplicationJSON pvcer404ApplicationJSONObject) {
         this.pvcer404ApplicationJSONObject = pvcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PvcerResponse {
      */
     
     public Pvcer500ApplicationJSON pvcer500ApplicationJSONObject;
+
     public PvcerResponse withPvcer500ApplicationJSONObject(Pvcer500ApplicationJSON pvcer500ApplicationJSONObject) {
         this.pvcer500ApplicationJSONObject = pvcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PvcerResponse {
      */
     
     public Pvcer502ApplicationJSON pvcer502ApplicationJSONObject;
+
     public PvcerResponse withPvcer502ApplicationJSONObject(Pvcer502ApplicationJSON pvcer502ApplicationJSONObject) {
         this.pvcer502ApplicationJSONObject = pvcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PvcerResponse {
      */
     
     public Pvcer503ApplicationJSON pvcer503ApplicationJSONObject;
+
     public PvcerResponse withPvcer503ApplicationJSONObject(Pvcer503ApplicationJSON pvcer503ApplicationJSONObject) {
         this.pvcer503ApplicationJSONObject = pvcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PvcerResponse {
      */
     
     public Pvcer504ApplicationJSON pvcer504ApplicationJSONObject;
+
     public PvcerResponse withPvcer504ApplicationJSONObject(Pvcer504ApplicationJSON pvcer504ApplicationJSONObject) {
         this.pvcer504ApplicationJSONObject = pvcer504ApplicationJSONObject;
         return this;
     }
     
+    public PvcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

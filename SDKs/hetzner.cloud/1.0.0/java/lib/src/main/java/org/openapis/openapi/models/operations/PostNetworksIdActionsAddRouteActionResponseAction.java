@@ -12,6 +12,7 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("error")
     public PostNetworksIdActionsAddRouteActionResponseActionError error;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withError(PostNetworksIdActionsAddRouteActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("resources")
     public PostNetworksIdActionsAddRouteActionResponseActionResources[] resources;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withResources(PostNetworksIdActionsAddRouteActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostNetworksIdActionsAddRouteActionResponseAction {
      */
     @JsonProperty("status")
     public PostNetworksIdActionsAddRouteActionResponseActionStatusEnum status;
+
     public PostNetworksIdActionsAddRouteActionResponseAction withStatus(PostNetworksIdActionsAddRouteActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostNetworksIdActionsAddRouteActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostNetworksIdActionsAddRouteActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostNetworksIdActionsAddRouteActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostNetworksIdActionsAddRouteActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

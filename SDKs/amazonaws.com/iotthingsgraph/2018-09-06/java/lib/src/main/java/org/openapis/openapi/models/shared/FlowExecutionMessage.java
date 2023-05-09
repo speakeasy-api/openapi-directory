@@ -20,6 +20,7 @@ public class FlowExecutionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public FlowExecutionEventTypeEnum eventType;
+
     public FlowExecutionMessage withEventType(FlowExecutionEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -28,6 +29,7 @@ public class FlowExecutionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public FlowExecutionMessage withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -36,6 +38,7 @@ public class FlowExecutionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public FlowExecutionMessage withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -46,9 +49,11 @@ public class FlowExecutionMessage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public FlowExecutionMessage withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public FlowExecutionMessage(){}
 }

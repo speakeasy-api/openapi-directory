@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ClaimBillingNotesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public ClaimBillingNotesListRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +17,7 @@ public class ClaimBillingNotesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ClaimBillingNotesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class ClaimBillingNotesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ClaimBillingNotesListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,9 +33,11 @@ public class ClaimBillingNotesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public ClaimBillingNotesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public ClaimBillingNotesListRequest(){}
 }

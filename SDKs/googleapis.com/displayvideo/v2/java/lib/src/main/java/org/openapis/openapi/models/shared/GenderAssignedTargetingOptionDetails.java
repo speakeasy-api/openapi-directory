@@ -18,9 +18,11 @@ public class GenderAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public GenderAssignedTargetingOptionDetailsGenderEnum gender;
+
     public GenderAssignedTargetingOptionDetails withGender(GenderAssignedTargetingOptionDetailsGenderEnum gender) {
         this.gender = gender;
         return this;
     }
     
+    public GenderAssignedTargetingOptionDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVolumesFsCreateRequest {
@@ -12,6 +13,7 @@ public class PostVolumesFsCreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FileshareParam fileshareParam;
+
     public PostVolumesFsCreateRequest withFileshareParam(org.openapis.openapi.models.shared.FileshareParam fileshareParam) {
         this.fileshareParam = fileshareParam;
         return this;
@@ -22,6 +24,7 @@ public class PostVolumesFsCreateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PostVolumesFsCreateRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -32,9 +35,15 @@ public class PostVolumesFsCreateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PostVolumesFsCreateRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
     }
     
+    public PostVolumesFsCreateRequest(@JsonProperty("FileshareParam") org.openapis.openapi.models.shared.FileshareParam fileshareParam, @JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken) {
+        this.fileshareParam = fileshareParam;
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+  }
 }

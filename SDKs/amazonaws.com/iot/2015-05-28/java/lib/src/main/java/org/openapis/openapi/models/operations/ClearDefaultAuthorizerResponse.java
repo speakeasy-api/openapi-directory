@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClearDefaultAuthorizerResponse {
@@ -12,6 +13,7 @@ public class ClearDefaultAuthorizerResponse {
      */
     
     public java.util.Map<String, Object> clearDefaultAuthorizerResponse;
+
     public ClearDefaultAuthorizerResponse withClearDefaultAuthorizerResponse(java.util.Map<String, Object> clearDefaultAuthorizerResponse) {
         this.clearDefaultAuthorizerResponse = clearDefaultAuthorizerResponse;
         return this;
@@ -19,6 +21,7 @@ public class ClearDefaultAuthorizerResponse {
     
     
     public String contentType;
+
     public ClearDefaultAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ClearDefaultAuthorizerResponse {
      */
     
     public Object internalFailureException;
+
     public ClearDefaultAuthorizerResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ClearDefaultAuthorizerResponse {
      */
     
     public Object invalidRequestException;
+
     public ClearDefaultAuthorizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ClearDefaultAuthorizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ClearDefaultAuthorizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ClearDefaultAuthorizerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ClearDefaultAuthorizerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class ClearDefaultAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public ClearDefaultAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ClearDefaultAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClearDefaultAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ClearDefaultAuthorizerResponse {
      */
     
     public Object throttlingException;
+
     public ClearDefaultAuthorizerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ClearDefaultAuthorizerResponse {
      */
     
     public Object unauthorizedException;
+
     public ClearDefaultAuthorizerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ClearDefaultAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

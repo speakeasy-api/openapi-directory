@@ -18,9 +18,11 @@ public class SslCertsInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public SslCertsInsertRequest withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
     }
     
+    public SslCertsInsertRequest(){}
 }

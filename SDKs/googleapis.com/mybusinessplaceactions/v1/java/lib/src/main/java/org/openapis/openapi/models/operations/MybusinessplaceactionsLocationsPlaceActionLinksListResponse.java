@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessplaceactionsLocationsPlaceActionLinksListResponse {
     
     public String contentType;
+
     public MybusinessplaceactionsLocationsPlaceActionLinksListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessplaceactionsLocationsPlaceActionLinksListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPlaceActionLinksResponse listPlaceActionLinksResponse;
+
     public MybusinessplaceactionsLocationsPlaceActionLinksListResponse withListPlaceActionLinksResponse(org.openapis.openapi.models.shared.ListPlaceActionLinksResponse listPlaceActionLinksResponse) {
         this.listPlaceActionLinksResponse = listPlaceActionLinksResponse;
         return this;
@@ -26,6 +29,7 @@ public class MybusinessplaceactionsLocationsPlaceActionLinksListResponse {
     
     
     public Integer statusCode;
+
     public MybusinessplaceactionsLocationsPlaceActionLinksListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessplaceactionsLocationsPlaceActionLinksListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessplaceactionsLocationsPlaceActionLinksListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinessplaceactionsLocationsPlaceActionLinksListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

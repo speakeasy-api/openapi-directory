@@ -18,6 +18,7 @@ public class GetOrder200ApplicationJSONItemsAdditionalInfoDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cubicweight")
     public Double cubicweight;
+
     public GetOrder200ApplicationJSONItemsAdditionalInfoDimension withCubicweight(Double cubicweight) {
         this.cubicweight = cubicweight;
         return this;
@@ -29,6 +30,7 @@ public class GetOrder200ApplicationJSONItemsAdditionalInfoDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public GetOrder200ApplicationJSONItemsAdditionalInfoDimension withHeight(Double height) {
         this.height = height;
         return this;
@@ -40,6 +42,7 @@ public class GetOrder200ApplicationJSONItemsAdditionalInfoDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Double length;
+
     public GetOrder200ApplicationJSONItemsAdditionalInfoDimension withLength(Double length) {
         this.length = length;
         return this;
@@ -51,6 +54,7 @@ public class GetOrder200ApplicationJSONItemsAdditionalInfoDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Double weight;
+
     public GetOrder200ApplicationJSONItemsAdditionalInfoDimension withWeight(Double weight) {
         this.weight = weight;
         return this;
@@ -62,9 +66,11 @@ public class GetOrder200ApplicationJSONItemsAdditionalInfoDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Double width;
+
     public GetOrder200ApplicationJSONItemsAdditionalInfoDimension withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public GetOrder200ApplicationJSONItemsAdditionalInfoDimension(){}
 }

@@ -18,9 +18,11 @@ public class AddSheetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public SheetProperties properties;
+
     public AddSheetRequest withProperties(SheetProperties properties) {
         this.properties = properties;
         return this;
     }
     
+    public AddSheetRequest(){}
 }

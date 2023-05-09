@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public GoogleCloudDatapipelinesV1Job[] jobs;
+
     public GoogleCloudDatapipelinesV1ListJobsResponse withJobs(GoogleCloudDatapipelinesV1Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatapipelinesV1ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatapipelinesV1ListJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1ListJobsResponse(){}
 }

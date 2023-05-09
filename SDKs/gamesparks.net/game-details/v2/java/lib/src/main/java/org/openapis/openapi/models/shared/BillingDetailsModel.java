@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BillingDetailsModel {
     @JsonProperty("building")
     public String building;
+
     public BillingDetailsModel withBuilding(String building) {
         this.building = building;
         return this;
@@ -21,6 +22,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("city")
     public String city;
+
     public BillingDetailsModel withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("companyName")
     public String companyName;
+
     public BillingDetailsModel withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -35,6 +38,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("country")
     public String country;
+
     public BillingDetailsModel withCountry(String country) {
         this.country = country;
         return this;
@@ -42,6 +46,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("email1")
     public String email1;
+
     public BillingDetailsModel withEmail1(String email1) {
         this.email1 = email1;
         return this;
@@ -50,6 +55,7 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email2")
     public String email2;
+
     public BillingDetailsModel withEmail2(String email2) {
         this.email2 = email2;
         return this;
@@ -58,6 +64,7 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email3")
     public String email3;
+
     public BillingDetailsModel withEmail3(String email3) {
         this.email3 = email3;
         return this;
@@ -65,6 +72,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("firstName1")
     public String firstName1;
+
     public BillingDetailsModel withFirstName1(String firstName1) {
         this.firstName1 = firstName1;
         return this;
@@ -73,6 +81,7 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName2")
     public String firstName2;
+
     public BillingDetailsModel withFirstName2(String firstName2) {
         this.firstName2 = firstName2;
         return this;
@@ -81,6 +90,7 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName3")
     public String firstName3;
+
     public BillingDetailsModel withFirstName3(String firstName3) {
         this.firstName3 = firstName3;
         return this;
@@ -88,6 +98,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("lastName1")
     public String lastName1;
+
     public BillingDetailsModel withLastName1(String lastName1) {
         this.lastName1 = lastName1;
         return this;
@@ -96,6 +107,7 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName2")
     public String lastName2;
+
     public BillingDetailsModel withLastName2(String lastName2) {
         this.lastName2 = lastName2;
         return this;
@@ -104,6 +116,7 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName3")
     public String lastName3;
+
     public BillingDetailsModel withLastName3(String lastName3) {
         this.lastName3 = lastName3;
         return this;
@@ -111,6 +124,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("postcode")
     public String postcode;
+
     public BillingDetailsModel withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -119,6 +133,7 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public BillingDetailsModel withState(String state) {
         this.state = state;
         return this;
@@ -126,6 +141,7 @@ public class BillingDetailsModel {
     
     @JsonProperty("street")
     public String street;
+
     public BillingDetailsModel withStreet(String street) {
         this.street = street;
         return this;
@@ -134,9 +150,21 @@ public class BillingDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxNumber")
     public String taxNumber;
+
     public BillingDetailsModel withTaxNumber(String taxNumber) {
         this.taxNumber = taxNumber;
         return this;
     }
     
+    public BillingDetailsModel(@JsonProperty("building") String building, @JsonProperty("city") String city, @JsonProperty("companyName") String companyName, @JsonProperty("country") String country, @JsonProperty("email1") String email1, @JsonProperty("firstName1") String firstName1, @JsonProperty("lastName1") String lastName1, @JsonProperty("postcode") String postcode, @JsonProperty("street") String street) {
+        this.building = building;
+        this.city = city;
+        this.companyName = companyName;
+        this.country = country;
+        this.email1 = email1;
+        this.firstName1 = firstName1;
+        this.lastName1 = lastName1;
+        this.postcode = postcode;
+        this.street = street;
+  }
 }

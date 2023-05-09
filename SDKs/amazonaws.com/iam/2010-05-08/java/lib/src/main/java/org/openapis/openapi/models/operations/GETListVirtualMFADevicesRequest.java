@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListVirtualMFADevicesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListVirtualMFADevicesActionEnum action;
+
     public GETListVirtualMFADevicesRequest withAction(GETListVirtualMFADevicesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListVirtualMFADevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssignmentStatus")
     public GETListVirtualMFADevicesAssignmentStatusEnum assignmentStatus;
+
     public GETListVirtualMFADevicesRequest withAssignmentStatus(GETListVirtualMFADevicesAssignmentStatusEnum assignmentStatus) {
         this.assignmentStatus = assignmentStatus;
         return this;
@@ -29,6 +32,7 @@ public class GETListVirtualMFADevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETListVirtualMFADevicesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETListVirtualMFADevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public GETListVirtualMFADevicesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -46,6 +51,7 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListVirtualMFADevicesVersionEnum version;
+
     public GETListVirtualMFADevicesRequest withVersion(GETListVirtualMFADevicesVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListVirtualMFADevicesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListVirtualMFADevicesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListVirtualMFADevicesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListVirtualMFADevicesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListVirtualMFADevicesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListVirtualMFADevicesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,14 @@ public class GETListVirtualMFADevicesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListVirtualMFADevicesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListVirtualMFADevicesRequest(@JsonProperty("Action") GETListVirtualMFADevicesActionEnum action, @JsonProperty("Version") GETListVirtualMFADevicesVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

@@ -12,9 +12,13 @@ public class PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulations {
      */
     @JsonProperty("assets")
     public PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets[] assets;
+
     public PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulations withAssets(PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulations(@JsonProperty("assets") PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets[] assets) {
+        this.assets = assets;
+  }
 }

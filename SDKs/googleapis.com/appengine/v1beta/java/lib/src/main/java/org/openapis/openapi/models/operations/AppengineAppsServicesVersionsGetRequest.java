@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsServicesVersionsGetRequest {
@@ -12,6 +13,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AppengineAppsServicesVersionsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AppengineAppsServicesVersionsGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppengineAppsServicesVersionsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
     public String appsId;
+
     public AppengineAppsServicesVersionsGetRequest withAppsId(String appsId) {
         this.appsId = appsId;
         return this;
@@ -52,6 +57,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AppengineAppsServicesVersionsGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppengineAppsServicesVersionsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppengineAppsServicesVersionsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppengineAppsServicesVersionsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppengineAppsServicesVersionsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppengineAppsServicesVersionsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=servicesId")
     public String servicesId;
+
     public AppengineAppsServicesVersionsGetRequest withServicesId(String servicesId) {
         this.servicesId = servicesId;
         return this;
@@ -122,6 +134,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AppengineAppsServicesVersionsGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AppengineAppsServicesVersionsGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,6 +156,7 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionsId")
     public String versionsId;
+
     public AppengineAppsServicesVersionsGetRequest withVersionsId(String versionsId) {
         this.versionsId = versionsId;
         return this;
@@ -152,9 +167,15 @@ public class AppengineAppsServicesVersionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public AppengineAppsServicesVersionsGetViewEnum view;
+
     public AppengineAppsServicesVersionsGetRequest withView(AppengineAppsServicesVersionsGetViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public AppengineAppsServicesVersionsGetRequest(@JsonProperty("appsId") String appsId, @JsonProperty("servicesId") String servicesId, @JsonProperty("versionsId") String versionsId) {
+        this.appsId = appsId;
+        this.servicesId = servicesId;
+        this.versionsId = versionsId;
+  }
 }

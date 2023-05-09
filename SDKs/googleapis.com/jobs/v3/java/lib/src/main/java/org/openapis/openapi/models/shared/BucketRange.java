@@ -18,6 +18,7 @@ public class BucketRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public Double from;
+
     public BucketRange withFrom(Double from) {
         this.from = from;
         return this;
@@ -29,9 +30,11 @@ public class BucketRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public Double to;
+
     public BucketRange withTo(Double to) {
         this.to = to;
         return this;
     }
     
+    public BucketRange(){}
 }

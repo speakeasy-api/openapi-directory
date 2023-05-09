@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DomainValidationOption {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DomainValidationOption withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -19,9 +20,14 @@ public class DomainValidationOption {
     
     @JsonProperty("ValidationDomain")
     public String validationDomain;
+
     public DomainValidationOption withValidationDomain(String validationDomain) {
         this.validationDomain = validationDomain;
         return this;
     }
     
+    public DomainValidationOption(@JsonProperty("DomainName") String domainName, @JsonProperty("ValidationDomain") String validationDomain) {
+        this.domainName = domainName;
+        this.validationDomain = validationDomain;
+  }
 }

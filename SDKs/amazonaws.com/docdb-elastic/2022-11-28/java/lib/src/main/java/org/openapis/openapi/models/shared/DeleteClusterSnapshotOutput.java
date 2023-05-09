@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteClusterSnapshotOutput {
     @JsonProperty("snapshot")
     public ClusterSnapshot snapshot;
+
     public DeleteClusterSnapshotOutput withSnapshot(ClusterSnapshot snapshot) {
         this.snapshot = snapshot;
         return this;
     }
     
+    public DeleteClusterSnapshotOutput(@JsonProperty("snapshot") ClusterSnapshot snapshot) {
+        this.snapshot = snapshot;
+  }
 }

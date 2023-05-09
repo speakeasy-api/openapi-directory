@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo {
     
     public Long baselineBandwidthInMbps;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo withBaselineBandwidthInMbps(Long baselineBandwidthInMbps) {
         this.baselineBandwidthInMbps = baselineBandwidthInMbps;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo {
     
     
     public Long baselineIops;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo withBaselineIops(Long baselineIops) {
         this.baselineIops = baselineIops;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo {
     
     
     public Double baselineThroughputInMBps;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo withBaselineThroughputInMBps(Double baselineThroughputInMBps) {
         this.baselineThroughputInMBps = baselineThroughputInMBps;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo {
     
     
     public Long maximumBandwidthInMbps;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo withMaximumBandwidthInMbps(Long maximumBandwidthInMbps) {
         this.maximumBandwidthInMbps = maximumBandwidthInMbps;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo {
     
     
     public Long maximumIops;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo withMaximumIops(Long maximumIops) {
         this.maximumIops = maximumIops;
         return this;
@@ -47,9 +52,11 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo {
     
     
     public Double maximumThroughputInMBps;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo withMaximumThroughputInMBps(Double maximumThroughputInMBps) {
         this.maximumThroughputInMBps = maximumThroughputInMBps;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationDestinationPortRange {
     
     public Long fromPort;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationDestinationPortRange withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinati
     
     
     public Long toPort;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationDestinationPortRange withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationDestinationPortRange(){}
 }

@@ -15,9 +15,11 @@ public class BatchAttachToIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachedObjectIdentifier")
     public String attachedObjectIdentifier;
+
     public BatchAttachToIndexResponse withAttachedObjectIdentifier(String attachedObjectIdentifier) {
         this.attachedObjectIdentifier = attachedObjectIdentifier;
         return this;
     }
     
+    public BatchAttachToIndexResponse(){}
 }

@@ -18,6 +18,7 @@ public class ImageAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSize")
     public String fileSize;
+
     public ImageAsset withFileSize(String fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -29,6 +30,7 @@ public class ImageAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullSize")
     public Dimensions fullSize;
+
     public ImageAsset withFullSize(Dimensions fullSize) {
         this.fullSize = fullSize;
         return this;
@@ -40,9 +42,11 @@ public class ImageAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ImageAsset withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public ImageAsset(){}
 }

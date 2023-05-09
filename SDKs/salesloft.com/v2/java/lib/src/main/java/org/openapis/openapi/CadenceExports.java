@@ -51,11 +51,9 @@ public class CadenceExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

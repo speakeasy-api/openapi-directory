@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PartnerIntegrationInputMessage {
     
     public String accountId;
+
     public PartnerIntegrationInputMessage withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +17,7 @@ public class PartnerIntegrationInputMessage {
     
     
     public String clusterIdentifier;
+
     public PartnerIntegrationInputMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class PartnerIntegrationInputMessage {
     
     
     public String databaseName;
+
     public PartnerIntegrationInputMessage withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -30,9 +33,16 @@ public class PartnerIntegrationInputMessage {
     
     
     public String partnerName;
+
     public PartnerIntegrationInputMessage withPartnerName(String partnerName) {
         this.partnerName = partnerName;
         return this;
     }
     
+    public PartnerIntegrationInputMessage(@JsonProperty("AccountId") String accountId, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartnerName") String partnerName) {
+        this.accountId = accountId;
+        this.clusterIdentifier = clusterIdentifier;
+        this.databaseName = databaseName;
+        this.partnerName = partnerName;
+  }
 }

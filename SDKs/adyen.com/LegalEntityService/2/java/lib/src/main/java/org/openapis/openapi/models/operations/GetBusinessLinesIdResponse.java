@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBusinessLinesIdResponse {
@@ -12,6 +13,7 @@ public class GetBusinessLinesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessLine businessLine;
+
     public GetBusinessLinesIdResponse withBusinessLine(org.openapis.openapi.models.shared.BusinessLine businessLine) {
         this.businessLine = businessLine;
         return this;
@@ -19,6 +21,7 @@ public class GetBusinessLinesIdResponse {
     
     
     public String contentType;
+
     public GetBusinessLinesIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBusinessLinesIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetBusinessLinesIdResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetBusinessLinesIdResponse {
     
     
     public Integer statusCode;
+
     public GetBusinessLinesIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetBusinessLinesIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBusinessLinesIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBusinessLinesIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

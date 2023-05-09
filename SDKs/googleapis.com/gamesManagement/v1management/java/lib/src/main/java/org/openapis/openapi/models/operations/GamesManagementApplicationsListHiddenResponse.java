@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GamesManagementApplicationsListHiddenResponse {
     
     public String contentType;
+
     public GamesManagementApplicationsListHiddenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GamesManagementApplicationsListHiddenResponse {
      */
     
     public org.openapis.openapi.models.shared.HiddenPlayerList hiddenPlayerList;
+
     public GamesManagementApplicationsListHiddenResponse withHiddenPlayerList(org.openapis.openapi.models.shared.HiddenPlayerList hiddenPlayerList) {
         this.hiddenPlayerList = hiddenPlayerList;
         return this;
@@ -26,6 +29,7 @@ public class GamesManagementApplicationsListHiddenResponse {
     
     
     public Integer statusCode;
+
     public GamesManagementApplicationsListHiddenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GamesManagementApplicationsListHiddenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GamesManagementApplicationsListHiddenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GamesManagementApplicationsListHiddenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

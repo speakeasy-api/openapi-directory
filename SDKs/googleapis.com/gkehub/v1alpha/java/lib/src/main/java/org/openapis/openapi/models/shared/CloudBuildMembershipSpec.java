@@ -18,6 +18,7 @@ public class CloudBuildMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicy")
     public CloudBuildMembershipSpecSecurityPolicyEnum securityPolicy;
+
     public CloudBuildMembershipSpec withSecurityPolicy(CloudBuildMembershipSpecSecurityPolicyEnum securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -29,9 +30,11 @@ public class CloudBuildMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public CloudBuildMembershipSpec withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CloudBuildMembershipSpec(){}
 }

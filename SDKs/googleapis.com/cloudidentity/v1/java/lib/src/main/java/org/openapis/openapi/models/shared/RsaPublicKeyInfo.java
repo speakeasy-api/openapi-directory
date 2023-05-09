@@ -18,9 +18,11 @@ public class RsaPublicKeyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keySize")
     public Integer keySize;
+
     public RsaPublicKeyInfo withKeySize(Integer keySize) {
         this.keySize = keySize;
         return this;
     }
     
+    public RsaPublicKeyInfo(){}
 }

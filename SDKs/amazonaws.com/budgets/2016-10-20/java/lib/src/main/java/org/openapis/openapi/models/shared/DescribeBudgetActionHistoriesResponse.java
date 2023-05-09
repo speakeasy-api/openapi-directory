@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeBudgetActionHistoriesResponse {
     @JsonProperty("ActionHistories")
     public ActionHistory[] actionHistories;
+
     public DescribeBudgetActionHistoriesResponse withActionHistories(ActionHistory[] actionHistories) {
         this.actionHistories = actionHistories;
         return this;
@@ -25,9 +26,13 @@ public class DescribeBudgetActionHistoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBudgetActionHistoriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBudgetActionHistoriesResponse(@JsonProperty("ActionHistories") ActionHistory[] actionHistories) {
+        this.actionHistories = actionHistories;
+  }
 }

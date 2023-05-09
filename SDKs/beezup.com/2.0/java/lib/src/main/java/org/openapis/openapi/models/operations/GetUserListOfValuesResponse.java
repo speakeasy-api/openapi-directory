@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserListOfValuesResponse {
@@ -12,6 +13,7 @@ public class GetUserListOfValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetUserListOfValuesResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetUserListOfValuesResponse {
     
     
     public String contentType;
+
     public GetUserListOfValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetUserListOfValuesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetUserListOfValuesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetUserListOfValuesResponse {
     
     
     public Integer statusCode;
+
     public GetUserListOfValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetUserListOfValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserListOfValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetUserListOfValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.UserListOfValuesResponse userListOfValuesResponse;
+
     public GetUserListOfValuesResponse withUserListOfValuesResponse(org.openapis.openapi.models.shared.UserListOfValuesResponse userListOfValuesResponse) {
         this.userListOfValuesResponse = userListOfValuesResponse;
         return this;
     }
     
+    public GetUserListOfValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

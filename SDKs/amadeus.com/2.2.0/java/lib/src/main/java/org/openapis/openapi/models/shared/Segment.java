@@ -18,6 +18,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aircraft")
     public AircraftEquipment aircraft;
+
     public Segment withAircraft(AircraftEquipment aircraft) {
         this.aircraft = aircraft;
         return this;
@@ -29,6 +30,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrival")
     public FlightEndPoint arrival;
+
     public Segment withArrival(FlightEndPoint arrival) {
         this.arrival = arrival;
         return this;
@@ -44,6 +46,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blacklistedInEU")
     public Boolean blacklistedInEU;
+
     public Segment withBlacklistedInEU(Boolean blacklistedInEU) {
         this.blacklistedInEU = blacklistedInEU;
         return this;
@@ -55,6 +58,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierCode")
     public String carrierCode;
+
     public Segment withCarrierCode(String carrierCode) {
         this.carrierCode = carrierCode;
         return this;
@@ -66,6 +70,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co2Emissions")
     public Co2Emission[] co2Emissions;
+
     public Segment withCo2Emissions(Co2Emission[] co2Emissions) {
         this.co2Emissions = co2Emissions;
         return this;
@@ -77,6 +82,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departure")
     public FlightEndPoint departure;
+
     public Segment withDeparture(FlightEndPoint departure) {
         this.departure = departure;
         return this;
@@ -88,6 +94,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public Segment withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -99,6 +106,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Segment withId(String id) {
         this.id = id;
         return this;
@@ -110,6 +118,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public Segment withNumber(String number) {
         this.number = number;
         return this;
@@ -121,6 +130,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfStops")
     public Long numberOfStops;
+
     public Segment withNumberOfStops(Long numberOfStops) {
         this.numberOfStops = numberOfStops;
         return this;
@@ -132,6 +142,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operating")
     public OperatingFlight operating;
+
     public Segment withOperating(OperatingFlight operating) {
         this.operating = operating;
         return this;
@@ -143,9 +154,11 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stops")
     public FlightStop[] stops;
+
     public Segment withStops(FlightStop[] stops) {
         this.stops = stops;
         return this;
     }
     
+    public Segment(){}
 }

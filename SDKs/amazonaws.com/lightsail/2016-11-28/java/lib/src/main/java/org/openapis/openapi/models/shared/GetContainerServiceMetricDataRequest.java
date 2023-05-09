@@ -16,6 +16,7 @@ public class GetContainerServiceMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetContainerServiceMetricDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class GetContainerServiceMetricDataRequest {
     
     @JsonProperty("metricName")
     public ContainerServiceMetricNameEnum metricName;
+
     public GetContainerServiceMetricDataRequest withMetricName(ContainerServiceMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +32,7 @@ public class GetContainerServiceMetricDataRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetContainerServiceMetricDataRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -37,6 +40,7 @@ public class GetContainerServiceMetricDataRequest {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GetContainerServiceMetricDataRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -46,6 +50,7 @@ public class GetContainerServiceMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetContainerServiceMetricDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -53,9 +58,18 @@ public class GetContainerServiceMetricDataRequest {
     
     @JsonProperty("statistics")
     public MetricStatisticEnum[] statistics;
+
     public GetContainerServiceMetricDataRequest withStatistics(MetricStatisticEnum[] statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public GetContainerServiceMetricDataRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("metricName") ContainerServiceMetricNameEnum metricName, @JsonProperty("period") Long period, @JsonProperty("serviceName") String serviceName, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("statistics") MetricStatisticEnum[] statistics) {
+        this.endTime = endTime;
+        this.metricName = metricName;
+        this.period = period;
+        this.serviceName = serviceName;
+        this.startTime = startTime;
+        this.statistics = statistics;
+  }
 }

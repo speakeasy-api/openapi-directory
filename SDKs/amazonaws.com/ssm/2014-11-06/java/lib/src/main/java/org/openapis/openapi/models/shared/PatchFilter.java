@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatchFilter {
     @JsonProperty("Key")
     public PatchFilterKeyEnum key;
+
     public PatchFilter withKey(PatchFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class PatchFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public PatchFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PatchFilter(@JsonProperty("Key") PatchFilterKeyEnum key, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

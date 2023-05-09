@@ -15,6 +15,7 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppVersion")
     public String appVersion;
+
     public EndpointDemographic withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -23,6 +24,7 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locale")
     public String locale;
+
     public EndpointDemographic withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -31,6 +33,7 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Make")
     public String make;
+
     public EndpointDemographic withMake(String make) {
         this.make = make;
         return this;
@@ -39,6 +42,7 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Model")
     public String model;
+
     public EndpointDemographic withModel(String model) {
         this.model = model;
         return this;
@@ -47,6 +51,7 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public EndpointDemographic withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -55,6 +60,7 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public String platform;
+
     public EndpointDemographic withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -63,6 +69,7 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformVersion")
     public String platformVersion;
+
     public EndpointDemographic withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -71,9 +78,11 @@ public class EndpointDemographic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public EndpointDemographic withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public EndpointDemographic(){}
 }

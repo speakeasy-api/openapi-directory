@@ -15,6 +15,7 @@ public class GetMembers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public GetMembers200ApplicationJSONEmbedded embedded;
+
     public GetMembers200ApplicationJSON withEmbedded(GetMembers200ApplicationJSONEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class GetMembers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetMembers200ApplicationJSONLinks links;
+
     public GetMembers200ApplicationJSON withLinks(GetMembers200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -34,9 +36,11 @@ public class GetMembers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public GetMembers200ApplicationJSON withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetMembers200ApplicationJSON(){}
 }

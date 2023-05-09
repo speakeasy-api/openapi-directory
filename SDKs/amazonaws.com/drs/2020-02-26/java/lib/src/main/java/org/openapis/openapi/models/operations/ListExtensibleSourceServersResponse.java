@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExtensibleSourceServersResponse {
@@ -12,6 +13,7 @@ public class ListExtensibleSourceServersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListExtensibleSourceServersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListExtensibleSourceServersResponse {
     
     
     public String contentType;
+
     public ListExtensibleSourceServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListExtensibleSourceServersResponse {
      */
     
     public Object internalServerException;
+
     public ListExtensibleSourceServersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListExtensibleSourceServersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExtensibleSourceServersResponse listExtensibleSourceServersResponse;
+
     public ListExtensibleSourceServersResponse withListExtensibleSourceServersResponse(org.openapis.openapi.models.shared.ListExtensibleSourceServersResponse listExtensibleSourceServersResponse) {
         this.listExtensibleSourceServersResponse = listExtensibleSourceServersResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListExtensibleSourceServersResponse {
     
     
     public Integer statusCode;
+
     public ListExtensibleSourceServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListExtensibleSourceServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExtensibleSourceServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListExtensibleSourceServersResponse {
      */
     
     public Object throttlingException;
+
     public ListExtensibleSourceServersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class ListExtensibleSourceServersResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ListExtensibleSourceServersResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -83,9 +92,14 @@ public class ListExtensibleSourceServersResponse {
      */
     
     public Object validationException;
+
     public ListExtensibleSourceServersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListExtensibleSourceServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TaskFailedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public TaskFailedEventDetails withCause(String cause) {
         this.cause = cause;
         return this;
@@ -23,6 +24,7 @@ public class TaskFailedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public TaskFailedEventDetails withError(String error) {
         this.error = error;
         return this;
@@ -30,6 +32,7 @@ public class TaskFailedEventDetails {
     
     @JsonProperty("resource")
     public String resource;
+
     public TaskFailedEventDetails withResource(String resource) {
         this.resource = resource;
         return this;
@@ -37,9 +40,14 @@ public class TaskFailedEventDetails {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public TaskFailedEventDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TaskFailedEventDetails(@JsonProperty("resource") String resource, @JsonProperty("resourceType") String resourceType) {
+        this.resource = resource;
+        this.resourceType = resourceType;
+  }
 }

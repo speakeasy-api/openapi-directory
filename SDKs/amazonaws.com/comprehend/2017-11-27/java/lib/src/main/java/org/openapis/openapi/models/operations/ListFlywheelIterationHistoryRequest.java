@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFlywheelIterationHistoryRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListFlywheelIterationHistoryRequest listFlywheelIterationHistoryRequest;
+
     public ListFlywheelIterationHistoryRequest withListFlywheelIterationHistoryRequest(org.openapis.openapi.models.shared.ListFlywheelIterationHistoryRequest listFlywheelIterationHistoryRequest) {
         this.listFlywheelIterationHistoryRequest = listFlywheelIterationHistoryRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListFlywheelIterationHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListFlywheelIterationHistoryRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListFlywheelIterationHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListFlywheelIterationHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListFlywheelIterationHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListFlywheelIterationHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListFlywheelIterationHistoryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListFlywheelIterationHistoryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListFlywheelIterationHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListFlywheelIterationHistoryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListFlywheelIterationHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListFlywheelIterationHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListFlywheelIterationHistoryXAmzTargetEnum xAmzTarget;
+
     public ListFlywheelIterationHistoryRequest withXAmzTarget(ListFlywheelIterationHistoryXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListFlywheelIterationHistoryRequest(@JsonProperty("ListFlywheelIterationHistoryRequest") org.openapis.openapi.models.shared.ListFlywheelIterationHistoryRequest listFlywheelIterationHistoryRequest, @JsonProperty("X-Amz-Target") ListFlywheelIterationHistoryXAmzTargetEnum xAmzTarget) {
+        this.listFlywheelIterationHistoryRequest = listFlywheelIterationHistoryRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

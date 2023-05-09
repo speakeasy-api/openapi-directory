@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETSessionInfoUsingGETResponse {
     
     public String contentType;
+
     public GETSessionInfoUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETSessionInfoUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETSessionInfoUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETSessionInfoUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETSessionInfoUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETSessionInfoUsingGETResponse {
      */
     
     public GETSessionInfoUsingGET200ApplicationJSON getSessionInfoUsingGET200ApplicationJSONObject;
+
     public GETSessionInfoUsingGETResponse withGETSessionInfoUsingGET200ApplicationJSONObject(GETSessionInfoUsingGET200ApplicationJSON getSessionInfoUsingGET200ApplicationJSONObject) {
         this.getSessionInfoUsingGET200ApplicationJSONObject = getSessionInfoUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETSessionInfoUsingGETResponse {
      */
     
     public GETSessionInfoUsingGET400ApplicationJSON getSessionInfoUsingGET400ApplicationJSONObject;
+
     public GETSessionInfoUsingGETResponse withGETSessionInfoUsingGET400ApplicationJSONObject(GETSessionInfoUsingGET400ApplicationJSON getSessionInfoUsingGET400ApplicationJSONObject) {
         this.getSessionInfoUsingGET400ApplicationJSONObject = getSessionInfoUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETSessionInfoUsingGETResponse {
      */
     
     public GETSessionInfoUsingGET401ApplicationJSON getSessionInfoUsingGET401ApplicationJSONObject;
+
     public GETSessionInfoUsingGETResponse withGETSessionInfoUsingGET401ApplicationJSONObject(GETSessionInfoUsingGET401ApplicationJSON getSessionInfoUsingGET401ApplicationJSONObject) {
         this.getSessionInfoUsingGET401ApplicationJSONObject = getSessionInfoUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETSessionInfoUsingGETResponse {
      */
     
     public GETSessionInfoUsingGET500ApplicationJSON getSessionInfoUsingGET500ApplicationJSONObject;
+
     public GETSessionInfoUsingGETResponse withGETSessionInfoUsingGET500ApplicationJSONObject(GETSessionInfoUsingGET500ApplicationJSON getSessionInfoUsingGET500ApplicationJSONObject) {
         this.getSessionInfoUsingGET500ApplicationJSONObject = getSessionInfoUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETSessionInfoUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

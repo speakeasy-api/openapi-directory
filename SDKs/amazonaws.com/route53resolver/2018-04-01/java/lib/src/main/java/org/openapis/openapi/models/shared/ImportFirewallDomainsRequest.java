@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportFirewallDomainsRequest {
     @JsonProperty("DomainFileUrl")
     public String domainFileUrl;
+
     public ImportFirewallDomainsRequest withDomainFileUrl(String domainFileUrl) {
         this.domainFileUrl = domainFileUrl;
         return this;
@@ -16,6 +17,7 @@ public class ImportFirewallDomainsRequest {
     
     @JsonProperty("FirewallDomainListId")
     public String firewallDomainListId;
+
     public ImportFirewallDomainsRequest withFirewallDomainListId(String firewallDomainListId) {
         this.firewallDomainListId = firewallDomainListId;
         return this;
@@ -23,9 +25,15 @@ public class ImportFirewallDomainsRequest {
     
     @JsonProperty("Operation")
     public FirewallDomainImportOperationEnum operation;
+
     public ImportFirewallDomainsRequest withOperation(FirewallDomainImportOperationEnum operation) {
         this.operation = operation;
         return this;
     }
     
+    public ImportFirewallDomainsRequest(@JsonProperty("DomainFileUrl") String domainFileUrl, @JsonProperty("FirewallDomainListId") String firewallDomainListId, @JsonProperty("Operation") FirewallDomainImportOperationEnum operation) {
+        this.domainFileUrl = domainFileUrl;
+        this.firewallDomainListId = firewallDomainListId;
+        this.operation = operation;
+  }
 }

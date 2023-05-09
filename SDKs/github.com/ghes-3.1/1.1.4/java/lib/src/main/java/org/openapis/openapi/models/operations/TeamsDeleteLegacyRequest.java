@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsDeleteLegacyRequest {
@@ -12,9 +13,13 @@ public class TeamsDeleteLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsDeleteLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsDeleteLegacyRequest(@JsonProperty("team_id") Long teamId) {
+        this.teamId = teamId;
+  }
 }

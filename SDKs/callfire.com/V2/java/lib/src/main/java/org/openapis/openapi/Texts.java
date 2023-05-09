@@ -62,12 +62,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTextBroadcastBatchResponse res = new org.openapis.openapi.models.operations.AddTextBroadcastBatchResponse() {{
+        org.openapis.openapi.models.operations.AddTextBroadcastBatchResponse res = new org.openapis.openapi.models.operations.AddTextBroadcastBatchResponse(contentType, httpRes.statusCode()) {{
             resourceId = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -119,12 +117,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddTextBroadcastRecipientsResponse res = new org.openapis.openapi.models.operations.AddTextBroadcastRecipientsResponse() {{
+        org.openapis.openapi.models.operations.AddTextBroadcastRecipientsResponse res = new org.openapis.openapi.models.operations.AddTextBroadcastRecipientsResponse(contentType, httpRes.statusCode()) {{
             textList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,11 +164,9 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArchiveTextBroadcastResponse res = new org.openapis.openapi.models.operations.ArchiveTextBroadcastResponse() {{
+        org.openapis.openapi.models.operations.ArchiveTextBroadcastResponse res = new org.openapis.openapi.models.operations.ArchiveTextBroadcastResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -211,12 +205,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTextAutoReplyResponse res = new org.openapis.openapi.models.operations.CreateTextAutoReplyResponse() {{
+        org.openapis.openapi.models.operations.CreateTextAutoReplyResponse res = new org.openapis.openapi.models.operations.CreateTextAutoReplyResponse(contentType, httpRes.statusCode()) {{
             resourceId = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -268,12 +260,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTextBroadcastResponse res = new org.openapis.openapi.models.operations.CreateTextBroadcastResponse() {{
+        org.openapis.openapi.models.operations.CreateTextBroadcastResponse res = new org.openapis.openapi.models.operations.CreateTextBroadcastResponse(contentType, httpRes.statusCode()) {{
             resourceId = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -317,11 +307,9 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTextAutoReplyResponse res = new org.openapis.openapi.models.operations.DeleteTextAutoReplyResponse() {{
+        org.openapis.openapi.models.operations.DeleteTextAutoReplyResponse res = new org.openapis.openapi.models.operations.DeleteTextAutoReplyResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -364,12 +352,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindTextAutoReplysResponse res = new org.openapis.openapi.models.operations.FindTextAutoReplysResponse() {{
+        org.openapis.openapi.models.operations.FindTextAutoReplysResponse res = new org.openapis.openapi.models.operations.FindTextAutoReplysResponse(contentType, httpRes.statusCode()) {{
             textAutoReplyPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -419,12 +405,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindTextBroadcastsResponse res = new org.openapis.openapi.models.operations.FindTextBroadcastsResponse() {{
+        org.openapis.openapi.models.operations.FindTextBroadcastsResponse res = new org.openapis.openapi.models.operations.FindTextBroadcastsResponse(contentType, httpRes.statusCode()) {{
             textBroadcastPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -474,12 +458,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindTextsResponse res = new org.openapis.openapi.models.operations.FindTextsResponse() {{
+        org.openapis.openapi.models.operations.FindTextsResponse res = new org.openapis.openapi.models.operations.FindTextsResponse(contentType, httpRes.statusCode()) {{
             textPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,12 +511,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextResponse res = new org.openapis.openapi.models.operations.GetTextResponse() {{
+        org.openapis.openapi.models.operations.GetTextResponse res = new org.openapis.openapi.models.operations.GetTextResponse(contentType, httpRes.statusCode()) {{
             text = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -584,12 +564,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextAutoReplyResponse res = new org.openapis.openapi.models.operations.GetTextAutoReplyResponse() {{
+        org.openapis.openapi.models.operations.GetTextAutoReplyResponse res = new org.openapis.openapi.models.operations.GetTextAutoReplyResponse(contentType, httpRes.statusCode()) {{
             textAutoReply = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -639,12 +617,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextBroadcastResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastResponse() {{
+        org.openapis.openapi.models.operations.GetTextBroadcastResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastResponse(contentType, httpRes.statusCode()) {{
             textBroadcast = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -694,12 +670,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextBroadcastBatchesResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastBatchesResponse() {{
+        org.openapis.openapi.models.operations.GetTextBroadcastBatchesResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastBatchesResponse(contentType, httpRes.statusCode()) {{
             batchPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -749,12 +723,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextBroadcastStatsResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastStatsResponse() {{
+        org.openapis.openapi.models.operations.GetTextBroadcastStatsResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastStatsResponse(contentType, httpRes.statusCode()) {{
             textBroadcastStatsDto = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -804,12 +776,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextBroadcastTextsResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastTextsResponse() {{
+        org.openapis.openapi.models.operations.GetTextBroadcastTextsResponse res = new org.openapis.openapi.models.operations.GetTextBroadcastTextsResponse(contentType, httpRes.statusCode()) {{
             textPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -861,12 +831,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendTextsResponse res = new org.openapis.openapi.models.operations.SendTextsResponse() {{
+        org.openapis.openapi.models.operations.SendTextsResponse res = new org.openapis.openapi.models.operations.SendTextsResponse(contentType, httpRes.statusCode()) {{
             textList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,11 +878,9 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartTextBroadcastResponse res = new org.openapis.openapi.models.operations.StartTextBroadcastResponse() {{
+        org.openapis.openapi.models.operations.StartTextBroadcastResponse res = new org.openapis.openapi.models.operations.StartTextBroadcastResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -951,11 +917,9 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopTextBroadcastResponse res = new org.openapis.openapi.models.operations.StopTextBroadcastResponse() {{
+        org.openapis.openapi.models.operations.StopTextBroadcastResponse res = new org.openapis.openapi.models.operations.StopTextBroadcastResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1000,11 +964,9 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusResponse res = new org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusResponse() {{
+        org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusResponse res = new org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1049,12 +1011,10 @@ public class Texts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTextBroadcastResponse res = new org.openapis.openapi.models.operations.UpdateTextBroadcastResponse() {{
+        org.openapis.openapi.models.operations.UpdateTextBroadcastResponse res = new org.openapis.openapi.models.operations.UpdateTextBroadcastResponse(contentType, httpRes.statusCode()) {{
             textBroadcastCreateResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

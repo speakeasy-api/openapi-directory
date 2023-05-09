@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCostCategoryDefinitionResponse {
     
     public String contentType;
+
     public CreateCostCategoryDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCostCategoryDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCostCategoryDefinitionResponse createCostCategoryDefinitionResponse;
+
     public CreateCostCategoryDefinitionResponse withCreateCostCategoryDefinitionResponse(org.openapis.openapi.models.shared.CreateCostCategoryDefinitionResponse createCostCategoryDefinitionResponse) {
         this.createCostCategoryDefinitionResponse = createCostCategoryDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCostCategoryDefinitionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCostCategoryDefinitionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class CreateCostCategoryDefinitionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateCostCategoryDefinitionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateCostCategoryDefinitionResponse {
     
     
     public Integer statusCode;
+
     public CreateCostCategoryDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateCostCategoryDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCostCategoryDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCostCategoryDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

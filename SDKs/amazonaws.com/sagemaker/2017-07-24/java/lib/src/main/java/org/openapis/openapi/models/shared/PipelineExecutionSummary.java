@@ -20,6 +20,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public PipelineExecutionSummary withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
@@ -28,6 +29,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDescription")
     public String pipelineExecutionDescription;
+
     public PipelineExecutionSummary withPipelineExecutionDescription(String pipelineExecutionDescription) {
         this.pipelineExecutionDescription = pipelineExecutionDescription;
         return this;
@@ -36,6 +38,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDisplayName")
     public String pipelineExecutionDisplayName;
+
     public PipelineExecutionSummary withPipelineExecutionDisplayName(String pipelineExecutionDisplayName) {
         this.pipelineExecutionDisplayName = pipelineExecutionDisplayName;
         return this;
@@ -44,6 +47,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionFailureReason")
     public String pipelineExecutionFailureReason;
+
     public PipelineExecutionSummary withPipelineExecutionFailureReason(String pipelineExecutionFailureReason) {
         this.pipelineExecutionFailureReason = pipelineExecutionFailureReason;
         return this;
@@ -52,6 +56,7 @@ public class PipelineExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionStatus")
     public PipelineExecutionStatusEnum pipelineExecutionStatus;
+
     public PipelineExecutionSummary withPipelineExecutionStatus(PipelineExecutionStatusEnum pipelineExecutionStatus) {
         this.pipelineExecutionStatus = pipelineExecutionStatus;
         return this;
@@ -62,9 +67,11 @@ public class PipelineExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public PipelineExecutionSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PipelineExecutionSummary(){}
 }

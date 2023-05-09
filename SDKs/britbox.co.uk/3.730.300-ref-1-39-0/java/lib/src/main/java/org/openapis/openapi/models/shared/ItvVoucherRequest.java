@@ -15,9 +15,13 @@ public class ItvVoucherRequest {
      */
     @JsonProperty("voucher")
     public String voucher;
+
     public ItvVoucherRequest withVoucher(String voucher) {
         this.voucher = voucher;
         return this;
     }
     
+    public ItvVoucherRequest(@JsonProperty("voucher") String voucher) {
+        this.voucher = voucher;
+  }
 }

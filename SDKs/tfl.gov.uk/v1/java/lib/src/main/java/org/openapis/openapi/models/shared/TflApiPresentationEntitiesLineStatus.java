@@ -19,6 +19,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public TflApiPresentationEntitiesLineStatus withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruption")
     public TflApiPresentationEntitiesDisruption disruption;
+
     public TflApiPresentationEntitiesLineStatus withDisruption(TflApiPresentationEntitiesDisruption disruption) {
         this.disruption = disruption;
         return this;
@@ -38,6 +40,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public TflApiPresentationEntitiesLineStatus withId(Integer id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesLineStatus withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -56,6 +60,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified")
     public OffsetDateTime modified;
+
     public TflApiPresentationEntitiesLineStatus withModified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
@@ -64,6 +69,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public TflApiPresentationEntitiesLineStatus withReason(String reason) {
         this.reason = reason;
         return this;
@@ -72,6 +78,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusSeverity")
     public Integer statusSeverity;
+
     public TflApiPresentationEntitiesLineStatus withStatusSeverity(Integer statusSeverity) {
         this.statusSeverity = statusSeverity;
         return this;
@@ -80,6 +87,7 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusSeverityDescription")
     public String statusSeverityDescription;
+
     public TflApiPresentationEntitiesLineStatus withStatusSeverityDescription(String statusSeverityDescription) {
         this.statusSeverityDescription = statusSeverityDescription;
         return this;
@@ -88,9 +96,11 @@ public class TflApiPresentationEntitiesLineStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validityPeriods")
     public TflApiPresentationEntitiesValidityPeriod[] validityPeriods;
+
     public TflApiPresentationEntitiesLineStatus withValidityPeriods(TflApiPresentationEntitiesValidityPeriod[] validityPeriods) {
         this.validityPeriods = validityPeriods;
         return this;
     }
     
+    public TflApiPresentationEntitiesLineStatus(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelDataRepositoryTaskRequest {
     @JsonProperty("TaskId")
     public String taskId;
+
     public CancelDataRepositoryTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public CancelDataRepositoryTaskRequest(@JsonProperty("TaskId") String taskId) {
+        this.taskId = taskId;
+  }
 }

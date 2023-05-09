@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2UnwrappedCryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GooglePrivacyDlpV2UnwrappedCryptoKey withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GooglePrivacyDlpV2UnwrappedCryptoKey(){}
 }

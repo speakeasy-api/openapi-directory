@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETStatsUsingGETResponse {
     
     public String contentType;
+
     public GETStatsUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GETStatsUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETStatsUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GETStatsUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETStatsUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GETStatsUsingGETResponse {
      */
     
     public GETStatsUsingGET200ApplicationJSON getStatsUsingGET200ApplicationJSONObject;
+
     public GETStatsUsingGETResponse withGETStatsUsingGET200ApplicationJSONObject(GETStatsUsingGET200ApplicationJSON getStatsUsingGET200ApplicationJSONObject) {
         this.getStatsUsingGET200ApplicationJSONObject = getStatsUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GETStatsUsingGETResponse {
      */
     
     public GETStatsUsingGET400ApplicationJSON getStatsUsingGET400ApplicationJSONObject;
+
     public GETStatsUsingGETResponse withGETStatsUsingGET400ApplicationJSONObject(GETStatsUsingGET400ApplicationJSON getStatsUsingGET400ApplicationJSONObject) {
         this.getStatsUsingGET400ApplicationJSONObject = getStatsUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GETStatsUsingGETResponse {
      */
     
     public GETStatsUsingGET401ApplicationJSON getStatsUsingGET401ApplicationJSONObject;
+
     public GETStatsUsingGETResponse withGETStatsUsingGET401ApplicationJSONObject(GETStatsUsingGET401ApplicationJSON getStatsUsingGET401ApplicationJSONObject) {
         this.getStatsUsingGET401ApplicationJSONObject = getStatsUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GETStatsUsingGETResponse {
      */
     
     public GETStatsUsingGET500ApplicationJSON getStatsUsingGET500ApplicationJSONObject;
+
     public GETStatsUsingGETResponse withGETStatsUsingGET500ApplicationJSONObject(GETStatsUsingGET500ApplicationJSON getStatsUsingGET500ApplicationJSONObject) {
         this.getStatsUsingGET500ApplicationJSONObject = getStatsUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public GETStatsUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

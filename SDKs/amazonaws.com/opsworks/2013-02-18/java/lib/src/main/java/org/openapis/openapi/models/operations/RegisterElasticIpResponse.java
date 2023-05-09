@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterElasticIpResponse {
     
     public String contentType;
+
     public RegisterElasticIpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterElasticIpResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterElasticIpResult registerElasticIpResult;
+
     public RegisterElasticIpResponse withRegisterElasticIpResult(org.openapis.openapi.models.shared.RegisterElasticIpResult registerElasticIpResult) {
         this.registerElasticIpResult = registerElasticIpResult;
         return this;
@@ -29,6 +32,7 @@ public class RegisterElasticIpResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterElasticIpResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class RegisterElasticIpResponse {
     
     
     public Integer statusCode;
+
     public RegisterElasticIpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RegisterElasticIpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterElasticIpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class RegisterElasticIpResponse {
      */
     
     public Object validationException;
+
     public RegisterElasticIpResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RegisterElasticIpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

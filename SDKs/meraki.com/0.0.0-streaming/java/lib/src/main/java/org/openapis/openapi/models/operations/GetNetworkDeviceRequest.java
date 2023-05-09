@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkDeviceRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public GetNetworkDeviceRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -16,9 +18,14 @@ public class GetNetworkDeviceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public GetNetworkDeviceRequest withSerial(String serial) {
         this.serial = serial;
         return this;
     }
     
+    public GetNetworkDeviceRequest(@JsonProperty("networkId") String networkId, @JsonProperty("serial") String serial) {
+        this.networkId = networkId;
+        this.serial = serial;
+  }
 }

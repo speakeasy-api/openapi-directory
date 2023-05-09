@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartMLEvaluationTaskRunResponse {
@@ -12,6 +13,7 @@ public class StartMLEvaluationTaskRunResponse {
      */
     
     public Object concurrentRunsExceededException;
+
     public StartMLEvaluationTaskRunResponse withConcurrentRunsExceededException(Object concurrentRunsExceededException) {
         this.concurrentRunsExceededException = concurrentRunsExceededException;
         return this;
@@ -19,6 +21,7 @@ public class StartMLEvaluationTaskRunResponse {
     
     
     public String contentType;
+
     public StartMLEvaluationTaskRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartMLEvaluationTaskRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartMLEvaluationTaskRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartMLEvaluationTaskRunResponse {
      */
     
     public Object internalServiceException;
+
     public StartMLEvaluationTaskRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StartMLEvaluationTaskRunResponse {
      */
     
     public Object invalidInputException;
+
     public StartMLEvaluationTaskRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StartMLEvaluationTaskRunResponse {
      */
     
     public Object mlTransformNotReadyException;
+
     public StartMLEvaluationTaskRunResponse withMLTransformNotReadyException(Object mlTransformNotReadyException) {
         this.mlTransformNotReadyException = mlTransformNotReadyException;
         return this;
@@ -69,6 +76,7 @@ public class StartMLEvaluationTaskRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public StartMLEvaluationTaskRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -79,6 +87,7 @@ public class StartMLEvaluationTaskRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartMLEvaluationTaskRunResponse startMLEvaluationTaskRunResponse;
+
     public StartMLEvaluationTaskRunResponse withStartMLEvaluationTaskRunResponse(org.openapis.openapi.models.shared.StartMLEvaluationTaskRunResponse startMLEvaluationTaskRunResponse) {
         this.startMLEvaluationTaskRunResponse = startMLEvaluationTaskRunResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartMLEvaluationTaskRunResponse {
     
     
     public Integer statusCode;
+
     public StartMLEvaluationTaskRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartMLEvaluationTaskRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartMLEvaluationTaskRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartMLEvaluationTaskRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

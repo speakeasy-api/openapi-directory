@@ -21,6 +21,7 @@ public class CodeScanningUploadSarifRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout_uri")
     public String checkoutUri;
+
     public CodeScanningUploadSarifRequestBody withCheckoutUri(String checkoutUri) {
         this.checkoutUri = checkoutUri;
         return this;
@@ -31,6 +32,7 @@ public class CodeScanningUploadSarifRequestBody {
      */
     @JsonProperty("commit_sha")
     public String commitSha;
+
     public CodeScanningUploadSarifRequestBody withCommitSha(String commitSha) {
         this.commitSha = commitSha;
         return this;
@@ -42,6 +44,7 @@ public class CodeScanningUploadSarifRequestBody {
      */
     @JsonProperty("ref")
     public String ref;
+
     public CodeScanningUploadSarifRequestBody withRef(String ref) {
         this.ref = ref;
         return this;
@@ -52,6 +55,7 @@ public class CodeScanningUploadSarifRequestBody {
      */
     @JsonProperty("sarif")
     public String sarif;
+
     public CodeScanningUploadSarifRequestBody withSarif(String sarif) {
         this.sarif = sarif;
         return this;
@@ -65,6 +69,7 @@ public class CodeScanningUploadSarifRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("started_at")
     public OffsetDateTime startedAt;
+
     public CodeScanningUploadSarifRequestBody withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -76,9 +81,15 @@ public class CodeScanningUploadSarifRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tool_name")
     public String toolName;
+
     public CodeScanningUploadSarifRequestBody withToolName(String toolName) {
         this.toolName = toolName;
         return this;
     }
     
+    public CodeScanningUploadSarifRequestBody(@JsonProperty("commit_sha") String commitSha, @JsonProperty("ref") String ref, @JsonProperty("sarif") String sarif) {
+        this.commitSha = commitSha;
+        this.ref = ref;
+        this.sarif = sarif;
+  }
 }

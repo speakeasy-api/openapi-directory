@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUrl")
     public String contentUrl;
+
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject withContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public GoogleCloudDialogflowV2IntentMessageImage icon;
+
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject withIcon(GoogleCloudDialogflowV2IntentMessageImage icon) {
         this.icon = icon;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeImage")
     public GoogleCloudDialogflowV2IntentMessageImage largeImage;
+
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject withLargeImage(GoogleCloudDialogflowV2IntentMessageImage largeImage) {
         this.largeImage = largeImage;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject(){}
 }

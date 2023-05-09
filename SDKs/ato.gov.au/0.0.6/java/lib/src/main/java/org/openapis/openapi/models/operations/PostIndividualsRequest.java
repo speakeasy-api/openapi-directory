@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsRequest {
@@ -12,6 +13,7 @@ public class PostIndividualsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PostIndividualsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class PostIndividualsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.IndividualInput individualInput;
+
     public PostIndividualsRequest withIndividualInput(org.openapis.openapi.models.shared.IndividualInput individualInput) {
         this.individualInput = individualInput;
         return this;
     }
     
+    public PostIndividualsRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("individualInput") org.openapis.openapi.models.shared.IndividualInput individualInput) {
+        this.apiKey = apiKey;
+        this.individualInput = individualInput;
+  }
 }

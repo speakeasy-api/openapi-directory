@@ -18,6 +18,7 @@ public class BookingBookRequestBodyItemsBookingQuestionAnswers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public BookingBookRequestBodyItemsBookingQuestionAnswers withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -29,9 +30,11 @@ public class BookingBookRequestBodyItemsBookingQuestionAnswers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questionId")
     public Long questionId;
+
     public BookingBookRequestBodyItemsBookingQuestionAnswers withQuestionId(Long questionId) {
         this.questionId = questionId;
         return this;
     }
     
+    public BookingBookRequestBodyItemsBookingQuestionAnswers(){}
 }

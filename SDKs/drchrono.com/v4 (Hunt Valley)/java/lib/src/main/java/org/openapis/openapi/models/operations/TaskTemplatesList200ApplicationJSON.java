@@ -18,6 +18,7 @@ public class TaskTemplatesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskTemplate[] data;
+
     public TaskTemplatesList200ApplicationJSON withData(org.openapis.openapi.models.shared.TaskTemplate[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class TaskTemplatesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public TaskTemplatesList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -40,9 +42,11 @@ public class TaskTemplatesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public TaskTemplatesList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public TaskTemplatesList200ApplicationJSON(){}
 }

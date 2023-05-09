@@ -18,6 +18,7 @@ public class PriceCoverageBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advanceBookingWindowRange")
     public PriceCoverageBucketAdvanceBookingWindowRangeEnum advanceBookingWindowRange;
+
     public PriceCoverageBucket withAdvanceBookingWindowRange(PriceCoverageBucketAdvanceBookingWindowRangeEnum advanceBookingWindowRange) {
         this.advanceBookingWindowRange = advanceBookingWindowRange;
         return this;
@@ -29,6 +30,7 @@ public class PriceCoverageBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availablePriceCount")
     public String availablePriceCount;
+
     public PriceCoverageBucket withAvailablePriceCount(String availablePriceCount) {
         this.availablePriceCount = availablePriceCount;
         return this;
@@ -40,6 +42,7 @@ public class PriceCoverageBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthOfStayRange")
     public PriceCoverageBucketLengthOfStayRangeEnum lengthOfStayRange;
+
     public PriceCoverageBucket withLengthOfStayRange(PriceCoverageBucketLengthOfStayRangeEnum lengthOfStayRange) {
         this.lengthOfStayRange = lengthOfStayRange;
         return this;
@@ -51,9 +54,11 @@ public class PriceCoverageBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceCoveragePercent")
     public Double priceCoveragePercent;
+
     public PriceCoverageBucket withPriceCoveragePercent(Double priceCoveragePercent) {
         this.priceCoveragePercent = priceCoveragePercent;
         return this;
     }
     
+    public PriceCoverageBucket(){}
 }

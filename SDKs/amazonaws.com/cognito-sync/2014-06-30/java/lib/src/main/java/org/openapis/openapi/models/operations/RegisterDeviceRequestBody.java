@@ -12,6 +12,7 @@ public class RegisterDeviceRequestBody {
      */
     @JsonProperty("Platform")
     public RegisterDeviceRequestBodyPlatformEnum platform;
+
     public RegisterDeviceRequestBody withPlatform(RegisterDeviceRequestBodyPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -22,9 +23,14 @@ public class RegisterDeviceRequestBody {
      */
     @JsonProperty("Token")
     public String token;
+
     public RegisterDeviceRequestBody withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RegisterDeviceRequestBody(@JsonProperty("Platform") RegisterDeviceRequestBodyPlatformEnum platform, @JsonProperty("Token") String token) {
+        this.platform = platform;
+        this.token = token;
+  }
 }

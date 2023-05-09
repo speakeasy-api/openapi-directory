@@ -12,9 +12,13 @@ public class DeregisterResourceRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DeregisterResourceRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DeregisterResourceRequestBody(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

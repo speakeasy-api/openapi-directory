@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateColumnStatisticsForTableResponse {
     
     public String contentType;
+
     public UpdateColumnStatisticsForTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateColumnStatisticsForTableResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateColumnStatisticsForTableResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateColumnStatisticsForTableResponse {
      */
     
     public Object glueEncryptionException;
+
     public UpdateColumnStatisticsForTableResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateColumnStatisticsForTableResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateColumnStatisticsForTableResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateColumnStatisticsForTableResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateColumnStatisticsForTableResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateColumnStatisticsForTableResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateColumnStatisticsForTableResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateColumnStatisticsForTableResponse {
     
     
     public Integer statusCode;
+
     public UpdateColumnStatisticsForTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateColumnStatisticsForTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateColumnStatisticsForTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateColumnStatisticsForTableResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateColumnStatisticsForTableResponse updateColumnStatisticsForTableResponse;
+
     public UpdateColumnStatisticsForTableResponse withUpdateColumnStatisticsForTableResponse(org.openapis.openapi.models.shared.UpdateColumnStatisticsForTableResponse updateColumnStatisticsForTableResponse) {
         this.updateColumnStatisticsForTableResponse = updateColumnStatisticsForTableResponse;
         return this;
     }
     
+    public UpdateColumnStatisticsForTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

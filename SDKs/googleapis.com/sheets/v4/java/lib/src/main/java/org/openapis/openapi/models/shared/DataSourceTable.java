@@ -18,6 +18,7 @@ public class DataSourceTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSelectionType")
     public DataSourceTableColumnSelectionTypeEnum columnSelectionType;
+
     public DataSourceTable withColumnSelectionType(DataSourceTableColumnSelectionTypeEnum columnSelectionType) {
         this.columnSelectionType = columnSelectionType;
         return this;
@@ -29,6 +30,7 @@ public class DataSourceTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public DataSourceColumnReference[] columns;
+
     public DataSourceTable withColumns(DataSourceColumnReference[] columns) {
         this.columns = columns;
         return this;
@@ -40,6 +42,7 @@ public class DataSourceTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataExecutionStatus")
     public DataExecutionStatus dataExecutionStatus;
+
     public DataSourceTable withDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
         this.dataExecutionStatus = dataExecutionStatus;
         return this;
@@ -51,6 +54,7 @@ public class DataSourceTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public DataSourceTable withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -62,6 +66,7 @@ public class DataSourceTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterSpecs")
     public FilterSpec[] filterSpecs;
+
     public DataSourceTable withFilterSpecs(FilterSpec[] filterSpecs) {
         this.filterSpecs = filterSpecs;
         return this;
@@ -73,6 +78,7 @@ public class DataSourceTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowLimit")
     public Integer rowLimit;
+
     public DataSourceTable withRowLimit(Integer rowLimit) {
         this.rowLimit = rowLimit;
         return this;
@@ -84,9 +90,11 @@ public class DataSourceTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortSpecs")
     public SortSpec[] sortSpecs;
+
     public DataSourceTable withSortSpecs(SortSpec[] sortSpecs) {
         this.sortSpecs = sortSpecs;
         return this;
     }
     
+    public DataSourceTable(){}
 }

@@ -12,6 +12,7 @@ public class GetCommentsByArticleIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=a_id")
     public String aId;
+
     public GetCommentsByArticleIdRequest withAId(String aId) {
         this.aId = aId;
         return this;
@@ -22,9 +23,11 @@ public class GetCommentsByArticleIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=p_id")
     public String pId;
+
     public GetCommentsByArticleIdRequest withPId(String pId) {
         this.pId = pId;
         return this;
     }
     
+    public GetCommentsByArticleIdRequest(){}
 }

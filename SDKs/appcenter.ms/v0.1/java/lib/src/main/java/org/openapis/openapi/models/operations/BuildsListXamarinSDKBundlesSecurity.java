@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsListXamarinSDKBundlesSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Token")
     public String apiToken;
+
     public BuildsListXamarinSDKBundlesSecurity withAPIToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }
     
+    public BuildsListXamarinSDKBundlesSecurity(@JsonProperty("APIToken") String apiToken) {
+        this.apiToken = apiToken;
+  }
 }

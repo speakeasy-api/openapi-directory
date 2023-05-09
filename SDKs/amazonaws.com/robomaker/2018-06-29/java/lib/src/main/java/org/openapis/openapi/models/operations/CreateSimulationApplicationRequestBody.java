@@ -15,6 +15,7 @@ public class CreateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public CreateSimulationApplicationRequestBodyEnvironment environment;
+
     public CreateSimulationApplicationRequestBody withEnvironment(CreateSimulationApplicationRequestBodyEnvironment environment) {
         this.environment = environment;
         return this;
@@ -25,6 +26,7 @@ public class CreateSimulationApplicationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateSimulationApplicationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class CreateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingEngine")
     public CreateSimulationApplicationRequestBodyRenderingEngine renderingEngine;
+
     public CreateSimulationApplicationRequestBody withRenderingEngine(CreateSimulationApplicationRequestBodyRenderingEngine renderingEngine) {
         this.renderingEngine = renderingEngine;
         return this;
@@ -46,6 +49,7 @@ public class CreateSimulationApplicationRequestBody {
      */
     @JsonProperty("robotSoftwareSuite")
     public CreateSimulationApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite;
+
     public CreateSimulationApplicationRequestBody withRobotSoftwareSuite(CreateSimulationApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -56,6 +60,7 @@ public class CreateSimulationApplicationRequestBody {
      */
     @JsonProperty("simulationSoftwareSuite")
     public CreateSimulationApplicationRequestBodySimulationSoftwareSuite simulationSoftwareSuite;
+
     public CreateSimulationApplicationRequestBody withSimulationSoftwareSuite(CreateSimulationApplicationRequestBodySimulationSoftwareSuite simulationSoftwareSuite) {
         this.simulationSoftwareSuite = simulationSoftwareSuite;
         return this;
@@ -67,6 +72,7 @@ public class CreateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.SourceConfig[] sources;
+
     public CreateSimulationApplicationRequestBody withSources(org.openapis.openapi.models.shared.SourceConfig[] sources) {
         this.sources = sources;
         return this;
@@ -78,9 +84,15 @@ public class CreateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSimulationApplicationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSimulationApplicationRequestBody(@JsonProperty("name") String name, @JsonProperty("robotSoftwareSuite") CreateSimulationApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite, @JsonProperty("simulationSoftwareSuite") CreateSimulationApplicationRequestBodySimulationSoftwareSuite simulationSoftwareSuite) {
+        this.name = name;
+        this.robotSoftwareSuite = robotSoftwareSuite;
+        this.simulationSoftwareSuite = simulationSoftwareSuite;
+  }
 }

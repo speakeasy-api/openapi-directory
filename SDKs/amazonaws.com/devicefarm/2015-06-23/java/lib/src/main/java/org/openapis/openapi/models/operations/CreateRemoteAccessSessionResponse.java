@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRemoteAccessSessionResponse {
@@ -12,6 +13,7 @@ public class CreateRemoteAccessSessionResponse {
      */
     
     public Object argumentException;
+
     public CreateRemoteAccessSessionResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateRemoteAccessSessionResponse {
     
     
     public String contentType;
+
     public CreateRemoteAccessSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateRemoteAccessSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRemoteAccessSessionResult createRemoteAccessSessionResult;
+
     public CreateRemoteAccessSessionResponse withCreateRemoteAccessSessionResult(org.openapis.openapi.models.shared.CreateRemoteAccessSessionResult createRemoteAccessSessionResult) {
         this.createRemoteAccessSessionResult = createRemoteAccessSessionResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateRemoteAccessSessionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRemoteAccessSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRemoteAccessSessionResponse {
      */
     
     public Object notFoundException;
+
     public CreateRemoteAccessSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRemoteAccessSessionResponse {
      */
     
     public Object serviceAccountException;
+
     public CreateRemoteAccessSessionResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class CreateRemoteAccessSessionResponse {
     
     
     public Integer statusCode;
+
     public CreateRemoteAccessSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateRemoteAccessSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRemoteAccessSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateRemoteAccessSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

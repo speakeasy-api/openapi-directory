@@ -15,6 +15,7 @@ public class UpdateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateNetworkSiteRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateNetworkSiteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,9 +38,13 @@ public class UpdateNetworkSiteRequestBody {
      */
     @JsonProperty("networkSiteArn")
     public String networkSiteArn;
+
     public UpdateNetworkSiteRequestBody withNetworkSiteArn(String networkSiteArn) {
         this.networkSiteArn = networkSiteArn;
         return this;
     }
     
+    public UpdateNetworkSiteRequestBody(@JsonProperty("networkSiteArn") String networkSiteArn) {
+        this.networkSiteArn = networkSiteArn;
+  }
 }

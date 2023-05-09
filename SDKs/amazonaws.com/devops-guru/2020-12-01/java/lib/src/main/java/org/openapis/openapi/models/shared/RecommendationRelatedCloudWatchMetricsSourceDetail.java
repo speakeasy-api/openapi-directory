@@ -15,6 +15,7 @@ public class RecommendationRelatedCloudWatchMetricsSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public RecommendationRelatedCloudWatchMetricsSourceDetail withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationRelatedCloudWatchMetricsSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public RecommendationRelatedCloudWatchMetricsSourceDetail withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public RecommendationRelatedCloudWatchMetricsSourceDetail(){}
 }

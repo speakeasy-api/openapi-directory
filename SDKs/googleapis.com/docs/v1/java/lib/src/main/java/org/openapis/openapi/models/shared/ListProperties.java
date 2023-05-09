@@ -18,9 +18,11 @@ public class ListProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestingLevels")
     public NestingLevel[] nestingLevels;
+
     public ListProperties withNestingLevels(NestingLevel[] nestingLevels) {
         this.nestingLevels = nestingLevels;
         return this;
     }
     
+    public ListProperties(){}
 }

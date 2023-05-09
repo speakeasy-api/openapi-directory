@@ -20,6 +20,7 @@ public class UsageStatistics {
      */
     @JsonProperty("dedicatedCoreTime")
     public String dedicatedCoreTime;
+
     public UsageStatistics withDedicatedCoreTime(String dedicatedCoreTime) {
         this.dedicatedCoreTime = dedicatedCoreTime;
         return this;
@@ -32,6 +33,7 @@ public class UsageStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public UsageStatistics withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -44,9 +46,15 @@ public class UsageStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public UsageStatistics withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public UsageStatistics(@JsonProperty("dedicatedCoreTime") String dedicatedCoreTime, @JsonProperty("lastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.dedicatedCoreTime = dedicatedCoreTime;
+        this.lastUpdateTime = lastUpdateTime;
+        this.startTime = startTime;
+  }
 }

@@ -15,6 +15,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public Podcast withAuthor(String author) {
         this.author = author;
         return this;
@@ -23,6 +24,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block")
     public Boolean block;
+
     public Podcast withBlock(Boolean block) {
         this.block = block;
         return this;
@@ -30,6 +32,7 @@ public class Podcast {
     
     @JsonProperty("categories")
     public String[] categories;
+
     public Podcast withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -38,6 +41,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public Podcast withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -46,6 +50,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Podcast withCountry(String country) {
         this.country = country;
         return this;
@@ -53,6 +58,7 @@ public class Podcast {
     
     @JsonProperty("description")
     public String description;
+
     public Podcast withDescription(String description) {
         this.description = description;
         return this;
@@ -61,6 +67,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicit")
     public Boolean explicit;
+
     public Podcast withExplicit(Boolean explicit) {
         this.explicit = explicit;
         return this;
@@ -69,6 +76,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Podcast withImage(String image) {
         this.image = image;
         return this;
@@ -77,6 +85,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Podcast withKey(String key) {
         this.key = key;
         return this;
@@ -85,6 +94,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public Podcast withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -92,6 +102,7 @@ public class Podcast {
     
     @JsonProperty("language")
     public String language;
+
     public Podcast withLanguage(String language) {
         this.language = language;
         return this;
@@ -100,6 +111,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Podcast withLink(String link) {
         this.link = link;
         return this;
@@ -108,6 +120,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerEmail")
     public String ownerEmail;
+
     public Podcast withOwnerEmail(String ownerEmail) {
         this.ownerEmail = ownerEmail;
         return this;
@@ -116,6 +129,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerName")
     public String ownerName;
+
     public Podcast withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -124,6 +138,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showType")
     public String showType;
+
     public Podcast withShowType(String showType) {
         this.showType = showType;
         return this;
@@ -132,6 +147,7 @@ public class Podcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public Podcast withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -139,6 +155,7 @@ public class Podcast {
     
     @JsonProperty("summary")
     public String summary;
+
     public Podcast withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -146,9 +163,17 @@ public class Podcast {
     
     @JsonProperty("title")
     public String title;
+
     public Podcast withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Podcast(@JsonProperty("categories") String[] categories, @JsonProperty("description") String description, @JsonProperty("language") String language, @JsonProperty("summary") String summary, @JsonProperty("title") String title) {
+        this.categories = categories;
+        this.description = description;
+        this.language = language;
+        this.summary = summary;
+        this.title = title;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteUserRequest {
@@ -12,9 +13,13 @@ public class EnterpriseAdminDeleteUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public EnterpriseAdminDeleteUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public EnterpriseAdminDeleteUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

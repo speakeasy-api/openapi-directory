@@ -12,6 +12,7 @@ public class LISTENOIREReponseEtatEtat {
      */
     @JsonProperty("listeNoire")
     public String listeNoire;
+
     public LISTENOIREReponseEtatEtat withListeNoire(String listeNoire) {
         this.listeNoire = listeNoire;
         return this;
@@ -22,9 +23,14 @@ public class LISTENOIREReponseEtatEtat {
      */
     @JsonProperty("tel")
     public String tel;
+
     public LISTENOIREReponseEtatEtat withTel(String tel) {
         this.tel = tel;
         return this;
     }
     
+    public LISTENOIREReponseEtatEtat(@JsonProperty("listeNoire") String listeNoire, @JsonProperty("tel") String tel) {
+        this.listeNoire = listeNoire;
+        this.tel = tel;
+  }
 }

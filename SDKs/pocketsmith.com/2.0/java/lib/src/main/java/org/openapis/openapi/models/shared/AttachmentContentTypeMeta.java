@@ -15,6 +15,7 @@ public class AttachmentContentTypeMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AttachmentContentTypeMeta withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class AttachmentContentTypeMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public String extension;
+
     public AttachmentContentTypeMeta withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -37,9 +39,11 @@ public class AttachmentContentTypeMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AttachmentContentTypeMeta withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AttachmentContentTypeMeta(){}
 }

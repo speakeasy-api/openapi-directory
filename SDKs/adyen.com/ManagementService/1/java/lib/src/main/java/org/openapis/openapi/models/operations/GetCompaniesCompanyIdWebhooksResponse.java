@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompaniesCompanyIdWebhooksResponse {
     
     public String contentType;
+
     public GetCompaniesCompanyIdWebhooksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCompaniesCompanyIdWebhooksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWebhooksResponse listWebhooksResponse;
+
     public GetCompaniesCompanyIdWebhooksResponse withListWebhooksResponse(org.openapis.openapi.models.shared.ListWebhooksResponse listWebhooksResponse) {
         this.listWebhooksResponse = listWebhooksResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCompaniesCompanyIdWebhooksResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetCompaniesCompanyIdWebhooksResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetCompaniesCompanyIdWebhooksResponse {
     
     
     public Integer statusCode;
+
     public GetCompaniesCompanyIdWebhooksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCompaniesCompanyIdWebhooksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompaniesCompanyIdWebhooksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompaniesCompanyIdWebhooksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

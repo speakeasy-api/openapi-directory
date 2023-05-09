@@ -31,10 +31,11 @@ public class Privilege {
 
     /**
      * This method retrieves the seller's current set of privileges, including whether or not the seller's eBay registration has been completed, as well as the details of their site-wide &lt;b&gt;sellingLimt&lt;/b&gt; (the amount and quantity they can sell on a given day).
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPrivilegesResponse getPrivileges() throws Exception {
+    public org.openapis.openapi.models.operations.GetPrivilegesResponse getPrivileges(org.openapis.openapi.models.operations.GetPrivilegesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/privilege");
         
@@ -43,16 +44,15 @@ public class Privilege {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrivilegesResponse res = new org.openapis.openapi.models.operations.GetPrivilegesResponse() {{
+        org.openapis.openapi.models.operations.GetPrivilegesResponse res = new org.openapis.openapi.models.operations.GetPrivilegesResponse(contentType, httpRes.statusCode()) {{
             sellingPrivileges = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class DestinyConfigDestinyManifest {
      */
     
     public DestinyConfigImagePyramidEntry[] iconImagePyramidInfo;
+
     public DestinyConfigDestinyManifest withIconImagePyramidInfo(DestinyConfigImagePyramidEntry[] iconImagePyramidInfo) {
         this.iconImagePyramidInfo = iconImagePyramidInfo;
         return this;
@@ -25,6 +26,7 @@ public class DestinyConfigDestinyManifest {
      */
     
     public java.util.Map<String, java.util.Map<String, String>> jsonWorldComponentContentPaths;
+
     public DestinyConfigDestinyManifest withJsonWorldComponentContentPaths(java.util.Map<String, java.util.Map<String, String>> jsonWorldComponentContentPaths) {
         this.jsonWorldComponentContentPaths = jsonWorldComponentContentPaths;
         return this;
@@ -35,6 +37,7 @@ public class DestinyConfigDestinyManifest {
      */
     
     public java.util.Map<String, String> jsonWorldContentPaths;
+
     public DestinyConfigDestinyManifest withJsonWorldContentPaths(java.util.Map<String, String> jsonWorldContentPaths) {
         this.jsonWorldContentPaths = jsonWorldContentPaths;
         return this;
@@ -42,6 +45,7 @@ public class DestinyConfigDestinyManifest {
     
     
     public String mobileAssetContentPath;
+
     public DestinyConfigDestinyManifest withMobileAssetContentPath(String mobileAssetContentPath) {
         this.mobileAssetContentPath = mobileAssetContentPath;
         return this;
@@ -49,6 +53,7 @@ public class DestinyConfigDestinyManifest {
     
     
     public String mobileClanBannerDatabasePath;
+
     public DestinyConfigDestinyManifest withMobileClanBannerDatabasePath(String mobileClanBannerDatabasePath) {
         this.mobileClanBannerDatabasePath = mobileClanBannerDatabasePath;
         return this;
@@ -56,6 +61,7 @@ public class DestinyConfigDestinyManifest {
     
     
     public DestinyConfigGearAssetDataBaseDefinition[] mobileGearAssetDataBases;
+
     public DestinyConfigDestinyManifest withMobileGearAssetDataBases(DestinyConfigGearAssetDataBaseDefinition[] mobileGearAssetDataBases) {
         this.mobileGearAssetDataBases = mobileGearAssetDataBases;
         return this;
@@ -63,6 +69,7 @@ public class DestinyConfigDestinyManifest {
     
     
     public java.util.Map<String, String> mobileGearCDN;
+
     public DestinyConfigDestinyManifest withMobileGearCDN(java.util.Map<String, String> mobileGearCDN) {
         this.mobileGearCDN = mobileGearCDN;
         return this;
@@ -70,6 +77,7 @@ public class DestinyConfigDestinyManifest {
     
     
     public java.util.Map<String, String> mobileWorldContentPaths;
+
     public DestinyConfigDestinyManifest withMobileWorldContentPaths(java.util.Map<String, String> mobileWorldContentPaths) {
         this.mobileWorldContentPaths = mobileWorldContentPaths;
         return this;
@@ -77,9 +85,11 @@ public class DestinyConfigDestinyManifest {
     
     
     public String version;
+
     public DestinyConfigDestinyManifest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DestinyConfigDestinyManifest(){}
 }

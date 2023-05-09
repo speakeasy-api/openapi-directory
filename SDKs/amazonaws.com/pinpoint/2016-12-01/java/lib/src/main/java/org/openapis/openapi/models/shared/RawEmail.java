@@ -15,9 +15,11 @@ public class RawEmail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public String data;
+
     public RawEmail withData(String data) {
         this.data = data;
         return this;
     }
     
+    public RawEmail(){}
 }

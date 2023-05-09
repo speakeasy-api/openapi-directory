@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeprecatedRetrieveInventoryAdjustmentRequest {
@@ -12,9 +13,13 @@ public class DeprecatedRetrieveInventoryAdjustmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adjustment_id")
     public String adjustmentId;
+
     public DeprecatedRetrieveInventoryAdjustmentRequest withAdjustmentId(String adjustmentId) {
         this.adjustmentId = adjustmentId;
         return this;
     }
     
+    public DeprecatedRetrieveInventoryAdjustmentRequest(@JsonProperty("adjustment_id") String adjustmentId) {
+        this.adjustmentId = adjustmentId;
+  }
 }

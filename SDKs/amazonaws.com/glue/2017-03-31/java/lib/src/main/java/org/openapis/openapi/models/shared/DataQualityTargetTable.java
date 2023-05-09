@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataQualityTargetTable {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DataQualityTargetTable withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,9 +20,14 @@ public class DataQualityTargetTable {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DataQualityTargetTable withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DataQualityTargetTable(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

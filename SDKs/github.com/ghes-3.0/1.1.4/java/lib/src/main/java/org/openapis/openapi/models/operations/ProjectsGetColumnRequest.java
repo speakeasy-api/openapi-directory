@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsGetColumnRequest {
@@ -12,9 +13,13 @@ public class ProjectsGetColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column_id")
     public Long columnId;
+
     public ProjectsGetColumnRequest withColumnId(Long columnId) {
         this.columnId = columnId;
         return this;
     }
     
+    public ProjectsGetColumnRequest(@JsonProperty("column_id") Long columnId) {
+        this.columnId = columnId;
+  }
 }

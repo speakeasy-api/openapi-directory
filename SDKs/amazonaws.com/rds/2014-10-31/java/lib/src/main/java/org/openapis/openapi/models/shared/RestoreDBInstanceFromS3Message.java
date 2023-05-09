@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreDBInstanceFromS3Message {
     
     public Long allocatedStorage;
+
     public RestoreDBInstanceFromS3Message withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public RestoreDBInstanceFromS3Message withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -23,6 +25,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String availabilityZone;
+
     public RestoreDBInstanceFromS3Message withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -30,6 +33,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Long backupRetentionPeriod;
+
     public RestoreDBInstanceFromS3Message withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -37,6 +41,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean copyTagsToSnapshot;
+
     public RestoreDBInstanceFromS3Message withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -44,6 +49,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String dbInstanceClass;
+
     public RestoreDBInstanceFromS3Message withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -51,6 +57,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String dbInstanceIdentifier;
+
     public RestoreDBInstanceFromS3Message withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -58,6 +65,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String dbName;
+
     public RestoreDBInstanceFromS3Message withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -65,6 +73,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String dbParameterGroupName;
+
     public RestoreDBInstanceFromS3Message withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -72,6 +81,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String[] dbSecurityGroups;
+
     public RestoreDBInstanceFromS3Message withDBSecurityGroups(String[] dbSecurityGroups) {
         this.dbSecurityGroups = dbSecurityGroups;
         return this;
@@ -79,6 +89,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String dbSubnetGroupName;
+
     public RestoreDBInstanceFromS3Message withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -86,6 +97,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean deletionProtection;
+
     public RestoreDBInstanceFromS3Message withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -93,6 +105,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String[] enableCloudwatchLogsExports;
+
     public RestoreDBInstanceFromS3Message withEnableCloudwatchLogsExports(String[] enableCloudwatchLogsExports) {
         this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
         return this;
@@ -100,6 +113,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public RestoreDBInstanceFromS3Message withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -107,6 +121,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean enablePerformanceInsights;
+
     public RestoreDBInstanceFromS3Message withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
@@ -114,6 +129,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String engine;
+
     public RestoreDBInstanceFromS3Message withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -121,6 +137,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String engineVersion;
+
     public RestoreDBInstanceFromS3Message withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -128,6 +145,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Long iops;
+
     public RestoreDBInstanceFromS3Message withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -135,6 +153,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String kmsKeyId;
+
     public RestoreDBInstanceFromS3Message withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -142,6 +161,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String licenseModel;
+
     public RestoreDBInstanceFromS3Message withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -149,6 +169,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean manageMasterUserPassword;
+
     public RestoreDBInstanceFromS3Message withManageMasterUserPassword(Boolean manageMasterUserPassword) {
         this.manageMasterUserPassword = manageMasterUserPassword;
         return this;
@@ -156,6 +177,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String masterUserPassword;
+
     public RestoreDBInstanceFromS3Message withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -163,6 +185,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String masterUserSecretKmsKeyId;
+
     public RestoreDBInstanceFromS3Message withMasterUserSecretKmsKeyId(String masterUserSecretKmsKeyId) {
         this.masterUserSecretKmsKeyId = masterUserSecretKmsKeyId;
         return this;
@@ -170,6 +193,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String masterUsername;
+
     public RestoreDBInstanceFromS3Message withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -177,6 +201,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Long maxAllocatedStorage;
+
     public RestoreDBInstanceFromS3Message withMaxAllocatedStorage(Long maxAllocatedStorage) {
         this.maxAllocatedStorage = maxAllocatedStorage;
         return this;
@@ -184,6 +209,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Long monitoringInterval;
+
     public RestoreDBInstanceFromS3Message withMonitoringInterval(Long monitoringInterval) {
         this.monitoringInterval = monitoringInterval;
         return this;
@@ -191,6 +217,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String monitoringRoleArn;
+
     public RestoreDBInstanceFromS3Message withMonitoringRoleArn(String monitoringRoleArn) {
         this.monitoringRoleArn = monitoringRoleArn;
         return this;
@@ -198,6 +225,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean multiAZ;
+
     public RestoreDBInstanceFromS3Message withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -205,6 +233,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String networkType;
+
     public RestoreDBInstanceFromS3Message withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -212,6 +241,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String optionGroupName;
+
     public RestoreDBInstanceFromS3Message withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -219,6 +249,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String performanceInsightsKMSKeyId;
+
     public RestoreDBInstanceFromS3Message withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -226,6 +257,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Long performanceInsightsRetentionPeriod;
+
     public RestoreDBInstanceFromS3Message withPerformanceInsightsRetentionPeriod(Long performanceInsightsRetentionPeriod) {
         this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
         return this;
@@ -233,6 +265,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Long port;
+
     public RestoreDBInstanceFromS3Message withPort(Long port) {
         this.port = port;
         return this;
@@ -240,6 +273,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String preferredBackupWindow;
+
     public RestoreDBInstanceFromS3Message withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -247,6 +281,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String preferredMaintenanceWindow;
+
     public RestoreDBInstanceFromS3Message withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -254,6 +289,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public ProcessorFeatureList[] processorFeatures;
+
     public RestoreDBInstanceFromS3Message withProcessorFeatures(ProcessorFeatureList[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -261,6 +297,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean publiclyAccessible;
+
     public RestoreDBInstanceFromS3Message withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -268,6 +305,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String s3BucketName;
+
     public RestoreDBInstanceFromS3Message withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -275,6 +313,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String s3IngestionRoleArn;
+
     public RestoreDBInstanceFromS3Message withS3IngestionRoleArn(String s3IngestionRoleArn) {
         this.s3IngestionRoleArn = s3IngestionRoleArn;
         return this;
@@ -282,6 +321,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String s3Prefix;
+
     public RestoreDBInstanceFromS3Message withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -289,6 +329,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String sourceEngine;
+
     public RestoreDBInstanceFromS3Message withSourceEngine(String sourceEngine) {
         this.sourceEngine = sourceEngine;
         return this;
@@ -296,6 +337,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String sourceEngineVersion;
+
     public RestoreDBInstanceFromS3Message withSourceEngineVersion(String sourceEngineVersion) {
         this.sourceEngineVersion = sourceEngineVersion;
         return this;
@@ -303,6 +345,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean storageEncrypted;
+
     public RestoreDBInstanceFromS3Message withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -310,6 +353,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Long storageThroughput;
+
     public RestoreDBInstanceFromS3Message withStorageThroughput(Long storageThroughput) {
         this.storageThroughput = storageThroughput;
         return this;
@@ -317,6 +361,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String storageType;
+
     public RestoreDBInstanceFromS3Message withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -324,6 +369,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public TagList[] tags;
+
     public RestoreDBInstanceFromS3Message withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -331,6 +377,7 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public Boolean useDefaultProcessorFeatures;
+
     public RestoreDBInstanceFromS3Message withUseDefaultProcessorFeatures(Boolean useDefaultProcessorFeatures) {
         this.useDefaultProcessorFeatures = useDefaultProcessorFeatures;
         return this;
@@ -338,9 +385,19 @@ public class RestoreDBInstanceFromS3Message {
     
     
     public String[] vpcSecurityGroupIds;
+
     public RestoreDBInstanceFromS3Message withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public RestoreDBInstanceFromS3Message(@JsonProperty("DBInstanceClass") String dbInstanceClass, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("Engine") String engine, @JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("S3IngestionRoleArn") String s3IngestionRoleArn, @JsonProperty("SourceEngine") String sourceEngine, @JsonProperty("SourceEngineVersion") String sourceEngineVersion) {
+        this.dbInstanceClass = dbInstanceClass;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.engine = engine;
+        this.s3BucketName = s3BucketName;
+        this.s3IngestionRoleArn = s3IngestionRoleArn;
+        this.sourceEngine = sourceEngine;
+        this.sourceEngineVersion = sourceEngineVersion;
+  }
 }

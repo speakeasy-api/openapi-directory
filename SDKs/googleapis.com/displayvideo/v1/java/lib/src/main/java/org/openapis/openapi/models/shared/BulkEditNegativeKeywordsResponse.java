@@ -18,9 +18,11 @@ public class BulkEditNegativeKeywordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeKeywords")
     public NegativeKeyword[] negativeKeywords;
+
     public BulkEditNegativeKeywordsResponse withNegativeKeywords(NegativeKeyword[] negativeKeywords) {
         this.negativeKeywords = negativeKeywords;
         return this;
     }
     
+    public BulkEditNegativeKeywordsResponse(){}
 }

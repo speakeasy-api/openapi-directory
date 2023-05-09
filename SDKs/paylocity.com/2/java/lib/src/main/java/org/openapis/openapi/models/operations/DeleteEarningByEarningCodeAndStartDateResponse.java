@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEarningByEarningCodeAndStartDateResponse {
     
     public String contentType;
+
     public DeleteEarningByEarningCodeAndStartDateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteEarningByEarningCodeAndStartDateResponse {
     
     
     public Integer statusCode;
+
     public DeleteEarningByEarningCodeAndStartDateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteEarningByEarningCodeAndStartDateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEarningByEarningCodeAndStartDateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DeleteEarningByEarningCodeAndStartDateResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public DeleteEarningByEarningCodeAndStartDateResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteEarningByEarningCodeAndStartDateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV05HealthInformationRequestJsonResponse {
     
     public byte[] body;
+
     public PostV05HealthInformationRequestJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostV05HealthInformationRequestJsonResponse {
     
     
     public String contentType;
+
     public PostV05HealthInformationRequestJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +31,7 @@ public class PostV05HealthInformationRequestJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public PostV05HealthInformationRequestJsonResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -35,6 +39,7 @@ public class PostV05HealthInformationRequestJsonResponse {
     
     
     public Integer statusCode;
+
     public PostV05HealthInformationRequestJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -42,9 +47,14 @@ public class PostV05HealthInformationRequestJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV05HealthInformationRequestJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostV05HealthInformationRequestJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

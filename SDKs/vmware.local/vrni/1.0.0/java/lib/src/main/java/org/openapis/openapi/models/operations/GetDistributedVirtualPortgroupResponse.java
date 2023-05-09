@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistributedVirtualPortgroupResponse {
@@ -12,6 +13,7 @@ public class GetDistributedVirtualPortgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetDistributedVirtualPortgroupResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class GetDistributedVirtualPortgroupResponse {
     
     
     public String contentType;
+
     public GetDistributedVirtualPortgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDistributedVirtualPortgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DistributedVirtualPortgroup distributedVirtualPortgroup;
+
     public GetDistributedVirtualPortgroupResponse withDistributedVirtualPortgroup(org.openapis.openapi.models.shared.DistributedVirtualPortgroup distributedVirtualPortgroup) {
         this.distributedVirtualPortgroup = distributedVirtualPortgroup;
         return this;
@@ -36,6 +40,7 @@ public class GetDistributedVirtualPortgroupResponse {
     
     
     public Integer statusCode;
+
     public GetDistributedVirtualPortgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetDistributedVirtualPortgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistributedVirtualPortgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDistributedVirtualPortgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

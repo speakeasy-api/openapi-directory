@@ -15,9 +15,11 @@ public class DescribeWatchlistResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Watchlist")
     public Watchlist watchlist;
+
     public DescribeWatchlistResponse withWatchlist(Watchlist watchlist) {
         this.watchlist = watchlist;
         return this;
     }
     
+    public DescribeWatchlistResponse(){}
 }

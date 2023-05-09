@@ -19,6 +19,7 @@ public class PlacementSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public PlacementSummary withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -26,6 +27,7 @@ public class PlacementSummary {
     
     @JsonProperty("placementName")
     public String placementName;
+
     public PlacementSummary withPlacementName(String placementName) {
         this.placementName = placementName;
         return this;
@@ -33,6 +35,7 @@ public class PlacementSummary {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public PlacementSummary withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -42,9 +45,16 @@ public class PlacementSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedDate")
     public OffsetDateTime updatedDate;
+
     public PlacementSummary withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public PlacementSummary(@JsonProperty("createdDate") OffsetDateTime createdDate, @JsonProperty("placementName") String placementName, @JsonProperty("projectName") String projectName, @JsonProperty("updatedDate") OffsetDateTime updatedDate) {
+        this.createdDate = createdDate;
+        this.placementName = placementName;
+        this.projectName = projectName;
+        this.updatedDate = updatedDate;
+  }
 }

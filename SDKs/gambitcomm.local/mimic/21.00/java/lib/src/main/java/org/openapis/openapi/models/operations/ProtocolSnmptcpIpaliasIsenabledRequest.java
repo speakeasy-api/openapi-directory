@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmptcpIpaliasIsenabledRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmptcpIpaliasIsenabledRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmptcpIpaliasIsenabledRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolSnmptcpIpaliasIsenabledRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipaddress")
     public String ipaddress;
+
     public ProtocolSnmptcpIpaliasIsenabledRequest withIpaddress(String ipaddress) {
         this.ipaddress = ipaddress;
         return this;
@@ -26,9 +29,15 @@ public class ProtocolSnmptcpIpaliasIsenabledRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
     public Integer port;
+
     public ProtocolSnmptcpIpaliasIsenabledRequest withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public ProtocolSnmptcpIpaliasIsenabledRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("ipaddress") String ipaddress, @JsonProperty("port") Integer port) {
+        this.agentNum = agentNum;
+        this.ipaddress = ipaddress;
+        this.port = port;
+  }
 }

@@ -12,9 +12,11 @@ public class SendMessagesRequestPhoneNumberFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public SendMessagesRequestPhoneNumberFilterGroup group;
+
     public SendMessagesRequestPhoneNumberFilter withGroup(SendMessagesRequestPhoneNumberFilterGroup group) {
         this.group = group;
         return this;
     }
     
+    public SendMessagesRequestPhoneNumberFilter(){}
 }

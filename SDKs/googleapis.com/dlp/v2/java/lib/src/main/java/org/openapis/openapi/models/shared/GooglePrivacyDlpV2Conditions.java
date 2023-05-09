@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2Conditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GooglePrivacyDlpV2Condition[] conditions;
+
     public GooglePrivacyDlpV2Conditions withConditions(GooglePrivacyDlpV2Condition[] conditions) {
         this.conditions = conditions;
         return this;
     }
     
+    public GooglePrivacyDlpV2Conditions(){}
 }

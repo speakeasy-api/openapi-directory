@@ -12,9 +12,11 @@ public class GetApiInfoItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetApiInfoItemRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetApiInfoItemRequest(){}
 }

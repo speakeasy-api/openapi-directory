@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateObjectResponse {
@@ -12,6 +13,7 @@ public class CreateObjectResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateObjectResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateObjectResponse {
     
     
     public String contentType;
+
     public CreateObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateObjectResponse createObjectResponse;
+
     public CreateObjectResponse withCreateObjectResponse(org.openapis.openapi.models.shared.CreateObjectResponse createObjectResponse) {
         this.createObjectResponse = createObjectResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateObjectResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public CreateObjectResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class CreateObjectResponse {
      */
     
     public Object facetValidationException;
+
     public CreateObjectResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateObjectResponse {
      */
     
     public Object internalServiceException;
+
     public CreateObjectResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateObjectResponse {
      */
     
     public Object invalidArnException;
+
     public CreateObjectResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class CreateObjectResponse {
      */
     
     public Object limitExceededException;
+
     public CreateObjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateObjectResponse {
      */
     
     public Object linkNameAlreadyInUseException;
+
     public CreateObjectResponse withLinkNameAlreadyInUseException(Object linkNameAlreadyInUseException) {
         this.linkNameAlreadyInUseException = linkNameAlreadyInUseException;
         return this;
@@ -96,6 +106,7 @@ public class CreateObjectResponse {
     
     
     public Integer statusCode;
+
     public CreateObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateObjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateObjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class CreateObjectResponse {
      */
     
     public Object retryableConflictException;
+
     public CreateObjectResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,6 +147,7 @@ public class CreateObjectResponse {
      */
     
     public Object unsupportedIndexTypeException;
+
     public CreateObjectResponse withUnsupportedIndexTypeException(Object unsupportedIndexTypeException) {
         this.unsupportedIndexTypeException = unsupportedIndexTypeException;
         return this;
@@ -143,9 +158,14 @@ public class CreateObjectResponse {
      */
     
     public Object validationException;
+
     public CreateObjectResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

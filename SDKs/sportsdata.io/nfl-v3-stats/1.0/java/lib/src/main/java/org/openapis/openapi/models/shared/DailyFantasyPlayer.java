@@ -12,6 +12,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Date")
     public String date;
+
     public DailyFantasyPlayer withDate(String date) {
         this.date = date;
         return this;
@@ -20,6 +21,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsSalary")
     public Long draftKingsSalary;
+
     public DailyFantasyPlayer withDraftKingsSalary(Long draftKingsSalary) {
         this.draftKingsSalary = draftKingsSalary;
         return this;
@@ -28,6 +30,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelSalary")
     public Long fanDuelSalary;
+
     public DailyFantasyPlayer withFanDuelSalary(Long fanDuelSalary) {
         this.fanDuelSalary = fanDuelSalary;
         return this;
@@ -36,6 +39,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDataSalary")
     public Long fantasyDataSalary;
+
     public DailyFantasyPlayer withFantasyDataSalary(Long fantasyDataSalary) {
         this.fantasyDataSalary = fantasyDataSalary;
         return this;
@@ -44,6 +48,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftSalary")
     public Long fantasyDraftSalary;
+
     public DailyFantasyPlayer withFantasyDraftSalary(Long fantasyDraftSalary) {
         this.fantasyDraftSalary = fantasyDraftSalary;
         return this;
@@ -52,6 +57,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeOrAway")
     public String homeOrAway;
+
     public DailyFantasyPlayer withHomeOrAway(String homeOrAway) {
         this.homeOrAway = homeOrAway;
         return this;
@@ -60,6 +66,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastGameFantasyPoints")
     public Double lastGameFantasyPoints;
+
     public DailyFantasyPlayer withLastGameFantasyPoints(Double lastGameFantasyPoints) {
         this.lastGameFantasyPoints = lastGameFantasyPoints;
         return this;
@@ -68,6 +75,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DailyFantasyPlayer withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +84,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public DailyFantasyPlayer withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -84,6 +93,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPositionRank")
     public Long opponentPositionRank;
+
     public DailyFantasyPlayer withOpponentPositionRank(Long opponentPositionRank) {
         this.opponentPositionRank = opponentPositionRank;
         return this;
@@ -92,6 +102,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRank")
     public Long opponentRank;
+
     public DailyFantasyPlayer withOpponentRank(Long opponentRank) {
         this.opponentRank = opponentRank;
         return this;
@@ -100,6 +111,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public DailyFantasyPlayer withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -108,6 +120,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public DailyFantasyPlayer withPosition(String position) {
         this.position = position;
         return this;
@@ -116,6 +129,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectedFantasyPoints")
     public Double projectedFantasyPoints;
+
     public DailyFantasyPlayer withProjectedFantasyPoints(Double projectedFantasyPoints) {
         this.projectedFantasyPoints = projectedFantasyPoints;
         return this;
@@ -124,6 +138,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salary")
     public Long salary;
+
     public DailyFantasyPlayer withSalary(Long salary) {
         this.salary = salary;
         return this;
@@ -132,6 +147,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public DailyFantasyPlayer withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -140,6 +156,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DailyFantasyPlayer withStatus(String status) {
         this.status = status;
         return this;
@@ -148,6 +165,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public String statusCode;
+
     public DailyFantasyPlayer withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -156,6 +174,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusColor")
     public String statusColor;
+
     public DailyFantasyPlayer withStatusColor(String statusColor) {
         this.statusColor = statusColor;
         return this;
@@ -164,6 +183,7 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public DailyFantasyPlayer withTeam(String team) {
         this.team = team;
         return this;
@@ -172,9 +192,11 @@ public class DailyFantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooSalary")
     public Long yahooSalary;
+
     public DailyFantasyPlayer withYahooSalary(Long yahooSalary) {
         this.yahooSalary = yahooSalary;
         return this;
     }
     
+    public DailyFantasyPlayer(){}
 }

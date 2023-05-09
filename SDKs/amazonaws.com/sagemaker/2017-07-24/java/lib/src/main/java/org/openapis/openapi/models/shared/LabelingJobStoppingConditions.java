@@ -15,6 +15,7 @@ public class LabelingJobStoppingConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxHumanLabeledObjectCount")
     public Long maxHumanLabeledObjectCount;
+
     public LabelingJobStoppingConditions withMaxHumanLabeledObjectCount(Long maxHumanLabeledObjectCount) {
         this.maxHumanLabeledObjectCount = maxHumanLabeledObjectCount;
         return this;
@@ -23,9 +24,11 @@ public class LabelingJobStoppingConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPercentageOfInputDatasetLabeled")
     public Long maxPercentageOfInputDatasetLabeled;
+
     public LabelingJobStoppingConditions withMaxPercentageOfInputDatasetLabeled(Long maxPercentageOfInputDatasetLabeled) {
         this.maxPercentageOfInputDatasetLabeled = maxPercentageOfInputDatasetLabeled;
         return this;
     }
     
+    public LabelingJobStoppingConditions(){}
 }

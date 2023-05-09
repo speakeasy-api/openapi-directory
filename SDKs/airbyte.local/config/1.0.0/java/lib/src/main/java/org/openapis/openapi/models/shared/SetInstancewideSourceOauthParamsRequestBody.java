@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetInstancewideSourceOauthParamsRequestBody {
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public SetInstancewideSourceOauthParamsRequestBody withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
@@ -16,9 +17,14 @@ public class SetInstancewideSourceOauthParamsRequestBody {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SetInstancewideSourceOauthParamsRequestBody withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
     }
     
+    public SetInstancewideSourceOauthParamsRequestBody(@JsonProperty("params") java.util.Map<String, Object> params, @JsonProperty("sourceDefinitionId") String sourceDefinitionId) {
+        this.params = params;
+        this.sourceDefinitionId = sourceDefinitionId;
+  }
 }

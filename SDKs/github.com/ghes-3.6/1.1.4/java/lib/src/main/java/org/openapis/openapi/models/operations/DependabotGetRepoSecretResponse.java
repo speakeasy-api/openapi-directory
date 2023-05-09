@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DependabotGetRepoSecretResponse {
     
     public String contentType;
+
     public DependabotGetRepoSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DependabotGetRepoSecretResponse {
     
     
     public Integer statusCode;
+
     public DependabotGetRepoSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DependabotGetRepoSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DependabotGetRepoSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DependabotGetRepoSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.DependabotSecret dependabotSecret;
+
     public DependabotGetRepoSecretResponse withDependabotSecret(org.openapis.openapi.models.shared.DependabotSecret dependabotSecret) {
         this.dependabotSecret = dependabotSecret;
         return this;
     }
     
+    public DependabotGetRepoSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

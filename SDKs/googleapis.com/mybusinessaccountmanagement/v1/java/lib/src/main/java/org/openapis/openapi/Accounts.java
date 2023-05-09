@@ -60,11 +60,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateResponse(contentType, httpRes.statusCode()) {{
             account = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsGetResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsGetResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsGetResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsGetResponse(contentType, httpRes.statusCode()) {{
             account = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsAcceptResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsAcceptResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsAcceptResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsAcceptResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsDeclineResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsDeclineResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsDeclineResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsDeclineResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsListResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsListResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsInvitationsListResponse(contentType, httpRes.statusCode()) {{
             listInvitationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,11 +274,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsListResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsListResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsListResponse(contentType, httpRes.statusCode()) {{
             listAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

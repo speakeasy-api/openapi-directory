@@ -62,11 +62,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse(contentType, httpRes.statusCode()) {{
             createAssetResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditResponse(contentType, httpRes.statusCode()) {{
             auditAdvertiserResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkEditAdvertiserAssignedTargetingOptionsResponse(contentType, httpRes.statusCode()) {{
             bulkEditAdvertiserAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse(contentType, httpRes.statusCode()) {{
             bulkListAdvertiserAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsBulkListCampaignAssignedTargetingOptionsResponse(contentType, httpRes.statusCode()) {{
             bulkListCampaignAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateResponse(contentType, httpRes.statusCode()) {{
             campaign = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetResponse(contentType, httpRes.statusCode()) {{
             campaign = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListResponse(contentType, httpRes.statusCode()) {{
             listCampaignsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchResponse(contentType, httpRes.statusCode()) {{
             campaign = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +508,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +552,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse(contentType, httpRes.statusCode()) {{
             listCampaignAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -622,11 +598,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -668,11 +642,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListResponse(contentType, httpRes.statusCode()) {{
             listChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -716,11 +688,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +734,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse(contentType, httpRes.statusCode()) {{
             bulkEditSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -810,11 +778,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -856,11 +822,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListResponse(contentType, httpRes.statusCode()) {{
             listSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -904,11 +868,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse(contentType, httpRes.statusCode()) {{
             replaceSitesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -952,11 +914,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateResponse(contentType, httpRes.statusCode()) {{
             advertiser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1000,11 +960,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1046,11 +1004,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1092,11 +1048,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1138,11 +1092,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListResponse(contentType, httpRes.statusCode()) {{
             listCreativesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1186,11 +1138,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1232,11 +1182,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1278,11 +1226,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetResponse(contentType, httpRes.statusCode()) {{
             advertiser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1324,11 +1270,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse(contentType, httpRes.statusCode()) {{
             bulkListInsertionOrderAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1372,11 +1316,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse(contentType, httpRes.statusCode()) {{
             insertionOrder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1418,11 +1360,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1464,11 +1404,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetResponse(contentType, httpRes.statusCode()) {{
             insertionOrder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1510,11 +1448,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListResponse(contentType, httpRes.statusCode()) {{
             listInsertionOrdersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1558,11 +1494,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse(contentType, httpRes.statusCode()) {{
             insertionOrder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1604,11 +1538,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1650,11 +1582,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse(contentType, httpRes.statusCode()) {{
             listInsertionOrderAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1696,11 +1626,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListResponse(contentType, httpRes.statusCode()) {{
             listInvoicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1742,11 +1670,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse(contentType, httpRes.statusCode()) {{
             lookupInvoiceCurrencyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1790,11 +1716,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsResponse(contentType, httpRes.statusCode()) {{
             bulkEditLineItemAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1836,11 +1760,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsResponse(contentType, httpRes.statusCode()) {{
             bulkListLineItemAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1884,11 +1806,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateResponse(contentType, httpRes.statusCode()) {{
             lineItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1930,11 +1850,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1978,11 +1896,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse(contentType, httpRes.statusCode()) {{
             lineItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2024,11 +1940,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetResponse(contentType, httpRes.statusCode()) {{
             lineItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2070,11 +1984,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListResponse(contentType, httpRes.statusCode()) {{
             listLineItemsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2118,11 +2030,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchResponse(contentType, httpRes.statusCode()) {{
             lineItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2166,11 +2076,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2212,11 +2120,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2258,11 +2164,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2304,11 +2208,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse(contentType, httpRes.statusCode()) {{
             listLineItemAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2350,11 +2252,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersListResponse(contentType, httpRes.statusCode()) {{
             listAdvertisersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2398,11 +2298,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse(contentType, httpRes.statusCode()) {{
             bulkEditAssignedLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2446,11 +2344,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse(contentType, httpRes.statusCode()) {{
             assignedLocation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2492,11 +2388,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2538,11 +2432,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse(contentType, httpRes.statusCode()) {{
             listAssignedLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2586,11 +2478,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateResponse(contentType, httpRes.statusCode()) {{
             locationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2632,11 +2522,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListResponse(contentType, httpRes.statusCode()) {{
             listLocationListsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2680,11 +2568,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchResponse(contentType, httpRes.statusCode()) {{
             locationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2699,7 +2585,7 @@ public class Advertisers {
     }
 
     /**
-     * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned.
+     * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned. **Warning:** Line Items using manual triggers will stop serving in Display &amp; Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -2728,11 +2614,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateResponse(contentType, httpRes.statusCode()) {{
             manualTrigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2747,7 +2631,7 @@ public class Advertisers {
     }
 
     /**
-     * Creates a new manual trigger. Returns the newly created manual trigger if successful.
+     * Creates a new manual trigger. Returns the newly created manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display &amp; Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -2776,11 +2660,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateResponse(contentType, httpRes.statusCode()) {{
             manualTrigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2795,7 +2677,7 @@ public class Advertisers {
     }
 
     /**
-     * Deactivates a manual trigger.
+     * Deactivates a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display &amp; Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -2824,11 +2706,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse(contentType, httpRes.statusCode()) {{
             manualTrigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2843,7 +2723,7 @@ public class Advertisers {
     }
 
     /**
-     * Gets a manual trigger.
+     * Gets a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display &amp; Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -2870,11 +2750,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetResponse(contentType, httpRes.statusCode()) {{
             manualTrigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2889,7 +2767,7 @@ public class Advertisers {
     }
 
     /**
-     * Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required.
+     * Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required. **Warning:** Line Items using manual triggers will stop serving in Display &amp; Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -2916,11 +2794,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListResponse(contentType, httpRes.statusCode()) {{
             listManualTriggersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2935,7 +2811,7 @@ public class Advertisers {
     }
 
     /**
-     * Updates a manual trigger. Returns the updated manual trigger if successful.
+     * Updates a manual trigger. Returns the updated manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display &amp; Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -2964,11 +2840,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchResponse(contentType, httpRes.statusCode()) {{
             manualTrigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3012,11 +2886,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse(contentType, httpRes.statusCode()) {{
             negativeKeywordList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3058,11 +2930,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse(contentType, httpRes.statusCode()) {{
             listNegativeKeywordListsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3106,11 +2976,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse(contentType, httpRes.statusCode()) {{
             bulkEditNegativeKeywordsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3152,11 +3020,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3198,11 +3064,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse(contentType, httpRes.statusCode()) {{
             listNegativeKeywordsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3246,11 +3110,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse(contentType, httpRes.statusCode()) {{
             replaceNegativeKeywordsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3294,11 +3156,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse(contentType, httpRes.statusCode()) {{
             negativeKeywordList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3342,11 +3202,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchResponse(contentType, httpRes.statusCode()) {{
             advertiser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3390,11 +3248,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3436,11 +3292,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3482,11 +3336,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse(contentType, httpRes.statusCode()) {{
             assignedTargetingOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3528,11 +3380,9 @@ public class Advertisers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse(contentType, httpRes.statusCode()) {{
             listAdvertiserAssignedTargetingOptionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

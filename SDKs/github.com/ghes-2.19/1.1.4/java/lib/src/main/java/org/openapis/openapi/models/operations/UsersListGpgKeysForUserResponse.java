@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersListGpgKeysForUserResponse {
     
     public String contentType;
+
     public UsersListGpgKeysForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersListGpgKeysForUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UsersListGpgKeysForUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UsersListGpgKeysForUserResponse {
     
     
     public Integer statusCode;
+
     public UsersListGpgKeysForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UsersListGpgKeysForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersListGpgKeysForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class UsersListGpgKeysForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.GpgKey[] gpgKeys;
+
     public UsersListGpgKeysForUserResponse withGpgKeys(org.openapis.openapi.models.shared.GpgKey[] gpgKeys) {
         this.gpgKeys = gpgKeys;
         return this;
     }
     
+    public UsersListGpgKeysForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

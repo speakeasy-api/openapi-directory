@@ -15,9 +15,13 @@ public class PostVolumes201ApplicationJSONVolumeProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostVolumes201ApplicationJSONVolumeProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PostVolumes201ApplicationJSONVolumeProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

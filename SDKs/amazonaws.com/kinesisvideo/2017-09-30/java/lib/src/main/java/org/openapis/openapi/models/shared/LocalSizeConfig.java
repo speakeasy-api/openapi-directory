@@ -15,6 +15,7 @@ public class LocalSizeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxLocalMediaSizeInMB")
     public Long maxLocalMediaSizeInMB;
+
     public LocalSizeConfig withMaxLocalMediaSizeInMB(Long maxLocalMediaSizeInMB) {
         this.maxLocalMediaSizeInMB = maxLocalMediaSizeInMB;
         return this;
@@ -23,9 +24,11 @@ public class LocalSizeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StrategyOnFullSize")
     public StrategyOnFullSizeEnum strategyOnFullSize;
+
     public LocalSizeConfig withStrategyOnFullSize(StrategyOnFullSizeEnum strategyOnFullSize) {
         this.strategyOnFullSize = strategyOnFullSize;
         return this;
     }
     
+    public LocalSizeConfig(){}
 }

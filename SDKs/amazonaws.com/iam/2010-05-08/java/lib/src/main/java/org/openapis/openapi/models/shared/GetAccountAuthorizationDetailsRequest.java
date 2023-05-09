@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GetAccountAuthorizationDetailsRequest {
     
     public EntityTypeEnum[] filter;
+
     public GetAccountAuthorizationDetailsRequest withFilter(EntityTypeEnum[] filter) {
         this.filter = filter;
         return this;
@@ -16,6 +17,7 @@ public class GetAccountAuthorizationDetailsRequest {
     
     
     public String marker;
+
     public GetAccountAuthorizationDetailsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class GetAccountAuthorizationDetailsRequest {
     
     
     public Long maxItems;
+
     public GetAccountAuthorizationDetailsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
     }
     
+    public GetAccountAuthorizationDetailsRequest(){}
 }

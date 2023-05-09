@@ -15,9 +15,11 @@ public class CreateGameServerGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroup")
     public GameServerGroup gameServerGroup;
+
     public CreateGameServerGroupOutput withGameServerGroup(GameServerGroup gameServerGroup) {
         this.gameServerGroup = gameServerGroup;
         return this;
     }
     
+    public CreateGameServerGroupOutput(){}
 }

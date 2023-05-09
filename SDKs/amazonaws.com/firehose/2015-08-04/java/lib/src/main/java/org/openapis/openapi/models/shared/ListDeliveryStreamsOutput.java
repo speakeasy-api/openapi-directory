@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDeliveryStreamsOutput {
     @JsonProperty("DeliveryStreamNames")
     public String[] deliveryStreamNames;
+
     public ListDeliveryStreamsOutput withDeliveryStreamNames(String[] deliveryStreamNames) {
         this.deliveryStreamNames = deliveryStreamNames;
         return this;
@@ -19,9 +20,14 @@ public class ListDeliveryStreamsOutput {
     
     @JsonProperty("HasMoreDeliveryStreams")
     public Boolean hasMoreDeliveryStreams;
+
     public ListDeliveryStreamsOutput withHasMoreDeliveryStreams(Boolean hasMoreDeliveryStreams) {
         this.hasMoreDeliveryStreams = hasMoreDeliveryStreams;
         return this;
     }
     
+    public ListDeliveryStreamsOutput(@JsonProperty("DeliveryStreamNames") String[] deliveryStreamNames, @JsonProperty("HasMoreDeliveryStreams") Boolean hasMoreDeliveryStreams) {
+        this.deliveryStreamNames = deliveryStreamNames;
+        this.hasMoreDeliveryStreams = hasMoreDeliveryStreams;
+  }
 }

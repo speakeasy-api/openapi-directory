@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BotLocaleHistoryEvent {
     @JsonProperty("event")
     public String event;
+
     public BotLocaleHistoryEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -26,9 +27,14 @@ public class BotLocaleHistoryEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventDate")
     public OffsetDateTime eventDate;
+
     public BotLocaleHistoryEvent withEventDate(OffsetDateTime eventDate) {
         this.eventDate = eventDate;
         return this;
     }
     
+    public BotLocaleHistoryEvent(@JsonProperty("event") String event, @JsonProperty("eventDate") OffsetDateTime eventDate) {
+        this.event = event;
+        this.eventDate = eventDate;
+  }
 }

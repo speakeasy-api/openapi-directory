@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse {
     
     public String contentType;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRespons
      */
     
     public org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse googlePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse withGooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse(org.openapis.openapi.models.shared.GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse googlePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse) {
         this.googlePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse = googlePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRespons
     
     
     public Integer statusCode;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

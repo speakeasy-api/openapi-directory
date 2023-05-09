@@ -29,6 +29,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
      */
     @JsonProperty("creditorAccount")
     public AccountReference16CH creditorAccount;
+
     public PeriodicPaymentInitiationWithStatusResponse withCreditorAccount(AccountReference16CH creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -37,6 +38,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAddress")
     public Address creditorAddress;
+
     public PeriodicPaymentInitiationWithStatusResponse withCreditorAddress(Address creditorAddress) {
         this.creditorAddress = creditorAddress;
         return this;
@@ -54,6 +56,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAgent")
     public CreditorAgent7CH creditorAgent;
+
     public PeriodicPaymentInitiationWithStatusResponse withCreditorAgent(CreditorAgent7CH creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -64,6 +67,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
      */
     @JsonProperty("creditorName")
     public String creditorName;
+
     public PeriodicPaymentInitiationWithStatusResponse withCreditorName(String creditorName) {
         this.creditorName = creditorName;
         return this;
@@ -81,6 +85,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfExecution")
     public DayOfExecutionEnum dayOfExecution;
+
     public PeriodicPaymentInitiationWithStatusResponse withDayOfExecution(DayOfExecutionEnum dayOfExecution) {
         this.dayOfExecution = dayOfExecution;
         return this;
@@ -95,6 +100,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
      */
     @JsonProperty("debtorAccount")
     public AccountReference16CH debtorAccount;
+
     public PeriodicPaymentInitiationWithStatusResponse withDebtorAccount(AccountReference16CH debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -109,6 +115,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public PeriodicPaymentInitiationWithStatusResponse withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -117,6 +124,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endToEndIdentification")
     public String endToEndIdentification;
+
     public PeriodicPaymentInitiationWithStatusResponse withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -133,6 +141,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRule")
     public ExecutionRuleEnum executionRule;
+
     public PeriodicPaymentInitiationWithStatusResponse withExecutionRule(ExecutionRuleEnum executionRule) {
         this.executionRule = executionRule;
         return this;
@@ -153,6 +162,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
      */
     @JsonProperty("frequency")
     public FrequencyCodeEnum frequency;
+
     public PeriodicPaymentInitiationWithStatusResponse withFrequency(FrequencyCodeEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -160,6 +170,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     
     @JsonProperty("instructedAmount")
     public Amount instructedAmount;
+
     public PeriodicPaymentInitiationWithStatusResponse withInstructedAmount(Amount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -174,6 +185,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purposeCode")
     public PurposeCodeEnum purposeCode;
+
     public PeriodicPaymentInitiationWithStatusResponse withPurposeCode(PurposeCodeEnum purposeCode) {
         this.purposeCode = purposeCode;
         return this;
@@ -186,6 +198,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationStructured")
     public RemittanceInformationStructured remittanceInformationStructured;
+
     public PeriodicPaymentInitiationWithStatusResponse withRemittanceInformationStructured(RemittanceInformationStructured remittanceInformationStructured) {
         this.remittanceInformationStructured = remittanceInformationStructured;
         return this;
@@ -198,6 +211,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructured")
     public String remittanceInformationUnstructured;
+
     public PeriodicPaymentInitiationWithStatusResponse withRemittanceInformationUnstructured(String remittanceInformationUnstructured) {
         this.remittanceInformationUnstructured = remittanceInformationUnstructured;
         return this;
@@ -210,6 +224,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructuredArray")
     public String[] remittanceInformationUnstructuredArray;
+
     public PeriodicPaymentInitiationWithStatusResponse withRemittanceInformationUnstructuredArray(String[] remittanceInformationUnstructuredArray) {
         this.remittanceInformationUnstructuredArray = remittanceInformationUnstructuredArray;
         return this;
@@ -219,6 +234,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("requestedExecutionDate")
     public LocalDate requestedExecutionDate;
+
     public PeriodicPaymentInitiationWithStatusResponse withRequestedExecutionDate(LocalDate requestedExecutionDate) {
         this.requestedExecutionDate = requestedExecutionDate;
         return this;
@@ -229,6 +245,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedExecutionTime")
     public OffsetDateTime requestedExecutionTime;
+
     public PeriodicPaymentInitiationWithStatusResponse withRequestedExecutionTime(OffsetDateTime requestedExecutionTime) {
         this.requestedExecutionTime = requestedExecutionTime;
         return this;
@@ -241,6 +258,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public PeriodicPaymentInitiationWithStatusResponse withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -292,6 +310,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionStatus")
     public TransactionStatusEnum transactionStatus;
+
     public PeriodicPaymentInitiationWithStatusResponse withTransactionStatus(TransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
@@ -303,6 +322,7 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateCreditor")
     public String ultimateCreditor;
+
     public PeriodicPaymentInitiationWithStatusResponse withUltimateCreditor(String ultimateCreditor) {
         this.ultimateCreditor = ultimateCreditor;
         return this;
@@ -314,9 +334,18 @@ public class PeriodicPaymentInitiationWithStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateDebtor")
     public String ultimateDebtor;
+
     public PeriodicPaymentInitiationWithStatusResponse withUltimateDebtor(String ultimateDebtor) {
         this.ultimateDebtor = ultimateDebtor;
         return this;
     }
     
+    public PeriodicPaymentInitiationWithStatusResponse(@JsonProperty("creditorAccount") AccountReference16CH creditorAccount, @JsonProperty("creditorName") String creditorName, @JsonProperty("debtorAccount") AccountReference16CH debtorAccount, @JsonProperty("frequency") FrequencyCodeEnum frequency, @JsonProperty("instructedAmount") Amount instructedAmount, @JsonProperty("startDate") LocalDate startDate) {
+        this.creditorAccount = creditorAccount;
+        this.creditorName = creditorName;
+        this.debtorAccount = debtorAccount;
+        this.frequency = frequency;
+        this.instructedAmount = instructedAmount;
+        this.startDate = startDate;
+  }
 }

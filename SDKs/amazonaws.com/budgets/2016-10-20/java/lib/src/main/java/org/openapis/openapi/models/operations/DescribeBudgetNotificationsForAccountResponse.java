@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBudgetNotificationsForAccountResponse {
@@ -12,6 +13,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeBudgetNotificationsForAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
     
     
     public String contentType;
+
     public DescribeBudgetNotificationsForAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBudgetNotificationsForAccountResponse describeBudgetNotificationsForAccountResponse;
+
     public DescribeBudgetNotificationsForAccountResponse withDescribeBudgetNotificationsForAccountResponse(org.openapis.openapi.models.shared.DescribeBudgetNotificationsForAccountResponse describeBudgetNotificationsForAccountResponse) {
         this.describeBudgetNotificationsForAccountResponse = describeBudgetNotificationsForAccountResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public Object expiredNextTokenException;
+
     public DescribeBudgetNotificationsForAccountResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeBudgetNotificationsForAccountResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeBudgetNotificationsForAccountResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeBudgetNotificationsForAccountResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public Object notFoundException;
+
     public DescribeBudgetNotificationsForAccountResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
     
     
     public Integer statusCode;
+
     public DescribeBudgetNotificationsForAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeBudgetNotificationsForAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBudgetNotificationsForAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeBudgetNotificationsForAccountResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBudgetNotificationsForAccountResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeBudgetNotificationsForAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

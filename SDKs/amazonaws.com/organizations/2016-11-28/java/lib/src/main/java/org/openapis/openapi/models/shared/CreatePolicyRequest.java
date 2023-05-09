@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePolicyRequest {
     @JsonProperty("Content")
     public String content;
+
     public CreatePolicyRequest withContent(String content) {
         this.content = content;
         return this;
@@ -18,6 +19,7 @@ public class CreatePolicyRequest {
     
     @JsonProperty("Description")
     public String description;
+
     public CreatePolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +27,7 @@ public class CreatePolicyRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreatePolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class CreatePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePolicyRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -40,9 +44,16 @@ public class CreatePolicyRequest {
     
     @JsonProperty("Type")
     public PolicyTypeEnum type;
+
     public CreatePolicyRequest withType(PolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreatePolicyRequest(@JsonProperty("Content") String content, @JsonProperty("Description") String description, @JsonProperty("Name") String name, @JsonProperty("Type") PolicyTypeEnum type) {
+        this.content = content;
+        this.description = description;
+        this.name = name;
+        this.type = type;
+  }
 }

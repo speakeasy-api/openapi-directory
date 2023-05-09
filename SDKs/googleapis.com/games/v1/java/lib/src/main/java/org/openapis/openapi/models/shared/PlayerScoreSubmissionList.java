@@ -18,6 +18,7 @@ public class PlayerScoreSubmissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlayerScoreSubmissionList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class PlayerScoreSubmissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scores")
     public ScoreSubmission[] scores;
+
     public PlayerScoreSubmissionList withScores(ScoreSubmission[] scores) {
         this.scores = scores;
         return this;
     }
     
+    public PlayerScoreSubmissionList(){}
 }

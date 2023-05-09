@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetIdentityPoolRolesResponse {
@@ -12,6 +13,7 @@ public class SetIdentityPoolRolesResponse {
      */
     
     public Object concurrentModificationException;
+
     public SetIdentityPoolRolesResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class SetIdentityPoolRolesResponse {
     
     
     public String contentType;
+
     public SetIdentityPoolRolesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetIdentityPoolRolesResponse {
      */
     
     public Object internalErrorException;
+
     public SetIdentityPoolRolesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class SetIdentityPoolRolesResponse {
      */
     
     public Object invalidParameterException;
+
     public SetIdentityPoolRolesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class SetIdentityPoolRolesResponse {
      */
     
     public Object notAuthorizedException;
+
     public SetIdentityPoolRolesResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class SetIdentityPoolRolesResponse {
      */
     
     public Object resourceConflictException;
+
     public SetIdentityPoolRolesResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -69,6 +76,7 @@ public class SetIdentityPoolRolesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetIdentityPoolRolesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class SetIdentityPoolRolesResponse {
     
     
     public Integer statusCode;
+
     public SetIdentityPoolRolesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SetIdentityPoolRolesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetIdentityPoolRolesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class SetIdentityPoolRolesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SetIdentityPoolRolesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SetIdentityPoolRolesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

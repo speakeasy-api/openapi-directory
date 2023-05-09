@@ -15,6 +15,7 @@ public class CreateStageResponseAccessLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public CreateStageResponseAccessLogSettings withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateStageResponseAccessLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CreateStageResponseAccessLogSettings withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public CreateStageResponseAccessLogSettings(){}
 }

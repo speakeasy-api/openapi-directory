@@ -18,6 +18,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affiliateId")
     public String affiliateId;
+
     public GetOrder2200ApplicationJSON withAffiliateId(String affiliateId) {
         this.affiliateId = affiliateId;
         return this;
@@ -29,6 +30,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCancellation")
     public Boolean allowCancellation;
+
     public GetOrder2200ApplicationJSON withAllowCancellation(Boolean allowCancellation) {
         this.allowCancellation = allowCancellation;
         return this;
@@ -40,6 +42,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowEdition")
     public Boolean allowEdition;
+
     public GetOrder2200ApplicationJSON withAllowEdition(Boolean allowEdition) {
         this.allowEdition = allowEdition;
         return this;
@@ -51,6 +54,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedBy")
     public String approvedBy;
+
     public GetOrder2200ApplicationJSON withApprovedBy(String approvedBy) {
         this.approvedBy = approvedBy;
         return this;
@@ -62,6 +66,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedDate")
     public String authorizedDate;
+
     public GetOrder2200ApplicationJSON withAuthorizedDate(String authorizedDate) {
         this.authorizedDate = authorizedDate;
         return this;
@@ -73,6 +78,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callCenterOperatorData")
     public String callCenterOperatorData;
+
     public GetOrder2200ApplicationJSON withCallCenterOperatorData(String callCenterOperatorData) {
         this.callCenterOperatorData = callCenterOperatorData;
         return this;
@@ -84,6 +90,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelReason")
     public String cancelReason;
+
     public GetOrder2200ApplicationJSON withCancelReason(String cancelReason) {
         this.cancelReason = cancelReason;
         return this;
@@ -95,6 +102,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelledBy")
     public String cancelledBy;
+
     public GetOrder2200ApplicationJSON withCancelledBy(String cancelledBy) {
         this.cancelledBy = cancelledBy;
         return this;
@@ -103,6 +111,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changesAttachment")
     public org.openapis.openapi.models.shared.ChangesAttachment changesAttachment;
+
     public GetOrder2200ApplicationJSON withChangesAttachment(org.openapis.openapi.models.shared.ChangesAttachment changesAttachment) {
         this.changesAttachment = changesAttachment;
         return this;
@@ -111,6 +120,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientProfileData")
     public org.openapis.openapi.models.shared.ClientProfileData clientProfileData;
+
     public GetOrder2200ApplicationJSON withClientProfileData(org.openapis.openapi.models.shared.ClientProfileData clientProfileData) {
         this.clientProfileData = clientProfileData;
         return this;
@@ -122,6 +132,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commercialConditionData")
     public String commercialConditionData;
+
     public GetOrder2200ApplicationJSON withCommercialConditionData(String commercialConditionData) {
         this.commercialConditionData = commercialConditionData;
         return this;
@@ -133,6 +144,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public GetOrder2200ApplicationJSON withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -144,6 +156,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customData")
     public String customData;
+
     public GetOrder2200ApplicationJSON withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -155,6 +168,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailTracked")
     public String emailTracked;
+
     public GetOrder2200ApplicationJSON withEmailTracked(String emailTracked) {
         this.emailTracked = emailTracked;
         return this;
@@ -166,6 +180,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followUpEmail")
     public String followUpEmail;
+
     public GetOrder2200ApplicationJSON withFollowUpEmail(String followUpEmail) {
         this.followUpEmail = followUpEmail;
         return this;
@@ -177,6 +192,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftRegistryData")
     public String giftRegistryData;
+
     public GetOrder2200ApplicationJSON withGiftRegistryData(String giftRegistryData) {
         this.giftRegistryData = giftRegistryData;
         return this;
@@ -188,6 +204,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public GetOrder2200ApplicationJSON withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -199,6 +216,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceData")
     public java.util.Map<String, Object> invoiceData;
+
     public GetOrder2200ApplicationJSON withInvoiceData(java.util.Map<String, Object> invoiceData) {
         this.invoiceData = invoiceData;
         return this;
@@ -210,6 +228,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoicedDate")
     public String invoicedDate;
+
     public GetOrder2200ApplicationJSON withInvoicedDate(String invoicedDate) {
         this.invoicedDate = invoicedDate;
         return this;
@@ -221,6 +240,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCheckedIn")
     public Boolean isCheckedIn;
+
     public GetOrder2200ApplicationJSON withIsCheckedIn(Boolean isCheckedIn) {
         this.isCheckedIn = isCheckedIn;
         return this;
@@ -232,6 +252,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCompleted")
     public Boolean isCompleted;
+
     public GetOrder2200ApplicationJSON withIsCompleted(Boolean isCompleted) {
         this.isCompleted = isCompleted;
         return this;
@@ -243,6 +264,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GetOrder2200ApplicationJSONItems[] items;
+
     public GetOrder2200ApplicationJSON withItems(GetOrder2200ApplicationJSONItems[] items) {
         this.items = items;
         return this;
@@ -254,6 +276,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastChange")
     public String lastChange;
+
     public GetOrder2200ApplicationJSON withLastChange(String lastChange) {
         this.lastChange = lastChange;
         return this;
@@ -265,6 +288,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastMessage")
     public String lastMessage;
+
     public GetOrder2200ApplicationJSON withLastMessage(String lastMessage) {
         this.lastMessage = lastMessage;
         return this;
@@ -276,6 +300,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingData")
     public String marketingData;
+
     public GetOrder2200ApplicationJSON withMarketingData(String marketingData) {
         this.marketingData = marketingData;
         return this;
@@ -284,6 +309,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplace")
     public org.openapis.openapi.models.shared.Marketplace marketplace;
+
     public GetOrder2200ApplicationJSON withMarketplace(org.openapis.openapi.models.shared.Marketplace marketplace) {
         this.marketplace = marketplace;
         return this;
@@ -295,6 +321,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceItems")
     public String[] marketplaceItems;
+
     public GetOrder2200ApplicationJSON withMarketplaceItems(String[] marketplaceItems) {
         this.marketplaceItems = marketplaceItems;
         return this;
@@ -306,6 +333,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceOrderId")
     public String marketplaceOrderId;
+
     public GetOrder2200ApplicationJSON withMarketplaceOrderId(String marketplaceOrderId) {
         this.marketplaceOrderId = marketplaceOrderId;
         return this;
@@ -317,6 +345,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceServicesEndpoint")
     public String marketplaceServicesEndpoint;
+
     public GetOrder2200ApplicationJSON withMarketplaceServicesEndpoint(String marketplaceServicesEndpoint) {
         this.marketplaceServicesEndpoint = marketplaceServicesEndpoint;
         return this;
@@ -328,6 +357,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantName")
     public String merchantName;
+
     public GetOrder2200ApplicationJSON withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -339,6 +369,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openTextField")
     public String openTextField;
+
     public GetOrder2200ApplicationJSON withOpenTextField(String openTextField) {
         this.openTextField = openTextField;
         return this;
@@ -350,6 +381,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderFormId")
     public String orderFormId;
+
     public GetOrder2200ApplicationJSON withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
@@ -361,6 +393,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderGroup")
     public String orderGroup;
+
     public GetOrder2200ApplicationJSON withOrderGroup(String orderGroup) {
         this.orderGroup = orderGroup;
         return this;
@@ -372,6 +405,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public GetOrder2200ApplicationJSON withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -383,6 +417,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public GetOrder2200ApplicationJSON withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -394,6 +429,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageAttachment")
     public GetOrder2200ApplicationJSONPackageAttachment packageAttachment;
+
     public GetOrder2200ApplicationJSON withPackageAttachment(GetOrder2200ApplicationJSONPackageAttachment packageAttachment) {
         this.packageAttachment = packageAttachment;
         return this;
@@ -402,6 +438,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentData")
     public org.openapis.openapi.models.shared.PaymentData paymentData;
+
     public GetOrder2200ApplicationJSON withPaymentData(org.openapis.openapi.models.shared.PaymentData paymentData) {
         this.paymentData = paymentData;
         return this;
@@ -410,6 +447,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratesAndBenefitsData")
     public org.openapis.openapi.models.shared.RatesAndBenefitsData ratesAndBenefitsData;
+
     public GetOrder2200ApplicationJSON withRatesAndBenefitsData(org.openapis.openapi.models.shared.RatesAndBenefitsData ratesAndBenefitsData) {
         this.ratesAndBenefitsData = ratesAndBenefitsData;
         return this;
@@ -421,6 +459,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roundingError")
     public Integer roundingError;
+
     public GetOrder2200ApplicationJSON withRoundingError(Integer roundingError) {
         this.roundingError = roundingError;
         return this;
@@ -432,6 +471,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public GetOrder2200ApplicationJSON withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -443,6 +483,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerOrderId")
     public String sellerOrderId;
+
     public GetOrder2200ApplicationJSON withSellerOrderId(String sellerOrderId) {
         this.sellerOrderId = sellerOrderId;
         return this;
@@ -454,6 +495,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellers")
     public org.openapis.openapi.models.shared.Seller[] sellers;
+
     public GetOrder2200ApplicationJSON withSellers(org.openapis.openapi.models.shared.Seller[] sellers) {
         this.sellers = sellers;
         return this;
@@ -465,6 +507,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public String sequence;
+
     public GetOrder2200ApplicationJSON withSequence(String sequence) {
         this.sequence = sequence;
         return this;
@@ -473,6 +516,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingData")
     public org.openapis.openapi.models.shared.ShippingData shippingData;
+
     public GetOrder2200ApplicationJSON withShippingData(org.openapis.openapi.models.shared.ShippingData shippingData) {
         this.shippingData = shippingData;
         return this;
@@ -484,6 +528,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetOrder2200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -495,6 +540,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDescription")
     public String statusDescription;
+
     public GetOrder2200ApplicationJSON withStatusDescription(String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
@@ -503,6 +549,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storePreferencesData")
     public org.openapis.openapi.models.shared.StorePreferencesData storePreferencesData;
+
     public GetOrder2200ApplicationJSON withStorePreferencesData(org.openapis.openapi.models.shared.StorePreferencesData storePreferencesData) {
         this.storePreferencesData = storePreferencesData;
         return this;
@@ -514,6 +561,7 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totals")
     public GetOrder2200ApplicationJSONTotals[] totals;
+
     public GetOrder2200ApplicationJSON withTotals(GetOrder2200ApplicationJSONTotals[] totals) {
         this.totals = totals;
         return this;
@@ -525,9 +573,11 @@ public class GetOrder2200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Integer value;
+
     public GetOrder2200ApplicationJSON withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public GetOrder2200ApplicationJSON(){}
 }

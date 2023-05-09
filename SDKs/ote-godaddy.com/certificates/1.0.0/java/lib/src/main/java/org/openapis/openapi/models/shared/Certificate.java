@@ -17,6 +17,7 @@ public class Certificate {
      */
     @JsonProperty("certificateId")
     public String certificateId;
+
     public Certificate withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -28,6 +29,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public Certificate withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -35,6 +37,7 @@ public class Certificate {
     
     @JsonProperty("contact")
     public CertificateContact contact;
+
     public Certificate withContact(CertificateContact contact) {
         this.contact = contact;
         return this;
@@ -45,6 +48,7 @@ public class Certificate {
      */
     @JsonProperty("createdAt")
     public String createdAt;
+
     public Certificate withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -56,6 +60,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deniedReason")
     public String deniedReason;
+
     public Certificate withDeniedReason(String deniedReason) {
         this.deniedReason = deniedReason;
         return this;
@@ -64,6 +69,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public CertificateOrganization organization;
+
     public Certificate withOrganization(CertificateOrganization organization) {
         this.organization = organization;
         return this;
@@ -74,6 +80,7 @@ public class Certificate {
      */
     @JsonProperty("period")
     public Long period;
+
     public Certificate withPeriod(Long period) {
         this.period = period;
         return this;
@@ -84,6 +91,7 @@ public class Certificate {
      */
     @JsonProperty("productType")
     public CertificateProductTypeEnum productType;
+
     public Certificate withProductType(CertificateProductTypeEnum productType) {
         this.productType = productType;
         return this;
@@ -95,6 +103,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public Long progress;
+
     public Certificate withProgress(Long progress) {
         this.progress = progress;
         return this;
@@ -106,6 +115,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revokedAt")
     public String revokedAt;
+
     public Certificate withRevokedAt(String revokedAt) {
         this.revokedAt = revokedAt;
         return this;
@@ -117,6 +127,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootType")
     public CertificateRootTypeEnum rootType;
+
     public Certificate withRootType(CertificateRootTypeEnum rootType) {
         this.rootType = rootType;
         return this;
@@ -128,6 +139,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public Certificate withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -139,6 +151,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumberHex")
     public String serialNumberHex;
+
     public Certificate withSerialNumberHex(String serialNumberHex) {
         this.serialNumberHex = serialNumberHex;
         return this;
@@ -150,6 +163,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotSize")
     public CertificateSlotSizeEnum slotSize;
+
     public Certificate withSlotSize(CertificateSlotSizeEnum slotSize) {
         this.slotSize = slotSize;
         return this;
@@ -160,6 +174,7 @@ public class Certificate {
      */
     @JsonProperty("status")
     public CertificateStatusEnum status;
+
     public Certificate withStatus(CertificateStatusEnum status) {
         this.status = status;
         return this;
@@ -171,6 +186,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public SubjectAlternativeNameDetails[] subjectAlternativeNames;
+
     public Certificate withSubjectAlternativeNames(SubjectAlternativeNameDetails[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -182,6 +198,7 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validEnd")
     public String validEnd;
+
     public Certificate withValidEnd(String validEnd) {
         this.validEnd = validEnd;
         return this;
@@ -193,9 +210,18 @@ public class Certificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validStart")
     public String validStart;
+
     public Certificate withValidStart(String validStart) {
         this.validStart = validStart;
         return this;
     }
     
+    public Certificate(@JsonProperty("certificateId") String certificateId, @JsonProperty("contact") CertificateContact contact, @JsonProperty("createdAt") String createdAt, @JsonProperty("period") Long period, @JsonProperty("productType") CertificateProductTypeEnum productType, @JsonProperty("status") CertificateStatusEnum status) {
+        this.certificateId = certificateId;
+        this.contact = contact;
+        this.createdAt = createdAt;
+        this.period = period;
+        this.productType = productType;
+        this.status = status;
+  }
 }

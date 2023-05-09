@@ -60,11 +60,9 @@ public class BundleDownloads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBundleDownloadsResponse res = new org.openapis.openapi.models.operations.GetBundleDownloadsResponse() {{
+        org.openapis.openapi.models.operations.GetBundleDownloadsResponse res = new org.openapis.openapi.models.operations.GetBundleDownloadsResponse(contentType, httpRes.statusCode()) {{
             bundleDownloadEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

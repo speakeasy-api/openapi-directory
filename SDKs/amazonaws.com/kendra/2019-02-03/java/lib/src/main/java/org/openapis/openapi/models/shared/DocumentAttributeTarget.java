@@ -15,6 +15,7 @@ public class DocumentAttributeTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetDocumentAttributeKey")
     public String targetDocumentAttributeKey;
+
     public DocumentAttributeTarget withTargetDocumentAttributeKey(String targetDocumentAttributeKey) {
         this.targetDocumentAttributeKey = targetDocumentAttributeKey;
         return this;
@@ -23,6 +24,7 @@ public class DocumentAttributeTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetDocumentAttributeValue")
     public DocumentAttributeValue targetDocumentAttributeValue;
+
     public DocumentAttributeTarget withTargetDocumentAttributeValue(DocumentAttributeValue targetDocumentAttributeValue) {
         this.targetDocumentAttributeValue = targetDocumentAttributeValue;
         return this;
@@ -31,9 +33,11 @@ public class DocumentAttributeTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetDocumentAttributeValueDeletion")
     public Boolean targetDocumentAttributeValueDeletion;
+
     public DocumentAttributeTarget withTargetDocumentAttributeValueDeletion(Boolean targetDocumentAttributeValueDeletion) {
         this.targetDocumentAttributeValueDeletion = targetDocumentAttributeValueDeletion;
         return this;
     }
     
+    public DocumentAttributeTarget(){}
 }

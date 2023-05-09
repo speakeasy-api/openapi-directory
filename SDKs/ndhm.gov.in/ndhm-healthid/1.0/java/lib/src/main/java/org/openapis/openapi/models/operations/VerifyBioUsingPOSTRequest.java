@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyBioUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public VerifyBioUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class VerifyBioUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateHidBiometricRequest createHidBiometricRequest;
+
     public VerifyBioUsingPOSTRequest withCreateHidBiometricRequest(org.openapis.openapi.models.shared.CreateHidBiometricRequest createHidBiometricRequest) {
         this.createHidBiometricRequest = createHidBiometricRequest;
         return this;
     }
     
+    public VerifyBioUsingPOSTRequest(@JsonProperty("CreateHidBiometricRequest") org.openapis.openapi.models.shared.CreateHidBiometricRequest createHidBiometricRequest) {
+        this.createHidBiometricRequest = createHidBiometricRequest;
+  }
 }

@@ -15,6 +15,7 @@ public class SlugResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productName")
     public String productName;
+
     public SlugResponse withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -23,9 +24,11 @@ public class SlugResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public SlugResponse withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public SlugResponse(){}
 }

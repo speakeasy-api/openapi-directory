@@ -59,11 +59,9 @@ public class DirectorySites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingDirectorySitesGetResponse res = new org.openapis.openapi.models.operations.DfareportingDirectorySitesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingDirectorySitesGetResponse res = new org.openapis.openapi.models.operations.DfareportingDirectorySitesGetResponse(contentType, httpRes.statusCode()) {{
             directorySite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class DirectorySites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertResponse(contentType, httpRes.statusCode()) {{
             directorySite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class DirectorySites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingDirectorySitesListResponse res = new org.openapis.openapi.models.operations.DfareportingDirectorySitesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingDirectorySitesListResponse res = new org.openapis.openapi.models.operations.DfareportingDirectorySitesListResponse(contentType, httpRes.statusCode()) {{
             directorySitesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

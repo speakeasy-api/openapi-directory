@@ -15,6 +15,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustSubscriptionId")
     public String custSubscriptionId;
+
     public EventSubscription withCustSubscriptionId(String custSubscriptionId) {
         this.custSubscriptionId = custSubscriptionId;
         return this;
@@ -23,6 +24,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerAwsId")
     public String customerAwsId;
+
     public EventSubscription withCustomerAwsId(String customerAwsId) {
         this.customerAwsId = customerAwsId;
         return this;
@@ -31,6 +33,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public EventSubscription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -39,6 +42,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCategoriesList")
     public String[] eventCategoriesList;
+
     public EventSubscription withEventCategoriesList(String[] eventCategoriesList) {
         this.eventCategoriesList = eventCategoriesList;
         return this;
@@ -47,6 +51,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public EventSubscription withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -55,6 +60,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceIdsList")
     public String[] sourceIdsList;
+
     public EventSubscription withSourceIdsList(String[] sourceIdsList) {
         this.sourceIdsList = sourceIdsList;
         return this;
@@ -63,6 +69,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public EventSubscription withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -71,6 +78,7 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public EventSubscription withStatus(String status) {
         this.status = status;
         return this;
@@ -79,9 +87,11 @@ public class EventSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionCreationTime")
     public String subscriptionCreationTime;
+
     public EventSubscription withSubscriptionCreationTime(String subscriptionCreationTime) {
         this.subscriptionCreationTime = subscriptionCreationTime;
         return this;
     }
     
+    public EventSubscription(){}
 }

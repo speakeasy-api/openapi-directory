@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DisassociateTransitGatewayPolicyTableResult {
     
     public DisassociateTransitGatewayPolicyTableResultAssociation association;
+
     public DisassociateTransitGatewayPolicyTableResult withAssociation(DisassociateTransitGatewayPolicyTableResultAssociation association) {
         this.association = association;
         return this;
     }
     
+    public DisassociateTransitGatewayPolicyTableResult(){}
 }

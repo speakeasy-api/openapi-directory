@@ -15,6 +15,7 @@ public class ChromeOsDeviceDiskVolumeReportsVolumeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageFree")
     public String storageFree;
+
     public ChromeOsDeviceDiskVolumeReportsVolumeInfo withStorageFree(String storageFree) {
         this.storageFree = storageFree;
         return this;
@@ -26,6 +27,7 @@ public class ChromeOsDeviceDiskVolumeReportsVolumeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageTotal")
     public String storageTotal;
+
     public ChromeOsDeviceDiskVolumeReportsVolumeInfo withStorageTotal(String storageTotal) {
         this.storageTotal = storageTotal;
         return this;
@@ -37,9 +39,11 @@ public class ChromeOsDeviceDiskVolumeReportsVolumeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeId")
     public String volumeId;
+
     public ChromeOsDeviceDiskVolumeReportsVolumeInfo withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public ChromeOsDeviceDiskVolumeReportsVolumeInfo(){}
 }

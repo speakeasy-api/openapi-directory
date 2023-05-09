@@ -15,6 +15,7 @@ public class DescribeAcceleratorOfferingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorTypes")
     public String[] acceleratorTypes;
+
     public DescribeAcceleratorOfferingsRequestBody withAcceleratorTypes(String[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -25,9 +26,13 @@ public class DescribeAcceleratorOfferingsRequestBody {
      */
     @JsonProperty("locationType")
     public DescribeAcceleratorOfferingsRequestBodyLocationTypeEnum locationType;
+
     public DescribeAcceleratorOfferingsRequestBody withLocationType(DescribeAcceleratorOfferingsRequestBodyLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
     }
     
+    public DescribeAcceleratorOfferingsRequestBody(@JsonProperty("locationType") DescribeAcceleratorOfferingsRequestBodyLocationTypeEnum locationType) {
+        this.locationType = locationType;
+  }
 }

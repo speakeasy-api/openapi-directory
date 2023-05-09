@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BuildsListToolsetsResponse {
     
     public String contentType;
+
     public BuildsListToolsetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BuildsListToolsetsResponse {
     
     
     public Integer statusCode;
+
     public BuildsListToolsetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BuildsListToolsetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BuildsListToolsetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BuildsListToolsetsResponse {
      */
     
     public BuildsListToolsets200ApplicationJSON buildsListToolsets200ApplicationJSONObject;
+
     public BuildsListToolsetsResponse withBuildsListToolsets200ApplicationJSONObject(BuildsListToolsets200ApplicationJSON buildsListToolsets200ApplicationJSONObject) {
         this.buildsListToolsets200ApplicationJSONObject = buildsListToolsets200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class BuildsListToolsetsResponse {
      */
     
     public BuildsListToolsetsDefaultApplicationJSON buildsListToolsetsDefaultApplicationJSONObject;
+
     public BuildsListToolsetsResponse withBuildsListToolsetsDefaultApplicationJSONObject(BuildsListToolsetsDefaultApplicationJSON buildsListToolsetsDefaultApplicationJSONObject) {
         this.buildsListToolsetsDefaultApplicationJSONObject = buildsListToolsetsDefaultApplicationJSONObject;
         return this;
     }
     
+    public BuildsListToolsetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

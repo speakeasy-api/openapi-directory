@@ -17,6 +17,7 @@ public class ThreeDSAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public ThreeDSAvailabilityRequest withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -28,6 +29,7 @@ public class ThreeDSAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public String[] brands;
+
     public ThreeDSAvailabilityRequest withBrands(String[] brands) {
         this.brands = brands;
         return this;
@@ -39,6 +41,7 @@ public class ThreeDSAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public ThreeDSAvailabilityRequest withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -49,6 +52,7 @@ public class ThreeDSAvailabilityRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public ThreeDSAvailabilityRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -60,6 +64,7 @@ public class ThreeDSAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public ThreeDSAvailabilityRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -71,9 +76,13 @@ public class ThreeDSAvailabilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public ThreeDSAvailabilityRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public ThreeDSAvailabilityRequest(@JsonProperty("merchantAccount") String merchantAccount) {
+        this.merchantAccount = merchantAccount;
+  }
 }

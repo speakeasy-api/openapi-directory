@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTSelectRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public POSTSelectRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class POSTSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTSelectActionEnum action;
+
     public POSTSelectRequest withAction(POSTSelectActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class POSTSelectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public POSTSelectRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -33,6 +37,7 @@ public class POSTSelectRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTSelectRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -40,6 +45,7 @@ public class POSTSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public POSTSelectRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -47,6 +53,7 @@ public class POSTSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public POSTSelectRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -54,6 +61,7 @@ public class POSTSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public POSTSelectRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -61,6 +69,7 @@ public class POSTSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public POSTSelectRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -68,9 +77,19 @@ public class POSTSelectRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTSelectVersionEnum version;
+
     public POSTSelectRequest withVersion(POSTSelectVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public POSTSelectRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") POSTSelectActionEnum action, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") POSTSelectVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

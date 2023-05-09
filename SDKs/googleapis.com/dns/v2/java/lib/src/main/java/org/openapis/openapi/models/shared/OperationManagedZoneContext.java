@@ -15,6 +15,7 @@ public class OperationManagedZoneContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newValue")
     public ManagedZone newValue;
+
     public OperationManagedZoneContext withNewValue(ManagedZone newValue) {
         this.newValue = newValue;
         return this;
@@ -26,9 +27,11 @@ public class OperationManagedZoneContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldValue")
     public ManagedZone oldValue;
+
     public OperationManagedZoneContext withOldValue(ManagedZone oldValue) {
         this.oldValue = oldValue;
         return this;
     }
     
+    public OperationManagedZoneContext(){}
 }

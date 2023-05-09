@@ -12,6 +12,7 @@ public class AccountInstitutionCurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=article_id")
     public Long articleId;
+
     public AccountInstitutionCurationsRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -22,6 +23,7 @@ public class AccountInstitutionCurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     public Long groupId;
+
     public AccountInstitutionCurationsRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +34,7 @@ public class AccountInstitutionCurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public AccountInstitutionCurationsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class AccountInstitutionCurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public AccountInstitutionCurationsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -52,9 +56,11 @@ public class AccountInstitutionCurationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public AccountInstitutionCurationsStatusEnum status;
+
     public AccountInstitutionCurationsRequest withStatus(AccountInstitutionCurationsStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccountInstitutionCurationsRequest(){}
 }

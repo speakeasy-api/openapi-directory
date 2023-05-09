@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDebitAccountHolderResponse {
     
     public String contentType;
+
     public PostDebitAccountHolderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostDebitAccountHolderResponse {
      */
     
     public org.openapis.openapi.models.shared.DebitAccountHolderResponse debitAccountHolderResponse;
+
     public PostDebitAccountHolderResponse withDebitAccountHolderResponse(org.openapis.openapi.models.shared.DebitAccountHolderResponse debitAccountHolderResponse) {
         this.debitAccountHolderResponse = debitAccountHolderResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostDebitAccountHolderResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostDebitAccountHolderResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostDebitAccountHolderResponse {
     
     
     public Integer statusCode;
+
     public PostDebitAccountHolderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostDebitAccountHolderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDebitAccountHolderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDebitAccountHolderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

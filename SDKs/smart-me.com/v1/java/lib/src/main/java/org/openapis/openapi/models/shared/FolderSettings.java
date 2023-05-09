@@ -20,6 +20,7 @@ public class FolderSettings {
     @JsonProperty("Description")
     @SpeakeasyMetadata("form:name=Description")
     public String description;
+
     public FolderSettings withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +33,7 @@ public class FolderSettings {
     @JsonProperty("Enable")
     @SpeakeasyMetadata("form:name=Enable")
     public Boolean enable;
+
     public FolderSettings withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -44,6 +46,7 @@ public class FolderSettings {
     @JsonProperty("FolderType")
     @SpeakeasyMetadata("form:name=FolderType")
     public FolderSettingsFolderTypeEnum folderType;
+
     public FolderSettings withFolderType(FolderSettingsFolderTypeEnum folderType) {
         this.folderType = folderType;
         return this;
@@ -56,6 +59,7 @@ public class FolderSettings {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public FolderSettings withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +72,7 @@ public class FolderSettings {
     @JsonProperty("ParentFolderId")
     @SpeakeasyMetadata("form:name=ParentFolderId")
     public String parentFolderId;
+
     public FolderSettings withParentFolderId(String parentFolderId) {
         this.parentFolderId = parentFolderId;
         return this;
@@ -80,6 +85,7 @@ public class FolderSettings {
     @JsonProperty("SerialNumber")
     @SpeakeasyMetadata("form:name=SerialNumber")
     public Long serialNumber;
+
     public FolderSettings withSerialNumber(Long serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -92,6 +98,7 @@ public class FolderSettings {
     @JsonProperty("UseableForVirtualBillingMeters")
     @SpeakeasyMetadata("form:name=UseableForVirtualBillingMeters")
     public Boolean useableForVirtualBillingMeters;
+
     public FolderSettings withUseableForVirtualBillingMeters(Boolean useableForVirtualBillingMeters) {
         this.useableForVirtualBillingMeters = useableForVirtualBillingMeters;
         return this;
@@ -104,6 +111,7 @@ public class FolderSettings {
     @JsonProperty("ValueCorrection")
     @SpeakeasyMetadata("form:name=ValueCorrection")
     public Double valueCorrection;
+
     public FolderSettings withValueCorrection(Double valueCorrection) {
         this.valueCorrection = valueCorrection;
         return this;
@@ -116,6 +124,7 @@ public class FolderSettings {
     @JsonProperty("ValueCorrectionParentFolder")
     @SpeakeasyMetadata("form:name=ValueCorrectionParentFolder")
     public Double valueCorrectionParentFolder;
+
     public FolderSettings withValueCorrectionParentFolder(Double valueCorrectionParentFolder) {
         this.valueCorrectionParentFolder = valueCorrectionParentFolder;
         return this;
@@ -128,9 +137,11 @@ public class FolderSettings {
     @JsonProperty("VisualizationName")
     @SpeakeasyMetadata("form:name=VisualizationName")
     public String visualizationName;
+
     public FolderSettings withVisualizationName(String visualizationName) {
         this.visualizationName = visualizationName;
         return this;
     }
     
+    public FolderSettings(){}
 }

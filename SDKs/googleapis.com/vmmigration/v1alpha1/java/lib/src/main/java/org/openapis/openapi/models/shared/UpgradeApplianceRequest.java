@@ -18,9 +18,11 @@ public class UpgradeApplianceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public UpgradeApplianceRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public UpgradeApplianceRequest(){}
 }

@@ -15,6 +15,7 @@ public class CreateBackendStorageRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public CreateBackendStorageRequestBodyResourceConfig withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,6 +24,7 @@ public class CreateBackendStorageRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public CreateBackendStorageRequestBodyResourceConfigPermissions permissions;
+
     public CreateBackendStorageRequestBodyResourceConfig withPermissions(CreateBackendStorageRequestBodyResourceConfigPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -31,9 +33,11 @@ public class CreateBackendStorageRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public CreateBackendStorageRequestBodyResourceConfigServiceNameEnum serviceName;
+
     public CreateBackendStorageRequestBodyResourceConfig withServiceName(CreateBackendStorageRequestBodyResourceConfigServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public CreateBackendStorageRequestBodyResourceConfig(){}
 }

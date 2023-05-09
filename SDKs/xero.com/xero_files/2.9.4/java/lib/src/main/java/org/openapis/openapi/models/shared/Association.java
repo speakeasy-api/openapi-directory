@@ -18,6 +18,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileId")
     public String fileId;
+
     public Association withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -29,6 +30,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectGroup")
     public ObjectGroupEnum objectGroup;
+
     public Association withObjectGroup(ObjectGroupEnum objectGroup) {
         this.objectGroup = objectGroup;
         return this;
@@ -40,6 +42,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectId")
     public String objectId;
+
     public Association withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -51,9 +54,11 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectType")
     public ObjectTypeEnum objectType;
+
     public Association withObjectType(ObjectTypeEnum objectType) {
         this.objectType = objectType;
         return this;
     }
     
+    public Association(){}
 }

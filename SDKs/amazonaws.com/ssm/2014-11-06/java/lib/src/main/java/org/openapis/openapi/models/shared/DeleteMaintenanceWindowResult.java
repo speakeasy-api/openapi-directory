@@ -15,9 +15,11 @@ public class DeleteMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public DeleteMaintenanceWindowResult withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public DeleteMaintenanceWindowResult(){}
 }

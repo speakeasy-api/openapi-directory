@@ -15,6 +15,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public Source withPassword(String password) {
         this.password = password;
         return this;
@@ -23,6 +24,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Revision")
     public String revision;
+
     public Source withRevision(String revision) {
         this.revision = revision;
         return this;
@@ -31,6 +33,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshKey")
     public String sshKey;
+
     public Source withSshKey(String sshKey) {
         this.sshKey = sshKey;
         return this;
@@ -39,6 +42,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SourceTypeEnum type;
+
     public Source withType(SourceTypeEnum type) {
         this.type = type;
         return this;
@@ -47,6 +51,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public Source withUrl(String url) {
         this.url = url;
         return this;
@@ -55,9 +60,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public Source withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Source(){}
 }

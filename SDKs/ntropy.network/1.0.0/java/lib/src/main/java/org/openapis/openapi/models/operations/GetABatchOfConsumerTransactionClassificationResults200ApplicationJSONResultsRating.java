@@ -12,6 +12,7 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviews")
     public Double reviews;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsRating withReviews(Double reviews) {
         this.reviews = reviews;
         return this;
@@ -20,9 +21,11 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsRating withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsRating(){}
 }

@@ -18,6 +18,7 @@ public class VpnGatewayListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public VpnGatewayListWarningCodeEnum code;
+
     public VpnGatewayListWarning withCode(VpnGatewayListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class VpnGatewayListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public VpnGatewayListWarningData[] data;
+
     public VpnGatewayListWarning withData(VpnGatewayListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class VpnGatewayListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public VpnGatewayListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public VpnGatewayListWarning(){}
 }

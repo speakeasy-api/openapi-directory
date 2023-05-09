@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPostAppointmentJsonRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerPostAppointmentJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails;
+
     public DiaryControllerPostAppointmentJsonRequest withDiaryAppointmentDetails(org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails) {
         this.diaryAppointmentDetails = diaryAppointmentDetails;
         return this;
@@ -22,6 +24,7 @@ public class DiaryControllerPostAppointmentJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
     public Boolean lettings;
+
     public DiaryControllerPostAppointmentJsonRequest withLettings(Boolean lettings) {
         this.lettings = lettings;
         return this;
@@ -32,6 +35,7 @@ public class DiaryControllerPostAppointmentJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyIdentifier")
     public String[] propertyIdentifier;
+
     public DiaryControllerPostAppointmentJsonRequest withPropertyIdentifier(String[] propertyIdentifier) {
         this.propertyIdentifier = propertyIdentifier;
         return this;
@@ -42,9 +46,15 @@ public class DiaryControllerPostAppointmentJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerPostAppointmentJsonRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerPostAppointmentJsonRequest(@JsonProperty("DiaryAppointmentDetails") org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails, @JsonProperty("propertyIdentifier") String[] propertyIdentifier, @JsonProperty("shortName") String shortName) {
+        this.diaryAppointmentDetails = diaryAppointmentDetails;
+        this.propertyIdentifier = propertyIdentifier;
+        this.shortName = shortName;
+  }
 }

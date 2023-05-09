@@ -15,6 +15,7 @@ public class GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocols")
     public org.openapis.openapi.models.shared.ChannelProtocolEnum[] protocols;
+
     public GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration withProtocols(org.openapis.openapi.models.shared.ChannelProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -23,9 +24,11 @@ public class GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public org.openapis.openapi.models.shared.ChannelRoleEnum role;
+
     public GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration withRole(org.openapis.openapi.models.shared.ChannelRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration(){}
 }

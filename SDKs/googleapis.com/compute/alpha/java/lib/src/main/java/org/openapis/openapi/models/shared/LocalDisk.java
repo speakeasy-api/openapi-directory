@@ -15,6 +15,7 @@ public class LocalDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskCount")
     public Integer diskCount;
+
     public LocalDisk withDiskCount(Integer diskCount) {
         this.diskCount = diskCount;
         return this;
@@ -26,6 +27,7 @@ public class LocalDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public Integer diskSizeGb;
+
     public LocalDisk withDiskSizeGb(Integer diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -37,9 +39,11 @@ public class LocalDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public LocalDisk withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
     }
     
+    public LocalDisk(){}
 }

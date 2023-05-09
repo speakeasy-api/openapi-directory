@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBProxyRequest {
     
     public UserAuthConfig[] auth;
+
     public ModifyDBProxyRequest withAuth(UserAuthConfig[] auth) {
         this.auth = auth;
         return this;
@@ -16,6 +17,7 @@ public class ModifyDBProxyRequest {
     
     
     public String dbProxyName;
+
     public ModifyDBProxyRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -23,6 +25,7 @@ public class ModifyDBProxyRequest {
     
     
     public Boolean debugLogging;
+
     public ModifyDBProxyRequest withDebugLogging(Boolean debugLogging) {
         this.debugLogging = debugLogging;
         return this;
@@ -30,6 +33,7 @@ public class ModifyDBProxyRequest {
     
     
     public Long idleClientTimeout;
+
     public ModifyDBProxyRequest withIdleClientTimeout(Long idleClientTimeout) {
         this.idleClientTimeout = idleClientTimeout;
         return this;
@@ -37,6 +41,7 @@ public class ModifyDBProxyRequest {
     
     
     public String newDBProxyName;
+
     public ModifyDBProxyRequest withNewDBProxyName(String newDBProxyName) {
         this.newDBProxyName = newDBProxyName;
         return this;
@@ -44,6 +49,7 @@ public class ModifyDBProxyRequest {
     
     
     public Boolean requireTLS;
+
     public ModifyDBProxyRequest withRequireTLS(Boolean requireTLS) {
         this.requireTLS = requireTLS;
         return this;
@@ -51,6 +57,7 @@ public class ModifyDBProxyRequest {
     
     
     public String roleArn;
+
     public ModifyDBProxyRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -58,9 +65,13 @@ public class ModifyDBProxyRequest {
     
     
     public String[] securityGroups;
+
     public ModifyDBProxyRequest withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
     
+    public ModifyDBProxyRequest(@JsonProperty("DBProxyName") String dbProxyName) {
+        this.dbProxyName = dbProxyName;
+  }
 }

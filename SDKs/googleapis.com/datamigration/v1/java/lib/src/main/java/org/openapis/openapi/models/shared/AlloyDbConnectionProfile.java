@@ -18,6 +18,7 @@ public class AlloyDbConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public AlloyDbConnectionProfile withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,9 +30,11 @@ public class AlloyDbConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public AlloyDbSettings settings;
+
     public AlloyDbConnectionProfile withSettings(AlloyDbSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public AlloyDbConnectionProfile(){}
 }

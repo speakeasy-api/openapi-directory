@@ -15,6 +15,7 @@ public class GrammarSlotTypeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public GrammarSlotTypeSource withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -22,6 +23,7 @@ public class GrammarSlotTypeSource {
     
     @JsonProperty("s3BucketName")
     public String s3BucketName;
+
     public GrammarSlotTypeSource withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -29,9 +31,14 @@ public class GrammarSlotTypeSource {
     
     @JsonProperty("s3ObjectKey")
     public String s3ObjectKey;
+
     public GrammarSlotTypeSource withS3ObjectKey(String s3ObjectKey) {
         this.s3ObjectKey = s3ObjectKey;
         return this;
     }
     
+    public GrammarSlotTypeSource(@JsonProperty("s3BucketName") String s3BucketName, @JsonProperty("s3ObjectKey") String s3ObjectKey) {
+        this.s3BucketName = s3BucketName;
+        this.s3ObjectKey = s3ObjectKey;
+  }
 }

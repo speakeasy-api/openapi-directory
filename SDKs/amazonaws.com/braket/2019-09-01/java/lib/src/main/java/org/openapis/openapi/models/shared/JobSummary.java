@@ -21,6 +21,7 @@ public class JobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public JobSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class JobSummary {
     
     @JsonProperty("device")
     public String device;
+
     public JobSummary withDevice(String device) {
         this.device = device;
         return this;
@@ -38,6 +40,7 @@ public class JobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endedAt")
     public OffsetDateTime endedAt;
+
     public JobSummary withEndedAt(OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -45,6 +48,7 @@ public class JobSummary {
     
     @JsonProperty("jobArn")
     public String jobArn;
+
     public JobSummary withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -52,6 +56,7 @@ public class JobSummary {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public JobSummary withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -62,6 +67,7 @@ public class JobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public JobSummary withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -69,6 +75,7 @@ public class JobSummary {
     
     @JsonProperty("status")
     public JobPrimaryStatusEnum status;
+
     public JobSummary withStatus(JobPrimaryStatusEnum status) {
         this.status = status;
         return this;
@@ -77,9 +84,17 @@ public class JobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JobSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public JobSummary(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("device") String device, @JsonProperty("jobArn") String jobArn, @JsonProperty("jobName") String jobName, @JsonProperty("status") JobPrimaryStatusEnum status) {
+        this.createdAt = createdAt;
+        this.device = device;
+        this.jobArn = jobArn;
+        this.jobName = jobName;
+        this.status = status;
+  }
 }

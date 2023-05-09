@@ -15,6 +15,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForgotPassword")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword forgotPassword;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withForgotPassword(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword forgotPassword) {
         this.forgotPassword = forgotPassword;
         return this;
@@ -23,6 +24,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mfa")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa mfa;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withMfa(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa mfa) {
         this.mfa = mfa;
         return this;
@@ -31,6 +33,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OAuth")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth oAuth;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withOAuth(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth oAuth) {
         this.oAuth = oAuth;
         return this;
@@ -39,6 +42,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasswordPolicy")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPolicy passwordPolicy;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withPasswordPolicy(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPolicy passwordPolicy) {
         this.passwordPolicy = passwordPolicy;
         return this;
@@ -46,6 +50,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     
     @JsonProperty("RequiredSignUpAttributes")
     public org.openapis.openapi.models.shared.RequiredSignUpAttributesElementEnum[] requiredSignUpAttributes;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withRequiredSignUpAttributes(org.openapis.openapi.models.shared.RequiredSignUpAttributesElementEnum[] requiredSignUpAttributes) {
         this.requiredSignUpAttributes = requiredSignUpAttributes;
         return this;
@@ -53,6 +58,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     
     @JsonProperty("SignInMethod")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum signInMethod;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withSignInMethod(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum signInMethod) {
         this.signInMethod = signInMethod;
         return this;
@@ -60,6 +66,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     
     @JsonProperty("UserPoolName")
     public String userPoolName;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withUserPoolName(String userPoolName) {
         this.userPoolName = userPoolName;
         return this;
@@ -68,9 +75,15 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerificationMessage")
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage verificationMessage;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs withVerificationMessage(CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage verificationMessage) {
         this.verificationMessage = verificationMessage;
         return this;
     }
     
+    public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigs(@JsonProperty("RequiredSignUpAttributes") org.openapis.openapi.models.shared.RequiredSignUpAttributesElementEnum[] requiredSignUpAttributes, @JsonProperty("SignInMethod") CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum signInMethod, @JsonProperty("UserPoolName") String userPoolName) {
+        this.requiredSignUpAttributes = requiredSignUpAttributes;
+        this.signInMethod = signInMethod;
+        this.userPoolName = userPoolName;
+  }
 }

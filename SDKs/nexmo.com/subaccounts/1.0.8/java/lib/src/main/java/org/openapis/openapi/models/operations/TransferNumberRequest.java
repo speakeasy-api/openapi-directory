@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferNumberRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TransferNumberRequest transferNumberRequest;
+
     public TransferNumberRequest withTransferNumberRequest(org.openapis.openapi.models.shared.TransferNumberRequest transferNumberRequest) {
         this.transferNumberRequest = transferNumberRequest;
         return this;
@@ -19,9 +21,14 @@ public class TransferNumberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
     public String apiKey;
+
     public TransferNumberRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public TransferNumberRequest(@JsonProperty("TransferNumberRequest") org.openapis.openapi.models.shared.TransferNumberRequest transferNumberRequest, @JsonProperty("api_key") String apiKey) {
+        this.transferNumberRequest = transferNumberRequest;
+        this.apiKey = apiKey;
+  }
 }

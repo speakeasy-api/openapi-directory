@@ -17,7 +17,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;p&gt;Amazon GameLift provides solutions for hosting session-based multiplayer game servers in the cloud, including tools for deploying, operating, and scaling game servers. Built on Amazon Web Services global computing infrastructure, GameLift helps you deliver high-performance, high-reliability, low-cost game servers while dynamically scaling your resource usage to meet player demand. &lt;/p&gt; &lt;p&gt; &lt;b&gt;About GameLift solutions&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Get more information on these GameLift solutions in the &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/"&gt;GameLift Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;GameLift managed hosting -- GameLift offers a fully managed service to set up and maintain computing machines for hosting, manage game session and player session life cycle, and handle security, storage, and performance tracking. You can use automatic scaling tools to balance player demand and hosting costs, configure your game session management to minimize player latency, and add FlexMatch for matchmaking.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Managed hosting with Realtime Servers -- With GameLift Realtime Servers, you can quickly configure and set up ready-to-go game servers for your game. Realtime Servers provides a game server framework with core GameLift infrastructure already built in. Then use the full range of GameLift managed hosting features, including FlexMatch, for your game.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;GameLift FleetIQ -- Use GameLift FleetIQ as a standalone service while hosting your games using EC2 instances and Auto Scaling groups. GameLift FleetIQ provides optimizations for game hosting, including boosting the viability of low-cost Spot Instances gaming. For a complete solution, pair the GameLift FleetIQ and FlexMatch standalone services.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;GameLift FlexMatch -- Add matchmaking to your game hosting solution. FlexMatch is a customizable matchmaking service for multiplayer games. Use FlexMatch as integrated with GameLift managed hosting or incorporate FlexMatch as a standalone service into your own hosting solution.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;About this API Reference&lt;/b&gt; &lt;/p&gt; &lt;p&gt;This reference guide describes the low-level service API for Amazon GameLift. With each topic in this guide, you can find links to language-specific SDK guides and the Amazon Web Services CLI reference. Useful links:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html"&gt;GameLift API operations listed by tasks&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-components.html"&gt; GameLift tools and resources&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * &lt;p&gt;Amazon GameLift provides solutions for hosting session-based multiplayer game servers in the cloud, including tools for deploying, operating, and scaling game servers. Built on Amazon Web Services global computing infrastructure, GameLift helps you deliver high-performance, high-reliability, low-cost game servers while dynamically scaling your resource usage to meet player demand. &lt;/p&gt; &lt;p&gt; &lt;b&gt;About Amazon GameLift solutions&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Get more information on these Amazon GameLift solutions in the &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/"&gt;Amazon GameLift Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Amazon GameLift managed hosting -- Amazon GameLift offers a fully managed service to set up and maintain computing machines for hosting, manage game session and player session life cycle, and handle security, storage, and performance tracking. You can use automatic scaling tools to balance player demand and hosting costs, configure your game session management to minimize player latency, and add FlexMatch for matchmaking.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Managed hosting with Realtime Servers -- With Amazon GameLift Realtime Servers, you can quickly configure and set up ready-to-go game servers for your game. Realtime Servers provides a game server framework with core Amazon GameLift infrastructure already built in. Then use the full range of Amazon GameLift managed hosting features, including FlexMatch, for your game.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Amazon GameLift FleetIQ -- Use Amazon GameLift FleetIQ as a standalone service while hosting your games using EC2 instances and Auto Scaling groups. Amazon GameLift FleetIQ provides optimizations for game hosting, including boosting the viability of low-cost Spot Instances gaming. For a complete solution, pair the Amazon GameLift FleetIQ and FlexMatch standalone services.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Amazon GameLift FlexMatch -- Add matchmaking to your game hosting solution. FlexMatch is a customizable matchmaking service for multiplayer games. Use FlexMatch as integrated with Amazon GameLift managed hosting or incorporate FlexMatch as a standalone service into your own hosting solution.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;About this API Reference&lt;/b&gt; &lt;/p&gt; &lt;p&gt;This reference guide describes the low-level service API for Amazon GameLift. With each topic in this guide, you can find links to language-specific SDK guides and the Amazon Web Services CLI reference. Useful links:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html"&gt;Amazon GameLift API operations listed by tasks&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-components.html"&gt; Amazon GameLift tools and resources&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
  * https://docs.aws.amazon.com/gamelift/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -250,6 +250,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -287,15 +292,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptMatchResponse res = new org.openapis.openapi.models.operations.AcceptMatchResponse() {{
+        org.openapis.openapi.models.operations.AcceptMatchResponse res = new org.openapis.openapi.models.operations.AcceptMatchResponse(contentType, httpRes.statusCode()) {{
             acceptMatchOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -338,7 +341,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Locates an available game server and temporarily reserves it to host gameplay and players. This operation is called from a game client or client service (such as a matchmaker) to request hosting resources for a new game session. In response, GameLift FleetIQ locates an available game server, places it in &lt;code&gt;CLAIMED&lt;/code&gt; status for 60 seconds, and returns connection information that players can use to connect to the game server. &lt;/p&gt; &lt;p&gt;To claim a game server, identify a game server group. You can also specify a game server ID, although this approach bypasses GameLift FleetIQ placement optimization. Optionally, include game data to pass to the game server at the start of a game session, such as a game map or player information. &lt;/p&gt; &lt;p&gt;When a game server is successfully claimed, connection information is returned. A claimed game server's utilization status remains &lt;code&gt;AVAILABLE&lt;/code&gt; while the claim status is set to &lt;code&gt;CLAIMED&lt;/code&gt; for up to 60 seconds. This time period gives the game server time to update its status to &lt;code&gt;UTILIZED&lt;/code&gt; after players join. If the game server's status is not updated within 60 seconds, the game server reverts to unclaimed status and is available to be claimed by another request. The claim time period is a fixed value and is not configurable.&lt;/p&gt; &lt;p&gt;If you try to claim a specific game server, this request will fail in the following cases:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If the game server utilization status is &lt;code&gt;UTILIZED&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If the game server claim status is &lt;code&gt;CLAIMED&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;When claiming a specific game server, this request will succeed even if the game server is running on an instance in &lt;code&gt;DRAINING&lt;/code&gt; status. To avoid this, first check the instance status by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameServerInstances.html"&gt;DescribeGameServerInstances&lt;/a&gt; .&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Locates an available game server and temporarily reserves it to host gameplay and players. This operation is called from a game client or client service (such as a matchmaker) to request hosting resources for a new game session. In response, Amazon GameLift FleetIQ locates an available game server, places it in &lt;code&gt;CLAIMED&lt;/code&gt; status for 60 seconds, and returns connection information that players can use to connect to the game server. &lt;/p&gt; &lt;p&gt;To claim a game server, identify a game server group. You can also specify a game server ID, although this approach bypasses Amazon GameLift FleetIQ placement optimization. Optionally, include game data to pass to the game server at the start of a game session, such as a game map or player information. &lt;/p&gt; &lt;p&gt;When a game server is successfully claimed, connection information is returned. A claimed game server's utilization status remains &lt;code&gt;AVAILABLE&lt;/code&gt; while the claim status is set to &lt;code&gt;CLAIMED&lt;/code&gt; for up to 60 seconds. This time period gives the game server time to update its status to &lt;code&gt;UTILIZED&lt;/code&gt; after players join. If the game server's status is not updated within 60 seconds, the game server reverts to unclaimed status and is available to be claimed by another request. The claim time period is a fixed value and is not configurable.&lt;/p&gt; &lt;p&gt;If you try to claim a specific game server, this request will fail in the following cases:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If the game server utilization status is &lt;code&gt;UTILIZED&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If the game server claim status is &lt;code&gt;CLAIMED&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;When claiming a specific game server, this request will succeed even if the game server is running on an instance in &lt;code&gt;DRAINING&lt;/code&gt; status. To avoid this, first check the instance status by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameServerInstances.html"&gt;DescribeGameServerInstances&lt;/a&gt; .&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -371,7 +374,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClaimGameServerResponse res = new org.openapis.openapi.models.operations.ClaimGameServerResponse() {{
+        org.openapis.openapi.models.operations.ClaimGameServerResponse res = new org.openapis.openapi.models.operations.ClaimGameServerResponse(contentType, httpRes.statusCode()) {{
             claimGameServerOutput = null;
             invalidRequestException = null;
             notFoundException = null;
@@ -380,8 +383,6 @@ public class SDK {
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -471,7 +472,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAliasResponse res = new org.openapis.openapi.models.operations.CreateAliasResponse() {{
+        org.openapis.openapi.models.operations.CreateAliasResponse res = new org.openapis.openapi.models.operations.CreateAliasResponse(contentType, httpRes.statusCode()) {{
             createAliasOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
@@ -480,8 +481,6 @@ public class SDK {
             limitExceededException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -538,7 +537,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a new Amazon GameLift build resource for your game server binary files. Combine game server binaries into a zip file for use with Amazon GameLift. &lt;/p&gt; &lt;important&gt; &lt;p&gt;When setting up a new game build for GameLift, we recommend using the CLI command &lt;b&gt; &lt;a href="https://docs.aws.amazon.com/cli/latest/reference/gamelift/upload-build.html"&gt;upload-build&lt;/a&gt; &lt;/b&gt;. This helper command combines two tasks: (1) it uploads your build files from a file directory to a GameLift Amazon S3 location, and (2) it creates a new build resource.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;You can use the operation in the following scenarios:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To create a new game build with build files that are in an Amazon S3 location under an Amazon Web Services account that you control. To use this option, you give Amazon GameLift access to the Amazon S3 bucket. With permissions in place, specify a build name, operating system, and the Amazon S3 storage location of your game build.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To directly upload your build files to a GameLift Amazon S3 location. To use this option, specify a build name and operating system. This operation creates a new build resource and also returns an Amazon S3 location with temporary access credentials. Use the credentials to manually upload your build files to the specified Amazon S3 location. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html"&gt;Uploading Objects&lt;/a&gt; in the &lt;i&gt;Amazon S3 Developer Guide&lt;/i&gt;. After you upload build files to the GameLift Amazon S3 location, you can't update them. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, this operation creates a new build resource with a unique build ID and places it in &lt;code&gt;INITIALIZED&lt;/code&gt; status. A build must be in &lt;code&gt;READY&lt;/code&gt; status before you can create fleets with it.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-intro.html"&gt;Uploading Your Game&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build"&gt; Create a Build with Files in Amazon S3&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Creates a new Amazon GameLift build resource for your game server binary files. Combine game server binaries into a zip file for use with Amazon GameLift. &lt;/p&gt; &lt;important&gt; &lt;p&gt;When setting up a new game build for Amazon GameLift, we recommend using the CLI command &lt;b&gt; &lt;a href="https://docs.aws.amazon.com/cli/latest/reference/gamelift/upload-build.html"&gt;upload-build&lt;/a&gt; &lt;/b&gt;. This helper command combines two tasks: (1) it uploads your build files from a file directory to a Amazon GameLift Amazon S3 location, and (2) it creates a new build resource.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;You can use the operation in the following scenarios:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To create a new game build with build files that are in an Amazon S3 location under an Amazon Web Services account that you control. To use this option, you give Amazon GameLift access to the Amazon S3 bucket. With permissions in place, specify a build name, operating system, and the Amazon S3 storage location of your game build.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To directly upload your build files to a Amazon GameLift Amazon S3 location. To use this option, specify a build name and operating system. This operation creates a new build resource and also returns an Amazon S3 location with temporary access credentials. Use the credentials to manually upload your build files to the specified Amazon S3 location. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html"&gt;Uploading Objects&lt;/a&gt; in the &lt;i&gt;Amazon S3 Developer Guide&lt;/i&gt;. After you upload build files to the Amazon GameLift Amazon S3 location, you can't update them. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, this operation creates a new build resource with a unique build ID and places it in &lt;code&gt;INITIALIZED&lt;/code&gt; status. A build must be in &lt;code&gt;READY&lt;/code&gt; status before you can create fleets with it.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-intro.html"&gt;Uploading Your Game&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build"&gt; Create a Build with Files in Amazon S3&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -571,7 +570,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBuildResponse res = new org.openapis.openapi.models.operations.CreateBuildResponse() {{
+        org.openapis.openapi.models.operations.CreateBuildResponse res = new org.openapis.openapi.models.operations.CreateBuildResponse(contentType, httpRes.statusCode()) {{
             createBuildOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
@@ -579,8 +578,6 @@ public class SDK {
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,7 +627,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a fleet of Amazon Elastic Compute Cloud (Amazon Elastic Compute Cloud) instances to host your custom game server or Realtime Servers. Use this operation to configure the computing resources for your fleet and provide instructions for running game servers on each instance.&lt;/p&gt; &lt;p&gt;Most GameLift fleets can deploy instances to multiple locations, including the home Region (where the fleet is created) and an optional set of remote locations. Fleets that are created in the following Amazon Web Services Regions support multiple locations: us-east-1 (N. Virginia), us-west-2 (Oregon), eu-central-1 (Frankfurt), eu-west-1 (Ireland), ap-southeast-2 (Sydney), ap-northeast-1 (Tokyo), and ap-northeast-2 (Seoul). Fleets that are created in other GameLift Regions can deploy instances in the fleet's home Region only. All fleet instances use the same configuration regardless of location; however, you can adjust capacity settings and turn auto-scaling on/off for each location.&lt;/p&gt; &lt;p&gt;To create a fleet, choose the hardware for your instances, specify a game server build or Realtime script to deploy, and provide a runtime configuration to direct GameLift how to start and run game servers on each instance in the fleet. Set permissions for inbound traffic to your game servers, and enable optional features as needed. When creating a multi-location fleet, provide a list of additional remote locations.&lt;/p&gt; &lt;p&gt;If you need to debug your fleet, fetch logs, view performance metrics or other actions on the fleet, create the development fleet with port 22/3389 open. As a best practice, we recommend opening ports for remote access only when you need them and closing them when you're finished. &lt;/p&gt; &lt;p&gt;If successful, this operation creates a new Fleet resource and places it in &lt;code&gt;NEW&lt;/code&gt; status, which prompts GameLift to initiate the &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creation-workflow.html"&gt;fleet creation workflow&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-debug.html#fleets-creating-debug-creation"&gt;Debug fleet creation issues&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Multi-location fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Creates a fleet of Amazon Elastic Compute Cloud (Amazon EC2) instances to host your custom game server or Realtime Servers. Use this operation to configure the computing resources for your fleet and provide instructions for running game servers on each instance.&lt;/p&gt; &lt;p&gt;Most Amazon GameLift fleets can deploy instances to multiple locations, including the home Region (where the fleet is created) and an optional set of remote locations. Fleets that are created in the following Amazon Web Services Regions support multiple locations: us-east-1 (N. Virginia), us-west-2 (Oregon), eu-central-1 (Frankfurt), eu-west-1 (Ireland), ap-southeast-2 (Sydney), ap-northeast-1 (Tokyo), and ap-northeast-2 (Seoul). Fleets that are created in other Amazon GameLift Regions can deploy instances in the fleet's home Region only. All fleet instances use the same configuration regardless of location; however, you can adjust capacity settings and turn auto-scaling on/off for each location.&lt;/p&gt; &lt;p&gt;To create a fleet, choose the hardware for your instances, specify a game server build or Realtime script to deploy, and provide a runtime configuration to direct Amazon GameLift how to start and run game servers on each instance in the fleet. Set permissions for inbound traffic to your game servers, and enable optional features as needed. When creating a multi-location fleet, provide a list of additional remote locations.&lt;/p&gt; &lt;p&gt;If you need to debug your fleet, fetch logs, view performance metrics or other actions on the fleet, create the development fleet with port 22/3389 open. As a best practice, we recommend opening ports for remote access only when you need them and closing them when you're finished. &lt;/p&gt; &lt;p&gt;If successful, this operation creates a new Fleet resource and places it in &lt;code&gt;NEW&lt;/code&gt; status, which prompts Amazon GameLift to initiate the &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-all.html#fleets-creation-workflow"&gt;fleet creation workflow&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-debug.html#fleets-creating-debug-creation"&gt;Debug fleet creation issues&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Multi-location fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -663,7 +660,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFleetResponse res = new org.openapis.openapi.models.operations.CreateFleetResponse() {{
+        org.openapis.openapi.models.operations.CreateFleetResponse res = new org.openapis.openapi.models.operations.CreateFleetResponse(contentType, httpRes.statusCode()) {{
             createFleetOutput = null;
             internalServiceException = null;
             notFoundException = null;
@@ -674,8 +671,6 @@ public class SDK {
             taggingFailedException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -746,7 +741,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Adds remote locations to a fleet and begins populating the new locations with EC2 instances. The new instances conform to the fleet's instance type, auto-scaling, and other configuration settings. &lt;/p&gt; &lt;note&gt; &lt;p&gt;This operation cannot be used with fleets that don't support remote locations. Fleets can have multiple locations only if they reside in Amazon Web Services Regions that support this feature and were created after the feature was released in March 2021.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;To add fleet locations, specify the fleet to be updated and provide a list of one or more locations. &lt;/p&gt; &lt;p&gt;If successful, this operation returns the list of added locations with their status set to &lt;code&gt;NEW&lt;/code&gt;. GameLift initiates the process of starting an instance in each added location. You can track the status of each new location by monitoring location creation events using &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetEvents.html"&gt;DescribeFleetEvents&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Multi-location fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Adds remote locations to a fleet and begins populating the new locations with EC2 instances. The new instances conform to the fleet's instance type, auto-scaling, and other configuration settings. &lt;/p&gt; &lt;note&gt; &lt;p&gt;This operation cannot be used with fleets that don't support remote locations. Fleets can have multiple locations only if they reside in Amazon Web Services Regions that support this feature and were created after the feature was released in March 2021.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;To add fleet locations, specify the fleet to be updated and provide a list of one or more locations. &lt;/p&gt; &lt;p&gt;If successful, this operation returns the list of added locations with their status set to &lt;code&gt;NEW&lt;/code&gt;. Amazon GameLift initiates the process of starting an instance in each added location. You can track the status of each new location by monitoring location creation events using &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetEvents.html"&gt;DescribeFleetEvents&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Multi-location fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -779,7 +774,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFleetLocationsResponse res = new org.openapis.openapi.models.operations.CreateFleetLocationsResponse() {{
+        org.openapis.openapi.models.operations.CreateFleetLocationsResponse res = new org.openapis.openapi.models.operations.CreateFleetLocationsResponse(contentType, httpRes.statusCode()) {{
             createFleetLocationsOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -788,9 +783,8 @@ public class SDK {
             invalidFleetStatusException = null;
             unsupportedRegionException = null;
             conflictException = null;
+            limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -849,12 +843,19 @@ public class SDK {
                 res.conflictException = out;
             }
         }
+        else if (httpRes.statusCode() == 487) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.limitExceededException = out;
+            }
+        }
 
         return res;
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Creates a GameLift FleetIQ game server group for managing game hosting on a collection of Amazon Elastic Compute Cloud instances for game hosting. This operation creates the game server group, creates an Auto Scaling group in your Amazon Web Services account, and establishes a link between the two groups. You can view the status of your game server groups in the GameLift console. Game server group metrics and events are emitted to Amazon CloudWatch.&lt;/p&gt; &lt;p&gt;Before creating a new game server group, you must have the following: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;An Amazon Elastic Compute Cloud launch template that specifies how to launch Amazon Elastic Compute Cloud instances with your game server build. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html"&gt; Launching an Instance from a Launch Template&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Compute Cloud User Guide&lt;/i&gt;. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An IAM role that extends limited access to your Amazon Web Services account to allow GameLift FleetIQ to create and interact with the Auto Scaling group. For more information, see &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-iam-permissions-roles.html"&gt;Create IAM roles for cross-service interaction&lt;/a&gt; in the &lt;i&gt;GameLift FleetIQ Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To create a new game server group, specify a unique group name, IAM role and Amazon Elastic Compute Cloud launch template, and provide a list of instance types that can be used in the group. You must also set initial maximum and minimum limits on the group's instance count. You can optionally set an Auto Scaling policy with target tracking based on a GameLift FleetIQ metric.&lt;/p&gt; &lt;p&gt;Once the game server group and corresponding Auto Scaling group are created, you have full access to change the Auto Scaling group's configuration as needed. Several properties that are set when creating a game server group, including maximum/minimum size and auto-scaling policy settings, must be updated directly in the Auto Scaling group. Keep in mind that some Auto Scaling group properties are periodically updated by GameLift FleetIQ as part of its balancing activities to optimize for availability and cost.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Creates a Amazon GameLift FleetIQ game server group for managing game hosting on a collection of Amazon Elastic Compute Cloud instances for game hosting. This operation creates the game server group, creates an Auto Scaling group in your Amazon Web Services account, and establishes a link between the two groups. You can view the status of your game server groups in the Amazon GameLift console. Game server group metrics and events are emitted to Amazon CloudWatch.&lt;/p&gt; &lt;p&gt;Before creating a new game server group, you must have the following: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;An Amazon Elastic Compute Cloud launch template that specifies how to launch Amazon Elastic Compute Cloud instances with your game server build. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html"&gt; Launching an Instance from a Launch Template&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Compute Cloud User Guide&lt;/i&gt;. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;An IAM role that extends limited access to your Amazon Web Services account to allow Amazon GameLift FleetIQ to create and interact with the Auto Scaling group. For more information, see &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-iam-permissions-roles.html"&gt;Create IAM roles for cross-service interaction&lt;/a&gt; in the &lt;i&gt;Amazon GameLift FleetIQ Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To create a new game server group, specify a unique group name, IAM role and Amazon Elastic Compute Cloud launch template, and provide a list of instance types that can be used in the group. You must also set initial maximum and minimum limits on the group's instance count. You can optionally set an Auto Scaling policy with target tracking based on a Amazon GameLift FleetIQ metric.&lt;/p&gt; &lt;p&gt;Once the game server group and corresponding Auto Scaling group are created, you have full access to change the Auto Scaling group's configuration as needed. Several properties that are set when creating a game server group, including maximum/minimum size and auto-scaling policy settings, must be updated directly in the Auto Scaling group. Keep in mind that some Auto Scaling group properties are periodically updated by Amazon GameLift FleetIQ as part of its balancing activities to optimize for availability and cost.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -887,7 +888,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGameServerGroupResponse res = new org.openapis.openapi.models.operations.CreateGameServerGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateGameServerGroupResponse res = new org.openapis.openapi.models.operations.CreateGameServerGroupResponse(contentType, httpRes.statusCode()) {{
             createGameServerGroupOutput = null;
             invalidRequestException = null;
             conflictException = null;
@@ -895,8 +896,6 @@ public class SDK {
             internalServiceException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -946,7 +945,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a multiplayer game session for players in a specific fleet location. This operation prompts an available server process to start a game session and retrieves connection information for the new game session. As an alternative, consider using the GameLift game session placement feature with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StartGameSessionPlacement.html"&gt;StartGameSessionPlacement&lt;/a&gt; , which uses FleetIQ algorithms and queues to optimize the placement process.&lt;/p&gt; &lt;p&gt;When creating a game session, you specify exactly where you want to place it and provide a set of game session configuration settings. The fleet must be in &lt;code&gt;ACTIVE&lt;/code&gt; status before a game session can be created in it. &lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To create a game session on an instance in a fleet's home Region, provide a fleet or alias ID along with your game session configuration. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To create a game session on an instance in a fleet's remote location, provide a fleet or alias ID and a location name, along with your game session configuration. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, a workflow is initiated to start a new game session. A &lt;code&gt;GameSession&lt;/code&gt; object is returned containing the game session configuration and status. When the status is &lt;code&gt;ACTIVE&lt;/code&gt;, game session connection information is provided and player sessions can be created for the game session. By default, newly created game sessions are open to new players. You can restrict new player access by using &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html"&gt;UpdateGameSession&lt;/a&gt; to change the game session's player session creation policy.&lt;/p&gt; &lt;p&gt;Game session logs are retained for all active game sessions for 14 days. To access the logs, call &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_GetGameSessionLogUrl.html"&gt;GetGameSessionLogUrl&lt;/a&gt; to download the log files.&lt;/p&gt; &lt;p&gt; &lt;i&gt;Available in Amazon GameLift Local.&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"&gt;Start a game session&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Creates a multiplayer game session for players in a specific fleet location. This operation prompts an available server process to start a game session and retrieves connection information for the new game session. As an alternative, consider using the Amazon GameLift game session placement feature with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StartGameSessionPlacement.html"&gt;StartGameSessionPlacement&lt;/a&gt; , which uses FleetIQ algorithms and queues to optimize the placement process.&lt;/p&gt; &lt;p&gt;When creating a game session, you specify exactly where you want to place it and provide a set of game session configuration settings. The fleet must be in &lt;code&gt;ACTIVE&lt;/code&gt; status before a game session can be created in it. &lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To create a game session on an instance in a fleet's home Region, provide a fleet or alias ID along with your game session configuration. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To create a game session on an instance in a fleet's remote location, provide a fleet or alias ID and a location name, along with your game session configuration. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, a workflow is initiated to start a new game session. A &lt;code&gt;GameSession&lt;/code&gt; object is returned containing the game session configuration and status. When the status is &lt;code&gt;ACTIVE&lt;/code&gt;, game session connection information is provided and player sessions can be created for the game session. By default, newly created game sessions are open to new players. You can restrict new player access by using &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSession.html"&gt;UpdateGameSession&lt;/a&gt; to change the game session's player session creation policy.&lt;/p&gt; &lt;p&gt;Game session logs are retained for all active game sessions for 14 days. To access the logs, call &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_GetGameSessionLogUrl.html"&gt;GetGameSessionLogUrl&lt;/a&gt; to download the log files.&lt;/p&gt; &lt;p&gt; &lt;i&gt;Available in Amazon GameLift Local.&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"&gt;Start a game session&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -979,7 +978,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGameSessionResponse res = new org.openapis.openapi.models.operations.CreateGameSessionResponse() {{
+        org.openapis.openapi.models.operations.CreateGameSessionResponse res = new org.openapis.openapi.models.operations.CreateGameSessionResponse(contentType, httpRes.statusCode()) {{
             createGameSessionOutput = null;
             conflictException = null;
             internalServiceException = null;
@@ -993,8 +992,6 @@ public class SDK {
             idempotentParameterMismatchException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1086,7 +1083,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a placement queue that processes requests for new game sessions. A queue uses FleetIQ algorithms to determine the best placement locations and find an available game server there, then prompts the game server process to start a new game session. &lt;/p&gt; &lt;p&gt;A game session queue is configured with a set of destinations (GameLift fleets or aliases), which determine the locations where the queue can place new game sessions. These destinations can span multiple fleet types (Spot and On-Demand), instance types, and Amazon Web Services Regions. If the queue includes multi-location fleets, the queue is able to place game sessions in all of a fleet's remote locations. You can opt to filter out individual locations if needed.&lt;/p&gt; &lt;p&gt;The queue configuration also determines how FleetIQ selects the best available placement for a new game session. Before searching for an available game server, FleetIQ first prioritizes the queue's destinations and locations, with the best placement locations on top. You can set up the queue to use the FleetIQ default prioritization or provide an alternate set of priorities.&lt;/p&gt; &lt;p&gt;To create a new queue, provide a name, timeout value, and a list of destinations. Optionally, specify a sort configuration and/or a filter, and define a set of latency cap policies. You can also include the ARN for an Amazon Simple Notification Service (SNS) topic to receive notifications of game session placement activity. Notifications using SNS or CloudWatch events is the preferred way to track placement activity.&lt;/p&gt; &lt;p&gt;If successful, a new &lt;code&gt;GameSessionQueue&lt;/code&gt; object is returned with an assigned queue ARN. New game session requests, which are submitted to queue with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StartGameSessionPlacement.html"&gt;StartGameSessionPlacement&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StartMatchmaking.html"&gt;StartMatchmaking&lt;/a&gt;, reference a queue's name or ARN. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-design.html"&gt; Design a game session queue&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-creating.html"&gt; Create a game session queue&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameSessionQueue.html"&gt;CreateGameSessionQueue&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameSessionQueues.html"&gt;DescribeGameSessionQueues&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSessionQueue.html"&gt;UpdateGameSessionQueue&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DeleteGameSessionQueue.html"&gt;DeleteGameSessionQueue&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Creates a placement queue that processes requests for new game sessions. A queue uses FleetIQ algorithms to determine the best placement locations and find an available game server there, then prompts the game server process to start a new game session. &lt;/p&gt; &lt;p&gt;A game session queue is configured with a set of destinations (Amazon GameLift fleets or aliases), which determine the locations where the queue can place new game sessions. These destinations can span multiple fleet types (Spot and On-Demand), instance types, and Amazon Web Services Regions. If the queue includes multi-location fleets, the queue is able to place game sessions in all of a fleet's remote locations. You can opt to filter out individual locations if needed.&lt;/p&gt; &lt;p&gt;The queue configuration also determines how FleetIQ selects the best available placement for a new game session. Before searching for an available game server, FleetIQ first prioritizes the queue's destinations and locations, with the best placement locations on top. You can set up the queue to use the FleetIQ default prioritization or provide an alternate set of priorities.&lt;/p&gt; &lt;p&gt;To create a new queue, provide a name, timeout value, and a list of destinations. Optionally, specify a sort configuration and/or a filter, and define a set of latency cap policies. You can also include the ARN for an Amazon Simple Notification Service (SNS) topic to receive notifications of game session placement activity. Notifications using SNS or CloudWatch events is the preferred way to track placement activity.&lt;/p&gt; &lt;p&gt;If successful, a new &lt;code&gt;GameSessionQueue&lt;/code&gt; object is returned with an assigned queue ARN. New game session requests, which are submitted to queue with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StartGameSessionPlacement.html"&gt;StartGameSessionPlacement&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StartMatchmaking.html"&gt;StartMatchmaking&lt;/a&gt;, reference a queue's name or ARN. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-design.html"&gt; Design a game session queue&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-creating.html"&gt; Create a game session queue&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameSessionQueue.html"&gt;CreateGameSessionQueue&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameSessionQueues.html"&gt;DescribeGameSessionQueues&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSessionQueue.html"&gt;UpdateGameSessionQueue&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DeleteGameSessionQueue.html"&gt;DeleteGameSessionQueue&lt;/a&gt; | &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1119,7 +1116,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGameSessionQueueResponse res = new org.openapis.openapi.models.operations.CreateGameSessionQueueResponse() {{
+        org.openapis.openapi.models.operations.CreateGameSessionQueueResponse res = new org.openapis.openapi.models.operations.CreateGameSessionQueueResponse(contentType, httpRes.statusCode()) {{
             createGameSessionQueueOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -1128,8 +1125,6 @@ public class SDK {
             notFoundException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1219,7 +1214,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationResponse res = new org.openapis.openapi.models.operations.CreateLocationResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationResponse res = new org.openapis.openapi.models.operations.CreateLocationResponse(contentType, httpRes.statusCode()) {{
             createLocationOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
@@ -1228,8 +1223,6 @@ public class SDK {
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1286,7 +1279,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Defines a new matchmaking configuration for use with FlexMatch. Whether your are using FlexMatch with GameLift hosting or as a standalone matchmaking service, the matchmaking configuration sets out rules for matching players and forming teams. If you're also using GameLift hosting, it defines how to start game sessions for each match. Your matchmaking system can use multiple configurations to handle different game scenarios. All matchmaking requests identify the matchmaking configuration to use and provide player attributes consistent with that configuration. &lt;/p&gt; &lt;p&gt;To create a matchmaking configuration, you must provide the following: configuration name and FlexMatch mode (with or without GameLift hosting); a rule set that specifies how to evaluate players and find acceptable matches; whether player acceptance is required; and the maximum time allowed for a matchmaking attempt. When using FlexMatch with GameLift hosting, you also need to identify the game session queue to use when starting a game session for the match.&lt;/p&gt; &lt;p&gt;In addition, you must set up an Amazon Simple Notification Service topic to receive matchmaking notifications. Provide the topic ARN in the matchmaking configuration.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-configuration.html"&gt; Design a FlexMatch matchmaker&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-notification.html"&gt; Set up FlexMatch event notification&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Defines a new matchmaking configuration for use with FlexMatch. Whether your are using FlexMatch with Amazon GameLift hosting or as a standalone matchmaking service, the matchmaking configuration sets out rules for matching players and forming teams. If you're also using Amazon GameLift hosting, it defines how to start game sessions for each match. Your matchmaking system can use multiple configurations to handle different game scenarios. All matchmaking requests identify the matchmaking configuration to use and provide player attributes consistent with that configuration. &lt;/p&gt; &lt;p&gt;To create a matchmaking configuration, you must provide the following: configuration name and FlexMatch mode (with or without Amazon GameLift hosting); a rule set that specifies how to evaluate players and find acceptable matches; whether player acceptance is required; and the maximum time allowed for a matchmaking attempt. When using FlexMatch with Amazon GameLift hosting, you also need to identify the game session queue to use when starting a game session for the match.&lt;/p&gt; &lt;p&gt;In addition, you must set up an Amazon Simple Notification Service topic to receive matchmaking notifications. Provide the topic ARN in the matchmaking configuration.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-configuration.html"&gt; Design a FlexMatch matchmaker&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-notification.html"&gt; Set up FlexMatch event notification&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1319,7 +1312,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMatchmakingConfigurationResponse res = new org.openapis.openapi.models.operations.CreateMatchmakingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.CreateMatchmakingConfigurationResponse res = new org.openapis.openapi.models.operations.CreateMatchmakingConfigurationResponse(contentType, httpRes.statusCode()) {{
             createMatchmakingConfigurationOutput = null;
             invalidRequestException = null;
             limitExceededException = null;
@@ -1328,8 +1321,6 @@ public class SDK {
             unsupportedRegionException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1419,7 +1410,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMatchmakingRuleSetResponse res = new org.openapis.openapi.models.operations.CreateMatchmakingRuleSetResponse() {{
+        org.openapis.openapi.models.operations.CreateMatchmakingRuleSetResponse res = new org.openapis.openapi.models.operations.CreateMatchmakingRuleSetResponse(contentType, httpRes.statusCode()) {{
             createMatchmakingRuleSetOutput = null;
             invalidRequestException = null;
             limitExceededException = null;
@@ -1427,8 +1418,6 @@ public class SDK {
             unsupportedRegionException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1478,7 +1467,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Reserves an open player slot in a game session for a player. New player sessions can be created in any game session with an open slot that is in &lt;code&gt;ACTIVE&lt;/code&gt; status and has a player creation policy of &lt;code&gt;ACCEPT_ALL&lt;/code&gt;. You can add a group of players to a game session with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreatePlayerSessions.html"&gt;CreatePlayerSessions&lt;/a&gt; . &lt;/p&gt; &lt;p&gt;To create a player session, specify a game session ID, player ID, and optionally a set of player data. &lt;/p&gt; &lt;p&gt;If successful, a slot is reserved in the game session for the player and a new &lt;code&gt;PlayerSessions&lt;/code&gt; object is returned with a player session ID. The player references the player session ID when sending a connection request to the game session, and the game server can use it to validate the player reservation with the GameLift service. Player sessions cannot be updated. &lt;/p&gt; &lt;p&gt;The maximum number of players per game session is 200. It is not adjustable. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Reserves an open player slot in a game session for a player. New player sessions can be created in any game session with an open slot that is in &lt;code&gt;ACTIVE&lt;/code&gt; status and has a player creation policy of &lt;code&gt;ACCEPT_ALL&lt;/code&gt;. You can add a group of players to a game session with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreatePlayerSessions.html"&gt;CreatePlayerSessions&lt;/a&gt; . &lt;/p&gt; &lt;p&gt;To create a player session, specify a game session ID, player ID, and optionally a set of player data. &lt;/p&gt; &lt;p&gt;If successful, a slot is reserved in the game session for the player and a new &lt;code&gt;PlayerSessions&lt;/code&gt; object is returned with a player session ID. The player references the player session ID when sending a connection request to the game session, and the game server can use it to validate the player reservation with the Amazon GameLift service. Player sessions cannot be updated. &lt;/p&gt; &lt;p&gt;The maximum number of players per game session is 200. It is not adjustable. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1511,7 +1500,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePlayerSessionResponse res = new org.openapis.openapi.models.operations.CreatePlayerSessionResponse() {{
+        org.openapis.openapi.models.operations.CreatePlayerSessionResponse res = new org.openapis.openapi.models.operations.CreatePlayerSessionResponse(contentType, httpRes.statusCode()) {{
             createPlayerSessionOutput = null;
             internalServiceException = null;
             unauthorizedException = null;
@@ -1521,8 +1510,6 @@ public class SDK {
             invalidRequestException = null;
             notFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1586,7 +1573,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Reserves open slots in a game session for a group of players. New player sessions can be created in any game session with an open slot that is in &lt;code&gt;ACTIVE&lt;/code&gt; status and has a player creation policy of &lt;code&gt;ACCEPT_ALL&lt;/code&gt;. To add a single player to a game session, use &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreatePlayerSession.html"&gt;CreatePlayerSession&lt;/a&gt; &lt;/p&gt; &lt;p&gt;To create player sessions, specify a game session ID and a list of player IDs. Optionally, provide a set of player data for each player ID. &lt;/p&gt; &lt;p&gt;If successful, a slot is reserved in the game session for each player, and new &lt;code&gt;PlayerSession&lt;/code&gt; objects are returned with player session IDs. Each player references their player session ID when sending a connection request to the game session, and the game server can use it to validate the player reservation with the GameLift service. Player sessions cannot be updated.&lt;/p&gt; &lt;p&gt;The maximum number of players per game session is 200. It is not adjustable. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Reserves open slots in a game session for a group of players. New player sessions can be created in any game session with an open slot that is in &lt;code&gt;ACTIVE&lt;/code&gt; status and has a player creation policy of &lt;code&gt;ACCEPT_ALL&lt;/code&gt;. To add a single player to a game session, use &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreatePlayerSession.html"&gt;CreatePlayerSession&lt;/a&gt; &lt;/p&gt; &lt;p&gt;To create player sessions, specify a game session ID and a list of player IDs. Optionally, provide a set of player data for each player ID. &lt;/p&gt; &lt;p&gt;If successful, a slot is reserved in the game session for each player, and new &lt;code&gt;PlayerSession&lt;/code&gt; objects are returned with player session IDs. Each player references their player session ID when sending a connection request to the game session, and the game server can use it to validate the player reservation with the Amazon GameLift service. Player sessions cannot be updated.&lt;/p&gt; &lt;p&gt;The maximum number of players per game session is 200. It is not adjustable. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1619,7 +1606,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePlayerSessionsResponse res = new org.openapis.openapi.models.operations.CreatePlayerSessionsResponse() {{
+        org.openapis.openapi.models.operations.CreatePlayerSessionsResponse res = new org.openapis.openapi.models.operations.CreatePlayerSessionsResponse(contentType, httpRes.statusCode()) {{
             createPlayerSessionsOutput = null;
             internalServiceException = null;
             unauthorizedException = null;
@@ -1629,8 +1616,6 @@ public class SDK {
             invalidRequestException = null;
             notFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1727,7 +1712,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateScriptResponse res = new org.openapis.openapi.models.operations.CreateScriptResponse() {{
+        org.openapis.openapi.models.operations.CreateScriptResponse res = new org.openapis.openapi.models.operations.CreateScriptResponse(contentType, httpRes.statusCode()) {{
             createScriptOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
@@ -1735,8 +1720,6 @@ public class SDK {
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1819,15 +1802,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVpcPeeringAuthorizationResponse res = new org.openapis.openapi.models.operations.CreateVpcPeeringAuthorizationResponse() {{
+        org.openapis.openapi.models.operations.CreateVpcPeeringAuthorizationResponse res = new org.openapis.openapi.models.operations.CreateVpcPeeringAuthorizationResponse(contentType, httpRes.statusCode()) {{
             createVpcPeeringAuthorizationOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1903,15 +1884,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVpcPeeringConnectionResponse res = new org.openapis.openapi.models.operations.CreateVpcPeeringConnectionResponse() {{
+        org.openapis.openapi.models.operations.CreateVpcPeeringConnectionResponse res = new org.openapis.openapi.models.operations.CreateVpcPeeringConnectionResponse(contentType, httpRes.statusCode()) {{
             createVpcPeeringConnectionOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1987,15 +1966,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAliasResponse res = new org.openapis.openapi.models.operations.DeleteAliasResponse() {{
+        org.openapis.openapi.models.operations.DeleteAliasResponse res = new org.openapis.openapi.models.operations.DeleteAliasResponse(contentType, httpRes.statusCode()) {{
             unauthorizedException = null;
             notFoundException = null;
             invalidRequestException = null;
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2073,15 +2050,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBuildResponse res = new org.openapis.openapi.models.operations.DeleteBuildResponse() {{
+        org.openapis.openapi.models.operations.DeleteBuildResponse res = new org.openapis.openapi.models.operations.DeleteBuildResponse(contentType, httpRes.statusCode()) {{
             unauthorizedException = null;
             notFoundException = null;
             internalServiceException = null;
             taggingFailedException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2126,7 +2101,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Deletes all resources and information related a fleet. Any current fleet instances, including those in remote locations, are shut down. You don't need to call &lt;code&gt;DeleteFleetLocations&lt;/code&gt; separately.&lt;/p&gt; &lt;note&gt; &lt;p&gt;If the fleet being deleted has a VPC peering connection, you first need to get a valid authorization (good for 24 hours) by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateVpcPeeringAuthorization.html"&gt;CreateVpcPeeringAuthorization&lt;/a&gt;. You do not need to explicitly delete the VPC peering connection.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;To delete a fleet, specify the fleet ID to be terminated. During the deletion process the fleet status is changed to &lt;code&gt;DELETING&lt;/code&gt;. When completed, the status switches to &lt;code&gt;TERMINATED&lt;/code&gt; and the fleet event &lt;code&gt;FLEET_DELETED&lt;/code&gt; is sent.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift Fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Deletes all resources and information related a fleet. Any current fleet instances, including those in remote locations, are shut down. You don't need to call &lt;code&gt;DeleteFleetLocations&lt;/code&gt; separately.&lt;/p&gt; &lt;note&gt; &lt;p&gt;If the fleet being deleted has a VPC peering connection, you first need to get a valid authorization (good for 24 hours) by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateVpcPeeringAuthorization.html"&gt;CreateVpcPeeringAuthorization&lt;/a&gt;. You do not need to explicitly delete the VPC peering connection.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;To delete a fleet, specify the fleet ID to be terminated. During the deletion process the fleet status is changed to &lt;code&gt;DELETING&lt;/code&gt;. When completed, the status switches to &lt;code&gt;TERMINATED&lt;/code&gt; and the fleet event &lt;code&gt;FLEET_DELETED&lt;/code&gt; is sent.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift Fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2159,7 +2134,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFleetResponse res = new org.openapis.openapi.models.operations.DeleteFleetResponse() {{
+        org.openapis.openapi.models.operations.DeleteFleetResponse res = new org.openapis.openapi.models.operations.DeleteFleetResponse(contentType, httpRes.statusCode()) {{
             notFoundException = null;
             internalServiceException = null;
             invalidFleetStatusException = null;
@@ -2167,8 +2142,6 @@ public class SDK {
             invalidRequestException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2220,7 +2193,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Removes locations from a multi-location fleet. When deleting a location, all game server process and all instances that are still active in the location are shut down. &lt;/p&gt; &lt;p&gt;To delete fleet locations, identify the fleet ID and provide a list of the locations to be deleted. &lt;/p&gt; &lt;p&gt;If successful, GameLift sets the location status to &lt;code&gt;DELETING&lt;/code&gt;, and begins to shut down existing server processes and terminate instances in each location being deleted. When completed, the location status changes to &lt;code&gt;TERMINATED&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Removes locations from a multi-location fleet. When deleting a location, all game server process and all instances that are still active in the location are shut down. &lt;/p&gt; &lt;p&gt;To delete fleet locations, identify the fleet ID and provide a list of the locations to be deleted. &lt;/p&gt; &lt;p&gt;If successful, GameLift sets the location status to &lt;code&gt;DELETING&lt;/code&gt;, and begins to shut down existing server processes and terminate instances in each location being deleted. When completed, the location status changes to &lt;code&gt;TERMINATED&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2253,7 +2226,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFleetLocationsResponse res = new org.openapis.openapi.models.operations.DeleteFleetLocationsResponse() {{
+        org.openapis.openapi.models.operations.DeleteFleetLocationsResponse res = new org.openapis.openapi.models.operations.DeleteFleetLocationsResponse(contentType, httpRes.statusCode()) {{
             deleteFleetLocationsOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -2261,8 +2234,6 @@ public class SDK {
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2312,7 +2283,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Terminates a game server group and permanently deletes the game server group record. You have several options for how these resources are impacted when deleting the game server group. Depending on the type of delete operation selected, this operation might affect these resources:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The game server group&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The corresponding Auto Scaling group&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;All game servers that are currently running in the group&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To delete a game server group, identify the game server group to delete and specify the type of delete operation to initiate. Game server groups can only be deleted if they are in &lt;code&gt;ACTIVE&lt;/code&gt; or &lt;code&gt;ERROR&lt;/code&gt; status.&lt;/p&gt; &lt;p&gt;If the delete request is successful, a series of operations are kicked off. The game server group status is changed to &lt;code&gt;DELETE_SCHEDULED&lt;/code&gt;, which prevents new game servers from being registered and stops automatic scaling activity. Once all game servers in the game server group are deregistered, GameLift FleetIQ can begin deleting resources. If any of the delete operations fail, the game server group is placed in &lt;code&gt;ERROR&lt;/code&gt; status.&lt;/p&gt; &lt;p&gt;GameLift FleetIQ emits delete events to Amazon CloudWatch.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Terminates a game server group and permanently deletes the game server group record. You have several options for how these resources are impacted when deleting the game server group. Depending on the type of delete operation selected, this operation might affect these resources:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The game server group&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The corresponding Auto Scaling group&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;All game servers that are currently running in the group&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To delete a game server group, identify the game server group to delete and specify the type of delete operation to initiate. Game server groups can only be deleted if they are in &lt;code&gt;ACTIVE&lt;/code&gt; or &lt;code&gt;ERROR&lt;/code&gt; status.&lt;/p&gt; &lt;p&gt;If the delete request is successful, a series of operations are kicked off. The game server group status is changed to &lt;code&gt;DELETE_SCHEDULED&lt;/code&gt;, which prevents new game servers from being registered and stops automatic scaling activity. Once all game servers in the game server group are deregistered, Amazon GameLift FleetIQ can begin deleting resources. If any of the delete operations fail, the game server group is placed in &lt;code&gt;ERROR&lt;/code&gt; status.&lt;/p&gt; &lt;p&gt;Amazon GameLift FleetIQ emits delete events to Amazon CloudWatch.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2345,15 +2316,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGameServerGroupResponse res = new org.openapis.openapi.models.operations.DeleteGameServerGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteGameServerGroupResponse res = new org.openapis.openapi.models.operations.DeleteGameServerGroupResponse(contentType, httpRes.statusCode()) {{
             deleteGameServerGroupOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2429,7 +2398,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGameSessionQueueResponse res = new org.openapis.openapi.models.operations.DeleteGameSessionQueueResponse() {{
+        org.openapis.openapi.models.operations.DeleteGameSessionQueueResponse res = new org.openapis.openapi.models.operations.DeleteGameSessionQueueResponse(contentType, httpRes.statusCode()) {{
             deleteGameSessionQueueOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -2437,8 +2406,6 @@ public class SDK {
             unauthorizedException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2521,15 +2488,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLocationResponse res = new org.openapis.openapi.models.operations.DeleteLocationResponse() {{
+        org.openapis.openapi.models.operations.DeleteLocationResponse res = new org.openapis.openapi.models.operations.DeleteLocationResponse(contentType, httpRes.statusCode()) {{
             deleteLocationOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2605,7 +2570,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMatchmakingConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteMatchmakingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteMatchmakingConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteMatchmakingConfigurationResponse(contentType, httpRes.statusCode()) {{
             deleteMatchmakingConfigurationOutput = null;
             invalidRequestException = null;
             notFoundException = null;
@@ -2613,8 +2578,6 @@ public class SDK {
             unsupportedRegionException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2697,7 +2660,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMatchmakingRuleSetResponse res = new org.openapis.openapi.models.operations.DeleteMatchmakingRuleSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteMatchmakingRuleSetResponse res = new org.openapis.openapi.models.operations.DeleteMatchmakingRuleSetResponse(contentType, httpRes.statusCode()) {{
             deleteMatchmakingRuleSetOutput = null;
             invalidRequestException = null;
             internalServiceException = null;
@@ -2705,8 +2668,6 @@ public class SDK {
             notFoundException = null;
             taggingFailedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2756,7 +2717,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Deletes a fleet scaling policy. Once deleted, the policy is no longer in force and GameLift removes all record of it. To delete a scaling policy, specify both the scaling policy name and the fleet ID it is associated with.&lt;/p&gt; &lt;p&gt;To temporarily suspend scaling policies, use &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StopFleetActions.html"&gt;StopFleetActions&lt;/a&gt;. This operation suspends all policies for the fleet.&lt;/p&gt;
+     * &lt;p&gt;Deletes a fleet scaling policy. Once deleted, the policy is no longer in force and Amazon GameLift removes all record of it. To delete a scaling policy, specify both the scaling policy name and the fleet ID it is associated with.&lt;/p&gt; &lt;p&gt;To temporarily suspend scaling policies, use &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StopFleetActions.html"&gt;StopFleetActions&lt;/a&gt;. This operation suspends all policies for the fleet.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2789,14 +2750,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteScalingPolicyResponse res = new org.openapis.openapi.models.operations.DeleteScalingPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteScalingPolicyResponse res = new org.openapis.openapi.models.operations.DeleteScalingPolicyResponse(contentType, httpRes.statusCode()) {{
             internalServiceException = null;
             invalidRequestException = null;
             unauthorizedException = null;
             notFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2867,15 +2826,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteScriptResponse res = new org.openapis.openapi.models.operations.DeleteScriptResponse() {{
+        org.openapis.openapi.models.operations.DeleteScriptResponse res = new org.openapis.openapi.models.operations.DeleteScriptResponse(contentType, httpRes.statusCode()) {{
             invalidRequestException = null;
             unauthorizedException = null;
             notFoundException = null;
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2953,15 +2910,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVpcPeeringAuthorizationResponse res = new org.openapis.openapi.models.operations.DeleteVpcPeeringAuthorizationResponse() {{
+        org.openapis.openapi.models.operations.DeleteVpcPeeringAuthorizationResponse res = new org.openapis.openapi.models.operations.DeleteVpcPeeringAuthorizationResponse(contentType, httpRes.statusCode()) {{
             deleteVpcPeeringAuthorizationOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3037,15 +2992,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVpcPeeringConnectionResponse res = new org.openapis.openapi.models.operations.DeleteVpcPeeringConnectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteVpcPeeringConnectionResponse res = new org.openapis.openapi.models.operations.DeleteVpcPeeringConnectionResponse(contentType, httpRes.statusCode()) {{
             deleteVpcPeeringConnectionOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3121,15 +3074,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterComputeResponse res = new org.openapis.openapi.models.operations.DeregisterComputeResponse() {{
+        org.openapis.openapi.models.operations.DeregisterComputeResponse res = new org.openapis.openapi.models.operations.DeregisterComputeResponse(contentType, httpRes.statusCode()) {{
             deregisterComputeOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3172,7 +3123,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Removes the game server from a game server group. As a result of this operation, the deregistered game server can no longer be claimed and will not be returned in a list of active game servers. &lt;/p&gt; &lt;p&gt;To deregister a game server, specify the game server group and game server ID. If successful, this operation emits a CloudWatch event with termination timestamp and reason.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Removes the game server from a game server group. As a result of this operation, the deregistered game server can no longer be claimed and will not be returned in a list of active game servers. &lt;/p&gt; &lt;p&gt;To deregister a game server, specify the game server group and game server ID. If successful, this operation emits a CloudWatch event with termination timestamp and reason.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3205,14 +3156,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterGameServerResponse res = new org.openapis.openapi.models.operations.DeregisterGameServerResponse() {{
+        org.openapis.openapi.models.operations.DeregisterGameServerResponse res = new org.openapis.openapi.models.operations.DeregisterGameServerResponse(contentType, httpRes.statusCode()) {{
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3283,15 +3232,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAliasResponse res = new org.openapis.openapi.models.operations.DescribeAliasResponse() {{
+        org.openapis.openapi.models.operations.DescribeAliasResponse res = new org.openapis.openapi.models.operations.DescribeAliasResponse(contentType, httpRes.statusCode()) {{
             describeAliasOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3367,15 +3314,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeBuildResponse res = new org.openapis.openapi.models.operations.DescribeBuildResponse() {{
+        org.openapis.openapi.models.operations.DescribeBuildResponse res = new org.openapis.openapi.models.operations.DescribeBuildResponse(contentType, httpRes.statusCode()) {{
             describeBuildOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3418,7 +3363,7 @@ public class SDK {
     }
 
     /**
-     * Retrieves properties for a compute resource. To request a compute resource specify the fleet ID and compute name. If successful, GameLift returns an object containing the build properties.
+     * Retrieves properties for a compute resource. To request a compute resource specify the fleet ID and compute name. If successful, Amazon GameLift returns an object containing the build properties.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3451,15 +3396,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeComputeResponse res = new org.openapis.openapi.models.operations.DescribeComputeResponse() {{
+        org.openapis.openapi.models.operations.DescribeComputeResponse res = new org.openapis.openapi.models.operations.DescribeComputeResponse(contentType, httpRes.statusCode()) {{
             describeComputeOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3502,7 +3445,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves the instance limits and current utilization for an Amazon Web Services Region or location. Instance limits control the number of instances, per instance type, per location, that your Amazon Web Services account can use. Learn more at &lt;a href="http://aws.amazon.com/ec2/instance-types/"&gt;Amazon EC2 Instance Types&lt;/a&gt;. The information returned includes the maximum number of instances allowed and your account's current usage across all fleets. This information can affect your ability to scale your GameLift fleets. You can request a limit increase for your account by using the &lt;b&gt;Service limits&lt;/b&gt; page in the GameLift console.&lt;/p&gt; &lt;p&gt;Instance limits differ based on whether the instances are deployed in a fleet's home Region or in a remote location. For remote locations, limits also differ based on the combination of home Region and remote location. All requests must specify an Amazon Web Services Region (either explicitly or as your default settings). To get the limit for a remote location, you must also specify the location. For example, the following requests all return different results: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Request specifies the Region &lt;code&gt;ap-northeast-1&lt;/code&gt; with no location. The result is limits and usage data on all instance types that are deployed in &lt;code&gt;us-east-2&lt;/code&gt;, by all of the fleets that reside in &lt;code&gt;ap-northeast-1&lt;/code&gt;. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Request specifies the Region &lt;code&gt;us-east-1&lt;/code&gt; with location &lt;code&gt;ca-central-1&lt;/code&gt;. The result is limits and usage data on all instance types that are deployed in &lt;code&gt;ca-central-1&lt;/code&gt;, by all of the fleets that reside in &lt;code&gt;us-east-2&lt;/code&gt;. These limits do not affect fleets in any other Regions that deploy instances to &lt;code&gt;ca-central-1&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Request specifies the Region &lt;code&gt;eu-west-1&lt;/code&gt; with location &lt;code&gt;ca-central-1&lt;/code&gt;. The result is limits and usage data on all instance types that are deployed in &lt;code&gt;ca-central-1&lt;/code&gt;, by all of the fleets that reside in &lt;code&gt;eu-west-1&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;This operation can be used in the following ways:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get limit and usage data for all instance types that are deployed in an Amazon Web Services Region by fleets that reside in the same Region: Specify the Region only. Optionally, specify a single instance type to retrieve information for.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get limit and usage data for all instance types that are deployed to a remote location by fleets that reside in different Amazon Web Services Region: Provide both the Amazon Web Services Region and the remote location. Optionally, specify a single instance type to retrieve information for.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, an &lt;code&gt;EC2InstanceLimits&lt;/code&gt; object is returned with limits and usage data for each requested instance type.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves the instance limits and current utilization for an Amazon Web Services Region or location. Instance limits control the number of instances, per instance type, per location, that your Amazon Web Services account can use. Learn more at &lt;a href="http://aws.amazon.com/ec2/instance-types/"&gt;Amazon EC2 Instance Types&lt;/a&gt;. The information returned includes the maximum number of instances allowed and your account's current usage across all fleets. This information can affect your ability to scale your Amazon GameLift fleets. You can request a limit increase for your account by using the &lt;b&gt;Service limits&lt;/b&gt; page in the Amazon GameLift console.&lt;/p&gt; &lt;p&gt;Instance limits differ based on whether the instances are deployed in a fleet's home Region or in a remote location. For remote locations, limits also differ based on the combination of home Region and remote location. All requests must specify an Amazon Web Services Region (either explicitly or as your default settings). To get the limit for a remote location, you must also specify the location. For example, the following requests all return different results: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Request specifies the Region &lt;code&gt;ap-northeast-1&lt;/code&gt; with no location. The result is limits and usage data on all instance types that are deployed in &lt;code&gt;us-east-2&lt;/code&gt;, by all of the fleets that reside in &lt;code&gt;ap-northeast-1&lt;/code&gt;. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Request specifies the Region &lt;code&gt;us-east-1&lt;/code&gt; with location &lt;code&gt;ca-central-1&lt;/code&gt;. The result is limits and usage data on all instance types that are deployed in &lt;code&gt;ca-central-1&lt;/code&gt;, by all of the fleets that reside in &lt;code&gt;us-east-2&lt;/code&gt;. These limits do not affect fleets in any other Regions that deploy instances to &lt;code&gt;ca-central-1&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Request specifies the Region &lt;code&gt;eu-west-1&lt;/code&gt; with location &lt;code&gt;ca-central-1&lt;/code&gt;. The result is limits and usage data on all instance types that are deployed in &lt;code&gt;ca-central-1&lt;/code&gt;, by all of the fleets that reside in &lt;code&gt;eu-west-1&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;This operation can be used in the following ways:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get limit and usage data for all instance types that are deployed in an Amazon Web Services Region by fleets that reside in the same Region: Specify the Region only. Optionally, specify a single instance type to retrieve information for.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get limit and usage data for all instance types that are deployed to a remote location by fleets that reside in different Amazon Web Services Region: Provide both the Amazon Web Services Region and the remote location. Optionally, specify a single instance type to retrieve information for.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, an &lt;code&gt;EC2InstanceLimits&lt;/code&gt; object is returned with limits and usage data for each requested instance type.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3535,15 +3478,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEc2InstanceLimitsResponse res = new org.openapis.openapi.models.operations.DescribeEc2InstanceLimitsResponse() {{
+        org.openapis.openapi.models.operations.DescribeEc2InstanceLimitsResponse res = new org.openapis.openapi.models.operations.DescribeEc2InstanceLimitsResponse(contentType, httpRes.statusCode()) {{
             describeEc2InstanceLimitsOutput = null;
             invalidRequestException = null;
             internalServiceException = null;
             unauthorizedException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3586,7 +3527,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves core fleet-wide properties, including the computing hardware and deployment configuration for all instances in the fleet.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get attributes for one or more specific fleets, provide a list of fleet IDs or fleet ARNs. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get attributes for all fleets, do not provide a fleet identifier. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting attributes for multiple fleets, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetAttributes&lt;/code&gt; object is returned for each fleet requested, unless the fleet identifier is not found. &lt;/p&gt; &lt;note&gt; &lt;p&gt;Some API operations limit the number of fleet IDs that allowed in one request. If a request exceeds this limit, the request fails and the error message contains the maximum allowed number.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves core fleet-wide properties, including the computing hardware and deployment configuration for all instances in the fleet.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get attributes for one or more specific fleets, provide a list of fleet IDs or fleet ARNs. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get attributes for all fleets, do not provide a fleet identifier. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting attributes for multiple fleets, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetAttributes&lt;/code&gt; object is returned for each fleet requested, unless the fleet identifier is not found. &lt;/p&gt; &lt;note&gt; &lt;p&gt;Some API operations limit the number of fleet IDs that allowed in one request. If a request exceeds this limit, the request fails and the error message contains the maximum allowed number.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3625,15 +3566,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetAttributesResponse res = new org.openapis.openapi.models.operations.DescribeFleetAttributesResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetAttributesResponse res = new org.openapis.openapi.models.operations.DescribeFleetAttributesResponse(contentType, httpRes.statusCode()) {{
             describeFleetAttributesOutput = null;
             internalServiceException = null;
             notFoundException = null;
             invalidRequestException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3676,7 +3615,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves the resource capacity settings for one or more fleets. The data returned includes the current fleet capacity (number of EC2 instances), and settings that can control how capacity scaling. For fleets with remote locations, this operation retrieves data for the fleet's home Region only.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get capacity data for one or more specific fleets, provide a list of fleet IDs or fleet ARNs. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get capacity data for all fleets, do not provide a fleet identifier. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting multiple fleets, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetCapacity&lt;/code&gt; object is returned for each requested fleet ID. Each FleetCapacity object includes a &lt;code&gt;Location&lt;/code&gt; property, which is set to the fleet's home Region. When a list of fleet IDs is provided, attribute objects are returned only for fleets that currently exist.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Some API operations may limit the number of fleet IDs that are allowed in one request. If a request exceeds this limit, the request fails and the error message includes the maximum allowed.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift metrics for fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves the resource capacity settings for one or more fleets. The data returned includes the current fleet capacity (number of EC2 instances), and settings that can control how capacity scaling. For fleets with remote locations, this operation retrieves data for the fleet's home Region only.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get capacity data for one or more specific fleets, provide a list of fleet IDs or fleet ARNs. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get capacity data for all fleets, do not provide a fleet identifier. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting multiple fleets, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetCapacity&lt;/code&gt; object is returned for each requested fleet ID. Each FleetCapacity object includes a &lt;code&gt;Location&lt;/code&gt; property, which is set to the fleet's home Region. When a list of fleet IDs is provided, attribute objects are returned only for fleets that currently exist.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Some API operations may limit the number of fleet IDs that are allowed in one request. If a request exceeds this limit, the request fails and the error message includes the maximum allowed.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift metrics for fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3715,15 +3654,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetCapacityResponse res = new org.openapis.openapi.models.operations.DescribeFleetCapacityResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetCapacityResponse res = new org.openapis.openapi.models.operations.DescribeFleetCapacityResponse(contentType, httpRes.statusCode()) {{
             describeFleetCapacityOutput = null;
             internalServiceException = null;
             notFoundException = null;
             invalidRequestException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3766,7 +3703,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves entries from a fleet's event log. Fleet events are initiated by changes in status, such as during fleet creation and termination, changes in capacity, etc. If a fleet has multiple locations, events are also initiated by changes to status and capacity in remote locations. &lt;/p&gt; &lt;p&gt;You can specify a time range to limit the result set. Use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a collection of event log entries matching the request are returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves entries from a fleet's event log. Fleet events are initiated by changes in status, such as during fleet creation and termination, changes in capacity, etc. If a fleet has multiple locations, events are also initiated by changes to status and capacity in remote locations. &lt;/p&gt; &lt;p&gt;You can specify a time range to limit the result set. Use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a collection of event log entries matching the request are returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3805,15 +3742,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetEventsResponse res = new org.openapis.openapi.models.operations.DescribeFleetEventsResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetEventsResponse res = new org.openapis.openapi.models.operations.DescribeFleetEventsResponse(contentType, httpRes.statusCode()) {{
             describeFleetEventsOutput = null;
             notFoundException = null;
             internalServiceException = null;
             unauthorizedException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3856,7 +3791,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves information on a fleet's remote locations, including life-cycle status and any suspended fleet activity. &lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get data for specific locations, provide a fleet identifier and a list of locations. Location data is returned in the order that it is requested. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get data for all locations, provide a fleet identifier only. Location data is returned in no particular order. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting attributes for multiple locations, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;LocationAttributes&lt;/code&gt; object is returned for each requested location. If the fleet does not have a requested location, no information is returned. This operation does not return the home Region. To get information on a fleet's home Region, call &lt;code&gt;DescribeFleetAttributes&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves information on a fleet's remote locations, including life-cycle status and any suspended fleet activity. &lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get data for specific locations, provide a fleet identifier and a list of locations. Location data is returned in the order that it is requested. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get data for all locations, provide a fleet identifier only. Location data is returned in no particular order. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting attributes for multiple locations, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;LocationAttributes&lt;/code&gt; object is returned for each requested location. If the fleet does not have a requested location, no information is returned. This operation does not return the home Region. To get information on a fleet's home Region, call &lt;code&gt;DescribeFleetAttributes&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3895,7 +3830,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetLocationAttributesResponse res = new org.openapis.openapi.models.operations.DescribeFleetLocationAttributesResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetLocationAttributesResponse res = new org.openapis.openapi.models.operations.DescribeFleetLocationAttributesResponse(contentType, httpRes.statusCode()) {{
             describeFleetLocationAttributesOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -3903,8 +3838,6 @@ public class SDK {
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3954,7 +3887,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves the resource capacity settings for a fleet location. The data returned includes the current capacity (number of EC2 instances) and some scaling settings for the requested fleet location. Use this operation to retrieve capacity information for a fleet's remote location or home Region (you can also retrieve home Region capacity by calling &lt;code&gt;DescribeFleetCapacity&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;To retrieve capacity data, identify a fleet and location. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetCapacity&lt;/code&gt; object is returned for the requested fleet location. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift metrics for fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves the resource capacity settings for a fleet location. The data returned includes the current capacity (number of EC2 instances) and some scaling settings for the requested fleet location. Use this operation to retrieve capacity information for a fleet's remote location or home Region (you can also retrieve home Region capacity by calling &lt;code&gt;DescribeFleetCapacity&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;To retrieve capacity data, identify a fleet and location. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetCapacity&lt;/code&gt; object is returned for the requested fleet location. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift metrics for fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3987,7 +3920,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetLocationCapacityResponse res = new org.openapis.openapi.models.operations.DescribeFleetLocationCapacityResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetLocationCapacityResponse res = new org.openapis.openapi.models.operations.DescribeFleetLocationCapacityResponse(contentType, httpRes.statusCode()) {{
             describeFleetLocationCapacityOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -3995,8 +3928,6 @@ public class SDK {
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4046,7 +3977,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves current usage data for a fleet location. Utilization data provides a snapshot of current game hosting activity at the requested location. Use this operation to retrieve utilization information for a fleet's remote location or home Region (you can also retrieve home Region utilization by calling &lt;code&gt;DescribeFleetUtilization&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;To retrieve utilization data, identify a fleet and location. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetUtilization&lt;/code&gt; object is returned for the requested fleet location. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift metrics for fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves current usage data for a fleet location. Utilization data provides a snapshot of current game hosting activity at the requested location. Use this operation to retrieve utilization information for a fleet's remote location or home Region (you can also retrieve home Region utilization by calling &lt;code&gt;DescribeFleetUtilization&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;To retrieve utilization data, identify a fleet and location. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;FleetUtilization&lt;/code&gt; object is returned for the requested fleet location. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift metrics for fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4079,7 +4010,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetLocationUtilizationResponse res = new org.openapis.openapi.models.operations.DescribeFleetLocationUtilizationResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetLocationUtilizationResponse res = new org.openapis.openapi.models.operations.DescribeFleetLocationUtilizationResponse(contentType, httpRes.statusCode()) {{
             describeFleetLocationUtilizationOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -4087,8 +4018,6 @@ public class SDK {
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4138,7 +4067,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves a fleet's inbound connection permissions. Connection permissions specify the range of IP addresses and port settings that incoming traffic can use to access server processes in the fleet. Game sessions that are running on instances in the fleet must use connections that fall in this range.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To retrieve the inbound connection permissions for a fleet, identify the fleet's unique identifier. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To check the status of recent updates to a fleet remote location, specify the fleet ID and a location. Port setting updates can take time to propagate across all locations. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, a set of &lt;code&gt;IpPermission&lt;/code&gt; objects is returned for the requested fleet ID. When a location is specified, a pending status is included. If the requested fleet has been deleted, the result set is empty.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves a fleet's inbound connection permissions. Connection permissions specify the range of IP addresses and port settings that incoming traffic can use to access server processes in the fleet. Game sessions that are running on instances in the fleet must use connections that fall in this range.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To retrieve the inbound connection permissions for a fleet, identify the fleet's unique identifier. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To check the status of recent updates to a fleet remote location, specify the fleet ID and a location. Port setting updates can take time to propagate across all locations. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, a set of &lt;code&gt;IpPermission&lt;/code&gt; objects is returned for the requested fleet ID. When a location is specified, a pending status is included. If the requested fleet has been deleted, the result set is empty.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4171,7 +4100,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetPortSettingsResponse res = new org.openapis.openapi.models.operations.DescribeFleetPortSettingsResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetPortSettingsResponse res = new org.openapis.openapi.models.operations.DescribeFleetPortSettingsResponse(contentType, httpRes.statusCode()) {{
             describeFleetPortSettingsOutput = null;
             internalServiceException = null;
             notFoundException = null;
@@ -4179,8 +4108,6 @@ public class SDK {
             unauthorizedException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4230,7 +4157,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves utilization statistics for one or more fleets. Utilization data provides a snapshot of how the fleet's hosting resources are currently being used. For fleets with remote locations, this operation retrieves data for the fleet's home Region only. See &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationUtilization.html"&gt;DescribeFleetLocationUtilization&lt;/a&gt; to get utilization statistics for a fleet's remote locations.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get utilization data for one or more specific fleets, provide a list of fleet IDs or fleet ARNs. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get utilization data for all fleets, do not provide a fleet identifier. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting multiple fleets, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_FleetUtilization.html"&gt;FleetUtilization&lt;/a&gt; object is returned for each requested fleet ID, unless the fleet identifier is not found. Each fleet utilization object includes a &lt;code&gt;Location&lt;/code&gt; property, which is set to the fleet's home Region. &lt;/p&gt; &lt;note&gt; &lt;p&gt;Some API operations may limit the number of fleet IDs allowed in one request. If a request exceeds this limit, the request fails and the error message includes the maximum allowed.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift Fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift Metrics for Fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves utilization statistics for one or more fleets. Utilization data provides a snapshot of how the fleet's hosting resources are currently being used. For fleets with remote locations, this operation retrieves data for the fleet's home Region only. See &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationUtilization.html"&gt;DescribeFleetLocationUtilization&lt;/a&gt; to get utilization statistics for a fleet's remote locations.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get utilization data for one or more specific fleets, provide a list of fleet IDs or fleet ARNs. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get utilization data for all fleets, do not provide a fleet identifier. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;When requesting multiple fleets, use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_FleetUtilization.html"&gt;FleetUtilization&lt;/a&gt; object is returned for each requested fleet ID, unless the fleet identifier is not found. Each fleet utilization object includes a &lt;code&gt;Location&lt;/code&gt; property, which is set to the fleet's home Region. &lt;/p&gt; &lt;note&gt; &lt;p&gt;Some API operations may limit the number of fleet IDs allowed in one request. If a request exceeds this limit, the request fails and the error message includes the maximum allowed.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift Fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html#gamelift-metrics-fleet"&gt;GameLift Metrics for Fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4269,15 +4196,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetUtilizationResponse res = new org.openapis.openapi.models.operations.DescribeFleetUtilizationResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetUtilizationResponse res = new org.openapis.openapi.models.operations.DescribeFleetUtilizationResponse(contentType, httpRes.statusCode()) {{
             describeFleetUtilizationOutput = null;
             internalServiceException = null;
             notFoundException = null;
             invalidRequestException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4320,7 +4245,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves information for a registered game server. Information includes game server status, health check info, and the instance that the game server is running on. &lt;/p&gt; &lt;p&gt;To retrieve game server information, specify the game server ID. If successful, the requested game server object is returned. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves information for a registered game server. Information includes game server status, health check info, and the instance that the game server is running on. &lt;/p&gt; &lt;p&gt;To retrieve game server information, specify the game server ID. If successful, the requested game server object is returned. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4353,15 +4278,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGameServerResponse res = new org.openapis.openapi.models.operations.DescribeGameServerResponse() {{
+        org.openapis.openapi.models.operations.DescribeGameServerResponse res = new org.openapis.openapi.models.operations.DescribeGameServerResponse(contentType, httpRes.statusCode()) {{
             describeGameServerOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4404,7 +4327,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves information on a game server group. This operation returns only properties related to GameLift FleetIQ. To view or update properties for the corresponding Auto Scaling group, such as launch template, auto scaling policies, and maximum/minimum group size, access the Auto Scaling group directly.&lt;/p&gt; &lt;p&gt;To get attributes for a game server group, provide a group name or ARN value. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves information on a game server group. This operation returns only properties related to Amazon GameLift FleetIQ. To view or update properties for the corresponding Auto Scaling group, such as launch template, auto scaling policies, and maximum/minimum group size, access the Auto Scaling group directly.&lt;/p&gt; &lt;p&gt;To get attributes for a game server group, provide a group name or ARN value. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4437,15 +4360,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGameServerGroupResponse res = new org.openapis.openapi.models.operations.DescribeGameServerGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeGameServerGroupResponse res = new org.openapis.openapi.models.operations.DescribeGameServerGroupResponse(contentType, httpRes.statusCode()) {{
             describeGameServerGroupOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4488,7 +4409,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves status information about the Amazon EC2 instances associated with a GameLift FleetIQ game server group. Use this operation to detect when instances are active or not available to host new game servers.&lt;/p&gt; &lt;p&gt;To request status for all instances in the game server group, provide a game server group ID only. To request status for specific instances, provide the game server group ID and one or more instance IDs. Use the pagination parameters to retrieve results in sequential segments. If successful, a collection of &lt;code&gt;GameServerInstance&lt;/code&gt; objects is returned. &lt;/p&gt; &lt;p&gt;This operation is not designed to be called with every game server claim request; this practice can cause you to exceed your API limit, which results in errors. Instead, as a best practice, cache the results and refresh your cache no more than once every 10 seconds.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves status information about the Amazon EC2 instances associated with a Amazon GameLift FleetIQ game server group. Use this operation to detect when instances are active or not available to host new game servers.&lt;/p&gt; &lt;p&gt;To request status for all instances in the game server group, provide a game server group ID only. To request status for specific instances, provide the game server group ID and one or more instance IDs. Use the pagination parameters to retrieve results in sequential segments. If successful, a collection of &lt;code&gt;GameServerInstance&lt;/code&gt; objects is returned. &lt;/p&gt; &lt;p&gt;This operation is not designed to be called with every game server claim request; this practice can cause you to exceed your API limit, which results in errors. Instead, as a best practice, cache the results and refresh your cache no more than once every 10 seconds.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4527,15 +4448,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGameServerInstancesResponse res = new org.openapis.openapi.models.operations.DescribeGameServerInstancesResponse() {{
+        org.openapis.openapi.models.operations.DescribeGameServerInstancesResponse res = new org.openapis.openapi.models.operations.DescribeGameServerInstancesResponse(contentType, httpRes.statusCode()) {{
             describeGameServerInstancesOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4617,7 +4536,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGameSessionDetailsResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionDetailsResponse() {{
+        org.openapis.openapi.models.operations.DescribeGameSessionDetailsResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionDetailsResponse(contentType, httpRes.statusCode()) {{
             describeGameSessionDetailsOutput = null;
             internalServiceException = null;
             notFoundException = null;
@@ -4626,8 +4545,6 @@ public class SDK {
             terminalRoutingStrategyException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4717,15 +4634,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGameSessionPlacementResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionPlacementResponse() {{
+        org.openapis.openapi.models.operations.DescribeGameSessionPlacementResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionPlacementResponse(contentType, httpRes.statusCode()) {{
             describeGameSessionPlacementOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4807,15 +4722,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGameSessionQueuesResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionQueuesResponse() {{
+        org.openapis.openapi.models.operations.DescribeGameSessionQueuesResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionQueuesResponse(contentType, httpRes.statusCode()) {{
             describeGameSessionQueuesOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4897,7 +4810,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGameSessionsResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionsResponse() {{
+        org.openapis.openapi.models.operations.DescribeGameSessionsResponse res = new org.openapis.openapi.models.operations.DescribeGameSessionsResponse(contentType, httpRes.statusCode()) {{
             describeGameSessionsOutput = null;
             internalServiceException = null;
             notFoundException = null;
@@ -4906,8 +4819,6 @@ public class SDK {
             terminalRoutingStrategyException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5003,7 +4914,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeInstancesResponse res = new org.openapis.openapi.models.operations.DescribeInstancesResponse() {{
+        org.openapis.openapi.models.operations.DescribeInstancesResponse res = new org.openapis.openapi.models.operations.DescribeInstancesResponse(contentType, httpRes.statusCode()) {{
             describeInstancesOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
@@ -5011,8 +4922,6 @@ public class SDK {
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5095,14 +5004,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeMatchmakingResponse res = new org.openapis.openapi.models.operations.DescribeMatchmakingResponse() {{
+        org.openapis.openapi.models.operations.DescribeMatchmakingResponse res = new org.openapis.openapi.models.operations.DescribeMatchmakingResponse(contentType, httpRes.statusCode()) {{
             describeMatchmakingOutput = null;
             invalidRequestException = null;
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5177,14 +5084,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeMatchmakingConfigurationsResponse res = new org.openapis.openapi.models.operations.DescribeMatchmakingConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.DescribeMatchmakingConfigurationsResponse res = new org.openapis.openapi.models.operations.DescribeMatchmakingConfigurationsResponse(contentType, httpRes.statusCode()) {{
             describeMatchmakingConfigurationsOutput = null;
             invalidRequestException = null;
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5259,15 +5164,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeMatchmakingRuleSetsResponse res = new org.openapis.openapi.models.operations.DescribeMatchmakingRuleSetsResponse() {{
+        org.openapis.openapi.models.operations.DescribeMatchmakingRuleSetsResponse res = new org.openapis.openapi.models.operations.DescribeMatchmakingRuleSetsResponse(contentType, httpRes.statusCode()) {{
             describeMatchmakingRuleSetsOutput = null;
             invalidRequestException = null;
             internalServiceException = null;
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5349,15 +5252,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribePlayerSessionsResponse res = new org.openapis.openapi.models.operations.DescribePlayerSessionsResponse() {{
+        org.openapis.openapi.models.operations.DescribePlayerSessionsResponse res = new org.openapis.openapi.models.operations.DescribePlayerSessionsResponse(contentType, httpRes.statusCode()) {{
             describePlayerSessionsOutput = null;
             internalServiceException = null;
             notFoundException = null;
             invalidRequestException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5400,7 +5301,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves a fleet's runtime configuration settings. The runtime configuration tells GameLift which server processes to run (and how) on each instance in the fleet.&lt;/p&gt; &lt;p&gt;To get the runtime configuration that is currently in forces for a fleet, provide the fleet ID. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;RuntimeConfiguration&lt;/code&gt; object is returned for the requested fleet. If the requested fleet has been deleted, the result set is empty.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html"&gt;Running multiple processes on a fleet&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves a fleet's runtime configuration settings. The runtime configuration tells Amazon GameLift which server processes to run (and how) on each instance in the fleet.&lt;/p&gt; &lt;p&gt;To get the runtime configuration that is currently in forces for a fleet, provide the fleet ID. &lt;/p&gt; &lt;p&gt;If successful, a &lt;code&gt;RuntimeConfiguration&lt;/code&gt; object is returned for the requested fleet. If the requested fleet has been deleted, the result set is empty.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html"&gt;Running multiple processes on a fleet&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5433,15 +5334,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRuntimeConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeRuntimeConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DescribeRuntimeConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeRuntimeConfigurationResponse(contentType, httpRes.statusCode()) {{
             describeRuntimeConfigurationOutput = null;
             unauthorizedException = null;
             notFoundException = null;
             internalServiceException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5523,7 +5422,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeScalingPoliciesResponse res = new org.openapis.openapi.models.operations.DescribeScalingPoliciesResponse() {{
+        org.openapis.openapi.models.operations.DescribeScalingPoliciesResponse res = new org.openapis.openapi.models.operations.DescribeScalingPoliciesResponse(contentType, httpRes.statusCode()) {{
             describeScalingPoliciesOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -5531,8 +5430,6 @@ public class SDK {
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5615,15 +5512,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeScriptResponse res = new org.openapis.openapi.models.operations.DescribeScriptResponse() {{
+        org.openapis.openapi.models.operations.DescribeScriptResponse res = new org.openapis.openapi.models.operations.DescribeScriptResponse(contentType, httpRes.statusCode()) {{
             describeScriptOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             internalServiceException = null;
             notFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5699,14 +5594,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVpcPeeringAuthorizationsResponse res = new org.openapis.openapi.models.operations.DescribeVpcPeeringAuthorizationsResponse() {{
+        org.openapis.openapi.models.operations.DescribeVpcPeeringAuthorizationsResponse res = new org.openapis.openapi.models.operations.DescribeVpcPeeringAuthorizationsResponse(contentType, httpRes.statusCode()) {{
             describeVpcPeeringAuthorizationsOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5775,15 +5668,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVpcPeeringConnectionsResponse res = new org.openapis.openapi.models.operations.DescribeVpcPeeringConnectionsResponse() {{
+        org.openapis.openapi.models.operations.DescribeVpcPeeringConnectionsResponse res = new org.openapis.openapi.models.operations.DescribeVpcPeeringConnectionsResponse(contentType, httpRes.statusCode()) {{
             describeVpcPeeringConnectionsOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5826,7 +5717,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Requests remote access to a fleet instance. Remote access is useful for debugging, gathering benchmarking data, or observing activity in real time. &lt;/p&gt; &lt;p&gt;To remotely access an instance, you need credentials that match the operating system of the instance. For a Windows instance, GameLift returns a user name and password as strings for use with a Windows Remote Desktop client. For a Linux instance, GameLift returns a user name and RSA private key, also as strings, for use with an SSH client. The private key must be saved in the proper format to a &lt;code&gt;.pem&lt;/code&gt; file before using. If you're making this request using the CLI, saving the secret can be handled as part of the &lt;code&gt;GetInstanceAccess&lt;/code&gt; request, as shown in one of the examples for this operation. &lt;/p&gt; &lt;p&gt;To request access to a specific instance, specify the IDs of both the instance and the fleet it belongs to.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-remote-access.html"&gt;Remotely Access Fleet Instances&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-debug.html"&gt;Debug Fleet Issues&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Requests remote access to a fleet instance. Remote access is useful for debugging, gathering benchmarking data, or observing activity in real time. &lt;/p&gt; &lt;p&gt;To remotely access an instance, you need credentials that match the operating system of the instance. For a Windows instance, Amazon GameLift returns a user name and password as strings for use with a Windows Remote Desktop client. For a Linux instance, Amazon GameLift returns a user name and RSA private key, also as strings, for use with an SSH client. The private key must be saved in the proper format to a &lt;code&gt;.pem&lt;/code&gt; file before using. If you're making this request using the CLI, saving the secret can be handled as part of the &lt;code&gt;GetInstanceAccess&lt;/code&gt; request, as shown in one of the examples for this operation. &lt;/p&gt; &lt;p&gt;To request access to a specific instance, specify the IDs of both the instance and the fleet it belongs to.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-remote-access.html"&gt;Remotely Access Fleet Instances&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-debug.html"&gt;Debug Fleet Issues&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5859,15 +5750,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetComputeAccessResponse res = new org.openapis.openapi.models.operations.GetComputeAccessResponse() {{
+        org.openapis.openapi.models.operations.GetComputeAccessResponse res = new org.openapis.openapi.models.operations.GetComputeAccessResponse(contentType, httpRes.statusCode()) {{
             getComputeAccessOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5910,7 +5799,7 @@ public class SDK {
     }
 
     /**
-     * Requests an authorization token from GameLift. The authorization token is used by your game server to authenticate with GameLift. Each authentication token has an expiration token. To continue using the compute resource to host your game server, regularly retrieve a new authorization token.
+     * Requests an authentication token from Amazon GameLift. The authentication token is used by your game server to authenticate with Amazon GameLift. Each authentication token has an expiration time. To continue using the compute resource to host your game server, regularly retrieve a new authorization token.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5943,15 +5832,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetComputeAuthTokenResponse res = new org.openapis.openapi.models.operations.GetComputeAuthTokenResponse() {{
+        org.openapis.openapi.models.operations.GetComputeAuthTokenResponse res = new org.openapis.openapi.models.operations.GetComputeAuthTokenResponse(contentType, httpRes.statusCode()) {{
             getComputeAuthTokenOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5994,7 +5881,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves the location of stored game session logs for a specified game session. When a game session is terminated, GameLift automatically stores the logs in Amazon S3 and retains them for 14 days. Use this URL to download the logs.&lt;/p&gt; &lt;note&gt; &lt;p&gt;See the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_gamelift"&gt;Amazon Web Services Service Limits&lt;/a&gt; page for maximum log file sizes. Log files that exceed this limit are not saved.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves the location of stored game session logs for a specified game session. When a game session is terminated, Amazon GameLift automatically stores the logs in Amazon S3 and retains them for 14 days. Use this URL to download the logs.&lt;/p&gt; &lt;note&gt; &lt;p&gt;See the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_gamelift"&gt;Amazon Web Services Service Limits&lt;/a&gt; page for maximum log file sizes. Log files that exceed this limit are not saved.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6027,15 +5914,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGameSessionLogUrlResponse res = new org.openapis.openapi.models.operations.GetGameSessionLogUrlResponse() {{
+        org.openapis.openapi.models.operations.GetGameSessionLogUrlResponse res = new org.openapis.openapi.models.operations.GetGameSessionLogUrlResponse(contentType, httpRes.statusCode()) {{
             getGameSessionLogUrlOutput = null;
             internalServiceException = null;
             notFoundException = null;
             unauthorizedException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6078,7 +5963,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Requests remote access to a fleet instance. Remote access is useful for debugging, gathering benchmarking data, or observing activity in real time. &lt;/p&gt; &lt;p&gt;To remotely access an instance, you need credentials that match the operating system of the instance. For a Windows instance, GameLift returns a user name and password as strings for use with a Windows Remote Desktop client. For a Linux instance, GameLift returns a user name and RSA private key, also as strings, for use with an SSH client. The private key must be saved in the proper format to a &lt;code&gt;.pem&lt;/code&gt; file before using. If you're making this request using the CLI, saving the secret can be handled as part of the &lt;code&gt;GetInstanceAccess&lt;/code&gt; request, as shown in one of the examples for this operation. &lt;/p&gt; &lt;p&gt;To request access to a specific instance, specify the IDs of both the instance and the fleet it belongs to. You can retrieve a fleet's instance IDs by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeInstances.html"&gt;DescribeInstances&lt;/a&gt;. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-remote-access.html"&gt;Remotely Access Fleet Instances&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-debug.html"&gt;Debug Fleet Issues&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Requests remote access to a fleet instance. Remote access is useful for debugging, gathering benchmarking data, or observing activity in real time. &lt;/p&gt; &lt;p&gt;To remotely access an instance, you need credentials that match the operating system of the instance. For a Windows instance, Amazon GameLift returns a user name and password as strings for use with a Windows Remote Desktop client. For a Linux instance, Amazon GameLift returns a user name and RSA private key, also as strings, for use with an SSH client. The private key must be saved in the proper format to a &lt;code&gt;.pem&lt;/code&gt; file before using. If you're making this request using the CLI, saving the secret can be handled as part of the &lt;code&gt;GetInstanceAccess&lt;/code&gt; request, as shown in one of the examples for this operation. &lt;/p&gt; &lt;p&gt;To request access to a specific instance, specify the IDs of both the instance and the fleet it belongs to. You can retrieve a fleet's instance IDs by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeInstances.html"&gt;DescribeInstances&lt;/a&gt;. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-remote-access.html"&gt;Remotely Access Fleet Instances&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-debug.html"&gt;Debug Fleet Issues&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6111,15 +5996,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInstanceAccessResponse res = new org.openapis.openapi.models.operations.GetInstanceAccessResponse() {{
+        org.openapis.openapi.models.operations.GetInstanceAccessResponse res = new org.openapis.openapi.models.operations.GetInstanceAccessResponse(contentType, httpRes.statusCode()) {{
             getInstanceAccessOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6201,14 +6084,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAliasesResponse res = new org.openapis.openapi.models.operations.ListAliasesResponse() {{
+        org.openapis.openapi.models.operations.ListAliasesResponse res = new org.openapis.openapi.models.operations.ListAliasesResponse(contentType, httpRes.statusCode()) {{
             listAliasesOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6283,14 +6164,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListBuildsResponse res = new org.openapis.openapi.models.operations.ListBuildsResponse() {{
+        org.openapis.openapi.models.operations.ListBuildsResponse res = new org.openapis.openapi.models.operations.ListBuildsResponse(contentType, httpRes.statusCode()) {{
             listBuildsOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6365,14 +6244,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListComputeResponse res = new org.openapis.openapi.models.operations.ListComputeResponse() {{
+        org.openapis.openapi.models.operations.ListComputeResponse res = new org.openapis.openapi.models.operations.ListComputeResponse(contentType, httpRes.statusCode()) {{
             listComputeOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6408,7 +6285,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves a collection of fleet resources in an Amazon Web Services Region. You can call this operation to get fleets in a previously selected default Region (see &lt;a href="https://docs.aws.amazon.com/credref/latest/refdocs/setting-global-region.html"&gt;https://docs.aws.amazon.com/credref/latest/refdocs/setting-global-region.html&lt;/a&gt;or specify a Region in your request. You can filter the result set to find only those fleets that are deployed with a specific build or script. For fleets that have multiple locations, this operation retrieves fleets based on their home Region only.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get a list of all fleets in a Region, don't provide a build or script identifier. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get a list of all fleets where a specific custom game build is deployed, provide the build ID.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get a list of all Realtime Servers fleets with a specific configuration script, provide the script ID. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a list of fleet IDs that match the request parameters is returned. A NextToken value is also returned if there are more result pages to retrieve.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Fleet resources are not listed in a particular order.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves a collection of fleet resources in an Amazon Web Services Region. You can call this operation to get fleets in a previously selected default Region (see &lt;a href="https://docs.aws.amazon.com/credref/latest/refdocs/setting-global-region.html"&gt;https://docs.aws.amazon.com/credref/latest/refdocs/setting-global-region.html&lt;/a&gt;or specify a Region in your request. You can filter the result set to find only those fleets that are deployed with a specific build or script. For fleets that have multiple locations, this operation retrieves fleets based on their home Region only.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To get a list of all fleets in a Region, don't provide a build or script identifier. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get a list of all fleets where a specific custom game build is deployed, provide the build ID.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To get a list of all Realtime Servers fleets with a specific configuration script, provide the script ID. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Use the pagination parameters to retrieve results as a set of sequential pages. &lt;/p&gt; &lt;p&gt;If successful, a list of fleet IDs that match the request parameters is returned. A NextToken value is also returned if there are more result pages to retrieve.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Fleet resources are not listed in a particular order.&lt;/p&gt; &lt;/note&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6447,15 +6324,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFleetsResponse res = new org.openapis.openapi.models.operations.ListFleetsResponse() {{
+        org.openapis.openapi.models.operations.ListFleetsResponse res = new org.openapis.openapi.models.operations.ListFleetsResponse(contentType, httpRes.statusCode()) {{
             listFleetsOutput = null;
             internalServiceException = null;
             notFoundException = null;
             invalidRequestException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6537,14 +6412,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGameServerGroupsResponse res = new org.openapis.openapi.models.operations.ListGameServerGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListGameServerGroupsResponse res = new org.openapis.openapi.models.operations.ListGameServerGroupsResponse(contentType, httpRes.statusCode()) {{
             listGameServerGroupsOutput = null;
             invalidRequestException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6580,7 +6453,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves information on all game servers that are currently active in a specified game server group. You can opt to sort the list by game server age. Use the pagination parameters to retrieve results in a set of sequential segments. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Retrieves information on all game servers that are currently active in a specified game server group. You can opt to sort the list by game server age. Use the pagination parameters to retrieve results in a set of sequential segments. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6619,14 +6492,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGameServersResponse res = new org.openapis.openapi.models.operations.ListGameServersResponse() {{
+        org.openapis.openapi.models.operations.ListGameServersResponse res = new org.openapis.openapi.models.operations.ListGameServersResponse(contentType, httpRes.statusCode()) {{
             listGameServersOutput = null;
             invalidRequestException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6701,14 +6572,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLocationsResponse res = new org.openapis.openapi.models.operations.ListLocationsResponse() {{
+        org.openapis.openapi.models.operations.ListLocationsResponse res = new org.openapis.openapi.models.operations.ListLocationsResponse(contentType, httpRes.statusCode()) {{
             listLocationsOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6783,14 +6652,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListScriptsResponse res = new org.openapis.openapi.models.operations.ListScriptsResponse() {{
+        org.openapis.openapi.models.operations.ListScriptsResponse res = new org.openapis.openapi.models.operations.ListScriptsResponse(contentType, httpRes.statusCode()) {{
             listScriptsOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6826,7 +6693,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Retrieves all tags that are assigned to a GameLift resource. Resource tags are used to organize Amazon Web Services resources for a range of purposes. This operation handles the permissions necessary to manage tags for the following GameLift resource types:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Build&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Script&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Fleet&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alias&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;GameSessionQueue&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;MatchmakingConfiguration&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;MatchmakingRuleSet&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To list tags for a resource, specify the unique ARN value for the resource.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Retrieves all tags assigned to a Amazon GameLift resource. Use resource tags to organize Amazon Web Services resources for a range of purposes. This operation handles the permissions necessary to manage tags for Amazon GameLift resources that support tagging.&lt;/p&gt; &lt;p&gt;To list tags for a resource, specify the unique ARN value for the resource.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -6859,15 +6726,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             notFoundException = null;
             invalidRequestException = null;
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6943,15 +6808,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutScalingPolicyResponse res = new org.openapis.openapi.models.operations.PutScalingPolicyResponse() {{
+        org.openapis.openapi.models.operations.PutScalingPolicyResponse res = new org.openapis.openapi.models.operations.PutScalingPolicyResponse(contentType, httpRes.statusCode()) {{
             putScalingPolicyOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
             unauthorizedException = null;
             notFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6994,7 +6857,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Registers your compute resources in a fleet you previously created. After you register a compute to your fleet, you can monitor and manage your compute using GameLift. The operation returns the compute resource containing SDK endpoint you can use to connect your game server to GameLift.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-anywhere.html"&gt;Create an Anywhere fleet&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-testing.html"&gt;Test your integration&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Registers your compute resources in a fleet you previously created. After you register a compute to your fleet, you can monitor and manage your compute using Amazon GameLift. The operation returns the compute resource containing SDK endpoint you can use to connect your game server to Amazon GameLift.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-anywhere.html"&gt;Create an Anywhere fleet&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/integration-testing.html"&gt;Test your integration&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7027,15 +6890,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterComputeResponse res = new org.openapis.openapi.models.operations.RegisterComputeResponse() {{
+        org.openapis.openapi.models.operations.RegisterComputeResponse res = new org.openapis.openapi.models.operations.RegisterComputeResponse(contentType, httpRes.statusCode()) {{
             registerComputeOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             conflictException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7078,7 +6939,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Creates a new game server resource and notifies GameLift FleetIQ that the game server is ready to host gameplay and players. This operation is called by a game server process that is running on an instance in a game server group. Registering game servers enables GameLift FleetIQ to track available game servers and enables game clients and services to claim a game server for a new game session. &lt;/p&gt; &lt;p&gt;To register a game server, identify the game server group and instance where the game server is running, and provide a unique identifier for the game server. You can also include connection and game server data.&lt;/p&gt; &lt;p&gt;Once a game server is successfully registered, it is put in status &lt;code&gt;AVAILABLE&lt;/code&gt;. A request to register a game server may fail if the instance it is running on is in the process of shutting down as part of instance balancing or scale-down activity. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Creates a new game server resource and notifies Amazon GameLift FleetIQ that the game server is ready to host gameplay and players. This operation is called by a game server process that is running on an instance in a game server group. Registering game servers enables Amazon GameLift FleetIQ to track available game servers and enables game clients and services to claim a game server for a new game session. &lt;/p&gt; &lt;p&gt;To register a game server, identify the game server group and instance where the game server is running, and provide a unique identifier for the game server. You can also include connection and game server data.&lt;/p&gt; &lt;p&gt;Once a game server is successfully registered, it is put in status &lt;code&gt;AVAILABLE&lt;/code&gt;. A request to register a game server may fail if the instance it is running on is in the process of shutting down as part of instance balancing or scale-down activity. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7111,7 +6972,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterGameServerResponse res = new org.openapis.openapi.models.operations.RegisterGameServerResponse() {{
+        org.openapis.openapi.models.operations.RegisterGameServerResponse res = new org.openapis.openapi.models.operations.RegisterGameServerResponse(contentType, httpRes.statusCode()) {{
             registerGameServerOutput = null;
             invalidRequestException = null;
             conflictException = null;
@@ -7119,8 +6980,6 @@ public class SDK {
             limitExceededException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7203,15 +7062,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RequestUploadCredentialsResponse res = new org.openapis.openapi.models.operations.RequestUploadCredentialsResponse() {{
+        org.openapis.openapi.models.operations.RequestUploadCredentialsResponse res = new org.openapis.openapi.models.operations.RequestUploadCredentialsResponse(contentType, httpRes.statusCode()) {{
             requestUploadCredentialsOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7287,7 +7144,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResolveAliasResponse res = new org.openapis.openapi.models.operations.ResolveAliasResponse() {{
+        org.openapis.openapi.models.operations.ResolveAliasResponse res = new org.openapis.openapi.models.operations.ResolveAliasResponse(contentType, httpRes.statusCode()) {{
             resolveAliasOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
@@ -7295,8 +7152,6 @@ public class SDK {
             terminalRoutingStrategyException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7346,7 +7201,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Reinstates activity on a game server group after it has been suspended. A game server group might be suspended by the &lt;a href="gamelift/latest/apireference/API_SuspendGameServerGroup.html"&gt;SuspendGameServerGroup&lt;/a&gt; operation, or it might be suspended involuntarily due to a configuration problem. In the second case, you can manually resume activity on the group once the configuration problem has been resolved. Refer to the game server group status and status reason for more information on why group activity is suspended.&lt;/p&gt; &lt;p&gt;To resume activity, specify a game server group ARN and the type of activity to be resumed. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned showing that the resumed activity is no longer listed in &lt;code&gt;SuspendedActions&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Reinstates activity on a game server group after it has been suspended. A game server group might be suspended by the &lt;a href="gamelift/latest/apireference/API_SuspendGameServerGroup.html"&gt;SuspendGameServerGroup&lt;/a&gt; operation, or it might be suspended involuntarily due to a configuration problem. In the second case, you can manually resume activity on the group once the configuration problem has been resolved. Refer to the game server group status and status reason for more information on why group activity is suspended.&lt;/p&gt; &lt;p&gt;To resume activity, specify a game server group ARN and the type of activity to be resumed. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned showing that the resumed activity is no longer listed in &lt;code&gt;SuspendedActions&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7379,15 +7234,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResumeGameServerGroupResponse res = new org.openapis.openapi.models.operations.ResumeGameServerGroupResponse() {{
+        org.openapis.openapi.models.operations.ResumeGameServerGroupResponse res = new org.openapis.openapi.models.operations.ResumeGameServerGroupResponse(contentType, httpRes.statusCode()) {{
             resumeGameServerGroupOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7469,7 +7322,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchGameSessionsResponse res = new org.openapis.openapi.models.operations.SearchGameSessionsResponse() {{
+        org.openapis.openapi.models.operations.SearchGameSessionsResponse res = new org.openapis.openapi.models.operations.SearchGameSessionsResponse(contentType, httpRes.statusCode()) {{
             searchGameSessionsOutput = null;
             internalServiceException = null;
             notFoundException = null;
@@ -7478,8 +7331,6 @@ public class SDK {
             terminalRoutingStrategyException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7536,7 +7387,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Resumes certain types of activity on fleet instances that were suspended with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StopFleetActions.html"&gt;StopFleetActions&lt;/a&gt;. For multi-location fleets, fleet actions are managed separately for each location. Currently, this operation is used to restart a fleet's auto-scaling activity.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To restart actions on instances in the fleet's home Region, provide a fleet ID and the type of actions to resume. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To restart actions on instances in one of the fleet's remote locations, provide a fleet ID, a location name, and the type of actions to resume. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, GameLift once again initiates scaling events as triggered by the fleet's scaling policies. If actions on the fleet location were never stopped, this operation will have no effect.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Resumes certain types of activity on fleet instances that were suspended with &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_StopFleetActions.html"&gt;StopFleetActions&lt;/a&gt;. For multi-location fleets, fleet actions are managed separately for each location. Currently, this operation is used to restart a fleet's auto-scaling activity.&lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To restart actions on instances in the fleet's home Region, provide a fleet ID and the type of actions to resume. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To restart actions on instances in one of the fleet's remote locations, provide a fleet ID, a location name, and the type of actions to resume. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, Amazon GameLift once again initiates scaling events as triggered by the fleet's scaling policies. If actions on the fleet location were never stopped, this operation will have no effect.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7569,7 +7420,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartFleetActionsResponse res = new org.openapis.openapi.models.operations.StartFleetActionsResponse() {{
+        org.openapis.openapi.models.operations.StartFleetActionsResponse res = new org.openapis.openapi.models.operations.StartFleetActionsResponse(contentType, httpRes.statusCode()) {{
             startFleetActionsOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -7577,8 +7428,6 @@ public class SDK {
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7661,15 +7510,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartGameSessionPlacementResponse res = new org.openapis.openapi.models.operations.StartGameSessionPlacementResponse() {{
+        org.openapis.openapi.models.operations.StartGameSessionPlacementResponse res = new org.openapis.openapi.models.operations.StartGameSessionPlacementResponse(contentType, httpRes.statusCode()) {{
             startGameSessionPlacementOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7712,7 +7559,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Finds new players to fill open slots in currently running game sessions. The backfill match process is essentially identical to the process of forming new matches. Backfill requests use the same matchmaker that was used to make the original match, and they provide matchmaking data for all players currently in the game session. FlexMatch uses this information to select new players so that backfilled match continues to meet the original match requirements. &lt;/p&gt; &lt;p&gt;When using FlexMatch with GameLift managed hosting, you can request a backfill match from a client service by calling this operation with a &lt;code&gt;GameSessions&lt;/code&gt; ID. You also have the option of making backfill requests directly from your game server. In response to a request, FlexMatch creates player sessions for the new players, updates the &lt;code&gt;GameSession&lt;/code&gt; resource, and sends updated matchmaking data to the game server. You can request a backfill match at any point after a game session is started. Each game session can have only one active backfill request at a time; a subsequent request automatically replaces the earlier request.&lt;/p&gt; &lt;p&gt;When using FlexMatch as a standalone component, request a backfill match by calling this operation without a game session identifier. As with newly formed matches, matchmaking results are returned in a matchmaking event so that your game can update the game session that is being backfilled.&lt;/p&gt; &lt;p&gt;To request a backfill match, specify a unique ticket ID, the original matchmaking configuration, and matchmaking data for all current players in the game session being backfilled. Optionally, specify the &lt;code&gt;GameSession&lt;/code&gt; ARN. If successful, a match backfill ticket is created and returned with status set to QUEUED. Track the status of backfill tickets using the same method for tracking tickets for new matches.&lt;/p&gt; &lt;p&gt;Only game sessions created by FlexMatch are supported for match backfill.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-backfill.html"&gt; Backfill existing games with FlexMatch&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html"&gt; Matchmaking events&lt;/a&gt; (reference)&lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/gamelift-match.html"&gt; How GameLift FlexMatch works&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Finds new players to fill open slots in currently running game sessions. The backfill match process is essentially identical to the process of forming new matches. Backfill requests use the same matchmaker that was used to make the original match, and they provide matchmaking data for all players currently in the game session. FlexMatch uses this information to select new players so that backfilled match continues to meet the original match requirements. &lt;/p&gt; &lt;p&gt;When using FlexMatch with Amazon GameLift managed hosting, you can request a backfill match from a client service by calling this operation with a &lt;code&gt;GameSessions&lt;/code&gt; ID. You also have the option of making backfill requests directly from your game server. In response to a request, FlexMatch creates player sessions for the new players, updates the &lt;code&gt;GameSession&lt;/code&gt; resource, and sends updated matchmaking data to the game server. You can request a backfill match at any point after a game session is started. Each game session can have only one active backfill request at a time; a subsequent request automatically replaces the earlier request.&lt;/p&gt; &lt;p&gt;When using FlexMatch as a standalone component, request a backfill match by calling this operation without a game session identifier. As with newly formed matches, matchmaking results are returned in a matchmaking event so that your game can update the game session that is being backfilled.&lt;/p&gt; &lt;p&gt;To request a backfill match, specify a unique ticket ID, the original matchmaking configuration, and matchmaking data for all current players in the game session being backfilled. Optionally, specify the &lt;code&gt;GameSession&lt;/code&gt; ARN. If successful, a match backfill ticket is created and returned with status set to QUEUED. Track the status of backfill tickets using the same method for tracking tickets for new matches.&lt;/p&gt; &lt;p&gt;Only game sessions created by FlexMatch are supported for match backfill.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-backfill.html"&gt; Backfill existing games with FlexMatch&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html"&gt; Matchmaking events&lt;/a&gt; (reference)&lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/gamelift-match.html"&gt; How Amazon GameLift FlexMatch works&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7745,15 +7592,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartMatchBackfillResponse res = new org.openapis.openapi.models.operations.StartMatchBackfillResponse() {{
+        org.openapis.openapi.models.operations.StartMatchBackfillResponse res = new org.openapis.openapi.models.operations.StartMatchBackfillResponse(contentType, httpRes.statusCode()) {{
             startMatchBackfillOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7796,7 +7641,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Uses FlexMatch to create a game match for a group of players based on custom matchmaking rules. With games that use GameLift managed hosting, this operation also triggers GameLift to find hosting resources and start a new game session for the new match. Each matchmaking request includes information on one or more players and specifies the FlexMatch matchmaker to use. When a request is for multiple players, FlexMatch attempts to build a match that includes all players in the request, placing them in the same team and finding additional players as needed to fill the match. &lt;/p&gt; &lt;p&gt;To start matchmaking, provide a unique ticket ID, specify a matchmaking configuration, and include the players to be matched. You must also include any player attributes that are required by the matchmaking configuration's rule set. If successful, a matchmaking ticket is returned with status set to &lt;code&gt;QUEUED&lt;/code&gt;. &lt;/p&gt; &lt;p&gt;Track matchmaking events to respond as needed and acquire game session connection information for successfully completed matches. Ticket status updates are tracked using event notification through Amazon Simple Notification Service, which is defined in the matchmaking configuration.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-client.html"&gt; Add FlexMatch to a game client&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-notification.html"&gt; Set Up FlexMatch event notification&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/gamelift-match.html"&gt; How GameLift FlexMatch works&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Uses FlexMatch to create a game match for a group of players based on custom matchmaking rules. With games that use Amazon GameLift managed hosting, this operation also triggers Amazon GameLift to find hosting resources and start a new game session for the new match. Each matchmaking request includes information on one or more players and specifies the FlexMatch matchmaker to use. When a request is for multiple players, FlexMatch attempts to build a match that includes all players in the request, placing them in the same team and finding additional players as needed to fill the match. &lt;/p&gt; &lt;p&gt;To start matchmaking, provide a unique ticket ID, specify a matchmaking configuration, and include the players to be matched. You must also include any player attributes that are required by the matchmaking configuration's rule set. If successful, a matchmaking ticket is returned with status set to &lt;code&gt;QUEUED&lt;/code&gt;. &lt;/p&gt; &lt;p&gt;Track matchmaking events to respond as needed and acquire game session connection information for successfully completed matches. Ticket status updates are tracked using event notification through Amazon Simple Notification Service, which is defined in the matchmaking configuration.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-client.html"&gt; Add FlexMatch to a game client&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-notification.html"&gt; Set Up FlexMatch event notification&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/gamelift-match.html"&gt; How Amazon GameLift FlexMatch works&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7829,15 +7674,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartMatchmakingResponse res = new org.openapis.openapi.models.operations.StartMatchmakingResponse() {{
+        org.openapis.openapi.models.operations.StartMatchmakingResponse res = new org.openapis.openapi.models.operations.StartMatchmakingResponse(contentType, httpRes.statusCode()) {{
             startMatchmakingOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -7880,7 +7723,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Suspends certain types of activity in a fleet location. Currently, this operation is used to stop auto-scaling activity. For multi-location fleets, fleet actions are managed separately for each location. &lt;/p&gt; &lt;p&gt;Stopping fleet actions has several potential purposes. It allows you to temporarily stop auto-scaling activity but retain your scaling policies for use in the future. For multi-location fleets, you can set up fleet-wide auto-scaling, and then opt out of it for certain locations. &lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To stop actions on instances in the fleet's home Region, provide a fleet ID and the type of actions to suspend. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To stop actions on instances in one of the fleet's remote locations, provide a fleet ID, a location name, and the type of actions to suspend. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, GameLift no longer initiates scaling events except in response to manual changes using &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html"&gt;UpdateFleetCapacity&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift Fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Suspends certain types of activity in a fleet location. Currently, this operation is used to stop auto-scaling activity. For multi-location fleets, fleet actions are managed separately for each location. &lt;/p&gt; &lt;p&gt;Stopping fleet actions has several potential purposes. It allows you to temporarily stop auto-scaling activity but retain your scaling policies for use in the future. For multi-location fleets, you can set up fleet-wide auto-scaling, and then opt out of it for certain locations. &lt;/p&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To stop actions on instances in the fleet's home Region, provide a fleet ID and the type of actions to suspend. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To stop actions on instances in one of the fleet's remote locations, provide a fleet ID, a location name, and the type of actions to suspend. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, Amazon GameLift no longer initiates scaling events except in response to manual changes using &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html"&gt;UpdateFleetCapacity&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift Fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -7913,7 +7756,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopFleetActionsResponse res = new org.openapis.openapi.models.operations.StopFleetActionsResponse() {{
+        org.openapis.openapi.models.operations.StopFleetActionsResponse res = new org.openapis.openapi.models.operations.StopFleetActionsResponse(contentType, httpRes.statusCode()) {{
             stopFleetActionsOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
@@ -7921,8 +7764,6 @@ public class SDK {
             notFoundException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8005,15 +7846,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopGameSessionPlacementResponse res = new org.openapis.openapi.models.operations.StopGameSessionPlacementResponse() {{
+        org.openapis.openapi.models.operations.StopGameSessionPlacementResponse res = new org.openapis.openapi.models.operations.StopGameSessionPlacementResponse(contentType, httpRes.statusCode()) {{
             stopGameSessionPlacementOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8089,15 +7928,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopMatchmakingResponse res = new org.openapis.openapi.models.operations.StopMatchmakingResponse() {{
+        org.openapis.openapi.models.operations.StopMatchmakingResponse res = new org.openapis.openapi.models.operations.StopMatchmakingResponse(contentType, httpRes.statusCode()) {{
             stopMatchmakingOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8140,7 +7977,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Temporarily stops activity on a game server group without terminating instances or the game server group. You can restart activity by calling &lt;a href="gamelift/latest/apireference/API_ResumeGameServerGroup.html"&gt;ResumeGameServerGroup&lt;/a&gt;. You can suspend the following activity:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Instance type replacement&lt;/b&gt; - This activity evaluates the current game hosting viability of all Spot instance types that are defined for the game server group. It updates the Auto Scaling group to remove nonviable Spot Instance types, which have a higher chance of game server interruptions. It then balances capacity across the remaining viable Spot Instance types. When this activity is suspended, the Auto Scaling group continues with its current balance, regardless of viability. Instance protection, utilization metrics, and capacity scaling activities continue to be active. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To suspend activity, specify a game server group ARN and the type of activity to be suspended. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned showing that the activity is listed in &lt;code&gt;SuspendedActions&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Temporarily stops activity on a game server group without terminating instances or the game server group. You can restart activity by calling &lt;a href="gamelift/latest/apireference/API_ResumeGameServerGroup.html"&gt;ResumeGameServerGroup&lt;/a&gt;. You can suspend the following activity:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Instance type replacement&lt;/b&gt; - This activity evaluates the current game hosting viability of all Spot instance types that are defined for the game server group. It updates the Auto Scaling group to remove nonviable Spot Instance types, which have a higher chance of game server interruptions. It then balances capacity across the remaining viable Spot Instance types. When this activity is suspended, the Auto Scaling group continues with its current balance, regardless of viability. Instance protection, utilization metrics, and capacity scaling activities continue to be active. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To suspend activity, specify a game server group ARN and the type of activity to be suspended. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned showing that the activity is listed in &lt;code&gt;SuspendedActions&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -8173,15 +8010,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SuspendGameServerGroupResponse res = new org.openapis.openapi.models.operations.SuspendGameServerGroupResponse() {{
+        org.openapis.openapi.models.operations.SuspendGameServerGroupResponse res = new org.openapis.openapi.models.operations.SuspendGameServerGroupResponse(contentType, httpRes.statusCode()) {{
             suspendGameServerGroupOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8224,7 +8059,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; Assigns a tag to a GameLift resource. Amazon Web Services resource tags provide an additional management tool set. You can use tags to organize resources, create IAM permissions policies to manage access to groups of resources, customize Amazon Web Services cost breakdowns, etc. This operation handles the permissions necessary to manage tags for the following GameLift resource types:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Build&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Script&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Fleet&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alias&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;GameSessionQueue&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;MatchmakingConfiguration&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;MatchmakingRuleSet&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To add a tag to a resource, specify the unique ARN value for the resource and provide a tag list containing one or more tags. The operation succeeds even if the list includes tags that are already assigned to the specified resource. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Assigns a tag to an Amazon GameLift resource. You can use tags to organize resources, create IAM permissions policies to manage access to groups of resources, customize Amazon Web Services cost breakdowns, and more. This operation handles the permissions necessary to manage tags for Amazon GameLift resources that support tagging.&lt;/p&gt; &lt;p&gt;To add a tag to a resource, specify the unique ARN value for the resource and provide a tag list containing one or more tags. The operation succeeds even if the list includes tags that are already assigned to the resource. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -8257,15 +8092,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             notFoundException = null;
             invalidRequestException = null;
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8308,7 +8141,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Removes a tag that is assigned to a GameLift resource. Resource tags are used to organize Amazon Web Services resources for a range of purposes. This operation handles the permissions necessary to manage tags for the following GameLift resource types:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Build&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Script&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Fleet&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alias&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;GameSessionQueue&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;MatchmakingConfiguration&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;MatchmakingRuleSet&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To remove a tag from a resource, specify the unique ARN value for the resource and provide a string list containing one or more tags to be removed. This operation succeeds even if the list includes tags that are not currently assigned to the specified resource.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Removes a tag assigned to a Amazon GameLift resource. You can use resource tags to organize Amazon Web Services resources for a range of purposes. This operation handles the permissions necessary to manage tags for Amazon GameLift resources that support tagging.&lt;/p&gt; &lt;p&gt;To remove a tag from a resource, specify the unique ARN value for the resource and provide a string list containing one or more tags to remove. This operation succeeds even if the list includes tags that aren't assigned to the resource.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -8341,15 +8174,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             notFoundException = null;
             invalidRequestException = null;
             taggingFailedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8425,15 +8256,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAliasResponse res = new org.openapis.openapi.models.operations.UpdateAliasResponse() {{
+        org.openapis.openapi.models.operations.UpdateAliasResponse res = new org.openapis.openapi.models.operations.UpdateAliasResponse(contentType, httpRes.statusCode()) {{
             updateAliasOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8509,15 +8338,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBuildResponse res = new org.openapis.openapi.models.operations.UpdateBuildResponse() {{
+        org.openapis.openapi.models.operations.UpdateBuildResponse res = new org.openapis.openapi.models.operations.UpdateBuildResponse(contentType, httpRes.statusCode()) {{
             updateBuildOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8560,7 +8387,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Updates a fleet's mutable attributes, including game session protection and resource creation limits.&lt;/p&gt; &lt;p&gt;To update fleet attributes, specify the fleet ID and the property values that you want to change. &lt;/p&gt; &lt;p&gt;If successful, an updated &lt;code&gt;FleetAttributes&lt;/code&gt; object is returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Updates a fleet's mutable attributes, including game session protection and resource creation limits.&lt;/p&gt; &lt;p&gt;To update fleet attributes, specify the fleet ID and the property values that you want to change. &lt;/p&gt; &lt;p&gt;If successful, an updated &lt;code&gt;FleetAttributes&lt;/code&gt; object is returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -8593,7 +8420,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFleetAttributesResponse res = new org.openapis.openapi.models.operations.UpdateFleetAttributesResponse() {{
+        org.openapis.openapi.models.operations.UpdateFleetAttributesResponse res = new org.openapis.openapi.models.operations.UpdateFleetAttributesResponse(contentType, httpRes.statusCode()) {{
             updateFleetAttributesOutput = null;
             notFoundException = null;
             conflictException = null;
@@ -8603,8 +8430,6 @@ public class SDK {
             invalidRequestException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8668,7 +8493,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Updates capacity settings for a fleet. For fleets with multiple locations, use this operation to manage capacity settings in each location individually. Fleet capacity determines the number of game sessions and players that can be hosted based on the fleet configuration. Use this operation to set the following fleet capacity properties: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Minimum/maximum size: Set hard limits on fleet capacity. GameLift cannot set the fleet's capacity to a value outside of this range, whether the capacity is changed manually or through automatic scaling. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Desired capacity: Manually set the number of Amazon EC2 instances to be maintained in a fleet location. Before changing a fleet's desired capacity, you may want to call &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeEC2InstanceLimits.html"&gt;DescribeEC2InstanceLimits&lt;/a&gt; to get the maximum capacity of the fleet's Amazon EC2 instance type. Alternatively, consider using automatic scaling to adjust capacity based on player demand.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To update capacity for a fleet's home Region, or if the fleet has no remote locations, omit the &lt;code&gt;Location&lt;/code&gt; parameter. The fleet must be in &lt;code&gt;ACTIVE&lt;/code&gt; status. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To update capacity for a fleet's remote location, include the &lt;code&gt;Location&lt;/code&gt; parameter set to the location to be updated. The location must be in &lt;code&gt;ACTIVE&lt;/code&gt; status.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, capacity settings are updated immediately. In response a change in desired capacity, GameLift initiates steps to start new instances or terminate existing instances in the requested fleet location. This continues until the location's active instance count matches the new desired instance count. You can track a fleet's current capacity by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html"&gt;DescribeFleetCapacity&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html"&gt;DescribeFleetLocationCapacity&lt;/a&gt;. If the requested desired instance count is higher than the instance type's limit, the &lt;code&gt;LimitExceeded&lt;/code&gt; exception occurs.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-manage-capacity.html"&gt;Scaling fleet capacity&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Updates capacity settings for a fleet. For fleets with multiple locations, use this operation to manage capacity settings in each location individually. Fleet capacity determines the number of game sessions and players that can be hosted based on the fleet configuration. Use this operation to set the following fleet capacity properties: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Minimum/maximum size: Set hard limits on fleet capacity. Amazon GameLift cannot set the fleet's capacity to a value outside of this range, whether the capacity is changed manually or through automatic scaling. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Desired capacity: Manually set the number of Amazon EC2 instances to be maintained in a fleet location. Before changing a fleet's desired capacity, you may want to call &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeEC2InstanceLimits.html"&gt;DescribeEC2InstanceLimits&lt;/a&gt; to get the maximum capacity of the fleet's Amazon EC2 instance type. Alternatively, consider using automatic scaling to adjust capacity based on player demand.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;This operation can be used in the following ways: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To update capacity for a fleet's home Region, or if the fleet has no remote locations, omit the &lt;code&gt;Location&lt;/code&gt; parameter. The fleet must be in &lt;code&gt;ACTIVE&lt;/code&gt; status. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To update capacity for a fleet's remote location, include the &lt;code&gt;Location&lt;/code&gt; parameter set to the location to be updated. The location must be in &lt;code&gt;ACTIVE&lt;/code&gt; status.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If successful, capacity settings are updated immediately. In response a change in desired capacity, Amazon GameLift initiates steps to start new instances or terminate existing instances in the requested fleet location. This continues until the location's active instance count matches the new desired instance count. You can track a fleet's current capacity by calling &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html"&gt;DescribeFleetCapacity&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html"&gt;DescribeFleetLocationCapacity&lt;/a&gt;. If the requested desired instance count is higher than the instance type's limit, the &lt;code&gt;LimitExceeded&lt;/code&gt; exception occurs.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-manage-capacity.html"&gt;Scaling fleet capacity&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -8701,7 +8526,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFleetCapacityResponse res = new org.openapis.openapi.models.operations.UpdateFleetCapacityResponse() {{
+        org.openapis.openapi.models.operations.UpdateFleetCapacityResponse res = new org.openapis.openapi.models.operations.UpdateFleetCapacityResponse(contentType, httpRes.statusCode()) {{
             updateFleetCapacityOutput = null;
             notFoundException = null;
             conflictException = null;
@@ -8712,8 +8537,6 @@ public class SDK {
             unauthorizedException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8784,7 +8607,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Updates permissions that allow inbound traffic to connect to game sessions that are being hosted on instances in the fleet. &lt;/p&gt; &lt;p&gt;To update settings, specify the fleet ID to be updated and specify the changes to be made. List the permissions you want to add in &lt;code&gt;InboundPermissionAuthorizations&lt;/code&gt;, and permissions you want to remove in &lt;code&gt;InboundPermissionRevocations&lt;/code&gt;. Permissions to be removed must match existing fleet permissions. &lt;/p&gt; &lt;p&gt;If successful, the fleet ID for the updated fleet is returned. For fleets with remote locations, port setting updates can take time to propagate across all locations. You can check the status of updates in each location by calling &lt;code&gt;DescribeFleetPortSettings&lt;/code&gt; with a location name.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Updates permissions that allow inbound traffic to connect to game sessions that are being hosted on instances in the fleet. &lt;/p&gt; &lt;p&gt;To update settings, specify the fleet ID to be updated and specify the changes to be made. List the permissions you want to add in &lt;code&gt;InboundPermissionAuthorizations&lt;/code&gt;, and permissions you want to remove in &lt;code&gt;InboundPermissionRevocations&lt;/code&gt;. Permissions to be removed must match existing fleet permissions. &lt;/p&gt; &lt;p&gt;If successful, the fleet ID for the updated fleet is returned. For fleets with remote locations, port setting updates can take time to propagate across all locations. You can check the status of updates in each location by calling &lt;code&gt;DescribeFleetPortSettings&lt;/code&gt; with a location name.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -8817,7 +8640,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFleetPortSettingsResponse res = new org.openapis.openapi.models.operations.UpdateFleetPortSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateFleetPortSettingsResponse res = new org.openapis.openapi.models.operations.UpdateFleetPortSettingsResponse(contentType, httpRes.statusCode()) {{
             updateFleetPortSettingsOutput = null;
             notFoundException = null;
             conflictException = null;
@@ -8827,8 +8650,6 @@ public class SDK {
             invalidRequestException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8892,7 +8713,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Updates information about a registered game server to help GameLift FleetIQ to track game server availability. This operation is called by a game server process that is running on an instance in a game server group. &lt;/p&gt; &lt;p&gt;Use this operation to update the following types of game server information. You can make all three types of updates in the same request:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To update the game server's utilization status, identify the game server and game server group and specify the current utilization status. Use this status to identify when game servers are currently hosting games and when they are available to be claimed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To report health status, identify the game server and game server group and set health check to &lt;code&gt;HEALTHY&lt;/code&gt;. If a game server does not report health status for a certain length of time, the game server is no longer considered healthy. As a result, it will be eventually deregistered from the game server group to avoid affecting utilization metrics. The best practice is to report health every 60 seconds.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To change game server metadata, provide updated game server data.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Once a game server is successfully updated, the relevant statuses and timestamps are updated.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Updates information about a registered game server to help Amazon GameLift FleetIQ to track game server availability. This operation is called by a game server process that is running on an instance in a game server group. &lt;/p&gt; &lt;p&gt;Use this operation to update the following types of game server information. You can make all three types of updates in the same request:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To update the game server's utilization status, identify the game server and game server group and specify the current utilization status. Use this status to identify when game servers are currently hosting games and when they are available to be claimed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To report health status, identify the game server and game server group and set health check to &lt;code&gt;HEALTHY&lt;/code&gt;. If a game server does not report health status for a certain length of time, the game server is no longer considered healthy. As a result, it will be eventually deregistered from the game server group to avoid affecting utilization metrics. The best practice is to report health every 60 seconds.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To change game server metadata, provide updated game server data.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Once a game server is successfully updated, the relevant statuses and timestamps are updated.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -8925,15 +8746,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGameServerResponse res = new org.openapis.openapi.models.operations.UpdateGameServerResponse() {{
+        org.openapis.openapi.models.operations.UpdateGameServerResponse res = new org.openapis.openapi.models.operations.UpdateGameServerResponse(contentType, httpRes.statusCode()) {{
             updateGameServerOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -8976,7 +8795,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;This operation is used with the GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Updates GameLift FleetIQ-specific properties for a game server group. Many Auto Scaling group properties are updated on the Auto Scaling group directly, including the launch template, Auto Scaling policies, and maximum/minimum/desired instance counts.&lt;/p&gt; &lt;p&gt;To update the game server group, specify the game server group ID and provide the updated values. Before applying the updates, the new values are validated to ensure that GameLift FleetIQ can continue to perform instance balancing activity. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt; &lt;b&gt;This operation is used with the Amazon GameLift FleetIQ solution and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Updates Amazon GameLift FleetIQ-specific properties for a game server group. Many Auto Scaling group properties are updated on the Auto Scaling group directly, including the launch template, Auto Scaling policies, and maximum/minimum/desired instance counts.&lt;/p&gt; &lt;p&gt;To update the game server group, specify the game server group ID and provide the updated values. Before applying the updates, the new values are validated to ensure that Amazon GameLift FleetIQ can continue to perform instance balancing activity. If successful, a &lt;code&gt;GameServerGroup&lt;/code&gt; object is returned.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-intro.html"&gt;Amazon GameLift FleetIQ Guide&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -9009,15 +8828,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGameServerGroupResponse res = new org.openapis.openapi.models.operations.UpdateGameServerGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateGameServerGroupResponse res = new org.openapis.openapi.models.operations.UpdateGameServerGroupResponse(contentType, httpRes.statusCode()) {{
             updateGameServerGroupOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9093,7 +8910,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGameSessionResponse res = new org.openapis.openapi.models.operations.UpdateGameSessionResponse() {{
+        org.openapis.openapi.models.operations.UpdateGameSessionResponse res = new org.openapis.openapi.models.operations.UpdateGameSessionResponse(contentType, httpRes.statusCode()) {{
             updateGameSessionOutput = null;
             notFoundException = null;
             conflictException = null;
@@ -9102,8 +8919,6 @@ public class SDK {
             invalidGameSessionStatusException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9193,15 +9008,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGameSessionQueueResponse res = new org.openapis.openapi.models.operations.UpdateGameSessionQueueResponse() {{
+        org.openapis.openapi.models.operations.UpdateGameSessionQueueResponse res = new org.openapis.openapi.models.operations.UpdateGameSessionQueueResponse(contentType, httpRes.statusCode()) {{
             updateGameSessionQueueOutput = null;
             internalServiceException = null;
             invalidRequestException = null;
             notFoundException = null;
             unauthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9277,15 +9090,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMatchmakingConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateMatchmakingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateMatchmakingConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateMatchmakingConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateMatchmakingConfigurationOutput = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
             unsupportedRegionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9328,7 +9139,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Updates the current runtime configuration for the specified fleet, which tells GameLift how to launch server processes on all instances in the fleet. You can update a fleet's runtime configuration at any time after the fleet is created; it does not need to be in &lt;code&gt;ACTIVE&lt;/code&gt; status.&lt;/p&gt; &lt;p&gt;To update runtime configuration, specify the fleet ID and provide a &lt;code&gt;RuntimeConfiguration&lt;/code&gt; with an updated set of server process configurations.&lt;/p&gt; &lt;p&gt;If successful, the fleet's runtime configuration settings are updated. Each instance in the fleet regularly checks for and retrieves updated runtime configurations. Instances immediately begin complying with the new configuration by launching new server processes or not replacing existing processes when they shut down. Updating a fleet's runtime configuration never affects existing server processes.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up GameLift fleets&lt;/a&gt; &lt;/p&gt;
+     * &lt;p&gt;Updates the current runtime configuration for the specified fleet, which tells Amazon GameLift how to launch server processes on all instances in the fleet. You can update a fleet's runtime configuration at any time after the fleet is created; it does not need to be in &lt;code&gt;ACTIVE&lt;/code&gt; status.&lt;/p&gt; &lt;p&gt;To update runtime configuration, specify the fleet ID and provide a &lt;code&gt;RuntimeConfiguration&lt;/code&gt; with an updated set of server process configurations.&lt;/p&gt; &lt;p&gt;If successful, the fleet's runtime configuration settings are updated. Each instance in the fleet regularly checks for and retrieves updated runtime configurations. Instances immediately begin complying with the new configuration by launching new server processes or not replacing existing processes when they shut down. Updating a fleet's runtime configuration never affects existing server processes.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html"&gt;Setting up Amazon GameLift fleets&lt;/a&gt; &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -9361,7 +9172,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRuntimeConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateRuntimeConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateRuntimeConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateRuntimeConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateRuntimeConfigurationOutput = null;
             unauthorizedException = null;
             notFoundException = null;
@@ -9369,8 +9180,6 @@ public class SDK {
             invalidRequestException = null;
             invalidFleetStatusException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9453,15 +9262,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateScriptResponse res = new org.openapis.openapi.models.operations.UpdateScriptResponse() {{
+        org.openapis.openapi.models.operations.UpdateScriptResponse res = new org.openapis.openapi.models.operations.UpdateScriptResponse(contentType, httpRes.statusCode()) {{
             updateScriptOutput = null;
             unauthorizedException = null;
             invalidRequestException = null;
             notFoundException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -9537,14 +9344,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidateMatchmakingRuleSetResponse res = new org.openapis.openapi.models.operations.ValidateMatchmakingRuleSetResponse() {{
+        org.openapis.openapi.models.operations.ValidateMatchmakingRuleSetResponse res = new org.openapis.openapi.models.operations.ValidateMatchmakingRuleSetResponse(contentType, httpRes.statusCode()) {{
             validateMatchmakingRuleSetOutput = null;
             internalServiceException = null;
             unsupportedRegionException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSellerFundsSummaryResponse {
     
     public String contentType;
+
     public GetSellerFundsSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSellerFundsSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.SellerFundsSummaryResponse sellerFundsSummaryResponse;
+
     public GetSellerFundsSummaryResponse withSellerFundsSummaryResponse(org.openapis.openapi.models.shared.SellerFundsSummaryResponse sellerFundsSummaryResponse) {
         this.sellerFundsSummaryResponse = sellerFundsSummaryResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetSellerFundsSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetSellerFundsSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSellerFundsSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSellerFundsSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSellerFundsSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

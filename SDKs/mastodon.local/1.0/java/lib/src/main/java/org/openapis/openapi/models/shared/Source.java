@@ -19,6 +19,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public Field[] fields;
+
     public Source withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -30,6 +31,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("follow_requests_count")
     public Long followRequestsCount;
+
     public Source withFollowRequestsCount(Long followRequestsCount) {
         this.followRequestsCount = followRequestsCount;
         return this;
@@ -41,6 +43,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Source withLanguage(String language) {
         this.language = language;
         return this;
@@ -52,6 +55,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Source withNote(String note) {
         this.note = note;
         return this;
@@ -63,6 +67,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public SourcePrivacyEnum privacy;
+
     public Source withPrivacy(SourcePrivacyEnum privacy) {
         this.privacy = privacy;
         return this;
@@ -74,9 +79,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitive")
     public Boolean sensitive;
+
     public Source withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
     }
     
+    public Source(){}
 }

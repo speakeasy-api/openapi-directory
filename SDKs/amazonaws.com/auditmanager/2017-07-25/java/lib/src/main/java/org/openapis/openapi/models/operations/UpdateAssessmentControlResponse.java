@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssessmentControlResponse {
@@ -12,6 +13,7 @@ public class UpdateAssessmentControlResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAssessmentControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssessmentControlResponse {
     
     
     public String contentType;
+
     public UpdateAssessmentControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssessmentControlResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAssessmentControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAssessmentControlResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssessmentControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAssessmentControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssessmentControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAssessmentControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAssessmentControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAssessmentControlResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAssessmentControlResponse updateAssessmentControlResponse;
+
     public UpdateAssessmentControlResponse withUpdateAssessmentControlResponse(org.openapis.openapi.models.shared.UpdateAssessmentControlResponse updateAssessmentControlResponse) {
         this.updateAssessmentControlResponse = updateAssessmentControlResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAssessmentControlResponse {
      */
     
     public Object validationException;
+
     public UpdateAssessmentControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAssessmentControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

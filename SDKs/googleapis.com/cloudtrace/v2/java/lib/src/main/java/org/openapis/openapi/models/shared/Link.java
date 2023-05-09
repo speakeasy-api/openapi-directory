@@ -18,6 +18,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attributes attributes;
+
     public Link withAttributes(Attributes attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spanId")
     public String spanId;
+
     public Link withSpanId(String spanId) {
         this.spanId = spanId;
         return this;
@@ -40,6 +42,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traceId")
     public String traceId;
+
     public Link withTraceId(String traceId) {
         this.traceId = traceId;
         return this;
@@ -51,9 +54,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LinkTypeEnum type;
+
     public Link withType(LinkTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Link(){}
 }

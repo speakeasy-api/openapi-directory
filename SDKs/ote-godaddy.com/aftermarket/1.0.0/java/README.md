@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse;
 import org.openapis.openapi.models.shared.AftermarketListingExpiryCreate;
 
@@ -27,37 +26,39 @@ public class Application {
                 .build();
 
             org.openapis.openapi.models.. req = new org.openapis.openapi.models.shared.AftermarketListingExpiryCreate[]{{
-                add(new AftermarketListingExpiryCreate() {{
+                add(new AftermarketListingExpiryCreate("corrupti", "illum", 423655L) {{
                     domain = "provident";
                     expiresAt = "distinctio";
-                    losingRegistrarId = 844266;
-                    pageViewsMonthly = 602763;
-                    revenueMonthly = 857946;
+                    losingRegistrarId = 844266L;
+                    pageViewsMonthly = 602763L;
+                    revenueMonthly = 857946L;
                 }}),
-                add(new AftermarketListingExpiryCreate() {{
-                    domain = "corrupti";
-                    expiresAt = "illum";
-                    losingRegistrarId = 423655;
-                    pageViewsMonthly = 623564;
-                    revenueMonthly = 645894;
+                add(new AftermarketListingExpiryCreate("debitis", "ipsa", 963663L) {{
+                    domain = "error";
+                    expiresAt = "deserunt";
+                    losingRegistrarId = 384382L;
+                    pageViewsMonthly = 437587L;
+                    revenueMonthly = 297534L;
                 }}),
-                add(new AftermarketListingExpiryCreate() {{
-                    domain = "suscipit";
-                    expiresAt = "iure";
-                    losingRegistrarId = 297534;
-                    pageViewsMonthly = 891773;
-                    revenueMonthly = 56713;
+                add(new AftermarketListingExpiryCreate("voluptatum", "iusto", 568045L) {{
+                    domain = "tempora";
+                    expiresAt = "suscipit";
+                    losingRegistrarId = 477665L;
+                    pageViewsMonthly = 791725L;
+                    revenueMonthly = 812169L;
                 }}),
             }}            
 
             AddExpiryListingsJsonResponse res = sdk.v1.addExpiryListingsJson(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,11 +66,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `addExpiryListingsJson` - Add expiry listings into GoDaddy Auction
-* `addExpiryListingsRaw` - Add expiry listings into GoDaddy Auction
-* `deleteListings` - Remove listings from GoDaddy Auction
+* [addExpiryListingsJson](docs/v1/README.md#addexpirylistingsjson) - Add expiry listings into GoDaddy Auction
+* [addExpiryListingsRaw](docs/v1/README.md#addexpirylistingsraw) - Add expiry listings into GoDaddy Auction
+* [deleteListings](docs/v1/README.md#deletelistings) - Remove listings from GoDaddy Auction
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,6 +15,7 @@ public class BestSold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public BestSold withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class BestSold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_id")
     public Long productId;
+
     public BestSold withProductId(Long productId) {
         this.productId = productId;
         return this;
@@ -31,6 +33,7 @@ public class BestSold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_name")
     public String productName;
+
     public BestSold withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -42,9 +45,11 @@ public class BestSold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public BestSold withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public BestSold(){}
 }

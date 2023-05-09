@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservedCacheNodeMessage {
     
     public String marker;
+
     public ReservedCacheNodeMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class ReservedCacheNodeMessage {
     
     
     public ReservedCacheNodeList[] reservedCacheNodes;
+
     public ReservedCacheNodeMessage withReservedCacheNodes(ReservedCacheNodeList[] reservedCacheNodes) {
         this.reservedCacheNodes = reservedCacheNodes;
         return this;
     }
     
+    public ReservedCacheNodeMessage(){}
 }

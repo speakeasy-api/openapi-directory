@@ -15,6 +15,7 @@ public class BucketState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BucketState withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class BucketState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BucketState withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BucketState(){}
 }

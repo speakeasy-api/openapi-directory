@@ -15,6 +15,7 @@ public class StartJobRunRequestBodyJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hive")
     public org.openapis.openapi.models.shared.Hive hive;
+
     public StartJobRunRequestBodyJobDriver withHive(org.openapis.openapi.models.shared.Hive hive) {
         this.hive = hive;
         return this;
@@ -23,9 +24,11 @@ public class StartJobRunRequestBodyJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSubmit")
     public org.openapis.openapi.models.shared.SparkSubmit sparkSubmit;
+
     public StartJobRunRequestBodyJobDriver withSparkSubmit(org.openapis.openapi.models.shared.SparkSubmit sparkSubmit) {
         this.sparkSubmit = sparkSubmit;
         return this;
     }
     
+    public StartJobRunRequestBodyJobDriver(){}
 }

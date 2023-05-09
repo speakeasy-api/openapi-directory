@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * User - A user object that contains a specified user\u2019s metadata and attributes.
+ * User - A user object that contains the metadata and attributes for a specified user.
  */
 public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Addresses")
     public Address[] addresses;
+
     public User withAddresses(Address[] addresses) {
         this.addresses = addresses;
         return this;
@@ -23,6 +24,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public User withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -31,6 +33,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Emails")
     public Email[] emails;
+
     public User withEmails(Email[] emails) {
         this.emails = emails;
         return this;
@@ -39,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalIds")
     public ExternalId[] externalIds;
+
     public User withExternalIds(ExternalId[] externalIds) {
         this.externalIds = externalIds;
         return this;
@@ -46,6 +50,7 @@ public class User {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public User withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -54,6 +59,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locale")
     public String locale;
+
     public User withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -62,6 +68,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public Name name;
+
     public User withName(Name name) {
         this.name = name;
         return this;
@@ -70,6 +77,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NickName")
     public String nickName;
+
     public User withNickName(String nickName) {
         this.nickName = nickName;
         return this;
@@ -78,6 +86,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumbers")
     public PhoneNumber[] phoneNumbers;
+
     public User withPhoneNumbers(PhoneNumber[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
@@ -86,6 +95,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredLanguage")
     public String preferredLanguage;
+
     public User withPreferredLanguage(String preferredLanguage) {
         this.preferredLanguage = preferredLanguage;
         return this;
@@ -94,6 +104,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfileUrl")
     public String profileUrl;
+
     public User withProfileUrl(String profileUrl) {
         this.profileUrl = profileUrl;
         return this;
@@ -102,6 +113,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public User withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -110,6 +122,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public User withTitle(String title) {
         this.title = title;
         return this;
@@ -117,6 +130,7 @@ public class User {
     
     @JsonProperty("UserId")
     public String userId;
+
     public User withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -125,6 +139,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public User withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -133,9 +148,14 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserType")
     public String userType;
+
     public User withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public User(@JsonProperty("IdentityStoreId") String identityStoreId, @JsonProperty("UserId") String userId) {
+        this.identityStoreId = identityStoreId;
+        this.userId = userId;
+  }
 }

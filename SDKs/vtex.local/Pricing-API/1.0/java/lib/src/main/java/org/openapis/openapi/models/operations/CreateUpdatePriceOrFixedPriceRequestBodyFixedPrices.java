@@ -18,6 +18,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange dateRange;
+
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices withDateRange(CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,6 +30,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -39,6 +41,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices {
      */
     @JsonProperty("minQuantity")
     public Long minQuantity;
+
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices withMinQuantity(Long minQuantity) {
         this.minQuantity = minQuantity;
         return this;
@@ -49,6 +52,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices {
      */
     @JsonProperty("tradePolicyId")
     public String tradePolicyId;
+
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices withTradePolicyId(String tradePolicyId) {
         this.tradePolicyId = tradePolicyId;
         return this;
@@ -59,9 +63,15 @@ public class CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices {
      */
     @JsonProperty("value")
     public Double value;
+
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public CreateUpdatePriceOrFixedPriceRequestBodyFixedPrices(@JsonProperty("minQuantity") Long minQuantity, @JsonProperty("tradePolicyId") String tradePolicyId, @JsonProperty("value") Double value) {
+        this.minQuantity = minQuantity;
+        this.tradePolicyId = tradePolicyId;
+        this.value = value;
+  }
 }

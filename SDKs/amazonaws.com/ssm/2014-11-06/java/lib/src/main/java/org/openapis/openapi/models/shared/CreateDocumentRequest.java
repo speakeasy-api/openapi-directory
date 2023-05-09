@@ -12,6 +12,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attachments")
     public AttachmentsSource[] attachments;
+
     public CreateDocumentRequest withAttachments(AttachmentsSource[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,6 +20,7 @@ public class CreateDocumentRequest {
     
     @JsonProperty("Content")
     public String content;
+
     public CreateDocumentRequest withContent(String content) {
         this.content = content;
         return this;
@@ -27,6 +29,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateDocumentRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +38,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFormat")
     public DocumentFormatEnum documentFormat;
+
     public CreateDocumentRequest withDocumentFormat(DocumentFormatEnum documentFormat) {
         this.documentFormat = documentFormat;
         return this;
@@ -43,6 +47,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public DocumentTypeEnum documentType;
+
     public CreateDocumentRequest withDocumentType(DocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -50,6 +55,7 @@ public class CreateDocumentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateDocumentRequest withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +64,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Requires")
     public DocumentRequires[] requires;
+
     public CreateDocumentRequest withRequires(DocumentRequires[] requires) {
         this.requires = requires;
         return this;
@@ -66,6 +73,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDocumentRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -74,6 +82,7 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public CreateDocumentRequest withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -82,9 +91,14 @@ public class CreateDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public CreateDocumentRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public CreateDocumentRequest(@JsonProperty("Content") String content, @JsonProperty("Name") String name) {
+        this.content = content;
+        this.name = name;
+  }
 }

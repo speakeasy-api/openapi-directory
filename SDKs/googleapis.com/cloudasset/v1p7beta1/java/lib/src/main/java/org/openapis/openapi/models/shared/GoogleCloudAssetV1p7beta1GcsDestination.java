@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1p7beta1GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudAssetV1p7beta1GcsDestination withUri(String uri) {
         this.uri = uri;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1p7beta1GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriPrefix")
     public String uriPrefix;
+
     public GoogleCloudAssetV1p7beta1GcsDestination withUriPrefix(String uriPrefix) {
         this.uriPrefix = uriPrefix;
         return this;
     }
     
+    public GoogleCloudAssetV1p7beta1GcsDestination(){}
 }

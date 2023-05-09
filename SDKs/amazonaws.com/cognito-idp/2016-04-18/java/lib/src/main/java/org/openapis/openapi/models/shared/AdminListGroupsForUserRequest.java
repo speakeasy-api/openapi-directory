@@ -12,6 +12,7 @@ public class AdminListGroupsForUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public AdminListGroupsForUserRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class AdminListGroupsForUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public AdminListGroupsForUserRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class AdminListGroupsForUserRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminListGroupsForUserRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -34,9 +37,14 @@ public class AdminListGroupsForUserRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminListGroupsForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminListGroupsForUserRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

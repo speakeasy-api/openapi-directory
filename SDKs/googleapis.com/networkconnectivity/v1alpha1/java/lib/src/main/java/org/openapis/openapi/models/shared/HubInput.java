@@ -18,6 +18,7 @@ public class HubInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public HubInput withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class HubInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HubInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class HubInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public HubInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class HubInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HubInput withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class HubInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public HubInput withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public HubInput(){}
 }

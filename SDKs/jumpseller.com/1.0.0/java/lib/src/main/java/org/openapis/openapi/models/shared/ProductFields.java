@@ -15,6 +15,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcode")
     public String barcode;
+
     public ProductFields withBarcode(String barcode) {
         this.barcode = barcode;
         return this;
@@ -23,6 +24,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public CategoryFields[] categories;
+
     public ProductFields withCategories(CategoryFields[] categories) {
         this.categories = categories;
         return this;
@@ -34,6 +36,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public ProductFields withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +48,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductFields withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diameter")
     public Float diameter;
+
     public ProductFields withDiameter(Float diameter) {
         this.diameter = diameter;
         return this;
@@ -67,6 +72,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Float discount;
+
     public ProductFields withDiscount(Float discount) {
         this.discount = discount;
         return this;
@@ -78,6 +84,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
     public Boolean featured;
+
     public ProductFields withFeatured(Boolean featured) {
         this.featured = featured;
         return this;
@@ -89,6 +96,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("google_product_category")
     public String googleProductCategory;
+
     public ProductFields withGoogleProductCategory(String googleProductCategory) {
         this.googleProductCategory = googleProductCategory;
         return this;
@@ -100,6 +108,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Float height;
+
     public ProductFields withHeight(Float height) {
         this.height = height;
         return this;
@@ -111,6 +120,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ProductFields withId(Integer id) {
         this.id = id;
         return this;
@@ -119,6 +129,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public ImageFields[] images;
+
     public ProductFields withImages(ImageFields[] images) {
         this.images = images;
         return this;
@@ -130,6 +141,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Float length;
+
     public ProductFields withLength(Float length) {
         this.length = length;
         return this;
@@ -141,6 +153,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductFields withName(String name) {
         this.name = name;
         return this;
@@ -152,6 +165,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_format")
     public ProductFieldsPackageFormatEnum packageFormat;
+
     public ProductFields withPackageFormat(ProductFieldsPackageFormatEnum packageFormat) {
         this.packageFormat = packageFormat;
         return this;
@@ -163,6 +177,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink")
     public String permalink;
+
     public ProductFields withPermalink(String permalink) {
         this.permalink = permalink;
         return this;
@@ -174,6 +189,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public ProductFields withPrice(Float price) {
         this.price = price;
         return this;
@@ -185,6 +201,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public ProductFields withSku(String sku) {
         this.sku = sku;
         return this;
@@ -196,6 +213,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProductFieldsStatusEnum status;
+
     public ProductFields withStatus(ProductFieldsStatusEnum status) {
         this.status = status;
         return this;
@@ -207,6 +225,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock")
     public Integer stock;
+
     public ProductFields withStock(Integer stock) {
         this.stock = stock;
         return this;
@@ -218,6 +237,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock_unlimited")
     public Boolean stockUnlimited;
+
     public ProductFields withStockUnlimited(Boolean stockUnlimited) {
         this.stockUnlimited = stockUnlimited;
         return this;
@@ -226,6 +246,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public VariantFields[] variants;
+
     public ProductFields withVariants(VariantFields[] variants) {
         this.variants = variants;
         return this;
@@ -237,6 +258,7 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Float weight;
+
     public ProductFields withWeight(Float weight) {
         this.weight = weight;
         return this;
@@ -248,9 +270,11 @@ public class ProductFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public ProductFields withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public ProductFields(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1NormalizedVertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Float x;
+
     public GoogleCloudDatalabelingV1beta1NormalizedVertex withX(Float x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1NormalizedVertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Float y;
+
     public GoogleCloudDatalabelingV1beta1NormalizedVertex withY(Float y) {
         this.y = y;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1NormalizedVertex(){}
 }

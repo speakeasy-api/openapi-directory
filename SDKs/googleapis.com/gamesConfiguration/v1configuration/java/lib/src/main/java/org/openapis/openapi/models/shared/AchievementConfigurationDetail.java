@@ -18,6 +18,7 @@ public class AchievementConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public LocalizedStringBundle description;
+
     public AchievementConfigurationDetail withDescription(LocalizedStringBundle description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AchievementConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public AchievementConfigurationDetail withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -40,6 +42,7 @@ public class AchievementConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AchievementConfigurationDetail withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class AchievementConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public LocalizedStringBundle name;
+
     public AchievementConfigurationDetail withName(LocalizedStringBundle name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class AchievementConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointValue")
     public Integer pointValue;
+
     public AchievementConfigurationDetail withPointValue(Integer pointValue) {
         this.pointValue = pointValue;
         return this;
@@ -73,9 +78,11 @@ public class AchievementConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortRank")
     public Integer sortRank;
+
     public AchievementConfigurationDetail withSortRank(Integer sortRank) {
         this.sortRank = sortRank;
         return this;
     }
     
+    public AchievementConfigurationDetail(){}
 }

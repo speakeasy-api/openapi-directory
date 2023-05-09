@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfsSlatesRequest {
@@ -12,6 +13,7 @@ public class DfsSlatesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public DfsSlatesFormatEnum format;
+
     public DfsSlatesRequest withFormat(DfsSlatesFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class DfsSlatesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tournamentid")
     public String tournamentid;
+
     public DfsSlatesRequest withTournamentid(String tournamentid) {
         this.tournamentid = tournamentid;
         return this;
     }
     
+    public DfsSlatesRequest(@JsonProperty("format") DfsSlatesFormatEnum format, @JsonProperty("tournamentid") String tournamentid) {
+        this.format = format;
+        this.tournamentid = tournamentid;
+  }
 }

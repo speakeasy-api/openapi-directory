@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedLogEntries paginatedLogEntries;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse withPaginatedLogEntries(org.openapis.openapi.models.shared.PaginatedLogEntries paginatedLogEntries) {
         this.paginatedLogEntries = paginatedLogEntries;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

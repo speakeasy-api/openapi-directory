@@ -15,6 +15,7 @@ public class NewPartnerStoreStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public NewPartnerStoreStore withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class NewPartnerStoreStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_partner")
     public String emailPartner;
+
     public NewPartnerStoreStore withEmailPartner(String emailPartner) {
         this.emailPartner = emailPartner;
         return this;
@@ -37,6 +39,7 @@ public class NewPartnerStoreStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NewPartnerStoreStore withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class NewPartnerStoreStore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_url")
     public String redirectUrl;
+
     public NewPartnerStoreStore withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
     }
     
+    public NewPartnerStoreStore(){}
 }

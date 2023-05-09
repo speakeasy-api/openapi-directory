@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeleteManagedPrefixListResponse {
     
     public byte[] body;
+
     public POSTDeleteManagedPrefixListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteManagedPrefixListResponse {
     
     
     public String contentType;
+
     public POSTDeleteManagedPrefixListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteManagedPrefixListResponse {
     
     
     public Integer statusCode;
+
     public POSTDeleteManagedPrefixListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDeleteManagedPrefixListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeleteManagedPrefixListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeleteManagedPrefixListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public CreateJobRequestBodyInput input;
+
     public CreateJobRequestBody withInput(CreateJobRequestBodyInput input) {
         this.input = input;
         return this;
@@ -26,6 +27,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Inputs")
     public org.openapis.openapi.models.shared.JobInput[] inputs;
+
     public CreateJobRequestBody withInputs(org.openapis.openapi.models.shared.JobInput[] inputs) {
         this.inputs = inputs;
         return this;
@@ -37,6 +39,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Output")
     public CreateJobRequestBodyOutput output;
+
     public CreateJobRequestBody withOutput(CreateJobRequestBodyOutput output) {
         this.output = output;
         return this;
@@ -48,6 +51,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKeyPrefix")
     public String outputKeyPrefix;
+
     public CreateJobRequestBody withOutputKeyPrefix(String outputKeyPrefix) {
         this.outputKeyPrefix = outputKeyPrefix;
         return this;
@@ -59,6 +63,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outputs")
     public org.openapis.openapi.models.shared.CreateJobOutput[] outputs;
+
     public CreateJobRequestBody withOutputs(org.openapis.openapi.models.shared.CreateJobOutput[] outputs) {
         this.outputs = outputs;
         return this;
@@ -69,6 +74,7 @@ public class CreateJobRequestBody {
      */
     @JsonProperty("PipelineId")
     public String pipelineId;
+
     public CreateJobRequestBody withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
@@ -80,6 +86,7 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Playlists")
     public org.openapis.openapi.models.shared.CreateJobPlaylist[] playlists;
+
     public CreateJobRequestBody withPlaylists(org.openapis.openapi.models.shared.CreateJobPlaylist[] playlists) {
         this.playlists = playlists;
         return this;
@@ -91,9 +98,13 @@ public class CreateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserMetadata")
     public java.util.Map<String, String> userMetadata;
+
     public CreateJobRequestBody withUserMetadata(java.util.Map<String, String> userMetadata) {
         this.userMetadata = userMetadata;
         return this;
     }
     
+    public CreateJobRequestBody(@JsonProperty("PipelineId") String pipelineId) {
+        this.pipelineId = pipelineId;
+  }
 }

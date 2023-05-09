@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public AwsCodeBuildProjectEnvironment withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -23,6 +24,7 @@ public class AwsCodeBuildProjectEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentVariables")
     public AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails[] environmentVariables;
+
     public AwsCodeBuildProjectEnvironment withEnvironmentVariables(AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails[] environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -31,6 +33,7 @@ public class AwsCodeBuildProjectEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImagePullCredentialsType")
     public String imagePullCredentialsType;
+
     public AwsCodeBuildProjectEnvironment withImagePullCredentialsType(String imagePullCredentialsType) {
         this.imagePullCredentialsType = imagePullCredentialsType;
         return this;
@@ -39,6 +42,7 @@ public class AwsCodeBuildProjectEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivilegedMode")
     public Boolean privilegedMode;
+
     public AwsCodeBuildProjectEnvironment withPrivilegedMode(Boolean privilegedMode) {
         this.privilegedMode = privilegedMode;
         return this;
@@ -47,6 +51,7 @@ public class AwsCodeBuildProjectEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryCredential")
     public AwsCodeBuildProjectEnvironmentRegistryCredential registryCredential;
+
     public AwsCodeBuildProjectEnvironment withRegistryCredential(AwsCodeBuildProjectEnvironmentRegistryCredential registryCredential) {
         this.registryCredential = registryCredential;
         return this;
@@ -55,9 +60,11 @@ public class AwsCodeBuildProjectEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsCodeBuildProjectEnvironment withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsCodeBuildProjectEnvironment(){}
 }

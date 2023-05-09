@@ -12,6 +12,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedPattern")
     public String allowedPattern;
+
     public PutParameterRequest withAllowedPattern(String allowedPattern) {
         this.allowedPattern = allowedPattern;
         return this;
@@ -20,6 +21,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public String dataType;
+
     public PutParameterRequest withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -28,6 +30,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PutParameterRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public PutParameterRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -43,6 +47,7 @@ public class PutParameterRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public PutParameterRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overwrite")
     public Boolean overwrite;
+
     public PutParameterRequest withOverwrite(Boolean overwrite) {
         this.overwrite = overwrite;
         return this;
@@ -59,6 +65,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public String policies;
+
     public PutParameterRequest withPolicies(String policies) {
         this.policies = policies;
         return this;
@@ -67,6 +74,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public PutParameterRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -75,6 +83,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public ParameterTierEnum tier;
+
     public PutParameterRequest withTier(ParameterTierEnum tier) {
         this.tier = tier;
         return this;
@@ -83,6 +92,7 @@ public class PutParameterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ParameterTypeEnum type;
+
     public PutParameterRequest withType(ParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -90,9 +100,14 @@ public class PutParameterRequest {
     
     @JsonProperty("Value")
     public String value;
+
     public PutParameterRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PutParameterRequest(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

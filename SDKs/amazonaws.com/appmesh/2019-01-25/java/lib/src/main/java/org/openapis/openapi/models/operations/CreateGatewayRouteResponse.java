@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGatewayRouteResponse {
@@ -12,6 +13,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object badRequestException;
+
     public CreateGatewayRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object conflictException;
+
     public CreateGatewayRouteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateGatewayRouteResponse {
     
     
     public String contentType;
+
     public CreateGatewayRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGatewayRouteOutput createGatewayRouteOutput;
+
     public CreateGatewayRouteResponse withCreateGatewayRouteOutput(org.openapis.openapi.models.shared.CreateGatewayRouteOutput createGatewayRouteOutput) {
         this.createGatewayRouteOutput = createGatewayRouteOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object forbiddenException;
+
     public CreateGatewayRouteResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateGatewayRouteResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGatewayRouteResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object notFoundException;
+
     public CreateGatewayRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateGatewayRouteResponse {
     
     
     public Integer statusCode;
+
     public CreateGatewayRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateGatewayRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGatewayRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateGatewayRouteResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class CreateGatewayRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateGatewayRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateGatewayRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

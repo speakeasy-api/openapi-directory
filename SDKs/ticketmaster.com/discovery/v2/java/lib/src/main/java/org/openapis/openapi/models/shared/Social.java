@@ -15,9 +15,11 @@ public class Social {
      */
     
     public Twitter twitter;
+
     public Social withTwitter(Twitter twitter) {
         this.twitter = twitter;
         return this;
     }
     
+    public Social(){}
 }

@@ -15,6 +15,7 @@ public class Lpgsv503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Lpgsv503ApplicationJSONErrorEnum error;
+
     public Lpgsv503ApplicationJSON withError(Lpgsv503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Lpgsv503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Lpgsv503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Lpgsv503ApplicationJSON withErrorDescription(Lpgsv503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Lpgsv503ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateClientProfileRequest {
@@ -12,6 +13,7 @@ public class UpdateClientProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateClientProfileRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateClientProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateClientProfileRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClientProfileRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateClientProfileRequestBody requestBody;
+
     public UpdateClientProfileRequest withRequestBody(UpdateClientProfileRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -41,6 +45,7 @@ public class UpdateClientProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
     public String alternativeKey;
+
     public UpdateClientProfileRequest withAlternativeKey(String alternativeKey) {
         this.alternativeKey = alternativeKey;
         return this;
@@ -51,6 +56,7 @@ public class UpdateClientProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public UpdateClientProfileRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -63,9 +69,15 @@ public class UpdateClientProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ttl")
     public Long ttl;
+
     public UpdateClientProfileRequest withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public UpdateClientProfileRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("profileId") String profileId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.profileId = profileId;
+  }
 }

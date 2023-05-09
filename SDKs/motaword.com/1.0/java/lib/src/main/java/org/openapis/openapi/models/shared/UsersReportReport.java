@@ -12,6 +12,7 @@ public class UsersReportReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public UsersReportReport withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -20,6 +21,7 @@ public class UsersReportReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spending")
     public Float spending;
+
     public UsersReportReport withSpending(Float spending) {
         this.spending = spending;
         return this;
@@ -28,6 +30,7 @@ public class UsersReportReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public UsersReportReport withUser(User user) {
         this.user = user;
         return this;
@@ -36,9 +39,11 @@ public class UsersReportReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public Long wordCount;
+
     public UsersReportReport withWordCount(Long wordCount) {
         this.wordCount = wordCount;
         return this;
     }
     
+    public UsersReportReport(){}
 }

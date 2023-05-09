@@ -15,6 +15,7 @@ public class LatencyInjectionFaultConfig {
      */
     @JsonProperty("from")
     public Integer from;
+
     public LatencyInjectionFaultConfig withFrom(Integer from) {
         this.from = from;
         return this;
@@ -25,6 +26,7 @@ public class LatencyInjectionFaultConfig {
      */
     @JsonProperty("ratio")
     public Double ratio;
+
     public LatencyInjectionFaultConfig withRatio(Double ratio) {
         this.ratio = ratio;
         return this;
@@ -35,9 +37,15 @@ public class LatencyInjectionFaultConfig {
      */
     @JsonProperty("to")
     public Integer to;
+
     public LatencyInjectionFaultConfig withTo(Integer to) {
         this.to = to;
         return this;
     }
     
+    public LatencyInjectionFaultConfig(@JsonProperty("from") Integer from, @JsonProperty("ratio") Double ratio, @JsonProperty("to") Integer to) {
+        this.from = from;
+        this.ratio = ratio;
+        this.to = to;
+  }
 }

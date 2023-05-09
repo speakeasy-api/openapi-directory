@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Request withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Request withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Request withQuery(String query) {
         this.query = query;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnTotalResultsCount")
     public Boolean returnTotalResultsCount;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Request withReturnTotalResultsCount(Boolean returnTotalResultsCount) {
         this.returnTotalResultsCount = returnTotalResultsCount;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaryRowSetting")
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum summaryRowSetting;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Request withSummaryRowSetting(GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum summaryRowSetting) {
         this.summaryRowSetting = summaryRowSetting;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360Request withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ServicesSearchSearchAds360Request(){}
 }

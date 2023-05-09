@@ -20,6 +20,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public AppAssessment withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -28,6 +29,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public String appVersion;
+
     public AppAssessment withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -35,6 +37,7 @@ public class AppAssessment {
     
     @JsonProperty("assessmentArn")
     public String assessmentArn;
+
     public AppAssessment withAssessmentArn(String assessmentArn) {
         this.assessmentArn = assessmentArn;
         return this;
@@ -43,6 +46,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public AppAssessment withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -50,6 +54,7 @@ public class AppAssessment {
     
     @JsonProperty("assessmentStatus")
     public AssessmentStatusEnum assessmentStatus;
+
     public AppAssessment withAssessmentStatus(AssessmentStatusEnum assessmentStatus) {
         this.assessmentStatus = assessmentStatus;
         return this;
@@ -58,6 +63,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliance")
     public java.util.Map<String, DisruptionCompliance> compliance;
+
     public AppAssessment withCompliance(java.util.Map<String, DisruptionCompliance> compliance) {
         this.compliance = compliance;
         return this;
@@ -66,6 +72,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceStatus")
     public ComplianceStatusEnum complianceStatus;
+
     public AppAssessment withComplianceStatus(ComplianceStatusEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -74,6 +81,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost")
     public Cost cost;
+
     public AppAssessment withCost(Cost cost) {
         this.cost = cost;
         return this;
@@ -84,6 +92,7 @@ public class AppAssessment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public AppAssessment withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -91,6 +100,7 @@ public class AppAssessment {
     
     @JsonProperty("invoker")
     public AssessmentInvokerEnum invoker;
+
     public AppAssessment withInvoker(AssessmentInvokerEnum invoker) {
         this.invoker = invoker;
         return this;
@@ -99,6 +109,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AppAssessment withMessage(String message) {
         this.message = message;
         return this;
@@ -107,6 +118,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public ResiliencyPolicy policy;
+
     public AppAssessment withPolicy(ResiliencyPolicy policy) {
         this.policy = policy;
         return this;
@@ -115,6 +127,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resiliencyScore")
     public ResiliencyScore resiliencyScore;
+
     public AppAssessment withResiliencyScore(ResiliencyScore resiliencyScore) {
         this.resiliencyScore = resiliencyScore;
         return this;
@@ -123,6 +136,7 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceErrorsDetails")
     public ResourceErrorsDetails resourceErrorsDetails;
+
     public AppAssessment withResourceErrorsDetails(ResourceErrorsDetails resourceErrorsDetails) {
         this.resourceErrorsDetails = resourceErrorsDetails;
         return this;
@@ -133,6 +147,7 @@ public class AppAssessment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public AppAssessment withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -141,9 +156,15 @@ public class AppAssessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public AppAssessment withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public AppAssessment(@JsonProperty("assessmentArn") String assessmentArn, @JsonProperty("assessmentStatus") AssessmentStatusEnum assessmentStatus, @JsonProperty("invoker") AssessmentInvokerEnum invoker) {
+        this.assessmentArn = assessmentArn;
+        this.assessmentStatus = assessmentStatus;
+        this.invoker = invoker;
+  }
 }

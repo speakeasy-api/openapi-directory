@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackMessages")
     public GoogleCloudDatalabelingV1beta1FeedbackMessage[] feedbackMessages;
+
     public GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse withFeedbackMessages(GoogleCloudDatalabelingV1beta1FeedbackMessage[] feedbackMessages) {
         this.feedbackMessages = feedbackMessages;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse(){}
 }

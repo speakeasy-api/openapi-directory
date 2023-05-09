@@ -15,6 +15,7 @@ public class UpdateNetworkSitePlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateNetworkSitePlanRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkSitePlanRequestBody {
      */
     @JsonProperty("networkSiteArn")
     public String networkSiteArn;
+
     public UpdateNetworkSitePlanRequestBody withNetworkSiteArn(String networkSiteArn) {
         this.networkSiteArn = networkSiteArn;
         return this;
@@ -35,9 +37,14 @@ public class UpdateNetworkSitePlanRequestBody {
      */
     @JsonProperty("pendingPlan")
     public UpdateNetworkSitePlanRequestBodyPendingPlan pendingPlan;
+
     public UpdateNetworkSitePlanRequestBody withPendingPlan(UpdateNetworkSitePlanRequestBodyPendingPlan pendingPlan) {
         this.pendingPlan = pendingPlan;
         return this;
     }
     
+    public UpdateNetworkSitePlanRequestBody(@JsonProperty("networkSiteArn") String networkSiteArn, @JsonProperty("pendingPlan") UpdateNetworkSitePlanRequestBodyPendingPlan pendingPlan) {
+        this.networkSiteArn = networkSiteArn;
+        this.pendingPlan = pendingPlan;
+  }
 }

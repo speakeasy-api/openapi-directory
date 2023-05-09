@@ -15,9 +15,13 @@ public class GetPushTemplateResponse {
      */
     @JsonProperty("PushNotificationTemplateResponse")
     public PushNotificationTemplateResponse pushNotificationTemplateResponse;
+
     public GetPushTemplateResponse withPushNotificationTemplateResponse(PushNotificationTemplateResponse pushNotificationTemplateResponse) {
         this.pushNotificationTemplateResponse = pushNotificationTemplateResponse;
         return this;
     }
     
+    public GetPushTemplateResponse(@JsonProperty("PushNotificationTemplateResponse") PushNotificationTemplateResponse pushNotificationTemplateResponse) {
+        this.pushNotificationTemplateResponse = pushNotificationTemplateResponse;
+  }
 }

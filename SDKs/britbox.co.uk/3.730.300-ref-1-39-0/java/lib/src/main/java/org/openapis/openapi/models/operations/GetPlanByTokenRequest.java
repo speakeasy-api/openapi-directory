@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlanByTokenRequest {
@@ -22,6 +23,7 @@ public class GetPlanByTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetPlanByTokenRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -32,9 +34,13 @@ public class GetPlanByTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public GetPlanByTokenRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GetPlanByTokenRequest(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

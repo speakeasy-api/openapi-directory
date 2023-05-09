@@ -18,6 +18,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public FirewallAllowed[] allowed;
+
     public Firewall withAllowed(FirewallAllowed[] allowed) {
         this.allowed = allowed;
         return this;
@@ -29,6 +30,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Firewall withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("denied")
     public FirewallDenied[] denied;
+
     public Firewall withDenied(FirewallDenied[] denied) {
         this.denied = denied;
         return this;
@@ -51,6 +54,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Firewall withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationRanges")
     public String[] destinationRanges;
+
     public Firewall withDestinationRanges(String[] destinationRanges) {
         this.destinationRanges = destinationRanges;
         return this;
@@ -73,6 +78,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public FirewallDirectionEnum direction;
+
     public Firewall withDirection(FirewallDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -84,6 +90,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public Firewall withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -95,6 +102,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Firewall withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Firewall withKind(String kind) {
         this.kind = kind;
         return this;
@@ -117,6 +126,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public FirewallLogConfig logConfig;
+
     public Firewall withLogConfig(FirewallLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -128,6 +138,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Firewall withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +150,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Firewall withNetwork(String network) {
         this.network = network;
         return this;
@@ -150,6 +162,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public Firewall withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -161,6 +174,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Firewall withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -172,6 +186,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRanges")
     public String[] sourceRanges;
+
     public Firewall withSourceRanges(String[] sourceRanges) {
         this.sourceRanges = sourceRanges;
         return this;
@@ -183,6 +198,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServiceAccounts")
     public String[] sourceServiceAccounts;
+
     public Firewall withSourceServiceAccounts(String[] sourceServiceAccounts) {
         this.sourceServiceAccounts = sourceServiceAccounts;
         return this;
@@ -194,6 +210,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTags")
     public String[] sourceTags;
+
     public Firewall withSourceTags(String[] sourceTags) {
         this.sourceTags = sourceTags;
         return this;
@@ -205,6 +222,7 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetServiceAccounts")
     public String[] targetServiceAccounts;
+
     public Firewall withTargetServiceAccounts(String[] targetServiceAccounts) {
         this.targetServiceAccounts = targetServiceAccounts;
         return this;
@@ -216,9 +234,11 @@ public class Firewall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetTags")
     public String[] targetTags;
+
     public Firewall withTargetTags(String[] targetTags) {
         this.targetTags = targetTags;
         return this;
     }
     
+    public Firewall(){}
 }

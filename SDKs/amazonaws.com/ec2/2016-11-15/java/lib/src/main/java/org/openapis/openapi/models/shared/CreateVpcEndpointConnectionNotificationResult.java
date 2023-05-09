@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointConnectionNotificationResult {
     
     public String clientToken;
+
     public CreateVpcEndpointConnectionNotificationResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcEndpointConnectionNotificationResult {
     
     
     public CreateVpcEndpointConnectionNotificationResultConnectionNotification connectionNotification;
+
     public CreateVpcEndpointConnectionNotificationResult withConnectionNotification(CreateVpcEndpointConnectionNotificationResultConnectionNotification connectionNotification) {
         this.connectionNotification = connectionNotification;
         return this;
     }
     
+    public CreateVpcEndpointConnectionNotificationResult(){}
 }

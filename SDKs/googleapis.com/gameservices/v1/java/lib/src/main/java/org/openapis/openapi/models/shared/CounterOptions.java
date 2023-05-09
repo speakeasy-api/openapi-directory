@@ -18,6 +18,7 @@ public class CounterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomField[] customFields;
+
     public CounterOptions withCustomFields(CustomField[] customFields) {
         this.customFields = customFields;
         return this;
@@ -29,6 +30,7 @@ public class CounterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public CounterOptions withField(String field) {
         this.field = field;
         return this;
@@ -40,9 +42,11 @@ public class CounterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public CounterOptions withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public CounterOptions(){}
 }

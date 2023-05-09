@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdDigitalProductsJsonRequest {
@@ -12,6 +13,7 @@ public class PostProductsIdDigitalProductsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DigitalProductEdit digitalProductEdit;
+
     public PostProductsIdDigitalProductsJsonRequest withDigitalProductEdit(org.openapis.openapi.models.shared.DigitalProductEdit digitalProductEdit) {
         this.digitalProductEdit = digitalProductEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostProductsIdDigitalProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostProductsIdDigitalProductsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostProductsIdDigitalProductsJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostProductsIdDigitalProductsJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PostProductsIdDigitalProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostProductsIdDigitalProductsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostProductsIdDigitalProductsJsonRequest(@JsonProperty("DigitalProductEdit") org.openapis.openapi.models.shared.DigitalProductEdit digitalProductEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.digitalProductEdit = digitalProductEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

@@ -18,6 +18,7 @@ public class TimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closeDay")
     public TimePeriodCloseDayEnum closeDay;
+
     public TimePeriod withCloseDay(TimePeriodCloseDayEnum closeDay) {
         this.closeDay = closeDay;
         return this;
@@ -29,6 +30,7 @@ public class TimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closeTime")
     public TimeOfDay closeTime;
+
     public TimePeriod withCloseTime(TimeOfDay closeTime) {
         this.closeTime = closeTime;
         return this;
@@ -40,6 +42,7 @@ public class TimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openDay")
     public TimePeriodOpenDayEnum openDay;
+
     public TimePeriod withOpenDay(TimePeriodOpenDayEnum openDay) {
         this.openDay = openDay;
         return this;
@@ -51,9 +54,11 @@ public class TimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openTime")
     public TimeOfDay openTime;
+
     public TimePeriod withOpenTime(TimeOfDay openTime) {
         this.openTime = openTime;
         return this;
     }
     
+    public TimePeriod(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePullRequestEventsResponse {
@@ -12,6 +13,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object actorDoesNotExistException;
+
     public DescribePullRequestEventsResponse withActorDoesNotExistException(Object actorDoesNotExistException) {
         this.actorDoesNotExistException = actorDoesNotExistException;
         return this;
@@ -19,6 +21,7 @@ public class DescribePullRequestEventsResponse {
     
     
     public String contentType;
+
     public DescribePullRequestEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePullRequestEventsOutput describePullRequestEventsOutput;
+
     public DescribePullRequestEventsResponse withDescribePullRequestEventsOutput(org.openapis.openapi.models.shared.DescribePullRequestEventsOutput describePullRequestEventsOutput) {
         this.describePullRequestEventsOutput = describePullRequestEventsOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public DescribePullRequestEventsResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public DescribePullRequestEventsResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public DescribePullRequestEventsResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public DescribePullRequestEventsResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public DescribePullRequestEventsResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object invalidActorArnException;
+
     public DescribePullRequestEventsResponse withInvalidActorArnException(Object invalidActorArnException) {
         this.invalidActorArnException = invalidActorArnException;
         return this;
@@ -99,6 +109,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public DescribePullRequestEventsResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -109,6 +120,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public DescribePullRequestEventsResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -119,6 +131,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object invalidPullRequestEventTypeException;
+
     public DescribePullRequestEventsResponse withInvalidPullRequestEventTypeException(Object invalidPullRequestEventTypeException) {
         this.invalidPullRequestEventTypeException = invalidPullRequestEventTypeException;
         return this;
@@ -129,6 +142,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public DescribePullRequestEventsResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -139,6 +153,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public DescribePullRequestEventsResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -149,6 +164,7 @@ public class DescribePullRequestEventsResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public DescribePullRequestEventsResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -156,6 +172,7 @@ public class DescribePullRequestEventsResponse {
     
     
     public Integer statusCode;
+
     public DescribePullRequestEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -163,9 +180,14 @@ public class DescribePullRequestEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePullRequestEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePullRequestEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

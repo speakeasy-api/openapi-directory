@@ -15,6 +15,7 @@ public class CompatibleImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiId")
     public String amiId;
+
     public CompatibleImage withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -23,9 +24,11 @@ public class CompatibleImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CompatibleImage withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CompatibleImage(){}
 }

@@ -12,9 +12,13 @@ public class EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpri
      */
     @JsonProperty("selected_organization_ids")
     public Long[] selectedOrganizationIds;
+
     public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody withSelectedOrganizationIds(Long[] selectedOrganizationIds) {
         this.selectedOrganizationIds = selectedOrganizationIds;
         return this;
     }
     
+    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody(@JsonProperty("selected_organization_ids") Long[] selectedOrganizationIds) {
+        this.selectedOrganizationIds = selectedOrganizationIds;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DraftRegistrationsReadDraftRegistration - OK
@@ -15,6 +15,7 @@ public class DraftRegistrationsReadDraftRegistration {
      */
     
     public DraftRegistrationsReadDraftRegistrationAttributes attributes;
+
     public DraftRegistrationsReadDraftRegistration withAttributes(DraftRegistrationsReadDraftRegistrationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class DraftRegistrationsReadDraftRegistration {
      */
     
     public String id;
+
     public DraftRegistrationsReadDraftRegistration withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class DraftRegistrationsReadDraftRegistration {
      */
     
     public DraftRegistrationsReadDraftRegistrationLinks links;
+
     public DraftRegistrationsReadDraftRegistration withLinks(DraftRegistrationsReadDraftRegistrationLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class DraftRegistrationsReadDraftRegistration {
      */
     
     public DraftRegistrationsReadDraftRegistrationRelationships relationships;
+
     public DraftRegistrationsReadDraftRegistration withRelationships(DraftRegistrationsReadDraftRegistrationRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,17 @@ public class DraftRegistrationsReadDraftRegistration {
      */
     
     public String type;
+
     public DraftRegistrationsReadDraftRegistration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DraftRegistrationsReadDraftRegistration(@JsonProperty("attributes") DraftRegistrationsReadDraftRegistrationAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") DraftRegistrationsReadDraftRegistrationLinks links, @JsonProperty("relationships") DraftRegistrationsReadDraftRegistrationRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

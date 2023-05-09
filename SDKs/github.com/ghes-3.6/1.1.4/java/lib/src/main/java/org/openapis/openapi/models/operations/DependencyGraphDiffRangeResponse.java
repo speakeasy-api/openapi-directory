@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DependencyGraphDiffRangeResponse {
     
     public String contentType;
+
     public DependencyGraphDiffRangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DependencyGraphDiffRangeResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DependencyGraphDiffRangeResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class DependencyGraphDiffRangeResponse {
     
     
     public Integer statusCode;
+
     public DependencyGraphDiffRangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DependencyGraphDiffRangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DependencyGraphDiffRangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DependencyGraphDiffRangeResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public DependencyGraphDiffRangeResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class DependencyGraphDiffRangeResponse {
      */
     
     public org.openapis.openapi.models.shared.DependencyGraphDiff[] dependencyGraphDiff;
+
     public DependencyGraphDiffRangeResponse withDependencyGraphDiff(org.openapis.openapi.models.shared.DependencyGraphDiff[] dependencyGraphDiff) {
         this.dependencyGraphDiff = dependencyGraphDiff;
         return this;
     }
     
+    public DependencyGraphDiffRangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

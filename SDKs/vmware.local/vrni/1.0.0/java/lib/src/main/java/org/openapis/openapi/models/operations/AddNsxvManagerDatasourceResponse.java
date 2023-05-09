@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddNsxvManagerDatasourceResponse {
@@ -12,6 +13,7 @@ public class AddNsxvManagerDatasourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public AddNsxvManagerDatasourceResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class AddNsxvManagerDatasourceResponse {
     
     
     public String contentType;
+
     public AddNsxvManagerDatasourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddNsxvManagerDatasourceResponse {
      */
     
     public org.openapis.openapi.models.shared.NSXVManagerDataSource nsxvManagerDataSource;
+
     public AddNsxvManagerDatasourceResponse withNSXVManagerDataSource(org.openapis.openapi.models.shared.NSXVManagerDataSource nsxvManagerDataSource) {
         this.nsxvManagerDataSource = nsxvManagerDataSource;
         return this;
@@ -36,6 +40,7 @@ public class AddNsxvManagerDatasourceResponse {
     
     
     public Integer statusCode;
+
     public AddNsxvManagerDatasourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AddNsxvManagerDatasourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddNsxvManagerDatasourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddNsxvManagerDatasourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

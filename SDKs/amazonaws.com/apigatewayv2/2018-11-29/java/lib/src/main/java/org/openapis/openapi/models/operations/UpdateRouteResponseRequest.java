@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRouteResponseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateRouteResponseRequestBody requestBody;
+
     public UpdateRouteResponseRequest withRequestBody(UpdateRouteResponseRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateRouteResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateRouteResponseRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateRouteResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateRouteResponseRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateRouteResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateRouteResponseRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateRouteResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateRouteResponseRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateRouteResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateRouteResponseRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateRouteResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateRouteResponseRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateRouteResponseRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateRouteResponseRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateRouteResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public UpdateRouteResponseRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -78,6 +88,7 @@ public class UpdateRouteResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=routeId")
     public String routeId;
+
     public UpdateRouteResponseRequest withRouteId(String routeId) {
         this.routeId = routeId;
         return this;
@@ -88,9 +99,16 @@ public class UpdateRouteResponseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=routeResponseId")
     public String routeResponseId;
+
     public UpdateRouteResponseRequest withRouteResponseId(String routeResponseId) {
         this.routeResponseId = routeResponseId;
         return this;
     }
     
+    public UpdateRouteResponseRequest(@JsonProperty("RequestBody") UpdateRouteResponseRequestBody requestBody, @JsonProperty("apiId") String apiId, @JsonProperty("routeId") String routeId, @JsonProperty("routeResponseId") String routeResponseId) {
+        this.requestBody = requestBody;
+        this.apiId = apiId;
+        this.routeId = routeId;
+        this.routeResponseId = routeResponseId;
+  }
 }

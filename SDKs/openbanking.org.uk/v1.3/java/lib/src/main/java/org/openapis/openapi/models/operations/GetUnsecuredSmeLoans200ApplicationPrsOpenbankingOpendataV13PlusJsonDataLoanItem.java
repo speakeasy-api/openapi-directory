@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem {
     @JsonProperty("CCARegulatedEntity")
     public Boolean ccaRegulatedEntity;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withCCARegulatedEntity(Boolean ccaRegulatedEntity) {
         this.ccaRegulatedEntity = ccaRegulatedEntity;
         return this;
@@ -25,6 +26,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateOfChange")
     public String dateOfChange;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withDateOfChange(String dateOfChange) {
         this.dateOfChange = dateOfChange;
         return this;
@@ -32,6 +34,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("IsALowInterestRepaymentStartPossible")
     public Boolean isALowInterestRepaymentStartPossible;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withIsALowInterestRepaymentStartPossible(Boolean isALowInterestRepaymentStartPossible) {
         this.isALowInterestRepaymentStartPossible = isALowInterestRepaymentStartPossible;
         return this;
@@ -39,6 +42,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("IsThisAnInterestOnlyLoan")
     public Boolean isThisAnInterestOnlyLoan;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withIsThisAnInterestOnlyLoan(Boolean isThisAnInterestOnlyLoan) {
         this.isThisAnInterestOnlyLoan = isThisAnInterestOnlyLoan;
         return this;
@@ -50,6 +54,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LengthPromotionalInDays")
     public Long lengthPromotionalInDays;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withLengthPromotionalInDays(Long lengthPromotionalInDays) {
         this.lengthPromotionalInDays = lengthPromotionalInDays;
         return this;
@@ -58,6 +63,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoanPricing")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing[] loanPricing;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withLoanPricing(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemLoanPricing[] loanPricing) {
         this.loanPricing = loanPricing;
         return this;
@@ -68,6 +74,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("ProductState")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum productState;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withProductState(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum productState) {
         this.productState = productState;
         return this;
@@ -79,6 +86,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPromotionOrFutureTerms")
     public String startPromotionOrFutureTerms;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withStartPromotionOrFutureTerms(String startPromotionOrFutureTerms) {
         this.startPromotionOrFutureTerms = startPromotionOrFutureTerms;
         return this;
@@ -90,6 +98,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopPromotionOrFutureTerms")
     public String stopPromotionOrFutureTerms;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withStopPromotionOrFutureTerms(String stopPromotionOrFutureTerms) {
         this.stopPromotionOrFutureTerms = stopPromotionOrFutureTerms;
         return this;
@@ -97,9 +106,17 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     
     @JsonProperty("WillTheLoanBePaidInTrancheDrawdowns")
     public Boolean willTheLoanBePaidInTrancheDrawdowns;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem withWillTheLoanBePaidInTrancheDrawdowns(Boolean willTheLoanBePaidInTrancheDrawdowns) {
         this.willTheLoanBePaidInTrancheDrawdowns = willTheLoanBePaidInTrancheDrawdowns;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItem(@JsonProperty("CCARegulatedEntity") Boolean ccaRegulatedEntity, @JsonProperty("IsALowInterestRepaymentStartPossible") Boolean isALowInterestRepaymentStartPossible, @JsonProperty("IsThisAnInterestOnlyLoan") Boolean isThisAnInterestOnlyLoan, @JsonProperty("ProductState") GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataLoanItemProductStateEnum productState, @JsonProperty("WillTheLoanBePaidInTrancheDrawdowns") Boolean willTheLoanBePaidInTrancheDrawdowns) {
+        this.ccaRegulatedEntity = ccaRegulatedEntity;
+        this.isALowInterestRepaymentStartPossible = isALowInterestRepaymentStartPossible;
+        this.isThisAnInterestOnlyLoan = isThisAnInterestOnlyLoan;
+        this.productState = productState;
+        this.willTheLoanBePaidInTrancheDrawdowns = willTheLoanBePaidInTrancheDrawdowns;
+  }
 }

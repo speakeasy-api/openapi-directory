@@ -15,6 +15,7 @@ public class InventoryRetrievalJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public InventoryRetrievalJobDescription withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +24,7 @@ public class InventoryRetrievalJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public InventoryRetrievalJobDescription withFormat(String format) {
         this.format = format;
         return this;
@@ -31,6 +33,7 @@ public class InventoryRetrievalJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public String limit;
+
     public InventoryRetrievalJobDescription withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -39,6 +42,7 @@ public class InventoryRetrievalJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public InventoryRetrievalJobDescription withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -47,9 +51,11 @@ public class InventoryRetrievalJobDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public InventoryRetrievalJobDescription withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public InventoryRetrievalJobDescription(){}
 }

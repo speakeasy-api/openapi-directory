@@ -22,6 +22,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public PropertyValue[] customProperties;
+
     public MarketingEventUpdateRequestParams withCustomProperties(PropertyValue[] customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -35,6 +36,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public MarketingEventUpdateRequestParams withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -46,6 +48,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCancelled")
     public Boolean eventCancelled;
+
     public MarketingEventUpdateRequestParams withEventCancelled(Boolean eventCancelled) {
         this.eventCancelled = eventCancelled;
         return this;
@@ -57,6 +60,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDescription")
     public String eventDescription;
+
     public MarketingEventUpdateRequestParams withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -68,6 +72,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public String eventName;
+
     public MarketingEventUpdateRequestParams withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -79,6 +84,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventOrganizer")
     public String eventOrganizer;
+
     public MarketingEventUpdateRequestParams withEventOrganizer(String eventOrganizer) {
         this.eventOrganizer = eventOrganizer;
         return this;
@@ -90,6 +96,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public MarketingEventUpdateRequestParams withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -101,6 +108,7 @@ public class MarketingEventUpdateRequestParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventUrl")
     public String eventUrl;
+
     public MarketingEventUpdateRequestParams withEventUrl(String eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -114,9 +122,11 @@ public class MarketingEventUpdateRequestParams {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public MarketingEventUpdateRequestParams withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public MarketingEventUpdateRequestParams(){}
 }

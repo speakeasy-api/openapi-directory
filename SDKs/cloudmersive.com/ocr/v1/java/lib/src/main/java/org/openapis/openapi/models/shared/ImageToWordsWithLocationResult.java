@@ -18,6 +18,7 @@ public class ImageToWordsWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public ImageToWordsWithLocationResult withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
@@ -29,9 +30,11 @@ public class ImageToWordsWithLocationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Words")
     public OcrWordElement[] words;
+
     public ImageToWordsWithLocationResult withWords(OcrWordElement[] words) {
         this.words = words;
         return this;
     }
     
+    public ImageToWordsWithLocationResult(){}
 }

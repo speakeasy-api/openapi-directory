@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NodeConfigurationOptionList {
     
     public Double estimatedDiskUtilizationPercent;
+
     public NodeConfigurationOptionList withEstimatedDiskUtilizationPercent(Double estimatedDiskUtilizationPercent) {
         this.estimatedDiskUtilizationPercent = estimatedDiskUtilizationPercent;
         return this;
@@ -19,6 +20,7 @@ public class NodeConfigurationOptionList {
     
     
     public ModeEnum mode;
+
     public NodeConfigurationOptionList withMode(ModeEnum mode) {
         this.mode = mode;
         return this;
@@ -26,6 +28,7 @@ public class NodeConfigurationOptionList {
     
     
     public String nodeType;
+
     public NodeConfigurationOptionList withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -33,9 +36,11 @@ public class NodeConfigurationOptionList {
     
     
     public Long numberOfNodes;
+
     public NodeConfigurationOptionList withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
     }
     
+    public NodeConfigurationOptionList(){}
 }

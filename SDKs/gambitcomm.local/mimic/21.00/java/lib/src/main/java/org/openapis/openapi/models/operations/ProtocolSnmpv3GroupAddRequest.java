@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3GroupAddRequest {
@@ -12,6 +13,7 @@ public class ProtocolSnmpv3GroupAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolSnmpv3GroupAddRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolSnmpv3GroupAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupName")
     public String groupName;
+
     public ProtocolSnmpv3GroupAddRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -32,6 +35,7 @@ public class ProtocolSnmpv3GroupAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityModel")
     public String securityModel;
+
     public ProtocolSnmpv3GroupAddRequest withSecurityModel(String securityModel) {
         this.securityModel = securityModel;
         return this;
@@ -42,9 +46,16 @@ public class ProtocolSnmpv3GroupAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityName")
     public String securityName;
+
     public ProtocolSnmpv3GroupAddRequest withSecurityName(String securityName) {
         this.securityName = securityName;
         return this;
     }
     
+    public ProtocolSnmpv3GroupAddRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("groupName") String groupName, @JsonProperty("securityModel") String securityModel, @JsonProperty("securityName") String securityName) {
+        this.agentNum = agentNum;
+        this.groupName = groupName;
+        this.securityModel = securityModel;
+        this.securityName = securityName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPointGetBySmsResponse {
     
     public byte[] body;
+
     public StopPointGetBySmsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopPointGetBySmsResponse {
     
     
     public String contentType;
+
     public StopPointGetBySmsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopPointGetBySmsResponse {
     
     
     public Integer statusCode;
+
     public StopPointGetBySmsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopPointGetBySmsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPointGetBySmsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class StopPointGetBySmsResponse {
      */
     
     public java.util.Map<String, Object> systemObject;
+
     public StopPointGetBySmsResponse withSystemObject(java.util.Map<String, Object> systemObject) {
         this.systemObject = systemObject;
         return this;
     }
     
+    public StopPointGetBySmsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

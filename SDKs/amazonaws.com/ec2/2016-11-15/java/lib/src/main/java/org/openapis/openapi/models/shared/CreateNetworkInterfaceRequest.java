@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateNetworkInterfaceRequest {
     
     public String clientToken;
+
     public CreateNetworkInterfaceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public String description;
+
     public CreateNetworkInterfaceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public Boolean dryRun;
+
     public CreateNetworkInterfaceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public String[] groups;
+
     public CreateNetworkInterfaceRequest withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -37,6 +41,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public NetworkInterfaceCreationTypeEnum interfaceType;
+
     public CreateNetworkInterfaceRequest withInterfaceType(NetworkInterfaceCreationTypeEnum interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -44,6 +49,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public Long ipv4PrefixCount;
+
     public CreateNetworkInterfaceRequest withIpv4PrefixCount(Long ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
@@ -51,6 +57,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public CreateNetworkInterfaceRequestIpv4Prefixes[] ipv4Prefixes;
+
     public CreateNetworkInterfaceRequest withIpv4Prefixes(CreateNetworkInterfaceRequestIpv4Prefixes[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -58,6 +65,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public Long ipv6AddressCount;
+
     public CreateNetworkInterfaceRequest withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -65,6 +73,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public CreateNetworkInterfaceRequestIpv6Addresses[] ipv6Addresses;
+
     public CreateNetworkInterfaceRequest withIpv6Addresses(CreateNetworkInterfaceRequestIpv6Addresses[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -72,6 +81,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public Long ipv6PrefixCount;
+
     public CreateNetworkInterfaceRequest withIpv6PrefixCount(Long ipv6PrefixCount) {
         this.ipv6PrefixCount = ipv6PrefixCount;
         return this;
@@ -79,6 +89,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public CreateNetworkInterfaceRequestIpv6Prefixes[] ipv6Prefixes;
+
     public CreateNetworkInterfaceRequest withIpv6Prefixes(CreateNetworkInterfaceRequestIpv6Prefixes[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -86,6 +97,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public String privateIpAddress;
+
     public CreateNetworkInterfaceRequest withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -93,6 +105,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public CreateNetworkInterfaceRequestPrivateIpAddresses[] privateIpAddresses;
+
     public CreateNetworkInterfaceRequest withPrivateIpAddresses(CreateNetworkInterfaceRequestPrivateIpAddresses[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -100,6 +113,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public Long secondaryPrivateIpAddressCount;
+
     public CreateNetworkInterfaceRequest withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -107,6 +121,7 @@ public class CreateNetworkInterfaceRequest {
     
     
     public String subnetId;
+
     public CreateNetworkInterfaceRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -114,9 +129,13 @@ public class CreateNetworkInterfaceRequest {
     
     
     public CreateNetworkInterfaceRequestTagSpecifications[] tagSpecifications;
+
     public CreateNetworkInterfaceRequest withTagSpecifications(CreateNetworkInterfaceRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateNetworkInterfaceRequest(@JsonProperty("SubnetId") String subnetId) {
+        this.subnetId = subnetId;
+  }
 }

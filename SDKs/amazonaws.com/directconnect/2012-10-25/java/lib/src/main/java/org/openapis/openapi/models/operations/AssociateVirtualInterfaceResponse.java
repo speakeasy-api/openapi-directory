@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateVirtualInterfaceResponse {
     
     public String contentType;
+
     public AssociateVirtualInterfaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AssociateVirtualInterfaceResponse {
      */
     
     public Object directConnectClientException;
+
     public AssociateVirtualInterfaceResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateVirtualInterfaceResponse {
      */
     
     public Object directConnectServerException;
+
     public AssociateVirtualInterfaceResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -36,6 +40,7 @@ public class AssociateVirtualInterfaceResponse {
     
     
     public Integer statusCode;
+
     public AssociateVirtualInterfaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class AssociateVirtualInterfaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateVirtualInterfaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class AssociateVirtualInterfaceResponse {
      */
     
     public org.openapis.openapi.models.shared.VirtualInterface virtualInterface;
+
     public AssociateVirtualInterfaceResponse withVirtualInterface(org.openapis.openapi.models.shared.VirtualInterface virtualInterface) {
         this.virtualInterface = virtualInterface;
         return this;
     }
     
+    public AssociateVirtualInterfaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyArtifactsDestinyArtifactTier {
     
     public Boolean isUnlocked;
+
     public DestinyArtifactsDestinyArtifactTier withIsUnlocked(Boolean isUnlocked) {
         this.isUnlocked = isUnlocked;
         return this;
@@ -16,6 +17,7 @@ public class DestinyArtifactsDestinyArtifactTier {
     
     
     public DestinyArtifactsDestinyArtifactTierItem[] items;
+
     public DestinyArtifactsDestinyArtifactTier withItems(DestinyArtifactsDestinyArtifactTierItem[] items) {
         this.items = items;
         return this;
@@ -23,6 +25,7 @@ public class DestinyArtifactsDestinyArtifactTier {
     
     
     public Integer pointsToUnlock;
+
     public DestinyArtifactsDestinyArtifactTier withPointsToUnlock(Integer pointsToUnlock) {
         this.pointsToUnlock = pointsToUnlock;
         return this;
@@ -30,9 +33,11 @@ public class DestinyArtifactsDestinyArtifactTier {
     
     
     public Long tierHash;
+
     public DestinyArtifactsDestinyArtifactTier withTierHash(Long tierHash) {
         this.tierHash = tierHash;
         return this;
     }
     
+    public DestinyArtifactsDestinyArtifactTier(){}
 }

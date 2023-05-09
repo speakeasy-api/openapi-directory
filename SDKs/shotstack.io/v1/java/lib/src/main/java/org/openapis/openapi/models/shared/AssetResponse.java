@@ -18,9 +18,11 @@ public class AssetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AssetResponseData data;
+
     public AssetResponse withData(AssetResponseData data) {
         this.data = data;
         return this;
     }
     
+    public AssetResponse(){}
 }

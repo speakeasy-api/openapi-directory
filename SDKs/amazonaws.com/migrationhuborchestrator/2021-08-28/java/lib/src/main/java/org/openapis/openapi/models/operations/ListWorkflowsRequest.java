@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListWorkflowsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListWorkflowsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class ListWorkflowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListWorkflowsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class ListWorkflowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListWorkflowsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class ListWorkflowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListWorkflowsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class ListWorkflowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListWorkflowsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class ListWorkflowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListWorkflowsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +57,7 @@ public class ListWorkflowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListWorkflowsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +68,7 @@ public class ListWorkflowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adsApplicationConfigurationName")
     public String adsApplicationConfigurationName;
+
     public ListWorkflowsRequest withAdsApplicationConfigurationName(String adsApplicationConfigurationName) {
         this.adsApplicationConfigurationName = adsApplicationConfigurationName;
         return this;
@@ -71,6 +79,7 @@ public class ListWorkflowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListWorkflowsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -81,6 +90,7 @@ public class ListWorkflowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public ListWorkflowsRequest withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +101,7 @@ public class ListWorkflowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListWorkflowsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,6 +112,7 @@ public class ListWorkflowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public ListWorkflowsStatusEnum status;
+
     public ListWorkflowsRequest withStatus(ListWorkflowsStatusEnum status) {
         this.status = status;
         return this;
@@ -111,9 +123,11 @@ public class ListWorkflowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
     public String templateId;
+
     public ListWorkflowsRequest withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public ListWorkflowsRequest(){}
 }

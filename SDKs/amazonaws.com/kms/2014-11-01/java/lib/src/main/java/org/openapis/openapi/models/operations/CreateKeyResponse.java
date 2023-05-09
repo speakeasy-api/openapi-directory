@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateKeyResponse {
@@ -12,6 +13,7 @@ public class CreateKeyResponse {
      */
     
     public Object cloudHsmClusterInvalidConfigurationException;
+
     public CreateKeyResponse withCloudHsmClusterInvalidConfigurationException(Object cloudHsmClusterInvalidConfigurationException) {
         this.cloudHsmClusterInvalidConfigurationException = cloudHsmClusterInvalidConfigurationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateKeyResponse {
     
     
     public String contentType;
+
     public CreateKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateKeyResponse createKeyResponse;
+
     public CreateKeyResponse withCreateKeyResponse(org.openapis.openapi.models.shared.CreateKeyResponse createKeyResponse) {
         this.createKeyResponse = createKeyResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateKeyResponse {
      */
     
     public Object customKeyStoreInvalidStateException;
+
     public CreateKeyResponse withCustomKeyStoreInvalidStateException(Object customKeyStoreInvalidStateException) {
         this.customKeyStoreInvalidStateException = customKeyStoreInvalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class CreateKeyResponse {
      */
     
     public Object customKeyStoreNotFoundException;
+
     public CreateKeyResponse withCustomKeyStoreNotFoundException(Object customKeyStoreNotFoundException) {
         this.customKeyStoreNotFoundException = customKeyStoreNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateKeyResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public CreateKeyResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class CreateKeyResponse {
      */
     
     public Object invalidArnException;
+
     public CreateKeyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class CreateKeyResponse {
      */
     
     public Object kmsInternalException;
+
     public CreateKeyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -89,6 +98,7 @@ public class CreateKeyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateKeyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class CreateKeyResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public CreateKeyResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -106,6 +117,7 @@ public class CreateKeyResponse {
     
     
     public Integer statusCode;
+
     public CreateKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreateKeyResponse {
      */
     
     public Object tagException;
+
     public CreateKeyResponse withTagException(Object tagException) {
         this.tagException = tagException;
         return this;
@@ -133,6 +147,7 @@ public class CreateKeyResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateKeyResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -143,6 +158,7 @@ public class CreateKeyResponse {
      */
     
     public Object xksKeyAlreadyInUseException;
+
     public CreateKeyResponse withXksKeyAlreadyInUseException(Object xksKeyAlreadyInUseException) {
         this.xksKeyAlreadyInUseException = xksKeyAlreadyInUseException;
         return this;
@@ -153,6 +169,7 @@ public class CreateKeyResponse {
      */
     
     public Object xksKeyInvalidConfigurationException;
+
     public CreateKeyResponse withXksKeyInvalidConfigurationException(Object xksKeyInvalidConfigurationException) {
         this.xksKeyInvalidConfigurationException = xksKeyInvalidConfigurationException;
         return this;
@@ -163,9 +180,14 @@ public class CreateKeyResponse {
      */
     
     public Object xksKeyNotFoundException;
+
     public CreateKeyResponse withXksKeyNotFoundException(Object xksKeyNotFoundException) {
         this.xksKeyNotFoundException = xksKeyNotFoundException;
         return this;
     }
     
+    public CreateKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

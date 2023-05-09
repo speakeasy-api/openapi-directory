@@ -12,6 +12,7 @@ public class ModifyReportDefinitionRequest {
      */
     @JsonProperty("ReportDefinition")
     public ReportDefinition reportDefinition;
+
     public ModifyReportDefinitionRequest withReportDefinition(ReportDefinition reportDefinition) {
         this.reportDefinition = reportDefinition;
         return this;
@@ -22,9 +23,14 @@ public class ModifyReportDefinitionRequest {
      */
     @JsonProperty("ReportName")
     public String reportName;
+
     public ModifyReportDefinitionRequest withReportName(String reportName) {
         this.reportName = reportName;
         return this;
     }
     
+    public ModifyReportDefinitionRequest(@JsonProperty("ReportDefinition") ReportDefinition reportDefinition, @JsonProperty("ReportName") String reportName) {
+        this.reportDefinition = reportDefinition;
+        this.reportName = reportName;
+  }
 }

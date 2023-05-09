@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAlertsResponse {
@@ -12,6 +13,7 @@ public class ListAlertsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAlertsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAlertsResponse {
     
     
     public String contentType;
+
     public ListAlertsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAlertsResponse {
      */
     
     public Object internalServerException;
+
     public ListAlertsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAlertsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAlertsResponse listAlertsResponse;
+
     public ListAlertsResponse withListAlertsResponse(org.openapis.openapi.models.shared.ListAlertsResponse listAlertsResponse) {
         this.listAlertsResponse = listAlertsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAlertsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAlertsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListAlertsResponse {
     
     
     public Integer statusCode;
+
     public ListAlertsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAlertsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAlertsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAlertsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListAlertsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class ListAlertsResponse {
      */
     
     public Object validationException;
+
     public ListAlertsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAlertsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

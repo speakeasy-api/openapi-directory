@@ -15,6 +15,7 @@ public class DeleteApplicationReferenceDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public DeleteApplicationReferenceDataSourceResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,9 +24,11 @@ public class DeleteApplicationReferenceDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public DeleteApplicationReferenceDataSourceResponse withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
     }
     
+    public DeleteApplicationReferenceDataSourceResponse(){}
 }

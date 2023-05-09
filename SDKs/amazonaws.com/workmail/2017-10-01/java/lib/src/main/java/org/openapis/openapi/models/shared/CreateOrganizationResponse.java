@@ -15,9 +15,11 @@ public class CreateOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public CreateOrganizationResponse withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public CreateOrganizationResponse(){}
 }

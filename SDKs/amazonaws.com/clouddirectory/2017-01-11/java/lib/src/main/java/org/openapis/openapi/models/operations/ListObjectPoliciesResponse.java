@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListObjectPoliciesResponse {
@@ -12,6 +13,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListObjectPoliciesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListObjectPoliciesResponse {
     
     
     public String contentType;
+
     public ListObjectPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public ListObjectPoliciesResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object internalServiceException;
+
     public ListObjectPoliciesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object invalidArnException;
+
     public ListObjectPoliciesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListObjectPoliciesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object limitExceededException;
+
     public ListObjectPoliciesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListObjectPoliciesResponse listObjectPoliciesResponse;
+
     public ListObjectPoliciesResponse withListObjectPoliciesResponse(org.openapis.openapi.models.shared.ListObjectPoliciesResponse listObjectPoliciesResponse) {
         this.listObjectPoliciesResponse = listObjectPoliciesResponse;
         return this;
@@ -86,6 +95,7 @@ public class ListObjectPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListObjectPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListObjectPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListObjectPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListObjectPoliciesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object retryableConflictException;
+
     public ListObjectPoliciesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class ListObjectPoliciesResponse {
      */
     
     public Object validationException;
+
     public ListObjectPoliciesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListObjectPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

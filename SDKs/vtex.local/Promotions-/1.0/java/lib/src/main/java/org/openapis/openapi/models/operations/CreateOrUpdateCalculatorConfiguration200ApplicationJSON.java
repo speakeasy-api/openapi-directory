@@ -18,6 +18,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absoluteShippingDiscountValue")
     public Double absoluteShippingDiscountValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withAbsoluteShippingDiscountValue(Double absoluteShippingDiscountValue) {
         this.absoluteShippingDiscountValue = absoluteShippingDiscountValue;
         return this;
@@ -29,6 +30,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accumulateWithManualPrice")
     public Boolean accumulateWithManualPrice;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withAccumulateWithManualPrice(Boolean accumulateWithManualPrice) {
         this.accumulateWithManualPrice = accumulateWithManualPrice;
         return this;
@@ -40,6 +42,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activateGiftsMultiplier")
     public Boolean activateGiftsMultiplier;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withActivateGiftsMultiplier(Boolean activateGiftsMultiplier) {
         this.activateGiftsMultiplier = activateGiftsMultiplier;
         return this;
@@ -51,6 +54,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDaysOfWeek")
     public String[] activeDaysOfWeek;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withActiveDaysOfWeek(String[] activeDaysOfWeek) {
         this.activeDaysOfWeek = activeDaysOfWeek;
         return this;
@@ -62,6 +66,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affiliates")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONAffiliates[] affiliates;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withAffiliates(CreateOrUpdateCalculatorConfiguration200ApplicationJSONAffiliates[] affiliates) {
         this.affiliates = affiliates;
         return this;
@@ -73,6 +78,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyToAllShippings")
     public Boolean applyToAllShippings;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withApplyToAllShippings(Boolean applyToAllShippings) {
         this.applyToAllShippings = applyToAllShippings;
         return this;
@@ -84,6 +90,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areSalesChannelIdsExclusive")
     public Boolean areSalesChannelIdsExclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withAreSalesChannelIdsExclusive(Boolean areSalesChannelIdsExclusive) {
         this.areSalesChannelIdsExclusive = areSalesChannelIdsExclusive;
         return this;
@@ -95,6 +102,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginDateUtc")
     public String beginDateUtc;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withBeginDateUtc(String beginDateUtc) {
         this.beginDateUtc = beginDateUtc;
         return this;
@@ -106,6 +114,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brands")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONBrands[] brands;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withBrands(CreateOrUpdateCalculatorConfiguration200ApplicationJSONBrands[] brands) {
         this.brands = brands;
         return this;
@@ -117,6 +126,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandsAreInclusive")
     public Boolean brandsAreInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withBrandsAreInclusive(Boolean brandsAreInclusive) {
         this.brandsAreInclusive = brandsAreInclusive;
         return this;
@@ -128,6 +138,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaigns")
     public Object[] campaigns;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCampaigns(Object[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -136,6 +147,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardIssuers")
     public Object[] cardIssuers;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCardIssuers(Object[] cardIssuers) {
         this.cardIssuers = cardIssuers;
         return this;
@@ -147,6 +159,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONCategories[] categories;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCategories(CreateOrUpdateCalculatorConfiguration200ApplicationJSONCategories[] categories) {
         this.categories = categories;
         return this;
@@ -158,6 +171,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoriesAreInclusive")
     public Boolean categoriesAreInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCategoriesAreInclusive(Boolean categoriesAreInclusive) {
         this.categoriesAreInclusive = categoriesAreInclusive;
         return this;
@@ -169,6 +183,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterExpressions")
     public String[] clusterExpressions;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withClusterExpressions(String[] clusterExpressions) {
         this.clusterExpressions = clusterExpressions;
         return this;
@@ -180,6 +195,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONCollections[] collections;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCollections(CreateOrUpdateCalculatorConfiguration200ApplicationJSONCollections[] collections) {
         this.collections = collections;
         return this;
@@ -191,6 +207,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections1BuyTogether")
     public String[] collections1BuyTogether;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCollections1BuyTogether(String[] collections1BuyTogether) {
         this.collections1BuyTogether = collections1BuyTogether;
         return this;
@@ -199,6 +216,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections2BuyTogether")
     public Object[] collections2BuyTogether;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCollections2BuyTogether(Object[] collections2BuyTogether) {
         this.collections2BuyTogether = collections2BuyTogether;
         return this;
@@ -210,6 +228,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionsIsInclusive")
     public Boolean collectionsIsInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCollectionsIsInclusive(Boolean collectionsIsInclusive) {
         this.collectionsIsInclusive = collectionsIsInclusive;
         return this;
@@ -221,6 +240,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compareListPriceAndPrice")
     public Boolean compareListPriceAndPrice;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCompareListPriceAndPrice(Boolean compareListPriceAndPrice) {
         this.compareListPriceAndPrice = compareListPriceAndPrice;
         return this;
@@ -232,6 +252,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionsIds")
     public String[] conditionsIds;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withConditionsIds(String[] conditionsIds) {
         this.conditionsIds = conditionsIds;
         return this;
@@ -240,6 +261,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coupon")
     public Object[] coupon;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCoupon(Object[] coupon) {
         this.coupon = coupon;
         return this;
@@ -251,6 +273,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulative")
     public Boolean cumulative;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withCumulative(Boolean cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -262,6 +285,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysAgoOfPurchases")
     public Long daysAgoOfPurchases;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withDaysAgoOfPurchases(Long daysAgoOfPurchases) {
         this.daysAgoOfPurchases = daysAgoOfPurchases;
         return this;
@@ -273,6 +297,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -281,6 +306,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableDeal")
     public Boolean disableDeal;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withDisableDeal(Boolean disableDeal) {
         this.disableDeal = disableDeal;
         return this;
@@ -292,6 +318,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountType")
     public String discountType;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withDiscountType(String discountType) {
         this.discountType = discountType;
         return this;
@@ -303,6 +330,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBuyTogetherPerSku")
     public Boolean enableBuyTogetherPerSku;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withEnableBuyTogetherPerSku(Boolean enableBuyTogetherPerSku) {
         this.enableBuyTogetherPerSku = enableBuyTogetherPerSku;
         return this;
@@ -314,6 +342,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -325,6 +354,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstBuyIsProfileOptimistic")
     public Boolean firstBuyIsProfileOptimistic;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withFirstBuyIsProfileOptimistic(Boolean firstBuyIsProfileOptimistic) {
         this.firstBuyIsProfileOptimistic = firstBuyIsProfileOptimistic;
         return this;
@@ -336,6 +366,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftListTypes")
     public String[] giftListTypes;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withGiftListTypes(String[] giftListTypes) {
         this.giftListTypes = giftListTypes;
         return this;
@@ -347,6 +378,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idCalculatorConfiguration")
     public String idCalculatorConfiguration;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIdCalculatorConfiguration(String idCalculatorConfiguration) {
         this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
@@ -358,6 +390,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idSeller")
     public String idSeller;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIdSeller(String idSeller) {
         this.idSeller = idSeller;
         return this;
@@ -369,6 +402,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idSellerIsInclusive")
     public Boolean idSellerIsInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIdSellerIsInclusive(Boolean idSellerIsInclusive) {
         this.idSellerIsInclusive = idSellerIsInclusive;
         return this;
@@ -380,6 +414,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idsSalesChannel")
     public String[] idsSalesChannel;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIdsSalesChannel(String[] idsSalesChannel) {
         this.idsSalesChannel = idsSalesChannel;
         return this;
@@ -388,6 +423,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installment")
     public Long installment;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withInstallment(Long installment) {
         this.installment = installment;
         return this;
@@ -399,6 +435,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -410,6 +447,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -421,6 +459,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDifferentListPriceAndPrice")
     public Boolean isDifferentListPriceAndPrice;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIsDifferentListPriceAndPrice(Boolean isDifferentListPriceAndPrice) {
         this.isDifferentListPriceAndPrice = isDifferentListPriceAndPrice;
         return this;
@@ -432,6 +471,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFeatured")
     public Boolean isFeatured;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIsFeatured(Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
@@ -443,6 +483,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFirstBuy")
     public Boolean isFirstBuy;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIsFirstBuy(Boolean isFirstBuy) {
         this.isFirstBuy = isFirstBuy;
         return this;
@@ -454,6 +495,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMinMaxInstallments")
     public Boolean isMinMaxInstallments;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIsMinMaxInstallments(Boolean isMinMaxInstallments) {
         this.isMinMaxInstallments = isMinMaxInstallments;
         return this;
@@ -465,6 +507,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSlaSelected")
     public Boolean isSlaSelected;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withIsSlaSelected(Boolean isSlaSelected) {
         this.isSlaSelected = isSlaSelected;
         return this;
@@ -476,6 +519,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMaxPrice")
     public Double itemMaxPrice;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withItemMaxPrice(Double itemMaxPrice) {
         this.itemMaxPrice = itemMaxPrice;
         return this;
@@ -487,6 +531,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemMinPrice")
     public Double itemMinPrice;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withItemMinPrice(Double itemMinPrice) {
         this.itemMinPrice = itemMinPrice;
         return this;
@@ -498,6 +543,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public String lastModified;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -509,6 +555,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSku1BuyTogether")
     public Object[] listSku1BuyTogether;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withListSku1BuyTogether(Object[] listSku1BuyTogether) {
         this.listSku1BuyTogether = listSku1BuyTogether;
         return this;
@@ -520,6 +567,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listSku2BuyTogether")
     public Object[] listSku2BuyTogether;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withListSku2BuyTogether(Object[] listSku2BuyTogether) {
         this.listSku2BuyTogether = listSku2BuyTogether;
         return this;
@@ -531,6 +579,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingTags")
     public String[] marketingTags;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMarketingTags(String[] marketingTags) {
         this.marketingTags = marketingTags;
         return this;
@@ -542,6 +591,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingTagsAreNotInclusive")
     public Boolean marketingTagsAreNotInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMarketingTagsAreNotInclusive(Boolean marketingTagsAreNotInclusive) {
         this.marketingTagsAreNotInclusive = marketingTagsAreNotInclusive;
         return this;
@@ -553,6 +603,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstallment")
     public Long maxInstallment;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMaxInstallment(Long maxInstallment) {
         this.maxInstallment = maxInstallment;
         return this;
@@ -564,6 +615,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberOfAffectedItems")
     public Long maxNumberOfAffectedItems;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMaxNumberOfAffectedItems(Long maxNumberOfAffectedItems) {
         this.maxNumberOfAffectedItems = maxNumberOfAffectedItems;
         return this;
@@ -575,6 +627,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberOfAffectedItemsGroupKey")
     public String maxNumberOfAffectedItemsGroupKey;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMaxNumberOfAffectedItemsGroupKey(String maxNumberOfAffectedItemsGroupKey) {
         this.maxNumberOfAffectedItemsGroupKey = maxNumberOfAffectedItemsGroupKey;
         return this;
@@ -583,6 +636,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPricesPerItems")
     public Object[] maxPricesPerItems;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMaxPricesPerItems(Object[] maxPricesPerItems) {
         this.maxPricesPerItems = maxPricesPerItems;
         return this;
@@ -594,6 +648,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsage")
     public Long maxUsage;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMaxUsage(Long maxUsage) {
         this.maxUsage = maxUsage;
         return this;
@@ -605,6 +660,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUsagePerClient")
     public Long maxUsagePerClient;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMaxUsagePerClient(Long maxUsagePerClient) {
         this.maxUsagePerClient = maxUsagePerClient;
         return this;
@@ -616,6 +672,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumUnitPriceDiscount")
     public Double maximumUnitPriceDiscount;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMaximumUnitPriceDiscount(Double maximumUnitPriceDiscount) {
         this.maximumUnitPriceDiscount = maximumUnitPriceDiscount;
         return this;
@@ -624,6 +681,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchants")
     public Object[] merchants;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMerchants(Object[] merchants) {
         this.merchants = merchants;
         return this;
@@ -635,6 +693,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minInstallment")
     public Long minInstallment;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMinInstallment(Long minInstallment) {
         this.minInstallment = minInstallment;
         return this;
@@ -646,6 +705,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumQuantityBuyTogether")
     public Long minimumQuantityBuyTogether;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMinimumQuantityBuyTogether(Long minimumQuantityBuyTogether) {
         this.minimumQuantityBuyTogether = minimumQuantityBuyTogether;
         return this;
@@ -657,6 +717,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multipleUsePerClient")
     public Boolean multipleUsePerClient;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withMultipleUsePerClient(Boolean multipleUsePerClient) {
         this.multipleUsePerClient = multipleUsePerClient;
         return this;
@@ -668,6 +729,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -679,6 +741,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newOffset")
     public Double newOffset;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withNewOffset(Double newOffset) {
         this.newOffset = newOffset;
         return this;
@@ -690,6 +753,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalDiscountValue")
     public Double nominalDiscountValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withNominalDiscountValue(Double nominalDiscountValue) {
         this.nominalDiscountValue = nominalDiscountValue;
         return this;
@@ -701,6 +765,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalRewardValue")
     public Double nominalRewardValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withNominalRewardValue(Double nominalRewardValue) {
         this.nominalRewardValue = nominalRewardValue;
         return this;
@@ -712,6 +777,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalShippingDiscountValue")
     public Double nominalShippingDiscountValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withNominalShippingDiscountValue(Double nominalShippingDiscountValue) {
         this.nominalShippingDiscountValue = nominalShippingDiscountValue;
         return this;
@@ -723,6 +789,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nominalTax")
     public Double nominalTax;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withNominalTax(Double nominalTax) {
         this.nominalTax = nominalTax;
         return this;
@@ -734,6 +801,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -745,6 +813,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderStatusRewardValue")
     public String orderStatusRewardValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withOrderStatusRewardValue(String orderStatusRewardValue) {
         this.orderStatusRewardValue = orderStatusRewardValue;
         return this;
@@ -756,6 +825,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -767,6 +837,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsMethods")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONPaymentsMethods[] paymentsMethods;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPaymentsMethods(CreateOrUpdateCalculatorConfiguration200ApplicationJSONPaymentsMethods[] paymentsMethods) {
         this.paymentsMethods = paymentsMethods;
         return this;
@@ -775,6 +846,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentsRules")
     public Object[] paymentsRules;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPaymentsRules(Object[] paymentsRules) {
         this.paymentsRules = paymentsRules;
         return this;
@@ -786,6 +858,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValue")
     public Double percentualDiscountValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPercentualDiscountValue(Double percentualDiscountValue) {
         this.percentualDiscountValue = percentualDiscountValue;
         return this;
@@ -797,6 +870,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValueList")
     public Double[] percentualDiscountValueList;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPercentualDiscountValueList(Double[] percentualDiscountValueList) {
         this.percentualDiscountValueList = percentualDiscountValueList;
         return this;
@@ -808,6 +882,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValueList1")
     public Double percentualDiscountValueList1;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPercentualDiscountValueList1(Double percentualDiscountValueList1) {
         this.percentualDiscountValueList1 = percentualDiscountValueList1;
         return this;
@@ -819,6 +894,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualDiscountValueList2")
     public Double percentualDiscountValueList2;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPercentualDiscountValueList2(Double percentualDiscountValueList2) {
         this.percentualDiscountValueList2 = percentualDiscountValueList2;
         return this;
@@ -830,6 +906,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualRewardValue")
     public Double percentualRewardValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPercentualRewardValue(Double percentualRewardValue) {
         this.percentualRewardValue = percentualRewardValue;
         return this;
@@ -841,6 +918,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualShippingDiscountValue")
     public Double percentualShippingDiscountValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPercentualShippingDiscountValue(Double percentualShippingDiscountValue) {
         this.percentualShippingDiscountValue = percentualShippingDiscountValue;
         return this;
@@ -852,6 +930,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualTax")
     public Double percentualTax;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withPercentualTax(Double percentualTax) {
         this.percentualTax = percentualTax;
         return this;
@@ -863,6 +942,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONProducts[] products;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withProducts(CreateOrUpdateCalculatorConfiguration200ApplicationJSONProducts[] products) {
         this.products = products;
         return this;
@@ -874,6 +954,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsAreInclusive")
     public Boolean productsAreInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withProductsAreInclusive(Boolean productsAreInclusive) {
         this.productsAreInclusive = productsAreInclusive;
         return this;
@@ -882,6 +963,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productsSpecifications")
     public Object[] productsSpecifications;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withProductsSpecifications(Object[] productsSpecifications) {
         this.productsSpecifications = productsSpecifications;
         return this;
@@ -893,6 +975,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityToAffectBuyTogether")
     public Long quantityToAffectBuyTogether;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withQuantityToAffectBuyTogether(Long quantityToAffectBuyTogether) {
         this.quantityToAffectBuyTogether = quantityToAffectBuyTogether;
         return this;
@@ -904,6 +987,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebatePercentualDiscountValue")
     public Double rebatePercentualDiscountValue;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withRebatePercentualDiscountValue(Double rebatePercentualDiscountValue) {
         this.rebatePercentualDiscountValue = rebatePercentualDiscountValue;
         return this;
@@ -915,6 +999,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionsBins")
     public String[] restrictionsBins;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withRestrictionsBins(String[] restrictionsBins) {
         this.restrictionsBins = restrictionsBins;
         return this;
@@ -926,6 +1011,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingPercentualTax")
     public Double shippingPercentualTax;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withShippingPercentualTax(Double shippingPercentualTax) {
         this.shippingPercentualTax = shippingPercentualTax;
         return this;
@@ -937,6 +1023,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldDistributeDiscountAmongMatchedItems")
     public Boolean shouldDistributeDiscountAmongMatchedItems;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withShouldDistributeDiscountAmongMatchedItems(Boolean shouldDistributeDiscountAmongMatchedItems) {
         this.shouldDistributeDiscountAmongMatchedItems = shouldDistributeDiscountAmongMatchedItems;
         return this;
@@ -948,6 +1035,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skus")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkus[] skus;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withSkus(CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkus[] skus) {
         this.skus = skus;
         return this;
@@ -959,6 +1047,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skusAreInclusive")
     public Boolean skusAreInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withSkusAreInclusive(Boolean skusAreInclusive) {
         this.skusAreInclusive = skusAreInclusive;
         return this;
@@ -970,6 +1059,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skusGift")
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkusGift skusGift;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withSkusGift(CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkusGift skusGift) {
         this.skusGift = skusGift;
         return this;
@@ -981,6 +1071,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slasIds")
     public String[] slasIds;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withSlasIds(String[] slasIds) {
         this.slasIds = slasIds;
         return this;
@@ -989,6 +1080,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stores")
     public Object[] stores;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withStores(Object[] stores) {
         this.stores = stores;
         return this;
@@ -997,6 +1089,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storesAreInclusive")
     public Boolean storesAreInclusive;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withStoresAreInclusive(Boolean storesAreInclusive) {
         this.storesAreInclusive = storesAreInclusive;
         return this;
@@ -1008,6 +1101,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueCeling")
     public Double totalValueCeling;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withTotalValueCeling(Double totalValueCeling) {
         this.totalValueCeling = totalValueCeling;
         return this;
@@ -1019,6 +1113,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueFloor")
     public Double totalValueFloor;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withTotalValueFloor(Double totalValueFloor) {
         this.totalValueFloor = totalValueFloor;
         return this;
@@ -1027,6 +1122,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueIncludeAllItems")
     public Boolean totalValueIncludeAllItems;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withTotalValueIncludeAllItems(Boolean totalValueIncludeAllItems) {
         this.totalValueIncludeAllItems = totalValueIncludeAllItems;
         return this;
@@ -1038,6 +1134,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValueMode")
     public String totalValueMode;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withTotalValueMode(String totalValueMode) {
         this.totalValueMode = totalValueMode;
         return this;
@@ -1049,6 +1146,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalValuePurchase")
     public Double totalValuePurchase;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withTotalValuePurchase(Double totalValuePurchase) {
         this.totalValuePurchase = totalValuePurchase;
         return this;
@@ -1060,6 +1158,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
@@ -1071,6 +1170,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNewProgressiveAlgorithm")
     public Boolean useNewProgressiveAlgorithm;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withUseNewProgressiveAlgorithm(Boolean useNewProgressiveAlgorithm) {
         this.useNewProgressiveAlgorithm = useNewProgressiveAlgorithm;
         return this;
@@ -1082,6 +1182,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -1093,6 +1194,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -1104,9 +1206,11 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipCodeRanges")
     public Object[] zipCodeRanges;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSON withZipCodeRanges(Object[] zipCodeRanges) {
         this.zipCodeRanges = zipCodeRanges;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfiguration200ApplicationJSON(){}
 }

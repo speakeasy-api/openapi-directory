@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountCreateOAuth2SessionSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
     public String project;
+
     public AccountCreateOAuth2SessionSecurity withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public AccountCreateOAuth2SessionSecurity(@JsonProperty("Project") String project) {
+        this.project = project;
+  }
 }

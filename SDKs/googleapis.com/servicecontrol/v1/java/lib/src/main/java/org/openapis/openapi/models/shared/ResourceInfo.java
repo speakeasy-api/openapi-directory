@@ -18,6 +18,7 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public ResourceInfo withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -29,6 +30,7 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceContainer")
     public String resourceContainer;
+
     public ResourceInfo withResourceContainer(String resourceContainer) {
         this.resourceContainer = resourceContainer;
         return this;
@@ -40,6 +42,7 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLocation")
     public String resourceLocation;
+
     public ResourceInfo withResourceLocation(String resourceLocation) {
         this.resourceLocation = resourceLocation;
         return this;
@@ -51,9 +54,11 @@ public class ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ResourceInfo withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public ResourceInfo(){}
 }

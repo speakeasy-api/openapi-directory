@@ -12,9 +12,11 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeformAddress")
     public String freeformAddress;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListAddress withFreeformAddress(String freeformAddress) {
         this.freeformAddress = freeformAddress;
         return this;
     }
     
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListAddress(){}
 }

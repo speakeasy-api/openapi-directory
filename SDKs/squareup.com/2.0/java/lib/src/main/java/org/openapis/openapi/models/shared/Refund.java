@@ -19,6 +19,7 @@ public class Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_recipients")
     public AdditionalRecipient[] additionalRecipients;
+
     public Refund withAdditionalRecipients(AdditionalRecipient[] additionalRecipients) {
         this.additionalRecipients = additionalRecipients;
         return this;
@@ -34,6 +35,7 @@ public class Refund {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public Refund withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -45,6 +47,7 @@ public class Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Refund withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +58,7 @@ public class Refund {
      */
     @JsonProperty("id")
     public String id;
+
     public Refund withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class Refund {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public Refund withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -81,6 +86,7 @@ public class Refund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_fee_money")
     public Money processingFeeMoney;
+
     public Refund withProcessingFeeMoney(Money processingFeeMoney) {
         this.processingFeeMoney = processingFeeMoney;
         return this;
@@ -91,6 +97,7 @@ public class Refund {
      */
     @JsonProperty("reason")
     public String reason;
+
     public Refund withReason(String reason) {
         this.reason = reason;
         return this;
@@ -102,6 +109,7 @@ public class Refund {
      */
     @JsonProperty("status")
     public String status;
+
     public Refund withStatus(String status) {
         this.status = status;
         return this;
@@ -112,6 +120,7 @@ public class Refund {
      */
     @JsonProperty("tender_id")
     public String tenderId;
+
     public Refund withTenderId(String tenderId) {
         this.tenderId = tenderId;
         return this;
@@ -122,9 +131,19 @@ public class Refund {
      */
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public Refund withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public Refund(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("id") String id, @JsonProperty("location_id") String locationId, @JsonProperty("reason") String reason, @JsonProperty("status") String status, @JsonProperty("tender_id") String tenderId, @JsonProperty("transaction_id") String transactionId) {
+        this.amountMoney = amountMoney;
+        this.id = id;
+        this.locationId = locationId;
+        this.reason = reason;
+        this.status = status;
+        this.tenderId = tenderId;
+        this.transactionId = transactionId;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateCacheParameterGroupMessage - Represents the input of a &lt;code&gt;CreateCacheParameterGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCacheParameterGroupMessage {
     
     public String cacheParameterGroupFamily;
+
     public CreateCacheParameterGroupMessage withCacheParameterGroupFamily(String cacheParameterGroupFamily) {
         this.cacheParameterGroupFamily = cacheParameterGroupFamily;
         return this;
@@ -19,6 +20,7 @@ public class CreateCacheParameterGroupMessage {
     
     
     public String cacheParameterGroupName;
+
     public CreateCacheParameterGroupMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -26,6 +28,7 @@ public class CreateCacheParameterGroupMessage {
     
     
     public String description;
+
     public CreateCacheParameterGroupMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -33,9 +36,15 @@ public class CreateCacheParameterGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateCacheParameterGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCacheParameterGroupMessage(@JsonProperty("CacheParameterGroupFamily") String cacheParameterGroupFamily, @JsonProperty("CacheParameterGroupName") String cacheParameterGroupName, @JsonProperty("Description") String description) {
+        this.cacheParameterGroupFamily = cacheParameterGroupFamily;
+        this.cacheParameterGroupName = cacheParameterGroupName;
+        this.description = description;
+  }
 }

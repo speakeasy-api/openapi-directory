@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeKeyResponse {
     
     public String contentType;
+
     public DescribeKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeKeyResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public DescribeKeyResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeKeyResponse describeKeyResponse;
+
     public DescribeKeyResponse withDescribeKeyResponse(org.openapis.openapi.models.shared.DescribeKeyResponse describeKeyResponse) {
         this.describeKeyResponse = describeKeyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeKeyResponse {
      */
     
     public Object invalidArnException;
+
     public DescribeKeyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeKeyResponse {
      */
     
     public Object kmsInternalException;
+
     public DescribeKeyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeKeyResponse {
      */
     
     public Object notFoundException;
+
     public DescribeKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeKeyResponse {
     
     
     public Integer statusCode;
+
     public DescribeKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

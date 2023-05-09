@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAppValidationConfigurationResponse {
     
     public String contentType;
+
     public DeleteAppValidationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAppValidationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteAppValidationConfigurationResponse;
+
     public DeleteAppValidationConfigurationResponse withDeleteAppValidationConfigurationResponse(java.util.Map<String, Object> deleteAppValidationConfigurationResponse) {
         this.deleteAppValidationConfigurationResponse = deleteAppValidationConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAppValidationConfigurationResponse {
      */
     
     public Object internalError;
+
     public DeleteAppValidationConfigurationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAppValidationConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteAppValidationConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAppValidationConfigurationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public DeleteAppValidationConfigurationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAppValidationConfigurationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteAppValidationConfigurationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteAppValidationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteAppValidationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAppValidationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAppValidationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAppValidationConfigurationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public DeleteAppValidationConfigurationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public DeleteAppValidationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

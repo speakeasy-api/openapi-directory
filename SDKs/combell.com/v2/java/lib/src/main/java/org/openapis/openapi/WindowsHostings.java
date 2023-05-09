@@ -61,11 +61,9 @@ public class WindowsHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWindowsHostingResponse res = new org.openapis.openapi.models.operations.GetWindowsHostingResponse() {{
+        org.openapis.openapi.models.operations.GetWindowsHostingResponse res = new org.openapis.openapi.models.operations.GetWindowsHostingResponse(contentType, httpRes.statusCode()) {{
             windowsHostingDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class WindowsHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWindowsHostingsResponse res = new org.openapis.openapi.models.operations.GetWindowsHostingsResponse() {{
+        org.openapis.openapi.models.operations.GetWindowsHostingsResponse res = new org.openapis.openapi.models.operations.GetWindowsHostingsResponse(contentType, httpRes.statusCode()) {{
             windowsHostings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

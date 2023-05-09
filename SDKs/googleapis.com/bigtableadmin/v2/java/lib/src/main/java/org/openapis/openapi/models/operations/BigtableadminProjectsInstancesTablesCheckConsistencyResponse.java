@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigtableadminProjectsInstancesTablesCheckConsistencyResponse {
@@ -12,6 +13,7 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencyResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckConsistencyResponse checkConsistencyResponse;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencyResponse withCheckConsistencyResponse(org.openapis.openapi.models.shared.CheckConsistencyResponse checkConsistencyResponse) {
         this.checkConsistencyResponse = checkConsistencyResponse;
         return this;
@@ -19,6 +21,7 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencyResponse {
     
     
     public String contentType;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencyResponse {
     
     
     public Integer statusCode;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesCheckConsistencyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

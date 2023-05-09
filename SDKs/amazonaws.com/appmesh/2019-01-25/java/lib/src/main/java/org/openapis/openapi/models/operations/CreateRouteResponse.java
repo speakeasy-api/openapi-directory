@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRouteResponse {
@@ -12,6 +13,7 @@ public class CreateRouteResponse {
      */
     
     public Object badRequestException;
+
     public CreateRouteResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRouteResponse {
      */
     
     public Object conflictException;
+
     public CreateRouteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRouteResponse {
     
     
     public String contentType;
+
     public CreateRouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRouteResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRouteOutput createRouteOutput;
+
     public CreateRouteResponse withCreateRouteOutput(org.openapis.openapi.models.shared.CreateRouteOutput createRouteOutput) {
         this.createRouteOutput = createRouteOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateRouteResponse {
      */
     
     public Object forbiddenException;
+
     public CreateRouteResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRouteResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateRouteResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRouteResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRouteResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateRouteResponse {
      */
     
     public Object notFoundException;
+
     public CreateRouteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateRouteResponse {
     
     
     public Integer statusCode;
+
     public CreateRouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateRouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateRouteResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateRouteResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class CreateRouteResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateRouteResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateRouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

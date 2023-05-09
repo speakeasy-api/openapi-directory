@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSiteResponse {
@@ -12,6 +13,7 @@ public class DeleteSiteResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSiteResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSiteResponse {
      */
     
     public Object conflictException;
+
     public DeleteSiteResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSiteResponse {
     
     
     public String contentType;
+
     public DeleteSiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSiteResponse {
      */
     
     public java.util.Map<String, Object> deleteSiteOutput;
+
     public DeleteSiteResponse withDeleteSiteOutput(java.util.Map<String, Object> deleteSiteOutput) {
         this.deleteSiteOutput = deleteSiteOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSiteResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSiteResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSiteResponse {
      */
     
     public Object notFoundException;
+
     public DeleteSiteResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteSiteResponse {
     
     
     public Integer statusCode;
+
     public DeleteSiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSiteResponse {
      */
     
     public Object validationException;
+
     public DeleteSiteResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeWorkspaceImagePermissionsRequest {
     @JsonProperty("ImageId")
     public String imageId;
+
     public DescribeWorkspaceImagePermissionsRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeWorkspaceImagePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeWorkspaceImagePermissionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class DescribeWorkspaceImagePermissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspaceImagePermissionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeWorkspaceImagePermissionsRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

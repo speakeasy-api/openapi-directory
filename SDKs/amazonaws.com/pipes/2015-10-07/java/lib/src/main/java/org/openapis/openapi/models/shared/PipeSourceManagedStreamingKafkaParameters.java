@@ -15,6 +15,7 @@ public class PipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public PipeSourceManagedStreamingKafkaParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -23,6 +24,7 @@ public class PipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumerGroupID")
     public String consumerGroupID;
+
     public PipeSourceManagedStreamingKafkaParameters withConsumerGroupID(String consumerGroupID) {
         this.consumerGroupID = consumerGroupID;
         return this;
@@ -31,6 +33,7 @@ public class PipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public MSKAccessCredentials credentials;
+
     public PipeSourceManagedStreamingKafkaParameters withCredentials(MSKAccessCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -39,6 +42,7 @@ public class PipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public PipeSourceManagedStreamingKafkaParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
@@ -47,6 +51,7 @@ public class PipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartingPosition")
     public MSKStartPositionEnum startingPosition;
+
     public PipeSourceManagedStreamingKafkaParameters withStartingPosition(MSKStartPositionEnum startingPosition) {
         this.startingPosition = startingPosition;
         return this;
@@ -54,9 +59,13 @@ public class PipeSourceManagedStreamingKafkaParameters {
     
     @JsonProperty("TopicName")
     public String topicName;
+
     public PipeSourceManagedStreamingKafkaParameters withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public PipeSourceManagedStreamingKafkaParameters(@JsonProperty("TopicName") String topicName) {
+        this.topicName = topicName;
+  }
 }

@@ -15,9 +15,11 @@ public class ConvergenceDetected {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompleteOnConvergence")
     public CompleteOnConvergenceEnum completeOnConvergence;
+
     public ConvergenceDetected withCompleteOnConvergence(CompleteOnConvergenceEnum completeOnConvergence) {
         this.completeOnConvergence = completeOnConvergence;
         return this;
     }
     
+    public ConvergenceDetected(){}
 }

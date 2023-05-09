@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RouteData {
     @JsonProperty("meshName")
     public String meshName;
+
     public RouteData withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -22,6 +23,7 @@ public class RouteData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResourceMetadata metadata;
+
     public RouteData withMetadata(ResourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +31,7 @@ public class RouteData {
     
     @JsonProperty("routeName")
     public String routeName;
+
     public RouteData withRouteName(String routeName) {
         this.routeName = routeName;
         return this;
@@ -37,6 +40,7 @@ public class RouteData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public RouteSpec spec;
+
     public RouteData withSpec(RouteSpec spec) {
         this.spec = spec;
         return this;
@@ -45,6 +49,7 @@ public class RouteData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RouteStatus status;
+
     public RouteData withStatus(RouteStatus status) {
         this.status = status;
         return this;
@@ -52,9 +57,15 @@ public class RouteData {
     
     @JsonProperty("virtualRouterName")
     public String virtualRouterName;
+
     public RouteData withVirtualRouterName(String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
         return this;
     }
     
+    public RouteData(@JsonProperty("meshName") String meshName, @JsonProperty("routeName") String routeName, @JsonProperty("virtualRouterName") String virtualRouterName) {
+        this.meshName = meshName;
+        this.routeName = routeName;
+        this.virtualRouterName = virtualRouterName;
+  }
 }

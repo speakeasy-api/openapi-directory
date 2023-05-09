@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLFTagResponse {
@@ -12,6 +13,7 @@ public class DeleteLFTagResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLFTagResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLFTagResponse {
     
     
     public String contentType;
+
     public DeleteLFTagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLFTagResponse {
      */
     
     public java.util.Map<String, Object> deleteLFTagResponse;
+
     public DeleteLFTagResponse withDeleteLFTagResponse(java.util.Map<String, Object> deleteLFTagResponse) {
         this.deleteLFTagResponse = deleteLFTagResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLFTagResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteLFTagResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLFTagResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteLFTagResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteLFTagResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteLFTagResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteLFTagResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteLFTagResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteLFTagResponse {
     
     
     public Integer statusCode;
+
     public DeleteLFTagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteLFTagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLFTagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLFTagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

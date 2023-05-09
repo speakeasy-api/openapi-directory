@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplicapoolPoolsUpdatetemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Template template;
+
     public ReplicapoolPoolsUpdatetemplateRequest withTemplate(org.openapis.openapi.models.shared.Template template) {
         this.template = template;
         return this;
@@ -19,6 +21,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ReplicapoolPoolsUpdatetemplateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ReplicapoolPoolsUpdatetemplateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ReplicapoolPoolsUpdatetemplateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +54,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ReplicapoolPoolsUpdatetemplateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +65,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolName")
     public String poolName;
+
     public ReplicapoolPoolsUpdatetemplateRequest withPoolName(String poolName) {
         this.poolName = poolName;
         return this;
@@ -69,6 +76,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ReplicapoolPoolsUpdatetemplateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public ReplicapoolPoolsUpdatetemplateRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -89,6 +98,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ReplicapoolPoolsUpdatetemplateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ReplicapoolPoolsUpdatetemplateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -109,9 +120,15 @@ public class ReplicapoolPoolsUpdatetemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ReplicapoolPoolsUpdatetemplateRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ReplicapoolPoolsUpdatetemplateRequest(@JsonProperty("poolName") String poolName, @JsonProperty("projectName") String projectName, @JsonProperty("zone") String zone) {
+        this.poolName = poolName;
+        this.projectName = projectName;
+        this.zone = zone;
+  }
 }

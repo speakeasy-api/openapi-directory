@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExecutorsResponse {
     
     public String contentType;
+
     public ListExecutorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListExecutorsResponse {
      */
     
     public Object internalServerException;
+
     public ListExecutorsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListExecutorsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListExecutorsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListExecutorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExecutorsResponse listExecutorsResponse;
+
     public ListExecutorsResponse withListExecutorsResponse(org.openapis.openapi.models.shared.ListExecutorsResponse listExecutorsResponse) {
         this.listExecutorsResponse = listExecutorsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListExecutorsResponse {
     
     
     public Integer statusCode;
+
     public ListExecutorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListExecutorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExecutorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListExecutorsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListExecutorsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListExecutorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

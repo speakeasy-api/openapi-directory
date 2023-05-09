@@ -18,6 +18,7 @@ public class ListShareInvitationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListShareInvitationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class ListShareInvitationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareInvitationSummaries")
     public ShareInvitationSummary[] shareInvitationSummaries;
+
     public ListShareInvitationsOutput withShareInvitationSummaries(ShareInvitationSummary[] shareInvitationSummaries) {
         this.shareInvitationSummaries = shareInvitationSummaries;
         return this;
     }
     
+    public ListShareInvitationsOutput(){}
 }

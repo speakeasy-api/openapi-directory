@@ -18,6 +18,7 @@ public class AliasContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public AliasContextKindEnum kind;
+
     public AliasContext withKind(AliasContextKindEnum kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class AliasContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AliasContext withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AliasContext(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RejectVpcEndpointConnectionsResultUnsuccessful {
     
     public RejectVpcEndpointConnectionsResultUnsuccessfulError error;
+
     public RejectVpcEndpointConnectionsResultUnsuccessful withError(RejectVpcEndpointConnectionsResultUnsuccessfulError error) {
         this.error = error;
         return this;
@@ -19,9 +20,11 @@ public class RejectVpcEndpointConnectionsResultUnsuccessful {
     
     
     public String resourceId;
+
     public RejectVpcEndpointConnectionsResultUnsuccessful withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public RejectVpcEndpointConnectionsResultUnsuccessful(){}
 }

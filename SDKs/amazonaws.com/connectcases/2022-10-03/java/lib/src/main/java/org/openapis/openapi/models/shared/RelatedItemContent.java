@@ -15,6 +15,7 @@ public class RelatedItemContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public CommentContent comment;
+
     public RelatedItemContent withComment(CommentContent comment) {
         this.comment = comment;
         return this;
@@ -23,9 +24,11 @@ public class RelatedItemContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactContent contact;
+
     public RelatedItemContent withContact(ContactContent contact) {
         this.contact = contact;
         return this;
     }
     
+    public RelatedItemContent(){}
 }

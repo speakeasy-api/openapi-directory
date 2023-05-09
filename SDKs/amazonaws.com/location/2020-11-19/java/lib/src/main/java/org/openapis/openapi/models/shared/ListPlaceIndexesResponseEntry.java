@@ -21,6 +21,7 @@ public class ListPlaceIndexesResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ListPlaceIndexesResponseEntry withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -28,6 +29,7 @@ public class ListPlaceIndexesResponseEntry {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public ListPlaceIndexesResponseEntry withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -35,6 +37,7 @@ public class ListPlaceIndexesResponseEntry {
     
     @JsonProperty("Description")
     public String description;
+
     public ListPlaceIndexesResponseEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class ListPlaceIndexesResponseEntry {
     
     @JsonProperty("IndexName")
     public String indexName;
+
     public ListPlaceIndexesResponseEntry withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -50,6 +54,7 @@ public class ListPlaceIndexesResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public ListPlaceIndexesResponseEntryPricingPlanEnum pricingPlan;
+
     public ListPlaceIndexesResponseEntry withPricingPlan(ListPlaceIndexesResponseEntryPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -59,9 +64,17 @@ public class ListPlaceIndexesResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ListPlaceIndexesResponseEntry withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ListPlaceIndexesResponseEntry(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("DataSource") String dataSource, @JsonProperty("Description") String description, @JsonProperty("IndexName") String indexName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.dataSource = dataSource;
+        this.description = description;
+        this.indexName = indexName;
+        this.updateTime = updateTime;
+  }
 }

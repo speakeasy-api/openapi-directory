@@ -12,9 +12,11 @@ public class CreateSessionUsingPOST200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionID")
     public String sessionID;
+
     public CreateSessionUsingPOST200ApplicationJSONData withSessionID(String sessionID) {
         this.sessionID = sessionID;
         return this;
     }
     
+    public CreateSessionUsingPOST200ApplicationJSONData(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeJobLogItemsResponse {
     
     public String contentType;
+
     public DescribeJobLogItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeJobLogItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeJobLogItemsResponse describeJobLogItemsResponse;
+
     public DescribeJobLogItemsResponse withDescribeJobLogItemsResponse(org.openapis.openapi.models.shared.DescribeJobLogItemsResponse describeJobLogItemsResponse) {
         this.describeJobLogItemsResponse = describeJobLogItemsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeJobLogItemsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeJobLogItemsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeJobLogItemsResponse {
     
     
     public Integer statusCode;
+
     public DescribeJobLogItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeJobLogItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeJobLogItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DescribeJobLogItemsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeJobLogItemsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class DescribeJobLogItemsResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DescribeJobLogItemsResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeJobLogItemsResponse {
      */
     
     public Object validationException;
+
     public DescribeJobLogItemsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeJobLogItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

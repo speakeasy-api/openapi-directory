@@ -15,6 +15,7 @@ public class CreateSettingInitialValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hint")
     public String hint;
+
     public CreateSettingInitialValues withHint(String hint) {
         this.hint = hint;
         return this;
@@ -26,6 +27,7 @@ public class CreateSettingInitialValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialValues")
     public InitialValue[] initialValues;
+
     public CreateSettingInitialValues withInitialValues(InitialValue[] initialValues) {
         this.initialValues = initialValues;
         return this;
@@ -36,6 +38,7 @@ public class CreateSettingInitialValues {
      */
     @JsonProperty("key")
     public String key;
+
     public CreateSettingInitialValues withKey(String key) {
         this.key = key;
         return this;
@@ -46,6 +49,7 @@ public class CreateSettingInitialValues {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateSettingInitialValues withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +57,7 @@ public class CreateSettingInitialValues {
     
     @JsonProperty("settingType")
     public SettingTypeEnum settingType;
+
     public CreateSettingInitialValues withSettingType(SettingTypeEnum settingType) {
         this.settingType = settingType;
         return this;
@@ -64,9 +69,15 @@ public class CreateSettingInitialValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Long[] tags;
+
     public CreateSettingInitialValues withTags(Long[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSettingInitialValues(@JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("settingType") SettingTypeEnum settingType) {
+        this.key = key;
+        this.name = name;
+        this.settingType = settingType;
+  }
 }

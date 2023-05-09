@@ -15,6 +15,7 @@ public class DeleteFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupTags")
     public Tag[] finalBackupTags;
+
     public DeleteFileSystemWindowsConfiguration withFinalBackupTags(Tag[] finalBackupTags) {
         this.finalBackupTags = finalBackupTags;
         return this;
@@ -23,9 +24,11 @@ public class DeleteFileSystemWindowsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkipFinalBackup")
     public Boolean skipFinalBackup;
+
     public DeleteFileSystemWindowsConfiguration withSkipFinalBackup(Boolean skipFinalBackup) {
         this.skipFinalBackup = skipFinalBackup;
         return this;
     }
     
+    public DeleteFileSystemWindowsConfiguration(){}
 }

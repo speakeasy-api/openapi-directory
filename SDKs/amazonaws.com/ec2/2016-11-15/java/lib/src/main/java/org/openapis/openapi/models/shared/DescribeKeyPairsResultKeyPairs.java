@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeKeyPairsResultKeyPairs {
     
     public OffsetDateTime createTime;
+
     public DescribeKeyPairsResultKeyPairs withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeKeyPairsResultKeyPairs {
     
     
     public String keyFingerprint;
+
     public DescribeKeyPairsResultKeyPairs withKeyFingerprint(String keyFingerprint) {
         this.keyFingerprint = keyFingerprint;
         return this;
@@ -26,6 +28,7 @@ public class DescribeKeyPairsResultKeyPairs {
     
     
     public String keyName;
+
     public DescribeKeyPairsResultKeyPairs withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeKeyPairsResultKeyPairs {
     
     
     public String keyPairId;
+
     public DescribeKeyPairsResultKeyPairs withKeyPairId(String keyPairId) {
         this.keyPairId = keyPairId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeKeyPairsResultKeyPairs {
     
     
     public DescribeKeyPairsResultKeyPairsKeyTypeEnum keyType;
+
     public DescribeKeyPairsResultKeyPairs withKeyType(DescribeKeyPairsResultKeyPairsKeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeKeyPairsResultKeyPairs {
     
     
     public String publicKey;
+
     public DescribeKeyPairsResultKeyPairs withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -54,9 +60,11 @@ public class DescribeKeyPairsResultKeyPairs {
     
     
     public DescribeKeyPairsResultKeyPairsTags[] tags;
+
     public DescribeKeyPairsResultKeyPairs withTags(DescribeKeyPairsResultKeyPairsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeKeyPairsResultKeyPairs(){}
 }

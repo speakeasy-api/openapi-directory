@@ -18,6 +18,7 @@ public class GetV2Scim20ResourceTypes401ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public GetV2Scim20ResourceTypes401ApplicationScimPlusJson withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class GetV2Scim20ResourceTypes401ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public GetV2Scim20ResourceTypes401ApplicationScimPlusJson withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -34,9 +36,11 @@ public class GetV2Scim20ResourceTypes401ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Object status;
+
     public GetV2Scim20ResourceTypes401ApplicationScimPlusJson withStatus(Object status) {
         this.status = status;
         return this;
     }
     
+    public GetV2Scim20ResourceTypes401ApplicationScimPlusJson(){}
 }

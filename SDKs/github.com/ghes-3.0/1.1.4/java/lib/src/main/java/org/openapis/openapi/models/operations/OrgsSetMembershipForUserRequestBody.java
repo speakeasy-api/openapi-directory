@@ -17,9 +17,11 @@ public class OrgsSetMembershipForUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public OrgsSetMembershipForUserRequestBodyRoleEnum role;
+
     public OrgsSetMembershipForUserRequestBody withRole(OrgsSetMembershipForUserRequestBodyRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public OrgsSetMembershipForUserRequestBody(){}
 }

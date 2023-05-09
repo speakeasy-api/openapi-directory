@@ -15,9 +15,11 @@ public class DisassociateThirdPartyFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallStatus")
     public ThirdPartyFirewallAssociationStatusEnum thirdPartyFirewallStatus;
+
     public DisassociateThirdPartyFirewallResponse withThirdPartyFirewallStatus(ThirdPartyFirewallAssociationStatusEnum thirdPartyFirewallStatus) {
         this.thirdPartyFirewallStatus = thirdPartyFirewallStatus;
         return this;
     }
     
+    public DisassociateThirdPartyFirewallResponse(){}
 }

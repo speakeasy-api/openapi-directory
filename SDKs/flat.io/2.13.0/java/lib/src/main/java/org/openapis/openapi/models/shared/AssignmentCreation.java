@@ -23,6 +23,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedStudents")
     public String[] assignedStudents;
+
     public AssignmentCreation withAssignedStudents(String[] assignedStudents) {
         this.assignedStudents = assignedStudents;
         return this;
@@ -34,6 +35,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigneeMode")
     public AssignmentCreationAssigneeModeEnum assigneeMode;
+
     public AssignmentCreation withAssigneeMode(AssignmentCreationAssigneeModeEnum assigneeMode) {
         this.assigneeMode = assigneeMode;
         return this;
@@ -42,6 +44,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public ClassAttachmentCreation[] attachments;
+
     public AssignmentCreation withAttachments(ClassAttachmentCreation[] attachments) {
         this.attachments = attachments;
         return this;
@@ -53,6 +56,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover")
     public String cover;
+
     public AssignmentCreation withCover(String cover) {
         this.cover = cover;
         return this;
@@ -64,6 +68,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverFile")
     public String coverFile;
+
     public AssignmentCreation withCoverFile(String coverFile) {
         this.coverFile = coverFile;
         return this;
@@ -75,6 +80,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssignmentCreation withDescription(String description) {
         this.description = description;
         return this;
@@ -89,6 +95,7 @@ public class AssignmentCreation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dueDate")
     public OffsetDateTime dueDate;
+
     public AssignmentCreation withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -100,6 +107,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleClassroom")
     public AssignmentCreationGoogleClassroom googleClassroom;
+
     public AssignmentCreation withGoogleClassroom(AssignmentCreationGoogleClassroom googleClassroom) {
         this.googleClassroom = googleClassroom;
         return this;
@@ -112,6 +120,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPoints")
     public Double maxPoints;
+
     public AssignmentCreation withMaxPoints(Double maxPoints) {
         this.maxPoints = maxPoints;
         return this;
@@ -123,6 +132,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("microsoftGraph")
     public AssignmentCreationMicrosoftGraph microsoftGraph;
+
     public AssignmentCreation withMicrosoftGraph(AssignmentCreationMicrosoftGraph microsoftGraph) {
         this.microsoftGraph = microsoftGraph;
         return this;
@@ -134,6 +144,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nbPlaybackAuthorized")
     public Double nbPlaybackAuthorized;
+
     public AssignmentCreation withNbPlaybackAuthorized(Double nbPlaybackAuthorized) {
         this.nbPlaybackAuthorized = nbPlaybackAuthorized;
         return this;
@@ -149,6 +160,7 @@ public class AssignmentCreation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledDate")
     public OffsetDateTime scheduledDate;
+
     public AssignmentCreation withScheduledDate(OffsetDateTime scheduledDate) {
         this.scheduledDate = scheduledDate;
         return this;
@@ -160,6 +172,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AssignmentCreationStateEnum state;
+
     public AssignmentCreation withState(AssignmentCreationStateEnum state) {
         this.state = state;
         return this;
@@ -171,6 +184,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AssignmentCreation withTitle(String title) {
         this.title = title;
         return this;
@@ -182,6 +196,7 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolset")
     public String toolset;
+
     public AssignmentCreation withToolset(String toolset) {
         this.toolset = toolset;
         return this;
@@ -193,9 +208,11 @@ public class AssignmentCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AssignmentTypeEnum type;
+
     public AssignmentCreation withType(AssignmentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AssignmentCreation(){}
 }

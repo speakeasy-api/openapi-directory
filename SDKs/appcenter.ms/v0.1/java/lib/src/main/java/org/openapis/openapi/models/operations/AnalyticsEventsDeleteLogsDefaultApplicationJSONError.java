@@ -15,6 +15,7 @@ public class AnalyticsEventsDeleteLogsDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum code;
+
     public AnalyticsEventsDeleteLogsDefaultApplicationJSONError withCode(AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsEventsDeleteLogsDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AnalyticsEventsDeleteLogsDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AnalyticsEventsDeleteLogsDefaultApplicationJSONError(){}
 }

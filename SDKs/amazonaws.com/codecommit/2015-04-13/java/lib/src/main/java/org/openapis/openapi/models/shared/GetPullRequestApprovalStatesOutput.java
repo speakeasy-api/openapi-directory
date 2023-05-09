@@ -15,9 +15,11 @@ public class GetPullRequestApprovalStatesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvals")
     public Approval[] approvals;
+
     public GetPullRequestApprovalStatesOutput withApprovals(Approval[] approvals) {
         this.approvals = approvals;
         return this;
     }
     
+    public GetPullRequestApprovalStatesOutput(){}
 }

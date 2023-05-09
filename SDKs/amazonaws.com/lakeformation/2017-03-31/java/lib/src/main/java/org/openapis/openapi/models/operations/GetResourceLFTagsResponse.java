@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceLFTagsResponse {
@@ -12,6 +13,7 @@ public class GetResourceLFTagsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetResourceLFTagsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceLFTagsResponse {
     
     
     public String contentType;
+
     public GetResourceLFTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceLFTagsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetResourceLFTagsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceLFTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceLFTagsResponse getResourceLFTagsResponse;
+
     public GetResourceLFTagsResponse withGetResourceLFTagsResponse(org.openapis.openapi.models.shared.GetResourceLFTagsResponse getResourceLFTagsResponse) {
         this.getResourceLFTagsResponse = getResourceLFTagsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceLFTagsResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetResourceLFTagsResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class GetResourceLFTagsResponse {
      */
     
     public Object internalServiceException;
+
     public GetResourceLFTagsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class GetResourceLFTagsResponse {
      */
     
     public Object invalidInputException;
+
     public GetResourceLFTagsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class GetResourceLFTagsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetResourceLFTagsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class GetResourceLFTagsResponse {
     
     
     public Integer statusCode;
+
     public GetResourceLFTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetResourceLFTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceLFTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourceLFTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

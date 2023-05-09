@@ -28,6 +28,7 @@ public class CatalogIdMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_object_id")
     public String clientObjectId;
+
     public CatalogIdMapping withClientObjectId(String clientObjectId) {
         this.clientObjectId = clientObjectId;
         return this;
@@ -39,9 +40,11 @@ public class CatalogIdMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_id")
     public String objectId;
+
     public CatalogIdMapping withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CatalogIdMapping(){}
 }

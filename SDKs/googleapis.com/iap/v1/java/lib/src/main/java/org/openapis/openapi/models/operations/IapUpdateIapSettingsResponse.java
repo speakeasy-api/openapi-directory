@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IapUpdateIapSettingsResponse {
     
     public String contentType;
+
     public IapUpdateIapSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IapUpdateIapSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.IapSettings iapSettings;
+
     public IapUpdateIapSettingsResponse withIapSettings(org.openapis.openapi.models.shared.IapSettings iapSettings) {
         this.iapSettings = iapSettings;
         return this;
@@ -26,6 +29,7 @@ public class IapUpdateIapSettingsResponse {
     
     
     public Integer statusCode;
+
     public IapUpdateIapSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IapUpdateIapSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IapUpdateIapSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IapUpdateIapSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

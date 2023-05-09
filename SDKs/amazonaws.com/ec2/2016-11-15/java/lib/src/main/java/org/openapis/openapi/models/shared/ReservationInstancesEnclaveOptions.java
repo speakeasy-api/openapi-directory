@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesEnclaveOptions {
     
     public Boolean enabled;
+
     public ReservationInstancesEnclaveOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ReservationInstancesEnclaveOptions(){}
 }

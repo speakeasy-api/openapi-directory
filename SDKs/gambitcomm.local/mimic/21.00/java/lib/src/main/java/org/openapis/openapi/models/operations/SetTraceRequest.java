@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetTraceRequest {
@@ -12,6 +13,7 @@ public class SetTraceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetTraceRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetTraceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trace")
     public Integer trace;
+
     public SetTraceRequest withTrace(Integer trace) {
         this.trace = trace;
         return this;
     }
     
+    public SetTraceRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("trace") Integer trace) {
+        this.agentNum = agentNum;
+        this.trace = trace;
+  }
 }

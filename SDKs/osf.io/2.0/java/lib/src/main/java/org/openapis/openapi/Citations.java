@@ -61,11 +61,9 @@ public class Citations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CitationsStylesListResponse res = new org.openapis.openapi.models.operations.CitationsStylesListResponse() {{
+        org.openapis.openapi.models.operations.CitationsStylesListResponse res = new org.openapis.openapi.models.operations.CitationsStylesListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Citations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CitationsStylesReadResponse res = new org.openapis.openapi.models.operations.CitationsStylesReadResponse() {{
+        org.openapis.openapi.models.operations.CitationsStylesReadResponse res = new org.openapis.openapi.models.operations.CitationsStylesReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

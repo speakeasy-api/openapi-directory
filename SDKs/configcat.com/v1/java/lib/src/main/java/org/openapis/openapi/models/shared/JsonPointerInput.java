@@ -12,9 +12,11 @@ public class JsonPointerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public JsonPointerKindEnum kind;
+
     public JsonPointerInput withKind(JsonPointerKindEnum kind) {
         this.kind = kind;
         return this;
     }
     
+    public JsonPointerInput(){}
 }

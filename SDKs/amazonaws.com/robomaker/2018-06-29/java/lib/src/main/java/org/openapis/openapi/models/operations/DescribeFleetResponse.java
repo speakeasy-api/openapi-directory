@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetResponse {
     
     public String contentType;
+
     public DescribeFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetResponse describeFleetResponse;
+
     public DescribeFleetResponse withDescribeFleetResponse(org.openapis.openapi.models.shared.DescribeFleetResponse describeFleetResponse) {
         this.describeFleetResponse = describeFleetResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetResponse {
      */
     
     public Object internalServerException;
+
     public DescribeFleetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFleetResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeFleetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFleetResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFleetResponse {
      */
     
     public Object throttlingException;
+
     public DescribeFleetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

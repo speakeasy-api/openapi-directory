@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executorsCount")
     public Integer executorsCount;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources withExecutorsCount(Integer executorsCount) {
         this.executorsCount = executorsCount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxExecutorsCount")
     public Integer maxExecutorsCount;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources withMaxExecutorsCount(Integer maxExecutorsCount) {
         this.maxExecutorsCount = maxExecutorsCount;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources(){}
 }

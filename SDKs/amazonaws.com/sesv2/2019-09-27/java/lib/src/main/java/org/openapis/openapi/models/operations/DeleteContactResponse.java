@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteContactResponse {
@@ -12,6 +13,7 @@ public class DeleteContactResponse {
      */
     
     public Object badRequestException;
+
     public DeleteContactResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteContactResponse {
     
     
     public String contentType;
+
     public DeleteContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteContactResponse {
      */
     
     public java.util.Map<String, Object> deleteContactResponse;
+
     public DeleteContactResponse withDeleteContactResponse(java.util.Map<String, Object> deleteContactResponse) {
         this.deleteContactResponse = deleteContactResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteContactResponse {
      */
     
     public Object notFoundException;
+
     public DeleteContactResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteContactResponse {
     
     
     public Integer statusCode;
+
     public DeleteContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteContactResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteContactResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

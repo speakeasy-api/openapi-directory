@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeLoadBalancerTargetGroupsRequest {
     
     public String autoScalingGroupName;
+
     public DescribeLoadBalancerTargetGroupsRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLoadBalancerTargetGroupsRequest {
     
     
     public Long maxRecords;
+
     public DescribeLoadBalancerTargetGroupsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,13 @@ public class DescribeLoadBalancerTargetGroupsRequest {
     
     
     public String nextToken;
+
     public DescribeLoadBalancerTargetGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLoadBalancerTargetGroupsRequest(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

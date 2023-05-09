@@ -22,6 +22,7 @@ public class AutoImportConfiguration {
      */
     @JsonProperty("duplicateProductConfiguration")
     public DuplicateProductValueConfiguration duplicateProductConfiguration;
+
     public AutoImportConfiguration withDuplicateProductConfiguration(DuplicateProductValueConfiguration duplicateProductConfiguration) {
         this.duplicateProductConfiguration = duplicateProductConfiguration;
         return this;
@@ -32,6 +33,7 @@ public class AutoImportConfiguration {
      */
     @JsonProperty("input")
     public InputConfiguration input;
+
     public AutoImportConfiguration withInput(InputConfiguration input) {
         this.input = input;
         return this;
@@ -42,6 +44,7 @@ public class AutoImportConfiguration {
      */
     @JsonProperty("inputConfiguredByUserId")
     public String inputConfiguredByUserId;
+
     public AutoImportConfiguration withInputConfiguredByUserId(String inputConfiguredByUserId) {
         this.inputConfiguredByUserId = inputConfiguredByUserId;
         return this;
@@ -53,6 +56,7 @@ public class AutoImportConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pauseStatusChangedByUserId")
     public String pauseStatusChangedByUserId;
+
     public AutoImportConfiguration withPauseStatusChangedByUserId(String pauseStatusChangedByUserId) {
         this.pauseStatusChangedByUserId = pauseStatusChangedByUserId;
         return this;
@@ -66,6 +70,7 @@ public class AutoImportConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pauseStatusChangedUtcDate")
     public OffsetDateTime pauseStatusChangedUtcDate;
+
     public AutoImportConfiguration withPauseStatusChangedUtcDate(OffsetDateTime pauseStatusChangedUtcDate) {
         this.pauseStatusChangedUtcDate = pauseStatusChangedUtcDate;
         return this;
@@ -76,6 +81,7 @@ public class AutoImportConfiguration {
      */
     @JsonProperty("paused")
     public Boolean paused;
+
     public AutoImportConfiguration withPaused(Boolean paused) {
         this.paused = paused;
         return this;
@@ -87,6 +93,7 @@ public class AutoImportConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledByUserId")
     public String scheduledByUserId;
+
     public AutoImportConfiguration withScheduledByUserId(String scheduledByUserId) {
         this.scheduledByUserId = scheduledByUserId;
         return this;
@@ -98,6 +105,7 @@ public class AutoImportConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingLocalTimeZoneName")
     public String schedulingLocalTimeZoneName;
+
     public AutoImportConfiguration withSchedulingLocalTimeZoneName(String schedulingLocalTimeZoneName) {
         this.schedulingLocalTimeZoneName = schedulingLocalTimeZoneName;
         return this;
@@ -108,6 +116,7 @@ public class AutoImportConfiguration {
      */
     @JsonProperty("schedulingType")
     public SchedulingTypeEnum schedulingType;
+
     public AutoImportConfiguration withSchedulingType(SchedulingTypeEnum schedulingType) {
         this.schedulingType = schedulingType;
         return this;
@@ -118,9 +127,18 @@ public class AutoImportConfiguration {
      */
     @JsonProperty("schedulingValue")
     public String[] schedulingValue;
+
     public AutoImportConfiguration withSchedulingValue(String[] schedulingValue) {
         this.schedulingValue = schedulingValue;
         return this;
     }
     
+    public AutoImportConfiguration(@JsonProperty("duplicateProductConfiguration") DuplicateProductValueConfiguration duplicateProductConfiguration, @JsonProperty("input") InputConfiguration input, @JsonProperty("inputConfiguredByUserId") String inputConfiguredByUserId, @JsonProperty("paused") Boolean paused, @JsonProperty("schedulingType") SchedulingTypeEnum schedulingType, @JsonProperty("schedulingValue") String[] schedulingValue) {
+        this.duplicateProductConfiguration = duplicateProductConfiguration;
+        this.input = input;
+        this.inputConfiguredByUserId = inputConfiguredByUserId;
+        this.paused = paused;
+        this.schedulingType = schedulingType;
+        this.schedulingValue = schedulingValue;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class App {
     @JsonProperty("appArn")
     public String appArn;
+
     public App withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -26,6 +27,7 @@ public class App {
     
     @JsonProperty("appId")
     public String appId;
+
     public App withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -34,6 +36,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoBranchCreationConfig")
     public AutoBranchCreationConfig autoBranchCreationConfig;
+
     public App withAutoBranchCreationConfig(AutoBranchCreationConfig autoBranchCreationConfig) {
         this.autoBranchCreationConfig = autoBranchCreationConfig;
         return this;
@@ -42,6 +45,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoBranchCreationPatterns")
     public String[] autoBranchCreationPatterns;
+
     public App withAutoBranchCreationPatterns(String[] autoBranchCreationPatterns) {
         this.autoBranchCreationPatterns = autoBranchCreationPatterns;
         return this;
@@ -50,6 +54,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicAuthCredentials")
     public String basicAuthCredentials;
+
     public App withBasicAuthCredentials(String basicAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         return this;
@@ -58,6 +63,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildSpec")
     public String buildSpec;
+
     public App withBuildSpec(String buildSpec) {
         this.buildSpec = buildSpec;
         return this;
@@ -67,6 +73,7 @@ public class App {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public App withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -75,6 +82,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customHeaders")
     public String customHeaders;
+
     public App withCustomHeaders(String customHeaders) {
         this.customHeaders = customHeaders;
         return this;
@@ -83,6 +91,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRules")
     public CustomRule[] customRules;
+
     public App withCustomRules(CustomRule[] customRules) {
         this.customRules = customRules;
         return this;
@@ -90,6 +99,7 @@ public class App {
     
     @JsonProperty("defaultDomain")
     public String defaultDomain;
+
     public App withDefaultDomain(String defaultDomain) {
         this.defaultDomain = defaultDomain;
         return this;
@@ -97,6 +107,7 @@ public class App {
     
     @JsonProperty("description")
     public String description;
+
     public App withDescription(String description) {
         this.description = description;
         return this;
@@ -105,6 +116,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutoBranchCreation")
     public Boolean enableAutoBranchCreation;
+
     public App withEnableAutoBranchCreation(Boolean enableAutoBranchCreation) {
         this.enableAutoBranchCreation = enableAutoBranchCreation;
         return this;
@@ -112,6 +124,7 @@ public class App {
     
     @JsonProperty("enableBasicAuth")
     public Boolean enableBasicAuth;
+
     public App withEnableBasicAuth(Boolean enableBasicAuth) {
         this.enableBasicAuth = enableBasicAuth;
         return this;
@@ -119,6 +132,7 @@ public class App {
     
     @JsonProperty("enableBranchAutoBuild")
     public Boolean enableBranchAutoBuild;
+
     public App withEnableBranchAutoBuild(Boolean enableBranchAutoBuild) {
         this.enableBranchAutoBuild = enableBranchAutoBuild;
         return this;
@@ -127,6 +141,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBranchAutoDeletion")
     public Boolean enableBranchAutoDeletion;
+
     public App withEnableBranchAutoDeletion(Boolean enableBranchAutoDeletion) {
         this.enableBranchAutoDeletion = enableBranchAutoDeletion;
         return this;
@@ -134,6 +149,7 @@ public class App {
     
     @JsonProperty("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
     public App withEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -142,6 +158,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamServiceRoleArn")
     public String iamServiceRoleArn;
+
     public App withIamServiceRoleArn(String iamServiceRoleArn) {
         this.iamServiceRoleArn = iamServiceRoleArn;
         return this;
@@ -149,6 +166,7 @@ public class App {
     
     @JsonProperty("name")
     public String name;
+
     public App withName(String name) {
         this.name = name;
         return this;
@@ -156,6 +174,7 @@ public class App {
     
     @JsonProperty("platform")
     public PlatformEnum platform;
+
     public App withPlatform(PlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -164,6 +183,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productionBranch")
     public ProductionBranch productionBranch;
+
     public App withProductionBranch(ProductionBranch productionBranch) {
         this.productionBranch = productionBranch;
         return this;
@@ -171,6 +191,7 @@ public class App {
     
     @JsonProperty("repository")
     public String repository;
+
     public App withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -179,6 +200,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryCloneMethod")
     public RepositoryCloneMethodEnum repositoryCloneMethod;
+
     public App withRepositoryCloneMethod(RepositoryCloneMethodEnum repositoryCloneMethod) {
         this.repositoryCloneMethod = repositoryCloneMethod;
         return this;
@@ -187,6 +209,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public App withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -196,9 +219,24 @@ public class App {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public App withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public App(@JsonProperty("appArn") String appArn, @JsonProperty("appId") String appId, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("defaultDomain") String defaultDomain, @JsonProperty("description") String description, @JsonProperty("enableBasicAuth") Boolean enableBasicAuth, @JsonProperty("enableBranchAutoBuild") Boolean enableBranchAutoBuild, @JsonProperty("environmentVariables") java.util.Map<String, String> environmentVariables, @JsonProperty("name") String name, @JsonProperty("platform") PlatformEnum platform, @JsonProperty("repository") String repository, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.appArn = appArn;
+        this.appId = appId;
+        this.createTime = createTime;
+        this.defaultDomain = defaultDomain;
+        this.description = description;
+        this.enableBasicAuth = enableBasicAuth;
+        this.enableBranchAutoBuild = enableBranchAutoBuild;
+        this.environmentVariables = environmentVariables;
+        this.name = name;
+        this.platform = platform;
+        this.repository = repository;
+        this.updateTime = updateTime;
+  }
 }

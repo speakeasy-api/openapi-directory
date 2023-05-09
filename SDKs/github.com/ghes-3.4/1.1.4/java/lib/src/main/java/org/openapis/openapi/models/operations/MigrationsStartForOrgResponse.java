@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrationsStartForOrgResponse {
     
     public String contentType;
+
     public MigrationsStartForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MigrationsStartForOrgResponse {
     
     
     public Integer statusCode;
+
     public MigrationsStartForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MigrationsStartForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrationsStartForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MigrationsStartForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public MigrationsStartForOrgResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class MigrationsStartForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.Migration migration;
+
     public MigrationsStartForOrgResponse withMigration(org.openapis.openapi.models.shared.Migration migration) {
         this.migration = migration;
         return this;
@@ -53,9 +59,14 @@ public class MigrationsStartForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public MigrationsStartForOrgResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public MigrationsStartForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

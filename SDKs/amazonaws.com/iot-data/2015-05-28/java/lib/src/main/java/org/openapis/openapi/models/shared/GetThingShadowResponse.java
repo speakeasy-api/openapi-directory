@@ -15,9 +15,11 @@ public class GetThingShadowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public GetThingShadowResponse withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public GetThingShadowResponse(){}
 }

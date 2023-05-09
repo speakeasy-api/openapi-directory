@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NameValuePair {
     @JsonProperty("name")
     public String name;
+
     public NameValuePair withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class NameValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public NameValuePair withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NameValuePair(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

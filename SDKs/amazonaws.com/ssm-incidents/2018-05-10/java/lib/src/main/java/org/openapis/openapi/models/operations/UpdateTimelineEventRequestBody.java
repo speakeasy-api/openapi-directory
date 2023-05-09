@@ -20,6 +20,7 @@ public class UpdateTimelineEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateTimelineEventRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -31,6 +32,7 @@ public class UpdateTimelineEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventData")
     public String eventData;
+
     public UpdateTimelineEventRequestBody withEventData(String eventData) {
         this.eventData = eventData;
         return this;
@@ -41,6 +43,7 @@ public class UpdateTimelineEventRequestBody {
      */
     @JsonProperty("eventId")
     public String eventId;
+
     public UpdateTimelineEventRequestBody withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -52,6 +55,7 @@ public class UpdateTimelineEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventReferences")
     public org.openapis.openapi.models.shared.EventReference[] eventReferences;
+
     public UpdateTimelineEventRequestBody withEventReferences(org.openapis.openapi.models.shared.EventReference[] eventReferences) {
         this.eventReferences = eventReferences;
         return this;
@@ -65,6 +69,7 @@ public class UpdateTimelineEventRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTime")
     public OffsetDateTime eventTime;
+
     public UpdateTimelineEventRequestBody withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -76,6 +81,7 @@ public class UpdateTimelineEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public UpdateTimelineEventRequestBody withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -86,9 +92,14 @@ public class UpdateTimelineEventRequestBody {
      */
     @JsonProperty("incidentRecordArn")
     public String incidentRecordArn;
+
     public UpdateTimelineEventRequestBody withIncidentRecordArn(String incidentRecordArn) {
         this.incidentRecordArn = incidentRecordArn;
         return this;
     }
     
+    public UpdateTimelineEventRequestBody(@JsonProperty("eventId") String eventId, @JsonProperty("incidentRecordArn") String incidentRecordArn) {
+        this.eventId = eventId;
+        this.incidentRecordArn = incidentRecordArn;
+  }
 }

@@ -12,6 +12,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetBookmarkListRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +43,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetBookmarkListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,6 +54,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
     public org.openapis.openapi.models.shared.ItemTypeEnum itemType;
+
     public GetBookmarkListRequest withItemType(org.openapis.openapi.models.shared.ItemTypeEnum itemType) {
         this.itemType = itemType;
         return this;
@@ -72,6 +75,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetBookmarkListRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -82,6 +86,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.ListOrderEnum order;
+
     public GetBookmarkListRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
         this.order = order;
         return this;
@@ -92,6 +97,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetBookmarkListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -102,6 +108,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetBookmarkListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +119,7 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetBookmarkListRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -122,9 +130,11 @@ public class GetBookmarkListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetBookmarkListRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetBookmarkListRequest(){}
 }

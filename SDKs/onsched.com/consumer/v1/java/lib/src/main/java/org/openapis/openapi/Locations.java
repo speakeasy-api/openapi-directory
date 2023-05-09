@@ -60,11 +60,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1LocationsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1LocationsResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1LocationsResponse res = new org.openapis.openapi.models.operations.GetConsumerV1LocationsResponse(contentType, httpRes.statusCode()) {{
             locationListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1LocationsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1LocationsIdResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1LocationsIdResponse res = new org.openapis.openapi.models.operations.GetConsumerV1LocationsIdResponse(contentType, httpRes.statusCode()) {{
             locationViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

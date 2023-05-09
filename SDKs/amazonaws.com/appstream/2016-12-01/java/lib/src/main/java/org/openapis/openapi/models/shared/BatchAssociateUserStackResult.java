@@ -15,9 +15,11 @@ public class BatchAssociateUserStackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public UserStackAssociationError[] errors;
+
     public BatchAssociateUserStackResult withErrors(UserStackAssociationError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchAssociateUserStackResult(){}
 }

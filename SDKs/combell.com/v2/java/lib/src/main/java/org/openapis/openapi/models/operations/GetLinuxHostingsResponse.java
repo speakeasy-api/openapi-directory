@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLinuxHostingsResponse {
     
     public String contentType;
+
     public GetLinuxHostingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetLinuxHostingsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetLinuxHostingsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetLinuxHostingsResponse {
      */
     
     public org.openapis.openapi.models.shared.LinuxHosting[] linuxHostings;
+
     public GetLinuxHostingsResponse withLinuxHostings(org.openapis.openapi.models.shared.LinuxHosting[] linuxHostings) {
         this.linuxHostings = linuxHostings;
         return this;
@@ -33,6 +37,7 @@ public class GetLinuxHostingsResponse {
     
     
     public Integer statusCode;
+
     public GetLinuxHostingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetLinuxHostingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLinuxHostingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLinuxHostingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

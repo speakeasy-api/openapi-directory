@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateArchiveResponse {
@@ -12,6 +13,7 @@ public class CreateArchiveResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateArchiveResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateArchiveResponse {
     
     
     public String contentType;
+
     public CreateArchiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateArchiveResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateArchiveResponse createArchiveResponse;
+
     public CreateArchiveResponse withCreateArchiveResponse(org.openapis.openapi.models.shared.CreateArchiveResponse createArchiveResponse) {
         this.createArchiveResponse = createArchiveResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateArchiveResponse {
      */
     
     public Object internalException;
+
     public CreateArchiveResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class CreateArchiveResponse {
      */
     
     public Object invalidEventPatternException;
+
     public CreateArchiveResponse withInvalidEventPatternException(Object invalidEventPatternException) {
         this.invalidEventPatternException = invalidEventPatternException;
         return this;
@@ -59,6 +65,7 @@ public class CreateArchiveResponse {
      */
     
     public Object limitExceededException;
+
     public CreateArchiveResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateArchiveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateArchiveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateArchiveResponse {
     
     
     public Integer statusCode;
+
     public CreateArchiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateArchiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateArchiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateArchiveResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateArchiveResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateArchiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

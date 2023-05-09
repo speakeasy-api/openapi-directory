@@ -18,6 +18,7 @@ public class ListProductCertificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListProductCertificationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListProductCertificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCertifications")
     public ProductCertification[] productCertifications;
+
     public ListProductCertificationsResponse withProductCertifications(ProductCertification[] productCertifications) {
         this.productCertifications = productCertifications;
         return this;
     }
     
+    public ListProductCertificationsResponse(){}
 }

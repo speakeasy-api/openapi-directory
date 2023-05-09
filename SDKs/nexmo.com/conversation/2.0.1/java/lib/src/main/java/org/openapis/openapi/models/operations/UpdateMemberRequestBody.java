@@ -15,6 +15,7 @@ public class UpdateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public org.openapis.openapi.models.shared.MemberActionEnum action;
+
     public UpdateMemberRequestBody withAction(org.openapis.openapi.models.shared.MemberActionEnum action) {
         this.action = action;
         return this;
@@ -26,9 +27,11 @@ public class UpdateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public UpdateMemberRequestBody withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
     }
     
+    public UpdateMemberRequestBody(){}
 }

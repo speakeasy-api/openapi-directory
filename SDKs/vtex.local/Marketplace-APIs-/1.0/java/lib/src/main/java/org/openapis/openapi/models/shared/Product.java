@@ -12,6 +12,7 @@ public class Product {
      */
     @JsonProperty("brandId")
     public Integer brandId;
+
     public Product withBrandId(Integer brandId) {
         this.brandId = brandId;
         return this;
@@ -22,6 +23,7 @@ public class Product {
      */
     @JsonProperty("categoryId")
     public Integer categoryId;
+
     public Product withCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -32,6 +34,7 @@ public class Product {
      */
     @JsonProperty("description")
     public String description;
+
     public Product withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +45,7 @@ public class Product {
      */
     @JsonProperty("name")
     public String name;
+
     public Product withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,17 @@ public class Product {
      */
     @JsonProperty("specifications")
     public String specifications;
+
     public Product withSpecifications(String specifications) {
         this.specifications = specifications;
         return this;
     }
     
+    public Product(@JsonProperty("brandId") Integer brandId, @JsonProperty("categoryId") Integer categoryId, @JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("specifications") String specifications) {
+        this.brandId = brandId;
+        this.categoryId = categoryId;
+        this.description = description;
+        this.name = name;
+        this.specifications = specifications;
+  }
 }

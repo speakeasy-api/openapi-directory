@@ -15,9 +15,11 @@ public class StartPolicyGenerationRequestBodyPolicyGenerationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalArn")
     public String principalArn;
+
     public StartPolicyGenerationRequestBodyPolicyGenerationDetails withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
     }
     
+    public StartPolicyGenerationRequestBodyPolicyGenerationDetails(){}
 }

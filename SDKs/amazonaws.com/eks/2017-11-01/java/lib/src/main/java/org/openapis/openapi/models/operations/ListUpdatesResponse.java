@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUpdatesResponse {
@@ -12,6 +13,7 @@ public class ListUpdatesResponse {
      */
     
     public Object clientException;
+
     public ListUpdatesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListUpdatesResponse {
     
     
     public String contentType;
+
     public ListUpdatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListUpdatesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListUpdatesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListUpdatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUpdatesResponse listUpdatesResponse;
+
     public ListUpdatesResponse withListUpdatesResponse(org.openapis.openapi.models.shared.ListUpdatesResponse listUpdatesResponse) {
         this.listUpdatesResponse = listUpdatesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListUpdatesResponse {
     
     
     public Integer statusCode;
+
     public ListUpdatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListUpdatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUpdatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListUpdatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListUpdatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListUpdatesResponse {
      */
     
     public Object serverException;
+
     public ListUpdatesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public ListUpdatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

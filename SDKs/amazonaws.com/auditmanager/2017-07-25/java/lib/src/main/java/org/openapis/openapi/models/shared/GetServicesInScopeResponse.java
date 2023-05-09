@@ -15,9 +15,11 @@ public class GetServicesInScopeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceMetadata")
     public ServiceMetadata[] serviceMetadata;
+
     public GetServicesInScopeResponse withServiceMetadata(ServiceMetadata[] serviceMetadata) {
         this.serviceMetadata = serviceMetadata;
         return this;
     }
     
+    public GetServicesInScopeResponse(){}
 }

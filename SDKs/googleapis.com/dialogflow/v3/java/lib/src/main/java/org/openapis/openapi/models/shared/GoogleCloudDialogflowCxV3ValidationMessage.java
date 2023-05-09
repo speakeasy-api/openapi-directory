@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ValidationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public GoogleCloudDialogflowCxV3ValidationMessage withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3ValidationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceNames")
     public GoogleCloudDialogflowCxV3ResourceName[] resourceNames;
+
     public GoogleCloudDialogflowCxV3ValidationMessage withResourceNames(GoogleCloudDialogflowCxV3ResourceName[] resourceNames) {
         this.resourceNames = resourceNames;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3ValidationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public GoogleCloudDialogflowCxV3ValidationMessageResourceTypeEnum resourceType;
+
     public GoogleCloudDialogflowCxV3ValidationMessage withResourceType(GoogleCloudDialogflowCxV3ValidationMessageResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3ValidationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public GoogleCloudDialogflowCxV3ValidationMessage withResources(String[] resources) {
         this.resources = resources;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowCxV3ValidationMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public GoogleCloudDialogflowCxV3ValidationMessageSeverityEnum severity;
+
     public GoogleCloudDialogflowCxV3ValidationMessage withSeverity(GoogleCloudDialogflowCxV3ValidationMessageSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ValidationMessage(){}
 }

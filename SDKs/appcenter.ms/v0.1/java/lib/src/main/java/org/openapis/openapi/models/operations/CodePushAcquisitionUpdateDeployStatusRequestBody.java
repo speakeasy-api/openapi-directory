@@ -15,6 +15,7 @@ public class CodePushAcquisitionUpdateDeployStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_version")
     public String appVersion;
+
     public CodePushAcquisitionUpdateDeployStatusRequestBody withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -23,6 +24,7 @@ public class CodePushAcquisitionUpdateDeployStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_unique_id")
     public String clientUniqueId;
+
     public CodePushAcquisitionUpdateDeployStatusRequestBody withClientUniqueId(String clientUniqueId) {
         this.clientUniqueId = clientUniqueId;
         return this;
@@ -30,6 +32,7 @@ public class CodePushAcquisitionUpdateDeployStatusRequestBody {
     
     @JsonProperty("deployment_key")
     public String deploymentKey;
+
     public CodePushAcquisitionUpdateDeployStatusRequestBody withDeploymentKey(String deploymentKey) {
         this.deploymentKey = deploymentKey;
         return this;
@@ -38,6 +41,7 @@ public class CodePushAcquisitionUpdateDeployStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CodePushAcquisitionUpdateDeployStatusRequestBody withLabel(String label) {
         this.label = label;
         return this;
@@ -46,6 +50,7 @@ public class CodePushAcquisitionUpdateDeployStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_deployment_key")
     public String previousDeploymentKey;
+
     public CodePushAcquisitionUpdateDeployStatusRequestBody withPreviousDeploymentKey(String previousDeploymentKey) {
         this.previousDeploymentKey = previousDeploymentKey;
         return this;
@@ -54,6 +59,7 @@ public class CodePushAcquisitionUpdateDeployStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_label_or_app_version")
     public String previousLabelOrAppVersion;
+
     public CodePushAcquisitionUpdateDeployStatusRequestBody withPreviousLabelOrAppVersion(String previousLabelOrAppVersion) {
         this.previousLabelOrAppVersion = previousLabelOrAppVersion;
         return this;
@@ -62,9 +68,13 @@ public class CodePushAcquisitionUpdateDeployStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CodePushAcquisitionUpdateDeployStatusRequestBody withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CodePushAcquisitionUpdateDeployStatusRequestBody(@JsonProperty("deployment_key") String deploymentKey) {
+        this.deploymentKey = deploymentKey;
+  }
 }

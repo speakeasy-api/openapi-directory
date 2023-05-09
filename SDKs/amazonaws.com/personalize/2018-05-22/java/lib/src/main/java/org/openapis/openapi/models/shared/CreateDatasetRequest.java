@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDatasetRequest {
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public CreateDatasetRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -18,6 +19,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("datasetType")
     public String datasetType;
+
     public CreateDatasetRequest withDatasetType(String datasetType) {
         this.datasetType = datasetType;
         return this;
@@ -25,6 +27,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateDatasetRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +35,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("schemaArn")
     public String schemaArn;
+
     public CreateDatasetRequest withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -40,9 +44,16 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDatasetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetRequest(@JsonProperty("datasetGroupArn") String datasetGroupArn, @JsonProperty("datasetType") String datasetType, @JsonProperty("name") String name, @JsonProperty("schemaArn") String schemaArn) {
+        this.datasetGroupArn = datasetGroupArn;
+        this.datasetType = datasetType;
+        this.name = name;
+        this.schemaArn = schemaArn;
+  }
 }

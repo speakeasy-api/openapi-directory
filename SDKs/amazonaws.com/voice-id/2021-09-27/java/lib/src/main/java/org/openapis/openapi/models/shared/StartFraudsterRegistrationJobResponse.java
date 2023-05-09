@@ -15,9 +15,11 @@ public class StartFraudsterRegistrationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Job")
     public FraudsterRegistrationJob job;
+
     public StartFraudsterRegistrationJobResponse withJob(FraudsterRegistrationJob job) {
         this.job = job;
         return this;
     }
     
+    public StartFraudsterRegistrationJobResponse(){}
 }

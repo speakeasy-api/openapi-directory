@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EcosystemsOneRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ecosystem_id")
     public String ecosystemId;
+
     public EcosystemsOneRequest withEcosystemId(String ecosystemId) {
         this.ecosystemId = ecosystemId;
         return this;
     }
     
+    public EcosystemsOneRequest(@JsonProperty("ecosystem_id") String ecosystemId) {
+        this.ecosystemId = ecosystemId;
+  }
 }

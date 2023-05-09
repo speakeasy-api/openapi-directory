@@ -25,6 +25,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("Documents")
     @SpeakeasyMetadata("form:name=Documents,json")
     public MaintenanceDocumentModel[] documents;
+
     public MaintenanceIssueModel withDocuments(MaintenanceDocumentModel[] documents) {
         this.documents = documents;
         return this;
@@ -37,6 +38,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("ExternalID")
     @SpeakeasyMetadata("form:name=ExternalID")
     public String externalID;
+
     public MaintenanceIssueModel withExternalID(String externalID) {
         this.externalID = externalID;
         return this;
@@ -49,6 +51,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("IssueFault")
     @SpeakeasyMetadata("form:name=IssueFault")
     public String issueFault;
+
     public MaintenanceIssueModel withIssueFault(String issueFault) {
         this.issueFault = issueFault;
         return this;
@@ -61,6 +64,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("IssueNotes")
     @SpeakeasyMetadata("form:name=IssueNotes")
     public String issueNotes;
+
     public MaintenanceIssueModel withIssueNotes(String issueNotes) {
         this.issueNotes = issueNotes;
         return this;
@@ -73,6 +77,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("IssuePriority")
     @SpeakeasyMetadata("form:name=IssuePriority")
     public MaintenanceIssueModelIssuePriorityEnum issuePriority;
+
     public MaintenanceIssueModel withIssuePriority(MaintenanceIssueModelIssuePriorityEnum issuePriority) {
         this.issuePriority = issuePriority;
         return this;
@@ -85,6 +90,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("IssueTitle")
     @SpeakeasyMetadata("form:name=IssueTitle")
     public String issueTitle;
+
     public MaintenanceIssueModel withIssueTitle(String issueTitle) {
         this.issueTitle = issueTitle;
         return this;
@@ -97,6 +103,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("PropertyAddress1")
     @SpeakeasyMetadata("form:name=PropertyAddress1")
     public String propertyAddress1;
+
     public MaintenanceIssueModel withPropertyAddress1(String propertyAddress1) {
         this.propertyAddress1 = propertyAddress1;
         return this;
@@ -109,6 +116,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("PropertyAddress2")
     @SpeakeasyMetadata("form:name=PropertyAddress2")
     public String propertyAddress2;
+
     public MaintenanceIssueModel withPropertyAddress2(String propertyAddress2) {
         this.propertyAddress2 = propertyAddress2;
         return this;
@@ -121,6 +129,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("PropertyAddress3")
     @SpeakeasyMetadata("form:name=PropertyAddress3")
     public String propertyAddress3;
+
     public MaintenanceIssueModel withPropertyAddress3(String propertyAddress3) {
         this.propertyAddress3 = propertyAddress3;
         return this;
@@ -133,6 +142,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("PropertyAddress4")
     @SpeakeasyMetadata("form:name=PropertyAddress4")
     public String propertyAddress4;
+
     public MaintenanceIssueModel withPropertyAddress4(String propertyAddress4) {
         this.propertyAddress4 = propertyAddress4;
         return this;
@@ -145,6 +155,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("PropertyCountry")
     @SpeakeasyMetadata("form:name=PropertyCountry")
     public String propertyCountry;
+
     public MaintenanceIssueModel withPropertyCountry(String propertyCountry) {
         this.propertyCountry = propertyCountry;
         return this;
@@ -157,6 +168,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("PropertyPostcode")
     @SpeakeasyMetadata("form:name=PropertyPostcode")
     public String propertyPostcode;
+
     public MaintenanceIssueModel withPropertyPostcode(String propertyPostcode) {
         this.propertyPostcode = propertyPostcode;
         return this;
@@ -171,6 +183,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("ReportedAt")
     @SpeakeasyMetadata("form:name=ReportedAt")
     public OffsetDateTime reportedAt;
+
     public MaintenanceIssueModel withReportedAt(OffsetDateTime reportedAt) {
         this.reportedAt = reportedAt;
         return this;
@@ -183,6 +196,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("TenantEMailAddress")
     @SpeakeasyMetadata("form:name=TenantEMailAddress")
     public String tenantEMailAddress;
+
     public MaintenanceIssueModel withTenantEMailAddress(String tenantEMailAddress) {
         this.tenantEMailAddress = tenantEMailAddress;
         return this;
@@ -195,6 +209,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("TenantForename")
     @SpeakeasyMetadata("form:name=TenantForename")
     public String tenantForename;
+
     public MaintenanceIssueModel withTenantForename(String tenantForename) {
         this.tenantForename = tenantForename;
         return this;
@@ -207,6 +222,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("TenantPhonePrimary")
     @SpeakeasyMetadata("form:name=TenantPhonePrimary")
     public String tenantPhonePrimary;
+
     public MaintenanceIssueModel withTenantPhonePrimary(String tenantPhonePrimary) {
         this.tenantPhonePrimary = tenantPhonePrimary;
         return this;
@@ -219,6 +235,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("TenantPhoneSecondary")
     @SpeakeasyMetadata("form:name=TenantPhoneSecondary")
     public String tenantPhoneSecondary;
+
     public MaintenanceIssueModel withTenantPhoneSecondary(String tenantPhoneSecondary) {
         this.tenantPhoneSecondary = tenantPhoneSecondary;
         return this;
@@ -231,6 +248,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("TenantPresenceRequested")
     @SpeakeasyMetadata("form:name=TenantPresenceRequested")
     public Boolean tenantPresenceRequested;
+
     public MaintenanceIssueModel withTenantPresenceRequested(Boolean tenantPresenceRequested) {
         this.tenantPresenceRequested = tenantPresenceRequested;
         return this;
@@ -243,6 +261,7 @@ public class MaintenanceIssueModel {
     @JsonProperty("TenantSurname")
     @SpeakeasyMetadata("form:name=TenantSurname")
     public String tenantSurname;
+
     public MaintenanceIssueModel withTenantSurname(String tenantSurname) {
         this.tenantSurname = tenantSurname;
         return this;
@@ -255,9 +274,11 @@ public class MaintenanceIssueModel {
     @JsonProperty("TenantTitle")
     @SpeakeasyMetadata("form:name=TenantTitle")
     public String tenantTitle;
+
     public MaintenanceIssueModel withTenantTitle(String tenantTitle) {
         this.tenantTitle = tenantTitle;
         return this;
     }
     
+    public MaintenanceIssueModel(){}
 }

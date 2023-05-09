@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateManagedPrefixListRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateManagedPrefixListRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateManagedPrefixListRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateManagedPrefixListRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateManagedPrefixListRequestTagSpecificationsTags(){}
 }

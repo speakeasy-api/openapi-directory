@@ -12,6 +12,7 @@ public class DeleteOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public DeleteOrganizationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class DeleteOrganizationRequest {
     
     @JsonProperty("DeleteDirectory")
     public Boolean deleteDirectory;
+
     public DeleteOrganizationRequest withDeleteDirectory(Boolean deleteDirectory) {
         this.deleteDirectory = deleteDirectory;
         return this;
@@ -26,9 +28,14 @@ public class DeleteOrganizationRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteOrganizationRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteOrganizationRequest(@JsonProperty("DeleteDirectory") Boolean deleteDirectory, @JsonProperty("OrganizationId") String organizationId) {
+        this.deleteDirectory = deleteDirectory;
+        this.organizationId = organizationId;
+  }
 }

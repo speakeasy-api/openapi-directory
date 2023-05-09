@@ -17,6 +17,7 @@ public class ConvertedNoteToIssueIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public ConvertedNoteToIssueIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -24,6 +25,7 @@ public class ConvertedNoteToIssueIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public ConvertedNoteToIssueIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -31,6 +33,7 @@ public class ConvertedNoteToIssueIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public ConvertedNoteToIssueIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -38,6 +41,7 @@ public class ConvertedNoteToIssueIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public ConvertedNoteToIssueIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +49,7 @@ public class ConvertedNoteToIssueIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public ConvertedNoteToIssueIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -52,6 +57,7 @@ public class ConvertedNoteToIssueIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public ConvertedNoteToIssueIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +65,7 @@ public class ConvertedNoteToIssueIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public ConvertedNoteToIssueIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -69,6 +76,7 @@ public class ConvertedNoteToIssueIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public Integration performedViaGithubApp;
+
     public ConvertedNoteToIssueIssueEvent withPerformedViaGithubApp(Integration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -77,6 +85,7 @@ public class ConvertedNoteToIssueIssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_card")
     public ConvertedNoteToIssueIssueEventProjectCard projectCard;
+
     public ConvertedNoteToIssueIssueEvent withProjectCard(ConvertedNoteToIssueIssueEventProjectCard projectCard) {
         this.projectCard = projectCard;
         return this;
@@ -84,9 +93,21 @@ public class ConvertedNoteToIssueIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public ConvertedNoteToIssueIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ConvertedNoteToIssueIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") Integration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CoverageMapFilter {
     @JsonProperty("comparison")
     public CoverageMapComparisonEnum comparison;
+
     public CoverageMapFilter withComparison(CoverageMapComparisonEnum comparison) {
         this.comparison = comparison;
         return this;
@@ -21,6 +22,7 @@ public class CoverageMapFilter {
     
     @JsonProperty("key")
     public String key;
+
     public CoverageMapFilter withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +31,14 @@ public class CoverageMapFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CoverageMapFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CoverageMapFilter(@JsonProperty("comparison") CoverageMapComparisonEnum comparison, @JsonProperty("key") String key) {
+        this.comparison = comparison;
+        this.key = key;
+  }
 }

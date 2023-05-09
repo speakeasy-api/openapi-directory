@@ -15,9 +15,11 @@ public class DescribeMigrationTaskResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MigrationTask")
     public MigrationTask migrationTask;
+
     public DescribeMigrationTaskResult withMigrationTask(MigrationTask migrationTask) {
         this.migrationTask = migrationTask;
         return this;
     }
     
+    public DescribeMigrationTaskResult(){}
 }

@@ -15,6 +15,7 @@ public class AlertFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionFilterList")
     public DimensionFilter[] dimensionFilterList;
+
     public AlertFilters withDimensionFilterList(DimensionFilter[] dimensionFilterList) {
         this.dimensionFilterList = dimensionFilterList;
         return this;
@@ -23,9 +24,11 @@ public class AlertFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricList")
     public String[] metricList;
+
     public AlertFilters withMetricList(String[] metricList) {
         this.metricList = metricList;
         return this;
     }
     
+    public AlertFilters(){}
 }

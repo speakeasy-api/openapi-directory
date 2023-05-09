@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostFilesFileIdGetTemporaryLinkResponse {
     
     public byte[] body;
+
     public PostFilesFileIdGetTemporaryLinkResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostFilesFileIdGetTemporaryLinkResponse {
     
     
     public String contentType;
+
     public PostFilesFileIdGetTemporaryLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostFilesFileIdGetTemporaryLinkResponse {
     
     
     public Integer statusCode;
+
     public PostFilesFileIdGetTemporaryLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostFilesFileIdGetTemporaryLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostFilesFileIdGetTemporaryLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostFilesFileIdGetTemporaryLinkResponse {
      */
     
     public PostFilesFileIdGetTemporaryLink200ApplicationJSON postFilesFileIdGetTemporaryLink200ApplicationJSONObject;
+
     public PostFilesFileIdGetTemporaryLinkResponse withPostFilesFileIdGetTemporaryLink200ApplicationJSONObject(PostFilesFileIdGetTemporaryLink200ApplicationJSON postFilesFileIdGetTemporaryLink200ApplicationJSONObject) {
         this.postFilesFileIdGetTemporaryLink200ApplicationJSONObject = postFilesFileIdGetTemporaryLink200ApplicationJSONObject;
         return this;
@@ -52,6 +58,7 @@ public class PostFilesFileIdGetTemporaryLinkResponse {
      */
     
     public PostFilesFileIdGetTemporaryLink400ApplicationJSON postFilesFileIdGetTemporaryLink400ApplicationJSONObject;
+
     public PostFilesFileIdGetTemporaryLinkResponse withPostFilesFileIdGetTemporaryLink400ApplicationJSONObject(PostFilesFileIdGetTemporaryLink400ApplicationJSON postFilesFileIdGetTemporaryLink400ApplicationJSONObject) {
         this.postFilesFileIdGetTemporaryLink400ApplicationJSONObject = postFilesFileIdGetTemporaryLink400ApplicationJSONObject;
         return this;
@@ -62,9 +69,14 @@ public class PostFilesFileIdGetTemporaryLinkResponse {
      */
     
     public PostFilesFileIdGetTemporaryLink404ApplicationJSON postFilesFileIdGetTemporaryLink404ApplicationJSONObject;
+
     public PostFilesFileIdGetTemporaryLinkResponse withPostFilesFileIdGetTemporaryLink404ApplicationJSONObject(PostFilesFileIdGetTemporaryLink404ApplicationJSON postFilesFileIdGetTemporaryLink404ApplicationJSONObject) {
         this.postFilesFileIdGetTemporaryLink404ApplicationJSONObject = postFilesFileIdGetTemporaryLink404ApplicationJSONObject;
         return this;
     }
     
+    public PostFilesFileIdGetTemporaryLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

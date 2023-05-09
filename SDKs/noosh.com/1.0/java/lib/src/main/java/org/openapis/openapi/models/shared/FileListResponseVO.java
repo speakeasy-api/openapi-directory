@@ -15,6 +15,7 @@ public class FileListResponseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public FileVO[] result;
+
     public FileListResponseVO withResult(FileVO[] result) {
         this.result = result;
         return this;
@@ -23,6 +24,7 @@ public class FileListResponseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public FileListResponseVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class FileListResponseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public FileListResponseVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public FileListResponseVO(){}
 }

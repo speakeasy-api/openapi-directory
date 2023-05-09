@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest {
@@ -12,6 +13,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -42,9 +46,16 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("productId") String productId, @JsonProperty("skuId") String skuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.productId = productId;
+        this.skuId = skuId;
+  }
 }

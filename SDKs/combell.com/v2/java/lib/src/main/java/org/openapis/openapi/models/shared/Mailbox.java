@@ -15,6 +15,7 @@ public class Mailbox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_size")
     public Integer actualSize;
+
     public Mailbox withActualSize(Integer actualSize) {
         this.actualSize = actualSize;
         return this;
@@ -26,6 +27,7 @@ public class Mailbox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_size")
     public Integer maxSize;
+
     public Mailbox withMaxSize(Integer maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -34,9 +36,11 @@ public class Mailbox {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Mailbox withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Mailbox(){}
 }

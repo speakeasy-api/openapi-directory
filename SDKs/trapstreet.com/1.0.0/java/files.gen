@@ -32,4 +32,5 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetAddressRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAddress200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAddressResponse.java
+docs/sdk/README.md
 USAGE.md

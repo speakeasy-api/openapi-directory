@@ -18,9 +18,13 @@ public class AdditionalInformationStructured {
      */
     @JsonProperty("standingOrderDetails")
     public StandingOrderDetails standingOrderDetails;
+
     public AdditionalInformationStructured withStandingOrderDetails(StandingOrderDetails standingOrderDetails) {
         this.standingOrderDetails = standingOrderDetails;
         return this;
     }
     
+    public AdditionalInformationStructured(@JsonProperty("standingOrderDetails") StandingOrderDetails standingOrderDetails) {
+        this.standingOrderDetails = standingOrderDetails;
+  }
 }

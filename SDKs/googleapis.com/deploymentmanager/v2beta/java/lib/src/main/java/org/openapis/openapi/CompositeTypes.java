@@ -59,11 +59,9 @@ public class CompositeTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class CompositeTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetResponse(contentType, httpRes.statusCode()) {{
             compositeType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class CompositeTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class CompositeTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListResponse(contentType, httpRes.statusCode()) {{
             compositeTypesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class CompositeTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class CompositeTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

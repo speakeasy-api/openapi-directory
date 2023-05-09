@@ -18,9 +18,11 @@ public class EnableCertificateAuthorityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public EnableCertificateAuthorityRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public EnableCertificateAuthorityRequest(){}
 }

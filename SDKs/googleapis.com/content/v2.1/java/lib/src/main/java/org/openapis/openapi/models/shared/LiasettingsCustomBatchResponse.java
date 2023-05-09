@@ -18,6 +18,7 @@ public class LiasettingsCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public LiasettingsCustomBatchResponseEntry[] entries;
+
     public LiasettingsCustomBatchResponse withEntries(LiasettingsCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class LiasettingsCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LiasettingsCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public LiasettingsCustomBatchResponse(){}
 }

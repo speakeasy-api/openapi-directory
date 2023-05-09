@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVirtualInterfaceResponse {
     
     public String contentType;
+
     public DeleteVirtualInterfaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVirtualInterfaceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteVirtualInterfaceResponse deleteVirtualInterfaceResponse;
+
     public DeleteVirtualInterfaceResponse withDeleteVirtualInterfaceResponse(org.openapis.openapi.models.shared.DeleteVirtualInterfaceResponse deleteVirtualInterfaceResponse) {
         this.deleteVirtualInterfaceResponse = deleteVirtualInterfaceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVirtualInterfaceResponse {
      */
     
     public Object directConnectClientException;
+
     public DeleteVirtualInterfaceResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVirtualInterfaceResponse {
      */
     
     public Object directConnectServerException;
+
     public DeleteVirtualInterfaceResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteVirtualInterfaceResponse {
     
     
     public Integer statusCode;
+
     public DeleteVirtualInterfaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteVirtualInterfaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVirtualInterfaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteVirtualInterfaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

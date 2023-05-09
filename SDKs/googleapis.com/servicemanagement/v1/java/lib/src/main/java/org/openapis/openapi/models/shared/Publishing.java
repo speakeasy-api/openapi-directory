@@ -18,6 +18,7 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiShortName")
     public String apiShortName;
+
     public Publishing withApiShortName(String apiShortName) {
         this.apiShortName = apiShortName;
         return this;
@@ -29,6 +30,7 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeownerGithubTeams")
     public String[] codeownerGithubTeams;
+
     public Publishing withCodeownerGithubTeams(String[] codeownerGithubTeams) {
         this.codeownerGithubTeams = codeownerGithubTeams;
         return this;
@@ -40,6 +42,7 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docTagPrefix")
     public String docTagPrefix;
+
     public Publishing withDocTagPrefix(String docTagPrefix) {
         this.docTagPrefix = docTagPrefix;
         return this;
@@ -51,6 +54,7 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentationUri")
     public String documentationUri;
+
     public Publishing withDocumentationUri(String documentationUri) {
         this.documentationUri = documentationUri;
         return this;
@@ -62,6 +66,7 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("githubLabel")
     public String githubLabel;
+
     public Publishing withGithubLabel(String githubLabel) {
         this.githubLabel = githubLabel;
         return this;
@@ -73,6 +78,7 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("librarySettings")
     public ClientLibrarySettings[] librarySettings;
+
     public Publishing withLibrarySettings(ClientLibrarySettings[] librarySettings) {
         this.librarySettings = librarySettings;
         return this;
@@ -84,17 +90,19 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodSettings")
     public MethodSettings[] methodSettings;
+
     public Publishing withMethodSettings(MethodSettings[] methodSettings) {
         this.methodSettings = methodSettings;
         return this;
     }
     
     /**
-     * Link to a place that API users can report issues. Example: https://issuetracker.google.com/issues/new?component=190865&amp;template=1161103
+     * Link to a *public* URI where users can report issues. Example: https://issuetracker.google.com/issues/new?component=190865&amp;template=1161103
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newIssueUri")
     public String newIssueUri;
+
     public Publishing withNewIssueUri(String newIssueUri) {
         this.newIssueUri = newIssueUri;
         return this;
@@ -106,6 +114,7 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public PublishingOrganizationEnum organization;
+
     public Publishing withOrganization(PublishingOrganizationEnum organization) {
         this.organization = organization;
         return this;
@@ -117,9 +126,11 @@ public class Publishing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoReferenceDocumentationUri")
     public String protoReferenceDocumentationUri;
+
     public Publishing withProtoReferenceDocumentationUri(String protoReferenceDocumentationUri) {
         this.protoReferenceDocumentationUri = protoReferenceDocumentationUri;
         return this;
     }
     
+    public Publishing(){}
 }

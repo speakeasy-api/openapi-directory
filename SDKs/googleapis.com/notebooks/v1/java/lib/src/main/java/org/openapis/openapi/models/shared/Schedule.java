@@ -18,6 +18,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Schedule withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cronSchedule")
     public String cronSchedule;
+
     public Schedule withCronSchedule(String cronSchedule) {
         this.cronSchedule = cronSchedule;
         return this;
@@ -40,6 +42,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Schedule withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Schedule withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionTemplate")
     public ExecutionTemplate executionTemplate;
+
     public Schedule withExecutionTemplate(ExecutionTemplate executionTemplate) {
         this.executionTemplate = executionTemplate;
         return this;
@@ -73,6 +78,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Schedule withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentExecutions")
     public Execution[] recentExecutions;
+
     public Schedule withRecentExecutions(Execution[] recentExecutions) {
         this.recentExecutions = recentExecutions;
         return this;
@@ -92,6 +99,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ScheduleStateEnum state;
+
     public Schedule withState(ScheduleStateEnum state) {
         this.state = state;
         return this;
@@ -103,6 +111,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public Schedule withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -114,9 +123,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Schedule withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Schedule(){}
 }

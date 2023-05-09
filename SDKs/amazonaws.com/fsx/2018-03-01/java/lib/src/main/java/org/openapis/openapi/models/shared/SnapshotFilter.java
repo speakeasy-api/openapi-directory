@@ -15,6 +15,7 @@ public class SnapshotFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public SnapshotFilterNameEnum name;
+
     public SnapshotFilter withName(SnapshotFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class SnapshotFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public SnapshotFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SnapshotFilter(){}
 }

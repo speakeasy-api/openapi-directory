@@ -18,6 +18,7 @@ public class DeviceTierConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceGroups")
     public DeviceGroup[] deviceGroups;
+
     public DeviceTierConfig withDeviceGroups(DeviceGroup[] deviceGroups) {
         this.deviceGroups = deviceGroups;
         return this;
@@ -29,6 +30,7 @@ public class DeviceTierConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceTierConfigId")
     public String deviceTierConfigId;
+
     public DeviceTierConfig withDeviceTierConfigId(String deviceTierConfigId) {
         this.deviceTierConfigId = deviceTierConfigId;
         return this;
@@ -40,6 +42,7 @@ public class DeviceTierConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceTierSet")
     public DeviceTierSet deviceTierSet;
+
     public DeviceTierConfig withDeviceTierSet(DeviceTierSet deviceTierSet) {
         this.deviceTierSet = deviceTierSet;
         return this;
@@ -51,9 +54,11 @@ public class DeviceTierConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userCountrySets")
     public UserCountrySet[] userCountrySets;
+
     public DeviceTierConfig withUserCountrySets(UserCountrySet[] userCountrySets) {
         this.userCountrySets = userCountrySets;
         return this;
     }
     
+    public DeviceTierConfig(){}
 }

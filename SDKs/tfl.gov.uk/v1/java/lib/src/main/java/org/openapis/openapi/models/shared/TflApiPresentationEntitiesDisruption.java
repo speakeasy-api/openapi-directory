@@ -23,6 +23,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public TflApiPresentationEntitiesDisruption withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -34,6 +35,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedRoutes")
     public TflApiPresentationEntitiesDisruptedRoute[] affectedRoutes;
+
     public TflApiPresentationEntitiesDisruption withAffectedRoutes(TflApiPresentationEntitiesDisruptedRoute[] affectedRoutes) {
         this.affectedRoutes = affectedRoutes;
         return this;
@@ -45,6 +47,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedStops")
     public TflApiPresentationEntitiesStopPoint[] affectedStops;
+
     public TflApiPresentationEntitiesDisruption withAffectedStops(TflApiPresentationEntitiesStopPoint[] affectedStops) {
         this.affectedStops = affectedStops;
         return this;
@@ -56,6 +59,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public TflApiPresentationEntitiesDisruptionCategoryEnum category;
+
     public TflApiPresentationEntitiesDisruption withCategory(TflApiPresentationEntitiesDisruptionCategoryEnum category) {
         this.category = category;
         return this;
@@ -67,6 +71,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryDescription")
     public String categoryDescription;
+
     public TflApiPresentationEntitiesDisruption withCategoryDescription(String categoryDescription) {
         this.categoryDescription = categoryDescription;
         return this;
@@ -78,6 +83,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closureText")
     public String closureText;
+
     public TflApiPresentationEntitiesDisruption withClosureText(String closureText) {
         this.closureText = closureText;
         return this;
@@ -91,6 +97,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public TflApiPresentationEntitiesDisruption withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -102,6 +109,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TflApiPresentationEntitiesDisruption withDescription(String description) {
         this.description = description;
         return this;
@@ -115,6 +123,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public TflApiPresentationEntitiesDisruption withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -126,6 +135,7 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public TflApiPresentationEntitiesDisruption withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -137,9 +147,11 @@ public class TflApiPresentationEntitiesDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TflApiPresentationEntitiesDisruption withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TflApiPresentationEntitiesDisruption(){}
 }

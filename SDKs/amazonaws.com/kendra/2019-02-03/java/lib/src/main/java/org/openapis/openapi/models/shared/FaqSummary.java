@@ -22,6 +22,7 @@ public class FaqSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public FaqSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class FaqSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFormat")
     public FaqFileFormatEnum fileFormat;
+
     public FaqSummary withFileFormat(FaqFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -38,6 +40,7 @@ public class FaqSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public FaqSummary withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class FaqSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public FaqSummary withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -54,6 +58,7 @@ public class FaqSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FaqSummary withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class FaqSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FaqStatusEnum status;
+
     public FaqSummary withStatus(FaqStatusEnum status) {
         this.status = status;
         return this;
@@ -72,9 +78,11 @@ public class FaqSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public FaqSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public FaqSummary(){}
 }

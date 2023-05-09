@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTrackingStatusRequest {
@@ -12,6 +13,7 @@ public class UpdateTrackingStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateTrackingStatusRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateTrackingStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateTrackingStatusRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTrackingStatusRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateTrackingStatusRequest updateTrackingStatusRequest;
+
     public UpdateTrackingStatusRequest withUpdateTrackingStatusRequest(org.openapis.openapi.models.shared.UpdateTrackingStatusRequest updateTrackingStatusRequest) {
         this.updateTrackingStatusRequest = updateTrackingStatusRequest;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTrackingStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceNumber")
     public String invoiceNumber;
+
     public UpdateTrackingStatusRequest withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -49,9 +54,17 @@ public class UpdateTrackingStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public UpdateTrackingStatusRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public UpdateTrackingStatusRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpdateTrackingStatusRequest") org.openapis.openapi.models.shared.UpdateTrackingStatusRequest updateTrackingStatusRequest, @JsonProperty("invoiceNumber") String invoiceNumber, @JsonProperty("orderId") String orderId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.updateTrackingStatusRequest = updateTrackingStatusRequest;
+        this.invoiceNumber = invoiceNumber;
+        this.orderId = orderId;
+  }
 }

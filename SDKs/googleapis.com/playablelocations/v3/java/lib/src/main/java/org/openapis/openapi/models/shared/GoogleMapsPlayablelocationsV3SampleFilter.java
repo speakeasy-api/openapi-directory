@@ -18,6 +18,7 @@ public class GoogleMapsPlayablelocationsV3SampleFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedTypes")
     public String[] includedTypes;
+
     public GoogleMapsPlayablelocationsV3SampleFilter withIncludedTypes(String[] includedTypes) {
         this.includedTypes = includedTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleMapsPlayablelocationsV3SampleFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLocationCount")
     public Integer maxLocationCount;
+
     public GoogleMapsPlayablelocationsV3SampleFilter withMaxLocationCount(Integer maxLocationCount) {
         this.maxLocationCount = maxLocationCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleMapsPlayablelocationsV3SampleFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spacing")
     public GoogleMapsPlayablelocationsV3SampleSpacingOptions spacing;
+
     public GoogleMapsPlayablelocationsV3SampleFilter withSpacing(GoogleMapsPlayablelocationsV3SampleSpacingOptions spacing) {
         this.spacing = spacing;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3SampleFilter(){}
 }

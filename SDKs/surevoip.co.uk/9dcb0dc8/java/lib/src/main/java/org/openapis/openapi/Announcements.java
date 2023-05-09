@@ -54,11 +54,9 @@ public class Announcements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdResponse res = new org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdResponse res = new org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdResponse(contentType, httpRes.statusCode()) {{
             oneannouncementsPostResponses403ContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 404 || httpRes.statusCode() == 410) {
@@ -92,12 +90,10 @@ public class Announcements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnnouncementsResponse res = new org.openapis.openapi.models.operations.GetAnnouncementsResponse() {{
+        org.openapis.openapi.models.operations.GetAnnouncementsResponse res = new org.openapis.openapi.models.operations.GetAnnouncementsResponse(contentType, httpRes.statusCode()) {{
             oneGetResponses200ContentApplication1jsonSchema = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,12 +132,10 @@ public class Announcements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsResponse res = new org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsResponse res = new org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsResponse(contentType, httpRes.statusCode()) {{
             getCustomersAccountAnnouncements200ApplicationJSONObject = null;
             oneannouncementsPostResponses403ContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,12 +177,10 @@ public class Announcements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdResponse res = new org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdResponse res = new org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdResponse(contentType, httpRes.statusCode()) {{
             oneannouncementsPostResponses201ContentApplication1jsonSchema = null;
             getCustomersAccountAnnouncementsAnnouncementId404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,14 +227,12 @@ public class Announcements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAnnouncementsResponse res = new org.openapis.openapi.models.operations.PostAnnouncementsResponse() {{
+        org.openapis.openapi.models.operations.PostAnnouncementsResponse res = new org.openapis.openapi.models.operations.PostAnnouncementsResponse(contentType, httpRes.statusCode()) {{
             postAnnouncements201ApplicationJSONObject = null;
             postAnnouncements400ApplicationJSONObject = null;
             postAnnouncements403ApplicationJSONObject = null;
             oneannouncementsPostResponses403ContentApplication1jsonSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

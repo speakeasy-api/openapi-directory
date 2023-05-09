@@ -17,6 +17,7 @@ public class QuoteBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public QuoteBaseVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -28,6 +29,7 @@ public class QuoteBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public QuoteBaseVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -36,6 +38,7 @@ public class QuoteBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Long quoteId;
+
     public QuoteBaseVO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -44,6 +47,7 @@ public class QuoteBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_title")
     public String quoteTitle;
+
     public QuoteBaseVO withQuoteTitle(String quoteTitle) {
         this.quoteTitle = quoteTitle;
         return this;
@@ -52,6 +56,7 @@ public class QuoteBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public QuoteBaseVO withStatus(String status) {
         this.status = status;
         return this;
@@ -61,6 +66,7 @@ public class QuoteBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("submit_date")
     public LocalDate submitDate;
+
     public QuoteBaseVO withSubmitDate(LocalDate submitDate) {
         this.submitDate = submitDate;
         return this;
@@ -69,6 +75,7 @@ public class QuoteBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public QuoteBaseVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -80,9 +87,11 @@ public class QuoteBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public QuoteBaseVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
     }
     
+    public QuoteBaseVO(){}
 }

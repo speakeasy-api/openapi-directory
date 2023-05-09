@@ -15,9 +15,11 @@ public class DeleteFargateProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fargateProfile")
     public FargateProfile fargateProfile;
+
     public DeleteFargateProfileResponse withFargateProfile(FargateProfile fargateProfile) {
         this.fargateProfile = fargateProfile;
         return this;
     }
     
+    public DeleteFargateProfileResponse(){}
 }

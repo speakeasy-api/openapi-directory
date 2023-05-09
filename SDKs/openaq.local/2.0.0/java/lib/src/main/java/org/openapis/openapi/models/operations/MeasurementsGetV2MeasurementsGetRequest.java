@@ -14,6 +14,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String[] city;
+
     public MeasurementsGetV2MeasurementsGetRequest withCity(String[] city) {
         this.city = city;
         return this;
@@ -21,6 +22,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=coordinates")
     public String coordinates;
+
     public MeasurementsGetV2MeasurementsGetRequest withCoordinates(String coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -33,6 +35,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String[] country;
+
     public MeasurementsGetV2MeasurementsGetRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -45,6 +48,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
     public String countryId;
+
     public MeasurementsGetV2MeasurementsGetRequest withCountryId(String countryId) {
         this.countryId = countryId;
         return this;
@@ -52,6 +56,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
     public Object dateFrom;
+
     public MeasurementsGetV2MeasurementsGetRequest withDateFrom(Object dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -59,6 +64,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
     public Object dateTo;
+
     public MeasurementsGetV2MeasurementsGetRequest withDateTo(Object dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -69,6 +75,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
     public org.openapis.openapi.models.shared.EntityTypesEnum entity;
+
     public MeasurementsGetV2MeasurementsGetRequest withEntity(org.openapis.openapi.models.shared.EntityTypesEnum entity) {
         this.entity = entity;
         return this;
@@ -76,6 +83,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public MeasurementsGetV2MeasurementsGetRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -83,6 +91,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_geo")
     public Boolean hasGeo;
+
     public MeasurementsGetV2MeasurementsGetRequest withHasGeo(Boolean hasGeo) {
         this.hasGeo = hasGeo;
         return this;
@@ -90,6 +99,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_fields")
     public String includeFields;
+
     public MeasurementsGetV2MeasurementsGetRequest withIncludeFields(String includeFields) {
         this.includeFields = includeFields;
         return this;
@@ -97,6 +107,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
     public Boolean isAnalysis;
+
     public MeasurementsGetV2MeasurementsGetRequest withIsAnalysis(Boolean isAnalysis) {
         this.isAnalysis = isAnalysis;
         return this;
@@ -104,6 +115,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
     public Boolean isMobile;
+
     public MeasurementsGetV2MeasurementsGetRequest withIsMobile(Boolean isMobile) {
         this.isMobile = isMobile;
         return this;
@@ -114,6 +126,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public MeasurementsGetV2MeasurementsGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -121,6 +134,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public Object[] location;
+
     public MeasurementsGetV2MeasurementsGetRequest withLocation(Object[] location) {
         this.location = location;
         return this;
@@ -128,6 +142,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public Long locationId;
+
     public MeasurementsGetV2MeasurementsGetRequest withLocationId(Long locationId) {
         this.locationId = locationId;
         return this;
@@ -135,6 +150,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public MeasurementsGetV2MeasurementsGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -145,6 +161,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum orderBy;
+
     public MeasurementsGetV2MeasurementsGetRequest withOrderBy(MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -155,6 +172,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public MeasurementsGetV2MeasurementsGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -162,6 +180,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
     public Object[] parameter;
+
     public MeasurementsGetV2MeasurementsGetRequest withParameter(Object[] parameter) {
         this.parameter = parameter;
         return this;
@@ -169,6 +188,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter_id")
     public Long parameterId;
+
     public MeasurementsGetV2MeasurementsGetRequest withParameterId(Long parameterId) {
         this.parameterId = parameterId;
         return this;
@@ -176,6 +196,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
     public Long project;
+
     public MeasurementsGetV2MeasurementsGetRequest withProject(Long project) {
         this.project = project;
         return this;
@@ -183,6 +204,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Long radius;
+
     public MeasurementsGetV2MeasurementsGetRequest withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -193,6 +215,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensorType")
     public org.openapis.openapi.models.shared.SensorTypesEnum sensorType;
+
     public MeasurementsGetV2MeasurementsGetRequest withSensorType(org.openapis.openapi.models.shared.SensorTypesEnum sensorType) {
         this.sensorType = sensorType;
         return this;
@@ -203,6 +226,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public MeasurementsGetV2MeasurementsGetSortSortEnum sort;
+
     public MeasurementsGetV2MeasurementsGetRequest withSort(MeasurementsGetV2MeasurementsGetSortSortEnum sort) {
         this.sort = sort;
         return this;
@@ -210,6 +234,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public String[] unit;
+
     public MeasurementsGetV2MeasurementsGetRequest withUnit(String[] unit) {
         this.unit = unit;
         return this;
@@ -217,6 +242,7 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=value_from")
     public Double valueFrom;
+
     public MeasurementsGetV2MeasurementsGetRequest withValueFrom(Double valueFrom) {
         this.valueFrom = valueFrom;
         return this;
@@ -224,9 +250,11 @@ public class MeasurementsGetV2MeasurementsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=value_to")
     public Double valueTo;
+
     public MeasurementsGetV2MeasurementsGetRequest withValueTo(Double valueTo) {
         this.valueTo = valueTo;
         return this;
     }
     
+    public MeasurementsGetV2MeasurementsGetRequest(){}
 }

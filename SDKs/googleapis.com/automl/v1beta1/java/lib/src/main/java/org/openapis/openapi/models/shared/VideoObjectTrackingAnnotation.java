@@ -18,6 +18,7 @@ public class VideoObjectTrackingAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public BoundingPoly boundingBox;
+
     public VideoObjectTrackingAnnotation withBoundingBox(BoundingPoly boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -29,6 +30,7 @@ public class VideoObjectTrackingAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public VideoObjectTrackingAnnotation withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +42,7 @@ public class VideoObjectTrackingAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public VideoObjectTrackingAnnotation withScore(Float score) {
         this.score = score;
         return this;
@@ -51,9 +54,11 @@ public class VideoObjectTrackingAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeOffset")
     public String timeOffset;
+
     public VideoObjectTrackingAnnotation withTimeOffset(String timeOffset) {
         this.timeOffset = timeOffset;
         return this;
     }
     
+    public VideoObjectTrackingAnnotation(){}
 }

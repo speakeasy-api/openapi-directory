@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsVCpuCount {
     
     public Long max;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsVCpuCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Long min;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsVCpuCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsVCpuCount(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeScheduledInstancesRequest {
     
     public Boolean dryRun;
+
     public DescribeScheduledInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeScheduledInstancesRequest {
     
     
     public DescribeScheduledInstancesRequestFilters[] filters;
+
     public DescribeScheduledInstancesRequest withFilters(DescribeScheduledInstancesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeScheduledInstancesRequest {
     
     
     public Long maxResults;
+
     public DescribeScheduledInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -33,6 +36,7 @@ public class DescribeScheduledInstancesRequest {
     
     
     public String nextToken;
+
     public DescribeScheduledInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -40,6 +44,7 @@ public class DescribeScheduledInstancesRequest {
     
     
     public String[] scheduledInstanceIds;
+
     public DescribeScheduledInstancesRequest withScheduledInstanceIds(String[] scheduledInstanceIds) {
         this.scheduledInstanceIds = scheduledInstanceIds;
         return this;
@@ -47,9 +52,11 @@ public class DescribeScheduledInstancesRequest {
     
     
     public SlotStartTimeRangeRequest slotStartTimeRange;
+
     public DescribeScheduledInstancesRequest withSlotStartTimeRange(SlotStartTimeRangeRequest slotStartTimeRange) {
         this.slotStartTimeRange = slotStartTimeRange;
         return this;
     }
     
+    public DescribeScheduledInstancesRequest(){}
 }

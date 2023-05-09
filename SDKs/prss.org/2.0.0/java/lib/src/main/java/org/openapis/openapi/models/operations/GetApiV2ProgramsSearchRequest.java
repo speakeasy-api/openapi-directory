@@ -12,6 +12,7 @@ public class GetApiV2ProgramsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keywords")
     public String keywords;
+
     public GetApiV2ProgramsSearchRequest withKeywords(String keywords) {
         this.keywords = keywords;
         return this;
@@ -22,6 +23,7 @@ public class GetApiV2ProgramsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetApiV2ProgramsSearchRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,9 +34,11 @@ public class GetApiV2ProgramsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageStart")
     public Integer pageStart;
+
     public GetApiV2ProgramsSearchRequest withPageStart(Integer pageStart) {
         this.pageStart = pageStart;
         return this;
     }
     
+    public GetApiV2ProgramsSearchRequest(){}
 }

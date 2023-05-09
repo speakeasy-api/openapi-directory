@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceSummary {
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public InstanceSummary withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -22,6 +23,7 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStatusCheckDate")
     public String lastStatusCheckDate;
+
     public InstanceSummary withLastStatusCheckDate(String lastStatusCheckDate) {
         this.lastStatusCheckDate = lastStatusCheckDate;
         return this;
@@ -29,6 +31,7 @@ public class InstanceSummary {
     
     @JsonProperty("Products")
     public String[] products;
+
     public InstanceSummary withProducts(String[] products) {
         this.products = products;
         return this;
@@ -36,6 +39,7 @@ public class InstanceSummary {
     
     @JsonProperty("Status")
     public String status;
+
     public InstanceSummary withStatus(String status) {
         this.status = status;
         return this;
@@ -44,9 +48,15 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public InstanceSummary withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public InstanceSummary(@JsonProperty("InstanceId") String instanceId, @JsonProperty("Products") String[] products, @JsonProperty("Status") String status) {
+        this.instanceId = instanceId;
+        this.products = products;
+        this.status = status;
+  }
 }

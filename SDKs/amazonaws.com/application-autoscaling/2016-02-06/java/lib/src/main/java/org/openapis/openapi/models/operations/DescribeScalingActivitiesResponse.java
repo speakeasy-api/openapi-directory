@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScalingActivitiesResponse {
@@ -12,6 +13,7 @@ public class DescribeScalingActivitiesResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DescribeScalingActivitiesResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScalingActivitiesResponse {
     
     
     public String contentType;
+
     public DescribeScalingActivitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScalingActivitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScalingActivitiesResponse describeScalingActivitiesResponse;
+
     public DescribeScalingActivitiesResponse withDescribeScalingActivitiesResponse(org.openapis.openapi.models.shared.DescribeScalingActivitiesResponse describeScalingActivitiesResponse) {
         this.describeScalingActivitiesResponse = describeScalingActivitiesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScalingActivitiesResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeScalingActivitiesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeScalingActivitiesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeScalingActivitiesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeScalingActivitiesResponse {
     
     
     public Integer statusCode;
+
     public DescribeScalingActivitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeScalingActivitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScalingActivitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeScalingActivitiesResponse {
      */
     
     public Object validationException;
+
     public DescribeScalingActivitiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeScalingActivitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

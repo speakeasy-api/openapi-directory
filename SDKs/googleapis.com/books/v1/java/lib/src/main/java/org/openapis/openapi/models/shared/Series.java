@@ -18,6 +18,7 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Series withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,9 +27,11 @@ public class Series {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series")
     public SeriesSeries[] series;
+
     public Series withSeries(SeriesSeries[] series) {
         this.series = series;
         return this;
     }
     
+    public Series(){}
 }

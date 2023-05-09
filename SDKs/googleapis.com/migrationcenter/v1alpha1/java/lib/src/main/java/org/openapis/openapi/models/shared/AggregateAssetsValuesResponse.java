@@ -18,9 +18,11 @@ public class AggregateAssetsValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public AggregationResult[] results;
+
     public AggregateAssetsValuesResponse withResults(AggregationResult[] results) {
         this.results = results;
         return this;
     }
     
+    public AggregateAssetsValuesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTermStatsUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETTermStatsUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
     public String accId;
+
     public GETTermStatsUsingGETRequest withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -22,9 +24,14 @@ public class GETTermStatsUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filterAccId")
     public String filterAccId;
+
     public GETTermStatsUsingGETRequest withFilterAccId(String filterAccId) {
         this.filterAccId = filterAccId;
         return this;
     }
     
+    public GETTermStatsUsingGETRequest(@JsonProperty("accId") String accId, @JsonProperty("filterAccId") String filterAccId) {
+        this.accId = accId;
+        this.filterAccId = filterAccId;
+  }
 }

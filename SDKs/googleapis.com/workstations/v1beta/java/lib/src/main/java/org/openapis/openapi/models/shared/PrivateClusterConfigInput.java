@@ -18,6 +18,7 @@ public class PrivateClusterConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedProjects")
     public String[] allowedProjects;
+
     public PrivateClusterConfigInput withAllowedProjects(String[] allowedProjects) {
         this.allowedProjects = allowedProjects;
         return this;
@@ -29,9 +30,11 @@ public class PrivateClusterConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePrivateEndpoint")
     public Boolean enablePrivateEndpoint;
+
     public PrivateClusterConfigInput withEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         return this;
     }
     
+    public PrivateClusterConfigInput(){}
 }

@@ -15,9 +15,11 @@ public class GetInstitutions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institutions")
     public org.openapis.openapi.models.shared.InstitutionV1[] institutions;
+
     public GetInstitutions200ApplicationJSON withInstitutions(org.openapis.openapi.models.shared.InstitutionV1[] institutions) {
         this.institutions = institutions;
         return this;
     }
     
+    public GetInstitutions200ApplicationJSON(){}
 }

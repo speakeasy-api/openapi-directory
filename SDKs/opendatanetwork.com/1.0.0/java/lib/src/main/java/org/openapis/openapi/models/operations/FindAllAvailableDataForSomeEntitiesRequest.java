@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindAllAvailableDataForSomeEntitiesRequest {
@@ -12,6 +13,7 @@ public class FindAllAvailableDataForSomeEntitiesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public FindAllAvailableDataForSomeEntitiesRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +25,7 @@ public class FindAllAvailableDataForSomeEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public FindAllAvailableDataForSomeEntitiesRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -33,9 +36,13 @@ public class FindAllAvailableDataForSomeEntitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
     public String entityId;
+
     public FindAllAvailableDataForSomeEntitiesRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
     }
     
+    public FindAllAvailableDataForSomeEntitiesRequest(@JsonProperty("entity_id") String entityId) {
+        this.entityId = entityId;
+  }
 }

@@ -15,9 +15,11 @@ public class GetEmailIdentityPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public java.util.Map<String, String> policies;
+
     public GetEmailIdentityPoliciesResponse withPolicies(java.util.Map<String, String> policies) {
         this.policies = policies;
         return this;
     }
     
+    public GetEmailIdentityPoliciesResponse(){}
 }

@@ -17,6 +17,7 @@ public class PatientLinkReferenceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public PatientLinkReferenceResult withError(Error error) {
         this.error = error;
         return this;
@@ -25,6 +26,7 @@ public class PatientLinkReferenceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public PatientLinkReferenceResultLink link;
+
     public PatientLinkReferenceResult withLink(PatientLinkReferenceResultLink link) {
         this.link = link;
         return this;
@@ -35,6 +37,7 @@ public class PatientLinkReferenceResult {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientLinkReferenceResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class PatientLinkReferenceResult {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public PatientLinkReferenceResult withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,6 +58,7 @@ public class PatientLinkReferenceResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientLinkReferenceResult withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -61,9 +66,16 @@ public class PatientLinkReferenceResult {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public PatientLinkReferenceResult withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public PatientLinkReferenceResult(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("transactionId") String transactionId) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+        this.transactionId = transactionId;
+  }
 }

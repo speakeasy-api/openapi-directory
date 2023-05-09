@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompromisedCredentialsActionsType {
     @JsonProperty("EventAction")
     public CompromisedCredentialsEventActionTypeEnum eventAction;
+
     public CompromisedCredentialsActionsType withEventAction(CompromisedCredentialsEventActionTypeEnum eventAction) {
         this.eventAction = eventAction;
         return this;
     }
     
+    public CompromisedCredentialsActionsType(@JsonProperty("EventAction") CompromisedCredentialsEventActionTypeEnum eventAction) {
+        this.eventAction = eventAction;
+  }
 }

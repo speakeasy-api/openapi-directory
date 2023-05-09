@@ -134,6 +134,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -164,7 +169,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuyANumberResponse res = new org.openapis.openapi.models.operations.BuyANumberResponse() {{
+        org.openapis.openapi.models.operations.BuyANumberResponse res = new org.openapis.openapi.models.operations.BuyANumberResponse(contentType, httpRes.statusCode()) {{
             response = null;
             body = null;
             body = null;
@@ -172,8 +177,6 @@ public class SDK {
             body = null;
             response420 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,14 +243,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelANumberResponse res = new org.openapis.openapi.models.operations.CancelANumberResponse() {{
+        org.openapis.openapi.models.operations.CancelANumberResponse res = new org.openapis.openapi.models.operations.CancelANumberResponse(contentType, httpRes.statusCode()) {{
             response = null;
             body = null;
             body = null;
             unauthorized = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -304,14 +305,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAvailableNumbersResponse res = new org.openapis.openapi.models.operations.GetAvailableNumbersResponse() {{
+        org.openapis.openapi.models.operations.GetAvailableNumbersResponse res = new org.openapis.openapi.models.operations.GetAvailableNumbersResponse(contentType, httpRes.statusCode()) {{
             availableNumbers = null;
             body = null;
             body = null;
             accountUnauthorized = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,14 +367,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOwnedNumbersResponse res = new org.openapis.openapi.models.operations.GetOwnedNumbersResponse() {{
+        org.openapis.openapi.models.operations.GetOwnedNumbersResponse res = new org.openapis.openapi.models.operations.GetOwnedNumbersResponse(contentType, httpRes.statusCode()) {{
             inboundNumbers = null;
             body = null;
             body = null;
             accountUnauthorized = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -431,14 +428,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateANumberResponse res = new org.openapis.openapi.models.operations.UpdateANumberResponse() {{
+        org.openapis.openapi.models.operations.UpdateANumberResponse res = new org.openapis.openapi.models.operations.UpdateANumberResponse(contentType, httpRes.statusCode()) {{
             response = null;
             body = null;
             body = null;
             unauthorized = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

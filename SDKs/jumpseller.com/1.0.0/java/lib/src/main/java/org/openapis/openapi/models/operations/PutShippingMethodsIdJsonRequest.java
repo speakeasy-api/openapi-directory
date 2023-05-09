@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutShippingMethodsIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutShippingMethodsIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit;
+
     public PutShippingMethodsIdJsonRequest withShippingMethodEdit(org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit) {
         this.shippingMethodEdit = shippingMethodEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutShippingMethodsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutShippingMethodsIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutShippingMethodsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutShippingMethodsIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PutShippingMethodsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutShippingMethodsIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutShippingMethodsIdJsonRequest(@JsonProperty("ShippingMethodEdit") org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.shippingMethodEdit = shippingMethodEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

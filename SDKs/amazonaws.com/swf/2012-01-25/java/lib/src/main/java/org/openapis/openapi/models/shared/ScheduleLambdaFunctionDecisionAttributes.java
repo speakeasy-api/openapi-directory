@@ -15,6 +15,7 @@ public class ScheduleLambdaFunctionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public ScheduleLambdaFunctionDecisionAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -22,6 +23,7 @@ public class ScheduleLambdaFunctionDecisionAttributes {
     
     @JsonProperty("id")
     public String id;
+
     public ScheduleLambdaFunctionDecisionAttributes withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class ScheduleLambdaFunctionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public ScheduleLambdaFunctionDecisionAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -37,6 +40,7 @@ public class ScheduleLambdaFunctionDecisionAttributes {
     
     @JsonProperty("name")
     public String name;
+
     public ScheduleLambdaFunctionDecisionAttributes withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +49,14 @@ public class ScheduleLambdaFunctionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startToCloseTimeout")
     public String startToCloseTimeout;
+
     public ScheduleLambdaFunctionDecisionAttributes withStartToCloseTimeout(String startToCloseTimeout) {
         this.startToCloseTimeout = startToCloseTimeout;
         return this;
     }
     
+    public ScheduleLambdaFunctionDecisionAttributes(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

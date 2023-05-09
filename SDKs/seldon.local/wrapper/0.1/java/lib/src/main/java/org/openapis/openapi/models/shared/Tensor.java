@@ -12,6 +12,7 @@ public class Tensor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shape")
     public Integer[] shape;
+
     public Tensor withShape(Integer[] shape) {
         this.shape = shape;
         return this;
@@ -20,9 +21,11 @@ public class Tensor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Double[] values;
+
     public Tensor withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public Tensor(){}
 }

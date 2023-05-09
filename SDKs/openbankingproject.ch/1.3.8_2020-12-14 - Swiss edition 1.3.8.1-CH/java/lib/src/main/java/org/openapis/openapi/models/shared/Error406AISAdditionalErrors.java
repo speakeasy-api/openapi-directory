@@ -17,6 +17,7 @@ public class Error406AISAdditionalErrors {
      */
     @JsonProperty("code")
     public MessageCode406AISEnum code;
+
     public Error406AISAdditionalErrors withCode(MessageCode406AISEnum code) {
         this.code = code;
         return this;
@@ -31,6 +32,7 @@ public class Error406AISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error406AISAdditionalErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -45,9 +47,13 @@ public class Error406AISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error406AISAdditionalErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error406AISAdditionalErrors(@JsonProperty("code") MessageCode406AISEnum code) {
+        this.code = code;
+  }
 }

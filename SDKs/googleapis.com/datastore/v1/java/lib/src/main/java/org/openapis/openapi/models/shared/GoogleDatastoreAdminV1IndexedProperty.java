@@ -18,6 +18,7 @@ public class GoogleDatastoreAdminV1IndexedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public GoogleDatastoreAdminV1IndexedPropertyDirectionEnum direction;
+
     public GoogleDatastoreAdminV1IndexedProperty withDirection(GoogleDatastoreAdminV1IndexedPropertyDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -29,9 +30,11 @@ public class GoogleDatastoreAdminV1IndexedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleDatastoreAdminV1IndexedProperty withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleDatastoreAdminV1IndexedProperty(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerRelevance")
     public GoogleCloudDialogflowV2AgentAssistantFeedbackAnswerRelevanceEnum answerRelevance;
+
     public GoogleCloudDialogflowV2AgentAssistantFeedback withAnswerRelevance(GoogleCloudDialogflowV2AgentAssistantFeedbackAnswerRelevanceEnum answerRelevance) {
         this.answerRelevance = answerRelevance;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentCorrectness")
     public GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentCorrectnessEnum documentCorrectness;
+
     public GoogleCloudDialogflowV2AgentAssistantFeedback withDocumentCorrectness(GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentCorrectnessEnum documentCorrectness) {
         this.documentCorrectness = documentCorrectness;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentEfficiency")
     public GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentEfficiencyEnum documentEfficiency;
+
     public GoogleCloudDialogflowV2AgentAssistantFeedback withDocumentEfficiency(GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentEfficiencyEnum documentEfficiency) {
         this.documentEfficiency = documentEfficiency;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summarizationFeedback")
     public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback summarizationFeedback;
+
     public GoogleCloudDialogflowV2AgentAssistantFeedback withSummarizationFeedback(GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback summarizationFeedback) {
         this.summarizationFeedback = summarizationFeedback;
         return this;
     }
     
+    public GoogleCloudDialogflowV2AgentAssistantFeedback(){}
 }

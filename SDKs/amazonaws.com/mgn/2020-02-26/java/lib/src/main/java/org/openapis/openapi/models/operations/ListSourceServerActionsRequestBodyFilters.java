@@ -15,9 +15,11 @@ public class ListSourceServerActionsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionIDs")
     public String[] actionIDs;
+
     public ListSourceServerActionsRequestBodyFilters withActionIDs(String[] actionIDs) {
         this.actionIDs = actionIDs;
         return this;
     }
     
+    public ListSourceServerActionsRequestBodyFilters(){}
 }

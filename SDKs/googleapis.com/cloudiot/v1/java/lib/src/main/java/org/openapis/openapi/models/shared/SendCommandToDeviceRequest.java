@@ -18,6 +18,7 @@ public class SendCommandToDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryData")
     public String binaryData;
+
     public SendCommandToDeviceRequest withBinaryData(String binaryData) {
         this.binaryData = binaryData;
         return this;
@@ -29,9 +30,11 @@ public class SendCommandToDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subfolder")
     public String subfolder;
+
     public SendCommandToDeviceRequest withSubfolder(String subfolder) {
         this.subfolder = subfolder;
         return this;
     }
     
+    public SendCommandToDeviceRequest(){}
 }

@@ -57,11 +57,9 @@ public class Product {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductListingsAllResponse res = new org.openapis.openapi.models.operations.ProductListingsAllResponse() {{
+        org.openapis.openapi.models.operations.ProductListingsAllResponse res = new org.openapis.openapi.models.operations.ProductListingsAllResponse(contentType, httpRes.statusCode()) {{
             getListingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Product {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductsAllResponse res = new org.openapis.openapi.models.operations.ProductsAllResponse() {{
+        org.openapis.openapi.models.operations.ProductsAllResponse res = new org.openapis.openapi.models.operations.ProductsAllResponse(contentType, httpRes.statusCode()) {{
             getProductsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class Product {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProductsOneResponse res = new org.openapis.openapi.models.operations.ProductsOneResponse() {{
+        org.openapis.openapi.models.operations.ProductsOneResponse res = new org.openapis.openapi.models.operations.ProductsOneResponse(contentType, httpRes.statusCode()) {{
             getProductResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

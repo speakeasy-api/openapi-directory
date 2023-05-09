@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceShareInvitationsResponse {
     
     public String contentType;
+
     public GetResourceShareInvitationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceShareInvitationsResponse getResourceShareInvitationsResponse;
+
     public GetResourceShareInvitationsResponse withGetResourceShareInvitationsResponse(org.openapis.openapi.models.shared.GetResourceShareInvitationsResponse getResourceShareInvitationsResponse) {
         this.getResourceShareInvitationsResponse = getResourceShareInvitationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public GetResourceShareInvitationsResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetResourceShareInvitationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResourceShareInvitationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object malformedArnException;
+
     public GetResourceShareInvitationsResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -69,6 +76,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object resourceShareInvitationArnNotFoundException;
+
     public GetResourceShareInvitationsResponse withResourceShareInvitationArnNotFoundException(Object resourceShareInvitationArnNotFoundException) {
         this.resourceShareInvitationArnNotFoundException = resourceShareInvitationArnNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetResourceShareInvitationsResponse {
     
     
     public Integer statusCode;
+
     public GetResourceShareInvitationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetResourceShareInvitationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceShareInvitationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object serverInternalException;
+
     public GetResourceShareInvitationsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,6 +114,7 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetResourceShareInvitationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class GetResourceShareInvitationsResponse {
      */
     
     public Object unknownResourceException;
+
     public GetResourceShareInvitationsResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public GetResourceShareInvitationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

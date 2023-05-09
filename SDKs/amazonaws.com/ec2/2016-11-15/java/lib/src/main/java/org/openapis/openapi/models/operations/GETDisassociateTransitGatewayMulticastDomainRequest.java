@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateTransitGatewayMulticastDomainRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisassociateTransitGatewayMulticastDomainActionEnum action;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withAction(GETDisassociateTransitGatewayMulticastDomainActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetIds")
     public String[] subnetIds;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -39,6 +43,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
     public String transitGatewayAttachmentId;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -49,6 +54,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayMulticastDomainId")
     public String transitGatewayMulticastDomainId;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
@@ -56,6 +62,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisassociateTransitGatewayMulticastDomainVersionEnum version;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withVersion(GETDisassociateTransitGatewayMulticastDomainVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETDisassociateTransitGatewayMulticastDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisassociateTransitGatewayMulticastDomainRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisassociateTransitGatewayMulticastDomainRequest(@JsonProperty("Action") GETDisassociateTransitGatewayMulticastDomainActionEnum action, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId, @JsonProperty("TransitGatewayMulticastDomainId") String transitGatewayMulticastDomainId, @JsonProperty("Version") GETDisassociateTransitGatewayMulticastDomainVersionEnum version) {
+        this.action = action;
+        this.subnetIds = subnetIds;
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
+        this.version = version;
+  }
 }

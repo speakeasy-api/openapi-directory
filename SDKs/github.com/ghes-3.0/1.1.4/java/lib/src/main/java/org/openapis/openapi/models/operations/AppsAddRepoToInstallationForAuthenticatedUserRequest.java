@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsAddRepoToInstallationForAuthenticatedUserRequest {
@@ -12,6 +13,7 @@ public class AppsAddRepoToInstallationForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
     public Long installationId;
+
     public AppsAddRepoToInstallationForAuthenticatedUserRequest withInstallationId(Long installationId) {
         this.installationId = installationId;
         return this;
@@ -19,9 +21,14 @@ public class AppsAddRepoToInstallationForAuthenticatedUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
     public Long repositoryId;
+
     public AppsAddRepoToInstallationForAuthenticatedUserRequest withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
     }
     
+    public AppsAddRepoToInstallationForAuthenticatedUserRequest(@JsonProperty("installation_id") Long installationId, @JsonProperty("repository_id") Long repositoryId) {
+        this.installationId = installationId;
+        this.repositoryId = repositoryId;
+  }
 }

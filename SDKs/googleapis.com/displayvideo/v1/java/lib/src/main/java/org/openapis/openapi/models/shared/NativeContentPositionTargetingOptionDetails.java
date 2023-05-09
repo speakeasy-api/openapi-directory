@@ -18,9 +18,11 @@ public class NativeContentPositionTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentPosition")
     public NativeContentPositionTargetingOptionDetailsContentPositionEnum contentPosition;
+
     public NativeContentPositionTargetingOptionDetails withContentPosition(NativeContentPositionTargetingOptionDetailsContentPositionEnum contentPosition) {
         this.contentPosition = contentPosition;
         return this;
     }
     
+    public NativeContentPositionTargetingOptionDetails(){}
 }

@@ -18,6 +18,7 @@ public class ExecuteSwitchTrasaction403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public ExecuteSwitchTrasaction403ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class ExecuteSwitchTrasaction403ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public ExecuteSwitchTrasaction403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ExecuteSwitchTrasaction403ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

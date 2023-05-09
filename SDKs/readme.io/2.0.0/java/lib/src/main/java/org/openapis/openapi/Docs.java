@@ -64,10 +64,8 @@ public class Docs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDocResponse res = new org.openapis.openapi.models.operations.CreateDocResponse() {{
+        org.openapis.openapi.models.operations.CreateDocResponse res = new org.openapis.openapi.models.operations.CreateDocResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {
@@ -107,10 +105,8 @@ public class Docs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDocResponse res = new org.openapis.openapi.models.operations.DeleteDocResponse() {{
+        org.openapis.openapi.models.operations.DeleteDocResponse res = new org.openapis.openapi.models.operations.DeleteDocResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -150,10 +146,8 @@ public class Docs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocResponse res = new org.openapis.openapi.models.operations.GetDocResponse() {{
+        org.openapis.openapi.models.operations.GetDocResponse res = new org.openapis.openapi.models.operations.GetDocResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -199,10 +193,8 @@ public class Docs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchDocsResponse res = new org.openapis.openapi.models.operations.SearchDocsResponse() {{
+        org.openapis.openapi.models.operations.SearchDocsResponse res = new org.openapis.openapi.models.operations.SearchDocsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 500) {
@@ -247,10 +239,8 @@ public class Docs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDocResponse res = new org.openapis.openapi.models.operations.UpdateDocResponse() {{
+        org.openapis.openapi.models.operations.UpdateDocResponse res = new org.openapis.openapi.models.operations.UpdateDocResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {

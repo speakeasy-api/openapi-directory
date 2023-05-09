@@ -23,6 +23,7 @@ public class InboxRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public String company;
+
     public InboxRecipientEntity withCompany(String company) {
         this.company = company;
         return this;
@@ -34,6 +35,7 @@ public class InboxRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InboxRecipientEntity withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +47,7 @@ public class InboxRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public InboxRecipientEntity withNote(String note) {
         this.note = note;
         return this;
@@ -56,6 +59,7 @@ public class InboxRecipientEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient")
     public String recipient;
+
     public InboxRecipientEntity withRecipient(String recipient) {
         this.recipient = recipient;
         return this;
@@ -69,9 +73,11 @@ public class InboxRecipientEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("sent_at")
     public OffsetDateTime sentAt;
+
     public InboxRecipientEntity withSentAt(OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
     
+    public InboxRecipientEntity(){}
 }

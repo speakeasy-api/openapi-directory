@@ -12,6 +12,7 @@ public class NAHouseModelCa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("so")
     public String so;
+
     public NAHouseModelCa withSo(String so) {
         this.so = so;
         return this;
@@ -20,6 +21,7 @@ public class NAHouseModelCa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("te")
     public Double te;
+
     public NAHouseModelCa withTe(Double te) {
         this.te = te;
         return this;
@@ -28,9 +30,11 @@ public class NAHouseModelCa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ti")
     public Integer ti;
+
     public NAHouseModelCa withTi(Integer ti) {
         this.ti = ti;
         return this;
     }
     
+    public NAHouseModelCa(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeagueLeadersBySeasonRequest {
@@ -12,6 +13,7 @@ public class LeagueLeadersBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column")
     public LeagueLeadersBySeasonColumnEnum column;
+
     public LeagueLeadersBySeasonRequest withColumn(LeagueLeadersBySeasonColumnEnum column) {
         this.column = column;
         return this;
@@ -22,6 +24,7 @@ public class LeagueLeadersBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public LeagueLeadersBySeasonFormatEnum format;
+
     public LeagueLeadersBySeasonRequest withFormat(LeagueLeadersBySeasonFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class LeagueLeadersBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
     public LeagueLeadersBySeasonPositionEnum position;
+
     public LeagueLeadersBySeasonRequest withPosition(LeagueLeadersBySeasonPositionEnum position) {
         this.position = position;
         return this;
@@ -44,9 +48,16 @@ public class LeagueLeadersBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public LeagueLeadersBySeasonRequest withSeason(String season) {
         this.season = season;
         return this;
     }
     
+    public LeagueLeadersBySeasonRequest(@JsonProperty("column") LeagueLeadersBySeasonColumnEnum column, @JsonProperty("format") LeagueLeadersBySeasonFormatEnum format, @JsonProperty("position") LeagueLeadersBySeasonPositionEnum position, @JsonProperty("season") String season) {
+        this.column = column;
+        this.format = format;
+        this.position = position;
+        this.season = season;
+  }
 }

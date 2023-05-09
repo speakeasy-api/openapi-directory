@@ -15,9 +15,11 @@ public class GetDraftRegistrationsDraftIdInstitutionsInstitutionLinks {
      */
     
     public String self;
+
     public GetDraftRegistrationsDraftIdInstitutionsInstitutionLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public GetDraftRegistrationsDraftIdInstitutionsInstitutionLinks(){}
 }

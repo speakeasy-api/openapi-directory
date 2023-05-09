@@ -12,6 +12,7 @@ public class DescribeEngineVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultOnly")
     public Boolean defaultOnly;
+
     public DescribeEngineVersionsRequest withDefaultOnly(Boolean defaultOnly) {
         this.defaultOnly = defaultOnly;
         return this;
@@ -20,6 +21,7 @@ public class DescribeEngineVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public DescribeEngineVersionsRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -28,6 +30,7 @@ public class DescribeEngineVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeEngineVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class DescribeEngineVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEngineVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class DescribeEngineVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupFamily")
     public String parameterGroupFamily;
+
     public DescribeEngineVersionsRequest withParameterGroupFamily(String parameterGroupFamily) {
         this.parameterGroupFamily = parameterGroupFamily;
         return this;
     }
     
+    public DescribeEngineVersionsRequest(){}
 }

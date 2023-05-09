@@ -15,6 +15,7 @@ public class FirewallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallFailOpen")
     public FirewallFailOpenStatusEnum firewallFailOpen;
+
     public FirewallConfig withFirewallFailOpen(FirewallFailOpenStatusEnum firewallFailOpen) {
         this.firewallFailOpen = firewallFailOpen;
         return this;
@@ -23,6 +24,7 @@ public class FirewallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public FirewallConfig withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class FirewallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public FirewallConfig withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -39,9 +42,11 @@ public class FirewallConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public FirewallConfig withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public FirewallConfig(){}
 }

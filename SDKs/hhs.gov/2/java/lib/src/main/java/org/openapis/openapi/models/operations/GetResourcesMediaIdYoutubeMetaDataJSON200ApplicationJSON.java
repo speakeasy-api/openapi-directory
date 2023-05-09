@@ -15,6 +15,7 @@ public class GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback")
     public String callback;
+
     public GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -23,6 +24,7 @@ public class GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public org.openapis.openapi.models.shared.Meta meta;
+
     public GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Meta meta) {
         this.meta = meta;
         return this;
@@ -31,9 +33,11 @@ public class GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, Object>[] results;
+
     public GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON withResults(java.util.Map<String, Object>[] results) {
         this.results = results;
         return this;
     }
     
+    public GetResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSON(){}
 }

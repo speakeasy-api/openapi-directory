@@ -25,6 +25,7 @@ public class StartTaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public StartTaskInformation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -36,6 +37,7 @@ public class StartTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public StartTaskInformation withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -49,6 +51,7 @@ public class StartTaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRetryTime")
     public OffsetDateTime lastRetryTime;
+
     public StartTaskInformation withLastRetryTime(OffsetDateTime lastRetryTime) {
         this.lastRetryTime = lastRetryTime;
         return this;
@@ -59,6 +62,7 @@ public class StartTaskInformation {
      */
     @JsonProperty("retryCount")
     public Integer retryCount;
+
     public StartTaskInformation withRetryCount(Integer retryCount) {
         this.retryCount = retryCount;
         return this;
@@ -70,6 +74,7 @@ public class StartTaskInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingError")
     public TaskSchedulingError schedulingError;
+
     public StartTaskInformation withSchedulingError(TaskSchedulingError schedulingError) {
         this.schedulingError = schedulingError;
         return this;
@@ -82,6 +87,7 @@ public class StartTaskInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StartTaskInformation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -92,9 +98,15 @@ public class StartTaskInformation {
      */
     @JsonProperty("state")
     public StartTaskInformationStateEnum state;
+
     public StartTaskInformation withState(StartTaskInformationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public StartTaskInformation(@JsonProperty("retryCount") Integer retryCount, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("state") StartTaskInformationStateEnum state) {
+        this.retryCount = retryCount;
+        this.startTime = startTime;
+        this.state = state;
+  }
 }

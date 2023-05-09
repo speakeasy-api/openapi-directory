@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutUserPolicyRequest {
     
     public String policyDocument;
+
     public PutUserPolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -16,6 +17,7 @@ public class PutUserPolicyRequest {
     
     
     public String policyName;
+
     public PutUserPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -23,9 +25,15 @@ public class PutUserPolicyRequest {
     
     
     public String userName;
+
     public PutUserPolicyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public PutUserPolicyRequest(@JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("PolicyName") String policyName, @JsonProperty("UserName") String userName) {
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
+        this.userName = userName;
+  }
 }

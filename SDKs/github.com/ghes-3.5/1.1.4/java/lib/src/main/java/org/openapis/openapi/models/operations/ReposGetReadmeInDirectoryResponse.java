@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetReadmeInDirectoryResponse {
     
     public String contentType;
+
     public ReposGetReadmeInDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetReadmeInDirectoryResponse {
     
     
     public Integer statusCode;
+
     public ReposGetReadmeInDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetReadmeInDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetReadmeInDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetReadmeInDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetReadmeInDirectoryResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposGetReadmeInDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ContentFile contentFile;
+
     public ReposGetReadmeInDirectoryResponse withContentFile(org.openapis.openapi.models.shared.ContentFile contentFile) {
         this.contentFile = contentFile;
         return this;
@@ -53,9 +59,14 @@ public class ReposGetReadmeInDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposGetReadmeInDirectoryResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposGetReadmeInDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

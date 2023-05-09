@@ -18,9 +18,11 @@ public class Traces {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traces")
     public Trace[] traces;
+
     public Traces withTraces(Trace[] traces) {
         this.traces = traces;
         return this;
     }
     
+    public Traces(){}
 }

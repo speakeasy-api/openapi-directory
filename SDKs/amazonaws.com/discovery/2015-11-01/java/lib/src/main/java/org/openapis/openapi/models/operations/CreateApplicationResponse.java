@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApplicationResponse {
@@ -12,6 +13,7 @@ public class CreateApplicationResponse {
      */
     
     public Object authorizationErrorException;
+
     public CreateApplicationResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class CreateApplicationResponse {
     
     
     public String contentType;
+
     public CreateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApplicationResponse createApplicationResponse;
+
     public CreateApplicationResponse withCreateApplicationResponse(org.openapis.openapi.models.shared.CreateApplicationResponse createApplicationResponse) {
         this.createApplicationResponse = createApplicationResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateApplicationResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public CreateApplicationResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class CreateApplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateApplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateApplicationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateApplicationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class CreateApplicationResponse {
      */
     
     public Object serverInternalErrorException;
+
     public CreateApplicationResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class CreateApplicationResponse {
     
     
     public Integer statusCode;
+
     public CreateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

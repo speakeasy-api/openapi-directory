@@ -18,6 +18,7 @@ public class SendMessageRequestBody5TextViberServiceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SendMessageRequestBody5TextViberServiceAction withText(String text) {
         this.text = text;
         return this;
@@ -29,9 +30,11 @@ public class SendMessageRequestBody5TextViberServiceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public SendMessageRequestBody5TextViberServiceAction withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SendMessageRequestBody5TextViberServiceAction(){}
 }

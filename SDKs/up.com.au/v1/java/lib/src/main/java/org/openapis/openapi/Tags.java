@@ -72,10 +72,8 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsResponse res = new org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsResponse() {{
+        org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsResponse res = new org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -117,11 +115,9 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse() {{
+        org.openapis.openapi.models.operations.GetTagsResponse res = new org.openapis.openapi.models.operations.GetTagsResponse(contentType, httpRes.statusCode()) {{
             listTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,10 +161,8 @@ public class Tags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsResponse res = new org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsResponse() {{
+        org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsResponse res = new org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

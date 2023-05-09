@@ -20,6 +20,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public User withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class User {
     
     @JsonProperty("AuthenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public User withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -37,6 +39,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public User withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -45,6 +48,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public User withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -53,6 +57,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -61,6 +66,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public User withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -69,6 +75,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public User withStatus(String status) {
         this.status = status;
         return this;
@@ -77,9 +84,13 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public User withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public User(@JsonProperty("AuthenticationType") AuthenticationTypeEnum authenticationType) {
+        this.authenticationType = authenticationType;
+  }
 }

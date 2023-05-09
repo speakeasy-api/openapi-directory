@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateConfiguredTableAssociationOutput {
     @JsonProperty("configuredTableAssociation")
     public ConfiguredTableAssociation configuredTableAssociation;
+
     public UpdateConfiguredTableAssociationOutput withConfiguredTableAssociation(ConfiguredTableAssociation configuredTableAssociation) {
         this.configuredTableAssociation = configuredTableAssociation;
         return this;
     }
     
+    public UpdateConfiguredTableAssociationOutput(@JsonProperty("configuredTableAssociation") ConfiguredTableAssociation configuredTableAssociation) {
+        this.configuredTableAssociation = configuredTableAssociation;
+  }
 }

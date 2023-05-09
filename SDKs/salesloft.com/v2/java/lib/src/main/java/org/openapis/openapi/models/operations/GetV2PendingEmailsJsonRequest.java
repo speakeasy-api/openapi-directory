@@ -12,6 +12,7 @@ public class GetV2PendingEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2PendingEmailsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -22,6 +23,7 @@ public class GetV2PendingEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2PendingEmailsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -32,6 +34,7 @@ public class GetV2PendingEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2PendingEmailsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,9 +45,11 @@ public class GetV2PendingEmailsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2PendingEmailsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetV2PendingEmailsJsonRequest(){}
 }

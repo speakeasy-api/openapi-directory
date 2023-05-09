@@ -18,6 +18,7 @@ public class ComputeFlightEmissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightEmissions")
     public FlightWithEmissions[] flightEmissions;
+
     public ComputeFlightEmissionsResponse withFlightEmissions(FlightWithEmissions[] flightEmissions) {
         this.flightEmissions = flightEmissions;
         return this;
@@ -29,9 +30,11 @@ public class ComputeFlightEmissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVersion")
     public ModelVersion modelVersion;
+
     public ComputeFlightEmissionsResponse withModelVersion(ModelVersion modelVersion) {
         this.modelVersion = modelVersion;
         return this;
     }
     
+    public ComputeFlightEmissionsResponse(){}
 }

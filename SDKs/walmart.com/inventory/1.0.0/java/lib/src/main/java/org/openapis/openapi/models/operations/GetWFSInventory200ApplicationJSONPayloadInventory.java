@@ -12,6 +12,7 @@ public class GetWFSInventory200ApplicationJSONPayloadInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipNodes")
     public GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes[] shipNodes;
+
     public GetWFSInventory200ApplicationJSONPayloadInventory withShipNodes(GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes[] shipNodes) {
         this.shipNodes = shipNodes;
         return this;
@@ -23,9 +24,11 @@ public class GetWFSInventory200ApplicationJSONPayloadInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetWFSInventory200ApplicationJSONPayloadInventory withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public GetWFSInventory200ApplicationJSONPayloadInventory(){}
 }

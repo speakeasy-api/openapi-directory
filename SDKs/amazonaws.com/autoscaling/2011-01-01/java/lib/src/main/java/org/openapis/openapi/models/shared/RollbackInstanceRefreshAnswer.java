@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RollbackInstanceRefreshAnswer {
     
     public String instanceRefreshId;
+
     public RollbackInstanceRefreshAnswer withInstanceRefreshId(String instanceRefreshId) {
         this.instanceRefreshId = instanceRefreshId;
         return this;
     }
     
+    public RollbackInstanceRefreshAnswer(){}
 }

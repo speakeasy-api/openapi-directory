@@ -15,6 +15,7 @@ public class UpdatePortfolioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioDetail")
     public PortfolioDetail portfolioDetail;
+
     public UpdatePortfolioOutput withPortfolioDetail(PortfolioDetail portfolioDetail) {
         this.portfolioDetail = portfolioDetail;
         return this;
@@ -23,9 +24,11 @@ public class UpdatePortfolioOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public UpdatePortfolioOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdatePortfolioOutput(){}
 }

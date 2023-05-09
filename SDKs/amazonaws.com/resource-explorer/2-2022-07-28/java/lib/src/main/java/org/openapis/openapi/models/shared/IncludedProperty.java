@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IncludedProperty {
     @JsonProperty("Name")
     public String name;
+
     public IncludedProperty withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IncludedProperty(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

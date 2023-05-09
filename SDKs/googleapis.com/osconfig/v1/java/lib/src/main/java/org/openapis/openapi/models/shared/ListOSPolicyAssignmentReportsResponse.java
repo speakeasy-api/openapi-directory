@@ -18,6 +18,7 @@ public class ListOSPolicyAssignmentReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListOSPolicyAssignmentReportsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListOSPolicyAssignmentReportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyAssignmentReports")
     public OSPolicyAssignmentReport[] osPolicyAssignmentReports;
+
     public ListOSPolicyAssignmentReportsResponse withOsPolicyAssignmentReports(OSPolicyAssignmentReport[] osPolicyAssignmentReports) {
         this.osPolicyAssignmentReports = osPolicyAssignmentReports;
         return this;
     }
     
+    public ListOSPolicyAssignmentReportsResponse(){}
 }

@@ -12,6 +12,7 @@ public class DeleteServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DeleteServiceActionInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +20,13 @@ public class DeleteServiceActionInput {
     
     @JsonProperty("Id")
     public String id;
+
     public DeleteServiceActionInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteServiceActionInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

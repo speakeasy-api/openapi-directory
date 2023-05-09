@@ -61,11 +61,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse(contentType, httpRes.statusCode()) {{
             gcpUserAccessBinding = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse(contentType, httpRes.statusCode()) {{
             listGcpUserAccessBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse() {{
+        org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse res = new org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

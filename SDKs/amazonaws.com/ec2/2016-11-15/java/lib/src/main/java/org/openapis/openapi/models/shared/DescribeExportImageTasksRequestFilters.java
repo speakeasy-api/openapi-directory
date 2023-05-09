@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportImageTasksRequestFilters {
     
     public String name;
+
     public DescribeExportImageTasksRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeExportImageTasksRequestFilters {
     
     
     public String[] values;
+
     public DescribeExportImageTasksRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeExportImageTasksRequestFilters(){}
 }

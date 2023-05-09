@@ -15,6 +15,7 @@ public class ListRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockState")
     public ListRulesRequestBodyLockStateEnum lockState;
+
     public ListRulesRequestBody withLockState(ListRulesRequestBodyLockStateEnum lockState) {
         this.lockState = lockState;
         return this;
@@ -26,6 +27,7 @@ public class ListRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListRulesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRulesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class ListRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public org.openapis.openapi.models.shared.ResourceTag[] resourceTags;
+
     public ListRulesRequestBody withResourceTags(org.openapis.openapi.models.shared.ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -58,9 +62,13 @@ public class ListRulesRequestBody {
      */
     @JsonProperty("ResourceType")
     public ListRulesRequestBodyResourceTypeEnum resourceType;
+
     public ListRulesRequestBody withResourceType(ListRulesRequestBodyResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ListRulesRequestBody(@JsonProperty("ResourceType") ListRulesRequestBodyResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
+  }
 }

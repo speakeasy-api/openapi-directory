@@ -15,9 +15,11 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public Datum[] data;
+
     public Row withData(Datum[] data) {
         this.data = data;
         return this;
     }
     
+    public Row(){}
 }

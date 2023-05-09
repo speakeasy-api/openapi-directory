@@ -15,9 +15,11 @@ public class UpdateGlobalTableOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableDescription")
     public GlobalTableDescription globalTableDescription;
+
     public UpdateGlobalTableOutput withGlobalTableDescription(GlobalTableDescription globalTableDescription) {
         this.globalTableDescription = globalTableDescription;
         return this;
     }
     
+    public UpdateGlobalTableOutput(){}
 }

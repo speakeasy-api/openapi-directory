@@ -12,6 +12,7 @@ public class UpdateServiceTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateServiceTemplateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateServiceTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdateServiceTemplateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateServiceTemplateInput {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateServiceTemplateInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateServiceTemplateInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

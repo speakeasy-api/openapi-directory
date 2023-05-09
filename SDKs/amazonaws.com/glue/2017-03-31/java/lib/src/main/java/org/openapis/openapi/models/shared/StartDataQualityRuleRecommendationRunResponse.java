@@ -15,9 +15,11 @@ public class StartDataQualityRuleRecommendationRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public StartDataQualityRuleRecommendationRunResponse withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public StartDataQualityRuleRecommendationRunResponse(){}
 }

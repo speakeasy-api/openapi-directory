@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatafusionProjectsLocationsInstancesDnsPeeringsListResponse {
     
     public String contentType;
+
     public DatafusionProjectsLocationsInstancesDnsPeeringsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatafusionProjectsLocationsInstancesDnsPeeringsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDnsPeeringsResponse listDnsPeeringsResponse;
+
     public DatafusionProjectsLocationsInstancesDnsPeeringsListResponse withListDnsPeeringsResponse(org.openapis.openapi.models.shared.ListDnsPeeringsResponse listDnsPeeringsResponse) {
         this.listDnsPeeringsResponse = listDnsPeeringsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatafusionProjectsLocationsInstancesDnsPeeringsListResponse {
     
     
     public Integer statusCode;
+
     public DatafusionProjectsLocationsInstancesDnsPeeringsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatafusionProjectsLocationsInstancesDnsPeeringsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatafusionProjectsLocationsInstancesDnsPeeringsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatafusionProjectsLocationsInstancesDnsPeeringsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

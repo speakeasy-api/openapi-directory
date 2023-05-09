@@ -35,48 +35,6 @@ public class Sm {
 	}
 
     /**
-     * Force check-in a set of devices
-     * Force check-in a set of devices
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.CheckinNetworkSmDevicesResponse checkinNetworkSmDevices(org.openapis.openapi.models.operations.CheckinNetworkSmDevicesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckinNetworkSmDevicesRequest.class, baseUrl, "/networks/{networkId}/sm/devices/checkin", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PUT");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.CheckinNetworkSmDevicesResponse res = new org.openapis.openapi.models.operations.CheckinNetworkSmDevicesResponse() {{
-            checkinNetworkSmDevices200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.checkinNetworkSmDevices200ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Bypass activation lock attempt
      * Bypass activation lock attempt
      * @param request the request object containing all of the parameters for the API call
@@ -103,11 +61,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptResponse res = new org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptResponse() {{
+        org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptResponse res = new org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptResponse(contentType, httpRes.statusCode()) {{
             createNetworkSmBypassActivationLockAttempt201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -143,11 +99,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptResponse res = new org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptResponse res = new org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmBypassActivationLockAttempt200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +137,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmCellularUsageHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkSmCellularUsageHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmCellularUsageHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkSmCellularUsageHistoryResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmCellularUsageHistory200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,11 +175,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmCertsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmCertsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmCertsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmCertsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmCerts200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,11 +219,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmConnectivityResponse res = new org.openapis.openapi.models.operations.GetNetworkSmConnectivityResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmConnectivityResponse res = new org.openapis.openapi.models.operations.GetNetworkSmConnectivityResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmConnectivity200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -317,11 +265,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmDesktopLogsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDesktopLogsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmDesktopLogsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDesktopLogsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmDesktopLogs200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -365,11 +311,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmDeviceCommandLogsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDeviceCommandLogsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmDeviceCommandLogsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDeviceCommandLogsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmDeviceCommandLogs200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -407,11 +351,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmDeviceProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDeviceProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmDeviceProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDeviceProfilesResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmDeviceProfiles200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -453,11 +395,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmDevicesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDevicesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmDevicesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmDevicesResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmDevices200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -493,11 +433,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmNetworkAdaptersResponse res = new org.openapis.openapi.models.operations.GetNetworkSmNetworkAdaptersResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmNetworkAdaptersResponse res = new org.openapis.openapi.models.operations.GetNetworkSmNetworkAdaptersResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmNetworkAdapters200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -539,11 +477,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmPerformanceHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkSmPerformanceHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmPerformanceHistoryResponse res = new org.openapis.openapi.models.operations.GetNetworkSmPerformanceHistoryResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmPerformanceHistory200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -581,11 +517,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmProfilesResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmProfiles200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -621,11 +555,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmRestrictionsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmRestrictionsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmRestrictionsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmRestrictionsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmRestrictions200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -661,11 +593,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmSecurityCentersResponse res = new org.openapis.openapi.models.operations.GetNetworkSmSecurityCentersResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmSecurityCentersResponse res = new org.openapis.openapi.models.operations.GetNetworkSmSecurityCentersResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmSecurityCenters200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -701,11 +631,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmSoftwaresResponse res = new org.openapis.openapi.models.operations.GetNetworkSmSoftwaresResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmSoftwaresResponse res = new org.openapis.openapi.models.operations.GetNetworkSmSoftwaresResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmSoftwares200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -741,11 +669,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesResponse res = new org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmUserDeviceProfiles200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -781,11 +707,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresResponse res = new org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresResponse res = new org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmUserSoftwares200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -827,11 +751,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmUsersResponse res = new org.openapis.openapi.models.operations.GetNetworkSmUsersResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmUsersResponse res = new org.openapis.openapi.models.operations.GetNetworkSmUsersResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmUsers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -867,11 +789,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSmWlanListsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmWlanListsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSmWlanListsResponse res = new org.openapis.openapi.models.operations.GetNetworkSmWlanListsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSmWlanLists200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -909,11 +829,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LockNetworkSmDevicesResponse res = new org.openapis.openapi.models.operations.LockNetworkSmDevicesResponse() {{
+        org.openapis.openapi.models.operations.LockNetworkSmDevicesResponse res = new org.openapis.openapi.models.operations.LockNetworkSmDevicesResponse(contentType, httpRes.statusCode()) {{
             lockNetworkSmDevices200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -949,10 +867,8 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RefreshNetworkSmDeviceDetailsResponse res = new org.openapis.openapi.models.operations.RefreshNetworkSmDeviceDetailsResponse() {{
+        org.openapis.openapi.models.operations.RefreshNetworkSmDeviceDetailsResponse res = new org.openapis.openapi.models.operations.RefreshNetworkSmDeviceDetailsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -983,11 +899,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnenrollNetworkSmDeviceResponse res = new org.openapis.openapi.models.operations.UnenrollNetworkSmDeviceResponse() {{
+        org.openapis.openapi.models.operations.UnenrollNetworkSmDeviceResponse res = new org.openapis.openapi.models.operations.UnenrollNetworkSmDeviceResponse(contentType, httpRes.statusCode()) {{
             unenrollNetworkSmDevice200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1028,11 +942,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSmDeviceFieldsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSmDeviceFieldsResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSmDeviceFieldsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSmDeviceFieldsResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSmDeviceFields200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1073,11 +985,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSmDevicesTagsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSmDevicesTagsResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSmDevicesTagsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSmDevicesTagsResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSmDevicesTags200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1115,11 +1025,9 @@ public class Sm {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WipeNetworkSmDeviceResponse res = new org.openapis.openapi.models.operations.WipeNetworkSmDeviceResponse() {{
+        org.openapis.openapi.models.operations.WipeNetworkSmDeviceResponse res = new org.openapis.openapi.models.operations.WipeNetworkSmDeviceResponse(contentType, httpRes.statusCode()) {{
             wipeNetworkSmDevice200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

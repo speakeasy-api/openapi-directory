@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3EnvironmentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3EnvironmentInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3EnvironmentInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCasesConfig")
     public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig testCasesConfig;
+
     public GoogleCloudDialogflowCxV3EnvironmentInput withTestCasesConfig(GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig testCasesConfig) {
         this.testCasesConfig = testCasesConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionConfigs")
     public GoogleCloudDialogflowCxV3EnvironmentVersionConfig[] versionConfigs;
+
     public GoogleCloudDialogflowCxV3EnvironmentInput withVersionConfigs(GoogleCloudDialogflowCxV3EnvironmentVersionConfig[] versionConfigs) {
         this.versionConfigs = versionConfigs;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookConfig")
     public GoogleCloudDialogflowCxV3EnvironmentWebhookConfig webhookConfig;
+
     public GoogleCloudDialogflowCxV3EnvironmentInput withWebhookConfig(GoogleCloudDialogflowCxV3EnvironmentWebhookConfig webhookConfig) {
         this.webhookConfig = webhookConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3EnvironmentInput(){}
 }

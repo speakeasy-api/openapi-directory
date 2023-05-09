@@ -15,6 +15,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildConfigurations")
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurations[] buildConfigurations;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules withBuildConfigurations(BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModulesBuildConfigurations[] buildConfigurations) {
         this.buildConfigurations = buildConfigurations;
         return this;
@@ -26,6 +27,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildTypes")
     public String[] buildTypes;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules withBuildTypes(String[] buildTypes) {
         this.buildTypes = buildTypes;
         return this;
@@ -37,6 +39,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildVariants")
     public String[] buildVariants;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules withBuildVariants(String[] buildVariants) {
         this.buildVariants = buildVariants;
         return this;
@@ -48,6 +51,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasBundle")
     public Boolean hasBundle;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules withHasBundle(Boolean hasBundle) {
         this.hasBundle = hasBundle;
         return this;
@@ -59,6 +63,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRoot")
     public Boolean isRoot;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules withIsRoot(Boolean isRoot) {
         this.isRoot = isRoot;
         return this;
@@ -69,6 +74,7 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules {
      */
     @JsonProperty("name")
     public String name;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules withName(String name) {
         this.name = name;
         return this;
@@ -80,9 +86,13 @@ public class BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productFlavors")
     public String[] productFlavors;
+
     public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules withProductFlavors(String[] productFlavors) {
         this.productFlavors = productFlavors;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONAndroidAndroidModules(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

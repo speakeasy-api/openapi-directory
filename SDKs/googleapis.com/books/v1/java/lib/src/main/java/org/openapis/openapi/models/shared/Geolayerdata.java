@@ -12,6 +12,7 @@ public class Geolayerdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public GeolayerdataCommon common;
+
     public Geolayerdata withCommon(GeolayerdataCommon common) {
         this.common = common;
         return this;
@@ -20,6 +21,7 @@ public class Geolayerdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geo")
     public GeolayerdataGeo geo;
+
     public Geolayerdata withGeo(GeolayerdataGeo geo) {
         this.geo = geo;
         return this;
@@ -28,9 +30,11 @@ public class Geolayerdata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Geolayerdata withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Geolayerdata(){}
 }

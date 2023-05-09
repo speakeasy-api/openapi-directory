@@ -18,9 +18,11 @@ public class PlaceAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
     public String formatted;
+
     public PlaceAddress withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
     }
     
+    public PlaceAddress(){}
 }

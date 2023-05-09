@@ -18,9 +18,11 @@ public class WebAuthn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rpId")
     public String rpId;
+
     public WebAuthn withRpId(String rpId) {
         this.rpId = rpId;
         return this;
     }
     
+    public WebAuthn(){}
 }

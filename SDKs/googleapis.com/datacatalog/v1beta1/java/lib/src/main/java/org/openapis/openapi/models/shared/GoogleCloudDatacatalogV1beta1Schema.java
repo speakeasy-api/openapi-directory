@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public GoogleCloudDatacatalogV1beta1ColumnSchema[] columns;
+
     public GoogleCloudDatacatalogV1beta1Schema withColumns(GoogleCloudDatacatalogV1beta1ColumnSchema[] columns) {
         this.columns = columns;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1Schema(){}
 }

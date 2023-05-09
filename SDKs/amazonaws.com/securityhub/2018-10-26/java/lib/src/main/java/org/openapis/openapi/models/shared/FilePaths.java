@@ -15,6 +15,7 @@ public class FilePaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileName")
     public String fileName;
+
     public FilePaths withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -23,6 +24,7 @@ public class FilePaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilePath")
     public String filePath;
+
     public FilePaths withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -31,6 +33,7 @@ public class FilePaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hash")
     public String hash;
+
     public FilePaths withHash(String hash) {
         this.hash = hash;
         return this;
@@ -39,9 +42,11 @@ public class FilePaths {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public FilePaths withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public FilePaths(){}
 }

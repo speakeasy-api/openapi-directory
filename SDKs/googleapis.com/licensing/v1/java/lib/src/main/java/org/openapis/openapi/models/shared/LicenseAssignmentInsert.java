@@ -18,9 +18,11 @@ public class LicenseAssignmentInsert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public LicenseAssignmentInsert withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public LicenseAssignmentInsert(){}
 }

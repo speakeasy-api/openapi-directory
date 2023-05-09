@@ -18,9 +18,11 @@ public class SettingsChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionChanges")
     public RestrictionChange[] restrictionChanges;
+
     public SettingsChange withRestrictionChanges(RestrictionChange[] restrictionChanges) {
         this.restrictionChanges = restrictionChanges;
         return this;
     }
     
+    public SettingsChange(){}
 }

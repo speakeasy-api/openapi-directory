@@ -15,6 +15,7 @@ public class ListCompatibleImagesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleImages")
     public CompatibleImage[] compatibleImages;
+
     public ListCompatibleImagesResult withCompatibleImages(CompatibleImage[] compatibleImages) {
         this.compatibleImages = compatibleImages;
         return this;
@@ -23,9 +24,11 @@ public class ListCompatibleImagesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCompatibleImagesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCompatibleImagesResult(){}
 }

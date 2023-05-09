@@ -18,6 +18,7 @@ public class LiasettingsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LiasettingsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class LiasettingsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public LiasettingsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -37,9 +39,11 @@ public class LiasettingsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public LiaSettings[] resources;
+
     public LiasettingsListResponse withResources(LiaSettings[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public LiasettingsListResponse(){}
 }

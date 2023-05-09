@@ -14,6 +14,7 @@ public class GetMediaForFragmentListRequestBody {
      */
     @JsonProperty("Fragments")
     public String[] fragments;
+
     public GetMediaForFragmentListRequestBody withFragments(String[] fragments) {
         this.fragments = fragments;
         return this;
@@ -25,6 +26,7 @@ public class GetMediaForFragmentListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetMediaForFragmentListRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -36,9 +38,13 @@ public class GetMediaForFragmentListRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetMediaForFragmentListRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public GetMediaForFragmentListRequestBody(@JsonProperty("Fragments") String[] fragments) {
+        this.fragments = fragments;
+  }
 }

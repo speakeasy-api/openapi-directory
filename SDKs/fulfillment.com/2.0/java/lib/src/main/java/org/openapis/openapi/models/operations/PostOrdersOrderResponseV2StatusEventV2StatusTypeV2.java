@@ -15,6 +15,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionRequiredBy")
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy actionRequiredBy;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withActionRequiredBy(PostOrdersOrderResponseV2StatusEventV2StatusTypeV2ActionRequiredBy actionRequiredBy) {
         this.actionRequiredBy = actionRequiredBy;
         return this;
@@ -25,6 +26,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
      */
     @JsonProperty("code")
     public String code;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withCode(String code) {
         this.code = code;
         return this;
@@ -33,6 +35,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -40,6 +43,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     
     @JsonProperty("detailCode")
     public String detailCode;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withDetailCode(String detailCode) {
         this.detailCode = detailCode;
         return this;
@@ -51,6 +55,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isClosed")
     public Boolean isClosed;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withIsClosed(Boolean isClosed) {
         this.isClosed = isClosed;
         return this;
@@ -73,6 +79,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +91,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withReason(String reason) {
         this.reason = reason;
         return this;
@@ -91,6 +99,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     
     @JsonProperty("stage")
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage stage;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withStage(PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage stage) {
         this.stage = stage;
         return this;
@@ -98,9 +107,16 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 {
     
     @JsonProperty("state")
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State state;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2 withState(PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State state) {
         this.state = state;
         return this;
     }
     
+    public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2(@JsonProperty("code") String code, @JsonProperty("detailCode") String detailCode, @JsonProperty("stage") PostOrdersOrderResponseV2StatusEventV2StatusTypeV2Stage stage, @JsonProperty("state") PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State state) {
+        this.code = code;
+        this.detailCode = detailCode;
+        this.stage = stage;
+        this.state = state;
+  }
 }

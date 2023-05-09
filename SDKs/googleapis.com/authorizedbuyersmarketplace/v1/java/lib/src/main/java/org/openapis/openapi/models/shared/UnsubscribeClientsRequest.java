@@ -18,9 +18,11 @@ public class UnsubscribeClientsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clients")
     public String[] clients;
+
     public UnsubscribeClientsRequest withClients(String[] clients) {
         this.clients = clients;
         return this;
     }
     
+    public UnsubscribeClientsRequest(){}
 }

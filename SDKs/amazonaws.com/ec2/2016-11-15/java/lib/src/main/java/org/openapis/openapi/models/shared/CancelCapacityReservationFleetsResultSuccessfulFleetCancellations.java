@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelCapacityReservationFleetsResultSuccessfulFleetCancellations {
     
     public String capacityReservationFleetId;
+
     public CancelCapacityReservationFleetsResultSuccessfulFleetCancellations withCapacityReservationFleetId(String capacityReservationFleetId) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         return this;
@@ -19,6 +20,7 @@ public class CancelCapacityReservationFleetsResultSuccessfulFleetCancellations {
     
     
     public CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum currentFleetState;
+
     public CancelCapacityReservationFleetsResultSuccessfulFleetCancellations withCurrentFleetState(CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum currentFleetState) {
         this.currentFleetState = currentFleetState;
         return this;
@@ -26,9 +28,11 @@ public class CancelCapacityReservationFleetsResultSuccessfulFleetCancellations {
     
     
     public CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum previousFleetState;
+
     public CancelCapacityReservationFleetsResultSuccessfulFleetCancellations withPreviousFleetState(CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum previousFleetState) {
         this.previousFleetState = previousFleetState;
         return this;
     }
     
+    public CancelCapacityReservationFleetsResultSuccessfulFleetCancellations(){}
 }

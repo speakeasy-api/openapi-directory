@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaCreateAppsScriptProjectResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaLinkAppsScriptProjectResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListRuntimeEntitySchemasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaAuthConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListAuthConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaCertificate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListCertificatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaExecuteIntegrationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaCancelExecutionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListExecutionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaLiftSuspensionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListSuspensionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaResolveSuspensionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListIntegrationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -814,11 +782,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaScheduleIntegrationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +826,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -908,11 +872,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaPublishIntegrationVersionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +918,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaTakeoverEditLockResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,11 +964,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1052,11 +1010,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaUploadIntegrationVersionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1056,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaIntegrationTemplateVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1146,11 +1100,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1194,11 +1146,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaSfdcInstance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1240,11 +1190,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListSfdcInstancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1288,11 +1236,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaSfdcChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1334,11 +1280,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1380,11 +1324,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaSfdcChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1426,11 +1368,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaListSfdcChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1474,11 +1414,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchResponse() {{
+        org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchResponse res = new org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudIntegrationsV1alphaSfdcChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

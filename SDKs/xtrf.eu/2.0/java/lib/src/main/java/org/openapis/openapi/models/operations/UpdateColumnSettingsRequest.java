@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateColumnSettingsRequest {
@@ -12,6 +13,7 @@ public class UpdateColumnSettingsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdateColumnSettingsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateColumnSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnName")
     public String columnName;
+
     public UpdateColumnSettingsRequest withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -32,9 +35,15 @@ public class UpdateColumnSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public UpdateColumnSettingsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public UpdateColumnSettingsRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("columnName") String columnName, @JsonProperty("viewId") Long viewId) {
+        this.requestBody = requestBody;
+        this.columnName = columnName;
+        this.viewId = viewId;
+  }
 }

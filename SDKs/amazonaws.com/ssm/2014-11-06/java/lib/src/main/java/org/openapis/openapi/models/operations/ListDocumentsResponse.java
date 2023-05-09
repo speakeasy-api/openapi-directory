@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDocumentsResponse {
     
     public String contentType;
+
     public ListDocumentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDocumentsResponse {
      */
     
     public Object internalServerError;
+
     public ListDocumentsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListDocumentsResponse {
      */
     
     public Object invalidFilterKey;
+
     public ListDocumentsResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -39,6 +43,7 @@ public class ListDocumentsResponse {
      */
     
     public Object invalidNextToken;
+
     public ListDocumentsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -49,6 +54,7 @@ public class ListDocumentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDocumentsResult listDocumentsResult;
+
     public ListDocumentsResponse withListDocumentsResult(org.openapis.openapi.models.shared.ListDocumentsResult listDocumentsResult) {
         this.listDocumentsResult = listDocumentsResult;
         return this;
@@ -56,6 +62,7 @@ public class ListDocumentsResponse {
     
     
     public Integer statusCode;
+
     public ListDocumentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListDocumentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDocumentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDocumentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

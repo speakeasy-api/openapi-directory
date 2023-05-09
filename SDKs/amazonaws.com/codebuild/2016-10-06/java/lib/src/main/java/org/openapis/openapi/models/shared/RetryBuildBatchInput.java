@@ -12,6 +12,7 @@ public class RetryBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RetryBuildBatchInput withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class RetryBuildBatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryType")
     public RetryBuildBatchTypeEnum retryType;
+
     public RetryBuildBatchInput withRetryType(RetryBuildBatchTypeEnum retryType) {
         this.retryType = retryType;
         return this;
     }
     
+    public RetryBuildBatchInput(){}
 }

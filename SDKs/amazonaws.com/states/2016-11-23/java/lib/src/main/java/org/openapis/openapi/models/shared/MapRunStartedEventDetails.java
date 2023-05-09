@@ -15,9 +15,11 @@ public class MapRunStartedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public MapRunStartedEventDetails withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
     }
     
+    public MapRunStartedEventDetails(){}
 }

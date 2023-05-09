@@ -15,6 +15,7 @@ public class AwsCloudFrontDistributionOriginCustomOriginConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpPort")
     public Long httpPort;
+
     public AwsCloudFrontDistributionOriginCustomOriginConfig withHttpPort(Long httpPort) {
         this.httpPort = httpPort;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudFrontDistributionOriginCustomOriginConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpsPort")
     public Long httpsPort;
+
     public AwsCloudFrontDistributionOriginCustomOriginConfig withHttpsPort(Long httpsPort) {
         this.httpsPort = httpsPort;
         return this;
@@ -31,6 +33,7 @@ public class AwsCloudFrontDistributionOriginCustomOriginConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginKeepaliveTimeout")
     public Long originKeepaliveTimeout;
+
     public AwsCloudFrontDistributionOriginCustomOriginConfig withOriginKeepaliveTimeout(Long originKeepaliveTimeout) {
         this.originKeepaliveTimeout = originKeepaliveTimeout;
         return this;
@@ -39,6 +42,7 @@ public class AwsCloudFrontDistributionOriginCustomOriginConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginProtocolPolicy")
     public String originProtocolPolicy;
+
     public AwsCloudFrontDistributionOriginCustomOriginConfig withOriginProtocolPolicy(String originProtocolPolicy) {
         this.originProtocolPolicy = originProtocolPolicy;
         return this;
@@ -47,6 +51,7 @@ public class AwsCloudFrontDistributionOriginCustomOriginConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginReadTimeout")
     public Long originReadTimeout;
+
     public AwsCloudFrontDistributionOriginCustomOriginConfig withOriginReadTimeout(Long originReadTimeout) {
         this.originReadTimeout = originReadTimeout;
         return this;
@@ -55,9 +60,11 @@ public class AwsCloudFrontDistributionOriginCustomOriginConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginSslProtocols")
     public AwsCloudFrontDistributionOriginSslProtocols originSslProtocols;
+
     public AwsCloudFrontDistributionOriginCustomOriginConfig withOriginSslProtocols(AwsCloudFrontDistributionOriginSslProtocols originSslProtocols) {
         this.originSslProtocols = originSslProtocols;
         return this;
     }
     
+    public AwsCloudFrontDistributionOriginCustomOriginConfig(){}
 }

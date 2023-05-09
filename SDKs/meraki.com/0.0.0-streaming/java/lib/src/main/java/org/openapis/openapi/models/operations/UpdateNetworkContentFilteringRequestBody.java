@@ -15,6 +15,7 @@ public class UpdateNetworkContentFilteringRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedUrlPatterns")
     public String[] allowedUrlPatterns;
+
     public UpdateNetworkContentFilteringRequestBody withAllowedUrlPatterns(String[] allowedUrlPatterns) {
         this.allowedUrlPatterns = allowedUrlPatterns;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkContentFilteringRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockedUrlCategories")
     public String[] blockedUrlCategories;
+
     public UpdateNetworkContentFilteringRequestBody withBlockedUrlCategories(String[] blockedUrlCategories) {
         this.blockedUrlCategories = blockedUrlCategories;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkContentFilteringRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockedUrlPatterns")
     public String[] blockedUrlPatterns;
+
     public UpdateNetworkContentFilteringRequestBody withBlockedUrlPatterns(String[] blockedUrlPatterns) {
         this.blockedUrlPatterns = blockedUrlPatterns;
         return this;
@@ -48,9 +51,11 @@ public class UpdateNetworkContentFilteringRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlCategoryListSize")
     public UpdateNetworkContentFilteringRequestBodyUrlCategoryListSizeEnum urlCategoryListSize;
+
     public UpdateNetworkContentFilteringRequestBody withUrlCategoryListSize(UpdateNetworkContentFilteringRequestBodyUrlCategoryListSizeEnum urlCategoryListSize) {
         this.urlCategoryListSize = urlCategoryListSize;
         return this;
     }
     
+    public UpdateNetworkContentFilteringRequestBody(){}
 }

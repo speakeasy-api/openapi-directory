@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTerminateEnvironmentRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETTerminateEnvironmentActionEnum action;
+
     public GETTerminateEnvironmentRequest withAction(GETTerminateEnvironmentActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETTerminateEnvironmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
     public String environmentId;
+
     public GETTerminateEnvironmentRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +32,7 @@ public class GETTerminateEnvironmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETTerminateEnvironmentRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -39,6 +43,7 @@ public class GETTerminateEnvironmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ForceTerminate")
     public Boolean forceTerminate;
+
     public GETTerminateEnvironmentRequest withForceTerminate(Boolean forceTerminate) {
         this.forceTerminate = forceTerminate;
         return this;
@@ -49,6 +54,7 @@ public class GETTerminateEnvironmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TerminateResources")
     public Boolean terminateResources;
+
     public GETTerminateEnvironmentRequest withTerminateResources(Boolean terminateResources) {
         this.terminateResources = terminateResources;
         return this;
@@ -56,6 +62,7 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETTerminateEnvironmentVersionEnum version;
+
     public GETTerminateEnvironmentRequest withVersion(GETTerminateEnvironmentVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETTerminateEnvironmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETTerminateEnvironmentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETTerminateEnvironmentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETTerminateEnvironmentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETTerminateEnvironmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETTerminateEnvironmentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,14 @@ public class GETTerminateEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETTerminateEnvironmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETTerminateEnvironmentRequest(@JsonProperty("Action") GETTerminateEnvironmentActionEnum action, @JsonProperty("Version") GETTerminateEnvironmentVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

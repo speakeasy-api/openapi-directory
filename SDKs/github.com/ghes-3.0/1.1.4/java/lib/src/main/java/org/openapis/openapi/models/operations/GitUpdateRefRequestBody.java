@@ -15,6 +15,7 @@ public class GitUpdateRefRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public GitUpdateRefRequestBody withForce(Boolean force) {
         this.force = force;
         return this;
@@ -25,9 +26,13 @@ public class GitUpdateRefRequestBody {
      */
     @JsonProperty("sha")
     public String sha;
+
     public GitUpdateRefRequestBody withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public GitUpdateRefRequestBody(@JsonProperty("sha") String sha) {
+        this.sha = sha;
+  }
 }

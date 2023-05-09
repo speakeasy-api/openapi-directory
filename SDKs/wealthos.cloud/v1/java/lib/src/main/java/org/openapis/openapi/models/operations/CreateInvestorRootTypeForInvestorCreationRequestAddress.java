@@ -12,6 +12,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line")
     public String addressLine;
+
     public CreateInvestorRootTypeForInvestorCreationRequestAddress withAddressLine(String addressLine) {
         this.addressLine = addressLine;
         return this;
@@ -20,6 +21,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public CreateInvestorRootTypeForInvestorCreationRequestAddress withCity(String city) {
         this.city = city;
         return this;
@@ -30,6 +32,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestAddress {
      */
     @JsonProperty("country")
     public String country;
+
     public CreateInvestorRootTypeForInvestorCreationRequestAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -37,6 +40,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestAddress {
     
     @JsonProperty("postal_code")
     public String postalCode;
+
     public CreateInvestorRootTypeForInvestorCreationRequestAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -45,6 +49,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CreateInvestorRootTypeForInvestorCreationRequestAddress withState(String state) {
         this.state = state;
         return this;
@@ -53,9 +58,14 @@ public class CreateInvestorRootTypeForInvestorCreationRequestAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_name")
     public String streetName;
+
     public CreateInvestorRootTypeForInvestorCreationRequestAddress withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationRequestAddress(@JsonProperty("country") String country, @JsonProperty("postal_code") String postalCode) {
+        this.country = country;
+        this.postalCode = postalCode;
+  }
 }

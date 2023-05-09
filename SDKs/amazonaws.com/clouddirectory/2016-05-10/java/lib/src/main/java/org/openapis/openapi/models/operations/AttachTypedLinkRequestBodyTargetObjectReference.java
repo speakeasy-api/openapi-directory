@@ -15,9 +15,11 @@ public class AttachTypedLinkRequestBodyTargetObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public AttachTypedLinkRequestBodyTargetObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public AttachTypedLinkRequestBodyTargetObjectReference(){}
 }

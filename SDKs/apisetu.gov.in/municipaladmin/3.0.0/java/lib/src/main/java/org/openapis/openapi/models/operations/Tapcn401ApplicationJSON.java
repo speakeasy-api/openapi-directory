@@ -15,6 +15,7 @@ public class Tapcn401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Tapcn401ApplicationJSONErrorEnum error;
+
     public Tapcn401ApplicationJSON withError(Tapcn401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Tapcn401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Tapcn401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Tapcn401ApplicationJSON withErrorDescription(Tapcn401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Tapcn401ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class GetTermsOfServiceDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public GetTermsOfServiceDocumentResponse withDocument(String document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class GetTermsOfServiceDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetTermsOfServiceDocumentResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GetTermsOfServiceDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public GetTermsOfServiceDocumentResponse withLanguage(String language) {
         this.language = language;
         return this;
@@ -51,6 +54,7 @@ public class GetTermsOfServiceDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsOfServiceDocumentId")
     public String termsOfServiceDocumentId;
+
     public GetTermsOfServiceDocumentResponse withTermsOfServiceDocumentId(String termsOfServiceDocumentId) {
         this.termsOfServiceDocumentId = termsOfServiceDocumentId;
         return this;
@@ -62,9 +66,11 @@ public class GetTermsOfServiceDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetTermsOfServiceDocumentResponseTypeEnum type;
+
     public GetTermsOfServiceDocumentResponse withType(GetTermsOfServiceDocumentResponseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetTermsOfServiceDocumentResponse(){}
 }

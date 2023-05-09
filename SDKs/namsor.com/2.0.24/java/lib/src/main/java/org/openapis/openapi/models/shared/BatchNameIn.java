@@ -15,6 +15,7 @@ public class BatchNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public FactIn[] facts;
+
     public BatchNameIn withFacts(FactIn[] facts) {
         this.facts = facts;
         return this;
@@ -23,9 +24,11 @@ public class BatchNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properNouns")
     public NameIn[] properNouns;
+
     public BatchNameIn withProperNouns(NameIn[] properNouns) {
         this.properNouns = properNouns;
         return this;
     }
     
+    public BatchNameIn(){}
 }

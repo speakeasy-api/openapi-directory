@@ -15,9 +15,11 @@ public class CreatePartnerEventSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceArn")
     public String eventSourceArn;
+
     public CreatePartnerEventSourceResponse withEventSourceArn(String eventSourceArn) {
         this.eventSourceArn = eventSourceArn;
         return this;
     }
     
+    public CreatePartnerEventSourceResponse(){}
 }

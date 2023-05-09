@@ -12,6 +12,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowableBookings")
     public Integer allowableBookings;
+
     public AvailableTimeViewModel withAllowableBookings(Integer allowableBookings) {
         this.allowableBookings = allowableBookings;
         return this;
@@ -20,6 +21,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowableCapacity")
     public Integer allowableCapacity;
+
     public AvailableTimeViewModel withAllowableCapacity(Integer allowableCapacity) {
         this.allowableCapacity = allowableCapacity;
         return this;
@@ -28,6 +30,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableBookings")
     public Integer availableBookings;
+
     public AvailableTimeViewModel withAvailableBookings(Integer availableBookings) {
         this.availableBookings = availableBookings;
         return this;
@@ -36,6 +39,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableCapacity")
     public Integer availableCapacity;
+
     public AvailableTimeViewModel withAvailableCapacity(Integer availableCapacity) {
         this.availableCapacity = availableCapacity;
         return this;
@@ -44,6 +48,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public AvailableTimeViewModel withDate(String date) {
         this.date = date;
         return this;
@@ -52,6 +57,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayTime")
     public String displayTime;
+
     public AvailableTimeViewModel withDisplayTime(String displayTime) {
         this.displayTime = displayTime;
         return this;
@@ -60,6 +66,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public AvailableTimeViewModel withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -68,6 +75,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateTime")
     public String endDateTime;
+
     public AvailableTimeViewModel withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -76,6 +84,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public AvailableTimeViewModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -84,6 +93,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateTime")
     public String startDateTime;
+
     public AvailableTimeViewModel withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -92,6 +102,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Integer time;
+
     public AvailableTimeViewModel withTime(Integer time) {
         this.time = time;
         return this;
@@ -100,6 +111,7 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelAppointmentId")
     public String travelAppointmentId;
+
     public AvailableTimeViewModel withTravelAppointmentId(String travelAppointmentId) {
         this.travelAppointmentId = travelAppointmentId;
         return this;
@@ -108,9 +120,11 @@ public class AvailableTimeViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelTimeMins")
     public Integer travelTimeMins;
+
     public AvailableTimeViewModel withTravelTimeMins(Integer travelTimeMins) {
         this.travelTimeMins = travelTimeMins;
         return this;
     }
     
+    public AvailableTimeViewModel(){}
 }

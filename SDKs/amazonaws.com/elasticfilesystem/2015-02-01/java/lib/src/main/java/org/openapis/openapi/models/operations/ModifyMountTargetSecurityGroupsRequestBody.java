@@ -15,9 +15,11 @@ public class ModifyMountTargetSecurityGroupsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public ModifyMountTargetSecurityGroupsRequestBody withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
     
+    public ModifyMountTargetSecurityGroupsRequestBody(){}
 }

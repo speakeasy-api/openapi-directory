@@ -15,9 +15,11 @@ public class InstanceGroupsAddInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstanceReference[] instances;
+
     public InstanceGroupsAddInstancesRequest withInstances(InstanceReference[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public InstanceGroupsAddInstancesRequest(){}
 }

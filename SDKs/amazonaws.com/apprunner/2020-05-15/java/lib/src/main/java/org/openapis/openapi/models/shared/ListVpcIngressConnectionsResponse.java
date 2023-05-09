@@ -15,6 +15,7 @@ public class ListVpcIngressConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVpcIngressConnectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListVpcIngressConnectionsResponse {
     
     @JsonProperty("VpcIngressConnectionSummaryList")
     public VpcIngressConnectionSummary[] vpcIngressConnectionSummaryList;
+
     public ListVpcIngressConnectionsResponse withVpcIngressConnectionSummaryList(VpcIngressConnectionSummary[] vpcIngressConnectionSummaryList) {
         this.vpcIngressConnectionSummaryList = vpcIngressConnectionSummaryList;
         return this;
     }
     
+    public ListVpcIngressConnectionsResponse(@JsonProperty("VpcIngressConnectionSummaryList") VpcIngressConnectionSummary[] vpcIngressConnectionSummaryList) {
+        this.vpcIngressConnectionSummaryList = vpcIngressConnectionSummaryList;
+  }
 }

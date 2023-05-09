@@ -15,6 +15,7 @@ public class ListBotAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasSummaries")
     public BotAliasSummary[] botAliasSummaries;
+
     public ListBotAliasesResponse withBotAliasSummaries(BotAliasSummary[] botAliasSummaries) {
         this.botAliasSummaries = botAliasSummaries;
         return this;
@@ -23,6 +24,7 @@ public class ListBotAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListBotAliasesResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -31,9 +33,11 @@ public class ListBotAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBotAliasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBotAliasesResponse(){}
 }

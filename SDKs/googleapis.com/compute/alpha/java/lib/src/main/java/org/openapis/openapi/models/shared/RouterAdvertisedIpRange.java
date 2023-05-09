@@ -18,6 +18,7 @@ public class RouterAdvertisedIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RouterAdvertisedIpRange withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class RouterAdvertisedIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public String range;
+
     public RouterAdvertisedIpRange withRange(String range) {
         this.range = range;
         return this;
     }
     
+    public RouterAdvertisedIpRange(){}
 }

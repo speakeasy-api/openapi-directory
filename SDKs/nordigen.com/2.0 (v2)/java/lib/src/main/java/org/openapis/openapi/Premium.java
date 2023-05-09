@@ -58,7 +58,8 @@ public class Premium {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Response res = new org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Response() {{
+        org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Response res = new org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Response(contentType, httpRes.statusCode()) {{
+            retrieveAccountTransactionsV2200ApplicationJSONObject = null;
             retrieveAccountTransactionsV2400ApplicationJSONObject = null;
             retrieveAccountTransactionsV2401ApplicationJSONObject = null;
             retrieveAccountTransactionsV2403ApplicationJSONObject = null;
@@ -68,11 +69,14 @@ public class Premium {
             retrieveAccountTransactionsV2500ApplicationJSONObject = null;
             retrieveAccountTransactionsV2503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.retrieveAccountTransactionsV2200ApplicationJSONObject = out;
+            }
         }
         else if (httpRes.statusCode() == 400) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {

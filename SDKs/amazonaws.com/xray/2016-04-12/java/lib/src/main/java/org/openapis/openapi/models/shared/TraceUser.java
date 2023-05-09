@@ -15,6 +15,7 @@ public class TraceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceIds")
     public ServiceId[] serviceIds;
+
     public TraceUser withServiceIds(ServiceId[] serviceIds) {
         this.serviceIds = serviceIds;
         return this;
@@ -23,9 +24,11 @@ public class TraceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public TraceUser withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public TraceUser(){}
 }

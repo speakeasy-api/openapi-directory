@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintsContributorsListRequest {
@@ -12,9 +13,13 @@ public class PreprintsContributorsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_id")
     public String preprintId;
+
     public PreprintsContributorsListRequest withPreprintId(String preprintId) {
         this.preprintId = preprintId;
         return this;
     }
     
+    public PreprintsContributorsListRequest(@JsonProperty("preprint_id") String preprintId) {
+        this.preprintId = preprintId;
+  }
 }

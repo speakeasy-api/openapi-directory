@@ -18,6 +18,7 @@ public class PatientAllergy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PatientAllergy withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class PatientAllergy {
      */
     @JsonProperty("doctor")
     public Long doctor;
+
     public PatientAllergy withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -36,6 +38,7 @@ public class PatientAllergy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PatientAllergy withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +50,7 @@ public class PatientAllergy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public PatientAllergy withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -54,6 +58,7 @@ public class PatientAllergy {
     
     @JsonProperty("patient")
     public Long patient;
+
     public PatientAllergy withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -65,6 +70,7 @@ public class PatientAllergy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reaction")
     public String reaction;
+
     public PatientAllergy withReaction(String reaction) {
         this.reaction = reaction;
         return this;
@@ -76,6 +82,7 @@ public class PatientAllergy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rxnorm")
     public String rxnorm;
+
     public PatientAllergy withRxnorm(String rxnorm) {
         this.rxnorm = rxnorm;
         return this;
@@ -87,6 +94,7 @@ public class PatientAllergy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snomed_reaction")
     public PatientAllergySnomedReactionEnum snomedReaction;
+
     public PatientAllergy withSnomedReaction(PatientAllergySnomedReactionEnum snomedReaction) {
         this.snomedReaction = snomedReaction;
         return this;
@@ -98,9 +106,14 @@ public class PatientAllergy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PatientAllergyStatusEnum status;
+
     public PatientAllergy withStatus(PatientAllergyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PatientAllergy(@JsonProperty("doctor") Long doctor, @JsonProperty("patient") Long patient) {
+        this.doctor = doctor;
+        this.patient = patient;
+  }
 }

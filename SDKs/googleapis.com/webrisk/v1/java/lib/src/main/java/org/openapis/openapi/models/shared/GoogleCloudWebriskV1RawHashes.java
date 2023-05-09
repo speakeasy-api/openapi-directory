@@ -18,6 +18,7 @@ public class GoogleCloudWebriskV1RawHashes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixSize")
     public Integer prefixSize;
+
     public GoogleCloudWebriskV1RawHashes withPrefixSize(Integer prefixSize) {
         this.prefixSize = prefixSize;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudWebriskV1RawHashes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawHashes")
     public String rawHashes;
+
     public GoogleCloudWebriskV1RawHashes withRawHashes(String rawHashes) {
         this.rawHashes = rawHashes;
         return this;
     }
     
+    public GoogleCloudWebriskV1RawHashes(){}
 }

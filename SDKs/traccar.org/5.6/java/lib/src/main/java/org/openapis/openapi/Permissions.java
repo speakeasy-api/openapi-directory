@@ -59,10 +59,8 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePermissionsResponse res = new org.openapis.openapi.models.operations.DeletePermissionsResponse() {{
+        org.openapis.openapi.models.operations.DeletePermissionsResponse res = new org.openapis.openapi.models.operations.DeletePermissionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -97,11 +95,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPermissionsResponse res = new org.openapis.openapi.models.operations.PostPermissionsResponse() {{
+        org.openapis.openapi.models.operations.PostPermissionsResponse res = new org.openapis.openapi.models.operations.PostPermissionsResponse(contentType, httpRes.statusCode()) {{
             permission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateDeploymentResponse {
     
     public String contentType;
+
     public ReposCreateDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateDeploymentResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposCreateDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.Deployment deployment;
+
     public ReposCreateDeploymentResponse withDeployment(org.openapis.openapi.models.shared.Deployment deployment) {
         this.deployment = deployment;
         return this;
@@ -43,6 +48,7 @@ public class ReposCreateDeploymentResponse {
      */
     
     public ReposCreateDeployment202ApplicationJSON reposCreateDeployment202ApplicationJSONObject;
+
     public ReposCreateDeploymentResponse withReposCreateDeployment202ApplicationJSONObject(ReposCreateDeployment202ApplicationJSON reposCreateDeployment202ApplicationJSONObject) {
         this.reposCreateDeployment202ApplicationJSONObject = reposCreateDeployment202ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReposCreateDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateDeploymentResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

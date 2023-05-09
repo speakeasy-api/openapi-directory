@@ -18,20 +18,23 @@ public class GoogleCloudAssetV1Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisState")
     public IamPolicyAnalysisState analysisState;
+
     public GoogleCloudAssetV1Identity withAnalysisState(IamPolicyAnalysisState analysisState) {
         this.analysisState = analysisState;
         return this;
     }
     
     /**
-     * The identity name in any form of members appear in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding), such as: - user:foo@google.com - group:group1@google.com - serviceAccount:s1@prj1.iam.gserviceaccount.com - projectOwner:some_project_id - domain:google.com - allUsers - etc.
+     * The identity of members, formatted as appear in an [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). For example, they might be formatted like the following: - user:foo@google.com - group:group1@google.com - serviceAccount:s1@prj1.iam.gserviceaccount.com - projectOwner:some_project_id - domain:google.com - allUsers
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudAssetV1Identity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudAssetV1Identity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssociationResponse {
@@ -12,6 +13,7 @@ public class CreateAssociationResponse {
      */
     
     public Object associationAlreadyExists;
+
     public CreateAssociationResponse withAssociationAlreadyExists(Object associationAlreadyExists) {
         this.associationAlreadyExists = associationAlreadyExists;
         return this;
@@ -22,6 +24,7 @@ public class CreateAssociationResponse {
      */
     
     public Object associationLimitExceeded;
+
     public CreateAssociationResponse withAssociationLimitExceeded(Object associationLimitExceeded) {
         this.associationLimitExceeded = associationLimitExceeded;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssociationResponse {
     
     
     public String contentType;
+
     public CreateAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssociationResult createAssociationResult;
+
     public CreateAssociationResponse withCreateAssociationResult(org.openapis.openapi.models.shared.CreateAssociationResult createAssociationResult) {
         this.createAssociationResult = createAssociationResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateAssociationResponse {
      */
     
     public Object internalServerError;
+
     public CreateAssociationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidDocument;
+
     public CreateAssociationResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -69,6 +76,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public CreateAssociationResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -79,6 +87,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidInstanceId;
+
     public CreateAssociationResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -89,6 +98,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidOutputLocation;
+
     public CreateAssociationResponse withInvalidOutputLocation(Object invalidOutputLocation) {
         this.invalidOutputLocation = invalidOutputLocation;
         return this;
@@ -99,6 +109,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidParameters;
+
     public CreateAssociationResponse withInvalidParameters(Object invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -109,6 +120,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidSchedule;
+
     public CreateAssociationResponse withInvalidSchedule(Object invalidSchedule) {
         this.invalidSchedule = invalidSchedule;
         return this;
@@ -119,6 +131,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidTag;
+
     public CreateAssociationResponse withInvalidTag(Object invalidTag) {
         this.invalidTag = invalidTag;
         return this;
@@ -129,6 +142,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidTarget;
+
     public CreateAssociationResponse withInvalidTarget(Object invalidTarget) {
         this.invalidTarget = invalidTarget;
         return this;
@@ -139,6 +153,7 @@ public class CreateAssociationResponse {
      */
     
     public Object invalidTargetMaps;
+
     public CreateAssociationResponse withInvalidTargetMaps(Object invalidTargetMaps) {
         this.invalidTargetMaps = invalidTargetMaps;
         return this;
@@ -146,6 +161,7 @@ public class CreateAssociationResponse {
     
     
     public Integer statusCode;
+
     public CreateAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -153,6 +169,7 @@ public class CreateAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -163,9 +180,14 @@ public class CreateAssociationResponse {
      */
     
     public Object unsupportedPlatformType;
+
     public CreateAssociationResponse withUnsupportedPlatformType(Object unsupportedPlatformType) {
         this.unsupportedPlatformType = unsupportedPlatformType;
         return this;
     }
     
+    public CreateAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

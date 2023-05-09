@@ -24,6 +24,7 @@ public class PoolStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public PoolStatistics withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -35,6 +36,7 @@ public class PoolStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceStats")
     public ResourceStatistics resourceStats;
+
     public PoolStatistics withResourceStats(ResourceStatistics resourceStats) {
         this.resourceStats = resourceStats;
         return this;
@@ -47,6 +49,7 @@ public class PoolStatistics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public PoolStatistics withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -57,6 +60,7 @@ public class PoolStatistics {
      */
     @JsonProperty("url")
     public String url;
+
     public PoolStatistics withUrl(String url) {
         this.url = url;
         return this;
@@ -68,9 +72,15 @@ public class PoolStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageStats")
     public UsageStatistics usageStats;
+
     public PoolStatistics withUsageStats(UsageStatistics usageStats) {
         this.usageStats = usageStats;
         return this;
     }
     
+    public PoolStatistics(@JsonProperty("lastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("url") String url) {
+        this.lastUpdateTime = lastUpdateTime;
+        this.startTime = startTime;
+        this.url = url;
+  }
 }

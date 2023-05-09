@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ServiceAccountCredentials {
     @JsonProperty("AccountName")
     public String accountName;
+
     public ServiceAccountCredentials withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -19,9 +20,14 @@ public class ServiceAccountCredentials {
     
     @JsonProperty("AccountPassword")
     public String accountPassword;
+
     public ServiceAccountCredentials withAccountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
         return this;
     }
     
+    public ServiceAccountCredentials(@JsonProperty("AccountName") String accountName, @JsonProperty("AccountPassword") String accountPassword) {
+        this.accountName = accountName;
+        this.accountPassword = accountPassword;
+  }
 }

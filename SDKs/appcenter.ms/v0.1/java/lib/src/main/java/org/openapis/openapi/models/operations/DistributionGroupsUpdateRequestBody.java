@@ -18,6 +18,7 @@ public class DistributionGroupsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public DistributionGroupsUpdateRequestBody withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -29,9 +30,11 @@ public class DistributionGroupsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsUpdateRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DistributionGroupsUpdateRequestBody(){}
 }

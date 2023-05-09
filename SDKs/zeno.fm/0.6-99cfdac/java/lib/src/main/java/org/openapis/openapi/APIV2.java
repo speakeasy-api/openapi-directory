@@ -51,11 +51,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePodcastResponse res = new org.openapis.openapi.models.operations.CreatePodcastResponse() {{
+        org.openapis.openapi.models.operations.CreatePodcastResponse res = new org.openapis.openapi.models.operations.CreatePodcastResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,11 +89,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePodcastEpisodeResponse res = new org.openapis.openapi.models.operations.CreatePodcastEpisodeResponse() {{
+        org.openapis.openapi.models.operations.CreatePodcastEpisodeResponse res = new org.openapis.openapi.models.operations.CreatePodcastEpisodeResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +125,8 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePodcastResponse res = new org.openapis.openapi.models.operations.DeletePodcastResponse() {{
+        org.openapis.openapi.models.operations.DeletePodcastResponse res = new org.openapis.openapi.models.operations.DeletePodcastResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,10 +156,8 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePodcast1Response res = new org.openapis.openapi.models.operations.DeletePodcast1Response() {{
+        org.openapis.openapi.models.operations.DeletePodcast1Response res = new org.openapis.openapi.models.operations.DeletePodcast1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +193,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPartnerAggregatorStationsResponse res = new org.openapis.openapi.models.operations.GetPartnerAggregatorStationsResponse() {{
+        org.openapis.openapi.models.operations.GetPartnerAggregatorStationsResponse res = new org.openapis.openapi.models.operations.GetPartnerAggregatorStationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +229,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastResponse res = new org.openapis.openapi.models.operations.GetPodcastResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastResponse res = new org.openapis.openapi.models.operations.GetPodcastResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,11 +264,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastCategoriesResponse res = new org.openapis.openapi.models.operations.GetPodcastCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastCategoriesResponse res = new org.openapis.openapi.models.operations.GetPodcastCategoriesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,11 +299,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastCountriesResponse res = new org.openapis.openapi.models.operations.GetPodcastCountriesResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastCountriesResponse res = new org.openapis.openapi.models.operations.GetPodcastCountriesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -351,11 +335,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastEpisodeResponse res = new org.openapis.openapi.models.operations.GetPodcastEpisodeResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastEpisodeResponse res = new org.openapis.openapi.models.operations.GetPodcastEpisodeResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,11 +377,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastEpisodesResponse res = new org.openapis.openapi.models.operations.GetPodcastEpisodesResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastEpisodesResponse res = new org.openapis.openapi.models.operations.GetPodcastEpisodesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -432,11 +412,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPodcastLanguagesResponse res = new org.openapis.openapi.models.operations.GetPodcastLanguagesResponse() {{
+        org.openapis.openapi.models.operations.GetPodcastLanguagesResponse res = new org.openapis.openapi.models.operations.GetPodcastLanguagesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,11 +447,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStationCountriesResponse res = new org.openapis.openapi.models.operations.GetStationCountriesResponse() {{
+        org.openapis.openapi.models.operations.GetStationCountriesResponse res = new org.openapis.openapi.models.operations.GetStationCountriesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,11 +482,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStationGenresResponse res = new org.openapis.openapi.models.operations.GetStationGenresResponse() {{
+        org.openapis.openapi.models.operations.GetStationGenresResponse res = new org.openapis.openapi.models.operations.GetStationGenresResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -543,11 +517,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStationLanguagesResponse res = new org.openapis.openapi.models.operations.GetStationLanguagesResponse() {{
+        org.openapis.openapi.models.operations.GetStationLanguagesResponse res = new org.openapis.openapi.models.operations.GetStationLanguagesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,11 +558,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchPodcastsResponse res = new org.openapis.openapi.models.operations.SearchPodcastsResponse() {{
+        org.openapis.openapi.models.operations.SearchPodcastsResponse res = new org.openapis.openapi.models.operations.SearchPodcastsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -629,11 +599,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchStationsResponse res = new org.openapis.openapi.models.operations.SearchStationsResponse() {{
+        org.openapis.openapi.models.operations.SearchStationsResponse res = new org.openapis.openapi.models.operations.SearchStationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -669,11 +637,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePodcastResponse res = new org.openapis.openapi.models.operations.UpdatePodcastResponse() {{
+        org.openapis.openapi.models.operations.UpdatePodcastResponse res = new org.openapis.openapi.models.operations.UpdatePodcastResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -709,11 +675,9 @@ public class APIV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePodcastEpisodeResponse res = new org.openapis.openapi.models.operations.UpdatePodcastEpisodeResponse() {{
+        org.openapis.openapi.models.operations.UpdatePodcastEpisodeResponse res = new org.openapis.openapi.models.operations.UpdatePodcastEpisodeResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

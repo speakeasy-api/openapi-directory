@@ -15,6 +15,7 @@ public class SpecListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public SpecSimpleVO[] results;
+
     public SpecListVO withResults(SpecSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class SpecListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public SpecListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class SpecListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public SpecListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public SpecListVO(){}
 }

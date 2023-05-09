@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRecommenderConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public CreateRecommenderConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateRecommenderConfigurationResponse {
     
     
     public String contentType;
+
     public CreateRecommenderConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRecommenderConfigurationResponse createRecommenderConfigurationResponse;
+
     public CreateRecommenderConfigurationResponse withCreateRecommenderConfigurationResponse(org.openapis.openapi.models.shared.CreateRecommenderConfigurationResponse createRecommenderConfigurationResponse) {
         this.createRecommenderConfigurationResponse = createRecommenderConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public CreateRecommenderConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateRecommenderConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public Object methodNotAllowedException;
+
     public CreateRecommenderConfigurationResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public CreateRecommenderConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public Object payloadTooLargeException;
+
     public CreateRecommenderConfigurationResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class CreateRecommenderConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateRecommenderConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateRecommenderConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRecommenderConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateRecommenderConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateRecommenderConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateRecommenderConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

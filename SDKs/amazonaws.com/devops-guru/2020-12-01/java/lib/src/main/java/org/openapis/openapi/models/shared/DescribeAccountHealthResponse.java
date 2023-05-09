@@ -15,6 +15,7 @@ public class DescribeAccountHealthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzedResourceCount")
     public Long analyzedResourceCount;
+
     public DescribeAccountHealthResponse withAnalyzedResourceCount(Long analyzedResourceCount) {
         this.analyzedResourceCount = analyzedResourceCount;
         return this;
@@ -22,6 +23,7 @@ public class DescribeAccountHealthResponse {
     
     @JsonProperty("MetricsAnalyzed")
     public Long metricsAnalyzed;
+
     public DescribeAccountHealthResponse withMetricsAnalyzed(Long metricsAnalyzed) {
         this.metricsAnalyzed = metricsAnalyzed;
         return this;
@@ -29,6 +31,7 @@ public class DescribeAccountHealthResponse {
     
     @JsonProperty("OpenProactiveInsights")
     public Long openProactiveInsights;
+
     public DescribeAccountHealthResponse withOpenProactiveInsights(Long openProactiveInsights) {
         this.openProactiveInsights = openProactiveInsights;
         return this;
@@ -36,6 +39,7 @@ public class DescribeAccountHealthResponse {
     
     @JsonProperty("OpenReactiveInsights")
     public Long openReactiveInsights;
+
     public DescribeAccountHealthResponse withOpenReactiveInsights(Long openReactiveInsights) {
         this.openReactiveInsights = openReactiveInsights;
         return this;
@@ -43,9 +47,16 @@ public class DescribeAccountHealthResponse {
     
     @JsonProperty("ResourceHours")
     public Long resourceHours;
+
     public DescribeAccountHealthResponse withResourceHours(Long resourceHours) {
         this.resourceHours = resourceHours;
         return this;
     }
     
+    public DescribeAccountHealthResponse(@JsonProperty("MetricsAnalyzed") Long metricsAnalyzed, @JsonProperty("OpenProactiveInsights") Long openProactiveInsights, @JsonProperty("OpenReactiveInsights") Long openReactiveInsights, @JsonProperty("ResourceHours") Long resourceHours) {
+        this.metricsAnalyzed = metricsAnalyzed;
+        this.openProactiveInsights = openProactiveInsights;
+        this.openReactiveInsights = openReactiveInsights;
+        this.resourceHours = resourceHours;
+  }
 }

@@ -12,6 +12,7 @@ public class CampaignsResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CampaignsResponseError withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class CampaignsResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CampaignsResponseError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CampaignsResponseError(){}
 }

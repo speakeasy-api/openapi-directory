@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdsAssociatedRequest {
@@ -13,6 +14,7 @@ public class GetUsersIdsAssociatedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetUsersIdsAssociatedRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetUsersIdsAssociatedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetUsersIdsAssociatedRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetUsersIdsAssociatedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String ids;
+
     public GetUsersIdsAssociatedRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -70,6 +74,7 @@ public class GetUsersIdsAssociatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUsersIdsAssociatedRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -77,9 +82,13 @@ public class GetUsersIdsAssociatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetUsersIdsAssociatedRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
     }
     
+    public GetUsersIdsAssociatedRequest(@JsonProperty("ids") String ids) {
+        this.ids = ids;
+  }
 }

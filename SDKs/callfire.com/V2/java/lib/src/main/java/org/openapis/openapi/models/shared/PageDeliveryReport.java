@@ -18,6 +18,7 @@ public class PageDeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public DeliveryReport[] items;
+
     public PageDeliveryReport withItems(DeliveryReport[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class PageDeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public PageDeliveryReport withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class PageDeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public PageDeliveryReport withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -51,9 +54,11 @@ public class PageDeliveryReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public PageDeliveryReport withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public PageDeliveryReport(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2VoiceSelectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2VoiceSelectionParams withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2VoiceSelectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmlGender")
     public GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum ssmlGender;
+
     public GoogleCloudDialogflowV2VoiceSelectionParams withSsmlGender(GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum ssmlGender) {
         this.ssmlGender = ssmlGender;
         return this;
     }
     
+    public GoogleCloudDialogflowV2VoiceSelectionParams(){}
 }

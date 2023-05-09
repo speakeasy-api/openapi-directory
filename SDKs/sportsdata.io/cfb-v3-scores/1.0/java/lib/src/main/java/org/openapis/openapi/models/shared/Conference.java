@@ -12,6 +12,7 @@ public class Conference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceID")
     public Long conferenceID;
+
     public Conference withConferenceID(Long conferenceID) {
         this.conferenceID = conferenceID;
         return this;
@@ -20,6 +21,7 @@ public class Conference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceName")
     public String conferenceName;
+
     public Conference withConferenceName(String conferenceName) {
         this.conferenceName = conferenceName;
         return this;
@@ -28,6 +30,7 @@ public class Conference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DivisionName")
     public String divisionName;
+
     public Conference withDivisionName(String divisionName) {
         this.divisionName = divisionName;
         return this;
@@ -36,6 +39,7 @@ public class Conference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Conference withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +48,11 @@ public class Conference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Teams")
     public Team[] teams;
+
     public Conference withTeams(Team[] teams) {
         this.teams = teams;
         return this;
     }
     
+    public Conference(){}
 }

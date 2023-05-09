@@ -15,6 +15,7 @@ public class AwsCertificateManagerCertificateExtendedKeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsCertificateManagerCertificateExtendedKeyUsage withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AwsCertificateManagerCertificateExtendedKeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OId")
     public String oId;
+
     public AwsCertificateManagerCertificateExtendedKeyUsage withOId(String oId) {
         this.oId = oId;
         return this;
     }
     
+    public AwsCertificateManagerCertificateExtendedKeyUsage(){}
 }

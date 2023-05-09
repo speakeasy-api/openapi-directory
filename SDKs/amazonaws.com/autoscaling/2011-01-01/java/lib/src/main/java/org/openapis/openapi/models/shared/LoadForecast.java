@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class LoadForecast {
     
     public PredictiveScalingMetricSpecification metricSpecification;
+
     public LoadForecast withMetricSpecification(PredictiveScalingMetricSpecification metricSpecification) {
         this.metricSpecification = metricSpecification;
         return this;
@@ -19,6 +21,7 @@ public class LoadForecast {
     
     
     public OffsetDateTime[] timestamps;
+
     public LoadForecast withTimestamps(OffsetDateTime[] timestamps) {
         this.timestamps = timestamps;
         return this;
@@ -26,9 +29,15 @@ public class LoadForecast {
     
     
     public Double[] values;
+
     public LoadForecast withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public LoadForecast(@JsonProperty("MetricSpecification") PredictiveScalingMetricSpecification metricSpecification, @JsonProperty("Timestamps") OffsetDateTime[] timestamps, @JsonProperty("Values") Double[] values) {
+        this.metricSpecification = metricSpecification;
+        this.timestamps = timestamps;
+        this.values = values;
+  }
 }

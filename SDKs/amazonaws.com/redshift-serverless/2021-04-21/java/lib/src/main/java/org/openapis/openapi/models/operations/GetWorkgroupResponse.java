@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkgroupResponse {
     
     public String contentType;
+
     public GetWorkgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkgroupResponse getWorkgroupResponse;
+
     public GetWorkgroupResponse withGetWorkgroupResponse(org.openapis.openapi.models.shared.GetWorkgroupResponse getWorkgroupResponse) {
         this.getWorkgroupResponse = getWorkgroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkgroupResponse {
      */
     
     public Object internalServerException;
+
     public GetWorkgroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetWorkgroupResponse {
     
     
     public Integer statusCode;
+
     public GetWorkgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetWorkgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetWorkgroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetWorkgroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class GetWorkgroupResponse {
      */
     
     public Object validationException;
+
     public GetWorkgroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetWorkgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

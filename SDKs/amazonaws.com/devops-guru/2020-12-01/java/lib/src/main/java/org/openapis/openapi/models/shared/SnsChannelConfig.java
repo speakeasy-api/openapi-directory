@@ -15,9 +15,11 @@ public class SnsChannelConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicArn")
     public String topicArn;
+
     public SnsChannelConfig withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public SnsChannelConfig(){}
 }

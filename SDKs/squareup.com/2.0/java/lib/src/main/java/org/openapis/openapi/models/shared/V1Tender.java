@@ -39,6 +39,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_brand")
     public String cardBrand;
+
     public V1Tender withCardBrand(String cardBrand) {
         this.cardBrand = cardBrand;
         return this;
@@ -47,6 +48,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change_back_money")
     public V1Money changeBackMoney;
+
     public V1Tender withChangeBackMoney(V1Money changeBackMoney) {
         this.changeBackMoney = changeBackMoney;
         return this;
@@ -58,6 +60,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public V1Tender withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -69,6 +72,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entry_method")
     public String entryMethod;
+
     public V1Tender withEntryMethod(String entryMethod) {
         this.entryMethod = entryMethod;
         return this;
@@ -80,6 +84,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public V1Tender withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +96,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_exchange")
     public Boolean isExchange;
+
     public V1Tender withIsExchange(Boolean isExchange) {
         this.isExchange = isExchange;
         return this;
@@ -102,6 +108,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1Tender withName(String name) {
         this.name = name;
         return this;
@@ -113,6 +120,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pan_suffix")
     public String panSuffix;
+
     public V1Tender withPanSuffix(String panSuffix) {
         this.panSuffix = panSuffix;
         return this;
@@ -124,6 +132,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_note")
     public String paymentNote;
+
     public V1Tender withPaymentNote(String paymentNote) {
         this.paymentNote = paymentNote;
         return this;
@@ -135,6 +144,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipt_url")
     public String receiptUrl;
+
     public V1Tender withReceiptUrl(String receiptUrl) {
         this.receiptUrl = receiptUrl;
         return this;
@@ -143,6 +153,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_money")
     public V1Money refundedMoney;
+
     public V1Tender withRefundedMoney(V1Money refundedMoney) {
         this.refundedMoney = refundedMoney;
         return this;
@@ -154,6 +165,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settled_at")
     public String settledAt;
+
     public V1Tender withSettledAt(String settledAt) {
         this.settledAt = settledAt;
         return this;
@@ -165,6 +177,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tendered_at")
     public String tenderedAt;
+
     public V1Tender withTenderedAt(String tenderedAt) {
         this.tenderedAt = tenderedAt;
         return this;
@@ -173,6 +186,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tendered_money")
     public V1Money tenderedMoney;
+
     public V1Tender withTenderedMoney(V1Money tenderedMoney) {
         this.tenderedMoney = tenderedMoney;
         return this;
@@ -181,6 +195,7 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public V1Money totalMoney;
+
     public V1Tender withTotalMoney(V1Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
@@ -192,9 +207,11 @@ public class V1Tender {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public V1Tender withType(String type) {
         this.type = type;
         return this;
     }
     
+    public V1Tender(){}
 }

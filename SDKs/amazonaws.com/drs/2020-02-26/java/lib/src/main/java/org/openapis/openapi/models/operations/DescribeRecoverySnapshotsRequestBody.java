@@ -15,6 +15,7 @@ public class DescribeRecoverySnapshotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DescribeRecoverySnapshotsRequestBodyFilters filters;
+
     public DescribeRecoverySnapshotsRequestBody withFilters(DescribeRecoverySnapshotsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class DescribeRecoverySnapshotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeRecoverySnapshotsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class DescribeRecoverySnapshotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRecoverySnapshotsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class DescribeRecoverySnapshotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public DescribeRecoverySnapshotsRequestBodyOrderEnum order;
+
     public DescribeRecoverySnapshotsRequestBody withOrder(DescribeRecoverySnapshotsRequestBodyOrderEnum order) {
         this.order = order;
         return this;
@@ -58,9 +62,13 @@ public class DescribeRecoverySnapshotsRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public DescribeRecoverySnapshotsRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public DescribeRecoverySnapshotsRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1EgressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalResources")
     public String[] externalResources;
+
     public GoogleIdentityAccesscontextmanagerV1EgressTo withExternalResources(String[] externalResources) {
         this.externalResources = externalResources;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1EgressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public GoogleIdentityAccesscontextmanagerV1ApiOperation[] operations;
+
     public GoogleIdentityAccesscontextmanagerV1EgressTo withOperations(GoogleIdentityAccesscontextmanagerV1ApiOperation[] operations) {
         this.operations = operations;
         return this;
@@ -40,9 +42,11 @@ public class GoogleIdentityAccesscontextmanagerV1EgressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public GoogleIdentityAccesscontextmanagerV1EgressTo withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1EgressTo(){}
 }

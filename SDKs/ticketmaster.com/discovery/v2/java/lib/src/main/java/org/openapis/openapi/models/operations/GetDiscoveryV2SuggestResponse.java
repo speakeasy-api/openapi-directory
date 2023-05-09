@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDiscoveryV2SuggestResponse {
     
     public String contentType;
+
     public GetDiscoveryV2SuggestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetDiscoveryV2SuggestResponse {
     
     
     public Integer statusCode;
+
     public GetDiscoveryV2SuggestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetDiscoveryV2SuggestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDiscoveryV2SuggestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetDiscoveryV2SuggestResponse {
      */
     
     public String getDiscoveryV2Suggest200ApplicationHalPlusJsonString;
+
     public GetDiscoveryV2SuggestResponse withGetDiscoveryV2Suggest200ApplicationHalPlusJsonString(String getDiscoveryV2Suggest200ApplicationHalPlusJsonString) {
         this.getDiscoveryV2Suggest200ApplicationHalPlusJsonString = getDiscoveryV2Suggest200ApplicationHalPlusJsonString;
         return this;
@@ -43,9 +48,14 @@ public class GetDiscoveryV2SuggestResponse {
      */
     
     public String getDiscoveryV2Suggest200ApplicationJSONString;
+
     public GetDiscoveryV2SuggestResponse withGetDiscoveryV2Suggest200ApplicationJSONString(String getDiscoveryV2Suggest200ApplicationJSONString) {
         this.getDiscoveryV2Suggest200ApplicationJSONString = getDiscoveryV2Suggest200ApplicationJSONString;
         return this;
     }
     
+    public GetDiscoveryV2SuggestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

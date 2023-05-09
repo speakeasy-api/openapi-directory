@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestPushGoogleNotificationsUsingPOSTResponse {
     
     public byte[] body;
+
     public TestPushGoogleNotificationsUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TestPushGoogleNotificationsUsingPOSTResponse {
     
     
     public String contentType;
+
     public TestPushGoogleNotificationsUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TestPushGoogleNotificationsUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public TestPushGoogleNotificationsUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TestPushGoogleNotificationsUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestPushGoogleNotificationsUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TestPushGoogleNotificationsUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

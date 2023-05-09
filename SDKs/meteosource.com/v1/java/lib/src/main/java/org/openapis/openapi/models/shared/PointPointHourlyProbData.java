@@ -15,6 +15,7 @@ public class PointPointHourlyProbData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeze")
     public Double freeze;
+
     public PointPointHourlyProbData withFreeze(Double freeze) {
         this.freeze = freeze;
         return this;
@@ -27,6 +28,7 @@ public class PointPointHourlyProbData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precipitation")
     public Long precipitation;
+
     public PointPointHourlyProbData withPrecipitation(Long precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -39,9 +41,11 @@ public class PointPointHourlyProbData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storm")
     public Double storm;
+
     public PointPointHourlyProbData withStorm(Double storm) {
         this.storm = storm;
         return this;
     }
     
+    public PointPointHourlyProbData(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePDFRequest {
@@ -12,9 +13,13 @@ public class CreatePDFRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_id")
     public String checkId;
+
     public CreatePDFRequest withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
     }
     
+    public CreatePDFRequest(@JsonProperty("check_id") String checkId) {
+        this.checkId = checkId;
+  }
 }

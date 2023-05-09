@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DepthChartsRequest {
@@ -12,9 +13,13 @@ public class DepthChartsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public DepthChartsFormatEnum format;
+
     public DepthChartsRequest withFormat(DepthChartsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public DepthChartsRequest(@JsonProperty("format") DepthChartsFormatEnum format) {
+        this.format = format;
+  }
 }

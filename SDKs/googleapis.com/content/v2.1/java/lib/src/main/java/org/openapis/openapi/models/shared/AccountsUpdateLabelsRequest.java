@@ -15,9 +15,11 @@ public class AccountsUpdateLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelIds")
     public String[] labelIds;
+
     public AccountsUpdateLabelsRequest withLabelIds(String[] labelIds) {
         this.labelIds = labelIds;
         return this;
     }
     
+    public AccountsUpdateLabelsRequest(){}
 }

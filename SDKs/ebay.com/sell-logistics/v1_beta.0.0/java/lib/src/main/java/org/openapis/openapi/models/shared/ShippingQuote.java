@@ -18,6 +18,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public ShippingQuote withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationDate")
     public String expirationDate;
+
     public ShippingQuote withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -40,6 +42,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public Order[] orders;
+
     public ShippingQuote withOrders(Order[] orders) {
         this.orders = orders;
         return this;
@@ -51,6 +54,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageSpecification")
     public PackageSpecification packageSpecification;
+
     public ShippingQuote withPackageSpecification(PackageSpecification packageSpecification) {
         this.packageSpecification = packageSpecification;
         return this;
@@ -62,6 +66,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rates")
     public Rate[] rates;
+
     public ShippingQuote withRates(Rate[] rates) {
         this.rates = rates;
         return this;
@@ -73,6 +78,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipFrom")
     public Contact shipFrom;
+
     public ShippingQuote withShipFrom(Contact shipFrom) {
         this.shipFrom = shipFrom;
         return this;
@@ -84,6 +90,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipTo")
     public Contact shipTo;
+
     public ShippingQuote withShipTo(Contact shipTo) {
         this.shipTo = shipTo;
         return this;
@@ -95,6 +102,7 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingQuoteId")
     public String shippingQuoteId;
+
     public ShippingQuote withShippingQuoteId(String shippingQuoteId) {
         this.shippingQuoteId = shippingQuoteId;
         return this;
@@ -106,9 +114,11 @@ public class ShippingQuote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public Error[] warnings;
+
     public ShippingQuote withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ShippingQuote(){}
 }

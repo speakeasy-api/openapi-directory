@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FullItemInput {
     @JsonProperty("category")
     public FullItemCategoryEnum category;
+
     public FullItemInput withCategory(FullItemCategoryEnum category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favorite")
     public Boolean favorite;
+
     public FullItemInput withFavorite(Boolean favorite) {
         this.favorite = favorite;
         return this;
@@ -27,6 +29,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public FieldInput[] fields;
+
     public FullItemInput withFields(FieldInput[] fields) {
         this.fields = fields;
         return this;
@@ -35,6 +38,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public FileInput[] files;
+
     public FullItemInput withFiles(FileInput[] files) {
         this.files = files;
         return this;
@@ -43,6 +47,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FullItemInput withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +56,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public FullItemSections[] sections;
+
     public FullItemInput withSections(FullItemSections[] sections) {
         this.sections = sections;
         return this;
@@ -59,6 +65,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public FullItemInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -67,6 +74,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public FullItemInput withTitle(String title) {
         this.title = title;
         return this;
@@ -75,6 +83,7 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public FullItemUrls[] urls;
+
     public FullItemInput withUrls(FullItemUrls[] urls) {
         this.urls = urls;
         return this;
@@ -82,6 +91,7 @@ public class FullItemInput {
     
     @JsonProperty("vault")
     public FullItemVault vault;
+
     public FullItemInput withVault(FullItemVault vault) {
         this.vault = vault;
         return this;
@@ -90,9 +100,14 @@ public class FullItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public FullItemInput withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public FullItemInput(@JsonProperty("category") FullItemCategoryEnum category, @JsonProperty("vault") FullItemVault vault) {
+        this.category = category;
+        this.vault = vault;
+  }
 }

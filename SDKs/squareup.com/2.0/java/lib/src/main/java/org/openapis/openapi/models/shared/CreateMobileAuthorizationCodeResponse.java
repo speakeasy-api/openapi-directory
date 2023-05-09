@@ -20,6 +20,7 @@ public class CreateMobileAuthorizationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorization_code")
     public String authorizationCode;
+
     public CreateMobileAuthorizationCodeResponse withAuthorizationCode(String authorizationCode) {
         this.authorizationCode = authorizationCode;
         return this;
@@ -33,6 +34,7 @@ public class CreateMobileAuthorizationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public CreateMobileAuthorizationCodeResponse withError(Error error) {
         this.error = error;
         return this;
@@ -45,9 +47,11 @@ public class CreateMobileAuthorizationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public CreateMobileAuthorizationCodeResponse withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
     
+    public CreateMobileAuthorizationCodeResponse(){}
 }

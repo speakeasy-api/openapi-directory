@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWhatIfForecastExportRequest {
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public CreateWhatIfForecastExportRequest withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class CreateWhatIfForecastExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CreateWhatIfForecastExportRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -27,6 +29,7 @@ public class CreateWhatIfForecastExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWhatIfForecastExportRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -34,6 +37,7 @@ public class CreateWhatIfForecastExportRequest {
     
     @JsonProperty("WhatIfForecastArns")
     public String[] whatIfForecastArns;
+
     public CreateWhatIfForecastExportRequest withWhatIfForecastArns(String[] whatIfForecastArns) {
         this.whatIfForecastArns = whatIfForecastArns;
         return this;
@@ -41,9 +45,15 @@ public class CreateWhatIfForecastExportRequest {
     
     @JsonProperty("WhatIfForecastExportName")
     public String whatIfForecastExportName;
+
     public CreateWhatIfForecastExportRequest withWhatIfForecastExportName(String whatIfForecastExportName) {
         this.whatIfForecastExportName = whatIfForecastExportName;
         return this;
     }
     
+    public CreateWhatIfForecastExportRequest(@JsonProperty("Destination") DataDestination destination, @JsonProperty("WhatIfForecastArns") String[] whatIfForecastArns, @JsonProperty("WhatIfForecastExportName") String whatIfForecastExportName) {
+        this.destination = destination;
+        this.whatIfForecastArns = whatIfForecastArns;
+        this.whatIfForecastExportName = whatIfForecastExportName;
+  }
 }

@@ -18,6 +18,7 @@ public class Dimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public String height;
+
     public Dimensions withHeight(String height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class Dimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public String length;
+
     public Dimensions withLength(String length) {
         this.length = length;
         return this;
@@ -40,6 +42,7 @@ public class Dimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public Dimensions withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -51,9 +54,11 @@ public class Dimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public String width;
+
     public Dimensions withWidth(String width) {
         this.width = width;
         return this;
     }
     
+    public Dimensions(){}
 }

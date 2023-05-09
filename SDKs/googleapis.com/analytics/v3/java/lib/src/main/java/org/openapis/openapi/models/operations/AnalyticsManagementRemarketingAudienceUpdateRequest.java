@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementRemarketingAudienceUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RemarketingAudienceInput remarketingAudienceInput;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withRemarketingAudienceInput(org.openapis.openapi.models.shared.RemarketingAudienceInput remarketingAudienceInput) {
         this.remarketingAudienceInput = remarketingAudienceInput;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=remarketingAudienceId")
     public String remarketingAudienceId;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withRemarketingAudienceId(String remarketingAudienceId) {
         this.remarketingAudienceId = remarketingAudienceId;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -109,9 +120,15 @@ public class AnalyticsManagementRemarketingAudienceUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementRemarketingAudienceUpdateRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementRemarketingAudienceUpdateRequest(@JsonProperty("accountId") String accountId, @JsonProperty("remarketingAudienceId") String remarketingAudienceId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.remarketingAudienceId = remarketingAudienceId;
+        this.webPropertyId = webPropertyId;
+  }
 }

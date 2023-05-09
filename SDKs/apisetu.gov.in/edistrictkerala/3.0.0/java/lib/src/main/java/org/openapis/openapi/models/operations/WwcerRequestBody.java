@@ -15,6 +15,7 @@ public class WwcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public WwcerRequestBodyCertificateParameters certificateParameters;
+
     public WwcerRequestBody withCertificateParameters(WwcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class WwcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public WwcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class WwcerRequestBody {
      */
     @JsonProperty("format")
     public WwcerRequestBodyFormatEnum format;
+
     public WwcerRequestBody withFormat(WwcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class WwcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public WwcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public WwcerRequestBody(@JsonProperty("format") WwcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

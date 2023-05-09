@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StoryIdDeleteResponse {
     
     public String contentType;
+
     public StoryIdDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StoryIdDeleteResponse {
     
     
     public Integer statusCode;
+
     public StoryIdDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StoryIdDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StoryIdDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class StoryIdDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetail problemDetail;
+
     public StoryIdDeleteResponse withProblemDetail(org.openapis.openapi.models.shared.ProblemDetail problemDetail) {
         this.problemDetail = problemDetail;
         return this;
     }
     
+    public StoryIdDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

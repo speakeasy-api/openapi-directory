@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSuiteDefinitionResponse {
     
     public String contentType;
+
     public DeleteSuiteDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSuiteDefinitionResponse {
      */
     
     public java.util.Map<String, Object> deleteSuiteDefinitionResponse;
+
     public DeleteSuiteDefinitionResponse withDeleteSuiteDefinitionResponse(java.util.Map<String, Object> deleteSuiteDefinitionResponse) {
         this.deleteSuiteDefinitionResponse = deleteSuiteDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSuiteDefinitionResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSuiteDefinitionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteSuiteDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeleteSuiteDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteSuiteDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSuiteDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteSuiteDefinitionResponse {
      */
     
     public Object validationException;
+
     public DeleteSuiteDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSuiteDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

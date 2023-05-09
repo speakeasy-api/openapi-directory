@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaAccessDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public GoogleAnalyticsAdminV1betaAccessDateRange withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1betaAccessDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public GoogleAnalyticsAdminV1betaAccessDateRange withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccessDateRange(){}
 }

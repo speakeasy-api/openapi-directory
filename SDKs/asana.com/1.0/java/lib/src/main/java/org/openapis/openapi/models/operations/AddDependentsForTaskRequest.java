@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddDependentsForTaskRequest {
@@ -12,6 +13,7 @@ public class AddDependentsForTaskRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddDependentsForTaskRequestBody requestBody;
+
     public AddDependentsForTaskRequest withRequestBody(AddDependentsForTaskRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class AddDependentsForTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public AddDependentsForTaskRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class AddDependentsForTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public AddDependentsForTaskRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class AddDependentsForTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_gid")
     public String taskGid;
+
     public AddDependentsForTaskRequest withTaskGid(String taskGid) {
         this.taskGid = taskGid;
         return this;
     }
     
+    public AddDependentsForTaskRequest(@JsonProperty("RequestBody") AddDependentsForTaskRequestBody requestBody, @JsonProperty("task_gid") String taskGid) {
+        this.requestBody = requestBody;
+        this.taskGid = taskGid;
+  }
 }

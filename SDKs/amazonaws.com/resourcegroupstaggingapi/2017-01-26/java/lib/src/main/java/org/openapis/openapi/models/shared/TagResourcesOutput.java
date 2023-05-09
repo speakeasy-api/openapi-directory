@@ -15,9 +15,11 @@ public class TagResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedResourcesMap")
     public java.util.Map<String, FailureInfo> failedResourcesMap;
+
     public TagResourcesOutput withFailedResourcesMap(java.util.Map<String, FailureInfo> failedResourcesMap) {
         this.failedResourcesMap = failedResourcesMap;
         return this;
     }
     
+    public TagResourcesOutput(){}
 }

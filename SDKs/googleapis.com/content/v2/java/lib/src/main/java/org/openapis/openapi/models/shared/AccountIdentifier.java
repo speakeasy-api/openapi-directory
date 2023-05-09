@@ -15,6 +15,7 @@ public class AccountIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregatorId")
     public String aggregatorId;
+
     public AccountIdentifier withAggregatorId(String aggregatorId) {
         this.aggregatorId = aggregatorId;
         return this;
@@ -26,9 +27,11 @@ public class AccountIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public AccountIdentifier withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public AccountIdentifier(){}
 }

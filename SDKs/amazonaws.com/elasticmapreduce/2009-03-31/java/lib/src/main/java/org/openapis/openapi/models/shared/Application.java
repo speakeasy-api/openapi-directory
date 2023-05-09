@@ -15,6 +15,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalInfo")
     public java.util.Map<String, String> additionalInfo;
+
     public Application withAdditionalInfo(java.util.Map<String, String> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -23,6 +24,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Args")
     public String[] args;
+
     public Application withArgs(String[] args) {
         this.args = args;
         return this;
@@ -31,6 +33,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public Application withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Application(){}
 }

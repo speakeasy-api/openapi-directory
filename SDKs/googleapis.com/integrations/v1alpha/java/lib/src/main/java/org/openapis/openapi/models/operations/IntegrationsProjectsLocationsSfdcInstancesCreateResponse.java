@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsSfdcInstancesCreateResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsSfdcInstancesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsSfdcInstancesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaSfdcInstance googleCloudIntegrationsV1alphaSfdcInstance;
+
     public IntegrationsProjectsLocationsSfdcInstancesCreateResponse withGoogleCloudIntegrationsV1alphaSfdcInstance(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaSfdcInstance googleCloudIntegrationsV1alphaSfdcInstance) {
         this.googleCloudIntegrationsV1alphaSfdcInstance = googleCloudIntegrationsV1alphaSfdcInstance;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsSfdcInstancesCreateResponse {
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsSfdcInstancesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsSfdcInstancesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsSfdcInstancesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsSfdcInstancesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

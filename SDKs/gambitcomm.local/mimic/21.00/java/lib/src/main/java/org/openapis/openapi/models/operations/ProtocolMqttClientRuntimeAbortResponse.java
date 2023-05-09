@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolMqttClientRuntimeAbortResponse {
     
     public String contentType;
+
     public ProtocolMqttClientRuntimeAbortResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolMqttClientRuntimeAbortResponse {
     
     
     public Integer statusCode;
+
     public ProtocolMqttClientRuntimeAbortResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolMqttClientRuntimeAbortResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolMqttClientRuntimeAbortResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolMqttClientRuntimeAbortResponse {
      */
     
     public String[] protocolMqttClientRuntimeAbort200ApplicationJSONStrings;
+
     public ProtocolMqttClientRuntimeAbortResponse withProtocolMqttClientRuntimeAbort200ApplicationJSONStrings(String[] protocolMqttClientRuntimeAbort200ApplicationJSONStrings) {
         this.protocolMqttClientRuntimeAbort200ApplicationJSONStrings = protocolMqttClientRuntimeAbort200ApplicationJSONStrings;
         return this;
     }
     
+    public ProtocolMqttClientRuntimeAbortResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

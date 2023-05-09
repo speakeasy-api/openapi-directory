@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsSnapshotsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsSnapshotsGetSecurityOption1 option1;
+
     public DataflowProjectsSnapshotsGetSecurity withOption1(DataflowProjectsSnapshotsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsSnapshotsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsSnapshotsGetSecurityOption2 option2;
+
     public DataflowProjectsSnapshotsGetSecurity withOption2(DataflowProjectsSnapshotsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsSnapshotsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsSnapshotsGetSecurityOption3 option3;
+
     public DataflowProjectsSnapshotsGetSecurity withOption3(DataflowProjectsSnapshotsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsSnapshotsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsSnapshotsGetSecurityOption4 option4;
+
     public DataflowProjectsSnapshotsGetSecurity withOption4(DataflowProjectsSnapshotsGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsSnapshotsGetSecurity(){}
 }

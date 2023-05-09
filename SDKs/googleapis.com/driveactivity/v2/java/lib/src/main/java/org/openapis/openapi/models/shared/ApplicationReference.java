@@ -18,9 +18,11 @@ public class ApplicationReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ApplicationReferenceTypeEnum type;
+
     public ApplicationReference withType(ApplicationReferenceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApplicationReference(){}
 }

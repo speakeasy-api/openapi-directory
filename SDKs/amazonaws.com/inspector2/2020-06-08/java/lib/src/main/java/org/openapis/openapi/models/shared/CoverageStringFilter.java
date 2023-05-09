@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CoverageStringFilter {
     @JsonProperty("comparison")
     public CoverageStringComparisonEnum comparison;
+
     public CoverageStringFilter withComparison(CoverageStringComparisonEnum comparison) {
         this.comparison = comparison;
         return this;
@@ -19,9 +20,14 @@ public class CoverageStringFilter {
     
     @JsonProperty("value")
     public String value;
+
     public CoverageStringFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CoverageStringFilter(@JsonProperty("comparison") CoverageStringComparisonEnum comparison, @JsonProperty("value") String value) {
+        this.comparison = comparison;
+        this.value = value;
+  }
 }

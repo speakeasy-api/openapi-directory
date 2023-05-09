@@ -60,11 +60,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerCreativesGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerCreativesGetResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerCreativesGetResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerCreativesGetResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerCreativesInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerCreativesInsertResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerCreativesInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerCreativesInsertResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Creatives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerCreativesListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerCreativesListResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerCreativesListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerCreativesListResponse(contentType, httpRes.statusCode()) {{
             creativesList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

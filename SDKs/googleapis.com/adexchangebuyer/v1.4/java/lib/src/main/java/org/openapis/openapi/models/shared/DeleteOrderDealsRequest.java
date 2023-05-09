@@ -15,6 +15,7 @@ public class DeleteOrderDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealIds")
     public String[] dealIds;
+
     public DeleteOrderDealsRequest withDealIds(String[] dealIds) {
         this.dealIds = dealIds;
         return this;
@@ -26,6 +27,7 @@ public class DeleteOrderDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proposalRevisionNumber")
     public String proposalRevisionNumber;
+
     public DeleteOrderDealsRequest withProposalRevisionNumber(String proposalRevisionNumber) {
         this.proposalRevisionNumber = proposalRevisionNumber;
         return this;
@@ -37,9 +39,11 @@ public class DeleteOrderDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateAction")
     public String updateAction;
+
     public DeleteOrderDealsRequest withUpdateAction(String updateAction) {
         this.updateAction = updateAction;
         return this;
     }
     
+    public DeleteOrderDealsRequest(){}
 }

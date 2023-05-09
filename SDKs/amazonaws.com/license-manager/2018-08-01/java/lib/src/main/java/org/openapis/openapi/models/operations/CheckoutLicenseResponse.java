@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckoutLicenseResponse {
@@ -12,6 +13,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object accessDeniedException;
+
     public CheckoutLicenseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object authorizationException;
+
     public CheckoutLicenseResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -32,6 +35,7 @@ public class CheckoutLicenseResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckoutLicenseResponse checkoutLicenseResponse;
+
     public CheckoutLicenseResponse withCheckoutLicenseResponse(org.openapis.openapi.models.shared.CheckoutLicenseResponse checkoutLicenseResponse) {
         this.checkoutLicenseResponse = checkoutLicenseResponse;
         return this;
@@ -39,6 +43,7 @@ public class CheckoutLicenseResponse {
     
     
     public String contentType;
+
     public CheckoutLicenseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CheckoutLicenseResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object noEntitlementsAllowedException;
+
     public CheckoutLicenseResponse withNoEntitlementsAllowedException(Object noEntitlementsAllowedException) {
         this.noEntitlementsAllowedException = noEntitlementsAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CheckoutLicenseResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object redirectException;
+
     public CheckoutLicenseResponse withRedirectException(Object redirectException) {
         this.redirectException = redirectException;
         return this;
@@ -89,6 +98,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CheckoutLicenseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class CheckoutLicenseResponse {
     
     
     public Integer statusCode;
+
     public CheckoutLicenseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CheckoutLicenseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckoutLicenseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object serverInternalException;
+
     public CheckoutLicenseResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -123,6 +136,7 @@ public class CheckoutLicenseResponse {
      */
     
     public Object unsupportedDigitalSignatureMethodException;
+
     public CheckoutLicenseResponse withUnsupportedDigitalSignatureMethodException(Object unsupportedDigitalSignatureMethodException) {
         this.unsupportedDigitalSignatureMethodException = unsupportedDigitalSignatureMethodException;
         return this;
@@ -133,9 +147,14 @@ public class CheckoutLicenseResponse {
      */
     
     public Object validationException;
+
     public CheckoutLicenseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CheckoutLicenseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeNodeAssociationStatusResponse {
     
     public String contentType;
+
     public DescribeNodeAssociationStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeNodeAssociationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeNodeAssociationStatusResponse describeNodeAssociationStatusResponse;
+
     public DescribeNodeAssociationStatusResponse withDescribeNodeAssociationStatusResponse(org.openapis.openapi.models.shared.DescribeNodeAssociationStatusResponse describeNodeAssociationStatusResponse) {
         this.describeNodeAssociationStatusResponse = describeNodeAssociationStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeNodeAssociationStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeNodeAssociationStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeNodeAssociationStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeNodeAssociationStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeNodeAssociationStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeNodeAssociationStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeNodeAssociationStatusResponse {
      */
     
     public Object validationException;
+
     public DescribeNodeAssociationStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeNodeAssociationStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

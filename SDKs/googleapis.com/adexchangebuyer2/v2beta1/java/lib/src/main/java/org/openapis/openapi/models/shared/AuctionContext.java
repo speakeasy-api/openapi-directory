@@ -18,9 +18,11 @@ public class AuctionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auctionTypes")
     public AuctionContextAuctionTypesEnum[] auctionTypes;
+
     public AuctionContext withAuctionTypes(AuctionContextAuctionTypesEnum[] auctionTypes) {
         this.auctionTypes = auctionTypes;
         return this;
     }
     
+    public AuctionContext(){}
 }

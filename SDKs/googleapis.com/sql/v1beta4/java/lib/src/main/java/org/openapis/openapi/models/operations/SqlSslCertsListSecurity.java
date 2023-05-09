@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlSslCertsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlSslCertsListSecurityOption1 option1;
+
     public SqlSslCertsListSecurity withOption1(SqlSslCertsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlSslCertsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlSslCertsListSecurityOption2 option2;
+
     public SqlSslCertsListSecurity withOption2(SqlSslCertsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlSslCertsListSecurity(){}
 }

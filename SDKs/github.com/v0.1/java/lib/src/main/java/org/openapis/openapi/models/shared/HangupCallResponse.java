@@ -15,6 +15,7 @@ public class HangupCallResponse {
      */
     @JsonProperty("Message")
     public HangupCallResponseMessageEnum message;
+
     public HangupCallResponse withMessage(HangupCallResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class HangupCallResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public HangupCallResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public HangupCallResponse(@JsonProperty("Message") HangupCallResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

@@ -18,6 +18,7 @@ public class PolicyName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PolicyName withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class PolicyName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public PolicyName withRegion(String region) {
         this.region = region;
         return this;
@@ -40,9 +42,11 @@ public class PolicyName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PolicyName withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PolicyName(){}
 }

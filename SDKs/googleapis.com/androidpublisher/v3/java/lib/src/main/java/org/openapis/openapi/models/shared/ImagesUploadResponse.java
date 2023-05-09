@@ -18,9 +18,11 @@ public class ImagesUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public ImagesUploadResponse withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public ImagesUploadResponse(){}
 }

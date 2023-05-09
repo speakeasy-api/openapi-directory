@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DBSecurityGroup {
     
     public String dbSecurityGroupDescription;
+
     public DBSecurityGroup withDBSecurityGroupDescription(String dbSecurityGroupDescription) {
         this.dbSecurityGroupDescription = dbSecurityGroupDescription;
         return this;
@@ -16,6 +17,7 @@ public class DBSecurityGroup {
     
     
     public String dbSecurityGroupName;
+
     public DBSecurityGroup withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -23,6 +25,7 @@ public class DBSecurityGroup {
     
     
     public Ec2SecurityGroupList[] ec2SecurityGroups;
+
     public DBSecurityGroup withEc2SecurityGroups(Ec2SecurityGroupList[] ec2SecurityGroups) {
         this.ec2SecurityGroups = ec2SecurityGroups;
         return this;
@@ -30,6 +33,7 @@ public class DBSecurityGroup {
     
     
     public IPRangeList[] ipRanges;
+
     public DBSecurityGroup withIPRanges(IPRangeList[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -37,6 +41,7 @@ public class DBSecurityGroup {
     
     
     public String ownerId;
+
     public DBSecurityGroup withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -44,9 +49,11 @@ public class DBSecurityGroup {
     
     
     public String vpcId;
+
     public DBSecurityGroup withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBSecurityGroup(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateDataKeyPairResponse {
     
     public String contentType;
+
     public GenerateDataKeyPairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GenerateDataKeyPairResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object disabledException;
+
     public GenerateDataKeyPairResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateDataKeyPairResponse generateDataKeyPairResponse;
+
     public GenerateDataKeyPairResponse withGenerateDataKeyPairResponse(org.openapis.openapi.models.shared.GenerateDataKeyPairResponse generateDataKeyPairResponse) {
         this.generateDataKeyPairResponse = generateDataKeyPairResponse;
         return this;
@@ -49,6 +54,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public GenerateDataKeyPairResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public GenerateDataKeyPairResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -69,6 +76,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object kmsInternalException;
+
     public GenerateDataKeyPairResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -79,6 +87,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GenerateDataKeyPairResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object keyUnavailableException;
+
     public GenerateDataKeyPairResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object notFoundException;
+
     public GenerateDataKeyPairResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class GenerateDataKeyPairResponse {
     
     
     public Integer statusCode;
+
     public GenerateDataKeyPairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class GenerateDataKeyPairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateDataKeyPairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class GenerateDataKeyPairResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GenerateDataKeyPairResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GenerateDataKeyPairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DeploymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarms")
     public DeploymentAlarms alarms;
+
     public DeploymentConfiguration withAlarms(DeploymentAlarms alarms) {
         this.alarms = alarms;
         return this;
@@ -23,6 +24,7 @@ public class DeploymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentCircuitBreaker")
     public DeploymentCircuitBreaker deploymentCircuitBreaker;
+
     public DeploymentConfiguration withDeploymentCircuitBreaker(DeploymentCircuitBreaker deploymentCircuitBreaker) {
         this.deploymentCircuitBreaker = deploymentCircuitBreaker;
         return this;
@@ -31,6 +33,7 @@ public class DeploymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPercent")
     public Long maximumPercent;
+
     public DeploymentConfiguration withMaximumPercent(Long maximumPercent) {
         this.maximumPercent = maximumPercent;
         return this;
@@ -39,9 +42,11 @@ public class DeploymentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumHealthyPercent")
     public Long minimumHealthyPercent;
+
     public DeploymentConfiguration withMinimumHealthyPercent(Long minimumHealthyPercent) {
         this.minimumHealthyPercent = minimumHealthyPercent;
         return this;
     }
     
+    public DeploymentConfiguration(){}
 }

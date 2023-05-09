@@ -18,6 +18,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public Integer createdAt;
+
     public ActionNotificationExportResultEntity withCreatedAt(Integer createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folder")
     public String folder;
+
     public ActionNotificationExportResultEntity withFolder(String folder) {
         this.folder = folder;
         return this;
@@ -40,6 +42,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ActionNotificationExportResultEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ActionNotificationExportResultEntity withMessage(String message) {
         this.message = message;
         return this;
@@ -62,6 +66,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public ActionNotificationExportResultEntity withPath(String path) {
         this.path = path;
         return this;
@@ -73,6 +78,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_headers")
     public String requestHeaders;
+
     public ActionNotificationExportResultEntity withRequestHeaders(String requestHeaders) {
         this.requestHeaders = requestHeaders;
         return this;
@@ -84,6 +90,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_method")
     public String requestMethod;
+
     public ActionNotificationExportResultEntity withRequestMethod(String requestMethod) {
         this.requestMethod = requestMethod;
         return this;
@@ -95,6 +102,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_url")
     public String requestUrl;
+
     public ActionNotificationExportResultEntity withRequestUrl(String requestUrl) {
         this.requestUrl = requestUrl;
         return this;
@@ -106,6 +114,7 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public ActionNotificationExportResultEntity withStatus(Integer status) {
         this.status = status;
         return this;
@@ -117,9 +126,11 @@ public class ActionNotificationExportResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ActionNotificationExportResultEntity withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ActionNotificationExportResultEntity(){}
 }

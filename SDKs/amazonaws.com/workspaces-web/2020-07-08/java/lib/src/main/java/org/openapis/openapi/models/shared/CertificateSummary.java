@@ -20,6 +20,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public CertificateSummary withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -30,6 +31,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notValidAfter")
     public OffsetDateTime notValidAfter;
+
     public CertificateSummary withNotValidAfter(OffsetDateTime notValidAfter) {
         this.notValidAfter = notValidAfter;
         return this;
@@ -40,6 +42,7 @@ public class CertificateSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notValidBefore")
     public OffsetDateTime notValidBefore;
+
     public CertificateSummary withNotValidBefore(OffsetDateTime notValidBefore) {
         this.notValidBefore = notValidBefore;
         return this;
@@ -48,6 +51,7 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public CertificateSummary withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -56,9 +60,11 @@ public class CertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbprint")
     public String thumbprint;
+
     public CertificateSummary withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
     }
     
+    public CertificateSummary(){}
 }

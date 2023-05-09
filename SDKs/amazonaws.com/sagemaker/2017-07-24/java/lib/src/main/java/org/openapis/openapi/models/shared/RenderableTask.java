@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenderableTask {
     @JsonProperty("Input")
     public String input;
+
     public RenderableTask withInput(String input) {
         this.input = input;
         return this;
     }
     
+    public RenderableTask(@JsonProperty("Input") String input) {
+        this.input = input;
+  }
 }

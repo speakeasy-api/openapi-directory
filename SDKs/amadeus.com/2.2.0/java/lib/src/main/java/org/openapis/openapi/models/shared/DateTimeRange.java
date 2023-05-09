@@ -17,6 +17,7 @@ public class DateTimeRange {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public DateTimeRange withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -31,6 +32,7 @@ public class DateTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateWindow")
     public String dateWindow;
+
     public DateTimeRange withDateWindow(String dateWindow) {
         this.dateWindow = dateWindow;
         return this;
@@ -42,6 +44,7 @@ public class DateTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public DateTimeRange withTime(String time) {
         this.time = time;
         return this;
@@ -56,9 +59,13 @@ public class DateTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeWindow")
     public String timeWindow;
+
     public DateTimeRange withTimeWindow(String timeWindow) {
         this.timeWindow = timeWindow;
         return this;
     }
     
+    public DateTimeRange(@JsonProperty("date") LocalDate date) {
+        this.date = date;
+  }
 }

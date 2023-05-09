@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firebaseAppId")
     public String firebaseAppId;
+
     public GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamData withFirebaseAppId(String firebaseAppId) {
         this.firebaseAppId = firebaseAppId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamData withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaDataStreamAndroidAppStreamData(){}
 }

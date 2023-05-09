@@ -15,6 +15,7 @@ public class PartOfSpeechTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public PartOfSpeechTag withScore(Float score) {
         this.score = score;
         return this;
@@ -23,9 +24,11 @@ public class PartOfSpeechTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tag")
     public PartOfSpeechTagTypeEnum tag;
+
     public PartOfSpeechTag withTag(PartOfSpeechTagTypeEnum tag) {
         this.tag = tag;
         return this;
     }
     
+    public PartOfSpeechTag(){}
 }

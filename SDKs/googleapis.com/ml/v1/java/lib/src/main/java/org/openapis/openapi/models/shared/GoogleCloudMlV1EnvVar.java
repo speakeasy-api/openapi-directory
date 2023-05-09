@@ -18,6 +18,7 @@ public class GoogleCloudMlV1EnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudMlV1EnvVar withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1EnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudMlV1EnvVar withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudMlV1EnvVar(){}
 }

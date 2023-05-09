@@ -18,6 +18,7 @@ public class ListAndSearchMediaItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public ListAndSearchMediaItems200ApplicationJSONEmbedded embedded;
+
     public ListAndSearchMediaItems200ApplicationJSON withEmbedded(ListAndSearchMediaItems200ApplicationJSONEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -26,6 +27,7 @@ public class ListAndSearchMediaItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ListAndSearchMediaItems200ApplicationJSONLinks links;
+
     public ListAndSearchMediaItems200ApplicationJSON withLinks(ListAndSearchMediaItems200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -37,6 +39,7 @@ public class ListAndSearchMediaItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ListAndSearchMediaItems200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -48,6 +51,7 @@ public class ListAndSearchMediaItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_index")
     public Long pageIndex;
+
     public ListAndSearchMediaItems200ApplicationJSON withPageIndex(Long pageIndex) {
         this.pageIndex = pageIndex;
         return this;
@@ -59,9 +63,11 @@ public class ListAndSearchMediaItems200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public ListAndSearchMediaItems200ApplicationJSON withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public ListAndSearchMediaItems200ApplicationJSON(){}
 }

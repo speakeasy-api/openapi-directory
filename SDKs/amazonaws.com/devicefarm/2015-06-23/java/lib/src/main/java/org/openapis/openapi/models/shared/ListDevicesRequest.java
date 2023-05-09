@@ -15,6 +15,7 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ListDevicesRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DeviceFilter[] filters;
+
     public ListDevicesRequest withFilters(DeviceFilter[] filters) {
         this.filters = filters;
         return this;
@@ -31,9 +33,11 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDevicesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDevicesRequest(){}
 }

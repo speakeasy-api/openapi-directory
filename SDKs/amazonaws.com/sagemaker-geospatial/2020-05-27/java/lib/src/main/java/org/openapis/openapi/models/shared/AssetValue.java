@@ -9,15 +9,17 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AssetValue - &lt;p/&gt;
+ * AssetValue - The structure containing the asset properties.
  */
 public class AssetValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Href")
     public String href;
+
     public AssetValue withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public AssetValue(){}
 }

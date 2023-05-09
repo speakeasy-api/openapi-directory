@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEmailMonitoringConfigurationResponse {
     
     public String contentType;
+
     public DescribeEmailMonitoringConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEmailMonitoringConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEmailMonitoringConfigurationResponse describeEmailMonitoringConfigurationResponse;
+
     public DescribeEmailMonitoringConfigurationResponse withDescribeEmailMonitoringConfigurationResponse(org.openapis.openapi.models.shared.DescribeEmailMonitoringConfigurationResponse describeEmailMonitoringConfigurationResponse) {
         this.describeEmailMonitoringConfigurationResponse = describeEmailMonitoringConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEmailMonitoringConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeEmailMonitoringConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEmailMonitoringConfigurationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DescribeEmailMonitoringConfigurationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEmailMonitoringConfigurationResponse {
      */
     
     public Object organizationStateException;
+
     public DescribeEmailMonitoringConfigurationResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeEmailMonitoringConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEmailMonitoringConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeEmailMonitoringConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeEmailMonitoringConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeEmailMonitoringConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEmailMonitoringConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeEmailMonitoringConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

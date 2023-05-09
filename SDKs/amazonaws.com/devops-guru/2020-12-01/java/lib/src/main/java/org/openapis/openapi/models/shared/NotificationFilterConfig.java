@@ -15,6 +15,7 @@ public class NotificationFilterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageTypes")
     public NotificationMessageTypeEnum[] messageTypes;
+
     public NotificationFilterConfig withMessageTypes(NotificationMessageTypeEnum[] messageTypes) {
         this.messageTypes = messageTypes;
         return this;
@@ -23,9 +24,11 @@ public class NotificationFilterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severities")
     public InsightSeverityEnum[] severities;
+
     public NotificationFilterConfig withSeverities(InsightSeverityEnum[] severities) {
         this.severities = severities;
         return this;
     }
     
+    public NotificationFilterConfig(){}
 }

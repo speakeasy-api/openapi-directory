@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CommitTransactionResponse {
@@ -12,6 +13,7 @@ public class CommitTransactionResponse {
      */
     
     public Object accessDeniedException;
+
     public CommitTransactionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CommitTransactionResponse {
      */
     
     public Object badRequestException;
+
     public CommitTransactionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class CommitTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.CommitTransactionResponse commitTransactionResponse;
+
     public CommitTransactionResponse withCommitTransactionResponse(org.openapis.openapi.models.shared.CommitTransactionResponse commitTransactionResponse) {
         this.commitTransactionResponse = commitTransactionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CommitTransactionResponse {
     
     
     public String contentType;
+
     public CommitTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CommitTransactionResponse {
      */
     
     public Object forbiddenException;
+
     public CommitTransactionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CommitTransactionResponse {
      */
     
     public Object internalServerErrorException;
+
     public CommitTransactionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CommitTransactionResponse {
      */
     
     public Object notFoundException;
+
     public CommitTransactionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CommitTransactionResponse {
     
     
     public Integer statusCode;
+
     public CommitTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CommitTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CommitTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CommitTransactionResponse {
      */
     
     public Object serviceUnavailableError;
+
     public CommitTransactionResponse withServiceUnavailableError(Object serviceUnavailableError) {
         this.serviceUnavailableError = serviceUnavailableError;
         return this;
@@ -103,9 +114,14 @@ public class CommitTransactionResponse {
      */
     
     public Object statementTimeoutException;
+
     public CommitTransactionResponse withStatementTimeoutException(Object statementTimeoutException) {
         this.statementTimeoutException = statementTimeoutException;
         return this;
     }
     
+    public CommitTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

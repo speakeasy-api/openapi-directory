@@ -26,6 +26,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("appLaunchTimestamp")
     public OffsetDateTime appLaunchTimestamp;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withAppLaunchTimestamp(OffsetDateTime appLaunchTimestamp) {
         this.appLaunchTimestamp = appLaunchTimestamp;
         return this;
@@ -38,6 +39,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierName")
     public String carrierName;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withCarrierName(String carrierName) {
         this.carrierName = carrierName;
         return this;
@@ -46,6 +48,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -54,6 +57,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -62,6 +66,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorId")
     public String errorId;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -70,6 +75,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasAttachments")
     public Boolean hasAttachments;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withHasAttachments(Boolean hasAttachments) {
         this.hasAttachments = hasAttachments;
         return this;
@@ -78,6 +84,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasBreadcrumbs")
     public Boolean hasBreadcrumbs;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withHasBreadcrumbs(Boolean hasBreadcrumbs) {
         this.hasBreadcrumbs = hasBreadcrumbs;
         return this;
@@ -90,6 +97,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jailbreak")
     public Boolean jailbreak;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withJailbreak(Boolean jailbreak) {
         this.jailbreak = jailbreak;
         return this;
@@ -98,6 +106,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withLanguage(String language) {
         this.language = language;
         return this;
@@ -106,6 +115,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +124,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osType")
     public String osType;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withOsType(String osType) {
         this.osType = osType;
         return this;
@@ -122,6 +133,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -130,6 +142,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -138,6 +151,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonFrames")
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames[] reasonFrames;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withReasonFrames(ErrorsLatestErrorDetails200ApplicationJSONReasonFrames[] reasonFrames) {
         this.reasonFrames = reasonFrames;
         return this;
@@ -148,6 +162,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -156,9 +171,11 @@ public class ErrorsLatestErrorDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public ErrorsLatestErrorDetails200ApplicationJSON withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ErrorsLatestErrorDetails200ApplicationJSON(){}
 }

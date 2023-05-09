@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpgradeAppliedSchemaResponse {
@@ -12,6 +13,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public UpgradeAppliedSchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpgradeAppliedSchemaResponse {
     
     
     public String contentType;
+
     public UpgradeAppliedSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object incompatibleSchemaException;
+
     public UpgradeAppliedSchemaResponse withIncompatibleSchemaException(Object incompatibleSchemaException) {
         this.incompatibleSchemaException = incompatibleSchemaException;
         return this;
@@ -39,6 +43,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object internalServiceException;
+
     public UpgradeAppliedSchemaResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object invalidArnException;
+
     public UpgradeAppliedSchemaResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object invalidAttachmentException;
+
     public UpgradeAppliedSchemaResponse withInvalidAttachmentException(Object invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -69,6 +76,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpgradeAppliedSchemaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object retryableConflictException;
+
     public UpgradeAppliedSchemaResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -86,6 +95,7 @@ public class UpgradeAppliedSchemaResponse {
     
     
     public Integer statusCode;
+
     public UpgradeAppliedSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpgradeAppliedSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpgradeAppliedSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object schemaAlreadyExistsException;
+
     public UpgradeAppliedSchemaResponse withSchemaAlreadyExistsException(Object schemaAlreadyExistsException) {
         this.schemaAlreadyExistsException = schemaAlreadyExistsException;
         return this;
@@ -113,6 +125,7 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.UpgradeAppliedSchemaResponse upgradeAppliedSchemaResponse;
+
     public UpgradeAppliedSchemaResponse withUpgradeAppliedSchemaResponse(org.openapis.openapi.models.shared.UpgradeAppliedSchemaResponse upgradeAppliedSchemaResponse) {
         this.upgradeAppliedSchemaResponse = upgradeAppliedSchemaResponse;
         return this;
@@ -123,9 +136,14 @@ public class UpgradeAppliedSchemaResponse {
      */
     
     public Object validationException;
+
     public UpgradeAppliedSchemaResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpgradeAppliedSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

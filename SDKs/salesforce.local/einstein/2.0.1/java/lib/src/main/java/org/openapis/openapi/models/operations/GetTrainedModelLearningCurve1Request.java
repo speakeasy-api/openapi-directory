@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainedModelLearningCurve1Request {
@@ -12,6 +13,7 @@ public class GetTrainedModelLearningCurve1Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public String count;
+
     public GetTrainedModelLearningCurve1Request withCount(String count) {
         this.count = count;
         return this;
@@ -19,6 +21,7 @@ public class GetTrainedModelLearningCurve1Request {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public GetTrainedModelLearningCurve1Request withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -29,9 +32,13 @@ public class GetTrainedModelLearningCurve1Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTrainedModelLearningCurve1Request withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetTrainedModelLearningCurve1Request(@JsonProperty("modelId") String modelId) {
+        this.modelId = modelId;
+  }
 }

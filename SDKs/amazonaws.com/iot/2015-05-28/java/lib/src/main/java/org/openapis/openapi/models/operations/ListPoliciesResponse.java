@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPoliciesResponse {
     
     public String contentType;
+
     public ListPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPoliciesResponse {
      */
     
     public Object internalFailureException;
+
     public ListPoliciesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListPoliciesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListPoliciesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPoliciesResponse listPoliciesResponse;
+
     public ListPoliciesResponse withListPoliciesResponse(org.openapis.openapi.models.shared.ListPoliciesResponse listPoliciesResponse) {
         this.listPoliciesResponse = listPoliciesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPoliciesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListPoliciesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListPoliciesResponse {
      */
     
     public Object throttlingException;
+
     public ListPoliciesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListPoliciesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListPoliciesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

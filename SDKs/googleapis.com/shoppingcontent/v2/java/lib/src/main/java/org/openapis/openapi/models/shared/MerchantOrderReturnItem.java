@@ -12,6 +12,7 @@ public class MerchantOrderReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerReturnReason")
     public CustomerReturnReason customerReturnReason;
+
     public MerchantOrderReturnItem withCustomerReturnReason(CustomerReturnReason customerReturnReason) {
         this.customerReturnReason = customerReturnReason;
         return this;
@@ -23,6 +24,7 @@ public class MerchantOrderReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public MerchantOrderReturnItem withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -31,6 +33,7 @@ public class MerchantOrderReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReturnReason")
     public RefundReason merchantReturnReason;
+
     public MerchantOrderReturnItem withMerchantReturnReason(RefundReason merchantReturnReason) {
         this.merchantReturnReason = merchantReturnReason;
         return this;
@@ -39,6 +42,7 @@ public class MerchantOrderReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public OrderLineItemProduct product;
+
     public MerchantOrderReturnItem withProduct(OrderLineItemProduct product) {
         this.product = product;
         return this;
@@ -50,6 +54,7 @@ public class MerchantOrderReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnShipmentIds")
     public String[] returnShipmentIds;
+
     public MerchantOrderReturnItem withReturnShipmentIds(String[] returnShipmentIds) {
         this.returnShipmentIds = returnShipmentIds;
         return this;
@@ -61,9 +66,11 @@ public class MerchantOrderReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public MerchantOrderReturnItem withState(String state) {
         this.state = state;
         return this;
     }
     
+    public MerchantOrderReturnItem(){}
 }

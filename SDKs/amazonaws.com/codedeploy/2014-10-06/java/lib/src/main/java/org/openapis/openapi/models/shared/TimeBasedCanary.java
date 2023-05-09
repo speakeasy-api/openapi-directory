@@ -15,6 +15,7 @@ public class TimeBasedCanary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canaryInterval")
     public Long canaryInterval;
+
     public TimeBasedCanary withCanaryInterval(Long canaryInterval) {
         this.canaryInterval = canaryInterval;
         return this;
@@ -23,9 +24,11 @@ public class TimeBasedCanary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canaryPercentage")
     public Long canaryPercentage;
+
     public TimeBasedCanary withCanaryPercentage(Long canaryPercentage) {
         this.canaryPercentage = canaryPercentage;
         return this;
     }
     
+    public TimeBasedCanary(){}
 }

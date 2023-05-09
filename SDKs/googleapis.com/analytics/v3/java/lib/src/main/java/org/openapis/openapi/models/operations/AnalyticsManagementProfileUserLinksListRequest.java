@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementProfileUserLinksListRequest {
@@ -12,6 +13,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementProfileUserLinksListRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementProfileUserLinksListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementProfileUserLinksListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementProfileUserLinksListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
     public Long maxResults;
+
     public AnalyticsManagementProfileUserLinksListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementProfileUserLinksListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementProfileUserLinksListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public AnalyticsManagementProfileUserLinksListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -92,6 +101,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementProfileUserLinksListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +112,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-index")
     public Long startIndex;
+
     public AnalyticsManagementProfileUserLinksListRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -112,6 +123,7 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementProfileUserLinksListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -122,9 +134,15 @@ public class AnalyticsManagementProfileUserLinksListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementProfileUserLinksListRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementProfileUserLinksListRequest(@JsonProperty("accountId") String accountId, @JsonProperty("profileId") String profileId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.profileId = profileId;
+        this.webPropertyId = webPropertyId;
+  }
 }

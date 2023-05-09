@@ -67,10 +67,8 @@ public class Sellers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListSellersResponse res = new org.openapis.openapi.models.operations.GetListSellersResponse() {{
+        org.openapis.openapi.models.operations.GetListSellersResponse res = new org.openapis.openapi.models.operations.GetListSellersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,10 +113,8 @@ public class Sellers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRetrieveSellerResponse res = new org.openapis.openapi.models.operations.GetRetrieveSellerResponse() {{
+        org.openapis.openapi.models.operations.GetRetrieveSellerResponse res = new org.openapis.openapi.models.operations.GetRetrieveSellerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,10 +161,8 @@ public class Sellers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSellerResponse res = new org.openapis.openapi.models.operations.UpdateSellerResponse() {{
+        org.openapis.openapi.models.operations.UpdateSellerResponse res = new org.openapis.openapi.models.operations.UpdateSellerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,10 +216,8 @@ public class Sellers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpsertSellerRequestResponse res = new org.openapis.openapi.models.operations.UpsertSellerRequestResponse() {{
+        org.openapis.openapi.models.operations.UpsertSellerRequestResponse res = new org.openapis.openapi.models.operations.UpsertSellerRequestResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

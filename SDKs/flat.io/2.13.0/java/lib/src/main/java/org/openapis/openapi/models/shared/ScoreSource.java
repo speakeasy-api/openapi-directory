@@ -16,9 +16,11 @@ public class ScoreSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleDrive")
     public String googleDrive;
+
     public ScoreSource withGoogleDrive(String googleDrive) {
         this.googleDrive = googleDrive;
         return this;
     }
     
+    public ScoreSource(){}
 }

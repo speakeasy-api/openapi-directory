@@ -18,6 +18,7 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call")
     public Boolean call;
+
     public DoNotContact withCall(Boolean call) {
         this.call = call;
         return this;
@@ -29,6 +30,7 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public Long campaignId;
+
     public DoNotContact withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -40,6 +42,7 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public DoNotContact withCreated(Long created) {
         this.created = created;
         return this;
@@ -51,6 +54,7 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundCall")
     public Boolean inboundCall;
+
     public DoNotContact withInboundCall(Boolean inboundCall) {
         this.inboundCall = inboundCall;
         return this;
@@ -62,6 +66,7 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundText")
     public Boolean inboundText;
+
     public DoNotContact withInboundText(Boolean inboundText) {
         this.inboundText = inboundText;
         return this;
@@ -73,6 +78,7 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public DoNotContact withNumber(String number) {
         this.number = number;
         return this;
@@ -84,6 +90,7 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public DoNotContact withSource(String source) {
         this.source = source;
         return this;
@@ -95,9 +102,11 @@ public class DoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public Boolean text;
+
     public DoNotContact withText(Boolean text) {
         this.text = text;
         return this;
     }
     
+    public DoNotContact(){}
 }

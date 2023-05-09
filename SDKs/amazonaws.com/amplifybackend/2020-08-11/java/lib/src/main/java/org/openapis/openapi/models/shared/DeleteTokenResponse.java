@@ -15,9 +15,11 @@ public class DeleteTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsSuccess")
     public Boolean isSuccess;
+
     public DeleteTokenResponse withIsSuccess(Boolean isSuccess) {
         this.isSuccess = isSuccess;
         return this;
     }
     
+    public DeleteTokenResponse(){}
 }

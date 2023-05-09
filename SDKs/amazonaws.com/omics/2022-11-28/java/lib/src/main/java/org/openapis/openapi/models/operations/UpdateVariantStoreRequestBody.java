@@ -15,9 +15,11 @@ public class UpdateVariantStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateVariantStoreRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateVariantStoreRequestBody(){}
 }

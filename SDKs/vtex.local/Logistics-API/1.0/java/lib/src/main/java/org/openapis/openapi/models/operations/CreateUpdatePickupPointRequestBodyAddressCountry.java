@@ -12,6 +12,7 @@ public class CreateUpdatePickupPointRequestBodyAddressCountry {
      */
     @JsonProperty("acronym")
     public String acronym;
+
     public CreateUpdatePickupPointRequestBodyAddressCountry withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -22,9 +23,14 @@ public class CreateUpdatePickupPointRequestBodyAddressCountry {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateUpdatePickupPointRequestBodyAddressCountry withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateUpdatePickupPointRequestBodyAddressCountry(@JsonProperty("acronym") String acronym, @JsonProperty("name") String name) {
+        this.acronym = acronym;
+        this.name = name;
+  }
 }

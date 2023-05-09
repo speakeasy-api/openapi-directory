@@ -15,9 +15,11 @@ public class DescribeStepOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Step")
     public Step step;
+
     public DescribeStepOutput withStep(Step step) {
         this.step = step;
         return this;
     }
     
+    public DescribeStepOutput(){}
 }

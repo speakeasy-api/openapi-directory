@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingDynamicTargetingKeysListResponse {
     
     public String contentType;
+
     public DfareportingDynamicTargetingKeysListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingDynamicTargetingKeysListResponse {
      */
     
     public org.openapis.openapi.models.shared.DynamicTargetingKeysListResponse dynamicTargetingKeysListResponse;
+
     public DfareportingDynamicTargetingKeysListResponse withDynamicTargetingKeysListResponse(org.openapis.openapi.models.shared.DynamicTargetingKeysListResponse dynamicTargetingKeysListResponse) {
         this.dynamicTargetingKeysListResponse = dynamicTargetingKeysListResponse;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingDynamicTargetingKeysListResponse {
     
     
     public Integer statusCode;
+
     public DfareportingDynamicTargetingKeysListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingDynamicTargetingKeysListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingDynamicTargetingKeysListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingDynamicTargetingKeysListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

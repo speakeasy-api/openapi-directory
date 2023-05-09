@@ -22,6 +22,7 @@ public class DescribeLocationNfsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationNfsResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeLocationNfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationNfsResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLocationNfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationNfsResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLocationNfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public NfsMountOptions mountOptions;
+
     public DescribeLocationNfsResponse withMountOptions(NfsMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -57,9 +61,11 @@ public class DescribeLocationNfsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnPremConfig")
     public OnPremConfig onPremConfig;
+
     public DescribeLocationNfsResponse withOnPremConfig(OnPremConfig onPremConfig) {
         this.onPremConfig = onPremConfig;
         return this;
     }
     
+    public DescribeLocationNfsResponse(){}
 }

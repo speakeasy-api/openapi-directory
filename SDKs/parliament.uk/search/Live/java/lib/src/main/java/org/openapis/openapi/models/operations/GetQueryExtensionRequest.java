@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueryExtensionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Double count;
+
     public GetQueryExtensionRequest withCount(Double count) {
         this.count = count;
         return this;
@@ -19,6 +21,7 @@ public class GetQueryExtensionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extension")
     public GetQueryExtensionExtensionEnum extension;
+
     public GetQueryExtensionRequest withExtension(GetQueryExtensionExtensionEnum extension) {
         this.extension = extension;
         return this;
@@ -26,6 +29,7 @@ public class GetQueryExtensionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inUrlPrefixes")
     public String inUrlPrefixes;
+
     public GetQueryExtensionRequest withInUrlPrefixes(String inUrlPrefixes) {
         this.inUrlPrefixes = inUrlPrefixes;
         return this;
@@ -33,6 +37,7 @@ public class GetQueryExtensionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetQueryExtensionRequest withQ(String q) {
         this.q = q;
         return this;
@@ -40,6 +45,7 @@ public class GetQueryExtensionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Double start;
+
     public GetQueryExtensionRequest withStart(Double start) {
         this.start = start;
         return this;
@@ -47,9 +53,14 @@ public class GetQueryExtensionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subdomains")
     public String subdomains;
+
     public GetQueryExtensionRequest withSubdomains(String subdomains) {
         this.subdomains = subdomains;
         return this;
     }
     
+    public GetQueryExtensionRequest(@JsonProperty("extension") GetQueryExtensionExtensionEnum extension, @JsonProperty("q") String q) {
+        this.extension = extension;
+        this.q = q;
+  }
 }

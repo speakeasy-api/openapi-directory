@@ -15,6 +15,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Contact withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public Contact withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -37,6 +39,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infix")
     public String infix;
+
     public Contact withInfix(String infix) {
         this.infix = infix;
         return this;
@@ -48,6 +51,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public Contact withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -59,9 +63,11 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public Contact withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public Contact(){}
 }

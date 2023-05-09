@@ -12,6 +12,7 @@ public class OrgHookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public OrgHookConfig withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +21,7 @@ public class OrgHookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecure_ssl")
     public String insecureSsl;
+
     public OrgHookConfig withInsecureSsl(String insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -28,6 +30,7 @@ public class OrgHookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public OrgHookConfig withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -36,9 +39,11 @@ public class OrgHookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public OrgHookConfig withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OrgHookConfig(){}
 }

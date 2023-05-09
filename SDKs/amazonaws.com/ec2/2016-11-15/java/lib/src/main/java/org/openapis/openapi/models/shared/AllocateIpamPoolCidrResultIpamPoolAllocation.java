@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AllocateIpamPoolCidrResultIpamPoolAllocation {
     
     public String cidr;
+
     public AllocateIpamPoolCidrResultIpamPoolAllocation withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class AllocateIpamPoolCidrResultIpamPoolAllocation {
     
     
     public String description;
+
     public AllocateIpamPoolCidrResultIpamPoolAllocation withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class AllocateIpamPoolCidrResultIpamPoolAllocation {
     
     
     public String ipamPoolAllocationId;
+
     public AllocateIpamPoolCidrResultIpamPoolAllocation withIpamPoolAllocationId(String ipamPoolAllocationId) {
         this.ipamPoolAllocationId = ipamPoolAllocationId;
         return this;
@@ -33,6 +36,7 @@ public class AllocateIpamPoolCidrResultIpamPoolAllocation {
     
     
     public String resourceId;
+
     public AllocateIpamPoolCidrResultIpamPoolAllocation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,6 +44,7 @@ public class AllocateIpamPoolCidrResultIpamPoolAllocation {
     
     
     public String resourceOwner;
+
     public AllocateIpamPoolCidrResultIpamPoolAllocation withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -47,6 +52,7 @@ public class AllocateIpamPoolCidrResultIpamPoolAllocation {
     
     
     public String resourceRegion;
+
     public AllocateIpamPoolCidrResultIpamPoolAllocation withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -54,9 +60,11 @@ public class AllocateIpamPoolCidrResultIpamPoolAllocation {
     
     
     public AllocateIpamPoolCidrResultIpamPoolAllocationResourceTypeEnum resourceType;
+
     public AllocateIpamPoolCidrResultIpamPoolAllocation withResourceType(AllocateIpamPoolCidrResultIpamPoolAllocationResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public AllocateIpamPoolCidrResultIpamPoolAllocation(){}
 }

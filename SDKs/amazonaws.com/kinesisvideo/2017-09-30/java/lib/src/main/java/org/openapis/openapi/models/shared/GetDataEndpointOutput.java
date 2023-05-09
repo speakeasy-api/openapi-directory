@@ -15,9 +15,11 @@ public class GetDataEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataEndpoint")
     public String dataEndpoint;
+
     public GetDataEndpointOutput withDataEndpoint(String dataEndpoint) {
         this.dataEndpoint = dataEndpoint;
         return this;
     }
     
+    public GetDataEndpointOutput(){}
 }

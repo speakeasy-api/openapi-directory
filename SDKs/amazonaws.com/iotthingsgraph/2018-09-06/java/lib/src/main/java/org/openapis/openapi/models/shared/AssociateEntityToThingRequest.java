@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateEntityToThingRequest {
     @JsonProperty("entityId")
     public String entityId;
+
     public AssociateEntityToThingRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -19,6 +20,7 @@ public class AssociateEntityToThingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceVersion")
     public Long namespaceVersion;
+
     public AssociateEntityToThingRequest withNamespaceVersion(Long namespaceVersion) {
         this.namespaceVersion = namespaceVersion;
         return this;
@@ -26,9 +28,14 @@ public class AssociateEntityToThingRequest {
     
     @JsonProperty("thingName")
     public String thingName;
+
     public AssociateEntityToThingRequest withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public AssociateEntityToThingRequest(@JsonProperty("entityId") String entityId, @JsonProperty("thingName") String thingName) {
+        this.entityId = entityId;
+        this.thingName = thingName;
+  }
 }

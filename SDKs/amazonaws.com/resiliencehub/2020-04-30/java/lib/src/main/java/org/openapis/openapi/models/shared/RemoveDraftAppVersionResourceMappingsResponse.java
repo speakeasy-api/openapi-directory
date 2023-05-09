@@ -15,6 +15,7 @@ public class RemoveDraftAppVersionResourceMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appArn")
     public String appArn;
+
     public RemoveDraftAppVersionResourceMappingsResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -23,9 +24,11 @@ public class RemoveDraftAppVersionResourceMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public String appVersion;
+
     public RemoveDraftAppVersionResourceMappingsResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
     
+    public RemoveDraftAppVersionResourceMappingsResponse(){}
 }

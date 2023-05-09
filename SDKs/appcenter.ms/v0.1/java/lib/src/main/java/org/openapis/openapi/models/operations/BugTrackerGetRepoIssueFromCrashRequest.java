@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BugTrackerGetRepoIssueFromCrashRequest {
@@ -12,6 +13,7 @@ public class BugTrackerGetRepoIssueFromCrashRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public BugTrackerGetRepoIssueFromCrashRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class BugTrackerGetRepoIssueFromCrashRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
     public String crashGroupId;
+
     public BugTrackerGetRepoIssueFromCrashRequest withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -32,9 +35,15 @@ public class BugTrackerGetRepoIssueFromCrashRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public BugTrackerGetRepoIssueFromCrashRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public BugTrackerGetRepoIssueFromCrashRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.crashGroupId = crashGroupId;
+        this.ownerName = ownerName;
+  }
 }

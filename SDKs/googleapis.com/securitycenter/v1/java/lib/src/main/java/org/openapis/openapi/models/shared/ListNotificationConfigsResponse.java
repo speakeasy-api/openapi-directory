@@ -18,6 +18,7 @@ public class ListNotificationConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListNotificationConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListNotificationConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfigs")
     public NotificationConfig[] notificationConfigs;
+
     public ListNotificationConfigsResponse withNotificationConfigs(NotificationConfig[] notificationConfigs) {
         this.notificationConfigs = notificationConfigs;
         return this;
     }
     
+    public ListNotificationConfigsResponse(){}
 }

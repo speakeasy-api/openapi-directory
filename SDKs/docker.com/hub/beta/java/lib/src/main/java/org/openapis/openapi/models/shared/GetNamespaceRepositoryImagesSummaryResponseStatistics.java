@@ -15,6 +15,7 @@ public class GetNamespaceRepositoryImagesSummaryResponseStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Long active;
+
     public GetNamespaceRepositoryImagesSummaryResponseStatistics withActive(Long active) {
         this.active = active;
         return this;
@@ -26,6 +27,7 @@ public class GetNamespaceRepositoryImagesSummaryResponseStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactive")
     public Long inactive;
+
     public GetNamespaceRepositoryImagesSummaryResponseStatistics withInactive(Long inactive) {
         this.inactive = inactive;
         return this;
@@ -37,9 +39,11 @@ public class GetNamespaceRepositoryImagesSummaryResponseStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetNamespaceRepositoryImagesSummaryResponseStatistics withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetNamespaceRepositoryImagesSummaryResponseStatistics(){}
 }

@@ -60,11 +60,9 @@ public class CommunicationCost {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommunicationCostsResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsResponse() {{
+        org.openapis.openapi.models.operations.GetCommunicationCostsResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsResponse(contentType, httpRes.statusCode()) {{
             communicationCostPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -105,11 +103,9 @@ public class CommunicationCost {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommunicationCostsAggregatesResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsAggregatesResponse() {{
+        org.openapis.openapi.models.operations.GetCommunicationCostsAggregatesResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsAggregatesResponse(contentType, httpRes.statusCode()) {{
             communicationCostByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -150,11 +146,9 @@ public class CommunicationCost {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommunicationCostsByCandidateResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetCommunicationCostsByCandidateResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsByCandidateResponse(contentType, httpRes.statusCode()) {{
             communicationCostByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -195,11 +189,9 @@ public class CommunicationCost {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommunicationCostsTotalsByCandidateResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsTotalsByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetCommunicationCostsTotalsByCandidateResponse res = new org.openapis.openapi.models.operations.GetCommunicationCostsTotalsByCandidateResponse(contentType, httpRes.statusCode()) {{
             ccTotalsByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

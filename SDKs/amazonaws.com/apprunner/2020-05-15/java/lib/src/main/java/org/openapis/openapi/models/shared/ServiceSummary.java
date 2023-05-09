@@ -22,6 +22,7 @@ public class ServiceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ServiceSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public ServiceSummary withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -38,6 +40,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceId")
     public String serviceId;
+
     public ServiceSummary withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -46,6 +49,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public ServiceSummary withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -54,6 +58,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUrl")
     public String serviceUrl;
+
     public ServiceSummary withServiceUrl(String serviceUrl) {
         this.serviceUrl = serviceUrl;
         return this;
@@ -62,6 +67,7 @@ public class ServiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ServiceStatusEnum status;
+
     public ServiceSummary withStatus(ServiceStatusEnum status) {
         this.status = status;
         return this;
@@ -72,9 +78,11 @@ public class ServiceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public ServiceSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ServiceSummary(){}
 }

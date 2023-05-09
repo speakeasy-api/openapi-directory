@@ -12,6 +12,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("CNAME")
     public String cname;
+
     public HscerRequestBodyCertificateParameters withCname(String cname) {
         this.cname = cname;
         return this;
@@ -22,6 +23,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("ROLL")
     public String roll;
+
     public HscerRequestBodyCertificateParameters withRoll(String roll) {
         this.roll = roll;
         return this;
@@ -32,9 +34,15 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("YEAR")
     public String year;
+
     public HscerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public HscerRequestBodyCertificateParameters(@JsonProperty("CNAME") String cname, @JsonProperty("ROLL") String roll, @JsonProperty("YEAR") String year) {
+        this.cname = cname;
+        this.roll = roll;
+        this.year = year;
+  }
 }

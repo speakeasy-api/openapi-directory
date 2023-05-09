@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacesResultNetworkInterfacesAssociation {
     
     public String allocationId;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAssociation withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesAssociation {
     
     
     public String associationId;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesAssociation {
     
     
     public String carrierIp;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAssociation withCarrierIp(String carrierIp) {
         this.carrierIp = carrierIp;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesAssociation {
     
     
     public String customerOwnedIp;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAssociation withCustomerOwnedIp(String customerOwnedIp) {
         this.customerOwnedIp = customerOwnedIp;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesAssociation {
     
     
     public String ipOwnerId;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAssociation withIpOwnerId(String ipOwnerId) {
         this.ipOwnerId = ipOwnerId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesAssociation {
     
     
     public String publicDnsName;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAssociation withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -54,9 +60,11 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesAssociation {
     
     
     public String publicIp;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesAssociation withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public DescribeNetworkInterfacesResultNetworkInterfacesAssociation(){}
 }

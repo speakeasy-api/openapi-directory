@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFulfillmentPolicyRequest {
@@ -12,9 +13,13 @@ public class DeleteFulfillmentPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fulfillmentPolicyId")
     public String fulfillmentPolicyId;
+
     public DeleteFulfillmentPolicyRequest withFulfillmentPolicyId(String fulfillmentPolicyId) {
         this.fulfillmentPolicyId = fulfillmentPolicyId;
         return this;
     }
     
+    public DeleteFulfillmentPolicyRequest(@JsonProperty("fulfillmentPolicyId") String fulfillmentPolicyId) {
+        this.fulfillmentPolicyId = fulfillmentPolicyId;
+  }
 }

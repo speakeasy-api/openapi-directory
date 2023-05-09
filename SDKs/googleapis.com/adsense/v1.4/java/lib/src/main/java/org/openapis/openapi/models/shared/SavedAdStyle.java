@@ -15,6 +15,7 @@ public class SavedAdStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adStyle")
     public AdStyle adStyle;
+
     public SavedAdStyle withAdStyle(AdStyle adStyle) {
         this.adStyle = adStyle;
         return this;
@@ -26,6 +27,7 @@ public class SavedAdStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SavedAdStyle withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class SavedAdStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SavedAdStyle withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,9 +51,11 @@ public class SavedAdStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SavedAdStyle withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SavedAdStyle(){}
 }

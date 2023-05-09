@@ -15,6 +15,7 @@ public class DescribeOrderableReplicationInstancesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeOrderableReplicationInstancesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribeOrderableReplicationInstancesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeOrderableReplicationInstancesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeOrderableReplicationInstancesMessage(){}
 }

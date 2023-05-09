@@ -15,6 +15,7 @@ public class ResourceCountFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ResourceCountFilters withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ResourceCountFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ResourceCountFilters withRegion(String region) {
         this.region = region;
         return this;
@@ -31,9 +33,11 @@ public class ResourceCountFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public ResourceCountFilters withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceCountFilters(){}
 }

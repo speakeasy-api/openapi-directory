@@ -12,6 +12,7 @@ public class DescribeRiskConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public DescribeRiskConfigurationRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -19,9 +20,13 @@ public class DescribeRiskConfigurationRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public DescribeRiskConfigurationRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public DescribeRiskConfigurationRequest(@JsonProperty("UserPoolId") String userPoolId) {
+        this.userPoolId = userPoolId;
+  }
 }

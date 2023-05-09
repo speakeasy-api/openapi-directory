@@ -12,6 +12,7 @@ public class PutAutoTerminationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoTerminationPolicy")
     public AutoTerminationPolicy autoTerminationPolicy;
+
     public PutAutoTerminationPolicyInput withAutoTerminationPolicy(AutoTerminationPolicy autoTerminationPolicy) {
         this.autoTerminationPolicy = autoTerminationPolicy;
         return this;
@@ -19,9 +20,13 @@ public class PutAutoTerminationPolicyInput {
     
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public PutAutoTerminationPolicyInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     
+    public PutAutoTerminationPolicyInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

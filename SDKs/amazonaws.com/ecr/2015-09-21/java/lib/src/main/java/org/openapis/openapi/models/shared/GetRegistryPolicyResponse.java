@@ -15,6 +15,7 @@ public class GetRegistryPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyText")
     public String policyText;
+
     public GetRegistryPolicyResponse withPolicyText(String policyText) {
         this.policyText = policyText;
         return this;
@@ -23,9 +24,11 @@ public class GetRegistryPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetRegistryPolicyResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
     }
     
+    public GetRegistryPolicyResponse(){}
 }

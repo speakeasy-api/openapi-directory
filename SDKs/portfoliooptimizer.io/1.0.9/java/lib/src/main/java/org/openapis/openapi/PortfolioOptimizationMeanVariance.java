@@ -64,11 +64,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumReturn200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,11 +118,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumReturnDiversified200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +170,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumReturnSubsetResamplingBased200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,11 +220,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,11 +274,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumSharpeRatioDiversified200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +326,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +378,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMeanVarianceEfficient200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,11 +434,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMeanVarianceEfficientDiversified200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -502,11 +486,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -554,11 +536,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMinimumVariance200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -610,11 +590,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMinimumVarianceDiversified200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -664,11 +642,9 @@ public class PortfolioOptimizationMeanVariance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse res = new org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse(contentType, httpRes.statusCode()) {{
             postPortfolioOptimizationMinimumVarianceSubsetResamplingBased200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

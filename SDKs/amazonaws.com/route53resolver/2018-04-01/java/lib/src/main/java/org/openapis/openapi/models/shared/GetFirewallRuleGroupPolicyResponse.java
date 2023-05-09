@@ -15,9 +15,11 @@ public class GetFirewallRuleGroupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRuleGroupPolicy")
     public String firewallRuleGroupPolicy;
+
     public GetFirewallRuleGroupPolicyResponse withFirewallRuleGroupPolicy(String firewallRuleGroupPolicy) {
         this.firewallRuleGroupPolicy = firewallRuleGroupPolicy;
         return this;
     }
     
+    public GetFirewallRuleGroupPolicyResponse(){}
 }

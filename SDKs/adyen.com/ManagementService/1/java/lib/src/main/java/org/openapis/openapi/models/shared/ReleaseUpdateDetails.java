@@ -18,6 +18,7 @@ public class ReleaseUpdateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReleaseUpdateDetailsTypeEnum type;
+
     public ReleaseUpdateDetails withType(ReleaseUpdateDetailsTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class ReleaseUpdateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateAtFirstMaintenanceCall")
     public Boolean updateAtFirstMaintenanceCall;
+
     public ReleaseUpdateDetails withUpdateAtFirstMaintenanceCall(Boolean updateAtFirstMaintenanceCall) {
         this.updateAtFirstMaintenanceCall = updateAtFirstMaintenanceCall;
         return this;
     }
     
+    public ReleaseUpdateDetails(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UploadedBoundaryId {
     @JsonProperty("id")
     public String id;
+
     public UploadedBoundaryId withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UploadedBoundaryId(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

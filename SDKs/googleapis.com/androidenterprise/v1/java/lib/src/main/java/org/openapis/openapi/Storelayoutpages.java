@@ -59,10 +59,8 @@ public class Storelayoutpages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Storelayoutpages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetResponse(contentType, httpRes.statusCode()) {{
             storePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Storelayoutpages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertResponse(contentType, httpRes.statusCode()) {{
             storePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Storelayoutpages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListResponse(contentType, httpRes.statusCode()) {{
             storeLayoutPagesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Storelayoutpages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateResponse(contentType, httpRes.statusCode()) {{
             storePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

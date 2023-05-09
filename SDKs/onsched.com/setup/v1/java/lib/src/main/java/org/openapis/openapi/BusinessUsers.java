@@ -53,10 +53,8 @@ public class BusinessUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class BusinessUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1BusinessusersResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1BusinessusersResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersResponse(contentType, httpRes.statusCode()) {{
             businessUserListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class BusinessUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1BusinessusersPermissionsResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersPermissionsResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1BusinessusersPermissionsResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersPermissionsResponse(contentType, httpRes.statusCode()) {{
             businessPermissionListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +179,9 @@ public class BusinessUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesResponse(contentType, httpRes.statusCode()) {{
             authorizedCompanyListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class BusinessUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdResponse(contentType, httpRes.statusCode()) {{
             businessUserViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,11 +260,9 @@ public class BusinessUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1BusinessusersResponse res = new org.openapis.openapi.models.operations.PostSetupV1BusinessusersResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1BusinessusersResponse res = new org.openapis.openapi.models.operations.PostSetupV1BusinessusersResponse(contentType, httpRes.statusCode()) {{
             businessUserViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -314,11 +302,9 @@ public class BusinessUsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdResponse(contentType, httpRes.statusCode()) {{
             businessUserViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

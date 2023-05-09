@@ -33,7 +33,7 @@ public class Facets {
     /**
      * Search by Store Facets
      * Retrieves products by store facets. 
-     * &gt;\u26a0\ufe0f This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
+     * &gt;⚠️ This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
      * 
      * ## Response body example:
      * 
@@ -126,7 +126,7 @@ public class Facets {
      *      {
      *       "Quantity": 2,
      *       "Position": null,
-     *       "Name": "Z\u00e9",
+     *       "Name": "Zé",
      *       "Link": "/1/1234600/1/Ze?map=c,c,b,b",
      *       "LinkEncoded": "/1/1234600/1/Ze?map=c,c,b,b",
      *       "Map": "b",
@@ -334,7 +334,7 @@ public class Facets {
      *                 "Id": 13,
      *                 "Quantity": 1,
      *                 "Position": null,
-     *                 "Name": "n\u00e3o tem limite!",
+     *                 "Name": "não tem limite!",
      *                 "Link": "/Coronas/nao-tem-limite-/1?map=c,c,b",
      *                 "LinkEncoded": "/Coronas/nao-tem-limite-/1?map=c,c,b",
      *                 "Map": "c",
@@ -410,11 +410,9 @@ public class Facets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FacetscategoryResponse res = new org.openapis.openapi.models.operations.FacetscategoryResponse() {{
+        org.openapis.openapi.models.operations.FacetscategoryResponse res = new org.openapis.openapi.models.operations.FacetscategoryResponse(contentType, httpRes.statusCode()) {{
             facetscategory200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -431,7 +429,7 @@ public class Facets {
     /**
      * Get Category Facets
      * Retrieves the names and IDs of the categories facets. 
-     * &gt;\u26a0\ufe0f This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
+     * &gt;⚠️ This endpoint returns a maximum of 50 items per response, so the difference between `_from` and `_to` should not exceed this number. The result order is descending, from the highest product ID to the lowest.
      * 
      * ## Response body example:
      * 
@@ -482,11 +480,9 @@ public class Facets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiCatalogSystemPubFacetsCategoryCategoryIdResponse res = new org.openapis.openapi.models.operations.GetApiCatalogSystemPubFacetsCategoryCategoryIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiCatalogSystemPubFacetsCategoryCategoryIdResponse res = new org.openapis.openapi.models.operations.GetApiCatalogSystemPubFacetsCategoryCategoryIdResponse(contentType, httpRes.statusCode()) {{
             getApiCatalogSystemPubFacetsCategoryCategoryId200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

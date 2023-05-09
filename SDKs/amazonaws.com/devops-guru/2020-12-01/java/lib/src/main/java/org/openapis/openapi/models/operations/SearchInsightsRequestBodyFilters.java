@@ -18,6 +18,7 @@ public class SearchInsightsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public org.openapis.openapi.models.shared.ResourceCollection resourceCollection;
+
     public SearchInsightsRequestBodyFilters withResourceCollection(org.openapis.openapi.models.shared.ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -26,6 +27,7 @@ public class SearchInsightsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCollection")
     public org.openapis.openapi.models.shared.ServiceCollection serviceCollection;
+
     public SearchInsightsRequestBodyFilters withServiceCollection(org.openapis.openapi.models.shared.ServiceCollection serviceCollection) {
         this.serviceCollection = serviceCollection;
         return this;
@@ -34,6 +36,7 @@ public class SearchInsightsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severities")
     public org.openapis.openapi.models.shared.InsightSeverityEnum[] severities;
+
     public SearchInsightsRequestBodyFilters withSeverities(org.openapis.openapi.models.shared.InsightSeverityEnum[] severities) {
         this.severities = severities;
         return this;
@@ -42,9 +45,11 @@ public class SearchInsightsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statuses")
     public org.openapis.openapi.models.shared.InsightStatusEnum[] statuses;
+
     public SearchInsightsRequestBodyFilters withStatuses(org.openapis.openapi.models.shared.InsightStatusEnum[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public SearchInsightsRequestBodyFilters(){}
 }

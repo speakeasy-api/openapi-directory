@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON {
     @JsonProperty("labels")
     public org.openapis.openapi.models.shared.RunnerLabel[] labels;
+
     public ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON withLabels(org.openapis.openapi.models.shared.RunnerLabel[] labels) {
         this.labels = labels;
         return this;
@@ -19,9 +20,14 @@ public class ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ActionsListLabelsForSelfHostedRunnerForRepo200ApplicationJSON(@JsonProperty("labels") org.openapis.openapi.models.shared.RunnerLabel[] labels, @JsonProperty("total_count") Long totalCount) {
+        this.labels = labels;
+        this.totalCount = totalCount;
+  }
 }

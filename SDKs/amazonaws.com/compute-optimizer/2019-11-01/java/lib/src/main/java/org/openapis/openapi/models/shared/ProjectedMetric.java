@@ -16,6 +16,7 @@ public class ProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public MetricNameEnum name;
+
     public ProjectedMetric withName(MetricNameEnum name) {
         this.name = name;
         return this;
@@ -24,6 +25,7 @@ public class ProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamps")
     public OffsetDateTime[] timestamps;
+
     public ProjectedMetric withTimestamps(OffsetDateTime[] timestamps) {
         this.timestamps = timestamps;
         return this;
@@ -32,9 +34,11 @@ public class ProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Double[] values;
+
     public ProjectedMetric withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public ProjectedMetric(){}
 }

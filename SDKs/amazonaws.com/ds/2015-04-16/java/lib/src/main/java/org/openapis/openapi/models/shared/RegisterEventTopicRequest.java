@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterEventTopicRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public RegisterEventTopicRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,9 +20,14 @@ public class RegisterEventTopicRequest {
     
     @JsonProperty("TopicName")
     public String topicName;
+
     public RegisterEventTopicRequest withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public RegisterEventTopicRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("TopicName") String topicName) {
+        this.directoryId = directoryId;
+        this.topicName = topicName;
+  }
 }

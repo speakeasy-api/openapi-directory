@@ -18,6 +18,7 @@ public class ProjectBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAccountName")
     public String billingAccountName;
+
     public ProjectBillingInfo withBillingAccountName(String billingAccountName) {
         this.billingAccountName = billingAccountName;
         return this;
@@ -29,6 +30,7 @@ public class ProjectBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingEnabled")
     public Boolean billingEnabled;
+
     public ProjectBillingInfo withBillingEnabled(Boolean billingEnabled) {
         this.billingEnabled = billingEnabled;
         return this;
@@ -40,6 +42,7 @@ public class ProjectBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectBillingInfo withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class ProjectBillingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ProjectBillingInfo withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public ProjectBillingInfo(){}
 }

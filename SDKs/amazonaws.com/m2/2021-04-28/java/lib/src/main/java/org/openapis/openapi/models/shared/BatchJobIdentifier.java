@@ -15,6 +15,7 @@ public class BatchJobIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileBatchJobIdentifier")
     public FileBatchJobIdentifier fileBatchJobIdentifier;
+
     public BatchJobIdentifier withFileBatchJobIdentifier(FileBatchJobIdentifier fileBatchJobIdentifier) {
         this.fileBatchJobIdentifier = fileBatchJobIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class BatchJobIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptBatchJobIdentifier")
     public ScriptBatchJobIdentifier scriptBatchJobIdentifier;
+
     public BatchJobIdentifier withScriptBatchJobIdentifier(ScriptBatchJobIdentifier scriptBatchJobIdentifier) {
         this.scriptBatchJobIdentifier = scriptBatchJobIdentifier;
         return this;
     }
     
+    public BatchJobIdentifier(){}
 }

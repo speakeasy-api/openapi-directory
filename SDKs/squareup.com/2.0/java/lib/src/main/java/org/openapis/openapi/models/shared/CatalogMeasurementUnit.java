@@ -21,6 +21,7 @@ public class CatalogMeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement_unit")
     public MeasurementUnit measurementUnit;
+
     public CatalogMeasurementUnit withMeasurementUnit(MeasurementUnit measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -40,9 +41,11 @@ public class CatalogMeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public CatalogMeasurementUnit withPrecision(Long precision) {
         this.precision = precision;
         return this;
     }
     
+    public CatalogMeasurementUnit(){}
 }

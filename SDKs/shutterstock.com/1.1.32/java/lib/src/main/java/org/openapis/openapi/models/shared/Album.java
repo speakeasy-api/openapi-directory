@@ -15,6 +15,7 @@ public class Album {
      */
     @JsonProperty("id")
     public String id;
+
     public Album withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class Album {
      */
     @JsonProperty("title")
     public String title;
+
     public Album withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Album(@JsonProperty("id") String id, @JsonProperty("title") String title) {
+        this.id = id;
+        this.title = title;
+  }
 }

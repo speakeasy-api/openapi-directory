@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInternationalStandingOrdersJsonRequest {
@@ -12,6 +13,7 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateInternationalStandingOrdersJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OBWriteInternationalStandingOrder4 obWriteInternationalStandingOrder4;
+
     public CreateInternationalStandingOrdersJsonRequest withOBWriteInternationalStandingOrder4(org.openapis.openapi.models.shared.OBWriteInternationalStandingOrder4 obWriteInternationalStandingOrder4) {
         this.obWriteInternationalStandingOrder4 = obWriteInternationalStandingOrder4;
         return this;
@@ -32,6 +35,7 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateInternationalStandingOrdersJsonRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateInternationalStandingOrdersJsonRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateInternationalStandingOrdersJsonRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,6 +70,7 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateInternationalStandingOrdersJsonRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
@@ -76,6 +83,7 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
     public String xIdempotencyKey;
+
     public CreateInternationalStandingOrdersJsonRequest withXIdempotencyKey(String xIdempotencyKey) {
         this.xIdempotencyKey = xIdempotencyKey;
         return this;
@@ -86,9 +94,16 @@ public class CreateInternationalStandingOrdersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
     public String xJwsSignature;
+
     public CreateInternationalStandingOrdersJsonRequest withXJwsSignature(String xJwsSignature) {
         this.xJwsSignature = xJwsSignature;
         return this;
     }
     
+    public CreateInternationalStandingOrdersJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("OBWriteInternationalStandingOrder4") org.openapis.openapi.models.shared.OBWriteInternationalStandingOrder4 obWriteInternationalStandingOrder4, @JsonProperty("x-idempotency-key") String xIdempotencyKey, @JsonProperty("x-jws-signature") String xJwsSignature) {
+        this.authorization = authorization;
+        this.obWriteInternationalStandingOrder4 = obWriteInternationalStandingOrder4;
+        this.xIdempotencyKey = xIdempotencyKey;
+        this.xJwsSignature = xJwsSignature;
+  }
 }

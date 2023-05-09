@@ -68,13 +68,11 @@ public class Licenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicensesResponse res = new org.openapis.openapi.models.operations.GetLicensesResponse() {{
+        org.openapis.openapi.models.operations.GetLicensesResponse res = new org.openapis.openapi.models.operations.GetLicensesResponse(contentType, httpRes.statusCode()) {{
             licenses = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

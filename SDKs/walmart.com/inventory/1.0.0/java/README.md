@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetInventoryRequest;
 import org.openapis.openapi.models.operations.GetInventoryResponse;
 
@@ -26,23 +25,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetInventoryRequest req = new GetInventoryRequest() {{
-                wmConsumerChannelType = "corrupti";
-                wmQosCorrelationId = "provident";
-                wmSecAccessToken = "distinctio";
-                wmSvcName = "quibusdam";
-                shipNode = "unde";
-                sku = "nulla";
-            }}            
+            GetInventoryRequest req = new GetInventoryRequest("corrupti", "provident", "distinctio", "quibusdam") {{
+                wmConsumerChannelType = "unde";
+                shipNode = "nulla";
+            }};            
 
             GetInventoryResponse res = sdk.inventory.getInventory(req);
 
-            if (res.getInventory200ApplicationJSONObject.isPresent()) {
+            if (res.getInventory200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,16 +47,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### inventory
+### [inventory](docs/inventory/README.md)
 
-* `getInventory` - Inventory
-* `getMultiNodeInventoryForAllSkuAndAllShipNodes` - Multiple Item Inventory for All Ship Nodes
-* `getMultiNodeInventoryForSkuAndAllShipnodes` - Single Item Inventory by Ship Node
-* `getWFSInventory` - WFS Inventory
-* `updateBulkInventory` - Bulk Item Inventory Update
-* `updateInventoryForAnItemJson` - Update inventory
-* `updateInventoryForAnItemRaw` - Update inventory
-* `updateMultiNodeInventory` - Update Item Inventory per Ship Node
+* [getInventory](docs/inventory/README.md#getinventory) - Inventory
+* [getMultiNodeInventoryForAllSkuAndAllShipNodes](docs/inventory/README.md#getmultinodeinventoryforallskuandallshipnodes) - Multiple Item Inventory for All Ship Nodes
+* [getMultiNodeInventoryForSkuAndAllShipnodes](docs/inventory/README.md#getmultinodeinventoryforskuandallshipnodes) - Single Item Inventory by Ship Node
+* [getWFSInventory](docs/inventory/README.md#getwfsinventory) - WFS Inventory
+* [updateBulkInventory](docs/inventory/README.md#updatebulkinventory) - Bulk Item Inventory Update
+* [updateInventoryForAnItemJson](docs/inventory/README.md#updateinventoryforanitemjson) - Update inventory
+* [updateInventoryForAnItemRaw](docs/inventory/README.md#updateinventoryforanitemraw) - Update inventory
+* [updateMultiNodeInventory](docs/inventory/README.md#updatemultinodeinventory) - Update Item Inventory per Ship Node
 <!-- End SDK Available Operations -->
 
 ### Maturity

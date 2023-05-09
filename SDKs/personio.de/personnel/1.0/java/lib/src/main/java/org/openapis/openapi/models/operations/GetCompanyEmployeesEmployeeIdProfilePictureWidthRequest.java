@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest {
@@ -12,6 +13,7 @@ public class GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
     public Integer employeeId;
+
     public GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest withEmployeeId(Integer employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -22,9 +24,14 @@ public class GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=width")
     public Integer width;
+
     public GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest(@JsonProperty("employee_id") Integer employeeId, @JsonProperty("width") Integer width) {
+        this.employeeId = employeeId;
+        this.width = width;
+  }
 }

@@ -15,6 +15,7 @@ public class PutServersId200ApplicationJSONServerProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PutServersId200ApplicationJSONServerProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
@@ -25,9 +26,14 @@ public class PutServersId200ApplicationJSONServerProtection {
      */
     @JsonProperty("rebuild")
     public Boolean rebuild;
+
     public PutServersId200ApplicationJSONServerProtection withRebuild(Boolean rebuild) {
         this.rebuild = rebuild;
         return this;
     }
     
+    public PutServersId200ApplicationJSONServerProtection(@JsonProperty("delete") Boolean delete, @JsonProperty("rebuild") Boolean rebuild) {
+        this.delete = delete;
+        this.rebuild = rebuild;
+  }
 }

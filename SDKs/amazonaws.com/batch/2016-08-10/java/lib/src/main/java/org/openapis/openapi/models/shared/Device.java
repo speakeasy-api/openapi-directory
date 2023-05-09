@@ -15,6 +15,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPath")
     public String containerPath;
+
     public Device withContainerPath(String containerPath) {
         this.containerPath = containerPath;
         return this;
@@ -22,6 +23,7 @@ public class Device {
     
     @JsonProperty("hostPath")
     public String hostPath;
+
     public Device withHostPath(String hostPath) {
         this.hostPath = hostPath;
         return this;
@@ -30,9 +32,13 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public DeviceCgroupPermissionEnum[] permissions;
+
     public Device withPermissions(DeviceCgroupPermissionEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public Device(@JsonProperty("hostPath") String hostPath) {
+        this.hostPath = hostPath;
+  }
 }

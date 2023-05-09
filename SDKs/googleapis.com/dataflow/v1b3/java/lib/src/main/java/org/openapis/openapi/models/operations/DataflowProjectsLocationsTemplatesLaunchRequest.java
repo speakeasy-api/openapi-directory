@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataflowProjectsLocationsTemplatesLaunchRequest {
@@ -12,6 +13,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LaunchTemplateParameters launchTemplateParameters;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withLaunchTemplateParameters(org.openapis.openapi.models.shared.LaunchTemplateParameters launchTemplateParameters) {
         this.launchTemplateParameters = launchTemplateParameters;
         return this;
@@ -29,6 +32,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dynamicTemplate.gcsPath")
     public String dynamicTemplateGcsPath;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withDynamicTemplateGcsPath(String dynamicTemplateGcsPath) {
         this.dynamicTemplateGcsPath = dynamicTemplateGcsPath;
         return this;
@@ -69,6 +76,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dynamicTemplate.stagingLocation")
     public String dynamicTemplateStagingLocation;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withDynamicTemplateStagingLocation(String dynamicTemplateStagingLocation) {
         this.dynamicTemplateStagingLocation = dynamicTemplateStagingLocation;
         return this;
@@ -79,6 +87,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gcsPath")
     public String gcsPath;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withGcsPath(String gcsPath) {
         this.gcsPath = gcsPath;
         return this;
@@ -99,6 +109,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -119,6 +131,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -129,6 +142,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +153,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -149,6 +164,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -159,6 +175,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,6 +186,7 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -179,9 +197,14 @@ public class DataflowProjectsLocationsTemplatesLaunchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
     public Boolean validateOnly;
+
     public DataflowProjectsLocationsTemplatesLaunchRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public DataflowProjectsLocationsTemplatesLaunchRequest(@JsonProperty("location") String location, @JsonProperty("projectId") String projectId) {
+        this.location = location;
+        this.projectId = projectId;
+  }
 }

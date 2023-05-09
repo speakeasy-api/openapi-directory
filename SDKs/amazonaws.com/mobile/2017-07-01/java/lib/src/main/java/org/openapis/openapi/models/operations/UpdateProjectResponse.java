@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProjectResponse {
@@ -12,6 +13,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountActionRequiredException accountActionRequiredException;
+
     public UpdateProjectResponse withAccountActionRequiredException(org.openapis.openapi.models.shared.AccountActionRequiredException accountActionRequiredException) {
         this.accountActionRequiredException = accountActionRequiredException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequestException badRequestException;
+
     public UpdateProjectResponse withBadRequestException(org.openapis.openapi.models.shared.BadRequestException badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProjectResponse {
     
     
     public String contentType;
+
     public UpdateProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalFailureException internalFailureException;
+
     public UpdateProjectResponse withInternalFailureException(org.openapis.openapi.models.shared.InternalFailureException internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public UpdateProjectResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundException notFoundException;
+
     public UpdateProjectResponse withNotFoundException(org.openapis.openapi.models.shared.NotFoundException notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException;
+
     public UpdateProjectResponse withServiceUnavailableException(org.openapis.openapi.models.shared.ServiceUnavailableException serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateProjectResponse {
     
     
     public Integer statusCode;
+
     public UpdateProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException;
+
     public UpdateProjectResponse withTooManyRequestsException(org.openapis.openapi.models.shared.TooManyRequestsException tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException;
+
     public UpdateProjectResponse withUnauthorizedException(org.openapis.openapi.models.shared.UnauthorizedException unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProjectResult updateProjectResult;
+
     public UpdateProjectResponse withUpdateProjectResult(org.openapis.openapi.models.shared.UpdateProjectResult updateProjectResult) {
         this.updateProjectResult = updateProjectResult;
         return this;
     }
     
+    public UpdateProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

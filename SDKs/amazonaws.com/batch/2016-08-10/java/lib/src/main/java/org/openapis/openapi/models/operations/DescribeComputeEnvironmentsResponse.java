@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeComputeEnvironmentsResponse {
@@ -12,6 +13,7 @@ public class DescribeComputeEnvironmentsResponse {
      */
     
     public Object clientException;
+
     public DescribeComputeEnvironmentsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeComputeEnvironmentsResponse {
     
     
     public String contentType;
+
     public DescribeComputeEnvironmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeComputeEnvironmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeComputeEnvironmentsResponse describeComputeEnvironmentsResponse;
+
     public DescribeComputeEnvironmentsResponse withDescribeComputeEnvironmentsResponse(org.openapis.openapi.models.shared.DescribeComputeEnvironmentsResponse describeComputeEnvironmentsResponse) {
         this.describeComputeEnvironmentsResponse = describeComputeEnvironmentsResponse;
         return this;
@@ -36,6 +40,7 @@ public class DescribeComputeEnvironmentsResponse {
     
     
     public Integer statusCode;
+
     public DescribeComputeEnvironmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeComputeEnvironmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeComputeEnvironmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeComputeEnvironmentsResponse {
      */
     
     public Object serverException;
+
     public DescribeComputeEnvironmentsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DescribeComputeEnvironmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

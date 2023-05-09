@@ -12,6 +12,7 @@ public class GETListsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETListsFormat200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -20,6 +21,7 @@ public class GETListsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_modified")
     public String lastModified;
+
     public GETListsFormat200ApplicationJSON withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -28,6 +30,7 @@ public class GETListsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GETListsFormat200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -36,6 +39,7 @@ public class GETListsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GETListsFormat200ApplicationJSONResults[] results;
+
     public GETListsFormat200ApplicationJSON withResults(GETListsFormat200ApplicationJSONResults[] results) {
         this.results = results;
         return this;
@@ -44,9 +48,11 @@ public class GETListsFormat200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETListsFormat200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETListsFormat200ApplicationJSON(){}
 }

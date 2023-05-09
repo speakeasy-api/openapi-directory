@@ -18,6 +18,7 @@ public class OidcToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public String audience;
+
     public OidcToken withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -29,9 +30,11 @@ public class OidcToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmail")
     public String serviceAccountEmail;
+
     public OidcToken withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
     }
     
+    public OidcToken(){}
 }

@@ -22,6 +22,7 @@ public class DescribeEdgeConfigurationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeEdgeConfigurationOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeEdgeConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeConfig")
     public EdgeConfig edgeConfig;
+
     public DescribeEdgeConfigurationOutput withEdgeConfig(EdgeConfig edgeConfig) {
         this.edgeConfig = edgeConfig;
         return this;
@@ -38,6 +40,7 @@ public class DescribeEdgeConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedStatusDetails")
     public String failedStatusDetails;
+
     public DescribeEdgeConfigurationOutput withFailedStatusDetails(String failedStatusDetails) {
         this.failedStatusDetails = failedStatusDetails;
         return this;
@@ -48,6 +51,7 @@ public class DescribeEdgeConfigurationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public DescribeEdgeConfigurationOutput withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -56,6 +60,7 @@ public class DescribeEdgeConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DescribeEdgeConfigurationOutput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -64,6 +69,7 @@ public class DescribeEdgeConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DescribeEdgeConfigurationOutput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -72,9 +78,11 @@ public class DescribeEdgeConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncStatus")
     public SyncStatusEnum syncStatus;
+
     public DescribeEdgeConfigurationOutput withSyncStatus(SyncStatusEnum syncStatus) {
         this.syncStatus = syncStatus;
         return this;
     }
     
+    public DescribeEdgeConfigurationOutput(){}
 }

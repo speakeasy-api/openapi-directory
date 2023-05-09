@@ -14,6 +14,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
      */
     @JsonProperty("apps")
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps[] apps;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withApps(DistributionGroupsDetailsForOrg200ApplicationJSONApps[] apps) {
         this.apps = apps;
         return this;
@@ -25,6 +26,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +37,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
      */
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -55,6 +59,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +70,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
      */
     @JsonProperty("origin")
     public DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum origin;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withOrigin(DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -75,6 +81,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
      */
     @JsonProperty("total_apps_count")
     public Double totalAppsCount;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withTotalAppsCount(Double totalAppsCount) {
         this.totalAppsCount = totalAppsCount;
         return this;
@@ -85,9 +92,19 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSON {
      */
     @JsonProperty("total_users_count")
     public Double totalUsersCount;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSON withTotalUsersCount(Double totalUsersCount) {
         this.totalUsersCount = totalUsersCount;
         return this;
     }
     
+    public DistributionGroupsDetailsForOrg200ApplicationJSON(@JsonProperty("apps") DistributionGroupsDetailsForOrg200ApplicationJSONApps[] apps, @JsonProperty("id") String id, @JsonProperty("is_public") Boolean isPublic, @JsonProperty("name") String name, @JsonProperty("origin") DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum origin, @JsonProperty("total_apps_count") Double totalAppsCount, @JsonProperty("total_users_count") Double totalUsersCount) {
+        this.apps = apps;
+        this.id = id;
+        this.isPublic = isPublic;
+        this.name = name;
+        this.origin = origin;
+        this.totalAppsCount = totalAppsCount;
+        this.totalUsersCount = totalUsersCount;
+  }
 }

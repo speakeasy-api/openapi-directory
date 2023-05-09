@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class MessagesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public MessagesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public MessagesListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +25,7 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner")
     public Long owner;
+
     public MessagesListRequest withOwner(Long owner) {
         this.owner = owner;
         return this;
@@ -30,6 +33,7 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public MessagesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -37,6 +41,7 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public MessagesListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -44,6 +49,7 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=received_since")
     public String receivedSince;
+
     public MessagesListRequest withReceivedSince(String receivedSince) {
         this.receivedSince = receivedSince;
         return this;
@@ -51,6 +57,7 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responsible_user")
     public Long responsibleUser;
+
     public MessagesListRequest withResponsibleUser(Long responsibleUser) {
         this.responsibleUser = responsibleUser;
         return this;
@@ -58,6 +65,7 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public MessagesListRequest withType(String type) {
         this.type = type;
         return this;
@@ -65,9 +73,11 @@ public class MessagesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_since")
     public String updatedSince;
+
     public MessagesListRequest withUpdatedSince(String updatedSince) {
         this.updatedSince = updatedSince;
         return this;
     }
     
+    public MessagesListRequest(){}
 }

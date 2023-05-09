@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscriptionLimits {
     @JsonProperty("ProtectionGroupLimits")
     public ProtectionGroupLimits protectionGroupLimits;
+
     public SubscriptionLimits withProtectionGroupLimits(ProtectionGroupLimits protectionGroupLimits) {
         this.protectionGroupLimits = protectionGroupLimits;
         return this;
@@ -19,9 +20,14 @@ public class SubscriptionLimits {
     
     @JsonProperty("ProtectionLimits")
     public ProtectionLimits protectionLimits;
+
     public SubscriptionLimits withProtectionLimits(ProtectionLimits protectionLimits) {
         this.protectionLimits = protectionLimits;
         return this;
     }
     
+    public SubscriptionLimits(@JsonProperty("ProtectionGroupLimits") ProtectionGroupLimits protectionGroupLimits, @JsonProperty("ProtectionLimits") ProtectionLimits protectionLimits) {
+        this.protectionGroupLimits = protectionGroupLimits;
+        this.protectionLimits = protectionLimits;
+  }
 }

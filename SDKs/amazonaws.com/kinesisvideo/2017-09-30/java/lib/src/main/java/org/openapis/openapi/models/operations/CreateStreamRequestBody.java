@@ -15,6 +15,7 @@ public class CreateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRetentionInHours")
     public Long dataRetentionInHours;
+
     public CreateStreamRequestBody withDataRetentionInHours(Long dataRetentionInHours) {
         this.dataRetentionInHours = dataRetentionInHours;
         return this;
@@ -26,6 +27,7 @@ public class CreateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public CreateStreamRequestBody withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -37,6 +39,7 @@ public class CreateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateStreamRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -48,6 +51,7 @@ public class CreateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaType")
     public String mediaType;
+
     public CreateStreamRequestBody withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -58,6 +62,7 @@ public class CreateStreamRequestBody {
      */
     @JsonProperty("StreamName")
     public String streamName;
+
     public CreateStreamRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -69,9 +74,13 @@ public class CreateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateStreamRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStreamRequestBody(@JsonProperty("StreamName") String streamName) {
+        this.streamName = streamName;
+  }
 }

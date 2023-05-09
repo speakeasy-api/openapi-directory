@@ -15,9 +15,11 @@ public class GetCustomers302ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GetCustomers302ApplicationJSON withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public GetCustomers302ApplicationJSON(){}
 }

@@ -73,4 +73,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DoubleMatcher.java
 lib/src/main/java/org/openapis/openapi/models/shared/DoubleRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/PathSegment.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/discovery/README.md
 USAGE.md

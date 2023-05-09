@@ -15,6 +15,7 @@ public class ContinuousHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public ContinuousHyperParameterRange withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -23,6 +24,7 @@ public class ContinuousHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Double minValue;
+
     public ContinuousHyperParameterRange withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
@@ -31,9 +33,11 @@ public class ContinuousHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContinuousHyperParameterRange withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ContinuousHyperParameterRange(){}
 }

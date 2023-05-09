@@ -20,6 +20,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleArn")
     public String configRuleArn;
+
     public ConfigRuleEvaluationStatus withConfigRuleArn(String configRuleArn) {
         this.configRuleArn = configRuleArn;
         return this;
@@ -28,6 +29,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleId")
     public String configRuleId;
+
     public ConfigRuleEvaluationStatus withConfigRuleId(String configRuleId) {
         this.configRuleId = configRuleId;
         return this;
@@ -36,6 +38,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public ConfigRuleEvaluationStatus withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -46,6 +49,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstActivatedTime")
     public OffsetDateTime firstActivatedTime;
+
     public ConfigRuleEvaluationStatus withFirstActivatedTime(OffsetDateTime firstActivatedTime) {
         this.firstActivatedTime = firstActivatedTime;
         return this;
@@ -54,6 +58,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstEvaluationStarted")
     public Boolean firstEvaluationStarted;
+
     public ConfigRuleEvaluationStatus withFirstEvaluationStarted(Boolean firstEvaluationStarted) {
         this.firstEvaluationStarted = firstEvaluationStarted;
         return this;
@@ -64,6 +69,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastDeactivatedTime")
     public OffsetDateTime lastDeactivatedTime;
+
     public ConfigRuleEvaluationStatus withLastDeactivatedTime(OffsetDateTime lastDeactivatedTime) {
         this.lastDeactivatedTime = lastDeactivatedTime;
         return this;
@@ -72,6 +78,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastDebugLogDeliveryStatus")
     public String lastDebugLogDeliveryStatus;
+
     public ConfigRuleEvaluationStatus withLastDebugLogDeliveryStatus(String lastDebugLogDeliveryStatus) {
         this.lastDebugLogDeliveryStatus = lastDebugLogDeliveryStatus;
         return this;
@@ -80,6 +87,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastDebugLogDeliveryStatusReason")
     public String lastDebugLogDeliveryStatusReason;
+
     public ConfigRuleEvaluationStatus withLastDebugLogDeliveryStatusReason(String lastDebugLogDeliveryStatusReason) {
         this.lastDebugLogDeliveryStatusReason = lastDebugLogDeliveryStatusReason;
         return this;
@@ -90,6 +98,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastDebugLogDeliveryTime")
     public OffsetDateTime lastDebugLogDeliveryTime;
+
     public ConfigRuleEvaluationStatus withLastDebugLogDeliveryTime(OffsetDateTime lastDebugLogDeliveryTime) {
         this.lastDebugLogDeliveryTime = lastDebugLogDeliveryTime;
         return this;
@@ -98,6 +107,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastErrorCode")
     public String lastErrorCode;
+
     public ConfigRuleEvaluationStatus withLastErrorCode(String lastErrorCode) {
         this.lastErrorCode = lastErrorCode;
         return this;
@@ -106,6 +116,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastErrorMessage")
     public String lastErrorMessage;
+
     public ConfigRuleEvaluationStatus withLastErrorMessage(String lastErrorMessage) {
         this.lastErrorMessage = lastErrorMessage;
         return this;
@@ -116,6 +127,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastFailedEvaluationTime")
     public OffsetDateTime lastFailedEvaluationTime;
+
     public ConfigRuleEvaluationStatus withLastFailedEvaluationTime(OffsetDateTime lastFailedEvaluationTime) {
         this.lastFailedEvaluationTime = lastFailedEvaluationTime;
         return this;
@@ -126,6 +138,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastFailedInvocationTime")
     public OffsetDateTime lastFailedInvocationTime;
+
     public ConfigRuleEvaluationStatus withLastFailedInvocationTime(OffsetDateTime lastFailedInvocationTime) {
         this.lastFailedInvocationTime = lastFailedInvocationTime;
         return this;
@@ -136,6 +149,7 @@ public class ConfigRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuccessfulEvaluationTime")
     public OffsetDateTime lastSuccessfulEvaluationTime;
+
     public ConfigRuleEvaluationStatus withLastSuccessfulEvaluationTime(OffsetDateTime lastSuccessfulEvaluationTime) {
         this.lastSuccessfulEvaluationTime = lastSuccessfulEvaluationTime;
         return this;
@@ -146,9 +160,11 @@ public class ConfigRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSuccessfulInvocationTime")
     public OffsetDateTime lastSuccessfulInvocationTime;
+
     public ConfigRuleEvaluationStatus withLastSuccessfulInvocationTime(OffsetDateTime lastSuccessfulInvocationTime) {
         this.lastSuccessfulInvocationTime = lastSuccessfulInvocationTime;
         return this;
     }
     
+    public ConfigRuleEvaluationStatus(){}
 }

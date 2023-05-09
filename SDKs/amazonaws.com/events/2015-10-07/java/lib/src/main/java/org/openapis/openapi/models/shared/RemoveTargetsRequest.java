@@ -12,6 +12,7 @@ public class RemoveTargetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public RemoveTargetsRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -20,6 +21,7 @@ public class RemoveTargetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Force")
     public Boolean force;
+
     public RemoveTargetsRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -27,6 +29,7 @@ public class RemoveTargetsRequest {
     
     @JsonProperty("Ids")
     public String[] ids;
+
     public RemoveTargetsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -34,9 +37,14 @@ public class RemoveTargetsRequest {
     
     @JsonProperty("Rule")
     public String rule;
+
     public RemoveTargetsRequest withRule(String rule) {
         this.rule = rule;
         return this;
     }
     
+    public RemoveTargetsRequest(@JsonProperty("Ids") String[] ids, @JsonProperty("Rule") String rule) {
+        this.ids = ids;
+        this.rule = rule;
+  }
 }

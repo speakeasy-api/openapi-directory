@@ -18,9 +18,11 @@ public class CreateTimeSeriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeries")
     public TimeSeries[] timeSeries;
+
     public CreateTimeSeriesRequest withTimeSeries(TimeSeries[] timeSeries) {
         this.timeSeries = timeSeries;
         return this;
     }
     
+    public CreateTimeSeriesRequest(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotFleetRequestHistoryResponse {
     
     public DescribeSpotFleetRequestHistoryResponseHistoryRecords[] historyRecords;
+
     public DescribeSpotFleetRequestHistoryResponse withHistoryRecords(DescribeSpotFleetRequestHistoryResponseHistoryRecords[] historyRecords) {
         this.historyRecords = historyRecords;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestHistoryResponse {
     
     
     public OffsetDateTime lastEvaluatedTime;
+
     public DescribeSpotFleetRequestHistoryResponse withLastEvaluatedTime(OffsetDateTime lastEvaluatedTime) {
         this.lastEvaluatedTime = lastEvaluatedTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSpotFleetRequestHistoryResponse {
     
     
     public String nextToken;
+
     public DescribeSpotFleetRequestHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSpotFleetRequestHistoryResponse {
     
     
     public String spotFleetRequestId;
+
     public DescribeSpotFleetRequestHistoryResponse withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
@@ -40,9 +44,11 @@ public class DescribeSpotFleetRequestHistoryResponse {
     
     
     public OffsetDateTime startTime;
+
     public DescribeSpotFleetRequestHistoryResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeSpotFleetRequestHistoryResponse(){}
 }

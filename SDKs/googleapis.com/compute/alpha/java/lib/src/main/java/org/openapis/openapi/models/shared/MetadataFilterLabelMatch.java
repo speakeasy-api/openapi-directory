@@ -18,6 +18,7 @@ public class MetadataFilterLabelMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetadataFilterLabelMatch withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class MetadataFilterLabelMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MetadataFilterLabelMatch withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MetadataFilterLabelMatch(){}
 }

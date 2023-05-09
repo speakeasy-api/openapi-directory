@@ -15,6 +15,7 @@ public class CreateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateNotificationRuleRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateNotificationRuleRequestBody {
      */
     @JsonProperty("DetailType")
     public CreateNotificationRuleRequestBodyDetailTypeEnum detailType;
+
     public CreateNotificationRuleRequestBody withDetailType(CreateNotificationRuleRequestBodyDetailTypeEnum detailType) {
         this.detailType = detailType;
         return this;
@@ -35,6 +37,7 @@ public class CreateNotificationRuleRequestBody {
      */
     @JsonProperty("EventTypeIds")
     public String[] eventTypeIds;
+
     public CreateNotificationRuleRequestBody withEventTypeIds(String[] eventTypeIds) {
         this.eventTypeIds = eventTypeIds;
         return this;
@@ -45,6 +48,7 @@ public class CreateNotificationRuleRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateNotificationRuleRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class CreateNotificationRuleRequestBody {
      */
     @JsonProperty("Resource")
     public String resource;
+
     public CreateNotificationRuleRequestBody withResource(String resource) {
         this.resource = resource;
         return this;
@@ -66,6 +71,7 @@ public class CreateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CreateNotificationRuleRequestBodyStatusEnum status;
+
     public CreateNotificationRuleRequestBody withStatus(CreateNotificationRuleRequestBodyStatusEnum status) {
         this.status = status;
         return this;
@@ -77,6 +83,7 @@ public class CreateNotificationRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateNotificationRuleRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -87,9 +94,17 @@ public class CreateNotificationRuleRequestBody {
      */
     @JsonProperty("Targets")
     public org.openapis.openapi.models.shared.Target[] targets;
+
     public CreateNotificationRuleRequestBody withTargets(org.openapis.openapi.models.shared.Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public CreateNotificationRuleRequestBody(@JsonProperty("DetailType") CreateNotificationRuleRequestBodyDetailTypeEnum detailType, @JsonProperty("EventTypeIds") String[] eventTypeIds, @JsonProperty("Name") String name, @JsonProperty("Resource") String resource, @JsonProperty("Targets") org.openapis.openapi.models.shared.Target[] targets) {
+        this.detailType = detailType;
+        this.eventTypeIds = eventTypeIds;
+        this.name = name;
+        this.resource = resource;
+        this.targets = targets;
+  }
 }

@@ -21,6 +21,7 @@ public class ListEventLogsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ListEventLogsRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class ListEventLogsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public String eventName;
+
     public ListEventLogsRequestBody withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -43,6 +45,7 @@ public class ListEventLogsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListEventLogsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -54,6 +57,7 @@ public class ListEventLogsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEventLogsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -66,9 +70,14 @@ public class ListEventLogsRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ListEventLogsRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListEventLogsRequestBody(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

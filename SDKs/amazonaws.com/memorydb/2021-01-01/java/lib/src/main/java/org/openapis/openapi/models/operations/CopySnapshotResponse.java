@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopySnapshotResponse {
     
     public String contentType;
+
     public CopySnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CopySnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CopySnapshotResponse copySnapshotResponse;
+
     public CopySnapshotResponse withCopySnapshotResponse(org.openapis.openapi.models.shared.CopySnapshotResponse copySnapshotResponse) {
         this.copySnapshotResponse = copySnapshotResponse;
         return this;
@@ -29,6 +32,7 @@ public class CopySnapshotResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CopySnapshotResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class CopySnapshotResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CopySnapshotResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class CopySnapshotResponse {
      */
     
     public Object invalidSnapshotStateFault;
+
     public CopySnapshotResponse withInvalidSnapshotStateFault(Object invalidSnapshotStateFault) {
         this.invalidSnapshotStateFault = invalidSnapshotStateFault;
         return this;
@@ -59,6 +65,7 @@ public class CopySnapshotResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public CopySnapshotResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -69,6 +76,7 @@ public class CopySnapshotResponse {
      */
     
     public Object snapshotAlreadyExistsFault;
+
     public CopySnapshotResponse withSnapshotAlreadyExistsFault(Object snapshotAlreadyExistsFault) {
         this.snapshotAlreadyExistsFault = snapshotAlreadyExistsFault;
         return this;
@@ -79,6 +87,7 @@ public class CopySnapshotResponse {
      */
     
     public Object snapshotQuotaExceededFault;
+
     public CopySnapshotResponse withSnapshotQuotaExceededFault(Object snapshotQuotaExceededFault) {
         this.snapshotQuotaExceededFault = snapshotQuotaExceededFault;
         return this;
@@ -86,6 +95,7 @@ public class CopySnapshotResponse {
     
     
     public Integer statusCode;
+
     public CopySnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CopySnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopySnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CopySnapshotResponse {
      */
     
     public Object snapshotNotFoundFault;
+
     public CopySnapshotResponse withSnapshotNotFoundFault(Object snapshotNotFoundFault) {
         this.snapshotNotFoundFault = snapshotNotFoundFault;
         return this;
@@ -113,9 +125,14 @@ public class CopySnapshotResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public CopySnapshotResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
     }
     
+    public CopySnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

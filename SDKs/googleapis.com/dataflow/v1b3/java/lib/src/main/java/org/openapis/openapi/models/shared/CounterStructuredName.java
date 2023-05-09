@@ -18,6 +18,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentStepName")
     public String componentStepName;
+
     public CounterStructuredName withComponentStepName(String componentStepName) {
         this.componentStepName = componentStepName;
         return this;
@@ -29,6 +30,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStepName")
     public String executionStepName;
+
     public CounterStructuredName withExecutionStepName(String executionStepName) {
         this.executionStepName = executionStepName;
         return this;
@@ -40,6 +42,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputIndex")
     public Integer inputIndex;
+
     public CounterStructuredName withInputIndex(Integer inputIndex) {
         this.inputIndex = inputIndex;
         return this;
@@ -51,6 +54,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CounterStructuredName withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public CounterStructuredNameOriginEnum origin;
+
     public CounterStructuredName withOrigin(CounterStructuredNameOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -73,6 +78,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originNamespace")
     public String originNamespace;
+
     public CounterStructuredName withOriginNamespace(String originNamespace) {
         this.originNamespace = originNamespace;
         return this;
@@ -84,6 +90,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalRequestingStepName")
     public String originalRequestingStepName;
+
     public CounterStructuredName withOriginalRequestingStepName(String originalRequestingStepName) {
         this.originalRequestingStepName = originalRequestingStepName;
         return this;
@@ -95,6 +102,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalStepName")
     public String originalStepName;
+
     public CounterStructuredName withOriginalStepName(String originalStepName) {
         this.originalStepName = originalStepName;
         return this;
@@ -106,6 +114,7 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portion")
     public CounterStructuredNamePortionEnum portion;
+
     public CounterStructuredName withPortion(CounterStructuredNamePortionEnum portion) {
         this.portion = portion;
         return this;
@@ -117,9 +126,11 @@ public class CounterStructuredName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerId")
     public String workerId;
+
     public CounterStructuredName withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public CounterStructuredName(){}
 }

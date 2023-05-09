@@ -12,6 +12,7 @@ public class SystemCollectionsGenericKeyValuePairSystemInt32SystemString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public Integer key;
+
     public SystemCollectionsGenericKeyValuePairSystemInt32SystemString withKey(Integer key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class SystemCollectionsGenericKeyValuePairSystemInt32SystemString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SystemCollectionsGenericKeyValuePairSystemInt32SystemString withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SystemCollectionsGenericKeyValuePairSystemInt32SystemString(){}
 }

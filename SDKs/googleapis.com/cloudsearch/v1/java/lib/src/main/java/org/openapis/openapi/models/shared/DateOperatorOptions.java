@@ -18,6 +18,7 @@ public class DateOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greaterThanOperatorName")
     public String greaterThanOperatorName;
+
     public DateOperatorOptions withGreaterThanOperatorName(String greaterThanOperatorName) {
         this.greaterThanOperatorName = greaterThanOperatorName;
         return this;
@@ -29,6 +30,7 @@ public class DateOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lessThanOperatorName")
     public String lessThanOperatorName;
+
     public DateOperatorOptions withLessThanOperatorName(String lessThanOperatorName) {
         this.lessThanOperatorName = lessThanOperatorName;
         return this;
@@ -40,9 +42,11 @@ public class DateOperatorOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public DateOperatorOptions withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
     }
     
+    public DateOperatorOptions(){}
 }

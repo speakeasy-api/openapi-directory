@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanConstraint")
     public java.util.Map<String, Object> booleanConstraint;
+
     public GoogleCloudAssetV1Constraint withBooleanConstraint(java.util.Map<String, Object> booleanConstraint) {
         this.booleanConstraint = booleanConstraint;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraintDefault")
     public GoogleCloudAssetV1ConstraintConstraintDefaultEnum constraintDefault;
+
     public GoogleCloudAssetV1Constraint withConstraintDefault(GoogleCloudAssetV1ConstraintConstraintDefaultEnum constraintDefault) {
         this.constraintDefault = constraintDefault;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudAssetV1Constraint withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudAssetV1Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudAssetV1Constraint withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudAssetV1Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listConstraint")
     public GoogleCloudAssetV1ListConstraint listConstraint;
+
     public GoogleCloudAssetV1Constraint withListConstraint(GoogleCloudAssetV1ListConstraint listConstraint) {
         this.listConstraint = listConstraint;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudAssetV1Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudAssetV1Constraint withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudAssetV1Constraint(){}
 }

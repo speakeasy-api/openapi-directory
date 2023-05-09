@@ -15,9 +15,11 @@ public class DescribeComputeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compute")
     public Compute compute;
+
     public DescribeComputeOutput withCompute(Compute compute) {
         this.compute = compute;
         return this;
     }
     
+    public DescribeComputeOutput(){}
 }

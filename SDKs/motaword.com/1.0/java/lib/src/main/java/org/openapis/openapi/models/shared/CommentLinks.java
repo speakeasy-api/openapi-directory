@@ -12,6 +12,7 @@ public class CommentLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity")
     public Href activity;
+
     public CommentLinks withActivity(Href activity) {
         this.activity = activity;
         return this;
@@ -20,6 +21,7 @@ public class CommentLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public Href project;
+
     public CommentLinks withProject(Href project) {
         this.project = project;
         return this;
@@ -28,9 +30,11 @@ public class CommentLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Href self;
+
     public CommentLinks withSelf(Href self) {
         this.self = self;
         return this;
     }
     
+    public CommentLinks(){}
 }

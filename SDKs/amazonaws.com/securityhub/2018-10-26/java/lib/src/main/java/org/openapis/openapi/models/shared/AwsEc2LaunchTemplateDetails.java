@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultVersionNumber")
     public Long defaultVersionNumber;
+
     public AwsEc2LaunchTemplateDetails withDefaultVersionNumber(Long defaultVersionNumber) {
         this.defaultVersionNumber = defaultVersionNumber;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public AwsEc2LaunchTemplateDetails withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersionNumber")
     public Long latestVersionNumber;
+
     public AwsEc2LaunchTemplateDetails withLatestVersionNumber(Long latestVersionNumber) {
         this.latestVersionNumber = latestVersionNumber;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2LaunchTemplateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplateData")
     public AwsEc2LaunchTemplateDataDetails launchTemplateData;
+
     public AwsEc2LaunchTemplateDetails withLaunchTemplateData(AwsEc2LaunchTemplateDataDetails launchTemplateData) {
         this.launchTemplateData = launchTemplateData;
         return this;
@@ -47,9 +51,11 @@ public class AwsEc2LaunchTemplateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplateName")
     public String launchTemplateName;
+
     public AwsEc2LaunchTemplateDetails withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDetails(){}
 }

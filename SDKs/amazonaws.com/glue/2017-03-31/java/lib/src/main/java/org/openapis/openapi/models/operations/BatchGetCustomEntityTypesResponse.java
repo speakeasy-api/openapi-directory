@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetCustomEntityTypesResponse {
@@ -12,6 +13,7 @@ public class BatchGetCustomEntityTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetCustomEntityTypesResponse batchGetCustomEntityTypesResponse;
+
     public BatchGetCustomEntityTypesResponse withBatchGetCustomEntityTypesResponse(org.openapis.openapi.models.shared.BatchGetCustomEntityTypesResponse batchGetCustomEntityTypesResponse) {
         this.batchGetCustomEntityTypesResponse = batchGetCustomEntityTypesResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetCustomEntityTypesResponse {
     
     
     public String contentType;
+
     public BatchGetCustomEntityTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetCustomEntityTypesResponse {
      */
     
     public Object internalServiceException;
+
     public BatchGetCustomEntityTypesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetCustomEntityTypesResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetCustomEntityTypesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetCustomEntityTypesResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGetCustomEntityTypesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetCustomEntityTypesResponse {
     
     
     public Integer statusCode;
+
     public BatchGetCustomEntityTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetCustomEntityTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetCustomEntityTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetCustomEntityTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

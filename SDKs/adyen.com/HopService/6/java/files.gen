@@ -46,4 +46,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CollectInformation.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPciUrlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPciUrlRequest.java
+docs/sdk/README.md
+docs/hostedonboardingpage/README.md
+docs/pcicompliancequestionnairepage/README.md
 USAGE.md

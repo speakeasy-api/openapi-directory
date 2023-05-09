@@ -18,9 +18,11 @@ public class FetchCaCertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCerts")
     public CertChain[] caCerts;
+
     public FetchCaCertsResponse withCaCerts(CertChain[] caCerts) {
         this.caCerts = caCerts;
         return this;
     }
     
+    public FetchCaCertsResponse(){}
 }

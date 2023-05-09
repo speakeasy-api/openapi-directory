@@ -15,6 +15,7 @@ public class ChefConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BerkshelfVersion")
     public String berkshelfVersion;
+
     public ChefConfiguration withBerkshelfVersion(String berkshelfVersion) {
         this.berkshelfVersion = berkshelfVersion;
         return this;
@@ -23,9 +24,11 @@ public class ChefConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManageBerkshelf")
     public Boolean manageBerkshelf;
+
     public ChefConfiguration withManageBerkshelf(Boolean manageBerkshelf) {
         this.manageBerkshelf = manageBerkshelf;
         return this;
     }
     
+    public ChefConfiguration(){}
 }

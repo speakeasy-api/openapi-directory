@@ -18,6 +18,7 @@ public class ApiVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public ApiVersionInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class ApiVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApiVersionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ApiVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ApiVersionInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class ApiVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ApiVersionInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class ApiVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiVersionInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class ApiVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primarySpec")
     public String primarySpec;
+
     public ApiVersionInput withPrimarySpec(String primarySpec) {
         this.primarySpec = primarySpec;
         return this;
@@ -84,9 +90,11 @@ public class ApiVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ApiVersionInput withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ApiVersionInput(){}
 }

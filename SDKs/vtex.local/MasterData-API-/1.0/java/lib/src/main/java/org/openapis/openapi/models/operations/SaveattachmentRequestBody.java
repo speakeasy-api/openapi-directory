@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveattachmentRequestBody {
     @SpeakeasyMetadata("multipartForm:name=file,json")
     public byte[][] file;
+
     public SaveattachmentRequestBody withFile(byte[][] file) {
         this.file = file;
         return this;
     }
     
+    public SaveattachmentRequestBody(@JsonProperty("file") byte[][] file) {
+        this.file = file;
+  }
 }

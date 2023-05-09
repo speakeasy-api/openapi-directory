@@ -15,6 +15,7 @@ public class MaintenanceWindowTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public MaintenanceWindowTarget withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class MaintenanceWindowTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MaintenanceWindowTarget withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class MaintenanceWindowTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerInformation")
     public String ownerInformation;
+
     public MaintenanceWindowTarget withOwnerInformation(String ownerInformation) {
         this.ownerInformation = ownerInformation;
         return this;
@@ -39,6 +42,7 @@ public class MaintenanceWindowTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public MaintenanceWindowResourceTypeEnum resourceType;
+
     public MaintenanceWindowTarget withResourceType(MaintenanceWindowResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +51,7 @@ public class MaintenanceWindowTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public MaintenanceWindowTarget withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -55,6 +60,7 @@ public class MaintenanceWindowTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public MaintenanceWindowTarget withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
@@ -63,9 +69,11 @@ public class MaintenanceWindowTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowTargetId")
     public String windowTargetId;
+
     public MaintenanceWindowTarget withWindowTargetId(String windowTargetId) {
         this.windowTargetId = windowTargetId;
         return this;
     }
     
+    public MaintenanceWindowTarget(){}
 }

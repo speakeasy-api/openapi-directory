@@ -12,6 +12,7 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbedsParentData {
      */
     
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataAttributes attributes;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentData withAttributes(NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbedsParentData {
      */
     
     public java.util.Map<String, Object> data;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentData withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -32,6 +34,7 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbedsParentData {
      */
     
     public String id;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentData withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbedsParentData {
      */
     
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataRelationships relationships;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentData withRelationships(NodesDraftRegistrationsSubjectsSubjectEmbedsParentDataRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class NodesDraftRegistrationsSubjectsSubjectEmbedsParentData {
      */
     
     public String type;
+
     public NodesDraftRegistrationsSubjectsSubjectEmbedsParentData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubjectEmbedsParentData(){}
 }

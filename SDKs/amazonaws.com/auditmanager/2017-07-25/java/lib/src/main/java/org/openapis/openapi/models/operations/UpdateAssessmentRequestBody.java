@@ -15,6 +15,7 @@ public class UpdateAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentDescription")
     public String assessmentDescription;
+
     public UpdateAssessmentRequestBody withAssessmentDescription(String assessmentDescription) {
         this.assessmentDescription = assessmentDescription;
         return this;
@@ -26,6 +27,7 @@ public class UpdateAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public UpdateAssessmentRequestBody withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -37,6 +39,7 @@ public class UpdateAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentReportsDestination")
     public UpdateAssessmentRequestBodyAssessmentReportsDestination assessmentReportsDestination;
+
     public UpdateAssessmentRequestBody withAssessmentReportsDestination(UpdateAssessmentRequestBodyAssessmentReportsDestination assessmentReportsDestination) {
         this.assessmentReportsDestination = assessmentReportsDestination;
         return this;
@@ -48,6 +51,7 @@ public class UpdateAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public org.openapis.openapi.models.shared.Role[] roles;
+
     public UpdateAssessmentRequestBody withRoles(org.openapis.openapi.models.shared.Role[] roles) {
         this.roles = roles;
         return this;
@@ -58,9 +62,13 @@ public class UpdateAssessmentRequestBody {
      */
     @JsonProperty("scope")
     public UpdateAssessmentRequestBodyScope scope;
+
     public UpdateAssessmentRequestBody withScope(UpdateAssessmentRequestBodyScope scope) {
         this.scope = scope;
         return this;
     }
     
+    public UpdateAssessmentRequestBody(@JsonProperty("scope") UpdateAssessmentRequestBodyScope scope) {
+        this.scope = scope;
+  }
 }

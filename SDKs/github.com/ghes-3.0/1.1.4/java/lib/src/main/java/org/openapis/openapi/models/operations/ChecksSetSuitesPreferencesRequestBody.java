@@ -15,9 +15,11 @@ public class ChecksSetSuitesPreferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_trigger_checks")
     public ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks[] autoTriggerChecks;
+
     public ChecksSetSuitesPreferencesRequestBody withAutoTriggerChecks(ChecksSetSuitesPreferencesRequestBodyAutoTriggerChecks[] autoTriggerChecks) {
         this.autoTriggerChecks = autoTriggerChecks;
         return this;
     }
     
+    public ChecksSetSuitesPreferencesRequestBody(){}
 }

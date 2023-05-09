@@ -18,9 +18,11 @@ public class BatchDeletePrintersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printerIds")
     public String[] printerIds;
+
     public BatchDeletePrintersRequest withPrinterIds(String[] printerIds) {
         this.printerIds = printerIds;
         return this;
     }
     
+    public BatchDeletePrintersRequest(){}
 }

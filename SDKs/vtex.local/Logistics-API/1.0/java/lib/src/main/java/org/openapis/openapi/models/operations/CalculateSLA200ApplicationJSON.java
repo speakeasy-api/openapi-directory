@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateSLA200ApplicationJSON {
     @JsonProperty("aditionalTimeBlockedDays")
     public String aditionalTimeBlockedDays;
+
     public CalculateSLA200ApplicationJSON withAditionalTimeBlockedDays(String aditionalTimeBlockedDays) {
         this.aditionalTimeBlockedDays = aditionalTimeBlockedDays;
         return this;
@@ -16,6 +17,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("availabilityQuantity")
     public Integer availabilityQuantity;
+
     public CalculateSLA200ApplicationJSON withAvailabilityQuantity(Integer availabilityQuantity) {
         this.availabilityQuantity = availabilityQuantity;
         return this;
@@ -23,6 +25,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("carrierSchedule")
     public String[] carrierSchedule;
+
     public CalculateSLA200ApplicationJSON withCarrierSchedule(String[] carrierSchedule) {
         this.carrierSchedule = carrierSchedule;
         return this;
@@ -30,6 +33,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("coordinates")
     public String coordinates;
+
     public CalculateSLA200ApplicationJSON withCoordinates(String coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -37,6 +41,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("deliveryOnWeekends")
     public Boolean deliveryOnWeekends;
+
     public CalculateSLA200ApplicationJSON withDeliveryOnWeekends(Boolean deliveryOnWeekends) {
         this.deliveryOnWeekends = deliveryOnWeekends;
         return this;
@@ -44,6 +49,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("deliveryWindows")
     public CalculateSLA200ApplicationJSONDeliveryWindow[] deliveryWindows;
+
     public CalculateSLA200ApplicationJSON withDeliveryWindows(CalculateSLA200ApplicationJSONDeliveryWindow[] deliveryWindows) {
         this.deliveryWindows = deliveryWindows;
         return this;
@@ -51,6 +57,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("dockId")
     public String dockId;
+
     public CalculateSLA200ApplicationJSON withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -58,6 +65,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("dockTime")
     public String dockTime;
+
     public CalculateSLA200ApplicationJSON withDockTime(String dockTime) {
         this.dockTime = dockTime;
         return this;
@@ -65,6 +73,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("freightTableId")
     public String freightTableId;
+
     public CalculateSLA200ApplicationJSON withFreightTableId(String freightTableId) {
         this.freightTableId = freightTableId;
         return this;
@@ -72,6 +81,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("freightTableName")
     public String freightTableName;
+
     public CalculateSLA200ApplicationJSON withFreightTableName(String freightTableName) {
         this.freightTableName = freightTableName;
         return this;
@@ -79,6 +89,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("itemId")
     public String itemId;
+
     public CalculateSLA200ApplicationJSON withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -86,6 +97,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public CalculateSLA200ApplicationJSON withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -93,6 +105,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("location")
     public CalculateSLA200ApplicationJSONLocation1 location;
+
     public CalculateSLA200ApplicationJSON withLocation(CalculateSLA200ApplicationJSONLocation1 location) {
         this.location = location;
         return this;
@@ -100,6 +113,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("pickupStoreInfo")
     public String pickupStoreInfo;
+
     public CalculateSLA200ApplicationJSON withPickupStoreInfo(String pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -107,6 +121,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public CalculateSLA200ApplicationJSON withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -114,6 +129,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("restrictedFreight")
     public String restrictedFreight;
+
     public CalculateSLA200ApplicationJSON withRestrictedFreight(String restrictedFreight) {
         this.restrictedFreight = restrictedFreight;
         return this;
@@ -121,6 +137,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public CalculateSLA200ApplicationJSON withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -128,6 +145,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("slaType")
     public String slaType;
+
     public CalculateSLA200ApplicationJSON withSlaType(String slaType) {
         this.slaType = slaType;
         return this;
@@ -135,6 +153,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("slaTypeName")
     public String slaTypeName;
+
     public CalculateSLA200ApplicationJSON withSlaTypeName(String slaTypeName) {
         this.slaTypeName = slaTypeName;
         return this;
@@ -142,6 +161,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("timeToDockPlusDockTime")
     public String timeToDockPlusDockTime;
+
     public CalculateSLA200ApplicationJSON withTimeToDockPlusDockTime(String timeToDockPlusDockTime) {
         this.timeToDockPlusDockTime = timeToDockPlusDockTime;
         return this;
@@ -149,6 +169,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("totalTime")
     public String totalTime;
+
     public CalculateSLA200ApplicationJSON withTotalTime(String totalTime) {
         this.totalTime = totalTime;
         return this;
@@ -156,6 +177,7 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("transitTime")
     public String transitTime;
+
     public CalculateSLA200ApplicationJSON withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
@@ -163,9 +185,35 @@ public class CalculateSLA200ApplicationJSON {
     
     @JsonProperty("wareHouseId")
     public String wareHouseId;
+
     public CalculateSLA200ApplicationJSON withWareHouseId(String wareHouseId) {
         this.wareHouseId = wareHouseId;
         return this;
     }
     
+    public CalculateSLA200ApplicationJSON(@JsonProperty("aditionalTimeBlockedDays") String aditionalTimeBlockedDays, @JsonProperty("availabilityQuantity") Integer availabilityQuantity, @JsonProperty("carrierSchedule") String[] carrierSchedule, @JsonProperty("coordinates") String coordinates, @JsonProperty("deliveryOnWeekends") Boolean deliveryOnWeekends, @JsonProperty("deliveryWindows") CalculateSLA200ApplicationJSONDeliveryWindow[] deliveryWindows, @JsonProperty("dockId") String dockId, @JsonProperty("dockTime") String dockTime, @JsonProperty("freightTableId") String freightTableId, @JsonProperty("freightTableName") String freightTableName, @JsonProperty("itemId") String itemId, @JsonProperty("listPrice") Double listPrice, @JsonProperty("location") CalculateSLA200ApplicationJSONLocation1 location, @JsonProperty("pickupStoreInfo") String pickupStoreInfo, @JsonProperty("quantity") Integer quantity, @JsonProperty("restrictedFreight") String restrictedFreight, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("slaType") String slaType, @JsonProperty("slaTypeName") String slaTypeName, @JsonProperty("timeToDockPlusDockTime") String timeToDockPlusDockTime, @JsonProperty("totalTime") String totalTime, @JsonProperty("transitTime") String transitTime, @JsonProperty("wareHouseId") String wareHouseId) {
+        this.aditionalTimeBlockedDays = aditionalTimeBlockedDays;
+        this.availabilityQuantity = availabilityQuantity;
+        this.carrierSchedule = carrierSchedule;
+        this.coordinates = coordinates;
+        this.deliveryOnWeekends = deliveryOnWeekends;
+        this.deliveryWindows = deliveryWindows;
+        this.dockId = dockId;
+        this.dockTime = dockTime;
+        this.freightTableId = freightTableId;
+        this.freightTableName = freightTableName;
+        this.itemId = itemId;
+        this.listPrice = listPrice;
+        this.location = location;
+        this.pickupStoreInfo = pickupStoreInfo;
+        this.quantity = quantity;
+        this.restrictedFreight = restrictedFreight;
+        this.salesChannel = salesChannel;
+        this.slaType = slaType;
+        this.slaTypeName = slaTypeName;
+        this.timeToDockPlusDockTime = timeToDockPlusDockTime;
+        this.totalTime = totalTime;
+        this.transitTime = transitTime;
+        this.wareHouseId = wareHouseId;
+  }
 }

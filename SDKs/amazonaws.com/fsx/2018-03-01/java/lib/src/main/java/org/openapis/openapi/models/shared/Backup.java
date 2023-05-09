@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Backup {
     @JsonProperty("BackupId")
     public String backupId;
+
     public Backup withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -28,6 +29,7 @@ public class Backup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Backup withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryInformation")
     public ActiveDirectoryBackupAttributes directoryInformation;
+
     public Backup withDirectoryInformation(ActiveDirectoryBackupAttributes directoryInformation) {
         this.directoryInformation = directoryInformation;
         return this;
@@ -44,6 +47,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public BackupFailureDetails failureDetails;
+
     public Backup withFailureDetails(BackupFailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -51,6 +55,7 @@ public class Backup {
     
     @JsonProperty("FileSystem")
     public FileSystem fileSystem;
+
     public Backup withFileSystem(FileSystem fileSystem) {
         this.fileSystem = fileSystem;
         return this;
@@ -59,6 +64,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public Backup withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -66,6 +72,7 @@ public class Backup {
     
     @JsonProperty("Lifecycle")
     public BackupLifecycleEnum lifecycle;
+
     public Backup withLifecycle(BackupLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -77,6 +84,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public Backup withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -88,6 +96,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressPercent")
     public Long progressPercent;
+
     public Backup withProgressPercent(Long progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -96,6 +105,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public Backup withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -104,6 +114,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public Backup withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -115,6 +126,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackupId")
     public String sourceBackupId;
+
     public Backup withSourceBackupId(String sourceBackupId) {
         this.sourceBackupId = sourceBackupId;
         return this;
@@ -123,6 +135,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackupRegion")
     public String sourceBackupRegion;
+
     public Backup withSourceBackupRegion(String sourceBackupRegion) {
         this.sourceBackupRegion = sourceBackupRegion;
         return this;
@@ -131,6 +144,7 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Backup withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -138,6 +152,7 @@ public class Backup {
     
     @JsonProperty("Type")
     public BackupTypeEnum type;
+
     public Backup withType(BackupTypeEnum type) {
         this.type = type;
         return this;
@@ -149,9 +164,17 @@ public class Backup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volume")
     public Volume volume;
+
     public Backup withVolume(Volume volume) {
         this.volume = volume;
         return this;
     }
     
+    public Backup(@JsonProperty("BackupId") String backupId, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("FileSystem") FileSystem fileSystem, @JsonProperty("Lifecycle") BackupLifecycleEnum lifecycle, @JsonProperty("Type") BackupTypeEnum type) {
+        this.backupId = backupId;
+        this.creationTime = creationTime;
+        this.fileSystem = fileSystem;
+        this.lifecycle = lifecycle;
+        this.type = type;
+  }
 }

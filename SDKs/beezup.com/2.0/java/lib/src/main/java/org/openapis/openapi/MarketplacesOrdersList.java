@@ -40,7 +40,9 @@ public class MarketplacesOrdersList {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetOrderListFullResponse getOrderListFull(org.openapis.openapi.models.operations.GetOrderListFullRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/list/full");
@@ -68,12 +70,10 @@ public class MarketplacesOrdersList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderListFullResponse res = new org.openapis.openapi.models.operations.GetOrderListFullResponse() {{
+        org.openapis.openapi.models.operations.GetOrderListFullResponse res = new org.openapis.openapi.models.operations.GetOrderListFullResponse(contentType, httpRes.statusCode()) {{
             orderListFull = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,7 +100,9 @@ public class MarketplacesOrdersList {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetOrderListLightResponse getOrderListLight(org.openapis.openapi.models.shared.OrderListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/list/light");
@@ -120,12 +122,10 @@ public class MarketplacesOrdersList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderListLightResponse res = new org.openapis.openapi.models.operations.GetOrderListLightResponse() {{
+        org.openapis.openapi.models.operations.GetOrderListLightResponse res = new org.openapis.openapi.models.operations.GetOrderListLightResponse(contentType, httpRes.statusCode()) {{
             orderListLight = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

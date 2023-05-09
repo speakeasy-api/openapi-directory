@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateStatus")
     public GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum certificateStatus;
+
     public GoogleCloudIntegrationsV1alphaCertificate withCertificateStatus(GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum certificateStatus) {
         this.certificateStatus = certificateStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialId")
     public String credentialId;
+
     public GoogleCloudIntegrationsV1alphaCertificate withCredentialId(String credentialId) {
         this.credentialId = credentialId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaCertificate withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudIntegrationsV1alphaCertificate withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaCertificate withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawCertificate")
     public GoogleCloudIntegrationsV1alphaClientCertificate rawCertificate;
+
     public GoogleCloudIntegrationsV1alphaCertificate withRawCertificate(GoogleCloudIntegrationsV1alphaClientCertificate rawCertificate) {
         this.rawCertificate = rawCertificate;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestorId")
     public String requestorId;
+
     public GoogleCloudIntegrationsV1alphaCertificate withRequestorId(String requestorId) {
         this.requestorId = requestorId;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validEndTime")
     public String validEndTime;
+
     public GoogleCloudIntegrationsV1alphaCertificate withValidEndTime(String validEndTime) {
         this.validEndTime = validEndTime;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validStartTime")
     public String validStartTime;
+
     public GoogleCloudIntegrationsV1alphaCertificate withValidStartTime(String validStartTime) {
         this.validStartTime = validStartTime;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCertificate(){}
 }

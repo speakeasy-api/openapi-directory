@@ -15,9 +15,11 @@ public class CreateAttachmentForObject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.AttachmentResponse data;
+
     public CreateAttachmentForObject200ApplicationJSON withData(org.openapis.openapi.models.shared.AttachmentResponse data) {
         this.data = data;
         return this;
     }
     
+    public CreateAttachmentForObject200ApplicationJSON(){}
 }

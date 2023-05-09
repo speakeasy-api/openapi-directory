@@ -15,9 +15,11 @@ public class CreateVariantStoreRequestBodyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public CreateVariantStoreRequestBodyReference withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
     }
     
+    public CreateVariantStoreRequestBodyReference(){}
 }

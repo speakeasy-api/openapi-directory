@@ -18,6 +18,7 @@ public class CommonFeatureStateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appdevexperience")
     public AppDevExperienceFeatureState appdevexperience;
+
     public CommonFeatureStateInput withAppdevexperience(AppDevExperienceFeatureState appdevexperience) {
         this.appdevexperience = appdevexperience;
         return this;
@@ -29,6 +30,7 @@ public class CommonFeatureStateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetobservability")
     public java.util.Map<String, Object> fleetobservability;
+
     public CommonFeatureStateInput withFleetobservability(java.util.Map<String, Object> fleetobservability) {
         this.fleetobservability = fleetobservability;
         return this;
@@ -40,9 +42,11 @@ public class CommonFeatureStateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public FeatureState state;
+
     public CommonFeatureStateInput withState(FeatureState state) {
         this.state = state;
         return this;
     }
     
+    public CommonFeatureStateInput(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostConfigApacheSlingGetServletRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable.html")
     public Boolean enableHtml;
+
     public PostConfigApacheSlingGetServletRequest withEnableHtml(Boolean enableHtml) {
         this.enableHtml = enableHtml;
         return this;
@@ -16,6 +17,7 @@ public class PostConfigApacheSlingGetServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable.html@TypeHint")
     public String enableHtmlAtTypeHint;
+
     public PostConfigApacheSlingGetServletRequest withEnableHtmlAtTypeHint(String enableHtmlAtTypeHint) {
         this.enableHtmlAtTypeHint = enableHtmlAtTypeHint;
         return this;
@@ -23,6 +25,7 @@ public class PostConfigApacheSlingGetServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable.txt")
     public Boolean enableTxt;
+
     public PostConfigApacheSlingGetServletRequest withEnableTxt(Boolean enableTxt) {
         this.enableTxt = enableTxt;
         return this;
@@ -30,6 +33,7 @@ public class PostConfigApacheSlingGetServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable.txt@TypeHint")
     public String enableTxtAtTypeHint;
+
     public PostConfigApacheSlingGetServletRequest withEnableTxtAtTypeHint(String enableTxtAtTypeHint) {
         this.enableTxtAtTypeHint = enableTxtAtTypeHint;
         return this;
@@ -37,6 +41,7 @@ public class PostConfigApacheSlingGetServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable.xml")
     public Boolean enableXml;
+
     public PostConfigApacheSlingGetServletRequest withEnableXml(Boolean enableXml) {
         this.enableXml = enableXml;
         return this;
@@ -44,6 +49,7 @@ public class PostConfigApacheSlingGetServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable.xml@TypeHint")
     public String enableXmlAtTypeHint;
+
     public PostConfigApacheSlingGetServletRequest withEnableXmlAtTypeHint(String enableXmlAtTypeHint) {
         this.enableXmlAtTypeHint = enableXmlAtTypeHint;
         return this;
@@ -51,6 +57,7 @@ public class PostConfigApacheSlingGetServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json.maximumresults")
     public String jsonMaximumresults;
+
     public PostConfigApacheSlingGetServletRequest withJsonMaximumresults(String jsonMaximumresults) {
         this.jsonMaximumresults = jsonMaximumresults;
         return this;
@@ -58,9 +65,11 @@ public class PostConfigApacheSlingGetServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json.maximumresults@TypeHint")
     public String jsonMaximumresultsAtTypeHint;
+
     public PostConfigApacheSlingGetServletRequest withJsonMaximumresultsAtTypeHint(String jsonMaximumresultsAtTypeHint) {
         this.jsonMaximumresultsAtTypeHint = jsonMaximumresultsAtTypeHint;
         return this;
     }
     
+    public PostConfigApacheSlingGetServletRequest(){}
 }

@@ -52,11 +52,9 @@ public class CustomerShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStoreShareResponse res = new org.openapis.openapi.models.operations.DeleteStoreShareResponse() {{
+        org.openapis.openapi.models.operations.DeleteStoreShareResponse res = new org.openapis.openapi.models.operations.DeleteStoreShareResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -100,12 +98,10 @@ public class CustomerShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreSharesResponse res = new org.openapis.openapi.models.operations.GetStoreSharesResponse() {{
+        org.openapis.openapi.models.operations.GetStoreSharesResponse res = new org.openapis.openapi.models.operations.GetStoreSharesResponse(contentType, httpRes.statusCode()) {{
             storeShares = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,12 +151,10 @@ public class CustomerShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShareStoreResponse res = new org.openapis.openapi.models.operations.ShareStoreResponse() {{
+        org.openapis.openapi.models.operations.ShareStoreResponse res = new org.openapis.openapi.models.operations.ShareStoreResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessagePaymentRequired = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

@@ -15,6 +15,7 @@ public class SetDefaultSenderIdResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetArn")
     public String configurationSetArn;
+
     public SetDefaultSenderIdResult withConfigurationSetArn(String configurationSetArn) {
         this.configurationSetArn = configurationSetArn;
         return this;
@@ -23,6 +24,7 @@ public class SetDefaultSenderIdResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SetDefaultSenderIdResult withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -31,9 +33,11 @@ public class SetDefaultSenderIdResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderId")
     public String senderId;
+
     public SetDefaultSenderIdResult withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
     }
     
+    public SetDefaultSenderIdResult(){}
 }

@@ -12,6 +12,7 @@ public class ScimServiceProviderConfigBulk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxOperations")
     public Long maxOperations;
+
     public ScimServiceProviderConfigBulk withMaxOperations(Long maxOperations) {
         this.maxOperations = maxOperations;
         return this;
@@ -20,6 +21,7 @@ public class ScimServiceProviderConfigBulk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPayloadSize")
     public Long maxPayloadSize;
+
     public ScimServiceProviderConfigBulk withMaxPayloadSize(Long maxPayloadSize) {
         this.maxPayloadSize = maxPayloadSize;
         return this;
@@ -28,9 +30,11 @@ public class ScimServiceProviderConfigBulk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supported")
     public Boolean supported;
+
     public ScimServiceProviderConfigBulk withSupported(Boolean supported) {
         this.supported = supported;
         return this;
     }
     
+    public ScimServiceProviderConfigBulk(){}
 }

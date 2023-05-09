@@ -15,6 +15,7 @@ public class ProcessingS3Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPath")
     public String localPath;
+
     public ProcessingS3Input withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -23,6 +24,7 @@ public class ProcessingS3Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3CompressionType")
     public ProcessingS3CompressionTypeEnum s3CompressionType;
+
     public ProcessingS3Input withS3CompressionType(ProcessingS3CompressionTypeEnum s3CompressionType) {
         this.s3CompressionType = s3CompressionType;
         return this;
@@ -31,6 +33,7 @@ public class ProcessingS3Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataDistributionType")
     public ProcessingS3DataDistributionTypeEnum s3DataDistributionType;
+
     public ProcessingS3Input withS3DataDistributionType(ProcessingS3DataDistributionTypeEnum s3DataDistributionType) {
         this.s3DataDistributionType = s3DataDistributionType;
         return this;
@@ -38,6 +41,7 @@ public class ProcessingS3Input {
     
     @JsonProperty("S3DataType")
     public ProcessingS3DataTypeEnum s3DataType;
+
     public ProcessingS3Input withS3DataType(ProcessingS3DataTypeEnum s3DataType) {
         this.s3DataType = s3DataType;
         return this;
@@ -46,6 +50,7 @@ public class ProcessingS3Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3InputMode")
     public ProcessingS3InputModeEnum s3InputMode;
+
     public ProcessingS3Input withS3InputMode(ProcessingS3InputModeEnum s3InputMode) {
         this.s3InputMode = s3InputMode;
         return this;
@@ -53,9 +58,14 @@ public class ProcessingS3Input {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public ProcessingS3Input withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public ProcessingS3Input(@JsonProperty("S3DataType") ProcessingS3DataTypeEnum s3DataType, @JsonProperty("S3Uri") String s3Uri) {
+        this.s3DataType = s3DataType;
+        this.s3Uri = s3Uri;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PayeeLocationResponseData {
     @JsonProperty("payee_location")
     public PayeeLocation payeeLocation;
+
     public PayeeLocationResponseData withPayeeLocation(PayeeLocation payeeLocation) {
         this.payeeLocation = payeeLocation;
         return this;
     }
     
+    public PayeeLocationResponseData(@JsonProperty("payee_location") PayeeLocation payeeLocation) {
+        this.payeeLocation = payeeLocation;
+  }
 }

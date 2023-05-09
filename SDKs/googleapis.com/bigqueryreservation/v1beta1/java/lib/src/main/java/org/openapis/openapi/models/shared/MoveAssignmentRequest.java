@@ -18,9 +18,11 @@ public class MoveAssignmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public MoveAssignmentRequest withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
     }
     
+    public MoveAssignmentRequest(){}
 }

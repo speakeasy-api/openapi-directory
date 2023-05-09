@@ -18,6 +18,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directDebitReference")
     public String directDebitReference;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withDirectDebitReference(String directDebitReference) {
         this.directDebitReference = directDebitReference;
         return this;
@@ -29,6 +30,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directDebitUuid")
     public String directDebitUuid;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withDirectDebitUuid(String directDebitUuid) {
         this.directDebitUuid = directDebitUuid;
         return this;
@@ -40,6 +42,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateReference")
     public String mandateReference;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withMandateReference(String mandateReference) {
         this.mandateReference = mandateReference;
         return this;
@@ -51,6 +54,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateUUid")
     public String mandateUUid;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withMandateUUid(String mandateUUid) {
         this.mandateUUid = mandateUUid;
         return this;
@@ -62,6 +66,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateUuid")
     public String mandateUuid1;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withMandateUuid1(String mandateUuid1) {
         this.mandateUuid1 = mandateUuid1;
         return this;
@@ -73,6 +78,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorAlias")
     public String originatorAlias;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withOriginatorAlias(String originatorAlias) {
         this.originatorAlias = originatorAlias;
         return this;
@@ -84,6 +90,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorLogoUrlLarge")
     public String originatorLogoUrlLarge;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withOriginatorLogoUrlLarge(String originatorLogoUrlLarge) {
         this.originatorLogoUrlLarge = originatorLogoUrlLarge;
         return this;
@@ -95,6 +102,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorLogoUrlSmall")
     public String originatorLogoUrlSmall;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withOriginatorLogoUrlSmall(String originatorLogoUrlSmall) {
         this.originatorLogoUrlSmall = originatorLogoUrlSmall;
         return this;
@@ -106,6 +114,7 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorName")
     public String originatorName;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withOriginatorName(String originatorName) {
         this.originatorName = originatorName;
         return this;
@@ -117,9 +126,11 @@ public class GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorReference")
     public String originatorReference;
+
     public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails withOriginatorReference(String originatorReference) {
         this.originatorReference = originatorReference;
         return this;
     }
     
+    public GetListofCardTransactionsCardTransactionsv1TransactionDirectDebitDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListOpenIDConnectProvidersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListOpenIDConnectProvidersActionEnum action;
+
     public GETListOpenIDConnectProvidersRequest withAction(GETListOpenIDConnectProvidersActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListOpenIDConnectProvidersVersionEnum version;
+
     public GETListOpenIDConnectProvidersRequest withVersion(GETListOpenIDConnectProvidersVersionEnum version) {
         this.version = version;
         return this;
@@ -23,6 +26,7 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListOpenIDConnectProvidersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -30,6 +34,7 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListOpenIDConnectProvidersRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -37,6 +42,7 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListOpenIDConnectProvidersRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -44,6 +50,7 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListOpenIDConnectProvidersRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -51,6 +58,7 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListOpenIDConnectProvidersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -58,6 +66,7 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListOpenIDConnectProvidersRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -65,9 +74,14 @@ public class GETListOpenIDConnectProvidersRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListOpenIDConnectProvidersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListOpenIDConnectProvidersRequest(@JsonProperty("Action") GETListOpenIDConnectProvidersActionEnum action, @JsonProperty("Version") GETListOpenIDConnectProvidersVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

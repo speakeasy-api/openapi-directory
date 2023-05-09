@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsVCpuCount {
     
     public Long max;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsVCpuCount withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverri
     
     
     public Long min;
+
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsVCpuCount withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsVCpuCount(){}
 }

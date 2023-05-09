@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApksListResponse {
     
     public Apk[] apks;
+
     public ApksListResponse withApks(Apk[] apks) {
         this.apks = apks;
         return this;
@@ -22,9 +23,11 @@ public class ApksListResponse {
      */
     
     public String kind;
+
     public ApksListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ApksListResponse(){}
 }

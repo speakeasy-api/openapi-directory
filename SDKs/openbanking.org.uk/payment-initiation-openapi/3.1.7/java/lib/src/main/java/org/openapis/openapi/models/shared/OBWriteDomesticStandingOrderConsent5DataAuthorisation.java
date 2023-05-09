@@ -22,6 +22,7 @@ public class OBWriteDomesticStandingOrderConsent5DataAuthorisation {
      */
     @JsonProperty("AuthorisationType")
     public OBWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum authorisationType;
+
     public OBWriteDomesticStandingOrderConsent5DataAuthorisation withAuthorisationType(OBWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum authorisationType) {
         this.authorisationType = authorisationType;
         return this;
@@ -37,9 +38,13 @@ public class OBWriteDomesticStandingOrderConsent5DataAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionDateTime")
     public OffsetDateTime completionDateTime;
+
     public OBWriteDomesticStandingOrderConsent5DataAuthorisation withCompletionDateTime(OffsetDateTime completionDateTime) {
         this.completionDateTime = completionDateTime;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderConsent5DataAuthorisation(@JsonProperty("AuthorisationType") OBWriteDomesticStandingOrderConsent5DataAuthorisationAuthorisationTypeEnum authorisationType) {
+        this.authorisationType = authorisationType;
+  }
 }

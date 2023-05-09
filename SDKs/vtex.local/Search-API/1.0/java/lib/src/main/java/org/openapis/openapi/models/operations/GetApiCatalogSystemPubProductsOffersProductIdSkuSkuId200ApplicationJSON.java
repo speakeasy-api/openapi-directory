@@ -12,6 +12,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("EanId")
     public String eanId;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withEanId(String eanId) {
         this.eanId = eanId;
         return this;
@@ -22,6 +23,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -32,6 +34,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("LastModified")
     public String lastModified;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -42,6 +45,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("MainImage")
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage mainImage;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withMainImage(GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage mainImage) {
         this.mainImage = mainImage;
         return this;
@@ -52,6 +56,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("Name")
     public String name;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("NameComplete")
     public String nameComplete;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withNameComplete(String nameComplete) {
         this.nameComplete = nameComplete;
         return this;
@@ -72,6 +78,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("Offers")
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONOffers[] offers;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withOffers(GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONOffers[] offers) {
         this.offers = offers;
         return this;
@@ -82,6 +89,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("ProductId")
     public String productId;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -92,6 +100,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("RefId")
     public String refId;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -102,9 +111,22 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200Application
      */
     @JsonProperty("SkuId")
     public String skuId;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON(@JsonProperty("EanId") String eanId, @JsonProperty("IsActive") Boolean isActive, @JsonProperty("LastModified") String lastModified, @JsonProperty("MainImage") GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONMainImage mainImage, @JsonProperty("Name") String name, @JsonProperty("NameComplete") String nameComplete, @JsonProperty("Offers") GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONOffers[] offers, @JsonProperty("ProductId") String productId, @JsonProperty("RefId") String refId, @JsonProperty("SkuId") String skuId) {
+        this.eanId = eanId;
+        this.isActive = isActive;
+        this.lastModified = lastModified;
+        this.mainImage = mainImage;
+        this.name = name;
+        this.nameComplete = nameComplete;
+        this.offers = offers;
+        this.productId = productId;
+        this.refId = refId;
+        this.skuId = skuId;
+  }
 }

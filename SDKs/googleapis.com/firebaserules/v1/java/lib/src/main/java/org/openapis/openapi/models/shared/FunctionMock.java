@@ -18,6 +18,7 @@ public class FunctionMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public Arg[] args;
+
     public FunctionMock withArgs(Arg[] args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class FunctionMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public FunctionMock withFunction(String function) {
         this.function = function;
         return this;
@@ -40,9 +42,11 @@ public class FunctionMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Result result;
+
     public FunctionMock withResult(Result result) {
         this.result = result;
         return this;
     }
     
+    public FunctionMock(){}
 }

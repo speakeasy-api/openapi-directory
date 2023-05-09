@@ -15,6 +15,7 @@ public class DescribeOptedOutNumbersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOptedOutNumbersResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class DescribeOptedOutNumbersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListArn")
     public String optOutListArn;
+
     public DescribeOptedOutNumbersResult withOptOutListArn(String optOutListArn) {
         this.optOutListArn = optOutListArn;
         return this;
@@ -31,6 +33,7 @@ public class DescribeOptedOutNumbersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public DescribeOptedOutNumbersResult withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -39,9 +42,11 @@ public class DescribeOptedOutNumbersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptedOutNumbers")
     public OptedOutNumberInformation[] optedOutNumbers;
+
     public DescribeOptedOutNumbersResult withOptedOutNumbers(OptedOutNumberInformation[] optedOutNumbers) {
         this.optedOutNumbers = optedOutNumbers;
         return this;
     }
     
+    public DescribeOptedOutNumbersResult(){}
 }

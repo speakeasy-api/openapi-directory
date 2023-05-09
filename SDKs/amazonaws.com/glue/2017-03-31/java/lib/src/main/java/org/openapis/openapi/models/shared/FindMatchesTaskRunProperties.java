@@ -15,6 +15,7 @@ public class FindMatchesTaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public FindMatchesTaskRunProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -23,6 +24,7 @@ public class FindMatchesTaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public FindMatchesTaskRunProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -31,9 +33,11 @@ public class FindMatchesTaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobRunId")
     public String jobRunId;
+
     public FindMatchesTaskRunProperties withJobRunId(String jobRunId) {
         this.jobRunId = jobRunId;
         return this;
     }
     
+    public FindMatchesTaskRunProperties(){}
 }

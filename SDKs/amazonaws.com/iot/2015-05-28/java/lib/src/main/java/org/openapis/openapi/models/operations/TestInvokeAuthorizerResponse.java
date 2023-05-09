@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestInvokeAuthorizerResponse {
     
     public String contentType;
+
     public TestInvokeAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public Object internalFailureException;
+
     public TestInvokeAuthorizerResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public Object invalidRequestException;
+
     public TestInvokeAuthorizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public Object invalidResponseException;
+
     public TestInvokeAuthorizerResponse withInvalidResponseException(Object invalidResponseException) {
         this.invalidResponseException = invalidResponseException;
         return this;
@@ -46,6 +51,7 @@ public class TestInvokeAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public TestInvokeAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TestInvokeAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestInvokeAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TestInvokeAuthorizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public TestInvokeAuthorizerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public org.openapis.openapi.models.shared.TestInvokeAuthorizerResponse testInvokeAuthorizerResponse;
+
     public TestInvokeAuthorizerResponse withTestInvokeAuthorizerResponse(org.openapis.openapi.models.shared.TestInvokeAuthorizerResponse testInvokeAuthorizerResponse) {
         this.testInvokeAuthorizerResponse = testInvokeAuthorizerResponse;
         return this;
@@ -93,6 +103,7 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public Object throttlingException;
+
     public TestInvokeAuthorizerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class TestInvokeAuthorizerResponse {
      */
     
     public Object unauthorizedException;
+
     public TestInvokeAuthorizerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public TestInvokeAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

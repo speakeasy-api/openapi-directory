@@ -15,6 +15,7 @@ public class CreateGiftCardRequest {
      */
     @JsonProperty("gift_card")
     public GiftCard giftCard;
+
     public CreateGiftCardRequest withGiftCard(GiftCard giftCard) {
         this.giftCard = giftCard;
         return this;
@@ -25,6 +26,7 @@ public class CreateGiftCardRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateGiftCardRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -35,9 +37,15 @@ public class CreateGiftCardRequest {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public CreateGiftCardRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public CreateGiftCardRequest(@JsonProperty("gift_card") GiftCard giftCard, @JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("location_id") String locationId) {
+        this.giftCard = giftCard;
+        this.idempotencyKey = idempotencyKey;
+        this.locationId = locationId;
+  }
 }

@@ -35,10 +35,11 @@ public class Stats {
     /**
      * Get global otoroshi stats
      * Get global otoroshi stats
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GlobalLiveStatsResponse globalLiveStats() throws Exception {
+    public org.openapis.openapi.models.operations.GlobalLiveStatsResponse globalLiveStats(org.openapis.openapi.models.operations.GlobalLiveStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/live");
         
@@ -47,16 +48,15 @@ public class Stats {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GlobalLiveStatsResponse res = new org.openapis.openapi.models.operations.GlobalLiveStatsResponse() {{
+        org.openapis.openapi.models.operations.GlobalLiveStatsResponse res = new org.openapis.openapi.models.operations.GlobalLiveStatsResponse(contentType, httpRes.statusCode()) {{
             stats = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,12 +95,10 @@ public class Stats {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceLiveStatsResponse res = new org.openapis.openapi.models.operations.ServiceLiveStatsResponse() {{
+        org.openapis.openapi.models.operations.ServiceLiveStatsResponse res = new org.openapis.openapi.models.operations.ServiceLiveStatsResponse(contentType, httpRes.statusCode()) {{
             stats = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

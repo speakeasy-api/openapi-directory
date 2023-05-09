@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateSubnetCidrBlockRequest {
     
     public String associationId;
+
     public DisassociateSubnetCidrBlockRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
     }
     
+    public DisassociateSubnetCidrBlockRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

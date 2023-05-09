@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisconnectFromServiceResponse {
@@ -12,6 +13,7 @@ public class DisconnectFromServiceResponse {
      */
     
     public Object conflictException;
+
     public DisconnectFromServiceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DisconnectFromServiceResponse {
     
     
     public String contentType;
+
     public DisconnectFromServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisconnectFromServiceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisconnectFromServiceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DisconnectFromServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceServer sourceServer;
+
     public DisconnectFromServiceResponse withSourceServer(org.openapis.openapi.models.shared.SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
@@ -46,6 +51,7 @@ public class DisconnectFromServiceResponse {
     
     
     public Integer statusCode;
+
     public DisconnectFromServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisconnectFromServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisconnectFromServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DisconnectFromServiceResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DisconnectFromServiceResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DisconnectFromServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

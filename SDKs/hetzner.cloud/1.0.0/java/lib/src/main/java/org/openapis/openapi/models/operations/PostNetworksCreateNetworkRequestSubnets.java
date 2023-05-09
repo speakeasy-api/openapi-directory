@@ -15,6 +15,7 @@ public class PostNetworksCreateNetworkRequestSubnets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_range")
     public String ipRange;
+
     public PostNetworksCreateNetworkRequestSubnets withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -25,6 +26,7 @@ public class PostNetworksCreateNetworkRequestSubnets {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public PostNetworksCreateNetworkRequestSubnets withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
@@ -35,9 +37,26 @@ public class PostNetworksCreateNetworkRequestSubnets {
      */
     @JsonProperty("type")
     public PostNetworksCreateNetworkRequestSubnetsTypeEnum type;
+
     public PostNetworksCreateNetworkRequestSubnets withType(PostNetworksCreateNetworkRequestSubnetsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    /**
+     * ID of the robot vSwitch. Must be supplied if the subnet is of type vswitch.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("vswitch_id")
+    public Long vswitchId;
+
+    public PostNetworksCreateNetworkRequestSubnets withVswitchId(Long vswitchId) {
+        this.vswitchId = vswitchId;
+        return this;
+    }
+    
+    public PostNetworksCreateNetworkRequestSubnets(@JsonProperty("network_zone") String networkZone, @JsonProperty("type") PostNetworksCreateNetworkRequestSubnetsTypeEnum type) {
+        this.networkZone = networkZone;
+        this.type = type;
+  }
 }

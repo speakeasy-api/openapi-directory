@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsEventIdRequest {
@@ -12,9 +13,13 @@ public class GetEventsEventIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
     public String eventId;
+
     public GetEventsEventIdRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
     }
     
+    public GetEventsEventIdRequest(@JsonProperty("eventId") String eventId) {
+        this.eventId = eventId;
+  }
 }

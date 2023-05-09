@@ -20,6 +20,7 @@ public class FlywheelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveModelArn")
     public String activeModelArn;
+
     public FlywheelSummary withActiveModelArn(String activeModelArn) {
         this.activeModelArn = activeModelArn;
         return this;
@@ -30,6 +31,7 @@ public class FlywheelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FlywheelSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class FlywheelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakeS3Uri")
     public String dataLakeS3Uri;
+
     public FlywheelSummary withDataLakeS3Uri(String dataLakeS3Uri) {
         this.dataLakeS3Uri = dataLakeS3Uri;
         return this;
@@ -46,6 +49,7 @@ public class FlywheelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public FlywheelSummary withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -56,6 +60,7 @@ public class FlywheelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public FlywheelSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,6 +69,7 @@ public class FlywheelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestFlywheelIteration")
     public String latestFlywheelIteration;
+
     public FlywheelSummary withLatestFlywheelIteration(String latestFlywheelIteration) {
         this.latestFlywheelIteration = latestFlywheelIteration;
         return this;
@@ -72,6 +78,7 @@ public class FlywheelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FlywheelSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -80,6 +87,7 @@ public class FlywheelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelType")
     public ModelTypeEnum modelType;
+
     public FlywheelSummary withModelType(ModelTypeEnum modelType) {
         this.modelType = modelType;
         return this;
@@ -88,9 +96,11 @@ public class FlywheelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FlywheelStatusEnum status;
+
     public FlywheelSummary withStatus(FlywheelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public FlywheelSummary(){}
 }

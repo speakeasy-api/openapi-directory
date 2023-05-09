@@ -12,9 +12,13 @@ public class RemoveAttributesRequestBody {
      */
     @JsonProperty("UpdateAttributesRequest")
     public RemoveAttributesRequestBodyUpdateAttributesRequest updateAttributesRequest;
+
     public RemoveAttributesRequestBody withUpdateAttributesRequest(RemoveAttributesRequestBodyUpdateAttributesRequest updateAttributesRequest) {
         this.updateAttributesRequest = updateAttributesRequest;
         return this;
     }
     
+    public RemoveAttributesRequestBody(@JsonProperty("UpdateAttributesRequest") RemoveAttributesRequestBodyUpdateAttributesRequest updateAttributesRequest) {
+        this.updateAttributesRequest = updateAttributesRequest;
+  }
 }

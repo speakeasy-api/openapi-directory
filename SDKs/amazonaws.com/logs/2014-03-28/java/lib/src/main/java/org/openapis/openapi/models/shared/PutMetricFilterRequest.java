@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutMetricFilterRequest {
     @JsonProperty("filterName")
     public String filterName;
+
     public PutMetricFilterRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -16,6 +17,7 @@ public class PutMetricFilterRequest {
     
     @JsonProperty("filterPattern")
     public String filterPattern;
+
     public PutMetricFilterRequest withFilterPattern(String filterPattern) {
         this.filterPattern = filterPattern;
         return this;
@@ -23,6 +25,7 @@ public class PutMetricFilterRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public PutMetricFilterRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -30,9 +33,16 @@ public class PutMetricFilterRequest {
     
     @JsonProperty("metricTransformations")
     public MetricTransformation[] metricTransformations;
+
     public PutMetricFilterRequest withMetricTransformations(MetricTransformation[] metricTransformations) {
         this.metricTransformations = metricTransformations;
         return this;
     }
     
+    public PutMetricFilterRequest(@JsonProperty("filterName") String filterName, @JsonProperty("filterPattern") String filterPattern, @JsonProperty("logGroupName") String logGroupName, @JsonProperty("metricTransformations") MetricTransformation[] metricTransformations) {
+        this.filterName = filterName;
+        this.filterPattern = filterPattern;
+        this.logGroupName = logGroupName;
+        this.metricTransformations = metricTransformations;
+  }
 }

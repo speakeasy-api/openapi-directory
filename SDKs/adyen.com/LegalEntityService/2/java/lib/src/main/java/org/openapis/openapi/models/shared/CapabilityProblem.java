@@ -12,6 +12,7 @@ public class CapabilityProblem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public CapabilityProblemEntity entity;
+
     public CapabilityProblem withEntity(CapabilityProblemEntity entity) {
         this.entity = entity;
         return this;
@@ -20,9 +21,11 @@ public class CapabilityProblem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationErrors")
     public VerificationError[] verificationErrors;
+
     public CapabilityProblem withVerificationErrors(VerificationError[] verificationErrors) {
         this.verificationErrors = verificationErrors;
         return this;
     }
     
+    public CapabilityProblem(){}
 }

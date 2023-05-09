@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBucketResponse {
@@ -12,6 +13,7 @@ public class DeleteBucketResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteBucketResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBucketResponse {
     
     
     public String contentType;
+
     public DeleteBucketResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBucketResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBucketResult deleteBucketResult;
+
     public DeleteBucketResponse withDeleteBucketResult(org.openapis.openapi.models.shared.DeleteBucketResult deleteBucketResult) {
         this.deleteBucketResult = deleteBucketResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBucketResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteBucketResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBucketResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBucketResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBucketResponse {
      */
     
     public Object serviceException;
+
     public DeleteBucketResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteBucketResponse {
     
     
     public Integer statusCode;
+
     public DeleteBucketResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteBucketResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBucketResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteBucketResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteBucketResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteBucketResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

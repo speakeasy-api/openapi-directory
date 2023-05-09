@@ -17,6 +17,7 @@ public class PostUsersLoginErrorResponse {
      */
     @JsonProperty("detail")
     public String detail;
+
     public PostUsersLoginErrorResponse withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,9 +29,13 @@ public class PostUsersLoginErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login_2fa_token")
     public String login2faToken;
+
     public PostUsersLoginErrorResponse withLogin2faToken(String login2faToken) {
         this.login2faToken = login2faToken;
         return this;
     }
     
+    public PostUsersLoginErrorResponse(@JsonProperty("detail") String detail) {
+        this.detail = detail;
+  }
 }

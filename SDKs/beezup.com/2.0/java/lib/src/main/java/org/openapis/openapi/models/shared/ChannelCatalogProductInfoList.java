@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelCatalogProductInfoList {
     @JsonProperty("links")
     public ChannelCatalogProductInfoListLinks links;
+
     public ChannelCatalogProductInfoList withLinks(ChannelCatalogProductInfoListLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class ChannelCatalogProductInfoList {
     
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public ChannelCatalogProductInfoList withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
@@ -26,9 +28,15 @@ public class ChannelCatalogProductInfoList {
     
     @JsonProperty("productInfos")
     public ChannelCatalogProductInfo[] productInfos;
+
     public ChannelCatalogProductInfoList withProductInfos(ChannelCatalogProductInfo[] productInfos) {
         this.productInfos = productInfos;
         return this;
     }
     
+    public ChannelCatalogProductInfoList(@JsonProperty("links") ChannelCatalogProductInfoListLinks links, @JsonProperty("paginationResult") BeezUPCommonPaginationResult paginationResult, @JsonProperty("productInfos") ChannelCatalogProductInfo[] productInfos) {
+        this.links = links;
+        this.paginationResult = paginationResult;
+        this.productInfos = productInfos;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChatSpacesMessagesUpdateRequest {
@@ -12,6 +13,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ChatSpacesMessagesUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ChatSpacesMessagesUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MessageInput messageInput;
+
     public ChatSpacesMessagesUpdateRequest withMessageInput(org.openapis.openapi.models.shared.MessageInput messageInput) {
         this.messageInput = messageInput;
         return this;
@@ -29,6 +32,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ChatSpacesMessagesUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
     public Boolean allowMissing;
+
     public ChatSpacesMessagesUpdateRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -49,6 +54,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ChatSpacesMessagesUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ChatSpacesMessagesUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ChatSpacesMessagesUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ChatSpacesMessagesUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public ChatSpacesMessagesUpdateRequest withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ChatSpacesMessagesUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ChatSpacesMessagesUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ChatSpacesMessagesUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public ChatSpacesMessagesUpdateRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -139,6 +153,7 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ChatSpacesMessagesUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class ChatSpacesMessagesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ChatSpacesMessagesUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ChatSpacesMessagesUpdateRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

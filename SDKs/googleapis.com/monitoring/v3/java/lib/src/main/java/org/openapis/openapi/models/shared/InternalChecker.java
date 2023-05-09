@@ -18,6 +18,7 @@ public class InternalChecker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InternalChecker withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class InternalChecker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcpZone")
     public String gcpZone;
+
     public InternalChecker withGcpZone(String gcpZone) {
         this.gcpZone = gcpZone;
         return this;
@@ -40,6 +42,7 @@ public class InternalChecker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InternalChecker withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class InternalChecker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public InternalChecker withNetwork(String network) {
         this.network = network;
         return this;
@@ -62,6 +66,7 @@ public class InternalChecker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerProjectId")
     public String peerProjectId;
+
     public InternalChecker withPeerProjectId(String peerProjectId) {
         this.peerProjectId = peerProjectId;
         return this;
@@ -73,9 +78,11 @@ public class InternalChecker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InternalCheckerStateEnum state;
+
     public InternalChecker withState(InternalCheckerStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InternalChecker(){}
 }

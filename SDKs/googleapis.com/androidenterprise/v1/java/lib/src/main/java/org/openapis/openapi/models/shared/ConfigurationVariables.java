@@ -18,6 +18,7 @@ public class ConfigurationVariables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcmId")
     public String mcmId;
+
     public ConfigurationVariables withMcmId(String mcmId) {
         this.mcmId = mcmId;
         return this;
@@ -29,9 +30,11 @@ public class ConfigurationVariables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableSet")
     public VariableSet[] variableSet;
+
     public ConfigurationVariables withVariableSet(VariableSet[] variableSet) {
         this.variableSet = variableSet;
         return this;
     }
     
+    public ConfigurationVariables(){}
 }

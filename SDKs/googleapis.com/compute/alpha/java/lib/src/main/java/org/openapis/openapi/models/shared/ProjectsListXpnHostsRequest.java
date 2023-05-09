@@ -15,6 +15,7 @@ public class ProjectsListXpnHostsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public ProjectsListXpnHostsRequest withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -26,9 +27,11 @@ public class ProjectsListXpnHostsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPartialPage")
     public Boolean returnPartialPage;
+
     public ProjectsListXpnHostsRequest withReturnPartialPage(Boolean returnPartialPage) {
         this.returnPartialPage = returnPartialPage;
         return this;
     }
     
+    public ProjectsListXpnHostsRequest(){}
 }

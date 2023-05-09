@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest - The request message for the ImportProcessorVersion method. This method requires Document AI Service Agent of the destination project in the source project's IAM with [Document AI Editor role](https://cloud.google.com/document-ai/docs/access-control/iam-roles). The destination project is specified as part of the `parent` field. The source project is specified as part of `source` field. The Service Agent for Document AI can be found in https://cloud.google.com/iam/docs/service-agents.
+ * GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest - The request message for the ImportProcessorVersion method. Requirements: - The source processor version and destination processor must be in the same location. - The Document AI [Service Agent](https://cloud.google.com/iam/docs/service-agents) of the destination project must have [Document AI Editor role](https://cloud.google.com/document-ai/docs/access-control/iam-roles) on the source project. The destination project is specified as part of the parent field. The source project is specified as part of the source field.
  */
 public class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest {
     /**
@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processorVersionSource")
     public String processorVersionSource;
+
     public GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest withProcessorVersionSource(String processorVersionSource) {
         this.processorVersionSource = processorVersionSource;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest(){}
 }

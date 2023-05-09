@@ -12,6 +12,7 @@ public class ListRotationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListRotationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListRotationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRotationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListRotationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationNamePrefix")
     public String rotationNamePrefix;
+
     public ListRotationsRequest withRotationNamePrefix(String rotationNamePrefix) {
         this.rotationNamePrefix = rotationNamePrefix;
         return this;
     }
     
+    public ListRotationsRequest(){}
 }

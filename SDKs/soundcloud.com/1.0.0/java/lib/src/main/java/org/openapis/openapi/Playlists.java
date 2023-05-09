@@ -56,11 +56,9 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,12 +102,10 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             playlist = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,13 +154,11 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersResponse res = new org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersResponse() {{
+        org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersResponse res = new org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersResponse(contentType, httpRes.statusCode()) {{
             metaUsers = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,12 +214,10 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksResponse res = new org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksResponse() {{
+        org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksResponse res = new org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksResponse(contentType, httpRes.statusCode()) {{
             getPlaylistsPlaylistIdTracks200ApplicationJSONOneOf = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,13 +262,11 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPlaylistsResponse res = new org.openapis.openapi.models.operations.PostPlaylistsResponse() {{
+        org.openapis.openapi.models.operations.PostPlaylistsResponse res = new org.openapis.openapi.models.operations.PostPlaylistsResponse(contentType, httpRes.statusCode()) {{
             postPlaylists201ApplicationJSONObject = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -328,13 +318,11 @@ public class Playlists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             putPlaylistsPlaylistId200ApplicationJSONObject = null;
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

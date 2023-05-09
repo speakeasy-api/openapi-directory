@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBanks200ApplicationJSON {
     @JsonProperty("banks")
     public org.openapis.openapi.models.shared.Connector[] banks;
+
     public GetBanks200ApplicationJSON withBanks(org.openapis.openapi.models.shared.Connector[] banks) {
         this.banks = banks;
         return this;
@@ -25,9 +26,13 @@ public class GetBanks200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetBanks200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetBanks200ApplicationJSON(@JsonProperty("banks") org.openapis.openapi.models.shared.Connector[] banks) {
+        this.banks = banks;
+  }
 }

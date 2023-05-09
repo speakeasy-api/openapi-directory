@@ -15,6 +15,7 @@ public class SerDeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SerDeInfo withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class SerDeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public SerDeInfo withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -31,9 +33,11 @@ public class SerDeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SerializationLibrary")
     public String serializationLibrary;
+
     public SerDeInfo withSerializationLibrary(String serializationLibrary) {
         this.serializationLibrary = serializationLibrary;
         return this;
     }
     
+    public SerDeInfo(){}
 }

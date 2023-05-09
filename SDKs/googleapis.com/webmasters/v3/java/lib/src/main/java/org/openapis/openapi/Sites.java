@@ -58,10 +58,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitesAddResponse res = new org.openapis.openapi.models.operations.WebmastersSitesAddResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitesAddResponse res = new org.openapis.openapi.models.operations.WebmastersSitesAddResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,10 +96,8 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitesDeleteResponse res = new org.openapis.openapi.models.operations.WebmastersSitesDeleteResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitesDeleteResponse res = new org.openapis.openapi.models.operations.WebmastersSitesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,11 +134,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitesGetResponse res = new org.openapis.openapi.models.operations.WebmastersSitesGetResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitesGetResponse res = new org.openapis.openapi.models.operations.WebmastersSitesGetResponse(contentType, httpRes.statusCode()) {{
             wmxSite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,11 +178,9 @@ public class Sites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebmastersSitesListResponse res = new org.openapis.openapi.models.operations.WebmastersSitesListResponse() {{
+        org.openapis.openapi.models.operations.WebmastersSitesListResponse res = new org.openapis.openapi.models.operations.WebmastersSitesListResponse(contentType, httpRes.statusCode()) {{
             sitesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

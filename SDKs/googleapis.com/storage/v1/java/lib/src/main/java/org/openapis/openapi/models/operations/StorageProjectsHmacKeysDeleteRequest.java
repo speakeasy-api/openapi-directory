@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageProjectsHmacKeysDeleteRequest {
@@ -12,6 +13,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessId")
     public String accessId;
+
     public StorageProjectsHmacKeysDeleteRequest withAccessId(String accessId) {
         this.accessId = accessId;
         return this;
@@ -22,6 +24,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageProjectsHmacKeysDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageProjectsHmacKeysDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageProjectsHmacKeysDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageProjectsHmacKeysDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageProjectsHmacKeysDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public StorageProjectsHmacKeysDeleteRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -82,6 +90,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageProjectsHmacKeysDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageProjectsHmacKeysDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -102,6 +112,7 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageProjectsHmacKeysDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -112,9 +123,14 @@ public class StorageProjectsHmacKeysDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageProjectsHmacKeysDeleteRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageProjectsHmacKeysDeleteRequest(@JsonProperty("accessId") String accessId, @JsonProperty("projectId") String projectId) {
+        this.accessId = accessId;
+        this.projectId = projectId;
+  }
 }

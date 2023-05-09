@@ -18,6 +18,7 @@ public class HttpRedirectAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostRedirect")
     public String hostRedirect;
+
     public HttpRedirectAction withHostRedirect(String hostRedirect) {
         this.hostRedirect = hostRedirect;
         return this;
@@ -29,6 +30,7 @@ public class HttpRedirectAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpsRedirect")
     public Boolean httpsRedirect;
+
     public HttpRedirectAction withHttpsRedirect(Boolean httpsRedirect) {
         this.httpsRedirect = httpsRedirect;
         return this;
@@ -40,6 +42,7 @@ public class HttpRedirectAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathRedirect")
     public String pathRedirect;
+
     public HttpRedirectAction withPathRedirect(String pathRedirect) {
         this.pathRedirect = pathRedirect;
         return this;
@@ -51,6 +54,7 @@ public class HttpRedirectAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixRedirect")
     public String prefixRedirect;
+
     public HttpRedirectAction withPrefixRedirect(String prefixRedirect) {
         this.prefixRedirect = prefixRedirect;
         return this;
@@ -62,6 +66,7 @@ public class HttpRedirectAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectResponseCode")
     public HttpRedirectActionRedirectResponseCodeEnum redirectResponseCode;
+
     public HttpRedirectAction withRedirectResponseCode(HttpRedirectActionRedirectResponseCodeEnum redirectResponseCode) {
         this.redirectResponseCode = redirectResponseCode;
         return this;
@@ -73,9 +78,11 @@ public class HttpRedirectAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripQuery")
     public Boolean stripQuery;
+
     public HttpRedirectAction withStripQuery(Boolean stripQuery) {
         this.stripQuery = stripQuery;
         return this;
     }
     
+    public HttpRedirectAction(){}
 }

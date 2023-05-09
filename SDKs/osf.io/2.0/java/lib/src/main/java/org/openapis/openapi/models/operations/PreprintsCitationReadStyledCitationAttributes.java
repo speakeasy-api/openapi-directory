@@ -15,9 +15,11 @@ public class PreprintsCitationReadStyledCitationAttributes {
      */
     
     public String citation;
+
     public PreprintsCitationReadStyledCitationAttributes withCitation(String citation) {
         this.citation = citation;
         return this;
     }
     
+    public PreprintsCitationReadStyledCitationAttributes(){}
 }

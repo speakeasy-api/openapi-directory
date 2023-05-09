@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HumanLoopRequestSource {
     @JsonProperty("AwsManagedHumanLoopRequestSource")
     public AwsManagedHumanLoopRequestSourceEnum awsManagedHumanLoopRequestSource;
+
     public HumanLoopRequestSource withAwsManagedHumanLoopRequestSource(AwsManagedHumanLoopRequestSourceEnum awsManagedHumanLoopRequestSource) {
         this.awsManagedHumanLoopRequestSource = awsManagedHumanLoopRequestSource;
         return this;
     }
     
+    public HumanLoopRequestSource(@JsonProperty("AwsManagedHumanLoopRequestSource") AwsManagedHumanLoopRequestSourceEnum awsManagedHumanLoopRequestSource) {
+        this.awsManagedHumanLoopRequestSource = awsManagedHumanLoopRequestSource;
+  }
 }

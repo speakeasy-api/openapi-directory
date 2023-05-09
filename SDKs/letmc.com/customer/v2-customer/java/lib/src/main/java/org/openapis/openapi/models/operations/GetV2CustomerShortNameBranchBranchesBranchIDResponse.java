@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2CustomerShortNameBranchBranchesBranchIDResponse {
     
     public byte[] body;
+
     public GetV2CustomerShortNameBranchBranchesBranchIDResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetV2CustomerShortNameBranchBranchesBranchIDResponse {
      */
     
     public org.openapis.openapi.models.shared.BranchModel branchModel;
+
     public GetV2CustomerShortNameBranchBranchesBranchIDResponse withBranchModel(org.openapis.openapi.models.shared.BranchModel branchModel) {
         this.branchModel = branchModel;
         return this;
@@ -26,6 +29,7 @@ public class GetV2CustomerShortNameBranchBranchesBranchIDResponse {
     
     
     public String contentType;
+
     public GetV2CustomerShortNameBranchBranchesBranchIDResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetV2CustomerShortNameBranchBranchesBranchIDResponse {
     
     
     public Integer statusCode;
+
     public GetV2CustomerShortNameBranchBranchesBranchIDResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetV2CustomerShortNameBranchBranchesBranchIDResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2CustomerShortNameBranchBranchesBranchIDResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV2CustomerShortNameBranchBranchesBranchIDResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

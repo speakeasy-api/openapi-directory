@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutBlockPublicAccessConfigurationInput {
     @JsonProperty("BlockPublicAccessConfiguration")
     public BlockPublicAccessConfiguration blockPublicAccessConfiguration;
+
     public PutBlockPublicAccessConfigurationInput withBlockPublicAccessConfiguration(BlockPublicAccessConfiguration blockPublicAccessConfiguration) {
         this.blockPublicAccessConfiguration = blockPublicAccessConfiguration;
         return this;
     }
     
+    public PutBlockPublicAccessConfigurationInput(@JsonProperty("BlockPublicAccessConfiguration") BlockPublicAccessConfiguration blockPublicAccessConfiguration) {
+        this.blockPublicAccessConfiguration = blockPublicAccessConfiguration;
+  }
 }

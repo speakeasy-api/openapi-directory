@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DpicrResponse res = new org.openapis.openapi.models.operations.DpicrResponse() {{
+        org.openapis.openapi.models.operations.DpicrResponse res = new org.openapis.openapi.models.operations.DpicrResponse(contentType, httpRes.statusCode()) {{
             dpicr400ApplicationJSONObject = null;
             dpicr401ApplicationJSONObject = null;
             dpicr404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             dpicr503ApplicationJSONObject = null;
             dpicr504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

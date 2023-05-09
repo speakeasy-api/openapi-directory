@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse {
     
     public String contentType;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse googleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse withGoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse googleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse) {
         this.googleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse = googleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

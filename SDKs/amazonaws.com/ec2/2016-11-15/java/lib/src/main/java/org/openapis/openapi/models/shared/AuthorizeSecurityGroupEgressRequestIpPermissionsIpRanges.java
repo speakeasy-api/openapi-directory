@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupEgressRequestIpPermissionsIpRanges {
     
     public String cidrIp;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsIpRanges withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -19,9 +20,11 @@ public class AuthorizeSecurityGroupEgressRequestIpPermissionsIpRanges {
     
     
     public String description;
+
     public AuthorizeSecurityGroupEgressRequestIpPermissionsIpRanges withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressRequestIpPermissionsIpRanges(){}
 }

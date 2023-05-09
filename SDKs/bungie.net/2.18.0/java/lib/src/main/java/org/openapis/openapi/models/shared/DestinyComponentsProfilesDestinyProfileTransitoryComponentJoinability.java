@@ -15,6 +15,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinabili
      */
     
     public Integer closedReasons;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinability withClosedReasons(Integer closedReasons) {
         this.closedReasons = closedReasons;
         return this;
@@ -25,6 +26,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinabili
      */
     
     public Integer openSlots;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinability withOpenSlots(Integer openSlots) {
         this.openSlots = openSlots;
         return this;
@@ -35,9 +37,11 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinabili
      */
     
     public Integer privacySetting;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinability withPrivacySetting(Integer privacySetting) {
         this.privacySetting = privacySetting;
         return this;
     }
     
+    public DestinyComponentsProfilesDestinyProfileTransitoryComponentJoinability(){}
 }

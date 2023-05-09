@@ -15,6 +15,7 @@ public class CancelthetransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minicart")
     public CancelthetransactionRequestMinicart minicart;
+
     public CancelthetransactionRequest withMinicart(CancelthetransactionRequestMinicart minicart) {
         this.minicart = minicart;
         return this;
@@ -25,9 +26,13 @@ public class CancelthetransactionRequest {
      */
     @JsonProperty("value")
     public Integer value;
+
     public CancelthetransactionRequest withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public CancelthetransactionRequest(@JsonProperty("value") Integer value) {
+        this.value = value;
+  }
 }

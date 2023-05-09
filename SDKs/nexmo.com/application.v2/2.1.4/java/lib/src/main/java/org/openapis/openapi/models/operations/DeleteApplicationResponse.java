@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationResponse {
     
     public String contentType;
+
     public DeleteApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteApplicationResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteApplicationResponse {
      */
     
     public DeleteApplication401ApplicationJSON deleteApplication401ApplicationJSONObject;
+
     public DeleteApplicationResponse withDeleteApplication401ApplicationJSONObject(DeleteApplication401ApplicationJSON deleteApplication401ApplicationJSONObject) {
         this.deleteApplication401ApplicationJSONObject = deleteApplication401ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteApplicationResponse {
      */
     
     public DeleteApplication404ApplicationJSON deleteApplication404ApplicationJSONObject;
+
     public DeleteApplicationResponse withDeleteApplication404ApplicationJSONObject(DeleteApplication404ApplicationJSON deleteApplication404ApplicationJSONObject) {
         this.deleteApplication404ApplicationJSONObject = deleteApplication404ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteApplicationResponse {
      */
     
     public DeleteApplication405ApplicationJSON deleteApplication405ApplicationJSONObject;
+
     public DeleteApplicationResponse withDeleteApplication405ApplicationJSONObject(DeleteApplication405ApplicationJSON deleteApplication405ApplicationJSONObject) {
         this.deleteApplication405ApplicationJSONObject = deleteApplication405ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class DeleteApplicationResponse {
      */
     
     public DeleteApplication406ApplicationJSON deleteApplication406ApplicationJSONObject;
+
     public DeleteApplicationResponse withDeleteApplication406ApplicationJSONObject(DeleteApplication406ApplicationJSON deleteApplication406ApplicationJSONObject) {
         this.deleteApplication406ApplicationJSONObject = deleteApplication406ApplicationJSONObject;
         return this;
     }
     
+    public DeleteApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeBackupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupDescription")
     public BackupDescription backupDescription;
+
     public DescribeBackupOutput withBackupDescription(BackupDescription backupDescription) {
         this.backupDescription = backupDescription;
         return this;
     }
     
+    public DescribeBackupOutput(){}
 }

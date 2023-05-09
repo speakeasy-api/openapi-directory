@@ -15,9 +15,11 @@ public class DeleteParameterGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroup")
     public ParameterGroup parameterGroup;
+
     public DeleteParameterGroupResponse withParameterGroup(ParameterGroup parameterGroup) {
         this.parameterGroup = parameterGroup;
         return this;
     }
     
+    public DeleteParameterGroupResponse(){}
 }

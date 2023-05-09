@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ExtensionConfig {
     
     public java.util.Map<String, Object> hdr;
+
     public ExtensionConfig withHdr(java.util.Map<String, Object> hdr) {
         this.hdr = hdr;
         return this;
@@ -16,6 +17,7 @@ public class ExtensionConfig {
     
     
     public ExtensionConfigIntent intent;
+
     public ExtensionConfig withIntent(ExtensionConfigIntent intent) {
         this.intent = intent;
         return this;
@@ -23,6 +25,7 @@ public class ExtensionConfig {
     
     
     public ExtensionConfigMedia media;
+
     public ExtensionConfig withMedia(ExtensionConfigMedia media) {
         this.media = media;
         return this;
@@ -30,6 +33,7 @@ public class ExtensionConfig {
     
     
     public String url;
+
     public ExtensionConfig withUrl(String url) {
         this.url = url;
         return this;
@@ -37,9 +41,15 @@ public class ExtensionConfig {
     
     
     public String version;
+
     public ExtensionConfig withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ExtensionConfig(@JsonProperty("intent") ExtensionConfigIntent intent, @JsonProperty("media") ExtensionConfigMedia media, @JsonProperty("version") String version) {
+        this.intent = intent;
+        this.media = media;
+        this.version = version;
+  }
 }

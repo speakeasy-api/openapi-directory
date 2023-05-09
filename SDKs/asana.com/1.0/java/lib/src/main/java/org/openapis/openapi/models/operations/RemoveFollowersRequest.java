@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveFollowersRequest {
@@ -12,6 +13,7 @@ public class RemoveFollowersRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public RemoveFollowersRequestBody requestBody;
+
     public RemoveFollowersRequest withRequestBody(RemoveFollowersRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class RemoveFollowersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=goal_gid")
     public String goalGid;
+
     public RemoveFollowersRequest withGoalGid(String goalGid) {
         this.goalGid = goalGid;
         return this;
@@ -34,6 +37,7 @@ public class RemoveFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public RemoveFollowersRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -45,9 +49,14 @@ public class RemoveFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public RemoveFollowersRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public RemoveFollowersRequest(@JsonProperty("RequestBody") RemoveFollowersRequestBody requestBody, @JsonProperty("goal_gid") String goalGid) {
+        this.requestBody = requestBody;
+        this.goalGid = goalGid;
+  }
 }

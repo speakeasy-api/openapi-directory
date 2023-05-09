@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegistryGetApiResponse {
@@ -12,6 +13,7 @@ public class RegistryGetApiResponse {
      */
     
     public org.openapis.openapi.models.shared.Api api;
+
     public RegistryGetApiResponse withApi(org.openapis.openapi.models.shared.Api api) {
         this.api = api;
         return this;
@@ -19,6 +21,7 @@ public class RegistryGetApiResponse {
     
     
     public String contentType;
+
     public RegistryGetApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegistryGetApiResponse {
      */
     
     public org.openapis.openapi.models.shared.Status status;
+
     public RegistryGetApiResponse withStatus(org.openapis.openapi.models.shared.Status status) {
         this.status = status;
         return this;
@@ -36,6 +40,7 @@ public class RegistryGetApiResponse {
     
     
     public Integer statusCode;
+
     public RegistryGetApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RegistryGetApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegistryGetApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegistryGetApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

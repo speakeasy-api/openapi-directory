@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConfigurationSetEventDestinationsResponse {
@@ -12,6 +13,7 @@ public class GetConfigurationSetEventDestinationsResponse {
      */
     
     public Object badRequestException;
+
     public GetConfigurationSetEventDestinationsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetConfigurationSetEventDestinationsResponse {
     
     
     public String contentType;
+
     public GetConfigurationSetEventDestinationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetConfigurationSetEventDestinationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConfigurationSetEventDestinationsResponse getConfigurationSetEventDestinationsResponse;
+
     public GetConfigurationSetEventDestinationsResponse withGetConfigurationSetEventDestinationsResponse(org.openapis.openapi.models.shared.GetConfigurationSetEventDestinationsResponse getConfigurationSetEventDestinationsResponse) {
         this.getConfigurationSetEventDestinationsResponse = getConfigurationSetEventDestinationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetConfigurationSetEventDestinationsResponse {
      */
     
     public Object notFoundException;
+
     public GetConfigurationSetEventDestinationsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetConfigurationSetEventDestinationsResponse {
     
     
     public Integer statusCode;
+
     public GetConfigurationSetEventDestinationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetConfigurationSetEventDestinationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConfigurationSetEventDestinationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetConfigurationSetEventDestinationsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetConfigurationSetEventDestinationsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetConfigurationSetEventDestinationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

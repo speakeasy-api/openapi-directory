@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JustListenResponse {
     
     public String contentType;
+
     public JustListenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class JustListenResponse {
      */
     
     public org.openapis.openapi.models.shared.EpisodeSimple episodeSimple;
+
     public JustListenResponse withEpisodeSimple(org.openapis.openapi.models.shared.EpisodeSimple episodeSimple) {
         this.episodeSimple = episodeSimple;
         return this;
@@ -26,6 +29,7 @@ public class JustListenResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public JustListenResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class JustListenResponse {
     
     
     public Integer statusCode;
+
     public JustListenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class JustListenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JustListenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JustListenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

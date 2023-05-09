@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListKeyPoliciesResponse {
     
     public String contentType;
+
     public ListKeyPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListKeyPoliciesResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ListKeyPoliciesResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ListKeyPoliciesResponse {
      */
     
     public Object invalidArnException;
+
     public ListKeyPoliciesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class ListKeyPoliciesResponse {
      */
     
     public Object kmsInternalException;
+
     public ListKeyPoliciesResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -49,6 +54,7 @@ public class ListKeyPoliciesResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public ListKeyPoliciesResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class ListKeyPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListKeyPoliciesResponse listKeyPoliciesResponse;
+
     public ListKeyPoliciesResponse withListKeyPoliciesResponse(org.openapis.openapi.models.shared.ListKeyPoliciesResponse listKeyPoliciesResponse) {
         this.listKeyPoliciesResponse = listKeyPoliciesResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListKeyPoliciesResponse {
      */
     
     public Object notFoundException;
+
     public ListKeyPoliciesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListKeyPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListKeyPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListKeyPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListKeyPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListKeyPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

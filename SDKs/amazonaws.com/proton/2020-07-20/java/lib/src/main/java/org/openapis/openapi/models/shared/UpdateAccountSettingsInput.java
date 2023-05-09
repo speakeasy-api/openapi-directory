@@ -12,6 +12,7 @@ public class UpdateAccountSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletePipelineProvisioningRepository")
     public Boolean deletePipelineProvisioningRepository;
+
     public UpdateAccountSettingsInput withDeletePipelineProvisioningRepository(Boolean deletePipelineProvisioningRepository) {
         this.deletePipelineProvisioningRepository = deletePipelineProvisioningRepository;
         return this;
@@ -20,6 +21,7 @@ public class UpdateAccountSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineCodebuildRoleArn")
     public String pipelineCodebuildRoleArn;
+
     public UpdateAccountSettingsInput withPipelineCodebuildRoleArn(String pipelineCodebuildRoleArn) {
         this.pipelineCodebuildRoleArn = pipelineCodebuildRoleArn;
         return this;
@@ -28,6 +30,7 @@ public class UpdateAccountSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineProvisioningRepository")
     public RepositoryBranchInput pipelineProvisioningRepository;
+
     public UpdateAccountSettingsInput withPipelineProvisioningRepository(RepositoryBranchInput pipelineProvisioningRepository) {
         this.pipelineProvisioningRepository = pipelineProvisioningRepository;
         return this;
@@ -36,9 +39,11 @@ public class UpdateAccountSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineServiceRoleArn")
     public String pipelineServiceRoleArn;
+
     public UpdateAccountSettingsInput withPipelineServiceRoleArn(String pipelineServiceRoleArn) {
         this.pipelineServiceRoleArn = pipelineServiceRoleArn;
         return this;
     }
     
+    public UpdateAccountSettingsInput(){}
 }

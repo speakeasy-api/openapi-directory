@@ -56,12 +56,10 @@ public class LibreOffice {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LibreConvertPostResponse res = new org.openapis.openapi.models.operations.LibreConvertPostResponse() {{
+        org.openapis.openapi.models.operations.LibreConvertPostResponse res = new org.openapis.openapi.models.operations.LibreConvertPostResponse(contentType, httpRes.statusCode()) {{
             apiResponseSuccess = null;
             apiResponseFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceId")
     public String marketplaceId;
+
     public Subscription withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -29,6 +30,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public Subscription withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -40,6 +42,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionLevel")
     public String subscriptionLevel;
+
     public Subscription withSubscriptionLevel(String subscriptionLevel) {
         this.subscriptionLevel = subscriptionLevel;
         return this;
@@ -51,6 +54,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionType")
     public String subscriptionType;
+
     public Subscription withSubscriptionType(String subscriptionType) {
         this.subscriptionType = subscriptionType;
         return this;
@@ -62,9 +66,11 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("term")
     public TimeDuration term;
+
     public Subscription withTerm(TimeDuration term) {
         this.term = term;
         return this;
     }
     
+    public Subscription(){}
 }

@@ -13,9 +13,11 @@ public class GetWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetWebhooksRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetWebhooksRequest(){}
 }

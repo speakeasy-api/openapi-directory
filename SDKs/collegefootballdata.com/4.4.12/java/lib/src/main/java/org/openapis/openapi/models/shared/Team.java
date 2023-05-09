@@ -12,6 +12,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public Team withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -20,6 +21,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt_color")
     public String altColor;
+
     public Team withAltColor(String altColor) {
         this.altColor = altColor;
         return this;
@@ -28,6 +30,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt_name_1")
     public String altName1;
+
     public Team withAltName1(String altName1) {
         this.altName1 = altName1;
         return this;
@@ -36,6 +39,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt_name_2")
     public String altName2;
+
     public Team withAltName2(String altName2) {
         this.altName2 = altName2;
         return this;
@@ -44,6 +48,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt_name_3")
     public String altName3;
+
     public Team withAltName3(String altName3) {
         this.altName3 = altName3;
         return this;
@@ -52,6 +57,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public String classification;
+
     public Team withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -60,6 +66,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public Team withColor(String color) {
         this.color = color;
         return this;
@@ -68,6 +75,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public Team withConference(String conference) {
         this.conference = conference;
         return this;
@@ -76,6 +84,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("division")
     public String division;
+
     public Team withDivision(String division) {
         this.division = division;
         return this;
@@ -84,6 +93,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Team withId(Long id) {
         this.id = id;
         return this;
@@ -92,6 +102,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public TeamLocation location;
+
     public Team withLocation(TeamLocation location) {
         this.location = location;
         return this;
@@ -100,6 +111,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logos")
     public String[] logos;
+
     public Team withLogos(String[] logos) {
         this.logos = logos;
         return this;
@@ -108,6 +120,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mascot")
     public String mascot;
+
     public Team withMascot(String mascot) {
         this.mascot = mascot;
         return this;
@@ -116,6 +129,7 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("school")
     public String school;
+
     public Team withSchool(String school) {
         this.school = school;
         return this;
@@ -124,9 +138,11 @@ public class Team {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter")
     public String twitter;
+
     public Team withTwitter(String twitter) {
         this.twitter = twitter;
         return this;
     }
     
+    public Team(){}
 }

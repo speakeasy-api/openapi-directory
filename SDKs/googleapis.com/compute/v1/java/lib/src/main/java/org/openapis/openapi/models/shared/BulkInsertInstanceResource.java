@@ -18,6 +18,7 @@ public class BulkInsertInstanceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public BulkInsertInstanceResource withCount(String count) {
         this.count = count;
         return this;
@@ -26,6 +27,7 @@ public class BulkInsertInstanceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceProperties")
     public InstanceProperties instanceProperties;
+
     public BulkInsertInstanceResource withInstanceProperties(InstanceProperties instanceProperties) {
         this.instanceProperties = instanceProperties;
         return this;
@@ -37,6 +39,7 @@ public class BulkInsertInstanceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationPolicy")
     public LocationPolicy locationPolicy;
+
     public BulkInsertInstanceResource withLocationPolicy(LocationPolicy locationPolicy) {
         this.locationPolicy = locationPolicy;
         return this;
@@ -48,6 +51,7 @@ public class BulkInsertInstanceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCount")
     public String minCount;
+
     public BulkInsertInstanceResource withMinCount(String minCount) {
         this.minCount = minCount;
         return this;
@@ -59,6 +63,7 @@ public class BulkInsertInstanceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namePattern")
     public String namePattern;
+
     public BulkInsertInstanceResource withNamePattern(String namePattern) {
         this.namePattern = namePattern;
         return this;
@@ -70,6 +75,7 @@ public class BulkInsertInstanceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perInstanceProperties")
     public java.util.Map<String, BulkInsertInstanceResourcePerInstanceProperties> perInstanceProperties;
+
     public BulkInsertInstanceResource withPerInstanceProperties(java.util.Map<String, BulkInsertInstanceResourcePerInstanceProperties> perInstanceProperties) {
         this.perInstanceProperties = perInstanceProperties;
         return this;
@@ -81,9 +87,11 @@ public class BulkInsertInstanceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstanceTemplate")
     public String sourceInstanceTemplate;
+
     public BulkInsertInstanceResource withSourceInstanceTemplate(String sourceInstanceTemplate) {
         this.sourceInstanceTemplate = sourceInstanceTemplate;
         return this;
     }
     
+    public BulkInsertInstanceResource(){}
 }

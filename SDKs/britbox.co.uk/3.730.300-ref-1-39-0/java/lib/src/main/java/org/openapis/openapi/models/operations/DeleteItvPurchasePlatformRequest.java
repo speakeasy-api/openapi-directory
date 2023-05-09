@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteItvPurchasePlatformRequest {
@@ -12,6 +13,7 @@ public class DeleteItvPurchasePlatformRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvCancelSubscriptionRequest itvCancelSubscriptionRequest;
+
     public DeleteItvPurchasePlatformRequest withItvCancelSubscriptionRequest(org.openapis.openapi.models.shared.ItvCancelSubscriptionRequest itvCancelSubscriptionRequest) {
         this.itvCancelSubscriptionRequest = itvCancelSubscriptionRequest;
         return this;
@@ -32,6 +34,7 @@ public class DeleteItvPurchasePlatformRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public DeleteItvPurchasePlatformRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class DeleteItvPurchasePlatformRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public DeleteItvPurchasePlatformRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public DeleteItvPurchasePlatformRequest(@JsonProperty("ItvCancelSubscriptionRequest") org.openapis.openapi.models.shared.ItvCancelSubscriptionRequest itvCancelSubscriptionRequest, @JsonProperty("platform") String platform) {
+        this.itvCancelSubscriptionRequest = itvCancelSubscriptionRequest;
+        this.platform = platform;
+  }
 }

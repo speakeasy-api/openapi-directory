@@ -52,10 +52,8 @@ public class CadenceMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2CadenceMembershipsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2CadenceMembershipsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2CadenceMembershipsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2CadenceMembershipsIdJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class CadenceMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CadenceMembershipsJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadenceMembershipsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2CadenceMembershipsJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadenceMembershipsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class CadenceMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2CadenceMembershipsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadenceMembershipsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2CadenceMembershipsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2CadenceMembershipsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class CadenceMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2CadenceMembershipsJsonResponse res = new org.openapis.openapi.models.operations.PostV2CadenceMembershipsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV2CadenceMembershipsJsonResponse res = new org.openapis.openapi.models.operations.PostV2CadenceMembershipsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndTimeOffset")
     public String endTimeOffset;
+
     public EndpointInput withEndTimeOffset(String endTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         return this;
@@ -22,6 +23,7 @@ public class EndpointInput {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public EndpointInput withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -30,6 +32,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeaturesAttribute")
     public String featuresAttribute;
+
     public EndpointInput withFeaturesAttribute(String featuresAttribute) {
         this.featuresAttribute = featuresAttribute;
         return this;
@@ -38,6 +41,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceAttribute")
     public String inferenceAttribute;
+
     public EndpointInput withInferenceAttribute(String inferenceAttribute) {
         this.inferenceAttribute = inferenceAttribute;
         return this;
@@ -45,6 +49,7 @@ public class EndpointInput {
     
     @JsonProperty("LocalPath")
     public String localPath;
+
     public EndpointInput withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -53,6 +58,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProbabilityAttribute")
     public String probabilityAttribute;
+
     public EndpointInput withProbabilityAttribute(String probabilityAttribute) {
         this.probabilityAttribute = probabilityAttribute;
         return this;
@@ -61,6 +67,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProbabilityThresholdAttribute")
     public Double probabilityThresholdAttribute;
+
     public EndpointInput withProbabilityThresholdAttribute(Double probabilityThresholdAttribute) {
         this.probabilityThresholdAttribute = probabilityThresholdAttribute;
         return this;
@@ -69,6 +76,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataDistributionType")
     public ProcessingS3DataDistributionTypeEnum s3DataDistributionType;
+
     public EndpointInput withS3DataDistributionType(ProcessingS3DataDistributionTypeEnum s3DataDistributionType) {
         this.s3DataDistributionType = s3DataDistributionType;
         return this;
@@ -77,6 +85,7 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3InputMode")
     public ProcessingS3InputModeEnum s3InputMode;
+
     public EndpointInput withS3InputMode(ProcessingS3InputModeEnum s3InputMode) {
         this.s3InputMode = s3InputMode;
         return this;
@@ -85,9 +94,14 @@ public class EndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTimeOffset")
     public String startTimeOffset;
+
     public EndpointInput withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
     }
     
+    public EndpointInput(@JsonProperty("EndpointName") String endpointName, @JsonProperty("LocalPath") String localPath) {
+        this.endpointName = endpointName;
+        this.localPath = localPath;
+  }
 }

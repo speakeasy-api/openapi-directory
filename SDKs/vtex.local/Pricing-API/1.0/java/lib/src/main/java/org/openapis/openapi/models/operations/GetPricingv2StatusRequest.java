@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPricingv2StatusRequest {
@@ -12,6 +13,7 @@ public class GetPricingv2StatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetPricingv2StatusRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,9 +24,14 @@ public class GetPricingv2StatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetPricingv2StatusRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public GetPricingv2StatusRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

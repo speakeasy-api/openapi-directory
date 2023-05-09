@@ -12,9 +12,13 @@ public class DescribeWorldExportJobRequestBody {
      */
     @JsonProperty("job")
     public String job;
+
     public DescribeWorldExportJobRequestBody withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public DescribeWorldExportJobRequestBody(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

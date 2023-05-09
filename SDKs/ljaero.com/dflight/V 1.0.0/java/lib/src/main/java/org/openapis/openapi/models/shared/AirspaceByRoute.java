@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AirspaceByRoute {
     @JsonProperty("asptypes")
     public String[] asptypes;
+
     public AirspaceByRoute withAsptypes(String[] asptypes) {
         this.asptypes = asptypes;
         return this;
@@ -19,9 +20,14 @@ public class AirspaceByRoute {
     
     @JsonProperty("route")
     public java.util.Map<String, Object> route;
+
     public AirspaceByRoute withRoute(java.util.Map<String, Object> route) {
         this.route = route;
         return this;
     }
     
+    public AirspaceByRoute(@JsonProperty("asptypes") String[] asptypes, @JsonProperty("route") java.util.Map<String, Object> route) {
+        this.asptypes = asptypes;
+        this.route = route;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateServiceRoleToAccountResponse {
@@ -12,6 +13,7 @@ public class AssociateServiceRoleToAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateServiceRoleToAccountResponse associateServiceRoleToAccountResponse;
+
     public AssociateServiceRoleToAccountResponse withAssociateServiceRoleToAccountResponse(org.openapis.openapi.models.shared.AssociateServiceRoleToAccountResponse associateServiceRoleToAccountResponse) {
         this.associateServiceRoleToAccountResponse = associateServiceRoleToAccountResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateServiceRoleToAccountResponse {
      */
     
     public Object badRequestException;
+
     public AssociateServiceRoleToAccountResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateServiceRoleToAccountResponse {
     
     
     public String contentType;
+
     public AssociateServiceRoleToAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateServiceRoleToAccountResponse {
      */
     
     public Object internalServerErrorException;
+
     public AssociateServiceRoleToAccountResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateServiceRoleToAccountResponse {
     
     
     public Integer statusCode;
+
     public AssociateServiceRoleToAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AssociateServiceRoleToAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateServiceRoleToAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateServiceRoleToAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

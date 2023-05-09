@@ -574,4 +574,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/RegistrationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PasswordResetEmailRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/PasswordResetRequest.java
+docs/sdk/README.md
+docs/account/README.md
+docs/app/README.md
+docs/authorization/README.md
+docs/bt/README.md
+docs/content/README.md
+docs/ee/README.md
+docs/itv/README.md
+docs/profile/README.md
+docs/registration/README.md
+docs/support/README.md
 USAGE.md

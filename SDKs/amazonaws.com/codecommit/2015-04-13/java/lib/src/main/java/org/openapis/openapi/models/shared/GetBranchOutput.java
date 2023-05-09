@@ -15,9 +15,11 @@ public class GetBranchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public BranchInfo branch;
+
     public GetBranchOutput withBranch(BranchInfo branch) {
         this.branch = branch;
         return this;
     }
     
+    public GetBranchOutput(){}
 }

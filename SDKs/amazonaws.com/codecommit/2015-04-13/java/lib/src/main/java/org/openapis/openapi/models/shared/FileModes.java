@@ -15,6 +15,7 @@ public class FileModes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public FileModeTypeEnumEnum base;
+
     public FileModes withBase(FileModeTypeEnumEnum base) {
         this.base = base;
         return this;
@@ -23,6 +24,7 @@ public class FileModes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public FileModeTypeEnumEnum destination;
+
     public FileModes withDestination(FileModeTypeEnumEnum destination) {
         this.destination = destination;
         return this;
@@ -31,9 +33,11 @@ public class FileModes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public FileModeTypeEnumEnum source;
+
     public FileModes withSource(FileModeTypeEnumEnum source) {
         this.source = source;
         return this;
     }
     
+    public FileModes(){}
 }

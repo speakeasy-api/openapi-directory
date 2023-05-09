@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesCreateReleaseUploadRequest {
@@ -12,6 +13,7 @@ public class ReleasesCreateReleaseUploadRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReleasesCreateReleaseUploadRequestBody requestBody;
+
     public ReleasesCreateReleaseUploadRequest withRequestBody(ReleasesCreateReleaseUploadRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesCreateReleaseUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesCreateReleaseUploadRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,9 +35,14 @@ public class ReleasesCreateReleaseUploadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesCreateReleaseUploadRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ReleasesCreateReleaseUploadRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

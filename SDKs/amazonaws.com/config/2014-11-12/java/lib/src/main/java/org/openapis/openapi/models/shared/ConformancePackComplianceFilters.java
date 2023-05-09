@@ -15,6 +15,7 @@ public class ConformancePackComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ConformancePackComplianceTypeEnum complianceType;
+
     public ConformancePackComplianceFilters withComplianceType(ConformancePackComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,9 +24,11 @@ public class ConformancePackComplianceFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleNames")
     public String[] configRuleNames;
+
     public ConformancePackComplianceFilters withConfigRuleNames(String[] configRuleNames) {
         this.configRuleNames = configRuleNames;
         return this;
     }
     
+    public ConformancePackComplianceFilters(){}
 }

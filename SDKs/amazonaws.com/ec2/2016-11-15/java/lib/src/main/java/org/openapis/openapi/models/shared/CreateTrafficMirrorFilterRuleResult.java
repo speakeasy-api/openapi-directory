@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTrafficMirrorFilterRuleResult {
     
     public String clientToken;
+
     public CreateTrafficMirrorFilterRuleResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class CreateTrafficMirrorFilterRuleResult {
     
     
     public CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule trafficMirrorFilterRule;
+
     public CreateTrafficMirrorFilterRuleResult withTrafficMirrorFilterRule(CreateTrafficMirrorFilterRuleResultTrafficMirrorFilterRule trafficMirrorFilterRule) {
         this.trafficMirrorFilterRule = trafficMirrorFilterRule;
         return this;
     }
     
+    public CreateTrafficMirrorFilterRuleResult(){}
 }

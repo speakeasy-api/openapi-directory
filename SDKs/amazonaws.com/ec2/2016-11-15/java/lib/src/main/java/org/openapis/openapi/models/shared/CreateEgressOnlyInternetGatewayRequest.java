@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateEgressOnlyInternetGatewayRequest {
     
     public String clientToken;
+
     public CreateEgressOnlyInternetGatewayRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateEgressOnlyInternetGatewayRequest {
     
     
     public Boolean dryRun;
+
     public CreateEgressOnlyInternetGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateEgressOnlyInternetGatewayRequest {
     
     
     public CreateEgressOnlyInternetGatewayRequestTagSpecifications[] tagSpecifications;
+
     public CreateEgressOnlyInternetGatewayRequest withTagSpecifications(CreateEgressOnlyInternetGatewayRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -30,9 +33,13 @@ public class CreateEgressOnlyInternetGatewayRequest {
     
     
     public String vpcId;
+
     public CreateEgressOnlyInternetGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateEgressOnlyInternetGatewayRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

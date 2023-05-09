@@ -12,6 +12,7 @@ public class ConfirmPrivateVirtualInterfaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public ConfirmPrivateVirtualInterfaceRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -20,6 +21,7 @@ public class ConfirmPrivateVirtualInterfaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGatewayId")
     public String virtualGatewayId;
+
     public ConfirmPrivateVirtualInterfaceRequest withVirtualGatewayId(String virtualGatewayId) {
         this.virtualGatewayId = virtualGatewayId;
         return this;
@@ -27,9 +29,13 @@ public class ConfirmPrivateVirtualInterfaceRequest {
     
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public ConfirmPrivateVirtualInterfaceRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public ConfirmPrivateVirtualInterfaceRequest(@JsonProperty("virtualInterfaceId") String virtualInterfaceId) {
+        this.virtualInterfaceId = virtualInterfaceId;
+  }
 }

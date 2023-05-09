@@ -57,11 +57,9 @@ public class HistoricalData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHistoryResponse res = new org.openapis.openapi.models.operations.GetHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetHistoryResponse res = new org.openapis.openapi.models.operations.GetHistoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 500) {

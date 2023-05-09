@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class StackSetOperation {
     
     public StackSetOperationActionEnum action;
+
     public StackSetOperation withAction(StackSetOperationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class StackSetOperation {
     
     
     public String administrationRoleARN;
+
     public StackSetOperation withAdministrationRoleARN(String administrationRoleARN) {
         this.administrationRoleARN = administrationRoleARN;
         return this;
@@ -26,6 +28,7 @@ public class StackSetOperation {
     
     
     public OffsetDateTime creationTimestamp;
+
     public StackSetOperation withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -33,6 +36,7 @@ public class StackSetOperation {
     
     
     public DeploymentTargets deploymentTargets;
+
     public StackSetOperation withDeploymentTargets(DeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
@@ -40,6 +44,7 @@ public class StackSetOperation {
     
     
     public OffsetDateTime endTimestamp;
+
     public StackSetOperation withEndTimestamp(OffsetDateTime endTimestamp) {
         this.endTimestamp = endTimestamp;
         return this;
@@ -47,6 +52,7 @@ public class StackSetOperation {
     
     
     public String executionRoleName;
+
     public StackSetOperation withExecutionRoleName(String executionRoleName) {
         this.executionRoleName = executionRoleName;
         return this;
@@ -54,6 +60,7 @@ public class StackSetOperation {
     
     
     public String operationId;
+
     public StackSetOperation withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -61,6 +68,7 @@ public class StackSetOperation {
     
     
     public StackSetOperationPreferences operationPreferences;
+
     public StackSetOperation withOperationPreferences(StackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -68,6 +76,7 @@ public class StackSetOperation {
     
     
     public Boolean retainStacks;
+
     public StackSetOperation withRetainStacks(Boolean retainStacks) {
         this.retainStacks = retainStacks;
         return this;
@@ -75,6 +84,7 @@ public class StackSetOperation {
     
     
     public StackSetDriftDetectionDetails stackSetDriftDetectionDetails;
+
     public StackSetOperation withStackSetDriftDetectionDetails(StackSetDriftDetectionDetails stackSetDriftDetectionDetails) {
         this.stackSetDriftDetectionDetails = stackSetDriftDetectionDetails;
         return this;
@@ -82,6 +92,7 @@ public class StackSetOperation {
     
     
     public String stackSetId;
+
     public StackSetOperation withStackSetId(String stackSetId) {
         this.stackSetId = stackSetId;
         return this;
@@ -89,6 +100,7 @@ public class StackSetOperation {
     
     
     public StackSetOperationStatusEnum status;
+
     public StackSetOperation withStatus(StackSetOperationStatusEnum status) {
         this.status = status;
         return this;
@@ -96,6 +108,7 @@ public class StackSetOperation {
     
     
     public StackSetOperationStatusDetails statusDetails;
+
     public StackSetOperation withStatusDetails(StackSetOperationStatusDetails statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -103,9 +116,11 @@ public class StackSetOperation {
     
     
     public String statusReason;
+
     public StackSetOperation withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public StackSetOperation(){}
 }

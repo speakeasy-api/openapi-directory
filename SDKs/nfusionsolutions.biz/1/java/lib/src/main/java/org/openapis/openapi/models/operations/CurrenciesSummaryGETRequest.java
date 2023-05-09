@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CurrenciesSummaryGETRequest {
@@ -12,6 +13,7 @@ public class CurrenciesSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public CurrenciesSummaryGETFormatEnum format;
+
     public CurrenciesSummaryGETRequest withFormat(CurrenciesSummaryGETFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,13 @@ public class CurrenciesSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pairs")
     public String pairs;
+
     public CurrenciesSummaryGETRequest withPairs(String pairs) {
         this.pairs = pairs;
         return this;
     }
     
+    public CurrenciesSummaryGETRequest(@JsonProperty("pairs") String pairs) {
+        this.pairs = pairs;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCoipPoolRequestTagSpecifications {
     
     public CreateCoipPoolRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateCoipPoolRequestTagSpecifications withResourceType(CreateCoipPoolRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateCoipPoolRequestTagSpecifications {
     
     
     public CreateCoipPoolRequestTagSpecificationsTags[] tags;
+
     public CreateCoipPoolRequestTagSpecifications withTags(CreateCoipPoolRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCoipPoolRequestTagSpecifications(){}
 }

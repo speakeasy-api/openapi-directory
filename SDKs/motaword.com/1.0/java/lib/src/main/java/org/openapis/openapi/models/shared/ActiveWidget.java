@@ -18,11 +18,24 @@ import org.openapis.openapi.utils.DateTimeSerializer;
  */
 public class ActiveWidget {
     /**
+     * Is the Active Widget in admin mode? This changes a couple of behaviors in the widget to configure some rules like elements, sections, pages, etc.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("admin_mode")
+    public Boolean adminMode;
+
+    public ActiveWidget withAdminMode(Boolean adminMode) {
+        this.adminMode = adminMode;
+        return this;
+    }
+    
+    /**
      * When true, hash params are included in filenames. When false, params are ignored.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_hash_in_url")
     public Boolean allowHashInUrl;
+
     public ActiveWidget withAllowHashInUrl(Boolean allowHashInUrl) {
         this.allowHashInUrl = allowHashInUrl;
         return this;
@@ -34,6 +47,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_query_in_url")
     public Boolean allowQueryInUrl;
+
     public ActiveWidget withAllowQueryInUrl(Boolean allowQueryInUrl) {
         this.allowQueryInUrl = allowQueryInUrl;
         return this;
@@ -45,6 +59,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_detect_source_language")
     public Boolean autoDetectSourceLanguage;
+
     public ActiveWidget withAutoDetectSourceLanguage(Boolean autoDetectSourceLanguage) {
         this.autoDetectSourceLanguage = autoDetectSourceLanguage;
         return this;
@@ -58,8 +73,21 @@ public class ActiveWidget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ActiveWidget withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
+        return this;
+    }
+    
+    /**
+     * When true, Active ecosystem will print debug-level logs from all Active modules.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("debug_mode")
+    public Boolean debugMode;
+
+    public ActiveWidget withDebugMode(Boolean debugMode) {
+        this.debugMode = debugMode;
         return this;
     }
     
@@ -69,6 +97,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public String elements;
+
     public ActiveWidget withElements(String elements) {
         this.elements = elements;
         return this;
@@ -80,6 +109,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("follow_user")
     public Boolean followUser;
+
     public ActiveWidget withFollowUser(Boolean followUser) {
         this.followUser = followUser;
         return this;
@@ -91,14 +121,28 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force_cache_refresh_interval")
     public Boolean forceCacheRefreshInterval;
+
     public ActiveWidget withForceCacheRefreshInterval(Boolean forceCacheRefreshInterval) {
         this.forceCacheRefreshInterval = forceCacheRefreshInterval;
+        return this;
+    }
+    
+    /**
+     * When true, Active ecosystem will collect all strings on TMS no matter if the translation is present in the cache.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hit_backend_for_existing")
+    public Boolean hitBackendForExisting;
+
+    public ActiveWidget withHitBackendForExisting(Boolean hitBackendForExisting) {
+        this.hitBackendForExisting = hitBackendForExisting;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ActiveWidget withId(Long id) {
         this.id = id;
         return this;
@@ -110,6 +154,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_mappings")
     public String languageMappings;
+
     public ActiveWidget withLanguageMappings(String languageMappings) {
         this.languageMappings = languageMappings;
         return this;
@@ -121,6 +166,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("live")
     public Boolean live;
+
     public ActiveWidget withLive(Boolean live) {
         this.live = live;
         return this;
@@ -132,6 +178,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modify_links")
     public Boolean modifyLinks;
+
     public ActiveWidget withModifyLinks(Boolean modifyLinks) {
         this.modifyLinks = modifyLinks;
         return this;
@@ -140,6 +187,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ActiveWidget withName(String name) {
         this.name = name;
         return this;
@@ -151,6 +199,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimize_per_page")
     public Boolean optimizePerPage;
+
     public ActiveWidget withOptimizePerPage(Boolean optimizePerPage) {
         this.optimizePerPage = optimizePerPage;
         return this;
@@ -162,6 +211,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public String pages;
+
     public ActiveWidget withPages(String pages) {
         this.pages = pages;
         return this;
@@ -173,6 +223,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path_regex")
     public String pathRegex;
+
     public ActiveWidget withPathRegex(String pathRegex) {
         this.pathRegex = pathRegex;
         return this;
@@ -184,6 +235,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public ActiveWidget withPosition(String position) {
         this.position = position;
         return this;
@@ -195,6 +247,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_name")
     public String queryName;
+
     public ActiveWidget withQueryName(String queryName) {
         this.queryName = queryName;
         return this;
@@ -206,6 +259,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reboot_on_url_change")
     public Boolean rebootOnUrlChange;
+
     public ActiveWidget withRebootOnUrlChange(Boolean rebootOnUrlChange) {
         this.rebootOnUrlChange = rebootOnUrlChange;
         return this;
@@ -217,6 +271,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restricted_domains")
     public String restrictedDomains;
+
     public ActiveWidget withRestrictedDomains(String restrictedDomains) {
         this.restrictedDomains = restrictedDomains;
         return this;
@@ -228,6 +283,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public String sections;
+
     public ActiveWidget withSections(String sections) {
         this.sections = sections;
         return this;
@@ -239,6 +295,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("test_mode")
     public Boolean testMode;
+
     public ActiveWidget withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
@@ -250,6 +307,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("theme")
     public String theme;
+
     public ActiveWidget withTheme(String theme) {
         this.theme = theme;
         return this;
@@ -261,6 +319,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public ActiveWidget withToken(String token) {
         this.token = token;
         return this;
@@ -272,6 +331,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url_change_mode")
     public String urlChangeMode;
+
     public ActiveWidget withUrlChangeMode(String urlChangeMode) {
         this.urlChangeMode = urlChangeMode;
         return this;
@@ -283,6 +343,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url_mode")
     public String urlMode;
+
     public ActiveWidget withUrlMode(String urlMode) {
         this.urlMode = urlMode;
         return this;
@@ -294,6 +355,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_cache")
     public Boolean useCache;
+
     public ActiveWidget withUseCache(Boolean useCache) {
         this.useCache = useCache;
         return this;
@@ -305,6 +367,7 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_dummy_translations")
     public Boolean useDummyTranslations;
+
     public ActiveWidget withUseDummyTranslations(Boolean useDummyTranslations) {
         this.useDummyTranslations = useDummyTranslations;
         return this;
@@ -316,9 +379,11 @@ public class ActiveWidget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public String variables;
+
     public ActiveWidget withVariables(String variables) {
         this.variables = variables;
         return this;
     }
     
+    public ActiveWidget(){}
 }

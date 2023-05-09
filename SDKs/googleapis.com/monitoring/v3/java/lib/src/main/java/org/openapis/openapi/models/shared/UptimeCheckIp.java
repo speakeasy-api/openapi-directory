@@ -18,6 +18,7 @@ public class UptimeCheckIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public UptimeCheckIp withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,6 +30,7 @@ public class UptimeCheckIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public UptimeCheckIp withLocation(String location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class UptimeCheckIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public UptimeCheckIpRegionEnum region;
+
     public UptimeCheckIp withRegion(UptimeCheckIpRegionEnum region) {
         this.region = region;
         return this;
     }
     
+    public UptimeCheckIp(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportCertificateAuthorityCertificateResponse {
@@ -12,6 +13,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object certificateMismatchException;
+
     public ImportCertificateAuthorityCertificateResponse withCertificateMismatchException(Object certificateMismatchException) {
         this.certificateMismatchException = certificateMismatchException;
         return this;
@@ -22,6 +24,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object concurrentModificationException;
+
     public ImportCertificateAuthorityCertificateResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class ImportCertificateAuthorityCertificateResponse {
     
     
     public String contentType;
+
     public ImportCertificateAuthorityCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public ImportCertificateAuthorityCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public ImportCertificateAuthorityCertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object invalidStateException;
+
     public ImportCertificateAuthorityCertificateResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object malformedCertificateException;
+
     public ImportCertificateAuthorityCertificateResponse withMalformedCertificateException(Object malformedCertificateException) {
         this.malformedCertificateException = malformedCertificateException;
         return this;
@@ -79,6 +87,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object requestFailedException;
+
     public ImportCertificateAuthorityCertificateResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -89,6 +98,7 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object requestInProgressException;
+
     public ImportCertificateAuthorityCertificateResponse withRequestInProgressException(Object requestInProgressException) {
         this.requestInProgressException = requestInProgressException;
         return this;
@@ -96,6 +106,7 @@ public class ImportCertificateAuthorityCertificateResponse {
     
     
     public Integer statusCode;
+
     public ImportCertificateAuthorityCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class ImportCertificateAuthorityCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportCertificateAuthorityCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class ImportCertificateAuthorityCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportCertificateAuthorityCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ImportCertificateAuthorityCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdEventsPostRequest {
@@ -12,6 +13,7 @@ public class StoryIdEventsPostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public StoryIdEventsPostRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class StoryIdEventsPostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ManageEvent manageEvent;
+
     public StoryIdEventsPostRequest withManageEvent(org.openapis.openapi.models.shared.ManageEvent manageEvent) {
         this.manageEvent = manageEvent;
         return this;
     }
     
+    public StoryIdEventsPostRequest(@JsonProperty("id") String id, @JsonProperty("manage_event") org.openapis.openapi.models.shared.ManageEvent manageEvent) {
+        this.id = id;
+        this.manageEvent = manageEvent;
+  }
 }

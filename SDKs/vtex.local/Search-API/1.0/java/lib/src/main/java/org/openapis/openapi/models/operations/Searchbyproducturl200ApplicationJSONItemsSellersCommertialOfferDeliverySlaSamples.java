@@ -12,6 +12,7 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferDeli
      */
     @JsonProperty("DeliverySlaPerTypes")
     public Object[] deliverySlaPerTypes;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples withDeliverySlaPerTypes(Object[] deliverySlaPerTypes) {
         this.deliverySlaPerTypes = deliverySlaPerTypes;
         return this;
@@ -22,9 +23,14 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferDeli
      */
     @JsonProperty("Region")
     public String region;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamples(@JsonProperty("DeliverySlaPerTypes") Object[] deliverySlaPerTypes, @JsonProperty("Region") String region) {
+        this.deliverySlaPerTypes = deliverySlaPerTypes;
+        this.region = region;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRegistryResponse {
@@ -12,6 +13,7 @@ public class UpdateRegistryResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRegistryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRegistryResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateRegistryResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRegistryResponse {
     
     
     public String contentType;
+
     public UpdateRegistryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRegistryResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateRegistryResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRegistryResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateRegistryResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRegistryResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateRegistryResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateRegistryResponse {
     
     
     public Integer statusCode;
+
     public UpdateRegistryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRegistryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRegistryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateRegistryResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRegistryResponse updateRegistryResponse;
+
     public UpdateRegistryResponse withUpdateRegistryResponse(org.openapis.openapi.models.shared.UpdateRegistryResponse updateRegistryResponse) {
         this.updateRegistryResponse = updateRegistryResponse;
         return this;
     }
     
+    public UpdateRegistryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListDatasetLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetLabelDescriptions")
     public DatasetLabelDescription[] datasetLabelDescriptions;
+
     public ListDatasetLabelsResponse withDatasetLabelDescriptions(DatasetLabelDescription[] datasetLabelDescriptions) {
         this.datasetLabelDescriptions = datasetLabelDescriptions;
         return this;
@@ -23,9 +24,11 @@ public class ListDatasetLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatasetLabelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatasetLabelsResponse(){}
 }

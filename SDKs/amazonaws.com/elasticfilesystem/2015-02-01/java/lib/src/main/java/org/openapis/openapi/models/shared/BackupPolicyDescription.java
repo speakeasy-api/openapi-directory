@@ -15,9 +15,11 @@ public class BackupPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPolicy")
     public BackupPolicy backupPolicy;
+
     public BackupPolicyDescription withBackupPolicy(BackupPolicy backupPolicy) {
         this.backupPolicy = backupPolicy;
         return this;
     }
     
+    public BackupPolicyDescription(){}
 }

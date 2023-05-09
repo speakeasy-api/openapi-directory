@@ -15,9 +15,11 @@ public class StartGeneratedCodeJobResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedCodeJobId")
     public String generatedCodeJobId;
+
     public StartGeneratedCodeJobResult withGeneratedCodeJobId(String generatedCodeJobId) {
         this.generatedCodeJobId = generatedCodeJobId;
         return this;
     }
     
+    public StartGeneratedCodeJobResult(){}
 }

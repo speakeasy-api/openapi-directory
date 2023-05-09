@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLeng
      */
     @JsonProperty("portfolioValues")
     public Double[] portfolioValues;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1Portfolios withPortfolioValues(Double[] portfolioValues) {
         this.portfolioValues = portfolioValues;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequestBody1Portfolios(@JsonProperty("portfolioValues") Double[] portfolioValues) {
+        this.portfolioValues = portfolioValues;
+  }
 }

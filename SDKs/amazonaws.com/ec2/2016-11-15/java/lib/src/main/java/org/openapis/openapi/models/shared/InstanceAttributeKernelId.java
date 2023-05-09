@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeKernelId {
     
     public String value;
+
     public InstanceAttributeKernelId withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeKernelId(){}
 }

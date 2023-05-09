@@ -12,6 +12,7 @@ public class UpdateEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentConfig")
     public DeploymentConfig deploymentConfig;
+
     public UpdateEndpointInput withDeploymentConfig(DeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -19,6 +20,7 @@ public class UpdateEndpointInput {
     
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public UpdateEndpointInput withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -26,6 +28,7 @@ public class UpdateEndpointInput {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public UpdateEndpointInput withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -34,6 +37,7 @@ public class UpdateEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeRetainedVariantProperties")
     public VariantProperty[] excludeRetainedVariantProperties;
+
     public UpdateEndpointInput withExcludeRetainedVariantProperties(VariantProperty[] excludeRetainedVariantProperties) {
         this.excludeRetainedVariantProperties = excludeRetainedVariantProperties;
         return this;
@@ -42,6 +46,7 @@ public class UpdateEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetainAllVariantProperties")
     public Boolean retainAllVariantProperties;
+
     public UpdateEndpointInput withRetainAllVariantProperties(Boolean retainAllVariantProperties) {
         this.retainAllVariantProperties = retainAllVariantProperties;
         return this;
@@ -50,9 +55,14 @@ public class UpdateEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetainDeploymentConfig")
     public Boolean retainDeploymentConfig;
+
     public UpdateEndpointInput withRetainDeploymentConfig(Boolean retainDeploymentConfig) {
         this.retainDeploymentConfig = retainDeploymentConfig;
         return this;
     }
     
+    public UpdateEndpointInput(@JsonProperty("EndpointConfigName") String endpointConfigName, @JsonProperty("EndpointName") String endpointName) {
+        this.endpointConfigName = endpointConfigName;
+        this.endpointName = endpointName;
+  }
 }

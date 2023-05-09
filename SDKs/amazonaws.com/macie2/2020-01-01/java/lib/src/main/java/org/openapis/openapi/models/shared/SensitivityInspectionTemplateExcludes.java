@@ -15,9 +15,11 @@ public class SensitivityInspectionTemplateExcludes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDataIdentifierIds")
     public String[] managedDataIdentifierIds;
+
     public SensitivityInspectionTemplateExcludes withManagedDataIdentifierIds(String[] managedDataIdentifierIds) {
         this.managedDataIdentifierIds = managedDataIdentifierIds;
         return this;
     }
     
+    public SensitivityInspectionTemplateExcludes(){}
 }

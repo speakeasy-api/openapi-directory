@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsTotalLocalStorageGB {
     
     public Double max;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsTotalLocalStorageGB withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIn
     
     
     public Double min;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsTotalLocalStorageGB withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsTotalLocalStorageGB(){}
 }

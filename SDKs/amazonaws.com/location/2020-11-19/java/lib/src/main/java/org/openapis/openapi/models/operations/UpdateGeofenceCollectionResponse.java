@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGeofenceCollectionResponse {
@@ -12,6 +13,7 @@ public class UpdateGeofenceCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateGeofenceCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGeofenceCollectionResponse {
     
     
     public String contentType;
+
     public UpdateGeofenceCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGeofenceCollectionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateGeofenceCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGeofenceCollectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateGeofenceCollectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateGeofenceCollectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateGeofenceCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGeofenceCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGeofenceCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGeofenceCollectionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateGeofenceCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGeofenceCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGeofenceCollectionResponse updateGeofenceCollectionResponse;
+
     public UpdateGeofenceCollectionResponse withUpdateGeofenceCollectionResponse(org.openapis.openapi.models.shared.UpdateGeofenceCollectionResponse updateGeofenceCollectionResponse) {
         this.updateGeofenceCollectionResponse = updateGeofenceCollectionResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateGeofenceCollectionResponse {
      */
     
     public Object validationException;
+
     public UpdateGeofenceCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateGeofenceCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

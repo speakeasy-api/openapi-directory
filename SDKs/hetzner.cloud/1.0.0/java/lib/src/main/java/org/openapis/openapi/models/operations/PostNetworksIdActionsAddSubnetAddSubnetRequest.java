@@ -15,6 +15,7 @@ public class PostNetworksIdActionsAddSubnetAddSubnetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_range")
     public String ipRange;
+
     public PostNetworksIdActionsAddSubnetAddSubnetRequest withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -25,6 +26,7 @@ public class PostNetworksIdActionsAddSubnetAddSubnetRequest {
      */
     @JsonProperty("network_zone")
     public String networkZone;
+
     public PostNetworksIdActionsAddSubnetAddSubnetRequest withNetworkZone(String networkZone) {
         this.networkZone = networkZone;
         return this;
@@ -35,6 +37,7 @@ public class PostNetworksIdActionsAddSubnetAddSubnetRequest {
      */
     @JsonProperty("type")
     public PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum type;
+
     public PostNetworksIdActionsAddSubnetAddSubnetRequest withType(PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum type) {
         this.type = type;
         return this;
@@ -46,9 +49,14 @@ public class PostNetworksIdActionsAddSubnetAddSubnetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vswitch_id")
     public Long vswitchId;
+
     public PostNetworksIdActionsAddSubnetAddSubnetRequest withVswitchId(Long vswitchId) {
         this.vswitchId = vswitchId;
         return this;
     }
     
+    public PostNetworksIdActionsAddSubnetAddSubnetRequest(@JsonProperty("network_zone") String networkZone, @JsonProperty("type") PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum type) {
+        this.networkZone = networkZone;
+        this.type = type;
+  }
 }

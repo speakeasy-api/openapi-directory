@@ -18,6 +18,7 @@ public class DrivingDirectionMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public DrivingDirectionMetricsRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,9 +30,11 @@ public class DrivingDirectionMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numDays")
     public DrivingDirectionMetricsRequestNumDaysEnum numDays;
+
     public DrivingDirectionMetricsRequest withNumDays(DrivingDirectionMetricsRequestNumDaysEnum numDays) {
         this.numDays = numDays;
         return this;
     }
     
+    public DrivingDirectionMetricsRequest(){}
 }

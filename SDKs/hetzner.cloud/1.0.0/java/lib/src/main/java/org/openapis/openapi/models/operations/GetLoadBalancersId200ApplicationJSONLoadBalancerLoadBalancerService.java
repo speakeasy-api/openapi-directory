@@ -14,6 +14,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("destination_port")
     public Long destinationPort;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService withDestinationPort(Long destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -24,6 +25,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("health_check")
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck healthCheck;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService withHealthCheck(GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -35,6 +37,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http")
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP http;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService withHttp(GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP http) {
         this.http = http;
         return this;
@@ -45,6 +48,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("listen_port")
     public Long listenPort;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService withListenPort(Long listenPort) {
         this.listenPort = listenPort;
         return this;
@@ -55,6 +59,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("protocol")
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum protocol;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService withProtocol(GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -65,9 +70,17 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService
      */
     @JsonProperty("proxyprotocol")
     public Boolean proxyprotocol;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService withProxyprotocol(Boolean proxyprotocol) {
         this.proxyprotocol = proxyprotocol;
         return this;
     }
     
+    public GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerService(@JsonProperty("destination_port") Long destinationPort, @JsonProperty("health_check") GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck healthCheck, @JsonProperty("listen_port") Long listenPort, @JsonProperty("protocol") GetLoadBalancersId200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum protocol, @JsonProperty("proxyprotocol") Boolean proxyprotocol) {
+        this.destinationPort = destinationPort;
+        this.healthCheck = healthCheck;
+        this.listenPort = listenPort;
+        this.protocol = protocol;
+        this.proxyprotocol = proxyprotocol;
+  }
 }

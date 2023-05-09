@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendSerialConsoleSSHPublicKeyRequest {
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public SendSerialConsoleSSHPublicKeyRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -18,6 +19,7 @@ public class SendSerialConsoleSSHPublicKeyRequest {
     
     @JsonProperty("SSHPublicKey")
     public String sshPublicKey;
+
     public SendSerialConsoleSSHPublicKeyRequest withSSHPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -26,9 +28,14 @@ public class SendSerialConsoleSSHPublicKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SerialPort")
     public Long serialPort;
+
     public SendSerialConsoleSSHPublicKeyRequest withSerialPort(Long serialPort) {
         this.serialPort = serialPort;
         return this;
     }
     
+    public SendSerialConsoleSSHPublicKeyRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("SSHPublicKey") String sshPublicKey) {
+        this.instanceId = instanceId;
+        this.sshPublicKey = sshPublicKey;
+  }
 }

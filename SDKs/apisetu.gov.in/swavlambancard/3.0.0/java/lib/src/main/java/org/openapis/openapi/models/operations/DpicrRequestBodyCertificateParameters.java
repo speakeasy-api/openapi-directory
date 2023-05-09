@@ -12,6 +12,7 @@ public class DpicrRequestBodyCertificateParameters {
      */
     @JsonProperty("CERT_NO")
     public String certNo;
+
     public DpicrRequestBodyCertificateParameters withCertNo(String certNo) {
         this.certNo = certNo;
         return this;
@@ -22,9 +23,14 @@ public class DpicrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DpicrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
+    public DpicrRequestBodyCertificateParameters(@JsonProperty("CERT_NO") String certNo, @JsonProperty("FullName") String fullName) {
+        this.certNo = certNo;
+        this.fullName = fullName;
+  }
 }

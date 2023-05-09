@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * ResourceSharePermissionDetail - Information about an RAM permission.
+ * ResourceSharePermissionDetail - Information about a RAM managed permission.
  */
 public class ResourceSharePermissionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ResourceSharePermissionDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ResourceSharePermissionDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ResourceSharePermissionDetail withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,14 +40,25 @@ public class ResourceSharePermissionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVersion")
     public Boolean defaultVersion;
+
     public ResourceSharePermissionDetail withDefaultVersion(Boolean defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("featureSet")
+    public PermissionFeatureSetEnum featureSet;
+
+    public ResourceSharePermissionDetail withFeatureSet(PermissionFeatureSetEnum featureSet) {
+        this.featureSet = featureSet;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isResourceTypeDefault")
     public Boolean isResourceTypeDefault;
+
     public ResourceSharePermissionDetail withIsResourceTypeDefault(Boolean isResourceTypeDefault) {
         this.isResourceTypeDefault = isResourceTypeDefault;
         return this;
@@ -56,6 +69,7 @@ public class ResourceSharePermissionDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ResourceSharePermissionDetail withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -64,6 +78,7 @@ public class ResourceSharePermissionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceSharePermissionDetail withName(String name) {
         this.name = name;
         return this;
@@ -72,25 +87,56 @@ public class ResourceSharePermissionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public String permission;
+
     public ResourceSharePermissionDetail withPermission(String permission) {
         this.permission = permission;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("permissionType")
+    public PermissionTypeEnum permissionType;
+
+    public ResourceSharePermissionDetail withPermissionType(PermissionTypeEnum permissionType) {
+        this.permissionType = permissionType;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ResourceSharePermissionDetail withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public PermissionStatusEnum status;
+
+    public ResourceSharePermissionDetail withStatus(PermissionStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public Tag[] tags;
+
+    public ResourceSharePermissionDetail withTags(Tag[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ResourceSharePermissionDetail withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ResourceSharePermissionDetail(){}
 }

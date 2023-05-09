@@ -20,6 +20,7 @@ public class PlaylistItemContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endAt")
     public String endAt;
+
     public PlaylistItemContentDetails withEndAt(String endAt) {
         this.endAt = endAt;
         return this;
@@ -31,6 +32,7 @@ public class PlaylistItemContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PlaylistItemContentDetails withNote(String note) {
         this.note = note;
         return this;
@@ -42,6 +44,7 @@ public class PlaylistItemContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAt")
     public String startAt;
+
     public PlaylistItemContentDetails withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
@@ -53,6 +56,7 @@ public class PlaylistItemContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoId")
     public String videoId;
+
     public PlaylistItemContentDetails withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
@@ -66,9 +70,11 @@ public class PlaylistItemContentDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("videoPublishedAt")
     public OffsetDateTime videoPublishedAt;
+
     public PlaylistItemContentDetails withVideoPublishedAt(OffsetDateTime videoPublishedAt) {
         this.videoPublishedAt = videoPublishedAt;
         return this;
     }
     
+    public PlaylistItemContentDetails(){}
 }

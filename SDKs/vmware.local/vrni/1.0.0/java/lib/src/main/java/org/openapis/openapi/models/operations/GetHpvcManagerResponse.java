@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetHpvcManagerResponse {
     
     public String contentType;
+
     public GetHpvcManagerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetHpvcManagerResponse {
     
     
     public Integer statusCode;
+
     public GetHpvcManagerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetHpvcManagerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetHpvcManagerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetHpvcManagerResponse {
      */
     
     public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+
     public GetHpvcManagerResponse withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
         this.switchDataSource = switchDataSource;
         return this;
     }
     
+    public GetHpvcManagerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class RestoreTableFromBackupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableDescription")
     public TableDescription tableDescription;
+
     public RestoreTableFromBackupOutput withTableDescription(TableDescription tableDescription) {
         this.tableDescription = tableDescription;
         return this;
     }
     
+    public RestoreTableFromBackupOutput(){}
 }

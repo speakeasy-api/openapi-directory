@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobListPreparationAndReleaseTaskStatusRequest {
@@ -12,6 +13,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
     public String dollarFilter;
+
     public JobListPreparationAndReleaseTaskStatusRequest withDollarFilter(String dollarFilter) {
         this.dollarFilter = dollarFilter;
         return this;
@@ -22,6 +24,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
     public String dollarSelect;
+
     public JobListPreparationAndReleaseTaskStatusRequest withDollarSelect(String dollarSelect) {
         this.dollarSelect = dollarSelect;
         return this;
@@ -32,6 +35,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobListPreparationAndReleaseTaskStatusRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -42,6 +46,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobListPreparationAndReleaseTaskStatusRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -52,6 +57,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public JobListPreparationAndReleaseTaskStatusRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +68,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
     public Integer maxresults;
+
     public JobListPreparationAndReleaseTaskStatusRequest withMaxresults(Integer maxresults) {
         this.maxresults = maxresults;
         return this;
@@ -72,6 +79,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobListPreparationAndReleaseTaskStatusRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -82,6 +90,7 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobListPreparationAndReleaseTaskStatusRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -92,9 +101,14 @@ public class JobListPreparationAndReleaseTaskStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobListPreparationAndReleaseTaskStatusRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobListPreparationAndReleaseTaskStatusRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("jobId") String jobId) {
+        this.apiVersion = apiVersion;
+        this.jobId = jobId;
+  }
 }

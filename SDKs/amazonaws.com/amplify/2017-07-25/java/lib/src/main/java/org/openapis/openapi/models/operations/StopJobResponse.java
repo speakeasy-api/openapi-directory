@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopJobResponse {
@@ -12,6 +13,7 @@ public class StopJobResponse {
      */
     
     public Object badRequestException;
+
     public StopJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class StopJobResponse {
     
     
     public String contentType;
+
     public StopJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopJobResponse {
      */
     
     public Object internalFailureException;
+
     public StopJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class StopJobResponse {
      */
     
     public Object limitExceededException;
+
     public StopJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StopJobResponse {
      */
     
     public Object notFoundException;
+
     public StopJobResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class StopJobResponse {
     
     
     public Integer statusCode;
+
     public StopJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopJobResult stopJobResult;
+
     public StopJobResponse withStopJobResult(org.openapis.openapi.models.shared.StopJobResult stopJobResult) {
         this.stopJobResult = stopJobResult;
         return this;
@@ -83,9 +92,14 @@ public class StopJobResponse {
      */
     
     public Object unauthorizedException;
+
     public StopJobResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StopJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

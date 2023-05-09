@@ -15,6 +15,7 @@ public class ObjectAttributeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeKey")
     public AttributeKey attributeKey;
+
     public ObjectAttributeRange withAttributeKey(AttributeKey attributeKey) {
         this.attributeKey = attributeKey;
         return this;
@@ -23,9 +24,11 @@ public class ObjectAttributeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Range")
     public TypedAttributeValueRange range;
+
     public ObjectAttributeRange withRange(TypedAttributeValueRange range) {
         this.range = range;
         return this;
     }
     
+    public ObjectAttributeRange(){}
 }

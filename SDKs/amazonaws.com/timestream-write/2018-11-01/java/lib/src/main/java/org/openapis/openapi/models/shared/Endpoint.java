@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Endpoint {
     @JsonProperty("Address")
     public String address;
+
     public Endpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -19,9 +20,14 @@ public class Endpoint {
     
     @JsonProperty("CachePeriodInMinutes")
     public Long cachePeriodInMinutes;
+
     public Endpoint withCachePeriodInMinutes(Long cachePeriodInMinutes) {
         this.cachePeriodInMinutes = cachePeriodInMinutes;
         return this;
     }
     
+    public Endpoint(@JsonProperty("Address") String address, @JsonProperty("CachePeriodInMinutes") Long cachePeriodInMinutes) {
+        this.address = address;
+        this.cachePeriodInMinutes = cachePeriodInMinutes;
+  }
 }

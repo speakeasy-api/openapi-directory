@@ -15,6 +15,7 @@ public class DescribeDirectoryConfigsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryConfigs")
     public DirectoryConfig[] directoryConfigs;
+
     public DescribeDirectoryConfigsResult withDirectoryConfigs(DirectoryConfig[] directoryConfigs) {
         this.directoryConfigs = directoryConfigs;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDirectoryConfigsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDirectoryConfigsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDirectoryConfigsResult(){}
 }

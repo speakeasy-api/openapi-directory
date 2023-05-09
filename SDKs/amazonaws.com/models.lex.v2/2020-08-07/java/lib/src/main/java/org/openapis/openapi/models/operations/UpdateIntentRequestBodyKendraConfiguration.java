@@ -15,6 +15,7 @@ public class UpdateIntentRequestBodyKendraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kendraIndex")
     public String kendraIndex;
+
     public UpdateIntentRequestBodyKendraConfiguration withKendraIndex(String kendraIndex) {
         this.kendraIndex = kendraIndex;
         return this;
@@ -23,6 +24,7 @@ public class UpdateIntentRequestBodyKendraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryFilterString")
     public String queryFilterString;
+
     public UpdateIntentRequestBodyKendraConfiguration withQueryFilterString(String queryFilterString) {
         this.queryFilterString = queryFilterString;
         return this;
@@ -31,9 +33,11 @@ public class UpdateIntentRequestBodyKendraConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryFilterStringEnabled")
     public Boolean queryFilterStringEnabled;
+
     public UpdateIntentRequestBodyKendraConfiguration withQueryFilterStringEnabled(Boolean queryFilterStringEnabled) {
         this.queryFilterStringEnabled = queryFilterStringEnabled;
         return this;
     }
     
+    public UpdateIntentRequestBodyKendraConfiguration(){}
 }

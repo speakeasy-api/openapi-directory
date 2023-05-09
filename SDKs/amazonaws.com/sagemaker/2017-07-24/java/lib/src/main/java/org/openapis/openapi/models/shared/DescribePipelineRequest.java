@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePipelineRequest {
     @JsonProperty("PipelineName")
     public String pipelineName;
+
     public DescribePipelineRequest withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
     }
     
+    public DescribePipelineRequest(@JsonProperty("PipelineName") String pipelineName) {
+        this.pipelineName = pipelineName;
+  }
 }

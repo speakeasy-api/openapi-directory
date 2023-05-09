@@ -15,6 +15,7 @@ public class TagApiSpecRevisionRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public TagApiSpecRevisionRequest withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class TagApiSpecRevisionRequest {
      */
     @JsonProperty("tag")
     public String tag;
+
     public TagApiSpecRevisionRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public TagApiSpecRevisionRequest(@JsonProperty("name") String name, @JsonProperty("tag") String tag) {
+        this.name = name;
+        this.tag = tag;
+  }
 }

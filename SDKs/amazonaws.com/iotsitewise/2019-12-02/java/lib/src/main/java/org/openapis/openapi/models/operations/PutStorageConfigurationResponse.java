@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutStorageConfigurationResponse {
@@ -12,6 +13,7 @@ public class PutStorageConfigurationResponse {
      */
     
     public Object conflictingOperationException;
+
     public PutStorageConfigurationResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class PutStorageConfigurationResponse {
     
     
     public String contentType;
+
     public PutStorageConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutStorageConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public PutStorageConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class PutStorageConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public PutStorageConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class PutStorageConfigurationResponse {
      */
     
     public Object limitExceededException;
+
     public PutStorageConfigurationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutStorageConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutStorageConfigurationResponse putStorageConfigurationResponse;
+
     public PutStorageConfigurationResponse withPutStorageConfigurationResponse(org.openapis.openapi.models.shared.PutStorageConfigurationResponse putStorageConfigurationResponse) {
         this.putStorageConfigurationResponse = putStorageConfigurationResponse;
         return this;
@@ -69,6 +76,7 @@ public class PutStorageConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutStorageConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class PutStorageConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutStorageConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutStorageConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutStorageConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class PutStorageConfigurationResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public PutStorageConfigurationResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -103,9 +114,14 @@ public class PutStorageConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public PutStorageConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutStorageConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

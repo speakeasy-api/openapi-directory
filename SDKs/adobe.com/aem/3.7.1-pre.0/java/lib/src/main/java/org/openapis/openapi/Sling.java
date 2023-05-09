@@ -46,10 +46,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAgentResponse res = new org.openapis.openapi.models.operations.DeleteAgentResponse() {{
+        org.openapis.openapi.models.operations.DeleteAgentResponse res = new org.openapis.openapi.models.operations.DeleteAgentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -73,10 +71,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNodeResponse res = new org.openapis.openapi.models.operations.DeleteNodeResponse() {{
+        org.openapis.openapi.models.operations.DeleteNodeResponse res = new org.openapis.openapi.models.operations.DeleteNodeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -100,10 +96,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAgentResponse res = new org.openapis.openapi.models.operations.GetAgentResponse() {{
+        org.openapis.openapi.models.operations.GetAgentResponse res = new org.openapis.openapi.models.operations.GetAgentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -127,11 +121,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAgentsResponse res = new org.openapis.openapi.models.operations.GetAgentsResponse() {{
+        org.openapis.openapi.models.operations.GetAgentsResponse res = new org.openapis.openapi.models.operations.GetAgentsResponse(contentType, httpRes.statusCode()) {{
             getAgentsDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -159,12 +151,10 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAuthorizableKeystoreResponse res = new org.openapis.openapi.models.operations.GetAuthorizableKeystoreResponse() {{
+        org.openapis.openapi.models.operations.GetAuthorizableKeystoreResponse res = new org.openapis.openapi.models.operations.GetAuthorizableKeystoreResponse(contentType, httpRes.statusCode()) {{
             keystoreInfo = null;
             getAuthorizableKeystoreDefaultTextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +188,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetKeystoreResponse res = new org.openapis.openapi.models.operations.GetKeystoreResponse() {{
+        org.openapis.openapi.models.operations.GetKeystoreResponse res = new org.openapis.openapi.models.operations.GetKeystoreResponse(contentType, httpRes.statusCode()) {{
             getKeystoreDefaultApplicationOctetStreamBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -230,10 +218,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNodeResponse res = new org.openapis.openapi.models.operations.GetNodeResponse() {{
+        org.openapis.openapi.models.operations.GetNodeResponse res = new org.openapis.openapi.models.operations.GetNodeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -257,11 +243,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPackageResponse res = new org.openapis.openapi.models.operations.GetPackageResponse() {{
+        org.openapis.openapi.models.operations.GetPackageResponse res = new org.openapis.openapi.models.operations.GetPackageResponse(contentType, httpRes.statusCode()) {{
             getPackageDefaultApplicationOctetStreamBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -289,11 +273,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPackageFilterResponse res = new org.openapis.openapi.models.operations.GetPackageFilterResponse() {{
+        org.openapis.openapi.models.operations.GetPackageFilterResponse res = new org.openapis.openapi.models.operations.GetPackageFilterResponse(contentType, httpRes.statusCode()) {{
             getPackageFilterDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -327,11 +309,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetQueryResponse res = new org.openapis.openapi.models.operations.GetQueryResponse() {{
+        org.openapis.openapi.models.operations.GetQueryResponse res = new org.openapis.openapi.models.operations.GetQueryResponse(contentType, httpRes.statusCode()) {{
             getQueryDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -359,11 +339,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTruststoreResponse res = new org.openapis.openapi.models.operations.GetTruststoreResponse() {{
+        org.openapis.openapi.models.operations.GetTruststoreResponse res = new org.openapis.openapi.models.operations.GetTruststoreResponse(contentType, httpRes.statusCode()) {{
             getTruststoreDefaultApplicationOctetStreamBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -391,12 +369,10 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTruststoreInfoResponse res = new org.openapis.openapi.models.operations.GetTruststoreInfoResponse() {{
+        org.openapis.openapi.models.operations.GetTruststoreInfoResponse res = new org.openapis.openapi.models.operations.GetTruststoreInfoResponse(contentType, httpRes.statusCode()) {{
             truststoreInfo = null;
             getTruststoreInfoDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,10 +413,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAgentResponse res = new org.openapis.openapi.models.operations.PostAgentResponse() {{
+        org.openapis.openapi.models.operations.PostAgentResponse res = new org.openapis.openapi.models.operations.PostAgentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -472,12 +446,10 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAuthorizableKeystoreResponse res = new org.openapis.openapi.models.operations.PostAuthorizableKeystoreResponse() {{
+        org.openapis.openapi.models.operations.PostAuthorizableKeystoreResponse res = new org.openapis.openapi.models.operations.PostAuthorizableKeystoreResponse(contentType, httpRes.statusCode()) {{
             keystoreInfo = null;
             postAuthorizableKeystoreDefaultTextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,11 +489,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAuthorizablesResponse res = new org.openapis.openapi.models.operations.PostAuthorizablesResponse() {{
+        org.openapis.openapi.models.operations.PostAuthorizablesResponse res = new org.openapis.openapi.models.operations.PostAuthorizablesResponse(contentType, httpRes.statusCode()) {{
             postAuthorizablesDefaultTextHTMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -555,10 +525,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigAdobeGraniteSamlAuthenticationHandlerResponse res = new org.openapis.openapi.models.operations.PostConfigAdobeGraniteSamlAuthenticationHandlerResponse() {{
+        org.openapis.openapi.models.operations.PostConfigAdobeGraniteSamlAuthenticationHandlerResponse res = new org.openapis.openapi.models.operations.PostConfigAdobeGraniteSamlAuthenticationHandlerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -588,10 +556,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigApacheFelixJettyBasedHttpServiceResponse res = new org.openapis.openapi.models.operations.PostConfigApacheFelixJettyBasedHttpServiceResponse() {{
+        org.openapis.openapi.models.operations.PostConfigApacheFelixJettyBasedHttpServiceResponse res = new org.openapis.openapi.models.operations.PostConfigApacheFelixJettyBasedHttpServiceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -621,10 +587,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigApacheHttpComponentsProxyConfigurationResponse res = new org.openapis.openapi.models.operations.PostConfigApacheHttpComponentsProxyConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PostConfigApacheHttpComponentsProxyConfigurationResponse res = new org.openapis.openapi.models.operations.PostConfigApacheHttpComponentsProxyConfigurationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -654,10 +618,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigApacheSlingDavExServletResponse res = new org.openapis.openapi.models.operations.PostConfigApacheSlingDavExServletResponse() {{
+        org.openapis.openapi.models.operations.PostConfigApacheSlingDavExServletResponse res = new org.openapis.openapi.models.operations.PostConfigApacheSlingDavExServletResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -687,10 +649,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigApacheSlingGetServletResponse res = new org.openapis.openapi.models.operations.PostConfigApacheSlingGetServletResponse() {{
+        org.openapis.openapi.models.operations.PostConfigApacheSlingGetServletResponse res = new org.openapis.openapi.models.operations.PostConfigApacheSlingGetServletResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -720,10 +680,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigApacheSlingReferrerFilterResponse res = new org.openapis.openapi.models.operations.PostConfigApacheSlingReferrerFilterResponse() {{
+        org.openapis.openapi.models.operations.PostConfigApacheSlingReferrerFilterResponse res = new org.openapis.openapi.models.operations.PostConfigApacheSlingReferrerFilterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -747,10 +705,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigPropertyResponse res = new org.openapis.openapi.models.operations.PostConfigPropertyResponse() {{
+        org.openapis.openapi.models.operations.PostConfigPropertyResponse res = new org.openapis.openapi.models.operations.PostConfigPropertyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -782,10 +738,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNodeResponse res = new org.openapis.openapi.models.operations.PostNodeResponse() {{
+        org.openapis.openapi.models.operations.PostNodeResponse res = new org.openapis.openapi.models.operations.PostNodeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -815,10 +769,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNodeRwResponse res = new org.openapis.openapi.models.operations.PostNodeRwResponse() {{
+        org.openapis.openapi.models.operations.PostNodeRwResponse res = new org.openapis.openapi.models.operations.PostNodeRwResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -848,10 +800,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPathResponse res = new org.openapis.openapi.models.operations.PostPathResponse() {{
+        org.openapis.openapi.models.operations.PostPathResponse res = new org.openapis.openapi.models.operations.PostPathResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -881,11 +831,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostQueryResponse res = new org.openapis.openapi.models.operations.PostQueryResponse() {{
+        org.openapis.openapi.models.operations.PostQueryResponse res = new org.openapis.openapi.models.operations.PostQueryResponse(contentType, httpRes.statusCode()) {{
             postQueryDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -919,10 +867,8 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTreeActivationResponse res = new org.openapis.openapi.models.operations.PostTreeActivationResponse() {{
+        org.openapis.openapi.models.operations.PostTreeActivationResponse res = new org.openapis.openapi.models.operations.PostTreeActivationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -954,11 +900,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTruststoreResponse res = new org.openapis.openapi.models.operations.PostTruststoreResponse() {{
+        org.openapis.openapi.models.operations.PostTruststoreResponse res = new org.openapis.openapi.models.operations.PostTruststoreResponse(contentType, httpRes.statusCode()) {{
             postTruststoreDefaultTextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -988,11 +932,9 @@ public class Sling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTruststorePkcs12Response res = new org.openapis.openapi.models.operations.PostTruststorePkcs12Response() {{
+        org.openapis.openapi.models.operations.PostTruststorePkcs12Response res = new org.openapis.openapi.models.operations.PostTruststorePkcs12Response(contentType, httpRes.statusCode()) {{
             postTruststorePkcs12DefaultTextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

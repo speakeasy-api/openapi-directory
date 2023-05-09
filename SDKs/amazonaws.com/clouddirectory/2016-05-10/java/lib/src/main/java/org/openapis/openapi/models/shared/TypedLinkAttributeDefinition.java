@@ -15,6 +15,7 @@ public class TypedLinkAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public TypedAttributeValue defaultValue;
+
     public TypedLinkAttributeDefinition withDefaultValue(TypedAttributeValue defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class TypedLinkAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsImmutable")
     public Boolean isImmutable;
+
     public TypedLinkAttributeDefinition withIsImmutable(Boolean isImmutable) {
         this.isImmutable = isImmutable;
         return this;
@@ -30,6 +32,7 @@ public class TypedLinkAttributeDefinition {
     
     @JsonProperty("Name")
     public String name;
+
     public TypedLinkAttributeDefinition withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class TypedLinkAttributeDefinition {
     
     @JsonProperty("RequiredBehavior")
     public RequiredAttributeBehaviorEnum requiredBehavior;
+
     public TypedLinkAttributeDefinition withRequiredBehavior(RequiredAttributeBehaviorEnum requiredBehavior) {
         this.requiredBehavior = requiredBehavior;
         return this;
@@ -45,6 +49,7 @@ public class TypedLinkAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public java.util.Map<String, Rule> rules;
+
     public TypedLinkAttributeDefinition withRules(java.util.Map<String, Rule> rules) {
         this.rules = rules;
         return this;
@@ -52,9 +57,15 @@ public class TypedLinkAttributeDefinition {
     
     @JsonProperty("Type")
     public FacetAttributeTypeEnum type;
+
     public TypedLinkAttributeDefinition withType(FacetAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TypedLinkAttributeDefinition(@JsonProperty("Name") String name, @JsonProperty("RequiredBehavior") RequiredAttributeBehaviorEnum requiredBehavior, @JsonProperty("Type") FacetAttributeTypeEnum type) {
+        this.name = name;
+        this.requiredBehavior = requiredBehavior;
+        this.type = type;
+  }
 }

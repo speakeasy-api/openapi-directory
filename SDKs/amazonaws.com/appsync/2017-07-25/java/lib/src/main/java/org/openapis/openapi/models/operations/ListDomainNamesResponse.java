@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDomainNamesResponse {
@@ -12,6 +13,7 @@ public class ListDomainNamesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDomainNamesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListDomainNamesResponse {
      */
     
     public Object badRequestException;
+
     public ListDomainNamesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ListDomainNamesResponse {
     
     
     public String contentType;
+
     public ListDomainNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListDomainNamesResponse {
      */
     
     public Object internalFailureException;
+
     public ListDomainNamesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class ListDomainNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDomainNamesResponse listDomainNamesResponse;
+
     public ListDomainNamesResponse withListDomainNamesResponse(org.openapis.openapi.models.shared.ListDomainNamesResponse listDomainNamesResponse) {
         this.listDomainNamesResponse = listDomainNamesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDomainNamesResponse {
     
     
     public Integer statusCode;
+
     public ListDomainNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListDomainNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDomainNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDomainNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

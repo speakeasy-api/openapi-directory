@@ -18,6 +18,7 @@ public class PersistenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistenceMode")
     public PersistenceConfigPersistenceModeEnum persistenceMode;
+
     public PersistenceConfig withPersistenceMode(PersistenceConfigPersistenceModeEnum persistenceMode) {
         this.persistenceMode = persistenceMode;
         return this;
@@ -29,6 +30,7 @@ public class PersistenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdbNextSnapshotTime")
     public String rdbNextSnapshotTime;
+
     public PersistenceConfig withRdbNextSnapshotTime(String rdbNextSnapshotTime) {
         this.rdbNextSnapshotTime = rdbNextSnapshotTime;
         return this;
@@ -40,6 +42,7 @@ public class PersistenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdbSnapshotPeriod")
     public PersistenceConfigRdbSnapshotPeriodEnum rdbSnapshotPeriod;
+
     public PersistenceConfig withRdbSnapshotPeriod(PersistenceConfigRdbSnapshotPeriodEnum rdbSnapshotPeriod) {
         this.rdbSnapshotPeriod = rdbSnapshotPeriod;
         return this;
@@ -51,9 +54,11 @@ public class PersistenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdbSnapshotStartTime")
     public String rdbSnapshotStartTime;
+
     public PersistenceConfig withRdbSnapshotStartTime(String rdbSnapshotStartTime) {
         this.rdbSnapshotStartTime = rdbSnapshotStartTime;
         return this;
     }
     
+    public PersistenceConfig(){}
 }

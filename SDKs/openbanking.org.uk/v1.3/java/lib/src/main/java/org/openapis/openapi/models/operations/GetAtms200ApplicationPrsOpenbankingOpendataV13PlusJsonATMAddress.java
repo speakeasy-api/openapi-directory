@@ -18,6 +18,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BuildingNumberOrName")
     public String buildingNumberOrName;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress withBuildingNumberOrName(String buildingNumberOrName) {
         this.buildingNumberOrName = buildingNumberOrName;
         return this;
@@ -28,6 +29,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress {
      */
     @JsonProperty("Country")
     public String country;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -39,6 +41,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountrySubDivision")
     public String countrySubDivision;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress withCountrySubDivision(String countrySubDivision) {
         this.countrySubDivision = countrySubDivision;
         return this;
@@ -50,6 +53,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptionalAddressField")
     public String optionalAddressField;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress withOptionalAddressField(String optionalAddressField) {
         this.optionalAddressField = optionalAddressField;
         return this;
@@ -60,6 +64,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress {
      */
     @JsonProperty("PostCode")
     public String postCode;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress withPostCode(String postCode) {
         this.postCode = postCode;
         return this;
@@ -70,6 +75,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress {
      */
     @JsonProperty("StreetName")
     public String streetName;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
@@ -81,9 +87,15 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TownName")
     public String townName;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress withTownName(String townName) {
         this.townName = townName;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress(@JsonProperty("Country") String country, @JsonProperty("PostCode") String postCode, @JsonProperty("StreetName") String streetName) {
+        this.country = country;
+        this.postCode = postCode;
+        this.streetName = streetName;
+  }
 }

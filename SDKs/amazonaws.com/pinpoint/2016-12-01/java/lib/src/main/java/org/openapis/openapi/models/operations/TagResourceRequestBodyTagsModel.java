@@ -15,9 +15,11 @@ public class TagResourceRequestBodyTagsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public TagResourceRequestBodyTagsModel withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceRequestBodyTagsModel(){}
 }

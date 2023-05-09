@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber batchInputMarketingEventSubscriber;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest withBatchInputMarketingEventSubscriber(org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber batchInputMarketingEventSubscriber) {
         this.batchInputMarketingEventSubscriber = batchInputMarketingEventSubscriber;
         return this;
@@ -16,6 +18,7 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateU
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
     public String externalAccountId;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -23,6 +26,7 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateU
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
     public String externalEventId;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
@@ -30,9 +34,16 @@ public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateU
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriberState")
     public String subscriberState;
+
     public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest withSubscriberState(String subscriberState) {
         this.subscriberState = subscriberState;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest(@JsonProperty("BatchInputMarketingEventSubscriber") org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber batchInputMarketingEventSubscriber, @JsonProperty("externalAccountId") String externalAccountId, @JsonProperty("externalEventId") String externalEventId, @JsonProperty("subscriberState") String subscriberState) {
+        this.batchInputMarketingEventSubscriber = batchInputMarketingEventSubscriber;
+        this.externalAccountId = externalAccountId;
+        this.externalEventId = externalEventId;
+        this.subscriberState = subscriberState;
+  }
 }

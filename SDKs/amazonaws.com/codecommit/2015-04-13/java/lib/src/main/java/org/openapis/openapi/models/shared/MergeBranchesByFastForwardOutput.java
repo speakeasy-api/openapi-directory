@@ -15,6 +15,7 @@ public class MergeBranchesByFastForwardOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitId")
     public String commitId;
+
     public MergeBranchesByFastForwardOutput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -23,9 +24,11 @@ public class MergeBranchesByFastForwardOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treeId")
     public String treeId;
+
     public MergeBranchesByFastForwardOutput withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public MergeBranchesByFastForwardOutput(){}
 }

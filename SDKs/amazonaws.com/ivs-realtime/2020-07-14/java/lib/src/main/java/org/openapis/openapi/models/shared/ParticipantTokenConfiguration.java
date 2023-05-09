@@ -15,6 +15,7 @@ public class ParticipantTokenConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public ParticipantTokenConfiguration withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class ParticipantTokenConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public ParticipantTokenCapabilityEnum[] capabilities;
+
     public ParticipantTokenConfiguration withCapabilities(ParticipantTokenCapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -31,6 +33,7 @@ public class ParticipantTokenConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public ParticipantTokenConfiguration withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -39,9 +42,11 @@ public class ParticipantTokenConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public ParticipantTokenConfiguration withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ParticipantTokenConfiguration(){}
 }

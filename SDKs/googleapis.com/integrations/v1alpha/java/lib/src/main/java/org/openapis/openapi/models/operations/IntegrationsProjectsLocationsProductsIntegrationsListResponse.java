@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsProductsIntegrationsListResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsProductsIntegrationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaListIntegrationsResponse googleCloudIntegrationsV1alphaListIntegrationsResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationsListResponse withGoogleCloudIntegrationsV1alphaListIntegrationsResponse(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaListIntegrationsResponse googleCloudIntegrationsV1alphaListIntegrationsResponse) {
         this.googleCloudIntegrationsV1alphaListIntegrationsResponse = googleCloudIntegrationsV1alphaListIntegrationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsProductsIntegrationsListResponse {
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsProductsIntegrationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsProductsIntegrationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsProductsIntegrationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsProductsIntegrationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceInfo {
     @JsonProperty("4k_blocked")
     public Integer fourkBlocked;
+
     public DeviceInfo withFourkBlocked(Integer fourkBlocked) {
         this.fourkBlocked = fourkBlocked;
         return this;
@@ -16,6 +17,7 @@ public class DeviceInfo {
     
     @JsonProperty("capabilities")
     public Capabilities capabilities;
+
     public DeviceInfo withCapabilities(Capabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -23,6 +25,7 @@ public class DeviceInfo {
     
     @JsonProperty("cloud_device_id")
     public String cloudDeviceId;
+
     public DeviceInfo withCloudDeviceId(String cloudDeviceId) {
         this.cloudDeviceId = cloudDeviceId;
         return this;
@@ -30,6 +33,7 @@ public class DeviceInfo {
     
     @JsonProperty("factory_country_code")
     public String factoryCountryCode;
+
     public DeviceInfo withFactoryCountryCode(String factoryCountryCode) {
         this.factoryCountryCode = factoryCountryCode;
         return this;
@@ -37,6 +41,7 @@ public class DeviceInfo {
     
     @JsonProperty("hotspot_bssid")
     public String hotspotBssid;
+
     public DeviceInfo withHotspotBssid(String hotspotBssid) {
         this.hotspotBssid = hotspotBssid;
         return this;
@@ -44,6 +49,7 @@ public class DeviceInfo {
     
     @JsonProperty("local_authorization_token_hash")
     public String localAuthorizationTokenHash;
+
     public DeviceInfo withLocalAuthorizationTokenHash(String localAuthorizationTokenHash) {
         this.localAuthorizationTokenHash = localAuthorizationTokenHash;
         return this;
@@ -51,6 +57,7 @@ public class DeviceInfo {
     
     @JsonProperty("mac_address")
     public String macAddress;
+
     public DeviceInfo withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -58,6 +65,7 @@ public class DeviceInfo {
     
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public DeviceInfo withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -65,6 +73,7 @@ public class DeviceInfo {
     
     @JsonProperty("model_name")
     public String modelName;
+
     public DeviceInfo withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -72,6 +81,7 @@ public class DeviceInfo {
     
     @JsonProperty("product_name")
     public String productName;
+
     public DeviceInfo withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -79,6 +89,7 @@ public class DeviceInfo {
     
     @JsonProperty("public_key")
     public String publicKey;
+
     public DeviceInfo withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -86,6 +97,7 @@ public class DeviceInfo {
     
     @JsonProperty("ssdp_udn")
     public String ssdpUdn;
+
     public DeviceInfo withSsdpUdn(String ssdpUdn) {
         this.ssdpUdn = ssdpUdn;
         return this;
@@ -93,6 +105,7 @@ public class DeviceInfo {
     
     @JsonProperty("uma_client_id")
     public String umaClientId;
+
     public DeviceInfo withUmaClientId(String umaClientId) {
         this.umaClientId = umaClientId;
         return this;
@@ -100,6 +113,7 @@ public class DeviceInfo {
     
     @JsonProperty("uptime")
     public Double uptime;
+
     public DeviceInfo withUptime(Double uptime) {
         this.uptime = uptime;
         return this;
@@ -107,9 +121,27 @@ public class DeviceInfo {
     
     @JsonProperty("weave_device_id")
     public String weaveDeviceId;
+
     public DeviceInfo withWeaveDeviceId(String weaveDeviceId) {
         this.weaveDeviceId = weaveDeviceId;
         return this;
     }
     
+    public DeviceInfo(@JsonProperty("4k_blocked") Integer fourkBlocked, @JsonProperty("capabilities") Capabilities capabilities, @JsonProperty("cloud_device_id") String cloudDeviceId, @JsonProperty("factory_country_code") String factoryCountryCode, @JsonProperty("hotspot_bssid") String hotspotBssid, @JsonProperty("local_authorization_token_hash") String localAuthorizationTokenHash, @JsonProperty("mac_address") String macAddress, @JsonProperty("manufacturer") String manufacturer, @JsonProperty("model_name") String modelName, @JsonProperty("product_name") String productName, @JsonProperty("public_key") String publicKey, @JsonProperty("ssdp_udn") String ssdpUdn, @JsonProperty("uma_client_id") String umaClientId, @JsonProperty("uptime") Double uptime, @JsonProperty("weave_device_id") String weaveDeviceId) {
+        this.fourkBlocked = fourkBlocked;
+        this.capabilities = capabilities;
+        this.cloudDeviceId = cloudDeviceId;
+        this.factoryCountryCode = factoryCountryCode;
+        this.hotspotBssid = hotspotBssid;
+        this.localAuthorizationTokenHash = localAuthorizationTokenHash;
+        this.macAddress = macAddress;
+        this.manufacturer = manufacturer;
+        this.modelName = modelName;
+        this.productName = productName;
+        this.publicKey = publicKey;
+        this.ssdpUdn = ssdpUdn;
+        this.umaClientId = umaClientId;
+        this.uptime = uptime;
+        this.weaveDeviceId = weaveDeviceId;
+  }
 }

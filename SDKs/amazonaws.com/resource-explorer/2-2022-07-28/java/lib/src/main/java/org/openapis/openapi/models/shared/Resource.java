@@ -20,6 +20,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Resource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Resource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastReportedAt")
     public OffsetDateTime lastReportedAt;
+
     public Resource withLastReportedAt(OffsetDateTime lastReportedAt) {
         this.lastReportedAt = lastReportedAt;
         return this;
@@ -38,6 +40,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwningAccountId")
     public String owningAccountId;
+
     public Resource withOwningAccountId(String owningAccountId) {
         this.owningAccountId = owningAccountId;
         return this;
@@ -46,6 +49,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public ResourceProperty[] properties;
+
     public Resource withProperties(ResourceProperty[] properties) {
         this.properties = properties;
         return this;
@@ -54,6 +58,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Resource withRegion(String region) {
         this.region = region;
         return this;
@@ -62,6 +67,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public Resource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -70,9 +76,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public Resource withService(String service) {
         this.service = service;
         return this;
     }
     
+    public Resource(){}
 }

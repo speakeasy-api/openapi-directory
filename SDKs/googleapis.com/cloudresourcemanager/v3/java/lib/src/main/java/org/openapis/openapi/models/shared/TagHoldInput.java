@@ -18,6 +18,7 @@ public class TagHoldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpLink")
     public String helpLink;
+
     public TagHoldInput withHelpLink(String helpLink) {
         this.helpLink = helpLink;
         return this;
@@ -29,6 +30,7 @@ public class TagHoldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holder")
     public String holder;
+
     public TagHoldInput withHolder(String holder) {
         this.holder = holder;
         return this;
@@ -40,9 +42,11 @@ public class TagHoldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public TagHoldInput withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public TagHoldInput(){}
 }

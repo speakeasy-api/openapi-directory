@@ -15,6 +15,7 @@ public class AwsEfsAccessPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPointId")
     public String accessPointId;
+
     public AwsEfsAccessPointDetails withAccessPointId(String accessPointId) {
         this.accessPointId = accessPointId;
         return this;
@@ -23,6 +24,7 @@ public class AwsEfsAccessPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AwsEfsAccessPointDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class AwsEfsAccessPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public AwsEfsAccessPointDetails withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -39,6 +42,7 @@ public class AwsEfsAccessPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public AwsEfsAccessPointDetails withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -47,6 +51,7 @@ public class AwsEfsAccessPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PosixUser")
     public AwsEfsAccessPointPosixUserDetails posixUser;
+
     public AwsEfsAccessPointDetails withPosixUser(AwsEfsAccessPointPosixUserDetails posixUser) {
         this.posixUser = posixUser;
         return this;
@@ -55,9 +60,11 @@ public class AwsEfsAccessPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootDirectory")
     public AwsEfsAccessPointRootDirectoryDetails rootDirectory;
+
     public AwsEfsAccessPointDetails withRootDirectory(AwsEfsAccessPointRootDirectoryDetails rootDirectory) {
         this.rootDirectory = rootDirectory;
         return this;
     }
     
+    public AwsEfsAccessPointDetails(){}
 }

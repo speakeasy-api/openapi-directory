@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateTrunkInterfaceResult {
     
     public String clientToken;
+
     public AssociateTrunkInterfaceResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class AssociateTrunkInterfaceResult {
     
     
     public AssociateTrunkInterfaceResultInterfaceAssociation interfaceAssociation;
+
     public AssociateTrunkInterfaceResult withInterfaceAssociation(AssociateTrunkInterfaceResultInterfaceAssociation interfaceAssociation) {
         this.interfaceAssociation = interfaceAssociation;
         return this;
     }
     
+    public AssociateTrunkInterfaceResult(){}
 }

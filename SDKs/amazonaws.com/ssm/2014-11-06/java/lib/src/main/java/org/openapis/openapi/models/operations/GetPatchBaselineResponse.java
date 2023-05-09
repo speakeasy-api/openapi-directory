@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPatchBaselineResponse {
     
     public String contentType;
+
     public GetPatchBaselineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPatchBaselineResponse {
      */
     
     public Object doesNotExistException;
+
     public GetPatchBaselineResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class GetPatchBaselineResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPatchBaselineResult getPatchBaselineResult;
+
     public GetPatchBaselineResponse withGetPatchBaselineResult(org.openapis.openapi.models.shared.GetPatchBaselineResult getPatchBaselineResult) {
         this.getPatchBaselineResult = getPatchBaselineResult;
         return this;
@@ -39,6 +43,7 @@ public class GetPatchBaselineResponse {
      */
     
     public Object internalServerError;
+
     public GetPatchBaselineResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetPatchBaselineResponse {
      */
     
     public Object invalidResourceId;
+
     public GetPatchBaselineResponse withInvalidResourceId(Object invalidResourceId) {
         this.invalidResourceId = invalidResourceId;
         return this;
@@ -56,6 +62,7 @@ public class GetPatchBaselineResponse {
     
     
     public Integer statusCode;
+
     public GetPatchBaselineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetPatchBaselineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPatchBaselineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPatchBaselineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

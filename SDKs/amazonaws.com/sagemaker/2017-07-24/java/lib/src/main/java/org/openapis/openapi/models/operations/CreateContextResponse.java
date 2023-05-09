@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContextResponse {
     
     public String contentType;
+
     public CreateContextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateContextResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContextResponse createContextResponse;
+
     public CreateContextResponse withCreateContextResponse(org.openapis.openapi.models.shared.CreateContextResponse createContextResponse) {
         this.createContextResponse = createContextResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateContextResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateContextResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -36,6 +40,7 @@ public class CreateContextResponse {
     
     
     public Integer statusCode;
+
     public CreateContextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateContextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateContextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

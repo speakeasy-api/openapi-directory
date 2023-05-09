@@ -15,6 +15,7 @@ public class SqlScheduledMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDefer")
     public Boolean canDefer;
+
     public SqlScheduledMaintenance withCanDefer(Boolean canDefer) {
         this.canDefer = canDefer;
         return this;
@@ -26,6 +27,7 @@ public class SqlScheduledMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReschedule")
     public Boolean canReschedule;
+
     public SqlScheduledMaintenance withCanReschedule(Boolean canReschedule) {
         this.canReschedule = canReschedule;
         return this;
@@ -37,6 +39,7 @@ public class SqlScheduledMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleDeadlineTime")
     public String scheduleDeadlineTime;
+
     public SqlScheduledMaintenance withScheduleDeadlineTime(String scheduleDeadlineTime) {
         this.scheduleDeadlineTime = scheduleDeadlineTime;
         return this;
@@ -48,9 +51,11 @@ public class SqlScheduledMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public SqlScheduledMaintenance withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public SqlScheduledMaintenance(){}
 }

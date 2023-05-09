@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSuppressedDestinationResponse {
@@ -12,6 +13,7 @@ public class PutSuppressedDestinationResponse {
      */
     
     public Object badRequestException;
+
     public PutSuppressedDestinationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutSuppressedDestinationResponse {
     
     
     public String contentType;
+
     public PutSuppressedDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutSuppressedDestinationResponse {
      */
     
     public java.util.Map<String, Object> putSuppressedDestinationResponse;
+
     public PutSuppressedDestinationResponse withPutSuppressedDestinationResponse(java.util.Map<String, Object> putSuppressedDestinationResponse) {
         this.putSuppressedDestinationResponse = putSuppressedDestinationResponse;
         return this;
@@ -36,6 +40,7 @@ public class PutSuppressedDestinationResponse {
     
     
     public Integer statusCode;
+
     public PutSuppressedDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PutSuppressedDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSuppressedDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PutSuppressedDestinationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutSuppressedDestinationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutSuppressedDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

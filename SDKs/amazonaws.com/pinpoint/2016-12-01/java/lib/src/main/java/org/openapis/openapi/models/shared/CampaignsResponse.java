@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CampaignsResponse {
     @JsonProperty("Item")
     public CampaignResponse[] item;
+
     public CampaignsResponse withItem(CampaignResponse[] item) {
         this.item = item;
         return this;
@@ -22,9 +23,13 @@ public class CampaignsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public CampaignsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public CampaignsResponse(@JsonProperty("Item") CampaignResponse[] item) {
+        this.item = item;
+  }
 }

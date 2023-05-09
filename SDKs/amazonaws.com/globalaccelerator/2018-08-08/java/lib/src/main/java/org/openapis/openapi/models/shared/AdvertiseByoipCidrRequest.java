@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdvertiseByoipCidrRequest {
     @JsonProperty("Cidr")
     public String cidr;
+
     public AdvertiseByoipCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
     }
     
+    public AdvertiseByoipCidrRequest(@JsonProperty("Cidr") String cidr) {
+        this.cidr = cidr;
+  }
 }

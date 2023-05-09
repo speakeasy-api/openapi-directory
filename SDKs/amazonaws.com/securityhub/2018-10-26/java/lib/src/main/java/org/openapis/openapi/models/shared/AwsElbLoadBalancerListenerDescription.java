@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerListenerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Listener")
     public AwsElbLoadBalancerListener listener;
+
     public AwsElbLoadBalancerListenerDescription withListener(AwsElbLoadBalancerListener listener) {
         this.listener = listener;
         return this;
@@ -23,9 +24,11 @@ public class AwsElbLoadBalancerListenerDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyNames")
     public String[] policyNames;
+
     public AwsElbLoadBalancerListenerDescription withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public AwsElbLoadBalancerListenerDescription(){}
 }

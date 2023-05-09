@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTemplateStepGroupResponse {
@@ -12,6 +13,7 @@ public class GetTemplateStepGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTemplateStepGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTemplateStepGroupResponse {
     
     
     public String contentType;
+
     public GetTemplateStepGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTemplateStepGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTemplateStepGroupResponse getTemplateStepGroupResponse;
+
     public GetTemplateStepGroupResponse withGetTemplateStepGroupResponse(org.openapis.openapi.models.shared.GetTemplateStepGroupResponse getTemplateStepGroupResponse) {
         this.getTemplateStepGroupResponse = getTemplateStepGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTemplateStepGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetTemplateStepGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetTemplateStepGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTemplateStepGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetTemplateStepGroupResponse {
     
     
     public Integer statusCode;
+
     public GetTemplateStepGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTemplateStepGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTemplateStepGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetTemplateStepGroupResponse {
      */
     
     public Object throttlingException;
+
     public GetTemplateStepGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetTemplateStepGroupResponse {
      */
     
     public Object validationException;
+
     public GetTemplateStepGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTemplateStepGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

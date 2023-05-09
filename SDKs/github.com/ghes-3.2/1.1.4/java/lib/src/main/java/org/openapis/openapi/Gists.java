@@ -59,12 +59,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsCheckIsStarredResponse res = new org.openapis.openapi.models.operations.GistsCheckIsStarredResponse() {{
+        org.openapis.openapi.models.operations.GistsCheckIsStarredResponse res = new org.openapis.openapi.models.operations.GistsCheckIsStarredResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
             gistsCheckIsStarred404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -116,13 +114,11 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsCreateResponse res = new org.openapis.openapi.models.operations.GistsCreateResponse() {{
+        org.openapis.openapi.models.operations.GistsCreateResponse res = new org.openapis.openapi.models.operations.GistsCreateResponse(contentType, httpRes.statusCode()) {{
             gistSimple = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -180,12 +176,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsCreateCommentResponse res = new org.openapis.openapi.models.operations.GistsCreateCommentResponse() {{
+        org.openapis.openapi.models.operations.GistsCreateCommentResponse res = new org.openapis.openapi.models.operations.GistsCreateCommentResponse(contentType, httpRes.statusCode()) {{
             gistComment = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -231,11 +225,9 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsDeleteResponse res = new org.openapis.openapi.models.operations.GistsDeleteResponse() {{
+        org.openapis.openapi.models.operations.GistsDeleteResponse res = new org.openapis.openapi.models.operations.GistsDeleteResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -272,11 +264,9 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsDeleteCommentResponse res = new org.openapis.openapi.models.operations.GistsDeleteCommentResponse() {{
+        org.openapis.openapi.models.operations.GistsDeleteCommentResponse res = new org.openapis.openapi.models.operations.GistsDeleteCommentResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -313,13 +303,11 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsForkResponse res = new org.openapis.openapi.models.operations.GistsForkResponse() {{
+        org.openapis.openapi.models.operations.GistsForkResponse res = new org.openapis.openapi.models.operations.GistsForkResponse(contentType, httpRes.statusCode()) {{
             baseGist = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -372,13 +360,11 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsGetResponse res = new org.openapis.openapi.models.operations.GistsGetResponse() {{
+        org.openapis.openapi.models.operations.GistsGetResponse res = new org.openapis.openapi.models.operations.GistsGetResponse(contentType, httpRes.statusCode()) {{
             gistSimple = null;
             gistsGet403ApplicationJSONObject = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -429,13 +415,11 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsGetCommentResponse res = new org.openapis.openapi.models.operations.GistsGetCommentResponse() {{
+        org.openapis.openapi.models.operations.GistsGetCommentResponse res = new org.openapis.openapi.models.operations.GistsGetCommentResponse(contentType, httpRes.statusCode()) {{
             gistComment = null;
             gistsGetComment403ApplicationJSONObject = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,13 +470,11 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsGetRevisionResponse res = new org.openapis.openapi.models.operations.GistsGetRevisionResponse() {{
+        org.openapis.openapi.models.operations.GistsGetRevisionResponse res = new org.openapis.openapi.models.operations.GistsGetRevisionResponse(contentType, httpRes.statusCode()) {{
             gistSimple = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -548,12 +530,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsListResponse res = new org.openapis.openapi.models.operations.GistsListResponse() {{
+        org.openapis.openapi.models.operations.GistsListResponse res = new org.openapis.openapi.models.operations.GistsListResponse(contentType, httpRes.statusCode()) {{
             baseGists = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -605,12 +585,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsListCommentsResponse res = new org.openapis.openapi.models.operations.GistsListCommentsResponse() {{
+        org.openapis.openapi.models.operations.GistsListCommentsResponse res = new org.openapis.openapi.models.operations.GistsListCommentsResponse(contentType, httpRes.statusCode()) {{
             gistComments = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -662,12 +640,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsListCommitsResponse res = new org.openapis.openapi.models.operations.GistsListCommitsResponse() {{
+        org.openapis.openapi.models.operations.GistsListCommitsResponse res = new org.openapis.openapi.models.operations.GistsListCommitsResponse(contentType, httpRes.statusCode()) {{
             gistCommits = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,12 +696,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsListForUserResponse res = new org.openapis.openapi.models.operations.GistsListForUserResponse() {{
+        org.openapis.openapi.models.operations.GistsListForUserResponse res = new org.openapis.openapi.models.operations.GistsListForUserResponse(contentType, httpRes.statusCode()) {{
             baseGists = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -775,12 +749,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsListForksResponse res = new org.openapis.openapi.models.operations.GistsListForksResponse() {{
+        org.openapis.openapi.models.operations.GistsListForksResponse res = new org.openapis.openapi.models.operations.GistsListForksResponse(contentType, httpRes.statusCode()) {{
             gistSimples = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -835,13 +807,11 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsListPublicResponse res = new org.openapis.openapi.models.operations.GistsListPublicResponse() {{
+        org.openapis.openapi.models.operations.GistsListPublicResponse res = new org.openapis.openapi.models.operations.GistsListPublicResponse(contentType, httpRes.statusCode()) {{
             baseGists = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -901,12 +871,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsListStarredResponse res = new org.openapis.openapi.models.operations.GistsListStarredResponse() {{
+        org.openapis.openapi.models.operations.GistsListStarredResponse res = new org.openapis.openapi.models.operations.GistsListStarredResponse(contentType, httpRes.statusCode()) {{
             baseGists = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -953,11 +921,9 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsStarResponse res = new org.openapis.openapi.models.operations.GistsStarResponse() {{
+        org.openapis.openapi.models.operations.GistsStarResponse res = new org.openapis.openapi.models.operations.GistsStarResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -994,11 +960,9 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsUnstarResponse res = new org.openapis.openapi.models.operations.GistsUnstarResponse() {{
+        org.openapis.openapi.models.operations.GistsUnstarResponse res = new org.openapis.openapi.models.operations.GistsUnstarResponse(contentType, httpRes.statusCode()) {{
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {
@@ -1041,13 +1005,11 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsUpdateResponse res = new org.openapis.openapi.models.operations.GistsUpdateResponse() {{
+        org.openapis.openapi.models.operations.GistsUpdateResponse res = new org.openapis.openapi.models.operations.GistsUpdateResponse(contentType, httpRes.statusCode()) {{
             gistSimple = null;
             basicError = null;
             validationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1101,12 +1063,10 @@ public class Gists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GistsUpdateCommentResponse res = new org.openapis.openapi.models.operations.GistsUpdateCommentResponse() {{
+        org.openapis.openapi.models.operations.GistsUpdateCommentResponse res = new org.openapis.openapi.models.operations.GistsUpdateCommentResponse(contentType, httpRes.statusCode()) {{
             gistComment = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

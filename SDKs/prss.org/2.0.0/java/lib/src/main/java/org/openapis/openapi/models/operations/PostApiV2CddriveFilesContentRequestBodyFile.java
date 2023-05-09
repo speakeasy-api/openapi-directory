@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV2CddriveFilesContentRequestBodyFile {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public PostApiV2CddriveFilesContentRequestBodyFile withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class PostApiV2CddriveFilesContentRequestBodyFile {
     
     @SpeakeasyMetadata("multipartForm:name=file")
     public String file;
+
     public PostApiV2CddriveFilesContentRequestBodyFile withFile(String file) {
         this.file = file;
         return this;
     }
     
+    public PostApiV2CddriveFilesContentRequestBodyFile(@JsonProperty("content") byte[] content, @JsonProperty("file") String file) {
+        this.content = content;
+        this.file = file;
+  }
 }

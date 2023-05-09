@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClust
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClust
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedResource")
     public String linkedResource;
+
     public GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec withLinkedResource(String linkedResource) {
         this.linkedResource = linkedResource;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClust
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec withLocation(String location) {
         this.location = location;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClust
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec(){}
 }

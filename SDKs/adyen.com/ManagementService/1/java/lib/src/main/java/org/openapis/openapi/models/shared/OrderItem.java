@@ -15,8 +15,21 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrderItem withId(String id) {
         this.id = id;
+        return this;
+    }
+    
+    /**
+     * The number of installments for the specified product `id`.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("installments")
+    public Long installments;
+
+    public OrderItem withInstallments(Long installments) {
+        this.installments = installments;
         return this;
     }
     
@@ -26,6 +39,7 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderItem withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +51,11 @@ public class OrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public OrderItem withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public OrderItem(){}
 }

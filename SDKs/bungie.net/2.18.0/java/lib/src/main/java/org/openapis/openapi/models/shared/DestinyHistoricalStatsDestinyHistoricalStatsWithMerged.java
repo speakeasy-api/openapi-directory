@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyHistoricalStatsDestinyHistoricalStatsWithMerged {
     
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod merged;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsWithMerged withMerged(DestinyHistoricalStatsDestinyHistoricalStatsByPeriod merged) {
         this.merged = merged;
         return this;
@@ -16,9 +17,11 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsWithMerged {
     
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsByPeriod> results;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsWithMerged withResults(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsByPeriod> results) {
         this.results = results;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalStatsWithMerged(){}
 }

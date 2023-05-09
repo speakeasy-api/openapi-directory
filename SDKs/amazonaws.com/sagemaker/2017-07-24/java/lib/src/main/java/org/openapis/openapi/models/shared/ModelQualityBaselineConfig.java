@@ -15,6 +15,7 @@ public class ModelQualityBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseliningJobName")
     public String baseliningJobName;
+
     public ModelQualityBaselineConfig withBaseliningJobName(String baseliningJobName) {
         this.baseliningJobName = baseliningJobName;
         return this;
@@ -26,9 +27,11 @@ public class ModelQualityBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintsResource")
     public MonitoringConstraintsResource constraintsResource;
+
     public ModelQualityBaselineConfig withConstraintsResource(MonitoringConstraintsResource constraintsResource) {
         this.constraintsResource = constraintsResource;
         return this;
     }
     
+    public ModelQualityBaselineConfig(){}
 }

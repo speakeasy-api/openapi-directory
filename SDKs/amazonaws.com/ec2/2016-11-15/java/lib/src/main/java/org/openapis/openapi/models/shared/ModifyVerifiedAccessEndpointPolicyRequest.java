@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVerifiedAccessEndpointPolicyRequest {
     
     public String clientToken;
+
     public ModifyVerifiedAccessEndpointPolicyRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVerifiedAccessEndpointPolicyRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVerifiedAccessEndpointPolicyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVerifiedAccessEndpointPolicyRequest {
     
     
     public String policyDocument;
+
     public ModifyVerifiedAccessEndpointPolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -30,6 +33,7 @@ public class ModifyVerifiedAccessEndpointPolicyRequest {
     
     
     public Boolean policyEnabled;
+
     public ModifyVerifiedAccessEndpointPolicyRequest withPolicyEnabled(Boolean policyEnabled) {
         this.policyEnabled = policyEnabled;
         return this;
@@ -37,9 +41,14 @@ public class ModifyVerifiedAccessEndpointPolicyRequest {
     
     
     public String verifiedAccessEndpointId;
+
     public ModifyVerifiedAccessEndpointPolicyRequest withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
     }
     
+    public ModifyVerifiedAccessEndpointPolicyRequest(@JsonProperty("PolicyEnabled") Boolean policyEnabled, @JsonProperty("VerifiedAccessEndpointId") String verifiedAccessEndpointId) {
+        this.policyEnabled = policyEnabled;
+        this.verifiedAccessEndpointId = verifiedAccessEndpointId;
+  }
 }

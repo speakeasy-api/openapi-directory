@@ -27,6 +27,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderLineItemTax withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -40,6 +41,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_applied")
     public Boolean autoApplied;
+
     public OrderLineItemTax withAutoApplied(Boolean autoApplied) {
         this.autoApplied = autoApplied;
         return this;
@@ -51,6 +53,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderLineItemTax withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -62,6 +65,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderLineItemTax withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -90,6 +94,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public OrderLineItemTax withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -101,6 +106,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderLineItemTax withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +120,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public OrderLineItemTax withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -131,6 +138,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public OrderLineItemTax withScope(String scope) {
         this.scope = scope;
         return this;
@@ -142,6 +150,7 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderLineItemTax withType(String type) {
         this.type = type;
         return this;
@@ -153,9 +162,11 @@ public class OrderLineItemTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderLineItemTax withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderLineItemTax(){}
 }

@@ -15,6 +15,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public UpdateDeploymentGroupInput withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class UpdateDeploymentGroupInput {
     
     @JsonProperty("applicationName")
     public String applicationName;
+
     public UpdateDeploymentGroupInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -30,6 +32,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoRollbackConfiguration")
     public AutoRollbackConfiguration autoRollbackConfiguration;
+
     public UpdateDeploymentGroupInput withAutoRollbackConfiguration(AutoRollbackConfiguration autoRollbackConfiguration) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
         return this;
@@ -38,6 +41,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroups")
     public String[] autoScalingGroups;
+
     public UpdateDeploymentGroupInput withAutoScalingGroups(String[] autoScalingGroups) {
         this.autoScalingGroups = autoScalingGroups;
         return this;
@@ -46,6 +50,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueGreenDeploymentConfiguration")
     public BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration;
+
     public UpdateDeploymentGroupInput withBlueGreenDeploymentConfiguration(BlueGreenDeploymentConfiguration blueGreenDeploymentConfiguration) {
         this.blueGreenDeploymentConfiguration = blueGreenDeploymentConfiguration;
         return this;
@@ -53,6 +58,7 @@ public class UpdateDeploymentGroupInput {
     
     @JsonProperty("currentDeploymentGroupName")
     public String currentDeploymentGroupName;
+
     public UpdateDeploymentGroupInput withCurrentDeploymentGroupName(String currentDeploymentGroupName) {
         this.currentDeploymentGroupName = currentDeploymentGroupName;
         return this;
@@ -61,6 +67,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigName")
     public String deploymentConfigName;
+
     public UpdateDeploymentGroupInput withDeploymentConfigName(String deploymentConfigName) {
         this.deploymentConfigName = deploymentConfigName;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStyle")
     public DeploymentStyle deploymentStyle;
+
     public UpdateDeploymentGroupInput withDeploymentStyle(DeploymentStyle deploymentStyle) {
         this.deploymentStyle = deploymentStyle;
         return this;
@@ -77,6 +85,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2TagFilters")
     public Ec2TagFilter[] ec2TagFilters;
+
     public UpdateDeploymentGroupInput withEc2TagFilters(Ec2TagFilter[] ec2TagFilters) {
         this.ec2TagFilters = ec2TagFilters;
         return this;
@@ -85,6 +94,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2TagSet")
     public Ec2TagSet ec2TagSet;
+
     public UpdateDeploymentGroupInput withEc2TagSet(Ec2TagSet ec2TagSet) {
         this.ec2TagSet = ec2TagSet;
         return this;
@@ -93,6 +103,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecsServices")
     public ECSService[] ecsServices;
+
     public UpdateDeploymentGroupInput withEcsServices(ECSService[] ecsServices) {
         this.ecsServices = ecsServices;
         return this;
@@ -101,6 +112,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancerInfo")
     public LoadBalancerInfo loadBalancerInfo;
+
     public UpdateDeploymentGroupInput withLoadBalancerInfo(LoadBalancerInfo loadBalancerInfo) {
         this.loadBalancerInfo = loadBalancerInfo;
         return this;
@@ -109,6 +121,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newDeploymentGroupName")
     public String newDeploymentGroupName;
+
     public UpdateDeploymentGroupInput withNewDeploymentGroupName(String newDeploymentGroupName) {
         this.newDeploymentGroupName = newDeploymentGroupName;
         return this;
@@ -117,6 +130,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onPremisesInstanceTagFilters")
     public TagFilter[] onPremisesInstanceTagFilters;
+
     public UpdateDeploymentGroupInput withOnPremisesInstanceTagFilters(TagFilter[] onPremisesInstanceTagFilters) {
         this.onPremisesInstanceTagFilters = onPremisesInstanceTagFilters;
         return this;
@@ -125,6 +139,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onPremisesTagSet")
     public OnPremisesTagSet onPremisesTagSet;
+
     public UpdateDeploymentGroupInput withOnPremisesTagSet(OnPremisesTagSet onPremisesTagSet) {
         this.onPremisesTagSet = onPremisesTagSet;
         return this;
@@ -133,6 +148,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outdatedInstancesStrategy")
     public OutdatedInstancesStrategyEnum outdatedInstancesStrategy;
+
     public UpdateDeploymentGroupInput withOutdatedInstancesStrategy(OutdatedInstancesStrategyEnum outdatedInstancesStrategy) {
         this.outdatedInstancesStrategy = outdatedInstancesStrategy;
         return this;
@@ -141,6 +157,7 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRoleArn")
     public String serviceRoleArn;
+
     public UpdateDeploymentGroupInput withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -149,9 +166,14 @@ public class UpdateDeploymentGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerConfigurations")
     public TriggerConfig[] triggerConfigurations;
+
     public UpdateDeploymentGroupInput withTriggerConfigurations(TriggerConfig[] triggerConfigurations) {
         this.triggerConfigurations = triggerConfigurations;
         return this;
     }
     
+    public UpdateDeploymentGroupInput(@JsonProperty("applicationName") String applicationName, @JsonProperty("currentDeploymentGroupName") String currentDeploymentGroupName) {
+        this.applicationName = applicationName;
+        this.currentDeploymentGroupName = currentDeploymentGroupName;
+  }
 }

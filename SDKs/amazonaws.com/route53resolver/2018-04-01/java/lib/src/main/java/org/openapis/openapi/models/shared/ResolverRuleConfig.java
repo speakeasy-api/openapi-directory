@@ -15,6 +15,7 @@ public class ResolverRuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResolverRuleConfig withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class ResolverRuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverEndpointId")
     public String resolverEndpointId;
+
     public ResolverRuleConfig withResolverEndpointId(String resolverEndpointId) {
         this.resolverEndpointId = resolverEndpointId;
         return this;
@@ -31,9 +33,11 @@ public class ResolverRuleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetIps")
     public TargetAddress[] targetIps;
+
     public ResolverRuleConfig withTargetIps(TargetAddress[] targetIps) {
         this.targetIps = targetIps;
         return this;
     }
     
+    public ResolverRuleConfig(){}
 }

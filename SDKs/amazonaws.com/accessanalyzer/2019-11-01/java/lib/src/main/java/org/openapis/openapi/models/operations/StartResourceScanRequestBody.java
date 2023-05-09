@@ -14,6 +14,7 @@ public class StartResourceScanRequestBody {
      */
     @JsonProperty("analyzerArn")
     public String analyzerArn;
+
     public StartResourceScanRequestBody withAnalyzerArn(String analyzerArn) {
         this.analyzerArn = analyzerArn;
         return this;
@@ -24,6 +25,7 @@ public class StartResourceScanRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public StartResourceScanRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -35,9 +37,14 @@ public class StartResourceScanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceOwnerAccount")
     public String resourceOwnerAccount;
+
     public StartResourceScanRequestBody withResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
     
+    public StartResourceScanRequestBody(@JsonProperty("analyzerArn") String analyzerArn, @JsonProperty("resourceArn") String resourceArn) {
+        this.analyzerArn = analyzerArn;
+        this.resourceArn = resourceArn;
+  }
 }

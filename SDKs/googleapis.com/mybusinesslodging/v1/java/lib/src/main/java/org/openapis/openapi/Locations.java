@@ -57,11 +57,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse res = new org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse() {{
+        org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse res = new org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse(contentType, httpRes.statusCode()) {{
             lodging = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse res = new org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse() {{
+        org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse res = new org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse(contentType, httpRes.statusCode()) {{
             getGoogleUpdatedLodgingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingResponse res = new org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingResponse() {{
+        org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingResponse res = new org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingResponse(contentType, httpRes.statusCode()) {{
             lodging = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

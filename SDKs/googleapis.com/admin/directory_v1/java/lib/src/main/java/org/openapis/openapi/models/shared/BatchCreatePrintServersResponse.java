@@ -18,6 +18,7 @@ public class BatchCreatePrintServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public PrintServerFailureInfo[] failures;
+
     public BatchCreatePrintServersResponse withFailures(PrintServerFailureInfo[] failures) {
         this.failures = failures;
         return this;
@@ -29,9 +30,11 @@ public class BatchCreatePrintServersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printServers")
     public PrintServer[] printServers;
+
     public BatchCreatePrintServersResponse withPrintServers(PrintServer[] printServers) {
         this.printServers = printServers;
         return this;
     }
     
+    public BatchCreatePrintServersResponse(){}
 }

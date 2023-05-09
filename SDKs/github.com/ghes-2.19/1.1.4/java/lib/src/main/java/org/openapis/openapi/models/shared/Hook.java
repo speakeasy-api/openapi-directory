@@ -20,6 +20,7 @@ public class Hook {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public Hook withActive(Boolean active) {
         this.active = active;
         return this;
@@ -27,6 +28,7 @@ public class Hook {
     
     @JsonProperty("config")
     public HookConfig config;
+
     public Hook withConfig(HookConfig config) {
         this.config = config;
         return this;
@@ -36,6 +38,7 @@ public class Hook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Hook withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class Hook {
      */
     @JsonProperty("events")
     public String[] events;
+
     public Hook withEvents(String[] events) {
         this.events = events;
         return this;
@@ -56,6 +60,7 @@ public class Hook {
      */
     @JsonProperty("id")
     public Long id;
+
     public Hook withId(Long id) {
         this.id = id;
         return this;
@@ -63,6 +68,7 @@ public class Hook {
     
     @JsonProperty("last_response")
     public HookResponse lastResponse;
+
     public Hook withLastResponse(HookResponse lastResponse) {
         this.lastResponse = lastResponse;
         return this;
@@ -73,6 +79,7 @@ public class Hook {
      */
     @JsonProperty("name")
     public String name;
+
     public Hook withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class Hook {
     
     @JsonProperty("ping_url")
     public String pingUrl;
+
     public Hook withPingUrl(String pingUrl) {
         this.pingUrl = pingUrl;
         return this;
@@ -87,6 +95,7 @@ public class Hook {
     
     @JsonProperty("test_url")
     public String testUrl;
+
     public Hook withTestUrl(String testUrl) {
         this.testUrl = testUrl;
         return this;
@@ -94,6 +103,7 @@ public class Hook {
     
     @JsonProperty("type")
     public String type;
+
     public Hook withType(String type) {
         this.type = type;
         return this;
@@ -103,6 +113,7 @@ public class Hook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Hook withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -110,9 +121,24 @@ public class Hook {
     
     @JsonProperty("url")
     public String url;
+
     public Hook withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Hook(@JsonProperty("active") Boolean active, @JsonProperty("config") HookConfig config, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("events") String[] events, @JsonProperty("id") Long id, @JsonProperty("last_response") HookResponse lastResponse, @JsonProperty("name") String name, @JsonProperty("ping_url") String pingUrl, @JsonProperty("test_url") String testUrl, @JsonProperty("type") String type, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.active = active;
+        this.config = config;
+        this.createdAt = createdAt;
+        this.events = events;
+        this.id = id;
+        this.lastResponse = lastResponse;
+        this.name = name;
+        this.pingUrl = pingUrl;
+        this.testUrl = testUrl;
+        this.type = type;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

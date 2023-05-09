@@ -12,6 +12,7 @@ public class BundleResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_thread")
     public String thread;
+
     public BundleResourceAttributes withThread(String thread) {
         this.thread = thread;
         return this;
@@ -19,6 +20,7 @@ public class BundleResourceAttributes {
     
     @JsonProperty("effective_from")
     public String effectiveFrom;
+
     public BundleResourceAttributes withEffectiveFrom(String effectiveFrom) {
         this.effectiveFrom = effectiveFrom;
         return this;
@@ -27,6 +29,7 @@ public class BundleResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective_to")
     public String effectiveTo;
+
     public BundleResourceAttributes withEffectiveTo(String effectiveTo) {
         this.effectiveTo = effectiveTo;
         return this;
@@ -34,6 +37,7 @@ public class BundleResourceAttributes {
     
     @JsonProperty("title")
     public String title;
+
     public BundleResourceAttributes withTitle(String title) {
         this.title = title;
         return this;
@@ -41,9 +45,15 @@ public class BundleResourceAttributes {
     
     @JsonProperty("type")
     public String type;
+
     public BundleResourceAttributes withType(String type) {
         this.type = type;
         return this;
     }
     
+    public BundleResourceAttributes(@JsonProperty("effective_from") String effectiveFrom, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.effectiveFrom = effectiveFrom;
+        this.title = title;
+        this.type = type;
+  }
 }

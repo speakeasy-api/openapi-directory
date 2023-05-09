@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class StartInstancesResult {
     
     public StartInstancesResultStartingInstances[] startingInstances;
+
     public StartInstancesResult withStartingInstances(StartInstancesResultStartingInstances[] startingInstances) {
         this.startingInstances = startingInstances;
         return this;
     }
     
+    public StartInstancesResult(){}
 }

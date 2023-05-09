@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest {
@@ -12,6 +13,7 @@ public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aWBNumber")
     public String aWBNumber;
+
     public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withAWBNumber(String aWBNumber) {
         this.aWBNumber = aWBNumber;
         return this;
@@ -32,9 +35,15 @@ public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aWBPrefix")
     public String aWBPrefix;
+
     public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withAWBPrefix(String aWBPrefix) {
         this.aWBPrefix = aWBPrefix;
         return this;
     }
     
+    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("aWBNumber") String aWBNumber, @JsonProperty("aWBPrefix") String aWBPrefix) {
+        this.accept = accept;
+        this.aWBNumber = aWBNumber;
+        this.aWBPrefix = aWBPrefix;
+  }
 }

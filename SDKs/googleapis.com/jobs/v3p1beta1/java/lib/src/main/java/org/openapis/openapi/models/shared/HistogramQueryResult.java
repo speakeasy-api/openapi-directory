@@ -18,6 +18,7 @@ public class HistogramQueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogram")
     public java.util.Map<String, String> histogram;
+
     public HistogramQueryResult withHistogram(java.util.Map<String, String> histogram) {
         this.histogram = histogram;
         return this;
@@ -29,9 +30,11 @@ public class HistogramQueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramQuery")
     public String histogramQuery;
+
     public HistogramQueryResult withHistogramQuery(String histogramQuery) {
         this.histogramQuery = histogramQuery;
         return this;
     }
     
+    public HistogramQueryResult(){}
 }

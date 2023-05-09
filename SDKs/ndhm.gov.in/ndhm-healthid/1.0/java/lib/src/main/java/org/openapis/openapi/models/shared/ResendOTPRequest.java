@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResendOTPRequest {
     @JsonProperty("txnId")
     public String txnId;
+
     public ResendOTPRequest withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public ResendOTPRequest(@JsonProperty("txnId") String txnId) {
+        this.txnId = txnId;
+  }
 }

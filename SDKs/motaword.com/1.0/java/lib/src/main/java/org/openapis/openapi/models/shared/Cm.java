@@ -12,9 +12,11 @@ public class Cm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public Cm withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public Cm(){}
 }

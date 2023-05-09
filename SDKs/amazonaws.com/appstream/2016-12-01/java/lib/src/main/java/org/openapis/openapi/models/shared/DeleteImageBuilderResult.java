@@ -15,9 +15,11 @@ public class DeleteImageBuilderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageBuilder")
     public ImageBuilder imageBuilder;
+
     public DeleteImageBuilderResult withImageBuilder(ImageBuilder imageBuilder) {
         this.imageBuilder = imageBuilder;
         return this;
     }
     
+    public DeleteImageBuilderResult(){}
 }

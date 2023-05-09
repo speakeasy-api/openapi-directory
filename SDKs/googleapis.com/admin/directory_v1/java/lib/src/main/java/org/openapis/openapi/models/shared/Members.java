@@ -18,6 +18,7 @@ public class Members {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Members withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Members {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Members withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class Members {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public Member[] members;
+
     public Members withMembers(Member[] members) {
         this.members = members;
         return this;
@@ -51,9 +54,11 @@ public class Members {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Members withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Members(){}
 }

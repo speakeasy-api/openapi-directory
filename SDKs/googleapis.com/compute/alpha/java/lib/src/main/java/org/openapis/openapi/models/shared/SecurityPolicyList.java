@@ -15,6 +15,7 @@ public class SecurityPolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SecurityPolicyList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -26,6 +27,7 @@ public class SecurityPolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SecurityPolicyList withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class SecurityPolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public SecurityPolicy[] items;
+
     public SecurityPolicyList withItems(SecurityPolicy[] items) {
         this.items = items;
         return this;
@@ -48,6 +51,7 @@ public class SecurityPolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SecurityPolicyList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class SecurityPolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SecurityPolicyList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -70,6 +75,7 @@ public class SecurityPolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachables")
     public String[] unreachables;
+
     public SecurityPolicyList withUnreachables(String[] unreachables) {
         this.unreachables = unreachables;
         return this;
@@ -81,9 +87,11 @@ public class SecurityPolicyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SecurityPolicyListWarning warning;
+
     public SecurityPolicyList withWarning(SecurityPolicyListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SecurityPolicyList(){}
 }

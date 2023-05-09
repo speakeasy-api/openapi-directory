@@ -18,9 +18,11 @@ public class BackgroundSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColorSuggested")
     public Boolean backgroundColorSuggested;
+
     public BackgroundSuggestionState withBackgroundColorSuggested(Boolean backgroundColorSuggested) {
         this.backgroundColorSuggested = backgroundColorSuggested;
         return this;
     }
     
+    public BackgroundSuggestionState(){}
 }

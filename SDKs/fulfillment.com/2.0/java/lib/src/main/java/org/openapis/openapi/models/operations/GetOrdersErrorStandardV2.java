@@ -15,9 +15,11 @@ public class GetOrdersErrorStandardV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetOrdersErrorStandardV2 withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetOrdersErrorStandardV2(){}
 }

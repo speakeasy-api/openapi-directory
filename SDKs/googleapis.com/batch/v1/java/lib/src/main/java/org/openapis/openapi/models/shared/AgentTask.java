@@ -18,6 +18,7 @@ public class AgentTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intendedState")
     public AgentTaskIntendedStateEnum intendedState;
+
     public AgentTask withIntendedState(AgentTaskIntendedStateEnum intendedState) {
         this.intendedState = intendedState;
         return this;
@@ -29,6 +30,7 @@ public class AgentTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachedBarrier")
     public String reachedBarrier;
+
     public AgentTask withReachedBarrier(String reachedBarrier) {
         this.reachedBarrier = reachedBarrier;
         return this;
@@ -40,6 +42,7 @@ public class AgentTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public TaskSpec spec;
+
     public AgentTask withSpec(TaskSpec spec) {
         this.spec = spec;
         return this;
@@ -51,6 +54,7 @@ public class AgentTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskStatus status;
+
     public AgentTask withStatus(TaskStatus status) {
         this.status = status;
         return this;
@@ -62,9 +66,23 @@ public class AgentTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public String task;
+
     public AgentTask withTask(String task) {
         this.task = task;
         return this;
     }
     
+    /**
+     * TaskSource represents the source of the task.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taskSource")
+    public AgentTaskTaskSourceEnum taskSource;
+
+    public AgentTask withTaskSource(AgentTaskTaskSourceEnum taskSource) {
+        this.taskSource = taskSource;
+        return this;
+    }
+    
+    public AgentTask(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudWebriskV1SearchUrisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threat")
     public GoogleCloudWebriskV1SearchUrisResponseThreatUri threat;
+
     public GoogleCloudWebriskV1SearchUrisResponse withThreat(GoogleCloudWebriskV1SearchUrisResponseThreatUri threat) {
         this.threat = threat;
         return this;
     }
     
+    public GoogleCloudWebriskV1SearchUrisResponse(){}
 }

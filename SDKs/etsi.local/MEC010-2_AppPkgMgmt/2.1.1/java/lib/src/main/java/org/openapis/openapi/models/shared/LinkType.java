@@ -12,9 +12,13 @@ public class LinkType {
      */
     @JsonProperty("href")
     public String href;
+
     public LinkType withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public LinkType(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

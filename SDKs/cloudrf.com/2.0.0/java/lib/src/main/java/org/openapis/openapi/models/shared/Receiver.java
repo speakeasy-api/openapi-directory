@@ -15,6 +15,7 @@ public class Receiver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt")
     public Float alt;
+
     public Receiver withAlt(Float alt) {
         this.alt = alt;
         return this;
@@ -26,6 +27,7 @@ public class Receiver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Float lat;
+
     public Receiver withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -37,6 +39,7 @@ public class Receiver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Float lon;
+
     public Receiver withLon(Float lon) {
         this.lon = lon;
         return this;
@@ -48,6 +51,7 @@ public class Receiver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rxg")
     public Float rxg;
+
     public Receiver withRxg(Float rxg) {
         this.rxg = rxg;
         return this;
@@ -59,9 +63,11 @@ public class Receiver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rxs")
     public Float rxs;
+
     public Receiver withRxs(Float rxs) {
         this.rxs = rxs;
         return this;
     }
     
+    public Receiver(){}
 }

@@ -14,6 +14,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerSearchModel {
     @JsonProperty("SearchMode")
     @SpeakeasyMetadata("form:name=SearchMode")
     public RechnungsdruckWebAppControllersApiSearchControllerSearchModelSearchModeEnum searchMode;
+
     public RechnungsdruckWebAppControllersApiSearchControllerSearchModel withSearchMode(RechnungsdruckWebAppControllersApiSearchControllerSearchModelSearchModeEnum searchMode) {
         this.searchMode = searchMode;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersApiSearchControllerSearchModel {
     @JsonProperty("Term")
     @SpeakeasyMetadata("form:name=Term")
     public String term;
+
     public RechnungsdruckWebAppControllersApiSearchControllerSearchModel withTerm(String term) {
         this.term = term;
         return this;
@@ -32,9 +34,11 @@ public class RechnungsdruckWebAppControllersApiSearchControllerSearchModel {
     @JsonProperty("Type")
     @SpeakeasyMetadata("form:name=Type")
     public String[] type;
+
     public RechnungsdruckWebAppControllersApiSearchControllerSearchModel withType(String[] type) {
         this.type = type;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiSearchControllerSearchModel(){}
 }

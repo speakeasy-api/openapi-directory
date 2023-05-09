@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudVisionV1p1beta1TextDetectionParams {
     /**
-     * A list of advanced OCR options to fine-tune OCR behavior.
+     * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedOcrOptions")
     public String[] advancedOcrOptions;
+
     public GoogleCloudVisionV1p1beta1TextDetectionParams withAdvancedOcrOptions(String[] advancedOcrOptions) {
         this.advancedOcrOptions = advancedOcrOptions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1TextDetectionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableTextDetectionConfidenceScore")
     public Boolean enableTextDetectionConfidenceScore;
+
     public GoogleCloudVisionV1p1beta1TextDetectionParams withEnableTextDetectionConfidenceScore(Boolean enableTextDetectionConfidenceScore) {
         this.enableTextDetectionConfidenceScore = enableTextDetectionConfidenceScore;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1TextDetectionParams(){}
 }

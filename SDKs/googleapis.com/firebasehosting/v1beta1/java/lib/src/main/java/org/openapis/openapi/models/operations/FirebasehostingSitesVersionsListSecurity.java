@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirebasehostingSitesVersionsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirebasehostingSitesVersionsListSecurityOption1 option1;
+
     public FirebasehostingSitesVersionsListSecurity withOption1(FirebasehostingSitesVersionsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class FirebasehostingSitesVersionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebasehostingSitesVersionsListSecurityOption2 option2;
+
     public FirebasehostingSitesVersionsListSecurity withOption2(FirebasehostingSitesVersionsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class FirebasehostingSitesVersionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebasehostingSitesVersionsListSecurityOption3 option3;
+
     public FirebasehostingSitesVersionsListSecurity withOption3(FirebasehostingSitesVersionsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class FirebasehostingSitesVersionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebasehostingSitesVersionsListSecurityOption4 option4;
+
     public FirebasehostingSitesVersionsListSecurity withOption4(FirebasehostingSitesVersionsListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public FirebasehostingSitesVersionsListSecurity(){}
 }

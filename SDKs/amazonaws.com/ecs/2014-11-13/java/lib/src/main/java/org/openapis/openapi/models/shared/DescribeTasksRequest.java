@@ -12,6 +12,7 @@ public class DescribeTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DescribeTasksRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,6 +21,7 @@ public class DescribeTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public TaskFieldEnum[] include;
+
     public DescribeTasksRequest withInclude(TaskFieldEnum[] include) {
         this.include = include;
         return this;
@@ -27,9 +29,13 @@ public class DescribeTasksRequest {
     
     @JsonProperty("tasks")
     public String[] tasks;
+
     public DescribeTasksRequest withTasks(String[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public DescribeTasksRequest(@JsonProperty("tasks") String[] tasks) {
+        this.tasks = tasks;
+  }
 }

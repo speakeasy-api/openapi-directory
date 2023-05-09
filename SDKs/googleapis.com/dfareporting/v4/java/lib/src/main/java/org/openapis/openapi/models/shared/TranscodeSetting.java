@@ -18,6 +18,7 @@ public class TranscodeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledVideoFormats")
     public Integer[] enabledVideoFormats;
+
     public TranscodeSetting withEnabledVideoFormats(Integer[] enabledVideoFormats) {
         this.enabledVideoFormats = enabledVideoFormats;
         return this;
@@ -29,9 +30,11 @@ public class TranscodeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TranscodeSetting withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public TranscodeSetting(){}
 }

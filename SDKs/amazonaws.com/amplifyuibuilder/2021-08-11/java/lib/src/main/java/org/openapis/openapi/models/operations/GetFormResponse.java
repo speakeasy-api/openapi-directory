@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFormResponse {
     
     public String contentType;
+
     public GetFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFormResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFormResponse getFormResponse;
+
     public GetFormResponse withGetFormResponse(org.openapis.openapi.models.shared.GetFormResponse getFormResponse) {
         this.getFormResponse = getFormResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetFormResponse {
      */
     
     public Object internalServerException;
+
     public GetFormResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetFormResponse {
      */
     
     public Object invalidParameterException;
+
     public GetFormResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetFormResponse {
     
     
     public Integer statusCode;
+
     public GetFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetFormResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFormResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

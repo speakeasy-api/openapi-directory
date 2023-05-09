@@ -18,6 +18,7 @@ public class SubnetworkAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public SubnetworkAggregatedListWarningCodeEnum code;
+
     public SubnetworkAggregatedListWarning withCode(SubnetworkAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class SubnetworkAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public SubnetworkAggregatedListWarningData[] data;
+
     public SubnetworkAggregatedListWarning withData(SubnetworkAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class SubnetworkAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SubnetworkAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SubnetworkAggregatedListWarning(){}
 }

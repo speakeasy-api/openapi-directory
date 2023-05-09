@@ -18,6 +18,7 @@ public class InsightInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sapDiscovery")
     public SapDiscovery sapDiscovery;
+
     public InsightInput withSapDiscovery(SapDiscovery sapDiscovery) {
         this.sapDiscovery = sapDiscovery;
         return this;
@@ -29,9 +30,11 @@ public class InsightInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sapValidation")
     public SapValidation sapValidation;
+
     public InsightInput withSapValidation(SapValidation sapValidation) {
         this.sapValidation = sapValidation;
         return this;
     }
     
+    public InsightInput(){}
 }

@@ -15,6 +15,7 @@ public class PutVolumesIdUpdateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public PutVolumesIdUpdateVolumeRequestLabels labels;
+
     public PutVolumesIdUpdateVolumeRequest withLabels(PutVolumesIdUpdateVolumeRequestLabels labels) {
         this.labels = labels;
         return this;
@@ -25,9 +26,13 @@ public class PutVolumesIdUpdateVolumeRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public PutVolumesIdUpdateVolumeRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutVolumesIdUpdateVolumeRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

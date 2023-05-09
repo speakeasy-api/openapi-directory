@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopGUISessionResponse {
@@ -12,6 +13,7 @@ public class StopGUISessionResponse {
      */
     
     public Object accessDeniedException;
+
     public StopGUISessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StopGUISessionResponse {
     
     
     public String contentType;
+
     public StopGUISessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopGUISessionResponse {
      */
     
     public Object invalidInputException;
+
     public StopGUISessionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class StopGUISessionResponse {
      */
     
     public Object notFoundException;
+
     public StopGUISessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopGUISessionResponse {
     
     
     public Integer statusCode;
+
     public StopGUISessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopGUISessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopGUISessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopGUISessionResponse {
      */
     
     public Object serviceException;
+
     public StopGUISessionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,6 +81,7 @@ public class StopGUISessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopGUISessionResult stopGUISessionResult;
+
     public StopGUISessionResponse withStopGUISessionResult(org.openapis.openapi.models.shared.StopGUISessionResult stopGUISessionResult) {
         this.stopGUISessionResult = stopGUISessionResult;
         return this;
@@ -83,9 +92,14 @@ public class StopGUISessionResponse {
      */
     
     public Object unauthenticatedException;
+
     public StopGUISessionResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public StopGUISessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

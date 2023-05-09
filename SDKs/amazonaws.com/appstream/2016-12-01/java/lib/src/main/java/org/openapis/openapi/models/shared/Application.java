@@ -20,6 +20,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppBlockArn")
     public String appBlockArn;
+
     public Application withAppBlockArn(String appBlockArn) {
         this.appBlockArn = appBlockArn;
         return this;
@@ -28,6 +29,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Application withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +40,7 @@ public class Application {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public Application withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -46,6 +49,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Application withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Application withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +67,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public Application withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -70,6 +76,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IconS3Location")
     public S3Location iconS3Location;
+
     public Application withIconS3Location(S3Location iconS3Location) {
         this.iconS3Location = iconS3Location;
         return this;
@@ -78,6 +85,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IconURL")
     public String iconURL;
+
     public Application withIconURL(String iconURL) {
         this.iconURL = iconURL;
         return this;
@@ -86,6 +94,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceFamilies")
     public String[] instanceFamilies;
+
     public Application withInstanceFamilies(String[] instanceFamilies) {
         this.instanceFamilies = instanceFamilies;
         return this;
@@ -94,6 +103,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchParameters")
     public String launchParameters;
+
     public Application withLaunchParameters(String launchParameters) {
         this.launchParameters = launchParameters;
         return this;
@@ -102,6 +112,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchPath")
     public String launchPath;
+
     public Application withLaunchPath(String launchPath) {
         this.launchPath = launchPath;
         return this;
@@ -110,6 +121,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public java.util.Map<String, String> metadata;
+
     public Application withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -118,6 +130,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
@@ -126,6 +139,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platforms")
     public PlatformTypeEnum[] platforms;
+
     public Application withPlatforms(PlatformTypeEnum[] platforms) {
         this.platforms = platforms;
         return this;
@@ -134,9 +148,11 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public Application withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public Application(){}
 }

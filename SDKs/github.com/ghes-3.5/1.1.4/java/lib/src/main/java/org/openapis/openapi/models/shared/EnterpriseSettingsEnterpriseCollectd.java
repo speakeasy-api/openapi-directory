@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseCollectd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterpriseCollectd withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseCollectd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryption")
     public String encryption;
+
     public EnterpriseSettingsEnterpriseCollectd withEncryption(String encryption) {
         this.encryption = encryption;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterpriseCollectd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public EnterpriseSettingsEnterpriseCollectd withPassword(String password) {
         this.password = password;
         return this;
@@ -36,6 +39,7 @@ public class EnterpriseSettingsEnterpriseCollectd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public EnterpriseSettingsEnterpriseCollectd withPort(Long port) {
         this.port = port;
         return this;
@@ -44,6 +48,7 @@ public class EnterpriseSettingsEnterpriseCollectd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public String server;
+
     public EnterpriseSettingsEnterpriseCollectd withServer(String server) {
         this.server = server;
         return this;
@@ -52,9 +57,11 @@ public class EnterpriseSettingsEnterpriseCollectd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public EnterpriseSettingsEnterpriseCollectd withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseCollectd(){}
 }

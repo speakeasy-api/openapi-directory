@@ -15,6 +15,7 @@ public class BuildNotDeleted {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BuildNotDeleted withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class BuildNotDeleted {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public String statusCode;
+
     public BuildNotDeleted withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public BuildNotDeleted(){}
 }

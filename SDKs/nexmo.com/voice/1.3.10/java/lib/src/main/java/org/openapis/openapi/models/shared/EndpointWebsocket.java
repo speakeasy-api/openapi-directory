@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EndpointWebsocket {
     @JsonProperty("content-type")
     public EndpointWebsocketContentTypeEnum contentType;
+
     public EndpointWebsocket withContentType(EndpointWebsocketContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -25,6 +26,7 @@ public class EndpointWebsocket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public EndpointWebsocketHeaders headers;
+
     public EndpointWebsocket withHeaders(EndpointWebsocketHeaders headers) {
         this.headers = headers;
         return this;
@@ -35,6 +37,7 @@ public class EndpointWebsocket {
      */
     @JsonProperty("type")
     public String type;
+
     public EndpointWebsocket withType(String type) {
         this.type = type;
         return this;
@@ -43,9 +46,14 @@ public class EndpointWebsocket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public EndpointWebsocket withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public EndpointWebsocket(@JsonProperty("content-type") EndpointWebsocketContentTypeEnum contentType, @JsonProperty("type") String type) {
+        this.contentType = contentType;
+        this.type = type;
+  }
 }

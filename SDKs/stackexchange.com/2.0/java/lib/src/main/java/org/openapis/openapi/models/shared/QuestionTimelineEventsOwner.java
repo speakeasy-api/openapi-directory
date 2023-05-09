@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QuestionTimelineEventsOwner {
     
     public Long acceptRate;
+
     public QuestionTimelineEventsOwner withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class QuestionTimelineEventsOwner {
     
     
     public QuestionTimelineEventsOwnerBadgeCounts badgeCounts;
+
     public QuestionTimelineEventsOwner withBadgeCounts(QuestionTimelineEventsOwnerBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class QuestionTimelineEventsOwner {
     
     
     public String displayName;
+
     public QuestionTimelineEventsOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class QuestionTimelineEventsOwner {
     
     
     public String link;
+
     public QuestionTimelineEventsOwner withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class QuestionTimelineEventsOwner {
     
     
     public String profileImage;
+
     public QuestionTimelineEventsOwner withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class QuestionTimelineEventsOwner {
     
     
     public Long reputation;
+
     public QuestionTimelineEventsOwner withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class QuestionTimelineEventsOwner {
     
     
     public Long userId;
+
     public QuestionTimelineEventsOwner withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class QuestionTimelineEventsOwner {
     
     
     public String userType;
+
     public QuestionTimelineEventsOwner withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public QuestionTimelineEventsOwner(){}
 }

@@ -15,6 +15,7 @@ public class JobCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public JobCommand withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class JobCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PythonVersion")
     public String pythonVersion;
+
     public JobCommand withPythonVersion(String pythonVersion) {
         this.pythonVersion = pythonVersion;
         return this;
@@ -31,9 +33,11 @@ public class JobCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScriptLocation")
     public String scriptLocation;
+
     public JobCommand withScriptLocation(String scriptLocation) {
         this.scriptLocation = scriptLocation;
         return this;
     }
     
+    public JobCommand(){}
 }

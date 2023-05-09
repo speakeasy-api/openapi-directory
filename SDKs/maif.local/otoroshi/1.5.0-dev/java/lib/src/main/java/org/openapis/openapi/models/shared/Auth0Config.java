@@ -15,6 +15,7 @@ public class Auth0Config {
      */
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public Auth0Config withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -25,6 +26,7 @@ public class Auth0Config {
      */
     @JsonProperty("clientId")
     public String clientId;
+
     public Auth0Config withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -35,6 +37,7 @@ public class Auth0Config {
      */
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public Auth0Config withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -45,9 +48,16 @@ public class Auth0Config {
      */
     @JsonProperty("domain")
     public String domain;
+
     public Auth0Config withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public Auth0Config(@JsonProperty("callbackUrl") String callbackUrl, @JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret, @JsonProperty("domain") String domain) {
+        this.callbackUrl = callbackUrl;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.domain = domain;
+  }
 }

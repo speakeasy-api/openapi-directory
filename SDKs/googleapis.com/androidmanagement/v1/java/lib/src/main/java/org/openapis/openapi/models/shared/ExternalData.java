@@ -18,6 +18,7 @@ public class ExternalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256Hash")
     public String sha256Hash;
+
     public ExternalData withSha256Hash(String sha256Hash) {
         this.sha256Hash = sha256Hash;
         return this;
@@ -29,9 +30,11 @@ public class ExternalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ExternalData withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ExternalData(){}
 }

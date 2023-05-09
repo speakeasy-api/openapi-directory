@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyNetworkInterfaceAttributeRequestAttachment {
     
     public String attachmentId;
+
     public ModifyNetworkInterfaceAttributeRequestAttachment withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -19,9 +20,11 @@ public class ModifyNetworkInterfaceAttributeRequestAttachment {
     
     
     public Boolean deleteOnTermination;
+
     public ModifyNetworkInterfaceAttributeRequestAttachment withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
     }
     
+    public ModifyNetworkInterfaceAttributeRequestAttachment(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesCheckUserCanBeAssignedToIssueRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignee")
     public String assignee;
+
     public IssuesCheckUserCanBeAssignedToIssueRequest withAssignee(String assignee) {
         this.assignee = assignee;
         return this;
@@ -19,6 +21,7 @@ public class IssuesCheckUserCanBeAssignedToIssueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
     public Long issueNumber;
+
     public IssuesCheckUserCanBeAssignedToIssueRequest withIssueNumber(Long issueNumber) {
         this.issueNumber = issueNumber;
         return this;
@@ -29,6 +32,7 @@ public class IssuesCheckUserCanBeAssignedToIssueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesCheckUserCanBeAssignedToIssueRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,16 @@ public class IssuesCheckUserCanBeAssignedToIssueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesCheckUserCanBeAssignedToIssueRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public IssuesCheckUserCanBeAssignedToIssueRequest(@JsonProperty("assignee") String assignee, @JsonProperty("issue_number") Long issueNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.assignee = assignee;
+        this.issueNumber = issueNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

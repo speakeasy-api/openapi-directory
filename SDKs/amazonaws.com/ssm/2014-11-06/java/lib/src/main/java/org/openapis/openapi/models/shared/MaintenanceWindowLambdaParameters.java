@@ -15,6 +15,7 @@ public class MaintenanceWindowLambdaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientContext")
     public String clientContext;
+
     public MaintenanceWindowLambdaParameters withClientContext(String clientContext) {
         this.clientContext = clientContext;
         return this;
@@ -23,6 +24,7 @@ public class MaintenanceWindowLambdaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payload")
     public String payload;
+
     public MaintenanceWindowLambdaParameters withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -31,9 +33,11 @@ public class MaintenanceWindowLambdaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Qualifier")
     public String qualifier;
+
     public MaintenanceWindowLambdaParameters withQualifier(String qualifier) {
         this.qualifier = qualifier;
         return this;
     }
     
+    public MaintenanceWindowLambdaParameters(){}
 }

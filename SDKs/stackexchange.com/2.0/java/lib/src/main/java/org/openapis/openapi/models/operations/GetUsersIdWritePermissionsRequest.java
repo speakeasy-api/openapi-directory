@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdWritePermissionsRequest {
@@ -13,6 +14,7 @@ public class GetUsersIdWritePermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetUsersIdWritePermissionsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetUsersIdWritePermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetUsersIdWritePermissionsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +63,7 @@ public class GetUsersIdWritePermissionsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetUsersIdWritePermissionsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -67,6 +71,7 @@ public class GetUsersIdWritePermissionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUsersIdWritePermissionsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -74,6 +79,7 @@ public class GetUsersIdWritePermissionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetUsersIdWritePermissionsRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -85,9 +91,14 @@ public class GetUsersIdWritePermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetUsersIdWritePermissionsRequest withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public GetUsersIdWritePermissionsRequest(@JsonProperty("id") Long id, @JsonProperty("site") String site) {
+        this.id = id;
+        this.site = site;
+  }
 }

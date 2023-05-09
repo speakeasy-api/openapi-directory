@@ -18,6 +18,7 @@ public class ImageRawDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerType")
     public ImageRawDiskContainerTypeEnum containerType;
+
     public ImageRawDisk withContainerType(ImageRawDiskContainerTypeEnum containerType) {
         this.containerType = containerType;
         return this;
@@ -29,6 +30,7 @@ public class ImageRawDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1Checksum")
     public String sha1Checksum;
+
     public ImageRawDisk withSha1Checksum(String sha1Checksum) {
         this.sha1Checksum = sha1Checksum;
         return this;
@@ -40,9 +42,11 @@ public class ImageRawDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public ImageRawDisk withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public ImageRawDisk(){}
 }

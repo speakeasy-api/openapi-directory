@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteWorldsResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteWorldsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteWorldsResponse batchDeleteWorldsResponse;
+
     public BatchDeleteWorldsResponse withBatchDeleteWorldsResponse(org.openapis.openapi.models.shared.BatchDeleteWorldsResponse batchDeleteWorldsResponse) {
         this.batchDeleteWorldsResponse = batchDeleteWorldsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDeleteWorldsResponse {
     
     
     public String contentType;
+
     public BatchDeleteWorldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteWorldsResponse {
      */
     
     public Object internalServerException;
+
     public BatchDeleteWorldsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteWorldsResponse {
      */
     
     public Object invalidParameterException;
+
     public BatchDeleteWorldsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDeleteWorldsResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteWorldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchDeleteWorldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteWorldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class BatchDeleteWorldsResponse {
      */
     
     public Object throttlingException;
+
     public BatchDeleteWorldsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchDeleteWorldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

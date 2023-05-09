@@ -177,4 +177,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/RemoveIamPolicyResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/RemoveIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/RestoreServiceRequestRestoreTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RestoreServiceRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

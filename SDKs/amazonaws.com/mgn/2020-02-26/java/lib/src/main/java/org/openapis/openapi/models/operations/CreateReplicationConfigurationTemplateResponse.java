@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReplicationConfigurationTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateReplicationConfigurationTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateReplicationConfigurationTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateReplicationConfigurationTemplateResponse {
     
     
     public String contentType;
+
     public CreateReplicationConfigurationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateReplicationConfigurationTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplicationConfigurationTemplate replicationConfigurationTemplate;
+
     public CreateReplicationConfigurationTemplateResponse withReplicationConfigurationTemplate(org.openapis.openapi.models.shared.ReplicationConfigurationTemplate replicationConfigurationTemplate) {
         this.replicationConfigurationTemplate = replicationConfigurationTemplate;
         return this;
@@ -36,6 +40,7 @@ public class CreateReplicationConfigurationTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateReplicationConfigurationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateReplicationConfigurationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReplicationConfigurationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class CreateReplicationConfigurationTemplateResponse {
      */
     
     public Object uninitializedAccountException;
+
     public CreateReplicationConfigurationTemplateResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class CreateReplicationConfigurationTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateReplicationConfigurationTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateReplicationConfigurationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SentimentAnalysisSettings {
     @JsonProperty("detectSentiment")
     public Boolean detectSentiment;
+
     public SentimentAnalysisSettings withDetectSentiment(Boolean detectSentiment) {
         this.detectSentiment = detectSentiment;
         return this;
     }
     
+    public SentimentAnalysisSettings(@JsonProperty("detectSentiment") Boolean detectSentiment) {
+        this.detectSentiment = detectSentiment;
+  }
 }

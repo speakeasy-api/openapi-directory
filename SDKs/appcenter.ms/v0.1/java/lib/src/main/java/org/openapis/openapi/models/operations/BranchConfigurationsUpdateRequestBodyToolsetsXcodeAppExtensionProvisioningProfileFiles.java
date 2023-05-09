@@ -18,6 +18,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public String fileId;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvisioningProfileFiles withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -29,6 +30,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvisioningProfileFiles withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -40,6 +42,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetBundleIdentifier")
     public String targetBundleIdentifier;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvisioningProfileFiles withTargetBundleIdentifier(String targetBundleIdentifier) {
         this.targetBundleIdentifier = targetBundleIdentifier;
         return this;
@@ -51,9 +54,11 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadId")
     public String uploadId;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvisioningProfileFiles withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvisioningProfileFiles(){}
 }

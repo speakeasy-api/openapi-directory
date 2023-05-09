@@ -15,6 +15,7 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationManagers")
     public OperatingSystemConfigurationManager[] configurationManagers;
+
     public OperatingSystem withConfigurationManagers(OperatingSystemConfigurationManager[] configurationManagers) {
         this.configurationManagers = configurationManagers;
         return this;
@@ -23,6 +24,7 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public OperatingSystem withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OperatingSystem withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportedName")
     public String reportedName;
+
     public OperatingSystem withReportedName(String reportedName) {
         this.reportedName = reportedName;
         return this;
@@ -47,6 +51,7 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportedVersion")
     public String reportedVersion;
+
     public OperatingSystem withReportedVersion(String reportedVersion) {
         this.reportedVersion = reportedVersion;
         return this;
@@ -55,6 +60,7 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Supported")
     public Boolean supported;
+
     public OperatingSystem withSupported(Boolean supported) {
         this.supported = supported;
         return this;
@@ -63,9 +69,11 @@ public class OperatingSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public OperatingSystem withType(String type) {
         this.type = type;
         return this;
     }
     
+    public OperatingSystem(){}
 }

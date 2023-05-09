@@ -18,6 +18,7 @@ public class PerXdsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterConfig")
     public ClustersConfigDump clusterConfig;
+
     public PerXdsConfig withClusterConfig(ClustersConfigDump clusterConfig) {
         this.clusterConfig = clusterConfig;
         return this;
@@ -29,6 +30,7 @@ public class PerXdsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listenerConfig")
     public ListenersConfigDump listenerConfig;
+
     public PerXdsConfig withListenerConfig(ListenersConfigDump listenerConfig) {
         this.listenerConfig = listenerConfig;
         return this;
@@ -40,6 +42,7 @@ public class PerXdsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeConfig")
     public RoutesConfigDump routeConfig;
+
     public PerXdsConfig withRouteConfig(RoutesConfigDump routeConfig) {
         this.routeConfig = routeConfig;
         return this;
@@ -51,6 +54,7 @@ public class PerXdsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopedRouteConfig")
     public ScopedRoutesConfigDump scopedRouteConfig;
+
     public PerXdsConfig withScopedRouteConfig(ScopedRoutesConfigDump scopedRouteConfig) {
         this.scopedRouteConfig = scopedRouteConfig;
         return this;
@@ -59,9 +63,11 @@ public class PerXdsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PerXdsConfigStatusEnum status;
+
     public PerXdsConfig withStatus(PerXdsConfigStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PerXdsConfig(){}
 }

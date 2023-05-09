@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StandardsControlAssociationUpdate {
     @JsonProperty("AssociationStatus")
     public AssociationStatusEnum associationStatus;
+
     public StandardsControlAssociationUpdate withAssociationStatus(AssociationStatusEnum associationStatus) {
         this.associationStatus = associationStatus;
         return this;
@@ -21,6 +22,7 @@ public class StandardsControlAssociationUpdate {
     
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public StandardsControlAssociationUpdate withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
@@ -28,6 +30,7 @@ public class StandardsControlAssociationUpdate {
     
     @JsonProperty("StandardsArn")
     public String standardsArn;
+
     public StandardsControlAssociationUpdate withStandardsArn(String standardsArn) {
         this.standardsArn = standardsArn;
         return this;
@@ -36,9 +39,15 @@ public class StandardsControlAssociationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedReason")
     public String updatedReason;
+
     public StandardsControlAssociationUpdate withUpdatedReason(String updatedReason) {
         this.updatedReason = updatedReason;
         return this;
     }
     
+    public StandardsControlAssociationUpdate(@JsonProperty("AssociationStatus") AssociationStatusEnum associationStatus, @JsonProperty("SecurityControlId") String securityControlId, @JsonProperty("StandardsArn") String standardsArn) {
+        this.associationStatus = associationStatus;
+        this.securityControlId = securityControlId;
+        this.standardsArn = standardsArn;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateOTAUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsIotJobArn")
     public String awsIotJobArn;
+
     public CreateOTAUpdateResponse withAwsIotJobArn(String awsIotJobArn) {
         this.awsIotJobArn = awsIotJobArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateOTAUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsIotJobId")
     public String awsIotJobId;
+
     public CreateOTAUpdateResponse withAwsIotJobId(String awsIotJobId) {
         this.awsIotJobId = awsIotJobId;
         return this;
@@ -31,6 +33,7 @@ public class CreateOTAUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateArn")
     public String otaUpdateArn;
+
     public CreateOTAUpdateResponse withOtaUpdateArn(String otaUpdateArn) {
         this.otaUpdateArn = otaUpdateArn;
         return this;
@@ -39,6 +42,7 @@ public class CreateOTAUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateId")
     public String otaUpdateId;
+
     public CreateOTAUpdateResponse withOtaUpdateId(String otaUpdateId) {
         this.otaUpdateId = otaUpdateId;
         return this;
@@ -47,9 +51,11 @@ public class CreateOTAUpdateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otaUpdateStatus")
     public OTAUpdateStatusEnum otaUpdateStatus;
+
     public CreateOTAUpdateResponse withOtaUpdateStatus(OTAUpdateStatusEnum otaUpdateStatus) {
         this.otaUpdateStatus = otaUpdateStatus;
         return this;
     }
     
+    public CreateOTAUpdateResponse(){}
 }

@@ -15,6 +15,7 @@ public class State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public State withLabel(String label) {
         this.label = label;
         return this;
@@ -26,9 +27,11 @@ public class State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateKey")
     public String stateKey;
+
     public State withStateKey(String stateKey) {
         this.stateKey = stateKey;
         return this;
     }
     
+    public State(){}
 }

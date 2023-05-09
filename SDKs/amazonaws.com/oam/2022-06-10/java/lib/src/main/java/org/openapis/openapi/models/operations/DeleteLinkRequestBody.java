@@ -12,9 +12,13 @@ public class DeleteLinkRequestBody {
      */
     @JsonProperty("Identifier")
     public String identifier;
+
     public DeleteLinkRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public DeleteLinkRequestBody(@JsonProperty("Identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

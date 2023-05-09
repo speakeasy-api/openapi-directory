@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionConfirmationBody {
     @JsonProperty("cancelButtonLabel")
     public String cancelButtonLabel;
+
     public ActionConfirmationBody withCancelButtonLabel(String cancelButtonLabel) {
         this.cancelButtonLabel = cancelButtonLabel;
         return this;
@@ -16,6 +17,7 @@ public class ActionConfirmationBody {
     
     @JsonProperty("confirmButtonLabel")
     public String confirmButtonLabel;
+
     public ActionConfirmationBody withConfirmButtonLabel(String confirmButtonLabel) {
         this.confirmButtonLabel = confirmButtonLabel;
         return this;
@@ -23,9 +25,15 @@ public class ActionConfirmationBody {
     
     @JsonProperty("prompt")
     public String prompt;
+
     public ActionConfirmationBody withPrompt(String prompt) {
         this.prompt = prompt;
         return this;
     }
     
+    public ActionConfirmationBody(@JsonProperty("cancelButtonLabel") String cancelButtonLabel, @JsonProperty("confirmButtonLabel") String confirmButtonLabel, @JsonProperty("prompt") String prompt) {
+        this.cancelButtonLabel = cancelButtonLabel;
+        this.confirmButtonLabel = confirmButtonLabel;
+        this.prompt = prompt;
+  }
 }

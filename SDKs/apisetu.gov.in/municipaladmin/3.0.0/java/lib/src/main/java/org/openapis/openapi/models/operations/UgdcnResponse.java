@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UgdcnResponse {
     
     public String contentType;
+
     public UgdcnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UgdcnResponse {
     
     
     public Integer statusCode;
+
     public UgdcnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UgdcnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UgdcnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UgdcnResponse {
      */
     
     public Ugdcn400ApplicationJSON ugdcn400ApplicationJSONObject;
+
     public UgdcnResponse withUgdcn400ApplicationJSONObject(Ugdcn400ApplicationJSON ugdcn400ApplicationJSONObject) {
         this.ugdcn400ApplicationJSONObject = ugdcn400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class UgdcnResponse {
      */
     
     public Ugdcn401ApplicationJSON ugdcn401ApplicationJSONObject;
+
     public UgdcnResponse withUgdcn401ApplicationJSONObject(Ugdcn401ApplicationJSON ugdcn401ApplicationJSONObject) {
         this.ugdcn401ApplicationJSONObject = ugdcn401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UgdcnResponse {
      */
     
     public Ugdcn404ApplicationJSON ugdcn404ApplicationJSONObject;
+
     public UgdcnResponse withUgdcn404ApplicationJSONObject(Ugdcn404ApplicationJSON ugdcn404ApplicationJSONObject) {
         this.ugdcn404ApplicationJSONObject = ugdcn404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class UgdcnResponse {
      */
     
     public Ugdcn500ApplicationJSON ugdcn500ApplicationJSONObject;
+
     public UgdcnResponse withUgdcn500ApplicationJSONObject(Ugdcn500ApplicationJSON ugdcn500ApplicationJSONObject) {
         this.ugdcn500ApplicationJSONObject = ugdcn500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class UgdcnResponse {
      */
     
     public Ugdcn502ApplicationJSON ugdcn502ApplicationJSONObject;
+
     public UgdcnResponse withUgdcn502ApplicationJSONObject(Ugdcn502ApplicationJSON ugdcn502ApplicationJSONObject) {
         this.ugdcn502ApplicationJSONObject = ugdcn502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class UgdcnResponse {
      */
     
     public Ugdcn503ApplicationJSON ugdcn503ApplicationJSONObject;
+
     public UgdcnResponse withUgdcn503ApplicationJSONObject(Ugdcn503ApplicationJSON ugdcn503ApplicationJSONObject) {
         this.ugdcn503ApplicationJSONObject = ugdcn503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class UgdcnResponse {
      */
     
     public Ugdcn504ApplicationJSON ugdcn504ApplicationJSONObject;
+
     public UgdcnResponse withUgdcn504ApplicationJSONObject(Ugdcn504ApplicationJSON ugdcn504ApplicationJSONObject) {
         this.ugdcn504ApplicationJSONObject = ugdcn504ApplicationJSONObject;
         return this;
     }
     
+    public UgdcnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

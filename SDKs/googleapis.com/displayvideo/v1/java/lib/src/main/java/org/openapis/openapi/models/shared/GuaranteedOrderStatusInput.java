@@ -18,6 +18,7 @@ public class GuaranteedOrderStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityPauseReason")
     public String entityPauseReason;
+
     public GuaranteedOrderStatusInput withEntityPauseReason(String entityPauseReason) {
         this.entityPauseReason = entityPauseReason;
         return this;
@@ -29,9 +30,11 @@ public class GuaranteedOrderStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public GuaranteedOrderStatusEntityStatusEnum entityStatus;
+
     public GuaranteedOrderStatusInput withEntityStatus(GuaranteedOrderStatusEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
     }
     
+    public GuaranteedOrderStatusInput(){}
 }

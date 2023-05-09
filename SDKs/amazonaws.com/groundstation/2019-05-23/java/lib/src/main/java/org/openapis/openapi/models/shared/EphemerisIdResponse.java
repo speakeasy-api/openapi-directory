@@ -15,9 +15,11 @@ public class EphemerisIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemerisId")
     public String ephemerisId;
+
     public EphemerisIdResponse withEphemerisId(String ephemerisId) {
         this.ephemerisId = ephemerisId;
         return this;
     }
     
+    public EphemerisIdResponse(){}
 }

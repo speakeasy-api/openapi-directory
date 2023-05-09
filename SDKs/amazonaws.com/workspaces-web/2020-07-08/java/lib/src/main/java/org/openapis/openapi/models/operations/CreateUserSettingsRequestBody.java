@@ -15,6 +15,7 @@ public class CreateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateUserSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateUserSettingsRequestBody {
      */
     @JsonProperty("copyAllowed")
     public CreateUserSettingsRequestBodyCopyAllowedEnum copyAllowed;
+
     public CreateUserSettingsRequestBody withCopyAllowed(CreateUserSettingsRequestBodyCopyAllowedEnum copyAllowed) {
         this.copyAllowed = copyAllowed;
         return this;
@@ -36,6 +38,7 @@ public class CreateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disconnectTimeoutInMinutes")
     public Long disconnectTimeoutInMinutes;
+
     public CreateUserSettingsRequestBody withDisconnectTimeoutInMinutes(Long disconnectTimeoutInMinutes) {
         this.disconnectTimeoutInMinutes = disconnectTimeoutInMinutes;
         return this;
@@ -46,6 +49,7 @@ public class CreateUserSettingsRequestBody {
      */
     @JsonProperty("downloadAllowed")
     public CreateUserSettingsRequestBodyDownloadAllowedEnum downloadAllowed;
+
     public CreateUserSettingsRequestBody withDownloadAllowed(CreateUserSettingsRequestBodyDownloadAllowedEnum downloadAllowed) {
         this.downloadAllowed = downloadAllowed;
         return this;
@@ -57,6 +61,7 @@ public class CreateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleDisconnectTimeoutInMinutes")
     public Long idleDisconnectTimeoutInMinutes;
+
     public CreateUserSettingsRequestBody withIdleDisconnectTimeoutInMinutes(Long idleDisconnectTimeoutInMinutes) {
         this.idleDisconnectTimeoutInMinutes = idleDisconnectTimeoutInMinutes;
         return this;
@@ -67,6 +72,7 @@ public class CreateUserSettingsRequestBody {
      */
     @JsonProperty("pasteAllowed")
     public CreateUserSettingsRequestBodyPasteAllowedEnum pasteAllowed;
+
     public CreateUserSettingsRequestBody withPasteAllowed(CreateUserSettingsRequestBodyPasteAllowedEnum pasteAllowed) {
         this.pasteAllowed = pasteAllowed;
         return this;
@@ -77,6 +83,7 @@ public class CreateUserSettingsRequestBody {
      */
     @JsonProperty("printAllowed")
     public CreateUserSettingsRequestBodyPrintAllowedEnum printAllowed;
+
     public CreateUserSettingsRequestBody withPrintAllowed(CreateUserSettingsRequestBodyPrintAllowedEnum printAllowed) {
         this.printAllowed = printAllowed;
         return this;
@@ -88,6 +95,7 @@ public class CreateUserSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateUserSettingsRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -98,9 +106,17 @@ public class CreateUserSettingsRequestBody {
      */
     @JsonProperty("uploadAllowed")
     public CreateUserSettingsRequestBodyUploadAllowedEnum uploadAllowed;
+
     public CreateUserSettingsRequestBody withUploadAllowed(CreateUserSettingsRequestBodyUploadAllowedEnum uploadAllowed) {
         this.uploadAllowed = uploadAllowed;
         return this;
     }
     
+    public CreateUserSettingsRequestBody(@JsonProperty("copyAllowed") CreateUserSettingsRequestBodyCopyAllowedEnum copyAllowed, @JsonProperty("downloadAllowed") CreateUserSettingsRequestBodyDownloadAllowedEnum downloadAllowed, @JsonProperty("pasteAllowed") CreateUserSettingsRequestBodyPasteAllowedEnum pasteAllowed, @JsonProperty("printAllowed") CreateUserSettingsRequestBodyPrintAllowedEnum printAllowed, @JsonProperty("uploadAllowed") CreateUserSettingsRequestBodyUploadAllowedEnum uploadAllowed) {
+        this.copyAllowed = copyAllowed;
+        this.downloadAllowed = downloadAllowed;
+        this.pasteAllowed = pasteAllowed;
+        this.printAllowed = printAllowed;
+        this.uploadAllowed = uploadAllowed;
+  }
 }

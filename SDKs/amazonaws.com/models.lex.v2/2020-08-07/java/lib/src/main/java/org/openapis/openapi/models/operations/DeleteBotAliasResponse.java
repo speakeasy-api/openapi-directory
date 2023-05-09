@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBotAliasResponse {
@@ -12,6 +13,7 @@ public class DeleteBotAliasResponse {
      */
     
     public Object conflictException;
+
     public DeleteBotAliasResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBotAliasResponse {
     
     
     public String contentType;
+
     public DeleteBotAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBotAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBotAliasResponse deleteBotAliasResponse;
+
     public DeleteBotAliasResponse withDeleteBotAliasResponse(org.openapis.openapi.models.shared.DeleteBotAliasResponse deleteBotAliasResponse) {
         this.deleteBotAliasResponse = deleteBotAliasResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBotAliasResponse {
      */
     
     public Object internalServerException;
+
     public DeleteBotAliasResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBotAliasResponse {
      */
     
     public Object preconditionFailedException;
+
     public DeleteBotAliasResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBotAliasResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteBotAliasResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteBotAliasResponse {
     
     
     public Integer statusCode;
+
     public DeleteBotAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteBotAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBotAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteBotAliasResponse {
      */
     
     public Object throttlingException;
+
     public DeleteBotAliasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteBotAliasResponse {
      */
     
     public Object validationException;
+
     public DeleteBotAliasResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteBotAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

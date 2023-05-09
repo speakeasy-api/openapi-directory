@@ -15,6 +15,7 @@ public class ListBranchesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branches")
     public String[] branches;
+
     public ListBranchesOutput withBranches(String[] branches) {
         this.branches = branches;
         return this;
@@ -23,9 +24,11 @@ public class ListBranchesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBranchesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBranchesOutput(){}
 }

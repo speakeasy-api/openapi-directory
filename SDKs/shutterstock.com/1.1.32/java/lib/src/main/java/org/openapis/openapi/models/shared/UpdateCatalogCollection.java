@@ -15,6 +15,7 @@ public class UpdateCatalogCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover_asset")
     public UpdateCatalogCollectionCoverAsset coverAsset;
+
     public UpdateCatalogCollection withCoverAsset(UpdateCatalogCollectionCoverAsset coverAsset) {
         this.coverAsset = coverAsset;
         return this;
@@ -23,6 +24,7 @@ public class UpdateCatalogCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateCatalogCollection withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class UpdateCatalogCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public UpdateCatalogCollectionVisibilityEnum visibility;
+
     public UpdateCatalogCollection withVisibility(UpdateCatalogCollectionVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public UpdateCatalogCollection(){}
 }

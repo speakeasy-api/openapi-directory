@@ -15,6 +15,7 @@ public class CreateApiKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateApiKeyRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class CreateApiKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public Long expires;
+
     public CreateApiKeyRequestBody withExpires(Long expires) {
         this.expires = expires;
         return this;
     }
     
+    public CreateApiKeyRequestBody(){}
 }

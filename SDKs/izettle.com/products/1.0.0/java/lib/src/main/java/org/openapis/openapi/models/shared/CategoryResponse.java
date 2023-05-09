@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CategoryResponse {
     @JsonProperty("categories")
     public CategoryDTO[] categories;
+
     public CategoryResponse withCategories(CategoryDTO[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public CategoryResponse(@JsonProperty("categories") CategoryDTO[] categories) {
+        this.categories = categories;
+  }
 }

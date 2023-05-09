@@ -15,9 +15,11 @@ public class BatchGetOnPremisesInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceInfos")
     public InstanceInfo[] instanceInfos;
+
     public BatchGetOnPremisesInstancesOutput withInstanceInfos(InstanceInfo[] instanceInfos) {
         this.instanceInfos = instanceInfos;
         return this;
     }
     
+    public BatchGetOnPremisesInstancesOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAemHealthCheckResponse {
     
     public String contentType;
+
     public GetAemHealthCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAemHealthCheckResponse {
     
     
     public Integer statusCode;
+
     public GetAemHealthCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAemHealthCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAemHealthCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetAemHealthCheckResponse {
      */
     
     public String getAemHealthCheckDefaultApplicationJSONString;
+
     public GetAemHealthCheckResponse withGetAemHealthCheckDefaultApplicationJSONString(String getAemHealthCheckDefaultApplicationJSONString) {
         this.getAemHealthCheckDefaultApplicationJSONString = getAemHealthCheckDefaultApplicationJSONString;
         return this;
     }
     
+    public GetAemHealthCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

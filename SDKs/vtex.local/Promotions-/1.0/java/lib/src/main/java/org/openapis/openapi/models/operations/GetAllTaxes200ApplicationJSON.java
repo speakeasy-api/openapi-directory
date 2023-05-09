@@ -18,6 +18,7 @@ public class GetAllTaxes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archivedItems")
     public String[] archivedItems;
+
     public GetAllTaxes200ApplicationJSON withArchivedItems(String[] archivedItems) {
         this.archivedItems = archivedItems;
         return this;
@@ -29,6 +30,7 @@ public class GetAllTaxes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledItems")
     public String[] disabledItems;
+
     public GetAllTaxes200ApplicationJSON withDisabledItems(String[] disabledItems) {
         this.disabledItems = disabledItems;
         return this;
@@ -40,6 +42,7 @@ public class GetAllTaxes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.GetTaxes[] items;
+
     public GetAllTaxes200ApplicationJSON withItems(org.openapis.openapi.models.shared.GetTaxes[] items) {
         this.items = items;
         return this;
@@ -51,9 +54,11 @@ public class GetAllTaxes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitConfiguration")
     public GetAllTaxes200ApplicationJSONLimitConfiguration limitConfiguration;
+
     public GetAllTaxes200ApplicationJSON withLimitConfiguration(GetAllTaxes200ApplicationJSONLimitConfiguration limitConfiguration) {
         this.limitConfiguration = limitConfiguration;
         return this;
     }
     
+    public GetAllTaxes200ApplicationJSON(){}
 }

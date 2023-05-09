@@ -18,6 +18,7 @@ public class QueryInterpretationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDisableSupplementalResults")
     public Boolean forceDisableSupplementalResults;
+
     public QueryInterpretationConfig withForceDisableSupplementalResults(Boolean forceDisableSupplementalResults) {
         this.forceDisableSupplementalResults = forceDisableSupplementalResults;
         return this;
@@ -29,9 +30,11 @@ public class QueryInterpretationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceVerbatimMode")
     public Boolean forceVerbatimMode;
+
     public QueryInterpretationConfig withForceVerbatimMode(Boolean forceVerbatimMode) {
         this.forceVerbatimMode = forceVerbatimMode;
         return this;
     }
     
+    public QueryInterpretationConfig(){}
 }

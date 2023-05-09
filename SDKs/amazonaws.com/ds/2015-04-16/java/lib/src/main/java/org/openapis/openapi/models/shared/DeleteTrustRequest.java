@@ -15,6 +15,7 @@ public class DeleteTrustRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteAssociatedConditionalForwarder")
     public Boolean deleteAssociatedConditionalForwarder;
+
     public DeleteTrustRequest withDeleteAssociatedConditionalForwarder(Boolean deleteAssociatedConditionalForwarder) {
         this.deleteAssociatedConditionalForwarder = deleteAssociatedConditionalForwarder;
         return this;
@@ -22,9 +23,13 @@ public class DeleteTrustRequest {
     
     @JsonProperty("TrustId")
     public String trustId;
+
     public DeleteTrustRequest withTrustId(String trustId) {
         this.trustId = trustId;
         return this;
     }
     
+    public DeleteTrustRequest(@JsonProperty("TrustId") String trustId) {
+        this.trustId = trustId;
+  }
 }

@@ -15,6 +15,7 @@ public class GetSshKeys200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetSshKeys200ApplicationJSONMeta meta;
+
     public GetSshKeys200ApplicationJSON withMeta(GetSshKeys200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
@@ -22,9 +23,13 @@ public class GetSshKeys200ApplicationJSON {
     
     @JsonProperty("ssh_keys")
     public GetSshKeys200ApplicationJSONSshKeys[] sshKeys;
+
     public GetSshKeys200ApplicationJSON withSshKeys(GetSshKeys200ApplicationJSONSshKeys[] sshKeys) {
         this.sshKeys = sshKeys;
         return this;
     }
     
+    public GetSshKeys200ApplicationJSON(@JsonProperty("ssh_keys") GetSshKeys200ApplicationJSONSshKeys[] sshKeys) {
+        this.sshKeys = sshKeys;
+  }
 }

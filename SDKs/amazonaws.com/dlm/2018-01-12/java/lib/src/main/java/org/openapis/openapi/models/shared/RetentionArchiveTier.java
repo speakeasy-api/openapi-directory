@@ -15,6 +15,7 @@ public class RetentionArchiveTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public RetentionArchiveTier withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class RetentionArchiveTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public Long interval;
+
     public RetentionArchiveTier withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -31,9 +33,11 @@ public class RetentionArchiveTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntervalUnit")
     public RetentionIntervalUnitValuesEnum intervalUnit;
+
     public RetentionArchiveTier withIntervalUnit(RetentionIntervalUnitValuesEnum intervalUnit) {
         this.intervalUnit = intervalUnit;
         return this;
     }
     
+    public RetentionArchiveTier(){}
 }

@@ -63,7 +63,7 @@ public class Ccc {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommercialCreditCardsResponse res = new org.openapis.openapi.models.operations.GetCommercialCreditCardsResponse() {{
+        org.openapis.openapi.models.operations.GetCommercialCreditCardsResponse res = new org.openapis.openapi.models.operations.GetCommercialCreditCardsResponse(contentType, httpRes.statusCode()) {{
             getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = null;
             fourHundredErrorObject = null;
             fourHundredAndEightErrorObject = null;
@@ -72,8 +72,6 @@ public class Ccc {
             fiveHundredAndThreeErrorObject = null;
             errorObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +169,9 @@ public class Ccc {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadCommercialCreditCardsResponse res = new org.openapis.openapi.models.operations.HeadCommercialCreditCardsResponse() {{
+        org.openapis.openapi.models.operations.HeadCommercialCreditCardsResponse res = new org.openapis.openapi.models.operations.HeadCommercialCreditCardsResponse(contentType, httpRes.statusCode()) {{
             noResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

@@ -75,4 +75,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostSearchUsersResponse
 lib/src/main/java/org/openapis/openapi/models/operations/PostStartPhoneNumberAuthResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUpdateNotificationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUpdateUsernameResponse.java
+docs/sdk/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStartActivityStreamRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETStartActivityStreamActionEnum action;
+
     public GETStartActivityStreamRequest withAction(GETStartActivityStreamActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETStartActivityStreamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
     public Boolean applyImmediately;
+
     public GETStartActivityStreamRequest withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -29,6 +32,7 @@ public class GETStartActivityStreamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineNativeAuditFieldsIncluded")
     public Boolean engineNativeAuditFieldsIncluded;
+
     public GETStartActivityStreamRequest withEngineNativeAuditFieldsIncluded(Boolean engineNativeAuditFieldsIncluded) {
         this.engineNativeAuditFieldsIncluded = engineNativeAuditFieldsIncluded;
         return this;
@@ -39,6 +43,7 @@ public class GETStartActivityStreamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
     public String kmsKeyId;
+
     public GETStartActivityStreamRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -49,6 +54,7 @@ public class GETStartActivityStreamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Mode")
     public GETStartActivityStreamModeEnum mode;
+
     public GETStartActivityStreamRequest withMode(GETStartActivityStreamModeEnum mode) {
         this.mode = mode;
         return this;
@@ -59,6 +65,7 @@ public class GETStartActivityStreamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceArn")
     public String resourceArn;
+
     public GETStartActivityStreamRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -66,6 +73,7 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETStartActivityStreamVersionEnum version;
+
     public GETStartActivityStreamRequest withVersion(GETStartActivityStreamVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETStartActivityStreamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETStartActivityStreamRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETStartActivityStreamRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETStartActivityStreamRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETStartActivityStreamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETStartActivityStreamRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,17 @@ public class GETStartActivityStreamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETStartActivityStreamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETStartActivityStreamRequest(@JsonProperty("Action") GETStartActivityStreamActionEnum action, @JsonProperty("KmsKeyId") String kmsKeyId, @JsonProperty("Mode") GETStartActivityStreamModeEnum mode, @JsonProperty("ResourceArn") String resourceArn, @JsonProperty("Version") GETStartActivityStreamVersionEnum version) {
+        this.action = action;
+        this.kmsKeyId = kmsKeyId;
+        this.mode = mode;
+        this.resourceArn = resourceArn;
+        this.version = version;
+  }
 }

@@ -105,4 +105,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ShortcodeNotFound.java
 lib/src/main/java/org/openapis/openapi/models/shared/InvalidNumberTransferErrorResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferNumberResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferNumberRequest.java
+docs/sdk/README.md
+docs/subaccountmanagement/README.md
+docs/transfers/README.md
 USAGE.md

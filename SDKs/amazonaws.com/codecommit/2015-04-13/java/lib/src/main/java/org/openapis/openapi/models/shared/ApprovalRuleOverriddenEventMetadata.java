@@ -15,6 +15,7 @@ public class ApprovalRuleOverriddenEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideStatus")
     public OverrideStatusEnum overrideStatus;
+
     public ApprovalRuleOverriddenEventMetadata withOverrideStatus(OverrideStatusEnum overrideStatus) {
         this.overrideStatus = overrideStatus;
         return this;
@@ -23,9 +24,11 @@ public class ApprovalRuleOverriddenEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public ApprovalRuleOverriddenEventMetadata withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public ApprovalRuleOverriddenEventMetadata(){}
 }

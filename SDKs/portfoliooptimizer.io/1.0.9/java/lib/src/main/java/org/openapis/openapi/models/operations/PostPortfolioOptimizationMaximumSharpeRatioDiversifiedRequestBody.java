@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody {
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -42,6 +45,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody withConstraints(PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -52,9 +56,16 @@ public class PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody {
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

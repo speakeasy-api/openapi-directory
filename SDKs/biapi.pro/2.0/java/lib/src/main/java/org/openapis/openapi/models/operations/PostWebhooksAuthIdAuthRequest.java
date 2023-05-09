@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksAuthIdAuthRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostWebhooksAuthIdAuthRequestBody requestBody;
+
     public PostWebhooksAuthIdAuthRequest withRequestBody(PostWebhooksAuthIdAuthRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PostWebhooksAuthIdAuthRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostWebhooksAuthIdAuthRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -23,9 +26,14 @@ public class PostWebhooksAuthIdAuthRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_auth")
     public Long idAuth;
+
     public PostWebhooksAuthIdAuthRequest withIdAuth(Long idAuth) {
         this.idAuth = idAuth;
         return this;
     }
     
+    public PostWebhooksAuthIdAuthRequest(@JsonProperty("RequestBody") PostWebhooksAuthIdAuthRequestBody requestBody, @JsonProperty("id_auth") Long idAuth) {
+        this.requestBody = requestBody;
+        this.idAuth = idAuth;
+  }
 }

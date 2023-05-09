@@ -15,9 +15,11 @@ public class EditorialVideoCategoryResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public EditorialCategory[] data;
+
     public EditorialVideoCategoryResults withData(EditorialCategory[] data) {
         this.data = data;
         return this;
     }
     
+    public EditorialVideoCategoryResults(){}
 }

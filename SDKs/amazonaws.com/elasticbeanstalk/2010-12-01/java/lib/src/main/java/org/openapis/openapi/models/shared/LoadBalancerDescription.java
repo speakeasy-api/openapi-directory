@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LoadBalancerDescription {
     
     public String domain;
+
     public LoadBalancerDescription withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class LoadBalancerDescription {
     
     
     public Listener[] listeners;
+
     public LoadBalancerDescription withListeners(Listener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -26,9 +28,11 @@ public class LoadBalancerDescription {
     
     
     public String loadBalancerName;
+
     public LoadBalancerDescription withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public LoadBalancerDescription(){}
 }

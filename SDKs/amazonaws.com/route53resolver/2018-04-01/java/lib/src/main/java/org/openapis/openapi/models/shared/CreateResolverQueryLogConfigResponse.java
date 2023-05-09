@@ -15,9 +15,11 @@ public class CreateResolverQueryLogConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverQueryLogConfig")
     public ResolverQueryLogConfig resolverQueryLogConfig;
+
     public CreateResolverQueryLogConfigResponse withResolverQueryLogConfig(ResolverQueryLogConfig resolverQueryLogConfig) {
         this.resolverQueryLogConfig = resolverQueryLogConfig;
         return this;
     }
     
+    public CreateResolverQueryLogConfigResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineItemsReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public LineItemsReadRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +18,7 @@ public class LineItemsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public LineItemsReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -23,6 +26,7 @@ public class LineItemsReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public LineItemsReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +34,7 @@ public class LineItemsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public Long office;
+
     public LineItemsReadRequest withOffice(Long office) {
         this.office = office;
         return this;
@@ -37,6 +42,7 @@ public class LineItemsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public LineItemsReadRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -44,6 +50,7 @@ public class LineItemsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posted_date")
     public String postedDate;
+
     public LineItemsReadRequest withPostedDate(String postedDate) {
         this.postedDate = postedDate;
         return this;
@@ -51,6 +58,7 @@ public class LineItemsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
     public String serviceDate;
+
     public LineItemsReadRequest withServiceDate(String serviceDate) {
         this.serviceDate = serviceDate;
         return this;
@@ -58,9 +66,13 @@ public class LineItemsReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public LineItemsReadRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public LineItemsReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

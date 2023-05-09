@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFeaturesFeatureIdRequest;
 import org.openapis.openapi.models.operations.GetFeaturesFeatureIdResponse;
 
@@ -26,9 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetFeaturesFeatureIdRequest req = new GetFeaturesFeatureIdRequest() {{
-                featureId = 548814;
-            }}            
+            GetFeaturesFeatureIdRequest req = new GetFeaturesFeatureIdRequest(548814L);            
 
             GetFeaturesFeatureIdResponse res = sdk.feature.getFeaturesFeatureId(req);
 
@@ -38,6 +35,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,42 +44,42 @@ public class Application {
 ## Available Resources and Operations
 
 
-### feature
+### [feature](docs/feature/README.md)
 
-* `getFeaturesFeatureId` - Get a feature by its featureId
+* [getFeaturesFeatureId](docs/feature/README.md#getfeaturesfeatureid) - Get a feature by its featureId
 
-### featureTaxonomy
+### [featureTaxonomy](docs/featuretaxonomy/README.md)
 
-* `getFeatureCategories` - Get all feature categories
-* `getFeatureClasses` - Get all feature classes
-* `getFeatureTypes` - Get all feature types
+* [getFeatureCategories](docs/featuretaxonomy/README.md#getfeaturecategories) - Get all feature categories
+* [getFeatureClasses](docs/featuretaxonomy/README.md#getfeatureclasses) - Get all feature classes
+* [getFeatureTypes](docs/featuretaxonomy/README.md#getfeaturetypes) - Get all feature types
 
-### name
+### [name](docs/name/README.md)
 
-* `getNamesChanges` - Search for names with metadata changes in a given period
-* `getNamesDecisionsRecent` - Search for names affected by recent naming decision
-* `getNamesDecisionsYear` - Search for names affected by naming decisions in a given year
-* `getNamesInside` - Search in a geographic area
-* `getNamesNear` - Search near to a geographic point
-* `getNamesNotOfficialSearch` - Search by name, limit to unofficial names only
-* `getNamesOfficialSearch` - Search by name, limit to official names only
-* `getNamesSearch` - Search by name
-* `getNamesNameIdOutputFormat` - Get a name by its nameId
+* [getNamesChanges](docs/name/README.md#getnameschanges) - Search for names with metadata changes in a given period
+* [getNamesDecisionsRecent](docs/name/README.md#getnamesdecisionsrecent) - Search for names affected by recent naming decision
+* [getNamesDecisionsYear](docs/name/README.md#getnamesdecisionsyear) - Search for names affected by naming decisions in a given year
+* [getNamesInside](docs/name/README.md#getnamesinside) - Search in a geographic area
+* [getNamesNear](docs/name/README.md#getnamesnear) - Search near to a geographic point
+* [getNamesNotOfficialSearch](docs/name/README.md#getnamesnotofficialsearch) - Search by name, limit to unofficial names only
+* [getNamesOfficialSearch](docs/name/README.md#getnamesofficialsearch) - Search by name, limit to official names only
+* [getNamesSearch](docs/name/README.md#getnamessearch) - Search by name
+* [getNamesNameIdOutputFormat](docs/name/README.md#getnamesnameidoutputformat) - Get a name by its nameId
 
-### nameAuthority
+### [nameAuthority](docs/nameauthority/README.md)
 
-* `getNameAuthorities` - Get all name authorities
+* [getNameAuthorities](docs/nameauthority/README.md#getnameauthorities) - Get all name authorities
 
-### search
+### [search](docs/search/README.md)
 
-* `getNamesChanges` - Search for names with metadata changes in a given period
-* `getNamesDecisionsRecent` - Search for names affected by recent naming decision
-* `getNamesDecisionsYear` - Search for names affected by naming decisions in a given year
-* `getNamesInside` - Search in a geographic area
-* `getNamesNear` - Search near to a geographic point
-* `getNamesNotOfficialSearch` - Search by name, limit to unofficial names only
-* `getNamesOfficialSearch` - Search by name, limit to official names only
-* `getNamesSearch` - Search by name
+* [getNamesChanges](docs/search/README.md#getnameschanges) - Search for names with metadata changes in a given period
+* [getNamesDecisionsRecent](docs/search/README.md#getnamesdecisionsrecent) - Search for names affected by recent naming decision
+* [getNamesDecisionsYear](docs/search/README.md#getnamesdecisionsyear) - Search for names affected by naming decisions in a given year
+* [getNamesInside](docs/search/README.md#getnamesinside) - Search in a geographic area
+* [getNamesNear](docs/search/README.md#getnamesnear) - Search near to a geographic point
+* [getNamesNotOfficialSearch](docs/search/README.md#getnamesnotofficialsearch) - Search by name, limit to unofficial names only
+* [getNamesOfficialSearch](docs/search/README.md#getnamesofficialsearch) - Search by name, limit to official names only
+* [getNamesSearch](docs/search/README.md#getnamessearch) - Search by name
 <!-- End SDK Available Operations -->
 
 ### Maturity

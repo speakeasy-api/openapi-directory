@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSwitch200ApplicationJSON {
     @JsonProperty("buy_instructions")
     public GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions;
+
     public GetSwitch200ApplicationJSON withBuyInstructions(GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions) {
         this.buyInstructions = buyInstructions;
         return this;
@@ -25,6 +26,7 @@ public class GetSwitch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GetSwitch200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class GetSwitch200ApplicationJSON {
      */
     @JsonProperty("origin")
     public GetSwitch200ApplicationJSONOriginEnum origin;
+
     public GetSwitch200ApplicationJSON withOrigin(GetSwitch200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -45,6 +48,7 @@ public class GetSwitch200ApplicationJSON {
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public GetSwitch200ApplicationJSON withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -56,6 +60,7 @@ public class GetSwitch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public GetSwitch200ApplicationJSON withReason(String reason) {
         this.reason = reason;
         return this;
@@ -63,6 +68,7 @@ public class GetSwitch200ApplicationJSON {
     
     @JsonProperty("sell_instructions")
     public GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions;
+
     public GetSwitch200ApplicationJSON withSellInstructions(GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions) {
         this.sellInstructions = sellInstructions;
         return this;
@@ -73,6 +79,7 @@ public class GetSwitch200ApplicationJSON {
      */
     @JsonProperty("status")
     public GetSwitch200ApplicationJSONStatusEnum status;
+
     public GetSwitch200ApplicationJSON withStatus(GetSwitch200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -83,6 +90,7 @@ public class GetSwitch200ApplicationJSON {
      */
     @JsonProperty("switch_transaction_id")
     public String switchTransactionId;
+
     public GetSwitch200ApplicationJSON withSwitchTransactionId(String switchTransactionId) {
         this.switchTransactionId = switchTransactionId;
         return this;
@@ -94,9 +102,18 @@ public class GetSwitch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public GetSwitch200ApplicationJSONTransactions[] transactions;
+
     public GetSwitch200ApplicationJSON withTransactions(GetSwitch200ApplicationJSONTransactions[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public GetSwitch200ApplicationJSON(@JsonProperty("buy_instructions") GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions, @JsonProperty("origin") GetSwitch200ApplicationJSONOriginEnum origin, @JsonProperty("pot_id") String potId, @JsonProperty("sell_instructions") GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions, @JsonProperty("status") GetSwitch200ApplicationJSONStatusEnum status, @JsonProperty("switch_transaction_id") String switchTransactionId) {
+        this.buyInstructions = buyInstructions;
+        this.origin = origin;
+        this.potId = potId;
+        this.sellInstructions = sellInstructions;
+        this.status = status;
+        this.switchTransactionId = switchTransactionId;
+  }
 }

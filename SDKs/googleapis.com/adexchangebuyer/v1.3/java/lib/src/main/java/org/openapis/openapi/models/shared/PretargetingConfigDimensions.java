@@ -15,6 +15,7 @@ public class PretargetingConfigDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public String height;
+
     public PretargetingConfigDimensions withHeight(String height) {
         this.height = height;
         return this;
@@ -26,9 +27,11 @@ public class PretargetingConfigDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public String width;
+
     public PretargetingConfigDimensions withWidth(String width) {
         this.width = width;
         return this;
     }
     
+    public PretargetingConfigDimensions(){}
 }

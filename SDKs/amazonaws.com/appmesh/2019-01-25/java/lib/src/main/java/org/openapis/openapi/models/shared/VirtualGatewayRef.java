@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class VirtualGatewayRef {
     @JsonProperty("arn")
     public String arn;
+
     public VirtualGatewayRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class VirtualGatewayRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public VirtualGatewayRef withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class VirtualGatewayRef {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public VirtualGatewayRef withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -42,6 +45,7 @@ public class VirtualGatewayRef {
     
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualGatewayRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -49,6 +53,7 @@ public class VirtualGatewayRef {
     
     @JsonProperty("meshOwner")
     public String meshOwner;
+
     public VirtualGatewayRef withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -56,6 +61,7 @@ public class VirtualGatewayRef {
     
     @JsonProperty("resourceOwner")
     public String resourceOwner;
+
     public VirtualGatewayRef withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -63,6 +69,7 @@ public class VirtualGatewayRef {
     
     @JsonProperty("version")
     public Long version;
+
     public VirtualGatewayRef withVersion(Long version) {
         this.version = version;
         return this;
@@ -70,9 +77,20 @@ public class VirtualGatewayRef {
     
     @JsonProperty("virtualGatewayName")
     public String virtualGatewayName;
+
     public VirtualGatewayRef withVirtualGatewayName(String virtualGatewayName) {
         this.virtualGatewayName = virtualGatewayName;
         return this;
     }
     
+    public VirtualGatewayRef(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("meshName") String meshName, @JsonProperty("meshOwner") String meshOwner, @JsonProperty("resourceOwner") String resourceOwner, @JsonProperty("version") Long version, @JsonProperty("virtualGatewayName") String virtualGatewayName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.meshName = meshName;
+        this.meshOwner = meshOwner;
+        this.resourceOwner = resourceOwner;
+        this.version = version;
+        this.virtualGatewayName = virtualGatewayName;
+  }
 }

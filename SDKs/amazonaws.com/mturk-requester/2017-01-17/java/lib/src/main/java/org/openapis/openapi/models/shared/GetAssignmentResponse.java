@@ -15,6 +15,7 @@ public class GetAssignmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assignment")
     public Assignment assignment;
+
     public GetAssignmentResponse withAssignment(Assignment assignment) {
         this.assignment = assignment;
         return this;
@@ -23,9 +24,11 @@ public class GetAssignmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HIT")
     public Hit hit;
+
     public GetAssignmentResponse withHit(Hit hit) {
         this.hit = hit;
         return this;
     }
     
+    public GetAssignmentResponse(){}
 }

@@ -18,6 +18,7 @@ public class SearchSearchInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedSearchTime")
     public String formattedSearchTime;
+
     public SearchSearchInformation withFormattedSearchTime(String formattedSearchTime) {
         this.formattedSearchTime = formattedSearchTime;
         return this;
@@ -29,6 +30,7 @@ public class SearchSearchInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedTotalResults")
     public String formattedTotalResults;
+
     public SearchSearchInformation withFormattedTotalResults(String formattedTotalResults) {
         this.formattedTotalResults = formattedTotalResults;
         return this;
@@ -40,6 +42,7 @@ public class SearchSearchInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchTime")
     public Double searchTime;
+
     public SearchSearchInformation withSearchTime(Double searchTime) {
         this.searchTime = searchTime;
         return this;
@@ -51,9 +54,11 @@ public class SearchSearchInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResults")
     public String totalResults;
+
     public SearchSearchInformation withTotalResults(String totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public SearchSearchInformation(){}
 }

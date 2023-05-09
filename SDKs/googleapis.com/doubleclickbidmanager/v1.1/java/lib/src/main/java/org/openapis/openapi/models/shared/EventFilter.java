@@ -18,9 +18,11 @@ public class EventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public PathQueryOptionsFilter dimensionFilter;
+
     public EventFilter withDimensionFilter(PathQueryOptionsFilter dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
     }
     
+    public EventFilter(){}
 }

@@ -15,9 +15,13 @@ public class AutoCompleteTheRootSchema {
      */
     @JsonProperty("itemsReturned")
     public AutoCompleteTheRootSchemaItemsReturned[] itemsReturned;
+
     public AutoCompleteTheRootSchema withItemsReturned(AutoCompleteTheRootSchemaItemsReturned[] itemsReturned) {
         this.itemsReturned = itemsReturned;
         return this;
     }
     
+    public AutoCompleteTheRootSchema(@JsonProperty("itemsReturned") AutoCompleteTheRootSchemaItemsReturned[] itemsReturned) {
+        this.itemsReturned = itemsReturned;
+  }
 }

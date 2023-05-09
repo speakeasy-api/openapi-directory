@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteTagProtectionRequest {
@@ -12,6 +13,7 @@ public class ReposDeleteTagProtectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposDeleteTagProtectionRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ReposDeleteTagProtectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposDeleteTagProtectionRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -32,9 +35,15 @@ public class ReposDeleteTagProtectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_protection_id")
     public Long tagProtectionId;
+
     public ReposDeleteTagProtectionRequest withTagProtectionId(Long tagProtectionId) {
         this.tagProtectionId = tagProtectionId;
         return this;
     }
     
+    public ReposDeleteTagProtectionRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("tag_protection_id") Long tagProtectionId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.tagProtectionId = tagProtectionId;
+  }
 }

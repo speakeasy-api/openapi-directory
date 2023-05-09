@@ -18,6 +18,7 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public NetworkAddress withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingNetworkId")
     public String existingNetworkId;
+
     public NetworkAddress withExistingNetworkId(String existingNetworkId) {
         this.existingNetworkId = existingNetworkId;
         return this;
@@ -40,9 +42,11 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkId")
     public String networkId;
+
     public NetworkAddress withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public NetworkAddress(){}
 }

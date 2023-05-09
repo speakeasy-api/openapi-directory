@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAvailableResourceMetricsResponse {
     
     public String contentType;
+
     public ListAvailableResourceMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAvailableResourceMetricsResponse {
      */
     
     public Object internalServiceError;
+
     public ListAvailableResourceMetricsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListAvailableResourceMetricsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListAvailableResourceMetricsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListAvailableResourceMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAvailableResourceMetricsResponse listAvailableResourceMetricsResponse;
+
     public ListAvailableResourceMetricsResponse withListAvailableResourceMetricsResponse(org.openapis.openapi.models.shared.ListAvailableResourceMetricsResponse listAvailableResourceMetricsResponse) {
         this.listAvailableResourceMetricsResponse = listAvailableResourceMetricsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAvailableResourceMetricsResponse {
      */
     
     public Object notAuthorizedException;
+
     public ListAvailableResourceMetricsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class ListAvailableResourceMetricsResponse {
     
     
     public Integer statusCode;
+
     public ListAvailableResourceMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListAvailableResourceMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAvailableResourceMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAvailableResourceMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

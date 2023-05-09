@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolsIgnoreRequest {
@@ -12,6 +13,7 @@ public class SymbolsIgnoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public SymbolsIgnoreRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class SymbolsIgnoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public SymbolsIgnoreRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +35,15 @@ public class SymbolsIgnoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=symbol_id")
     public String symbolId;
+
     public SymbolsIgnoreRequest withSymbolId(String symbolId) {
         this.symbolId = symbolId;
         return this;
     }
     
+    public SymbolsIgnoreRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("symbol_id") String symbolId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.symbolId = symbolId;
+  }
 }

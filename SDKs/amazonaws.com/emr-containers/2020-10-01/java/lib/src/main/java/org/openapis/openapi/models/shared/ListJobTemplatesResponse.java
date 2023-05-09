@@ -15,6 +15,7 @@ public class ListJobTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListJobTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListJobTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templates")
     public JobTemplate[] templates;
+
     public ListJobTemplatesResponse withTemplates(JobTemplate[] templates) {
         this.templates = templates;
         return this;
     }
     
+    public ListJobTemplatesResponse(){}
 }

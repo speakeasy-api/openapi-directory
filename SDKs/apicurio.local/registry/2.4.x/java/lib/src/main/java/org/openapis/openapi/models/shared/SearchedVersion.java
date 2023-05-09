@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SearchedVersion {
     @JsonProperty("contentId")
     public Long contentId;
+
     public SearchedVersion withContentId(Long contentId) {
         this.contentId = contentId;
         return this;
@@ -26,6 +27,7 @@ public class SearchedVersion {
     
     @JsonProperty("createdBy")
     public String createdBy;
+
     public SearchedVersion withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -35,6 +37,7 @@ public class SearchedVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdOn")
     public OffsetDateTime createdOn;
+
     public SearchedVersion withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -43,6 +46,7 @@ public class SearchedVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SearchedVersion withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class SearchedVersion {
     
     @JsonProperty("globalId")
     public Long globalId;
+
     public SearchedVersion withGlobalId(Long globalId) {
         this.globalId = globalId;
         return this;
@@ -58,6 +63,7 @@ public class SearchedVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public SearchedVersion withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -66,6 +72,7 @@ public class SearchedVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SearchedVersion withName(String name) {
         this.name = name;
         return this;
@@ -77,6 +84,7 @@ public class SearchedVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public SearchedVersion withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -84,6 +92,7 @@ public class SearchedVersion {
     
     @JsonProperty("references")
     public ArtifactReference[] references;
+
     public SearchedVersion withReferences(ArtifactReference[] references) {
         this.references = references;
         return this;
@@ -100,6 +109,7 @@ public class SearchedVersion {
      */
     @JsonProperty("state")
     public ArtifactStateEnum state;
+
     public SearchedVersion withState(ArtifactStateEnum state) {
         this.state = state;
         return this;
@@ -107,6 +117,7 @@ public class SearchedVersion {
     
     @JsonProperty("type")
     public String type;
+
     public SearchedVersion withType(String type) {
         this.type = type;
         return this;
@@ -114,9 +125,20 @@ public class SearchedVersion {
     
     @JsonProperty("version")
     public String version;
+
     public SearchedVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SearchedVersion(@JsonProperty("contentId") Long contentId, @JsonProperty("createdBy") String createdBy, @JsonProperty("createdOn") OffsetDateTime createdOn, @JsonProperty("globalId") Long globalId, @JsonProperty("references") ArtifactReference[] references, @JsonProperty("state") ArtifactStateEnum state, @JsonProperty("type") String type, @JsonProperty("version") String version) {
+        this.contentId = contentId;
+        this.createdBy = createdBy;
+        this.createdOn = createdOn;
+        this.globalId = globalId;
+        this.references = references;
+        this.state = state;
+        this.type = type;
+        this.version = version;
+  }
 }

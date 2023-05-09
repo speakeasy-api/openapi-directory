@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSizeConstraintSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteSizeConstraintSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,9 +17,14 @@ public class DeleteSizeConstraintSetRequest {
     
     @JsonProperty("SizeConstraintSetId")
     public String sizeConstraintSetId;
+
     public DeleteSizeConstraintSetRequest withSizeConstraintSetId(String sizeConstraintSetId) {
         this.sizeConstraintSetId = sizeConstraintSetId;
         return this;
     }
     
+    public DeleteSizeConstraintSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("SizeConstraintSetId") String sizeConstraintSetId) {
+        this.changeToken = changeToken;
+        this.sizeConstraintSetId = sizeConstraintSetId;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyInstanceCapacityReservationAttributesRequest {
     
     public CapacityReservationSpecification capacityReservationSpecification;
+
     public ModifyInstanceCapacityReservationAttributesRequest withCapacityReservationSpecification(CapacityReservationSpecification capacityReservationSpecification) {
         this.capacityReservationSpecification = capacityReservationSpecification;
         return this;
@@ -16,6 +17,7 @@ public class ModifyInstanceCapacityReservationAttributesRequest {
     
     
     public Boolean dryRun;
+
     public ModifyInstanceCapacityReservationAttributesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class ModifyInstanceCapacityReservationAttributesRequest {
     
     
     public String instanceId;
+
     public ModifyInstanceCapacityReservationAttributesRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public ModifyInstanceCapacityReservationAttributesRequest(@JsonProperty("CapacityReservationSpecification") CapacityReservationSpecification capacityReservationSpecification, @JsonProperty("InstanceId") String instanceId) {
+        this.capacityReservationSpecification = capacityReservationSpecification;
+        this.instanceId = instanceId;
+  }
 }

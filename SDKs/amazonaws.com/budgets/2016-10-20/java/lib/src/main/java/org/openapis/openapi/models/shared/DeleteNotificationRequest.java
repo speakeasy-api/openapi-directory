@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteNotificationRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public DeleteNotificationRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteNotificationRequest {
     
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public DeleteNotificationRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -26,9 +28,15 @@ public class DeleteNotificationRequest {
     
     @JsonProperty("Notification")
     public Notification notification;
+
     public DeleteNotificationRequest withNotification(Notification notification) {
         this.notification = notification;
         return this;
     }
     
+    public DeleteNotificationRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("BudgetName") String budgetName, @JsonProperty("Notification") Notification notification) {
+        this.accountId = accountId;
+        this.budgetName = budgetName;
+        this.notification = notification;
+  }
 }

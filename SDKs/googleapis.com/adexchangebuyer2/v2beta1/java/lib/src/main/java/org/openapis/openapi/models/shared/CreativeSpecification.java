@@ -18,6 +18,7 @@ public class CreativeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeCompanionSizes")
     public AdSize[] creativeCompanionSizes;
+
     public CreativeSpecification withCreativeCompanionSizes(AdSize[] creativeCompanionSizes) {
         this.creativeCompanionSizes = creativeCompanionSizes;
         return this;
@@ -29,9 +30,11 @@ public class CreativeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeSize")
     public AdSize creativeSize;
+
     public CreativeSpecification withCreativeSize(AdSize creativeSize) {
         this.creativeSize = creativeSize;
         return this;
     }
     
+    public CreativeSpecification(){}
 }

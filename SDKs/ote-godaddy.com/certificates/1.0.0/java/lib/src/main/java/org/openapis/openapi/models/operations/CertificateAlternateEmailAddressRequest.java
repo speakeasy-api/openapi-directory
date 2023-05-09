@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateAlternateEmailAddressRequest {
@@ -12,6 +13,7 @@ public class CertificateAlternateEmailAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
     public String certificateId;
+
     public CertificateAlternateEmailAddressRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -22,9 +24,14 @@ public class CertificateAlternateEmailAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
     public String emailAddress;
+
     public CertificateAlternateEmailAddressRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public CertificateAlternateEmailAddressRequest(@JsonProperty("certificateId") String certificateId, @JsonProperty("emailAddress") String emailAddress) {
+        this.certificateId = certificateId;
+        this.emailAddress = emailAddress;
+  }
 }

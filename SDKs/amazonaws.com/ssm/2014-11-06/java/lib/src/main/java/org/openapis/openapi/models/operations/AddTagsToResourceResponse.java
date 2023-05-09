@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsToResourceResponse {
@@ -12,6 +13,7 @@ public class AddTagsToResourceResponse {
      */
     
     public java.util.Map<String, Object> addTagsToResourceResult;
+
     public AddTagsToResourceResponse withAddTagsToResourceResult(java.util.Map<String, Object> addTagsToResourceResult) {
         this.addTagsToResourceResult = addTagsToResourceResult;
         return this;
@@ -19,6 +21,7 @@ public class AddTagsToResourceResponse {
     
     
     public String contentType;
+
     public AddTagsToResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object internalServerError;
+
     public AddTagsToResourceResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object invalidResourceId;
+
     public AddTagsToResourceResponse withInvalidResourceId(Object invalidResourceId) {
         this.invalidResourceId = invalidResourceId;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object invalidResourceType;
+
     public AddTagsToResourceResponse withInvalidResourceType(Object invalidResourceType) {
         this.invalidResourceType = invalidResourceType;
         return this;
@@ -56,6 +62,7 @@ public class AddTagsToResourceResponse {
     
     
     public Integer statusCode;
+
     public AddTagsToResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AddTagsToResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsToResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AddTagsToResourceResponse {
      */
     
     public Object tooManyTagsError;
+
     public AddTagsToResourceResponse withTooManyTagsError(Object tooManyTagsError) {
         this.tooManyTagsError = tooManyTagsError;
         return this;
@@ -83,9 +92,14 @@ public class AddTagsToResourceResponse {
      */
     
     public Object tooManyUpdates;
+
     public AddTagsToResourceResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
     }
     
+    public AddTagsToResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

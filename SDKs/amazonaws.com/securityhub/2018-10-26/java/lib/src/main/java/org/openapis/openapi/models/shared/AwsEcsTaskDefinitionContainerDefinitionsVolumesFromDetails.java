@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadOnly")
     public Boolean readOnly;
+
     public AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceContainer")
     public String sourceContainer;
+
     public AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails withSourceContainer(String sourceContainer) {
         this.sourceContainer = sourceContainer;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails(){}
 }

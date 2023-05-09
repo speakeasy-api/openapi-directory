@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTimeToLiveResponse {
     
     public String contentType;
+
     public UpdateTimeToLiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTimeToLiveResponse {
      */
     
     public Object internalServerError;
+
     public UpdateTimeToLiveResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTimeToLiveResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateTimeToLiveResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateTimeToLiveResponse {
     
     
     public Integer statusCode;
+
     public UpdateTimeToLiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateTimeToLiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTimeToLiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTimeToLiveResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateTimeToLiveResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTimeToLiveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTimeToLiveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateTimeToLiveResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTimeToLiveOutput updateTimeToLiveOutput;
+
     public UpdateTimeToLiveResponse withUpdateTimeToLiveOutput(org.openapis.openapi.models.shared.UpdateTimeToLiveOutput updateTimeToLiveOutput) {
         this.updateTimeToLiveOutput = updateTimeToLiveOutput;
         return this;
     }
     
+    public UpdateTimeToLiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

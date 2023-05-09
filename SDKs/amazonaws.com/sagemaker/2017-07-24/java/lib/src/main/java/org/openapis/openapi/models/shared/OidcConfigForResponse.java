@@ -15,6 +15,7 @@ public class OidcConfigForResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationEndpoint")
     public String authorizationEndpoint;
+
     public OidcConfigForResponse withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class OidcConfigForResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public OidcConfigForResponse withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class OidcConfigForResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Issuer")
     public String issuer;
+
     public OidcConfigForResponse withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -39,6 +42,7 @@ public class OidcConfigForResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JwksUri")
     public String jwksUri;
+
     public OidcConfigForResponse withJwksUri(String jwksUri) {
         this.jwksUri = jwksUri;
         return this;
@@ -47,6 +51,7 @@ public class OidcConfigForResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogoutEndpoint")
     public String logoutEndpoint;
+
     public OidcConfigForResponse withLogoutEndpoint(String logoutEndpoint) {
         this.logoutEndpoint = logoutEndpoint;
         return this;
@@ -55,6 +60,7 @@ public class OidcConfigForResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenEndpoint")
     public String tokenEndpoint;
+
     public OidcConfigForResponse withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -63,9 +69,11 @@ public class OidcConfigForResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserInfoEndpoint")
     public String userInfoEndpoint;
+
     public OidcConfigForResponse withUserInfoEndpoint(String userInfoEndpoint) {
         this.userInfoEndpoint = userInfoEndpoint;
         return this;
     }
     
+    public OidcConfigForResponse(){}
 }

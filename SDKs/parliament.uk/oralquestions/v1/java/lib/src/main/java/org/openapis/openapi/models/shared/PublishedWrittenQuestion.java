@@ -17,6 +17,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Answer")
     public String answer;
+
     public PublishedWrittenQuestion withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -27,6 +28,7 @@ public class PublishedWrittenQuestion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AnsweredWhen")
     public OffsetDateTime answeredWhen;
+
     public PublishedWrittenQuestion withAnsweredWhen(OffsetDateTime answeredWhen) {
         this.answeredWhen = answeredWhen;
         return this;
@@ -35,6 +37,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnsweringBody")
     public String answeringBody;
+
     public PublishedWrittenQuestion withAnsweringBody(String answeringBody) {
         this.answeringBody = answeringBody;
         return this;
@@ -43,6 +46,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnsweringBodyId")
     public Integer answeringBodyId;
+
     public PublishedWrittenQuestion withAnsweringBodyId(Integer answeringBodyId) {
         this.answeringBodyId = answeringBodyId;
         return this;
@@ -51,6 +55,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnsweringMinister")
     public MemberForDate answeringMinister;
+
     public PublishedWrittenQuestion withAnsweringMinister(MemberForDate answeringMinister) {
         this.answeringMinister = answeringMinister;
         return this;
@@ -59,6 +64,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnsweringMinisterId")
     public Integer answeringMinisterId;
+
     public PublishedWrittenQuestion withAnsweringMinisterId(Integer answeringMinisterId) {
         this.answeringMinisterId = answeringMinisterId;
         return this;
@@ -67,6 +73,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnsweringMinisterTitle")
     public String answeringMinisterTitle;
+
     public PublishedWrittenQuestion withAnsweringMinisterTitle(String answeringMinisterTitle) {
         this.answeringMinisterTitle = answeringMinisterTitle;
         return this;
@@ -75,6 +82,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AskingMember")
     public MemberForDate askingMember;
+
     public PublishedWrittenQuestion withAskingMember(MemberForDate askingMember) {
         this.askingMember = askingMember;
         return this;
@@ -83,6 +91,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AskingMemberId")
     public Integer askingMemberId;
+
     public PublishedWrittenQuestion withAskingMemberId(Integer askingMemberId) {
         this.askingMemberId = askingMemberId;
         return this;
@@ -93,6 +102,7 @@ public class PublishedWrittenQuestion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DueForAnswer")
     public OffsetDateTime dueForAnswer;
+
     public PublishedWrittenQuestion withDueForAnswer(OffsetDateTime dueForAnswer) {
         this.dueForAnswer = dueForAnswer;
         return this;
@@ -101,6 +111,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public PublishedWrittenQuestion withId(Integer id) {
         this.id = id;
         return this;
@@ -109,6 +120,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionText")
     public String questionText;
+
     public PublishedWrittenQuestion withQuestionText(String questionText) {
         this.questionText = questionText;
         return this;
@@ -117,6 +129,7 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuestionType")
     public PublishedWrittenQuestionQuestionTypeEnum questionType;
+
     public PublishedWrittenQuestion withQuestionType(PublishedWrittenQuestionQuestionTypeEnum questionType) {
         this.questionType = questionType;
         return this;
@@ -127,6 +140,7 @@ public class PublishedWrittenQuestion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TabledWhen")
     public OffsetDateTime tabledWhen;
+
     public PublishedWrittenQuestion withTabledWhen(OffsetDateTime tabledWhen) {
         this.tabledWhen = tabledWhen;
         return this;
@@ -135,9 +149,11 @@ public class PublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UIN")
     public Integer uin;
+
     public PublishedWrittenQuestion withUin(Integer uin) {
         this.uin = uin;
         return this;
     }
     
+    public PublishedWrittenQuestion(){}
 }

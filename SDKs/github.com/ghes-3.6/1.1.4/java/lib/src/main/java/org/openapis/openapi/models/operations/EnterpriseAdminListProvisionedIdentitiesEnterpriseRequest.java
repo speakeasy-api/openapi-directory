@@ -12,6 +12,7 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedAttributes")
     public String excludedAttributes;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withExcludedAttributes(String excludedAttributes) {
         this.excludedAttributes = excludedAttributes;
         return this;
@@ -32,6 +34,7 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -42,9 +45,11 @@ public class EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Integer startIndex;
+
     public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest(){}
 }

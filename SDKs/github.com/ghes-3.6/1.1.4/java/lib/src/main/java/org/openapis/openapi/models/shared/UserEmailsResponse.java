@@ -15,6 +15,7 @@ public class UserEmailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public UserEmailsResponse withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -26,6 +27,7 @@ public class UserEmailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UserEmailsResponse withType(String type) {
         this.type = type;
         return this;
@@ -36,9 +38,13 @@ public class UserEmailsResponse {
      */
     @JsonProperty("value")
     public String value;
+
     public UserEmailsResponse withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UserEmailsResponse(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4RiceDeltaEncoding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodedData")
     public String encodedData;
+
     public GoogleSecuritySafebrowsingV4RiceDeltaEncoding withEncodedData(String encodedData) {
         this.encodedData = encodedData;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSecuritySafebrowsingV4RiceDeltaEncoding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstValue")
     public String firstValue;
+
     public GoogleSecuritySafebrowsingV4RiceDeltaEncoding withFirstValue(String firstValue) {
         this.firstValue = firstValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleSecuritySafebrowsingV4RiceDeltaEncoding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numEntries")
     public Integer numEntries;
+
     public GoogleSecuritySafebrowsingV4RiceDeltaEncoding withNumEntries(Integer numEntries) {
         this.numEntries = numEntries;
         return this;
@@ -51,9 +54,11 @@ public class GoogleSecuritySafebrowsingV4RiceDeltaEncoding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riceParameter")
     public Integer riceParameter;
+
     public GoogleSecuritySafebrowsingV4RiceDeltaEncoding withRiceParameter(Integer riceParameter) {
         this.riceParameter = riceParameter;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4RiceDeltaEncoding(){}
 }

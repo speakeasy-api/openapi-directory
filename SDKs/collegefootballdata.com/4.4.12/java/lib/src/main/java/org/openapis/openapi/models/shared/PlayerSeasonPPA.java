@@ -12,6 +12,7 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averagePPA")
     public PlayerSeasonPPAAveragePPA averagePPA;
+
     public PlayerSeasonPPA withAveragePPA(PlayerSeasonPPAAveragePPA averagePPA) {
         this.averagePPA = averagePPA;
         return this;
@@ -20,6 +21,7 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public PlayerSeasonPPA withConference(String conference) {
         this.conference = conference;
         return this;
@@ -28,6 +30,7 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PlayerSeasonPPA withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlayerSeasonPPA withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public PlayerSeasonPPA withPosition(String position) {
         this.position = position;
         return this;
@@ -52,6 +57,7 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public PlayerSeasonPPA withSeason(Long season) {
         this.season = season;
         return this;
@@ -60,6 +66,7 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public PlayerSeasonPPA withTeam(String team) {
         this.team = team;
         return this;
@@ -68,9 +75,11 @@ public class PlayerSeasonPPA {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPPA")
     public PlayerSeasonPPATotalPPA totalPPA;
+
     public PlayerSeasonPPA withTotalPPA(PlayerSeasonPPATotalPPA totalPPA) {
         this.totalPPA = totalPPA;
         return this;
     }
     
+    public PlayerSeasonPPA(){}
 }

@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4RawHashes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixSize")
     public Integer prefixSize;
+
     public GoogleSecuritySafebrowsingV4RawHashes withPrefixSize(Integer prefixSize) {
         this.prefixSize = prefixSize;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSecuritySafebrowsingV4RawHashes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawHashes")
     public String rawHashes;
+
     public GoogleSecuritySafebrowsingV4RawHashes withRawHashes(String rawHashes) {
         this.rawHashes = rawHashes;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4RawHashes(){}
 }

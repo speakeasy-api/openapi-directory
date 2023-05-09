@@ -18,6 +18,7 @@ public class URIs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chatBotUri")
     public String chatBotUri;
+
     public URIs withChatBotUri(String chatBotUri) {
         this.chatBotUri = chatBotUri;
         return this;
@@ -29,6 +30,7 @@ public class URIs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaUri")
     public String mediaUri;
+
     public URIs withMediaUri(String mediaUri) {
         this.mediaUri = mediaUri;
         return this;
@@ -40,6 +42,7 @@ public class URIs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootUri")
     public String rootUri;
+
     public URIs withRootUri(String rootUri) {
         this.rootUri = rootUri;
         return this;
@@ -51,9 +54,11 @@ public class URIs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualAgentStreamingServiceUri")
     public String virtualAgentStreamingServiceUri;
+
     public URIs withVirtualAgentStreamingServiceUri(String virtualAgentStreamingServiceUri) {
         this.virtualAgentStreamingServiceUri = virtualAgentStreamingServiceUri;
         return this;
     }
     
+    public URIs(){}
 }

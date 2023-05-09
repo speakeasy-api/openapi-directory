@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePlacementResponse {
     
     public String contentType;
+
     public DescribePlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePlacementResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePlacementResponse describePlacementResponse;
+
     public DescribePlacementResponse withDescribePlacementResponse(org.openapis.openapi.models.shared.DescribePlacementResponse describePlacementResponse) {
         this.describePlacementResponse = describePlacementResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePlacementResponse {
      */
     
     public Object internalFailureException;
+
     public DescribePlacementResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribePlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribePlacementResponse {
     
     
     public Integer statusCode;
+
     public DescribePlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribePlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribePlacementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePlacementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribePlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

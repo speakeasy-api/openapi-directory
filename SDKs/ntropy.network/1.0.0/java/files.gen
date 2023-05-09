@@ -45,4 +45,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTran
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTransactionClassificationResultsResponse.java
+docs/sdk/README.md
+docs/batch/README.md
+docs/batch1/README.md
+docs/business/README.md
+docs/classifier/README.md
+docs/consumer/README.md
 USAGE.md

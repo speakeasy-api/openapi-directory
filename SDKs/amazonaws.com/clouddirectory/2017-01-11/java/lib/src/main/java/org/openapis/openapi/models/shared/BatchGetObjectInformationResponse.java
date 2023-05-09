@@ -15,6 +15,7 @@ public class BatchGetObjectInformationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public BatchGetObjectInformationResponse withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetObjectInformationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaFacets")
     public SchemaFacet[] schemaFacets;
+
     public BatchGetObjectInformationResponse withSchemaFacets(SchemaFacet[] schemaFacets) {
         this.schemaFacets = schemaFacets;
         return this;
     }
     
+    public BatchGetObjectInformationResponse(){}
 }

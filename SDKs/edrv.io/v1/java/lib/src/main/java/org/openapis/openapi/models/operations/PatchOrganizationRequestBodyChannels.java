@@ -12,6 +12,7 @@ public class PatchOrganizationRequestBodyChannels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slack")
     public java.util.Map<String, Object> slack;
+
     public PatchOrganizationRequestBodyChannels withSlack(java.util.Map<String, Object> slack) {
         this.slack = slack;
         return this;
@@ -20,9 +21,11 @@ public class PatchOrganizationRequestBodyChannels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telegram")
     public java.util.Map<String, Object> telegram;
+
     public PatchOrganizationRequestBodyChannels withTelegram(java.util.Map<String, Object> telegram) {
         this.telegram = telegram;
         return this;
     }
     
+    public PatchOrganizationRequestBodyChannels(){}
 }

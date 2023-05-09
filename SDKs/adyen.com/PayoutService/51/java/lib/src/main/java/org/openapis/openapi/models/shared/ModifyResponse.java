@@ -18,6 +18,7 @@ public class ModifyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public ModifyResponse withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -28,6 +29,7 @@ public class ModifyResponse {
      */
     @JsonProperty("pspReference")
     public String pspReference;
+
     public ModifyResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,9 +42,14 @@ public class ModifyResponse {
      */
     @JsonProperty("response")
     public String response;
+
     public ModifyResponse withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public ModifyResponse(@JsonProperty("pspReference") String pspReference, @JsonProperty("response") String response) {
+        this.pspReference = pspReference;
+        this.response = response;
+  }
 }

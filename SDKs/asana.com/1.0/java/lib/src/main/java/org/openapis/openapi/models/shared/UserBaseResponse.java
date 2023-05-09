@@ -18,6 +18,7 @@ public class UserBaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserBaseResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class UserBaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public UserBaseResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -40,6 +42,7 @@ public class UserBaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserBaseResponse withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class UserBaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photo")
     public UserBaseResponsePhoto photo;
+
     public UserBaseResponse withPhoto(UserBaseResponsePhoto photo) {
         this.photo = photo;
         return this;
@@ -62,9 +66,11 @@ public class UserBaseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public UserBaseResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public UserBaseResponse(){}
 }

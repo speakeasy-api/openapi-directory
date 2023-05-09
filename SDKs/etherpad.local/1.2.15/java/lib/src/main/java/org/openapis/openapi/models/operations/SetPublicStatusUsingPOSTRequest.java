@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SetPublicStatusUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public SetPublicStatusUsingPOSTRequest withPadID(String padID) {
         this.padID = padID;
         return this;
@@ -16,9 +17,11 @@ public class SetPublicStatusUsingPOSTRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publicStatus")
     public String publicStatus;
+
     public SetPublicStatusUsingPOSTRequest withPublicStatus(String publicStatus) {
         this.publicStatus = publicStatus;
         return this;
     }
     
+    public SetPublicStatusUsingPOSTRequest(){}
 }

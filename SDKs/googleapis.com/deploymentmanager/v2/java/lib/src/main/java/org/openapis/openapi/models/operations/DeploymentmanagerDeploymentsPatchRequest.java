@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeploymentmanagerDeploymentsPatchRequest {
@@ -12,6 +13,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DeploymentmanagerDeploymentsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Deployment deployment1;
+
     public DeploymentmanagerDeploymentsPatchRequest withDeployment1(org.openapis.openapi.models.shared.Deployment deployment1) {
         this.deployment1 = deployment1;
         return this;
@@ -29,6 +32,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DeploymentmanagerDeploymentsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DeploymentmanagerDeploymentsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DeploymentmanagerDeploymentsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createPolicy")
     public DeploymentmanagerDeploymentsPatchCreatePolicyEnum createPolicy;
+
     public DeploymentmanagerDeploymentsPatchRequest withCreatePolicy(DeploymentmanagerDeploymentsPatchCreatePolicyEnum createPolicy) {
         this.createPolicy = createPolicy;
         return this;
@@ -69,6 +76,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deletePolicy")
     public DeploymentmanagerDeploymentsPatchDeletePolicyEnum deletePolicy;
+
     public DeploymentmanagerDeploymentsPatchRequest withDeletePolicy(DeploymentmanagerDeploymentsPatchDeletePolicyEnum deletePolicy) {
         this.deletePolicy = deletePolicy;
         return this;
@@ -79,6 +87,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deploymentPathParameter;
+
     public DeploymentmanagerDeploymentsPatchRequest withDeploymentPathParameter(String deploymentPathParameter) {
         this.deploymentPathParameter = deploymentPathParameter;
         return this;
@@ -89,6 +98,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DeploymentmanagerDeploymentsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -99,6 +109,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DeploymentmanagerDeploymentsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DeploymentmanagerDeploymentsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DeploymentmanagerDeploymentsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview")
     public Boolean preview;
+
     public DeploymentmanagerDeploymentsPatchRequest withPreview(Boolean preview) {
         this.preview = preview;
         return this;
@@ -139,6 +153,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DeploymentmanagerDeploymentsPatchRequest withProject(String project) {
         this.project = project;
         return this;
@@ -149,6 +164,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DeploymentmanagerDeploymentsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -159,6 +175,7 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DeploymentmanagerDeploymentsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,9 +186,14 @@ public class DeploymentmanagerDeploymentsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DeploymentmanagerDeploymentsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DeploymentmanagerDeploymentsPatchRequest(@JsonProperty("deploymentPathParameter") String deploymentPathParameter, @JsonProperty("project") String project) {
+        this.deploymentPathParameter = deploymentPathParameter;
+        this.project = project;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeCapacity")
     public ComputeCapacity computeCapacity;
+
     public CreateFleetRequest withComputeCapacity(ComputeCapacity computeCapacity) {
         this.computeCapacity = computeCapacity;
         return this;
@@ -20,6 +21,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateFleetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisconnectTimeoutInSeconds")
     public Long disconnectTimeoutInSeconds;
+
     public CreateFleetRequest withDisconnectTimeoutInSeconds(Long disconnectTimeoutInSeconds) {
         this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
         return this;
@@ -36,6 +39,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateFleetRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -44,6 +48,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainJoinInfo")
     public DomainJoinInfo domainJoinInfo;
+
     public CreateFleetRequest withDomainJoinInfo(DomainJoinInfo domainJoinInfo) {
         this.domainJoinInfo = domainJoinInfo;
         return this;
@@ -52,6 +57,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDefaultInternetAccess")
     public Boolean enableDefaultInternetAccess;
+
     public CreateFleetRequest withEnableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
         this.enableDefaultInternetAccess = enableDefaultInternetAccess;
         return this;
@@ -60,6 +66,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetType")
     public FleetTypeEnum fleetType;
+
     public CreateFleetRequest withFleetType(FleetTypeEnum fleetType) {
         this.fleetType = fleetType;
         return this;
@@ -68,6 +75,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public CreateFleetRequest withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -76,6 +84,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleDisconnectTimeoutInSeconds")
     public Long idleDisconnectTimeoutInSeconds;
+
     public CreateFleetRequest withIdleDisconnectTimeoutInSeconds(Long idleDisconnectTimeoutInSeconds) {
         this.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
         return this;
@@ -84,6 +93,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public CreateFleetRequest withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -92,6 +102,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageName")
     public String imageName;
+
     public CreateFleetRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -99,6 +110,7 @@ public class CreateFleetRequest {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public CreateFleetRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -107,6 +119,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentSessions")
     public Long maxConcurrentSessions;
+
     public CreateFleetRequest withMaxConcurrentSessions(Long maxConcurrentSessions) {
         this.maxConcurrentSessions = maxConcurrentSessions;
         return this;
@@ -115,6 +128,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxUserDurationInSeconds")
     public Long maxUserDurationInSeconds;
+
     public CreateFleetRequest withMaxUserDurationInSeconds(Long maxUserDurationInSeconds) {
         this.maxUserDurationInSeconds = maxUserDurationInSeconds;
         return this;
@@ -122,6 +136,7 @@ public class CreateFleetRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateFleetRequest withName(String name) {
         this.name = name;
         return this;
@@ -130,6 +145,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public PlatformTypeEnum platform;
+
     public CreateFleetRequest withPlatform(PlatformTypeEnum platform) {
         this.platform = platform;
         return this;
@@ -138,6 +154,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionScriptS3Location")
     public S3Location sessionScriptS3Location;
+
     public CreateFleetRequest withSessionScriptS3Location(S3Location sessionScriptS3Location) {
         this.sessionScriptS3Location = sessionScriptS3Location;
         return this;
@@ -146,6 +163,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamView")
     public StreamViewEnum streamView;
+
     public CreateFleetRequest withStreamView(StreamViewEnum streamView) {
         this.streamView = streamView;
         return this;
@@ -154,6 +172,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateFleetRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -162,6 +181,7 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsbDeviceFilterStrings")
     public String[] usbDeviceFilterStrings;
+
     public CreateFleetRequest withUsbDeviceFilterStrings(String[] usbDeviceFilterStrings) {
         this.usbDeviceFilterStrings = usbDeviceFilterStrings;
         return this;
@@ -170,9 +190,14 @@ public class CreateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateFleetRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateFleetRequest(@JsonProperty("InstanceType") String instanceType, @JsonProperty("Name") String name) {
+        this.instanceType = instanceType;
+        this.name = name;
+  }
 }

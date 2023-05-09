@@ -23,6 +23,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_properties")
     public java.util.Map<String, AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum> customProperties;
+
     public AnalyticsGetAudience200ApplicationJSON withCustomProperties(java.util.Map<String, AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum> customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -34,6 +35,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public AnalyticsGetAudience200ApplicationJSON withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -45,6 +47,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AnalyticsGetAudience200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -53,6 +56,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AnalyticsGetAudience200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -64,6 +68,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_count")
     public Long estimatedCount;
+
     public AnalyticsGetAudience200ApplicationJSON withEstimatedCount(Long estimatedCount) {
         this.estimatedCount = estimatedCount;
         return this;
@@ -75,6 +80,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_total_count")
     public Long estimatedTotalCount;
+
     public AnalyticsGetAudience200ApplicationJSON withEstimatedTotalCount(Long estimatedTotalCount) {
         this.estimatedTotalCount = estimatedTotalCount;
         return this;
@@ -86,6 +92,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AnalyticsGetAudience200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -97,6 +104,7 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AnalyticsGetAudience200ApplicationJSONStateEnum state;
+
     public AnalyticsGetAudience200ApplicationJSON withState(AnalyticsGetAudience200ApplicationJSONStateEnum state) {
         this.state = state;
         return this;
@@ -110,9 +118,11 @@ public class AnalyticsGetAudience200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public AnalyticsGetAudience200ApplicationJSON withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AnalyticsGetAudience200ApplicationJSON(){}
 }

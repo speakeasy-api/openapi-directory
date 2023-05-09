@@ -59,10 +59,8 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesForceReportUploadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetResponse(contentType, httpRes.statusCode()) {{
             device = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetStateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetStateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetStateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesGetStateResponse(contentType, httpRes.statusCode()) {{
             deviceState = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseDevicesListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseDevicesListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesListResponse(contentType, httpRes.statusCode()) {{
             devicesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseDevicesSetStateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesSetStateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseDevicesSetStateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesSetStateResponse(contentType, httpRes.statusCode()) {{
             deviceState = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseDevicesUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseDevicesUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseDevicesUpdateResponse(contentType, httpRes.statusCode()) {{
             device = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

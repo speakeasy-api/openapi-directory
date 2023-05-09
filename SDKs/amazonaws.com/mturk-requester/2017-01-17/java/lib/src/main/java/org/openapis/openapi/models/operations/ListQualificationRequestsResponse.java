@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListQualificationRequestsResponse {
     
     public String contentType;
+
     public ListQualificationRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListQualificationRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListQualificationRequestsResponse listQualificationRequestsResponse;
+
     public ListQualificationRequestsResponse withListQualificationRequestsResponse(org.openapis.openapi.models.shared.ListQualificationRequestsResponse listQualificationRequestsResponse) {
         this.listQualificationRequestsResponse = listQualificationRequestsResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListQualificationRequestsResponse {
      */
     
     public Object requestError;
+
     public ListQualificationRequestsResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class ListQualificationRequestsResponse {
      */
     
     public Object serviceFault;
+
     public ListQualificationRequestsResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class ListQualificationRequestsResponse {
     
     
     public Integer statusCode;
+
     public ListQualificationRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListQualificationRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListQualificationRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListQualificationRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

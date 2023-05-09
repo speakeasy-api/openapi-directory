@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipUri")
     public String sipUri;
+
     public GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall withSipUri(String sipUri) {
         this.sipUri = sipUri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall(){}
 }

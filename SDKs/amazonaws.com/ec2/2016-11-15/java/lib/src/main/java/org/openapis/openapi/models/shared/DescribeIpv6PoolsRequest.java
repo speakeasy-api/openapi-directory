@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpv6PoolsRequest {
     
     public Boolean dryRun;
+
     public DescribeIpv6PoolsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeIpv6PoolsRequest {
     
     
     public DescribeIpv6PoolsRequestFilters[] filters;
+
     public DescribeIpv6PoolsRequest withFilters(DescribeIpv6PoolsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeIpv6PoolsRequest {
     
     
     public Long maxResults;
+
     public DescribeIpv6PoolsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeIpv6PoolsRequest {
     
     
     public String nextToken;
+
     public DescribeIpv6PoolsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeIpv6PoolsRequest {
     
     
     public String[] poolIds;
+
     public DescribeIpv6PoolsRequest withPoolIds(String[] poolIds) {
         this.poolIds = poolIds;
         return this;
     }
     
+    public DescribeIpv6PoolsRequest(){}
 }

@@ -15,6 +15,7 @@ public class WorkflowStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyStepDetails")
     public CopyStepDetails copyStepDetails;
+
     public WorkflowStep withCopyStepDetails(CopyStepDetails copyStepDetails) {
         this.copyStepDetails = copyStepDetails;
         return this;
@@ -23,6 +24,7 @@ public class WorkflowStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomStepDetails")
     public CustomStepDetails customStepDetails;
+
     public WorkflowStep withCustomStepDetails(CustomStepDetails customStepDetails) {
         this.customStepDetails = customStepDetails;
         return this;
@@ -31,6 +33,7 @@ public class WorkflowStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DecryptStepDetails")
     public DecryptStepDetails decryptStepDetails;
+
     public WorkflowStep withDecryptStepDetails(DecryptStepDetails decryptStepDetails) {
         this.decryptStepDetails = decryptStepDetails;
         return this;
@@ -39,6 +42,7 @@ public class WorkflowStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteStepDetails")
     public DeleteStepDetails deleteStepDetails;
+
     public WorkflowStep withDeleteStepDetails(DeleteStepDetails deleteStepDetails) {
         this.deleteStepDetails = deleteStepDetails;
         return this;
@@ -47,6 +51,7 @@ public class WorkflowStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagStepDetails")
     public TagStepDetails tagStepDetails;
+
     public WorkflowStep withTagStepDetails(TagStepDetails tagStepDetails) {
         this.tagStepDetails = tagStepDetails;
         return this;
@@ -55,9 +60,11 @@ public class WorkflowStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public WorkflowStepTypeEnum type;
+
     public WorkflowStep withType(WorkflowStepTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public WorkflowStep(){}
 }

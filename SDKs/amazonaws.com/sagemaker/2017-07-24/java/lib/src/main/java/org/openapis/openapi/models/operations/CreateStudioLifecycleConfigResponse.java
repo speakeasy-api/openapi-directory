@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStudioLifecycleConfigResponse {
     
     public String contentType;
+
     public CreateStudioLifecycleConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateStudioLifecycleConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStudioLifecycleConfigResponse createStudioLifecycleConfigResponse;
+
     public CreateStudioLifecycleConfigResponse withCreateStudioLifecycleConfigResponse(org.openapis.openapi.models.shared.CreateStudioLifecycleConfigResponse createStudioLifecycleConfigResponse) {
         this.createStudioLifecycleConfigResponse = createStudioLifecycleConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateStudioLifecycleConfigResponse {
      */
     
     public Object resourceInUse;
+
     public CreateStudioLifecycleConfigResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class CreateStudioLifecycleConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateStudioLifecycleConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateStudioLifecycleConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStudioLifecycleConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateStudioLifecycleConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

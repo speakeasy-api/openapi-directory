@@ -18,9 +18,11 @@ public class TableRowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableRowCellsResult")
     public TableCellResult[] tableRowCellsResult;
+
     public TableRowResult withTableRowCellsResult(TableCellResult[] tableRowCellsResult) {
         this.tableRowCellsResult = tableRowCellsResult;
         return this;
     }
     
+    public TableRowResult(){}
 }

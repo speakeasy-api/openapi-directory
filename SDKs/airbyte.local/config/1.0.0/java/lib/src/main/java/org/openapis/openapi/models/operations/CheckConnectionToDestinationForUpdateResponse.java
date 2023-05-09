@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckConnectionToDestinationForUpdateResponse {
@@ -12,6 +13,7 @@ public class CheckConnectionToDestinationForUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckConnectionRead checkConnectionRead;
+
     public CheckConnectionToDestinationForUpdateResponse withCheckConnectionRead(org.openapis.openapi.models.shared.CheckConnectionRead checkConnectionRead) {
         this.checkConnectionRead = checkConnectionRead;
         return this;
@@ -19,6 +21,7 @@ public class CheckConnectionToDestinationForUpdateResponse {
     
     
     public String contentType;
+
     public CheckConnectionToDestinationForUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CheckConnectionToDestinationForUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public CheckConnectionToDestinationForUpdateResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class CheckConnectionToDestinationForUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public CheckConnectionToDestinationForUpdateResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class CheckConnectionToDestinationForUpdateResponse {
     
     
     public Integer statusCode;
+
     public CheckConnectionToDestinationForUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CheckConnectionToDestinationForUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckConnectionToDestinationForUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CheckConnectionToDestinationForUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

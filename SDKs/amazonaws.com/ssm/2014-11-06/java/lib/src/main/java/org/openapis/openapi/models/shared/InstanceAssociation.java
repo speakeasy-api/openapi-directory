@@ -15,6 +15,7 @@ public class InstanceAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public InstanceAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -23,6 +24,7 @@ public class InstanceAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public InstanceAssociation withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -31,6 +33,7 @@ public class InstanceAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public InstanceAssociation withContent(String content) {
         this.content = content;
         return this;
@@ -39,9 +42,11 @@ public class InstanceAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public InstanceAssociation withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public InstanceAssociation(){}
 }

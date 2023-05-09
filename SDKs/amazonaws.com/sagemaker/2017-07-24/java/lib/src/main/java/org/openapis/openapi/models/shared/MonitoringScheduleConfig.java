@@ -15,6 +15,7 @@ public class MonitoringScheduleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringJobDefinition")
     public MonitoringJobDefinition monitoringJobDefinition;
+
     public MonitoringScheduleConfig withMonitoringJobDefinition(MonitoringJobDefinition monitoringJobDefinition) {
         this.monitoringJobDefinition = monitoringJobDefinition;
         return this;
@@ -23,6 +24,7 @@ public class MonitoringScheduleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringJobDefinitionName")
     public String monitoringJobDefinitionName;
+
     public MonitoringScheduleConfig withMonitoringJobDefinitionName(String monitoringJobDefinitionName) {
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         return this;
@@ -31,6 +33,7 @@ public class MonitoringScheduleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringType")
     public MonitoringTypeEnum monitoringType;
+
     public MonitoringScheduleConfig withMonitoringType(MonitoringTypeEnum monitoringType) {
         this.monitoringType = monitoringType;
         return this;
@@ -39,9 +42,11 @@ public class MonitoringScheduleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleConfig")
     public ScheduleConfig scheduleConfig;
+
     public MonitoringScheduleConfig withScheduleConfig(ScheduleConfig scheduleConfig) {
         this.scheduleConfig = scheduleConfig;
         return this;
     }
     
+    public MonitoringScheduleConfig(){}
 }

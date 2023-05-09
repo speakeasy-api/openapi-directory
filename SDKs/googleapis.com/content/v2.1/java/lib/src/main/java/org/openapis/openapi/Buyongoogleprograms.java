@@ -61,10 +61,8 @@ public class Buyongoogleprograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateResponse() {{
+        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Buyongoogleprograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetResponse(contentType, httpRes.statusCode()) {{
             buyOnGoogleProgramStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,10 +145,8 @@ public class Buyongoogleprograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardResponse() {{
+        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class Buyongoogleprograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchResponse() {{
+        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchResponse(contentType, httpRes.statusCode()) {{
             buyOnGoogleProgramStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,10 +231,8 @@ public class Buyongoogleprograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseResponse() {{
+        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,10 +271,8 @@ public class Buyongoogleprograms {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewResponse() {{
+        org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewResponse res = new org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

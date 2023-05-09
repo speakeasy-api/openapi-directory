@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceSummary {
     @JsonProperty("deviceArn")
     public String deviceArn;
+
     public DeviceSummary withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -19,6 +20,7 @@ public class DeviceSummary {
     
     @JsonProperty("deviceName")
     public String deviceName;
+
     public DeviceSummary withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -26,6 +28,7 @@ public class DeviceSummary {
     
     @JsonProperty("deviceStatus")
     public DeviceStatusEnum deviceStatus;
+
     public DeviceSummary withDeviceStatus(DeviceStatusEnum deviceStatus) {
         this.deviceStatus = deviceStatus;
         return this;
@@ -33,6 +36,7 @@ public class DeviceSummary {
     
     @JsonProperty("deviceType")
     public DeviceTypeEnum deviceType;
+
     public DeviceSummary withDeviceType(DeviceTypeEnum deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -40,9 +44,17 @@ public class DeviceSummary {
     
     @JsonProperty("providerName")
     public String providerName;
+
     public DeviceSummary withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
     }
     
+    public DeviceSummary(@JsonProperty("deviceArn") String deviceArn, @JsonProperty("deviceName") String deviceName, @JsonProperty("deviceStatus") DeviceStatusEnum deviceStatus, @JsonProperty("deviceType") DeviceTypeEnum deviceType, @JsonProperty("providerName") String providerName) {
+        this.deviceArn = deviceArn;
+        this.deviceName = deviceName;
+        this.deviceStatus = deviceStatus;
+        this.deviceType = deviceType;
+        this.providerName = providerName;
+  }
 }

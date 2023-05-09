@@ -18,6 +18,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createFooter")
     public CreateFooterRequest createFooter;
+
     public Request withCreateFooter(CreateFooterRequest createFooter) {
         this.createFooter = createFooter;
         return this;
@@ -29,6 +30,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createFootnote")
     public CreateFootnoteRequest createFootnote;
+
     public Request withCreateFootnote(CreateFootnoteRequest createFootnote) {
         this.createFootnote = createFootnote;
         return this;
@@ -40,6 +42,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createHeader")
     public CreateHeaderRequest createHeader;
+
     public Request withCreateHeader(CreateHeaderRequest createHeader) {
         this.createHeader = createHeader;
         return this;
@@ -51,6 +54,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createNamedRange")
     public CreateNamedRangeRequest createNamedRange;
+
     public Request withCreateNamedRange(CreateNamedRangeRequest createNamedRange) {
         this.createNamedRange = createNamedRange;
         return this;
@@ -62,6 +66,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createParagraphBullets")
     public CreateParagraphBulletsRequest createParagraphBullets;
+
     public Request withCreateParagraphBullets(CreateParagraphBulletsRequest createParagraphBullets) {
         this.createParagraphBullets = createParagraphBullets;
         return this;
@@ -73,6 +78,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteContentRange")
     public DeleteContentRangeRequest deleteContentRange;
+
     public Request withDeleteContentRange(DeleteContentRangeRequest deleteContentRange) {
         this.deleteContentRange = deleteContentRange;
         return this;
@@ -84,6 +90,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteFooter")
     public DeleteFooterRequest deleteFooter;
+
     public Request withDeleteFooter(DeleteFooterRequest deleteFooter) {
         this.deleteFooter = deleteFooter;
         return this;
@@ -95,6 +102,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteHeader")
     public DeleteHeaderRequest deleteHeader;
+
     public Request withDeleteHeader(DeleteHeaderRequest deleteHeader) {
         this.deleteHeader = deleteHeader;
         return this;
@@ -106,6 +114,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteNamedRange")
     public DeleteNamedRangeRequest deleteNamedRange;
+
     public Request withDeleteNamedRange(DeleteNamedRangeRequest deleteNamedRange) {
         this.deleteNamedRange = deleteNamedRange;
         return this;
@@ -117,6 +126,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteParagraphBullets")
     public DeleteParagraphBulletsRequest deleteParagraphBullets;
+
     public Request withDeleteParagraphBullets(DeleteParagraphBulletsRequest deleteParagraphBullets) {
         this.deleteParagraphBullets = deleteParagraphBullets;
         return this;
@@ -128,6 +138,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletePositionedObject")
     public DeletePositionedObjectRequest deletePositionedObject;
+
     public Request withDeletePositionedObject(DeletePositionedObjectRequest deletePositionedObject) {
         this.deletePositionedObject = deletePositionedObject;
         return this;
@@ -139,6 +150,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTableColumn")
     public DeleteTableColumnRequest deleteTableColumn;
+
     public Request withDeleteTableColumn(DeleteTableColumnRequest deleteTableColumn) {
         this.deleteTableColumn = deleteTableColumn;
         return this;
@@ -150,6 +162,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTableRow")
     public DeleteTableRowRequest deleteTableRow;
+
     public Request withDeleteTableRow(DeleteTableRowRequest deleteTableRow) {
         this.deleteTableRow = deleteTableRow;
         return this;
@@ -161,6 +174,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertInlineImage")
     public InsertInlineImageRequest insertInlineImage;
+
     public Request withInsertInlineImage(InsertInlineImageRequest insertInlineImage) {
         this.insertInlineImage = insertInlineImage;
         return this;
@@ -172,6 +186,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertPageBreak")
     public InsertPageBreakRequest insertPageBreak;
+
     public Request withInsertPageBreak(InsertPageBreakRequest insertPageBreak) {
         this.insertPageBreak = insertPageBreak;
         return this;
@@ -183,6 +198,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertSectionBreak")
     public InsertSectionBreakRequest insertSectionBreak;
+
     public Request withInsertSectionBreak(InsertSectionBreakRequest insertSectionBreak) {
         this.insertSectionBreak = insertSectionBreak;
         return this;
@@ -194,6 +210,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertTable")
     public InsertTableRequest insertTable;
+
     public Request withInsertTable(InsertTableRequest insertTable) {
         this.insertTable = insertTable;
         return this;
@@ -205,6 +222,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertTableColumn")
     public InsertTableColumnRequest insertTableColumn;
+
     public Request withInsertTableColumn(InsertTableColumnRequest insertTableColumn) {
         this.insertTableColumn = insertTableColumn;
         return this;
@@ -216,6 +234,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertTableRow")
     public InsertTableRowRequest insertTableRow;
+
     public Request withInsertTableRow(InsertTableRowRequest insertTableRow) {
         this.insertTableRow = insertTableRow;
         return this;
@@ -227,6 +246,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertText")
     public InsertTextRequest insertText;
+
     public Request withInsertText(InsertTextRequest insertText) {
         this.insertText = insertText;
         return this;
@@ -238,6 +258,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeTableCells")
     public MergeTableCellsRequest mergeTableCells;
+
     public Request withMergeTableCells(MergeTableCellsRequest mergeTableCells) {
         this.mergeTableCells = mergeTableCells;
         return this;
@@ -249,6 +270,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinTableHeaderRows")
     public PinTableHeaderRowsRequest pinTableHeaderRows;
+
     public Request withPinTableHeaderRows(PinTableHeaderRowsRequest pinTableHeaderRows) {
         this.pinTableHeaderRows = pinTableHeaderRows;
         return this;
@@ -260,6 +282,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceAllText")
     public ReplaceAllTextRequest replaceAllText;
+
     public Request withReplaceAllText(ReplaceAllTextRequest replaceAllText) {
         this.replaceAllText = replaceAllText;
         return this;
@@ -271,6 +294,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceImage")
     public ReplaceImageRequest replaceImage;
+
     public Request withReplaceImage(ReplaceImageRequest replaceImage) {
         this.replaceImage = replaceImage;
         return this;
@@ -282,6 +306,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceNamedRangeContent")
     public ReplaceNamedRangeContentRequest replaceNamedRangeContent;
+
     public Request withReplaceNamedRangeContent(ReplaceNamedRangeContentRequest replaceNamedRangeContent) {
         this.replaceNamedRangeContent = replaceNamedRangeContent;
         return this;
@@ -293,6 +318,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unmergeTableCells")
     public UnmergeTableCellsRequest unmergeTableCells;
+
     public Request withUnmergeTableCells(UnmergeTableCellsRequest unmergeTableCells) {
         this.unmergeTableCells = unmergeTableCells;
         return this;
@@ -304,6 +330,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateDocumentStyle")
     public UpdateDocumentStyleRequest updateDocumentStyle;
+
     public Request withUpdateDocumentStyle(UpdateDocumentStyleRequest updateDocumentStyle) {
         this.updateDocumentStyle = updateDocumentStyle;
         return this;
@@ -315,6 +342,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateParagraphStyle")
     public UpdateParagraphStyleRequest updateParagraphStyle;
+
     public Request withUpdateParagraphStyle(UpdateParagraphStyleRequest updateParagraphStyle) {
         this.updateParagraphStyle = updateParagraphStyle;
         return this;
@@ -326,6 +354,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateSectionStyle")
     public UpdateSectionStyleRequest updateSectionStyle;
+
     public Request withUpdateSectionStyle(UpdateSectionStyleRequest updateSectionStyle) {
         this.updateSectionStyle = updateSectionStyle;
         return this;
@@ -337,6 +366,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTableCellStyle")
     public UpdateTableCellStyleRequest updateTableCellStyle;
+
     public Request withUpdateTableCellStyle(UpdateTableCellStyleRequest updateTableCellStyle) {
         this.updateTableCellStyle = updateTableCellStyle;
         return this;
@@ -348,6 +378,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTableColumnProperties")
     public UpdateTableColumnPropertiesRequest updateTableColumnProperties;
+
     public Request withUpdateTableColumnProperties(UpdateTableColumnPropertiesRequest updateTableColumnProperties) {
         this.updateTableColumnProperties = updateTableColumnProperties;
         return this;
@@ -359,6 +390,7 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTableRowStyle")
     public UpdateTableRowStyleRequest updateTableRowStyle;
+
     public Request withUpdateTableRowStyle(UpdateTableRowStyleRequest updateTableRowStyle) {
         this.updateTableRowStyle = updateTableRowStyle;
         return this;
@@ -370,9 +402,11 @@ public class Request {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTextStyle")
     public UpdateTextStyleRequest updateTextStyle;
+
     public Request withUpdateTextStyle(UpdateTextStyleRequest updateTextStyle) {
         this.updateTextStyle = updateTextStyle;
         return this;
     }
     
+    public Request(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TerminateSessionResponse {
     
     public String contentType;
+
     public TerminateSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TerminateSessionResponse {
      */
     
     public Object internalServerException;
+
     public TerminateSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class TerminateSessionResponse {
      */
     
     public Object invalidRequestException;
+
     public TerminateSessionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class TerminateSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TerminateSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class TerminateSessionResponse {
     
     
     public Integer statusCode;
+
     public TerminateSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class TerminateSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TerminateSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class TerminateSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminateSessionResponse terminateSessionResponse;
+
     public TerminateSessionResponse withTerminateSessionResponse(org.openapis.openapi.models.shared.TerminateSessionResponse terminateSessionResponse) {
         this.terminateSessionResponse = terminateSessionResponse;
         return this;
     }
     
+    public TerminateSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

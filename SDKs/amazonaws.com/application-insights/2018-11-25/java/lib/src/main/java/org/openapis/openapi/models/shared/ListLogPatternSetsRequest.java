@@ -12,6 +12,7 @@ public class ListLogPatternSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLogPatternSetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListLogPatternSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLogPatternSetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListLogPatternSetsRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public ListLogPatternSetsRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public ListLogPatternSetsRequest(@JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+  }
 }

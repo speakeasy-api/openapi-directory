@@ -12,9 +12,13 @@ public class DeleteApplicationRequestBody {
      */
     @JsonProperty("applicationID")
     public String applicationID;
+
     public DeleteApplicationRequestBody withApplicationID(String applicationID) {
         this.applicationID = applicationID;
         return this;
     }
     
+    public DeleteApplicationRequestBody(@JsonProperty("applicationID") String applicationID) {
+        this.applicationID = applicationID;
+  }
 }

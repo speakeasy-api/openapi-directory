@@ -18,6 +18,7 @@ public class LocationReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LocationReview withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class LocationReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("review")
     public Review review;
+
     public LocationReview withReview(Review review) {
         this.review = review;
         return this;
     }
     
+    public LocationReview(){}
 }

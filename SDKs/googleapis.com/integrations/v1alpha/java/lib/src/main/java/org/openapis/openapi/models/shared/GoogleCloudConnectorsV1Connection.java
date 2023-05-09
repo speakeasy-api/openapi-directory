@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authConfig")
     public GoogleCloudConnectorsV1AuthConfig authConfig;
+
     public GoogleCloudConnectorsV1Connection withAuthConfig(GoogleCloudConnectorsV1AuthConfig authConfig) {
         this.authConfig = authConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configVariables")
     public GoogleCloudConnectorsV1ConfigVariable[] configVariables;
+
     public GoogleCloudConnectorsV1Connection withConfigVariables(GoogleCloudConnectorsV1ConfigVariable[] configVariables) {
         this.configVariables = configVariables;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorVersion")
     public String connectorVersion;
+
     public GoogleCloudConnectorsV1Connection withConnectorVersion(String connectorVersion) {
         this.connectorVersion = connectorVersion;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudConnectorsV1Connection withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudConnectorsV1Connection withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConfigs")
     public GoogleCloudConnectorsV1DestinationConfig[] destinationConfigs;
+
     public GoogleCloudConnectorsV1Connection withDestinationConfigs(GoogleCloudConnectorsV1DestinationConfig[] destinationConfigs) {
         this.destinationConfigs = destinationConfigs;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envoyImageLocation")
     public String envoyImageLocation;
+
     public GoogleCloudConnectorsV1Connection withEnvoyImageLocation(String envoyImageLocation) {
         this.envoyImageLocation = envoyImageLocation;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLocation")
     public String imageLocation;
+
     public GoogleCloudConnectorsV1Connection withImageLocation(String imageLocation) {
         this.imageLocation = imageLocation;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudConnectorsV1Connection withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -117,8 +126,21 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockConfig")
     public GoogleCloudConnectorsV1LockConfig lockConfig;
+
     public GoogleCloudConnectorsV1Connection withLockConfig(GoogleCloudConnectorsV1LockConfig lockConfig) {
         this.lockConfig = lockConfig;
+        return this;
+    }
+    
+    /**
+     * Log configuration for the connection.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logConfig")
+    public GoogleCloudConnectorsV1LogConfig logConfig;
+
+    public GoogleCloudConnectorsV1Connection withLogConfig(GoogleCloudConnectorsV1LogConfig logConfig) {
+        this.logConfig = logConfig;
         return this;
     }
     
@@ -128,6 +150,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudConnectorsV1Connection withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +162,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeConfig")
     public GoogleCloudConnectorsV1NodeConfig nodeConfig;
+
     public GoogleCloudConnectorsV1Connection withNodeConfig(GoogleCloudConnectorsV1NodeConfig nodeConfig) {
         this.nodeConfig = nodeConfig;
         return this;
@@ -150,6 +174,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public GoogleCloudConnectorsV1Connection withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -161,6 +186,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDirectory")
     public String serviceDirectory;
+
     public GoogleCloudConnectorsV1Connection withServiceDirectory(String serviceDirectory) {
         this.serviceDirectory = serviceDirectory;
         return this;
@@ -172,6 +198,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslConfig")
     public GoogleCloudConnectorsV1SslConfig sslConfig;
+
     public GoogleCloudConnectorsV1Connection withSslConfig(GoogleCloudConnectorsV1SslConfig sslConfig) {
         this.sslConfig = sslConfig;
         return this;
@@ -183,8 +210,21 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleCloudConnectorsV1ConnectionStatus status;
+
     public GoogleCloudConnectorsV1Connection withStatus(GoogleCloudConnectorsV1ConnectionStatus status) {
         this.status = status;
+        return this;
+    }
+    
+    /**
+     * Output only. This subscription type enum value states if the metrics should be sent for billing or not.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subscriptionType")
+    public GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum subscriptionType;
+
+    public GoogleCloudConnectorsV1Connection withSubscriptionType(GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum subscriptionType) {
+        this.subscriptionType = subscriptionType;
         return this;
     }
     
@@ -194,6 +234,7 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public GoogleCloudConnectorsV1Connection withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -205,9 +246,11 @@ public class GoogleCloudConnectorsV1Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudConnectorsV1Connection withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudConnectorsV1Connection(){}
 }

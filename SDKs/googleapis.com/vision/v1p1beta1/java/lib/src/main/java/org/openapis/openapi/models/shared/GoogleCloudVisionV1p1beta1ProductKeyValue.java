@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1ProductKeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudVisionV1p1beta1ProductKeyValue withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1ProductKeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudVisionV1p1beta1ProductKeyValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1ProductKeyValue(){}
 }

@@ -15,6 +15,7 @@ public class UpdateProjectDataDeliveryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogs")
     public UpdateProjectDataDeliveryRequestBodyCloudWatchLogs cloudWatchLogs;
+
     public UpdateProjectDataDeliveryRequestBody withCloudWatchLogs(UpdateProjectDataDeliveryRequestBodyCloudWatchLogs cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -26,9 +27,11 @@ public class UpdateProjectDataDeliveryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Destination")
     public UpdateProjectDataDeliveryRequestBodyS3Destination s3Destination;
+
     public UpdateProjectDataDeliveryRequestBody withS3Destination(UpdateProjectDataDeliveryRequestBodyS3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public UpdateProjectDataDeliveryRequestBody(){}
 }

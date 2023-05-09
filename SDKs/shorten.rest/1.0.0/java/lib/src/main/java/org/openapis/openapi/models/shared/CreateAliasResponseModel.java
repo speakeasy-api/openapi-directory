@@ -15,6 +15,7 @@ public class CreateAliasResponseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasName")
     public String aliasName;
+
     public CreateAliasResponseModel withAliasName(String aliasName) {
         this.aliasName = aliasName;
         return this;
@@ -23,6 +24,7 @@ public class CreateAliasResponseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public CreateAliasResponseModel withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -31,9 +33,11 @@ public class CreateAliasResponseModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortUrl")
     public String shortUrl;
+
     public CreateAliasResponseModel withShortUrl(String shortUrl) {
         this.shortUrl = shortUrl;
         return this;
     }
     
+    public CreateAliasResponseModel(){}
 }

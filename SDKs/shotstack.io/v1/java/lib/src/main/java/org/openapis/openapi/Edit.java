@@ -55,11 +55,9 @@ public class Edit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRenderResponse res = new org.openapis.openapi.models.operations.GetRenderResponse() {{
+        org.openapis.openapi.models.operations.GetRenderResponse res = new org.openapis.openapi.models.operations.GetRenderResponse(contentType, httpRes.statusCode()) {{
             renderResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Edit {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRenderResponse res = new org.openapis.openapi.models.operations.PostRenderResponse() {{
+        org.openapis.openapi.models.operations.PostRenderResponse res = new org.openapis.openapi.models.operations.PostRenderResponse(contentType, httpRes.statusCode()) {{
             queuedResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

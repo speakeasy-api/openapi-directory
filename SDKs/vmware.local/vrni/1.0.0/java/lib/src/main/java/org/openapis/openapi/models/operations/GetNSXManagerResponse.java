@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNSXManagerResponse {
@@ -12,6 +13,7 @@ public class GetNSXManagerResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetNSXManagerResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -22,6 +24,7 @@ public class GetNSXManagerResponse {
      */
     
     public org.openapis.openapi.models.shared.BaseEntity baseEntity;
+
     public GetNSXManagerResponse withBaseEntity(org.openapis.openapi.models.shared.BaseEntity baseEntity) {
         this.baseEntity = baseEntity;
         return this;
@@ -29,6 +32,7 @@ public class GetNSXManagerResponse {
     
     
     public String contentType;
+
     public GetNSXManagerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetNSXManagerResponse {
     
     
     public Integer statusCode;
+
     public GetNSXManagerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetNSXManagerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNSXManagerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNSXManagerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

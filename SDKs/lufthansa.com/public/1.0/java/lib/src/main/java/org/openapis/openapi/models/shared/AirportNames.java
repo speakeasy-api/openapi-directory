@@ -18,9 +18,11 @@ public class AirportNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public Name[] name;
+
     public AirportNames withName(Name[] name) {
         this.name = name;
         return this;
     }
     
+    public AirportNames(){}
 }

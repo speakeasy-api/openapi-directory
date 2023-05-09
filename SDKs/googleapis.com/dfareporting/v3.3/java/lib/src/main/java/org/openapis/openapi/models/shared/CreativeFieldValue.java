@@ -18,6 +18,7 @@ public class CreativeFieldValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreativeFieldValue withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class CreativeFieldValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CreativeFieldValue withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class CreativeFieldValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CreativeFieldValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreativeFieldValue(){}
 }

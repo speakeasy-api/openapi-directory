@@ -17,6 +17,7 @@ public class TagInput {
     @JsonProperty("description")
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public TagInput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class TagInput {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public TagInput withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +41,15 @@ public class TagInput {
     @JsonProperty("type")
     @SpeakeasyMetadata("form:name=type")
     public TagTypeEnum type;
+
     public TagInput withType(TagTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TagInput(@JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("type") TagTypeEnum type) {
+        this.description = description;
+        this.name = name;
+        this.type = type;
+  }
 }

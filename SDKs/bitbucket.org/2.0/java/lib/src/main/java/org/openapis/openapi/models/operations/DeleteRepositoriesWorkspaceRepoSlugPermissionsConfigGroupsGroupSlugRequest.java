@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest {
@@ -12,6 +13,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_slug")
     public String groupSlug;
+
     public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withGroupSlug(String groupSlug) {
         this.groupSlug = groupSlug;
         return this;
@@ -24,6 +26,7 @@ public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest(@JsonProperty("group_slug") String groupSlug, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.groupSlug = groupSlug;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

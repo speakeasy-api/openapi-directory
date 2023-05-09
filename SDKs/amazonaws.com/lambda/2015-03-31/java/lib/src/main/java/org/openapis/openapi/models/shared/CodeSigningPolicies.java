@@ -15,9 +15,11 @@ public class CodeSigningPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UntrustedArtifactOnDeployment")
     public CodeSigningPolicyEnum untrustedArtifactOnDeployment;
+
     public CodeSigningPolicies withUntrustedArtifactOnDeployment(CodeSigningPolicyEnum untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
         return this;
     }
     
+    public CodeSigningPolicies(){}
 }

@@ -15,6 +15,7 @@ public class RepositoryAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryHead")
     public RepositoryHeadSourceCodeType repositoryHead;
+
     public RepositoryAnalysis withRepositoryHead(RepositoryHeadSourceCodeType repositoryHead) {
         this.repositoryHead = repositoryHead;
         return this;
@@ -26,9 +27,11 @@ public class RepositoryAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceCodeType")
     public SourceCodeType sourceCodeType;
+
     public RepositoryAnalysis withSourceCodeType(SourceCodeType sourceCodeType) {
         this.sourceCodeType = sourceCodeType;
         return this;
     }
     
+    public RepositoryAnalysis(){}
 }

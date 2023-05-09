@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompanyTimeOffsIdRequest {
@@ -12,9 +13,13 @@ public class GetCompanyTimeOffsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetCompanyTimeOffsIdRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public GetCompanyTimeOffsIdRequest(@JsonProperty("id") Integer id) {
+        this.id = id;
+  }
 }

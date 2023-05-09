@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSubnetsRequest {
     
     public Boolean dryRun;
+
     public DescribeSubnetsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeSubnetsRequest {
     
     
     public DescribeSubnetsRequestFilters[] filters;
+
     public DescribeSubnetsRequest withFilters(DescribeSubnetsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeSubnetsRequest {
     
     
     public Long maxResults;
+
     public DescribeSubnetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeSubnetsRequest {
     
     
     public String nextToken;
+
     public DescribeSubnetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeSubnetsRequest {
     
     
     public String[] subnetIds;
+
     public DescribeSubnetsRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public DescribeSubnetsRequest(){}
 }

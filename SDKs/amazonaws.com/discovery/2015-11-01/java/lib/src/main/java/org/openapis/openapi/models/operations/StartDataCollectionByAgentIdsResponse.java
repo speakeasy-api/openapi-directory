@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDataCollectionByAgentIdsResponse {
@@ -12,6 +13,7 @@ public class StartDataCollectionByAgentIdsResponse {
      */
     
     public Object authorizationErrorException;
+
     public StartDataCollectionByAgentIdsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class StartDataCollectionByAgentIdsResponse {
     
     
     public String contentType;
+
     public StartDataCollectionByAgentIdsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartDataCollectionByAgentIdsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public StartDataCollectionByAgentIdsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class StartDataCollectionByAgentIdsResponse {
      */
     
     public Object invalidParameterException;
+
     public StartDataCollectionByAgentIdsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartDataCollectionByAgentIdsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartDataCollectionByAgentIdsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class StartDataCollectionByAgentIdsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public StartDataCollectionByAgentIdsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -69,6 +76,7 @@ public class StartDataCollectionByAgentIdsResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDataCollectionByAgentIdsResponse startDataCollectionByAgentIdsResponse;
+
     public StartDataCollectionByAgentIdsResponse withStartDataCollectionByAgentIdsResponse(org.openapis.openapi.models.shared.StartDataCollectionByAgentIdsResponse startDataCollectionByAgentIdsResponse) {
         this.startDataCollectionByAgentIdsResponse = startDataCollectionByAgentIdsResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartDataCollectionByAgentIdsResponse {
     
     
     public Integer statusCode;
+
     public StartDataCollectionByAgentIdsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartDataCollectionByAgentIdsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDataCollectionByAgentIdsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartDataCollectionByAgentIdsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

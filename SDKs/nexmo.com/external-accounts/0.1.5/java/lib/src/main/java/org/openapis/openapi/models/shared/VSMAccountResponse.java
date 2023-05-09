@@ -17,6 +17,7 @@ public class VSMAccountResponse {
      */
     @JsonProperty("api_key")
     public String apiKey;
+
     public VSMAccountResponse withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -28,6 +29,7 @@ public class VSMAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public String[] applications;
+
     public VSMAccountResponse withApplications(String[] applications) {
         this.applications = applications;
         return this;
@@ -38,6 +40,7 @@ public class VSMAccountResponse {
      */
     @JsonProperty("external_id")
     public String externalId;
+
     public VSMAccountResponse withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -49,6 +52,7 @@ public class VSMAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VSMAccountResponse withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,15 @@ public class VSMAccountResponse {
      */
     @JsonProperty("provider")
     public String provider;
+
     public VSMAccountResponse withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public VSMAccountResponse(@JsonProperty("api_key") String apiKey, @JsonProperty("external_id") String externalId, @JsonProperty("provider") String provider) {
+        this.apiKey = apiKey;
+        this.externalId = externalId;
+        this.provider = provider;
+  }
 }

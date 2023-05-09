@@ -15,9 +15,11 @@ public class PipeTargetStateMachineParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationType")
     public PipeTargetInvocationTypeEnum invocationType;
+
     public PipeTargetStateMachineParameters withInvocationType(PipeTargetInvocationTypeEnum invocationType) {
         this.invocationType = invocationType;
         return this;
     }
     
+    public PipeTargetStateMachineParameters(){}
 }

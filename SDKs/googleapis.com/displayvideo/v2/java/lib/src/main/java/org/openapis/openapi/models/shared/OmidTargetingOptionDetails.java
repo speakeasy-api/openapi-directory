@@ -18,9 +18,11 @@ public class OmidTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("omid")
     public OmidTargetingOptionDetailsOmidEnum omid;
+
     public OmidTargetingOptionDetails withOmid(OmidTargetingOptionDetailsOmidEnum omid) {
         this.omid = omid;
         return this;
     }
     
+    public OmidTargetingOptionDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
     public String endTime;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -96,6 +106,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -106,6 +117,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
     public String startTime;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -113,6 +125,7 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withToken(String token) {
         this.token = token;
         return this;
@@ -123,9 +136,13 @@ public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherPurchasesVoidedpurchasesListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest(@JsonProperty("packageName") String packageName) {
+        this.packageName = packageName;
+  }
 }

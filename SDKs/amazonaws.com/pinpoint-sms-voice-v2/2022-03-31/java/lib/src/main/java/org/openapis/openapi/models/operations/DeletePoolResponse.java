@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePoolResponse {
@@ -12,6 +13,7 @@ public class DeletePoolResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePoolResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeletePoolResponse {
      */
     
     public Object conflictException;
+
     public DeletePoolResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePoolResponse {
     
     
     public String contentType;
+
     public DeletePoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeletePoolResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletePoolResult deletePoolResult;
+
     public DeletePoolResponse withDeletePoolResult(org.openapis.openapi.models.shared.DeletePoolResult deletePoolResult) {
         this.deletePoolResult = deletePoolResult;
         return this;
@@ -49,6 +54,7 @@ public class DeletePoolResponse {
      */
     
     public Object internalServerException;
+
     public DeletePoolResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeletePoolResponse {
     
     
     public Integer statusCode;
+
     public DeletePoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeletePoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeletePoolResponse {
      */
     
     public Object throttlingException;
+
     public DeletePoolResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeletePoolResponse {
      */
     
     public Object validationException;
+
     public DeletePoolResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

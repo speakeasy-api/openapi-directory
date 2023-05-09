@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamsRequestFilters {
     
     public String name;
+
     public DescribeIpamsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpamsRequestFilters {
     
     
     public String[] values;
+
     public DescribeIpamsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeIpamsRequestFilters(){}
 }

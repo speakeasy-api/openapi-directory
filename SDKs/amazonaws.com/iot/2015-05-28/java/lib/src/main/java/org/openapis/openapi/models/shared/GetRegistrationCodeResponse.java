@@ -15,9 +15,11 @@ public class GetRegistrationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationCode")
     public String registrationCode;
+
     public GetRegistrationCodeResponse withRegistrationCode(String registrationCode) {
         this.registrationCode = registrationCode;
         return this;
     }
     
+    public GetRegistrationCodeResponse(){}
 }

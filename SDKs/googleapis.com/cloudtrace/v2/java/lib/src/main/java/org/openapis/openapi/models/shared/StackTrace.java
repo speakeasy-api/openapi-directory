@@ -18,6 +18,7 @@ public class StackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackFrames")
     public StackFrames stackFrames;
+
     public StackTrace withStackFrames(StackFrames stackFrames) {
         this.stackFrames = stackFrames;
         return this;
@@ -29,9 +30,11 @@ public class StackTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackTraceHashId")
     public String stackTraceHashId;
+
     public StackTrace withStackTraceHashId(String stackTraceHashId) {
         this.stackTraceHashId = stackTraceHashId;
         return this;
     }
     
+    public StackTrace(){}
 }

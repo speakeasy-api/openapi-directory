@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public String[] allowedValues;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -29,9 +30,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum policy;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature withPolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum policy) {
         this.policy = policy;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature(){}
 }

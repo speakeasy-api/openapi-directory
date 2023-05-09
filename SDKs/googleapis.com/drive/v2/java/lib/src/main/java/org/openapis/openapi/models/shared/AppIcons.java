@@ -18,6 +18,7 @@ public class AppIcons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public AppIcons withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class AppIcons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public AppIcons withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -40,9 +42,11 @@ public class AppIcons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public AppIcons withSize(Integer size) {
         this.size = size;
         return this;
     }
     
+    public AppIcons(){}
 }

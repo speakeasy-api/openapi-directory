@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateNetworkInterfaceRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInterfaceRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateNetworkInterfaceRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateNetworkInterfaceRequestTagSpecificationsTags(){}
 }

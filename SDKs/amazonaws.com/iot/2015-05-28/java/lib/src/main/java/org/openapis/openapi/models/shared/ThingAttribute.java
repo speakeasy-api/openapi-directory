@@ -15,6 +15,7 @@ public class ThingAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public ThingAttribute withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class ThingAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingArn")
     public String thingArn;
+
     public ThingAttribute withThingArn(String thingArn) {
         this.thingArn = thingArn;
         return this;
@@ -31,6 +33,7 @@ public class ThingAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public ThingAttribute withThingName(String thingName) {
         this.thingName = thingName;
         return this;
@@ -39,6 +42,7 @@ public class ThingAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeName")
     public String thingTypeName;
+
     public ThingAttribute withThingTypeName(String thingTypeName) {
         this.thingTypeName = thingTypeName;
         return this;
@@ -47,9 +51,11 @@ public class ThingAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public ThingAttribute withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ThingAttribute(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceGroupRequest {
@@ -12,9 +13,13 @@ public class ServiceGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceGroupId")
     public String serviceGroupId;
+
     public ServiceGroupRequest withServiceGroupId(String serviceGroupId) {
         this.serviceGroupId = serviceGroupId;
         return this;
     }
     
+    public ServiceGroupRequest(@JsonProperty("serviceGroupId") String serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
+  }
 }

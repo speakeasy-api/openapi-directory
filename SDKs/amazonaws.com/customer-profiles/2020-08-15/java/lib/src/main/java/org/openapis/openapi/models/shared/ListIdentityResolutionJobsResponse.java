@@ -15,6 +15,7 @@ public class ListIdentityResolutionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityResolutionJobsList")
     public IdentityResolutionJob[] identityResolutionJobsList;
+
     public ListIdentityResolutionJobsResponse withIdentityResolutionJobsList(IdentityResolutionJob[] identityResolutionJobsList) {
         this.identityResolutionJobsList = identityResolutionJobsList;
         return this;
@@ -23,9 +24,11 @@ public class ListIdentityResolutionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentityResolutionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentityResolutionJobsResponse(){}
 }

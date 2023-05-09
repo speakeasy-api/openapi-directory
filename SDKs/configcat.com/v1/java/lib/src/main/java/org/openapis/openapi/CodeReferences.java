@@ -52,10 +52,8 @@ public class CodeReferences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV1CodeReferencesResponse res = new org.openapis.openapi.models.operations.PostV1CodeReferencesResponse() {{
+        org.openapis.openapi.models.operations.PostV1CodeReferencesResponse res = new org.openapis.openapi.models.operations.PostV1CodeReferencesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -84,10 +82,8 @@ public class CodeReferences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV1CodeReferencesDeleteReportsResponse res = new org.openapis.openapi.models.operations.PostV1CodeReferencesDeleteReportsResponse() {{
+        org.openapis.openapi.models.operations.PostV1CodeReferencesDeleteReportsResponse res = new org.openapis.openapi.models.operations.PostV1CodeReferencesDeleteReportsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {

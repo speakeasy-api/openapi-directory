@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReadSetMetadataResponse {
@@ -12,6 +13,7 @@ public class GetReadSetMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetReadSetMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetReadSetMetadataResponse {
     
     
     public String contentType;
+
     public GetReadSetMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetReadSetMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReadSetMetadataResponse getReadSetMetadataResponse;
+
     public GetReadSetMetadataResponse withGetReadSetMetadataResponse(org.openapis.openapi.models.shared.GetReadSetMetadataResponse getReadSetMetadataResponse) {
         this.getReadSetMetadataResponse = getReadSetMetadataResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetReadSetMetadataResponse {
      */
     
     public Object internalServerException;
+
     public GetReadSetMetadataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetReadSetMetadataResponse {
      */
     
     public Object requestTimeoutException;
+
     public GetReadSetMetadataResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class GetReadSetMetadataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetReadSetMetadataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetReadSetMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetReadSetMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetReadSetMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReadSetMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetReadSetMetadataResponse {
      */
     
     public Object throttlingException;
+
     public GetReadSetMetadataResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetReadSetMetadataResponse {
      */
     
     public Object validationException;
+
     public GetReadSetMetadataResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetReadSetMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

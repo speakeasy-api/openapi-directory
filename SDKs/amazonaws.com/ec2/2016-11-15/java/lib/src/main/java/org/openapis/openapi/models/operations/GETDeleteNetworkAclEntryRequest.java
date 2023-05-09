@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteNetworkAclEntryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteNetworkAclEntryActionEnum action;
+
     public GETDeleteNetworkAclEntryRequest withAction(GETDeleteNetworkAclEntryActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteNetworkAclEntryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Egress")
     public Boolean egress;
+
     public GETDeleteNetworkAclEntryRequest withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkAclId")
     public String networkAclId;
+
     public GETDeleteNetworkAclEntryRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -49,6 +54,7 @@ public class GETDeleteNetworkAclEntryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNumber")
     public Long ruleNumber;
+
     public GETDeleteNetworkAclEntryRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -56,6 +62,7 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteNetworkAclEntryVersionEnum version;
+
     public GETDeleteNetworkAclEntryRequest withVersion(GETDeleteNetworkAclEntryVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteNetworkAclEntryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteNetworkAclEntryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteNetworkAclEntryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteNetworkAclEntryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteNetworkAclEntryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteNetworkAclEntryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETDeleteNetworkAclEntryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteNetworkAclEntryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteNetworkAclEntryRequest(@JsonProperty("Action") GETDeleteNetworkAclEntryActionEnum action, @JsonProperty("Egress") Boolean egress, @JsonProperty("NetworkAclId") String networkAclId, @JsonProperty("RuleNumber") Long ruleNumber, @JsonProperty("Version") GETDeleteNetworkAclEntryVersionEnum version) {
+        this.action = action;
+        this.egress = egress;
+        this.networkAclId = networkAclId;
+        this.ruleNumber = ruleNumber;
+        this.version = version;
+  }
 }

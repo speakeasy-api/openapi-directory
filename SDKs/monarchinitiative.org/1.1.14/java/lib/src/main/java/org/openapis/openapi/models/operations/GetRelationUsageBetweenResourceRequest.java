@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationUsageBetweenResourceRequest {
@@ -14,6 +15,7 @@ public class GetRelationUsageBetweenResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetRelationUsageBetweenResourceRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -21,6 +23,7 @@ public class GetRelationUsageBetweenResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
     public String objectCategory;
+
     public GetRelationUsageBetweenResourceRequest withObjectCategory(String objectCategory) {
         this.objectCategory = objectCategory;
         return this;
@@ -28,6 +31,7 @@ public class GetRelationUsageBetweenResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_category")
     public String subjectCategory;
+
     public GetRelationUsageBetweenResourceRequest withSubjectCategory(String subjectCategory) {
         this.subjectCategory = subjectCategory;
         return this;
@@ -38,9 +42,14 @@ public class GetRelationUsageBetweenResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_taxon")
     public String subjectTaxon;
+
     public GetRelationUsageBetweenResourceRequest withSubjectTaxon(String subjectTaxon) {
         this.subjectTaxon = subjectTaxon;
         return this;
     }
     
+    public GetRelationUsageBetweenResourceRequest(@JsonProperty("object_category") String objectCategory, @JsonProperty("subject_category") String subjectCategory) {
+        this.objectCategory = objectCategory;
+        this.subjectCategory = subjectCategory;
+  }
 }

@@ -15,14 +15,25 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FacetResults")
     public FacetResult[] facetResults;
+
     public QueryResult withFacetResults(FacetResult[] facetResults) {
         this.facetResults = facetResults;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("FeaturedResultsItems")
+    public FeaturedResultsItem[] featuredResultsItems;
+
+    public QueryResult withFeaturedResultsItems(FeaturedResultsItem[] featuredResultsItems) {
+        this.featuredResultsItems = featuredResultsItems;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryId")
     public String queryId;
+
     public QueryResult withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -31,6 +42,7 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultItems")
     public QueryResultItem[] resultItems;
+
     public QueryResult withResultItems(QueryResultItem[] resultItems) {
         this.resultItems = resultItems;
         return this;
@@ -39,6 +51,7 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpellCorrectedQueries")
     public SpellCorrectedQuery[] spellCorrectedQueries;
+
     public QueryResult withSpellCorrectedQueries(SpellCorrectedQuery[] spellCorrectedQueries) {
         this.spellCorrectedQueries = spellCorrectedQueries;
         return this;
@@ -47,6 +60,7 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalNumberOfResults")
     public Long totalNumberOfResults;
+
     public QueryResult withTotalNumberOfResults(Long totalNumberOfResults) {
         this.totalNumberOfResults = totalNumberOfResults;
         return this;
@@ -55,9 +69,11 @@ public class QueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warnings")
     public Warning[] warnings;
+
     public QueryResult withWarnings(Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public QueryResult(){}
 }

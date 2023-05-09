@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public String audience;
+
     public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims(){}
 }

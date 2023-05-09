@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyFpgaImageAttributeResultFpgaImageAttributeLoadPermissions {
     
     public ModifyFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum group;
+
     public ModifyFpgaImageAttributeResultFpgaImageAttributeLoadPermissions withGroup(ModifyFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum group) {
         this.group = group;
         return this;
@@ -19,9 +20,11 @@ public class ModifyFpgaImageAttributeResultFpgaImageAttributeLoadPermissions {
     
     
     public String userId;
+
     public ModifyFpgaImageAttributeResultFpgaImageAttributeLoadPermissions withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ModifyFpgaImageAttributeResultFpgaImageAttributeLoadPermissions(){}
 }

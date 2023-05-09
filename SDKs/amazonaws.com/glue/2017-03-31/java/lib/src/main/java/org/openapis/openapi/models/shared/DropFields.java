@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DropFields {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public DropFields withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -19,6 +20,7 @@ public class DropFields {
     
     @JsonProperty("Name")
     public String name;
+
     public DropFields withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class DropFields {
     
     @JsonProperty("Paths")
     public String[][] paths;
+
     public DropFields withPaths(String[][] paths) {
         this.paths = paths;
         return this;
     }
     
+    public DropFields(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Paths") String[][] paths) {
+        this.inputs = inputs;
+        this.name = name;
+        this.paths = paths;
+  }
 }

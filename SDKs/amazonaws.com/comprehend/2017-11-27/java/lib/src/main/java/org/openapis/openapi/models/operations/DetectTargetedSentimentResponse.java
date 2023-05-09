@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectTargetedSentimentResponse {
     
     public String contentType;
+
     public DetectTargetedSentimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DetectTargetedSentimentResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectTargetedSentimentResponse detectTargetedSentimentResponse;
+
     public DetectTargetedSentimentResponse withDetectTargetedSentimentResponse(org.openapis.openapi.models.shared.DetectTargetedSentimentResponse detectTargetedSentimentResponse) {
         this.detectTargetedSentimentResponse = detectTargetedSentimentResponse;
         return this;
@@ -29,6 +32,7 @@ public class DetectTargetedSentimentResponse {
      */
     
     public Object internalServerException;
+
     public DetectTargetedSentimentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DetectTargetedSentimentResponse {
      */
     
     public Object invalidRequestException;
+
     public DetectTargetedSentimentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DetectTargetedSentimentResponse {
     
     
     public Integer statusCode;
+
     public DetectTargetedSentimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DetectTargetedSentimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectTargetedSentimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DetectTargetedSentimentResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public DetectTargetedSentimentResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -73,9 +81,14 @@ public class DetectTargetedSentimentResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public DetectTargetedSentimentResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public DetectTargetedSentimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

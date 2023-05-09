@@ -19,6 +19,7 @@ public class SegmentListModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SegmentListModel withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +28,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmail")
     public String creatorEmail;
+
     public SegmentListModel withCreatorEmail(String creatorEmail) {
         this.creatorEmail = creatorEmail;
         return this;
@@ -35,6 +37,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorFullName")
     public String creatorFullName;
+
     public SegmentListModel withCreatorFullName(String creatorFullName) {
         this.creatorFullName = creatorFullName;
         return this;
@@ -43,6 +46,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SegmentListModel withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +55,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterEmail")
     public String lastUpdaterEmail;
+
     public SegmentListModel withLastUpdaterEmail(String lastUpdaterEmail) {
         this.lastUpdaterEmail = lastUpdaterEmail;
         return this;
@@ -59,6 +64,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterFullName")
     public String lastUpdaterFullName;
+
     public SegmentListModel withLastUpdaterFullName(String lastUpdaterFullName) {
         this.lastUpdaterFullName = lastUpdaterFullName;
         return this;
@@ -67,6 +73,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SegmentListModel withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +82,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public ProductModel product;
+
     public SegmentListModel withProduct(ProductModel product) {
         this.product = product;
         return this;
@@ -83,6 +91,7 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public SegmentListModel withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -93,6 +102,7 @@ public class SegmentListModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SegmentListModel withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -101,9 +111,11 @@ public class SegmentListModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Integer usage;
+
     public SegmentListModel withUsage(Integer usage) {
         this.usage = usage;
         return this;
     }
     
+    public SegmentListModel(){}
 }

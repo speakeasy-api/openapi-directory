@@ -18,6 +18,7 @@ public class FileComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyCommentId")
     public String legacyCommentId;
+
     public FileComment withLegacyCommentId(String legacyCommentId) {
         this.legacyCommentId = legacyCommentId;
         return this;
@@ -29,6 +30,7 @@ public class FileComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyDiscussionId")
     public String legacyDiscussionId;
+
     public FileComment withLegacyDiscussionId(String legacyDiscussionId) {
         this.legacyDiscussionId = legacyDiscussionId;
         return this;
@@ -40,6 +42,7 @@ public class FileComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkToDiscussion")
     public String linkToDiscussion;
+
     public FileComment withLinkToDiscussion(String linkToDiscussion) {
         this.linkToDiscussion = linkToDiscussion;
         return this;
@@ -51,9 +54,11 @@ public class FileComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public DriveItem parent;
+
     public FileComment withParent(DriveItem parent) {
         this.parent = parent;
         return this;
     }
     
+    public FileComment(){}
 }

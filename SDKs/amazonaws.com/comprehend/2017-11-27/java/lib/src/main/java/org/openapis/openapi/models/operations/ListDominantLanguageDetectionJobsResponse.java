@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDominantLanguageDetectionJobsResponse {
     
     public String contentType;
+
     public ListDominantLanguageDetectionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDominantLanguageDetectionJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListDominantLanguageDetectionJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListDominantLanguageDetectionJobsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListDominantLanguageDetectionJobsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListDominantLanguageDetectionJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDominantLanguageDetectionJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListDominantLanguageDetectionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDominantLanguageDetectionJobsResponse listDominantLanguageDetectionJobsResponse;
+
     public ListDominantLanguageDetectionJobsResponse withListDominantLanguageDetectionJobsResponse(org.openapis.openapi.models.shared.ListDominantLanguageDetectionJobsResponse listDominantLanguageDetectionJobsResponse) {
         this.listDominantLanguageDetectionJobsResponse = listDominantLanguageDetectionJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListDominantLanguageDetectionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListDominantLanguageDetectionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDominantLanguageDetectionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDominantLanguageDetectionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListDominantLanguageDetectionJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDominantLanguageDetectionJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListDominantLanguageDetectionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

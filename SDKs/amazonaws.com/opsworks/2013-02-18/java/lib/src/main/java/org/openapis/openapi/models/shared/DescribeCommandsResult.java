@@ -15,9 +15,11 @@ public class DescribeCommandsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Commands")
     public Command[] commands;
+
     public DescribeCommandsResult withCommands(Command[] commands) {
         this.commands = commands;
         return this;
     }
     
+    public DescribeCommandsResult(){}
 }

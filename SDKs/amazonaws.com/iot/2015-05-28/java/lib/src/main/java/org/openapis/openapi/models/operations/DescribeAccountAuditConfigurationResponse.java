@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccountAuditConfigurationResponse {
     
     public String contentType;
+
     public DescribeAccountAuditConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAccountAuditConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccountAuditConfigurationResponse describeAccountAuditConfigurationResponse;
+
     public DescribeAccountAuditConfigurationResponse withDescribeAccountAuditConfigurationResponse(org.openapis.openapi.models.shared.DescribeAccountAuditConfigurationResponse describeAccountAuditConfigurationResponse) {
         this.describeAccountAuditConfigurationResponse = describeAccountAuditConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAccountAuditConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAccountAuditConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeAccountAuditConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccountAuditConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeAccountAuditConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccountAuditConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeAccountAuditConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAccountAuditConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeAccountAuditConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

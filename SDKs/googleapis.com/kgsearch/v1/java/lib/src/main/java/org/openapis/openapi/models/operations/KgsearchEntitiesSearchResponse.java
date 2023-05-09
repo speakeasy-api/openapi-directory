@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KgsearchEntitiesSearchResponse {
     
     public String contentType;
+
     public KgsearchEntitiesSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class KgsearchEntitiesSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchResponse searchResponse;
+
     public KgsearchEntitiesSearchResponse withSearchResponse(org.openapis.openapi.models.shared.SearchResponse searchResponse) {
         this.searchResponse = searchResponse;
         return this;
@@ -26,6 +29,7 @@ public class KgsearchEntitiesSearchResponse {
     
     
     public Integer statusCode;
+
     public KgsearchEntitiesSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class KgsearchEntitiesSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KgsearchEntitiesSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public KgsearchEntitiesSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

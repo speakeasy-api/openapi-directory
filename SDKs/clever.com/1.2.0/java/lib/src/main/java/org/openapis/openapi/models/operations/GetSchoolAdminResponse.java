@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchoolAdminResponse {
     
     public String contentType;
+
     public GetSchoolAdminResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSchoolAdminResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetSchoolAdminResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -29,6 +32,7 @@ public class GetSchoolAdminResponse {
      */
     
     public org.openapis.openapi.models.shared.SchoolAdminResponse schoolAdminResponse;
+
     public GetSchoolAdminResponse withSchoolAdminResponse(org.openapis.openapi.models.shared.SchoolAdminResponse schoolAdminResponse) {
         this.schoolAdminResponse = schoolAdminResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetSchoolAdminResponse {
     
     
     public Integer statusCode;
+
     public GetSchoolAdminResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetSchoolAdminResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchoolAdminResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSchoolAdminResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

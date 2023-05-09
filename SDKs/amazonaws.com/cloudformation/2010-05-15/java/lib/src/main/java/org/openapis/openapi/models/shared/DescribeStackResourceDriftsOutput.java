@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeStackResourceDriftsOutput - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackResourceDriftsOutput {
     
     public String nextToken;
+
     public DescribeStackResourceDriftsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class DescribeStackResourceDriftsOutput {
     
     
     public StackResourceDrift[] stackResourceDrifts;
+
     public DescribeStackResourceDriftsOutput withStackResourceDrifts(StackResourceDrift[] stackResourceDrifts) {
         this.stackResourceDrifts = stackResourceDrifts;
         return this;
     }
     
+    public DescribeStackResourceDriftsOutput(@JsonProperty("StackResourceDrifts") StackResourceDrift[] stackResourceDrifts) {
+        this.stackResourceDrifts = stackResourceDrifts;
+  }
 }

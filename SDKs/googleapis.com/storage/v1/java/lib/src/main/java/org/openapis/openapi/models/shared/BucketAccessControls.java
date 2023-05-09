@@ -18,6 +18,7 @@ public class BucketAccessControls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public BucketAccessControl[] items;
+
     public BucketAccessControls withItems(BucketAccessControl[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class BucketAccessControls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BucketAccessControls withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BucketAccessControls(){}
 }

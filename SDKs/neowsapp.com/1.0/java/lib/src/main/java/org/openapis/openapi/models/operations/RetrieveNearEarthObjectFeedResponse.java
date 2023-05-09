@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveNearEarthObjectFeedResponse {
     
     public String contentType;
+
     public RetrieveNearEarthObjectFeedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveNearEarthObjectFeedResponse {
      */
     
     public org.openapis.openapi.models.shared.NearEarthObjectList nearEarthObjectList;
+
     public RetrieveNearEarthObjectFeedResponse withNearEarthObjectList(org.openapis.openapi.models.shared.NearEarthObjectList nearEarthObjectList) {
         this.nearEarthObjectList = nearEarthObjectList;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveNearEarthObjectFeedResponse {
     
     
     public Integer statusCode;
+
     public RetrieveNearEarthObjectFeedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetrieveNearEarthObjectFeedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveNearEarthObjectFeedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetrieveNearEarthObjectFeedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

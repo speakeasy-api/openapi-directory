@@ -18,6 +18,7 @@ public class BulletSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listIdSuggested")
     public Boolean listIdSuggested;
+
     public BulletSuggestionState withListIdSuggested(Boolean listIdSuggested) {
         this.listIdSuggested = listIdSuggested;
         return this;
@@ -29,6 +30,7 @@ public class BulletSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestingLevelSuggested")
     public Boolean nestingLevelSuggested;
+
     public BulletSuggestionState withNestingLevelSuggested(Boolean nestingLevelSuggested) {
         this.nestingLevelSuggested = nestingLevelSuggested;
         return this;
@@ -40,9 +42,11 @@ public class BulletSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyleSuggestionState")
     public TextStyleSuggestionState textStyleSuggestionState;
+
     public BulletSuggestionState withTextStyleSuggestionState(TextStyleSuggestionState textStyleSuggestionState) {
         this.textStyleSuggestionState = textStyleSuggestionState;
         return this;
     }
     
+    public BulletSuggestionState(){}
 }

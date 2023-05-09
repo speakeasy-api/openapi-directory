@@ -15,6 +15,7 @@ public class ProvisionedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public ProvisionedResource withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -23,6 +24,7 @@ public class ProvisionedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProvisionedResource withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ProvisionedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningEngine")
     public ProvisionedResourceEngineEnum provisioningEngine;
+
     public ProvisionedResource withProvisioningEngine(ProvisionedResourceEngineEnum provisioningEngine) {
         this.provisioningEngine = provisioningEngine;
         return this;
     }
     
+    public ProvisionedResource(){}
 }

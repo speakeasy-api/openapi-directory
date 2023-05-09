@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMonitoringScheduleResponse {
     
     public String contentType;
+
     public CreateMonitoringScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMonitoringScheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMonitoringScheduleResponse createMonitoringScheduleResponse;
+
     public CreateMonitoringScheduleResponse withCreateMonitoringScheduleResponse(org.openapis.openapi.models.shared.CreateMonitoringScheduleResponse createMonitoringScheduleResponse) {
         this.createMonitoringScheduleResponse = createMonitoringScheduleResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateMonitoringScheduleResponse {
      */
     
     public Object resourceInUse;
+
     public CreateMonitoringScheduleResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateMonitoringScheduleResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateMonitoringScheduleResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CreateMonitoringScheduleResponse {
     
     
     public Integer statusCode;
+
     public CreateMonitoringScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateMonitoringScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMonitoringScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateMonitoringScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

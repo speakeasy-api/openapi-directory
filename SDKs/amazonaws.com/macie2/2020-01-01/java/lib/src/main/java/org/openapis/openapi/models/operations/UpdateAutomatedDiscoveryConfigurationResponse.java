@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAutomatedDiscoveryConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateAutomatedDiscoveryConfigurationResponse;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withUpdateAutomatedDiscoveryConfigurationResponse(java.util.Map<String, Object> updateAutomatedDiscoveryConfigurationResponse) {
         this.updateAutomatedDiscoveryConfigurationResponse = updateAutomatedDiscoveryConfigurationResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAutomatedDiscoveryConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateAutomatedDiscoveryConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAutomatedDiscoveryConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

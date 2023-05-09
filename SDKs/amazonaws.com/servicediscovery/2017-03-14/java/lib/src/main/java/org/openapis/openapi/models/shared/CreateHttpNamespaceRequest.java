@@ -12,6 +12,7 @@ public class CreateHttpNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public CreateHttpNamespaceRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -20,6 +21,7 @@ public class CreateHttpNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateHttpNamespaceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateHttpNamespaceRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateHttpNamespaceRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +38,13 @@ public class CreateHttpNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateHttpNamespaceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateHttpNamespaceRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

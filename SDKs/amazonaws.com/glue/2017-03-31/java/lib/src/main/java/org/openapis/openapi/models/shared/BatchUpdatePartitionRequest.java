@@ -12,6 +12,7 @@ public class BatchUpdatePartitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public BatchUpdatePartitionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class BatchUpdatePartitionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public BatchUpdatePartitionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class BatchUpdatePartitionRequest {
     
     @JsonProperty("Entries")
     public BatchUpdatePartitionRequestEntry[] entries;
+
     public BatchUpdatePartitionRequest withEntries(BatchUpdatePartitionRequestEntry[] entries) {
         this.entries = entries;
         return this;
@@ -33,9 +36,15 @@ public class BatchUpdatePartitionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public BatchUpdatePartitionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public BatchUpdatePartitionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Entries") BatchUpdatePartitionRequestEntry[] entries, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.entries = entries;
+        this.tableName = tableName;
+  }
 }

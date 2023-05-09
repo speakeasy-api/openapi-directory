@@ -16,74 +16,73 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateDestinationRequestBodyStateEnum;
-import org.openapis.openapi.models.operations.CreateDestinationRequestBody;
 import org.openapis.openapi.models.operations.CreateDestinationRequest;
+import org.openapis.openapi.models.operations.CreateDestinationRequestBody;
+import org.openapis.openapi.models.operations.CreateDestinationRequestBodyStateEnum;
 import org.openapis.openapi.models.operations.CreateDestinationResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateDestinationRequest req = new CreateDestinationRequest() {{
-                requestBody = new CreateDestinationRequestBody() {{
-                    additionalFixedProperties = "corrupti";
-                    clientToken = "provident";
-                    name = "distinctio";
-                    site = "quibusdam";
-                    state = "DISABLED";
-                }};
-                xAmzAlgorithm = "nulla";
-                xAmzContentSha256 = "corrupti";
-                xAmzCredential = "illum";
-                xAmzDate = "vel";
-                xAmzSecurityToken = "error";
-                xAmzSignature = "deserunt";
-                xAmzSignedHeaders = "suscipit";
-            }}            
+            CreateDestinationRequest req = new CreateDestinationRequest(                new CreateDestinationRequestBody("provident", "distinctio") {{
+                                additionalFixedProperties = "quibusdam";
+                                clientToken = "unde";
+                                state = CreateDestinationRequestBodyStateEnum.DECOMMISSIONED;
+                            }};) {{
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+            }};            
 
             CreateDestinationResponse res = sdk.createDestination(req);
 
-            if (res.createDestinationResponse.isPresent()) {
+            if (res.createDestinationResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createDestination` - Grants permission to create a destination
-* `createSite` - Grants permission to create a site
-* `createWorker` - Grants permission to create a worker
-* `createWorkerFleet` - Grants permission to create a worker fleet
-* `deleteDestination` - Grants permission to delete a destination
-* `deleteSite` - Grants permission to delete a site
-* `deleteWorker` - Grants permission to delete a worker
-* `deleteWorkerFleet` - Grants permission to delete a worker fleet
-* `getDestination` - Grants permission to get a destination
-* `getSite` - Grants permission to get a site
-* `getWorker` - Grants permission to get a worker
-* `getWorkerFleet` - Grants permission to get a worker fleet
-* `listDestinations` - Grants permission to list destinations
-* `listSites` - Grants permission to list sites
-* `listWorkerFleets` - Grants permission to list worker fleets
-* `listWorkers` - Grants permission to list workers
-* `updateDestination` - Grants permission to update a destination
-* `updateSite` - Grants permission to update a site
-* `updateWorker` - Grants permission to update a worker
-* `updateWorkerFleet` - Grants permission to update a worker fleet
+* [createDestination](docs/sdk/README.md#createdestination) - Grants permission to create a destination
+* [createSite](docs/sdk/README.md#createsite) - Grants permission to create a site
+* [createWorker](docs/sdk/README.md#createworker) - Grants permission to create a worker
+* [createWorkerFleet](docs/sdk/README.md#createworkerfleet) - Grants permission to create a worker fleet
+* [deleteDestination](docs/sdk/README.md#deletedestination) - Grants permission to delete a destination
+* [deleteSite](docs/sdk/README.md#deletesite) - Grants permission to delete a site
+* [deleteWorker](docs/sdk/README.md#deleteworker) - Grants permission to delete a worker
+* [deleteWorkerFleet](docs/sdk/README.md#deleteworkerfleet) - Grants permission to delete a worker fleet
+* [getDestination](docs/sdk/README.md#getdestination) - Grants permission to get a destination
+* [getSite](docs/sdk/README.md#getsite) - Grants permission to get a site
+* [getWorker](docs/sdk/README.md#getworker) - Grants permission to get a worker
+* [getWorkerFleet](docs/sdk/README.md#getworkerfleet) - Grants permission to get a worker fleet
+* [listDestinations](docs/sdk/README.md#listdestinations) - Grants permission to list destinations
+* [listSites](docs/sdk/README.md#listsites) - Grants permission to list sites
+* [listWorkerFleets](docs/sdk/README.md#listworkerfleets) - Grants permission to list worker fleets
+* [listWorkers](docs/sdk/README.md#listworkers) - Grants permission to list workers
+* [updateDestination](docs/sdk/README.md#updatedestination) - Grants permission to update a destination
+* [updateSite](docs/sdk/README.md#updatesite) - Grants permission to update a site
+* [updateWorker](docs/sdk/README.md#updateworker) - Grants permission to update a worker
+* [updateWorkerFleet](docs/sdk/README.md#updateworkerfleet) - Grants permission to update a worker fleet
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,6 +18,7 @@ public class ListArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifacts")
     public ArtifactOutput[] artifacts;
+
     public ListArtifactsResponse withArtifacts(ArtifactOutput[] artifacts) {
         this.artifacts = artifacts;
         return this;
@@ -29,9 +30,11 @@ public class ListArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListArtifactsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListArtifactsResponse(){}
 }

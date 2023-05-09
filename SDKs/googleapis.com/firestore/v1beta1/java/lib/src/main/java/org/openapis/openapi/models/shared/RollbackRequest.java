@@ -18,9 +18,11 @@ public class RollbackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RollbackRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RollbackRequest(){}
 }

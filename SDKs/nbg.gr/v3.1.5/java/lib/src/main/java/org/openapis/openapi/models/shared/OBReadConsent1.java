@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBReadConsent1 {
     @JsonProperty("Data")
     public OBReadData1 data;
+
     public OBReadConsent1 withData(OBReadData1 data) {
         this.data = data;
         return this;
@@ -22,9 +23,14 @@ public class OBReadConsent1 {
      */
     @JsonProperty("Risk")
     public java.util.Map<String, Object> risk;
+
     public OBReadConsent1 withRisk(java.util.Map<String, Object> risk) {
         this.risk = risk;
         return this;
     }
     
+    public OBReadConsent1(@JsonProperty("Data") OBReadData1 data, @JsonProperty("Risk") java.util.Map<String, Object> risk) {
+        this.data = data;
+        this.risk = risk;
+  }
 }

@@ -15,6 +15,7 @@ public class ExportTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationsCount")
     public Long applicationsCount;
+
     public ExportTaskSummary withApplicationsCount(Long applicationsCount) {
         this.applicationsCount = applicationsCount;
         return this;
@@ -23,6 +24,7 @@ public class ExportTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serversCount")
     public Long serversCount;
+
     public ExportTaskSummary withServersCount(Long serversCount) {
         this.serversCount = serversCount;
         return this;
@@ -31,9 +33,11 @@ public class ExportTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wavesCount")
     public Long wavesCount;
+
     public ExportTaskSummary withWavesCount(Long wavesCount) {
         this.wavesCount = wavesCount;
         return this;
     }
     
+    public ExportTaskSummary(){}
 }

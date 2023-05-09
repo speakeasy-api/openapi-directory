@@ -18,9 +18,11 @@ public class GoogleFirestoreAdminV1TtlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleFirestoreAdminV1TtlConfigStateEnum state;
+
     public GoogleFirestoreAdminV1TtlConfig withState(GoogleFirestoreAdminV1TtlConfigStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleFirestoreAdminV1TtlConfig(){}
 }

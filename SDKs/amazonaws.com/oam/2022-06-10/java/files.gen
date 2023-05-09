@@ -88,4 +88,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceOutput.j
 lib/src/main/java/org/openapis/openapi/models/shared/PutSinkPolicyOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateLinkOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

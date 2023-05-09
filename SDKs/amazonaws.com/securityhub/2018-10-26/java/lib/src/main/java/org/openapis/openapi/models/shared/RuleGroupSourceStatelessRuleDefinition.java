@@ -15,6 +15,7 @@ public class RuleGroupSourceStatelessRuleDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Actions")
     public String[] actions;
+
     public RuleGroupSourceStatelessRuleDefinition withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupSourceStatelessRuleDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchAttributes")
     public RuleGroupSourceStatelessRuleMatchAttributes matchAttributes;
+
     public RuleGroupSourceStatelessRuleDefinition withMatchAttributes(RuleGroupSourceStatelessRuleMatchAttributes matchAttributes) {
         this.matchAttributes = matchAttributes;
         return this;
     }
     
+    public RuleGroupSourceStatelessRuleDefinition(){}
 }

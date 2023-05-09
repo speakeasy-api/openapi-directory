@@ -12,6 +12,7 @@ public class GetStatisticsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetStatisticsCollectionRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetStatisticsCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetStatisticsCollectionRequest withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public GetStatisticsCollectionRequest(){}
 }

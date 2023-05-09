@@ -15,9 +15,11 @@ public class GetInstancePortStatesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portStates")
     public InstancePortState[] portStates;
+
     public GetInstancePortStatesResult withPortStates(InstancePortState[] portStates) {
         this.portStates = portStates;
         return this;
     }
     
+    public GetInstancePortStatesResult(){}
 }

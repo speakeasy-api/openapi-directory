@@ -18,6 +18,7 @@ public class Suffix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customSuffix")
     public String customSuffix;
+
     public Suffix withCustomSuffix(String customSuffix) {
         this.customSuffix = customSuffix;
         return this;
@@ -29,9 +30,11 @@ public class Suffix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public SuffixOptionEnum option;
+
     public Suffix withOption(SuffixOptionEnum option) {
         this.option = option;
         return this;
     }
     
+    public Suffix(){}
 }

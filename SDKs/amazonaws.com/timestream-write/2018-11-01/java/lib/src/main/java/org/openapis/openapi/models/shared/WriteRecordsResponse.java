@@ -15,9 +15,11 @@ public class WriteRecordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordsIngested")
     public RecordsIngested recordsIngested;
+
     public WriteRecordsResponse withRecordsIngested(RecordsIngested recordsIngested) {
         this.recordsIngested = recordsIngested;
         return this;
     }
     
+    public WriteRecordsResponse(){}
 }

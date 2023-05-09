@@ -15,9 +15,11 @@ public class ResourceIntegrations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroup")
     public ResourceGroup resourceGroup;
+
     public ResourceIntegrations withResourceGroup(ResourceGroup resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
     }
     
+    public ResourceIntegrations(){}
 }

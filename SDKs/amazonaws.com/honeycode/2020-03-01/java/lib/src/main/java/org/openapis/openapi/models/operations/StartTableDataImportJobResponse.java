@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTableDataImportJobResponse {
@@ -12,6 +13,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartTableDataImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartTableDataImportJobResponse {
     
     
     public String contentType;
+
     public StartTableDataImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object internalServerException;
+
     public StartTableDataImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object requestTimeoutException;
+
     public StartTableDataImportJobResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartTableDataImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartTableDataImportJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public StartTableDataImportJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTableDataImportJobResult startTableDataImportJobResult;
+
     public StartTableDataImportJobResponse withStartTableDataImportJobResult(org.openapis.openapi.models.shared.StartTableDataImportJobResult startTableDataImportJobResult) {
         this.startTableDataImportJobResult = startTableDataImportJobResult;
         return this;
@@ -86,6 +95,7 @@ public class StartTableDataImportJobResponse {
     
     
     public Integer statusCode;
+
     public StartTableDataImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class StartTableDataImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTableDataImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object throttlingException;
+
     public StartTableDataImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class StartTableDataImportJobResponse {
      */
     
     public Object validationException;
+
     public StartTableDataImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartTableDataImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

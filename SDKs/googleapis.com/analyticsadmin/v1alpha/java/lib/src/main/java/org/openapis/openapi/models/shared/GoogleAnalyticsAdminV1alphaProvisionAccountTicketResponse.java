@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaProvisionAccountTicketResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountTicketId")
     public String accountTicketId;
+
     public GoogleAnalyticsAdminV1alphaProvisionAccountTicketResponse withAccountTicketId(String accountTicketId) {
         this.accountTicketId = accountTicketId;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaProvisionAccountTicketResponse(){}
 }

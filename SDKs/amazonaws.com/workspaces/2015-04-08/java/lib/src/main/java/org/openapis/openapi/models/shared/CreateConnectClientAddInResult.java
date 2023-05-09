@@ -15,9 +15,11 @@ public class CreateConnectClientAddInResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddInId")
     public String addInId;
+
     public CreateConnectClientAddInResult withAddInId(String addInId) {
         this.addInId = addInId;
         return this;
     }
     
+    public CreateConnectClientAddInResult(){}
 }

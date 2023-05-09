@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public GoogleCloudConnectorsV1Destination[] destinations;
+
     public GoogleCloudConnectorsV1DestinationConfig withDestinations(GoogleCloudConnectorsV1Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudConnectorsV1DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudConnectorsV1DestinationConfig withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GoogleCloudConnectorsV1DestinationConfig(){}
 }

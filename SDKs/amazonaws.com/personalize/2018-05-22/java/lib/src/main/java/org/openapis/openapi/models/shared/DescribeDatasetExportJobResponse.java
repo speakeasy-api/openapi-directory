@@ -15,9 +15,11 @@ public class DescribeDatasetExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetExportJob")
     public DatasetExportJob datasetExportJob;
+
     public DescribeDatasetExportJobResponse withDatasetExportJob(DatasetExportJob datasetExportJob) {
         this.datasetExportJob = datasetExportJob;
         return this;
     }
     
+    public DescribeDatasetExportJobResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListQueuesRequest {
     
     public Long maxResults;
+
     public ListQueuesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListQueuesRequest {
     
     
     public String nextToken;
+
     public ListQueuesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,11 @@ public class ListQueuesRequest {
     
     
     public String queueNamePrefix;
+
     public ListQueuesRequest withQueueNamePrefix(String queueNamePrefix) {
         this.queueNamePrefix = queueNamePrefix;
         return this;
     }
     
+    public ListQueuesRequest(){}
 }

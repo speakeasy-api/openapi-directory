@@ -15,9 +15,11 @@ public class StartMLEvaluationTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunId")
     public String taskRunId;
+
     public StartMLEvaluationTaskRunResponse withTaskRunId(String taskRunId) {
         this.taskRunId = taskRunId;
         return this;
     }
     
+    public StartMLEvaluationTaskRunResponse(){}
 }

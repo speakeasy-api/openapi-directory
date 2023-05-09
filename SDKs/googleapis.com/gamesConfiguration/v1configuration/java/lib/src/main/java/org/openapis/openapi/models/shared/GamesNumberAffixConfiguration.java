@@ -18,6 +18,7 @@ public class GamesNumberAffixConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("few")
     public LocalizedStringBundle few;
+
     public GamesNumberAffixConfiguration withFew(LocalizedStringBundle few) {
         this.few = few;
         return this;
@@ -29,6 +30,7 @@ public class GamesNumberAffixConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("many")
     public LocalizedStringBundle many;
+
     public GamesNumberAffixConfiguration withMany(LocalizedStringBundle many) {
         this.many = many;
         return this;
@@ -40,6 +42,7 @@ public class GamesNumberAffixConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("one")
     public LocalizedStringBundle one;
+
     public GamesNumberAffixConfiguration withOne(LocalizedStringBundle one) {
         this.one = one;
         return this;
@@ -51,6 +54,7 @@ public class GamesNumberAffixConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other")
     public LocalizedStringBundle other;
+
     public GamesNumberAffixConfiguration withOther(LocalizedStringBundle other) {
         this.other = other;
         return this;
@@ -62,6 +66,7 @@ public class GamesNumberAffixConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("two")
     public LocalizedStringBundle two;
+
     public GamesNumberAffixConfiguration withTwo(LocalizedStringBundle two) {
         this.two = two;
         return this;
@@ -73,9 +78,11 @@ public class GamesNumberAffixConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zero")
     public LocalizedStringBundle zero;
+
     public GamesNumberAffixConfiguration withZero(LocalizedStringBundle zero) {
         this.zero = zero;
         return this;
     }
     
+    public GamesNumberAffixConfiguration(){}
 }

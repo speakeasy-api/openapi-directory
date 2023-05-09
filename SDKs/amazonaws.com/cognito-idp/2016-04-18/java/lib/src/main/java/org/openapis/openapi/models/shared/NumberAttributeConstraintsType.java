@@ -15,6 +15,7 @@ public class NumberAttributeConstraintsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxValue")
     public String maxValue;
+
     public NumberAttributeConstraintsType withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -23,9 +24,11 @@ public class NumberAttributeConstraintsType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinValue")
     public String minValue;
+
     public NumberAttributeConstraintsType withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public NumberAttributeConstraintsType(){}
 }

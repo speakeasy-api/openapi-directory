@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDhcpOptionsResultDhcpOptions {
     
     public CreateDhcpOptionsResultDhcpOptionsDhcpConfigurations[] dhcpConfigurations;
+
     public CreateDhcpOptionsResultDhcpOptions withDhcpConfigurations(CreateDhcpOptionsResultDhcpOptionsDhcpConfigurations[] dhcpConfigurations) {
         this.dhcpConfigurations = dhcpConfigurations;
         return this;
@@ -19,6 +20,7 @@ public class CreateDhcpOptionsResultDhcpOptions {
     
     
     public String dhcpOptionsId;
+
     public CreateDhcpOptionsResultDhcpOptions withDhcpOptionsId(String dhcpOptionsId) {
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
@@ -26,6 +28,7 @@ public class CreateDhcpOptionsResultDhcpOptions {
     
     
     public String ownerId;
+
     public CreateDhcpOptionsResultDhcpOptions withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,9 +36,11 @@ public class CreateDhcpOptionsResultDhcpOptions {
     
     
     public CreateDhcpOptionsResultDhcpOptionsTags[] tags;
+
     public CreateDhcpOptionsResultDhcpOptions withTags(CreateDhcpOptionsResultDhcpOptionsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDhcpOptionsResultDhcpOptions(){}
 }

@@ -12,6 +12,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedTackles")
     public Double assistedTackles;
+
     public FantasyDefenseGame withAssistedTackles(Double assistedTackles) {
         this.assistedTackles = assistedTackles;
         return this;
@@ -20,6 +21,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnTouchdowns")
     public Double blockedKickReturnTouchdowns;
+
     public FantasyDefenseGame withBlockedKickReturnTouchdowns(Double blockedKickReturnTouchdowns) {
         this.blockedKickReturnTouchdowns = blockedKickReturnTouchdowns;
         return this;
@@ -28,6 +30,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKickReturnYards")
     public Double blockedKickReturnYards;
+
     public FantasyDefenseGame withBlockedKickReturnYards(Double blockedKickReturnYards) {
         this.blockedKickReturnYards = blockedKickReturnYards;
         return this;
@@ -36,6 +39,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedKicks")
     public Double blockedKicks;
+
     public FantasyDefenseGame withBlockedKicks(Double blockedKicks) {
         this.blockedKicks = blockedKicks;
         return this;
@@ -44,6 +48,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Date")
     public String date;
+
     public FantasyDefenseGame withDate(String date) {
         this.date = date;
         return this;
@@ -52,6 +57,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public FantasyDefenseGame withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -60,6 +66,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public FantasyDefenseGame withDay(String day) {
         this.day = day;
         return this;
@@ -68,6 +75,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefensiveTouchdowns")
     public Double defensiveTouchdowns;
+
     public FantasyDefenseGame withDefensiveTouchdowns(Double defensiveTouchdowns) {
         this.defensiveTouchdowns = defensiveTouchdowns;
         return this;
@@ -76,6 +84,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsFantasyPointsAllowed")
     public Double draftKingsFantasyPointsAllowed;
+
     public FantasyDefenseGame withDraftKingsFantasyPointsAllowed(Double draftKingsFantasyPointsAllowed) {
         this.draftKingsFantasyPointsAllowed = draftKingsFantasyPointsAllowed;
         return this;
@@ -84,6 +93,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsKickerFantasyPointsAllowed")
     public Double draftKingsKickerFantasyPointsAllowed;
+
     public FantasyDefenseGame withDraftKingsKickerFantasyPointsAllowed(Double draftKingsKickerFantasyPointsAllowed) {
         this.draftKingsKickerFantasyPointsAllowed = draftKingsKickerFantasyPointsAllowed;
         return this;
@@ -92,6 +102,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsPosition")
     public String draftKingsPosition;
+
     public FantasyDefenseGame withDraftKingsPosition(String draftKingsPosition) {
         this.draftKingsPosition = draftKingsPosition;
         return this;
@@ -100,6 +111,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsQuarterbackFantasyPointsAllowed")
     public Double draftKingsQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withDraftKingsQuarterbackFantasyPointsAllowed(Double draftKingsQuarterbackFantasyPointsAllowed) {
         this.draftKingsQuarterbackFantasyPointsAllowed = draftKingsQuarterbackFantasyPointsAllowed;
         return this;
@@ -108,6 +120,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsRunningbackFantasyPointsAllowed")
     public Double draftKingsRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withDraftKingsRunningbackFantasyPointsAllowed(Double draftKingsRunningbackFantasyPointsAllowed) {
         this.draftKingsRunningbackFantasyPointsAllowed = draftKingsRunningbackFantasyPointsAllowed;
         return this;
@@ -116,6 +129,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsSalary")
     public Long draftKingsSalary;
+
     public FantasyDefenseGame withDraftKingsSalary(Long draftKingsSalary) {
         this.draftKingsSalary = draftKingsSalary;
         return this;
@@ -124,6 +138,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsTightEndFantasyPointsAllowed")
     public Double draftKingsTightEndFantasyPointsAllowed;
+
     public FantasyDefenseGame withDraftKingsTightEndFantasyPointsAllowed(Double draftKingsTightEndFantasyPointsAllowed) {
         this.draftKingsTightEndFantasyPointsAllowed = draftKingsTightEndFantasyPointsAllowed;
         return this;
@@ -132,6 +147,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsWideReceiverFantasyPointsAllowed")
     public Double draftKingsWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseGame withDraftKingsWideReceiverFantasyPointsAllowed(Double draftKingsWideReceiverFantasyPointsAllowed) {
         this.draftKingsWideReceiverFantasyPointsAllowed = draftKingsWideReceiverFantasyPointsAllowed;
         return this;
@@ -140,6 +156,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelFantasyPointsAllowed")
     public Double fanDuelFantasyPointsAllowed;
+
     public FantasyDefenseGame withFanDuelFantasyPointsAllowed(Double fanDuelFantasyPointsAllowed) {
         this.fanDuelFantasyPointsAllowed = fanDuelFantasyPointsAllowed;
         return this;
@@ -148,6 +165,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelKickerFantasyPointsAllowed")
     public Double fanDuelKickerFantasyPointsAllowed;
+
     public FantasyDefenseGame withFanDuelKickerFantasyPointsAllowed(Double fanDuelKickerFantasyPointsAllowed) {
         this.fanDuelKickerFantasyPointsAllowed = fanDuelKickerFantasyPointsAllowed;
         return this;
@@ -156,6 +174,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelPosition")
     public String fanDuelPosition;
+
     public FantasyDefenseGame withFanDuelPosition(String fanDuelPosition) {
         this.fanDuelPosition = fanDuelPosition;
         return this;
@@ -164,6 +183,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelQuarterbackFantasyPointsAllowed")
     public Double fanDuelQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withFanDuelQuarterbackFantasyPointsAllowed(Double fanDuelQuarterbackFantasyPointsAllowed) {
         this.fanDuelQuarterbackFantasyPointsAllowed = fanDuelQuarterbackFantasyPointsAllowed;
         return this;
@@ -172,6 +192,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelRunningbackFantasyPointsAllowed")
     public Double fanDuelRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withFanDuelRunningbackFantasyPointsAllowed(Double fanDuelRunningbackFantasyPointsAllowed) {
         this.fanDuelRunningbackFantasyPointsAllowed = fanDuelRunningbackFantasyPointsAllowed;
         return this;
@@ -180,6 +201,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelSalary")
     public Long fanDuelSalary;
+
     public FantasyDefenseGame withFanDuelSalary(Long fanDuelSalary) {
         this.fanDuelSalary = fanDuelSalary;
         return this;
@@ -188,6 +210,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelTightEndFantasyPointsAllowed")
     public Double fanDuelTightEndFantasyPointsAllowed;
+
     public FantasyDefenseGame withFanDuelTightEndFantasyPointsAllowed(Double fanDuelTightEndFantasyPointsAllowed) {
         this.fanDuelTightEndFantasyPointsAllowed = fanDuelTightEndFantasyPointsAllowed;
         return this;
@@ -196,6 +219,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelWideReceiverFantasyPointsAllowed")
     public Double fanDuelWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseGame withFanDuelWideReceiverFantasyPointsAllowed(Double fanDuelWideReceiverFantasyPointsAllowed) {
         this.fanDuelWideReceiverFantasyPointsAllowed = fanDuelWideReceiverFantasyPointsAllowed;
         return this;
@@ -204,6 +228,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDataSalary")
     public Long fantasyDataSalary;
+
     public FantasyDefenseGame withFantasyDataSalary(Long fantasyDataSalary) {
         this.fantasyDataSalary = fantasyDataSalary;
         return this;
@@ -212,6 +237,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDefenseID")
     public Long fantasyDefenseID;
+
     public FantasyDefenseGame withFantasyDefenseID(Long fantasyDefenseID) {
         this.fantasyDefenseID = fantasyDefenseID;
         return this;
@@ -220,6 +246,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftFantasyPointsAllowed")
     public Double fantasyDraftFantasyPointsAllowed;
+
     public FantasyDefenseGame withFantasyDraftFantasyPointsAllowed(Double fantasyDraftFantasyPointsAllowed) {
         this.fantasyDraftFantasyPointsAllowed = fantasyDraftFantasyPointsAllowed;
         return this;
@@ -228,6 +255,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftKickerFantasyPointsAllowed")
     public Double fantasyDraftKickerFantasyPointsAllowed;
+
     public FantasyDefenseGame withFantasyDraftKickerFantasyPointsAllowed(Double fantasyDraftKickerFantasyPointsAllowed) {
         this.fantasyDraftKickerFantasyPointsAllowed = fantasyDraftKickerFantasyPointsAllowed;
         return this;
@@ -236,6 +264,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftPosition")
     public String fantasyDraftPosition;
+
     public FantasyDefenseGame withFantasyDraftPosition(String fantasyDraftPosition) {
         this.fantasyDraftPosition = fantasyDraftPosition;
         return this;
@@ -244,6 +273,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftQuarterbackFantasyPointsAllowed")
     public Double fantasyDraftQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withFantasyDraftQuarterbackFantasyPointsAllowed(Double fantasyDraftQuarterbackFantasyPointsAllowed) {
         this.fantasyDraftQuarterbackFantasyPointsAllowed = fantasyDraftQuarterbackFantasyPointsAllowed;
         return this;
@@ -252,6 +282,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftRunningbackFantasyPointsAllowed")
     public Double fantasyDraftRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withFantasyDraftRunningbackFantasyPointsAllowed(Double fantasyDraftRunningbackFantasyPointsAllowed) {
         this.fantasyDraftRunningbackFantasyPointsAllowed = fantasyDraftRunningbackFantasyPointsAllowed;
         return this;
@@ -260,6 +291,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftSalary")
     public Long fantasyDraftSalary;
+
     public FantasyDefenseGame withFantasyDraftSalary(Long fantasyDraftSalary) {
         this.fantasyDraftSalary = fantasyDraftSalary;
         return this;
@@ -268,6 +300,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftTightEndFantasyPointsAllowed")
     public Double fantasyDraftTightEndFantasyPointsAllowed;
+
     public FantasyDefenseGame withFantasyDraftTightEndFantasyPointsAllowed(Double fantasyDraftTightEndFantasyPointsAllowed) {
         this.fantasyDraftTightEndFantasyPointsAllowed = fantasyDraftTightEndFantasyPointsAllowed;
         return this;
@@ -276,6 +309,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftWideReceiverFantasyPointsAllowed")
     public Double fantasyDraftWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseGame withFantasyDraftWideReceiverFantasyPointsAllowed(Double fantasyDraftWideReceiverFantasyPointsAllowed) {
         this.fantasyDraftWideReceiverFantasyPointsAllowed = fantasyDraftWideReceiverFantasyPointsAllowed;
         return this;
@@ -284,6 +318,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public FantasyDefenseGame withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -292,6 +327,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsAllowed")
     public Double fantasyPointsAllowed;
+
     public FantasyDefenseGame withFantasyPointsAllowed(Double fantasyPointsAllowed) {
         this.fantasyPointsAllowed = fantasyPointsAllowed;
         return this;
@@ -300,6 +336,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public FantasyDefenseGame withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -308,6 +345,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public FantasyDefenseGame withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -316,6 +354,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public FantasyDefenseGame withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -324,6 +363,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public FantasyDefenseGame withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -332,6 +372,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnTouchdowns")
     public Double fieldGoalReturnTouchdowns;
+
     public FantasyDefenseGame withFieldGoalReturnTouchdowns(Double fieldGoalReturnTouchdowns) {
         this.fieldGoalReturnTouchdowns = fieldGoalReturnTouchdowns;
         return this;
@@ -340,6 +381,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalReturnYards")
     public Double fieldGoalReturnYards;
+
     public FantasyDefenseGame withFieldGoalReturnYards(Double fieldGoalReturnYards) {
         this.fieldGoalReturnYards = fieldGoalReturnYards;
         return this;
@@ -348,6 +390,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthDownAttempts")
     public Double fourthDownAttempts;
+
     public FantasyDefenseGame withFourthDownAttempts(Double fourthDownAttempts) {
         this.fourthDownAttempts = fourthDownAttempts;
         return this;
@@ -356,6 +399,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthDownConversions")
     public Double fourthDownConversions;
+
     public FantasyDefenseGame withFourthDownConversions(Double fourthDownConversions) {
         this.fourthDownConversions = fourthDownConversions;
         return this;
@@ -364,6 +408,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnTouchdowns")
     public Double fumbleReturnTouchdowns;
+
     public FantasyDefenseGame withFumbleReturnTouchdowns(Double fumbleReturnTouchdowns) {
         this.fumbleReturnTouchdowns = fumbleReturnTouchdowns;
         return this;
@@ -372,6 +417,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumbleReturnYards")
     public Double fumbleReturnYards;
+
     public FantasyDefenseGame withFumbleReturnYards(Double fumbleReturnYards) {
         this.fumbleReturnYards = fumbleReturnYards;
         return this;
@@ -380,6 +426,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesForced")
     public Double fumblesForced;
+
     public FantasyDefenseGame withFumblesForced(Double fumblesForced) {
         this.fumblesForced = fumblesForced;
         return this;
@@ -388,6 +435,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesRecovered")
     public Double fumblesRecovered;
+
     public FantasyDefenseGame withFumblesRecovered(Double fumblesRecovered) {
         this.fumblesRecovered = fumblesRecovered;
         return this;
@@ -396,6 +444,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameKey")
     public String gameKey;
+
     public FantasyDefenseGame withGameKey(String gameKey) {
         this.gameKey = gameKey;
         return this;
@@ -404,6 +453,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalGameID")
     public Long globalGameID;
+
     public FantasyDefenseGame withGlobalGameID(Long globalGameID) {
         this.globalGameID = globalGameID;
         return this;
@@ -412,6 +462,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalOpponentID")
     public Long globalOpponentID;
+
     public FantasyDefenseGame withGlobalOpponentID(Long globalOpponentID) {
         this.globalOpponentID = globalOpponentID;
         return this;
@@ -420,6 +471,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public FantasyDefenseGame withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -428,6 +480,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeOrAway")
     public String homeOrAway;
+
     public FantasyDefenseGame withHomeOrAway(String homeOrAway) {
         this.homeOrAway = homeOrAway;
         return this;
@@ -436,6 +489,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Humidity")
     public Long humidity;
+
     public FantasyDefenseGame withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -444,6 +498,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnTouchdowns")
     public Double interceptionReturnTouchdowns;
+
     public FantasyDefenseGame withInterceptionReturnTouchdowns(Double interceptionReturnTouchdowns) {
         this.interceptionReturnTouchdowns = interceptionReturnTouchdowns;
         return this;
@@ -452,6 +507,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterceptionReturnYards")
     public Double interceptionReturnYards;
+
     public FantasyDefenseGame withInterceptionReturnYards(Double interceptionReturnYards) {
         this.interceptionReturnYards = interceptionReturnYards;
         return this;
@@ -460,6 +516,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interceptions")
     public Double interceptions;
+
     public FantasyDefenseGame withInterceptions(Double interceptions) {
         this.interceptions = interceptions;
         return this;
@@ -468,6 +525,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsGameOver")
     public Boolean isGameOver;
+
     public FantasyDefenseGame withIsGameOver(Boolean isGameOver) {
         this.isGameOver = isGameOver;
         return this;
@@ -476,6 +534,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnLong")
     public Double kickReturnLong;
+
     public FantasyDefenseGame withKickReturnLong(Double kickReturnLong) {
         this.kickReturnLong = kickReturnLong;
         return this;
@@ -484,6 +543,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnTouchdowns")
     public Double kickReturnTouchdowns;
+
     public FantasyDefenseGame withKickReturnTouchdowns(Double kickReturnTouchdowns) {
         this.kickReturnTouchdowns = kickReturnTouchdowns;
         return this;
@@ -492,6 +552,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturnYards")
     public Double kickReturnYards;
+
     public FantasyDefenseGame withKickReturnYards(Double kickReturnYards) {
         this.kickReturnYards = kickReturnYards;
         return this;
@@ -500,6 +561,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickReturns")
     public Double kickReturns;
+
     public FantasyDefenseGame withKickReturns(Double kickReturns) {
         this.kickReturns = kickReturns;
         return this;
@@ -508,6 +570,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KickerFantasyPointsAllowed")
     public Double kickerFantasyPointsAllowed;
+
     public FantasyDefenseGame withKickerFantasyPointsAllowed(Double kickerFantasyPointsAllowed) {
         this.kickerFantasyPointsAllowed = kickerFantasyPointsAllowed;
         return this;
@@ -516,6 +579,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OffensiveYardsAllowed")
     public Double offensiveYardsAllowed;
+
     public FantasyDefenseGame withOffensiveYardsAllowed(Double offensiveYardsAllowed) {
         this.offensiveYardsAllowed = offensiveYardsAllowed;
         return this;
@@ -524,6 +588,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public FantasyDefenseGame withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -532,6 +597,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentID")
     public Long opponentID;
+
     public FantasyDefenseGame withOpponentID(Long opponentID) {
         this.opponentID = opponentID;
         return this;
@@ -540,6 +606,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPositionRank")
     public Long opponentPositionRank;
+
     public FantasyDefenseGame withOpponentPositionRank(Long opponentPositionRank) {
         this.opponentPositionRank = opponentPositionRank;
         return this;
@@ -548,6 +615,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRank")
     public Long opponentRank;
+
     public FantasyDefenseGame withOpponentRank(Long opponentRank) {
         this.opponentRank = opponentRank;
         return this;
@@ -556,6 +624,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassesDefended")
     public Double passesDefended;
+
     public FantasyDefenseGame withPassesDefended(Double passesDefended) {
         this.passesDefended = passesDefended;
         return this;
@@ -564,6 +633,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public FantasyDefenseGame withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -572,6 +642,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsAllowed")
     public Double pointsAllowed;
+
     public FantasyDefenseGame withPointsAllowed(Double pointsAllowed) {
         this.pointsAllowed = pointsAllowed;
         return this;
@@ -580,6 +651,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsAllowedByDefenseSpecialTeams")
     public Double pointsAllowedByDefenseSpecialTeams;
+
     public FantasyDefenseGame withPointsAllowedByDefenseSpecialTeams(Double pointsAllowedByDefenseSpecialTeams) {
         this.pointsAllowedByDefenseSpecialTeams = pointsAllowedByDefenseSpecialTeams;
         return this;
@@ -588,6 +660,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnLong")
     public Double puntReturnLong;
+
     public FantasyDefenseGame withPuntReturnLong(Double puntReturnLong) {
         this.puntReturnLong = puntReturnLong;
         return this;
@@ -596,6 +669,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnTouchdowns")
     public Double puntReturnTouchdowns;
+
     public FantasyDefenseGame withPuntReturnTouchdowns(Double puntReturnTouchdowns) {
         this.puntReturnTouchdowns = puntReturnTouchdowns;
         return this;
@@ -604,6 +678,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturnYards")
     public Double puntReturnYards;
+
     public FantasyDefenseGame withPuntReturnYards(Double puntReturnYards) {
         this.puntReturnYards = puntReturnYards;
         return this;
@@ -612,6 +687,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntReturns")
     public Double puntReturns;
+
     public FantasyDefenseGame withPuntReturns(Double puntReturns) {
         this.puntReturns = puntReturns;
         return this;
@@ -620,6 +696,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackFantasyPointsAllowed")
     public Double quarterbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withQuarterbackFantasyPointsAllowed(Double quarterbackFantasyPointsAllowed) {
         this.quarterbackFantasyPointsAllowed = quarterbackFantasyPointsAllowed;
         return this;
@@ -628,6 +705,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuarterbackHits")
     public Double quarterbackHits;
+
     public FantasyDefenseGame withQuarterbackHits(Double quarterbackHits) {
         this.quarterbackHits = quarterbackHits;
         return this;
@@ -636,6 +714,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningbackFantasyPointsAllowed")
     public Double runningbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withRunningbackFantasyPointsAllowed(Double runningbackFantasyPointsAllowed) {
         this.runningbackFantasyPointsAllowed = runningbackFantasyPointsAllowed;
         return this;
@@ -644,6 +723,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SackYards")
     public Double sackYards;
+
     public FantasyDefenseGame withSackYards(Double sackYards) {
         this.sackYards = sackYards;
         return this;
@@ -652,6 +732,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacks")
     public Double sacks;
+
     public FantasyDefenseGame withSacks(Double sacks) {
         this.sacks = sacks;
         return this;
@@ -660,6 +741,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Safeties")
     public Double safeties;
+
     public FantasyDefenseGame withSafeties(Double safeties) {
         this.safeties = safeties;
         return this;
@@ -668,6 +750,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreID")
     public Long scoreID;
+
     public FantasyDefenseGame withScoreID(Long scoreID) {
         this.scoreID = scoreID;
         return this;
@@ -676,6 +759,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringDetails")
     public ScoringDetail[] scoringDetails;
+
     public FantasyDefenseGame withScoringDetails(ScoringDetail[] scoringDetails) {
         this.scoringDetails = scoringDetails;
         return this;
@@ -684,6 +768,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public FantasyDefenseGame withSeason(Long season) {
         this.season = season;
         return this;
@@ -692,6 +777,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public FantasyDefenseGame withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -700,6 +786,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoloTackles")
     public Double soloTackles;
+
     public FantasyDefenseGame withSoloTackles(Double soloTackles) {
         this.soloTackles = soloTackles;
         return this;
@@ -708,6 +795,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecialTeamsTouchdowns")
     public Double specialTeamsTouchdowns;
+
     public FantasyDefenseGame withSpecialTeamsTouchdowns(Double specialTeamsTouchdowns) {
         this.specialTeamsTouchdowns = specialTeamsTouchdowns;
         return this;
@@ -716,6 +804,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stadium")
     public String stadium;
+
     public FantasyDefenseGame withStadium(String stadium) {
         this.stadium = stadium;
         return this;
@@ -724,6 +813,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TacklesForLoss")
     public Double tacklesForLoss;
+
     public FantasyDefenseGame withTacklesForLoss(Double tacklesForLoss) {
         this.tacklesForLoss = tacklesForLoss;
         return this;
@@ -732,6 +822,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public FantasyDefenseGame withTeam(String team) {
         this.team = team;
         return this;
@@ -740,6 +831,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public FantasyDefenseGame withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -748,6 +840,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Temperature")
     public Long temperature;
+
     public FantasyDefenseGame withTemperature(Long temperature) {
         this.temperature = temperature;
         return this;
@@ -756,6 +849,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdDownAttempts")
     public Double thirdDownAttempts;
+
     public FantasyDefenseGame withThirdDownAttempts(Double thirdDownAttempts) {
         this.thirdDownAttempts = thirdDownAttempts;
         return this;
@@ -764,6 +858,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdDownConversions")
     public Double thirdDownConversions;
+
     public FantasyDefenseGame withThirdDownConversions(Double thirdDownConversions) {
         this.thirdDownConversions = thirdDownConversions;
         return this;
@@ -772,6 +867,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TightEndFantasyPointsAllowed")
     public Double tightEndFantasyPointsAllowed;
+
     public FantasyDefenseGame withTightEndFantasyPointsAllowed(Double tightEndFantasyPointsAllowed) {
         this.tightEndFantasyPointsAllowed = tightEndFantasyPointsAllowed;
         return this;
@@ -780,6 +876,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TouchdownsScored")
     public Double touchdownsScored;
+
     public FantasyDefenseGame withTouchdownsScored(Double touchdownsScored) {
         this.touchdownsScored = touchdownsScored;
         return this;
@@ -788,6 +885,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReturns")
     public Double twoPointConversionReturns;
+
     public FantasyDefenseGame withTwoPointConversionReturns(Double twoPointConversionReturns) {
         this.twoPointConversionReturns = twoPointConversionReturns;
         return this;
@@ -796,6 +894,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VictivSalary")
     public Long victivSalary;
+
     public FantasyDefenseGame withVictivSalary(Long victivSalary) {
         this.victivSalary = victivSalary;
         return this;
@@ -804,6 +903,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public FantasyDefenseGame withWeek(Long week) {
         this.week = week;
         return this;
@@ -812,6 +912,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WideReceiverFantasyPointsAllowed")
     public Double wideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseGame withWideReceiverFantasyPointsAllowed(Double wideReceiverFantasyPointsAllowed) {
         this.wideReceiverFantasyPointsAllowed = wideReceiverFantasyPointsAllowed;
         return this;
@@ -820,6 +921,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindSpeed")
     public Long windSpeed;
+
     public FantasyDefenseGame withWindSpeed(Long windSpeed) {
         this.windSpeed = windSpeed;
         return this;
@@ -828,6 +930,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooFantasyPointsAllowed")
     public Double yahooFantasyPointsAllowed;
+
     public FantasyDefenseGame withYahooFantasyPointsAllowed(Double yahooFantasyPointsAllowed) {
         this.yahooFantasyPointsAllowed = yahooFantasyPointsAllowed;
         return this;
@@ -836,6 +939,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooKickerFantasyPointsAllowed")
     public Double yahooKickerFantasyPointsAllowed;
+
     public FantasyDefenseGame withYahooKickerFantasyPointsAllowed(Double yahooKickerFantasyPointsAllowed) {
         this.yahooKickerFantasyPointsAllowed = yahooKickerFantasyPointsAllowed;
         return this;
@@ -844,6 +948,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooPosition")
     public String yahooPosition;
+
     public FantasyDefenseGame withYahooPosition(String yahooPosition) {
         this.yahooPosition = yahooPosition;
         return this;
@@ -852,6 +957,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooQuarterbackFantasyPointsAllowed")
     public Double yahooQuarterbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withYahooQuarterbackFantasyPointsAllowed(Double yahooQuarterbackFantasyPointsAllowed) {
         this.yahooQuarterbackFantasyPointsAllowed = yahooQuarterbackFantasyPointsAllowed;
         return this;
@@ -860,6 +966,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooRunningbackFantasyPointsAllowed")
     public Double yahooRunningbackFantasyPointsAllowed;
+
     public FantasyDefenseGame withYahooRunningbackFantasyPointsAllowed(Double yahooRunningbackFantasyPointsAllowed) {
         this.yahooRunningbackFantasyPointsAllowed = yahooRunningbackFantasyPointsAllowed;
         return this;
@@ -868,6 +975,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooSalary")
     public Long yahooSalary;
+
     public FantasyDefenseGame withYahooSalary(Long yahooSalary) {
         this.yahooSalary = yahooSalary;
         return this;
@@ -876,6 +984,7 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooTightEndFantasyPointsAllowed")
     public Double yahooTightEndFantasyPointsAllowed;
+
     public FantasyDefenseGame withYahooTightEndFantasyPointsAllowed(Double yahooTightEndFantasyPointsAllowed) {
         this.yahooTightEndFantasyPointsAllowed = yahooTightEndFantasyPointsAllowed;
         return this;
@@ -884,9 +993,11 @@ public class FantasyDefenseGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooWideReceiverFantasyPointsAllowed")
     public Double yahooWideReceiverFantasyPointsAllowed;
+
     public FantasyDefenseGame withYahooWideReceiverFantasyPointsAllowed(Double yahooWideReceiverFantasyPointsAllowed) {
         this.yahooWideReceiverFantasyPointsAllowed = yahooWideReceiverFantasyPointsAllowed;
         return this;
     }
     
+    public FantasyDefenseGame(){}
 }

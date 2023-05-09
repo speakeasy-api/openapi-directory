@@ -15,6 +15,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public Image withAltText(String altText) {
         this.altText = altText;
         return this;
@@ -25,6 +26,7 @@ public class Image {
      */
     @JsonProperty("height")
     public Double height;
+
     public Image withHeight(Double height) {
         this.height = height;
         return this;
@@ -35,6 +37,7 @@ public class Image {
      */
     @JsonProperty("url")
     public String url;
+
     public Image withUrl(String url) {
         this.url = url;
         return this;
@@ -45,9 +48,15 @@ public class Image {
      */
     @JsonProperty("width")
     public Double width;
+
     public Image withWidth(Double width) {
         this.width = width;
         return this;
     }
     
+    public Image(@JsonProperty("height") Double height, @JsonProperty("url") String url, @JsonProperty("width") Double width) {
+        this.height = height;
+        this.url = url;
+        this.width = width;
+  }
 }

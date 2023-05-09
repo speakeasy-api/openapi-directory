@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PersistentStorage {
     @JsonProperty("sizeInGiB")
     public Long sizeInGiB;
+
     public PersistentStorage withSizeInGiB(Long sizeInGiB) {
         this.sizeInGiB = sizeInGiB;
         return this;
     }
     
+    public PersistentStorage(@JsonProperty("sizeInGiB") Long sizeInGiB) {
+        this.sizeInGiB = sizeInGiB;
+  }
 }

@@ -15,9 +15,11 @@ public class GetAssociationForServiceQuotaTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceQuotaTemplateAssociationStatus")
     public ServiceQuotaTemplateAssociationStatusEnum serviceQuotaTemplateAssociationStatus;
+
     public GetAssociationForServiceQuotaTemplateResponse withServiceQuotaTemplateAssociationStatus(ServiceQuotaTemplateAssociationStatusEnum serviceQuotaTemplateAssociationStatus) {
         this.serviceQuotaTemplateAssociationStatus = serviceQuotaTemplateAssociationStatus;
         return this;
     }
     
+    public GetAssociationForServiceQuotaTemplateResponse(){}
 }

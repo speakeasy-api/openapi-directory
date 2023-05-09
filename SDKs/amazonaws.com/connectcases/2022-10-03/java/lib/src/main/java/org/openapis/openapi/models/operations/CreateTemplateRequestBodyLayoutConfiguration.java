@@ -15,9 +15,11 @@ public class CreateTemplateRequestBodyLayoutConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLayout")
     public String defaultLayout;
+
     public CreateTemplateRequestBodyLayoutConfiguration withDefaultLayout(String defaultLayout) {
         this.defaultLayout = defaultLayout;
         return this;
     }
     
+    public CreateTemplateRequestBodyLayoutConfiguration(){}
 }

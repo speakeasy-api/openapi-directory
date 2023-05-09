@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamResourceDiscoveriesResult {
     
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries[] ipamResourceDiscoveries;
+
     public DescribeIpamResourceDiscoveriesResult withIpamResourceDiscoveries(DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveries[] ipamResourceDiscoveries) {
         this.ipamResourceDiscoveries = ipamResourceDiscoveries;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpamResourceDiscoveriesResult {
     
     
     public String nextToken;
+
     public DescribeIpamResourceDiscoveriesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeIpamResourceDiscoveriesResult(){}
 }

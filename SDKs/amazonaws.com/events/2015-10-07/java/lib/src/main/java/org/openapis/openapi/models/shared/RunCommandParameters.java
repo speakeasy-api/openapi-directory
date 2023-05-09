@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RunCommandParameters {
     @JsonProperty("RunCommandTargets")
     public RunCommandTarget[] runCommandTargets;
+
     public RunCommandParameters withRunCommandTargets(RunCommandTarget[] runCommandTargets) {
         this.runCommandTargets = runCommandTargets;
         return this;
     }
     
+    public RunCommandParameters(@JsonProperty("RunCommandTargets") RunCommandTarget[] runCommandTargets) {
+        this.runCommandTargets = runCommandTargets;
+  }
 }

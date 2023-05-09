@@ -18,6 +18,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public GetProductInfo200ApplicationJSONProduct withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public GetProductInfo200ApplicationJSONProduct withCategory(String category) {
         this.category = category;
         return this;
@@ -40,6 +42,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetProductInfo200ApplicationJSONProduct withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public Long ean;
+
     public GetProductInfo200ApplicationJSONProduct withEan(Long ean) {
         this.ean = ean;
         return this;
@@ -62,6 +66,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public GetProductInfo200ApplicationJSONProduct withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -73,6 +78,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetProductInfo200ApplicationJSONProduct withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public GetProductInfo200ApplicationJSONProduct withRegion(String region) {
         this.region = region;
         return this;
@@ -95,6 +102,7 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specs")
     public String[][] specs;
+
     public GetProductInfo200ApplicationJSONProduct withSpecs(String[][] specs) {
         this.specs = specs;
         return this;
@@ -106,9 +114,11 @@ public class GetProductInfo200ApplicationJSONProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upc")
     public Long upc;
+
     public GetProductInfo200ApplicationJSONProduct withUpc(Long upc) {
         this.upc = upc;
         return this;
     }
     
+    public GetProductInfo200ApplicationJSONProduct(){}
 }

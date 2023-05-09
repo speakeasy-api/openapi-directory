@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveSellerCommissionsRequest {
@@ -12,6 +13,7 @@ public class RemoveSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RemoveSellerCommissionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RemoveSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RemoveSellerCommissionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class RemoveSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public RemoveSellerCommissionsRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class RemoveSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
     public String categoryId;
+
     public RemoveSellerCommissionsRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -52,6 +57,7 @@ public class RemoveSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public RemoveSellerCommissionsRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -62,9 +68,18 @@ public class RemoveSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public RemoveSellerCommissionsRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public RemoveSellerCommissionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("categoryId") String categoryId, @JsonProperty("environment") String environment, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.categoryId = categoryId;
+        this.environment = environment;
+        this.sellerId = sellerId;
+  }
 }

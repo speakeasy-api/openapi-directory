@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AutoScalingGroupsType - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AutoScalingGroupsType {
     
     public AutoScalingGroup[] autoScalingGroups;
+
     public AutoScalingGroupsType withAutoScalingGroups(AutoScalingGroup[] autoScalingGroups) {
         this.autoScalingGroups = autoScalingGroups;
         return this;
@@ -19,9 +20,13 @@ public class AutoScalingGroupsType {
     
     
     public String nextToken;
+
     public AutoScalingGroupsType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public AutoScalingGroupsType(@JsonProperty("AutoScalingGroups") AutoScalingGroup[] autoScalingGroups) {
+        this.autoScalingGroups = autoScalingGroups;
+  }
 }

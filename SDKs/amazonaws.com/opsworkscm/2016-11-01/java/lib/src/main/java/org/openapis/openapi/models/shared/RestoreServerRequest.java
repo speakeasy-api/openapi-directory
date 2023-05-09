@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RestoreServerRequest {
     @JsonProperty("BackupId")
     public String backupId;
+
     public RestoreServerRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
@@ -19,6 +20,7 @@ public class RestoreServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public RestoreServerRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -27,6 +29,7 @@ public class RestoreServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPair")
     public String keyPair;
+
     public RestoreServerRequest withKeyPair(String keyPair) {
         this.keyPair = keyPair;
         return this;
@@ -34,9 +37,14 @@ public class RestoreServerRequest {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public RestoreServerRequest withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public RestoreServerRequest(@JsonProperty("BackupId") String backupId, @JsonProperty("ServerName") String serverName) {
+        this.backupId = backupId;
+        this.serverName = serverName;
+  }
 }

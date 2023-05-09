@@ -63,4 +63,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RetrieveDistributionLinksRe
 lib/src/main/java/org/openapis/openapi/models/shared/RetrieveDistributionLinksResponseResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/RetrieveDistributionLinksResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubscribeToEventBody.java
+docs/sdk/README.md
 USAGE.md

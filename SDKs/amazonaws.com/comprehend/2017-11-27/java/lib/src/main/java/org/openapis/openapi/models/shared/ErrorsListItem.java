@@ -15,6 +15,7 @@ public class ErrorsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public PageBasedErrorCodeEnum errorCode;
+
     public ErrorsListItem withErrorCode(PageBasedErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class ErrorsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public ErrorsListItem withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class ErrorsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public ErrorsListItem withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public ErrorsListItem(){}
 }

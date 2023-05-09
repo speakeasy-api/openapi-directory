@@ -18,6 +18,7 @@ public class RuntimeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public ParameterMetadata[] parameters;
+
     public RuntimeMetadata withParameters(ParameterMetadata[] parameters) {
         this.parameters = parameters;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkInfo")
     public SDKInfo sdkInfo;
+
     public RuntimeMetadata withSDKInfo(SDKInfo sdkInfo) {
         this.sdkInfo = sdkInfo;
         return this;
     }
     
+    public RuntimeMetadata(){}
 }

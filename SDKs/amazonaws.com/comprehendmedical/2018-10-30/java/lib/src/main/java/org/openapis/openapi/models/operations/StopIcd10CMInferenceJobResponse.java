@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopIcd10CMInferenceJobResponse {
     
     public String contentType;
+
     public StopIcd10CMInferenceJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopIcd10CMInferenceJobResponse {
      */
     
     public Object internalServerException;
+
     public StopIcd10CMInferenceJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopIcd10CMInferenceJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopIcd10CMInferenceJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopIcd10CMInferenceJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopIcd10CMInferenceJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopIcd10CMInferenceJobResponse {
     
     
     public Integer statusCode;
+
     public StopIcd10CMInferenceJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopIcd10CMInferenceJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopIcd10CMInferenceJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopIcd10CMInferenceJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopIcd10CMInferenceJobResponse stopIcd10CMInferenceJobResponse;
+
     public StopIcd10CMInferenceJobResponse withStopIcd10CMInferenceJobResponse(org.openapis.openapi.models.shared.StopIcd10CMInferenceJobResponse stopIcd10CMInferenceJobResponse) {
         this.stopIcd10CMInferenceJobResponse = stopIcd10CMInferenceJobResponse;
         return this;
     }
     
+    public StopIcd10CMInferenceJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

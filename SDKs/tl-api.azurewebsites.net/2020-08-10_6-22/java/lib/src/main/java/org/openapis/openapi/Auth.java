@@ -53,11 +53,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthLoginResponse res = new org.openapis.openapi.models.operations.AuthLoginResponse() {{
+        org.openapis.openapi.models.operations.AuthLoginResponse res = new org.openapis.openapi.models.operations.AuthLoginResponse(contentType, httpRes.statusCode()) {{
             authLogin200ApplicationOctetStreamBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

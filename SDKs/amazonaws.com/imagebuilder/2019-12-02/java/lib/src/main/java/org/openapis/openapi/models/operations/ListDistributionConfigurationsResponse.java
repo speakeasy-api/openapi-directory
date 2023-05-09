@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDistributionConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListDistributionConfigurationsResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public Object clientException;
+
     public ListDistributionConfigurationsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListDistributionConfigurationsResponse {
     
     
     public String contentType;
+
     public ListDistributionConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public Object forbiddenException;
+
     public ListDistributionConfigurationsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListDistributionConfigurationsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDistributionConfigurationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDistributionConfigurationsResponse listDistributionConfigurationsResponse;
+
     public ListDistributionConfigurationsResponse withListDistributionConfigurationsResponse(org.openapis.openapi.models.shared.ListDistributionConfigurationsResponse listDistributionConfigurationsResponse) {
         this.listDistributionConfigurationsResponse = listDistributionConfigurationsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public Object serviceException;
+
     public ListDistributionConfigurationsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListDistributionConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListDistributionConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListDistributionConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDistributionConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListDistributionConfigurationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDistributionConfigurationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListDistributionConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

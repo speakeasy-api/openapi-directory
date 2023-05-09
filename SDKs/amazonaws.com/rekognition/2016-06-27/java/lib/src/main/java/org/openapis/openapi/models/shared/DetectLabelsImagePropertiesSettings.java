@@ -15,9 +15,11 @@ public class DetectLabelsImagePropertiesSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxDominantColors")
     public Long maxDominantColors;
+
     public DetectLabelsImagePropertiesSettings withMaxDominantColors(Long maxDominantColors) {
         this.maxDominantColors = maxDominantColors;
         return this;
     }
     
+    public DetectLabelsImagePropertiesSettings(){}
 }

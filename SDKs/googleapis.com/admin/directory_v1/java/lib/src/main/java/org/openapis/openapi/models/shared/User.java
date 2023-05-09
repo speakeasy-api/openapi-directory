@@ -14,7 +14,7 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * User - The Directory API allows you to create and manage your account's users, user aliases, and user Gmail chat profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
+ * User - The Directory API allows you to create and manage your account's users, user aliases, and user Google profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
  */
 public class User {
     /**
@@ -23,6 +23,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public Object addresses;
+
     public User withAddresses(Object addresses) {
         this.addresses = addresses;
         return this;
@@ -34,6 +35,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agreedToTerms")
     public Boolean agreedToTerms;
+
     public User withAgreedToTerms(Boolean agreedToTerms) {
         this.agreedToTerms = agreedToTerms;
         return this;
@@ -45,6 +47,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public String[] aliases;
+
     public User withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -56,6 +59,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public User withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -67,6 +71,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changePasswordAtNextLogin")
     public Boolean changePasswordAtNextLogin;
+
     public User withChangePasswordAtNextLogin(Boolean changePasswordAtNextLogin) {
         this.changePasswordAtNextLogin = changePasswordAtNextLogin;
         return this;
@@ -80,6 +85,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public User withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -91,6 +97,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customSchemas")
     public java.util.Map<String, java.util.Map<String, Object>> customSchemas;
+
     public User withCustomSchemas(java.util.Map<String, java.util.Map<String, Object>> customSchemas) {
         this.customSchemas = customSchemas;
         return this;
@@ -102,6 +109,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public User withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -112,6 +120,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deletionTime")
     public OffsetDateTime deletionTime;
+
     public User withDeletionTime(OffsetDateTime deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -123,6 +132,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public Object emails;
+
     public User withEmails(Object emails) {
         this.emails = emails;
         return this;
@@ -134,6 +144,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public User withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -145,6 +156,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIds")
     public Object externalIds;
+
     public User withExternalIds(Object externalIds) {
         this.externalIds = externalIds;
         return this;
@@ -156,6 +168,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public Object gender;
+
     public User withGender(Object gender) {
         this.gender = gender;
         return this;
@@ -167,6 +180,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashFunction")
     public String hashFunction;
+
     public User withHashFunction(String hashFunction) {
         this.hashFunction = hashFunction;
         return this;
@@ -178,6 +192,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -189,6 +204,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ims")
     public Object ims;
+
     public User withIms(Object ims) {
         this.ims = ims;
         return this;
@@ -200,6 +216,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInGlobalAddressList")
     public Boolean includeInGlobalAddressList;
+
     public User withIncludeInGlobalAddressList(Boolean includeInGlobalAddressList) {
         this.includeInGlobalAddressList = includeInGlobalAddressList;
         return this;
@@ -211,6 +228,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipWhitelisted")
     public Boolean ipWhitelisted;
+
     public User withIpWhitelisted(Boolean ipWhitelisted) {
         this.ipWhitelisted = ipWhitelisted;
         return this;
@@ -222,6 +240,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAdmin")
     public Boolean isAdmin;
+
     public User withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -233,6 +252,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDelegatedAdmin")
     public Boolean isDelegatedAdmin;
+
     public User withIsDelegatedAdmin(Boolean isDelegatedAdmin) {
         this.isDelegatedAdmin = isDelegatedAdmin;
         return this;
@@ -244,6 +264,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEnforcedIn2Sv")
     public Boolean isEnforcedIn2Sv;
+
     public User withIsEnforcedIn2Sv(Boolean isEnforcedIn2Sv) {
         this.isEnforcedIn2Sv = isEnforcedIn2Sv;
         return this;
@@ -255,6 +276,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEnrolledIn2Sv")
     public Boolean isEnrolledIn2Sv;
+
     public User withIsEnrolledIn2Sv(Boolean isEnrolledIn2Sv) {
         this.isEnrolledIn2Sv = isEnrolledIn2Sv;
         return this;
@@ -266,6 +288,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMailboxSetup")
     public Boolean isMailboxSetup;
+
     public User withIsMailboxSetup(Boolean isMailboxSetup) {
         this.isMailboxSetup = isMailboxSetup;
         return this;
@@ -277,6 +300,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public Object keywords;
+
     public User withKeywords(Object keywords) {
         this.keywords = keywords;
         return this;
@@ -288,6 +312,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public User withKind(String kind) {
         this.kind = kind;
         return this;
@@ -299,6 +324,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public Object languages;
+
     public User withLanguages(Object languages) {
         this.languages = languages;
         return this;
@@ -312,6 +338,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastLoginTime")
     public OffsetDateTime lastLoginTime;
+
     public User withLastLoginTime(OffsetDateTime lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
         return this;
@@ -323,6 +350,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public Object locations;
+
     public User withLocations(Object locations) {
         this.locations = locations;
         return this;
@@ -331,6 +359,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public UserName name;
+
     public User withName(UserName name) {
         this.name = name;
         return this;
@@ -342,6 +371,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonEditableAliases")
     public String[] nonEditableAliases;
+
     public User withNonEditableAliases(String[] nonEditableAliases) {
         this.nonEditableAliases = nonEditableAliases;
         return this;
@@ -353,6 +383,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public Object notes;
+
     public User withNotes(Object notes) {
         this.notes = notes;
         return this;
@@ -364,6 +395,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitPath")
     public String orgUnitPath;
+
     public User withOrgUnitPath(String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
@@ -375,6 +407,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizations")
     public Object organizations;
+
     public User withOrganizations(Object organizations) {
         this.organizations = organizations;
         return this;
@@ -386,6 +419,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public User withPassword(String password) {
         this.password = password;
         return this;
@@ -397,6 +431,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phones")
     public Object phones;
+
     public User withPhones(Object phones) {
         this.phones = phones;
         return this;
@@ -408,6 +443,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posixAccounts")
     public Object posixAccounts;
+
     public User withPosixAccounts(Object posixAccounts) {
         this.posixAccounts = posixAccounts;
         return this;
@@ -419,6 +455,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public String primaryEmail;
+
     public User withPrimaryEmail(String primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
@@ -430,6 +467,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryEmail")
     public String recoveryEmail;
+
     public User withRecoveryEmail(String recoveryEmail) {
         this.recoveryEmail = recoveryEmail;
         return this;
@@ -441,6 +479,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryPhone")
     public String recoveryPhone;
+
     public User withRecoveryPhone(String recoveryPhone) {
         this.recoveryPhone = recoveryPhone;
         return this;
@@ -452,6 +491,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relations")
     public Object relations;
+
     public User withRelations(Object relations) {
         this.relations = relations;
         return this;
@@ -463,6 +503,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKeys")
     public Object sshPublicKeys;
+
     public User withSshPublicKeys(Object sshPublicKeys) {
         this.sshPublicKeys = sshPublicKeys;
         return this;
@@ -474,6 +515,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public User withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -485,6 +527,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionReason")
     public String suspensionReason;
+
     public User withSuspensionReason(String suspensionReason) {
         this.suspensionReason = suspensionReason;
         return this;
@@ -496,6 +539,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailPhotoEtag")
     public String thumbnailPhotoEtag;
+
     public User withThumbnailPhotoEtag(String thumbnailPhotoEtag) {
         this.thumbnailPhotoEtag = thumbnailPhotoEtag;
         return this;
@@ -507,6 +551,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailPhotoUrl")
     public String thumbnailPhotoUrl;
+
     public User withThumbnailPhotoUrl(String thumbnailPhotoUrl) {
         this.thumbnailPhotoUrl = thumbnailPhotoUrl;
         return this;
@@ -518,9 +563,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websites")
     public Object websites;
+
     public User withWebsites(Object websites) {
         this.websites = websites;
         return this;
     }
     
+    public User(){}
 }

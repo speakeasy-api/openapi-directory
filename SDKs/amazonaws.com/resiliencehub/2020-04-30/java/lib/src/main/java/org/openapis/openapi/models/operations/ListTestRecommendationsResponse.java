@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTestRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ListTestRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTestRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListTestRecommendationsResponse {
      */
     
     public Object conflictException;
+
     public ListTestRecommendationsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListTestRecommendationsResponse {
     
     
     public String contentType;
+
     public ListTestRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListTestRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ListTestRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListTestRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTestRecommendationsResponse listTestRecommendationsResponse;
+
     public ListTestRecommendationsResponse withListTestRecommendationsResponse(org.openapis.openapi.models.shared.ListTestRecommendationsResponse listTestRecommendationsResponse) {
         this.listTestRecommendationsResponse = listTestRecommendationsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListTestRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ListTestRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListTestRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTestRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListTestRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTestRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class ListTestRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ListTestRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListTestRecommendationsResponse {
      */
     
     public Object validationException;
+
     public ListTestRecommendationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTestRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

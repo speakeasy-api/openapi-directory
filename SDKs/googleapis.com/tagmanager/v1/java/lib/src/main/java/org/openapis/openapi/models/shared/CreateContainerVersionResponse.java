@@ -18,6 +18,7 @@ public class CreateContainerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compilerError")
     public Boolean compilerError;
+
     public CreateContainerVersionResponse withCompilerError(Boolean compilerError) {
         this.compilerError = compilerError;
         return this;
@@ -29,9 +30,11 @@ public class CreateContainerVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersion")
     public ContainerVersion containerVersion;
+
     public CreateContainerVersionResponse withContainerVersion(ContainerVersion containerVersion) {
         this.containerVersion = containerVersion;
         return this;
     }
     
+    public CreateContainerVersionResponse(){}
 }

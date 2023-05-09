@@ -18,9 +18,11 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public Control withEnvironment(String environment) {
         this.environment = environment;
         return this;
     }
     
+    public Control(){}
 }

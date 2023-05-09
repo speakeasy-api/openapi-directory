@@ -3,13 +3,12 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest;
 import org.openapis.openapi.models.operations.TravelimpactmodelFlightsComputeFlightEmissionsResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ComputeFlightEmissionsRequest;
-import org.openapis.openapi.models.shared.Flight;
 import org.openapis.openapi.models.shared.Date;
+import org.openapis.openapi.models.shared.Flight;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,7 +18,7 @@ public class Application {
                 .build();
 
             TravelimpactmodelFlightsComputeFlightEmissionsRequest req = new TravelimpactmodelFlightsComputeFlightEmissionsRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 computeFlightEmissionsRequest = new ComputeFlightEmissionsRequest() {{
                     flights = new org.openapis.openapi.models.shared.Flight[]{{
                         add(new Flight() {{
@@ -56,9 +55,9 @@ public class Application {
                             origin = "voluptatum";
                         }}),
                     }};
-                }};
+                }};;
                 accessToken = "iusto";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "nisi";
                 fields = "recusandae";
                 key = "temporibus";
@@ -67,15 +66,17 @@ public class Application {
                 quotaUser = "quis";
                 uploadType = "veritatis";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             TravelimpactmodelFlightsComputeFlightEmissionsResponse res = sdk.flights.travelimpactmodelFlightsComputeFlightEmissions(req);
 
-            if (res.computeFlightEmissionsResponse.isPresent()) {
+            if (res.computeFlightEmissionsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

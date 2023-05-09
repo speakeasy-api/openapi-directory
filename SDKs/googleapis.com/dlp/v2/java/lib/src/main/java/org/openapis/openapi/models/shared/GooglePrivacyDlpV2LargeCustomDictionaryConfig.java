@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2LargeCustomDictionaryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigQueryField")
     public GooglePrivacyDlpV2BigQueryField bigQueryField;
+
     public GooglePrivacyDlpV2LargeCustomDictionaryConfig withBigQueryField(GooglePrivacyDlpV2BigQueryField bigQueryField) {
         this.bigQueryField = bigQueryField;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2LargeCustomDictionaryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudStorageFileSet")
     public GooglePrivacyDlpV2CloudStorageFileSet cloudStorageFileSet;
+
     public GooglePrivacyDlpV2LargeCustomDictionaryConfig withCloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSet cloudStorageFileSet) {
         this.cloudStorageFileSet = cloudStorageFileSet;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2LargeCustomDictionaryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputPath")
     public GooglePrivacyDlpV2CloudStoragePath outputPath;
+
     public GooglePrivacyDlpV2LargeCustomDictionaryConfig withOutputPath(GooglePrivacyDlpV2CloudStoragePath outputPath) {
         this.outputPath = outputPath;
         return this;
     }
     
+    public GooglePrivacyDlpV2LargeCustomDictionaryConfig(){}
 }

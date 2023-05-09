@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomotivePartsCompatibilityPoliciesRequest {
@@ -12,6 +13,7 @@ public class GetAutomotivePartsCompatibilityPoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetAutomotivePartsCompatibilityPoliciesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -22,9 +24,13 @@ public class GetAutomotivePartsCompatibilityPoliciesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
     public String marketplaceId;
+
     public GetAutomotivePartsCompatibilityPoliciesRequest withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
     }
     
+    public GetAutomotivePartsCompatibilityPoliciesRequest(@JsonProperty("marketplace_id") String marketplaceId) {
+        this.marketplaceId = marketplaceId;
+  }
 }

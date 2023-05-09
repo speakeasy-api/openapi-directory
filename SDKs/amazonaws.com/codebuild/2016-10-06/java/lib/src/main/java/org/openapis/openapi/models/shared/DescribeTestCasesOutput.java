@@ -15,6 +15,7 @@ public class DescribeTestCasesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeTestCasesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeTestCasesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCases")
     public TestCase[] testCases;
+
     public DescribeTestCasesOutput withTestCases(TestCase[] testCases) {
         this.testCases = testCases;
         return this;
     }
     
+    public DescribeTestCasesOutput(){}
 }

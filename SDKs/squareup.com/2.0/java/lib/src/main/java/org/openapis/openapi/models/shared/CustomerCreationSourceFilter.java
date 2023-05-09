@@ -24,6 +24,7 @@ public class CustomerCreationSourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public String rule;
+
     public CustomerCreationSourceFilter withRule(String rule) {
         this.rule = rule;
         return this;
@@ -35,9 +36,11 @@ public class CustomerCreationSourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public CustomerCreationSourceFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CustomerCreationSourceFilter(){}
 }

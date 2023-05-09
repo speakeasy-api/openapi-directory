@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest;
 import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaIdeaActivityTypeEnum;
 import org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaIdeaActivity;
+import org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaIdeaActivityTypeEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -30,44 +29,44 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest req = new IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest() {{
-                dollarXgafv = "2";
+            IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest req = new IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleSearchIdeahubV1betaIdeaActivity = new GoogleSearchIdeahubV1betaIdeaActivity() {{
                     ideas = new String[]{{
-                        add("distinctio"),
                         add("quibusdam"),
                         add("unde"),
+                        add("nulla"),
                     }};
-                    name = "nulla";
+                    name = "Dallas Kassulke";
                     topics = new String[]{{
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    type = "POST_DELETED";
-                    uri = "http://innocent-effect.org";
-                }};
-                accessToken = "ipsa";
-                alt = "proto";
-                callback = "tempora";
-                fields = "suscipit";
-                key = "molestiae";
-                oauthToken = "minus";
-                parent = "placeat";
+                    type = GoogleSearchIdeahubV1betaIdeaActivityTypeEnum.POST_UNPUBLISHED;
+                    uri = "http://whirlwind-diver.info";
+                }};;
+                accessToken = "molestiae";
+                alt = AltEnum.PROTO;
+                callback = "placeat";
+                fields = "voluptatum";
+                key = "iusto";
+                oauthToken = "excepturi";
                 prettyPrint = false;
-                quotaUser = "voluptatum";
-                uploadType = "iusto";
-                uploadProtocol = "excepturi";
-            }}            
+                quotaUser = "nisi";
+                uploadType = "recusandae";
+                uploadProtocol = "temporibus";
+            }};            
 
             IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse res = sdk.platforms.ideahubPlatformsPropertiesIdeaActivitiesCreate(req);
 
-            if (res.googleSearchIdeahubV1betaIdeaActivity.isPresent()) {
+            if (res.googleSearchIdeahubV1betaIdeaActivity != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -75,12 +74,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### platforms
+### [platforms](docs/platforms/README.md)
 
-* `ideahubPlatformsPropertiesIdeaActivitiesCreate` - Creates an idea activity entry.
-* `ideahubPlatformsPropertiesIdeasList` - List ideas for a given Creator and filter and sort options.
-* `ideahubPlatformsPropertiesLocalesList` - Returns which locales ideas are available in for a given Creator.
-* `ideahubPlatformsPropertiesTopicStatesPatch` - Update a topic state resource.
+* [ideahubPlatformsPropertiesIdeaActivitiesCreate](docs/platforms/README.md#ideahubplatformspropertiesideaactivitiescreate) - Creates an idea activity entry.
+* [ideahubPlatformsPropertiesIdeasList](docs/platforms/README.md#ideahubplatformspropertiesideaslist) - List ideas for a given Creator and filter and sort options.
+* [ideahubPlatformsPropertiesLocalesList](docs/platforms/README.md#ideahubplatformspropertieslocaleslist) - Returns which locales ideas are available in for a given Creator.
+* [ideahubPlatformsPropertiesTopicStatesPatch](docs/platforms/README.md#ideahubplatformspropertiestopicstatespatch) - Update a topic state resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

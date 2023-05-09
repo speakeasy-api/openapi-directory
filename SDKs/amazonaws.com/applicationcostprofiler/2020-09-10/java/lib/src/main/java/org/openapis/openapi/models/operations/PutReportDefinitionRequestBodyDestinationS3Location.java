@@ -15,6 +15,7 @@ public class PutReportDefinitionRequestBodyDestinationS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public PutReportDefinitionRequestBodyDestinationS3Location withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,9 +24,11 @@ public class PutReportDefinitionRequestBodyDestinationS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public PutReportDefinitionRequestBodyDestinationS3Location withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public PutReportDefinitionRequestBodyDestinationS3Location(){}
 }

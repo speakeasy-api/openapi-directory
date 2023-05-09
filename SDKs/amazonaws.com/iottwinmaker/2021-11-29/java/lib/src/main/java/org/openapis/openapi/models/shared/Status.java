@@ -15,6 +15,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ErrorDetails error;
+
     public Status withError(ErrorDetails error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StateEnum state;
+
     public Status withState(StateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Status(){}
 }

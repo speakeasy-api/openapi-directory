@@ -61,11 +61,9 @@ public class BillingAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingBillingAssignmentsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingBillingAssignmentsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingBillingAssignmentsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingBillingAssignmentsInsertResponse(contentType, httpRes.statusCode()) {{
             billingAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class BillingAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingBillingAssignmentsListResponse res = new org.openapis.openapi.models.operations.DfareportingBillingAssignmentsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingBillingAssignmentsListResponse res = new org.openapis.openapi.models.operations.DfareportingBillingAssignmentsListResponse(contentType, httpRes.statusCode()) {{
             billingAssignmentsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

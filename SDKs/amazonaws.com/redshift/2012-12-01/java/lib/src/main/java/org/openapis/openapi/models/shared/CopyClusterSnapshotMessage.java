@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CopyClusterSnapshotMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopyClusterSnapshotMessage {
     
     public Long manualSnapshotRetentionPeriod;
+
     public CopyClusterSnapshotMessage withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -19,6 +20,7 @@ public class CopyClusterSnapshotMessage {
     
     
     public String sourceSnapshotClusterIdentifier;
+
     public CopyClusterSnapshotMessage withSourceSnapshotClusterIdentifier(String sourceSnapshotClusterIdentifier) {
         this.sourceSnapshotClusterIdentifier = sourceSnapshotClusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class CopyClusterSnapshotMessage {
     
     
     public String sourceSnapshotIdentifier;
+
     public CopyClusterSnapshotMessage withSourceSnapshotIdentifier(String sourceSnapshotIdentifier) {
         this.sourceSnapshotIdentifier = sourceSnapshotIdentifier;
         return this;
@@ -33,9 +36,14 @@ public class CopyClusterSnapshotMessage {
     
     
     public String targetSnapshotIdentifier;
+
     public CopyClusterSnapshotMessage withTargetSnapshotIdentifier(String targetSnapshotIdentifier) {
         this.targetSnapshotIdentifier = targetSnapshotIdentifier;
         return this;
     }
     
+    public CopyClusterSnapshotMessage(@JsonProperty("SourceSnapshotIdentifier") String sourceSnapshotIdentifier, @JsonProperty("TargetSnapshotIdentifier") String targetSnapshotIdentifier) {
+        this.sourceSnapshotIdentifier = sourceSnapshotIdentifier;
+        this.targetSnapshotIdentifier = targetSnapshotIdentifier;
+  }
 }

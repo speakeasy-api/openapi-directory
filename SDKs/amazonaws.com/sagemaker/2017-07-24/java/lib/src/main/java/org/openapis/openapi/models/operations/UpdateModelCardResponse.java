@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateModelCardResponse {
@@ -12,6 +13,7 @@ public class UpdateModelCardResponse {
      */
     
     public Object conflictException;
+
     public UpdateModelCardResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateModelCardResponse {
     
     
     public String contentType;
+
     public UpdateModelCardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateModelCardResponse {
     
     
     public Integer statusCode;
+
     public UpdateModelCardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateModelCardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateModelCardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateModelCardResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public UpdateModelCardResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -53,6 +59,7 @@ public class UpdateModelCardResponse {
      */
     
     public Object resourceNotFound;
+
     public UpdateModelCardResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -63,9 +70,14 @@ public class UpdateModelCardResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateModelCardResponse updateModelCardResponse;
+
     public UpdateModelCardResponse withUpdateModelCardResponse(org.openapis.openapi.models.shared.UpdateModelCardResponse updateModelCardResponse) {
         this.updateModelCardResponse = updateModelCardResponse;
         return this;
     }
     
+    public UpdateModelCardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

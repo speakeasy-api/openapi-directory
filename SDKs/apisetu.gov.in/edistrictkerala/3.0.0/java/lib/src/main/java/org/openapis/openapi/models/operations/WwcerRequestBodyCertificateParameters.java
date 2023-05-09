@@ -12,6 +12,7 @@ public class WwcerRequestBodyCertificateParameters {
      */
     @JsonProperty("aplno")
     public String aplno;
+
     public WwcerRequestBodyCertificateParameters withAplno(String aplno) {
         this.aplno = aplno;
         return this;
@@ -22,6 +23,7 @@ public class WwcerRequestBodyCertificateParameters {
      */
     @JsonProperty("certno")
     public String certno;
+
     public WwcerRequestBodyCertificateParameters withCertno(String certno) {
         this.certno = certno;
         return this;
@@ -32,9 +34,15 @@ public class WwcerRequestBodyCertificateParameters {
      */
     @JsonProperty("sccd")
     public String sccd;
+
     public WwcerRequestBodyCertificateParameters withSccd(String sccd) {
         this.sccd = sccd;
         return this;
     }
     
+    public WwcerRequestBodyCertificateParameters(@JsonProperty("aplno") String aplno, @JsonProperty("certno") String certno, @JsonProperty("sccd") String sccd) {
+        this.aplno = aplno;
+        this.certno = certno;
+        this.sccd = sccd;
+  }
 }

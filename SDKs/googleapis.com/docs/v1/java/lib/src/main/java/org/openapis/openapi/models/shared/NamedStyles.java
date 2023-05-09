@@ -18,9 +18,11 @@ public class NamedStyles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("styles")
     public NamedStyle[] styles;
+
     public NamedStyles withStyles(NamedStyle[] styles) {
         this.styles = styles;
         return this;
     }
     
+    public NamedStyles(){}
 }

@@ -15,6 +15,7 @@ public class AwsWafv2RulesActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Allow")
     public AwsWafv2ActionAllowDetails allow;
+
     public AwsWafv2RulesActionDetails withAllow(AwsWafv2ActionAllowDetails allow) {
         this.allow = allow;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafv2RulesActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Block")
     public AwsWafv2ActionBlockDetails block;
+
     public AwsWafv2RulesActionDetails withBlock(AwsWafv2ActionBlockDetails block) {
         this.block = block;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafv2RulesActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Captcha")
     public AwsWafv2RulesActionCaptchaDetails captcha;
+
     public AwsWafv2RulesActionDetails withCaptcha(AwsWafv2RulesActionCaptchaDetails captcha) {
         this.captcha = captcha;
         return this;
@@ -39,9 +42,11 @@ public class AwsWafv2RulesActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public AwsWafv2RulesActionCountDetails count;
+
     public AwsWafv2RulesActionDetails withCount(AwsWafv2RulesActionCountDetails count) {
         this.count = count;
         return this;
     }
     
+    public AwsWafv2RulesActionDetails(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ArchiveRetainRule {
     @JsonProperty("RetentionArchiveTier")
     public RetentionArchiveTier retentionArchiveTier;
+
     public ArchiveRetainRule withRetentionArchiveTier(RetentionArchiveTier retentionArchiveTier) {
         this.retentionArchiveTier = retentionArchiveTier;
         return this;
     }
     
+    public ArchiveRetainRule(@JsonProperty("RetentionArchiveTier") RetentionArchiveTier retentionArchiveTier) {
+        this.retentionArchiveTier = retentionArchiveTier;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterVersionList {
     
     public String clusterParameterGroupFamily;
+
     public ClusterVersionList withClusterParameterGroupFamily(String clusterParameterGroupFamily) {
         this.clusterParameterGroupFamily = clusterParameterGroupFamily;
         return this;
@@ -19,6 +20,7 @@ public class ClusterVersionList {
     
     
     public String clusterVersion;
+
     public ClusterVersionList withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -26,9 +28,11 @@ public class ClusterVersionList {
     
     
     public String description;
+
     public ClusterVersionList withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public ClusterVersionList(){}
 }

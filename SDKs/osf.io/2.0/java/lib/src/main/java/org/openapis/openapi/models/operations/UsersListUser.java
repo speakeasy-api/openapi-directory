@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UsersListUser {
     /**
@@ -12,6 +12,7 @@ public class UsersListUser {
      */
     
     public UsersListUserAttributes attributes;
+
     public UsersListUser withAttributes(UsersListUserAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class UsersListUser {
      */
     
     public String id;
+
     public UsersListUser withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class UsersListUser {
      */
     
     public UsersListUserLinks links;
+
     public UsersListUser withLinks(UsersListUserLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class UsersListUser {
      */
     
     public UsersListUserRelationships relationships;
+
     public UsersListUser withRelationships(UsersListUserRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,17 @@ public class UsersListUser {
      */
     
     public String type;
+
     public UsersListUser withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UsersListUser(@JsonProperty("attributes") UsersListUserAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") UsersListUserLinks links, @JsonProperty("relationships") UsersListUserRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

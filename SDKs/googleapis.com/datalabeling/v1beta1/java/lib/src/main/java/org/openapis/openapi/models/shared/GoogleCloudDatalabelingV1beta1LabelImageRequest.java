@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1LabelImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicConfig")
     public GoogleCloudDatalabelingV1beta1HumanAnnotationConfig basicConfig;
+
     public GoogleCloudDatalabelingV1beta1LabelImageRequest withBasicConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfig basicConfig) {
         this.basicConfig = basicConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1LabelImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPolyConfig")
     public GoogleCloudDatalabelingV1beta1BoundingPolyConfig boundingPolyConfig;
+
     public GoogleCloudDatalabelingV1beta1LabelImageRequest withBoundingPolyConfig(GoogleCloudDatalabelingV1beta1BoundingPolyConfig boundingPolyConfig) {
         this.boundingPolyConfig = boundingPolyConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatalabelingV1beta1LabelImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature")
     public GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum feature;
+
     public GoogleCloudDatalabelingV1beta1LabelImageRequest withFeature(GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum feature) {
         this.feature = feature;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatalabelingV1beta1LabelImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageClassificationConfig")
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfig imageClassificationConfig;
+
     public GoogleCloudDatalabelingV1beta1LabelImageRequest withImageClassificationConfig(GoogleCloudDatalabelingV1beta1ImageClassificationConfig imageClassificationConfig) {
         this.imageClassificationConfig = imageClassificationConfig;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatalabelingV1beta1LabelImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polylineConfig")
     public GoogleCloudDatalabelingV1beta1PolylineConfig polylineConfig;
+
     public GoogleCloudDatalabelingV1beta1LabelImageRequest withPolylineConfig(GoogleCloudDatalabelingV1beta1PolylineConfig polylineConfig) {
         this.polylineConfig = polylineConfig;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDatalabelingV1beta1LabelImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentationConfig")
     public GoogleCloudDatalabelingV1beta1SegmentationConfig segmentationConfig;
+
     public GoogleCloudDatalabelingV1beta1LabelImageRequest withSegmentationConfig(GoogleCloudDatalabelingV1beta1SegmentationConfig segmentationConfig) {
         this.segmentationConfig = segmentationConfig;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1LabelImageRequest(){}
 }

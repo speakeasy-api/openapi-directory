@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMinuteUsageResponse {
     
     public String contentType;
+
     public GetMinuteUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMinuteUsageResponse {
      */
     
     public Object dependencyException;
+
     public GetMinuteUsageResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class GetMinuteUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMinuteUsageResponse getMinuteUsageResponse;
+
     public GetMinuteUsageResponse withGetMinuteUsageResponse(org.openapis.openapi.models.shared.GetMinuteUsageResponse getMinuteUsageResponse) {
         this.getMinuteUsageResponse = getMinuteUsageResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMinuteUsageResponse {
      */
     
     public Object invalidParameterException;
+
     public GetMinuteUsageResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetMinuteUsageResponse {
     
     
     public Integer statusCode;
+
     public GetMinuteUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetMinuteUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMinuteUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetMinuteUsageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMinuteUsageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetMinuteUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

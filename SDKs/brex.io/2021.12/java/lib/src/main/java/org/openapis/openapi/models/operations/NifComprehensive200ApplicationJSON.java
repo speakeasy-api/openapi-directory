@@ -15,6 +15,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity")
     public java.util.Map<String, Object> activity;
+
     public NifComprehensive200ApplicationJSON withActivity(java.util.Map<String, Object> activity) {
         this.activity = activity;
         return this;
@@ -23,6 +24,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public NifComprehensive200ApplicationJSON withAddress(String address) {
         this.address = address;
         return this;
@@ -31,6 +33,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capital")
     public Double capital;
+
     public NifComprehensive200ApplicationJSON withCapital(Double capital) {
         this.capital = capital;
         return this;
@@ -39,6 +42,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public NifComprehensive200ApplicationJSON withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -46,6 +50,7 @@ public class NifComprehensive200ApplicationJSON {
     
     @JsonProperty("confidenceScore")
     public Double confidenceScore;
+
     public NifComprehensive200ApplicationJSON withConfidenceScore(Double confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -54,6 +59,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public NifComprehensive200ApplicationJSON withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -62,6 +68,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public NifComprehensive200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -70,6 +77,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public NifComprehensive200ApplicationJSON withFax(String fax) {
         this.fax = fax;
         return this;
@@ -78,6 +86,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geo")
     public String geo;
+
     public NifComprehensive200ApplicationJSON withGeo(String geo) {
         this.geo = geo;
         return this;
@@ -86,6 +95,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalType")
     public String legalType;
+
     public NifComprehensive200ApplicationJSON withLegalType(String legalType) {
         this.legalType = legalType;
         return this;
@@ -93,6 +103,7 @@ public class NifComprehensive200ApplicationJSON {
     
     @JsonProperty("nifNumber")
     public Double nifNumber;
+
     public NifComprehensive200ApplicationJSON withNifNumber(Double nifNumber) {
         this.nifNumber = nifNumber;
         return this;
@@ -101,6 +112,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public NifComprehensive200ApplicationJSON withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -109,6 +121,7 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public java.util.Map<String, Object> status;
+
     public NifComprehensive200ApplicationJSON withStatus(java.util.Map<String, Object> status) {
         this.status = status;
         return this;
@@ -116,6 +129,7 @@ public class NifComprehensive200ApplicationJSON {
     
     @JsonProperty("validationStatus")
     public Boolean validationStatus;
+
     public NifComprehensive200ApplicationJSON withValidationStatus(Boolean validationStatus) {
         this.validationStatus = validationStatus;
         return this;
@@ -124,9 +138,15 @@ public class NifComprehensive200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public NifComprehensive200ApplicationJSON withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public NifComprehensive200ApplicationJSON(@JsonProperty("confidenceScore") Double confidenceScore, @JsonProperty("nifNumber") Double nifNumber, @JsonProperty("validationStatus") Boolean validationStatus) {
+        this.confidenceScore = confidenceScore;
+        this.nifNumber = nifNumber;
+        this.validationStatus = validationStatus;
+  }
 }

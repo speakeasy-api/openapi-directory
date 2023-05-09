@@ -4,6 +4,7 @@
 
 package org.openapis.openapi;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
@@ -61,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateResponse(contentType, httpRes.statusCode()) {{
             ekmConnection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listEkmConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,6 +116,50 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListEkmConnectionsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListEkmConnectionsResponse.class);
                 res.listEkmConnectionsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Verifies that Cloud KMS can successfully connect to the external key manager specified by an EkmConnection. If there is an error connecting to the EKM, this method returns a FAILED_PRECONDITION status containing structured information as described at https://cloud.google.com/kms/docs/reference/ekm_errors.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityResponse cloudkmsProjectsLocationsEkmConnectionsVerifyConnectivity(org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest request, org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivitySecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest.class, baseUrl, "/v1/{name}:verifyConnectivity", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityResponse(contentType, httpRes.statusCode()) {{
+            verifyConnectivityResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.verifyConnectivityResponse = out;
             }
         }
 
@@ -155,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsGenerateRandomBytesResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsGenerateRandomBytesResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsGenerateRandomBytesResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsGenerateRandomBytesResponse(contentType, httpRes.statusCode()) {{
             generateRandomBytesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCreateResponse(contentType, httpRes.statusCode()) {{
             keyRing = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCreateResponse(contentType, httpRes.statusCode()) {{
             cryptoKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricDecryptResponse(contentType, httpRes.statusCode()) {{
             asymmetricDecryptResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsAsymmetricSignResponse(contentType, httpRes.statusCode()) {{
             asymmetricSignResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             cryptoKeyVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyResponse(contentType, httpRes.statusCode()) {{
             cryptoKeyVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsGetPublicKeyResponse(contentType, httpRes.statusCode()) {{
             publicKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -535,11 +560,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportResponse(contentType, httpRes.statusCode()) {{
             cryptoKeyVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -581,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListResponse(contentType, httpRes.statusCode()) {{
             listCryptoKeyVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -629,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacSignResponse(contentType, httpRes.statusCode()) {{
             macSignResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -677,11 +696,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsMacVerifyResponse(contentType, httpRes.statusCode()) {{
             macVerifyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -725,11 +742,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsPatchResponse(contentType, httpRes.statusCode()) {{
             cryptoKeyVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -773,11 +788,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsRestoreResponse(contentType, httpRes.statusCode()) {{
             cryptoKeyVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -821,11 +834,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysDecryptResponse(contentType, httpRes.statusCode()) {{
             decryptResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -869,11 +880,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptResponse(contentType, httpRes.statusCode()) {{
             encryptResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -915,11 +924,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysListResponse(contentType, httpRes.statusCode()) {{
             listCryptoKeysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -963,11 +970,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsCryptoKeysUpdatePrimaryVersionResponse(contentType, httpRes.statusCode()) {{
             cryptoKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1011,11 +1016,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsCreateResponse(contentType, httpRes.statusCode()) {{
             importJob = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1057,11 +1060,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetResponse(contentType, httpRes.statusCode()) {{
             importJob = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1103,11 +1104,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1149,11 +1148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsListResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsListResponse(contentType, httpRes.statusCode()) {{
             listImportJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1197,11 +1194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1245,11 +1240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsImportJobsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1291,11 +1284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsListResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsKeyRingsListResponse(contentType, httpRes.statusCode()) {{
             listKeyRingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1337,11 +1328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudkmsProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CloudkmsProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

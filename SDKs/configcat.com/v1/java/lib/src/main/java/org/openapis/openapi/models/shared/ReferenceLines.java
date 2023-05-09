@@ -14,6 +14,7 @@ public class ReferenceLines {
      */
     @JsonProperty("file")
     public String file;
+
     public ReferenceLines withFile(String file) {
         this.file = file;
         return this;
@@ -25,6 +26,7 @@ public class ReferenceLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileUrl")
     public String fileUrl;
+
     public ReferenceLines withFileUrl(String fileUrl) {
         this.fileUrl = fileUrl;
         return this;
@@ -36,6 +38,7 @@ public class ReferenceLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLines")
     public ReferenceLine[] postLines;
+
     public ReferenceLines withPostLines(ReferenceLine[] postLines) {
         this.postLines = postLines;
         return this;
@@ -47,6 +50,7 @@ public class ReferenceLines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preLines")
     public ReferenceLine[] preLines;
+
     public ReferenceLines withPreLines(ReferenceLine[] preLines) {
         this.preLines = preLines;
         return this;
@@ -54,9 +58,14 @@ public class ReferenceLines {
     
     @JsonProperty("referenceLine")
     public ReferenceLine referenceLine;
+
     public ReferenceLines withReferenceLine(ReferenceLine referenceLine) {
         this.referenceLine = referenceLine;
         return this;
     }
     
+    public ReferenceLines(@JsonProperty("file") String file, @JsonProperty("referenceLine") ReferenceLine referenceLine) {
+        this.file = file;
+        this.referenceLine = referenceLine;
+  }
 }

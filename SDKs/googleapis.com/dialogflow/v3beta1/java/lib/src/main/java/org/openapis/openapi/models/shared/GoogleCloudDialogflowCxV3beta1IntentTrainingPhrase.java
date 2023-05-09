@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parts")
     public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart[] parts;
+
     public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase withParts(GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart[] parts) {
         this.parts = parts;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeatCount")
     public Integer repeatCount;
+
     public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase withRepeatCount(Integer repeatCount) {
         this.repeatCount = repeatCount;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase(){}
 }

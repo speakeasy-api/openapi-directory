@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EnvironmentSummary {
     @JsonProperty("arn")
     public String arn;
+
     public EnvironmentSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class EnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentRoleArn")
     public String componentRoleArn;
+
     public EnvironmentSummary withComponentRoleArn(String componentRoleArn) {
         this.componentRoleArn = componentRoleArn;
         return this;
@@ -36,6 +38,7 @@ public class EnvironmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public EnvironmentSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +46,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public EnvironmentSummary withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -51,6 +55,7 @@ public class EnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public EnvironmentSummary withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -59,6 +64,7 @@ public class EnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +73,7 @@ public class EnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccountConnectionId")
     public String environmentAccountConnectionId;
+
     public EnvironmentSummary withEnvironmentAccountConnectionId(String environmentAccountConnectionId) {
         this.environmentAccountConnectionId = environmentAccountConnectionId;
         return this;
@@ -75,6 +82,7 @@ public class EnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccountId")
     public String environmentAccountId;
+
     public EnvironmentSummary withEnvironmentAccountId(String environmentAccountId) {
         this.environmentAccountId = environmentAccountId;
         return this;
@@ -84,6 +92,7 @@ public class EnvironmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentAttemptedAt")
     public OffsetDateTime lastDeploymentAttemptedAt;
+
     public EnvironmentSummary withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
         this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
         return this;
@@ -93,6 +102,7 @@ public class EnvironmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentSucceededAt")
     public OffsetDateTime lastDeploymentSucceededAt;
+
     public EnvironmentSummary withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
         this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
         return this;
@@ -100,6 +110,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("name")
     public String name;
+
     public EnvironmentSummary withName(String name) {
         this.name = name;
         return this;
@@ -108,6 +119,7 @@ public class EnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protonServiceRoleArn")
     public String protonServiceRoleArn;
+
     public EnvironmentSummary withProtonServiceRoleArn(String protonServiceRoleArn) {
         this.protonServiceRoleArn = protonServiceRoleArn;
         return this;
@@ -116,6 +128,7 @@ public class EnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning")
     public ProvisioningEnum provisioning;
+
     public EnvironmentSummary withProvisioning(ProvisioningEnum provisioning) {
         this.provisioning = provisioning;
         return this;
@@ -123,6 +136,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public EnvironmentSummary withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -130,6 +144,7 @@ public class EnvironmentSummary {
     
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public EnvironmentSummary withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
@@ -137,9 +152,21 @@ public class EnvironmentSummary {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public EnvironmentSummary withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public EnvironmentSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deploymentStatus") DeploymentStatusEnum deploymentStatus, @JsonProperty("lastDeploymentAttemptedAt") OffsetDateTime lastDeploymentAttemptedAt, @JsonProperty("lastDeploymentSucceededAt") OffsetDateTime lastDeploymentSucceededAt, @JsonProperty("name") String name, @JsonProperty("templateMajorVersion") String templateMajorVersion, @JsonProperty("templateMinorVersion") String templateMinorVersion, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.deploymentStatus = deploymentStatus;
+        this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
+        this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
+        this.name = name;
+        this.templateMajorVersion = templateMajorVersion;
+        this.templateMinorVersion = templateMinorVersion;
+        this.templateName = templateName;
+  }
 }

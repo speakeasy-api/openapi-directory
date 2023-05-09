@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStudentsForSchoolRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
     public String endingBefore;
+
     public GetStudentsForSchoolRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -16,6 +18,7 @@ public class GetStudentsForSchoolRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetStudentsForSchoolRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class GetStudentsForSchoolRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetStudentsForSchoolRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -30,6 +34,7 @@ public class GetStudentsForSchoolRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
     public String startingAfter;
+
     public GetStudentsForSchoolRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
@@ -37,9 +42,13 @@ public class GetStudentsForSchoolRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
     public String where;
+
     public GetStudentsForSchoolRequest withWhere(String where) {
         this.where = where;
         return this;
     }
     
+    public GetStudentsForSchoolRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

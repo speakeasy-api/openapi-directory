@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutActionRevisionResponse {
@@ -12,6 +13,7 @@ public class PutActionRevisionResponse {
      */
     
     public Object actionNotFoundException;
+
     public PutActionRevisionResponse withActionNotFoundException(Object actionNotFoundException) {
         this.actionNotFoundException = actionNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class PutActionRevisionResponse {
     
     
     public String contentType;
+
     public PutActionRevisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutActionRevisionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public PutActionRevisionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutActionRevisionResponse {
      */
     
     public org.openapis.openapi.models.shared.PutActionRevisionOutput putActionRevisionOutput;
+
     public PutActionRevisionResponse withPutActionRevisionOutput(org.openapis.openapi.models.shared.PutActionRevisionOutput putActionRevisionOutput) {
         this.putActionRevisionOutput = putActionRevisionOutput;
         return this;
@@ -46,6 +51,7 @@ public class PutActionRevisionResponse {
     
     
     public Integer statusCode;
+
     public PutActionRevisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutActionRevisionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutActionRevisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutActionRevisionResponse {
      */
     
     public Object stageNotFoundException;
+
     public PutActionRevisionResponse withStageNotFoundException(Object stageNotFoundException) {
         this.stageNotFoundException = stageNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class PutActionRevisionResponse {
      */
     
     public Object validationException;
+
     public PutActionRevisionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutActionRevisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

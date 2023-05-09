@@ -15,6 +15,7 @@ public class PostNetworksIdActionsAddSubnetActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostNetworksIdActionsAddSubnetActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostNetworksIdActionsAddSubnetActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostNetworksIdActionsAddSubnetActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostNetworksIdActionsAddSubnetActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

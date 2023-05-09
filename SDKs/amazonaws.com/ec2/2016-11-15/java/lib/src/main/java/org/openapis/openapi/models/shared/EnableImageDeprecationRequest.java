@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class EnableImageDeprecationRequest {
     
     public OffsetDateTime deprecateAt;
+
     public EnableImageDeprecationRequest withDeprecateAt(OffsetDateTime deprecateAt) {
         this.deprecateAt = deprecateAt;
         return this;
@@ -16,6 +18,7 @@ public class EnableImageDeprecationRequest {
     
     
     public Boolean dryRun;
+
     public EnableImageDeprecationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +26,14 @@ public class EnableImageDeprecationRequest {
     
     
     public String imageId;
+
     public EnableImageDeprecationRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public EnableImageDeprecationRequest(@JsonProperty("DeprecateAt") OffsetDateTime deprecateAt, @JsonProperty("ImageId") String imageId) {
+        this.deprecateAt = deprecateAt;
+        this.imageId = imageId;
+  }
 }

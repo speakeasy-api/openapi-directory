@@ -15,6 +15,7 @@ public class SettlementTransactionAmountCommission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public SettlementTransactionAmountCommission withCategory(String category) {
         this.category = category;
         return this;
@@ -26,9 +27,11 @@ public class SettlementTransactionAmountCommission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public String rate;
+
     public SettlementTransactionAmountCommission withRate(String rate) {
         this.rate = rate;
         return this;
     }
     
+    public SettlementTransactionAmountCommission(){}
 }

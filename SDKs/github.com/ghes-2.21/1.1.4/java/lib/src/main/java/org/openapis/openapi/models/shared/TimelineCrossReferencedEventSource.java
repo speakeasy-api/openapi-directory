@@ -15,6 +15,7 @@ public class TimelineCrossReferencedEventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public IssueSimple issue;
+
     public TimelineCrossReferencedEventSource withIssue(IssueSimple issue) {
         this.issue = issue;
         return this;
@@ -23,9 +24,11 @@ public class TimelineCrossReferencedEventSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TimelineCrossReferencedEventSource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TimelineCrossReferencedEventSource(){}
 }

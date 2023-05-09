@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountGroupMappingRequest {
@@ -12,9 +13,13 @@ public class GetAccountGroupMappingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_mapping_id")
     public String groupMappingId;
+
     public GetAccountGroupMappingRequest withGroupMappingId(String groupMappingId) {
         this.groupMappingId = groupMappingId;
         return this;
     }
     
+    public GetAccountGroupMappingRequest(@JsonProperty("group_mapping_id") String groupMappingId) {
+        this.groupMappingId = groupMappingId;
+  }
 }

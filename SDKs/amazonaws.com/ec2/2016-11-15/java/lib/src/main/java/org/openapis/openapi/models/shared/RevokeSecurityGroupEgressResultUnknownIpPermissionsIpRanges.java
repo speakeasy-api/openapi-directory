@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSecurityGroupEgressResultUnknownIpPermissionsIpRanges {
     
     public String cidrIp;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsIpRanges withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -19,9 +20,11 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissionsIpRanges {
     
     
     public String description;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsIpRanges withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public RevokeSecurityGroupEgressResultUnknownIpPermissionsIpRanges(){}
 }

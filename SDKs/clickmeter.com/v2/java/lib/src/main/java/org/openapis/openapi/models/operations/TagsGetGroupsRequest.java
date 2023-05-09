@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetGroupsRequest {
@@ -12,6 +13,7 @@ public class TagsGetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public TagsGetGroupsRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +24,7 @@ public class TagsGetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public TagsGetGroupsRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +35,7 @@ public class TagsGetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public TagsGetGroupsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class TagsGetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public TagsGetGroupsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,6 +57,7 @@ public class TagsGetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public TagsGetGroupsStatusEnum status;
+
     public TagsGetGroupsRequest withStatus(TagsGetGroupsStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +68,7 @@ public class TagsGetGroupsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public Long tagId;
+
     public TagsGetGroupsRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
@@ -72,9 +79,13 @@ public class TagsGetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public TagsGetGroupsRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public TagsGetGroupsRequest(@JsonProperty("tagId") Long tagId) {
+        this.tagId = tagId;
+  }
 }

@@ -58,11 +58,9 @@ public class Players {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesPlayersGetResponse res = new org.openapis.openapi.models.operations.GamesPlayersGetResponse() {{
+        org.openapis.openapi.models.operations.GamesPlayersGetResponse res = new org.openapis.openapi.models.operations.GamesPlayersGetResponse(contentType, httpRes.statusCode()) {{
             player = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Players {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse res = new org.openapis.openapi.models.operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse() {{
+        org.openapis.openapi.models.operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse res = new org.openapis.openapi.models.operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse(contentType, httpRes.statusCode()) {{
             getMultipleApplicationPlayerIdsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Players {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesPlayersGetScopedPlayerIdsResponse res = new org.openapis.openapi.models.operations.GamesPlayersGetScopedPlayerIdsResponse() {{
+        org.openapis.openapi.models.operations.GamesPlayersGetScopedPlayerIdsResponse res = new org.openapis.openapi.models.operations.GamesPlayersGetScopedPlayerIdsResponse(contentType, httpRes.statusCode()) {{
             scopedPlayerIds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Players {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesPlayersListResponse res = new org.openapis.openapi.models.operations.GamesPlayersListResponse() {{
+        org.openapis.openapi.models.operations.GamesPlayersListResponse res = new org.openapis.openapi.models.operations.GamesPlayersListResponse(contentType, httpRes.statusCode()) {{
             playerListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

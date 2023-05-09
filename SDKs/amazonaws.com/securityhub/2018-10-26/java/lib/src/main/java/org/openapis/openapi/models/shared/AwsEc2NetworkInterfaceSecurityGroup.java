@@ -15,6 +15,7 @@ public class AwsEc2NetworkInterfaceSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public AwsEc2NetworkInterfaceSecurityGroup withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2NetworkInterfaceSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AwsEc2NetworkInterfaceSecurityGroup withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public AwsEc2NetworkInterfaceSecurityGroup(){}
 }

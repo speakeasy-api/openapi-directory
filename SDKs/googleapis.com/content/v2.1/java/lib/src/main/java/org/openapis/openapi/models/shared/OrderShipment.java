@@ -15,6 +15,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public OrderShipment withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -26,6 +27,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public OrderShipment withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -37,6 +39,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryDate")
     public String deliveryDate;
+
     public OrderShipment withDeliveryDate(String deliveryDate) {
         this.deliveryDate = deliveryDate;
         return this;
@@ -48,6 +51,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrderShipment withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItems")
     public OrderShipmentLineItemShipment[] lineItems;
+
     public OrderShipment withLineItems(OrderShipmentLineItemShipment[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -67,6 +72,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledDeliveryDetails")
     public OrderShipmentScheduledDeliveryDetails scheduledDeliveryDetails;
+
     public OrderShipment withScheduledDeliveryDetails(OrderShipmentScheduledDeliveryDetails scheduledDeliveryDetails) {
         this.scheduledDeliveryDetails = scheduledDeliveryDetails;
         return this;
@@ -78,6 +84,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentGroupId")
     public String shipmentGroupId;
+
     public OrderShipment withShipmentGroupId(String shipmentGroupId) {
         this.shipmentGroupId = shipmentGroupId;
         return this;
@@ -89,6 +96,7 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public OrderShipment withStatus(String status) {
         this.status = status;
         return this;
@@ -100,9 +108,11 @@ public class OrderShipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public OrderShipment withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public OrderShipment(){}
 }

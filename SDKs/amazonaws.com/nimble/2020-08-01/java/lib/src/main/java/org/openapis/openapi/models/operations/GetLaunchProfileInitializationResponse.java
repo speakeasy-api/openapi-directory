@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLaunchProfileInitializationResponse {
@@ -12,6 +13,7 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLaunchProfileInitializationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public Object conflictException;
+
     public GetLaunchProfileInitializationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetLaunchProfileInitializationResponse {
     
     
     public String contentType;
+
     public GetLaunchProfileInitializationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLaunchProfileInitializationResponse getLaunchProfileInitializationResponse;
+
     public GetLaunchProfileInitializationResponse withGetLaunchProfileInitializationResponse(org.openapis.openapi.models.shared.GetLaunchProfileInitializationResponse getLaunchProfileInitializationResponse) {
         this.getLaunchProfileInitializationResponse = getLaunchProfileInitializationResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetLaunchProfileInitializationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLaunchProfileInitializationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetLaunchProfileInitializationResponse {
     
     
     public Integer statusCode;
+
     public GetLaunchProfileInitializationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetLaunchProfileInitializationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLaunchProfileInitializationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetLaunchProfileInitializationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public Object throttlingException;
+
     public GetLaunchProfileInitializationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetLaunchProfileInitializationResponse {
      */
     
     public Object validationException;
+
     public GetLaunchProfileInitializationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLaunchProfileInitializationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

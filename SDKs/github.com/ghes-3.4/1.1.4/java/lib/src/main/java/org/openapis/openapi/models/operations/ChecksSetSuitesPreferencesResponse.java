@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChecksSetSuitesPreferencesResponse {
     
     public String contentType;
+
     public ChecksSetSuitesPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ChecksSetSuitesPreferencesResponse {
     
     
     public Integer statusCode;
+
     public ChecksSetSuitesPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ChecksSetSuitesPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChecksSetSuitesPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ChecksSetSuitesPreferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckSuitePreference checkSuitePreference;
+
     public ChecksSetSuitesPreferencesResponse withCheckSuitePreference(org.openapis.openapi.models.shared.CheckSuitePreference checkSuitePreference) {
         this.checkSuitePreference = checkSuitePreference;
         return this;
     }
     
+    public ChecksSetSuitesPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

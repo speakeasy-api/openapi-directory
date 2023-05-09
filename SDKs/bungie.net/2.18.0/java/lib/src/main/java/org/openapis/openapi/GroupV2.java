@@ -50,11 +50,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipResponse res = new org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipResponse() {{
+        org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipResponse res = new org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -89,11 +87,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2AddOptionalConversationResponse res = new org.openapis.openapi.models.operations.GroupV2AddOptionalConversationResponse() {{
+        org.openapis.openapi.models.operations.GroupV2AddOptionalConversationResponse res = new org.openapis.openapi.models.operations.GroupV2AddOptionalConversationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -128,11 +124,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2ApproveAllPendingResponse res = new org.openapis.openapi.models.operations.GroupV2ApproveAllPendingResponse() {{
+        org.openapis.openapi.models.operations.GroupV2ApproveAllPendingResponse res = new org.openapis.openapi.models.operations.GroupV2ApproveAllPendingResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,11 +161,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2ApprovePendingResponse res = new org.openapis.openapi.models.operations.GroupV2ApprovePendingResponse() {{
+        org.openapis.openapi.models.operations.GroupV2ApprovePendingResponse res = new org.openapis.openapi.models.operations.GroupV2ApprovePendingResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +198,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2ApprovePendingForListResponse res = new org.openapis.openapi.models.operations.GroupV2ApprovePendingForListResponse() {{
+        org.openapis.openapi.models.operations.GroupV2ApprovePendingForListResponse res = new org.openapis.openapi.models.operations.GroupV2ApprovePendingForListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +235,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2BanMemberResponse res = new org.openapis.openapi.models.operations.GroupV2BanMemberResponse() {{
+        org.openapis.openapi.models.operations.GroupV2BanMemberResponse res = new org.openapis.openapi.models.operations.GroupV2BanMemberResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,11 +272,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2DenyAllPendingResponse res = new org.openapis.openapi.models.operations.GroupV2DenyAllPendingResponse() {{
+        org.openapis.openapi.models.operations.GroupV2DenyAllPendingResponse res = new org.openapis.openapi.models.operations.GroupV2DenyAllPendingResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,11 +309,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2DenyPendingForListResponse res = new org.openapis.openapi.models.operations.GroupV2DenyPendingForListResponse() {{
+        org.openapis.openapi.models.operations.GroupV2DenyPendingForListResponse res = new org.openapis.openapi.models.operations.GroupV2DenyPendingForListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -362,11 +346,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2EditClanBannerResponse res = new org.openapis.openapi.models.operations.GroupV2EditClanBannerResponse() {{
+        org.openapis.openapi.models.operations.GroupV2EditClanBannerResponse res = new org.openapis.openapi.models.operations.GroupV2EditClanBannerResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -401,11 +383,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2EditFounderOptionsResponse res = new org.openapis.openapi.models.operations.GroupV2EditFounderOptionsResponse() {{
+        org.openapis.openapi.models.operations.GroupV2EditFounderOptionsResponse res = new org.openapis.openapi.models.operations.GroupV2EditFounderOptionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +420,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2EditGroupResponse res = new org.openapis.openapi.models.operations.GroupV2EditGroupResponse() {{
+        org.openapis.openapi.models.operations.GroupV2EditGroupResponse res = new org.openapis.openapi.models.operations.GroupV2EditGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -479,11 +457,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2EditGroupMembershipResponse res = new org.openapis.openapi.models.operations.GroupV2EditGroupMembershipResponse() {{
+        org.openapis.openapi.models.operations.GroupV2EditGroupMembershipResponse res = new org.openapis.openapi.models.operations.GroupV2EditGroupMembershipResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -518,11 +494,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2EditOptionalConversationResponse res = new org.openapis.openapi.models.operations.GroupV2EditOptionalConversationResponse() {{
+        org.openapis.openapi.models.operations.GroupV2EditOptionalConversationResponse res = new org.openapis.openapi.models.operations.GroupV2EditOptionalConversationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -561,11 +535,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -597,11 +569,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetAvailableAvatarsResponse res = new org.openapis.openapi.models.operations.GroupV2GetAvailableAvatarsResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetAvailableAvatarsResponse res = new org.openapis.openapi.models.operations.GroupV2GetAvailableAvatarsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,11 +603,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetAvailableThemesResponse res = new org.openapis.openapi.models.operations.GroupV2GetAvailableThemesResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetAvailableThemesResponse res = new org.openapis.openapi.models.operations.GroupV2GetAvailableThemesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +646,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -715,11 +681,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -752,11 +716,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetGroupByNameResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupByNameResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetGroupByNameResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupByNameResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -788,11 +750,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetGroupByNameV2Response res = new org.openapis.openapi.models.operations.GroupV2GetGroupByNameV2Response() {{
+        org.openapis.openapi.models.operations.GroupV2GetGroupByNameV2Response res = new org.openapis.openapi.models.operations.GroupV2GetGroupByNameV2Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -825,11 +785,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -862,11 +820,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberResponse res = new org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -907,11 +863,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsResponse res = new org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsResponse res = new org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -950,11 +904,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupResponse res = new org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -995,11 +947,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsResponse res = new org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsResponse res = new org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1032,11 +982,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberResponse res = new org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberResponse res = new org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1071,11 +1019,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsResponse res = new org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsResponse res = new org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1110,11 +1056,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingResponse res = new org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingResponse res = new org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1146,11 +1090,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2GroupSearchResponse res = new org.openapis.openapi.models.operations.GroupV2GroupSearchResponse() {{
+        org.openapis.openapi.models.operations.GroupV2GroupSearchResponse res = new org.openapis.openapi.models.operations.GroupV2GroupSearchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1185,11 +1127,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteResponse res = new org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteResponse() {{
+        org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteResponse res = new org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1224,11 +1164,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelResponse res = new org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelResponse() {{
+        org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelResponse res = new org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1263,11 +1201,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2KickMemberResponse res = new org.openapis.openapi.models.operations.GroupV2KickMemberResponse() {{
+        org.openapis.openapi.models.operations.GroupV2KickMemberResponse res = new org.openapis.openapi.models.operations.GroupV2KickMemberResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1300,11 +1236,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderResponse res = new org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderResponse() {{
+        org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderResponse res = new org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1339,11 +1273,9 @@ public class GroupV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GroupV2UnbanMemberResponse res = new org.openapis.openapi.models.operations.GroupV2UnbanMemberResponse() {{
+        org.openapis.openapi.models.operations.GroupV2UnbanMemberResponse res = new org.openapis.openapi.models.operations.GroupV2UnbanMemberResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

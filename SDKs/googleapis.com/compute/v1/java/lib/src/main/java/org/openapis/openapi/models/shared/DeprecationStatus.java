@@ -18,6 +18,7 @@ public class DeprecationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public String deleted;
+
     public DeprecationStatus withDeleted(String deleted) {
         this.deleted = deleted;
         return this;
@@ -29,6 +30,7 @@ public class DeprecationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public String deprecated;
+
     public DeprecationStatus withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -40,6 +42,7 @@ public class DeprecationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obsolete")
     public String obsolete;
+
     public DeprecationStatus withObsolete(String obsolete) {
         this.obsolete = obsolete;
         return this;
@@ -51,6 +54,7 @@ public class DeprecationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacement")
     public String replacement;
+
     public DeprecationStatus withReplacement(String replacement) {
         this.replacement = replacement;
         return this;
@@ -62,9 +66,11 @@ public class DeprecationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DeprecationStatusStateEnum state;
+
     public DeprecationStatus withState(DeprecationStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DeprecationStatus(){}
 }

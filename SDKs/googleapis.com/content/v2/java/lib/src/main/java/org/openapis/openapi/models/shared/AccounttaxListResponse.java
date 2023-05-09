@@ -18,6 +18,7 @@ public class AccounttaxListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccounttaxListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class AccounttaxListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AccounttaxListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -37,9 +39,11 @@ public class AccounttaxListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public AccountTax[] resources;
+
     public AccounttaxListResponse withResources(AccountTax[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public AccounttaxListResponse(){}
 }

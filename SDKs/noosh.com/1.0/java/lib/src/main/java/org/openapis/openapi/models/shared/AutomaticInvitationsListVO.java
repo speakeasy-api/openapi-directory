@@ -15,6 +15,7 @@ public class AutomaticInvitationsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public AutomaticInvitationVO[] results;
+
     public AutomaticInvitationsListVO withResults(AutomaticInvitationVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class AutomaticInvitationsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public AutomaticInvitationsListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class AutomaticInvitationsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public AutomaticInvitationsListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public AutomaticInvitationsListVO(){}
 }

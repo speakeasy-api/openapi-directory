@@ -15,6 +15,7 @@ public class CreateLicenseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public CreateLicenseResponse withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateLicenseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public LicenseStatusEnum status;
+
     public CreateLicenseResponse withStatus(LicenseStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class CreateLicenseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public CreateLicenseResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateLicenseResponse(){}
 }

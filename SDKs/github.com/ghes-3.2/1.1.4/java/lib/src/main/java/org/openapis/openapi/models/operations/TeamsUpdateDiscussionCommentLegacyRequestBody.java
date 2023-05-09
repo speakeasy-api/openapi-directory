@@ -12,9 +12,13 @@ public class TeamsUpdateDiscussionCommentLegacyRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public TeamsUpdateDiscussionCommentLegacyRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public TeamsUpdateDiscussionCommentLegacyRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

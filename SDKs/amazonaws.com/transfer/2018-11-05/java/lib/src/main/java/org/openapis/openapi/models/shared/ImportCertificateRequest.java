@@ -19,6 +19,7 @@ public class ImportCertificateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActiveDate")
     public OffsetDateTime activeDate;
+
     public ImportCertificateRequest withActiveDate(OffsetDateTime activeDate) {
         this.activeDate = activeDate;
         return this;
@@ -26,6 +27,7 @@ public class ImportCertificateRequest {
     
     @JsonProperty("Certificate")
     public String certificate;
+
     public ImportCertificateRequest withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -34,6 +36,7 @@ public class ImportCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateChain")
     public String certificateChain;
+
     public ImportCertificateRequest withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
@@ -42,6 +45,7 @@ public class ImportCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ImportCertificateRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +56,7 @@ public class ImportCertificateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InactiveDate")
     public OffsetDateTime inactiveDate;
+
     public ImportCertificateRequest withInactiveDate(OffsetDateTime inactiveDate) {
         this.inactiveDate = inactiveDate;
         return this;
@@ -60,6 +65,7 @@ public class ImportCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateKey")
     public String privateKey;
+
     public ImportCertificateRequest withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -68,6 +74,7 @@ public class ImportCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportCertificateRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +82,14 @@ public class ImportCertificateRequest {
     
     @JsonProperty("Usage")
     public CertificateUsageTypeEnum usage;
+
     public ImportCertificateRequest withUsage(CertificateUsageTypeEnum usage) {
         this.usage = usage;
         return this;
     }
     
+    public ImportCertificateRequest(@JsonProperty("Certificate") String certificate, @JsonProperty("Usage") CertificateUsageTypeEnum usage) {
+        this.certificate = certificate;
+        this.usage = usage;
+  }
 }

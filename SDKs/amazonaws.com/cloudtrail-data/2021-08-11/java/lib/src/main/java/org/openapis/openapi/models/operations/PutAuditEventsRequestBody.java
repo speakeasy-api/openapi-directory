@@ -12,9 +12,13 @@ public class PutAuditEventsRequestBody {
      */
     @JsonProperty("auditEvents")
     public org.openapis.openapi.models.shared.AuditEvent[] auditEvents;
+
     public PutAuditEventsRequestBody withAuditEvents(org.openapis.openapi.models.shared.AuditEvent[] auditEvents) {
         this.auditEvents = auditEvents;
         return this;
     }
     
+    public PutAuditEventsRequestBody(@JsonProperty("auditEvents") org.openapis.openapi.models.shared.AuditEvent[] auditEvents) {
+        this.auditEvents = auditEvents;
+  }
 }

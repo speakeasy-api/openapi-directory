@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetHttpsProxiesSetUrlMapSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetHttpsProxiesSetUrlMapSecurityOption1 option1;
+
     public ComputeTargetHttpsProxiesSetUrlMapSecurity withOption1(ComputeTargetHttpsProxiesSetUrlMapSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeTargetHttpsProxiesSetUrlMapSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetHttpsProxiesSetUrlMapSecurityOption2 option2;
+
     public ComputeTargetHttpsProxiesSetUrlMapSecurity withOption2(ComputeTargetHttpsProxiesSetUrlMapSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeTargetHttpsProxiesSetUrlMapSecurity(){}
 }

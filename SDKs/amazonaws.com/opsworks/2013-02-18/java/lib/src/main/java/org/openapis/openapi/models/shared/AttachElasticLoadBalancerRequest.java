@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttachElasticLoadBalancerRequest {
     @JsonProperty("ElasticLoadBalancerName")
     public String elasticLoadBalancerName;
+
     public AttachElasticLoadBalancerRequest withElasticLoadBalancerName(String elasticLoadBalancerName) {
         this.elasticLoadBalancerName = elasticLoadBalancerName;
         return this;
@@ -16,9 +17,14 @@ public class AttachElasticLoadBalancerRequest {
     
     @JsonProperty("LayerId")
     public String layerId;
+
     public AttachElasticLoadBalancerRequest withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
     }
     
+    public AttachElasticLoadBalancerRequest(@JsonProperty("ElasticLoadBalancerName") String elasticLoadBalancerName, @JsonProperty("LayerId") String layerId) {
+        this.elasticLoadBalancerName = elasticLoadBalancerName;
+        this.layerId = layerId;
+  }
 }

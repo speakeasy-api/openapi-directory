@@ -17,9 +17,11 @@ public class OrderDeleteApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public OrderDeleteApiModel withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public OrderDeleteApiModel(){}
 }

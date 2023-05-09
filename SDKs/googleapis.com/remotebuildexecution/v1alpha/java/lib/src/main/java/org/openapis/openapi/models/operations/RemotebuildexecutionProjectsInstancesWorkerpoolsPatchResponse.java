@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse {
     
     public String contentType;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse withGoogleLongrunningOperation(org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation) {
         this.googleLongrunningOperation = googleLongrunningOperation;
         return this;
@@ -26,6 +29,7 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse {
     
     
     public Integer statusCode;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

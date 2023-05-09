@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProvisioningProfileRequest {
@@ -12,6 +13,7 @@ public class ProvisioningProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ProvisioningProfileRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ProvisioningProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ProvisioningProfileRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +35,15 @@ public class ProvisioningProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ProvisioningProfileRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
     }
     
+    public ProvisioningProfileRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") Long releaseId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+  }
 }

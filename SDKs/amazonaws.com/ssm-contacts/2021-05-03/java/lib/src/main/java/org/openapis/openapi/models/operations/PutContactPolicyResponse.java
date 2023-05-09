@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutContactPolicyResponse {
@@ -12,6 +13,7 @@ public class PutContactPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public PutContactPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutContactPolicyResponse {
      */
     
     public Object conflictException;
+
     public PutContactPolicyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutContactPolicyResponse {
     
     
     public String contentType;
+
     public PutContactPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutContactPolicyResponse {
      */
     
     public Object internalServerException;
+
     public PutContactPolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutContactPolicyResponse {
      */
     
     public java.util.Map<String, Object> putContactPolicyResult;
+
     public PutContactPolicyResponse withPutContactPolicyResult(java.util.Map<String, Object> putContactPolicyResult) {
         this.putContactPolicyResult = putContactPolicyResult;
         return this;
@@ -56,6 +62,7 @@ public class PutContactPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutContactPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutContactPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutContactPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutContactPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutContactPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class PutContactPolicyResponse {
      */
     
     public Object throttlingException;
+
     public PutContactPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class PutContactPolicyResponse {
      */
     
     public Object validationException;
+
     public PutContactPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutContactPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

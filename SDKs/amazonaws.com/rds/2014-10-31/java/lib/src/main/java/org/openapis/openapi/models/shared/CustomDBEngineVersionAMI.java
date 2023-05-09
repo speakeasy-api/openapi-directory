@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CustomDBEngineVersionAMI {
     
     public String imageId;
+
     public CustomDBEngineVersionAMI withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -19,9 +20,11 @@ public class CustomDBEngineVersionAMI {
     
     
     public String status;
+
     public CustomDBEngineVersionAMI withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CustomDBEngineVersionAMI(){}
 }

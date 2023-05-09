@@ -175,4 +175,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StopDataCollectionByAgentId
 lib/src/main/java/org/openapis/openapi/models/shared/StopDataCollectionByAgentIdsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateApplicationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

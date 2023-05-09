@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectionLimits {
     @JsonProperty("ProtectedResourceTypeLimits")
     public Limit[] protectedResourceTypeLimits;
+
     public ProtectionLimits withProtectedResourceTypeLimits(Limit[] protectedResourceTypeLimits) {
         this.protectedResourceTypeLimits = protectedResourceTypeLimits;
         return this;
     }
     
+    public ProtectionLimits(@JsonProperty("ProtectedResourceTypeLimits") Limit[] protectedResourceTypeLimits) {
+        this.protectedResourceTypeLimits = protectedResourceTypeLimits;
+  }
 }

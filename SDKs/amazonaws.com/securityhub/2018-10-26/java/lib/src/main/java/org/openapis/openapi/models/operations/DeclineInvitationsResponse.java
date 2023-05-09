@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeclineInvitationsResponse {
     
     public String contentType;
+
     public DeclineInvitationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeclineInvitationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DeclineInvitationsResponse declineInvitationsResponse;
+
     public DeclineInvitationsResponse withDeclineInvitationsResponse(org.openapis.openapi.models.shared.DeclineInvitationsResponse declineInvitationsResponse) {
         this.declineInvitationsResponse = declineInvitationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeclineInvitationsResponse {
      */
     
     public Object internalException;
+
     public DeclineInvitationsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DeclineInvitationsResponse {
      */
     
     public Object invalidAccessException;
+
     public DeclineInvitationsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class DeclineInvitationsResponse {
      */
     
     public Object invalidInputException;
+
     public DeclineInvitationsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeclineInvitationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeclineInvitationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeclineInvitationsResponse {
     
     
     public Integer statusCode;
+
     public DeclineInvitationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeclineInvitationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeclineInvitationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeclineInvitationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

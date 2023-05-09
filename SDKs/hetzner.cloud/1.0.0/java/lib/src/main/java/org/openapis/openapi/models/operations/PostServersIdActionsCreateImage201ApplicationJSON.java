@@ -18,6 +18,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public PostServersIdActionsCreateImage201ApplicationJSONAction action;
+
     public PostServersIdActionsCreateImage201ApplicationJSON withAction(PostServersIdActionsCreateImage201ApplicationJSONAction action) {
         this.action = action;
         return this;
@@ -26,9 +27,11 @@ public class PostServersIdActionsCreateImage201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public PostServersIdActionsCreateImage201ApplicationJSONImage image;
+
     public PostServersIdActionsCreateImage201ApplicationJSON withImage(PostServersIdActionsCreateImage201ApplicationJSONImage image) {
         this.image = image;
         return this;
     }
     
+    public PostServersIdActionsCreateImage201ApplicationJSON(){}
 }

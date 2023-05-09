@@ -15,6 +15,7 @@ public class DescribeAppVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public java.util.Map<String, String[]> additionalInfo;
+
     public DescribeAppVersionResponse withAdditionalInfo(java.util.Map<String, String[]> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -22,6 +23,7 @@ public class DescribeAppVersionResponse {
     
     @JsonProperty("appArn")
     public String appArn;
+
     public DescribeAppVersionResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -29,9 +31,14 @@ public class DescribeAppVersionResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public DescribeAppVersionResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
     
+    public DescribeAppVersionResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+  }
 }

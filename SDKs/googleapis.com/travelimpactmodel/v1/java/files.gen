@@ -41,4 +41,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/EmissionsGramsPerPax.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComputeFlightEmissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/flights/README.md
 USAGE.md

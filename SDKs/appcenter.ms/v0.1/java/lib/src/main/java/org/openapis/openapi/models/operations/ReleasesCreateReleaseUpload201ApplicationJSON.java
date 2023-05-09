@@ -15,6 +15,7 @@ public class ReleasesCreateReleaseUpload201ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesCreateReleaseUpload201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class ReleasesCreateReleaseUpload201ApplicationJSON {
      */
     @JsonProperty("package_asset_id")
     public String packageAssetId;
+
     public ReleasesCreateReleaseUpload201ApplicationJSON withPackageAssetId(String packageAssetId) {
         this.packageAssetId = packageAssetId;
         return this;
@@ -35,6 +37,7 @@ public class ReleasesCreateReleaseUpload201ApplicationJSON {
      */
     @JsonProperty("token")
     public String token;
+
     public ReleasesCreateReleaseUpload201ApplicationJSON withToken(String token) {
         this.token = token;
         return this;
@@ -45,6 +48,7 @@ public class ReleasesCreateReleaseUpload201ApplicationJSON {
      */
     @JsonProperty("upload_domain")
     public String uploadDomain;
+
     public ReleasesCreateReleaseUpload201ApplicationJSON withUploadDomain(String uploadDomain) {
         this.uploadDomain = uploadDomain;
         return this;
@@ -55,9 +59,17 @@ public class ReleasesCreateReleaseUpload201ApplicationJSON {
      */
     @JsonProperty("url_encoded_token")
     public String urlEncodedToken;
+
     public ReleasesCreateReleaseUpload201ApplicationJSON withUrlEncodedToken(String urlEncodedToken) {
         this.urlEncodedToken = urlEncodedToken;
         return this;
     }
     
+    public ReleasesCreateReleaseUpload201ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("package_asset_id") String packageAssetId, @JsonProperty("token") String token, @JsonProperty("upload_domain") String uploadDomain, @JsonProperty("url_encoded_token") String urlEncodedToken) {
+        this.id = id;
+        this.packageAssetId = packageAssetId;
+        this.token = token;
+        this.uploadDomain = uploadDomain;
+        this.urlEncodedToken = urlEncodedToken;
+  }
 }

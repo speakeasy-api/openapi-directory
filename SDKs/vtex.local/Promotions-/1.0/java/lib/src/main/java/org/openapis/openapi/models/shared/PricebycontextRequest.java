@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PricebycontextRequest {
     @JsonProperty("id")
     public Integer id;
+
     public PricebycontextRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class PricebycontextRequest {
     
     @JsonProperty("itemId")
     public Integer itemId;
+
     public PricebycontextRequest withItemId(Integer itemId) {
         this.itemId = itemId;
         return this;
@@ -23,6 +25,7 @@ public class PricebycontextRequest {
     
     @JsonProperty("salesChannel")
     public Integer salesChannel;
+
     public PricebycontextRequest withSalesChannel(Integer salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -30,6 +33,7 @@ public class PricebycontextRequest {
     
     @JsonProperty("sellerId")
     public String sellerId;
+
     public PricebycontextRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -37,6 +41,7 @@ public class PricebycontextRequest {
     
     @JsonProperty("validFrom")
     public String validFrom;
+
     public PricebycontextRequest withValidFrom(String validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -44,9 +49,18 @@ public class PricebycontextRequest {
     
     @JsonProperty("validTo")
     public String validTo;
+
     public PricebycontextRequest withValidTo(String validTo) {
         this.validTo = validTo;
         return this;
     }
     
+    public PricebycontextRequest(@JsonProperty("id") Integer id, @JsonProperty("itemId") Integer itemId, @JsonProperty("salesChannel") Integer salesChannel, @JsonProperty("sellerId") String sellerId, @JsonProperty("validFrom") String validFrom, @JsonProperty("validTo") String validTo) {
+        this.id = id;
+        this.itemId = itemId;
+        this.salesChannel = salesChannel;
+        this.sellerId = sellerId;
+        this.validFrom = validFrom;
+        this.validTo = validTo;
+  }
 }

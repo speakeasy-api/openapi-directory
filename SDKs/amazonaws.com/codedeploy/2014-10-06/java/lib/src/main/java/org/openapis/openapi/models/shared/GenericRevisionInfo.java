@@ -20,6 +20,7 @@ public class GenericRevisionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentGroups")
     public String[] deploymentGroups;
+
     public GenericRevisionInfo withDeploymentGroups(String[] deploymentGroups) {
         this.deploymentGroups = deploymentGroups;
         return this;
@@ -28,6 +29,7 @@ public class GenericRevisionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GenericRevisionInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class GenericRevisionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstUsedTime")
     public OffsetDateTime firstUsedTime;
+
     public GenericRevisionInfo withFirstUsedTime(OffsetDateTime firstUsedTime) {
         this.firstUsedTime = firstUsedTime;
         return this;
@@ -48,6 +51,7 @@ public class GenericRevisionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUsedTime")
     public OffsetDateTime lastUsedTime;
+
     public GenericRevisionInfo withLastUsedTime(OffsetDateTime lastUsedTime) {
         this.lastUsedTime = lastUsedTime;
         return this;
@@ -58,9 +62,11 @@ public class GenericRevisionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registerTime")
     public OffsetDateTime registerTime;
+
     public GenericRevisionInfo withRegisterTime(OffsetDateTime registerTime) {
         this.registerTime = registerTime;
         return this;
     }
     
+    public GenericRevisionInfo(){}
 }

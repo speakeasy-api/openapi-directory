@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoTaskMetadataAdmin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleGroupEmail")
     public String googleGroupEmail;
+
     public EnterpriseCrmEventbusProtoTaskMetadataAdmin withGoogleGroupEmail(String googleGroupEmail) {
         this.googleGroupEmail = googleGroupEmail;
         return this;
@@ -23,9 +24,11 @@ public class EnterpriseCrmEventbusProtoTaskMetadataAdmin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public EnterpriseCrmEventbusProtoTaskMetadataAdmin withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoTaskMetadataAdmin(){}
 }

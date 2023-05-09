@@ -20,6 +20,7 @@ public class AssessmentReportMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentId")
     public String assessmentId;
+
     public AssessmentReportMetadata withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -28,6 +29,7 @@ public class AssessmentReportMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentName")
     public String assessmentName;
+
     public AssessmentReportMetadata withAssessmentName(String assessmentName) {
         this.assessmentName = assessmentName;
         return this;
@@ -36,6 +38,7 @@ public class AssessmentReportMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public AssessmentReportMetadata withAuthor(String author) {
         this.author = author;
         return this;
@@ -46,6 +49,7 @@ public class AssessmentReportMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AssessmentReportMetadata withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class AssessmentReportMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssessmentReportMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class AssessmentReportMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentReportMetadata withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class AssessmentReportMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssessmentReportMetadata withName(String name) {
         this.name = name;
         return this;
@@ -78,9 +85,11 @@ public class AssessmentReportMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AssessmentReportStatusEnum status;
+
     public AssessmentReportMetadata withStatus(AssessmentReportStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssessmentReportMetadata(){}
 }

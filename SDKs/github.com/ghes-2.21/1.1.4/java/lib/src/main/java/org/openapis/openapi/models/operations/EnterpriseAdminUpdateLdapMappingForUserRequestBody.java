@@ -15,9 +15,11 @@ public class EnterpriseAdminUpdateLdapMappingForUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_dn")
     public String ldapDn;
+
     public EnterpriseAdminUpdateLdapMappingForUserRequestBody withLdapDn(String ldapDn) {
         this.ldapDn = ldapDn;
         return this;
     }
     
+    public EnterpriseAdminUpdateLdapMappingForUserRequestBody(){}
 }

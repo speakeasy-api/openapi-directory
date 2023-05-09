@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCertificatesResponse {
     
     public String contentType;
+
     public ListCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCertificatesResponse {
      */
     
     public Object internalServiceError;
+
     public ListCertificatesResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListCertificatesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCertificatesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListCertificatesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListCertificatesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCertificatesResponse listCertificatesResponse;
+
     public ListCertificatesResponse withListCertificatesResponse(org.openapis.openapi.models.shared.ListCertificatesResponse listCertificatesResponse) {
         this.listCertificatesResponse = listCertificatesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListCertificatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCertificatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListCertificatesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListCertificatesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListCertificatesResponse {
     
     
     public Integer statusCode;
+
     public ListCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

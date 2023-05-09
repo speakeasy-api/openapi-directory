@@ -270,4 +270,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DeleteObjectInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/AddObjectInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTableStorageOptimizerResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

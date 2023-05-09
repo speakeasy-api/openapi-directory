@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateActivityInput {
     @JsonProperty("name")
     public String name;
+
     public CreateActivityInput withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,13 @@ public class CreateActivityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateActivityInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateActivityInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class UpdateorderFormconfigurationRequestTaxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public UpdateorderFormconfigurationRequestTaxConfiguration withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,6 +30,7 @@ public class UpdateorderFormconfigurationRequestTaxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationHeader")
     public String authorizationHeader;
+
     public UpdateorderFormconfigurationRequestTaxConfiguration withAuthorizationHeader(String authorizationHeader) {
         this.authorizationHeader = authorizationHeader;
         return this;
@@ -40,9 +42,11 @@ public class UpdateorderFormconfigurationRequestTaxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UpdateorderFormconfigurationRequestTaxConfiguration withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UpdateorderFormconfigurationRequestTaxConfiguration(){}
 }

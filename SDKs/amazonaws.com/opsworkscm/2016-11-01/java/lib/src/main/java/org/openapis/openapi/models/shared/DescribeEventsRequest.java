@@ -12,6 +12,7 @@ public class DescribeEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeEventsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class DescribeEventsRequest {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public DescribeEventsRequest withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public DescribeEventsRequest(@JsonProperty("ServerName") String serverName) {
+        this.serverName = serverName;
+  }
 }

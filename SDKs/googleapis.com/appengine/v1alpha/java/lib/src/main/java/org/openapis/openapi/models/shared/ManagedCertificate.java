@@ -18,6 +18,7 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRenewalTime")
     public String lastRenewalTime;
+
     public ManagedCertificate withLastRenewalTime(String lastRenewalTime) {
         this.lastRenewalTime = lastRenewalTime;
         return this;
@@ -29,9 +30,11 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ManagedCertificateStatusEnum status;
+
     public ManagedCertificate withStatus(ManagedCertificateStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ManagedCertificate(){}
 }

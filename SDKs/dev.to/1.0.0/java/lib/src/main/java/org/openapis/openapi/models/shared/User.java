@@ -15,6 +15,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_username")
     public String githubUsername;
+
     public User withGithubUsername(String githubUsername) {
         this.githubUsername = githubUsername;
         return this;
@@ -23,6 +24,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joined_at")
     public String joinedAt;
+
     public User withJoinedAt(String joinedAt) {
         this.joinedAt = joinedAt;
         return this;
@@ -39,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public User withLocation(String location) {
         this.location = location;
         return this;
@@ -47,6 +51,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_image")
     public String profileImage;
+
     public User withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -63,6 +69,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public User withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -71,6 +78,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_username")
     public String twitterUsername;
+
     public User withTwitterUsername(String twitterUsername) {
         this.twitterUsername = twitterUsername;
         return this;
@@ -79,6 +87,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_of")
     public String typeOf;
+
     public User withTypeOf(String typeOf) {
         this.typeOf = typeOf;
         return this;
@@ -87,6 +96,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
@@ -95,9 +105,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url")
     public String websiteUrl;
+
     public User withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
     
+    public User(){}
 }

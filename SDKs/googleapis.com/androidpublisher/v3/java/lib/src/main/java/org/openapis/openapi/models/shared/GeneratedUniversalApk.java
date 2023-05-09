@@ -18,9 +18,11 @@ public class GeneratedUniversalApk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadId")
     public String downloadId;
+
     public GeneratedUniversalApk withDownloadId(String downloadId) {
         this.downloadId = downloadId;
         return this;
     }
     
+    public GeneratedUniversalApk(){}
 }

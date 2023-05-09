@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksSubscribeRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public WebhooksSubscribeRequestBody requestBody;
+
     public WebhooksSubscribeRequest withRequestBody(WebhooksSubscribeRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class WebhooksSubscribeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public WebhooksSubscribeRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public WebhooksSubscribeRequest(@JsonProperty("RequestBody") WebhooksSubscribeRequestBody requestBody, @JsonProperty("accountId") String accountId) {
+        this.requestBody = requestBody;
+        this.accountId = accountId;
+  }
 }

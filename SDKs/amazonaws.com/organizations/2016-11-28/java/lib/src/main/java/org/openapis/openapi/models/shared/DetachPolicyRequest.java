@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetachPolicyRequest {
     @JsonProperty("PolicyId")
     public String policyId;
+
     public DetachPolicyRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -16,9 +17,14 @@ public class DetachPolicyRequest {
     
     @JsonProperty("TargetId")
     public String targetId;
+
     public DetachPolicyRequest withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public DetachPolicyRequest(@JsonProperty("PolicyId") String policyId, @JsonProperty("TargetId") String targetId) {
+        this.policyId = policyId;
+        this.targetId = targetId;
+  }
 }

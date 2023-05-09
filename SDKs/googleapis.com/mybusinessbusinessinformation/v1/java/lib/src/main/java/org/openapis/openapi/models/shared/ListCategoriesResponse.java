@@ -18,6 +18,7 @@ public class ListCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Category[] categories;
+
     public ListCategoriesResponse withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -29,9 +30,11 @@ public class ListCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCategoriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCategoriesResponse(){}
 }

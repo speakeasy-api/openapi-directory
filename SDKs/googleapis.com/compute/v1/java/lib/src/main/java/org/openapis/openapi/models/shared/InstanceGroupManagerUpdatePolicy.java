@@ -15,6 +15,7 @@ public class InstanceGroupManagerUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceRedistributionType")
     public InstanceGroupManagerUpdatePolicyInstanceRedistributionTypeEnum instanceRedistributionType;
+
     public InstanceGroupManagerUpdatePolicy withInstanceRedistributionType(InstanceGroupManagerUpdatePolicyInstanceRedistributionTypeEnum instanceRedistributionType) {
         this.instanceRedistributionType = instanceRedistributionType;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManagerUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSurge")
     public FixedOrPercent maxSurge;
+
     public InstanceGroupManagerUpdatePolicy withMaxSurge(FixedOrPercent maxSurge) {
         this.maxSurge = maxSurge;
         return this;
@@ -37,6 +39,7 @@ public class InstanceGroupManagerUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUnavailable")
     public FixedOrPercent maxUnavailable;
+
     public InstanceGroupManagerUpdatePolicy withMaxUnavailable(FixedOrPercent maxUnavailable) {
         this.maxUnavailable = maxUnavailable;
         return this;
@@ -48,6 +51,7 @@ public class InstanceGroupManagerUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimalAction")
     public InstanceGroupManagerUpdatePolicyMinimalActionEnum minimalAction;
+
     public InstanceGroupManagerUpdatePolicy withMinimalAction(InstanceGroupManagerUpdatePolicyMinimalActionEnum minimalAction) {
         this.minimalAction = minimalAction;
         return this;
@@ -59,6 +63,7 @@ public class InstanceGroupManagerUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostDisruptiveAllowedAction")
     public InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedActionEnum mostDisruptiveAllowedAction;
+
     public InstanceGroupManagerUpdatePolicy withMostDisruptiveAllowedAction(InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedActionEnum mostDisruptiveAllowedAction) {
         this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
         return this;
@@ -70,6 +75,7 @@ public class InstanceGroupManagerUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacementMethod")
     public InstanceGroupManagerUpdatePolicyReplacementMethodEnum replacementMethod;
+
     public InstanceGroupManagerUpdatePolicy withReplacementMethod(InstanceGroupManagerUpdatePolicyReplacementMethodEnum replacementMethod) {
         this.replacementMethod = replacementMethod;
         return this;
@@ -81,9 +87,11 @@ public class InstanceGroupManagerUpdatePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InstanceGroupManagerUpdatePolicyTypeEnum type;
+
     public InstanceGroupManagerUpdatePolicy withType(InstanceGroupManagerUpdatePolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InstanceGroupManagerUpdatePolicy(){}
 }

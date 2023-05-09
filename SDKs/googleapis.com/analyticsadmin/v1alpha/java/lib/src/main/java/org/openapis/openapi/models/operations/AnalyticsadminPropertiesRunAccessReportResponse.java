@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesRunAccessReportResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesRunAccessReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesRunAccessReportResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaRunAccessReportResponse googleAnalyticsAdminV1alphaRunAccessReportResponse;
+
     public AnalyticsadminPropertiesRunAccessReportResponse withGoogleAnalyticsAdminV1alphaRunAccessReportResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaRunAccessReportResponse googleAnalyticsAdminV1alphaRunAccessReportResponse) {
         this.googleAnalyticsAdminV1alphaRunAccessReportResponse = googleAnalyticsAdminV1alphaRunAccessReportResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesRunAccessReportResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesRunAccessReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesRunAccessReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesRunAccessReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesRunAccessReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

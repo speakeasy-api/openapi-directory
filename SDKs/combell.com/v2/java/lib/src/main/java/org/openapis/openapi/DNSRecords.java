@@ -62,10 +62,8 @@ public class DNSRecords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdResponse res = new org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdResponse res = new org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -100,11 +98,9 @@ public class DNSRecords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDnsDomainNameRecordsResponse res = new org.openapis.openapi.models.operations.GetDnsDomainNameRecordsResponse() {{
+        org.openapis.openapi.models.operations.GetDnsDomainNameRecordsResponse res = new org.openapis.openapi.models.operations.GetDnsDomainNameRecordsResponse(contentType, httpRes.statusCode()) {{
             dnsRecords = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class DNSRecords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdResponse res = new org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdResponse() {{
+        org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdResponse res = new org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdResponse(contentType, httpRes.statusCode()) {{
             dnsRecord = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,10 +186,8 @@ public class DNSRecords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDnsDomainNameRecordsResponse res = new org.openapis.openapi.models.operations.PostDnsDomainNameRecordsResponse() {{
+        org.openapis.openapi.models.operations.PostDnsDomainNameRecordsResponse res = new org.openapis.openapi.models.operations.PostDnsDomainNameRecordsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -234,10 +226,8 @@ public class DNSRecords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdResponse res = new org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdResponse() {{
+        org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdResponse res = new org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

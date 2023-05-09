@@ -15,6 +15,7 @@ public class CreateJobRequestBodyPresignedUrlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresInSec")
     public Long expiresInSec;
+
     public CreateJobRequestBodyPresignedUrlConfig withExpiresInSec(Long expiresInSec) {
         this.expiresInSec = expiresInSec;
         return this;
@@ -23,9 +24,11 @@ public class CreateJobRequestBodyPresignedUrlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateJobRequestBodyPresignedUrlConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CreateJobRequestBodyPresignedUrlConfig(){}
 }

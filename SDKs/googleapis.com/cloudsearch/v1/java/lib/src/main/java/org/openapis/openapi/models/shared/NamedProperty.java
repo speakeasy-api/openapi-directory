@@ -15,6 +15,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValue")
     public Boolean booleanValue;
+
     public NamedProperty withBooleanValue(Boolean booleanValue) {
         this.booleanValue = booleanValue;
         return this;
@@ -26,6 +27,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateValues")
     public DateValues dateValues;
+
     public NamedProperty withDateValues(DateValues dateValues) {
         this.dateValues = dateValues;
         return this;
@@ -37,6 +39,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValues")
     public DoubleValues doubleValues;
+
     public NamedProperty withDoubleValues(DoubleValues doubleValues) {
         this.doubleValues = doubleValues;
         return this;
@@ -48,6 +51,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumValues")
     public EnumValues enumValues;
+
     public NamedProperty withEnumValues(EnumValues enumValues) {
         this.enumValues = enumValues;
         return this;
@@ -59,6 +63,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("htmlValues")
     public HtmlValues htmlValues;
+
     public NamedProperty withHtmlValues(HtmlValues htmlValues) {
         this.htmlValues = htmlValues;
         return this;
@@ -70,6 +75,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValues")
     public IntegerValues integerValues;
+
     public NamedProperty withIntegerValues(IntegerValues integerValues) {
         this.integerValues = integerValues;
         return this;
@@ -81,6 +87,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NamedProperty withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +99,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectValues")
     public ObjectValues objectValues;
+
     public NamedProperty withObjectValues(ObjectValues objectValues) {
         this.objectValues = objectValues;
         return this;
@@ -103,6 +111,7 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textValues")
     public TextValues textValues;
+
     public NamedProperty withTextValues(TextValues textValues) {
         this.textValues = textValues;
         return this;
@@ -114,9 +123,11 @@ public class NamedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampValues")
     public TimestampValues timestampValues;
+
     public NamedProperty withTimestampValues(TimestampValues timestampValues) {
         this.timestampValues = timestampValues;
         return this;
     }
     
+    public NamedProperty(){}
 }

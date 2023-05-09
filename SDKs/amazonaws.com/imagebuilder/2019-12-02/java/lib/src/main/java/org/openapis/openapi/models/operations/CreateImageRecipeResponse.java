@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImageRecipeResponse {
@@ -12,6 +13,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public CreateImageRecipeResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object clientException;
+
     public CreateImageRecipeResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateImageRecipeResponse {
     
     
     public String contentType;
+
     public CreateImageRecipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateImageRecipeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateImageRecipeResponse createImageRecipeResponse;
+
     public CreateImageRecipeResponse withCreateImageRecipeResponse(org.openapis.openapi.models.shared.CreateImageRecipeResponse createImageRecipeResponse) {
         this.createImageRecipeResponse = createImageRecipeResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object forbiddenException;
+
     public CreateImageRecipeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateImageRecipeResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -69,6 +76,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateImageRecipeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object invalidVersionNumberException;
+
     public CreateImageRecipeResponse withInvalidVersionNumberException(Object invalidVersionNumberException) {
         this.invalidVersionNumberException = invalidVersionNumberException;
         return this;
@@ -89,6 +98,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateImageRecipeResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -99,6 +109,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateImageRecipeResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -109,6 +120,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object serviceException;
+
     public CreateImageRecipeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -119,6 +131,7 @@ public class CreateImageRecipeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateImageRecipeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -126,6 +139,7 @@ public class CreateImageRecipeResponse {
     
     
     public Integer statusCode;
+
     public CreateImageRecipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class CreateImageRecipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImageRecipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class CreateImageRecipeResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateImageRecipeResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CreateImageRecipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

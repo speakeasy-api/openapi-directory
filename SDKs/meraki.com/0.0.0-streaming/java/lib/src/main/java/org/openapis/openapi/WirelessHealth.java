@@ -59,11 +59,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientConnectionStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientConnectionStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientConnectionStats200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientLatencyStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientLatencyStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientLatencyStats200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientsConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientsConnectionStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientsConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientsConnectionStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientsConnectionStats200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkClientsLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientsLatencyStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkClientsLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkClientsLatencyStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkClientsLatencyStats200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkConnectionStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkConnectionStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkConnectionStats200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkDeviceConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDeviceConnectionStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkDeviceConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDeviceConnectionStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkDeviceConnectionStats200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,11 +323,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkDeviceLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDeviceLatencyStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkDeviceLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDeviceLatencyStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkDeviceLatencyStats200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,11 +367,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkDevicesConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDevicesConnectionStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkDevicesConnectionStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDevicesConnectionStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkDevicesConnectionStats200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,11 +411,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkDevicesLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDevicesLatencyStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkDevicesLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkDevicesLatencyStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkDevicesLatencyStats200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -473,11 +455,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkFailedConnectionsResponse res = new org.openapis.openapi.models.operations.GetNetworkFailedConnectionsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkFailedConnectionsResponse res = new org.openapis.openapi.models.operations.GetNetworkFailedConnectionsResponse(contentType, httpRes.statusCode()) {{
             getNetworkFailedConnections200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -519,11 +499,9 @@ public class WirelessHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkLatencyStatsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkLatencyStatsResponse res = new org.openapis.openapi.models.operations.GetNetworkLatencyStatsResponse(contentType, httpRes.statusCode()) {{
             getNetworkLatencyStats200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -181,4 +181,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartBatchJobResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateApplicationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateEnvironmentResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

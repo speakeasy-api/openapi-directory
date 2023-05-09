@@ -18,6 +18,7 @@ public class GlobalExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classLabel")
     public String classLabel;
+
     public GlobalExplanation withClassLabel(String classLabel) {
         this.classLabel = classLabel;
         return this;
@@ -29,9 +30,11 @@ public class GlobalExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanations")
     public Explanation[] explanations;
+
     public GlobalExplanation withExplanations(Explanation[] explanations) {
         this.explanations = explanations;
         return this;
     }
     
+    public GlobalExplanation(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HealthCheckDefaultApplicationJSON {
     @JsonProperty("code")
     public Integer code;
+
     public HealthCheckDefaultApplicationJSON withCode(Integer code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class HealthCheckDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public String fault;
+
     public HealthCheckDefaultApplicationJSON withFault(String fault) {
         this.fault = fault;
         return this;
@@ -29,6 +31,7 @@ public class HealthCheckDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public HealthCheckDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,15 @@ public class HealthCheckDefaultApplicationJSON {
     
     @JsonProperty("tag")
     public String tag;
+
     public HealthCheckDefaultApplicationJSON withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public HealthCheckDefaultApplicationJSON(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("tag") String tag) {
+        this.code = code;
+        this.message = message;
+        this.tag = tag;
+  }
 }

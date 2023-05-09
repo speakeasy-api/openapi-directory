@@ -18,9 +18,11 @@ public class GetPublisherProfilesByAccountIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profiles")
     public PublisherProfileApiProto[] profiles;
+
     public GetPublisherProfilesByAccountIdResponse withProfiles(PublisherProfileApiProto[] profiles) {
         this.profiles = profiles;
         return this;
     }
     
+    public GetPublisherProfilesByAccountIdResponse(){}
 }

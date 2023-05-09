@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteStackRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteStackActionEnum action;
+
     public GETDeleteStackRequest withAction(GETDeleteStackActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteStackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
     public String clientRequestToken;
+
     public GETDeleteStackRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteStackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetainResources")
     public String[] retainResources;
+
     public GETDeleteStackRequest withRetainResources(String[] retainResources) {
         this.retainResources = retainResources;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteStackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleARN")
     public String roleARN;
+
     public GETDeleteStackRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -49,6 +54,7 @@ public class GETDeleteStackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
     public String stackName;
+
     public GETDeleteStackRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -56,6 +62,7 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteStackVersionEnum version;
+
     public GETDeleteStackRequest withVersion(GETDeleteStackVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteStackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteStackRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteStackRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteStackRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteStackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteStackRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETDeleteStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteStackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteStackRequest(@JsonProperty("Action") GETDeleteStackActionEnum action, @JsonProperty("StackName") String stackName, @JsonProperty("Version") GETDeleteStackVersionEnum version) {
+        this.action = action;
+        this.stackName = stackName;
+        this.version = version;
+  }
 }

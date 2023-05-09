@@ -18,6 +18,7 @@ public class CreateBatchPaymentNewBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchName")
     public String batchName;
+
     public CreateBatchPaymentNewBatch withBatchName(String batchName) {
         this.batchName = batchName;
         return this;
@@ -29,17 +30,19 @@ public class CreateBatchPaymentNewBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public CreateBatchPaymentNewBatch withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
     
     /**
-     * GBP or EUR
+     * 3 digit ISO code for the currency you wish to send - GBP, EUR, USD, CAD, etc...
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public CreateBatchPaymentNewBatch withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -51,6 +54,7 @@ public class CreateBatchPaymentNewBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobNumber")
     public String jobNumber;
+
     public CreateBatchPaymentNewBatch withJobNumber(String jobNumber) {
         this.jobNumber = jobNumber;
         return this;
@@ -62,9 +66,11 @@ public class CreateBatchPaymentNewBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreateBatchPaymentNewBatchTypeEnum type;
+
     public CreateBatchPaymentNewBatch withType(CreateBatchPaymentNewBatchTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateBatchPaymentNewBatch(){}
 }

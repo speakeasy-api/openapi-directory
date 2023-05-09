@@ -12,6 +12,7 @@ public class RegisterRobotRequestBody {
      */
     @JsonProperty("fleet")
     public String fleet;
+
     public RegisterRobotRequestBody withFleet(String fleet) {
         this.fleet = fleet;
         return this;
@@ -22,9 +23,14 @@ public class RegisterRobotRequestBody {
      */
     @JsonProperty("robot")
     public String robot;
+
     public RegisterRobotRequestBody withRobot(String robot) {
         this.robot = robot;
         return this;
     }
     
+    public RegisterRobotRequestBody(@JsonProperty("fleet") String fleet, @JsonProperty("robot") String robot) {
+        this.fleet = fleet;
+        this.robot = robot;
+  }
 }

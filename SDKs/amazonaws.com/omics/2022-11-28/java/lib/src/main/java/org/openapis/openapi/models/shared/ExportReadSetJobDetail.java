@@ -22,6 +22,7 @@ public class ExportReadSetJobDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public ExportReadSetJobDetail withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class ExportReadSetJobDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ExportReadSetJobDetail withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class ExportReadSetJobDetail {
     
     @JsonProperty("destination")
     public String destination;
+
     public ExportReadSetJobDetail withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -45,6 +48,7 @@ public class ExportReadSetJobDetail {
     
     @JsonProperty("id")
     public String id;
+
     public ExportReadSetJobDetail withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class ExportReadSetJobDetail {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public ExportReadSetJobDetail withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -59,9 +64,17 @@ public class ExportReadSetJobDetail {
     
     @JsonProperty("status")
     public ReadSetExportJobStatusEnum status;
+
     public ExportReadSetJobDetail withStatus(ReadSetExportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ExportReadSetJobDetail(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("destination") String destination, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetExportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.destination = destination;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

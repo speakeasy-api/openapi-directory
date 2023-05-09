@@ -18,6 +18,7 @@ public class SubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public SubscriptionResponse withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class SubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public SubscriptionResponse withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class SubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public SubscriptionResponse withNext(String next) {
         this.next = next;
         return this;
@@ -51,6 +54,7 @@ public class SubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptions")
     public Subscription[] subscriptions;
+
     public SubscriptionResponse withSubscriptions(Subscription[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
@@ -62,9 +66,11 @@ public class SubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public SubscriptionResponse withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public SubscriptionResponse(){}
 }

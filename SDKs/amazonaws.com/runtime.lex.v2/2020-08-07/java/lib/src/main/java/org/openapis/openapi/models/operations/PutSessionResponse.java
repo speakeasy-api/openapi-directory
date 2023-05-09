@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSessionResponse {
@@ -12,6 +13,7 @@ public class PutSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public PutSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutSessionResponse {
      */
     
     public Object badGatewayException;
+
     public PutSessionResponse withBadGatewayException(Object badGatewayException) {
         this.badGatewayException = badGatewayException;
         return this;
@@ -32,6 +35,7 @@ public class PutSessionResponse {
      */
     
     public Object conflictException;
+
     public PutSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class PutSessionResponse {
     
     
     public String contentType;
+
     public PutSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class PutSessionResponse {
      */
     
     public Object dependencyFailedException;
+
     public PutSessionResponse withDependencyFailedException(Object dependencyFailedException) {
         this.dependencyFailedException = dependencyFailedException;
         return this;
@@ -59,6 +65,7 @@ public class PutSessionResponse {
      */
     
     public Object internalServerException;
+
     public PutSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class PutSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.PutSessionResponse putSessionResponse;
+
     public PutSessionResponse withPutSessionResponse(org.openapis.openapi.models.shared.PutSessionResponse putSessionResponse) {
         this.putSessionResponse = putSessionResponse;
         return this;
@@ -76,6 +84,7 @@ public class PutSessionResponse {
     
     
     public Integer statusCode;
+
     public PutSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class PutSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class PutSessionResponse {
      */
     
     public Object throttlingException;
+
     public PutSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class PutSessionResponse {
      */
     
     public Object validationException;
+
     public PutSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

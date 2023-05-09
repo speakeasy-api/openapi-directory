@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsUpdateResponse {
     
     public String contentType;
+
     public ProjectsUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsUpdateResponse {
     
     
     public Integer statusCode;
+
     public ProjectsUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsUpdateResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ProjectsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.Project project;
+
     public ProjectsUpdateResponse withProject(org.openapis.openapi.models.shared.Project project) {
         this.project = project;
         return this;
@@ -53,6 +59,7 @@ public class ProjectsUpdateResponse {
      */
     
     public ProjectsUpdate403ApplicationJSON projectsUpdate403ApplicationJSONObject;
+
     public ProjectsUpdateResponse withProjectsUpdate403ApplicationJSONObject(ProjectsUpdate403ApplicationJSON projectsUpdate403ApplicationJSONObject) {
         this.projectsUpdate403ApplicationJSONObject = projectsUpdate403ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ProjectsUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public ProjectsUpdateResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public ProjectsUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

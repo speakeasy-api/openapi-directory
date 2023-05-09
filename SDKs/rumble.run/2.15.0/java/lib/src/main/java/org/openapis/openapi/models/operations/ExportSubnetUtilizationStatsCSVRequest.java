@@ -12,9 +12,11 @@ public class ExportSubnetUtilizationStatsCSVRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mask")
     public String mask;
+
     public ExportSubnetUtilizationStatsCSVRequest withMask(String mask) {
         this.mask = mask;
         return this;
     }
     
+    public ExportSubnetUtilizationStatsCSVRequest(){}
 }

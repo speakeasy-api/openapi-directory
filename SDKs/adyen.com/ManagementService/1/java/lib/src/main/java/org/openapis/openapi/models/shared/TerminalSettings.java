@@ -15,6 +15,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardholderReceipt")
     public CardholderReceipt cardholderReceipt;
+
     public TerminalSettings withCardholderReceipt(CardholderReceipt cardholderReceipt) {
         this.cardholderReceipt = cardholderReceipt;
         return this;
@@ -23,6 +24,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectivity")
     public Connectivity connectivity;
+
     public TerminalSettings withConnectivity(Connectivity connectivity) {
         this.connectivity = connectivity;
         return this;
@@ -34,6 +36,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gratuities")
     public Gratuity[] gratuities;
+
     public TerminalSettings withGratuities(Gratuity[] gratuities) {
         this.gratuities = gratuities;
         return this;
@@ -42,6 +45,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardware")
     public Hardware hardware;
+
     public TerminalSettings withHardware(Hardware hardware) {
         this.hardware = hardware;
         return this;
@@ -50,6 +54,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nexo")
     public Nexo nexo;
+
     public TerminalSettings withNexo(Nexo nexo) {
         this.nexo = nexo;
         return this;
@@ -58,6 +63,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offlineProcessing")
     public OfflineProcessing offlineProcessing;
+
     public TerminalSettings withOfflineProcessing(OfflineProcessing offlineProcessing) {
         this.offlineProcessing = offlineProcessing;
         return this;
@@ -66,6 +72,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opi")
     public Opi opi;
+
     public TerminalSettings withOpi(Opi opi) {
         this.opi = opi;
         return this;
@@ -74,6 +81,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passcodes")
     public Passcodes passcodes;
+
     public TerminalSettings withPasscodes(Passcodes passcodes) {
         this.passcodes = passcodes;
         return this;
@@ -82,6 +90,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payAtTable")
     public PayAtTable payAtTable;
+
     public TerminalSettings withPayAtTable(PayAtTable payAtTable) {
         this.payAtTable = payAtTable;
         return this;
@@ -90,6 +99,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment")
     public Payment payment;
+
     public TerminalSettings withPayment(Payment payment) {
         this.payment = payment;
         return this;
@@ -98,6 +108,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiptOptions")
     public ReceiptOptions receiptOptions;
+
     public TerminalSettings withReceiptOptions(ReceiptOptions receiptOptions) {
         this.receiptOptions = receiptOptions;
         return this;
@@ -106,6 +117,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiptPrinting")
     public ReceiptPrinting receiptPrinting;
+
     public TerminalSettings withReceiptPrinting(ReceiptPrinting receiptPrinting) {
         this.receiptPrinting = receiptPrinting;
         return this;
@@ -114,6 +126,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public Signature signature;
+
     public TerminalSettings withSignature(Signature signature) {
         this.signature = signature;
         return this;
@@ -122,6 +135,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standalone")
     public Standalone standalone;
+
     public TerminalSettings withStandalone(Standalone standalone) {
         this.standalone = standalone;
         return this;
@@ -130,6 +144,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surcharge")
     public Surcharge surcharge;
+
     public TerminalSettings withSurcharge(Surcharge surcharge) {
         this.surcharge = surcharge;
         return this;
@@ -138,6 +153,7 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeouts")
     public Timeouts timeouts;
+
     public TerminalSettings withTimeouts(Timeouts timeouts) {
         this.timeouts = timeouts;
         return this;
@@ -146,9 +162,11 @@ public class TerminalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiProfiles")
     public WifiProfiles wifiProfiles;
+
     public TerminalSettings withWifiProfiles(WifiProfiles wifiProfiles) {
         this.wifiProfiles = wifiProfiles;
         return this;
     }
     
+    public TerminalSettings(){}
 }

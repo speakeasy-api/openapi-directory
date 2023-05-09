@@ -12,6 +12,7 @@ public class ElectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ElectionSummary withCount(Integer count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class ElectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disbursements")
     public Double disbursements;
+
     public ElectionSummary withDisbursements(Double disbursements) {
         this.disbursements = disbursements;
         return this;
@@ -28,6 +30,7 @@ public class ElectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("independent_expenditures")
     public Double independentExpenditures;
+
     public ElectionSummary withIndependentExpenditures(Double independentExpenditures) {
         this.independentExpenditures = independentExpenditures;
         return this;
@@ -36,9 +39,11 @@ public class ElectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipts")
     public Double receipts;
+
     public ElectionSummary withReceipts(Double receipts) {
         this.receipts = receipts;
         return this;
     }
     
+    public ElectionSummary(){}
 }

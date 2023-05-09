@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * SecretScanningAlertResolutionEnum - **Required when the `state` is `resolved`.** The reason for resolving the alert.
  */
 public enum SecretScanningAlertResolutionEnum {
-    NULL_("null"),
+    LESS_THAN_NIL_GREATER_THAN("<nil>"),
     FALSE_POSITIVE("false_positive"),
     WONT_FIX("wont_fix"),
     REVOKED("revoked"),

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebACLSummary {
     @JsonProperty("Name")
     public String name;
+
     public WebACLSummary withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class WebACLSummary {
     
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public WebACLSummary withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public WebACLSummary(@JsonProperty("Name") String name, @JsonProperty("WebACLId") String webACLId) {
+        this.name = name;
+        this.webACLId = webACLId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolPatchRequest {
@@ -12,6 +13,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public PoolPatchRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public PoolPatchRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public PoolPatchRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public PoolPatchRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PoolPatchParameter poolPatchParameter;
+
     public PoolPatchRequest withPoolPatchParameter(org.openapis.openapi.models.shared.PoolPatchParameter poolPatchParameter) {
         this.poolPatchParameter = poolPatchParameter;
         return this;
@@ -62,6 +68,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolPatchRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -72,6 +79,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolPatchRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -82,6 +90,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolPatchRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -92,6 +101,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public PoolPatchRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -102,6 +112,7 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolPatchRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -112,9 +123,15 @@ public class PoolPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolPatchRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolPatchRequest(@JsonProperty("PoolPatchParameter") org.openapis.openapi.models.shared.PoolPatchParameter poolPatchParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("poolId") String poolId) {
+        this.poolPatchParameter = poolPatchParameter;
+        this.apiVersion = apiVersion;
+        this.poolId = poolId;
+  }
 }

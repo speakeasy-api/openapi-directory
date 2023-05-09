@@ -18,6 +18,7 @@ public class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayedDeviceDoze")
     public Float delayedDeviceDoze;
+
     public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents withDelayedDeviceDoze(Float delayedDeviceDoze) {
         this.delayedDeviceDoze = delayedDeviceDoze;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayedDeviceOffline")
     public Float delayedDeviceOffline;
+
     public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents withDelayedDeviceOffline(Float delayedDeviceOffline) {
         this.delayedDeviceOffline = delayedDeviceOffline;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayedMessageThrottled")
     public Float delayedMessageThrottled;
+
     public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents withDelayedMessageThrottled(Float delayedMessageThrottled) {
         this.delayedMessageThrottled = delayedMessageThrottled;
         return this;
@@ -51,6 +54,7 @@ public class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayedUserStopped")
     public Float delayedUserStopped;
+
     public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents withDelayedUserStopped(Float delayedUserStopped) {
         this.delayedUserStopped = delayedUserStopped;
         return this;
@@ -62,9 +66,11 @@ public class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveredNoDelay")
     public Float deliveredNoDelay;
+
     public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents withDeliveredNoDelay(Float deliveredNoDelay) {
         this.deliveredNoDelay = deliveredNoDelay;
         return this;
     }
     
+    public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents(){}
 }

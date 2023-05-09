@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResponsePlanSummary {
     @JsonProperty("arn")
     public String arn;
+
     public ResponsePlanSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class ResponsePlanSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ResponsePlanSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +31,14 @@ public class ResponsePlanSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ResponsePlanSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ResponsePlanSummary(@JsonProperty("arn") String arn, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.name = name;
+  }
 }

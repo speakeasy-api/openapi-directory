@@ -12,9 +12,11 @@ public class OBReadDataStandingOrder5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandingOrder")
     public OBStandingOrder5[] standingOrder;
+
     public OBReadDataStandingOrder5 withStandingOrder(OBStandingOrder5[] standingOrder) {
         this.standingOrder = standingOrder;
         return this;
     }
     
+    public OBReadDataStandingOrder5(){}
 }

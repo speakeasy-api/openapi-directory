@@ -15,6 +15,7 @@ public class ListDatabasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public ListDatabasesRequestBody withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,6 +27,7 @@ public class ListDatabasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentId")
     public String componentId;
+
     public ListDatabasesRequestBody withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -37,6 +39,7 @@ public class ListDatabasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDatabasesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,9 +51,11 @@ public class ListDatabasesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatabasesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDatabasesRequestBody(){}
 }

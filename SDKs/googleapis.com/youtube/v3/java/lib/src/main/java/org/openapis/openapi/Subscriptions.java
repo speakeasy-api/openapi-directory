@@ -59,10 +59,8 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeSubscriptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeSubscriptionsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeSubscriptionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeSubscriptionsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeSubscriptionsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeSubscriptionsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeSubscriptionsInsertResponse(contentType, httpRes.statusCode()) {{
             subscription = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeSubscriptionsListResponse res = new org.openapis.openapi.models.operations.YoutubeSubscriptionsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeSubscriptionsListResponse res = new org.openapis.openapi.models.operations.YoutubeSubscriptionsListResponse(contentType, httpRes.statusCode()) {{
             subscriptionListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

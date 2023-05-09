@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNodeCount")
     public Integer maxNodeCount;
+
     public GoogleCloudConnectorsV1NodeConfig withMaxNodeCount(Integer maxNodeCount) {
         this.maxNodeCount = maxNodeCount;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudConnectorsV1NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodeCount")
     public Integer minNodeCount;
+
     public GoogleCloudConnectorsV1NodeConfig withMinNodeCount(Integer minNodeCount) {
         this.minNodeCount = minNodeCount;
         return this;
     }
     
+    public GoogleCloudConnectorsV1NodeConfig(){}
 }

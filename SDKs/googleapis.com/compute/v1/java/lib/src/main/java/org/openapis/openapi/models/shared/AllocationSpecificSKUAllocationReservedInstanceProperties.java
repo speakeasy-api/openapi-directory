@@ -18,6 +18,7 @@ public class AllocationSpecificSKUAllocationReservedInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAccelerators")
     public AcceleratorConfig[] guestAccelerators;
+
     public AllocationSpecificSKUAllocationReservedInstanceProperties withGuestAccelerators(AcceleratorConfig[] guestAccelerators) {
         this.guestAccelerators = guestAccelerators;
         return this;
@@ -29,6 +30,7 @@ public class AllocationSpecificSKUAllocationReservedInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localSsds")
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk[] localSsds;
+
     public AllocationSpecificSKUAllocationReservedInstanceProperties withLocalSsds(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk[] localSsds) {
         this.localSsds = localSsds;
         return this;
@@ -40,6 +42,7 @@ public class AllocationSpecificSKUAllocationReservedInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationHint")
     public String locationHint;
+
     public AllocationSpecificSKUAllocationReservedInstanceProperties withLocationHint(String locationHint) {
         this.locationHint = locationHint;
         return this;
@@ -51,6 +54,7 @@ public class AllocationSpecificSKUAllocationReservedInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public AllocationSpecificSKUAllocationReservedInstanceProperties withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -62,9 +66,11 @@ public class AllocationSpecificSKUAllocationReservedInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public AllocationSpecificSKUAllocationReservedInstanceProperties withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
     }
     
+    public AllocationSpecificSKUAllocationReservedInstanceProperties(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrUpdateAnnotationRequest {
@@ -12,6 +13,7 @@ public class CreateOrUpdateAnnotationRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CreateOrUpdateAnnotationRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrUpdateAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=annotationId")
     public String annotationId;
+
     public CreateOrUpdateAnnotationRequest withAnnotationId(String annotationId) {
         this.annotationId = annotationId;
         return this;
@@ -32,6 +35,7 @@ public class CreateOrUpdateAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public CreateOrUpdateAnnotationRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -42,6 +46,7 @@ public class CreateOrUpdateAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public CreateOrUpdateAnnotationRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -52,6 +57,7 @@ public class CreateOrUpdateAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public String reportId;
+
     public CreateOrUpdateAnnotationRequest withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -62,9 +68,18 @@ public class CreateOrUpdateAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public CreateOrUpdateAnnotationRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public CreateOrUpdateAnnotationRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("annotationId") String annotationId, @JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("reportId") String reportId, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.annotationId = annotationId;
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.reportId = reportId;
+        this.workspace = workspace;
+  }
 }

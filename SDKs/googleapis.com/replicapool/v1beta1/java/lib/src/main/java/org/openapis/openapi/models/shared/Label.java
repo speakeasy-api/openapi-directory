@@ -18,6 +18,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Label withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Label withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Label(){}
 }

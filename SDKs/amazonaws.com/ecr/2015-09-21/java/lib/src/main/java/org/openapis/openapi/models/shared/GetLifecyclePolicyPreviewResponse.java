@@ -15,6 +15,7 @@ public class GetLifecyclePolicyPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecyclePolicyText")
     public String lifecyclePolicyText;
+
     public GetLifecyclePolicyPreviewResponse withLifecyclePolicyText(String lifecyclePolicyText) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         return this;
@@ -23,6 +24,7 @@ public class GetLifecyclePolicyPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetLifecyclePolicyPreviewResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,6 +33,7 @@ public class GetLifecyclePolicyPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previewResults")
     public LifecyclePolicyPreviewResult[] previewResults;
+
     public GetLifecyclePolicyPreviewResponse withPreviewResults(LifecyclePolicyPreviewResult[] previewResults) {
         this.previewResults = previewResults;
         return this;
@@ -39,6 +42,7 @@ public class GetLifecyclePolicyPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetLifecyclePolicyPreviewResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -47,6 +51,7 @@ public class GetLifecyclePolicyPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetLifecyclePolicyPreviewResponse withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -55,6 +60,7 @@ public class GetLifecyclePolicyPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public LifecyclePolicyPreviewStatusEnum status;
+
     public GetLifecyclePolicyPreviewResponse withStatus(LifecyclePolicyPreviewStatusEnum status) {
         this.status = status;
         return this;
@@ -63,9 +69,11 @@ public class GetLifecyclePolicyPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public LifecyclePolicyPreviewSummary summary;
+
     public GetLifecyclePolicyPreviewResponse withSummary(LifecyclePolicyPreviewSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public GetLifecyclePolicyPreviewResponse(){}
 }

@@ -20,6 +20,7 @@ public class HomeRegionControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlId")
     public String controlId;
+
     public HomeRegionControl withControlId(String controlId) {
         this.controlId = controlId;
         return this;
@@ -28,6 +29,7 @@ public class HomeRegionControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public HomeRegionControl withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -38,6 +40,7 @@ public class HomeRegionControl {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedTime")
     public OffsetDateTime requestedTime;
+
     public HomeRegionControl withRequestedTime(OffsetDateTime requestedTime) {
         this.requestedTime = requestedTime;
         return this;
@@ -46,9 +49,11 @@ public class HomeRegionControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public Target target;
+
     public HomeRegionControl withTarget(Target target) {
         this.target = target;
         return this;
     }
     
+    public HomeRegionControl(){}
 }

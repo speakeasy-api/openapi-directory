@@ -18,9 +18,11 @@ public class ProjectRequestCurrentStatusUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectRequestCurrentStatusUpdateInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectRequestCurrentStatusUpdateInput(){}
 }

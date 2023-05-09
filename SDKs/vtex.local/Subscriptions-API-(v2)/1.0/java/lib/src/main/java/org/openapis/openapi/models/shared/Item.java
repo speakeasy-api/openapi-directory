@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Item {
     @JsonProperty("endpoint")
     public String endpoint;
+
     public Item withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -16,6 +17,7 @@ public class Item {
     
     @JsonProperty("priceAtSubscriptionDate")
     public Integer priceAtSubscriptionDate;
+
     public Item withPriceAtSubscriptionDate(Integer priceAtSubscriptionDate) {
         this.priceAtSubscriptionDate = priceAtSubscriptionDate;
         return this;
@@ -23,6 +25,7 @@ public class Item {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -30,6 +33,7 @@ public class Item {
     
     @JsonProperty("sellingPrice")
     public Integer sellingPrice;
+
     public Item withSellingPrice(Integer sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -37,9 +41,17 @@ public class Item {
     
     @JsonProperty("sku")
     public Sku sku;
+
     public Item withSku(Sku sku) {
         this.sku = sku;
         return this;
     }
     
+    public Item(@JsonProperty("endpoint") String endpoint, @JsonProperty("priceAtSubscriptionDate") Integer priceAtSubscriptionDate, @JsonProperty("quantity") Integer quantity, @JsonProperty("sellingPrice") Integer sellingPrice, @JsonProperty("sku") Sku sku) {
+        this.endpoint = endpoint;
+        this.priceAtSubscriptionDate = priceAtSubscriptionDate;
+        this.quantity = quantity;
+        this.sellingPrice = sellingPrice;
+        this.sku = sku;
+  }
 }

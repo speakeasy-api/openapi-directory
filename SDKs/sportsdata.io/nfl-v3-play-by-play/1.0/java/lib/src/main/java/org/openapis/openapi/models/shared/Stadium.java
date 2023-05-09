@@ -12,6 +12,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public Stadium withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -20,6 +21,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Stadium withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Stadium withCountry(String country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLat")
     public Double geoLat;
+
     public Stadium withGeoLat(Double geoLat) {
         this.geoLat = geoLat;
         return this;
@@ -44,6 +48,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLong")
     public Double geoLong;
+
     public Stadium withGeoLong(Double geoLong) {
         this.geoLong = geoLong;
         return this;
@@ -52,6 +57,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Stadium withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +66,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayingSurface")
     public String playingSurface;
+
     public Stadium withPlayingSurface(String playingSurface) {
         this.playingSurface = playingSurface;
         return this;
@@ -68,6 +75,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StadiumID")
     public Long stadiumID;
+
     public Stadium withStadiumID(Long stadiumID) {
         this.stadiumID = stadiumID;
         return this;
@@ -76,6 +84,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Stadium withState(String state) {
         this.state = state;
         return this;
@@ -84,9 +93,11 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Stadium withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Stadium(){}
 }

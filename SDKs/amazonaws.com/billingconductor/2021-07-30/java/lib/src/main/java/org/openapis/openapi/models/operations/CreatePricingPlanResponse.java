@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePricingPlanResponse {
@@ -12,6 +13,7 @@ public class CreatePricingPlanResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePricingPlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreatePricingPlanResponse {
      */
     
     public Object conflictException;
+
     public CreatePricingPlanResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreatePricingPlanResponse {
     
     
     public String contentType;
+
     public CreatePricingPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreatePricingPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePricingPlanOutput createPricingPlanOutput;
+
     public CreatePricingPlanResponse withCreatePricingPlanOutput(org.openapis.openapi.models.shared.CreatePricingPlanOutput createPricingPlanOutput) {
         this.createPricingPlanOutput = createPricingPlanOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreatePricingPlanResponse {
      */
     
     public Object internalServerException;
+
     public CreatePricingPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePricingPlanResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePricingPlanResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePricingPlanResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public CreatePricingPlanResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreatePricingPlanResponse {
     
     
     public Integer statusCode;
+
     public CreatePricingPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreatePricingPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePricingPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreatePricingPlanResponse {
      */
     
     public Object throttlingException;
+
     public CreatePricingPlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreatePricingPlanResponse {
      */
     
     public Object validationException;
+
     public CreatePricingPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePricingPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

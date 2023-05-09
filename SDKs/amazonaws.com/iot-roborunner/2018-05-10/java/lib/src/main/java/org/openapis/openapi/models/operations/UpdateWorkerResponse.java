@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkerResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkerResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorkerResponse {
     
     
     public String contentType;
+
     public UpdateWorkerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkerResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateWorkerResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateWorkerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorkerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkerResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkerResponse updateWorkerResponse;
+
     public UpdateWorkerResponse withUpdateWorkerResponse(org.openapis.openapi.models.shared.UpdateWorkerResponse updateWorkerResponse) {
         this.updateWorkerResponse = updateWorkerResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateWorkerResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

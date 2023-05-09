@@ -18,6 +18,7 @@ public class TargetInstancesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public TargetInstancesScopedListWarningCodeEnum code;
+
     public TargetInstancesScopedListWarning withCode(TargetInstancesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class TargetInstancesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TargetInstancesScopedListWarningData[] data;
+
     public TargetInstancesScopedListWarning withData(TargetInstancesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class TargetInstancesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TargetInstancesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TargetInstancesScopedListWarning(){}
 }

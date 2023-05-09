@@ -18,9 +18,11 @@ public class BucketLifecycleRuleAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public BucketLifecycleRuleAction withType(String type) {
         this.type = type;
         return this;
     }
     
+    public BucketLifecycleRuleAction(){}
 }

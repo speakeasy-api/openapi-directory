@@ -15,6 +15,7 @@ public class DetectTextFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionsOfInterest")
     public RegionOfInterest[] regionsOfInterest;
+
     public DetectTextFilters withRegionsOfInterest(RegionOfInterest[] regionsOfInterest) {
         this.regionsOfInterest = regionsOfInterest;
         return this;
@@ -26,9 +27,11 @@ public class DetectTextFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WordFilter")
     public DetectionFilter wordFilter;
+
     public DetectTextFilters withWordFilter(DetectionFilter wordFilter) {
         this.wordFilter = wordFilter;
         return this;
     }
     
+    public DetectTextFilters(){}
 }

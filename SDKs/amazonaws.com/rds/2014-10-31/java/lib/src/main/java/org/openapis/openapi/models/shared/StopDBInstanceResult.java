@@ -15,9 +15,11 @@ public class StopDBInstanceResult {
      */
     
     public DBInstance dbInstance;
+
     public StopDBInstanceResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public StopDBInstanceResult(){}
 }

@@ -57,14 +57,12 @@ public class Cabwise {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CabwiseGetResponse res = new org.openapis.openapi.models.operations.CabwiseGetResponse() {{
+        org.openapis.openapi.models.operations.CabwiseGetResponse res = new org.openapis.openapi.models.operations.CabwiseGetResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

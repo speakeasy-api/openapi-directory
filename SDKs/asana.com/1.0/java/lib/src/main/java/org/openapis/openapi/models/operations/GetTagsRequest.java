@@ -13,6 +13,7 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTagsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +26,7 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTagsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +39,7 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetTagsRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +51,7 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetTagsRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,9 +62,11 @@ public class GetTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetTagsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetTagsRequest(){}
 }

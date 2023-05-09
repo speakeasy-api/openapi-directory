@@ -15,9 +15,11 @@ public class AnalyticsEventProperties200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_properties")
     public String[] eventProperties;
+
     public AnalyticsEventProperties200ApplicationJSON withEventProperties(String[] eventProperties) {
         this.eventProperties = eventProperties;
         return this;
     }
     
+    public AnalyticsEventProperties200ApplicationJSON(){}
 }

@@ -22,6 +22,7 @@ public class SecurityConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimeStamp")
     public OffsetDateTime createdTimeStamp;
+
     public SecurityConfiguration withCreatedTimeStamp(OffsetDateTime createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
         return this;
@@ -30,6 +31,7 @@ public class SecurityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public SecurityConfiguration withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -38,9 +40,11 @@ public class SecurityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SecurityConfiguration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SecurityConfiguration(){}
 }

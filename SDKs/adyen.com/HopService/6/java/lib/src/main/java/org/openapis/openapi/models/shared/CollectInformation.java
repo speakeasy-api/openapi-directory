@@ -15,6 +15,7 @@ public class CollectInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankDetails")
     public Boolean bankDetails;
+
     public CollectInformation withBankDetails(Boolean bankDetails) {
         this.bankDetails = bankDetails;
         return this;
@@ -26,6 +27,7 @@ public class CollectInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDetails")
     public Boolean businessDetails;
+
     public CollectInformation withBusinessDetails(Boolean businessDetails) {
         this.businessDetails = businessDetails;
         return this;
@@ -37,6 +39,7 @@ public class CollectInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualDetails")
     public Boolean individualDetails;
+
     public CollectInformation withIndividualDetails(Boolean individualDetails) {
         this.individualDetails = individualDetails;
         return this;
@@ -48,6 +51,7 @@ public class CollectInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementDetails")
     public Boolean legalArrangementDetails;
+
     public CollectInformation withLegalArrangementDetails(Boolean legalArrangementDetails) {
         this.legalArrangementDetails = legalArrangementDetails;
         return this;
@@ -59,6 +63,7 @@ public class CollectInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pciQuestionnaire")
     public Boolean pciQuestionnaire;
+
     public CollectInformation withPciQuestionnaire(Boolean pciQuestionnaire) {
         this.pciQuestionnaire = pciQuestionnaire;
         return this;
@@ -70,9 +75,11 @@ public class CollectInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderDetails")
     public Boolean shareholderDetails;
+
     public CollectInformation withShareholderDetails(Boolean shareholderDetails) {
         this.shareholderDetails = shareholderDetails;
         return this;
     }
     
+    public CollectInformation(){}
 }

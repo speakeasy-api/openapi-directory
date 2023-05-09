@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateThingShadowResponse {
@@ -12,6 +13,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object conflictException;
+
     public UpdateThingShadowResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateThingShadowResponse {
     
     
     public String contentType;
+
     public UpdateThingShadowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateThingShadowResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateThingShadowResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateThingShadowResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object requestEntityTooLargeException;
+
     public UpdateThingShadowResponse withRequestEntityTooLargeException(Object requestEntityTooLargeException) {
         this.requestEntityTooLargeException = requestEntityTooLargeException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateThingShadowResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateThingShadowResponse {
     
     
     public Integer statusCode;
+
     public UpdateThingShadowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateThingShadowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateThingShadowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object throttlingException;
+
     public UpdateThingShadowResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateThingShadowResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateThingShadowResponse {
      */
     
     public Object unsupportedDocumentEncodingException;
+
     public UpdateThingShadowResponse withUnsupportedDocumentEncodingException(Object unsupportedDocumentEncodingException) {
         this.unsupportedDocumentEncodingException = unsupportedDocumentEncodingException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateThingShadowResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateThingShadowResponse updateThingShadowResponse;
+
     public UpdateThingShadowResponse withUpdateThingShadowResponse(org.openapis.openapi.models.shared.UpdateThingShadowResponse updateThingShadowResponse) {
         this.updateThingShadowResponse = updateThingShadowResponse;
         return this;
     }
     
+    public UpdateThingShadowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

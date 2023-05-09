@@ -18,6 +18,7 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public DateRange withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -29,6 +30,7 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DateRange withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public DateRange withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public DateRange(){}
 }

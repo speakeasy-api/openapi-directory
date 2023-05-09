@@ -18,6 +18,7 @@ public class ClientInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ClientInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class ClientInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerClientId")
     public String partnerClientId;
+
     public ClientInput withPartnerClientId(String partnerClientId) {
         this.partnerClientId = partnerClientId;
         return this;
@@ -40,6 +42,7 @@ public class ClientInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public ClientRoleEnum role;
+
     public ClientInput withRole(ClientRoleEnum role) {
         this.role = role;
         return this;
@@ -51,9 +54,11 @@ public class ClientInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerVisible")
     public Boolean sellerVisible;
+
     public ClientInput withSellerVisible(Boolean sellerVisible) {
         this.sellerVisible = sellerVisible;
         return this;
     }
     
+    public ClientInput(){}
 }

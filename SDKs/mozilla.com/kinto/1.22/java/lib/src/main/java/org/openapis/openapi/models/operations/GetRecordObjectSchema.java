@@ -15,6 +15,7 @@ public class GetRecordObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public GetRecordObjectSchema withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetRecordObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GetRecordObjectSchemaPermissions permissions;
+
     public GetRecordObjectSchema withPermissions(GetRecordObjectSchemaPermissions permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GetRecordObjectSchema(){}
 }

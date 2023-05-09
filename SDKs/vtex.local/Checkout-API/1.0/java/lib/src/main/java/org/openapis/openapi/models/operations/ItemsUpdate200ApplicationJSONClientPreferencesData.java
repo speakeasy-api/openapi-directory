@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONClientPreferencesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public ItemsUpdate200ApplicationJSONClientPreferencesData withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -29,9 +30,11 @@ public class ItemsUpdate200ApplicationJSONClientPreferencesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optinNewsLetter")
     public Boolean optinNewsLetter;
+
     public ItemsUpdate200ApplicationJSONClientPreferencesData withOptinNewsLetter(Boolean optinNewsLetter) {
         this.optinNewsLetter = optinNewsLetter;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONClientPreferencesData(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomActionTypeResponse {
@@ -12,6 +13,7 @@ public class CreateCustomActionTypeResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateCustomActionTypeResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateCustomActionTypeResponse {
     
     
     public String contentType;
+
     public CreateCustomActionTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomActionTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomActionTypeOutput createCustomActionTypeOutput;
+
     public CreateCustomActionTypeResponse withCreateCustomActionTypeOutput(org.openapis.openapi.models.shared.CreateCustomActionTypeOutput createCustomActionTypeOutput) {
         this.createCustomActionTypeOutput = createCustomActionTypeOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomActionTypeResponse {
      */
     
     public Object invalidTagsException;
+
     public CreateCustomActionTypeResponse withInvalidTagsException(Object invalidTagsException) {
         this.invalidTagsException = invalidTagsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomActionTypeResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCustomActionTypeResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateCustomActionTypeResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomActionTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateCustomActionTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomActionTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateCustomActionTypeResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateCustomActionTypeResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateCustomActionTypeResponse {
      */
     
     public Object validationException;
+
     public CreateCustomActionTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateCustomActionTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

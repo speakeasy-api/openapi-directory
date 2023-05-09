@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckForNotificationsResponse {
     
     public byte[] body;
+
     public CheckForNotificationsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CheckForNotificationsResponse {
     
     
     public String contentType;
+
     public CheckForNotificationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CheckForNotificationsResponse {
     
     
     public Integer statusCode;
+
     public CheckForNotificationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class CheckForNotificationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckForNotificationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class CheckForNotificationsResponse {
      */
     
     public String checkForNotifications400WildcardString;
+
     public CheckForNotificationsResponse withCheckForNotifications400WildcardString(String checkForNotifications400WildcardString) {
         this.checkForNotifications400WildcardString = checkForNotifications400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class CheckForNotificationsResponse {
      */
     
     public String checkForNotifications401WildcardString;
+
     public CheckForNotificationsResponse withCheckForNotifications401WildcardString(String checkForNotifications401WildcardString) {
         this.checkForNotifications401WildcardString = checkForNotifications401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class CheckForNotificationsResponse {
      */
     
     public String checkForNotifications404WildcardString;
+
     public CheckForNotificationsResponse withCheckForNotifications404WildcardString(String checkForNotifications404WildcardString) {
         this.checkForNotifications404WildcardString = checkForNotifications404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class CheckForNotificationsResponse {
      */
     
     public String checkForNotifications409WildcardString;
+
     public CheckForNotificationsResponse withCheckForNotifications409WildcardString(String checkForNotifications409WildcardString) {
         this.checkForNotifications409WildcardString = checkForNotifications409WildcardString;
         return this;
     }
     
+    public CheckForNotificationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

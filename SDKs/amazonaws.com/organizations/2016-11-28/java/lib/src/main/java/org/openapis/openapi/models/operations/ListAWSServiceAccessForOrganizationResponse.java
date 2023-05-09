@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAWSServiceAccessForOrganizationResponse {
@@ -12,6 +13,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListAWSServiceAccessForOrganizationResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAWSServiceAccessForOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public Object constraintViolationException;
+
     public ListAWSServiceAccessForOrganizationResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -39,6 +43,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
     
     
     public String contentType;
+
     public ListAWSServiceAccessForOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public Object invalidInputException;
+
     public ListAWSServiceAccessForOrganizationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAWSServiceAccessForOrganizationResponse listAWSServiceAccessForOrganizationResponse;
+
     public ListAWSServiceAccessForOrganizationResponse withListAWSServiceAccessForOrganizationResponse(org.openapis.openapi.models.shared.ListAWSServiceAccessForOrganizationResponse listAWSServiceAccessForOrganizationResponse) {
         this.listAWSServiceAccessForOrganizationResponse = listAWSServiceAccessForOrganizationResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public Object serviceException;
+
     public ListAWSServiceAccessForOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
     
     
     public Integer statusCode;
+
     public ListAWSServiceAccessForOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAWSServiceAccessForOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListAWSServiceAccessForOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class ListAWSServiceAccessForOrganizationResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public ListAWSServiceAccessForOrganizationResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public ListAWSServiceAccessForOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

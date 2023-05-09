@@ -15,6 +15,7 @@ public class HidBenefitNameSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benefitId")
     public String benefitId;
+
     public HidBenefitNameSearchRequest withBenefitId(String benefitId) {
         this.benefitId = benefitId;
         return this;
@@ -23,9 +24,11 @@ public class HidBenefitNameSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthId")
     public String healthId;
+
     public HidBenefitNameSearchRequest withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
     }
     
+    public HidBenefitNameSearchRequest(){}
 }

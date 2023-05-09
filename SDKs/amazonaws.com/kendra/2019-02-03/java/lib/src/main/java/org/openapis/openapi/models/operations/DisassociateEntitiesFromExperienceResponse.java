@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateEntitiesFromExperienceResponse {
@@ -12,6 +13,7 @@ public class DisassociateEntitiesFromExperienceResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateEntitiesFromExperienceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateEntitiesFromExperienceResponse {
     
     
     public String contentType;
+
     public DisassociateEntitiesFromExperienceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateEntitiesFromExperienceResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateEntitiesFromExperienceResponse disassociateEntitiesFromExperienceResponse;
+
     public DisassociateEntitiesFromExperienceResponse withDisassociateEntitiesFromExperienceResponse(org.openapis.openapi.models.shared.DisassociateEntitiesFromExperienceResponse disassociateEntitiesFromExperienceResponse) {
         this.disassociateEntitiesFromExperienceResponse = disassociateEntitiesFromExperienceResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateEntitiesFromExperienceResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateEntitiesFromExperienceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateEntitiesFromExperienceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateEntitiesFromExperienceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisassociateEntitiesFromExperienceResponse {
     
     
     public Integer statusCode;
+
     public DisassociateEntitiesFromExperienceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateEntitiesFromExperienceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateEntitiesFromExperienceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateEntitiesFromExperienceResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateEntitiesFromExperienceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateEntitiesFromExperienceResponse {
      */
     
     public Object validationException;
+
     public DisassociateEntitiesFromExperienceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateEntitiesFromExperienceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

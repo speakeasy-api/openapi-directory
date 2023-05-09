@@ -15,6 +15,7 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingCriteria")
     public ListFindingsRequestBodyFindingCriteria findingCriteria;
+
     public ListFindingsRequestBody withFindingCriteria(ListFindingsRequestBodyFindingCriteria findingCriteria) {
         this.findingCriteria = findingCriteria;
         return this;
@@ -26,6 +27,7 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListFindingsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFindingsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortCriteria")
     public ListFindingsRequestBodySortCriteria sortCriteria;
+
     public ListFindingsRequestBody withSortCriteria(ListFindingsRequestBodySortCriteria sortCriteria) {
         this.sortCriteria = sortCriteria;
         return this;
     }
     
+    public ListFindingsRequestBody(){}
 }

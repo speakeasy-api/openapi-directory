@@ -18,6 +18,7 @@ public class PriceCompetitiveness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benchmarkPriceCurrencyCode")
     public String benchmarkPriceCurrencyCode;
+
     public PriceCompetitiveness withBenchmarkPriceCurrencyCode(String benchmarkPriceCurrencyCode) {
         this.benchmarkPriceCurrencyCode = benchmarkPriceCurrencyCode;
         return this;
@@ -29,6 +30,7 @@ public class PriceCompetitiveness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benchmarkPriceMicros")
     public String benchmarkPriceMicros;
+
     public PriceCompetitiveness withBenchmarkPriceMicros(String benchmarkPriceMicros) {
         this.benchmarkPriceMicros = benchmarkPriceMicros;
         return this;
@@ -40,9 +42,11 @@ public class PriceCompetitiveness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public PriceCompetitiveness withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
     
+    public PriceCompetitiveness(){}
 }

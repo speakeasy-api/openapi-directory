@@ -18,6 +18,7 @@ public class CustomPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public CustomPage withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class CustomPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public CustomPage withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -40,6 +42,7 @@ public class CustomPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public String html;
+
     public CustomPage withHtml(String html) {
         this.html = html;
         return this;
@@ -51,6 +54,7 @@ public class CustomPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("htmlmode")
     public Boolean htmlmode;
+
     public CustomPage withHtmlmode(Boolean htmlmode) {
         this.htmlmode = htmlmode;
         return this;
@@ -61,9 +65,13 @@ public class CustomPage {
      */
     @JsonProperty("title")
     public String title;
+
     public CustomPage withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CustomPage(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

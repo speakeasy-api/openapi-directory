@@ -18,6 +18,7 @@ public class DescribeQueryDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeQueryDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class DescribeQueryDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryDefinitions")
     public QueryDefinition[] queryDefinitions;
+
     public DescribeQueryDefinitionsResponse withQueryDefinitions(QueryDefinition[] queryDefinitions) {
         this.queryDefinitions = queryDefinitions;
         return this;
     }
     
+    public DescribeQueryDefinitionsResponse(){}
 }

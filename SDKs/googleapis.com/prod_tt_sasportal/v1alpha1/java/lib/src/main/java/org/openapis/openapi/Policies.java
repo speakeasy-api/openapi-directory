@@ -61,11 +61,9 @@ public class Policies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalPoliciesGetResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalPoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalPoliciesGetResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalPoliciesGetResponse(contentType, httpRes.statusCode()) {{
             sasPortalPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Policies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalPoliciesSetResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalPoliciesSetResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalPoliciesSetResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalPoliciesSetResponse(contentType, httpRes.statusCode()) {{
             sasPortalPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Policies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalPoliciesTestResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalPoliciesTestResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalPoliciesTestResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalPoliciesTestResponse(contentType, httpRes.statusCode()) {{
             sasPortalTestPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

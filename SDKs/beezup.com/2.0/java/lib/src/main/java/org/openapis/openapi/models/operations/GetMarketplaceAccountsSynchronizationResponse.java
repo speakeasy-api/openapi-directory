@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMarketplaceAccountsSynchronizationResponse {
@@ -12,6 +13,7 @@ public class GetMarketplaceAccountsSynchronizationResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetMarketplaceAccountsSynchronizationResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetMarketplaceAccountsSynchronizationResponse {
     
     
     public String contentType;
+
     public GetMarketplaceAccountsSynchronizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetMarketplaceAccountsSynchronizationResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetMarketplaceAccountsSynchronizationResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetMarketplaceAccountsSynchronizationResponse {
     
     
     public Integer statusCode;
+
     public GetMarketplaceAccountsSynchronizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetMarketplaceAccountsSynchronizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMarketplaceAccountsSynchronizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetMarketplaceAccountsSynchronizationResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountSynchronizationList accountSynchronizationList;
+
     public GetMarketplaceAccountsSynchronizationResponse withAccountSynchronizationList(org.openapis.openapi.models.shared.AccountSynchronizationList accountSynchronizationList) {
         this.accountSynchronizationList = accountSynchronizationList;
         return this;
     }
     
+    public GetMarketplaceAccountsSynchronizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

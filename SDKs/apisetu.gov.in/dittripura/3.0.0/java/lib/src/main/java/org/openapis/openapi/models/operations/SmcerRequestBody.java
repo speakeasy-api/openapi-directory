@@ -15,6 +15,7 @@ public class SmcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public SmcerRequestBodyCertificateParameters certificateParameters;
+
     public SmcerRequestBody withCertificateParameters(SmcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class SmcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public SmcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class SmcerRequestBody {
      */
     @JsonProperty("format")
     public SmcerRequestBodyFormatEnum format;
+
     public SmcerRequestBody withFormat(SmcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class SmcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public SmcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public SmcerRequestBody(@JsonProperty("format") SmcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

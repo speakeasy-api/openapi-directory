@@ -68,12 +68,10 @@ public class QueryService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryResponse res = new org.openapis.openapi.models.operations.QueryResponse() {{
+        org.openapis.openapi.models.operations.QueryResponse res = new org.openapis.openapi.models.operations.QueryResponse(contentType, httpRes.statusCode()) {{
             servingBatchQueryResponse = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,12 +127,10 @@ public class QueryService {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StreamQueryResponse res = new org.openapis.openapi.models.operations.StreamQueryResponse() {{
+        org.openapis.openapi.models.operations.StreamQueryResponse res = new org.openapis.openapi.models.operations.StreamQueryResponse(contentType, httpRes.statusCode()) {{
             streamResultOfServingResponseSet = null;
             googlerpcStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

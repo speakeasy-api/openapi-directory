@@ -71,12 +71,10 @@ public class IndividualsAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -127,13 +125,11 @@ public class IndividualsAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesResponse(contentType, httpRes.statusCode()) {{
             addresses = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,13 +189,11 @@ public class IndividualsAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             address = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,13 +256,11 @@ public class IndividualsAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostIndividualsPartyIdAddressesResponse res = new org.openapis.openapi.models.operations.PostIndividualsPartyIdAddressesResponse() {{
+        org.openapis.openapi.models.operations.PostIndividualsPartyIdAddressesResponse res = new org.openapis.openapi.models.operations.PostIndividualsPartyIdAddressesResponse(contentType, httpRes.statusCode()) {{
             address = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -333,14 +325,12 @@ public class IndividualsAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutIndividualsPartyIdAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.PutIndividualsPartyIdAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             address = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

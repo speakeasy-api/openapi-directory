@@ -15,6 +15,7 @@ public class SubmitTranscriptionJobMultipartFormData {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public SubmitTranscriptionJobMultipartFormDataMedia media;
+
     public SubmitTranscriptionJobMultipartFormData withMedia(SubmitTranscriptionJobMultipartFormDataMedia media) {
         this.media = media;
         return this;
@@ -22,9 +23,11 @@ public class SubmitTranscriptionJobMultipartFormData {
     
     @SpeakeasyMetadata("multipartForm:name=options,json")
     public Object options;
+
     public SubmitTranscriptionJobMultipartFormData withOptions(Object options) {
         this.options = options;
         return this;
     }
     
+    public SubmitTranscriptionJobMultipartFormData(){}
 }

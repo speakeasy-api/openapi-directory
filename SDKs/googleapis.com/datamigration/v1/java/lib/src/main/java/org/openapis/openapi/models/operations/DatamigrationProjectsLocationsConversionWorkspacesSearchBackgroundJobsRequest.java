@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest {
@@ -12,6 +13,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completedUntilTime")
     public String completedUntilTime;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withCompletedUntilTime(String completedUntilTime) {
         this.completedUntilTime = completedUntilTime;
         return this;
@@ -62,6 +68,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionWorkspace")
     public String conversionWorkspace;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withConversionWorkspace(String conversionWorkspace) {
         this.conversionWorkspace = conversionWorkspace;
         return this;
@@ -72,6 +79,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxSize")
     public Long maxSize;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -102,6 +112,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnMostRecentPerJobType")
     public Boolean returnMostRecentPerJobType;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withReturnMostRecentPerJobType(Boolean returnMostRecentPerJobType) {
         this.returnMostRecentPerJobType = returnMostRecentPerJobType;
         return this;
@@ -142,6 +156,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,13 @@ public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest(@JsonProperty("conversionWorkspace") String conversionWorkspace) {
+        this.conversionWorkspace = conversionWorkspace;
+  }
 }

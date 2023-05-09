@@ -18,6 +18,7 @@ public class Deblock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Deblock withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class Deblock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strength")
     public Double strength;
+
     public Deblock withStrength(Double strength) {
         this.strength = strength;
         return this;
     }
     
+    public Deblock(){}
 }

@@ -17,6 +17,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[category]")
     public String filterCategory;
+
     public GetTransactionsRequest withFilterCategory(String filterCategory) {
         this.filterCategory = filterCategory;
         return this;
@@ -30,6 +31,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[since]")
     public OffsetDateTime filterSince;
+
     public GetTransactionsRequest withFilterSince(OffsetDateTime filterSince) {
         this.filterSince = filterSince;
         return this;
@@ -43,6 +45,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[status]")
     public org.openapis.openapi.models.shared.TransactionStatusEnumEnum filterStatus;
+
     public GetTransactionsRequest withFilterStatus(org.openapis.openapi.models.shared.TransactionStatusEnumEnum filterStatus) {
         this.filterStatus = filterStatus;
         return this;
@@ -56,6 +59,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[tag]")
     public String filterTag;
+
     public GetTransactionsRequest withFilterTag(String filterTag) {
         this.filterTag = filterTag;
         return this;
@@ -69,6 +73,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[until]")
     public OffsetDateTime filterUntil;
+
     public GetTransactionsRequest withFilterUntil(OffsetDateTime filterUntil) {
         this.filterUntil = filterUntil;
         return this;
@@ -80,9 +85,11 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetTransactionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetTransactionsRequest(){}
 }

@@ -12,6 +12,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acEntries")
     public AcEntryDto[] acEntries;
+
     public ProductTranQueryDto withAcEntries(AcEntryDto[] acEntries) {
         this.acEntries = acEntries;
         return this;
@@ -20,6 +21,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public ProductTranQueryDto withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -28,6 +30,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountNet")
     public Double amountNet;
+
     public ProductTranQueryDto withAmountNet(Double amountNet) {
         this.amountNet = amountNet;
         return this;
@@ -36,6 +39,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ProductTranQueryDto withId(Long id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public ProductTranQueryDto withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -52,6 +57,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String productCode;
+
     public ProductTranQueryDto withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -60,6 +66,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public Long productId;
+
     public ProductTranQueryDto withProductId(Long productId) {
         this.productId = productId;
         return this;
@@ -68,6 +75,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public ProductTranQueryDto withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -76,6 +84,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tranNotes")
     public String[] tranNotes;
+
     public ProductTranQueryDto withTranNotes(String[] tranNotes) {
         this.tranNotes = tranNotes;
         return this;
@@ -84,6 +93,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPrice")
     public Double unitPrice;
+
     public ProductTranQueryDto withUnitPrice(Double unitPrice) {
         this.unitPrice = unitPrice;
         return this;
@@ -92,6 +102,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat")
     public Double vat;
+
     public ProductTranQueryDto withVat(Double vat) {
         this.vat = vat;
         return this;
@@ -100,6 +111,7 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatAnalysisTypeId")
     public Long vatAnalysisTypeId;
+
     public ProductTranQueryDto withVatAnalysisTypeId(Long vatAnalysisTypeId) {
         this.vatAnalysisTypeId = vatAnalysisTypeId;
         return this;
@@ -108,9 +120,11 @@ public class ProductTranQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatRateId")
     public Long vatRateId;
+
     public ProductTranQueryDto withVatRateId(Long vatRateId) {
         this.vatRateId = vatRateId;
         return this;
     }
     
+    public ProductTranQueryDto(){}
 }

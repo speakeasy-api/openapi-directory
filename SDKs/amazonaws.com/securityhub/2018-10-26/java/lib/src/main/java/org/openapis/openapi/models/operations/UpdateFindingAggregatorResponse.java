@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFindingAggregatorResponse {
@@ -12,6 +13,7 @@ public class UpdateFindingAggregatorResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFindingAggregatorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFindingAggregatorResponse {
     
     
     public String contentType;
+
     public UpdateFindingAggregatorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFindingAggregatorResponse {
      */
     
     public Object internalException;
+
     public UpdateFindingAggregatorResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFindingAggregatorResponse {
      */
     
     public Object invalidAccessException;
+
     public UpdateFindingAggregatorResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFindingAggregatorResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateFindingAggregatorResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFindingAggregatorResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateFindingAggregatorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateFindingAggregatorResponse {
     
     
     public Integer statusCode;
+
     public UpdateFindingAggregatorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFindingAggregatorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFindingAggregatorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFindingAggregatorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFindingAggregatorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateFindingAggregatorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFindingAggregatorResponse updateFindingAggregatorResponse;
+
     public UpdateFindingAggregatorResponse withUpdateFindingAggregatorResponse(org.openapis.openapi.models.shared.UpdateFindingAggregatorResponse updateFindingAggregatorResponse) {
         this.updateFindingAggregatorResponse = updateFindingAggregatorResponse;
         return this;
     }
     
+    public UpdateFindingAggregatorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

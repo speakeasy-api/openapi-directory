@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNewCustomerAddressRequest {
@@ -12,6 +13,7 @@ public class CreateNewCustomerAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateNewCustomerAddressRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateNewCustomerAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateNewCustomerAddressRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class CreateNewCustomerAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public CreateNewCustomerAddressRequest withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -39,9 +43,15 @@ public class CreateNewCustomerAddressRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests;
+
     public CreateNewCustomerAddressRequest withCreateUpdateAddressRequests(org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests) {
         this.createUpdateAddressRequests = createUpdateAddressRequests;
         return this;
     }
     
+    public CreateNewCustomerAddressRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("createUpdateAddressRequests") org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.createUpdateAddressRequests = createUpdateAddressRequests;
+  }
 }

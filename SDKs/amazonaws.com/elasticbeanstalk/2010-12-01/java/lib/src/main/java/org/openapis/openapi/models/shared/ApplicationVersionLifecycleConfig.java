@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplicationVersionLifecycleConfig {
     
     public MaxAgeRule maxAgeRule;
+
     public ApplicationVersionLifecycleConfig withMaxAgeRule(MaxAgeRule maxAgeRule) {
         this.maxAgeRule = maxAgeRule;
         return this;
@@ -19,9 +20,11 @@ public class ApplicationVersionLifecycleConfig {
     
     
     public MaxCountRule maxCountRule;
+
     public ApplicationVersionLifecycleConfig withMaxCountRule(MaxCountRule maxCountRule) {
         this.maxCountRule = maxCountRule;
         return this;
     }
     
+    public ApplicationVersionLifecycleConfig(){}
 }

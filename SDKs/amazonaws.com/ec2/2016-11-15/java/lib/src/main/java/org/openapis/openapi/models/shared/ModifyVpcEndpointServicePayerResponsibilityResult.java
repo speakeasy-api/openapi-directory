@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpcEndpointServicePayerResponsibilityResult {
     
     public Boolean returnValue;
+
     public ModifyVpcEndpointServicePayerResponsibilityResult withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public ModifyVpcEndpointServicePayerResponsibilityResult(){}
 }

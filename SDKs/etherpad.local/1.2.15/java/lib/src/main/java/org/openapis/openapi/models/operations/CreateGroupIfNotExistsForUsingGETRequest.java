@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateGroupIfNotExistsForUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupMapper")
     public String groupMapper;
+
     public CreateGroupIfNotExistsForUsingGETRequest withGroupMapper(String groupMapper) {
         this.groupMapper = groupMapper;
         return this;
     }
     
+    public CreateGroupIfNotExistsForUsingGETRequest(){}
 }

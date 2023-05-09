@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansT
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccount withCount(Long count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansT
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlan plan;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccount withPlan(BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlan plan) {
         this.plan = plan;
         return this;
     }
     
+    public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccount(){}
 }

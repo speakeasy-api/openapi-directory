@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePreparedStatementResponse {
     
     public String contentType;
+
     public UpdatePreparedStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePreparedStatementResponse {
      */
     
     public Object internalServerException;
+
     public UpdatePreparedStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePreparedStatementResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdatePreparedStatementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePreparedStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePreparedStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePreparedStatementResponse {
     
     
     public Integer statusCode;
+
     public UpdatePreparedStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePreparedStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePreparedStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdatePreparedStatementResponse {
      */
     
     public java.util.Map<String, Object> updatePreparedStatementOutput;
+
     public UpdatePreparedStatementResponse withUpdatePreparedStatementOutput(java.util.Map<String, Object> updatePreparedStatementOutput) {
         this.updatePreparedStatementOutput = updatePreparedStatementOutput;
         return this;
     }
     
+    public UpdatePreparedStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

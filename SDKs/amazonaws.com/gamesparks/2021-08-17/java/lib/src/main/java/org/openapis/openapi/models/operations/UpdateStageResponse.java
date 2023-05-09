@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStageResponse {
@@ -12,6 +13,7 @@ public class UpdateStageResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateStageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStageResponse {
     
     
     public String contentType;
+
     public UpdateStageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStageResponse {
      */
     
     public Object internalServerException;
+
     public UpdateStageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateStageResponse {
     
     
     public Integer statusCode;
+
     public UpdateStageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateStageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateStageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateStageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateStageResponse {
      */
     
     public Object throttlingException;
+
     public UpdateStageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateStageResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateStageResult updateStageResult;
+
     public UpdateStageResponse withUpdateStageResult(org.openapis.openapi.models.shared.UpdateStageResult updateStageResult) {
         this.updateStageResult = updateStageResult;
         return this;
@@ -83,9 +92,14 @@ public class UpdateStageResponse {
      */
     
     public Object validationException;
+
     public UpdateStageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateStageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

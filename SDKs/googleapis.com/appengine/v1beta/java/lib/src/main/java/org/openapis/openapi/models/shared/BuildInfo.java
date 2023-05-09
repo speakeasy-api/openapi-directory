@@ -18,9 +18,11 @@ public class BuildInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudBuildId")
     public String cloudBuildId;
+
     public BuildInfo withCloudBuildId(String cloudBuildId) {
         this.cloudBuildId = cloudBuildId;
         return this;
     }
     
+    public BuildInfo(){}
 }

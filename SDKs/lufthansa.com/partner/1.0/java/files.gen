@@ -83,4 +83,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/PriceOffersResponse.jav
 lib/src/main/java/org/openapis/openapi/models/operations/SeatDetailsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SeatDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SeatDetailsResponse.java
+docs/sdk/README.md
+docs/baggage/README.md
+docs/offers/README.md
+docs/orders/README.md
+docs/preflight/README.md
+docs/promotions/README.md
+docs/referencedata/README.md
 USAGE.md

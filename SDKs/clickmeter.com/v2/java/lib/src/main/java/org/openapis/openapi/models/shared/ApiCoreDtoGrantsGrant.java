@@ -12,6 +12,7 @@ public class ApiCoreDtoGrantsGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatapointType")
     public String datapointType;
+
     public ApiCoreDtoGrantsGrant withDatapointType(String datapointType) {
         this.datapointType = datapointType;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoGrantsGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entity")
     public ApiCoreResponsesEntityUriSystemInt64 entity;
+
     public ApiCoreDtoGrantsGrant withEntity(ApiCoreResponsesEntityUriSystemInt64 entity) {
         this.entity = entity;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreDtoGrantsGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityName")
     public String entityName;
+
     public ApiCoreDtoGrantsGrant withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -36,6 +39,7 @@ public class ApiCoreDtoGrantsGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityType")
     public String entityType;
+
     public ApiCoreDtoGrantsGrant withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -44,9 +48,11 @@ public class ApiCoreDtoGrantsGrant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ApiCoreDtoGrantsGrant withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ApiCoreDtoGrantsGrant(){}
 }

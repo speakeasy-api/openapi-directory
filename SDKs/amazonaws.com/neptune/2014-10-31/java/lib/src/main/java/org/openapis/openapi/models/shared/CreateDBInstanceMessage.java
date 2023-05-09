@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBInstanceMessage {
     
     public Long allocatedStorage;
+
     public CreateDBInstanceMessage withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public CreateDBInstanceMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -23,6 +25,7 @@ public class CreateDBInstanceMessage {
     
     
     public String availabilityZone;
+
     public CreateDBInstanceMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -30,6 +33,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long backupRetentionPeriod;
+
     public CreateDBInstanceMessage withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -37,6 +41,7 @@ public class CreateDBInstanceMessage {
     
     
     public String characterSetName;
+
     public CreateDBInstanceMessage withCharacterSetName(String characterSetName) {
         this.characterSetName = characterSetName;
         return this;
@@ -44,6 +49,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public CreateDBInstanceMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -51,6 +57,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbClusterIdentifier;
+
     public CreateDBInstanceMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -58,6 +65,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbInstanceClass;
+
     public CreateDBInstanceMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -65,6 +73,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbInstanceIdentifier;
+
     public CreateDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -72,6 +81,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbName;
+
     public CreateDBInstanceMessage withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -79,6 +89,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbParameterGroupName;
+
     public CreateDBInstanceMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -86,6 +97,7 @@ public class CreateDBInstanceMessage {
     
     
     public String[] dbSecurityGroups;
+
     public CreateDBInstanceMessage withDBSecurityGroups(String[] dbSecurityGroups) {
         this.dbSecurityGroups = dbSecurityGroups;
         return this;
@@ -93,6 +105,7 @@ public class CreateDBInstanceMessage {
     
     
     public String dbSubnetGroupName;
+
     public CreateDBInstanceMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -100,6 +113,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean deletionProtection;
+
     public CreateDBInstanceMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -107,6 +121,7 @@ public class CreateDBInstanceMessage {
     
     
     public String domain;
+
     public CreateDBInstanceMessage withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -114,6 +129,7 @@ public class CreateDBInstanceMessage {
     
     
     public String domainIAMRoleName;
+
     public CreateDBInstanceMessage withDomainIAMRoleName(String domainIAMRoleName) {
         this.domainIAMRoleName = domainIAMRoleName;
         return this;
@@ -121,6 +137,7 @@ public class CreateDBInstanceMessage {
     
     
     public String[] enableCloudwatchLogsExports;
+
     public CreateDBInstanceMessage withEnableCloudwatchLogsExports(String[] enableCloudwatchLogsExports) {
         this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
         return this;
@@ -128,6 +145,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public CreateDBInstanceMessage withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -135,6 +153,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean enablePerformanceInsights;
+
     public CreateDBInstanceMessage withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
@@ -142,6 +161,7 @@ public class CreateDBInstanceMessage {
     
     
     public String engine;
+
     public CreateDBInstanceMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -149,6 +169,7 @@ public class CreateDBInstanceMessage {
     
     
     public String engineVersion;
+
     public CreateDBInstanceMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -156,6 +177,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long iops;
+
     public CreateDBInstanceMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -163,6 +185,7 @@ public class CreateDBInstanceMessage {
     
     
     public String kmsKeyId;
+
     public CreateDBInstanceMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -170,6 +193,7 @@ public class CreateDBInstanceMessage {
     
     
     public String licenseModel;
+
     public CreateDBInstanceMessage withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -177,6 +201,7 @@ public class CreateDBInstanceMessage {
     
     
     public String masterUserPassword;
+
     public CreateDBInstanceMessage withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -184,6 +209,7 @@ public class CreateDBInstanceMessage {
     
     
     public String masterUsername;
+
     public CreateDBInstanceMessage withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -191,6 +217,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long monitoringInterval;
+
     public CreateDBInstanceMessage withMonitoringInterval(Long monitoringInterval) {
         this.monitoringInterval = monitoringInterval;
         return this;
@@ -198,6 +225,7 @@ public class CreateDBInstanceMessage {
     
     
     public String monitoringRoleArn;
+
     public CreateDBInstanceMessage withMonitoringRoleArn(String monitoringRoleArn) {
         this.monitoringRoleArn = monitoringRoleArn;
         return this;
@@ -205,6 +233,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean multiAZ;
+
     public CreateDBInstanceMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -212,6 +241,7 @@ public class CreateDBInstanceMessage {
     
     
     public String optionGroupName;
+
     public CreateDBInstanceMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -219,6 +249,7 @@ public class CreateDBInstanceMessage {
     
     
     public String performanceInsightsKMSKeyId;
+
     public CreateDBInstanceMessage withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -226,6 +257,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long port;
+
     public CreateDBInstanceMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -233,6 +265,7 @@ public class CreateDBInstanceMessage {
     
     
     public String preferredBackupWindow;
+
     public CreateDBInstanceMessage withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -240,6 +273,7 @@ public class CreateDBInstanceMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public CreateDBInstanceMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -247,6 +281,7 @@ public class CreateDBInstanceMessage {
     
     
     public Long promotionTier;
+
     public CreateDBInstanceMessage withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
@@ -254,6 +289,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean publiclyAccessible;
+
     public CreateDBInstanceMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -261,6 +297,7 @@ public class CreateDBInstanceMessage {
     
     
     public Boolean storageEncrypted;
+
     public CreateDBInstanceMessage withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -268,6 +305,7 @@ public class CreateDBInstanceMessage {
     
     
     public String storageType;
+
     public CreateDBInstanceMessage withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -275,6 +313,7 @@ public class CreateDBInstanceMessage {
     
     
     public TagList[] tags;
+
     public CreateDBInstanceMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -282,6 +321,7 @@ public class CreateDBInstanceMessage {
     
     
     public String tdeCredentialArn;
+
     public CreateDBInstanceMessage withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -289,6 +329,7 @@ public class CreateDBInstanceMessage {
     
     
     public String tdeCredentialPassword;
+
     public CreateDBInstanceMessage withTdeCredentialPassword(String tdeCredentialPassword) {
         this.tdeCredentialPassword = tdeCredentialPassword;
         return this;
@@ -296,6 +337,7 @@ public class CreateDBInstanceMessage {
     
     
     public String timezone;
+
     public CreateDBInstanceMessage withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -303,9 +345,16 @@ public class CreateDBInstanceMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public CreateDBInstanceMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public CreateDBInstanceMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("DBInstanceClass") String dbInstanceClass, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("Engine") String engine) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.dbInstanceClass = dbInstanceClass;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.engine = engine;
+  }
 }

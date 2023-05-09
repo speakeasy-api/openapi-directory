@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRemoteAccessSessionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteRemoteAccessSessionRequest deleteRemoteAccessSessionRequest;
+
     public DeleteRemoteAccessSessionRequest withDeleteRemoteAccessSessionRequest(org.openapis.openapi.models.shared.DeleteRemoteAccessSessionRequest deleteRemoteAccessSessionRequest) {
         this.deleteRemoteAccessSessionRequest = deleteRemoteAccessSessionRequest;
         return this;
@@ -16,6 +18,7 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteRemoteAccessSessionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteRemoteAccessSessionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteRemoteAccessSessionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteRemoteAccessSessionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteRemoteAccessSessionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteRemoteAccessSessionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteRemoteAccessSessionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteRemoteAccessSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteRemoteAccessSessionXAmzTargetEnum xAmzTarget;
+
     public DeleteRemoteAccessSessionRequest withXAmzTarget(DeleteRemoteAccessSessionXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteRemoteAccessSessionRequest(@JsonProperty("DeleteRemoteAccessSessionRequest") org.openapis.openapi.models.shared.DeleteRemoteAccessSessionRequest deleteRemoteAccessSessionRequest, @JsonProperty("X-Amz-Target") DeleteRemoteAccessSessionXAmzTargetEnum xAmzTarget) {
+        this.deleteRemoteAccessSessionRequest = deleteRemoteAccessSessionRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

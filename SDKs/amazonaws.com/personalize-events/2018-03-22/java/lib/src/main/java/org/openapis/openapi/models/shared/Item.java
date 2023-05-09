@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Item {
     @JsonProperty("itemId")
     public String itemId;
+
     public Item withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -25,9 +26,13 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public Item withProperties(Object properties) {
         this.properties = properties;
         return this;
     }
     
+    public Item(@JsonProperty("itemId") String itemId) {
+        this.itemId = itemId;
+  }
 }

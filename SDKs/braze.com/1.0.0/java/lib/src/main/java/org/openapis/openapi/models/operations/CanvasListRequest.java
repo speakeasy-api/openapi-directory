@@ -14,6 +14,7 @@ public class CanvasListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_archived")
     public String includeArchived;
+
     public CanvasListRequest withIncludeArchived(String includeArchived) {
         this.includeArchived = includeArchived;
         return this;
@@ -26,6 +27,7 @@ public class CanvasListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_edit.time[gt]")
     public String lastEditTimeGt;
+
     public CanvasListRequest withLastEditTimeGt(String lastEditTimeGt) {
         this.lastEditTimeGt = lastEditTimeGt;
         return this;
@@ -38,6 +40,7 @@ public class CanvasListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public CanvasListRequest withPage(String page) {
         this.page = page;
         return this;
@@ -50,9 +53,11 @@ public class CanvasListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public CanvasListRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
     }
     
+    public CanvasListRequest(){}
 }

@@ -15,6 +15,7 @@ public class DescribeDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public Destination[] destinations;
+
     public DescribeDestinationsResponse withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -26,9 +27,11 @@ public class DescribeDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeDestinationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDestinationsResponse(){}
 }

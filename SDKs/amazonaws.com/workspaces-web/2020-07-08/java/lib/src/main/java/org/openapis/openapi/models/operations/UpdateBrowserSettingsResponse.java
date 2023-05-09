@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBrowserSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateBrowserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateBrowserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBrowserSettingsResponse {
     
     
     public String contentType;
+
     public UpdateBrowserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBrowserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateBrowserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBrowserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateBrowserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBrowserSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateBrowserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBrowserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBrowserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBrowserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBrowserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBrowserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBrowserSettingsResponse updateBrowserSettingsResponse;
+
     public UpdateBrowserSettingsResponse withUpdateBrowserSettingsResponse(org.openapis.openapi.models.shared.UpdateBrowserSettingsResponse updateBrowserSettingsResponse) {
         this.updateBrowserSettingsResponse = updateBrowserSettingsResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateBrowserSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateBrowserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateBrowserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

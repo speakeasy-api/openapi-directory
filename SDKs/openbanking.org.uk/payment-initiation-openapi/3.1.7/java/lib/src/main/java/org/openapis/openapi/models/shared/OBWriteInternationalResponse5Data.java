@@ -17,6 +17,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteInternationalResponse5DataCharges[] charges;
+
     public OBWriteInternationalResponse5Data withCharges(OBWriteInternationalResponse5DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -27,6 +28,7 @@ public class OBWriteInternationalResponse5Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteInternationalResponse5Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -41,6 +43,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteInternationalResponse5Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteInternationalResponse5Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -63,6 +67,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRateInformation")
     public OBWriteInternationalResponse5DataExchangeRateInformation exchangeRateInformation;
+
     public OBWriteInternationalResponse5Data withExchangeRateInformation(OBWriteInternationalResponse5DataExchangeRateInformation exchangeRateInformation) {
         this.exchangeRateInformation = exchangeRateInformation;
         return this;
@@ -78,6 +83,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedExecutionDateTime")
     public OffsetDateTime expectedExecutionDateTime;
+
     public OBWriteInternationalResponse5Data withExpectedExecutionDateTime(OffsetDateTime expectedExecutionDateTime) {
         this.expectedExecutionDateTime = expectedExecutionDateTime;
         return this;
@@ -93,6 +99,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedSettlementDateTime")
     public OffsetDateTime expectedSettlementDateTime;
+
     public OBWriteInternationalResponse5Data withExpectedSettlementDateTime(OffsetDateTime expectedSettlementDateTime) {
         this.expectedSettlementDateTime = expectedSettlementDateTime;
         return this;
@@ -103,6 +110,7 @@ public class OBWriteInternationalResponse5Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalResponse5DataInitiation initiation;
+
     public OBWriteInternationalResponse5Data withInitiation(OBWriteInternationalResponse5DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -113,6 +121,7 @@ public class OBWriteInternationalResponse5Data {
      */
     @JsonProperty("InternationalPaymentId")
     public String internationalPaymentId;
+
     public OBWriteInternationalResponse5Data withInternationalPaymentId(String internationalPaymentId) {
         this.internationalPaymentId = internationalPaymentId;
         return this;
@@ -124,6 +133,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAuthorisation")
     public OBWriteInternationalResponse5DataMultiAuthorisation multiAuthorisation;
+
     public OBWriteInternationalResponse5Data withMultiAuthorisation(OBWriteInternationalResponse5DataMultiAuthorisation multiAuthorisation) {
         this.multiAuthorisation = multiAuthorisation;
         return this;
@@ -132,6 +142,7 @@ public class OBWriteInternationalResponse5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Refund")
     public OBWriteInternationalResponse5DataRefund refund;
+
     public OBWriteInternationalResponse5Data withRefund(OBWriteInternationalResponse5DataRefund refund) {
         this.refund = refund;
         return this;
@@ -142,6 +153,7 @@ public class OBWriteInternationalResponse5Data {
      */
     @JsonProperty("Status")
     public OBWriteInternationalResponse5DataStatusEnum status;
+
     public OBWriteInternationalResponse5Data withStatus(OBWriteInternationalResponse5DataStatusEnum status) {
         this.status = status;
         return this;
@@ -156,9 +168,18 @@ public class OBWriteInternationalResponse5Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteInternationalResponse5Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteInternationalResponse5Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Initiation") OBWriteInternationalResponse5DataInitiation initiation, @JsonProperty("InternationalPaymentId") String internationalPaymentId, @JsonProperty("Status") OBWriteInternationalResponse5DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.initiation = initiation;
+        this.internationalPaymentId = internationalPaymentId;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

@@ -15,6 +15,7 @@ public class UsersReadUserLinks {
      */
     
     public String html;
+
     public UsersReadUserLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class UsersReadUserLinks {
      */
     
     public String profileImage;
+
     public UsersReadUserLinks withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
     }
     
+    public UsersReadUserLinks(){}
 }

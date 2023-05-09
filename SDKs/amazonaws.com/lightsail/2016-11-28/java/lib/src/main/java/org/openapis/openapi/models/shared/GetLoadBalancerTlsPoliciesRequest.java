@@ -12,9 +12,11 @@ public class GetLoadBalancerTlsPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetLoadBalancerTlsPoliciesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetLoadBalancerTlsPoliciesRequest(){}
 }

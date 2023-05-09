@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeConfigurationSetResponse {
     
     public ConfigurationSet configurationSet;
+
     public DescribeConfigurationSetResponse withConfigurationSet(ConfigurationSet configurationSet) {
         this.configurationSet = configurationSet;
         return this;
@@ -22,6 +23,7 @@ public class DescribeConfigurationSetResponse {
      */
     
     public DeliveryOptions deliveryOptions;
+
     public DescribeConfigurationSetResponse withDeliveryOptions(DeliveryOptions deliveryOptions) {
         this.deliveryOptions = deliveryOptions;
         return this;
@@ -29,6 +31,7 @@ public class DescribeConfigurationSetResponse {
     
     
     public EventDestination[] eventDestinations;
+
     public DescribeConfigurationSetResponse withEventDestinations(EventDestination[] eventDestinations) {
         this.eventDestinations = eventDestinations;
         return this;
@@ -36,6 +39,7 @@ public class DescribeConfigurationSetResponse {
     
     
     public ReputationOptions reputationOptions;
+
     public DescribeConfigurationSetResponse withReputationOptions(ReputationOptions reputationOptions) {
         this.reputationOptions = reputationOptions;
         return this;
@@ -43,9 +47,11 @@ public class DescribeConfigurationSetResponse {
     
     
     public TrackingOptions trackingOptions;
+
     public DescribeConfigurationSetResponse withTrackingOptions(TrackingOptions trackingOptions) {
         this.trackingOptions = trackingOptions;
         return this;
     }
     
+    public DescribeConfigurationSetResponse(){}
 }

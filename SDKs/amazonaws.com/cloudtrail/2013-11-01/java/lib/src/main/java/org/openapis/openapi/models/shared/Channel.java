@@ -15,6 +15,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelArn")
     public String channelArn;
+
     public Channel withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -23,9 +24,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Channel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Channel(){}
 }

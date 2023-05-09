@@ -12,6 +12,7 @@ public class MovieMultimediaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public MovieMultimediaResource withHeight(Long height) {
         this.height = height;
         return this;
@@ -20,6 +21,7 @@ public class MovieMultimediaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src")
     public String src;
+
     public MovieMultimediaResource withSrc(String src) {
         this.src = src;
         return this;
@@ -28,6 +30,7 @@ public class MovieMultimediaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MovieMultimediaResource withType(String type) {
         this.type = type;
         return this;
@@ -36,9 +39,11 @@ public class MovieMultimediaResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public MovieMultimediaResource withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public MovieMultimediaResource(){}
 }

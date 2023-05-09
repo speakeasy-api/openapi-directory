@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFloatingIpsIdActions200ApplicationJSON {
     @JsonProperty("actions")
     public GetFloatingIpsIdActions200ApplicationJSONAction[] actions;
+
     public GetFloatingIpsIdActions200ApplicationJSON withActions(GetFloatingIpsIdActions200ApplicationJSONAction[] actions) {
         this.actions = actions;
         return this;
     }
     
+    public GetFloatingIpsIdActions200ApplicationJSON(@JsonProperty("actions") GetFloatingIpsIdActions200ApplicationJSONAction[] actions) {
+        this.actions = actions;
+  }
 }

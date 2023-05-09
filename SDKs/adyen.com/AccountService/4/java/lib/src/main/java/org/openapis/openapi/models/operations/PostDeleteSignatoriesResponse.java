@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDeleteSignatoriesResponse {
     
     public String contentType;
+
     public PostDeleteSignatoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostDeleteSignatoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.GenericResponse genericResponse;
+
     public PostDeleteSignatoriesResponse withGenericResponse(org.openapis.openapi.models.shared.GenericResponse genericResponse) {
         this.genericResponse = genericResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostDeleteSignatoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostDeleteSignatoriesResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostDeleteSignatoriesResponse {
     
     
     public Integer statusCode;
+
     public PostDeleteSignatoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostDeleteSignatoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDeleteSignatoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDeleteSignatoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

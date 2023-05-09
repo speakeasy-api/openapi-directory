@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SortDefinition {
     @JsonProperty("Key")
     public String key;
+
     public SortDefinition withKey(String key) {
         this.key = key;
         return this;
@@ -22,9 +23,13 @@ public class SortDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public SortDefinition withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SortDefinition(@JsonProperty("Key") String key) {
+        this.key = key;
+  }
 }

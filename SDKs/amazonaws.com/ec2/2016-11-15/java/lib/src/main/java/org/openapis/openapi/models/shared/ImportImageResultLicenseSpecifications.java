@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImportImageResultLicenseSpecifications {
     
     public String licenseConfigurationArn;
+
     public ImportImageResultLicenseSpecifications withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
     }
     
+    public ImportImageResultLicenseSpecifications(){}
 }

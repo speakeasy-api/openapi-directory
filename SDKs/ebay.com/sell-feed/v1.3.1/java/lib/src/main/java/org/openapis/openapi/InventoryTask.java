@@ -58,10 +58,8 @@ public class InventoryTask {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInventoryTaskResponse res = new org.openapis.openapi.models.operations.CreateInventoryTaskResponse() {{
+        org.openapis.openapi.models.operations.CreateInventoryTaskResponse res = new org.openapis.openapi.models.operations.CreateInventoryTaskResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {
@@ -92,11 +90,9 @@ public class InventoryTask {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInventoryTaskResponse res = new org.openapis.openapi.models.operations.GetInventoryTaskResponse() {{
+        org.openapis.openapi.models.operations.GetInventoryTaskResponse res = new org.openapis.openapi.models.operations.GetInventoryTaskResponse(contentType, httpRes.statusCode()) {{
             inventoryTask = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,11 +136,9 @@ public class InventoryTask {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInventoryTasksResponse res = new org.openapis.openapi.models.operations.GetInventoryTasksResponse() {{
+        org.openapis.openapi.models.operations.GetInventoryTasksResponse res = new org.openapis.openapi.models.operations.GetInventoryTasksResponse(contentType, httpRes.statusCode()) {{
             inventoryTaskCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

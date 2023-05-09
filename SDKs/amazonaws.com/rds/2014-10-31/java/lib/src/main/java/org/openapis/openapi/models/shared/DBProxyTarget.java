@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBProxyTarget {
     
     public String endpoint;
+
     public DBProxyTarget withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,6 +20,7 @@ public class DBProxyTarget {
     
     
     public Long port;
+
     public DBProxyTarget withPort(Long port) {
         this.port = port;
         return this;
@@ -26,6 +28,7 @@ public class DBProxyTarget {
     
     
     public String rdsResourceId;
+
     public DBProxyTarget withRdsResourceId(String rdsResourceId) {
         this.rdsResourceId = rdsResourceId;
         return this;
@@ -33,6 +36,7 @@ public class DBProxyTarget {
     
     
     public TargetRoleEnum role;
+
     public DBProxyTarget withRole(TargetRoleEnum role) {
         this.role = role;
         return this;
@@ -40,6 +44,7 @@ public class DBProxyTarget {
     
     
     public String targetArn;
+
     public DBProxyTarget withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
@@ -47,6 +52,7 @@ public class DBProxyTarget {
     
     
     public TargetHealth targetHealth;
+
     public DBProxyTarget withTargetHealth(TargetHealth targetHealth) {
         this.targetHealth = targetHealth;
         return this;
@@ -54,6 +60,7 @@ public class DBProxyTarget {
     
     
     public String trackedClusterId;
+
     public DBProxyTarget withTrackedClusterId(String trackedClusterId) {
         this.trackedClusterId = trackedClusterId;
         return this;
@@ -61,9 +68,11 @@ public class DBProxyTarget {
     
     
     public TargetTypeEnum type;
+
     public DBProxyTarget withType(TargetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DBProxyTarget(){}
 }

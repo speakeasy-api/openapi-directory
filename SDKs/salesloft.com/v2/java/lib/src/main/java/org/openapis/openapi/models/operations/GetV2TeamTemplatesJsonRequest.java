@@ -12,6 +12,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public String[] ids;
+
     public GetV2TeamTemplatesJsonRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -22,6 +23,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_archived_templates")
     public Boolean includeArchivedTemplates;
+
     public GetV2TeamTemplatesJsonRequest withIncludeArchivedTemplates(Boolean includeArchivedTemplates) {
         this.includeArchivedTemplates = includeArchivedTemplates;
         return this;
@@ -32,6 +34,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2TeamTemplatesJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -42,6 +45,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2TeamTemplatesJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -52,6 +56,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2TeamTemplatesJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +67,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2TeamTemplatesJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -72,6 +78,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetV2TeamTemplatesJsonRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -82,6 +89,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2TeamTemplatesJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -92,6 +100,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2TeamTemplatesJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -102,6 +111,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tag")
     public String[] tag;
+
     public GetV2TeamTemplatesJsonRequest withTag(String[] tag) {
         this.tag = tag;
         return this;
@@ -112,6 +122,7 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tag_ids")
     public Long[] tagIds;
+
     public GetV2TeamTemplatesJsonRequest withTagIds(Long[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -126,9 +137,11 @@ public class GetV2TeamTemplatesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public GetV2TeamTemplatesJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetV2TeamTemplatesJsonRequest(){}
 }

@@ -20,6 +20,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certKey")
     public String certKey;
+
     public InstanceAccessDetails withCertKey(String certKey) {
         this.certKey = certKey;
         return this;
@@ -30,6 +31,7 @@ public class InstanceAccessDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiresAt")
     public OffsetDateTime expiresAt;
+
     public InstanceAccessDetails withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -38,6 +40,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostKeys")
     public HostKeyAttributes[] hostKeys;
+
     public InstanceAccessDetails withHostKeys(HostKeyAttributes[] hostKeys) {
         this.hostKeys = hostKeys;
         return this;
@@ -46,6 +49,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public InstanceAccessDetails withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -54,6 +58,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public InstanceAccessDetails withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -62,6 +67,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public InstanceAccessDetails withPassword(String password) {
         this.password = password;
         return this;
@@ -70,6 +76,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordData")
     public PasswordData passwordData;
+
     public InstanceAccessDetails withPasswordData(PasswordData passwordData) {
         this.passwordData = passwordData;
         return this;
@@ -78,6 +85,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKey")
     public String privateKey;
+
     public InstanceAccessDetails withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -86,6 +94,7 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public InstanceAccessProtocolEnum protocol;
+
     public InstanceAccessDetails withProtocol(InstanceAccessProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -94,9 +103,11 @@ public class InstanceAccessDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public InstanceAccessDetails withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public InstanceAccessDetails(){}
 }

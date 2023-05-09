@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationSecurityEventsResponse {
     
     public String contentType;
+
     public GetOrganizationSecurityEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganizationSecurityEventsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrganizationSecurityEventsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganizationSecurityEventsResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationSecurityEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOrganizationSecurityEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationSecurityEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetOrganizationSecurityEventsResponse {
      */
     
     public java.util.Map<String, Object>[] getOrganizationSecurityEvents200ApplicationJSONObjects;
+
     public GetOrganizationSecurityEventsResponse withGetOrganizationSecurityEvents200ApplicationJSONObjects(java.util.Map<String, Object>[] getOrganizationSecurityEvents200ApplicationJSONObjects) {
         this.getOrganizationSecurityEvents200ApplicationJSONObjects = getOrganizationSecurityEvents200ApplicationJSONObjects;
         return this;
     }
     
+    public GetOrganizationSecurityEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

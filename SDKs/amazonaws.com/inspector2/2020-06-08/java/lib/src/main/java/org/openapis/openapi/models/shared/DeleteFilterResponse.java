@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFilterResponse {
     @JsonProperty("arn")
     public String arn;
+
     public DeleteFilterResponse withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteFilterResponse(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

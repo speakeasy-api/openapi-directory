@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelFindingsReportResponse {
@@ -12,6 +13,7 @@ public class CancelFindingsReportResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelFindingsReportResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelFindingsReportResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelFindingsReportResponse cancelFindingsReportResponse;
+
     public CancelFindingsReportResponse withCancelFindingsReportResponse(org.openapis.openapi.models.shared.CancelFindingsReportResponse cancelFindingsReportResponse) {
         this.cancelFindingsReportResponse = cancelFindingsReportResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelFindingsReportResponse {
     
     
     public String contentType;
+
     public CancelFindingsReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelFindingsReportResponse {
      */
     
     public Object internalServerException;
+
     public CancelFindingsReportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CancelFindingsReportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelFindingsReportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelFindingsReportResponse {
     
     
     public Integer statusCode;
+
     public CancelFindingsReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelFindingsReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelFindingsReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CancelFindingsReportResponse {
      */
     
     public Object throttlingException;
+
     public CancelFindingsReportResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CancelFindingsReportResponse {
      */
     
     public Object validationException;
+
     public CancelFindingsReportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelFindingsReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

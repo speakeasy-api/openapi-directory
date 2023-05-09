@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.FindEligibleItemsSecurity;
 import org.openapis.openapi.models.operations.FindEligibleItemsRequest;
 import org.openapis.openapi.models.operations.FindEligibleItemsResponse;
+import org.openapis.openapi.models.operations.FindEligibleItemsSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,22 +26,23 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FindEligibleItemsRequest req = new FindEligibleItemsRequest() {{
-                xEbayCMarketplaceId = "corrupti";
+            FindEligibleItemsRequest req = new FindEligibleItemsRequest("corrupti") {{
                 limit = "provident";
                 offset = "distinctio";
-            }}            
+            }};            
 
-            FindEligibleItemsResponse res = sdk.offer.findEligibleItems(req, new FindEligibleItemsSecurity() {{
+            FindEligibleItemsResponse res = sdk.offer.findEligibleItems(req, new FindEligibleItemsSecurity("quibusdam") {{
                 apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.pagedEligibleItemCollection.isPresent()) {
+            if (res.pagedEligibleItemCollection != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,10 +50,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### offer
+### [offer](docs/offer/README.md)
 
-* `findEligibleItems` - This method evaluates a seller's current listings and returns the set of IDs that are eligible for a seller-initiated discount offer to a buyer. A listing ID is returned only when one or more buyers have shown an &quot;interest&quot; in the listing. If any buyers have shown interest in a listing, the seller can initiate a &quot;negotiation&quot; with them by calling sendOfferToInterestedBuyers, which sends all interested buyers a message that offers the listing at a discount. For details about how to create seller offers to buyers, see Sending offers to buyers.
-* `sendOfferToInterestedBuyers` - This method sends eligible buyers offers to purchase items in a listing at a discount. When a buyer has shown interest in a listing, they become &quot;eligible&quot; to receive a seller-initiated offer to purchase the item(s). Sellers use findEligibleItems to get the set of listings that have interested buyers. If a listing has interested buyers, sellers can use this method (sendOfferToInterestedBuyers) to send an offer to the buyers who are interested in the listing. The offer gives buyers the ability to purchase the associated listings at a discounted price. For details about how to create seller offers to buyers, see Sending offers to buyers.
+* [findEligibleItems](docs/offer/README.md#findeligibleitems) - This method evaluates a seller's current listings and returns the set of IDs that are eligible for a seller-initiated discount offer to a buyer. A listing ID is returned only when one or more buyers have shown an &quot;interest&quot; in the listing. If any buyers have shown interest in a listing, the seller can initiate a &quot;negotiation&quot; with them by calling sendOfferToInterestedBuyers, which sends all interested buyers a message that offers the listing at a discount. For details about how to create seller offers to buyers, see Sending offers to buyers.
+* [sendOfferToInterestedBuyers](docs/offer/README.md#sendoffertointerestedbuyers) - This method sends eligible buyers offers to purchase items in a listing at a discount. When a buyer has shown interest in a listing, they become &quot;eligible&quot; to receive a seller-initiated offer to purchase the item(s). Sellers use findEligibleItems to get the set of listings that have interested buyers. If a listing has interested buyers, sellers can use this method (sendOfferToInterestedBuyers) to send an offer to the buyers who are interested in the listing. The offer gives buyers the ability to purchase the associated listings at a discounted price. For details about how to create seller offers to buyers, see Sending offers to buyers.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -22,6 +22,7 @@ public class FileSystemSize {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public FileSystemSize withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -29,6 +30,7 @@ public class FileSystemSize {
     
     @JsonProperty("Value")
     public Long value;
+
     public FileSystemSize withValue(Long value) {
         this.value = value;
         return this;
@@ -37,6 +39,7 @@ public class FileSystemSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueInIA")
     public Long valueInIA;
+
     public FileSystemSize withValueInIA(Long valueInIA) {
         this.valueInIA = valueInIA;
         return this;
@@ -45,9 +48,13 @@ public class FileSystemSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueInStandard")
     public Long valueInStandard;
+
     public FileSystemSize withValueInStandard(Long valueInStandard) {
         this.valueInStandard = valueInStandard;
         return this;
     }
     
+    public FileSystemSize(@JsonProperty("Value") Long value) {
+        this.value = value;
+  }
 }

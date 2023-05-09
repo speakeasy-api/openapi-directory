@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyCacheSubnetGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyCacheSubnetGroupActionEnum action;
+
     public GETModifyCacheSubnetGroupRequest withAction(GETModifyCacheSubnetGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyCacheSubnetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheSubnetGroupDescription")
     public String cacheSubnetGroupDescription;
+
     public GETModifyCacheSubnetGroupRequest withCacheSubnetGroupDescription(String cacheSubnetGroupDescription) {
         this.cacheSubnetGroupDescription = cacheSubnetGroupDescription;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyCacheSubnetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheSubnetGroupName")
     public String cacheSubnetGroupName;
+
     public GETModifyCacheSubnetGroupRequest withCacheSubnetGroupName(String cacheSubnetGroupName) {
         this.cacheSubnetGroupName = cacheSubnetGroupName;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyCacheSubnetGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetIds")
     public String[] subnetIds;
+
     public GETModifyCacheSubnetGroupRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyCacheSubnetGroupVersionEnum version;
+
     public GETModifyCacheSubnetGroupRequest withVersion(GETModifyCacheSubnetGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyCacheSubnetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyCacheSubnetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyCacheSubnetGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyCacheSubnetGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyCacheSubnetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyCacheSubnetGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETModifyCacheSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyCacheSubnetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyCacheSubnetGroupRequest(@JsonProperty("Action") GETModifyCacheSubnetGroupActionEnum action, @JsonProperty("CacheSubnetGroupName") String cacheSubnetGroupName, @JsonProperty("Version") GETModifyCacheSubnetGroupVersionEnum version) {
+        this.action = action;
+        this.cacheSubnetGroupName = cacheSubnetGroupName;
+        this.version = version;
+  }
 }

@@ -68,10 +68,8 @@ public class GetVersions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuggestionbyversionResponse res = new org.openapis.openapi.models.operations.GetSuggestionbyversionResponse() {{
+        org.openapis.openapi.models.operations.GetSuggestionbyversionResponse res = new org.openapis.openapi.models.operations.GetSuggestionbyversionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,10 +118,8 @@ public class GetVersions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVersionsResponse res = new org.openapis.openapi.models.operations.GetVersionsResponse() {{
+        org.openapis.openapi.models.operations.GetVersionsResponse res = new org.openapis.openapi.models.operations.GetVersionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

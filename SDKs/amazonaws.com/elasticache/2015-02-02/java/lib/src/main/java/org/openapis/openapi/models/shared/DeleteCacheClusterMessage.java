@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteCacheClusterMessage - Represents the input of a &lt;code&gt;DeleteCacheCluster&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteCacheClusterMessage {
     
     public String cacheClusterId;
+
     public DeleteCacheClusterMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,9 +20,13 @@ public class DeleteCacheClusterMessage {
     
     
     public String finalSnapshotIdentifier;
+
     public DeleteCacheClusterMessage withFinalSnapshotIdentifier(String finalSnapshotIdentifier) {
         this.finalSnapshotIdentifier = finalSnapshotIdentifier;
         return this;
     }
     
+    public DeleteCacheClusterMessage(@JsonProperty("CacheClusterId") String cacheClusterId) {
+        this.cacheClusterId = cacheClusterId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FailoverShardResponse {
@@ -12,6 +13,7 @@ public class FailoverShardResponse {
      */
     
     public Object apiCallRateForCustomerExceededFault;
+
     public FailoverShardResponse withAPICallRateForCustomerExceededFault(Object apiCallRateForCustomerExceededFault) {
         this.apiCallRateForCustomerExceededFault = apiCallRateForCustomerExceededFault;
         return this;
@@ -22,6 +24,7 @@ public class FailoverShardResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public FailoverShardResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -29,6 +32,7 @@ public class FailoverShardResponse {
     
     
     public String contentType;
+
     public FailoverShardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class FailoverShardResponse {
      */
     
     public org.openapis.openapi.models.shared.FailoverShardResponse failoverShardResponse;
+
     public FailoverShardResponse withFailoverShardResponse(org.openapis.openapi.models.shared.FailoverShardResponse failoverShardResponse) {
         this.failoverShardResponse = failoverShardResponse;
         return this;
@@ -49,6 +54,7 @@ public class FailoverShardResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public FailoverShardResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -59,6 +65,7 @@ public class FailoverShardResponse {
      */
     
     public Object invalidKMSKeyFault;
+
     public FailoverShardResponse withInvalidKMSKeyFault(Object invalidKMSKeyFault) {
         this.invalidKMSKeyFault = invalidKMSKeyFault;
         return this;
@@ -69,6 +76,7 @@ public class FailoverShardResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public FailoverShardResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -79,6 +87,7 @@ public class FailoverShardResponse {
      */
     
     public Object invalidParameterValueException;
+
     public FailoverShardResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -86,6 +95,7 @@ public class FailoverShardResponse {
     
     
     public Integer statusCode;
+
     public FailoverShardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class FailoverShardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FailoverShardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class FailoverShardResponse {
      */
     
     public Object shardNotFoundFault;
+
     public FailoverShardResponse withShardNotFoundFault(Object shardNotFoundFault) {
         this.shardNotFoundFault = shardNotFoundFault;
         return this;
@@ -113,9 +125,14 @@ public class FailoverShardResponse {
      */
     
     public Object testFailoverNotAvailableFault;
+
     public FailoverShardResponse withTestFailoverNotAvailableFault(Object testFailoverNotAvailableFault) {
         this.testFailoverNotAvailableFault = testFailoverNotAvailableFault;
         return this;
     }
     
+    public FailoverShardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

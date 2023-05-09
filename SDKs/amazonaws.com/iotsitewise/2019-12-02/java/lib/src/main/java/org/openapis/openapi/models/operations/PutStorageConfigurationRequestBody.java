@@ -15,6 +15,7 @@ public class PutStorageConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disassociatedDataStorage")
     public PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum disassociatedDataStorage;
+
     public PutStorageConfigurationRequestBody withDisassociatedDataStorage(PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum disassociatedDataStorage) {
         this.disassociatedDataStorage = disassociatedDataStorage;
         return this;
@@ -26,6 +27,7 @@ public class PutStorageConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiLayerStorage")
     public PutStorageConfigurationRequestBodyMultiLayerStorage multiLayerStorage;
+
     public PutStorageConfigurationRequestBody withMultiLayerStorage(PutStorageConfigurationRequestBodyMultiLayerStorage multiLayerStorage) {
         this.multiLayerStorage = multiLayerStorage;
         return this;
@@ -37,6 +39,7 @@ public class PutStorageConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public PutStorageConfigurationRequestBodyRetentionPeriod retentionPeriod;
+
     public PutStorageConfigurationRequestBody withRetentionPeriod(PutStorageConfigurationRequestBodyRetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -47,9 +50,13 @@ public class PutStorageConfigurationRequestBody {
      */
     @JsonProperty("storageType")
     public PutStorageConfigurationRequestBodyStorageTypeEnum storageType;
+
     public PutStorageConfigurationRequestBody withStorageType(PutStorageConfigurationRequestBodyStorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public PutStorageConfigurationRequestBody(@JsonProperty("storageType") PutStorageConfigurationRequestBodyStorageTypeEnum storageType) {
+        this.storageType = storageType;
+  }
 }

@@ -15,9 +15,11 @@ public class StopCalculationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CalculationExecutionStateEnum state;
+
     public StopCalculationExecutionResponse withState(CalculationExecutionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public StopCalculationExecutionResponse(){}
 }

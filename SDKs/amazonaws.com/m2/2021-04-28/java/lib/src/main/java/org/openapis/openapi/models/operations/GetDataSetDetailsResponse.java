@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataSetDetailsResponse {
@@ -12,6 +13,7 @@ public class GetDataSetDetailsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDataSetDetailsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDataSetDetailsResponse {
     
     
     public String contentType;
+
     public GetDataSetDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDataSetDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataSetDetailsResponse getDataSetDetailsResponse;
+
     public GetDataSetDetailsResponse withGetDataSetDetailsResponse(org.openapis.openapi.models.shared.GetDataSetDetailsResponse getDataSetDetailsResponse) {
         this.getDataSetDetailsResponse = getDataSetDetailsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDataSetDetailsResponse {
      */
     
     public Object internalServerException;
+
     public GetDataSetDetailsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataSetDetailsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDataSetDetailsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetDataSetDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetDataSetDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDataSetDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataSetDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetDataSetDetailsResponse {
      */
     
     public Object throttlingException;
+
     public GetDataSetDetailsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetDataSetDetailsResponse {
      */
     
     public Object validationException;
+
     public GetDataSetDetailsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDataSetDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConnectionAliasPermissionsResponse {
@@ -12,6 +13,7 @@ public class DescribeConnectionAliasPermissionsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeConnectionAliasPermissionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConnectionAliasPermissionsResponse {
     
     
     public String contentType;
+
     public DescribeConnectionAliasPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConnectionAliasPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConnectionAliasPermissionsResult describeConnectionAliasPermissionsResult;
+
     public DescribeConnectionAliasPermissionsResponse withDescribeConnectionAliasPermissionsResult(org.openapis.openapi.models.shared.DescribeConnectionAliasPermissionsResult describeConnectionAliasPermissionsResult) {
         this.describeConnectionAliasPermissionsResult = describeConnectionAliasPermissionsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConnectionAliasPermissionsResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeConnectionAliasPermissionsResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConnectionAliasPermissionsResponse {
      */
     
     public Object operationNotSupportedException;
+
     public DescribeConnectionAliasPermissionsResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeConnectionAliasPermissionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeConnectionAliasPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeConnectionAliasPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConnectionAliasPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeConnectionAliasPermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeConnectionAliasPermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeConnectionAliasPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

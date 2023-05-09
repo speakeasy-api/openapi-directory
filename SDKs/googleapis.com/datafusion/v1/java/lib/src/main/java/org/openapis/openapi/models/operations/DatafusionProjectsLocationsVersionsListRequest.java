@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatafusionProjectsLocationsVersionsListRequest {
@@ -12,6 +13,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatafusionProjectsLocationsVersionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatafusionProjectsLocationsVersionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatafusionProjectsLocationsVersionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatafusionProjectsLocationsVersionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatafusionProjectsLocationsVersionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatafusionProjectsLocationsVersionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latestPatchOnly")
     public Boolean latestPatchOnly;
+
     public DatafusionProjectsLocationsVersionsListRequest withLatestPatchOnly(Boolean latestPatchOnly) {
         this.latestPatchOnly = latestPatchOnly;
         return this;
@@ -82,6 +90,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatafusionProjectsLocationsVersionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DatafusionProjectsLocationsVersionsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -102,6 +112,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DatafusionProjectsLocationsVersionsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +123,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DatafusionProjectsLocationsVersionsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -122,6 +134,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatafusionProjectsLocationsVersionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatafusionProjectsLocationsVersionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatafusionProjectsLocationsVersionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,13 @@ public class DatafusionProjectsLocationsVersionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatafusionProjectsLocationsVersionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatafusionProjectsLocationsVersionsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

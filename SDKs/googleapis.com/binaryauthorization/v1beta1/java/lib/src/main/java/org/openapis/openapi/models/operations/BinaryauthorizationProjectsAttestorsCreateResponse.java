@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BinaryauthorizationProjectsAttestorsCreateResponse {
@@ -12,6 +13,7 @@ public class BinaryauthorizationProjectsAttestorsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Attestor attestor;
+
     public BinaryauthorizationProjectsAttestorsCreateResponse withAttestor(org.openapis.openapi.models.shared.Attestor attestor) {
         this.attestor = attestor;
         return this;
@@ -19,6 +21,7 @@ public class BinaryauthorizationProjectsAttestorsCreateResponse {
     
     
     public String contentType;
+
     public BinaryauthorizationProjectsAttestorsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BinaryauthorizationProjectsAttestorsCreateResponse {
     
     
     public Integer statusCode;
+
     public BinaryauthorizationProjectsAttestorsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BinaryauthorizationProjectsAttestorsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BinaryauthorizationProjectsAttestorsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BinaryauthorizationProjectsAttestorsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

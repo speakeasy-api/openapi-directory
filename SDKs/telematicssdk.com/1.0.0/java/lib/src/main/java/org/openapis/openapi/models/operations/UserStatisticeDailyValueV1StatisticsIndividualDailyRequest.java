@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class UserStatisticeDailyValueV1StatisticsIndividualDailyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public String endDate;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDailyRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -16,9 +17,11 @@ public class UserStatisticeDailyValueV1StatisticsIndividualDailyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public String startDate;
+
     public UserStatisticeDailyValueV1StatisticsIndividualDailyRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public UserStatisticeDailyValueV1StatisticsIndividualDailyRequest(){}
 }

@@ -15,6 +15,7 @@ public class PreprintsCitationListCitationDetailAttributes {
      */
     
     public String author;
+
     public PreprintsCitationListCitationDetailAttributes withAuthor(String author) {
         this.author = author;
         return this;
@@ -25,6 +26,7 @@ public class PreprintsCitationListCitationDetailAttributes {
      */
     
     public String doi;
+
     public PreprintsCitationListCitationDetailAttributes withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -35,6 +37,7 @@ public class PreprintsCitationListCitationDetailAttributes {
      */
     
     public String publisher;
+
     public PreprintsCitationListCitationDetailAttributes withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -45,9 +48,11 @@ public class PreprintsCitationListCitationDetailAttributes {
      */
     
     public String title;
+
     public PreprintsCitationListCitationDetailAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PreprintsCitationListCitationDetailAttributes(){}
 }

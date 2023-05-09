@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ReceiptIpFilter - &lt;p&gt;A receipt IP address filter enables you to specify whether to accept or reject mail originating from an IP address or range of IP addresses.&lt;/p&gt; &lt;p&gt;For information about setting up IP address filters, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-ip-filters.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReceiptIpFilter {
     
     public String cidr;
+
     public ReceiptIpFilter withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,9 +20,14 @@ public class ReceiptIpFilter {
     
     
     public ReceiptFilterPolicyEnum policy;
+
     public ReceiptIpFilter withPolicy(ReceiptFilterPolicyEnum policy) {
         this.policy = policy;
         return this;
     }
     
+    public ReceiptIpFilter(@JsonProperty("Cidr") String cidr, @JsonProperty("Policy") ReceiptFilterPolicyEnum policy) {
+        this.cidr = cidr;
+        this.policy = policy;
+  }
 }

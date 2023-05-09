@@ -19,6 +19,7 @@ public class ScoreTrackCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public ScoreTrackCreation withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -30,6 +31,7 @@ public class ScoreTrackCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ScoreTrackStateEnum state;
+
     public ScoreTrackCreation withState(ScoreTrackStateEnum state) {
         this.state = state;
         return this;
@@ -38,6 +40,7 @@ public class ScoreTrackCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synchronizationPoints")
     public ScoreTrackPoint[] synchronizationPoints;
+
     public ScoreTrackCreation withSynchronizationPoints(ScoreTrackPoint[] synchronizationPoints) {
         this.synchronizationPoints = synchronizationPoints;
         return this;
@@ -49,6 +52,7 @@ public class ScoreTrackCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ScoreTrackCreation withTitle(String title) {
         this.title = title;
         return this;
@@ -60,9 +64,11 @@ public class ScoreTrackCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ScoreTrackCreation withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ScoreTrackCreation(){}
 }

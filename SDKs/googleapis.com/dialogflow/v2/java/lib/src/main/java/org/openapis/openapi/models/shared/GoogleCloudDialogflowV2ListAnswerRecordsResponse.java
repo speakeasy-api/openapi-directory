@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ListAnswerRecordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerRecords")
     public GoogleCloudDialogflowV2AnswerRecord[] answerRecords;
+
     public GoogleCloudDialogflowV2ListAnswerRecordsResponse withAnswerRecords(GoogleCloudDialogflowV2AnswerRecord[] answerRecords) {
         this.answerRecords = answerRecords;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2ListAnswerRecordsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2ListAnswerRecordsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ListAnswerRecordsResponse(){}
 }

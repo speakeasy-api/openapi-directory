@@ -18,6 +18,7 @@ public class MultiClassClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateClassificationMetrics")
     public AggregateClassificationMetrics aggregateClassificationMetrics;
+
     public MultiClassClassificationMetrics withAggregateClassificationMetrics(AggregateClassificationMetrics aggregateClassificationMetrics) {
         this.aggregateClassificationMetrics = aggregateClassificationMetrics;
         return this;
@@ -29,9 +30,11 @@ public class MultiClassClassificationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confusionMatrixList")
     public ConfusionMatrix[] confusionMatrixList;
+
     public MultiClassClassificationMetrics withConfusionMatrixList(ConfusionMatrix[] confusionMatrixList) {
         this.confusionMatrixList = confusionMatrixList;
         return this;
     }
     
+    public MultiClassClassificationMetrics(){}
 }

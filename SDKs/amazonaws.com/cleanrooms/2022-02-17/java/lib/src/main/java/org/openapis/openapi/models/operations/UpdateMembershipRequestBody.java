@@ -15,9 +15,11 @@ public class UpdateMembershipRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryLogStatus")
     public UpdateMembershipRequestBodyQueryLogStatusEnum queryLogStatus;
+
     public UpdateMembershipRequestBody withQueryLogStatus(UpdateMembershipRequestBodyQueryLogStatusEnum queryLogStatus) {
         this.queryLogStatus = queryLogStatus;
         return this;
     }
     
+    public UpdateMembershipRequestBody(){}
 }

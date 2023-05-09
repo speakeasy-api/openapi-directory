@@ -15,6 +15,7 @@ public class DescribeRuleGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroup")
     public RuleGroup ruleGroup;
+
     public DescribeRuleGroupResponse withRuleGroup(RuleGroup ruleGroup) {
         this.ruleGroup = ruleGroup;
         return this;
@@ -22,6 +23,7 @@ public class DescribeRuleGroupResponse {
     
     @JsonProperty("RuleGroupResponse")
     public RuleGroupResponse ruleGroupResponse;
+
     public DescribeRuleGroupResponse withRuleGroupResponse(RuleGroupResponse ruleGroupResponse) {
         this.ruleGroupResponse = ruleGroupResponse;
         return this;
@@ -29,9 +31,14 @@ public class DescribeRuleGroupResponse {
     
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public DescribeRuleGroupResponse withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public DescribeRuleGroupResponse(@JsonProperty("RuleGroupResponse") RuleGroupResponse ruleGroupResponse, @JsonProperty("UpdateToken") String updateToken) {
+        this.ruleGroupResponse = ruleGroupResponse;
+        this.updateToken = updateToken;
+  }
 }

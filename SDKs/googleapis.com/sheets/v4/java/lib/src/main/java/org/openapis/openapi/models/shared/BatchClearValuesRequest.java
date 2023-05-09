@@ -18,9 +18,11 @@ public class BatchClearValuesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranges")
     public String[] ranges;
+
     public BatchClearValuesRequest withRanges(String[] ranges) {
         this.ranges = ranges;
         return this;
     }
     
+    public BatchClearValuesRequest(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ListPhraseMatchersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudContactcenterinsightsV1ListPhraseMatchersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1ListPhraseMatchersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseMatchers")
     public GoogleCloudContactcenterinsightsV1PhraseMatcher[] phraseMatchers;
+
     public GoogleCloudContactcenterinsightsV1ListPhraseMatchersResponse withPhraseMatchers(GoogleCloudContactcenterinsightsV1PhraseMatcher[] phraseMatchers) {
         this.phraseMatchers = phraseMatchers;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ListPhraseMatchersResponse(){}
 }

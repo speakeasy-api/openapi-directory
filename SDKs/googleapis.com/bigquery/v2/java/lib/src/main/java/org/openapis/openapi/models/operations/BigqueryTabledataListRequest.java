@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryTabledataListRequest {
@@ -12,6 +13,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryTabledataListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public BigqueryTabledataListRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -32,6 +35,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryTabledataListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryTabledataListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public BigqueryTabledataListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryTabledataListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public BigqueryTabledataListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -82,6 +90,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryTabledataListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryTabledataListRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -102,6 +112,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryTabledataListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=selectedFields")
     public String selectedFields;
+
     public BigqueryTabledataListRequest withSelectedFields(String selectedFields) {
         this.selectedFields = selectedFields;
         return this;
@@ -122,6 +134,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public String startIndex;
+
     public BigqueryTabledataListRequest withStartIndex(String startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -132,6 +145,7 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
     public String tableId;
+
     public BigqueryTabledataListRequest withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -142,9 +156,15 @@ public class BigqueryTabledataListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryTabledataListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public BigqueryTabledataListRequest(@JsonProperty("datasetId") String datasetId, @JsonProperty("projectId") String projectId, @JsonProperty("tableId") String tableId) {
+        this.datasetId = datasetId;
+        this.projectId = projectId;
+        this.tableId = tableId;
+  }
 }

@@ -62,11 +62,9 @@ public class InboxRecipients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInboxRecipientsResponse res = new org.openapis.openapi.models.operations.GetInboxRecipientsResponse() {{
+        org.openapis.openapi.models.operations.GetInboxRecipientsResponse res = new org.openapis.openapi.models.operations.GetInboxRecipientsResponse(contentType, httpRes.statusCode()) {{
             inboxRecipientEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,6 +95,9 @@ public class InboxRecipients {
         req.setMethod("POST");
         req.setURL(url);
         SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
         req.setBody(serializedRequestBody);
         
         
@@ -105,11 +106,9 @@ public class InboxRecipients {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostInboxRecipientsResponse res = new org.openapis.openapi.models.operations.PostInboxRecipientsResponse() {{
+        org.openapis.openapi.models.operations.PostInboxRecipientsResponse res = new org.openapis.openapi.models.operations.PostInboxRecipientsResponse(contentType, httpRes.statusCode()) {{
             inboxRecipientEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

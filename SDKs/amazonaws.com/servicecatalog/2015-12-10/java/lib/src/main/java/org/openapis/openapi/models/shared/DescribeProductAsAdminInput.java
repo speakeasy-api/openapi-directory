@@ -12,6 +12,7 @@ public class DescribeProductAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeProductAsAdminInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class DescribeProductAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeProductAsAdminInput withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class DescribeProductAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeProductAsAdminInput withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class DescribeProductAsAdminInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePortfolioId")
     public String sourcePortfolioId;
+
     public DescribeProductAsAdminInput withSourcePortfolioId(String sourcePortfolioId) {
         this.sourcePortfolioId = sourcePortfolioId;
         return this;
     }
     
+    public DescribeProductAsAdminInput(){}
 }

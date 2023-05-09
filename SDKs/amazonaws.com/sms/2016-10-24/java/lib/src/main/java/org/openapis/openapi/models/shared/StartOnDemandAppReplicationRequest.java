@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartOnDemandAppReplicationRequest {
     @JsonProperty("appId")
     public String appId;
+
     public StartOnDemandAppReplicationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -19,9 +20,13 @@ public class StartOnDemandAppReplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StartOnDemandAppReplicationRequest withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public StartOnDemandAppReplicationRequest(@JsonProperty("appId") String appId) {
+        this.appId = appId;
+  }
 }

@@ -58,10 +58,8 @@ public class ShippingPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiLogisticsPvtShippingPoliciesIdResponse res = new org.openapis.openapi.models.operations.DeleteApiLogisticsPvtShippingPoliciesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiLogisticsPvtShippingPoliciesIdResponse res = new org.openapis.openapi.models.operations.DeleteApiLogisticsPvtShippingPoliciesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,10 +106,8 @@ public class ShippingPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,10 +148,8 @@ public class ShippingPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesIdResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesIdResponse res = new org.openapis.openapi.models.operations.GetApiLogisticsPvtShippingPoliciesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,10 +192,8 @@ public class ShippingPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiLogisticsPvtShippingPoliciesResponse res = new org.openapis.openapi.models.operations.PostApiLogisticsPvtShippingPoliciesResponse() {{
+        org.openapis.openapi.models.operations.PostApiLogisticsPvtShippingPoliciesResponse res = new org.openapis.openapi.models.operations.PostApiLogisticsPvtShippingPoliciesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,10 +236,8 @@ public class ShippingPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiLogisticsPvtShippingPoliciesIdResponse res = new org.openapis.openapi.models.operations.PutApiLogisticsPvtShippingPoliciesIdResponse() {{
+        org.openapis.openapi.models.operations.PutApiLogisticsPvtShippingPoliciesIdResponse res = new org.openapis.openapi.models.operations.PutApiLogisticsPvtShippingPoliciesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

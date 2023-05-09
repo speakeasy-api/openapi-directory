@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteLocalGatewayRouteRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteLocalGatewayRouteActionEnum action;
+
     public GETDeleteLocalGatewayRouteRequest withAction(GETDeleteLocalGatewayRouteActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public GETDeleteLocalGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public GETDeleteLocalGatewayRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteLocalGatewayRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -49,6 +54,7 @@ public class GETDeleteLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayRouteTableId")
     public String localGatewayRouteTableId;
+
     public GETDeleteLocalGatewayRouteRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -56,6 +62,7 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteLocalGatewayRouteVersionEnum version;
+
     public GETDeleteLocalGatewayRouteRequest withVersion(GETDeleteLocalGatewayRouteVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteLocalGatewayRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteLocalGatewayRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteLocalGatewayRouteRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteLocalGatewayRouteRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteLocalGatewayRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteLocalGatewayRouteRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETDeleteLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteLocalGatewayRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteLocalGatewayRouteRequest(@JsonProperty("Action") GETDeleteLocalGatewayRouteActionEnum action, @JsonProperty("LocalGatewayRouteTableId") String localGatewayRouteTableId, @JsonProperty("Version") GETDeleteLocalGatewayRouteVersionEnum version) {
+        this.action = action;
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        this.version = version;
+  }
 }

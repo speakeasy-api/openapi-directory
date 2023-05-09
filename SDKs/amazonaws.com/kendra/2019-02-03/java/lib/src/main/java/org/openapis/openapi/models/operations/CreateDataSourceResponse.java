@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataSourceResponse {
@@ -12,6 +13,7 @@ public class CreateDataSourceResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDataSourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDataSourceResponse {
      */
     
     public Object conflictException;
+
     public CreateDataSourceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataSourceResponse {
     
     
     public String contentType;
+
     public CreateDataSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataSourceResponse createDataSourceResponse;
+
     public CreateDataSourceResponse withCreateDataSourceResponse(org.openapis.openapi.models.shared.CreateDataSourceResponse createDataSourceResponse) {
         this.createDataSourceResponse = createDataSourceResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataSourceResponse {
      */
     
     public Object internalServerException;
+
     public CreateDataSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDataSourceResponse {
      */
     
     public Object resourceAlreadyExistException;
+
     public CreateDataSourceResponse withResourceAlreadyExistException(Object resourceAlreadyExistException) {
         this.resourceAlreadyExistException = resourceAlreadyExistException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDataSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDataSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDataSourceResponse {
     
     
     public Integer statusCode;
+
     public CreateDataSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDataSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDataSourceResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateDataSourceResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -103,6 +114,7 @@ public class CreateDataSourceResponse {
      */
     
     public Object throttlingException;
+
     public CreateDataSourceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class CreateDataSourceResponse {
      */
     
     public Object validationException;
+
     public CreateDataSourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDataSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

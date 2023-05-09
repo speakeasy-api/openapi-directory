@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationConfig {
     @JsonProperty("services")
     public String[] services;
+
     public DestinationConfig withServices(String[] services) {
         this.services = services;
         return this;
@@ -22,9 +23,13 @@ public class DestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public DestinationConfig withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public DestinationConfig(@JsonProperty("services") String[] services) {
+        this.services = services;
+  }
 }

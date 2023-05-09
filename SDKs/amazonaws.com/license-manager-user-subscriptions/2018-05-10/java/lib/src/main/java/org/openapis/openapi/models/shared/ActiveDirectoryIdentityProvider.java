@@ -15,9 +15,11 @@ public class ActiveDirectoryIdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public ActiveDirectoryIdentityProvider withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public ActiveDirectoryIdentityProvider(){}
 }

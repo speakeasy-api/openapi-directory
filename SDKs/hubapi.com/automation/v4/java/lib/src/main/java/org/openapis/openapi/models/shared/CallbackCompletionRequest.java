@@ -15,9 +15,13 @@ public class CallbackCompletionRequest {
      */
     @JsonProperty("outputFields")
     public java.util.Map<String, String> outputFields;
+
     public CallbackCompletionRequest withOutputFields(java.util.Map<String, String> outputFields) {
         this.outputFields = outputFields;
         return this;
     }
     
+    public CallbackCompletionRequest(@JsonProperty("outputFields") java.util.Map<String, String> outputFields) {
+        this.outputFields = outputFields;
+  }
 }

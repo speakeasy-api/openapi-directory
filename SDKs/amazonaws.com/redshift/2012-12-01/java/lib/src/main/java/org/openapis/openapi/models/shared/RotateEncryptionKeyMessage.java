@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RotateEncryptionKeyMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class RotateEncryptionKeyMessage {
     
     public String clusterIdentifier;
+
     public RotateEncryptionKeyMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
     }
     
+    public RotateEncryptionKeyMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

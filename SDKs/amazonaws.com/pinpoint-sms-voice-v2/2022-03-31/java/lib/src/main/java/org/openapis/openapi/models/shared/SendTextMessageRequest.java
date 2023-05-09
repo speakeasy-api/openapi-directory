@@ -12,6 +12,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SendTextMessageRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -20,6 +21,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Context")
     public java.util.Map<String, String> context;
+
     public SendTextMessageRequest withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -28,6 +30,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCountryParameters")
     public java.util.Map<String, String> destinationCountryParameters;
+
     public SendTextMessageRequest withDestinationCountryParameters(java.util.Map<String, String> destinationCountryParameters) {
         this.destinationCountryParameters = destinationCountryParameters;
         return this;
@@ -35,6 +38,7 @@ public class SendTextMessageRequest {
     
     @JsonProperty("DestinationPhoneNumber")
     public String destinationPhoneNumber;
+
     public SendTextMessageRequest withDestinationPhoneNumber(String destinationPhoneNumber) {
         this.destinationPhoneNumber = destinationPhoneNumber;
         return this;
@@ -43,6 +47,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public SendTextMessageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -51,6 +56,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keyword")
     public String keyword;
+
     public SendTextMessageRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -59,6 +65,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPrice")
     public String maxPrice;
+
     public SendTextMessageRequest withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -67,6 +74,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageBody")
     public String messageBody;
+
     public SendTextMessageRequest withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -75,6 +83,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public SendTextMessageRequest withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -83,6 +92,7 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public SendTextMessageRequest withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
@@ -91,9 +101,13 @@ public class SendTextMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLive")
     public Long timeToLive;
+
     public SendTextMessageRequest withTimeToLive(Long timeToLive) {
         this.timeToLive = timeToLive;
         return this;
     }
     
+    public SendTextMessageRequest(@JsonProperty("DestinationPhoneNumber") String destinationPhoneNumber) {
+        this.destinationPhoneNumber = destinationPhoneNumber;
+  }
 }

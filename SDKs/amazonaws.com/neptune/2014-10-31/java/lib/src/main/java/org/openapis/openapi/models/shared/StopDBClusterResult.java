@@ -15,9 +15,11 @@ public class StopDBClusterResult {
      */
     
     public DBCluster dbCluster;
+
     public StopDBClusterResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public StopDBClusterResult(){}
 }

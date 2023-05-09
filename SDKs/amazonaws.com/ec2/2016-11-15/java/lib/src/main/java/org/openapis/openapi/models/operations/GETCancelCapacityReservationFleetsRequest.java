@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCancelCapacityReservationFleetsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCancelCapacityReservationFleetsActionEnum action;
+
     public GETCancelCapacityReservationFleetsRequest withAction(GETCancelCapacityReservationFleetsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCancelCapacityReservationFleetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CapacityReservationFleetId")
     public String[] capacityReservationFleetId;
+
     public GETCancelCapacityReservationFleetsRequest withCapacityReservationFleetId(String[] capacityReservationFleetId) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         return this;
@@ -29,6 +32,7 @@ public class GETCancelCapacityReservationFleetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCancelCapacityReservationFleetsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -36,6 +40,7 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCancelCapacityReservationFleetsVersionEnum version;
+
     public GETCancelCapacityReservationFleetsRequest withVersion(GETCancelCapacityReservationFleetsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCancelCapacityReservationFleetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCancelCapacityReservationFleetsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCancelCapacityReservationFleetsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCancelCapacityReservationFleetsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCancelCapacityReservationFleetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCancelCapacityReservationFleetsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETCancelCapacityReservationFleetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCancelCapacityReservationFleetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCancelCapacityReservationFleetsRequest(@JsonProperty("Action") GETCancelCapacityReservationFleetsActionEnum action, @JsonProperty("CapacityReservationFleetId") String[] capacityReservationFleetId, @JsonProperty("Version") GETCancelCapacityReservationFleetsVersionEnum version) {
+        this.action = action;
+        this.capacityReservationFleetId = capacityReservationFleetId;
+        this.version = version;
+  }
 }

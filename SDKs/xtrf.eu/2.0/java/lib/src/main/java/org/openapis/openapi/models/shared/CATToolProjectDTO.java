@@ -15,9 +15,11 @@ public class CATToolProjectDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectCreatedInCatToolOrCreationIsQueued")
     public Boolean projectCreatedInCatToolOrCreationIsQueued;
+
     public CATToolProjectDTO withProjectCreatedInCatToolOrCreationIsQueued(Boolean projectCreatedInCatToolOrCreationIsQueued) {
         this.projectCreatedInCatToolOrCreationIsQueued = projectCreatedInCatToolOrCreationIsQueued;
         return this;
     }
     
+    public CATToolProjectDTO(){}
 }

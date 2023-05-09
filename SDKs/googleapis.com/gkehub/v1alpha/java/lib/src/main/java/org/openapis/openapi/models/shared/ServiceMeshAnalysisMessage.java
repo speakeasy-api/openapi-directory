@@ -18,6 +18,7 @@ public class ServiceMeshAnalysisMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public java.util.Map<String, Object> args;
+
     public ServiceMeshAnalysisMessage withArgs(java.util.Map<String, Object> args) {
         this.args = args;
         return this;
@@ -29,6 +30,7 @@ public class ServiceMeshAnalysisMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServiceMeshAnalysisMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ServiceMeshAnalysisMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageBase")
     public ServiceMeshAnalysisMessageBase messageBase;
+
     public ServiceMeshAnalysisMessage withMessageBase(ServiceMeshAnalysisMessageBase messageBase) {
         this.messageBase = messageBase;
         return this;
@@ -51,9 +54,11 @@ public class ServiceMeshAnalysisMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePaths")
     public String[] resourcePaths;
+
     public ServiceMeshAnalysisMessage withResourcePaths(String[] resourcePaths) {
         this.resourcePaths = resourcePaths;
         return this;
     }
     
+    public ServiceMeshAnalysisMessage(){}
 }

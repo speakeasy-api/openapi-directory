@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RequestSpotInstancesRequest {
     
     public String availabilityZoneGroup;
+
     public RequestSpotInstancesRequest withAvailabilityZoneGroup(String availabilityZoneGroup) {
         this.availabilityZoneGroup = availabilityZoneGroup;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotInstancesRequest {
     
     
     public Long blockDurationMinutes;
+
     public RequestSpotInstancesRequest withBlockDurationMinutes(Long blockDurationMinutes) {
         this.blockDurationMinutes = blockDurationMinutes;
         return this;
@@ -26,6 +28,7 @@ public class RequestSpotInstancesRequest {
     
     
     public String clientToken;
+
     public RequestSpotInstancesRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -33,6 +36,7 @@ public class RequestSpotInstancesRequest {
     
     
     public Boolean dryRun;
+
     public RequestSpotInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -40,6 +44,7 @@ public class RequestSpotInstancesRequest {
     
     
     public Long instanceCount;
+
     public RequestSpotInstancesRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -47,6 +52,7 @@ public class RequestSpotInstancesRequest {
     
     
     public InstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public RequestSpotInstancesRequest withInstanceInterruptionBehavior(InstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -54,6 +60,7 @@ public class RequestSpotInstancesRequest {
     
     
     public String launchGroup;
+
     public RequestSpotInstancesRequest withLaunchGroup(String launchGroup) {
         this.launchGroup = launchGroup;
         return this;
@@ -61,6 +68,7 @@ public class RequestSpotInstancesRequest {
     
     
     public RequestSpotLaunchSpecification launchSpecification;
+
     public RequestSpotInstancesRequest withLaunchSpecification(RequestSpotLaunchSpecification launchSpecification) {
         this.launchSpecification = launchSpecification;
         return this;
@@ -68,6 +76,7 @@ public class RequestSpotInstancesRequest {
     
     
     public String spotPrice;
+
     public RequestSpotInstancesRequest withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -75,6 +84,7 @@ public class RequestSpotInstancesRequest {
     
     
     public RequestSpotInstancesRequestTagSpecifications[] tagSpecifications;
+
     public RequestSpotInstancesRequest withTagSpecifications(RequestSpotInstancesRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -82,6 +92,7 @@ public class RequestSpotInstancesRequest {
     
     
     public RequestSpotInstancesRequestTypeEnum type;
+
     public RequestSpotInstancesRequest withType(RequestSpotInstancesRequestTypeEnum type) {
         this.type = type;
         return this;
@@ -89,6 +100,7 @@ public class RequestSpotInstancesRequest {
     
     
     public OffsetDateTime validFrom;
+
     public RequestSpotInstancesRequest withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -96,9 +108,11 @@ public class RequestSpotInstancesRequest {
     
     
     public OffsetDateTime validUntil;
+
     public RequestSpotInstancesRequest withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public RequestSpotInstancesRequest(){}
 }

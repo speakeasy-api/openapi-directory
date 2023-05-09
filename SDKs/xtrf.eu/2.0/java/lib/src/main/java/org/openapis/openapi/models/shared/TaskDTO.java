@@ -18,6 +18,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTaskPONumber")
     public String clientTaskPONumber;
+
     public TaskDTO withClientTaskPONumber(String clientTaskPONumber) {
         this.clientTaskPONumber = clientTaskPONumber;
         return this;
@@ -26,6 +27,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDTO[] customFields;
+
     public TaskDTO withCustomFields(CustomFieldDTO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -34,6 +36,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public ProjectDatesDTO dates;
+
     public TaskDTO withDates(ProjectDatesDTO dates) {
         this.dates = dates;
         return this;
@@ -45,6 +48,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finance")
     public TaskFinanceDTO finance;
+
     public TaskDTO withFinance(TaskFinanceDTO finance) {
         this.finance = finance;
         return this;
@@ -56,6 +60,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TaskDTO withId(Long id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public TaskDTO withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -75,6 +81,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     public InstructionsDTO instructions;
+
     public TaskDTO withInstructions(InstructionsDTO instructions) {
         this.instructions = instructions;
         return this;
@@ -83,6 +90,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public TaskJobsDTO jobs;
+
     public TaskDTO withJobs(TaskJobsDTO jobs) {
         this.jobs = jobs;
         return this;
@@ -94,6 +102,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombination")
     public CommonLanguageCombinationDTO languageCombination;
+
     public TaskDTO withLanguageCombination(CommonLanguageCombinationDTO languageCombination) {
         this.languageCombination = languageCombination;
         return this;
@@ -105,6 +114,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskDTO withName(String name) {
         this.name = name;
         return this;
@@ -116,6 +126,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public ClassicPeopleDTO people;
+
     public TaskDTO withPeople(ClassicPeopleDTO people) {
         this.people = people;
         return this;
@@ -127,6 +138,7 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public Long projectId;
+
     public TaskDTO withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -138,9 +150,11 @@ public class TaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quoteId")
     public Long quoteId;
+
     public TaskDTO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public TaskDTO(){}
 }

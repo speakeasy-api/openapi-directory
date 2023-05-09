@@ -59,11 +59,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CaptureTransactionResponse res = new org.openapis.openapi.models.operations.CaptureTransactionResponse() {{
+        org.openapis.openapi.models.operations.CaptureTransactionResponse res = new org.openapis.openapi.models.operations.CaptureTransactionResponse(contentType, httpRes.statusCode()) {{
             captureTransactionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChargeResponse res = new org.openapis.openapi.models.operations.ChargeResponse() {{
+        org.openapis.openapi.models.operations.ChargeResponse res = new org.openapis.openapi.models.operations.ChargeResponse(contentType, httpRes.statusCode()) {{
             chargeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTransactionsResponse res = new org.openapis.openapi.models.operations.ListTransactionsResponse() {{
+        org.openapis.openapi.models.operations.ListTransactionsResponse res = new org.openapis.openapi.models.operations.ListTransactionsResponse(contentType, httpRes.statusCode()) {{
             listTransactionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,11 +211,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveTransactionResponse res = new org.openapis.openapi.models.operations.RetrieveTransactionResponse() {{
+        org.openapis.openapi.models.operations.RetrieveTransactionResponse res = new org.openapis.openapi.models.operations.RetrieveTransactionResponse(contentType, httpRes.statusCode()) {{
             retrieveTransactionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +255,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VoidTransactionResponse res = new org.openapis.openapi.models.operations.VoidTransactionResponse() {{
+        org.openapis.openapi.models.operations.VoidTransactionResponse res = new org.openapis.openapi.models.operations.VoidTransactionResponse(contentType, httpRes.statusCode()) {{
             voidTransactionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,11 +309,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsResponse res = new org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsResponse() {{
+        org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsResponse res = new org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsResponse(contentType, httpRes.statusCode()) {{
             listRefundsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -373,11 +361,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse res = new org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse() {{
+        org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse res = new org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse(contentType, httpRes.statusCode()) {{
             createRefundResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

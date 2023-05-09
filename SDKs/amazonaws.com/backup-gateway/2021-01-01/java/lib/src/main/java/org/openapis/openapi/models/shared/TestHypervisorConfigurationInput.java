@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestHypervisorConfigurationInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public TestHypervisorConfigurationInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
@@ -18,6 +19,7 @@ public class TestHypervisorConfigurationInput {
     
     @JsonProperty("Host")
     public String host;
+
     public TestHypervisorConfigurationInput withHost(String host) {
         this.host = host;
         return this;
@@ -26,6 +28,7 @@ public class TestHypervisorConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public TestHypervisorConfigurationInput withPassword(String password) {
         this.password = password;
         return this;
@@ -34,9 +37,14 @@ public class TestHypervisorConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public TestHypervisorConfigurationInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TestHypervisorConfigurationInput(@JsonProperty("GatewayArn") String gatewayArn, @JsonProperty("Host") String host) {
+        this.gatewayArn = gatewayArn;
+        this.host = host;
+  }
 }

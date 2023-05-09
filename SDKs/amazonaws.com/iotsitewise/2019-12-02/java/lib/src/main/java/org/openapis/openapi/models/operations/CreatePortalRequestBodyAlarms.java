@@ -15,6 +15,7 @@ public class CreatePortalRequestBodyAlarms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmRoleArn")
     public String alarmRoleArn;
+
     public CreatePortalRequestBodyAlarms withAlarmRoleArn(String alarmRoleArn) {
         this.alarmRoleArn = alarmRoleArn;
         return this;
@@ -23,9 +24,11 @@ public class CreatePortalRequestBodyAlarms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationLambdaArn")
     public String notificationLambdaArn;
+
     public CreatePortalRequestBodyAlarms withNotificationLambdaArn(String notificationLambdaArn) {
         this.notificationLambdaArn = notificationLambdaArn;
         return this;
     }
     
+    public CreatePortalRequestBodyAlarms(){}
 }

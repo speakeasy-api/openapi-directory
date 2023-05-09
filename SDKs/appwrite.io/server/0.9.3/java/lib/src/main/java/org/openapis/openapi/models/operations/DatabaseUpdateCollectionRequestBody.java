@@ -14,6 +14,7 @@ public class DatabaseUpdateCollectionRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public DatabaseUpdateCollectionRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class DatabaseUpdateCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read")
     public String[] read;
+
     public DatabaseUpdateCollectionRequestBody withRead(String[] read) {
         this.read = read;
         return this;
@@ -36,6 +38,7 @@ public class DatabaseUpdateCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public String[] rules;
+
     public DatabaseUpdateCollectionRequestBody withRules(String[] rules) {
         this.rules = rules;
         return this;
@@ -47,9 +50,13 @@ public class DatabaseUpdateCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write")
     public String[] write;
+
     public DatabaseUpdateCollectionRequestBody withWrite(String[] write) {
         this.write = write;
         return this;
     }
     
+    public DatabaseUpdateCollectionRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

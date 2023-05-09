@@ -15,6 +15,7 @@ public class StartReadSetImportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartReadSetImportJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class StartReadSetImportJobRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartReadSetImportJobRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -35,9 +37,14 @@ public class StartReadSetImportJobRequestBody {
      */
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.StartReadSetImportJobSourceItem[] sources;
+
     public StartReadSetImportJobRequestBody withSources(org.openapis.openapi.models.shared.StartReadSetImportJobSourceItem[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public StartReadSetImportJobRequestBody(@JsonProperty("roleArn") String roleArn, @JsonProperty("sources") org.openapis.openapi.models.shared.StartReadSetImportJobSourceItem[] sources) {
+        this.roleArn = roleArn;
+        this.sources = sources;
+  }
 }

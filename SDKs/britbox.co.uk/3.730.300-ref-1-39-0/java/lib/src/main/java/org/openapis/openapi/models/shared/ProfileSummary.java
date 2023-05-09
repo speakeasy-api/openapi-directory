@@ -18,6 +18,7 @@ public class ProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public ProfileSummary withColor(String color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class ProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heroAutoplay")
     public Boolean heroAutoplay;
+
     public ProfileSummary withHeroAutoplay(Boolean heroAutoplay) {
         this.heroAutoplay = heroAutoplay;
         return this;
@@ -40,6 +42,7 @@ public class ProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heroWithAudio")
     public Boolean heroWithAudio;
+
     public ProfileSummary withHeroWithAudio(Boolean heroWithAudio) {
         this.heroWithAudio = heroWithAudio;
         return this;
@@ -50,6 +53,7 @@ public class ProfileSummary {
      */
     @JsonProperty("id")
     public String id;
+
     public ProfileSummary withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +67,7 @@ public class ProfileSummary {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public ProfileSummary withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -78,6 +83,7 @@ public class ProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public ProfileSummary withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -91,6 +97,7 @@ public class ProfileSummary {
      */
     @JsonProperty("marketingEnabled")
     public Boolean marketingEnabled;
+
     public ProfileSummary withMarketingEnabled(Boolean marketingEnabled) {
         this.marketingEnabled = marketingEnabled;
         return this;
@@ -99,6 +106,7 @@ public class ProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRatingContentFilter")
     public ClassificationSummary maxRatingContentFilter;
+
     public ProfileSummary withMaxRatingContentFilter(ClassificationSummary maxRatingContentFilter) {
         this.maxRatingContentFilter = maxRatingContentFilter;
         return this;
@@ -107,6 +115,7 @@ public class ProfileSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRatingPlaybackGuard")
     public ClassificationSummary minRatingPlaybackGuard;
+
     public ProfileSummary withMinRatingPlaybackGuard(ClassificationSummary minRatingPlaybackGuard) {
         this.minRatingPlaybackGuard = minRatingPlaybackGuard;
         return this;
@@ -117,6 +126,7 @@ public class ProfileSummary {
      */
     @JsonProperty("name")
     public String name;
+
     public ProfileSummary withName(String name) {
         this.name = name;
         return this;
@@ -127,6 +137,7 @@ public class ProfileSummary {
      */
     @JsonProperty("pinEnabled")
     public Boolean pinEnabled;
+
     public ProfileSummary withPinEnabled(Boolean pinEnabled) {
         this.pinEnabled = pinEnabled;
         return this;
@@ -137,6 +148,7 @@ public class ProfileSummary {
      */
     @JsonProperty("purchaseEnabled")
     public Boolean purchaseEnabled;
+
     public ProfileSummary withPurchaseEnabled(Boolean purchaseEnabled) {
         this.purchaseEnabled = purchaseEnabled;
         return this;
@@ -147,9 +159,19 @@ public class ProfileSummary {
      */
     @JsonProperty("segments")
     public String[] segments;
+
     public ProfileSummary withSegments(String[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public ProfileSummary(@JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("marketingEnabled") Boolean marketingEnabled, @JsonProperty("name") String name, @JsonProperty("pinEnabled") Boolean pinEnabled, @JsonProperty("purchaseEnabled") Boolean purchaseEnabled, @JsonProperty("segments") String[] segments) {
+        this.id = id;
+        this.isActive = isActive;
+        this.marketingEnabled = marketingEnabled;
+        this.name = name;
+        this.pinEnabled = pinEnabled;
+        this.purchaseEnabled = purchaseEnabled;
+        this.segments = segments;
+  }
 }

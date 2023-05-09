@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPermissionsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListPermissionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListPermissionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListPermissionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListPermissionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListPermissionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListPermissionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListPermissionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListPermissionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListPermissionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListPermissionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListPermissionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListPermissionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListPermissionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public String groupId;
+
     public ListPermissionsRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -71,6 +80,7 @@ public class ListPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListPermissionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -81,6 +91,7 @@ public class ListPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListPermissionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -91,6 +102,7 @@ public class ListPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public ListPermissionsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -101,6 +113,7 @@ public class ListPermissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userType")
     public ListPermissionsUserTypeEnum userType;
+
     public ListPermissionsRequest withUserType(ListPermissionsUserTypeEnum userType) {
         this.userType = userType;
         return this;
@@ -111,9 +124,13 @@ public class ListPermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspaceId")
     public String workspaceId;
+
     public ListPermissionsRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public ListPermissionsRequest(@JsonProperty("workspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

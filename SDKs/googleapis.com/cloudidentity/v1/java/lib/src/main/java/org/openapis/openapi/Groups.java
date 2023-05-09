@@ -61,11 +61,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsListResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsListResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsListResponse(contentType, httpRes.statusCode()) {{
             listGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsLookupResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsLookupResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsLookupResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsLookupResponse(contentType, httpRes.statusCode()) {{
             lookupGroupNameResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse(contentType, httpRes.statusCode()) {{
             checkTransitiveMembershipResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsListResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsListResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsListResponse(contentType, httpRes.statusCode()) {{
             listMembershipsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupResponse(contentType, httpRes.statusCode()) {{
             lookupMembershipNameResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +417,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse(contentType, httpRes.statusCode()) {{
             modifyMembershipRolesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,11 +459,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse(contentType, httpRes.statusCode()) {{
             searchDirectGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -523,11 +503,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse(contentType, httpRes.statusCode()) {{
             searchTransitiveGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -569,11 +547,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse(contentType, httpRes.statusCode()) {{
             searchTransitiveMembershipsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -615,11 +591,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityGroupsSearchResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsSearchResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityGroupsSearchResponse res = new org.openapis.openapi.models.operations.CloudidentityGroupsSearchResponse(contentType, httpRes.statusCode()) {{
             searchGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

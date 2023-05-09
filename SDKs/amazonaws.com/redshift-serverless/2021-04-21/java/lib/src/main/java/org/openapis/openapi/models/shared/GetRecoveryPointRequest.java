@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRecoveryPointRequest {
     @JsonProperty("recoveryPointId")
     public String recoveryPointId;
+
     public GetRecoveryPointRequest withRecoveryPointId(String recoveryPointId) {
         this.recoveryPointId = recoveryPointId;
         return this;
     }
     
+    public GetRecoveryPointRequest(@JsonProperty("recoveryPointId") String recoveryPointId) {
+        this.recoveryPointId = recoveryPointId;
+  }
 }

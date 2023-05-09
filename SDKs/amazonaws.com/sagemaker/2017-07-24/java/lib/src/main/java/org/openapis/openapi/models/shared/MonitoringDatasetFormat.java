@@ -15,6 +15,7 @@ public class MonitoringDatasetFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Csv")
     public MonitoringCsvDatasetFormat csv;
+
     public MonitoringDatasetFormat withCsv(MonitoringCsvDatasetFormat csv) {
         this.csv = csv;
         return this;
@@ -23,6 +24,7 @@ public class MonitoringDatasetFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Json")
     public MonitoringJsonDatasetFormat json;
+
     public MonitoringDatasetFormat withJson(MonitoringJsonDatasetFormat json) {
         this.json = json;
         return this;
@@ -31,9 +33,11 @@ public class MonitoringDatasetFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parquet")
     public java.util.Map<String, Object> parquet;
+
     public MonitoringDatasetFormat withParquet(java.util.Map<String, Object> parquet) {
         this.parquet = parquet;
         return this;
     }
     
+    public MonitoringDatasetFormat(){}
 }

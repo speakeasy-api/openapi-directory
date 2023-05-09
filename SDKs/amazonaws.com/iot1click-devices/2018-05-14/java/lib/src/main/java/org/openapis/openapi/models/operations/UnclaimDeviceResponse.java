@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnclaimDeviceResponse {
     
     public String contentType;
+
     public UnclaimDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UnclaimDeviceResponse {
      */
     
     public Object internalFailureException;
+
     public UnclaimDeviceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UnclaimDeviceResponse {
      */
     
     public Object invalidRequestException;
+
     public UnclaimDeviceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UnclaimDeviceResponse {
     
     
     public Integer statusCode;
+
     public UnclaimDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UnclaimDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnclaimDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UnclaimDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnclaimDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class UnclaimDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.UnclaimDeviceResponse unclaimDeviceResponse;
+
     public UnclaimDeviceResponse withUnclaimDeviceResponse(org.openapis.openapi.models.shared.UnclaimDeviceResponse unclaimDeviceResponse) {
         this.unclaimDeviceResponse = unclaimDeviceResponse;
         return this;
     }
     
+    public UnclaimDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

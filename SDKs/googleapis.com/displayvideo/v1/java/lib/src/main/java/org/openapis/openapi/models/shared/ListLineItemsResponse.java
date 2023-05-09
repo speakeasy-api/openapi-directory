@@ -18,6 +18,7 @@ public class ListLineItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItems")
     public LineItem[] lineItems;
+
     public ListLineItemsResponse withLineItems(LineItem[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -29,9 +30,11 @@ public class ListLineItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListLineItemsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListLineItemsResponse(){}
 }

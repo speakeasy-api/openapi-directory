@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdminRequestsRequestIdRequest {
@@ -12,9 +13,13 @@ public class GetAdminRequestsRequestIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=requestId")
     public String requestId;
+
     public GetAdminRequestsRequestIdRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetAdminRequestsRequestIdRequest(@JsonProperty("requestId") String requestId) {
+        this.requestId = requestId;
+  }
 }

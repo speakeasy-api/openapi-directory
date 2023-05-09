@@ -15,9 +15,11 @@ public class DescribeIdentityUsageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityUsage")
     public IdentityUsage identityUsage;
+
     public DescribeIdentityUsageResponse withIdentityUsage(IdentityUsage identityUsage) {
         this.identityUsage = identityUsage;
         return this;
     }
     
+    public DescribeIdentityUsageResponse(){}
 }

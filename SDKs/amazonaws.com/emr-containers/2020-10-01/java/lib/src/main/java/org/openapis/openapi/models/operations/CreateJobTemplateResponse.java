@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateJobTemplateResponse {
     
     public String contentType;
+
     public CreateJobTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateJobTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateJobTemplateResponse createJobTemplateResponse;
+
     public CreateJobTemplateResponse withCreateJobTemplateResponse(org.openapis.openapi.models.shared.CreateJobTemplateResponse createJobTemplateResponse) {
         this.createJobTemplateResponse = createJobTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateJobTemplateResponse {
      */
     
     public Object internalServerException;
+
     public CreateJobTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateJobTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateJobTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CreateJobTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateJobTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateJobTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateJobTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateJobTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateJobTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateJobTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

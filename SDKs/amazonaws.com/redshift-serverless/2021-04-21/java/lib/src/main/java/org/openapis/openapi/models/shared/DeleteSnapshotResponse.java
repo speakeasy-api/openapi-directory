@@ -15,9 +15,11 @@ public class DeleteSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshot")
     public Snapshot snapshot;
+
     public DeleteSnapshotResponse withSnapshot(Snapshot snapshot) {
         this.snapshot = snapshot;
         return this;
     }
     
+    public DeleteSnapshotResponse(){}
 }

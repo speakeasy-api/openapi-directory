@@ -18,6 +18,7 @@ public class UpdateSpreadsheetPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateSpreadsheetPropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class UpdateSpreadsheetPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public SpreadsheetProperties properties;
+
     public UpdateSpreadsheetPropertiesRequest withProperties(SpreadsheetProperties properties) {
         this.properties = properties;
         return this;
     }
     
+    public UpdateSpreadsheetPropertiesRequest(){}
 }

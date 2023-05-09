@@ -15,6 +15,7 @@ public class EncryptionSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyIdentifier")
     public String kmsKeyIdentifier;
+
     public EncryptionSpecification withKmsKeyIdentifier(String kmsKeyIdentifier) {
         this.kmsKeyIdentifier = kmsKeyIdentifier;
         return this;
@@ -22,9 +23,13 @@ public class EncryptionSpecification {
     
     @JsonProperty("type")
     public EncryptionTypeEnum type;
+
     public EncryptionSpecification withType(EncryptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EncryptionSpecification(@JsonProperty("type") EncryptionTypeEnum type) {
+        this.type = type;
+  }
 }

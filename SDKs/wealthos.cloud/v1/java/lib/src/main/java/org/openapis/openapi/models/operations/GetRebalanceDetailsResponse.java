@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRebalanceDetailsResponse {
     
     public String contentType;
+
     public GetRebalanceDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRebalanceDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetRebalanceDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRebalanceDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRebalanceDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails200ApplicationJSON getRebalanceDetails200ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails200ApplicationJSONObject(GetRebalanceDetails200ApplicationJSON getRebalanceDetails200ApplicationJSONObject) {
         this.getRebalanceDetails200ApplicationJSONObject = getRebalanceDetails200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails400ApplicationJSON getRebalanceDetails400ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails400ApplicationJSONObject(GetRebalanceDetails400ApplicationJSON getRebalanceDetails400ApplicationJSONObject) {
         this.getRebalanceDetails400ApplicationJSONObject = getRebalanceDetails400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails401ApplicationJSON getRebalanceDetails401ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails401ApplicationJSONObject(GetRebalanceDetails401ApplicationJSON getRebalanceDetails401ApplicationJSONObject) {
         this.getRebalanceDetails401ApplicationJSONObject = getRebalanceDetails401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails403ApplicationJSON getRebalanceDetails403ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails403ApplicationJSONObject(GetRebalanceDetails403ApplicationJSON getRebalanceDetails403ApplicationJSONObject) {
         this.getRebalanceDetails403ApplicationJSONObject = getRebalanceDetails403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails404ApplicationJSON getRebalanceDetails404ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails404ApplicationJSONObject(GetRebalanceDetails404ApplicationJSON getRebalanceDetails404ApplicationJSONObject) {
         this.getRebalanceDetails404ApplicationJSONObject = getRebalanceDetails404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails409ApplicationJSON getRebalanceDetails409ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails409ApplicationJSONObject(GetRebalanceDetails409ApplicationJSON getRebalanceDetails409ApplicationJSONObject) {
         this.getRebalanceDetails409ApplicationJSONObject = getRebalanceDetails409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails429ApplicationJSON getRebalanceDetails429ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails429ApplicationJSONObject(GetRebalanceDetails429ApplicationJSON getRebalanceDetails429ApplicationJSONObject) {
         this.getRebalanceDetails429ApplicationJSONObject = getRebalanceDetails429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class GetRebalanceDetailsResponse {
      */
     
     public GetRebalanceDetails500ApplicationJSON getRebalanceDetails500ApplicationJSONObject;
+
     public GetRebalanceDetailsResponse withGetRebalanceDetails500ApplicationJSONObject(GetRebalanceDetails500ApplicationJSON getRebalanceDetails500ApplicationJSONObject) {
         this.getRebalanceDetails500ApplicationJSONObject = getRebalanceDetails500ApplicationJSONObject;
         return this;
     }
     
+    public GetRebalanceDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

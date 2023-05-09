@@ -15,6 +15,7 @@ public class AuthParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorSuppliedValues")
     public String[] connectorSuppliedValues;
+
     public AuthParameter withConnectorSuppliedValues(String[] connectorSuppliedValues) {
         this.connectorSuppliedValues = connectorSuppliedValues;
         return this;
@@ -23,6 +24,7 @@ public class AuthParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuthParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class AuthParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRequired")
     public Boolean isRequired;
+
     public AuthParameter withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -39,6 +42,7 @@ public class AuthParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSensitiveField")
     public Boolean isSensitiveField;
+
     public AuthParameter withIsSensitiveField(Boolean isSensitiveField) {
         this.isSensitiveField = isSensitiveField;
         return this;
@@ -47,6 +51,7 @@ public class AuthParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public AuthParameter withKey(String key) {
         this.key = key;
         return this;
@@ -55,9 +60,11 @@ public class AuthParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public AuthParameter withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public AuthParameter(){}
 }

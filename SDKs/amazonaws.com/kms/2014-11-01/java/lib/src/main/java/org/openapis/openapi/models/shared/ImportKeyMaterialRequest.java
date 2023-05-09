@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ImportKeyMaterialRequest {
     @JsonProperty("EncryptedKeyMaterial")
     public String encryptedKeyMaterial;
+
     public ImportKeyMaterialRequest withEncryptedKeyMaterial(String encryptedKeyMaterial) {
         this.encryptedKeyMaterial = encryptedKeyMaterial;
         return this;
@@ -24,6 +25,7 @@ public class ImportKeyMaterialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationModel")
     public ExpirationModelTypeEnum expirationModel;
+
     public ImportKeyMaterialRequest withExpirationModel(ExpirationModelTypeEnum expirationModel) {
         this.expirationModel = expirationModel;
         return this;
@@ -31,6 +33,7 @@ public class ImportKeyMaterialRequest {
     
     @JsonProperty("ImportToken")
     public String importToken;
+
     public ImportKeyMaterialRequest withImportToken(String importToken) {
         this.importToken = importToken;
         return this;
@@ -38,6 +41,7 @@ public class ImportKeyMaterialRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public ImportKeyMaterialRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -48,9 +52,15 @@ public class ImportKeyMaterialRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValidTo")
     public OffsetDateTime validTo;
+
     public ImportKeyMaterialRequest withValidTo(OffsetDateTime validTo) {
         this.validTo = validTo;
         return this;
     }
     
+    public ImportKeyMaterialRequest(@JsonProperty("EncryptedKeyMaterial") String encryptedKeyMaterial, @JsonProperty("ImportToken") String importToken, @JsonProperty("KeyId") String keyId) {
+        this.encryptedKeyMaterial = encryptedKeyMaterial;
+        this.importToken = importToken;
+        this.keyId = keyId;
+  }
 }

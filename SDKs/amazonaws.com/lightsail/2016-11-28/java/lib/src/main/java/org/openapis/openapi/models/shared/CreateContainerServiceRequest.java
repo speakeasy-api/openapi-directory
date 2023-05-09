@@ -12,6 +12,7 @@ public class CreateContainerServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public ContainerServiceDeploymentRequest deployment;
+
     public CreateContainerServiceRequest withDeployment(ContainerServiceDeploymentRequest deployment) {
         this.deployment = deployment;
         return this;
@@ -19,6 +20,7 @@ public class CreateContainerServiceRequest {
     
     @JsonProperty("power")
     public ContainerServicePowerNameEnum power;
+
     public CreateContainerServiceRequest withPower(ContainerServicePowerNameEnum power) {
         this.power = power;
         return this;
@@ -27,6 +29,7 @@ public class CreateContainerServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateRegistryAccess")
     public PrivateRegistryAccessRequest privateRegistryAccess;
+
     public CreateContainerServiceRequest withPrivateRegistryAccess(PrivateRegistryAccessRequest privateRegistryAccess) {
         this.privateRegistryAccess = privateRegistryAccess;
         return this;
@@ -35,6 +38,7 @@ public class CreateContainerServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicDomainNames")
     public java.util.Map<String, String[]> publicDomainNames;
+
     public CreateContainerServiceRequest withPublicDomainNames(java.util.Map<String, String[]> publicDomainNames) {
         this.publicDomainNames = publicDomainNames;
         return this;
@@ -42,6 +46,7 @@ public class CreateContainerServiceRequest {
     
     @JsonProperty("scale")
     public Long scale;
+
     public CreateContainerServiceRequest withScale(Long scale) {
         this.scale = scale;
         return this;
@@ -49,6 +54,7 @@ public class CreateContainerServiceRequest {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public CreateContainerServiceRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -57,9 +63,15 @@ public class CreateContainerServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateContainerServiceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateContainerServiceRequest(@JsonProperty("power") ContainerServicePowerNameEnum power, @JsonProperty("scale") Long scale, @JsonProperty("serviceName") String serviceName) {
+        this.power = power;
+        this.scale = scale;
+        this.serviceName = serviceName;
+  }
 }

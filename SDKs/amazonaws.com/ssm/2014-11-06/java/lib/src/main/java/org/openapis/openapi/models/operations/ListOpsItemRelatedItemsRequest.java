@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOpsItemRelatedItemsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListOpsItemRelatedItemsRequest listOpsItemRelatedItemsRequest;
+
     public ListOpsItemRelatedItemsRequest withListOpsItemRelatedItemsRequest(org.openapis.openapi.models.shared.ListOpsItemRelatedItemsRequest listOpsItemRelatedItemsRequest) {
         this.listOpsItemRelatedItemsRequest = listOpsItemRelatedItemsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListOpsItemRelatedItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListOpsItemRelatedItemsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListOpsItemRelatedItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListOpsItemRelatedItemsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListOpsItemRelatedItemsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListOpsItemRelatedItemsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListOpsItemRelatedItemsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListOpsItemRelatedItemsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListOpsItemRelatedItemsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListOpsItemRelatedItemsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListOpsItemRelatedItemsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListOpsItemRelatedItemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListOpsItemRelatedItemsXAmzTargetEnum xAmzTarget;
+
     public ListOpsItemRelatedItemsRequest withXAmzTarget(ListOpsItemRelatedItemsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListOpsItemRelatedItemsRequest(@JsonProperty("ListOpsItemRelatedItemsRequest") org.openapis.openapi.models.shared.ListOpsItemRelatedItemsRequest listOpsItemRelatedItemsRequest, @JsonProperty("X-Amz-Target") ListOpsItemRelatedItemsXAmzTargetEnum xAmzTarget) {
+        this.listOpsItemRelatedItemsRequest = listOpsItemRelatedItemsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

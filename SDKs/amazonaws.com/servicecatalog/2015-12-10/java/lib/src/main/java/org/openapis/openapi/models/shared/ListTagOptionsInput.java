@@ -12,6 +12,7 @@ public class ListTagOptionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ListTagOptionsFilters filters;
+
     public ListTagOptionsInput withFilters(ListTagOptionsFilters filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListTagOptionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListTagOptionsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,9 +30,11 @@ public class ListTagOptionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListTagOptionsInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public ListTagOptionsInput(){}
 }

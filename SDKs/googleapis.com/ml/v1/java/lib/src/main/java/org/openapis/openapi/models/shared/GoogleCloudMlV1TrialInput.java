@@ -18,6 +18,7 @@ public class GoogleCloudMlV1TrialInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalMeasurement")
     public GoogleCloudMlV1Measurement finalMeasurement;
+
     public GoogleCloudMlV1TrialInput withFinalMeasurement(GoogleCloudMlV1Measurement finalMeasurement) {
         this.finalMeasurement = finalMeasurement;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1TrialInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurements")
     public GoogleCloudMlV1Measurement[] measurements;
+
     public GoogleCloudMlV1TrialInput withMeasurements(GoogleCloudMlV1Measurement[] measurements) {
         this.measurements = measurements;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1TrialInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudMlV1TrialParameter[] parameters;
+
     public GoogleCloudMlV1TrialInput withParameters(GoogleCloudMlV1TrialParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudMlV1TrialInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudMlV1TrialStateEnum state;
+
     public GoogleCloudMlV1TrialInput withState(GoogleCloudMlV1TrialStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleCloudMlV1TrialInput(){}
 }

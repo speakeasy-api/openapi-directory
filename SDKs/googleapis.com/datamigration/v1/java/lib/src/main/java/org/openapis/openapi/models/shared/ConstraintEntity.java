@@ -18,6 +18,7 @@ public class ConstraintEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public ConstraintEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -29,6 +30,7 @@ public class ConstraintEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConstraintEntity withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class ConstraintEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceColumns")
     public String[] referenceColumns;
+
     public ConstraintEntity withReferenceColumns(String[] referenceColumns) {
         this.referenceColumns = referenceColumns;
         return this;
@@ -51,6 +54,7 @@ public class ConstraintEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceTable")
     public String referenceTable;
+
     public ConstraintEntity withReferenceTable(String referenceTable) {
         this.referenceTable = referenceTable;
         return this;
@@ -62,6 +66,7 @@ public class ConstraintEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableColumns")
     public String[] tableColumns;
+
     public ConstraintEntity withTableColumns(String[] tableColumns) {
         this.tableColumns = tableColumns;
         return this;
@@ -73,6 +78,7 @@ public class ConstraintEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public ConstraintEntity withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -84,9 +90,11 @@ public class ConstraintEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ConstraintEntity withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ConstraintEntity(){}
 }

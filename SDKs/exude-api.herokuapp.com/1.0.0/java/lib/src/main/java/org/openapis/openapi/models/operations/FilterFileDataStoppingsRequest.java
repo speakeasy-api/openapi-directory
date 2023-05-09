@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilterFileDataStoppingsRequest {
@@ -12,6 +13,7 @@ public class FilterFileDataStoppingsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public FilterFileDataStoppingsRequestBody requestBody;
+
     public FilterFileDataStoppingsRequest withRequestBody(FilterFileDataStoppingsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class FilterFileDataStoppingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public FilterFileDataStoppingsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FilterFileDataStoppingsRequest(@JsonProperty("RequestBody") FilterFileDataStoppingsRequestBody requestBody, @JsonProperty("type") String type) {
+        this.requestBody = requestBody;
+        this.type = type;
+  }
 }

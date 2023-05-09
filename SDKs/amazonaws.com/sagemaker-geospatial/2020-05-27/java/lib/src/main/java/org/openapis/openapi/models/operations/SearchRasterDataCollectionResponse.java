@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchRasterDataCollectionResponse {
@@ -12,6 +13,7 @@ public class SearchRasterDataCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchRasterDataCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchRasterDataCollectionResponse {
     
     
     public String contentType;
+
     public SearchRasterDataCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchRasterDataCollectionResponse {
      */
     
     public Object internalServerException;
+
     public SearchRasterDataCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class SearchRasterDataCollectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchRasterDataCollectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SearchRasterDataCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchRasterDataCollectionOutput searchRasterDataCollectionOutput;
+
     public SearchRasterDataCollectionResponse withSearchRasterDataCollectionOutput(org.openapis.openapi.models.shared.SearchRasterDataCollectionOutput searchRasterDataCollectionOutput) {
         this.searchRasterDataCollectionOutput = searchRasterDataCollectionOutput;
         return this;
@@ -56,6 +62,7 @@ public class SearchRasterDataCollectionResponse {
     
     
     public Integer statusCode;
+
     public SearchRasterDataCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SearchRasterDataCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchRasterDataCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SearchRasterDataCollectionResponse {
      */
     
     public Object throttlingException;
+
     public SearchRasterDataCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class SearchRasterDataCollectionResponse {
      */
     
     public Object validationException;
+
     public SearchRasterDataCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchRasterDataCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

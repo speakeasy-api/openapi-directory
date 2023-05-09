@@ -15,6 +15,7 @@ public class ComponentPropertyBindingProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ComponentPropertyBindingProperties withField(String field) {
         this.field = field;
         return this;
@@ -22,9 +23,13 @@ public class ComponentPropertyBindingProperties {
     
     @JsonProperty("property")
     public String property;
+
     public ComponentPropertyBindingProperties withProperty(String property) {
         this.property = property;
         return this;
     }
     
+    public ComponentPropertyBindingProperties(@JsonProperty("property") String property) {
+        this.property = property;
+  }
 }

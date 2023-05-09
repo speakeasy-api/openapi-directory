@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeOrganizationConfigRuleStatusesResponse {
     
     public String contentType;
+
     public DescribeOrganizationConfigRuleStatusesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeOrganizationConfigRuleStatusesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeOrganizationConfigRuleStatusesResponse describeOrganizationConfigRuleStatusesResponse;
+
     public DescribeOrganizationConfigRuleStatusesResponse withDescribeOrganizationConfigRuleStatusesResponse(org.openapis.openapi.models.shared.DescribeOrganizationConfigRuleStatusesResponse describeOrganizationConfigRuleStatusesResponse) {
         this.describeOrganizationConfigRuleStatusesResponse = describeOrganizationConfigRuleStatusesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeOrganizationConfigRuleStatusesResponse {
      */
     
     public Object invalidLimitException;
+
     public DescribeOrganizationConfigRuleStatusesResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeOrganizationConfigRuleStatusesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeOrganizationConfigRuleStatusesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeOrganizationConfigRuleStatusesResponse {
      */
     
     public Object noSuchOrganizationConfigRuleException;
+
     public DescribeOrganizationConfigRuleStatusesResponse withNoSuchOrganizationConfigRuleException(Object noSuchOrganizationConfigRuleException) {
         this.noSuchOrganizationConfigRuleException = noSuchOrganizationConfigRuleException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeOrganizationConfigRuleStatusesResponse {
      */
     
     public Object organizationAccessDeniedException;
+
     public DescribeOrganizationConfigRuleStatusesResponse withOrganizationAccessDeniedException(Object organizationAccessDeniedException) {
         this.organizationAccessDeniedException = organizationAccessDeniedException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeOrganizationConfigRuleStatusesResponse {
     
     
     public Integer statusCode;
+
     public DescribeOrganizationConfigRuleStatusesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeOrganizationConfigRuleStatusesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeOrganizationConfigRuleStatusesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeOrganizationConfigRuleStatusesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

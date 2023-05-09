@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1WebDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestGuessLabels")
     public GoogleCloudVisionV1p1beta1WebDetectionWebLabel[] bestGuessLabels;
+
     public GoogleCloudVisionV1p1beta1WebDetection withBestGuessLabels(GoogleCloudVisionV1p1beta1WebDetectionWebLabel[] bestGuessLabels) {
         this.bestGuessLabels = bestGuessLabels;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1WebDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullMatchingImages")
     public GoogleCloudVisionV1p1beta1WebDetectionWebImage[] fullMatchingImages;
+
     public GoogleCloudVisionV1p1beta1WebDetection withFullMatchingImages(GoogleCloudVisionV1p1beta1WebDetectionWebImage[] fullMatchingImages) {
         this.fullMatchingImages = fullMatchingImages;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p1beta1WebDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagesWithMatchingImages")
     public GoogleCloudVisionV1p1beta1WebDetectionWebPage[] pagesWithMatchingImages;
+
     public GoogleCloudVisionV1p1beta1WebDetection withPagesWithMatchingImages(GoogleCloudVisionV1p1beta1WebDetectionWebPage[] pagesWithMatchingImages) {
         this.pagesWithMatchingImages = pagesWithMatchingImages;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVisionV1p1beta1WebDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partialMatchingImages")
     public GoogleCloudVisionV1p1beta1WebDetectionWebImage[] partialMatchingImages;
+
     public GoogleCloudVisionV1p1beta1WebDetection withPartialMatchingImages(GoogleCloudVisionV1p1beta1WebDetectionWebImage[] partialMatchingImages) {
         this.partialMatchingImages = partialMatchingImages;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudVisionV1p1beta1WebDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visuallySimilarImages")
     public GoogleCloudVisionV1p1beta1WebDetectionWebImage[] visuallySimilarImages;
+
     public GoogleCloudVisionV1p1beta1WebDetection withVisuallySimilarImages(GoogleCloudVisionV1p1beta1WebDetectionWebImage[] visuallySimilarImages) {
         this.visuallySimilarImages = visuallySimilarImages;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudVisionV1p1beta1WebDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webEntities")
     public GoogleCloudVisionV1p1beta1WebDetectionWebEntity[] webEntities;
+
     public GoogleCloudVisionV1p1beta1WebDetection withWebEntities(GoogleCloudVisionV1p1beta1WebDetectionWebEntity[] webEntities) {
         this.webEntities = webEntities;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1WebDetection(){}
 }

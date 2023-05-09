@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VideointelligenceOperationsProjectsLocationsOperationsGetResponse {
     
     public String contentType;
+
     public VideointelligenceOperationsProjectsLocationsOperationsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VideointelligenceOperationsProjectsLocationsOperationsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation;
+
     public VideointelligenceOperationsProjectsLocationsOperationsGetResponse withGoogleLongrunningOperation(org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation) {
         this.googleLongrunningOperation = googleLongrunningOperation;
         return this;
@@ -26,6 +29,7 @@ public class VideointelligenceOperationsProjectsLocationsOperationsGetResponse {
     
     
     public Integer statusCode;
+
     public VideointelligenceOperationsProjectsLocationsOperationsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VideointelligenceOperationsProjectsLocationsOperationsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VideointelligenceOperationsProjectsLocationsOperationsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VideointelligenceOperationsProjectsLocationsOperationsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

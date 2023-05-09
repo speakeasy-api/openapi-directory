@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceStatusResultInstanceStatusesInstanceState {
     
     public Long code;
+
     public DescribeInstanceStatusResultInstanceStatusesInstanceState withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceStatusResultInstanceStatusesInstanceState {
     
     
     public DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum name;
+
     public DescribeInstanceStatusResultInstanceStatusesInstanceState withName(DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public DescribeInstanceStatusResultInstanceStatusesInstanceState(){}
 }

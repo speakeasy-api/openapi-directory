@@ -15,9 +15,11 @@ public class UpdateTeam200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TeamResponse data;
+
     public UpdateTeam200ApplicationJSON withData(org.openapis.openapi.models.shared.TeamResponse data) {
         this.data = data;
         return this;
     }
     
+    public UpdateTeam200ApplicationJSON(){}
 }

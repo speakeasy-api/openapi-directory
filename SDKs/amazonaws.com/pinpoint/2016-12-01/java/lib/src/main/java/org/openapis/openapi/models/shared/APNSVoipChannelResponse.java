@@ -15,6 +15,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public APNSVoipChannelResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public APNSVoipChannelResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +33,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAuthenticationMethod")
     public String defaultAuthenticationMethod;
+
     public APNSVoipChannelResponse withDefaultAuthenticationMethod(String defaultAuthenticationMethod) {
         this.defaultAuthenticationMethod = defaultAuthenticationMethod;
         return this;
@@ -39,6 +42,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public APNSVoipChannelResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -47,6 +51,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCredential")
     public Boolean hasCredential;
+
     public APNSVoipChannelResponse withHasCredential(Boolean hasCredential) {
         this.hasCredential = hasCredential;
         return this;
@@ -55,6 +60,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasTokenKey")
     public Boolean hasTokenKey;
+
     public APNSVoipChannelResponse withHasTokenKey(Boolean hasTokenKey) {
         this.hasTokenKey = hasTokenKey;
         return this;
@@ -63,6 +69,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public APNSVoipChannelResponse withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsArchived")
     public Boolean isArchived;
+
     public APNSVoipChannelResponse withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -79,6 +87,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public APNSVoipChannelResponse withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -87,6 +96,7 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public APNSVoipChannelResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -94,6 +104,7 @@ public class APNSVoipChannelResponse {
     
     @JsonProperty("Platform")
     public String platform;
+
     public APNSVoipChannelResponse withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -102,9 +113,13 @@ public class APNSVoipChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public APNSVoipChannelResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public APNSVoipChannelResponse(@JsonProperty("Platform") String platform) {
+        this.platform = platform;
+  }
 }

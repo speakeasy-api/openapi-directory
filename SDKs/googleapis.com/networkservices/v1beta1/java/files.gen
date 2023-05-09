@@ -189,4 +189,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TlsRouteRouteMatch.java
 lib/src/main/java/org/openapis/openapi/models/shared/TlsRouteRouteAction.java
 lib/src/main/java/org/openapis/openapi/models/shared/TlsRouteRouteDestination.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTlsRoutesResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

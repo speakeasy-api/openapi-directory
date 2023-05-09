@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPathRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:name")
     public String name;
+
     public PostPathRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +18,7 @@ public class PostPathRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:primaryType")
     public String jcrPrimaryType;
+
     public PostPathRequest withJcrPrimaryType(String jcrPrimaryType) {
         this.jcrPrimaryType = jcrPrimaryType;
         return this;
@@ -23,9 +26,15 @@ public class PostPathRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public PostPathRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PostPathRequest(@JsonProperty(":name") String name, @JsonProperty("jcr:primaryType") String jcrPrimaryType, @JsonProperty("path") String path) {
+        this.name = name;
+        this.jcrPrimaryType = jcrPrimaryType;
+        this.path = path;
+  }
 }

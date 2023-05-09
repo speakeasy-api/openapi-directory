@@ -15,6 +15,7 @@ public class CelebrityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public CelebrityDetail withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,6 +24,7 @@ public class CelebrityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public CelebrityDetail withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -31,6 +33,7 @@ public class CelebrityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Face")
     public FaceDetail face;
+
     public CelebrityDetail withFace(FaceDetail face) {
         this.face = face;
         return this;
@@ -39,6 +42,7 @@ public class CelebrityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CelebrityDetail withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class CelebrityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KnownGender")
     public KnownGender knownGender;
+
     public CelebrityDetail withKnownGender(KnownGender knownGender) {
         this.knownGender = knownGender;
         return this;
@@ -55,6 +60,7 @@ public class CelebrityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CelebrityDetail withName(String name) {
         this.name = name;
         return this;
@@ -63,9 +69,11 @@ public class CelebrityDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Urls")
     public String[] urls;
+
     public CelebrityDetail withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public CelebrityDetail(){}
 }

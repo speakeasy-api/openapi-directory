@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationIdRequestBody {
     @JsonProperty("destinationId")
     public String destinationId;
+
     public DestinationIdRequestBody withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
     }
     
+    public DestinationIdRequestBody(@JsonProperty("destinationId") String destinationId) {
+        this.destinationId = destinationId;
+  }
 }

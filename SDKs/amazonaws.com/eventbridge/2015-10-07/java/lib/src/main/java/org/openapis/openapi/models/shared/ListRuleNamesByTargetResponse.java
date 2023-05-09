@@ -15,6 +15,7 @@ public class ListRuleNamesByTargetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRuleNamesByTargetResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRuleNamesByTargetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleNames")
     public String[] ruleNames;
+
     public ListRuleNamesByTargetResponse withRuleNames(String[] ruleNames) {
         this.ruleNames = ruleNames;
         return this;
     }
     
+    public ListRuleNamesByTargetResponse(){}
 }

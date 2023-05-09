@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigquerydatatransferProjectsTransferConfigsRunsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsTransferConfigsRunsGetSecurityOption1 option1;
+
     public BigquerydatatransferProjectsTransferConfigsRunsGetSecurity withOption1(BigquerydatatransferProjectsTransferConfigsRunsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigquerydatatransferProjectsTransferConfigsRunsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsTransferConfigsRunsGetSecurityOption2 option2;
+
     public BigquerydatatransferProjectsTransferConfigsRunsGetSecurity withOption2(BigquerydatatransferProjectsTransferConfigsRunsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class BigquerydatatransferProjectsTransferConfigsRunsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsTransferConfigsRunsGetSecurityOption3 option3;
+
     public BigquerydatatransferProjectsTransferConfigsRunsGetSecurity withOption3(BigquerydatatransferProjectsTransferConfigsRunsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public BigquerydatatransferProjectsTransferConfigsRunsGetSecurity(){}
 }

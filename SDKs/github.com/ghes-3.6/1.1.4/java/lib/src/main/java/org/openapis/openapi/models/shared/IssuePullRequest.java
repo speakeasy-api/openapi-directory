@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class IssuePullRequest {
     @JsonProperty("diff_url")
     public String diffUrl;
+
     public IssuePullRequest withDiffUrl(String diffUrl) {
         this.diffUrl = diffUrl;
         return this;
@@ -23,6 +24,7 @@ public class IssuePullRequest {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public IssuePullRequest withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -33,6 +35,7 @@ public class IssuePullRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("merged_at")
     public OffsetDateTime mergedAt;
+
     public IssuePullRequest withMergedAt(OffsetDateTime mergedAt) {
         this.mergedAt = mergedAt;
         return this;
@@ -40,6 +43,7 @@ public class IssuePullRequest {
     
     @JsonProperty("patch_url")
     public String patchUrl;
+
     public IssuePullRequest withPatchUrl(String patchUrl) {
         this.patchUrl = patchUrl;
         return this;
@@ -47,9 +51,16 @@ public class IssuePullRequest {
     
     @JsonProperty("url")
     public String url;
+
     public IssuePullRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public IssuePullRequest(@JsonProperty("diff_url") String diffUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("patch_url") String patchUrl, @JsonProperty("url") String url) {
+        this.diffUrl = diffUrl;
+        this.htmlUrl = htmlUrl;
+        this.patchUrl = patchUrl;
+        this.url = url;
+  }
 }

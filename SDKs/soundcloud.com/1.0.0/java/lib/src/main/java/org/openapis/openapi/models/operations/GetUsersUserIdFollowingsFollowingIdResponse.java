@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersUserIdFollowingsFollowingIdResponse {
@@ -12,6 +13,7 @@ public class GetUsersUserIdFollowingsFollowingIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CompleteUser completeUser;
+
     public GetUsersUserIdFollowingsFollowingIdResponse withCompleteUser(org.openapis.openapi.models.shared.CompleteUser completeUser) {
         this.completeUser = completeUser;
         return this;
@@ -19,6 +21,7 @@ public class GetUsersUserIdFollowingsFollowingIdResponse {
     
     
     public String contentType;
+
     public GetUsersUserIdFollowingsFollowingIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetUsersUserIdFollowingsFollowingIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetUsersUserIdFollowingsFollowingIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetUsersUserIdFollowingsFollowingIdResponse {
     
     
     public Integer statusCode;
+
     public GetUsersUserIdFollowingsFollowingIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersUserIdFollowingsFollowingIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersUserIdFollowingsFollowingIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUsersUserIdFollowingsFollowingIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

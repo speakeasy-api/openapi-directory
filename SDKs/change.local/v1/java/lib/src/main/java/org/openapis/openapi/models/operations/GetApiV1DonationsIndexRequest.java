@@ -12,9 +12,11 @@ public class GetApiV1DonationsIndexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public GetApiV1DonationsIndexRequest withPage(Double page) {
         this.page = page;
         return this;
     }
     
+    public GetApiV1DonationsIndexRequest(){}
 }

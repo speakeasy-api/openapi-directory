@@ -12,6 +12,7 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SpcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("exsession")
     public String exsession;
+
     public SpcerRequestBodyCertificateParameters withExsession(String exsession) {
         this.exsession = exsession;
         return this;
@@ -32,6 +34,7 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("rollnumber")
     public String rollnumber;
+
     public SpcerRequestBodyCertificateParameters withRollnumber(String rollnumber) {
         this.rollnumber = rollnumber;
         return this;
@@ -42,6 +45,7 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("totalmarks")
     public String totalmarks;
+
     public SpcerRequestBodyCertificateParameters withTotalmarks(String totalmarks) {
         this.totalmarks = totalmarks;
         return this;
@@ -52,9 +56,17 @@ public class SpcerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public SpcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public SpcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("exsession") String exsession, @JsonProperty("rollnumber") String rollnumber, @JsonProperty("totalmarks") String totalmarks, @JsonProperty("year") String year) {
+        this.fullName = fullName;
+        this.exsession = exsession;
+        this.rollnumber = rollnumber;
+        this.totalmarks = totalmarks;
+        this.year = year;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetApiV2EpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginAirDateAfter")
     public OffsetDateTime beginAirDateAfter;
+
     public GetApiV2EpisodesRequest withBeginAirDateAfter(OffsetDateTime beginAirDateAfter) {
         this.beginAirDateAfter = beginAirDateAfter;
         return this;
@@ -23,6 +25,7 @@ public class GetApiV2EpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endAirDateBefore")
     public OffsetDateTime endAirDateBefore;
+
     public GetApiV2EpisodesRequest withEndAirDateBefore(OffsetDateTime endAirDateBefore) {
         this.endAirDateBefore = endAirDateBefore;
         return this;
@@ -33,6 +36,7 @@ public class GetApiV2EpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long id;
+
     public GetApiV2EpisodesRequest withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class GetApiV2EpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderById")
     public GetApiV2EpisodesOrderByIDEnum orderById;
+
     public GetApiV2EpisodesRequest withOrderById(GetApiV2EpisodesOrderByIDEnum orderById) {
         this.orderById = orderById;
         return this;
@@ -53,6 +58,7 @@ public class GetApiV2EpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetApiV2EpisodesRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -63,6 +69,7 @@ public class GetApiV2EpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageStart")
     public Integer pageStart;
+
     public GetApiV2EpisodesRequest withPageStart(Integer pageStart) {
         this.pageStart = pageStart;
         return this;
@@ -73,9 +80,13 @@ public class GetApiV2EpisodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=programId")
     public Long programId;
+
     public GetApiV2EpisodesRequest withProgramId(Long programId) {
         this.programId = programId;
         return this;
     }
     
+    public GetApiV2EpisodesRequest(@JsonProperty("programId") Long programId) {
+        this.programId = programId;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionArn")
     public String actionArn;
+
     public DescribeActionResponse withActionArn(String actionArn) {
         this.actionArn = actionArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionName")
     public String actionName;
+
     public DescribeActionResponse withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -36,6 +38,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public String actionType;
+
     public DescribeActionResponse withActionType(String actionType) {
         this.actionType = actionType;
         return this;
@@ -47,6 +50,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeActionResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -57,6 +61,7 @@ public class DescribeActionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeActionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -65,6 +70,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeActionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -76,6 +82,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeActionResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -86,6 +93,7 @@ public class DescribeActionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeActionResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -94,6 +102,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public DescribeActionResponse withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -105,6 +114,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public DescribeActionResponse withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -113,6 +123,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public DescribeActionResponse withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -121,6 +132,7 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ActionSource source;
+
     public DescribeActionResponse withSource(ActionSource source) {
         this.source = source;
         return this;
@@ -129,9 +141,11 @@ public class DescribeActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ActionStatusEnum status;
+
     public DescribeActionResponse withStatus(ActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeActionResponse(){}
 }

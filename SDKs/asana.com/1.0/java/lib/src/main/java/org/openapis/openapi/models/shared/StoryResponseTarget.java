@@ -18,6 +18,7 @@ public class StoryResponseTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public StoryResponseTarget withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class StoryResponseTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoryResponseTarget withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +43,7 @@ public class StoryResponseTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public StoryResponseTargetResourceSubtypeEnum resourceSubtype;
+
     public StoryResponseTarget withResourceSubtype(StoryResponseTargetResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -52,9 +55,11 @@ public class StoryResponseTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public StoryResponseTarget withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public StoryResponseTarget(){}
 }

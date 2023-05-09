@@ -12,6 +12,7 @@ public class GetVideoCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetVideoCollectionListEmbedEnum[] embed;
+
     public GetVideoCollectionListRequest withEmbed(GetVideoCollectionListEmbedEnum[] embed) {
         this.embed = embed;
         return this;
@@ -22,6 +23,7 @@ public class GetVideoCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetVideoCollectionListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +34,11 @@ public class GetVideoCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetVideoCollectionListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetVideoCollectionListRequest(){}
 }

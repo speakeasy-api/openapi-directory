@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLaunchProfileMemberRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteLaunchProfileMemberRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLaunchProfileMemberRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Token")
     public String xAmzClientToken;
+
     public DeleteLaunchProfileMemberRequest withXAmzClientToken(String xAmzClientToken) {
         this.xAmzClientToken = xAmzClientToken;
         return this;
@@ -26,6 +29,7 @@ public class DeleteLaunchProfileMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteLaunchProfileMemberRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -33,6 +37,7 @@ public class DeleteLaunchProfileMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteLaunchProfileMemberRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -40,6 +45,7 @@ public class DeleteLaunchProfileMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteLaunchProfileMemberRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -47,6 +53,7 @@ public class DeleteLaunchProfileMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteLaunchProfileMemberRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -54,6 +61,7 @@ public class DeleteLaunchProfileMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteLaunchProfileMemberRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -61,6 +69,7 @@ public class DeleteLaunchProfileMemberRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteLaunchProfileMemberRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -71,6 +80,7 @@ public class DeleteLaunchProfileMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=launchProfileId")
     public String launchProfileId;
+
     public DeleteLaunchProfileMemberRequest withLaunchProfileId(String launchProfileId) {
         this.launchProfileId = launchProfileId;
         return this;
@@ -81,6 +91,7 @@ public class DeleteLaunchProfileMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=principalId")
     public String principalId;
+
     public DeleteLaunchProfileMemberRequest withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -91,9 +102,15 @@ public class DeleteLaunchProfileMemberRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
     public String studioId;
+
     public DeleteLaunchProfileMemberRequest withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public DeleteLaunchProfileMemberRequest(@JsonProperty("launchProfileId") String launchProfileId, @JsonProperty("principalId") String principalId, @JsonProperty("studioId") String studioId) {
+        this.launchProfileId = launchProfileId;
+        this.principalId = principalId;
+        this.studioId = studioId;
+  }
 }

@@ -15,6 +15,7 @@ public class DevEndpointCustomLibraries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraJarsS3Path")
     public String extraJarsS3Path;
+
     public DevEndpointCustomLibraries withExtraJarsS3Path(String extraJarsS3Path) {
         this.extraJarsS3Path = extraJarsS3Path;
         return this;
@@ -23,9 +24,11 @@ public class DevEndpointCustomLibraries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPythonLibsS3Path")
     public String extraPythonLibsS3Path;
+
     public DevEndpointCustomLibraries withExtraPythonLibsS3Path(String extraPythonLibsS3Path) {
         this.extraPythonLibsS3Path = extraPythonLibsS3Path;
         return this;
     }
     
+    public DevEndpointCustomLibraries(){}
 }

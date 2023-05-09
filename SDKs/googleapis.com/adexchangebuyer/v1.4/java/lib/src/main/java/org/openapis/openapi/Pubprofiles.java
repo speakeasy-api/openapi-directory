@@ -58,11 +58,9 @@ public class Pubprofiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerPubprofilesListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPubprofilesListResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerPubprofilesListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerPubprofilesListResponse(contentType, httpRes.statusCode()) {{
             getPublisherProfilesByAccountIdResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

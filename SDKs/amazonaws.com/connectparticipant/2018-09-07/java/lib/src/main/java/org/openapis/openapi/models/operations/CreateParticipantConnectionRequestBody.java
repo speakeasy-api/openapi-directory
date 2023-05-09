@@ -15,6 +15,7 @@ public class CreateParticipantConnectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectParticipant")
     public Boolean connectParticipant;
+
     public CreateParticipantConnectionRequestBody withConnectParticipant(Boolean connectParticipant) {
         this.connectParticipant = connectParticipant;
         return this;
@@ -26,9 +27,11 @@ public class CreateParticipantConnectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public org.openapis.openapi.models.shared.ConnectionTypeEnum[] type;
+
     public CreateParticipantConnectionRequestBody withType(org.openapis.openapi.models.shared.ConnectionTypeEnum[] type) {
         this.type = type;
         return this;
     }
     
+    public CreateParticipantConnectionRequestBody(){}
 }

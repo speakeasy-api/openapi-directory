@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateAccountAliasRequest {
     
     public String accountAlias;
+
     public CreateAccountAliasRequest withAccountAlias(String accountAlias) {
         this.accountAlias = accountAlias;
         return this;
     }
     
+    public CreateAccountAliasRequest(@JsonProperty("AccountAlias") String accountAlias) {
+        this.accountAlias = accountAlias;
+  }
 }

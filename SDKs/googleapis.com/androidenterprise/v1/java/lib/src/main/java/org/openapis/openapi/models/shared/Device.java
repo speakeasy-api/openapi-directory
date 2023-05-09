@@ -18,6 +18,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidId")
     public String androidId;
+
     public Device withAndroidId(String androidId) {
         this.androidId = androidId;
         return this;
@@ -29,6 +30,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public String device;
+
     public Device withDevice(String device) {
         this.device = device;
         return this;
@@ -40,6 +42,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestBuildFingerprint")
     public String latestBuildFingerprint;
+
     public Device withLatestBuildFingerprint(String latestBuildFingerprint) {
         this.latestBuildFingerprint = latestBuildFingerprint;
         return this;
@@ -51,6 +54,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maker")
     public String maker;
+
     public Device withMaker(String maker) {
         this.maker = maker;
         return this;
@@ -62,6 +66,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementType")
     public DeviceManagementTypeEnum managementType;
+
     public Device withManagementType(DeviceManagementTypeEnum managementType) {
         this.managementType = managementType;
         return this;
@@ -73,6 +78,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public Device withModel(String model) {
         this.model = model;
         return this;
@@ -84,6 +90,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public Device withPolicy(Policy policy) {
         this.policy = policy;
         return this;
@@ -95,6 +102,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public String product;
+
     public Device withProduct(String product) {
         this.product = product;
         return this;
@@ -106,6 +114,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report")
     public DeviceReport report;
+
     public Device withReport(DeviceReport report) {
         this.report = report;
         return this;
@@ -117,6 +126,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailBrand")
     public String retailBrand;
+
     public Device withRetailBrand(String retailBrand) {
         this.retailBrand = retailBrand;
         return this;
@@ -128,9 +138,11 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sdkVersion")
     public Integer sdkVersion;
+
     public Device withSDKVersion(Integer sdkVersion) {
         this.sdkVersion = sdkVersion;
         return this;
     }
     
+    public Device(){}
 }

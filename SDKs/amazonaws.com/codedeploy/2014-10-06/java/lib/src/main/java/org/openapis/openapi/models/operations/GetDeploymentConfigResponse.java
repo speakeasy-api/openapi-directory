@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeploymentConfigResponse {
     
     public String contentType;
+
     public GetDeploymentConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDeploymentConfigResponse {
      */
     
     public Object deploymentConfigDoesNotExistException;
+
     public GetDeploymentConfigResponse withDeploymentConfigDoesNotExistException(Object deploymentConfigDoesNotExistException) {
         this.deploymentConfigDoesNotExistException = deploymentConfigDoesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class GetDeploymentConfigResponse {
      */
     
     public Object deploymentConfigNameRequiredException;
+
     public GetDeploymentConfigResponse withDeploymentConfigNameRequiredException(Object deploymentConfigNameRequiredException) {
         this.deploymentConfigNameRequiredException = deploymentConfigNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class GetDeploymentConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeploymentConfigOutput getDeploymentConfigOutput;
+
     public GetDeploymentConfigResponse withGetDeploymentConfigOutput(org.openapis.openapi.models.shared.GetDeploymentConfigOutput getDeploymentConfigOutput) {
         this.getDeploymentConfigOutput = getDeploymentConfigOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetDeploymentConfigResponse {
      */
     
     public Object invalidComputePlatformException;
+
     public GetDeploymentConfigResponse withInvalidComputePlatformException(Object invalidComputePlatformException) {
         this.invalidComputePlatformException = invalidComputePlatformException;
         return this;
@@ -59,6 +65,7 @@ public class GetDeploymentConfigResponse {
      */
     
     public Object invalidDeploymentConfigNameException;
+
     public GetDeploymentConfigResponse withInvalidDeploymentConfigNameException(Object invalidDeploymentConfigNameException) {
         this.invalidDeploymentConfigNameException = invalidDeploymentConfigNameException;
         return this;
@@ -66,6 +73,7 @@ public class GetDeploymentConfigResponse {
     
     
     public Integer statusCode;
+
     public GetDeploymentConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDeploymentConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeploymentConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeploymentConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

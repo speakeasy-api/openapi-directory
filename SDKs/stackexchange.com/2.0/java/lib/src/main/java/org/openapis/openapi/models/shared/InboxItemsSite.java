@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class InboxItemsSite {
     
     public Object[] aliases;
+
     public InboxItemsSite withAliases(Object[] aliases) {
         this.aliases = aliases;
         return this;
@@ -16,6 +17,7 @@ public class InboxItemsSite {
     
     
     public String apiSiteParameter;
+
     public InboxItemsSite withApiSiteParameter(String apiSiteParameter) {
         this.apiSiteParameter = apiSiteParameter;
         return this;
@@ -23,6 +25,7 @@ public class InboxItemsSite {
     
     
     public String audience;
+
     public InboxItemsSite withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -30,6 +33,7 @@ public class InboxItemsSite {
     
     
     public Long closedBetaDate;
+
     public InboxItemsSite withClosedBetaDate(Long closedBetaDate) {
         this.closedBetaDate = closedBetaDate;
         return this;
@@ -37,6 +41,7 @@ public class InboxItemsSite {
     
     
     public String faviconUrl;
+
     public InboxItemsSite withFaviconUrl(String faviconUrl) {
         this.faviconUrl = faviconUrl;
         return this;
@@ -44,6 +49,7 @@ public class InboxItemsSite {
     
     
     public String highResolutionIconUrl;
+
     public InboxItemsSite withHighResolutionIconUrl(String highResolutionIconUrl) {
         this.highResolutionIconUrl = highResolutionIconUrl;
         return this;
@@ -51,6 +57,7 @@ public class InboxItemsSite {
     
     
     public String iconUrl;
+
     public InboxItemsSite withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -58,6 +65,7 @@ public class InboxItemsSite {
     
     
     public Long launchDate;
+
     public InboxItemsSite withLaunchDate(Long launchDate) {
         this.launchDate = launchDate;
         return this;
@@ -65,6 +73,7 @@ public class InboxItemsSite {
     
     
     public String logoUrl;
+
     public InboxItemsSite withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -72,6 +81,7 @@ public class InboxItemsSite {
     
     
     public Object[] markdownExtensions;
+
     public InboxItemsSite withMarkdownExtensions(Object[] markdownExtensions) {
         this.markdownExtensions = markdownExtensions;
         return this;
@@ -79,6 +89,7 @@ public class InboxItemsSite {
     
     
     public String name;
+
     public InboxItemsSite withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +97,7 @@ public class InboxItemsSite {
     
     
     public Long openBetaDate;
+
     public InboxItemsSite withOpenBetaDate(Long openBetaDate) {
         this.openBetaDate = openBetaDate;
         return this;
@@ -93,6 +105,7 @@ public class InboxItemsSite {
     
     
     public Object[] relatedSites;
+
     public InboxItemsSite withRelatedSites(Object[] relatedSites) {
         this.relatedSites = relatedSites;
         return this;
@@ -100,6 +113,7 @@ public class InboxItemsSite {
     
     
     public String siteState;
+
     public InboxItemsSite withSiteState(String siteState) {
         this.siteState = siteState;
         return this;
@@ -107,6 +121,7 @@ public class InboxItemsSite {
     
     
     public String siteType;
+
     public InboxItemsSite withSiteType(String siteType) {
         this.siteType = siteType;
         return this;
@@ -114,6 +129,7 @@ public class InboxItemsSite {
     
     
     public String siteUrl;
+
     public InboxItemsSite withSiteUrl(String siteUrl) {
         this.siteUrl = siteUrl;
         return this;
@@ -121,6 +137,7 @@ public class InboxItemsSite {
     
     
     public InboxItemsSiteStyling styling;
+
     public InboxItemsSite withStyling(InboxItemsSiteStyling styling) {
         this.styling = styling;
         return this;
@@ -128,9 +145,11 @@ public class InboxItemsSite {
     
     
     public String twitterAccount;
+
     public InboxItemsSite withTwitterAccount(String twitterAccount) {
         this.twitterAccount = twitterAccount;
         return this;
     }
     
+    public InboxItemsSite(){}
 }

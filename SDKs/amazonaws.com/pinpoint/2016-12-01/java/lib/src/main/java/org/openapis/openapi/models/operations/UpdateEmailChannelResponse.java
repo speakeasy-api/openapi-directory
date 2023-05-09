@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEmailChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateEmailChannelResponse {
      */
     
     public Object badRequestException;
+
     public UpdateEmailChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEmailChannelResponse {
     
     
     public String contentType;
+
     public UpdateEmailChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEmailChannelResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateEmailChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEmailChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateEmailChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEmailChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateEmailChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateEmailChannelResponse {
      */
     
     public Object notFoundException;
+
     public UpdateEmailChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateEmailChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateEmailChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateEmailChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateEmailChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEmailChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEmailChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateEmailChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateEmailChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateEmailChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEmailChannelResponse updateEmailChannelResponse;
+
     public UpdateEmailChannelResponse withUpdateEmailChannelResponse(org.openapis.openapi.models.shared.UpdateEmailChannelResponse updateEmailChannelResponse) {
         this.updateEmailChannelResponse = updateEmailChannelResponse;
         return this;
     }
     
+    public UpdateEmailChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

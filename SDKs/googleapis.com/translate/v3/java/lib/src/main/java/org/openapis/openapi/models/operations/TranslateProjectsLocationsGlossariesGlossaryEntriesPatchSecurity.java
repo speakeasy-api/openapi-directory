@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurityOption1 option1;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurity withOption1(TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurityOption2 option2;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurity withOption2(TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurity(){}
 }

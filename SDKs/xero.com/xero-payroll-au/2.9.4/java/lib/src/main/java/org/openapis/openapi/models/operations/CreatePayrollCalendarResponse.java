@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePayrollCalendarResponse {
     
     public String contentType;
+
     public CreatePayrollCalendarResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePayrollCalendarResponse {
      */
     
     public org.openapis.openapi.models.shared.PayrollCalendars payrollCalendars;
+
     public CreatePayrollCalendarResponse withPayrollCalendars(org.openapis.openapi.models.shared.PayrollCalendars payrollCalendars) {
         this.payrollCalendars = payrollCalendars;
         return this;
@@ -26,6 +29,7 @@ public class CreatePayrollCalendarResponse {
     
     
     public Integer statusCode;
+
     public CreatePayrollCalendarResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreatePayrollCalendarResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePayrollCalendarResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePayrollCalendarResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

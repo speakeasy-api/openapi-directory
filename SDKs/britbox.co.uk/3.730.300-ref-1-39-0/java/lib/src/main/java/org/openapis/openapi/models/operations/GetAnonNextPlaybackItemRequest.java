@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAnonNextPlaybackItemRequest {
@@ -12,6 +13,7 @@ public class GetAnonNextPlaybackItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetAnonNextPlaybackItemRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -29,6 +31,7 @@ public class GetAnonNextPlaybackItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public GetAnonNextPlaybackItemExpandEnum expand;
+
     public GetAnonNextPlaybackItemRequest withExpand(GetAnonNextPlaybackItemExpandEnum expand) {
         this.expand = expand;
         return this;
@@ -59,6 +62,7 @@ public class GetAnonNextPlaybackItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetAnonNextPlaybackItemRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -70,6 +74,7 @@ public class GetAnonNextPlaybackItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public String itemId;
+
     public GetAnonNextPlaybackItemRequest withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -90,6 +95,7 @@ public class GetAnonNextPlaybackItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetAnonNextPlaybackItemRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -100,6 +106,7 @@ public class GetAnonNextPlaybackItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
     public String maxRating;
+
     public GetAnonNextPlaybackItemRequest withMaxRating(String maxRating) {
         this.maxRating = maxRating;
         return this;
@@ -110,9 +117,13 @@ public class GetAnonNextPlaybackItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetAnonNextPlaybackItemRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public GetAnonNextPlaybackItemRequest(@JsonProperty("itemId") String itemId) {
+        this.itemId = itemId;
+  }
 }

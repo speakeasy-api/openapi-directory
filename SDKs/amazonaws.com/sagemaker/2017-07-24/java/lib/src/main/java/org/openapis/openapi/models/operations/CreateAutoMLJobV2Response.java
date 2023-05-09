@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAutoMLJobV2Response {
     
     public String contentType;
+
     public CreateAutoMLJobV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAutoMLJobV2Response {
      */
     
     public org.openapis.openapi.models.shared.CreateAutoMLJobV2Response createAutoMLJobV2Response;
+
     public CreateAutoMLJobV2Response withCreateAutoMLJobV2Response(org.openapis.openapi.models.shared.CreateAutoMLJobV2Response createAutoMLJobV2Response) {
         this.createAutoMLJobV2Response = createAutoMLJobV2Response;
         return this;
@@ -29,6 +32,7 @@ public class CreateAutoMLJobV2Response {
      */
     
     public Object resourceInUse;
+
     public CreateAutoMLJobV2Response withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class CreateAutoMLJobV2Response {
     
     
     public Integer statusCode;
+
     public CreateAutoMLJobV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateAutoMLJobV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAutoMLJobV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateAutoMLJobV2Response {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateAutoMLJobV2Response withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateAutoMLJobV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

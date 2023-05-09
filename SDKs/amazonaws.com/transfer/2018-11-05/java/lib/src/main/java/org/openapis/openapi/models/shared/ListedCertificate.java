@@ -22,6 +22,7 @@ public class ListedCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActiveDate")
     public OffsetDateTime activeDate;
+
     public ListedCertificate withActiveDate(OffsetDateTime activeDate) {
         this.activeDate = activeDate;
         return this;
@@ -30,6 +31,7 @@ public class ListedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListedCertificate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +40,7 @@ public class ListedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public ListedCertificate withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -46,6 +49,7 @@ public class ListedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ListedCertificate withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class ListedCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InactiveDate")
     public OffsetDateTime inactiveDate;
+
     public ListedCertificate withInactiveDate(OffsetDateTime inactiveDate) {
         this.inactiveDate = inactiveDate;
         return this;
@@ -64,6 +69,7 @@ public class ListedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CertificateStatusTypeEnum status;
+
     public ListedCertificate withStatus(CertificateStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -72,6 +78,7 @@ public class ListedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CertificateTypeEnum type;
+
     public ListedCertificate withType(CertificateTypeEnum type) {
         this.type = type;
         return this;
@@ -80,9 +87,11 @@ public class ListedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Usage")
     public CertificateUsageTypeEnum usage;
+
     public ListedCertificate withUsage(CertificateUsageTypeEnum usage) {
         this.usage = usage;
         return this;
     }
     
+    public ListedCertificate(){}
 }

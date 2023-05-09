@@ -15,6 +15,7 @@ public class AutoScalingConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationArn")
     public String autoScalingConfigurationArn;
+
     public AutoScalingConfigurationSummary withAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
         this.autoScalingConfigurationArn = autoScalingConfigurationArn;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationName")
     public String autoScalingConfigurationName;
+
     public AutoScalingConfigurationSummary withAutoScalingConfigurationName(String autoScalingConfigurationName) {
         this.autoScalingConfigurationName = autoScalingConfigurationName;
         return this;
@@ -31,9 +33,11 @@ public class AutoScalingConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationRevision")
     public Long autoScalingConfigurationRevision;
+
     public AutoScalingConfigurationSummary withAutoScalingConfigurationRevision(Long autoScalingConfigurationRevision) {
         this.autoScalingConfigurationRevision = autoScalingConfigurationRevision;
         return this;
     }
     
+    public AutoScalingConfigurationSummary(){}
 }

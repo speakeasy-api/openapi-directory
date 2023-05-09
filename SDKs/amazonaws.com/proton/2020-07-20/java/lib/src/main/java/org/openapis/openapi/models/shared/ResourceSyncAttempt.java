@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ResourceSyncAttempt {
     @JsonProperty("events")
     public ResourceSyncEvent[] events;
+
     public ResourceSyncAttempt withEvents(ResourceSyncEvent[] events) {
         this.events = events;
         return this;
@@ -24,6 +25,7 @@ public class ResourceSyncAttempt {
     
     @JsonProperty("initialRevision")
     public Revision initialRevision;
+
     public ResourceSyncAttempt withInitialRevision(Revision initialRevision) {
         this.initialRevision = initialRevision;
         return this;
@@ -33,6 +35,7 @@ public class ResourceSyncAttempt {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public ResourceSyncAttempt withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -40,6 +43,7 @@ public class ResourceSyncAttempt {
     
     @JsonProperty("status")
     public ResourceSyncStatusEnum status;
+
     public ResourceSyncAttempt withStatus(ResourceSyncStatusEnum status) {
         this.status = status;
         return this;
@@ -47,6 +51,7 @@ public class ResourceSyncAttempt {
     
     @JsonProperty("target")
     public String target;
+
     public ResourceSyncAttempt withTarget(String target) {
         this.target = target;
         return this;
@@ -54,9 +59,18 @@ public class ResourceSyncAttempt {
     
     @JsonProperty("targetRevision")
     public Revision targetRevision;
+
     public ResourceSyncAttempt withTargetRevision(Revision targetRevision) {
         this.targetRevision = targetRevision;
         return this;
     }
     
+    public ResourceSyncAttempt(@JsonProperty("events") ResourceSyncEvent[] events, @JsonProperty("initialRevision") Revision initialRevision, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("status") ResourceSyncStatusEnum status, @JsonProperty("target") String target, @JsonProperty("targetRevision") Revision targetRevision) {
+        this.events = events;
+        this.initialRevision = initialRevision;
+        this.startedAt = startedAt;
+        this.status = status;
+        this.target = target;
+        this.targetRevision = targetRevision;
+  }
 }

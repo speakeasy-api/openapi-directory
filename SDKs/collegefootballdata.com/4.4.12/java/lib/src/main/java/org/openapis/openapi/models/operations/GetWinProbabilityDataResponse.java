@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWinProbabilityDataResponse {
     
     public String contentType;
+
     public GetWinProbabilityDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWinProbabilityDataResponse {
      */
     
     public org.openapis.openapi.models.shared.PlayWP[] playWPS;
+
     public GetWinProbabilityDataResponse withPlayWPS(org.openapis.openapi.models.shared.PlayWP[] playWPS) {
         this.playWPS = playWPS;
         return this;
@@ -26,6 +29,7 @@ public class GetWinProbabilityDataResponse {
     
     
     public Integer statusCode;
+
     public GetWinProbabilityDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetWinProbabilityDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWinProbabilityDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetWinProbabilityDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

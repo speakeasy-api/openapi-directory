@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1ListIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intents")
     public GoogleCloudDialogflowV2beta1Intent[] intents;
+
     public GoogleCloudDialogflowV2beta1ListIntentsResponse withIntents(GoogleCloudDialogflowV2beta1Intent[] intents) {
         this.intents = intents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1ListIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowV2beta1ListIntentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1ListIntentsResponse(){}
 }

@@ -18,6 +18,7 @@ public class IamPolicySearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public String assetType;
+
     public IamPolicySearchResult withAssetType(String assetType) {
         this.assetType = assetType;
         return this;
@@ -29,6 +30,7 @@ public class IamPolicySearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public Explanation explanation;
+
     public IamPolicySearchResult withExplanation(Explanation explanation) {
         this.explanation = explanation;
         return this;
@@ -40,6 +42,7 @@ public class IamPolicySearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folders")
     public String[] folders;
+
     public IamPolicySearchResult withFolders(String[] folders) {
         this.folders = folders;
         return this;
@@ -51,6 +54,7 @@ public class IamPolicySearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public IamPolicySearchResult withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -62,6 +66,7 @@ public class IamPolicySearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public IamPolicySearchResult withPolicy(Policy policy) {
         this.policy = policy;
         return this;
@@ -73,6 +78,7 @@ public class IamPolicySearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public IamPolicySearchResult withProject(String project) {
         this.project = project;
         return this;
@@ -84,9 +90,11 @@ public class IamPolicySearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public IamPolicySearchResult withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public IamPolicySearchResult(){}
 }

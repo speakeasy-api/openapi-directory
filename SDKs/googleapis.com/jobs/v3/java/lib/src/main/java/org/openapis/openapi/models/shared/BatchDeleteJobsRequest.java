@@ -18,9 +18,11 @@ public class BatchDeleteJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public BatchDeleteJobsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public BatchDeleteJobsRequest(){}
 }

@@ -15,6 +15,7 @@ public class EFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationConfig")
     public EFSAuthorizationConfig authorizationConfig;
+
     public EFSVolumeConfiguration withAuthorizationConfig(EFSAuthorizationConfig authorizationConfig) {
         this.authorizationConfig = authorizationConfig;
         return this;
@@ -22,6 +23,7 @@ public class EFSVolumeConfiguration {
     
     @JsonProperty("fileSystemId")
     public String fileSystemId;
+
     public EFSVolumeConfiguration withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -30,6 +32,7 @@ public class EFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootDirectory")
     public String rootDirectory;
+
     public EFSVolumeConfiguration withRootDirectory(String rootDirectory) {
         this.rootDirectory = rootDirectory;
         return this;
@@ -38,6 +41,7 @@ public class EFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitEncryption")
     public EFSTransitEncryptionEnum transitEncryption;
+
     public EFSVolumeConfiguration withTransitEncryption(EFSTransitEncryptionEnum transitEncryption) {
         this.transitEncryption = transitEncryption;
         return this;
@@ -46,9 +50,13 @@ public class EFSVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitEncryptionPort")
     public Long transitEncryptionPort;
+
     public EFSVolumeConfiguration withTransitEncryptionPort(Long transitEncryptionPort) {
         this.transitEncryptionPort = transitEncryptionPort;
         return this;
     }
     
+    public EFSVolumeConfiguration(@JsonProperty("fileSystemId") String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+  }
 }

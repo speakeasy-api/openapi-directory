@@ -15,9 +15,11 @@ public class ImportExternalApiSpecification200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public ImportExternalApiSpecification200ApplicationJSONCollections[] collections;
+
     public ImportExternalApiSpecification200ApplicationJSON withCollections(ImportExternalApiSpecification200ApplicationJSONCollections[] collections) {
         this.collections = collections;
         return this;
     }
     
+    public ImportExternalApiSpecification200ApplicationJSON(){}
 }

@@ -12,6 +12,7 @@ public class UpdateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibleEnvironmentTemplates")
     public CompatibleEnvironmentTemplateInput[] compatibleEnvironmentTemplates;
+
     public UpdateServiceTemplateVersionInput withCompatibleEnvironmentTemplates(CompatibleEnvironmentTemplateInput[] compatibleEnvironmentTemplates) {
         this.compatibleEnvironmentTemplates = compatibleEnvironmentTemplates;
         return this;
@@ -20,6 +21,7 @@ public class UpdateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateServiceTemplateVersionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateServiceTemplateVersionInput {
     
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public UpdateServiceTemplateVersionInput withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -34,6 +37,7 @@ public class UpdateServiceTemplateVersionInput {
     
     @JsonProperty("minorVersion")
     public String minorVersion;
+
     public UpdateServiceTemplateVersionInput withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -42,6 +46,7 @@ public class UpdateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TemplateVersionStatusEnum status;
+
     public UpdateServiceTemplateVersionInput withStatus(TemplateVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -50,6 +55,7 @@ public class UpdateServiceTemplateVersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedComponentSources")
     public ServiceTemplateSupportedComponentSourceTypeEnum[] supportedComponentSources;
+
     public UpdateServiceTemplateVersionInput withSupportedComponentSources(ServiceTemplateSupportedComponentSourceTypeEnum[] supportedComponentSources) {
         this.supportedComponentSources = supportedComponentSources;
         return this;
@@ -57,9 +63,15 @@ public class UpdateServiceTemplateVersionInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public UpdateServiceTemplateVersionInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public UpdateServiceTemplateVersionInput(@JsonProperty("majorVersion") String majorVersion, @JsonProperty("minorVersion") String minorVersion, @JsonProperty("templateName") String templateName) {
+        this.majorVersion = majorVersion;
+        this.minorVersion = minorVersion;
+        this.templateName = templateName;
+  }
 }

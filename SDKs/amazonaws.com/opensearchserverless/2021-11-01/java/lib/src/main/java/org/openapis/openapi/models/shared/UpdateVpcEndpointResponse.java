@@ -15,9 +15,11 @@ public class UpdateVpcEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateVpcEndpointDetail")
     public UpdateVpcEndpointDetail updateVpcEndpointDetail;
+
     public UpdateVpcEndpointResponse withUpdateVpcEndpointDetail(UpdateVpcEndpointDetail updateVpcEndpointDetail) {
         this.updateVpcEndpointDetail = updateVpcEndpointDetail;
         return this;
     }
     
+    public UpdateVpcEndpointResponse(){}
 }

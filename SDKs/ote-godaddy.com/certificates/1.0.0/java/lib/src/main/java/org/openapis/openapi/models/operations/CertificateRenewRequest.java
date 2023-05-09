@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateRenewRequest {
@@ -12,6 +13,7 @@ public class CertificateRenewRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CertificateRenew certificateRenew;
+
     public CertificateRenewRequest withCertificateRenew(org.openapis.openapi.models.shared.CertificateRenew certificateRenew) {
         this.certificateRenew = certificateRenew;
         return this;
@@ -22,9 +24,14 @@ public class CertificateRenewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
     public String certificateId;
+
     public CertificateRenewRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public CertificateRenewRequest(@JsonProperty("CertificateRenew") org.openapis.openapi.models.shared.CertificateRenew certificateRenew, @JsonProperty("certificateId") String certificateId) {
+        this.certificateRenew = certificateRenew;
+        this.certificateId = certificateId;
+  }
 }

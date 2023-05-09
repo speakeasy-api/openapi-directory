@@ -15,6 +15,7 @@ public class ObjectDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ObjectDetectionResponse withObject(String object) {
         this.object = object;
         return this;
@@ -23,6 +24,7 @@ public class ObjectDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilities")
     public DetectionResult[] probabilities;
+
     public ObjectDetectionResponse withProbabilities(DetectionResult[] probabilities) {
         this.probabilities = probabilities;
         return this;
@@ -34,9 +36,11 @@ public class ObjectDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleId")
     public String sampleId;
+
     public ObjectDetectionResponse withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
     }
     
+    public ObjectDetectionResponse(){}
 }

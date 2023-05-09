@@ -15,6 +15,7 @@ public class GetSavingsPlansCoverageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSavingsPlansCoverageResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class GetSavingsPlansCoverageResponse {
     
     @JsonProperty("SavingsPlansCoverages")
     public SavingsPlansCoverage[] savingsPlansCoverages;
+
     public GetSavingsPlansCoverageResponse withSavingsPlansCoverages(SavingsPlansCoverage[] savingsPlansCoverages) {
         this.savingsPlansCoverages = savingsPlansCoverages;
         return this;
     }
     
+    public GetSavingsPlansCoverageResponse(@JsonProperty("SavingsPlansCoverages") SavingsPlansCoverage[] savingsPlansCoverages) {
+        this.savingsPlansCoverages = savingsPlansCoverages;
+  }
 }

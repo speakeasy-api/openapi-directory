@@ -61,11 +61,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             targetPoolAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsGetResponse(contentType, httpRes.statusCode()) {{
             targetPool = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthResponse(contentType, httpRes.statusCode()) {{
             targetPoolInstanceHealth = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsListResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsListResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsListResponse(contentType, httpRes.statusCode()) {{
             targetPoolList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -533,11 +513,55 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsSetSecurityPolicyResponse computeTargetPoolsSetSecurityPolicy(org.openapis.openapi.models.operations.ComputeTargetPoolsSetSecurityPolicyRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsSetSecurityPolicySecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsSetSecurityPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/setSecurityPolicy", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicyReference", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsSetSecurityPolicyRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ComputeTargetPoolsSetSecurityPolicyResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsSetSecurityPolicyResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -581,11 +605,9 @@ public class TargetPools {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetPoolsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetPoolsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeTargetPoolsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

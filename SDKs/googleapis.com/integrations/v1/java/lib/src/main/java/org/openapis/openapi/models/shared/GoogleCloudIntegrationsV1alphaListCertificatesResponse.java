@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaListCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public GoogleCloudIntegrationsV1alphaCertificate[] certificates;
+
     public GoogleCloudIntegrationsV1alphaListCertificatesResponse withCertificates(GoogleCloudIntegrationsV1alphaCertificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaListCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIntegrationsV1alphaListCertificatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaListCertificatesResponse(){}
 }

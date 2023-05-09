@@ -18,9 +18,11 @@ public class VoiceExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportFormat")
     public VoiceExportOptionsExportFormatEnum exportFormat;
+
     public VoiceExportOptions withExportFormat(VoiceExportOptionsExportFormatEnum exportFormat) {
         this.exportFormat = exportFormat;
         return this;
     }
     
+    public VoiceExportOptions(){}
 }

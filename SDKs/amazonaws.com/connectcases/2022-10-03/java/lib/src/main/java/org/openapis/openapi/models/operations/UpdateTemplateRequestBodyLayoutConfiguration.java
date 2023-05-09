@@ -15,9 +15,11 @@ public class UpdateTemplateRequestBodyLayoutConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLayout")
     public String defaultLayout;
+
     public UpdateTemplateRequestBodyLayoutConfiguration withDefaultLayout(String defaultLayout) {
         this.defaultLayout = defaultLayout;
         return this;
     }
     
+    public UpdateTemplateRequestBodyLayoutConfiguration(){}
 }

@@ -18,6 +18,7 @@ public class FeatureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FeatureStateCodeEnum code;
+
     public FeatureState withCode(FeatureStateCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class FeatureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FeatureState withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +42,11 @@ public class FeatureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public FeatureState withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public FeatureState(){}
 }

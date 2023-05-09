@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreatePolicyVersionResponse {
     
     public PolicyVersion policyVersion;
+
     public CreatePolicyVersionResponse withPolicyVersion(PolicyVersion policyVersion) {
         this.policyVersion = policyVersion;
         return this;
     }
     
+    public CreatePolicyVersionResponse(){}
 }

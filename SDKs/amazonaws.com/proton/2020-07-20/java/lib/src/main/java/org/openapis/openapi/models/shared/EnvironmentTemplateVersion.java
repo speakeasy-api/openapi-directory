@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EnvironmentTemplateVersion {
     @JsonProperty("arn")
     public String arn;
+
     public EnvironmentTemplateVersion withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class EnvironmentTemplateVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public EnvironmentTemplateVersion withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class EnvironmentTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentTemplateVersion withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class EnvironmentTemplateVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public EnvironmentTemplateVersion withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -52,6 +56,7 @@ public class EnvironmentTemplateVersion {
     
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public EnvironmentTemplateVersion withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -59,6 +64,7 @@ public class EnvironmentTemplateVersion {
     
     @JsonProperty("minorVersion")
     public String minorVersion;
+
     public EnvironmentTemplateVersion withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -67,6 +73,7 @@ public class EnvironmentTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedMinorVersion")
     public String recommendedMinorVersion;
+
     public EnvironmentTemplateVersion withRecommendedMinorVersion(String recommendedMinorVersion) {
         this.recommendedMinorVersion = recommendedMinorVersion;
         return this;
@@ -75,6 +82,7 @@ public class EnvironmentTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public EnvironmentTemplateVersion withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -82,6 +90,7 @@ public class EnvironmentTemplateVersion {
     
     @JsonProperty("status")
     public TemplateVersionStatusEnum status;
+
     public EnvironmentTemplateVersion withStatus(TemplateVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -90,6 +99,7 @@ public class EnvironmentTemplateVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public EnvironmentTemplateVersion withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -97,9 +107,19 @@ public class EnvironmentTemplateVersion {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public EnvironmentTemplateVersion withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public EnvironmentTemplateVersion(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("majorVersion") String majorVersion, @JsonProperty("minorVersion") String minorVersion, @JsonProperty("status") TemplateVersionStatusEnum status, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.majorVersion = majorVersion;
+        this.minorVersion = minorVersion;
+        this.status = status;
+        this.templateName = templateName;
+  }
 }

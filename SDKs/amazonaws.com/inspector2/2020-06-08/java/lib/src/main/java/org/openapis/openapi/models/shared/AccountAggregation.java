@@ -15,6 +15,7 @@ public class AccountAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingType")
     public AggregationFindingTypeEnum findingType;
+
     public AccountAggregation withFindingType(AggregationFindingTypeEnum findingType) {
         this.findingType = findingType;
         return this;
@@ -23,6 +24,7 @@ public class AccountAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public AggregationResourceTypeEnum resourceType;
+
     public AccountAggregation withResourceType(AggregationResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -31,6 +33,7 @@ public class AccountAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public AccountSortByEnum sortBy;
+
     public AccountAggregation withSortBy(AccountSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -39,9 +42,11 @@ public class AccountAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public AccountAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public AccountAggregation(){}
 }

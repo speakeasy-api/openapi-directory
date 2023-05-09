@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteArchiveRuleResponse {
@@ -12,6 +13,7 @@ public class DeleteArchiveRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteArchiveRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteArchiveRuleResponse {
     
     
     public String contentType;
+
     public DeleteArchiveRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteArchiveRuleResponse {
      */
     
     public Object internalServerException;
+
     public DeleteArchiveRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteArchiveRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteArchiveRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteArchiveRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteArchiveRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteArchiveRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteArchiveRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteArchiveRuleResponse {
      */
     
     public Object throttlingException;
+
     public DeleteArchiveRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteArchiveRuleResponse {
      */
     
     public Object validationException;
+
     public DeleteArchiveRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteArchiveRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

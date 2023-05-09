@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOutpostResponse {
@@ -12,6 +13,7 @@ public class CreateOutpostResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateOutpostResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateOutpostResponse {
      */
     
     public Object conflictException;
+
     public CreateOutpostResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateOutpostResponse {
     
     
     public String contentType;
+
     public CreateOutpostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateOutpostResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOutpostOutput createOutpostOutput;
+
     public CreateOutpostResponse withCreateOutpostOutput(org.openapis.openapi.models.shared.CreateOutpostOutput createOutpostOutput) {
         this.createOutpostOutput = createOutpostOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateOutpostResponse {
      */
     
     public Object internalServerException;
+
     public CreateOutpostResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOutpostResponse {
      */
     
     public Object notFoundException;
+
     public CreateOutpostResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateOutpostResponse {
     
     
     public Integer statusCode;
+
     public CreateOutpostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateOutpostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOutpostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateOutpostResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateOutpostResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateOutpostResponse {
      */
     
     public Object validationException;
+
     public CreateOutpostResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateOutpostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

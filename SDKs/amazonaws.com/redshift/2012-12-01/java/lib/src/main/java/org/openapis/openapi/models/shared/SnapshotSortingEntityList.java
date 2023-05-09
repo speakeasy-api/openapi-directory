@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SnapshotSortingEntityList - Describes a sorting entity
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SnapshotSortingEntityList {
     
     public SnapshotAttributeToSortByEnum attribute;
+
     public SnapshotSortingEntityList withAttribute(SnapshotAttributeToSortByEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -19,9 +20,13 @@ public class SnapshotSortingEntityList {
     
     
     public SortByOrderEnum sortOrder;
+
     public SnapshotSortingEntityList withSortOrder(SortByOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SnapshotSortingEntityList(@JsonProperty("Attribute") SnapshotAttributeToSortByEnum attribute) {
+        this.attribute = attribute;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1EnvironmentSessionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public GoogleCloudDataplexV1EnvironmentSessionStatus withActive(Boolean active) {
         this.active = active;
         return this;
     }
     
+    public GoogleCloudDataplexV1EnvironmentSessionStatus(){}
 }

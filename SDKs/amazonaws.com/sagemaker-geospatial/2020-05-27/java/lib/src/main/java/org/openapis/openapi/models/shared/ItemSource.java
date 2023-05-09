@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * ItemSource - Structure representing the items in the response for SearchRasterDataCollection.
+ * ItemSource - The structure representing the items in the response for SearchRasterDataCollection.
  */
 public class ItemSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assets")
     public java.util.Map<String, AssetValue> assets;
+
     public ItemSource withAssets(java.util.Map<String, AssetValue> assets) {
         this.assets = assets;
         return this;
@@ -29,6 +30,7 @@ public class ItemSource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateTime")
     public OffsetDateTime dateTime;
+
     public ItemSource withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -36,6 +38,7 @@ public class ItemSource {
     
     @JsonProperty("Geometry")
     public Geometry geometry;
+
     public ItemSource withGeometry(Geometry geometry) {
         this.geometry = geometry;
         return this;
@@ -43,6 +46,7 @@ public class ItemSource {
     
     @JsonProperty("Id")
     public String id;
+
     public ItemSource withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +55,15 @@ public class ItemSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public Properties properties;
+
     public ItemSource withProperties(Properties properties) {
         this.properties = properties;
         return this;
     }
     
+    public ItemSource(@JsonProperty("DateTime") OffsetDateTime dateTime, @JsonProperty("Geometry") Geometry geometry, @JsonProperty("Id") String id) {
+        this.dateTime = dateTime;
+        this.geometry = geometry;
+        this.id = id;
+  }
 }

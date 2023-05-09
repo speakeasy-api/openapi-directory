@@ -15,6 +15,7 @@ public class CreateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateStreamRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateStreamRequestBody {
      */
     @JsonProperty("files")
     public org.openapis.openapi.models.shared.StreamFile[] files;
+
     public CreateStreamRequestBody withFiles(org.openapis.openapi.models.shared.StreamFile[] files) {
         this.files = files;
         return this;
@@ -35,6 +37,7 @@ public class CreateStreamRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateStreamRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -46,9 +49,14 @@ public class CreateStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateStreamRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStreamRequestBody(@JsonProperty("files") org.openapis.openapi.models.shared.StreamFile[] files, @JsonProperty("roleArn") String roleArn) {
+        this.files = files;
+        this.roleArn = roleArn;
+  }
 }

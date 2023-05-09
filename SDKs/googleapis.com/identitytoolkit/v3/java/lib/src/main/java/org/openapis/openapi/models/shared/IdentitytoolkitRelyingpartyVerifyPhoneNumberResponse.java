@@ -15,6 +15,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresIn")
     public String expiresIn;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withExpiresIn(String expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -23,6 +24,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -31,6 +33,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isNewUser")
     public Boolean isNewUser;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withIsNewUser(Boolean isNewUser) {
         this.isNewUser = isNewUser;
         return this;
@@ -39,6 +42,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localId")
     public String localId;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withLocalId(String localId) {
         this.localId = localId;
         return this;
@@ -47,6 +51,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -55,6 +60,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -63,6 +69,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temporaryProof")
     public String temporaryProof;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withTemporaryProof(String temporaryProof) {
         this.temporaryProof = temporaryProof;
         return this;
@@ -71,6 +78,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temporaryProofExpiresIn")
     public String temporaryProofExpiresIn;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withTemporaryProofExpiresIn(String temporaryProofExpiresIn) {
         this.temporaryProofExpiresIn = temporaryProofExpiresIn;
         return this;
@@ -79,6 +87,7 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationProof")
     public String verificationProof;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withVerificationProof(String verificationProof) {
         this.verificationProof = verificationProof;
         return this;
@@ -87,9 +96,11 @@ public class IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationProofExpiresIn")
     public String verificationProofExpiresIn;
+
     public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse withVerificationProofExpiresIn(String verificationProofExpiresIn) {
         this.verificationProofExpiresIn = verificationProofExpiresIn;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse(){}
 }

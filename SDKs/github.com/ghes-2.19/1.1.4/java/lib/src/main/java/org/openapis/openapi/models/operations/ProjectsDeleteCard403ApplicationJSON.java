@@ -15,6 +15,7 @@ public class ProjectsDeleteCard403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public ProjectsDeleteCard403ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -23,6 +24,7 @@ public class ProjectsDeleteCard403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public String[] errors;
+
     public ProjectsDeleteCard403ApplicationJSON withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -31,9 +33,11 @@ public class ProjectsDeleteCard403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ProjectsDeleteCard403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ProjectsDeleteCard403ApplicationJSON(){}
 }

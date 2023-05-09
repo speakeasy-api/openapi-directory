@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamMediaByTagRequest {
@@ -12,6 +13,7 @@ public class GetTeamMediaByTagRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetTeamMediaByTagRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,6 +24,7 @@ public class GetTeamMediaByTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=media_tag")
     public String mediaTag;
+
     public GetTeamMediaByTagRequest withMediaTag(String mediaTag) {
         this.mediaTag = mediaTag;
         return this;
@@ -32,9 +35,14 @@ public class GetTeamMediaByTagRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_key")
     public String teamKey;
+
     public GetTeamMediaByTagRequest withTeamKey(String teamKey) {
         this.teamKey = teamKey;
         return this;
     }
     
+    public GetTeamMediaByTagRequest(@JsonProperty("media_tag") String mediaTag, @JsonProperty("team_key") String teamKey) {
+        this.mediaTag = mediaTag;
+        this.teamKey = teamKey;
+  }
 }

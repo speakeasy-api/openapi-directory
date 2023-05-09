@@ -20,6 +20,7 @@ public class LexiconAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alphabet")
     public String alphabet;
+
     public LexiconAttributes withAlphabet(String alphabet) {
         this.alphabet = alphabet;
         return this;
@@ -28,6 +29,7 @@ public class LexiconAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public LexiconAttributes withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -38,6 +40,7 @@ public class LexiconAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModified")
     public OffsetDateTime lastModified;
+
     public LexiconAttributes withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -46,6 +49,7 @@ public class LexiconAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LexemesCount")
     public Long lexemesCount;
+
     public LexiconAttributes withLexemesCount(Long lexemesCount) {
         this.lexemesCount = lexemesCount;
         return this;
@@ -54,6 +58,7 @@ public class LexiconAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LexiconArn")
     public String lexiconArn;
+
     public LexiconAttributes withLexiconArn(String lexiconArn) {
         this.lexiconArn = lexiconArn;
         return this;
@@ -62,9 +67,11 @@ public class LexiconAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public LexiconAttributes withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public LexiconAttributes(){}
 }

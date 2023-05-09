@@ -15,6 +15,7 @@ public class ListAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public AliasConfiguration[] aliases;
+
     public ListAliasesResponse withAliases(AliasConfiguration[] aliases) {
         this.aliases = aliases;
         return this;
@@ -23,9 +24,11 @@ public class ListAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListAliasesResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListAliasesResponse(){}
 }

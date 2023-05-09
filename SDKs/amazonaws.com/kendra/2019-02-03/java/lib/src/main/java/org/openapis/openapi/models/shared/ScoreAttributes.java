@@ -15,9 +15,11 @@ public class ScoreAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreConfidence")
     public ScoreConfidenceEnum scoreConfidence;
+
     public ScoreAttributes withScoreConfidence(ScoreConfidenceEnum scoreConfidence) {
         this.scoreConfidence = scoreConfidence;
         return this;
     }
     
+    public ScoreAttributes(){}
 }

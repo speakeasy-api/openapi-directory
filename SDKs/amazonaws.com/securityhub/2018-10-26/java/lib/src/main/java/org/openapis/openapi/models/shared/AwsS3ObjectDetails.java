@@ -15,6 +15,7 @@ public class AwsS3ObjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public AwsS3ObjectDetails withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3ObjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public AwsS3ObjectDetails withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -31,6 +33,7 @@ public class AwsS3ObjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModified")
     public String lastModified;
+
     public AwsS3ObjectDetails withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -39,6 +42,7 @@ public class AwsS3ObjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSEKMSKeyId")
     public String ssekmsKeyId;
+
     public AwsS3ObjectDetails withSSEKMSKeyId(String ssekmsKeyId) {
         this.ssekmsKeyId = ssekmsKeyId;
         return this;
@@ -47,6 +51,7 @@ public class AwsS3ObjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideEncryption")
     public String serverSideEncryption;
+
     public AwsS3ObjectDetails withServerSideEncryption(String serverSideEncryption) {
         this.serverSideEncryption = serverSideEncryption;
         return this;
@@ -55,9 +60,11 @@ public class AwsS3ObjectDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public AwsS3ObjectDetails withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public AwsS3ObjectDetails(){}
 }

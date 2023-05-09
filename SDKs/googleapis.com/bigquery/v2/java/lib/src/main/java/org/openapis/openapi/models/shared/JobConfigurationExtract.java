@@ -15,6 +15,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compression")
     public String compression;
+
     public JobConfigurationExtract withCompression(String compression) {
         this.compression = compression;
         return this;
@@ -26,6 +27,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationFormat")
     public String destinationFormat;
+
     public JobConfigurationExtract withDestinationFormat(String destinationFormat) {
         this.destinationFormat = destinationFormat;
         return this;
@@ -37,6 +39,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationUri")
     public String destinationUri;
+
     public JobConfigurationExtract withDestinationUri(String destinationUri) {
         this.destinationUri = destinationUri;
         return this;
@@ -48,6 +51,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationUris")
     public String[] destinationUris;
+
     public JobConfigurationExtract withDestinationUris(String[] destinationUris) {
         this.destinationUris = destinationUris;
         return this;
@@ -59,6 +63,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldDelimiter")
     public String fieldDelimiter;
+
     public JobConfigurationExtract withFieldDelimiter(String fieldDelimiter) {
         this.fieldDelimiter = fieldDelimiter;
         return this;
@@ -70,6 +75,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printHeader")
     public Boolean printHeader;
+
     public JobConfigurationExtract withPrintHeader(Boolean printHeader) {
         this.printHeader = printHeader;
         return this;
@@ -78,6 +84,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceModel")
     public ModelReference sourceModel;
+
     public JobConfigurationExtract withSourceModel(ModelReference sourceModel) {
         this.sourceModel = sourceModel;
         return this;
@@ -86,6 +93,7 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTable")
     public TableReference sourceTable;
+
     public JobConfigurationExtract withSourceTable(TableReference sourceTable) {
         this.sourceTable = sourceTable;
         return this;
@@ -97,9 +105,11 @@ public class JobConfigurationExtract {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAvroLogicalTypes")
     public Boolean useAvroLogicalTypes;
+
     public JobConfigurationExtract withUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
         this.useAvroLogicalTypes = useAvroLogicalTypes;
         return this;
     }
     
+    public JobConfigurationExtract(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProgressUpdateStreamsResponse {
@@ -12,6 +13,7 @@ public class ListProgressUpdateStreamsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListProgressUpdateStreamsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListProgressUpdateStreamsResponse {
     
     
     public String contentType;
+
     public ListProgressUpdateStreamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListProgressUpdateStreamsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public ListProgressUpdateStreamsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class ListProgressUpdateStreamsResponse {
      */
     
     public Object internalServerError;
+
     public ListProgressUpdateStreamsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ListProgressUpdateStreamsResponse {
      */
     
     public Object invalidInputException;
+
     public ListProgressUpdateStreamsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListProgressUpdateStreamsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProgressUpdateStreamsResult listProgressUpdateStreamsResult;
+
     public ListProgressUpdateStreamsResponse withListProgressUpdateStreamsResult(org.openapis.openapi.models.shared.ListProgressUpdateStreamsResult listProgressUpdateStreamsResult) {
         this.listProgressUpdateStreamsResult = listProgressUpdateStreamsResult;
         return this;
@@ -66,6 +73,7 @@ public class ListProgressUpdateStreamsResponse {
     
     
     public Integer statusCode;
+
     public ListProgressUpdateStreamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListProgressUpdateStreamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProgressUpdateStreamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListProgressUpdateStreamsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListProgressUpdateStreamsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class ListProgressUpdateStreamsResponse {
      */
     
     public Object throttlingException;
+
     public ListProgressUpdateStreamsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListProgressUpdateStreamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PreprocessingUnrotateAdvancedResponse {
     
     public String contentType;
+
     public PreprocessingUnrotateAdvancedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PreprocessingUnrotateAdvancedResponse {
      */
     
     public String preprocessingUnrotateAdvanced200ApplicationJSONByteString;
+
     public PreprocessingUnrotateAdvancedResponse withPreprocessingUnrotateAdvanced200ApplicationJSONByteString(String preprocessingUnrotateAdvanced200ApplicationJSONByteString) {
         this.preprocessingUnrotateAdvanced200ApplicationJSONByteString = preprocessingUnrotateAdvanced200ApplicationJSONByteString;
         return this;
@@ -29,6 +32,7 @@ public class PreprocessingUnrotateAdvancedResponse {
      */
     
     public String preprocessingUnrotateAdvanced200ApplicationXMLByteString;
+
     public PreprocessingUnrotateAdvancedResponse withPreprocessingUnrotateAdvanced200ApplicationXMLByteString(String preprocessingUnrotateAdvanced200ApplicationXMLByteString) {
         this.preprocessingUnrotateAdvanced200ApplicationXMLByteString = preprocessingUnrotateAdvanced200ApplicationXMLByteString;
         return this;
@@ -39,6 +43,7 @@ public class PreprocessingUnrotateAdvancedResponse {
      */
     
     public String preprocessingUnrotateAdvanced200TextJSONByteString;
+
     public PreprocessingUnrotateAdvancedResponse withPreprocessingUnrotateAdvanced200TextJSONByteString(String preprocessingUnrotateAdvanced200TextJSONByteString) {
         this.preprocessingUnrotateAdvanced200TextJSONByteString = preprocessingUnrotateAdvanced200TextJSONByteString;
         return this;
@@ -49,6 +54,7 @@ public class PreprocessingUnrotateAdvancedResponse {
      */
     
     public String preprocessingUnrotateAdvanced200TextXMLByteString;
+
     public PreprocessingUnrotateAdvancedResponse withPreprocessingUnrotateAdvanced200TextXMLByteString(String preprocessingUnrotateAdvanced200TextXMLByteString) {
         this.preprocessingUnrotateAdvanced200TextXMLByteString = preprocessingUnrotateAdvanced200TextXMLByteString;
         return this;
@@ -56,6 +62,7 @@ public class PreprocessingUnrotateAdvancedResponse {
     
     
     public Integer statusCode;
+
     public PreprocessingUnrotateAdvancedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PreprocessingUnrotateAdvancedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PreprocessingUnrotateAdvancedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PreprocessingUnrotateAdvancedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

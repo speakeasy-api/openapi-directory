@@ -15,9 +15,11 @@ public class NamesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public EntityName[] entities;
+
     public NamesResponse withEntities(EntityName[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public NamesResponse(){}
 }

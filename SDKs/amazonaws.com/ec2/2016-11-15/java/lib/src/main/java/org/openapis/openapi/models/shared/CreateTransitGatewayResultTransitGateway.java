@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateTransitGatewayResultTransitGateway {
     
     public OffsetDateTime creationTime;
+
     public CreateTransitGatewayResultTransitGateway withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayResultTransitGateway {
     
     
     public String description;
+
     public CreateTransitGatewayResultTransitGateway withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayResultTransitGateway {
     
     
     public CreateTransitGatewayResultTransitGatewayOptions options;
+
     public CreateTransitGatewayResultTransitGateway withOptions(CreateTransitGatewayResultTransitGatewayOptions options) {
         this.options = options;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayResultTransitGateway {
     
     
     public String ownerId;
+
     public CreateTransitGatewayResultTransitGateway withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class CreateTransitGatewayResultTransitGateway {
     
     
     public CreateTransitGatewayResultTransitGatewayStateEnum state;
+
     public CreateTransitGatewayResultTransitGateway withState(CreateTransitGatewayResultTransitGatewayStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class CreateTransitGatewayResultTransitGateway {
     
     
     public CreateTransitGatewayResultTransitGatewayTags[] tags;
+
     public CreateTransitGatewayResultTransitGateway withTags(CreateTransitGatewayResultTransitGatewayTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class CreateTransitGatewayResultTransitGateway {
     
     
     public String transitGatewayArn;
+
     public CreateTransitGatewayResultTransitGateway withTransitGatewayArn(String transitGatewayArn) {
         this.transitGatewayArn = transitGatewayArn;
         return this;
@@ -61,9 +68,11 @@ public class CreateTransitGatewayResultTransitGateway {
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayResultTransitGateway withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
     }
     
+    public CreateTransitGatewayResultTransitGateway(){}
 }

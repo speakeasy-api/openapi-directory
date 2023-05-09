@@ -21,6 +21,7 @@ public class Error400PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error400PIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error400PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error400PISAdditionalErrors[] additionalErrors;
+
     public Error400PIS withAdditionalErrors(Error400PISAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error400PIS {
      */
     @JsonProperty("code")
     public MessageCode400PISEnum code;
+
     public Error400PIS withCode(MessageCode400PISEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error400PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error400PIS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error400PIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error400PIS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error400PIS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error400PIS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error400PIS(@JsonProperty("code") MessageCode400PISEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

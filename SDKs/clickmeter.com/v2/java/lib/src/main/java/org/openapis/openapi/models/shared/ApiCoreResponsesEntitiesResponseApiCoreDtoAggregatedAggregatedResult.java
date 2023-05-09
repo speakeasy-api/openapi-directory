@@ -12,9 +12,11 @@ public class ApiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResul
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public ApiCoreDtoAggregatedAggregatedResult[] entities;
+
     public ApiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult withEntities(ApiCoreDtoAggregatedAggregatedResult[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public ApiCoreResponsesEntitiesResponseApiCoreDtoAggregatedAggregatedResult(){}
 }

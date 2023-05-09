@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Failures {
     @JsonProperty("exceptionMessage")
     public String exceptionMessage;
+
     public Failures withExceptionMessage(String exceptionMessage) {
         this.exceptionMessage = exceptionMessage;
         return this;
@@ -24,6 +25,7 @@ public class Failures {
     
     @JsonProperty("remediation")
     public String remediation;
+
     public Failures withRemediation(String remediation) {
         this.remediation = remediation;
         return this;
@@ -33,9 +35,15 @@ public class Failures {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Failures withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Failures(@JsonProperty("exceptionMessage") String exceptionMessage, @JsonProperty("remediation") String remediation, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.exceptionMessage = exceptionMessage;
+        this.remediation = remediation;
+        this.timestamp = timestamp;
+  }
 }

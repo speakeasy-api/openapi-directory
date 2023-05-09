@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPublicUrlResponse {
@@ -12,6 +13,7 @@ public class GetPublicUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public GetPublicUrlResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetPublicUrlResponse {
     
     
     public String contentType;
+
     public GetPublicUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPublicUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.DocumentPublicUrl documentPublicUrl;
+
     public GetPublicUrlResponse withDocumentPublicUrl(org.openapis.openapi.models.shared.DocumentPublicUrl documentPublicUrl) {
         this.documentPublicUrl = documentPublicUrl;
         return this;
@@ -36,6 +40,7 @@ public class GetPublicUrlResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPublicUrlResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class GetPublicUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public GetPublicUrlResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetPublicUrlResponse {
     
     
     public Integer statusCode;
+
     public GetPublicUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class GetPublicUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPublicUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class GetPublicUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public GetPublicUrlResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public GetPublicUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

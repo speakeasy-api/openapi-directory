@@ -15,6 +15,7 @@ public class DescribeProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Budgets")
     public BudgetDetail[] budgets;
+
     public DescribeProductOutput withBudgets(BudgetDetail[] budgets) {
         this.budgets = budgets;
         return this;
@@ -23,6 +24,7 @@ public class DescribeProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchPaths")
     public LaunchPath[] launchPaths;
+
     public DescribeProductOutput withLaunchPaths(LaunchPath[] launchPaths) {
         this.launchPaths = launchPaths;
         return this;
@@ -31,6 +33,7 @@ public class DescribeProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductViewSummary")
     public ProductViewSummary productViewSummary;
+
     public DescribeProductOutput withProductViewSummary(ProductViewSummary productViewSummary) {
         this.productViewSummary = productViewSummary;
         return this;
@@ -39,9 +42,11 @@ public class DescribeProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifacts")
     public ProvisioningArtifact[] provisioningArtifacts;
+
     public DescribeProductOutput withProvisioningArtifacts(ProvisioningArtifact[] provisioningArtifacts) {
         this.provisioningArtifacts = provisioningArtifacts;
         return this;
     }
     
+    public DescribeProductOutput(){}
 }

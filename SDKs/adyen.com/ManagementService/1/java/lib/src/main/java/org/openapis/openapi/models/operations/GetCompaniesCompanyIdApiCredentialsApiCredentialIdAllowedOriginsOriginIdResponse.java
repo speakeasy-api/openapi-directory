@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOri
      */
     
     public org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withAllowedOrigin(org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin) {
         this.allowedOrigin = allowedOrigin;
         return this;
@@ -19,6 +21,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOri
     
     
     public String contentType;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOri
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOri
     
     
     public Integer statusCode;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOri
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

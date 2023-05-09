@@ -23,6 +23,7 @@ public class ShiftWage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourly_rate")
     public Money hourlyRate;
+
     public ShiftWage withHourlyRate(Money hourlyRate) {
         this.hourlyRate = hourlyRate;
         return this;
@@ -35,9 +36,11 @@ public class ShiftWage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ShiftWage withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ShiftWage(){}
 }

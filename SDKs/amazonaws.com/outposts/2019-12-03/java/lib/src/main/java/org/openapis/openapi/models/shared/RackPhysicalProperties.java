@@ -15,6 +15,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FiberOpticCableType")
     public FiberOpticCableTypeEnum fiberOpticCableType;
+
     public RackPhysicalProperties withFiberOpticCableType(FiberOpticCableTypeEnum fiberOpticCableType) {
         this.fiberOpticCableType = fiberOpticCableType;
         return this;
@@ -23,6 +24,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumSupportedWeightLbs")
     public MaximumSupportedWeightLbsEnum maximumSupportedWeightLbs;
+
     public RackPhysicalProperties withMaximumSupportedWeightLbs(MaximumSupportedWeightLbsEnum maximumSupportedWeightLbs) {
         this.maximumSupportedWeightLbs = maximumSupportedWeightLbs;
         return this;
@@ -31,6 +33,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpticalStandard")
     public OpticalStandardEnum opticalStandard;
+
     public RackPhysicalProperties withOpticalStandard(OpticalStandardEnum opticalStandard) {
         this.opticalStandard = opticalStandard;
         return this;
@@ -39,6 +42,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerConnector")
     public PowerConnectorEnum powerConnector;
+
     public RackPhysicalProperties withPowerConnector(PowerConnectorEnum powerConnector) {
         this.powerConnector = powerConnector;
         return this;
@@ -47,6 +51,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerDrawKva")
     public PowerDrawKvaEnum powerDrawKva;
+
     public RackPhysicalProperties withPowerDrawKva(PowerDrawKvaEnum powerDrawKva) {
         this.powerDrawKva = powerDrawKva;
         return this;
@@ -55,6 +60,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerFeedDrop")
     public PowerFeedDropEnum powerFeedDrop;
+
     public RackPhysicalProperties withPowerFeedDrop(PowerFeedDropEnum powerFeedDrop) {
         this.powerFeedDrop = powerFeedDrop;
         return this;
@@ -63,6 +69,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerPhase")
     public PowerPhaseEnum powerPhase;
+
     public RackPhysicalProperties withPowerPhase(PowerPhaseEnum powerPhase) {
         this.powerPhase = powerPhase;
         return this;
@@ -71,6 +78,7 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UplinkCount")
     public UplinkCountEnum uplinkCount;
+
     public RackPhysicalProperties withUplinkCount(UplinkCountEnum uplinkCount) {
         this.uplinkCount = uplinkCount;
         return this;
@@ -79,9 +87,11 @@ public class RackPhysicalProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UplinkGbps")
     public UplinkGbpsEnum uplinkGbps;
+
     public RackPhysicalProperties withUplinkGbps(UplinkGbpsEnum uplinkGbps) {
         this.uplinkGbps = uplinkGbps;
         return this;
     }
     
+    public RackPhysicalProperties(){}
 }

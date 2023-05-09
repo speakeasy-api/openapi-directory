@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMLTransformRequest {
     @JsonProperty("TransformId")
     public String transformId;
+
     public GetMLTransformRequest withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public GetMLTransformRequest(@JsonProperty("TransformId") String transformId) {
+        this.transformId = transformId;
+  }
 }

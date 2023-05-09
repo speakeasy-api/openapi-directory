@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribePlacementGroupsResult {
     
     public DescribePlacementGroupsResultPlacementGroups[] placementGroups;
+
     public DescribePlacementGroupsResult withPlacementGroups(DescribePlacementGroupsResultPlacementGroups[] placementGroups) {
         this.placementGroups = placementGroups;
         return this;
     }
     
+    public DescribePlacementGroupsResult(){}
 }

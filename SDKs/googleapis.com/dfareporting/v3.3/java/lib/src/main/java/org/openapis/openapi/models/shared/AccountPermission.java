@@ -18,6 +18,7 @@ public class AccountPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountProfiles")
     public AccountPermissionAccountProfilesEnum[] accountProfiles;
+
     public AccountPermission withAccountProfiles(AccountPermissionAccountProfilesEnum[] accountProfiles) {
         this.accountProfiles = accountProfiles;
         return this;
@@ -29,6 +30,7 @@ public class AccountPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AccountPermission withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AccountPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountPermission withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class AccountPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public AccountPermissionLevelEnum level;
+
     public AccountPermission withLevel(AccountPermissionLevelEnum level) {
         this.level = level;
         return this;
@@ -62,6 +66,7 @@ public class AccountPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountPermission withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class AccountPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionGroupId")
     public String permissionGroupId;
+
     public AccountPermission withPermissionGroupId(String permissionGroupId) {
         this.permissionGroupId = permissionGroupId;
         return this;
     }
     
+    public AccountPermission(){}
 }

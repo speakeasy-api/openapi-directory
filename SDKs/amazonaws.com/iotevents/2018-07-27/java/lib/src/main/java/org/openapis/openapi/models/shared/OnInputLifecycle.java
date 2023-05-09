@@ -15,6 +15,7 @@ public class OnInputLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public Event[] events;
+
     public OnInputLifecycle withEvents(Event[] events) {
         this.events = events;
         return this;
@@ -23,9 +24,11 @@ public class OnInputLifecycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionEvents")
     public TransitionEvent[] transitionEvents;
+
     public OnInputLifecycle withTransitionEvents(TransitionEvent[] transitionEvents) {
         this.transitionEvents = transitionEvents;
         return this;
     }
     
+    public OnInputLifecycle(){}
 }

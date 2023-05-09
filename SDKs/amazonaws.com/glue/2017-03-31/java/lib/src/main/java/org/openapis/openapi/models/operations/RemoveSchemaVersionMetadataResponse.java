@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveSchemaVersionMetadataResponse {
@@ -12,6 +13,7 @@ public class RemoveSchemaVersionMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public RemoveSchemaVersionMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveSchemaVersionMetadataResponse {
     
     
     public String contentType;
+
     public RemoveSchemaVersionMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveSchemaVersionMetadataResponse {
      */
     
     public Object entityNotFoundException;
+
     public RemoveSchemaVersionMetadataResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveSchemaVersionMetadataResponse {
      */
     
     public Object invalidInputException;
+
     public RemoveSchemaVersionMetadataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveSchemaVersionMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveSchemaVersionMetadataResponse removeSchemaVersionMetadataResponse;
+
     public RemoveSchemaVersionMetadataResponse withRemoveSchemaVersionMetadataResponse(org.openapis.openapi.models.shared.RemoveSchemaVersionMetadataResponse removeSchemaVersionMetadataResponse) {
         this.removeSchemaVersionMetadataResponse = removeSchemaVersionMetadataResponse;
         return this;
@@ -56,6 +62,7 @@ public class RemoveSchemaVersionMetadataResponse {
     
     
     public Integer statusCode;
+
     public RemoveSchemaVersionMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class RemoveSchemaVersionMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveSchemaVersionMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveSchemaVersionMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

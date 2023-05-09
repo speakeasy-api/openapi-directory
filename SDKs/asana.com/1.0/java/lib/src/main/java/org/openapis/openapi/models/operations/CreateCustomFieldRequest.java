@@ -12,6 +12,7 @@ public class CreateCustomFieldRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateCustomFieldRequestBodyInput requestBody;
+
     public CreateCustomFieldRequest withRequestBody(CreateCustomFieldRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +24,7 @@ public class CreateCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CreateCustomFieldRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +37,7 @@ public class CreateCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public CreateCustomFieldRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -47,6 +50,7 @@ public class CreateCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateCustomFieldRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -58,9 +62,11 @@ public class CreateCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateCustomFieldRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public CreateCustomFieldRequest(){}
 }

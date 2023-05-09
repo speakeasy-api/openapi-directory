@@ -12,6 +12,7 @@ public class GetEBSVolumeRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public GetEBSVolumeRecommendationsRequest withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -20,6 +21,7 @@ public class GetEBSVolumeRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public EBSFilter[] filters;
+
     public GetEBSVolumeRecommendationsRequest withFilters(EBSFilter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class GetEBSVolumeRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetEBSVolumeRecommendationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetEBSVolumeRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetEBSVolumeRecommendationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class GetEBSVolumeRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeArns")
     public String[] volumeArns;
+
     public GetEBSVolumeRecommendationsRequest withVolumeArns(String[] volumeArns) {
         this.volumeArns = volumeArns;
         return this;
     }
     
+    public GetEBSVolumeRecommendationsRequest(){}
 }

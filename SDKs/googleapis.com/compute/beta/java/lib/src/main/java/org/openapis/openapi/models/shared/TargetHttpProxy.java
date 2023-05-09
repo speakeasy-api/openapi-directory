@@ -18,6 +18,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetHttpProxy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetHttpProxy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public TargetHttpProxy withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpFilters")
     public String[] httpFilters;
+
     public TargetHttpProxy withHttpFilters(String[] httpFilters) {
         this.httpFilters = httpFilters;
         return this;
@@ -62,6 +66,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetHttpProxy withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetHttpProxy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +90,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetHttpProxy withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyBind")
     public Boolean proxyBind;
+
     public TargetHttpProxy withProxyBind(Boolean proxyBind) {
         this.proxyBind = proxyBind;
         return this;
@@ -106,6 +114,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TargetHttpProxy withRegion(String region) {
         this.region = region;
         return this;
@@ -117,6 +126,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetHttpProxy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -128,9 +138,11 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMap")
     public String urlMap;
+
     public TargetHttpProxy withUrlMap(String urlMap) {
         this.urlMap = urlMap;
         return this;
     }
     
+    public TargetHttpProxy(){}
 }

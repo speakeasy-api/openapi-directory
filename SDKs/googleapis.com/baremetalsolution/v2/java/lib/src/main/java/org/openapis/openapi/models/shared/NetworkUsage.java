@@ -18,6 +18,7 @@ public class NetworkUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public Network network;
+
     public NetworkUsage withNetwork(Network network) {
         this.network = network;
         return this;
@@ -29,9 +30,11 @@ public class NetworkUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usedIps")
     public String[] usedIps;
+
     public NetworkUsage withUsedIps(String[] usedIps) {
         this.usedIps = usedIps;
         return this;
     }
     
+    public NetworkUsage(){}
 }

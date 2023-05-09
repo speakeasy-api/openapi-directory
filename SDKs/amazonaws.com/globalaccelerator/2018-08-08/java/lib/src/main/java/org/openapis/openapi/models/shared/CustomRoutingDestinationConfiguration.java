@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomRoutingDestinationConfiguration {
     @JsonProperty("FromPort")
     public Long fromPort;
+
     public CustomRoutingDestinationConfiguration withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class CustomRoutingDestinationConfiguration {
     
     @JsonProperty("Protocols")
     public CustomRoutingProtocolEnum[] protocols;
+
     public CustomRoutingDestinationConfiguration withProtocols(CustomRoutingProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -26,9 +28,15 @@ public class CustomRoutingDestinationConfiguration {
     
     @JsonProperty("ToPort")
     public Long toPort;
+
     public CustomRoutingDestinationConfiguration withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public CustomRoutingDestinationConfiguration(@JsonProperty("FromPort") Long fromPort, @JsonProperty("Protocols") CustomRoutingProtocolEnum[] protocols, @JsonProperty("ToPort") Long toPort) {
+        this.fromPort = fromPort;
+        this.protocols = protocols;
+        this.toPort = toPort;
+  }
 }

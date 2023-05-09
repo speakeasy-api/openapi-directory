@@ -18,6 +18,7 @@ public class InsertRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public InsertRangeRequest withRange(GridRange range) {
         this.range = range;
         return this;
@@ -29,9 +30,11 @@ public class InsertRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shiftDimension")
     public InsertRangeRequestShiftDimensionEnum shiftDimension;
+
     public InsertRangeRequest withShiftDimension(InsertRangeRequestShiftDimensionEnum shiftDimension) {
         this.shiftDimension = shiftDimension;
         return this;
     }
     
+    public InsertRangeRequest(){}
 }

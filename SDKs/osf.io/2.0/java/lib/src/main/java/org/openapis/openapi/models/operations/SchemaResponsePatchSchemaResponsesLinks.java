@@ -18,9 +18,11 @@ public class SchemaResponsePatchSchemaResponsesLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public SchemaResponsePatchSchemaResponsesLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public SchemaResponsePatchSchemaResponsesLinks(){}
 }

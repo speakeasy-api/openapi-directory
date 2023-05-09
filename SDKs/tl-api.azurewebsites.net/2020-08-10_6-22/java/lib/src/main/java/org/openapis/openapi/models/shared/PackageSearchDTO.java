@@ -25,6 +25,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeStatus")
     public Boolean activeStatus;
+
     public PackageSearchDTO withActiveStatus(Boolean activeStatus) {
         this.activeStatus = activeStatus;
         return this;
@@ -38,6 +39,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonFee")
     public Double addonFee;
+
     public PackageSearchDTO withAddonFee(Double addonFee) {
         this.addonFee = addonFee;
         return this;
@@ -50,6 +52,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyForAllGyms")
     public Boolean applyForAllGyms;
+
     public PackageSearchDTO withApplyForAllGyms(Boolean applyForAllGyms) {
         this.applyForAllGyms = applyForAllGyms;
         return this;
@@ -62,6 +65,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindingPeriod")
     public Integer bindingPeriod;
+
     public PackageSearchDTO withBindingPeriod(Integer bindingPeriod) {
         this.bindingPeriod = bindingPeriod;
         return this;
@@ -76,6 +80,7 @@ public class PackageSearchDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public PackageSearchDTO withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -88,6 +93,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdUser")
     public String createdUser;
+
     public PackageSearchDTO withCreatedUser(String createdUser) {
         this.createdUser = createdUser;
         return this;
@@ -100,6 +106,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PackageSearchDTO withDescription(String description) {
         this.description = description;
         return this;
@@ -112,6 +119,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public String features;
+
     public PackageSearchDTO withFeatures(String features) {
         this.features = features;
         return this;
@@ -124,6 +132,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeMonths")
     public Integer freeMonths;
+
     public PackageSearchDTO withFreeMonths(Integer freeMonths) {
         this.freeMonths = freeMonths;
         return this;
@@ -136,6 +145,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberCanRemoveAddOns")
     public Boolean memberCanRemoveAddOns;
+
     public PackageSearchDTO withMemberCanRemoveAddOns(Boolean memberCanRemoveAddOns) {
         this.memberCanRemoveAddOns = memberCanRemoveAddOns;
         return this;
@@ -150,6 +160,7 @@ public class PackageSearchDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedDate")
     public OffsetDateTime modifiedDate;
+
     public PackageSearchDTO withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -162,6 +173,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedUser")
     public String modifiedUser;
+
     public PackageSearchDTO withModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
         return this;
@@ -175,6 +187,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthlyFee")
     public Double monthlyFee;
+
     public PackageSearchDTO withMonthlyFee(Double monthlyFee) {
         this.monthlyFee = monthlyFee;
         return this;
@@ -186,6 +199,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfVisits")
     public Integer numberOfVisits;
+
     public PackageSearchDTO withNumberOfVisits(Integer numberOfVisits) {
         this.numberOfVisits = numberOfVisits;
         return this;
@@ -194,6 +208,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageId")
     public Integer packageId;
+
     public PackageSearchDTO withPackageId(Integer packageId) {
         this.packageId = packageId;
         return this;
@@ -202,6 +217,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public PackageSearchDTO withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -210,6 +226,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageNumber")
     public Integer packageNumber;
+
     public PackageSearchDTO withPackageNumber(Integer packageNumber) {
         this.packageNumber = packageNumber;
         return this;
@@ -222,6 +239,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageType")
     public String packageType;
+
     public PackageSearchDTO withPackageType(String packageType) {
         this.packageType = packageType;
         return this;
@@ -234,6 +252,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationFee")
     public Double registrationFee;
+
     public PackageSearchDTO withRegistrationFee(Double registrationFee) {
         this.registrationFee = registrationFee;
         return this;
@@ -246,6 +265,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceFee")
     public Double serviceFee;
+
     public PackageSearchDTO withServiceFee(Double serviceFee) {
         this.serviceFee = serviceFee;
         return this;
@@ -258,6 +278,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public PackageSearchDTO withTags(String tags) {
         this.tags = tags;
         return this;
@@ -269,6 +290,7 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public PackageSearchDTO withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -282,9 +304,11 @@ public class PackageSearchDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPrice")
     public Double totalPrice;
+
     public PackageSearchDTO withTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
     
+    public PackageSearchDTO(){}
 }

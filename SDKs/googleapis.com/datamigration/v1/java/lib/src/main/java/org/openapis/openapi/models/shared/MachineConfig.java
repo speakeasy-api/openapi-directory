@@ -18,9 +18,11 @@ public class MachineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuCount")
     public Integer cpuCount;
+
     public MachineConfig withCpuCount(Integer cpuCount) {
         this.cpuCount = cpuCount;
         return this;
     }
     
+    public MachineConfig(){}
 }

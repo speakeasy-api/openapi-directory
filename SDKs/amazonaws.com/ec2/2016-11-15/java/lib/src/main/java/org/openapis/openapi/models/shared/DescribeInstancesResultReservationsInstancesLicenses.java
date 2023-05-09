@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesLicenses {
     
     public String licenseConfigurationArn;
+
     public DescribeInstancesResultReservationsInstancesLicenses withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesLicenses(){}
 }

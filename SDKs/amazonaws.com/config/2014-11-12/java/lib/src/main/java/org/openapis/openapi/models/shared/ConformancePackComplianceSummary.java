@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConformancePackComplianceSummary {
     @JsonProperty("ConformancePackComplianceStatus")
     public ConformancePackComplianceTypeEnum conformancePackComplianceStatus;
+
     public ConformancePackComplianceSummary withConformancePackComplianceStatus(ConformancePackComplianceTypeEnum conformancePackComplianceStatus) {
         this.conformancePackComplianceStatus = conformancePackComplianceStatus;
         return this;
@@ -19,9 +20,14 @@ public class ConformancePackComplianceSummary {
     
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public ConformancePackComplianceSummary withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
     }
     
+    public ConformancePackComplianceSummary(@JsonProperty("ConformancePackComplianceStatus") ConformancePackComplianceTypeEnum conformancePackComplianceStatus, @JsonProperty("ConformancePackName") String conformancePackName) {
+        this.conformancePackComplianceStatus = conformancePackComplianceStatus;
+        this.conformancePackName = conformancePackName;
+  }
 }

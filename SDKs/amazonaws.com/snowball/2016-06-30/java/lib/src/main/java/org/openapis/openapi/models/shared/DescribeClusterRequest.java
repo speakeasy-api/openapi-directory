@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeClusterRequest {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public DescribeClusterRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     
+    public DescribeClusterRequest(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

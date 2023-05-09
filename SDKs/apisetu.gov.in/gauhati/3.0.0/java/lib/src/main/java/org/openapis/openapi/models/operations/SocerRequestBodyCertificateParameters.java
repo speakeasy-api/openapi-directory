@@ -12,6 +12,7 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("APPL_NO")
     public String applNo;
+
     public SocerRequestBodyCertificateParameters withApplNo(String applNo) {
         this.applNo = applNo;
         return this;
@@ -22,6 +23,7 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SocerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -32,6 +34,7 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SocerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,9 +45,16 @@ public class SocerRequestBodyCertificateParameters {
      */
     @JsonProperty("SESSION")
     public String session;
+
     public SocerRequestBodyCertificateParameters withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public SocerRequestBodyCertificateParameters(@JsonProperty("APPL_NO") String applNo, @JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("SESSION") String session) {
+        this.applNo = applNo;
+        this.dob = dob;
+        this.fullName = fullName;
+        this.session = session;
+  }
 }

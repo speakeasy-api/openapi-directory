@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteProvisionedProductServiceActionResponse {
     
     public String contentType;
+
     public ExecuteProvisionedProductServiceActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExecuteProvisionedProductServiceActionResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteProvisionedProductServiceActionOutput executeProvisionedProductServiceActionOutput;
+
     public ExecuteProvisionedProductServiceActionResponse withExecuteProvisionedProductServiceActionOutput(org.openapis.openapi.models.shared.ExecuteProvisionedProductServiceActionOutput executeProvisionedProductServiceActionOutput) {
         this.executeProvisionedProductServiceActionOutput = executeProvisionedProductServiceActionOutput;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteProvisionedProductServiceActionResponse {
      */
     
     public Object invalidParametersException;
+
     public ExecuteProvisionedProductServiceActionResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteProvisionedProductServiceActionResponse {
      */
     
     public Object invalidStateException;
+
     public ExecuteProvisionedProductServiceActionResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -46,6 +51,7 @@ public class ExecuteProvisionedProductServiceActionResponse {
     
     
     public Integer statusCode;
+
     public ExecuteProvisionedProductServiceActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ExecuteProvisionedProductServiceActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteProvisionedProductServiceActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ExecuteProvisionedProductServiceActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ExecuteProvisionedProductServiceActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ExecuteProvisionedProductServiceActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

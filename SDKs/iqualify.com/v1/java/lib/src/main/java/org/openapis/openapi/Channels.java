@@ -57,11 +57,9 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersResponse res = new org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersResponse() {{
+        org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersResponse res = new org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -99,12 +97,10 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse(contentType, httpRes.statusCode()) {{
             comments = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsResponse(contentType, httpRes.statusCode()) {{
             httpPosts = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse(contentType, httpRes.statusCode()) {{
             comments = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +235,10 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsResponse(contentType, httpRes.statusCode()) {{
             channelResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,12 +281,10 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersResponse(contentType, httpRes.statusCode()) {{
             channelResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,12 +332,10 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdResponse res = new org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdResponse() {{
+        org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdResponse res = new org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdResponse(contentType, httpRes.statusCode()) {{
             channelResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,12 +383,10 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsResponse() {{
+        org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsResponse(contentType, httpRes.statusCode()) {{
             channelResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -450,11 +434,9 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersResponse() {{
+        org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersResponse res = new org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

@@ -18,6 +18,7 @@ public class VersionedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public java.util.Map<String, Object> resource;
+
     public VersionedResource withResource(java.util.Map<String, Object> resource) {
         this.resource = resource;
         return this;
@@ -29,9 +30,11 @@ public class VersionedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public VersionedResource withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public VersionedResource(){}
 }

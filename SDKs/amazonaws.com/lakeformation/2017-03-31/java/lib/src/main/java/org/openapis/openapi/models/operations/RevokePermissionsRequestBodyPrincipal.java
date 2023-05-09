@@ -15,9 +15,11 @@ public class RevokePermissionsRequestBodyPrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakePrincipalIdentifier")
     public String dataLakePrincipalIdentifier;
+
     public RevokePermissionsRequestBodyPrincipal withDataLakePrincipalIdentifier(String dataLakePrincipalIdentifier) {
         this.dataLakePrincipalIdentifier = dataLakePrincipalIdentifier;
         return this;
     }
     
+    public RevokePermissionsRequestBodyPrincipal(){}
 }

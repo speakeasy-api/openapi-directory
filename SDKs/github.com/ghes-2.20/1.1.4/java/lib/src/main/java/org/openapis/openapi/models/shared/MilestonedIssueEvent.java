@@ -15,6 +15,7 @@ public class MilestonedIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public MilestonedIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -22,6 +23,7 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public MilestonedIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -29,6 +31,7 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public MilestonedIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -36,6 +39,7 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public MilestonedIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +47,7 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public MilestonedIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -50,6 +55,7 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public MilestonedIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +63,7 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("milestone")
     public MilestonedIssueEventMilestone milestone;
+
     public MilestonedIssueEvent withMilestone(MilestonedIssueEventMilestone milestone) {
         this.milestone = milestone;
         return this;
@@ -64,6 +71,7 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public MilestonedIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -74,6 +82,7 @@ public class MilestonedIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public MilestonedIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -81,9 +90,22 @@ public class MilestonedIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public MilestonedIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MilestonedIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("milestone") MilestonedIssueEventMilestone milestone, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.milestone = milestone;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

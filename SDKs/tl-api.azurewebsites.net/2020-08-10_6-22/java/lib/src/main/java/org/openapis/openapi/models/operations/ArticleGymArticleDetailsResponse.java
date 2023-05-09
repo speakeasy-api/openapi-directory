@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArticleGymArticleDetailsResponse {
     
     public org.openapis.openapi.models.shared.ApiResponse apiResponse;
+
     public ArticleGymArticleDetailsResponse withApiResponse(org.openapis.openapi.models.shared.ApiResponse apiResponse) {
         this.apiResponse = apiResponse;
         return this;
@@ -16,6 +18,7 @@ public class ArticleGymArticleDetailsResponse {
     
     
     public String contentType;
+
     public ArticleGymArticleDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ArticleGymArticleDetailsResponse {
     
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfListOfArticleSearchDTO defaultResponseDTOOfListOfArticleSearchDTO;
+
     public ArticleGymArticleDetailsResponse withDefaultResponseDTOOfListOfArticleSearchDTO(org.openapis.openapi.models.shared.DefaultResponseDTOOfListOfArticleSearchDTO defaultResponseDTOOfListOfArticleSearchDTO) {
         this.defaultResponseDTOOfListOfArticleSearchDTO = defaultResponseDTOOfListOfArticleSearchDTO;
         return this;
@@ -33,6 +37,7 @@ public class ArticleGymArticleDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GymArticleDetailsDTO gymArticleDetailsDTO;
+
     public ArticleGymArticleDetailsResponse withGymArticleDetailsDTO(org.openapis.openapi.models.shared.GymArticleDetailsDTO gymArticleDetailsDTO) {
         this.gymArticleDetailsDTO = gymArticleDetailsDTO;
         return this;
@@ -40,6 +45,7 @@ public class ArticleGymArticleDetailsResponse {
     
     
     public Integer statusCode;
+
     public ArticleGymArticleDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class ArticleGymArticleDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArticleGymArticleDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArticleGymArticleDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

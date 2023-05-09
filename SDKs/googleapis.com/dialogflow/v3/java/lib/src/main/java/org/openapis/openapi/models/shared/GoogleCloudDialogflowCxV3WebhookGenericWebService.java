@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3WebhookGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedCaCerts")
     public String[] allowedCaCerts;
+
     public GoogleCloudDialogflowCxV3WebhookGenericWebService withAllowedCaCerts(String[] allowedCaCerts) {
         this.allowedCaCerts = allowedCaCerts;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3WebhookGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public GoogleCloudDialogflowCxV3WebhookGenericWebService withPassword(String password) {
         this.password = password;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3WebhookGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHeaders")
     public java.util.Map<String, String> requestHeaders;
+
     public GoogleCloudDialogflowCxV3WebhookGenericWebService withRequestHeaders(java.util.Map<String, String> requestHeaders) {
         this.requestHeaders = requestHeaders;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3WebhookGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowCxV3WebhookGenericWebService withUri(String uri) {
         this.uri = uri;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowCxV3WebhookGenericWebService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GoogleCloudDialogflowCxV3WebhookGenericWebService withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3WebhookGenericWebService(){}
 }

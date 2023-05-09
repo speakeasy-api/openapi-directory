@@ -12,6 +12,7 @@ public class GetTriggersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DependentJobName")
     public String dependentJobName;
+
     public GetTriggersRequest withDependentJobName(String dependentJobName) {
         this.dependentJobName = dependentJobName;
         return this;
@@ -20,6 +21,7 @@ public class GetTriggersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetTriggersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class GetTriggersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTriggersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetTriggersRequest(){}
 }

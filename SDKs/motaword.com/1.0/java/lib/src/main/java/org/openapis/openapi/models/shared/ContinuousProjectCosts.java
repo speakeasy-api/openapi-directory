@@ -12,6 +12,7 @@ public class ContinuousProjectCosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mt")
     public Monetary mt;
+
     public ContinuousProjectCosts withMt(Monetary mt) {
         this.mt = mt;
         return this;
@@ -20,6 +21,7 @@ public class ContinuousProjectCosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_edit")
     public Monetary postEdit;
+
     public ContinuousProjectCosts withPostEdit(Monetary postEdit) {
         this.postEdit = postEdit;
         return this;
@@ -28,6 +30,7 @@ public class ContinuousProjectCosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saved")
     public Monetary saved;
+
     public ContinuousProjectCosts withSaved(Monetary saved) {
         this.saved = saved;
         return this;
@@ -36,9 +39,11 @@ public class ContinuousProjectCosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Monetary total;
+
     public ContinuousProjectCosts withTotal(Monetary total) {
         this.total = total;
         return this;
     }
     
+    public ContinuousProjectCosts(){}
 }

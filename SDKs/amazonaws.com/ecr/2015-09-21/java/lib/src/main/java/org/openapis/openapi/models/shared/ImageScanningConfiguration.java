@@ -15,9 +15,11 @@ public class ImageScanningConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanOnPush")
     public Boolean scanOnPush;
+
     public ImageScanningConfiguration withScanOnPush(Boolean scanOnPush) {
         this.scanOnPush = scanOnPush;
         return this;
     }
     
+    public ImageScanningConfiguration(){}
 }

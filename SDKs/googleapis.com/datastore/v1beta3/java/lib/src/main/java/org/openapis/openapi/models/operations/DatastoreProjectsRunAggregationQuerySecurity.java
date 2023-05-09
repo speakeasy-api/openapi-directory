@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DatastoreProjectsRunAggregationQuerySecurity {
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsRunAggregationQuerySecurityOption1 option1;
+
     public DatastoreProjectsRunAggregationQuerySecurity withOption1(DatastoreProjectsRunAggregationQuerySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DatastoreProjectsRunAggregationQuerySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DatastoreProjectsRunAggregationQuerySecurityOption2 option2;
+
     public DatastoreProjectsRunAggregationQuerySecurity withOption2(DatastoreProjectsRunAggregationQuerySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DatastoreProjectsRunAggregationQuerySecurity(){}
 }

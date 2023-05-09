@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostLikesTracksTrackIdResponse {
     
     public String contentType;
+
     public PostLikesTracksTrackIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostLikesTracksTrackIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostLikesTracksTrackIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PostLikesTracksTrackIdResponse {
     
     
     public Integer statusCode;
+
     public PostLikesTracksTrackIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PostLikesTracksTrackIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostLikesTracksTrackIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PostLikesTracksTrackIdResponse {
      */
     
     public org.openapis.openapi.models.shared.TooManyRequests tooManyRequests;
+
     public PostLikesTracksTrackIdResponse withTooManyRequests(org.openapis.openapi.models.shared.TooManyRequests tooManyRequests) {
         this.tooManyRequests = tooManyRequests;
         return this;
     }
     
+    public PostLikesTracksTrackIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

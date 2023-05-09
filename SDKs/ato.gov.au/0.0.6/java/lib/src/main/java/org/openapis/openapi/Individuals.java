@@ -72,13 +72,11 @@ public class Individuals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdResponse(contentType, httpRes.statusCode()) {{
             failedPrecondition = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -144,13 +142,11 @@ public class Individuals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsResponse res = new org.openapis.openapi.models.operations.GetIndividualsResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsResponse res = new org.openapis.openapi.models.operations.GetIndividualsResponse(contentType, httpRes.statusCode()) {{
             individuals = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,13 +206,11 @@ public class Individuals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsPartyIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsPartyIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdResponse(contentType, httpRes.statusCode()) {{
             individual = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -279,13 +273,11 @@ public class Individuals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostIndividualsResponse res = new org.openapis.openapi.models.operations.PostIndividualsResponse() {{
+        org.openapis.openapi.models.operations.PostIndividualsResponse res = new org.openapis.openapi.models.operations.PostIndividualsResponse(contentType, httpRes.statusCode()) {{
             individual = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -350,14 +342,12 @@ public class Individuals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutIndividualsPartyIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdResponse() {{
+        org.openapis.openapi.models.operations.PutIndividualsPartyIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdResponse(contentType, httpRes.statusCode()) {{
             individual = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

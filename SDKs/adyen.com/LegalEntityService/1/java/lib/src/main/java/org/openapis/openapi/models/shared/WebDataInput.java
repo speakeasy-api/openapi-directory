@@ -15,9 +15,11 @@ public class WebDataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAddress")
     public String webAddress;
+
     public WebDataInput withWebAddress(String webAddress) {
         this.webAddress = webAddress;
         return this;
     }
     
+    public WebDataInput(){}
 }

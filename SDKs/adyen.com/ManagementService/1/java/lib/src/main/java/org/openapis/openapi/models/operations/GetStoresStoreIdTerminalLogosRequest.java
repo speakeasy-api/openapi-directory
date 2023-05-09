@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoresStoreIdTerminalLogosRequest {
@@ -12,6 +13,7 @@ public class GetStoresStoreIdTerminalLogosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public GetStoresStoreIdTerminalLogosRequest withModel(String model) {
         this.model = model;
         return this;
@@ -22,9 +24,14 @@ public class GetStoresStoreIdTerminalLogosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public GetStoresStoreIdTerminalLogosRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetStoresStoreIdTerminalLogosRequest(@JsonProperty("model") String model, @JsonProperty("storeId") String storeId) {
+        this.model = model;
+        this.storeId = storeId;
+  }
 }

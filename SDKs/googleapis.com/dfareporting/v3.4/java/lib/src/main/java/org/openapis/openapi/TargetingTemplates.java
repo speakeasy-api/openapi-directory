@@ -59,11 +59,9 @@ public class TargetingTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetResponse(contentType, httpRes.statusCode()) {{
             targetingTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class TargetingTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertResponse(contentType, httpRes.statusCode()) {{
             targetingTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class TargetingTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListResponse(contentType, httpRes.statusCode()) {{
             targetingTemplatesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class TargetingTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchResponse(contentType, httpRes.statusCode()) {{
             targetingTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class TargetingTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateResponse(contentType, httpRes.statusCode()) {{
             targetingTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

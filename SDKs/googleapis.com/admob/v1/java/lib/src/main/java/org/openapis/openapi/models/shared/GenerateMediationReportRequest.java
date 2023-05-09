@@ -18,9 +18,11 @@ public class GenerateMediationReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportSpec")
     public MediationReportSpec reportSpec;
+
     public GenerateMediationReportRequest withReportSpec(MediationReportSpec reportSpec) {
         this.reportSpec = reportSpec;
         return this;
     }
     
+    public GenerateMediationReportRequest(){}
 }

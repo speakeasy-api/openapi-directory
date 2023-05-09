@@ -17,6 +17,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("AfterPaymentDescription")
     @SpeakeasyMetadata("form:name=AfterPaymentDescription")
     public String afterPaymentDescription;
+
     public ProductUpdateApiModel withAfterPaymentDescription(String afterPaymentDescription) {
         this.afterPaymentDescription = afterPaymentDescription;
         return this;
@@ -29,6 +30,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Attachments")
     @SpeakeasyMetadata("form:name=Attachments,json")
     public ProductAttachmentApiModel[] attachments;
+
     public ProductUpdateApiModel withAttachments(ProductAttachmentApiModel[] attachments) {
         this.attachments = attachments;
         return this;
@@ -42,6 +44,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("ButtonCallToAction")
     @SpeakeasyMetadata("form:name=ButtonCallToAction")
     public String buttonCallToAction;
+
     public ProductUpdateApiModel withButtonCallToAction(String buttonCallToAction) {
         this.buttonCallToAction = buttonCallToAction;
         return this;
@@ -54,6 +57,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Coupons")
     @SpeakeasyMetadata("form:name=Coupons,json")
     public ProductCouponApiModel[] coupons;
+
     public ProductUpdateApiModel withCoupons(ProductCouponApiModel[] coupons) {
         this.coupons = coupons;
         return this;
@@ -66,6 +70,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("CurrencyId")
     @SpeakeasyMetadata("form:name=CurrencyId")
     public Integer currencyId;
+
     public ProductUpdateApiModel withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -78,6 +83,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Description")
     @SpeakeasyMetadata("form:name=Description")
     public String description;
+
     public ProductUpdateApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -90,6 +96,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Discounts")
     @SpeakeasyMetadata("form:name=Discounts,json")
     public ProductDiscountApiModel[] discounts;
+
     public ProductUpdateApiModel withDiscounts(ProductDiscountApiModel[] discounts) {
         this.discounts = discounts;
         return this;
@@ -102,6 +109,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public ProductUpdateApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -114,6 +122,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("IsFeatured")
     @SpeakeasyMetadata("form:name=IsFeatured")
     public Boolean isFeatured;
+
     public ProductUpdateApiModel withIsFeatured(Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
@@ -126,6 +135,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Items")
     @SpeakeasyMetadata("form:name=Items,json")
     public ProductItemApiModel[] items;
+
     public ProductUpdateApiModel withItems(ProductItemApiModel[] items) {
         this.items = items;
         return this;
@@ -138,6 +148,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public ProductUpdateApiModel withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +161,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("PaymentGateways")
     @SpeakeasyMetadata("form:name=PaymentGateways,json")
     public ProductGatewayApiModel[] paymentGateways;
+
     public ProductUpdateApiModel withPaymentGateways(ProductGatewayApiModel[] paymentGateways) {
         this.paymentGateways = paymentGateways;
         return this;
@@ -162,6 +174,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("ShippingAmount")
     @SpeakeasyMetadata("form:name=ShippingAmount")
     public Double shippingAmount;
+
     public ProductUpdateApiModel withShippingAmount(Double shippingAmount) {
         this.shippingAmount = shippingAmount;
         return this;
@@ -174,6 +187,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("ShippingDescription")
     @SpeakeasyMetadata("form:name=ShippingDescription")
     public String shippingDescription;
+
     public ProductUpdateApiModel withShippingDescription(String shippingDescription) {
         this.shippingDescription = shippingDescription;
         return this;
@@ -186,6 +200,7 @@ public class ProductUpdateApiModel {
     @JsonProperty("Status")
     @SpeakeasyMetadata("form:name=Status")
     public ProductUpdateApiModelStatusEnum status;
+
     public ProductUpdateApiModel withStatus(ProductUpdateApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -198,9 +213,11 @@ public class ProductUpdateApiModel {
     @JsonProperty("WhatHappensNextDescription")
     @SpeakeasyMetadata("form:name=WhatHappensNextDescription")
     public String whatHappensNextDescription;
+
     public ProductUpdateApiModel withWhatHappensNextDescription(String whatHappensNextDescription) {
         this.whatHappensNextDescription = whatHappensNextDescription;
         return this;
     }
     
+    public ProductUpdateApiModel(){}
 }

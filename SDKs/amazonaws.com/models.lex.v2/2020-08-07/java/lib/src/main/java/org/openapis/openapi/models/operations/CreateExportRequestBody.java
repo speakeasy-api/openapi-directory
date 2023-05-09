@@ -14,6 +14,7 @@ public class CreateExportRequestBody {
      */
     @JsonProperty("fileFormat")
     public CreateExportRequestBodyFileFormatEnum fileFormat;
+
     public CreateExportRequestBody withFileFormat(CreateExportRequestBodyFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -25,6 +26,7 @@ public class CreateExportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePassword")
     public String filePassword;
+
     public CreateExportRequestBody withFilePassword(String filePassword) {
         this.filePassword = filePassword;
         return this;
@@ -35,9 +37,14 @@ public class CreateExportRequestBody {
      */
     @JsonProperty("resourceSpecification")
     public CreateExportRequestBodyResourceSpecification resourceSpecification;
+
     public CreateExportRequestBody withResourceSpecification(CreateExportRequestBodyResourceSpecification resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
         return this;
     }
     
+    public CreateExportRequestBody(@JsonProperty("fileFormat") CreateExportRequestBodyFileFormatEnum fileFormat, @JsonProperty("resourceSpecification") CreateExportRequestBodyResourceSpecification resourceSpecification) {
+        this.fileFormat = fileFormat;
+        this.resourceSpecification = resourceSpecification;
+  }
 }

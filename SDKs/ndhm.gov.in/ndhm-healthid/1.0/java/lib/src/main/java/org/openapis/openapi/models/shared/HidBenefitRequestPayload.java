@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class HidBenefitRequestPayload {
     
     public String address;
+
     public HidBenefitRequestPayload withAddress(String address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class HidBenefitRequestPayload {
     
     
     public HidBenefitRequestPayloadAuthMethodsEnum[] authMethods;
+
     public HidBenefitRequestPayload withAuthMethods(HidBenefitRequestPayloadAuthMethodsEnum[] authMethods) {
         this.authMethods = authMethods;
         return this;
@@ -26,6 +28,7 @@ public class HidBenefitRequestPayload {
     
     
     public String benefitId;
+
     public HidBenefitRequestPayload withBenefitId(String benefitId) {
         this.benefitId = benefitId;
         return this;
@@ -33,6 +36,7 @@ public class HidBenefitRequestPayload {
     
     
     public String dayOfBirth;
+
     public HidBenefitRequestPayload withDayOfBirth(String dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
         return this;
@@ -40,6 +44,7 @@ public class HidBenefitRequestPayload {
     
     
     public String districtCode;
+
     public HidBenefitRequestPayload withDistrictCode(String districtCode) {
         this.districtCode = districtCode;
         return this;
@@ -47,6 +52,7 @@ public class HidBenefitRequestPayload {
     
     
     public String districtName;
+
     public HidBenefitRequestPayload withDistrictName(String districtName) {
         this.districtName = districtName;
         return this;
@@ -54,6 +60,7 @@ public class HidBenefitRequestPayload {
     
     
     public String email;
+
     public HidBenefitRequestPayload withEmail(String email) {
         this.email = email;
         return this;
@@ -61,6 +68,7 @@ public class HidBenefitRequestPayload {
     
     
     public String firstName;
+
     public HidBenefitRequestPayload withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -68,6 +76,7 @@ public class HidBenefitRequestPayload {
     
     
     public String gender;
+
     public HidBenefitRequestPayload withGender(String gender) {
         this.gender = gender;
         return this;
@@ -75,6 +84,7 @@ public class HidBenefitRequestPayload {
     
     
     public String healthId;
+
     public HidBenefitRequestPayload withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -82,6 +92,7 @@ public class HidBenefitRequestPayload {
     
     
     public String healthIdNumber;
+
     public HidBenefitRequestPayload withHealthIdNumber(String healthIdNumber) {
         this.healthIdNumber = healthIdNumber;
         return this;
@@ -89,6 +100,7 @@ public class HidBenefitRequestPayload {
     
     
     public String kycPhoto;
+
     public HidBenefitRequestPayload withKycPhoto(String kycPhoto) {
         this.kycPhoto = kycPhoto;
         return this;
@@ -96,6 +108,7 @@ public class HidBenefitRequestPayload {
     
     
     public Boolean kycVerified;
+
     public HidBenefitRequestPayload withKycVerified(Boolean kycVerified) {
         this.kycVerified = kycVerified;
         return this;
@@ -103,6 +116,7 @@ public class HidBenefitRequestPayload {
     
     
     public String lastName;
+
     public HidBenefitRequestPayload withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -110,6 +124,7 @@ public class HidBenefitRequestPayload {
     
     
     public String middleName;
+
     public HidBenefitRequestPayload withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -117,6 +132,7 @@ public class HidBenefitRequestPayload {
     
     
     public String mobile;
+
     public HidBenefitRequestPayload withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -124,6 +140,7 @@ public class HidBenefitRequestPayload {
     
     
     public String monthOfBirth;
+
     public HidBenefitRequestPayload withMonthOfBirth(String monthOfBirth) {
         this.monthOfBirth = monthOfBirth;
         return this;
@@ -131,6 +148,7 @@ public class HidBenefitRequestPayload {
     
     
     public String name;
+
     public HidBenefitRequestPayload withName(String name) {
         this.name = name;
         return this;
@@ -138,6 +156,7 @@ public class HidBenefitRequestPayload {
     
     
     public Boolean new_;
+
     public HidBenefitRequestPayload withNew(Boolean new_) {
         this.new_ = new_;
         return this;
@@ -145,6 +164,7 @@ public class HidBenefitRequestPayload {
     
     
     public String pincode;
+
     public HidBenefitRequestPayload withPincode(String pincode) {
         this.pincode = pincode;
         return this;
@@ -152,6 +172,7 @@ public class HidBenefitRequestPayload {
     
     
     public String profilePhoto;
+
     public HidBenefitRequestPayload withProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
         return this;
@@ -159,6 +180,7 @@ public class HidBenefitRequestPayload {
     
     
     public String stateCode;
+
     public HidBenefitRequestPayload withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -166,6 +188,7 @@ public class HidBenefitRequestPayload {
     
     
     public String stateName;
+
     public HidBenefitRequestPayload withStateName(String stateName) {
         this.stateName = stateName;
         return this;
@@ -173,6 +196,7 @@ public class HidBenefitRequestPayload {
     
     
     public String status;
+
     public HidBenefitRequestPayload withStatus(String status) {
         this.status = status;
         return this;
@@ -180,6 +204,7 @@ public class HidBenefitRequestPayload {
     
     
     public String subDistrictCode;
+
     public HidBenefitRequestPayload withSubDistrictCode(String subDistrictCode) {
         this.subDistrictCode = subDistrictCode;
         return this;
@@ -187,6 +212,7 @@ public class HidBenefitRequestPayload {
     
     
     public String subdistrictName;
+
     public HidBenefitRequestPayload withSubdistrictName(String subdistrictName) {
         this.subdistrictName = subdistrictName;
         return this;
@@ -194,6 +220,7 @@ public class HidBenefitRequestPayload {
     
     
     public java.util.Map<String, String> tags;
+
     public HidBenefitRequestPayload withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -201,6 +228,7 @@ public class HidBenefitRequestPayload {
     
     
     public String token;
+
     public HidBenefitRequestPayload withToken(String token) {
         this.token = token;
         return this;
@@ -208,6 +236,7 @@ public class HidBenefitRequestPayload {
     
     
     public String townCode;
+
     public HidBenefitRequestPayload withTownCode(String townCode) {
         this.townCode = townCode;
         return this;
@@ -215,6 +244,7 @@ public class HidBenefitRequestPayload {
     
     
     public String townName;
+
     public HidBenefitRequestPayload withTownName(String townName) {
         this.townName = townName;
         return this;
@@ -222,6 +252,7 @@ public class HidBenefitRequestPayload {
     
     
     public String villageCode;
+
     public HidBenefitRequestPayload withVillageCode(String villageCode) {
         this.villageCode = villageCode;
         return this;
@@ -229,6 +260,7 @@ public class HidBenefitRequestPayload {
     
     
     public String villageName;
+
     public HidBenefitRequestPayload withVillageName(String villageName) {
         this.villageName = villageName;
         return this;
@@ -236,6 +268,7 @@ public class HidBenefitRequestPayload {
     
     
     public String wardCode;
+
     public HidBenefitRequestPayload withWardCode(String wardCode) {
         this.wardCode = wardCode;
         return this;
@@ -243,6 +276,7 @@ public class HidBenefitRequestPayload {
     
     
     public String wardName;
+
     public HidBenefitRequestPayload withWardName(String wardName) {
         this.wardName = wardName;
         return this;
@@ -250,9 +284,11 @@ public class HidBenefitRequestPayload {
     
     
     public String yearOfBirth;
+
     public HidBenefitRequestPayload withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public HidBenefitRequestPayload(){}
 }

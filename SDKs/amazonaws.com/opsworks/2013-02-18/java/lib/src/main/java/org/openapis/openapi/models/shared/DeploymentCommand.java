@@ -15,6 +15,7 @@ public class DeploymentCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Args")
     public java.util.Map<String, String[]> args;
+
     public DeploymentCommand withArgs(java.util.Map<String, String[]> args) {
         this.args = args;
         return this;
@@ -22,9 +23,13 @@ public class DeploymentCommand {
     
     @JsonProperty("Name")
     public DeploymentCommandNameEnum name;
+
     public DeploymentCommand withName(DeploymentCommandNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public DeploymentCommand(@JsonProperty("Name") DeploymentCommandNameEnum name) {
+        this.name = name;
+  }
 }

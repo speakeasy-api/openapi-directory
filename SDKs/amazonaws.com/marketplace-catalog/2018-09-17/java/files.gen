@@ -31,14 +31,19 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CancelChangeSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelChangeSetResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteResourcePolicyRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteResourcePolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeChangeSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeChangeSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeEntityRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeEntityResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetResourcePolicyRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetResourcePolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListChangeSetsRequestBodySort.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListChangeSetsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListChangeSetsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListChangeSetsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesRequestBodyOwnershipTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesRequestBodySort.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesRequest.java
@@ -46,6 +51,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesResponse.ja
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagsForResourceRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagsForResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTagsForResourceResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PutResourcePolicyRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/PutResourcePolicyRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/PutResourcePolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartChangeSetRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartChangeSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartChangeSetResponse.java
@@ -63,6 +71,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ChangeSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/Entity.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeEntityResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetResourcePolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListChangeSetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ChangeSetSummaryListItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/SortOrderEnum.java
@@ -74,4 +83,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Tag.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartChangeSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Change.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

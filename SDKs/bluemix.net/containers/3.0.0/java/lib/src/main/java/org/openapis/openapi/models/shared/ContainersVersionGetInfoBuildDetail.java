@@ -15,6 +15,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public String api;
+
     public ContainersVersionGetInfoBuildDetail withApi(String api) {
         this.api = api;
         return this;
@@ -26,6 +27,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automount")
     public String automount;
+
     public ContainersVersionGetInfoBuildDetail withAutomount(String automount) {
         this.automount = automount;
         return this;
@@ -37,6 +39,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grupdater")
     public String grupdater;
+
     public ContainersVersionGetInfoBuildDetail withGrupdater(String grupdater) {
         this.grupdater = grupdater;
         return this;
@@ -48,6 +51,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("harmony")
     public String harmony;
+
     public ContainersVersionGetInfoBuildDetail withHarmony(String harmony) {
         this.harmony = harmony;
         return this;
@@ -59,6 +63,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health-monitor")
     public String healthMonitor;
+
     public ContainersVersionGetInfoBuildDetail withHealthMonitor(String healthMonitor) {
         this.healthMonitor = healthMonitor;
         return this;
@@ -70,6 +75,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hijack")
     public String hijack;
+
     public ContainersVersionGetInfoBuildDetail withHijack(String hijack) {
         this.hijack = hijack;
         return this;
@@ -81,6 +87,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap")
     public String ldap;
+
     public ContainersVersionGetInfoBuildDetail withLdap(String ldap) {
         this.ldap = ldap;
         return this;
@@ -92,6 +99,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logmet")
     public String logmet;
+
     public ContainersVersionGetInfoBuildDetail withLogmet(String logmet) {
         this.logmet = logmet;
         return this;
@@ -103,6 +111,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lumberjack")
     public String lumberjack;
+
     public ContainersVersionGetInfoBuildDetail withLumberjack(String lumberjack) {
         this.lumberjack = lumberjack;
         return this;
@@ -114,6 +123,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redis-cluster")
     public String redisCluster;
+
     public ContainersVersionGetInfoBuildDetail withRedisCluster(String redisCluster) {
         this.redisCluster = redisCluster;
         return this;
@@ -125,6 +135,7 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sgwatcher")
     public String sgwatcher;
+
     public ContainersVersionGetInfoBuildDetail withSgwatcher(String sgwatcher) {
         this.sgwatcher = sgwatcher;
         return this;
@@ -136,9 +147,11 @@ public class ContainersVersionGetInfoBuildDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volmgr")
     public String volmgr;
+
     public ContainersVersionGetInfoBuildDetail withVolmgr(String volmgr) {
         this.volmgr = volmgr;
         return this;
     }
     
+    public ContainersVersionGetInfoBuildDetail(){}
 }

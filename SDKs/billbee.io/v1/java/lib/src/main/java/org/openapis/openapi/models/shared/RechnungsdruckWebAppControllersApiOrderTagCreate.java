@@ -17,9 +17,11 @@ public class RechnungsdruckWebAppControllersApiOrderTagCreate {
     @JsonProperty("Tags")
     @SpeakeasyMetadata("form:name=Tags")
     public String[] tags;
+
     public RechnungsdruckWebAppControllersApiOrderTagCreate withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiOrderTagCreate(){}
 }

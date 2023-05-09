@@ -16,7 +16,7 @@ public enum ScheduledTransactionSummaryFlagColorEnum {
     GREEN("green"),
     BLUE("blue"),
     PURPLE("purple"),
-    NULL_("null");
+    LESS_THAN_NIL_GREATER_THAN("<nil>");
 
     @JsonValue
     public final String value;

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryForecastResponse {
     
     public String contentType;
+
     public QueryForecastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class QueryForecastResponse {
      */
     
     public Object invalidInputException;
+
     public QueryForecastResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class QueryForecastResponse {
      */
     
     public Object invalidNextTokenException;
+
     public QueryForecastResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class QueryForecastResponse {
      */
     
     public Object limitExceededException;
+
     public QueryForecastResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class QueryForecastResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryForecastResponse queryForecastResponse;
+
     public QueryForecastResponse withQueryForecastResponse(org.openapis.openapi.models.shared.QueryForecastResponse queryForecastResponse) {
         this.queryForecastResponse = queryForecastResponse;
         return this;
@@ -59,6 +65,7 @@ public class QueryForecastResponse {
      */
     
     public Object resourceInUseException;
+
     public QueryForecastResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class QueryForecastResponse {
      */
     
     public Object resourceNotFoundException;
+
     public QueryForecastResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class QueryForecastResponse {
     
     
     public Integer statusCode;
+
     public QueryForecastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class QueryForecastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryForecastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QueryForecastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

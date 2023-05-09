@@ -18,6 +18,7 @@ public class AchievementDefinitionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public AchievementDefinition[] items;
+
     public AchievementDefinitionsListResponse withItems(AchievementDefinition[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class AchievementDefinitionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AchievementDefinitionsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class AchievementDefinitionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AchievementDefinitionsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public AchievementDefinitionsListResponse(){}
 }

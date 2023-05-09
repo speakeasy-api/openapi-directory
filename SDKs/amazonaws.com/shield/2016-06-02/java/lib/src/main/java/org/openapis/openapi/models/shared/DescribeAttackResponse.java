@@ -15,9 +15,11 @@ public class DescribeAttackResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attack")
     public AttackDetail attack;
+
     public DescribeAttackResponse withAttack(AttackDetail attack) {
         this.attack = attack;
         return this;
     }
     
+    public DescribeAttackResponse(){}
 }

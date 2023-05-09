@@ -18,6 +18,7 @@ public class PerformanceIndicatorFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstParameter")
     public PerformanceIndicatorFormulaParameterTypeEnum firstParameter;
+
     public PerformanceIndicatorFormula withFirstParameter(PerformanceIndicatorFormulaParameterTypeEnum firstParameter) {
         this.firstParameter = firstParameter;
         return this;
@@ -26,6 +27,7 @@ public class PerformanceIndicatorFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public PerformanceIndicatorFormulaOperatorNameEnum operatorName;
+
     public PerformanceIndicatorFormula withOperatorName(PerformanceIndicatorFormulaOperatorNameEnum operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -37,6 +39,7 @@ public class PerformanceIndicatorFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondParameter")
     public PerformanceIndicatorFormulaParameterTypeEnum secondParameter;
+
     public PerformanceIndicatorFormula withSecondParameter(PerformanceIndicatorFormulaParameterTypeEnum secondParameter) {
         this.secondParameter = secondParameter;
         return this;
@@ -48,9 +51,11 @@ public class PerformanceIndicatorFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdParameter")
     public Long thirdParameter;
+
     public PerformanceIndicatorFormula withThirdParameter(Long thirdParameter) {
         this.thirdParameter = thirdParameter;
         return this;
     }
     
+    public PerformanceIndicatorFormula(){}
 }

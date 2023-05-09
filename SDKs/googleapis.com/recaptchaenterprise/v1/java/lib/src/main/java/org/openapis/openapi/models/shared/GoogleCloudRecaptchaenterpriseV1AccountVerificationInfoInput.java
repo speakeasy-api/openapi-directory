@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfoInput[] endpoints;
+
     public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput withEndpoints(GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfoInput[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput(){}
 }

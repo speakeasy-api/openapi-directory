@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeywordExtractionRequestBody {
@@ -12,6 +13,7 @@ public class KeywordExtractionRequestBody {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public KeywordExtractionRequestBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class KeywordExtractionRequestBody {
      */
     @SpeakeasyMetadata("form:name=n")
     public Long n;
+
     public KeywordExtractionRequestBody withN(Long n) {
         this.n = n;
         return this;
@@ -32,9 +35,13 @@ public class KeywordExtractionRequestBody {
      */
     @SpeakeasyMetadata("form:name=text")
     public String text;
+
     public KeywordExtractionRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public KeywordExtractionRequestBody(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

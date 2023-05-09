@@ -12,6 +12,7 @@ public class DeleteDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteDatabaseRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,9 +20,13 @@ public class DeleteDatabaseRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DeleteDatabaseRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteDatabaseRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

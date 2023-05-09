@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BillingAggregatedInformationGetForOrgResponse {
     
     public String contentType;
+
     public BillingAggregatedInformationGetForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BillingAggregatedInformationGetForOrgResponse {
     
     
     public Integer statusCode;
+
     public BillingAggregatedInformationGetForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BillingAggregatedInformationGetForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BillingAggregatedInformationGetForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BillingAggregatedInformationGetForOrgResponse {
      */
     
     public BillingAggregatedInformationGetForOrg200ApplicationJSON billingAggregatedInformationGetForOrg200ApplicationJSONObject;
+
     public BillingAggregatedInformationGetForOrgResponse withBillingAggregatedInformationGetForOrg200ApplicationJSONObject(BillingAggregatedInformationGetForOrg200ApplicationJSON billingAggregatedInformationGetForOrg200ApplicationJSONObject) {
         this.billingAggregatedInformationGetForOrg200ApplicationJSONObject = billingAggregatedInformationGetForOrg200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class BillingAggregatedInformationGetForOrgResponse {
      */
     
     public BillingAggregatedInformationGetForOrgDefaultApplicationJSON billingAggregatedInformationGetForOrgDefaultApplicationJSONObject;
+
     public BillingAggregatedInformationGetForOrgResponse withBillingAggregatedInformationGetForOrgDefaultApplicationJSONObject(BillingAggregatedInformationGetForOrgDefaultApplicationJSON billingAggregatedInformationGetForOrgDefaultApplicationJSONObject) {
         this.billingAggregatedInformationGetForOrgDefaultApplicationJSONObject = billingAggregatedInformationGetForOrgDefaultApplicationJSONObject;
         return this;
     }
     
+    public BillingAggregatedInformationGetForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

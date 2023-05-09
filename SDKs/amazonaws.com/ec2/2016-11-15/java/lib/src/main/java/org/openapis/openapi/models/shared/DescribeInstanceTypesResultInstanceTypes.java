@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypes {
     
     public Boolean autoRecoverySupported;
+
     public DescribeInstanceTypesResultInstanceTypes withAutoRecoverySupported(Boolean autoRecoverySupported) {
         this.autoRecoverySupported = autoRecoverySupported;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public Boolean bareMetal;
+
     public DescribeInstanceTypesResultInstanceTypes withBareMetal(Boolean bareMetal) {
         this.bareMetal = bareMetal;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public Boolean burstablePerformanceSupported;
+
     public DescribeInstanceTypesResultInstanceTypes withBurstablePerformanceSupported(Boolean burstablePerformanceSupported) {
         this.burstablePerformanceSupported = burstablePerformanceSupported;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public Boolean currentGeneration;
+
     public DescribeInstanceTypesResultInstanceTypes withCurrentGeneration(Boolean currentGeneration) {
         this.currentGeneration = currentGeneration;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public Boolean dedicatedHostsSupported;
+
     public DescribeInstanceTypesResultInstanceTypes withDedicatedHostsSupported(Boolean dedicatedHostsSupported) {
         this.dedicatedHostsSupported = dedicatedHostsSupported;
         return this;
@@ -47,6 +52,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesEbsInfo ebsInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withEbsInfo(DescribeInstanceTypesResultInstanceTypesEbsInfo ebsInfo) {
         this.ebsInfo = ebsInfo;
         return this;
@@ -54,6 +60,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesFpgaInfo fpgaInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withFpgaInfo(DescribeInstanceTypesResultInstanceTypesFpgaInfo fpgaInfo) {
         this.fpgaInfo = fpgaInfo;
         return this;
@@ -61,6 +68,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public Boolean freeTierEligible;
+
     public DescribeInstanceTypesResultInstanceTypes withFreeTierEligible(Boolean freeTierEligible) {
         this.freeTierEligible = freeTierEligible;
         return this;
@@ -68,6 +76,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesGpuInfo gpuInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withGpuInfo(DescribeInstanceTypesResultInstanceTypesGpuInfo gpuInfo) {
         this.gpuInfo = gpuInfo;
         return this;
@@ -75,6 +84,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public Boolean hibernationSupported;
+
     public DescribeInstanceTypesResultInstanceTypes withHibernationSupported(Boolean hibernationSupported) {
         this.hibernationSupported = hibernationSupported;
         return this;
@@ -82,6 +92,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesHypervisorEnum hypervisor;
+
     public DescribeInstanceTypesResultInstanceTypes withHypervisor(DescribeInstanceTypesResultInstanceTypesHypervisorEnum hypervisor) {
         this.hypervisor = hypervisor;
         return this;
@@ -89,6 +100,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesInferenceAcceleratorInfo inferenceAcceleratorInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withInferenceAcceleratorInfo(DescribeInstanceTypesResultInstanceTypesInferenceAcceleratorInfo inferenceAcceleratorInfo) {
         this.inferenceAcceleratorInfo = inferenceAcceleratorInfo;
         return this;
@@ -96,6 +108,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo instanceStorageInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withInstanceStorageInfo(DescribeInstanceTypesResultInstanceTypesInstanceStorageInfo instanceStorageInfo) {
         this.instanceStorageInfo = instanceStorageInfo;
         return this;
@@ -103,6 +116,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public Boolean instanceStorageSupported;
+
     public DescribeInstanceTypesResultInstanceTypes withInstanceStorageSupported(Boolean instanceStorageSupported) {
         this.instanceStorageSupported = instanceStorageSupported;
         return this;
@@ -110,6 +124,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum instanceType;
+
     public DescribeInstanceTypesResultInstanceTypes withInstanceType(DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -117,6 +132,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesMemoryInfo memoryInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withMemoryInfo(DescribeInstanceTypesResultInstanceTypesMemoryInfo memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
@@ -124,6 +140,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo networkInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withNetworkInfo(DescribeInstanceTypesResultInstanceTypesNetworkInfo networkInfo) {
         this.networkInfo = networkInfo;
         return this;
@@ -131,6 +148,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesPlacementGroupInfo placementGroupInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withPlacementGroupInfo(DescribeInstanceTypesResultInstanceTypesPlacementGroupInfo placementGroupInfo) {
         this.placementGroupInfo = placementGroupInfo;
         return this;
@@ -138,6 +156,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesProcessorInfo processorInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withProcessorInfo(DescribeInstanceTypesResultInstanceTypesProcessorInfo processorInfo) {
         this.processorInfo = processorInfo;
         return this;
@@ -145,6 +164,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum[] supportedBootModes;
+
     public DescribeInstanceTypesResultInstanceTypes withSupportedBootModes(DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum[] supportedBootModes) {
         this.supportedBootModes = supportedBootModes;
         return this;
@@ -152,6 +172,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum[] supportedRootDeviceTypes;
+
     public DescribeInstanceTypesResultInstanceTypes withSupportedRootDeviceTypes(DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum[] supportedRootDeviceTypes) {
         this.supportedRootDeviceTypes = supportedRootDeviceTypes;
         return this;
@@ -159,6 +180,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum[] supportedUsageClasses;
+
     public DescribeInstanceTypesResultInstanceTypes withSupportedUsageClasses(DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum[] supportedUsageClasses) {
         this.supportedUsageClasses = supportedUsageClasses;
         return this;
@@ -166,6 +188,7 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum[] supportedVirtualizationTypes;
+
     public DescribeInstanceTypesResultInstanceTypes withSupportedVirtualizationTypes(DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum[] supportedVirtualizationTypes) {
         this.supportedVirtualizationTypes = supportedVirtualizationTypes;
         return this;
@@ -173,9 +196,11 @@ public class DescribeInstanceTypesResultInstanceTypes {
     
     
     public DescribeInstanceTypesResultInstanceTypesVCpuInfo vCpuInfo;
+
     public DescribeInstanceTypesResultInstanceTypes withVCpuInfo(DescribeInstanceTypesResultInstanceTypesVCpuInfo vCpuInfo) {
         this.vCpuInfo = vCpuInfo;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypes(){}
 }

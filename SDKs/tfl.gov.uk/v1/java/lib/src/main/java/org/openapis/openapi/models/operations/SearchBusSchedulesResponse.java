@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchBusSchedulesResponse {
     
     public byte[] body;
+
     public SearchBusSchedulesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SearchBusSchedulesResponse {
     
     
     public String contentType;
+
     public SearchBusSchedulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class SearchBusSchedulesResponse {
     
     
     public Integer statusCode;
+
     public SearchBusSchedulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class SearchBusSchedulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchBusSchedulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class SearchBusSchedulesResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesSearchResponse tflApiPresentationEntitiesSearchResponse;
+
     public SearchBusSchedulesResponse withTflApiPresentationEntitiesSearchResponse(org.openapis.openapi.models.shared.TflApiPresentationEntitiesSearchResponse tflApiPresentationEntitiesSearchResponse) {
         this.tflApiPresentationEntitiesSearchResponse = tflApiPresentationEntitiesSearchResponse;
         return this;
     }
     
+    public SearchBusSchedulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

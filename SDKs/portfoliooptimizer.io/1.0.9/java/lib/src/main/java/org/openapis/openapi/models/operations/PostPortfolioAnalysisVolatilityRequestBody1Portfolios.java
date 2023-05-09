@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisVolatilityRequestBody1Portfolios {
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioAnalysisVolatilityRequestBody1Portfolios withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioAnalysisVolatilityRequestBody1Portfolios(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

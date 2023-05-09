@@ -12,6 +12,7 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeable")
     public Boolean changeable;
+
     public OrderLineItem withChangeable(Boolean changeable) {
         this.changeable = changeable;
         return this;
@@ -19,6 +20,7 @@ public class OrderLineItem {
     
     @JsonProperty("id")
     public String id;
+
     public OrderLineItem withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class OrderLineItem {
     
     @JsonProperty("orderLineItemNumber")
     public Double orderLineItemNumber;
+
     public OrderLineItem withOrderLineItemNumber(Double orderLineItemNumber) {
         this.orderLineItemNumber = orderLineItemNumber;
         return this;
@@ -33,6 +36,7 @@ public class OrderLineItem {
     
     @JsonProperty("orderLineItemStatus")
     public OrderLineItemOrderLineItemStatusEnum orderLineItemStatus;
+
     public OrderLineItem withOrderLineItemStatus(OrderLineItemOrderLineItemStatusEnum orderLineItemStatus) {
         this.orderLineItemStatus = orderLineItemStatus;
         return this;
@@ -41,9 +45,15 @@ public class OrderLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantities")
     public OrderLineItemQuantities[] quantities;
+
     public OrderLineItem withQuantities(OrderLineItemQuantities[] quantities) {
         this.quantities = quantities;
         return this;
     }
     
+    public OrderLineItem(@JsonProperty("id") String id, @JsonProperty("orderLineItemNumber") Double orderLineItemNumber, @JsonProperty("orderLineItemStatus") OrderLineItemOrderLineItemStatusEnum orderLineItemStatus) {
+        this.id = id;
+        this.orderLineItemNumber = orderLineItemNumber;
+        this.orderLineItemStatus = orderLineItemStatus;
+  }
 }

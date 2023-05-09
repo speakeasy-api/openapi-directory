@@ -41,15 +41,13 @@ public class BabelFeeController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckForNotificationsResponse res = new org.openapis.openapi.models.operations.CheckForNotificationsResponse() {{
+        org.openapis.openapi.models.operations.CheckForNotificationsResponse res = new org.openapis.openapi.models.operations.CheckForNotificationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
             checkForNotifications400WildcardString = null;
             checkForNotifications401WildcardString = null;
             checkForNotifications404WildcardString = null;
             checkForNotifications409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,15 +98,13 @@ public class BabelFeeController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1Response res = new org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1Response() {{
+        org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1Response res = new org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1Response(contentType, httpRes.statusCode()) {{
             body = null;
             ergoPayCreateBabelBox1400WildcardString = null;
             ergoPayCreateBabelBox1401WildcardString = null;
             ergoPayCreateBabelBox1404WildcardString = null;
             ergoPayCreateBabelBox1409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,15 +155,13 @@ public class BabelFeeController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBabelFeeOverviewResponse res = new org.openapis.openapi.models.operations.GetBabelFeeOverviewResponse() {{
+        org.openapis.openapi.models.operations.GetBabelFeeOverviewResponse res = new org.openapis.openapi.models.operations.GetBabelFeeOverviewResponse(contentType, httpRes.statusCode()) {{
             body = null;
             getBabelFeeOverview400WildcardString = null;
             getBabelFeeOverview401WildcardString = null;
             getBabelFeeOverview404WildcardString = null;
             getBabelFeeOverview409WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

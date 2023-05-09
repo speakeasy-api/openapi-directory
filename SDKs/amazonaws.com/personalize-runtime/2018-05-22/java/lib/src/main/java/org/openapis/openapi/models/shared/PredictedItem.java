@@ -15,6 +15,7 @@ public class PredictedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public PredictedItem withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -23,6 +24,7 @@ public class PredictedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionName")
     public String promotionName;
+
     public PredictedItem withPromotionName(String promotionName) {
         this.promotionName = promotionName;
         return this;
@@ -31,9 +33,11 @@ public class PredictedItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public PredictedItem withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public PredictedItem(){}
 }

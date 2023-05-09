@@ -61,12 +61,10 @@ public class TimePeriods {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimePeriodResponse res = new org.openapis.openapi.models.operations.GetTimePeriodResponse() {{
+        org.openapis.openapi.models.operations.GetTimePeriodResponse res = new org.openapis.openapi.models.operations.GetTimePeriodResponse(contentType, httpRes.statusCode()) {{
             getTimePeriod200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class TimePeriods {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTimePeriodsResponse res = new org.openapis.openapi.models.operations.GetTimePeriodsResponse() {{
+        org.openapis.openapi.models.operations.GetTimePeriodsResponse res = new org.openapis.openapi.models.operations.GetTimePeriodsResponse(contentType, httpRes.statusCode()) {{
             getTimePeriods200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

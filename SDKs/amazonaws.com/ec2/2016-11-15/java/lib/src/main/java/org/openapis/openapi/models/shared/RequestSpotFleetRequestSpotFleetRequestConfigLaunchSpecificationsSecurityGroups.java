@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsSecurityGroups {
     
     public String groupId;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsSecurityGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsSe
     
     
     public String groupName;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsSecurityGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsSecurityGroups(){}
 }

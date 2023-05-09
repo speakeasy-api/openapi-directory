@@ -18,6 +18,7 @@ public class ImageDescriptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captions")
     public ImageCaption[] captions;
+
     public ImageDescriptionDetails withCaptions(ImageCaption[] captions) {
         this.captions = captions;
         return this;
@@ -29,9 +30,11 @@ public class ImageDescriptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public ImageDescriptionDetails withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImageDescriptionDetails(){}
 }

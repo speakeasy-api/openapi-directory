@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSetupV1LocationsIdGoogleServiceAccountResponse {
     
     public String contentType;
+
     public PostSetupV1LocationsIdGoogleServiceAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostSetupV1LocationsIdGoogleServiceAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleServiceAccountCreds googleServiceAccountCreds;
+
     public PostSetupV1LocationsIdGoogleServiceAccountResponse withGoogleServiceAccountCreds(org.openapis.openapi.models.shared.GoogleServiceAccountCreds googleServiceAccountCreds) {
         this.googleServiceAccountCreds = googleServiceAccountCreds;
         return this;
@@ -26,6 +29,7 @@ public class PostSetupV1LocationsIdGoogleServiceAccountResponse {
     
     
     public Integer statusCode;
+
     public PostSetupV1LocationsIdGoogleServiceAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostSetupV1LocationsIdGoogleServiceAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSetupV1LocationsIdGoogleServiceAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostSetupV1LocationsIdGoogleServiceAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

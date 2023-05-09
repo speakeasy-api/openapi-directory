@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContainerServiceResponse {
@@ -12,6 +13,7 @@ public class UpdateContainerServiceResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateContainerServiceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateContainerServiceResponse {
     
     
     public String contentType;
+
     public UpdateContainerServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateContainerServiceResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateContainerServiceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateContainerServiceResponse {
      */
     
     public Object notFoundException;
+
     public UpdateContainerServiceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateContainerServiceResponse {
     
     
     public Integer statusCode;
+
     public UpdateContainerServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateContainerServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContainerServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateContainerServiceResponse {
      */
     
     public Object serviceException;
+
     public UpdateContainerServiceResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateContainerServiceResponse {
      */
     
     public Object unauthenticatedException;
+
     public UpdateContainerServiceResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateContainerServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateContainerServiceResult updateContainerServiceResult;
+
     public UpdateContainerServiceResponse withUpdateContainerServiceResult(org.openapis.openapi.models.shared.UpdateContainerServiceResult updateContainerServiceResult) {
         this.updateContainerServiceResult = updateContainerServiceResult;
         return this;
     }
     
+    public UpdateContainerServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

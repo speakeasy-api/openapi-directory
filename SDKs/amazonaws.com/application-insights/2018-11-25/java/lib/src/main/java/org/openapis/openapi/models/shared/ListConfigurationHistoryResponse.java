@@ -15,6 +15,7 @@ public class ListConfigurationHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventList")
     public ConfigurationEvent[] eventList;
+
     public ListConfigurationHistoryResponse withEventList(ConfigurationEvent[] eventList) {
         this.eventList = eventList;
         return this;
@@ -23,9 +24,11 @@ public class ListConfigurationHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConfigurationHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConfigurationHistoryResponse(){}
 }

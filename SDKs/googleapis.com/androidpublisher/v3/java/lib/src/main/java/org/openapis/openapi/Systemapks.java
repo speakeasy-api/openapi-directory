@@ -61,11 +61,9 @@ public class Systemapks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateResponse(contentType, httpRes.statusCode()) {{
             variant = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Systemapks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Systemapks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetResponse(contentType, httpRes.statusCode()) {{
             variant = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Systemapks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListResponse(contentType, httpRes.statusCode()) {{
             systemApksListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

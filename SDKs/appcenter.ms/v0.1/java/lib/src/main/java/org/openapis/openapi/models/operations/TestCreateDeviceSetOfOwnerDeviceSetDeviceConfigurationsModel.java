@@ -12,6 +12,7 @@ public class TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public String formFactor;
+
     public TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel withFormFactor(String formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -20,6 +21,7 @@ public class TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -28,6 +30,7 @@ public class TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseDate")
     public String releaseDate;
+
     public TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel withReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
         return this;
     }
     
+    public TestCreateDeviceSetOfOwnerDeviceSetDeviceConfigurationsModel(){}
 }

@@ -12,6 +12,7 @@ public class LocationsLocations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public LocationsLocations withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class LocationsLocations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LocationsLocations withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LocationsLocations(){}
 }

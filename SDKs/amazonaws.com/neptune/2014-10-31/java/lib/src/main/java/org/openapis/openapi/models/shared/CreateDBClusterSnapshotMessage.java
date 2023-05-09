@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBClusterSnapshotMessage {
     
     public String dbClusterIdentifier;
+
     public CreateDBClusterSnapshotMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBClusterSnapshotMessage {
     
     
     public String dbClusterSnapshotIdentifier;
+
     public CreateDBClusterSnapshotMessage withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
         this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
         return this;
@@ -23,9 +25,14 @@ public class CreateDBClusterSnapshotMessage {
     
     
     public TagList[] tags;
+
     public CreateDBClusterSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDBClusterSnapshotMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("DBClusterSnapshotIdentifier") String dbClusterSnapshotIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
+  }
 }

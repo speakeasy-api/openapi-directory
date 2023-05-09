@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MemberSpecification {
     @JsonProperty("accountId")
     public String accountId;
+
     public MemberSpecification withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class MemberSpecification {
     
     @JsonProperty("displayName")
     public String displayName;
+
     public MemberSpecification withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -26,9 +28,15 @@ public class MemberSpecification {
     
     @JsonProperty("memberAbilities")
     public MemberAbilityEnum[] memberAbilities;
+
     public MemberSpecification withMemberAbilities(MemberAbilityEnum[] memberAbilities) {
         this.memberAbilities = memberAbilities;
         return this;
     }
     
+    public MemberSpecification(@JsonProperty("accountId") String accountId, @JsonProperty("displayName") String displayName, @JsonProperty("memberAbilities") MemberAbilityEnum[] memberAbilities) {
+        this.accountId = accountId;
+        this.displayName = displayName;
+        this.memberAbilities = memberAbilities;
+  }
 }

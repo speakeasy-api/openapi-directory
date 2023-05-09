@@ -15,6 +15,7 @@ public class CreateCollectionFromSchema200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public CreateCollectionFromSchema200ApplicationJSONCollection collection;
+
     public CreateCollectionFromSchema200ApplicationJSON withCollection(CreateCollectionFromSchema200ApplicationJSONCollection collection) {
         this.collection = collection;
         return this;
@@ -23,9 +24,11 @@ public class CreateCollectionFromSchema200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relations")
     public CreateCollectionFromSchema200ApplicationJSONRelations[] relations;
+
     public CreateCollectionFromSchema200ApplicationJSON withRelations(CreateCollectionFromSchema200ApplicationJSONRelations[] relations) {
         this.relations = relations;
         return this;
     }
     
+    public CreateCollectionFromSchema200ApplicationJSON(){}
 }

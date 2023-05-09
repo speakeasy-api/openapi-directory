@@ -53,6 +53,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/Execution.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecutionInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/Step.java
+lib/src/main/java/org/openapis/openapi/models/shared/StateErrorTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/StateError.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/StackTrace.java
 lib/src/main/java/org/openapis/openapi/models/shared/StackTraceElement.java
@@ -62,4 +64,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListExecutionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TriggerPubsubExecutionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PubsubMessage.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

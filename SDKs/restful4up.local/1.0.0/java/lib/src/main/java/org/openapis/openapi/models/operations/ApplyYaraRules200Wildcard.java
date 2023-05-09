@@ -12,9 +12,11 @@ package org.openapis.openapi.models.operations;
 public class ApplyYaraRules200Wildcard {
     
     public org.openapis.openapi.models.shared.ApplyYaraRule result;
+
     public ApplyYaraRules200Wildcard withResult(org.openapis.openapi.models.shared.ApplyYaraRule result) {
         this.result = result;
         return this;
     }
     
+    public ApplyYaraRules200Wildcard(){}
 }

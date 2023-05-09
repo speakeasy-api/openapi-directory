@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchEntitiesRequest {
     @JsonProperty("entityTypes")
     public EntityTypeEnum[] entityTypes;
+
     public SearchEntitiesRequest withEntityTypes(EntityTypeEnum[] entityTypes) {
         this.entityTypes = entityTypes;
         return this;
@@ -19,6 +20,7 @@ public class SearchEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public EntityFilter[] filters;
+
     public SearchEntitiesRequest withFilters(EntityFilter[] filters) {
         this.filters = filters;
         return this;
@@ -27,6 +29,7 @@ public class SearchEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchEntitiesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class SearchEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceVersion")
     public Long namespaceVersion;
+
     public SearchEntitiesRequest withNamespaceVersion(Long namespaceVersion) {
         this.namespaceVersion = namespaceVersion;
         return this;
@@ -43,9 +47,13 @@ public class SearchEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchEntitiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchEntitiesRequest(@JsonProperty("entityTypes") EntityTypeEnum[] entityTypes) {
+        this.entityTypes = entityTypes;
+  }
 }

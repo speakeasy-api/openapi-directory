@@ -18,6 +18,7 @@ public class APIResponseSongResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public APIResponseSongResponseResults withId(Long id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class APIResponseSongResponseResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public APIResponseSongResponseResults withName(String name) {
         this.name = name;
         return this;
     }
     
+    public APIResponseSongResponseResults(){}
 }

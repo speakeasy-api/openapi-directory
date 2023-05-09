@@ -12,6 +12,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public SendCommandRequest withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchOutputConfig")
     public CloudWatchOutputConfig cloudWatchOutputConfig;
+
     public SendCommandRequest withCloudWatchOutputConfig(CloudWatchOutputConfig cloudWatchOutputConfig) {
         this.cloudWatchOutputConfig = cloudWatchOutputConfig;
         return this;
@@ -28,6 +30,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public SendCommandRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -36,6 +39,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentHash")
     public String documentHash;
+
     public SendCommandRequest withDocumentHash(String documentHash) {
         this.documentHash = documentHash;
         return this;
@@ -44,6 +48,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentHashType")
     public DocumentHashTypeEnum documentHashType;
+
     public SendCommandRequest withDocumentHashType(DocumentHashTypeEnum documentHashType) {
         this.documentHashType = documentHashType;
         return this;
@@ -51,6 +56,7 @@ public class SendCommandRequest {
     
     @JsonProperty("DocumentName")
     public String documentName;
+
     public SendCommandRequest withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -59,6 +65,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public SendCommandRequest withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -67,6 +74,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public SendCommandRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -75,6 +83,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public String maxConcurrency;
+
     public SendCommandRequest withMaxConcurrency(String maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -83,6 +92,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxErrors")
     public String maxErrors;
+
     public SendCommandRequest withMaxErrors(String maxErrors) {
         this.maxErrors = maxErrors;
         return this;
@@ -91,6 +101,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfig")
     public NotificationConfig notificationConfig;
+
     public SendCommandRequest withNotificationConfig(NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -99,6 +110,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3BucketName")
     public String outputS3BucketName;
+
     public SendCommandRequest withOutputS3BucketName(String outputS3BucketName) {
         this.outputS3BucketName = outputS3BucketName;
         return this;
@@ -107,6 +119,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3KeyPrefix")
     public String outputS3KeyPrefix;
+
     public SendCommandRequest withOutputS3KeyPrefix(String outputS3KeyPrefix) {
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         return this;
@@ -115,6 +128,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3Region")
     public String outputS3Region;
+
     public SendCommandRequest withOutputS3Region(String outputS3Region) {
         this.outputS3Region = outputS3Region;
         return this;
@@ -123,6 +137,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public SendCommandRequest withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -131,6 +146,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public SendCommandRequest withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -139,6 +155,7 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public SendCommandRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
@@ -147,9 +164,13 @@ public class SendCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutSeconds")
     public Long timeoutSeconds;
+
     public SendCommandRequest withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public SendCommandRequest(@JsonProperty("DocumentName") String documentName) {
+        this.documentName = documentName;
+  }
 }

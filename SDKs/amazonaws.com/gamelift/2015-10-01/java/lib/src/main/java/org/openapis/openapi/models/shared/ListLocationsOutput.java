@@ -15,6 +15,7 @@ public class ListLocationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Locations")
     public LocationModel[] locations;
+
     public ListLocationsOutput withLocations(LocationModel[] locations) {
         this.locations = locations;
         return this;
@@ -23,9 +24,11 @@ public class ListLocationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLocationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLocationsOutput(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OnDemandProvisioningSpecification {
     @JsonProperty("AllocationStrategy")
     public OnDemandProvisioningAllocationStrategyEnum allocationStrategy;
+
     public OnDemandProvisioningSpecification withAllocationStrategy(OnDemandProvisioningAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -22,9 +23,13 @@ public class OnDemandProvisioningSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityReservationOptions")
     public OnDemandCapacityReservationOptions capacityReservationOptions;
+
     public OnDemandProvisioningSpecification withCapacityReservationOptions(OnDemandCapacityReservationOptions capacityReservationOptions) {
         this.capacityReservationOptions = capacityReservationOptions;
         return this;
     }
     
+    public OnDemandProvisioningSpecification(@JsonProperty("AllocationStrategy") OnDemandProvisioningAllocationStrategyEnum allocationStrategy) {
+        this.allocationStrategy = allocationStrategy;
+  }
 }

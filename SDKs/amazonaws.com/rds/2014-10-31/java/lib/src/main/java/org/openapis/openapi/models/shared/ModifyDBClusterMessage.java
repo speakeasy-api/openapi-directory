@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyDBClusterMessage - &lt;p/&gt;
@@ -12,13 +12,23 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBClusterMessage {
     
     public Long allocatedStorage;
+
     public ModifyDBClusterMessage withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
     }
     
     
+    public Boolean allowEngineModeChange;
+
+    public ModifyDBClusterMessage withAllowEngineModeChange(Boolean allowEngineModeChange) {
+        this.allowEngineModeChange = allowEngineModeChange;
+        return this;
+    }
+    
+    
     public Boolean allowMajorVersionUpgrade;
+
     public ModifyDBClusterMessage withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         return this;
@@ -26,6 +36,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean applyImmediately;
+
     public ModifyDBClusterMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -33,6 +44,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ModifyDBClusterMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -40,6 +52,7 @@ public class ModifyDBClusterMessage {
     
     
     public Long backtrackWindow;
+
     public ModifyDBClusterMessage withBacktrackWindow(Long backtrackWindow) {
         this.backtrackWindow = backtrackWindow;
         return this;
@@ -47,6 +60,7 @@ public class ModifyDBClusterMessage {
     
     
     public Long backupRetentionPeriod;
+
     public ModifyDBClusterMessage withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -54,6 +68,7 @@ public class ModifyDBClusterMessage {
     
     
     public CloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration;
+
     public ModifyDBClusterMessage withCloudwatchLogsExportConfiguration(CloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration) {
         this.cloudwatchLogsExportConfiguration = cloudwatchLogsExportConfiguration;
         return this;
@@ -61,6 +76,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public ModifyDBClusterMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -68,6 +84,7 @@ public class ModifyDBClusterMessage {
     
     
     public String dbClusterIdentifier;
+
     public ModifyDBClusterMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -75,6 +92,7 @@ public class ModifyDBClusterMessage {
     
     
     public String dbClusterInstanceClass;
+
     public ModifyDBClusterMessage withDBClusterInstanceClass(String dbClusterInstanceClass) {
         this.dbClusterInstanceClass = dbClusterInstanceClass;
         return this;
@@ -82,6 +100,7 @@ public class ModifyDBClusterMessage {
     
     
     public String dbClusterParameterGroupName;
+
     public ModifyDBClusterMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -89,6 +108,7 @@ public class ModifyDBClusterMessage {
     
     
     public String dbInstanceParameterGroupName;
+
     public ModifyDBClusterMessage withDBInstanceParameterGroupName(String dbInstanceParameterGroupName) {
         this.dbInstanceParameterGroupName = dbInstanceParameterGroupName;
         return this;
@@ -96,6 +116,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean deletionProtection;
+
     public ModifyDBClusterMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -103,6 +124,7 @@ public class ModifyDBClusterMessage {
     
     
     public String domain;
+
     public ModifyDBClusterMessage withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -110,6 +132,7 @@ public class ModifyDBClusterMessage {
     
     
     public String domainIAMRoleName;
+
     public ModifyDBClusterMessage withDomainIAMRoleName(String domainIAMRoleName) {
         this.domainIAMRoleName = domainIAMRoleName;
         return this;
@@ -117,6 +140,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean enableGlobalWriteForwarding;
+
     public ModifyDBClusterMessage withEnableGlobalWriteForwarding(Boolean enableGlobalWriteForwarding) {
         this.enableGlobalWriteForwarding = enableGlobalWriteForwarding;
         return this;
@@ -124,6 +148,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean enableHttpEndpoint;
+
     public ModifyDBClusterMessage withEnableHttpEndpoint(Boolean enableHttpEndpoint) {
         this.enableHttpEndpoint = enableHttpEndpoint;
         return this;
@@ -131,6 +156,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public ModifyDBClusterMessage withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -138,13 +164,23 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean enablePerformanceInsights;
+
     public ModifyDBClusterMessage withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
     }
     
     
+    public String engineMode;
+
+    public ModifyDBClusterMessage withEngineMode(String engineMode) {
+        this.engineMode = engineMode;
+        return this;
+    }
+    
+    
     public String engineVersion;
+
     public ModifyDBClusterMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -152,6 +188,7 @@ public class ModifyDBClusterMessage {
     
     
     public Long iops;
+
     public ModifyDBClusterMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -159,6 +196,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean manageMasterUserPassword;
+
     public ModifyDBClusterMessage withManageMasterUserPassword(Boolean manageMasterUserPassword) {
         this.manageMasterUserPassword = manageMasterUserPassword;
         return this;
@@ -166,6 +204,7 @@ public class ModifyDBClusterMessage {
     
     
     public String masterUserPassword;
+
     public ModifyDBClusterMessage withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -173,6 +212,7 @@ public class ModifyDBClusterMessage {
     
     
     public String masterUserSecretKmsKeyId;
+
     public ModifyDBClusterMessage withMasterUserSecretKmsKeyId(String masterUserSecretKmsKeyId) {
         this.masterUserSecretKmsKeyId = masterUserSecretKmsKeyId;
         return this;
@@ -180,6 +220,7 @@ public class ModifyDBClusterMessage {
     
     
     public Long monitoringInterval;
+
     public ModifyDBClusterMessage withMonitoringInterval(Long monitoringInterval) {
         this.monitoringInterval = monitoringInterval;
         return this;
@@ -187,6 +228,7 @@ public class ModifyDBClusterMessage {
     
     
     public String monitoringRoleArn;
+
     public ModifyDBClusterMessage withMonitoringRoleArn(String monitoringRoleArn) {
         this.monitoringRoleArn = monitoringRoleArn;
         return this;
@@ -194,6 +236,7 @@ public class ModifyDBClusterMessage {
     
     
     public String networkType;
+
     public ModifyDBClusterMessage withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -201,6 +244,7 @@ public class ModifyDBClusterMessage {
     
     
     public String newDBClusterIdentifier;
+
     public ModifyDBClusterMessage withNewDBClusterIdentifier(String newDBClusterIdentifier) {
         this.newDBClusterIdentifier = newDBClusterIdentifier;
         return this;
@@ -208,6 +252,7 @@ public class ModifyDBClusterMessage {
     
     
     public String optionGroupName;
+
     public ModifyDBClusterMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -215,6 +260,7 @@ public class ModifyDBClusterMessage {
     
     
     public String performanceInsightsKMSKeyId;
+
     public ModifyDBClusterMessage withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -222,6 +268,7 @@ public class ModifyDBClusterMessage {
     
     
     public Long performanceInsightsRetentionPeriod;
+
     public ModifyDBClusterMessage withPerformanceInsightsRetentionPeriod(Long performanceInsightsRetentionPeriod) {
         this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
         return this;
@@ -229,6 +276,7 @@ public class ModifyDBClusterMessage {
     
     
     public Long port;
+
     public ModifyDBClusterMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -236,6 +284,7 @@ public class ModifyDBClusterMessage {
     
     
     public String preferredBackupWindow;
+
     public ModifyDBClusterMessage withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -243,6 +292,7 @@ public class ModifyDBClusterMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public ModifyDBClusterMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -250,6 +300,7 @@ public class ModifyDBClusterMessage {
     
     
     public Boolean rotateMasterUserPassword;
+
     public ModifyDBClusterMessage withRotateMasterUserPassword(Boolean rotateMasterUserPassword) {
         this.rotateMasterUserPassword = rotateMasterUserPassword;
         return this;
@@ -257,6 +308,7 @@ public class ModifyDBClusterMessage {
     
     
     public ScalingConfiguration scalingConfiguration;
+
     public ModifyDBClusterMessage withScalingConfiguration(ScalingConfiguration scalingConfiguration) {
         this.scalingConfiguration = scalingConfiguration;
         return this;
@@ -267,6 +319,7 @@ public class ModifyDBClusterMessage {
      */
     
     public ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+
     public ModifyDBClusterMessage withServerlessV2ScalingConfiguration(ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
         this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
         return this;
@@ -274,6 +327,7 @@ public class ModifyDBClusterMessage {
     
     
     public String storageType;
+
     public ModifyDBClusterMessage withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -281,9 +335,13 @@ public class ModifyDBClusterMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public ModifyDBClusterMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public ModifyDBClusterMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+  }
 }

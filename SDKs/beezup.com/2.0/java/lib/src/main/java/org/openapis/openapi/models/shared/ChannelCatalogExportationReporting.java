@@ -20,6 +20,7 @@ public class ChannelCatalogExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheStatus")
     public String cacheStatus;
+
     public ChannelCatalogExportationReporting withCacheStatus(String cacheStatus) {
         this.cacheStatus = cacheStatus;
         return this;
@@ -30,6 +31,7 @@ public class ChannelCatalogExportationReporting {
      */
     @JsonProperty("clientIpAddress")
     public String clientIpAddress;
+
     public ChannelCatalogExportationReporting withClientIpAddress(String clientIpAddress) {
         this.clientIpAddress = clientIpAddress;
         return this;
@@ -40,6 +42,7 @@ public class ChannelCatalogExportationReporting {
      */
     @JsonProperty("clientUserAgent")
     public String clientUserAgent;
+
     public ChannelCatalogExportationReporting withClientUserAgent(String clientUserAgent) {
         this.clientUserAgent = clientUserAgent;
         return this;
@@ -53,6 +56,7 @@ public class ChannelCatalogExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportationDuration")
     public String exportationDuration;
+
     public ChannelCatalogExportationReporting withExportationDuration(String exportationDuration) {
         this.exportationDuration = exportationDuration;
         return this;
@@ -65,6 +69,7 @@ public class ChannelCatalogExportationReporting {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("exportationUtcDate")
     public OffsetDateTime exportationUtcDate;
+
     public ChannelCatalogExportationReporting withExportationUtcDate(OffsetDateTime exportationUtcDate) {
         this.exportationUtcDate = exportationUtcDate;
         return this;
@@ -76,9 +81,15 @@ public class ChannelCatalogExportationReporting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportedProductCount")
     public Integer exportedProductCount;
+
     public ChannelCatalogExportationReporting withExportedProductCount(Integer exportedProductCount) {
         this.exportedProductCount = exportedProductCount;
         return this;
     }
     
+    public ChannelCatalogExportationReporting(@JsonProperty("clientIpAddress") String clientIpAddress, @JsonProperty("clientUserAgent") String clientUserAgent, @JsonProperty("exportationUtcDate") OffsetDateTime exportationUtcDate) {
+        this.clientIpAddress = clientIpAddress;
+        this.clientUserAgent = clientUserAgent;
+        this.exportationUtcDate = exportationUtcDate;
+  }
 }

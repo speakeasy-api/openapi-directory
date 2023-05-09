@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerMarketplacedealsListRequest {
@@ -12,6 +13,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerMarketplacedealsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerMarketplacedealsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerMarketplacedealsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerMarketplacedealsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pqlQuery")
     public String pqlQuery;
+
     public AdexchangebuyerMarketplacedealsListRequest withPqlQuery(String pqlQuery) {
         this.pqlQuery = pqlQuery;
         return this;
@@ -62,6 +68,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerMarketplacedealsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
     public String proposalId;
+
     public AdexchangebuyerMarketplacedealsListRequest withProposalId(String proposalId) {
         this.proposalId = proposalId;
         return this;
@@ -82,6 +90,7 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerMarketplacedealsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +101,13 @@ public class AdexchangebuyerMarketplacedealsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerMarketplacedealsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerMarketplacedealsListRequest(@JsonProperty("proposalId") String proposalId) {
+        this.proposalId = proposalId;
+  }
 }

@@ -18,6 +18,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierRateName")
     public String carrierRateName;
+
     public Value withCarrierRateName(String carrierRateName) {
         this.carrierRateName = carrierRateName;
         return this;
@@ -26,6 +27,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flatRate")
     public Price flatRate;
+
     public Value withFlatRate(Price flatRate) {
         this.flatRate = flatRate;
         return this;
@@ -37,6 +39,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noShipping")
     public Boolean noShipping;
+
     public Value withNoShipping(Boolean noShipping) {
         this.noShipping = noShipping;
         return this;
@@ -48,6 +51,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricePercentage")
     public String pricePercentage;
+
     public Value withPricePercentage(String pricePercentage) {
         this.pricePercentage = pricePercentage;
         return this;
@@ -59,9 +63,11 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtableName")
     public String subtableName;
+
     public Value withSubtableName(String subtableName) {
         this.subtableName = subtableName;
         return this;
     }
     
+    public Value(){}
 }

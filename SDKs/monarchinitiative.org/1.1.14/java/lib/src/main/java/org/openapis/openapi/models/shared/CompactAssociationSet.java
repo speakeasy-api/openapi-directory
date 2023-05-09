@@ -12,6 +12,7 @@ public class CompactAssociationSet {
      */
     @JsonProperty("objects")
     public String[] objects;
+
     public CompactAssociationSet withObjects(String[] objects) {
         this.objects = objects;
         return this;
@@ -22,6 +23,7 @@ public class CompactAssociationSet {
      */
     @JsonProperty("relation")
     public String relation;
+
     public CompactAssociationSet withRelation(String relation) {
         this.relation = relation;
         return this;
@@ -32,9 +34,15 @@ public class CompactAssociationSet {
      */
     @JsonProperty("subject")
     public String subject;
+
     public CompactAssociationSet withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public CompactAssociationSet(@JsonProperty("objects") String[] objects, @JsonProperty("relation") String relation, @JsonProperty("subject") String subject) {
+        this.objects = objects;
+        this.relation = relation;
+        this.subject = subject;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRepositoryPipelineKnownHostRequest {
@@ -12,6 +13,7 @@ public class UpdateRepositoryPipelineKnownHostRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdateRepositoryPipelineKnownHostRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRepositoryPipelineKnownHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=known_host_uuid")
     public String knownHostUuid;
+
     public UpdateRepositoryPipelineKnownHostRequest withKnownHostUuid(String knownHostUuid) {
         this.knownHostUuid = knownHostUuid;
         return this;
@@ -32,6 +35,7 @@ public class UpdateRepositoryPipelineKnownHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public UpdateRepositoryPipelineKnownHostRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -42,9 +46,16 @@ public class UpdateRepositoryPipelineKnownHostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public UpdateRepositoryPipelineKnownHostRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdateRepositoryPipelineKnownHostRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("known_host_uuid") String knownHostUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.knownHostUuid = knownHostUuid;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

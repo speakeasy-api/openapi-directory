@@ -20,6 +20,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteInternationalConsentResponse6DataAuthorisation authorisation;
+
     public OBWriteInternationalConsentResponse6Data withAuthorisation(OBWriteInternationalConsentResponse6DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteInternationalConsentResponse6DataCharges[] charges;
+
     public OBWriteInternationalConsentResponse6Data withCharges(OBWriteInternationalConsentResponse6DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -38,6 +40,7 @@ public class OBWriteInternationalConsentResponse6Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteInternationalConsentResponse6Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteInternationalConsentResponse6Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -67,6 +71,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CutOffDateTime")
     public OffsetDateTime cutOffDateTime;
+
     public OBWriteInternationalConsentResponse6Data withCutOffDateTime(OffsetDateTime cutOffDateTime) {
         this.cutOffDateTime = cutOffDateTime;
         return this;
@@ -78,6 +83,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteInternationalConsentResponse6Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -89,6 +95,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRateInformation")
     public OBWriteInternationalConsentResponse6DataExchangeRateInformation exchangeRateInformation;
+
     public OBWriteInternationalConsentResponse6Data withExchangeRateInformation(OBWriteInternationalConsentResponse6DataExchangeRateInformation exchangeRateInformation) {
         this.exchangeRateInformation = exchangeRateInformation;
         return this;
@@ -104,6 +111,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedExecutionDateTime")
     public OffsetDateTime expectedExecutionDateTime;
+
     public OBWriteInternationalConsentResponse6Data withExpectedExecutionDateTime(OffsetDateTime expectedExecutionDateTime) {
         this.expectedExecutionDateTime = expectedExecutionDateTime;
         return this;
@@ -119,6 +127,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpectedSettlementDateTime")
     public OffsetDateTime expectedSettlementDateTime;
+
     public OBWriteInternationalConsentResponse6Data withExpectedSettlementDateTime(OffsetDateTime expectedSettlementDateTime) {
         this.expectedSettlementDateTime = expectedSettlementDateTime;
         return this;
@@ -129,6 +138,7 @@ public class OBWriteInternationalConsentResponse6Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalConsentResponse6DataInitiation initiation;
+
     public OBWriteInternationalConsentResponse6Data withInitiation(OBWriteInternationalConsentResponse6DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -140,6 +150,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteInternationalConsentResponse6DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteInternationalConsentResponse6Data withReadRefundAccount(OBWriteInternationalConsentResponse6DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -151,6 +162,7 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteInternationalConsentResponse6Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
@@ -161,6 +173,7 @@ public class OBWriteInternationalConsentResponse6Data {
      */
     @JsonProperty("Status")
     public OBWriteInternationalConsentResponse6DataStatusEnum status;
+
     public OBWriteInternationalConsentResponse6Data withStatus(OBWriteInternationalConsentResponse6DataStatusEnum status) {
         this.status = status;
         return this;
@@ -175,9 +188,17 @@ public class OBWriteInternationalConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteInternationalConsentResponse6Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteInternationalConsentResponse6Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Initiation") OBWriteInternationalConsentResponse6DataInitiation initiation, @JsonProperty("Status") OBWriteInternationalConsentResponse6DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.initiation = initiation;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

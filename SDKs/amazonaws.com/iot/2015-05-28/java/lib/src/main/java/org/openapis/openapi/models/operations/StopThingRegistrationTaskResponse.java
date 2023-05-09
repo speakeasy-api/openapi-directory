@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopThingRegistrationTaskResponse {
     
     public String contentType;
+
     public StopThingRegistrationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopThingRegistrationTaskResponse {
      */
     
     public Object internalFailureException;
+
     public StopThingRegistrationTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class StopThingRegistrationTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public StopThingRegistrationTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class StopThingRegistrationTaskResponse {
     
     
     public Integer statusCode;
+
     public StopThingRegistrationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopThingRegistrationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopThingRegistrationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopThingRegistrationTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopThingRegistrationTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopThingRegistrationTaskResponse {
      */
     
     public java.util.Map<String, Object> stopThingRegistrationTaskResponse;
+
     public StopThingRegistrationTaskResponse withStopThingRegistrationTaskResponse(java.util.Map<String, Object> stopThingRegistrationTaskResponse) {
         this.stopThingRegistrationTaskResponse = stopThingRegistrationTaskResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopThingRegistrationTaskResponse {
      */
     
     public Object throttlingException;
+
     public StopThingRegistrationTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StopThingRegistrationTaskResponse {
      */
     
     public Object unauthorizedException;
+
     public StopThingRegistrationTaskResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public StopThingRegistrationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

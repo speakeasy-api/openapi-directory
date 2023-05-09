@@ -15,6 +15,7 @@ public class ListTrialComponentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrialComponentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTrialComponentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentSummaries")
     public TrialComponentSummary[] trialComponentSummaries;
+
     public ListTrialComponentsResponse withTrialComponentSummaries(TrialComponentSummary[] trialComponentSummaries) {
         this.trialComponentSummaries = trialComponentSummaries;
         return this;
     }
     
+    public ListTrialComponentsResponse(){}
 }

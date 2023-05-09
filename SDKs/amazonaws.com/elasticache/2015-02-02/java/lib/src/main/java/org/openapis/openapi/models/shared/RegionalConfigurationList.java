@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RegionalConfigurationList - A list of the replication groups 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RegionalConfigurationList {
     
     public String replicationGroupId;
+
     public RegionalConfigurationList withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -19,6 +20,7 @@ public class RegionalConfigurationList {
     
     
     public String replicationGroupRegion;
+
     public RegionalConfigurationList withReplicationGroupRegion(String replicationGroupRegion) {
         this.replicationGroupRegion = replicationGroupRegion;
         return this;
@@ -26,9 +28,15 @@ public class RegionalConfigurationList {
     
     
     public ReshardingConfigurationList[] reshardingConfiguration;
+
     public RegionalConfigurationList withReshardingConfiguration(ReshardingConfigurationList[] reshardingConfiguration) {
         this.reshardingConfiguration = reshardingConfiguration;
         return this;
     }
     
+    public RegionalConfigurationList(@JsonProperty("ReplicationGroupId") String replicationGroupId, @JsonProperty("ReplicationGroupRegion") String replicationGroupRegion, @JsonProperty("ReshardingConfiguration") ReshardingConfigurationList[] reshardingConfiguration) {
+        this.replicationGroupId = replicationGroupId;
+        this.replicationGroupRegion = replicationGroupRegion;
+        this.reshardingConfiguration = reshardingConfiguration;
+  }
 }

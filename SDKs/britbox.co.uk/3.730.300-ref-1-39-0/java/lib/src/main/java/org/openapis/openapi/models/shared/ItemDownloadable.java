@@ -12,6 +12,7 @@ public class ItemDownloadable {
      */
     @JsonProperty("downloadable")
     public Boolean downloadable;
+
     public ItemDownloadable withDownloadable(Boolean downloadable) {
         this.downloadable = downloadable;
         return this;
@@ -22,9 +23,14 @@ public class ItemDownloadable {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemDownloadable withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ItemDownloadable(@JsonProperty("downloadable") Boolean downloadable, @JsonProperty("id") String id) {
+        this.downloadable = downloadable;
+        this.id = id;
+  }
 }

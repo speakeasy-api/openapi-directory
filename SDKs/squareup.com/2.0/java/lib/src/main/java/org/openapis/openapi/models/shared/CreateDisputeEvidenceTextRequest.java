@@ -17,6 +17,7 @@ public class CreateDisputeEvidenceTextRequest {
      */
     @JsonProperty("evidence_text")
     public String evidenceText;
+
     public CreateDisputeEvidenceTextRequest withEvidenceText(String evidenceText) {
         this.evidenceText = evidenceText;
         return this;
@@ -28,6 +29,7 @@ public class CreateDisputeEvidenceTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence_type")
     public String evidenceType;
+
     public CreateDisputeEvidenceTextRequest withEvidenceType(String evidenceType) {
         this.evidenceType = evidenceType;
         return this;
@@ -38,9 +40,14 @@ public class CreateDisputeEvidenceTextRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateDisputeEvidenceTextRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CreateDisputeEvidenceTextRequest(@JsonProperty("evidence_text") String evidenceText, @JsonProperty("idempotency_key") String idempotencyKey) {
+        this.evidenceText = evidenceText;
+        this.idempotencyKey = idempotencyKey;
+  }
 }

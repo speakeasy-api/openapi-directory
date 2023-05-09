@@ -55,10 +55,8 @@ public class Scans {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1ScansResponse res = new org.openapis.openapi.models.operations.GetApiV1ScansResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1ScansResponse res = new org.openapis.openapi.models.operations.GetApiV1ScansResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -89,10 +87,8 @@ public class Scans {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1ScansIdResponse res = new org.openapis.openapi.models.operations.GetApiV1ScansIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1ScansIdResponse res = new org.openapis.openapi.models.operations.GetApiV1ScansIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -129,10 +125,8 @@ public class Scans {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdResponse res = new org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdResponse res = new org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {

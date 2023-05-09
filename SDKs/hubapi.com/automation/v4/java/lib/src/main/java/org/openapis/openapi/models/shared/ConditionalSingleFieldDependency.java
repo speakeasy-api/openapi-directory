@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConditionalSingleFieldDependency {
     @JsonProperty("controllingFieldName")
     public String controllingFieldName;
+
     public ConditionalSingleFieldDependency withControllingFieldName(String controllingFieldName) {
         this.controllingFieldName = controllingFieldName;
         return this;
@@ -16,6 +17,7 @@ public class ConditionalSingleFieldDependency {
     
     @JsonProperty("controllingFieldValue")
     public String controllingFieldValue;
+
     public ConditionalSingleFieldDependency withControllingFieldValue(String controllingFieldValue) {
         this.controllingFieldValue = controllingFieldValue;
         return this;
@@ -23,6 +25,7 @@ public class ConditionalSingleFieldDependency {
     
     @JsonProperty("dependencyType")
     public ConditionalSingleFieldDependencyDependencyTypeEnum dependencyType;
+
     public ConditionalSingleFieldDependency withDependencyType(ConditionalSingleFieldDependencyDependencyTypeEnum dependencyType) {
         this.dependencyType = dependencyType;
         return this;
@@ -30,9 +33,16 @@ public class ConditionalSingleFieldDependency {
     
     @JsonProperty("dependentFieldNames")
     public String[] dependentFieldNames;
+
     public ConditionalSingleFieldDependency withDependentFieldNames(String[] dependentFieldNames) {
         this.dependentFieldNames = dependentFieldNames;
         return this;
     }
     
+    public ConditionalSingleFieldDependency(@JsonProperty("controllingFieldName") String controllingFieldName, @JsonProperty("controllingFieldValue") String controllingFieldValue, @JsonProperty("dependencyType") ConditionalSingleFieldDependencyDependencyTypeEnum dependencyType, @JsonProperty("dependentFieldNames") String[] dependentFieldNames) {
+        this.controllingFieldName = controllingFieldName;
+        this.controllingFieldValue = controllingFieldValue;
+        this.dependencyType = dependencyType;
+        this.dependentFieldNames = dependentFieldNames;
+  }
 }

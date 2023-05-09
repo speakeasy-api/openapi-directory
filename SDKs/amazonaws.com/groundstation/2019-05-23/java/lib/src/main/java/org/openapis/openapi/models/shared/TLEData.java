@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TLEData {
     @JsonProperty("tleLine1")
     public String tleLine1;
+
     public TLEData withTleLine1(String tleLine1) {
         this.tleLine1 = tleLine1;
         return this;
@@ -19,6 +20,7 @@ public class TLEData {
     
     @JsonProperty("tleLine2")
     public String tleLine2;
+
     public TLEData withTleLine2(String tleLine2) {
         this.tleLine2 = tleLine2;
         return this;
@@ -26,9 +28,15 @@ public class TLEData {
     
     @JsonProperty("validTimeRange")
     public TimeRange validTimeRange;
+
     public TLEData withValidTimeRange(TimeRange validTimeRange) {
         this.validTimeRange = validTimeRange;
         return this;
     }
     
+    public TLEData(@JsonProperty("tleLine1") String tleLine1, @JsonProperty("tleLine2") String tleLine2, @JsonProperty("validTimeRange") TimeRange validTimeRange) {
+        this.tleLine1 = tleLine1;
+        this.tleLine2 = tleLine2;
+        this.validTimeRange = validTimeRange;
+  }
 }

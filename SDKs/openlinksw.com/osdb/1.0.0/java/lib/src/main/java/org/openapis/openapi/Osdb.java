@@ -51,12 +51,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionHelpResponse res = new org.openapis.openapi.models.operations.ActionHelpResponse() {{
+        org.openapis.openapi.models.operations.ActionHelpResponse res = new org.openapis.openapi.models.operations.ActionHelpResponse(contentType, httpRes.statusCode()) {{
             actionHelpResponse = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,12 +96,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeActionResponse res = new org.openapis.openapi.models.operations.DescribeActionResponse() {{
+        org.openapis.openapi.models.operations.DescribeActionResponse res = new org.openapis.openapi.models.operations.DescribeActionResponse(contentType, httpRes.statusCode()) {{
             describeActionResponse = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,12 +141,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeServiceResponse res = new org.openapis.openapi.models.operations.DescribeServiceResponse() {{
+        org.openapis.openapi.models.operations.DescribeServiceResponse res = new org.openapis.openapi.models.operations.DescribeServiceResponse(contentType, httpRes.statusCode()) {{
             describeServiceResponse = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,11 +203,9 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteActionResponse res = new org.openapis.openapi.models.operations.ExecuteActionResponse() {{
+        org.openapis.openapi.models.operations.ExecuteActionResponse res = new org.openapis.openapi.models.operations.ExecuteActionResponse(contentType, httpRes.statusCode()) {{
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -250,12 +242,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListActionsResponse res = new org.openapis.openapi.models.operations.ListActionsResponse() {{
+        org.openapis.openapi.models.operations.ListActionsResponse res = new org.openapis.openapi.models.operations.ListActionsResponse(contentType, httpRes.statusCode()) {{
             listActionsResponse = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,12 +286,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServicesResponse res = new org.openapis.openapi.models.operations.ListServicesResponse() {{
+        org.openapis.openapi.models.operations.ListServicesResponse res = new org.openapis.openapi.models.operations.ListServicesResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,12 +333,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LoadServiceResponse res = new org.openapis.openapi.models.operations.LoadServiceResponse() {{
+        org.openapis.openapi.models.operations.LoadServiceResponse res = new org.openapis.openapi.models.operations.LoadServiceResponse(contentType, httpRes.statusCode()) {{
             loadService200ApplicationJSONObject = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,12 +377,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LoginResponse res = new org.openapis.openapi.models.operations.LoginResponse() {{
+        org.openapis.openapi.models.operations.LoginResponse res = new org.openapis.openapi.models.operations.LoginResponse(contentType, httpRes.statusCode()) {{
             loginResponse = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,12 +421,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LogoutResponse res = new org.openapis.openapi.models.operations.LogoutResponse() {{
+        org.openapis.openapi.models.operations.LogoutResponse res = new org.openapis.openapi.models.operations.LogoutResponse(contentType, httpRes.statusCode()) {{
             logoutResponse = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,12 +466,10 @@ public class Osdb {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnloadServiceResponse res = new org.openapis.openapi.models.operations.UnloadServiceResponse() {{
+        org.openapis.openapi.models.operations.UnloadServiceResponse res = new org.openapis.openapi.models.operations.UnloadServiceResponse(contentType, httpRes.statusCode()) {{
             unloadService200ApplicationJSONObject = null;
             errorModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

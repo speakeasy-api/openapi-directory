@@ -12,6 +12,7 @@ public class DeleteRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public DeleteRepositoryRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -20,6 +21,7 @@ public class DeleteRepositoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DeleteRepositoryRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -27,9 +29,13 @@ public class DeleteRepositoryRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DeleteRepositoryRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DeleteRepositoryRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

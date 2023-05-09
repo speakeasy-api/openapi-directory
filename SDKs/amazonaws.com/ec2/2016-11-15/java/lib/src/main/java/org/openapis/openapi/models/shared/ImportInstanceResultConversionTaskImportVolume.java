@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportInstanceResultConversionTaskImportVolume {
     
     public String availabilityZone;
+
     public ImportInstanceResultConversionTaskImportVolume withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class ImportInstanceResultConversionTaskImportVolume {
     
     
     public Long bytesConverted;
+
     public ImportInstanceResultConversionTaskImportVolume withBytesConverted(Long bytesConverted) {
         this.bytesConverted = bytesConverted;
         return this;
@@ -26,6 +28,7 @@ public class ImportInstanceResultConversionTaskImportVolume {
     
     
     public String description;
+
     public ImportInstanceResultConversionTaskImportVolume withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class ImportInstanceResultConversionTaskImportVolume {
     
     
     public ImportInstanceResultConversionTaskImportVolumeImage image;
+
     public ImportInstanceResultConversionTaskImportVolume withImage(ImportInstanceResultConversionTaskImportVolumeImage image) {
         this.image = image;
         return this;
@@ -40,9 +44,11 @@ public class ImportInstanceResultConversionTaskImportVolume {
     
     
     public ImportInstanceResultConversionTaskImportVolumeVolume volume;
+
     public ImportInstanceResultConversionTaskImportVolume withVolume(ImportInstanceResultConversionTaskImportVolumeVolume volume) {
         this.volume = volume;
         return this;
     }
     
+    public ImportInstanceResultConversionTaskImportVolume(){}
 }

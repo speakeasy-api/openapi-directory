@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTrackTrackingResponseFeatureGeometry {
     @JsonProperty("coordinates")
     public Object coordinates;
+
     public GetTrackTrackingResponseFeatureGeometry withCoordinates(Object coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -23,9 +24,14 @@ public class GetTrackTrackingResponseFeatureGeometry {
      */
     @JsonProperty("type")
     public GetTrackTrackingResponseFeatureGeometryTypeEnum type;
+
     public GetTrackTrackingResponseFeatureGeometry withType(GetTrackTrackingResponseFeatureGeometryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetTrackTrackingResponseFeatureGeometry(@JsonProperty("coordinates") Object coordinates, @JsonProperty("type") GetTrackTrackingResponseFeatureGeometryTypeEnum type) {
+        this.coordinates = coordinates;
+        this.type = type;
+  }
 }

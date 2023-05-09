@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class YoutubeAnalyticsGroupItemsDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public YoutubeAnalyticsGroupItemsDeleteSecurityOption1 option1;
+
     public YoutubeAnalyticsGroupItemsDeleteSecurity withOption1(YoutubeAnalyticsGroupItemsDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class YoutubeAnalyticsGroupItemsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeAnalyticsGroupItemsDeleteSecurityOption2 option2;
+
     public YoutubeAnalyticsGroupItemsDeleteSecurity withOption2(YoutubeAnalyticsGroupItemsDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class YoutubeAnalyticsGroupItemsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeAnalyticsGroupItemsDeleteSecurityOption3 option3;
+
     public YoutubeAnalyticsGroupItemsDeleteSecurity withOption3(YoutubeAnalyticsGroupItemsDeleteSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class YoutubeAnalyticsGroupItemsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeAnalyticsGroupItemsDeleteSecurityOption4 option4;
+
     public YoutubeAnalyticsGroupItemsDeleteSecurity withOption4(YoutubeAnalyticsGroupItemsDeleteSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class YoutubeAnalyticsGroupItemsDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public YoutubeAnalyticsGroupItemsDeleteSecurityOption5 option5;
+
     public YoutubeAnalyticsGroupItemsDeleteSecurity withOption5(YoutubeAnalyticsGroupItemsDeleteSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public YoutubeAnalyticsGroupItemsDeleteSecurity(){}
 }

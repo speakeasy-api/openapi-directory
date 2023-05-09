@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1CountChromeAppRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleChromeManagementV1CountChromeAppRequestsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1CountChromeAppRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedApps")
     public GoogleChromeManagementV1ChromeAppRequest[] requestedApps;
+
     public GoogleChromeManagementV1CountChromeAppRequestsResponse withRequestedApps(GoogleChromeManagementV1ChromeAppRequest[] requestedApps) {
         this.requestedApps = requestedApps;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1CountChromeAppRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GoogleChromeManagementV1CountChromeAppRequestsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GoogleChromeManagementV1CountChromeAppRequestsResponse(){}
 }

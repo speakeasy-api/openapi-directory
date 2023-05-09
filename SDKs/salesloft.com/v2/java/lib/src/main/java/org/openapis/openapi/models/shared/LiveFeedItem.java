@@ -12,6 +12,7 @@ public class LiveFeedItem {
      */
     
     public java.util.Map<String, Object> alertMetadata;
+
     public LiveFeedItem withAlertMetadata(java.util.Map<String, Object> alertMetadata) {
         this.alertMetadata = alertMetadata;
         return this;
@@ -22,6 +23,7 @@ public class LiveFeedItem {
      */
     
     public OffsetDateTime eventOccurredAt;
+
     public LiveFeedItem withEventOccurredAt(OffsetDateTime eventOccurredAt) {
         this.eventOccurredAt = eventOccurredAt;
         return this;
@@ -32,6 +34,7 @@ public class LiveFeedItem {
      */
     
     public String eventType;
+
     public LiveFeedItem withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -42,6 +45,7 @@ public class LiveFeedItem {
      */
     
     public Long id;
+
     public LiveFeedItem withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class LiveFeedItem {
      */
     
     public String message;
+
     public LiveFeedItem withMessage(String message) {
         this.message = message;
         return this;
@@ -62,6 +67,7 @@ public class LiveFeedItem {
      */
     
     public java.util.Map<String, Object> metadata;
+
     public LiveFeedItem withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -72,6 +78,7 @@ public class LiveFeedItem {
      */
     
     public String path;
+
     public LiveFeedItem withPath(String path) {
         this.path = path;
         return this;
@@ -82,6 +89,7 @@ public class LiveFeedItem {
      */
     
     public String rollupKey;
+
     public LiveFeedItem withRollupKey(String rollupKey) {
         this.rollupKey = rollupKey;
         return this;
@@ -92,6 +100,7 @@ public class LiveFeedItem {
      */
     
     public String title;
+
     public LiveFeedItem withTitle(String title) {
         this.title = title;
         return this;
@@ -102,9 +111,11 @@ public class LiveFeedItem {
      */
     
     public String userGuid;
+
     public LiveFeedItem withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public LiveFeedItem(){}
 }

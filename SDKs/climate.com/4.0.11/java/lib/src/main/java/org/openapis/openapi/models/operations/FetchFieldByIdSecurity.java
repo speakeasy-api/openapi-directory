@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FetchFieldByIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Api-Key")
     public String apiKey;
+
     public FetchFieldByIdSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +17,11 @@ public class FetchFieldByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2AuthorizationCode;
+
     public FetchFieldByIdSecurity withOauth2AuthorizationCode(String oauth2AuthorizationCode) {
         this.oauth2AuthorizationCode = oauth2AuthorizationCode;
         return this;
     }
     
+    public FetchFieldByIdSecurity(){}
 }

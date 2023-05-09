@@ -18,9 +18,11 @@ public class EnterpriseAuthenticationAppLinkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public EnterpriseAuthenticationAppLinkConfig withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public EnterpriseAuthenticationAppLinkConfig(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListCustomVerificationEmailTemplatesResponse {
     
     public CustomVerificationEmailTemplate[] customVerificationEmailTemplates;
+
     public ListCustomVerificationEmailTemplatesResponse withCustomVerificationEmailTemplates(CustomVerificationEmailTemplate[] customVerificationEmailTemplates) {
         this.customVerificationEmailTemplates = customVerificationEmailTemplates;
         return this;
@@ -19,9 +20,11 @@ public class ListCustomVerificationEmailTemplatesResponse {
     
     
     public String nextToken;
+
     public ListCustomVerificationEmailTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomVerificationEmailTemplatesResponse(){}
 }

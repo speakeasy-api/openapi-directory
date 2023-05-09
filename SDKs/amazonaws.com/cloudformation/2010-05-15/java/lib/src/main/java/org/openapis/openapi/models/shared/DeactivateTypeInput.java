@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DeactivateTypeInput {
     
     public String arn;
+
     public DeactivateTypeInput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,6 +17,7 @@ public class DeactivateTypeInput {
     
     
     public ThirdPartyTypeEnum type;
+
     public DeactivateTypeInput withType(ThirdPartyTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +25,11 @@ public class DeactivateTypeInput {
     
     
     public String typeName;
+
     public DeactivateTypeInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public DeactivateTypeInput(){}
 }

@@ -12,9 +12,13 @@ public class DeletePlaybackKeyPairRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeletePlaybackKeyPairRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeletePlaybackKeyPairRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

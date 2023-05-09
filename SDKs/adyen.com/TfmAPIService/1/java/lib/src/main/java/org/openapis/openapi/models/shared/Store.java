@@ -12,6 +12,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public Store withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Store withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +36,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inStoreTerminals")
     public String[] inStoreTerminals;
+
     public Store withInStoreTerminals(String[] inStoreTerminals) {
         this.inStoreTerminals = inStoreTerminals;
         return this;
@@ -45,6 +48,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccountCode")
     public String merchantAccountCode;
+
     public Store withMerchantAccountCode(String merchantAccountCode) {
         this.merchantAccountCode = merchantAccountCode;
         return this;
@@ -66,6 +70,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Store withStatus(String status) {
         this.status = status;
         return this;
@@ -76,9 +81,13 @@ public class Store {
      */
     @JsonProperty("store")
     public String store;
+
     public Store withStore(String store) {
         this.store = store;
         return this;
     }
     
+    public Store(@JsonProperty("store") String store) {
+        this.store = store;
+  }
 }

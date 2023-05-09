@@ -15,6 +15,7 @@ public class PutEmailIdentityDkimSigningAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningAttributes")
     public PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes signingAttributes;
+
     public PutEmailIdentityDkimSigningAttributesRequestBody withSigningAttributes(PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributes signingAttributes) {
         this.signingAttributes = signingAttributes;
         return this;
@@ -25,9 +26,13 @@ public class PutEmailIdentityDkimSigningAttributesRequestBody {
      */
     @JsonProperty("SigningAttributesOrigin")
     public PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum signingAttributesOrigin;
+
     public PutEmailIdentityDkimSigningAttributesRequestBody withSigningAttributesOrigin(PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum signingAttributesOrigin) {
         this.signingAttributesOrigin = signingAttributesOrigin;
         return this;
     }
     
+    public PutEmailIdentityDkimSigningAttributesRequestBody(@JsonProperty("SigningAttributesOrigin") PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum signingAttributesOrigin) {
+        this.signingAttributesOrigin = signingAttributesOrigin;
+  }
 }

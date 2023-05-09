@@ -12,6 +12,7 @@ public class BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions {
      */
     @JsonProperty("configurations")
     public String[] configurations;
+
     public BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions withConfigurations(String[] configurations) {
         this.configurations = configurations;
         return this;
@@ -22,9 +23,14 @@ public class BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions {
      */
     @JsonProperty("path")
     public String path;
+
     public BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONUwpUwpSolutions(@JsonProperty("configurations") String[] configurations, @JsonProperty("path") String path) {
+        this.configurations = configurations;
+        this.path = path;
+  }
 }

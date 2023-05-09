@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListPolicyVersionsResponse {
     
     public Boolean isTruncated;
+
     public ListPolicyVersionsResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListPolicyVersionsResponse {
     
     
     public String marker;
+
     public ListPolicyVersionsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,11 @@ public class ListPolicyVersionsResponse {
     
     
     public PolicyVersion[] versions;
+
     public ListPolicyVersionsResponse withVersions(PolicyVersion[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListPolicyVersionsResponse(){}
 }

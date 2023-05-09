@@ -20,6 +20,7 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationArn")
     public String autoScalingConfigurationArn;
+
     public AutoScalingConfiguration withAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
         this.autoScalingConfigurationArn = autoScalingConfigurationArn;
         return this;
@@ -28,6 +29,7 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationName")
     public String autoScalingConfigurationName;
+
     public AutoScalingConfiguration withAutoScalingConfigurationName(String autoScalingConfigurationName) {
         this.autoScalingConfigurationName = autoScalingConfigurationName;
         return this;
@@ -36,6 +38,7 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationRevision")
     public Long autoScalingConfigurationRevision;
+
     public AutoScalingConfiguration withAutoScalingConfigurationRevision(Long autoScalingConfigurationRevision) {
         this.autoScalingConfigurationRevision = autoScalingConfigurationRevision;
         return this;
@@ -46,6 +49,7 @@ public class AutoScalingConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public AutoScalingConfiguration withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -56,6 +60,7 @@ public class AutoScalingConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletedAt")
     public OffsetDateTime deletedAt;
+
     public AutoScalingConfiguration withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -64,6 +69,7 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latest")
     public Boolean latest;
+
     public AutoScalingConfiguration withLatest(Boolean latest) {
         this.latest = latest;
         return this;
@@ -72,6 +78,7 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrency")
     public Long maxConcurrency;
+
     public AutoScalingConfiguration withMaxConcurrency(Long maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -80,6 +87,7 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxSize")
     public Long maxSize;
+
     public AutoScalingConfiguration withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -88,6 +96,7 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinSize")
     public Long minSize;
+
     public AutoScalingConfiguration withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -96,9 +105,11 @@ public class AutoScalingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AutoScalingConfigurationStatusEnum status;
+
     public AutoScalingConfiguration withStatus(AutoScalingConfigurationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AutoScalingConfiguration(){}
 }

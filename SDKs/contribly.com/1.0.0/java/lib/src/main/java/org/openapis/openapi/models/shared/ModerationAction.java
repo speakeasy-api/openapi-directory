@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModerationAction {
     @JsonProperty("id")
     public String id;
+
     public ModerationAction withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class ModerationAction {
     
     @JsonProperty("label")
     public String label;
+
     public ModerationAction withLabel(String label) {
         this.label = label;
         return this;
@@ -23,9 +25,15 @@ public class ModerationAction {
     
     @JsonProperty("resultingState")
     public ModerationState resultingState;
+
     public ModerationAction withResultingState(ModerationState resultingState) {
         this.resultingState = resultingState;
         return this;
     }
     
+    public ModerationAction(@JsonProperty("id") String id, @JsonProperty("label") String label, @JsonProperty("resultingState") ModerationState resultingState) {
+        this.id = id;
+        this.label = label;
+        this.resultingState = resultingState;
+  }
 }

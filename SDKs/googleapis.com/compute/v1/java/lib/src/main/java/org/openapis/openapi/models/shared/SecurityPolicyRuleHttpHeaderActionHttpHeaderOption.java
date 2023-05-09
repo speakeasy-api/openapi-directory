@@ -15,6 +15,7 @@ public class SecurityPolicyRuleHttpHeaderActionHttpHeaderOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerName")
     public String headerName;
+
     public SecurityPolicyRuleHttpHeaderActionHttpHeaderOption withHeaderName(String headerName) {
         this.headerName = headerName;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRuleHttpHeaderActionHttpHeaderOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerValue")
     public String headerValue;
+
     public SecurityPolicyRuleHttpHeaderActionHttpHeaderOption withHeaderValue(String headerValue) {
         this.headerValue = headerValue;
         return this;
     }
     
+    public SecurityPolicyRuleHttpHeaderActionHttpHeaderOption(){}
 }

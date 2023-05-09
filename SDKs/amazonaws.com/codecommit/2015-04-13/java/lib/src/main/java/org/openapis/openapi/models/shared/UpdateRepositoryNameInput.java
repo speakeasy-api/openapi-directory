@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRepositoryNameInput {
     @JsonProperty("newName")
     public String newName;
+
     public UpdateRepositoryNameInput withNewName(String newName) {
         this.newName = newName;
         return this;
@@ -19,9 +20,14 @@ public class UpdateRepositoryNameInput {
     
     @JsonProperty("oldName")
     public String oldName;
+
     public UpdateRepositoryNameInput withOldName(String oldName) {
         this.oldName = oldName;
         return this;
     }
     
+    public UpdateRepositoryNameInput(@JsonProperty("newName") String newName, @JsonProperty("oldName") String oldName) {
+        this.newName = newName;
+        this.oldName = oldName;
+  }
 }

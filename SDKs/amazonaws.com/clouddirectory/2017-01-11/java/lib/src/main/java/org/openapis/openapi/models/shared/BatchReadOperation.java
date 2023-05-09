@@ -15,6 +15,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GetLinkAttributes")
     public BatchGetLinkAttributes getLinkAttributes;
+
     public BatchReadOperation withGetLinkAttributes(BatchGetLinkAttributes getLinkAttributes) {
         this.getLinkAttributes = getLinkAttributes;
         return this;
@@ -23,6 +24,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GetObjectAttributes")
     public BatchGetObjectAttributes getObjectAttributes;
+
     public BatchReadOperation withGetObjectAttributes(BatchGetObjectAttributes getObjectAttributes) {
         this.getObjectAttributes = getObjectAttributes;
         return this;
@@ -31,6 +33,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GetObjectInformation")
     public BatchGetObjectInformation getObjectInformation;
+
     public BatchReadOperation withGetObjectInformation(BatchGetObjectInformation getObjectInformation) {
         this.getObjectInformation = getObjectInformation;
         return this;
@@ -39,6 +42,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListAttachedIndices")
     public BatchListAttachedIndices listAttachedIndices;
+
     public BatchReadOperation withListAttachedIndices(BatchListAttachedIndices listAttachedIndices) {
         this.listAttachedIndices = listAttachedIndices;
         return this;
@@ -47,6 +51,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListIncomingTypedLinks")
     public BatchListIncomingTypedLinks listIncomingTypedLinks;
+
     public BatchReadOperation withListIncomingTypedLinks(BatchListIncomingTypedLinks listIncomingTypedLinks) {
         this.listIncomingTypedLinks = listIncomingTypedLinks;
         return this;
@@ -55,6 +60,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListIndex")
     public BatchListIndex listIndex;
+
     public BatchReadOperation withListIndex(BatchListIndex listIndex) {
         this.listIndex = listIndex;
         return this;
@@ -63,6 +69,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListObjectAttributes")
     public BatchListObjectAttributes listObjectAttributes;
+
     public BatchReadOperation withListObjectAttributes(BatchListObjectAttributes listObjectAttributes) {
         this.listObjectAttributes = listObjectAttributes;
         return this;
@@ -71,6 +78,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListObjectChildren")
     public BatchListObjectChildren listObjectChildren;
+
     public BatchReadOperation withListObjectChildren(BatchListObjectChildren listObjectChildren) {
         this.listObjectChildren = listObjectChildren;
         return this;
@@ -79,6 +87,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListObjectParentPaths")
     public BatchListObjectParentPaths listObjectParentPaths;
+
     public BatchReadOperation withListObjectParentPaths(BatchListObjectParentPaths listObjectParentPaths) {
         this.listObjectParentPaths = listObjectParentPaths;
         return this;
@@ -87,6 +96,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListObjectParents")
     public BatchListObjectParents listObjectParents;
+
     public BatchReadOperation withListObjectParents(BatchListObjectParents listObjectParents) {
         this.listObjectParents = listObjectParents;
         return this;
@@ -95,6 +105,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListObjectPolicies")
     public BatchListObjectPolicies listObjectPolicies;
+
     public BatchReadOperation withListObjectPolicies(BatchListObjectPolicies listObjectPolicies) {
         this.listObjectPolicies = listObjectPolicies;
         return this;
@@ -103,6 +114,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListOutgoingTypedLinks")
     public BatchListOutgoingTypedLinks listOutgoingTypedLinks;
+
     public BatchReadOperation withListOutgoingTypedLinks(BatchListOutgoingTypedLinks listOutgoingTypedLinks) {
         this.listOutgoingTypedLinks = listOutgoingTypedLinks;
         return this;
@@ -111,6 +123,7 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListPolicyAttachments")
     public BatchListPolicyAttachments listPolicyAttachments;
+
     public BatchReadOperation withListPolicyAttachments(BatchListPolicyAttachments listPolicyAttachments) {
         this.listPolicyAttachments = listPolicyAttachments;
         return this;
@@ -119,9 +132,11 @@ public class BatchReadOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LookupPolicy")
     public BatchLookupPolicy lookupPolicy;
+
     public BatchReadOperation withLookupPolicy(BatchLookupPolicy lookupPolicy) {
         this.lookupPolicy = lookupPolicy;
         return this;
     }
     
+    public BatchReadOperation(){}
 }

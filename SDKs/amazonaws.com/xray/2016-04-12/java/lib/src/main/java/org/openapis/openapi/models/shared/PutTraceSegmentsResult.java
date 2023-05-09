@@ -15,9 +15,11 @@ public class PutTraceSegmentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedTraceSegments")
     public UnprocessedTraceSegment[] unprocessedTraceSegments;
+
     public PutTraceSegmentsResult withUnprocessedTraceSegments(UnprocessedTraceSegment[] unprocessedTraceSegments) {
         this.unprocessedTraceSegments = unprocessedTraceSegments;
         return this;
     }
     
+    public PutTraceSegmentsResult(){}
 }

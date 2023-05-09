@@ -15,6 +15,7 @@ public class DeleteFileCacheResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCacheId")
     public String fileCacheId;
+
     public DeleteFileCacheResponse withFileCacheId(String fileCacheId) {
         this.fileCacheId = fileCacheId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteFileCacheResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public FileCacheLifecycleEnum lifecycle;
+
     public DeleteFileCacheResponse withLifecycle(FileCacheLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
     }
     
+    public DeleteFileCacheResponse(){}
 }

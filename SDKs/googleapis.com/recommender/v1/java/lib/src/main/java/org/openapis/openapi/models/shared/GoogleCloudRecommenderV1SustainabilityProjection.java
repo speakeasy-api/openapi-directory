@@ -18,6 +18,7 @@ public class GoogleCloudRecommenderV1SustainabilityProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public GoogleCloudRecommenderV1SustainabilityProjection withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommenderV1SustainabilityProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kgCO2e")
     public Double kgCo2e;
+
     public GoogleCloudRecommenderV1SustainabilityProjection withKgCo2e(Double kgCo2e) {
         this.kgCo2e = kgCo2e;
         return this;
     }
     
+    public GoogleCloudRecommenderV1SustainabilityProjection(){}
 }

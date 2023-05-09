@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCatalogObjectRequest {
@@ -14,6 +15,7 @@ public class RetrieveCatalogObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalog_version")
     public Long catalogVersion;
+
     public RetrieveCatalogObjectRequest withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -33,6 +35,7 @@ public class RetrieveCatalogObjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_related_objects")
     public Boolean includeRelatedObjects;
+
     public RetrieveCatalogObjectRequest withIncludeRelatedObjects(Boolean includeRelatedObjects) {
         this.includeRelatedObjects = includeRelatedObjects;
         return this;
@@ -43,9 +46,13 @@ public class RetrieveCatalogObjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_id")
     public String objectId;
+
     public RetrieveCatalogObjectRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public RetrieveCatalogObjectRequest(@JsonProperty("object_id") String objectId) {
+        this.objectId = objectId;
+  }
 }

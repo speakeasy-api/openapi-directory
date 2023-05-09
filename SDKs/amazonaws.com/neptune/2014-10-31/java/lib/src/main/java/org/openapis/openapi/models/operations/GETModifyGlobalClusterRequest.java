@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyGlobalClusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyGlobalClusterActionEnum action;
+
     public GETModifyGlobalClusterRequest withAction(GETModifyGlobalClusterActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMajorVersionUpgrade")
     public Boolean allowMajorVersionUpgrade;
+
     public GETModifyGlobalClusterRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
     public Boolean deletionProtection;
+
     public GETModifyGlobalClusterRequest withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETModifyGlobalClusterRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalClusterIdentifier")
     public String globalClusterIdentifier;
+
     public GETModifyGlobalClusterRequest withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyGlobalClusterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewGlobalClusterIdentifier")
     public String newGlobalClusterIdentifier;
+
     public GETModifyGlobalClusterRequest withNewGlobalClusterIdentifier(String newGlobalClusterIdentifier) {
         this.newGlobalClusterIdentifier = newGlobalClusterIdentifier;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyGlobalClusterVersionEnum version;
+
     public GETModifyGlobalClusterRequest withVersion(GETModifyGlobalClusterVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyGlobalClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyGlobalClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyGlobalClusterRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyGlobalClusterRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyGlobalClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyGlobalClusterRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETModifyGlobalClusterRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyGlobalClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyGlobalClusterRequest(@JsonProperty("Action") GETModifyGlobalClusterActionEnum action, @JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier, @JsonProperty("Version") GETModifyGlobalClusterVersionEnum version) {
+        this.action = action;
+        this.globalClusterIdentifier = globalClusterIdentifier;
+        this.version = version;
+  }
 }

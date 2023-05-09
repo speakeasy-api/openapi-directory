@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualMeterCalculateFormulaGetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=formula")
     public String formula;
+
     public VirtualMeterCalculateFormulaGetRequest withFormula(String formula) {
         this.formula = formula;
         return this;
     }
     
+    public VirtualMeterCalculateFormulaGetRequest(@JsonProperty("formula") String formula) {
+        this.formula = formula;
+  }
 }

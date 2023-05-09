@@ -18,6 +18,7 @@ public class InstancesGetEffectiveFirewallsResponseOrganizationFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InstancesGetEffectiveFirewallsResponseOrganizationFirewallPolicy withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class InstancesGetEffectiveFirewallsResponseOrganizationFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public SecurityPolicyRule[] rules;
+
     public InstancesGetEffectiveFirewallsResponseOrganizationFirewallPolicy withRules(SecurityPolicyRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public InstancesGetEffectiveFirewallsResponseOrganizationFirewallPolicy(){}
 }

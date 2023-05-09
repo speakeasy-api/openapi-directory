@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilter withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inListFilter")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterInListFilter inListFilter;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilter withInListFilter(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterInListFilter inListFilter) {
         this.inListFilter = inListFilter;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaExpandedDataSetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringFilter")
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilter stringFilter;
+
     public GoogleAnalyticsAdminV1alphaExpandedDataSetFilter withStringFilter(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilter stringFilter) {
         this.stringFilter = stringFilter;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaExpandedDataSetFilter(){}
 }

@@ -14,6 +14,7 @@ public class PullsCreateReviewCommentAlternativeRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public PullsCreateReviewCommentAlternativeRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -25,9 +26,13 @@ public class PullsCreateReviewCommentAlternativeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_reply_to")
     public Long inReplyTo;
+
     public PullsCreateReviewCommentAlternativeRequestBody withInReplyTo(Long inReplyTo) {
         this.inReplyTo = inReplyTo;
         return this;
     }
     
+    public PullsCreateReviewCommentAlternativeRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

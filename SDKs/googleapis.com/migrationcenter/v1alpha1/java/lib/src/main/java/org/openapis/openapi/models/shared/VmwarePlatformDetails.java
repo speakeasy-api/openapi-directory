@@ -18,6 +18,7 @@ public class VmwarePlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("esxVersion")
     public String esxVersion;
+
     public VmwarePlatformDetails withEsxVersion(String esxVersion) {
         this.esxVersion = esxVersion;
         return this;
@@ -29,6 +30,7 @@ public class VmwarePlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osid")
     public String osid;
+
     public VmwarePlatformDetails withOsid(String osid) {
         this.osid = osid;
         return this;
@@ -40,9 +42,11 @@ public class VmwarePlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenterVersion")
     public String vcenterVersion;
+
     public VmwarePlatformDetails withVcenterVersion(String vcenterVersion) {
         this.vcenterVersion = vcenterVersion;
         return this;
     }
     
+    public VmwarePlatformDetails(){}
 }

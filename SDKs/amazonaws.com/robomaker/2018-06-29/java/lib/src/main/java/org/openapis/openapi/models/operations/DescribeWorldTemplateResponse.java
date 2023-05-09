@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorldTemplateResponse {
     
     public String contentType;
+
     public DescribeWorldTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorldTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorldTemplateResponse describeWorldTemplateResponse;
+
     public DescribeWorldTemplateResponse withDescribeWorldTemplateResponse(org.openapis.openapi.models.shared.DescribeWorldTemplateResponse describeWorldTemplateResponse) {
         this.describeWorldTemplateResponse = describeWorldTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorldTemplateResponse {
      */
     
     public Object internalServerException;
+
     public DescribeWorldTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorldTemplateResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeWorldTemplateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeWorldTemplateResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorldTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeWorldTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorldTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeWorldTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWorldTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeWorldTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DescribeWorldTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeWorldTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

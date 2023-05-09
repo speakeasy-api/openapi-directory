@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatasetContentResponse {
     
     public String contentType;
+
     public DeleteDatasetContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDatasetContentResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteDatasetContentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatasetContentResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteDatasetContentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatasetContentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDatasetContentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDatasetContentResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatasetContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDatasetContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatasetContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDatasetContentResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteDatasetContentResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDatasetContentResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDatasetContentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteDatasetContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

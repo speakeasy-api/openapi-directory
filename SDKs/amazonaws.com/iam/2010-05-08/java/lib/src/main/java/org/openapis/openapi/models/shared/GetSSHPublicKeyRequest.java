@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetSSHPublicKeyRequest {
     
     public EncodingTypeEnum encoding;
+
     public GetSSHPublicKeyRequest withEncoding(EncodingTypeEnum encoding) {
         this.encoding = encoding;
         return this;
@@ -16,6 +17,7 @@ public class GetSSHPublicKeyRequest {
     
     
     public String sshPublicKeyId;
+
     public GetSSHPublicKeyRequest withSSHPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -23,9 +25,15 @@ public class GetSSHPublicKeyRequest {
     
     
     public String userName;
+
     public GetSSHPublicKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetSSHPublicKeyRequest(@JsonProperty("Encoding") EncodingTypeEnum encoding, @JsonProperty("SSHPublicKeyId") String sshPublicKeyId, @JsonProperty("UserName") String userName) {
+        this.encoding = encoding;
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.userName = userName;
+  }
 }

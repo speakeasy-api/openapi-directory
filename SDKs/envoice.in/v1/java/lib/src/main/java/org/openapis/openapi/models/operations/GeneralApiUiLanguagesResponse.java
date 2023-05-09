@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GeneralApiUiLanguagesResponse {
     
     public byte[] body;
+
     public GeneralApiUiLanguagesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GeneralApiUiLanguagesResponse {
     
     
     public String contentType;
+
     public GeneralApiUiLanguagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GeneralApiUiLanguagesResponse {
     
     
     public Integer statusCode;
+
     public GeneralApiUiLanguagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GeneralApiUiLanguagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GeneralApiUiLanguagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GeneralApiUiLanguagesResponse {
      */
     
     public org.openapis.openapi.models.shared.UILanguageDetailsApiModel[] uiLanguageDetailsApiModels;
+
     public GeneralApiUiLanguagesResponse withUILanguageDetailsApiModels(org.openapis.openapi.models.shared.UILanguageDetailsApiModel[] uiLanguageDetailsApiModels) {
         this.uiLanguageDetailsApiModels = uiLanguageDetailsApiModels;
         return this;
     }
     
+    public GeneralApiUiLanguagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

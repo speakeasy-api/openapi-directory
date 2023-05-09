@@ -20,6 +20,7 @@ public class StatusParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     public String applicationId;
+
     public StatusParams withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -31,6 +32,7 @@ public class StatusParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_reply_to_id")
     public String inReplyToId;
+
     public StatusParams withInReplyToId(String inReplyToId) {
         this.inReplyToId = inReplyToId;
         return this;
@@ -42,6 +44,7 @@ public class StatusParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media_ids")
     public String[] mediaIds;
+
     public StatusParams withMediaIds(String[] mediaIds) {
         this.mediaIds = mediaIds;
         return this;
@@ -55,6 +58,7 @@ public class StatusParams {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduled_at")
     public OffsetDateTime scheduledAt;
+
     public StatusParams withScheduledAt(OffsetDateTime scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
@@ -66,6 +70,7 @@ public class StatusParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitive")
     public Boolean sensitive;
+
     public StatusParams withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
@@ -77,6 +82,7 @@ public class StatusParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spoiler_text")
     public String spoilerText;
+
     public StatusParams withSpoilerText(String spoilerText) {
         this.spoilerText = spoilerText;
         return this;
@@ -88,6 +94,7 @@ public class StatusParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public StatusParams withText(String text) {
         this.text = text;
         return this;
@@ -99,9 +106,11 @@ public class StatusParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public String visibility;
+
     public StatusParams withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public StatusParams(){}
 }

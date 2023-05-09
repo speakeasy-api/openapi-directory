@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints {
     
     public OffsetDateTime endDate;
+
     public GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -19,6 +20,7 @@ public class GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints {
     
     
     public OffsetDateTime startDate;
+
     public GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -26,6 +28,7 @@ public class GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints {
     
     
     public String status;
+
     public GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints withStatus(String status) {
         this.status = status;
         return this;
@@ -33,9 +36,11 @@ public class GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints {
     
     
     public Float value;
+
     public GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public GetAwsNetworkPerformanceDataResultDataResponsesMetricPoints(){}
 }

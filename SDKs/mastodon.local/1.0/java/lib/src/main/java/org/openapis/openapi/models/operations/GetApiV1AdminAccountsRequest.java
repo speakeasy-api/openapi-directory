@@ -12,6 +12,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
     public Boolean active;
+
     public GetApiV1AdminAccountsRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +23,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=by_domain")
     public String byDomain;
+
     public GetApiV1AdminAccountsRequest withByDomain(String byDomain) {
         this.byDomain = byDomain;
         return this;
@@ -32,6 +34,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disabled")
     public Boolean disabled;
+
     public GetApiV1AdminAccountsRequest withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -42,6 +45,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display_name")
     public String displayName;
+
     public GetApiV1AdminAccountsRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -52,6 +56,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetApiV1AdminAccountsRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -62,6 +67,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public GetApiV1AdminAccountsRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -72,6 +78,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
     public Boolean local;
+
     public GetApiV1AdminAccountsRequest withLocal(Boolean local) {
         this.local = local;
         return this;
@@ -82,6 +89,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pending")
     public Boolean pending;
+
     public GetApiV1AdminAccountsRequest withPending(Boolean pending) {
         this.pending = pending;
         return this;
@@ -92,6 +100,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=remote")
     public Boolean remote;
+
     public GetApiV1AdminAccountsRequest withRemote(Boolean remote) {
         this.remote = remote;
         return this;
@@ -102,6 +111,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=silenced")
     public Boolean silenced;
+
     public GetApiV1AdminAccountsRequest withSilenced(Boolean silenced) {
         this.silenced = silenced;
         return this;
@@ -112,6 +122,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=staff")
     public Boolean staff;
+
     public GetApiV1AdminAccountsRequest withStaff(Boolean staff) {
         this.staff = staff;
         return this;
@@ -122,6 +133,7 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=suspended")
     public Boolean suspended;
+
     public GetApiV1AdminAccountsRequest withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -132,9 +144,11 @@ public class GetApiV1AdminAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetApiV1AdminAccountsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetApiV1AdminAccountsRequest(){}
 }

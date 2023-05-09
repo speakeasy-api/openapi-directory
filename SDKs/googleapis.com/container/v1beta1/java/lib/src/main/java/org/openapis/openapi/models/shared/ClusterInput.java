@@ -18,6 +18,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonsConfig")
     public AddonsConfig addonsConfig;
+
     public ClusterInput withAddonsConfig(AddonsConfig addonsConfig) {
         this.addonsConfig = addonsConfig;
         return this;
@@ -29,6 +30,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticatorGroupsConfig")
     public AuthenticatorGroupsConfig authenticatorGroupsConfig;
+
     public ClusterInput withAuthenticatorGroupsConfig(AuthenticatorGroupsConfig authenticatorGroupsConfig) {
         this.authenticatorGroupsConfig = authenticatorGroupsConfig;
         return this;
@@ -40,6 +42,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autopilot")
     public Autopilot autopilot;
+
     public ClusterInput withAutopilot(Autopilot autopilot) {
         this.autopilot = autopilot;
         return this;
@@ -51,6 +54,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscaling")
     public ClusterAutoscaling autoscaling;
+
     public ClusterInput withAutoscaling(ClusterAutoscaling autoscaling) {
         this.autoscaling = autoscaling;
         return this;
@@ -62,6 +66,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryAuthorization")
     public BinaryAuthorization binaryAuthorization;
+
     public ClusterInput withBinaryAuthorization(BinaryAuthorization binaryAuthorization) {
         this.binaryAuthorization = binaryAuthorization;
         return this;
@@ -73,6 +78,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIpv4Cidr")
     public String clusterIpv4Cidr;
+
     public ClusterInput withClusterIpv4Cidr(String clusterIpv4Cidr) {
         this.clusterIpv4Cidr = clusterIpv4Cidr;
         return this;
@@ -84,6 +90,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterTelemetry")
     public ClusterTelemetry clusterTelemetry;
+
     public ClusterInput withClusterTelemetry(ClusterTelemetry clusterTelemetry) {
         this.clusterTelemetry = clusterTelemetry;
         return this;
@@ -95,6 +102,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public StatusCondition[] conditions;
+
     public ClusterInput withConditions(StatusCondition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -106,6 +114,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialNodes")
     public ConfidentialNodes confidentialNodes;
+
     public ClusterInput withConfidentialNodes(ConfidentialNodes confidentialNodes) {
         this.confidentialNodes = confidentialNodes;
         return this;
@@ -117,6 +126,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costManagementConfig")
     public CostManagementConfig costManagementConfig;
+
     public ClusterInput withCostManagementConfig(CostManagementConfig costManagementConfig) {
         this.costManagementConfig = costManagementConfig;
         return this;
@@ -128,6 +138,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ClusterInput withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -139,6 +150,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentMasterVersion")
     public String currentMasterVersion;
+
     public ClusterInput withCurrentMasterVersion(String currentMasterVersion) {
         this.currentMasterVersion = currentMasterVersion;
         return this;
@@ -150,6 +162,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentNodeCount")
     public Integer currentNodeCount;
+
     public ClusterInput withCurrentNodeCount(Integer currentNodeCount) {
         this.currentNodeCount = currentNodeCount;
         return this;
@@ -161,6 +174,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentNodeVersion")
     public String currentNodeVersion;
+
     public ClusterInput withCurrentNodeVersion(String currentNodeVersion) {
         this.currentNodeVersion = currentNodeVersion;
         return this;
@@ -172,6 +186,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseEncryption")
     public DatabaseEncryption databaseEncryption;
+
     public ClusterInput withDatabaseEncryption(DatabaseEncryption databaseEncryption) {
         this.databaseEncryption = databaseEncryption;
         return this;
@@ -183,6 +198,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultMaxPodsConstraint")
     public MaxPodsConstraint defaultMaxPodsConstraint;
+
     public ClusterInput withDefaultMaxPodsConstraint(MaxPodsConstraint defaultMaxPodsConstraint) {
         this.defaultMaxPodsConstraint = defaultMaxPodsConstraint;
         return this;
@@ -194,6 +210,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ClusterInput withDescription(String description) {
         this.description = description;
         return this;
@@ -205,6 +222,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableKubernetesAlpha")
     public Boolean enableKubernetesAlpha;
+
     public ClusterInput withEnableKubernetesAlpha(Boolean enableKubernetesAlpha) {
         this.enableKubernetesAlpha = enableKubernetesAlpha;
         return this;
@@ -216,6 +234,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableTpu")
     public Boolean enableTpu;
+
     public ClusterInput withEnableTpu(Boolean enableTpu) {
         this.enableTpu = enableTpu;
         return this;
@@ -227,6 +246,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public ClusterInput withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -238,6 +258,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ClusterInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -249,6 +270,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public ClusterInput withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -260,6 +282,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public Fleet fleet;
+
     public ClusterInput withFleet(Fleet fleet) {
         this.fleet = fleet;
         return this;
@@ -271,6 +294,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityServiceConfig")
     public IdentityServiceConfig identityServiceConfig;
+
     public ClusterInput withIdentityServiceConfig(IdentityServiceConfig identityServiceConfig) {
         this.identityServiceConfig = identityServiceConfig;
         return this;
@@ -282,6 +306,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialClusterVersion")
     public String initialClusterVersion;
+
     public ClusterInput withInitialClusterVersion(String initialClusterVersion) {
         this.initialClusterVersion = initialClusterVersion;
         return this;
@@ -293,6 +318,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialNodeCount")
     public Integer initialNodeCount;
+
     public ClusterInput withInitialNodeCount(Integer initialNodeCount) {
         this.initialNodeCount = initialNodeCount;
         return this;
@@ -304,6 +330,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceGroupUrls")
     public String[] instanceGroupUrls;
+
     public ClusterInput withInstanceGroupUrls(String[] instanceGroupUrls) {
         this.instanceGroupUrls = instanceGroupUrls;
         return this;
@@ -315,6 +342,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAllocationPolicy")
     public IPAllocationPolicyInput ipAllocationPolicy;
+
     public ClusterInput withIpAllocationPolicy(IPAllocationPolicyInput ipAllocationPolicy) {
         this.ipAllocationPolicy = ipAllocationPolicy;
         return this;
@@ -326,6 +354,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public ClusterInput withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -337,6 +366,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyAbac")
     public LegacyAbac legacyAbac;
+
     public ClusterInput withLegacyAbac(LegacyAbac legacyAbac) {
         this.legacyAbac = legacyAbac;
         return this;
@@ -348,6 +378,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ClusterInput withLocation(String location) {
         this.location = location;
         return this;
@@ -359,6 +390,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public ClusterInput withLocations(String[] locations) {
         this.locations = locations;
         return this;
@@ -370,6 +402,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public LoggingConfig loggingConfig;
+
     public ClusterInput withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -381,6 +414,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingService")
     public String loggingService;
+
     public ClusterInput withLoggingService(String loggingService) {
         this.loggingService = loggingService;
         return this;
@@ -392,6 +426,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenancePolicy")
     public MaintenancePolicy maintenancePolicy;
+
     public ClusterInput withMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
         this.maintenancePolicy = maintenancePolicy;
         return this;
@@ -403,6 +438,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("master")
     public java.util.Map<String, Object> master;
+
     public ClusterInput withMaster(java.util.Map<String, Object> master) {
         this.master = master;
         return this;
@@ -414,6 +450,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterAuth")
     public MasterAuth masterAuth;
+
     public ClusterInput withMasterAuth(MasterAuth masterAuth) {
         this.masterAuth = masterAuth;
         return this;
@@ -425,6 +462,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterAuthorizedNetworksConfig")
     public MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig;
+
     public ClusterInput withMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig) {
         this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
         return this;
@@ -436,6 +474,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterIpv4CidrBlock")
     public String masterIpv4CidrBlock;
+
     public ClusterInput withMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
         return this;
@@ -447,6 +486,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshCertificates")
     public MeshCertificates meshCertificates;
+
     public ClusterInput withMeshCertificates(MeshCertificates meshCertificates) {
         this.meshCertificates = meshCertificates;
         return this;
@@ -458,6 +498,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringConfig")
     public MonitoringConfig monitoringConfig;
+
     public ClusterInput withMonitoringConfig(MonitoringConfig monitoringConfig) {
         this.monitoringConfig = monitoringConfig;
         return this;
@@ -469,6 +510,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoringService")
     public String monitoringService;
+
     public ClusterInput withMonitoringService(String monitoringService) {
         this.monitoringService = monitoringService;
         return this;
@@ -480,6 +522,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClusterInput withName(String name) {
         this.name = name;
         return this;
@@ -491,6 +534,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public ClusterInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -502,6 +546,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NetworkConfig networkConfig;
+
     public ClusterInput withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -513,6 +558,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPolicy")
     public NetworkPolicy networkPolicy;
+
     public ClusterInput withNetworkPolicy(NetworkPolicy networkPolicy) {
         this.networkPolicy = networkPolicy;
         return this;
@@ -524,6 +570,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeConfig")
     public NodeConfig nodeConfig;
+
     public ClusterInput withNodeConfig(NodeConfig nodeConfig) {
         this.nodeConfig = nodeConfig;
         return this;
@@ -535,6 +582,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeIpv4CidrSize")
     public Integer nodeIpv4CidrSize;
+
     public ClusterInput withNodeIpv4CidrSize(Integer nodeIpv4CidrSize) {
         this.nodeIpv4CidrSize = nodeIpv4CidrSize;
         return this;
@@ -546,6 +594,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolAutoConfig")
     public NodePoolAutoConfig nodePoolAutoConfig;
+
     public ClusterInput withNodePoolAutoConfig(NodePoolAutoConfig nodePoolAutoConfig) {
         this.nodePoolAutoConfig = nodePoolAutoConfig;
         return this;
@@ -557,6 +606,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolDefaults")
     public NodePoolDefaults nodePoolDefaults;
+
     public ClusterInput withNodePoolDefaults(NodePoolDefaults nodePoolDefaults) {
         this.nodePoolDefaults = nodePoolDefaults;
         return this;
@@ -568,6 +618,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePools")
     public NodePool[] nodePools;
+
     public ClusterInput withNodePools(NodePool[] nodePools) {
         this.nodePools = nodePools;
         return this;
@@ -579,6 +630,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfig")
     public NotificationConfig notificationConfig;
+
     public ClusterInput withNotificationConfig(NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -590,6 +642,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podSecurityPolicyConfig")
     public PodSecurityPolicyConfig podSecurityPolicyConfig;
+
     public ClusterInput withPodSecurityPolicyConfig(PodSecurityPolicyConfig podSecurityPolicyConfig) {
         this.podSecurityPolicyConfig = podSecurityPolicyConfig;
         return this;
@@ -601,6 +654,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateCluster")
     public Boolean privateCluster;
+
     public ClusterInput withPrivateCluster(Boolean privateCluster) {
         this.privateCluster = privateCluster;
         return this;
@@ -612,6 +666,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateClusterConfig")
     public PrivateClusterConfig privateClusterConfig;
+
     public ClusterInput withPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
         this.privateClusterConfig = privateClusterConfig;
         return this;
@@ -623,6 +678,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectConfig")
     public ProtectConfig protectConfig;
+
     public ClusterInput withProtectConfig(ProtectConfig protectConfig) {
         this.protectConfig = protectConfig;
         return this;
@@ -634,6 +690,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseChannel")
     public ReleaseChannel releaseChannel;
+
     public ClusterInput withReleaseChannel(ReleaseChannel releaseChannel) {
         this.releaseChannel = releaseChannel;
         return this;
@@ -645,6 +702,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLabels")
     public java.util.Map<String, String> resourceLabels;
+
     public ClusterInput withResourceLabels(java.util.Map<String, String> resourceLabels) {
         this.resourceLabels = resourceLabels;
         return this;
@@ -656,6 +714,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUsageExportConfig")
     public ResourceUsageExportConfig resourceUsageExportConfig;
+
     public ClusterInput withResourceUsageExportConfig(ResourceUsageExportConfig resourceUsageExportConfig) {
         this.resourceUsageExportConfig = resourceUsageExportConfig;
         return this;
@@ -667,6 +726,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ClusterInput withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -678,6 +738,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicesIpv4Cidr")
     public String servicesIpv4Cidr;
+
     public ClusterInput withServicesIpv4Cidr(String servicesIpv4Cidr) {
         this.servicesIpv4Cidr = servicesIpv4Cidr;
         return this;
@@ -689,6 +750,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedNodes")
     public ShieldedNodes shieldedNodes;
+
     public ClusterInput withShieldedNodes(ShieldedNodes shieldedNodes) {
         this.shieldedNodes = shieldedNodes;
         return this;
@@ -700,6 +762,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ClusterStatusEnum status;
+
     public ClusterInput withStatus(ClusterStatusEnum status) {
         this.status = status;
         return this;
@@ -711,6 +774,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ClusterInput withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -722,6 +786,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public ClusterInput withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -733,6 +798,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuConfig")
     public TpuConfig tpuConfig;
+
     public ClusterInput withTpuConfig(TpuConfig tpuConfig) {
         this.tpuConfig = tpuConfig;
         return this;
@@ -744,6 +810,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpuIpv4CidrBlock")
     public String tpuIpv4CidrBlock;
+
     public ClusterInput withTpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
         this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
         return this;
@@ -755,6 +822,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verticalPodAutoscaling")
     public VerticalPodAutoscaling verticalPodAutoscaling;
+
     public ClusterInput withVerticalPodAutoscaling(VerticalPodAutoscaling verticalPodAutoscaling) {
         this.verticalPodAutoscaling = verticalPodAutoscaling;
         return this;
@@ -766,6 +834,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadAltsConfig")
     public WorkloadALTSConfig workloadAltsConfig;
+
     public ClusterInput withWorkloadAltsConfig(WorkloadALTSConfig workloadAltsConfig) {
         this.workloadAltsConfig = workloadAltsConfig;
         return this;
@@ -777,6 +846,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadCertificates")
     public WorkloadCertificates workloadCertificates;
+
     public ClusterInput withWorkloadCertificates(WorkloadCertificates workloadCertificates) {
         this.workloadCertificates = workloadCertificates;
         return this;
@@ -788,6 +858,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadIdentityConfig")
     public WorkloadIdentityConfig workloadIdentityConfig;
+
     public ClusterInput withWorkloadIdentityConfig(WorkloadIdentityConfig workloadIdentityConfig) {
         this.workloadIdentityConfig = workloadIdentityConfig;
         return this;
@@ -799,9 +870,11 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public ClusterInput withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ClusterInput(){}
 }

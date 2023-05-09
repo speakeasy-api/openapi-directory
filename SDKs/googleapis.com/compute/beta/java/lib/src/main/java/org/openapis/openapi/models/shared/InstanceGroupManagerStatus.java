@@ -12,6 +12,7 @@ public class InstanceGroupManagerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allInstancesConfig")
     public InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig;
+
     public InstanceGroupManagerStatus withAllInstancesConfig(InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig) {
         this.allInstancesConfig = allInstancesConfig;
         return this;
@@ -23,6 +24,7 @@ public class InstanceGroupManagerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscaler")
     public String autoscaler;
+
     public InstanceGroupManagerStatus withAutoscaler(String autoscaler) {
         this.autoscaler = autoscaler;
         return this;
@@ -34,6 +36,7 @@ public class InstanceGroupManagerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isStable")
     public Boolean isStable;
+
     public InstanceGroupManagerStatus withIsStable(Boolean isStable) {
         this.isStable = isStable;
         return this;
@@ -42,6 +45,7 @@ public class InstanceGroupManagerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateful")
     public InstanceGroupManagerStatusStateful stateful;
+
     public InstanceGroupManagerStatus withStateful(InstanceGroupManagerStatusStateful stateful) {
         this.stateful = stateful;
         return this;
@@ -50,9 +54,11 @@ public class InstanceGroupManagerStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionTarget")
     public InstanceGroupManagerStatusVersionTarget versionTarget;
+
     public InstanceGroupManagerStatus withVersionTarget(InstanceGroupManagerStatusVersionTarget versionTarget) {
         this.versionTarget = versionTarget;
         return this;
     }
     
+    public InstanceGroupManagerStatus(){}
 }

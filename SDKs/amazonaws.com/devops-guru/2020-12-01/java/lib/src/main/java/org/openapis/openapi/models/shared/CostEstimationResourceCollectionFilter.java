@@ -15,6 +15,7 @@ public class CostEstimationResourceCollectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormation")
     public CloudFormationCostEstimationResourceCollectionFilter cloudFormation;
+
     public CostEstimationResourceCollectionFilter withCloudFormation(CloudFormationCostEstimationResourceCollectionFilter cloudFormation) {
         this.cloudFormation = cloudFormation;
         return this;
@@ -23,9 +24,11 @@ public class CostEstimationResourceCollectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagCostEstimationResourceCollectionFilter[] tags;
+
     public CostEstimationResourceCollectionFilter withTags(TagCostEstimationResourceCollectionFilter[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CostEstimationResourceCollectionFilter(){}
 }

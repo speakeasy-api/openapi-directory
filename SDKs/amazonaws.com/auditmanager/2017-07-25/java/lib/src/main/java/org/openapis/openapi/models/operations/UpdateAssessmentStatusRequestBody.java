@@ -12,9 +12,13 @@ public class UpdateAssessmentStatusRequestBody {
      */
     @JsonProperty("status")
     public UpdateAssessmentStatusRequestBodyStatusEnum status;
+
     public UpdateAssessmentStatusRequestBody withStatus(UpdateAssessmentStatusRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateAssessmentStatusRequestBody(@JsonProperty("status") UpdateAssessmentStatusRequestBodyStatusEnum status) {
+        this.status = status;
+  }
 }

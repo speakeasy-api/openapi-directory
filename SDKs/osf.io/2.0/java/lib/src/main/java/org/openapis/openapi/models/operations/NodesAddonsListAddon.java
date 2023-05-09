@@ -12,6 +12,7 @@ public class NodesAddonsListAddon {
      */
     
     public NodesAddonsListAddonAttributes attributes;
+
     public NodesAddonsListAddon withAttributes(NodesAddonsListAddonAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesAddonsListAddon {
      */
     
     public String id;
+
     public NodesAddonsListAddon withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,11 @@ public class NodesAddonsListAddon {
      */
     
     public String type;
+
     public NodesAddonsListAddon withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesAddonsListAddon(){}
 }

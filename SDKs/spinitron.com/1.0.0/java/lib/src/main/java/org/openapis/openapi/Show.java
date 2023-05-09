@@ -87,14 +87,12 @@ public class Show {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShowsResponse res = new org.openapis.openapi.models.operations.GetShowsResponse() {{
+        org.openapis.openapi.models.operations.GetShowsResponse res = new org.openapis.openapi.models.operations.GetShowsResponse(contentType, httpRes.statusCode()) {{
             getShows200ApplicationJSONObject = null;
             body = null;
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,14 +152,12 @@ public class Show {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShowsIdResponse res = new org.openapis.openapi.models.operations.GetShowsIdResponse() {{
+        org.openapis.openapi.models.operations.GetShowsIdResponse res = new org.openapis.openapi.models.operations.GetShowsIdResponse(contentType, httpRes.statusCode()) {{
             show = null;
             body = null;
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

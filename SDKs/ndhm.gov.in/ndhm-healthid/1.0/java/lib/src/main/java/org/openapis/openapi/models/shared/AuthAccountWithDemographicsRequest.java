@@ -15,6 +15,7 @@ public class AuthAccountWithDemographicsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public AuthAccountWithDemographicsRequest withGender(String gender) {
         this.gender = gender;
         return this;
@@ -23,6 +24,7 @@ public class AuthAccountWithDemographicsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthAccountWithDemographicsRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class AuthAccountWithDemographicsRequest {
     
     @JsonProperty("txnId")
     public String txnId;
+
     public AuthAccountWithDemographicsRequest withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
@@ -38,9 +41,13 @@ public class AuthAccountWithDemographicsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearOfBirth")
     public String yearOfBirth;
+
     public AuthAccountWithDemographicsRequest withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public AuthAccountWithDemographicsRequest(@JsonProperty("txnId") String txnId) {
+        this.txnId = txnId;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeFleetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyCode")
     public String companyCode;
+
     public DescribeFleetMetadataResponse withCompanyCode(String companyCode) {
         this.companyCode = companyCode;
         return this;
@@ -30,6 +31,7 @@ public class DescribeFleetMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public DescribeFleetMetadataResponse withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeFleetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeFleetMetadataResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class DescribeFleetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetName")
     public String fleetName;
+
     public DescribeFleetMetadataResponse withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -54,6 +58,7 @@ public class DescribeFleetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetStatus")
     public FleetStatusEnum fleetStatus;
+
     public DescribeFleetMetadataResponse withFleetStatus(FleetStatusEnum fleetStatus) {
         this.fleetStatus = fleetStatus;
         return this;
@@ -64,6 +69,7 @@ public class DescribeFleetMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public DescribeFleetMetadataResponse withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -72,6 +78,7 @@ public class DescribeFleetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizeForEndUserLocation")
     public Boolean optimizeForEndUserLocation;
+
     public DescribeFleetMetadataResponse withOptimizeForEndUserLocation(Boolean optimizeForEndUserLocation) {
         this.optimizeForEndUserLocation = optimizeForEndUserLocation;
         return this;
@@ -80,9 +87,11 @@ public class DescribeFleetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeFleetMetadataResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeFleetMetadataResponse(){}
 }

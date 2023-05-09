@@ -18,6 +18,7 @@ public class PkixPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKeyPem")
     public String publicKeyPem;
+
     public PkixPublicKey withPublicKeyPem(String publicKeyPem) {
         this.publicKeyPem = publicKeyPem;
         return this;
@@ -29,9 +30,11 @@ public class PkixPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureAlgorithm")
     public PkixPublicKeySignatureAlgorithmEnum signatureAlgorithm;
+
     public PkixPublicKey withSignatureAlgorithm(PkixPublicKeySignatureAlgorithmEnum signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
         return this;
     }
     
+    public PkixPublicKey(){}
 }

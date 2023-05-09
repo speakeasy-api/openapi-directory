@@ -18,6 +18,7 @@ public class EventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public String attribute;
+
     public EventFilter withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -29,6 +30,7 @@ public class EventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public String operator;
+
     public EventFilter withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -40,9 +42,11 @@ public class EventFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public EventFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EventFilter(){}
 }

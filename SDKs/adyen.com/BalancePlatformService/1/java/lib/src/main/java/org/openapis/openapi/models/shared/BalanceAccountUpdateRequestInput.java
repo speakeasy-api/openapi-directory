@@ -15,6 +15,7 @@ public class BalanceAccountUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderId")
     public String accountHolderId;
+
     public BalanceAccountUpdateRequestInput withAccountHolderId(String accountHolderId) {
         this.accountHolderId = accountHolderId;
         return this;
@@ -27,6 +28,7 @@ public class BalanceAccountUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCurrencyCode")
     public String defaultCurrencyCode;
+
     public BalanceAccountUpdateRequestInput withDefaultCurrencyCode(String defaultCurrencyCode) {
         this.defaultCurrencyCode = defaultCurrencyCode;
         return this;
@@ -38,6 +40,7 @@ public class BalanceAccountUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BalanceAccountUpdateRequestInput withDescription(String description) {
         this.description = description;
         return this;
@@ -49,6 +52,7 @@ public class BalanceAccountUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public BalanceAccountUpdateRequestInput withReference(String reference) {
         this.reference = reference;
         return this;
@@ -62,6 +66,7 @@ public class BalanceAccountUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public BalanceAccountUpdateRequestStatusEnum status;
+
     public BalanceAccountUpdateRequestInput withStatus(BalanceAccountUpdateRequestStatusEnum status) {
         this.status = status;
         return this;
@@ -81,6 +86,7 @@ public class BalanceAccountUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sweepConfigurations")
     public java.util.Map<String, SweepConfigurationInput> sweepConfigurations;
+
     public BalanceAccountUpdateRequestInput withSweepConfigurations(java.util.Map<String, SweepConfigurationInput> sweepConfigurations) {
         this.sweepConfigurations = sweepConfigurations;
         return this;
@@ -93,9 +99,11 @@ public class BalanceAccountUpdateRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public BalanceAccountUpdateRequestInput withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public BalanceAccountUpdateRequestInput(){}
 }

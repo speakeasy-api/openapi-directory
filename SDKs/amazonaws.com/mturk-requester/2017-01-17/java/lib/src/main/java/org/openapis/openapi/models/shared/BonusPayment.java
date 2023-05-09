@@ -20,6 +20,7 @@ public class BonusPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentId")
     public String assignmentId;
+
     public BonusPayment withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -31,6 +32,7 @@ public class BonusPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BonusAmount")
     public String bonusAmount;
+
     public BonusPayment withBonusAmount(String bonusAmount) {
         this.bonusAmount = bonusAmount;
         return this;
@@ -41,6 +43,7 @@ public class BonusPayment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("GrantTime")
     public OffsetDateTime grantTime;
+
     public BonusPayment withGrantTime(OffsetDateTime grantTime) {
         this.grantTime = grantTime;
         return this;
@@ -49,6 +52,7 @@ public class BonusPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public BonusPayment withReason(String reason) {
         this.reason = reason;
         return this;
@@ -57,9 +61,11 @@ public class BonusPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerId")
     public String workerId;
+
     public BonusPayment withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public BonusPayment(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWorkspaceApiKeyResponse {
     @JsonProperty("key")
     public String key;
+
     public CreateWorkspaceApiKeyResponse withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class CreateWorkspaceApiKeyResponse {
     
     @JsonProperty("keyName")
     public String keyName;
+
     public CreateWorkspaceApiKeyResponse withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -26,9 +28,15 @@ public class CreateWorkspaceApiKeyResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public CreateWorkspaceApiKeyResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public CreateWorkspaceApiKeyResponse(@JsonProperty("key") String key, @JsonProperty("keyName") String keyName, @JsonProperty("workspaceId") String workspaceId) {
+        this.key = key;
+        this.keyName = keyName;
+        this.workspaceId = workspaceId;
+  }
 }

@@ -12,6 +12,7 @@ public class PickupStoreInfo {
      */
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public PickupStoreInfo withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -22,6 +23,7 @@ public class PickupStoreInfo {
      */
     @JsonProperty("address")
     public String address;
+
     public PickupStoreInfo withAddress(String address) {
         this.address = address;
         return this;
@@ -32,6 +34,7 @@ public class PickupStoreInfo {
      */
     @JsonProperty("dockId")
     public String dockId;
+
     public PickupStoreInfo withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -42,6 +45,7 @@ public class PickupStoreInfo {
      */
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public PickupStoreInfo withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -52,9 +56,17 @@ public class PickupStoreInfo {
      */
     @JsonProperty("isPickupStore")
     public Boolean isPickupStore;
+
     public PickupStoreInfo withIsPickupStore(Boolean isPickupStore) {
         this.isPickupStore = isPickupStore;
         return this;
     }
     
+    public PickupStoreInfo(@JsonProperty("additionalInfo") String additionalInfo, @JsonProperty("address") String address, @JsonProperty("dockId") String dockId, @JsonProperty("friendlyName") String friendlyName, @JsonProperty("isPickupStore") Boolean isPickupStore) {
+        this.additionalInfo = additionalInfo;
+        this.address = address;
+        this.dockId = dockId;
+        this.friendlyName = friendlyName;
+        this.isPickupStore = isPickupStore;
+  }
 }

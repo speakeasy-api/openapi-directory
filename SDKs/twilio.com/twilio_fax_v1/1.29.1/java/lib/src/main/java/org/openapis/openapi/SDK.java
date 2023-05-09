@@ -155,6 +155,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -196,10 +201,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFaxResponse res = new org.openapis.openapi.models.operations.DeleteFaxResponse() {{
+        org.openapis.openapi.models.operations.DeleteFaxResponse res = new org.openapis.openapi.models.operations.DeleteFaxResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -246,10 +249,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFaxMediaResponse res = new org.openapis.openapi.models.operations.DeleteFaxMediaResponse() {{
+        org.openapis.openapi.models.operations.DeleteFaxMediaResponse res = new org.openapis.openapi.models.operations.DeleteFaxMediaResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -296,11 +297,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchFaxResponse res = new org.openapis.openapi.models.operations.FetchFaxResponse() {{
+        org.openapis.openapi.models.operations.FetchFaxResponse res = new org.openapis.openapi.models.operations.FetchFaxResponse(contentType, httpRes.statusCode()) {{
             faxV1Fax = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,11 +351,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchFaxMediaResponse res = new org.openapis.openapi.models.operations.FetchFaxMediaResponse() {{
+        org.openapis.openapi.models.operations.FetchFaxMediaResponse res = new org.openapis.openapi.models.operations.FetchFaxMediaResponse(contentType, httpRes.statusCode()) {{
             faxV1FaxFaxMedia = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,11 +411,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFaxResponse res = new org.openapis.openapi.models.operations.ListFaxResponse() {{
+        org.openapis.openapi.models.operations.ListFaxResponse res = new org.openapis.openapi.models.operations.ListFaxResponse(contentType, httpRes.statusCode()) {{
             listFaxResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,11 +471,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFaxMediaResponse res = new org.openapis.openapi.models.operations.ListFaxMediaResponse() {{
+        org.openapis.openapi.models.operations.ListFaxMediaResponse res = new org.openapis.openapi.models.operations.ListFaxMediaResponse(contentType, httpRes.statusCode()) {{
             listFaxMediaResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

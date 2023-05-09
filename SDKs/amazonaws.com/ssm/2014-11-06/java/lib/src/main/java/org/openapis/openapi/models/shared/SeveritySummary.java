@@ -15,6 +15,7 @@ public class SeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CriticalCount")
     public Long criticalCount;
+
     public SeveritySummary withCriticalCount(Long criticalCount) {
         this.criticalCount = criticalCount;
         return this;
@@ -23,6 +24,7 @@ public class SeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HighCount")
     public Long highCount;
+
     public SeveritySummary withHighCount(Long highCount) {
         this.highCount = highCount;
         return this;
@@ -31,6 +33,7 @@ public class SeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InformationalCount")
     public Long informationalCount;
+
     public SeveritySummary withInformationalCount(Long informationalCount) {
         this.informationalCount = informationalCount;
         return this;
@@ -39,6 +42,7 @@ public class SeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LowCount")
     public Long lowCount;
+
     public SeveritySummary withLowCount(Long lowCount) {
         this.lowCount = lowCount;
         return this;
@@ -47,6 +51,7 @@ public class SeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediumCount")
     public Long mediumCount;
+
     public SeveritySummary withMediumCount(Long mediumCount) {
         this.mediumCount = mediumCount;
         return this;
@@ -55,9 +60,11 @@ public class SeveritySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnspecifiedCount")
     public Long unspecifiedCount;
+
     public SeveritySummary withUnspecifiedCount(Long unspecifiedCount) {
         this.unspecifiedCount = unspecifiedCount;
         return this;
     }
     
+    public SeveritySummary(){}
 }

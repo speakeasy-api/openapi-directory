@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcAttributeRequest {
     
     public AttributeBooleanValue enableDnsHostnames;
+
     public ModifyVpcAttributeRequest withEnableDnsHostnames(AttributeBooleanValue enableDnsHostnames) {
         this.enableDnsHostnames = enableDnsHostnames;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcAttributeRequest {
     
     
     public AttributeBooleanValue enableDnsSupport;
+
     public ModifyVpcAttributeRequest withEnableDnsSupport(AttributeBooleanValue enableDnsSupport) {
         this.enableDnsSupport = enableDnsSupport;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpcAttributeRequest {
     
     
     public AttributeBooleanValue enableNetworkAddressUsageMetrics;
+
     public ModifyVpcAttributeRequest withEnableNetworkAddressUsageMetrics(AttributeBooleanValue enableNetworkAddressUsageMetrics) {
         this.enableNetworkAddressUsageMetrics = enableNetworkAddressUsageMetrics;
         return this;
@@ -30,9 +33,13 @@ public class ModifyVpcAttributeRequest {
     
     
     public String vpcId;
+
     public ModifyVpcAttributeRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ModifyVpcAttributeRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

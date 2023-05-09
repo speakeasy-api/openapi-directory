@@ -18,6 +18,7 @@ public class IosTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appBundleId")
     public String appBundleId;
+
     public IosTestLoop withAppBundleId(String appBundleId) {
         this.appBundleId = appBundleId;
         return this;
@@ -29,6 +30,7 @@ public class IosTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIpa")
     public FileReference appIpa;
+
     public IosTestLoop withAppIpa(FileReference appIpa) {
         this.appIpa = appIpa;
         return this;
@@ -40,9 +42,11 @@ public class IosTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scenarios")
     public Integer[] scenarios;
+
     public IosTestLoop withScenarios(Integer[] scenarios) {
         this.scenarios = scenarios;
         return this;
     }
     
+    public IosTestLoop(){}
 }

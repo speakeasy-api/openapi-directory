@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AcknowledgeThirdPartyJobInput {
     @JsonProperty("clientToken")
     public String clientToken;
+
     public AcknowledgeThirdPartyJobInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class AcknowledgeThirdPartyJobInput {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public AcknowledgeThirdPartyJobInput withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -26,9 +28,15 @@ public class AcknowledgeThirdPartyJobInput {
     
     @JsonProperty("nonce")
     public String nonce;
+
     public AcknowledgeThirdPartyJobInput withNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     
+    public AcknowledgeThirdPartyJobInput(@JsonProperty("clientToken") String clientToken, @JsonProperty("jobId") String jobId, @JsonProperty("nonce") String nonce) {
+        this.clientToken = clientToken;
+        this.jobId = jobId;
+        this.nonce = nonce;
+  }
 }

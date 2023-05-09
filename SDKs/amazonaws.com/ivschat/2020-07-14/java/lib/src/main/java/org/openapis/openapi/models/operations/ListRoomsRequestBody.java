@@ -15,6 +15,7 @@ public class ListRoomsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfigurationIdentifier")
     public String loggingConfigurationIdentifier;
+
     public ListRoomsRequestBody withLoggingConfigurationIdentifier(String loggingConfigurationIdentifier) {
         this.loggingConfigurationIdentifier = loggingConfigurationIdentifier;
         return this;
@@ -26,6 +27,7 @@ public class ListRoomsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListRoomsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListRoomsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageReviewHandlerUri")
     public String messageReviewHandlerUri;
+
     public ListRoomsRequestBody withMessageReviewHandlerUri(String messageReviewHandlerUri) {
         this.messageReviewHandlerUri = messageReviewHandlerUri;
         return this;
@@ -48,6 +51,7 @@ public class ListRoomsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListRoomsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,11 @@ public class ListRoomsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRoomsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRoomsRequestBody(){}
 }

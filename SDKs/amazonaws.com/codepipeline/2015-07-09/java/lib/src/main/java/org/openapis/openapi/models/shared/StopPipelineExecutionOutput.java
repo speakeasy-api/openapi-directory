@@ -15,9 +15,11 @@ public class StopPipelineExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public StopPipelineExecutionOutput withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
     }
     
+    public StopPipelineExecutionOutput(){}
 }

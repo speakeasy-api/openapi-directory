@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDatasetContentResponse {
     
     public String contentType;
+
     public GetDatasetContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDatasetContentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDatasetContentResponse getDatasetContentResponse;
+
     public GetDatasetContentResponse withGetDatasetContentResponse(org.openapis.openapi.models.shared.GetDatasetContentResponse getDatasetContentResponse) {
         this.getDatasetContentResponse = getDatasetContentResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDatasetContentResponse {
      */
     
     public Object internalFailureException;
+
     public GetDatasetContentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetDatasetContentResponse {
      */
     
     public Object invalidRequestException;
+
     public GetDatasetContentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetDatasetContentResponse {
     
     
     public Integer statusCode;
+
     public GetDatasetContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDatasetContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDatasetContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetDatasetContentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDatasetContentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetDatasetContentResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetDatasetContentResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class GetDatasetContentResponse {
      */
     
     public Object throttlingException;
+
     public GetDatasetContentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetDatasetContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

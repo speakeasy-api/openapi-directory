@@ -12,6 +12,7 @@ public class ApiCoreDtoAccountingConversionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideComCost")
     public Boolean hideComCost;
+
     public ApiCoreDtoAccountingConversionOptions withHideComCost(Boolean hideComCost) {
         this.hideComCost = hideComCost;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoAccountingConversionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideCost")
     public Boolean hideCost;
+
     public ApiCoreDtoAccountingConversionOptions withHideCost(Boolean hideCost) {
         this.hideCost = hideCost;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreDtoAccountingConversionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideCount")
     public Boolean hideCount;
+
     public ApiCoreDtoAccountingConversionOptions withHideCount(Boolean hideCount) {
         this.hideCount = hideCount;
         return this;
@@ -36,6 +39,7 @@ public class ApiCoreDtoAccountingConversionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideParams")
     public Boolean hideParams;
+
     public ApiCoreDtoAccountingConversionOptions withHideParams(Boolean hideParams) {
         this.hideParams = hideParams;
         return this;
@@ -44,6 +48,7 @@ public class ApiCoreDtoAccountingConversionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideValue")
     public Boolean hideValue;
+
     public ApiCoreDtoAccountingConversionOptions withHideValue(Boolean hideValue) {
         this.hideValue = hideValue;
         return this;
@@ -52,6 +57,7 @@ public class ApiCoreDtoAccountingConversionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentCommission")
     public Integer percentCommission;
+
     public ApiCoreDtoAccountingConversionOptions withPercentCommission(Integer percentCommission) {
         this.percentCommission = percentCommission;
         return this;
@@ -60,9 +66,11 @@ public class ApiCoreDtoAccountingConversionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentValue")
     public Integer percentValue;
+
     public ApiCoreDtoAccountingConversionOptions withPercentValue(Integer percentValue) {
         this.percentValue = percentValue;
         return this;
     }
     
+    public ApiCoreDtoAccountingConversionOptions(){}
 }

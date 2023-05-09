@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentBatchInline")
     public GoogleCloudDialogflowV2beta1IntentBatchInput intentBatchInline;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput withIntentBatchInline(GoogleCloudDialogflowV2beta1IntentBatchInput intentBatchInline) {
         this.intentBatchInline = intentBatchInline;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentBatchUri")
     public String intentBatchUri;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput withIntentBatchUri(String intentBatchUri) {
         this.intentBatchUri = intentBatchUri;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentView")
     public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestIntentViewEnum intentView;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput withIntentView(GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestIntentViewEnum intentView) {
         this.intentView = intentView;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestInput(){}
 }

@@ -18,6 +18,7 @@ public class NotifyShopperResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayedReference")
     public String displayedReference;
+
     public NotifyShopperResult withDisplayedReference(String displayedReference) {
         this.displayedReference = displayedReference;
         return this;
@@ -29,6 +30,7 @@ public class NotifyShopperResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NotifyShopperResult withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class NotifyShopperResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public NotifyShopperResult withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -51,6 +54,7 @@ public class NotifyShopperResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public NotifyShopperResult withReference(String reference) {
         this.reference = reference;
         return this;
@@ -62,6 +66,7 @@ public class NotifyShopperResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public NotifyShopperResult withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -73,6 +78,7 @@ public class NotifyShopperResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperNotificationReference")
     public String shopperNotificationReference;
+
     public NotifyShopperResult withShopperNotificationReference(String shopperNotificationReference) {
         this.shopperNotificationReference = shopperNotificationReference;
         return this;
@@ -84,9 +90,11 @@ public class NotifyShopperResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storedPaymentMethodId")
     public String storedPaymentMethodId;
+
     public NotifyShopperResult withStoredPaymentMethodId(String storedPaymentMethodId) {
         this.storedPaymentMethodId = storedPaymentMethodId;
         return this;
     }
     
+    public NotifyShopperResult(){}
 }

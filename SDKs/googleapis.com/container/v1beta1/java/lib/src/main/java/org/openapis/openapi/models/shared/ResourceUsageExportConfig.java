@@ -18,6 +18,7 @@ public class ResourceUsageExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDestination")
     public BigQueryDestination bigqueryDestination;
+
     public ResourceUsageExportConfig withBigqueryDestination(BigQueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
         return this;
@@ -29,6 +30,7 @@ public class ResourceUsageExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumptionMeteringConfig")
     public ConsumptionMeteringConfig consumptionMeteringConfig;
+
     public ResourceUsageExportConfig withConsumptionMeteringConfig(ConsumptionMeteringConfig consumptionMeteringConfig) {
         this.consumptionMeteringConfig = consumptionMeteringConfig;
         return this;
@@ -40,9 +42,11 @@ public class ResourceUsageExportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableNetworkEgressMetering")
     public Boolean enableNetworkEgressMetering;
+
     public ResourceUsageExportConfig withEnableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;
         return this;
     }
     
+    public ResourceUsageExportConfig(){}
 }

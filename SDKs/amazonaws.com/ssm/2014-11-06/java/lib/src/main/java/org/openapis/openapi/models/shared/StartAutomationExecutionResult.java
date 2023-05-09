@@ -15,9 +15,11 @@ public class StartAutomationExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public StartAutomationExecutionResult withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
     }
     
+    public StartAutomationExecutionResult(){}
 }

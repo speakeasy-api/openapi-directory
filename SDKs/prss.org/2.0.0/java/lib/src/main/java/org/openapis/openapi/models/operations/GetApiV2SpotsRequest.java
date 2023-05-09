@@ -12,6 +12,7 @@ public class GetApiV2SpotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderById")
     public GetApiV2SpotsOrderByIDEnum orderById;
+
     public GetApiV2SpotsRequest withOrderById(GetApiV2SpotsOrderByIDEnum orderById) {
         this.orderById = orderById;
         return this;
@@ -22,6 +23,7 @@ public class GetApiV2SpotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetApiV2SpotsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -32,9 +34,11 @@ public class GetApiV2SpotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageStart")
     public Integer pageStart;
+
     public GetApiV2SpotsRequest withPageStart(Integer pageStart) {
         this.pageStart = pageStart;
         return this;
     }
     
+    public GetApiV2SpotsRequest(){}
 }

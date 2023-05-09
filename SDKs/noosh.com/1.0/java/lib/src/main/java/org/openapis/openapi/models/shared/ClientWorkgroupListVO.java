@@ -15,6 +15,7 @@ public class ClientWorkgroupListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ClientWorkgroupSimpleVO[] results;
+
     public ClientWorkgroupListVO withResults(ClientWorkgroupSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class ClientWorkgroupListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public ClientWorkgroupListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class ClientWorkgroupListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public ClientWorkgroupListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public ClientWorkgroupListVO(){}
 }

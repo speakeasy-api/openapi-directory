@@ -18,9 +18,11 @@ public class Usage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageRateTimeline")
     public UsageRateTimeline usageRateTimeline;
+
     public Usage withUsageRateTimeline(UsageRateTimeline usageRateTimeline) {
         this.usageRateTimeline = usageRateTimeline;
         return this;
     }
     
+    public Usage(){}
 }

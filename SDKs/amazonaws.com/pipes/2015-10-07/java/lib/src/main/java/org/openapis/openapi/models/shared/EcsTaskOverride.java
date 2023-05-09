@@ -15,6 +15,7 @@ public class EcsTaskOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerOverrides")
     public EcsContainerOverride[] containerOverrides;
+
     public EcsTaskOverride withContainerOverrides(EcsContainerOverride[] containerOverrides) {
         this.containerOverrides = containerOverrides;
         return this;
@@ -23,6 +24,7 @@ public class EcsTaskOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cpu")
     public String cpu;
+
     public EcsTaskOverride withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class EcsTaskOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EphemeralStorage")
     public EcsEphemeralStorage ephemeralStorage;
+
     public EcsTaskOverride withEphemeralStorage(EcsEphemeralStorage ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -39,6 +42,7 @@ public class EcsTaskOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public EcsTaskOverride withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -47,6 +51,7 @@ public class EcsTaskOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceAcceleratorOverrides")
     public EcsInferenceAcceleratorOverride[] inferenceAcceleratorOverrides;
+
     public EcsTaskOverride withInferenceAcceleratorOverrides(EcsInferenceAcceleratorOverride[] inferenceAcceleratorOverrides) {
         this.inferenceAcceleratorOverrides = inferenceAcceleratorOverrides;
         return this;
@@ -55,6 +60,7 @@ public class EcsTaskOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public String memory;
+
     public EcsTaskOverride withMemory(String memory) {
         this.memory = memory;
         return this;
@@ -63,9 +69,11 @@ public class EcsTaskOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRoleArn")
     public String taskRoleArn;
+
     public EcsTaskOverride withTaskRoleArn(String taskRoleArn) {
         this.taskRoleArn = taskRoleArn;
         return this;
     }
     
+    public EcsTaskOverride(){}
 }

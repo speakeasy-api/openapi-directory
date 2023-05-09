@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPullrequestsRequest {
@@ -14,6 +15,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum state;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withState(GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum state) {
         this.state = state;
         return this;
@@ -36,9 +39,14 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

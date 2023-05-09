@@ -12,6 +12,7 @@ public class Images200ApplicationJSONImageResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Images200ApplicationJSONImageResultsImage image;
+
     public Images200ApplicationJSONImageResults withImage(Images200ApplicationJSONImageResultsImage image) {
         this.image = image;
         return this;
@@ -20,9 +21,11 @@ public class Images200ApplicationJSONImageResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Images200ApplicationJSONImageResultsLink link;
+
     public Images200ApplicationJSONImageResults withLink(Images200ApplicationJSONImageResultsLink link) {
         this.link = link;
         return this;
     }
     
+    public Images200ApplicationJSONImageResults(){}
 }

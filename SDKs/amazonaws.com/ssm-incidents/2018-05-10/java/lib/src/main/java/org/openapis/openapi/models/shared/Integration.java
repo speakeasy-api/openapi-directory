@@ -15,9 +15,11 @@ public class Integration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagerDutyConfiguration")
     public PagerDutyConfiguration pagerDutyConfiguration;
+
     public Integration withPagerDutyConfiguration(PagerDutyConfiguration pagerDutyConfiguration) {
         this.pagerDutyConfiguration = pagerDutyConfiguration;
         return this;
     }
     
+    public Integration(){}
 }

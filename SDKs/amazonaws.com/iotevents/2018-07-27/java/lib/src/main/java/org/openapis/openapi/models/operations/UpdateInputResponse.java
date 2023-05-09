@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInputResponse {
     
     public String contentType;
+
     public UpdateInputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateInputResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateInputResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateInputResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateInputResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateInputResponse {
     
     
     public Integer statusCode;
+
     public UpdateInputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateInputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateInputResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateInputResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateInputResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateInputResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateInputResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateInputResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateInputResponse {
      */
     
     public Object throttlingException;
+
     public UpdateInputResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateInputResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateInputResponse updateInputResponse;
+
     public UpdateInputResponse withUpdateInputResponse(org.openapis.openapi.models.shared.UpdateInputResponse updateInputResponse) {
         this.updateInputResponse = updateInputResponse;
         return this;
     }
     
+    public UpdateInputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

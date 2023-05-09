@@ -15,6 +15,7 @@ public class TrafficPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Phases")
     public Phase[] phases;
+
     public TrafficPattern withPhases(Phase[] phases) {
         this.phases = phases;
         return this;
@@ -23,9 +24,11 @@ public class TrafficPattern {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrafficType")
     public TrafficTypeEnum trafficType;
+
     public TrafficPattern withTrafficType(TrafficTypeEnum trafficType) {
         this.trafficType = trafficType;
         return this;
     }
     
+    public TrafficPattern(){}
 }

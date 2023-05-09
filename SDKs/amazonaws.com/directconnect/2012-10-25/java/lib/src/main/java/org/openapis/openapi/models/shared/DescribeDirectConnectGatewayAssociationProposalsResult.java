@@ -15,6 +15,7 @@ public class DescribeDirectConnectGatewayAssociationProposalsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayAssociationProposals")
     public DirectConnectGatewayAssociationProposal[] directConnectGatewayAssociationProposals;
+
     public DescribeDirectConnectGatewayAssociationProposalsResult withDirectConnectGatewayAssociationProposals(DirectConnectGatewayAssociationProposal[] directConnectGatewayAssociationProposals) {
         this.directConnectGatewayAssociationProposals = directConnectGatewayAssociationProposals;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDirectConnectGatewayAssociationProposalsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeDirectConnectGatewayAssociationProposalsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDirectConnectGatewayAssociationProposalsResult(){}
 }

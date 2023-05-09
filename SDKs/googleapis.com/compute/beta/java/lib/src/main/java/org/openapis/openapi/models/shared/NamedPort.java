@@ -18,6 +18,7 @@ public class NamedPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NamedPort withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class NamedPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public NamedPort withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public NamedPort(){}
 }

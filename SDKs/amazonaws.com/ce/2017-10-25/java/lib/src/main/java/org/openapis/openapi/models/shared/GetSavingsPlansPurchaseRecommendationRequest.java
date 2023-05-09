@@ -12,6 +12,7 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountScope")
     public AccountScopeEnum accountScope;
+
     public GetSavingsPlansPurchaseRecommendationRequest withAccountScope(AccountScopeEnum accountScope) {
         this.accountScope = accountScope;
         return this;
@@ -20,6 +21,7 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetSavingsPlansPurchaseRecommendationRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -27,6 +29,7 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     
     @JsonProperty("LookbackPeriodInDays")
     public LookbackPeriodInDaysEnum lookbackPeriodInDays;
+
     public GetSavingsPlansPurchaseRecommendationRequest withLookbackPeriodInDays(LookbackPeriodInDaysEnum lookbackPeriodInDays) {
         this.lookbackPeriodInDays = lookbackPeriodInDays;
         return this;
@@ -35,6 +38,7 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetSavingsPlansPurchaseRecommendationRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -43,6 +47,7 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public GetSavingsPlansPurchaseRecommendationRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -50,6 +55,7 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     
     @JsonProperty("PaymentOption")
     public PaymentOptionEnum paymentOption;
+
     public GetSavingsPlansPurchaseRecommendationRequest withPaymentOption(PaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -57,6 +63,7 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     
     @JsonProperty("SavingsPlansType")
     public SupportedSavingsPlansTypeEnum savingsPlansType;
+
     public GetSavingsPlansPurchaseRecommendationRequest withSavingsPlansType(SupportedSavingsPlansTypeEnum savingsPlansType) {
         this.savingsPlansType = savingsPlansType;
         return this;
@@ -64,9 +71,16 @@ public class GetSavingsPlansPurchaseRecommendationRequest {
     
     @JsonProperty("TermInYears")
     public TermInYearsEnum termInYears;
+
     public GetSavingsPlansPurchaseRecommendationRequest withTermInYears(TermInYearsEnum termInYears) {
         this.termInYears = termInYears;
         return this;
     }
     
+    public GetSavingsPlansPurchaseRecommendationRequest(@JsonProperty("LookbackPeriodInDays") LookbackPeriodInDaysEnum lookbackPeriodInDays, @JsonProperty("PaymentOption") PaymentOptionEnum paymentOption, @JsonProperty("SavingsPlansType") SupportedSavingsPlansTypeEnum savingsPlansType, @JsonProperty("TermInYears") TermInYearsEnum termInYears) {
+        this.lookbackPeriodInDays = lookbackPeriodInDays;
+        this.paymentOption = paymentOption;
+        this.savingsPlansType = savingsPlansType;
+        this.termInYears = termInYears;
+  }
 }

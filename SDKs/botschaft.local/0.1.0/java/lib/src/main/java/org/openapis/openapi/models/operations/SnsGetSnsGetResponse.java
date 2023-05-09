@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SnsGetSnsGetResponse {
     
     public String contentType;
+
     public SnsGetSnsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SnsGetSnsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public SnsGetSnsGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class SnsGetSnsGetResponse {
     
     
     public Integer statusCode;
+
     public SnsGetSnsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SnsGetSnsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SnsGetSnsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SnsGetSnsGetResponse {
      */
     
     public Object snsGetSnsGet200ApplicationJSONAny;
+
     public SnsGetSnsGetResponse withSnsGetSnsGet200ApplicationJSONAny(Object snsGetSnsGet200ApplicationJSONAny) {
         this.snsGetSnsGet200ApplicationJSONAny = snsGetSnsGet200ApplicationJSONAny;
         return this;
     }
     
+    public SnsGetSnsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

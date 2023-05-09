@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeploymentStageStatusSummary {
     @JsonProperty("DeploymentConfig")
     public EdgeDeploymentConfig deploymentConfig;
+
     public DeploymentStageStatusSummary withDeploymentConfig(EdgeDeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -19,6 +20,7 @@ public class DeploymentStageStatusSummary {
     
     @JsonProperty("DeploymentStatus")
     public EdgeDeploymentStatus deploymentStatus;
+
     public DeploymentStageStatusSummary withDeploymentStatus(EdgeDeploymentStatus deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -26,6 +28,7 @@ public class DeploymentStageStatusSummary {
     
     @JsonProperty("DeviceSelectionConfig")
     public DeviceSelectionConfig deviceSelectionConfig;
+
     public DeploymentStageStatusSummary withDeviceSelectionConfig(DeviceSelectionConfig deviceSelectionConfig) {
         this.deviceSelectionConfig = deviceSelectionConfig;
         return this;
@@ -33,9 +36,16 @@ public class DeploymentStageStatusSummary {
     
     @JsonProperty("StageName")
     public String stageName;
+
     public DeploymentStageStatusSummary withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public DeploymentStageStatusSummary(@JsonProperty("DeploymentConfig") EdgeDeploymentConfig deploymentConfig, @JsonProperty("DeploymentStatus") EdgeDeploymentStatus deploymentStatus, @JsonProperty("DeviceSelectionConfig") DeviceSelectionConfig deviceSelectionConfig, @JsonProperty("StageName") String stageName) {
+        this.deploymentConfig = deploymentConfig;
+        this.deploymentStatus = deploymentStatus;
+        this.deviceSelectionConfig = deviceSelectionConfig;
+        this.stageName = stageName;
+  }
 }

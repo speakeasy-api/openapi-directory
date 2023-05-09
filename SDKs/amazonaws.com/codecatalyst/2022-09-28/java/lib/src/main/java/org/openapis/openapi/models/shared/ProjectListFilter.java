@@ -15,6 +15,7 @@ public class ProjectListFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public ProjectListFilter withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -22,6 +23,7 @@ public class ProjectListFilter {
     
     @JsonProperty("key")
     public FilterKeyEnum key;
+
     public ProjectListFilter withKey(FilterKeyEnum key) {
         this.key = key;
         return this;
@@ -29,9 +31,14 @@ public class ProjectListFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public ProjectListFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ProjectListFilter(@JsonProperty("key") FilterKeyEnum key, @JsonProperty("values") String[] values) {
+        this.key = key;
+        this.values = values;
+  }
 }

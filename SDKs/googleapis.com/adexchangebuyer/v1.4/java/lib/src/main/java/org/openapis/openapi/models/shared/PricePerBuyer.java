@@ -18,6 +18,7 @@ public class PricePerBuyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auctionTier")
     public String auctionTier;
+
     public PricePerBuyer withAuctionTier(String auctionTier) {
         this.auctionTier = auctionTier;
         return this;
@@ -26,6 +27,7 @@ public class PricePerBuyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedBuyer")
     public Buyer billedBuyer;
+
     public PricePerBuyer withBilledBuyer(Buyer billedBuyer) {
         this.billedBuyer = billedBuyer;
         return this;
@@ -34,6 +36,7 @@ public class PricePerBuyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public Buyer buyer;
+
     public PricePerBuyer withBuyer(Buyer buyer) {
         this.buyer = buyer;
         return this;
@@ -42,9 +45,11 @@ public class PricePerBuyer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public PricePerBuyer withPrice(Price price) {
         this.price = price;
         return this;
     }
     
+    public PricePerBuyer(){}
 }

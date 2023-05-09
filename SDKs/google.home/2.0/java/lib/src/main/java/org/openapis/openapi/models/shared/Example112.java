@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example112 {
     @JsonProperty("device_class")
     public Integer deviceClass;
+
     public Example112 withDeviceClass(Integer deviceClass) {
         this.deviceClass = deviceClass;
         return this;
@@ -16,6 +17,7 @@ public class Example112 {
     
     @JsonProperty("device_type")
     public Integer deviceType;
+
     public Example112 withDeviceType(Integer deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -23,6 +25,7 @@ public class Example112 {
     
     @JsonProperty("expected_profiles")
     public Integer expectedProfiles;
+
     public Example112 withExpectedProfiles(Integer expectedProfiles) {
         this.expectedProfiles = expectedProfiles;
         return this;
@@ -30,6 +33,7 @@ public class Example112 {
     
     @JsonProperty("mac_address")
     public String macAddress;
+
     public Example112 withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -37,6 +41,7 @@ public class Example112 {
     
     @JsonProperty("name")
     public String name;
+
     public Example112 withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +49,18 @@ public class Example112 {
     
     @JsonProperty("rssi")
     public Integer rssi;
+
     public Example112 withRssi(Integer rssi) {
         this.rssi = rssi;
         return this;
     }
     
+    public Example112(@JsonProperty("device_class") Integer deviceClass, @JsonProperty("device_type") Integer deviceType, @JsonProperty("expected_profiles") Integer expectedProfiles, @JsonProperty("mac_address") String macAddress, @JsonProperty("name") String name, @JsonProperty("rssi") Integer rssi) {
+        this.deviceClass = deviceClass;
+        this.deviceType = deviceType;
+        this.expectedProfiles = expectedProfiles;
+        this.macAddress = macAddress;
+        this.name = name;
+        this.rssi = rssi;
+  }
 }

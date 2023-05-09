@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageSystemsRequest {
@@ -12,6 +13,7 @@ public class PackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
     public String[] filterSystemProfileSapSidsIn;
+
     public PackageSystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
         this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
@@ -22,6 +24,7 @@ public class PackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
     public String filterSystemProfileSapSystem;
+
     public PackageSystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
         this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
@@ -32,6 +35,7 @@ public class PackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PackageSystemsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class PackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PackageSystemsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -52,6 +57,7 @@ public class PackageSystemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
     public String packageName;
+
     public PackageSystemsRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -62,9 +68,13 @@ public class PackageSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String[] tags;
+
     public PackageSystemsRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PackageSystemsRequest(@JsonProperty("package_name") String packageName) {
+        this.packageName = packageName;
+  }
 }

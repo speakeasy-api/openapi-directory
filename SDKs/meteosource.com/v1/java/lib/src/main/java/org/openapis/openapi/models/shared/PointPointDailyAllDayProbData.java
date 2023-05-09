@@ -16,6 +16,7 @@ public class PointPointDailyAllDayProbData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeze")
     public Double freeze;
+
     public PointPointDailyAllDayProbData withFreeze(Double freeze) {
         this.freeze = freeze;
         return this;
@@ -28,6 +29,7 @@ public class PointPointDailyAllDayProbData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precipitation")
     public Long precipitation;
+
     public PointPointDailyAllDayProbData withPrecipitation(Long precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -40,9 +42,11 @@ public class PointPointDailyAllDayProbData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storm")
     public Double storm;
+
     public PointPointDailyAllDayProbData withStorm(Double storm) {
         this.storm = storm;
         return this;
     }
     
+    public PointPointDailyAllDayProbData(){}
 }

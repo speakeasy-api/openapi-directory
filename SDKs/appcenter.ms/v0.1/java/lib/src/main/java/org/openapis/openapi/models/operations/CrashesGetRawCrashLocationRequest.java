@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesGetRawCrashLocationRequest {
@@ -12,6 +13,7 @@ public class CrashesGetRawCrashLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CrashesGetRawCrashLocationRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class CrashesGetRawCrashLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
     public String crashGroupId;
+
     public CrashesGetRawCrashLocationRequest withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -32,6 +35,7 @@ public class CrashesGetRawCrashLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
     public String crashId;
+
     public CrashesGetRawCrashLocationRequest withCrashId(String crashId) {
         this.crashId = crashId;
         return this;
@@ -42,9 +46,16 @@ public class CrashesGetRawCrashLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CrashesGetRawCrashLocationRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CrashesGetRawCrashLocationRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_group_id") String crashGroupId, @JsonProperty("crash_id") String crashId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.crashGroupId = crashGroupId;
+        this.crashId = crashId;
+        this.ownerName = ownerName;
+  }
 }

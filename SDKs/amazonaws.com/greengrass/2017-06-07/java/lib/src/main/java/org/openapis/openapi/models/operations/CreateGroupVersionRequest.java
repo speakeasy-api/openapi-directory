@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGroupVersionRequest {
@@ -12,6 +13,7 @@ public class CreateGroupVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GroupId")
     public String groupId;
+
     public CreateGroupVersionRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,6 +21,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateGroupVersionRequestBody requestBody;
+
     public CreateGroupVersionRequest withRequestBody(CreateGroupVersionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateGroupVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateGroupVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateGroupVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateGroupVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateGroupVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateGroupVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class CreateGroupVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateGroupVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,9 +88,14 @@ public class CreateGroupVersionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-Client-Token")
     public String xAmznClientToken;
+
     public CreateGroupVersionRequest withXAmznClientToken(String xAmznClientToken) {
         this.xAmznClientToken = xAmznClientToken;
         return this;
     }
     
+    public CreateGroupVersionRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("RequestBody") CreateGroupVersionRequestBody requestBody) {
+        this.groupId = groupId;
+        this.requestBody = requestBody;
+  }
 }

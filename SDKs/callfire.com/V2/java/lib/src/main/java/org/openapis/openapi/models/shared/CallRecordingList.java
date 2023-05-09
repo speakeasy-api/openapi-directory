@@ -15,9 +15,11 @@ public class CallRecordingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CallRecording[] items;
+
     public CallRecordingList withItems(CallRecording[] items) {
         this.items = items;
         return this;
     }
     
+    public CallRecordingList(){}
 }

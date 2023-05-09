@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest {
     @JsonProperty("buy_instructions")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withBuyInstructions(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions) {
         this.buyInstructions = buyInstructions;
         return this;
@@ -22,6 +23,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("instruction_id")
     public String instructionId;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withInstructionId(String instructionId) {
         this.instructionId = instructionId;
         return this;
@@ -32,6 +34,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("portfolio_deviation")
     public String portfolioDeviation;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withPortfolioDeviation(String portfolioDeviation) {
         this.portfolioDeviation = portfolioDeviation;
         return this;
@@ -42,6 +45,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("portfolio_template_id")
     public String portfolioTemplateId;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -52,6 +56,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -62,6 +67,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("reason")
     public String reason;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -69,6 +75,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
     
     @JsonProperty("sell_instructions")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withSellInstructions(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions) {
         this.sellInstructions = sellInstructions;
         return this;
@@ -79,6 +86,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("status")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum status;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withStatus(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum status) {
         this.status = status;
         return this;
@@ -89,9 +97,21 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("transactions")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions[] transactions;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest withTransactions(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequest(@JsonProperty("buy_instructions") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest[] buyInstructions, @JsonProperty("instruction_id") String instructionId, @JsonProperty("portfolio_deviation") String portfolioDeviation, @JsonProperty("portfolio_template_id") String portfolioTemplateId, @JsonProperty("pot_id") String potId, @JsonProperty("reason") String reason, @JsonProperty("sell_instructions") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequest[] sellInstructions, @JsonProperty("status") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum status, @JsonProperty("transactions") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions[] transactions) {
+        this.buyInstructions = buyInstructions;
+        this.instructionId = instructionId;
+        this.portfolioDeviation = portfolioDeviation;
+        this.portfolioTemplateId = portfolioTemplateId;
+        this.potId = potId;
+        this.reason = reason;
+        this.sellInstructions = sellInstructions;
+        this.status = status;
+        this.transactions = transactions;
+  }
 }

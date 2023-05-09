@@ -12,6 +12,7 @@ public class PostNetworksIdActionsAddSubnetActionResponseActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostNetworksIdActionsAddSubnetActionResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostNetworksIdActionsAddSubnetActionResponseActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public PostNetworksIdActionsAddSubnetActionResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostNetworksIdActionsAddSubnetActionResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

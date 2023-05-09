@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2IntentMessageSimpleResponses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleResponses")
     public GoogleCloudDialogflowV2IntentMessageSimpleResponse[] simpleResponses;
+
     public GoogleCloudDialogflowV2IntentMessageSimpleResponses withSimpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponse[] simpleResponses) {
         this.simpleResponses = simpleResponses;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageSimpleResponses(){}
 }

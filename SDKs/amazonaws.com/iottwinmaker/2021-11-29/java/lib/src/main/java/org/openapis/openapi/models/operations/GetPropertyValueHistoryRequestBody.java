@@ -20,6 +20,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public GetPropertyValueHistoryRequestBody withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -31,6 +32,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public GetPropertyValueHistoryRequestBody withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -44,6 +46,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public GetPropertyValueHistoryRequestBody withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -55,6 +58,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GetPropertyValueHistoryRequestBody withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -66,6 +70,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public GetPropertyValueHistoryRequestBody withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -77,6 +82,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpolation")
     public GetPropertyValueHistoryRequestBodyInterpolation interpolation;
+
     public GetPropertyValueHistoryRequestBody withInterpolation(GetPropertyValueHistoryRequestBodyInterpolation interpolation) {
         this.interpolation = interpolation;
         return this;
@@ -88,6 +94,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetPropertyValueHistoryRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -99,6 +106,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetPropertyValueHistoryRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -110,6 +118,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderByTime")
     public GetPropertyValueHistoryRequestBodyOrderByTimeEnum orderByTime;
+
     public GetPropertyValueHistoryRequestBody withOrderByTime(GetPropertyValueHistoryRequestBodyOrderByTimeEnum orderByTime) {
         this.orderByTime = orderByTime;
         return this;
@@ -121,6 +130,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyFilters")
     public org.openapis.openapi.models.shared.PropertyFilter[] propertyFilters;
+
     public GetPropertyValueHistoryRequestBody withPropertyFilters(org.openapis.openapi.models.shared.PropertyFilter[] propertyFilters) {
         this.propertyFilters = propertyFilters;
         return this;
@@ -131,6 +141,7 @@ public class GetPropertyValueHistoryRequestBody {
      */
     @JsonProperty("selectedProperties")
     public String[] selectedProperties;
+
     public GetPropertyValueHistoryRequestBody withSelectedProperties(String[] selectedProperties) {
         this.selectedProperties = selectedProperties;
         return this;
@@ -144,6 +155,7 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public GetPropertyValueHistoryRequestBody withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -155,9 +167,13 @@ public class GetPropertyValueHistoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GetPropertyValueHistoryRequestBody withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetPropertyValueHistoryRequestBody(@JsonProperty("selectedProperties") String[] selectedProperties) {
+        this.selectedProperties = selectedProperties;
+  }
 }

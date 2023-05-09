@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteDBSubnetGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteDBSubnetGroupActionEnum action;
+
     public GETDeleteDBSubnetGroupRequest withAction(GETDeleteDBSubnetGroupActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSubnetGroupName")
     public String dbSubnetGroupName;
+
     public GETDeleteDBSubnetGroupRequest withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteDBSubnetGroupVersionEnum version;
+
     public GETDeleteDBSubnetGroupRequest withVersion(GETDeleteDBSubnetGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteDBSubnetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteDBSubnetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteDBSubnetGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteDBSubnetGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteDBSubnetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteDBSubnetGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,15 @@ public class GETDeleteDBSubnetGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteDBSubnetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteDBSubnetGroupRequest(@JsonProperty("Action") GETDeleteDBSubnetGroupActionEnum action, @JsonProperty("DBSubnetGroupName") String dbSubnetGroupName, @JsonProperty("Version") GETDeleteDBSubnetGroupVersionEnum version) {
+        this.action = action;
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        this.version = version;
+  }
 }

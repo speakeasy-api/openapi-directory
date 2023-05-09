@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesSetLabelsResponse {
     
     public String contentType;
+
     public IssuesSetLabelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesSetLabelsResponse {
     
     
     public Integer statusCode;
+
     public IssuesSetLabelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IssuesSetLabelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesSetLabelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IssuesSetLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesSetLabelsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class IssuesSetLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.Label[] labels;
+
     public IssuesSetLabelsResponse withLabels(org.openapis.openapi.models.shared.Label[] labels) {
         this.labels = labels;
         return this;
@@ -53,9 +59,14 @@ public class IssuesSetLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public IssuesSetLabelsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public IssuesSetLabelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

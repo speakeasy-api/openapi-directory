@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReactionsCreateForCommitCommentResponse {
     
     public String contentType;
+
     public ReactionsCreateForCommitCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReactionsCreateForCommitCommentResponse {
     
     
     public Integer statusCode;
+
     public ReactionsCreateForCommitCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReactionsCreateForCommitCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReactionsCreateForCommitCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReactionsCreateForCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.Reaction reaction;
+
     public ReactionsCreateForCommitCommentResponse withReaction(org.openapis.openapi.models.shared.Reaction reaction) {
         this.reaction = reaction;
         return this;
@@ -43,6 +48,7 @@ public class ReactionsCreateForCommitCommentResponse {
      */
     
     public ReactionsCreateForCommitComment415ApplicationJSON reactionsCreateForCommitComment415ApplicationJSONObject;
+
     public ReactionsCreateForCommitCommentResponse withReactionsCreateForCommitComment415ApplicationJSONObject(ReactionsCreateForCommitComment415ApplicationJSON reactionsCreateForCommitComment415ApplicationJSONObject) {
         this.reactionsCreateForCommitComment415ApplicationJSONObject = reactionsCreateForCommitComment415ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReactionsCreateForCommitCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReactionsCreateForCommitCommentResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReactionsCreateForCommitCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

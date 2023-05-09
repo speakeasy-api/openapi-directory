@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ResourceGroup {
     @JsonProperty("arn")
     public String arn;
+
     public ResourceGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class ResourceGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ResourceGroup withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,9 +35,15 @@ public class ResourceGroup {
     
     @JsonProperty("tags")
     public ResourceGroupTag[] tags;
+
     public ResourceGroup withTags(ResourceGroupTag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ResourceGroup(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("tags") ResourceGroupTag[] tags) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.tags = tags;
+  }
 }

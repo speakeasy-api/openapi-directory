@@ -17,6 +17,7 @@ public class ApiCoreRequestsPatchBody {
     @JsonProperty("Action")
     @SpeakeasyMetadata("form:name=Action")
     public String action;
+
     public ApiCoreRequestsPatchBody withAction(String action) {
         this.action = action;
         return this;
@@ -26,9 +27,11 @@ public class ApiCoreRequestsPatchBody {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Long id;
+
     public ApiCoreRequestsPatchBody withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public ApiCoreRequestsPatchBody(){}
 }

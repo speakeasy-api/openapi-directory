@@ -58,12 +58,10 @@ public class ClientCredentials {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddClientSecretResponse res = new org.openapis.openapi.models.operations.AddClientSecretResponse() {{
+        org.openapis.openapi.models.operations.AddClientSecretResponse res = new org.openapis.openapi.models.operations.AddClientSecretResponse(contentType, httpRes.statusCode()) {{
             clientCredentialsResponses = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

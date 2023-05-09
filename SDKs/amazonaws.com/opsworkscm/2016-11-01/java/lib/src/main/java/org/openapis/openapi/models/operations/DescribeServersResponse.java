@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeServersResponse {
     
     public String contentType;
+
     public DescribeServersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeServersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeServersResponse describeServersResponse;
+
     public DescribeServersResponse withDescribeServersResponse(org.openapis.openapi.models.shared.DescribeServersResponse describeServersResponse) {
         this.describeServersResponse = describeServersResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeServersResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeServersResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeServersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeServersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeServersResponse {
     
     
     public Integer statusCode;
+
     public DescribeServersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeServersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeServersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeServersResponse {
      */
     
     public Object validationException;
+
     public DescribeServersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeServersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

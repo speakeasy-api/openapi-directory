@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePipelineResponse {
     
     public String contentType;
+
     public CreatePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePipelineResponse createPipelineResponse;
+
     public CreatePipelineResponse withCreatePipelineResponse(org.openapis.openapi.models.shared.CreatePipelineResponse createPipelineResponse) {
         this.createPipelineResponse = createPipelineResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreatePipelineResponse {
      */
     
     public Object internalFailureException;
+
     public CreatePipelineResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public CreatePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePipelineResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePipelineResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreatePipelineResponse {
     
     
     public Integer statusCode;
+
     public CreatePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreatePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreatePipelineResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreatePipelineResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreatePipelineResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreatePipelineResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class CreatePipelineResponse {
      */
     
     public Object throttlingException;
+
     public CreatePipelineResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreatePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

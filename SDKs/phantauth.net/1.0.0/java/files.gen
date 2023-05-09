@@ -65,4 +65,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUserUsernameTokenKin
 lib/src/main/java/org/openapis/openapi/models/operations/PostUserRequestBodyAddress.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUserRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUserResponse.java
+docs/sdk/README.md
+docs/client/README.md
+docs/domain/README.md
+docs/fleet/README.md
+docs/team/README.md
+docs/tenant/README.md
+docs/user/README.md
 USAGE.md

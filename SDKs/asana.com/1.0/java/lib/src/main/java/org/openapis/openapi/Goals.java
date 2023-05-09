@@ -69,12 +69,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddFollowersResponse res = new org.openapis.openapi.models.operations.AddFollowersResponse() {{
+        org.openapis.openapi.models.operations.AddFollowersResponse res = new org.openapis.openapi.models.operations.AddFollowersResponse(contentType, httpRes.statusCode()) {{
             addFollowers200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,12 +128,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGoalResponse res = new org.openapis.openapi.models.operations.CreateGoalResponse() {{
+        org.openapis.openapi.models.operations.CreateGoalResponse res = new org.openapis.openapi.models.operations.CreateGoalResponse(contentType, httpRes.statusCode()) {{
             createGoal201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -189,12 +185,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGoalMetricResponse res = new org.openapis.openapi.models.operations.CreateGoalMetricResponse() {{
+        org.openapis.openapi.models.operations.CreateGoalMetricResponse res = new org.openapis.openapi.models.operations.CreateGoalMetricResponse(contentType, httpRes.statusCode()) {{
             createGoalMetric200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,12 +239,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGoalResponse res = new org.openapis.openapi.models.operations.DeleteGoalResponse() {{
+        org.openapis.openapi.models.operations.DeleteGoalResponse res = new org.openapis.openapi.models.operations.DeleteGoalResponse(contentType, httpRes.statusCode()) {{
             deleteGoal200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,12 +291,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGoalResponse res = new org.openapis.openapi.models.operations.GetGoalResponse() {{
+        org.openapis.openapi.models.operations.GetGoalResponse res = new org.openapis.openapi.models.operations.GetGoalResponse(contentType, httpRes.statusCode()) {{
             getGoal200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -353,12 +343,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGoalsResponse res = new org.openapis.openapi.models.operations.GetGoalsResponse() {{
+        org.openapis.openapi.models.operations.GetGoalsResponse res = new org.openapis.openapi.models.operations.GetGoalsResponse(contentType, httpRes.statusCode()) {{
             getGoals200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -407,12 +395,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetParentGoalsForGoalResponse res = new org.openapis.openapi.models.operations.GetParentGoalsForGoalResponse() {{
+        org.openapis.openapi.models.operations.GetParentGoalsForGoalResponse res = new org.openapis.openapi.models.operations.GetParentGoalsForGoalResponse(contentType, httpRes.statusCode()) {{
             getParentGoalsForGoal200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -468,12 +454,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveFollowersResponse res = new org.openapis.openapi.models.operations.RemoveFollowersResponse() {{
+        org.openapis.openapi.models.operations.RemoveFollowersResponse res = new org.openapis.openapi.models.operations.RemoveFollowersResponse(contentType, httpRes.statusCode()) {{
             removeFollowers200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,12 +515,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGoalResponse res = new org.openapis.openapi.models.operations.UpdateGoalResponse() {{
+        org.openapis.openapi.models.operations.UpdateGoalResponse res = new org.openapis.openapi.models.operations.UpdateGoalResponse(contentType, httpRes.statusCode()) {{
             updateGoal200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -593,12 +575,10 @@ public class Goals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGoalMetricResponse res = new org.openapis.openapi.models.operations.UpdateGoalMetricResponse() {{
+        org.openapis.openapi.models.operations.UpdateGoalMetricResponse res = new org.openapis.openapi.models.operations.UpdateGoalMetricResponse(contentType, httpRes.statusCode()) {{
             updateGoalMetric200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

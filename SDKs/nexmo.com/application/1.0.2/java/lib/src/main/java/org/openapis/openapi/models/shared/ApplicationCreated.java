@@ -18,6 +18,7 @@ public class ApplicationCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public ApplicationCreated withLinks(Links links) {
         this.links = links;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApplicationCreated withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ApplicationCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public KeysWithPrivateKey keys;
+
     public ApplicationCreated withKeys(KeysWithPrivateKey keys) {
         this.keys = keys;
         return this;
@@ -47,6 +50,7 @@ public class ApplicationCreated {
      */
     @JsonProperty("messages")
     public Messages messages;
+
     public ApplicationCreated withMessages(Messages messages) {
         this.messages = messages;
         return this;
@@ -57,6 +61,7 @@ public class ApplicationCreated {
      */
     @JsonProperty("name")
     public String name;
+
     public ApplicationCreated withName(String name) {
         this.name = name;
         return this;
@@ -67,9 +72,15 @@ public class ApplicationCreated {
      */
     @JsonProperty("voice")
     public Voice voice;
+
     public ApplicationCreated withVoice(Voice voice) {
         this.voice = voice;
         return this;
     }
     
+    public ApplicationCreated(@JsonProperty("messages") Messages messages, @JsonProperty("name") String name, @JsonProperty("voice") Voice voice) {
+        this.messages = messages;
+        this.name = name;
+        this.voice = voice;
+  }
 }

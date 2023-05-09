@@ -18,6 +18,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedDateUtc")
     public String authorizedDateUtc;
+
     public ReservationById200ApplicationJSON withAuthorizedDateUtc(String authorizedDateUtc) {
         this.authorizedDateUtc = authorizedDateUtc;
         return this;
@@ -29,6 +30,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanceledDateUtc")
     public String canceledDateUtc;
+
     public ReservationById200ApplicationJSON withCanceledDateUtc(String canceledDateUtc) {
         this.canceledDateUtc = canceledDateUtc;
         return this;
@@ -40,6 +42,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfirmedDateUtc")
     public String confirmedDateUtc;
+
     public ReservationById200ApplicationJSON withConfirmedDateUtc(String confirmedDateUtc) {
         this.confirmedDateUtc = confirmedDateUtc;
         return this;
@@ -51,6 +54,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public String[] errors;
+
     public ReservationById200ApplicationJSON withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -59,6 +63,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsSucess")
     public Boolean isSucess;
+
     public ReservationById200ApplicationJSON withIsSucess(Boolean isSucess) {
         this.isSucess = isSucess;
         return this;
@@ -70,6 +75,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateDateUtc")
     public String lastUpdateDateUtc;
+
     public ReservationById200ApplicationJSON withLastUpdateDateUtc(String lastUpdateDateUtc) {
         this.lastUpdateDateUtc = lastUpdateDateUtc;
         return this;
@@ -81,6 +87,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockId")
     public String lockId;
+
     public ReservationById200ApplicationJSON withLockId(String lockId) {
         this.lockId = lockId;
         return this;
@@ -92,6 +99,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumConfirmationDateUtc")
     public String maximumConfirmationDateUtc;
+
     public ReservationById200ApplicationJSON withMaximumConfirmationDateUtc(String maximumConfirmationDateUtc) {
         this.maximumConfirmationDateUtc = maximumConfirmationDateUtc;
         return this;
@@ -103,6 +111,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PickupPointItemOptions")
     public String pickupPointItemOptions;
+
     public ReservationById200ApplicationJSON withPickupPointItemOptions(String pickupPointItemOptions) {
         this.pickupPointItemOptions = pickupPointItemOptions;
         return this;
@@ -114,6 +123,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservationDateUtc")
     public String reservationDateUtc;
+
     public ReservationById200ApplicationJSON withReservationDateUtc(String reservationDateUtc) {
         this.reservationDateUtc = reservationDateUtc;
         return this;
@@ -125,6 +135,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SalesChannel")
     public String salesChannel;
+
     public ReservationById200ApplicationJSON withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -136,6 +147,7 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlaRequest")
     public ReservationById200ApplicationJSONSlaRequest[] slaRequest;
+
     public ReservationById200ApplicationJSON withSlaRequest(ReservationById200ApplicationJSONSlaRequest[] slaRequest) {
         this.slaRequest = slaRequest;
         return this;
@@ -153,9 +165,11 @@ public class ReservationById200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public Integer status;
+
     public ReservationById200ApplicationJSON withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public ReservationById200ApplicationJSON(){}
 }

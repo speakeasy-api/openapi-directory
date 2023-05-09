@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse {
     
     public String contentType;
+
     public MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse {
     
     
     public Integer statusCode;
+
     public MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse {
      */
     
     public org.openapis.openapi.models.shared.VoiceOfMerchantState voiceOfMerchantState;
+
     public MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse withVoiceOfMerchantState(org.openapis.openapi.models.shared.VoiceOfMerchantState voiceOfMerchantState) {
         this.voiceOfMerchantState = voiceOfMerchantState;
         return this;
     }
     
+    public MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

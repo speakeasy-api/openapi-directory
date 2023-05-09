@@ -15,6 +15,7 @@ public class BookedRoom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adults")
     public Double adults;
+
     public BookedRoom withAdults(Double adults) {
         this.adults = adults;
         return this;
@@ -26,6 +27,7 @@ public class BookedRoom {
      */
     @JsonProperty("notes")
     public NotesBookedRoom notes;
+
     public BookedRoom withNotes(NotesBookedRoom notes) {
         this.notes = notes;
         return this;
@@ -36,6 +38,7 @@ public class BookedRoom {
      */
     @JsonProperty("rate")
     public BookedRate rate;
+
     public BookedRoom withRate(BookedRate rate) {
         this.rate = rate;
         return this;
@@ -46,6 +49,7 @@ public class BookedRoom {
      */
     @JsonProperty("roomType")
     public BookedRoomRoomType roomType;
+
     public BookedRoom withRoomType(BookedRoomRoomType roomType) {
         this.roomType = roomType;
         return this;
@@ -57,9 +61,15 @@ public class BookedRoom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerToImpalaPayment")
     public Money sellerToImpalaPayment;
+
     public BookedRoom withSellerToImpalaPayment(Money sellerToImpalaPayment) {
         this.sellerToImpalaPayment = sellerToImpalaPayment;
         return this;
     }
     
+    public BookedRoom(@JsonProperty("notes") NotesBookedRoom notes, @JsonProperty("rate") BookedRate rate, @JsonProperty("roomType") BookedRoomRoomType roomType) {
+        this.notes = notes;
+        this.rate = rate;
+        this.roomType = roomType;
+  }
 }

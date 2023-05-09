@@ -19,6 +19,7 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -29,6 +30,7 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail {
      */
     @JsonProperty("Status")
     public String status;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail withStatus(String status) {
         this.status = status;
         return this;
@@ -40,6 +42,7 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum statusReason;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail withStatusReason(OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -51,9 +54,13 @@ public class OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReasonDescription")
     public String statusReasonDescription;
+
     public OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail withStatusReasonDescription(String statusReasonDescription) {
         this.statusReasonDescription = statusReasonDescription;
         return this;
     }
     
+    public OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetail(@JsonProperty("Status") String status) {
+        this.status = status;
+  }
 }

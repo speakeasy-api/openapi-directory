@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplaceDefaultPolicyVersionParams {
     @JsonProperty("templateName")
     public PolicyTemplateNameEnum templateName;
+
     public ReplaceDefaultPolicyVersionParams withTemplateName(PolicyTemplateNameEnum templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ReplaceDefaultPolicyVersionParams(@JsonProperty("templateName") PolicyTemplateNameEnum templateName) {
+        this.templateName = templateName;
+  }
 }

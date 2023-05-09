@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetControlResponse {
@@ -12,6 +13,7 @@ public class GetControlResponse {
      */
     
     public Object accessDeniedException;
+
     public GetControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetControlResponse {
     
     
     public String contentType;
+
     public GetControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetControlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetControlResponse getControlResponse;
+
     public GetControlResponse withGetControlResponse(org.openapis.openapi.models.shared.GetControlResponse getControlResponse) {
         this.getControlResponse = getControlResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetControlResponse {
      */
     
     public Object internalServerException;
+
     public GetControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetControlResponse {
     
     
     public Integer statusCode;
+
     public GetControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetControlResponse {
      */
     
     public Object validationException;
+
     public GetControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

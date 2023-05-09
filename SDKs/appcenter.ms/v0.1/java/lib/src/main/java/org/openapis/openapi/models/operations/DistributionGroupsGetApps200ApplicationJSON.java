@@ -15,6 +15,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DistributionGroupsGetApps200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsGetApps200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -36,6 +38,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public DistributionGroupsGetApps200ApplicationJSON withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -47,6 +50,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public DistributionGroupsGetApps200ApplicationJSON withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -57,6 +61,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public DistributionGroupsGetApps200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsGetApps200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +84,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public String origin;
+
     public DistributionGroupsGetApps200ApplicationJSON withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -88,6 +95,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
      */
     @JsonProperty("os")
     public DistributionGroupsGetApps200ApplicationJSONOsEnum os;
+
     public DistributionGroupsGetApps200ApplicationJSON withOs(DistributionGroupsGetApps200ApplicationJSONOsEnum os) {
         this.os = os;
         return this;
@@ -98,6 +106,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
      */
     @JsonProperty("owner")
     public DistributionGroupsGetApps200ApplicationJSONOwner owner;
+
     public DistributionGroupsGetApps200ApplicationJSON withOwner(DistributionGroupsGetApps200ApplicationJSONOwner owner) {
         this.owner = owner;
         return this;
@@ -109,6 +118,7 @@ public class DistributionGroupsGetApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public DistributionGroupsGetApps200ApplicationJSON withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -120,9 +130,17 @@ public class DistributionGroupsGetApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public DistributionGroupsGetApps200ApplicationJSON withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
     }
     
+    public DistributionGroupsGetApps200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("os") DistributionGroupsGetApps200ApplicationJSONOsEnum os, @JsonProperty("owner") DistributionGroupsGetApps200ApplicationJSONOwner owner) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.os = os;
+        this.owner = owner;
+  }
 }

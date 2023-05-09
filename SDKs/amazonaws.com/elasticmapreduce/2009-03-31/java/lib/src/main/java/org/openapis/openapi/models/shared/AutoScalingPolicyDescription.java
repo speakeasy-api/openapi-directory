@@ -15,6 +15,7 @@ public class AutoScalingPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Constraints")
     public ScalingConstraints constraints;
+
     public AutoScalingPolicyDescription withConstraints(ScalingConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public ScalingRule[] rules;
+
     public AutoScalingPolicyDescription withRules(ScalingRule[] rules) {
         this.rules = rules;
         return this;
@@ -31,9 +33,11 @@ public class AutoScalingPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AutoScalingPolicyStatus status;
+
     public AutoScalingPolicyDescription withStatus(AutoScalingPolicyStatus status) {
         this.status = status;
         return this;
     }
     
+    public AutoScalingPolicyDescription(){}
 }

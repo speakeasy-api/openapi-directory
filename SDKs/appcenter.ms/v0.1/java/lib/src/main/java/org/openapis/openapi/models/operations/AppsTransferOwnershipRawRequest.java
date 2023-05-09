@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsTransferOwnershipRawRequest {
@@ -12,6 +13,7 @@ public class AppsTransferOwnershipRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
     public byte[] requestBody;
+
     public AppsTransferOwnershipRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class AppsTransferOwnershipRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AppsTransferOwnershipRawRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class AppsTransferOwnershipRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination_owner_name")
     public String destinationOwnerName;
+
     public AppsTransferOwnershipRawRequest withDestinationOwnerName(String destinationOwnerName) {
         this.destinationOwnerName = destinationOwnerName;
         return this;
@@ -42,9 +46,15 @@ public class AppsTransferOwnershipRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AppsTransferOwnershipRawRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public AppsTransferOwnershipRawRequest(@JsonProperty("app_name") String appName, @JsonProperty("destination_owner_name") String destinationOwnerName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.destinationOwnerName = destinationOwnerName;
+        this.ownerName = ownerName;
+  }
 }

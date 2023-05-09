@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssessmentReportsResponse {
@@ -12,6 +13,7 @@ public class ListAssessmentReportsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAssessmentReportsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAssessmentReportsResponse {
     
     
     public String contentType;
+
     public ListAssessmentReportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAssessmentReportsResponse {
      */
     
     public Object internalServerException;
+
     public ListAssessmentReportsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssessmentReportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssessmentReportsResponse listAssessmentReportsResponse;
+
     public ListAssessmentReportsResponse withListAssessmentReportsResponse(org.openapis.openapi.models.shared.ListAssessmentReportsResponse listAssessmentReportsResponse) {
         this.listAssessmentReportsResponse = listAssessmentReportsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAssessmentReportsResponse {
     
     
     public Integer statusCode;
+
     public ListAssessmentReportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAssessmentReportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssessmentReportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListAssessmentReportsResponse {
      */
     
     public Object validationException;
+
     public ListAssessmentReportsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAssessmentReportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

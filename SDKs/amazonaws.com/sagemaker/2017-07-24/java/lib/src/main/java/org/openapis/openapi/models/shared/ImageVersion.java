@@ -21,6 +21,7 @@ public class ImageVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ImageVersion withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class ImageVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public ImageVersion withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -36,6 +38,7 @@ public class ImageVersion {
     
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public ImageVersion withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -43,6 +46,7 @@ public class ImageVersion {
     
     @JsonProperty("ImageVersionArn")
     public String imageVersionArn;
+
     public ImageVersion withImageVersionArn(String imageVersionArn) {
         this.imageVersionArn = imageVersionArn;
         return this;
@@ -50,6 +54,7 @@ public class ImageVersion {
     
     @JsonProperty("ImageVersionStatus")
     public ImageVersionStatusEnum imageVersionStatus;
+
     public ImageVersion withImageVersionStatus(ImageVersionStatusEnum imageVersionStatus) {
         this.imageVersionStatus = imageVersionStatus;
         return this;
@@ -59,6 +64,7 @@ public class ImageVersion {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ImageVersion withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -66,9 +72,18 @@ public class ImageVersion {
     
     @JsonProperty("Version")
     public Long version;
+
     public ImageVersion withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ImageVersion(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ImageArn") String imageArn, @JsonProperty("ImageVersionArn") String imageVersionArn, @JsonProperty("ImageVersionStatus") ImageVersionStatusEnum imageVersionStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("Version") Long version) {
+        this.creationTime = creationTime;
+        this.imageArn = imageArn;
+        this.imageVersionArn = imageVersionArn;
+        this.imageVersionStatus = imageVersionStatus;
+        this.lastModifiedTime = lastModifiedTime;
+        this.version = version;
+  }
 }

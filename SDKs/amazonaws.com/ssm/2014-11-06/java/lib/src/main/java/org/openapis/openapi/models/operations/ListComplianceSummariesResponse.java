@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListComplianceSummariesResponse {
     
     public String contentType;
+
     public ListComplianceSummariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListComplianceSummariesResponse {
      */
     
     public Object internalServerError;
+
     public ListComplianceSummariesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListComplianceSummariesResponse {
      */
     
     public Object invalidFilter;
+
     public ListComplianceSummariesResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -39,6 +43,7 @@ public class ListComplianceSummariesResponse {
      */
     
     public Object invalidNextToken;
+
     public ListComplianceSummariesResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -49,6 +54,7 @@ public class ListComplianceSummariesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListComplianceSummariesResult listComplianceSummariesResult;
+
     public ListComplianceSummariesResponse withListComplianceSummariesResult(org.openapis.openapi.models.shared.ListComplianceSummariesResult listComplianceSummariesResult) {
         this.listComplianceSummariesResult = listComplianceSummariesResult;
         return this;
@@ -56,6 +62,7 @@ public class ListComplianceSummariesResponse {
     
     
     public Integer statusCode;
+
     public ListComplianceSummariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListComplianceSummariesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListComplianceSummariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListComplianceSummariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

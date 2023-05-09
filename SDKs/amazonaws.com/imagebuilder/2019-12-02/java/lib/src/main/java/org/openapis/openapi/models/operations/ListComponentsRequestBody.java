@@ -15,6 +15,7 @@ public class ListComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byName")
     public Boolean byName;
+
     public ListComponentsRequestBody withByName(Boolean byName) {
         this.byName = byName;
         return this;
@@ -26,6 +27,7 @@ public class ListComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListComponentsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class ListComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListComponentsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,6 +51,7 @@ public class ListComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListComponentsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,9 +63,11 @@ public class ListComponentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public ListComponentsRequestBodyOwnerEnum owner;
+
     public ListComponentsRequestBody withOwner(ListComponentsRequestBodyOwnerEnum owner) {
         this.owner = owner;
         return this;
     }
     
+    public ListComponentsRequestBody(){}
 }

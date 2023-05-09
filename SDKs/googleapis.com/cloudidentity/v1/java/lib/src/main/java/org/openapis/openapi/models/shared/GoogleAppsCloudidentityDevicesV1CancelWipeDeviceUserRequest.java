@@ -18,9 +18,11 @@ public class GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public String customer;
+
     public GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
     }
     
+    public GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest(){}
 }

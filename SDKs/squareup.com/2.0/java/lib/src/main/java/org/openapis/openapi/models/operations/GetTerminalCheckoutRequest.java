@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTerminalCheckoutRequest {
@@ -12,9 +13,13 @@ public class GetTerminalCheckoutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=checkout_id")
     public String checkoutId;
+
     public GetTerminalCheckoutRequest withCheckoutId(String checkoutId) {
         this.checkoutId = checkoutId;
         return this;
     }
     
+    public GetTerminalCheckoutRequest(@JsonProperty("checkout_id") String checkoutId) {
+        this.checkoutId = checkoutId;
+  }
 }

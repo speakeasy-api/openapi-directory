@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSetupV1LocationsIdDeleteallimagesResponse {
     
     public String contentType;
+
     public DeleteSetupV1LocationsIdDeleteallimagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteSetupV1LocationsIdDeleteallimagesResponse {
     
     
     public Integer statusCode;
+
     public DeleteSetupV1LocationsIdDeleteallimagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteSetupV1LocationsIdDeleteallimagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSetupV1LocationsIdDeleteallimagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DeleteSetupV1LocationsIdDeleteallimagesResponse {
      */
     
     public Boolean deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean;
+
     public DeleteSetupV1LocationsIdDeleteallimagesResponse withDeleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean(Boolean deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean) {
         this.deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean = deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean;
         return this;
     }
     
+    public DeleteSetupV1LocationsIdDeleteallimagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

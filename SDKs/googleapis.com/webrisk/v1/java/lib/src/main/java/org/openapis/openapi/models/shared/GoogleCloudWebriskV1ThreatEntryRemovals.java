@@ -18,6 +18,7 @@ public class GoogleCloudWebriskV1ThreatEntryRemovals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawIndices")
     public GoogleCloudWebriskV1RawIndices rawIndices;
+
     public GoogleCloudWebriskV1ThreatEntryRemovals withRawIndices(GoogleCloudWebriskV1RawIndices rawIndices) {
         this.rawIndices = rawIndices;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudWebriskV1ThreatEntryRemovals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riceIndices")
     public GoogleCloudWebriskV1RiceDeltaEncoding riceIndices;
+
     public GoogleCloudWebriskV1ThreatEntryRemovals withRiceIndices(GoogleCloudWebriskV1RiceDeltaEncoding riceIndices) {
         this.riceIndices = riceIndices;
         return this;
     }
     
+    public GoogleCloudWebriskV1ThreatEntryRemovals(){}
 }

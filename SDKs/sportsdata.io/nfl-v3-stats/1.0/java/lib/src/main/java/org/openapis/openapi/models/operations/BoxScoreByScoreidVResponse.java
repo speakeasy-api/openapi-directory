@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BoxScoreByScoreidVResponse {
     
     public org.openapis.openapi.models.shared.BoxScoreV3 boxScoreV3;
+
     public BoxScoreByScoreidVResponse withBoxScoreV3(org.openapis.openapi.models.shared.BoxScoreV3 boxScoreV3) {
         this.boxScoreV3 = boxScoreV3;
         return this;
@@ -16,6 +18,7 @@ public class BoxScoreByScoreidVResponse {
     
     
     public String contentType;
+
     public BoxScoreByScoreidVResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class BoxScoreByScoreidVResponse {
     
     
     public Integer statusCode;
+
     public BoxScoreByScoreidVResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class BoxScoreByScoreidVResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BoxScoreByScoreidVResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BoxScoreByScoreidVResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

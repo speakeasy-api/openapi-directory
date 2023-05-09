@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TerminateClientVpnConnectionsRequest {
     
     public String clientVpnEndpointId;
+
     public TerminateClientVpnConnectionsRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -16,6 +17,7 @@ public class TerminateClientVpnConnectionsRequest {
     
     
     public String connectionId;
+
     public TerminateClientVpnConnectionsRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -23,6 +25,7 @@ public class TerminateClientVpnConnectionsRequest {
     
     
     public Boolean dryRun;
+
     public TerminateClientVpnConnectionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,9 +33,13 @@ public class TerminateClientVpnConnectionsRequest {
     
     
     public String username;
+
     public TerminateClientVpnConnectionsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TerminateClientVpnConnectionsRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+  }
 }

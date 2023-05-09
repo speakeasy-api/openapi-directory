@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SmartReplyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerRecord")
     public String answerRecord;
+
     public GoogleCloudDialogflowV2SmartReplyAnswer withAnswerRecord(String answerRecord) {
         this.answerRecord = answerRecord;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2SmartReplyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDialogflowV2SmartReplyAnswer withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2SmartReplyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reply")
     public String reply;
+
     public GoogleCloudDialogflowV2SmartReplyAnswer withReply(String reply) {
         this.reply = reply;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SmartReplyAnswer(){}
 }

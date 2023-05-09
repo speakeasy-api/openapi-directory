@@ -15,6 +15,7 @@ public class ImageFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public ImageFailureCodeEnum failureCode;
+
     public ImageFailure withFailureCode(ImageFailureCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -23,6 +24,7 @@ public class ImageFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public ImageFailure withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -31,9 +33,11 @@ public class ImageFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public ImageIdentifier imageId;
+
     public ImageFailure withImageId(ImageIdentifier imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public ImageFailure(){}
 }

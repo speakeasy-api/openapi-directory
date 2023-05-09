@@ -18,6 +18,7 @@ public class ConfigManagementPolicyControllerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentState")
     public ConfigManagementGatekeeperDeploymentState deploymentState;
+
     public ConfigManagementPolicyControllerState withDeploymentState(ConfigManagementGatekeeperDeploymentState deploymentState) {
         this.deploymentState = deploymentState;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementPolicyControllerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migration")
     public ConfigManagementPolicyControllerMigration migration;
+
     public ConfigManagementPolicyControllerState withMigration(ConfigManagementPolicyControllerMigration migration) {
         this.migration = migration;
         return this;
@@ -40,9 +42,11 @@ public class ConfigManagementPolicyControllerState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public ConfigManagementPolicyControllerVersion version;
+
     public ConfigManagementPolicyControllerState withVersion(ConfigManagementPolicyControllerVersion version) {
         this.version = version;
         return this;
     }
     
+    public ConfigManagementPolicyControllerState(){}
 }

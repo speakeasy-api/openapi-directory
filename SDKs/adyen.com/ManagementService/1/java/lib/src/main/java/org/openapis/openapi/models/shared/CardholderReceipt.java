@@ -15,9 +15,11 @@ public class CardholderReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerForAuthorizedReceipt")
     public String headerForAuthorizedReceipt;
+
     public CardholderReceipt withHeaderForAuthorizedReceipt(String headerForAuthorizedReceipt) {
         this.headerForAuthorizedReceipt = headerForAuthorizedReceipt;
         return this;
     }
     
+    public CardholderReceipt(){}
 }

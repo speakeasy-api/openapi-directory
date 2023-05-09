@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateFraudsterRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public AssociateFraudsterRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -16,6 +17,7 @@ public class AssociateFraudsterRequest {
     
     @JsonProperty("FraudsterId")
     public String fraudsterId;
+
     public AssociateFraudsterRequest withFraudsterId(String fraudsterId) {
         this.fraudsterId = fraudsterId;
         return this;
@@ -23,9 +25,15 @@ public class AssociateFraudsterRequest {
     
     @JsonProperty("WatchlistId")
     public String watchlistId;
+
     public AssociateFraudsterRequest withWatchlistId(String watchlistId) {
         this.watchlistId = watchlistId;
         return this;
     }
     
+    public AssociateFraudsterRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("FraudsterId") String fraudsterId, @JsonProperty("WatchlistId") String watchlistId) {
+        this.domainId = domainId;
+        this.fraudsterId = fraudsterId;
+        this.watchlistId = watchlistId;
+  }
 }

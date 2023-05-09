@@ -18,6 +18,7 @@ public class LineStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LineStyleTypeEnum type;
+
     public LineStyle withType(LineStyleTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class LineStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public LineStyle withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public LineStyle(){}
 }

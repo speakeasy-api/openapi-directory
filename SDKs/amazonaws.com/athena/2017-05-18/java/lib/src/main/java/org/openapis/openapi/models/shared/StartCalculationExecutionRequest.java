@@ -12,6 +12,7 @@ public class StartCalculationExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculationConfiguration")
     public StartCalculationExecutionRequestCalculationConfiguration calculationConfiguration;
+
     public StartCalculationExecutionRequest withCalculationConfiguration(StartCalculationExecutionRequestCalculationConfiguration calculationConfiguration) {
         this.calculationConfiguration = calculationConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class StartCalculationExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartCalculationExecutionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -28,6 +30,7 @@ public class StartCalculationExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeBlock")
     public String codeBlock;
+
     public StartCalculationExecutionRequest withCodeBlock(String codeBlock) {
         this.codeBlock = codeBlock;
         return this;
@@ -36,6 +39,7 @@ public class StartCalculationExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StartCalculationExecutionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -43,9 +47,13 @@ public class StartCalculationExecutionRequest {
     
     @JsonProperty("SessionId")
     public String sessionId;
+
     public StartCalculationExecutionRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public StartCalculationExecutionRequest(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

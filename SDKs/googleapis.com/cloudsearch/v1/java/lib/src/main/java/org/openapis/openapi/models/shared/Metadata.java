@@ -18,6 +18,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Metadata withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -26,6 +27,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayOptions")
     public ResultDisplayMetadata displayOptions;
+
     public Metadata withDisplayOptions(ResultDisplayMetadata displayOptions) {
         this.displayOptions = displayOptions;
         return this;
@@ -37,6 +39,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public NamedProperty[] fields;
+
     public Metadata withFields(NamedProperty[] fields) {
         this.fields = fields;
         return this;
@@ -48,6 +51,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public Metadata withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -59,6 +63,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public Metadata withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -70,6 +75,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public Person owner;
+
     public Metadata withOwner(Person owner) {
         this.owner = owner;
         return this;
@@ -81,6 +87,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public Metadata withSource(Source source) {
         this.source = source;
         return this;
@@ -92,6 +99,7 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailUrl")
     public String thumbnailUrl;
+
     public Metadata withThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl;
         return this;
@@ -103,9 +111,11 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Metadata withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Metadata(){}
 }

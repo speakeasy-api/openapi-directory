@@ -15,6 +15,7 @@ public class SchemaVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedTime")
     public String createdTime;
+
     public SchemaVersionListItem withCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -23,6 +24,7 @@ public class SchemaVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public SchemaVersionListItem withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -31,6 +33,7 @@ public class SchemaVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public SchemaVersionListItem withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
@@ -39,6 +42,7 @@ public class SchemaVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SchemaVersionStatusEnum status;
+
     public SchemaVersionListItem withStatus(SchemaVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class SchemaVersionListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionNumber")
     public Long versionNumber;
+
     public SchemaVersionListItem withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public SchemaVersionListItem(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteAnalysisSchemeRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DeleteAnalysisScheme&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the analysis scheme you want to delete. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteAnalysisSchemeRequest {
     
     public String analysisSchemeName;
+
     public DeleteAnalysisSchemeRequest withAnalysisSchemeName(String analysisSchemeName) {
         this.analysisSchemeName = analysisSchemeName;
         return this;
@@ -22,9 +23,14 @@ public class DeleteAnalysisSchemeRequest {
      */
     
     public String domainName;
+
     public DeleteAnalysisSchemeRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DeleteAnalysisSchemeRequest(@JsonProperty("AnalysisSchemeName") String analysisSchemeName, @JsonProperty("DomainName") String domainName) {
+        this.analysisSchemeName = analysisSchemeName;
+        this.domainName = domainName;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StandardsSubscription {
     @JsonProperty("StandardsArn")
     public String standardsArn;
+
     public StandardsSubscription withStandardsArn(String standardsArn) {
         this.standardsArn = standardsArn;
         return this;
@@ -21,6 +22,7 @@ public class StandardsSubscription {
     
     @JsonProperty("StandardsInput")
     public java.util.Map<String, String> standardsInput;
+
     public StandardsSubscription withStandardsInput(java.util.Map<String, String> standardsInput) {
         this.standardsInput = standardsInput;
         return this;
@@ -28,6 +30,7 @@ public class StandardsSubscription {
     
     @JsonProperty("StandardsStatus")
     public StandardsStatusEnum standardsStatus;
+
     public StandardsSubscription withStandardsStatus(StandardsStatusEnum standardsStatus) {
         this.standardsStatus = standardsStatus;
         return this;
@@ -36,6 +39,7 @@ public class StandardsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsStatusReason")
     public StandardsStatusReason standardsStatusReason;
+
     public StandardsSubscription withStandardsStatusReason(StandardsStatusReason standardsStatusReason) {
         this.standardsStatusReason = standardsStatusReason;
         return this;
@@ -43,9 +47,16 @@ public class StandardsSubscription {
     
     @JsonProperty("StandardsSubscriptionArn")
     public String standardsSubscriptionArn;
+
     public StandardsSubscription withStandardsSubscriptionArn(String standardsSubscriptionArn) {
         this.standardsSubscriptionArn = standardsSubscriptionArn;
         return this;
     }
     
+    public StandardsSubscription(@JsonProperty("StandardsArn") String standardsArn, @JsonProperty("StandardsInput") java.util.Map<String, String> standardsInput, @JsonProperty("StandardsStatus") StandardsStatusEnum standardsStatus, @JsonProperty("StandardsSubscriptionArn") String standardsSubscriptionArn) {
+        this.standardsArn = standardsArn;
+        this.standardsInput = standardsInput;
+        this.standardsStatus = standardsStatus;
+        this.standardsSubscriptionArn = standardsSubscriptionArn;
+  }
 }

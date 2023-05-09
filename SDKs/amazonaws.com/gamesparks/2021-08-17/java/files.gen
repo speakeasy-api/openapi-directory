@@ -161,4 +161,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/OperationEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSnapshotResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateStageResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class DescribeJobLogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public JobLog[] items;
+
     public DescribeJobLogItemsResponse withItems(JobLog[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class DescribeJobLogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeJobLogItemsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeJobLogItemsResponse(){}
 }

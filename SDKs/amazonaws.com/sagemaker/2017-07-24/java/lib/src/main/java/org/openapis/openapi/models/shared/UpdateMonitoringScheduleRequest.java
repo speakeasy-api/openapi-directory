@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateMonitoringScheduleRequest {
     @JsonProperty("MonitoringScheduleConfig")
     public MonitoringScheduleConfig monitoringScheduleConfig;
+
     public UpdateMonitoringScheduleRequest withMonitoringScheduleConfig(MonitoringScheduleConfig monitoringScheduleConfig) {
         this.monitoringScheduleConfig = monitoringScheduleConfig;
         return this;
@@ -16,9 +17,14 @@ public class UpdateMonitoringScheduleRequest {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public UpdateMonitoringScheduleRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
     }
     
+    public UpdateMonitoringScheduleRequest(@JsonProperty("MonitoringScheduleConfig") MonitoringScheduleConfig monitoringScheduleConfig, @JsonProperty("MonitoringScheduleName") String monitoringScheduleName) {
+        this.monitoringScheduleConfig = monitoringScheduleConfig;
+        this.monitoringScheduleName = monitoringScheduleName;
+  }
 }

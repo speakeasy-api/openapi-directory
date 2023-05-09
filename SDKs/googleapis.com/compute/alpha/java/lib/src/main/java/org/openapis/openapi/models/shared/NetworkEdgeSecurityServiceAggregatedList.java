@@ -15,6 +15,7 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public NetworkEdgeSecurityServiceAggregatedList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -26,6 +27,7 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkEdgeSecurityServiceAggregatedList withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, NetworkEdgeSecurityServicesScopedList> items;
+
     public NetworkEdgeSecurityServiceAggregatedList withItems(java.util.Map<String, NetworkEdgeSecurityServicesScopedList> items) {
         this.items = items;
         return this;
@@ -48,6 +51,7 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NetworkEdgeSecurityServiceAggregatedList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public NetworkEdgeSecurityServiceAggregatedList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -70,6 +75,7 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NetworkEdgeSecurityServiceAggregatedList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -81,6 +87,7 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachables")
     public String[] unreachables;
+
     public NetworkEdgeSecurityServiceAggregatedList withUnreachables(String[] unreachables) {
         this.unreachables = unreachables;
         return this;
@@ -92,9 +99,11 @@ public class NetworkEdgeSecurityServiceAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NetworkEdgeSecurityServiceAggregatedListWarning warning;
+
     public NetworkEdgeSecurityServiceAggregatedList withWarning(NetworkEdgeSecurityServiceAggregatedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NetworkEdgeSecurityServiceAggregatedList(){}
 }

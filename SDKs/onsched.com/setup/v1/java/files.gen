@@ -439,4 +439,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/ServiceSettingsUpdateModel.
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceOptionsUpdateModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceFeesUpdateModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/appointments/README.md
+docs/businessusers/README.md
+docs/calendars/README.md
+docs/companies/README.md
+docs/customers/README.md
+docs/locations/README.md
+docs/resourcegroups/README.md
+docs/resources/README.md
+docs/servicegroups/README.md
+docs/services/README.md
 USAGE.md

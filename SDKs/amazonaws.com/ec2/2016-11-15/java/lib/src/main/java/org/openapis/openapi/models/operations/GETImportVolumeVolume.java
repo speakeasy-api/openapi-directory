@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,9 +13,13 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETImportVolumeVolume {
     @SpeakeasyMetadata("queryParam:name=Size")
     public Long size;
+
     public GETImportVolumeVolume withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public GETImportVolumeVolume(@JsonProperty("Size") Long size) {
+        this.size = size;
+  }
 }

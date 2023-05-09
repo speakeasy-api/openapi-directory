@@ -12,9 +12,13 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("TagsModel")
     public TagResourceRequestBodyTagsModel tagsModel;
+
     public TagResourceRequestBody withTagsModel(TagResourceRequestBodyTagsModel tagsModel) {
         this.tagsModel = tagsModel;
         return this;
     }
     
+    public TagResourceRequestBody(@JsonProperty("TagsModel") TagResourceRequestBodyTagsModel tagsModel) {
+        this.tagsModel = tagsModel;
+  }
 }

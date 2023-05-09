@@ -15,9 +15,11 @@ public class DescribeTimeBasedAutoScalingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeBasedAutoScalingConfigurations")
     public TimeBasedAutoScalingConfiguration[] timeBasedAutoScalingConfigurations;
+
     public DescribeTimeBasedAutoScalingResult withTimeBasedAutoScalingConfigurations(TimeBasedAutoScalingConfiguration[] timeBasedAutoScalingConfigurations) {
         this.timeBasedAutoScalingConfigurations = timeBasedAutoScalingConfigurations;
         return this;
     }
     
+    public DescribeTimeBasedAutoScalingResult(){}
 }

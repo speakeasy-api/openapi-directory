@@ -18,6 +18,7 @@ public class CreateNamedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateNamedRangeRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class CreateNamedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Range range;
+
     public CreateNamedRangeRequest withRange(Range range) {
         this.range = range;
         return this;
     }
     
+    public CreateNamedRangeRequest(){}
 }

@@ -15,6 +15,7 @@ public class ListCustomRoutingAcceleratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accelerators")
     public CustomRoutingAccelerator[] accelerators;
+
     public ListCustomRoutingAcceleratorsResponse withAccelerators(CustomRoutingAccelerator[] accelerators) {
         this.accelerators = accelerators;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomRoutingAcceleratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomRoutingAcceleratorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomRoutingAcceleratorsResponse(){}
 }

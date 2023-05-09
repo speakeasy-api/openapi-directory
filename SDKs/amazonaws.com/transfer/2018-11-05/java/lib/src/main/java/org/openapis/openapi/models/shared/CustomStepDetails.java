@@ -15,6 +15,7 @@ public class CustomStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CustomStepDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class CustomStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceFileLocation")
     public String sourceFileLocation;
+
     public CustomStepDetails withSourceFileLocation(String sourceFileLocation) {
         this.sourceFileLocation = sourceFileLocation;
         return this;
@@ -31,6 +33,7 @@ public class CustomStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public CustomStepDetails withTarget(String target) {
         this.target = target;
         return this;
@@ -39,9 +42,11 @@ public class CustomStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutSeconds")
     public Long timeoutSeconds;
+
     public CustomStepDetails withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public CustomStepDetails(){}
 }

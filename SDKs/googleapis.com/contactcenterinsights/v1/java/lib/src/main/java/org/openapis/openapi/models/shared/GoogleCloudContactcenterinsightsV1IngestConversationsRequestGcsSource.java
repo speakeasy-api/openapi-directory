@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSour
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketUri")
     public String bucketUri;
+
     public GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource withBucketUri(String bucketUri) {
         this.bucketUri = bucketUri;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource(){}
 }

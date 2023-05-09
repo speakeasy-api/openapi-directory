@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkL3FirewallRulesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkL3FirewallRulesRequestBody requestBody;
+
     public UpdateNetworkL3FirewallRulesRequest withRequestBody(UpdateNetworkL3FirewallRulesRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdateNetworkL3FirewallRulesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkL3FirewallRulesRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public UpdateNetworkL3FirewallRulesRequest(@JsonProperty("networkId") String networkId) {
+        this.networkId = networkId;
+  }
 }

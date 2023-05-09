@@ -10,24 +10,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateAppVersionRequestBody {
     /**
-     * &lt;p&gt;Additional configuration parameters for an AWS Resilience Hub application.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one associated account.&lt;/p&gt; &lt;p&gt;Key: &lt;code&gt;"failover-regions"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Value: &lt;code&gt;"[{"region":"&amp;lt;REGION&amp;gt;", "accounts":[{"id":"&amp;lt;ACCOUNT_ID&amp;gt;"}]}]"&lt;/code&gt; &lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Additional configuration parameters for an Resilience Hub application. If you want to implement &lt;code&gt;additionalInfo&lt;/code&gt; through the Resilience Hub console rather than using an API call, see &lt;a href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/app-config-param.html"&gt;Configure the application configuration parameters&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Currently, this parameter accepts a key-value mapping (in a string format) of only one failover region and one associated account.&lt;/p&gt; &lt;p&gt;Key: &lt;code&gt;"failover-regions"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Value: &lt;code&gt;"[{"region":"&amp;lt;REGION&amp;gt;", "accounts":[{"id":"&amp;lt;ACCOUNT_ID&amp;gt;"}]}]"&lt;/code&gt; &lt;/p&gt; &lt;/note&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public java.util.Map<String, String[]> additionalInfo;
+
     public UpdateAppVersionRequestBody withAdditionalInfo(java.util.Map<String, String[]> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
     }
     
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public UpdateAppVersionRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
     }
     
+    public UpdateAppVersionRequestBody(@JsonProperty("appArn") String appArn) {
+        this.appArn = appArn;
+  }
 }

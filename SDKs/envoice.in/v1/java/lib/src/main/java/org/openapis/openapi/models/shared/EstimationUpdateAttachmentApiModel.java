@@ -15,6 +15,7 @@ public class EstimationUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public EstimationUpdateAttachmentApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class EstimationUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public EstimationUpdateAttachmentApiModel withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +39,7 @@ public class EstimationUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObfuscatedFileName")
     public String obfuscatedFileName;
+
     public EstimationUpdateAttachmentApiModel withObfuscatedFileName(String obfuscatedFileName) {
         this.obfuscatedFileName = obfuscatedFileName;
         return this;
@@ -48,6 +51,7 @@ public class EstimationUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalFileName")
     public String originalFileName;
+
     public EstimationUpdateAttachmentApiModel withOriginalFileName(String originalFileName) {
         this.originalFileName = originalFileName;
         return this;
@@ -59,6 +63,7 @@ public class EstimationUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public EstimationUpdateAttachmentApiModel withSize(Long size) {
         this.size = size;
         return this;
@@ -70,9 +75,11 @@ public class EstimationUpdateAttachmentApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EstimationUpdateAttachmentApiModelTypeEnum type;
+
     public EstimationUpdateAttachmentApiModel withType(EstimationUpdateAttachmentApiModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EstimationUpdateAttachmentApiModel(){}
 }

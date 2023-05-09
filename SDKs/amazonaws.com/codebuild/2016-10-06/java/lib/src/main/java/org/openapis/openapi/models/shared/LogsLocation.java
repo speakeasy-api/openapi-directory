@@ -15,6 +15,7 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogs")
     public CloudWatchLogsConfig cloudWatchLogs;
+
     public LogsLocation withCloudWatchLogs(CloudWatchLogsConfig cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -23,6 +24,7 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogsArn")
     public String cloudWatchLogsArn;
+
     public LogsLocation withCloudWatchLogsArn(String cloudWatchLogsArn) {
         this.cloudWatchLogsArn = cloudWatchLogsArn;
         return this;
@@ -31,6 +33,7 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deepLink")
     public String deepLink;
+
     public LogsLocation withDeepLink(String deepLink) {
         this.deepLink = deepLink;
         return this;
@@ -39,6 +42,7 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public LogsLocation withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -47,6 +51,7 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3DeepLink")
     public String s3DeepLink;
+
     public LogsLocation withS3DeepLink(String s3DeepLink) {
         this.s3DeepLink = s3DeepLink;
         return this;
@@ -55,6 +60,7 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Logs")
     public S3LogsConfig s3Logs;
+
     public LogsLocation withS3Logs(S3LogsConfig s3Logs) {
         this.s3Logs = s3Logs;
         return this;
@@ -63,6 +69,7 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3LogsArn")
     public String s3LogsArn;
+
     public LogsLocation withS3LogsArn(String s3LogsArn) {
         this.s3LogsArn = s3LogsArn;
         return this;
@@ -71,9 +78,11 @@ public class LogsLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamName")
     public String streamName;
+
     public LogsLocation withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public LogsLocation(){}
 }

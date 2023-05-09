@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LawTopics - For local incentive/regulation descriptions, the category that the incentive/regulation falls under, described below: Infrastructure Requirements, Vehicle Purchase and Infrastructure Development Incentives, Fuel Use Incentives, Parking Incentives, Technical Assistance, Vehicle Acquisition Requirements, Promotion Initiatives, Idle Reduction Requirements, Renewable Fuels Mandates and Standards
@@ -15,6 +15,7 @@ public class LawTopics {
      */
     
     public Long id;
+
     public LawTopics withId(Long id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class LawTopics {
      */
     
     public Long sortOrder;
+
     public LawTopics withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -35,9 +37,15 @@ public class LawTopics {
      */
     
     public String title;
+
     public LawTopics withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public LawTopics(@JsonProperty("id") Long id, @JsonProperty("sort_order") Long sortOrder, @JsonProperty("title") String title) {
+        this.id = id;
+        this.sortOrder = sortOrder;
+        this.title = title;
+  }
 }

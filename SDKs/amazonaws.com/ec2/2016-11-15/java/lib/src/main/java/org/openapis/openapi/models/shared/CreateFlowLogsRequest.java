@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateFlowLogsRequest {
     
     public String clientToken;
+
     public CreateFlowLogsRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateFlowLogsRequest {
     
     
     public String deliverCrossAccountRole;
+
     public CreateFlowLogsRequest withDeliverCrossAccountRole(String deliverCrossAccountRole) {
         this.deliverCrossAccountRole = deliverCrossAccountRole;
         return this;
@@ -23,6 +25,7 @@ public class CreateFlowLogsRequest {
     
     
     public String deliverLogsPermissionArn;
+
     public CreateFlowLogsRequest withDeliverLogsPermissionArn(String deliverLogsPermissionArn) {
         this.deliverLogsPermissionArn = deliverLogsPermissionArn;
         return this;
@@ -30,6 +33,7 @@ public class CreateFlowLogsRequest {
     
     
     public DestinationOptionsRequest destinationOptions;
+
     public CreateFlowLogsRequest withDestinationOptions(DestinationOptionsRequest destinationOptions) {
         this.destinationOptions = destinationOptions;
         return this;
@@ -37,6 +41,7 @@ public class CreateFlowLogsRequest {
     
     
     public Boolean dryRun;
+
     public CreateFlowLogsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class CreateFlowLogsRequest {
     
     
     public String logDestination;
+
     public CreateFlowLogsRequest withLogDestination(String logDestination) {
         this.logDestination = logDestination;
         return this;
@@ -51,6 +57,7 @@ public class CreateFlowLogsRequest {
     
     
     public LogDestinationTypeEnum logDestinationType;
+
     public CreateFlowLogsRequest withLogDestinationType(LogDestinationTypeEnum logDestinationType) {
         this.logDestinationType = logDestinationType;
         return this;
@@ -58,6 +65,7 @@ public class CreateFlowLogsRequest {
     
     
     public String logFormat;
+
     public CreateFlowLogsRequest withLogFormat(String logFormat) {
         this.logFormat = logFormat;
         return this;
@@ -65,6 +73,7 @@ public class CreateFlowLogsRequest {
     
     
     public String logGroupName;
+
     public CreateFlowLogsRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -72,6 +81,7 @@ public class CreateFlowLogsRequest {
     
     
     public Long maxAggregationInterval;
+
     public CreateFlowLogsRequest withMaxAggregationInterval(Long maxAggregationInterval) {
         this.maxAggregationInterval = maxAggregationInterval;
         return this;
@@ -79,6 +89,7 @@ public class CreateFlowLogsRequest {
     
     
     public String[] resourceIds;
+
     public CreateFlowLogsRequest withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -86,6 +97,7 @@ public class CreateFlowLogsRequest {
     
     
     public FlowLogsResourceTypeEnum resourceType;
+
     public CreateFlowLogsRequest withResourceType(FlowLogsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -93,6 +105,7 @@ public class CreateFlowLogsRequest {
     
     
     public CreateFlowLogsRequestTagSpecifications[] tagSpecifications;
+
     public CreateFlowLogsRequest withTagSpecifications(CreateFlowLogsRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -100,9 +113,14 @@ public class CreateFlowLogsRequest {
     
     
     public TrafficTypeEnum trafficType;
+
     public CreateFlowLogsRequest withTrafficType(TrafficTypeEnum trafficType) {
         this.trafficType = trafficType;
         return this;
     }
     
+    public CreateFlowLogsRequest(@JsonProperty("ResourceIds") String[] resourceIds, @JsonProperty("ResourceType") FlowLogsResourceTypeEnum resourceType) {
+        this.resourceIds = resourceIds;
+        this.resourceType = resourceType;
+  }
 }

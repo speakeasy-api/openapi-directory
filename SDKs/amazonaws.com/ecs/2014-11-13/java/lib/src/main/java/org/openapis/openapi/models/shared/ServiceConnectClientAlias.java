@@ -15,6 +15,7 @@ public class ServiceConnectClientAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsName")
     public String dnsName;
+
     public ServiceConnectClientAlias withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -22,9 +23,13 @@ public class ServiceConnectClientAlias {
     
     @JsonProperty("port")
     public Long port;
+
     public ServiceConnectClientAlias withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public ServiceConnectClientAlias(@JsonProperty("port") Long port) {
+        this.port = port;
+  }
 }

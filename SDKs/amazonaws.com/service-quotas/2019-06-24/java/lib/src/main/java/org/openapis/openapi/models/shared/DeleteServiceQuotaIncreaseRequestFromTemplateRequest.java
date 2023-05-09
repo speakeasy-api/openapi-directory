@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteServiceQuotaIncreaseRequestFromTemplateRequest {
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public DeleteServiceQuotaIncreaseRequestFromTemplateRequest withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -16,6 +17,7 @@ public class DeleteServiceQuotaIncreaseRequestFromTemplateRequest {
     
     @JsonProperty("QuotaCode")
     public String quotaCode;
+
     public DeleteServiceQuotaIncreaseRequestFromTemplateRequest withQuotaCode(String quotaCode) {
         this.quotaCode = quotaCode;
         return this;
@@ -23,9 +25,15 @@ public class DeleteServiceQuotaIncreaseRequestFromTemplateRequest {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public DeleteServiceQuotaIncreaseRequestFromTemplateRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public DeleteServiceQuotaIncreaseRequestFromTemplateRequest(@JsonProperty("AwsRegion") String awsRegion, @JsonProperty("QuotaCode") String quotaCode, @JsonProperty("ServiceCode") String serviceCode) {
+        this.awsRegion = awsRegion;
+        this.quotaCode = quotaCode;
+        this.serviceCode = serviceCode;
+  }
 }

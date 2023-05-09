@@ -12,6 +12,7 @@ public class ListTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public ListTasksRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -22,6 +23,7 @@ public class ListTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListTasksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class ListTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListTasksRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,9 +45,11 @@ public class ListTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public ListTasksRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListTasksRequest(){}
 }

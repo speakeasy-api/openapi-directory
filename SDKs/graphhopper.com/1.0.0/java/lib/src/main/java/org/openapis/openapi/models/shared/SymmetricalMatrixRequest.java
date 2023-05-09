@@ -15,6 +15,7 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("curbsides")
     public String[] curbsides;
+
     public SymmetricalMatrixRequest withCurbsides(String[] curbsides) {
         this.curbsides = curbsides;
         return this;
@@ -26,6 +27,7 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fail_fast")
     public Boolean failFast;
+
     public SymmetricalMatrixRequest withFailFast(Boolean failFast) {
         this.failFast = failFast;
         return this;
@@ -37,6 +39,7 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("out_arrays")
     public String[] outArrays;
+
     public SymmetricalMatrixRequest withOutArrays(String[] outArrays) {
         this.outArrays = outArrays;
         return this;
@@ -48,6 +51,7 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("point_hints")
     public String[] pointHints;
+
     public SymmetricalMatrixRequest withPointHints(String[] pointHints) {
         this.pointHints = pointHints;
         return this;
@@ -59,6 +63,7 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("points")
     public Double[][] points;
+
     public SymmetricalMatrixRequest withPoints(Double[][] points) {
         this.points = points;
         return this;
@@ -70,6 +75,7 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snap_preventions")
     public String[] snapPreventions;
+
     public SymmetricalMatrixRequest withSnapPreventions(String[] snapPreventions) {
         this.snapPreventions = snapPreventions;
         return this;
@@ -81,6 +87,7 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("turn_costs")
     public Boolean turnCosts;
+
     public SymmetricalMatrixRequest withTurnCosts(Boolean turnCosts) {
         this.turnCosts = turnCosts;
         return this;
@@ -89,9 +96,11 @@ public class SymmetricalMatrixRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicle")
     public VehicleProfileIdEnum vehicle;
+
     public SymmetricalMatrixRequest withVehicle(VehicleProfileIdEnum vehicle) {
         this.vehicle = vehicle;
         return this;
     }
     
+    public SymmetricalMatrixRequest(){}
 }

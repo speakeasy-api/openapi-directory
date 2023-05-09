@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSavedRevisionsUsingPOSTResponse {
     
     public String contentType;
+
     public ListSavedRevisionsUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListSavedRevisionsUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ListSavedRevisionsUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListSavedRevisionsUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSavedRevisionsUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListSavedRevisionsUsingPOSTResponse {
      */
     
     public ListSavedRevisionsUsingPOST200ApplicationJSON listSavedRevisionsUsingPOST200ApplicationJSONObject;
+
     public ListSavedRevisionsUsingPOSTResponse withListSavedRevisionsUsingPOST200ApplicationJSONObject(ListSavedRevisionsUsingPOST200ApplicationJSON listSavedRevisionsUsingPOST200ApplicationJSONObject) {
         this.listSavedRevisionsUsingPOST200ApplicationJSONObject = listSavedRevisionsUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListSavedRevisionsUsingPOSTResponse {
      */
     
     public ListSavedRevisionsUsingPOST400ApplicationJSON listSavedRevisionsUsingPOST400ApplicationJSONObject;
+
     public ListSavedRevisionsUsingPOSTResponse withListSavedRevisionsUsingPOST400ApplicationJSONObject(ListSavedRevisionsUsingPOST400ApplicationJSON listSavedRevisionsUsingPOST400ApplicationJSONObject) {
         this.listSavedRevisionsUsingPOST400ApplicationJSONObject = listSavedRevisionsUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListSavedRevisionsUsingPOSTResponse {
      */
     
     public ListSavedRevisionsUsingPOST401ApplicationJSON listSavedRevisionsUsingPOST401ApplicationJSONObject;
+
     public ListSavedRevisionsUsingPOSTResponse withListSavedRevisionsUsingPOST401ApplicationJSONObject(ListSavedRevisionsUsingPOST401ApplicationJSON listSavedRevisionsUsingPOST401ApplicationJSONObject) {
         this.listSavedRevisionsUsingPOST401ApplicationJSONObject = listSavedRevisionsUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListSavedRevisionsUsingPOSTResponse {
      */
     
     public ListSavedRevisionsUsingPOST500ApplicationJSON listSavedRevisionsUsingPOST500ApplicationJSONObject;
+
     public ListSavedRevisionsUsingPOSTResponse withListSavedRevisionsUsingPOST500ApplicationJSONObject(ListSavedRevisionsUsingPOST500ApplicationJSON listSavedRevisionsUsingPOST500ApplicationJSONObject) {
         this.listSavedRevisionsUsingPOST500ApplicationJSONObject = listSavedRevisionsUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public ListSavedRevisionsUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

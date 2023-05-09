@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SubnetMapping {
     
     public String allocationId;
+
     public SubnetMapping withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class SubnetMapping {
     
     
     public String iPv6Address;
+
     public SubnetMapping withIPv6Address(String iPv6Address) {
         this.iPv6Address = iPv6Address;
         return this;
@@ -26,6 +28,7 @@ public class SubnetMapping {
     
     
     public String privateIPv4Address;
+
     public SubnetMapping withPrivateIPv4Address(String privateIPv4Address) {
         this.privateIPv4Address = privateIPv4Address;
         return this;
@@ -33,9 +36,11 @@ public class SubnetMapping {
     
     
     public String subnetId;
+
     public SubnetMapping withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public SubnetMapping(){}
 }

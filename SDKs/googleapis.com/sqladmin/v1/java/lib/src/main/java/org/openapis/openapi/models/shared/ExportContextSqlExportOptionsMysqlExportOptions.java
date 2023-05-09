@@ -18,9 +18,11 @@ public class ExportContextSqlExportOptionsMysqlExportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterData")
     public Integer masterData;
+
     public ExportContextSqlExportOptionsMysqlExportOptions withMasterData(Integer masterData) {
         this.masterData = masterData;
         return this;
     }
     
+    public ExportContextSqlExportOptionsMysqlExportOptions(){}
 }

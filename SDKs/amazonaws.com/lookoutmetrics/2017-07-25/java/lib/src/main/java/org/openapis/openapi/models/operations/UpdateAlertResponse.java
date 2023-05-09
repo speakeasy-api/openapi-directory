@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAlertResponse {
@@ -12,6 +13,7 @@ public class UpdateAlertResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAlertResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAlertResponse {
     
     
     public String contentType;
+
     public UpdateAlertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAlertResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAlertResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAlertResponse {
     
     
     public Integer statusCode;
+
     public UpdateAlertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAlertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAlertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAlertResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAlertResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAlertResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateAlertResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAlertResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAlertResponse updateAlertResponse;
+
     public UpdateAlertResponse withUpdateAlertResponse(org.openapis.openapi.models.shared.UpdateAlertResponse updateAlertResponse) {
         this.updateAlertResponse = updateAlertResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAlertResponse {
      */
     
     public Object validationException;
+
     public UpdateAlertResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAlertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

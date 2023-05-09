@@ -15,6 +15,7 @@ public class S3MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKeyArn")
     public String encryptionKeyArn;
+
     public S3MonitoringConfiguration withEncryptionKeyArn(String encryptionKeyArn) {
         this.encryptionKeyArn = encryptionKeyArn;
         return this;
@@ -23,9 +24,11 @@ public class S3MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logUri")
     public String logUri;
+
     public S3MonitoringConfiguration withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
     }
     
+    public S3MonitoringConfiguration(){}
 }

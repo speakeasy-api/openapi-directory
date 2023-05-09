@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * UserGroupResolutionConfiguration - &lt;p&gt;Provides the configuration information to fetch access levels of groups and users from an IAM Identity Center (successor to Single Sign-On) identity source. This is useful for user context filtering, where search results are filtered based on the user or their group access to documents. You can also use the &lt;a href="https://docs.aws.amazon.com/kendra/latest/dg/API_PutPrincipalMapping.html"&gt;PutPrincipalMapping&lt;/a&gt; API to map users to their groups so that you only need to provide the user ID when you issue the query.&lt;/p&gt; &lt;p&gt;To set up an IAM Identity Center identity source in the console to use with Amazon Kendra, see &lt;a href="https://docs.aws.amazon.com/kendra/latest/dg/getting-started-aws-sso.html"&gt;Getting started with an IAM Identity Center identity source&lt;/a&gt;. You must also grant the required permissions to use IAM Identity Center with Amazon Kendra. For more information, see &lt;a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html#iam-roles-aws-sso"&gt;IAM roles for IAM Identity Center&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Amazon Kendra currently does not support using &lt;code&gt;UserGroupResolutionConfiguration&lt;/code&gt; with an Amazon Web Services organization member account for your IAM Identity Center identify source. You must create your index in the management account for the organization in order to use &lt;code&gt;UserGroupResolutionConfiguration&lt;/code&gt;.&lt;/p&gt;
+ * UserGroupResolutionConfiguration - &lt;p&gt;Provides the configuration information to get users and groups from an IAM Identity Center (successor to Single Sign-On) identity source. This is useful for user context filtering, where search results are filtered based on the user or their group access to documents. You can also use the &lt;a href="https://docs.aws.amazon.com/kendra/latest/dg/API_PutPrincipalMapping.html"&gt;PutPrincipalMapping&lt;/a&gt; API to map users to their groups so that you only need to provide the user ID when you issue the query.&lt;/p&gt; &lt;p&gt;To set up an IAM Identity Center identity source in the console to use with Amazon Kendra, see &lt;a href="https://docs.aws.amazon.com/kendra/latest/dg/getting-started-aws-sso.html"&gt;Getting started with an IAM Identity Center identity source&lt;/a&gt;. You must also grant the required permissions to use IAM Identity Center with Amazon Kendra. For more information, see &lt;a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html#iam-roles-aws-sso"&gt;IAM roles for IAM Identity Center&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Amazon Kendra currently does not support using &lt;code&gt;UserGroupResolutionConfiguration&lt;/code&gt; with an Amazon Web Services organization member account for your IAM Identity Center identify source. You must create your index in the management account for the organization in order to use &lt;code&gt;UserGroupResolutionConfiguration&lt;/code&gt;.&lt;/p&gt;
  */
 public class UserGroupResolutionConfiguration {
     @JsonProperty("UserGroupResolutionMode")
     public UserGroupResolutionModeEnum userGroupResolutionMode;
+
     public UserGroupResolutionConfiguration withUserGroupResolutionMode(UserGroupResolutionModeEnum userGroupResolutionMode) {
         this.userGroupResolutionMode = userGroupResolutionMode;
         return this;
     }
     
+    public UserGroupResolutionConfiguration(@JsonProperty("UserGroupResolutionMode") UserGroupResolutionModeEnum userGroupResolutionMode) {
+        this.userGroupResolutionMode = userGroupResolutionMode;
+  }
 }

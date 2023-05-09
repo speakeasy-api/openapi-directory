@@ -18,6 +18,7 @@ public class EventPeriodRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventPeriodRange withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class EventPeriodRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodEndMillis")
     public String periodEndMillis;
+
     public EventPeriodRange withPeriodEndMillis(String periodEndMillis) {
         this.periodEndMillis = periodEndMillis;
         return this;
@@ -40,9 +42,11 @@ public class EventPeriodRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodStartMillis")
     public String periodStartMillis;
+
     public EventPeriodRange withPeriodStartMillis(String periodStartMillis) {
         this.periodStartMillis = periodStartMillis;
         return this;
     }
     
+    public EventPeriodRange(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprocessingGetPageAngleRequestBody {
@@ -12,9 +13,13 @@ public class PreprocessingGetPageAngleRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PreprocessingGetPageAngleRequestBodyImageFile imageFile;
+
     public PreprocessingGetPageAngleRequestBody withImageFile(PreprocessingGetPageAngleRequestBodyImageFile imageFile) {
         this.imageFile = imageFile;
         return this;
     }
     
+    public PreprocessingGetPageAngleRequestBody(@JsonProperty("imageFile") PreprocessingGetPageAngleRequestBodyImageFile imageFile) {
+        this.imageFile = imageFile;
+  }
 }

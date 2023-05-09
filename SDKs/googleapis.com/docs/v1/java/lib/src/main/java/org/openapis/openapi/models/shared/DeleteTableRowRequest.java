@@ -18,9 +18,11 @@ public class DeleteTableRowRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellLocation")
     public TableCellLocation tableCellLocation;
+
     public DeleteTableRowRequest withTableCellLocation(TableCellLocation tableCellLocation) {
         this.tableCellLocation = tableCellLocation;
         return this;
     }
     
+    public DeleteTableRowRequest(){}
 }

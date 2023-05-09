@@ -18,6 +18,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNodeCount")
     public Integer maxNodeCount;
+
     public NodeConfig withMaxNodeCount(Integer maxNodeCount) {
         this.maxNodeCount = maxNodeCount;
         return this;
@@ -29,9 +30,11 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodeCount")
     public Integer minNodeCount;
+
     public NodeConfig withMinNodeCount(Integer minNodeCount) {
         this.minNodeCount = minNodeCount;
         return this;
     }
     
+    public NodeConfig(){}
 }

@@ -15,6 +15,7 @@ public class StoreSplitConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public StoreSplitConfiguration withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -26,9 +27,11 @@ public class StoreSplitConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitConfigurationId")
     public String splitConfigurationId;
+
     public StoreSplitConfiguration withSplitConfigurationId(String splitConfigurationId) {
         this.splitConfigurationId = splitConfigurationId;
         return this;
     }
     
+    public StoreSplitConfiguration(){}
 }

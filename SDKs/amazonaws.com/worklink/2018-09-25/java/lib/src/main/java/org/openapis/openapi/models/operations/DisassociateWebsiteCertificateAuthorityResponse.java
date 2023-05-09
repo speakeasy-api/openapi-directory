@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateWebsiteCertificateAuthorityResponse {
     
     public String contentType;
+
     public DisassociateWebsiteCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
      */
     
     public java.util.Map<String, Object> disassociateWebsiteCertificateAuthorityResponse;
+
     public DisassociateWebsiteCertificateAuthorityResponse withDisassociateWebsiteCertificateAuthorityResponse(java.util.Map<String, Object> disassociateWebsiteCertificateAuthorityResponse) {
         this.disassociateWebsiteCertificateAuthorityResponse = disassociateWebsiteCertificateAuthorityResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object internalServerErrorException;
+
     public DisassociateWebsiteCertificateAuthorityResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateWebsiteCertificateAuthorityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public DisassociateWebsiteCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateWebsiteCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateWebsiteCertificateAuthorityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DisassociateWebsiteCertificateAuthorityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateWebsiteCertificateAuthorityResponse {
      */
     
     public Object unauthorizedException;
+
     public DisassociateWebsiteCertificateAuthorityResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DisassociateWebsiteCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

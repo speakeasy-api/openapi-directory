@@ -12,9 +12,11 @@ public class ServerBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ServerBindingTypeEnum type;
+
     public ServerBinding withType(ServerBindingTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ServerBinding(){}
 }

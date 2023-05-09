@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ResamplingConfigInput - &lt;p/&gt;
+ * ResamplingConfigInput - The structure representing input for resampling operation.
  */
 public class ResamplingConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmName")
     public AlgorithmNameResamplingEnum algorithmName;
+
     public ResamplingConfigInput withAlgorithmName(AlgorithmNameResamplingEnum algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -22,6 +23,7 @@ public class ResamplingConfigInput {
     
     @JsonProperty("OutputResolution")
     public OutputResolutionResamplingInput outputResolution;
+
     public ResamplingConfigInput withOutputResolution(OutputResolutionResamplingInput outputResolution) {
         this.outputResolution = outputResolution;
         return this;
@@ -30,9 +32,13 @@ public class ResamplingConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBands")
     public String[] targetBands;
+
     public ResamplingConfigInput withTargetBands(String[] targetBands) {
         this.targetBands = targetBands;
         return this;
     }
     
+    public ResamplingConfigInput(@JsonProperty("OutputResolution") OutputResolutionResamplingInput outputResolution) {
+        this.outputResolution = outputResolution;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoginRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetLoginFormatEnum format;
+
     public GetLoginRequest withFormat(GetLoginFormatEnum format) {
         this.format = format;
         return this;
@@ -19,6 +21,7 @@ public class GetLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetLoginRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +32,14 @@ public class GetLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pass")
     public String pass;
+
     public GetLoginRequest withPass(String pass) {
         this.pass = pass;
         return this;
     }
     
+    public GetLoginRequest(@JsonProperty("name") String name, @JsonProperty("pass") String pass) {
+        this.name = name;
+        this.pass = pass;
+  }
 }

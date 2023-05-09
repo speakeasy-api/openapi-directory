@@ -18,9 +18,11 @@ public class TableDisplayOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shownColumns")
     public String[] shownColumns;
+
     public TableDisplayOptions withShownColumns(String[] shownColumns) {
         this.shownColumns = shownColumns;
         return this;
     }
     
+    public TableDisplayOptions(){}
 }

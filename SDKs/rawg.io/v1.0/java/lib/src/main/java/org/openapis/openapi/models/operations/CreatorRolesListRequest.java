@@ -12,6 +12,7 @@ public class CreatorRolesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CreatorRolesListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class CreatorRolesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public CreatorRolesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public CreatorRolesListRequest(){}
 }

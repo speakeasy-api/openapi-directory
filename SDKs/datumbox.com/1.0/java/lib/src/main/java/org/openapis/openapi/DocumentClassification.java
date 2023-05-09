@@ -53,10 +53,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdultContentDetectionResponse res = new org.openapis.openapi.models.operations.AdultContentDetectionResponse() {{
+        org.openapis.openapi.models.operations.AdultContentDetectionResponse res = new org.openapis.openapi.models.operations.AdultContentDetectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,10 +86,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommercialDetectionResponse res = new org.openapis.openapi.models.operations.CommercialDetectionResponse() {{
+        org.openapis.openapi.models.operations.CommercialDetectionResponse res = new org.openapis.openapi.models.operations.CommercialDetectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,10 +119,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EducationalDetectionResponse res = new org.openapis.openapi.models.operations.EducationalDetectionResponse() {{
+        org.openapis.openapi.models.operations.EducationalDetectionResponse res = new org.openapis.openapi.models.operations.EducationalDetectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,10 +152,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderDetectionResponse res = new org.openapis.openapi.models.operations.GenderDetectionResponse() {{
+        org.openapis.openapi.models.operations.GenderDetectionResponse res = new org.openapis.openapi.models.operations.GenderDetectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,10 +185,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDetectionResponse res = new org.openapis.openapi.models.operations.LanguageDetectionResponse() {{
+        org.openapis.openapi.models.operations.LanguageDetectionResponse res = new org.openapis.openapi.models.operations.LanguageDetectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,10 +218,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReadabilityAssessmentResponse res = new org.openapis.openapi.models.operations.ReadabilityAssessmentResponse() {{
+        org.openapis.openapi.models.operations.ReadabilityAssessmentResponse res = new org.openapis.openapi.models.operations.ReadabilityAssessmentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,10 +251,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SentimentAnalysisResponse res = new org.openapis.openapi.models.operations.SentimentAnalysisResponse() {{
+        org.openapis.openapi.models.operations.SentimentAnalysisResponse res = new org.openapis.openapi.models.operations.SentimentAnalysisResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,10 +284,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpamDetectionResponse res = new org.openapis.openapi.models.operations.SpamDetectionResponse() {{
+        org.openapis.openapi.models.operations.SpamDetectionResponse res = new org.openapis.openapi.models.operations.SpamDetectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,10 +317,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubjectivityAnalysisResponse res = new org.openapis.openapi.models.operations.SubjectivityAnalysisResponse() {{
+        org.openapis.openapi.models.operations.SubjectivityAnalysisResponse res = new org.openapis.openapi.models.operations.SubjectivityAnalysisResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,10 +350,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TopicClassificationResponse res = new org.openapis.openapi.models.operations.TopicClassificationResponse() {{
+        org.openapis.openapi.models.operations.TopicClassificationResponse res = new org.openapis.openapi.models.operations.TopicClassificationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,10 +383,8 @@ public class DocumentClassification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TwitterSentimentAnalysisResponse res = new org.openapis.openapi.models.operations.TwitterSentimentAnalysisResponse() {{
+        org.openapis.openapi.models.operations.TwitterSentimentAnalysisResponse res = new org.openapis.openapi.models.operations.TwitterSentimentAnalysisResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

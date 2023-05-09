@@ -20,6 +20,7 @@ public class InstanceGroupDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BidPrice")
     public String bidPrice;
+
     public InstanceGroupDetail withBidPrice(String bidPrice) {
         this.bidPrice = bidPrice;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public InstanceGroupDetail withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -37,6 +39,7 @@ public class InstanceGroupDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAmiId")
     public String customAmiId;
+
     public InstanceGroupDetail withCustomAmiId(String customAmiId) {
         this.customAmiId = customAmiId;
         return this;
@@ -47,6 +50,7 @@ public class InstanceGroupDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public InstanceGroupDetail withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -55,6 +59,7 @@ public class InstanceGroupDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupId")
     public String instanceGroupId;
+
     public InstanceGroupDetail withInstanceGroupId(String instanceGroupId) {
         this.instanceGroupId = instanceGroupId;
         return this;
@@ -62,6 +67,7 @@ public class InstanceGroupDetail {
     
     @JsonProperty("InstanceRequestCount")
     public Long instanceRequestCount;
+
     public InstanceGroupDetail withInstanceRequestCount(Long instanceRequestCount) {
         this.instanceRequestCount = instanceRequestCount;
         return this;
@@ -69,6 +75,7 @@ public class InstanceGroupDetail {
     
     @JsonProperty("InstanceRole")
     public InstanceRoleTypeEnum instanceRole;
+
     public InstanceGroupDetail withInstanceRole(InstanceRoleTypeEnum instanceRole) {
         this.instanceRole = instanceRole;
         return this;
@@ -76,6 +83,7 @@ public class InstanceGroupDetail {
     
     @JsonProperty("InstanceRunningCount")
     public Long instanceRunningCount;
+
     public InstanceGroupDetail withInstanceRunningCount(Long instanceRunningCount) {
         this.instanceRunningCount = instanceRunningCount;
         return this;
@@ -83,6 +91,7 @@ public class InstanceGroupDetail {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public InstanceGroupDetail withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -91,6 +100,7 @@ public class InstanceGroupDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastStateChangeReason")
     public String lastStateChangeReason;
+
     public InstanceGroupDetail withLastStateChangeReason(String lastStateChangeReason) {
         this.lastStateChangeReason = lastStateChangeReason;
         return this;
@@ -98,6 +108,7 @@ public class InstanceGroupDetail {
     
     @JsonProperty("Market")
     public MarketTypeEnum market;
+
     public InstanceGroupDetail withMarket(MarketTypeEnum market) {
         this.market = market;
         return this;
@@ -106,6 +117,7 @@ public class InstanceGroupDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InstanceGroupDetail withName(String name) {
         this.name = name;
         return this;
@@ -116,6 +128,7 @@ public class InstanceGroupDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReadyDateTime")
     public OffsetDateTime readyDateTime;
+
     public InstanceGroupDetail withReadyDateTime(OffsetDateTime readyDateTime) {
         this.readyDateTime = readyDateTime;
         return this;
@@ -126,6 +139,7 @@ public class InstanceGroupDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDateTime")
     public OffsetDateTime startDateTime;
+
     public InstanceGroupDetail withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -133,9 +147,19 @@ public class InstanceGroupDetail {
     
     @JsonProperty("State")
     public InstanceGroupStateEnum state;
+
     public InstanceGroupDetail withState(InstanceGroupStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InstanceGroupDetail(@JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("InstanceRequestCount") Long instanceRequestCount, @JsonProperty("InstanceRole") InstanceRoleTypeEnum instanceRole, @JsonProperty("InstanceRunningCount") Long instanceRunningCount, @JsonProperty("InstanceType") String instanceType, @JsonProperty("Market") MarketTypeEnum market, @JsonProperty("State") InstanceGroupStateEnum state) {
+        this.creationDateTime = creationDateTime;
+        this.instanceRequestCount = instanceRequestCount;
+        this.instanceRole = instanceRole;
+        this.instanceRunningCount = instanceRunningCount;
+        this.instanceType = instanceType;
+        this.market = market;
+        this.state = state;
+  }
 }

@@ -15,6 +15,7 @@ public class ProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public ProductInput withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,6 +23,7 @@ public class ProductInput {
     
     @JsonProperty("currency")
     public CurrencyEnum currency;
+
     public ProductInput withCurrency(CurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -30,6 +32,7 @@ public class ProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("general_ledger_number")
     public String generalLedgerNumber;
+
     public ProductInput withGeneralLedgerNumber(String generalLedgerNumber) {
         this.generalLedgerNumber = generalLedgerNumber;
         return this;
@@ -38,6 +41,7 @@ public class ProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("general_ledger_taxcode")
     public String generalLedgerTaxcode;
+
     public ProductInput withGeneralLedgerTaxcode(String generalLedgerTaxcode) {
         this.generalLedgerTaxcode = generalLedgerTaxcode;
         return this;
@@ -45,6 +49,7 @@ public class ProductInput {
     
     @JsonProperty("name")
     public String name;
+
     public ProductInput withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +58,7 @@ public class ProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_unit_price")
     public Float netUnitPrice;
+
     public ProductInput withNetUnitPrice(Float netUnitPrice) {
         this.netUnitPrice = netUnitPrice;
         return this;
@@ -60,6 +66,7 @@ public class ProductInput {
     
     @JsonProperty("unit")
     public String unit;
+
     public ProductInput withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -67,9 +74,16 @@ public class ProductInput {
     
     @JsonProperty("vat")
     public VatEnum vat;
+
     public ProductInput withVat(VatEnum vat) {
         this.vat = vat;
         return this;
     }
     
+    public ProductInput(@JsonProperty("currency") CurrencyEnum currency, @JsonProperty("name") String name, @JsonProperty("unit") String unit, @JsonProperty("vat") VatEnum vat) {
+        this.currency = currency;
+        this.name = name;
+        this.unit = unit;
+        this.vat = vat;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * IdentityNotificationAttributes - Represents the notification attributes of an identity, including whether an identity has Amazon Simple Notification Service (Amazon SNS) topics set for bounce, complaint, and/or delivery notifications, and whether feedback forwarding is enabled for bounce and complaint notifications.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IdentityNotificationAttributes {
     
     public String bounceTopic;
+
     public IdentityNotificationAttributes withBounceTopic(String bounceTopic) {
         this.bounceTopic = bounceTopic;
         return this;
@@ -19,6 +20,7 @@ public class IdentityNotificationAttributes {
     
     
     public String complaintTopic;
+
     public IdentityNotificationAttributes withComplaintTopic(String complaintTopic) {
         this.complaintTopic = complaintTopic;
         return this;
@@ -26,6 +28,7 @@ public class IdentityNotificationAttributes {
     
     
     public String deliveryTopic;
+
     public IdentityNotificationAttributes withDeliveryTopic(String deliveryTopic) {
         this.deliveryTopic = deliveryTopic;
         return this;
@@ -33,6 +36,7 @@ public class IdentityNotificationAttributes {
     
     
     public Boolean forwardingEnabled;
+
     public IdentityNotificationAttributes withForwardingEnabled(Boolean forwardingEnabled) {
         this.forwardingEnabled = forwardingEnabled;
         return this;
@@ -40,6 +44,7 @@ public class IdentityNotificationAttributes {
     
     
     public Boolean headersInBounceNotificationsEnabled;
+
     public IdentityNotificationAttributes withHeadersInBounceNotificationsEnabled(Boolean headersInBounceNotificationsEnabled) {
         this.headersInBounceNotificationsEnabled = headersInBounceNotificationsEnabled;
         return this;
@@ -47,6 +52,7 @@ public class IdentityNotificationAttributes {
     
     
     public Boolean headersInComplaintNotificationsEnabled;
+
     public IdentityNotificationAttributes withHeadersInComplaintNotificationsEnabled(Boolean headersInComplaintNotificationsEnabled) {
         this.headersInComplaintNotificationsEnabled = headersInComplaintNotificationsEnabled;
         return this;
@@ -54,9 +60,16 @@ public class IdentityNotificationAttributes {
     
     
     public Boolean headersInDeliveryNotificationsEnabled;
+
     public IdentityNotificationAttributes withHeadersInDeliveryNotificationsEnabled(Boolean headersInDeliveryNotificationsEnabled) {
         this.headersInDeliveryNotificationsEnabled = headersInDeliveryNotificationsEnabled;
         return this;
     }
     
+    public IdentityNotificationAttributes(@JsonProperty("BounceTopic") String bounceTopic, @JsonProperty("ComplaintTopic") String complaintTopic, @JsonProperty("DeliveryTopic") String deliveryTopic, @JsonProperty("ForwardingEnabled") Boolean forwardingEnabled) {
+        this.bounceTopic = bounceTopic;
+        this.complaintTopic = complaintTopic;
+        this.deliveryTopic = deliveryTopic;
+        this.forwardingEnabled = forwardingEnabled;
+  }
 }

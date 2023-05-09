@@ -18,6 +18,7 @@ public class GetClientProfileByEmail200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAccounts")
     public String[] availableAccounts;
+
     public GetClientProfileByEmail200ApplicationJSON withAvailableAccounts(String[] availableAccounts) {
         this.availableAccounts = availableAccounts;
         return this;
@@ -29,6 +30,7 @@ public class GetClientProfileByEmail200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAddresses")
     public GetClientProfileByEmail200ApplicationJSONAvailableAddresses[] availableAddresses;
+
     public GetClientProfileByEmail200ApplicationJSON withAvailableAddresses(GetClientProfileByEmail200ApplicationJSONAvailableAddresses[] availableAddresses) {
         this.availableAddresses = availableAddresses;
         return this;
@@ -40,6 +42,7 @@ public class GetClientProfileByEmail200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isComplete")
     public Boolean isComplete;
+
     public GetClientProfileByEmail200ApplicationJSON withIsComplete(Boolean isComplete) {
         this.isComplete = isComplete;
         return this;
@@ -51,6 +54,7 @@ public class GetClientProfileByEmail200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileProvider")
     public String profileProvider;
+
     public GetClientProfileByEmail200ApplicationJSON withProfileProvider(String profileProvider) {
         this.profileProvider = profileProvider;
         return this;
@@ -62,6 +66,7 @@ public class GetClientProfileByEmail200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userProfile")
     public GetClientProfileByEmail200ApplicationJSONUserProfile userProfile;
+
     public GetClientProfileByEmail200ApplicationJSON withUserProfile(GetClientProfileByEmail200ApplicationJSONUserProfile userProfile) {
         this.userProfile = userProfile;
         return this;
@@ -73,9 +78,11 @@ public class GetClientProfileByEmail200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userProfileId")
     public String userProfileId;
+
     public GetClientProfileByEmail200ApplicationJSON withUserProfileId(String userProfileId) {
         this.userProfileId = userProfileId;
         return this;
     }
     
+    public GetClientProfileByEmail200ApplicationJSON(){}
 }

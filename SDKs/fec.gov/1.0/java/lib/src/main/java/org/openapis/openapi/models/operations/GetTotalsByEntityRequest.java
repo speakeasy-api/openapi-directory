@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTotalsByEntityRequest {
@@ -13,6 +14,7 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetTotalsByEntityRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -26,6 +28,7 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer cycle;
+
     public GetTotalsByEntityRequest withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -36,6 +39,7 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetTotalsByEntityRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -46,6 +50,7 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetTotalsByEntityRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -57,6 +62,7 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetTotalsByEntityRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -67,6 +73,7 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetTotalsByEntityRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -77,6 +84,7 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetTotalsByEntityRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -87,9 +95,14 @@ public class GetTotalsByEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetTotalsByEntityRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetTotalsByEntityRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("cycle") Integer cycle) {
+        this.apiKey = apiKey;
+        this.cycle = cycle;
+  }
 }

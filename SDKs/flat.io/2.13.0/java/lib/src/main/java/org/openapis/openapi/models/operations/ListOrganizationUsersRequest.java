@@ -12,6 +12,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.SortDirectionEnum direction;
+
     public ListOrganizationUsersRequest withDirection(org.openapis.openapi.models.shared.SortDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +23,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String[] group;
+
     public ListOrganizationUsersRequest withGroup(String[] group) {
         this.group = group;
         return this;
@@ -32,6 +34,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=licenseExpirationDate")
     public String[] licenseExpirationDate;
+
     public ListOrganizationUsersRequest withLicenseExpirationDate(String[] licenseExpirationDate) {
         this.licenseExpirationDate = licenseExpirationDate;
         return this;
@@ -42,6 +45,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListOrganizationUsersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -54,6 +58,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
     public String next;
+
     public ListOrganizationUsersRequest withNext(String next) {
         this.next = next;
         return this;
@@ -64,6 +69,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noActiveLicense")
     public Boolean noActiveLicense;
+
     public ListOrganizationUsersRequest withNoActiveLicense(Boolean noActiveLicense) {
         this.noActiveLicense = noActiveLicense;
         return this;
@@ -74,6 +80,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyIds")
     public Boolean onlyIds;
+
     public ListOrganizationUsersRequest withOnlyIds(Boolean onlyIds) {
         this.onlyIds = onlyIds;
         return this;
@@ -86,6 +93,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
     public String previous;
+
     public ListOrganizationUsersRequest withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -96,6 +104,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public ListOrganizationUsersRequest withQ(String q) {
         this.q = q;
         return this;
@@ -106,6 +115,7 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public org.openapis.openapi.models.shared.RoleEnum[] role;
+
     public ListOrganizationUsersRequest withRole(org.openapis.openapi.models.shared.RoleEnum[] role) {
         this.role = role;
         return this;
@@ -116,9 +126,11 @@ public class ListOrganizationUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public ListOrganizationUsersRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListOrganizationUsersRequest(){}
 }

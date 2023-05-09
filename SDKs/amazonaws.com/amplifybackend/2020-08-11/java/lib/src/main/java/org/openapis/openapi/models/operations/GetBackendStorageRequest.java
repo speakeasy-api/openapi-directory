@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBackendStorageRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public GetBackendStorageRequestBody requestBody;
+
     public GetBackendStorageRequest withRequestBody(GetBackendStorageRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class GetBackendStorageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetBackendStorageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetBackendStorageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetBackendStorageRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetBackendStorageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetBackendStorageRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetBackendStorageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetBackendStorageRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetBackendStorageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetBackendStorageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetBackendStorageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetBackendStorageRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetBackendStorageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetBackendStorageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class GetBackendStorageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public GetBackendStorageRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -78,9 +88,15 @@ public class GetBackendStorageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=backendEnvironmentName")
     public String backendEnvironmentName;
+
     public GetBackendStorageRequest withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
     }
     
+    public GetBackendStorageRequest(@JsonProperty("RequestBody") GetBackendStorageRequestBody requestBody, @JsonProperty("appId") String appId, @JsonProperty("backendEnvironmentName") String backendEnvironmentName) {
+        this.requestBody = requestBody;
+        this.appId = appId;
+        this.backendEnvironmentName = backendEnvironmentName;
+  }
 }

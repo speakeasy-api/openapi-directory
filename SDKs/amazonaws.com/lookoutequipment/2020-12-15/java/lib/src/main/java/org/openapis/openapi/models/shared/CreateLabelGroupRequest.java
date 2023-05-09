@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLabelGroupRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateLabelGroupRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateLabelGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCodes")
     public String[] faultCodes;
+
     public CreateLabelGroupRequest withFaultCodes(String[] faultCodes) {
         this.faultCodes = faultCodes;
         return this;
@@ -26,6 +28,7 @@ public class CreateLabelGroupRequest {
     
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public CreateLabelGroupRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -34,9 +37,14 @@ public class CreateLabelGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateLabelGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLabelGroupRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("LabelGroupName") String labelGroupName) {
+        this.clientToken = clientToken;
+        this.labelGroupName = labelGroupName;
+  }
 }

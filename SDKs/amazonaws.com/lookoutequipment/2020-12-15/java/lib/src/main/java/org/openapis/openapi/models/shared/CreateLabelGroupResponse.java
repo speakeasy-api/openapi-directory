@@ -15,6 +15,7 @@ public class CreateLabelGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupArn")
     public String labelGroupArn;
+
     public CreateLabelGroupResponse withLabelGroupArn(String labelGroupArn) {
         this.labelGroupArn = labelGroupArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateLabelGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public CreateLabelGroupResponse withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
     }
     
+    public CreateLabelGroupResponse(){}
 }

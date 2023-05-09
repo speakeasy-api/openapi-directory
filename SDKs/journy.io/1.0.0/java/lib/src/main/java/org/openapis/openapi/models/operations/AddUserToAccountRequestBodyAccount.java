@@ -18,6 +18,7 @@ public class AddUserToAccountRequestBodyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AddUserToAccountRequestBodyAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,9 +30,11 @@ public class AddUserToAccountRequestBodyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public AddUserToAccountRequestBodyAccount withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public AddUserToAccountRequestBodyAccount(){}
 }

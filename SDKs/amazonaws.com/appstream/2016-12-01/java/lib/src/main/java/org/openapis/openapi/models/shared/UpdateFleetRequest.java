@@ -12,6 +12,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToDelete")
     public FleetAttributeEnum[] attributesToDelete;
+
     public UpdateFleetRequest withAttributesToDelete(FleetAttributeEnum[] attributesToDelete) {
         this.attributesToDelete = attributesToDelete;
         return this;
@@ -20,6 +21,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeCapacity")
     public ComputeCapacity computeCapacity;
+
     public UpdateFleetRequest withComputeCapacity(ComputeCapacity computeCapacity) {
         this.computeCapacity = computeCapacity;
         return this;
@@ -28,6 +30,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteVpcConfig")
     public Boolean deleteVpcConfig;
+
     public UpdateFleetRequest withDeleteVpcConfig(Boolean deleteVpcConfig) {
         this.deleteVpcConfig = deleteVpcConfig;
         return this;
@@ -36,6 +39,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateFleetRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisconnectTimeoutInSeconds")
     public Long disconnectTimeoutInSeconds;
+
     public UpdateFleetRequest withDisconnectTimeoutInSeconds(Long disconnectTimeoutInSeconds) {
         this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
         return this;
@@ -52,6 +57,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateFleetRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -60,6 +66,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainJoinInfo")
     public DomainJoinInfo domainJoinInfo;
+
     public UpdateFleetRequest withDomainJoinInfo(DomainJoinInfo domainJoinInfo) {
         this.domainJoinInfo = domainJoinInfo;
         return this;
@@ -68,6 +75,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDefaultInternetAccess")
     public Boolean enableDefaultInternetAccess;
+
     public UpdateFleetRequest withEnableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
         this.enableDefaultInternetAccess = enableDefaultInternetAccess;
         return this;
@@ -76,6 +84,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public UpdateFleetRequest withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -84,6 +93,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleDisconnectTimeoutInSeconds")
     public Long idleDisconnectTimeoutInSeconds;
+
     public UpdateFleetRequest withIdleDisconnectTimeoutInSeconds(Long idleDisconnectTimeoutInSeconds) {
         this.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
         return this;
@@ -92,6 +102,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public UpdateFleetRequest withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -100,6 +111,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageName")
     public String imageName;
+
     public UpdateFleetRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -108,6 +120,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public UpdateFleetRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -116,6 +129,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentSessions")
     public Long maxConcurrentSessions;
+
     public UpdateFleetRequest withMaxConcurrentSessions(Long maxConcurrentSessions) {
         this.maxConcurrentSessions = maxConcurrentSessions;
         return this;
@@ -124,6 +138,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxUserDurationInSeconds")
     public Long maxUserDurationInSeconds;
+
     public UpdateFleetRequest withMaxUserDurationInSeconds(Long maxUserDurationInSeconds) {
         this.maxUserDurationInSeconds = maxUserDurationInSeconds;
         return this;
@@ -132,6 +147,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateFleetRequest withName(String name) {
         this.name = name;
         return this;
@@ -140,6 +156,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public PlatformTypeEnum platform;
+
     public UpdateFleetRequest withPlatform(PlatformTypeEnum platform) {
         this.platform = platform;
         return this;
@@ -148,6 +165,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionScriptS3Location")
     public S3Location sessionScriptS3Location;
+
     public UpdateFleetRequest withSessionScriptS3Location(S3Location sessionScriptS3Location) {
         this.sessionScriptS3Location = sessionScriptS3Location;
         return this;
@@ -156,6 +174,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamView")
     public StreamViewEnum streamView;
+
     public UpdateFleetRequest withStreamView(StreamViewEnum streamView) {
         this.streamView = streamView;
         return this;
@@ -164,6 +183,7 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsbDeviceFilterStrings")
     public String[] usbDeviceFilterStrings;
+
     public UpdateFleetRequest withUsbDeviceFilterStrings(String[] usbDeviceFilterStrings) {
         this.usbDeviceFilterStrings = usbDeviceFilterStrings;
         return this;
@@ -172,9 +192,11 @@ public class UpdateFleetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public UpdateFleetRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public UpdateFleetRequest(){}
 }

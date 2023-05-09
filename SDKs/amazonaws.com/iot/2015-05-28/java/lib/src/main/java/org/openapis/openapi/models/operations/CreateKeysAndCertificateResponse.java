@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateKeysAndCertificateResponse {
     
     public String contentType;
+
     public CreateKeysAndCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateKeysAndCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateKeysAndCertificateResponse createKeysAndCertificateResponse;
+
     public CreateKeysAndCertificateResponse withCreateKeysAndCertificateResponse(org.openapis.openapi.models.shared.CreateKeysAndCertificateResponse createKeysAndCertificateResponse) {
         this.createKeysAndCertificateResponse = createKeysAndCertificateResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateKeysAndCertificateResponse {
      */
     
     public Object internalFailureException;
+
     public CreateKeysAndCertificateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateKeysAndCertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateKeysAndCertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateKeysAndCertificateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateKeysAndCertificateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class CreateKeysAndCertificateResponse {
     
     
     public Integer statusCode;
+
     public CreateKeysAndCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateKeysAndCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateKeysAndCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateKeysAndCertificateResponse {
      */
     
     public Object throttlingException;
+
     public CreateKeysAndCertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CreateKeysAndCertificateResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateKeysAndCertificateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateKeysAndCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

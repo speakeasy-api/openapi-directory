@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OptedOutFilter {
     @JsonProperty("Name")
     public OptedOutFilterNameEnum name;
+
     public OptedOutFilter withName(OptedOutFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class OptedOutFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public OptedOutFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public OptedOutFilter(@JsonProperty("Name") OptedOutFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

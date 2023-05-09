@@ -18,6 +18,7 @@ public class AppTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileAppCategoryTargeting")
     public NumericTargetingDimension mobileAppCategoryTargeting;
+
     public AppTargeting withMobileAppCategoryTargeting(NumericTargetingDimension mobileAppCategoryTargeting) {
         this.mobileAppCategoryTargeting = mobileAppCategoryTargeting;
         return this;
@@ -29,9 +30,11 @@ public class AppTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileAppTargeting")
     public StringTargetingDimension mobileAppTargeting;
+
     public AppTargeting withMobileAppTargeting(StringTargetingDimension mobileAppTargeting) {
         this.mobileAppTargeting = mobileAppTargeting;
         return this;
     }
     
+    public AppTargeting(){}
 }

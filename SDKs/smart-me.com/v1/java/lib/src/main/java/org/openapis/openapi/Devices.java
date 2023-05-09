@@ -53,14 +53,12 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesGetResponse res = new org.openapis.openapi.models.operations.DevicesGetResponse() {{
+        org.openapis.openapi.models.operations.DevicesGetResponse res = new org.openapis.openapi.models.operations.DevicesGetResponse(contentType, httpRes.statusCode()) {{
             devices = null;
             devices = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,14 +113,12 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesPostFormResponse res = new org.openapis.openapi.models.operations.DevicesPostFormResponse() {{
+        org.openapis.openapi.models.operations.DevicesPostFormResponse res = new org.openapis.openapi.models.operations.DevicesPostFormResponse(contentType, httpRes.statusCode()) {{
             deviceToPost = null;
             deviceToPost = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,14 +175,12 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesPostJsonResponse res = new org.openapis.openapi.models.operations.DevicesPostJsonResponse() {{
+        org.openapis.openapi.models.operations.DevicesPostJsonResponse res = new org.openapis.openapi.models.operations.DevicesPostJsonResponse(contentType, httpRes.statusCode()) {{
             deviceToPost = null;
             deviceToPost = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,14 +237,12 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesPostRawResponse res = new org.openapis.openapi.models.operations.DevicesPostRawResponse() {{
+        org.openapis.openapi.models.operations.DevicesPostRawResponse res = new org.openapis.openapi.models.operations.DevicesPostRawResponse(contentType, httpRes.statusCode()) {{
             deviceToPost = null;
             deviceToPost = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -307,14 +299,12 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesPutResponse res = new org.openapis.openapi.models.operations.DevicesPutResponse() {{
+        org.openapis.openapi.models.operations.DevicesPutResponse res = new org.openapis.openapi.models.operations.DevicesPutResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -364,14 +354,12 @@ public class Devices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiDevicesIdResponse res = new org.openapis.openapi.models.operations.GetApiDevicesIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiDevicesIdResponse res = new org.openapis.openapi.models.operations.GetApiDevicesIdResponse(contentType, httpRes.statusCode()) {{
             device = null;
             device = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

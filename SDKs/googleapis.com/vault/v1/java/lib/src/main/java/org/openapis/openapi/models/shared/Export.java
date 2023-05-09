@@ -18,6 +18,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudStorageSink")
     public CloudStorageSink cloudStorageSink;
+
     public Export withCloudStorageSink(CloudStorageSink cloudStorageSink) {
         this.cloudStorageSink = cloudStorageSink;
         return this;
@@ -29,6 +30,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Export withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportOptions")
     public ExportOptions exportOptions;
+
     public Export withExportOptions(ExportOptions exportOptions) {
         this.exportOptions = exportOptions;
         return this;
@@ -51,6 +54,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Export withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matterId")
     public String matterId;
+
     public Export withMatterId(String matterId) {
         this.matterId = matterId;
         return this;
@@ -73,6 +78,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Export withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public Query query;
+
     public Export withQuery(Query query) {
         this.query = query;
         return this;
@@ -95,6 +102,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requester")
     public UserInfo requester;
+
     public Export withRequester(UserInfo requester) {
         this.requester = requester;
         return this;
@@ -106,6 +114,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public ExportStats stats;
+
     public Export withStats(ExportStats stats) {
         this.stats = stats;
         return this;
@@ -117,9 +126,11 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExportStatusEnum status;
+
     public Export withStatus(ExportStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Export(){}
 }

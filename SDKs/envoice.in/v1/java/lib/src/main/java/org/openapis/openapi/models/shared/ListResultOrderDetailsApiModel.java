@@ -15,6 +15,7 @@ public class ListResultOrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Integer count;
+
     public ListResultOrderDetailsApiModel withCount(Integer count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class ListResultOrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessages")
     public IErrorInfo[] errorMessages;
+
     public ListResultOrderDetailsApiModel withErrorMessages(IErrorInfo[] errorMessages) {
         this.errorMessages = errorMessages;
         return this;
@@ -31,6 +33,7 @@ public class ListResultOrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsFaulted")
     public Boolean isFaulted;
+
     public ListResultOrderDetailsApiModel withIsFaulted(Boolean isFaulted) {
         this.isFaulted = isFaulted;
         return this;
@@ -39,6 +42,7 @@ public class ListResultOrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public OrderDetailsApiModel[] result;
+
     public ListResultOrderDetailsApiModel withResult(OrderDetailsApiModel[] result) {
         this.result = result;
         return this;
@@ -47,9 +51,11 @@ public class ListResultOrderDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Integer totalCount;
+
     public ListResultOrderDetailsApiModel withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ListResultOrderDetailsApiModel(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddUserToGroupRequest {
     
     public String groupName;
+
     public AddUserToGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,9 +17,14 @@ public class AddUserToGroupRequest {
     
     
     public String userName;
+
     public AddUserToGroupRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public AddUserToGroupRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("UserName") String userName) {
+        this.groupName = groupName;
+        this.userName = userName;
+  }
 }

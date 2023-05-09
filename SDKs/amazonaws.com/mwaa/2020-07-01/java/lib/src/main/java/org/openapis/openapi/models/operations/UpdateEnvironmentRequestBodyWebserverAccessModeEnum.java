@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * UpdateEnvironmentRequestBodyWebserverAccessModeEnum - The Apache Airflow &lt;i&gt;Web server&lt;/i&gt; access mode. To learn more, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html"&gt;Apache Airflow access modes&lt;/a&gt;.
+ * UpdateEnvironmentRequestBodyWebserverAccessModeEnum - The Apache Airflow &lt;i&gt;Web server&lt;/i&gt; access mode. For more information, see &lt;a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html"&gt;Apache Airflow access modes&lt;/a&gt;.
  */
 public enum UpdateEnvironmentRequestBodyWebserverAccessModeEnum {
     PRIVATE_ONLY("PRIVATE_ONLY"),

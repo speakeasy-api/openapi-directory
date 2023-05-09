@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteCustomerGatewayRequest - Contains the parameters for DeleteCustomerGateway.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteCustomerGatewayRequest {
     
     public String customerGatewayId;
+
     public DeleteCustomerGatewayRequest withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -19,9 +20,13 @@ public class DeleteCustomerGatewayRequest {
     
     
     public Boolean dryRun;
+
     public DeleteCustomerGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DeleteCustomerGatewayRequest(@JsonProperty("CustomerGatewayId") String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+  }
 }

@@ -15,6 +15,7 @@ public class GetPullRequestOverrideStateOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overridden")
     public Boolean overridden;
+
     public GetPullRequestOverrideStateOutput withOverridden(Boolean overridden) {
         this.overridden = overridden;
         return this;
@@ -23,9 +24,11 @@ public class GetPullRequestOverrideStateOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrider")
     public String overrider;
+
     public GetPullRequestOverrideStateOutput withOverrider(String overrider) {
         this.overrider = overrider;
         return this;
     }
     
+    public GetPullRequestOverrideStateOutput(){}
 }

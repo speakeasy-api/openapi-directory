@@ -15,9 +15,11 @@ public class GetLogRecordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logRecord")
     public java.util.Map<String, String> logRecord;
+
     public GetLogRecordResponse withLogRecord(java.util.Map<String, String> logRecord) {
         this.logRecord = logRecord;
         return this;
     }
     
+    public GetLogRecordResponse(){}
 }

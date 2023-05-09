@@ -18,6 +18,7 @@ public class AboutStorageQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public String limit;
+
     public AboutStorageQuota withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -29,6 +30,7 @@ public class AboutStorageQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public String usage;
+
     public AboutStorageQuota withUsage(String usage) {
         this.usage = usage;
         return this;
@@ -40,6 +42,7 @@ public class AboutStorageQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageInDrive")
     public String usageInDrive;
+
     public AboutStorageQuota withUsageInDrive(String usageInDrive) {
         this.usageInDrive = usageInDrive;
         return this;
@@ -51,9 +54,11 @@ public class AboutStorageQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageInDriveTrash")
     public String usageInDriveTrash;
+
     public AboutStorageQuota withUsageInDriveTrash(String usageInDriveTrash) {
         this.usageInDriveTrash = usageInDriveTrash;
         return this;
     }
     
+    public AboutStorageQuota(){}
 }

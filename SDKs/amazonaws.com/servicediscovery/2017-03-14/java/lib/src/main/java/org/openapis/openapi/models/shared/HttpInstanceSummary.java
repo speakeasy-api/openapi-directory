@@ -15,6 +15,7 @@ public class HttpInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public HttpInstanceSummary withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class HttpInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthStatus")
     public HealthStatusEnum healthStatus;
+
     public HttpInstanceSummary withHealthStatus(HealthStatusEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -31,6 +33,7 @@ public class HttpInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public HttpInstanceSummary withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,6 +42,7 @@ public class HttpInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamespaceName")
     public String namespaceName;
+
     public HttpInstanceSummary withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -47,9 +51,11 @@ public class HttpInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public HttpInstanceSummary withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public HttpInstanceSummary(){}
 }

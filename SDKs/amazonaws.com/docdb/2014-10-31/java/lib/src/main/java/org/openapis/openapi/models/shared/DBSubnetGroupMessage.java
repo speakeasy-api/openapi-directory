@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBSubnetGroupMessage {
     
     public DBSubnetGroups[] dbSubnetGroups;
+
     public DBSubnetGroupMessage withDBSubnetGroups(DBSubnetGroups[] dbSubnetGroups) {
         this.dbSubnetGroups = dbSubnetGroups;
         return this;
@@ -19,9 +20,11 @@ public class DBSubnetGroupMessage {
     
     
     public String marker;
+
     public DBSubnetGroupMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBSubnetGroupMessage(){}
 }

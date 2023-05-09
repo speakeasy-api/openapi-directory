@@ -15,9 +15,11 @@ public class AttachPolicyRequestBodyPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public AttachPolicyRequestBodyPolicyReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public AttachPolicyRequestBodyPolicyReference(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendMessageBatchResultEntryList - Encloses a &lt;code&gt;MessageId&lt;/code&gt; for a successfully-enqueued message in a &lt;code&gt; &lt;a&gt;SendMessageBatch&lt;/a&gt;.&lt;/code&gt; 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendMessageBatchResultEntryList {
     
     public String id;
+
     public SendMessageBatchResultEntryList withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class SendMessageBatchResultEntryList {
     
     
     public String md5OfMessageAttributes;
+
     public SendMessageBatchResultEntryList withMd5OfMessageAttributes(String md5OfMessageAttributes) {
         this.md5OfMessageAttributes = md5OfMessageAttributes;
         return this;
@@ -26,6 +28,7 @@ public class SendMessageBatchResultEntryList {
     
     
     public String md5OfMessageBody;
+
     public SendMessageBatchResultEntryList withMd5OfMessageBody(String md5OfMessageBody) {
         this.md5OfMessageBody = md5OfMessageBody;
         return this;
@@ -33,6 +36,7 @@ public class SendMessageBatchResultEntryList {
     
     
     public String md5OfMessageSystemAttributes;
+
     public SendMessageBatchResultEntryList withMd5OfMessageSystemAttributes(String md5OfMessageSystemAttributes) {
         this.md5OfMessageSystemAttributes = md5OfMessageSystemAttributes;
         return this;
@@ -40,6 +44,7 @@ public class SendMessageBatchResultEntryList {
     
     
     public String messageId;
+
     public SendMessageBatchResultEntryList withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -47,9 +52,15 @@ public class SendMessageBatchResultEntryList {
     
     
     public String sequenceNumber;
+
     public SendMessageBatchResultEntryList withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
     
+    public SendMessageBatchResultEntryList(@JsonProperty("Id") String id, @JsonProperty("MD5OfMessageBody") String md5OfMessageBody, @JsonProperty("MessageId") String messageId) {
+        this.id = id;
+        this.md5OfMessageBody = md5OfMessageBody;
+        this.messageId = messageId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommercialCreditCardsResponse {
@@ -12,6 +13,7 @@ public class GetCommercialCreditCardsResponse {
      */
     
     public GetCommercialCreditCards400ErrorObject fourHundredErrorObject;
+
     public GetCommercialCreditCardsResponse withFourHundredErrorObject(GetCommercialCreditCards400ErrorObject fourHundredErrorObject) {
         this.fourHundredErrorObject = fourHundredErrorObject;
         return this;
@@ -22,6 +24,7 @@ public class GetCommercialCreditCardsResponse {
      */
     
     public GetCommercialCreditCards408ErrorObject fourHundredAndEightErrorObject;
+
     public GetCommercialCreditCardsResponse withFourHundredAndEightErrorObject(GetCommercialCreditCards408ErrorObject fourHundredAndEightErrorObject) {
         this.fourHundredAndEightErrorObject = fourHundredAndEightErrorObject;
         return this;
@@ -32,6 +35,7 @@ public class GetCommercialCreditCardsResponse {
      */
     
     public GetCommercialCreditCards429ErrorObject fourHundredAndTwentyNineErrorObject;
+
     public GetCommercialCreditCardsResponse withFourHundredAndTwentyNineErrorObject(GetCommercialCreditCards429ErrorObject fourHundredAndTwentyNineErrorObject) {
         this.fourHundredAndTwentyNineErrorObject = fourHundredAndTwentyNineErrorObject;
         return this;
@@ -42,6 +46,7 @@ public class GetCommercialCreditCardsResponse {
      */
     
     public GetCommercialCreditCards500ErrorObject fiveHundredErrorObject;
+
     public GetCommercialCreditCardsResponse withFiveHundredErrorObject(GetCommercialCreditCards500ErrorObject fiveHundredErrorObject) {
         this.fiveHundredErrorObject = fiveHundredErrorObject;
         return this;
@@ -52,6 +57,7 @@ public class GetCommercialCreditCardsResponse {
      */
     
     public GetCommercialCreditCards503ErrorObject fiveHundredAndThreeErrorObject;
+
     public GetCommercialCreditCardsResponse withFiveHundredAndThreeErrorObject(GetCommercialCreditCards503ErrorObject fiveHundredAndThreeErrorObject) {
         this.fiveHundredAndThreeErrorObject = fiveHundredAndThreeErrorObject;
         return this;
@@ -59,6 +65,7 @@ public class GetCommercialCreditCardsResponse {
     
     
     public String contentType;
+
     public GetCommercialCreditCardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class GetCommercialCreditCardsResponse {
      */
     
     public GetCommercialCreditCardsErrorObject errorObject;
+
     public GetCommercialCreditCardsResponse withErrorObject(GetCommercialCreditCardsErrorObject errorObject) {
         this.errorObject = errorObject;
         return this;
@@ -76,6 +84,7 @@ public class GetCommercialCreditCardsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetCommercialCreditCardsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -83,6 +92,7 @@ public class GetCommercialCreditCardsResponse {
     
     
     public Integer statusCode;
+
     public GetCommercialCreditCardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -90,6 +100,7 @@ public class GetCommercialCreditCardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommercialCreditCardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -100,9 +111,14 @@ public class GetCommercialCreditCardsResponse {
      */
     
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJson getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
+
     public GetCommercialCreditCardsResponse withGetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJson getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject) {
         this.getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = getCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
         return this;
     }
     
+    public GetCommercialCreditCardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

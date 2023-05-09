@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostApiV1AppsRequestBody {
     /**
@@ -12,6 +12,7 @@ public class PostApiV1AppsRequestBody {
      */
     
     public String clientName;
+
     public PostApiV1AppsRequestBody withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -22,6 +23,7 @@ public class PostApiV1AppsRequestBody {
      */
     
     public String redirectUris;
+
     public PostApiV1AppsRequestBody withRedirectUris(String redirectUris) {
         this.redirectUris = redirectUris;
         return this;
@@ -32,6 +34,7 @@ public class PostApiV1AppsRequestBody {
      */
     
     public String scopes;
+
     public PostApiV1AppsRequestBody withScopes(String scopes) {
         this.scopes = scopes;
         return this;
@@ -42,9 +45,14 @@ public class PostApiV1AppsRequestBody {
      */
     
     public String website;
+
     public PostApiV1AppsRequestBody withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public PostApiV1AppsRequestBody(@JsonProperty("client_name") String clientName, @JsonProperty("redirect_uris") String redirectUris) {
+        this.clientName = clientName;
+        this.redirectUris = redirectUris;
+  }
 }

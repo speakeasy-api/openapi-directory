@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DatastoreOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public GooglePrivacyDlpV2KindExpression kind;
+
     public GooglePrivacyDlpV2DatastoreOptions withKind(GooglePrivacyDlpV2KindExpression kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2DatastoreOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionId")
     public GooglePrivacyDlpV2PartitionId partitionId;
+
     public GooglePrivacyDlpV2DatastoreOptions withPartitionId(GooglePrivacyDlpV2PartitionId partitionId) {
         this.partitionId = partitionId;
         return this;
     }
     
+    public GooglePrivacyDlpV2DatastoreOptions(){}
 }

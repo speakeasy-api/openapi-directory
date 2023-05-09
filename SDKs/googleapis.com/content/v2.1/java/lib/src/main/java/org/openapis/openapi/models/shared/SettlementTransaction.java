@@ -15,6 +15,7 @@ public class SettlementTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public SettlementTransactionAmount amount;
+
     public SettlementTransaction withAmount(SettlementTransactionAmount amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class SettlementTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public SettlementTransactionIdentifiers identifiers;
+
     public SettlementTransaction withIdentifiers(SettlementTransactionIdentifiers identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -34,6 +36,7 @@ public class SettlementTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SettlementTransaction withKind(String kind) {
         this.kind = kind;
         return this;
@@ -42,9 +45,11 @@ public class SettlementTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public SettlementTransactionTransaction transaction;
+
     public SettlementTransaction withTransaction(SettlementTransactionTransaction transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public SettlementTransaction(){}
 }

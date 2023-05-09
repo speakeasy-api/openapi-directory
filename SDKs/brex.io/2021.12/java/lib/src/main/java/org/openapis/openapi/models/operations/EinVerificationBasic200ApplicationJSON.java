@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EinVerificationBasic200ApplicationJSON {
     @JsonProperty("confidence_score")
     public String confidenceScore;
+
     public EinVerificationBasic200ApplicationJSON withConfidenceScore(String confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -19,6 +20,7 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("confidence_score_explanation")
     public String confidenceScoreExplanation;
+
     public EinVerificationBasic200ApplicationJSON withConfidenceScoreExplanation(String confidenceScoreExplanation) {
         this.confidenceScoreExplanation = confidenceScoreExplanation;
         return this;
@@ -26,6 +28,7 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("dba_score")
     public String dbaScore;
+
     public EinVerificationBasic200ApplicationJSON withDbaScore(String dbaScore) {
         this.dbaScore = dbaScore;
         return this;
@@ -33,6 +36,7 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("dba_score_explanation")
     public String dbaScoreExplanation;
+
     public EinVerificationBasic200ApplicationJSON withDbaScoreExplanation(String dbaScoreExplanation) {
         this.dbaScoreExplanation = dbaScoreExplanation;
         return this;
@@ -40,6 +44,7 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("ein")
     public String ein;
+
     public EinVerificationBasic200ApplicationJSON withEin(String ein) {
         this.ein = ein;
         return this;
@@ -47,6 +52,7 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("irs_score")
     public String irsScore;
+
     public EinVerificationBasic200ApplicationJSON withIrsScore(String irsScore) {
         this.irsScore = irsScore;
         return this;
@@ -54,6 +60,7 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("irs_score_explanation")
     public String irsScoreExplanation;
+
     public EinVerificationBasic200ApplicationJSON withIrsScoreExplanation(String irsScoreExplanation) {
         this.irsScoreExplanation = irsScoreExplanation;
         return this;
@@ -61,6 +68,7 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("timestamp")
     public Double timestamp;
+
     public EinVerificationBasic200ApplicationJSON withTimestamp(Double timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -68,9 +76,21 @@ public class EinVerificationBasic200ApplicationJSON {
     
     @JsonProperty("validationStatus")
     public Boolean validationStatus;
+
     public EinVerificationBasic200ApplicationJSON withValidationStatus(Boolean validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public EinVerificationBasic200ApplicationJSON(@JsonProperty("confidence_score") String confidenceScore, @JsonProperty("confidence_score_explanation") String confidenceScoreExplanation, @JsonProperty("dba_score") String dbaScore, @JsonProperty("dba_score_explanation") String dbaScoreExplanation, @JsonProperty("ein") String ein, @JsonProperty("irs_score") String irsScore, @JsonProperty("irs_score_explanation") String irsScoreExplanation, @JsonProperty("timestamp") Double timestamp, @JsonProperty("validationStatus") Boolean validationStatus) {
+        this.confidenceScore = confidenceScore;
+        this.confidenceScoreExplanation = confidenceScoreExplanation;
+        this.dbaScore = dbaScore;
+        this.dbaScoreExplanation = dbaScoreExplanation;
+        this.ein = ein;
+        this.irsScore = irsScore;
+        this.irsScoreExplanation = irsScoreExplanation;
+        this.timestamp = timestamp;
+        this.validationStatus = validationStatus;
+  }
 }

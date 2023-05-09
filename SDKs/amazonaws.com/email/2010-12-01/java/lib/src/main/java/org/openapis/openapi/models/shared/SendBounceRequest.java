@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendBounceRequest - Represents a request to send a bounce message to the sender of an email you received through Amazon SES.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendBounceRequest {
     
     public String bounceSender;
+
     public SendBounceRequest withBounceSender(String bounceSender) {
         this.bounceSender = bounceSender;
         return this;
@@ -19,6 +20,7 @@ public class SendBounceRequest {
     
     
     public String bounceSenderArn;
+
     public SendBounceRequest withBounceSenderArn(String bounceSenderArn) {
         this.bounceSenderArn = bounceSenderArn;
         return this;
@@ -26,6 +28,7 @@ public class SendBounceRequest {
     
     
     public BouncedRecipientInfo[] bouncedRecipientInfoList;
+
     public SendBounceRequest withBouncedRecipientInfoList(BouncedRecipientInfo[] bouncedRecipientInfoList) {
         this.bouncedRecipientInfoList = bouncedRecipientInfoList;
         return this;
@@ -33,6 +36,7 @@ public class SendBounceRequest {
     
     
     public String explanation;
+
     public SendBounceRequest withExplanation(String explanation) {
         this.explanation = explanation;
         return this;
@@ -40,6 +44,7 @@ public class SendBounceRequest {
     
     
     public MessageDsn messageDsn;
+
     public SendBounceRequest withMessageDsn(MessageDsn messageDsn) {
         this.messageDsn = messageDsn;
         return this;
@@ -47,9 +52,15 @@ public class SendBounceRequest {
     
     
     public String originalMessageId;
+
     public SendBounceRequest withOriginalMessageId(String originalMessageId) {
         this.originalMessageId = originalMessageId;
         return this;
     }
     
+    public SendBounceRequest(@JsonProperty("BounceSender") String bounceSender, @JsonProperty("BouncedRecipientInfoList") BouncedRecipientInfo[] bouncedRecipientInfoList, @JsonProperty("OriginalMessageId") String originalMessageId) {
+        this.bounceSender = bounceSender;
+        this.bouncedRecipientInfoList = bouncedRecipientInfoList;
+        this.originalMessageId = originalMessageId;
+  }
 }

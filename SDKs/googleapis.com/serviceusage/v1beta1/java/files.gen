@@ -167,4 +167,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Option.java
 lib/src/main/java/org/openapis/openapi/models/shared/Mixin.java
 lib/src/main/java/org/openapis/openapi/models/shared/MethodSyntaxEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Method.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

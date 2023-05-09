@@ -20,6 +20,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessEndpoints")
     public AccessEndpoint[] accessEndpoints;
+
     public ImageBuilder withAccessEndpoints(AccessEndpoint[] accessEndpoints) {
         this.accessEndpoints = accessEndpoints;
         return this;
@@ -28,6 +29,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppstreamAgentVersion")
     public String appstreamAgentVersion;
+
     public ImageBuilder withAppstreamAgentVersion(String appstreamAgentVersion) {
         this.appstreamAgentVersion = appstreamAgentVersion;
         return this;
@@ -36,6 +38,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ImageBuilder withArn(String arn) {
         this.arn = arn;
         return this;
@@ -46,6 +49,7 @@ public class ImageBuilder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ImageBuilder withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -54,6 +58,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ImageBuilder withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public ImageBuilder withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -70,6 +76,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainJoinInfo")
     public DomainJoinInfo domainJoinInfo;
+
     public ImageBuilder withDomainJoinInfo(DomainJoinInfo domainJoinInfo) {
         this.domainJoinInfo = domainJoinInfo;
         return this;
@@ -78,6 +85,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDefaultInternetAccess")
     public Boolean enableDefaultInternetAccess;
+
     public ImageBuilder withEnableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
         this.enableDefaultInternetAccess = enableDefaultInternetAccess;
         return this;
@@ -86,6 +94,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public ImageBuilder withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -94,6 +103,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public ImageBuilder withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -102,6 +112,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageBuilderErrors")
     public ResourceError[] imageBuilderErrors;
+
     public ImageBuilder withImageBuilderErrors(ResourceError[] imageBuilderErrors) {
         this.imageBuilderErrors = imageBuilderErrors;
         return this;
@@ -110,6 +121,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public ImageBuilder withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -117,6 +129,7 @@ public class ImageBuilder {
     
     @JsonProperty("Name")
     public String name;
+
     public ImageBuilder withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +141,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkAccessConfiguration")
     public NetworkAccessConfiguration networkAccessConfiguration;
+
     public ImageBuilder withNetworkAccessConfiguration(NetworkAccessConfiguration networkAccessConfiguration) {
         this.networkAccessConfiguration = networkAccessConfiguration;
         return this;
@@ -136,6 +150,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public PlatformTypeEnum platform;
+
     public ImageBuilder withPlatform(PlatformTypeEnum platform) {
         this.platform = platform;
         return this;
@@ -144,6 +159,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ImageBuilderStateEnum state;
+
     public ImageBuilder withState(ImageBuilderStateEnum state) {
         this.state = state;
         return this;
@@ -152,6 +168,7 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public ImageBuilderStateChangeReason stateChangeReason;
+
     public ImageBuilder withStateChangeReason(ImageBuilderStateChangeReason stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -160,9 +177,13 @@ public class ImageBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public ImageBuilder withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public ImageBuilder(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

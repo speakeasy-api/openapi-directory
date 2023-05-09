@@ -15,6 +15,7 @@ public class AdminListGroupsForUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public GroupType[] groups;
+
     public AdminListGroupsForUserResponse withGroups(GroupType[] groups) {
         this.groups = groups;
         return this;
@@ -23,9 +24,11 @@ public class AdminListGroupsForUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public AdminListGroupsForUserResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public AdminListGroupsForUserResponse(){}
 }

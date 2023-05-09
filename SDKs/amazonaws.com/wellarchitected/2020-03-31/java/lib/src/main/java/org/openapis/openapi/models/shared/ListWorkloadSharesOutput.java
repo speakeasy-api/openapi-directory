@@ -18,6 +18,7 @@ public class ListWorkloadSharesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkloadSharesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,6 +30,7 @@ public class ListWorkloadSharesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public ListWorkloadSharesOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -40,9 +42,11 @@ public class ListWorkloadSharesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadShareSummaries")
     public WorkloadShareSummary[] workloadShareSummaries;
+
     public ListWorkloadSharesOutput withWorkloadShareSummaries(WorkloadShareSummary[] workloadShareSummaries) {
         this.workloadShareSummaries = workloadShareSummaries;
         return this;
     }
     
+    public ListWorkloadSharesOutput(){}
 }

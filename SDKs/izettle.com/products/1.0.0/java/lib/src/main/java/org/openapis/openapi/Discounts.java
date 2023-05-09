@@ -58,11 +58,9 @@ public class Discounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDiscountResponse res = new org.openapis.openapi.models.operations.CreateDiscountResponse() {{
+        org.openapis.openapi.models.operations.CreateDiscountResponse res = new org.openapis.openapi.models.operations.CreateDiscountResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -102,10 +100,8 @@ public class Discounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDiscountResponse res = new org.openapis.openapi.models.operations.DeleteDiscountResponse() {{
+        org.openapis.openapi.models.operations.DeleteDiscountResponse res = new org.openapis.openapi.models.operations.DeleteDiscountResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -136,11 +132,9 @@ public class Discounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllDiscountsResponse res = new org.openapis.openapi.models.operations.GetAllDiscountsResponse() {{
+        org.openapis.openapi.models.operations.GetAllDiscountsResponse res = new org.openapis.openapi.models.operations.GetAllDiscountsResponse(contentType, httpRes.statusCode()) {{
             discountResponses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +179,9 @@ public class Discounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiscountResponse res = new org.openapis.openapi.models.operations.GetDiscountResponse() {{
+        org.openapis.openapi.models.operations.GetDiscountResponse res = new org.openapis.openapi.models.operations.GetDiscountResponse(contentType, httpRes.statusCode()) {{
             discountResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Discounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDiscountResponse res = new org.openapis.openapi.models.operations.UpdateDiscountResponse() {{
+        org.openapis.openapi.models.operations.UpdateDiscountResponse res = new org.openapis.openapi.models.operations.UpdateDiscountResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

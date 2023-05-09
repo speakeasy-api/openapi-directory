@@ -14,6 +14,7 @@ public class CreateSoftwareUpdateJobRequestBody {
      */
     @JsonProperty("S3UrlSignerRole")
     public String s3UrlSignerRole;
+
     public CreateSoftwareUpdateJobRequestBody withS3UrlSignerRole(String s3UrlSignerRole) {
         this.s3UrlSignerRole = s3UrlSignerRole;
         return this;
@@ -24,6 +25,7 @@ public class CreateSoftwareUpdateJobRequestBody {
      */
     @JsonProperty("SoftwareToUpdate")
     public CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum softwareToUpdate;
+
     public CreateSoftwareUpdateJobRequestBody withSoftwareToUpdate(CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum softwareToUpdate) {
         this.softwareToUpdate = softwareToUpdate;
         return this;
@@ -35,6 +37,7 @@ public class CreateSoftwareUpdateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateAgentLogLevel")
     public CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum updateAgentLogLevel;
+
     public CreateSoftwareUpdateJobRequestBody withUpdateAgentLogLevel(CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum updateAgentLogLevel) {
         this.updateAgentLogLevel = updateAgentLogLevel;
         return this;
@@ -45,6 +48,7 @@ public class CreateSoftwareUpdateJobRequestBody {
      */
     @JsonProperty("UpdateTargets")
     public String[] updateTargets;
+
     public CreateSoftwareUpdateJobRequestBody withUpdateTargets(String[] updateTargets) {
         this.updateTargets = updateTargets;
         return this;
@@ -55,6 +59,7 @@ public class CreateSoftwareUpdateJobRequestBody {
      */
     @JsonProperty("UpdateTargetsArchitecture")
     public CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum updateTargetsArchitecture;
+
     public CreateSoftwareUpdateJobRequestBody withUpdateTargetsArchitecture(CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum updateTargetsArchitecture) {
         this.updateTargetsArchitecture = updateTargetsArchitecture;
         return this;
@@ -65,9 +70,17 @@ public class CreateSoftwareUpdateJobRequestBody {
      */
     @JsonProperty("UpdateTargetsOperatingSystem")
     public CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum updateTargetsOperatingSystem;
+
     public CreateSoftwareUpdateJobRequestBody withUpdateTargetsOperatingSystem(CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum updateTargetsOperatingSystem) {
         this.updateTargetsOperatingSystem = updateTargetsOperatingSystem;
         return this;
     }
     
+    public CreateSoftwareUpdateJobRequestBody(@JsonProperty("S3UrlSignerRole") String s3UrlSignerRole, @JsonProperty("SoftwareToUpdate") CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum softwareToUpdate, @JsonProperty("UpdateTargets") String[] updateTargets, @JsonProperty("UpdateTargetsArchitecture") CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum updateTargetsArchitecture, @JsonProperty("UpdateTargetsOperatingSystem") CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum updateTargetsOperatingSystem) {
+        this.s3UrlSignerRole = s3UrlSignerRole;
+        this.softwareToUpdate = softwareToUpdate;
+        this.updateTargets = updateTargets;
+        this.updateTargetsArchitecture = updateTargetsArchitecture;
+        this.updateTargetsOperatingSystem = updateTargetsOperatingSystem;
+  }
 }

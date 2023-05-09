@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BankAccountV3 {
     @JsonProperty("accountHolder")
     public PartyIdentification2 accountHolder;
+
     public BankAccountV3 withAccountHolder(PartyIdentification2 accountHolder) {
         this.accountHolder = accountHolder;
         return this;
@@ -19,9 +20,14 @@ public class BankAccountV3 {
      */
     @JsonProperty("accountIdentification")
     public Object accountIdentification;
+
     public BankAccountV3 withAccountIdentification(Object accountIdentification) {
         this.accountIdentification = accountIdentification;
         return this;
     }
     
+    public BankAccountV3(@JsonProperty("accountHolder") PartyIdentification2 accountHolder, @JsonProperty("accountIdentification") Object accountIdentification) {
+        this.accountHolder = accountHolder;
+        this.accountIdentification = accountIdentification;
+  }
 }

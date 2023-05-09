@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleOption {
     @JsonProperty("Keyword")
     public String keyword;
+
     public RuleOption withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -22,9 +23,13 @@ public class RuleOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public String[] settings;
+
     public RuleOption withSettings(String[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public RuleOption(@JsonProperty("Keyword") String keyword) {
+        this.keyword = keyword;
+  }
 }

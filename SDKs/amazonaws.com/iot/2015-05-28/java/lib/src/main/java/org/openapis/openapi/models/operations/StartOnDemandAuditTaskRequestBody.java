@@ -12,9 +12,13 @@ public class StartOnDemandAuditTaskRequestBody {
      */
     @JsonProperty("targetCheckNames")
     public String[] targetCheckNames;
+
     public StartOnDemandAuditTaskRequestBody withTargetCheckNames(String[] targetCheckNames) {
         this.targetCheckNames = targetCheckNames;
         return this;
     }
     
+    public StartOnDemandAuditTaskRequestBody(@JsonProperty("targetCheckNames") String[] targetCheckNames) {
+        this.targetCheckNames = targetCheckNames;
+  }
 }

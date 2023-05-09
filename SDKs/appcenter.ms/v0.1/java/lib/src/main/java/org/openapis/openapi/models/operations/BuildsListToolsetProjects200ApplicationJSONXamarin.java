@@ -12,9 +12,13 @@ public class BuildsListToolsetProjects200ApplicationJSONXamarin {
      */
     @JsonProperty("xamarinSolutions")
     public BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions[] xamarinSolutions;
+
     public BuildsListToolsetProjects200ApplicationJSONXamarin withXamarinSolutions(BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions[] xamarinSolutions) {
         this.xamarinSolutions = xamarinSolutions;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONXamarin(@JsonProperty("xamarinSolutions") BuildsListToolsetProjects200ApplicationJSONXamarinXamarinSolutions[] xamarinSolutions) {
+        this.xamarinSolutions = xamarinSolutions;
+  }
 }

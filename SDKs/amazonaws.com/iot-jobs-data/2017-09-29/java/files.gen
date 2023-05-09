@@ -49,4 +49,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartNextPendingJobExecutio
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateJobExecutionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobExecutionState.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

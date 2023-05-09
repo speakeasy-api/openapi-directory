@@ -15,6 +15,7 @@ public class SignUpResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeliveryDetails")
     public CodeDeliveryDetailsType codeDeliveryDetails;
+
     public SignUpResponse withCodeDeliveryDetails(CodeDeliveryDetailsType codeDeliveryDetails) {
         this.codeDeliveryDetails = codeDeliveryDetails;
         return this;
@@ -22,6 +23,7 @@ public class SignUpResponse {
     
     @JsonProperty("UserConfirmed")
     public Boolean userConfirmed;
+
     public SignUpResponse withUserConfirmed(Boolean userConfirmed) {
         this.userConfirmed = userConfirmed;
         return this;
@@ -29,9 +31,14 @@ public class SignUpResponse {
     
     @JsonProperty("UserSub")
     public String userSub;
+
     public SignUpResponse withUserSub(String userSub) {
         this.userSub = userSub;
         return this;
     }
     
+    public SignUpResponse(@JsonProperty("UserConfirmed") Boolean userConfirmed, @JsonProperty("UserSub") String userSub) {
+        this.userConfirmed = userConfirmed;
+        this.userSub = userSub;
+  }
 }

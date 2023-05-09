@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPipelineDefinitionResponse {
     
     public String contentType;
+
     public PutPipelineDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutPipelineDefinitionResponse {
      */
     
     public Object internalServiceError;
+
     public PutPipelineDefinitionResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class PutPipelineDefinitionResponse {
      */
     
     public Object invalidRequestException;
+
     public PutPipelineDefinitionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class PutPipelineDefinitionResponse {
      */
     
     public Object pipelineDeletedException;
+
     public PutPipelineDefinitionResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class PutPipelineDefinitionResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public PutPipelineDefinitionResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutPipelineDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.PutPipelineDefinitionOutput putPipelineDefinitionOutput;
+
     public PutPipelineDefinitionResponse withPutPipelineDefinitionOutput(org.openapis.openapi.models.shared.PutPipelineDefinitionOutput putPipelineDefinitionOutput) {
         this.putPipelineDefinitionOutput = putPipelineDefinitionOutput;
         return this;
@@ -66,6 +73,7 @@ public class PutPipelineDefinitionResponse {
     
     
     public Integer statusCode;
+
     public PutPipelineDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutPipelineDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPipelineDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutPipelineDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

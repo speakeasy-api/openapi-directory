@@ -12,6 +12,7 @@ public class GetStatsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetStatsRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -19,6 +20,7 @@ public class GetStatsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.FilterDirectionEnum direction;
+
     public GetStatsRequest withDirection(org.openapis.openapi.models.shared.FilterDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -26,6 +28,7 @@ public class GetStatsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public GetStatsRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -36,6 +39,7 @@ public class GetStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetStatsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
@@ -43,6 +47,7 @@ public class GetStatsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetStatsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -50,6 +55,7 @@ public class GetStatsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public GetStatsRequest withStart(String start) {
         this.start = start;
         return this;
@@ -60,9 +66,11 @@ public class GetStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public GetStatsUnitEnum unit;
+
     public GetStatsRequest withUnit(GetStatsUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetStatsRequest(){}
 }

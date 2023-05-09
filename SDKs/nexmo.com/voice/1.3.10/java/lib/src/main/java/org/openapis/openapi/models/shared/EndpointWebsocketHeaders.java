@@ -18,9 +18,11 @@ public class EndpointWebsocketHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public EndpointWebsocketHeaders withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public EndpointWebsocketHeaders(){}
 }

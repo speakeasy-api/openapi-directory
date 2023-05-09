@@ -15,9 +15,11 @@ public class AwsEcrRepositoryImageScanningConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScanOnPush")
     public Boolean scanOnPush;
+
     public AwsEcrRepositoryImageScanningConfigurationDetails withScanOnPush(Boolean scanOnPush) {
         this.scanOnPush = scanOnPush;
         return this;
     }
     
+    public AwsEcrRepositoryImageScanningConfigurationDetails(){}
 }

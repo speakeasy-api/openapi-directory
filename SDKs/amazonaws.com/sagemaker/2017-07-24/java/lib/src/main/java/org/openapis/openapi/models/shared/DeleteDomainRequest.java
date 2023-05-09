@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDomainRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public DeleteDomainRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -19,9 +20,13 @@ public class DeleteDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPolicy")
     public RetentionPolicy retentionPolicy;
+
     public DeleteDomainRequest withRetentionPolicy(RetentionPolicy retentionPolicy) {
         this.retentionPolicy = retentionPolicy;
         return this;
     }
     
+    public DeleteDomainRequest(@JsonProperty("DomainId") String domainId) {
+        this.domainId = domainId;
+  }
 }

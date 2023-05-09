@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFunctionConfigurationResponse {
     
     public String contentType;
+
     public GetFunctionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFunctionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration;
+
     public GetFunctionConfigurationResponse withFunctionConfiguration(org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class GetFunctionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public GetFunctionConfigurationResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetFunctionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetFunctionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetFunctionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFunctionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetFunctionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceException serviceException;
+
     public GetFunctionConfigurationResponse withServiceException(org.openapis.openapi.models.shared.ServiceException serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public GetFunctionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScrolldocumentsRequest {
@@ -12,6 +13,7 @@ public class ScrolldocumentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ScrolldocumentsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ScrolldocumentsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ScrolldocumentsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class ScrolldocumentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public ScrolldocumentsRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
     }
     
+    public ScrolldocumentsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("acronym") String acronym) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.acronym = acronym;
+  }
 }

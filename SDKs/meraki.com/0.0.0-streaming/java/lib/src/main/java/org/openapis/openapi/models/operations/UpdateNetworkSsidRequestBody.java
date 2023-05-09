@@ -15,6 +15,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apTagsAndVlanIds")
     public UpdateNetworkSsidRequestBodyApTagsAndVlanIds[] apTagsAndVlanIds;
+
     public UpdateNetworkSsidRequestBody withApTagsAndVlanIds(UpdateNetworkSsidRequestBodyApTagsAndVlanIds[] apTagsAndVlanIds) {
         this.apTagsAndVlanIds = apTagsAndVlanIds;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authMode")
     public UpdateNetworkSsidRequestBodyAuthModeEnum authMode;
+
     public UpdateNetworkSsidRequestBody withAuthMode(UpdateNetworkSsidRequestBodyAuthModeEnum authMode) {
         this.authMode = authMode;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityTags")
     public String[] availabilityTags;
+
     public UpdateNetworkSsidRequestBody withAvailabilityTags(String[] availabilityTags) {
         this.availabilityTags = availabilityTags;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableOnAllAps")
     public Boolean availableOnAllAps;
+
     public UpdateNetworkSsidRequestBody withAvailableOnAllAps(Boolean availableOnAllAps) {
         this.availableOnAllAps = availableOnAllAps;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandSelection")
     public String bandSelection;
+
     public UpdateNetworkSsidRequestBody withBandSelection(String bandSelection) {
         this.bandSelection = bandSelection;
         return this;
@@ -70,6 +75,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concentratorNetworkId")
     public String concentratorNetworkId;
+
     public UpdateNetworkSsidRequestBody withConcentratorNetworkId(String concentratorNetworkId) {
         this.concentratorNetworkId = concentratorNetworkId;
         return this;
@@ -81,6 +87,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVlanId")
     public Long defaultVlanId;
+
     public UpdateNetworkSsidRequestBody withDefaultVlanId(Long defaultVlanId) {
         this.defaultVlanId = defaultVlanId;
         return this;
@@ -92,6 +99,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disassociateClientsOnVpnFailover")
     public Boolean disassociateClientsOnVpnFailover;
+
     public UpdateNetworkSsidRequestBody withDisassociateClientsOnVpnFailover(Boolean disassociateClientsOnVpnFailover) {
         this.disassociateClientsOnVpnFailover = disassociateClientsOnVpnFailover;
         return this;
@@ -103,6 +111,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateNetworkSsidRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -114,6 +123,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionMode")
     public UpdateNetworkSsidRequestBodyEncryptionModeEnum encryptionMode;
+
     public UpdateNetworkSsidRequestBody withEncryptionMode(UpdateNetworkSsidRequestBodyEncryptionModeEnum encryptionMode) {
         this.encryptionMode = encryptionMode;
         return this;
@@ -125,6 +135,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterpriseAdminAccess")
     public UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum enterpriseAdminAccess;
+
     public UpdateNetworkSsidRequestBody withEnterpriseAdminAccess(UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum enterpriseAdminAccess) {
         this.enterpriseAdminAccess = enterpriseAdminAccess;
         return this;
@@ -136,6 +147,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAssignmentMode")
     public String ipAssignmentMode;
+
     public UpdateNetworkSsidRequestBody withIpAssignmentMode(String ipAssignmentMode) {
         this.ipAssignmentMode = ipAssignmentMode;
         return this;
@@ -147,6 +159,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lanIsolationEnabled")
     public Boolean lanIsolationEnabled;
+
     public UpdateNetworkSsidRequestBody withLanIsolationEnabled(Boolean lanIsolationEnabled) {
         this.lanIsolationEnabled = lanIsolationEnabled;
         return this;
@@ -158,6 +171,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minBitrate")
     public Float minBitrate;
+
     public UpdateNetworkSsidRequestBody withMinBitrate(Float minBitrate) {
         this.minBitrate = minBitrate;
         return this;
@@ -169,6 +183,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkSsidRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -180,6 +195,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perClientBandwidthLimitDown")
     public Long perClientBandwidthLimitDown;
+
     public UpdateNetworkSsidRequestBody withPerClientBandwidthLimitDown(Long perClientBandwidthLimitDown) {
         this.perClientBandwidthLimitDown = perClientBandwidthLimitDown;
         return this;
@@ -191,6 +207,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perClientBandwidthLimitUp")
     public Long perClientBandwidthLimitUp;
+
     public UpdateNetworkSsidRequestBody withPerClientBandwidthLimitUp(Long perClientBandwidthLimitUp) {
         this.perClientBandwidthLimitUp = perClientBandwidthLimitUp;
         return this;
@@ -202,6 +219,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psk")
     public String psk;
+
     public UpdateNetworkSsidRequestBody withPsk(String psk) {
         this.psk = psk;
         return this;
@@ -213,6 +231,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusAccountingEnabled")
     public Boolean radiusAccountingEnabled;
+
     public UpdateNetworkSsidRequestBody withRadiusAccountingEnabled(Boolean radiusAccountingEnabled) {
         this.radiusAccountingEnabled = radiusAccountingEnabled;
         return this;
@@ -224,6 +243,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusAccountingServers")
     public UpdateNetworkSsidRequestBodyRadiusAccountingServers[] radiusAccountingServers;
+
     public UpdateNetworkSsidRequestBody withRadiusAccountingServers(UpdateNetworkSsidRequestBodyRadiusAccountingServers[] radiusAccountingServers) {
         this.radiusAccountingServers = radiusAccountingServers;
         return this;
@@ -235,6 +255,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusAttributeForGroupPolicies")
     public String radiusAttributeForGroupPolicies;
+
     public UpdateNetworkSsidRequestBody withRadiusAttributeForGroupPolicies(String radiusAttributeForGroupPolicies) {
         this.radiusAttributeForGroupPolicies = radiusAttributeForGroupPolicies;
         return this;
@@ -246,6 +267,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusCoaEnabled")
     public Boolean radiusCoaEnabled;
+
     public UpdateNetworkSsidRequestBody withRadiusCoaEnabled(Boolean radiusCoaEnabled) {
         this.radiusCoaEnabled = radiusCoaEnabled;
         return this;
@@ -257,6 +279,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusFailoverPolicy")
     public UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum radiusFailoverPolicy;
+
     public UpdateNetworkSsidRequestBody withRadiusFailoverPolicy(UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum radiusFailoverPolicy) {
         this.radiusFailoverPolicy = radiusFailoverPolicy;
         return this;
@@ -268,6 +291,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusLoadBalancingPolicy")
     public UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum radiusLoadBalancingPolicy;
+
     public UpdateNetworkSsidRequestBody withRadiusLoadBalancingPolicy(UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum radiusLoadBalancingPolicy) {
         this.radiusLoadBalancingPolicy = radiusLoadBalancingPolicy;
         return this;
@@ -279,6 +303,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusOverride")
     public Boolean radiusOverride;
+
     public UpdateNetworkSsidRequestBody withRadiusOverride(Boolean radiusOverride) {
         this.radiusOverride = radiusOverride;
         return this;
@@ -290,6 +315,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radiusServers")
     public UpdateNetworkSsidRequestBodyRadiusServers[] radiusServers;
+
     public UpdateNetworkSsidRequestBody withRadiusServers(UpdateNetworkSsidRequestBodyRadiusServers[] radiusServers) {
         this.radiusServers = radiusServers;
         return this;
@@ -301,6 +327,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryConcentratorNetworkId")
     public String secondaryConcentratorNetworkId;
+
     public UpdateNetworkSsidRequestBody withSecondaryConcentratorNetworkId(String secondaryConcentratorNetworkId) {
         this.secondaryConcentratorNetworkId = secondaryConcentratorNetworkId;
         return this;
@@ -312,6 +339,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splashPage")
     public UpdateNetworkSsidRequestBodySplashPageEnum splashPage;
+
     public UpdateNetworkSsidRequestBody withSplashPage(UpdateNetworkSsidRequestBodySplashPageEnum splashPage) {
         this.splashPage = splashPage;
         return this;
@@ -323,6 +351,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useVlanTagging")
     public Boolean useVlanTagging;
+
     public UpdateNetworkSsidRequestBody withUseVlanTagging(Boolean useVlanTagging) {
         this.useVlanTagging = useVlanTagging;
         return this;
@@ -334,6 +363,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visible")
     public Boolean visible;
+
     public UpdateNetworkSsidRequestBody withVisible(Boolean visible) {
         this.visible = visible;
         return this;
@@ -345,6 +375,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlanId")
     public Long vlanId;
+
     public UpdateNetworkSsidRequestBody withVlanId(Long vlanId) {
         this.vlanId = vlanId;
         return this;
@@ -356,6 +387,7 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("walledGardenEnabled")
     public Boolean walledGardenEnabled;
+
     public UpdateNetworkSsidRequestBody withWalledGardenEnabled(Boolean walledGardenEnabled) {
         this.walledGardenEnabled = walledGardenEnabled;
         return this;
@@ -367,20 +399,23 @@ public class UpdateNetworkSsidRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("walledGardenRanges")
     public String walledGardenRanges;
+
     public UpdateNetworkSsidRequestBody withWalledGardenRanges(String walledGardenRanges) {
         this.walledGardenRanges = walledGardenRanges;
         return this;
     }
     
     /**
-     * The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
+     * The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode', 'WPA3 only' or 'WPA3 192-bit Security')
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wpaEncryptionMode")
     public UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum wpaEncryptionMode;
+
     public UpdateNetworkSsidRequestBody withWpaEncryptionMode(UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum wpaEncryptionMode) {
         this.wpaEncryptionMode = wpaEncryptionMode;
         return this;
     }
     
+    public UpdateNetworkSsidRequestBody(){}
 }

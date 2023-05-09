@@ -15,9 +15,11 @@ public class DescribeDeliveryChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryChannels")
     public DeliveryChannel[] deliveryChannels;
+
     public DescribeDeliveryChannelsResponse withDeliveryChannels(DeliveryChannel[] deliveryChannels) {
         this.deliveryChannels = deliveryChannels;
         return this;
     }
     
+    public DescribeDeliveryChannelsResponse(){}
 }

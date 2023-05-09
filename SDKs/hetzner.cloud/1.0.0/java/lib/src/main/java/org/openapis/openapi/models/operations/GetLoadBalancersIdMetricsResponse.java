@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoadBalancersIdMetricsResponse {
     
     public String contentType;
+
     public GetLoadBalancersIdMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetLoadBalancersIdMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetLoadBalancersIdMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetLoadBalancersIdMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoadBalancersIdMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetLoadBalancersIdMetricsResponse {
      */
     
     public GetLoadBalancersIdMetrics200ApplicationJSON getLoadBalancersIdMetrics200ApplicationJSONObject;
+
     public GetLoadBalancersIdMetricsResponse withGetLoadBalancersIdMetrics200ApplicationJSONObject(GetLoadBalancersIdMetrics200ApplicationJSON getLoadBalancersIdMetrics200ApplicationJSONObject) {
         this.getLoadBalancersIdMetrics200ApplicationJSONObject = getLoadBalancersIdMetrics200ApplicationJSONObject;
         return this;
     }
     
+    public GetLoadBalancersIdMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

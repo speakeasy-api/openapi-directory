@@ -88,4 +88,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/TaskLists.java
 lib/src/main/java/org/openapis/openapi/models/shared/TaskLinks.java
 lib/src/main/java/org/openapis/openapi/models/shared/Task.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tasks.java
+docs/sdk/README.md
+docs/tasklists/README.md
+docs/tasks/README.md
 USAGE.md

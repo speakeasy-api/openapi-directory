@@ -15,6 +15,7 @@ public class RegistrationsReadRegistrationLinks {
      */
     
     public String html;
+
     public RegistrationsReadRegistrationLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class RegistrationsReadRegistrationLinks {
      */
     
     public String self;
+
     public RegistrationsReadRegistrationLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsReadRegistrationLinks(){}
 }

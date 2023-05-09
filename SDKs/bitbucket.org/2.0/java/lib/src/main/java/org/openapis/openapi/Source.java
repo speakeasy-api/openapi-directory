@@ -112,12 +112,10 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse(contentType, httpRes.statusCode()) {{
             paginatedFiles = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,12 +172,10 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse(contentType, httpRes.statusCode()) {{
             paginatedTreeentries = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -431,12 +427,10 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse(contentType, httpRes.statusCode()) {{
             paginatedTreeentries = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -606,11 +600,9 @@ public class Source {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

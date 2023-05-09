@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSONOrdersRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateAndBenefitsIdentifiers")
     public String[] rateAndBenefitsIdentifiers;
+
     public PlaceOrder200ApplicationJSONOrdersRatesAndBenefitsData withRateAndBenefitsIdentifiers(String[] rateAndBenefitsIdentifiers) {
         this.rateAndBenefitsIdentifiers = rateAndBenefitsIdentifiers;
         return this;
@@ -29,9 +30,11 @@ public class PlaceOrder200ApplicationJSONOrdersRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teaser")
     public String[] teaser;
+
     public PlaceOrder200ApplicationJSONOrdersRatesAndBenefitsData withTeaser(String[] teaser) {
         this.teaser = teaser;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersRatesAndBenefitsData(){}
 }

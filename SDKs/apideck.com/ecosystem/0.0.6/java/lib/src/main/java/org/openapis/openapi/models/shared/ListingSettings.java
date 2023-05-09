@@ -12,6 +12,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description_text_template")
     public String descriptionTextTemplate;
+
     public ListingSettings withDescriptionTextTemplate(String descriptionTextTemplate) {
         this.descriptionTextTemplate = descriptionTextTemplate;
         return this;
@@ -20,6 +21,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description_title")
     public String descriptionTitle;
+
     public ListingSettings withDescriptionTitle(String descriptionTitle) {
         this.descriptionTitle = descriptionTitle;
         return this;
@@ -28,6 +30,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features_text_template")
     public String featuresTextTemplate;
+
     public ListingSettings withFeaturesTextTemplate(String featuresTextTemplate) {
         this.featuresTextTemplate = featuresTextTemplate;
         return this;
@@ -36,6 +39,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features_title")
     public String featuresTitle;
+
     public ListingSettings withFeaturesTitle(String featuresTitle) {
         this.featuresTitle = featuresTitle;
         return this;
@@ -44,6 +48,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("install_button_label")
     public String installButtonLabel;
+
     public ListingSettings withInstallButtonLabel(String installButtonLabel) {
         this.installButtonLabel = installButtonLabel;
         return this;
@@ -52,6 +57,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_postfix")
     public String namePostfix;
+
     public ListingSettings withNamePostfix(String namePostfix) {
         this.namePostfix = namePostfix;
         return this;
@@ -60,6 +66,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naming")
     public ListingSettingsNamingEnum naming;
+
     public ListingSettings withNaming(ListingSettingsNamingEnum naming) {
         this.naming = naming;
         return this;
@@ -68,6 +75,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_integration_link")
     public String nativeIntegrationLink;
+
     public ListingSettings withNativeIntegrationLink(String nativeIntegrationLink) {
         this.nativeIntegrationLink = nativeIntegrationLink;
         return this;
@@ -76,6 +84,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_disabled")
     public Boolean pricingDisabled;
+
     public ListingSettings withPricingDisabled(Boolean pricingDisabled) {
         this.pricingDisabled = pricingDisabled;
         return this;
@@ -84,6 +93,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_text_template")
     public String pricingTextTemplate;
+
     public ListingSettings withPricingTextTemplate(String pricingTextTemplate) {
         this.pricingTextTemplate = pricingTextTemplate;
         return this;
@@ -92,6 +102,7 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_title")
     public String pricingTitle;
+
     public ListingSettings withPricingTitle(String pricingTitle) {
         this.pricingTitle = pricingTitle;
         return this;
@@ -100,9 +111,11 @@ public class ListingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sidebar_position")
     public ListingSettingsSidebarPositionEnum sidebarPosition;
+
     public ListingSettings withSidebarPosition(ListingSettingsSidebarPositionEnum sidebarPosition) {
         this.sidebarPosition = sidebarPosition;
         return this;
     }
     
+    public ListingSettings(){}
 }

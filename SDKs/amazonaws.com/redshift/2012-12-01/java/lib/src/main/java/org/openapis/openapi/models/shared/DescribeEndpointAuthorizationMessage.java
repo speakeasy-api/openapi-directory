@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEndpointAuthorizationMessage {
     
     public String account;
+
     public DescribeEndpointAuthorizationMessage withAccount(String account) {
         this.account = account;
         return this;
@@ -16,6 +17,7 @@ public class DescribeEndpointAuthorizationMessage {
     
     
     public String clusterIdentifier;
+
     public DescribeEndpointAuthorizationMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class DescribeEndpointAuthorizationMessage {
     
     
     public Boolean grantee;
+
     public DescribeEndpointAuthorizationMessage withGrantee(Boolean grantee) {
         this.grantee = grantee;
         return this;
@@ -30,6 +33,7 @@ public class DescribeEndpointAuthorizationMessage {
     
     
     public String marker;
+
     public DescribeEndpointAuthorizationMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,9 +41,11 @@ public class DescribeEndpointAuthorizationMessage {
     
     
     public Long maxRecords;
+
     public DescribeEndpointAuthorizationMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeEndpointAuthorizationMessage(){}
 }

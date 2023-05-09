@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetUserClanInviteSettingRequest {
@@ -12,9 +13,13 @@ public class GroupV2GetUserClanInviteSettingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mType")
     public Integer mType;
+
     public GroupV2GetUserClanInviteSettingRequest withMType(Integer mType) {
         this.mType = mType;
         return this;
     }
     
+    public GroupV2GetUserClanInviteSettingRequest(@JsonProperty("mType") Integer mType) {
+        this.mType = mType;
+  }
 }

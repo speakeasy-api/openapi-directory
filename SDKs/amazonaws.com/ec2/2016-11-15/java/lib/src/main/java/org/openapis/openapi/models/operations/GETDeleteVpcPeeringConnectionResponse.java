@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteVpcPeeringConnectionResponse {
     
     public byte[] body;
+
     public GETDeleteVpcPeeringConnectionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteVpcPeeringConnectionResponse {
     
     
     public String contentType;
+
     public GETDeleteVpcPeeringConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteVpcPeeringConnectionResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteVpcPeeringConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteVpcPeeringConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteVpcPeeringConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteVpcPeeringConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

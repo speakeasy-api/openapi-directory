@@ -18,6 +18,7 @@ public class MembershipRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MembershipRelation withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class MembershipRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public MembershipRelation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class MembershipRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public MembershipRelation withGroup(String group) {
         this.group = group;
         return this;
@@ -51,6 +54,7 @@ public class MembershipRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupKey")
     public EntityKey groupKey;
+
     public MembershipRelation withGroupKey(EntityKey groupKey) {
         this.groupKey = groupKey;
         return this;
@@ -62,6 +66,7 @@ public class MembershipRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public MembershipRelation withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class MembershipRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public String membership;
+
     public MembershipRelation withMembership(String membership) {
         this.membership = membership;
         return this;
@@ -84,9 +90,11 @@ public class MembershipRelation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public MembershipRole[] roles;
+
     public MembershipRelation withRoles(MembershipRole[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public MembershipRelation(){}
 }

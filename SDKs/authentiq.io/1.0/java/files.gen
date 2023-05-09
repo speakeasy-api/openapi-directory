@@ -37,7 +37,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/AuthorizeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/TokenRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/TokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TokenResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/UserInfoSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UserInfoResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ClientSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ClientResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ClientClientIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ClientClientIdRequest.java
@@ -59,4 +61,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/UserInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/Address.java
 lib/src/main/java/org/openapis/openapi/models/shared/Client.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProblemDetail.java
+docs/sdk/README.md
+docs/authentication/README.md
+docs/clientmanagement/README.md
+docs/sessionmanagement/README.md
 USAGE.md

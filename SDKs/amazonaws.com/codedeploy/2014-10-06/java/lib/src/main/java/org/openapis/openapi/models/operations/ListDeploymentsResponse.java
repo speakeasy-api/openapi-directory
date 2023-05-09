@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeploymentsResponse {
@@ -12,6 +13,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public ListDeploymentsResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public ListDeploymentsResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class ListDeploymentsResponse {
     
     
     public String contentType;
+
     public ListDeploymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object deploymentGroupDoesNotExistException;
+
     public ListDeploymentsResponse withDeploymentGroupDoesNotExistException(Object deploymentGroupDoesNotExistException) {
         this.deploymentGroupDoesNotExistException = deploymentGroupDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object deploymentGroupNameRequiredException;
+
     public ListDeploymentsResponse withDeploymentGroupNameRequiredException(Object deploymentGroupNameRequiredException) {
         this.deploymentGroupNameRequiredException = deploymentGroupNameRequiredException;
         return this;
@@ -59,6 +65,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public ListDeploymentsResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -69,6 +76,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object invalidDeploymentGroupNameException;
+
     public ListDeploymentsResponse withInvalidDeploymentGroupNameException(Object invalidDeploymentGroupNameException) {
         this.invalidDeploymentGroupNameException = invalidDeploymentGroupNameException;
         return this;
@@ -79,6 +87,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object invalidDeploymentStatusException;
+
     public ListDeploymentsResponse withInvalidDeploymentStatusException(Object invalidDeploymentStatusException) {
         this.invalidDeploymentStatusException = invalidDeploymentStatusException;
         return this;
@@ -89,6 +98,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object invalidExternalIdException;
+
     public ListDeploymentsResponse withInvalidExternalIdException(Object invalidExternalIdException) {
         this.invalidExternalIdException = invalidExternalIdException;
         return this;
@@ -99,6 +109,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDeploymentsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -109,6 +120,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDeploymentsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -119,6 +131,7 @@ public class ListDeploymentsResponse {
      */
     
     public Object invalidTimeRangeException;
+
     public ListDeploymentsResponse withInvalidTimeRangeException(Object invalidTimeRangeException) {
         this.invalidTimeRangeException = invalidTimeRangeException;
         return this;
@@ -129,6 +142,7 @@ public class ListDeploymentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeploymentsOutput listDeploymentsOutput;
+
     public ListDeploymentsResponse withListDeploymentsOutput(org.openapis.openapi.models.shared.ListDeploymentsOutput listDeploymentsOutput) {
         this.listDeploymentsOutput = listDeploymentsOutput;
         return this;
@@ -136,6 +150,7 @@ public class ListDeploymentsResponse {
     
     
     public Integer statusCode;
+
     public ListDeploymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,9 +158,14 @@ public class ListDeploymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeploymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDeploymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

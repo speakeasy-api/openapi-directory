@@ -18,6 +18,7 @@ public class OcrPageResultWithWordsWithLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageNumber")
     public Integer pageNumber;
+
     public OcrPageResultWithWordsWithLocation withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -29,6 +30,7 @@ public class OcrPageResultWithWordsWithLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public OcrPageResultWithWordsWithLocation withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
@@ -40,9 +42,11 @@ public class OcrPageResultWithWordsWithLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Words")
     public OcrWordElement[] words;
+
     public OcrPageResultWithWordsWithLocation withWords(OcrWordElement[] words) {
         this.words = words;
         return this;
     }
     
+    public OcrPageResultWithWordsWithLocation(){}
 }

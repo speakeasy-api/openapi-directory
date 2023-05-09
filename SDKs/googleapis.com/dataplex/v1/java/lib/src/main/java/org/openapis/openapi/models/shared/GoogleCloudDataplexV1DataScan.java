@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1DataScan withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GoogleCloudDataplexV1DataSource data;
+
     public GoogleCloudDataplexV1DataScan withData(GoogleCloudDataplexV1DataSource data) {
         this.data = data;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataProfileResult")
     public GoogleCloudDataplexV1DataProfileResult dataProfileResult;
+
     public GoogleCloudDataplexV1DataScan withDataProfileResult(GoogleCloudDataplexV1DataProfileResult dataProfileResult) {
         this.dataProfileResult = dataProfileResult;
         return this;
@@ -50,8 +53,9 @@ public class GoogleCloudDataplexV1DataScan {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataProfileSpec")
-    public java.util.Map<String, Object> dataProfileSpec;
-    public GoogleCloudDataplexV1DataScan withDataProfileSpec(java.util.Map<String, Object> dataProfileSpec) {
+    public GoogleCloudDataplexV1DataProfileSpec dataProfileSpec;
+
+    public GoogleCloudDataplexV1DataScan withDataProfileSpec(GoogleCloudDataplexV1DataProfileSpec dataProfileSpec) {
         this.dataProfileSpec = dataProfileSpec;
         return this;
     }
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataQualityResult")
     public GoogleCloudDataplexV1DataQualityResult dataQualityResult;
+
     public GoogleCloudDataplexV1DataScan withDataQualityResult(GoogleCloudDataplexV1DataQualityResult dataQualityResult) {
         this.dataQualityResult = dataQualityResult;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataQualitySpec")
     public GoogleCloudDataplexV1DataQualitySpec dataQualitySpec;
+
     public GoogleCloudDataplexV1DataScan withDataQualitySpec(GoogleCloudDataplexV1DataQualitySpec dataQualitySpec) {
         this.dataQualitySpec = dataQualitySpec;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1DataScan withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1DataScan withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionSpec")
     public GoogleCloudDataplexV1DataScanExecutionSpec executionSpec;
+
     public GoogleCloudDataplexV1DataScan withExecutionSpec(GoogleCloudDataplexV1DataScanExecutionSpec executionSpec) {
         this.executionSpec = executionSpec;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public GoogleCloudDataplexV1DataScanExecutionStatus executionStatus;
+
     public GoogleCloudDataplexV1DataScan withExecutionStatus(GoogleCloudDataplexV1DataScanExecutionStatus executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1DataScan withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1DataScan withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1DataScanStateEnum state;
+
     public GoogleCloudDataplexV1DataScan withState(GoogleCloudDataplexV1DataScanStateEnum state) {
         this.state = state;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1DataScanTypeEnum type;
+
     public GoogleCloudDataplexV1DataScan withType(GoogleCloudDataplexV1DataScanTypeEnum type) {
         this.type = type;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudDataplexV1DataScan withUid(String uid) {
         this.uid = uid;
         return this;
@@ -183,9 +198,11 @@ public class GoogleCloudDataplexV1DataScan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1DataScan withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataScan(){}
 }

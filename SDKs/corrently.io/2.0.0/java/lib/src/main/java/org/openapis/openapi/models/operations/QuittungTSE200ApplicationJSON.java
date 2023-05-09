@@ -18,6 +18,7 @@ public class QuittungTSE200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Object data;
+
     public QuittungTSE200ApplicationJSON withData(Object data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class QuittungTSE200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publickey")
     public String publickey;
+
     public QuittungTSE200ApplicationJSON withPublickey(String publickey) {
         this.publickey = publickey;
         return this;
@@ -40,6 +42,7 @@ public class QuittungTSE200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public String raw;
+
     public QuittungTSE200ApplicationJSON withRaw(String raw) {
         this.raw = raw;
         return this;
@@ -51,9 +54,11 @@ public class QuittungTSE200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public QuittungTSE200ApplicationJSON withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public QuittungTSE200ApplicationJSON(){}
 }

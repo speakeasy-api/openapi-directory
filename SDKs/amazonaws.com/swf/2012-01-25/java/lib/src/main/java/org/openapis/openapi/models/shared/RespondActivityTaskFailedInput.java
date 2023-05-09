@@ -12,6 +12,7 @@ public class RespondActivityTaskFailedInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public RespondActivityTaskFailedInput withDetails(String details) {
         this.details = details;
         return this;
@@ -20,6 +21,7 @@ public class RespondActivityTaskFailedInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public RespondActivityTaskFailedInput withReason(String reason) {
         this.reason = reason;
         return this;
@@ -27,9 +29,13 @@ public class RespondActivityTaskFailedInput {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public RespondActivityTaskFailedInput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public RespondActivityTaskFailedInput(@JsonProperty("taskToken") String taskToken) {
+        this.taskToken = taskToken;
+  }
 }

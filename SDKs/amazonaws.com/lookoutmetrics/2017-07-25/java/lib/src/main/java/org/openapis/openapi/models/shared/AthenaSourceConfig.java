@@ -15,6 +15,7 @@ public class AthenaSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackTestConfiguration")
     public BackTestConfiguration backTestConfiguration;
+
     public AthenaSourceConfig withBackTestConfiguration(BackTestConfiguration backTestConfiguration) {
         this.backTestConfiguration = backTestConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class AthenaSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCatalog")
     public String dataCatalog;
+
     public AthenaSourceConfig withDataCatalog(String dataCatalog) {
         this.dataCatalog = dataCatalog;
         return this;
@@ -31,6 +33,7 @@ public class AthenaSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public AthenaSourceConfig withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class AthenaSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AthenaSourceConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -47,6 +51,7 @@ public class AthenaSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ResultsPath")
     public String s3ResultsPath;
+
     public AthenaSourceConfig withS3ResultsPath(String s3ResultsPath) {
         this.s3ResultsPath = s3ResultsPath;
         return this;
@@ -55,6 +60,7 @@ public class AthenaSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public AthenaSourceConfig withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -63,9 +69,11 @@ public class AthenaSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroupName")
     public String workGroupName;
+
     public AthenaSourceConfig withWorkGroupName(String workGroupName) {
         this.workGroupName = workGroupName;
         return this;
     }
     
+    public AthenaSourceConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutscorebyfieldRequest {
@@ -12,6 +13,7 @@ public class PutscorebyfieldRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PutscorebyfieldRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class PutscorebyfieldRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PutscorebyfieldRequest putscorebyfieldRequest;
+
     public PutscorebyfieldRequest withPutscorebyfieldRequest(org.openapis.openapi.models.shared.PutscorebyfieldRequest putscorebyfieldRequest) {
         this.putscorebyfieldRequest = putscorebyfieldRequest;
         return this;
@@ -29,6 +32,7 @@ public class PutscorebyfieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public PutscorebyfieldRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -39,6 +43,7 @@ public class PutscorebyfieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field-name")
     public String fieldName;
+
     public PutscorebyfieldRequest withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -49,9 +54,17 @@ public class PutscorebyfieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutscorebyfieldRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutscorebyfieldRequest(@JsonProperty("Accept") String accept, @JsonProperty("PutscorebyfieldRequest") org.openapis.openapi.models.shared.PutscorebyfieldRequest putscorebyfieldRequest, @JsonProperty("acronym") String acronym, @JsonProperty("field-name") String fieldName, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.putscorebyfieldRequest = putscorebyfieldRequest;
+        this.acronym = acronym;
+        this.fieldName = fieldName;
+        this.id = id;
+  }
 }

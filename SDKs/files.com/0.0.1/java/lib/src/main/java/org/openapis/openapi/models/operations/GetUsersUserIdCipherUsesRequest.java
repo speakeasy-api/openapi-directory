@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdCipherUsesRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdCipherUsesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetUsersUserIdCipherUsesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetUsersUserIdCipherUsesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetUsersUserIdCipherUsesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -32,9 +35,13 @@ public class GetUsersUserIdCipherUsesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Integer userId;
+
     public GetUsersUserIdCipherUsesRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdCipherUsesRequest(@JsonProperty("user_id") Integer userId) {
+        this.userId = userId;
+  }
 }

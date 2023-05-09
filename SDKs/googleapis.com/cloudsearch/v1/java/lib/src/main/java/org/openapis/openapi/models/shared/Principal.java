@@ -18,6 +18,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupResourceName")
     public String groupResourceName;
+
     public Principal withGroupResourceName(String groupResourceName) {
         this.groupResourceName = groupResourceName;
         return this;
@@ -26,6 +27,7 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gsuitePrincipal")
     public GSuitePrincipal gsuitePrincipal;
+
     public Principal withGsuitePrincipal(GSuitePrincipal gsuitePrincipal) {
         this.gsuitePrincipal = gsuitePrincipal;
         return this;
@@ -37,9 +39,11 @@ public class Principal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userResourceName")
     public String userResourceName;
+
     public Principal withUserResourceName(String userResourceName) {
         this.userResourceName = userResourceName;
         return this;
     }
     
+    public Principal(){}
 }

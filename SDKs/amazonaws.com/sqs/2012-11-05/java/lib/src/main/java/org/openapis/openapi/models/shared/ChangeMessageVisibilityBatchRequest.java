@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ChangeMessageVisibilityBatchRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ChangeMessageVisibilityBatchRequest {
     
     public ChangeMessageVisibilityBatchRequestEntryList[] entries;
+
     public ChangeMessageVisibilityBatchRequest withEntries(ChangeMessageVisibilityBatchRequestEntryList[] entries) {
         this.entries = entries;
         return this;
@@ -19,9 +20,14 @@ public class ChangeMessageVisibilityBatchRequest {
     
     
     public String queueUrl;
+
     public ChangeMessageVisibilityBatchRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public ChangeMessageVisibilityBatchRequest(@JsonProperty("Entries") ChangeMessageVisibilityBatchRequestEntryList[] entries, @JsonProperty("QueueUrl") String queueUrl) {
+        this.entries = entries;
+        this.queueUrl = queueUrl;
+  }
 }

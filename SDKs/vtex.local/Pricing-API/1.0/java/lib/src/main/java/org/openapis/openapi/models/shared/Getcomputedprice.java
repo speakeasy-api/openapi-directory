@@ -18,6 +18,7 @@ public class Getcomputedprice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costPrice")
     public Double costPrice;
+
     public Getcomputedprice withCostPrice(Double costPrice) {
         this.costPrice = costPrice;
         return this;
@@ -28,6 +29,7 @@ public class Getcomputedprice {
      */
     @JsonProperty("listPrice")
     public Integer listPrice;
+
     public Getcomputedprice withListPrice(Integer listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -38,6 +40,7 @@ public class Getcomputedprice {
      */
     @JsonProperty("priceValidUntil")
     public String priceValidUntil;
+
     public Getcomputedprice withPriceValidUntil(String priceValidUntil) {
         this.priceValidUntil = priceValidUntil;
         return this;
@@ -48,6 +51,7 @@ public class Getcomputedprice {
      */
     @JsonProperty("sellingPrice")
     public Double sellingPrice;
+
     public Getcomputedprice withSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -58,9 +62,16 @@ public class Getcomputedprice {
      */
     @JsonProperty("tradePolicyId")
     public String tradePolicyId;
+
     public Getcomputedprice withTradePolicyId(String tradePolicyId) {
         this.tradePolicyId = tradePolicyId;
         return this;
     }
     
+    public Getcomputedprice(@JsonProperty("listPrice") Integer listPrice, @JsonProperty("priceValidUntil") String priceValidUntil, @JsonProperty("sellingPrice") Double sellingPrice, @JsonProperty("tradePolicyId") String tradePolicyId) {
+        this.listPrice = listPrice;
+        this.priceValidUntil = priceValidUntil;
+        this.sellingPrice = sellingPrice;
+        this.tradePolicyId = tradePolicyId;
+  }
 }

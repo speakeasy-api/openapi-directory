@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEffectivePoliciesResponse {
     
     public String contentType;
+
     public GetEffectivePoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEffectivePoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEffectivePoliciesResponse getEffectivePoliciesResponse;
+
     public GetEffectivePoliciesResponse withGetEffectivePoliciesResponse(org.openapis.openapi.models.shared.GetEffectivePoliciesResponse getEffectivePoliciesResponse) {
         this.getEffectivePoliciesResponse = getEffectivePoliciesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetEffectivePoliciesResponse {
      */
     
     public Object internalFailureException;
+
     public GetEffectivePoliciesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetEffectivePoliciesResponse {
      */
     
     public Object invalidRequestException;
+
     public GetEffectivePoliciesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetEffectivePoliciesResponse {
      */
     
     public Object limitExceededException;
+
     public GetEffectivePoliciesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetEffectivePoliciesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEffectivePoliciesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetEffectivePoliciesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetEffectivePoliciesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class GetEffectivePoliciesResponse {
     
     
     public Integer statusCode;
+
     public GetEffectivePoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetEffectivePoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEffectivePoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetEffectivePoliciesResponse {
      */
     
     public Object throttlingException;
+
     public GetEffectivePoliciesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetEffectivePoliciesResponse {
      */
     
     public Object unauthorizedException;
+
     public GetEffectivePoliciesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetEffectivePoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

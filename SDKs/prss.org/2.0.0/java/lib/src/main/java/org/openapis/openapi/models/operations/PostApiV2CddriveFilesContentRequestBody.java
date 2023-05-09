@@ -15,6 +15,7 @@ public class PostApiV2CddriveFilesContentRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PostApiV2CddriveFilesContentRequestBodyFile file;
+
     public PostApiV2CddriveFilesContentRequestBody withFile(PostApiV2CddriveFilesContentRequestBodyFile file) {
         this.file = file;
         return this;
@@ -25,6 +26,7 @@ public class PostApiV2CddriveFilesContentRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostApiV2CddriveFilesContentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,11 @@ public class PostApiV2CddriveFilesContentRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=parent-id")
     public Long parentId;
+
     public PostApiV2CddriveFilesContentRequestBody withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public PostApiV2CddriveFilesContentRequestBody(){}
 }

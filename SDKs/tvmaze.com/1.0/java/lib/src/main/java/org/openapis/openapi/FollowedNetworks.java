@@ -51,10 +51,8 @@ public class FollowedNetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdResponse res = new org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdResponse res = new org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -90,11 +88,9 @@ public class FollowedNetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserFollowsNetworksResponse res = new org.openapis.openapi.models.operations.GetUserFollowsNetworksResponse() {{
+        org.openapis.openapi.models.operations.GetUserFollowsNetworksResponse res = new org.openapis.openapi.models.operations.GetUserFollowsNetworksResponse(contentType, httpRes.statusCode()) {{
             networkFollows = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,11 +125,9 @@ public class FollowedNetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdResponse res = new org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdResponse res = new org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdResponse(contentType, httpRes.statusCode()) {{
             networkFollow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,11 +164,9 @@ public class FollowedNetworks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdResponse res = new org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdResponse() {{
+        org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdResponse res = new org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdResponse(contentType, httpRes.statusCode()) {{
             networkFollow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

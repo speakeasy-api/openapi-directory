@@ -22,6 +22,7 @@ public class AutoSnapshotDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AutoSnapshotDetails withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class AutoSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public AutoSnapshotDetails withDate(String date) {
         this.date = date;
         return this;
@@ -38,6 +40,7 @@ public class AutoSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromAttachedDisks")
     public AttachedDisk[] fromAttachedDisks;
+
     public AutoSnapshotDetails withFromAttachedDisks(AttachedDisk[] fromAttachedDisks) {
         this.fromAttachedDisks = fromAttachedDisks;
         return this;
@@ -46,9 +49,11 @@ public class AutoSnapshotDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AutoSnapshotStatusEnum status;
+
     public AutoSnapshotDetails withStatus(AutoSnapshotStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AutoSnapshotDetails(){}
 }

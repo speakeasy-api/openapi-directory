@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateApplicationFleetResponse {
@@ -12,6 +13,7 @@ public class AssociateApplicationFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateApplicationFleetResult associateApplicationFleetResult;
+
     public AssociateApplicationFleetResponse withAssociateApplicationFleetResult(org.openapis.openapi.models.shared.AssociateApplicationFleetResult associateApplicationFleetResult) {
         this.associateApplicationFleetResult = associateApplicationFleetResult;
         return this;
@@ -22,6 +24,7 @@ public class AssociateApplicationFleetResponse {
      */
     
     public Object concurrentModificationException;
+
     public AssociateApplicationFleetResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateApplicationFleetResponse {
     
     
     public String contentType;
+
     public AssociateApplicationFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateApplicationFleetResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public AssociateApplicationFleetResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateApplicationFleetResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateApplicationFleetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateApplicationFleetResponse {
      */
     
     public Object operationNotPermittedException;
+
     public AssociateApplicationFleetResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateApplicationFleetResponse {
     
     
     public Integer statusCode;
+
     public AssociateApplicationFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociateApplicationFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateApplicationFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class AssociateApplicationFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateApplicationFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AssociateApplicationFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

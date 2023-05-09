@@ -20,6 +20,7 @@ public class ContactList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactListName")
     public String contactListName;
+
     public ContactList withContactListName(String contactListName) {
         this.contactListName = contactListName;
         return this;
@@ -30,9 +31,11 @@ public class ContactList {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public ContactList withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
     }
     
+    public ContactList(){}
 }

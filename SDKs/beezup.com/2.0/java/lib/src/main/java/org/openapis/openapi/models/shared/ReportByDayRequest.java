@@ -14,6 +14,7 @@ public class ReportByDayRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedFilters")
     public ReportAdvancedFilters advancedFilters;
+
     public ReportByDayRequest withAdvancedFilters(ReportAdvancedFilters advancedFilters) {
         this.advancedFilters = advancedFilters;
         return this;
@@ -25,6 +26,7 @@ public class ReportByDayRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("beginPeriodUtcDate")
     public LocalDate beginPeriodUtcDate;
+
     public ReportByDayRequest withBeginPeriodUtcDate(LocalDate beginPeriodUtcDate) {
         this.beginPeriodUtcDate = beginPeriodUtcDate;
         return this;
@@ -36,6 +38,7 @@ public class ReportByDayRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogCategoryId")
     public String catalogCategoryId;
+
     public ReportByDayRequest withCatalogCategoryId(String catalogCategoryId) {
         this.catalogCategoryId = catalogCategoryId;
         return this;
@@ -47,6 +50,7 @@ public class ReportByDayRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelIds")
     public String[] channelIds;
+
     public ReportByDayRequest withChannelIds(String[] channelIds) {
         this.channelIds = channelIds;
         return this;
@@ -58,6 +62,7 @@ public class ReportByDayRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endPeriodUtcDate")
     public LocalDate endPeriodUtcDate;
+
     public ReportByDayRequest withEndPeriodUtcDate(LocalDate endPeriodUtcDate) {
         this.endPeriodUtcDate = endPeriodUtcDate;
         return this;
@@ -69,9 +74,14 @@ public class ReportByDayRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ReportByDayRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ReportByDayRequest(@JsonProperty("beginPeriodUtcDate") LocalDate beginPeriodUtcDate, @JsonProperty("endPeriodUtcDate") LocalDate endPeriodUtcDate) {
+        this.beginPeriodUtcDate = beginPeriodUtcDate;
+        this.endPeriodUtcDate = endPeriodUtcDate;
+  }
 }

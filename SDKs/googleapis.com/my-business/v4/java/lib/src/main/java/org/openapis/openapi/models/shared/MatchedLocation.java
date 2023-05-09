@@ -18,6 +18,7 @@ public class MatchedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isExactMatch")
     public Boolean isExactMatch;
+
     public MatchedLocation withIsExactMatch(Boolean isExactMatch) {
         this.isExactMatch = isExactMatch;
         return this;
@@ -29,9 +30,11 @@ public class MatchedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public MatchedLocation withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public MatchedLocation(){}
 }

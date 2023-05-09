@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextRowId")
     public String contextRowId;
+
     public Filter withContextRowId(String contextRowId) {
         this.contextRowId = contextRowId;
         return this;
@@ -22,9 +23,13 @@ public class Filter {
     
     @JsonProperty("formula")
     public String formula;
+
     public Filter withFormula(String formula) {
         this.formula = formula;
         return this;
     }
     
+    public Filter(@JsonProperty("formula") String formula) {
+        this.formula = formula;
+  }
 }

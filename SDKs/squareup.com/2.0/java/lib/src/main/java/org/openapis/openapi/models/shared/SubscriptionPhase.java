@@ -18,6 +18,7 @@ public class SubscriptionPhase {
      */
     @JsonProperty("cadence")
     public String cadence;
+
     public SubscriptionPhase withCadence(String cadence) {
         this.cadence = cadence;
         return this;
@@ -29,6 +30,7 @@ public class SubscriptionPhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Long ordinal;
+
     public SubscriptionPhase withOrdinal(Long ordinal) {
         this.ordinal = ordinal;
         return this;
@@ -40,6 +42,7 @@ public class SubscriptionPhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periods")
     public Long periods;
+
     public SubscriptionPhase withPeriods(Long periods) {
         this.periods = periods;
         return this;
@@ -55,6 +58,7 @@ public class SubscriptionPhase {
      */
     @JsonProperty("recurring_price_money")
     public Money recurringPriceMoney;
+
     public SubscriptionPhase withRecurringPriceMoney(Money recurringPriceMoney) {
         this.recurringPriceMoney = recurringPriceMoney;
         return this;
@@ -66,9 +70,14 @@ public class SubscriptionPhase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public SubscriptionPhase withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public SubscriptionPhase(@JsonProperty("cadence") String cadence, @JsonProperty("recurring_price_money") Money recurringPriceMoney) {
+        this.cadence = cadence;
+        this.recurringPriceMoney = recurringPriceMoney;
+  }
 }

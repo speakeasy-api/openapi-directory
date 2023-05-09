@@ -20,6 +20,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderStrategy")
     public CapacityProviderStrategyItem[] capacityProviderStrategy;
+
     public Deployment withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         return this;
@@ -30,6 +31,7 @@ public class Deployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Deployment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCount")
     public Long desiredCount;
+
     public Deployment withDesiredCount(Long desiredCount) {
         this.desiredCount = desiredCount;
         return this;
@@ -46,6 +49,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedTasks")
     public Long failedTasks;
+
     public Deployment withFailedTasks(Long failedTasks) {
         this.failedTasks = failedTasks;
         return this;
@@ -54,6 +58,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Deployment withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchType")
     public LaunchTypeEnum launchType;
+
     public Deployment withLaunchType(LaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -70,6 +76,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public Deployment withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -78,6 +85,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingCount")
     public Long pendingCount;
+
     public Deployment withPendingCount(Long pendingCount) {
         this.pendingCount = pendingCount;
         return this;
@@ -86,6 +94,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformFamily")
     public String platformFamily;
+
     public Deployment withPlatformFamily(String platformFamily) {
         this.platformFamily = platformFamily;
         return this;
@@ -94,6 +103,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public Deployment withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -102,6 +112,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutState")
     public DeploymentRolloutStateEnum rolloutState;
+
     public Deployment withRolloutState(DeploymentRolloutStateEnum rolloutState) {
         this.rolloutState = rolloutState;
         return this;
@@ -110,6 +121,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutStateReason")
     public String rolloutStateReason;
+
     public Deployment withRolloutStateReason(String rolloutStateReason) {
         this.rolloutStateReason = rolloutStateReason;
         return this;
@@ -118,6 +130,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningCount")
     public Long runningCount;
+
     public Deployment withRunningCount(Long runningCount) {
         this.runningCount = runningCount;
         return this;
@@ -126,6 +139,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConnectConfiguration")
     public ServiceConnectConfiguration serviceConnectConfiguration;
+
     public Deployment withServiceConnectConfiguration(ServiceConnectConfiguration serviceConnectConfiguration) {
         this.serviceConnectConfiguration = serviceConnectConfiguration;
         return this;
@@ -134,6 +148,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConnectResources")
     public ServiceConnectServiceResource[] serviceConnectResources;
+
     public Deployment withServiceConnectResources(ServiceConnectServiceResource[] serviceConnectResources) {
         this.serviceConnectResources = serviceConnectResources;
         return this;
@@ -142,6 +157,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Deployment withStatus(String status) {
         this.status = status;
         return this;
@@ -150,6 +166,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinition")
     public String taskDefinition;
+
     public Deployment withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
@@ -160,9 +177,11 @@ public class Deployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Deployment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Deployment(){}
 }

@@ -17,6 +17,7 @@ public class WebhookDeliveryLogResourceAttributesResponse {
      */
     @JsonProperty("body")
     public String body;
+
     public WebhookDeliveryLogResourceAttributesResponse withBody(String body) {
         this.body = body;
         return this;
@@ -28,9 +29,14 @@ public class WebhookDeliveryLogResourceAttributesResponse {
      */
     @JsonProperty("statusCode")
     public Long statusCode;
+
     public WebhookDeliveryLogResourceAttributesResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public WebhookDeliveryLogResourceAttributesResponse(@JsonProperty("body") String body, @JsonProperty("statusCode") Long statusCode) {
+        this.body = body;
+        this.statusCode = statusCode;
+  }
 }

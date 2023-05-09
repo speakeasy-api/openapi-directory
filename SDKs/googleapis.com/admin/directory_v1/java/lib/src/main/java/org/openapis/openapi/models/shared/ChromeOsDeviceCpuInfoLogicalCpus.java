@@ -18,6 +18,7 @@ public class ChromeOsDeviceCpuInfoLogicalCpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cStates")
     public ChromeOsDeviceCpuInfoLogicalCpusCStates[] cStates;
+
     public ChromeOsDeviceCpuInfoLogicalCpus withCStates(ChromeOsDeviceCpuInfoLogicalCpusCStates[] cStates) {
         this.cStates = cStates;
         return this;
@@ -29,6 +30,7 @@ public class ChromeOsDeviceCpuInfoLogicalCpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentScalingFrequencyKhz")
     public Integer currentScalingFrequencyKhz;
+
     public ChromeOsDeviceCpuInfoLogicalCpus withCurrentScalingFrequencyKhz(Integer currentScalingFrequencyKhz) {
         this.currentScalingFrequencyKhz = currentScalingFrequencyKhz;
         return this;
@@ -40,6 +42,7 @@ public class ChromeOsDeviceCpuInfoLogicalCpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idleDuration")
     public String idleDuration;
+
     public ChromeOsDeviceCpuInfoLogicalCpus withIdleDuration(String idleDuration) {
         this.idleDuration = idleDuration;
         return this;
@@ -51,9 +54,11 @@ public class ChromeOsDeviceCpuInfoLogicalCpus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxScalingFrequencyKhz")
     public Integer maxScalingFrequencyKhz;
+
     public ChromeOsDeviceCpuInfoLogicalCpus withMaxScalingFrequencyKhz(Integer maxScalingFrequencyKhz) {
         this.maxScalingFrequencyKhz = maxScalingFrequencyKhz;
         return this;
     }
     
+    public ChromeOsDeviceCpuInfoLogicalCpus(){}
 }

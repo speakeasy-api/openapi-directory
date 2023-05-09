@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest {
@@ -12,6 +13,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=crManifest")
     public String crManifest;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withCrManifest(String crManifest) {
         this.crManifest = crManifest;
         return this;
@@ -62,6 +68,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=crdManifest")
     public String crdManifest;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withCrdManifest(String crdManifest) {
         this.crdManifest = crdManifest;
         return this;
@@ -72,6 +79,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

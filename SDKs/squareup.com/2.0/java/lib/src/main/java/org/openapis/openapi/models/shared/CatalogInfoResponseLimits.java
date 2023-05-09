@@ -16,6 +16,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch_delete_max_object_ids")
     public Long batchDeleteMaxObjectIds;
+
     public CatalogInfoResponseLimits withBatchDeleteMaxObjectIds(Long batchDeleteMaxObjectIds) {
         this.batchDeleteMaxObjectIds = batchDeleteMaxObjectIds;
         return this;
@@ -28,6 +29,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch_retrieve_max_object_ids")
     public Long batchRetrieveMaxObjectIds;
+
     public CatalogInfoResponseLimits withBatchRetrieveMaxObjectIds(Long batchRetrieveMaxObjectIds) {
         this.batchRetrieveMaxObjectIds = batchRetrieveMaxObjectIds;
         return this;
@@ -40,6 +42,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch_upsert_max_objects_per_batch")
     public Long batchUpsertMaxObjectsPerBatch;
+
     public CatalogInfoResponseLimits withBatchUpsertMaxObjectsPerBatch(Long batchUpsertMaxObjectsPerBatch) {
         this.batchUpsertMaxObjectsPerBatch = batchUpsertMaxObjectsPerBatch;
         return this;
@@ -52,6 +55,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch_upsert_max_total_objects")
     public Long batchUpsertMaxTotalObjects;
+
     public CatalogInfoResponseLimits withBatchUpsertMaxTotalObjects(Long batchUpsertMaxTotalObjects) {
         this.batchUpsertMaxTotalObjects = batchUpsertMaxTotalObjects;
         return this;
@@ -64,6 +68,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_max_page_limit")
     public Long searchMaxPageLimit;
+
     public CatalogInfoResponseLimits withSearchMaxPageLimit(Long searchMaxPageLimit) {
         this.searchMaxPageLimit = searchMaxPageLimit;
         return this;
@@ -76,6 +81,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_item_modifier_lists_max_item_ids")
     public Long updateItemModifierListsMaxItemIds;
+
     public CatalogInfoResponseLimits withUpdateItemModifierListsMaxItemIds(Long updateItemModifierListsMaxItemIds) {
         this.updateItemModifierListsMaxItemIds = updateItemModifierListsMaxItemIds;
         return this;
@@ -88,6 +94,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_item_modifier_lists_max_modifier_lists_to_disable")
     public Long updateItemModifierListsMaxModifierListsToDisable;
+
     public CatalogInfoResponseLimits withUpdateItemModifierListsMaxModifierListsToDisable(Long updateItemModifierListsMaxModifierListsToDisable) {
         this.updateItemModifierListsMaxModifierListsToDisable = updateItemModifierListsMaxModifierListsToDisable;
         return this;
@@ -100,6 +107,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_item_modifier_lists_max_modifier_lists_to_enable")
     public Long updateItemModifierListsMaxModifierListsToEnable;
+
     public CatalogInfoResponseLimits withUpdateItemModifierListsMaxModifierListsToEnable(Long updateItemModifierListsMaxModifierListsToEnable) {
         this.updateItemModifierListsMaxModifierListsToEnable = updateItemModifierListsMaxModifierListsToEnable;
         return this;
@@ -112,6 +120,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_item_taxes_max_item_ids")
     public Long updateItemTaxesMaxItemIds;
+
     public CatalogInfoResponseLimits withUpdateItemTaxesMaxItemIds(Long updateItemTaxesMaxItemIds) {
         this.updateItemTaxesMaxItemIds = updateItemTaxesMaxItemIds;
         return this;
@@ -124,6 +133,7 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_item_taxes_max_taxes_to_disable")
     public Long updateItemTaxesMaxTaxesToDisable;
+
     public CatalogInfoResponseLimits withUpdateItemTaxesMaxTaxesToDisable(Long updateItemTaxesMaxTaxesToDisable) {
         this.updateItemTaxesMaxTaxesToDisable = updateItemTaxesMaxTaxesToDisable;
         return this;
@@ -136,9 +146,11 @@ public class CatalogInfoResponseLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_item_taxes_max_taxes_to_enable")
     public Long updateItemTaxesMaxTaxesToEnable;
+
     public CatalogInfoResponseLimits withUpdateItemTaxesMaxTaxesToEnable(Long updateItemTaxesMaxTaxesToEnable) {
         this.updateItemTaxesMaxTaxesToEnable = updateItemTaxesMaxTaxesToEnable;
         return this;
     }
     
+    public CatalogInfoResponseLimits(){}
 }

@@ -12,6 +12,7 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public MergePullRequestBySquashInput withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -20,6 +21,7 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public MergePullRequestBySquashInput withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -28,6 +30,7 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public MergePullRequestBySquashInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -36,6 +39,7 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolution")
     public ConflictResolution conflictResolution;
+
     public MergePullRequestBySquashInput withConflictResolution(ConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -44,6 +48,7 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public MergePullRequestBySquashInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -52,6 +57,7 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public MergePullRequestBySquashInput withEmail(String email) {
         this.email = email;
         return this;
@@ -60,6 +66,7 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyFolders")
     public Boolean keepEmptyFolders;
+
     public MergePullRequestBySquashInput withKeepEmptyFolders(Boolean keepEmptyFolders) {
         this.keepEmptyFolders = keepEmptyFolders;
         return this;
@@ -67,6 +74,7 @@ public class MergePullRequestBySquashInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public MergePullRequestBySquashInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -74,6 +82,7 @@ public class MergePullRequestBySquashInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public MergePullRequestBySquashInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -82,9 +91,14 @@ public class MergePullRequestBySquashInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCommitId")
     public String sourceCommitId;
+
     public MergePullRequestBySquashInput withSourceCommitId(String sourceCommitId) {
         this.sourceCommitId = sourceCommitId;
         return this;
     }
     
+    public MergePullRequestBySquashInput(@JsonProperty("pullRequestId") String pullRequestId, @JsonProperty("repositoryName") String repositoryName) {
+        this.pullRequestId = pullRequestId;
+        this.repositoryName = repositoryName;
+  }
 }

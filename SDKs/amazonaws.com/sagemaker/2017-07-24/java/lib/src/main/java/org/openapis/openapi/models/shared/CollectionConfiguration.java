@@ -15,6 +15,7 @@ public class CollectionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionName")
     public String collectionName;
+
     public CollectionConfiguration withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -23,9 +24,11 @@ public class CollectionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionParameters")
     public java.util.Map<String, String> collectionParameters;
+
     public CollectionConfiguration withCollectionParameters(java.util.Map<String, String> collectionParameters) {
         this.collectionParameters = collectionParameters;
         return this;
     }
     
+    public CollectionConfiguration(){}
 }

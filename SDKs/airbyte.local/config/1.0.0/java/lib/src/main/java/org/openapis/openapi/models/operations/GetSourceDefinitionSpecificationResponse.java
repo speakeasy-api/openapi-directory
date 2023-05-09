@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSourceDefinitionSpecificationResponse {
     
     public String contentType;
+
     public GetSourceDefinitionSpecificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSourceDefinitionSpecificationResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetSourceDefinitionSpecificationResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetSourceDefinitionSpecificationResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetSourceDefinitionSpecificationResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class GetSourceDefinitionSpecificationResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceDefinitionSpecificationRead sourceDefinitionSpecificationRead;
+
     public GetSourceDefinitionSpecificationResponse withSourceDefinitionSpecificationRead(org.openapis.openapi.models.shared.SourceDefinitionSpecificationRead sourceDefinitionSpecificationRead) {
         this.sourceDefinitionSpecificationRead = sourceDefinitionSpecificationRead;
         return this;
@@ -46,6 +51,7 @@ public class GetSourceDefinitionSpecificationResponse {
     
     
     public Integer statusCode;
+
     public GetSourceDefinitionSpecificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetSourceDefinitionSpecificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSourceDefinitionSpecificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSourceDefinitionSpecificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

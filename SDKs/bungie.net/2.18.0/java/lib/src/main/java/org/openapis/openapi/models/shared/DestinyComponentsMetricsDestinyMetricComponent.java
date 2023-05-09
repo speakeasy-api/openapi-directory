@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsMetricsDestinyMetricComponent {
     
     public Boolean invisible;
+
     public DestinyComponentsMetricsDestinyMetricComponent withInvisible(Boolean invisible) {
         this.invisible = invisible;
         return this;
@@ -19,9 +20,11 @@ public class DestinyComponentsMetricsDestinyMetricComponent {
      */
     
     public DestinyQuestsDestinyObjectiveProgress objectiveProgress;
+
     public DestinyComponentsMetricsDestinyMetricComponent withObjectiveProgress(DestinyQuestsDestinyObjectiveProgress objectiveProgress) {
         this.objectiveProgress = objectiveProgress;
         return this;
     }
     
+    public DestinyComponentsMetricsDestinyMetricComponent(){}
 }

@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneActivityVariant {
      */
     
     public Long activityHash;
+
     public DestinyMilestonesDestinyMilestoneActivityVariant withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyMilestonesDestinyMilestoneActivityVariant {
      */
     
     public Long activityModeHash;
+
     public DestinyMilestonesDestinyMilestoneActivityVariant withActivityModeHash(Long activityModeHash) {
         this.activityModeHash = activityModeHash;
         return this;
@@ -35,6 +37,7 @@ public class DestinyMilestonesDestinyMilestoneActivityVariant {
      */
     
     public DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum activityModeType;
+
     public DestinyMilestonesDestinyMilestoneActivityVariant withActivityModeType(DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum activityModeType) {
         this.activityModeType = activityModeType;
         return this;
@@ -45,9 +48,11 @@ public class DestinyMilestonesDestinyMilestoneActivityVariant {
      */
     
     public DestinyMilestonesDestinyMilestoneActivityVariantCompletionStatus completionStatus;
+
     public DestinyMilestonesDestinyMilestoneActivityVariant withCompletionStatus(DestinyMilestonesDestinyMilestoneActivityVariantCompletionStatus completionStatus) {
         this.completionStatus = completionStatus;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneActivityVariant(){}
 }

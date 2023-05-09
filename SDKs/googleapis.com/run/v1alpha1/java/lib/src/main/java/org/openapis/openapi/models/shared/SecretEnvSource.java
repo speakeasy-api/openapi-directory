@@ -18,6 +18,7 @@ public class SecretEnvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localObjectReference")
     public LocalObjectReference localObjectReference;
+
     public SecretEnvSource withLocalObjectReference(LocalObjectReference localObjectReference) {
         this.localObjectReference = localObjectReference;
         return this;
@@ -29,6 +30,7 @@ public class SecretEnvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecretEnvSource withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class SecretEnvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public SecretEnvSource withOptional(Boolean optional) {
         this.optional = optional;
         return this;
     }
     
+    public SecretEnvSource(){}
 }

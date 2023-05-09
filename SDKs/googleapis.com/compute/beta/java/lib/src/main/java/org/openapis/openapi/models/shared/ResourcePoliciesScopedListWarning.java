@@ -18,6 +18,7 @@ public class ResourcePoliciesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ResourcePoliciesScopedListWarningCodeEnum code;
+
     public ResourcePoliciesScopedListWarning withCode(ResourcePoliciesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePoliciesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourcePoliciesScopedListWarningData[] data;
+
     public ResourcePoliciesScopedListWarning withData(ResourcePoliciesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ResourcePoliciesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ResourcePoliciesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ResourcePoliciesScopedListWarning(){}
 }

@@ -18,8 +18,45 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroup")
     public GoogleAdsSearchads360V0ResourcesAdGroup adGroup;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroup(GoogleAdsSearchads360V0ResourcesAdGroup adGroup) {
         this.adGroup = adGroup;
+        return this;
+    }
+    
+    /**
+     * An ad group ad.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("adGroupAd")
+    public GoogleAdsSearchads360V0ResourcesAdGroupAd adGroupAd;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroupAd(GoogleAdsSearchads360V0ResourcesAdGroupAd adGroupAd) {
+        this.adGroupAd = adGroupAd;
+        return this;
+    }
+    
+    /**
+     * A relationship between an ad group ad and a label.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("adGroupAdLabel")
+    public GoogleAdsSearchads360V0ResourcesAdGroupAdLabel adGroupAdLabel;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroupAdLabel(GoogleAdsSearchads360V0ResourcesAdGroupAdLabel adGroupAdLabel) {
+        this.adGroupAdLabel = adGroupAdLabel;
+        return this;
+    }
+    
+    /**
+     * An ad group audience view. Includes performance data from interests and remarketing lists for Display Network and YouTube Network ads, and remarketing lists for search ads (RLSA), aggregated at the audience level.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("adGroupAudienceView")
+    public GoogleAdsSearchads360V0ResourcesAdGroupAudienceView adGroupAudienceView;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroupAudienceView(GoogleAdsSearchads360V0ResourcesAdGroupAudienceView adGroupAudienceView) {
+        this.adGroupAudienceView = adGroupAudienceView;
         return this;
     }
     
@@ -29,6 +66,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupBidModifier")
     public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier adGroupBidModifier;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroupBidModifier(GoogleAdsSearchads360V0ResourcesAdGroupBidModifier adGroupBidModifier) {
         this.adGroupBidModifier = adGroupBidModifier;
         return this;
@@ -40,8 +78,45 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupCriterion")
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterion adGroupCriterion;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroupCriterion(GoogleAdsSearchads360V0ResourcesAdGroupCriterion adGroupCriterion) {
         this.adGroupCriterion = adGroupCriterion;
+        return this;
+    }
+    
+    /**
+     * A relationship between an ad group criterion and a label.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("adGroupCriterionLabel")
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel adGroupCriterionLabel;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroupCriterionLabel(GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel adGroupCriterionLabel) {
+        this.adGroupCriterionLabel = adGroupCriterionLabel;
+        return this;
+    }
+    
+    /**
+     * A relationship between an ad group and a label.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("adGroupLabel")
+    public GoogleAdsSearchads360V0ResourcesAdGroupLabel adGroupLabel;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withAdGroupLabel(GoogleAdsSearchads360V0ResourcesAdGroupLabel adGroupLabel) {
+        this.adGroupLabel = adGroupLabel;
+        return this;
+    }
+    
+    /**
+     * An age range view.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ageRangeView")
+    public GoogleAdsSearchads360V0ResourcesAgeRangeView ageRangeView;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withAgeRangeView(GoogleAdsSearchads360V0ResourcesAgeRangeView ageRangeView) {
+        this.ageRangeView = ageRangeView;
         return this;
     }
     
@@ -51,6 +126,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingStrategy")
     public GoogleAdsSearchads360V0ResourcesBiddingStrategy biddingStrategy;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withBiddingStrategy(GoogleAdsSearchads360V0ResourcesBiddingStrategy biddingStrategy) {
         this.biddingStrategy = biddingStrategy;
         return this;
@@ -62,8 +138,21 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign")
     public GoogleAdsSearchads360V0ResourcesCampaign campaign;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withCampaign(GoogleAdsSearchads360V0ResourcesCampaign campaign) {
         this.campaign = campaign;
+        return this;
+    }
+    
+    /**
+     * A campaign audience view. Includes performance data from interests and remarketing lists for Display Network and YouTube Network ads, and remarketing lists for search ads (RLSA), aggregated by campaign and audience criterion. This view only includes audiences attached at the campaign level.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campaignAudienceView")
+    public GoogleAdsSearchads360V0ResourcesCampaignAudienceView campaignAudienceView;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withCampaignAudienceView(GoogleAdsSearchads360V0ResourcesCampaignAudienceView campaignAudienceView) {
+        this.campaignAudienceView = campaignAudienceView;
         return this;
     }
     
@@ -73,6 +162,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignBudget")
     public GoogleAdsSearchads360V0ResourcesCampaignBudget campaignBudget;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withCampaignBudget(GoogleAdsSearchads360V0ResourcesCampaignBudget campaignBudget) {
         this.campaignBudget = campaignBudget;
         return this;
@@ -84,8 +174,21 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignCriterion")
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion campaignCriterion;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withCampaignCriterion(GoogleAdsSearchads360V0ResourcesCampaignCriterion campaignCriterion) {
         this.campaignCriterion = campaignCriterion;
+        return this;
+    }
+    
+    /**
+     * Represents a relationship between a campaign and a label.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campaignLabel")
+    public GoogleAdsSearchads360V0ResourcesCampaignLabel campaignLabel;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withCampaignLabel(GoogleAdsSearchads360V0ResourcesCampaignLabel campaignLabel) {
+        this.campaignLabel = campaignLabel;
         return this;
     }
     
@@ -95,6 +198,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionAction")
     public GoogleAdsSearchads360V0ResourcesConversionAction conversionAction;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withConversionAction(GoogleAdsSearchads360V0ResourcesConversionAction conversionAction) {
         this.conversionAction = conversionAction;
         return this;
@@ -106,6 +210,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customColumns")
     public GoogleAdsSearchads360V0CommonValue[] customColumns;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withCustomColumns(GoogleAdsSearchads360V0CommonValue[] customColumns) {
         this.customColumns = customColumns;
         return this;
@@ -117,6 +222,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public GoogleAdsSearchads360V0ResourcesCustomer customer;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withCustomer(GoogleAdsSearchads360V0ResourcesCustomer customer) {
         this.customer = customer;
         return this;
@@ -128,6 +234,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerClient")
     public GoogleAdsSearchads360V0ResourcesCustomerClient customerClient;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withCustomerClient(GoogleAdsSearchads360V0ResourcesCustomerClient customerClient) {
         this.customerClient = customerClient;
         return this;
@@ -139,8 +246,33 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagerLink")
     public GoogleAdsSearchads360V0ResourcesCustomerManagerLink customerManagerLink;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withCustomerManagerLink(GoogleAdsSearchads360V0ResourcesCustomerManagerLink customerManagerLink) {
         this.customerManagerLink = customerManagerLink;
+        return this;
+    }
+    
+    /**
+     * A dynamic search ads search term view.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dynamicSearchAdsSearchTermView")
+    public GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView dynamicSearchAdsSearchTermView;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withDynamicSearchAdsSearchTermView(GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView dynamicSearchAdsSearchTermView) {
+        this.dynamicSearchAdsSearchTermView = dynamicSearchAdsSearchTermView;
+        return this;
+    }
+    
+    /**
+     * A gender view.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("genderView")
+    public GoogleAdsSearchads360V0ResourcesGenderView genderView;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withGenderView(GoogleAdsSearchads360V0ResourcesGenderView genderView) {
+        this.genderView = genderView;
         return this;
     }
     
@@ -150,8 +282,33 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordView")
     public GoogleAdsSearchads360V0ResourcesKeywordView keywordView;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withKeywordView(GoogleAdsSearchads360V0ResourcesKeywordView keywordView) {
         this.keywordView = keywordView;
+        return this;
+    }
+    
+    /**
+     * A label.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("label")
+    public GoogleAdsSearchads360V0ResourcesLabel label;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withLabel(GoogleAdsSearchads360V0ResourcesLabel label) {
+        this.label = label;
+        return this;
+    }
+    
+    /**
+     * A location view summarizes the performance of campaigns by Location criteria.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("locationView")
+    public GoogleAdsSearchads360V0ResourcesLocationView locationView;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withLocationView(GoogleAdsSearchads360V0ResourcesLocationView locationView) {
+        this.locationView = locationView;
         return this;
     }
     
@@ -161,6 +318,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GoogleAdsSearchads360V0CommonMetrics metrics;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withMetrics(GoogleAdsSearchads360V0CommonMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -172,6 +330,7 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productGroupView")
     public GoogleAdsSearchads360V0ResourcesProductGroupView productGroupView;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withProductGroupView(GoogleAdsSearchads360V0ResourcesProductGroupView productGroupView) {
         this.productGroupView = productGroupView;
         return this;
@@ -183,9 +342,35 @@ public class GoogleAdsSearchads360V0ServicesSearchAds360Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public GoogleAdsSearchads360V0CommonSegments segments;
+
     public GoogleAdsSearchads360V0ServicesSearchAds360Row withSegments(GoogleAdsSearchads360V0CommonSegments segments) {
         this.segments = segments;
         return this;
     }
     
+    /**
+     * A user list. This is a list of users a customer may target.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userList")
+    public GoogleAdsSearchads360V0ResourcesUserList userList;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withUserList(GoogleAdsSearchads360V0ResourcesUserList userList) {
+        this.userList = userList;
+        return this;
+    }
+    
+    /**
+     * A webpage view.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webpageView")
+    public GoogleAdsSearchads360V0ResourcesWebpageView webpageView;
+
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row withWebpageView(GoogleAdsSearchads360V0ResourcesWebpageView webpageView) {
+        this.webpageView = webpageView;
+        return this;
+    }
+    
+    public GoogleAdsSearchads360V0ServicesSearchAds360Row(){}
 }

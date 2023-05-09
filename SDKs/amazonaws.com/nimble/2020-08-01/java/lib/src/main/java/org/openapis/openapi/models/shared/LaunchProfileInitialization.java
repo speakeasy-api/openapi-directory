@@ -15,6 +15,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDirectory")
     public LaunchProfileInitializationActiveDirectory activeDirectory;
+
     public LaunchProfileInitialization withActiveDirectory(LaunchProfileInitializationActiveDirectory activeDirectory) {
         this.activeDirectory = activeDirectory;
         return this;
@@ -23,6 +24,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2SecurityGroupIds")
     public String[] ec2SecurityGroupIds;
+
     public LaunchProfileInitialization withEc2SecurityGroupIds(String[] ec2SecurityGroupIds) {
         this.ec2SecurityGroupIds = ec2SecurityGroupIds;
         return this;
@@ -31,6 +33,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfileId")
     public String launchProfileId;
+
     public LaunchProfileInitialization withLaunchProfileId(String launchProfileId) {
         this.launchProfileId = launchProfileId;
         return this;
@@ -39,6 +42,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfileProtocolVersion")
     public String launchProfileProtocolVersion;
+
     public LaunchProfileInitialization withLaunchProfileProtocolVersion(String launchProfileProtocolVersion) {
         this.launchProfileProtocolVersion = launchProfileProtocolVersion;
         return this;
@@ -47,6 +51,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchPurpose")
     public String launchPurpose;
+
     public LaunchProfileInitialization withLaunchPurpose(String launchPurpose) {
         this.launchPurpose = launchPurpose;
         return this;
@@ -55,6 +60,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LaunchProfileInitialization withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public LaunchProfilePlatformEnum platform;
+
     public LaunchProfileInitialization withPlatform(LaunchProfilePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -71,6 +78,7 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemInitializationScripts")
     public LaunchProfileInitializationScript[] systemInitializationScripts;
+
     public LaunchProfileInitialization withSystemInitializationScripts(LaunchProfileInitializationScript[] systemInitializationScripts) {
         this.systemInitializationScripts = systemInitializationScripts;
         return this;
@@ -79,9 +87,11 @@ public class LaunchProfileInitialization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInitializationScripts")
     public LaunchProfileInitializationScript[] userInitializationScripts;
+
     public LaunchProfileInitialization withUserInitializationScripts(LaunchProfileInitializationScript[] userInitializationScripts) {
         this.userInitializationScripts = userInitializationScripts;
         return this;
     }
     
+    public LaunchProfileInitialization(){}
 }

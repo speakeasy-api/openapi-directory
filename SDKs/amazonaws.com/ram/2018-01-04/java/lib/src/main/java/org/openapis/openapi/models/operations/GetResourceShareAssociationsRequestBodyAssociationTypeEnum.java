@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * GetResourceShareAssociationsRequestBodyAssociationTypeEnum - &lt;p&gt;Specifies whether you want to retrieve the associations that involve a specified resource or principal.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PRINCIPAL&lt;/code&gt; \u2013 list the principals that are associated with the specified resource share.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;RESOURCE&lt;/code&gt; \u2013 list the resources that are associated with the specified resource share.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * GetResourceShareAssociationsRequestBodyAssociationTypeEnum - &lt;p&gt;Specifies whether you want to retrieve the associations that involve a specified resource or principal.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PRINCIPAL&lt;/code&gt; \u2013 list the principals whose associations you want to see.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;RESOURCE&lt;/code&gt; \u2013 list the resources whose associations you want to see.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
  */
 public enum GetResourceShareAssociationsRequestBodyAssociationTypeEnum {
     PRINCIPAL("PRINCIPAL"),

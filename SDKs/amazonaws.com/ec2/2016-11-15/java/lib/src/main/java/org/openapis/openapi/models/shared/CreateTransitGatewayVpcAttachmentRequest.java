@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayVpcAttachmentRequest {
     
     public Boolean dryRun;
+
     public CreateTransitGatewayVpcAttachmentRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayVpcAttachmentRequest {
     
     
     public CreateTransitGatewayVpcAttachmentRequestOptions options;
+
     public CreateTransitGatewayVpcAttachmentRequest withOptions(CreateTransitGatewayVpcAttachmentRequestOptions options) {
         this.options = options;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayVpcAttachmentRequest {
     
     
     public String[] subnetIds;
+
     public CreateTransitGatewayVpcAttachmentRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -30,6 +33,7 @@ public class CreateTransitGatewayVpcAttachmentRequest {
     
     
     public TagSpecificationList[] tagSpecifications;
+
     public CreateTransitGatewayVpcAttachmentRequest withTagSpecifications(TagSpecificationList[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -37,6 +41,7 @@ public class CreateTransitGatewayVpcAttachmentRequest {
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayVpcAttachmentRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -44,9 +49,15 @@ public class CreateTransitGatewayVpcAttachmentRequest {
     
     
     public String vpcId;
+
     public CreateTransitGatewayVpcAttachmentRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateTransitGatewayVpcAttachmentRequest(@JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("TransitGatewayId") String transitGatewayId, @JsonProperty("VpcId") String vpcId) {
+        this.subnetIds = subnetIds;
+        this.transitGatewayId = transitGatewayId;
+        this.vpcId = vpcId;
+  }
 }

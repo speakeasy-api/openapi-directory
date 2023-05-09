@@ -15,6 +15,7 @@ public class MultiConditionalBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public SimpleCondition condition;
+
     public MultiConditionalBranch withCondition(SimpleCondition condition) {
         this.condition = condition;
         return this;
@@ -23,9 +24,11 @@ public class MultiConditionalBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public MultiConditionalBranch withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
     }
     
+    public MultiConditionalBranch(){}
 }

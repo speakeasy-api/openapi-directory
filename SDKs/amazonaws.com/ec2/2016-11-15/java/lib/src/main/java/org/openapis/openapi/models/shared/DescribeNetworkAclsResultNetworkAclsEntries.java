@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     public String cidrBlock;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     
     public Boolean egress;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     
     public DescribeNetworkAclsResultNetworkAclsEntriesIcmpTypeCode icmpTypeCode;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withIcmpTypeCode(DescribeNetworkAclsResultNetworkAclsEntriesIcmpTypeCode icmpTypeCode) {
         this.icmpTypeCode = icmpTypeCode;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     
     public String ipv6CidrBlock;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     
     public DescribeNetworkAclsResultNetworkAclsEntriesPortRange portRange;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withPortRange(DescribeNetworkAclsResultNetworkAclsEntriesPortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     
     public String protocol;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     
     public DescribeNetworkAclsResultNetworkAclsEntriesRuleActionEnum ruleAction;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withRuleAction(DescribeNetworkAclsResultNetworkAclsEntriesRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -61,9 +68,11 @@ public class DescribeNetworkAclsResultNetworkAclsEntries {
     
     
     public Long ruleNumber;
+
     public DescribeNetworkAclsResultNetworkAclsEntries withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public DescribeNetworkAclsResultNetworkAclsEntries(){}
 }

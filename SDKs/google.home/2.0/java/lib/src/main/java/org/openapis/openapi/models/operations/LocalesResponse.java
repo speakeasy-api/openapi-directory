@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LocalesResponse {
     
     public String contentType;
+
     public LocalesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LocalesResponse {
     
     
     public org.openapis.openapi.models.shared.Example15[] example15s;
+
     public LocalesResponse withExample15s(org.openapis.openapi.models.shared.Example15[] example15s) {
         this.example15s = example15s;
         return this;
@@ -23,6 +26,7 @@ public class LocalesResponse {
     
     
     public Integer statusCode;
+
     public LocalesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class LocalesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LocalesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LocalesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

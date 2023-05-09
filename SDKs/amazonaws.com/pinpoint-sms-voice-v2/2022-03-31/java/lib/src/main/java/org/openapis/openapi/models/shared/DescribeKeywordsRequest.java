@@ -12,6 +12,7 @@ public class DescribeKeywordsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public KeywordFilter[] filters;
+
     public DescribeKeywordsRequest withFilters(KeywordFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeKeywordsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keywords")
     public String[] keywords;
+
     public DescribeKeywordsRequest withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -28,6 +30,7 @@ public class DescribeKeywordsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeKeywordsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class DescribeKeywordsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeKeywordsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,9 +47,13 @@ public class DescribeKeywordsRequest {
     
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public DescribeKeywordsRequest withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
     }
     
+    public DescribeKeywordsRequest(@JsonProperty("OriginationIdentity") String originationIdentity) {
+        this.originationIdentity = originationIdentity;
+  }
 }

@@ -18,6 +18,7 @@ public class TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnCount")
     public String columnCount;
+
     public TableSpec withColumnCount(String columnCount) {
         this.columnCount = columnCount;
         return this;
@@ -29,6 +30,7 @@ public class TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public TableSpec withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfigs")
     public InputConfig[] inputConfigs;
+
     public TableSpec withInputConfigs(InputConfig[] inputConfigs) {
         this.inputConfigs = inputConfigs;
         return this;
@@ -51,6 +54,7 @@ public class TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TableSpec withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public String rowCount;
+
     public TableSpec withRowCount(String rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -73,6 +78,7 @@ public class TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeColumnSpecId")
     public String timeColumnSpecId;
+
     public TableSpec withTimeColumnSpecId(String timeColumnSpecId) {
         this.timeColumnSpecId = timeColumnSpecId;
         return this;
@@ -84,9 +90,11 @@ public class TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validRowCount")
     public String validRowCount;
+
     public TableSpec withValidRowCount(String validRowCount) {
         this.validRowCount = validRowCount;
         return this;
     }
     
+    public TableSpec(){}
 }

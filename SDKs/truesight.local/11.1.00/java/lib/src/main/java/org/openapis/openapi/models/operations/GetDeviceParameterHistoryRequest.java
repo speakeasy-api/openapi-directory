@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceParameterHistoryRequest {
@@ -12,6 +13,7 @@ public class GetDeviceParameterHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public Integer deviceId;
+
     public GetDeviceParameterHistoryRequest withDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,6 +24,7 @@ public class GetDeviceParameterHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Long from;
+
     public GetDeviceParameterHistoryRequest withFrom(Long from) {
         this.from = from;
         return this;
@@ -32,6 +35,7 @@ public class GetDeviceParameterHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorSid")
     public String monitorSid;
+
     public GetDeviceParameterHistoryRequest withMonitorSid(String monitorSid) {
         this.monitorSid = monitorSid;
         return this;
@@ -42,6 +46,7 @@ public class GetDeviceParameterHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorType")
     public String monitorType;
+
     public GetDeviceParameterHistoryRequest withMonitorType(String monitorType) {
         this.monitorType = monitorType;
         return this;
@@ -52,6 +57,7 @@ public class GetDeviceParameterHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameterName")
     public String parameterName;
+
     public GetDeviceParameterHistoryRequest withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -62,9 +68,15 @@ public class GetDeviceParameterHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public Long to;
+
     public GetDeviceParameterHistoryRequest withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public GetDeviceParameterHistoryRequest(@JsonProperty("deviceId") Integer deviceId, @JsonProperty("monitorType") String monitorType, @JsonProperty("parameterName") String parameterName) {
+        this.deviceId = deviceId;
+        this.monitorType = monitorType;
+        this.parameterName = parameterName;
+  }
 }

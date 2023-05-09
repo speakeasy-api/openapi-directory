@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEntitlementsResponse {
     
     public String contentType;
+
     public DescribeEntitlementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEntitlementsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEntitlementsResult describeEntitlementsResult;
+
     public DescribeEntitlementsResponse withDescribeEntitlementsResult(org.openapis.openapi.models.shared.DescribeEntitlementsResult describeEntitlementsResult) {
         this.describeEntitlementsResult = describeEntitlementsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEntitlementsResponse {
      */
     
     public Object entitlementNotFoundException;
+
     public DescribeEntitlementsResponse withEntitlementNotFoundException(Object entitlementNotFoundException) {
         this.entitlementNotFoundException = entitlementNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEntitlementsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeEntitlementsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeEntitlementsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEntitlementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeEntitlementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEntitlementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeEntitlementsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEntitlementsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeEntitlementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

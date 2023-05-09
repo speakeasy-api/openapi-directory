@@ -12,9 +12,11 @@ public class Android70 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public String[] devices;
+
     public Android70 withDevices(String[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public Android70(){}
 }

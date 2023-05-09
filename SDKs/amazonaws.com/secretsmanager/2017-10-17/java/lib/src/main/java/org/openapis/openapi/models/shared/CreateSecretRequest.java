@@ -12,6 +12,7 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddReplicaRegions")
     public ReplicaRegionType[] addReplicaRegions;
+
     public CreateSecretRequest withAddReplicaRegions(ReplicaRegionType[] addReplicaRegions) {
         this.addReplicaRegions = addReplicaRegions;
         return this;
@@ -20,6 +21,7 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateSecretRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -28,6 +30,7 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateSecretRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceOverwriteReplicaSecret")
     public Boolean forceOverwriteReplicaSecret;
+
     public CreateSecretRequest withForceOverwriteReplicaSecret(Boolean forceOverwriteReplicaSecret) {
         this.forceOverwriteReplicaSecret = forceOverwriteReplicaSecret;
         return this;
@@ -44,6 +48,7 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateSecretRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -51,6 +56,7 @@ public class CreateSecretRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateSecretRequest withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +65,7 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretBinary")
     public String secretBinary;
+
     public CreateSecretRequest withSecretBinary(String secretBinary) {
         this.secretBinary = secretBinary;
         return this;
@@ -67,6 +74,7 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretString")
     public String secretString;
+
     public CreateSecretRequest withSecretString(String secretString) {
         this.secretString = secretString;
         return this;
@@ -75,9 +83,13 @@ public class CreateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateSecretRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSecretRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

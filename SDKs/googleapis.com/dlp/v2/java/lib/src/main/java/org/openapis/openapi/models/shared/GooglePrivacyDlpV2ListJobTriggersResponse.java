@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ListJobTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTriggers")
     public GooglePrivacyDlpV2JobTrigger[] jobTriggers;
+
     public GooglePrivacyDlpV2ListJobTriggersResponse withJobTriggers(GooglePrivacyDlpV2JobTrigger[] jobTriggers) {
         this.jobTriggers = jobTriggers;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2ListJobTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GooglePrivacyDlpV2ListJobTriggersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GooglePrivacyDlpV2ListJobTriggersResponse(){}
 }

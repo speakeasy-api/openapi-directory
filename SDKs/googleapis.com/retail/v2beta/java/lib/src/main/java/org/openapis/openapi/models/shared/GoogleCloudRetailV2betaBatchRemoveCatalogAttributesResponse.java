@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedCatalogAttributes")
     public String[] deletedCatalogAttributes;
+
     public GoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse withDeletedCatalogAttributes(String[] deletedCatalogAttributes) {
         this.deletedCatalogAttributes = deletedCatalogAttributes;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetCatalogAttributes")
     public String[] resetCatalogAttributes;
+
     public GoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse withResetCatalogAttributes(String[] resetCatalogAttributes) {
         this.resetCatalogAttributes = resetCatalogAttributes;
         return this;
     }
     
+    public GoogleCloudRetailV2betaBatchRemoveCatalogAttributesResponse(){}
 }

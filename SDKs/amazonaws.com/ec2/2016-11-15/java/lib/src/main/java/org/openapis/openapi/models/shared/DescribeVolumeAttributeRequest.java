@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeVolumeAttributeRequest {
     
     public VolumeAttributeNameEnum attribute;
+
     public DescribeVolumeAttributeRequest withAttribute(VolumeAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVolumeAttributeRequest {
     
     
     public Boolean dryRun;
+
     public DescribeVolumeAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DescribeVolumeAttributeRequest {
     
     
     public String volumeId;
+
     public DescribeVolumeAttributeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public DescribeVolumeAttributeRequest(@JsonProperty("Attribute") VolumeAttributeNameEnum attribute, @JsonProperty("VolumeId") String volumeId) {
+        this.attribute = attribute;
+        this.volumeId = volumeId;
+  }
 }

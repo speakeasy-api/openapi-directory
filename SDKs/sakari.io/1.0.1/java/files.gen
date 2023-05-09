@@ -197,4 +197,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/EventTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountEventPayload.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageEventPayload.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/WebhooksUnsubscribeEventResponse.java
+docs/sdk/README.md
+docs/authentication/README.md
+docs/campaigns/README.md
+docs/contacts/README.md
+docs/conversations/README.md
+docs/messages/README.md
+docs/templates/README.md
+docs/tools/README.md
+docs/webhooks/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class CatalogQuickAmountsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amounts")
     public CatalogQuickAmount[] amounts;
+
     public CatalogQuickAmountsSettings withAmounts(CatalogQuickAmount[] amounts) {
         this.amounts = amounts;
         return this;
@@ -30,6 +31,7 @@ public class CatalogQuickAmountsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligible_for_auto_amounts")
     public Boolean eligibleForAutoAmounts;
+
     public CatalogQuickAmountsSettings withEligibleForAutoAmounts(Boolean eligibleForAutoAmounts) {
         this.eligibleForAutoAmounts = eligibleForAutoAmounts;
         return this;
@@ -40,9 +42,13 @@ public class CatalogQuickAmountsSettings {
      */
     @JsonProperty("option")
     public String option;
+
     public CatalogQuickAmountsSettings withOption(String option) {
         this.option = option;
         return this;
     }
     
+    public CatalogQuickAmountsSettings(@JsonProperty("option") String option) {
+        this.option = option;
+  }
 }

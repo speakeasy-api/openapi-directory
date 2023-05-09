@@ -18,6 +18,7 @@ public class Hook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public String[] actions;
+
     public Hook withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class Hook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_type")
     public HookEventTypeEnum eventType;
+
     public Hook withEventType(HookEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -40,6 +42,7 @@ public class Hook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signing_key")
     public String signingKey;
+
     public Hook withSigningKey(String signingKey) {
         this.signingKey = signingKey;
         return this;
@@ -51,6 +54,7 @@ public class Hook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public HookStatusEnum status;
+
     public Hook withStatus(HookStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +66,7 @@ public class Hook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_type")
     public String subscriberType;
+
     public Hook withSubscriberType(String subscriberType) {
         this.subscriberType = subscriberType;
         return this;
@@ -73,9 +78,11 @@ public class Hook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_url")
     public String subscriberUrl;
+
     public Hook withSubscriberUrl(String subscriberUrl) {
         this.subscriberUrl = subscriberUrl;
         return this;
     }
     
+    public Hook(){}
 }

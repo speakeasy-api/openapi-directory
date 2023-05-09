@@ -15,6 +15,7 @@ public class PacketMirroringMirroredResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public PacketMirroringMirroredResourceInfoInstanceInfo[] instances;
+
     public PacketMirroringMirroredResourceInfo withInstances(PacketMirroringMirroredResourceInfoInstanceInfo[] instances) {
         this.instances = instances;
         return this;
@@ -26,6 +27,7 @@ public class PacketMirroringMirroredResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworks")
     public PacketMirroringMirroredResourceInfoSubnetInfo[] subnetworks;
+
     public PacketMirroringMirroredResourceInfo withSubnetworks(PacketMirroringMirroredResourceInfoSubnetInfo[] subnetworks) {
         this.subnetworks = subnetworks;
         return this;
@@ -37,9 +39,11 @@ public class PacketMirroringMirroredResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public PacketMirroringMirroredResourceInfo withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PacketMirroringMirroredResourceInfo(){}
 }

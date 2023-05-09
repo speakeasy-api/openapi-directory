@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRe
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRe
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsRe
      */
     
     public org.openapis.openapi.models.shared.PaginatedPullrequestComments paginatedPullrequestComments;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse withPaginatedPullrequestComments(org.openapis.openapi.models.shared.PaginatedPullrequestComments paginatedPullrequestComments) {
         this.paginatedPullrequestComments = paginatedPullrequestComments;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

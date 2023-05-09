@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilesPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public FilesPatchRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class FilesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
     public String fileId;
+
     public FilesPatchRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
     
+    public FilesPatchRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("file_id") String fileId) {
+        this.requestBody = requestBody;
+        this.fileId = fileId;
+  }
 }

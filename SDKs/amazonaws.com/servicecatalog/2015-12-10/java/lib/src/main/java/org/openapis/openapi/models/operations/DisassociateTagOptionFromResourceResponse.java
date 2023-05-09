@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateTagOptionFromResourceResponse {
     
     public String contentType;
+
     public DisassociateTagOptionFromResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateTagOptionFromResourceResponse {
      */
     
     public java.util.Map<String, Object> disassociateTagOptionFromResourceOutput;
+
     public DisassociateTagOptionFromResourceResponse withDisassociateTagOptionFromResourceOutput(java.util.Map<String, Object> disassociateTagOptionFromResourceOutput) {
         this.disassociateTagOptionFromResourceOutput = disassociateTagOptionFromResourceOutput;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateTagOptionFromResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateTagOptionFromResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DisassociateTagOptionFromResourceResponse {
     
     
     public Integer statusCode;
+
     public DisassociateTagOptionFromResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DisassociateTagOptionFromResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateTagOptionFromResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DisassociateTagOptionFromResourceResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public DisassociateTagOptionFromResourceResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public DisassociateTagOptionFromResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

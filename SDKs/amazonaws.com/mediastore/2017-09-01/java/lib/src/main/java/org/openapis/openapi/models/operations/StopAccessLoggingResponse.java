@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopAccessLoggingResponse {
@@ -12,6 +13,7 @@ public class StopAccessLoggingResponse {
      */
     
     public Object containerInUseException;
+
     public StopAccessLoggingResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class StopAccessLoggingResponse {
      */
     
     public Object containerNotFoundException;
+
     public StopAccessLoggingResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StopAccessLoggingResponse {
     
     
     public String contentType;
+
     public StopAccessLoggingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StopAccessLoggingResponse {
      */
     
     public Object internalServerError;
+
     public StopAccessLoggingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class StopAccessLoggingResponse {
     
     
     public Integer statusCode;
+
     public StopAccessLoggingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopAccessLoggingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopAccessLoggingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopAccessLoggingResponse {
      */
     
     public java.util.Map<String, Object> stopAccessLoggingOutput;
+
     public StopAccessLoggingResponse withStopAccessLoggingOutput(java.util.Map<String, Object> stopAccessLoggingOutput) {
         this.stopAccessLoggingOutput = stopAccessLoggingOutput;
         return this;
     }
     
+    public StopAccessLoggingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

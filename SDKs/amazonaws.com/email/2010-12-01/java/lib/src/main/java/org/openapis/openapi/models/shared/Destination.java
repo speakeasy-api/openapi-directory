@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Destination {
     
     public String[] bccAddresses;
+
     public Destination withBccAddresses(String[] bccAddresses) {
         this.bccAddresses = bccAddresses;
         return this;
@@ -19,6 +20,7 @@ public class Destination {
     
     
     public String[] ccAddresses;
+
     public Destination withCcAddresses(String[] ccAddresses) {
         this.ccAddresses = ccAddresses;
         return this;
@@ -26,9 +28,11 @@ public class Destination {
     
     
     public String[] toAddresses;
+
     public Destination withToAddresses(String[] toAddresses) {
         this.toAddresses = toAddresses;
         return this;
     }
     
+    public Destination(){}
 }

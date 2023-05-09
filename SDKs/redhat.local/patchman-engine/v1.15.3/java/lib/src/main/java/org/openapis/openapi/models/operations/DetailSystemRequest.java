@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetailSystemRequest {
@@ -12,9 +13,13 @@ public class DetailSystemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
     public String inventoryId;
+
     public DetailSystemRequest withInventoryId(String inventoryId) {
         this.inventoryId = inventoryId;
         return this;
     }
     
+    public DetailSystemRequest(@JsonProperty("inventory_id") String inventoryId) {
+        this.inventoryId = inventoryId;
+  }
 }

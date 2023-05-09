@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsPathsRequestFilters {
     
     public String name;
+
     public DescribeNetworkInsightsPathsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInsightsPathsRequestFilters {
     
     
     public String[] values;
+
     public DescribeNetworkInsightsPathsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeNetworkInsightsPathsRequestFilters(){}
 }

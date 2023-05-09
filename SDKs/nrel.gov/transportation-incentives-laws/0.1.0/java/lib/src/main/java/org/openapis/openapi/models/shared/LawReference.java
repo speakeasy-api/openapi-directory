@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LawReference - The URL associated with any bill or legislative reference included in the description.
@@ -15,6 +15,7 @@ public class LawReference {
      */
     
     public String description;
+
     public LawReference withDescription(String description) {
         this.description = description;
         return this;
@@ -25,9 +26,14 @@ public class LawReference {
      */
     
     public String url;
+
     public LawReference withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LawReference(@JsonProperty("description") String description, @JsonProperty("url") String url) {
+        this.description = description;
+        this.url = url;
+  }
 }

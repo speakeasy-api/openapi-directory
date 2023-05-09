@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSpecProductTypeListOfWorkgroupResponse {
     
     public byte[] body;
+
     public GetSpecProductTypeListOfWorkgroupResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetSpecProductTypeListOfWorkgroupResponse {
     
     
     public String contentType;
+
     public GetSpecProductTypeListOfWorkgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSpecProductTypeListOfWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetSpecProductTypeListOfWorkgroupResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetSpecProductTypeListOfWorkgroupResponse {
     
     
     public Integer statusCode;
+
     public GetSpecProductTypeListOfWorkgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetSpecProductTypeListOfWorkgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSpecProductTypeListOfWorkgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetSpecProductTypeListOfWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkgroupAttributeListVO workgroupAttributeListVO;
+
     public GetSpecProductTypeListOfWorkgroupResponse withWorkgroupAttributeListVO(org.openapis.openapi.models.shared.WorkgroupAttributeListVO workgroupAttributeListVO) {
         this.workgroupAttributeListVO = workgroupAttributeListVO;
         return this;
     }
     
+    public GetSpecProductTypeListOfWorkgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

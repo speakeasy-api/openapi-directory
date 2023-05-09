@@ -18,6 +18,7 @@ public class BucketWebsite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainPageSuffix")
     public String mainPageSuffix;
+
     public BucketWebsite withMainPageSuffix(String mainPageSuffix) {
         this.mainPageSuffix = mainPageSuffix;
         return this;
@@ -29,9 +30,11 @@ public class BucketWebsite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notFoundPage")
     public String notFoundPage;
+
     public BucketWebsite withNotFoundPage(String notFoundPage) {
         this.notFoundPage = notFoundPage;
         return this;
     }
     
+    public BucketWebsite(){}
 }

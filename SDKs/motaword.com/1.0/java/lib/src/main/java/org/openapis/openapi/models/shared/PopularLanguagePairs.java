@@ -15,9 +15,11 @@ public class PopularLanguagePairs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pairs")
     public LanguagePair[] pairs;
+
     public PopularLanguagePairs withPairs(LanguagePair[] pairs) {
         this.pairs = pairs;
         return this;
     }
     
+    public PopularLanguagePairs(){}
 }

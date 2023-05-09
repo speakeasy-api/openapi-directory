@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ListReceiptFiltersResponse {
     
     public ReceiptFilter[] filters;
+
     public ListReceiptFiltersResponse withFilters(ReceiptFilter[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public ListReceiptFiltersResponse(){}
 }

@@ -63,13 +63,11 @@ public class Roles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClassificationsRolesResponse res = new org.openapis.openapi.models.operations.GetClassificationsRolesResponse() {{
+        org.openapis.openapi.models.operations.GetClassificationsRolesResponse res = new org.openapis.openapi.models.operations.GetClassificationsRolesResponse(contentType, httpRes.statusCode()) {{
             roles = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

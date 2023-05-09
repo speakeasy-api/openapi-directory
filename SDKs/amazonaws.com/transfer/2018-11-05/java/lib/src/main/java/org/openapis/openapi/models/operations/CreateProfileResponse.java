@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProfileResponse {
     
     public String contentType;
+
     public CreateProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProfileResponse createProfileResponse;
+
     public CreateProfileResponse withCreateProfileResponse(org.openapis.openapi.models.shared.CreateProfileResponse createProfileResponse) {
         this.createProfileResponse = createProfileResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateProfileResponse {
      */
     
     public Object internalServiceError;
+
     public CreateProfileResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class CreateProfileResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateProfileResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateProfileResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateProfileResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class CreateProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateProfileResponse {
      */
     
     public Object throttlingException;
+
     public CreateProfileResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

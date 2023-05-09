@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum SearchSearchRouteTypesEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3),
+    FOUR(4);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private SearchSearchRouteTypesEnum(String value) {
+    private SearchSearchRouteTypesEnum(Integer value) {
         this.value = value;
     }
 }

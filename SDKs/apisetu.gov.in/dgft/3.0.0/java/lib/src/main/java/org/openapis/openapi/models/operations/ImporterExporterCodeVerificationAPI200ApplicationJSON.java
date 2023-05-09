@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     @JsonProperty("addressLine1")
     public String addressLine1;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -24,6 +25,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("addressLine2")
     public String addressLine2;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -31,6 +33,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("branch")
     public ImporterExporterCodeVerificationAPI200ApplicationJSONBranch[] branch;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withBranch(ImporterExporterCodeVerificationAPI200ApplicationJSONBranch[] branch) {
         this.branch = branch;
         return this;
@@ -38,6 +41,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("city")
     public String city;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withCity(String city) {
         this.city = city;
         return this;
@@ -47,6 +51,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dataAsOn")
     public OffsetDateTime dataAsOn;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withDataAsOn(OffsetDateTime dataAsOn) {
         this.dataAsOn = dataAsOn;
         return this;
@@ -54,6 +59,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("directors")
     public ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors[] directors;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withDirectors(ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors[] directors) {
         this.directors = directors;
         return this;
@@ -61,6 +67,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("entityName")
     public String entityName;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -68,6 +75,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("exporterType")
     public String exporterType;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withExporterType(String exporterType) {
         this.exporterType = exporterType;
         return this;
@@ -75,6 +83,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("iec")
     public String iec;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withIec(String iec) {
         this.iec = iec;
         return this;
@@ -82,6 +91,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("iecIssueDate")
     public String iecIssueDate;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withIecIssueDate(String iecIssueDate) {
         this.iecIssueDate = iecIssueDate;
         return this;
@@ -89,6 +99,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("iecModificationDate")
     public String iecModificationDate;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withIecModificationDate(String iecModificationDate) {
         this.iecModificationDate = iecModificationDate;
         return this;
@@ -96,6 +107,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("iecStatus")
     public String iecStatus;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withIecStatus(String iecStatus) {
         this.iecStatus = iecStatus;
         return this;
@@ -103,6 +115,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("natureOfConcern")
     public String natureOfConcern;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withNatureOfConcern(String natureOfConcern) {
         this.natureOfConcern = natureOfConcern;
         return this;
@@ -110,6 +123,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("pan")
     public String pan;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withPan(String pan) {
         this.pan = pan;
         return this;
@@ -117,6 +131,7 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("pin")
     public String pin;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withPin(String pin) {
         this.pin = pin;
         return this;
@@ -124,9 +139,28 @@ public class ImporterExporterCodeVerificationAPI200ApplicationJSON {
     
     @JsonProperty("state")
     public String state;
+
     public ImporterExporterCodeVerificationAPI200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ImporterExporterCodeVerificationAPI200ApplicationJSON(@JsonProperty("addressLine1") String addressLine1, @JsonProperty("addressLine2") String addressLine2, @JsonProperty("branch") ImporterExporterCodeVerificationAPI200ApplicationJSONBranch[] branch, @JsonProperty("city") String city, @JsonProperty("dataAsOn") OffsetDateTime dataAsOn, @JsonProperty("directors") ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors[] directors, @JsonProperty("entityName") String entityName, @JsonProperty("exporterType") String exporterType, @JsonProperty("iec") String iec, @JsonProperty("iecIssueDate") String iecIssueDate, @JsonProperty("iecModificationDate") String iecModificationDate, @JsonProperty("iecStatus") String iecStatus, @JsonProperty("natureOfConcern") String natureOfConcern, @JsonProperty("pan") String pan, @JsonProperty("pin") String pin, @JsonProperty("state") String state) {
+        this.addressLine1 = addressLine1;
+        this.addressLine2 = addressLine2;
+        this.branch = branch;
+        this.city = city;
+        this.dataAsOn = dataAsOn;
+        this.directors = directors;
+        this.entityName = entityName;
+        this.exporterType = exporterType;
+        this.iec = iec;
+        this.iecIssueDate = iecIssueDate;
+        this.iecModificationDate = iecModificationDate;
+        this.iecStatus = iecStatus;
+        this.natureOfConcern = natureOfConcern;
+        this.pan = pan;
+        this.pin = pin;
+        this.state = state;
+  }
 }

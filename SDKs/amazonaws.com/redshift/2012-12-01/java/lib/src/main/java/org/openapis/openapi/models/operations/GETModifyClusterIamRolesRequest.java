@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterIamRolesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyClusterIamRolesActionEnum action;
+
     public GETModifyClusterIamRolesRequest withAction(GETModifyClusterIamRolesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyClusterIamRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddIamRoles")
     public String[] addIamRoles;
+
     public GETModifyClusterIamRolesRequest withAddIamRoles(String[] addIamRoles) {
         this.addIamRoles = addIamRoles;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyClusterIamRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETModifyClusterIamRolesRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyClusterIamRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultIamRoleArn")
     public String defaultIamRoleArn;
+
     public GETModifyClusterIamRolesRequest withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyClusterIamRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveIamRoles")
     public String[] removeIamRoles;
+
     public GETModifyClusterIamRolesRequest withRemoveIamRoles(String[] removeIamRoles) {
         this.removeIamRoles = removeIamRoles;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyClusterIamRolesVersionEnum version;
+
     public GETModifyClusterIamRolesRequest withVersion(GETModifyClusterIamRolesVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyClusterIamRolesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyClusterIamRolesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyClusterIamRolesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyClusterIamRolesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyClusterIamRolesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyClusterIamRolesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETModifyClusterIamRolesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyClusterIamRolesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyClusterIamRolesRequest(@JsonProperty("Action") GETModifyClusterIamRolesActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETModifyClusterIamRolesVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachPolicyResponse {
@@ -12,6 +13,7 @@ public class AttachPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachPolicyResponse {
      */
     
     public java.util.Map<String, Object> attachPolicyResponse;
+
     public AttachPolicyResponse withAttachPolicyResponse(java.util.Map<String, Object> attachPolicyResponse) {
         this.attachPolicyResponse = attachPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class AttachPolicyResponse {
     
     
     public String contentType;
+
     public AttachPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AttachPolicyResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public AttachPolicyResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class AttachPolicyResponse {
      */
     
     public Object internalServiceException;
+
     public AttachPolicyResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class AttachPolicyResponse {
      */
     
     public Object invalidArnException;
+
     public AttachPolicyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class AttachPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public AttachPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class AttachPolicyResponse {
      */
     
     public Object notPolicyException;
+
     public AttachPolicyResponse withNotPolicyException(Object notPolicyException) {
         this.notPolicyException = notPolicyException;
         return this;
@@ -86,6 +95,7 @@ public class AttachPolicyResponse {
     
     
     public Integer statusCode;
+
     public AttachPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AttachPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class AttachPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class AttachPolicyResponse {
      */
     
     public Object retryableConflictException;
+
     public AttachPolicyResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class AttachPolicyResponse {
      */
     
     public Object validationException;
+
     public AttachPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

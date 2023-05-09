@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostConfigAemHealthCheckServletRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundles.ignored")
     public String[] bundlesIgnored;
+
     public PostConfigAemHealthCheckServletRequest withBundlesIgnored(String[] bundlesIgnored) {
         this.bundlesIgnored = bundlesIgnored;
         return this;
@@ -16,9 +17,11 @@ public class PostConfigAemHealthCheckServletRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundles.ignored@TypeHint")
     public String bundlesIgnoredAtTypeHint;
+
     public PostConfigAemHealthCheckServletRequest withBundlesIgnoredAtTypeHint(String bundlesIgnoredAtTypeHint) {
         this.bundlesIgnoredAtTypeHint = bundlesIgnoredAtTypeHint;
         return this;
     }
     
+    public PostConfigAemHealthCheckServletRequest(){}
 }

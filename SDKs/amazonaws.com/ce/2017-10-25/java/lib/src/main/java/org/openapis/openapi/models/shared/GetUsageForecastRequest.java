@@ -12,6 +12,7 @@ public class GetUsageForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetUsageForecastRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class GetUsageForecastRequest {
     
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetUsageForecastRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -26,6 +28,7 @@ public class GetUsageForecastRequest {
     
     @JsonProperty("Metric")
     public MetricEnum metric;
+
     public GetUsageForecastRequest withMetric(MetricEnum metric) {
         this.metric = metric;
         return this;
@@ -34,6 +37,7 @@ public class GetUsageForecastRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictionIntervalLevel")
     public Long predictionIntervalLevel;
+
     public GetUsageForecastRequest withPredictionIntervalLevel(Long predictionIntervalLevel) {
         this.predictionIntervalLevel = predictionIntervalLevel;
         return this;
@@ -41,9 +45,15 @@ public class GetUsageForecastRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetUsageForecastRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetUsageForecastRequest(@JsonProperty("Granularity") GranularityEnum granularity, @JsonProperty("Metric") MetricEnum metric, @JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.granularity = granularity;
+        this.metric = metric;
+        this.timePeriod = timePeriod;
+  }
 }

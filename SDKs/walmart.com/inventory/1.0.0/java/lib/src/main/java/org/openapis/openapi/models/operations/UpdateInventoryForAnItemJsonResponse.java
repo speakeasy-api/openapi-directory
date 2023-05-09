@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInventoryForAnItemJsonResponse {
     
     public byte[] body;
+
     public UpdateInventoryForAnItemJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class UpdateInventoryForAnItemJsonResponse {
     
     
     public String contentType;
+
     public UpdateInventoryForAnItemJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class UpdateInventoryForAnItemJsonResponse {
     
     
     public Integer statusCode;
+
     public UpdateInventoryForAnItemJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UpdateInventoryForAnItemJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInventoryForAnItemJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class UpdateInventoryForAnItemJsonResponse {
      */
     
     public UpdateInventoryForAnItemJSON200ApplicationJSON updateInventoryForAnItemJSON200ApplicationJSONObject;
+
     public UpdateInventoryForAnItemJsonResponse withUpdateInventoryForAnItemJSON200ApplicationJSONObject(UpdateInventoryForAnItemJSON200ApplicationJSON updateInventoryForAnItemJSON200ApplicationJSONObject) {
         this.updateInventoryForAnItemJSON200ApplicationJSONObject = updateInventoryForAnItemJSON200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateInventoryForAnItemJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class DoubleRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Double max;
+
     public DoubleRange withMax(Double max) {
         this.max = max;
         return this;
@@ -29,9 +30,11 @@ public class DoubleRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Double min;
+
     public DoubleRange withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public DoubleRange(){}
 }

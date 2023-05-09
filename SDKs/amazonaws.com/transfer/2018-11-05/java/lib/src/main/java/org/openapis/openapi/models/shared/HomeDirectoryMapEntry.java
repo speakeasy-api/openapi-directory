@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HomeDirectoryMapEntry {
     @JsonProperty("Entry")
     public String entry;
+
     public HomeDirectoryMapEntry withEntry(String entry) {
         this.entry = entry;
         return this;
@@ -19,9 +20,14 @@ public class HomeDirectoryMapEntry {
     
     @JsonProperty("Target")
     public String target;
+
     public HomeDirectoryMapEntry withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public HomeDirectoryMapEntry(@JsonProperty("Entry") String entry, @JsonProperty("Target") String target) {
+        this.entry = entry;
+        this.target = target;
+  }
 }

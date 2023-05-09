@@ -18,9 +18,11 @@ public class EditDomainWillRenewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("will_renew")
     public Boolean willRenew;
+
     public EditDomainWillRenewRequest withWillRenew(Boolean willRenew) {
         this.willRenew = willRenew;
         return this;
     }
     
+    public EditDomainWillRenewRequest(){}
 }

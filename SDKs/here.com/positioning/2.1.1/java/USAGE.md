@@ -3,8 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetApiVersionResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,11 +17,13 @@ public class Application {
 
             GetApiVersionResponse res = sdk.apiInformation.getApiVersion();
 
-            if (res.apiVersion.isPresent()) {
+            if (res.apiVersion != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

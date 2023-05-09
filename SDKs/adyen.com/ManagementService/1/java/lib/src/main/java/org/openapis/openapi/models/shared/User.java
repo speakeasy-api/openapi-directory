@@ -15,6 +15,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public User withLinks(Links links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroups")
     public String[] accountGroups;
+
     public User withAccountGroups(String[] accountGroups) {
         this.accountGroups = accountGroups;
         return this;
@@ -37,8 +39,21 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public User withActive(Boolean active) {
         this.active = active;
+        return this;
+    }
+    
+    /**
+     * Set of authn apps available to this user
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authnApps")
+    public String[] authnApps;
+
+    public User withAuthnApps(String[] authnApps) {
+        this.authnApps = authnApps;
         return this;
     }
     
@@ -47,6 +62,7 @@ public class User {
      */
     @JsonProperty("email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -57,6 +73,7 @@ public class User {
      */
     @JsonProperty("id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +82,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name name;
+
     public User withName(Name name) {
         this.name = name;
         return this;
@@ -75,6 +93,7 @@ public class User {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public User withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -85,6 +104,7 @@ public class User {
      */
     @JsonProperty("timeZoneCode")
     public String timeZoneCode;
+
     public User withTimeZoneCode(String timeZoneCode) {
         this.timeZoneCode = timeZoneCode;
         return this;
@@ -95,9 +115,17 @@ public class User {
      */
     @JsonProperty("username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public User(@JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("roles") String[] roles, @JsonProperty("timeZoneCode") String timeZoneCode, @JsonProperty("username") String username) {
+        this.email = email;
+        this.id = id;
+        this.roles = roles;
+        this.timeZoneCode = timeZoneCode;
+        this.username = username;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudAdvisorynotificationsV1CsvCsvRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public String[] entries;
+
     public GoogleCloudAdvisorynotificationsV1CsvCsvRow withEntries(String[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1CsvCsvRow(){}
 }

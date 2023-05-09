@@ -57,10 +57,8 @@ public class TypeTypeCensusAcs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeCensusAcsResponse res = new org.openapis.openapi.models.operations.SearchTypeCensusAcsResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeCensusAcsResponse res = new org.openapis.openapi.models.operations.SearchTypeCensusAcsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

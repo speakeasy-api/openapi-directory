@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryTagApiSpecRevisionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TagApiSpecRevisionRequest tagApiSpecRevisionRequest;
+
     public RegistryTagApiSpecRevisionRequest withTagApiSpecRevisionRequest(org.openapis.openapi.models.shared.TagApiSpecRevisionRequest tagApiSpecRevisionRequest) {
         this.tagApiSpecRevisionRequest = tagApiSpecRevisionRequest;
         return this;
@@ -19,6 +21,7 @@ public class RegistryTagApiSpecRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryTagApiSpecRevisionRequest withApi(String api) {
         this.api = api;
         return this;
@@ -29,6 +32,7 @@ public class RegistryTagApiSpecRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryTagApiSpecRevisionRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -39,6 +43,7 @@ public class RegistryTagApiSpecRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryTagApiSpecRevisionRequest withProject(String project) {
         this.project = project;
         return this;
@@ -49,6 +54,7 @@ public class RegistryTagApiSpecRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
     public String spec;
+
     public RegistryTagApiSpecRevisionRequest withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -59,9 +65,18 @@ public class RegistryTagApiSpecRevisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public RegistryTagApiSpecRevisionRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RegistryTagApiSpecRevisionRequest(@JsonProperty("TagApiSpecRevisionRequest") org.openapis.openapi.models.shared.TagApiSpecRevisionRequest tagApiSpecRevisionRequest, @JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project, @JsonProperty("spec") String spec, @JsonProperty("version") String version) {
+        this.tagApiSpecRevisionRequest = tagApiSpecRevisionRequest;
+        this.api = api;
+        this.location = location;
+        this.project = project;
+        this.spec = spec;
+        this.version = version;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopStreamEncryptionInput {
     @JsonProperty("EncryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public StopStreamEncryptionInput withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -18,6 +19,7 @@ public class StopStreamEncryptionInput {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public StopStreamEncryptionInput withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -26,6 +28,7 @@ public class StopStreamEncryptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public StopStreamEncryptionInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -34,9 +37,14 @@ public class StopStreamEncryptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public StopStreamEncryptionInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public StopStreamEncryptionInput(@JsonProperty("EncryptionType") EncryptionTypeEnum encryptionType, @JsonProperty("KeyId") String keyId) {
+        this.encryptionType = encryptionType;
+        this.keyId = keyId;
+  }
 }

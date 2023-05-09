@@ -22,6 +22,7 @@ public class ProtocolsListData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ProtocolsListData withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -32,6 +33,7 @@ public class ProtocolsListData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public ProtocolsListData withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -40,6 +42,7 @@ public class ProtocolsListData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListId")
     public String listId;
+
     public ProtocolsListData withListId(String listId) {
         this.listId = listId;
         return this;
@@ -47,6 +50,7 @@ public class ProtocolsListData {
     
     @JsonProperty("ListName")
     public String listName;
+
     public ProtocolsListData withListName(String listName) {
         this.listName = listName;
         return this;
@@ -55,6 +59,7 @@ public class ProtocolsListData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListUpdateToken")
     public String listUpdateToken;
+
     public ProtocolsListData withListUpdateToken(String listUpdateToken) {
         this.listUpdateToken = listUpdateToken;
         return this;
@@ -63,6 +68,7 @@ public class ProtocolsListData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreviousProtocolsList")
     public java.util.Map<String, String[]> previousProtocolsList;
+
     public ProtocolsListData withPreviousProtocolsList(java.util.Map<String, String[]> previousProtocolsList) {
         this.previousProtocolsList = previousProtocolsList;
         return this;
@@ -70,9 +76,14 @@ public class ProtocolsListData {
     
     @JsonProperty("ProtocolsList")
     public String[] protocolsList;
+
     public ProtocolsListData withProtocolsList(String[] protocolsList) {
         this.protocolsList = protocolsList;
         return this;
     }
     
+    public ProtocolsListData(@JsonProperty("ListName") String listName, @JsonProperty("ProtocolsList") String[] protocolsList) {
+        this.listName = listName;
+        this.protocolsList = protocolsList;
+  }
 }

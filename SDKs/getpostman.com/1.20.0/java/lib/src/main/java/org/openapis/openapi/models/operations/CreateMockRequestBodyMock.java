@@ -12,6 +12,7 @@ public class CreateMockRequestBodyMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public CreateMockRequestBodyMock withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -20,9 +21,11 @@ public class CreateMockRequestBodyMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public CreateMockRequestBodyMock withEnvironment(String environment) {
         this.environment = environment;
         return this;
     }
     
+    public CreateMockRequestBodyMock(){}
 }

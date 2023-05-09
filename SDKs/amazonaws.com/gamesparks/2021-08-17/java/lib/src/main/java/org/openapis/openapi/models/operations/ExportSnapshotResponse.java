@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportSnapshotResponse {
@@ -12,6 +13,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExportSnapshotResponse {
     
     
     public String contentType;
+
     public ExportSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportSnapshotResult exportSnapshotResult;
+
     public ExportSnapshotResponse withExportSnapshotResult(org.openapis.openapi.models.shared.ExportSnapshotResult exportSnapshotResult) {
         this.exportSnapshotResult = exportSnapshotResult;
         return this;
@@ -39,6 +43,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public ExportSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ExportSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ExportSnapshotResponse {
     
     
     public Integer statusCode;
+
     public ExportSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ExportSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ExportSnapshotResponse {
      */
     
     public Object throttlingException;
+
     public ExportSnapshotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ExportSnapshotResponse {
      */
     
     public Object validationException;
+
     public ExportSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ExportSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

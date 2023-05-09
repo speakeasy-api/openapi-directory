@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMonitorRequest {
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public DeleteMonitorRequest withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
     }
     
+    public DeleteMonitorRequest(@JsonProperty("MonitorArn") String monitorArn) {
+        this.monitorArn = monitorArn;
+  }
 }

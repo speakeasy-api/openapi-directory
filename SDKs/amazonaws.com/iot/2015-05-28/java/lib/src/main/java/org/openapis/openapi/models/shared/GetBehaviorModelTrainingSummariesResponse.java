@@ -15,6 +15,7 @@ public class GetBehaviorModelTrainingSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetBehaviorModelTrainingSummariesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetBehaviorModelTrainingSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaries")
     public BehaviorModelTrainingSummary[] summaries;
+
     public GetBehaviorModelTrainingSummariesResponse withSummaries(BehaviorModelTrainingSummary[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public GetBehaviorModelTrainingSummariesResponse(){}
 }

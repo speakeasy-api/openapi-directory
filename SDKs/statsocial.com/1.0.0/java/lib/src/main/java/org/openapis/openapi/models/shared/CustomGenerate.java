@@ -15,6 +15,7 @@ public class CustomGenerate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CustomGenerateResponse data;
+
     public CustomGenerate withData(CustomGenerateResponse data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class CustomGenerate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public CustomGenerate withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class CustomGenerate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public CustomGenerate withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public CustomGenerate(){}
 }

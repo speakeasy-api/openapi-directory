@@ -12,9 +12,13 @@ public class DeleteNotificationConfigurationRequest {
      */
     @JsonProperty("notificationIds")
     public Long[] notificationIds;
+
     public DeleteNotificationConfigurationRequest withNotificationIds(Long[] notificationIds) {
         this.notificationIds = notificationIds;
         return this;
     }
     
+    public DeleteNotificationConfigurationRequest(@JsonProperty("notificationIds") Long[] notificationIds) {
+        this.notificationIds = notificationIds;
+  }
 }

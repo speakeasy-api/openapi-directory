@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPullRequestResponse {
     
     public String contentType;
+
     public GetPullRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPullRequestResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetPullRequestResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class GetPullRequestResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetPullRequestResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class GetPullRequestResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetPullRequestResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class GetPullRequestResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetPullRequestResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetPullRequestResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetPullRequestResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class GetPullRequestResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPullRequestOutput getPullRequestOutput;
+
     public GetPullRequestResponse withGetPullRequestOutput(org.openapis.openapi.models.shared.GetPullRequestOutput getPullRequestOutput) {
         this.getPullRequestOutput = getPullRequestOutput;
         return this;
@@ -79,6 +87,7 @@ public class GetPullRequestResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public GetPullRequestResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -89,6 +98,7 @@ public class GetPullRequestResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public GetPullRequestResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -99,6 +109,7 @@ public class GetPullRequestResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public GetPullRequestResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -106,6 +117,7 @@ public class GetPullRequestResponse {
     
     
     public Integer statusCode;
+
     public GetPullRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class GetPullRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPullRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPullRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

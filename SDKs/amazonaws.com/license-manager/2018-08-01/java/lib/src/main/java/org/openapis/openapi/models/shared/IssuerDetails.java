@@ -15,6 +15,7 @@ public class IssuerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyFingerprint")
     public String keyFingerprint;
+
     public IssuerDetails withKeyFingerprint(String keyFingerprint) {
         this.keyFingerprint = keyFingerprint;
         return this;
@@ -23,6 +24,7 @@ public class IssuerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public IssuerDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class IssuerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SignKey")
     public String signKey;
+
     public IssuerDetails withSignKey(String signKey) {
         this.signKey = signKey;
         return this;
     }
     
+    public IssuerDetails(){}
 }

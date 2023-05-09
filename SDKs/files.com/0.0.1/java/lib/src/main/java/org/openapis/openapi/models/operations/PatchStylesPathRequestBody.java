@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchStylesPathRequestBody {
@@ -12,9 +13,13 @@ public class PatchStylesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PatchStylesPathRequestBodyFile file;
+
     public PatchStylesPathRequestBody withFile(PatchStylesPathRequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public PatchStylesPathRequestBody(@JsonProperty("file") PatchStylesPathRequestBodyFile file) {
+        this.file = file;
+  }
 }

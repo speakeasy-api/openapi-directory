@@ -3,12 +3,11 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteSecurityOption1;
-import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteSecurityOption2;
-import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteSecurity;
 import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteRequest;
 import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteResponse;
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteSecurity;
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteSecurityOption1;
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -17,10 +16,8 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            StorageBucketAccessControlsDeleteRequest req = new StorageBucketAccessControlsDeleteRequest() {{
-                alt = "json";
-                bucket = "corrupti";
-                entity = "provident";
+            StorageBucketAccessControlsDeleteRequest req = new StorageBucketAccessControlsDeleteRequest("corrupti", "provident") {{
+                alt = AltEnum.JSON;
                 fields = "distinctio";
                 key = "quibusdam";
                 oauthToken = "unde";
@@ -29,10 +26,10 @@ public class Application {
                 uploadType = "corrupti";
                 userIp = "illum";
                 userProject = "vel";
-            }}            
+            }};            
 
             StorageBucketAccessControlsDeleteResponse res = sdk.bucketAccessControls.storageBucketAccessControlsDelete(req, new StorageBucketAccessControlsDeleteSecurity() {{
-                option1 = new StorageBucketAccessControlsDeleteSecurityOption1() {{
+                option1 = new StorageBucketAccessControlsDeleteSecurityOption1("error", "deserunt") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
@@ -44,5 +41,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

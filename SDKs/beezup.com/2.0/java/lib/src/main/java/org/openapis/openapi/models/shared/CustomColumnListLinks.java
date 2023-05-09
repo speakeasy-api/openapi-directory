@@ -12,6 +12,7 @@ public class CustomColumnListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add")
     public LinksCatalogSaveCustomColumnLink add;
+
     public CustomColumnListLinks withAdd(LinksCatalogSaveCustomColumnLink add) {
         this.add = add;
         return this;
@@ -19,9 +20,13 @@ public class CustomColumnListLinks {
     
     @JsonProperty("self")
     public LinksCatalogGetCustomColumnsLink self;
+
     public CustomColumnListLinks withSelf(LinksCatalogGetCustomColumnsLink self) {
         this.self = self;
         return this;
     }
     
+    public CustomColumnListLinks(@JsonProperty("self") LinksCatalogGetCustomColumnsLink self) {
+        this.self = self;
+  }
 }

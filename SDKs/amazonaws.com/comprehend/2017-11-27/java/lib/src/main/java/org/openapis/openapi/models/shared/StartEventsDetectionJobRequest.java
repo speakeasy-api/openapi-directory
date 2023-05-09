@@ -12,6 +12,7 @@ public class StartEventsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartEventsDetectionJobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartEventsDetectionJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartEventsDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartEventsDetectionJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartEventsDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -34,6 +37,7 @@ public class StartEventsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartEventsDetectionJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -41,6 +45,7 @@ public class StartEventsDetectionJobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartEventsDetectionJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -48,6 +53,7 @@ public class StartEventsDetectionJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartEventsDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -56,6 +62,7 @@ public class StartEventsDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartEventsDetectionJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -63,9 +70,17 @@ public class StartEventsDetectionJobRequest {
     
     @JsonProperty("TargetEventTypes")
     public String[] targetEventTypes;
+
     public StartEventsDetectionJobRequest withTargetEventTypes(String[] targetEventTypes) {
         this.targetEventTypes = targetEventTypes;
         return this;
     }
     
+    public StartEventsDetectionJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig, @JsonProperty("TargetEventTypes") String[] targetEventTypes) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.outputDataConfig = outputDataConfig;
+        this.targetEventTypes = targetEventTypes;
+  }
 }

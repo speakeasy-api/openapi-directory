@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class SSHPublicKeyMetadata {
     
     public String sshPublicKeyId;
+
     public SSHPublicKeyMetadata withSSHPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -19,6 +21,7 @@ public class SSHPublicKeyMetadata {
     
     
     public StatusTypeEnum status;
+
     public SSHPublicKeyMetadata withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -26,6 +29,7 @@ public class SSHPublicKeyMetadata {
     
     
     public OffsetDateTime uploadDate;
+
     public SSHPublicKeyMetadata withUploadDate(OffsetDateTime uploadDate) {
         this.uploadDate = uploadDate;
         return this;
@@ -33,9 +37,16 @@ public class SSHPublicKeyMetadata {
     
     
     public String userName;
+
     public SSHPublicKeyMetadata withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public SSHPublicKeyMetadata(@JsonProperty("SSHPublicKeyId") String sshPublicKeyId, @JsonProperty("Status") StatusTypeEnum status, @JsonProperty("UploadDate") OffsetDateTime uploadDate, @JsonProperty("UserName") String userName) {
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.status = status;
+        this.uploadDate = uploadDate;
+        this.userName = userName;
+  }
 }

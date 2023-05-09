@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTrustStoreCertificatesResponse {
@@ -12,6 +13,7 @@ public class ListTrustStoreCertificatesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTrustStoreCertificatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTrustStoreCertificatesResponse {
     
     
     public String contentType;
+
     public ListTrustStoreCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTrustStoreCertificatesResponse {
      */
     
     public Object internalServerException;
+
     public ListTrustStoreCertificatesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTrustStoreCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTrustStoreCertificatesResponse listTrustStoreCertificatesResponse;
+
     public ListTrustStoreCertificatesResponse withListTrustStoreCertificatesResponse(org.openapis.openapi.models.shared.ListTrustStoreCertificatesResponse listTrustStoreCertificatesResponse) {
         this.listTrustStoreCertificatesResponse = listTrustStoreCertificatesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListTrustStoreCertificatesResponse {
     
     
     public Integer statusCode;
+
     public ListTrustStoreCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTrustStoreCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTrustStoreCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTrustStoreCertificatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTrustStoreCertificatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListTrustStoreCertificatesResponse {
      */
     
     public Object throttlingException;
+
     public ListTrustStoreCertificatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListTrustStoreCertificatesResponse {
      */
     
     public Object validationException;
+
     public ListTrustStoreCertificatesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTrustStoreCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class NAWelcomeHome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cameras")
     public NAWelcomeCamera[] cameras;
+
     public NAWelcomeHome withCameras(NAWelcomeCamera[] cameras) {
         this.cameras = cameras;
         return this;
@@ -20,6 +21,7 @@ public class NAWelcomeHome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public NAWelcomeEvent[] events;
+
     public NAWelcomeHome withEvents(NAWelcomeEvent[] events) {
         this.events = events;
         return this;
@@ -31,6 +33,7 @@ public class NAWelcomeHome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NAWelcomeHome withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class NAWelcomeHome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public NAWelcomeModule[] modules;
+
     public NAWelcomeHome withModules(NAWelcomeModule[] modules) {
         this.modules = modules;
         return this;
@@ -50,6 +54,7 @@ public class NAWelcomeHome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NAWelcomeHome withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +63,7 @@ public class NAWelcomeHome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persons")
     public NAWelcomePerson[] persons;
+
     public NAWelcomeHome withPersons(NAWelcomePerson[] persons) {
         this.persons = persons;
         return this;
@@ -66,9 +72,11 @@ public class NAWelcomeHome {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public NAWelcomePlace place;
+
     public NAWelcomeHome withPlace(NAWelcomePlace place) {
         this.place = place;
         return this;
     }
     
+    public NAWelcomeHome(){}
 }

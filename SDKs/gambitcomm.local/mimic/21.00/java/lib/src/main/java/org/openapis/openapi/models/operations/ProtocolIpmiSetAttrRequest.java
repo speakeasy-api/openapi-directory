@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolIpmiSetAttrRequest {
@@ -12,6 +13,7 @@ public class ProtocolIpmiSetAttrRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolIpmiSetAttrRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolIpmiSetAttrRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
     public String attr;
+
     public ProtocolIpmiSetAttrRequest withAttr(String attr) {
         this.attr = attr;
         return this;
@@ -29,9 +32,15 @@ public class ProtocolIpmiSetAttrRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
     public String value;
+
     public ProtocolIpmiSetAttrRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProtocolIpmiSetAttrRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("attr") String attr, @JsonProperty("value") String value) {
+        this.agentNum = agentNum;
+        this.attr = attr;
+        this.value = value;
+  }
 }

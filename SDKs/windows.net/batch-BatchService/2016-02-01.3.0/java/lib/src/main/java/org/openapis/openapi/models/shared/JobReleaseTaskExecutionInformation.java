@@ -25,6 +25,7 @@ public class JobReleaseTaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public JobReleaseTaskExecutionInformation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -36,6 +37,7 @@ public class JobReleaseTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public JobReleaseTaskExecutionInformation withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -47,6 +49,7 @@ public class JobReleaseTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingError")
     public TaskSchedulingError schedulingError;
+
     public JobReleaseTaskExecutionInformation withSchedulingError(TaskSchedulingError schedulingError) {
         this.schedulingError = schedulingError;
         return this;
@@ -59,6 +62,7 @@ public class JobReleaseTaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public JobReleaseTaskExecutionInformation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -69,6 +73,7 @@ public class JobReleaseTaskExecutionInformation {
      */
     @JsonProperty("state")
     public JobReleaseTaskExecutionInformationStateEnum state;
+
     public JobReleaseTaskExecutionInformation withState(JobReleaseTaskExecutionInformationStateEnum state) {
         this.state = state;
         return this;
@@ -80,6 +85,7 @@ public class JobReleaseTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRootDirectory")
     public String taskRootDirectory;
+
     public JobReleaseTaskExecutionInformation withTaskRootDirectory(String taskRootDirectory) {
         this.taskRootDirectory = taskRootDirectory;
         return this;
@@ -91,9 +97,14 @@ public class JobReleaseTaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskRootDirectoryUrl")
     public String taskRootDirectoryUrl;
+
     public JobReleaseTaskExecutionInformation withTaskRootDirectoryUrl(String taskRootDirectoryUrl) {
         this.taskRootDirectoryUrl = taskRootDirectoryUrl;
         return this;
     }
     
+    public JobReleaseTaskExecutionInformation(@JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("state") JobReleaseTaskExecutionInformationStateEnum state) {
+        this.startTime = startTime;
+        this.state = state;
+  }
 }

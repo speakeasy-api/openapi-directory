@@ -20,6 +20,7 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlId")
     public String crawlId;
+
     public CrawlerHistory withCrawlId(String crawlId) {
         this.crawlId = crawlId;
         return this;
@@ -28,6 +29,7 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DPUHour")
     public Double dpuHour;
+
     public CrawlerHistory withDPUHour(Double dpuHour) {
         this.dpuHour = dpuHour;
         return this;
@@ -38,6 +40,7 @@ public class CrawlerHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public CrawlerHistory withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public CrawlerHistory withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -54,6 +58,7 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogGroup")
     public String logGroup;
+
     public CrawlerHistory withLogGroup(String logGroup) {
         this.logGroup = logGroup;
         return this;
@@ -62,6 +67,7 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogStream")
     public String logStream;
+
     public CrawlerHistory withLogStream(String logStream) {
         this.logStream = logStream;
         return this;
@@ -70,6 +76,7 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessagePrefix")
     public String messagePrefix;
+
     public CrawlerHistory withMessagePrefix(String messagePrefix) {
         this.messagePrefix = messagePrefix;
         return this;
@@ -80,6 +87,7 @@ public class CrawlerHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CrawlerHistory withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -88,6 +96,7 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CrawlerHistoryStateEnum state;
+
     public CrawlerHistory withState(CrawlerHistoryStateEnum state) {
         this.state = state;
         return this;
@@ -96,9 +105,11 @@ public class CrawlerHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Summary")
     public String summary;
+
     public CrawlerHistory withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public CrawlerHistory(){}
 }

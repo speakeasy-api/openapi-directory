@@ -40,4 +40,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SearchperpackageRequest
 lib/src/main/java/org/openapis/openapi/models/operations/SearchperpackageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/PackageSearchResult.java
+docs/sdk/README.md
+docs/search/README.md
 USAGE.md

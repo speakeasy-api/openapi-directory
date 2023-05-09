@@ -17,6 +17,7 @@ public class ClassCreation {
      */
     @JsonProperty("name")
     public String name;
+
     public ClassCreation withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +29,13 @@ public class ClassCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public String section;
+
     public ClassCreation withSection(String section) {
         this.section = section;
         return this;
     }
     
+    public ClassCreation(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

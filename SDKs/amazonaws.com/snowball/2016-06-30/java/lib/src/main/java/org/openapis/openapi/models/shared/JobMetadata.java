@@ -20,6 +20,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressId")
     public String addressId;
+
     public JobMetadata withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -28,6 +29,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public JobMetadata withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -38,6 +40,7 @@ public class JobMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public JobMetadata withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -46,6 +49,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataTransferProgress")
     public DataTransfer dataTransferProgress;
+
     public JobMetadata withDataTransferProgress(DataTransfer dataTransferProgress) {
         this.dataTransferProgress = dataTransferProgress;
         return this;
@@ -54,6 +58,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public JobMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +70,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceConfiguration")
     public DeviceConfiguration deviceConfiguration;
+
     public JobMetadata withDeviceConfiguration(DeviceConfiguration deviceConfiguration) {
         this.deviceConfiguration = deviceConfiguration;
         return this;
@@ -73,6 +79,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForwardingAddressId")
     public String forwardingAddressId;
+
     public JobMetadata withForwardingAddressId(String forwardingAddressId) {
         this.forwardingAddressId = forwardingAddressId;
         return this;
@@ -81,6 +88,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public JobMetadata withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -89,6 +97,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobLogInfo")
     public JobLogs jobLogInfo;
+
     public JobMetadata withJobLogInfo(JobLogs jobLogInfo) {
         this.jobLogInfo = jobLogInfo;
         return this;
@@ -97,6 +106,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobState")
     public JobStateEnum jobState;
+
     public JobMetadata withJobState(JobStateEnum jobState) {
         this.jobState = jobState;
         return this;
@@ -105,6 +115,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public JobMetadata withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -113,6 +124,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyARN")
     public String kmsKeyARN;
+
     public JobMetadata withKmsKeyARN(String kmsKeyARN) {
         this.kmsKeyARN = kmsKeyARN;
         return this;
@@ -121,6 +133,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongTermPricingId")
     public String longTermPricingId;
+
     public JobMetadata withLongTermPricingId(String longTermPricingId) {
         this.longTermPricingId = longTermPricingId;
         return this;
@@ -129,6 +142,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notification")
     public Notification notification;
+
     public JobMetadata withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -137,6 +151,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDeviceServiceConfiguration")
     public OnDeviceServiceConfiguration onDeviceServiceConfiguration;
+
     public JobMetadata withOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
         this.onDeviceServiceConfiguration = onDeviceServiceConfiguration;
         return this;
@@ -145,6 +160,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteManagement")
     public RemoteManagementEnum remoteManagement;
+
     public JobMetadata withRemoteManagement(RemoteManagementEnum remoteManagement) {
         this.remoteManagement = remoteManagement;
         return this;
@@ -153,6 +169,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public JobResource resources;
+
     public JobMetadata withResources(JobResource resources) {
         this.resources = resources;
         return this;
@@ -161,6 +178,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public JobMetadata withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -169,6 +187,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingDetails")
     public ShippingDetails shippingDetails;
+
     public JobMetadata withShippingDetails(ShippingDetails shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
@@ -177,6 +196,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballCapacityPreference")
     public SnowballCapacityEnum snowballCapacityPreference;
+
     public JobMetadata withSnowballCapacityPreference(SnowballCapacityEnum snowballCapacityPreference) {
         this.snowballCapacityPreference = snowballCapacityPreference;
         return this;
@@ -185,6 +205,7 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballType")
     public SnowballTypeEnum snowballType;
+
     public JobMetadata withSnowballType(SnowballTypeEnum snowballType) {
         this.snowballType = snowballType;
         return this;
@@ -193,9 +214,11 @@ public class JobMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxDocuments")
     public TaxDocuments taxDocuments;
+
     public JobMetadata withTaxDocuments(TaxDocuments taxDocuments) {
         this.taxDocuments = taxDocuments;
         return this;
     }
     
+    public JobMetadata(){}
 }

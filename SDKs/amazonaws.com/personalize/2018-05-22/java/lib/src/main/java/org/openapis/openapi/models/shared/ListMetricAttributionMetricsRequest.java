@@ -12,6 +12,7 @@ public class ListMetricAttributionMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListMetricAttributionMetricsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListMetricAttributionMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAttributionArn")
     public String metricAttributionArn;
+
     public ListMetricAttributionMetricsRequest withMetricAttributionArn(String metricAttributionArn) {
         this.metricAttributionArn = metricAttributionArn;
         return this;
@@ -28,9 +30,11 @@ public class ListMetricAttributionMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMetricAttributionMetricsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMetricAttributionMetricsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBranchResponse {
@@ -12,6 +13,7 @@ public class DeleteBranchResponse {
      */
     
     public Object badRequestException;
+
     public DeleteBranchResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBranchResponse {
     
     
     public String contentType;
+
     public DeleteBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBranchResult deleteBranchResult;
+
     public DeleteBranchResponse withDeleteBranchResult(org.openapis.openapi.models.shared.DeleteBranchResult deleteBranchResult) {
         this.deleteBranchResult = deleteBranchResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBranchResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public DeleteBranchResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBranchResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteBranchResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBranchResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBranchResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteBranchResponse {
     
     
     public Integer statusCode;
+
     public DeleteBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteBranchResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteBranchResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

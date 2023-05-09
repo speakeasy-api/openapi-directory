@@ -15,6 +15,7 @@ public class ComponentRunWith {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posixUser")
     public String posixUser;
+
     public ComponentRunWith withPosixUser(String posixUser) {
         this.posixUser = posixUser;
         return this;
@@ -23,6 +24,7 @@ public class ComponentRunWith {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemResourceLimits")
     public SystemResourceLimits systemResourceLimits;
+
     public ComponentRunWith withSystemResourceLimits(SystemResourceLimits systemResourceLimits) {
         this.systemResourceLimits = systemResourceLimits;
         return this;
@@ -31,9 +33,11 @@ public class ComponentRunWith {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsUser")
     public String windowsUser;
+
     public ComponentRunWith withWindowsUser(String windowsUser) {
         this.windowsUser = windowsUser;
         return this;
     }
     
+    public ComponentRunWith(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageProjectsHmacKeysUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HmacKeyMetadata hmacKeyMetadata;
+
     public StorageProjectsHmacKeysUpdateRequest withHmacKeyMetadata(org.openapis.openapi.models.shared.HmacKeyMetadata hmacKeyMetadata) {
         this.hmacKeyMetadata = hmacKeyMetadata;
         return this;
@@ -19,6 +21,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessId")
     public String accessId;
+
     public StorageProjectsHmacKeysUpdateRequest withAccessId(String accessId) {
         this.accessId = accessId;
         return this;
@@ -29,6 +32,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageProjectsHmacKeysUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageProjectsHmacKeysUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageProjectsHmacKeysUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageProjectsHmacKeysUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageProjectsHmacKeysUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public StorageProjectsHmacKeysUpdateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -89,6 +98,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageProjectsHmacKeysUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageProjectsHmacKeysUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -109,6 +120,7 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageProjectsHmacKeysUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -119,9 +131,14 @@ public class StorageProjectsHmacKeysUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageProjectsHmacKeysUpdateRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageProjectsHmacKeysUpdateRequest(@JsonProperty("accessId") String accessId, @JsonProperty("projectId") String projectId) {
+        this.accessId = accessId;
+        this.projectId = projectId;
+  }
 }

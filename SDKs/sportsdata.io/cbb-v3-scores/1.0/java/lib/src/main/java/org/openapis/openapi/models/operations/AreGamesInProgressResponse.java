@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AreGamesInProgressResponse {
     
     public Boolean areGamesInProgress200ApplicationJSONBoolean;
+
     public AreGamesInProgressResponse withAreGamesInProgress200ApplicationJSONBoolean(Boolean areGamesInProgress200ApplicationJSONBoolean) {
         this.areGamesInProgress200ApplicationJSONBoolean = areGamesInProgress200ApplicationJSONBoolean;
         return this;
@@ -16,6 +18,7 @@ public class AreGamesInProgressResponse {
     
     
     public String contentType;
+
     public AreGamesInProgressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class AreGamesInProgressResponse {
     
     
     public Integer statusCode;
+
     public AreGamesInProgressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class AreGamesInProgressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AreGamesInProgressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AreGamesInProgressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

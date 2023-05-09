@@ -11,13 +11,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * 
  */
 public enum TypeaheadShowPodcastsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private TypeaheadShowPodcastsEnum(String value) {
+    private TypeaheadShowPodcastsEnum(Long value) {
         this.value = value;
     }
 }

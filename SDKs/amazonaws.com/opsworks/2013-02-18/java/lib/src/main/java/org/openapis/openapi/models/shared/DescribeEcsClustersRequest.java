@@ -12,6 +12,7 @@ public class DescribeEcsClustersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsClusterArns")
     public String[] ecsClusterArns;
+
     public DescribeEcsClustersRequest withEcsClusterArns(String[] ecsClusterArns) {
         this.ecsClusterArns = ecsClusterArns;
         return this;
@@ -20,6 +21,7 @@ public class DescribeEcsClustersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeEcsClustersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeEcsClustersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEcsClustersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribeEcsClustersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeEcsClustersRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeEcsClustersRequest(){}
 }

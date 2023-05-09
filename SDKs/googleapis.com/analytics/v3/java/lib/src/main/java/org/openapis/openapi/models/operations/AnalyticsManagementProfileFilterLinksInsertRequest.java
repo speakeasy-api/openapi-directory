@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementProfileFilterLinksInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProfileFilterLinkInput profileFilterLinkInput;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withProfileFilterLinkInput(org.openapis.openapi.models.shared.ProfileFilterLinkInput profileFilterLinkInput) {
         this.profileFilterLinkInput = profileFilterLinkInput;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -109,9 +120,15 @@ public class AnalyticsManagementProfileFilterLinksInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
     public String webPropertyId;
+
     public AnalyticsManagementProfileFilterLinksInsertRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public AnalyticsManagementProfileFilterLinksInsertRequest(@JsonProperty("accountId") String accountId, @JsonProperty("profileId") String profileId, @JsonProperty("webPropertyId") String webPropertyId) {
+        this.accountId = accountId;
+        this.profileId = profileId;
+        this.webPropertyId = webPropertyId;
+  }
 }

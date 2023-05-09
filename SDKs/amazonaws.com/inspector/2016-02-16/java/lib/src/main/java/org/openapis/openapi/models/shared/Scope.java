@@ -15,6 +15,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public ScopeTypeEnum key;
+
     public Scope withKey(ScopeTypeEnum key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Scope withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Scope(){}
 }

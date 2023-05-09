@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecommendationDisruptionCompliance {
     @JsonProperty("expectedComplianceStatus")
     public ComplianceStatusEnum expectedComplianceStatus;
+
     public RecommendationDisruptionCompliance withExpectedComplianceStatus(ComplianceStatusEnum expectedComplianceStatus) {
         this.expectedComplianceStatus = expectedComplianceStatus;
         return this;
@@ -22,6 +23,7 @@ public class RecommendationDisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedRpoDescription")
     public String expectedRpoDescription;
+
     public RecommendationDisruptionCompliance withExpectedRpoDescription(String expectedRpoDescription) {
         this.expectedRpoDescription = expectedRpoDescription;
         return this;
@@ -30,6 +32,7 @@ public class RecommendationDisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedRpoInSecs")
     public Long expectedRpoInSecs;
+
     public RecommendationDisruptionCompliance withExpectedRpoInSecs(Long expectedRpoInSecs) {
         this.expectedRpoInSecs = expectedRpoInSecs;
         return this;
@@ -38,6 +41,7 @@ public class RecommendationDisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedRtoDescription")
     public String expectedRtoDescription;
+
     public RecommendationDisruptionCompliance withExpectedRtoDescription(String expectedRtoDescription) {
         this.expectedRtoDescription = expectedRtoDescription;
         return this;
@@ -46,9 +50,13 @@ public class RecommendationDisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedRtoInSecs")
     public Long expectedRtoInSecs;
+
     public RecommendationDisruptionCompliance withExpectedRtoInSecs(Long expectedRtoInSecs) {
         this.expectedRtoInSecs = expectedRtoInSecs;
         return this;
     }
     
+    public RecommendationDisruptionCompliance(@JsonProperty("expectedComplianceStatus") ComplianceStatusEnum expectedComplianceStatus) {
+        this.expectedComplianceStatus = expectedComplianceStatus;
+  }
 }

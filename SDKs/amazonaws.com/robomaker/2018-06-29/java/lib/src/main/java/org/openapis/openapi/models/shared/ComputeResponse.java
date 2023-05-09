@@ -15,6 +15,7 @@ public class ComputeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeType")
     public ComputeTypeEnum computeType;
+
     public ComputeResponse withComputeType(ComputeTypeEnum computeType) {
         this.computeType = computeType;
         return this;
@@ -23,6 +24,7 @@ public class ComputeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuUnitLimit")
     public Long gpuUnitLimit;
+
     public ComputeResponse withGpuUnitLimit(Long gpuUnitLimit) {
         this.gpuUnitLimit = gpuUnitLimit;
         return this;
@@ -31,9 +33,11 @@ public class ComputeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationUnitLimit")
     public Long simulationUnitLimit;
+
     public ComputeResponse withSimulationUnitLimit(Long simulationUnitLimit) {
         this.simulationUnitLimit = simulationUnitLimit;
         return this;
     }
     
+    public ComputeResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressTransfersResult {
     
     public DescribeAddressTransfersResultAddressTransfers[] addressTransfers;
+
     public DescribeAddressTransfersResult withAddressTransfers(DescribeAddressTransfersResultAddressTransfers[] addressTransfers) {
         this.addressTransfers = addressTransfers;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAddressTransfersResult {
     
     
     public String nextToken;
+
     public DescribeAddressTransfersResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAddressTransfersResult(){}
 }

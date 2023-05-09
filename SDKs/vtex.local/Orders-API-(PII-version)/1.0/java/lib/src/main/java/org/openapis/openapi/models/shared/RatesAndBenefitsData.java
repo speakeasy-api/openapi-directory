@@ -12,6 +12,7 @@ public class RatesAndBenefitsData {
      */
     @JsonProperty("id")
     public String id;
+
     public RatesAndBenefitsData withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class RatesAndBenefitsData {
      */
     @JsonProperty("rateAndBenefitsIdentifiers")
     public String[] rateAndBenefitsIdentifiers;
+
     public RatesAndBenefitsData withRateAndBenefitsIdentifiers(String[] rateAndBenefitsIdentifiers) {
         this.rateAndBenefitsIdentifiers = rateAndBenefitsIdentifiers;
         return this;
     }
     
+    public RatesAndBenefitsData(@JsonProperty("id") String id, @JsonProperty("rateAndBenefitsIdentifiers") String[] rateAndBenefitsIdentifiers) {
+        this.id = id;
+        this.rateAndBenefitsIdentifiers = rateAndBenefitsIdentifiers;
+  }
 }

@@ -20,6 +20,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ApplicationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ApplicationSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApplicationSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApplicationSummary withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class ApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public ApplicationSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -64,9 +69,11 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApplicationSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApplicationSummary(){}
 }

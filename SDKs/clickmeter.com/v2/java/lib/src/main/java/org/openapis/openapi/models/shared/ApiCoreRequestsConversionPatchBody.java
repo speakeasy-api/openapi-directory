@@ -17,6 +17,7 @@ public class ApiCoreRequestsConversionPatchBody {
     @JsonProperty("Action")
     @SpeakeasyMetadata("form:name=Action")
     public String action;
+
     public ApiCoreRequestsConversionPatchBody withAction(String action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class ApiCoreRequestsConversionPatchBody {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Long id;
+
     public ApiCoreRequestsConversionPatchBody withId(Long id) {
         this.id = id;
         return this;
@@ -35,9 +37,11 @@ public class ApiCoreRequestsConversionPatchBody {
     @JsonProperty("ReplaceId")
     @SpeakeasyMetadata("form:name=ReplaceId")
     public Long replaceId;
+
     public ApiCoreRequestsConversionPatchBody withReplaceId(Long replaceId) {
         this.replaceId = replaceId;
         return this;
     }
     
+    public ApiCoreRequestsConversionPatchBody(){}
 }

@@ -15,6 +15,7 @@ public class RepublishAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public MqttHeaders headers;
+
     public RepublishAction withHeaders(MqttHeaders headers) {
         this.headers = headers;
         return this;
@@ -23,6 +24,7 @@ public class RepublishAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qos")
     public Long qos;
+
     public RepublishAction withQos(Long qos) {
         this.qos = qos;
         return this;
@@ -30,6 +32,7 @@ public class RepublishAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public RepublishAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -37,9 +40,14 @@ public class RepublishAction {
     
     @JsonProperty("topic")
     public String topic;
+
     public RepublishAction withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public RepublishAction(@JsonProperty("roleArn") String roleArn, @JsonProperty("topic") String topic) {
+        this.roleArn = roleArn;
+        this.topic = topic;
+  }
 }

@@ -12,9 +12,13 @@ public class StopEarthObservationJobRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public StopEarthObservationJobRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public StopEarthObservationJobRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

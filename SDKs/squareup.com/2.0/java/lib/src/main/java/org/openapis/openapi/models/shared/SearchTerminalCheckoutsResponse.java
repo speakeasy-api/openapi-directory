@@ -18,6 +18,7 @@ public class SearchTerminalCheckoutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkouts")
     public TerminalCheckout[] checkouts;
+
     public SearchTerminalCheckoutsResponse withCheckouts(TerminalCheckout[] checkouts) {
         this.checkouts = checkouts;
         return this;
@@ -32,6 +33,7 @@ public class SearchTerminalCheckoutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchTerminalCheckoutsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,9 +45,11 @@ public class SearchTerminalCheckoutsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchTerminalCheckoutsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public SearchTerminalCheckoutsResponse(){}
 }

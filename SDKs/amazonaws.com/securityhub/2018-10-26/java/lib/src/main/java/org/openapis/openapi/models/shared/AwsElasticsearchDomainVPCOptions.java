@@ -15,6 +15,7 @@ public class AwsElasticsearchDomainVPCOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public AwsElasticsearchDomainVPCOptions withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -23,6 +24,7 @@ public class AwsElasticsearchDomainVPCOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public AwsElasticsearchDomainVPCOptions withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -31,6 +33,7 @@ public class AwsElasticsearchDomainVPCOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public AwsElasticsearchDomainVPCOptions withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -39,9 +42,11 @@ public class AwsElasticsearchDomainVPCOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VPCId")
     public String vpcId;
+
     public AwsElasticsearchDomainVPCOptions withVPCId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsElasticsearchDomainVPCOptions(){}
 }

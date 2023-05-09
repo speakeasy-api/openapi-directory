@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataSubjectRightCancelExportRequestResponse {
     
     public String contentType;
+
     public DataSubjectRightCancelExportRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DataSubjectRightCancelExportRequestResponse {
      */
     
     public DataSubjectRightCancelExportRequest202ApplicationJSON dataSubjectRightCancelExportRequest202ApplicationJSONObject;
+
     public DataSubjectRightCancelExportRequestResponse withDataSubjectRightCancelExportRequest202ApplicationJSONObject(DataSubjectRightCancelExportRequest202ApplicationJSON dataSubjectRightCancelExportRequest202ApplicationJSONObject) {
         this.dataSubjectRightCancelExportRequest202ApplicationJSONObject = dataSubjectRightCancelExportRequest202ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class DataSubjectRightCancelExportRequestResponse {
      */
     
     public DataSubjectRightCancelExportRequest503ApplicationJSON dataSubjectRightCancelExportRequest503ApplicationJSONObject;
+
     public DataSubjectRightCancelExportRequestResponse withDataSubjectRightCancelExportRequest503ApplicationJSONObject(DataSubjectRightCancelExportRequest503ApplicationJSON dataSubjectRightCancelExportRequest503ApplicationJSONObject) {
         this.dataSubjectRightCancelExportRequest503ApplicationJSONObject = dataSubjectRightCancelExportRequest503ApplicationJSONObject;
         return this;
@@ -39,6 +43,7 @@ public class DataSubjectRightCancelExportRequestResponse {
      */
     
     public DataSubjectRightCancelExportRequestDefaultApplicationJSON dataSubjectRightCancelExportRequestDefaultApplicationJSONObject;
+
     public DataSubjectRightCancelExportRequestResponse withDataSubjectRightCancelExportRequestDefaultApplicationJSONObject(DataSubjectRightCancelExportRequestDefaultApplicationJSON dataSubjectRightCancelExportRequestDefaultApplicationJSONObject) {
         this.dataSubjectRightCancelExportRequestDefaultApplicationJSONObject = dataSubjectRightCancelExportRequestDefaultApplicationJSONObject;
         return this;
@@ -46,6 +51,7 @@ public class DataSubjectRightCancelExportRequestResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DataSubjectRightCancelExportRequestResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -53,6 +59,7 @@ public class DataSubjectRightCancelExportRequestResponse {
     
     
     public Integer statusCode;
+
     public DataSubjectRightCancelExportRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class DataSubjectRightCancelExportRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataSubjectRightCancelExportRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DataSubjectRightCancelExportRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

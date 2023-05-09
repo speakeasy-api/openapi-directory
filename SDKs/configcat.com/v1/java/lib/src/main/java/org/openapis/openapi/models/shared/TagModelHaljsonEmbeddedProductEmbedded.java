@@ -12,9 +12,11 @@ public class TagModelHaljsonEmbeddedProductEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public TagModelHaljsonEmbeddedProductEmbeddedOrganization organization;
+
     public TagModelHaljsonEmbeddedProductEmbedded withOrganization(TagModelHaljsonEmbeddedProductEmbeddedOrganization organization) {
         this.organization = organization;
         return this;
     }
     
+    public TagModelHaljsonEmbeddedProductEmbedded(){}
 }

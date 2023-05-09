@@ -67,11 +67,9 @@ public class PrimaryIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignResponse() {{
+        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -108,11 +106,9 @@ public class PrimaryIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrResponse() {{
+        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -152,11 +148,9 @@ public class PrimaryIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -203,11 +197,9 @@ public class PrimaryIPActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignResponse() {{
+        org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignResponse res = new org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

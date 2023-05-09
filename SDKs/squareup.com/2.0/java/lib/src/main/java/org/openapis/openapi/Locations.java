@@ -58,11 +58,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLocationResponse res = new org.openapis.openapi.models.operations.CreateLocationResponse() {{
+        org.openapis.openapi.models.operations.CreateLocationResponse res = new org.openapis.openapi.models.operations.CreateLocationResponse(contentType, httpRes.statusCode()) {{
             createLocationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -83,10 +81,11 @@ public class Locations {
      * Many Square API endpoints require a `location_id` parameter.
      * The `id` field of the [`Location`](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) objects returned by this
      * endpoint correspond to that `location_id` parameter.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLocationsResponse listLocations() throws Exception {
+    public org.openapis.openapi.models.operations.ListLocationsResponse listLocations(org.openapis.openapi.models.operations.ListLocationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/locations");
         
@@ -95,16 +94,15 @@ public class Locations {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLocationsResponse res = new org.openapis.openapi.models.operations.ListLocationsResponse() {{
+        org.openapis.openapi.models.operations.ListLocationsResponse res = new org.openapis.openapi.models.operations.ListLocationsResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +141,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveLocationResponse res = new org.openapis.openapi.models.operations.RetrieveLocationResponse() {{
+        org.openapis.openapi.models.operations.RetrieveLocationResponse res = new org.openapis.openapi.models.operations.RetrieveLocationResponse(contentType, httpRes.statusCode()) {{
             retrieveLocationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,11 +185,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLocationResponse res = new org.openapis.openapi.models.operations.UpdateLocationResponse() {{
+        org.openapis.openapi.models.operations.UpdateLocationResponse res = new org.openapis.openapi.models.operations.UpdateLocationResponse(contentType, httpRes.statusCode()) {{
             updateLocationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

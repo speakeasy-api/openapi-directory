@@ -13,6 +13,7 @@ public class GetMeActivitiesTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
     public org.openapis.openapi.models.shared.AccessEnum[] access;
+
     public GetMeActivitiesTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
         this.access = access;
         return this;
@@ -23,9 +24,11 @@ public class GetMeActivitiesTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetMeActivitiesTracksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetMeActivitiesTracksRequest(){}
 }

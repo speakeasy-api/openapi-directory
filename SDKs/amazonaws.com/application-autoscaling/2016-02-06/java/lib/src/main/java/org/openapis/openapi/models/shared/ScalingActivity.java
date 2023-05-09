@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ScalingActivity {
     @JsonProperty("ActivityId")
     public String activityId;
+
     public ScalingActivity withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -26,6 +27,7 @@ public class ScalingActivity {
     
     @JsonProperty("Cause")
     public String cause;
+
     public ScalingActivity withCause(String cause) {
         this.cause = cause;
         return this;
@@ -33,6 +35,7 @@ public class ScalingActivity {
     
     @JsonProperty("Description")
     public String description;
+
     public ScalingActivity withDescription(String description) {
         this.description = description;
         return this;
@@ -41,6 +44,7 @@ public class ScalingActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public String details;
+
     public ScalingActivity withDetails(String details) {
         this.details = details;
         return this;
@@ -51,6 +55,7 @@ public class ScalingActivity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ScalingActivity withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -59,6 +64,7 @@ public class ScalingActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotScaledReasons")
     public NotScaledReason[] notScaledReasons;
+
     public ScalingActivity withNotScaledReasons(NotScaledReason[] notScaledReasons) {
         this.notScaledReasons = notScaledReasons;
         return this;
@@ -66,6 +72,7 @@ public class ScalingActivity {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ScalingActivity withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -73,6 +80,7 @@ public class ScalingActivity {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public ScalingActivity withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -80,6 +88,7 @@ public class ScalingActivity {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public ScalingActivity withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -89,6 +98,7 @@ public class ScalingActivity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ScalingActivity withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -96,6 +106,7 @@ public class ScalingActivity {
     
     @JsonProperty("StatusCode")
     public ScalingActivityStatusCodeEnum statusCode;
+
     public ScalingActivity withStatusCode(ScalingActivityStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -104,9 +115,20 @@ public class ScalingActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ScalingActivity withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ScalingActivity(@JsonProperty("ActivityId") String activityId, @JsonProperty("Cause") String cause, @JsonProperty("Description") String description, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace, @JsonProperty("StartTime") OffsetDateTime startTime, @JsonProperty("StatusCode") ScalingActivityStatusCodeEnum statusCode) {
+        this.activityId = activityId;
+        this.cause = cause;
+        this.description = description;
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.serviceNamespace = serviceNamespace;
+        this.startTime = startTime;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GetAllBenefits200ApplicationJSONLimitConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activesCount")
     public Long activesCount;
+
     public GetAllBenefits200ApplicationJSONLimitConfiguration withActivesCount(Long activesCount) {
         this.activesCount = activesCount;
         return this;
@@ -29,9 +30,11 @@ public class GetAllBenefits200ApplicationJSONLimitConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public GetAllBenefits200ApplicationJSONLimitConfiguration withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetAllBenefits200ApplicationJSONLimitConfiguration(){}
 }

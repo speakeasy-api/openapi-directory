@@ -18,9 +18,11 @@ public class ActivityContentDetailsFavorite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public ResourceId resourceId;
+
     public ActivityContentDetailsFavorite withResourceId(ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ActivityContentDetailsFavorite(){}
 }

@@ -18,6 +18,7 @@ public class BiddingFunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingFunction")
     public String biddingFunction;
+
     public BiddingFunctionInput withBiddingFunction(String biddingFunction) {
         this.biddingFunction = biddingFunction;
         return this;
@@ -29,6 +30,7 @@ public class BiddingFunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BiddingFunctionInput withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class BiddingFunctionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BiddingFunctionTypeEnum type;
+
     public BiddingFunctionInput withType(BiddingFunctionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BiddingFunctionInput(){}
 }

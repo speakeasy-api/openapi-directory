@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelCommandRequest {
     @JsonProperty("CommandId")
     public String commandId;
+
     public CancelCommandRequest withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -22,9 +23,13 @@ public class CancelCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public CancelCommandRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     
+    public CancelCommandRequest(@JsonProperty("CommandId") String commandId) {
+        this.commandId = commandId;
+  }
 }

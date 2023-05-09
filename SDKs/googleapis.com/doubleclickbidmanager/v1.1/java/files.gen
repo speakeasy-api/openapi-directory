@@ -86,4 +86,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReportStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportFailureErrorCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportFailure.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportKey.java
+docs/sdk/README.md
+docs/queries/README.md
+docs/reports/README.md
 USAGE.md

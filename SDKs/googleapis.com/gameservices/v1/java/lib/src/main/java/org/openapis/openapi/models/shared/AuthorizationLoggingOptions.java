@@ -18,9 +18,11 @@ public class AuthorizationLoggingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionType")
     public AuthorizationLoggingOptionsPermissionTypeEnum permissionType;
+
     public AuthorizationLoggingOptions withPermissionType(AuthorizationLoggingOptionsPermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
     }
     
+    public AuthorizationLoggingOptions(){}
 }

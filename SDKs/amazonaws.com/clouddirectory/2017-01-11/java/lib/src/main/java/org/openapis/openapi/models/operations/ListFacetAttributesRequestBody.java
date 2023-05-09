@@ -15,6 +15,7 @@ public class ListFacetAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFacetAttributesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -25,6 +26,7 @@ public class ListFacetAttributesRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public ListFacetAttributesRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class ListFacetAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFacetAttributesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFacetAttributesRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

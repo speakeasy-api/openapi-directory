@@ -61,4 +61,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ExportIamPolicyAnalysisRequ
 lib/src/main/java/org/openapis/openapi/models/shared/IamPolicyAnalysisOutputConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GcsDestination.java
 lib/src/main/java/org/openapis/openapi/models/shared/Options.java
+docs/sdk/README.md
+docs/v1p4beta1/README.md
 USAGE.md

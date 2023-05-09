@@ -15,6 +15,7 @@ public class Certificate {
      */
     @JsonProperty("ca_cert")
     public String caCert;
+
     public Certificate withCaCert(String caCert) {
         this.caCert = caCert;
         return this;
@@ -25,6 +26,7 @@ public class Certificate {
      */
     @JsonProperty("server_cert")
     public String serverCert;
+
     public Certificate withServerCert(String serverCert) {
         this.serverCert = serverCert;
         return this;
@@ -35,6 +37,7 @@ public class Certificate {
      */
     @JsonProperty("user_cert")
     public String userCert;
+
     public Certificate withUserCert(String userCert) {
         this.userCert = userCert;
         return this;
@@ -45,9 +48,16 @@ public class Certificate {
      */
     @JsonProperty("user_key")
     public String userKey;
+
     public Certificate withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public Certificate(@JsonProperty("ca_cert") String caCert, @JsonProperty("server_cert") String serverCert, @JsonProperty("user_cert") String userCert, @JsonProperty("user_key") String userKey) {
+        this.caCert = caCert;
+        this.serverCert = serverCert;
+        this.userCert = userCert;
+        this.userKey = userKey;
+  }
 }

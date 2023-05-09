@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateHostInput {
     @JsonProperty("HostArn")
     public String hostArn;
+
     public UpdateHostInput withHostArn(String hostArn) {
         this.hostArn = hostArn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateHostInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderEndpoint")
     public String providerEndpoint;
+
     public UpdateHostInput withProviderEndpoint(String providerEndpoint) {
         this.providerEndpoint = providerEndpoint;
         return this;
@@ -27,9 +29,13 @@ public class UpdateHostInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public UpdateHostInput withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public UpdateHostInput(@JsonProperty("HostArn") String hostArn) {
+        this.hostArn = hostArn;
+  }
 }

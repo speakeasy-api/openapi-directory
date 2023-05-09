@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCertificateAuthorityAuditReportResponse {
     
     public String contentType;
+
     public DescribeCertificateAuthorityAuditReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCertificateAuthorityAuditReportResponse describeCertificateAuthorityAuditReportResponse;
+
     public DescribeCertificateAuthorityAuditReportResponse withDescribeCertificateAuthorityAuditReportResponse(org.openapis.openapi.models.shared.DescribeCertificateAuthorityAuditReportResponse describeCertificateAuthorityAuditReportResponse) {
         this.describeCertificateAuthorityAuditReportResponse = describeCertificateAuthorityAuditReportResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
      */
     
     public Object invalidArgsException;
+
     public DescribeCertificateAuthorityAuditReportResponse withInvalidArgsException(Object invalidArgsException) {
         this.invalidArgsException = invalidArgsException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
      */
     
     public Object invalidArnException;
+
     public DescribeCertificateAuthorityAuditReportResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCertificateAuthorityAuditReportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeCertificateAuthorityAuditReportResponse {
     
     
     public Integer statusCode;
+
     public DescribeCertificateAuthorityAuditReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeCertificateAuthorityAuditReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCertificateAuthorityAuditReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCertificateAuthorityAuditReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

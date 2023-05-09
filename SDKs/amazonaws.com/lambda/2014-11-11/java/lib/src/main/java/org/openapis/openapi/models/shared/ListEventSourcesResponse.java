@@ -15,6 +15,7 @@ public class ListEventSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSources")
     public EventSourceConfiguration[] eventSources;
+
     public ListEventSourcesResponse withEventSources(EventSourceConfiguration[] eventSources) {
         this.eventSources = eventSources;
         return this;
@@ -23,9 +24,11 @@ public class ListEventSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListEventSourcesResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListEventSourcesResponse(){}
 }

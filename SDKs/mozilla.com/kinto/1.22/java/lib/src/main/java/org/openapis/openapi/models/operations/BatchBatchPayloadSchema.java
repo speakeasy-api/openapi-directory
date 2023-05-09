@@ -12,6 +12,7 @@ public class BatchBatchPayloadSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaults")
     public BatchBatchPayloadSchemaDefaults defaults;
+
     public BatchBatchPayloadSchema withDefaults(BatchBatchPayloadSchemaDefaults defaults) {
         this.defaults = defaults;
         return this;
@@ -19,9 +20,13 @@ public class BatchBatchPayloadSchema {
     
     @JsonProperty("requests")
     public BatchBatchPayloadSchemaRequests[] requests;
+
     public BatchBatchPayloadSchema withRequests(BatchBatchPayloadSchemaRequests[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchBatchPayloadSchema(@JsonProperty("requests") BatchBatchPayloadSchemaRequests[] requests) {
+        this.requests = requests;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateWebhookResponse {
     
     public String contentType;
+
     public ReposCreateWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateWebhookResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateWebhookResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateWebhookResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposCreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCreateWebhookResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ReposCreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.Hook hook;
+
     public ReposCreateWebhookResponse withHook(org.openapis.openapi.models.shared.Hook hook) {
         this.hook = hook;
         return this;
@@ -60,9 +67,14 @@ public class ReposCreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateWebhookResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

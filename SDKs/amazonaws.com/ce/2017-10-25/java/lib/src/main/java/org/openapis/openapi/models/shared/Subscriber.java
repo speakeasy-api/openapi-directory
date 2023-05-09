@@ -15,6 +15,7 @@ public class Subscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public Subscriber withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class Subscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SubscriberStatusEnum status;
+
     public Subscriber withStatus(SubscriberStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class Subscriber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SubscriberTypeEnum type;
+
     public Subscriber withType(SubscriberTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Subscriber(){}
 }

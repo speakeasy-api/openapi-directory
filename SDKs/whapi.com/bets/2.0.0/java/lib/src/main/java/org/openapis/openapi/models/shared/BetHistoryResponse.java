@@ -15,9 +15,11 @@ public class BetHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bets")
     public PlacedBet[] bets;
+
     public BetHistoryResponse withBets(PlacedBet[] bets) {
         this.bets = bets;
         return this;
     }
     
+    public BetHistoryResponse(){}
 }

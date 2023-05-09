@@ -12,6 +12,7 @@ public class ListFlywheelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public FlywheelFilter filter;
+
     public ListFlywheelsRequest withFilter(FlywheelFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListFlywheelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFlywheelsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListFlywheelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFlywheelsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFlywheelsRequest(){}
 }

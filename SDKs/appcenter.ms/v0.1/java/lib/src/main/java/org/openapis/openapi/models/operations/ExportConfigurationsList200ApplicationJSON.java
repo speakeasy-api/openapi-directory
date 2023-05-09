@@ -15,6 +15,7 @@ public class ExportConfigurationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLink")
     public String nextLink;
+
     public ExportConfigurationsList200ApplicationJSON withNextLink(String nextLink) {
         this.nextLink = nextLink;
         return this;
@@ -26,6 +27,7 @@ public class ExportConfigurationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public ExportConfigurationsList200ApplicationJSON withTotal(Long total) {
         this.total = total;
         return this;
@@ -33,9 +35,13 @@ public class ExportConfigurationsList200ApplicationJSON {
     
     @JsonProperty("values")
     public ExportConfigurationsList200ApplicationJSONValues[] values;
+
     public ExportConfigurationsList200ApplicationJSON withValues(ExportConfigurationsList200ApplicationJSONValues[] values) {
         this.values = values;
         return this;
     }
     
+    public ExportConfigurationsList200ApplicationJSON(@JsonProperty("values") ExportConfigurationsList200ApplicationJSONValues[] values) {
+        this.values = values;
+  }
 }

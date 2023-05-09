@@ -15,6 +15,7 @@ public class StartJobRunRequestBodyJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSqlJobDriver")
     public org.openapis.openapi.models.shared.SparkSqlJobDriver sparkSqlJobDriver;
+
     public StartJobRunRequestBodyJobDriver withSparkSqlJobDriver(org.openapis.openapi.models.shared.SparkSqlJobDriver sparkSqlJobDriver) {
         this.sparkSqlJobDriver = sparkSqlJobDriver;
         return this;
@@ -23,9 +24,11 @@ public class StartJobRunRequestBodyJobDriver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkSubmitJobDriver")
     public org.openapis.openapi.models.shared.SparkSubmitJobDriver sparkSubmitJobDriver;
+
     public StartJobRunRequestBodyJobDriver withSparkSubmitJobDriver(org.openapis.openapi.models.shared.SparkSubmitJobDriver sparkSubmitJobDriver) {
         this.sparkSubmitJobDriver = sparkSubmitJobDriver;
         return this;
     }
     
+    public StartJobRunRequestBodyJobDriver(){}
 }

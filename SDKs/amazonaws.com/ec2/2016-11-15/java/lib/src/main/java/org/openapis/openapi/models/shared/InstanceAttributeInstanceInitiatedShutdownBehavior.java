@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeInstanceInitiatedShutdownBehavior {
     
     public String value;
+
     public InstanceAttributeInstanceInitiatedShutdownBehavior withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeInstanceInitiatedShutdownBehavior(){}
 }

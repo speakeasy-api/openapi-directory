@@ -13,6 +13,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public FacetsRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public LocalDate endDate;
+
     public FacetsRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +35,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facetFilters")
     public String facetFilters;
+
     public FacetsRequest withFacetFilters(String facetFilters) {
         this.facetFilters = facetFilters;
         return this;
@@ -43,6 +46,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchTerms")
     public String searchTerms;
+
     public FacetsRequest withSearchTerms(String searchTerms) {
         this.searchTerms = searchTerms;
         return this;
@@ -53,6 +57,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortKeys")
     public FacetsSortKeysEnum sortKeys;
+
     public FacetsRequest withSortKeys(FacetsSortKeysEnum sortKeys) {
         this.sortKeys = sortKeys;
         return this;
@@ -63,6 +68,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public FacetsSourceEnum source;
+
     public FacetsRequest withSource(FacetsSourceEnum source) {
         this.source = source;
         return this;
@@ -73,6 +79,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spatial")
     public String spatial;
+
     public FacetsRequest withSpatial(String spatial) {
         this.spatial = spatial;
         return this;
@@ -83,6 +90,7 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public LocalDate startDate;
+
     public FacetsRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -93,9 +101,11 @@ public class FacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public FacetsRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public FacetsRequest(){}
 }

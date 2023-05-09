@@ -18,9 +18,11 @@ public class EstimationTimePoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimationTimeFrameOffset")
     public String estimationTimeFrameOffset;
+
     public EstimationTimePoint withEstimationTimeFrameOffset(String estimationTimeFrameOffset) {
         this.estimationTimeFrameOffset = estimationTimeFrameOffset;
         return this;
     }
     
+    public EstimationTimePoint(){}
 }

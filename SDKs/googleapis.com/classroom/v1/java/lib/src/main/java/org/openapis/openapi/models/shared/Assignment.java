@@ -18,9 +18,11 @@ public class Assignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studentWorkFolder")
     public DriveFolder studentWorkFolder;
+
     public Assignment withStudentWorkFolder(DriveFolder studentWorkFolder) {
         this.studentWorkFolder = studentWorkFolder;
         return this;
     }
     
+    public Assignment(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSourceSyncJobMetricTarget {
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public DataSourceSyncJobMetricTarget withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -22,9 +23,13 @@ public class DataSourceSyncJobMetricTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceSyncJobId")
     public String dataSourceSyncJobId;
+
     public DataSourceSyncJobMetricTarget withDataSourceSyncJobId(String dataSourceSyncJobId) {
         this.dataSourceSyncJobId = dataSourceSyncJobId;
         return this;
     }
     
+    public DataSourceSyncJobMetricTarget(@JsonProperty("DataSourceId") String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+  }
 }

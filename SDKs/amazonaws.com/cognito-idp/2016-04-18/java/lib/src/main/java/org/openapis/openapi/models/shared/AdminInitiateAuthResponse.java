@@ -15,6 +15,7 @@ public class AdminInitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationResult")
     public AuthenticationResultType authenticationResult;
+
     public AdminInitiateAuthResponse withAuthenticationResult(AuthenticationResultType authenticationResult) {
         this.authenticationResult = authenticationResult;
         return this;
@@ -23,6 +24,7 @@ public class AdminInitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeName")
     public ChallengeNameTypeEnum challengeName;
+
     public AdminInitiateAuthResponse withChallengeName(ChallengeNameTypeEnum challengeName) {
         this.challengeName = challengeName;
         return this;
@@ -31,6 +33,7 @@ public class AdminInitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeParameters")
     public java.util.Map<String, String> challengeParameters;
+
     public AdminInitiateAuthResponse withChallengeParameters(java.util.Map<String, String> challengeParameters) {
         this.challengeParameters = challengeParameters;
         return this;
@@ -39,9 +42,11 @@ public class AdminInitiateAuthResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public String session;
+
     public AdminInitiateAuthResponse withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public AdminInitiateAuthResponse(){}
 }

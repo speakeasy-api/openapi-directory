@@ -22,6 +22,7 @@ public class ThesaurusSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ThesaurusSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class ThesaurusSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ThesaurusSummary withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class ThesaurusSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ThesaurusSummary withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class ThesaurusSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ThesaurusStatusEnum status;
+
     public ThesaurusSummary withStatus(ThesaurusStatusEnum status) {
         this.status = status;
         return this;
@@ -56,9 +60,11 @@ public class ThesaurusSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public ThesaurusSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ThesaurusSummary(){}
 }

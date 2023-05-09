@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateGeofenceCollectionResponse {
     @JsonProperty("CollectionArn")
     public String collectionArn;
+
     public CreateGeofenceCollectionResponse withCollectionArn(String collectionArn) {
         this.collectionArn = collectionArn;
         return this;
@@ -24,6 +25,7 @@ public class CreateGeofenceCollectionResponse {
     
     @JsonProperty("CollectionName")
     public String collectionName;
+
     public CreateGeofenceCollectionResponse withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -33,9 +35,15 @@ public class CreateGeofenceCollectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public CreateGeofenceCollectionResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
     }
     
+    public CreateGeofenceCollectionResponse(@JsonProperty("CollectionArn") String collectionArn, @JsonProperty("CollectionName") String collectionName, @JsonProperty("CreateTime") OffsetDateTime createTime) {
+        this.collectionArn = collectionArn;
+        this.collectionName = collectionName;
+        this.createTime = createTime;
+  }
 }

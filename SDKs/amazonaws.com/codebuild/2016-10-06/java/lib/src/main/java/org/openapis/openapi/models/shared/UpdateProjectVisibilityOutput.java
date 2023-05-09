@@ -15,6 +15,7 @@ public class UpdateProjectVisibilityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectArn")
     public String projectArn;
+
     public UpdateProjectVisibilityOutput withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -26,6 +27,7 @@ public class UpdateProjectVisibilityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectVisibility")
     public ProjectVisibilityTypeEnum projectVisibility;
+
     public UpdateProjectVisibilityOutput withProjectVisibility(ProjectVisibilityTypeEnum projectVisibility) {
         this.projectVisibility = projectVisibility;
         return this;
@@ -34,9 +36,11 @@ public class UpdateProjectVisibilityOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicProjectAlias")
     public String publicProjectAlias;
+
     public UpdateProjectVisibilityOutput withPublicProjectAlias(String publicProjectAlias) {
         this.publicProjectAlias = publicProjectAlias;
         return this;
     }
     
+    public UpdateProjectVisibilityOutput(){}
 }

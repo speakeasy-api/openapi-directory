@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeServiceActionExecutionParametersResponse {
     
     public String contentType;
+
     public DescribeServiceActionExecutionParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeServiceActionExecutionParametersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeServiceActionExecutionParametersOutput describeServiceActionExecutionParametersOutput;
+
     public DescribeServiceActionExecutionParametersResponse withDescribeServiceActionExecutionParametersOutput(org.openapis.openapi.models.shared.DescribeServiceActionExecutionParametersOutput describeServiceActionExecutionParametersOutput) {
         this.describeServiceActionExecutionParametersOutput = describeServiceActionExecutionParametersOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeServiceActionExecutionParametersResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribeServiceActionExecutionParametersResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeServiceActionExecutionParametersResponse {
     
     
     public Integer statusCode;
+
     public DescribeServiceActionExecutionParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeServiceActionExecutionParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeServiceActionExecutionParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeServiceActionExecutionParametersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeServiceActionExecutionParametersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeServiceActionExecutionParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

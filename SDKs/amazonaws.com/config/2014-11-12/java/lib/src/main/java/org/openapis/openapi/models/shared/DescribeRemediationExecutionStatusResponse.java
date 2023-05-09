@@ -15,6 +15,7 @@ public class DescribeRemediationExecutionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRemediationExecutionStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRemediationExecutionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemediationExecutionStatuses")
     public RemediationExecutionStatus[] remediationExecutionStatuses;
+
     public DescribeRemediationExecutionStatusResponse withRemediationExecutionStatuses(RemediationExecutionStatus[] remediationExecutionStatuses) {
         this.remediationExecutionStatuses = remediationExecutionStatuses;
         return this;
     }
     
+    public DescribeRemediationExecutionStatusResponse(){}
 }

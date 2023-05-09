@@ -12,9 +12,11 @@ public class GetMailboxesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainName;
+
     public GetMailboxesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public GetMailboxesRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsCustomInsertRequest {
@@ -12,6 +13,7 @@ public class GetReportsCustomInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Object[] ids;
+
     public GetReportsCustomInsertRequest withIds(Object[] ids) {
         this.ids = ids;
         return this;
@@ -22,9 +24,14 @@ public class GetReportsCustomInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_hash")
     public String uploadHash;
+
     public GetReportsCustomInsertRequest withUploadHash(String uploadHash) {
         this.uploadHash = uploadHash;
         return this;
     }
     
+    public GetReportsCustomInsertRequest(@JsonProperty("ids") Object[] ids, @JsonProperty("upload_hash") String uploadHash) {
+        this.ids = ids;
+        this.uploadHash = uploadHash;
+  }
 }

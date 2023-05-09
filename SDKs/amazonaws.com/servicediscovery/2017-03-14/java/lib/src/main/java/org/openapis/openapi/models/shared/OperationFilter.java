@@ -15,6 +15,7 @@ public class OperationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public FilterConditionEnum condition;
+
     public OperationFilter withCondition(FilterConditionEnum condition) {
         this.condition = condition;
         return this;
@@ -22,6 +23,7 @@ public class OperationFilter {
     
     @JsonProperty("Name")
     public OperationFilterNameEnum name;
+
     public OperationFilter withName(OperationFilterNameEnum name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class OperationFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public OperationFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public OperationFilter(@JsonProperty("Name") OperationFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

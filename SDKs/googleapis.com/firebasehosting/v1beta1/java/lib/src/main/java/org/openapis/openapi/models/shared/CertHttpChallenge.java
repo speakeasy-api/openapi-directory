@@ -18,6 +18,7 @@ public class CertHttpChallenge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public CertHttpChallenge withPath(String path) {
         this.path = path;
         return this;
@@ -29,9 +30,11 @@ public class CertHttpChallenge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public CertHttpChallenge withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public CertHttpChallenge(){}
 }

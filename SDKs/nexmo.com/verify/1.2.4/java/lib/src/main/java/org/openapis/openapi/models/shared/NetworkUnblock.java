@@ -15,6 +15,7 @@ public class NetworkUnblock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkUnblock withNetwork(String network) {
         this.network = network;
         return this;
@@ -26,9 +27,11 @@ public class NetworkUnblock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unblock_duration")
     public Long unblockDuration;
+
     public NetworkUnblock withUnblockDuration(Long unblockDuration) {
         this.unblockDuration = unblockDuration;
         return this;
     }
     
+    public NetworkUnblock(){}
 }

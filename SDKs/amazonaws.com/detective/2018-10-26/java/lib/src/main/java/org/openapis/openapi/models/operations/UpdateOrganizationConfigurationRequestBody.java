@@ -15,6 +15,7 @@ public class UpdateOrganizationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoEnable")
     public Boolean autoEnable;
+
     public UpdateOrganizationConfigurationRequestBody withAutoEnable(Boolean autoEnable) {
         this.autoEnable = autoEnable;
         return this;
@@ -25,9 +26,13 @@ public class UpdateOrganizationConfigurationRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public UpdateOrganizationConfigurationRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public UpdateOrganizationConfigurationRequestBody(@JsonProperty("GraphArn") String graphArn) {
+        this.graphArn = graphArn;
+  }
 }

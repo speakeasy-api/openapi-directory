@@ -15,6 +15,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri_am_from")
     public String friAmFrom;
+
     public V3StopStaffing withFriAmFrom(String friAmFrom) {
         this.friAmFrom = friAmFrom;
         return this;
@@ -26,6 +27,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri_am_to")
     public String friAmTo;
+
     public V3StopStaffing withFriAmTo(String friAmTo) {
         this.friAmTo = friAmTo;
         return this;
@@ -37,6 +39,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri_pm_from")
     public String friPmFrom;
+
     public V3StopStaffing withFriPmFrom(String friPmFrom) {
         this.friPmFrom = friPmFrom;
         return this;
@@ -48,6 +51,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri_pm_to")
     public String friPmTo;
+
     public V3StopStaffing withFriPmTo(String friPmTo) {
         this.friPmTo = friPmTo;
         return this;
@@ -59,6 +63,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon_am_from")
     public String monAmFrom;
+
     public V3StopStaffing withMonAmFrom(String monAmFrom) {
         this.monAmFrom = monAmFrom;
         return this;
@@ -70,6 +75,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon_am_to")
     public String monAmTo;
+
     public V3StopStaffing withMonAmTo(String monAmTo) {
         this.monAmTo = monAmTo;
         return this;
@@ -81,6 +87,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon_pm_from")
     public String monPmFrom;
+
     public V3StopStaffing withMonPmFrom(String monPmFrom) {
         this.monPmFrom = monPmFrom;
         return this;
@@ -92,6 +99,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon_pm_to")
     public String monPmTo;
+
     public V3StopStaffing withMonPmTo(String monPmTo) {
         this.monPmTo = monPmTo;
         return this;
@@ -103,6 +111,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ph_additional_text")
     public String phAdditionalText;
+
     public V3StopStaffing withPhAdditionalText(String phAdditionalText) {
         this.phAdditionalText = phAdditionalText;
         return this;
@@ -114,6 +123,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ph_from")
     public String phFrom;
+
     public V3StopStaffing withPhFrom(String phFrom) {
         this.phFrom = phFrom;
         return this;
@@ -125,6 +135,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ph_to")
     public String phTo;
+
     public V3StopStaffing withPhTo(String phTo) {
         this.phTo = phTo;
         return this;
@@ -136,6 +147,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat_am_from")
     public String satAmFrom;
+
     public V3StopStaffing withSatAmFrom(String satAmFrom) {
         this.satAmFrom = satAmFrom;
         return this;
@@ -147,6 +159,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat_am_to")
     public String satAmTo;
+
     public V3StopStaffing withSatAmTo(String satAmTo) {
         this.satAmTo = satAmTo;
         return this;
@@ -158,6 +171,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat_pm_from")
     public String satPmFrom;
+
     public V3StopStaffing withSatPmFrom(String satPmFrom) {
         this.satPmFrom = satPmFrom;
         return this;
@@ -169,6 +183,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat_pm_to")
     public String satPmTo;
+
     public V3StopStaffing withSatPmTo(String satPmTo) {
         this.satPmTo = satPmTo;
         return this;
@@ -180,6 +195,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun_am_from")
     public String sunAmFrom;
+
     public V3StopStaffing withSunAmFrom(String sunAmFrom) {
         this.sunAmFrom = sunAmFrom;
         return this;
@@ -191,6 +207,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun_am_to")
     public String sunAmTo;
+
     public V3StopStaffing withSunAmTo(String sunAmTo) {
         this.sunAmTo = sunAmTo;
         return this;
@@ -202,6 +219,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun_pm_from")
     public String sunPmFrom;
+
     public V3StopStaffing withSunPmFrom(String sunPmFrom) {
         this.sunPmFrom = sunPmFrom;
         return this;
@@ -213,6 +231,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun_pm_to")
     public String sunPmTo;
+
     public V3StopStaffing withSunPmTo(String sunPmTo) {
         this.sunPmTo = sunPmTo;
         return this;
@@ -224,6 +243,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu_am_from")
     public String thuAmFrom;
+
     public V3StopStaffing withThuAmFrom(String thuAmFrom) {
         this.thuAmFrom = thuAmFrom;
         return this;
@@ -235,6 +255,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu_am_to")
     public String thuAmTo;
+
     public V3StopStaffing withThuAmTo(String thuAmTo) {
         this.thuAmTo = thuAmTo;
         return this;
@@ -246,6 +267,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu_pm_from")
     public String thuPmFrom;
+
     public V3StopStaffing withThuPmFrom(String thuPmFrom) {
         this.thuPmFrom = thuPmFrom;
         return this;
@@ -257,6 +279,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu_pm_to")
     public String thuPmTo;
+
     public V3StopStaffing withThuPmTo(String thuPmTo) {
         this.thuPmTo = thuPmTo;
         return this;
@@ -268,6 +291,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue_am_from")
     public String tueAmFrom;
+
     public V3StopStaffing withTueAmFrom(String tueAmFrom) {
         this.tueAmFrom = tueAmFrom;
         return this;
@@ -279,6 +303,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue_am_to")
     public String tueAmTo;
+
     public V3StopStaffing withTueAmTo(String tueAmTo) {
         this.tueAmTo = tueAmTo;
         return this;
@@ -290,6 +315,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue_pm_from")
     public String tuePmFrom;
+
     public V3StopStaffing withTuePmFrom(String tuePmFrom) {
         this.tuePmFrom = tuePmFrom;
         return this;
@@ -301,6 +327,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue_pm_to")
     public String tuePmTo;
+
     public V3StopStaffing withTuePmTo(String tuePmTo) {
         this.tuePmTo = tuePmTo;
         return this;
@@ -312,6 +339,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed_am_from")
     public String wedAmFrom;
+
     public V3StopStaffing withWedAmFrom(String wedAmFrom) {
         this.wedAmFrom = wedAmFrom;
         return this;
@@ -323,6 +351,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed_am_to")
     public String wedAmTo;
+
     public V3StopStaffing withWedAmTo(String wedAmTo) {
         this.wedAmTo = wedAmTo;
         return this;
@@ -334,6 +363,7 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed_pm_To")
     public String wedPmTo;
+
     public V3StopStaffing withWedPmTo(String wedPmTo) {
         this.wedPmTo = wedPmTo;
         return this;
@@ -345,9 +375,11 @@ public class V3StopStaffing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed_pm_from")
     public String wedPmFrom;
+
     public V3StopStaffing withWedPmFrom(String wedPmFrom) {
         this.wedPmFrom = wedPmFrom;
         return this;
     }
     
+    public V3StopStaffing(){}
 }

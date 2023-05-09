@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBParameterGroupsMessage {
     
     public String dbParameterGroupName;
+
     public DescribeDBParameterGroupsMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBParameterGroupsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBParameterGroupsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBParameterGroupsMessage {
     
     
     public String marker;
+
     public DescribeDBParameterGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +33,11 @@ public class DescribeDBParameterGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBParameterGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBParameterGroupsMessage(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ExportTransitGatewayRoutesResult {
     
     public String s3Location;
+
     public ExportTransitGatewayRoutesResult withS3Location(String s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public ExportTransitGatewayRoutesResult(){}
 }

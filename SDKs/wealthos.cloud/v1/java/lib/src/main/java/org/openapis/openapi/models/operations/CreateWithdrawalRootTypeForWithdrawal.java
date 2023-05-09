@@ -15,6 +15,7 @@ public class CreateWithdrawalRootTypeForWithdrawal {
      */
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public CreateWithdrawalRootTypeForWithdrawal withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -25,6 +26,7 @@ public class CreateWithdrawalRootTypeForWithdrawal {
      */
     @JsonProperty("currency")
     public String currency;
+
     public CreateWithdrawalRootTypeForWithdrawal withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -35,6 +37,7 @@ public class CreateWithdrawalRootTypeForWithdrawal {
      */
     @JsonProperty("pot_id")
     public String potId;
+
     public CreateWithdrawalRootTypeForWithdrawal withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -45,6 +48,7 @@ public class CreateWithdrawalRootTypeForWithdrawal {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public CreateWithdrawalRootTypeForWithdrawal withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -55,6 +59,7 @@ public class CreateWithdrawalRootTypeForWithdrawal {
      */
     @JsonProperty("sub_transaction_type")
     public CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum subTransactionType;
+
     public CreateWithdrawalRootTypeForWithdrawal withSubTransactionType(CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum subTransactionType) {
         this.subTransactionType = subTransactionType;
         return this;
@@ -65,9 +70,18 @@ public class CreateWithdrawalRootTypeForWithdrawal {
      */
     @JsonProperty("transaction_value")
     public String transactionValue;
+
     public CreateWithdrawalRootTypeForWithdrawal withTransactionValue(String transactionValue) {
         this.transactionValue = transactionValue;
         return this;
     }
     
+    public CreateWithdrawalRootTypeForWithdrawal(@JsonProperty("bank_account_id") String bankAccountId, @JsonProperty("currency") String currency, @JsonProperty("pot_id") String potId, @JsonProperty("request_id") String requestId, @JsonProperty("sub_transaction_type") CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum subTransactionType, @JsonProperty("transaction_value") String transactionValue) {
+        this.bankAccountId = bankAccountId;
+        this.currency = currency;
+        this.potId = potId;
+        this.requestId = requestId;
+        this.subTransactionType = subTransactionType;
+        this.transactionValue = transactionValue;
+  }
 }

@@ -18,6 +18,7 @@ public class TeamsCreateTeamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamsCreateTeamRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class TeamsCreateTeamRequestBody {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsCreateTeamRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,9 +41,13 @@ public class TeamsCreateTeamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamsCreateTeamRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TeamsCreateTeamRequestBody(@JsonProperty("display_name") String displayName) {
+        this.displayName = displayName;
+  }
 }

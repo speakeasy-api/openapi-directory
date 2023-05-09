@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GeoMatchSet {
     @JsonProperty("GeoMatchConstraints")
     public GeoMatchConstraint[] geoMatchConstraints;
+
     public GeoMatchSet withGeoMatchConstraints(GeoMatchConstraint[] geoMatchConstraints) {
         this.geoMatchConstraints = geoMatchConstraints;
         return this;
@@ -21,6 +22,7 @@ public class GeoMatchSet {
     
     @JsonProperty("GeoMatchSetId")
     public String geoMatchSetId;
+
     public GeoMatchSet withGeoMatchSetId(String geoMatchSetId) {
         this.geoMatchSetId = geoMatchSetId;
         return this;
@@ -29,9 +31,14 @@ public class GeoMatchSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GeoMatchSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GeoMatchSet(@JsonProperty("GeoMatchConstraints") GeoMatchConstraint[] geoMatchConstraints, @JsonProperty("GeoMatchSetId") String geoMatchSetId) {
+        this.geoMatchConstraints = geoMatchConstraints;
+        this.geoMatchSetId = geoMatchSetId;
+  }
 }

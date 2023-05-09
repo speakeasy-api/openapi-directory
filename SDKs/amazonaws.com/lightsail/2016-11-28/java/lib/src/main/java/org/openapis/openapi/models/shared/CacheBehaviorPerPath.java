@@ -15,6 +15,7 @@ public class CacheBehaviorPerPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behavior")
     public BehaviorEnumEnum behavior;
+
     public CacheBehaviorPerPath withBehavior(BehaviorEnumEnum behavior) {
         this.behavior = behavior;
         return this;
@@ -23,9 +24,11 @@ public class CacheBehaviorPerPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public CacheBehaviorPerPath withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public CacheBehaviorPerPath(){}
 }

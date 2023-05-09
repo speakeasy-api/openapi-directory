@@ -18,9 +18,11 @@ public class ModifyAttachmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addAttachments")
     public Attachment[] addAttachments;
+
     public ModifyAttachmentsRequest withAddAttachments(Attachment[] addAttachments) {
         this.addAttachments = addAttachments;
         return this;
     }
     
+    public ModifyAttachmentsRequest(){}
 }

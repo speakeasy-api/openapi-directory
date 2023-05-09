@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectCustomLabelsResponse {
@@ -12,6 +13,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object accessDeniedException;
+
     public DetectCustomLabelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetectCustomLabelsResponse {
     
     
     public String contentType;
+
     public DetectCustomLabelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectCustomLabelsResponse detectCustomLabelsResponse;
+
     public DetectCustomLabelsResponse withDetectCustomLabelsResponse(org.openapis.openapi.models.shared.DetectCustomLabelsResponse detectCustomLabelsResponse) {
         this.detectCustomLabelsResponse = detectCustomLabelsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object imageTooLargeException;
+
     public DetectCustomLabelsResponse withImageTooLargeException(Object imageTooLargeException) {
         this.imageTooLargeException = imageTooLargeException;
         return this;
@@ -49,6 +54,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object internalServerError;
+
     public DetectCustomLabelsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object invalidImageFormatException;
+
     public DetectCustomLabelsResponse withInvalidImageFormatException(Object invalidImageFormatException) {
         this.invalidImageFormatException = invalidImageFormatException;
         return this;
@@ -69,6 +76,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object invalidParameterException;
+
     public DetectCustomLabelsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public DetectCustomLabelsResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object limitExceededException;
+
     public DetectCustomLabelsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DetectCustomLabelsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -109,6 +120,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetectCustomLabelsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -116,6 +128,7 @@ public class DetectCustomLabelsResponse {
     
     
     public Integer statusCode;
+
     public DetectCustomLabelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class DetectCustomLabelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectCustomLabelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object resourceNotReadyException;
+
     public DetectCustomLabelsResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -143,9 +158,14 @@ public class DetectCustomLabelsResponse {
      */
     
     public Object throttlingException;
+
     public DetectCustomLabelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DetectCustomLabelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

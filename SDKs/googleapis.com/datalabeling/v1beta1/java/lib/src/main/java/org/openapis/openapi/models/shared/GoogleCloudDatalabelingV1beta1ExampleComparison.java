@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ExampleComparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groundTruthExample")
     public GoogleCloudDatalabelingV1beta1Example groundTruthExample;
+
     public GoogleCloudDatalabelingV1beta1ExampleComparison withGroundTruthExample(GoogleCloudDatalabelingV1beta1Example groundTruthExample) {
         this.groundTruthExample = groundTruthExample;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1ExampleComparison {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelCreatedExamples")
     public GoogleCloudDatalabelingV1beta1Example[] modelCreatedExamples;
+
     public GoogleCloudDatalabelingV1beta1ExampleComparison withModelCreatedExamples(GoogleCloudDatalabelingV1beta1Example[] modelCreatedExamples) {
         this.modelCreatedExamples = modelCreatedExamples;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ExampleComparison(){}
 }

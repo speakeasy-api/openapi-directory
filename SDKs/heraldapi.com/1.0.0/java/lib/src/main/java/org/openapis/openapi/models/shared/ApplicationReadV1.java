@@ -18,6 +18,7 @@ public class ApplicationReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_values")
     public CoverageValueReadV1[] coverageValues;
+
     public ApplicationReadV1 withCoverageValues(CoverageValueReadV1[] coverageValues) {
         this.coverageValues = coverageValues;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApplicationReadV1 withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class ApplicationReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public String[] products;
+
     public ApplicationReadV1 withProducts(String[] products) {
         this.products = products;
         return this;
@@ -51,6 +54,7 @@ public class ApplicationReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_values")
     public RiskValueReadV1[] riskValues;
+
     public ApplicationReadV1 withRiskValues(RiskValueReadV1[] riskValues) {
         this.riskValues = riskValues;
         return this;
@@ -62,9 +66,11 @@ public class ApplicationReadV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ApplicationReadV1StatusEnum status;
+
     public ApplicationReadV1 withStatus(ApplicationReadV1StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ApplicationReadV1(){}
 }

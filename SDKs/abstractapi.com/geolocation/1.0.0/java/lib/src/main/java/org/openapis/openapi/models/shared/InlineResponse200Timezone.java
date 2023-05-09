@@ -12,6 +12,7 @@ public class InlineResponse200Timezone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public InlineResponse200Timezone withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -20,6 +21,7 @@ public class InlineResponse200Timezone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_time")
     public String currentTime;
+
     public InlineResponse200Timezone withCurrentTime(String currentTime) {
         this.currentTime = currentTime;
         return this;
@@ -28,6 +30,7 @@ public class InlineResponse200Timezone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gmt_offset")
     public Long gmtOffset;
+
     public InlineResponse200Timezone withGmtOffset(Long gmtOffset) {
         this.gmtOffset = gmtOffset;
         return this;
@@ -36,6 +39,7 @@ public class InlineResponse200Timezone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_dst")
     public Boolean isDst;
+
     public InlineResponse200Timezone withIsDst(Boolean isDst) {
         this.isDst = isDst;
         return this;
@@ -44,9 +48,11 @@ public class InlineResponse200Timezone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InlineResponse200Timezone withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InlineResponse200Timezone(){}
 }

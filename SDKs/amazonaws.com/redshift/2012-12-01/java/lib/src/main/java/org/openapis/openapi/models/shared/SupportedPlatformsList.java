@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SupportedPlatformsList {
     
     public String name;
+
     public SupportedPlatformsList withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SupportedPlatformsList(){}
 }

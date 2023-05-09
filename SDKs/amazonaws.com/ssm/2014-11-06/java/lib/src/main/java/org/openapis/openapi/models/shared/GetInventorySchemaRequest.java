@@ -12,6 +12,7 @@ public class GetInventorySchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aggregator")
     public Boolean aggregator;
+
     public GetInventorySchemaRequest withAggregator(Boolean aggregator) {
         this.aggregator = aggregator;
         return this;
@@ -20,6 +21,7 @@ public class GetInventorySchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetInventorySchemaRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class GetInventorySchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInventorySchemaRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class GetInventorySchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubType")
     public Boolean subType;
+
     public GetInventorySchemaRequest withSubType(Boolean subType) {
         this.subType = subType;
         return this;
@@ -44,9 +48,11 @@ public class GetInventorySchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public GetInventorySchemaRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public GetInventorySchemaRequest(){}
 }

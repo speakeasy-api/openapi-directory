@@ -15,9 +15,11 @@ public class GetTokenMetadataResponseMetadataOfUtxoUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public java.util.Map<String, Object>[] meta;
+
     public GetTokenMetadataResponseMetadataOfUtxoUserData withMeta(java.util.Map<String, Object>[] meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetTokenMetadataResponseMetadataOfUtxoUserData(){}
 }

@@ -15,6 +15,7 @@ public class ReleaseNotesContent {
      */
     @JsonProperty("body")
     public String body;
+
     public ReleaseNotesContent withBody(String body) {
         this.body = body;
         return this;
@@ -25,9 +26,14 @@ public class ReleaseNotesContent {
      */
     @JsonProperty("name")
     public String name;
+
     public ReleaseNotesContent withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReleaseNotesContent(@JsonProperty("body") String body, @JsonProperty("name") String name) {
+        this.body = body;
+        this.name = name;
+  }
 }

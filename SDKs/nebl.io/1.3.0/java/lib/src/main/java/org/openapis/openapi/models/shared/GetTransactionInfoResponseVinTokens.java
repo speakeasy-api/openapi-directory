@@ -15,6 +15,7 @@ public class GetTransactionInfoResponseVinTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationPolicy")
     public String aggregationPolicy;
+
     public GetTransactionInfoResponseVinTokens withAggregationPolicy(String aggregationPolicy) {
         this.aggregationPolicy = aggregationPolicy;
         return this;
@@ -26,6 +27,7 @@ public class GetTransactionInfoResponseVinTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public GetTransactionInfoResponseVinTokens withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -37,6 +39,7 @@ public class GetTransactionInfoResponseVinTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("divisibility")
     public Double divisibility;
+
     public GetTransactionInfoResponseVinTokens withDivisibility(Double divisibility) {
         this.divisibility = divisibility;
         return this;
@@ -48,6 +51,7 @@ public class GetTransactionInfoResponseVinTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueTxid")
     public String issueTxid;
+
     public GetTransactionInfoResponseVinTokens withIssueTxid(String issueTxid) {
         this.issueTxid = issueTxid;
         return this;
@@ -59,6 +63,7 @@ public class GetTransactionInfoResponseVinTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockStatus")
     public Boolean lockStatus;
+
     public GetTransactionInfoResponseVinTokens withLockStatus(Boolean lockStatus) {
         this.lockStatus = lockStatus;
         return this;
@@ -70,9 +75,11 @@ public class GetTransactionInfoResponseVinTokens {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public GetTransactionInfoResponseVinTokens withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public GetTransactionInfoResponseVinTokens(){}
 }

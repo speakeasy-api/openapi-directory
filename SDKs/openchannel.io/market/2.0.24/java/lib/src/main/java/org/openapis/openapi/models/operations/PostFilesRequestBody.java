@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFilesRequestBody {
@@ -12,9 +13,13 @@ public class PostFilesRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PostFilesRequestBodyFile file;
+
     public PostFilesRequestBody withFile(PostFilesRequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public PostFilesRequestBody(@JsonProperty("file") PostFilesRequestBodyFile file) {
+        this.file = file;
+  }
 }

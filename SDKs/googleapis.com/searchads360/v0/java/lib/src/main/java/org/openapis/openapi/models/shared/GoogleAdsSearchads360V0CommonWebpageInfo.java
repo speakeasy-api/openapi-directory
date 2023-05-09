@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonWebpageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GoogleAdsSearchads360V0CommonWebpageConditionInfo[] conditions;
+
     public GoogleAdsSearchads360V0CommonWebpageInfo withConditions(GoogleAdsSearchads360V0CommonWebpageConditionInfo[] conditions) {
         this.conditions = conditions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0CommonWebpageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coveragePercentage")
     public Double coveragePercentage;
+
     public GoogleAdsSearchads360V0CommonWebpageInfo withCoveragePercentage(Double coveragePercentage) {
         this.coveragePercentage = coveragePercentage;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0CommonWebpageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criterionName")
     public String criterionName;
+
     public GoogleAdsSearchads360V0CommonWebpageInfo withCriterionName(String criterionName) {
         this.criterionName = criterionName;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonWebpageInfo(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CountriesGetV2CountriesGetResponse {
     
     public String contentType;
+
     public CountriesGetV2CountriesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CountriesGetV2CountriesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public CountriesGetV2CountriesGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class CountriesGetV2CountriesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQCountriesResult openAQCountriesResult;
+
     public CountriesGetV2CountriesGetResponse withOpenAQCountriesResult(org.openapis.openapi.models.shared.OpenAQCountriesResult openAQCountriesResult) {
         this.openAQCountriesResult = openAQCountriesResult;
         return this;
@@ -36,6 +40,7 @@ public class CountriesGetV2CountriesGetResponse {
     
     
     public Integer statusCode;
+
     public CountriesGetV2CountriesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CountriesGetV2CountriesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CountriesGetV2CountriesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CountriesGetV2CountriesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

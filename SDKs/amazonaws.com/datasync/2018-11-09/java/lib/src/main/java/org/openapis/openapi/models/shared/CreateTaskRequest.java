@@ -15,6 +15,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogGroupArn")
     public String cloudWatchLogGroupArn;
+
     public CreateTaskRequest withCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         return this;
@@ -22,6 +23,7 @@ public class CreateTaskRequest {
     
     @JsonProperty("DestinationLocationArn")
     public String destinationLocationArn;
+
     public CreateTaskRequest withDestinationLocationArn(String destinationLocationArn) {
         this.destinationLocationArn = destinationLocationArn;
         return this;
@@ -30,6 +32,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Excludes")
     public FilterRule[] excludes;
+
     public CreateTaskRequest withExcludes(FilterRule[] excludes) {
         this.excludes = excludes;
         return this;
@@ -38,6 +41,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Includes")
     public FilterRule[] includes;
+
     public CreateTaskRequest withIncludes(FilterRule[] includes) {
         this.includes = includes;
         return this;
@@ -46,6 +50,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateTaskRequest withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +59,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public Options options;
+
     public CreateTaskRequest withOptions(Options options) {
         this.options = options;
         return this;
@@ -62,6 +68,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public TaskSchedule schedule;
+
     public CreateTaskRequest withSchedule(TaskSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -69,6 +76,7 @@ public class CreateTaskRequest {
     
     @JsonProperty("SourceLocationArn")
     public String sourceLocationArn;
+
     public CreateTaskRequest withSourceLocationArn(String sourceLocationArn) {
         this.sourceLocationArn = sourceLocationArn;
         return this;
@@ -77,9 +85,14 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateTaskRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTaskRequest(@JsonProperty("DestinationLocationArn") String destinationLocationArn, @JsonProperty("SourceLocationArn") String sourceLocationArn) {
+        this.destinationLocationArn = destinationLocationArn;
+        this.sourceLocationArn = sourceLocationArn;
+  }
 }

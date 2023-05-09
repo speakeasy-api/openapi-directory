@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAccessPreviewsResponse {
     @JsonProperty("accessPreviews")
     public AccessPreviewSummary[] accessPreviews;
+
     public ListAccessPreviewsResponse withAccessPreviews(AccessPreviewSummary[] accessPreviews) {
         this.accessPreviews = accessPreviews;
         return this;
@@ -22,9 +23,13 @@ public class ListAccessPreviewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAccessPreviewsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccessPreviewsResponse(@JsonProperty("accessPreviews") AccessPreviewSummary[] accessPreviews) {
+        this.accessPreviews = accessPreviews;
+  }
 }

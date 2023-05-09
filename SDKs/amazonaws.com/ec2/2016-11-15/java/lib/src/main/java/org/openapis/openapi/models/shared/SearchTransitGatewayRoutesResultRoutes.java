@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchTransitGatewayRoutesResultRoutes {
     
     public String destinationCidrBlock;
+
     public SearchTransitGatewayRoutesResultRoutes withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class SearchTransitGatewayRoutesResultRoutes {
     
     
     public String prefixListId;
+
     public SearchTransitGatewayRoutesResultRoutes withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -26,6 +28,7 @@ public class SearchTransitGatewayRoutesResultRoutes {
     
     
     public SearchTransitGatewayRoutesResultRoutesStateEnum state;
+
     public SearchTransitGatewayRoutesResultRoutes withState(SearchTransitGatewayRoutesResultRoutesStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class SearchTransitGatewayRoutesResultRoutes {
     
     
     public SearchTransitGatewayRoutesResultRoutesTransitGatewayAttachments[] transitGatewayAttachments;
+
     public SearchTransitGatewayRoutesResultRoutes withTransitGatewayAttachments(SearchTransitGatewayRoutesResultRoutesTransitGatewayAttachments[] transitGatewayAttachments) {
         this.transitGatewayAttachments = transitGatewayAttachments;
         return this;
@@ -40,6 +44,7 @@ public class SearchTransitGatewayRoutesResultRoutes {
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public SearchTransitGatewayRoutesResultRoutes withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -47,9 +52,11 @@ public class SearchTransitGatewayRoutesResultRoutes {
     
     
     public SearchTransitGatewayRoutesResultRoutesTypeEnum type;
+
     public SearchTransitGatewayRoutesResultRoutes withType(SearchTransitGatewayRoutesResultRoutesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SearchTransitGatewayRoutesResultRoutes(){}
 }

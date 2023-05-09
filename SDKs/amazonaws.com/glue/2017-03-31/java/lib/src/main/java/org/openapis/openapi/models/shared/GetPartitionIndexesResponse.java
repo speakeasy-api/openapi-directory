@@ -15,6 +15,7 @@ public class GetPartitionIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetPartitionIndexesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetPartitionIndexesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionIndexDescriptorList")
     public PartitionIndexDescriptor[] partitionIndexDescriptorList;
+
     public GetPartitionIndexesResponse withPartitionIndexDescriptorList(PartitionIndexDescriptor[] partitionIndexDescriptorList) {
         this.partitionIndexDescriptorList = partitionIndexDescriptorList;
         return this;
     }
     
+    public GetPartitionIndexesResponse(){}
 }

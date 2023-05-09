@@ -15,6 +15,7 @@ public class ProductOptionVariantEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductOptionVariantEdit withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class ProductOptionVariantEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_option_id")
     public Integer productOptionId;
+
     public ProductOptionVariantEdit withProductOptionId(Integer productOptionId) {
         this.productOptionId = productOptionId;
         return this;
@@ -37,6 +39,7 @@ public class ProductOptionVariantEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_option_position")
     public Integer productOptionPosition;
+
     public ProductOptionVariantEdit withProductOptionPosition(Integer productOptionPosition) {
         this.productOptionPosition = productOptionPosition;
         return this;
@@ -48,6 +51,7 @@ public class ProductOptionVariantEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_option_value_id")
     public Integer productOptionValueId;
+
     public ProductOptionVariantEdit withProductOptionValueId(Integer productOptionValueId) {
         this.productOptionValueId = productOptionValueId;
         return this;
@@ -59,6 +63,7 @@ public class ProductOptionVariantEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_value_position")
     public Integer productValuePosition;
+
     public ProductOptionVariantEdit withProductValuePosition(Integer productValuePosition) {
         this.productValuePosition = productValuePosition;
         return this;
@@ -70,9 +75,11 @@ public class ProductOptionVariantEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ProductOptionVariantEdit withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProductOptionVariantEdit(){}
 }

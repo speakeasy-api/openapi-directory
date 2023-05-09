@@ -15,6 +15,7 @@ public class CreateRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contracttest")
     public String[] contracttest;
+
     public CreateRelations200ApplicationJSON withContracttest(String[] contracttest) {
         this.contracttest = contracttest;
         return this;
@@ -23,6 +24,7 @@ public class CreateRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public String[] documentation;
+
     public CreateRelations200ApplicationJSON withDocumentation(String[] documentation) {
         this.documentation = documentation;
         return this;
@@ -31,9 +33,11 @@ public class CreateRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testsuite")
     public String[] testsuite;
+
     public CreateRelations200ApplicationJSON withTestsuite(String[] testsuite) {
         this.testsuite = testsuite;
         return this;
     }
     
+    public CreateRelations200ApplicationJSON(){}
 }

@@ -16,9 +16,11 @@ public class GetUserAccountInfoRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetUserAccountInfoRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    public GetUserAccountInfoRequest(){}
 }

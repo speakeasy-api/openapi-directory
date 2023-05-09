@@ -15,9 +15,11 @@ public class CreateFileCacheResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCache")
     public FileCacheCreating fileCache;
+
     public CreateFileCacheResponse withFileCache(FileCacheCreating fileCache) {
         this.fileCache = fileCache;
         return this;
     }
     
+    public CreateFileCacheResponse(){}
 }

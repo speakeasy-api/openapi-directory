@@ -12,6 +12,7 @@ public class VideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public VideosRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class VideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public VideosRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public VideosRequest(){}
 }

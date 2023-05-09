@@ -18,6 +18,7 @@ public class ResultsStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultsStoragePath")
     public FileReference resultsStoragePath;
+
     public ResultsStorage withResultsStoragePath(FileReference resultsStoragePath) {
         this.resultsStoragePath = resultsStoragePath;
         return this;
@@ -29,9 +30,11 @@ public class ResultsStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xunitXmlFile")
     public FileReference xunitXmlFile;
+
     public ResultsStorage withXunitXmlFile(FileReference xunitXmlFile) {
         this.xunitXmlFile = xunitXmlFile;
         return this;
     }
     
+    public ResultsStorage(){}
 }

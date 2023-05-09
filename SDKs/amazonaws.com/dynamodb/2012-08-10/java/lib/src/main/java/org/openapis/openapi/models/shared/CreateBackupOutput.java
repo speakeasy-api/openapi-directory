@@ -15,9 +15,11 @@ public class CreateBackupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupDetails")
     public BackupDetails backupDetails;
+
     public CreateBackupOutput withBackupDetails(BackupDetails backupDetails) {
         this.backupDetails = backupDetails;
         return this;
     }
     
+    public CreateBackupOutput(){}
 }

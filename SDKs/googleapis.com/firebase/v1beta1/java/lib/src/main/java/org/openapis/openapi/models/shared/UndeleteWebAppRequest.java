@@ -15,6 +15,7 @@ public class UndeleteWebAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public UndeleteWebAppRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -26,9 +27,11 @@ public class UndeleteWebAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public UndeleteWebAppRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public UndeleteWebAppRequest(){}
 }

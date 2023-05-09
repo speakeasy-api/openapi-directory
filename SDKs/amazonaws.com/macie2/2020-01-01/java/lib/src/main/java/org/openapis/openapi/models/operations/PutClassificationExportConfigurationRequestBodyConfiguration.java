@@ -15,9 +15,11 @@ public class PutClassificationExportConfigurationRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Destination")
     public org.openapis.openapi.models.shared.S3Destination s3Destination;
+
     public PutClassificationExportConfigurationRequestBodyConfiguration withS3Destination(org.openapis.openapi.models.shared.S3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public PutClassificationExportConfigurationRequestBodyConfiguration(){}
 }

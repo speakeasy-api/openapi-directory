@@ -12,6 +12,7 @@ public class IPAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IP")
     public String ip;
+
     public IPAlias withIp(String ip) {
         this.ip = ip;
         return this;
@@ -20,6 +21,7 @@ public class IPAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interface")
     public String interface_;
+
     public IPAlias withInterface(String interface_) {
         this.interface_ = interface_;
         return this;
@@ -28,6 +30,7 @@ public class IPAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mask")
     public String mask;
+
     public IPAlias withMask(String mask) {
         this.mask = mask;
         return this;
@@ -36,9 +39,11 @@ public class IPAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public IPAlias withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public IPAlias(){}
 }

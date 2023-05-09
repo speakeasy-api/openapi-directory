@@ -13,6 +13,7 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringBodyIds")
     public Integer[] parametersAnsweringBodyIds;
+
     public PublishedOralQuestionTimeGetRequest withParametersAnsweringBodyIds(Integer[] parametersAnsweringBodyIds) {
         this.parametersAnsweringBodyIds = parametersAnsweringBodyIds;
         return this;
@@ -23,6 +24,7 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateEnd")
     public OffsetDateTime parametersAnsweringDateEnd;
+
     public PublishedOralQuestionTimeGetRequest withParametersAnsweringDateEnd(OffsetDateTime parametersAnsweringDateEnd) {
         this.parametersAnsweringDateEnd = parametersAnsweringDateEnd;
         return this;
@@ -33,6 +35,7 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateStart")
     public OffsetDateTime parametersAnsweringDateStart;
+
     public PublishedOralQuestionTimeGetRequest withParametersAnsweringDateStart(OffsetDateTime parametersAnsweringDateStart) {
         this.parametersAnsweringDateStart = parametersAnsweringDateStart;
         return this;
@@ -43,6 +46,7 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.deadlineDateEnd")
     public OffsetDateTime parametersDeadlineDateEnd;
+
     public PublishedOralQuestionTimeGetRequest withParametersDeadlineDateEnd(OffsetDateTime parametersDeadlineDateEnd) {
         this.parametersDeadlineDateEnd = parametersDeadlineDateEnd;
         return this;
@@ -53,6 +57,7 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.deadlineDateStart")
     public OffsetDateTime parametersDeadlineDateStart;
+
     public PublishedOralQuestionTimeGetRequest withParametersDeadlineDateStart(OffsetDateTime parametersDeadlineDateStart) {
         this.parametersDeadlineDateStart = parametersDeadlineDateStart;
         return this;
@@ -63,6 +68,7 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.oralQuestionTimeId")
     public Integer parametersOralQuestionTimeId;
+
     public PublishedOralQuestionTimeGetRequest withParametersOralQuestionTimeId(Integer parametersOralQuestionTimeId) {
         this.parametersOralQuestionTimeId = parametersOralQuestionTimeId;
         return this;
@@ -73,6 +79,7 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.skip")
     public Integer parametersSkip;
+
     public PublishedOralQuestionTimeGetRequest withParametersSkip(Integer parametersSkip) {
         this.parametersSkip = parametersSkip;
         return this;
@@ -83,9 +90,11 @@ public class PublishedOralQuestionTimeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.take")
     public Integer parametersTake;
+
     public PublishedOralQuestionTimeGetRequest withParametersTake(Integer parametersTake) {
         this.parametersTake = parametersTake;
         return this;
     }
     
+    public PublishedOralQuestionTimeGetRequest(){}
 }

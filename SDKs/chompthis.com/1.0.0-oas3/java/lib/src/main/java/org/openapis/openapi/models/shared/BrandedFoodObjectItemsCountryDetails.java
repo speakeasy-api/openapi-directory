@@ -18,6 +18,7 @@ public class BrandedFoodObjectItemsCountryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("english_speaking")
     public Long englishSpeaking;
+
     public BrandedFoodObjectItemsCountryDetails withEnglishSpeaking(Long englishSpeaking) {
         this.englishSpeaking = englishSpeaking;
         return this;
@@ -29,9 +30,11 @@ public class BrandedFoodObjectItemsCountryDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("non_english_speaking")
     public Long nonEnglishSpeaking;
+
     public BrandedFoodObjectItemsCountryDetails withNonEnglishSpeaking(Long nonEnglishSpeaking) {
         this.nonEnglishSpeaking = nonEnglishSpeaking;
         return this;
     }
     
+    public BrandedFoodObjectItemsCountryDetails(){}
 }

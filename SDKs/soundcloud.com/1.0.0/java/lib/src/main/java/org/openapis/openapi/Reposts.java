@@ -54,12 +54,10 @@ public class Reposts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,12 +102,10 @@ public class Reposts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdResponse res = new org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdResponse res = new org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,12 +150,10 @@ public class Reposts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdResponse() {{
+        org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdResponse res = new org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -204,12 +198,10 @@ public class Reposts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepostsTracksTrackIdResponse res = new org.openapis.openapi.models.operations.PostRepostsTracksTrackIdResponse() {{
+        org.openapis.openapi.models.operations.PostRepostsTracksTrackIdResponse res = new org.openapis.openapi.models.operations.PostRepostsTracksTrackIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -18,6 +18,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backfill")
     public Boolean backfill;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration withBackfill(Boolean backfill) {
         this.backfill = backfill;
         return this;
@@ -26,6 +27,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_entities")
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum[] exportEntities;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration withExportEntities(ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum[] exportEntities) {
         this.exportEntities = exportEntities;
         return this;
@@ -37,6 +39,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_group")
     public String resourceGroup;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -48,6 +51,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_name")
     public String resourceName;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -58,9 +62,13 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurat
      */
     @JsonProperty("type")
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum type;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration withType(ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration(@JsonProperty("type") ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum type) {
+        this.type = type;
+  }
 }

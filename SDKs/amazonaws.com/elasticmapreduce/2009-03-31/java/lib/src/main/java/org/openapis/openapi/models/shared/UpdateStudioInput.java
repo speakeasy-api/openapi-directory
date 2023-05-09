@@ -12,6 +12,7 @@ public class UpdateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultS3Location")
     public String defaultS3Location;
+
     public UpdateStudioInput withDefaultS3Location(String defaultS3Location) {
         this.defaultS3Location = defaultS3Location;
         return this;
@@ -20,6 +21,7 @@ public class UpdateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateStudioInput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateStudioInput withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class UpdateStudioInput {
     
     @JsonProperty("StudioId")
     public String studioId;
+
     public UpdateStudioInput withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
@@ -43,9 +47,13 @@ public class UpdateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public UpdateStudioInput withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public UpdateStudioInput(@JsonProperty("StudioId") String studioId) {
+        this.studioId = studioId;
+  }
 }

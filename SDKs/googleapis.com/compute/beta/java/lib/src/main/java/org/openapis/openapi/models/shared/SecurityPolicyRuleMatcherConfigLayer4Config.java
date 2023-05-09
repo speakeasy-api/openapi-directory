@@ -15,6 +15,7 @@ public class SecurityPolicyRuleMatcherConfigLayer4Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipProtocol")
     public String ipProtocol;
+
     public SecurityPolicyRuleMatcherConfigLayer4Config withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPolicyRuleMatcherConfigLayer4Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public String[] ports;
+
     public SecurityPolicyRuleMatcherConfigLayer4Config withPorts(String[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public SecurityPolicyRuleMatcherConfigLayer4Config(){}
 }

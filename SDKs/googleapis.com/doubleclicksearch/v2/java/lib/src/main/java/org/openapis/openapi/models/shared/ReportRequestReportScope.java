@@ -18,6 +18,7 @@ public class ReportRequestReportScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupId")
     public String adGroupId;
+
     public ReportRequestReportScope withAdGroupId(String adGroupId) {
         this.adGroupId = adGroupId;
         return this;
@@ -29,6 +30,7 @@ public class ReportRequestReportScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adId")
     public String adId;
+
     public ReportRequestReportScope withAdId(String adId) {
         this.adId = adId;
         return this;
@@ -40,6 +42,7 @@ public class ReportRequestReportScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public ReportRequestReportScope withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -51,6 +54,7 @@ public class ReportRequestReportScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agencyId")
     public String agencyId;
+
     public ReportRequestReportScope withAgencyId(String agencyId) {
         this.agencyId = agencyId;
         return this;
@@ -62,6 +66,7 @@ public class ReportRequestReportScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public String campaignId;
+
     public ReportRequestReportScope withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -73,6 +78,7 @@ public class ReportRequestReportScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineAccountId")
     public String engineAccountId;
+
     public ReportRequestReportScope withEngineAccountId(String engineAccountId) {
         this.engineAccountId = engineAccountId;
         return this;
@@ -84,9 +90,11 @@ public class ReportRequestReportScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordId")
     public String keywordId;
+
     public ReportRequestReportScope withKeywordId(String keywordId) {
         this.keywordId = keywordId;
         return this;
     }
     
+    public ReportRequestReportScope(){}
 }

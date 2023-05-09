@@ -18,6 +18,7 @@ public class ThirdPartyVendorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementId")
     public String placementId;
+
     public ThirdPartyVendorConfig withPlacementId(String placementId) {
         this.placementId = placementId;
         return this;
@@ -29,9 +30,11 @@ public class ThirdPartyVendorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public ThirdPartyVendorConfigVendorEnum vendor;
+
     public ThirdPartyVendorConfig withVendor(ThirdPartyVendorConfigVendorEnum vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public ThirdPartyVendorConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersGetContextForUserResponse {
     
     public String contentType;
+
     public UsersGetContextForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersGetContextForUserResponse {
     
     
     public Integer statusCode;
+
     public UsersGetContextForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersGetContextForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersGetContextForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersGetContextForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersGetContextForUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class UsersGetContextForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Hovercard hovercard;
+
     public UsersGetContextForUserResponse withHovercard(org.openapis.openapi.models.shared.Hovercard hovercard) {
         this.hovercard = hovercard;
         return this;
@@ -53,9 +59,14 @@ public class UsersGetContextForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public UsersGetContextForUserResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public UsersGetContextForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyAadharBioUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public VerifyAadharBioUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class VerifyAadharBioUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VerifyAadhaarWithBio verifyAadhaarWithBio;
+
     public VerifyAadharBioUsingPOSTRequest withVerifyAadhaarWithBio(org.openapis.openapi.models.shared.VerifyAadhaarWithBio verifyAadhaarWithBio) {
         this.verifyAadhaarWithBio = verifyAadhaarWithBio;
         return this;
     }
     
+    public VerifyAadharBioUsingPOSTRequest(@JsonProperty("VerifyAadhaarWithBio") org.openapis.openapi.models.shared.VerifyAadhaarWithBio verifyAadhaarWithBio) {
+        this.verifyAadhaarWithBio = verifyAadhaarWithBio;
+  }
 }

@@ -18,6 +18,7 @@ public class CatalogV1Id {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_v1_id")
     public String catalogV1Id;
+
     public CatalogV1Id withCatalogV1Id(String catalogV1Id) {
         this.catalogV1Id = catalogV1Id;
         return this;
@@ -29,9 +30,11 @@ public class CatalogV1Id {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public CatalogV1Id withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public CatalogV1Id(){}
 }

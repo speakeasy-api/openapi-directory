@@ -15,6 +15,7 @@ public class ProductViewAggregationValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApproximateCount")
     public Long approximateCount;
+
     public ProductViewAggregationValue withApproximateCount(Long approximateCount) {
         this.approximateCount = approximateCount;
         return this;
@@ -23,9 +24,11 @@ public class ProductViewAggregationValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ProductViewAggregationValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProductViewAggregationValue(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Entitlement {
     @JsonProperty("AppVisibility")
     public AppVisibilityEnum appVisibility;
+
     public Entitlement withAppVisibility(AppVisibilityEnum appVisibility) {
         this.appVisibility = appVisibility;
         return this;
@@ -26,6 +27,7 @@ public class Entitlement {
     
     @JsonProperty("Attributes")
     public EntitlementAttribute[] attributes;
+
     public Entitlement withAttributes(EntitlementAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -36,6 +38,7 @@ public class Entitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public Entitlement withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -44,6 +47,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Entitlement withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class Entitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public Entitlement withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -61,6 +66,7 @@ public class Entitlement {
     
     @JsonProperty("Name")
     public String name;
+
     public Entitlement withName(String name) {
         this.name = name;
         return this;
@@ -68,9 +74,16 @@ public class Entitlement {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public Entitlement withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public Entitlement(@JsonProperty("AppVisibility") AppVisibilityEnum appVisibility, @JsonProperty("Attributes") EntitlementAttribute[] attributes, @JsonProperty("Name") String name, @JsonProperty("StackName") String stackName) {
+        this.appVisibility = appVisibility;
+        this.attributes = attributes;
+        this.name = name;
+        this.stackName = stackName;
+  }
 }

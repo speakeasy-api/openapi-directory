@@ -15,9 +15,11 @@ public class ExtendTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public ExtendTransactionRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ExtendTransactionRequestBody(){}
 }

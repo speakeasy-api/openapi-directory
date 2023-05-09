@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscriptionBatchUpdateRequest {
     @JsonProperty("active")
     public Boolean active;
+
     public SubscriptionBatchUpdateRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -16,9 +17,14 @@ public class SubscriptionBatchUpdateRequest {
     
     @JsonProperty("id")
     public Integer id;
+
     public SubscriptionBatchUpdateRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public SubscriptionBatchUpdateRequest(@JsonProperty("active") Boolean active, @JsonProperty("id") Integer id) {
+        this.active = active;
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public HttpRouteHeader[] headers;
+
     public HttpRouteMatch withHeaders(HttpRouteHeader[] headers) {
         this.headers = headers;
         return this;
@@ -23,6 +24,7 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public HttpMethodEnum method;
+
     public HttpRouteMatch withMethod(HttpMethodEnum method) {
         this.method = method;
         return this;
@@ -31,6 +33,7 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public HttpPathMatch path;
+
     public HttpRouteMatch withPath(HttpPathMatch path) {
         this.path = path;
         return this;
@@ -39,6 +42,7 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public HttpRouteMatch withPort(Long port) {
         this.port = port;
         return this;
@@ -47,6 +51,7 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public HttpRouteMatch withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -55,6 +60,7 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameters")
     public HttpQueryParameter[] queryParameters;
+
     public HttpRouteMatch withQueryParameters(HttpQueryParameter[] queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -63,9 +69,11 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheme")
     public HttpSchemeEnum scheme;
+
     public HttpRouteMatch withScheme(HttpSchemeEnum scheme) {
         this.scheme = scheme;
         return this;
     }
     
+    public HttpRouteMatch(){}
 }

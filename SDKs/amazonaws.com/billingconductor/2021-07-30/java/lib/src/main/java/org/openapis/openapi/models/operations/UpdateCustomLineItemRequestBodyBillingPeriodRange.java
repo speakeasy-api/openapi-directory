@@ -15,6 +15,7 @@ public class UpdateCustomLineItemRequestBodyBillingPeriodRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveEndBillingPeriod")
     public String exclusiveEndBillingPeriod;
+
     public UpdateCustomLineItemRequestBodyBillingPeriodRange withExclusiveEndBillingPeriod(String exclusiveEndBillingPeriod) {
         this.exclusiveEndBillingPeriod = exclusiveEndBillingPeriod;
         return this;
@@ -23,9 +24,11 @@ public class UpdateCustomLineItemRequestBodyBillingPeriodRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusiveStartBillingPeriod")
     public String inclusiveStartBillingPeriod;
+
     public UpdateCustomLineItemRequestBodyBillingPeriodRange withInclusiveStartBillingPeriod(String inclusiveStartBillingPeriod) {
         this.inclusiveStartBillingPeriod = inclusiveStartBillingPeriod;
         return this;
     }
     
+    public UpdateCustomLineItemRequestBodyBillingPeriodRange(){}
 }

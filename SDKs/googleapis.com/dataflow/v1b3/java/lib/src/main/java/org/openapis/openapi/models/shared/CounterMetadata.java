@@ -18,6 +18,7 @@ public class CounterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CounterMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class CounterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public CounterMetadataKindEnum kind;
+
     public CounterMetadata withKind(CounterMetadataKindEnum kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class CounterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherUnits")
     public String otherUnits;
+
     public CounterMetadata withOtherUnits(String otherUnits) {
         this.otherUnits = otherUnits;
         return this;
@@ -51,9 +54,11 @@ public class CounterMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardUnits")
     public CounterMetadataStandardUnitsEnum standardUnits;
+
     public CounterMetadata withStandardUnits(CounterMetadataStandardUnitsEnum standardUnits) {
         this.standardUnits = standardUnits;
         return this;
     }
     
+    public CounterMetadata(){}
 }

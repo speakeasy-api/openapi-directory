@@ -15,6 +15,7 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public ComponentResponse withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -23,6 +24,7 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public ComponentResponse withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -31,6 +33,7 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definedIn")
     public String definedIn;
+
     public ComponentResponse withDefinedIn(String definedIn) {
         this.definedIn = definedIn;
         return this;
@@ -39,6 +42,7 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ComponentResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public ComponentResponse withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -58,6 +63,7 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyGroups")
     public java.util.Map<String, ComponentPropertyGroupResponse> propertyGroups;
+
     public ComponentResponse withPropertyGroups(java.util.Map<String, ComponentPropertyGroupResponse> propertyGroups) {
         this.propertyGroups = propertyGroups;
         return this;
@@ -66,6 +72,7 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public ComponentResponse withStatus(Status status) {
         this.status = status;
         return this;
@@ -74,9 +81,11 @@ public class ComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncSource")
     public String syncSource;
+
     public ComponentResponse withSyncSource(String syncSource) {
         this.syncSource = syncSource;
         return this;
     }
     
+    public ComponentResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest withAllowedOrigin(org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin) {
         this.allowedOrigin = allowedOrigin;
         return this;
@@ -19,6 +21,7 @@ public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
     public String apiCredentialId;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest withApiCredentialId(String apiCredentialId) {
         this.apiCredentialId = apiCredentialId;
         return this;
@@ -29,9 +32,14 @@ public class PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public PostCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest(@JsonProperty("apiCredentialId") String apiCredentialId, @JsonProperty("companyId") String companyId) {
+        this.apiCredentialId = apiCredentialId;
+        this.companyId = companyId;
+  }
 }

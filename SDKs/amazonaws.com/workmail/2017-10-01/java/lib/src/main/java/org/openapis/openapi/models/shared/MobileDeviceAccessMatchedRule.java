@@ -15,6 +15,7 @@ public class MobileDeviceAccessMatchedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MobileDeviceAccessRuleId")
     public String mobileDeviceAccessRuleId;
+
     public MobileDeviceAccessMatchedRule withMobileDeviceAccessRuleId(String mobileDeviceAccessRuleId) {
         this.mobileDeviceAccessRuleId = mobileDeviceAccessRuleId;
         return this;
@@ -23,9 +24,11 @@ public class MobileDeviceAccessMatchedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MobileDeviceAccessMatchedRule withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MobileDeviceAccessMatchedRule(){}
 }

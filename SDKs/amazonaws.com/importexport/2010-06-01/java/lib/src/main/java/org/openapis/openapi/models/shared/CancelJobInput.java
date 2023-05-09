@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CancelJobInput - Input structure for the CancelJob operation.
@@ -15,6 +15,7 @@ public class CancelJobInput {
      */
     
     public String apiVersion;
+
     public CancelJobInput withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -25,9 +26,13 @@ public class CancelJobInput {
      */
     
     public String jobId;
+
     public CancelJobInput withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public CancelJobInput(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

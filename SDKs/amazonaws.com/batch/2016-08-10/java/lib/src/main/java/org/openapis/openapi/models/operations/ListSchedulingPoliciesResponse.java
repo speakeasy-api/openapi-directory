@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSchedulingPoliciesResponse {
@@ -12,6 +13,7 @@ public class ListSchedulingPoliciesResponse {
      */
     
     public Object clientException;
+
     public ListSchedulingPoliciesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListSchedulingPoliciesResponse {
     
     
     public String contentType;
+
     public ListSchedulingPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSchedulingPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSchedulingPoliciesResponse listSchedulingPoliciesResponse;
+
     public ListSchedulingPoliciesResponse withListSchedulingPoliciesResponse(org.openapis.openapi.models.shared.ListSchedulingPoliciesResponse listSchedulingPoliciesResponse) {
         this.listSchedulingPoliciesResponse = listSchedulingPoliciesResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListSchedulingPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListSchedulingPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListSchedulingPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSchedulingPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListSchedulingPoliciesResponse {
      */
     
     public Object serverException;
+
     public ListSchedulingPoliciesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public ListSchedulingPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

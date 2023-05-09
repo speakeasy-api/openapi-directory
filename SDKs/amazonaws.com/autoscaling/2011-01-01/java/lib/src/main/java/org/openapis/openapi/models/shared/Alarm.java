@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Alarm {
     
     public String alarmARN;
+
     public Alarm withAlarmARN(String alarmARN) {
         this.alarmARN = alarmARN;
         return this;
@@ -19,9 +20,11 @@ public class Alarm {
     
     
     public String alarmName;
+
     public Alarm withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
     }
     
+    public Alarm(){}
 }

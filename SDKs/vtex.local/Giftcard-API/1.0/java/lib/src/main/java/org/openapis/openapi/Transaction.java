@@ -65,11 +65,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelGiftCardTransactionResponse res = new org.openapis.openapi.models.operations.CancelGiftCardTransactionResponse() {{
+        org.openapis.openapi.models.operations.CancelGiftCardTransactionResponse res = new org.openapis.openapi.models.operations.CancelGiftCardTransactionResponse(contentType, httpRes.statusCode()) {{
             response6 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,11 +113,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGiftCardTransactionResponse res = new org.openapis.openapi.models.operations.CreateGiftCardTransactionResponse() {{
+        org.openapis.openapi.models.operations.CreateGiftCardTransactionResponse res = new org.openapis.openapi.models.operations.CreateGiftCardTransactionResponse(contentType, httpRes.statusCode()) {{
             response3 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +158,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDResponse res = new org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDResponse() {{
+        org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDResponse res = new org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDResponse(contentType, httpRes.statusCode()) {{
             response5 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,11 +204,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGiftCardTransactionsResponse res = new org.openapis.openapi.models.operations.GetGiftCardTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetGiftCardTransactionsResponse res = new org.openapis.openapi.models.operations.GetGiftCardTransactionsResponse(contentType, httpRes.statusCode()) {{
             response3s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,11 +250,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionAuthorizationsResponse res = new org.openapis.openapi.models.operations.GetTransactionAuthorizationsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionAuthorizationsResponse res = new org.openapis.openapi.models.operations.GetTransactionAuthorizationsResponse(contentType, httpRes.statusCode()) {{
             response6 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +296,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionCancellationsResponse res = new org.openapis.openapi.models.operations.GetTransactionCancellationsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionCancellationsResponse res = new org.openapis.openapi.models.operations.GetTransactionCancellationsResponse(contentType, httpRes.statusCode()) {{
             response7s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,11 +342,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionSettlementsResponse res = new org.openapis.openapi.models.operations.GetTransactionSettlementsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionSettlementsResponse res = new org.openapis.openapi.models.operations.GetTransactionSettlementsResponse(contentType, httpRes.statusCode()) {{
             response6s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -407,11 +393,9 @@ public class Transaction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SettleGiftCardTransactionResponse res = new org.openapis.openapi.models.operations.SettleGiftCardTransactionResponse() {{
+        org.openapis.openapi.models.operations.SettleGiftCardTransactionResponse res = new org.openapis.openapi.models.operations.SettleGiftCardTransactionResponse(contentType, httpRes.statusCode()) {{
             response6 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

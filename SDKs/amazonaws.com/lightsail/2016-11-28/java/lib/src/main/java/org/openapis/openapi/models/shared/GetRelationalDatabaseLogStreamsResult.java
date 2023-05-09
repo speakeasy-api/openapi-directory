@@ -15,9 +15,11 @@ public class GetRelationalDatabaseLogStreamsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreams")
     public String[] logStreams;
+
     public GetRelationalDatabaseLogStreamsResult withLogStreams(String[] logStreams) {
         this.logStreams = logStreams;
         return this;
     }
     
+    public GetRelationalDatabaseLogStreamsResult(){}
 }

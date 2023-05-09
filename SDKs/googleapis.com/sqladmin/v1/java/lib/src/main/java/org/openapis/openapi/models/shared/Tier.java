@@ -18,6 +18,7 @@ public class Tier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskQuota")
     public String diskQuota;
+
     public Tier withDiskQuota(String diskQuota) {
         this.diskQuota = diskQuota;
         return this;
@@ -29,6 +30,7 @@ public class Tier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RAM")
     public String ram;
+
     public Tier withRam(String ram) {
         this.ram = ram;
         return this;
@@ -40,6 +42,7 @@ public class Tier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Tier withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class Tier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String[] region;
+
     public Tier withRegion(String[] region) {
         this.region = region;
         return this;
@@ -62,9 +66,11 @@ public class Tier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public String tier;
+
     public Tier withTier(String tier) {
         this.tier = tier;
         return this;
     }
     
+    public Tier(){}
 }

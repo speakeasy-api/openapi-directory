@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ValuesInPastMultipleGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public ValuesInPastMultipleGetRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -23,6 +25,7 @@ public class ValuesInPastMultipleGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ValuesInPastMultipleGetRequest withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class ValuesInPastMultipleGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
     public Integer interval;
+
     public ValuesInPastMultipleGetRequest withInterval(Integer interval) {
         this.interval = interval;
         return this;
@@ -43,9 +47,16 @@ public class ValuesInPastMultipleGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public ValuesInPastMultipleGetRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public ValuesInPastMultipleGetRequest(@JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("id") String id, @JsonProperty("interval") Integer interval, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.endDate = endDate;
+        this.id = id;
+        this.interval = interval;
+        this.startDate = startDate;
+  }
 }

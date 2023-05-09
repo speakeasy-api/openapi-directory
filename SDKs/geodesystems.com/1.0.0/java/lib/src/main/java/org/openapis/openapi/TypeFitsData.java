@@ -57,10 +57,8 @@ public class TypeFitsData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchFitsDataResponse res = new org.openapis.openapi.models.operations.SearchFitsDataResponse() {{
+        org.openapis.openapi.models.operations.SearchFitsDataResponse res = new org.openapis.openapi.models.operations.SearchFitsDataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

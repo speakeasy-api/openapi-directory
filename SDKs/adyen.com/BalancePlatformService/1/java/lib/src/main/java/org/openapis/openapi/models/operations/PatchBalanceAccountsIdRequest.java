@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchBalanceAccountsIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BalanceAccountUpdateRequestInput balanceAccountUpdateRequestInput;
+
     public PatchBalanceAccountsIdRequest withBalanceAccountUpdateRequestInput(org.openapis.openapi.models.shared.BalanceAccountUpdateRequestInput balanceAccountUpdateRequestInput) {
         this.balanceAccountUpdateRequestInput = balanceAccountUpdateRequestInput;
         return this;
@@ -19,9 +21,13 @@ public class PatchBalanceAccountsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchBalanceAccountsIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatchBalanceAccountsIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

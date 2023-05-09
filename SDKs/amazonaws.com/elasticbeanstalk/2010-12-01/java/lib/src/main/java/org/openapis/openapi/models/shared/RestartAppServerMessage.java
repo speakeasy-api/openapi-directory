@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestartAppServerMessage {
     
     public String environmentId;
+
     public RestartAppServerMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,9 +20,11 @@ public class RestartAppServerMessage {
     
     
     public String environmentName;
+
     public RestartAppServerMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public RestartAppServerMessage(){}
 }

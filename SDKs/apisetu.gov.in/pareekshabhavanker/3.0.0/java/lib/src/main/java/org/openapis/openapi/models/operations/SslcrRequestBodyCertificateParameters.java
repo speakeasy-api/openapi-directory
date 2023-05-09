@@ -12,6 +12,7 @@ public class SslcrRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public SslcrRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class SslcrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public SslcrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class SslcrRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public SslcrRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -42,6 +45,7 @@ public class SslcrRequestBodyCertificateParameters {
      */
     @JsonProperty("regno")
     public String regno;
+
     public SslcrRequestBodyCertificateParameters withRegno(String regno) {
         this.regno = regno;
         return this;
@@ -52,9 +56,17 @@ public class SslcrRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public SslcrRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public SslcrRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("UID") String uid, @JsonProperty("regno") String regno, @JsonProperty("year") String year) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.uid = uid;
+        this.regno = regno;
+        this.year = year;
+  }
 }

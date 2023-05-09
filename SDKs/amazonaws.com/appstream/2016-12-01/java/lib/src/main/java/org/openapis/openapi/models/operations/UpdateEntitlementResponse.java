@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEntitlementResponse {
@@ -12,6 +13,7 @@ public class UpdateEntitlementResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateEntitlementResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEntitlementResponse {
     
     
     public String contentType;
+
     public UpdateEntitlementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEntitlementResponse {
      */
     
     public Object entitlementNotFoundException;
+
     public UpdateEntitlementResponse withEntitlementNotFoundException(Object entitlementNotFoundException) {
         this.entitlementNotFoundException = entitlementNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEntitlementResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateEntitlementResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEntitlementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEntitlementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateEntitlementResponse {
     
     
     public Integer statusCode;
+
     public UpdateEntitlementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEntitlementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEntitlementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateEntitlementResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEntitlementResult updateEntitlementResult;
+
     public UpdateEntitlementResponse withUpdateEntitlementResult(org.openapis.openapi.models.shared.UpdateEntitlementResult updateEntitlementResult) {
         this.updateEntitlementResult = updateEntitlementResult;
         return this;
     }
     
+    public UpdateEntitlementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

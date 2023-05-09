@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1BoundingPoly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedVertices")
     public GoogleCloudDocumentaiV1NormalizedVertex[] normalizedVertices;
+
     public GoogleCloudDocumentaiV1BoundingPoly withNormalizedVertices(GoogleCloudDocumentaiV1NormalizedVertex[] normalizedVertices) {
         this.normalizedVertices = normalizedVertices;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1BoundingPoly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertices")
     public GoogleCloudDocumentaiV1Vertex[] vertices;
+
     public GoogleCloudDocumentaiV1BoundingPoly withVertices(GoogleCloudDocumentaiV1Vertex[] vertices) {
         this.vertices = vertices;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1BoundingPoly(){}
 }

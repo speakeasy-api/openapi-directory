@@ -15,6 +15,7 @@ public class SourceOauthConsentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthInputConfiguration")
     public Object oAuthInputConfiguration;
+
     public SourceOauthConsentRequest withOAuthInputConfiguration(Object oAuthInputConfiguration) {
         this.oAuthInputConfiguration = oAuthInputConfiguration;
         return this;
@@ -25,6 +26,7 @@ public class SourceOauthConsentRequest {
      */
     @JsonProperty("redirectUrl")
     public String redirectUrl;
+
     public SourceOauthConsentRequest withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -32,6 +34,7 @@ public class SourceOauthConsentRequest {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceOauthConsentRequest withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -40,6 +43,7 @@ public class SourceOauthConsentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceOauthConsentRequest withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -47,9 +51,15 @@ public class SourceOauthConsentRequest {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public SourceOauthConsentRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public SourceOauthConsentRequest(@JsonProperty("redirectUrl") String redirectUrl, @JsonProperty("sourceDefinitionId") String sourceDefinitionId, @JsonProperty("workspaceId") String workspaceId) {
+        this.redirectUrl = redirectUrl;
+        this.sourceDefinitionId = sourceDefinitionId;
+        this.workspaceId = workspaceId;
+  }
 }

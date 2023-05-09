@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScanningRepositoryFilter {
     @JsonProperty("filter")
     public String filter;
+
     public ScanningRepositoryFilter withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -19,9 +20,14 @@ public class ScanningRepositoryFilter {
     
     @JsonProperty("filterType")
     public ScanningRepositoryFilterTypeEnum filterType;
+
     public ScanningRepositoryFilter withFilterType(ScanningRepositoryFilterTypeEnum filterType) {
         this.filterType = filterType;
         return this;
     }
     
+    public ScanningRepositoryFilter(@JsonProperty("filter") String filter, @JsonProperty("filterType") ScanningRepositoryFilterTypeEnum filterType) {
+        this.filter = filter;
+        this.filterType = filterType;
+  }
 }

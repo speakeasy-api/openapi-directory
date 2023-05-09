@@ -18,6 +18,7 @@ public class ShieldedVmIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public ShieldedVmIdentityEntry encryptionKey;
+
     public ShieldedVmIdentity withEncryptionKey(ShieldedVmIdentityEntry encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -29,6 +30,7 @@ public class ShieldedVmIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ShieldedVmIdentity withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class ShieldedVmIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingKey")
     public ShieldedVmIdentityEntry signingKey;
+
     public ShieldedVmIdentity withSigningKey(ShieldedVmIdentityEntry signingKey) {
         this.signingKey = signingKey;
         return this;
     }
     
+    public ShieldedVmIdentity(){}
 }

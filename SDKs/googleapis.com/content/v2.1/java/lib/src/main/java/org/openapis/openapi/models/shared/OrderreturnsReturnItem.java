@@ -12,6 +12,7 @@ public class OrderreturnsReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund")
     public OrderreturnsRefundOperation refund;
+
     public OrderreturnsReturnItem withRefund(OrderreturnsRefundOperation refund) {
         this.refund = refund;
         return this;
@@ -20,6 +21,7 @@ public class OrderreturnsReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reject")
     public OrderreturnsRejectOperation reject;
+
     public OrderreturnsReturnItem withReject(OrderreturnsRejectOperation reject) {
         this.reject = reject;
         return this;
@@ -31,9 +33,11 @@ public class OrderreturnsReturnItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnItemId")
     public String returnItemId;
+
     public OrderreturnsReturnItem withReturnItemId(String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
     
+    public OrderreturnsReturnItem(){}
 }

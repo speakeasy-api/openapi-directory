@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BindtoanotherskuRequest {
@@ -12,6 +13,7 @@ public class BindtoanotherskuRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public BindtoanotherskuRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class BindtoanotherskuRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public BindtoanotherskuRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class BindtoanotherskuRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BindtoanotherskuRequestBody requestBody;
+
     public BindtoanotherskuRequest withRequestBody(BindtoanotherskuRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -42,6 +46,7 @@ public class BindtoanotherskuRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public BindtoanotherskuRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,9 +57,16 @@ public class BindtoanotherskuRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerSkuId")
     public String sellerSkuId;
+
     public BindtoanotherskuRequest withSellerSkuId(String sellerSkuId) {
         this.sellerSkuId = sellerSkuId;
         return this;
     }
     
+    public BindtoanotherskuRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerSkuId") String sellerSkuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.sellerId = sellerId;
+        this.sellerSkuId = sellerSkuId;
+  }
 }

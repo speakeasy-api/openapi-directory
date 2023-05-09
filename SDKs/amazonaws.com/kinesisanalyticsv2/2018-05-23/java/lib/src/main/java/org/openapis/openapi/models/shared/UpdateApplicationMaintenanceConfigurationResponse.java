@@ -15,6 +15,7 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public UpdateApplicationMaintenanceConfigurationResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,9 +24,11 @@ public class UpdateApplicationMaintenanceConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationMaintenanceConfigurationDescription")
     public ApplicationMaintenanceConfigurationDescription applicationMaintenanceConfigurationDescription;
+
     public UpdateApplicationMaintenanceConfigurationResponse withApplicationMaintenanceConfigurationDescription(ApplicationMaintenanceConfigurationDescription applicationMaintenanceConfigurationDescription) {
         this.applicationMaintenanceConfigurationDescription = applicationMaintenanceConfigurationDescription;
         return this;
     }
     
+    public UpdateApplicationMaintenanceConfigurationResponse(){}
 }

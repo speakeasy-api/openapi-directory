@@ -12,6 +12,7 @@ public class GetResourcesSourcesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
     public Integer max;
+
     public GetResourcesSourcesJsonRequest withMax(Integer max) {
         this.max = max;
         return this;
@@ -22,6 +23,7 @@ public class GetResourcesSourcesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
     public Integer offset;
+
     public GetResourcesSourcesJsonRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,9 +34,11 @@ public class GetResourcesSourcesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public String sort;
+
     public GetResourcesSourcesJsonRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetResourcesSourcesJsonRequest(){}
 }

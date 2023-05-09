@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOpsItemResponse {
     
     public String contentType;
+
     public CreateOpsItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateOpsItemResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOpsItemResponse createOpsItemResponse;
+
     public CreateOpsItemResponse withCreateOpsItemResponse(org.openapis.openapi.models.shared.CreateOpsItemResponse createOpsItemResponse) {
         this.createOpsItemResponse = createOpsItemResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateOpsItemResponse {
      */
     
     public Object internalServerError;
+
     public CreateOpsItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class CreateOpsItemResponse {
      */
     
     public Object opsItemAccessDeniedException;
+
     public CreateOpsItemResponse withOpsItemAccessDeniedException(Object opsItemAccessDeniedException) {
         this.opsItemAccessDeniedException = opsItemAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class CreateOpsItemResponse {
      */
     
     public Object opsItemAlreadyExistsException;
+
     public CreateOpsItemResponse withOpsItemAlreadyExistsException(Object opsItemAlreadyExistsException) {
         this.opsItemAlreadyExistsException = opsItemAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOpsItemResponse {
      */
     
     public Object opsItemInvalidParameterException;
+
     public CreateOpsItemResponse withOpsItemInvalidParameterException(Object opsItemInvalidParameterException) {
         this.opsItemInvalidParameterException = opsItemInvalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateOpsItemResponse {
      */
     
     public Object opsItemLimitExceededException;
+
     public CreateOpsItemResponse withOpsItemLimitExceededException(Object opsItemLimitExceededException) {
         this.opsItemLimitExceededException = opsItemLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateOpsItemResponse {
     
     
     public Integer statusCode;
+
     public CreateOpsItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateOpsItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOpsItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateOpsItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

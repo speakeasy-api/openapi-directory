@@ -18,6 +18,7 @@ public class AttributeValueMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AttributeValueMetadata withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class AttributeValueMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public AttributeValueMetadata withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public AttributeValueMetadata(){}
 }

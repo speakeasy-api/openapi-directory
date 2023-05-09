@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssetPropertyResponse {
@@ -12,6 +13,7 @@ public class UpdateAssetPropertyResponse {
      */
     
     public Object conflictingOperationException;
+
     public UpdateAssetPropertyResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssetPropertyResponse {
     
     
     public String contentType;
+
     public UpdateAssetPropertyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssetPropertyResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAssetPropertyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAssetPropertyResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAssetPropertyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAssetPropertyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAssetPropertyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAssetPropertyResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssetPropertyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAssetPropertyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssetPropertyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAssetPropertyResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAssetPropertyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public UpdateAssetPropertyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

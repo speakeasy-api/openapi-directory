@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersListEmailsForAuthenticatedResponse {
     
     public String contentType;
+
     public UsersListEmailsForAuthenticatedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersListEmailsForAuthenticatedResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UsersListEmailsForAuthenticatedResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UsersListEmailsForAuthenticatedResponse {
     
     
     public Integer statusCode;
+
     public UsersListEmailsForAuthenticatedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UsersListEmailsForAuthenticatedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersListEmailsForAuthenticatedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class UsersListEmailsForAuthenticatedResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersListEmailsForAuthenticatedResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class UsersListEmailsForAuthenticatedResponse {
      */
     
     public org.openapis.openapi.models.shared.Email[] emails;
+
     public UsersListEmailsForAuthenticatedResponse withEmails(org.openapis.openapi.models.shared.Email[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public UsersListEmailsForAuthenticatedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

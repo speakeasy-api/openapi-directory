@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttackVolumeStatistics {
     @JsonProperty("Max")
     public Double max;
+
     public AttackVolumeStatistics withMax(Double max) {
         this.max = max;
         return this;
     }
     
+    public AttackVolumeStatistics(@JsonProperty("Max") Double max) {
+        this.max = max;
+  }
 }

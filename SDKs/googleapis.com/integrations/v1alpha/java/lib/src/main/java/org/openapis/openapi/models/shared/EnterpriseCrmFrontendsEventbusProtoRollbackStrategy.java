@@ -18,6 +18,7 @@ public class EnterpriseCrmFrontendsEventbusProtoRollbackStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmFrontendsEventbusProtoEventParameters parameters;
+
     public EnterpriseCrmFrontendsEventbusProtoRollbackStrategy withParameters(EnterpriseCrmFrontendsEventbusProtoEventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmFrontendsEventbusProtoRollbackStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollbackTaskImplementationClassName")
     public String rollbackTaskImplementationClassName;
+
     public EnterpriseCrmFrontendsEventbusProtoRollbackStrategy withRollbackTaskImplementationClassName(String rollbackTaskImplementationClassName) {
         this.rollbackTaskImplementationClassName = rollbackTaskImplementationClassName;
         return this;
@@ -40,9 +42,11 @@ public class EnterpriseCrmFrontendsEventbusProtoRollbackStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskNumbersToRollback")
     public String[] taskNumbersToRollback;
+
     public EnterpriseCrmFrontendsEventbusProtoRollbackStrategy withTaskNumbersToRollback(String[] taskNumbersToRollback) {
         this.taskNumbersToRollback = taskNumbersToRollback;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoRollbackStrategy(){}
 }

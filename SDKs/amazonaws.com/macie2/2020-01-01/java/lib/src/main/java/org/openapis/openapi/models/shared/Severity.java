@@ -15,6 +15,7 @@ public class Severity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public SeverityDescriptionEnum description;
+
     public Severity withDescription(SeverityDescriptionEnum description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class Severity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Long score;
+
     public Severity withScore(Long score) {
         this.score = score;
         return this;
     }
     
+    public Severity(){}
 }

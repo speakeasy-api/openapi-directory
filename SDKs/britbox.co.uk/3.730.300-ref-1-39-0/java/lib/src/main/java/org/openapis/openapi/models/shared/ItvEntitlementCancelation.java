@@ -19,6 +19,7 @@ public class ItvEntitlementCancelation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("cancelled_at")
     public OffsetDateTime cancelledAt;
+
     public ItvEntitlementCancelation withCancelledAt(OffsetDateTime cancelledAt) {
         this.cancelledAt = cancelledAt;
         return this;
@@ -29,6 +30,7 @@ public class ItvEntitlementCancelation {
      */
     @JsonProperty("itvId")
     public String itvId;
+
     public ItvEntitlementCancelation withItvId(String itvId) {
         this.itvId = itvId;
         return this;
@@ -39,6 +41,7 @@ public class ItvEntitlementCancelation {
      */
     @JsonProperty("source")
     public String source;
+
     public ItvEntitlementCancelation withSource(String source) {
         this.source = source;
         return this;
@@ -49,9 +52,16 @@ public class ItvEntitlementCancelation {
      */
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public ItvEntitlementCancelation withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public ItvEntitlementCancelation(@JsonProperty("cancelled_at") OffsetDateTime cancelledAt, @JsonProperty("itvId") String itvId, @JsonProperty("source") String source, @JsonProperty("subscriptionId") String subscriptionId) {
+        this.cancelledAt = cancelledAt;
+        this.itvId = itvId;
+        this.source = source;
+        this.subscriptionId = subscriptionId;
+  }
 }

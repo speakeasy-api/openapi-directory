@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StoresGetDefaultApplicationJSON {
     @JsonProperty("code")
     public StoresGetDefaultApplicationJSONCodeEnum code;
+
     public StoresGetDefaultApplicationJSON withCode(StoresGetDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class StoresGetDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public StoresGetDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StoresGetDefaultApplicationJSON(@JsonProperty("code") StoresGetDefaultApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

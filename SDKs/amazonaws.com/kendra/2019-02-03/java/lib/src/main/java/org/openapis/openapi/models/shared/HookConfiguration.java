@@ -15,6 +15,7 @@ public class HookConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvocationCondition")
     public DocumentAttributeCondition invocationCondition;
+
     public HookConfiguration withInvocationCondition(DocumentAttributeCondition invocationCondition) {
         this.invocationCondition = invocationCondition;
         return this;
@@ -22,6 +23,7 @@ public class HookConfiguration {
     
     @JsonProperty("LambdaArn")
     public String lambdaArn;
+
     public HookConfiguration withLambdaArn(String lambdaArn) {
         this.lambdaArn = lambdaArn;
         return this;
@@ -29,9 +31,14 @@ public class HookConfiguration {
     
     @JsonProperty("S3Bucket")
     public String s3Bucket;
+
     public HookConfiguration withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
     }
     
+    public HookConfiguration(@JsonProperty("LambdaArn") String lambdaArn, @JsonProperty("S3Bucket") String s3Bucket) {
+        this.lambdaArn = lambdaArn;
+        this.s3Bucket = s3Bucket;
+  }
 }

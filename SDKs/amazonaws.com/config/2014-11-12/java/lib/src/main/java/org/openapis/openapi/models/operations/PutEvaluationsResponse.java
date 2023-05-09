@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEvaluationsResponse {
     
     public String contentType;
+
     public PutEvaluationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutEvaluationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutEvaluationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class PutEvaluationsResponse {
      */
     
     public Object invalidResultTokenException;
+
     public PutEvaluationsResponse withInvalidResultTokenException(Object invalidResultTokenException) {
         this.invalidResultTokenException = invalidResultTokenException;
         return this;
@@ -39,6 +43,7 @@ public class PutEvaluationsResponse {
      */
     
     public Object noSuchConfigRuleException;
+
     public PutEvaluationsResponse withNoSuchConfigRuleException(Object noSuchConfigRuleException) {
         this.noSuchConfigRuleException = noSuchConfigRuleException;
         return this;
@@ -49,6 +54,7 @@ public class PutEvaluationsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutEvaluationsResponse putEvaluationsResponse;
+
     public PutEvaluationsResponse withPutEvaluationsResponse(org.openapis.openapi.models.shared.PutEvaluationsResponse putEvaluationsResponse) {
         this.putEvaluationsResponse = putEvaluationsResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutEvaluationsResponse {
     
     
     public Integer statusCode;
+
     public PutEvaluationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutEvaluationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEvaluationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutEvaluationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

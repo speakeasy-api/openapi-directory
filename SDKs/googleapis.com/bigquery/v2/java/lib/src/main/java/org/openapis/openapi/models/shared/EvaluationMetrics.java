@@ -18,6 +18,7 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arimaForecastingMetrics")
     public ArimaForecastingMetrics arimaForecastingMetrics;
+
     public EvaluationMetrics withArimaForecastingMetrics(ArimaForecastingMetrics arimaForecastingMetrics) {
         this.arimaForecastingMetrics = arimaForecastingMetrics;
         return this;
@@ -29,6 +30,7 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryClassificationMetrics")
     public BinaryClassificationMetrics binaryClassificationMetrics;
+
     public EvaluationMetrics withBinaryClassificationMetrics(BinaryClassificationMetrics binaryClassificationMetrics) {
         this.binaryClassificationMetrics = binaryClassificationMetrics;
         return this;
@@ -40,6 +42,7 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteringMetrics")
     public ClusteringMetrics clusteringMetrics;
+
     public EvaluationMetrics withClusteringMetrics(ClusteringMetrics clusteringMetrics) {
         this.clusteringMetrics = clusteringMetrics;
         return this;
@@ -51,6 +54,7 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionalityReductionMetrics")
     public DimensionalityReductionMetrics dimensionalityReductionMetrics;
+
     public EvaluationMetrics withDimensionalityReductionMetrics(DimensionalityReductionMetrics dimensionalityReductionMetrics) {
         this.dimensionalityReductionMetrics = dimensionalityReductionMetrics;
         return this;
@@ -62,6 +66,7 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiClassClassificationMetrics")
     public MultiClassClassificationMetrics multiClassClassificationMetrics;
+
     public EvaluationMetrics withMultiClassClassificationMetrics(MultiClassClassificationMetrics multiClassClassificationMetrics) {
         this.multiClassClassificationMetrics = multiClassClassificationMetrics;
         return this;
@@ -73,6 +78,7 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rankingMetrics")
     public RankingMetrics rankingMetrics;
+
     public EvaluationMetrics withRankingMetrics(RankingMetrics rankingMetrics) {
         this.rankingMetrics = rankingMetrics;
         return this;
@@ -84,9 +90,11 @@ public class EvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regressionMetrics")
     public RegressionMetrics regressionMetrics;
+
     public EvaluationMetrics withRegressionMetrics(RegressionMetrics regressionMetrics) {
         this.regressionMetrics = regressionMetrics;
         return this;
     }
     
+    public EvaluationMetrics(){}
 }

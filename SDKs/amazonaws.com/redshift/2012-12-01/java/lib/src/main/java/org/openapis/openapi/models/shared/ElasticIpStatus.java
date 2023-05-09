@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ElasticIpStatus {
     
     public String elasticIp;
+
     public ElasticIpStatus withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -19,9 +20,11 @@ public class ElasticIpStatus {
     
     
     public String status;
+
     public ElasticIpStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ElasticIpStatus(){}
 }

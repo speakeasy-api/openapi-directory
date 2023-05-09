@@ -15,6 +15,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api-key")
     public String apiKey;
+
     public DeliveryReceipt withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -26,6 +27,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client-ref")
     public String clientRef;
+
     public DeliveryReceipt withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -37,6 +39,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("err-code")
     public String errCode;
+
     public DeliveryReceipt withErrCode(String errCode) {
         this.errCode = errCode;
         return this;
@@ -48,6 +51,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message-timestamp")
     public String messageTimestamp;
+
     public DeliveryReceipt withMessageTimestamp(String messageTimestamp) {
         this.messageTimestamp = messageTimestamp;
         return this;
@@ -59,6 +63,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public DeliveryReceipt withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -70,6 +75,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msisdn")
     public String msisdn;
+
     public DeliveryReceipt withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
@@ -81,6 +87,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network-code")
     public String networkCode;
+
     public DeliveryReceipt withNetworkCode(String networkCode) {
         this.networkCode = networkCode;
         return this;
@@ -92,6 +99,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonce")
     public String nonce;
+
     public DeliveryReceipt withNonce(String nonce) {
         this.nonce = nonce;
         return this;
@@ -103,6 +111,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public DeliveryReceipt withPrice(String price) {
         this.price = price;
         return this;
@@ -114,6 +123,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scts")
     public String scts;
+
     public DeliveryReceipt withScts(String scts) {
         this.scts = scts;
         return this;
@@ -125,6 +135,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sig")
     public String sig;
+
     public DeliveryReceipt withSig(String sig) {
         this.sig = sig;
         return this;
@@ -136,6 +147,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DeliveryReceipt withStatus(String status) {
         this.status = status;
         return this;
@@ -147,6 +159,7 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public DeliveryReceipt withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -158,9 +171,11 @@ public class DeliveryReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public DeliveryReceipt withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public DeliveryReceipt(){}
 }

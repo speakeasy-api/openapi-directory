@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BillTo {
     @JsonProperty("contact")
     public Contact contact;
+
     public BillTo withContact(Contact contact) {
         this.contact = contact;
         return this;
@@ -22,9 +23,13 @@ public class BillTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxId")
     public String taxId;
+
     public BillTo withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
     }
     
+    public BillTo(@JsonProperty("contact") Contact contact) {
+        this.contact = contact;
+  }
 }

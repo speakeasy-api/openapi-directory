@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequestInp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GoogleAppsDriveLabelsV2FieldInput field;
+
     public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequestInput withField(GoogleAppsDriveLabelsV2FieldInput field) {
         this.field = field;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequestInput(){}
 }

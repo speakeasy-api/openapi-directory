@@ -12,9 +12,13 @@ public class BatchGetStandardsControlAssociationsRequestBody {
      */
     @JsonProperty("StandardsControlAssociationIds")
     public org.openapis.openapi.models.shared.StandardsControlAssociationId[] standardsControlAssociationIds;
+
     public BatchGetStandardsControlAssociationsRequestBody withStandardsControlAssociationIds(org.openapis.openapi.models.shared.StandardsControlAssociationId[] standardsControlAssociationIds) {
         this.standardsControlAssociationIds = standardsControlAssociationIds;
         return this;
     }
     
+    public BatchGetStandardsControlAssociationsRequestBody(@JsonProperty("StandardsControlAssociationIds") org.openapis.openapi.models.shared.StandardsControlAssociationId[] standardsControlAssociationIds) {
+        this.standardsControlAssociationIds = standardsControlAssociationIds;
+  }
 }

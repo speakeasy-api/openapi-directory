@@ -20,6 +20,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionPlanInstructions")
     public String actionPlanInstructions;
+
     public Control withActionPlanInstructions(String actionPlanInstructions) {
         this.actionPlanInstructions = actionPlanInstructions;
         return this;
@@ -28,6 +29,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionPlanTitle")
     public String actionPlanTitle;
+
     public Control withActionPlanTitle(String actionPlanTitle) {
         this.actionPlanTitle = actionPlanTitle;
         return this;
@@ -36,6 +38,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Control withArn(String arn) {
         this.arn = arn;
         return this;
@@ -44,6 +47,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlMappingSources")
     public ControlMappingSource[] controlMappingSources;
+
     public Control withControlMappingSources(ControlMappingSource[] controlMappingSources) {
         this.controlMappingSources = controlMappingSources;
         return this;
@@ -52,6 +56,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSources")
     public String controlSources;
+
     public Control withControlSources(String controlSources) {
         this.controlSources = controlSources;
         return this;
@@ -62,6 +67,7 @@ public class Control {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Control withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -70,6 +76,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public Control withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -78,6 +85,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Control withDescription(String description) {
         this.description = description;
         return this;
@@ -86,6 +94,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Control withId(String id) {
         this.id = id;
         return this;
@@ -96,6 +105,7 @@ public class Control {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public Control withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -104,6 +114,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedBy")
     public String lastUpdatedBy;
+
     public Control withLastUpdatedBy(String lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
         return this;
@@ -112,6 +123,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Control withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +132,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Control withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -128,6 +141,7 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testingInformation")
     public String testingInformation;
+
     public Control withTestingInformation(String testingInformation) {
         this.testingInformation = testingInformation;
         return this;
@@ -136,9 +150,11 @@ public class Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ControlTypeEnum type;
+
     public Control withType(ControlTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Control(){}
 }

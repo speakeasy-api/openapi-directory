@@ -62,11 +62,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeepNotesCreateResponse res = new org.openapis.openapi.models.operations.KeepNotesCreateResponse() {{
+        org.openapis.openapi.models.operations.KeepNotesCreateResponse res = new org.openapis.openapi.models.operations.KeepNotesCreateResponse(contentType, httpRes.statusCode()) {{
             note = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeepNotesDeleteResponse res = new org.openapis.openapi.models.operations.KeepNotesDeleteResponse() {{
+        org.openapis.openapi.models.operations.KeepNotesDeleteResponse res = new org.openapis.openapi.models.operations.KeepNotesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeepNotesGetResponse res = new org.openapis.openapi.models.operations.KeepNotesGetResponse() {{
+        org.openapis.openapi.models.operations.KeepNotesGetResponse res = new org.openapis.openapi.models.operations.KeepNotesGetResponse(contentType, httpRes.statusCode()) {{
             note = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeepNotesListResponse res = new org.openapis.openapi.models.operations.KeepNotesListResponse() {{
+        org.openapis.openapi.models.operations.KeepNotesListResponse res = new org.openapis.openapi.models.operations.KeepNotesListResponse(contentType, httpRes.statusCode()) {{
             listNotesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeepNotesPermissionsBatchCreateResponse res = new org.openapis.openapi.models.operations.KeepNotesPermissionsBatchCreateResponse() {{
+        org.openapis.openapi.models.operations.KeepNotesPermissionsBatchCreateResponse res = new org.openapis.openapi.models.operations.KeepNotesPermissionsBatchCreateResponse(contentType, httpRes.statusCode()) {{
             batchCreatePermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Notes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeepNotesPermissionsBatchDeleteResponse res = new org.openapis.openapi.models.operations.KeepNotesPermissionsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.KeepNotesPermissionsBatchDeleteResponse res = new org.openapis.openapi.models.operations.KeepNotesPermissionsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

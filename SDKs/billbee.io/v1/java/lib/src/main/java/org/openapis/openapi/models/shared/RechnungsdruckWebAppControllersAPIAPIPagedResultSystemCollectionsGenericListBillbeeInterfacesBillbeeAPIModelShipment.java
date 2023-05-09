@@ -15,6 +15,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public BillbeeInterfacesBillbeeAPIModelShipment[] data;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment withData(BillbeeInterfacesBillbeeAPIModelShipment[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipmentErrorCodeEnum errorCode;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment withErrorCode(RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipmentErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,6 +33,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDescription")
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipmentErrorDescriptionEnum errorDescription;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment withErrorDescription(RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipmentErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
@@ -39,6 +42,7 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -47,9 +51,11 @@ public class RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Paging")
     public RechnungsdruckWebAppControllersAPIAPIPagedResultPagingInformationSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment paging;
+
     public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment withPaging(RechnungsdruckWebAppControllersAPIAPIPagedResultPagingInformationSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment paging) {
         this.paging = paging;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment(){}
 }

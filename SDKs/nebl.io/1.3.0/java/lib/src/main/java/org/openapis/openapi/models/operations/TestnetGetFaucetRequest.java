@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetFaucetRequest {
@@ -12,6 +13,7 @@ public class TestnetGetFaucetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
     public String address;
+
     public TestnetGetFaucetRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -22,9 +24,13 @@ public class TestnetGetFaucetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
     public Double amount;
+
     public TestnetGetFaucetRequest withAmount(Double amount) {
         this.amount = amount;
         return this;
     }
     
+    public TestnetGetFaucetRequest(@JsonProperty("address") String address) {
+        this.address = address;
+  }
 }

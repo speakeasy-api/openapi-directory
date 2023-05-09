@@ -12,6 +12,7 @@ public class GetDomainsUpdatesDeletedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetDomainsUpdatesDeletedRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +23,7 @@ public class GetDomainsUpdatesDeletedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetDomainsUpdatesDeletedRequest withDate(String date) {
         this.date = date;
         return this;
@@ -32,6 +34,7 @@ public class GetDomainsUpdatesDeletedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetDomainsUpdatesDeletedRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,9 +45,11 @@ public class GetDomainsUpdatesDeletedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetDomainsUpdatesDeletedRequest withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public GetDomainsUpdatesDeletedRequest(){}
 }

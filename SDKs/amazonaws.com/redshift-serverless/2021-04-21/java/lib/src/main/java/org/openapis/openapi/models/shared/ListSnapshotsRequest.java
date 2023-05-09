@@ -19,6 +19,7 @@ public class ListSnapshotsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ListSnapshotsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -27,6 +28,7 @@ public class ListSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListSnapshotsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +37,7 @@ public class ListSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public ListSnapshotsRequest withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -43,6 +46,7 @@ public class ListSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public ListSnapshotsRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -51,6 +55,7 @@ public class ListSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSnapshotsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,6 +64,7 @@ public class ListSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public ListSnapshotsRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -69,9 +75,11 @@ public class ListSnapshotsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ListSnapshotsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListSnapshotsRequest(){}
 }

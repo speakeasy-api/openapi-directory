@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteApplicationInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public DeleteApplicationInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
     }
     
+    public DeleteApplicationInput(@JsonProperty("applicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateLoadBalancerPolicyInput - Contains the parameters for CreateLoadBalancerPolicy.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLoadBalancerPolicyInput {
     
     public String loadBalancerName;
+
     public CreateLoadBalancerPolicyInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,6 +20,7 @@ public class CreateLoadBalancerPolicyInput {
     
     
     public PolicyAttribute[] policyAttributes;
+
     public CreateLoadBalancerPolicyInput withPolicyAttributes(PolicyAttribute[] policyAttributes) {
         this.policyAttributes = policyAttributes;
         return this;
@@ -26,6 +28,7 @@ public class CreateLoadBalancerPolicyInput {
     
     
     public String policyName;
+
     public CreateLoadBalancerPolicyInput withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -33,9 +36,15 @@ public class CreateLoadBalancerPolicyInput {
     
     
     public String policyTypeName;
+
     public CreateLoadBalancerPolicyInput withPolicyTypeName(String policyTypeName) {
         this.policyTypeName = policyTypeName;
         return this;
     }
     
+    public CreateLoadBalancerPolicyInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("PolicyName") String policyName, @JsonProperty("PolicyTypeName") String policyTypeName) {
+        this.loadBalancerName = loadBalancerName;
+        this.policyName = policyName;
+        this.policyTypeName = policyTypeName;
+  }
 }

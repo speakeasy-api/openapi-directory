@@ -62,4 +62,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/InsertSKUBindingRespons
 lib/src/main/java/org/openapis/openapi/models/operations/PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/skubindings/README.md
 USAGE.md

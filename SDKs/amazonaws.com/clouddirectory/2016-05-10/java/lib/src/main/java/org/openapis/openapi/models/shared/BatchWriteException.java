@@ -15,6 +15,7 @@ public class BatchWriteException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchWriteException withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,6 +24,7 @@ public class BatchWriteException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public BatchWriteException withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class BatchWriteException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public BatchWriteExceptionTypeEnum type;
+
     public BatchWriteException withType(BatchWriteExceptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BatchWriteException(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeMatchmakingInput {
     @JsonProperty("TicketIds")
     public String[] ticketIds;
+
     public DescribeMatchmakingInput withTicketIds(String[] ticketIds) {
         this.ticketIds = ticketIds;
         return this;
     }
     
+    public DescribeMatchmakingInput(@JsonProperty("TicketIds") String[] ticketIds) {
+        this.ticketIds = ticketIds;
+  }
 }

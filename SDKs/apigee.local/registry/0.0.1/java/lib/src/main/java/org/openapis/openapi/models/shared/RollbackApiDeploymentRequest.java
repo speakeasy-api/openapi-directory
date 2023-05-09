@@ -15,6 +15,7 @@ public class RollbackApiDeploymentRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public RollbackApiDeploymentRequest withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class RollbackApiDeploymentRequest {
      */
     @JsonProperty("revisionId")
     public String revisionId;
+
     public RollbackApiDeploymentRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public RollbackApiDeploymentRequest(@JsonProperty("name") String name, @JsonProperty("revisionId") String revisionId) {
+        this.name = name;
+        this.revisionId = revisionId;
+  }
 }

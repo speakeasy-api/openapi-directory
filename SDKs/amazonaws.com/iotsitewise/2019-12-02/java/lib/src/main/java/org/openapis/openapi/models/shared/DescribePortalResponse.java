@@ -20,6 +20,7 @@ public class DescribePortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarms")
     public Alarms alarms;
+
     public DescribePortalResponse withAlarms(Alarms alarms) {
         this.alarms = alarms;
         return this;
@@ -28,6 +29,7 @@ public class DescribePortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationSenderEmail")
     public String notificationSenderEmail;
+
     public DescribePortalResponse withNotificationSenderEmail(String notificationSenderEmail) {
         this.notificationSenderEmail = notificationSenderEmail;
         return this;
@@ -35,6 +37,7 @@ public class DescribePortalResponse {
     
     @JsonProperty("portalArn")
     public String portalArn;
+
     public DescribePortalResponse withPortalArn(String portalArn) {
         this.portalArn = portalArn;
         return this;
@@ -43,6 +46,7 @@ public class DescribePortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalAuthMode")
     public AuthModeEnum portalAuthMode;
+
     public DescribePortalResponse withPortalAuthMode(AuthModeEnum portalAuthMode) {
         this.portalAuthMode = portalAuthMode;
         return this;
@@ -50,6 +54,7 @@ public class DescribePortalResponse {
     
     @JsonProperty("portalClientId")
     public String portalClientId;
+
     public DescribePortalResponse withPortalClientId(String portalClientId) {
         this.portalClientId = portalClientId;
         return this;
@@ -57,6 +62,7 @@ public class DescribePortalResponse {
     
     @JsonProperty("portalContactEmail")
     public String portalContactEmail;
+
     public DescribePortalResponse withPortalContactEmail(String portalContactEmail) {
         this.portalContactEmail = portalContactEmail;
         return this;
@@ -66,6 +72,7 @@ public class DescribePortalResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("portalCreationDate")
     public OffsetDateTime portalCreationDate;
+
     public DescribePortalResponse withPortalCreationDate(OffsetDateTime portalCreationDate) {
         this.portalCreationDate = portalCreationDate;
         return this;
@@ -74,6 +81,7 @@ public class DescribePortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalDescription")
     public String portalDescription;
+
     public DescribePortalResponse withPortalDescription(String portalDescription) {
         this.portalDescription = portalDescription;
         return this;
@@ -81,6 +89,7 @@ public class DescribePortalResponse {
     
     @JsonProperty("portalId")
     public String portalId;
+
     public DescribePortalResponse withPortalId(String portalId) {
         this.portalId = portalId;
         return this;
@@ -90,6 +99,7 @@ public class DescribePortalResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("portalLastUpdateDate")
     public OffsetDateTime portalLastUpdateDate;
+
     public DescribePortalResponse withPortalLastUpdateDate(OffsetDateTime portalLastUpdateDate) {
         this.portalLastUpdateDate = portalLastUpdateDate;
         return this;
@@ -98,6 +108,7 @@ public class DescribePortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalLogoImageLocation")
     public ImageLocation portalLogoImageLocation;
+
     public DescribePortalResponse withPortalLogoImageLocation(ImageLocation portalLogoImageLocation) {
         this.portalLogoImageLocation = portalLogoImageLocation;
         return this;
@@ -105,6 +116,7 @@ public class DescribePortalResponse {
     
     @JsonProperty("portalName")
     public String portalName;
+
     public DescribePortalResponse withPortalName(String portalName) {
         this.portalName = portalName;
         return this;
@@ -112,6 +124,7 @@ public class DescribePortalResponse {
     
     @JsonProperty("portalStartUrl")
     public String portalStartUrl;
+
     public DescribePortalResponse withPortalStartUrl(String portalStartUrl) {
         this.portalStartUrl = portalStartUrl;
         return this;
@@ -119,6 +132,7 @@ public class DescribePortalResponse {
     
     @JsonProperty("portalStatus")
     public PortalStatus portalStatus;
+
     public DescribePortalResponse withPortalStatus(PortalStatus portalStatus) {
         this.portalStatus = portalStatus;
         return this;
@@ -127,9 +141,21 @@ public class DescribePortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribePortalResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribePortalResponse(@JsonProperty("portalArn") String portalArn, @JsonProperty("portalClientId") String portalClientId, @JsonProperty("portalContactEmail") String portalContactEmail, @JsonProperty("portalCreationDate") OffsetDateTime portalCreationDate, @JsonProperty("portalId") String portalId, @JsonProperty("portalLastUpdateDate") OffsetDateTime portalLastUpdateDate, @JsonProperty("portalName") String portalName, @JsonProperty("portalStartUrl") String portalStartUrl, @JsonProperty("portalStatus") PortalStatus portalStatus) {
+        this.portalArn = portalArn;
+        this.portalClientId = portalClientId;
+        this.portalContactEmail = portalContactEmail;
+        this.portalCreationDate = portalCreationDate;
+        this.portalId = portalId;
+        this.portalLastUpdateDate = portalLastUpdateDate;
+        this.portalName = portalName;
+        this.portalStartUrl = portalStartUrl;
+        this.portalStatus = portalStatus;
+  }
 }

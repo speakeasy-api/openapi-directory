@@ -18,6 +18,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskLabel")
     public String diskLabel;
+
     public DiskEntry withDiskLabel(String diskLabel) {
         this.diskLabel = diskLabel;
         return this;
@@ -29,6 +30,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskLabelType")
     public String diskLabelType;
+
     public DiskEntry withDiskLabelType(String diskLabelType) {
         this.diskLabelType = diskLabelType;
         return this;
@@ -40,6 +42,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hwAddress")
     public String hwAddress;
+
     public DiskEntry withHwAddress(String hwAddress) {
         this.hwAddress = hwAddress;
         return this;
@@ -51,6 +54,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interfaceType")
     public String interfaceType;
+
     public DiskEntry withInterfaceType(String interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -62,6 +66,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitions")
     public DiskPartitionList partitions;
+
     public DiskEntry withPartitions(DiskPartitionList partitions) {
         this.partitions = partitions;
         return this;
@@ -73,6 +78,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DiskEntry withStatus(String status) {
         this.status = status;
         return this;
@@ -84,6 +90,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCapacityBytes")
     public String totalCapacityBytes;
+
     public DiskEntry withTotalCapacityBytes(String totalCapacityBytes) {
         this.totalCapacityBytes = totalCapacityBytes;
         return this;
@@ -95,6 +102,7 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalFreeBytes")
     public String totalFreeBytes;
+
     public DiskEntry withTotalFreeBytes(String totalFreeBytes) {
         this.totalFreeBytes = totalFreeBytes;
         return this;
@@ -106,9 +114,11 @@ public class DiskEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmwareConfig")
     public VmwareDiskConfig vmwareConfig;
+
     public DiskEntry withVmwareConfig(VmwareDiskConfig vmwareConfig) {
         this.vmwareConfig = vmwareConfig;
         return this;
     }
     
+    public DiskEntry(){}
 }

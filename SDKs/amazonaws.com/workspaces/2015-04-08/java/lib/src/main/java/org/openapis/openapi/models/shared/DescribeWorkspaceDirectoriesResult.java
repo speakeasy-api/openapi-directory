@@ -15,6 +15,7 @@ public class DescribeWorkspaceDirectoriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Directories")
     public WorkspaceDirectory[] directories;
+
     public DescribeWorkspaceDirectoriesResult withDirectories(WorkspaceDirectory[] directories) {
         this.directories = directories;
         return this;
@@ -23,9 +24,11 @@ public class DescribeWorkspaceDirectoriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspaceDirectoriesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeWorkspaceDirectoriesResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPortalsResponse {
@@ -12,6 +13,7 @@ public class ListPortalsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPortalsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPortalsResponse {
     
     
     public String contentType;
+
     public ListPortalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPortalsResponse {
      */
     
     public Object internalServerException;
+
     public ListPortalsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPortalsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPortalsResponse listPortalsResponse;
+
     public ListPortalsResponse withListPortalsResponse(org.openapis.openapi.models.shared.ListPortalsResponse listPortalsResponse) {
         this.listPortalsResponse = listPortalsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListPortalsResponse {
     
     
     public Integer statusCode;
+
     public ListPortalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPortalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPortalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListPortalsResponse {
      */
     
     public Object throttlingException;
+
     public ListPortalsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListPortalsResponse {
      */
     
     public Object validationException;
+
     public ListPortalsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPortalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

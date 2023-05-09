@@ -18,6 +18,7 @@ public class BiddingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedBid")
     public FixedBidStrategy fixedBid;
+
     public BiddingStrategy withFixedBid(FixedBidStrategy fixedBid) {
         this.fixedBid = fixedBid;
         return this;
@@ -29,6 +30,7 @@ public class BiddingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximizeSpendAutoBid")
     public MaximizeSpendBidStrategy maximizeSpendAutoBid;
+
     public BiddingStrategy withMaximizeSpendAutoBid(MaximizeSpendBidStrategy maximizeSpendAutoBid) {
         this.maximizeSpendAutoBid = maximizeSpendAutoBid;
         return this;
@@ -40,9 +42,11 @@ public class BiddingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceGoalAutoBid")
     public PerformanceGoalBidStrategy performanceGoalAutoBid;
+
     public BiddingStrategy withPerformanceGoalAutoBid(PerformanceGoalBidStrategy performanceGoalAutoBid) {
         this.performanceGoalAutoBid = performanceGoalAutoBid;
         return this;
     }
     
+    public BiddingStrategy(){}
 }

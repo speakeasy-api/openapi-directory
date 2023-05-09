@@ -15,6 +15,7 @@ public class CreateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupProperties")
     public CreateBillingGroupRequestBodyBillingGroupProperties billingGroupProperties;
+
     public CreateBillingGroupRequestBody withBillingGroupProperties(CreateBillingGroupRequestBodyBillingGroupProperties billingGroupProperties) {
         this.billingGroupProperties = billingGroupProperties;
         return this;
@@ -26,9 +27,11 @@ public class CreateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateBillingGroupRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBillingGroupRequestBody(){}
 }

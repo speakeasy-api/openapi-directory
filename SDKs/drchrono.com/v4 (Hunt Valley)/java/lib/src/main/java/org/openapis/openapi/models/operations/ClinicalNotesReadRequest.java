@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClinicalNotesReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public ClinicalNotesReadRequest withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +18,7 @@ public class ClinicalNotesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
     public String dateRange;
+
     public ClinicalNotesReadRequest withDateRange(String dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -23,6 +26,7 @@ public class ClinicalNotesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public ClinicalNotesReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,6 +34,7 @@ public class ClinicalNotesReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ClinicalNotesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +42,7 @@ public class ClinicalNotesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public Long office;
+
     public ClinicalNotesReadRequest withOffice(Long office) {
         this.office = office;
         return this;
@@ -44,6 +50,7 @@ public class ClinicalNotesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public ClinicalNotesReadRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -51,9 +58,13 @@ public class ClinicalNotesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public ClinicalNotesReadRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public ClinicalNotesReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

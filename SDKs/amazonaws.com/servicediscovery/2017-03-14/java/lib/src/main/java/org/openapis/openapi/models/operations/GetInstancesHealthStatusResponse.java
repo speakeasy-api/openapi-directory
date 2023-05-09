@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInstancesHealthStatusResponse {
     
     public String contentType;
+
     public GetInstancesHealthStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInstancesHealthStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInstancesHealthStatusResponse getInstancesHealthStatusResponse;
+
     public GetInstancesHealthStatusResponse withGetInstancesHealthStatusResponse(org.openapis.openapi.models.shared.GetInstancesHealthStatusResponse getInstancesHealthStatusResponse) {
         this.getInstancesHealthStatusResponse = getInstancesHealthStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetInstancesHealthStatusResponse {
      */
     
     public Object instanceNotFound;
+
     public GetInstancesHealthStatusResponse withInstanceNotFound(Object instanceNotFound) {
         this.instanceNotFound = instanceNotFound;
         return this;
@@ -39,6 +43,7 @@ public class GetInstancesHealthStatusResponse {
      */
     
     public Object invalidInput;
+
     public GetInstancesHealthStatusResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -46,6 +51,7 @@ public class GetInstancesHealthStatusResponse {
     
     
     public Integer statusCode;
+
     public GetInstancesHealthStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetInstancesHealthStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInstancesHealthStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetInstancesHealthStatusResponse {
      */
     
     public Object serviceNotFound;
+
     public GetInstancesHealthStatusResponse withServiceNotFound(Object serviceNotFound) {
         this.serviceNotFound = serviceNotFound;
         return this;
     }
     
+    public GetInstancesHealthStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

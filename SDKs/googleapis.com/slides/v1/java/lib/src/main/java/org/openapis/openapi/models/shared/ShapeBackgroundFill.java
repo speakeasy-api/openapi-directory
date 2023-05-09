@@ -18,6 +18,7 @@ public class ShapeBackgroundFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyState")
     public ShapeBackgroundFillPropertyStateEnum propertyState;
+
     public ShapeBackgroundFill withPropertyState(ShapeBackgroundFillPropertyStateEnum propertyState) {
         this.propertyState = propertyState;
         return this;
@@ -29,9 +30,11 @@ public class ShapeBackgroundFill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solidFill")
     public SolidFill solidFill;
+
     public ShapeBackgroundFill withSolidFill(SolidFill solidFill) {
         this.solidFill = solidFill;
         return this;
     }
     
+    public ShapeBackgroundFill(){}
 }

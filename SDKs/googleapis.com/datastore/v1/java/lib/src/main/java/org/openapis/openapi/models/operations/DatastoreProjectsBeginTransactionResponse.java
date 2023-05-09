@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatastoreProjectsBeginTransactionResponse {
@@ -12,6 +13,7 @@ public class DatastoreProjectsBeginTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.BeginTransactionResponse beginTransactionResponse;
+
     public DatastoreProjectsBeginTransactionResponse withBeginTransactionResponse(org.openapis.openapi.models.shared.BeginTransactionResponse beginTransactionResponse) {
         this.beginTransactionResponse = beginTransactionResponse;
         return this;
@@ -19,6 +21,7 @@ public class DatastoreProjectsBeginTransactionResponse {
     
     
     public String contentType;
+
     public DatastoreProjectsBeginTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DatastoreProjectsBeginTransactionResponse {
     
     
     public Integer statusCode;
+
     public DatastoreProjectsBeginTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatastoreProjectsBeginTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatastoreProjectsBeginTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatastoreProjectsBeginTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

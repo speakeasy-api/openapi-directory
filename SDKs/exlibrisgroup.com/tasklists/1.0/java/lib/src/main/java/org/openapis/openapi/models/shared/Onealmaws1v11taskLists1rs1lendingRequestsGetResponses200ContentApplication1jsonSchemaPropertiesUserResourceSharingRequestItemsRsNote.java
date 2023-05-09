@@ -20,6 +20,7 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsRsNote withContent(String content) {
         this.content = content;
         return this;
@@ -31,6 +32,7 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsRsNote withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -43,9 +45,11 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("created_date")
     public LocalDate createdDate;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsRsNote withCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
         return this;
     }
     
+    public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsRsNote(){}
 }

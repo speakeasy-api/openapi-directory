@@ -15,6 +15,7 @@ public class ListNotificationRulesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotificationRulesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListNotificationRulesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationRules")
     public NotificationRuleSummary[] notificationRules;
+
     public ListNotificationRulesResult withNotificationRules(NotificationRuleSummary[] notificationRules) {
         this.notificationRules = notificationRules;
         return this;
     }
     
+    public ListNotificationRulesResult(){}
 }

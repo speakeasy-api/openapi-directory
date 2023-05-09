@@ -18,6 +18,7 @@ public class TestRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public TestRulesetRequest withSource(Source source) {
         this.source = source;
         return this;
@@ -29,9 +30,11 @@ public class TestRulesetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSuite")
     public TestSuite testSuite;
+
     public TestRulesetRequest withTestSuite(TestSuite testSuite) {
         this.testSuite = testSuite;
         return this;
     }
     
+    public TestRulesetRequest(){}
 }

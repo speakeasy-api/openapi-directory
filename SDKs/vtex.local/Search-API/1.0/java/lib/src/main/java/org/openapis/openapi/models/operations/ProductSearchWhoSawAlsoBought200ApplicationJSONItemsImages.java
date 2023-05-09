@@ -12,6 +12,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages {
      */
     @JsonProperty("imageId")
     public String imageId;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages {
      */
     @JsonProperty("imageLabel")
     public String imageLabel;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages withImageLabel(String imageLabel) {
         this.imageLabel = imageLabel;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages {
      */
     @JsonProperty("imageLastModified")
     public String imageLastModified;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages withImageLastModified(String imageLastModified) {
         this.imageLastModified = imageLastModified;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages {
      */
     @JsonProperty("imageTag")
     public String imageTag;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages withImageTag(String imageTag) {
         this.imageTag = imageTag;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages {
      */
     @JsonProperty("imageText")
     public String imageText;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages withImageText(String imageText) {
         this.imageText = imageText;
         return this;
@@ -62,9 +67,18 @@ public class ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages {
      */
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoBought200ApplicationJSONItemsImages(@JsonProperty("imageId") String imageId, @JsonProperty("imageLabel") String imageLabel, @JsonProperty("imageLastModified") String imageLastModified, @JsonProperty("imageTag") String imageTag, @JsonProperty("imageText") String imageText, @JsonProperty("imageUrl") String imageUrl) {
+        this.imageId = imageId;
+        this.imageLabel = imageLabel;
+        this.imageLastModified = imageLastModified;
+        this.imageTag = imageTag;
+        this.imageText = imageText;
+        this.imageUrl = imageUrl;
+  }
 }

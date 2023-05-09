@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileRequest {
@@ -12,6 +13,7 @@ public class UploadFileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FolderId")
     public String folderId;
+
     public UploadFileRequest withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -19,6 +21,7 @@ public class UploadFileRequest {
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public UploadFileRequestBody requestBody;
+
     public UploadFileRequest withRequestBody(UploadFileRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,9 +32,13 @@ public class UploadFileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public UploadFileRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public UploadFileRequest(@JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

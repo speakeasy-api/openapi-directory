@@ -15,6 +15,7 @@ public class OrderProductTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixed")
     public Boolean fixed;
+
     public OrderProductTax withFixed(Boolean fixed) {
         this.fixed = fixed;
         return this;
@@ -26,6 +27,7 @@ public class OrderProductTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderProductTax withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class OrderProductTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderProductTax withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class OrderProductTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Float rate;
+
     public OrderProductTax withRate(Float rate) {
         this.rate = rate;
         return this;
@@ -59,9 +63,11 @@ public class OrderProductTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_on_product_price")
     public Boolean taxOnProductPrice;
+
     public OrderProductTax withTaxOnProductPrice(Boolean taxOnProductPrice) {
         this.taxOnProductPrice = taxOnProductPrice;
         return this;
     }
     
+    public OrderProductTax(){}
 }

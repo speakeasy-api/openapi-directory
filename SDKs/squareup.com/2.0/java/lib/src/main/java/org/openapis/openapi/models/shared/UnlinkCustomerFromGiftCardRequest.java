@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnlinkCustomerFromGiftCardRequest {
     @JsonProperty("customer_id")
     public String customerId;
+
     public UnlinkCustomerFromGiftCardRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public UnlinkCustomerFromGiftCardRequest(@JsonProperty("customer_id") String customerId) {
+        this.customerId = customerId;
+  }
 }

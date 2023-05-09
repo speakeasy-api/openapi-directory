@@ -18,6 +18,7 @@ public class KioskCustomization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSettings")
     public KioskCustomizationDeviceSettingsEnum deviceSettings;
+
     public KioskCustomization withDeviceSettings(KioskCustomizationDeviceSettingsEnum deviceSettings) {
         this.deviceSettings = deviceSettings;
         return this;
@@ -29,6 +30,7 @@ public class KioskCustomization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerButtonActions")
     public KioskCustomizationPowerButtonActionsEnum powerButtonActions;
+
     public KioskCustomization withPowerButtonActions(KioskCustomizationPowerButtonActionsEnum powerButtonActions) {
         this.powerButtonActions = powerButtonActions;
         return this;
@@ -40,6 +42,7 @@ public class KioskCustomization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusBar")
     public KioskCustomizationStatusBarEnum statusBar;
+
     public KioskCustomization withStatusBar(KioskCustomizationStatusBarEnum statusBar) {
         this.statusBar = statusBar;
         return this;
@@ -51,6 +54,7 @@ public class KioskCustomization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemErrorWarnings")
     public KioskCustomizationSystemErrorWarningsEnum systemErrorWarnings;
+
     public KioskCustomization withSystemErrorWarnings(KioskCustomizationSystemErrorWarningsEnum systemErrorWarnings) {
         this.systemErrorWarnings = systemErrorWarnings;
         return this;
@@ -62,9 +66,11 @@ public class KioskCustomization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemNavigation")
     public KioskCustomizationSystemNavigationEnum systemNavigation;
+
     public KioskCustomization withSystemNavigation(KioskCustomizationSystemNavigationEnum systemNavigation) {
         this.systemNavigation = systemNavigation;
         return this;
     }
     
+    public KioskCustomization(){}
 }

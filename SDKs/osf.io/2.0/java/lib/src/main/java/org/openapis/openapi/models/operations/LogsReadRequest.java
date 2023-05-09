@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LogsReadRequest {
@@ -12,9 +13,13 @@ public class LogsReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=log_id")
     public String logId;
+
     public LogsReadRequest withLogId(String logId) {
         this.logId = logId;
         return this;
     }
     
+    public LogsReadRequest(@JsonProperty("log_id") String logId) {
+        this.logId = logId;
+  }
 }

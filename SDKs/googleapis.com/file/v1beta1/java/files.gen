@@ -99,8 +99,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/NetworkConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkConfigInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileShareConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/NfsExportOptionsAccessModeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/NfsExportOptionsSecurityFlavorsEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NfsExportOptionsSquashModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NfsExportOptions.java
+lib/src/main/java/org/openapis/openapi/models/shared/DirectoryServicesConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/ManagedActiveDirectoryConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListInstancesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RestoreInstanceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/RevertInstanceRequest.java
@@ -115,4 +118,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListSnapshotsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

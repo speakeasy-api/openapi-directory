@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesImportResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesImportResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesImportResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesImportResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugIssuesImportResponse {
      */
     
     public org.openapis.openapi.models.shared.IssueJobStatus issueJobStatus;
+
     public GetRepositoriesWorkspaceRepoSlugIssuesImportResponse withIssueJobStatus(org.openapis.openapi.models.shared.IssueJobStatus issueJobStatus) {
         this.issueJobStatus = issueJobStatus;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugIssuesImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

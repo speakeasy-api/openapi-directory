@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SplitShardInput {
     @JsonProperty("NewStartingHashKey")
     public String newStartingHashKey;
+
     public SplitShardInput withNewStartingHashKey(String newStartingHashKey) {
         this.newStartingHashKey = newStartingHashKey;
         return this;
@@ -21,6 +22,7 @@ public class SplitShardInput {
     
     @JsonProperty("ShardToSplit")
     public String shardToSplit;
+
     public SplitShardInput withShardToSplit(String shardToSplit) {
         this.shardToSplit = shardToSplit;
         return this;
@@ -29,6 +31,7 @@ public class SplitShardInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public SplitShardInput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -37,9 +40,14 @@ public class SplitShardInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public SplitShardInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public SplitShardInput(@JsonProperty("NewStartingHashKey") String newStartingHashKey, @JsonProperty("ShardToSplit") String shardToSplit) {
+        this.newStartingHashKey = newStartingHashKey;
+        this.shardToSplit = shardToSplit;
+  }
 }

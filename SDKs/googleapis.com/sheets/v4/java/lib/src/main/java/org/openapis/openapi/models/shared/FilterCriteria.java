@@ -18,6 +18,7 @@ public class FilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public BooleanCondition condition;
+
     public FilterCriteria withCondition(BooleanCondition condition) {
         this.condition = condition;
         return this;
@@ -29,6 +30,7 @@ public class FilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenValues")
     public String[] hiddenValues;
+
     public FilterCriteria withHiddenValues(String[] hiddenValues) {
         this.hiddenValues = hiddenValues;
         return this;
@@ -40,6 +42,7 @@ public class FilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleBackgroundColor")
     public Color visibleBackgroundColor;
+
     public FilterCriteria withVisibleBackgroundColor(Color visibleBackgroundColor) {
         this.visibleBackgroundColor = visibleBackgroundColor;
         return this;
@@ -51,6 +54,7 @@ public class FilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleBackgroundColorStyle")
     public ColorStyle visibleBackgroundColorStyle;
+
     public FilterCriteria withVisibleBackgroundColorStyle(ColorStyle visibleBackgroundColorStyle) {
         this.visibleBackgroundColorStyle = visibleBackgroundColorStyle;
         return this;
@@ -62,6 +66,7 @@ public class FilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleForegroundColor")
     public Color visibleForegroundColor;
+
     public FilterCriteria withVisibleForegroundColor(Color visibleForegroundColor) {
         this.visibleForegroundColor = visibleForegroundColor;
         return this;
@@ -73,9 +78,11 @@ public class FilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibleForegroundColorStyle")
     public ColorStyle visibleForegroundColorStyle;
+
     public FilterCriteria withVisibleForegroundColorStyle(ColorStyle visibleForegroundColorStyle) {
         this.visibleForegroundColorStyle = visibleForegroundColorStyle;
         return this;
     }
     
+    public FilterCriteria(){}
 }

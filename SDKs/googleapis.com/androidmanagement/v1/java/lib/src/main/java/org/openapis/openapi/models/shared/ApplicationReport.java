@@ -18,6 +18,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationSource")
     public ApplicationReportApplicationSourceEnum applicationSource;
+
     public ApplicationReport withApplicationSource(ApplicationReportApplicationSourceEnum applicationSource) {
         this.applicationSource = applicationSource;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ApplicationReport withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public ApplicationEvent[] events;
+
     public ApplicationReport withEvents(ApplicationEvent[] events) {
         this.events = events;
         return this;
@@ -51,6 +54,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installerPackageName")
     public String installerPackageName;
+
     public ApplicationReport withInstallerPackageName(String installerPackageName) {
         this.installerPackageName = installerPackageName;
         return this;
@@ -62,6 +66,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyedAppStates")
     public KeyedAppState[] keyedAppStates;
+
     public ApplicationReport withKeyedAppStates(KeyedAppState[] keyedAppStates) {
         this.keyedAppStates = keyedAppStates;
         return this;
@@ -73,6 +78,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public ApplicationReport withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -84,6 +90,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageSha256Hash")
     public String packageSha256Hash;
+
     public ApplicationReport withPackageSha256Hash(String packageSha256Hash) {
         this.packageSha256Hash = packageSha256Hash;
         return this;
@@ -95,6 +102,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingKeyCertFingerprints")
     public String[] signingKeyCertFingerprints;
+
     public ApplicationReport withSigningKeyCertFingerprints(String[] signingKeyCertFingerprints) {
         this.signingKeyCertFingerprints = signingKeyCertFingerprints;
         return this;
@@ -106,6 +114,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ApplicationReportStateEnum state;
+
     public ApplicationReport withState(ApplicationReportStateEnum state) {
         this.state = state;
         return this;
@@ -117,6 +126,7 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public Integer versionCode;
+
     public ApplicationReport withVersionCode(Integer versionCode) {
         this.versionCode = versionCode;
         return this;
@@ -128,9 +138,11 @@ public class ApplicationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionName")
     public String versionName;
+
     public ApplicationReport withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public ApplicationReport(){}
 }

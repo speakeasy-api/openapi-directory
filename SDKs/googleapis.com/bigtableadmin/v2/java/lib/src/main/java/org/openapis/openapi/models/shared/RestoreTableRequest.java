@@ -18,6 +18,7 @@ public class RestoreTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backup")
     public String backup;
+
     public RestoreTableRequest withBackup(String backup) {
         this.backup = backup;
         return this;
@@ -29,9 +30,11 @@ public class RestoreTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public RestoreTableRequest withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public RestoreTableRequest(){}
 }

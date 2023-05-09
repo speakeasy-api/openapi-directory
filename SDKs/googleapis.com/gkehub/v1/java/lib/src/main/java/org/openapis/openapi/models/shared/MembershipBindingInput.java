@@ -18,6 +18,7 @@ public class MembershipBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleet")
     public Boolean fleet;
+
     public MembershipBindingInput withFleet(Boolean fleet) {
         this.fleet = fleet;
         return this;
@@ -29,6 +30,7 @@ public class MembershipBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MembershipBindingInput withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class MembershipBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public MembershipBindingInput withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public MembershipBindingInput(){}
 }

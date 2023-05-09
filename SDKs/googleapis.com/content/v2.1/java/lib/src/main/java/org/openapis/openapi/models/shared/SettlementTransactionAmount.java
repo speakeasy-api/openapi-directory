@@ -12,6 +12,7 @@ public class SettlementTransactionAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commission")
     public SettlementTransactionAmountCommission commission;
+
     public SettlementTransactionAmount withCommission(SettlementTransactionAmountCommission commission) {
         this.commission = commission;
         return this;
@@ -23,6 +24,7 @@ public class SettlementTransactionAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SettlementTransactionAmount withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class SettlementTransactionAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionAmount")
     public Price transactionAmount;
+
     public SettlementTransactionAmount withTransactionAmount(Price transactionAmount) {
         this.transactionAmount = transactionAmount;
         return this;
@@ -42,9 +45,11 @@ public class SettlementTransactionAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SettlementTransactionAmount withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SettlementTransactionAmount(){}
 }

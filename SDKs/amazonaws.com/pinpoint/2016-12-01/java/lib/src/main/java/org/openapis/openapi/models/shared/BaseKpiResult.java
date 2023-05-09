@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BaseKpiResult {
     @JsonProperty("Rows")
     public ResultRow[] rows;
+
     public BaseKpiResult withRows(ResultRow[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public BaseKpiResult(@JsonProperty("Rows") ResultRow[] rows) {
+        this.rows = rows;
+  }
 }

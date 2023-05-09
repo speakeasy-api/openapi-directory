@@ -15,6 +15,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PageModifyFields withBody(String body) {
         this.body = body;
         return this;
@@ -26,6 +27,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public PageCategory[] categories;
+
     public PageModifyFields withCategories(PageCategory[] categories) {
         this.categories = categories;
         return this;
@@ -37,6 +39,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public PageModifyFieldsImage image;
+
     public PageModifyFields withImage(PageModifyFieldsImage image) {
         this.image = image;
         return this;
@@ -48,6 +51,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta_description")
     public String metaDescription;
+
     public PageModifyFields withMetaDescription(String metaDescription) {
         this.metaDescription = metaDescription;
         return this;
@@ -59,6 +63,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_title")
     public String pageTitle;
+
     public PageModifyFields withPageTitle(String pageTitle) {
         this.pageTitle = pageTitle;
         return this;
@@ -70,6 +75,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink")
     public String permalink;
+
     public PageModifyFields withPermalink(String permalink) {
         this.permalink = permalink;
         return this;
@@ -81,6 +87,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PageModifyFieldsStatusEnum status;
+
     public PageModifyFields withStatus(PageModifyFieldsStatusEnum status) {
         this.status = status;
         return this;
@@ -92,6 +99,7 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public Long template;
+
     public PageModifyFields withTemplate(Long template) {
         this.template = template;
         return this;
@@ -103,9 +111,11 @@ public class PageModifyFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PageModifyFields withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PageModifyFields(){}
 }

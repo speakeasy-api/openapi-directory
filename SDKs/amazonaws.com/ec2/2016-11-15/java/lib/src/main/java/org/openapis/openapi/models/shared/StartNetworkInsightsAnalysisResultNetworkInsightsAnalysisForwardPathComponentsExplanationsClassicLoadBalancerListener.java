@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsClassicLoadBalancerListener {
     
     public Long instancePort;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsClassicLoadBalancerListener withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -19,9 +20,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPat
     
     
     public Long loadBalancerPort;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsClassicLoadBalancerListener withLoadBalancerPort(Long loadBalancerPort) {
         this.loadBalancerPort = loadBalancerPort;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsClassicLoadBalancerListener(){}
 }

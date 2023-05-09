@@ -15,6 +15,7 @@ public class DescribeProductViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductViewSummary")
     public ProductViewSummary productViewSummary;
+
     public DescribeProductViewOutput withProductViewSummary(ProductViewSummary productViewSummary) {
         this.productViewSummary = productViewSummary;
         return this;
@@ -23,9 +24,11 @@ public class DescribeProductViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifacts")
     public ProvisioningArtifact[] provisioningArtifacts;
+
     public DescribeProductViewOutput withProvisioningArtifacts(ProvisioningArtifact[] provisioningArtifacts) {
         this.provisioningArtifacts = provisioningArtifacts;
         return this;
     }
     
+    public DescribeProductViewOutput(){}
 }

@@ -12,6 +12,7 @@ public class CampaignRequestFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public String[] attributes;
+
     public CampaignRequestFilters withAttributes(String[] attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class CampaignRequestFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public String[] contacts;
+
     public CampaignRequestFilters withContacts(String[] contacts) {
         this.contacts = contacts;
         return this;
@@ -28,9 +30,11 @@ public class CampaignRequestFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public CampaignRequestFilters withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CampaignRequestFilters(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetStackPolicyOutput {
     
     public String stackPolicyBody;
+
     public GetStackPolicyOutput withStackPolicyBody(String stackPolicyBody) {
         this.stackPolicyBody = stackPolicyBody;
         return this;
     }
     
+    public GetStackPolicyOutput(){}
 }

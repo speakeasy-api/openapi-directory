@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateNetworkSettingsResponse {
@@ -12,6 +13,7 @@ public class DisassociateNetworkSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateNetworkSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateNetworkSettingsResponse {
     
     
     public String contentType;
+
     public DisassociateNetworkSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateNetworkSettingsResponse {
      */
     
     public java.util.Map<String, Object> disassociateNetworkSettingsResponse;
+
     public DisassociateNetworkSettingsResponse withDisassociateNetworkSettingsResponse(java.util.Map<String, Object> disassociateNetworkSettingsResponse) {
         this.disassociateNetworkSettingsResponse = disassociateNetworkSettingsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateNetworkSettingsResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateNetworkSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateNetworkSettingsResponse {
     
     
     public Integer statusCode;
+
     public DisassociateNetworkSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateNetworkSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateNetworkSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateNetworkSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateNetworkSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateNetworkSettingsResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateNetworkSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateNetworkSettingsResponse {
      */
     
     public Object validationException;
+
     public DisassociateNetworkSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateNetworkSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

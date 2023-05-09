@@ -18,9 +18,11 @@ public class PartitionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionKey")
     public PartitionSpecPartitionKeyEnum partitionKey;
+
     public PartitionSpec withPartitionKey(PartitionSpecPartitionKeyEnum partitionKey) {
         this.partitionKey = partitionKey;
         return this;
     }
     
+    public PartitionSpec(){}
 }

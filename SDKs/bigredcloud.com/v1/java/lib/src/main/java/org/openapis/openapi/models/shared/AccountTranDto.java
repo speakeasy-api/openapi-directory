@@ -17,6 +17,7 @@ public class AccountTranDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranId")
     public Long bookTranId;
+
     public AccountTranDto withBookTranId(Long bookTranId) {
         this.bookTranId = bookTranId;
         return this;
@@ -25,6 +26,7 @@ public class AccountTranDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTranTypeId")
     public Long bookTranTypeId;
+
     public AccountTranDto withBookTranTypeId(Long bookTranTypeId) {
         this.bookTranTypeId = bookTranTypeId;
         return this;
@@ -33,6 +35,7 @@ public class AccountTranDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTransactionReference")
     public String bookTransactionReference;
+
     public AccountTranDto withBookTransactionReference(String bookTransactionReference) {
         this.bookTransactionReference = bookTransactionReference;
         return this;
@@ -41,6 +44,7 @@ public class AccountTranDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookTypeDesc")
     public String bookTypeDesc;
+
     public AccountTranDto withBookTypeDesc(String bookTypeDesc) {
         this.bookTypeDesc = bookTypeDesc;
         return this;
@@ -49,6 +53,7 @@ public class AccountTranDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credit")
     public Double credit;
+
     public AccountTranDto withCredit(Double credit) {
         this.credit = credit;
         return this;
@@ -57,6 +62,7 @@ public class AccountTranDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debit")
     public Double debit;
+
     public AccountTranDto withDebit(Double debit) {
         this.debit = debit;
         return this;
@@ -65,6 +71,7 @@ public class AccountTranDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AccountTranDto withId(Long id) {
         this.id = id;
         return this;
@@ -75,9 +82,11 @@ public class AccountTranDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("procDate")
     public OffsetDateTime procDate;
+
     public AccountTranDto withProcDate(OffsetDateTime procDate) {
         this.procDate = procDate;
         return this;
     }
     
+    public AccountTranDto(){}
 }

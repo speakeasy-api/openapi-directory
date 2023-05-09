@@ -15,6 +15,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedInfrastructureMetrics")
     public EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics;
+
     public GetEffectiveRecommendationPreferencesResponse withEnhancedInfrastructureMetrics(EnhancedInfrastructureMetricsEnum enhancedInfrastructureMetrics) {
         this.enhancedInfrastructureMetrics = enhancedInfrastructureMetrics;
         return this;
@@ -23,9 +24,11 @@ public class GetEffectiveRecommendationPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalMetricsPreference")
     public ExternalMetricsPreference externalMetricsPreference;
+
     public GetEffectiveRecommendationPreferencesResponse withExternalMetricsPreference(ExternalMetricsPreference externalMetricsPreference) {
         this.externalMetricsPreference = externalMetricsPreference;
         return this;
     }
     
+    public GetEffectiveRecommendationPreferencesResponse(){}
 }

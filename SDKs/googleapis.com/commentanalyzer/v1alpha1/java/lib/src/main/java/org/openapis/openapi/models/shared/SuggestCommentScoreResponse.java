@@ -18,6 +18,7 @@ public class SuggestCommentScoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public SuggestCommentScoreResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,6 +30,7 @@ public class SuggestCommentScoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public String[] detectedLanguages;
+
     public SuggestCommentScoreResponse withDetectedLanguages(String[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -40,9 +42,11 @@ public class SuggestCommentScoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLanguages")
     public String[] requestedLanguages;
+
     public SuggestCommentScoreResponse withRequestedLanguages(String[] requestedLanguages) {
         this.requestedLanguages = requestedLanguages;
         return this;
     }
     
+    public SuggestCommentScoreResponse(){}
 }

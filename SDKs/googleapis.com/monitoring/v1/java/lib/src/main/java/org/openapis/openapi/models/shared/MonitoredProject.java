@@ -18,6 +18,7 @@ public class MonitoredProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public MonitoredProject withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,9 +30,11 @@ public class MonitoredProject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MonitoredProject withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MonitoredProject(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListDiscussionsLegacyRequest {
@@ -12,6 +13,7 @@ public class TeamsListDiscussionsLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public TeamsListDiscussionsLegacyRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class TeamsListDiscussionsLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public TeamsListDiscussionsLegacyRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class TeamsListDiscussionsLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public TeamsListDiscussionsLegacyRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,9 +43,13 @@ public class TeamsListDiscussionsLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsListDiscussionsLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsListDiscussionsLegacyRequest(@JsonProperty("team_id") Long teamId) {
+        this.teamId = teamId;
+  }
 }

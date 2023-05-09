@@ -15,6 +15,7 @@ public class StatementGetResponseConditionConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public String[] conditions;
+
     public StatementGetResponseConditionConditions withConditions(String[] conditions) {
         this.conditions = conditions;
         return this;
@@ -26,6 +27,7 @@ public class StatementGetResponseConditionConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public StatementGetResponseConditionConditions withKey(String key) {
         this.key = key;
         return this;
@@ -37,6 +39,7 @@ public class StatementGetResponseConditionConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public String operation;
+
     public StatementGetResponseConditionConditions withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -48,9 +51,11 @@ public class StatementGetResponseConditionConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public StatementGetResponseConditionConditions withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public StatementGetResponseConditionConditions(){}
 }

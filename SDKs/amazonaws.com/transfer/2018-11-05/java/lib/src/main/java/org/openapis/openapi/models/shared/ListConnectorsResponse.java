@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListConnectorsResponse {
     @JsonProperty("Connectors")
     public ListedConnector[] connectors;
+
     public ListConnectorsResponse withConnectors(ListedConnector[] connectors) {
         this.connectors = connectors;
         return this;
@@ -22,9 +23,13 @@ public class ListConnectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConnectorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConnectorsResponse(@JsonProperty("Connectors") ListedConnector[] connectors) {
+        this.connectors = connectors;
+  }
 }

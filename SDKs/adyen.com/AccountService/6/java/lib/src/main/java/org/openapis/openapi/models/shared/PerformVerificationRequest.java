@@ -12,6 +12,7 @@ public class PerformVerificationRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public PerformVerificationRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -23,6 +24,7 @@ public class PerformVerificationRequest {
      */
     @JsonProperty("accountStateType")
     public PerformVerificationRequestAccountStateTypeEnum accountStateType;
+
     public PerformVerificationRequest withAccountStateType(PerformVerificationRequestAccountStateTypeEnum accountStateType) {
         this.accountStateType = accountStateType;
         return this;
@@ -33,9 +35,15 @@ public class PerformVerificationRequest {
      */
     @JsonProperty("tier")
     public Integer tier;
+
     public PerformVerificationRequest withTier(Integer tier) {
         this.tier = tier;
         return this;
     }
     
+    public PerformVerificationRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("accountStateType") PerformVerificationRequestAccountStateTypeEnum accountStateType, @JsonProperty("tier") Integer tier) {
+        this.accountHolderCode = accountHolderCode;
+        this.accountStateType = accountStateType;
+        this.tier = tier;
+  }
 }

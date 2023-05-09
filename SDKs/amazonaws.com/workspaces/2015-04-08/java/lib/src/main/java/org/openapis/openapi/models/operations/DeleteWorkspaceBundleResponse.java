@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkspaceBundleResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkspaceBundleResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkspaceBundleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorkspaceBundleResponse {
     
     
     public String contentType;
+
     public DeleteWorkspaceBundleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkspaceBundleResponse {
      */
     
     public java.util.Map<String, Object> deleteWorkspaceBundleResult;
+
     public DeleteWorkspaceBundleResponse withDeleteWorkspaceBundleResult(java.util.Map<String, Object> deleteWorkspaceBundleResult) {
         this.deleteWorkspaceBundleResult = deleteWorkspaceBundleResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkspaceBundleResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DeleteWorkspaceBundleResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkspaceBundleResponse {
      */
     
     public Object resourceAssociatedException;
+
     public DeleteWorkspaceBundleResponse withResourceAssociatedException(Object resourceAssociatedException) {
         this.resourceAssociatedException = resourceAssociatedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteWorkspaceBundleResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkspaceBundleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWorkspaceBundleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkspaceBundleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteWorkspaceBundleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkspaceBundleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteWorkspaceBundleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

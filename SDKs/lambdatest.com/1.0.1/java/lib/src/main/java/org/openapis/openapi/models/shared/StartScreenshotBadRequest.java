@@ -15,9 +15,11 @@ public class StartScreenshotBadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StartScreenshotBadRequest withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StartScreenshotBadRequest(){}
 }

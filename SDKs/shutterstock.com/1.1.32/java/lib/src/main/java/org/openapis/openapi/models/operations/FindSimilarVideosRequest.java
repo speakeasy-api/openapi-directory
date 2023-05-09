@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindSimilarVideosRequest {
@@ -12,6 +13,7 @@ public class FindSimilarVideosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public FindSimilarVideosRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class FindSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public FindSimilarVideosRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -32,6 +35,7 @@ public class FindSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public FindSimilarVideosRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class FindSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public FindSimilarVideosRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,9 +57,13 @@ public class FindSimilarVideosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public FindSimilarVideosViewEnum view;
+
     public FindSimilarVideosRequest withView(FindSimilarVideosViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public FindSimilarVideosRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

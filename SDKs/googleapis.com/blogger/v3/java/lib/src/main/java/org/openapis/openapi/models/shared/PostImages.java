@@ -12,9 +12,11 @@ public class PostImages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PostImages withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostImages(){}
 }

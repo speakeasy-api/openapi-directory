@@ -15,6 +15,7 @@ public class FirewallPolicyStatelessRuleGroupReferencesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public FirewallPolicyStatelessRuleGroupReferencesDetails withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -23,9 +24,11 @@ public class FirewallPolicyStatelessRuleGroupReferencesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public FirewallPolicyStatelessRuleGroupReferencesDetails withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public FirewallPolicyStatelessRuleGroupReferencesDetails(){}
 }

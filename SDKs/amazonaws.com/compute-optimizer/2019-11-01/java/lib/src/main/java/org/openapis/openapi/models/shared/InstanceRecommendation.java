@@ -20,6 +20,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public InstanceRecommendation withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentInstanceType")
     public String currentInstanceType;
+
     public InstanceRecommendation withCurrentInstanceType(String currentInstanceType) {
         this.currentInstanceType = currentInstanceType;
         return this;
@@ -36,6 +38,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPerformanceRisk")
     public CurrentPerformanceRiskEnum currentPerformanceRisk;
+
     public InstanceRecommendation withCurrentPerformanceRisk(CurrentPerformanceRiskEnum currentPerformanceRisk) {
         this.currentPerformanceRisk = currentPerformanceRisk;
         return this;
@@ -44,6 +47,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveRecommendationPreferences")
     public EffectiveRecommendationPreferences effectiveRecommendationPreferences;
+
     public InstanceRecommendation withEffectiveRecommendationPreferences(EffectiveRecommendationPreferences effectiveRecommendationPreferences) {
         this.effectiveRecommendationPreferences = effectiveRecommendationPreferences;
         return this;
@@ -52,6 +56,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finding")
     public FindingEnum finding;
+
     public InstanceRecommendation withFinding(FindingEnum finding) {
         this.finding = finding;
         return this;
@@ -60,6 +65,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingReasonCodes")
     public InstanceRecommendationFindingReasonCodeEnum[] findingReasonCodes;
+
     public InstanceRecommendation withFindingReasonCodes(InstanceRecommendationFindingReasonCodeEnum[] findingReasonCodes) {
         this.findingReasonCodes = findingReasonCodes;
         return this;
@@ -68,6 +74,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredWorkloadTypes")
     public InferredWorkloadTypeEnum[] inferredWorkloadTypes;
+
     public InstanceRecommendation withInferredWorkloadTypes(InferredWorkloadTypeEnum[] inferredWorkloadTypes) {
         this.inferredWorkloadTypes = inferredWorkloadTypes;
         return this;
@@ -76,6 +83,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceArn")
     public String instanceArn;
+
     public InstanceRecommendation withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -84,8 +92,18 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public InstanceRecommendation withInstanceName(String instanceName) {
         this.instanceName = instanceName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instanceState")
+    public InstanceStateEnum instanceState;
+
+    public InstanceRecommendation withInstanceState(InstanceStateEnum instanceState) {
+        this.instanceState = instanceState;
         return this;
     }
     
@@ -94,6 +112,7 @@ public class InstanceRecommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRefreshTimestamp")
     public OffsetDateTime lastRefreshTimestamp;
+
     public InstanceRecommendation withLastRefreshTimestamp(OffsetDateTime lastRefreshTimestamp) {
         this.lastRefreshTimestamp = lastRefreshTimestamp;
         return this;
@@ -102,6 +121,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookBackPeriodInDays")
     public Double lookBackPeriodInDays;
+
     public InstanceRecommendation withLookBackPeriodInDays(Double lookBackPeriodInDays) {
         this.lookBackPeriodInDays = lookBackPeriodInDays;
         return this;
@@ -110,6 +130,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationOptions")
     public InstanceRecommendationOption[] recommendationOptions;
+
     public InstanceRecommendation withRecommendationOptions(InstanceRecommendationOption[] recommendationOptions) {
         this.recommendationOptions = recommendationOptions;
         return this;
@@ -118,6 +139,7 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationSources")
     public RecommendationSource[] recommendationSources;
+
     public InstanceRecommendation withRecommendationSources(RecommendationSource[] recommendationSources) {
         this.recommendationSources = recommendationSources;
         return this;
@@ -126,9 +148,11 @@ public class InstanceRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationMetrics")
     public UtilizationMetric[] utilizationMetrics;
+
     public InstanceRecommendation withUtilizationMetrics(UtilizationMetric[] utilizationMetrics) {
         this.utilizationMetrics = utilizationMetrics;
         return this;
     }
     
+    public InstanceRecommendation(){}
 }

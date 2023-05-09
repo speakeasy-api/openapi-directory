@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMobileDeviceAccessRuleResponse {
     
     public String contentType;
+
     public UpdateMobileDeviceAccessRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMobileDeviceAccessRuleResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateMobileDeviceAccessRuleResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMobileDeviceAccessRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateMobileDeviceAccessRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMobileDeviceAccessRuleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public UpdateMobileDeviceAccessRuleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateMobileDeviceAccessRuleResponse {
      */
     
     public Object organizationStateException;
+
     public UpdateMobileDeviceAccessRuleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateMobileDeviceAccessRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateMobileDeviceAccessRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMobileDeviceAccessRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMobileDeviceAccessRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateMobileDeviceAccessRuleResponse {
      */
     
     public java.util.Map<String, Object> updateMobileDeviceAccessRuleResponse;
+
     public UpdateMobileDeviceAccessRuleResponse withUpdateMobileDeviceAccessRuleResponse(java.util.Map<String, Object> updateMobileDeviceAccessRuleResponse) {
         this.updateMobileDeviceAccessRuleResponse = updateMobileDeviceAccessRuleResponse;
         return this;
     }
     
+    public UpdateMobileDeviceAccessRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

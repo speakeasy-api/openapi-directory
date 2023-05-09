@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BuildsListXamarinSDKBundlesDefaultApplicationJSON {
     @JsonProperty("code")
     public String code;
+
     public BuildsListXamarinSDKBundlesDefaultApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class BuildsListXamarinSDKBundlesDefaultApplicationJSON {
     
     @JsonProperty("id")
     public String id;
+
     public BuildsListXamarinSDKBundlesDefaultApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,15 @@ public class BuildsListXamarinSDKBundlesDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public BuildsListXamarinSDKBundlesDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BuildsListXamarinSDKBundlesDefaultApplicationJSON(@JsonProperty("code") String code, @JsonProperty("id") String id, @JsonProperty("message") String message) {
+        this.code = code;
+        this.id = id;
+        this.message = message;
+  }
 }

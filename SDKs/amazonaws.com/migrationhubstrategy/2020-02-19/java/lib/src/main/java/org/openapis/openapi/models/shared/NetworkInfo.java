@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NetworkInfo {
     @JsonProperty("interfaceName")
     public String interfaceName;
+
     public NetworkInfo withInterfaceName(String interfaceName) {
         this.interfaceName = interfaceName;
         return this;
@@ -19,6 +20,7 @@ public class NetworkInfo {
     
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NetworkInfo withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -26,6 +28,7 @@ public class NetworkInfo {
     
     @JsonProperty("macAddress")
     public String macAddress;
+
     public NetworkInfo withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -33,9 +36,16 @@ public class NetworkInfo {
     
     @JsonProperty("netMask")
     public String netMask;
+
     public NetworkInfo withNetMask(String netMask) {
         this.netMask = netMask;
         return this;
     }
     
+    public NetworkInfo(@JsonProperty("interfaceName") String interfaceName, @JsonProperty("ipAddress") String ipAddress, @JsonProperty("macAddress") String macAddress, @JsonProperty("netMask") String netMask) {
+        this.interfaceName = interfaceName;
+        this.ipAddress = ipAddress;
+        this.macAddress = macAddress;
+        this.netMask = netMask;
+  }
 }

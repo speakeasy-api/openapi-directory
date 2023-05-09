@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTagOptionResponse {
     
     public String contentType;
+
     public DeleteTagOptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTagOptionResponse {
      */
     
     public java.util.Map<String, Object> deleteTagOptionOutput;
+
     public DeleteTagOptionResponse withDeleteTagOptionOutput(java.util.Map<String, Object> deleteTagOptionOutput) {
         this.deleteTagOptionOutput = deleteTagOptionOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTagOptionResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteTagOptionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTagOptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTagOptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteTagOptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteTagOptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteTagOptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTagOptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteTagOptionResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public DeleteTagOptionResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public DeleteTagOptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

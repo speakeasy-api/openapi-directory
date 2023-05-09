@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsTransferOwnershipRawResponse {
     
     public String contentType;
+
     public AppsTransferOwnershipRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsTransferOwnershipRawResponse {
     
     
     public Integer statusCode;
+
     public AppsTransferOwnershipRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsTransferOwnershipRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsTransferOwnershipRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsTransferOwnershipRawResponse {
      */
     
     public AppsTransferOwnershipRaw200ApplicationJSON appsTransferOwnershipRaw200ApplicationJSONObject;
+
     public AppsTransferOwnershipRawResponse withAppsTransferOwnershipRaw200ApplicationJSONObject(AppsTransferOwnershipRaw200ApplicationJSON appsTransferOwnershipRaw200ApplicationJSONObject) {
         this.appsTransferOwnershipRaw200ApplicationJSONObject = appsTransferOwnershipRaw200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class AppsTransferOwnershipRawResponse {
      */
     
     public AppsTransferOwnershipRawDefaultApplicationJSON appsTransferOwnershipRawDefaultApplicationJSONObject;
+
     public AppsTransferOwnershipRawResponse withAppsTransferOwnershipRawDefaultApplicationJSONObject(AppsTransferOwnershipRawDefaultApplicationJSON appsTransferOwnershipRawDefaultApplicationJSONObject) {
         this.appsTransferOwnershipRawDefaultApplicationJSONObject = appsTransferOwnershipRawDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppsTransferOwnershipRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

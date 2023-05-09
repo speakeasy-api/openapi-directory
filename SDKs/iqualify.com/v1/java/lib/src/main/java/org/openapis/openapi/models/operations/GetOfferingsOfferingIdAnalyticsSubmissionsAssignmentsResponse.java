@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssignmentMarkResponse[] assignmentMarkResponses;
+
     public GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse withAssignmentMarkResponses(org.openapis.openapi.models.shared.AssignmentMarkResponse[] assignmentMarkResponses) {
         this.assignmentMarkResponses = assignmentMarkResponses;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse {
     
     
     public String contentType;
+
     public GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

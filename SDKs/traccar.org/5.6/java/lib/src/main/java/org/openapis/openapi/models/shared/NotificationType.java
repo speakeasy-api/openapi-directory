@@ -12,9 +12,11 @@ public class NotificationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NotificationType withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NotificationType(){}
 }

@@ -18,6 +18,7 @@ public class TaskConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTaskRetryCount")
     public Integer maxTaskRetryCount;
+
     public TaskConstraints withMaxTaskRetryCount(Integer maxTaskRetryCount) {
         this.maxTaskRetryCount = maxTaskRetryCount;
         return this;
@@ -29,6 +30,7 @@ public class TaskConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWallClockTime")
     public String maxWallClockTime;
+
     public TaskConstraints withMaxWallClockTime(String maxWallClockTime) {
         this.maxWallClockTime = maxWallClockTime;
         return this;
@@ -40,9 +42,11 @@ public class TaskConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionTime")
     public String retentionTime;
+
     public TaskConstraints withRetentionTime(String retentionTime) {
         this.retentionTime = retentionTime;
         return this;
     }
     
+    public TaskConstraints(){}
 }

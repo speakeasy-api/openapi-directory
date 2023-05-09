@@ -15,6 +15,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
     public String dateOfBirth;
+
     public Customer withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -26,6 +27,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public Customer withGender(String gender) {
         this.gender = gender;
         return this;
@@ -37,6 +39,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_four_ssn")
     public String lastFourSsn;
+
     public Customer withLastFourSsn(String lastFourSsn) {
         this.lastFourSsn = lastFourSsn;
         return this;
@@ -48,6 +51,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("national_identification_number")
     public String nationalIdentificationNumber;
+
     public Customer withNationalIdentificationNumber(String nationalIdentificationNumber) {
         this.nationalIdentificationNumber = nationalIdentificationNumber;
         return this;
@@ -59,6 +63,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_entity_type")
     public CustomerOrganizationEntityTypeEnum organizationEntityType;
+
     public Customer withOrganizationEntityType(CustomerOrganizationEntityTypeEnum organizationEntityType) {
         this.organizationEntityType = organizationEntityType;
         return this;
@@ -70,6 +75,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_registration_id")
     public String organizationRegistrationId;
+
     public Customer withOrganizationRegistrationId(String organizationRegistrationId) {
         this.organizationRegistrationId = organizationRegistrationId;
         return this;
@@ -87,6 +93,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Customer withTitle(String title) {
         this.title = title;
         return this;
@@ -98,6 +105,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Customer withType(String type) {
         this.type = type;
         return this;
@@ -109,9 +117,11 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat_id")
     public String vatId;
+
     public Customer withVatId(String vatId) {
         this.vatId = vatId;
         return this;
     }
     
+    public Customer(){}
 }

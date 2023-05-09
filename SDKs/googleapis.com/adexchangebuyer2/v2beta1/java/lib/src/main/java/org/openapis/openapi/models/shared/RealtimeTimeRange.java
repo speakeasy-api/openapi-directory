@@ -18,9 +18,11 @@ public class RealtimeTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimestamp")
     public String startTimestamp;
+
     public RealtimeTimeRange withStartTimestamp(String startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
     }
     
+    public RealtimeTimeRange(){}
 }

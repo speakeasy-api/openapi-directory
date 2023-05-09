@@ -69,10 +69,8 @@ public class ThreeForBackEndOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedResponse res = new org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedResponse() {{
+        org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedResponse res = new org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class ThreeForBackEndOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedDailyResponse res = new org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedDailyResponse() {{
+        org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedDailyResponse res = new org.openapis.openapi.models.operations.RootV1ScoringsConsolidatedDailyResponse(contentType, httpRes.statusCode()) {{
             rootV1ScoringsConsolidatedDaily200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,10 +153,8 @@ public class ThreeForBackEndOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedResponse res = new org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedResponse() {{
+        org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedResponse res = new org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,10 +192,8 @@ public class ThreeForBackEndOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedDailyResponse res = new org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedDailyResponse() {{
+        org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedDailyResponse res = new org.openapis.openapi.models.operations.RootV1StatisticsConsolidatedDailyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

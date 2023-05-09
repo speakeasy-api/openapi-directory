@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsErrorAttachmentLocationRequest {
@@ -12,6 +13,7 @@ public class ErrorsErrorAttachmentLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsErrorAttachmentLocationRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ErrorsErrorAttachmentLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachmentId")
     public String attachmentId;
+
     public ErrorsErrorAttachmentLocationRequest withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -32,6 +35,7 @@ public class ErrorsErrorAttachmentLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
     public String errorId;
+
     public ErrorsErrorAttachmentLocationRequest withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -42,9 +46,16 @@ public class ErrorsErrorAttachmentLocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsErrorAttachmentLocationRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ErrorsErrorAttachmentLocationRequest(@JsonProperty("app_name") String appName, @JsonProperty("attachmentId") String attachmentId, @JsonProperty("errorId") String errorId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.attachmentId = attachmentId;
+        this.errorId = errorId;
+        this.ownerName = ownerName;
+  }
 }

@@ -18,6 +18,7 @@ public class ObjectOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public String entity;
+
     public ObjectOwner withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -29,9 +30,11 @@ public class ObjectOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public ObjectOwner withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
     }
     
+    public ObjectOwner(){}
 }

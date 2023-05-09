@@ -15,6 +15,7 @@ public class ListOrganizationAdminAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Administrators")
     public Administrator[] administrators;
+
     public ListOrganizationAdminAccountsResponse withAdministrators(Administrator[] administrators) {
         this.administrators = administrators;
         return this;
@@ -23,9 +24,11 @@ public class ListOrganizationAdminAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListOrganizationAdminAccountsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListOrganizationAdminAccountsResponse(){}
 }

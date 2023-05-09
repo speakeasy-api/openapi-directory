@@ -59,11 +59,9 @@ public class Markdown {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MarkdownRenderResponse res = new org.openapis.openapi.models.operations.MarkdownRenderResponse() {{
+        org.openapis.openapi.models.operations.MarkdownRenderResponse res = new org.openapis.openapi.models.operations.MarkdownRenderResponse(contentType, httpRes.statusCode()) {{
             markdownRender200TextHTMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Markdown {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MarkdownRenderRawResponse res = new org.openapis.openapi.models.operations.MarkdownRenderRawResponse() {{
+        org.openapis.openapi.models.operations.MarkdownRenderRawResponse res = new org.openapis.openapi.models.operations.MarkdownRenderRawResponse(contentType, httpRes.statusCode()) {{
             markdownRenderRaw200TextHTMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

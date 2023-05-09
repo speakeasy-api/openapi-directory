@@ -15,9 +15,11 @@ public class GetApiV2PerformanceStats404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object> errors;
+
     public GetApiV2PerformanceStats404ApplicationJSON withErrors(java.util.Map<String, Object> errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetApiV2PerformanceStats404ApplicationJSON(){}
 }

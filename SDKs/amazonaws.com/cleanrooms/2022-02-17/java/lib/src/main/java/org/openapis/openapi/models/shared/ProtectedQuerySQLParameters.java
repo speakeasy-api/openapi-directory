@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedQuerySQLParameters {
     @JsonProperty("queryString")
     public String queryString;
+
     public ProtectedQuerySQLParameters withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public ProtectedQuerySQLParameters(@JsonProperty("queryString") String queryString) {
+        this.queryString = queryString;
+  }
 }

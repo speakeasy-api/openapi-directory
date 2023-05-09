@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolUploadsGetLocationResponse {
     
     public String contentType;
+
     public SymbolUploadsGetLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolUploadsGetLocationResponse {
     
     
     public Integer statusCode;
+
     public SymbolUploadsGetLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolUploadsGetLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolUploadsGetLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolUploadsGetLocationResponse {
      */
     
     public SymbolUploadsGetLocation200ApplicationJSON symbolUploadsGetLocation200ApplicationJSONObject;
+
     public SymbolUploadsGetLocationResponse withSymbolUploadsGetLocation200ApplicationJSONObject(SymbolUploadsGetLocation200ApplicationJSON symbolUploadsGetLocation200ApplicationJSONObject) {
         this.symbolUploadsGetLocation200ApplicationJSONObject = symbolUploadsGetLocation200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SymbolUploadsGetLocationResponse {
      */
     
     public SymbolUploadsGetLocation403ApplicationJSON symbolUploadsGetLocation403ApplicationJSONObject;
+
     public SymbolUploadsGetLocationResponse withSymbolUploadsGetLocation403ApplicationJSONObject(SymbolUploadsGetLocation403ApplicationJSON symbolUploadsGetLocation403ApplicationJSONObject) {
         this.symbolUploadsGetLocation403ApplicationJSONObject = symbolUploadsGetLocation403ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SymbolUploadsGetLocationResponse {
      */
     
     public SymbolUploadsGetLocation404ApplicationJSON symbolUploadsGetLocation404ApplicationJSONObject;
+
     public SymbolUploadsGetLocationResponse withSymbolUploadsGetLocation404ApplicationJSONObject(SymbolUploadsGetLocation404ApplicationJSON symbolUploadsGetLocation404ApplicationJSONObject) {
         this.symbolUploadsGetLocation404ApplicationJSONObject = symbolUploadsGetLocation404ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SymbolUploadsGetLocationResponse {
      */
     
     public SymbolUploadsGetLocation500ApplicationJSON symbolUploadsGetLocation500ApplicationJSONObject;
+
     public SymbolUploadsGetLocationResponse withSymbolUploadsGetLocation500ApplicationJSONObject(SymbolUploadsGetLocation500ApplicationJSON symbolUploadsGetLocation500ApplicationJSONObject) {
         this.symbolUploadsGetLocation500ApplicationJSONObject = symbolUploadsGetLocation500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolUploadsGetLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

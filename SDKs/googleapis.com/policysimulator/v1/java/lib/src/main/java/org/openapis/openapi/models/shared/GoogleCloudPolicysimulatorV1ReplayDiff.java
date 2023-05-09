@@ -18,9 +18,11 @@ public class GoogleCloudPolicysimulatorV1ReplayDiff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessDiff")
     public GoogleCloudPolicysimulatorV1AccessStateDiff accessDiff;
+
     public GoogleCloudPolicysimulatorV1ReplayDiff withAccessDiff(GoogleCloudPolicysimulatorV1AccessStateDiff accessDiff) {
         this.accessDiff = accessDiff;
         return this;
     }
     
+    public GoogleCloudPolicysimulatorV1ReplayDiff(){}
 }

@@ -18,20 +18,23 @@ public class SecurityPolicyAdaptiveProtectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDeployConfig")
     public SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig autoDeployConfig;
+
     public SecurityPolicyAdaptiveProtectionConfig withAutoDeployConfig(SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig autoDeployConfig) {
         this.autoDeployConfig = autoDeployConfig;
         return this;
     }
     
     /**
-     * Configuration options for L7 DDoS detection.
+     * Configuration options for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layer7DdosDefenseConfig")
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig;
+
     public SecurityPolicyAdaptiveProtectionConfig withLayer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig) {
         this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
         return this;
     }
     
+    public SecurityPolicyAdaptiveProtectionConfig(){}
 }

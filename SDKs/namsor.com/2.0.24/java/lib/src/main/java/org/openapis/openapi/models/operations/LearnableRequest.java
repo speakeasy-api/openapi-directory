@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LearnableRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=learnable")
     public Boolean learnable;
+
     public LearnableRequest withLearnable(Boolean learnable) {
         this.learnable = learnable;
         return this;
@@ -19,6 +21,7 @@ public class LearnableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
     public String source;
+
     public LearnableRequest withSource(String source) {
         this.source = source;
         return this;
@@ -26,9 +29,15 @@ public class LearnableRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public LearnableRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public LearnableRequest(@JsonProperty("learnable") Boolean learnable, @JsonProperty("source") String source, @JsonProperty("token") String token) {
+        this.learnable = learnable;
+        this.source = source;
+        this.token = token;
+  }
 }

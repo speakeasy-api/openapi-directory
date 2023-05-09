@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class ScheduledUpdateGroupActionRequest {
     
     public Long desiredCapacity;
+
     public ScheduledUpdateGroupActionRequest withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -19,6 +21,7 @@ public class ScheduledUpdateGroupActionRequest {
     
     
     public OffsetDateTime endTime;
+
     public ScheduledUpdateGroupActionRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +29,7 @@ public class ScheduledUpdateGroupActionRequest {
     
     
     public Long maxSize;
+
     public ScheduledUpdateGroupActionRequest withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -33,6 +37,7 @@ public class ScheduledUpdateGroupActionRequest {
     
     
     public Long minSize;
+
     public ScheduledUpdateGroupActionRequest withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -40,6 +45,7 @@ public class ScheduledUpdateGroupActionRequest {
     
     
     public String recurrence;
+
     public ScheduledUpdateGroupActionRequest withRecurrence(String recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -47,6 +53,7 @@ public class ScheduledUpdateGroupActionRequest {
     
     
     public String scheduledActionName;
+
     public ScheduledUpdateGroupActionRequest withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -54,6 +61,7 @@ public class ScheduledUpdateGroupActionRequest {
     
     
     public OffsetDateTime startTime;
+
     public ScheduledUpdateGroupActionRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -61,9 +69,13 @@ public class ScheduledUpdateGroupActionRequest {
     
     
     public String timeZone;
+
     public ScheduledUpdateGroupActionRequest withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public ScheduledUpdateGroupActionRequest(@JsonProperty("ScheduledActionName") String scheduledActionName) {
+        this.scheduledActionName = scheduledActionName;
+  }
 }

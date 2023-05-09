@@ -69,11 +69,9 @@ public class Metrics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrometheusMetricsResponse res = new org.openapis.openapi.models.operations.GetPrometheusMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetPrometheusMetricsResponse res = new org.openapis.openapi.models.operations.GetPrometheusMetricsResponse(contentType, httpRes.statusCode()) {{
             getPrometheusMetrics200TextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

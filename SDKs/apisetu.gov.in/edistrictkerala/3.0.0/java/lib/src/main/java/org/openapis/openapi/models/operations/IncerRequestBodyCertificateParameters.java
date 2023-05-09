@@ -12,6 +12,7 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("aplno")
     public String aplno;
+
     public IncerRequestBodyCertificateParameters withAplno(String aplno) {
         this.aplno = aplno;
         return this;
@@ -22,6 +23,7 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("certno")
     public String certno;
+
     public IncerRequestBodyCertificateParameters withCertno(String certno) {
         this.certno = certno;
         return this;
@@ -32,9 +34,15 @@ public class IncerRequestBodyCertificateParameters {
      */
     @JsonProperty("sccd")
     public String sccd;
+
     public IncerRequestBodyCertificateParameters withSccd(String sccd) {
         this.sccd = sccd;
         return this;
     }
     
+    public IncerRequestBodyCertificateParameters(@JsonProperty("aplno") String aplno, @JsonProperty("certno") String certno, @JsonProperty("sccd") String sccd) {
+        this.aplno = aplno;
+        this.certno = certno;
+        this.sccd = sccd;
+  }
 }

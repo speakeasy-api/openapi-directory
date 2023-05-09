@@ -15,6 +15,7 @@ public class CreateRealtimeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public CreateRealtimeEndpointOutput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -23,9 +24,11 @@ public class CreateRealtimeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RealtimeEndpointInfo")
     public RealtimeEndpointInfo realtimeEndpointInfo;
+
     public CreateRealtimeEndpointOutput withRealtimeEndpointInfo(RealtimeEndpointInfo realtimeEndpointInfo) {
         this.realtimeEndpointInfo = realtimeEndpointInfo;
         return this;
     }
     
+    public CreateRealtimeEndpointOutput(){}
 }

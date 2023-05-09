@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListInferenceExperimentsResponse {
     
     public String contentType;
+
     public ListInferenceExperimentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListInferenceExperimentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListInferenceExperimentsResponse listInferenceExperimentsResponse;
+
     public ListInferenceExperimentsResponse withListInferenceExperimentsResponse(org.openapis.openapi.models.shared.ListInferenceExperimentsResponse listInferenceExperimentsResponse) {
         this.listInferenceExperimentsResponse = listInferenceExperimentsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListInferenceExperimentsResponse {
     
     
     public Integer statusCode;
+
     public ListInferenceExperimentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListInferenceExperimentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListInferenceExperimentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListInferenceExperimentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

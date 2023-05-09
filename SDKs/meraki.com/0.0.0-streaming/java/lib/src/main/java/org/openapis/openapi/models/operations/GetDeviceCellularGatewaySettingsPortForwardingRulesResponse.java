@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeviceCellularGatewaySettingsPortForwardingRulesResponse {
     
     public String contentType;
+
     public GetDeviceCellularGatewaySettingsPortForwardingRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetDeviceCellularGatewaySettingsPortForwardingRulesResponse {
     
     
     public Integer statusCode;
+
     public GetDeviceCellularGatewaySettingsPortForwardingRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetDeviceCellularGatewaySettingsPortForwardingRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeviceCellularGatewaySettingsPortForwardingRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetDeviceCellularGatewaySettingsPortForwardingRulesResponse {
      */
     
     public java.util.Map<String, Object> getDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject;
+
     public GetDeviceCellularGatewaySettingsPortForwardingRulesResponse withGetDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject(java.util.Map<String, Object> getDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject) {
         this.getDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject = getDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject;
         return this;
     }
     
+    public GetDeviceCellularGatewaySettingsPortForwardingRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class MetrosListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MetrosListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class MetrosListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metros")
     public Metro[] metros;
+
     public MetrosListResponse withMetros(Metro[] metros) {
         this.metros = metros;
         return this;
     }
     
+    public MetrosListResponse(){}
 }

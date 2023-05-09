@@ -53,11 +53,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressResponse res = new org.openapis.openapi.models.operations.GetAddressResponse() {{
+        org.openapis.openapi.models.operations.GetAddressResponse res = new org.openapis.openapi.models.operations.GetAddressResponse(contentType, httpRes.statusCode()) {{
             getAddressResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressBalanceResponse res = new org.openapis.openapi.models.operations.GetAddressBalanceResponse() {{
+        org.openapis.openapi.models.operations.GetAddressBalanceResponse res = new org.openapis.openapi.models.operations.GetAddressBalanceResponse(contentType, httpRes.statusCode()) {{
             getAddressBalanceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -131,11 +127,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressTotalReceivedResponse res = new org.openapis.openapi.models.operations.GetAddressTotalReceivedResponse() {{
+        org.openapis.openapi.models.operations.GetAddressTotalReceivedResponse res = new org.openapis.openapi.models.operations.GetAddressTotalReceivedResponse(contentType, httpRes.statusCode()) {{
             getAddressTotalReceivedResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,11 +164,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressTotalSentResponse res = new org.openapis.openapi.models.operations.GetAddressTotalSentResponse() {{
+        org.openapis.openapi.models.operations.GetAddressTotalSentResponse res = new org.openapis.openapi.models.operations.GetAddressTotalSentResponse(contentType, httpRes.statusCode()) {{
             getAddressTotalSentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,11 +201,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressUnconfirmedBalanceResponse res = new org.openapis.openapi.models.operations.GetAddressUnconfirmedBalanceResponse() {{
+        org.openapis.openapi.models.operations.GetAddressUnconfirmedBalanceResponse res = new org.openapis.openapi.models.operations.GetAddressUnconfirmedBalanceResponse(contentType, httpRes.statusCode()) {{
             getAddressUnconfirmedBalanceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +238,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressUtxosResponse res = new org.openapis.openapi.models.operations.GetAddressUtxosResponse() {{
+        org.openapis.openapi.models.operations.GetAddressUtxosResponse res = new org.openapis.openapi.models.operations.GetAddressUtxosResponse(contentType, httpRes.statusCode()) {{
             getAddressUtxosResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +275,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBlockResponse res = new org.openapis.openapi.models.operations.GetBlockResponse() {{
+        org.openapis.openapi.models.operations.GetBlockResponse res = new org.openapis.openapi.models.operations.GetBlockResponse(contentType, httpRes.statusCode()) {{
             getBlockResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -326,11 +312,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBlockIndexResponse res = new org.openapis.openapi.models.operations.GetBlockIndexResponse() {{
+        org.openapis.openapi.models.operations.GetBlockIndexResponse res = new org.openapis.openapi.models.operations.GetBlockIndexResponse(contentType, httpRes.statusCode()) {{
             getBlockIndexResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -365,11 +349,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRawTxResponse res = new org.openapis.openapi.models.operations.GetRawTxResponse() {{
+        org.openapis.openapi.models.operations.GetRawTxResponse res = new org.openapis.openapi.models.operations.GetRawTxResponse(contentType, httpRes.statusCode()) {{
             getRawTxResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,11 +392,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse() {{
+        org.openapis.openapi.models.operations.GetStatusResponse res = new org.openapis.openapi.models.operations.GetStatusResponse(contentType, httpRes.statusCode()) {{
             getStatusResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,11 +428,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSyncResponse res = new org.openapis.openapi.models.operations.GetSyncResponse() {{
+        org.openapis.openapi.models.operations.GetSyncResponse res = new org.openapis.openapi.models.operations.GetSyncResponse(contentType, httpRes.statusCode()) {{
             getSyncResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,11 +465,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTxResponse res = new org.openapis.openapi.models.operations.GetTxResponse() {{
+        org.openapis.openapi.models.operations.GetTxResponse res = new org.openapis.openapi.models.operations.GetTxResponse(contentType, httpRes.statusCode()) {{
             getTxResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +508,9 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTxsResponse res = new org.openapis.openapi.models.operations.GetTxsResponse() {{
+        org.openapis.openapi.models.operations.GetTxsResponse res = new org.openapis.openapi.models.operations.GetTxsResponse(contentType, httpRes.statusCode()) {{
             getTxsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -577,12 +551,10 @@ public class Insight {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendTxResponse res = new org.openapis.openapi.models.operations.SendTxResponse() {{
+        org.openapis.openapi.models.operations.SendTxResponse res = new org.openapis.openapi.models.operations.SendTxResponse(contentType, httpRes.statusCode()) {{
             broadcastTxResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

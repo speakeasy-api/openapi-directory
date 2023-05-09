@@ -15,9 +15,11 @@ public class ProjectStatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ProjectStatusDTO withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ProjectStatusDTO(){}
 }

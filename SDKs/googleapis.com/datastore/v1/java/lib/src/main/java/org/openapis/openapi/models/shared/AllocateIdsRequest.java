@@ -18,6 +18,7 @@ public class AllocateIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseId")
     public String databaseId;
+
     public AllocateIdsRequest withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -29,9 +30,11 @@ public class AllocateIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public Key[] keys;
+
     public AllocateIdsRequest withKeys(Key[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public AllocateIdsRequest(){}
 }

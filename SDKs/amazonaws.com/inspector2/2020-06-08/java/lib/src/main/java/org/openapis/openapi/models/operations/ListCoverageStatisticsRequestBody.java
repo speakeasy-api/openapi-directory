@@ -15,6 +15,7 @@ public class ListCoverageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public ListCoverageStatisticsRequestBodyFilterCriteria filterCriteria;
+
     public ListCoverageStatisticsRequestBody withFilterCriteria(ListCoverageStatisticsRequestBodyFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -26,6 +27,7 @@ public class ListCoverageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupBy")
     public ListCoverageStatisticsRequestBodyGroupByEnum groupBy;
+
     public ListCoverageStatisticsRequestBody withGroupBy(ListCoverageStatisticsRequestBodyGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -37,9 +39,11 @@ public class ListCoverageStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCoverageStatisticsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCoverageStatisticsRequestBody(){}
 }

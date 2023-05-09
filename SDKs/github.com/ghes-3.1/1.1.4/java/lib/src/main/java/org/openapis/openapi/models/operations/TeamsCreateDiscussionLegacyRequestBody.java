@@ -14,6 +14,7 @@ public class TeamsCreateDiscussionLegacyRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public TeamsCreateDiscussionLegacyRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -25,6 +26,7 @@ public class TeamsCreateDiscussionLegacyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private")
     public Boolean private_;
+
     public TeamsCreateDiscussionLegacyRequestBody withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -35,9 +37,14 @@ public class TeamsCreateDiscussionLegacyRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public TeamsCreateDiscussionLegacyRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public TeamsCreateDiscussionLegacyRequestBody(@JsonProperty("body") String body, @JsonProperty("title") String title) {
+        this.body = body;
+        this.title = title;
+  }
 }

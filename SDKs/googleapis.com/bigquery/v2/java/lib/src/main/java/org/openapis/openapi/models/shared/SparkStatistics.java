@@ -15,6 +15,7 @@ public class SparkStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public java.util.Map<String, String> endpoints;
+
     public SparkStatistics withEndpoints(java.util.Map<String, String> endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -23,6 +24,7 @@ public class SparkStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging_info")
     public SparkLoggingInfo loggingInfo;
+
     public SparkStatistics withLoggingInfo(SparkLoggingInfo loggingInfo) {
         this.loggingInfo = loggingInfo;
         return this;
@@ -34,6 +36,7 @@ public class SparkStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spark_job_id")
     public String sparkJobId;
+
     public SparkStatistics withSparkJobId(String sparkJobId) {
         this.sparkJobId = sparkJobId;
         return this;
@@ -45,9 +48,11 @@ public class SparkStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spark_job_location")
     public String sparkJobLocation;
+
     public SparkStatistics withSparkJobLocation(String sparkJobLocation) {
         this.sparkJobLocation = sparkJobLocation;
         return this;
     }
     
+    public SparkStatistics(){}
 }

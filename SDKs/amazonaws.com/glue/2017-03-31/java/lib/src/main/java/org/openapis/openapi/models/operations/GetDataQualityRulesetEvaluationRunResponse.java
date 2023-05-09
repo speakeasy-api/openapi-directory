@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataQualityRulesetEvaluationRunResponse {
     
     public String contentType;
+
     public GetDataQualityRulesetEvaluationRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetDataQualityRulesetEvaluationRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataQualityRulesetEvaluationRunResponse getDataQualityRulesetEvaluationRunResponse;
+
     public GetDataQualityRulesetEvaluationRunResponse withGetDataQualityRulesetEvaluationRunResponse(org.openapis.openapi.models.shared.GetDataQualityRulesetEvaluationRunResponse getDataQualityRulesetEvaluationRunResponse) {
         this.getDataQualityRulesetEvaluationRunResponse = getDataQualityRulesetEvaluationRunResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object internalServiceException;
+
     public GetDataQualityRulesetEvaluationRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object invalidInputException;
+
     public GetDataQualityRulesetEvaluationRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetDataQualityRulesetEvaluationRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     
     
     public Integer statusCode;
+
     public GetDataQualityRulesetEvaluationRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDataQualityRulesetEvaluationRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataQualityRulesetEvaluationRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDataQualityRulesetEvaluationRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

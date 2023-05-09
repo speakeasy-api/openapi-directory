@@ -18,6 +18,7 @@ public class GoogleCloudPolicysimulatorV1ExplainedAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessState")
     public GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum accessState;
+
     public GoogleCloudPolicysimulatorV1ExplainedAccess withAccessState(GoogleCloudPolicysimulatorV1ExplainedAccessAccessStateEnum accessState) {
         this.accessState = accessState;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPolicysimulatorV1ExplainedAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GoogleRpcStatus[] errors;
+
     public GoogleCloudPolicysimulatorV1ExplainedAccess withErrors(GoogleRpcStatus[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudPolicysimulatorV1ExplainedAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public GoogleCloudPolicysimulatorV1ExplainedPolicy[] policies;
+
     public GoogleCloudPolicysimulatorV1ExplainedAccess withPolicies(GoogleCloudPolicysimulatorV1ExplainedPolicy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public GoogleCloudPolicysimulatorV1ExplainedAccess(){}
 }

@@ -15,9 +15,11 @@ public class InstanceGroupsRemoveInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstanceReference[] instances;
+
     public InstanceGroupsRemoveInstancesRequest withInstances(InstanceReference[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public InstanceGroupsRemoveInstancesRequest(){}
 }

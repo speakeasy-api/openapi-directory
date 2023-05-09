@@ -57,12 +57,10 @@ public class Reviewing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfirmThirdPartyResponse res = new org.openapis.openapi.models.operations.PostConfirmThirdPartyResponse() {{
+        org.openapis.openapi.models.operations.PostConfirmThirdPartyResponse res = new org.openapis.openapi.models.operations.PostConfirmThirdPartyResponse(contentType, httpRes.statusCode()) {{
             modifyResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Reviewing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeclineThirdPartyResponse res = new org.openapis.openapi.models.operations.PostDeclineThirdPartyResponse() {{
+        org.openapis.openapi.models.operations.PostDeclineThirdPartyResponse res = new org.openapis.openapi.models.operations.PostDeclineThirdPartyResponse(contentType, httpRes.statusCode()) {{
             modifyResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

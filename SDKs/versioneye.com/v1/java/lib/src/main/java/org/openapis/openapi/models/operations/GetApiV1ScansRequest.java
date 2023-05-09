@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetApiV1ScansRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetApiV1ScansRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,11 @@ public class GetApiV1ScansRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public String perPage;
+
     public GetApiV1ScansRequest withPerPage(String perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetApiV1ScansRequest(){}
 }

@@ -12,6 +12,7 @@ public class ImportClientBrandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeAndroid")
     public DefaultImportClientBrandingAttributes deviceTypeAndroid;
+
     public ImportClientBrandingRequest withDeviceTypeAndroid(DefaultImportClientBrandingAttributes deviceTypeAndroid) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         return this;
@@ -20,6 +21,7 @@ public class ImportClientBrandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeIos")
     public IosImportClientBrandingAttributes deviceTypeIos;
+
     public ImportClientBrandingRequest withDeviceTypeIos(IosImportClientBrandingAttributes deviceTypeIos) {
         this.deviceTypeIos = deviceTypeIos;
         return this;
@@ -28,6 +30,7 @@ public class ImportClientBrandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeLinux")
     public DefaultImportClientBrandingAttributes deviceTypeLinux;
+
     public ImportClientBrandingRequest withDeviceTypeLinux(DefaultImportClientBrandingAttributes deviceTypeLinux) {
         this.deviceTypeLinux = deviceTypeLinux;
         return this;
@@ -36,6 +39,7 @@ public class ImportClientBrandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeOsx")
     public DefaultImportClientBrandingAttributes deviceTypeOsx;
+
     public ImportClientBrandingRequest withDeviceTypeOsx(DefaultImportClientBrandingAttributes deviceTypeOsx) {
         this.deviceTypeOsx = deviceTypeOsx;
         return this;
@@ -44,6 +48,7 @@ public class ImportClientBrandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeWeb")
     public DefaultImportClientBrandingAttributes deviceTypeWeb;
+
     public ImportClientBrandingRequest withDeviceTypeWeb(DefaultImportClientBrandingAttributes deviceTypeWeb) {
         this.deviceTypeWeb = deviceTypeWeb;
         return this;
@@ -52,6 +57,7 @@ public class ImportClientBrandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeWindows")
     public DefaultImportClientBrandingAttributes deviceTypeWindows;
+
     public ImportClientBrandingRequest withDeviceTypeWindows(DefaultImportClientBrandingAttributes deviceTypeWindows) {
         this.deviceTypeWindows = deviceTypeWindows;
         return this;
@@ -59,9 +65,13 @@ public class ImportClientBrandingRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ImportClientBrandingRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ImportClientBrandingRequest(@JsonProperty("ResourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

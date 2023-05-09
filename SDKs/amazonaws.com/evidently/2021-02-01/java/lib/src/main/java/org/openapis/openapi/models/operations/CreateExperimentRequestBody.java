@@ -15,6 +15,7 @@ public class CreateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateExperimentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateExperimentRequestBody {
      */
     @JsonProperty("metricGoals")
     public org.openapis.openapi.models.shared.MetricGoalConfig[] metricGoals;
+
     public CreateExperimentRequestBody withMetricGoals(org.openapis.openapi.models.shared.MetricGoalConfig[] metricGoals) {
         this.metricGoals = metricGoals;
         return this;
@@ -35,6 +37,7 @@ public class CreateExperimentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateExperimentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class CreateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlineAbConfig")
     public CreateExperimentRequestBodyOnlineAbConfig onlineAbConfig;
+
     public CreateExperimentRequestBody withOnlineAbConfig(CreateExperimentRequestBodyOnlineAbConfig onlineAbConfig) {
         this.onlineAbConfig = onlineAbConfig;
         return this;
@@ -57,6 +61,7 @@ public class CreateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("randomizationSalt")
     public String randomizationSalt;
+
     public CreateExperimentRequestBody withRandomizationSalt(String randomizationSalt) {
         this.randomizationSalt = randomizationSalt;
         return this;
@@ -68,6 +73,7 @@ public class CreateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplingRate")
     public Long samplingRate;
+
     public CreateExperimentRequestBody withSamplingRate(Long samplingRate) {
         this.samplingRate = samplingRate;
         return this;
@@ -79,6 +85,7 @@ public class CreateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment")
     public String segment;
+
     public CreateExperimentRequestBody withSegment(String segment) {
         this.segment = segment;
         return this;
@@ -90,6 +97,7 @@ public class CreateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateExperimentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -100,9 +108,15 @@ public class CreateExperimentRequestBody {
      */
     @JsonProperty("treatments")
     public org.openapis.openapi.models.shared.TreatmentConfig[] treatments;
+
     public CreateExperimentRequestBody withTreatments(org.openapis.openapi.models.shared.TreatmentConfig[] treatments) {
         this.treatments = treatments;
         return this;
     }
     
+    public CreateExperimentRequestBody(@JsonProperty("metricGoals") org.openapis.openapi.models.shared.MetricGoalConfig[] metricGoals, @JsonProperty("name") String name, @JsonProperty("treatments") org.openapis.openapi.models.shared.TreatmentConfig[] treatments) {
+        this.metricGoals = metricGoals;
+        this.name = name;
+        this.treatments = treatments;
+  }
 }

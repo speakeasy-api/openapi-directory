@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePushTemplateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdatePushTemplateRequestBody requestBody;
+
     public UpdatePushTemplateRequest withRequestBody(UpdatePushTemplateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdatePushTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdatePushTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdatePushTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdatePushTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdatePushTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdatePushTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdatePushTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdatePushTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdatePushTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdatePushTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdatePushTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdatePushTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdatePushTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdatePushTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdatePushTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=create-new-version")
     public Boolean createNewVersion;
+
     public UpdatePushTemplateRequest withCreateNewVersion(Boolean createNewVersion) {
         this.createNewVersion = createNewVersion;
         return this;
@@ -78,6 +88,7 @@ public class UpdatePushTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-name")
     public String templateName;
+
     public UpdatePushTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -88,9 +99,14 @@ public class UpdatePushTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public UpdatePushTemplateRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdatePushTemplateRequest(@JsonProperty("RequestBody") UpdatePushTemplateRequestBody requestBody, @JsonProperty("template-name") String templateName) {
+        this.requestBody = requestBody;
+        this.templateName = templateName;
+  }
 }

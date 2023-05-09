@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RiskParameterV1 {
     @JsonProperty("id")
     public String id;
+
     public RiskParameterV1 withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class RiskParameterV1 {
     
     @JsonProperty("text")
     public String text;
+
     public RiskParameterV1 withText(String text) {
         this.text = text;
         return this;
     }
     
+    public RiskParameterV1(@JsonProperty("id") String id, @JsonProperty("text") String text) {
+        this.id = id;
+        this.text = text;
+  }
 }

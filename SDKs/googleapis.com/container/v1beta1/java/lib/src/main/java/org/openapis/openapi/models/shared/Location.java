@@ -18,6 +18,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Location withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommended")
     public Boolean recommended;
+
     public Location withRecommended(Boolean recommended) {
         this.recommended = recommended;
         return this;
@@ -40,9 +42,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public LocationTypeEnum type;
+
     public Location withType(LocationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Location(){}
 }

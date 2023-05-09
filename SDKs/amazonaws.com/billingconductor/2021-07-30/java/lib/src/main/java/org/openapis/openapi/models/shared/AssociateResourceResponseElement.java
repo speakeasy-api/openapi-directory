@@ -15,6 +15,7 @@ public class AssociateResourceResponseElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AssociateResourceResponseElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class AssociateResourceResponseElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public AssociateResourceError error;
+
     public AssociateResourceResponseElement withError(AssociateResourceError error) {
         this.error = error;
         return this;
     }
     
+    public AssociateResourceResponseElement(){}
 }

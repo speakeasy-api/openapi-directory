@@ -12,6 +12,7 @@ public class SaveSuggestionRequestPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public String currency;
+
     public SaveSuggestionRequestPricing withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -20,6 +21,7 @@ public class SaveSuggestionRequestPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencySymbol")
     public String currencySymbol;
+
     public SaveSuggestionRequestPricing withCurrencySymbol(String currencySymbol) {
         this.currencySymbol = currencySymbol;
         return this;
@@ -28,9 +30,11 @@ public class SaveSuggestionRequestPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SalePrice")
     public Integer salePrice;
+
     public SaveSuggestionRequestPricing withSalePrice(Integer salePrice) {
         this.salePrice = salePrice;
         return this;
     }
     
+    public SaveSuggestionRequestPricing(){}
 }

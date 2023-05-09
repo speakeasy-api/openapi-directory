@@ -15,6 +15,7 @@ public class ListMetricValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricDatumList")
     public MetricDatum[] metricDatumList;
+
     public ListMetricValuesResponse withMetricDatumList(MetricDatum[] metricDatumList) {
         this.metricDatumList = metricDatumList;
         return this;
@@ -23,9 +24,11 @@ public class ListMetricValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMetricValuesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMetricValuesResponse(){}
 }

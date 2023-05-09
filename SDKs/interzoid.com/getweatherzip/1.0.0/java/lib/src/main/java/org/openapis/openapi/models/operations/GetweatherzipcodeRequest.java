@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetweatherzipcodeRequest {
@@ -12,6 +13,7 @@ public class GetweatherzipcodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetweatherzipcodeRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -22,9 +24,14 @@ public class GetweatherzipcodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String zip;
+
     public GetweatherzipcodeRequest withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public GetweatherzipcodeRequest(@JsonProperty("license") String license, @JsonProperty("zip") String zip) {
+        this.license = license;
+        this.zip = zip;
+  }
 }

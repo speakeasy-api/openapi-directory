@@ -12,9 +12,11 @@ public class GetAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public GetAppRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public GetAppRequest(){}
 }

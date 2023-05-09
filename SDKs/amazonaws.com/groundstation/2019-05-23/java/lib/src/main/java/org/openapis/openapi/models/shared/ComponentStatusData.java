@@ -15,6 +15,7 @@ public class ComponentStatusData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesReceived")
     public Long bytesReceived;
+
     public ComponentStatusData withBytesReceived(Long bytesReceived) {
         this.bytesReceived = bytesReceived;
         return this;
@@ -23,6 +24,7 @@ public class ComponentStatusData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesSent")
     public Long bytesSent;
+
     public ComponentStatusData withBytesSent(Long bytesSent) {
         this.bytesSent = bytesSent;
         return this;
@@ -30,20 +32,23 @@ public class ComponentStatusData {
     
     @JsonProperty("capabilityArn")
     public String capabilityArn;
+
     public ComponentStatusData withCapabilityArn(String capabilityArn) {
         this.capabilityArn = capabilityArn;
         return this;
     }
     
     @JsonProperty("componentType")
-    public ComponentTypeEnum componentType;
-    public ComponentStatusData withComponentType(ComponentTypeEnum componentType) {
+    public String componentType;
+
+    public ComponentStatusData withComponentType(String componentType) {
         this.componentType = componentType;
         return this;
     }
     
     @JsonProperty("dataflowId")
     public String dataflowId;
+
     public ComponentStatusData withDataflowId(String dataflowId) {
         this.dataflowId = dataflowId;
         return this;
@@ -52,6 +57,7 @@ public class ComponentStatusData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packetsDropped")
     public Long packetsDropped;
+
     public ComponentStatusData withPacketsDropped(Long packetsDropped) {
         this.packetsDropped = packetsDropped;
         return this;
@@ -59,9 +65,16 @@ public class ComponentStatusData {
     
     @JsonProperty("status")
     public AgentStatusEnum status;
+
     public ComponentStatusData withStatus(AgentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ComponentStatusData(@JsonProperty("capabilityArn") String capabilityArn, @JsonProperty("componentType") String componentType, @JsonProperty("dataflowId") String dataflowId, @JsonProperty("status") AgentStatusEnum status) {
+        this.capabilityArn = capabilityArn;
+        this.componentType = componentType;
+        this.dataflowId = dataflowId;
+        this.status = status;
+  }
 }

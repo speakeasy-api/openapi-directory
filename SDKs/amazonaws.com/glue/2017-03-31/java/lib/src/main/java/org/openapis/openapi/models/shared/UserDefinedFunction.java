@@ -20,6 +20,7 @@ public class UserDefinedFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UserDefinedFunction withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -28,6 +29,7 @@ public class UserDefinedFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClassName")
     public String className;
+
     public UserDefinedFunction withClassName(String className) {
         this.className = className;
         return this;
@@ -38,6 +40,7 @@ public class UserDefinedFunction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public UserDefinedFunction withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -46,6 +49,7 @@ public class UserDefinedFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UserDefinedFunction withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -54,6 +58,7 @@ public class UserDefinedFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionName")
     public String functionName;
+
     public UserDefinedFunction withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -62,6 +67,7 @@ public class UserDefinedFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerName")
     public String ownerName;
+
     public UserDefinedFunction withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -70,6 +76,7 @@ public class UserDefinedFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerType")
     public PrincipalTypeEnum ownerType;
+
     public UserDefinedFunction withOwnerType(PrincipalTypeEnum ownerType) {
         this.ownerType = ownerType;
         return this;
@@ -78,9 +85,11 @@ public class UserDefinedFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceUris")
     public ResourceUri[] resourceUris;
+
     public UserDefinedFunction withResourceUris(ResourceUri[] resourceUris) {
         this.resourceUris = resourceUris;
         return this;
     }
     
+    public UserDefinedFunction(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeInstancesGetEffectiveFirewallsResponse {
     
     public String contentType;
+
     public ComputeInstancesGetEffectiveFirewallsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstancesGetEffectiveFirewallsResponse {
      */
     
     public org.openapis.openapi.models.shared.InstancesGetEffectiveFirewallsResponse instancesGetEffectiveFirewallsResponse;
+
     public ComputeInstancesGetEffectiveFirewallsResponse withInstancesGetEffectiveFirewallsResponse(org.openapis.openapi.models.shared.InstancesGetEffectiveFirewallsResponse instancesGetEffectiveFirewallsResponse) {
         this.instancesGetEffectiveFirewallsResponse = instancesGetEffectiveFirewallsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ComputeInstancesGetEffectiveFirewallsResponse {
     
     
     public Integer statusCode;
+
     public ComputeInstancesGetEffectiveFirewallsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeInstancesGetEffectiveFirewallsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeInstancesGetEffectiveFirewallsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeInstancesGetEffectiveFirewallsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

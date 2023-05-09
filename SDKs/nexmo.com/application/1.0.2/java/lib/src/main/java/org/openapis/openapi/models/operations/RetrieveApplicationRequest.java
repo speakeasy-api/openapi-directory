@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveApplicationRequest {
@@ -12,6 +13,7 @@ public class RetrieveApplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public RetrieveApplicationRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class RetrieveApplicationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
     public String apiSecret;
+
     public RetrieveApplicationRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,9 +35,15 @@ public class RetrieveApplicationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_id")
     public String appId;
+
     public RetrieveApplicationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public RetrieveApplicationRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("api_secret") String apiSecret, @JsonProperty("app_id") String appId) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.appId = appId;
+  }
 }

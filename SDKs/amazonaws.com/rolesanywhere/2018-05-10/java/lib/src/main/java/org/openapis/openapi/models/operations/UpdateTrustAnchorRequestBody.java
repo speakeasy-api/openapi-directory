@@ -15,6 +15,7 @@ public class UpdateTrustAnchorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateTrustAnchorRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class UpdateTrustAnchorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public UpdateTrustAnchorRequestBodySource source;
+
     public UpdateTrustAnchorRequestBody withSource(UpdateTrustAnchorRequestBodySource source) {
         this.source = source;
         return this;
     }
     
+    public UpdateTrustAnchorRequestBody(){}
 }

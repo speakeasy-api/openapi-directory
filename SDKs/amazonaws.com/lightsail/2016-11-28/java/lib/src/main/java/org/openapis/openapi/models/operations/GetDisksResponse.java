@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDisksResponse {
@@ -12,6 +13,7 @@ public class GetDisksResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDisksResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetDisksResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetDisksResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetDisksResponse {
     
     
     public String contentType;
+
     public GetDisksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDisksResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDisksResult getDisksResult;
+
     public GetDisksResponse withGetDisksResult(org.openapis.openapi.models.shared.GetDisksResult getDisksResult) {
         this.getDisksResult = getDisksResult;
         return this;
@@ -49,6 +54,7 @@ public class GetDisksResponse {
      */
     
     public Object invalidInputException;
+
     public GetDisksResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetDisksResponse {
      */
     
     public Object notFoundException;
+
     public GetDisksResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetDisksResponse {
      */
     
     public Object operationFailureException;
+
     public GetDisksResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetDisksResponse {
      */
     
     public Object serviceException;
+
     public GetDisksResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetDisksResponse {
     
     
     public Integer statusCode;
+
     public GetDisksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetDisksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDisksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetDisksResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetDisksResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetDisksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class InferenceAcceleratorOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public InferenceAcceleratorOverride withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,9 +24,11 @@ public class InferenceAcceleratorOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceType")
     public String deviceType;
+
     public InferenceAcceleratorOverride withDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
     }
     
+    public InferenceAcceleratorOverride(){}
 }

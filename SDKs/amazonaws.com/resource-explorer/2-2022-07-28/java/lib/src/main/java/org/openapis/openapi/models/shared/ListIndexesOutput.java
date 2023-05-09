@@ -15,6 +15,7 @@ public class ListIndexesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Indexes")
     public Index[] indexes;
+
     public ListIndexesOutput withIndexes(Index[] indexes) {
         this.indexes = indexes;
         return this;
@@ -23,9 +24,11 @@ public class ListIndexesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIndexesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIndexesOutput(){}
 }

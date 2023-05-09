@@ -18,9 +18,11 @@ public class DiskEntryList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public DiskEntry[] entries;
+
     public DiskEntryList withEntries(DiskEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public DiskEntryList(){}
 }

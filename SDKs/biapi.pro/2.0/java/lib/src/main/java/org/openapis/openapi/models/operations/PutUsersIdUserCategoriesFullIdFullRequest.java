@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserCategoriesFullIdFullRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PutUsersIdUserCategoriesFullIdFullRequestBody requestBody;
+
     public PutUsersIdUserCategoriesFullIdFullRequest withRequestBody(PutUsersIdUserCategoriesFullIdFullRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PutUsersIdUserCategoriesFullIdFullRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PutUsersIdUserCategoriesFullIdFullRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -23,6 +26,7 @@ public class PutUsersIdUserCategoriesFullIdFullRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_full")
     public Long idFull;
+
     public PutUsersIdUserCategoriesFullIdFullRequest withIdFull(Long idFull) {
         this.idFull = idFull;
         return this;
@@ -33,9 +37,14 @@ public class PutUsersIdUserCategoriesFullIdFullRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PutUsersIdUserCategoriesFullIdFullRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PutUsersIdUserCategoriesFullIdFullRequest(@JsonProperty("id_full") Long idFull, @JsonProperty("id_user") String idUser) {
+        this.idFull = idFull;
+        this.idUser = idUser;
+  }
 }

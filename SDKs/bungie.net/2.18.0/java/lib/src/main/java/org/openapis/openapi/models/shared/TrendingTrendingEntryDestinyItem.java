@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class TrendingTrendingEntryDestinyItem {
     
     public Long itemHash;
+
     public TrendingTrendingEntryDestinyItem withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
     }
     
+    public TrendingTrendingEntryDestinyItem(){}
 }

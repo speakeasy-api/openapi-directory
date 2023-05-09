@@ -15,6 +15,7 @@ public class CostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultsByTime")
     public EstimateByTime[] resultsByTime;
+
     public CostEstimate withResultsByTime(EstimateByTime[] resultsByTime) {
         this.resultsByTime = resultsByTime;
         return this;
@@ -23,9 +24,11 @@ public class CostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageType")
     public String usageType;
+
     public CostEstimate withUsageType(String usageType) {
         this.usageType = usageType;
         return this;
     }
     
+    public CostEstimate(){}
 }

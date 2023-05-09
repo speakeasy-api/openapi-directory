@@ -16,9 +16,11 @@ public class GoogleIamV1TestIamPermissionsResponse {
      */
     
     public String[] permissions;
+
     public GoogleIamV1TestIamPermissionsResponse withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GoogleIamV1TestIamPermissionsResponse(){}
 }

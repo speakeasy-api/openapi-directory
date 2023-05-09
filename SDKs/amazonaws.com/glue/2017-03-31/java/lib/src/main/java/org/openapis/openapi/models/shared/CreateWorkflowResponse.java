@@ -15,9 +15,11 @@ public class CreateWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateWorkflowResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateWorkflowResponse(){}
 }

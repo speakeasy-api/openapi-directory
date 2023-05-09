@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1BatchCreateMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public GoogleCloudDialogflowV2beta1Message[] messages;
+
     public GoogleCloudDialogflowV2beta1BatchCreateMessagesResponse withMessages(GoogleCloudDialogflowV2beta1Message[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1BatchCreateMessagesResponse(){}
 }

@@ -56,10 +56,8 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorContactsDeleteResponse res = new org.openapis.openapi.models.operations.MirrorContactsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MirrorContactsDeleteResponse res = new org.openapis.openapi.models.operations.MirrorContactsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorContactsGetResponse res = new org.openapis.openapi.models.operations.MirrorContactsGetResponse() {{
+        org.openapis.openapi.models.operations.MirrorContactsGetResponse res = new org.openapis.openapi.models.operations.MirrorContactsGetResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorContactsInsertResponse res = new org.openapis.openapi.models.operations.MirrorContactsInsertResponse() {{
+        org.openapis.openapi.models.operations.MirrorContactsInsertResponse res = new org.openapis.openapi.models.operations.MirrorContactsInsertResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +182,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorContactsListResponse res = new org.openapis.openapi.models.operations.MirrorContactsListResponse() {{
+        org.openapis.openapi.models.operations.MirrorContactsListResponse res = new org.openapis.openapi.models.operations.MirrorContactsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,11 +227,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorContactsPatchResponse res = new org.openapis.openapi.models.operations.MirrorContactsPatchResponse() {{
+        org.openapis.openapi.models.operations.MirrorContactsPatchResponse res = new org.openapis.openapi.models.operations.MirrorContactsPatchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,11 +272,9 @@ public class Contacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MirrorContactsUpdateResponse res = new org.openapis.openapi.models.operations.MirrorContactsUpdateResponse() {{
+        org.openapis.openapi.models.operations.MirrorContactsUpdateResponse res = new org.openapis.openapi.models.operations.MirrorContactsUpdateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

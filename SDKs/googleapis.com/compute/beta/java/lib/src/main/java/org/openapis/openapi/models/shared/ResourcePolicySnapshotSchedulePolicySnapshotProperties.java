@@ -18,6 +18,7 @@ public class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chainName")
     public String chainName;
+
     public ResourcePolicySnapshotSchedulePolicySnapshotProperties withChainName(String chainName) {
         this.chainName = chainName;
         return this;
@@ -29,6 +30,7 @@ public class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestFlush")
     public Boolean guestFlush;
+
     public ResourcePolicySnapshotSchedulePolicySnapshotProperties withGuestFlush(Boolean guestFlush) {
         this.guestFlush = guestFlush;
         return this;
@@ -40,6 +42,7 @@ public class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ResourcePolicySnapshotSchedulePolicySnapshotProperties withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,9 +54,11 @@ public class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageLocations")
     public String[] storageLocations;
+
     public ResourcePolicySnapshotSchedulePolicySnapshotProperties withStorageLocations(String[] storageLocations) {
         this.storageLocations = storageLocations;
         return this;
     }
     
+    public ResourcePolicySnapshotSchedulePolicySnapshotProperties(){}
 }

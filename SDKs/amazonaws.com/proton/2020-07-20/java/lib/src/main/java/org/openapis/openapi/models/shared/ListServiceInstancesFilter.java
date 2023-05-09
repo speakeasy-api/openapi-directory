@@ -15,6 +15,7 @@ public class ListServiceInstancesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public ListServiceInstancesFilterByEnum key;
+
     public ListServiceInstancesFilter withKey(ListServiceInstancesFilterByEnum key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class ListServiceInstancesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ListServiceInstancesFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListServiceInstancesFilter(){}
 }

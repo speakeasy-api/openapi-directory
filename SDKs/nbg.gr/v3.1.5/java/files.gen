@@ -169,4 +169,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/OBEntryStatus1CodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProprietaryBankTransactionCodeStructure1.java
 lib/src/main/java/org/openapis/openapi/models/shared/OBCashAccount6.java
 lib/src/main/java/org/openapis/openapi/models/shared/OBTransactionCashBalance.java
+docs/sdk/README.md
+docs/accountaccess/README.md
+docs/accounts/README.md
+docs/balances/README.md
+docs/beneficiaries/README.md
+docs/parties/README.md
+docs/sandbox/README.md
+docs/scheduledpayments/README.md
+docs/standingorders/README.md
+docs/statements/README.md
+docs/transactions/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudassetAnalyzeIamPolicyRequest {
@@ -12,6 +13,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudassetAnalyzeIamPolicyRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudassetAnalyzeIamPolicyRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudassetAnalyzeIamPolicyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analysisQuery.accessSelector.permissions")
     public String[] analysisQueryAccessSelectorPermissions;
+
     public CloudassetAnalyzeIamPolicyRequest withAnalysisQueryAccessSelectorPermissions(String[] analysisQueryAccessSelectorPermissions) {
         this.analysisQueryAccessSelectorPermissions = analysisQueryAccessSelectorPermissions;
         return this;
@@ -52,6 +57,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analysisQuery.accessSelector.roles")
     public String[] analysisQueryAccessSelectorRoles;
+
     public CloudassetAnalyzeIamPolicyRequest withAnalysisQueryAccessSelectorRoles(String[] analysisQueryAccessSelectorRoles) {
         this.analysisQueryAccessSelectorRoles = analysisQueryAccessSelectorRoles;
         return this;
@@ -62,6 +68,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analysisQuery.identitySelector.identity")
     public String analysisQueryIdentitySelectorIdentity;
+
     public CloudassetAnalyzeIamPolicyRequest withAnalysisQueryIdentitySelectorIdentity(String analysisQueryIdentitySelectorIdentity) {
         this.analysisQueryIdentitySelectorIdentity = analysisQueryIdentitySelectorIdentity;
         return this;
@@ -72,6 +79,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analysisQuery.resourceSelector.fullResourceName")
     public String analysisQueryResourceSelectorFullResourceName;
+
     public CloudassetAnalyzeIamPolicyRequest withAnalysisQueryResourceSelectorFullResourceName(String analysisQueryResourceSelectorFullResourceName) {
         this.analysisQueryResourceSelectorFullResourceName = analysisQueryResourceSelectorFullResourceName;
         return this;
@@ -82,6 +90,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudassetAnalyzeIamPolicyRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -92,6 +101,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudassetAnalyzeIamPolicyRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -102,6 +112,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudassetAnalyzeIamPolicyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -112,6 +123,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudassetAnalyzeIamPolicyRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.analyzeServiceAccountImpersonation")
     public Boolean optionsAnalyzeServiceAccountImpersonation;
+
     public CloudassetAnalyzeIamPolicyRequest withOptionsAnalyzeServiceAccountImpersonation(Boolean optionsAnalyzeServiceAccountImpersonation) {
         this.optionsAnalyzeServiceAccountImpersonation = optionsAnalyzeServiceAccountImpersonation;
         return this;
@@ -132,6 +145,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.executionTimeout")
     public String optionsExecutionTimeout;
+
     public CloudassetAnalyzeIamPolicyRequest withOptionsExecutionTimeout(String optionsExecutionTimeout) {
         this.optionsExecutionTimeout = optionsExecutionTimeout;
         return this;
@@ -142,6 +156,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.expandGroups")
     public Boolean optionsExpandGroups;
+
     public CloudassetAnalyzeIamPolicyRequest withOptionsExpandGroups(Boolean optionsExpandGroups) {
         this.optionsExpandGroups = optionsExpandGroups;
         return this;
@@ -152,6 +167,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.expandResources")
     public Boolean optionsExpandResources;
+
     public CloudassetAnalyzeIamPolicyRequest withOptionsExpandResources(Boolean optionsExpandResources) {
         this.optionsExpandResources = optionsExpandResources;
         return this;
@@ -162,6 +178,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.expandRoles")
     public Boolean optionsExpandRoles;
+
     public CloudassetAnalyzeIamPolicyRequest withOptionsExpandRoles(Boolean optionsExpandRoles) {
         this.optionsExpandRoles = optionsExpandRoles;
         return this;
@@ -172,6 +189,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.outputGroupEdges")
     public Boolean optionsOutputGroupEdges;
+
     public CloudassetAnalyzeIamPolicyRequest withOptionsOutputGroupEdges(Boolean optionsOutputGroupEdges) {
         this.optionsOutputGroupEdges = optionsOutputGroupEdges;
         return this;
@@ -182,6 +200,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.outputResourceEdges")
     public Boolean optionsOutputResourceEdges;
+
     public CloudassetAnalyzeIamPolicyRequest withOptionsOutputResourceEdges(Boolean optionsOutputResourceEdges) {
         this.optionsOutputResourceEdges = optionsOutputResourceEdges;
         return this;
@@ -192,6 +211,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public CloudassetAnalyzeIamPolicyRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -202,6 +222,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudassetAnalyzeIamPolicyRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -212,6 +233,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudassetAnalyzeIamPolicyRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -222,6 +244,7 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudassetAnalyzeIamPolicyRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -232,9 +255,13 @@ public class CloudassetAnalyzeIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudassetAnalyzeIamPolicyRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudassetAnalyzeIamPolicyRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

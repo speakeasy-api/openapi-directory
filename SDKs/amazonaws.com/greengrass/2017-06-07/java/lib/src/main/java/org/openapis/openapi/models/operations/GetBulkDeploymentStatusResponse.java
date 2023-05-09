@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBulkDeploymentStatusResponse {
@@ -12,6 +13,7 @@ public class GetBulkDeploymentStatusResponse {
      */
     
     public Object badRequestException;
+
     public GetBulkDeploymentStatusResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetBulkDeploymentStatusResponse {
     
     
     public String contentType;
+
     public GetBulkDeploymentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBulkDeploymentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBulkDeploymentStatusResponse getBulkDeploymentStatusResponse;
+
     public GetBulkDeploymentStatusResponse withGetBulkDeploymentStatusResponse(org.openapis.openapi.models.shared.GetBulkDeploymentStatusResponse getBulkDeploymentStatusResponse) {
         this.getBulkDeploymentStatusResponse = getBulkDeploymentStatusResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetBulkDeploymentStatusResponse {
     
     
     public Integer statusCode;
+
     public GetBulkDeploymentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetBulkDeploymentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBulkDeploymentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBulkDeploymentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

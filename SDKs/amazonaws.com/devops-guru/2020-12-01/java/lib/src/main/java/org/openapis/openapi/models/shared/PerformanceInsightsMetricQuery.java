@@ -15,6 +15,7 @@ public class PerformanceInsightsMetricQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public java.util.Map<String, String> filter;
+
     public PerformanceInsightsMetricQuery withFilter(java.util.Map<String, String> filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class PerformanceInsightsMetricQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public PerformanceInsightsMetricDimensionGroup groupBy;
+
     public PerformanceInsightsMetricQuery withGroupBy(PerformanceInsightsMetricDimensionGroup groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -31,9 +33,11 @@ public class PerformanceInsightsMetricQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metric")
     public String metric;
+
     public PerformanceInsightsMetricQuery withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public PerformanceInsightsMetricQuery(){}
 }

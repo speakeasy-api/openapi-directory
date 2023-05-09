@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsTags {
     
     public String key;
+
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsTags {
     
     
     public String value;
+
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsTags(){}
 }

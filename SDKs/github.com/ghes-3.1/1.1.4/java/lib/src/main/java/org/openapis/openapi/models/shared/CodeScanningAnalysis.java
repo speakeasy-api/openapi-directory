@@ -22,6 +22,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("analysis_key")
     public String analysisKey;
+
     public CodeScanningAnalysis withAnalysisKey(String analysisKey) {
         this.analysisKey = analysisKey;
         return this;
@@ -33,6 +34,7 @@ public class CodeScanningAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public CodeScanningAnalysis withCategory(String category) {
         this.category = category;
         return this;
@@ -43,6 +45,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("commit_sha")
     public String commitSha;
+
     public CodeScanningAnalysis withCommitSha(String commitSha) {
         this.commitSha = commitSha;
         return this;
@@ -55,6 +58,7 @@ public class CodeScanningAnalysis {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public CodeScanningAnalysis withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -62,6 +66,7 @@ public class CodeScanningAnalysis {
     
     @JsonProperty("deletable")
     public Boolean deletable;
+
     public CodeScanningAnalysis withDeletable(Boolean deletable) {
         this.deletable = deletable;
         return this;
@@ -72,6 +77,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("environment")
     public String environment;
+
     public CodeScanningAnalysis withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -79,6 +85,7 @@ public class CodeScanningAnalysis {
     
     @JsonProperty("error")
     public String error;
+
     public CodeScanningAnalysis withError(String error) {
         this.error = error;
         return this;
@@ -89,6 +96,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("id")
     public Long id;
+
     public CodeScanningAnalysis withId(Long id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("ref")
     public String ref;
+
     public CodeScanningAnalysis withRef(String ref) {
         this.ref = ref;
         return this;
@@ -110,6 +119,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("results_count")
     public Long resultsCount;
+
     public CodeScanningAnalysis withResultsCount(Long resultsCount) {
         this.resultsCount = resultsCount;
         return this;
@@ -120,6 +130,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("rules_count")
     public Long rulesCount;
+
     public CodeScanningAnalysis withRulesCount(Long rulesCount) {
         this.rulesCount = rulesCount;
         return this;
@@ -130,6 +141,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("sarif_id")
     public String sarifId;
+
     public CodeScanningAnalysis withSarifId(String sarifId) {
         this.sarifId = sarifId;
         return this;
@@ -137,6 +149,7 @@ public class CodeScanningAnalysis {
     
     @JsonProperty("tool")
     public CodeScanningAnalysisTool tool;
+
     public CodeScanningAnalysis withTool(CodeScanningAnalysisTool tool) {
         this.tool = tool;
         return this;
@@ -145,6 +158,7 @@ public class CodeScanningAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tool_name")
     public String toolName;
+
     public CodeScanningAnalysis withToolName(String toolName) {
         this.toolName = toolName;
         return this;
@@ -155,6 +169,7 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("url")
     public String url;
+
     public CodeScanningAnalysis withUrl(String url) {
         this.url = url;
         return this;
@@ -165,9 +180,26 @@ public class CodeScanningAnalysis {
      */
     @JsonProperty("warning")
     public String warning;
+
     public CodeScanningAnalysis withWarning(String warning) {
         this.warning = warning;
         return this;
     }
     
+    public CodeScanningAnalysis(@JsonProperty("analysis_key") String analysisKey, @JsonProperty("commit_sha") String commitSha, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("deletable") Boolean deletable, @JsonProperty("environment") String environment, @JsonProperty("error") String error, @JsonProperty("id") Long id, @JsonProperty("ref") String ref, @JsonProperty("results_count") Long resultsCount, @JsonProperty("rules_count") Long rulesCount, @JsonProperty("sarif_id") String sarifId, @JsonProperty("tool") CodeScanningAnalysisTool tool, @JsonProperty("url") String url, @JsonProperty("warning") String warning) {
+        this.analysisKey = analysisKey;
+        this.commitSha = commitSha;
+        this.createdAt = createdAt;
+        this.deletable = deletable;
+        this.environment = environment;
+        this.error = error;
+        this.id = id;
+        this.ref = ref;
+        this.resultsCount = resultsCount;
+        this.rulesCount = rulesCount;
+        this.sarifId = sarifId;
+        this.tool = tool;
+        this.url = url;
+        this.warning = warning;
+  }
 }

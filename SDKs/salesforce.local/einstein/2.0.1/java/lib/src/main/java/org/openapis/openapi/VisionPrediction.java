@@ -58,11 +58,9 @@ public class VisionPrediction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DetectMultipartResponse res = new org.openapis.openapi.models.operations.DetectMultipartResponse() {{
+        org.openapis.openapi.models.operations.DetectMultipartResponse res = new org.openapis.openapi.models.operations.DetectMultipartResponse(contentType, httpRes.statusCode()) {{
             objectDetectionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class VisionPrediction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OcrMultipartResponse res = new org.openapis.openapi.models.operations.OcrMultipartResponse() {{
+        org.openapis.openapi.models.operations.OcrMultipartResponse res = new org.openapis.openapi.models.operations.OcrMultipartResponse(contentType, httpRes.statusCode()) {{
             ocrPredictResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class VisionPrediction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PredictMultipartResponse res = new org.openapis.openapi.models.operations.PredictMultipartResponse() {{
+        org.openapis.openapi.models.operations.PredictMultipartResponse res = new org.openapis.openapi.models.operations.PredictMultipartResponse(contentType, httpRes.statusCode()) {{
             imageClassificationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

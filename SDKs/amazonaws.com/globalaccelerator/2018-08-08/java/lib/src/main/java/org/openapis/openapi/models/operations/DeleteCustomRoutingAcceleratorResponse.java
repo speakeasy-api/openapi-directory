@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomRoutingAcceleratorResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomRoutingAcceleratorResponse {
      */
     
     public Object acceleratorNotDisabledException;
+
     public DeleteCustomRoutingAcceleratorResponse withAcceleratorNotDisabledException(Object acceleratorNotDisabledException) {
         this.acceleratorNotDisabledException = acceleratorNotDisabledException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCustomRoutingAcceleratorResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public DeleteCustomRoutingAcceleratorResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteCustomRoutingAcceleratorResponse {
      */
     
     public Object associatedListenerFoundException;
+
     public DeleteCustomRoutingAcceleratorResponse withAssociatedListenerFoundException(Object associatedListenerFoundException) {
         this.associatedListenerFoundException = associatedListenerFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomRoutingAcceleratorResponse {
     
     
     public String contentType;
+
     public DeleteCustomRoutingAcceleratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomRoutingAcceleratorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteCustomRoutingAcceleratorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCustomRoutingAcceleratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteCustomRoutingAcceleratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCustomRoutingAcceleratorResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomRoutingAcceleratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCustomRoutingAcceleratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomRoutingAcceleratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCustomRoutingAcceleratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class GetNumbersPrimeFactorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersPrimeFactorsRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersPrimeFactorsRequest(){}
 }

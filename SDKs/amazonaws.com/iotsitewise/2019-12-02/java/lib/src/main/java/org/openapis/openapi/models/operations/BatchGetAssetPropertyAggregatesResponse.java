@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetAssetPropertyAggregatesResponse {
@@ -12,6 +13,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetAssetPropertyAggregatesResponse batchGetAssetPropertyAggregatesResponse;
+
     public BatchGetAssetPropertyAggregatesResponse withBatchGetAssetPropertyAggregatesResponse(org.openapis.openapi.models.shared.BatchGetAssetPropertyAggregatesResponse batchGetAssetPropertyAggregatesResponse) {
         this.batchGetAssetPropertyAggregatesResponse = batchGetAssetPropertyAggregatesResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
     
     
     public String contentType;
+
     public BatchGetAssetPropertyAggregatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
      */
     
     public Object internalFailureException;
+
     public BatchGetAssetPropertyAggregatesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchGetAssetPropertyAggregatesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
     
     
     public Integer statusCode;
+
     public BatchGetAssetPropertyAggregatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetAssetPropertyAggregatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetAssetPropertyAggregatesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchGetAssetPropertyAggregatesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetAssetPropertyAggregatesResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetAssetPropertyAggregatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchGetAssetPropertyAggregatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

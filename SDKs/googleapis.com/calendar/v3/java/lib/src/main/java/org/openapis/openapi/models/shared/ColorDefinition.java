@@ -15,6 +15,7 @@ public class ColorDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background")
     public String background;
+
     public ColorDefinition withBackground(String background) {
         this.background = background;
         return this;
@@ -26,9 +27,11 @@ public class ColorDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foreground")
     public String foreground;
+
     public ColorDefinition withForeground(String foreground) {
         this.foreground = foreground;
         return this;
     }
     
+    public ColorDefinition(){}
 }

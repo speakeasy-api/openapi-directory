@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchArtifactsRequest {
@@ -12,6 +13,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public SearchArtifactsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SearchArtifactsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -32,6 +35,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public SearchArtifactsOrderEnum order;
+
     public SearchArtifactsRequest withOrder(SearchArtifactsOrderEnum order) {
         this.order = order;
         return this;
@@ -42,6 +46,7 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=over")
     public SearchArtifactsOverEnum over;
+
     public SearchArtifactsRequest withOver(SearchArtifactsOverEnum over) {
         this.over = over;
         return this;
@@ -52,9 +57,14 @@ public class SearchArtifactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public SearchArtifactsRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public SearchArtifactsRequest(@JsonProperty("limit") Long limit, @JsonProperty("offset") Long offset) {
+        this.limit = limit;
+        this.offset = offset;
+  }
 }

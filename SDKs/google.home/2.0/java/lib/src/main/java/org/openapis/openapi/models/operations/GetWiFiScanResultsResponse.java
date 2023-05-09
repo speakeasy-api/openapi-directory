@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWiFiScanResultsResponse {
     
     public String contentType;
+
     public GetWiFiScanResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWiFiScanResultsResponse {
     
     
     public org.openapis.openapi.models.shared.Example114[] example114s;
+
     public GetWiFiScanResultsResponse withExample114s(org.openapis.openapi.models.shared.Example114[] example114s) {
         this.example114s = example114s;
         return this;
@@ -23,6 +26,7 @@ public class GetWiFiScanResultsResponse {
     
     
     public Integer statusCode;
+
     public GetWiFiScanResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetWiFiScanResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWiFiScanResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetWiFiScanResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -16,6 +16,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentAc
      */
     
     public OffsetDateTime endTime;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentAc
      */
     
     public Float highestOpposingFactionScore;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity withHighestOpposingFactionScore(Float highestOpposingFactionScore) {
         this.highestOpposingFactionScore = highestOpposingFactionScore;
         return this;
@@ -36,6 +38,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentAc
      */
     
     public Integer numberOfOpponents;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity withNumberOfOpponents(Integer numberOfOpponents) {
         this.numberOfOpponents = numberOfOpponents;
         return this;
@@ -46,6 +49,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentAc
      */
     
     public Integer numberOfPlayers;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity withNumberOfPlayers(Integer numberOfPlayers) {
         this.numberOfPlayers = numberOfPlayers;
         return this;
@@ -56,6 +60,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentAc
      */
     
     public Float score;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity withScore(Float score) {
         this.score = score;
         return this;
@@ -66,9 +71,11 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentAc
      */
     
     public OffsetDateTime startTime;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DestinyComponentsProfilesDestinyProfileTransitoryComponentCurrentActivity(){}
 }

@@ -15,6 +15,7 @@ public class GatewayRouteHostnameMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exact")
     public String exact;
+
     public GatewayRouteHostnameMatch withExact(String exact) {
         this.exact = exact;
         return this;
@@ -23,9 +24,11 @@ public class GatewayRouteHostnameMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffix")
     public String suffix;
+
     public GatewayRouteHostnameMatch withSuffix(String suffix) {
         this.suffix = suffix;
         return this;
     }
     
+    public GatewayRouteHostnameMatch(){}
 }

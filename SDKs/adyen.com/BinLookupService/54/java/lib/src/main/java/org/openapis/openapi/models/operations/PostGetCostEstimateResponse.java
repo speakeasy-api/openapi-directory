@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostGetCostEstimateResponse {
     
     public String contentType;
+
     public PostGetCostEstimateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostGetCostEstimateResponse {
      */
     
     public org.openapis.openapi.models.shared.CostEstimateResponse costEstimateResponse;
+
     public PostGetCostEstimateResponse withCostEstimateResponse(org.openapis.openapi.models.shared.CostEstimateResponse costEstimateResponse) {
         this.costEstimateResponse = costEstimateResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostGetCostEstimateResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostGetCostEstimateResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostGetCostEstimateResponse {
     
     
     public Integer statusCode;
+
     public PostGetCostEstimateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostGetCostEstimateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostGetCostEstimateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostGetCostEstimateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

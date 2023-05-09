@@ -66,11 +66,9 @@ public class ForgotHealthIdNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Response res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Response() {{
+        org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Response res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class ForgotHealthIdNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class ForgotHealthIdNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +225,9 @@ public class ForgotHealthIdNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

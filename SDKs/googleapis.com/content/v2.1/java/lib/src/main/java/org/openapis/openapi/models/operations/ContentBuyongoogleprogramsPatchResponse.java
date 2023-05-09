@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentBuyongoogleprogramsPatchResponse {
@@ -12,6 +13,7 @@ public class ContentBuyongoogleprogramsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BuyOnGoogleProgramStatus buyOnGoogleProgramStatus;
+
     public ContentBuyongoogleprogramsPatchResponse withBuyOnGoogleProgramStatus(org.openapis.openapi.models.shared.BuyOnGoogleProgramStatus buyOnGoogleProgramStatus) {
         this.buyOnGoogleProgramStatus = buyOnGoogleProgramStatus;
         return this;
@@ -19,6 +21,7 @@ public class ContentBuyongoogleprogramsPatchResponse {
     
     
     public String contentType;
+
     public ContentBuyongoogleprogramsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ContentBuyongoogleprogramsPatchResponse {
     
     
     public Integer statusCode;
+
     public ContentBuyongoogleprogramsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentBuyongoogleprogramsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentBuyongoogleprogramsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentBuyongoogleprogramsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

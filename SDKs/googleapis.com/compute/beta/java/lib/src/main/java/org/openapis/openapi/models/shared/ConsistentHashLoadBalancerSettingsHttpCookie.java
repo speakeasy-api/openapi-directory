@@ -18,6 +18,7 @@ public class ConsistentHashLoadBalancerSettingsHttpCookie {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConsistentHashLoadBalancerSettingsHttpCookie withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class ConsistentHashLoadBalancerSettingsHttpCookie {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public ConsistentHashLoadBalancerSettingsHttpCookie withPath(String path) {
         this.path = path;
         return this;
@@ -40,9 +42,11 @@ public class ConsistentHashLoadBalancerSettingsHttpCookie {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Duration ttl;
+
     public ConsistentHashLoadBalancerSettingsHttpCookie withTtl(Duration ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public ConsistentHashLoadBalancerSettingsHttpCookie(){}
 }

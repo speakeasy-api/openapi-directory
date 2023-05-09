@@ -57,11 +57,9 @@ public class WebhooksMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdResponse(contentType, httpRes.statusCode()) {{
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -110,12 +108,10 @@ public class WebhooksMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksResponse(contentType, httpRes.statusCode()) {{
             listWebhooksResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,12 +161,10 @@ public class WebhooksMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,12 +215,10 @@ public class WebhooksMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,12 +269,10 @@ public class WebhooksMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -331,12 +321,10 @@ public class WebhooksMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacResponse(contentType, httpRes.statusCode()) {{
             generateHmacKeyResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,12 +379,10 @@ public class WebhooksMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestResponse(contentType, httpRes.statusCode()) {{
             testWebhookResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

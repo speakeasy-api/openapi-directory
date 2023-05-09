@@ -42,4 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/RatingAspectDistribution.ja
 lib/src/main/java/org/openapis/openapi/models/shared/MarketPriceDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/Amount.java
 lib/src/main/java/org/openapis/openapi/models/shared/Image.java
+docs/sdk/README.md
+docs/merchandisedproduct/README.md
 USAGE.md

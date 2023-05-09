@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomEntityTypeResponse {
@@ -12,6 +13,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateCustomEntityTypeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateCustomEntityTypeResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomEntityTypeResponse {
     
     
     public String contentType;
+
     public CreateCustomEntityTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomEntityTypeResponse createCustomEntityTypeResponse;
+
     public CreateCustomEntityTypeResponse withCreateCustomEntityTypeResponse(org.openapis.openapi.models.shared.CreateCustomEntityTypeResponse createCustomEntityTypeResponse) {
         this.createCustomEntityTypeResponse = createCustomEntityTypeResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateCustomEntityTypeResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public Object internalServiceException;
+
     public CreateCustomEntityTypeResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public Object invalidInputException;
+
     public CreateCustomEntityTypeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateCustomEntityTypeResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class CreateCustomEntityTypeResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateCustomEntityTypeResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateCustomEntityTypeResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomEntityTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateCustomEntityTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomEntityTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCustomEntityTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

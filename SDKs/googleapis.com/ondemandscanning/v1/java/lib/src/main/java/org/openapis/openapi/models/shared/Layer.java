@@ -18,6 +18,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public String arguments;
+
     public Layer withArguments(String arguments) {
         this.arguments = arguments;
         return this;
@@ -29,9 +30,11 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directive")
     public String directive;
+
     public Layer withDirective(String directive) {
         this.directive = directive;
         return this;
     }
     
+    public Layer(){}
 }

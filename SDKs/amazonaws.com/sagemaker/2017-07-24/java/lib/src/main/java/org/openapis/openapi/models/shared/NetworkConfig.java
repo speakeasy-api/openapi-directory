@@ -15,6 +15,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableInterContainerTrafficEncryption")
     public Boolean enableInterContainerTrafficEncryption;
+
     public NetworkConfig withEnableInterContainerTrafficEncryption(Boolean enableInterContainerTrafficEncryption) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         return this;
@@ -23,6 +24,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNetworkIsolation")
     public Boolean enableNetworkIsolation;
+
     public NetworkConfig withEnableNetworkIsolation(Boolean enableNetworkIsolation) {
         this.enableNetworkIsolation = enableNetworkIsolation;
         return this;
@@ -34,9 +36,11 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public NetworkConfig withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public NetworkConfig(){}
 }

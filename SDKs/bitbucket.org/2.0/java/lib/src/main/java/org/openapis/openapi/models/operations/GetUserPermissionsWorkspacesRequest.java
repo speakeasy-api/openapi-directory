@@ -13,6 +13,7 @@ public class GetUserPermissionsWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetUserPermissionsWorkspacesRequest withQ(String q) {
         this.q = q;
         return this;
@@ -26,9 +27,11 @@ public class GetUserPermissionsWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetUserPermissionsWorkspacesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetUserPermissionsWorkspacesRequest(){}
 }

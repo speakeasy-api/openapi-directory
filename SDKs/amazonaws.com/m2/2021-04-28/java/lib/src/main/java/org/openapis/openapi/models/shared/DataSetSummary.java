@@ -22,6 +22,7 @@ public class DataSetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DataSetSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DataSetSummary {
     
     @JsonProperty("dataSetName")
     public String dataSetName;
+
     public DataSetSummary withDataSetName(String dataSetName) {
         this.dataSetName = dataSetName;
         return this;
@@ -37,6 +39,7 @@ public class DataSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSetOrg")
     public String dataSetOrg;
+
     public DataSetSummary withDataSetOrg(String dataSetOrg) {
         this.dataSetOrg = dataSetOrg;
         return this;
@@ -45,6 +48,7 @@ public class DataSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public DataSetSummary withFormat(String format) {
         this.format = format;
         return this;
@@ -55,6 +59,7 @@ public class DataSetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastReferencedTime")
     public OffsetDateTime lastReferencedTime;
+
     public DataSetSummary withLastReferencedTime(OffsetDateTime lastReferencedTime) {
         this.lastReferencedTime = lastReferencedTime;
         return this;
@@ -65,9 +70,13 @@ public class DataSetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public DataSetSummary withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
     }
     
+    public DataSetSummary(@JsonProperty("dataSetName") String dataSetName) {
+        this.dataSetName = dataSetName;
+  }
 }

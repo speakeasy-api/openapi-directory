@@ -17,8 +17,9 @@ public class GetUploadedDocumentsResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentDetails")
-    public DocumentDetail[] documentDetails;
-    public GetUploadedDocumentsResponse withDocumentDetails(DocumentDetail[] documentDetails) {
+    public DocumentDetailWrapper[] documentDetails;
+
+    public GetUploadedDocumentsResponse withDocumentDetails(DocumentDetailWrapper[] documentDetails) {
         this.documentDetails = documentDetails;
         return this;
     }
@@ -29,6 +30,7 @@ public class GetUploadedDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetUploadedDocumentsResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -40,6 +42,7 @@ public class GetUploadedDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetUploadedDocumentsResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -53,9 +56,11 @@ public class GetUploadedDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public GetUploadedDocumentsResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public GetUploadedDocumentsResponse(){}
 }

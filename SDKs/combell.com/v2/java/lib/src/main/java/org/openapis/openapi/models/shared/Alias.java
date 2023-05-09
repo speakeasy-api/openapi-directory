@@ -15,6 +15,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public String[] destinations;
+
     public Alias withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -26,9 +27,11 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public Alias withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public Alias(){}
 }

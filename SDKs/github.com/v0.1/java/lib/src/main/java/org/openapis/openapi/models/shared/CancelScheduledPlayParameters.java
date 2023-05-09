@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,9 +16,13 @@ public class CancelScheduledPlayParameters {
      */
     @SpeakeasyMetadata("form:name=SchedPlayId")
     public String schedPlayId;
+
     public CancelScheduledPlayParameters withSchedPlayId(String schedPlayId) {
         this.schedPlayId = schedPlayId;
         return this;
     }
     
+    public CancelScheduledPlayParameters(@JsonProperty("SchedPlayId") String schedPlayId) {
+        this.schedPlayId = schedPlayId;
+  }
 }

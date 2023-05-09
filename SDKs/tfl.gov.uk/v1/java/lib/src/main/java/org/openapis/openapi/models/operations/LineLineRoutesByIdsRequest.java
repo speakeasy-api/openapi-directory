@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineLineRoutesByIdsRequest {
@@ -12,6 +13,7 @@ public class LineLineRoutesByIdsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String[] ids;
+
     public LineLineRoutesByIdsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -22,9 +24,13 @@ public class LineLineRoutesByIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
     public LineLineRoutesByIdsServiceTypesEnum[] serviceTypes;
+
     public LineLineRoutesByIdsRequest withServiceTypes(LineLineRoutesByIdsServiceTypesEnum[] serviceTypes) {
         this.serviceTypes = serviceTypes;
         return this;
     }
     
+    public LineLineRoutesByIdsRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

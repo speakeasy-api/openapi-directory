@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserIdResponse {
@@ -12,6 +13,7 @@ public class GetUserIdResponse {
      */
     
     public Object accessDeniedException;
+
     public GetUserIdResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetUserIdResponse {
     
     
     public String contentType;
+
     public GetUserIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetUserIdResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUserIdResponse getUserIdResponse;
+
     public GetUserIdResponse withGetUserIdResponse(org.openapis.openapi.models.shared.GetUserIdResponse getUserIdResponse) {
         this.getUserIdResponse = getUserIdResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetUserIdResponse {
      */
     
     public Object internalServerException;
+
     public GetUserIdResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetUserIdResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUserIdResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetUserIdResponse {
     
     
     public Integer statusCode;
+
     public GetUserIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetUserIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetUserIdResponse {
      */
     
     public Object throttlingException;
+
     public GetUserIdResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetUserIdResponse {
      */
     
     public Object validationException;
+
     public GetUserIdResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetUserIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

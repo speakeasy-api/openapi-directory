@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LifecycleHookSpecification - &lt;p&gt;Describes information used to specify a lifecycle hook for an Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html"&gt;Amazon EC2 Auto Scaling lifecycle hooks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LifecycleHookSpecification {
     
     public String defaultResult;
+
     public LifecycleHookSpecification withDefaultResult(String defaultResult) {
         this.defaultResult = defaultResult;
         return this;
@@ -19,6 +20,7 @@ public class LifecycleHookSpecification {
     
     
     public Long heartbeatTimeout;
+
     public LifecycleHookSpecification withHeartbeatTimeout(Long heartbeatTimeout) {
         this.heartbeatTimeout = heartbeatTimeout;
         return this;
@@ -26,6 +28,7 @@ public class LifecycleHookSpecification {
     
     
     public String lifecycleHookName;
+
     public LifecycleHookSpecification withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
@@ -33,6 +36,7 @@ public class LifecycleHookSpecification {
     
     
     public String lifecycleTransition;
+
     public LifecycleHookSpecification withLifecycleTransition(String lifecycleTransition) {
         this.lifecycleTransition = lifecycleTransition;
         return this;
@@ -40,6 +44,7 @@ public class LifecycleHookSpecification {
     
     
     public String notificationMetadata;
+
     public LifecycleHookSpecification withNotificationMetadata(String notificationMetadata) {
         this.notificationMetadata = notificationMetadata;
         return this;
@@ -47,6 +52,7 @@ public class LifecycleHookSpecification {
     
     
     public String notificationTargetARN;
+
     public LifecycleHookSpecification withNotificationTargetARN(String notificationTargetARN) {
         this.notificationTargetARN = notificationTargetARN;
         return this;
@@ -54,9 +60,14 @@ public class LifecycleHookSpecification {
     
     
     public String roleARN;
+
     public LifecycleHookSpecification withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public LifecycleHookSpecification(@JsonProperty("LifecycleHookName") String lifecycleHookName, @JsonProperty("LifecycleTransition") String lifecycleTransition) {
+        this.lifecycleHookName = lifecycleHookName;
+        this.lifecycleTransition = lifecycleTransition;
+  }
 }

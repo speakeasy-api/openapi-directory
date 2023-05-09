@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartExportTaskResponse {
@@ -12,6 +13,7 @@ public class StartExportTaskResponse {
      */
     
     public Object authorizationErrorException;
+
     public StartExportTaskResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class StartExportTaskResponse {
     
     
     public String contentType;
+
     public StartExportTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartExportTaskResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public StartExportTaskResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class StartExportTaskResponse {
      */
     
     public Object invalidParameterException;
+
     public StartExportTaskResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartExportTaskResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartExportTaskResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class StartExportTaskResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartExportTaskResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -69,6 +76,7 @@ public class StartExportTaskResponse {
      */
     
     public Object serverInternalErrorException;
+
     public StartExportTaskResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -79,6 +87,7 @@ public class StartExportTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartExportTaskResponse startExportTaskResponse;
+
     public StartExportTaskResponse withStartExportTaskResponse(org.openapis.openapi.models.shared.StartExportTaskResponse startExportTaskResponse) {
         this.startExportTaskResponse = startExportTaskResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartExportTaskResponse {
     
     
     public Integer statusCode;
+
     public StartExportTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartExportTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartExportTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartExportTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

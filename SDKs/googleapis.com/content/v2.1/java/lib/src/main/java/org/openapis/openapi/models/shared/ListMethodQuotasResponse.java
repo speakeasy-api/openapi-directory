@@ -18,6 +18,7 @@ public class ListMethodQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodQuotas")
     public MethodQuota[] methodQuotas;
+
     public ListMethodQuotasResponse withMethodQuotas(MethodQuota[] methodQuotas) {
         this.methodQuotas = methodQuotas;
         return this;
@@ -29,9 +30,11 @@ public class ListMethodQuotasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMethodQuotasResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMethodQuotasResponse(){}
 }

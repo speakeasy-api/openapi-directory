@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminUpdateDeviceStatusResponse {
@@ -12,6 +13,7 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public java.util.Map<String, Object> adminUpdateDeviceStatusResponse;
+
     public AdminUpdateDeviceStatusResponse withAdminUpdateDeviceStatusResponse(java.util.Map<String, Object> adminUpdateDeviceStatusResponse) {
         this.adminUpdateDeviceStatusResponse = adminUpdateDeviceStatusResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminUpdateDeviceStatusResponse {
     
     
     public String contentType;
+
     public AdminUpdateDeviceStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public Object internalErrorException;
+
     public AdminUpdateDeviceStatusResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminUpdateDeviceStatusResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public AdminUpdateDeviceStatusResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -59,6 +65,7 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminUpdateDeviceStatusResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -66,6 +73,7 @@ public class AdminUpdateDeviceStatusResponse {
     
     
     public Integer statusCode;
+
     public AdminUpdateDeviceStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AdminUpdateDeviceStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminUpdateDeviceStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminUpdateDeviceStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminUpdateDeviceStatusResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class AdminUpdateDeviceStatusResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminUpdateDeviceStatusResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminUpdateDeviceStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

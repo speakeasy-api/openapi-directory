@@ -15,9 +15,11 @@ public class DeleteEventSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSubscription")
     public EventSubscription eventSubscription;
+
     public DeleteEventSubscriptionResponse withEventSubscription(EventSubscription eventSubscription) {
         this.eventSubscription = eventSubscription;
         return this;
     }
     
+    public DeleteEventSubscriptionResponse(){}
 }

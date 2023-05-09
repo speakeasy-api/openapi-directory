@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutGroupsIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Group group;
+
     public PutGroupsIdRequest withGroup(org.openapis.openapi.models.shared.Group group) {
         this.group = group;
         return this;
@@ -16,9 +18,14 @@ public class PutGroupsIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutGroupsIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutGroupsIdRequest(@JsonProperty("Group") org.openapis.openapi.models.shared.Group group, @JsonProperty("id") Long id) {
+        this.group = group;
+        this.id = id;
+  }
 }

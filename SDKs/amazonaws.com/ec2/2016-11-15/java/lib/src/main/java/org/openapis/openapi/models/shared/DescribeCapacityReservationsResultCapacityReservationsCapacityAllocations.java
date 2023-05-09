@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCapacityReservationsResultCapacityReservationsCapacityAllocations {
     
     public DescribeCapacityReservationsResultCapacityReservationsCapacityAllocationsAllocationTypeEnum allocationType;
+
     public DescribeCapacityReservationsResultCapacityReservationsCapacityAllocations withAllocationType(DescribeCapacityReservationsResultCapacityReservationsCapacityAllocationsAllocationTypeEnum allocationType) {
         this.allocationType = allocationType;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCapacityReservationsResultCapacityReservationsCapacityAlloc
     
     
     public Long count;
+
     public DescribeCapacityReservationsResultCapacityReservationsCapacityAllocations withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public DescribeCapacityReservationsResultCapacityReservationsCapacityAllocations(){}
 }

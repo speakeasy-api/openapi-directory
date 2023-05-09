@@ -18,6 +18,7 @@ public class FilterUppercaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public FilterUppercaseDetails withField(String field) {
         this.field = field;
         return this;
@@ -29,9 +30,11 @@ public class FilterUppercaseDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldIndex")
     public Integer fieldIndex;
+
     public FilterUppercaseDetails withFieldIndex(Integer fieldIndex) {
         this.fieldIndex = fieldIndex;
         return this;
     }
     
+    public FilterUppercaseDetails(){}
 }

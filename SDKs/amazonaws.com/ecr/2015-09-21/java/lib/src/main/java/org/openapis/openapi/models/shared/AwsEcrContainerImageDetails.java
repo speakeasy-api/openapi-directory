@@ -20,6 +20,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public AwsEcrContainerImageDetails withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -28,6 +29,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public AwsEcrContainerImageDetails withAuthor(String author) {
         this.author = author;
         return this;
@@ -36,6 +38,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageHash")
     public String imageHash;
+
     public AwsEcrContainerImageDetails withImageHash(String imageHash) {
         this.imageHash = imageHash;
         return this;
@@ -44,6 +47,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTags")
     public String[] imageTags;
+
     public AwsEcrContainerImageDetails withImageTags(String[] imageTags) {
         this.imageTags = imageTags;
         return this;
@@ -52,6 +56,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public AwsEcrContainerImageDetails withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -62,6 +67,7 @@ public class AwsEcrContainerImageDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pushedAt")
     public OffsetDateTime pushedAt;
+
     public AwsEcrContainerImageDetails withPushedAt(OffsetDateTime pushedAt) {
         this.pushedAt = pushedAt;
         return this;
@@ -70,6 +76,7 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registry")
     public String registry;
+
     public AwsEcrContainerImageDetails withRegistry(String registry) {
         this.registry = registry;
         return this;
@@ -78,9 +85,11 @@ public class AwsEcrContainerImageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public AwsEcrContainerImageDetails withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public AwsEcrContainerImageDetails(){}
 }

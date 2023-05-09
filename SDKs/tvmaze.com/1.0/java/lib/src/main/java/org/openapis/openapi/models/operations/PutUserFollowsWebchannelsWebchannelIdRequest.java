@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUserFollowsWebchannelsWebchannelIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webchannel_id")
     public Long webchannelId;
+
     public PutUserFollowsWebchannelsWebchannelIdRequest withWebchannelId(Long webchannelId) {
         this.webchannelId = webchannelId;
         return this;
     }
     
+    public PutUserFollowsWebchannelsWebchannelIdRequest(@JsonProperty("webchannel_id") Long webchannelId) {
+        this.webchannelId = webchannelId;
+  }
 }

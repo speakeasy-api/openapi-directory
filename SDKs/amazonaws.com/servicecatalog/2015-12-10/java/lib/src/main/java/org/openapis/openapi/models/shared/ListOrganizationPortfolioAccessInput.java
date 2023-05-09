@@ -12,6 +12,7 @@ public class ListOrganizationPortfolioAccessInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListOrganizationPortfolioAccessInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class ListOrganizationPortfolioAccessInput {
     
     @JsonProperty("OrganizationNodeType")
     public OrganizationNodeTypeEnum organizationNodeType;
+
     public ListOrganizationPortfolioAccessInput withOrganizationNodeType(OrganizationNodeTypeEnum organizationNodeType) {
         this.organizationNodeType = organizationNodeType;
         return this;
@@ -27,6 +29,7 @@ public class ListOrganizationPortfolioAccessInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListOrganizationPortfolioAccessInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -35,6 +38,7 @@ public class ListOrganizationPortfolioAccessInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListOrganizationPortfolioAccessInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -42,9 +46,14 @@ public class ListOrganizationPortfolioAccessInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public ListOrganizationPortfolioAccessInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
     }
     
+    public ListOrganizationPortfolioAccessInput(@JsonProperty("OrganizationNodeType") OrganizationNodeTypeEnum organizationNodeType, @JsonProperty("PortfolioId") String portfolioId) {
+        this.organizationNodeType = organizationNodeType;
+        this.portfolioId = portfolioId;
+  }
 }

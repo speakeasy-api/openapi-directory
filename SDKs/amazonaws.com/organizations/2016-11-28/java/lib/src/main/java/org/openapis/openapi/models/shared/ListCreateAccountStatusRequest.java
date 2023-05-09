@@ -12,6 +12,7 @@ public class ListCreateAccountStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCreateAccountStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListCreateAccountStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCreateAccountStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListCreateAccountStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("States")
     public CreateAccountStateEnum[] states;
+
     public ListCreateAccountStatusRequest withStates(CreateAccountStateEnum[] states) {
         this.states = states;
         return this;
     }
     
+    public ListCreateAccountStatusRequest(){}
 }

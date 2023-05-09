@@ -18,6 +18,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public File withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,6 +30,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public File withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public File withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -51,6 +54,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public FileFormatEnum format;
+
     public File withFormat(FileFormatEnum format) {
         this.format = format;
         return this;
@@ -62,6 +66,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public File withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public File withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +90,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public File withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -95,6 +102,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportId")
     public String reportId;
+
     public File withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -106,6 +114,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FileStatusEnum status;
+
     public File withStatus(FileStatusEnum status) {
         this.status = status;
         return this;
@@ -117,9 +126,11 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public FileUrls urls;
+
     public File withUrls(FileUrls urls) {
         this.urls = urls;
         return this;
     }
     
+    public File(){}
 }

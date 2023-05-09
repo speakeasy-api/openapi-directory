@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyInstanceMetadataOptionsRequest {
     
     public Boolean dryRun;
+
     public ModifyInstanceMetadataOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyInstanceMetadataOptionsRequest {
     
     
     public InstanceMetadataEndpointStateEnum httpEndpoint;
+
     public ModifyInstanceMetadataOptionsRequest withHttpEndpoint(InstanceMetadataEndpointStateEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -23,6 +25,7 @@ public class ModifyInstanceMetadataOptionsRequest {
     
     
     public InstanceMetadataProtocolStateEnum httpProtocolIpv6;
+
     public ModifyInstanceMetadataOptionsRequest withHttpProtocolIpv6(InstanceMetadataProtocolStateEnum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -30,6 +33,7 @@ public class ModifyInstanceMetadataOptionsRequest {
     
     
     public Long httpPutResponseHopLimit;
+
     public ModifyInstanceMetadataOptionsRequest withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -37,6 +41,7 @@ public class ModifyInstanceMetadataOptionsRequest {
     
     
     public HttpTokensStateEnum httpTokens;
+
     public ModifyInstanceMetadataOptionsRequest withHttpTokens(HttpTokensStateEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -44,6 +49,7 @@ public class ModifyInstanceMetadataOptionsRequest {
     
     
     public String instanceId;
+
     public ModifyInstanceMetadataOptionsRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -51,9 +57,13 @@ public class ModifyInstanceMetadataOptionsRequest {
     
     
     public InstanceMetadataTagsStateEnum instanceMetadataTags;
+
     public ModifyInstanceMetadataOptionsRequest withInstanceMetadataTags(InstanceMetadataTagsStateEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
     }
     
+    public ModifyInstanceMetadataOptionsRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

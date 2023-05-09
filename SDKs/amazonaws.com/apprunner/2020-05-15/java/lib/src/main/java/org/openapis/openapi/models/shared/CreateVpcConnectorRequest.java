@@ -12,6 +12,7 @@ public class CreateVpcConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public CreateVpcConnectorRequest withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcConnectorRequest {
     
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public CreateVpcConnectorRequest withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -27,6 +29,7 @@ public class CreateVpcConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateVpcConnectorRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -34,9 +37,14 @@ public class CreateVpcConnectorRequest {
     
     @JsonProperty("VpcConnectorName")
     public String vpcConnectorName;
+
     public CreateVpcConnectorRequest withVpcConnectorName(String vpcConnectorName) {
         this.vpcConnectorName = vpcConnectorName;
         return this;
     }
     
+    public CreateVpcConnectorRequest(@JsonProperty("Subnets") String[] subnets, @JsonProperty("VpcConnectorName") String vpcConnectorName) {
+        this.subnets = subnets;
+        this.vpcConnectorName = vpcConnectorName;
+  }
 }

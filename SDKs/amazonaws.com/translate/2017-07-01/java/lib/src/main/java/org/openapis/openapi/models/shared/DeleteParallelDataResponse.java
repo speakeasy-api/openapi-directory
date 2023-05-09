@@ -15,6 +15,7 @@ public class DeleteParallelDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeleteParallelDataResponse withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class DeleteParallelDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ParallelDataStatusEnum status;
+
     public DeleteParallelDataResponse withStatus(ParallelDataStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteParallelDataResponse(){}
 }

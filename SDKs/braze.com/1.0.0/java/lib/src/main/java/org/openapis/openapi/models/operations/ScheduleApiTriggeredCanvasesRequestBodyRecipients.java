@@ -12,6 +12,7 @@ public class ScheduleApiTriggeredCanvasesRequestBodyRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canvas_entry_properties")
     public java.util.Map<String, Object> canvasEntryProperties;
+
     public ScheduleApiTriggeredCanvasesRequestBodyRecipients withCanvasEntryProperties(java.util.Map<String, Object> canvasEntryProperties) {
         this.canvasEntryProperties = canvasEntryProperties;
         return this;
@@ -20,6 +21,7 @@ public class ScheduleApiTriggeredCanvasesRequestBodyRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_user_id")
     public String externalUserId;
+
     public ScheduleApiTriggeredCanvasesRequestBodyRecipients withExternalUserId(String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
@@ -28,6 +30,7 @@ public class ScheduleApiTriggeredCanvasesRequestBodyRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger_properties")
     public String triggerProperties;
+
     public ScheduleApiTriggeredCanvasesRequestBodyRecipients withTriggerProperties(String triggerProperties) {
         this.triggerProperties = triggerProperties;
         return this;
@@ -36,9 +39,11 @@ public class ScheduleApiTriggeredCanvasesRequestBodyRecipients {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_alias")
     public String userAlias;
+
     public ScheduleApiTriggeredCanvasesRequestBodyRecipients withUserAlias(String userAlias) {
         this.userAlias = userAlias;
         return this;
     }
     
+    public ScheduleApiTriggeredCanvasesRequestBodyRecipients(){}
 }

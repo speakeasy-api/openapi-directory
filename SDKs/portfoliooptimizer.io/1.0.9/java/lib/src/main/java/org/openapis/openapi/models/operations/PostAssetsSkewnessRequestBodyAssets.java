@@ -12,9 +12,13 @@ public class PostAssetsSkewnessRequestBodyAssets {
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostAssetsSkewnessRequestBodyAssets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostAssetsSkewnessRequestBodyAssets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

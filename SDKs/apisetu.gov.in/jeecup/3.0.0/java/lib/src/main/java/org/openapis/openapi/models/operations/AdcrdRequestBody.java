@@ -15,6 +15,7 @@ public class AdcrdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public AdcrdRequestBodyCertificateParameters certificateParameters;
+
     public AdcrdRequestBody withCertificateParameters(AdcrdRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class AdcrdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public AdcrdRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class AdcrdRequestBody {
      */
     @JsonProperty("format")
     public AdcrdRequestBodyFormatEnum format;
+
     public AdcrdRequestBody withFormat(AdcrdRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class AdcrdRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public AdcrdRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public AdcrdRequestBody(@JsonProperty("format") AdcrdRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

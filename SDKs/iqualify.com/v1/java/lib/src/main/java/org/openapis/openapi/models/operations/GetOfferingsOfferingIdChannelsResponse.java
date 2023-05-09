@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsOfferingIdChannelsResponse {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelResponse[] channelResponses;
+
     public GetOfferingsOfferingIdChannelsResponse withChannelResponses(org.openapis.openapi.models.shared.ChannelResponse[] channelResponses) {
         this.channelResponses = channelResponses;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsOfferingIdChannelsResponse {
     
     
     public String contentType;
+
     public GetOfferingsOfferingIdChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsOfferingIdChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsOfferingIdChannelsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsOfferingIdChannelsResponse {
     
     
     public Integer statusCode;
+
     public GetOfferingsOfferingIdChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsOfferingIdChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsOfferingIdChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsOfferingIdChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

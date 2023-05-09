@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLoadBalancerResponse {
@@ -12,6 +13,7 @@ public class GetLoadBalancerResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLoadBalancerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetLoadBalancerResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetLoadBalancerResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetLoadBalancerResponse {
     
     
     public String contentType;
+
     public GetLoadBalancerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetLoadBalancerResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLoadBalancerResult getLoadBalancerResult;
+
     public GetLoadBalancerResponse withGetLoadBalancerResult(org.openapis.openapi.models.shared.GetLoadBalancerResult getLoadBalancerResult) {
         this.getLoadBalancerResult = getLoadBalancerResult;
         return this;
@@ -49,6 +54,7 @@ public class GetLoadBalancerResponse {
      */
     
     public Object invalidInputException;
+
     public GetLoadBalancerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetLoadBalancerResponse {
      */
     
     public Object notFoundException;
+
     public GetLoadBalancerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetLoadBalancerResponse {
      */
     
     public Object operationFailureException;
+
     public GetLoadBalancerResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetLoadBalancerResponse {
      */
     
     public Object serviceException;
+
     public GetLoadBalancerResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetLoadBalancerResponse {
     
     
     public Integer statusCode;
+
     public GetLoadBalancerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetLoadBalancerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLoadBalancerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetLoadBalancerResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetLoadBalancerResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetLoadBalancerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

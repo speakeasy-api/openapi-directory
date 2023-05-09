@@ -15,6 +15,7 @@ public class NonCompliantResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public java.util.Map<String, String> additionalInfo;
+
     public NonCompliantResource withAdditionalInfo(java.util.Map<String, String> additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -23,6 +24,7 @@ public class NonCompliantResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIdentifier")
     public ResourceIdentifier resourceIdentifier;
+
     public NonCompliantResource withResourceIdentifier(ResourceIdentifier resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -31,9 +33,11 @@ public class NonCompliantResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public NonCompliantResource withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public NonCompliantResource(){}
 }

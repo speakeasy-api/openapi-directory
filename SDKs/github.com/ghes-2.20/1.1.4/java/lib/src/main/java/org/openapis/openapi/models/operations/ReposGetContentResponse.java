@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetContentResponse {
     
     public byte[] body;
+
     public ReposGetContentResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetContentResponse {
     
     
     public String contentType;
+
     public ReposGetContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetContentResponse {
     
     
     public Integer statusCode;
+
     public ReposGetContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposGetContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposGetContentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetContentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class ReposGetContentResponse {
      */
     
     public Object reposGetContent200ApplicationJSONOneOf;
+
     public ReposGetContentResponse withReposGetContent200ApplicationJSONOneOf(Object reposGetContent200ApplicationJSONOneOf) {
         this.reposGetContent200ApplicationJSONOneOf = reposGetContent200ApplicationJSONOneOf;
         return this;
     }
     
+    public ReposGetContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

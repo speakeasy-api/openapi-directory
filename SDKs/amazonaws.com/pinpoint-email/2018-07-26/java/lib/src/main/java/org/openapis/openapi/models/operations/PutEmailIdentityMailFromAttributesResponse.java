@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEmailIdentityMailFromAttributesResponse {
@@ -12,6 +13,7 @@ public class PutEmailIdentityMailFromAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutEmailIdentityMailFromAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutEmailIdentityMailFromAttributesResponse {
     
     
     public String contentType;
+
     public PutEmailIdentityMailFromAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutEmailIdentityMailFromAttributesResponse {
      */
     
     public Object notFoundException;
+
     public PutEmailIdentityMailFromAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutEmailIdentityMailFromAttributesResponse {
      */
     
     public java.util.Map<String, Object> putEmailIdentityMailFromAttributesResponse;
+
     public PutEmailIdentityMailFromAttributesResponse withPutEmailIdentityMailFromAttributesResponse(java.util.Map<String, Object> putEmailIdentityMailFromAttributesResponse) {
         this.putEmailIdentityMailFromAttributesResponse = putEmailIdentityMailFromAttributesResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutEmailIdentityMailFromAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutEmailIdentityMailFromAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutEmailIdentityMailFromAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEmailIdentityMailFromAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutEmailIdentityMailFromAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutEmailIdentityMailFromAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutEmailIdentityMailFromAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

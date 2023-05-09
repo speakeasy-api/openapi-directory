@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ListInspectTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectTemplates")
     public GooglePrivacyDlpV2InspectTemplate[] inspectTemplates;
+
     public GooglePrivacyDlpV2ListInspectTemplatesResponse withInspectTemplates(GooglePrivacyDlpV2InspectTemplate[] inspectTemplates) {
         this.inspectTemplates = inspectTemplates;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2ListInspectTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GooglePrivacyDlpV2ListInspectTemplatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GooglePrivacyDlpV2ListInspectTemplatesResponse(){}
 }

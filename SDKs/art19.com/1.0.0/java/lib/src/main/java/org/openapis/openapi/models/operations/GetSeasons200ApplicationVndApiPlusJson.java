@@ -15,6 +15,7 @@ public class GetSeasons200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Season[] data;
+
     public GetSeasons200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.Season[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetSeasons200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.Links links;
+
     public GetSeasons200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.Links links) {
         this.links = links;
         return this;
     }
     
+    public GetSeasons200ApplicationVndApiPlusJson(){}
 }

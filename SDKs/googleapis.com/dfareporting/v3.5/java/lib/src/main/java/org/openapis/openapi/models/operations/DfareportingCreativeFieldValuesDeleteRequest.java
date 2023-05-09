@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingCreativeFieldValuesDeleteRequest {
@@ -12,6 +13,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingCreativeFieldValuesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingCreativeFieldValuesDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingCreativeFieldValuesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingCreativeFieldValuesDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=creativeFieldId")
     public String creativeFieldId;
+
     public DfareportingCreativeFieldValuesDeleteRequest withCreativeFieldId(String creativeFieldId) {
         this.creativeFieldId = creativeFieldId;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingCreativeFieldValuesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DfareportingCreativeFieldValuesDeleteRequest withId(String id) {
         this.id = id;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingCreativeFieldValuesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingCreativeFieldValuesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingCreativeFieldValuesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingCreativeFieldValuesDeleteRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingCreativeFieldValuesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingCreativeFieldValuesDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,15 @@ public class DfareportingCreativeFieldValuesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingCreativeFieldValuesDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingCreativeFieldValuesDeleteRequest(@JsonProperty("creativeFieldId") String creativeFieldId, @JsonProperty("id") String id, @JsonProperty("profileId") String profileId) {
+        this.creativeFieldId = creativeFieldId;
+        this.id = id;
+        this.profileId = profileId;
+  }
 }

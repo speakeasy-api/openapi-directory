@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTestRequest {
     @JsonProperty("arn")
     public String arn;
+
     public GetTestRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetTestRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

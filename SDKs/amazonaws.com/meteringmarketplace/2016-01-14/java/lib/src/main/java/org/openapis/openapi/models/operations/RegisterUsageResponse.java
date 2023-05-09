@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterUsageResponse {
     
     public String contentType;
+
     public RegisterUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterUsageResponse {
      */
     
     public Object customerNotEntitledException;
+
     public RegisterUsageResponse withCustomerNotEntitledException(Object customerNotEntitledException) {
         this.customerNotEntitledException = customerNotEntitledException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterUsageResponse {
      */
     
     public Object disabledApiException;
+
     public RegisterUsageResponse withDisabledApiException(Object disabledApiException) {
         this.disabledApiException = disabledApiException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterUsageResponse {
      */
     
     public Object internalServiceErrorException;
+
     public RegisterUsageResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterUsageResponse {
      */
     
     public Object invalidProductCodeException;
+
     public RegisterUsageResponse withInvalidProductCodeException(Object invalidProductCodeException) {
         this.invalidProductCodeException = invalidProductCodeException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterUsageResponse {
      */
     
     public Object invalidPublicKeyVersionException;
+
     public RegisterUsageResponse withInvalidPublicKeyVersionException(Object invalidPublicKeyVersionException) {
         this.invalidPublicKeyVersionException = invalidPublicKeyVersionException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterUsageResponse {
      */
     
     public Object invalidRegionException;
+
     public RegisterUsageResponse withInvalidRegionException(Object invalidRegionException) {
         this.invalidRegionException = invalidRegionException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterUsageResponse {
      */
     
     public Object platformNotSupportedException;
+
     public RegisterUsageResponse withPlatformNotSupportedException(Object platformNotSupportedException) {
         this.platformNotSupportedException = platformNotSupportedException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterUsageResult registerUsageResult;
+
     public RegisterUsageResponse withRegisterUsageResult(org.openapis.openapi.models.shared.RegisterUsageResult registerUsageResult) {
         this.registerUsageResult = registerUsageResult;
         return this;
@@ -96,6 +106,7 @@ public class RegisterUsageResponse {
     
     
     public Integer statusCode;
+
     public RegisterUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class RegisterUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class RegisterUsageResponse {
      */
     
     public Object throttlingException;
+
     public RegisterUsageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public RegisterUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

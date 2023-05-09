@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDetectKeyPhrasesResponse {
     @JsonProperty("ErrorList")
     public BatchItemError[] errorList;
+
     public BatchDetectKeyPhrasesResponse withErrorList(BatchItemError[] errorList) {
         this.errorList = errorList;
         return this;
@@ -19,9 +20,14 @@ public class BatchDetectKeyPhrasesResponse {
     
     @JsonProperty("ResultList")
     public BatchDetectKeyPhrasesItemResult[] resultList;
+
     public BatchDetectKeyPhrasesResponse withResultList(BatchDetectKeyPhrasesItemResult[] resultList) {
         this.resultList = resultList;
         return this;
     }
     
+    public BatchDetectKeyPhrasesResponse(@JsonProperty("ErrorList") BatchItemError[] errorList, @JsonProperty("ResultList") BatchDetectKeyPhrasesItemResult[] resultList) {
+        this.errorList = errorList;
+        this.resultList = resultList;
+  }
 }

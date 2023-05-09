@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageRating")
     public Float averageRating;
+
     public GoogleCloudRetailV2betaRating withAverageRating(Float averageRating) {
         this.averageRating = averageRating;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratingCount")
     public Integer ratingCount;
+
     public GoogleCloudRetailV2betaRating withRatingCount(Integer ratingCount) {
         this.ratingCount = ratingCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2betaRating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratingHistogram")
     public Integer[] ratingHistogram;
+
     public GoogleCloudRetailV2betaRating withRatingHistogram(Integer[] ratingHistogram) {
         this.ratingHistogram = ratingHistogram;
         return this;
     }
     
+    public GoogleCloudRetailV2betaRating(){}
 }

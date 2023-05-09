@@ -12,6 +12,7 @@ public class EventRankingExtraStatsInfo {
      */
     @JsonProperty("name")
     public String name;
+
     public EventRankingExtraStatsInfo withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class EventRankingExtraStatsInfo {
      */
     @JsonProperty("precision")
     public Double precision;
+
     public EventRankingExtraStatsInfo withPrecision(Double precision) {
         this.precision = precision;
         return this;
     }
     
+    public EventRankingExtraStatsInfo(@JsonProperty("name") String name, @JsonProperty("precision") Double precision) {
+        this.name = name;
+        this.precision = precision;
+  }
 }

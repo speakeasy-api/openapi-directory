@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatePickupPointCreateUpdateAddress2Country {
     @JsonProperty("acronym")
     public String acronym;
+
     public CreateUpdatePickupPointCreateUpdateAddress2Country withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -16,9 +17,14 @@ public class CreateUpdatePickupPointCreateUpdateAddress2Country {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUpdatePickupPointCreateUpdateAddress2Country withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateUpdatePickupPointCreateUpdateAddress2Country(@JsonProperty("acronym") String acronym, @JsonProperty("name") String name) {
+        this.acronym = acronym;
+        this.name = name;
+  }
 }

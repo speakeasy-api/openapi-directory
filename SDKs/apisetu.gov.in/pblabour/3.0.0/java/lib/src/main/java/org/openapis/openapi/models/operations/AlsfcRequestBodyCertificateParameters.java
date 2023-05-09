@@ -12,6 +12,7 @@ public class AlsfcRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public AlsfcRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -22,9 +23,14 @@ public class AlsfcRequestBodyCertificateParameters {
      */
     @JsonProperty("lino")
     public String lino;
+
     public AlsfcRequestBodyCertificateParameters withLino(String lino) {
         this.lino = lino;
         return this;
     }
     
+    public AlsfcRequestBodyCertificateParameters(@JsonProperty("UID") String uid, @JsonProperty("lino") String lino) {
+        this.uid = uid;
+        this.lino = lino;
+  }
 }

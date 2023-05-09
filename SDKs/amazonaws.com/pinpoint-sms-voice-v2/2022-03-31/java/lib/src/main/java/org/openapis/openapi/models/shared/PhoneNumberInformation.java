@@ -21,6 +21,7 @@ public class PhoneNumberInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public PhoneNumberInformation withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -28,6 +29,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public PhoneNumberInformation withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -35,6 +37,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public PhoneNumberInformation withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -42,6 +45,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public PhoneNumberInformation withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -49,6 +53,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("MonthlyLeasingPrice")
     public String monthlyLeasingPrice;
+
     public PhoneNumberInformation withMonthlyLeasingPrice(String monthlyLeasingPrice) {
         this.monthlyLeasingPrice = monthlyLeasingPrice;
         return this;
@@ -56,6 +61,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("NumberCapabilities")
     public NumberCapabilityEnum[] numberCapabilities;
+
     public PhoneNumberInformation withNumberCapabilities(NumberCapabilityEnum[] numberCapabilities) {
         this.numberCapabilities = numberCapabilities;
         return this;
@@ -63,6 +69,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("NumberType")
     public NumberTypeEnum numberType;
+
     public PhoneNumberInformation withNumberType(NumberTypeEnum numberType) {
         this.numberType = numberType;
         return this;
@@ -70,6 +77,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public PhoneNumberInformation withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -77,6 +85,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public PhoneNumberInformation withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -84,6 +93,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("PhoneNumberArn")
     public String phoneNumberArn;
+
     public PhoneNumberInformation withPhoneNumberArn(String phoneNumberArn) {
         this.phoneNumberArn = phoneNumberArn;
         return this;
@@ -92,6 +102,7 @@ public class PhoneNumberInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumberId")
     public String phoneNumberId;
+
     public PhoneNumberInformation withPhoneNumberId(String phoneNumberId) {
         this.phoneNumberId = phoneNumberId;
         return this;
@@ -100,6 +111,7 @@ public class PhoneNumberInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolId")
     public String poolId;
+
     public PhoneNumberInformation withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -107,6 +119,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("SelfManagedOptOutsEnabled")
     public Boolean selfManagedOptOutsEnabled;
+
     public PhoneNumberInformation withSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
         this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
         return this;
@@ -114,6 +127,7 @@ public class PhoneNumberInformation {
     
     @JsonProperty("Status")
     public NumberStatusEnum status;
+
     public PhoneNumberInformation withStatus(NumberStatusEnum status) {
         this.status = status;
         return this;
@@ -122,6 +136,7 @@ public class PhoneNumberInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayChannelArn")
     public String twoWayChannelArn;
+
     public PhoneNumberInformation withTwoWayChannelArn(String twoWayChannelArn) {
         this.twoWayChannelArn = twoWayChannelArn;
         return this;
@@ -129,9 +144,25 @@ public class PhoneNumberInformation {
     
     @JsonProperty("TwoWayEnabled")
     public Boolean twoWayEnabled;
+
     public PhoneNumberInformation withTwoWayEnabled(Boolean twoWayEnabled) {
         this.twoWayEnabled = twoWayEnabled;
         return this;
     }
     
+    public PhoneNumberInformation(@JsonProperty("CreatedTimestamp") OffsetDateTime createdTimestamp, @JsonProperty("DeletionProtectionEnabled") Boolean deletionProtectionEnabled, @JsonProperty("IsoCountryCode") String isoCountryCode, @JsonProperty("MessageType") MessageTypeEnum messageType, @JsonProperty("MonthlyLeasingPrice") String monthlyLeasingPrice, @JsonProperty("NumberCapabilities") NumberCapabilityEnum[] numberCapabilities, @JsonProperty("NumberType") NumberTypeEnum numberType, @JsonProperty("OptOutListName") String optOutListName, @JsonProperty("PhoneNumber") String phoneNumber, @JsonProperty("PhoneNumberArn") String phoneNumberArn, @JsonProperty("SelfManagedOptOutsEnabled") Boolean selfManagedOptOutsEnabled, @JsonProperty("Status") NumberStatusEnum status, @JsonProperty("TwoWayEnabled") Boolean twoWayEnabled) {
+        this.createdTimestamp = createdTimestamp;
+        this.deletionProtectionEnabled = deletionProtectionEnabled;
+        this.isoCountryCode = isoCountryCode;
+        this.messageType = messageType;
+        this.monthlyLeasingPrice = monthlyLeasingPrice;
+        this.numberCapabilities = numberCapabilities;
+        this.numberType = numberType;
+        this.optOutListName = optOutListName;
+        this.phoneNumber = phoneNumber;
+        this.phoneNumberArn = phoneNumberArn;
+        this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
+        this.status = status;
+        this.twoWayEnabled = twoWayEnabled;
+  }
 }

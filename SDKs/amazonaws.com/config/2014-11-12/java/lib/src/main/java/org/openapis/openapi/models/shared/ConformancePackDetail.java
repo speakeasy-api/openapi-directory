@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConformancePackDetail {
     @JsonProperty("ConformancePackArn")
     public String conformancePackArn;
+
     public ConformancePackDetail withConformancePackArn(String conformancePackArn) {
         this.conformancePackArn = conformancePackArn;
         return this;
@@ -26,6 +27,7 @@ public class ConformancePackDetail {
     
     @JsonProperty("ConformancePackId")
     public String conformancePackId;
+
     public ConformancePackDetail withConformancePackId(String conformancePackId) {
         this.conformancePackId = conformancePackId;
         return this;
@@ -34,6 +36,7 @@ public class ConformancePackDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackInputParameters")
     public ConformancePackInputParameter[] conformancePackInputParameters;
+
     public ConformancePackDetail withConformancePackInputParameters(ConformancePackInputParameter[] conformancePackInputParameters) {
         this.conformancePackInputParameters = conformancePackInputParameters;
         return this;
@@ -41,6 +44,7 @@ public class ConformancePackDetail {
     
     @JsonProperty("ConformancePackName")
     public String conformancePackName;
+
     public ConformancePackDetail withConformancePackName(String conformancePackName) {
         this.conformancePackName = conformancePackName;
         return this;
@@ -49,6 +53,7 @@ public class ConformancePackDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public ConformancePackDetail withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -57,6 +62,7 @@ public class ConformancePackDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryS3Bucket")
     public String deliveryS3Bucket;
+
     public ConformancePackDetail withDeliveryS3Bucket(String deliveryS3Bucket) {
         this.deliveryS3Bucket = deliveryS3Bucket;
         return this;
@@ -65,6 +71,7 @@ public class ConformancePackDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryS3KeyPrefix")
     public String deliveryS3KeyPrefix;
+
     public ConformancePackDetail withDeliveryS3KeyPrefix(String deliveryS3KeyPrefix) {
         this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
         return this;
@@ -75,6 +82,7 @@ public class ConformancePackDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateRequestedTime")
     public OffsetDateTime lastUpdateRequestedTime;
+
     public ConformancePackDetail withLastUpdateRequestedTime(OffsetDateTime lastUpdateRequestedTime) {
         this.lastUpdateRequestedTime = lastUpdateRequestedTime;
         return this;
@@ -83,9 +91,15 @@ public class ConformancePackDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateSSMDocumentDetails")
     public TemplateSSMDocumentDetails templateSSMDocumentDetails;
+
     public ConformancePackDetail withTemplateSSMDocumentDetails(TemplateSSMDocumentDetails templateSSMDocumentDetails) {
         this.templateSSMDocumentDetails = templateSSMDocumentDetails;
         return this;
     }
     
+    public ConformancePackDetail(@JsonProperty("ConformancePackArn") String conformancePackArn, @JsonProperty("ConformancePackId") String conformancePackId, @JsonProperty("ConformancePackName") String conformancePackName) {
+        this.conformancePackArn = conformancePackArn;
+        this.conformancePackId = conformancePackId;
+        this.conformancePackName = conformancePackName;
+  }
 }

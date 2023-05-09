@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopLoggingResponse {
@@ -12,6 +13,7 @@ public class StopLoggingResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public StopLoggingResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -22,6 +24,7 @@ public class StopLoggingResponse {
      */
     
     public Object conflictException;
+
     public StopLoggingResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StopLoggingResponse {
     
     
     public String contentType;
+
     public StopLoggingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StopLoggingResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public StopLoggingResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -49,6 +54,7 @@ public class StopLoggingResponse {
      */
     
     public Object invalidHomeRegionException;
+
     public StopLoggingResponse withInvalidHomeRegionException(Object invalidHomeRegionException) {
         this.invalidHomeRegionException = invalidHomeRegionException;
         return this;
@@ -59,6 +65,7 @@ public class StopLoggingResponse {
      */
     
     public Object invalidTrailNameException;
+
     public StopLoggingResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -69,6 +76,7 @@ public class StopLoggingResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public StopLoggingResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -79,6 +87,7 @@ public class StopLoggingResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public StopLoggingResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -89,6 +98,7 @@ public class StopLoggingResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StopLoggingResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -96,6 +106,7 @@ public class StopLoggingResponse {
     
     
     public Integer statusCode;
+
     public StopLoggingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class StopLoggingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopLoggingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class StopLoggingResponse {
      */
     
     public java.util.Map<String, Object> stopLoggingResponse;
+
     public StopLoggingResponse withStopLoggingResponse(java.util.Map<String, Object> stopLoggingResponse) {
         this.stopLoggingResponse = stopLoggingResponse;
         return this;
@@ -123,6 +136,7 @@ public class StopLoggingResponse {
      */
     
     public Object trailNotFoundException;
+
     public StopLoggingResponse withTrailNotFoundException(Object trailNotFoundException) {
         this.trailNotFoundException = trailNotFoundException;
         return this;
@@ -133,9 +147,14 @@ public class StopLoggingResponse {
      */
     
     public Object unsupportedOperationException;
+
     public StopLoggingResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public StopLoggingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

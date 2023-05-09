@@ -18,9 +18,11 @@ public class TimeQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Boolean duration;
+
     public TimeQuestion withDuration(Boolean duration) {
         this.duration = duration;
         return this;
     }
     
+    public TimeQuestion(){}
 }

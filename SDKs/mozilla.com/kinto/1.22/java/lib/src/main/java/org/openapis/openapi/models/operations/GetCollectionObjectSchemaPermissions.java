@@ -12,6 +12,7 @@ public class GetCollectionObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read")
     public String[] read;
+
     public GetCollectionObjectSchemaPermissions withRead(String[] read) {
         this.read = read;
         return this;
@@ -20,6 +21,7 @@ public class GetCollectionObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record:create")
     public String[] recordCreate;
+
     public GetCollectionObjectSchemaPermissions withRecordCreate(String[] recordCreate) {
         this.recordCreate = recordCreate;
         return this;
@@ -28,9 +30,11 @@ public class GetCollectionObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write")
     public String[] write;
+
     public GetCollectionObjectSchemaPermissions withWrite(String[] write) {
         this.write = write;
         return this;
     }
     
+    public GetCollectionObjectSchemaPermissions(){}
 }

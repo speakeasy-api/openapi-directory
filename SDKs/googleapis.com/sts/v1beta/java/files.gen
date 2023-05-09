@@ -36,4 +36,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityStsV1betaExch
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityStsV1betaExchangeTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/v1beta/README.md
 USAGE.md

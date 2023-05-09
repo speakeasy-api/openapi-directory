@@ -15,9 +15,11 @@ public class LiveChatTextMessageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageText")
     public String messageText;
+
     public LiveChatTextMessageDetails withMessageText(String messageText) {
         this.messageText = messageText;
         return this;
     }
     
+    public LiveChatTextMessageDetails(){}
 }

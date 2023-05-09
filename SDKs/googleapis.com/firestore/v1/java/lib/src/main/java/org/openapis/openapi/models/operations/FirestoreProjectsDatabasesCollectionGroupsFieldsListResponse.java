@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse {
     
     public String contentType;
+
     public FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFirestoreAdminV1ListFieldsResponse googleFirestoreAdminV1ListFieldsResponse;
+
     public FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse withGoogleFirestoreAdminV1ListFieldsResponse(org.openapis.openapi.models.shared.GoogleFirestoreAdminV1ListFieldsResponse googleFirestoreAdminV1ListFieldsResponse) {
         this.googleFirestoreAdminV1ListFieldsResponse = googleFirestoreAdminV1ListFieldsResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse {
     
     
     public Integer statusCode;
+
     public FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

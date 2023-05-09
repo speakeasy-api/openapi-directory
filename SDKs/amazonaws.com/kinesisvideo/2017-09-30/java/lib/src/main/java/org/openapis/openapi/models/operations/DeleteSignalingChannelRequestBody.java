@@ -14,6 +14,7 @@ public class DeleteSignalingChannelRequestBody {
      */
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public DeleteSignalingChannelRequestBody withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -25,9 +26,13 @@ public class DeleteSignalingChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentVersion")
     public String currentVersion;
+
     public DeleteSignalingChannelRequestBody withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
     
+    public DeleteSignalingChannelRequestBody(@JsonProperty("ChannelARN") String channelARN) {
+        this.channelARN = channelARN;
+  }
 }

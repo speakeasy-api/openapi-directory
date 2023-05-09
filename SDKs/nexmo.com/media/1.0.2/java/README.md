@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteAMediaItemResponse;
 
 public class Application {
@@ -33,18 +32,20 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `deleteAMediaItem` - Delete a media item
-* `listAndSearchMediaItems` - List and search media items
-* `retrieveAMediaItem` - Retrieve a media item
-* `updateAMediaItem` - Update a media item
+* [deleteAMediaItem](docs/sdk/README.md#deleteamediaitem) - Delete a media item
+* [listAndSearchMediaItems](docs/sdk/README.md#listandsearchmediaitems) - List and search media items
+* [retrieveAMediaItem](docs/sdk/README.md#retrieveamediaitem) - Retrieve a media item
+* [updateAMediaItem](docs/sdk/README.md#updateamediaitem) - Update a media item
 <!-- End SDK Available Operations -->
 
 ### Maturity

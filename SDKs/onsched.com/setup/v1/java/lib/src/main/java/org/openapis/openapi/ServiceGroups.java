@@ -53,11 +53,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSetupV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1ServicegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSetupV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.DeleteSetupV1ServicegroupsIdResponse(contentType, httpRes.statusCode()) {{
             serviceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1ServicegroupsResponse res = new org.openapis.openapi.models.operations.GetSetupV1ServicegroupsResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1ServicegroupsResponse res = new org.openapis.openapi.models.operations.GetSetupV1ServicegroupsResponse(contentType, httpRes.statusCode()) {{
             serviceGroupListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSetupV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1ServicegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.GetSetupV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.GetSetupV1ServicegroupsIdResponse(contentType, httpRes.statusCode()) {{
             serviceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSetupV1ServicegroupsResponse res = new org.openapis.openapi.models.operations.PostSetupV1ServicegroupsResponse() {{
+        org.openapis.openapi.models.operations.PostSetupV1ServicegroupsResponse res = new org.openapis.openapi.models.operations.PostSetupV1ServicegroupsResponse(contentType, httpRes.statusCode()) {{
             serviceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,11 +215,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdResponse res = new org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdResponse(contentType, httpRes.statusCode()) {{
             serviceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class ServiceGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdRecoverResponse res = new org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdRecoverResponse() {{
+        org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdRecoverResponse res = new org.openapis.openapi.models.operations.PutSetupV1ServicegroupsIdRecoverResponse(contentType, httpRes.statusCode()) {{
             serviceGroupViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

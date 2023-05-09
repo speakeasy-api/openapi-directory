@@ -15,6 +15,7 @@ public class GetImageRecipePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public String policy;
+
     public GetImageRecipePolicyResponse withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,9 +24,11 @@ public class GetImageRecipePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetImageRecipePolicyResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetImageRecipePolicyResponse(){}
 }

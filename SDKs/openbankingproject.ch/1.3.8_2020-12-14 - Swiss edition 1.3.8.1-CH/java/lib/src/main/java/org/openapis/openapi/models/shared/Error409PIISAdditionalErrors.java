@@ -17,6 +17,7 @@ public class Error409PIISAdditionalErrors {
      */
     @JsonProperty("code")
     public MessageCode409PIISEnum code;
+
     public Error409PIISAdditionalErrors withCode(MessageCode409PIISEnum code) {
         this.code = code;
         return this;
@@ -31,6 +32,7 @@ public class Error409PIISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error409PIISAdditionalErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -45,9 +47,13 @@ public class Error409PIISAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error409PIISAdditionalErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error409PIISAdditionalErrors(@JsonProperty("code") MessageCode409PIISEnum code) {
+        this.code = code;
+  }
 }

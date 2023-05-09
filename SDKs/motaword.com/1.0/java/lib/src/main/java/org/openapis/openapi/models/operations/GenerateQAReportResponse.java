@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateQAReportResponse {
     
     public String contentType;
+
     public GenerateQAReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateQAReportResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GenerateQAReportResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GenerateQAReportResponse {
      */
     
     public org.openapis.openapi.models.shared.QaWarnings qaWarnings;
+
     public GenerateQAReportResponse withQaWarnings(org.openapis.openapi.models.shared.QaWarnings qaWarnings) {
         this.qaWarnings = qaWarnings;
         return this;
@@ -36,6 +40,7 @@ public class GenerateQAReportResponse {
     
     
     public Integer statusCode;
+
     public GenerateQAReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GenerateQAReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateQAReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateQAReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

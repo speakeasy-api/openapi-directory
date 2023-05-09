@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetPropertyAggregatesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetAssetPropertyAggregatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -17,6 +19,7 @@ public class GetAssetPropertyAggregatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetAssetPropertyAggregatesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -24,6 +27,7 @@ public class GetAssetPropertyAggregatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetAssetPropertyAggregatesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -31,6 +35,7 @@ public class GetAssetPropertyAggregatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetAssetPropertyAggregatesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -38,6 +43,7 @@ public class GetAssetPropertyAggregatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetAssetPropertyAggregatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -45,6 +51,7 @@ public class GetAssetPropertyAggregatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetAssetPropertyAggregatesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -52,6 +59,7 @@ public class GetAssetPropertyAggregatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetAssetPropertyAggregatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -62,6 +70,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregateTypes")
     public org.openapis.openapi.models.shared.AggregateTypeEnum[] aggregateTypes;
+
     public GetAssetPropertyAggregatesRequest withAggregateTypes(org.openapis.openapi.models.shared.AggregateTypeEnum[] aggregateTypes) {
         this.aggregateTypes = aggregateTypes;
         return this;
@@ -72,6 +81,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
     public String assetId;
+
     public GetAssetPropertyAggregatesRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -82,6 +92,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public GetAssetPropertyAggregatesRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -92,6 +103,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetAssetPropertyAggregatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +114,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public GetAssetPropertyAggregatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -112,6 +125,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyAlias")
     public String propertyAlias;
+
     public GetAssetPropertyAggregatesRequest withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -122,6 +136,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyId")
     public String propertyId;
+
     public GetAssetPropertyAggregatesRequest withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -132,6 +147,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qualities")
     public org.openapis.openapi.models.shared.QualityEnum[] qualities;
+
     public GetAssetPropertyAggregatesRequest withQualities(org.openapis.openapi.models.shared.QualityEnum[] qualities) {
         this.qualities = qualities;
         return this;
@@ -142,6 +158,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
     public String resolution;
+
     public GetAssetPropertyAggregatesRequest withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -152,6 +169,7 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public GetAssetPropertyAggregatesRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -162,9 +180,16 @@ public class GetAssetPropertyAggregatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOrdering")
     public GetAssetPropertyAggregatesTimeOrderingEnum timeOrdering;
+
     public GetAssetPropertyAggregatesRequest withTimeOrdering(GetAssetPropertyAggregatesTimeOrderingEnum timeOrdering) {
         this.timeOrdering = timeOrdering;
         return this;
     }
     
+    public GetAssetPropertyAggregatesRequest(@JsonProperty("aggregateTypes") org.openapis.openapi.models.shared.AggregateTypeEnum[] aggregateTypes, @JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("resolution") String resolution, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.aggregateTypes = aggregateTypes;
+        this.endDate = endDate;
+        this.resolution = resolution;
+        this.startDate = startDate;
+  }
 }

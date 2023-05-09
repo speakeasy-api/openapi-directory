@@ -15,6 +15,7 @@ public class SetIdentityPoolConfigurationRequestBodyPushSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationArns")
     public String[] applicationArns;
+
     public SetIdentityPoolConfigurationRequestBodyPushSync withApplicationArns(String[] applicationArns) {
         this.applicationArns = applicationArns;
         return this;
@@ -23,9 +24,11 @@ public class SetIdentityPoolConfigurationRequestBodyPushSync {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public SetIdentityPoolConfigurationRequestBodyPushSync withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public SetIdentityPoolConfigurationRequestBodyPushSync(){}
 }

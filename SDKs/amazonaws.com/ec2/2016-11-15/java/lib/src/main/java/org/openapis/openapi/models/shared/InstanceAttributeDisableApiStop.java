@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeDisableApiStop {
     
     public Boolean value;
+
     public InstanceAttributeDisableApiStop withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeDisableApiStop(){}
 }

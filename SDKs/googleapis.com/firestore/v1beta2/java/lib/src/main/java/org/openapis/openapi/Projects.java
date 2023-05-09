@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse(contentType, httpRes.statusCode()) {{
             googleFirestoreAdminV1beta2ListFieldsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse(contentType, httpRes.statusCode()) {{
             googleFirestoreAdminV1beta2Index = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListResponse(contentType, httpRes.statusCode()) {{
             googleFirestoreAdminV1beta2ListIndexesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsResponse() {{
+        org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsResponse res = new org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

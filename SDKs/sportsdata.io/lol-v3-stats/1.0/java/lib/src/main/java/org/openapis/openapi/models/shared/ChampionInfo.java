@@ -12,6 +12,7 @@ public class ChampionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChampionId")
     public Long championId;
+
     public ChampionInfo withChampionId(Long championId) {
         this.championId = championId;
         return this;
@@ -20,6 +21,7 @@ public class ChampionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ChampionInfo withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class ChampionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public ChampionInfo withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ChampionInfo(){}
 }

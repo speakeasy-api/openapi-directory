@@ -144,4 +144,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/EventRetrieved.java
 lib/src/main/java/org/openapis/openapi/models/shared/LegStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MemberActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/conversation/README.md
+docs/event/README.md
+docs/leg/README.md
+docs/member/README.md
+docs/user/README.md
 USAGE.md

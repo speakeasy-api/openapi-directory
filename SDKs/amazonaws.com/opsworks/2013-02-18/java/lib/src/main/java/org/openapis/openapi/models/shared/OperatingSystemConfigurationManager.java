@@ -15,6 +15,7 @@ public class OperatingSystemConfigurationManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OperatingSystemConfigurationManager withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class OperatingSystemConfigurationManager {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public OperatingSystemConfigurationManager withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public OperatingSystemConfigurationManager(){}
 }

@@ -14,6 +14,7 @@ public class SendMessageRequestBody4Image {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody4ImageChannelEnum channel;
+
     public SendMessageRequestBody4Image withChannel(SendMessageRequestBody4ImageChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody4Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody4Image withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -36,6 +38,7 @@ public class SendMessageRequestBody4Image {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody4Image withFrom(String from) {
         this.from = from;
         return this;
@@ -43,6 +46,7 @@ public class SendMessageRequestBody4Image {
     
     @JsonProperty("image")
     public SendMessageRequestBody4ImageImage image;
+
     public SendMessageRequestBody4Image withImage(SendMessageRequestBody4ImageImage image) {
         this.image = image;
         return this;
@@ -53,6 +57,7 @@ public class SendMessageRequestBody4Image {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody4ImageMessageTypeEnum messageType;
+
     public SendMessageRequestBody4Image withMessageType(SendMessageRequestBody4ImageMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -61,6 +66,7 @@ public class SendMessageRequestBody4Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messenger")
     public SendMessageRequestBody4ImageMessenger messenger;
+
     public SendMessageRequestBody4Image withMessenger(SendMessageRequestBody4ImageMessenger messenger) {
         this.messenger = messenger;
         return this;
@@ -72,9 +78,17 @@ public class SendMessageRequestBody4Image {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody4Image withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody4Image(@JsonProperty("channel") SendMessageRequestBody4ImageChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("image") SendMessageRequestBody4ImageImage image, @JsonProperty("message_type") SendMessageRequestBody4ImageMessageTypeEnum messageType, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.image = image;
+        this.messageType = messageType;
+        this.to = to;
+  }
 }

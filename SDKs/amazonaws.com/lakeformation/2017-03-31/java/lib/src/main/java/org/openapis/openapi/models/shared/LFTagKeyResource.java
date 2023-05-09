@@ -15,6 +15,7 @@ public class LFTagKeyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public LFTagKeyResource withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -22,6 +23,7 @@ public class LFTagKeyResource {
     
     @JsonProperty("TagKey")
     public String tagKey;
+
     public LFTagKeyResource withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -29,9 +31,14 @@ public class LFTagKeyResource {
     
     @JsonProperty("TagValues")
     public String[] tagValues;
+
     public LFTagKeyResource withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public LFTagKeyResource(@JsonProperty("TagKey") String tagKey, @JsonProperty("TagValues") String[] tagValues) {
+        this.tagKey = tagKey;
+        this.tagValues = tagValues;
+  }
 }

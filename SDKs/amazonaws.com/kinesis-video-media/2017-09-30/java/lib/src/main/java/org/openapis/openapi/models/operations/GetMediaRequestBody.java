@@ -14,6 +14,7 @@ public class GetMediaRequestBody {
      */
     @JsonProperty("StartSelector")
     public GetMediaRequestBodyStartSelector startSelector;
+
     public GetMediaRequestBody withStartSelector(GetMediaRequestBodyStartSelector startSelector) {
         this.startSelector = startSelector;
         return this;
@@ -25,6 +26,7 @@ public class GetMediaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetMediaRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -36,9 +38,13 @@ public class GetMediaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetMediaRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public GetMediaRequestBody(@JsonProperty("StartSelector") GetMediaRequestBodyStartSelector startSelector) {
+        this.startSelector = startSelector;
+  }
 }

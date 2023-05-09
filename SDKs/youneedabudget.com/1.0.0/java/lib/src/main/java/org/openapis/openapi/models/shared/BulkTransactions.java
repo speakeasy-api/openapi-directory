@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BulkTransactions {
     @JsonProperty("transactions")
     public SaveTransaction[] transactions;
+
     public BulkTransactions withTransactions(SaveTransaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public BulkTransactions(@JsonProperty("transactions") SaveTransaction[] transactions) {
+        this.transactions = transactions;
+  }
 }

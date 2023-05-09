@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrievePaymentResponse {
     
     public String contentType;
+
     public RetrievePaymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrievePaymentResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentRead paymentRead;
+
     public RetrievePaymentResponse withPaymentRead(org.openapis.openapi.models.shared.PaymentRead paymentRead) {
         this.paymentRead = paymentRead;
         return this;
@@ -26,6 +29,7 @@ public class RetrievePaymentResponse {
     
     
     public Integer statusCode;
+
     public RetrievePaymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrievePaymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrievePaymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrievePaymentResponse {
      */
     
     public java.util.Map<String, Object> retrievePayment400ApplicationJSONObject;
+
     public RetrievePaymentResponse withRetrievePayment400ApplicationJSONObject(java.util.Map<String, Object> retrievePayment400ApplicationJSONObject) {
         this.retrievePayment400ApplicationJSONObject = retrievePayment400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RetrievePaymentResponse {
      */
     
     public java.util.Map<String, Object> retrievePayment401ApplicationJSONObject;
+
     public RetrievePaymentResponse withRetrievePayment401ApplicationJSONObject(java.util.Map<String, Object> retrievePayment401ApplicationJSONObject) {
         this.retrievePayment401ApplicationJSONObject = retrievePayment401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RetrievePaymentResponse {
      */
     
     public java.util.Map<String, Object> retrievePayment403ApplicationJSONObject;
+
     public RetrievePaymentResponse withRetrievePayment403ApplicationJSONObject(java.util.Map<String, Object> retrievePayment403ApplicationJSONObject) {
         this.retrievePayment403ApplicationJSONObject = retrievePayment403ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class RetrievePaymentResponse {
      */
     
     public java.util.Map<String, Object> retrievePayment404ApplicationJSONObject;
+
     public RetrievePaymentResponse withRetrievePayment404ApplicationJSONObject(java.util.Map<String, Object> retrievePayment404ApplicationJSONObject) {
         this.retrievePayment404ApplicationJSONObject = retrievePayment404ApplicationJSONObject;
         return this;
     }
     
+    public RetrievePaymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

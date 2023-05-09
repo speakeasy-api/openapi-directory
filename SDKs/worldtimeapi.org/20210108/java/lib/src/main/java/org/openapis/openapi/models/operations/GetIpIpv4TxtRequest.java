@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIpIpv4TxtRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipv4")
     public String ipv4;
+
     public GetIpIpv4TxtRequest withIpv4(String ipv4) {
         this.ipv4 = ipv4;
         return this;
     }
     
+    public GetIpIpv4TxtRequest(@JsonProperty("ipv4") String ipv4) {
+        this.ipv4 = ipv4;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicePermissionsResultAllowedPrincipals {
     
     public String principal;
+
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipals withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcEndpointServicePermissionsResultAllowedPrincipals {
     
     
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsPrincipalTypeEnum principalType;
+
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipals withPrincipalType(DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsPrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpcEndpointServicePermissionsResultAllowedPrincipals {
     
     
     public String serviceId;
+
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipals withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpcEndpointServicePermissionsResultAllowedPrincipals {
     
     
     public String servicePermissionId;
+
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipals withServicePermissionId(String servicePermissionId) {
         this.servicePermissionId = servicePermissionId;
         return this;
@@ -40,9 +44,11 @@ public class DescribeVpcEndpointServicePermissionsResultAllowedPrincipals {
     
     
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsTags[] tags;
+
     public DescribeVpcEndpointServicePermissionsResultAllowedPrincipals withTags(DescribeVpcEndpointServicePermissionsResultAllowedPrincipalsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeVpcEndpointServicePermissionsResultAllowedPrincipals(){}
 }

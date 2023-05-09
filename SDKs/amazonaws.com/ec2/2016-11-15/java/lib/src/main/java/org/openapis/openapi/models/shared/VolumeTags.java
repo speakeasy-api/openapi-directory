@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VolumeTags {
     
     public String key;
+
     public VolumeTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class VolumeTags {
     
     
     public String value;
+
     public VolumeTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public VolumeTags(){}
 }

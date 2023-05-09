@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CertificateDetails {
     
     public String caIdentifier;
+
     public CertificateDetails withCAIdentifier(String caIdentifier) {
         this.caIdentifier = caIdentifier;
         return this;
@@ -19,9 +20,11 @@ public class CertificateDetails {
     
     
     public OffsetDateTime validTill;
+
     public CertificateDetails withValidTill(OffsetDateTime validTill) {
         this.validTill = validTill;
         return this;
     }
     
+    public CertificateDetails(){}
 }

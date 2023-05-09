@@ -18,6 +18,7 @@ public class DownloadParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowGzipCompression")
     public Boolean allowGzipCompression;
+
     public DownloadParameters withAllowGzipCompression(Boolean allowGzipCompression) {
         this.allowGzipCompression = allowGzipCompression;
         return this;
@@ -29,9 +30,11 @@ public class DownloadParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreRange")
     public Boolean ignoreRange;
+
     public DownloadParameters withIgnoreRange(Boolean ignoreRange) {
         this.ignoreRange = ignoreRange;
         return this;
     }
     
+    public DownloadParameters(){}
 }

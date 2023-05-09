@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendBulkEmailResponse {
     @JsonProperty("BulkEmailEntryResults")
     public BulkEmailEntryResult[] bulkEmailEntryResults;
+
     public SendBulkEmailResponse withBulkEmailEntryResults(BulkEmailEntryResult[] bulkEmailEntryResults) {
         this.bulkEmailEntryResults = bulkEmailEntryResults;
         return this;
     }
     
+    public SendBulkEmailResponse(@JsonProperty("BulkEmailEntryResults") BulkEmailEntryResult[] bulkEmailEntryResults) {
+        this.bulkEmailEntryResults = bulkEmailEntryResults;
+  }
 }

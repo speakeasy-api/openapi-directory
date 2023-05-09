@@ -15,6 +15,7 @@ public class ListChangeSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeSetSummaryList")
     public ChangeSetSummaryListItem[] changeSetSummaryList;
+
     public ListChangeSetsResponse withChangeSetSummaryList(ChangeSetSummaryListItem[] changeSetSummaryList) {
         this.changeSetSummaryList = changeSetSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListChangeSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListChangeSetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListChangeSetsResponse(){}
 }

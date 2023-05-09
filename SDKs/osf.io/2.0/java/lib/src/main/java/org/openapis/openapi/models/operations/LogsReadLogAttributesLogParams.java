@@ -15,6 +15,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String addon;
+
     public LogsReadLogAttributesLogParams withAddon(String addon) {
         this.addon = addon;
         return this;
@@ -25,6 +26,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public Boolean anonymousLink;
+
     public LogsReadLogAttributesLogParams withAnonymousLink(Boolean anonymousLink) {
         this.anonymousLink = anonymousLink;
         return this;
@@ -35,6 +37,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String bucket;
+
     public LogsReadLogAttributesLogParams withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -45,6 +48,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String citationName;
+
     public LogsReadLogAttributesLogParams withCitationName(String citationName) {
         this.citationName = citationName;
         return this;
@@ -55,6 +59,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String contributors;
+
     public LogsReadLogAttributesLogParams withContributors(String contributors) {
         this.contributors = contributors;
         return this;
@@ -65,6 +70,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String dataSet;
+
     public LogsReadLogAttributesLogParams withDataSet(String dataSet) {
         this.dataSet = dataSet;
         return this;
@@ -75,6 +81,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String destination;
+
     public LogsReadLogAttributesLogParams withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -85,6 +92,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String figshareTitle;
+
     public LogsReadLogAttributesLogParams withFigshareTitle(String figshareTitle) {
         this.figshareTitle = figshareTitle;
         return this;
@@ -95,6 +103,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String file;
+
     public LogsReadLogAttributesLogParams withFile(String file) {
         this.file = file;
         return this;
@@ -105,6 +114,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String filename;
+
     public LogsReadLogAttributesLogParams withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -115,6 +125,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String folder;
+
     public LogsReadLogAttributesLogParams withFolder(String folder) {
         this.folder = folder;
         return this;
@@ -125,6 +136,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String folderName;
+
     public LogsReadLogAttributesLogParams withFolderName(String folderName) {
         this.folderName = folderName;
         return this;
@@ -135,6 +147,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String forwardUrl;
+
     public LogsReadLogAttributesLogParams withForwardUrl(String forwardUrl) {
         this.forwardUrl = forwardUrl;
         return this;
@@ -145,6 +158,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String githubRepo;
+
     public LogsReadLogAttributesLogParams withGithubRepo(String githubRepo) {
         this.githubRepo = githubRepo;
         return this;
@@ -155,6 +169,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String githubUser;
+
     public LogsReadLogAttributesLogParams withGithubUser(String githubUser) {
         this.githubUser = githubUser;
         return this;
@@ -165,6 +180,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String identifiers;
+
     public LogsReadLogAttributesLogParams withIdentifiers(String identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -175,6 +191,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String institution;
+
     public LogsReadLogAttributesLogParams withInstitution(String institution) {
         this.institution = institution;
         return this;
@@ -185,6 +202,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String kind;
+
     public LogsReadLogAttributesLogParams withKind(String kind) {
         this.kind = kind;
         return this;
@@ -195,6 +213,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String license;
+
     public LogsReadLogAttributesLogParams withLicense(String license) {
         this.license = license;
         return this;
@@ -205,6 +224,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String oldPage;
+
     public LogsReadLogAttributesLogParams withOldPage(String oldPage) {
         this.oldPage = oldPage;
         return this;
@@ -215,6 +235,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String page;
+
     public LogsReadLogAttributesLogParams withPage(String page) {
         this.page = page;
         return this;
@@ -225,6 +246,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String pageId;
+
     public LogsReadLogAttributesLogParams withPageId(String pageId) {
         this.pageId = pageId;
         return this;
@@ -235,6 +257,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String paramsNode;
+
     public LogsReadLogAttributesLogParams withParamsNode(String paramsNode) {
         this.paramsNode = paramsNode;
         return this;
@@ -245,6 +268,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String paramsProject;
+
     public LogsReadLogAttributesLogParams withParamsProject(String paramsProject) {
         this.paramsProject = paramsProject;
         return this;
@@ -255,6 +279,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String path;
+
     public LogsReadLogAttributesLogParams withPath(String path) {
         this.path = path;
         return this;
@@ -265,6 +290,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String pointer;
+
     public LogsReadLogAttributesLogParams withPointer(String pointer) {
         this.pointer = pointer;
         return this;
@@ -275,6 +301,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String preprint;
+
     public LogsReadLogAttributesLogParams withPreprint(String preprint) {
         this.preprint = preprint;
         return this;
@@ -285,6 +312,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String preprintProvider;
+
     public LogsReadLogAttributesLogParams withPreprintProvider(String preprintProvider) {
         this.preprintProvider = preprintProvider;
         return this;
@@ -295,6 +323,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String previousInstitution;
+
     public LogsReadLogAttributesLogParams withPreviousInstitution(String previousInstitution) {
         this.previousInstitution = previousInstitution;
         return this;
@@ -305,6 +334,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String source;
+
     public LogsReadLogAttributesLogParams withSource(String source) {
         this.source = source;
         return this;
@@ -315,6 +345,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String study;
+
     public LogsReadLogAttributesLogParams withStudy(String study) {
         this.study = study;
         return this;
@@ -325,6 +356,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String tag;
+
     public LogsReadLogAttributesLogParams withTag(String tag) {
         this.tag = tag;
         return this;
@@ -335,6 +367,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String tags;
+
     public LogsReadLogAttributesLogParams withTags(String tags) {
         this.tags = tags;
         return this;
@@ -345,6 +378,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String target;
+
     public LogsReadLogAttributesLogParams withTarget(String target) {
         this.target = target;
         return this;
@@ -355,6 +389,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String templateNode;
+
     public LogsReadLogAttributesLogParams withTemplateNode(String templateNode) {
         this.templateNode = templateNode;
         return this;
@@ -365,6 +400,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String titleNew;
+
     public LogsReadLogAttributesLogParams withTitleNew(String titleNew) {
         this.titleNew = titleNew;
         return this;
@@ -375,6 +411,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String titleOriginal;
+
     public LogsReadLogAttributesLogParams withTitleOriginal(String titleOriginal) {
         this.titleOriginal = titleOriginal;
         return this;
@@ -385,6 +422,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String updatedFields;
+
     public LogsReadLogAttributesLogParams withUpdatedFields(String updatedFields) {
         this.updatedFields = updatedFields;
         return this;
@@ -395,6 +433,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String urls;
+
     public LogsReadLogAttributesLogParams withUrls(String urls) {
         this.urls = urls;
         return this;
@@ -405,6 +444,7 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String version;
+
     public LogsReadLogAttributesLogParams withVersion(String version) {
         this.version = version;
         return this;
@@ -415,9 +455,11 @@ public class LogsReadLogAttributesLogParams {
      */
     
     public String wiki;
+
     public LogsReadLogAttributesLogParams withWiki(String wiki) {
         this.wiki = wiki;
         return this;
     }
     
+    public LogsReadLogAttributesLogParams(){}
 }

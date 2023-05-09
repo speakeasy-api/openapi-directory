@@ -15,6 +15,7 @@ public class ReplaceContentEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public ReplaceContentEntry withContent(String content) {
         this.content = content;
         return this;
@@ -23,6 +24,7 @@ public class ReplaceContentEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMode")
     public FileModeTypeEnumEnum fileMode;
+
     public ReplaceContentEntry withFileMode(FileModeTypeEnumEnum fileMode) {
         this.fileMode = fileMode;
         return this;
@@ -30,6 +32,7 @@ public class ReplaceContentEntry {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public ReplaceContentEntry withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -37,9 +40,14 @@ public class ReplaceContentEntry {
     
     @JsonProperty("replacementType")
     public ReplacementTypeEnumEnum replacementType;
+
     public ReplaceContentEntry withReplacementType(ReplacementTypeEnumEnum replacementType) {
         this.replacementType = replacementType;
         return this;
     }
     
+    public ReplaceContentEntry(@JsonProperty("filePath") String filePath, @JsonProperty("replacementType") ReplacementTypeEnumEnum replacementType) {
+        this.filePath = filePath;
+        this.replacementType = replacementType;
+  }
 }

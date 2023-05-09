@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlatformRequest {
@@ -12,9 +13,13 @@ public class GetPlatformRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platformId")
     public String platformId;
+
     public GetPlatformRequest withPlatformId(String platformId) {
         this.platformId = platformId;
         return this;
     }
     
+    public GetPlatformRequest(@JsonProperty("platformId") String platformId) {
+        this.platformId = platformId;
+  }
 }

@@ -15,6 +15,7 @@ public class VpcDNSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public VpcDNSTarget withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +24,7 @@ public class VpcDNSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public VpcDNSTarget withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -31,9 +33,11 @@ public class VpcDNSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcIngressConnectionArn")
     public String vpcIngressConnectionArn;
+
     public VpcDNSTarget withVpcIngressConnectionArn(String vpcIngressConnectionArn) {
         this.vpcIngressConnectionArn = vpcIngressConnectionArn;
         return this;
     }
     
+    public VpcDNSTarget(){}
 }

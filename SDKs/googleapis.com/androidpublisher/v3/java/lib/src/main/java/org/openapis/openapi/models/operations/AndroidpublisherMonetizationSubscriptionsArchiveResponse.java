@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidpublisherMonetizationSubscriptionsArchiveResponse {
     
     public String contentType;
+
     public AndroidpublisherMonetizationSubscriptionsArchiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AndroidpublisherMonetizationSubscriptionsArchiveResponse {
     
     
     public Integer statusCode;
+
     public AndroidpublisherMonetizationSubscriptionsArchiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AndroidpublisherMonetizationSubscriptionsArchiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidpublisherMonetizationSubscriptionsArchiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AndroidpublisherMonetizationSubscriptionsArchiveResponse {
      */
     
     public org.openapis.openapi.models.shared.Subscription subscription;
+
     public AndroidpublisherMonetizationSubscriptionsArchiveResponse withSubscription(org.openapis.openapi.models.shared.Subscription subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public AndroidpublisherMonetizationSubscriptionsArchiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

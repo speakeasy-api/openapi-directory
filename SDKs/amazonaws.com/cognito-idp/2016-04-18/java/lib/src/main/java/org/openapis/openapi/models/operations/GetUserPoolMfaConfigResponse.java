@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserPoolMfaConfigResponse {
     
     public String contentType;
+
     public GetUserPoolMfaConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUserPoolMfaConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUserPoolMfaConfigResponse getUserPoolMfaConfigResponse;
+
     public GetUserPoolMfaConfigResponse withGetUserPoolMfaConfigResponse(org.openapis.openapi.models.shared.GetUserPoolMfaConfigResponse getUserPoolMfaConfigResponse) {
         this.getUserPoolMfaConfigResponse = getUserPoolMfaConfigResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetUserPoolMfaConfigResponse {
      */
     
     public Object internalErrorException;
+
     public GetUserPoolMfaConfigResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetUserPoolMfaConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public GetUserPoolMfaConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetUserPoolMfaConfigResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetUserPoolMfaConfigResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class GetUserPoolMfaConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUserPoolMfaConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetUserPoolMfaConfigResponse {
     
     
     public Integer statusCode;
+
     public GetUserPoolMfaConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetUserPoolMfaConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserPoolMfaConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetUserPoolMfaConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetUserPoolMfaConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetUserPoolMfaConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

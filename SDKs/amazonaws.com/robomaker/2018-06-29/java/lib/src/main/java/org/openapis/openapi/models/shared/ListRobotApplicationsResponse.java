@@ -15,6 +15,7 @@ public class ListRobotApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRobotApplicationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRobotApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotApplicationSummaries")
     public RobotApplicationSummary[] robotApplicationSummaries;
+
     public ListRobotApplicationsResponse withRobotApplicationSummaries(RobotApplicationSummary[] robotApplicationSummaries) {
         this.robotApplicationSummaries = robotApplicationSummaries;
         return this;
     }
     
+    public ListRobotApplicationsResponse(){}
 }

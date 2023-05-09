@@ -16,12 +16,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatatransferApplicationsGetSecurityOption1;
-import org.openapis.openapi.models.operations.DatatransferApplicationsGetSecurityOption2;
-import org.openapis.openapi.models.operations.DatatransferApplicationsGetSecurity;
 import org.openapis.openapi.models.operations.DatatransferApplicationsGetRequest;
 import org.openapis.openapi.models.operations.DatatransferApplicationsGetResponse;
+import org.openapis.openapi.models.operations.DatatransferApplicationsGetSecurity;
+import org.openapis.openapi.models.operations.DatatransferApplicationsGetSecurityOption1;
+import org.openapis.openapi.models.operations.DatatransferApplicationsGetSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -31,11 +30,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatatransferApplicationsGetRequest req = new DatatransferApplicationsGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                applicationId = "quibusdam";
+            DatatransferApplicationsGetRequest req = new DatatransferApplicationsGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
                 callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
@@ -44,21 +42,23 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             DatatransferApplicationsGetResponse res = sdk.applications.datatransferApplicationsGet(req, new DatatransferApplicationsGetSecurity() {{
-                option1 = new DatatransferApplicationsGetSecurityOption1() {{
+                option1 = new DatatransferApplicationsGetSecurityOption1("suscipit", "iure") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.application.isPresent()) {
+            if (res.application != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,16 +66,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### applications
+### [applications](docs/applications/README.md)
 
-* `datatransferApplicationsGet` - Retrieves information about an application for the given application ID.
-* `datatransferApplicationsList` - Lists the applications available for data transfer for a customer.
+* [datatransferApplicationsGet](docs/applications/README.md#datatransferapplicationsget) - Retrieves information about an application for the given application ID.
+* [datatransferApplicationsList](docs/applications/README.md#datatransferapplicationslist) - Lists the applications available for data transfer for a customer.
 
-### transfers
+### [transfers](docs/transfers/README.md)
 
-* `datatransferTransfersGet` - Retrieves a data transfer request by its resource ID.
-* `datatransferTransfersInsert` - Inserts a data transfer request. See the [Transfer parameters](/admin-sdk/data-transfer/v1/parameters) reference for specific application requirements.
-* `datatransferTransfersList` - Lists the transfers for a customer by source user, destination user, or status.
+* [datatransferTransfersGet](docs/transfers/README.md#datatransfertransfersget) - Retrieves a data transfer request by its resource ID.
+* [datatransferTransfersInsert](docs/transfers/README.md#datatransfertransfersinsert) - Inserts a data transfer request. See the [Transfer parameters](/admin-sdk/data-transfer/v1/parameters) reference for specific application requirements.
+* [datatransferTransfersList](docs/transfers/README.md#datatransfertransferslist) - Lists the transfers for a customer by source user, destination user, or status.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -58,11 +58,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingOrdersGetResponse res = new org.openapis.openapi.models.operations.DfareportingOrdersGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingOrdersGetResponse res = new org.openapis.openapi.models.operations.DfareportingOrdersGetResponse(contentType, httpRes.statusCode()) {{
             order = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingOrdersListResponse res = new org.openapis.openapi.models.operations.DfareportingOrdersListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingOrdersListResponse res = new org.openapis.openapi.models.operations.DfareportingOrdersListResponse(contentType, httpRes.statusCode()) {{
             ordersListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

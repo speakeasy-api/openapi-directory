@@ -13,6 +13,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchGazeteerCensusTractsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchGazeteerCensusTractsRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchGazeteerCensusTractsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchGazeteerCensusTractsRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchGazeteerCensusTractsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchGazeteerCensusTractsRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchGazeteerCensusTractsRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchGazeteerCensusTractsRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchGazeteerCensusTractsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchGazeteerCensusTractsRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchGazeteerCensusTractsRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchGazeteerCensusTractsRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchGazeteerCensusTractsRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchGazeteerCensusTractsRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.census_tract_id")
     public String searchDbGazeteerCensusTractsCensusTractId;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsCensusTractId(String searchDbGazeteerCensusTractsCensusTractId) {
         this.searchDbGazeteerCensusTractsCensusTractId = searchDbGazeteerCensusTractsCensusTractId;
         return this;
@@ -163,6 +178,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.county_fips")
     public String searchDbGazeteerCensusTractsCountyFips;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsCountyFips(String searchDbGazeteerCensusTractsCountyFips) {
         this.searchDbGazeteerCensusTractsCountyFips = searchDbGazeteerCensusTractsCountyFips;
         return this;
@@ -173,6 +189,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.county_name")
     public String searchDbGazeteerCensusTractsCountyName;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsCountyName(String searchDbGazeteerCensusTractsCountyName) {
         this.searchDbGazeteerCensusTractsCountyName = searchDbGazeteerCensusTractsCountyName;
         return this;
@@ -183,6 +200,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.full_census_tract_id")
     public String searchDbGazeteerCensusTractsFullCensusTractId;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsFullCensusTractId(String searchDbGazeteerCensusTractsFullCensusTractId) {
         this.searchDbGazeteerCensusTractsFullCensusTractId = searchDbGazeteerCensusTractsFullCensusTractId;
         return this;
@@ -193,6 +211,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.land_area")
     public Double searchDbGazeteerCensusTractsLandArea;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsLandArea(Double searchDbGazeteerCensusTractsLandArea) {
         this.searchDbGazeteerCensusTractsLandArea = searchDbGazeteerCensusTractsLandArea;
         return this;
@@ -203,6 +222,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.location")
     public String searchDbGazeteerCensusTractsLocation;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsLocation(String searchDbGazeteerCensusTractsLocation) {
         this.searchDbGazeteerCensusTractsLocation = searchDbGazeteerCensusTractsLocation;
         return this;
@@ -213,6 +233,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.state")
     public String searchDbGazeteerCensusTractsState;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsState(String searchDbGazeteerCensusTractsState) {
         this.searchDbGazeteerCensusTractsState = searchDbGazeteerCensusTractsState;
         return this;
@@ -223,6 +244,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.state_fips")
     public String searchDbGazeteerCensusTractsStateFips;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsStateFips(String searchDbGazeteerCensusTractsStateFips) {
         this.searchDbGazeteerCensusTractsStateFips = searchDbGazeteerCensusTractsStateFips;
         return this;
@@ -233,6 +255,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_census_tracts.water_area")
     public Double searchDbGazeteerCensusTractsWaterArea;
+
     public SearchGazeteerCensusTractsRequest withSearchDbGazeteerCensusTractsWaterArea(Double searchDbGazeteerCensusTractsWaterArea) {
         this.searchDbGazeteerCensusTractsWaterArea = searchDbGazeteerCensusTractsWaterArea;
         return this;
@@ -243,6 +266,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchGazeteerCensusTractsRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -253,6 +277,7 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchGazeteerCensusTractsRequest withText(String text) {
         this.text = text;
         return this;
@@ -263,9 +288,11 @@ public class SearchGazeteerCensusTractsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchGazeteerCensusTractsRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchGazeteerCensusTractsRequest(){}
 }

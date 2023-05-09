@@ -15,6 +15,7 @@ public class DeleteBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DeleteBotResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteBotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botStatus")
     public BotStatusEnum botStatus;
+
     public DeleteBotResponse withBotStatus(BotStatusEnum botStatus) {
         this.botStatus = botStatus;
         return this;
     }
     
+    public DeleteBotResponse(){}
 }

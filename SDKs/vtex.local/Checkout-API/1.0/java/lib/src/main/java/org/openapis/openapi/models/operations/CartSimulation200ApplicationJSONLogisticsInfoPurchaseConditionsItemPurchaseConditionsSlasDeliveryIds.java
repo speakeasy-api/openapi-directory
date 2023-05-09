@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courierId")
     public String courierId;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlasDeliveryIds withCourierId(String courierId) {
         this.courierId = courierId;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courierName")
     public String courierName;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlasDeliveryIds withCourierName(String courierName) {
         this.courierName = courierName;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlasDeliveryIds withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -48,6 +51,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlasDeliveryIds withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -59,9 +63,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlasDeliveryIds withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoPurchaseConditionsItemPurchaseConditionsSlasDeliveryIds(){}
 }

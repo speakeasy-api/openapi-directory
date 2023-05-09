@@ -15,6 +15,7 @@ public class ListLogPatternsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogPatterns")
     public LogPattern[] logPatterns;
+
     public ListLogPatternsResponse withLogPatterns(LogPattern[] logPatterns) {
         this.logPatterns = logPatterns;
         return this;
@@ -23,6 +24,7 @@ public class ListLogPatternsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLogPatternsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListLogPatternsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public ListLogPatternsResponse withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public ListLogPatternsResponse(){}
 }

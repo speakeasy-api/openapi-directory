@@ -15,9 +15,11 @@ public class UpdateShareInvitationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareInvitation")
     public ShareInvitation shareInvitation;
+
     public UpdateShareInvitationOutput withShareInvitation(ShareInvitation shareInvitation) {
         this.shareInvitation = shareInvitation;
         return this;
     }
     
+    public UpdateShareInvitationOutput(){}
 }

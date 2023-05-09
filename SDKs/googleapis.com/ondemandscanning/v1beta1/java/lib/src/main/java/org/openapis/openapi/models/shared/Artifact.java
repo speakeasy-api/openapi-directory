@@ -18,6 +18,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checksum")
     public String checksum;
+
     public Artifact withChecksum(String checksum) {
         this.checksum = checksum;
         return this;
@@ -29,6 +30,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Artifact withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public Artifact withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public Artifact(){}
 }

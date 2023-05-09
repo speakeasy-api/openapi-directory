@@ -15,6 +15,7 @@ public class ContinuousProjectDocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public ContinuousProjectDocument[] documents;
+
     public ContinuousProjectDocumentList withDocuments(ContinuousProjectDocument[] documents) {
         this.documents = documents;
         return this;
@@ -23,9 +24,11 @@ public class ContinuousProjectDocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public ContinuousProjectDocumentList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public ContinuousProjectDocumentList(){}
 }

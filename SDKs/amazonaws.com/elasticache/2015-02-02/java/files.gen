@@ -685,4 +685,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartMigrationMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/CustomerNodeEndpoint.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestFailoverMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

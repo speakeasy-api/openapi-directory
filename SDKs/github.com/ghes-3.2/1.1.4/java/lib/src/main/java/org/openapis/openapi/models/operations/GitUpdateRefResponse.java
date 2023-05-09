@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GitUpdateRefResponse {
     
     public String contentType;
+
     public GitUpdateRefResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GitUpdateRefResponse {
     
     
     public Integer statusCode;
+
     public GitUpdateRefResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GitUpdateRefResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GitUpdateRefResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GitUpdateRefResponse {
      */
     
     public org.openapis.openapi.models.shared.GitRef gitRef;
+
     public GitUpdateRefResponse withGitRef(org.openapis.openapi.models.shared.GitRef gitRef) {
         this.gitRef = gitRef;
         return this;
@@ -43,9 +48,14 @@ public class GitUpdateRefResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GitUpdateRefResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GitUpdateRefResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

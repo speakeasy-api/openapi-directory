@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest withForce(Boolean force) {
         this.force = force;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1PurgeUserEventsRequest(){}
 }

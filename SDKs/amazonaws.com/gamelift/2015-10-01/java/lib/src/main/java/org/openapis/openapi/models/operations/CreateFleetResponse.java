@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFleetResponse {
@@ -12,6 +13,7 @@ public class CreateFleetResponse {
      */
     
     public Object conflictException;
+
     public CreateFleetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFleetResponse {
     
     
     public String contentType;
+
     public CreateFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFleetOutput createFleetOutput;
+
     public CreateFleetResponse withCreateFleetOutput(org.openapis.openapi.models.shared.CreateFleetOutput createFleetOutput) {
         this.createFleetOutput = createFleetOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateFleetResponse {
      */
     
     public Object internalServiceException;
+
     public CreateFleetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFleetResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFleetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFleetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFleetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFleetResponse {
      */
     
     public Object notFoundException;
+
     public CreateFleetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateFleetResponse {
     
     
     public Integer statusCode;
+
     public CreateFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateFleetResponse {
      */
     
     public Object taggingFailedException;
+
     public CreateFleetResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -103,6 +114,7 @@ public class CreateFleetResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateFleetResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -113,9 +125,14 @@ public class CreateFleetResponse {
      */
     
     public Object unsupportedRegionException;
+
     public CreateFleetResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public CreateFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

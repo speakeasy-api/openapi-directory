@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse {
     
     public String contentType;
+
     public DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResp
      */
     
     public org.openapis.openapi.models.shared.RetrieveTransferParametersResponse retrieveTransferParametersResponse;
+
     public DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse withRetrieveTransferParametersResponse(org.openapis.openapi.models.shared.RetrieveTransferParametersResponse retrieveTransferParametersResponse) {
         this.retrieveTransferParametersResponse = retrieveTransferParametersResponse;
         return this;
@@ -26,6 +29,7 @@ public class DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResp
     
     
     public Integer statusCode;
+
     public DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

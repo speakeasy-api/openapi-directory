@@ -18,9 +18,11 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetInventoryItemInventoryArrayV2ItemInventoryV2Merchant(){}
 }

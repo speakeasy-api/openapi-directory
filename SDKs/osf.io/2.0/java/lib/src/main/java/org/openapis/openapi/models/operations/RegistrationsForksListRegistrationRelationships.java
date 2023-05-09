@@ -15,6 +15,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String affiliatedInstitutions;
+
     public RegistrationsForksListRegistrationRelationships withAffiliatedInstitutions(String affiliatedInstitutions) {
         this.affiliatedInstitutions = affiliatedInstitutions;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String children;
+
     public RegistrationsForksListRegistrationRelationships withChildren(String children) {
         this.children = children;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String citation;
+
     public RegistrationsForksListRegistrationRelationships withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String comments;
+
     public RegistrationsForksListRegistrationRelationships withComments(String comments) {
         this.comments = comments;
         return this;
@@ -55,6 +59,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String contributors;
+
     public RegistrationsForksListRegistrationRelationships withContributors(String contributors) {
         this.contributors = contributors;
         return this;
@@ -65,6 +70,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String files;
+
     public RegistrationsForksListRegistrationRelationships withFiles(String files) {
         this.files = files;
         return this;
@@ -75,6 +81,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String forks;
+
     public RegistrationsForksListRegistrationRelationships withForks(String forks) {
         this.forks = forks;
         return this;
@@ -85,6 +92,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String identifiers;
+
     public RegistrationsForksListRegistrationRelationships withIdentifiers(String identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -95,6 +103,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String linkedNodes;
+
     public RegistrationsForksListRegistrationRelationships withLinkedNodes(String linkedNodes) {
         this.linkedNodes = linkedNodes;
         return this;
@@ -105,6 +114,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String logs;
+
     public RegistrationsForksListRegistrationRelationships withLogs(String logs) {
         this.logs = logs;
         return this;
@@ -115,6 +125,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String nodeLinks;
+
     public RegistrationsForksListRegistrationRelationships withNodeLinks(String nodeLinks) {
         this.nodeLinks = nodeLinks;
         return this;
@@ -125,6 +136,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String parent;
+
     public RegistrationsForksListRegistrationRelationships withParent(String parent) {
         this.parent = parent;
         return this;
@@ -135,6 +147,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String registeredBy;
+
     public RegistrationsForksListRegistrationRelationships withRegisteredBy(String registeredBy) {
         this.registeredBy = registeredBy;
         return this;
@@ -145,6 +158,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String registeredFrom;
+
     public RegistrationsForksListRegistrationRelationships withRegisteredFrom(String registeredFrom) {
         this.registeredFrom = registeredFrom;
         return this;
@@ -155,6 +169,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String registrationSchema;
+
     public RegistrationsForksListRegistrationRelationships withRegistrationSchema(String registrationSchema) {
         this.registrationSchema = registrationSchema;
         return this;
@@ -165,6 +180,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String root;
+
     public RegistrationsForksListRegistrationRelationships withRoot(String root) {
         this.root = root;
         return this;
@@ -175,6 +191,7 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String viewOnlyLinks;
+
     public RegistrationsForksListRegistrationRelationships withViewOnlyLinks(String viewOnlyLinks) {
         this.viewOnlyLinks = viewOnlyLinks;
         return this;
@@ -185,9 +202,11 @@ public class RegistrationsForksListRegistrationRelationships {
      */
     
     public String wikis;
+
     public RegistrationsForksListRegistrationRelationships withWikis(String wikis) {
         this.wikis = wikis;
         return this;
     }
     
+    public RegistrationsForksListRegistrationRelationships(){}
 }

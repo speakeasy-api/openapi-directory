@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeClusterSnapshotsMessage {
     
     public Boolean clusterExists;
+
     public DescribeClusterSnapshotsMessage withClusterExists(Boolean clusterExists) {
         this.clusterExists = clusterExists;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String clusterIdentifier;
+
     public DescribeClusterSnapshotsMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public OffsetDateTime endTime;
+
     public DescribeClusterSnapshotsMessage withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String marker;
+
     public DescribeClusterSnapshotsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -40,6 +44,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public Long maxRecords;
+
     public DescribeClusterSnapshotsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -47,6 +52,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String ownerAccount;
+
     public DescribeClusterSnapshotsMessage withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -54,6 +60,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String snapshotArn;
+
     public DescribeClusterSnapshotsMessage withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -61,6 +68,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String snapshotIdentifier;
+
     public DescribeClusterSnapshotsMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -68,6 +76,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String snapshotType;
+
     public DescribeClusterSnapshotsMessage withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -75,6 +84,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public SnapshotSortingEntityList[] sortingEntities;
+
     public DescribeClusterSnapshotsMessage withSortingEntities(SnapshotSortingEntityList[] sortingEntities) {
         this.sortingEntities = sortingEntities;
         return this;
@@ -82,6 +92,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public OffsetDateTime startTime;
+
     public DescribeClusterSnapshotsMessage withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -89,6 +100,7 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String[] tagKeys;
+
     public DescribeClusterSnapshotsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -96,9 +108,11 @@ public class DescribeClusterSnapshotsMessage {
     
     
     public String[] tagValues;
+
     public DescribeClusterSnapshotsMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeClusterSnapshotsMessage(){}
 }

@@ -61,7 +61,7 @@ public class Track {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TrackEventResponse res = new org.openapis.openapi.models.operations.TrackEventResponse() {{
+        org.openapis.openapi.models.operations.TrackEventResponse res = new org.openapis.openapi.models.operations.TrackEventResponse(contentType, httpRes.statusCode()) {{
             trackEvent201ApplicationJSONObject = null;
             trackEvent400ApplicationJSONObject = null;
             trackEvent401ApplicationJSONObject = null;
@@ -69,8 +69,6 @@ public class Track {
             trackEvent429ApplicationJSONObject = null;
             trackEvent500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

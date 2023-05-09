@@ -15,6 +15,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appExtensionTargets")
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersAppExtensionTargets[] appExtensionTargets;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers withAppExtensionTargets(BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersAppExtensionTargets[] appExtensionTargets) {
         this.appExtensionTargets = appExtensionTargets;
         return this;
@@ -26,6 +27,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cartfilePath")
     public String cartfilePath;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers withCartfilePath(String cartfilePath) {
         this.cartfilePath = cartfilePath;
         return this;
@@ -36,6 +38,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("path")
     public String path;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers withPath(String path) {
         this.path = path;
         return this;
@@ -47,6 +50,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podfilePath")
     public String podfilePath;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers withPodfilePath(String podfilePath) {
         this.podfilePath = podfilePath;
         return this;
@@ -57,6 +61,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("sharedSchemes")
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes[] sharedSchemes;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers withSharedSchemes(BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes[] sharedSchemes) {
         this.sharedSchemes = sharedSchemes;
         return this;
@@ -68,6 +73,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceProjectPaths")
     public String workspaceProjectPaths;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers withWorkspaceProjectPaths(String workspaceProjectPaths) {
         this.workspaceProjectPaths = workspaceProjectPaths;
         return this;
@@ -79,9 +85,14 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeProjectSha")
     public String xcodeProjectSha;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers withXcodeProjectSha(String xcodeProjectSha) {
         this.xcodeProjectSha = xcodeProjectSha;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainers(@JsonProperty("path") String path, @JsonProperty("sharedSchemes") BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersSharedSchemes[] sharedSchemes) {
+        this.path = path;
+        this.sharedSchemes = sharedSchemes;
+  }
 }

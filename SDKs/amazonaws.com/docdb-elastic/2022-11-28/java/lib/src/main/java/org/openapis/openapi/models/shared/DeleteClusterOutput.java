@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteClusterOutput {
     @JsonProperty("cluster")
     public Cluster cluster;
+
     public DeleteClusterOutput withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public DeleteClusterOutput(@JsonProperty("cluster") Cluster cluster) {
+        this.cluster = cluster;
+  }
 }

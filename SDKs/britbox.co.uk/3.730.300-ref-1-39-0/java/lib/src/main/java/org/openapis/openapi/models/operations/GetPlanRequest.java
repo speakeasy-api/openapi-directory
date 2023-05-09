@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlanRequest {
@@ -12,6 +13,7 @@ public class GetPlanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetPlanRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,13 @@ public class GetPlanRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetPlanRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetPlanRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

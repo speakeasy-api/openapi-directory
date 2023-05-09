@@ -15,6 +15,7 @@ public class DefaultIntegerHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTunable")
     public Boolean isTunable;
+
     public DefaultIntegerHyperParameterRange withIsTunable(Boolean isTunable) {
         this.isTunable = isTunable;
         return this;
@@ -23,6 +24,7 @@ public class DefaultIntegerHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Long maxValue;
+
     public DefaultIntegerHyperParameterRange withMaxValue(Long maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -31,6 +33,7 @@ public class DefaultIntegerHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Long minValue;
+
     public DefaultIntegerHyperParameterRange withMinValue(Long minValue) {
         this.minValue = minValue;
         return this;
@@ -39,9 +42,11 @@ public class DefaultIntegerHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DefaultIntegerHyperParameterRange withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DefaultIntegerHyperParameterRange(){}
 }

@@ -15,9 +15,11 @@ public class RegionCommitmentsUpdateReservationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservations")
     public Reservation[] reservations;
+
     public RegionCommitmentsUpdateReservationsRequest withReservations(Reservation[] reservations) {
         this.reservations = reservations;
         return this;
     }
     
+    public RegionCommitmentsUpdateReservationsRequest(){}
 }

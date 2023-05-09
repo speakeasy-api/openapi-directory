@@ -15,6 +15,7 @@ public class GetConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionList")
     public Connection[] connectionList;
+
     public GetConnectionsResponse withConnectionList(Connection[] connectionList) {
         this.connectionList = connectionList;
         return this;
@@ -23,9 +24,11 @@ public class GetConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetConnectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetConnectionsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -16,8 +17,20 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=creditor_account multipartForm:name=creditor_account")
     public String creditorAccount;
+
     public PaymentWriteRequest2 withCreditorAccount(String creditorAccount) {
         this.creditorAccount = creditorAccount;
+        return this;
+    }
+    
+    /**
+     * Creditor account
+     */
+    @SpeakeasyMetadata("form:name=creditor_object,json multipartForm:name=creditor_object,json")
+    public CreditorAccountWriteRequest creditorObject;
+
+    public PaymentWriteRequest2 withCreditorObject(CreditorAccountWriteRequest creditorObject) {
+        this.creditorObject = creditorObject;
         return this;
     }
     
@@ -26,6 +39,7 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=custom_payment_id multipartForm:name=custom_payment_id")
     public String customPaymentId;
+
     public PaymentWriteRequest2 withCustomPaymentId(String customPaymentId) {
         this.customPaymentId = customPaymentId;
         return this;
@@ -36,6 +50,7 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=debtor_account,json multipartForm:name=debtor_account,json")
     public Object debtorAccount;
+
     public PaymentWriteRequest2 withDebtorAccount(Object debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -46,6 +61,7 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=description multipartForm:name=description")
     public String description;
+
     public PaymentWriteRequest2 withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +72,7 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=institution_id multipartForm:name=institution_id")
     public String institutionId;
+
     public PaymentWriteRequest2 withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -66,6 +83,7 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=instructed_amount,json multipartForm:name=instructed_amount,json")
     public InstructedAmountRequest instructedAmount;
+
     public PaymentWriteRequest2 withInstructedAmount(InstructedAmountRequest instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -73,9 +91,21 @@ public class PaymentWriteRequest2 {
     
     /**
      * Payment product
+     * 
+     * * `T2P` - target-2-payments
+     * * `SCT` - sepa-credit-transfers
+     * * `ISCT` - instant-sepa-credit-transfer
+     * * `CBCT` - cross-border-credit-transfers
+     * * `BACS` - Back Payment Scheme
+     * * `CHAPS` - CHAPS Payment Scheme
+     * * `FPS` - Faster Payment Scheme
+     * * `SWIFT` - Swift Payment Service
+     * * `BT` - Balance Transfer
+     * * `MT` - Money Transfer
      */
     @SpeakeasyMetadata("form:name=payment_product multipartForm:name=payment_product")
     public Object paymentProduct;
+
     public PaymentWriteRequest2 withPaymentProduct(Object paymentProduct) {
         this.paymentProduct = paymentProduct;
         return this;
@@ -86,6 +116,7 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=periodic_payment,json multipartForm:name=periodic_payment,json")
     public PeriodicPaymentRequest periodicPayment;
+
     public PaymentWriteRequest2 withPeriodicPayment(PeriodicPaymentRequest periodicPayment) {
         this.periodicPayment = periodicPayment;
         return this;
@@ -96,6 +127,7 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=redirect multipartForm:name=redirect")
     public String redirect;
+
     public PaymentWriteRequest2 withRedirect(String redirect) {
         this.redirect = redirect;
         return this;
@@ -106,9 +138,25 @@ public class PaymentWriteRequest2 {
      */
     @SpeakeasyMetadata("form:name=requested_execution_date multipartForm:name=requested_execution_date")
     public LocalDate requestedExecutionDate;
+
     public PaymentWriteRequest2 withRequestedExecutionDate(LocalDate requestedExecutionDate) {
         this.requestedExecutionDate = requestedExecutionDate;
         return this;
     }
     
+    /**
+     * Indicates whether payment should be submitted separately
+     */
+    @SpeakeasyMetadata("form:name=submit_payment multipartForm:name=submit_payment")
+    public Boolean submitPayment;
+
+    public PaymentWriteRequest2 withSubmitPayment(Boolean submitPayment) {
+        this.submitPayment = submitPayment;
+        return this;
+    }
+    
+    public PaymentWriteRequest2(@JsonProperty("instructed_amount") InstructedAmountRequest instructedAmount, @JsonProperty("redirect") String redirect) {
+        this.instructedAmount = instructedAmount;
+        this.redirect = redirect;
+  }
 }

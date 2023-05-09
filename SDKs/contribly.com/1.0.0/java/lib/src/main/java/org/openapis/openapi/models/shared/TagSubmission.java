@@ -15,6 +15,7 @@ public class TagSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colour")
     public String colour;
+
     public TagSubmission withColour(String colour) {
         this.colour = colour;
         return this;
@@ -22,6 +23,7 @@ public class TagSubmission {
     
     @JsonProperty("name")
     public String name;
+
     public TagSubmission withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class TagSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagSet")
     public TagSet tagSet;
+
     public TagSubmission withTagSet(TagSet tagSet) {
         this.tagSet = tagSet;
         return this;
@@ -38,9 +41,13 @@ public class TagSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlWords")
     public String urlWords;
+
     public TagSubmission withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
     }
     
+    public TagSubmission(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

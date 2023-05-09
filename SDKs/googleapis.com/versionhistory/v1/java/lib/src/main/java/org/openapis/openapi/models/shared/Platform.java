@@ -18,6 +18,7 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Platform withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformType")
     public PlatformPlatformTypeEnum platformType;
+
     public Platform withPlatformType(PlatformPlatformTypeEnum platformType) {
         this.platformType = platformType;
         return this;
     }
     
+    public Platform(){}
 }

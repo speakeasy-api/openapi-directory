@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetApplicationRevisionInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public GetApplicationRevisionInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,14 @@ public class GetApplicationRevisionInput {
     
     @JsonProperty("revision")
     public RevisionLocation revision;
+
     public GetApplicationRevisionInput withRevision(RevisionLocation revision) {
         this.revision = revision;
         return this;
     }
     
+    public GetApplicationRevisionInput(@JsonProperty("applicationName") String applicationName, @JsonProperty("revision") RevisionLocation revision) {
+        this.applicationName = applicationName;
+        this.revision = revision;
+  }
 }

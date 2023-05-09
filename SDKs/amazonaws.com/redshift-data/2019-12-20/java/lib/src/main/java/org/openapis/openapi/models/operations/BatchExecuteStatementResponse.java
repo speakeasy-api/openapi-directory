@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchExecuteStatementResponse {
@@ -12,6 +13,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object activeStatementsExceededException;
+
     public BatchExecuteStatementResponse withActiveStatementsExceededException(Object activeStatementsExceededException) {
         this.activeStatementsExceededException = activeStatementsExceededException;
         return this;
@@ -22,6 +24,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object batchExecuteStatementException;
+
     public BatchExecuteStatementResponse withBatchExecuteStatementException(Object batchExecuteStatementException) {
         this.batchExecuteStatementException = batchExecuteStatementException;
         return this;
@@ -32,6 +35,7 @@ public class BatchExecuteStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchExecuteStatementOutput batchExecuteStatementOutput;
+
     public BatchExecuteStatementResponse withBatchExecuteStatementOutput(org.openapis.openapi.models.shared.BatchExecuteStatementOutput batchExecuteStatementOutput) {
         this.batchExecuteStatementOutput = batchExecuteStatementOutput;
         return this;
@@ -39,6 +43,7 @@ public class BatchExecuteStatementResponse {
     
     
     public String contentType;
+
     public BatchExecuteStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -46,6 +51,7 @@ public class BatchExecuteStatementResponse {
     
     
     public Integer statusCode;
+
     public BatchExecuteStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchExecuteStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchExecuteStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class BatchExecuteStatementResponse {
      */
     
     public Object validationException;
+
     public BatchExecuteStatementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchExecuteStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

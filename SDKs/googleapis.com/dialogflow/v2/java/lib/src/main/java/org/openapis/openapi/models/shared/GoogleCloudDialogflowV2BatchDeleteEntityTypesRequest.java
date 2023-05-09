@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityTypeNames")
     public String[] entityTypeNames;
+
     public GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest withEntityTypeNames(String[] entityTypeNames) {
         this.entityTypeNames = entityTypeNames;
         return this;
     }
     
+    public GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest(){}
 }

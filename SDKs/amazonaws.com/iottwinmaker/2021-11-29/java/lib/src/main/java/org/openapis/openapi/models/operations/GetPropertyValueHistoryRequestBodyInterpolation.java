@@ -15,6 +15,7 @@ public class GetPropertyValueHistoryRequestBodyInterpolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interpolationType")
     public org.openapis.openapi.models.shared.InterpolationTypeEnum interpolationType;
+
     public GetPropertyValueHistoryRequestBodyInterpolation withInterpolationType(org.openapis.openapi.models.shared.InterpolationTypeEnum interpolationType) {
         this.interpolationType = interpolationType;
         return this;
@@ -23,9 +24,11 @@ public class GetPropertyValueHistoryRequestBodyInterpolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalInSeconds")
     public Long intervalInSeconds;
+
     public GetPropertyValueHistoryRequestBodyInterpolation withIntervalInSeconds(Long intervalInSeconds) {
         this.intervalInSeconds = intervalInSeconds;
         return this;
     }
     
+    public GetPropertyValueHistoryRequestBodyInterpolation(){}
 }

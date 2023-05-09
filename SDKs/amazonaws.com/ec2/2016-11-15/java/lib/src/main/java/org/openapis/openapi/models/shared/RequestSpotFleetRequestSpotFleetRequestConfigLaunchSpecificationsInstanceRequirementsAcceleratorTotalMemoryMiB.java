@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTotalMemoryMiB {
     
     public Long max;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTotalMemoryMiB withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsIn
     
     
     public Long min;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTotalMemoryMiB withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTotalMemoryMiB(){}
 }

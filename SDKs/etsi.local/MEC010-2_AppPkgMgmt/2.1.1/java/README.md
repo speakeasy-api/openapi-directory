@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AppDGETRequest;
 import org.openapis.openapi.models.operations.AppDGETResponse;
 
@@ -26,23 +25,24 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AppDGETRequest req = new AppDGETRequest() {{
-                allFields = "corrupti";
-                appDId = "provident";
+            AppDGETRequest req = new AppDGETRequest("corrupti") {{
+                allFields = "provident";
                 excludeDefault = "distinctio";
                 excludeFields = "quibusdam";
                 fields = "unde";
                 filter = "nulla";
-            }}            
+            }};            
 
             AppDGETResponse res = sdk.appPkgm.appDGET(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,27 +50,27 @@ public class Application {
 ## Available Resources and Operations
 
 
-### appPkgm
+### [appPkgm](docs/apppkgm/README.md)
 
-* `appDGET` - Reads the content of the AppD of on-boarded individual application package resources.
-* `appDIdGET` - Fetch the onboarded application package content identified by appPkgId or appDId.
-* `appDIdPUT` - Uploads the content of application package.
-* `appPkgGET` - Fetch the onboarded application package content identified by appPkgId or appDId.
-* `appPkgIdGET` - Reads the content of the AppD of on-boarded individual application package resources.
-* `appPkgPUT` - Uploads the content of application package.
-* `appPackageDELETE` - Deletes an individual application package resources
-* `appPackageGET` - Queries the information related to individual application package resources
-* `appPackagePATCH` - Updates the operational state of an individual application package resource
-* `appPackagesGET` - Queries information relating to on-boarded application packages in the MEO
-* `appPackagesPOST` - Create a resource for on-boarding an application package to a MEO
-* `individualSubscriptionDELETE` - Deletes the individual subscription to notifications about application package changes in MEO.
-* `individualSubscriptionGET` - Used to represent an individual subscription to notifications about application package changes.
-* `subscriptionsGET` - used to retrieve the information of subscriptions to individual application package resource in MEO
-* `subscriptionsPOST` - Subscribe to notifications about on-boarding an application package
+* [appDGET](docs/apppkgm/README.md#appdget) - Reads the content of the AppD of on-boarded individual application package resources.
+* [appDIdGET](docs/apppkgm/README.md#appdidget) - Fetch the onboarded application package content identified by appPkgId or appDId.
+* [appDIdPUT](docs/apppkgm/README.md#appdidput) - Uploads the content of application package.
+* [appPkgGET](docs/apppkgm/README.md#apppkgget) - Fetch the onboarded application package content identified by appPkgId or appDId.
+* [appPkgIdGET](docs/apppkgm/README.md#apppkgidget) - Reads the content of the AppD of on-boarded individual application package resources.
+* [appPkgPUT](docs/apppkgm/README.md#apppkgput) - Uploads the content of application package.
+* [appPackageDELETE](docs/apppkgm/README.md#apppackagedelete) - Deletes an individual application package resources
+* [appPackageGET](docs/apppkgm/README.md#apppackageget) - Queries the information related to individual application package resources
+* [appPackagePATCH](docs/apppkgm/README.md#apppackagepatch) - Updates the operational state of an individual application package resource
+* [appPackagesGET](docs/apppkgm/README.md#apppackagesget) - Queries information relating to on-boarded application packages in the MEO
+* [appPackagesPOST](docs/apppkgm/README.md#apppackagespost) - Create a resource for on-boarding an application package to a MEO
+* [individualSubscriptionDELETE](docs/apppkgm/README.md#individualsubscriptiondelete) - Deletes the individual subscription to notifications about application package changes in MEO.
+* [individualSubscriptionGET](docs/apppkgm/README.md#individualsubscriptionget) - Used to represent an individual subscription to notifications about application package changes.
+* [subscriptionsGET](docs/apppkgm/README.md#subscriptionsget) - used to retrieve the information of subscriptions to individual application package resource in MEO
+* [subscriptionsPOST](docs/apppkgm/README.md#subscriptionspost) - Subscribe to notifications about on-boarding an application package
 
-### appPkgmNotifications
+### [appPkgmNotifications](docs/apppkgmnotifications/README.md)
 
-* `appPkgNotificationPOST` - Registers a notification endpoint to notify application package operations
+* [appPkgNotificationPOST](docs/apppkgmnotifications/README.md#apppkgnotificationpost) - Registers a notification endpoint to notify application package operations
 <!-- End SDK Available Operations -->
 
 ### Maturity

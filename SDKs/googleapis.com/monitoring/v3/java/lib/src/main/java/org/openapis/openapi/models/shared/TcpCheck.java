@@ -18,6 +18,7 @@ public class TcpCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pingConfig")
     public PingConfig pingConfig;
+
     public TcpCheck withPingConfig(PingConfig pingConfig) {
         this.pingConfig = pingConfig;
         return this;
@@ -29,9 +30,11 @@ public class TcpCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public TcpCheck withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public TcpCheck(){}
 }

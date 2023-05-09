@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdditemsubscriptionGroupIdRequest {
@@ -12,6 +13,7 @@ public class AdditemsubscriptionGroupIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public AdditemsubscriptionGroupIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class AdditemsubscriptionGroupIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdditemsubscriptionGroupIdRequest additemsubscriptionGroupIdRequest;
+
     public AdditemsubscriptionGroupIdRequest withAdditemsubscriptionGroupIdRequest(org.openapis.openapi.models.shared.AdditemsubscriptionGroupIdRequest additemsubscriptionGroupIdRequest) {
         this.additemsubscriptionGroupIdRequest = additemsubscriptionGroupIdRequest;
         return this;
@@ -29,6 +32,7 @@ public class AdditemsubscriptionGroupIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public AdditemsubscriptionGroupIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,9 +43,16 @@ public class AdditemsubscriptionGroupIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public AdditemsubscriptionGroupIdRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public AdditemsubscriptionGroupIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Additemsubscription-groupIdRequest") org.openapis.openapi.models.shared.AdditemsubscriptionGroupIdRequest additemsubscriptionGroupIdRequest, @JsonProperty("Content-Type") String contentType, @JsonProperty("groupId") String groupId) {
+        this.accept = accept;
+        this.additemsubscriptionGroupIdRequest = additemsubscriptionGroupIdRequest;
+        this.contentType = contentType;
+        this.groupId = groupId;
+  }
 }

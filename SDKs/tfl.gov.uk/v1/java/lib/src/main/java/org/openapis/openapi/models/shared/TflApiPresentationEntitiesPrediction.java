@@ -23,6 +23,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bearing")
     public String bearing;
+
     public TflApiPresentationEntitiesPrediction withBearing(String bearing) {
         this.bearing = bearing;
         return this;
@@ -34,6 +35,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentLocation")
     public String currentLocation;
+
     public TflApiPresentationEntitiesPrediction withCurrentLocation(String currentLocation) {
         this.currentLocation = currentLocation;
         return this;
@@ -45,6 +47,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public TflApiPresentationEntitiesPrediction withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -56,6 +59,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationNaptanId")
     public String destinationNaptanId;
+
     public TflApiPresentationEntitiesPrediction withDestinationNaptanId(String destinationNaptanId) {
         this.destinationNaptanId = destinationNaptanId;
         return this;
@@ -67,6 +71,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesPrediction withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -80,6 +85,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expectedArrival")
     public OffsetDateTime expectedArrival;
+
     public TflApiPresentationEntitiesPrediction withExpectedArrival(OffsetDateTime expectedArrival) {
         this.expectedArrival = expectedArrival;
         return this;
@@ -91,6 +97,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesPrediction withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +109,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesPrediction withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -113,6 +121,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineName")
     public String lineName;
+
     public TflApiPresentationEntitiesPrediction withLineName(String lineName) {
         this.lineName = lineName;
         return this;
@@ -124,6 +133,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modeName")
     public String modeName;
+
     public TflApiPresentationEntitiesPrediction withModeName(String modeName) {
         this.modeName = modeName;
         return this;
@@ -135,6 +145,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanId")
     public String naptanId;
+
     public TflApiPresentationEntitiesPrediction withNaptanId(String naptanId) {
         this.naptanId = naptanId;
         return this;
@@ -146,6 +157,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationType")
     public Integer operationType;
+
     public TflApiPresentationEntitiesPrediction withOperationType(Integer operationType) {
         this.operationType = operationType;
         return this;
@@ -157,6 +169,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformName")
     public String platformName;
+
     public TflApiPresentationEntitiesPrediction withPlatformName(String platformName) {
         this.platformName = platformName;
         return this;
@@ -168,6 +181,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationName")
     public String stationName;
+
     public TflApiPresentationEntitiesPrediction withStationName(String stationName) {
         this.stationName = stationName;
         return this;
@@ -181,6 +195,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeToLive")
     public OffsetDateTime timeToLive;
+
     public TflApiPresentationEntitiesPrediction withTimeToLive(OffsetDateTime timeToLive) {
         this.timeToLive = timeToLive;
         return this;
@@ -192,6 +207,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeToStation")
     public Integer timeToStation;
+
     public TflApiPresentationEntitiesPrediction withTimeToStation(Integer timeToStation) {
         this.timeToStation = timeToStation;
         return this;
@@ -205,6 +221,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public TflApiPresentationEntitiesPrediction withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -213,6 +230,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timing")
     public TflApiPresentationEntitiesPredictionTiming timing;
+
     public TflApiPresentationEntitiesPrediction withTiming(TflApiPresentationEntitiesPredictionTiming timing) {
         this.timing = timing;
         return this;
@@ -224,6 +242,7 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("towards")
     public String towards;
+
     public TflApiPresentationEntitiesPrediction withTowards(String towards) {
         this.towards = towards;
         return this;
@@ -235,9 +254,11 @@ public class TflApiPresentationEntitiesPrediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicleId")
     public String vehicleId;
+
     public TflApiPresentationEntitiesPrediction withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
     }
     
+    public TflApiPresentationEntitiesPrediction(){}
 }

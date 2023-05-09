@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainsIdResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain;
+
     public GetDomainsIdResponse withApiCoreDtoDomainsDomain(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain) {
         this.apiCoreDtoDomainsDomain = apiCoreDtoDomainsDomain;
         return this;
@@ -16,6 +18,7 @@ public class GetDomainsIdResponse {
     
     
     public byte[] body;
+
     public GetDomainsIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class GetDomainsIdResponse {
     
     
     public String contentType;
+
     public GetDomainsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class GetDomainsIdResponse {
     
     
     public Integer statusCode;
+
     public GetDomainsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class GetDomainsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDomainsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

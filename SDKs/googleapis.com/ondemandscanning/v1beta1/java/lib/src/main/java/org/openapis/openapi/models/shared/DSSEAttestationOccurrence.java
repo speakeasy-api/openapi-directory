@@ -18,6 +18,7 @@ public class DSSEAttestationOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envelope")
     public Envelope envelope;
+
     public DSSEAttestationOccurrence withEnvelope(Envelope envelope) {
         this.envelope = envelope;
         return this;
@@ -29,9 +30,11 @@ public class DSSEAttestationOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statement")
     public InTotoStatement statement;
+
     public DSSEAttestationOccurrence withStatement(InTotoStatement statement) {
         this.statement = statement;
         return this;
     }
     
+    public DSSEAttestationOccurrence(){}
 }

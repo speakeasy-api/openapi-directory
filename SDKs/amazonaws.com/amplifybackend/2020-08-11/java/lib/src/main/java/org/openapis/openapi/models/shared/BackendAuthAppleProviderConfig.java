@@ -15,6 +15,7 @@ public class BackendAuthAppleProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public BackendAuthAppleProviderConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class BackendAuthAppleProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public BackendAuthAppleProviderConfig withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -31,6 +33,7 @@ public class BackendAuthAppleProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateKey")
     public String privateKey;
+
     public BackendAuthAppleProviderConfig withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -39,9 +42,11 @@ public class BackendAuthAppleProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public String teamId;
+
     public BackendAuthAppleProviderConfig withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public BackendAuthAppleProviderConfig(){}
 }

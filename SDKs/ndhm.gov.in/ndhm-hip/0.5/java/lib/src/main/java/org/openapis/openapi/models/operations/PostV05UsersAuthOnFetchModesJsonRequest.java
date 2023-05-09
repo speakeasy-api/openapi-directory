@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnFetchModesJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthOnFetchModesJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthOnFetchModesJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthOnFetchModesJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthModeQueryResponse patientAuthModeQueryResponse;
+
     public PostV05UsersAuthOnFetchModesJsonRequest withPatientAuthModeQueryResponse(org.openapis.openapi.models.shared.PatientAuthModeQueryResponse patientAuthModeQueryResponse) {
         this.patientAuthModeQueryResponse = patientAuthModeQueryResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostV05UsersAuthOnFetchModesJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05UsersAuthOnFetchModesJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
@@ -39,9 +43,16 @@ public class PostV05UsersAuthOnFetchModesJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05UsersAuthOnFetchModesJsonRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05UsersAuthOnFetchModesJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthModeQueryResponse") org.openapis.openapi.models.shared.PatientAuthModeQueryResponse patientAuthModeQueryResponse, @JsonProperty("X-HIP-ID") String xHipId, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.patientAuthModeQueryResponse = patientAuthModeQueryResponse;
+        this.xHipId = xHipId;
+        this.xHiuId = xHiuId;
+  }
 }

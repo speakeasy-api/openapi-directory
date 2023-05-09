@@ -151,6 +151,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -183,7 +188,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelZonalShiftResponse res = new org.openapis.openapi.models.operations.CancelZonalShiftResponse() {{
+        org.openapis.openapi.models.operations.CancelZonalShiftResponse res = new org.openapis.openapi.models.operations.CancelZonalShiftResponse(contentType, httpRes.statusCode()) {{
             zonalShift = null;
             internalServerException = null;
             conflictException = null;
@@ -192,8 +197,6 @@ public class SDK {
             validationException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,7 +281,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetManagedResourceResponse res = new org.openapis.openapi.models.operations.GetManagedResourceResponse() {{
+        org.openapis.openapi.models.operations.GetManagedResourceResponse res = new org.openapis.openapi.models.operations.GetManagedResourceResponse(contentType, httpRes.statusCode()) {{
             getManagedResourceResponse = null;
             internalServerException = null;
             resourceNotFoundException = null;
@@ -286,8 +289,6 @@ public class SDK {
             validationException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -371,15 +372,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListManagedResourcesResponse res = new org.openapis.openapi.models.operations.ListManagedResourcesResponse() {{
+        org.openapis.openapi.models.operations.ListManagedResourcesResponse res = new org.openapis.openapi.models.operations.ListManagedResourcesResponse(contentType, httpRes.statusCode()) {{
             listManagedResourcesResponse = null;
             internalServerException = null;
             throttlingException = null;
             validationException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -456,15 +455,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListZonalShiftsResponse res = new org.openapis.openapi.models.operations.ListZonalShiftsResponse() {{
+        org.openapis.openapi.models.operations.ListZonalShiftsResponse res = new org.openapis.openapi.models.operations.ListZonalShiftsResponse(contentType, httpRes.statusCode()) {{
             listZonalShiftsResponse = null;
             internalServerException = null;
             throttlingException = null;
             validationException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,7 +537,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartZonalShiftResponse res = new org.openapis.openapi.models.operations.StartZonalShiftResponse() {{
+        org.openapis.openapi.models.operations.StartZonalShiftResponse res = new org.openapis.openapi.models.operations.StartZonalShiftResponse(contentType, httpRes.statusCode()) {{
             zonalShift = null;
             internalServerException = null;
             conflictException = null;
@@ -549,8 +546,6 @@ public class SDK {
             validationException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -640,7 +635,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateZonalShiftResponse res = new org.openapis.openapi.models.operations.UpdateZonalShiftResponse() {{
+        org.openapis.openapi.models.operations.UpdateZonalShiftResponse res = new org.openapis.openapi.models.operations.UpdateZonalShiftResponse(contentType, httpRes.statusCode()) {{
             zonalShift = null;
             internalServerException = null;
             conflictException = null;
@@ -649,8 +644,6 @@ public class SDK {
             validationException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class FilterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public Filter filter;
+
     public FilterOptions withFilter(Filter filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class FilterOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public FilterOptions withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
     }
     
+    public FilterOptions(){}
 }

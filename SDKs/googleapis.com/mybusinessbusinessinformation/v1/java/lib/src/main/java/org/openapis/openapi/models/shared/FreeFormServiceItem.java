@@ -18,6 +18,7 @@ public class FreeFormServiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public FreeFormServiceItem withCategory(String category) {
         this.category = category;
         return this;
@@ -29,9 +30,11 @@ public class FreeFormServiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public Label label;
+
     public FreeFormServiceItem withLabel(Label label) {
         this.label = label;
         return this;
     }
     
+    public FreeFormServiceItem(){}
 }

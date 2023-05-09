@@ -18,6 +18,7 @@ public class ListQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListQueriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queries")
     public Query[] queries;
+
     public ListQueriesResponse withQueries(Query[] queries) {
         this.queries = queries;
         return this;
     }
     
+    public ListQueriesResponse(){}
 }

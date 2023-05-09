@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRiskConfigurationResponse {
     
     public String contentType;
+
     public DescribeRiskConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRiskConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRiskConfigurationResponse describeRiskConfigurationResponse;
+
     public DescribeRiskConfigurationResponse withDescribeRiskConfigurationResponse(org.openapis.openapi.models.shared.DescribeRiskConfigurationResponse describeRiskConfigurationResponse) {
         this.describeRiskConfigurationResponse = describeRiskConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRiskConfigurationResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeRiskConfigurationResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRiskConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeRiskConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRiskConfigurationResponse {
      */
     
     public Object notAuthorizedException;
+
     public DescribeRiskConfigurationResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeRiskConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRiskConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeRiskConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeRiskConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeRiskConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRiskConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeRiskConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeRiskConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeRiskConfigurationResponse {
      */
     
     public Object userPoolAddOnNotEnabledException;
+
     public DescribeRiskConfigurationResponse withUserPoolAddOnNotEnabledException(Object userPoolAddOnNotEnabledException) {
         this.userPoolAddOnNotEnabledException = userPoolAddOnNotEnabledException;
         return this;
     }
     
+    public DescribeRiskConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

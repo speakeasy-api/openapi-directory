@@ -18,6 +18,7 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountNames")
     public String[] accountNames;
+
     public UserItems withAccountNames(String[] accountNames) {
         this.accountNames = accountNames;
         return this;
@@ -29,6 +30,7 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserItems withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UserItems withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAdmin")
     public Boolean isAdmin;
+
     public UserItems withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -62,6 +66,7 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBlocked")
     public Boolean isBlocked;
+
     public UserItems withIsBlocked(Boolean isBlocked) {
         this.isBlocked = isBlocked;
         return this;
@@ -73,6 +78,7 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReliable")
     public Boolean isReliable;
+
     public UserItems withIsReliable(Boolean isReliable) {
         this.isReliable = isReliable;
         return this;
@@ -84,6 +90,7 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserItems withName(String name) {
         this.name = name;
         return this;
@@ -95,9 +102,11 @@ public class UserItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public UserItems withRoles(String[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public UserItems(){}
 }

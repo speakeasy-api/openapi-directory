@@ -15,6 +15,7 @@ public class RootCauseException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public RootCauseException withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class RootCauseException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RootCauseException withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RootCauseException(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ListPagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3ListPagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ListPagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public GoogleCloudDialogflowCxV3Page[] pages;
+
     public GoogleCloudDialogflowCxV3ListPagesResponse withPages(GoogleCloudDialogflowCxV3Page[] pages) {
         this.pages = pages;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ListPagesResponse(){}
 }

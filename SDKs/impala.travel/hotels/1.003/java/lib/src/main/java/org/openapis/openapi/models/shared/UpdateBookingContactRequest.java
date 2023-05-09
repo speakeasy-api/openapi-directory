@@ -20,6 +20,7 @@ public class UpdateBookingContactRequest {
      */
     @JsonProperty("bookingContact")
     public PersonInfo bookingContact;
+
     public UpdateBookingContactRequest withBookingContact(PersonInfo bookingContact) {
         this.bookingContact = bookingContact;
         return this;
@@ -32,9 +33,14 @@ public class UpdateBookingContactRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateBookingVersionAtTimestamp")
     public OffsetDateTime updateBookingVersionAtTimestamp;
+
     public UpdateBookingContactRequest withUpdateBookingVersionAtTimestamp(OffsetDateTime updateBookingVersionAtTimestamp) {
         this.updateBookingVersionAtTimestamp = updateBookingVersionAtTimestamp;
         return this;
     }
     
+    public UpdateBookingContactRequest(@JsonProperty("bookingContact") PersonInfo bookingContact, @JsonProperty("updateBookingVersionAtTimestamp") OffsetDateTime updateBookingVersionAtTimestamp) {
+        this.bookingContact = bookingContact;
+        this.updateBookingVersionAtTimestamp = updateBookingVersionAtTimestamp;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DescribeSlotTypeResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public DescribeSlotTypeResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -36,6 +38,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compositeSlotTypeSetting")
     public CompositeSlotTypeSetting compositeSlotTypeSetting;
+
     public DescribeSlotTypeResponse withCompositeSlotTypeSetting(CompositeSlotTypeSetting compositeSlotTypeSetting) {
         this.compositeSlotTypeSetting = compositeSlotTypeSetting;
         return this;
@@ -46,6 +49,7 @@ public class DescribeSlotTypeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DescribeSlotTypeResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -54,6 +58,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeSlotTypeResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +70,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalSourceSetting")
     public ExternalSourceSetting externalSourceSetting;
+
     public DescribeSlotTypeResponse withExternalSourceSetting(ExternalSourceSetting externalSourceSetting) {
         this.externalSourceSetting = externalSourceSetting;
         return this;
@@ -75,6 +81,7 @@ public class DescribeSlotTypeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DescribeSlotTypeResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -83,6 +90,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public DescribeSlotTypeResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -91,6 +99,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentSlotTypeSignature")
     public String parentSlotTypeSignature;
+
     public DescribeSlotTypeResponse withParentSlotTypeSignature(String parentSlotTypeSignature) {
         this.parentSlotTypeSignature = parentSlotTypeSignature;
         return this;
@@ -99,6 +108,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeId")
     public String slotTypeId;
+
     public DescribeSlotTypeResponse withSlotTypeId(String slotTypeId) {
         this.slotTypeId = slotTypeId;
         return this;
@@ -107,6 +117,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeName")
     public String slotTypeName;
+
     public DescribeSlotTypeResponse withSlotTypeName(String slotTypeName) {
         this.slotTypeName = slotTypeName;
         return this;
@@ -115,6 +126,7 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeValues")
     public SlotTypeValue[] slotTypeValues;
+
     public DescribeSlotTypeResponse withSlotTypeValues(SlotTypeValue[] slotTypeValues) {
         this.slotTypeValues = slotTypeValues;
         return this;
@@ -123,9 +135,11 @@ public class DescribeSlotTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueSelectionSetting")
     public SlotValueSelectionSetting valueSelectionSetting;
+
     public DescribeSlotTypeResponse withValueSelectionSetting(SlotValueSelectionSetting valueSelectionSetting) {
         this.valueSelectionSetting = valueSelectionSetting;
         return this;
     }
     
+    public DescribeSlotTypeResponse(){}
 }

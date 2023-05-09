@@ -15,6 +15,7 @@ public class MetricFilterMatchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventMessage")
     public String eventMessage;
+
     public MetricFilterMatchRecord withEventMessage(String eventMessage) {
         this.eventMessage = eventMessage;
         return this;
@@ -23,6 +24,7 @@ public class MetricFilterMatchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventNumber")
     public Long eventNumber;
+
     public MetricFilterMatchRecord withEventNumber(Long eventNumber) {
         this.eventNumber = eventNumber;
         return this;
@@ -31,9 +33,11 @@ public class MetricFilterMatchRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extractedValues")
     public java.util.Map<String, String> extractedValues;
+
     public MetricFilterMatchRecord withExtractedValues(java.util.Map<String, String> extractedValues) {
         this.extractedValues = extractedValues;
         return this;
     }
     
+    public MetricFilterMatchRecord(){}
 }

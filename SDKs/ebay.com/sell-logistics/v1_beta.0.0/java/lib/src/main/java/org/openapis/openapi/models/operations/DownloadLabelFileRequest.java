@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadLabelFileRequest {
@@ -12,9 +13,13 @@ public class DownloadLabelFileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipmentId")
     public String shipmentId;
+
     public DownloadLabelFileRequest withShipmentId(String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
     }
     
+    public DownloadLabelFileRequest(@JsonProperty("shipmentId") String shipmentId) {
+        this.shipmentId = shipmentId;
+  }
 }

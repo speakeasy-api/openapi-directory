@@ -15,6 +15,7 @@ public class DescribeOrganizationResourceCollectionHealthRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public DescribeOrganizationResourceCollectionHealthRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,6 +27,7 @@ public class DescribeOrganizationResourceCollectionHealthRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeOrganizationResourceCollectionHealthRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class DescribeOrganizationResourceCollectionHealthRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOrganizationResourceCollectionHealthRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,6 +50,7 @@ public class DescribeOrganizationResourceCollectionHealthRequestBody {
      */
     @JsonProperty("OrganizationResourceCollectionType")
     public DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum organizationResourceCollectionType;
+
     public DescribeOrganizationResourceCollectionHealthRequestBody withOrganizationResourceCollectionType(DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum organizationResourceCollectionType) {
         this.organizationResourceCollectionType = organizationResourceCollectionType;
         return this;
@@ -58,9 +62,13 @@ public class DescribeOrganizationResourceCollectionHealthRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitIds")
     public String[] organizationalUnitIds;
+
     public DescribeOrganizationResourceCollectionHealthRequestBody withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
     }
     
+    public DescribeOrganizationResourceCollectionHealthRequestBody(@JsonProperty("OrganizationResourceCollectionType") DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum organizationResourceCollectionType) {
+        this.organizationResourceCollectionType = organizationResourceCollectionType;
+  }
 }

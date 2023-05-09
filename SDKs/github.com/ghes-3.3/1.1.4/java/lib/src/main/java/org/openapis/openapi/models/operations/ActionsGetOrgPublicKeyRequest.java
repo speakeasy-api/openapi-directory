@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetOrgPublicKeyRequest {
@@ -12,9 +13,13 @@ public class ActionsGetOrgPublicKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsGetOrgPublicKeyRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public ActionsGetOrgPublicKeyRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

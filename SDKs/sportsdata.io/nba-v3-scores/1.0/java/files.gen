@@ -41,6 +41,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/DepthChartsResponse.jav
 lib/src/main/java/org/openapis/openapi/models/operations/GamesByDateFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GamesByDateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GamesByDateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GamesByDateBasicFormatEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GamesByDateBasicRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GamesByDateBasicResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/NewsFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/NewsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/NewsResponse.java
@@ -62,12 +65,18 @@ lib/src/main/java/org/openapis/openapi/models/operations/PlayerDetailsByPlayerRe
 lib/src/main/java/org/openapis/openapi/models/operations/PlayersByTeamFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayersByTeamRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayersByTeamResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PlayersByTeamBasicFormatEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/PlayersByTeamBasicRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/PlayersByTeamBasicResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/RefereesFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RefereesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RefereesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SchedulesFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SchedulesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SchedulesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/SchedulesBasicFormatEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/SchedulesBasicRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/SchedulesBasicResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/StadiumsFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/StadiumsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/StadiumsResponse.java
@@ -95,9 +104,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/DepthChart.java
 lib/src/main/java/org/openapis/openapi/models/shared/Game.java
 lib/src/main/java/org/openapis/openapi/models/shared/Series.java
 lib/src/main/java/org/openapis/openapi/models/shared/Quarter.java
+lib/src/main/java/org/openapis/openapi/models/shared/ScoreBasic.java
 lib/src/main/java/org/openapis/openapi/models/shared/News.java
 lib/src/main/java/org/openapis/openapi/models/shared/Player.java
+lib/src/main/java/org/openapis/openapi/models/shared/PlayerBasic.java
 lib/src/main/java/org/openapis/openapi/models/shared/Referee.java
+lib/src/main/java/org/openapis/openapi/models/shared/ScheduleBasic.java
 lib/src/main/java/org/openapis/openapi/models/shared/Stadium.java
 lib/src/main/java/org/openapis/openapi/models/shared/Standing.java
 lib/src/main/java/org/openapis/openapi/models/shared/TeamGame.java
@@ -105,4 +117,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TeamSeason.java
 lib/src/main/java/org/openapis/openapi/models/shared/OpponentSeason.java
 lib/src/main/java/org/openapis/openapi/models/shared/Team.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

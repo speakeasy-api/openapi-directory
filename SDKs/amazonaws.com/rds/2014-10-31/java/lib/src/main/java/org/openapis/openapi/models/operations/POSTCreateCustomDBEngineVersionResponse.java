@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTCreateCustomDBEngineVersionResponse {
     
     public byte[] body;
+
     public POSTCreateCustomDBEngineVersionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTCreateCustomDBEngineVersionResponse {
     
     
     public String contentType;
+
     public POSTCreateCustomDBEngineVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTCreateCustomDBEngineVersionResponse {
     
     
     public Integer statusCode;
+
     public POSTCreateCustomDBEngineVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTCreateCustomDBEngineVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTCreateCustomDBEngineVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTCreateCustomDBEngineVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

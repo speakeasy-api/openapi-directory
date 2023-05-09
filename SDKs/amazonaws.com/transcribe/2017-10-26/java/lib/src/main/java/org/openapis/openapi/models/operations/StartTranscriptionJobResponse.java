@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTranscriptionJobResponse {
@@ -12,6 +13,7 @@ public class StartTranscriptionJobResponse {
      */
     
     public Object badRequestException;
+
     public StartTranscriptionJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class StartTranscriptionJobResponse {
      */
     
     public Object conflictException;
+
     public StartTranscriptionJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartTranscriptionJobResponse {
     
     
     public String contentType;
+
     public StartTranscriptionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartTranscriptionJobResponse {
      */
     
     public Object internalFailureException;
+
     public StartTranscriptionJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class StartTranscriptionJobResponse {
      */
     
     public Object limitExceededException;
+
     public StartTranscriptionJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartTranscriptionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTranscriptionJobResponse startTranscriptionJobResponse;
+
     public StartTranscriptionJobResponse withStartTranscriptionJobResponse(org.openapis.openapi.models.shared.StartTranscriptionJobResponse startTranscriptionJobResponse) {
         this.startTranscriptionJobResponse = startTranscriptionJobResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartTranscriptionJobResponse {
     
     
     public Integer statusCode;
+
     public StartTranscriptionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StartTranscriptionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTranscriptionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartTranscriptionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

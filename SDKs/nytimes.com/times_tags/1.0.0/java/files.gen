@@ -33,4 +33,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetTimestagsFilterEnum.
 lib/src/main/java/org/openapis/openapi/models/operations/GetTimestagsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTimestagsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

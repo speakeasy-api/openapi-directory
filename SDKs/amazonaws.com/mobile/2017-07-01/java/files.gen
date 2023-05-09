@@ -74,4 +74,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ProjectSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateProjectResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountActionRequiredException.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

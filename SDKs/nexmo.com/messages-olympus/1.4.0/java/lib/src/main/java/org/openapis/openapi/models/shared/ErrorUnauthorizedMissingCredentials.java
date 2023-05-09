@@ -18,6 +18,7 @@ public class ErrorUnauthorizedMissingCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ErrorUnauthorizedMissingCredentials withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,6 +29,7 @@ public class ErrorUnauthorizedMissingCredentials {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorUnauthorizedMissingCredentials withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -38,6 +40,7 @@ public class ErrorUnauthorizedMissingCredentials {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorUnauthorizedMissingCredentials withTitle(String title) {
         this.title = title;
         return this;
@@ -48,9 +51,15 @@ public class ErrorUnauthorizedMissingCredentials {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorUnauthorizedMissingCredentials withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorUnauthorizedMissingCredentials(@JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

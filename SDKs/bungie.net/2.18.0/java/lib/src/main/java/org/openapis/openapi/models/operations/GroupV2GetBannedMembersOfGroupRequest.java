@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetBannedMembersOfGroupRequest {
@@ -12,6 +13,7 @@ public class GroupV2GetBannedMembersOfGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
     public Integer currentpage;
+
     public GroupV2GetBannedMembersOfGroupRequest withCurrentpage(Integer currentpage) {
         this.currentpage = currentpage;
         return this;
@@ -22,9 +24,14 @@ public class GroupV2GetBannedMembersOfGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2GetBannedMembersOfGroupRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public GroupV2GetBannedMembersOfGroupRequest(@JsonProperty("currentpage") Integer currentpage, @JsonProperty("groupId") Long groupId) {
+        this.currentpage = currentpage;
+        this.groupId = groupId;
+  }
 }

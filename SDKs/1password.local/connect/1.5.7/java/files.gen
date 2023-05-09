@@ -111,4 +111,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/PatchOpEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Patch.java
 lib/src/main/java/org/openapis/openapi/models/shared/VaultTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Vault.java
+docs/sdk/README.md
+docs/activity/README.md
+docs/files/README.md
+docs/health/README.md
+docs/items/README.md
+docs/metrics/README.md
+docs/vaults/README.md
 USAGE.md

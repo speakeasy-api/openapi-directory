@@ -17,9 +17,13 @@ public class IterationInput {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public IterationInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IterationInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

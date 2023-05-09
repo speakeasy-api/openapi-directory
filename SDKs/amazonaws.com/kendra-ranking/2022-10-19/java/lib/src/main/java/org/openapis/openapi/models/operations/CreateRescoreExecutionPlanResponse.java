@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRescoreExecutionPlanResponse {
@@ -12,6 +13,7 @@ public class CreateRescoreExecutionPlanResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRescoreExecutionPlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRescoreExecutionPlanResponse {
      */
     
     public Object conflictException;
+
     public CreateRescoreExecutionPlanResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRescoreExecutionPlanResponse {
     
     
     public String contentType;
+
     public CreateRescoreExecutionPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRescoreExecutionPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRescoreExecutionPlanResponse createRescoreExecutionPlanResponse;
+
     public CreateRescoreExecutionPlanResponse withCreateRescoreExecutionPlanResponse(org.openapis.openapi.models.shared.CreateRescoreExecutionPlanResponse createRescoreExecutionPlanResponse) {
         this.createRescoreExecutionPlanResponse = createRescoreExecutionPlanResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateRescoreExecutionPlanResponse {
      */
     
     public Object internalServerException;
+
     public CreateRescoreExecutionPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateRescoreExecutionPlanResponse {
     
     
     public Integer statusCode;
+
     public CreateRescoreExecutionPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateRescoreExecutionPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRescoreExecutionPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateRescoreExecutionPlanResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRescoreExecutionPlanResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateRescoreExecutionPlanResponse {
      */
     
     public Object throttlingException;
+
     public CreateRescoreExecutionPlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRescoreExecutionPlanResponse {
      */
     
     public Object validationException;
+
     public CreateRescoreExecutionPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRescoreExecutionPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

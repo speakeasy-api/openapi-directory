@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatabasesResponse {
     
     public String contentType;
+
     public ListDatabasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDatabasesResponse {
      */
     
     public Object internalServerException;
+
     public ListDatabasesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListDatabasesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDatabasesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDatabasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatabasesOutput listDatabasesOutput;
+
     public ListDatabasesResponse withListDatabasesOutput(org.openapis.openapi.models.shared.ListDatabasesOutput listDatabasesOutput) {
         this.listDatabasesOutput = listDatabasesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListDatabasesResponse {
      */
     
     public Object metadataException;
+
     public ListDatabasesResponse withMetadataException(Object metadataException) {
         this.metadataException = metadataException;
         return this;
@@ -56,6 +62,7 @@ public class ListDatabasesResponse {
     
     
     public Integer statusCode;
+
     public ListDatabasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListDatabasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatabasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDatabasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

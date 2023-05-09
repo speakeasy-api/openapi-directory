@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForResourceResponse {
@@ -12,6 +13,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTagsForResourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForResourceResponse {
     
     
     public String contentType;
+
     public ListTagsForResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object internalServiceException;
+
     public ListTagsForResourceResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object invalidArnException;
+
     public ListTagsForResourceResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object invalidTaggingRequestException;
+
     public ListTagsForResourceResponse withInvalidTaggingRequestException(Object invalidTaggingRequestException) {
         this.invalidTaggingRequestException = invalidTaggingRequestException;
         return this;
@@ -59,6 +65,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object limitExceededException;
+
     public ListTagsForResourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListTagsForResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForResourceResponse listTagsForResourceResponse;
+
     public ListTagsForResourceResponse withListTagsForResourceResponse(org.openapis.openapi.models.shared.ListTagsForResourceResponse listTagsForResourceResponse) {
         this.listTagsForResourceResponse = listTagsForResourceResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListTagsForResourceResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListTagsForResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsForResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListTagsForResourceResponse {
      */
     
     public Object retryableConflictException;
+
     public ListTagsForResourceResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ListTagsForResourceResponse {
      */
     
     public Object validationException;
+
     public ListTagsForResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTagsForResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

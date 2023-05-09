@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveReportFilterRequest {
@@ -12,6 +13,7 @@ public class SaveReportFilterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportFilterId")
     public String reportFilterId;
+
     public SaveReportFilterRequest withReportFilterId(String reportFilterId) {
         this.reportFilterId = reportFilterId;
         return this;
@@ -19,6 +21,7 @@ public class SaveReportFilterRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SaveReportFilterRequest saveReportFilterRequest;
+
     public SaveReportFilterRequest withSaveReportFilterRequest(org.openapis.openapi.models.shared.SaveReportFilterRequest saveReportFilterRequest) {
         this.saveReportFilterRequest = saveReportFilterRequest;
         return this;
@@ -29,9 +32,15 @@ public class SaveReportFilterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public SaveReportFilterRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public SaveReportFilterRequest(@JsonProperty("reportFilterId") String reportFilterId, @JsonProperty("saveReportFilterRequest") org.openapis.openapi.models.shared.SaveReportFilterRequest saveReportFilterRequest, @JsonProperty("storeId") String storeId) {
+        this.reportFilterId = reportFilterId;
+        this.saveReportFilterRequest = saveReportFilterRequest;
+        this.storeId = storeId;
+  }
 }

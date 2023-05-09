@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListGlobalWebhooksRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminListGlobalWebhooksRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public EnterpriseAdminListGlobalWebhooksRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminListGlobalWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminListGlobalWebhooksRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class EnterpriseAdminListGlobalWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminListGlobalWebhooksRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public EnterpriseAdminListGlobalWebhooksRequest(@JsonProperty("accept") String accept) {
+        this.accept = accept;
+  }
 }

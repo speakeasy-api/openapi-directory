@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAssistantAssociationResponse {
@@ -12,6 +13,7 @@ public class DeleteAssistantAssociationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAssistantAssociationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAssistantAssociationResponse {
     
     
     public String contentType;
+
     public DeleteAssistantAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAssistantAssociationResponse {
      */
     
     public java.util.Map<String, Object> deleteAssistantAssociationResponse;
+
     public DeleteAssistantAssociationResponse withDeleteAssistantAssociationResponse(java.util.Map<String, Object> deleteAssistantAssociationResponse) {
         this.deleteAssistantAssociationResponse = deleteAssistantAssociationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAssistantAssociationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAssistantAssociationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAssistantAssociationResponse {
     
     
     public Integer statusCode;
+
     public DeleteAssistantAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAssistantAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAssistantAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAssistantAssociationResponse {
      */
     
     public Object validationException;
+
     public DeleteAssistantAssociationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAssistantAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

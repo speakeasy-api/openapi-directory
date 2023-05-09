@@ -15,6 +15,7 @@ public class ListIdentitiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HideDisabled")
     public Boolean hideDisabled;
+
     public ListIdentitiesInput withHideDisabled(Boolean hideDisabled) {
         this.hideDisabled = hideDisabled;
         return this;
@@ -22,6 +23,7 @@ public class ListIdentitiesInput {
     
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public ListIdentitiesInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -29,6 +31,7 @@ public class ListIdentitiesInput {
     
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListIdentitiesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +40,14 @@ public class ListIdentitiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentitiesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentitiesInput(@JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("MaxResults") Long maxResults) {
+        this.identityPoolId = identityPoolId;
+        this.maxResults = maxResults;
+  }
 }

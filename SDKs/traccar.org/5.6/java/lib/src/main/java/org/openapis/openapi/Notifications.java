@@ -55,10 +55,8 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNotificationsIdResponse res = new org.openapis.openapi.models.operations.DeleteNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteNotificationsIdResponse res = new org.openapis.openapi.models.operations.DeleteNotificationsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNotificationsResponse res = new org.openapis.openapi.models.operations.GetNotificationsResponse() {{
+        org.openapis.openapi.models.operations.GetNotificationsResponse res = new org.openapis.openapi.models.operations.GetNotificationsResponse(contentType, httpRes.statusCode()) {{
             notifications = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNotificationsTypesResponse res = new org.openapis.openapi.models.operations.GetNotificationsTypesResponse() {{
+        org.openapis.openapi.models.operations.GetNotificationsTypesResponse res = new org.openapis.openapi.models.operations.GetNotificationsTypesResponse(contentType, httpRes.statusCode()) {{
             notificationTypes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNotificationsResponse res = new org.openapis.openapi.models.operations.PostNotificationsResponse() {{
+        org.openapis.openapi.models.operations.PostNotificationsResponse res = new org.openapis.openapi.models.operations.PostNotificationsResponse(contentType, httpRes.statusCode()) {{
             notification = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +207,8 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNotificationsTestResponse res = new org.openapis.openapi.models.operations.PostNotificationsTestResponse() {{
+        org.openapis.openapi.models.operations.PostNotificationsTestResponse res = new org.openapis.openapi.models.operations.PostNotificationsTestResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -253,11 +243,9 @@ public class Notifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutNotificationsIdResponse res = new org.openapis.openapi.models.operations.PutNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.PutNotificationsIdResponse res = new org.openapis.openapi.models.operations.PutNotificationsIdResponse(contentType, httpRes.statusCode()) {{
             notification = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

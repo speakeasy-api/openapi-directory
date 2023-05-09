@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationSettings {
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ApplicationSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -22,9 +23,13 @@ public class ApplicationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SettingsGroup")
     public String settingsGroup;
+
     public ApplicationSettings withSettingsGroup(String settingsGroup) {
         this.settingsGroup = settingsGroup;
         return this;
     }
     
+    public ApplicationSettings(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

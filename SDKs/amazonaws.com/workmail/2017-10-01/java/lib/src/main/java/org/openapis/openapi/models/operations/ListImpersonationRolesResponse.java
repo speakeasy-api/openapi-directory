@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImpersonationRolesResponse {
     
     public String contentType;
+
     public ListImpersonationRolesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListImpersonationRolesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListImpersonationRolesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class ListImpersonationRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImpersonationRolesResponse listImpersonationRolesResponse;
+
     public ListImpersonationRolesResponse withListImpersonationRolesResponse(org.openapis.openapi.models.shared.ListImpersonationRolesResponse listImpersonationRolesResponse) {
         this.listImpersonationRolesResponse = listImpersonationRolesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListImpersonationRolesResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListImpersonationRolesResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListImpersonationRolesResponse {
      */
     
     public Object organizationStateException;
+
     public ListImpersonationRolesResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class ListImpersonationRolesResponse {
     
     
     public Integer statusCode;
+
     public ListImpersonationRolesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListImpersonationRolesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImpersonationRolesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListImpersonationRolesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

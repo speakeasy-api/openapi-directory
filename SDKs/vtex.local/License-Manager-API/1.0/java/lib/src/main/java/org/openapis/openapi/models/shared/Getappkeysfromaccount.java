@@ -20,6 +20,7 @@ public class Getappkeysfromaccount {
      */
     @JsonProperty("appKey")
     public String appKey;
+
     public Getappkeysfromaccount withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -32,6 +33,7 @@ public class Getappkeysfromaccount {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdIn")
     public OffsetDateTime createdIn;
+
     public Getappkeysfromaccount withCreatedIn(OffsetDateTime createdIn) {
         this.createdIn = createdIn;
         return this;
@@ -42,6 +44,7 @@ public class Getappkeysfromaccount {
      */
     @JsonProperty("id")
     public String id;
+
     public Getappkeysfromaccount withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class Getappkeysfromaccount {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public Getappkeysfromaccount withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -62,9 +66,17 @@ public class Getappkeysfromaccount {
      */
     @JsonProperty("label")
     public String label;
+
     public Getappkeysfromaccount withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public Getappkeysfromaccount(@JsonProperty("appKey") String appKey, @JsonProperty("createdIn") OffsetDateTime createdIn, @JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("label") String label) {
+        this.appKey = appKey;
+        this.createdIn = createdIn;
+        this.id = id;
+        this.isActive = isActive;
+        this.label = label;
+  }
 }

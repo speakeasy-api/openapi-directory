@@ -18,6 +18,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configMap")
     public ConfigMapVolumeSource configMap;
+
     public Volume withConfigMap(ConfigMapVolumeSource configMap) {
         this.configMap = configMap;
         return this;
@@ -29,6 +30,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Volume withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public SecretVolumeSource secret;
+
     public Volume withSecret(SecretVolumeSource secret) {
         this.secret = secret;
         return this;
     }
     
+    public Volume(){}
 }

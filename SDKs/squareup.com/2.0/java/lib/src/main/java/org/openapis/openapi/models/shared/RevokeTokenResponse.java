@@ -18,9 +18,11 @@ public class RevokeTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public RevokeTokenResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public RevokeTokenResponse(){}
 }

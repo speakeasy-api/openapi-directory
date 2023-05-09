@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePrimaryEmailAddressRequest {
     @JsonProperty("Email")
     public String email;
+
     public UpdatePrimaryEmailAddressRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -16,6 +17,7 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @JsonProperty("EntityId")
     public String entityId;
+
     public UpdatePrimaryEmailAddressRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,9 +25,15 @@ public class UpdatePrimaryEmailAddressRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public UpdatePrimaryEmailAddressRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public UpdatePrimaryEmailAddressRequest(@JsonProperty("Email") String email, @JsonProperty("EntityId") String entityId, @JsonProperty("OrganizationId") String organizationId) {
+        this.email = email;
+        this.entityId = entityId;
+        this.organizationId = organizationId;
+  }
 }

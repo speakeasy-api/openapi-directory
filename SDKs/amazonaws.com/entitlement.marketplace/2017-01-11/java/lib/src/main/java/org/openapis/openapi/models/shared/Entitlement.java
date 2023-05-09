@@ -20,6 +20,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerIdentifier")
     public String customerIdentifier;
+
     public Entitlement withCustomerIdentifier(String customerIdentifier) {
         this.customerIdentifier = customerIdentifier;
         return this;
@@ -28,6 +29,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimension")
     public String dimension;
+
     public Entitlement withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -38,6 +40,7 @@ public class Entitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDate")
     public OffsetDateTime expirationDate;
+
     public Entitlement withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -46,6 +49,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductCode")
     public String productCode;
+
     public Entitlement withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -54,9 +58,11 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public EntitlementValue value;
+
     public Entitlement withValue(EntitlementValue value) {
         this.value = value;
         return this;
     }
     
+    public Entitlement(){}
 }

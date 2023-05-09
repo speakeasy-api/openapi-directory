@@ -18,6 +18,7 @@ public class CreateCollectdTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadErrors")
     public CollectdPayloadError[] payloadErrors;
+
     public CreateCollectdTimeSeriesResponse withPayloadErrors(CollectdPayloadError[] payloadErrors) {
         this.payloadErrors = payloadErrors;
         return this;
@@ -29,9 +30,11 @@ public class CreateCollectdTimeSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public CreateTimeSeriesSummary summary;
+
     public CreateCollectdTimeSeriesResponse withSummary(CreateTimeSeriesSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public CreateCollectdTimeSeriesResponse(){}
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse(contentType, httpRes.statusCode()) {{
             fetchInstanceProvisioningSettingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListResponse(contentType, httpRes.statusCode()) {{
             listInstancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +426,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListResponse(contentType, httpRes.statusCode()) {{
             listNetworksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse(contentType, httpRes.statusCode()) {{
             listNetworkUsageResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse(contentType, httpRes.statusCode()) {{
             listNfsSharesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             provisioningConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,11 +740,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse(contentType, httpRes.statusCode()) {{
             submitProvisioningConfigResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -816,11 +784,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse(contentType, httpRes.statusCode()) {{
             listProvisioningQuotasResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse(contentType, httpRes.statusCode()) {{
             sshKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -910,11 +874,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListResponse(contentType, httpRes.statusCode()) {{
             listSSHKeysResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +918,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListResponse(contentType, httpRes.statusCode()) {{
             listVolumesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1004,11 +964,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1050,11 +1008,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse(contentType, httpRes.statusCode()) {{
             listLunsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1098,11 +1054,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1146,11 +1100,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse(contentType, httpRes.statusCode()) {{
             volume = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1194,11 +1146,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1242,11 +1192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse(contentType, httpRes.statusCode()) {{
             volumeSnapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1288,11 +1236,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1334,11 +1280,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse(contentType, httpRes.statusCode()) {{
             volumeSnapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1380,11 +1324,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse(contentType, httpRes.statusCode()) {{
             listVolumeSnapshotsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1428,11 +1370,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

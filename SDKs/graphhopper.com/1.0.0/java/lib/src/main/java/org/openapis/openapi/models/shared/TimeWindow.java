@@ -15,6 +15,7 @@ public class TimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earliest")
     public Long earliest;
+
     public TimeWindow withEarliest(Long earliest) {
         this.earliest = earliest;
         return this;
@@ -26,9 +27,11 @@ public class TimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest")
     public Long latest;
+
     public TimeWindow withLatest(Long latest) {
         this.latest = latest;
         return this;
     }
     
+    public TimeWindow(){}
 }

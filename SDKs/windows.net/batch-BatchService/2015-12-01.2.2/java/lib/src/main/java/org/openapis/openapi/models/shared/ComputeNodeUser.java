@@ -25,6 +25,7 @@ public class ComputeNodeUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiryTime")
     public OffsetDateTime expiryTime;
+
     public ComputeNodeUser withExpiryTime(OffsetDateTime expiryTime) {
         this.expiryTime = expiryTime;
         return this;
@@ -36,6 +37,7 @@ public class ComputeNodeUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAdmin")
     public Boolean isAdmin;
+
     public ComputeNodeUser withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -46,6 +48,7 @@ public class ComputeNodeUser {
      */
     @JsonProperty("name")
     public String name;
+
     public ComputeNodeUser withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +59,14 @@ public class ComputeNodeUser {
      */
     @JsonProperty("password")
     public String password;
+
     public ComputeNodeUser withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public ComputeNodeUser(@JsonProperty("name") String name, @JsonProperty("password") String password) {
+        this.name = name;
+        this.password = password;
+  }
 }

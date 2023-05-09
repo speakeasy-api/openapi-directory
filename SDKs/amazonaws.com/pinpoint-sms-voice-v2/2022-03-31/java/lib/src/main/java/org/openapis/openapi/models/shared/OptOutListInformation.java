@@ -19,6 +19,7 @@ public class OptOutListInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public OptOutListInformation withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -26,6 +27,7 @@ public class OptOutListInformation {
     
     @JsonProperty("OptOutListArn")
     public String optOutListArn;
+
     public OptOutListInformation withOptOutListArn(String optOutListArn) {
         this.optOutListArn = optOutListArn;
         return this;
@@ -33,9 +35,15 @@ public class OptOutListInformation {
     
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public OptOutListInformation withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
     }
     
+    public OptOutListInformation(@JsonProperty("CreatedTimestamp") OffsetDateTime createdTimestamp, @JsonProperty("OptOutListArn") String optOutListArn, @JsonProperty("OptOutListName") String optOutListName) {
+        this.createdTimestamp = createdTimestamp;
+        this.optOutListArn = optOutListArn;
+        this.optOutListName = optOutListName;
+  }
 }

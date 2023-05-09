@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeDomainsRequest {
     
     public String[] domainNames;
+
     public DescribeDomainsRequest withDomainNames(String[] domainNames) {
         this.domainNames = domainNames;
         return this;
     }
     
+    public DescribeDomainsRequest(){}
 }

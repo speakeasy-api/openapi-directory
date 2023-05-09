@@ -327,4 +327,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/CostAllocationTagStatusEntr
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateCostCategoryDefinitionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateCostCategoryDefinitionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public String asset;
+
     public GoogleCloudDataplexV1Action withAsset(String asset) {
         this.asset = asset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public GoogleCloudDataplexV1ActionCategoryEnum category;
+
     public GoogleCloudDataplexV1Action withCategory(GoogleCloudDataplexV1ActionCategoryEnum category) {
         this.category = category;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLocations")
     public String[] dataLocations;
+
     public GoogleCloudDataplexV1Action withDataLocations(String[] dataLocations) {
         this.dataLocations = dataLocations;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectTime")
     public String detectTime;
+
     public GoogleCloudDataplexV1Action withDetectTime(String detectTime) {
         this.detectTime = detectTime;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedSecurityPolicyApply")
     public GoogleCloudDataplexV1ActionFailedSecurityPolicyApply failedSecurityPolicyApply;
+
     public GoogleCloudDataplexV1Action withFailedSecurityPolicyApply(GoogleCloudDataplexV1ActionFailedSecurityPolicyApply failedSecurityPolicyApply) {
         this.failedSecurityPolicyApply = failedSecurityPolicyApply;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incompatibleDataSchema")
     public GoogleCloudDataplexV1ActionIncompatibleDataSchema incompatibleDataSchema;
+
     public GoogleCloudDataplexV1Action withIncompatibleDataSchema(GoogleCloudDataplexV1ActionIncompatibleDataSchema incompatibleDataSchema) {
         this.incompatibleDataSchema = incompatibleDataSchema;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidDataFormat")
     public GoogleCloudDataplexV1ActionInvalidDataFormat invalidDataFormat;
+
     public GoogleCloudDataplexV1Action withInvalidDataFormat(GoogleCloudDataplexV1ActionInvalidDataFormat invalidDataFormat) {
         this.invalidDataFormat = invalidDataFormat;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidDataOrganization")
     public java.util.Map<String, Object> invalidDataOrganization;
+
     public GoogleCloudDataplexV1Action withInvalidDataOrganization(java.util.Map<String, Object> invalidDataOrganization) {
         this.invalidDataOrganization = invalidDataOrganization;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidDataPartition")
     public GoogleCloudDataplexV1ActionInvalidDataPartition invalidDataPartition;
+
     public GoogleCloudDataplexV1Action withInvalidDataPartition(GoogleCloudDataplexV1ActionInvalidDataPartition invalidDataPartition) {
         this.invalidDataPartition = invalidDataPartition;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public String issue;
+
     public GoogleCloudDataplexV1Action withIssue(String issue) {
         this.issue = issue;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lake")
     public String lake;
+
     public GoogleCloudDataplexV1Action withLake(String lake) {
         this.lake = lake;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingData")
     public java.util.Map<String, Object> missingData;
+
     public GoogleCloudDataplexV1Action withMissingData(java.util.Map<String, Object> missingData) {
         this.missingData = missingData;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingResource")
     public java.util.Map<String, Object> missingResource;
+
     public GoogleCloudDataplexV1Action withMissingResource(java.util.Map<String, Object> missingResource) {
         this.missingResource = missingResource;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Action withName(String name) {
         this.name = name;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unauthorizedResource")
     public java.util.Map<String, Object> unauthorizedResource;
+
     public GoogleCloudDataplexV1Action withUnauthorizedResource(java.util.Map<String, Object> unauthorizedResource) {
         this.unauthorizedResource = unauthorizedResource;
         return this;
@@ -183,9 +198,11 @@ public class GoogleCloudDataplexV1Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public GoogleCloudDataplexV1Action withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public GoogleCloudDataplexV1Action(){}
 }

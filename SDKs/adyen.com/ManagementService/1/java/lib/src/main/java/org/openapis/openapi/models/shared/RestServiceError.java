@@ -17,6 +17,7 @@ public class RestServiceError {
      */
     @JsonProperty("detail")
     public String detail;
+
     public RestServiceError withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -27,6 +28,7 @@ public class RestServiceError {
      */
     @JsonProperty("errorCode")
     public String errorCode;
+
     public RestServiceError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -38,6 +40,7 @@ public class RestServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public RestServiceError withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -49,6 +52,7 @@ public class RestServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public InvalidField[] invalidFields;
+
     public RestServiceError withInvalidFields(InvalidField[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -60,6 +64,7 @@ public class RestServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public RestServiceError withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -68,6 +73,7 @@ public class RestServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public JSONObject response;
+
     public RestServiceError withResponse(JSONObject response) {
         this.response = response;
         return this;
@@ -78,6 +84,7 @@ public class RestServiceError {
      */
     @JsonProperty("status")
     public Integer status;
+
     public RestServiceError withStatus(Integer status) {
         this.status = status;
         return this;
@@ -88,6 +95,7 @@ public class RestServiceError {
      */
     @JsonProperty("title")
     public String title;
+
     public RestServiceError withTitle(String title) {
         this.title = title;
         return this;
@@ -98,9 +106,17 @@ public class RestServiceError {
      */
     @JsonProperty("type")
     public String type;
+
     public RestServiceError withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RestServiceError(@JsonProperty("detail") String detail, @JsonProperty("errorCode") String errorCode, @JsonProperty("status") Integer status, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.errorCode = errorCode;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

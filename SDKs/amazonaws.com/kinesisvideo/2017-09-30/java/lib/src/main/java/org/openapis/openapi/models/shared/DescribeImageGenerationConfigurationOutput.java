@@ -15,9 +15,11 @@ public class DescribeImageGenerationConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageGenerationConfiguration")
     public ImageGenerationConfiguration imageGenerationConfiguration;
+
     public DescribeImageGenerationConfigurationOutput withImageGenerationConfiguration(ImageGenerationConfiguration imageGenerationConfiguration) {
         this.imageGenerationConfiguration = imageGenerationConfiguration;
         return this;
     }
     
+    public DescribeImageGenerationConfigurationOutput(){}
 }

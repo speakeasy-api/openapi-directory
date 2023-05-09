@@ -17,9 +17,11 @@ public class ApiCoreRequestsPatchBodyBatch {
     @JsonProperty("PatchRequests")
     @SpeakeasyMetadata("form:name=PatchRequests,json")
     public ApiCoreRequestsPatchBody[] patchRequests;
+
     public ApiCoreRequestsPatchBodyBatch withPatchRequests(ApiCoreRequestsPatchBody[] patchRequests) {
         this.patchRequests = patchRequests;
         return this;
     }
     
+    public ApiCoreRequestsPatchBodyBatch(){}
 }

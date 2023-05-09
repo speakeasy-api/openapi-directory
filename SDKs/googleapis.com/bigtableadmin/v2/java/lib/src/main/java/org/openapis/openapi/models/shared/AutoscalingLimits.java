@@ -18,6 +18,7 @@ public class AutoscalingLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxServeNodes")
     public Integer maxServeNodes;
+
     public AutoscalingLimits withMaxServeNodes(Integer maxServeNodes) {
         this.maxServeNodes = maxServeNodes;
         return this;
@@ -29,9 +30,11 @@ public class AutoscalingLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minServeNodes")
     public Integer minServeNodes;
+
     public AutoscalingLimits withMinServeNodes(Integer minServeNodes) {
         this.minServeNodes = minServeNodes;
         return this;
     }
     
+    public AutoscalingLimits(){}
 }

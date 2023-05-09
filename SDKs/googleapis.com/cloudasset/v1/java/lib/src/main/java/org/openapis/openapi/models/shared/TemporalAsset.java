@@ -18,6 +18,7 @@ public class TemporalAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public Asset asset;
+
     public TemporalAsset withAsset(Asset asset) {
         this.asset = asset;
         return this;
@@ -29,6 +30,7 @@ public class TemporalAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public TemporalAsset withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -40,6 +42,7 @@ public class TemporalAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorAsset")
     public Asset priorAsset;
+
     public TemporalAsset withPriorAsset(Asset priorAsset) {
         this.priorAsset = priorAsset;
         return this;
@@ -51,6 +54,7 @@ public class TemporalAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorAssetState")
     public TemporalAssetPriorAssetStateEnum priorAssetState;
+
     public TemporalAsset withPriorAssetState(TemporalAssetPriorAssetStateEnum priorAssetState) {
         this.priorAssetState = priorAssetState;
         return this;
@@ -62,9 +66,11 @@ public class TemporalAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("window")
     public TimeWindow window;
+
     public TemporalAsset withWindow(TimeWindow window) {
         this.window = window;
         return this;
     }
     
+    public TemporalAsset(){}
 }

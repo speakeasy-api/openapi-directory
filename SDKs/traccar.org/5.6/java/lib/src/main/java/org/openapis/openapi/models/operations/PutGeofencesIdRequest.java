@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutGeofencesIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Geofence geofence;
+
     public PutGeofencesIdRequest withGeofence(org.openapis.openapi.models.shared.Geofence geofence) {
         this.geofence = geofence;
         return this;
@@ -16,9 +18,14 @@ public class PutGeofencesIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutGeofencesIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutGeofencesIdRequest(@JsonProperty("Geofence") org.openapis.openapi.models.shared.Geofence geofence, @JsonProperty("id") Long id) {
+        this.geofence = geofence;
+        this.id = id;
+  }
 }

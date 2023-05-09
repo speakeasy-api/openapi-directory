@@ -15,6 +15,7 @@ public class V1x1InvitedTeamMemberResultsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public V1x1InvitedTeamMemberVO[] results;
+
     public V1x1InvitedTeamMemberResultsVO withResults(V1x1InvitedTeamMemberVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class V1x1InvitedTeamMemberResultsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public V1x1InvitedTeamMemberResultsVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class V1x1InvitedTeamMemberResultsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public V1x1InvitedTeamMemberResultsVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public V1x1InvitedTeamMemberResultsVO(){}
 }

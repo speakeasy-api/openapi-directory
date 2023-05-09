@@ -18,6 +18,7 @@ public class Timepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markName")
     public String markName;
+
     public Timepoint withMarkName(String markName) {
         this.markName = markName;
         return this;
@@ -29,9 +30,11 @@ public class Timepoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeconds")
     public Double timeSeconds;
+
     public Timepoint withTimeSeconds(Double timeSeconds) {
         this.timeSeconds = timeSeconds;
         return this;
     }
     
+    public Timepoint(){}
 }

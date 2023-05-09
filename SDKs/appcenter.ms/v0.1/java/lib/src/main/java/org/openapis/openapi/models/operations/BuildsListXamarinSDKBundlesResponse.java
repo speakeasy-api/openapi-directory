@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BuildsListXamarinSDKBundlesResponse {
     
     public String contentType;
+
     public BuildsListXamarinSDKBundlesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BuildsListXamarinSDKBundlesResponse {
     
     
     public Integer statusCode;
+
     public BuildsListXamarinSDKBundlesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BuildsListXamarinSDKBundlesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BuildsListXamarinSDKBundlesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BuildsListXamarinSDKBundlesResponse {
      */
     
     public BuildsListXamarinSDKBundles200ApplicationJSON[] buildsListXamarinSDKBundles200ApplicationJSONObjects;
+
     public BuildsListXamarinSDKBundlesResponse withBuildsListXamarinSDKBundles200ApplicationJSONObjects(BuildsListXamarinSDKBundles200ApplicationJSON[] buildsListXamarinSDKBundles200ApplicationJSONObjects) {
         this.buildsListXamarinSDKBundles200ApplicationJSONObjects = buildsListXamarinSDKBundles200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class BuildsListXamarinSDKBundlesResponse {
      */
     
     public BuildsListXamarinSDKBundlesDefaultApplicationJSON buildsListXamarinSDKBundlesDefaultApplicationJSONObject;
+
     public BuildsListXamarinSDKBundlesResponse withBuildsListXamarinSDKBundlesDefaultApplicationJSONObject(BuildsListXamarinSDKBundlesDefaultApplicationJSON buildsListXamarinSDKBundlesDefaultApplicationJSONObject) {
         this.buildsListXamarinSDKBundlesDefaultApplicationJSONObject = buildsListXamarinSDKBundlesDefaultApplicationJSONObject;
         return this;
     }
     
+    public BuildsListXamarinSDKBundlesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

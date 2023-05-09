@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DepthChartsResponse {
     
     public String contentType;
+
     public DepthChartsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DepthChartsResponse {
     
     
     public Integer statusCode;
+
     public DepthChartsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DepthChartsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DepthChartsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class DepthChartsResponse {
     
     
     public org.openapis.openapi.models.shared.TeamDepthChart[] teamDepthCharts;
+
     public DepthChartsResponse withTeamDepthCharts(org.openapis.openapi.models.shared.TeamDepthChart[] teamDepthCharts) {
         this.teamDepthCharts = teamDepthCharts;
         return this;
     }
     
+    public DepthChartsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

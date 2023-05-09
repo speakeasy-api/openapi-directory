@@ -18,6 +18,7 @@ public class CustomEventImpressionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CustomEventImpressionAnnotation withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class CustomEventImpressionAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathImpressionId")
     public String pathImpressionId;
+
     public CustomEventImpressionAnnotation withPathImpressionId(String pathImpressionId) {
         this.pathImpressionId = pathImpressionId;
         return this;
     }
     
+    public CustomEventImpressionAnnotation(){}
 }

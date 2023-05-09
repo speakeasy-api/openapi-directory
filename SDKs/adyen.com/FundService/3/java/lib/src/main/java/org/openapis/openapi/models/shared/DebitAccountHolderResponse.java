@@ -18,6 +18,7 @@ public class DebitAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public DebitAccountHolderResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -29,6 +30,7 @@ public class DebitAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public DebitAccountHolderResponse withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -40,6 +42,7 @@ public class DebitAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReferences")
     public String[] merchantReferences;
+
     public DebitAccountHolderResponse withMerchantReferences(String[] merchantReferences) {
         this.merchantReferences = merchantReferences;
         return this;
@@ -51,6 +54,7 @@ public class DebitAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public DebitAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -62,6 +66,7 @@ public class DebitAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public DebitAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -75,9 +80,11 @@ public class DebitAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public DebitAccountHolderResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public DebitAccountHolderResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetweatherzipcodeResponse {
     
     public String contentType;
+
     public GetweatherzipcodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetweatherzipcodeResponse {
     
     
     public Integer statusCode;
+
     public GetweatherzipcodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetweatherzipcodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetweatherzipcodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetweatherzipcodeResponse {
      */
     
     public Getweatherzipcode200ApplicationJSON getweatherzipcode200ApplicationJSONObject;
+
     public GetweatherzipcodeResponse withGetweatherzipcode200ApplicationJSONObject(Getweatherzipcode200ApplicationJSON getweatherzipcode200ApplicationJSONObject) {
         this.getweatherzipcode200ApplicationJSONObject = getweatherzipcode200ApplicationJSONObject;
         return this;
     }
     
+    public GetweatherzipcodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

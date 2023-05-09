@@ -16,6 +16,7 @@ public class ChannelCatalogListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add")
     public LinksAddChannelCatalogLink add;
+
     public ChannelCatalogListLinks withAdd(LinksAddChannelCatalogLink add) {
         this.add = add;
         return this;
@@ -24,6 +25,7 @@ public class ChannelCatalogListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPColumns")
     public ExternalLinksCatalogGetBeezUPColumnsLink beezUPColumns;
+
     public ChannelCatalogListLinks withBeezUPColumns(ExternalLinksCatalogGetBeezUPColumnsLink beezUPColumns) {
         this.beezUPColumns = beezUPColumns;
         return this;
@@ -32,6 +34,7 @@ public class ChannelCatalogListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterOperators")
     public LinksGetChannelCatalogFilterOperatorsLink filterOperators;
+
     public ChannelCatalogListLinks withFilterOperators(LinksGetChannelCatalogFilterOperatorsLink filterOperators) {
         this.filterOperators = filterOperators;
         return this;
@@ -40,9 +43,11 @@ public class ChannelCatalogListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetChannelCatalogsLink self;
+
     public ChannelCatalogListLinks withSelf(LinksGetChannelCatalogsLink self) {
         this.self = self;
         return this;
     }
     
+    public ChannelCatalogListLinks(){}
 }

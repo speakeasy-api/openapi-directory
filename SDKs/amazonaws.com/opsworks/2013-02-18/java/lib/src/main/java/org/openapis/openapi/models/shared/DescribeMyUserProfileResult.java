@@ -15,9 +15,11 @@ public class DescribeMyUserProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfile")
     public SelfUserProfile userProfile;
+
     public DescribeMyUserProfileResult withUserProfile(SelfUserProfile userProfile) {
         this.userProfile = userProfile;
         return this;
     }
     
+    public DescribeMyUserProfileResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse {
     
     public String contentType;
+
     public MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse {
     
     
     public Integer statusCode;
+
     public MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

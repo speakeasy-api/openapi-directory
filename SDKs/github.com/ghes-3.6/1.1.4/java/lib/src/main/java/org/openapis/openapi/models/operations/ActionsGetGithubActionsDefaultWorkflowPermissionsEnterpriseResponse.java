@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse {
     
     public String contentType;
+
     public ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse
     
     
     public Integer statusCode;
+
     public ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse
      */
     
     public org.openapis.openapi.models.shared.ActionsGetDefaultWorkflowPermissions actionsGetDefaultWorkflowPermissions;
+
     public ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse withActionsGetDefaultWorkflowPermissions(org.openapis.openapi.models.shared.ActionsGetDefaultWorkflowPermissions actionsGetDefaultWorkflowPermissions) {
         this.actionsGetDefaultWorkflowPermissions = actionsGetDefaultWorkflowPermissions;
         return this;
     }
     
+    public ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

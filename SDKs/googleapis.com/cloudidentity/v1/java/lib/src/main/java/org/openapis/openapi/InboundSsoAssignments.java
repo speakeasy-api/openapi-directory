@@ -61,11 +61,9 @@ public class InboundSsoAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsCreateResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class InboundSsoAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class InboundSsoAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsGetResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsGetResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsGetResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsGetResponse(contentType, httpRes.statusCode()) {{
             inboundSsoAssignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class InboundSsoAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsListResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsListResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsListResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsListResponse(contentType, httpRes.statusCode()) {{
             listInboundSsoAssignmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class InboundSsoAssignments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.CloudidentityInboundSsoAssignmentsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

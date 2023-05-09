@@ -149,4 +149,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ValidateResourcePolicyRespo
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationErrorsEntry.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateResourcePolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

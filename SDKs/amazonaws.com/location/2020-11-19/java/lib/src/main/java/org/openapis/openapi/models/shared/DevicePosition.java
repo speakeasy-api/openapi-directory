@@ -20,6 +20,7 @@ public class DevicePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accuracy")
     public PositionalAccuracy accuracy;
+
     public DevicePosition withAccuracy(PositionalAccuracy accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -28,6 +29,7 @@ public class DevicePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public DevicePosition withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -35,6 +37,7 @@ public class DevicePosition {
     
     @JsonProperty("Position")
     public Double[] position;
+
     public DevicePosition withPosition(Double[] position) {
         this.position = position;
         return this;
@@ -43,6 +46,7 @@ public class DevicePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionProperties")
     public java.util.Map<String, String> positionProperties;
+
     public DevicePosition withPositionProperties(java.util.Map<String, String> positionProperties) {
         this.positionProperties = positionProperties;
         return this;
@@ -52,6 +56,7 @@ public class DevicePosition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReceivedTime")
     public OffsetDateTime receivedTime;
+
     public DevicePosition withReceivedTime(OffsetDateTime receivedTime) {
         this.receivedTime = receivedTime;
         return this;
@@ -61,9 +66,15 @@ public class DevicePosition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SampleTime")
     public OffsetDateTime sampleTime;
+
     public DevicePosition withSampleTime(OffsetDateTime sampleTime) {
         this.sampleTime = sampleTime;
         return this;
     }
     
+    public DevicePosition(@JsonProperty("Position") Double[] position, @JsonProperty("ReceivedTime") OffsetDateTime receivedTime, @JsonProperty("SampleTime") OffsetDateTime sampleTime) {
+        this.position = position;
+        this.receivedTime = receivedTime;
+        this.sampleTime = sampleTime;
+  }
 }

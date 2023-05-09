@@ -15,6 +15,7 @@ public class ReferencePredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ReferencePredictorSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class ReferencePredictorSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public StateEnum state;
+
     public ReferencePredictorSummary withState(StateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ReferencePredictorSummary(){}
 }

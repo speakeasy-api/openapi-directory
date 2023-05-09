@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudresourcemanagerFoldersDeleteResponse {
     
     public String contentType;
+
     public CloudresourcemanagerFoldersDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudresourcemanagerFoldersDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.Folder folder;
+
     public CloudresourcemanagerFoldersDeleteResponse withFolder(org.openapis.openapi.models.shared.Folder folder) {
         this.folder = folder;
         return this;
@@ -26,6 +29,7 @@ public class CloudresourcemanagerFoldersDeleteResponse {
     
     
     public Integer statusCode;
+
     public CloudresourcemanagerFoldersDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudresourcemanagerFoldersDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudresourcemanagerFoldersDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudresourcemanagerFoldersDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

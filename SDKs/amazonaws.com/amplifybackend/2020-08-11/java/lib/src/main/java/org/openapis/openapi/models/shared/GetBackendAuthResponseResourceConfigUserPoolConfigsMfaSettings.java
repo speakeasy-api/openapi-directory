@@ -15,6 +15,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MfaTypes")
     public MfaTypesElementEnum[] mfaTypes;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings withMfaTypes(MfaTypesElementEnum[] mfaTypes) {
         this.mfaTypes = mfaTypes;
         return this;
@@ -23,9 +24,11 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsMessage")
     public String smsMessage;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings withSmsMessage(String smsMessage) {
         this.smsMessage = smsMessage;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsMfaSettings(){}
 }

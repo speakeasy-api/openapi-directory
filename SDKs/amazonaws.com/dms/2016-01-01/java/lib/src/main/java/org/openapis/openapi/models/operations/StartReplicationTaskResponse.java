@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartReplicationTaskResponse {
@@ -12,6 +13,7 @@ public class StartReplicationTaskResponse {
      */
     
     public Object accessDeniedFault;
+
     public StartReplicationTaskResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class StartReplicationTaskResponse {
     
     
     public String contentType;
+
     public StartReplicationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartReplicationTaskResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public StartReplicationTaskResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class StartReplicationTaskResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public StartReplicationTaskResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -49,6 +54,7 @@ public class StartReplicationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartReplicationTaskResponse startReplicationTaskResponse;
+
     public StartReplicationTaskResponse withStartReplicationTaskResponse(org.openapis.openapi.models.shared.StartReplicationTaskResponse startReplicationTaskResponse) {
         this.startReplicationTaskResponse = startReplicationTaskResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartReplicationTaskResponse {
     
     
     public Integer statusCode;
+
     public StartReplicationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartReplicationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartReplicationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartReplicationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

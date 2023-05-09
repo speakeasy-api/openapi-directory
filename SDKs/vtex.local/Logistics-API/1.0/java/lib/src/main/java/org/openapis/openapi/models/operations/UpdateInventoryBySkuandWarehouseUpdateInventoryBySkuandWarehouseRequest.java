@@ -17,6 +17,7 @@ public class UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateUtcOnBalanceSystem")
     public String dateUtcOnBalanceSystem;
+
     public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest withDateUtcOnBalanceSystem(String dateUtcOnBalanceSystem) {
         this.dateUtcOnBalanceSystem = dateUtcOnBalanceSystem;
         return this;
@@ -24,6 +25,7 @@ public class UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseReq
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -31,6 +33,7 @@ public class UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseReq
     
     @JsonProperty("timeToRefill (deprecated)")
     public String timeToRefillDeprecated;
+
     public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest withTimeToRefillDeprecated(String timeToRefillDeprecated) {
         this.timeToRefillDeprecated = timeToRefillDeprecated;
         return this;
@@ -38,9 +41,15 @@ public class UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseReq
     
     @JsonProperty("unlimitedQuantity")
     public Boolean unlimitedQuantity;
+
     public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest withUnlimitedQuantity(Boolean unlimitedQuantity) {
         this.unlimitedQuantity = unlimitedQuantity;
         return this;
     }
     
+    public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest(@JsonProperty("quantity") Integer quantity, @JsonProperty("timeToRefill (deprecated)") String timeToRefillDeprecated, @JsonProperty("unlimitedQuantity") Boolean unlimitedQuantity) {
+        this.quantity = quantity;
+        this.timeToRefillDeprecated = timeToRefillDeprecated;
+        this.unlimitedQuantity = unlimitedQuantity;
+  }
 }

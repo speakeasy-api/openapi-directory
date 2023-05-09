@@ -15,6 +15,7 @@ public class ListMailDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MailDomains")
     public MailDomainSummary[] mailDomains;
+
     public ListMailDomainsResponse withMailDomains(MailDomainSummary[] mailDomains) {
         this.mailDomains = mailDomains;
         return this;
@@ -23,9 +24,11 @@ public class ListMailDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMailDomainsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMailDomainsResponse(){}
 }

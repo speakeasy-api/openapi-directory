@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAliasesResponse {
     
     public String contentType;
+
     public ListAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAliasesResponse listAliasesResponse;
+
     public ListAliasesResponse withListAliasesResponse(org.openapis.openapi.models.shared.ListAliasesResponse listAliasesResponse) {
         this.listAliasesResponse = listAliasesResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListAliasesResponse {
      */
     
     public Object resourceNotFound;
+
     public ListAliasesResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class ListAliasesResponse {
     
     
     public Integer statusCode;
+
     public ListAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

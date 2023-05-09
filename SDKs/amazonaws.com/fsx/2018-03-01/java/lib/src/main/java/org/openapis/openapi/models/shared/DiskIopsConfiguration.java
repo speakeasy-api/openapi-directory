@@ -15,6 +15,7 @@ public class DiskIopsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public DiskIopsConfiguration withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -23,9 +24,11 @@ public class DiskIopsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public DiskIopsConfigurationModeEnum mode;
+
     public DiskIopsConfiguration withMode(DiskIopsConfigurationModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public DiskIopsConfiguration(){}
 }

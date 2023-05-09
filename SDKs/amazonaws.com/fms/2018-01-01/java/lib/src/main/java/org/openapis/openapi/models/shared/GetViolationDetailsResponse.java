@@ -15,9 +15,11 @@ public class GetViolationDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViolationDetail")
     public ViolationDetail violationDetail;
+
     public GetViolationDetailsResponse withViolationDetail(ViolationDetail violationDetail) {
         this.violationDetail = violationDetail;
         return this;
     }
     
+    public GetViolationDetailsResponse(){}
 }

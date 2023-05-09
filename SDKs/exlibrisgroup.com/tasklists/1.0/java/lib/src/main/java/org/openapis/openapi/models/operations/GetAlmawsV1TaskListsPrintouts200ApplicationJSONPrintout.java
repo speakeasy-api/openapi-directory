@@ -25,6 +25,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -36,6 +37,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +49,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("letter")
     public String letter;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withLetter(String letter) {
         this.letter = letter;
         return this;
@@ -55,6 +58,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withLink(String link) {
         this.link = link;
         return this;
@@ -66,6 +70,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printer")
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintoutPrinter printer;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withPrinter(GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintoutPrinter printer) {
         this.printer = printer;
         return this;
@@ -77,6 +82,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printout")
     public String printout;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withPrintout(String printout) {
         this.printout = printout;
         return this;
@@ -88,6 +94,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withSize(String size) {
         this.size = size;
         return this;
@@ -99,6 +106,7 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withSource(String source) {
         this.source = source;
         return this;
@@ -110,9 +118,11 @@ public class GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintoutStatus status;
+
     public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout withStatus(GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintoutStatus status) {
         this.status = status;
         return this;
     }
     
+    public GetAlmawsV1TaskListsPrintouts200ApplicationJSONPrintout(){}
 }

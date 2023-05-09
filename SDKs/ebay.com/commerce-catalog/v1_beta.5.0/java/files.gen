@@ -45,4 +45,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Refinement.java
 lib/src/main/java/org/openapis/openapi/models/shared/AspectDistribution.java
 lib/src/main/java/org/openapis/openapi/models/shared/AspectValueDistribution.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProductSummary.java
+docs/sdk/README.md
+docs/product/README.md
+docs/productsummary/README.md
 USAGE.md

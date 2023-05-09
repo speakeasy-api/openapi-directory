@@ -15,9 +15,11 @@ public class TimeoutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inProgressTimeoutInMinutes")
     public Long inProgressTimeoutInMinutes;
+
     public TimeoutConfig withInProgressTimeoutInMinutes(Long inProgressTimeoutInMinutes) {
         this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
         return this;
     }
     
+    public TimeoutConfig(){}
 }

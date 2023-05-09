@@ -15,6 +15,7 @@ public class UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CampaignHook")
     public org.openapis.openapi.models.shared.CampaignHook campaignHook;
+
     public UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest withCampaignHook(org.openapis.openapi.models.shared.CampaignHook campaignHook) {
         this.campaignHook = campaignHook;
         return this;
@@ -23,6 +24,7 @@ public class UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchMetricsEnabled")
     public Boolean cloudWatchMetricsEnabled;
+
     public UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest withCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         return this;
@@ -31,6 +33,7 @@ public class UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTaggingEnabled")
     public Boolean eventTaggingEnabled;
+
     public UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest withEventTaggingEnabled(Boolean eventTaggingEnabled) {
         this.eventTaggingEnabled = eventTaggingEnabled;
         return this;
@@ -39,6 +42,7 @@ public class UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limits")
     public org.openapis.openapi.models.shared.CampaignLimits limits;
+
     public UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest withLimits(org.openapis.openapi.models.shared.CampaignLimits limits) {
         this.limits = limits;
         return this;
@@ -47,9 +51,11 @@ public class UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuietTime")
     public org.openapis.openapi.models.shared.QuietTime quietTime;
+
     public UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest withQuietTime(org.openapis.openapi.models.shared.QuietTime quietTime) {
         this.quietTime = quietTime;
         return this;
     }
     
+    public UpdateApplicationSettingsRequestBodyWriteApplicationSettingsRequest(){}
 }

@@ -15,9 +15,11 @@ public class UpdateInputResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfiguration")
     public InputConfiguration inputConfiguration;
+
     public UpdateInputResponse withInputConfiguration(InputConfiguration inputConfiguration) {
         this.inputConfiguration = inputConfiguration;
         return this;
     }
     
+    public UpdateInputResponse(){}
 }

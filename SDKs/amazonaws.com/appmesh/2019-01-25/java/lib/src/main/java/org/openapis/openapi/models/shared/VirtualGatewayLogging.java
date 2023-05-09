@@ -15,9 +15,11 @@ public class VirtualGatewayLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLog")
     public VirtualGatewayAccessLog accessLog;
+
     public VirtualGatewayLogging withAccessLog(VirtualGatewayAccessLog accessLog) {
         this.accessLog = accessLog;
         return this;
     }
     
+    public VirtualGatewayLogging(){}
 }

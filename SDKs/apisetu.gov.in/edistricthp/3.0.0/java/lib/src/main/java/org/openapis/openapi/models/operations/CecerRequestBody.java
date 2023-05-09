@@ -15,6 +15,7 @@ public class CecerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public CecerRequestBodyCertificateParameters certificateParameters;
+
     public CecerRequestBody withCertificateParameters(CecerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class CecerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public CecerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class CecerRequestBody {
      */
     @JsonProperty("format")
     public CecerRequestBodyFormatEnum format;
+
     public CecerRequestBody withFormat(CecerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class CecerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public CecerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public CecerRequestBody(@JsonProperty("format") CecerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

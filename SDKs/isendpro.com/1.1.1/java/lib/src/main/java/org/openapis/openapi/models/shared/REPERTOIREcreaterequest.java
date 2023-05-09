@@ -15,6 +15,7 @@ public class REPERTOIREcreaterequest {
      */
     @JsonProperty("keyid")
     public String keyid;
+
     public REPERTOIREcreaterequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -25,6 +26,7 @@ public class REPERTOIREcreaterequest {
      */
     @JsonProperty("repertoireEdit")
     public REPERTOIREcreaterequestRepertoireEditEnum repertoireEdit;
+
     public REPERTOIREcreaterequest withRepertoireEdit(REPERTOIREcreaterequestRepertoireEditEnum repertoireEdit) {
         this.repertoireEdit = repertoireEdit;
         return this;
@@ -35,9 +37,15 @@ public class REPERTOIREcreaterequest {
      */
     @JsonProperty("repertoireNom")
     public String repertoireNom;
+
     public REPERTOIREcreaterequest withRepertoireNom(String repertoireNom) {
         this.repertoireNom = repertoireNom;
         return this;
     }
     
+    public REPERTOIREcreaterequest(@JsonProperty("keyid") String keyid, @JsonProperty("repertoireEdit") REPERTOIREcreaterequestRepertoireEditEnum repertoireEdit, @JsonProperty("repertoireNom") String repertoireNom) {
+        this.keyid = keyid;
+        this.repertoireEdit = repertoireEdit;
+        this.repertoireNom = repertoireNom;
+  }
 }

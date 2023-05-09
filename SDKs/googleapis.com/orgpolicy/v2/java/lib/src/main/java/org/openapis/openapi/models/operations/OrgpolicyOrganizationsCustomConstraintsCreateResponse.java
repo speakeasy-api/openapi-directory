@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgpolicyOrganizationsCustomConstraintsCreateResponse {
     
     public String contentType;
+
     public OrgpolicyOrganizationsCustomConstraintsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrgpolicyOrganizationsCustomConstraintsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudOrgpolicyV2CustomConstraint googleCloudOrgpolicyV2CustomConstraint;
+
     public OrgpolicyOrganizationsCustomConstraintsCreateResponse withGoogleCloudOrgpolicyV2CustomConstraint(org.openapis.openapi.models.shared.GoogleCloudOrgpolicyV2CustomConstraint googleCloudOrgpolicyV2CustomConstraint) {
         this.googleCloudOrgpolicyV2CustomConstraint = googleCloudOrgpolicyV2CustomConstraint;
         return this;
@@ -26,6 +29,7 @@ public class OrgpolicyOrganizationsCustomConstraintsCreateResponse {
     
     
     public Integer statusCode;
+
     public OrgpolicyOrganizationsCustomConstraintsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OrgpolicyOrganizationsCustomConstraintsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgpolicyOrganizationsCustomConstraintsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrgpolicyOrganizationsCustomConstraintsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

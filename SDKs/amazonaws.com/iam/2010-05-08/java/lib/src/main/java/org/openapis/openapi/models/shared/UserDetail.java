@@ -15,6 +15,7 @@ public class UserDetail {
      */
     
     public String arn;
+
     public UserDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class UserDetail {
     
     
     public AttachedPolicy[] attachedManagedPolicies;
+
     public UserDetail withAttachedManagedPolicies(AttachedPolicy[] attachedManagedPolicies) {
         this.attachedManagedPolicies = attachedManagedPolicies;
         return this;
@@ -29,6 +31,7 @@ public class UserDetail {
     
     
     public OffsetDateTime createDate;
+
     public UserDetail withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -36,6 +39,7 @@ public class UserDetail {
     
     
     public String[] groupList;
+
     public UserDetail withGroupList(String[] groupList) {
         this.groupList = groupList;
         return this;
@@ -43,6 +47,7 @@ public class UserDetail {
     
     
     public String path;
+
     public UserDetail withPath(String path) {
         this.path = path;
         return this;
@@ -50,6 +55,7 @@ public class UserDetail {
     
     
     public AttachedPermissionsBoundary permissionsBoundary;
+
     public UserDetail withPermissionsBoundary(AttachedPermissionsBoundary permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -57,6 +63,7 @@ public class UserDetail {
     
     
     public Tag[] tags;
+
     public UserDetail withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -64,6 +71,7 @@ public class UserDetail {
     
     
     public String userId;
+
     public UserDetail withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -71,6 +79,7 @@ public class UserDetail {
     
     
     public String userName;
+
     public UserDetail withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -78,9 +87,11 @@ public class UserDetail {
     
     
     public PolicyDetail[] userPolicyList;
+
     public UserDetail withUserPolicyList(PolicyDetail[] userPolicyList) {
         this.userPolicyList = userPolicyList;
         return this;
     }
     
+    public UserDetail(){}
 }

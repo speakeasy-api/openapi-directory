@@ -15,9 +15,11 @@ public class DeleteBillingGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DeleteBillingGroupOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteBillingGroupOutput(){}
 }

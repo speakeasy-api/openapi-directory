@@ -15,6 +15,7 @@ public class SendMessageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public SendMessageRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody {
      */
     @JsonProperty("Content")
     public String content;
+
     public SendMessageRequestBody withContent(String content) {
         this.content = content;
         return this;
@@ -35,9 +37,14 @@ public class SendMessageRequestBody {
      */
     @JsonProperty("ContentType")
     public String contentType;
+
     public SendMessageRequestBody withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public SendMessageRequestBody(@JsonProperty("Content") String content, @JsonProperty("ContentType") String contentType) {
+        this.content = content;
+        this.contentType = contentType;
+  }
 }

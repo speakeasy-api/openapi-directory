@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionControllerGetSessionInfoRequest {
@@ -12,6 +13,7 @@ public class SessionControllerGetSessionInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public SessionControllerGetSessionInfoRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -22,9 +24,14 @@ public class SessionControllerGetSessionInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public SessionControllerGetSessionInfoRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public SessionControllerGetSessionInfoRequest(@JsonProperty("shortName") String shortName, @JsonProperty("token") String token) {
+        this.shortName = shortName;
+        this.token = token;
+  }
 }

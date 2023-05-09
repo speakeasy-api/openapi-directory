@@ -57,11 +57,9 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse res = new org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse() {{
+        org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse res = new org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -99,12 +97,10 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse(contentType, httpRes.statusCode()) {{
             cardResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse res = new org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse() {{
+        org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse res = new org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse(contentType, httpRes.statusCode()) {{
             cardListResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,12 +194,10 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse res = new org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse res = new org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse(contentType, httpRes.statusCode()) {{
             cardResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,12 +245,10 @@ public class Cards {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateResponse res = new org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateResponse() {{
+        org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateResponse res = new org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateResponse(contentType, httpRes.statusCode()) {{
             cardResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

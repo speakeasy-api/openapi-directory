@@ -15,6 +15,7 @@ public class DriftCheckModelQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Constraints")
     public MetricsSource constraints;
+
     public DriftCheckModelQuality withConstraints(MetricsSource constraints) {
         this.constraints = constraints;
         return this;
@@ -23,9 +24,11 @@ public class DriftCheckModelQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistics")
     public MetricsSource statistics;
+
     public DriftCheckModelQuality withStatistics(MetricsSource statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public DriftCheckModelQuality(){}
 }

@@ -18,6 +18,7 @@ public class ClientUserInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAccountId")
     public String clientAccountId;
+
     public ClientUserInvitation withClientAccountId(String clientAccountId) {
         this.clientAccountId = clientAccountId;
         return this;
@@ -29,6 +30,7 @@ public class ClientUserInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ClientUserInvitation withEmail(String email) {
         this.email = email;
         return this;
@@ -40,9 +42,11 @@ public class ClientUserInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitationId")
     public String invitationId;
+
     public ClientUserInvitation withInvitationId(String invitationId) {
         this.invitationId = invitationId;
         return this;
     }
     
+    public ClientUserInvitation(){}
 }

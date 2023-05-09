@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAccountSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String accountAuth;
+
     public DeleteAccountSecurity withAccountAuth(String accountAuth) {
         this.accountAuth = accountAuth;
         return this;
     }
     
+    public DeleteAccountSecurity(@JsonProperty("accountAuth") String accountAuth) {
+        this.accountAuth = accountAuth;
+  }
 }

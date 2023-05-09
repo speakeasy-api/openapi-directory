@@ -18,6 +18,7 @@ public class GetDataSourceIndexStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageIndexedItemCount")
     public String averageIndexedItemCount;
+
     public GetDataSourceIndexStatsResponse withAverageIndexedItemCount(String averageIndexedItemCount) {
         this.averageIndexedItemCount = averageIndexedItemCount;
         return this;
@@ -29,9 +30,11 @@ public class GetDataSourceIndexStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public DataSourceIndexStats[] stats;
+
     public GetDataSourceIndexStatsResponse withStats(DataSourceIndexStats[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public GetDataSourceIndexStatsResponse(){}
 }

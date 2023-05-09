@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class GetServiceLastAccessedDetailsWithEntitiesResponse {
     
     public EntityDetails[] entityDetailsList;
+
     public GetServiceLastAccessedDetailsWithEntitiesResponse withEntityDetailsList(EntityDetails[] entityDetailsList) {
         this.entityDetailsList = entityDetailsList;
         return this;
@@ -19,6 +21,7 @@ public class GetServiceLastAccessedDetailsWithEntitiesResponse {
     
     
     public ErrorDetails error;
+
     public GetServiceLastAccessedDetailsWithEntitiesResponse withError(ErrorDetails error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetServiceLastAccessedDetailsWithEntitiesResponse {
     
     
     public Boolean isTruncated;
+
     public GetServiceLastAccessedDetailsWithEntitiesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -33,6 +37,7 @@ public class GetServiceLastAccessedDetailsWithEntitiesResponse {
     
     
     public OffsetDateTime jobCompletionDate;
+
     public GetServiceLastAccessedDetailsWithEntitiesResponse withJobCompletionDate(OffsetDateTime jobCompletionDate) {
         this.jobCompletionDate = jobCompletionDate;
         return this;
@@ -40,6 +45,7 @@ public class GetServiceLastAccessedDetailsWithEntitiesResponse {
     
     
     public OffsetDateTime jobCreationDate;
+
     public GetServiceLastAccessedDetailsWithEntitiesResponse withJobCreationDate(OffsetDateTime jobCreationDate) {
         this.jobCreationDate = jobCreationDate;
         return this;
@@ -47,6 +53,7 @@ public class GetServiceLastAccessedDetailsWithEntitiesResponse {
     
     
     public JobStatusTypeEnum jobStatus;
+
     public GetServiceLastAccessedDetailsWithEntitiesResponse withJobStatus(JobStatusTypeEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -54,9 +61,16 @@ public class GetServiceLastAccessedDetailsWithEntitiesResponse {
     
     
     public String marker;
+
     public GetServiceLastAccessedDetailsWithEntitiesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public GetServiceLastAccessedDetailsWithEntitiesResponse(@JsonProperty("EntityDetailsList") EntityDetails[] entityDetailsList, @JsonProperty("JobCompletionDate") OffsetDateTime jobCompletionDate, @JsonProperty("JobCreationDate") OffsetDateTime jobCreationDate, @JsonProperty("JobStatus") JobStatusTypeEnum jobStatus) {
+        this.entityDetailsList = entityDetailsList;
+        this.jobCompletionDate = jobCompletionDate;
+        this.jobCreationDate = jobCreationDate;
+        this.jobStatus = jobStatus;
+  }
 }

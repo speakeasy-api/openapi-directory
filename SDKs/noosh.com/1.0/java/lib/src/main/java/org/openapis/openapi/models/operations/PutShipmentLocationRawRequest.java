@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutShipmentLocationRawRequest {
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public PutShipmentLocationRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PutShipmentLocationRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public PutShipmentLocationRawRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -23,6 +26,7 @@ public class PutShipmentLocationRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public PutShipmentLocationRawRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -30,6 +34,7 @@ public class PutShipmentLocationRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipment_id")
     public String shipmentId;
+
     public PutShipmentLocationRawRequest withShipmentId(String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
@@ -37,9 +42,16 @@ public class PutShipmentLocationRawRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public PutShipmentLocationRawRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public PutShipmentLocationRawRequest(@JsonProperty("location_id") String locationId, @JsonProperty("project_id") String projectId, @JsonProperty("shipment_id") String shipmentId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.locationId = locationId;
+        this.projectId = projectId;
+        this.shipmentId = shipmentId;
+        this.workgroupId = workgroupId;
+  }
 }

@@ -18,6 +18,7 @@ public class DimensionDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public DimensionDimensionValue withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class DimensionDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DimensionDimensionValue withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class DimensionDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public DimensionDimensionValue withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public DimensionDimensionValue(){}
 }

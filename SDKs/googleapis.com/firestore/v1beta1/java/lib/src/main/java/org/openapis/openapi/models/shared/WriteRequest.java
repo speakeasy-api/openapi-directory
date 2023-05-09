@@ -18,6 +18,7 @@ public class WriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public WriteRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,6 +30,7 @@ public class WriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public WriteRequest withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -40,6 +42,7 @@ public class WriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamToken")
     public String streamToken;
+
     public WriteRequest withStreamToken(String streamToken) {
         this.streamToken = streamToken;
         return this;
@@ -51,9 +54,11 @@ public class WriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writes")
     public Write[] writes;
+
     public WriteRequest withWrites(Write[] writes) {
         this.writes = writes;
         return this;
     }
     
+    public WriteRequest(){}
 }

@@ -15,6 +15,7 @@ public class CodePushDeploymentUploadCreate200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public CodePushDeploymentUploadCreate200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class CodePushDeploymentUploadCreate200ApplicationJSON {
      */
     @JsonProperty("token")
     public String token;
+
     public CodePushDeploymentUploadCreate200ApplicationJSON withToken(String token) {
         this.token = token;
         return this;
@@ -35,9 +37,15 @@ public class CodePushDeploymentUploadCreate200ApplicationJSON {
      */
     @JsonProperty("upload_domain")
     public String uploadDomain;
+
     public CodePushDeploymentUploadCreate200ApplicationJSON withUploadDomain(String uploadDomain) {
         this.uploadDomain = uploadDomain;
         return this;
     }
     
+    public CodePushDeploymentUploadCreate200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("token") String token, @JsonProperty("upload_domain") String uploadDomain) {
+        this.id = id;
+        this.token = token;
+        this.uploadDomain = uploadDomain;
+  }
 }

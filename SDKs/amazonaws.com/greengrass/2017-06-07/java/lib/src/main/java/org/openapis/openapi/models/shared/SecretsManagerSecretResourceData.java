@@ -15,6 +15,7 @@ public class SecretsManagerSecretResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public SecretsManagerSecretResourceData withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class SecretsManagerSecretResourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalStagingLabelsToDownload")
     public String[] additionalStagingLabelsToDownload;
+
     public SecretsManagerSecretResourceData withAdditionalStagingLabelsToDownload(String[] additionalStagingLabelsToDownload) {
         this.additionalStagingLabelsToDownload = additionalStagingLabelsToDownload;
         return this;
     }
     
+    public SecretsManagerSecretResourceData(){}
 }

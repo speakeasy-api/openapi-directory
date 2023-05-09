@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DnsOptionsSpecification {
     
     public DnsRecordIpTypeEnum dnsRecordIpType;
+
     public DnsOptionsSpecification withDnsRecordIpType(DnsRecordIpTypeEnum dnsRecordIpType) {
         this.dnsRecordIpType = dnsRecordIpType;
         return this;
@@ -19,9 +20,11 @@ public class DnsOptionsSpecification {
     
     
     public Boolean privateDnsOnlyForInboundResolverEndpoint;
+
     public DnsOptionsSpecification withPrivateDnsOnlyForInboundResolverEndpoint(Boolean privateDnsOnlyForInboundResolverEndpoint) {
         this.privateDnsOnlyForInboundResolverEndpoint = privateDnsOnlyForInboundResolverEndpoint;
         return this;
     }
     
+    public DnsOptionsSpecification(){}
 }

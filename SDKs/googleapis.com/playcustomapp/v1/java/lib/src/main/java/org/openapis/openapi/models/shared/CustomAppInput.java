@@ -15,6 +15,7 @@ public class CustomAppInput {
      */
     
     public String languageCode;
+
     public CustomAppInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -25,6 +26,7 @@ public class CustomAppInput {
      */
     
     public Organization[] organizations;
+
     public CustomAppInput withOrganizations(Organization[] organizations) {
         this.organizations = organizations;
         return this;
@@ -35,9 +37,11 @@ public class CustomAppInput {
      */
     
     public String title;
+
     public CustomAppInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CustomAppInput(){}
 }

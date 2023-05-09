@@ -15,6 +15,7 @@ public class RouterType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public RouterType withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -23,6 +24,7 @@ public class RouterType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routerTypeIdentifier")
     public String routerTypeIdentifier;
+
     public RouterType withRouterTypeIdentifier(String routerTypeIdentifier) {
         this.routerTypeIdentifier = routerTypeIdentifier;
         return this;
@@ -31,6 +33,7 @@ public class RouterType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("software")
     public String software;
+
     public RouterType withSoftware(String software) {
         this.software = software;
         return this;
@@ -39,6 +42,7 @@ public class RouterType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public RouterType withVendor(String vendor) {
         this.vendor = vendor;
         return this;
@@ -47,6 +51,7 @@ public class RouterType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xsltTemplateName")
     public String xsltTemplateName;
+
     public RouterType withXsltTemplateName(String xsltTemplateName) {
         this.xsltTemplateName = xsltTemplateName;
         return this;
@@ -55,9 +60,11 @@ public class RouterType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xsltTemplateNameForMacSec")
     public String xsltTemplateNameForMacSec;
+
     public RouterType withXsltTemplateNameForMacSec(String xsltTemplateNameForMacSec) {
         this.xsltTemplateNameForMacSec = xsltTemplateNameForMacSec;
         return this;
     }
     
+    public RouterType(){}
 }

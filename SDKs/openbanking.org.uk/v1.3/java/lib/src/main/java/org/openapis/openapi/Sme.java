@@ -63,7 +63,7 @@ public class Sme {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUnsecuredSmeLoansResponse res = new org.openapis.openapi.models.operations.GetUnsecuredSmeLoansResponse() {{
+        org.openapis.openapi.models.operations.GetUnsecuredSmeLoansResponse res = new org.openapis.openapi.models.operations.GetUnsecuredSmeLoansResponse(contentType, httpRes.statusCode()) {{
             getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = null;
             fourHundredErrorObject = null;
             fourHundredAndEightErrorObject = null;
@@ -72,8 +72,6 @@ public class Sme {
             fiveHundredAndThreeErrorObject = null;
             errorObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +169,9 @@ public class Sme {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadUnsecuredSmeLoansResponse res = new org.openapis.openapi.models.operations.HeadUnsecuredSmeLoansResponse() {{
+        org.openapis.openapi.models.operations.HeadUnsecuredSmeLoansResponse res = new org.openapis.openapi.models.operations.HeadUnsecuredSmeLoansResponse(contentType, httpRes.statusCode()) {{
             noResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

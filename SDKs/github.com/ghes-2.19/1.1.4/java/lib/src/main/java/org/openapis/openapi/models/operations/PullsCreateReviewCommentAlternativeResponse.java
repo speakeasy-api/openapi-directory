@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsCreateReviewCommentAlternativeResponse {
     
     public String contentType;
+
     public PullsCreateReviewCommentAlternativeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsCreateReviewCommentAlternativeResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PullsCreateReviewCommentAlternativeResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PullsCreateReviewCommentAlternativeResponse {
     
     
     public Integer statusCode;
+
     public PullsCreateReviewCommentAlternativeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PullsCreateReviewCommentAlternativeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsCreateReviewCommentAlternativeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PullsCreateReviewCommentAlternativeResponse {
      */
     
     public org.openapis.openapi.models.shared.LegacyReviewComment legacyReviewComment;
+
     public PullsCreateReviewCommentAlternativeResponse withLegacyReviewComment(org.openapis.openapi.models.shared.LegacyReviewComment legacyReviewComment) {
         this.legacyReviewComment = legacyReviewComment;
         return this;
     }
     
+    public PullsCreateReviewCommentAlternativeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAnomalySubscriptionsResponse {
     @JsonProperty("AnomalySubscriptions")
     public AnomalySubscription[] anomalySubscriptions;
+
     public GetAnomalySubscriptionsResponse withAnomalySubscriptions(AnomalySubscription[] anomalySubscriptions) {
         this.anomalySubscriptions = anomalySubscriptions;
         return this;
@@ -22,9 +23,13 @@ public class GetAnomalySubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetAnomalySubscriptionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetAnomalySubscriptionsResponse(@JsonProperty("AnomalySubscriptions") AnomalySubscription[] anomalySubscriptions) {
+        this.anomalySubscriptions = anomalySubscriptions;
+  }
 }

@@ -15,6 +15,7 @@ public class GetBackendAPIResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAuthTypes")
     public BackendAPIAuthType[] additionalAuthTypes;
+
     public GetBackendAPIResponseResourceConfig withAdditionalAuthTypes(BackendAPIAuthType[] additionalAuthTypes) {
         this.additionalAuthTypes = additionalAuthTypes;
         return this;
@@ -23,6 +24,7 @@ public class GetBackendAPIResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiName")
     public String apiName;
+
     public GetBackendAPIResponseResourceConfig withApiName(String apiName) {
         this.apiName = apiName;
         return this;
@@ -31,6 +33,7 @@ public class GetBackendAPIResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConflictResolution")
     public GetBackendAPIResponseResourceConfigConflictResolution conflictResolution;
+
     public GetBackendAPIResponseResourceConfig withConflictResolution(GetBackendAPIResponseResourceConfigConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -39,6 +42,7 @@ public class GetBackendAPIResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAuthType")
     public GetBackendAPIResponseResourceConfigDefaultAuthType defaultAuthType;
+
     public GetBackendAPIResponseResourceConfig withDefaultAuthType(GetBackendAPIResponseResourceConfigDefaultAuthType defaultAuthType) {
         this.defaultAuthType = defaultAuthType;
         return this;
@@ -47,6 +51,7 @@ public class GetBackendAPIResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public GetBackendAPIResponseResourceConfig withService(String service) {
         this.service = service;
         return this;
@@ -55,9 +60,11 @@ public class GetBackendAPIResponseResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformSchema")
     public String transformSchema;
+
     public GetBackendAPIResponseResourceConfig withTransformSchema(String transformSchema) {
         this.transformSchema = transformSchema;
         return this;
     }
     
+    public GetBackendAPIResponseResourceConfig(){}
 }

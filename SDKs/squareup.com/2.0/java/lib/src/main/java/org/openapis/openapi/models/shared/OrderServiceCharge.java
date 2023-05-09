@@ -23,6 +23,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public OrderServiceCharge withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -39,6 +40,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderServiceCharge withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -61,6 +63,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_taxes")
     public OrderLineItemAppliedTax[] appliedTaxes;
+
     public OrderServiceCharge withAppliedTaxes(OrderLineItemAppliedTax[] appliedTaxes) {
         this.appliedTaxes = appliedTaxes;
         return this;
@@ -72,6 +75,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculation_phase")
     public String calculationPhase;
+
     public OrderServiceCharge withCalculationPhase(String calculationPhase) {
         this.calculationPhase = calculationPhase;
         return this;
@@ -83,6 +87,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderServiceCharge withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -94,6 +99,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderServiceCharge withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -122,6 +128,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public OrderServiceCharge withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -133,6 +140,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderServiceCharge withName(String name) {
         this.name = name;
         return this;
@@ -147,6 +155,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public OrderServiceCharge withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -160,6 +169,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxable")
     public Boolean taxable;
+
     public OrderServiceCharge withTaxable(Boolean taxable) {
         this.taxable = taxable;
         return this;
@@ -176,6 +186,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public Money totalMoney;
+
     public OrderServiceCharge withTotalMoney(Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
@@ -192,6 +203,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_tax_money")
     public Money totalTaxMoney;
+
     public OrderServiceCharge withTotalTaxMoney(Money totalTaxMoney) {
         this.totalTaxMoney = totalTaxMoney;
         return this;
@@ -203,6 +215,7 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public OrderServiceCharge withType(String type) {
         this.type = type;
         return this;
@@ -214,9 +227,11 @@ public class OrderServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderServiceCharge withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderServiceCharge(){}
 }

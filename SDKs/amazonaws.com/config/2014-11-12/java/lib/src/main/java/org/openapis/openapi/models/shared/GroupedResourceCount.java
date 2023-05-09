@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GroupedResourceCount {
     @JsonProperty("GroupName")
     public String groupName;
+
     public GroupedResourceCount withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -19,9 +20,14 @@ public class GroupedResourceCount {
     
     @JsonProperty("ResourceCount")
     public Long resourceCount;
+
     public GroupedResourceCount withResourceCount(Long resourceCount) {
         this.resourceCount = resourceCount;
         return this;
     }
     
+    public GroupedResourceCount(@JsonProperty("GroupName") String groupName, @JsonProperty("ResourceCount") Long resourceCount) {
+        this.groupName = groupName;
+        this.resourceCount = resourceCount;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SelectResourceConfigRequest {
     @JsonProperty("Expression")
     public String expression;
+
     public SelectResourceConfigRequest withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -19,6 +20,7 @@ public class SelectResourceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public SelectResourceConfigRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,9 +29,13 @@ public class SelectResourceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SelectResourceConfigRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SelectResourceConfigRequest(@JsonProperty("Expression") String expression) {
+        this.expression = expression;
+  }
 }

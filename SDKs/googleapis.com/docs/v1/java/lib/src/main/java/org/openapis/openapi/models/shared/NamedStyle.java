@@ -18,6 +18,7 @@ public class NamedStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedStyleType")
     public NamedStyleNamedStyleTypeEnum namedStyleType;
+
     public NamedStyle withNamedStyleType(NamedStyleNamedStyleTypeEnum namedStyleType) {
         this.namedStyleType = namedStyleType;
         return this;
@@ -29,6 +30,7 @@ public class NamedStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraphStyle")
     public ParagraphStyle paragraphStyle;
+
     public NamedStyle withParagraphStyle(ParagraphStyle paragraphStyle) {
         this.paragraphStyle = paragraphStyle;
         return this;
@@ -40,9 +42,11 @@ public class NamedStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public NamedStyle withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public NamedStyle(){}
 }

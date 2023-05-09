@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobDebugInfoRead {
     @JsonProperty("attempts")
     public AttemptInfoRead[] attempts;
+
     public JobDebugInfoRead withAttempts(AttemptInfoRead[] attempts) {
         this.attempts = attempts;
         return this;
@@ -21,6 +22,7 @@ public class JobDebugInfoRead {
     
     @JsonProperty("job")
     public JobDebugRead job;
+
     public JobDebugInfoRead withJob(JobDebugRead job) {
         this.job = job;
         return this;
@@ -29,9 +31,14 @@ public class JobDebugInfoRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowState")
     public WorkflowStateRead workflowState;
+
     public JobDebugInfoRead withWorkflowState(WorkflowStateRead workflowState) {
         this.workflowState = workflowState;
         return this;
     }
     
+    public JobDebugInfoRead(@JsonProperty("attempts") AttemptInfoRead[] attempts, @JsonProperty("job") JobDebugRead job) {
+        this.attempts = attempts;
+        this.job = job;
+  }
 }

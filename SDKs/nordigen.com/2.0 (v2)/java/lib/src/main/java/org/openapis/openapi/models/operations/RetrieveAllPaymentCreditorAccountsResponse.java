@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveAllPaymentCreditorAccountsResponse {
     
     public String contentType;
+
     public RetrieveAllPaymentCreditorAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveAllPaymentCreditorAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreditorAccount[] creditorAccounts;
+
     public RetrieveAllPaymentCreditorAccountsResponse withCreditorAccounts(org.openapis.openapi.models.shared.CreditorAccount[] creditorAccounts) {
         this.creditorAccounts = creditorAccounts;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveAllPaymentCreditorAccountsResponse {
     
     
     public Integer statusCode;
+
     public RetrieveAllPaymentCreditorAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveAllPaymentCreditorAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveAllPaymentCreditorAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveAllPaymentCreditorAccountsResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllPaymentCreditorAccounts400ApplicationJSONObject;
+
     public RetrieveAllPaymentCreditorAccountsResponse withRetrieveAllPaymentCreditorAccounts400ApplicationJSONObject(java.util.Map<String, Object> retrieveAllPaymentCreditorAccounts400ApplicationJSONObject) {
         this.retrieveAllPaymentCreditorAccounts400ApplicationJSONObject = retrieveAllPaymentCreditorAccounts400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveAllPaymentCreditorAccountsResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllPaymentCreditorAccounts401ApplicationJSONObject;
+
     public RetrieveAllPaymentCreditorAccountsResponse withRetrieveAllPaymentCreditorAccounts401ApplicationJSONObject(java.util.Map<String, Object> retrieveAllPaymentCreditorAccounts401ApplicationJSONObject) {
         this.retrieveAllPaymentCreditorAccounts401ApplicationJSONObject = retrieveAllPaymentCreditorAccounts401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class RetrieveAllPaymentCreditorAccountsResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllPaymentCreditorAccounts403ApplicationJSONObject;
+
     public RetrieveAllPaymentCreditorAccountsResponse withRetrieveAllPaymentCreditorAccounts403ApplicationJSONObject(java.util.Map<String, Object> retrieveAllPaymentCreditorAccounts403ApplicationJSONObject) {
         this.retrieveAllPaymentCreditorAccounts403ApplicationJSONObject = retrieveAllPaymentCreditorAccounts403ApplicationJSONObject;
         return this;
     }
     
+    public RetrieveAllPaymentCreditorAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

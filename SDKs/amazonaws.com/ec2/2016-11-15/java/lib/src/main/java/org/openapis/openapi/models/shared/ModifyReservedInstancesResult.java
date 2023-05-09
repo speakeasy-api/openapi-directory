@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyReservedInstancesResult {
     
     public String reservedInstancesModificationId;
+
     public ModifyReservedInstancesResult withReservedInstancesModificationId(String reservedInstancesModificationId) {
         this.reservedInstancesModificationId = reservedInstancesModificationId;
         return this;
     }
     
+    public ModifyReservedInstancesResult(){}
 }

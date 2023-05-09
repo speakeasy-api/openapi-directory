@@ -21,6 +21,7 @@ public class GetServiceGraphRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetServiceGraphRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class GetServiceGraphRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupARN")
     public String groupARN;
+
     public GetServiceGraphRequestBody withGroupARN(String groupARN) {
         this.groupARN = groupARN;
         return this;
@@ -43,6 +45,7 @@ public class GetServiceGraphRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public GetServiceGraphRequestBody withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -54,6 +57,7 @@ public class GetServiceGraphRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetServiceGraphRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -66,9 +70,14 @@ public class GetServiceGraphRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetServiceGraphRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetServiceGraphRequestBody(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

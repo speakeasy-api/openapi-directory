@@ -22,6 +22,7 @@ public class OBReadData1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBReadData1 withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -32,6 +33,7 @@ public class OBReadData1 {
      */
     @JsonProperty("Permissions")
     public OBExternalPermissions1CodeEnum[] permissions;
+
     public OBReadData1 withPermissions(OBExternalPermissions1CodeEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -45,6 +47,7 @@ public class OBReadData1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransactionFromDateTime")
     public OffsetDateTime transactionFromDateTime;
+
     public OBReadData1 withTransactionFromDateTime(OffsetDateTime transactionFromDateTime) {
         this.transactionFromDateTime = transactionFromDateTime;
         return this;
@@ -58,9 +61,13 @@ public class OBReadData1 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TransactionToDateTime")
     public OffsetDateTime transactionToDateTime;
+
     public OBReadData1 withTransactionToDateTime(OffsetDateTime transactionToDateTime) {
         this.transactionToDateTime = transactionToDateTime;
         return this;
     }
     
+    public OBReadData1(@JsonProperty("Permissions") OBExternalPermissions1CodeEnum[] permissions) {
+        this.permissions = permissions;
+  }
 }

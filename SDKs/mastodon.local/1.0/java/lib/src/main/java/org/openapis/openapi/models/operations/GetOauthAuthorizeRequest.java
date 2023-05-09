@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOauthAuthorizeRequest {
@@ -12,6 +13,7 @@ public class GetOauthAuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
     public String clientId;
+
     public GetOauthAuthorizeRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +24,7 @@ public class GetOauthAuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force_login")
     public Boolean forceLogin;
+
     public GetOauthAuthorizeRequest withForceLogin(Boolean forceLogin) {
         this.forceLogin = forceLogin;
         return this;
@@ -32,6 +35,7 @@ public class GetOauthAuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
     public String redirectUri;
+
     public GetOauthAuthorizeRequest withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -42,6 +46,7 @@ public class GetOauthAuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=response_type")
     public String responseType;
+
     public GetOauthAuthorizeRequest withResponseType(String responseType) {
         this.responseType = responseType;
         return this;
@@ -52,9 +57,15 @@ public class GetOauthAuthorizeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public GetOauthAuthorizeRequest withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public GetOauthAuthorizeRequest(@JsonProperty("client_id") String clientId, @JsonProperty("redirect_uri") String redirectUri, @JsonProperty("response_type") String responseType) {
+        this.clientId = clientId;
+        this.redirectUri = redirectUri;
+        this.responseType = responseType;
+  }
 }

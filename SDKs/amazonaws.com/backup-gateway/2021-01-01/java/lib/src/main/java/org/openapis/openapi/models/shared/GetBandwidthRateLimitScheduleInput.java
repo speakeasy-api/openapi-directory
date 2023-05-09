@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBandwidthRateLimitScheduleInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public GetBandwidthRateLimitScheduleInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public GetBandwidthRateLimitScheduleInput(@JsonProperty("GatewayArn") String gatewayArn) {
+        this.gatewayArn = gatewayArn;
+  }
 }

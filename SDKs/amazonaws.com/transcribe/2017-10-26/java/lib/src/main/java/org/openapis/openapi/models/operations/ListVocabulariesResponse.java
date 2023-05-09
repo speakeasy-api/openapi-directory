@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVocabulariesResponse {
@@ -12,6 +13,7 @@ public class ListVocabulariesResponse {
      */
     
     public Object badRequestException;
+
     public ListVocabulariesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListVocabulariesResponse {
     
     
     public String contentType;
+
     public ListVocabulariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListVocabulariesResponse {
      */
     
     public Object internalFailureException;
+
     public ListVocabulariesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListVocabulariesResponse {
      */
     
     public Object limitExceededException;
+
     public ListVocabulariesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListVocabulariesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVocabulariesResponse listVocabulariesResponse;
+
     public ListVocabulariesResponse withListVocabulariesResponse(org.openapis.openapi.models.shared.ListVocabulariesResponse listVocabulariesResponse) {
         this.listVocabulariesResponse = listVocabulariesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListVocabulariesResponse {
     
     
     public Integer statusCode;
+
     public ListVocabulariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListVocabulariesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVocabulariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListVocabulariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

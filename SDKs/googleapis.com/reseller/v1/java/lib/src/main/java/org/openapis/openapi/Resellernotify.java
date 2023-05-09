@@ -58,11 +58,9 @@ public class Resellernotify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsResponse res = new org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsResponse() {{
+        org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsResponse res = new org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsResponse(contentType, httpRes.statusCode()) {{
             resellernotifyGetwatchdetailsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Resellernotify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResellerResellernotifyRegisterResponse res = new org.openapis.openapi.models.operations.ResellerResellernotifyRegisterResponse() {{
+        org.openapis.openapi.models.operations.ResellerResellernotifyRegisterResponse res = new org.openapis.openapi.models.operations.ResellerResellernotifyRegisterResponse(contentType, httpRes.statusCode()) {{
             resellernotifyResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Resellernotify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterResponse res = new org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterResponse() {{
+        org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterResponse res = new org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterResponse(contentType, httpRes.statusCode()) {{
             resellernotifyResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

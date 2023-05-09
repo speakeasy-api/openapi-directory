@@ -15,6 +15,7 @@ public class UpdateEmailChannelRequestBodyEmailChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSet")
     public String configurationSet;
+
     public UpdateEmailChannelRequestBodyEmailChannelRequest withConfigurationSet(String configurationSet) {
         this.configurationSet = configurationSet;
         return this;
@@ -23,6 +24,7 @@ public class UpdateEmailChannelRequestBodyEmailChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateEmailChannelRequestBodyEmailChannelRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class UpdateEmailChannelRequestBodyEmailChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromAddress")
     public String fromAddress;
+
     public UpdateEmailChannelRequestBodyEmailChannelRequest withFromAddress(String fromAddress) {
         this.fromAddress = fromAddress;
         return this;
@@ -39,6 +42,7 @@ public class UpdateEmailChannelRequestBodyEmailChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identity")
     public String identity;
+
     public UpdateEmailChannelRequestBodyEmailChannelRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -47,9 +51,11 @@ public class UpdateEmailChannelRequestBodyEmailChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateEmailChannelRequestBodyEmailChannelRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateEmailChannelRequestBodyEmailChannelRequest(){}
 }

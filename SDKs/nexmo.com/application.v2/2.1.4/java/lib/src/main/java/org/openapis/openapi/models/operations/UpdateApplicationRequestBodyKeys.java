@@ -15,9 +15,11 @@ public class UpdateApplicationRequestBodyKeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public UpdateApplicationRequestBodyKeys withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public UpdateApplicationRequestBodyKeys(){}
 }

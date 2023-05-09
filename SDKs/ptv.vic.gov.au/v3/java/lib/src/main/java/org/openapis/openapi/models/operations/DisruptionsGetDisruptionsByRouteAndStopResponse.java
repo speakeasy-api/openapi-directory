@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisruptionsGetDisruptionsByRouteAndStopResponse {
     
     public byte[] body;
+
     public DisruptionsGetDisruptionsByRouteAndStopResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopResponse {
     
     
     public String contentType;
+
     public DisruptionsGetDisruptionsByRouteAndStopResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopResponse {
     
     
     public Integer statusCode;
+
     public DisruptionsGetDisruptionsByRouteAndStopResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisruptionsGetDisruptionsByRouteAndStopResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopResponse {
      */
     
     public org.openapis.openapi.models.shared.V3DisruptionsResponse v3DisruptionsResponse;
+
     public DisruptionsGetDisruptionsByRouteAndStopResponse withV3DisruptionsResponse(org.openapis.openapi.models.shared.V3DisruptionsResponse v3DisruptionsResponse) {
         this.v3DisruptionsResponse = v3DisruptionsResponse;
         return this;
@@ -50,9 +56,14 @@ public class DisruptionsGetDisruptionsByRouteAndStopResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public DisruptionsGetDisruptionsByRouteAndStopResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
     }
     
+    public DisruptionsGetDisruptionsByRouteAndStopResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

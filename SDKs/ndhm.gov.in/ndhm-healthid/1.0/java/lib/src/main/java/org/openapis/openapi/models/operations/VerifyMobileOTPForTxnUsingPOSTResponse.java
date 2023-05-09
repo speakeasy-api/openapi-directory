@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifyMobileOTPForTxnUsingPOSTResponse {
     
     public byte[] body;
+
     public VerifyMobileOTPForTxnUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class VerifyMobileOTPForTxnUsingPOSTResponse {
     
     
     public String contentType;
+
     public VerifyMobileOTPForTxnUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class VerifyMobileOTPForTxnUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public VerifyMobileOTPForTxnUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class VerifyMobileOTPForTxnUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifyMobileOTPForTxnUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VerifyMobileOTPForTxnUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class ListSecurityConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListSecurityConfigsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListSecurityConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSecurityConfigsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListSecurityConfigsRequest {
     
     @JsonProperty("type")
     public SecurityConfigTypeEnum type;
+
     public ListSecurityConfigsRequest withType(SecurityConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListSecurityConfigsRequest(@JsonProperty("type") SecurityConfigTypeEnum type) {
+        this.type = type;
+  }
 }

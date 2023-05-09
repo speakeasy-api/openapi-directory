@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomersAccountAnnouncementsResponse {
     
     public String contentType;
+
     public GetCustomersAccountAnnouncementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCustomersAccountAnnouncementsResponse {
     
     
     public Integer statusCode;
+
     public GetCustomersAccountAnnouncementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCustomersAccountAnnouncementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomersAccountAnnouncementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetCustomersAccountAnnouncementsResponse {
      */
     
     public GetCustomersAccountAnnouncements200ApplicationJSON getCustomersAccountAnnouncements200ApplicationJSONObject;
+
     public GetCustomersAccountAnnouncementsResponse withGetCustomersAccountAnnouncements200ApplicationJSONObject(GetCustomersAccountAnnouncements200ApplicationJSON getCustomersAccountAnnouncements200ApplicationJSONObject) {
         this.getCustomersAccountAnnouncements200ApplicationJSONObject = getCustomersAccountAnnouncements200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class GetCustomersAccountAnnouncementsResponse {
      */
     
     public org.openapis.openapi.models.shared.OneannouncementsPostResponses403ContentApplication1jsonSchema oneannouncementsPostResponses403ContentApplication1jsonSchema;
+
     public GetCustomersAccountAnnouncementsResponse withOneannouncementsPostResponses403ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneannouncementsPostResponses403ContentApplication1jsonSchema oneannouncementsPostResponses403ContentApplication1jsonSchema) {
         this.oneannouncementsPostResponses403ContentApplication1jsonSchema = oneannouncementsPostResponses403ContentApplication1jsonSchema;
         return this;
     }
     
+    public GetCustomersAccountAnnouncementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

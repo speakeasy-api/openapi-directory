@@ -18,6 +18,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public java.util.Map<String, String> details;
+
     public Prediction withDetails(java.util.Map<String, String> details) {
         this.details = details;
         return this;
@@ -26,6 +27,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedLabel")
     public String predictedLabel;
+
     public Prediction withPredictedLabel(String predictedLabel) {
         this.predictedLabel = predictedLabel;
         return this;
@@ -37,6 +39,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedScores")
     public java.util.Map<String, Float> predictedScores;
+
     public Prediction withPredictedScores(java.util.Map<String, Float> predictedScores) {
         this.predictedScores = predictedScores;
         return this;
@@ -45,9 +48,11 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedValue")
     public Float predictedValue;
+
     public Prediction withPredictedValue(Float predictedValue) {
         this.predictedValue = predictedValue;
         return this;
     }
     
+    public Prediction(){}
 }

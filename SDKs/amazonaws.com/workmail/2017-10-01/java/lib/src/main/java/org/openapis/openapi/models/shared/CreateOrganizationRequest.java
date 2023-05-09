@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateOrganizationRequest {
     @JsonProperty("Alias")
     public String alias;
+
     public CreateOrganizationRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,6 +20,7 @@ public class CreateOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateOrganizationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -27,6 +29,7 @@ public class CreateOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CreateOrganizationRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -35,6 +38,7 @@ public class CreateOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domains")
     public Domain[] domains;
+
     public CreateOrganizationRequest withDomains(Domain[] domains) {
         this.domains = domains;
         return this;
@@ -43,6 +47,7 @@ public class CreateOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableInteroperability")
     public Boolean enableInteroperability;
+
     public CreateOrganizationRequest withEnableInteroperability(Boolean enableInteroperability) {
         this.enableInteroperability = enableInteroperability;
         return this;
@@ -51,9 +56,13 @@ public class CreateOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public CreateOrganizationRequest withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public CreateOrganizationRequest(@JsonProperty("Alias") String alias) {
+        this.alias = alias;
+  }
 }

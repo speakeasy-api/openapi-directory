@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchema withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchema withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityTypes")
     public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType[] entityTypes;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchema withEntityTypes(GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType[] entityTypes) {
         this.entityTypes = entityTypes;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata metadata;
+
     public GoogleCloudDocumentaiV1beta3DocumentSchema withMetadata(GoogleCloudDocumentaiV1beta3DocumentSchemaMetadata metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentSchema(){}
 }

@@ -18,9 +18,11 @@ public class JobExecutionStageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepName")
     public String[] stepName;
+
     public JobExecutionStageInfo withStepName(String[] stepName) {
         this.stepName = stepName;
         return this;
     }
     
+    public JobExecutionStageInfo(){}
 }

@@ -15,6 +15,7 @@ public class DatasetActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public String actionName;
+
     public DatasetActionSummary withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -23,9 +24,11 @@ public class DatasetActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public DatasetActionTypeEnum actionType;
+
     public DatasetActionSummary withActionType(DatasetActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
     }
     
+    public DatasetActionSummary(){}
 }

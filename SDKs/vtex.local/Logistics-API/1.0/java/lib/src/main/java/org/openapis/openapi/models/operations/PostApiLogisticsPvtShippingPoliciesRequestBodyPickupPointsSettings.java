@@ -15,6 +15,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings 
      */
     @JsonProperty("pickupPointIds")
     public Object[] pickupPointIds;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings withPickupPointIds(Object[] pickupPointIds) {
         this.pickupPointIds = pickupPointIds;
         return this;
@@ -25,6 +26,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings 
      */
     @JsonProperty("pickupPointTags")
     public Object[] pickupPointTags;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings withPickupPointTags(Object[] pickupPointTags) {
         this.pickupPointTags = pickupPointTags;
         return this;
@@ -35,9 +37,15 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings 
      */
     @JsonProperty("sellers")
     public Object[] sellers;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings withSellers(Object[] sellers) {
         this.sellers = sellers;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyPickupPointsSettings(@JsonProperty("pickupPointIds") Object[] pickupPointIds, @JsonProperty("pickupPointTags") Object[] pickupPointTags, @JsonProperty("sellers") Object[] sellers) {
+        this.pickupPointIds = pickupPointIds;
+        this.pickupPointTags = pickupPointTags;
+        this.sellers = sellers;
+  }
 }

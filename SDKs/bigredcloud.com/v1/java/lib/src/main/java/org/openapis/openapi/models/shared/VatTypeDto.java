@@ -12,6 +12,7 @@ public class VatTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public VatTypeDto withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class VatTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VatTypeDto withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class VatTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VatTypeDto withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class VatTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isNotApplicable")
     public Boolean isNotApplicable;
+
     public VatTypeDto withIsNotApplicable(Boolean isNotApplicable) {
         this.isNotApplicable = isNotApplicable;
         return this;
@@ -44,9 +48,11 @@ public class VatTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOnlyZero")
     public Boolean isOnlyZero;
+
     public VatTypeDto withIsOnlyZero(Boolean isOnlyZero) {
         this.isOnlyZero = isOnlyZero;
         return this;
     }
     
+    public VatTypeDto(){}
 }

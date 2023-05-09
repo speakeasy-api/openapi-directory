@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListTemplatesResponse {
     
     public String nextToken;
+
     public ListTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListTemplatesResponse {
     
     
     public TemplateMetadata[] templatesMetadata;
+
     public ListTemplatesResponse withTemplatesMetadata(TemplateMetadata[] templatesMetadata) {
         this.templatesMetadata = templatesMetadata;
         return this;
     }
     
+    public ListTemplatesResponse(){}
 }

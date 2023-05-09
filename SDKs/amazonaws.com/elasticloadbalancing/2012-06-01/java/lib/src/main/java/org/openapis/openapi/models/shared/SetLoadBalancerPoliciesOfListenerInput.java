@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SetLoadBalancerPoliciesOfListenerInput - Contains the parameters for SetLoadBalancePoliciesOfListener.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SetLoadBalancerPoliciesOfListenerInput {
     
     public String loadBalancerName;
+
     public SetLoadBalancerPoliciesOfListenerInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,6 +20,7 @@ public class SetLoadBalancerPoliciesOfListenerInput {
     
     
     public Long loadBalancerPort;
+
     public SetLoadBalancerPoliciesOfListenerInput withLoadBalancerPort(Long loadBalancerPort) {
         this.loadBalancerPort = loadBalancerPort;
         return this;
@@ -26,9 +28,15 @@ public class SetLoadBalancerPoliciesOfListenerInput {
     
     
     public String[] policyNames;
+
     public SetLoadBalancerPoliciesOfListenerInput withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public SetLoadBalancerPoliciesOfListenerInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("LoadBalancerPort") Long loadBalancerPort, @JsonProperty("PolicyNames") String[] policyNames) {
+        this.loadBalancerName = loadBalancerName;
+        this.loadBalancerPort = loadBalancerPort;
+        this.policyNames = policyNames;
+  }
 }

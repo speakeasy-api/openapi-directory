@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ReservedDBInstancesOfferingList {
     
     public String currencyCode;
+
     public ReservedDBInstancesOfferingList withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -16,6 +17,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public String dbInstanceClass;
+
     public ReservedDBInstancesOfferingList withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -23,6 +25,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public Long duration;
+
     public ReservedDBInstancesOfferingList withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -30,6 +33,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public Double fixedPrice;
+
     public ReservedDBInstancesOfferingList withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -37,6 +41,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public Boolean multiAZ;
+
     public ReservedDBInstancesOfferingList withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -44,6 +49,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public String offeringType;
+
     public ReservedDBInstancesOfferingList withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -51,6 +57,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public String productDescription;
+
     public ReservedDBInstancesOfferingList withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -58,6 +65,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedDBInstancesOfferingList withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -65,6 +73,7 @@ public class ReservedDBInstancesOfferingList {
     
     
     public String reservedDBInstancesOfferingId;
+
     public ReservedDBInstancesOfferingList withReservedDBInstancesOfferingId(String reservedDBInstancesOfferingId) {
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
@@ -72,9 +81,11 @@ public class ReservedDBInstancesOfferingList {
     
     
     public Double usagePrice;
+
     public ReservedDBInstancesOfferingList withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedDBInstancesOfferingList(){}
 }

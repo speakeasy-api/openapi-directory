@@ -15,6 +15,7 @@ public class AwsEcrContainerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AwsEcrContainerAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcrContainerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public AwsEcrContainerAggregationResponse withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcrContainerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageSha")
     public String imageSha;
+
     public AwsEcrContainerAggregationResponse withImageSha(String imageSha) {
         this.imageSha = imageSha;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcrContainerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTags")
     public String[] imageTags;
+
     public AwsEcrContainerAggregationResponse withImageTags(String[] imageTags) {
         this.imageTags = imageTags;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcrContainerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public AwsEcrContainerAggregationResponse withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -54,6 +59,7 @@ public class AwsEcrContainerAggregationResponse {
     
     @JsonProperty("resourceId")
     public String resourceId;
+
     public AwsEcrContainerAggregationResponse withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -62,9 +68,13 @@ public class AwsEcrContainerAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public AwsEcrContainerAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public AwsEcrContainerAggregationResponse(@JsonProperty("resourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

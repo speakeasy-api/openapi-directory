@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBackupInput {
     @JsonProperty("BackupArn")
     public String backupArn;
+
     public DeleteBackupInput withBackupArn(String backupArn) {
         this.backupArn = backupArn;
         return this;
     }
     
+    public DeleteBackupInput(@JsonProperty("BackupArn") String backupArn) {
+        this.backupArn = backupArn;
+  }
 }

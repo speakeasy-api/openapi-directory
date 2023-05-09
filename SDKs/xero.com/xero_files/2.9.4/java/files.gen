@@ -88,4 +88,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Folder.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/User.java
 lib/src/main/java/org/openapis/openapi/models/shared/Files.java
+docs/sdk/README.md
+docs/files/README.md
 USAGE.md

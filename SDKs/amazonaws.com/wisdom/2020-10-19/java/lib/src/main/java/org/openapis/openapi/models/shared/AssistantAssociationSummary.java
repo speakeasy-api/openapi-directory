@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssistantAssociationSummary {
     @JsonProperty("assistantArn")
     public String assistantArn;
+
     public AssistantAssociationSummary withAssistantArn(String assistantArn) {
         this.assistantArn = assistantArn;
         return this;
@@ -21,6 +22,7 @@ public class AssistantAssociationSummary {
     
     @JsonProperty("assistantAssociationArn")
     public String assistantAssociationArn;
+
     public AssistantAssociationSummary withAssistantAssociationArn(String assistantAssociationArn) {
         this.assistantAssociationArn = assistantAssociationArn;
         return this;
@@ -28,6 +30,7 @@ public class AssistantAssociationSummary {
     
     @JsonProperty("assistantAssociationId")
     public String assistantAssociationId;
+
     public AssistantAssociationSummary withAssistantAssociationId(String assistantAssociationId) {
         this.assistantAssociationId = assistantAssociationId;
         return this;
@@ -35,6 +38,7 @@ public class AssistantAssociationSummary {
     
     @JsonProperty("assistantId")
     public String assistantId;
+
     public AssistantAssociationSummary withAssistantId(String assistantId) {
         this.assistantId = assistantId;
         return this;
@@ -42,6 +46,7 @@ public class AssistantAssociationSummary {
     
     @JsonProperty("associationData")
     public AssistantAssociationOutputData associationData;
+
     public AssistantAssociationSummary withAssociationData(AssistantAssociationOutputData associationData) {
         this.associationData = associationData;
         return this;
@@ -49,6 +54,7 @@ public class AssistantAssociationSummary {
     
     @JsonProperty("associationType")
     public AssociationTypeEnum associationType;
+
     public AssistantAssociationSummary withAssociationType(AssociationTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -57,9 +63,18 @@ public class AssistantAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public AssistantAssociationSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public AssistantAssociationSummary(@JsonProperty("assistantArn") String assistantArn, @JsonProperty("assistantAssociationArn") String assistantAssociationArn, @JsonProperty("assistantAssociationId") String assistantAssociationId, @JsonProperty("assistantId") String assistantId, @JsonProperty("associationData") AssistantAssociationOutputData associationData, @JsonProperty("associationType") AssociationTypeEnum associationType) {
+        this.assistantArn = assistantArn;
+        this.assistantAssociationArn = assistantAssociationArn;
+        this.assistantAssociationId = assistantAssociationId;
+        this.assistantId = assistantId;
+        this.associationData = associationData;
+        this.associationType = associationType;
+  }
 }

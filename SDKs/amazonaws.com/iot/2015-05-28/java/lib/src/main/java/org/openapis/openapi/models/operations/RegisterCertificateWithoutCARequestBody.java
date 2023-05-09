@@ -14,6 +14,7 @@ public class RegisterCertificateWithoutCARequestBody {
      */
     @JsonProperty("certificatePem")
     public String certificatePem;
+
     public RegisterCertificateWithoutCARequestBody withCertificatePem(String certificatePem) {
         this.certificatePem = certificatePem;
         return this;
@@ -25,9 +26,13 @@ public class RegisterCertificateWithoutCARequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RegisterCertificateWithoutCARequestBodyStatusEnum status;
+
     public RegisterCertificateWithoutCARequestBody withStatus(RegisterCertificateWithoutCARequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RegisterCertificateWithoutCARequestBody(@JsonProperty("certificatePem") String certificatePem) {
+        this.certificatePem = certificatePem;
+  }
 }

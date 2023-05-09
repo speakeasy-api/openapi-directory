@@ -15,6 +15,7 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corsPolicy")
     public CorsPolicy corsPolicy;
+
     public HttpRouteAction withCorsPolicy(CorsPolicy corsPolicy) {
         this.corsPolicy = corsPolicy;
         return this;
@@ -26,6 +27,7 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faultInjectionPolicy")
     public HttpFaultInjection faultInjectionPolicy;
+
     public HttpRouteAction withFaultInjectionPolicy(HttpFaultInjection faultInjectionPolicy) {
         this.faultInjectionPolicy = faultInjectionPolicy;
         return this;
@@ -37,6 +39,7 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStreamDuration")
     public Duration maxStreamDuration;
+
     public HttpRouteAction withMaxStreamDuration(Duration maxStreamDuration) {
         this.maxStreamDuration = maxStreamDuration;
         return this;
@@ -48,6 +51,7 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMirrorPolicy")
     public RequestMirrorPolicy requestMirrorPolicy;
+
     public HttpRouteAction withRequestMirrorPolicy(RequestMirrorPolicy requestMirrorPolicy) {
         this.requestMirrorPolicy = requestMirrorPolicy;
         return this;
@@ -59,6 +63,7 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicy")
     public HttpRetryPolicy retryPolicy;
+
     public HttpRouteAction withRetryPolicy(HttpRetryPolicy retryPolicy) {
         this.retryPolicy = retryPolicy;
         return this;
@@ -70,6 +75,7 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public Duration timeout;
+
     public HttpRouteAction withTimeout(Duration timeout) {
         this.timeout = timeout;
         return this;
@@ -81,6 +87,7 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRewrite")
     public UrlRewrite urlRewrite;
+
     public HttpRouteAction withUrlRewrite(UrlRewrite urlRewrite) {
         this.urlRewrite = urlRewrite;
         return this;
@@ -92,9 +99,11 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightedBackendServices")
     public WeightedBackendService[] weightedBackendServices;
+
     public HttpRouteAction withWeightedBackendServices(WeightedBackendService[] weightedBackendServices) {
         this.weightedBackendServices = weightedBackendServices;
         return this;
     }
     
+    public HttpRouteAction(){}
 }

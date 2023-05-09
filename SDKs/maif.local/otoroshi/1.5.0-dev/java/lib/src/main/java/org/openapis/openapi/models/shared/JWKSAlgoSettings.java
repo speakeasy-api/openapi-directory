@@ -18,6 +18,7 @@ public class JWKSAlgoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public JWKSAlgoSettings withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -29,6 +30,7 @@ public class JWKSAlgoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kty")
     public String kty;
+
     public JWKSAlgoSettings withKty(String kty) {
         this.kty = kty;
         return this;
@@ -40,6 +42,7 @@ public class JWKSAlgoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public Long timeout;
+
     public JWKSAlgoSettings withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -51,6 +54,7 @@ public class JWKSAlgoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Long ttl;
+
     public JWKSAlgoSettings withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -61,6 +65,7 @@ public class JWKSAlgoSettings {
      */
     @JsonProperty("type")
     public String type;
+
     public JWKSAlgoSettings withType(String type) {
         this.type = type;
         return this;
@@ -72,9 +77,13 @@ public class JWKSAlgoSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public JWKSAlgoSettings withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public JWKSAlgoSettings(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

@@ -16,6 +16,7 @@ public class AnalyticsDistributionReleaseCounts200ApplicationJSONCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_group")
     public String distributionGroup;
+
     public AnalyticsDistributionReleaseCounts200ApplicationJSONCounts withDistributionGroup(String distributionGroup) {
         this.distributionGroup = distributionGroup;
         return this;
@@ -23,6 +24,7 @@ public class AnalyticsDistributionReleaseCounts200ApplicationJSONCounts {
     
     @JsonProperty("release_id")
     public String releaseId;
+
     public AnalyticsDistributionReleaseCounts200ApplicationJSONCounts withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -34,6 +36,7 @@ public class AnalyticsDistributionReleaseCounts200ApplicationJSONCounts {
      */
     @JsonProperty("total_count")
     public Long totalCount;
+
     public AnalyticsDistributionReleaseCounts200ApplicationJSONCounts withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -45,9 +48,15 @@ public class AnalyticsDistributionReleaseCounts200ApplicationJSONCounts {
      */
     @JsonProperty("unique_count")
     public Long uniqueCount;
+
     public AnalyticsDistributionReleaseCounts200ApplicationJSONCounts withUniqueCount(Long uniqueCount) {
         this.uniqueCount = uniqueCount;
         return this;
     }
     
+    public AnalyticsDistributionReleaseCounts200ApplicationJSONCounts(@JsonProperty("release_id") String releaseId, @JsonProperty("total_count") Long totalCount, @JsonProperty("unique_count") Long uniqueCount) {
+        this.releaseId = releaseId;
+        this.totalCount = totalCount;
+        this.uniqueCount = uniqueCount;
+  }
 }

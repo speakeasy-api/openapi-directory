@@ -12,6 +12,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateMobileDeviceAccessRuleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceModels")
     public String[] deviceModels;
+
     public UpdateMobileDeviceAccessRuleRequest withDeviceModels(String[] deviceModels) {
         this.deviceModels = deviceModels;
         return this;
@@ -28,6 +30,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceOperatingSystems")
     public String[] deviceOperatingSystems;
+
     public UpdateMobileDeviceAccessRuleRequest withDeviceOperatingSystems(String[] deviceOperatingSystems) {
         this.deviceOperatingSystems = deviceOperatingSystems;
         return this;
@@ -36,6 +39,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypes")
     public String[] deviceTypes;
+
     public UpdateMobileDeviceAccessRuleRequest withDeviceTypes(String[] deviceTypes) {
         this.deviceTypes = deviceTypes;
         return this;
@@ -44,6 +48,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceUserAgents")
     public String[] deviceUserAgents;
+
     public UpdateMobileDeviceAccessRuleRequest withDeviceUserAgents(String[] deviceUserAgents) {
         this.deviceUserAgents = deviceUserAgents;
         return this;
@@ -51,6 +56,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     
     @JsonProperty("Effect")
     public MobileDeviceAccessRuleEffectEnum effect;
+
     public UpdateMobileDeviceAccessRuleRequest withEffect(MobileDeviceAccessRuleEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -58,6 +64,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     
     @JsonProperty("MobileDeviceAccessRuleId")
     public String mobileDeviceAccessRuleId;
+
     public UpdateMobileDeviceAccessRuleRequest withMobileDeviceAccessRuleId(String mobileDeviceAccessRuleId) {
         this.mobileDeviceAccessRuleId = mobileDeviceAccessRuleId;
         return this;
@@ -65,6 +72,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateMobileDeviceAccessRuleRequest withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotDeviceModels")
     public String[] notDeviceModels;
+
     public UpdateMobileDeviceAccessRuleRequest withNotDeviceModels(String[] notDeviceModels) {
         this.notDeviceModels = notDeviceModels;
         return this;
@@ -81,6 +90,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotDeviceOperatingSystems")
     public String[] notDeviceOperatingSystems;
+
     public UpdateMobileDeviceAccessRuleRequest withNotDeviceOperatingSystems(String[] notDeviceOperatingSystems) {
         this.notDeviceOperatingSystems = notDeviceOperatingSystems;
         return this;
@@ -89,6 +99,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotDeviceTypes")
     public String[] notDeviceTypes;
+
     public UpdateMobileDeviceAccessRuleRequest withNotDeviceTypes(String[] notDeviceTypes) {
         this.notDeviceTypes = notDeviceTypes;
         return this;
@@ -97,6 +108,7 @@ public class UpdateMobileDeviceAccessRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotDeviceUserAgents")
     public String[] notDeviceUserAgents;
+
     public UpdateMobileDeviceAccessRuleRequest withNotDeviceUserAgents(String[] notDeviceUserAgents) {
         this.notDeviceUserAgents = notDeviceUserAgents;
         return this;
@@ -104,9 +116,16 @@ public class UpdateMobileDeviceAccessRuleRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public UpdateMobileDeviceAccessRuleRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public UpdateMobileDeviceAccessRuleRequest(@JsonProperty("Effect") MobileDeviceAccessRuleEffectEnum effect, @JsonProperty("MobileDeviceAccessRuleId") String mobileDeviceAccessRuleId, @JsonProperty("Name") String name, @JsonProperty("OrganizationId") String organizationId) {
+        this.effect = effect;
+        this.mobileDeviceAccessRuleId = mobileDeviceAccessRuleId;
+        this.name = name;
+        this.organizationId = organizationId;
+  }
 }

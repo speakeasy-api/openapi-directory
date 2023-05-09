@@ -18,6 +18,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterStates")
     public java.util.Map<String, ClusterState> clusterStates;
+
     public Table withClusterStates(java.util.Map<String, ClusterState> clusterStates) {
         this.clusterStates = clusterStates;
         return this;
@@ -29,6 +30,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnFamilies")
     public java.util.Map<String, ColumnFamily> columnFamilies;
+
     public Table withColumnFamilies(java.util.Map<String, ColumnFamily> columnFamilies) {
         this.columnFamilies = columnFamilies;
         return this;
@@ -40,6 +42,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletionProtection")
     public Boolean deletionProtection;
+
     public Table withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -51,6 +54,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("granularity")
     public TableGranularityEnum granularity;
+
     public Table withGranularity(TableGranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -62,6 +66,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Table withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreInfo")
     public RestoreInfo restoreInfo;
+
     public Table withRestoreInfo(RestoreInfo restoreInfo) {
         this.restoreInfo = restoreInfo;
         return this;
@@ -84,9 +90,11 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public TableStats stats;
+
     public Table withStats(TableStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public Table(){}
 }

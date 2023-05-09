@@ -56,11 +56,9 @@ public class Quality {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteResponse res = new org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteResponse() {{
+        org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteResponse res = new org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteResponse(contentType, httpRes.statusCode()) {{
             dailyQualityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Quality {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesResponse res = new org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesResponse() {{
+        org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesResponse res = new org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesResponse(contentType, httpRes.statusCode()) {{
             overallQualityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

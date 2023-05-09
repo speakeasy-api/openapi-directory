@@ -12,6 +12,7 @@ public class GetAuthTokenCode200ApplicationJSON {
      */
     @JsonProperty("access")
     public String access;
+
     public GetAuthTokenCode200ApplicationJSON withAccess(String access) {
         this.access = access;
         return this;
@@ -22,6 +23,7 @@ public class GetAuthTokenCode200ApplicationJSON {
      */
     @JsonProperty("code")
     public String code;
+
     public GetAuthTokenCode200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -32,6 +34,7 @@ public class GetAuthTokenCode200ApplicationJSON {
      */
     @JsonProperty("expires_in")
     public Long expiresIn;
+
     public GetAuthTokenCode200ApplicationJSON withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -42,9 +45,16 @@ public class GetAuthTokenCode200ApplicationJSON {
      */
     @JsonProperty("type")
     public java.util.Map<String, Object> type;
+
     public GetAuthTokenCode200ApplicationJSON withType(java.util.Map<String, Object> type) {
         this.type = type;
         return this;
     }
     
+    public GetAuthTokenCode200ApplicationJSON(@JsonProperty("access") String access, @JsonProperty("code") String code, @JsonProperty("expires_in") Long expiresIn, @JsonProperty("type") java.util.Map<String, Object> type) {
+        this.access = access;
+        this.code = code;
+        this.expiresIn = expiresIn;
+        this.type = type;
+  }
 }

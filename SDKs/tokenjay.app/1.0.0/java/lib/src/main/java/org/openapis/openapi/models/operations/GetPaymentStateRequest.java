@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentStateRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=requestId")
     public String requestId;
+
     public GetPaymentStateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GetPaymentStateRequest(@JsonProperty("requestId") String requestId) {
+        this.requestId = requestId;
+  }
 }

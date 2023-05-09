@@ -15,9 +15,11 @@ public class CompanyDeepsearchISINRequestBody {
      */
     @SpeakeasyMetadata("form:name=isin")
     public String isin;
+
     public CompanyDeepsearchISINRequestBody withIsin(String isin) {
         this.isin = isin;
         return this;
     }
     
+    public CompanyDeepsearchISINRequestBody(){}
 }

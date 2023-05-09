@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelFrom4 {
     @JsonProperty("content-type")
     public ChannelFrom4ContentTypeEnum contentType;
+
     public ChannelFrom4 withContentType(ChannelFrom4ContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -25,6 +26,7 @@ public class ChannelFrom4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public ChannelFrom4Headers headers;
+
     public ChannelFrom4 withHeaders(ChannelFrom4Headers headers) {
         this.headers = headers;
         return this;
@@ -35,6 +37,7 @@ public class ChannelFrom4 {
      */
     @JsonProperty("type")
     public String type;
+
     public ChannelFrom4 withType(String type) {
         this.type = type;
         return this;
@@ -43,9 +46,14 @@ public class ChannelFrom4 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ChannelFrom4 withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ChannelFrom4(@JsonProperty("content-type") ChannelFrom4ContentTypeEnum contentType, @JsonProperty("type") String type) {
+        this.contentType = contentType;
+        this.type = type;
+  }
 }

@@ -4,6 +4,8 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateResourceRequestBody {
@@ -12,6 +14,7 @@ public class UpdateResourceRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public UpdateResourceRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -22,9 +25,26 @@ public class UpdateResourceRequestBody {
      */
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateResourceRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    /**
+     * Whether or not the resource is a federated resource.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("WithFederation")
+    public Boolean withFederation;
+
+    public UpdateResourceRequestBody withWithFederation(Boolean withFederation) {
+        this.withFederation = withFederation;
+        return this;
+    }
+    
+    public UpdateResourceRequestBody(@JsonProperty("ResourceArn") String resourceArn, @JsonProperty("RoleArn") String roleArn) {
+        this.resourceArn = resourceArn;
+        this.roleArn = roleArn;
+  }
 }

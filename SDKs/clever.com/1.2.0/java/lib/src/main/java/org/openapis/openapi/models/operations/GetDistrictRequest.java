@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDistrictRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetDistrictRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,13 @@ public class GetDistrictRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public String include;
+
     public GetDistrictRequest withInclude(String include) {
         this.include = include;
         return this;
     }
     
+    public GetDistrictRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -18,9 +18,11 @@ public class GetAdministratorAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Administrator")
     public Invitation administrator;
+
     public GetAdministratorAccountResponse withAdministrator(Invitation administrator) {
         this.administrator = administrator;
         return this;
     }
     
+    public GetAdministratorAccountResponse(){}
 }

@@ -15,6 +15,7 @@ public class UpdateEmailTemplateRequestBodyTemplateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Html")
     public String html;
+
     public UpdateEmailTemplateRequestBodyTemplateContent withHtml(String html) {
         this.html = html;
         return this;
@@ -23,6 +24,7 @@ public class UpdateEmailTemplateRequestBodyTemplateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public UpdateEmailTemplateRequestBodyTemplateContent withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -31,9 +33,11 @@ public class UpdateEmailTemplateRequestBodyTemplateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public UpdateEmailTemplateRequestBodyTemplateContent withText(String text) {
         this.text = text;
         return this;
     }
     
+    public UpdateEmailTemplateRequestBodyTemplateContent(){}
 }

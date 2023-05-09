@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteConditionalForwarderRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DeleteConditionalForwarderRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,9 +20,14 @@ public class DeleteConditionalForwarderRequest {
     
     @JsonProperty("RemoteDomainName")
     public String remoteDomainName;
+
     public DeleteConditionalForwarderRequest withRemoteDomainName(String remoteDomainName) {
         this.remoteDomainName = remoteDomainName;
         return this;
     }
     
+    public DeleteConditionalForwarderRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("RemoteDomainName") String remoteDomainName) {
+        this.directoryId = directoryId;
+        this.remoteDomainName = remoteDomainName;
+  }
 }

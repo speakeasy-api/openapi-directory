@@ -15,6 +15,7 @@ public class RdsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentOption")
     public String deploymentOption;
+
     public RdsRequirements withDeploymentOption(String deploymentOption) {
         this.deploymentOption = deploymentOption;
         return this;
@@ -23,6 +24,7 @@ public class RdsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineEdition")
     public String engineEdition;
+
     public RdsRequirements withEngineEdition(String engineEdition) {
         this.engineEdition = engineEdition;
         return this;
@@ -31,6 +33,7 @@ public class RdsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMemory")
     public Double instanceMemory;
+
     public RdsRequirements withInstanceMemory(Double instanceMemory) {
         this.instanceMemory = instanceMemory;
         return this;
@@ -39,6 +42,7 @@ public class RdsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceVcpu")
     public Double instanceVcpu;
+
     public RdsRequirements withInstanceVcpu(Double instanceVcpu) {
         this.instanceVcpu = instanceVcpu;
         return this;
@@ -47,6 +51,7 @@ public class RdsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageIops")
     public Long storageIops;
+
     public RdsRequirements withStorageIops(Long storageIops) {
         this.storageIops = storageIops;
         return this;
@@ -55,9 +60,11 @@ public class RdsRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageSize")
     public Long storageSize;
+
     public RdsRequirements withStorageSize(Long storageSize) {
         this.storageSize = storageSize;
         return this;
     }
     
+    public RdsRequirements(){}
 }

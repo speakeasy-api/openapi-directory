@@ -14,6 +14,7 @@ public class CreateConfiguredTableRequestBody {
      */
     @JsonProperty("allowedColumns")
     public String[] allowedColumns;
+
     public CreateConfiguredTableRequestBody withAllowedColumns(String[] allowedColumns) {
         this.allowedColumns = allowedColumns;
         return this;
@@ -24,6 +25,7 @@ public class CreateConfiguredTableRequestBody {
      */
     @JsonProperty("analysisMethod")
     public CreateConfiguredTableRequestBodyAnalysisMethodEnum analysisMethod;
+
     public CreateConfiguredTableRequestBody withAnalysisMethod(CreateConfiguredTableRequestBodyAnalysisMethodEnum analysisMethod) {
         this.analysisMethod = analysisMethod;
         return this;
@@ -35,6 +37,7 @@ public class CreateConfiguredTableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateConfiguredTableRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class CreateConfiguredTableRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateConfiguredTableRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class CreateConfiguredTableRequestBody {
      */
     @JsonProperty("tableReference")
     public CreateConfiguredTableRequestBodyTableReference tableReference;
+
     public CreateConfiguredTableRequestBody withTableReference(CreateConfiguredTableRequestBodyTableReference tableReference) {
         this.tableReference = tableReference;
         return this;
@@ -66,9 +71,16 @@ public class CreateConfiguredTableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateConfiguredTableRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConfiguredTableRequestBody(@JsonProperty("allowedColumns") String[] allowedColumns, @JsonProperty("analysisMethod") CreateConfiguredTableRequestBodyAnalysisMethodEnum analysisMethod, @JsonProperty("name") String name, @JsonProperty("tableReference") CreateConfiguredTableRequestBodyTableReference tableReference) {
+        this.allowedColumns = allowedColumns;
+        this.analysisMethod = analysisMethod;
+        this.name = name;
+        this.tableReference = tableReference;
+  }
 }

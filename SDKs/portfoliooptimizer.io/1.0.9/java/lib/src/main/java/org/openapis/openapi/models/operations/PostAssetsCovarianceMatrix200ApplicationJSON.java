@@ -15,9 +15,13 @@ public class PostAssetsCovarianceMatrix200ApplicationJSON {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostAssetsCovarianceMatrix200ApplicationJSON withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
     }
     
+    public PostAssetsCovarianceMatrix200ApplicationJSON(@JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

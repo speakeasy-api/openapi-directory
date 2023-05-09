@@ -18,6 +18,7 @@ public class GoogleAppsScriptTypeWebAppEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPointConfig")
     public GoogleAppsScriptTypeWebAppConfig entryPointConfig;
+
     public GoogleAppsScriptTypeWebAppEntryPoint withEntryPointConfig(GoogleAppsScriptTypeWebAppConfig entryPointConfig) {
         this.entryPointConfig = entryPointConfig;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsScriptTypeWebAppEntryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoogleAppsScriptTypeWebAppEntryPoint withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoogleAppsScriptTypeWebAppEntryPoint(){}
 }

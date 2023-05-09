@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteFileResponse3 {
     @JsonProperty("Data")
     public OBWriteFileResponse3Data data;
+
     public OBWriteFileResponse3 withData(OBWriteFileResponse3Data data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteFileResponse3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBWriteFileResponse3 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,9 +38,13 @@ public class OBWriteFileResponse3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBWriteFileResponse3 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBWriteFileResponse3(@JsonProperty("Data") OBWriteFileResponse3Data data) {
+        this.data = data;
+  }
 }

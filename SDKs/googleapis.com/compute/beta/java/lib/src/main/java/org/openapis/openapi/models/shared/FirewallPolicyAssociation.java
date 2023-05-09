@@ -18,6 +18,7 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentTarget")
     public String attachmentTarget;
+
     public FirewallPolicyAssociation withAttachmentTarget(String attachmentTarget) {
         this.attachmentTarget = attachmentTarget;
         return this;
@@ -29,6 +30,7 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public FirewallPolicyAssociation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicyId")
     public String firewallPolicyId;
+
     public FirewallPolicyAssociation withFirewallPolicyId(String firewallPolicyId) {
         this.firewallPolicyId = firewallPolicyId;
         return this;
@@ -51,6 +54,7 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FirewallPolicyAssociation withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class FirewallPolicyAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public FirewallPolicyAssociation withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public FirewallPolicyAssociation(){}
 }

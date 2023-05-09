@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrUpdateCalculatorConfigurationRequest {
@@ -12,6 +13,7 @@ public class CreateOrUpdateCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateOrUpdateCalculatorConfigurationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrUpdateCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateOrUpdateCalculatorConfigurationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class CreateOrUpdateCalculatorConfigurationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateOrUpdateCalculatorConfigurationRequestBody requestBody;
+
     public CreateOrUpdateCalculatorConfigurationRequest withRequestBody(CreateOrUpdateCalculatorConfigurationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfigurationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") CreateOrUpdateCalculatorConfigurationRequestBody requestBody) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+  }
 }

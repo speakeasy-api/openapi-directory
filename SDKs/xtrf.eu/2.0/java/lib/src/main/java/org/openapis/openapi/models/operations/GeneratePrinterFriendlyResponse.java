@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GeneratePrinterFriendlyResponse {
     
     public String contentType;
+
     public GeneratePrinterFriendlyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GeneratePrinterFriendlyResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportResultDTO reportResultDTO;
+
     public GeneratePrinterFriendlyResponse withReportResultDTO(org.openapis.openapi.models.shared.ReportResultDTO reportResultDTO) {
         this.reportResultDTO = reportResultDTO;
         return this;
@@ -26,6 +29,7 @@ public class GeneratePrinterFriendlyResponse {
     
     
     public Integer statusCode;
+
     public GeneratePrinterFriendlyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GeneratePrinterFriendlyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GeneratePrinterFriendlyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GeneratePrinterFriendlyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

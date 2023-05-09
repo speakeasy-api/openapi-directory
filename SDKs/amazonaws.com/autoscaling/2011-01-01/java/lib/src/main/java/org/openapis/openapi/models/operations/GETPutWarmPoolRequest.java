@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutWarmPoolRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutWarmPoolActionEnum action;
+
     public GETPutWarmPoolRequest withAction(GETPutWarmPoolActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPutWarmPoolRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETPutWarmPoolRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETPutWarmPoolRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceReusePolicy")
     public GETPutWarmPoolInstanceReusePolicy instanceReusePolicy;
+
     public GETPutWarmPoolRequest withInstanceReusePolicy(GETPutWarmPoolInstanceReusePolicy instanceReusePolicy) {
         this.instanceReusePolicy = instanceReusePolicy;
         return this;
@@ -39,6 +43,7 @@ public class GETPutWarmPoolRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxGroupPreparedCapacity")
     public Long maxGroupPreparedCapacity;
+
     public GETPutWarmPoolRequest withMaxGroupPreparedCapacity(Long maxGroupPreparedCapacity) {
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         return this;
@@ -49,6 +54,7 @@ public class GETPutWarmPoolRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MinSize")
     public Long minSize;
+
     public GETPutWarmPoolRequest withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -59,6 +65,7 @@ public class GETPutWarmPoolRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PoolState")
     public GETPutWarmPoolPoolStateEnum poolState;
+
     public GETPutWarmPoolRequest withPoolState(GETPutWarmPoolPoolStateEnum poolState) {
         this.poolState = poolState;
         return this;
@@ -66,6 +73,7 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutWarmPoolVersionEnum version;
+
     public GETPutWarmPoolRequest withVersion(GETPutWarmPoolVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutWarmPoolRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutWarmPoolRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutWarmPoolRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutWarmPoolRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutWarmPoolRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutWarmPoolRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETPutWarmPoolRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutWarmPoolRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutWarmPoolRequest(@JsonProperty("Action") GETPutWarmPoolActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("Version") GETPutWarmPoolVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.version = version;
+  }
 }

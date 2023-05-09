@@ -18,6 +18,7 @@ public class LookupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseId")
     public String databaseId;
+
     public LookupRequest withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -29,6 +30,7 @@ public class LookupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public Key[] keys;
+
     public LookupRequest withKeys(Key[] keys) {
         this.keys = keys;
         return this;
@@ -40,9 +42,11 @@ public class LookupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOptions")
     public ReadOptions readOptions;
+
     public LookupRequest withReadOptions(ReadOptions readOptions) {
         this.readOptions = readOptions;
         return this;
     }
     
+    public LookupRequest(){}
 }

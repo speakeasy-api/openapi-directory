@@ -15,6 +15,7 @@ public class CreateJobRequestBodyInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceCount")
     public Long instanceCount;
+
     public CreateJobRequestBodyInstanceConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -23,6 +24,7 @@ public class CreateJobRequestBodyInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public org.openapis.openapi.models.shared.InstanceTypeEnum instanceType;
+
     public CreateJobRequestBodyInstanceConfig withInstanceType(org.openapis.openapi.models.shared.InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -31,9 +33,11 @@ public class CreateJobRequestBodyInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeSizeInGb")
     public Long volumeSizeInGb;
+
     public CreateJobRequestBodyInstanceConfig withVolumeSizeInGb(Long volumeSizeInGb) {
         this.volumeSizeInGb = volumeSizeInGb;
         return this;
     }
     
+    public CreateJobRequestBodyInstanceConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAgreementResponse {
     
     public String contentType;
+
     public UpdateAgreementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAgreementResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateAgreementResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAgreementResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAgreementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAgreementResponse {
      */
     
     public Object resourceExistsException;
+
     public UpdateAgreementResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAgreementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAgreementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAgreementResponse {
     
     
     public Integer statusCode;
+
     public UpdateAgreementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAgreementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAgreementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAgreementResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateAgreementResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAgreementResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAgreementResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateAgreementResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAgreementResponse updateAgreementResponse;
+
     public UpdateAgreementResponse withUpdateAgreementResponse(org.openapis.openapi.models.shared.UpdateAgreementResponse updateAgreementResponse) {
         this.updateAgreementResponse = updateAgreementResponse;
         return this;
     }
     
+    public UpdateAgreementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

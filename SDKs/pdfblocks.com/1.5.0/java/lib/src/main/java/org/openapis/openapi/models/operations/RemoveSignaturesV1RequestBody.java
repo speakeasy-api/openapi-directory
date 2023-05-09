@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveSignaturesV1RequestBody {
@@ -12,9 +13,13 @@ public class RemoveSignaturesV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public RemoveSignaturesV1RequestBodyFile file;
+
     public RemoveSignaturesV1RequestBody withFile(RemoveSignaturesV1RequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public RemoveSignaturesV1RequestBody(@JsonProperty("file") RemoveSignaturesV1RequestBodyFile file) {
+        this.file = file;
+  }
 }

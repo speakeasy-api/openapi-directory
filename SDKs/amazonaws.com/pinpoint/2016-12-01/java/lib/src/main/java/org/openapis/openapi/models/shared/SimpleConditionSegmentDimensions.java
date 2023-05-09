@@ -15,6 +15,7 @@ public class SimpleConditionSegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, AttributeDimension> attributes;
+
     public SimpleConditionSegmentDimensions withAttributes(java.util.Map<String, AttributeDimension> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class SimpleConditionSegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Behavior")
     public SegmentBehaviors behavior;
+
     public SimpleConditionSegmentDimensions withBehavior(SegmentBehaviors behavior) {
         this.behavior = behavior;
         return this;
@@ -31,6 +33,7 @@ public class SimpleConditionSegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Demographic")
     public SegmentDemographics demographic;
+
     public SimpleConditionSegmentDimensions withDemographic(SegmentDemographics demographic) {
         this.demographic = demographic;
         return this;
@@ -39,6 +42,7 @@ public class SimpleConditionSegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public SegmentLocation location;
+
     public SimpleConditionSegmentDimensions withLocation(SegmentLocation location) {
         this.location = location;
         return this;
@@ -47,6 +51,7 @@ public class SimpleConditionSegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, MetricDimension> metrics;
+
     public SimpleConditionSegmentDimensions withMetrics(java.util.Map<String, MetricDimension> metrics) {
         this.metrics = metrics;
         return this;
@@ -55,9 +60,11 @@ public class SimpleConditionSegmentDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAttributes")
     public java.util.Map<String, AttributeDimension> userAttributes;
+
     public SimpleConditionSegmentDimensions withUserAttributes(java.util.Map<String, AttributeDimension> userAttributes) {
         this.userAttributes = userAttributes;
         return this;
     }
     
+    public SimpleConditionSegmentDimensions(){}
 }

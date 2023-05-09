@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
     public String hapikey;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
@@ -16,6 +17,7 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
@@ -23,6 +25,7 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
@@ -30,6 +33,7 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2Legacy1;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withOauth2Legacy1(String oauth2Legacy1) {
         this.oauth2Legacy1 = oauth2Legacy1;
         return this;
@@ -37,6 +41,7 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth3;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withOauth3(String oauth3) {
         this.oauth3 = oauth3;
         return this;
@@ -44,6 +49,7 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app")
     public String privateApps;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withPrivateApps(String privateApps) {
         this.privateApps = privateApps;
         return this;
@@ -51,6 +57,7 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app")
     public String privateApps1;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withPrivateApps1(String privateApps1) {
         this.privateApps1 = privateApps1;
         return this;
@@ -58,6 +65,7 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
@@ -65,9 +73,11 @@ public class GetCmsV3DomainsDomainIdGetByIdSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
     public String privateAppsLegacy1;
+
     public GetCmsV3DomainsDomainIdGetByIdSecurity withPrivateAppsLegacy1(String privateAppsLegacy1) {
         this.privateAppsLegacy1 = privateAppsLegacy1;
         return this;
     }
     
+    public GetCmsV3DomainsDomainIdGetByIdSecurity(){}
 }

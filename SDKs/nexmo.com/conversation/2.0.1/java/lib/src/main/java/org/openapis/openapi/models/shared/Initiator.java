@@ -12,9 +12,11 @@ public class Initiator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joined")
     public InitiatorJoined joined;
+
     public Initiator withJoined(InitiatorJoined joined) {
         this.joined = joined;
         return this;
     }
     
+    public Initiator(){}
 }

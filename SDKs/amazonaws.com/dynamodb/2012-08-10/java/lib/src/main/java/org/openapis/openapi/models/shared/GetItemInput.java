@@ -15,6 +15,7 @@ public class GetItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public GetItemInput withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -23,6 +24,7 @@ public class GetItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public GetItemInput withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -31,6 +33,7 @@ public class GetItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public GetItemInput withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -38,6 +41,7 @@ public class GetItemInput {
     
     @JsonProperty("Key")
     public java.util.Map<String, AttributeValue> key;
+
     public GetItemInput withKey(java.util.Map<String, AttributeValue> key) {
         this.key = key;
         return this;
@@ -46,6 +50,7 @@ public class GetItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectionExpression")
     public String projectionExpression;
+
     public GetItemInput withProjectionExpression(String projectionExpression) {
         this.projectionExpression = projectionExpression;
         return this;
@@ -57,6 +62,7 @@ public class GetItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public GetItemInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -64,9 +70,14 @@ public class GetItemInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetItemInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetItemInput(@JsonProperty("Key") java.util.Map<String, AttributeValue> key, @JsonProperty("TableName") String tableName) {
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

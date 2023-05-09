@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Payments {
     @JsonProperty("href")
     public String href;
+
     public Payments withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public Payments(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

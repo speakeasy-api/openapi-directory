@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateListenerInput {
     
     public String[] alpnPolicy;
+
     public CreateListenerInput withAlpnPolicy(String[] alpnPolicy) {
         this.alpnPolicy = alpnPolicy;
         return this;
@@ -16,6 +17,7 @@ public class CreateListenerInput {
     
     
     public Certificate[] certificates;
+
     public CreateListenerInput withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -23,6 +25,7 @@ public class CreateListenerInput {
     
     
     public Action[] defaultActions;
+
     public CreateListenerInput withDefaultActions(Action[] defaultActions) {
         this.defaultActions = defaultActions;
         return this;
@@ -30,6 +33,7 @@ public class CreateListenerInput {
     
     
     public String loadBalancerArn;
+
     public CreateListenerInput withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -37,6 +41,7 @@ public class CreateListenerInput {
     
     
     public Long port;
+
     public CreateListenerInput withPort(Long port) {
         this.port = port;
         return this;
@@ -44,6 +49,7 @@ public class CreateListenerInput {
     
     
     public ProtocolEnumEnum protocol;
+
     public CreateListenerInput withProtocol(ProtocolEnumEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -51,6 +57,7 @@ public class CreateListenerInput {
     
     
     public String sslPolicy;
+
     public CreateListenerInput withSslPolicy(String sslPolicy) {
         this.sslPolicy = sslPolicy;
         return this;
@@ -58,9 +65,14 @@ public class CreateListenerInput {
     
     
     public Tag[] tags;
+
     public CreateListenerInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateListenerInput(@JsonProperty("DefaultActions") Action[] defaultActions, @JsonProperty("LoadBalancerArn") String loadBalancerArn) {
+        this.defaultActions = defaultActions;
+        this.loadBalancerArn = loadBalancerArn;
+  }
 }

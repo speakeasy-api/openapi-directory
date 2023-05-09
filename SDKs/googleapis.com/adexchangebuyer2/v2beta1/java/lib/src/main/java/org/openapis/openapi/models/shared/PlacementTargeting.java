@@ -18,6 +18,7 @@ public class PlacementTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileApplicationTargeting")
     public MobileApplicationTargeting mobileApplicationTargeting;
+
     public PlacementTargeting withMobileApplicationTargeting(MobileApplicationTargeting mobileApplicationTargeting) {
         this.mobileApplicationTargeting = mobileApplicationTargeting;
         return this;
@@ -29,9 +30,11 @@ public class PlacementTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlTargeting")
     public UrlTargeting urlTargeting;
+
     public PlacementTargeting withUrlTargeting(UrlTargeting urlTargeting) {
         this.urlTargeting = urlTargeting;
         return this;
     }
     
+    public PlacementTargeting(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAcceleratorResponse {
     
     public String contentType;
+
     public CreateAcceleratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAcceleratorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAcceleratorResponse createAcceleratorResponse;
+
     public CreateAcceleratorResponse withCreateAcceleratorResponse(org.openapis.openapi.models.shared.CreateAcceleratorResponse createAcceleratorResponse) {
         this.createAcceleratorResponse = createAcceleratorResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAcceleratorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateAcceleratorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAcceleratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateAcceleratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAcceleratorResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAcceleratorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAcceleratorResponse {
     
     
     public Integer statusCode;
+
     public CreateAcceleratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateAcceleratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAcceleratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAcceleratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

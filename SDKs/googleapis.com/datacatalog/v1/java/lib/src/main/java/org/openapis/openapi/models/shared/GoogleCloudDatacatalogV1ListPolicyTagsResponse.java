@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ListPolicyTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogV1ListPolicyTagsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1ListPolicyTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTags")
     public GoogleCloudDatacatalogV1PolicyTag[] policyTags;
+
     public GoogleCloudDatacatalogV1ListPolicyTagsResponse withPolicyTags(GoogleCloudDatacatalogV1PolicyTag[] policyTags) {
         this.policyTags = policyTags;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ListPolicyTagsResponse(){}
 }

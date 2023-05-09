@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class ListExportsInput {
     
     public String nextToken;
+
     public ListExportsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExportsInput(){}
 }

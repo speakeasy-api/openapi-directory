@@ -12,6 +12,7 @@ public class ListResourceDelegatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourceDelegatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListResourceDelegatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceDelegatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class ListResourceDelegatesRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public ListResourceDelegatesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -34,9 +37,14 @@ public class ListResourceDelegatesRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ListResourceDelegatesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ListResourceDelegatesRequest(@JsonProperty("OrganizationId") String organizationId, @JsonProperty("ResourceId") String resourceId) {
+        this.organizationId = organizationId;
+        this.resourceId = resourceId;
+  }
 }

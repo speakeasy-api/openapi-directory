@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CSVMappingParameters {
     @JsonProperty("RecordColumnDelimiter")
     public String recordColumnDelimiter;
+
     public CSVMappingParameters withRecordColumnDelimiter(String recordColumnDelimiter) {
         this.recordColumnDelimiter = recordColumnDelimiter;
         return this;
@@ -19,9 +20,14 @@ public class CSVMappingParameters {
     
     @JsonProperty("RecordRowDelimiter")
     public String recordRowDelimiter;
+
     public CSVMappingParameters withRecordRowDelimiter(String recordRowDelimiter) {
         this.recordRowDelimiter = recordRowDelimiter;
         return this;
     }
     
+    public CSVMappingParameters(@JsonProperty("RecordColumnDelimiter") String recordColumnDelimiter, @JsonProperty("RecordRowDelimiter") String recordRowDelimiter) {
+        this.recordColumnDelimiter = recordColumnDelimiter;
+        this.recordRowDelimiter = recordRowDelimiter;
+  }
 }

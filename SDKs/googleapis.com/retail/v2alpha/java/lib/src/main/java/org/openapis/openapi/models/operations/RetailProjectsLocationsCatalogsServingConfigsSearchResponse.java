@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetailProjectsLocationsCatalogsServingConfigsSearchResponse {
     
     public String contentType;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRetailV2alphaSearchResponse googleCloudRetailV2alphaSearchResponse;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchResponse withGoogleCloudRetailV2alphaSearchResponse(org.openapis.openapi.models.shared.GoogleCloudRetailV2alphaSearchResponse googleCloudRetailV2alphaSearchResponse) {
         this.googleCloudRetailV2alphaSearchResponse = googleCloudRetailV2alphaSearchResponse;
         return this;
@@ -26,6 +29,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchResponse {
     
     
     public Integer statusCode;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsServingConfigsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ReferenceListItem {
     @JsonProperty("arn")
     public String arn;
+
     public ReferenceListItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ReferenceListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ReferenceListItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class ReferenceListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReferenceListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class ReferenceListItem {
     
     @JsonProperty("id")
     public String id;
+
     public ReferenceListItem withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +54,7 @@ public class ReferenceListItem {
     
     @JsonProperty("md5")
     public String md5;
+
     public ReferenceListItem withMd5(String md5) {
         this.md5 = md5;
         return this;
@@ -58,6 +63,7 @@ public class ReferenceListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReferenceListItem withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +71,7 @@ public class ReferenceListItem {
     
     @JsonProperty("referenceStoreId")
     public String referenceStoreId;
+
     public ReferenceListItem withReferenceStoreId(String referenceStoreId) {
         this.referenceStoreId = referenceStoreId;
         return this;
@@ -73,6 +80,7 @@ public class ReferenceListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReferenceStatusEnum status;
+
     public ReferenceListItem withStatus(ReferenceStatusEnum status) {
         this.status = status;
         return this;
@@ -82,9 +90,18 @@ public class ReferenceListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public ReferenceListItem withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ReferenceListItem(@JsonProperty("arn") String arn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("md5") String md5, @JsonProperty("referenceStoreId") String referenceStoreId, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.id = id;
+        this.md5 = md5;
+        this.referenceStoreId = referenceStoreId;
+        this.updateTime = updateTime;
+  }
 }

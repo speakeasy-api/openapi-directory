@@ -228,4 +228,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateLaunchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateProjectResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateProjectDataDeliveryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

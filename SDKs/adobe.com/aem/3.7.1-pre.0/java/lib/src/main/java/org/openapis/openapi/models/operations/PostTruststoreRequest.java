@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostTruststoreRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:operation")
     public String operation;
+
     public PostTruststoreRequest withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -16,6 +17,7 @@ public class PostTruststoreRequest {
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostTruststoreRequestBody requestBody;
+
     public PostTruststoreRequest withRequestBody(PostTruststoreRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +25,7 @@ public class PostTruststoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyStoreType")
     public String keyStoreType;
+
     public PostTruststoreRequest withKeyStoreType(String keyStoreType) {
         this.keyStoreType = keyStoreType;
         return this;
@@ -30,6 +33,7 @@ public class PostTruststoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newPassword")
     public String newPassword;
+
     public PostTruststoreRequest withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -37,6 +41,7 @@ public class PostTruststoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rePassword")
     public String rePassword;
+
     public PostTruststoreRequest withRePassword(String rePassword) {
         this.rePassword = rePassword;
         return this;
@@ -44,9 +49,11 @@ public class PostTruststoreRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeAlias")
     public String removeAlias;
+
     public PostTruststoreRequest withRemoveAlias(String removeAlias) {
         this.removeAlias = removeAlias;
         return this;
     }
     
+    public PostTruststoreRequest(){}
 }

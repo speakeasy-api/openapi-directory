@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTableRowsResult {
     @JsonProperty("columnIds")
     public String[] columnIds;
+
     public ListTableRowsResult withColumnIds(String[] columnIds) {
         this.columnIds = columnIds;
         return this;
@@ -22,6 +23,7 @@ public class ListTableRowsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTableRowsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,6 +32,7 @@ public class ListTableRowsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowIdsNotFound")
     public String[] rowIdsNotFound;
+
     public ListTableRowsResult withRowIdsNotFound(String[] rowIdsNotFound) {
         this.rowIdsNotFound = rowIdsNotFound;
         return this;
@@ -37,6 +40,7 @@ public class ListTableRowsResult {
     
     @JsonProperty("rows")
     public TableRow[] rows;
+
     public ListTableRowsResult withRows(TableRow[] rows) {
         this.rows = rows;
         return this;
@@ -44,9 +48,15 @@ public class ListTableRowsResult {
     
     @JsonProperty("workbookCursor")
     public Long workbookCursor;
+
     public ListTableRowsResult withWorkbookCursor(Long workbookCursor) {
         this.workbookCursor = workbookCursor;
         return this;
     }
     
+    public ListTableRowsResult(@JsonProperty("columnIds") String[] columnIds, @JsonProperty("rows") TableRow[] rows, @JsonProperty("workbookCursor") Long workbookCursor) {
+        this.columnIds = columnIds;
+        this.rows = rows;
+        this.workbookCursor = workbookCursor;
+  }
 }

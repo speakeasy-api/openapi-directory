@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstancePatchStateFilter {
     @JsonProperty("Key")
     public String key;
+
     public InstancePatchStateFilter withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class InstancePatchStateFilter {
     
     @JsonProperty("Type")
     public InstancePatchStateOperatorTypeEnum type;
+
     public InstancePatchStateFilter withType(InstancePatchStateOperatorTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class InstancePatchStateFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public InstancePatchStateFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public InstancePatchStateFilter(@JsonProperty("Key") String key, @JsonProperty("Type") InstancePatchStateOperatorTypeEnum type, @JsonProperty("Values") String[] values) {
+        this.key = key;
+        this.type = type;
+        this.values = values;
+  }
 }

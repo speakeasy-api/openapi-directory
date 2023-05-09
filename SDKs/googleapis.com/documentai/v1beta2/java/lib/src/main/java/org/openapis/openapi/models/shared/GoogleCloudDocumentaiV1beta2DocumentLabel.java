@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automlModel")
     public String automlModel;
+
     public GoogleCloudDocumentaiV1beta2DocumentLabel withAutomlModel(String automlModel) {
         this.automlModel = automlModel;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDocumentaiV1beta2DocumentLabel withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDocumentaiV1beta2DocumentLabel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentLabel(){}
 }

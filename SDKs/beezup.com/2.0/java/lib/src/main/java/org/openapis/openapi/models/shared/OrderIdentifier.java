@@ -12,6 +12,7 @@ public class OrderIdentifier {
      */
     @JsonProperty("accountId")
     public Integer accountId;
+
     public OrderIdentifier withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class OrderIdentifier {
      */
     @JsonProperty("beezUPOrderId")
     public String beezUPOrderId;
+
     public OrderIdentifier withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -32,9 +34,15 @@ public class OrderIdentifier {
      */
     @JsonProperty("marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public OrderIdentifier withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public OrderIdentifier(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

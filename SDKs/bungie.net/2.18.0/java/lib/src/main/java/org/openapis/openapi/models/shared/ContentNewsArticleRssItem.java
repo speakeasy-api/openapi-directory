@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class ContentNewsArticleRssItem {
     
     public String description;
+
     public ContentNewsArticleRssItem withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class ContentNewsArticleRssItem {
     
     
     public String htmlContent;
+
     public ContentNewsArticleRssItem withHtmlContent(String htmlContent) {
         this.htmlContent = htmlContent;
         return this;
@@ -23,6 +25,7 @@ public class ContentNewsArticleRssItem {
     
     
     public String imagePath;
+
     public ContentNewsArticleRssItem withImagePath(String imagePath) {
         this.imagePath = imagePath;
         return this;
@@ -30,6 +33,7 @@ public class ContentNewsArticleRssItem {
     
     
     public String link;
+
     public ContentNewsArticleRssItem withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class ContentNewsArticleRssItem {
     
     
     public String optionalMobileImagePath;
+
     public ContentNewsArticleRssItem withOptionalMobileImagePath(String optionalMobileImagePath) {
         this.optionalMobileImagePath = optionalMobileImagePath;
         return this;
@@ -44,6 +49,7 @@ public class ContentNewsArticleRssItem {
     
     
     public OffsetDateTime pubDate;
+
     public ContentNewsArticleRssItem withPubDate(OffsetDateTime pubDate) {
         this.pubDate = pubDate;
         return this;
@@ -51,6 +57,7 @@ public class ContentNewsArticleRssItem {
     
     
     public String title;
+
     public ContentNewsArticleRssItem withTitle(String title) {
         this.title = title;
         return this;
@@ -58,9 +65,11 @@ public class ContentNewsArticleRssItem {
     
     
     public String uniqueIdentifier;
+
     public ContentNewsArticleRssItem withUniqueIdentifier(String uniqueIdentifier) {
         this.uniqueIdentifier = uniqueIdentifier;
         return this;
     }
     
+    public ContentNewsArticleRssItem(){}
 }

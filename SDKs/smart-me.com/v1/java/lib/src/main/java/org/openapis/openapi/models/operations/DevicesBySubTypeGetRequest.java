@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesBySubTypeGetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meterSubType")
     public DevicesBySubTypeGetMeterSubTypeEnum meterSubType;
+
     public DevicesBySubTypeGetRequest withMeterSubType(DevicesBySubTypeGetMeterSubTypeEnum meterSubType) {
         this.meterSubType = meterSubType;
         return this;
     }
     
+    public DevicesBySubTypeGetRequest(@JsonProperty("meterSubType") DevicesBySubTypeGetMeterSubTypeEnum meterSubType) {
+        this.meterSubType = meterSubType;
+  }
 }

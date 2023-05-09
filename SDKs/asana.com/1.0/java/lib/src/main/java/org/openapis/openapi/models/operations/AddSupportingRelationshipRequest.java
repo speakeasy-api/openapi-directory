@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddSupportingRelationshipRequest {
@@ -12,6 +13,7 @@ public class AddSupportingRelationshipRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddSupportingRelationshipRequestBody requestBody;
+
     public AddSupportingRelationshipRequest withRequestBody(AddSupportingRelationshipRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class AddSupportingRelationshipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=goal_gid")
     public String goalGid;
+
     public AddSupportingRelationshipRequest withGoalGid(String goalGid) {
         this.goalGid = goalGid;
         return this;
@@ -34,6 +37,7 @@ public class AddSupportingRelationshipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public AddSupportingRelationshipRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -45,9 +49,14 @@ public class AddSupportingRelationshipRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public AddSupportingRelationshipRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public AddSupportingRelationshipRequest(@JsonProperty("RequestBody") AddSupportingRelationshipRequestBody requestBody, @JsonProperty("goal_gid") String goalGid) {
+        this.requestBody = requestBody;
+        this.goalGid = goalGid;
+  }
 }

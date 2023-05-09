@@ -12,6 +12,7 @@ public class Playlists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public Playlist[] collection;
+
     public Playlists withCollection(Playlist[] collection) {
         this.collection = collection;
         return this;
@@ -20,9 +21,11 @@ public class Playlists {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_href")
     public String nextHref;
+
     public Playlists withNextHref(String nextHref) {
         this.nextHref = nextHref;
         return this;
     }
     
+    public Playlists(){}
 }

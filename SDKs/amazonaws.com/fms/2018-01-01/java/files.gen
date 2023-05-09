@@ -65,6 +65,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/DisassociateThirdPartyF
 lib/src/main/java/org/openapis/openapi/models/operations/GetAdminAccountXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAdminAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAdminAccountResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetAdminScopeXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetAdminScopeRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetAdminScopeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAppsListXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAppsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAppsListResponse.java
@@ -92,6 +95,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetThirdPartyFirewallAs
 lib/src/main/java/org/openapis/openapi/models/operations/GetViolationDetailsXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetViolationDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetViolationDetailsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListAdminAccountsForOrganizationXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListAdminAccountsForOrganizationRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListAdminAccountsForOrganizationResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListAdminsManagingAccountXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListAdminsManagingAccountRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListAdminsManagingAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAppsListsXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAppsListsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAppsListsResponse.java
@@ -122,6 +131,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListTagsForResourceResp
 lib/src/main/java/org/openapis/openapi/models/operations/ListThirdPartyFirewallFirewallPoliciesXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListThirdPartyFirewallFirewallPoliciesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListThirdPartyFirewallFirewallPoliciesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PutAdminAccountXAmzTargetEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/PutAdminAccountRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/PutAdminAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutAppsListXAmzTargetEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutAppsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutAppsListResponse.java
@@ -162,6 +174,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/DisassociateThirdPartyFirew
 lib/src/main/java/org/openapis/openapi/models/shared/DisassociateThirdPartyFirewallRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetAdminAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountRoleStatusEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetAdminScopeResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/OrganizationStatusEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/AdminScope.java
+lib/src/main/java/org/openapis/openapi/models/shared/RegionScope.java
+lib/src/main/java/org/openapis/openapi/models/shared/PolicyTypeScope.java
+lib/src/main/java/org/openapis/openapi/models/shared/SecurityServiceTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/OrganizationalUnitScope.java
+lib/src/main/java/org/openapis/openapi/models/shared/AccountScope.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetAdminScopeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetAppsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppsListData.java
 lib/src/main/java/org/openapis/openapi/models/shared/App.java
@@ -175,12 +196,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetNotificationChannelRespo
 lib/src/main/java/org/openapis/openapi/models/shared/GetPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Policy.java
 lib/src/main/java/org/openapis/openapi/models/shared/SecurityServicePolicyData.java
-lib/src/main/java/org/openapis/openapi/models/shared/SecurityServiceTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PolicyOption.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThirdPartyFirewallPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/FirewallDeploymentModelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkFirewallPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResourceTag.java
+lib/src/main/java/org/openapis/openapi/models/shared/CustomerPolicyStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetProtectionStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetProtectionStatusRequest.java
@@ -189,6 +210,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ProtocolsListData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetProtocolsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetResourceSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResourceSet.java
+lib/src/main/java/org/openapis/openapi/models/shared/ResourceSetStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetResourceSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetThirdPartyFirewallAssociationStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/MarketplaceSubscriptionOnboardingStatusEnum.java
@@ -248,6 +270,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/AwsEc2NetworkInterfaceViola
 lib/src/main/java/org/openapis/openapi/models/shared/AwsEc2InstanceViolation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tag.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetViolationDetailsRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListAdminAccountsForOrganizationResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/AdminAccountSummary.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListAdminAccountsForOrganizationRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListAdminsManagingAccountResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListAdminsManagingAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListAppsListsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AppsListDataSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListAppsListsRequest.java
@@ -278,6 +305,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceRequest.
 lib/src/main/java/org/openapis/openapi/models/shared/ListThirdPartyFirewallFirewallPoliciesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThirdPartyFirewallFirewallPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListThirdPartyFirewallFirewallPoliciesRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/PutAdminAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutAppsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutAppsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutNotificationChannelRequest.java
@@ -290,4 +318,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PutResourceSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UntagResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

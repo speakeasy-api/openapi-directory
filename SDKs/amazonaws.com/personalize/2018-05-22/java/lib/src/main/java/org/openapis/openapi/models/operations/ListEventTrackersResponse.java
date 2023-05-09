@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEventTrackersResponse {
     
     public String contentType;
+
     public ListEventTrackersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEventTrackersResponse {
      */
     
     public Object invalidInputException;
+
     public ListEventTrackersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListEventTrackersResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListEventTrackersResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListEventTrackersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEventTrackersResponse listEventTrackersResponse;
+
     public ListEventTrackersResponse withListEventTrackersResponse(org.openapis.openapi.models.shared.ListEventTrackersResponse listEventTrackersResponse) {
         this.listEventTrackersResponse = listEventTrackersResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListEventTrackersResponse {
     
     
     public Integer statusCode;
+
     public ListEventTrackersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListEventTrackersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEventTrackersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListEventTrackersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

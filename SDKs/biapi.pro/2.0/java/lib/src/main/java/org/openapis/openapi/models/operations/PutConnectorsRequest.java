@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PutConnectorsRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PutConnectorsRequestBody requestBody;
+
     public PutConnectorsRequest withRequestBody(PutConnectorsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class PutConnectorsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PutConnectorsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
     }
     
+    public PutConnectorsRequest(){}
 }

@@ -15,6 +15,7 @@ public class MetricDatum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public AutoMLMetricEnumEnum metricName;
+
     public MetricDatum withMetricName(AutoMLMetricEnumEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -23,6 +24,7 @@ public class MetricDatum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Set")
     public MetricSetSourceEnum set;
+
     public MetricDatum withSet(MetricSetSourceEnum set) {
         this.set = set;
         return this;
@@ -31,6 +33,7 @@ public class MetricDatum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardMetricName")
     public AutoMLMetricExtendedEnumEnum standardMetricName;
+
     public MetricDatum withStandardMetricName(AutoMLMetricExtendedEnumEnum standardMetricName) {
         this.standardMetricName = standardMetricName;
         return this;
@@ -39,9 +42,11 @@ public class MetricDatum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Float value;
+
     public MetricDatum withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public MetricDatum(){}
 }

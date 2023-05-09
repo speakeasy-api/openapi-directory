@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest {
@@ -12,6 +13,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailyMetric")
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum dailyMetric;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailyMetric(BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum dailyMetric) {
         this.dailyMetric = dailyMetric;
         return this;
@@ -62,6 +68,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailyRange.endDate.day")
     public Long dailyRangeEndDateDay;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailyRangeEndDateDay(Long dailyRangeEndDateDay) {
         this.dailyRangeEndDateDay = dailyRangeEndDateDay;
         return this;
@@ -72,6 +79,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailyRange.endDate.month")
     public Long dailyRangeEndDateMonth;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailyRangeEndDateMonth(Long dailyRangeEndDateMonth) {
         this.dailyRangeEndDateMonth = dailyRangeEndDateMonth;
         return this;
@@ -82,6 +90,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailyRange.endDate.year")
     public Long dailyRangeEndDateYear;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailyRangeEndDateYear(Long dailyRangeEndDateYear) {
         this.dailyRangeEndDateYear = dailyRangeEndDateYear;
         return this;
@@ -92,6 +101,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailyRange.startDate.day")
     public Long dailyRangeStartDateDay;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailyRangeStartDateDay(Long dailyRangeStartDateDay) {
         this.dailyRangeStartDateDay = dailyRangeStartDateDay;
         return this;
@@ -102,6 +112,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailyRange.startDate.month")
     public Long dailyRangeStartDateMonth;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailyRangeStartDateMonth(Long dailyRangeStartDateMonth) {
         this.dailyRangeStartDateMonth = dailyRangeStartDateMonth;
         return this;
@@ -112,16 +123,18 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailyRange.startDate.year")
     public Long dailyRangeStartDateYear;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailyRangeStartDateYear(Long dailyRangeStartDateYear) {
         this.dailyRangeStartDateYear = dailyRangeStartDateYear;
         return this;
     }
     
     /**
-     * Represents the day of the week. Eg: MONDAY.
+     * Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailySubEntityType.dayOfWeek")
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum dailySubEntityTypeDayOfWeek;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailySubEntityTypeDayOfWeek(BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum dailySubEntityTypeDayOfWeek) {
         this.dailySubEntityTypeDayOfWeek = dailySubEntityTypeDayOfWeek;
         return this;
@@ -132,6 +145,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailySubEntityType.timeOfDay.hours")
     public Long dailySubEntityTypeTimeOfDayHours;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailySubEntityTypeTimeOfDayHours(Long dailySubEntityTypeTimeOfDayHours) {
         this.dailySubEntityTypeTimeOfDayHours = dailySubEntityTypeTimeOfDayHours;
         return this;
@@ -142,6 +156,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailySubEntityType.timeOfDay.minutes")
     public Long dailySubEntityTypeTimeOfDayMinutes;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailySubEntityTypeTimeOfDayMinutes(Long dailySubEntityTypeTimeOfDayMinutes) {
         this.dailySubEntityTypeTimeOfDayMinutes = dailySubEntityTypeTimeOfDayMinutes;
         return this;
@@ -152,6 +167,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailySubEntityType.timeOfDay.nanos")
     public Long dailySubEntityTypeTimeOfDayNanos;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailySubEntityTypeTimeOfDayNanos(Long dailySubEntityTypeTimeOfDayNanos) {
         this.dailySubEntityTypeTimeOfDayNanos = dailySubEntityTypeTimeOfDayNanos;
         return this;
@@ -162,6 +178,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dailySubEntityType.timeOfDay.seconds")
     public Long dailySubEntityTypeTimeOfDaySeconds;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withDailySubEntityTypeTimeOfDaySeconds(Long dailySubEntityTypeTimeOfDaySeconds) {
         this.dailySubEntityTypeTimeOfDaySeconds = dailySubEntityTypeTimeOfDaySeconds;
         return this;
@@ -172,6 +189,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -182,6 +200,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -192,6 +211,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withName(String name) {
         this.name = name;
         return this;
@@ -202,6 +222,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -212,6 +233,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -222,6 +244,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -232,6 +255,7 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -242,9 +266,13 @@ public class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

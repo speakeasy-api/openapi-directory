@@ -18,6 +18,7 @@ public class DemoteMasterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DemoteMasterConfiguration withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class DemoteMasterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlReplicaConfiguration")
     public DemoteMasterMySqlReplicaConfiguration mysqlReplicaConfiguration;
+
     public DemoteMasterConfiguration withMysqlReplicaConfiguration(DemoteMasterMySqlReplicaConfiguration mysqlReplicaConfiguration) {
         this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
         return this;
     }
     
+    public DemoteMasterConfiguration(){}
 }

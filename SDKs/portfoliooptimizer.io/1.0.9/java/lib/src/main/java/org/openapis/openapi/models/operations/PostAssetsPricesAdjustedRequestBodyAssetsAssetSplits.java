@@ -12,6 +12,7 @@ public class PostAssetsPricesAdjustedRequestBodyAssetsAssetSplits {
      */
     @JsonProperty("date")
     public String date;
+
     public PostAssetsPricesAdjustedRequestBodyAssetsAssetSplits withDate(String date) {
         this.date = date;
         return this;
@@ -22,9 +23,14 @@ public class PostAssetsPricesAdjustedRequestBodyAssetsAssetSplits {
      */
     @JsonProperty("factor")
     public Double factor;
+
     public PostAssetsPricesAdjustedRequestBodyAssetsAssetSplits withFactor(Double factor) {
         this.factor = factor;
         return this;
     }
     
+    public PostAssetsPricesAdjustedRequestBodyAssetsAssetSplits(@JsonProperty("date") String date, @JsonProperty("factor") Double factor) {
+        this.date = date;
+        this.factor = factor;
+  }
 }

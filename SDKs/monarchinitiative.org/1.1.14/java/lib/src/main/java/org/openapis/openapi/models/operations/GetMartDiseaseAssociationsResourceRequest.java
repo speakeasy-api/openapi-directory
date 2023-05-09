@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMartDiseaseAssociationsResourceRequest {
@@ -12,6 +13,7 @@ public class GetMartDiseaseAssociationsResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
     public String objectCategory;
+
     public GetMartDiseaseAssociationsResourceRequest withObjectCategory(String objectCategory) {
         this.objectCategory = objectCategory;
         return this;
@@ -22,6 +24,7 @@ public class GetMartDiseaseAssociationsResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
     public String[] slim;
+
     public GetMartDiseaseAssociationsResourceRequest withSlim(String[] slim) {
         this.slim = slim;
         return this;
@@ -32,9 +35,14 @@ public class GetMartDiseaseAssociationsResourceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxon")
     public String taxon;
+
     public GetMartDiseaseAssociationsResourceRequest withTaxon(String taxon) {
         this.taxon = taxon;
         return this;
     }
     
+    public GetMartDiseaseAssociationsResourceRequest(@JsonProperty("object_category") String objectCategory, @JsonProperty("taxon") String taxon) {
+        this.objectCategory = objectCategory;
+        this.taxon = taxon;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnAuthorizationRulesResultAuthorizationRules {
     
     public Boolean accessAll;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRules withAccessAll(Boolean accessAll) {
         this.accessAll = accessAll;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientVpnAuthorizationRulesResultAuthorizationRules {
     
     
     public String clientVpnEndpointId;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRules withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClientVpnAuthorizationRulesResultAuthorizationRules {
     
     
     public String description;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRules withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClientVpnAuthorizationRulesResultAuthorizationRules {
     
     
     public String destinationCidr;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRules withDestinationCidr(String destinationCidr) {
         this.destinationCidr = destinationCidr;
         return this;
@@ -40,6 +44,7 @@ public class DescribeClientVpnAuthorizationRulesResultAuthorizationRules {
     
     
     public String groupId;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRules withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -47,9 +52,11 @@ public class DescribeClientVpnAuthorizationRulesResultAuthorizationRules {
     
     
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatus status;
+
     public DescribeClientVpnAuthorizationRulesResultAuthorizationRules withStatus(DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatus status) {
         this.status = status;
         return this;
     }
     
+    public DescribeClientVpnAuthorizationRulesResultAuthorizationRules(){}
 }

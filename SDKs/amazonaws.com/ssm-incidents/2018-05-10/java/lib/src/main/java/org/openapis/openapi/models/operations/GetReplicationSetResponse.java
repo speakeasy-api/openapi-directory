@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReplicationSetResponse {
@@ -12,6 +13,7 @@ public class GetReplicationSetResponse {
      */
     
     public Object accessDeniedException;
+
     public GetReplicationSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetReplicationSetResponse {
     
     
     public String contentType;
+
     public GetReplicationSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetReplicationSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReplicationSetOutput getReplicationSetOutput;
+
     public GetReplicationSetResponse withGetReplicationSetOutput(org.openapis.openapi.models.shared.GetReplicationSetOutput getReplicationSetOutput) {
         this.getReplicationSetOutput = getReplicationSetOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetReplicationSetResponse {
      */
     
     public Object internalServerException;
+
     public GetReplicationSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetReplicationSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetReplicationSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetReplicationSetResponse {
     
     
     public Integer statusCode;
+
     public GetReplicationSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetReplicationSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReplicationSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetReplicationSetResponse {
      */
     
     public Object throttlingException;
+
     public GetReplicationSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetReplicationSetResponse {
      */
     
     public Object validationException;
+
     public GetReplicationSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetReplicationSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

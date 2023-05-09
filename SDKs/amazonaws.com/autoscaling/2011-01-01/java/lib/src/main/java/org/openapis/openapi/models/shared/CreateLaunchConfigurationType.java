@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLaunchConfigurationType {
     
     public Boolean associatePublicIpAddress;
+
     public CreateLaunchConfigurationType withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -16,6 +17,7 @@ public class CreateLaunchConfigurationType {
     
     
     public BlockDeviceMapping[] blockDeviceMappings;
+
     public CreateLaunchConfigurationType withBlockDeviceMappings(BlockDeviceMapping[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -23,6 +25,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String classicLinkVPCId;
+
     public CreateLaunchConfigurationType withClassicLinkVPCId(String classicLinkVPCId) {
         this.classicLinkVPCId = classicLinkVPCId;
         return this;
@@ -30,6 +33,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String[] classicLinkVPCSecurityGroups;
+
     public CreateLaunchConfigurationType withClassicLinkVPCSecurityGroups(String[] classicLinkVPCSecurityGroups) {
         this.classicLinkVPCSecurityGroups = classicLinkVPCSecurityGroups;
         return this;
@@ -37,6 +41,7 @@ public class CreateLaunchConfigurationType {
     
     
     public Boolean ebsOptimized;
+
     public CreateLaunchConfigurationType withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -44,6 +49,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String iamInstanceProfile;
+
     public CreateLaunchConfigurationType withIamInstanceProfile(String iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -51,6 +57,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String imageId;
+
     public CreateLaunchConfigurationType withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -58,6 +65,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String instanceId;
+
     public CreateLaunchConfigurationType withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -65,6 +73,7 @@ public class CreateLaunchConfigurationType {
     
     
     public InstanceMonitoring instanceMonitoring;
+
     public CreateLaunchConfigurationType withInstanceMonitoring(InstanceMonitoring instanceMonitoring) {
         this.instanceMonitoring = instanceMonitoring;
         return this;
@@ -72,6 +81,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String instanceType;
+
     public CreateLaunchConfigurationType withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -79,6 +89,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String kernelId;
+
     public CreateLaunchConfigurationType withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -86,6 +97,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String keyName;
+
     public CreateLaunchConfigurationType withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -93,6 +105,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String launchConfigurationName;
+
     public CreateLaunchConfigurationType withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
@@ -100,6 +113,7 @@ public class CreateLaunchConfigurationType {
     
     
     public InstanceMetadataOptions metadataOptions;
+
     public CreateLaunchConfigurationType withMetadataOptions(InstanceMetadataOptions metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -107,6 +121,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String placementTenancy;
+
     public CreateLaunchConfigurationType withPlacementTenancy(String placementTenancy) {
         this.placementTenancy = placementTenancy;
         return this;
@@ -114,6 +129,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String ramdiskId;
+
     public CreateLaunchConfigurationType withRamdiskId(String ramdiskId) {
         this.ramdiskId = ramdiskId;
         return this;
@@ -121,6 +137,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String[] securityGroups;
+
     public CreateLaunchConfigurationType withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -128,6 +145,7 @@ public class CreateLaunchConfigurationType {
     
     
     public String spotPrice;
+
     public CreateLaunchConfigurationType withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -135,9 +153,13 @@ public class CreateLaunchConfigurationType {
     
     
     public String userData;
+
     public CreateLaunchConfigurationType withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public CreateLaunchConfigurationType(@JsonProperty("LaunchConfigurationName") String launchConfigurationName) {
+        this.launchConfigurationName = launchConfigurationName;
+  }
 }

@@ -20,6 +20,7 @@ public class RiskValueWriteV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("child_risk_values")
     public RiskValueWriteV1[] childRiskValues;
+
     public RiskValueWriteV1 withChildRiskValues(RiskValueWriteV1[] childRiskValues) {
         this.childRiskValues = childRiskValues;
         return this;
@@ -30,6 +31,7 @@ public class RiskValueWriteV1 {
      */
     @JsonProperty("risk_parameter_id")
     public String riskParameterId;
+
     public RiskValueWriteV1 withRiskParameterId(String riskParameterId) {
         this.riskParameterId = riskParameterId;
         return this;
@@ -40,9 +42,14 @@ public class RiskValueWriteV1 {
      */
     @JsonProperty("value")
     public Object value;
+
     public RiskValueWriteV1 withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public RiskValueWriteV1(@JsonProperty("risk_parameter_id") String riskParameterId, @JsonProperty("value") Object value) {
+        this.riskParameterId = riskParameterId;
+        this.value = value;
+  }
 }

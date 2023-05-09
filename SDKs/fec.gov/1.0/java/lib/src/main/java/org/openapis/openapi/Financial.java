@@ -13,13 +13,13 @@ import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
 
 /**
- * Fetch key information about a committee's Form 3, Form 3X, or Form 3P financial reports. 
+ * Fetch key information about a committee's Form 3, Form 3X, Form 13, or Form 3P financial reports. 
  * 
  *  Most committees are required to summarize their financial activity in each filing; those summaries are included in these files. Generally, committees file reports on a quarterly or monthly basis, but some must also submit a report 12 days before primary elections. Therefore, during the primary season, the period covered by this file may be different for different committees. These totals also incorporate any changes made by committees, if any report covering the period is amended. 
  * 
  *  Information is made available on the API as soon as it's processed. Keep in mind, complex paper filings take longer to process. 
  * 
- *  The financial endpoints use data from FEC [form 5](https://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](https://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](https://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; and [Form 3P](https://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
+ *  The financial endpoints use data from FEC [form 5](https://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](https://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](https://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; [Form 13](https://www.fec.gov/pdf/forms/fecfrm13.pdf) for inaugural committees; and [Form 3P](https://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
  */
 public class Financial {
 	
@@ -66,11 +66,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdReportsResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdReportsResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdReportsResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdReportsResponse(contentType, httpRes.statusCode()) {{
             committeeReportsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -111,11 +109,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdTotalsResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdTotalsResponse() {{
+        org.openapis.openapi.models.operations.GetCommitteeCommitteeIdTotalsResponse res = new org.openapis.openapi.models.operations.GetCommitteeCommitteeIdTotalsResponse(contentType, httpRes.statusCode()) {{
             committeeTotalsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -156,11 +152,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectionsResponse res = new org.openapis.openapi.models.operations.GetElectionsResponse() {{
+        org.openapis.openapi.models.operations.GetElectionsResponse res = new org.openapis.openapi.models.operations.GetElectionsResponse(contentType, httpRes.statusCode()) {{
             electionPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -201,11 +195,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectionsSearchResponse res = new org.openapis.openapi.models.operations.GetElectionsSearchResponse() {{
+        org.openapis.openapi.models.operations.GetElectionsSearchResponse res = new org.openapis.openapi.models.operations.GetElectionsSearchResponse(contentType, httpRes.statusCode()) {{
             electionsListPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -246,11 +238,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetElectionsSummaryResponse res = new org.openapis.openapi.models.operations.GetElectionsSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetElectionsSummaryResponse res = new org.openapis.openapi.models.operations.GetElectionsSummaryResponse(contentType, httpRes.statusCode()) {{
             electionSummary = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -291,11 +281,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsEntityTypeResponse res = new org.openapis.openapi.models.operations.GetReportsEntityTypeResponse() {{
+        org.openapis.openapi.models.operations.GetReportsEntityTypeResponse res = new org.openapis.openapi.models.operations.GetReportsEntityTypeResponse(contentType, httpRes.statusCode()) {{
             committeeReportsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -336,11 +324,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTotalsByEntityResponse res = new org.openapis.openapi.models.operations.GetTotalsByEntityResponse() {{
+        org.openapis.openapi.models.operations.GetTotalsByEntityResponse res = new org.openapis.openapi.models.operations.GetTotalsByEntityResponse(contentType, httpRes.statusCode()) {{
             entityReceiptDisbursementTotalsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -348,6 +334,49 @@ public class Financial {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.EntityReceiptDisbursementTotalsPage out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.EntityReceiptDisbursementTotalsPage.class);
                 res.entityReceiptDisbursementTotalsPage = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     *  - This endpoint provides information about an inaugural committee's Form 13 report of donations accepted. - The data is aggregated by the contributor and the two-year period. We refer to two-year periods as a `cycle`. -  - 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetTotalsInauguralCommitteesByContributorResponse getTotalsInauguralCommitteesByContributor(org.openapis.openapi.models.operations.GetTotalsInauguralCommitteesByContributorRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/totals/inaugural_committees/by_contributor/");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTotalsInauguralCommitteesByContributorRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetTotalsInauguralCommitteesByContributorResponse res = new org.openapis.openapi.models.operations.GetTotalsInauguralCommitteesByContributorResponse(contentType, httpRes.statusCode()) {{
+            inauguralDonationsPage = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.InauguralDonationsPage out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.InauguralDonationsPage.class);
+                res.inauguralDonationsPage = out;
             }
         }
 
@@ -381,11 +410,9 @@ public class Financial {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTotalsEntityTypeResponse res = new org.openapis.openapi.models.operations.GetTotalsEntityTypeResponse() {{
+        org.openapis.openapi.models.operations.GetTotalsEntityTypeResponse res = new org.openapis.openapi.models.operations.GetTotalsEntityTypeResponse(contentType, httpRes.statusCode()) {{
             committeeTotalsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

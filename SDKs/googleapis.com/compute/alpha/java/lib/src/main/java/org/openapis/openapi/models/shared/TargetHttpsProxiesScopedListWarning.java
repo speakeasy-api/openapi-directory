@@ -18,6 +18,7 @@ public class TargetHttpsProxiesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public TargetHttpsProxiesScopedListWarningCodeEnum code;
+
     public TargetHttpsProxiesScopedListWarning withCode(TargetHttpsProxiesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class TargetHttpsProxiesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TargetHttpsProxiesScopedListWarningData[] data;
+
     public TargetHttpsProxiesScopedListWarning withData(TargetHttpsProxiesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class TargetHttpsProxiesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TargetHttpsProxiesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TargetHttpsProxiesScopedListWarning(){}
 }

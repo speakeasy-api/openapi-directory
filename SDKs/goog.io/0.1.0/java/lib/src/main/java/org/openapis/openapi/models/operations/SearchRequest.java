@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public SearchRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public SearchRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

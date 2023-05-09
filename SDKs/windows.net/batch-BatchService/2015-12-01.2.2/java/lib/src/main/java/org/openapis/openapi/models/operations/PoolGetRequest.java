@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolGetRequest {
@@ -12,6 +13,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$expand")
     public String dollarExpand;
+
     public PoolGetRequest withDollarExpand(String dollarExpand) {
         this.dollarExpand = dollarExpand;
         return this;
@@ -22,6 +24,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
     public String dollarSelect;
+
     public PoolGetRequest withDollarSelect(String dollarSelect) {
         this.dollarSelect = dollarSelect;
         return this;
@@ -32,6 +35,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public PoolGetRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -42,6 +46,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public PoolGetRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public PoolGetRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -62,6 +68,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public PoolGetRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -72,6 +79,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolGetRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -82,6 +90,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolGetRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -92,6 +101,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolGetRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -102,6 +112,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public PoolGetRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -112,6 +123,7 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolGetRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -122,9 +134,14 @@ public class PoolGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolGetRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolGetRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.poolId = poolId;
+  }
 }

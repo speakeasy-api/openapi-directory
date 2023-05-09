@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1 {
      */
     @JsonProperty("benchmarkSharpeRatio")
     public Double benchmarkSharpeRatio;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1 withBenchmarkSharpeRatio(Double benchmarkSharpeRatio) {
         this.benchmarkSharpeRatio = benchmarkSharpeRatio;
         return this;
@@ -19,6 +20,7 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1 {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1Portfolios[] portfolios;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1 withPortfolios(PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -29,9 +31,15 @@ public class PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1 {
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1 withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1(@JsonProperty("benchmarkSharpeRatio") Double benchmarkSharpeRatio, @JsonProperty("portfolios") PostPortfolioAnalysisSharpeRatioProbabilisticRequestBody1Portfolios[] portfolios, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.benchmarkSharpeRatio = benchmarkSharpeRatio;
+        this.portfolios = portfolios;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SqlInstancesFailoverResponse {
     
     public String contentType;
+
     public SqlInstancesFailoverResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SqlInstancesFailoverResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public SqlInstancesFailoverResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class SqlInstancesFailoverResponse {
     
     
     public Integer statusCode;
+
     public SqlInstancesFailoverResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SqlInstancesFailoverResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SqlInstancesFailoverResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SqlInstancesFailoverResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

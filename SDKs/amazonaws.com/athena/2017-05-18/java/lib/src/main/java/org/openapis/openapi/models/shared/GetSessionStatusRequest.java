@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSessionStatusRequest {
     @JsonProperty("SessionId")
     public String sessionId;
+
     public GetSessionStatusRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public GetSessionStatusRequest(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeMatchmakingConfigurationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public MatchmakingConfiguration[] configurations;
+
     public DescribeMatchmakingConfigurationsOutput withConfigurations(MatchmakingConfiguration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -23,9 +24,11 @@ public class DescribeMatchmakingConfigurationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeMatchmakingConfigurationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeMatchmakingConfigurationsOutput(){}
 }

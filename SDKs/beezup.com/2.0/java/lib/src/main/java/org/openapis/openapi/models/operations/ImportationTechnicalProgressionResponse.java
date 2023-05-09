@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationTechnicalProgressionResponse {
@@ -13,6 +14,7 @@ public class ImportationTechnicalProgressionResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationTechnicalProgressionResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -20,6 +22,7 @@ public class ImportationTechnicalProgressionResponse {
     
     
     public String contentType;
+
     public ImportationTechnicalProgressionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +30,7 @@ public class ImportationTechnicalProgressionResponse {
     
     
     public Integer statusCode;
+
     public ImportationTechnicalProgressionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,6 +38,7 @@ public class ImportationTechnicalProgressionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationTechnicalProgressionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -44,9 +49,14 @@ public class ImportationTechnicalProgressionResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportationTechnicalProgression importationTechnicalProgression;
+
     public ImportationTechnicalProgressionResponse withImportationTechnicalProgression(org.openapis.openapi.models.shared.ImportationTechnicalProgression importationTechnicalProgression) {
         this.importationTechnicalProgression = importationTechnicalProgression;
         return this;
     }
     
+    public ImportationTechnicalProgressionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

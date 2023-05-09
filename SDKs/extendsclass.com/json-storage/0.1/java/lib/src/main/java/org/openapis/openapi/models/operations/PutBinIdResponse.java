@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutBinIdResponse {
     
     public String contentType;
+
     public PutBinIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutBinIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PutBinIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class PutBinIdResponse {
     
     
     public Integer statusCode;
+
     public PutBinIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutBinIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutBinIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class PutBinIdResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateStatus updateStatus;
+
     public PutBinIdResponse withUpdateStatus(org.openapis.openapi.models.shared.UpdateStatus updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public PutBinIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

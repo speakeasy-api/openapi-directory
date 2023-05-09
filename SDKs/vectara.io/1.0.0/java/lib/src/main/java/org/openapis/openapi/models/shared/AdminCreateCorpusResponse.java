@@ -18,6 +18,7 @@ public class AdminCreateCorpusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpusId")
     public Long corpusId;
+
     public AdminCreateCorpusResponse withCorpusId(Long corpusId) {
         this.corpusId = corpusId;
         return this;
@@ -26,9 +27,11 @@ public class AdminCreateCorpusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComvectaraStatus status;
+
     public AdminCreateCorpusResponse withStatus(ComvectaraStatus status) {
         this.status = status;
         return this;
     }
     
+    public AdminCreateCorpusResponse(){}
 }

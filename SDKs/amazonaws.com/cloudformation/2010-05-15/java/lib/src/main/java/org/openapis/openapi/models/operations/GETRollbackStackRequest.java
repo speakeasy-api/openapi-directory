@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRollbackStackRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRollbackStackActionEnum action;
+
     public GETRollbackStackRequest withAction(GETRollbackStackActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRollbackStackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
     public String clientRequestToken;
+
     public GETRollbackStackRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -29,6 +32,7 @@ public class GETRollbackStackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleARN")
     public String roleARN;
+
     public GETRollbackStackRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -39,6 +43,7 @@ public class GETRollbackStackRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
     public String stackName;
+
     public GETRollbackStackRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -46,6 +51,7 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRollbackStackVersionEnum version;
+
     public GETRollbackStackRequest withVersion(GETRollbackStackVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRollbackStackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRollbackStackRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRollbackStackRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRollbackStackRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRollbackStackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRollbackStackRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETRollbackStackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRollbackStackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRollbackStackRequest(@JsonProperty("Action") GETRollbackStackActionEnum action, @JsonProperty("StackName") String stackName, @JsonProperty("Version") GETRollbackStackVersionEnum version) {
+        this.action = action;
+        this.stackName = stackName;
+        this.version = version;
+  }
 }

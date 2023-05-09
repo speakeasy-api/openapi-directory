@@ -15,6 +15,7 @@ public class BuiltInIntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BuiltInIntentSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class BuiltInIntentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentSignature")
     public String intentSignature;
+
     public BuiltInIntentSummary withIntentSignature(String intentSignature) {
         this.intentSignature = intentSignature;
         return this;
     }
     
+    public BuiltInIntentSummary(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationLicensesRequest {
@@ -12,6 +13,7 @@ public class GetOrganizationLicensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceSerial")
     public String deviceSerial;
+
     public GetOrganizationLicensesRequest withDeviceSerial(String deviceSerial) {
         this.deviceSerial = deviceSerial;
         return this;
@@ -22,6 +24,7 @@ public class GetOrganizationLicensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
     public String endingBefore;
+
     public GetOrganizationLicensesRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -32,6 +35,7 @@ public class GetOrganizationLicensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=networkId")
     public String networkId;
+
     public GetOrganizationLicensesRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -39,6 +43,7 @@ public class GetOrganizationLicensesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public GetOrganizationLicensesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -49,6 +54,7 @@ public class GetOrganizationLicensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetOrganizationLicensesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -59,6 +65,7 @@ public class GetOrganizationLicensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
     public String startingAfter;
+
     public GetOrganizationLicensesRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
@@ -69,9 +76,13 @@ public class GetOrganizationLicensesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public GetOrganizationLicensesStateEnum state;
+
     public GetOrganizationLicensesRequest withState(GetOrganizationLicensesStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GetOrganizationLicensesRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

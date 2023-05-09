@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRelatedItemsResponse {
@@ -12,6 +13,7 @@ public class UpdateRelatedItemsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRelatedItemsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRelatedItemsResponse {
      */
     
     public Object conflictException;
+
     public UpdateRelatedItemsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRelatedItemsResponse {
     
     
     public String contentType;
+
     public UpdateRelatedItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRelatedItemsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRelatedItemsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRelatedItemsResponse {
     
     
     public Integer statusCode;
+
     public UpdateRelatedItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRelatedItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRelatedItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRelatedItemsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRelatedItemsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRelatedItemsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRelatedItemsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRelatedItemsResponse {
      */
     
     public java.util.Map<String, Object> updateRelatedItemsOutput;
+
     public UpdateRelatedItemsResponse withUpdateRelatedItemsOutput(java.util.Map<String, Object> updateRelatedItemsOutput) {
         this.updateRelatedItemsOutput = updateRelatedItemsOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateRelatedItemsResponse {
      */
     
     public Object validationException;
+
     public UpdateRelatedItemsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRelatedItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

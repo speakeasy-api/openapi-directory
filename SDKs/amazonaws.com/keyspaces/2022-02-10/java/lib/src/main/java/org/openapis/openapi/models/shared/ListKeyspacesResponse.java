@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListKeyspacesResponse {
     @JsonProperty("keyspaces")
     public KeyspaceSummary[] keyspaces;
+
     public ListKeyspacesResponse withKeyspaces(KeyspaceSummary[] keyspaces) {
         this.keyspaces = keyspaces;
         return this;
@@ -22,9 +23,13 @@ public class ListKeyspacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListKeyspacesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListKeyspacesResponse(@JsonProperty("keyspaces") KeyspaceSummary[] keyspaces) {
+        this.keyspaces = keyspaces;
+  }
 }

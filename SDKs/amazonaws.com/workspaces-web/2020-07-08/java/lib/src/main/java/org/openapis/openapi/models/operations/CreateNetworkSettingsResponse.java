@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNetworkSettingsResponse {
@@ -12,6 +13,7 @@ public class CreateNetworkSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateNetworkSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateNetworkSettingsResponse {
      */
     
     public Object conflictException;
+
     public CreateNetworkSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateNetworkSettingsResponse {
     
     
     public String contentType;
+
     public CreateNetworkSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateNetworkSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNetworkSettingsResponse createNetworkSettingsResponse;
+
     public CreateNetworkSettingsResponse withCreateNetworkSettingsResponse(org.openapis.openapi.models.shared.CreateNetworkSettingsResponse createNetworkSettingsResponse) {
         this.createNetworkSettingsResponse = createNetworkSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateNetworkSettingsResponse {
      */
     
     public Object internalServerException;
+
     public CreateNetworkSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateNetworkSettingsResponse {
     
     
     public Integer statusCode;
+
     public CreateNetworkSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateNetworkSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNetworkSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateNetworkSettingsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateNetworkSettingsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateNetworkSettingsResponse {
      */
     
     public Object throttlingException;
+
     public CreateNetworkSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateNetworkSettingsResponse {
      */
     
     public Object validationException;
+
     public CreateNetworkSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateNetworkSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

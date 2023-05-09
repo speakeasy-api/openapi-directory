@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetECObyIDRequest {
@@ -12,9 +13,13 @@ public class GetECObyIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ECO_ID")
     public String ecoId;
+
     public GetECObyIDRequest withEcoId(String ecoId) {
         this.ecoId = ecoId;
         return this;
     }
     
+    public GetECObyIDRequest(@JsonProperty("ECO_ID") String ecoId) {
+        this.ecoId = ecoId;
+  }
 }

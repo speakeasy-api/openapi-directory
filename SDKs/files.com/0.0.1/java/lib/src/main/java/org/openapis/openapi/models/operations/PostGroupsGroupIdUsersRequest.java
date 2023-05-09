@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostGroupsGroupIdUsersRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostGroupsGroupIdUsersRequestBody requestBody;
+
     public PostGroupsGroupIdUsersRequest withRequestBody(PostGroupsGroupIdUsersRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PostGroupsGroupIdUsersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
     public Integer groupId;
+
     public PostGroupsGroupIdUsersRequest withGroupId(Integer groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public PostGroupsGroupIdUsersRequest(@JsonProperty("group_id") Integer groupId) {
+        this.groupId = groupId;
+  }
 }

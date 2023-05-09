@@ -40,6 +40,7 @@ public class GoogleCloudPrivatecatalogproducerV1beta1Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudPrivatecatalogproducerV1beta1Association withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -55,6 +56,7 @@ public class GoogleCloudPrivatecatalogproducerV1beta1Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudPrivatecatalogproducerV1beta1Association withName(String name) {
         this.name = name;
         return this;
@@ -72,9 +74,11 @@ public class GoogleCloudPrivatecatalogproducerV1beta1Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public GoogleCloudPrivatecatalogproducerV1beta1Association withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public GoogleCloudPrivatecatalogproducerV1beta1Association(){}
 }

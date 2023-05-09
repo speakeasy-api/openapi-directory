@@ -15,6 +15,7 @@ public class CreateRoomRequestBodyMessageReviewHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fallbackResult")
     public org.openapis.openapi.models.shared.FallbackResultEnum fallbackResult;
+
     public CreateRoomRequestBodyMessageReviewHandler withFallbackResult(org.openapis.openapi.models.shared.FallbackResultEnum fallbackResult) {
         this.fallbackResult = fallbackResult;
         return this;
@@ -23,9 +24,11 @@ public class CreateRoomRequestBodyMessageReviewHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public CreateRoomRequestBodyMessageReviewHandler withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public CreateRoomRequestBodyMessageReviewHandler(){}
 }

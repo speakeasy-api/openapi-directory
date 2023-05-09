@@ -15,9 +15,11 @@ public class ResetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamsToReset")
     public StreamDescriptor[] streamsToReset;
+
     public ResetConfig withStreamsToReset(StreamDescriptor[] streamsToReset) {
         this.streamsToReset = streamsToReset;
         return this;
     }
     
+    public ResetConfig(){}
 }

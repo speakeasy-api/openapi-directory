@@ -15,6 +15,7 @@ public class CollectionPrivateLinkCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_date")
     public String expiresDate;
+
     public CollectionPrivateLinkCreator withExpiresDate(String expiresDate) {
         this.expiresDate = expiresDate;
         return this;
@@ -26,9 +27,11 @@ public class CollectionPrivateLinkCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read_only")
     public Boolean readOnly;
+
     public CollectionPrivateLinkCreator withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
     }
     
+    public CollectionPrivateLinkCreator(){}
 }

@@ -15,6 +15,7 @@ public class GetCelebrityInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KnownGender")
     public KnownGender knownGender;
+
     public GetCelebrityInfoResponse withKnownGender(KnownGender knownGender) {
         this.knownGender = knownGender;
         return this;
@@ -23,6 +24,7 @@ public class GetCelebrityInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetCelebrityInfoResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class GetCelebrityInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Urls")
     public String[] urls;
+
     public GetCelebrityInfoResponse withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public GetCelebrityInfoResponse(){}
 }

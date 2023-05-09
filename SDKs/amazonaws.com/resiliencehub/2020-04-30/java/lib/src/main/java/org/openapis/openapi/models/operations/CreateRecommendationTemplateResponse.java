@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRecommendationTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRecommendationTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public Object conflictException;
+
     public CreateRecommendationTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRecommendationTemplateResponse {
     
     
     public String contentType;
+
     public CreateRecommendationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRecommendationTemplateResponse createRecommendationTemplateResponse;
+
     public CreateRecommendationTemplateResponse withCreateRecommendationTemplateResponse(org.openapis.openapi.models.shared.CreateRecommendationTemplateResponse createRecommendationTemplateResponse) {
         this.createRecommendationTemplateResponse = createRecommendationTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public Object internalServerException;
+
     public CreateRecommendationTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateRecommendationTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateRecommendationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateRecommendationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRecommendationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateRecommendationTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRecommendationTemplateResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public Object throttlingException;
+
     public CreateRecommendationTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateRecommendationTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateRecommendationTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRecommendationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

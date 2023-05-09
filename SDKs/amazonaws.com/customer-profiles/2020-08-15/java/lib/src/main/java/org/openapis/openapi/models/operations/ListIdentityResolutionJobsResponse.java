@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIdentityResolutionJobsResponse {
@@ -12,6 +13,7 @@ public class ListIdentityResolutionJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListIdentityResolutionJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListIdentityResolutionJobsResponse {
      */
     
     public Object badRequestException;
+
     public ListIdentityResolutionJobsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ListIdentityResolutionJobsResponse {
     
     
     public String contentType;
+
     public ListIdentityResolutionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListIdentityResolutionJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListIdentityResolutionJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListIdentityResolutionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIdentityResolutionJobsResponse listIdentityResolutionJobsResponse;
+
     public ListIdentityResolutionJobsResponse withListIdentityResolutionJobsResponse(org.openapis.openapi.models.shared.ListIdentityResolutionJobsResponse listIdentityResolutionJobsResponse) {
         this.listIdentityResolutionJobsResponse = listIdentityResolutionJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListIdentityResolutionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListIdentityResolutionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListIdentityResolutionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIdentityResolutionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListIdentityResolutionJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListIdentityResolutionJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListIdentityResolutionJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListIdentityResolutionJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListIdentityResolutionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

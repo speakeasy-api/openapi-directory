@@ -18,6 +18,7 @@ public class FileValidationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileErrors")
     public ImportError[] fileErrors;
+
     public FileValidationReport withFileErrors(ImportError[] fileErrors) {
         this.fileErrors = fileErrors;
         return this;
@@ -29,6 +30,7 @@ public class FileValidationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public FileValidationReport withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -40,6 +42,7 @@ public class FileValidationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partialReport")
     public Boolean partialReport;
+
     public FileValidationReport withPartialReport(Boolean partialReport) {
         this.partialReport = partialReport;
         return this;
@@ -51,9 +54,11 @@ public class FileValidationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowErrors")
     public ImportRowError[] rowErrors;
+
     public FileValidationReport withRowErrors(ImportRowError[] rowErrors) {
         this.rowErrors = rowErrors;
         return this;
     }
     
+    public FileValidationReport(){}
 }

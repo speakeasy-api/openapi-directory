@@ -15,9 +15,11 @@ public class UpdateBackendConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loginAuthConfig")
     public UpdateBackendConfigRequestBodyLoginAuthConfig loginAuthConfig;
+
     public UpdateBackendConfigRequestBody withLoginAuthConfig(UpdateBackendConfigRequestBodyLoginAuthConfig loginAuthConfig) {
         this.loginAuthConfig = loginAuthConfig;
         return this;
     }
     
+    public UpdateBackendConfigRequestBody(){}
 }

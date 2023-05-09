@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateComponentResponse {
@@ -12,6 +13,7 @@ public class CreateComponentResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public CreateComponentResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateComponentResponse {
      */
     
     public Object clientException;
+
     public CreateComponentResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class CreateComponentResponse {
     
     
     public String contentType;
+
     public CreateComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateComponentResponse createComponentResponse;
+
     public CreateComponentResponse withCreateComponentResponse(org.openapis.openapi.models.shared.CreateComponentResponse createComponentResponse) {
         this.createComponentResponse = createComponentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateComponentResponse {
      */
     
     public Object forbiddenException;
+
     public CreateComponentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateComponentResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateComponentResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -69,6 +76,7 @@ public class CreateComponentResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateComponentResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -79,6 +87,7 @@ public class CreateComponentResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateComponentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -89,6 +98,7 @@ public class CreateComponentResponse {
      */
     
     public Object invalidVersionNumberException;
+
     public CreateComponentResponse withInvalidVersionNumberException(Object invalidVersionNumberException) {
         this.invalidVersionNumberException = invalidVersionNumberException;
         return this;
@@ -99,6 +109,7 @@ public class CreateComponentResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateComponentResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -109,6 +120,7 @@ public class CreateComponentResponse {
      */
     
     public Object serviceException;
+
     public CreateComponentResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -119,6 +131,7 @@ public class CreateComponentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateComponentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -126,6 +139,7 @@ public class CreateComponentResponse {
     
     
     public Integer statusCode;
+
     public CreateComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class CreateComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class CreateComponentResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateComponentResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CreateComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

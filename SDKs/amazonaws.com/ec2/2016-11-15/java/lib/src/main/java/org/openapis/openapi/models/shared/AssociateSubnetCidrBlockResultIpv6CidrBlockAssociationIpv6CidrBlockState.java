@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState {
     
     public AssociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum state;
+
     public AssociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState withState(AssociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class AssociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlock
     
     
     public String statusMessage;
+
     public AssociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public AssociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockState(){}
 }

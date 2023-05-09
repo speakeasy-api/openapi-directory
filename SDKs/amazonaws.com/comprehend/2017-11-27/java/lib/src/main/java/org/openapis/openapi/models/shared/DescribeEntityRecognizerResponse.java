@@ -15,9 +15,11 @@ public class DescribeEntityRecognizerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityRecognizerProperties")
     public EntityRecognizerProperties entityRecognizerProperties;
+
     public DescribeEntityRecognizerResponse withEntityRecognizerProperties(EntityRecognizerProperties entityRecognizerProperties) {
         this.entityRecognizerProperties = entityRecognizerProperties;
         return this;
     }
     
+    public DescribeEntityRecognizerResponse(){}
 }

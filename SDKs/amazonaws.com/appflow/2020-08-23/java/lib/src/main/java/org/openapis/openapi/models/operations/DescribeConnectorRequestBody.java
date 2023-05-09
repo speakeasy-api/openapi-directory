@@ -15,6 +15,7 @@ public class DescribeConnectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public DescribeConnectorRequestBody withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -25,9 +26,13 @@ public class DescribeConnectorRequestBody {
      */
     @JsonProperty("connectorType")
     public DescribeConnectorRequestBodyConnectorTypeEnum connectorType;
+
     public DescribeConnectorRequestBody withConnectorType(DescribeConnectorRequestBodyConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
     }
     
+    public DescribeConnectorRequestBody(@JsonProperty("connectorType") DescribeConnectorRequestBodyConnectorTypeEnum connectorType) {
+        this.connectorType = connectorType;
+  }
 }

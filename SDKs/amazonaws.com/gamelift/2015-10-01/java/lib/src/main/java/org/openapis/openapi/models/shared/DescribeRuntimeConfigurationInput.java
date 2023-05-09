@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeRuntimeConfigurationInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeRuntimeConfigurationInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public DescribeRuntimeConfigurationInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

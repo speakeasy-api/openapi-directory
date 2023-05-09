@@ -18,6 +18,7 @@ public class PivotGroupLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyOrder")
     public Integer applyOrder;
+
     public PivotGroupLimit withApplyOrder(Integer applyOrder) {
         this.applyOrder = applyOrder;
         return this;
@@ -29,9 +30,11 @@ public class PivotGroupLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countLimit")
     public Integer countLimit;
+
     public PivotGroupLimit withCountLimit(Integer countLimit) {
         this.countLimit = countLimit;
         return this;
     }
     
+    public PivotGroupLimit(){}
 }

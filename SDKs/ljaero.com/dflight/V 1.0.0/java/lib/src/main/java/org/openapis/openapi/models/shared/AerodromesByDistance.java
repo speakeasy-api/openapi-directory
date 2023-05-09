@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AerodromesByDistance {
     @JsonProperty("distance")
     public Object distance;
+
     public AerodromesByDistance withDistance(Object distance) {
         this.distance = distance;
         return this;
@@ -19,6 +20,7 @@ public class AerodromesByDistance {
     
     @JsonProperty("latitude")
     public Object latitude;
+
     public AerodromesByDistance withLatitude(Object latitude) {
         this.latitude = latitude;
         return this;
@@ -26,9 +28,15 @@ public class AerodromesByDistance {
     
     @JsonProperty("longitude")
     public Object longitude;
+
     public AerodromesByDistance withLongitude(Object longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public AerodromesByDistance(@JsonProperty("distance") Object distance, @JsonProperty("latitude") Object latitude, @JsonProperty("longitude") Object longitude) {
+        this.distance = distance;
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PurchaseScheduledInstancesRequestPurchaseRequests - Describes a request to purchase Scheduled Instances.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseScheduledInstancesRequestPurchaseRequests {
     
     public Long instanceCount;
+
     public PurchaseScheduledInstancesRequestPurchaseRequests withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -19,9 +20,14 @@ public class PurchaseScheduledInstancesRequestPurchaseRequests {
     
     
     public String purchaseToken;
+
     public PurchaseScheduledInstancesRequestPurchaseRequests withPurchaseToken(String purchaseToken) {
         this.purchaseToken = purchaseToken;
         return this;
     }
     
+    public PurchaseScheduledInstancesRequestPurchaseRequests(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("PurchaseToken") String purchaseToken) {
+        this.instanceCount = instanceCount;
+        this.purchaseToken = purchaseToken;
+  }
 }

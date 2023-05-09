@@ -12,6 +12,7 @@ public class OBBranchAndFinancialInstitutionIdentification5 {
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBBranchAndFinancialInstitutionIdentification5 withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -22,9 +23,14 @@ public class OBBranchAndFinancialInstitutionIdentification5 {
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBBranchAndFinancialInstitutionIdentification5 withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
     }
     
+    public OBBranchAndFinancialInstitutionIdentification5(@JsonProperty("Identification") String identification, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.schemeName = schemeName;
+  }
 }

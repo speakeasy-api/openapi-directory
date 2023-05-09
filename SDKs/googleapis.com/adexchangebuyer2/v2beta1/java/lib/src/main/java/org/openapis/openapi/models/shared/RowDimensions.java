@@ -18,6 +18,7 @@ public class RowDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherIdentifier")
     public String publisherIdentifier;
+
     public RowDimensions withPublisherIdentifier(String publisherIdentifier) {
         this.publisherIdentifier = publisherIdentifier;
         return this;
@@ -29,9 +30,11 @@ public class RowDimensions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeInterval")
     public TimeInterval timeInterval;
+
     public RowDimensions withTimeInterval(TimeInterval timeInterval) {
         this.timeInterval = timeInterval;
         return this;
     }
     
+    public RowDimensions(){}
 }

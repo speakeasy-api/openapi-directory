@@ -15,6 +15,7 @@ public class LFTagPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public LFTagPolicyResource withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -22,6 +23,7 @@ public class LFTagPolicyResource {
     
     @JsonProperty("Expression")
     public LFTag[] expression;
+
     public LFTagPolicyResource withExpression(LFTag[] expression) {
         this.expression = expression;
         return this;
@@ -29,9 +31,14 @@ public class LFTagPolicyResource {
     
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public LFTagPolicyResource withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public LFTagPolicyResource(@JsonProperty("Expression") LFTag[] expression, @JsonProperty("ResourceType") ResourceTypeEnum resourceType) {
+        this.expression = expression;
+        this.resourceType = resourceType;
+  }
 }

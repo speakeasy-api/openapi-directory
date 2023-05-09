@@ -15,6 +15,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public Environment withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -23,6 +24,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dedicatedServiceAccountId")
     public String dedicatedServiceAccountId;
+
     public Environment withDedicatedServiceAccountId(String dedicatedServiceAccountId) {
         this.dedicatedServiceAccountId = dedicatedServiceAccountId;
         return this;
@@ -31,6 +33,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Environment withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentArn")
     public String environmentArn;
+
     public Environment withEnvironmentArn(String environmentArn) {
         this.environmentArn = environmentArn;
         return this;
@@ -47,6 +51,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public Environment withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -55,6 +60,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentUrl")
     public String environmentUrl;
+
     public Environment withEnvironmentUrl(String environmentUrl) {
         this.environmentUrl = environmentUrl;
         return this;
@@ -63,6 +69,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationMode")
     public FederationModeEnum federationMode;
+
     public Environment withFederationMode(FederationModeEnum federationMode) {
         this.federationMode = federationMode;
         return this;
@@ -71,6 +78,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationParameters")
     public FederationParameters federationParameters;
+
     public Environment withFederationParameters(FederationParameters federationParameters) {
         this.federationParameters = federationParameters;
         return this;
@@ -79,6 +87,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public Environment withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -87,6 +96,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Environment withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +105,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sageMakerStudioDomainUrl")
     public String sageMakerStudioDomainUrl;
+
     public Environment withSageMakerStudioDomainUrl(String sageMakerStudioDomainUrl) {
         this.sageMakerStudioDomainUrl = sageMakerStudioDomainUrl;
         return this;
@@ -103,9 +114,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EnvironmentStatusEnum status;
+
     public Environment withStatus(EnvironmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Environment(){}
 }

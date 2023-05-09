@@ -18,6 +18,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedGroups")
     public String[] assignedGroups;
+
     public Asset withAssignedGroups(String[] assignedGroups) {
         this.assignedGroups = assignedGroups;
         return this;
@@ -29,6 +30,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Asset withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -40,6 +42,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Asset withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insightList")
     public InsightList insightList;
+
     public Asset withInsightList(InsightList insightList) {
         this.insightList = insightList;
         return this;
@@ -62,6 +66,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Asset withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Asset withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceData")
     public AssetPerformanceData performanceData;
+
     public Asset withPerformanceData(AssetPerformanceData performanceData) {
         this.performanceData = performanceData;
         return this;
@@ -95,6 +102,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public String[] sources;
+
     public Asset withSources(String[] sources) {
         this.sources = sources;
         return this;
@@ -106,6 +114,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Asset withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -117,9 +126,11 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachineDetails")
     public VirtualMachineDetails virtualMachineDetails;
+
     public Asset withVirtualMachineDetails(VirtualMachineDetails virtualMachineDetails) {
         this.virtualMachineDetails = virtualMachineDetails;
         return this;
     }
     
+    public Asset(){}
 }

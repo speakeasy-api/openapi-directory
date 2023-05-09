@@ -12,6 +12,7 @@ public class ListObservabilityConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestOnly")
     public Boolean latestOnly;
+
     public ListObservabilityConfigurationsRequest withLatestOnly(Boolean latestOnly) {
         this.latestOnly = latestOnly;
         return this;
@@ -20,6 +21,7 @@ public class ListObservabilityConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListObservabilityConfigurationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListObservabilityConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObservabilityConfigurationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListObservabilityConfigurationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationName")
     public String observabilityConfigurationName;
+
     public ListObservabilityConfigurationsRequest withObservabilityConfigurationName(String observabilityConfigurationName) {
         this.observabilityConfigurationName = observabilityConfigurationName;
         return this;
     }
     
+    public ListObservabilityConfigurationsRequest(){}
 }

@@ -18,6 +18,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public String configuration;
+
     public WorkItem withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -29,6 +30,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WorkItem withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialReportIndex")
     public String initialReportIndex;
+
     public WorkItem withInitialReportIndex(String initialReportIndex) {
         this.initialReportIndex = initialReportIndex;
         return this;
@@ -51,6 +54,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public WorkItem withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +66,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseExpireTime")
     public String leaseExpireTime;
+
     public WorkItem withLeaseExpireTime(String leaseExpireTime) {
         this.leaseExpireTime = leaseExpireTime;
         return this;
@@ -73,6 +78,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapTask")
     public MapTask mapTask;
+
     public WorkItem withMapTask(MapTask mapTask) {
         this.mapTask = mapTask;
         return this;
@@ -84,6 +90,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public Package[] packages;
+
     public WorkItem withPackages(Package[] packages) {
         this.packages = packages;
         return this;
@@ -95,6 +102,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public WorkItem withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -106,6 +114,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportStatusInterval")
     public String reportStatusInterval;
+
     public WorkItem withReportStatusInterval(String reportStatusInterval) {
         this.reportStatusInterval = reportStatusInterval;
         return this;
@@ -117,6 +126,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seqMapTask")
     public SeqMapTask seqMapTask;
+
     public WorkItem withSeqMapTask(SeqMapTask seqMapTask) {
         this.seqMapTask = seqMapTask;
         return this;
@@ -128,6 +138,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shellTask")
     public ShellTask shellTask;
+
     public WorkItem withShellTask(ShellTask shellTask) {
         this.shellTask = shellTask;
         return this;
@@ -139,6 +150,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceOperationTask")
     public SourceOperationRequest sourceOperationTask;
+
     public WorkItem withSourceOperationTask(SourceOperationRequest sourceOperationTask) {
         this.sourceOperationTask = sourceOperationTask;
         return this;
@@ -150,6 +162,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingComputationTask")
     public StreamingComputationTask streamingComputationTask;
+
     public WorkItem withStreamingComputationTask(StreamingComputationTask streamingComputationTask) {
         this.streamingComputationTask = streamingComputationTask;
         return this;
@@ -161,6 +174,7 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingConfigTask")
     public StreamingConfigTask streamingConfigTask;
+
     public WorkItem withStreamingConfigTask(StreamingConfigTask streamingConfigTask) {
         this.streamingConfigTask = streamingConfigTask;
         return this;
@@ -172,9 +186,11 @@ public class WorkItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingSetupTask")
     public StreamingSetupTask streamingSetupTask;
+
     public WorkItem withStreamingSetupTask(StreamingSetupTask streamingSetupTask) {
         this.streamingSetupTask = streamingSetupTask;
         return this;
     }
     
+    public WorkItem(){}
 }

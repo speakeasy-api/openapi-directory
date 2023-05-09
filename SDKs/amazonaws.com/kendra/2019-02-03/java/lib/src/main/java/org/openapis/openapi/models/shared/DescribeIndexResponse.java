@@ -20,6 +20,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUnits")
     public CapacityUnitsConfiguration capacityUnits;
+
     public DescribeIndexResponse withCapacityUnits(CapacityUnitsConfiguration capacityUnits) {
         this.capacityUnits = capacityUnits;
         return this;
@@ -30,6 +31,7 @@ public class DescribeIndexResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DescribeIndexResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeIndexResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadataConfigurations")
     public DocumentMetadataConfiguration[] documentMetadataConfigurations;
+
     public DescribeIndexResponse withDocumentMetadataConfigurations(DocumentMetadataConfiguration[] documentMetadataConfigurations) {
         this.documentMetadataConfigurations = documentMetadataConfigurations;
         return this;
@@ -54,6 +58,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Edition")
     public IndexEditionEnum edition;
+
     public DescribeIndexResponse withEdition(IndexEditionEnum edition) {
         this.edition = edition;
         return this;
@@ -62,6 +67,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeIndexResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -70,6 +76,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DescribeIndexResponse withId(String id) {
         this.id = id;
         return this;
@@ -78,6 +85,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexStatistics")
     public IndexStatistics indexStatistics;
+
     public DescribeIndexResponse withIndexStatistics(IndexStatistics indexStatistics) {
         this.indexStatistics = indexStatistics;
         return this;
@@ -86,6 +94,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeIndexResponse withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeIndexResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -102,6 +112,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public DescribeIndexResponse withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -110,6 +121,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public IndexStatusEnum status;
+
     public DescribeIndexResponse withStatus(IndexStatusEnum status) {
         this.status = status;
         return this;
@@ -120,6 +132,7 @@ public class DescribeIndexResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public DescribeIndexResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -128,6 +141,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextPolicy")
     public UserContextPolicyEnum userContextPolicy;
+
     public DescribeIndexResponse withUserContextPolicy(UserContextPolicyEnum userContextPolicy) {
         this.userContextPolicy = userContextPolicy;
         return this;
@@ -136,6 +150,7 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserGroupResolutionConfiguration")
     public UserGroupResolutionConfiguration userGroupResolutionConfiguration;
+
     public DescribeIndexResponse withUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
         this.userGroupResolutionConfiguration = userGroupResolutionConfiguration;
         return this;
@@ -144,9 +159,11 @@ public class DescribeIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserTokenConfigurations")
     public UserTokenConfiguration[] userTokenConfigurations;
+
     public DescribeIndexResponse withUserTokenConfigurations(UserTokenConfiguration[] userTokenConfigurations) {
         this.userTokenConfigurations = userTokenConfigurations;
         return this;
     }
     
+    public DescribeIndexResponse(){}
 }

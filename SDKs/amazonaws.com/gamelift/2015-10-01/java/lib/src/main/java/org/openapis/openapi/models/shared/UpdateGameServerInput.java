@@ -12,6 +12,7 @@ public class UpdateGameServerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerData")
     public String gameServerData;
+
     public UpdateGameServerInput withGameServerData(String gameServerData) {
         this.gameServerData = gameServerData;
         return this;
@@ -19,6 +20,7 @@ public class UpdateGameServerInput {
     
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public UpdateGameServerInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -26,6 +28,7 @@ public class UpdateGameServerInput {
     
     @JsonProperty("GameServerId")
     public String gameServerId;
+
     public UpdateGameServerInput withGameServerId(String gameServerId) {
         this.gameServerId = gameServerId;
         return this;
@@ -34,6 +37,7 @@ public class UpdateGameServerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheck")
     public GameServerHealthCheckEnum healthCheck;
+
     public UpdateGameServerInput withHealthCheck(GameServerHealthCheckEnum healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -42,9 +46,14 @@ public class UpdateGameServerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UtilizationStatus")
     public GameServerUtilizationStatusEnum utilizationStatus;
+
     public UpdateGameServerInput withUtilizationStatus(GameServerUtilizationStatusEnum utilizationStatus) {
         this.utilizationStatus = utilizationStatus;
         return this;
     }
     
+    public UpdateGameServerInput(@JsonProperty("GameServerGroupName") String gameServerGroupName, @JsonProperty("GameServerId") String gameServerId) {
+        this.gameServerGroupName = gameServerGroupName;
+        this.gameServerId = gameServerId;
+  }
 }

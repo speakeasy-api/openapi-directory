@@ -15,6 +15,7 @@ public class LockNetworkSmDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String ids;
+
     public LockNetworkSmDevicesRequestBody withIds(String ids) {
         this.ids = ids;
         return this;
@@ -26,6 +27,7 @@ public class LockNetworkSmDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin")
     public Long pin;
+
     public LockNetworkSmDevicesRequestBody withPin(Long pin) {
         this.pin = pin;
         return this;
@@ -37,6 +39,7 @@ public class LockNetworkSmDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public LockNetworkSmDevicesRequestBody withScope(String scope) {
         this.scope = scope;
         return this;
@@ -48,6 +51,7 @@ public class LockNetworkSmDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serials")
     public String serials;
+
     public LockNetworkSmDevicesRequestBody withSerials(String serials) {
         this.serials = serials;
         return this;
@@ -59,9 +63,11 @@ public class LockNetworkSmDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMacs")
     public String wifiMacs;
+
     public LockNetworkSmDevicesRequestBody withWifiMacs(String wifiMacs) {
         this.wifiMacs = wifiMacs;
         return this;
     }
     
+    public LockNetworkSmDevicesRequestBody(){}
 }

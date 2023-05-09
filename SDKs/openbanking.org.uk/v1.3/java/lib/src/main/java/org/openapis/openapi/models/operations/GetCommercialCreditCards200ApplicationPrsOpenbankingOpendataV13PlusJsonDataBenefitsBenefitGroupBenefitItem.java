@@ -15,6 +15,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BenefitDetail")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail[] benefitDetail;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem withBenefitDetail(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail[] benefitDetail) {
         this.benefitDetail = benefitDetail;
         return this;
@@ -26,6 +27,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateOfChange")
     public String dateOfChange;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem withDateOfChange(String dateOfChange) {
         this.dateOfChange = dateOfChange;
         return this;
@@ -37,6 +39,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LengthPromotionalInDays")
     public Long lengthPromotionalInDays;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem withLengthPromotionalInDays(Long lengthPromotionalInDays) {
         this.lengthPromotionalInDays = lengthPromotionalInDays;
         return this;
@@ -48,6 +51,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPromotionOrFutureTerms")
     public String startPromotionOrFutureTerms;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem withStartPromotionOrFutureTerms(String startPromotionOrFutureTerms) {
         this.startPromotionOrFutureTerms = startPromotionOrFutureTerms;
         return this;
@@ -59,9 +63,11 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopPromotionOrFutureTerms")
     public String stopPromotionOrFutureTerms;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem withStopPromotionOrFutureTerms(String stopPromotionOrFutureTerms) {
         this.stopPromotionOrFutureTerms = stopPromotionOrFutureTerms;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItem(){}
 }

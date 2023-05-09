@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentsForPullRequestRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetCommentsForPullRequestInput getCommentsForPullRequestInput;
+
     public GetCommentsForPullRequestRequest withGetCommentsForPullRequestInput(org.openapis.openapi.models.shared.GetCommentsForPullRequestInput getCommentsForPullRequestInput) {
         this.getCommentsForPullRequestInput = getCommentsForPullRequestInput;
         return this;
@@ -16,6 +18,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetCommentsForPullRequestRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetCommentsForPullRequestRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetCommentsForPullRequestRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetCommentsForPullRequestRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetCommentsForPullRequestRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetCommentsForPullRequestRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetCommentsForPullRequestRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class GetCommentsForPullRequestRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetCommentsForPullRequestXAmzTargetEnum xAmzTarget;
+
     public GetCommentsForPullRequestRequest withXAmzTarget(GetCommentsForPullRequestXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class GetCommentsForPullRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public GetCommentsForPullRequestRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -85,9 +96,14 @@ public class GetCommentsForPullRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public GetCommentsForPullRequestRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetCommentsForPullRequestRequest(@JsonProperty("GetCommentsForPullRequestInput") org.openapis.openapi.models.shared.GetCommentsForPullRequestInput getCommentsForPullRequestInput, @JsonProperty("X-Amz-Target") GetCommentsForPullRequestXAmzTargetEnum xAmzTarget) {
+        this.getCommentsForPullRequestInput = getCommentsForPullRequestInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

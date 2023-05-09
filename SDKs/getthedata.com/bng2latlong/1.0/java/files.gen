@@ -33,4 +33,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBng2latlongEastingNo
 lib/src/main/java/org/openapis/openapi/models/operations/GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBng2latlongEastingNorthing200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBng2latlongEastingNorthingResponse.java
+docs/sdk/README.md
 USAGE.md

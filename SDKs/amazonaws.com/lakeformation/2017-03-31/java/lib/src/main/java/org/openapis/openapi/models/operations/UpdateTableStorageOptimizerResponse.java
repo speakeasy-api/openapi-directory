@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTableStorageOptimizerResponse {
@@ -12,6 +13,7 @@ public class UpdateTableStorageOptimizerResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateTableStorageOptimizerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTableStorageOptimizerResponse {
     
     
     public String contentType;
+
     public UpdateTableStorageOptimizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTableStorageOptimizerResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateTableStorageOptimizerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTableStorageOptimizerResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateTableStorageOptimizerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTableStorageOptimizerResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateTableStorageOptimizerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateTableStorageOptimizerResponse {
     
     
     public Integer statusCode;
+
     public UpdateTableStorageOptimizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTableStorageOptimizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTableStorageOptimizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateTableStorageOptimizerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTableStorageOptimizerResponse updateTableStorageOptimizerResponse;
+
     public UpdateTableStorageOptimizerResponse withUpdateTableStorageOptimizerResponse(org.openapis.openapi.models.shared.UpdateTableStorageOptimizerResponse updateTableStorageOptimizerResponse) {
         this.updateTableStorageOptimizerResponse = updateTableStorageOptimizerResponse;
         return this;
     }
     
+    public UpdateTableStorageOptimizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

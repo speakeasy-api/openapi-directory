@@ -18,6 +18,7 @@ public class SearchShiftsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchShiftsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -29,6 +30,7 @@ public class SearchShiftsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchShiftsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -40,9 +42,11 @@ public class SearchShiftsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public ShiftQuery query;
+
     public SearchShiftsRequest withQuery(ShiftQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchShiftsRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSinglePaymentIntent201ApplicationJSON {
     @JsonProperty("amount")
     public String amount;
+
     public CreateSinglePaymentIntent201ApplicationJSON withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -21,6 +22,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     
     @JsonProperty("currency")
     public String currency;
+
     public CreateSinglePaymentIntent201ApplicationJSON withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -32,6 +34,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investment_instructions")
     public CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions[] investmentInstructions;
+
     public CreateSinglePaymentIntent201ApplicationJSON withInvestmentInstructions(CreateSinglePaymentIntent201ApplicationJSONInvestmentInstructions[] investmentInstructions) {
         this.investmentInstructions = investmentInstructions;
         return this;
@@ -39,6 +42,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     
     @JsonProperty("payment_type")
     public CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum paymentType;
+
     public CreateSinglePaymentIntent201ApplicationJSON withPaymentType(CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -46,6 +50,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     
     @JsonProperty("pot_id")
     public String potId;
+
     public CreateSinglePaymentIntent201ApplicationJSON withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -53,6 +58,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     
     @JsonProperty("purpose")
     public CreateSinglePaymentIntent201ApplicationJSONPurposeEnum purpose;
+
     public CreateSinglePaymentIntent201ApplicationJSON withPurpose(CreateSinglePaymentIntent201ApplicationJSONPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -60,6 +66,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     
     @JsonProperty("service_provider")
     public CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum serviceProvider;
+
     public CreateSinglePaymentIntent201ApplicationJSON withServiceProvider(CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum serviceProvider) {
         this.serviceProvider = serviceProvider;
         return this;
@@ -71,6 +78,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_provider_params")
     public CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams serviceProviderParams;
+
     public CreateSinglePaymentIntent201ApplicationJSON withServiceProviderParams(CreateSinglePaymentIntent201ApplicationJSONServiceProviderParams serviceProviderParams) {
         this.serviceProviderParams = serviceProviderParams;
         return this;
@@ -78,6 +86,7 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     
     @JsonProperty("status")
     public CreateSinglePaymentIntent201ApplicationJSONStatusEnum status;
+
     public CreateSinglePaymentIntent201ApplicationJSON withStatus(CreateSinglePaymentIntent201ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -85,9 +94,20 @@ public class CreateSinglePaymentIntent201ApplicationJSON {
     
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public CreateSinglePaymentIntent201ApplicationJSON withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public CreateSinglePaymentIntent201ApplicationJSON(@JsonProperty("amount") String amount, @JsonProperty("currency") String currency, @JsonProperty("payment_type") CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum paymentType, @JsonProperty("pot_id") String potId, @JsonProperty("purpose") CreateSinglePaymentIntent201ApplicationJSONPurposeEnum purpose, @JsonProperty("service_provider") CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum serviceProvider, @JsonProperty("status") CreateSinglePaymentIntent201ApplicationJSONStatusEnum status, @JsonProperty("transaction_id") String transactionId) {
+        this.amount = amount;
+        this.currency = currency;
+        this.paymentType = paymentType;
+        this.potId = potId;
+        this.purpose = purpose;
+        this.serviceProvider = serviceProvider;
+        this.status = status;
+        this.transactionId = transactionId;
+  }
 }

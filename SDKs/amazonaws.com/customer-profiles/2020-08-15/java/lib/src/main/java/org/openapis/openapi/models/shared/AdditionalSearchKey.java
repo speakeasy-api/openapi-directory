@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdditionalSearchKey {
     @JsonProperty("KeyName")
     public String keyName;
+
     public AdditionalSearchKey withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -19,9 +20,14 @@ public class AdditionalSearchKey {
     
     @JsonProperty("Values")
     public String[] values;
+
     public AdditionalSearchKey withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AdditionalSearchKey(@JsonProperty("KeyName") String keyName, @JsonProperty("Values") String[] values) {
+        this.keyName = keyName;
+        this.values = values;
+  }
 }

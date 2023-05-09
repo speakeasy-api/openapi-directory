@@ -15,6 +15,7 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public String accountId;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_scope")
     public CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum displayScope;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withDisplayScope(CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum displayScope) {
         this.displayScope = displayScope;
         return this;
@@ -40,6 +42,7 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrity")
     public String integrity;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withIntegrity(String integrity) {
         this.integrity = integrity;
         return this;
@@ -62,6 +66,7 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("make_date")
     public Long makeDate;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withMakeDate(Long makeDate) {
         this.makeDate = makeDate;
         return this;
@@ -73,6 +78,7 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth_application_id")
     public Long oauthApplicationId;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withOauthApplicationId(Long oauthApplicationId) {
         this.oauthApplicationId = oauthApplicationId;
         return this;
@@ -84,6 +90,7 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src")
     public String src;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withSrc(String src) {
         this.src = src;
         return this;
@@ -95,9 +102,11 @@ public class CreateShopScriptTag200ApplicationJSONScriptTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_date")
     public Long updateDate;
+
     public CreateShopScriptTag200ApplicationJSONScriptTag withUpdateDate(Long updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public CreateShopScriptTag200ApplicationJSONScriptTag(){}
 }

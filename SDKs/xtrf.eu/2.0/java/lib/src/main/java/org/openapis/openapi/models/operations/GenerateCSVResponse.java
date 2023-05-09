@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateCSVResponse {
     
     public String contentType;
+
     public GenerateCSVResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateCSVResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportResultDTO reportResultDTO;
+
     public GenerateCSVResponse withReportResultDTO(org.openapis.openapi.models.shared.ReportResultDTO reportResultDTO) {
         this.reportResultDTO = reportResultDTO;
         return this;
@@ -26,6 +29,7 @@ public class GenerateCSVResponse {
     
     
     public Integer statusCode;
+
     public GenerateCSVResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GenerateCSVResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateCSVResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateCSVResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

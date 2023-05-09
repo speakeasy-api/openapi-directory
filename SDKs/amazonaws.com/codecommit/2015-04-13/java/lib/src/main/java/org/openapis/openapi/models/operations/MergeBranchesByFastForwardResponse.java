@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergeBranchesByFastForwardResponse {
@@ -12,6 +13,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object branchDoesNotExistException;
+
     public MergeBranchesByFastForwardResponse withBranchDoesNotExistException(Object branchDoesNotExistException) {
         this.branchDoesNotExistException = branchDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object branchNameIsTagNameException;
+
     public MergeBranchesByFastForwardResponse withBranchNameIsTagNameException(Object branchNameIsTagNameException) {
         this.branchNameIsTagNameException = branchNameIsTagNameException;
         return this;
@@ -32,6 +35,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object branchNameRequiredException;
+
     public MergeBranchesByFastForwardResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -42,6 +46,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public MergeBranchesByFastForwardResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -52,6 +57,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object commitRequiredException;
+
     public MergeBranchesByFastForwardResponse withCommitRequiredException(Object commitRequiredException) {
         this.commitRequiredException = commitRequiredException;
         return this;
@@ -62,6 +68,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object concurrentReferenceUpdateException;
+
     public MergeBranchesByFastForwardResponse withConcurrentReferenceUpdateException(Object concurrentReferenceUpdateException) {
         this.concurrentReferenceUpdateException = concurrentReferenceUpdateException;
         return this;
@@ -69,6 +76,7 @@ public class MergeBranchesByFastForwardResponse {
     
     
     public String contentType;
+
     public MergeBranchesByFastForwardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public MergeBranchesByFastForwardResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -89,6 +98,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public MergeBranchesByFastForwardResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -99,6 +109,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public MergeBranchesByFastForwardResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -109,6 +120,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public MergeBranchesByFastForwardResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -119,6 +131,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public MergeBranchesByFastForwardResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -129,6 +142,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object invalidBranchNameException;
+
     public MergeBranchesByFastForwardResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -139,6 +153,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object invalidCommitException;
+
     public MergeBranchesByFastForwardResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -149,6 +164,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public MergeBranchesByFastForwardResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -159,6 +175,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object invalidTargetBranchException;
+
     public MergeBranchesByFastForwardResponse withInvalidTargetBranchException(Object invalidTargetBranchException) {
         this.invalidTargetBranchException = invalidTargetBranchException;
         return this;
@@ -169,6 +186,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object manualMergeRequiredException;
+
     public MergeBranchesByFastForwardResponse withManualMergeRequiredException(Object manualMergeRequiredException) {
         this.manualMergeRequiredException = manualMergeRequiredException;
         return this;
@@ -179,6 +197,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public org.openapis.openapi.models.shared.MergeBranchesByFastForwardOutput mergeBranchesByFastForwardOutput;
+
     public MergeBranchesByFastForwardResponse withMergeBranchesByFastForwardOutput(org.openapis.openapi.models.shared.MergeBranchesByFastForwardOutput mergeBranchesByFastForwardOutput) {
         this.mergeBranchesByFastForwardOutput = mergeBranchesByFastForwardOutput;
         return this;
@@ -189,6 +208,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public MergeBranchesByFastForwardResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -199,6 +219,7 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public MergeBranchesByFastForwardResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -206,6 +227,7 @@ public class MergeBranchesByFastForwardResponse {
     
     
     public Integer statusCode;
+
     public MergeBranchesByFastForwardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -213,6 +235,7 @@ public class MergeBranchesByFastForwardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergeBranchesByFastForwardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -223,9 +246,14 @@ public class MergeBranchesByFastForwardResponse {
      */
     
     public Object tipsDivergenceExceededException;
+
     public MergeBranchesByFastForwardResponse withTipsDivergenceExceededException(Object tipsDivergenceExceededException) {
         this.tipsDivergenceExceededException = tipsDivergenceExceededException;
         return this;
     }
     
+    public MergeBranchesByFastForwardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

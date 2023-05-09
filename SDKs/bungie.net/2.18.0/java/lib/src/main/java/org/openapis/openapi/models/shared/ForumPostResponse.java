@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class ForumPostResponse {
     
     public Boolean isPinned;
+
     public ForumPostResponse withIsPinned(Boolean isPinned) {
         this.isPinned = isPinned;
         return this;
@@ -16,6 +17,7 @@ public class ForumPostResponse {
     
     
     public IgnoresIgnoreResponse ignoreStatus;
+
     public ForumPostResponse withIgnoreStatus(IgnoresIgnoreResponse ignoreStatus) {
         this.ignoreStatus = ignoreStatus;
         return this;
@@ -23,6 +25,7 @@ public class ForumPostResponse {
     
     
     public Boolean isActive;
+
     public ForumPostResponse withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -30,6 +33,7 @@ public class ForumPostResponse {
     
     
     public Boolean isAnnouncement;
+
     public ForumPostResponse withIsAnnouncement(Boolean isAnnouncement) {
         this.isAnnouncement = isAnnouncement;
         return this;
@@ -37,6 +41,7 @@ public class ForumPostResponse {
     
     
     public OffsetDateTime lastReplyTimestamp;
+
     public ForumPostResponse withLastReplyTimestamp(OffsetDateTime lastReplyTimestamp) {
         this.lastReplyTimestamp = lastReplyTimestamp;
         return this;
@@ -44,6 +49,7 @@ public class ForumPostResponse {
     
     
     public Long latestReplyAuthorId;
+
     public ForumPostResponse withLatestReplyAuthorId(Long latestReplyAuthorId) {
         this.latestReplyAuthorId = latestReplyAuthorId;
         return this;
@@ -51,6 +57,7 @@ public class ForumPostResponse {
     
     
     public Long latestReplyPostId;
+
     public ForumPostResponse withLatestReplyPostId(Long latestReplyPostId) {
         this.latestReplyPostId = latestReplyPostId;
         return this;
@@ -58,6 +65,7 @@ public class ForumPostResponse {
     
     
     public String locale;
+
     public ForumPostResponse withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -65,6 +73,7 @@ public class ForumPostResponse {
     
     
     public Integer popularity;
+
     public ForumPostResponse withPopularity(Integer popularity) {
         this.popularity = popularity;
         return this;
@@ -72,6 +81,7 @@ public class ForumPostResponse {
     
     
     public String thumbnail;
+
     public ForumPostResponse withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -79,6 +89,7 @@ public class ForumPostResponse {
     
     
     public Integer urlMediaType;
+
     public ForumPostResponse withUrlMediaType(Integer urlMediaType) {
         this.urlMediaType = urlMediaType;
         return this;
@@ -86,6 +97,7 @@ public class ForumPostResponse {
     
     
     public Boolean userHasMutedPost;
+
     public ForumPostResponse withUserHasMutedPost(Boolean userHasMutedPost) {
         this.userHasMutedPost = userHasMutedPost;
         return this;
@@ -93,6 +105,7 @@ public class ForumPostResponse {
     
     
     public Boolean userHasRated;
+
     public ForumPostResponse withUserHasRated(Boolean userHasRated) {
         this.userHasRated = userHasRated;
         return this;
@@ -100,9 +113,11 @@ public class ForumPostResponse {
     
     
     public Integer userRating;
+
     public ForumPostResponse withUserRating(Integer userRating) {
         this.userRating = userRating;
         return this;
     }
     
+    public ForumPostResponse(){}
 }

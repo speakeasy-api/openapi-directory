@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceOrderRequest {
@@ -12,6 +13,7 @@ public class PlaceOrderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PlaceOrderRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PlaceOrderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PlaceOrderRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PlaceOrderRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PlaceOrderRequestBody requestBody;
+
     public PlaceOrderRequest withRequestBody(PlaceOrderRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,14 @@ public class PlaceOrderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sc")
     public Long sc;
+
     public PlaceOrderRequest withSc(Long sc) {
         this.sc = sc;
         return this;
     }
     
+    public PlaceOrderRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

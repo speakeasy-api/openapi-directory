@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAddressRequest {
     @JsonProperty("ethereumaddress")
     public String ethereumaddress;
+
     public DeleteAddressRequest withEthereumaddress(String ethereumaddress) {
         this.ethereumaddress = ethereumaddress;
         return this;
@@ -16,9 +17,14 @@ public class DeleteAddressRequest {
     
     @JsonProperty("password")
     public String password;
+
     public DeleteAddressRequest withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public DeleteAddressRequest(@JsonProperty("ethereumaddress") String ethereumaddress, @JsonProperty("password") String password) {
+        this.ethereumaddress = ethereumaddress;
+        this.password = password;
+  }
 }

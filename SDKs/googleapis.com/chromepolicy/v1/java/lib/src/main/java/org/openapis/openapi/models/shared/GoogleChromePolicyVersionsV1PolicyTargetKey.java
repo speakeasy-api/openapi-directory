@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1PolicyTargetKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTargetKeys")
     public java.util.Map<String, String> additionalTargetKeys;
+
     public GoogleChromePolicyVersionsV1PolicyTargetKey withAdditionalTargetKeys(java.util.Map<String, String> additionalTargetKeys) {
         this.additionalTargetKeys = additionalTargetKeys;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1PolicyTargetKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResource")
     public String targetResource;
+
     public GoogleChromePolicyVersionsV1PolicyTargetKey withTargetResource(String targetResource) {
         this.targetResource = targetResource;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicyTargetKey(){}
 }

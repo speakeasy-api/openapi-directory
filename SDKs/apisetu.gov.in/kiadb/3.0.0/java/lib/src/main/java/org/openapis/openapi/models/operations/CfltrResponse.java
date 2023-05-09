@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CfltrResponse {
     
     public String contentType;
+
     public CfltrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CfltrResponse {
     
     
     public Integer statusCode;
+
     public CfltrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CfltrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CfltrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CfltrResponse {
      */
     
     public Cfltr400ApplicationJSON cfltr400ApplicationJSONObject;
+
     public CfltrResponse withCfltr400ApplicationJSONObject(Cfltr400ApplicationJSON cfltr400ApplicationJSONObject) {
         this.cfltr400ApplicationJSONObject = cfltr400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CfltrResponse {
      */
     
     public Cfltr401ApplicationJSON cfltr401ApplicationJSONObject;
+
     public CfltrResponse withCfltr401ApplicationJSONObject(Cfltr401ApplicationJSON cfltr401ApplicationJSONObject) {
         this.cfltr401ApplicationJSONObject = cfltr401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CfltrResponse {
      */
     
     public Cfltr404ApplicationJSON cfltr404ApplicationJSONObject;
+
     public CfltrResponse withCfltr404ApplicationJSONObject(Cfltr404ApplicationJSON cfltr404ApplicationJSONObject) {
         this.cfltr404ApplicationJSONObject = cfltr404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CfltrResponse {
      */
     
     public Cfltr500ApplicationJSON cfltr500ApplicationJSONObject;
+
     public CfltrResponse withCfltr500ApplicationJSONObject(Cfltr500ApplicationJSON cfltr500ApplicationJSONObject) {
         this.cfltr500ApplicationJSONObject = cfltr500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CfltrResponse {
      */
     
     public Cfltr502ApplicationJSON cfltr502ApplicationJSONObject;
+
     public CfltrResponse withCfltr502ApplicationJSONObject(Cfltr502ApplicationJSON cfltr502ApplicationJSONObject) {
         this.cfltr502ApplicationJSONObject = cfltr502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CfltrResponse {
      */
     
     public Cfltr503ApplicationJSON cfltr503ApplicationJSONObject;
+
     public CfltrResponse withCfltr503ApplicationJSONObject(Cfltr503ApplicationJSON cfltr503ApplicationJSONObject) {
         this.cfltr503ApplicationJSONObject = cfltr503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CfltrResponse {
      */
     
     public Cfltr504ApplicationJSON cfltr504ApplicationJSONObject;
+
     public CfltrResponse withCfltr504ApplicationJSONObject(Cfltr504ApplicationJSON cfltr504ApplicationJSONObject) {
         this.cfltr504ApplicationJSONObject = cfltr504ApplicationJSONObject;
         return this;
     }
     
+    public CfltrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

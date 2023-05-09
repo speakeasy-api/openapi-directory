@@ -18,6 +18,7 @@ public class UpdatePortalRequestBodyPortalLogoImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public org.openapis.openapi.models.shared.ImageFile file;
+
     public UpdatePortalRequestBodyPortalLogoImage withFile(org.openapis.openapi.models.shared.ImageFile file) {
         this.file = file;
         return this;
@@ -26,9 +27,11 @@ public class UpdatePortalRequestBodyPortalLogoImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdatePortalRequestBodyPortalLogoImage withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdatePortalRequestBodyPortalLogoImage(){}
 }

@@ -18,6 +18,7 @@ public class ListMembershipBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipBindings")
     public MembershipBinding[] membershipBindings;
+
     public ListMembershipBindingsResponse withMembershipBindings(MembershipBinding[] membershipBindings) {
         this.membershipBindings = membershipBindings;
         return this;
@@ -29,9 +30,11 @@ public class ListMembershipBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMembershipBindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMembershipBindingsResponse(){}
 }

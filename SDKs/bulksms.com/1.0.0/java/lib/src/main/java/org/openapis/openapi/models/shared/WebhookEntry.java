@@ -27,6 +27,7 @@ public class WebhookEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public WebhookEntry withActive(Boolean active) {
         this.active = active;
         return this;
@@ -44,6 +45,7 @@ public class WebhookEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEmailAddress")
     public String contactEmailAddress;
+
     public WebhookEntry withContactEmailAddress(String contactEmailAddress) {
         this.contactEmailAddress = contactEmailAddress;
         return this;
@@ -63,6 +65,7 @@ public class WebhookEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invokeOption")
     public WebhookEntryInvokeOptionEnum invokeOption;
+
     public WebhookEntry withInvokeOption(WebhookEntryInvokeOptionEnum invokeOption) {
         this.invokeOption = invokeOption;
         return this;
@@ -75,6 +78,7 @@ public class WebhookEntry {
      */
     @JsonProperty("name")
     public String name;
+
     public WebhookEntry withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +95,7 @@ public class WebhookEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onWebApp")
     public Boolean onWebApp;
+
     public WebhookEntry withOnWebApp(Boolean onWebApp) {
         this.onWebApp = onWebApp;
         return this;
@@ -110,6 +115,7 @@ public class WebhookEntry {
      */
     @JsonProperty("triggerScope")
     public WebhookEntryTriggerScopeEnum triggerScope;
+
     public WebhookEntry withTriggerScope(WebhookEntryTriggerScopeEnum triggerScope) {
         this.triggerScope = triggerScope;
         return this;
@@ -123,9 +129,15 @@ public class WebhookEntry {
      */
     @JsonProperty("url")
     public String url;
+
     public WebhookEntry withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhookEntry(@JsonProperty("name") String name, @JsonProperty("triggerScope") WebhookEntryTriggerScopeEnum triggerScope, @JsonProperty("url") String url) {
+        this.name = name;
+        this.triggerScope = triggerScope;
+        this.url = url;
+  }
 }

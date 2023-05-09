@@ -12,9 +12,11 @@ public class GetNumbersNumeralChineseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersNumeralChineseRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersNumeralChineseRequest(){}
 }

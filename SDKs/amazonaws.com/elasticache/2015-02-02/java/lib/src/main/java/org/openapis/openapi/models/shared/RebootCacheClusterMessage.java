@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RebootCacheClusterMessage - Represents the input of a &lt;code&gt;RebootCacheCluster&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RebootCacheClusterMessage {
     
     public String cacheClusterId;
+
     public RebootCacheClusterMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,9 +20,14 @@ public class RebootCacheClusterMessage {
     
     
     public String[] cacheNodeIdsToReboot;
+
     public RebootCacheClusterMessage withCacheNodeIdsToReboot(String[] cacheNodeIdsToReboot) {
         this.cacheNodeIdsToReboot = cacheNodeIdsToReboot;
         return this;
     }
     
+    public RebootCacheClusterMessage(@JsonProperty("CacheClusterId") String cacheClusterId, @JsonProperty("CacheNodeIdsToReboot") String[] cacheNodeIdsToReboot) {
+        this.cacheClusterId = cacheClusterId;
+        this.cacheNodeIdsToReboot = cacheNodeIdsToReboot;
+  }
 }

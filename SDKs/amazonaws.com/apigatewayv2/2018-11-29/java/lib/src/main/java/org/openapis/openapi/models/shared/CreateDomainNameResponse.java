@@ -15,6 +15,7 @@ public class CreateDomainNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiMappingSelectionExpression")
     public String apiMappingSelectionExpression;
+
     public CreateDomainNameResponse withApiMappingSelectionExpression(String apiMappingSelectionExpression) {
         this.apiMappingSelectionExpression = apiMappingSelectionExpression;
         return this;
@@ -23,6 +24,7 @@ public class CreateDomainNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public CreateDomainNameResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -31,6 +33,7 @@ public class CreateDomainNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainNameConfigurations")
     public DomainNameConfiguration[] domainNameConfigurations;
+
     public CreateDomainNameResponse withDomainNameConfigurations(DomainNameConfiguration[] domainNameConfigurations) {
         this.domainNameConfigurations = domainNameConfigurations;
         return this;
@@ -39,6 +42,7 @@ public class CreateDomainNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MutualTlsAuthentication")
     public CreateDomainNameResponseMutualTlsAuthentication mutualTlsAuthentication;
+
     public CreateDomainNameResponse withMutualTlsAuthentication(CreateDomainNameResponseMutualTlsAuthentication mutualTlsAuthentication) {
         this.mutualTlsAuthentication = mutualTlsAuthentication;
         return this;
@@ -47,9 +51,11 @@ public class CreateDomainNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateDomainNameResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDomainNameResponse(){}
 }

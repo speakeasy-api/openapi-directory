@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotFleetRequestHistoryRequest {
     
     public Boolean dryRun;
+
     public DescribeSpotFleetRequestHistoryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSpotFleetRequestHistoryRequest {
     
     
     public DescribeSpotFleetRequestHistoryRequestEventTypeEnum eventType;
+
     public DescribeSpotFleetRequestHistoryRequest withEventType(DescribeSpotFleetRequestHistoryRequestEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -26,6 +29,7 @@ public class DescribeSpotFleetRequestHistoryRequest {
     
     
     public Long maxResults;
+
     public DescribeSpotFleetRequestHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -33,6 +37,7 @@ public class DescribeSpotFleetRequestHistoryRequest {
     
     
     public String nextToken;
+
     public DescribeSpotFleetRequestHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -40,6 +45,7 @@ public class DescribeSpotFleetRequestHistoryRequest {
     
     
     public String spotFleetRequestId;
+
     public DescribeSpotFleetRequestHistoryRequest withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
@@ -47,9 +53,14 @@ public class DescribeSpotFleetRequestHistoryRequest {
     
     
     public OffsetDateTime startTime;
+
     public DescribeSpotFleetRequestHistoryRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeSpotFleetRequestHistoryRequest(@JsonProperty("SpotFleetRequestId") String spotFleetRequestId, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.spotFleetRequestId = spotFleetRequestId;
+        this.startTime = startTime;
+  }
 }

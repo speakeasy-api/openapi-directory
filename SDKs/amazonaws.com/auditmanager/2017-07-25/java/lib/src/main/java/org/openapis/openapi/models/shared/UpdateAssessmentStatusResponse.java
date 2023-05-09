@@ -15,9 +15,11 @@ public class UpdateAssessmentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessment")
     public Assessment assessment;
+
     public UpdateAssessmentStatusResponse withAssessment(Assessment assessment) {
         this.assessment = assessment;
         return this;
     }
     
+    public UpdateAssessmentStatusResponse(){}
 }

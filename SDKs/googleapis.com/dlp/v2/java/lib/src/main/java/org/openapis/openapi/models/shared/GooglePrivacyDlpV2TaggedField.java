@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2TaggedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customTag")
     public String customTag;
+
     public GooglePrivacyDlpV2TaggedField withCustomTag(String customTag) {
         this.customTag = customTag;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2TaggedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GooglePrivacyDlpV2FieldId field;
+
     public GooglePrivacyDlpV2TaggedField withField(GooglePrivacyDlpV2FieldId field) {
         this.field = field;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2TaggedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferred")
     public java.util.Map<String, Object> inferred;
+
     public GooglePrivacyDlpV2TaggedField withInferred(java.util.Map<String, Object> inferred) {
         this.inferred = inferred;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2TaggedField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoType")
     public GooglePrivacyDlpV2InfoType infoType;
+
     public GooglePrivacyDlpV2TaggedField withInfoType(GooglePrivacyDlpV2InfoType infoType) {
         this.infoType = infoType;
         return this;
     }
     
+    public GooglePrivacyDlpV2TaggedField(){}
 }

@@ -12,9 +12,11 @@ public class CreateScriptTag200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script_tag")
     public CreateScriptTag200ApplicationJSONScriptTag scriptTag;
+
     public CreateScriptTag200ApplicationJSON withScriptTag(CreateScriptTag200ApplicationJSONScriptTag scriptTag) {
         this.scriptTag = scriptTag;
         return this;
     }
     
+    public CreateScriptTag200ApplicationJSON(){}
 }

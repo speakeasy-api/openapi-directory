@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VatComprehensiveResponse {
     
     public String contentType;
+
     public VatComprehensiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VatComprehensiveResponse {
     
     
     public Integer statusCode;
+
     public VatComprehensiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VatComprehensiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VatComprehensiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class VatComprehensiveResponse {
      */
     
     public VatComprehensive200ApplicationJSON vatComprehensive200ApplicationJSONObject;
+
     public VatComprehensiveResponse withVatComprehensive200ApplicationJSONObject(VatComprehensive200ApplicationJSON vatComprehensive200ApplicationJSONObject) {
         this.vatComprehensive200ApplicationJSONObject = vatComprehensive200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class VatComprehensiveResponse {
      */
     
     public VatComprehensiveDefaultApplicationJSON vatComprehensiveDefaultApplicationJSONObject;
+
     public VatComprehensiveResponse withVatComprehensiveDefaultApplicationJSONObject(VatComprehensiveDefaultApplicationJSON vatComprehensiveDefaultApplicationJSONObject) {
         this.vatComprehensiveDefaultApplicationJSONObject = vatComprehensiveDefaultApplicationJSONObject;
         return this;
     }
     
+    public VatComprehensiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -143,11 +143,9 @@ public class PricingConfiguration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPricingConfigResponse res = new org.openapis.openapi.models.operations.GetPricingConfigResponse() {{
+        org.openapis.openapi.models.operations.GetPricingConfigResponse res = new org.openapis.openapi.models.operations.GetPricingConfigResponse(contentType, httpRes.statusCode()) {{
             pricingConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +223,9 @@ public class PricingConfiguration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPricingv2StatusResponse res = new org.openapis.openapi.models.operations.GetPricingv2StatusResponse() {{
+        org.openapis.openapi.models.operations.GetPricingv2StatusResponse res = new org.openapis.openapi.models.operations.GetPricingv2StatusResponse(contentType, httpRes.statusCode()) {{
             getPricingv2Status200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

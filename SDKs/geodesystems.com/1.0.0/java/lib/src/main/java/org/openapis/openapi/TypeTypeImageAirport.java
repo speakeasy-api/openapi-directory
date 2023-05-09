@@ -57,10 +57,8 @@ public class TypeTypeImageAirport {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeImageAirportResponse res = new org.openapis.openapi.models.operations.SearchTypeImageAirportResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeImageAirportResponse res = new org.openapis.openapi.models.operations.SearchTypeImageAirportResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

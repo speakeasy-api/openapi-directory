@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovePermissionRequest {
@@ -12,6 +13,7 @@ public class RemovePermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public RemovePermissionRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -22,6 +24,7 @@ public class RemovePermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Qualifier")
     public String qualifier;
+
     public RemovePermissionRequest withQualifier(String qualifier) {
         this.qualifier = qualifier;
         return this;
@@ -32,6 +35,7 @@ public class RemovePermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RevisionId")
     public String revisionId;
+
     public RemovePermissionRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -42,6 +46,7 @@ public class RemovePermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StatementId")
     public String statementId;
+
     public RemovePermissionRequest withStatementId(String statementId) {
         this.statementId = statementId;
         return this;
@@ -49,6 +54,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public RemovePermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -56,6 +62,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public RemovePermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -63,6 +70,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public RemovePermissionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -70,6 +78,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public RemovePermissionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -77,6 +86,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public RemovePermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -84,6 +94,7 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public RemovePermissionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -91,9 +102,14 @@ public class RemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public RemovePermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public RemovePermissionRequest(@JsonProperty("FunctionName") String functionName, @JsonProperty("StatementId") String statementId) {
+        this.functionName = functionName;
+        this.statementId = statementId;
+  }
 }

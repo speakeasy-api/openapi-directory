@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateReportDefinitionResponse {
@@ -12,6 +13,7 @@ public class UpdateReportDefinitionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateReportDefinitionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateReportDefinitionResponse {
     
     
     public String contentType;
+
     public UpdateReportDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateReportDefinitionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateReportDefinitionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateReportDefinitionResponse {
     
     
     public Integer statusCode;
+
     public UpdateReportDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateReportDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateReportDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateReportDefinitionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateReportDefinitionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateReportDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateReportDefinitionResult updateReportDefinitionResult;
+
     public UpdateReportDefinitionResponse withUpdateReportDefinitionResult(org.openapis.openapi.models.shared.UpdateReportDefinitionResult updateReportDefinitionResult) {
         this.updateReportDefinitionResult = updateReportDefinitionResult;
         return this;
@@ -73,9 +81,14 @@ public class UpdateReportDefinitionResponse {
      */
     
     public Object validationException;
+
     public UpdateReportDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateReportDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

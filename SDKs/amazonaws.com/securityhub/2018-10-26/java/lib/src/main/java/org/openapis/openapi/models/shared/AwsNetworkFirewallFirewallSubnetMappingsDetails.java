@@ -15,9 +15,11 @@ public class AwsNetworkFirewallFirewallSubnetMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AwsNetworkFirewallFirewallSubnetMappingsDetails withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public AwsNetworkFirewallFirewallSubnetMappingsDetails(){}
 }

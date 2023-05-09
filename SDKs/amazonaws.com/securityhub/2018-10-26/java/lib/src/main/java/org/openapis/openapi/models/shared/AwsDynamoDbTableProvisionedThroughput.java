@@ -15,6 +15,7 @@ public class AwsDynamoDbTableProvisionedThroughput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastDecreaseDateTime")
     public String lastDecreaseDateTime;
+
     public AwsDynamoDbTableProvisionedThroughput withLastDecreaseDateTime(String lastDecreaseDateTime) {
         this.lastDecreaseDateTime = lastDecreaseDateTime;
         return this;
@@ -23,6 +24,7 @@ public class AwsDynamoDbTableProvisionedThroughput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastIncreaseDateTime")
     public String lastIncreaseDateTime;
+
     public AwsDynamoDbTableProvisionedThroughput withLastIncreaseDateTime(String lastIncreaseDateTime) {
         this.lastIncreaseDateTime = lastIncreaseDateTime;
         return this;
@@ -31,6 +33,7 @@ public class AwsDynamoDbTableProvisionedThroughput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfDecreasesToday")
     public Long numberOfDecreasesToday;
+
     public AwsDynamoDbTableProvisionedThroughput withNumberOfDecreasesToday(Long numberOfDecreasesToday) {
         this.numberOfDecreasesToday = numberOfDecreasesToday;
         return this;
@@ -39,6 +42,7 @@ public class AwsDynamoDbTableProvisionedThroughput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadCapacityUnits")
     public Long readCapacityUnits;
+
     public AwsDynamoDbTableProvisionedThroughput withReadCapacityUnits(Long readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
@@ -47,9 +51,11 @@ public class AwsDynamoDbTableProvisionedThroughput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteCapacityUnits")
     public Long writeCapacityUnits;
+
     public AwsDynamoDbTableProvisionedThroughput withWriteCapacityUnits(Long writeCapacityUnits) {
         this.writeCapacityUnits = writeCapacityUnits;
         return this;
     }
     
+    public AwsDynamoDbTableProvisionedThroughput(){}
 }

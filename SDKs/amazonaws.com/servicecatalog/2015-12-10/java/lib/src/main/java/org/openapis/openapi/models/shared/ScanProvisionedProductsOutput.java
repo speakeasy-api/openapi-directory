@@ -15,6 +15,7 @@ public class ScanProvisionedProductsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ScanProvisionedProductsOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ScanProvisionedProductsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProducts")
     public ProvisionedProductDetail[] provisionedProducts;
+
     public ScanProvisionedProductsOutput withProvisionedProducts(ProvisionedProductDetail[] provisionedProducts) {
         this.provisionedProducts = provisionedProducts;
         return this;
     }
     
+    public ScanProvisionedProductsOutput(){}
 }

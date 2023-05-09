@@ -18,6 +18,7 @@ public class CompleteUserSubscriptions1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public CompleteUserSubscriptions1Product product;
+
     public CompleteUserSubscriptions1 withProduct(CompleteUserSubscriptions1Product product) {
         this.product = product;
         return this;
@@ -29,9 +30,11 @@ public class CompleteUserSubscriptions1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring")
     public Boolean recurring;
+
     public CompleteUserSubscriptions1 withRecurring(Boolean recurring) {
         this.recurring = recurring;
         return this;
     }
     
+    public CompleteUserSubscriptions1(){}
 }

@@ -15,6 +15,7 @@ public class AssociateRepositoryRequestBodyKMSKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionOption")
     public org.openapis.openapi.models.shared.EncryptionOptionEnum encryptionOption;
+
     public AssociateRepositoryRequestBodyKMSKeyDetails withEncryptionOption(org.openapis.openapi.models.shared.EncryptionOptionEnum encryptionOption) {
         this.encryptionOption = encryptionOption;
         return this;
@@ -23,9 +24,11 @@ public class AssociateRepositoryRequestBodyKMSKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyId")
     public String kmsKeyId;
+
     public AssociateRepositoryRequestBodyKMSKeyDetails withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public AssociateRepositoryRequestBodyKMSKeyDetails(){}
 }

@@ -15,6 +15,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public RecommendationSummary withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPerformanceRiskRatings")
     public CurrentPerformanceRiskRatings currentPerformanceRiskRatings;
+
     public RecommendationSummary withCurrentPerformanceRiskRatings(CurrentPerformanceRiskRatings currentPerformanceRiskRatings) {
         this.currentPerformanceRiskRatings = currentPerformanceRiskRatings;
         return this;
@@ -31,6 +33,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationResourceType")
     public RecommendationSourceTypeEnum recommendationResourceType;
+
     public RecommendationSummary withRecommendationResourceType(RecommendationSourceTypeEnum recommendationResourceType) {
         this.recommendationResourceType = recommendationResourceType;
         return this;
@@ -39,6 +42,7 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsOpportunity")
     public SavingsOpportunity savingsOpportunity;
+
     public RecommendationSummary withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
         this.savingsOpportunity = savingsOpportunity;
         return this;
@@ -47,9 +51,11 @@ public class RecommendationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaries")
     public Summary[] summaries;
+
     public RecommendationSummary withSummaries(Summary[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public RecommendationSummary(){}
 }

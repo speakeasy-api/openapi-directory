@@ -12,6 +12,7 @@ public class SchemaResponseActionReadSchemaResponseActionsAttributes {
      */
     
     public Boolean auto;
+
     public SchemaResponseActionReadSchemaResponseActionsAttributes withAuto(Boolean auto) {
         this.auto = auto;
         return this;
@@ -22,6 +23,7 @@ public class SchemaResponseActionReadSchemaResponseActionsAttributes {
      */
     
     public String comment;
+
     public SchemaResponseActionReadSchemaResponseActionsAttributes withComment(String comment) {
         this.comment = comment;
         return this;
@@ -32,6 +34,7 @@ public class SchemaResponseActionReadSchemaResponseActionsAttributes {
      */
     
     public String dateCreated;
+
     public SchemaResponseActionReadSchemaResponseActionsAttributes withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -42,6 +45,7 @@ public class SchemaResponseActionReadSchemaResponseActionsAttributes {
      */
     
     public SchemaResponseActionReadSchemaResponseActionsAttributesFromStateEnum fromState;
+
     public SchemaResponseActionReadSchemaResponseActionsAttributes withFromState(SchemaResponseActionReadSchemaResponseActionsAttributesFromStateEnum fromState) {
         this.fromState = fromState;
         return this;
@@ -52,6 +56,7 @@ public class SchemaResponseActionReadSchemaResponseActionsAttributes {
      */
     
     public SchemaResponseActionReadSchemaResponseActionsAttributesToStateEnum toState;
+
     public SchemaResponseActionReadSchemaResponseActionsAttributes withToState(SchemaResponseActionReadSchemaResponseActionsAttributesToStateEnum toState) {
         this.toState = toState;
         return this;
@@ -62,6 +67,7 @@ public class SchemaResponseActionReadSchemaResponseActionsAttributes {
      */
     
     public SchemaResponseActionReadSchemaResponseActionsAttributesTriggerEnum trigger;
+
     public SchemaResponseActionReadSchemaResponseActionsAttributes withTrigger(SchemaResponseActionReadSchemaResponseActionsAttributesTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
@@ -72,9 +78,11 @@ public class SchemaResponseActionReadSchemaResponseActionsAttributes {
      */
     
     public Boolean visible;
+
     public SchemaResponseActionReadSchemaResponseActionsAttributes withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public SchemaResponseActionReadSchemaResponseActionsAttributes(){}
 }

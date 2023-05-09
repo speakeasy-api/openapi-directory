@@ -18,6 +18,7 @@ public class YoutubeAndPartnersBiddingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupEffectiveTargetCpaSource")
     public YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum adGroupEffectiveTargetCpaSource;
+
     public YoutubeAndPartnersBiddingStrategy withAdGroupEffectiveTargetCpaSource(YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum adGroupEffectiveTargetCpaSource) {
         this.adGroupEffectiveTargetCpaSource = adGroupEffectiveTargetCpaSource;
         return this;
@@ -29,6 +30,7 @@ public class YoutubeAndPartnersBiddingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupEffectiveTargetCpaValue")
     public String adGroupEffectiveTargetCpaValue;
+
     public YoutubeAndPartnersBiddingStrategy withAdGroupEffectiveTargetCpaValue(String adGroupEffectiveTargetCpaValue) {
         this.adGroupEffectiveTargetCpaValue = adGroupEffectiveTargetCpaValue;
         return this;
@@ -40,6 +42,7 @@ public class YoutubeAndPartnersBiddingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public YoutubeAndPartnersBiddingStrategyTypeEnum type;
+
     public YoutubeAndPartnersBiddingStrategy withType(YoutubeAndPartnersBiddingStrategyTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +54,11 @@ public class YoutubeAndPartnersBiddingStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public YoutubeAndPartnersBiddingStrategy withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public YoutubeAndPartnersBiddingStrategy(){}
 }

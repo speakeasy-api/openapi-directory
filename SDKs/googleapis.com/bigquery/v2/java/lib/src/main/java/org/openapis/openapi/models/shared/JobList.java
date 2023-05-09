@@ -18,6 +18,7 @@ public class JobList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public JobList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class JobList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public JobListJobs[] jobs;
+
     public JobList withJobs(JobListJobs[] jobs) {
         this.jobs = jobs;
         return this;
@@ -40,6 +42,7 @@ public class JobList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public JobList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class JobList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public JobList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public JobList(){}
 }

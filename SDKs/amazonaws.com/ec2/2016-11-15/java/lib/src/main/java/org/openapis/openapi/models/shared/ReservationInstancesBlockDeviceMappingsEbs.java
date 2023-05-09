@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservationInstancesBlockDeviceMappingsEbs {
     
     public OffsetDateTime attachTime;
+
     public ReservationInstancesBlockDeviceMappingsEbs withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class ReservationInstancesBlockDeviceMappingsEbs {
     
     
     public Boolean deleteOnTermination;
+
     public ReservationInstancesBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -26,6 +28,7 @@ public class ReservationInstancesBlockDeviceMappingsEbs {
     
     
     public ReservationInstancesBlockDeviceMappingsEbsStatusEnum status;
+
     public ReservationInstancesBlockDeviceMappingsEbs withStatus(ReservationInstancesBlockDeviceMappingsEbsStatusEnum status) {
         this.status = status;
         return this;
@@ -33,9 +36,11 @@ public class ReservationInstancesBlockDeviceMappingsEbs {
     
     
     public String volumeId;
+
     public ReservationInstancesBlockDeviceMappingsEbs withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public ReservationInstancesBlockDeviceMappingsEbs(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGeneratedPolicyResponse {
     @JsonProperty("generatedPolicyResult")
     public GeneratedPolicyResult generatedPolicyResult;
+
     public GetGeneratedPolicyResponse withGeneratedPolicyResult(GeneratedPolicyResult generatedPolicyResult) {
         this.generatedPolicyResult = generatedPolicyResult;
         return this;
@@ -19,9 +20,14 @@ public class GetGeneratedPolicyResponse {
     
     @JsonProperty("jobDetails")
     public JobDetails jobDetails;
+
     public GetGeneratedPolicyResponse withJobDetails(JobDetails jobDetails) {
         this.jobDetails = jobDetails;
         return this;
     }
     
+    public GetGeneratedPolicyResponse(@JsonProperty("generatedPolicyResult") GeneratedPolicyResult generatedPolicyResult, @JsonProperty("jobDetails") JobDetails jobDetails) {
+        this.generatedPolicyResult = generatedPolicyResult;
+        this.jobDetails = jobDetails;
+  }
 }

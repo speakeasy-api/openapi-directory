@@ -18,6 +18,7 @@ public class AppliedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osLicense")
     public String osLicense;
+
     public AppliedLicense withOsLicense(String osLicense) {
         this.osLicense = osLicense;
         return this;
@@ -29,9 +30,11 @@ public class AppliedLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AppliedLicenseTypeEnum type;
+
     public AppliedLicense withType(AppliedLicenseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppliedLicense(){}
 }

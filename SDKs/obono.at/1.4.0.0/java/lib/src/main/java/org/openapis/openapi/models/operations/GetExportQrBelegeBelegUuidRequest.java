@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportQrBelegeBelegUuidRequest {
@@ -12,9 +13,13 @@ public class GetExportQrBelegeBelegUuidRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
     public String belegUuid;
+
     public GetExportQrBelegeBelegUuidRequest withBelegUuid(String belegUuid) {
         this.belegUuid = belegUuid;
         return this;
     }
     
+    public GetExportQrBelegeBelegUuidRequest(@JsonProperty("belegUuid") String belegUuid) {
+        this.belegUuid = belegUuid;
+  }
 }

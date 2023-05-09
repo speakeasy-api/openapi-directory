@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiReactionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public PostApiReactionsCategoryEnum category;
+
     public PostApiReactionsRequest withCategory(PostApiReactionsCategoryEnum category) {
         this.category = category;
         return this;
@@ -16,6 +18,7 @@ public class PostApiReactionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reactable_id")
     public Integer reactableId;
+
     public PostApiReactionsRequest withReactableId(Integer reactableId) {
         this.reactableId = reactableId;
         return this;
@@ -23,9 +26,15 @@ public class PostApiReactionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reactable_type")
     public PostApiReactionsReactableTypeEnum reactableType;
+
     public PostApiReactionsRequest withReactableType(PostApiReactionsReactableTypeEnum reactableType) {
         this.reactableType = reactableType;
         return this;
     }
     
+    public PostApiReactionsRequest(@JsonProperty("category") PostApiReactionsCategoryEnum category, @JsonProperty("reactable_id") Integer reactableId, @JsonProperty("reactable_type") PostApiReactionsReactableTypeEnum reactableType) {
+        this.category = category;
+        this.reactableId = reactableId;
+        this.reactableType = reactableType;
+  }
 }

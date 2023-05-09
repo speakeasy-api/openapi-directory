@@ -20,6 +20,7 @@ public class FolderMenuConfiguration {
     @JsonProperty("BrowserTimeZoneName")
     @SpeakeasyMetadata("form:name=BrowserTimeZoneName")
     public String browserTimeZoneName;
+
     public FolderMenuConfiguration withBrowserTimeZoneName(String browserTimeZoneName) {
         this.browserTimeZoneName = browserTimeZoneName;
         return this;
@@ -32,6 +33,7 @@ public class FolderMenuConfiguration {
     @JsonProperty("BrowserUtcTime")
     @SpeakeasyMetadata("form:name=BrowserUtcTime")
     public String browserUtcTime;
+
     public FolderMenuConfiguration withBrowserUtcTime(String browserUtcTime) {
         this.browserUtcTime = browserUtcTime;
         return this;
@@ -41,9 +43,11 @@ public class FolderMenuConfiguration {
     @JsonProperty("Items")
     @SpeakeasyMetadata("form:name=Items,json")
     public FolderMenuItem[] items;
+
     public FolderMenuConfiguration withItems(FolderMenuItem[] items) {
         this.items = items;
         return this;
     }
     
+    public FolderMenuConfiguration(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainersQuotaResponse {
@@ -12,6 +13,7 @@ public class GetContainersQuotaResponse {
      */
     
     public org.openapis.openapi.models.shared.ContainersQuotaInfo containersQuotaInfo;
+
     public GetContainersQuotaResponse withContainersQuotaInfo(org.openapis.openapi.models.shared.ContainersQuotaInfo containersQuotaInfo) {
         this.containersQuotaInfo = containersQuotaInfo;
         return this;
@@ -19,6 +21,7 @@ public class GetContainersQuotaResponse {
     
     
     public String contentType;
+
     public GetContainersQuotaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetContainersQuotaResponse {
     
     
     public Integer statusCode;
+
     public GetContainersQuotaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetContainersQuotaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainersQuotaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetContainersQuotaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

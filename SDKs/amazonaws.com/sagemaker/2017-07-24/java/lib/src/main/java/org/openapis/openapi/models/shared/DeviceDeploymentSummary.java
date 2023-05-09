@@ -20,6 +20,7 @@ public class DeviceDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeployedStageName")
     public String deployedStageName;
+
     public DeviceDeploymentSummary withDeployedStageName(String deployedStageName) {
         this.deployedStageName = deployedStageName;
         return this;
@@ -30,6 +31,7 @@ public class DeviceDeploymentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeploymentStartTime")
     public OffsetDateTime deploymentStartTime;
+
     public DeviceDeploymentSummary withDeploymentStartTime(OffsetDateTime deploymentStartTime) {
         this.deploymentStartTime = deploymentStartTime;
         return this;
@@ -38,6 +40,7 @@ public class DeviceDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DeviceDeploymentSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class DeviceDeploymentSummary {
     
     @JsonProperty("DeviceArn")
     public String deviceArn;
+
     public DeviceDeploymentSummary withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -53,6 +57,7 @@ public class DeviceDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceDeploymentStatus")
     public DeviceDeploymentStatusEnum deviceDeploymentStatus;
+
     public DeviceDeploymentSummary withDeviceDeploymentStatus(DeviceDeploymentStatusEnum deviceDeploymentStatus) {
         this.deviceDeploymentStatus = deviceDeploymentStatus;
         return this;
@@ -61,6 +66,7 @@ public class DeviceDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceDeploymentStatusMessage")
     public String deviceDeploymentStatusMessage;
+
     public DeviceDeploymentSummary withDeviceDeploymentStatusMessage(String deviceDeploymentStatusMessage) {
         this.deviceDeploymentStatusMessage = deviceDeploymentStatusMessage;
         return this;
@@ -69,6 +75,7 @@ public class DeviceDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public DeviceDeploymentSummary withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -76,6 +83,7 @@ public class DeviceDeploymentSummary {
     
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public DeviceDeploymentSummary withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -83,6 +91,7 @@ public class DeviceDeploymentSummary {
     
     @JsonProperty("EdgeDeploymentPlanArn")
     public String edgeDeploymentPlanArn;
+
     public DeviceDeploymentSummary withEdgeDeploymentPlanArn(String edgeDeploymentPlanArn) {
         this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
         return this;
@@ -90,6 +99,7 @@ public class DeviceDeploymentSummary {
     
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public DeviceDeploymentSummary withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
@@ -97,9 +107,17 @@ public class DeviceDeploymentSummary {
     
     @JsonProperty("StageName")
     public String stageName;
+
     public DeviceDeploymentSummary withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public DeviceDeploymentSummary(@JsonProperty("DeviceArn") String deviceArn, @JsonProperty("DeviceName") String deviceName, @JsonProperty("EdgeDeploymentPlanArn") String edgeDeploymentPlanArn, @JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName, @JsonProperty("StageName") String stageName) {
+        this.deviceArn = deviceArn;
+        this.deviceName = deviceName;
+        this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+        this.stageName = stageName;
+  }
 }

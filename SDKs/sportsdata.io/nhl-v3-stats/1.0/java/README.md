@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AreGamesInProgressFormatEnum;
 import org.openapis.openapi.models.operations.AreGamesInProgressRequest;
 import org.openapis.openapi.models.operations.AreGamesInProgressResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,56 +30,56 @@ public class Application {
                 }})
                 .build();
 
-            AreGamesInProgressRequest req = new AreGamesInProgressRequest() {{
-                format = "JSON";
-            }}            
+            AreGamesInProgressRequest req = new AreGamesInProgressRequest(AreGamesInProgressFormatEnum.JSON);            
 
             AreGamesInProgressResponse res = sdk.areGamesInProgress(req);
 
-            if (res.areGamesInProgress200ApplicationJSONBoolean.isPresent()) {
+            if (res.areGamesInProgress200ApplicationJSONBoolean != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `areGamesInProgress` - Are Games In Progress
-* `boxScore` - Box Score
-* `boxScoresByDate` - Box Scores by Date
-* `boxScoresByDateDelta` - Box Scores by Date Delta
-* `currentSeason` - Current Season
-* `dfsSlatesByDate` - DFS Slates by Date
-* `gamesByDate` - Games by Date
-* `lineCombinationsBySeason` - Line Combinations by Season
-* `news` - News
-* `newsByDate` - News by Date
-* `newsByPlayer` - News by Player
-* `playerDetailsByActive` - Player Details by Active
-* `playerDetailsByFreeAgent` - Player Details by Free Agent
-* `playerDetailsByPlayer` - Player Details by Player
-* `playerGameLogsBySeason` - Player Game Logs By Season
-* `playerGameStatsByDate` - Player Game Stats by Date
-* `playerGameStatsByPlayer` - Player Game Stats by Player
-* `playerSeasonStats` - Player Season Stats
-* `playerSeasonStatsByPlayer` - Player Season Stats By Player
-* `playerSeasonStatsByTeam` - Player Season Stats by Team
-* `playersByTeam` - Players by Team
-* `schedules` - Schedules
-* `stadiums` - Stadiums
-* `standings` - Standings
-* `teamGameLogsBySeason` - Team Game Logs By Season
-* `teamGameStatsByDate` - Team Game Stats by Date
-* `teamSeasonStats` - Team Season Stats
-* `teamStatsAllowedByPosition` - Team Stats Allowed by Position
-* `teamsActive` - Teams (Active)
-* `teamsAll` - Teams (All)
+* [areGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [boxScore](docs/sdk/README.md#boxscore) - Box Score
+* [boxScoresByDate](docs/sdk/README.md#boxscoresbydate) - Box Scores by Date
+* [boxScoresByDateDelta](docs/sdk/README.md#boxscoresbydatedelta) - Box Scores by Date Delta
+* [currentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - DFS Slates by Date
+* [gamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [lineCombinationsBySeason](docs/sdk/README.md#linecombinationsbyseason) - Line Combinations by Season
+* [news](docs/sdk/README.md#news) - News
+* [newsByDate](docs/sdk/README.md#newsbydate) - News by Date
+* [newsByPlayer](docs/sdk/README.md#newsbyplayer) - News by Player
+* [playerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details by Active
+* [playerDetailsByFreeAgent](docs/sdk/README.md#playerdetailsbyfreeagent) - Player Details by Free Agent
+* [playerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details by Player
+* [playerGameLogsBySeason](docs/sdk/README.md#playergamelogsbyseason) - Player Game Logs By Season
+* [playerGameStatsByDate](docs/sdk/README.md#playergamestatsbydate) - Player Game Stats by Date
+* [playerGameStatsByPlayer](docs/sdk/README.md#playergamestatsbyplayer) - Player Game Stats by Player
+* [playerSeasonStats](docs/sdk/README.md#playerseasonstats) - Player Season Stats
+* [playerSeasonStatsByPlayer](docs/sdk/README.md#playerseasonstatsbyplayer) - Player Season Stats By Player
+* [playerSeasonStatsByTeam](docs/sdk/README.md#playerseasonstatsbyteam) - Player Season Stats by Team
+* [playersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [schedules](docs/sdk/README.md#schedules) - Schedules
+* [stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [standings](docs/sdk/README.md#standings) - Standings
+* [teamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [teamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [teamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [teamStatsAllowedByPosition](docs/sdk/README.md#teamstatsallowedbyposition) - Team Stats Allowed by Position
+* [teamsActive](docs/sdk/README.md#teamsactive) - Teams (Active)
+* [teamsAll](docs/sdk/README.md#teamsall) - Teams (All)
 <!-- End SDK Available Operations -->
 
 ### Maturity

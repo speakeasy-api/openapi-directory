@@ -12,6 +12,7 @@ public class DescribeContainerInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public DescribeContainerInstancesRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class DescribeContainerInstancesRequest {
     
     @JsonProperty("containerInstances")
     public String[] containerInstances;
+
     public DescribeContainerInstancesRequest withContainerInstances(String[] containerInstances) {
         this.containerInstances = containerInstances;
         return this;
@@ -27,9 +29,13 @@ public class DescribeContainerInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public ContainerInstanceFieldEnum[] include;
+
     public DescribeContainerInstancesRequest withInclude(ContainerInstanceFieldEnum[] include) {
         this.include = include;
         return this;
     }
     
+    public DescribeContainerInstancesRequest(@JsonProperty("containerInstances") String[] containerInstances) {
+        this.containerInstances = containerInstances;
+  }
 }

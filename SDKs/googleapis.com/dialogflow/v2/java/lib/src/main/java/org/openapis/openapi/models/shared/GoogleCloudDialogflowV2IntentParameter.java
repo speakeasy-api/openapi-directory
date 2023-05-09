@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public GoogleCloudDialogflowV2IntentParameter withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2IntentParameter withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityTypeDisplayName")
     public String entityTypeDisplayName;
+
     public GoogleCloudDialogflowV2IntentParameter withEntityTypeDisplayName(String entityTypeDisplayName) {
         this.entityTypeDisplayName = entityTypeDisplayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isList")
     public Boolean isList;
+
     public GoogleCloudDialogflowV2IntentParameter withIsList(Boolean isList) {
         this.isList = isList;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatory")
     public Boolean mandatory;
+
     public GoogleCloudDialogflowV2IntentParameter withMandatory(Boolean mandatory) {
         this.mandatory = mandatory;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2IntentParameter withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prompts")
     public String[] prompts;
+
     public GoogleCloudDialogflowV2IntentParameter withPrompts(String[] prompts) {
         this.prompts = prompts;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDialogflowV2IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudDialogflowV2IntentParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentParameter(){}
 }

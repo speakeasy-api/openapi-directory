@@ -12,9 +12,11 @@ public class ApiCoreResponsesEntitiesResponseApiCoreDtoClickStreamHit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public ApiCoreDtoClickStreamHit[] entities;
+
     public ApiCoreResponsesEntitiesResponseApiCoreDtoClickStreamHit withEntities(ApiCoreDtoClickStreamHit[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public ApiCoreResponsesEntitiesResponseApiCoreDtoClickStreamHit(){}
 }

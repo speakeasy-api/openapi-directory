@@ -15,6 +15,7 @@ public class CommissionStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Monetary balance;
+
     public CommissionStats withBalance(Monetary balance) {
         this.balance = balance;
         return this;
@@ -23,6 +24,7 @@ public class CommissionStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid")
     public Monetary paid;
+
     public CommissionStats withPaid(Monetary paid) {
         this.paid = paid;
         return this;
@@ -31,6 +33,7 @@ public class CommissionStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_total")
     public Monetary quoteTotal;
+
     public CommissionStats withQuoteTotal(Monetary quoteTotal) {
         this.quoteTotal = quoteTotal;
         return this;
@@ -39,9 +42,11 @@ public class CommissionStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Monetary total;
+
     public CommissionStats withTotal(Monetary total) {
         this.total = total;
         return this;
     }
     
+    public CommissionStats(){}
 }

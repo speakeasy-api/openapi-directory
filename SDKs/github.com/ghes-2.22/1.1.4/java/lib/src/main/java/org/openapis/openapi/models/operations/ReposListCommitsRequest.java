@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ReposListCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
     public String author;
+
     public ReposListCommitsRequest withAuthor(String author) {
         this.author = author;
         return this;
@@ -20,6 +22,7 @@ public class ReposListCommitsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposListCommitsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -30,6 +33,7 @@ public class ReposListCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposListCommitsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -40,6 +44,7 @@ public class ReposListCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public ReposListCommitsRequest withPath(String path) {
         this.path = path;
         return this;
@@ -50,6 +55,7 @@ public class ReposListCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListCommitsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -57,6 +63,7 @@ public class ReposListCommitsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposListCommitsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -67,6 +74,7 @@ public class ReposListCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha")
     public String sha;
+
     public ReposListCommitsRequest withSha(String sha) {
         this.sha = sha;
         return this;
@@ -77,6 +85,7 @@ public class ReposListCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public ReposListCommitsRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -87,9 +96,14 @@ public class ReposListCommitsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=until")
     public OffsetDateTime until;
+
     public ReposListCommitsRequest withUntil(OffsetDateTime until) {
         this.until = until;
         return this;
     }
     
+    public ReposListCommitsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

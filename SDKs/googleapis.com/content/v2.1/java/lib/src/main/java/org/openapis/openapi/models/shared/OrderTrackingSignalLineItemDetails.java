@@ -18,6 +18,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public OrderTrackingSignalLineItemDetails withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtin")
     public String gtin;
+
     public OrderTrackingSignalLineItemDetails withGtin(String gtin) {
         this.gtin = gtin;
         return this;
@@ -40,6 +42,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrderTrackingSignalLineItemDetails withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -51,6 +54,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String mpn;
+
     public OrderTrackingSignalLineItemDetails withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -62,6 +66,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productDescription")
     public String productDescription;
+
     public OrderTrackingSignalLineItemDetails withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -73,6 +78,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrderTrackingSignalLineItemDetails withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -84,6 +90,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTitle")
     public String productTitle;
+
     public OrderTrackingSignalLineItemDetails withProductTitle(String productTitle) {
         this.productTitle = productTitle;
         return this;
@@ -95,6 +102,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public OrderTrackingSignalLineItemDetails withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -106,6 +114,7 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public OrderTrackingSignalLineItemDetails withSku(String sku) {
         this.sku = sku;
         return this;
@@ -117,9 +126,11 @@ public class OrderTrackingSignalLineItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upc")
     public String upc;
+
     public OrderTrackingSignalLineItemDetails withUpc(String upc) {
         this.upc = upc;
         return this;
     }
     
+    public OrderTrackingSignalLineItemDetails(){}
 }

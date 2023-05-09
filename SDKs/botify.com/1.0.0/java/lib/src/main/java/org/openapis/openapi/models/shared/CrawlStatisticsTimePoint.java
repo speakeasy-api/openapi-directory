@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CrawlStatisticsTimePoint {
     @JsonProperty("count")
     public Long count;
+
     public CrawlStatisticsTimePoint withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,14 @@ public class CrawlStatisticsTimePoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("datetime")
     public OffsetDateTime datetime;
+
     public CrawlStatisticsTimePoint withDatetime(OffsetDateTime datetime) {
         this.datetime = datetime;
         return this;
     }
     
+    public CrawlStatisticsTimePoint(@JsonProperty("count") Long count, @JsonProperty("datetime") OffsetDateTime datetime) {
+        this.count = count;
+        this.datetime = datetime;
+  }
 }

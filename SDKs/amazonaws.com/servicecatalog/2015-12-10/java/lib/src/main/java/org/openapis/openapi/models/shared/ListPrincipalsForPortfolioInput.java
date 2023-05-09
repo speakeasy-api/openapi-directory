@@ -12,6 +12,7 @@ public class ListPrincipalsForPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListPrincipalsForPortfolioInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class ListPrincipalsForPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListPrincipalsForPortfolioInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,6 +30,7 @@ public class ListPrincipalsForPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListPrincipalsForPortfolioInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -35,9 +38,13 @@ public class ListPrincipalsForPortfolioInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public ListPrincipalsForPortfolioInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
     }
     
+    public ListPrincipalsForPortfolioInput(@JsonProperty("PortfolioId") String portfolioId) {
+        this.portfolioId = portfolioId;
+  }
 }

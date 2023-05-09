@@ -51,10 +51,8 @@ public class FollowedWebchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdResponse res = new org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdResponse res = new org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -90,11 +88,9 @@ public class FollowedWebchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserFollowsWebchannelsResponse res = new org.openapis.openapi.models.operations.GetUserFollowsWebchannelsResponse() {{
+        org.openapis.openapi.models.operations.GetUserFollowsWebchannelsResponse res = new org.openapis.openapi.models.operations.GetUserFollowsWebchannelsResponse(contentType, httpRes.statusCode()) {{
             webchannelFollows = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,11 +125,9 @@ public class FollowedWebchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdResponse res = new org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdResponse res = new org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdResponse(contentType, httpRes.statusCode()) {{
             webchannelFollow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,11 +164,9 @@ public class FollowedWebchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdResponse res = new org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdResponse() {{
+        org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdResponse res = new org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdResponse(contentType, httpRes.statusCode()) {{
             webchannelFollow = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

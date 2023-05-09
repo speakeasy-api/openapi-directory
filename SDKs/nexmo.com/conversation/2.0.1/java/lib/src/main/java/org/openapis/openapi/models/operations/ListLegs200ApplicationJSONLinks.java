@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListLegs200ApplicationJSONLinks {
     @JsonProperty("self")
     public ListLegs200ApplicationJSONLinksSelf self;
+
     public ListLegs200ApplicationJSONLinks withSelf(ListLegs200ApplicationJSONLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public ListLegs200ApplicationJSONLinks(@JsonProperty("self") ListLegs200ApplicationJSONLinksSelf self) {
+        this.self = self;
+  }
 }

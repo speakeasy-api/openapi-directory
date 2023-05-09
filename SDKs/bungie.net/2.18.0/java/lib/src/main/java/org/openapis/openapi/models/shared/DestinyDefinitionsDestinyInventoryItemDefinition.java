@@ -16,6 +16,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionAction action;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withAction(DestinyDefinitionsDestinyInventoryItemDefinitionAction action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Boolean allowActions;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withAllowActions(Boolean allowActions) {
         this.allowActions = allowActions;
         return this;
@@ -36,6 +38,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsAnimationsDestinyAnimationReference[] animations;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withAnimations(DestinyDefinitionsAnimationsDestinyAnimationReference[] animations) {
         this.animations = animations;
         return this;
@@ -46,6 +49,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor backgroundColor;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withBackgroundColor(DestinyDefinitionsDestinyInventoryItemDefinitionBackgroundColor backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -56,6 +60,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer breakerType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withBreakerType(Integer breakerType) {
         this.breakerType = breakerType;
         return this;
@@ -66,6 +71,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long breakerTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withBreakerTypeHash(Long breakerTypeHash) {
         this.breakerTypeHash = breakerTypeHash;
         return this;
@@ -77,6 +83,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer classType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withClassType(Integer classType) {
         this.classType = classType;
         return this;
@@ -87,6 +94,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long collectibleHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withCollectibleHash(Long collectibleHash) {
         this.collectibleHash = collectibleHash;
         return this;
@@ -97,6 +105,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionCrafting crafting;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withCrafting(DestinyDefinitionsDestinyInventoryItemDefinitionCrafting crafting) {
         this.crafting = crafting;
         return this;
@@ -107,6 +116,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long[] damageTypeHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withDamageTypeHashes(Long[] damageTypeHashes) {
         this.damageTypeHashes = damageTypeHashes;
         return this;
@@ -121,6 +131,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer[] damageTypes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withDamageTypes(Integer[] damageTypes) {
         this.damageTypes = damageTypes;
         return this;
@@ -132,6 +143,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer defaultDamageType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withDefaultDamageType(Integer defaultDamageType) {
         this.defaultDamageType = defaultDamageType;
         return this;
@@ -143,6 +155,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long defaultDamageTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withDefaultDamageTypeHash(Long defaultDamageTypeHash) {
         this.defaultDamageTypeHash = defaultDamageTypeHash;
         return this;
@@ -153,6 +166,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withDisplayProperties(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties) {
         this.displayProperties = displayProperties;
         return this;
@@ -163,6 +177,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String displaySource;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withDisplaySource(String displaySource) {
         this.displaySource = displaySource;
         return this;
@@ -174,6 +189,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Boolean doesPostmasterPullHaveSideEffects;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withDoesPostmasterPullHaveSideEffects(Boolean doesPostmasterPullHaveSideEffects) {
         this.doesPostmasterPullHaveSideEffects = doesPostmasterPullHaveSideEffects;
         return this;
@@ -184,6 +200,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long emblemObjectiveHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withEmblemObjectiveHash(Long emblemObjectiveHash) {
         this.emblemObjectiveHash = emblemObjectiveHash;
         return this;
@@ -195,6 +212,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Boolean equippable;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withEquippable(Boolean equippable) {
         this.equippable = equippable;
         return this;
@@ -205,6 +223,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock equippingBlock;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withEquippingBlock(DestinyDefinitionsDestinyInventoryItemDefinitionEquippingBlock equippingBlock) {
         this.equippingBlock = equippingBlock;
         return this;
@@ -212,6 +231,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
     
     
     public String flavorText;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withFlavorText(String flavorText) {
         this.flavorText = flavorText;
         return this;
@@ -222,6 +242,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionGearset gearset;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withGearset(DestinyDefinitionsDestinyInventoryItemDefinitionGearset gearset) {
         this.gearset = gearset;
         return this;
@@ -233,6 +254,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long hash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withHash(Long hash) {
         this.hash = hash;
         return this;
@@ -243,6 +265,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String iconWatermark;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withIconWatermark(String iconWatermark) {
         this.iconWatermark = iconWatermark;
         return this;
@@ -253,6 +276,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String iconWatermarkShelved;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withIconWatermarkShelved(String iconWatermarkShelved) {
         this.iconWatermarkShelved = iconWatermarkShelved;
         return this;
@@ -263,6 +287,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer index;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withIndex(Integer index) {
         this.index = index;
         return this;
@@ -273,6 +298,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory inventory;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withInventory(DestinyDefinitionsDestinyInventoryItemDefinitionInventory inventory) {
         this.inventory = inventory;
         return this;
@@ -283,6 +309,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyItemInvestmentStatDefinition[] investmentStats;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withInvestmentStats(DestinyDefinitionsDestinyItemInvestmentStatDefinition[] investmentStats) {
         this.investmentStats = investmentStats;
         return this;
@@ -293,6 +320,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Boolean isWrapper;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withIsWrapper(Boolean isWrapper) {
         this.isWrapper = isWrapper;
         return this;
@@ -304,6 +332,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long[] itemCategoryHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withItemCategoryHashes(Long[] itemCategoryHashes) {
         this.itemCategoryHashes = itemCategoryHashes;
         return this;
@@ -315,6 +344,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer itemSubType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withItemSubType(Integer itemSubType) {
         this.itemSubType = itemSubType;
         return this;
@@ -326,6 +356,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer itemType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withItemType(Integer itemType) {
         this.itemType = itemType;
         return this;
@@ -336,6 +367,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String itemTypeAndTierDisplayName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withItemTypeAndTierDisplayName(String itemTypeAndTierDisplayName) {
         this.itemTypeAndTierDisplayName = itemTypeAndTierDisplayName;
         return this;
@@ -346,6 +378,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String itemTypeDisplayName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withItemTypeDisplayName(String itemTypeDisplayName) {
         this.itemTypeDisplayName = itemTypeDisplayName;
         return this;
@@ -356,6 +389,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public LinksHyperlinkReference[] links;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withLinks(LinksHyperlinkReference[] links) {
         this.links = links;
         return this;
@@ -366,6 +400,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long loreHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withLoreHash(Long loreHash) {
         this.loreHash = loreHash;
         return this;
@@ -376,6 +411,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionMetrics metrics;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withMetrics(DestinyDefinitionsDestinyInventoryItemDefinitionMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -388,6 +424,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Boolean nonTransferrable;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withNonTransferrable(Boolean nonTransferrable) {
         this.nonTransferrable = nonTransferrable;
         return this;
@@ -398,6 +435,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionObjectives objectives;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withObjectives(DestinyDefinitionsDestinyInventoryItemDefinitionObjectives objectives) {
         this.objectives = objectives;
         return this;
@@ -408,6 +446,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyItemPerkEntryDefinition[] perks;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withPerks(DestinyDefinitionsDestinyItemPerkEntryDefinition[] perks) {
         this.perks = perks;
         return this;
@@ -418,6 +457,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlug plug;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withPlug(DestinyDefinitionsDestinyInventoryItemDefinitionPlug plug) {
         this.plug = plug;
         return this;
@@ -428,6 +468,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionPreview preview;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withPreview(DestinyDefinitionsDestinyInventoryItemDefinitionPreview preview) {
         this.preview = preview;
         return this;
@@ -438,6 +479,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionQuality quality;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withQuality(DestinyDefinitionsDestinyInventoryItemDefinitionQuality quality) {
         this.quality = quality;
         return this;
@@ -448,6 +490,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Boolean redacted;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withRedacted(Boolean redacted) {
         this.redacted = redacted;
         return this;
@@ -458,6 +501,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionSack sack;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSack(DestinyDefinitionsDestinyInventoryItemDefinitionSack sack) {
         this.sack = sack;
         return this;
@@ -468,6 +512,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String screenshot;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withScreenshot(String screenshot) {
         this.screenshot = screenshot;
         return this;
@@ -478,6 +523,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long seasonHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSeasonHash(Long seasonHash) {
         this.seasonHash = seasonHash;
         return this;
@@ -488,6 +534,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String secondaryIcon;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSecondaryIcon(String secondaryIcon) {
         this.secondaryIcon = secondaryIcon;
         return this;
@@ -498,6 +545,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String secondaryOverlay;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSecondaryOverlay(String secondaryOverlay) {
         this.secondaryOverlay = secondaryOverlay;
         return this;
@@ -508,6 +556,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String secondarySpecial;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSecondarySpecial(String secondarySpecial) {
         this.secondarySpecial = secondarySpecial;
         return this;
@@ -518,6 +567,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionSetData setData;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSetData(DestinyDefinitionsDestinyInventoryItemDefinitionSetData setData) {
         this.setData = setData;
         return this;
@@ -528,6 +578,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionSockets sockets;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSockets(DestinyDefinitionsDestinyInventoryItemDefinitionSockets sockets) {
         this.sockets = sockets;
         return this;
@@ -538,6 +589,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionSourceData sourceData;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSourceData(DestinyDefinitionsDestinyInventoryItemDefinitionSourceData sourceData) {
         this.sourceData = sourceData;
         return this;
@@ -548,6 +600,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Integer specialItemType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSpecialItemType(Integer specialItemType) {
         this.specialItemType = specialItemType;
         return this;
@@ -558,6 +611,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionStats stats;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withStats(DestinyDefinitionsDestinyInventoryItemDefinitionStats stats) {
         this.stats = stats;
         return this;
@@ -568,6 +622,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionSummary summary;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSummary(DestinyDefinitionsDestinyInventoryItemDefinitionSummary summary) {
         this.summary = summary;
         return this;
@@ -579,6 +634,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long summaryItemHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withSummaryItemHash(Long summaryItemHash) {
         this.summaryItemHash = summaryItemHash;
         return this;
@@ -589,6 +645,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid talentGrid;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withTalentGrid(DestinyDefinitionsDestinyInventoryItemDefinitionTalentGrid talentGrid) {
         this.talentGrid = talentGrid;
         return this;
@@ -599,6 +656,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyItemTooltipNotification[] tooltipNotifications;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withTooltipNotifications(DestinyDefinitionsDestinyItemTooltipNotification[] tooltipNotifications) {
         this.tooltipNotifications = tooltipNotifications;
         return this;
@@ -609,6 +667,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String tooltipStyle;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withTooltipStyle(String tooltipStyle) {
         this.tooltipStyle = tooltipStyle;
         return this;
@@ -619,6 +678,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public Long[] traitHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withTraitHashes(Long[] traitHashes) {
         this.traitHashes = traitHashes;
         return this;
@@ -629,6 +689,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String[] traitIds;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withTraitIds(String[] traitIds) {
         this.traitIds = traitIds;
         return this;
@@ -639,6 +700,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock translationBlock;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withTranslationBlock(DestinyDefinitionsDestinyInventoryItemDefinitionTranslationBlock translationBlock) {
         this.translationBlock = translationBlock;
         return this;
@@ -649,6 +711,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public String uiItemDisplayStyle;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withUiItemDisplayStyle(String uiItemDisplayStyle) {
         this.uiItemDisplayStyle = uiItemDisplayStyle;
         return this;
@@ -659,9 +722,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinition {
      */
     
     public DestinyDefinitionsDestinyInventoryItemDefinitionValue value;
+
     public DestinyDefinitionsDestinyInventoryItemDefinition withValue(DestinyDefinitionsDestinyInventoryItemDefinitionValue value) {
         this.value = value;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinition(){}
 }

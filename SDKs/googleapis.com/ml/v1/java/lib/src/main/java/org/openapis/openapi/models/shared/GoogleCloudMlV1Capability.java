@@ -15,6 +15,7 @@ public class GoogleCloudMlV1Capability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAccelerators")
     public GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum[] availableAccelerators;
+
     public GoogleCloudMlV1Capability withAvailableAccelerators(GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum[] availableAccelerators) {
         this.availableAccelerators = availableAccelerators;
         return this;
@@ -23,9 +24,11 @@ public class GoogleCloudMlV1Capability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudMlV1CapabilityTypeEnum type;
+
     public GoogleCloudMlV1Capability withType(GoogleCloudMlV1CapabilityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudMlV1Capability(){}
 }

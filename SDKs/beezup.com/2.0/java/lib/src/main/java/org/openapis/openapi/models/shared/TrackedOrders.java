@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrackedOrders {
     @JsonProperty("orders")
     public TrackedOrder[] orders;
+
     public TrackedOrders withOrders(TrackedOrder[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public TrackedOrders(@JsonProperty("orders") TrackedOrder[] orders) {
+        this.orders = orders;
+  }
 }

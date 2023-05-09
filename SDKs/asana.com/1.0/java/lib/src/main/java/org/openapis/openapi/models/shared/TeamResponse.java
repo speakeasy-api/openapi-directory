@@ -19,6 +19,7 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public TeamResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -42,6 +44,7 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_description")
     public String htmlDescription;
+
     public TeamResponse withHtmlDescription(String htmlDescription) {
         this.htmlDescription = htmlDescription;
         return this;
@@ -53,6 +56,7 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamResponse withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +65,7 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public TeamResponseOrganization organization;
+
     public TeamResponse withOrganization(TeamResponseOrganization organization) {
         this.organization = organization;
         return this;
@@ -72,6 +77,7 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink_url")
     public String permalinkUrl;
+
     public TeamResponse withPermalinkUrl(String permalinkUrl) {
         this.permalinkUrl = permalinkUrl;
         return this;
@@ -83,6 +89,7 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public TeamResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -95,9 +102,11 @@ public class TeamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public TeamResponseVisibilityEnum visibility;
+
     public TeamResponse withVisibility(TeamResponseVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public TeamResponse(){}
 }

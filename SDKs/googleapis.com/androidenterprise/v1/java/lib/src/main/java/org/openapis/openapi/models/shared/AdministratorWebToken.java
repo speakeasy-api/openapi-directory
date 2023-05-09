@@ -18,9 +18,11 @@ public class AdministratorWebToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public AdministratorWebToken withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public AdministratorWebToken(){}
 }

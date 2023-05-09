@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdmobAccountsNetworkReportGenerateResponse {
     
     public String contentType;
+
     public AdmobAccountsNetworkReportGenerateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdmobAccountsNetworkReportGenerateResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateNetworkReportResponse generateNetworkReportResponse;
+
     public AdmobAccountsNetworkReportGenerateResponse withGenerateNetworkReportResponse(org.openapis.openapi.models.shared.GenerateNetworkReportResponse generateNetworkReportResponse) {
         this.generateNetworkReportResponse = generateNetworkReportResponse;
         return this;
@@ -26,6 +29,7 @@ public class AdmobAccountsNetworkReportGenerateResponse {
     
     
     public Integer statusCode;
+
     public AdmobAccountsNetworkReportGenerateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdmobAccountsNetworkReportGenerateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdmobAccountsNetworkReportGenerateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdmobAccountsNetworkReportGenerateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

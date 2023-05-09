@@ -12,9 +12,11 @@ public class ActivationResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootContentId")
     public String rootContentId;
+
     public ActivationResponseMetadata withRootContentId(String rootContentId) {
         this.rootContentId = rootContentId;
         return this;
     }
     
+    public ActivationResponseMetadata(){}
 }

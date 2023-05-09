@@ -18,6 +18,7 @@ public class CaseClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CaseClassification withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class CaseClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CaseClassification withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CaseClassification(){}
 }

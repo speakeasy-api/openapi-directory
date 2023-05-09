@@ -61,11 +61,9 @@ public class Datafeedstatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedstatusesCustombatchResponse res = new org.openapis.openapi.models.operations.ContentDatafeedstatusesCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedstatusesCustombatchResponse res = new org.openapis.openapi.models.operations.ContentDatafeedstatusesCustombatchResponse(contentType, httpRes.statusCode()) {{
             datafeedstatusesCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Datafeedstatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedstatusesGetResponse res = new org.openapis.openapi.models.operations.ContentDatafeedstatusesGetResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedstatusesGetResponse res = new org.openapis.openapi.models.operations.ContentDatafeedstatusesGetResponse(contentType, httpRes.statusCode()) {{
             datafeedStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Datafeedstatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedstatusesListResponse res = new org.openapis.openapi.models.operations.ContentDatafeedstatusesListResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedstatusesListResponse res = new org.openapis.openapi.models.operations.ContentDatafeedstatusesListResponse(contentType, httpRes.statusCode()) {{
             datafeedstatusesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

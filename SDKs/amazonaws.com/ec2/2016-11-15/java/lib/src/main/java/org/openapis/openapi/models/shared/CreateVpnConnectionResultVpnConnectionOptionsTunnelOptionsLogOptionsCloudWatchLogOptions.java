@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptionsCloudWatchLogOptions {
     
     public Boolean logEnabled;
+
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptionsCloudWatchLogOptions withLogEnabled(Boolean logEnabled) {
         this.logEnabled = logEnabled;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOption
     
     
     public String logGroupArn;
+
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptionsCloudWatchLogOptions withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
@@ -26,9 +28,11 @@ public class CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOption
     
     
     public String logOutputFormat;
+
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptionsCloudWatchLogOptions withLogOutputFormat(String logOutputFormat) {
         this.logOutputFormat = logOutputFormat;
         return this;
     }
     
+    public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsLogOptionsCloudWatchLogOptions(){}
 }

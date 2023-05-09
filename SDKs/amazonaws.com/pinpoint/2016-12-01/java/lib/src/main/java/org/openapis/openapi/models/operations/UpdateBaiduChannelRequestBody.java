@@ -12,9 +12,13 @@ public class UpdateBaiduChannelRequestBody {
      */
     @JsonProperty("BaiduChannelRequest")
     public UpdateBaiduChannelRequestBodyBaiduChannelRequest baiduChannelRequest;
+
     public UpdateBaiduChannelRequestBody withBaiduChannelRequest(UpdateBaiduChannelRequestBodyBaiduChannelRequest baiduChannelRequest) {
         this.baiduChannelRequest = baiduChannelRequest;
         return this;
     }
     
+    public UpdateBaiduChannelRequestBody(@JsonProperty("BaiduChannelRequest") UpdateBaiduChannelRequestBodyBaiduChannelRequest baiduChannelRequest) {
+        this.baiduChannelRequest = baiduChannelRequest;
+  }
 }

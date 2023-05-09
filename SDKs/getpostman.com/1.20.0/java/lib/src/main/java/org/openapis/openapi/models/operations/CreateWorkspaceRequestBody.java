@@ -12,9 +12,11 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public CreateWorkspaceRequestBodyWorkspace workspace;
+
     public CreateWorkspaceRequestBody withWorkspace(CreateWorkspaceRequestBodyWorkspace workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public CreateWorkspaceRequestBody(){}
 }

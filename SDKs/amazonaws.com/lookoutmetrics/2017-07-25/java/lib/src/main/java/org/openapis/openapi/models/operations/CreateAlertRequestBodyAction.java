@@ -15,6 +15,7 @@ public class CreateAlertRequestBodyAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaConfiguration")
     public org.openapis.openapi.models.shared.LambdaConfiguration lambdaConfiguration;
+
     public CreateAlertRequestBodyAction withLambdaConfiguration(org.openapis.openapi.models.shared.LambdaConfiguration lambdaConfiguration) {
         this.lambdaConfiguration = lambdaConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class CreateAlertRequestBodyAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNSConfiguration")
     public org.openapis.openapi.models.shared.SNSConfiguration snsConfiguration;
+
     public CreateAlertRequestBodyAction withSNSConfiguration(org.openapis.openapi.models.shared.SNSConfiguration snsConfiguration) {
         this.snsConfiguration = snsConfiguration;
         return this;
     }
     
+    public CreateAlertRequestBodyAction(){}
 }

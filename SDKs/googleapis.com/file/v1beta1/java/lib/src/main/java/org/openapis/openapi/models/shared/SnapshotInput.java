@@ -18,6 +18,7 @@ public class SnapshotInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SnapshotInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class SnapshotInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public SnapshotInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public SnapshotInput(){}
 }

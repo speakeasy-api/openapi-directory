@@ -54,10 +54,8 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAdminMappingsResponse res = new org.openapis.openapi.models.operations.DeleteAdminMappingsResponse() {{
+        org.openapis.openapi.models.operations.DeleteAdminMappingsResponse res = new org.openapis.openapi.models.operations.DeleteAdminMappingsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,10 +84,8 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdResponse res = new org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdResponse res = new org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -124,11 +120,9 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminMappingsResponse res = new org.openapis.openapi.models.operations.GetAdminMappingsResponse() {{
+        org.openapis.openapi.models.operations.GetAdminMappingsResponse res = new org.openapis.openapi.models.operations.GetAdminMappingsResponse(contentType, httpRes.statusCode()) {{
             getAdminMappings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +156,9 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdResponse res = new org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdResponse() {{
+        org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdResponse res = new org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdResponse(contentType, httpRes.statusCode()) {{
             getAdminMappingsStubMappingId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +196,9 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminMappingsResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsResponse() {{
+        org.openapis.openapi.models.operations.PostAdminMappingsResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsResponse(contentType, httpRes.statusCode()) {{
             postAdminMappings201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -247,11 +237,9 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminMappingsFindByMetadataResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsFindByMetadataResponse() {{
+        org.openapis.openapi.models.operations.PostAdminMappingsFindByMetadataResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsFindByMetadataResponse(contentType, httpRes.statusCode()) {{
             postAdminMappingsFindByMetadata200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,10 +273,8 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminMappingsImportResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsImportResponse() {{
+        org.openapis.openapi.models.operations.PostAdminMappingsImportResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsImportResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,10 +305,8 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminMappingsRemoveByMetadataResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsRemoveByMetadataResponse() {{
+        org.openapis.openapi.models.operations.PostAdminMappingsRemoveByMetadataResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsRemoveByMetadataResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -351,10 +335,8 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminMappingsResetResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsResetResponse() {{
+        org.openapis.openapi.models.operations.PostAdminMappingsResetResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsResetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,10 +365,8 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminMappingsSaveResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsSaveResponse() {{
+        org.openapis.openapi.models.operations.PostAdminMappingsSaveResponse res = new org.openapis.openapi.models.operations.PostAdminMappingsSaveResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -417,11 +397,9 @@ public class StubMappings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdResponse res = new org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdResponse() {{
+        org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdResponse res = new org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdResponse(contentType, httpRes.statusCode()) {{
             putAdminMappingsStubMappingId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

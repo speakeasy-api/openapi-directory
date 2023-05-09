@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlInstancesTruncateLogSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlInstancesTruncateLogSecurityOption1 option1;
+
     public SqlInstancesTruncateLogSecurity withOption1(SqlInstancesTruncateLogSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlInstancesTruncateLogSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlInstancesTruncateLogSecurityOption2 option2;
+
     public SqlInstancesTruncateLogSecurity withOption2(SqlInstancesTruncateLogSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlInstancesTruncateLogSecurity(){}
 }

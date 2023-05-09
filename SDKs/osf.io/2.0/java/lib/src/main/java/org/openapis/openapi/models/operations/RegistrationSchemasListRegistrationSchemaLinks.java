@@ -15,9 +15,11 @@ public class RegistrationSchemasListRegistrationSchemaLinks {
      */
     
     public String self;
+
     public RegistrationSchemasListRegistrationSchemaLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationSchemasListRegistrationSchemaLinks(){}
 }

@@ -18,9 +18,11 @@ public class StoreLayoutClustersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public StoreCluster[] cluster;
+
     public StoreLayoutClustersListResponse withCluster(StoreCluster[] cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public StoreLayoutClustersListResponse(){}
 }

@@ -18,6 +18,7 @@ public class ListServicePerimetersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListServicePerimetersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListServicePerimetersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicePerimeters")
     public ServicePerimeter[] servicePerimeters;
+
     public ListServicePerimetersResponse withServicePerimeters(ServicePerimeter[] servicePerimeters) {
         this.servicePerimeters = servicePerimeters;
         return this;
     }
     
+    public ListServicePerimetersResponse(){}
 }

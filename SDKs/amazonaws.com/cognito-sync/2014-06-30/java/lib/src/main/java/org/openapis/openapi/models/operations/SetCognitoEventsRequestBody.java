@@ -12,9 +12,13 @@ public class SetCognitoEventsRequestBody {
      */
     @JsonProperty("Events")
     public java.util.Map<String, String> events;
+
     public SetCognitoEventsRequestBody withEvents(java.util.Map<String, String> events) {
         this.events = events;
         return this;
     }
     
+    public SetCognitoEventsRequestBody(@JsonProperty("Events") java.util.Map<String, String> events) {
+        this.events = events;
+  }
 }

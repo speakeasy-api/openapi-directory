@@ -18,6 +18,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Channel withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Channel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Channel(){}
 }

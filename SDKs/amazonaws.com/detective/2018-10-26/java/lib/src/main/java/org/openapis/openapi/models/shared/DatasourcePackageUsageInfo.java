@@ -20,6 +20,7 @@ public class DatasourcePackageUsageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeUsageInBytes")
     public Long volumeUsageInBytes;
+
     public DatasourcePackageUsageInfo withVolumeUsageInBytes(Long volumeUsageInBytes) {
         this.volumeUsageInBytes = volumeUsageInBytes;
         return this;
@@ -30,9 +31,11 @@ public class DatasourcePackageUsageInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("VolumeUsageUpdateTime")
     public OffsetDateTime volumeUsageUpdateTime;
+
     public DatasourcePackageUsageInfo withVolumeUsageUpdateTime(OffsetDateTime volumeUsageUpdateTime) {
         this.volumeUsageUpdateTime = volumeUsageUpdateTime;
         return this;
     }
     
+    public DatasourcePackageUsageInfo(){}
 }

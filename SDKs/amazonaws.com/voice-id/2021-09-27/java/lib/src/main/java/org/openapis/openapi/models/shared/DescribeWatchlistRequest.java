@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeWatchlistRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public DescribeWatchlistRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeWatchlistRequest {
     
     @JsonProperty("WatchlistId")
     public String watchlistId;
+
     public DescribeWatchlistRequest withWatchlistId(String watchlistId) {
         this.watchlistId = watchlistId;
         return this;
     }
     
+    public DescribeWatchlistRequest(@JsonProperty("DomainId") String domainId, @JsonProperty("WatchlistId") String watchlistId) {
+        this.domainId = domainId;
+        this.watchlistId = watchlistId;
+  }
 }

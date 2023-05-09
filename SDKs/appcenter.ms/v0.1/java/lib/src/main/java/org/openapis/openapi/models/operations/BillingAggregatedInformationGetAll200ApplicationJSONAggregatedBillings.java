@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureSubscriptionId")
     public String azureSubscriptionId;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings withAzureSubscriptionId(String azureSubscriptionId) {
         this.azureSubscriptionId = azureSubscriptionId;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureSubscriptionState")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsAzureSubscriptionStateEnum azureSubscriptionState;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings withAzureSubscriptionState(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsAzureSubscriptionStateEnum azureSubscriptionState) {
         this.azureSubscriptionState = azureSubscriptionState;
         return this;
@@ -40,6 +42,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPlans")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlans billingPlans;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings withBillingPlans(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsBillingPlans billingPlans) {
         this.billingPlans = billingPlans;
         return this;
@@ -51,6 +54,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -73,6 +78,7 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsage usage;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings withUsage(BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillingsUsage usage) {
         this.usage = usage;
         return this;
@@ -84,9 +90,11 @@ public class BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBilli
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public BillingAggregatedInformationGetAll200ApplicationJSONAggregatedBillings(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
     public String developerHapikey;
+
     public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity withDeveloperHapikey(String developerHapikey) {
         this.developerHapikey = developerHapikey;
         return this;
     }
     
+    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity(@JsonProperty("developer_hapikey") String developerHapikey) {
+        this.developerHapikey = developerHapikey;
+  }
 }

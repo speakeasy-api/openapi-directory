@@ -12,6 +12,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("phoneno")
     public String phoneno;
+
     public TwipcRequestBodyCertificateParameters withPhoneno(String phoneno) {
         this.phoneno = phoneno;
         return this;
@@ -22,9 +23,14 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("policyno")
     public String policyno;
+
     public TwipcRequestBodyCertificateParameters withPolicyno(String policyno) {
         this.policyno = policyno;
         return this;
     }
     
+    public TwipcRequestBodyCertificateParameters(@JsonProperty("phoneno") String phoneno, @JsonProperty("policyno") String policyno) {
+        this.phoneno = phoneno;
+        this.policyno = policyno;
+  }
 }

@@ -18,6 +18,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Entitlement withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public Entitlement withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -40,6 +42,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Entitlement withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -51,9 +54,11 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionToken")
     public String subscriptionToken;
+
     public Entitlement withSubscriptionToken(String subscriptionToken) {
         this.subscriptionToken = subscriptionToken;
         return this;
     }
     
+    public Entitlement(){}
 }

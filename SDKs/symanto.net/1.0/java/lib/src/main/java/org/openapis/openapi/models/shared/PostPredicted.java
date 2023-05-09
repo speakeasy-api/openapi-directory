@@ -15,6 +15,7 @@ public class PostPredicted {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostPredicted withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,13 @@ public class PostPredicted {
      */
     @JsonProperty("predictions")
     public Prediction[] predictions;
+
     public PostPredicted withPredictions(Prediction[] predictions) {
         this.predictions = predictions;
         return this;
     }
     
+    public PostPredicted(@JsonProperty("predictions") Prediction[] predictions) {
+        this.predictions = predictions;
+  }
 }

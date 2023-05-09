@@ -15,6 +15,7 @@ public class CreativeFilteringReasonsReasons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteringCount")
     public String filteringCount;
+
     public CreativeFilteringReasonsReasons withFilteringCount(String filteringCount) {
         this.filteringCount = filteringCount;
         return this;
@@ -26,9 +27,11 @@ public class CreativeFilteringReasonsReasons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteringStatus")
     public Integer filteringStatus;
+
     public CreativeFilteringReasonsReasons withFilteringStatus(Integer filteringStatus) {
         this.filteringStatus = filteringStatus;
         return this;
     }
     
+    public CreativeFilteringReasonsReasons(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebriskProjectsSubmissionsCreateResponse {
     
     public String contentType;
+
     public WebriskProjectsSubmissionsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebriskProjectsSubmissionsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudWebriskV1Submission googleCloudWebriskV1Submission;
+
     public WebriskProjectsSubmissionsCreateResponse withGoogleCloudWebriskV1Submission(org.openapis.openapi.models.shared.GoogleCloudWebriskV1Submission googleCloudWebriskV1Submission) {
         this.googleCloudWebriskV1Submission = googleCloudWebriskV1Submission;
         return this;
@@ -26,6 +29,7 @@ public class WebriskProjectsSubmissionsCreateResponse {
     
     
     public Integer statusCode;
+
     public WebriskProjectsSubmissionsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class WebriskProjectsSubmissionsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebriskProjectsSubmissionsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WebriskProjectsSubmissionsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

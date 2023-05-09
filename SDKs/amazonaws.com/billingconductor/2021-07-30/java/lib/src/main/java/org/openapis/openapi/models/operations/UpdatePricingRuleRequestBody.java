@@ -14,6 +14,7 @@ public class UpdatePricingRuleRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public UpdatePricingRuleRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class UpdatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePricingRuleRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class UpdatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModifierPercentage")
     public Double modifierPercentage;
+
     public UpdatePricingRuleRequestBody withModifierPercentage(Double modifierPercentage) {
         this.modifierPercentage = modifierPercentage;
         return this;
@@ -47,6 +50,7 @@ public class UpdatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdatePricingRuleRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class UpdatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tiering")
     public UpdatePricingRuleRequestBodyTiering tiering;
+
     public UpdatePricingRuleRequestBody withTiering(UpdatePricingRuleRequestBodyTiering tiering) {
         this.tiering = tiering;
         return this;
@@ -69,9 +74,13 @@ public class UpdatePricingRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public UpdatePricingRuleRequestBodyTypeEnum type;
+
     public UpdatePricingRuleRequestBody withType(UpdatePricingRuleRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdatePricingRuleRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

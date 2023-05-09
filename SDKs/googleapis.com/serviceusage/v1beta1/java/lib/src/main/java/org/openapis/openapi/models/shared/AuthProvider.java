@@ -18,6 +18,7 @@ public class AuthProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audiences")
     public String audiences;
+
     public AuthProvider withAudiences(String audiences) {
         this.audiences = audiences;
         return this;
@@ -29,6 +30,7 @@ public class AuthProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationUrl")
     public String authorizationUrl;
+
     public AuthProvider withAuthorizationUrl(String authorizationUrl) {
         this.authorizationUrl = authorizationUrl;
         return this;
@@ -40,6 +42,7 @@ public class AuthProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AuthProvider withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class AuthProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public AuthProvider withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -62,6 +66,7 @@ public class AuthProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwksUri")
     public String jwksUri;
+
     public AuthProvider withJwksUri(String jwksUri) {
         this.jwksUri = jwksUri;
         return this;
@@ -73,9 +78,11 @@ public class AuthProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtLocations")
     public JwtLocation[] jwtLocations;
+
     public AuthProvider withJwtLocations(JwtLocation[] jwtLocations) {
         this.jwtLocations = jwtLocations;
         return this;
     }
     
+    public AuthProvider(){}
 }

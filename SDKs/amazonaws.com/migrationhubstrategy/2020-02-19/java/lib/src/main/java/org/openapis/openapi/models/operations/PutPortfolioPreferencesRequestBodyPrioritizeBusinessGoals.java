@@ -15,9 +15,11 @@ public class PutPortfolioPreferencesRequestBodyPrioritizeBusinessGoals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessGoals")
     public org.openapis.openapi.models.shared.BusinessGoals businessGoals;
+
     public PutPortfolioPreferencesRequestBodyPrioritizeBusinessGoals withBusinessGoals(org.openapis.openapi.models.shared.BusinessGoals businessGoals) {
         this.businessGoals = businessGoals;
         return this;
     }
     
+    public PutPortfolioPreferencesRequestBodyPrioritizeBusinessGoals(){}
 }

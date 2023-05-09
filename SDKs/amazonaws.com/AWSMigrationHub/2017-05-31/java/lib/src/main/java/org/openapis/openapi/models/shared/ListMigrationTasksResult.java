@@ -15,6 +15,7 @@ public class ListMigrationTasksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MigrationTaskSummaryList")
     public MigrationTaskSummary[] migrationTaskSummaryList;
+
     public ListMigrationTasksResult withMigrationTaskSummaryList(MigrationTaskSummary[] migrationTaskSummaryList) {
         this.migrationTaskSummaryList = migrationTaskSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListMigrationTasksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMigrationTasksResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMigrationTasksResult(){}
 }

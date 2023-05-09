@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCompareCommitsResponse {
     
     public String contentType;
+
     public ReposCompareCommitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCompareCommitsResponse {
     
     
     public Integer statusCode;
+
     public ReposCompareCommitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposCompareCommitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCompareCommitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposCompareCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCompareCommitsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposCompareCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.CommitComparison commitComparison;
+
     public ReposCompareCommitsResponse withCommitComparison(org.openapis.openapi.models.shared.CommitComparison commitComparison) {
         this.commitComparison = commitComparison;
         return this;
@@ -53,9 +59,14 @@ public class ReposCompareCommitsResponse {
      */
     
     public ReposCompareCommits503ApplicationJSON reposCompareCommits503ApplicationJSONObject;
+
     public ReposCompareCommitsResponse withReposCompareCommits503ApplicationJSONObject(ReposCompareCommits503ApplicationJSON reposCompareCommits503ApplicationJSONObject) {
         this.reposCompareCommits503ApplicationJSONObject = reposCompareCommits503ApplicationJSONObject;
         return this;
     }
     
+    public ReposCompareCommitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

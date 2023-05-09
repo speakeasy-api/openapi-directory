@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyReplicationGroupMessage - Represents the input of a &lt;code&gt;ModifyReplicationGroups&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyReplicationGroupMessage {
     
     public Boolean applyImmediately;
+
     public ModifyReplicationGroupMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -19,6 +20,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String authToken;
+
     public ModifyReplicationGroupMessage withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -26,6 +28,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public AuthTokenUpdateStrategyTypeEnum authTokenUpdateStrategy;
+
     public ModifyReplicationGroupMessage withAuthTokenUpdateStrategy(AuthTokenUpdateStrategyTypeEnum authTokenUpdateStrategy) {
         this.authTokenUpdateStrategy = authTokenUpdateStrategy;
         return this;
@@ -33,6 +36,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ModifyReplicationGroupMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -40,6 +44,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public Boolean automaticFailoverEnabled;
+
     public ModifyReplicationGroupMessage withAutomaticFailoverEnabled(Boolean automaticFailoverEnabled) {
         this.automaticFailoverEnabled = automaticFailoverEnabled;
         return this;
@@ -47,6 +52,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String cacheNodeType;
+
     public ModifyReplicationGroupMessage withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -54,6 +60,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String cacheParameterGroupName;
+
     public ModifyReplicationGroupMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -61,6 +68,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String[] cacheSecurityGroupNames;
+
     public ModifyReplicationGroupMessage withCacheSecurityGroupNames(String[] cacheSecurityGroupNames) {
         this.cacheSecurityGroupNames = cacheSecurityGroupNames;
         return this;
@@ -68,6 +76,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String engineVersion;
+
     public ModifyReplicationGroupMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -75,6 +84,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public IpDiscoveryEnum ipDiscovery;
+
     public ModifyReplicationGroupMessage withIpDiscovery(IpDiscoveryEnum ipDiscovery) {
         this.ipDiscovery = ipDiscovery;
         return this;
@@ -82,6 +92,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public LogDeliveryConfigurationRequestList[] logDeliveryConfigurations;
+
     public ModifyReplicationGroupMessage withLogDeliveryConfigurations(LogDeliveryConfigurationRequestList[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -89,6 +100,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public Boolean multiAZEnabled;
+
     public ModifyReplicationGroupMessage withMultiAZEnabled(Boolean multiAZEnabled) {
         this.multiAZEnabled = multiAZEnabled;
         return this;
@@ -96,6 +108,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String nodeGroupId;
+
     public ModifyReplicationGroupMessage withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -103,6 +116,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String notificationTopicArn;
+
     public ModifyReplicationGroupMessage withNotificationTopicArn(String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
         return this;
@@ -110,6 +124,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String notificationTopicStatus;
+
     public ModifyReplicationGroupMessage withNotificationTopicStatus(String notificationTopicStatus) {
         this.notificationTopicStatus = notificationTopicStatus;
         return this;
@@ -117,6 +132,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public ModifyReplicationGroupMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -124,6 +140,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String primaryClusterId;
+
     public ModifyReplicationGroupMessage withPrimaryClusterId(String primaryClusterId) {
         this.primaryClusterId = primaryClusterId;
         return this;
@@ -131,6 +148,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public Boolean removeUserGroups;
+
     public ModifyReplicationGroupMessage withRemoveUserGroups(Boolean removeUserGroups) {
         this.removeUserGroups = removeUserGroups;
         return this;
@@ -138,6 +156,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String replicationGroupDescription;
+
     public ModifyReplicationGroupMessage withReplicationGroupDescription(String replicationGroupDescription) {
         this.replicationGroupDescription = replicationGroupDescription;
         return this;
@@ -145,6 +164,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String replicationGroupId;
+
     public ModifyReplicationGroupMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -152,6 +172,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String[] securityGroupIds;
+
     public ModifyReplicationGroupMessage withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -159,6 +180,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public Long snapshotRetentionLimit;
+
     public ModifyReplicationGroupMessage withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -166,6 +188,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String snapshotWindow;
+
     public ModifyReplicationGroupMessage withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -173,6 +196,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String snapshottingClusterId;
+
     public ModifyReplicationGroupMessage withSnapshottingClusterId(String snapshottingClusterId) {
         this.snapshottingClusterId = snapshottingClusterId;
         return this;
@@ -180,6 +204,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public Boolean transitEncryptionEnabled;
+
     public ModifyReplicationGroupMessage withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -187,6 +212,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public TransitEncryptionModeEnum transitEncryptionMode;
+
     public ModifyReplicationGroupMessage withTransitEncryptionMode(TransitEncryptionModeEnum transitEncryptionMode) {
         this.transitEncryptionMode = transitEncryptionMode;
         return this;
@@ -194,6 +220,7 @@ public class ModifyReplicationGroupMessage {
     
     
     public String[] userGroupIdsToAdd;
+
     public ModifyReplicationGroupMessage withUserGroupIdsToAdd(String[] userGroupIdsToAdd) {
         this.userGroupIdsToAdd = userGroupIdsToAdd;
         return this;
@@ -201,9 +228,13 @@ public class ModifyReplicationGroupMessage {
     
     
     public String[] userGroupIdsToRemove;
+
     public ModifyReplicationGroupMessage withUserGroupIdsToRemove(String[] userGroupIdsToRemove) {
         this.userGroupIdsToRemove = userGroupIdsToRemove;
         return this;
     }
     
+    public ModifyReplicationGroupMessage(@JsonProperty("ReplicationGroupId") String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+  }
 }

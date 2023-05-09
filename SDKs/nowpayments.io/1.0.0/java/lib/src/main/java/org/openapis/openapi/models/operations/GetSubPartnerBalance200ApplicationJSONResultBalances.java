@@ -12,6 +12,7 @@ public class GetSubPartnerBalance200ApplicationJSONResultBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usddtrc20")
     public GetSubPartnerBalance200ApplicationJSONResultBalancesUsddtrc20 usddtrc20;
+
     public GetSubPartnerBalance200ApplicationJSONResultBalances withUsddtrc20(GetSubPartnerBalance200ApplicationJSONResultBalancesUsddtrc20 usddtrc20) {
         this.usddtrc20 = usddtrc20;
         return this;
@@ -20,9 +21,11 @@ public class GetSubPartnerBalance200ApplicationJSONResultBalances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usdtbsc")
     public GetSubPartnerBalance200ApplicationJSONResultBalancesUsdtbsc usdtbsc;
+
     public GetSubPartnerBalance200ApplicationJSONResultBalances withUsdtbsc(GetSubPartnerBalance200ApplicationJSONResultBalancesUsdtbsc usdtbsc) {
         this.usdtbsc = usdtbsc;
         return this;
     }
     
+    public GetSubPartnerBalance200ApplicationJSONResultBalances(){}
 }

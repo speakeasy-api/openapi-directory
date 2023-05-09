@@ -12,6 +12,7 @@ public class ImportModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public ImportModelRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -20,6 +21,7 @@ public class ImportModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelKmsKeyId")
     public String modelKmsKeyId;
+
     public ImportModelRequest withModelKmsKeyId(String modelKmsKeyId) {
         this.modelKmsKeyId = modelKmsKeyId;
         return this;
@@ -28,6 +30,7 @@ public class ImportModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public ImportModelRequest withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -35,6 +38,7 @@ public class ImportModelRequest {
     
     @JsonProperty("SourceModelArn")
     public String sourceModelArn;
+
     public ImportModelRequest withSourceModelArn(String sourceModelArn) {
         this.sourceModelArn = sourceModelArn;
         return this;
@@ -43,6 +47,7 @@ public class ImportModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportModelRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -51,9 +56,13 @@ public class ImportModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public ImportModelRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public ImportModelRequest(@JsonProperty("SourceModelArn") String sourceModelArn) {
+        this.sourceModelArn = sourceModelArn;
+  }
 }

@@ -18,6 +18,7 @@ public class ConvertedOtherRegionsPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eurPrice")
     public Money eurPrice;
+
     public ConvertedOtherRegionsPrice withEurPrice(Money eurPrice) {
         this.eurPrice = eurPrice;
         return this;
@@ -29,9 +30,11 @@ public class ConvertedOtherRegionsPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usdPrice")
     public Money usdPrice;
+
     public ConvertedOtherRegionsPrice withUsdPrice(Money usdPrice) {
         this.usdPrice = usdPrice;
         return this;
     }
     
+    public ConvertedOtherRegionsPrice(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ListViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudContactcenterinsightsV1ListViewsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1ListViewsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("views")
     public GoogleCloudContactcenterinsightsV1View[] views;
+
     public GoogleCloudContactcenterinsightsV1ListViewsResponse withViews(GoogleCloudContactcenterinsightsV1View[] views) {
         this.views = views;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ListViewsResponse(){}
 }

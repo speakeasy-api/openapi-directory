@@ -15,6 +15,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupSizeInBytes")
     public Long backupSizeInBytes;
+
     public AwsBackupRecoveryPointDetails withBackupSizeInBytes(Long backupSizeInBytes) {
         this.backupSizeInBytes = backupSizeInBytes;
         return this;
@@ -23,6 +24,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupVaultArn")
     public String backupVaultArn;
+
     public AwsBackupRecoveryPointDetails withBackupVaultArn(String backupVaultArn) {
         this.backupVaultArn = backupVaultArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupVaultName")
     public String backupVaultName;
+
     public AwsBackupRecoveryPointDetails withBackupVaultName(String backupVaultName) {
         this.backupVaultName = backupVaultName;
         return this;
@@ -39,6 +42,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculatedLifecycle")
     public AwsBackupRecoveryPointCalculatedLifecycleDetails calculatedLifecycle;
+
     public AwsBackupRecoveryPointDetails withCalculatedLifecycle(AwsBackupRecoveryPointCalculatedLifecycleDetails calculatedLifecycle) {
         this.calculatedLifecycle = calculatedLifecycle;
         return this;
@@ -47,6 +51,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionDate")
     public String completionDate;
+
     public AwsBackupRecoveryPointDetails withCompletionDate(String completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -55,6 +60,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public AwsBackupRecoveryPointCreatedByDetails createdBy;
+
     public AwsBackupRecoveryPointDetails withCreatedBy(AwsBackupRecoveryPointCreatedByDetails createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -63,6 +69,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public AwsBackupRecoveryPointDetails withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -71,6 +78,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionKeyArn")
     public String encryptionKeyArn;
+
     public AwsBackupRecoveryPointDetails withEncryptionKeyArn(String encryptionKeyArn) {
         this.encryptionKeyArn = encryptionKeyArn;
         return this;
@@ -79,6 +87,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public AwsBackupRecoveryPointDetails withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -87,6 +96,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsEncrypted")
     public Boolean isEncrypted;
+
     public AwsBackupRecoveryPointDetails withIsEncrypted(Boolean isEncrypted) {
         this.isEncrypted = isEncrypted;
         return this;
@@ -95,6 +105,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastRestoreTime")
     public String lastRestoreTime;
+
     public AwsBackupRecoveryPointDetails withLastRestoreTime(String lastRestoreTime) {
         this.lastRestoreTime = lastRestoreTime;
         return this;
@@ -103,6 +114,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public AwsBackupRecoveryPointLifecycleDetails lifecycle;
+
     public AwsBackupRecoveryPointDetails withLifecycle(AwsBackupRecoveryPointLifecycleDetails lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -111,6 +123,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecoveryPointArn")
     public String recoveryPointArn;
+
     public AwsBackupRecoveryPointDetails withRecoveryPointArn(String recoveryPointArn) {
         this.recoveryPointArn = recoveryPointArn;
         return this;
@@ -119,6 +132,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public AwsBackupRecoveryPointDetails withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -127,6 +141,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public AwsBackupRecoveryPointDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -135,6 +150,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackupVaultArn")
     public String sourceBackupVaultArn;
+
     public AwsBackupRecoveryPointDetails withSourceBackupVaultArn(String sourceBackupVaultArn) {
         this.sourceBackupVaultArn = sourceBackupVaultArn;
         return this;
@@ -143,6 +159,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsBackupRecoveryPointDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -151,6 +168,7 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public AwsBackupRecoveryPointDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -159,9 +177,11 @@ public class AwsBackupRecoveryPointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageClass")
     public String storageClass;
+
     public AwsBackupRecoveryPointDetails withStorageClass(String storageClass) {
         this.storageClass = storageClass;
         return this;
     }
     
+    public AwsBackupRecoveryPointDetails(){}
 }

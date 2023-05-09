@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateOrganizationConfigurationResponse {
     @JsonProperty("autoEnable")
     public AutoEnable autoEnable;
+
     public UpdateOrganizationConfigurationResponse withAutoEnable(AutoEnable autoEnable) {
         this.autoEnable = autoEnable;
         return this;
     }
     
+    public UpdateOrganizationConfigurationResponse(@JsonProperty("autoEnable") AutoEnable autoEnable) {
+        this.autoEnable = autoEnable;
+  }
 }

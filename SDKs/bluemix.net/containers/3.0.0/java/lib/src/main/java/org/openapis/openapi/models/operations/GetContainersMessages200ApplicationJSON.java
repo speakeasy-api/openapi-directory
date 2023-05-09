@@ -18,6 +18,7 @@ public class GetContainersMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_date")
     public String createdDate;
+
     public GetContainersMessages200ApplicationJSON withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -29,9 +30,11 @@ public class GetContainersMessages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetContainersMessages200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetContainersMessages200ApplicationJSON(){}
 }

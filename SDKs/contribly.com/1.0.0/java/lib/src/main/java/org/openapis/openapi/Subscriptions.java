@@ -55,10 +55,8 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.DeleteSubscriptionsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.DeleteSubscriptionsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -87,11 +85,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionTypesResponse res = new org.openapis.openapi.models.operations.GetSubscriptionTypesResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionTypesResponse res = new org.openapis.openapi.models.operations.GetSubscriptionTypesResponse(contentType, httpRes.statusCode()) {{
             subscriptionTypes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,11 +126,9 @@ public class Subscriptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubscriptionsResponse res = new org.openapis.openapi.models.operations.GetSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.GetSubscriptionsResponse res = new org.openapis.openapi.models.operations.GetSubscriptionsResponse(contentType, httpRes.statusCode()) {{
             subscriptions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

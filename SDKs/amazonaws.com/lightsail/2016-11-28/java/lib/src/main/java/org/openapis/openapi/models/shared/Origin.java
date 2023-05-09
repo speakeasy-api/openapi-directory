@@ -15,6 +15,7 @@ public class Origin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Origin withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class Origin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocolPolicy")
     public OriginProtocolPolicyEnumEnum protocolPolicy;
+
     public Origin withProtocolPolicy(OriginProtocolPolicyEnumEnum protocolPolicy) {
         this.protocolPolicy = protocolPolicy;
         return this;
@@ -31,6 +33,7 @@ public class Origin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionName")
     public RegionNameEnum regionName;
+
     public Origin withRegionName(RegionNameEnum regionName) {
         this.regionName = regionName;
         return this;
@@ -39,9 +42,11 @@ public class Origin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public Origin withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public Origin(){}
 }

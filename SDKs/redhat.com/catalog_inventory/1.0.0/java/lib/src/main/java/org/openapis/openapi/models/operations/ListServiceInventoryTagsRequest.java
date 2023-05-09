@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceInventoryTagsRequest {
@@ -12,6 +13,7 @@ public class ListServiceInventoryTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public ListServiceInventoryTagsRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
@@ -22,6 +24,7 @@ public class ListServiceInventoryTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ListServiceInventoryTagsRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class ListServiceInventoryTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListServiceInventoryTagsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class ListServiceInventoryTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListServiceInventoryTagsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,13 @@ public class ListServiceInventoryTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public ListServiceInventoryTagsRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListServiceInventoryTagsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

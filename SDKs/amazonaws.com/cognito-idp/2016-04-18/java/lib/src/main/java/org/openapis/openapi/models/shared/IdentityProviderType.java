@@ -20,6 +20,7 @@ public class IdentityProviderType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeMapping")
     public java.util.Map<String, String> attributeMapping;
+
     public IdentityProviderType withAttributeMapping(java.util.Map<String, String> attributeMapping) {
         this.attributeMapping = attributeMapping;
         return this;
@@ -30,6 +31,7 @@ public class IdentityProviderType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public IdentityProviderType withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +40,7 @@ public class IdentityProviderType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdpIdentifiers")
     public String[] idpIdentifiers;
+
     public IdentityProviderType withIdpIdentifiers(String[] idpIdentifiers) {
         this.idpIdentifiers = idpIdentifiers;
         return this;
@@ -48,6 +51,7 @@ public class IdentityProviderType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public IdentityProviderType withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -56,6 +60,7 @@ public class IdentityProviderType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderDetails")
     public java.util.Map<String, String> providerDetails;
+
     public IdentityProviderType withProviderDetails(java.util.Map<String, String> providerDetails) {
         this.providerDetails = providerDetails;
         return this;
@@ -64,6 +69,7 @@ public class IdentityProviderType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderName")
     public String providerName;
+
     public IdentityProviderType withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -72,6 +78,7 @@ public class IdentityProviderType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public IdentityProviderTypeTypeEnum providerType;
+
     public IdentityProviderType withProviderType(IdentityProviderTypeTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -80,9 +87,11 @@ public class IdentityProviderType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public IdentityProviderType withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public IdentityProviderType(){}
 }

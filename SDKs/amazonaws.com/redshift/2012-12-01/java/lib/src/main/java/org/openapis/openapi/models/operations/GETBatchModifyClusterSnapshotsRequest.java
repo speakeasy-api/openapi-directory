@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBatchModifyClusterSnapshotsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETBatchModifyClusterSnapshotsActionEnum action;
+
     public GETBatchModifyClusterSnapshotsRequest withAction(GETBatchModifyClusterSnapshotsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Force")
     public Boolean force;
+
     public GETBatchModifyClusterSnapshotsRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -29,6 +32,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
     public Long manualSnapshotRetentionPeriod;
+
     public GETBatchModifyClusterSnapshotsRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -39,6 +43,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifierList")
     public String[] snapshotIdentifierList;
+
     public GETBatchModifyClusterSnapshotsRequest withSnapshotIdentifierList(String[] snapshotIdentifierList) {
         this.snapshotIdentifierList = snapshotIdentifierList;
         return this;
@@ -46,6 +51,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETBatchModifyClusterSnapshotsVersionEnum version;
+
     public GETBatchModifyClusterSnapshotsRequest withVersion(GETBatchModifyClusterSnapshotsVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETBatchModifyClusterSnapshotsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETBatchModifyClusterSnapshotsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETBatchModifyClusterSnapshotsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETBatchModifyClusterSnapshotsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETBatchModifyClusterSnapshotsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETBatchModifyClusterSnapshotsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETBatchModifyClusterSnapshotsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETBatchModifyClusterSnapshotsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETBatchModifyClusterSnapshotsRequest(@JsonProperty("Action") GETBatchModifyClusterSnapshotsActionEnum action, @JsonProperty("SnapshotIdentifierList") String[] snapshotIdentifierList, @JsonProperty("Version") GETBatchModifyClusterSnapshotsVersionEnum version) {
+        this.action = action;
+        this.snapshotIdentifierList = snapshotIdentifierList;
+        this.version = version;
+  }
 }

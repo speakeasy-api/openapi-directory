@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBusinessNamesRequest {
@@ -12,9 +13,13 @@ public class GetBusinessNamesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GetBusinessNamesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetBusinessNamesRequest(@JsonProperty("apiKey") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

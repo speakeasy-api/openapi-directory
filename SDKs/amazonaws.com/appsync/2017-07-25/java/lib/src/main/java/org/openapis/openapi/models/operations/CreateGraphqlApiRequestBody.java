@@ -15,6 +15,7 @@ public class CreateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAuthenticationProviders")
     public org.openapis.openapi.models.shared.AdditionalAuthenticationProvider[] additionalAuthenticationProviders;
+
     public CreateGraphqlApiRequestBody withAdditionalAuthenticationProviders(org.openapis.openapi.models.shared.AdditionalAuthenticationProvider[] additionalAuthenticationProviders) {
         this.additionalAuthenticationProviders = additionalAuthenticationProviders;
         return this;
@@ -25,6 +26,7 @@ public class CreateGraphqlApiRequestBody {
      */
     @JsonProperty("authenticationType")
     public CreateGraphqlApiRequestBodyAuthenticationTypeEnum authenticationType;
+
     public CreateGraphqlApiRequestBody withAuthenticationType(CreateGraphqlApiRequestBodyAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -36,6 +38,7 @@ public class CreateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaAuthorizerConfig")
     public CreateGraphqlApiRequestBodyLambdaAuthorizerConfig lambdaAuthorizerConfig;
+
     public CreateGraphqlApiRequestBody withLambdaAuthorizerConfig(CreateGraphqlApiRequestBodyLambdaAuthorizerConfig lambdaAuthorizerConfig) {
         this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
         return this;
@@ -47,6 +50,7 @@ public class CreateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public CreateGraphqlApiRequestBodyLogConfig logConfig;
+
     public CreateGraphqlApiRequestBody withLogConfig(CreateGraphqlApiRequestBodyLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -57,6 +61,7 @@ public class CreateGraphqlApiRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateGraphqlApiRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +73,7 @@ public class CreateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openIDConnectConfig")
     public CreateGraphqlApiRequestBodyOpenIDConnectConfig openIDConnectConfig;
+
     public CreateGraphqlApiRequestBody withOpenIDConnectConfig(CreateGraphqlApiRequestBodyOpenIDConnectConfig openIDConnectConfig) {
         this.openIDConnectConfig = openIDConnectConfig;
         return this;
@@ -79,6 +85,7 @@ public class CreateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateGraphqlApiRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -90,6 +97,7 @@ public class CreateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPoolConfig")
     public CreateGraphqlApiRequestBodyUserPoolConfig userPoolConfig;
+
     public CreateGraphqlApiRequestBody withUserPoolConfig(CreateGraphqlApiRequestBodyUserPoolConfig userPoolConfig) {
         this.userPoolConfig = userPoolConfig;
         return this;
@@ -101,9 +109,14 @@ public class CreateGraphqlApiRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xrayEnabled")
     public Boolean xrayEnabled;
+
     public CreateGraphqlApiRequestBody withXrayEnabled(Boolean xrayEnabled) {
         this.xrayEnabled = xrayEnabled;
         return this;
     }
     
+    public CreateGraphqlApiRequestBody(@JsonProperty("authenticationType") CreateGraphqlApiRequestBodyAuthenticationTypeEnum authenticationType, @JsonProperty("name") String name) {
+        this.authenticationType = authenticationType;
+        this.name = name;
+  }
 }

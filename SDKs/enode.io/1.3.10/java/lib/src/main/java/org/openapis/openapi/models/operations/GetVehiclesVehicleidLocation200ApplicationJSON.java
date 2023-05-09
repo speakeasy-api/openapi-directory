@@ -21,6 +21,7 @@ public class GetVehiclesVehicleidLocation200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastUpdated")
     public LocalDate lastUpdated;
+
     public GetVehiclesVehicleidLocation200ApplicationJSON withLastUpdated(LocalDate lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -32,6 +33,7 @@ public class GetVehiclesVehicleidLocation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public GetVehiclesVehicleidLocation200ApplicationJSON withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -43,9 +45,11 @@ public class GetVehiclesVehicleidLocation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public GetVehiclesVehicleidLocation200ApplicationJSON withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public GetVehiclesVehicleidLocation200ApplicationJSON(){}
 }

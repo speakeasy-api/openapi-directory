@@ -18,6 +18,7 @@ public class EditGuaranteedOrderReadAccessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedAdvertisers")
     public String[] addedAdvertisers;
+
     public EditGuaranteedOrderReadAccessorsRequest withAddedAdvertisers(String[] addedAdvertisers) {
         this.addedAdvertisers = addedAdvertisers;
         return this;
@@ -29,6 +30,7 @@ public class EditGuaranteedOrderReadAccessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerId")
     public String partnerId;
+
     public EditGuaranteedOrderReadAccessorsRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -40,6 +42,7 @@ public class EditGuaranteedOrderReadAccessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAccessInherited")
     public Boolean readAccessInherited;
+
     public EditGuaranteedOrderReadAccessorsRequest withReadAccessInherited(Boolean readAccessInherited) {
         this.readAccessInherited = readAccessInherited;
         return this;
@@ -51,9 +54,11 @@ public class EditGuaranteedOrderReadAccessorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removedAdvertisers")
     public String[] removedAdvertisers;
+
     public EditGuaranteedOrderReadAccessorsRequest withRemovedAdvertisers(String[] removedAdvertisers) {
         this.removedAdvertisers = removedAdvertisers;
         return this;
     }
     
+    public EditGuaranteedOrderReadAccessorsRequest(){}
 }

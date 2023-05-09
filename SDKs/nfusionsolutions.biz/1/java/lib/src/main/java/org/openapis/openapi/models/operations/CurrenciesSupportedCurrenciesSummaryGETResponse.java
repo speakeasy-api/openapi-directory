@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CurrenciesSupportedCurrenciesSummaryGETResponse {
     
     public byte[] body;
+
     public CurrenciesSupportedCurrenciesSummaryGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CurrenciesSupportedCurrenciesSummaryGETResponse {
     
     
     public String contentType;
+
     public CurrenciesSupportedCurrenciesSummaryGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CurrenciesSupportedCurrenciesSummaryGETResponse {
      */
     
     public String[] currenciesSupportedCurrenciesSummaryGET200ApplicationJSONStrings;
+
     public CurrenciesSupportedCurrenciesSummaryGETResponse withCurrenciesSupportedCurrenciesSummaryGET200ApplicationJSONStrings(String[] currenciesSupportedCurrenciesSummaryGET200ApplicationJSONStrings) {
         this.currenciesSupportedCurrenciesSummaryGET200ApplicationJSONStrings = currenciesSupportedCurrenciesSummaryGET200ApplicationJSONStrings;
         return this;
@@ -33,6 +37,7 @@ public class CurrenciesSupportedCurrenciesSummaryGETResponse {
     
     
     public Integer statusCode;
+
     public CurrenciesSupportedCurrenciesSummaryGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CurrenciesSupportedCurrenciesSummaryGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CurrenciesSupportedCurrenciesSummaryGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CurrenciesSupportedCurrenciesSummaryGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

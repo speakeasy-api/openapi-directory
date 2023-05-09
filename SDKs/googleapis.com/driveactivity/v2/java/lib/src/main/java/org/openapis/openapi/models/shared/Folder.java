@@ -18,9 +18,11 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FolderTypeEnum type;
+
     public Folder withType(FolderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Folder(){}
 }

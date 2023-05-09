@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterStreamConsumerResponse {
     
     public String contentType;
+
     public RegisterStreamConsumerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterStreamConsumerResponse {
      */
     
     public Object invalidArgumentException;
+
     public RegisterStreamConsumerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterStreamConsumerResponse {
      */
     
     public Object limitExceededException;
+
     public RegisterStreamConsumerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterStreamConsumerResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterStreamConsumerOutput registerStreamConsumerOutput;
+
     public RegisterStreamConsumerResponse withRegisterStreamConsumerOutput(org.openapis.openapi.models.shared.RegisterStreamConsumerOutput registerStreamConsumerOutput) {
         this.registerStreamConsumerOutput = registerStreamConsumerOutput;
         return this;
@@ -46,6 +51,7 @@ public class RegisterStreamConsumerResponse {
     
     
     public Integer statusCode;
+
     public RegisterStreamConsumerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RegisterStreamConsumerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterStreamConsumerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RegisterStreamConsumerResponse {
      */
     
     public Object resourceInUseException;
+
     public RegisterStreamConsumerResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -73,9 +81,14 @@ public class RegisterStreamConsumerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterStreamConsumerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public RegisterStreamConsumerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class HazardStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statementDescription")
     public String statementDescription;
+
     public HazardStatement withStatementDescription(String statementDescription) {
         this.statementDescription = statementDescription;
         return this;
@@ -29,9 +30,11 @@ public class HazardStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statementId")
     public String statementId;
+
     public HazardStatement withStatementId(String statementId) {
         this.statementId = statementId;
         return this;
     }
     
+    public HazardStatement(){}
 }

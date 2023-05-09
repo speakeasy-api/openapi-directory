@@ -15,6 +15,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionRatio")
     public Double completionRatio;
+
     public JobStatistics withCompletionRatio(Double completionRatio) {
         this.completionRatio = completionRatio;
         return this;
@@ -23,6 +24,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copy")
     public JobStatistics5 copy;
+
     public JobStatistics withCopy(JobStatistics5 copy) {
         this.copy = copy;
         return this;
@@ -34,6 +36,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public JobStatistics withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -42,6 +45,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataMaskingStatistics")
     public DataMaskingStatistics dataMaskingStatistics;
+
     public JobStatistics withDataMaskingStatistics(DataMaskingStatistics dataMaskingStatistics) {
         this.dataMaskingStatistics = dataMaskingStatistics;
         return this;
@@ -53,6 +57,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public JobStatistics withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -61,6 +66,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extract")
     public JobStatistics4 extract;
+
     public JobStatistics withExtract(JobStatistics4 extract) {
         this.extract = extract;
         return this;
@@ -69,6 +75,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load")
     public JobStatistics3 load;
+
     public JobStatistics withLoad(JobStatistics3 load) {
         this.load = load;
         return this;
@@ -80,6 +87,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numChildJobs")
     public String numChildJobs;
+
     public JobStatistics withNumChildJobs(String numChildJobs) {
         this.numChildJobs = numChildJobs;
         return this;
@@ -91,6 +99,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentJobId")
     public String parentJobId;
+
     public JobStatistics withParentJobId(String parentJobId) {
         this.parentJobId = parentJobId;
         return this;
@@ -99,6 +108,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public JobStatistics2 query;
+
     public JobStatistics withQuery(JobStatistics2 query) {
         this.query = query;
         return this;
@@ -110,6 +120,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaDeferments")
     public String[] quotaDeferments;
+
     public JobStatistics withQuotaDeferments(String[] quotaDeferments) {
         this.quotaDeferments = quotaDeferments;
         return this;
@@ -121,6 +132,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationUsage")
     public JobStatisticsReservationUsage[] reservationUsage;
+
     public JobStatistics withReservationUsage(JobStatisticsReservationUsage[] reservationUsage) {
         this.reservationUsage = reservationUsage;
         return this;
@@ -132,6 +144,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservation_id")
     public String reservationId;
+
     public JobStatistics withReservationId(String reservationId) {
         this.reservationId = reservationId;
         return this;
@@ -140,6 +153,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowLevelSecurityStatistics")
     public RowLevelSecurityStatistics rowLevelSecurityStatistics;
+
     public JobStatistics withRowLevelSecurityStatistics(RowLevelSecurityStatistics rowLevelSecurityStatistics) {
         this.rowLevelSecurityStatistics = rowLevelSecurityStatistics;
         return this;
@@ -148,6 +162,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptStatistics")
     public ScriptStatistics scriptStatistics;
+
     public JobStatistics withScriptStatistics(ScriptStatistics scriptStatistics) {
         this.scriptStatistics = scriptStatistics;
         return this;
@@ -156,6 +171,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public SessionInfo sessionInfo;
+
     public JobStatistics withSessionInfo(SessionInfo sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
@@ -167,6 +183,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public JobStatistics withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -178,6 +195,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytesProcessed")
     public String totalBytesProcessed;
+
     public JobStatistics withTotalBytesProcessed(String totalBytesProcessed) {
         this.totalBytesProcessed = totalBytesProcessed;
         return this;
@@ -189,6 +207,7 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSlotMs")
     public String totalSlotMs;
+
     public JobStatistics withTotalSlotMs(String totalSlotMs) {
         this.totalSlotMs = totalSlotMs;
         return this;
@@ -197,9 +216,11 @@ public class JobStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionInfo")
     public TransactionInfo transactionInfo;
+
     public JobStatistics withTransactionInfo(TransactionInfo transactionInfo) {
         this.transactionInfo = transactionInfo;
         return this;
     }
     
+    public JobStatistics(){}
 }

@@ -19,6 +19,7 @@ public class BreakType {
      */
     @JsonProperty("break_name")
     public String breakName;
+
     public BreakType withBreakName(String breakName) {
         this.breakName = breakName;
         return this;
@@ -30,6 +31,7 @@ public class BreakType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public BreakType withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class BreakType {
      */
     @JsonProperty("expected_duration")
     public String expectedDuration;
+
     public BreakType withExpectedDuration(String expectedDuration) {
         this.expectedDuration = expectedDuration;
         return this;
@@ -52,6 +55,7 @@ public class BreakType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BreakType withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +67,7 @@ public class BreakType {
      */
     @JsonProperty("is_paid")
     public Boolean isPaid;
+
     public BreakType withIsPaid(Boolean isPaid) {
         this.isPaid = isPaid;
         return this;
@@ -73,6 +78,7 @@ public class BreakType {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public BreakType withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -84,6 +90,7 @@ public class BreakType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public BreakType withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -98,9 +105,16 @@ public class BreakType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public BreakType withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public BreakType(@JsonProperty("break_name") String breakName, @JsonProperty("expected_duration") String expectedDuration, @JsonProperty("is_paid") Boolean isPaid, @JsonProperty("location_id") String locationId) {
+        this.breakName = breakName;
+        this.expectedDuration = expectedDuration;
+        this.isPaid = isPaid;
+        this.locationId = locationId;
+  }
 }

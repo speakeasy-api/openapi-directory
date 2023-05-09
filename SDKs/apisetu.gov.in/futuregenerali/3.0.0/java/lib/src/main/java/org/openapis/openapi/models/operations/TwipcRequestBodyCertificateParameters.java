@@ -12,6 +12,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public TwipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("policyno")
     public String policyno;
+
     public TwipcRequestBodyCertificateParameters withPolicyno(String policyno) {
         this.policyno = policyno;
         return this;
     }
     
+    public TwipcRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("policyno") String policyno) {
+        this.fullName = fullName;
+        this.policyno = policyno;
+  }
 }

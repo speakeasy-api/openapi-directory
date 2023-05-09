@@ -18,9 +18,11 @@ public class Getusage200ApplicationJSONProfileUsages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileId")
     public Getusage200ApplicationJSONProfileUsagesProfileId profileId;
+
     public Getusage200ApplicationJSONProfileUsages withProfileId(Getusage200ApplicationJSONProfileUsagesProfileId profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public Getusage200ApplicationJSONProfileUsages(){}
 }

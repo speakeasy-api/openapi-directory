@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CheckSpellingRussianRequestBody;
 import org.openapis.openapi.models.operations.CheckSpellingRussianRequest;
+import org.openapis.openapi.models.operations.CheckSpellingRussianRequestBody;
 import org.openapis.openapi.models.operations.CheckSpellingRussianResponse;
 
 public class Application {
@@ -31,9 +30,9 @@ public class Application {
                 requestBody = new CheckSpellingRussianRequestBody() {{
                     langCode = "ru";
                     text = "Добрый вее!";
-                }};
+                }};;
                 xRapidAPIKey = "corrupti";
-            }}            
+            }};            
 
             CheckSpellingRussianResponse res = sdk.checkSpellingRussian(req);
 
@@ -43,15 +42,17 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `checkSpellingRussian` - Check Spelling (Russian)
+* [checkSpellingRussian](docs/sdk/README.md#checkspellingrussian) - Check Spelling (Russian)
 <!-- End SDK Available Operations -->
 
 ### Maturity

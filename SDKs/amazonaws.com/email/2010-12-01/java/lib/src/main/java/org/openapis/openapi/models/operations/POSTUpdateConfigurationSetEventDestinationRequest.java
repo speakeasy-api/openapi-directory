@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTUpdateConfigurationSetEventDestinationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTUpdateConfigurationSetEventDestinationActionEnum action;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withAction(POSTUpdateConfigurationSetEventDestinationActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTUpdateConfigurationSetEventDestinationVersionEnum version;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withVersion(POSTUpdateConfigurationSetEventDestinationVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTUpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTUpdateConfigurationSetEventDestinationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTUpdateConfigurationSetEventDestinationRequest(@JsonProperty("Action") POSTUpdateConfigurationSetEventDestinationActionEnum action, @JsonProperty("Version") POSTUpdateConfigurationSetEventDestinationVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

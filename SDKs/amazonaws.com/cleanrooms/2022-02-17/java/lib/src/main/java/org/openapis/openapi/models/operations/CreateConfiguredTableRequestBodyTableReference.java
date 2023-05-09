@@ -15,9 +15,11 @@ public class CreateConfiguredTableRequestBodyTableReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glue")
     public org.openapis.openapi.models.shared.GlueTableReference glue;
+
     public CreateConfiguredTableRequestBodyTableReference withGlue(org.openapis.openapi.models.shared.GlueTableReference glue) {
         this.glue = glue;
         return this;
     }
     
+    public CreateConfiguredTableRequestBodyTableReference(){}
 }

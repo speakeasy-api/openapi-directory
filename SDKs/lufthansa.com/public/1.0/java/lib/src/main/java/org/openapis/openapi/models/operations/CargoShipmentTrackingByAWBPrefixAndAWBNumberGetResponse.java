@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse {
     
     public java.util.Map<String, Object> cargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject;
+
     public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse withCargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject(java.util.Map<String, Object> cargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject) {
         this.cargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject = cargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject;
         return this;
@@ -16,6 +18,7 @@ public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse {
     
     
     public String contentType;
+
     public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse {
     
     
     public Integer statusCode;
+
     public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

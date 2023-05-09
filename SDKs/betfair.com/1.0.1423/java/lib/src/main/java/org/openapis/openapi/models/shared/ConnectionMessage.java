@@ -15,6 +15,7 @@ public class ConnectionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ConnectionMessage withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -26,6 +27,7 @@ public class ConnectionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ConnectionMessage withId(Integer id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class ConnectionMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public String op;
+
     public ConnectionMessage withOp(String op) {
         this.op = op;
         return this;
     }
     
+    public ConnectionMessage(){}
 }

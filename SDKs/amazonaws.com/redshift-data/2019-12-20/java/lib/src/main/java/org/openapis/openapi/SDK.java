@@ -155,11 +155,16 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
     /**
-     * &lt;p&gt;Runs one or more SQL statements, which can be data manipulation language (DML) or data definition language (DDL). Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless workgroup, specify the Amazon Resource Name (ARN) of the secret and the database name. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required. When connecting to a serverless workgroup, specify the workgroup name and database name. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;p&gt;Runs one or more SQL statements, which can be data manipulation language (DML) or data definition language (DDL). Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, provide the &lt;code&gt;secret-arn&lt;/code&gt; of a secret stored in Secrets Manager which has &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. The specified secret contains credentials to connect to the &lt;code&gt;database&lt;/code&gt; you specify. When you are connecting to a cluster, you also supply the database name, If you provide a cluster identifier (&lt;code&gt;dbClusterIdentifier&lt;/code&gt;), it must match the cluster identifier stored in the secret. When you are connecting to a serverless workgroup, you also supply the database name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to your data warehouse, choose one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;When connecting to a serverless workgroup, specify the workgroup name and database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as an IAM identity, specify the cluster identifier and the database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentialsWithIAM&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as a database user, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -192,14 +197,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchExecuteStatementResponse res = new org.openapis.openapi.models.operations.BatchExecuteStatementResponse() {{
+        org.openapis.openapi.models.operations.BatchExecuteStatementResponse res = new org.openapis.openapi.models.operations.BatchExecuteStatementResponse(contentType, httpRes.statusCode()) {{
             batchExecuteStatementOutput = null;
             validationException = null;
             activeStatementsExceededException = null;
             batchExecuteStatementException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -268,15 +271,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelStatementResponse res = new org.openapis.openapi.models.operations.CancelStatementResponse() {{
+        org.openapis.openapi.models.operations.CancelStatementResponse res = new org.openapis.openapi.models.operations.CancelStatementResponse(contentType, httpRes.statusCode()) {{
             cancelStatementResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             internalServerException = null;
             databaseConnectionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -352,14 +353,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeStatementResponse res = new org.openapis.openapi.models.operations.DescribeStatementResponse() {{
+        org.openapis.openapi.models.operations.DescribeStatementResponse res = new org.openapis.openapi.models.operations.DescribeStatementResponse(contentType, httpRes.statusCode()) {{
             describeStatementResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,7 +394,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Describes the detailed information about a table from metadata in the cluster. The information includes its columns. A token is returned to page through the column list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless workgroup, specify the Amazon Resource Name (ARN) of the secret and the database name. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required. When connecting to a serverless workgroup, specify the workgroup name and database name. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;p&gt;Describes the detailed information about a table from metadata in the cluster. The information includes its columns. A token is returned to page through the column list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, provide the &lt;code&gt;secret-arn&lt;/code&gt; of a secret stored in Secrets Manager which has &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. The specified secret contains credentials to connect to the &lt;code&gt;database&lt;/code&gt; you specify. When you are connecting to a cluster, you also supply the database name, If you provide a cluster identifier (&lt;code&gt;dbClusterIdentifier&lt;/code&gt;), it must match the cluster identifier stored in the secret. When you are connecting to a serverless workgroup, you also supply the database name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to your data warehouse, choose one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;When connecting to a serverless workgroup, specify the workgroup name and database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as an IAM identity, specify the cluster identifier and the database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentialsWithIAM&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as a database user, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -434,14 +433,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTableResponse res = new org.openapis.openapi.models.operations.DescribeTableResponse() {{
+        org.openapis.openapi.models.operations.DescribeTableResponse res = new org.openapis.openapi.models.operations.DescribeTableResponse(contentType, httpRes.statusCode()) {{
             describeTableResponse = null;
             validationException = null;
             internalServerException = null;
             databaseConnectionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,7 +474,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Runs an SQL statement, which can be data manipulation language (DML) or data definition language (DDL). This statement must be a single SQL statement. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless workgroup, specify the Amazon Resource Name (ARN) of the secret and the database name. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required. When connecting to a serverless workgroup, specify the workgroup name and database name. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;p&gt;Runs an SQL statement, which can be data manipulation language (DML) or data definition language (DDL). This statement must be a single SQL statement. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, provide the &lt;code&gt;secret-arn&lt;/code&gt; of a secret stored in Secrets Manager which has &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. The specified secret contains credentials to connect to the &lt;code&gt;database&lt;/code&gt; you specify. When you are connecting to a cluster, you also supply the database name, If you provide a cluster identifier (&lt;code&gt;dbClusterIdentifier&lt;/code&gt;), it must match the cluster identifier stored in the secret. When you are connecting to a serverless workgroup, you also supply the database name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to your data warehouse, choose one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;When connecting to a serverless workgroup, specify the workgroup name and database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as an IAM identity, specify the cluster identifier and the database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentialsWithIAM&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as a database user, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -510,14 +507,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteStatementResponse res = new org.openapis.openapi.models.operations.ExecuteStatementResponse() {{
+        org.openapis.openapi.models.operations.ExecuteStatementResponse res = new org.openapis.openapi.models.operations.ExecuteStatementResponse(contentType, httpRes.statusCode()) {{
             executeStatementOutput = null;
             validationException = null;
             executeStatementException = null;
             activeStatementsExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -592,14 +587,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatementResultResponse res = new org.openapis.openapi.models.operations.GetStatementResultResponse() {{
+        org.openapis.openapi.models.operations.GetStatementResultResponse res = new org.openapis.openapi.models.operations.GetStatementResultResponse(contentType, httpRes.statusCode()) {{
             getStatementResultResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -635,7 +628,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;List the databases in a cluster. A token is returned to page through the database list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless workgroup, specify the Amazon Resource Name (ARN) of the secret and the database name. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required. When connecting to a serverless workgroup, specify the workgroup name and database name. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;p&gt;List the databases in a cluster. A token is returned to page through the database list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, provide the &lt;code&gt;secret-arn&lt;/code&gt; of a secret stored in Secrets Manager which has &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. The specified secret contains credentials to connect to the &lt;code&gt;database&lt;/code&gt; you specify. When you are connecting to a cluster, you also supply the database name, If you provide a cluster identifier (&lt;code&gt;dbClusterIdentifier&lt;/code&gt;), it must match the cluster identifier stored in the secret. When you are connecting to a serverless workgroup, you also supply the database name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to your data warehouse, choose one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;When connecting to a serverless workgroup, specify the workgroup name and database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as an IAM identity, specify the cluster identifier and the database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentialsWithIAM&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as a database user, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -674,14 +667,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDatabasesResponse res = new org.openapis.openapi.models.operations.ListDatabasesResponse() {{
+        org.openapis.openapi.models.operations.ListDatabasesResponse res = new org.openapis.openapi.models.operations.ListDatabasesResponse(contentType, httpRes.statusCode()) {{
             listDatabasesResponse = null;
             validationException = null;
             internalServerException = null;
             databaseConnectionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -717,7 +708,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Lists the schemas in a database. A token is returned to page through the schema list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless workgroup, specify the Amazon Resource Name (ARN) of the secret and the database name. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required. When connecting to a serverless workgroup, specify the workgroup name and database name. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;p&gt;Lists the schemas in a database. A token is returned to page through the schema list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, provide the &lt;code&gt;secret-arn&lt;/code&gt; of a secret stored in Secrets Manager which has &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. The specified secret contains credentials to connect to the &lt;code&gt;database&lt;/code&gt; you specify. When you are connecting to a cluster, you also supply the database name, If you provide a cluster identifier (&lt;code&gt;dbClusterIdentifier&lt;/code&gt;), it must match the cluster identifier stored in the secret. When you are connecting to a serverless workgroup, you also supply the database name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to your data warehouse, choose one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;When connecting to a serverless workgroup, specify the workgroup name and database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as an IAM identity, specify the cluster identifier and the database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentialsWithIAM&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as a database user, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -756,14 +747,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSchemasResponse res = new org.openapis.openapi.models.operations.ListSchemasResponse() {{
+        org.openapis.openapi.models.operations.ListSchemasResponse res = new org.openapis.openapi.models.operations.ListSchemasResponse(contentType, httpRes.statusCode()) {{
             listSchemasResponse = null;
             validationException = null;
             internalServerException = null;
             databaseConnectionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -838,13 +827,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStatementsResponse res = new org.openapis.openapi.models.operations.ListStatementsResponse() {{
+        org.openapis.openapi.models.operations.ListStatementsResponse res = new org.openapis.openapi.models.operations.ListStatementsResponse(contentType, httpRes.statusCode()) {{
             listStatementsResponse = null;
             validationException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -873,7 +860,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;List the tables in a database. If neither &lt;code&gt;SchemaPattern&lt;/code&gt; nor &lt;code&gt;TablePattern&lt;/code&gt; are specified, then all tables in the database are returned. A token is returned to page through the table list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless workgroup, specify the Amazon Resource Name (ARN) of the secret and the database name. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required. When connecting to a serverless workgroup, specify the workgroup name and database name. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;p&gt;List the tables in a database. If neither &lt;code&gt;SchemaPattern&lt;/code&gt; nor &lt;code&gt;TablePattern&lt;/code&gt; are specified, then all tables in the database are returned. A token is returned to page through the table list. Depending on the authorization method, use one of the following combinations of request parameters: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Secrets Manager - when connecting to a cluster, provide the &lt;code&gt;secret-arn&lt;/code&gt; of a secret stored in Secrets Manager which has &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. The specified secret contains credentials to connect to the &lt;code&gt;database&lt;/code&gt; you specify. When you are connecting to a cluster, you also supply the database name, If you provide a cluster identifier (&lt;code&gt;dbClusterIdentifier&lt;/code&gt;), it must match the cluster identifier stored in the secret. When you are connecting to a serverless workgroup, you also supply the database name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Temporary credentials - when connecting to your data warehouse, choose one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;When connecting to a serverless workgroup, specify the workgroup name and database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift-serverless:GetCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as an IAM identity, specify the cluster identifier and the database name. The database user name is derived from the IAM identity. For example, &lt;code&gt;arn:iam::123456789012:user:foo&lt;/code&gt; has the database user name &lt;code&gt;IAM:foo&lt;/code&gt;. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentialsWithIAM&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;When connecting to a cluster as a database user, specify the cluster identifier, the database name, and the database user name. Also, permission to call the &lt;code&gt;redshift:GetClusterCredentials&lt;/code&gt; operation is required.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information about the Amazon Redshift Data API and CLI usage examples, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html"&gt;Using the Amazon Redshift Data API&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Management Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -912,14 +899,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTablesResponse res = new org.openapis.openapi.models.operations.ListTablesResponse() {{
+        org.openapis.openapi.models.operations.ListTablesResponse res = new org.openapis.openapi.models.operations.ListTablesResponse(contentType, httpRes.statusCode()) {{
             listTablesResponse = null;
             validationException = null;
             internalServerException = null;
             databaseConnectionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

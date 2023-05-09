@@ -18,9 +18,11 @@ public class LanguageCodesSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCodes")
     public String[] languageCodes;
+
     public LanguageCodesSet withLanguageCodes(String[] languageCodes) {
         this.languageCodes = languageCodes;
         return this;
     }
     
+    public LanguageCodesSet(){}
 }

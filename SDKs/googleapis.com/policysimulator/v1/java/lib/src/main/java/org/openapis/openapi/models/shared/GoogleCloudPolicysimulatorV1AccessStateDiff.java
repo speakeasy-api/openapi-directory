@@ -18,6 +18,7 @@ public class GoogleCloudPolicysimulatorV1AccessStateDiff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessChange")
     public GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum accessChange;
+
     public GoogleCloudPolicysimulatorV1AccessStateDiff withAccessChange(GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum accessChange) {
         this.accessChange = accessChange;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPolicysimulatorV1AccessStateDiff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseline")
     public GoogleCloudPolicysimulatorV1ExplainedAccess baseline;
+
     public GoogleCloudPolicysimulatorV1AccessStateDiff withBaseline(GoogleCloudPolicysimulatorV1ExplainedAccess baseline) {
         this.baseline = baseline;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudPolicysimulatorV1AccessStateDiff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulated")
     public GoogleCloudPolicysimulatorV1ExplainedAccess simulated;
+
     public GoogleCloudPolicysimulatorV1AccessStateDiff withSimulated(GoogleCloudPolicysimulatorV1ExplainedAccess simulated) {
         this.simulated = simulated;
         return this;
     }
     
+    public GoogleCloudPolicysimulatorV1AccessStateDiff(){}
 }

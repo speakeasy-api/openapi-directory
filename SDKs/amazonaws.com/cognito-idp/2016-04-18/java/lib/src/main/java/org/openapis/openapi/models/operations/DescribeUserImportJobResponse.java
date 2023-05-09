@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUserImportJobResponse {
     
     public String contentType;
+
     public DescribeUserImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUserImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUserImportJobResponse describeUserImportJobResponse;
+
     public DescribeUserImportJobResponse withDescribeUserImportJobResponse(org.openapis.openapi.models.shared.DescribeUserImportJobResponse describeUserImportJobResponse) {
         this.describeUserImportJobResponse = describeUserImportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUserImportJobResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeUserImportJobResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUserImportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeUserImportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeUserImportJobResponse {
      */
     
     public Object notAuthorizedException;
+
     public DescribeUserImportJobResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeUserImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeUserImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeUserImportJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeUserImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeUserImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUserImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeUserImportJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeUserImportJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeUserImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

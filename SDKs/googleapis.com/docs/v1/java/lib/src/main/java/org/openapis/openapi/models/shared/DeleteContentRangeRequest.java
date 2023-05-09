@@ -18,9 +18,11 @@ public class DeleteContentRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public Range range;
+
     public DeleteContentRangeRequest withRange(Range range) {
         this.range = range;
         return this;
     }
     
+    public DeleteContentRangeRequest(){}
 }

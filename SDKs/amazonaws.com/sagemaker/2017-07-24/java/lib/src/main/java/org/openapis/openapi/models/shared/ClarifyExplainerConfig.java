@@ -15,6 +15,7 @@ public class ClarifyExplainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableExplanations")
     public String enableExplanations;
+
     public ClarifyExplainerConfig withEnableExplanations(String enableExplanations) {
         this.enableExplanations = enableExplanations;
         return this;
@@ -23,6 +24,7 @@ public class ClarifyExplainerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceConfig")
     public ClarifyInferenceConfig inferenceConfig;
+
     public ClarifyExplainerConfig withInferenceConfig(ClarifyInferenceConfig inferenceConfig) {
         this.inferenceConfig = inferenceConfig;
         return this;
@@ -30,9 +32,13 @@ public class ClarifyExplainerConfig {
     
     @JsonProperty("ShapConfig")
     public ClarifyShapConfig shapConfig;
+
     public ClarifyExplainerConfig withShapConfig(ClarifyShapConfig shapConfig) {
         this.shapConfig = shapConfig;
         return this;
     }
     
+    public ClarifyExplainerConfig(@JsonProperty("ShapConfig") ClarifyShapConfig shapConfig) {
+        this.shapConfig = shapConfig;
+  }
 }

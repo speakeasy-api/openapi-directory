@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class HsmStatus {
     
     public String hsmClientCertificateIdentifier;
+
     public HsmStatus withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class HsmStatus {
     
     
     public String hsmConfigurationIdentifier;
+
     public HsmStatus withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -26,9 +28,11 @@ public class HsmStatus {
     
     
     public String status;
+
     public HsmStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public HsmStatus(){}
 }

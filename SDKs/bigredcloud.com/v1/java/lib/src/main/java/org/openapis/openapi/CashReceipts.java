@@ -59,11 +59,9 @@ public class CashReceipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CashReceiptsDeleteResponse res = new org.openapis.openapi.models.operations.CashReceiptsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CashReceiptsDeleteResponse res = new org.openapis.openapi.models.operations.CashReceiptsDeleteResponse(contentType, httpRes.statusCode()) {{
             cashReceiptsDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class CashReceipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CashReceiptsGetResponse res = new org.openapis.openapi.models.operations.CashReceiptsGetResponse() {{
+        org.openapis.openapi.models.operations.CashReceiptsGetResponse res = new org.openapis.openapi.models.operations.CashReceiptsGetResponse(contentType, httpRes.statusCode()) {{
             pageResultCashReceiptQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class CashReceipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CashReceiptsPostResponse res = new org.openapis.openapi.models.operations.CashReceiptsPostResponse() {{
+        org.openapis.openapi.models.operations.CashReceiptsPostResponse res = new org.openapis.openapi.models.operations.CashReceiptsPostResponse(contentType, httpRes.statusCode()) {{
             cashReceiptsPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class CashReceipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CashReceiptsProcessBatchResponse res = new org.openapis.openapi.models.operations.CashReceiptsProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.CashReceiptsProcessBatchResponse res = new org.openapis.openapi.models.operations.CashReceiptsProcessBatchResponse(contentType, httpRes.statusCode()) {{
             cashReceiptsProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class CashReceipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CashReceiptsPutResponse res = new org.openapis.openapi.models.operations.CashReceiptsPutResponse() {{
+        org.openapis.openapi.models.operations.CashReceiptsPutResponse res = new org.openapis.openapi.models.operations.CashReceiptsPutResponse(contentType, httpRes.statusCode()) {{
             cashReceiptsPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class CashReceipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1CashReceiptsIdResponse res = new org.openapis.openapi.models.operations.GetV1CashReceiptsIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1CashReceiptsIdResponse res = new org.openapis.openapi.models.operations.GetV1CashReceiptsIdResponse(contentType, httpRes.statusCode()) {{
             cashReceiptDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

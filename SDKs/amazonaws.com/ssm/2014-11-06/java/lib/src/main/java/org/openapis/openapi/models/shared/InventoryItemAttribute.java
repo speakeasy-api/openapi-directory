@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryItemAttribute {
     @JsonProperty("DataType")
     public InventoryAttributeDataTypeEnum dataType;
+
     public InventoryItemAttribute withDataType(InventoryAttributeDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -19,9 +20,14 @@ public class InventoryItemAttribute {
     
     @JsonProperty("Name")
     public String name;
+
     public InventoryItemAttribute withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InventoryItemAttribute(@JsonProperty("DataType") InventoryAttributeDataTypeEnum dataType, @JsonProperty("Name") String name) {
+        this.dataType = dataType;
+        this.name = name;
+  }
 }

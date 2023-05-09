@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter {
     
     public Long characterId;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -16,6 +17,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter {
     
     
     public Boolean deleted;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -23,6 +25,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter {
     
     
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod merged;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter withMerged(DestinyHistoricalStatsDestinyHistoricalStatsByPeriod merged) {
         this.merged = merged;
         return this;
@@ -30,9 +33,11 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter {
     
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsByPeriod> results;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter withResults(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsByPeriod> results) {
         this.results = results;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter(){}
 }

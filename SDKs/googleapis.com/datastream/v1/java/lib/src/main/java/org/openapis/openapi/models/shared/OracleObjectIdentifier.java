@@ -18,6 +18,7 @@ public class OracleObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public OracleObjectIdentifier withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -29,9 +30,11 @@ public class OracleObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public OracleObjectIdentifier withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public OracleObjectIdentifier(){}
 }

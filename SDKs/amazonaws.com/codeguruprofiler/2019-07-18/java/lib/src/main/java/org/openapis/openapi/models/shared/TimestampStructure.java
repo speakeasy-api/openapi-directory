@@ -19,9 +19,13 @@ public class TimestampStructure {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("value")
     public OffsetDateTime value;
+
     public TimestampStructure withValue(OffsetDateTime value) {
         this.value = value;
         return this;
     }
     
+    public TimestampStructure(@JsonProperty("value") OffsetDateTime value) {
+        this.value = value;
+  }
 }

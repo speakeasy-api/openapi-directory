@@ -18,6 +18,7 @@ public class AccountPermissionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountPermissions")
     public AccountPermission[] accountPermissions;
+
     public AccountPermissionsListResponse withAccountPermissions(AccountPermission[] accountPermissions) {
         this.accountPermissions = accountPermissions;
         return this;
@@ -29,9 +30,11 @@ public class AccountPermissionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountPermissionsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountPermissionsListResponse(){}
 }

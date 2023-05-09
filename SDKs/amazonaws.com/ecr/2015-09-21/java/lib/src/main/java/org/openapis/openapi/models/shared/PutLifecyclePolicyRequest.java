@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutLifecyclePolicyRequest {
     @JsonProperty("lifecyclePolicyText")
     public String lifecyclePolicyText;
+
     public PutLifecyclePolicyRequest withLifecyclePolicyText(String lifecyclePolicyText) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         return this;
@@ -19,6 +20,7 @@ public class PutLifecyclePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public PutLifecyclePolicyRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -26,9 +28,14 @@ public class PutLifecyclePolicyRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutLifecyclePolicyRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutLifecyclePolicyRequest(@JsonProperty("lifecyclePolicyText") String lifecyclePolicyText, @JsonProperty("repositoryName") String repositoryName) {
+        this.lifecyclePolicyText = lifecyclePolicyText;
+        this.repositoryName = repositoryName;
+  }
 }

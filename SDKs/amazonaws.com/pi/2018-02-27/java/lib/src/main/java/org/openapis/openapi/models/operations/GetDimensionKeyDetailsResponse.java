@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDimensionKeyDetailsResponse {
     
     public String contentType;
+
     public GetDimensionKeyDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDimensionKeyDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDimensionKeyDetailsResponse getDimensionKeyDetailsResponse;
+
     public GetDimensionKeyDetailsResponse withGetDimensionKeyDetailsResponse(org.openapis.openapi.models.shared.GetDimensionKeyDetailsResponse getDimensionKeyDetailsResponse) {
         this.getDimensionKeyDetailsResponse = getDimensionKeyDetailsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDimensionKeyDetailsResponse {
      */
     
     public Object internalServiceError;
+
     public GetDimensionKeyDetailsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class GetDimensionKeyDetailsResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetDimensionKeyDetailsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetDimensionKeyDetailsResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetDimensionKeyDetailsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class GetDimensionKeyDetailsResponse {
     
     
     public Integer statusCode;
+
     public GetDimensionKeyDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetDimensionKeyDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDimensionKeyDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDimensionKeyDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

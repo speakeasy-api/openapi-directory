@@ -15,6 +15,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingMonth")
     public String bookingMonth;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONData withBookingMonth(String bookingMonth) {
         this.bookingMonth = bookingMonth;
         return this;
@@ -26,6 +27,7 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDates[] dates;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONData withDates(BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONDataDates[] dates) {
         this.dates = dates;
         return this;
@@ -39,9 +41,11 @@ public class BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingUnit")
     public String pricingUnit;
+
     public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONData withPricingUnit(String pricingUnit) {
         this.pricingUnit = pricingUnit;
         return this;
     }
     
+    public BookingAvailabilityTourgradesPricingmatrix200ApplicationJSONData(){}
 }

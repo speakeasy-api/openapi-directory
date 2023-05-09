@@ -18,6 +18,7 @@ public class ReplaceNamedRangeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRangeId")
     public String namedRangeId;
+
     public ReplaceNamedRangeContentRequest withNamedRangeId(String namedRangeId) {
         this.namedRangeId = namedRangeId;
         return this;
@@ -29,6 +30,7 @@ public class ReplaceNamedRangeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRangeName")
     public String namedRangeName;
+
     public ReplaceNamedRangeContentRequest withNamedRangeName(String namedRangeName) {
         this.namedRangeName = namedRangeName;
         return this;
@@ -40,9 +42,11 @@ public class ReplaceNamedRangeContentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ReplaceNamedRangeContentRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ReplaceNamedRangeContentRequest(){}
 }

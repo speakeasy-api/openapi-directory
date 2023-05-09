@@ -12,6 +12,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedByPlayerId1")
     public Long assistedByPlayerId1;
+
     public Goal withAssistedByPlayerId1(Long assistedByPlayerId1) {
         this.assistedByPlayerId1 = assistedByPlayerId1;
         return this;
@@ -20,6 +21,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedByPlayerId2")
     public Long assistedByPlayerId2;
+
     public Goal withAssistedByPlayerId2(Long assistedByPlayerId2) {
         this.assistedByPlayerId2 = assistedByPlayerId2;
         return this;
@@ -28,6 +30,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedByPlayerName1")
     public String assistedByPlayerName1;
+
     public Goal withAssistedByPlayerName1(String assistedByPlayerName1) {
         this.assistedByPlayerName1 = assistedByPlayerName1;
         return this;
@@ -36,6 +39,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedByPlayerName2")
     public String assistedByPlayerName2;
+
     public Goal withAssistedByPlayerName2(String assistedByPlayerName2) {
         this.assistedByPlayerName2 = assistedByPlayerName2;
         return this;
@@ -44,6 +48,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameId")
     public Long gameId;
+
     public Goal withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -52,6 +57,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameMinute")
     public Long gameMinute;
+
     public Goal withGameMinute(Long gameMinute) {
         this.gameMinute = gameMinute;
         return this;
@@ -60,6 +66,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameMinuteExtra")
     public Long gameMinuteExtra;
+
     public Goal withGameMinuteExtra(Long gameMinuteExtra) {
         this.gameMinuteExtra = gameMinuteExtra;
         return this;
@@ -68,6 +75,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoalId")
     public Long goalId;
+
     public Goal withGoalId(Long goalId) {
         this.goalId = goalId;
         return this;
@@ -76,6 +84,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Goal withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public Long playerId;
+
     public Goal withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -92,6 +102,7 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public Goal withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -100,9 +111,11 @@ public class Goal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Goal withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Goal(){}
 }

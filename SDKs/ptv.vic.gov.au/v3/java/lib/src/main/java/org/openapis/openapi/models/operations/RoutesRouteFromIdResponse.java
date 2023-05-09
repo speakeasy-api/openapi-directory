@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RoutesRouteFromIdResponse {
     
     public byte[] body;
+
     public RoutesRouteFromIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class RoutesRouteFromIdResponse {
     
     
     public String contentType;
+
     public RoutesRouteFromIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class RoutesRouteFromIdResponse {
     
     
     public Integer statusCode;
+
     public RoutesRouteFromIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class RoutesRouteFromIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RoutesRouteFromIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class RoutesRouteFromIdResponse {
      */
     
     public org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse;
+
     public RoutesRouteFromIdResponse withV3ErrorResponse(org.openapis.openapi.models.shared.V3ErrorResponse v3ErrorResponse) {
         this.v3ErrorResponse = v3ErrorResponse;
         return this;
@@ -50,9 +56,14 @@ public class RoutesRouteFromIdResponse {
      */
     
     public org.openapis.openapi.models.shared.V3RouteResponse v3RouteResponse;
+
     public RoutesRouteFromIdResponse withV3RouteResponse(org.openapis.openapi.models.shared.V3RouteResponse v3RouteResponse) {
         this.v3RouteResponse = v3RouteResponse;
         return this;
     }
     
+    public RoutesRouteFromIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Target withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public Target withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Target(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageGroups")
     public String[] ageGroups;
+
     public GoogleCloudRetailV2betaAudience withAgeGroups(String[] ageGroups) {
         this.ageGroups = ageGroups;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaAudience {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genders")
     public String[] genders;
+
     public GoogleCloudRetailV2betaAudience withGenders(String[] genders) {
         this.genders = genders;
         return this;
     }
     
+    public GoogleCloudRetailV2betaAudience(){}
 }

@@ -14,6 +14,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,6 +23,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription azureSubscription;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withAzureSubscription(DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -33,6 +35,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -65,6 +70,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -76,6 +82,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -86,6 +93,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("id")
     public String id;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +105,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum[] memberPermissions;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withMemberPermissions(DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -107,6 +116,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +127,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("origin")
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum origin;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withOrigin(DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -127,6 +138,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("os")
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum os;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withOs(DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum os) {
         this.os = os;
         return this;
@@ -137,6 +149,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("owner")
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner owner;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withOwner(DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner owner) {
         this.owner = owner;
         return this;
@@ -147,6 +160,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
      */
     @JsonProperty("platform")
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum platform;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withPlatform(DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -158,6 +172,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -169,9 +184,20 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONApps withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public DistributionGroupsDetailsForOrg200ApplicationJSONApps(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum origin, @JsonProperty("os") DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum os, @JsonProperty("owner") DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwner owner, @JsonProperty("platform") DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

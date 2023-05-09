@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CallDataRecord {
     
     public EmbeddedResource call;
+
     public CallDataRecord withCall(EmbeddedResource call) {
         this.call = call;
         return this;
@@ -22,6 +23,7 @@ public class CallDataRecord {
      */
     
     public String callType;
+
     public CallDataRecord withCallType(String callType) {
         this.callType = callType;
         return this;
@@ -32,6 +34,7 @@ public class CallDataRecord {
      */
     
     public String callUuid;
+
     public CallDataRecord withCallUuid(String callUuid) {
         this.callUuid = callUuid;
         return this;
@@ -39,6 +42,7 @@ public class CallDataRecord {
     
     
     public EmbeddedResource calledPerson;
+
     public CallDataRecord withCalledPerson(EmbeddedResource calledPerson) {
         this.calledPerson = calledPerson;
         return this;
@@ -49,6 +53,7 @@ public class CallDataRecord {
      */
     
     public OffsetDateTime createdAt;
+
     public CallDataRecord withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -59,6 +64,7 @@ public class CallDataRecord {
      */
     
     public String direction;
+
     public CallDataRecord withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -69,6 +75,7 @@ public class CallDataRecord {
      */
     
     public Long duration;
+
     public CallDataRecord withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -79,6 +86,7 @@ public class CallDataRecord {
      */
     
     public String from;
+
     public CallDataRecord withFrom(String from) {
         this.from = from;
         return this;
@@ -89,6 +97,7 @@ public class CallDataRecord {
      */
     
     public Long id;
+
     public CallDataRecord withId(Long id) {
         this.id = id;
         return this;
@@ -96,6 +105,7 @@ public class CallDataRecord {
     
     
     public EmbeddedRecordingResource recording;
+
     public CallDataRecord withRecording(EmbeddedRecordingResource recording) {
         this.recording = recording;
         return this;
@@ -106,6 +116,7 @@ public class CallDataRecord {
      */
     
     public String status;
+
     public CallDataRecord withStatus(String status) {
         this.status = status;
         return this;
@@ -116,6 +127,7 @@ public class CallDataRecord {
      */
     
     public String to;
+
     public CallDataRecord withTo(String to) {
         this.to = to;
         return this;
@@ -126,6 +138,7 @@ public class CallDataRecord {
      */
     
     public OffsetDateTime updatedAt;
+
     public CallDataRecord withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -133,9 +146,11 @@ public class CallDataRecord {
     
     
     public EmbeddedResource user;
+
     public CallDataRecord withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public CallDataRecord(){}
 }

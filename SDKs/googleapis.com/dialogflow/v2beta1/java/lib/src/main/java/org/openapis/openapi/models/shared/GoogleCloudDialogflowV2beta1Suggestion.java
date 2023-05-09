@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articles")
     public GoogleCloudDialogflowV2beta1SuggestionArticle[] articles;
+
     public GoogleCloudDialogflowV2beta1Suggestion withArticles(GoogleCloudDialogflowV2beta1SuggestionArticle[] articles) {
         this.articles = articles;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2beta1Suggestion withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faqAnswers")
     public GoogleCloudDialogflowV2beta1SuggestionFaqAnswer[] faqAnswers;
+
     public GoogleCloudDialogflowV2beta1Suggestion withFaqAnswers(GoogleCloudDialogflowV2beta1SuggestionFaqAnswer[] faqAnswers) {
         this.faqAnswers = faqAnswers;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestMessage")
     public String latestMessage;
+
     public GoogleCloudDialogflowV2beta1Suggestion withLatestMessage(String latestMessage) {
         this.latestMessage = latestMessage;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1Suggestion withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1Suggestion(){}
 }

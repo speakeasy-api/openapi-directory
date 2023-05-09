@@ -18,6 +18,7 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateOfChange")
     public String dateOfChange;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees withDateOfChange(String dateOfChange) {
         this.dateOfChange = dateOfChange;
         return this;
@@ -25,6 +26,7 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     
     @JsonProperty("FeeDetails")
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFeesFeeDetails[] feeDetails;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees withFeeDetails(GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFeesFeeDetails[] feeDetails) {
         this.feeDetails = feeDetails;
         return this;
@@ -36,6 +38,7 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeHigherTier")
     public Long feeHigherTier;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees withFeeHigherTier(Long feeHigherTier) {
         this.feeHigherTier = feeHigherTier;
         return this;
@@ -47,6 +50,7 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeeLowerTier")
     public Long feeLowerTier;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees withFeeLowerTier(Long feeLowerTier) {
         this.feeLowerTier = feeLowerTier;
         return this;
@@ -58,6 +62,7 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LengthPromotionalInDays")
     public Long lengthPromotionalInDays;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees withLengthPromotionalInDays(Long lengthPromotionalInDays) {
         this.lengthPromotionalInDays = lengthPromotionalInDays;
         return this;
@@ -69,6 +74,7 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPromotionOrFutureTerms")
     public String startPromotionOrFutureTerms;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees withStartPromotionOrFutureTerms(String startPromotionOrFutureTerms) {
         this.startPromotionOrFutureTerms = startPromotionOrFutureTerms;
         return this;
@@ -80,9 +86,13 @@ public class GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopPromotionOrFutureTerms")
     public String stopPromotionOrFutureTerms;
+
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees withStopPromotionOrFutureTerms(String stopPromotionOrFutureTerms) {
         this.stopPromotionOrFutureTerms = stopPromotionOrFutureTerms;
         return this;
     }
     
+    public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFees(@JsonProperty("FeeDetails") GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonBusinessCurrentAccountFeesAndChargesFeesFeeDetails[] feeDetails) {
+        this.feeDetails = feeDetails;
+  }
 }

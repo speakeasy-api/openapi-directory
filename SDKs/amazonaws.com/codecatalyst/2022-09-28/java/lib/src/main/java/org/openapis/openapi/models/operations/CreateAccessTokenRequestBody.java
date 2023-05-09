@@ -22,6 +22,7 @@ public class CreateAccessTokenRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiresTime")
     public OffsetDateTime expiresTime;
+
     public CreateAccessTokenRequestBody withExpiresTime(OffsetDateTime expiresTime) {
         this.expiresTime = expiresTime;
         return this;
@@ -32,9 +33,13 @@ public class CreateAccessTokenRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAccessTokenRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateAccessTokenRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

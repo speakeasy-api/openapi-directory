@@ -18,6 +18,7 @@ public class GetFleetFleetname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@id")
     public String atId;
+
     public GetFleetFleetname200ApplicationJSON withAtId(String atId) {
         this.atId = atId;
         return this;
@@ -29,6 +30,7 @@ public class GetFleetFleetname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public GetFleetFleetname200ApplicationJSON withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -40,6 +42,7 @@ public class GetFleetFleetname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_email")
     public String logoEmail;
+
     public GetFleetFleetname200ApplicationJSON withLogoEmail(String logoEmail) {
         this.logoEmail = logoEmail;
         return this;
@@ -51,6 +54,7 @@ public class GetFleetFleetname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public Object[] members;
+
     public GetFleetFleetname200ApplicationJSON withMembers(Object[] members) {
         this.members = members;
         return this;
@@ -62,6 +66,7 @@ public class GetFleetFleetname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetFleetFleetname200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GetFleetFleetname200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public String profile;
+
     public GetFleetFleetname200ApplicationJSON withProfile(String profile) {
         this.profile = profile;
         return this;
@@ -83,9 +89,13 @@ public class GetFleetFleetname200ApplicationJSON {
      */
     @JsonProperty("sub")
     public String sub;
+
     public GetFleetFleetname200ApplicationJSON withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetFleetFleetname200ApplicationJSON(@JsonProperty("sub") String sub) {
+        this.sub = sub;
+  }
 }

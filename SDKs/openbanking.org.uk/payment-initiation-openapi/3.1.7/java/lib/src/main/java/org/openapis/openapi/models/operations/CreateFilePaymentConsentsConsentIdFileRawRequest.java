@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFilePaymentConsentsConsentIdFileRawRequest {
@@ -12,6 +13,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConsentId")
     public String consentId;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -32,6 +35,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/jose+jwe")
     public byte[] requestBody;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -42,6 +46,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -54,6 +59,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -64,6 +70,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -74,6 +81,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
@@ -86,6 +94,7 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
     public String xIdempotencyKey;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withXIdempotencyKey(String xIdempotencyKey) {
         this.xIdempotencyKey = xIdempotencyKey;
         return this;
@@ -96,9 +105,17 @@ public class CreateFilePaymentConsentsConsentIdFileRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
     public String xJwsSignature;
+
     public CreateFilePaymentConsentsConsentIdFileRawRequest withXJwsSignature(String xJwsSignature) {
         this.xJwsSignature = xJwsSignature;
         return this;
     }
     
+    public CreateFilePaymentConsentsConsentIdFileRawRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("ConsentId") String consentId, @JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("x-idempotency-key") String xIdempotencyKey, @JsonProperty("x-jws-signature") String xJwsSignature) {
+        this.authorization = authorization;
+        this.consentId = consentId;
+        this.requestBody = requestBody;
+        this.xIdempotencyKey = xIdempotencyKey;
+        this.xJwsSignature = xJwsSignature;
+  }
 }

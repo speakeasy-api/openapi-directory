@@ -15,9 +15,11 @@ public class ActionsReRunWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_debug_logging")
     public Boolean enableDebugLogging;
+
     public ActionsReRunWorkflowRequestBody withEnableDebugLogging(Boolean enableDebugLogging) {
         this.enableDebugLogging = enableDebugLogging;
         return this;
     }
     
+    public ActionsReRunWorkflowRequestBody(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleCategoriesReplaceRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator;
+
     public PrivateArticleCategoriesReplaceRequest withCategoriesCreator(org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator) {
         this.categoriesCreator = categoriesCreator;
         return this;
@@ -19,9 +21,14 @@ public class PrivateArticleCategoriesReplaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleCategoriesReplaceRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticleCategoriesReplaceRequest(@JsonProperty("CategoriesCreator") org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator, @JsonProperty("article_id") Long articleId) {
+        this.categoriesCreator = categoriesCreator;
+        this.articleId = articleId;
+  }
 }

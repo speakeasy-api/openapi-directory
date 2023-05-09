@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPagesByEngagementResponse {
@@ -12,6 +13,7 @@ public class ListPagesByEngagementResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPagesByEngagementResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPagesByEngagementResponse {
     
     
     public String contentType;
+
     public ListPagesByEngagementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPagesByEngagementResponse {
      */
     
     public Object internalServerException;
+
     public ListPagesByEngagementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListPagesByEngagementResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPagesByEngagementResult listPagesByEngagementResult;
+
     public ListPagesByEngagementResponse withListPagesByEngagementResult(org.openapis.openapi.models.shared.ListPagesByEngagementResult listPagesByEngagementResult) {
         this.listPagesByEngagementResult = listPagesByEngagementResult;
         return this;
@@ -46,6 +51,7 @@ public class ListPagesByEngagementResponse {
     
     
     public Integer statusCode;
+
     public ListPagesByEngagementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPagesByEngagementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPagesByEngagementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListPagesByEngagementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPagesByEngagementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListPagesByEngagementResponse {
      */
     
     public Object throttlingException;
+
     public ListPagesByEngagementResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListPagesByEngagementResponse {
      */
     
     public Object validationException;
+
     public ListPagesByEngagementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPagesByEngagementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

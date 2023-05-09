@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDocumentResponse {
@@ -12,6 +13,7 @@ public class DeleteDocumentResponse {
      */
     
     public Object associatedInstances;
+
     public DeleteDocumentResponse withAssociatedInstances(Object associatedInstances) {
         this.associatedInstances = associatedInstances;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDocumentResponse {
     
     
     public String contentType;
+
     public DeleteDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDocumentResponse {
      */
     
     public java.util.Map<String, Object> deleteDocumentResult;
+
     public DeleteDocumentResponse withDeleteDocumentResult(java.util.Map<String, Object> deleteDocumentResult) {
         this.deleteDocumentResult = deleteDocumentResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDocumentResponse {
      */
     
     public Object internalServerError;
+
     public DeleteDocumentResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDocumentResponse {
      */
     
     public Object invalidDocument;
+
     public DeleteDocumentResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDocumentResponse {
      */
     
     public Object invalidDocumentOperation;
+
     public DeleteDocumentResponse withInvalidDocumentOperation(Object invalidDocumentOperation) {
         this.invalidDocumentOperation = invalidDocumentOperation;
         return this;
@@ -66,6 +73,7 @@ public class DeleteDocumentResponse {
     
     
     public Integer statusCode;
+
     public DeleteDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

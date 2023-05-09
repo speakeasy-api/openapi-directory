@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePipelineVariableForWorkspaceResponse {
     
     public String contentType;
+
     public UpdatePipelineVariableForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdatePipelineVariableForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public UpdatePipelineVariableForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdatePipelineVariableForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePipelineVariableForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdatePipelineVariableForWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public UpdatePipelineVariableForWorkspaceResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class UpdatePipelineVariableForWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> pipelineVariable;
+
     public UpdatePipelineVariableForWorkspaceResponse withPipelineVariable(java.util.Map<String, Object> pipelineVariable) {
         this.pipelineVariable = pipelineVariable;
         return this;
     }
     
+    public UpdatePipelineVariableForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UntagStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UntagStreamRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -26,6 +27,7 @@ public class UntagStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public UntagStreamRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -36,9 +38,13 @@ public class UntagStreamRequestBody {
      */
     @JsonProperty("TagKeyList")
     public String[] tagKeyList;
+
     public UntagStreamRequestBody withTagKeyList(String[] tagKeyList) {
         this.tagKeyList = tagKeyList;
         return this;
     }
     
+    public UntagStreamRequestBody(@JsonProperty("TagKeyList") String[] tagKeyList) {
+        this.tagKeyList = tagKeyList;
+  }
 }

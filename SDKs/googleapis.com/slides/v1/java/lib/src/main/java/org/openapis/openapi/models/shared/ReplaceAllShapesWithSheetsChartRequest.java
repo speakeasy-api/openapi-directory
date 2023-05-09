@@ -18,6 +18,7 @@ public class ReplaceAllShapesWithSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartId")
     public Integer chartId;
+
     public ReplaceAllShapesWithSheetsChartRequest withChartId(Integer chartId) {
         this.chartId = chartId;
         return this;
@@ -29,6 +30,7 @@ public class ReplaceAllShapesWithSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containsText")
     public SubstringMatchCriteria containsText;
+
     public ReplaceAllShapesWithSheetsChartRequest withContainsText(SubstringMatchCriteria containsText) {
         this.containsText = containsText;
         return this;
@@ -40,6 +42,7 @@ public class ReplaceAllShapesWithSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkingMode")
     public ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum linkingMode;
+
     public ReplaceAllShapesWithSheetsChartRequest withLinkingMode(ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum linkingMode) {
         this.linkingMode = linkingMode;
         return this;
@@ -51,6 +54,7 @@ public class ReplaceAllShapesWithSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageObjectIds")
     public String[] pageObjectIds;
+
     public ReplaceAllShapesWithSheetsChartRequest withPageObjectIds(String[] pageObjectIds) {
         this.pageObjectIds = pageObjectIds;
         return this;
@@ -62,9 +66,11 @@ public class ReplaceAllShapesWithSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public ReplaceAllShapesWithSheetsChartRequest withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
     }
     
+    public ReplaceAllShapesWithSheetsChartRequest(){}
 }

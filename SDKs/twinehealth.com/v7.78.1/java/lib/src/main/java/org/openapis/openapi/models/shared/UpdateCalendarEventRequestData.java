@@ -12,6 +12,7 @@ public class UpdateCalendarEventRequestData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attributes attributes;
+
     public UpdateCalendarEventRequestData withAttributes(Attributes attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class UpdateCalendarEventRequestData {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateCalendarEventRequestData withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class UpdateCalendarEventRequestData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public UpdateCalendarEventRequestDataRelationships relationships;
+
     public UpdateCalendarEventRequestData withRelationships(UpdateCalendarEventRequestDataRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +37,14 @@ public class UpdateCalendarEventRequestData {
     
     @JsonProperty("type")
     public TypeEnum type;
+
     public UpdateCalendarEventRequestData withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateCalendarEventRequestData(@JsonProperty("id") String id, @JsonProperty("type") TypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

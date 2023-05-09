@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MutanResponse {
     
     public byte[] body;
+
     public MutanResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class MutanResponse {
     
     
     public String contentType;
+
     public MutanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class MutanResponse {
     
     
     public Integer statusCode;
+
     public MutanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class MutanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MutanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class MutanResponse {
      */
     
     public Mutan400ApplicationJSON mutan400ApplicationJSONObject;
+
     public MutanResponse withMutan400ApplicationJSONObject(Mutan400ApplicationJSON mutan400ApplicationJSONObject) {
         this.mutan400ApplicationJSONObject = mutan400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class MutanResponse {
      */
     
     public Mutan401ApplicationJSON mutan401ApplicationJSONObject;
+
     public MutanResponse withMutan401ApplicationJSONObject(Mutan401ApplicationJSON mutan401ApplicationJSONObject) {
         this.mutan401ApplicationJSONObject = mutan401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class MutanResponse {
      */
     
     public Mutan404ApplicationJSON mutan404ApplicationJSONObject;
+
     public MutanResponse withMutan404ApplicationJSONObject(Mutan404ApplicationJSON mutan404ApplicationJSONObject) {
         this.mutan404ApplicationJSONObject = mutan404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class MutanResponse {
      */
     
     public Mutan500ApplicationJSON mutan500ApplicationJSONObject;
+
     public MutanResponse withMutan500ApplicationJSONObject(Mutan500ApplicationJSON mutan500ApplicationJSONObject) {
         this.mutan500ApplicationJSONObject = mutan500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class MutanResponse {
      */
     
     public Mutan502ApplicationJSON mutan502ApplicationJSONObject;
+
     public MutanResponse withMutan502ApplicationJSONObject(Mutan502ApplicationJSON mutan502ApplicationJSONObject) {
         this.mutan502ApplicationJSONObject = mutan502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class MutanResponse {
      */
     
     public Mutan503ApplicationJSON mutan503ApplicationJSONObject;
+
     public MutanResponse withMutan503ApplicationJSONObject(Mutan503ApplicationJSON mutan503ApplicationJSONObject) {
         this.mutan503ApplicationJSONObject = mutan503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class MutanResponse {
      */
     
     public Mutan504ApplicationJSON mutan504ApplicationJSONObject;
+
     public MutanResponse withMutan504ApplicationJSONObject(Mutan504ApplicationJSON mutan504ApplicationJSONObject) {
         this.mutan504ApplicationJSONObject = mutan504ApplicationJSONObject;
         return this;
     }
     
+    public MutanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

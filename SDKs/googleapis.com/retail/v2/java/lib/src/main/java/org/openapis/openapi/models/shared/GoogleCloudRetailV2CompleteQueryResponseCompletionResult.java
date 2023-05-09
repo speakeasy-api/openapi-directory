@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2CompleteQueryResponseCompletionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, GoogleCloudRetailV2CustomAttribute> attributes;
+
     public GoogleCloudRetailV2CompleteQueryResponseCompletionResult withAttributes(java.util.Map<String, GoogleCloudRetailV2CustomAttribute> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2CompleteQueryResponseCompletionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestion")
     public String suggestion;
+
     public GoogleCloudRetailV2CompleteQueryResponseCompletionResult withSuggestion(String suggestion) {
         this.suggestion = suggestion;
         return this;
     }
     
+    public GoogleCloudRetailV2CompleteQueryResponseCompletionResult(){}
 }

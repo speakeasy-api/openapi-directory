@@ -18,6 +18,7 @@ public class ShardSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs")
     public java.util.Map<String, Object>[] runs;
+
     public ShardSummary withRuns(java.util.Map<String, Object>[] runs) {
         this.runs = runs;
         return this;
@@ -29,9 +30,11 @@ public class ShardSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardResult")
     public MergedResult shardResult;
+
     public ShardSummary withShardResult(MergedResult shardResult) {
         this.shardResult = shardResult;
         return this;
     }
     
+    public ShardSummary(){}
 }

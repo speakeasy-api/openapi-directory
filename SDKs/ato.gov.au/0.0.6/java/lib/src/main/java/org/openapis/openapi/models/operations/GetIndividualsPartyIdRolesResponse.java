@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIndividualsPartyIdRolesResponse {
     
     public String contentType;
+
     public GetIndividualsPartyIdRolesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetIndividualsPartyIdRolesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetIndividualsPartyIdRolesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetIndividualsPartyIdRolesResponse {
     
     
     public Integer statusCode;
+
     public GetIndividualsPartyIdRolesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetIndividualsPartyIdRolesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIndividualsPartyIdRolesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetIndividualsPartyIdRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetIndividualsPartyIdRolesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -50,6 +56,7 @@ public class GetIndividualsPartyIdRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.PartyRole[] partyRoles;
+
     public GetIndividualsPartyIdRolesResponse withPartyRoles(org.openapis.openapi.models.shared.PartyRole[] partyRoles) {
         this.partyRoles = partyRoles;
         return this;
@@ -60,9 +67,14 @@ public class GetIndividualsPartyIdRolesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetIndividualsPartyIdRolesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetIndividualsPartyIdRolesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

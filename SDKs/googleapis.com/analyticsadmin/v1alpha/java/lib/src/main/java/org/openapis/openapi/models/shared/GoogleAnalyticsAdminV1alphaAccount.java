@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAnalyticsAdminV1alphaAccount withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public GoogleAnalyticsAdminV1alphaAccount withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaAccount withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaAccount withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GoogleAnalyticsAdminV1alphaAccount withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAnalyticsAdminV1alphaAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleAnalyticsAdminV1alphaAccount withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccount(){}
 }

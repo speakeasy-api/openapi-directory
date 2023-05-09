@@ -15,6 +15,7 @@ public class StartEdgeConfigurationUpdateRequestBodyEdgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionConfig")
     public org.openapis.openapi.models.shared.DeletionConfig deletionConfig;
+
     public StartEdgeConfigurationUpdateRequestBodyEdgeConfig withDeletionConfig(org.openapis.openapi.models.shared.DeletionConfig deletionConfig) {
         this.deletionConfig = deletionConfig;
         return this;
@@ -23,6 +24,7 @@ public class StartEdgeConfigurationUpdateRequestBodyEdgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HubDeviceArn")
     public String hubDeviceArn;
+
     public StartEdgeConfigurationUpdateRequestBodyEdgeConfig withHubDeviceArn(String hubDeviceArn) {
         this.hubDeviceArn = hubDeviceArn;
         return this;
@@ -31,6 +33,7 @@ public class StartEdgeConfigurationUpdateRequestBodyEdgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecorderConfig")
     public org.openapis.openapi.models.shared.RecorderConfig recorderConfig;
+
     public StartEdgeConfigurationUpdateRequestBodyEdgeConfig withRecorderConfig(org.openapis.openapi.models.shared.RecorderConfig recorderConfig) {
         this.recorderConfig = recorderConfig;
         return this;
@@ -39,9 +42,11 @@ public class StartEdgeConfigurationUpdateRequestBodyEdgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploaderConfig")
     public org.openapis.openapi.models.shared.UploaderConfig uploaderConfig;
+
     public StartEdgeConfigurationUpdateRequestBodyEdgeConfig withUploaderConfig(org.openapis.openapi.models.shared.UploaderConfig uploaderConfig) {
         this.uploaderConfig = uploaderConfig;
         return this;
     }
     
+    public StartEdgeConfigurationUpdateRequestBodyEdgeConfig(){}
 }

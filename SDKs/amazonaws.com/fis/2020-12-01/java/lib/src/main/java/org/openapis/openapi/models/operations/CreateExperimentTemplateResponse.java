@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExperimentTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateExperimentTemplateResponse {
      */
     
     public Object conflictException;
+
     public CreateExperimentTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateExperimentTemplateResponse {
     
     
     public String contentType;
+
     public CreateExperimentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateExperimentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExperimentTemplateResponse createExperimentTemplateResponse;
+
     public CreateExperimentTemplateResponse withCreateExperimentTemplateResponse(org.openapis.openapi.models.shared.CreateExperimentTemplateResponse createExperimentTemplateResponse) {
         this.createExperimentTemplateResponse = createExperimentTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateExperimentTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExperimentTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CreateExperimentTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateExperimentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateExperimentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExperimentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateExperimentTemplateResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateExperimentTemplateResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,9 +81,14 @@ public class CreateExperimentTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateExperimentTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateExperimentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

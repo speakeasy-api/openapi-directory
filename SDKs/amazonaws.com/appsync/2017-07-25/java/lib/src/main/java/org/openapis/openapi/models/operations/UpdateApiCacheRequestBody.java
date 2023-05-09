@@ -12,6 +12,7 @@ public class UpdateApiCacheRequestBody {
      */
     @JsonProperty("apiCachingBehavior")
     public UpdateApiCacheRequestBodyApiCachingBehaviorEnum apiCachingBehavior;
+
     public UpdateApiCacheRequestBody withApiCachingBehavior(UpdateApiCacheRequestBodyApiCachingBehaviorEnum apiCachingBehavior) {
         this.apiCachingBehavior = apiCachingBehavior;
         return this;
@@ -22,6 +23,7 @@ public class UpdateApiCacheRequestBody {
      */
     @JsonProperty("ttl")
     public Long ttl;
+
     public UpdateApiCacheRequestBody withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -32,9 +34,15 @@ public class UpdateApiCacheRequestBody {
      */
     @JsonProperty("type")
     public UpdateApiCacheRequestBodyTypeEnum type;
+
     public UpdateApiCacheRequestBody withType(UpdateApiCacheRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateApiCacheRequestBody(@JsonProperty("apiCachingBehavior") UpdateApiCacheRequestBodyApiCachingBehaviorEnum apiCachingBehavior, @JsonProperty("ttl") Long ttl, @JsonProperty("type") UpdateApiCacheRequestBodyTypeEnum type) {
+        this.apiCachingBehavior = apiCachingBehavior;
+        this.ttl = ttl;
+        this.type = type;
+  }
 }

@@ -18,9 +18,11 @@ public class ApigatewayBackendConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleServiceAccount")
     public String googleServiceAccount;
+
     public ApigatewayBackendConfig withGoogleServiceAccount(String googleServiceAccount) {
         this.googleServiceAccount = googleServiceAccount;
         return this;
     }
     
+    public ApigatewayBackendConfig(){}
 }

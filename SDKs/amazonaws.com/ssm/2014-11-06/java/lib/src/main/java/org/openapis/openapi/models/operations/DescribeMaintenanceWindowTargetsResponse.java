@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMaintenanceWindowTargetsResponse {
     
     public String contentType;
+
     public DescribeMaintenanceWindowTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMaintenanceWindowTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMaintenanceWindowTargetsResult describeMaintenanceWindowTargetsResult;
+
     public DescribeMaintenanceWindowTargetsResponse withDescribeMaintenanceWindowTargetsResult(org.openapis.openapi.models.shared.DescribeMaintenanceWindowTargetsResult describeMaintenanceWindowTargetsResult) {
         this.describeMaintenanceWindowTargetsResult = describeMaintenanceWindowTargetsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMaintenanceWindowTargetsResponse {
      */
     
     public Object doesNotExistException;
+
     public DescribeMaintenanceWindowTargetsResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMaintenanceWindowTargetsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMaintenanceWindowTargetsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMaintenanceWindowTargetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeMaintenanceWindowTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeMaintenanceWindowTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMaintenanceWindowTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMaintenanceWindowTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

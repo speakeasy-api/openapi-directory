@@ -20,6 +20,7 @@ public class NotebookExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EditorId")
     public String editorId;
+
     public NotebookExecutionSummary withEditorId(String editorId) {
         this.editorId = editorId;
         return this;
@@ -30,6 +31,7 @@ public class NotebookExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public NotebookExecutionSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class NotebookExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecutionId")
     public String notebookExecutionId;
+
     public NotebookExecutionSummary withNotebookExecutionId(String notebookExecutionId) {
         this.notebookExecutionId = notebookExecutionId;
         return this;
@@ -46,6 +49,7 @@ public class NotebookExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecutionName")
     public String notebookExecutionName;
+
     public NotebookExecutionSummary withNotebookExecutionName(String notebookExecutionName) {
         this.notebookExecutionName = notebookExecutionName;
         return this;
@@ -56,6 +60,7 @@ public class NotebookExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public NotebookExecutionSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -64,9 +69,11 @@ public class NotebookExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public NotebookExecutionStatusEnum status;
+
     public NotebookExecutionSummary withStatus(NotebookExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public NotebookExecutionSummary(){}
 }

@@ -15,6 +15,7 @@ public class DataProcessing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFilter")
     public String inputFilter;
+
     public DataProcessing withInputFilter(String inputFilter) {
         this.inputFilter = inputFilter;
         return this;
@@ -23,6 +24,7 @@ public class DataProcessing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JoinSource")
     public JoinSourceEnum joinSource;
+
     public DataProcessing withJoinSource(JoinSourceEnum joinSource) {
         this.joinSource = joinSource;
         return this;
@@ -31,9 +33,11 @@ public class DataProcessing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputFilter")
     public String outputFilter;
+
     public DataProcessing withOutputFilter(String outputFilter) {
         this.outputFilter = outputFilter;
         return this;
     }
     
+    public DataProcessing(){}
 }

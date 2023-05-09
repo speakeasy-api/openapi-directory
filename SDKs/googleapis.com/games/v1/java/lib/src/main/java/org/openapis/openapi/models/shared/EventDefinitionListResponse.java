@@ -18,6 +18,7 @@ public class EventDefinitionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public EventDefinition[] items;
+
     public EventDefinitionListResponse withItems(EventDefinition[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class EventDefinitionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventDefinitionListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class EventDefinitionListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public EventDefinitionListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public EventDefinitionListResponse(){}
 }

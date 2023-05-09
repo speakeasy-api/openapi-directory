@@ -18,9 +18,11 @@ public class DeleteReportDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseMessage")
     public String responseMessage;
+
     public DeleteReportDefinitionResponse withResponseMessage(String responseMessage) {
         this.responseMessage = responseMessage;
         return this;
     }
     
+    public DeleteReportDefinitionResponse(){}
 }

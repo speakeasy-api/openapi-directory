@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSourceServerResponse {
@@ -12,6 +13,7 @@ public class DeleteSourceServerResponse {
      */
     
     public Object conflictException;
+
     public DeleteSourceServerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSourceServerResponse {
     
     
     public String contentType;
+
     public DeleteSourceServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSourceServerResponse {
      */
     
     public java.util.Map<String, Object> deleteSourceServerResponse;
+
     public DeleteSourceServerResponse withDeleteSourceServerResponse(java.util.Map<String, Object> deleteSourceServerResponse) {
         this.deleteSourceServerResponse = deleteSourceServerResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSourceServerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSourceServerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSourceServerResponse {
     
     
     public Integer statusCode;
+
     public DeleteSourceServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSourceServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSourceServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteSourceServerResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DeleteSourceServerResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DeleteSourceServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

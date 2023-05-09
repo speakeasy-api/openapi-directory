@@ -15,9 +15,13 @@ public class ItvCancelSubscriptionRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvCancelSubscriptionRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvCancelSubscriptionRequest(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

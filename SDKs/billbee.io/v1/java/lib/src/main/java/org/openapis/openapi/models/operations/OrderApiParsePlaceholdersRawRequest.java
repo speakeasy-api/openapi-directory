@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiParsePlaceholdersRawRequest {
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public OrderApiParsePlaceholdersRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class OrderApiParsePlaceholdersRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiParsePlaceholdersRawRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OrderApiParsePlaceholdersRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("id") Long id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

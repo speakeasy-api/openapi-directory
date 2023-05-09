@@ -15,6 +15,7 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoConfigEnabled")
     public Boolean autoConfigEnabled;
+
     public ApplicationInfo withAutoConfigEnabled(Boolean autoConfigEnabled) {
         this.autoConfigEnabled = autoConfigEnabled;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CWEMonitorEnabled")
     public Boolean cweMonitorEnabled;
+
     public ApplicationInfo withCWEMonitorEnabled(Boolean cweMonitorEnabled) {
         this.cweMonitorEnabled = cweMonitorEnabled;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscoveryType")
     public DiscoveryTypeEnum discoveryType;
+
     public ApplicationInfo withDiscoveryType(DiscoveryTypeEnum discoveryType) {
         this.discoveryType = discoveryType;
         return this;
@@ -39,6 +42,7 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifeCycle")
     public String lifeCycle;
+
     public ApplicationInfo withLifeCycle(String lifeCycle) {
         this.lifeCycle = lifeCycle;
         return this;
@@ -47,6 +51,7 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsCenterEnabled")
     public Boolean opsCenterEnabled;
+
     public ApplicationInfo withOpsCenterEnabled(Boolean opsCenterEnabled) {
         this.opsCenterEnabled = opsCenterEnabled;
         return this;
@@ -55,6 +60,7 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemSNSTopicArn")
     public String opsItemSNSTopicArn;
+
     public ApplicationInfo withOpsItemSNSTopicArn(String opsItemSNSTopicArn) {
         this.opsItemSNSTopicArn = opsItemSNSTopicArn;
         return this;
@@ -63,6 +69,7 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Remarks")
     public String remarks;
+
     public ApplicationInfo withRemarks(String remarks) {
         this.remarks = remarks;
         return this;
@@ -71,9 +78,11 @@ public class ApplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public ApplicationInfo withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public ApplicationInfo(){}
 }

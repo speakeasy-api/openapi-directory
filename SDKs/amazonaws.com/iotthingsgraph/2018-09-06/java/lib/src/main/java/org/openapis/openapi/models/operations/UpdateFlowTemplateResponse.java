@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFlowTemplateResponse {
     
     public String contentType;
+
     public UpdateFlowTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFlowTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateFlowTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFlowTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFlowTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFlowTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFlowTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateFlowTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateFlowTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFlowTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFlowTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFlowTemplateResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFlowTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateFlowTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFlowTemplateResponse updateFlowTemplateResponse;
+
     public UpdateFlowTemplateResponse withUpdateFlowTemplateResponse(org.openapis.openapi.models.shared.UpdateFlowTemplateResponse updateFlowTemplateResponse) {
         this.updateFlowTemplateResponse = updateFlowTemplateResponse;
         return this;
     }
     
+    public UpdateFlowTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

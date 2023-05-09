@@ -21,6 +21,7 @@ public class GetAnnotationStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetAnnotationStoreResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("description")
     public String description;
+
     public GetAnnotationStoreResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetAnnotationStoreResponse withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetAnnotationStoreResponse withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +53,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("reference")
     public ReferenceItem reference;
+
     public GetAnnotationStoreResponse withReference(ReferenceItem reference) {
         this.reference = reference;
         return this;
@@ -56,6 +61,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("sseConfig")
     public SseConfig sseConfig;
+
     public GetAnnotationStoreResponse withSseConfig(SseConfig sseConfig) {
         this.sseConfig = sseConfig;
         return this;
@@ -63,6 +69,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public GetAnnotationStoreResponse withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +77,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetAnnotationStoreResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -77,6 +85,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("storeArn")
     public String storeArn;
+
     public GetAnnotationStoreResponse withStoreArn(String storeArn) {
         this.storeArn = storeArn;
         return this;
@@ -85,6 +94,7 @@ public class GetAnnotationStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeFormat")
     public StoreFormatEnum storeFormat;
+
     public GetAnnotationStoreResponse withStoreFormat(StoreFormatEnum storeFormat) {
         this.storeFormat = storeFormat;
         return this;
@@ -93,6 +103,7 @@ public class GetAnnotationStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeOptions")
     public StoreOptions storeOptions;
+
     public GetAnnotationStoreResponse withStoreOptions(StoreOptions storeOptions) {
         this.storeOptions = storeOptions;
         return this;
@@ -100,6 +111,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("storeSizeBytes")
     public Long storeSizeBytes;
+
     public GetAnnotationStoreResponse withStoreSizeBytes(Long storeSizeBytes) {
         this.storeSizeBytes = storeSizeBytes;
         return this;
@@ -107,6 +119,7 @@ public class GetAnnotationStoreResponse {
     
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetAnnotationStoreResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -116,9 +129,24 @@ public class GetAnnotationStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public GetAnnotationStoreResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetAnnotationStoreResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("reference") ReferenceItem reference, @JsonProperty("sseConfig") SseConfig sseConfig, @JsonProperty("status") StoreStatusEnum status, @JsonProperty("statusMessage") String statusMessage, @JsonProperty("storeArn") String storeArn, @JsonProperty("storeSizeBytes") Long storeSizeBytes, @JsonProperty("tags") java.util.Map<String, String> tags, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.creationTime = creationTime;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.reference = reference;
+        this.sseConfig = sseConfig;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.storeArn = storeArn;
+        this.storeSizeBytes = storeSizeBytes;
+        this.tags = tags;
+        this.updateTime = updateTime;
+  }
 }

@@ -12,6 +12,7 @@ public class Term {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_date")
     public String endDate;
+
     public Term withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -20,6 +21,7 @@ public class Term {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Term withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class Term {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_date")
     public String startDate;
+
     public Term withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public Term(){}
 }

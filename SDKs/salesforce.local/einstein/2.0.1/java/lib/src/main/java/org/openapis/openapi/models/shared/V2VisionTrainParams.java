@@ -18,6 +18,7 @@ public class V2VisionTrainParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainSplitRatio")
     public Float trainSplitRatio;
+
     public V2VisionTrainParams withTrainSplitRatio(Float trainSplitRatio) {
         this.trainSplitRatio = trainSplitRatio;
         return this;
@@ -29,6 +30,7 @@ public class V2VisionTrainParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withFeedback")
     public Boolean withFeedback;
+
     public V2VisionTrainParams withWithFeedback(Boolean withFeedback) {
         this.withFeedback = withFeedback;
         return this;
@@ -40,9 +42,11 @@ public class V2VisionTrainParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withGlobalDatasetId")
     public Long withGlobalDatasetId;
+
     public V2VisionTrainParams withWithGlobalDatasetId(Long withGlobalDatasetId) {
         this.withGlobalDatasetId = withGlobalDatasetId;
         return this;
     }
     
+    public V2VisionTrainParams(){}
 }

@@ -18,6 +18,7 @@ public class SequenceEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cache")
     public String cache;
+
     public SequenceEntity withCache(String cache) {
         this.cache = cache;
         return this;
@@ -29,6 +30,7 @@ public class SequenceEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public SequenceEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -40,6 +42,7 @@ public class SequenceEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Boolean cycle;
+
     public SequenceEntity withCycle(Boolean cycle) {
         this.cycle = cycle;
         return this;
@@ -51,6 +54,7 @@ public class SequenceEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("increment")
     public String increment;
+
     public SequenceEntity withIncrement(String increment) {
         this.increment = increment;
         return this;
@@ -62,6 +66,7 @@ public class SequenceEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public String maxValue;
+
     public SequenceEntity withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -73,6 +78,7 @@ public class SequenceEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public String minValue;
+
     public SequenceEntity withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
@@ -84,9 +90,11 @@ public class SequenceEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startValue")
     public String startValue;
+
     public SequenceEntity withStartValue(String startValue) {
         this.startValue = startValue;
         return this;
     }
     
+    public SequenceEntity(){}
 }

@@ -15,6 +15,7 @@ public class StudioEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public StudioEncryptionConfiguration withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -22,9 +23,13 @@ public class StudioEncryptionConfiguration {
     
     @JsonProperty("keyType")
     public StudioEncryptionConfigurationKeyTypeEnum keyType;
+
     public StudioEncryptionConfiguration withKeyType(StudioEncryptionConfigurationKeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
     }
     
+    public StudioEncryptionConfiguration(@JsonProperty("keyType") StudioEncryptionConfigurationKeyTypeEnum keyType) {
+        this.keyType = keyType;
+  }
 }

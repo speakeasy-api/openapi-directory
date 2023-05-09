@@ -60,11 +60,9 @@ public class Priorities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrioritiesResponse res = new org.openapis.openapi.models.operations.GetPrioritiesResponse() {{
+        org.openapis.openapi.models.operations.GetPrioritiesResponse res = new org.openapis.openapi.models.operations.GetPrioritiesResponse(contentType, httpRes.statusCode()) {{
             priorityEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

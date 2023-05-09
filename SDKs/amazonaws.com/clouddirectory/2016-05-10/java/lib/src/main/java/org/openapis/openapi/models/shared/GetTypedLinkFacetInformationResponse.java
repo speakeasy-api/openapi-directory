@@ -15,9 +15,11 @@ public class GetTypedLinkFacetInformationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityAttributeOrder")
     public String[] identityAttributeOrder;
+
     public GetTypedLinkFacetInformationResponse withIdentityAttributeOrder(String[] identityAttributeOrder) {
         this.identityAttributeOrder = identityAttributeOrder;
         return this;
     }
     
+    public GetTypedLinkFacetInformationResponse(){}
 }

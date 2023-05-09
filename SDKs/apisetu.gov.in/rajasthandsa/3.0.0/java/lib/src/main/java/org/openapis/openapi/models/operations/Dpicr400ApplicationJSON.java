@@ -15,6 +15,7 @@ public class Dpicr400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Dpicr400ApplicationJSONErrorEnum error;
+
     public Dpicr400ApplicationJSON withError(Dpicr400ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Dpicr400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Dpicr400ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Dpicr400ApplicationJSON withErrorDescription(Dpicr400ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Dpicr400ApplicationJSON(){}
 }

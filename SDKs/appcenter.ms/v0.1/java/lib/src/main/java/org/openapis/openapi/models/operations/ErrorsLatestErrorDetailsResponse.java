@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsLatestErrorDetailsResponse {
     
     public String contentType;
+
     public ErrorsLatestErrorDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsLatestErrorDetailsResponse {
      */
     
     public ErrorsLatestErrorDetails200ApplicationJSON errorsLatestErrorDetails200ApplicationJSONObject;
+
     public ErrorsLatestErrorDetailsResponse withErrorsLatestErrorDetails200ApplicationJSONObject(ErrorsLatestErrorDetails200ApplicationJSON errorsLatestErrorDetails200ApplicationJSONObject) {
         this.errorsLatestErrorDetails200ApplicationJSONObject = errorsLatestErrorDetails200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsLatestErrorDetailsResponse {
      */
     
     public ErrorsLatestErrorDetailsDefaultApplicationJSON errorsLatestErrorDetailsDefaultApplicationJSONObject;
+
     public ErrorsLatestErrorDetailsResponse withErrorsLatestErrorDetailsDefaultApplicationJSONObject(ErrorsLatestErrorDetailsDefaultApplicationJSON errorsLatestErrorDetailsDefaultApplicationJSONObject) {
         this.errorsLatestErrorDetailsDefaultApplicationJSONObject = errorsLatestErrorDetailsDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsLatestErrorDetailsResponse {
     
     
     public Integer statusCode;
+
     public ErrorsLatestErrorDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsLatestErrorDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsLatestErrorDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsLatestErrorDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

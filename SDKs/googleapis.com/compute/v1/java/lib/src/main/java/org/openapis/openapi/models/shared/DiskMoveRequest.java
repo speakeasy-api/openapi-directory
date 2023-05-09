@@ -15,6 +15,7 @@ public class DiskMoveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationZone")
     public String destinationZone;
+
     public DiskMoveRequest withDestinationZone(String destinationZone) {
         this.destinationZone = destinationZone;
         return this;
@@ -26,9 +27,11 @@ public class DiskMoveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDisk")
     public String targetDisk;
+
     public DiskMoveRequest withTargetDisk(String targetDisk) {
         this.targetDisk = targetDisk;
         return this;
     }
     
+    public DiskMoveRequest(){}
 }

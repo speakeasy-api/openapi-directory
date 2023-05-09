@@ -18,6 +18,7 @@ public class ListPlaceActionLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPlaceActionLinksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPlaceActionLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeActionLinks")
     public PlaceActionLink[] placeActionLinks;
+
     public ListPlaceActionLinksResponse withPlaceActionLinks(PlaceActionLink[] placeActionLinks) {
         this.placeActionLinks = placeActionLinks;
         return this;
     }
     
+    public ListPlaceActionLinksResponse(){}
 }

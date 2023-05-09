@@ -18,9 +18,11 @@ public class ExternalGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public ExternalGroupsGroups[] groups;
+
     public ExternalGroups withGroups(ExternalGroupsGroups[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public ExternalGroups(){}
 }

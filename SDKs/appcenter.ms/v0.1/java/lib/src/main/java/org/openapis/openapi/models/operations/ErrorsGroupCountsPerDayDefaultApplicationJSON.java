@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorsGroupCountsPerDayDefaultApplicationJSON {
     @JsonProperty("error")
     public ErrorsGroupCountsPerDayDefaultApplicationJSONError error;
+
     public ErrorsGroupCountsPerDayDefaultApplicationJSON withError(ErrorsGroupCountsPerDayDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public ErrorsGroupCountsPerDayDefaultApplicationJSON(@JsonProperty("error") ErrorsGroupCountsPerDayDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1ListUserEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRecommendationengineV1beta1ListUserEventsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1ListUserEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEvents")
     public GoogleCloudRecommendationengineV1beta1UserEvent[] userEvents;
+
     public GoogleCloudRecommendationengineV1beta1ListUserEventsResponse withUserEvents(GoogleCloudRecommendationengineV1beta1UserEvent[] userEvents) {
         this.userEvents = userEvents;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1ListUserEventsResponse(){}
 }

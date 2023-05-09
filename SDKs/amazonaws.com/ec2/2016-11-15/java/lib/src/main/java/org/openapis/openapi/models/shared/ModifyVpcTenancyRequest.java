@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcTenancyRequest {
     
     public Boolean dryRun;
+
     public ModifyVpcTenancyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcTenancyRequest {
     
     
     public VpcTenancyEnum instanceTenancy;
+
     public ModifyVpcTenancyRequest withInstanceTenancy(VpcTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -23,9 +25,14 @@ public class ModifyVpcTenancyRequest {
     
     
     public String vpcId;
+
     public ModifyVpcTenancyRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ModifyVpcTenancyRequest(@JsonProperty("InstanceTenancy") VpcTenancyEnum instanceTenancy, @JsonProperty("VpcId") String vpcId) {
+        this.instanceTenancy = instanceTenancy;
+        this.vpcId = vpcId;
+  }
 }

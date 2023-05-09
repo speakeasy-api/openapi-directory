@@ -12,6 +12,7 @@ public class AddOrReplaceDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public AddOrReplaceDocumentsRequestBody withAuthor(String author) {
         this.author = author;
         return this;
@@ -20,6 +21,7 @@ public class AddOrReplaceDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genre")
     public String genre;
+
     public AddOrReplaceDocumentsRequestBody withGenre(String genre) {
         this.genre = genre;
         return this;
@@ -28,6 +30,7 @@ public class AddOrReplaceDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public AddOrReplaceDocumentsRequestBody withId(Double id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class AddOrReplaceDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public AddOrReplaceDocumentsRequestBody withPrice(Double price) {
         this.price = price;
         return this;
@@ -44,9 +48,11 @@ public class AddOrReplaceDocumentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AddOrReplaceDocumentsRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AddOrReplaceDocumentsRequestBody(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupRulesRequestFilters {
     
     public String name;
+
     public DescribeSecurityGroupRulesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSecurityGroupRulesRequestFilters {
     
     
     public String[] values;
+
     public DescribeSecurityGroupRulesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeSecurityGroupRulesRequestFilters(){}
 }

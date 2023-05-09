@@ -15,6 +15,7 @@ public class Language {
      */
     @JsonProperty("code")
     public String code;
+
     public Language withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class Language {
      */
     @JsonProperty("name")
     public String name;
+
     public Language withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,15 @@ public class Language {
      */
     @JsonProperty("nativeName")
     public String nativeName;
+
     public Language withNativeName(String nativeName) {
         this.nativeName = nativeName;
         return this;
     }
     
+    public Language(@JsonProperty("code") String code, @JsonProperty("name") String name, @JsonProperty("nativeName") String nativeName) {
+        this.code = code;
+        this.name = name;
+        this.nativeName = nativeName;
+  }
 }

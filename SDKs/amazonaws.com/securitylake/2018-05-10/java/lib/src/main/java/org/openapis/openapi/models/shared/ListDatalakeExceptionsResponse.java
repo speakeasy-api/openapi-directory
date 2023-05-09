@@ -15,6 +15,7 @@ public class ListDatalakeExceptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDatalakeExceptionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListDatalakeExceptionsResponse {
     
     @JsonProperty("nonRetryableFailures")
     public FailuresResponse[] nonRetryableFailures;
+
     public ListDatalakeExceptionsResponse withNonRetryableFailures(FailuresResponse[] nonRetryableFailures) {
         this.nonRetryableFailures = nonRetryableFailures;
         return this;
     }
     
+    public ListDatalakeExceptionsResponse(@JsonProperty("nonRetryableFailures") FailuresResponse[] nonRetryableFailures) {
+        this.nonRetryableFailures = nonRetryableFailures;
+  }
 }

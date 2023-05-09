@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityMailFromDomainAttributesResponse - Represents the custom MAIL FROM attributes for a list of identities.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityMailFromDomainAttributesResponse {
     
     public java.util.Map<String, IdentityMailFromDomainAttributes> mailFromDomainAttributes;
+
     public GetIdentityMailFromDomainAttributesResponse withMailFromDomainAttributes(java.util.Map<String, IdentityMailFromDomainAttributes> mailFromDomainAttributes) {
         this.mailFromDomainAttributes = mailFromDomainAttributes;
         return this;
     }
     
+    public GetIdentityMailFromDomainAttributesResponse(@JsonProperty("MailFromDomainAttributes") java.util.Map<String, IdentityMailFromDomainAttributes> mailFromDomainAttributes) {
+        this.mailFromDomainAttributes = mailFromDomainAttributes;
+  }
 }

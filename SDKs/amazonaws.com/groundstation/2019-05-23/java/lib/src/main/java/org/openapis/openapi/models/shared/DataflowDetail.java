@@ -18,6 +18,7 @@ public class DataflowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Destination destination;
+
     public DataflowDetail withDestination(Destination destination) {
         this.destination = destination;
         return this;
@@ -26,6 +27,7 @@ public class DataflowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public DataflowDetail withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -37,9 +39,11 @@ public class DataflowDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public DataflowDetail withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public DataflowDetail(){}
 }

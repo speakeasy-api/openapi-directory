@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configs")
     public GoogleFirebaseAppcheckV1betaRecaptchaConfig[] configs;
+
     public GoogleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse withConfigs(GoogleFirebaseAppcheckV1betaRecaptchaConfig[] configs) {
         this.configs = configs;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaBatchGetRecaptchaConfigsResponse(){}
 }

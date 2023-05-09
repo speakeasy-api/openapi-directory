@@ -12,6 +12,7 @@ public class CreateProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public CreateProvisionedProductPlanInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class CreateProvisionedProductPlanInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateProvisionedProductPlanInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -27,6 +29,7 @@ public class CreateProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationArns")
     public String[] notificationArns;
+
     public CreateProvisionedProductPlanInput withNotificationArns(String[] notificationArns) {
         this.notificationArns = notificationArns;
         return this;
@@ -35,6 +38,7 @@ public class CreateProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PathId")
     public String pathId;
+
     public CreateProvisionedProductPlanInput withPathId(String pathId) {
         this.pathId = pathId;
         return this;
@@ -42,6 +46,7 @@ public class CreateProvisionedProductPlanInput {
     
     @JsonProperty("PlanName")
     public String planName;
+
     public CreateProvisionedProductPlanInput withPlanName(String planName) {
         this.planName = planName;
         return this;
@@ -49,6 +54,7 @@ public class CreateProvisionedProductPlanInput {
     
     @JsonProperty("PlanType")
     public ProvisionedProductPlanTypeEnum planType;
+
     public CreateProvisionedProductPlanInput withPlanType(ProvisionedProductPlanTypeEnum planType) {
         this.planType = planType;
         return this;
@@ -56,6 +62,7 @@ public class CreateProvisionedProductPlanInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public CreateProvisionedProductPlanInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -63,6 +70,7 @@ public class CreateProvisionedProductPlanInput {
     
     @JsonProperty("ProvisionedProductName")
     public String provisionedProductName;
+
     public CreateProvisionedProductPlanInput withProvisionedProductName(String provisionedProductName) {
         this.provisionedProductName = provisionedProductName;
         return this;
@@ -70,6 +78,7 @@ public class CreateProvisionedProductPlanInput {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public CreateProvisionedProductPlanInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -78,6 +87,7 @@ public class CreateProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningParameters")
     public UpdateProvisioningParameter[] provisioningParameters;
+
     public CreateProvisionedProductPlanInput withProvisioningParameters(UpdateProvisioningParameter[] provisioningParameters) {
         this.provisioningParameters = provisioningParameters;
         return this;
@@ -86,9 +96,18 @@ public class CreateProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateProvisionedProductPlanInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProvisionedProductPlanInput(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("PlanName") String planName, @JsonProperty("PlanType") ProvisionedProductPlanTypeEnum planType, @JsonProperty("ProductId") String productId, @JsonProperty("ProvisionedProductName") String provisionedProductName, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId) {
+        this.idempotencyToken = idempotencyToken;
+        this.planName = planName;
+        this.planType = planType;
+        this.productId = productId;
+        this.provisionedProductName = provisionedProductName;
+        this.provisioningArtifactId = provisioningArtifactId;
+  }
 }

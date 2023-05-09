@@ -15,6 +15,7 @@ public class RegistrationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RegistrationOutput withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class RegistrationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public RegistrationOutput withResult(String result) {
         this.result = result;
         return this;
@@ -31,9 +33,11 @@ public class RegistrationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExecutionStatusEnum status;
+
     public RegistrationOutput withStatus(ExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RegistrationOutput(){}
 }

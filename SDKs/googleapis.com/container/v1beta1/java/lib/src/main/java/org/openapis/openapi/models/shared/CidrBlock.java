@@ -18,6 +18,7 @@ public class CidrBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidrBlock")
     public String cidrBlock;
+
     public CidrBlock withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -29,9 +30,11 @@ public class CidrBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CidrBlock withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public CidrBlock(){}
 }

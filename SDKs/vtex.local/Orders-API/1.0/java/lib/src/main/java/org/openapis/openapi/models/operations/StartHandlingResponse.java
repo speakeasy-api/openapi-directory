@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartHandlingResponse {
     
     public String contentType;
+
     public StartHandlingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartHandlingResponse {
      */
     
     public StartHandling401ApplicationJSON startHandling401ApplicationJSONObject;
+
     public StartHandlingResponse withStartHandling401ApplicationJSONObject(StartHandling401ApplicationJSON startHandling401ApplicationJSONObject) {
         this.startHandling401ApplicationJSONObject = startHandling401ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class StartHandlingResponse {
      */
     
     public StartHandling409ApplicationJSON startHandling409ApplicationJSONObject;
+
     public StartHandlingResponse withStartHandling409ApplicationJSONObject(StartHandling409ApplicationJSON startHandling409ApplicationJSONObject) {
         this.startHandling409ApplicationJSONObject = startHandling409ApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class StartHandlingResponse {
     
     
     public Integer statusCode;
+
     public StartHandlingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class StartHandlingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartHandlingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartHandlingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

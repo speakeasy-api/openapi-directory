@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CorridorResponse {
     
     public String contentType;
+
     public CorridorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CorridorResponse {
      */
     
     public org.openapis.openapi.models.shared.CorridorOut corridorOut;
+
     public CorridorResponse withCorridorOut(org.openapis.openapi.models.shared.CorridorOut corridorOut) {
         this.corridorOut = corridorOut;
         return this;
@@ -26,6 +29,7 @@ public class CorridorResponse {
     
     
     public Integer statusCode;
+
     public CorridorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CorridorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CorridorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CorridorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

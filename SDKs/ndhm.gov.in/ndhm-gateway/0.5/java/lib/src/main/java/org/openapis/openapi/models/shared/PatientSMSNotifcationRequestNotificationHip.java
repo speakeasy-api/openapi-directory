@@ -14,6 +14,7 @@ public class PatientSMSNotifcationRequestNotificationHip {
      */
     @JsonProperty("id")
     public String id;
+
     public PatientSMSNotifcationRequestNotificationHip withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,13 @@ public class PatientSMSNotifcationRequestNotificationHip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatientSMSNotifcationRequestNotificationHip withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PatientSMSNotifcationRequestNotificationHip(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

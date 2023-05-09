@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContainersUsageRequest {
@@ -12,6 +13,7 @@ public class GetContainersUsageRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public GetContainersUsageRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -22,9 +24,14 @@ public class GetContainersUsageRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public GetContainersUsageRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
     }
     
+    public GetContainersUsageRequest(@JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken) {
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WxByDistanceUsV1WxForecastDistanceQueryPostResponse {
     
     public String contentType;
+
     public WxByDistanceUsV1WxForecastDistanceQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WxByDistanceUsV1WxForecastDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public WxByDistanceUsV1WxForecastDistanceQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class WxByDistanceUsV1WxForecastDistanceQueryPostResponse {
     
     
     public Integer statusCode;
+
     public WxByDistanceUsV1WxForecastDistanceQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class WxByDistanceUsV1WxForecastDistanceQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WxByDistanceUsV1WxForecastDistanceQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class WxByDistanceUsV1WxForecastDistanceQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.WxDistanceResponse wxDistanceResponse;
+
     public WxByDistanceUsV1WxForecastDistanceQueryPostResponse withWxDistanceResponse(org.openapis.openapi.models.shared.WxDistanceResponse wxDistanceResponse) {
         this.wxDistanceResponse = wxDistanceResponse;
         return this;
     }
     
+    public WxByDistanceUsV1WxForecastDistanceQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

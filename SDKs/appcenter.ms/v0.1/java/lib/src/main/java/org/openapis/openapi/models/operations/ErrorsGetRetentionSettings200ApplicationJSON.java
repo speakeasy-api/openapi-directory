@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorsGetRetentionSettings200ApplicationJSON {
     @JsonProperty("retention_in_days")
     public ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum retentionInDays;
+
     public ErrorsGetRetentionSettings200ApplicationJSON withRetentionInDays(ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum retentionInDays) {
         this.retentionInDays = retentionInDays;
         return this;
     }
     
+    public ErrorsGetRetentionSettings200ApplicationJSON(@JsonProperty("retention_in_days") ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum retentionInDays) {
+        this.retentionInDays = retentionInDays;
+  }
 }

@@ -15,6 +15,7 @@ public class PsprtRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PsprtRequestBodyCertificateParameters certificateParameters;
+
     public PsprtRequestBody withCertificateParameters(PsprtRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PsprtRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PsprtRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PsprtRequestBody {
      */
     @JsonProperty("format")
     public PsprtRequestBodyFormatEnum format;
+
     public PsprtRequestBody withFormat(PsprtRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PsprtRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PsprtRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PsprtRequestBody(@JsonProperty("format") PsprtRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -15,6 +15,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
     public LambdaExecutionParameters withEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -23,6 +24,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventSources")
     public LambdaEventSource[] eventSources;
+
     public LambdaExecutionParameters withEventSources(LambdaEventSource[] eventSources) {
         this.eventSources = eventSources;
         return this;
@@ -31,6 +33,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execArgs")
     public String[] execArgs;
+
     public LambdaExecutionParameters withExecArgs(String[] execArgs) {
         this.execArgs = execArgs;
         return this;
@@ -39,6 +42,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputPayloadEncodingType")
     public LambdaInputPayloadEncodingTypeEnum inputPayloadEncodingType;
+
     public LambdaExecutionParameters withInputPayloadEncodingType(LambdaInputPayloadEncodingTypeEnum inputPayloadEncodingType) {
         this.inputPayloadEncodingType = inputPayloadEncodingType;
         return this;
@@ -47,6 +51,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxProcessParams")
     public LambdaLinuxProcessParams linuxProcessParams;
+
     public LambdaExecutionParameters withLinuxProcessParams(LambdaLinuxProcessParams linuxProcessParams) {
         this.linuxProcessParams = linuxProcessParams;
         return this;
@@ -55,6 +60,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIdleTimeInSeconds")
     public Long maxIdleTimeInSeconds;
+
     public LambdaExecutionParameters withMaxIdleTimeInSeconds(Long maxIdleTimeInSeconds) {
         this.maxIdleTimeInSeconds = maxIdleTimeInSeconds;
         return this;
@@ -63,6 +69,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxInstancesCount")
     public Long maxInstancesCount;
+
     public LambdaExecutionParameters withMaxInstancesCount(Long maxInstancesCount) {
         this.maxInstancesCount = maxInstancesCount;
         return this;
@@ -71,6 +78,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxQueueSize")
     public Long maxQueueSize;
+
     public LambdaExecutionParameters withMaxQueueSize(Long maxQueueSize) {
         this.maxQueueSize = maxQueueSize;
         return this;
@@ -79,6 +87,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinned")
     public Boolean pinned;
+
     public LambdaExecutionParameters withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -87,6 +96,7 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusTimeoutInSeconds")
     public Long statusTimeoutInSeconds;
+
     public LambdaExecutionParameters withStatusTimeoutInSeconds(Long statusTimeoutInSeconds) {
         this.statusTimeoutInSeconds = statusTimeoutInSeconds;
         return this;
@@ -95,9 +105,11 @@ public class LambdaExecutionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public LambdaExecutionParameters withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public LambdaExecutionParameters(){}
 }

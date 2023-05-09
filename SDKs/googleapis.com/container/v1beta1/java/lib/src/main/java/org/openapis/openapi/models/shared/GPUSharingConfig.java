@@ -18,6 +18,7 @@ public class GPUSharingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuSharingStrategy")
     public GPUSharingConfigGPUSharingStrategyEnum gpuSharingStrategy;
+
     public GPUSharingConfig withGpuSharingStrategy(GPUSharingConfigGPUSharingStrategyEnum gpuSharingStrategy) {
         this.gpuSharingStrategy = gpuSharingStrategy;
         return this;
@@ -29,9 +30,11 @@ public class GPUSharingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSharedClientsPerGpu")
     public String maxSharedClientsPerGpu;
+
     public GPUSharingConfig withMaxSharedClientsPerGpu(String maxSharedClientsPerGpu) {
         this.maxSharedClientsPerGpu = maxSharedClientsPerGpu;
         return this;
     }
     
+    public GPUSharingConfig(){}
 }

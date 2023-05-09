@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteTransactionResponse {
     
     public String contentType;
+
     public ExecuteTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExecuteTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteTransactionOutput executeTransactionOutput;
+
     public ExecuteTransactionResponse withExecuteTransactionOutput(org.openapis.openapi.models.shared.ExecuteTransactionOutput executeTransactionOutput) {
         this.executeTransactionOutput = executeTransactionOutput;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteTransactionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public ExecuteTransactionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteTransactionResponse {
      */
     
     public Object internalServerError;
+
     public ExecuteTransactionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class ExecuteTransactionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ExecuteTransactionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -59,6 +65,7 @@ public class ExecuteTransactionResponse {
      */
     
     public Object requestLimitExceeded;
+
     public ExecuteTransactionResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -69,6 +76,7 @@ public class ExecuteTransactionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ExecuteTransactionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ExecuteTransactionResponse {
     
     
     public Integer statusCode;
+
     public ExecuteTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ExecuteTransactionResponse {
      */
     
     public Object transactionCanceledException;
+
     public ExecuteTransactionResponse withTransactionCanceledException(Object transactionCanceledException) {
         this.transactionCanceledException = transactionCanceledException;
         return this;
@@ -103,9 +114,14 @@ public class ExecuteTransactionResponse {
      */
     
     public Object transactionInProgressException;
+
     public ExecuteTransactionResponse withTransactionInProgressException(Object transactionInProgressException) {
         this.transactionInProgressException = transactionInProgressException;
         return this;
     }
     
+    public ExecuteTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

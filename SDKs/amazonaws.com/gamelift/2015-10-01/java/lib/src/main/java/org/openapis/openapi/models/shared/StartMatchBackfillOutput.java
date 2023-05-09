@@ -15,9 +15,11 @@ public class StartMatchBackfillOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchmakingTicket")
     public MatchmakingTicket matchmakingTicket;
+
     public StartMatchBackfillOutput withMatchmakingTicket(MatchmakingTicket matchmakingTicket) {
         this.matchmakingTicket = matchmakingTicket;
         return this;
     }
     
+    public StartMatchBackfillOutput(){}
 }

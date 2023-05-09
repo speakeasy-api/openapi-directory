@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisassociateAssessmentReportEvidenceResponse {
@@ -12,6 +13,7 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisassociateAssessmentReportEvidenceResponse batchDisassociateAssessmentReportEvidenceResponse;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withBatchDisassociateAssessmentReportEvidenceResponse(org.openapis.openapi.models.shared.BatchDisassociateAssessmentReportEvidenceResponse batchDisassociateAssessmentReportEvidenceResponse) {
         this.batchDisassociateAssessmentReportEvidenceResponse = batchDisassociateAssessmentReportEvidenceResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
     
     
     public String contentType;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
      */
     
     public Object internalServerException;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
     
     
     public Integer statusCode;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class BatchDisassociateAssessmentReportEvidenceResponse {
      */
     
     public Object validationException;
+
     public BatchDisassociateAssessmentReportEvidenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDisassociateAssessmentReportEvidenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

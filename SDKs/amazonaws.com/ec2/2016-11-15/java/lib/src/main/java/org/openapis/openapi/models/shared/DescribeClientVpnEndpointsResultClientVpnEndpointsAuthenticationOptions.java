@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions {
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsActiveDirectory activeDirectory;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions withActiveDirectory(DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsActiveDirectory activeDirectory) {
         this.activeDirectory = activeDirectory;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOpt
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsFederatedAuthentication federatedAuthentication;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions withFederatedAuthentication(DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsFederatedAuthentication federatedAuthentication) {
         this.federatedAuthentication = federatedAuthentication;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOpt
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsMutualAuthentication mutualAuthentication;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions withMutualAuthentication(DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsMutualAuthentication mutualAuthentication) {
         this.mutualAuthentication = mutualAuthentication;
         return this;
@@ -33,9 +36,11 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOpt
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum type;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions withType(DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions(){}
 }

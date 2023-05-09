@@ -18,6 +18,7 @@ public class PerfSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleTime")
     public Timestamp sampleTime;
+
     public PerfSample withSampleTime(Timestamp sampleTime) {
         this.sampleTime = sampleTime;
         return this;
@@ -29,9 +30,11 @@ public class PerfSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public PerfSample withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public PerfSample(){}
 }

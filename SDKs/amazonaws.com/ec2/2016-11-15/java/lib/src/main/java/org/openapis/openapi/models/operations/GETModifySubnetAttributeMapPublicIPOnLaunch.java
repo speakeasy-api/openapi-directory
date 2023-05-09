@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifySubnetAttributeMapPublicIPOnLaunch {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifySubnetAttributeMapPublicIPOnLaunch withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifySubnetAttributeMapPublicIPOnLaunch(){}
 }

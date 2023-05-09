@@ -18,6 +18,7 @@ public class DetectedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public DetectedLanguage withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,9 +30,11 @@ public class DetectedLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public DetectedLanguage withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public DetectedLanguage(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateReceiptRuleRequest - Represents a request to create a receipt rule. You use receipt rules to receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateReceiptRuleRequest {
     
     public String after;
+
     public CreateReceiptRuleRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -19,6 +20,7 @@ public class CreateReceiptRuleRequest {
     
     
     public ReceiptRule rule;
+
     public CreateReceiptRuleRequest withRule(ReceiptRule rule) {
         this.rule = rule;
         return this;
@@ -26,9 +28,14 @@ public class CreateReceiptRuleRequest {
     
     
     public String ruleSetName;
+
     public CreateReceiptRuleRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public CreateReceiptRuleRequest(@JsonProperty("Rule") ReceiptRule rule, @JsonProperty("RuleSetName") String ruleSetName) {
+        this.rule = rule;
+        this.ruleSetName = ruleSetName;
+  }
 }

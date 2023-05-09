@@ -60,11 +60,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesListResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesListResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesListResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesListResponse(contentType, httpRes.statusCode()) {{
             listTablesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateResponse(contentType, httpRes.statusCode()) {{
             batchCreateRowsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateResponse(contentType, httpRes.statusCode()) {{
             batchUpdateRowsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateResponse(contentType, httpRes.statusCode()) {{
             row = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesRowsListResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsListResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesRowsListResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsListResponse(contentType, httpRes.statusCode()) {{
             listRowsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Tables {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchResponse() {{
+        org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchResponse res = new org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchResponse(contentType, httpRes.statusCode()) {{
             row = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

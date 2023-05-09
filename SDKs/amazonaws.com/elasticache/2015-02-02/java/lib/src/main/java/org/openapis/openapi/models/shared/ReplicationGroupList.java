@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReplicationGroupList {
     
     public String arn;
+
     public ReplicationGroupList withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class ReplicationGroupList {
     
     
     public Boolean atRestEncryptionEnabled;
+
     public ReplicationGroupList withAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
         this.atRestEncryptionEnabled = atRestEncryptionEnabled;
         return this;
@@ -26,6 +28,7 @@ public class ReplicationGroupList {
     
     
     public Boolean authTokenEnabled;
+
     public ReplicationGroupList withAuthTokenEnabled(Boolean authTokenEnabled) {
         this.authTokenEnabled = authTokenEnabled;
         return this;
@@ -33,6 +36,7 @@ public class ReplicationGroupList {
     
     
     public OffsetDateTime authTokenLastModifiedDate;
+
     public ReplicationGroupList withAuthTokenLastModifiedDate(OffsetDateTime authTokenLastModifiedDate) {
         this.authTokenLastModifiedDate = authTokenLastModifiedDate;
         return this;
@@ -40,6 +44,7 @@ public class ReplicationGroupList {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ReplicationGroupList withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -47,6 +52,7 @@ public class ReplicationGroupList {
     
     
     public AutomaticFailoverStatusEnum automaticFailover;
+
     public ReplicationGroupList withAutomaticFailover(AutomaticFailoverStatusEnum automaticFailover) {
         this.automaticFailover = automaticFailover;
         return this;
@@ -54,6 +60,7 @@ public class ReplicationGroupList {
     
     
     public String cacheNodeType;
+
     public ReplicationGroupList withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -61,6 +68,7 @@ public class ReplicationGroupList {
     
     
     public Boolean clusterEnabled;
+
     public ReplicationGroupList withClusterEnabled(Boolean clusterEnabled) {
         this.clusterEnabled = clusterEnabled;
         return this;
@@ -68,6 +76,7 @@ public class ReplicationGroupList {
     
     
     public Endpoint configurationEndpoint;
+
     public ReplicationGroupList withConfigurationEndpoint(Endpoint configurationEndpoint) {
         this.configurationEndpoint = configurationEndpoint;
         return this;
@@ -75,6 +84,7 @@ public class ReplicationGroupList {
     
     
     public DataTieringStatusEnum dataTiering;
+
     public ReplicationGroupList withDataTiering(DataTieringStatusEnum dataTiering) {
         this.dataTiering = dataTiering;
         return this;
@@ -82,6 +92,7 @@ public class ReplicationGroupList {
     
     
     public String description;
+
     public ReplicationGroupList withDescription(String description) {
         this.description = description;
         return this;
@@ -89,6 +100,7 @@ public class ReplicationGroupList {
     
     
     public GlobalReplicationGroupInfo globalReplicationGroupInfo;
+
     public ReplicationGroupList withGlobalReplicationGroupInfo(GlobalReplicationGroupInfo globalReplicationGroupInfo) {
         this.globalReplicationGroupInfo = globalReplicationGroupInfo;
         return this;
@@ -96,6 +108,7 @@ public class ReplicationGroupList {
     
     
     public IpDiscoveryEnum ipDiscovery;
+
     public ReplicationGroupList withIpDiscovery(IpDiscoveryEnum ipDiscovery) {
         this.ipDiscovery = ipDiscovery;
         return this;
@@ -103,6 +116,7 @@ public class ReplicationGroupList {
     
     
     public String kmsKeyId;
+
     public ReplicationGroupList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -110,6 +124,7 @@ public class ReplicationGroupList {
     
     
     public LogDeliveryConfigurationList[] logDeliveryConfigurations;
+
     public ReplicationGroupList withLogDeliveryConfigurations(LogDeliveryConfigurationList[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -117,6 +132,7 @@ public class ReplicationGroupList {
     
     
     public String[] memberClusters;
+
     public ReplicationGroupList withMemberClusters(String[] memberClusters) {
         this.memberClusters = memberClusters;
         return this;
@@ -124,6 +140,7 @@ public class ReplicationGroupList {
     
     
     public String[] memberClustersOutpostArns;
+
     public ReplicationGroupList withMemberClustersOutpostArns(String[] memberClustersOutpostArns) {
         this.memberClustersOutpostArns = memberClustersOutpostArns;
         return this;
@@ -131,6 +148,7 @@ public class ReplicationGroupList {
     
     
     public MultiAZStatusEnum multiAZ;
+
     public ReplicationGroupList withMultiAZ(MultiAZStatusEnum multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -138,6 +156,7 @@ public class ReplicationGroupList {
     
     
     public NetworkTypeEnum networkType;
+
     public ReplicationGroupList withNetworkType(NetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -145,6 +164,7 @@ public class ReplicationGroupList {
     
     
     public NodeGroupList[] nodeGroups;
+
     public ReplicationGroupList withNodeGroups(NodeGroupList[] nodeGroups) {
         this.nodeGroups = nodeGroups;
         return this;
@@ -152,6 +172,7 @@ public class ReplicationGroupList {
     
     
     public ReplicationGroupPendingModifiedValues pendingModifiedValues;
+
     public ReplicationGroupList withPendingModifiedValues(ReplicationGroupPendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -159,6 +180,7 @@ public class ReplicationGroupList {
     
     
     public OffsetDateTime replicationGroupCreateTime;
+
     public ReplicationGroupList withReplicationGroupCreateTime(OffsetDateTime replicationGroupCreateTime) {
         this.replicationGroupCreateTime = replicationGroupCreateTime;
         return this;
@@ -166,6 +188,7 @@ public class ReplicationGroupList {
     
     
     public String replicationGroupId;
+
     public ReplicationGroupList withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -173,6 +196,7 @@ public class ReplicationGroupList {
     
     
     public Long snapshotRetentionLimit;
+
     public ReplicationGroupList withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -180,6 +204,7 @@ public class ReplicationGroupList {
     
     
     public String snapshotWindow;
+
     public ReplicationGroupList withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -187,6 +212,7 @@ public class ReplicationGroupList {
     
     
     public String snapshottingClusterId;
+
     public ReplicationGroupList withSnapshottingClusterId(String snapshottingClusterId) {
         this.snapshottingClusterId = snapshottingClusterId;
         return this;
@@ -194,6 +220,7 @@ public class ReplicationGroupList {
     
     
     public String status;
+
     public ReplicationGroupList withStatus(String status) {
         this.status = status;
         return this;
@@ -201,6 +228,7 @@ public class ReplicationGroupList {
     
     
     public Boolean transitEncryptionEnabled;
+
     public ReplicationGroupList withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -208,6 +236,7 @@ public class ReplicationGroupList {
     
     
     public TransitEncryptionModeEnum transitEncryptionMode;
+
     public ReplicationGroupList withTransitEncryptionMode(TransitEncryptionModeEnum transitEncryptionMode) {
         this.transitEncryptionMode = transitEncryptionMode;
         return this;
@@ -215,9 +244,11 @@ public class ReplicationGroupList {
     
     
     public String[] userGroupIds;
+
     public ReplicationGroupList withUserGroupIds(String[] userGroupIds) {
         this.userGroupIds = userGroupIds;
         return this;
     }
     
+    public ReplicationGroupList(){}
 }

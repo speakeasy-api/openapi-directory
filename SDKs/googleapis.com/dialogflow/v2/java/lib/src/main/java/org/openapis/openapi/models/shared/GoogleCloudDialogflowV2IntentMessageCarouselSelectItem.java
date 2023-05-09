@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public GoogleCloudDialogflowV2IntentMessageImage image;
+
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem withImage(GoogleCloudDialogflowV2IntentMessageImage image) {
         this.image = image;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfo info;
+
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem withInfo(GoogleCloudDialogflowV2IntentMessageSelectItemInfo info) {
         this.info = info;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem(){}
 }

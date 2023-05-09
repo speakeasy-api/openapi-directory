@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidenterpriseServiceaccountkeysListRequest {
@@ -12,6 +13,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidenterpriseServiceaccountkeysListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidenterpriseServiceaccountkeysListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidenterpriseServiceaccountkeysListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidenterpriseServiceaccountkeysListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterpriseId")
     public String enterpriseId;
+
     public AndroidenterpriseServiceaccountkeysListRequest withEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
@@ -62,6 +68,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidenterpriseServiceaccountkeysListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidenterpriseServiceaccountkeysListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidenterpriseServiceaccountkeysListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidenterpriseServiceaccountkeysListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidenterpriseServiceaccountkeysListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidenterpriseServiceaccountkeysListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,9 +134,13 @@ public class AndroidenterpriseServiceaccountkeysListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidenterpriseServiceaccountkeysListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidenterpriseServiceaccountkeysListRequest(@JsonProperty("enterpriseId") String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+  }
 }

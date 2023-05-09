@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * OptionConfigurationList - A list of all available options
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionConfigurationList {
     
     public String[] dbSecurityGroupMemberships;
+
     public OptionConfigurationList withDBSecurityGroupMemberships(String[] dbSecurityGroupMemberships) {
         this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
         return this;
@@ -19,6 +20,7 @@ public class OptionConfigurationList {
     
     
     public String optionName;
+
     public OptionConfigurationList withOptionName(String optionName) {
         this.optionName = optionName;
         return this;
@@ -26,6 +28,7 @@ public class OptionConfigurationList {
     
     
     public OptionSettingsList[] optionSettings;
+
     public OptionConfigurationList withOptionSettings(OptionSettingsList[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -33,6 +36,7 @@ public class OptionConfigurationList {
     
     
     public String optionVersion;
+
     public OptionConfigurationList withOptionVersion(String optionVersion) {
         this.optionVersion = optionVersion;
         return this;
@@ -40,6 +44,7 @@ public class OptionConfigurationList {
     
     
     public Long port;
+
     public OptionConfigurationList withPort(Long port) {
         this.port = port;
         return this;
@@ -47,9 +52,13 @@ public class OptionConfigurationList {
     
     
     public String[] vpcSecurityGroupMemberships;
+
     public OptionConfigurationList withVpcSecurityGroupMemberships(String[] vpcSecurityGroupMemberships) {
         this.vpcSecurityGroupMemberships = vpcSecurityGroupMemberships;
         return this;
     }
     
+    public OptionConfigurationList(@JsonProperty("OptionName") String optionName) {
+        this.optionName = optionName;
+  }
 }

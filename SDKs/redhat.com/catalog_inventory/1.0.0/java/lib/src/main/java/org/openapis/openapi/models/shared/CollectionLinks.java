@@ -12,6 +12,7 @@ public class CollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public String first;
+
     public CollectionLinks withFirst(String first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class CollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public String last;
+
     public CollectionLinks withLast(String last) {
         this.last = last;
         return this;
@@ -28,6 +30,7 @@ public class CollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public CollectionLinks withNext(String next) {
         this.next = next;
         return this;
@@ -36,9 +39,11 @@ public class CollectionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public String prev;
+
     public CollectionLinks withPrev(String prev) {
         this.prev = prev;
         return this;
     }
     
+    public CollectionLinks(){}
 }

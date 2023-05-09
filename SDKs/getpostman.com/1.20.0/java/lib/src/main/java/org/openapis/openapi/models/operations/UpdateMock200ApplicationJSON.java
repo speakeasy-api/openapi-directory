@@ -15,9 +15,11 @@ public class UpdateMock200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mock")
     public UpdateMock200ApplicationJSONMock mock;
+
     public UpdateMock200ApplicationJSON withMock(UpdateMock200ApplicationJSONMock mock) {
         this.mock = mock;
         return this;
     }
     
+    public UpdateMock200ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertSellerCommissionsRequest {
@@ -12,6 +13,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpsertSellerCommissionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpsertSellerCommissionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpsertSellerCommissionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpsertSellerCommissionsRequest upsertSellerCommissionsRequest;
+
     public UpsertSellerCommissionsRequest withUpsertSellerCommissionsRequest(org.openapis.openapi.models.shared.UpsertSellerCommissionsRequest upsertSellerCommissionsRequest) {
         this.upsertSellerCommissionsRequest = upsertSellerCommissionsRequest;
         return this;
@@ -39,6 +43,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public UpsertSellerCommissionsRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,6 +54,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
     public String categoryId;
+
     public UpsertSellerCommissionsRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -59,6 +65,7 @@ public class UpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public UpsertSellerCommissionsRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -69,9 +76,19 @@ public class UpsertSellerCommissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public UpsertSellerCommissionsRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public UpsertSellerCommissionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpsertSellerCommissionsRequest") org.openapis.openapi.models.shared.UpsertSellerCommissionsRequest upsertSellerCommissionsRequest, @JsonProperty("accountName") String accountName, @JsonProperty("categoryId") String categoryId, @JsonProperty("environment") String environment, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.upsertSellerCommissionsRequest = upsertSellerCommissionsRequest;
+        this.accountName = accountName;
+        this.categoryId = categoryId;
+        this.environment = environment;
+        this.sellerId = sellerId;
+  }
 }

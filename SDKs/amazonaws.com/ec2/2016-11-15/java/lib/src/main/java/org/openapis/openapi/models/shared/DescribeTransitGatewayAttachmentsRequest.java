@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayAttachmentsRequest {
     
     public Boolean dryRun;
+
     public DescribeTransitGatewayAttachmentsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTransitGatewayAttachmentsRequest {
     
     
     public DescribeTransitGatewayAttachmentsRequestFilters[] filters;
+
     public DescribeTransitGatewayAttachmentsRequest withFilters(DescribeTransitGatewayAttachmentsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTransitGatewayAttachmentsRequest {
     
     
     public Long maxResults;
+
     public DescribeTransitGatewayAttachmentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeTransitGatewayAttachmentsRequest {
     
     
     public String nextToken;
+
     public DescribeTransitGatewayAttachmentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeTransitGatewayAttachmentsRequest {
     
     
     public String[] transitGatewayAttachmentIds;
+
     public DescribeTransitGatewayAttachmentsRequest withTransitGatewayAttachmentIds(String[] transitGatewayAttachmentIds) {
         this.transitGatewayAttachmentIds = transitGatewayAttachmentIds;
         return this;
     }
     
+    public DescribeTransitGatewayAttachmentsRequest(){}
 }

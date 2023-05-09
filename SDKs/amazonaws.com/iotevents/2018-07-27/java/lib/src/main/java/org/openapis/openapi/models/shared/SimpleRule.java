@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SimpleRule {
     @JsonProperty("comparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public SimpleRule withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -19,6 +20,7 @@ public class SimpleRule {
     
     @JsonProperty("inputProperty")
     public String inputProperty;
+
     public SimpleRule withInputProperty(String inputProperty) {
         this.inputProperty = inputProperty;
         return this;
@@ -26,9 +28,15 @@ public class SimpleRule {
     
     @JsonProperty("threshold")
     public String threshold;
+
     public SimpleRule withThreshold(String threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public SimpleRule(@JsonProperty("comparisonOperator") ComparisonOperatorEnum comparisonOperator, @JsonProperty("inputProperty") String inputProperty, @JsonProperty("threshold") String threshold) {
+        this.comparisonOperator = comparisonOperator;
+        this.inputProperty = inputProperty;
+        this.threshold = threshold;
+  }
 }

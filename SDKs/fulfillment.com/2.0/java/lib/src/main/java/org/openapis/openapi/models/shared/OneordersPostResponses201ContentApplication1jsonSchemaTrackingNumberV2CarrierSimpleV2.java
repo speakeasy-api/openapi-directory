@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OneordersPostResponses201ContentApplication1jsonSchemaTrackingNumberV2CarrierSimpleV2 {
     @JsonProperty("id")
     public Long id;
+
     public OneordersPostResponses201ContentApplication1jsonSchemaTrackingNumberV2CarrierSimpleV2 withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OneordersPostResponses201ContentApplication1jsonSchemaTrackingNumberV2CarrierSimpleV2(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

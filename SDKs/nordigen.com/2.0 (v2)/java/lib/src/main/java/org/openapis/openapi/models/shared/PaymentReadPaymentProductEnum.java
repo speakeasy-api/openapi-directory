@@ -7,13 +7,28 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * PaymentReadPaymentProductEnum - Payment product
+ * PaymentReadPaymentProductEnum - * `T2P` - target-2-payments
+ * * `SCT` - sepa-credit-transfers
+ * * `ISCT` - instant-sepa-credit-transfer
+ * * `CBCT` - cross-border-credit-transfers
+ * * `BACS` - Back Payment Scheme
+ * * `CHAPS` - CHAPS Payment Scheme
+ * * `FPS` - Faster Payment Scheme
+ * * `SWIFT` - Swift Payment Service
+ * * `BT` - Balance Transfer
+ * * `MT` - Money Transfer
  */
 public enum PaymentReadPaymentProductEnum {
     T2_P("T2P"),
     SCT("SCT"),
     ISCT("ISCT"),
-    CBCT("CBCT");
+    CBCT("CBCT"),
+    BACS("BACS"),
+    CHAPS("CHAPS"),
+    FPS("FPS"),
+    SWIFT("SWIFT"),
+    BT("BT"),
+    MT("MT");
 
     @JsonValue
     public final String value;

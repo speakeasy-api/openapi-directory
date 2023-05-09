@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionHeaders")
     public GoogleAnalyticsAdminV1betaAccessDimensionHeader[] dimensionHeaders;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportResponse withDimensionHeaders(GoogleAnalyticsAdminV1betaAccessDimensionHeader[] dimensionHeaders) {
         this.dimensionHeaders = dimensionHeaders;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricHeaders")
     public GoogleAnalyticsAdminV1betaAccessMetricHeader[] metricHeaders;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportResponse withMetricHeaders(GoogleAnalyticsAdminV1betaAccessMetricHeader[] metricHeaders) {
         this.metricHeaders = metricHeaders;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quota")
     public GoogleAnalyticsAdminV1betaAccessQuota quota;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportResponse withQuota(GoogleAnalyticsAdminV1betaAccessQuota quota) {
         this.quota = quota;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public Integer rowCount;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportResponse withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1betaRunAccessReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public GoogleAnalyticsAdminV1betaAccessRow[] rows;
+
     public GoogleAnalyticsAdminV1betaRunAccessReportResponse withRows(GoogleAnalyticsAdminV1betaAccessRow[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaRunAccessReportResponse(){}
 }

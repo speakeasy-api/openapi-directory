@@ -15,6 +15,7 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultSettings")
     public UpdateNetworkSwitchSettingsMulticastRequestBodyDefaultSettings defaultSettings;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBody withDefaultSettings(UpdateNetworkSwitchSettingsMulticastRequestBodyDefaultSettings defaultSettings) {
         this.defaultSettings = defaultSettings;
         return this;
@@ -26,9 +27,11 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides[] overrides;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBody withOverrides(UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public UpdateNetworkSwitchSettingsMulticastRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseListDocumentsRequest {
@@ -12,6 +13,7 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
     public String collectionId;
+
     public DatabaseListDocumentsRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -22,6 +24,7 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
     public String[] filters;
+
     public DatabaseListDocumentsRequest withFilters(String[] filters) {
         this.filters = filters;
         return this;
@@ -32,6 +35,7 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public DatabaseListDocumentsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public DatabaseListDocumentsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,6 +57,7 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderCast")
     public String orderCast;
+
     public DatabaseListDocumentsRequest withOrderCast(String orderCast) {
         this.orderCast = orderCast;
         return this;
@@ -62,6 +68,7 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderField")
     public String orderField;
+
     public DatabaseListDocumentsRequest withOrderField(String orderField) {
         this.orderField = orderField;
         return this;
@@ -72,6 +79,7 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
     public String orderType;
+
     public DatabaseListDocumentsRequest withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -82,9 +90,13 @@ public class DatabaseListDocumentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public DatabaseListDocumentsRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public DatabaseListDocumentsRequest(@JsonProperty("collectionId") String collectionId) {
+        this.collectionId = collectionId;
+  }
 }

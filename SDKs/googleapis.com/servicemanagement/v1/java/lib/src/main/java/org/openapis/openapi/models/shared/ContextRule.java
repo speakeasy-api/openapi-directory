@@ -18,6 +18,7 @@ public class ContextRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedRequestExtensions")
     public String[] allowedRequestExtensions;
+
     public ContextRule withAllowedRequestExtensions(String[] allowedRequestExtensions) {
         this.allowedRequestExtensions = allowedRequestExtensions;
         return this;
@@ -29,6 +30,7 @@ public class ContextRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedResponseExtensions")
     public String[] allowedResponseExtensions;
+
     public ContextRule withAllowedResponseExtensions(String[] allowedResponseExtensions) {
         this.allowedResponseExtensions = allowedResponseExtensions;
         return this;
@@ -40,6 +42,7 @@ public class ContextRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provided")
     public String[] provided;
+
     public ContextRule withProvided(String[] provided) {
         this.provided = provided;
         return this;
@@ -51,6 +54,7 @@ public class ContextRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public String[] requested;
+
     public ContextRule withRequested(String[] requested) {
         this.requested = requested;
         return this;
@@ -62,9 +66,11 @@ public class ContextRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public ContextRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public ContextRule(){}
 }

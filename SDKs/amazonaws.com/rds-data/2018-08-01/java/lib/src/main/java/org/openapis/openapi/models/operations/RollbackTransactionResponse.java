@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RollbackTransactionResponse {
@@ -12,6 +13,7 @@ public class RollbackTransactionResponse {
      */
     
     public Object accessDeniedException;
+
     public RollbackTransactionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RollbackTransactionResponse {
      */
     
     public Object badRequestException;
+
     public RollbackTransactionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class RollbackTransactionResponse {
     
     
     public String contentType;
+
     public RollbackTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RollbackTransactionResponse {
      */
     
     public Object forbiddenException;
+
     public RollbackTransactionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class RollbackTransactionResponse {
      */
     
     public Object internalServerErrorException;
+
     public RollbackTransactionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class RollbackTransactionResponse {
      */
     
     public Object notFoundException;
+
     public RollbackTransactionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class RollbackTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.RollbackTransactionResponse rollbackTransactionResponse;
+
     public RollbackTransactionResponse withRollbackTransactionResponse(org.openapis.openapi.models.shared.RollbackTransactionResponse rollbackTransactionResponse) {
         this.rollbackTransactionResponse = rollbackTransactionResponse;
         return this;
@@ -76,6 +84,7 @@ public class RollbackTransactionResponse {
     
     
     public Integer statusCode;
+
     public RollbackTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RollbackTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RollbackTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class RollbackTransactionResponse {
      */
     
     public Object serviceUnavailableError;
+
     public RollbackTransactionResponse withServiceUnavailableError(Object serviceUnavailableError) {
         this.serviceUnavailableError = serviceUnavailableError;
         return this;
@@ -103,9 +114,14 @@ public class RollbackTransactionResponse {
      */
     
     public Object statementTimeoutException;
+
     public RollbackTransactionResponse withStatementTimeoutException(Object statementTimeoutException) {
         this.statementTimeoutException = statementTimeoutException;
         return this;
     }
     
+    public RollbackTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

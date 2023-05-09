@@ -20,6 +20,7 @@ public class TestGridSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public TestGridSession withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class TestGridSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingMinutes")
     public Double billingMinutes;
+
     public TestGridSession withBillingMinutes(Double billingMinutes) {
         this.billingMinutes = billingMinutes;
         return this;
@@ -38,6 +40,7 @@ public class TestGridSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public TestGridSession withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -48,6 +51,7 @@ public class TestGridSession {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ended")
     public OffsetDateTime ended;
+
     public TestGridSession withEnded(OffsetDateTime ended) {
         this.ended = ended;
         return this;
@@ -56,6 +60,7 @@ public class TestGridSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seleniumProperties")
     public String seleniumProperties;
+
     public TestGridSession withSeleniumProperties(String seleniumProperties) {
         this.seleniumProperties = seleniumProperties;
         return this;
@@ -64,9 +69,11 @@ public class TestGridSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TestGridSessionStatusEnum status;
+
     public TestGridSession withStatus(TestGridSessionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public TestGridSession(){}
 }

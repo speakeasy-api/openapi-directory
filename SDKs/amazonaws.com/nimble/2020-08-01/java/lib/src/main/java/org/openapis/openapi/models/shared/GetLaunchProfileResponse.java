@@ -15,9 +15,11 @@ public class GetLaunchProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchProfile")
     public LaunchProfile launchProfile;
+
     public GetLaunchProfileResponse withLaunchProfile(LaunchProfile launchProfile) {
         this.launchProfile = launchProfile;
         return this;
     }
     
+    public GetLaunchProfileResponse(){}
 }

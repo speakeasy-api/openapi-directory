@@ -18,6 +18,7 @@ public class SnapshotJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SnapshotJobRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class SnapshotJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public SnapshotJobRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class SnapshotJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotSources")
     public Boolean snapshotSources;
+
     public SnapshotJobRequest withSnapshotSources(Boolean snapshotSources) {
         this.snapshotSources = snapshotSources;
         return this;
@@ -51,9 +54,11 @@ public class SnapshotJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public SnapshotJobRequest withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public SnapshotJobRequest(){}
 }

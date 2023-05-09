@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptPortfolioShareResponse {
@@ -12,6 +13,7 @@ public class AcceptPortfolioShareResponse {
      */
     
     public java.util.Map<String, Object> acceptPortfolioShareOutput;
+
     public AcceptPortfolioShareResponse withAcceptPortfolioShareOutput(java.util.Map<String, Object> acceptPortfolioShareOutput) {
         this.acceptPortfolioShareOutput = acceptPortfolioShareOutput;
         return this;
@@ -19,6 +21,7 @@ public class AcceptPortfolioShareResponse {
     
     
     public String contentType;
+
     public AcceptPortfolioShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcceptPortfolioShareResponse {
      */
     
     public Object invalidParametersException;
+
     public AcceptPortfolioShareResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptPortfolioShareResponse {
      */
     
     public Object limitExceededException;
+
     public AcceptPortfolioShareResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class AcceptPortfolioShareResponse {
     
     
     public Integer statusCode;
+
     public AcceptPortfolioShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AcceptPortfolioShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptPortfolioShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class AcceptPortfolioShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcceptPortfolioShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public AcceptPortfolioShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

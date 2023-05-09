@@ -15,6 +15,7 @@ public class FileCacheNFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsIps")
     public String[] dnsIps;
+
     public FileCacheNFSConfiguration withDnsIps(String[] dnsIps) {
         this.dnsIps = dnsIps;
         return this;
@@ -22,9 +23,13 @@ public class FileCacheNFSConfiguration {
     
     @JsonProperty("Version")
     public NfsVersionEnum version;
+
     public FileCacheNFSConfiguration withVersion(NfsVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public FileCacheNFSConfiguration(@JsonProperty("Version") NfsVersionEnum version) {
+        this.version = version;
+  }
 }

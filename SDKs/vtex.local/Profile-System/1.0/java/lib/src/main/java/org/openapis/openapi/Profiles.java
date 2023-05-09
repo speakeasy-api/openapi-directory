@@ -76,11 +76,9 @@ public class Profiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClientProfileResponse res = new org.openapis.openapi.models.operations.CreateClientProfileResponse() {{
+        org.openapis.openapi.models.operations.CreateClientProfileResponse res = new org.openapis.openapi.models.operations.CreateClientProfileResponse(contentType, httpRes.statusCode()) {{
             createClientProfile201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -126,10 +124,8 @@ public class Profiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClientProfileResponse res = new org.openapis.openapi.models.operations.DeleteClientProfileResponse() {{
+        org.openapis.openapi.models.operations.DeleteClientProfileResponse res = new org.openapis.openapi.models.operations.DeleteClientProfileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -180,11 +176,9 @@ public class Profiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProfileResponse res = new org.openapis.openapi.models.operations.GetProfileResponse() {{
+        org.openapis.openapi.models.operations.GetProfileResponse res = new org.openapis.openapi.models.operations.GetProfileResponse(contentType, httpRes.statusCode()) {{
             getProfile200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +228,9 @@ public class Profiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProfileByVersionResponse res = new org.openapis.openapi.models.operations.GetProfileByVersionResponse() {{
+        org.openapis.openapi.models.operations.GetProfileByVersionResponse res = new org.openapis.openapi.models.operations.GetProfileByVersionResponse(contentType, httpRes.statusCode()) {{
             getProfileByVersion200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +284,9 @@ public class Profiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUnmaskedProfileResponse res = new org.openapis.openapi.models.operations.GetUnmaskedProfileResponse() {{
+        org.openapis.openapi.models.operations.GetUnmaskedProfileResponse res = new org.openapis.openapi.models.operations.GetUnmaskedProfileResponse(contentType, httpRes.statusCode()) {{
             getUnmaskedProfile200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -350,11 +340,9 @@ public class Profiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUnmaskedProfileByVersionResponse res = new org.openapis.openapi.models.operations.GetUnmaskedProfileByVersionResponse() {{
+        org.openapis.openapi.models.operations.GetUnmaskedProfileByVersionResponse res = new org.openapis.openapi.models.operations.GetUnmaskedProfileByVersionResponse(contentType, httpRes.statusCode()) {{
             getUnmaskedProfileByVersion200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,11 +398,9 @@ public class Profiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClientProfileResponse res = new org.openapis.openapi.models.operations.UpdateClientProfileResponse() {{
+        org.openapis.openapi.models.operations.UpdateClientProfileResponse res = new org.openapis.openapi.models.operations.UpdateClientProfileResponse(contentType, httpRes.statusCode()) {{
             updateClientProfile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

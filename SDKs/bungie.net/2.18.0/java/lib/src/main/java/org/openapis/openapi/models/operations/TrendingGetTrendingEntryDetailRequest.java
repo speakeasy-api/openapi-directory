@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrendingGetTrendingEntryDetailRequest {
@@ -12,6 +13,7 @@ public class TrendingGetTrendingEntryDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identifier")
     public String identifier;
+
     public TrendingGetTrendingEntryDetailRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -22,9 +24,14 @@ public class TrendingGetTrendingEntryDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trendingEntryType")
     public Integer trendingEntryType;
+
     public TrendingGetTrendingEntryDetailRequest withTrendingEntryType(Integer trendingEntryType) {
         this.trendingEntryType = trendingEntryType;
         return this;
     }
     
+    public TrendingGetTrendingEntryDetailRequest(@JsonProperty("identifier") String identifier, @JsonProperty("trendingEntryType") Integer trendingEntryType) {
+        this.identifier = identifier;
+        this.trendingEntryType = trendingEntryType;
+  }
 }

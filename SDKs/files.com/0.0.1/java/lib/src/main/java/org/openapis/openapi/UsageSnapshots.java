@@ -60,11 +60,9 @@ public class UsageSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsageSnapshotsResponse res = new org.openapis.openapi.models.operations.GetUsageSnapshotsResponse() {{
+        org.openapis.openapi.models.operations.GetUsageSnapshotsResponse res = new org.openapis.openapi.models.operations.GetUsageSnapshotsResponse(contentType, httpRes.statusCode()) {{
             usageSnapshotEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

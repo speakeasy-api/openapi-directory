@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetEarthObservationJobOutput {
     @JsonProperty("Arn")
     public String arn;
+
     public GetEarthObservationJobOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class GetEarthObservationJobOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public GetEarthObservationJobOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class GetEarthObservationJobOutput {
     
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public GetEarthObservationJobOutput withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
@@ -43,6 +46,7 @@ public class GetEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetails")
     public EarthObservationJobErrorDetails errorDetails;
+
     public GetEarthObservationJobOutput withErrorDetails(EarthObservationJobErrorDetails errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -51,6 +55,7 @@ public class GetEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public GetEarthObservationJobOutput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -59,6 +64,7 @@ public class GetEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportErrorDetails")
     public ExportErrorDetails exportErrorDetails;
+
     public GetEarthObservationJobOutput withExportErrorDetails(ExportErrorDetails exportErrorDetails) {
         this.exportErrorDetails = exportErrorDetails;
         return this;
@@ -67,6 +73,7 @@ public class GetEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportStatus")
     public EarthObservationJobExportStatusEnum exportStatus;
+
     public GetEarthObservationJobOutput withExportStatus(EarthObservationJobExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -74,6 +81,7 @@ public class GetEarthObservationJobOutput {
     
     @JsonProperty("InputConfig")
     public InputConfigOutput inputConfig;
+
     public GetEarthObservationJobOutput withInputConfig(InputConfigOutput inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -81,6 +89,7 @@ public class GetEarthObservationJobOutput {
     
     @JsonProperty("JobConfig")
     public JobConfigInput jobConfig;
+
     public GetEarthObservationJobOutput withJobConfig(JobConfigInput jobConfig) {
         this.jobConfig = jobConfig;
         return this;
@@ -89,6 +98,7 @@ public class GetEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public GetEarthObservationJobOutput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -96,6 +106,7 @@ public class GetEarthObservationJobOutput {
     
     @JsonProperty("Name")
     public String name;
+
     public GetEarthObservationJobOutput withName(String name) {
         this.name = name;
         return this;
@@ -104,6 +115,7 @@ public class GetEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputBands")
     public OutputBand[] outputBands;
+
     public GetEarthObservationJobOutput withOutputBands(OutputBand[] outputBands) {
         this.outputBands = outputBands;
         return this;
@@ -111,6 +123,7 @@ public class GetEarthObservationJobOutput {
     
     @JsonProperty("Status")
     public EarthObservationJobStatusEnum status;
+
     public GetEarthObservationJobOutput withStatus(EarthObservationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -119,9 +132,19 @@ public class GetEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetEarthObservationJobOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetEarthObservationJobOutput(@JsonProperty("Arn") String arn, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("DurationInSeconds") Long durationInSeconds, @JsonProperty("InputConfig") InputConfigOutput inputConfig, @JsonProperty("JobConfig") JobConfigInput jobConfig, @JsonProperty("Name") String name, @JsonProperty("Status") EarthObservationJobStatusEnum status) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.durationInSeconds = durationInSeconds;
+        this.inputConfig = inputConfig;
+        this.jobConfig = jobConfig;
+        this.name = name;
+        this.status = status;
+  }
 }

@@ -22,6 +22,7 @@ public class GetDistributionLatestCacheResetResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public GetDistributionLatestCacheResetResult withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -30,9 +31,11 @@ public class GetDistributionLatestCacheResetResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetDistributionLatestCacheResetResult withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetDistributionLatestCacheResetResult(){}
 }

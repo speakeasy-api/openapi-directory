@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindEligibleItemsResponse {
     
     public String contentType;
+
     public FindEligibleItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindEligibleItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.PagedEligibleItemCollection pagedEligibleItemCollection;
+
     public FindEligibleItemsResponse withPagedEligibleItemCollection(org.openapis.openapi.models.shared.PagedEligibleItemCollection pagedEligibleItemCollection) {
         this.pagedEligibleItemCollection = pagedEligibleItemCollection;
         return this;
@@ -26,6 +29,7 @@ public class FindEligibleItemsResponse {
     
     
     public Integer statusCode;
+
     public FindEligibleItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FindEligibleItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindEligibleItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindEligibleItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

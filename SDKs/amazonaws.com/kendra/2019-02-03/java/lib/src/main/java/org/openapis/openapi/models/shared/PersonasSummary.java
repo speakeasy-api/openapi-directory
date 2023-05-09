@@ -22,6 +22,7 @@ public class PersonasSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public PersonasSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class PersonasSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public PersonasSummary withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -38,6 +40,7 @@ public class PersonasSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Persona")
     public PersonaEnum persona;
+
     public PersonasSummary withPersona(PersonaEnum persona) {
         this.persona = persona;
         return this;
@@ -48,9 +51,11 @@ public class PersonasSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public PersonasSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public PersonasSummary(){}
 }

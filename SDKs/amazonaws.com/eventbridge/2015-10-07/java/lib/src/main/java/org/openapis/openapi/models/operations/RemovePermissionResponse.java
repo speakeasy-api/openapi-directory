@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemovePermissionResponse {
@@ -12,6 +13,7 @@ public class RemovePermissionResponse {
      */
     
     public Object concurrentModificationException;
+
     public RemovePermissionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class RemovePermissionResponse {
     
     
     public String contentType;
+
     public RemovePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemovePermissionResponse {
      */
     
     public Object internalException;
+
     public RemovePermissionResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class RemovePermissionResponse {
      */
     
     public Object operationDisabledException;
+
     public RemovePermissionResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class RemovePermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemovePermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class RemovePermissionResponse {
     
     
     public Integer statusCode;
+
     public RemovePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class RemovePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemovePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemovePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

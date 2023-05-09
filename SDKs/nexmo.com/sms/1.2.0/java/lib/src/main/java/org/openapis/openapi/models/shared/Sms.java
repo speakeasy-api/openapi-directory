@@ -18,6 +18,7 @@ public class Sms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message-count")
     public String messageCount;
+
     public Sms withMessageCount(String messageCount) {
         this.messageCount = messageCount;
         return this;
@@ -26,9 +27,11 @@ public class Sms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     public Message[] messages;
+
     public Sms withMessages(Message[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public Sms(){}
 }

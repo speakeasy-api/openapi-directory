@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MessageSystemAttributeValue - &lt;p&gt;The user-specified message system attribute value. For string data types, the &lt;code&gt;Value&lt;/code&gt; attribute has the same restrictions on the content as the message body. For more information, see &lt;code&gt; &lt;a&gt;SendMessage&lt;/a&gt;.&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;Name&lt;/code&gt;, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;value&lt;/code&gt; and the message body must not be empty or null.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MessageSystemAttributeValue {
     
     public String[] binaryListValues;
+
     public MessageSystemAttributeValue withBinaryListValues(String[] binaryListValues) {
         this.binaryListValues = binaryListValues;
         return this;
@@ -19,6 +20,7 @@ public class MessageSystemAttributeValue {
     
     
     public String binaryValue;
+
     public MessageSystemAttributeValue withBinaryValue(String binaryValue) {
         this.binaryValue = binaryValue;
         return this;
@@ -26,6 +28,7 @@ public class MessageSystemAttributeValue {
     
     
     public String dataType;
+
     public MessageSystemAttributeValue withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -33,6 +36,7 @@ public class MessageSystemAttributeValue {
     
     
     public String[] stringListValues;
+
     public MessageSystemAttributeValue withStringListValues(String[] stringListValues) {
         this.stringListValues = stringListValues;
         return this;
@@ -40,9 +44,13 @@ public class MessageSystemAttributeValue {
     
     
     public String stringValue;
+
     public MessageSystemAttributeValue withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public MessageSystemAttributeValue(@JsonProperty("DataType") String dataType) {
+        this.dataType = dataType;
+  }
 }

@@ -20,6 +20,7 @@ public class CreateTimelineEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateTimelineEventRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +31,7 @@ public class CreateTimelineEventRequestBody {
      */
     @JsonProperty("eventData")
     public String eventData;
+
     public CreateTimelineEventRequestBody withEventData(String eventData) {
         this.eventData = eventData;
         return this;
@@ -41,6 +43,7 @@ public class CreateTimelineEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventReferences")
     public org.openapis.openapi.models.shared.EventReference[] eventReferences;
+
     public CreateTimelineEventRequestBody withEventReferences(org.openapis.openapi.models.shared.EventReference[] eventReferences) {
         this.eventReferences = eventReferences;
         return this;
@@ -53,6 +56,7 @@ public class CreateTimelineEventRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTime")
     public OffsetDateTime eventTime;
+
     public CreateTimelineEventRequestBody withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -63,6 +67,7 @@ public class CreateTimelineEventRequestBody {
      */
     @JsonProperty("eventType")
     public String eventType;
+
     public CreateTimelineEventRequestBody withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -73,9 +78,16 @@ public class CreateTimelineEventRequestBody {
      */
     @JsonProperty("incidentRecordArn")
     public String incidentRecordArn;
+
     public CreateTimelineEventRequestBody withIncidentRecordArn(String incidentRecordArn) {
         this.incidentRecordArn = incidentRecordArn;
         return this;
     }
     
+    public CreateTimelineEventRequestBody(@JsonProperty("eventData") String eventData, @JsonProperty("eventTime") OffsetDateTime eventTime, @JsonProperty("eventType") String eventType, @JsonProperty("incidentRecordArn") String incidentRecordArn) {
+        this.eventData = eventData;
+        this.eventTime = eventTime;
+        this.eventType = eventType;
+        this.incidentRecordArn = incidentRecordArn;
+  }
 }

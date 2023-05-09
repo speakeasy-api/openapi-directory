@@ -15,9 +15,13 @@ public class ActionsCacheUsagePolicyForRepository {
      */
     @JsonProperty("repo_cache_size_limit_in_gb")
     public Long repoCacheSizeLimitInGb;
+
     public ActionsCacheUsagePolicyForRepository withRepoCacheSizeLimitInGb(Long repoCacheSizeLimitInGb) {
         this.repoCacheSizeLimitInGb = repoCacheSizeLimitInGb;
         return this;
     }
     
+    public ActionsCacheUsagePolicyForRepository(@JsonProperty("repo_cache_size_limit_in_gb") Long repoCacheSizeLimitInGb) {
+        this.repoCacheSizeLimitInGb = repoCacheSizeLimitInGb;
+  }
 }

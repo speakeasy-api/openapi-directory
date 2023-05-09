@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolDisableAutoScaleRequest {
@@ -12,6 +13,7 @@ public class PoolDisableAutoScaleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolDisableAutoScaleRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -22,6 +24,7 @@ public class PoolDisableAutoScaleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolDisableAutoScaleRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -32,6 +35,7 @@ public class PoolDisableAutoScaleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolDisableAutoScaleRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -42,6 +46,7 @@ public class PoolDisableAutoScaleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public PoolDisableAutoScaleRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -52,6 +57,7 @@ public class PoolDisableAutoScaleRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolDisableAutoScaleRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -62,9 +68,14 @@ public class PoolDisableAutoScaleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolDisableAutoScaleRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolDisableAutoScaleRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.poolId = poolId;
+  }
 }

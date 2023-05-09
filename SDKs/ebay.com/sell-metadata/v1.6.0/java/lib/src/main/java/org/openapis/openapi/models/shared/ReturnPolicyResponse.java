@@ -18,6 +18,7 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPolicies")
     public ReturnPolicy[] returnPolicies;
+
     public ReturnPolicyResponse withReturnPolicies(ReturnPolicy[] returnPolicies) {
         this.returnPolicies = returnPolicies;
         return this;
@@ -29,9 +30,11 @@ public class ReturnPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public Error[] warnings;
+
     public ReturnPolicyResponse withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ReturnPolicyResponse(){}
 }

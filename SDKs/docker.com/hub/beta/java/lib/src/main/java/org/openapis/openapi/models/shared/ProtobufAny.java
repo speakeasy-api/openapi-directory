@@ -12,6 +12,7 @@ public class ProtobufAny {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type_url")
     public String typeUrl;
+
     public ProtobufAny withTypeUrl(String typeUrl) {
         this.typeUrl = typeUrl;
         return this;
@@ -20,9 +21,11 @@ public class ProtobufAny {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ProtobufAny withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProtobufAny(){}
 }

@@ -15,6 +15,7 @@ public class DescribeWorkspacesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspacesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeWorkspacesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Workspaces")
     public Workspace[] workspaces;
+
     public DescribeWorkspacesResult withWorkspaces(Workspace[] workspaces) {
         this.workspaces = workspaces;
         return this;
     }
     
+    public DescribeWorkspacesResult(){}
 }

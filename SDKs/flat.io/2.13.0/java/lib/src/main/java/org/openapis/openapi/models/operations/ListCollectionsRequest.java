@@ -12,6 +12,7 @@ public class ListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public ListCollectionsDirectionEnum direction;
+
     public ListCollectionsRequest withDirection(ListCollectionsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +23,7 @@ public class ListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListCollectionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -34,6 +36,7 @@ public class ListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
     public String next;
+
     public ListCollectionsRequest withNext(String next) {
         this.next = next;
         return this;
@@ -48,6 +51,7 @@ public class ListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
     public String parent;
+
     public ListCollectionsRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -60,6 +64,7 @@ public class ListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
     public String previous;
+
     public ListCollectionsRequest withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -70,9 +75,11 @@ public class ListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ListCollectionsSortEnum sort;
+
     public ListCollectionsRequest withSort(ListCollectionsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListCollectionsRequest(){}
 }

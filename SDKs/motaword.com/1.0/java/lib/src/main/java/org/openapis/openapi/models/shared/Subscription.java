@@ -23,6 +23,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downgrade")
     public String[] downgrade;
+
     public Subscription withDowngrade(String[] downgrade) {
         this.downgrade = downgrade;
         return this;
@@ -34,6 +35,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     public Long paymentMethod;
+
     public Subscription withPaymentMethod(Long paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -47,6 +49,7 @@ public class Subscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("period_end")
     public OffsetDateTime periodEnd;
+
     public Subscription withPeriodEnd(OffsetDateTime periodEnd) {
         this.periodEnd = periodEnd;
         return this;
@@ -58,6 +61,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan_id")
     public String planId;
+
     public Subscription withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -69,6 +73,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan_name")
     public String planName;
+
     public Subscription withPlanName(String planName) {
         this.planName = planName;
         return this;
@@ -80,6 +85,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public Subscription withPrice(String price) {
         this.price = price;
         return this;
@@ -88,6 +94,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public Object[] products;
+
     public Subscription withProducts(Object[] products) {
         this.products = products;
         return this;
@@ -99,6 +106,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_name")
     public String scheduleName;
+
     public Subscription withScheduleName(String scheduleName) {
         this.scheduleName = scheduleName;
         return this;
@@ -112,6 +120,7 @@ public class Subscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("schedule_start")
     public OffsetDateTime scheduleStart;
+
     public Subscription withScheduleStart(OffsetDateTime scheduleStart) {
         this.scheduleStart = scheduleStart;
         return this;
@@ -123,6 +132,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public Subscription withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -134,6 +144,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgrade")
     public String[] upgrade;
+
     public Subscription withUpgrade(String[] upgrade) {
         this.upgrade = upgrade;
         return this;
@@ -145,9 +156,11 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withTrial")
     public Object withTrial;
+
     public Subscription withWithTrial(Object withTrial) {
         this.withTrial = withTrial;
         return this;
     }
     
+    public Subscription(){}
 }

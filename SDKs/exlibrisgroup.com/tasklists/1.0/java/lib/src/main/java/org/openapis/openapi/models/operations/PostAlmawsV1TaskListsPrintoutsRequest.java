@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAlmawsV1TaskListsPrintoutsRequest {
@@ -12,6 +13,7 @@ public class PostAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=letter")
     public String letter;
+
     public PostAlmawsV1TaskListsPrintoutsRequest withLetter(String letter) {
         this.letter = letter;
         return this;
@@ -22,6 +24,7 @@ public class PostAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=op")
     public String op;
+
     public PostAlmawsV1TaskListsPrintoutsRequest withOp(String op) {
         this.op = op;
         return this;
@@ -32,6 +35,7 @@ public class PostAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printer_id")
     public String printerId;
+
     public PostAlmawsV1TaskListsPrintoutsRequest withPrinterId(String printerId) {
         this.printerId = printerId;
         return this;
@@ -42,6 +46,7 @@ public class PostAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printout_id")
     public String printoutId;
+
     public PostAlmawsV1TaskListsPrintoutsRequest withPrintoutId(String printoutId) {
         this.printoutId = printoutId;
         return this;
@@ -52,9 +57,13 @@ public class PostAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public PostAlmawsV1TaskListsPrintoutsRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PostAlmawsV1TaskListsPrintoutsRequest(@JsonProperty("op") String op) {
+        this.op = op;
+  }
 }

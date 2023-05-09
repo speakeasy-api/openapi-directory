@@ -18,6 +18,7 @@ public class HttpFaultInjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abort")
     public HttpFaultAbort abort;
+
     public HttpFaultInjection withAbort(HttpFaultAbort abort) {
         this.abort = abort;
         return this;
@@ -29,9 +30,11 @@ public class HttpFaultInjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delay")
     public HttpFaultDelay delay;
+
     public HttpFaultInjection withDelay(HttpFaultDelay delay) {
         this.delay = delay;
         return this;
     }
     
+    public HttpFaultInjection(){}
 }

@@ -15,6 +15,7 @@ public class DeleteFileSystemLustreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupId")
     public String finalBackupId;
+
     public DeleteFileSystemLustreResponse withFinalBackupId(String finalBackupId) {
         this.finalBackupId = finalBackupId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteFileSystemLustreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupTags")
     public Tag[] finalBackupTags;
+
     public DeleteFileSystemLustreResponse withFinalBackupTags(Tag[] finalBackupTags) {
         this.finalBackupTags = finalBackupTags;
         return this;
     }
     
+    public DeleteFileSystemLustreResponse(){}
 }

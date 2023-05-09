@@ -18,6 +18,7 @@ public class MobileCarriersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MobileCarriersListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class MobileCarriersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileCarriers")
     public MobileCarrier[] mobileCarriers;
+
     public MobileCarriersListResponse withMobileCarriers(MobileCarrier[] mobileCarriers) {
         this.mobileCarriers = mobileCarriers;
         return this;
     }
     
+    public MobileCarriersListResponse(){}
 }

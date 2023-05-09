@@ -21,6 +21,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeModelQualityJobDefinitionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     
     @JsonProperty("JobDefinitionArn")
     public String jobDefinitionArn;
+
     public DescribeModelQualityJobDefinitionResponse withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
@@ -35,6 +37,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     
     @JsonProperty("JobDefinitionName")
     public String jobDefinitionName;
+
     public DescribeModelQualityJobDefinitionResponse withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -45,6 +48,7 @@ public class DescribeModelQualityJobDefinitionResponse {
      */
     @JsonProperty("JobResources")
     public MonitoringResources jobResources;
+
     public DescribeModelQualityJobDefinitionResponse withJobResources(MonitoringResources jobResources) {
         this.jobResources = jobResources;
         return this;
@@ -52,6 +56,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     
     @JsonProperty("ModelQualityAppSpecification")
     public ModelQualityAppSpecification modelQualityAppSpecification;
+
     public DescribeModelQualityJobDefinitionResponse withModelQualityAppSpecification(ModelQualityAppSpecification modelQualityAppSpecification) {
         this.modelQualityAppSpecification = modelQualityAppSpecification;
         return this;
@@ -60,6 +65,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelQualityBaselineConfig")
     public ModelQualityBaselineConfig modelQualityBaselineConfig;
+
     public DescribeModelQualityJobDefinitionResponse withModelQualityBaselineConfig(ModelQualityBaselineConfig modelQualityBaselineConfig) {
         this.modelQualityBaselineConfig = modelQualityBaselineConfig;
         return this;
@@ -67,6 +73,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     
     @JsonProperty("ModelQualityJobInput")
     public ModelQualityJobInput modelQualityJobInput;
+
     public DescribeModelQualityJobDefinitionResponse withModelQualityJobInput(ModelQualityJobInput modelQualityJobInput) {
         this.modelQualityJobInput = modelQualityJobInput;
         return this;
@@ -77,6 +84,7 @@ public class DescribeModelQualityJobDefinitionResponse {
      */
     @JsonProperty("ModelQualityJobOutputConfig")
     public MonitoringOutputConfig modelQualityJobOutputConfig;
+
     public DescribeModelQualityJobDefinitionResponse withModelQualityJobOutputConfig(MonitoringOutputConfig modelQualityJobOutputConfig) {
         this.modelQualityJobOutputConfig = modelQualityJobOutputConfig;
         return this;
@@ -85,6 +93,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public MonitoringNetworkConfig networkConfig;
+
     public DescribeModelQualityJobDefinitionResponse withNetworkConfig(MonitoringNetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -92,6 +101,7 @@ public class DescribeModelQualityJobDefinitionResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeModelQualityJobDefinitionResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -103,9 +113,20 @@ public class DescribeModelQualityJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public MonitoringStoppingCondition stoppingCondition;
+
     public DescribeModelQualityJobDefinitionResponse withStoppingCondition(MonitoringStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
     }
     
+    public DescribeModelQualityJobDefinitionResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("JobDefinitionArn") String jobDefinitionArn, @JsonProperty("JobDefinitionName") String jobDefinitionName, @JsonProperty("JobResources") MonitoringResources jobResources, @JsonProperty("ModelQualityAppSpecification") ModelQualityAppSpecification modelQualityAppSpecification, @JsonProperty("ModelQualityJobInput") ModelQualityJobInput modelQualityJobInput, @JsonProperty("ModelQualityJobOutputConfig") MonitoringOutputConfig modelQualityJobOutputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.creationTime = creationTime;
+        this.jobDefinitionArn = jobDefinitionArn;
+        this.jobDefinitionName = jobDefinitionName;
+        this.jobResources = jobResources;
+        this.modelQualityAppSpecification = modelQualityAppSpecification;
+        this.modelQualityJobInput = modelQualityJobInput;
+        this.modelQualityJobOutputConfig = modelQualityJobOutputConfig;
+        this.roleArn = roleArn;
+  }
 }

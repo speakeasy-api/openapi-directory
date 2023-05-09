@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordRequest {
@@ -12,6 +13,7 @@ public class ChangePasswordRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Secret secret;
+
     public ChangePasswordRequest withSecret(org.openapis.openapi.models.shared.Secret secret) {
         this.secret = secret;
         return this;
@@ -22,9 +24,14 @@ public class ChangePasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shopperId")
     public String shopperId;
+
     public ChangePasswordRequest withShopperId(String shopperId) {
         this.shopperId = shopperId;
         return this;
     }
     
+    public ChangePasswordRequest(@JsonProperty("Secret") org.openapis.openapi.models.shared.Secret secret, @JsonProperty("shopperId") String shopperId) {
+        this.secret = secret;
+        this.shopperId = shopperId;
+  }
 }

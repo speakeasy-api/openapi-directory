@@ -18,6 +18,7 @@ public class InterconnectDiagnosticsMacsecStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ckn")
     public String ckn;
+
     public InterconnectDiagnosticsMacsecStatus withCkn(String ckn) {
         this.ckn = ckn;
         return this;
@@ -29,9 +30,11 @@ public class InterconnectDiagnosticsMacsecStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operational")
     public Boolean operational;
+
     public InterconnectDiagnosticsMacsecStatus withOperational(Boolean operational) {
         this.operational = operational;
         return this;
     }
     
+    public InterconnectDiagnosticsMacsecStatus(){}
 }

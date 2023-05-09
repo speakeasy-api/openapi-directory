@@ -15,6 +15,7 @@ public class DocumentClassificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public String[] labels;
+
     public DocumentClassificationConfig withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -22,9 +23,13 @@ public class DocumentClassificationConfig {
     
     @JsonProperty("Mode")
     public DocumentClassifierModeEnum mode;
+
     public DocumentClassificationConfig withMode(DocumentClassifierModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public DocumentClassificationConfig(@JsonProperty("Mode") DocumentClassifierModeEnum mode) {
+        this.mode = mode;
+  }
 }

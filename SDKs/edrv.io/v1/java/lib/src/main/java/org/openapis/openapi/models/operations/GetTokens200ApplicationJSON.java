@@ -15,6 +15,7 @@ public class GetTokens200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetTokens200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class GetTokens200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetTokens200ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -31,9 +33,11 @@ public class GetTokens200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object[] result;
+
     public GetTokens200ApplicationJSON withResult(Object[] result) {
         this.result = result;
         return this;
     }
     
+    public GetTokens200ApplicationJSON(){}
 }

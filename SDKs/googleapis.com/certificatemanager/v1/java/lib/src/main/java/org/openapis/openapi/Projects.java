@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse(contentType, httpRes.statusCode()) {{
             listCertificateIssuanceConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse(contentType, httpRes.statusCode()) {{
             listCertificateMapEntriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse(contentType, httpRes.statusCode()) {{
             listCertificateMapsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListResponse(contentType, httpRes.statusCode()) {{
             listCertificatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse(contentType, httpRes.statusCode()) {{
             listDnsAuthorizationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -496,54 +476,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListDnsAuthorizationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListDnsAuthorizationsResponse.class);
                 res.listDnsAuthorizationsResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Updates a DnsAuthorization.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse certificatemanagerProjectsLocationsDnsAuthorizationsPatch(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("PATCH");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dnsAuthorizationInput", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse() {{
-            operation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
-                res.operation = out;
             }
         }
 
@@ -578,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -638,98 +566,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.empty = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteResponse certificatemanagerProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteResponse() {{
-            empty = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.empty = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetResponse certificatemanagerProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetResponse() {{
-            operation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
-                res.operation = out;
             }
         }
 
@@ -764,11 +600,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -776,6 +610,230 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListOperationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListOperationsResponse.class);
                 res.listOperationsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a new TrustConfig in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsCreateResponse certificatemanagerProjectsLocationsTrustConfigsCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsCreateRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsCreateRequest.class, baseUrl, "/v1/{parent}/trustConfigs", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "trustConfigInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsCreateResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Deletes a single TrustConfig.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsDeleteResponse certificatemanagerProjectsLocationsTrustConfigsDelete(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsDeleteRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsDeleteSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsDeleteRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsDeleteResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsDeleteResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Gets details of a single TrustConfig.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsGetResponse certificatemanagerProjectsLocationsTrustConfigsGet(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsGetRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsGetSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsGetRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsGetRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsGetResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsGetResponse(contentType, httpRes.statusCode()) {{
+            trustConfig = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TrustConfig out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TrustConfig.class);
+                res.trustConfig = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists TrustConfigs in a given project and location.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsListResponse certificatemanagerProjectsLocationsTrustConfigsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsListRequest.class, baseUrl, "/v1/{parent}/trustConfigs", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsListResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsListResponse(contentType, httpRes.statusCode()) {{
+            listTrustConfigsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListTrustConfigsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListTrustConfigsResponse.class);
+                res.listTrustConfigsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Updates a TrustConfig.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsPatchResponse certificatemanagerProjectsLocationsTrustConfigsPatch(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsPatchRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsPatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "trustConfigInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsPatchRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsPatchResponse res = new org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsTrustConfigsPatchResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
             }
         }
 

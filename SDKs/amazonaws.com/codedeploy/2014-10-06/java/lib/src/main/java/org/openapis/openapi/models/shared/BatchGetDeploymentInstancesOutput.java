@@ -15,6 +15,7 @@ public class BatchGetDeploymentInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchGetDeploymentInstancesOutput withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetDeploymentInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instancesSummary")
     public InstanceSummary[] instancesSummary;
+
     public BatchGetDeploymentInstancesOutput withInstancesSummary(InstanceSummary[] instancesSummary) {
         this.instancesSummary = instancesSummary;
         return this;
     }
     
+    public BatchGetDeploymentInstancesOutput(){}
 }

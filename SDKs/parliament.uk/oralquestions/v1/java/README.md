@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetRequest;
 import org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PublishedEarlyDayMotionGetRequest req = new PublishedEarlyDayMotionGetRequest() {{
-                id = 548814;
-            }}            
+            PublishedEarlyDayMotionGetRequest req = new PublishedEarlyDayMotionGetRequest(548814);            
 
             PublishedEarlyDayMotionGetResponse res = sdk.earlyDayMotions.publishedEarlyDayMotionGet(req);
 
-            if (res.apiResponseListPublishedWrittenQuestion.isPresent()) {
+            if (res.apiResponseListPublishedWrittenQuestion != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,18 +44,18 @@ public class Application {
 ## Available Resources and Operations
 
 
-### earlyDayMotions
+### [earlyDayMotions](docs/earlydaymotions/README.md)
 
-* `publishedEarlyDayMotionGet` - Returns a single Early Day Motion by ID
-* `getEarlyDayMotionsList` - Returns a list of Early Day Motions
+* [publishedEarlyDayMotionGet](docs/earlydaymotions/README.md#publishedearlydaymotionget) - Returns a single Early Day Motion by ID
+* [getEarlyDayMotionsList](docs/earlydaymotions/README.md#getearlydaymotionslist) - Returns a list of Early Day Motions
 
-### oralQuestionTimes
+### [oralQuestionTimes](docs/oralquestiontimes/README.md)
 
-* `publishedOralQuestionTimeGet` - Returns a list of oral question times
+* [publishedOralQuestionTimeGet](docs/oralquestiontimes/README.md#publishedoralquestiontimeget) - Returns a list of oral question times
 
-### oralQuestions
+### [oralQuestions](docs/oralquestions/README.md)
 
-* `publishedOralQuestionGet` - Returns a list of oral questions
+* [publishedOralQuestionGet](docs/oralquestions/README.md#publishedoralquestionget) - Returns a list of oral questions
 <!-- End SDK Available Operations -->
 
 ### Maturity

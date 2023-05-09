@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateFirewallRuleGroupRequest {
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public AssociateFirewallRuleGroupRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -18,6 +19,7 @@ public class AssociateFirewallRuleGroupRequest {
     
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public AssociateFirewallRuleGroupRequest withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
@@ -26,6 +28,7 @@ public class AssociateFirewallRuleGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MutationProtection")
     public MutationProtectionStatusEnum mutationProtection;
+
     public AssociateFirewallRuleGroupRequest withMutationProtection(MutationProtectionStatusEnum mutationProtection) {
         this.mutationProtection = mutationProtection;
         return this;
@@ -33,6 +36,7 @@ public class AssociateFirewallRuleGroupRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public AssociateFirewallRuleGroupRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +44,7 @@ public class AssociateFirewallRuleGroupRequest {
     
     @JsonProperty("Priority")
     public Long priority;
+
     public AssociateFirewallRuleGroupRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -48,6 +53,7 @@ public class AssociateFirewallRuleGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public AssociateFirewallRuleGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -55,9 +61,17 @@ public class AssociateFirewallRuleGroupRequest {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AssociateFirewallRuleGroupRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AssociateFirewallRuleGroupRequest(@JsonProperty("CreatorRequestId") String creatorRequestId, @JsonProperty("FirewallRuleGroupId") String firewallRuleGroupId, @JsonProperty("Name") String name, @JsonProperty("Priority") Long priority, @JsonProperty("VpcId") String vpcId) {
+        this.creatorRequestId = creatorRequestId;
+        this.firewallRuleGroupId = firewallRuleGroupId;
+        this.name = name;
+        this.priority = priority;
+        this.vpcId = vpcId;
+  }
 }

@@ -18,6 +18,7 @@ public class CollectionOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public CollectionOverride withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -29,9 +30,11 @@ public class CollectionOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public CollectionOverride withOptions(Options options) {
         this.options = options;
         return this;
     }
     
+    public CollectionOverride(){}
 }

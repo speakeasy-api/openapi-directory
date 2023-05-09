@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ScheduleKeyDeletionResponse {
     
     public String contentType;
+
     public ScheduleKeyDeletionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ScheduleKeyDeletionResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ScheduleKeyDeletionResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ScheduleKeyDeletionResponse {
      */
     
     public Object invalidArnException;
+
     public ScheduleKeyDeletionResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class ScheduleKeyDeletionResponse {
      */
     
     public Object kmsInternalException;
+
     public ScheduleKeyDeletionResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -49,6 +54,7 @@ public class ScheduleKeyDeletionResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public ScheduleKeyDeletionResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class ScheduleKeyDeletionResponse {
      */
     
     public Object notFoundException;
+
     public ScheduleKeyDeletionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ScheduleKeyDeletionResponse {
      */
     
     public org.openapis.openapi.models.shared.ScheduleKeyDeletionResponse scheduleKeyDeletionResponse;
+
     public ScheduleKeyDeletionResponse withScheduleKeyDeletionResponse(org.openapis.openapi.models.shared.ScheduleKeyDeletionResponse scheduleKeyDeletionResponse) {
         this.scheduleKeyDeletionResponse = scheduleKeyDeletionResponse;
         return this;
@@ -76,6 +84,7 @@ public class ScheduleKeyDeletionResponse {
     
     
     public Integer statusCode;
+
     public ScheduleKeyDeletionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ScheduleKeyDeletionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ScheduleKeyDeletionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ScheduleKeyDeletionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

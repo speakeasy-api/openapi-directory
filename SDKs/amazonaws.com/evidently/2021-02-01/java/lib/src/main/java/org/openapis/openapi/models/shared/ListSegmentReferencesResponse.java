@@ -15,6 +15,7 @@ public class ListSegmentReferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSegmentReferencesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSegmentReferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencedBy")
     public RefResource[] referencedBy;
+
     public ListSegmentReferencesResponse withReferencedBy(RefResource[] referencedBy) {
         this.referencedBy = referencedBy;
         return this;
     }
     
+    public ListSegmentReferencesResponse(){}
 }

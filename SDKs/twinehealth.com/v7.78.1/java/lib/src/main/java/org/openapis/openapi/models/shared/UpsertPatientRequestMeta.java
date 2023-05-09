@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsertPatientRequestMeta {
     @JsonProperty("query")
     public UpsertPatientRequestMetaQuery query;
+
     public UpsertPatientRequestMeta withQuery(UpsertPatientRequestMetaQuery query) {
         this.query = query;
         return this;
     }
     
+    public UpsertPatientRequestMeta(@JsonProperty("query") UpsertPatientRequestMetaQuery query) {
+        this.query = query;
+  }
 }

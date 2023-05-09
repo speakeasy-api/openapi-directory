@@ -18,6 +18,7 @@ public class ItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ItemStatusCodeEnum code;
+
     public ItemStatus withCode(ItemStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processingErrors")
     public ProcessingError[] processingErrors;
+
     public ItemStatus withProcessingErrors(ProcessingError[] processingErrors) {
         this.processingErrors = processingErrors;
         return this;
@@ -40,9 +42,11 @@ public class ItemStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryErrors")
     public RepositoryError[] repositoryErrors;
+
     public ItemStatus withRepositoryErrors(RepositoryError[] repositoryErrors) {
         this.repositoryErrors = repositoryErrors;
         return this;
     }
     
+    public ItemStatus(){}
 }

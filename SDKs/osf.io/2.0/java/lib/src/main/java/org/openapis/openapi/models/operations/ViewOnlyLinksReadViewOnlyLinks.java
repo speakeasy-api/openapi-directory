@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ViewOnlyLinksReadViewOnlyLinks - OK
@@ -15,6 +15,7 @@ public class ViewOnlyLinksReadViewOnlyLinks {
      */
     
     public ViewOnlyLinksReadViewOnlyLinksAttributes attributes;
+
     public ViewOnlyLinksReadViewOnlyLinks withAttributes(ViewOnlyLinksReadViewOnlyLinksAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class ViewOnlyLinksReadViewOnlyLinks {
      */
     
     public String id;
+
     public ViewOnlyLinksReadViewOnlyLinks withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class ViewOnlyLinksReadViewOnlyLinks {
      */
     
     public ViewOnlyLinksReadViewOnlyLinksRelationships relationships;
+
     public ViewOnlyLinksReadViewOnlyLinks withRelationships(ViewOnlyLinksReadViewOnlyLinksRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -45,9 +48,16 @@ public class ViewOnlyLinksReadViewOnlyLinks {
      */
     
     public String type;
+
     public ViewOnlyLinksReadViewOnlyLinks withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ViewOnlyLinksReadViewOnlyLinks(@JsonProperty("attributes") ViewOnlyLinksReadViewOnlyLinksAttributes attributes, @JsonProperty("id") String id, @JsonProperty("relationships") ViewOnlyLinksReadViewOnlyLinksRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

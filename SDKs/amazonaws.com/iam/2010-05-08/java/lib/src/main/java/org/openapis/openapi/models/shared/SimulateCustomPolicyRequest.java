@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SimulateCustomPolicyRequest {
     
     public String[] actionNames;
+
     public SimulateCustomPolicyRequest withActionNames(String[] actionNames) {
         this.actionNames = actionNames;
         return this;
@@ -16,6 +17,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public String callerArn;
+
     public SimulateCustomPolicyRequest withCallerArn(String callerArn) {
         this.callerArn = callerArn;
         return this;
@@ -23,6 +25,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public ContextEntry[] contextEntries;
+
     public SimulateCustomPolicyRequest withContextEntries(ContextEntry[] contextEntries) {
         this.contextEntries = contextEntries;
         return this;
@@ -30,6 +33,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public String marker;
+
     public SimulateCustomPolicyRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +41,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public Long maxItems;
+
     public SimulateCustomPolicyRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -44,6 +49,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public String[] permissionsBoundaryPolicyInputList;
+
     public SimulateCustomPolicyRequest withPermissionsBoundaryPolicyInputList(String[] permissionsBoundaryPolicyInputList) {
         this.permissionsBoundaryPolicyInputList = permissionsBoundaryPolicyInputList;
         return this;
@@ -51,6 +57,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public String[] policyInputList;
+
     public SimulateCustomPolicyRequest withPolicyInputList(String[] policyInputList) {
         this.policyInputList = policyInputList;
         return this;
@@ -58,6 +65,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public String[] resourceArns;
+
     public SimulateCustomPolicyRequest withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
@@ -65,6 +73,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public String resourceHandlingOption;
+
     public SimulateCustomPolicyRequest withResourceHandlingOption(String resourceHandlingOption) {
         this.resourceHandlingOption = resourceHandlingOption;
         return this;
@@ -72,6 +81,7 @@ public class SimulateCustomPolicyRequest {
     
     
     public String resourceOwner;
+
     public SimulateCustomPolicyRequest withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -79,9 +89,14 @@ public class SimulateCustomPolicyRequest {
     
     
     public String resourcePolicy;
+
     public SimulateCustomPolicyRequest withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public SimulateCustomPolicyRequest(@JsonProperty("ActionNames") String[] actionNames, @JsonProperty("PolicyInputList") String[] policyInputList) {
+        this.actionNames = actionNames;
+        this.policyInputList = policyInputList;
+  }
 }

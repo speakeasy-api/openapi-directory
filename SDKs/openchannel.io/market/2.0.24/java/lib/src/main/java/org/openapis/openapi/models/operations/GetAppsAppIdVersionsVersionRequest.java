@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsAppIdVersionsVersionRequest {
@@ -12,6 +13,7 @@ public class GetAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public GetAppsAppIdVersionsVersionRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -22,6 +24,7 @@ public class GetAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public GetAppsAppIdVersionsVersionRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -32,9 +35,14 @@ public class GetAppsAppIdVersionsVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public Long version;
+
     public GetAppsAppIdVersionsVersionRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public GetAppsAppIdVersionsVersionRequest(@JsonProperty("appId") String appId, @JsonProperty("version") Long version) {
+        this.appId = appId;
+        this.version = version;
+  }
 }

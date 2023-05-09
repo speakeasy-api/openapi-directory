@@ -18,6 +18,7 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CsvConfiguration")
     public CsvConfiguration csvConfiguration;
+
     public DataSourceConfiguration withCsvConfiguration(CsvConfiguration csvConfiguration) {
         this.csvConfiguration = csvConfiguration;
         return this;
@@ -25,6 +26,7 @@ public class DataSourceConfiguration {
     
     @JsonProperty("DataFormat")
     public BatchLoadDataFormatEnum dataFormat;
+
     public DataSourceConfiguration withDataFormat(BatchLoadDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -32,9 +34,14 @@ public class DataSourceConfiguration {
     
     @JsonProperty("DataSourceS3Configuration")
     public DataSourceS3Configuration dataSourceS3Configuration;
+
     public DataSourceConfiguration withDataSourceS3Configuration(DataSourceS3Configuration dataSourceS3Configuration) {
         this.dataSourceS3Configuration = dataSourceS3Configuration;
         return this;
     }
     
+    public DataSourceConfiguration(@JsonProperty("DataFormat") BatchLoadDataFormatEnum dataFormat, @JsonProperty("DataSourceS3Configuration") DataSourceS3Configuration dataSourceS3Configuration) {
+        this.dataFormat = dataFormat;
+        this.dataSourceS3Configuration = dataSourceS3Configuration;
+  }
 }

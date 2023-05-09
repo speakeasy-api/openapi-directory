@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EvaluateDataQuality {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public EvaluateDataQuality withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -21,6 +22,7 @@ public class EvaluateDataQuality {
     
     @JsonProperty("Name")
     public String name;
+
     public EvaluateDataQuality withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +31,7 @@ public class EvaluateDataQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Output")
     public DQTransformOutputEnum output;
+
     public EvaluateDataQuality withOutput(DQTransformOutputEnum output) {
         this.output = output;
         return this;
@@ -37,6 +40,7 @@ public class EvaluateDataQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublishingOptions")
     public DQResultsPublishingOptions publishingOptions;
+
     public EvaluateDataQuality withPublishingOptions(DQResultsPublishingOptions publishingOptions) {
         this.publishingOptions = publishingOptions;
         return this;
@@ -44,6 +48,7 @@ public class EvaluateDataQuality {
     
     @JsonProperty("Ruleset")
     public String ruleset;
+
     public EvaluateDataQuality withRuleset(String ruleset) {
         this.ruleset = ruleset;
         return this;
@@ -52,9 +57,15 @@ public class EvaluateDataQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopJobOnFailureOptions")
     public DQStopJobOnFailureOptions stopJobOnFailureOptions;
+
     public EvaluateDataQuality withStopJobOnFailureOptions(DQStopJobOnFailureOptions stopJobOnFailureOptions) {
         this.stopJobOnFailureOptions = stopJobOnFailureOptions;
         return this;
     }
     
+    public EvaluateDataQuality(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Ruleset") String ruleset) {
+        this.inputs = inputs;
+        this.name = name;
+        this.ruleset = ruleset;
+  }
 }

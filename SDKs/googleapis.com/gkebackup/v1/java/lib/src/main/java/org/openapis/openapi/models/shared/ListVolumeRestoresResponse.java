@@ -18,6 +18,7 @@ public class ListVolumeRestoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVolumeRestoresResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListVolumeRestoresResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeRestores")
     public VolumeRestore[] volumeRestores;
+
     public ListVolumeRestoresResponse withVolumeRestores(VolumeRestore[] volumeRestores) {
         this.volumeRestores = volumeRestores;
         return this;
     }
     
+    public ListVolumeRestoresResponse(){}
 }

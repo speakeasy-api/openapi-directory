@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRegistryResponse {
     
     public String contentType;
+
     public DescribeRegistryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRegistryResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRegistryResponse describeRegistryResponse;
+
     public DescribeRegistryResponse withDescribeRegistryResponse(org.openapis.openapi.models.shared.DescribeRegistryResponse describeRegistryResponse) {
         this.describeRegistryResponse = describeRegistryResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRegistryResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeRegistryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRegistryResponse {
      */
     
     public Object serverException;
+
     public DescribeRegistryResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRegistryResponse {
     
     
     public Integer statusCode;
+
     public DescribeRegistryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeRegistryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRegistryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeRegistryResponse {
      */
     
     public Object validationException;
+
     public DescribeRegistryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeRegistryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

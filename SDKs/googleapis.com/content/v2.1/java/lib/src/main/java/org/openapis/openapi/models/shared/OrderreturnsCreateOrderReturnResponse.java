@@ -18,6 +18,7 @@ public class OrderreturnsCreateOrderReturnResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public String executionStatus;
+
     public OrderreturnsCreateOrderReturnResponse withExecutionStatus(String executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -29,6 +30,7 @@ public class OrderreturnsCreateOrderReturnResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrderreturnsCreateOrderReturnResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class OrderreturnsCreateOrderReturnResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderReturn")
     public MerchantOrderReturn orderReturn;
+
     public OrderreturnsCreateOrderReturnResponse withOrderReturn(MerchantOrderReturn orderReturn) {
         this.orderReturn = orderReturn;
         return this;
     }
     
+    public OrderreturnsCreateOrderReturnResponse(){}
 }

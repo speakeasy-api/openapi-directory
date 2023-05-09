@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Object object1;
+
     public StorageObjectsPatchRequest withObject1(org.openapis.openapi.models.shared.Object object1) {
         this.object1 = object1;
         return this;
@@ -19,6 +21,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucket;
+
     public StorageObjectsPatchRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -39,6 +43,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generation")
     public String generation;
+
     public StorageObjectsPatchRequest withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -59,6 +65,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
     public String ifGenerationMatch;
+
     public StorageObjectsPatchRequest withIfGenerationMatch(String ifGenerationMatch) {
         this.ifGenerationMatch = ifGenerationMatch;
         return this;
@@ -69,6 +76,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
     public String ifGenerationNotMatch;
+
     public StorageObjectsPatchRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
         this.ifGenerationNotMatch = ifGenerationNotMatch;
         return this;
@@ -79,6 +87,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
     public String ifMetagenerationMatch;
+
     public StorageObjectsPatchRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
         return this;
@@ -89,6 +98,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
     public String ifMetagenerationNotMatch;
+
     public StorageObjectsPatchRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
         this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
         return this;
@@ -99,6 +109,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String objectPathParameter;
+
     public StorageObjectsPatchRequest withObjectPathParameter(String objectPathParameter) {
         this.objectPathParameter = objectPathParameter;
         return this;
@@ -129,6 +142,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +153,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public StorageObjectsPatchProjectionEnum projection;
+
     public StorageObjectsPatchRequest withProjection(StorageObjectsPatchProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -149,6 +164,7 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -159,9 +175,14 @@ public class StorageObjectsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public StorageObjectsPatchRequest(@JsonProperty("bucket") String bucket, @JsonProperty("objectPathParameter") String objectPathParameter) {
+        this.bucket = bucket;
+        this.objectPathParameter = objectPathParameter;
+  }
 }

@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ByteContentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public GooglePrivacyDlpV2ByteContentItem withData(String data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2ByteContentItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GooglePrivacyDlpV2ByteContentItemTypeEnum type;
+
     public GooglePrivacyDlpV2ByteContentItem withType(GooglePrivacyDlpV2ByteContentItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GooglePrivacyDlpV2ByteContentItem(){}
 }

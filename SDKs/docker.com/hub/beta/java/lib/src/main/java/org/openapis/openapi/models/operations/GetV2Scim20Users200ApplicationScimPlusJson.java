@@ -12,6 +12,7 @@ public class GetV2Scim20Users200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsPerPage")
     public Long itemsPerPage;
+
     public GetV2Scim20Users200ApplicationScimPlusJson withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -20,6 +21,7 @@ public class GetV2Scim20Users200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public org.openapis.openapi.models.shared.ScimUser[] resources;
+
     public GetV2Scim20Users200ApplicationScimPlusJson withResources(org.openapis.openapi.models.shared.ScimUser[] resources) {
         this.resources = resources;
         return this;
@@ -28,6 +30,7 @@ public class GetV2Scim20Users200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public GetV2Scim20Users200ApplicationScimPlusJson withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -36,6 +39,7 @@ public class GetV2Scim20Users200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Long startIndex;
+
     public GetV2Scim20Users200ApplicationScimPlusJson withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -44,9 +48,11 @@ public class GetV2Scim20Users200ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResults")
     public Long totalResults;
+
     public GetV2Scim20Users200ApplicationScimPlusJson withTotalResults(Long totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public GetV2Scim20Users200ApplicationScimPlusJson(){}
 }

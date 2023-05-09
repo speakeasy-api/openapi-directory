@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CheckSuitePreference {
     @JsonProperty("preferences")
     public CheckSuitePreferencePreferences preferences;
+
     public CheckSuitePreference withPreferences(CheckSuitePreferencePreferences preferences) {
         this.preferences = preferences;
         return this;
@@ -22,9 +23,14 @@ public class CheckSuitePreference {
      */
     @JsonProperty("repository")
     public MinimalRepository repository;
+
     public CheckSuitePreference withRepository(MinimalRepository repository) {
         this.repository = repository;
         return this;
     }
     
+    public CheckSuitePreference(@JsonProperty("preferences") CheckSuitePreferencePreferences preferences, @JsonProperty("repository") MinimalRepository repository) {
+        this.preferences = preferences;
+        this.repository = repository;
+  }
 }

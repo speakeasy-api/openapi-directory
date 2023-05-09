@@ -12,6 +12,7 @@ public class Image {
      */
     @JsonProperty("imageName")
     public String imageName;
+
     public Image withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -22,9 +23,14 @@ public class Image {
      */
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public Image withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
     
+    public Image(@JsonProperty("imageName") String imageName, @JsonProperty("imageUrl") String imageUrl) {
+        this.imageName = imageName;
+        this.imageUrl = imageUrl;
+  }
 }

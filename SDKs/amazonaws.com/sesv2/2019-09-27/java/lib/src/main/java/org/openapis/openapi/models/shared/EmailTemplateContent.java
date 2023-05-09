@@ -15,6 +15,7 @@ public class EmailTemplateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Html")
     public String html;
+
     public EmailTemplateContent withHtml(String html) {
         this.html = html;
         return this;
@@ -23,6 +24,7 @@ public class EmailTemplateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public EmailTemplateContent withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -31,9 +33,11 @@ public class EmailTemplateContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public EmailTemplateContent withText(String text) {
         this.text = text;
         return this;
     }
     
+    public EmailTemplateContent(){}
 }

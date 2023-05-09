@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AlertTarget {
     @JsonProperty("alertTargetArn")
     public String alertTargetArn;
+
     public AlertTarget withAlertTargetArn(String alertTargetArn) {
         this.alertTargetArn = alertTargetArn;
         return this;
@@ -19,9 +20,14 @@ public class AlertTarget {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public AlertTarget withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public AlertTarget(@JsonProperty("alertTargetArn") String alertTargetArn, @JsonProperty("roleArn") String roleArn) {
+        this.alertTargetArn = alertTargetArn;
+        this.roleArn = roleArn;
+  }
 }

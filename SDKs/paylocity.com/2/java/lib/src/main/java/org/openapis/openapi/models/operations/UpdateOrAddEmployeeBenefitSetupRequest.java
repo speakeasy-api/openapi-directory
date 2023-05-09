@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrAddEmployeeBenefitSetupRequest {
@@ -12,6 +13,7 @@ public class UpdateOrAddEmployeeBenefitSetupRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BenefitSetup benefitSetup;
+
     public UpdateOrAddEmployeeBenefitSetupRequest withBenefitSetup(org.openapis.openapi.models.shared.BenefitSetup benefitSetup) {
         this.benefitSetup = benefitSetup;
         return this;
@@ -22,6 +24,7 @@ public class UpdateOrAddEmployeeBenefitSetupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public UpdateOrAddEmployeeBenefitSetupRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -32,9 +35,15 @@ public class UpdateOrAddEmployeeBenefitSetupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public UpdateOrAddEmployeeBenefitSetupRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
     }
     
+    public UpdateOrAddEmployeeBenefitSetupRequest(@JsonProperty("benefitSetup") org.openapis.openapi.models.shared.BenefitSetup benefitSetup, @JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId) {
+        this.benefitSetup = benefitSetup;
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+  }
 }

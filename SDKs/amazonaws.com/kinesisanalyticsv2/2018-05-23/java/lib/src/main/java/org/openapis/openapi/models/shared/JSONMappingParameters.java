@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JSONMappingParameters {
     @JsonProperty("RecordRowPath")
     public String recordRowPath;
+
     public JSONMappingParameters withRecordRowPath(String recordRowPath) {
         this.recordRowPath = recordRowPath;
         return this;
     }
     
+    public JSONMappingParameters(@JsonProperty("RecordRowPath") String recordRowPath) {
+        this.recordRowPath = recordRowPath;
+  }
 }

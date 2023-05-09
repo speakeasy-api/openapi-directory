@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse {
     
     public String contentType;
+
     public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse 
     
     
     public Integer statusCode;
+
     public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse 
      */
     
     public org.openapis.openapi.models.shared.TransactionsCluster transactionsCluster;
+
     public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse withTransactionsCluster(org.openapis.openapi.models.shared.TransactionsCluster transactionsCluster) {
         this.transactionsCluster = transactionsCluster;
         return this;
     }
     
+    public DeleteUsersIdUserTransactionsclustersIdTransactionsclusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

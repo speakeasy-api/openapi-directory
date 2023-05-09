@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClusterResponse {
@@ -12,6 +13,7 @@ public class UpdateClusterResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public UpdateClusterResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class UpdateClusterResponse {
     
     
     public String contentType;
+
     public UpdateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public UpdateClusterResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -39,6 +43,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public UpdateClusterResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidParameterGroupStateFault;
+
     public UpdateClusterResponse withInvalidParameterGroupStateFault(Object invalidParameterGroupStateFault) {
         this.invalidParameterGroupStateFault = invalidParameterGroupStateFault;
         return this;
@@ -59,6 +65,7 @@ public class UpdateClusterResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateClusterResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateClusterResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public UpdateClusterResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -76,6 +84,7 @@ public class UpdateClusterResponse {
     
     
     public Integer statusCode;
+
     public UpdateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateClusterResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public UpdateClusterResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -103,9 +114,14 @@ public class UpdateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateClusterResponse updateClusterResponse;
+
     public UpdateClusterResponse withUpdateClusterResponse(org.openapis.openapi.models.shared.UpdateClusterResponse updateClusterResponse) {
         this.updateClusterResponse = updateClusterResponse;
         return this;
     }
     
+    public UpdateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

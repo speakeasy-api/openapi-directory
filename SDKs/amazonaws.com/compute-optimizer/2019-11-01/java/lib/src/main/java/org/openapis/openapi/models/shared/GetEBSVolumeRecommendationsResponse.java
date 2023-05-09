@@ -15,6 +15,7 @@ public class GetEBSVolumeRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetRecommendationError[] errors;
+
     public GetEBSVolumeRecommendationsResponse withErrors(GetRecommendationError[] errors) {
         this.errors = errors;
         return this;
@@ -23,6 +24,7 @@ public class GetEBSVolumeRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetEBSVolumeRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class GetEBSVolumeRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeRecommendations")
     public VolumeRecommendation[] volumeRecommendations;
+
     public GetEBSVolumeRecommendationsResponse withVolumeRecommendations(VolumeRecommendation[] volumeRecommendations) {
         this.volumeRecommendations = volumeRecommendations;
         return this;
     }
     
+    public GetEBSVolumeRecommendationsResponse(){}
 }

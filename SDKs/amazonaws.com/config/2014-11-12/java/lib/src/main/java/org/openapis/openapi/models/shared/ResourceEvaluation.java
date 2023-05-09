@@ -20,6 +20,7 @@ public class ResourceEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMode")
     public EvaluationModeEnum evaluationMode;
+
     public ResourceEvaluation withEvaluationMode(EvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
@@ -30,6 +31,7 @@ public class ResourceEvaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EvaluationStartTimestamp")
     public OffsetDateTime evaluationStartTimestamp;
+
     public ResourceEvaluation withEvaluationStartTimestamp(OffsetDateTime evaluationStartTimestamp) {
         this.evaluationStartTimestamp = evaluationStartTimestamp;
         return this;
@@ -38,9 +40,11 @@ public class ResourceEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceEvaluationId")
     public String resourceEvaluationId;
+
     public ResourceEvaluation withResourceEvaluationId(String resourceEvaluationId) {
         this.resourceEvaluationId = resourceEvaluationId;
         return this;
     }
     
+    public ResourceEvaluation(){}
 }

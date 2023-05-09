@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribePlatformVersionResult {
     
     public PlatformDescription platformDescription;
+
     public DescribePlatformVersionResult withPlatformDescription(PlatformDescription platformDescription) {
         this.platformDescription = platformDescription;
         return this;
     }
     
+    public DescribePlatformVersionResult(){}
 }

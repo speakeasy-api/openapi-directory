@@ -10,11 +10,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class HivePartitioningOptions {
     /**
+     * [Output-only] For permanent external tables, this field is populated with the hive partition keys in the order they were inferred. The types of the partition keys can be deduced by checking the table schema (which will include the partition keys). Not every API will populate this field in the output. For example, Tables.Get will populate it, but Tables.List will not contain this field.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fields")
+    public String[] fields;
+
+    public HivePartitioningOptions withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
      * [Optional] When set, what mode of hive partitioning to use when reading data. The following modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2) STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3) CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats support hive partitioning. Requesting hive partitioning on an unsupported format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public HivePartitioningOptions withMode(String mode) {
         this.mode = mode;
         return this;
@@ -26,6 +39,7 @@ public class HivePartitioningOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirePartitionFilter")
     public Boolean requirePartitionFilter;
+
     public HivePartitioningOptions withRequirePartitionFilter(Boolean requirePartitionFilter) {
         this.requirePartitionFilter = requirePartitionFilter;
         return this;
@@ -37,9 +51,11 @@ public class HivePartitioningOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUriPrefix")
     public String sourceUriPrefix;
+
     public HivePartitioningOptions withSourceUriPrefix(String sourceUriPrefix) {
         this.sourceUriPrefix = sourceUriPrefix;
         return this;
     }
     
+    public HivePartitioningOptions(){}
 }

@@ -32,6 +32,52 @@ public class RegionSecurityPolicies {
 	}
 
     /**
+     * Inserts a rule into a security policy.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleResponse computeRegionSecurityPoliciesAddRule(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/addRule", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicyRule", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesAddRuleResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Deletes the specified policy.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
@@ -59,11 +105,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +149,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse(contentType, httpRes.statusCode()) {{
             securityPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,6 +159,50 @@ public class RegionSecurityPolicies {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.SecurityPolicy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.SecurityPolicy.class);
                 res.securityPolicy = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Gets a rule at the specified priority.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleResponse computeRegionSecurityPoliciesGetRule(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/getRule", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRuleResponse(contentType, httpRes.statusCode()) {{
+            securityPolicyRule = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.SecurityPolicyRule out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.SecurityPolicyRule.class);
+                res.securityPolicyRule = out;
             }
         }
 
@@ -153,11 +239,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +283,9 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse(contentType, httpRes.statusCode()) {{
             securityPolicyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +329,99 @@ public class RegionSecurityPolicies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleResponse computeRegionSecurityPoliciesPatchRule(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/patchRule", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicyRule", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRuleResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Deletes a rule at the specified priority.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleResponse computeRegionSecurityPoliciesRemoveRule(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/removeRule", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleResponse res = new org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesRemoveRuleResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

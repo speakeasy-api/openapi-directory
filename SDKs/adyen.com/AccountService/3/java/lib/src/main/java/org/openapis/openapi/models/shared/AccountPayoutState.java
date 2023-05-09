@@ -15,6 +15,7 @@ public class AccountPayoutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPayout")
     public Boolean allowPayout;
+
     public AccountPayoutState withAllowPayout(Boolean allowPayout) {
         this.allowPayout = allowPayout;
         return this;
@@ -26,6 +27,7 @@ public class AccountPayoutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableReason")
     public String disableReason;
+
     public AccountPayoutState withDisableReason(String disableReason) {
         this.disableReason = disableReason;
         return this;
@@ -37,6 +39,7 @@ public class AccountPayoutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public AccountPayoutState withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -45,6 +48,7 @@ public class AccountPayoutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutLimit")
     public Amount payoutLimit;
+
     public AccountPayoutState withPayoutLimit(Amount payoutLimit) {
         this.payoutLimit = payoutLimit;
         return this;
@@ -56,9 +60,11 @@ public class AccountPayoutState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tierNumber")
     public Integer tierNumber;
+
     public AccountPayoutState withTierNumber(Integer tierNumber) {
         this.tierNumber = tierNumber;
         return this;
     }
     
+    public AccountPayoutState(){}
 }

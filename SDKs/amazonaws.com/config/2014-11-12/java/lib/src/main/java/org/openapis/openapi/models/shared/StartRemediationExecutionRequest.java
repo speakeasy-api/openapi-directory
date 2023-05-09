@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartRemediationExecutionRequest {
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public StartRemediationExecutionRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -16,9 +17,14 @@ public class StartRemediationExecutionRequest {
     
     @JsonProperty("ResourceKeys")
     public ResourceKey[] resourceKeys;
+
     public StartRemediationExecutionRequest withResourceKeys(ResourceKey[] resourceKeys) {
         this.resourceKeys = resourceKeys;
         return this;
     }
     
+    public StartRemediationExecutionRequest(@JsonProperty("ConfigRuleName") String configRuleName, @JsonProperty("ResourceKeys") ResourceKey[] resourceKeys) {
+        this.configRuleName = configRuleName;
+        this.resourceKeys = resourceKeys;
+  }
 }

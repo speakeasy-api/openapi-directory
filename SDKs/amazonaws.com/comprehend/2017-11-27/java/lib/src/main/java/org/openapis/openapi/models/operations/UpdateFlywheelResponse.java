@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFlywheelResponse {
     
     public String contentType;
+
     public UpdateFlywheelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFlywheelResponse {
      */
     
     public Object internalServerException;
+
     public UpdateFlywheelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFlywheelResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFlywheelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFlywheelResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public UpdateFlywheelResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFlywheelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFlywheelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateFlywheelResponse {
     
     
     public Integer statusCode;
+
     public UpdateFlywheelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFlywheelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFlywheelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFlywheelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateFlywheelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateFlywheelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFlywheelResponse updateFlywheelResponse;
+
     public UpdateFlywheelResponse withUpdateFlywheelResponse(org.openapis.openapi.models.shared.UpdateFlywheelResponse updateFlywheelResponse) {
         this.updateFlywheelResponse = updateFlywheelResponse;
         return this;
     }
     
+    public UpdateFlywheelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

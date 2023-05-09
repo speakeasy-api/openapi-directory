@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VerifyDomainDkimResponse - Returns CNAME records that you must publish to the DNS server of your domain to set up Easy DKIM with Amazon SES.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class VerifyDomainDkimResponse {
     
     public String[] dkimTokens;
+
     public VerifyDomainDkimResponse withDkimTokens(String[] dkimTokens) {
         this.dkimTokens = dkimTokens;
         return this;
     }
     
+    public VerifyDomainDkimResponse(@JsonProperty("DkimTokens") String[] dkimTokens) {
+        this.dkimTokens = dkimTokens;
+  }
 }

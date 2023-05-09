@@ -15,6 +15,7 @@ public class ServiceResourceCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cost")
     public Double cost;
+
     public ServiceResourceCost withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -23,6 +24,7 @@ public class ServiceResourceCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public ServiceResourceCost withCount(Long count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class ServiceResourceCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CostEstimationServiceResourceStateEnum state;
+
     public ServiceResourceCost withState(CostEstimationServiceResourceStateEnum state) {
         this.state = state;
         return this;
@@ -39,6 +42,7 @@ public class ServiceResourceCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ServiceResourceCost withType(String type) {
         this.type = type;
         return this;
@@ -47,9 +51,11 @@ public class ServiceResourceCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnitCost")
     public Double unitCost;
+
     public ServiceResourceCost withUnitCost(Double unitCost) {
         this.unitCost = unitCost;
         return this;
     }
     
+    public ServiceResourceCost(){}
 }

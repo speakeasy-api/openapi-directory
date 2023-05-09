@@ -15,9 +15,11 @@ public class DescribeRecommendationFeedbackResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationFeedback")
     public RecommendationFeedback recommendationFeedback;
+
     public DescribeRecommendationFeedbackResponse withRecommendationFeedback(RecommendationFeedback recommendationFeedback) {
         this.recommendationFeedback = recommendationFeedback;
         return this;
     }
     
+    public DescribeRecommendationFeedbackResponse(){}
 }

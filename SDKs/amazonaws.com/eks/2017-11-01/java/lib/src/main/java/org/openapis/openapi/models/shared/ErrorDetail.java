@@ -15,6 +15,7 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public ErrorDetail withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ErrorDetail withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class ErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public String[] resourceIds;
+
     public ErrorDetail withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
     
+    public ErrorDetail(){}
 }

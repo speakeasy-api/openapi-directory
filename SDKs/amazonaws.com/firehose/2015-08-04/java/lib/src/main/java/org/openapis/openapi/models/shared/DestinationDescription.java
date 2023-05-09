@@ -15,6 +15,7 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonOpenSearchServerlessDestinationDescription")
     public AmazonOpenSearchServerlessDestinationDescription amazonOpenSearchServerlessDestinationDescription;
+
     public DestinationDescription withAmazonOpenSearchServerlessDestinationDescription(AmazonOpenSearchServerlessDestinationDescription amazonOpenSearchServerlessDestinationDescription) {
         this.amazonOpenSearchServerlessDestinationDescription = amazonOpenSearchServerlessDestinationDescription;
         return this;
@@ -23,6 +24,7 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonopensearchserviceDestinationDescription")
     public AmazonopensearchserviceDestinationDescription amazonopensearchserviceDestinationDescription;
+
     public DestinationDescription withAmazonopensearchserviceDestinationDescription(AmazonopensearchserviceDestinationDescription amazonopensearchserviceDestinationDescription) {
         this.amazonopensearchserviceDestinationDescription = amazonopensearchserviceDestinationDescription;
         return this;
@@ -30,6 +32,7 @@ public class DestinationDescription {
     
     @JsonProperty("DestinationId")
     public String destinationId;
+
     public DestinationDescription withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -38,6 +41,7 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticsearchDestinationDescription")
     public ElasticsearchDestinationDescription elasticsearchDestinationDescription;
+
     public DestinationDescription withElasticsearchDestinationDescription(ElasticsearchDestinationDescription elasticsearchDestinationDescription) {
         this.elasticsearchDestinationDescription = elasticsearchDestinationDescription;
         return this;
@@ -46,6 +50,7 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedS3DestinationDescription")
     public ExtendedS3DestinationDescription extendedS3DestinationDescription;
+
     public DestinationDescription withExtendedS3DestinationDescription(ExtendedS3DestinationDescription extendedS3DestinationDescription) {
         this.extendedS3DestinationDescription = extendedS3DestinationDescription;
         return this;
@@ -54,6 +59,7 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpEndpointDestinationDescription")
     public HttpEndpointDestinationDescription httpEndpointDestinationDescription;
+
     public DestinationDescription withHttpEndpointDestinationDescription(HttpEndpointDestinationDescription httpEndpointDestinationDescription) {
         this.httpEndpointDestinationDescription = httpEndpointDestinationDescription;
         return this;
@@ -62,6 +68,7 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftDestinationDescription")
     public RedshiftDestinationDescription redshiftDestinationDescription;
+
     public DestinationDescription withRedshiftDestinationDescription(RedshiftDestinationDescription redshiftDestinationDescription) {
         this.redshiftDestinationDescription = redshiftDestinationDescription;
         return this;
@@ -70,6 +77,7 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DestinationDescription")
     public S3DestinationDescription s3DestinationDescription;
+
     public DestinationDescription withS3DestinationDescription(S3DestinationDescription s3DestinationDescription) {
         this.s3DestinationDescription = s3DestinationDescription;
         return this;
@@ -78,9 +86,13 @@ public class DestinationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplunkDestinationDescription")
     public SplunkDestinationDescription splunkDestinationDescription;
+
     public DestinationDescription withSplunkDestinationDescription(SplunkDestinationDescription splunkDestinationDescription) {
         this.splunkDestinationDescription = splunkDestinationDescription;
         return this;
     }
     
+    public DestinationDescription(@JsonProperty("DestinationId") String destinationId) {
+        this.destinationId = destinationId;
+  }
 }

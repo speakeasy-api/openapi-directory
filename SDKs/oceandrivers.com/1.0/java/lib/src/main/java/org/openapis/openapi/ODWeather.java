@@ -50,10 +50,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompareStationResponse res = new org.openapis.openapi.models.operations.CompareStationResponse() {{
+        org.openapis.openapi.models.operations.CompareStationResponse res = new org.openapis.openapi.models.operations.CompareStationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -82,10 +80,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAemetStationResponse res = new org.openapis.openapi.models.operations.GetAemetStationResponse() {{
+        org.openapis.openapi.models.operations.GetAemetStationResponse res = new org.openapis.openapi.models.operations.GetAemetStationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,10 +116,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEasywindResponse res = new org.openapis.openapi.models.operations.GetEasywindResponse() {{
+        org.openapis.openapi.models.operations.GetEasywindResponse res = new org.openapis.openapi.models.operations.GetEasywindResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,10 +146,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventStationsResponse res = new org.openapis.openapi.models.operations.GetEventStationsResponse() {{
+        org.openapis.openapi.models.operations.GetEventStationsResponse res = new org.openapis.openapi.models.operations.GetEventStationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,10 +176,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetForecastPointsResponse res = new org.openapis.openapi.models.operations.GetForecastPointsResponse() {{
+        org.openapis.openapi.models.operations.GetForecastPointsResponse res = new org.openapis.openapi.models.operations.GetForecastPointsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,10 +212,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetForecastTimeSeriesResponse res = new org.openapis.openapi.models.operations.GetForecastTimeSeriesResponse() {{
+        org.openapis.openapi.models.operations.GetForecastTimeSeriesResponse res = new org.openapis.openapi.models.operations.GetForecastTimeSeriesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,10 +248,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfResponse res = new org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfResponse() {{
+        org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfResponse res = new org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,10 +278,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSocibWeatherStationResponse res = new org.openapis.openapi.models.operations.GetSocibWeatherStationResponse() {{
+        org.openapis.openapi.models.operations.GetSocibWeatherStationResponse res = new org.openapis.openapi.models.operations.GetSocibWeatherStationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -330,10 +314,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWeatherDisplayResponse res = new org.openapis.openapi.models.operations.GetWeatherDisplayResponse() {{
+        org.openapis.openapi.models.operations.GetWeatherDisplayResponse res = new org.openapis.openapi.models.operations.GetWeatherDisplayResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,10 +343,8 @@ public class ODWeather {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebCamsResponse res = new org.openapis.openapi.models.operations.GetWebCamsResponse() {{
+        org.openapis.openapi.models.operations.GetWebCamsResponse res = new org.openapis.openapi.models.operations.GetWebCamsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

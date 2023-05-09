@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProvisioningArtifactResponse {
     
     public String contentType;
+
     public UpdateProvisioningArtifactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProvisioningArtifactResponse {
      */
     
     public Object invalidParametersException;
+
     public UpdateProvisioningArtifactResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateProvisioningArtifactResponse {
     
     
     public Integer statusCode;
+
     public UpdateProvisioningArtifactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateProvisioningArtifactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProvisioningArtifactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateProvisioningArtifactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProvisioningArtifactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,9 +59,14 @@ public class UpdateProvisioningArtifactResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProvisioningArtifactOutput updateProvisioningArtifactOutput;
+
     public UpdateProvisioningArtifactResponse withUpdateProvisioningArtifactOutput(org.openapis.openapi.models.shared.UpdateProvisioningArtifactOutput updateProvisioningArtifactOutput) {
         this.updateProvisioningArtifactOutput = updateProvisioningArtifactOutput;
         return this;
     }
     
+    public UpdateProvisioningArtifactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

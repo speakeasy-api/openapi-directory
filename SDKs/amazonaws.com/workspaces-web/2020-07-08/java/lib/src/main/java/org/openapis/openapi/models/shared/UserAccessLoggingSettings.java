@@ -15,6 +15,7 @@ public class UserAccessLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedPortalArns")
     public String[] associatedPortalArns;
+
     public UserAccessLoggingSettings withAssociatedPortalArns(String[] associatedPortalArns) {
         this.associatedPortalArns = associatedPortalArns;
         return this;
@@ -23,6 +24,7 @@ public class UserAccessLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kinesisStreamArn")
     public String kinesisStreamArn;
+
     public UserAccessLoggingSettings withKinesisStreamArn(String kinesisStreamArn) {
         this.kinesisStreamArn = kinesisStreamArn;
         return this;
@@ -30,9 +32,13 @@ public class UserAccessLoggingSettings {
     
     @JsonProperty("userAccessLoggingSettingsArn")
     public String userAccessLoggingSettingsArn;
+
     public UserAccessLoggingSettings withUserAccessLoggingSettingsArn(String userAccessLoggingSettingsArn) {
         this.userAccessLoggingSettingsArn = userAccessLoggingSettingsArn;
         return this;
     }
     
+    public UserAccessLoggingSettings(@JsonProperty("userAccessLoggingSettingsArn") String userAccessLoggingSettingsArn) {
+        this.userAccessLoggingSettingsArn = userAccessLoggingSettingsArn;
+  }
 }

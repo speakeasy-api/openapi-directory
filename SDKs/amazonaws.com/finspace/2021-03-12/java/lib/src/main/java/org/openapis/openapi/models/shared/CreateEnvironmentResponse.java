@@ -15,6 +15,7 @@ public class CreateEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentArn")
     public String environmentArn;
+
     public CreateEnvironmentResponse withEnvironmentArn(String environmentArn) {
         this.environmentArn = environmentArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public CreateEnvironmentResponse withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -31,9 +33,11 @@ public class CreateEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentUrl")
     public String environmentUrl;
+
     public CreateEnvironmentResponse withEnvironmentUrl(String environmentUrl) {
         this.environmentUrl = environmentUrl;
         return this;
     }
     
+    public CreateEnvironmentResponse(){}
 }

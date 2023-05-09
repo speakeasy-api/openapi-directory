@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorField.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/AftermarketListingAction.java
 lib/src/main/java/org/openapis/openapi/models/shared/AftermarketListingExpiryCreate.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

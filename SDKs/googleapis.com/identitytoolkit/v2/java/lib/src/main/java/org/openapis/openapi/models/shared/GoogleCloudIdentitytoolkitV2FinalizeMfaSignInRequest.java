@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mfaEnrollmentId")
     public String mfaEnrollmentId;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest withMfaEnrollmentId(String mfaEnrollmentId) {
         this.mfaEnrollmentId = mfaEnrollmentId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mfaPendingCredential")
     public String mfaPendingCredential;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest withMfaPendingCredential(String mfaPendingCredential) {
         this.mfaPendingCredential = mfaPendingCredential;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneVerificationInfo")
     public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo phoneVerificationInfo;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest withPhoneVerificationInfo(GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo phoneVerificationInfo) {
         this.phoneVerificationInfo = phoneVerificationInfo;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantId")
     public String tenantId;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totpVerificationInfo")
     public GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo totpVerificationInfo;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest withTotpVerificationInfo(GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo totpVerificationInfo) {
         this.totpVerificationInfo = totpVerificationInfo;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest(){}
 }

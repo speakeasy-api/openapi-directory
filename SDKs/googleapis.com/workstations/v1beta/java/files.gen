@@ -99,13 +99,17 @@ lib/src/main/java/org/openapis/openapi/models/shared/PrivateClusterConfigInput.j
 lib/src/main/java/org/openapis/openapi/models/shared/ListWorkstationClustersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkstationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkstationConfigInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/ReadinessCheck.java
 lib/src/main/java/org/openapis/openapi/models/shared/PersistentDirectory.java
 lib/src/main/java/org/openapis/openapi/models/shared/GceRegionalPersistentDiskReclaimPolicyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GceRegionalPersistentDisk.java
 lib/src/main/java/org/openapis/openapi/models/shared/Host.java
+lib/src/main/java/org/openapis/openapi/models/shared/HostInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/GceInstance.java
+lib/src/main/java/org/openapis/openapi/models/shared/GceInstanceInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/GceShieldedInstanceConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GceConfidentialInstanceConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/Accelerator.java
 lib/src/main/java/org/openapis/openapi/models/shared/CustomerEncryptionKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Container.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWorkstationConfigsResponse.java
@@ -128,4 +132,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartWorkstationRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/StopWorkstationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

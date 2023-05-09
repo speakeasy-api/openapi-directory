@@ -15,6 +15,7 @@ public class PostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogGroupName")
     public String cloudWatchLogGroupName;
+
     public PostLaunchActions withCloudWatchLogGroupName(String cloudWatchLogGroupName) {
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         return this;
@@ -23,6 +24,7 @@ public class PostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public PostLaunchActionsDeploymentTypeEnum deployment;
+
     public PostLaunchActions withDeployment(PostLaunchActionsDeploymentTypeEnum deployment) {
         this.deployment = deployment;
         return this;
@@ -31,6 +33,7 @@ public class PostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3LogBucket")
     public String s3LogBucket;
+
     public PostLaunchActions withS3LogBucket(String s3LogBucket) {
         this.s3LogBucket = s3LogBucket;
         return this;
@@ -39,6 +42,7 @@ public class PostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3OutputKeyPrefix")
     public String s3OutputKeyPrefix;
+
     public PostLaunchActions withS3OutputKeyPrefix(String s3OutputKeyPrefix) {
         this.s3OutputKeyPrefix = s3OutputKeyPrefix;
         return this;
@@ -47,9 +51,11 @@ public class PostLaunchActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmDocuments")
     public SsmDocument[] ssmDocuments;
+
     public PostLaunchActions withSsmDocuments(SsmDocument[] ssmDocuments) {
         this.ssmDocuments = ssmDocuments;
         return this;
     }
     
+    public PostLaunchActions(){}
 }

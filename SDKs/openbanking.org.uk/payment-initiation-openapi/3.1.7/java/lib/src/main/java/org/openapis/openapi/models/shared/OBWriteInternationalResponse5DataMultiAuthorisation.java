@@ -27,6 +27,7 @@ public class OBWriteInternationalResponse5DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBWriteInternationalResponse5DataMultiAuthorisation withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -42,6 +43,7 @@ public class OBWriteInternationalResponse5DataMultiAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateDateTime")
     public OffsetDateTime lastUpdateDateTime;
+
     public OBWriteInternationalResponse5DataMultiAuthorisation withLastUpdateDateTime(OffsetDateTime lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -53,6 +55,7 @@ public class OBWriteInternationalResponse5DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberReceived")
     public Long numberReceived;
+
     public OBWriteInternationalResponse5DataMultiAuthorisation withNumberReceived(Long numberReceived) {
         this.numberReceived = numberReceived;
         return this;
@@ -64,6 +67,7 @@ public class OBWriteInternationalResponse5DataMultiAuthorisation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberRequired")
     public Long numberRequired;
+
     public OBWriteInternationalResponse5DataMultiAuthorisation withNumberRequired(Long numberRequired) {
         this.numberRequired = numberRequired;
         return this;
@@ -74,9 +78,13 @@ public class OBWriteInternationalResponse5DataMultiAuthorisation {
      */
     @JsonProperty("Status")
     public OBWriteInternationalResponse5DataMultiAuthorisationStatusEnum status;
+
     public OBWriteInternationalResponse5DataMultiAuthorisation withStatus(OBWriteInternationalResponse5DataMultiAuthorisationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public OBWriteInternationalResponse5DataMultiAuthorisation(@JsonProperty("Status") OBWriteInternationalResponse5DataMultiAuthorisationStatusEnum status) {
+        this.status = status;
+  }
 }

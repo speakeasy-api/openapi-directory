@@ -12,6 +12,7 @@ public class TokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenData")
     public java.util.Map<String, String> tokenData;
+
     public TokenDetails withTokenData(java.util.Map<String, String> tokenData) {
         this.tokenData = tokenData;
         return this;
@@ -20,9 +21,11 @@ public class TokenDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenDataType")
     public String tokenDataType;
+
     public TokenDetails withTokenDataType(String tokenDataType) {
         this.tokenDataType = tokenDataType;
         return this;
     }
     
+    public TokenDetails(){}
 }

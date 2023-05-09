@@ -12,6 +12,7 @@ public class EmailTemplateCounts {
      */
     
     public Long bounces;
+
     public EmailTemplateCounts withBounces(Long bounces) {
         this.bounces = bounces;
         return this;
@@ -22,6 +23,7 @@ public class EmailTemplateCounts {
      */
     
     public Long clicks;
+
     public EmailTemplateCounts withClicks(Long clicks) {
         this.clicks = clicks;
         return this;
@@ -32,6 +34,7 @@ public class EmailTemplateCounts {
      */
     
     public Long replies;
+
     public EmailTemplateCounts withReplies(Long replies) {
         this.replies = replies;
         return this;
@@ -42,6 +45,7 @@ public class EmailTemplateCounts {
      */
     
     public Long sentEmails;
+
     public EmailTemplateCounts withSentEmails(Long sentEmails) {
         this.sentEmails = sentEmails;
         return this;
@@ -52,9 +56,11 @@ public class EmailTemplateCounts {
      */
     
     public Long views;
+
     public EmailTemplateCounts withViews(Long views) {
         this.views = views;
         return this;
     }
     
+    public EmailTemplateCounts(){}
 }

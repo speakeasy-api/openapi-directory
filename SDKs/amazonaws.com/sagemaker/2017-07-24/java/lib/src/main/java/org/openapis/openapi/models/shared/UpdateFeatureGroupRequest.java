@@ -12,6 +12,7 @@ public class UpdateFeatureGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureAdditions")
     public FeatureDefinition[] featureAdditions;
+
     public UpdateFeatureGroupRequest withFeatureAdditions(FeatureDefinition[] featureAdditions) {
         this.featureAdditions = featureAdditions;
         return this;
@@ -19,9 +20,13 @@ public class UpdateFeatureGroupRequest {
     
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public UpdateFeatureGroupRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
     }
     
+    public UpdateFeatureGroupRequest(@JsonProperty("FeatureGroupName") String featureGroupName) {
+        this.featureGroupName = featureGroupName;
+  }
 }

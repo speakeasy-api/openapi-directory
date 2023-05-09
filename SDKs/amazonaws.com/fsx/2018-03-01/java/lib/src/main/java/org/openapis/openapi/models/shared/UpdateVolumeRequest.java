@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateVolumeRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateVolumeRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -23,6 +24,7 @@ public class UpdateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateVolumeRequest withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class UpdateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapConfiguration")
     public UpdateOntapVolumeConfiguration ontapConfiguration;
+
     public UpdateVolumeRequest withOntapConfiguration(UpdateOntapVolumeConfiguration ontapConfiguration) {
         this.ontapConfiguration = ontapConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class UpdateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSConfiguration")
     public UpdateOpenZFSVolumeConfiguration openZFSConfiguration;
+
     public UpdateVolumeRequest withOpenZFSConfiguration(UpdateOpenZFSVolumeConfiguration openZFSConfiguration) {
         this.openZFSConfiguration = openZFSConfiguration;
         return this;
@@ -46,9 +50,13 @@ public class UpdateVolumeRequest {
     
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public UpdateVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public UpdateVolumeRequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

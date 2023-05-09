@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3RecordingConfig {
     @JsonProperty("bucketArn")
     public String bucketArn;
+
     public S3RecordingConfig withBucketArn(String bucketArn) {
         this.bucketArn = bucketArn;
         return this;
@@ -22,6 +23,7 @@ public class S3RecordingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public S3RecordingConfig withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -29,9 +31,14 @@ public class S3RecordingConfig {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public S3RecordingConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public S3RecordingConfig(@JsonProperty("bucketArn") String bucketArn, @JsonProperty("roleArn") String roleArn) {
+        this.bucketArn = bucketArn;
+        this.roleArn = roleArn;
+  }
 }

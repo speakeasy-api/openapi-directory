@@ -20,6 +20,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdministrativeActions")
     public AdministrativeAction[] administrativeActions;
+
     public FileSystem withAdministrativeActions(AdministrativeAction[] administrativeActions) {
         this.administrativeActions = administrativeActions;
         return this;
@@ -30,6 +31,7 @@ public class FileSystem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FileSystem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DNSName")
     public String dnsName;
+
     public FileSystem withDNSName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -49,6 +52,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public FileSystemFailureDetails failureDetails;
+
     public FileSystem withFailureDetails(FileSystemFailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -57,6 +61,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public FileSystem withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -65,6 +70,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemType")
     public FileSystemTypeEnum fileSystemType;
+
     public FileSystem withFileSystemType(FileSystemTypeEnum fileSystemType) {
         this.fileSystemType = fileSystemType;
         return this;
@@ -73,6 +79,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemTypeVersion")
     public String fileSystemTypeVersion;
+
     public FileSystem withFileSystemTypeVersion(String fileSystemTypeVersion) {
         this.fileSystemTypeVersion = fileSystemTypeVersion;
         return this;
@@ -81,6 +88,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public FileSystem withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -89,6 +97,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public FileSystemLifecycleEnum lifecycle;
+
     public FileSystem withLifecycle(FileSystemLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -100,6 +109,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreConfiguration")
     public LustreFileSystemConfiguration lustreConfiguration;
+
     public FileSystem withLustreConfiguration(LustreFileSystemConfiguration lustreConfiguration) {
         this.lustreConfiguration = lustreConfiguration;
         return this;
@@ -108,6 +118,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceIds")
     public String[] networkInterfaceIds;
+
     public FileSystem withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -116,6 +127,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapConfiguration")
     public OntapFileSystemConfiguration ontapConfiguration;
+
     public FileSystem withOntapConfiguration(OntapFileSystemConfiguration ontapConfiguration) {
         this.ontapConfiguration = ontapConfiguration;
         return this;
@@ -124,6 +136,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSConfiguration")
     public OpenZFSFileSystemConfiguration openZFSConfiguration;
+
     public FileSystem withOpenZFSConfiguration(OpenZFSFileSystemConfiguration openZFSConfiguration) {
         this.openZFSConfiguration = openZFSConfiguration;
         return this;
@@ -132,6 +145,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public FileSystem withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -140,6 +154,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public FileSystem withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -148,6 +163,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageCapacity")
     public Long storageCapacity;
+
     public FileSystem withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -156,6 +172,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageType")
     public StorageTypeEnum storageType;
+
     public FileSystem withStorageType(StorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
@@ -164,6 +181,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public FileSystem withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -172,6 +190,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public FileSystem withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -180,6 +199,7 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public FileSystem withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -188,9 +208,11 @@ public class FileSystem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowsConfiguration")
     public WindowsFileSystemConfiguration windowsConfiguration;
+
     public FileSystem withWindowsConfiguration(WindowsFileSystemConfiguration windowsConfiguration) {
         this.windowsConfiguration = windowsConfiguration;
         return this;
     }
     
+    public FileSystem(){}
 }

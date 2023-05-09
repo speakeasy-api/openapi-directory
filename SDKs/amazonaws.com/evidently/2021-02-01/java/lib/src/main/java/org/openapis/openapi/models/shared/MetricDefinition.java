@@ -15,6 +15,7 @@ public class MetricDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityIdKey")
     public String entityIdKey;
+
     public MetricDefinition withEntityIdKey(String entityIdKey) {
         this.entityIdKey = entityIdKey;
         return this;
@@ -23,6 +24,7 @@ public class MetricDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventPattern")
     public String eventPattern;
+
     public MetricDefinition withEventPattern(String eventPattern) {
         this.eventPattern = eventPattern;
         return this;
@@ -31,6 +33,7 @@ public class MetricDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetricDefinition withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class MetricDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitLabel")
     public String unitLabel;
+
     public MetricDefinition withUnitLabel(String unitLabel) {
         this.unitLabel = unitLabel;
         return this;
@@ -47,9 +51,11 @@ public class MetricDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueKey")
     public String valueKey;
+
     public MetricDefinition withValueKey(String valueKey) {
         this.valueKey = valueKey;
         return this;
     }
     
+    public MetricDefinition(){}
 }

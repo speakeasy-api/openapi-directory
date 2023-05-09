@@ -20,6 +20,7 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelName")
     public String channelName;
+
     public ChannelSummary withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -28,6 +29,7 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelStorage")
     public ChannelStorageSummary channelStorage;
+
     public ChannelSummary withChannelStorage(ChannelStorageSummary channelStorage) {
         this.channelStorage = channelStorage;
         return this;
@@ -38,6 +40,7 @@ public class ChannelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ChannelSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class ChannelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastMessageArrivalTime")
     public OffsetDateTime lastMessageArrivalTime;
+
     public ChannelSummary withLastMessageArrivalTime(OffsetDateTime lastMessageArrivalTime) {
         this.lastMessageArrivalTime = lastMessageArrivalTime;
         return this;
@@ -58,6 +62,7 @@ public class ChannelSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public ChannelSummary withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -66,9 +71,11 @@ public class ChannelSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ChannelStatusEnum status;
+
     public ChannelSummary withStatus(ChannelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ChannelSummary(){}
 }

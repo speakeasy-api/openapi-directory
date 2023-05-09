@@ -15,6 +15,7 @@ public class DataTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesTransferred")
     public Long bytesTransferred;
+
     public DataTransfer withBytesTransferred(Long bytesTransferred) {
         this.bytesTransferred = bytesTransferred;
         return this;
@@ -23,6 +24,7 @@ public class DataTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectsTransferred")
     public Long objectsTransferred;
+
     public DataTransfer withObjectsTransferred(Long objectsTransferred) {
         this.objectsTransferred = objectsTransferred;
         return this;
@@ -31,6 +33,7 @@ public class DataTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalBytes")
     public Long totalBytes;
+
     public DataTransfer withTotalBytes(Long totalBytes) {
         this.totalBytes = totalBytes;
         return this;
@@ -39,9 +42,11 @@ public class DataTransfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalObjects")
     public Long totalObjects;
+
     public DataTransfer withTotalObjects(Long totalObjects) {
         this.totalObjects = totalObjects;
         return this;
     }
     
+    public DataTransfer(){}
 }

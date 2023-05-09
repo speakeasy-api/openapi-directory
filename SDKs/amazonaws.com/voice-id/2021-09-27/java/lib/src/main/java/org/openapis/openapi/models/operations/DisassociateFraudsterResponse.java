@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateFraudsterResponse {
@@ -12,6 +13,7 @@ public class DisassociateFraudsterResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateFraudsterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateFraudsterResponse {
      */
     
     public Object conflictException;
+
     public DisassociateFraudsterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateFraudsterResponse {
     
     
     public String contentType;
+
     public DisassociateFraudsterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateFraudsterResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateFraudsterResponse disassociateFraudsterResponse;
+
     public DisassociateFraudsterResponse withDisassociateFraudsterResponse(org.openapis.openapi.models.shared.DisassociateFraudsterResponse disassociateFraudsterResponse) {
         this.disassociateFraudsterResponse = disassociateFraudsterResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateFraudsterResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateFraudsterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateFraudsterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateFraudsterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateFraudsterResponse {
     
     
     public Integer statusCode;
+
     public DisassociateFraudsterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateFraudsterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateFraudsterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateFraudsterResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateFraudsterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateFraudsterResponse {
      */
     
     public Object validationException;
+
     public DisassociateFraudsterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateFraudsterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

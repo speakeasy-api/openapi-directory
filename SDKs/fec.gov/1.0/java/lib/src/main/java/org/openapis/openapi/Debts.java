@@ -60,11 +60,9 @@ public class Debts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleDResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleDResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleDResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleDResponse(contentType, httpRes.statusCode()) {{
             getSchedulesScheduleDDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -105,11 +103,9 @@ public class Debts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleDSubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleDSubIdResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleDSubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleDSubIdResponse(contentType, httpRes.statusCode()) {{
             getSchedulesScheduleDSubIdDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

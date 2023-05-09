@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AggregateOperation {
     @JsonProperty("AggFunc")
     public AggFunctionEnum aggFunc;
+
     public AggregateOperation withAggFunc(AggFunctionEnum aggFunc) {
         this.aggFunc = aggFunc;
         return this;
@@ -19,9 +20,14 @@ public class AggregateOperation {
     
     @JsonProperty("Column")
     public String[] column;
+
     public AggregateOperation withColumn(String[] column) {
         this.column = column;
         return this;
     }
     
+    public AggregateOperation(@JsonProperty("AggFunc") AggFunctionEnum aggFunc, @JsonProperty("Column") String[] column) {
+        this.aggFunc = aggFunc;
+        this.column = column;
+  }
 }

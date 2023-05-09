@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendOfferToInterestedBuyersRequest {
@@ -12,6 +13,7 @@ public class SendOfferToInterestedBuyersRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateOffersRequest createOffersRequest;
+
     public SendOfferToInterestedBuyersRequest withCreateOffersRequest(org.openapis.openapi.models.shared.CreateOffersRequest createOffersRequest) {
         this.createOffersRequest = createOffersRequest;
         return this;
@@ -22,9 +24,13 @@ public class SendOfferToInterestedBuyersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public SendOfferToInterestedBuyersRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
+    public SendOfferToInterestedBuyersRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

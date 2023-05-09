@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigIdResponse configIdResponse;
+
     public UpdateConfigResponse withConfigIdResponse(org.openapis.openapi.models.shared.ConfigIdResponse configIdResponse) {
         this.configIdResponse = configIdResponse;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConfigResponse {
     
     
     public String contentType;
+
     public UpdateConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConfigResponse {
      */
     
     public Object dependencyException;
+
     public UpdateConfigResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public UpdateConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

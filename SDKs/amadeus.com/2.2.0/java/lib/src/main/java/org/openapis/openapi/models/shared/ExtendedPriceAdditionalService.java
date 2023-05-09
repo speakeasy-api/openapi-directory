@@ -12,6 +12,7 @@ public class ExtendedPriceAdditionalService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public ExtendedPriceAdditionalService withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class ExtendedPriceAdditionalService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AdditionalServiceTypeEnum type;
+
     public ExtendedPriceAdditionalService withType(AdditionalServiceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExtendedPriceAdditionalService(){}
 }

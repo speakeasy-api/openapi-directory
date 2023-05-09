@@ -20,6 +20,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Member withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegatedAdminAccountId")
     public String delegatedAdminAccountId;
+
     public Member withDelegatedAdminAccountId(String delegatedAdminAccountId) {
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         return this;
@@ -36,6 +38,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipStatus")
     public RelationshipStatusEnum relationshipStatus;
+
     public Member withRelationshipStatus(RelationshipStatusEnum relationshipStatus) {
         this.relationshipStatus = relationshipStatus;
         return this;
@@ -46,9 +49,11 @@ public class Member {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Member withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Member(){}
 }

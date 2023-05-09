@@ -15,6 +15,7 @@ public class DescribeServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public Failure[] failures;
+
     public DescribeServicesResponse withFailures(Failure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class DescribeServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public Service[] services;
+
     public DescribeServicesResponse withServices(Service[] services) {
         this.services = services;
         return this;
     }
     
+    public DescribeServicesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSignalingChannelsResponse {
@@ -12,6 +13,7 @@ public class ListSignalingChannelsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSignalingChannelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListSignalingChannelsResponse {
      */
     
     public Object clientLimitExceededException;
+
     public ListSignalingChannelsResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class ListSignalingChannelsResponse {
     
     
     public String contentType;
+
     public ListSignalingChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListSignalingChannelsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListSignalingChannelsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class ListSignalingChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSignalingChannelsOutput listSignalingChannelsOutput;
+
     public ListSignalingChannelsResponse withListSignalingChannelsOutput(org.openapis.openapi.models.shared.ListSignalingChannelsOutput listSignalingChannelsOutput) {
         this.listSignalingChannelsOutput = listSignalingChannelsOutput;
         return this;
@@ -56,6 +62,7 @@ public class ListSignalingChannelsResponse {
     
     
     public Integer statusCode;
+
     public ListSignalingChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListSignalingChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSignalingChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSignalingChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

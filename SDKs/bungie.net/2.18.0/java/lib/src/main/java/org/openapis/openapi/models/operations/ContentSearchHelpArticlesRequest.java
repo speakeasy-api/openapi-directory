@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentSearchHelpArticlesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchtext")
     public String searchtext;
+
     public ContentSearchHelpArticlesRequest withSearchtext(String searchtext) {
         this.searchtext = searchtext;
         return this;
@@ -16,9 +18,14 @@ public class ContentSearchHelpArticlesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=size")
     public String size;
+
     public ContentSearchHelpArticlesRequest withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public ContentSearchHelpArticlesRequest(@JsonProperty("searchtext") String searchtext, @JsonProperty("size") String size) {
+        this.searchtext = searchtext;
+        this.size = size;
+  }
 }

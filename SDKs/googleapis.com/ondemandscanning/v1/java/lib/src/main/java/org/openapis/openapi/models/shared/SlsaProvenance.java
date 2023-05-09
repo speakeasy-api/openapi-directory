@@ -12,6 +12,7 @@ public class SlsaProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builder")
     public SlsaBuilder builder;
+
     public SlsaProvenance withBuilder(SlsaBuilder builder) {
         this.builder = builder;
         return this;
@@ -23,6 +24,7 @@ public class SlsaProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("materials")
     public Material[] materials;
+
     public SlsaProvenance withMaterials(Material[] materials) {
         this.materials = materials;
         return this;
@@ -34,6 +36,7 @@ public class SlsaProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SlsaMetadata metadata;
+
     public SlsaProvenance withMetadata(SlsaMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -45,9 +48,11 @@ public class SlsaProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipe")
     public SlsaRecipe recipe;
+
     public SlsaProvenance withRecipe(SlsaRecipe recipe) {
         this.recipe = recipe;
         return this;
     }
     
+    public SlsaProvenance(){}
 }

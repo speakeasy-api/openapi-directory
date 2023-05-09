@@ -12,9 +12,11 @@ public class OpenBadgeClassCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("narrative")
     public String narrative;
+
     public OpenBadgeClassCriteria withNarrative(String narrative) {
         this.narrative = narrative;
         return this;
     }
     
+    public OpenBadgeClassCriteria(){}
 }

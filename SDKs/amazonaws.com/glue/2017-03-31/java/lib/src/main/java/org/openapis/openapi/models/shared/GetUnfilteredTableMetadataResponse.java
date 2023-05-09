@@ -15,6 +15,7 @@ public class GetUnfilteredTableMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedColumns")
     public String[] authorizedColumns;
+
     public GetUnfilteredTableMetadataResponse withAuthorizedColumns(String[] authorizedColumns) {
         this.authorizedColumns = authorizedColumns;
         return this;
@@ -23,6 +24,7 @@ public class GetUnfilteredTableMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CellFilters")
     public ColumnRowFilter[] cellFilters;
+
     public GetUnfilteredTableMetadataResponse withCellFilters(ColumnRowFilter[] cellFilters) {
         this.cellFilters = cellFilters;
         return this;
@@ -31,6 +33,7 @@ public class GetUnfilteredTableMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRegisteredWithLakeFormation")
     public Boolean isRegisteredWithLakeFormation;
+
     public GetUnfilteredTableMetadataResponse withIsRegisteredWithLakeFormation(Boolean isRegisteredWithLakeFormation) {
         this.isRegisteredWithLakeFormation = isRegisteredWithLakeFormation;
         return this;
@@ -39,9 +42,11 @@ public class GetUnfilteredTableMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public Table table;
+
     public GetUnfilteredTableMetadataResponse withTable(Table table) {
         this.table = table;
         return this;
     }
     
+    public GetUnfilteredTableMetadataResponse(){}
 }

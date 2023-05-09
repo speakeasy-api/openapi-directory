@@ -15,9 +15,11 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedServiceActionAssociations")
     public FailedServiceActionAssociation[] failedServiceActionAssociations;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactOutput withFailedServiceActionAssociations(FailedServiceActionAssociation[] failedServiceActionAssociations) {
         this.failedServiceActionAssociations = failedServiceActionAssociations;
         return this;
     }
     
+    public BatchDisassociateServiceActionFromProvisioningArtifactOutput(){}
 }

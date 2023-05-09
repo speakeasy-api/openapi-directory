@@ -61,11 +61,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetResponse(contentType, httpRes.statusCode()) {{
             deployment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListResponse(contentType, httpRes.statusCode()) {{
             deploymentsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -437,11 +421,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -533,11 +513,9 @@ public class Deployments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteUserAttributesRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public DeleteUserAttributesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -19,9 +20,14 @@ public class DeleteUserAttributesRequest {
     
     @JsonProperty("UserAttributeNames")
     public String[] userAttributeNames;
+
     public DeleteUserAttributesRequest withUserAttributeNames(String[] userAttributeNames) {
         this.userAttributeNames = userAttributeNames;
         return this;
     }
     
+    public DeleteUserAttributesRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("UserAttributeNames") String[] userAttributeNames) {
+        this.accessToken = accessToken;
+        this.userAttributeNames = userAttributeNames;
+  }
 }

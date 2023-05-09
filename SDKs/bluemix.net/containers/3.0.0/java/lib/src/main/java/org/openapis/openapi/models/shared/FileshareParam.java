@@ -15,6 +15,7 @@ public class FileshareParam {
      */
     @JsonProperty("fsIOPS")
     public Double fsIOPS;
+
     public FileshareParam withFsIOPS(Double fsIOPS) {
         this.fsIOPS = fsIOPS;
         return this;
@@ -25,6 +26,7 @@ public class FileshareParam {
      */
     @JsonProperty("fsName")
     public String fsName;
+
     public FileshareParam withFsName(String fsName) {
         this.fsName = fsName;
         return this;
@@ -35,9 +37,15 @@ public class FileshareParam {
      */
     @JsonProperty("fsSize")
     public Long fsSize;
+
     public FileshareParam withFsSize(Long fsSize) {
         this.fsSize = fsSize;
         return this;
     }
     
+    public FileshareParam(@JsonProperty("fsIOPS") Double fsIOPS, @JsonProperty("fsName") String fsName, @JsonProperty("fsSize") Long fsSize) {
+        this.fsIOPS = fsIOPS;
+        this.fsName = fsName;
+        this.fsSize = fsSize;
+  }
 }

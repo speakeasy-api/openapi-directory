@@ -15,9 +15,11 @@ public class CreateIntentRequestBodyDialogCodeHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CreateIntentRequestBodyDialogCodeHook withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public CreateIntentRequestBodyDialogCodeHook(){}
 }

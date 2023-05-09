@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointMinutely {
     @JsonProperty("data")
     public PointPointMinutelyPrecipitationData[] data;
+
     public PointPointMinutely withData(PointPointMinutelyPrecipitationData[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,13 @@ public class PointPointMinutely {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public PointPointMinutely withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public PointPointMinutely(@JsonProperty("data") PointPointMinutelyPrecipitationData[] data) {
+        this.data = data;
+  }
 }

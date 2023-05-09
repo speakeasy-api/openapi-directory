@@ -20,6 +20,7 @@ public class Invitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Invitation withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class Invitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitationId")
     public String invitationId;
+
     public Invitation withInvitationId(String invitationId) {
         this.invitationId = invitationId;
         return this;
@@ -38,6 +40,7 @@ public class Invitation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("invitedAt")
     public OffsetDateTime invitedAt;
+
     public Invitation withInvitedAt(OffsetDateTime invitedAt) {
         this.invitedAt = invitedAt;
         return this;
@@ -46,9 +49,11 @@ public class Invitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipStatus")
     public RelationshipStatusEnum relationshipStatus;
+
     public Invitation withRelationshipStatus(RelationshipStatusEnum relationshipStatus) {
         this.relationshipStatus = relationshipStatus;
         return this;
     }
     
+    public Invitation(){}
 }

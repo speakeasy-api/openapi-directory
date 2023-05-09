@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateTeamMemberRequest {
     @JsonProperty("projectId")
     public String projectId;
+
     public DisassociateTeamMemberRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateTeamMemberRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public DisassociateTeamMemberRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public DisassociateTeamMemberRequest(@JsonProperty("projectId") String projectId, @JsonProperty("userArn") String userArn) {
+        this.projectId = projectId;
+        this.userArn = userArn;
+  }
 }

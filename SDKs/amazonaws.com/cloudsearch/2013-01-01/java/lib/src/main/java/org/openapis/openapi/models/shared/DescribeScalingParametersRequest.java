@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeScalingParametersRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DescribeScalingParameters&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to describe. 
@@ -15,9 +15,13 @@ public class DescribeScalingParametersRequest {
      */
     
     public String domainName;
+
     public DescribeScalingParametersRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DescribeScalingParametersRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

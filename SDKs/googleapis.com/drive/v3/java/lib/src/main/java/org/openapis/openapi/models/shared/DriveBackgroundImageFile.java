@@ -18,6 +18,7 @@ public class DriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DriveBackgroundImageFile withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class DriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Float width;
+
     public DriveBackgroundImageFile withWidth(Float width) {
         this.width = width;
         return this;
@@ -40,6 +42,7 @@ public class DriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xCoordinate")
     public Float xCoordinate;
+
     public DriveBackgroundImageFile withXCoordinate(Float xCoordinate) {
         this.xCoordinate = xCoordinate;
         return this;
@@ -51,9 +54,11 @@ public class DriveBackgroundImageFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yCoordinate")
     public Float yCoordinate;
+
     public DriveBackgroundImageFile withYCoordinate(Float yCoordinate) {
         this.yCoordinate = yCoordinate;
         return this;
     }
     
+    public DriveBackgroundImageFile(){}
 }

@@ -15,9 +15,11 @@ public class CreateMonitor400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public CreateMonitor400ApplicationJSONError error;
+
     public CreateMonitor400ApplicationJSON withError(CreateMonitor400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public CreateMonitor400ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class ImportDataFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ImportDataFile withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,17 +30,19 @@ public class ImportDataFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ImportDataFile withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
     /**
-     * The payload format.
+     * Required. The payload format.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public ImportDataFileFormatEnum format;
+
     public ImportDataFile withFormat(ImportDataFileFormatEnum format) {
         this.format = format;
         return this;
@@ -51,6 +54,7 @@ public class ImportDataFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportDataFile withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class ImportDataFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ImportDataFileStateEnum state;
+
     public ImportDataFile withState(ImportDataFileStateEnum state) {
         this.state = state;
         return this;
@@ -73,9 +78,11 @@ public class ImportDataFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadFileInfo")
     public UploadFileInfo uploadFileInfo;
+
     public ImportDataFile withUploadFileInfo(UploadFileInfo uploadFileInfo) {
         this.uploadFileInfo = uploadFileInfo;
         return this;
     }
     
+    public ImportDataFile(){}
 }

@@ -18,9 +18,11 @@ public class RenderMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRun")
     public CloudRunRenderMetadata cloudRun;
+
     public RenderMetadata withCloudRun(CloudRunRenderMetadata cloudRun) {
         this.cloudRun = cloudRun;
         return this;
     }
     
+    public RenderMetadata(){}
 }

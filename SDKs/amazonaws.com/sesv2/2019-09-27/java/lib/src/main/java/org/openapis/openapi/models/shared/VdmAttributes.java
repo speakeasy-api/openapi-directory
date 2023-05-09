@@ -15,6 +15,7 @@ public class VdmAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DashboardAttributes")
     public DashboardAttributes dashboardAttributes;
+
     public VdmAttributes withDashboardAttributes(DashboardAttributes dashboardAttributes) {
         this.dashboardAttributes = dashboardAttributes;
         return this;
@@ -23,6 +24,7 @@ public class VdmAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GuardianAttributes")
     public GuardianAttributes guardianAttributes;
+
     public VdmAttributes withGuardianAttributes(GuardianAttributes guardianAttributes) {
         this.guardianAttributes = guardianAttributes;
         return this;
@@ -30,9 +32,13 @@ public class VdmAttributes {
     
     @JsonProperty("VdmEnabled")
     public FeatureStatusEnum vdmEnabled;
+
     public VdmAttributes withVdmEnabled(FeatureStatusEnum vdmEnabled) {
         this.vdmEnabled = vdmEnabled;
         return this;
     }
     
+    public VdmAttributes(@JsonProperty("VdmEnabled") FeatureStatusEnum vdmEnabled) {
+        this.vdmEnabled = vdmEnabled;
+  }
 }

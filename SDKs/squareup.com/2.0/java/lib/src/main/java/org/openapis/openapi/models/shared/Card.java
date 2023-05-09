@@ -46,6 +46,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public Card withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -58,6 +59,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public Card withBin(String bin) {
         this.bin = bin;
         return this;
@@ -69,6 +71,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_brand")
     public String cardBrand;
+
     public Card withCardBrand(String cardBrand) {
         this.cardBrand = cardBrand;
         return this;
@@ -81,6 +84,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_type")
     public String cardType;
+
     public Card withCardType(String cardType) {
         this.cardType = cardType;
         return this;
@@ -92,6 +96,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardholder_name")
     public String cardholderName;
+
     public Card withCardholderName(String cardholderName) {
         this.cardholderName = cardholderName;
         return this;
@@ -103,6 +108,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public Card withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -114,6 +120,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Card withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -125,6 +132,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exp_month")
     public Long expMonth;
+
     public Card withExpMonth(Long expMonth) {
         this.expMonth = expMonth;
         return this;
@@ -136,6 +144,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exp_year")
     public Long expYear;
+
     public Card withExpYear(Long expYear) {
         this.expYear = expYear;
         return this;
@@ -149,6 +158,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Card withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -160,6 +170,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Card withId(String id) {
         this.id = id;
         return this;
@@ -171,6 +182,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_4")
     public String last4;
+
     public Card withLast4(String last4) {
         this.last4 = last4;
         return this;
@@ -183,6 +195,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prepaid_type")
     public String prepaidType;
+
     public Card withPrepaidType(String prepaidType) {
         this.prepaidType = prepaidType;
         return this;
@@ -196,6 +209,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public Card withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -209,9 +223,11 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Card withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Card(){}
 }

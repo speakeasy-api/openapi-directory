@@ -18,6 +18,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_size")
     public Integer actualSize;
+
     public WindowsHostingDetail withActualSize(Integer actualSize) {
         this.actualSize = actualSize;
         return this;
@@ -29,6 +30,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_pool")
     public ApplicationPool applicationPool;
+
     public WindowsHostingDetail withApplicationPool(ApplicationPool applicationPool) {
         this.applicationPool = applicationPool;
         return this;
@@ -40,6 +42,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public WindowsHostingDetail withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -51,6 +54,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ftp_username")
     public String ftpUsername;
+
     public WindowsHostingDetail withFtpUsername(String ftpUsername) {
         this.ftpUsername = ftpUsername;
         return this;
@@ -62,6 +66,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public WindowsHostingDetail withIp(String ip) {
         this.ip = ip;
         return this;
@@ -73,6 +78,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_type")
     public WindowsIpTypeEnum ipType;
+
     public WindowsHostingDetail withIpType(WindowsIpTypeEnum ipType) {
         this.ipType = ipType;
         return this;
@@ -84,6 +90,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_size")
     public Integer maxSize;
+
     public WindowsHostingDetail withMaxSize(Integer maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -95,6 +102,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mssql_database_names")
     public String[] mssqlDatabaseNames;
+
     public WindowsHostingDetail withMssqlDatabaseNames(String[] mssqlDatabaseNames) {
         this.mssqlDatabaseNames = mssqlDatabaseNames;
         return this;
@@ -106,6 +114,7 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicepack_id")
     public Integer servicepackId;
+
     public WindowsHostingDetail withServicepackId(Integer servicepackId) {
         this.servicepackId = servicepackId;
         return this;
@@ -117,9 +126,11 @@ public class WindowsHostingDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public WindowsSite[] sites;
+
     public WindowsHostingDetail withSites(WindowsSite[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public WindowsHostingDetail(){}
 }

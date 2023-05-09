@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDevicesResponse {
     
     public String contentType;
+
     public ListDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDevicesResponse {
      */
     
     public Object internalFailureException;
+
     public ListDevicesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDevicesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDevicesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDevicesResponse listDevicesResponse;
+
     public ListDevicesResponse withListDevicesResponse(org.openapis.openapi.models.shared.ListDevicesResponse listDevicesResponse) {
         this.listDevicesResponse = listDevicesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDevicesResponse {
      */
     
     public Object rangeNotSatisfiableException;
+
     public ListDevicesResponse withRangeNotSatisfiableException(Object rangeNotSatisfiableException) {
         this.rangeNotSatisfiableException = rangeNotSatisfiableException;
         return this;
@@ -56,6 +62,7 @@ public class ListDevicesResponse {
     
     
     public Integer statusCode;
+
     public ListDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

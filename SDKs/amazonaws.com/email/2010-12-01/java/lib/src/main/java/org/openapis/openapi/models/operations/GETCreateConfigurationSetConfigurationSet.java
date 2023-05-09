@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,9 +13,13 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETCreateConfigurationSetConfigurationSet {
     @SpeakeasyMetadata("queryParam:name=Name")
     public String name;
+
     public GETCreateConfigurationSetConfigurationSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GETCreateConfigurationSetConfigurationSet(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

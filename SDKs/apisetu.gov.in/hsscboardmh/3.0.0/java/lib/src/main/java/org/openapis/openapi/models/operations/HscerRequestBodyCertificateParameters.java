@@ -12,6 +12,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HscerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("exsession")
     public String exsession;
+
     public HscerRequestBodyCertificateParameters withExsession(String exsession) {
         this.exsession = exsession;
         return this;
@@ -32,6 +34,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("rollnumber")
     public String rollnumber;
+
     public HscerRequestBodyCertificateParameters withRollnumber(String rollnumber) {
         this.rollnumber = rollnumber;
         return this;
@@ -42,6 +45,7 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("totalmarks")
     public String totalmarks;
+
     public HscerRequestBodyCertificateParameters withTotalmarks(String totalmarks) {
         this.totalmarks = totalmarks;
         return this;
@@ -52,9 +56,17 @@ public class HscerRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public HscerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public HscerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("exsession") String exsession, @JsonProperty("rollnumber") String rollnumber, @JsonProperty("totalmarks") String totalmarks, @JsonProperty("year") String year) {
+        this.fullName = fullName;
+        this.exsession = exsession;
+        this.rollnumber = rollnumber;
+        this.totalmarks = totalmarks;
+        this.year = year;
+  }
 }

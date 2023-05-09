@@ -15,9 +15,11 @@ public class AwsS3BucketNotificationConfigurationFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3KeyFilter")
     public AwsS3BucketNotificationConfigurationS3KeyFilter s3KeyFilter;
+
     public AwsS3BucketNotificationConfigurationFilter withS3KeyFilter(AwsS3BucketNotificationConfigurationS3KeyFilter s3KeyFilter) {
         this.s3KeyFilter = s3KeyFilter;
         return this;
     }
     
+    public AwsS3BucketNotificationConfigurationFilter(){}
 }

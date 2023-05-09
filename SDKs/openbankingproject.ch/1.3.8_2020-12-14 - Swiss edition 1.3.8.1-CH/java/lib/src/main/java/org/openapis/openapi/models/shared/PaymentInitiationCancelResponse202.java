@@ -43,6 +43,7 @@ public class PaymentInitiationCancelResponse202 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public PaymentInitiationCancelResponse202 withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -56,6 +57,7 @@ public class PaymentInitiationCancelResponse202 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challengeData")
     public ChallengeData challengeData;
+
     public PaymentInitiationCancelResponse202 withChallengeData(ChallengeData challengeData) {
         this.challengeData = challengeData;
         return this;
@@ -68,6 +70,7 @@ public class PaymentInitiationCancelResponse202 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chosenScaMethod")
     public ChosenScaMethod chosenScaMethod;
+
     public PaymentInitiationCancelResponse202 withChosenScaMethod(ChosenScaMethod chosenScaMethod) {
         this.chosenScaMethod = chosenScaMethod;
         return this;
@@ -89,6 +92,7 @@ public class PaymentInitiationCancelResponse202 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaMethods")
     public AuthenticationObject[] scaMethods;
+
     public PaymentInitiationCancelResponse202 withScaMethods(AuthenticationObject[] scaMethods) {
         this.scaMethods = scaMethods;
         return this;
@@ -139,9 +143,13 @@ public class PaymentInitiationCancelResponse202 {
      */
     @JsonProperty("transactionStatus")
     public TransactionStatusEnum transactionStatus;
+
     public PaymentInitiationCancelResponse202 withTransactionStatus(TransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public PaymentInitiationCancelResponse202(@JsonProperty("transactionStatus") TransactionStatusEnum transactionStatus) {
+        this.transactionStatus = transactionStatus;
+  }
 }

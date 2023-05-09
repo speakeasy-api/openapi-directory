@@ -15,6 +15,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StreamSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamArn")
     public String streamArn;
+
     public StreamSummary withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -31,6 +33,7 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public StreamSummary withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -39,9 +42,11 @@ public class StreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamVersion")
     public Long streamVersion;
+
     public StreamSummary withStreamVersion(Long streamVersion) {
         this.streamVersion = streamVersion;
         return this;
     }
     
+    public StreamSummary(){}
 }

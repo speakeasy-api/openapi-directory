@@ -12,6 +12,7 @@ public class PaymentMethodCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset_urls")
     public AssetUrls assetUrls;
+
     public PaymentMethodCategory withAssetUrls(AssetUrls assetUrls) {
         this.assetUrls = assetUrls;
         return this;
@@ -24,6 +25,7 @@ public class PaymentMethodCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public PaymentMethodCategory withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -35,9 +37,11 @@ public class PaymentMethodCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PaymentMethodCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PaymentMethodCategory(){}
 }

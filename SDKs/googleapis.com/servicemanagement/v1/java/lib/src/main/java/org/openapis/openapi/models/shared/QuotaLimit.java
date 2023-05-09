@@ -18,6 +18,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLimit")
     public String defaultLimit;
+
     public QuotaLimit withDefaultLimit(String defaultLimit) {
         this.defaultLimit = defaultLimit;
         return this;
@@ -29,6 +30,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public QuotaLimit withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public QuotaLimit withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public QuotaLimit withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -62,6 +66,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeTier")
     public String freeTier;
+
     public QuotaLimit withFreeTier(String freeTier) {
         this.freeTier = freeTier;
         return this;
@@ -73,6 +78,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLimit")
     public String maxLimit;
+
     public QuotaLimit withMaxLimit(String maxLimit) {
         this.maxLimit = maxLimit;
         return this;
@@ -84,6 +90,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public QuotaLimit withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -95,6 +102,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public QuotaLimit withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public QuotaLimit withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -117,9 +126,11 @@ public class QuotaLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public java.util.Map<String, String> values;
+
     public QuotaLimit withValues(java.util.Map<String, String> values) {
         this.values = values;
         return this;
     }
     
+    public QuotaLimit(){}
 }

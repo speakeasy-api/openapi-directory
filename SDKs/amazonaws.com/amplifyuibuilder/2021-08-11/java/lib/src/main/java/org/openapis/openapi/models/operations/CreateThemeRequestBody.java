@@ -12,9 +12,13 @@ public class CreateThemeRequestBody {
      */
     @JsonProperty("themeToCreate")
     public CreateThemeRequestBodyThemeToCreate themeToCreate;
+
     public CreateThemeRequestBody withThemeToCreate(CreateThemeRequestBodyThemeToCreate themeToCreate) {
         this.themeToCreate = themeToCreate;
         return this;
     }
     
+    public CreateThemeRequestBody(@JsonProperty("themeToCreate") CreateThemeRequestBodyThemeToCreate themeToCreate) {
+        this.themeToCreate = themeToCreate;
+  }
 }

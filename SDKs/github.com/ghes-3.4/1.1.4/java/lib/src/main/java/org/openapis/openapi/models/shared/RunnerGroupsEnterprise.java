@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RunnerGroupsEnterprise {
     @JsonProperty("allows_public_repositories")
     public Boolean allowsPublicRepositories;
+
     public RunnerGroupsEnterprise withAllowsPublicRepositories(Boolean allowsPublicRepositories) {
         this.allowsPublicRepositories = allowsPublicRepositories;
         return this;
@@ -21,6 +22,7 @@ public class RunnerGroupsEnterprise {
     
     @JsonProperty("default")
     public Boolean default_;
+
     public RunnerGroupsEnterprise withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -28,6 +30,7 @@ public class RunnerGroupsEnterprise {
     
     @JsonProperty("id")
     public Double id;
+
     public RunnerGroupsEnterprise withId(Double id) {
         this.id = id;
         return this;
@@ -35,6 +38,7 @@ public class RunnerGroupsEnterprise {
     
     @JsonProperty("name")
     public String name;
+
     public RunnerGroupsEnterprise withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class RunnerGroupsEnterprise {
     
     @JsonProperty("runners_url")
     public String runnersUrl;
+
     public RunnerGroupsEnterprise withRunnersUrl(String runnersUrl) {
         this.runnersUrl = runnersUrl;
         return this;
@@ -50,6 +55,7 @@ public class RunnerGroupsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_organizations_url")
     public String selectedOrganizationsUrl;
+
     public RunnerGroupsEnterprise withSelectedOrganizationsUrl(String selectedOrganizationsUrl) {
         this.selectedOrganizationsUrl = selectedOrganizationsUrl;
         return this;
@@ -57,9 +63,18 @@ public class RunnerGroupsEnterprise {
     
     @JsonProperty("visibility")
     public String visibility;
+
     public RunnerGroupsEnterprise withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public RunnerGroupsEnterprise(@JsonProperty("allows_public_repositories") Boolean allowsPublicRepositories, @JsonProperty("default") Boolean default_, @JsonProperty("id") Double id, @JsonProperty("name") String name, @JsonProperty("runners_url") String runnersUrl, @JsonProperty("visibility") String visibility) {
+        this.allowsPublicRepositories = allowsPublicRepositories;
+        this.default_ = default_;
+        this.id = id;
+        this.name = name;
+        this.runnersUrl = runnersUrl;
+        this.visibility = visibility;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishPushNotificationToDevicesJsonResponse {
     
     public byte[] body;
+
     public PublishPushNotificationToDevicesJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PublishPushNotificationToDevicesJsonResponse {
     
     
     public String contentType;
+
     public PublishPushNotificationToDevicesJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PublishPushNotificationToDevicesJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PublishPushNotificationToDevicesJsonResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class PublishPushNotificationToDevicesJsonResponse {
     
     
     public Integer statusCode;
+
     public PublishPushNotificationToDevicesJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PublishPushNotificationToDevicesJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishPushNotificationToDevicesJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PublishPushNotificationToDevicesJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

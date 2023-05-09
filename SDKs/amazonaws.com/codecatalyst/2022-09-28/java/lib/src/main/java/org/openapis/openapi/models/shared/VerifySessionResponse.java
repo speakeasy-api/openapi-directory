@@ -15,9 +15,11 @@ public class VerifySessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public String identity;
+
     public VerifySessionResponse withIdentity(String identity) {
         this.identity = identity;
         return this;
     }
     
+    public VerifySessionResponse(){}
 }

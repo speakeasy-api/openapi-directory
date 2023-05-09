@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContactReachabilityStatusResponse {
     
     public String contentType;
+
     public GetContactReachabilityStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetContactReachabilityStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContactReachabilityStatusResponse getContactReachabilityStatusResponse;
+
     public GetContactReachabilityStatusResponse withGetContactReachabilityStatusResponse(org.openapis.openapi.models.shared.GetContactReachabilityStatusResponse getContactReachabilityStatusResponse) {
         this.getContactReachabilityStatusResponse = getContactReachabilityStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetContactReachabilityStatusResponse {
      */
     
     public Object invalidInput;
+
     public GetContactReachabilityStatusResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class GetContactReachabilityStatusResponse {
      */
     
     public Object operationLimitExceeded;
+
     public GetContactReachabilityStatusResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class GetContactReachabilityStatusResponse {
     
     
     public Integer statusCode;
+
     public GetContactReachabilityStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetContactReachabilityStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContactReachabilityStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetContactReachabilityStatusResponse {
      */
     
     public Object unsupportedTLD;
+
     public GetContactReachabilityStatusResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public GetContactReachabilityStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

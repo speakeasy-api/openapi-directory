@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeKeywordsResponse {
@@ -12,6 +13,7 @@ public class DescribeKeywordsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeKeywordsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeKeywordsResponse {
     
     
     public String contentType;
+
     public DescribeKeywordsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeKeywordsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeKeywordsResult describeKeywordsResult;
+
     public DescribeKeywordsResponse withDescribeKeywordsResult(org.openapis.openapi.models.shared.DescribeKeywordsResult describeKeywordsResult) {
         this.describeKeywordsResult = describeKeywordsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeKeywordsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeKeywordsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeKeywordsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeKeywordsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeKeywordsResponse {
     
     
     public Integer statusCode;
+
     public DescribeKeywordsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeKeywordsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeKeywordsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeKeywordsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeKeywordsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeKeywordsResponse {
      */
     
     public Object validationException;
+
     public DescribeKeywordsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeKeywordsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

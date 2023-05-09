@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LookupDeveloperIdentityResponse {
     
     public String contentType;
+
     public LookupDeveloperIdentityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LookupDeveloperIdentityResponse {
      */
     
     public Object internalErrorException;
+
     public LookupDeveloperIdentityResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class LookupDeveloperIdentityResponse {
      */
     
     public Object invalidParameterException;
+
     public LookupDeveloperIdentityResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class LookupDeveloperIdentityResponse {
      */
     
     public org.openapis.openapi.models.shared.LookupDeveloperIdentityResponse lookupDeveloperIdentityResponse;
+
     public LookupDeveloperIdentityResponse withLookupDeveloperIdentityResponse(org.openapis.openapi.models.shared.LookupDeveloperIdentityResponse lookupDeveloperIdentityResponse) {
         this.lookupDeveloperIdentityResponse = lookupDeveloperIdentityResponse;
         return this;
@@ -49,6 +54,7 @@ public class LookupDeveloperIdentityResponse {
      */
     
     public Object notAuthorizedException;
+
     public LookupDeveloperIdentityResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class LookupDeveloperIdentityResponse {
     
     
     public Integer statusCode;
+
     public LookupDeveloperIdentityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class LookupDeveloperIdentityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LookupDeveloperIdentityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class LookupDeveloperIdentityResponse {
      */
     
     public Object resourceConflictException;
+
     public LookupDeveloperIdentityResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -83,6 +92,7 @@ public class LookupDeveloperIdentityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public LookupDeveloperIdentityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class LookupDeveloperIdentityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public LookupDeveloperIdentityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public LookupDeveloperIdentityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

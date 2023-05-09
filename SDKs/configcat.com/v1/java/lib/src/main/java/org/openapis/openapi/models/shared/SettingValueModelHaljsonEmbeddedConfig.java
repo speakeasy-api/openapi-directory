@@ -12,6 +12,7 @@ public class SettingValueModelHaljsonEmbeddedConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SettingValueModelHaljsonEmbeddedConfigEmbedded embedded;
+
     public SettingValueModelHaljsonEmbeddedConfig withEmbedded(SettingValueModelHaljsonEmbeddedConfigEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -20,6 +21,7 @@ public class SettingValueModelHaljsonEmbeddedConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SettingValueModelHaljsonEmbeddedConfigLinks links;
+
     public SettingValueModelHaljsonEmbeddedConfig withLinks(SettingValueModelHaljsonEmbeddedConfigLinks links) {
         this.links = links;
         return this;
@@ -28,6 +30,7 @@ public class SettingValueModelHaljsonEmbeddedConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public SettingValueModelHaljsonEmbeddedConfig withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -36,6 +39,7 @@ public class SettingValueModelHaljsonEmbeddedConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SettingValueModelHaljsonEmbeddedConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class SettingValueModelHaljsonEmbeddedConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingValueModelHaljsonEmbeddedConfig withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +57,11 @@ public class SettingValueModelHaljsonEmbeddedConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public SettingValueModelHaljsonEmbeddedConfig withOrder(Integer order) {
         this.order = order;
         return this;
     }
     
+    public SettingValueModelHaljsonEmbeddedConfig(){}
 }

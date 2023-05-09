@@ -18,6 +18,7 @@ public class ProjectCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public java.util.Map<String, Object> customFields;
+
     public ProjectCreate withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -29,6 +30,7 @@ public class ProjectCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields_list")
     public CustomArticleFieldAdd[] customFieldsList;
+
     public ProjectCreate withCustomFieldsList(CustomArticleFieldAdd[] customFieldsList) {
         this.customFieldsList = customFieldsList;
         return this;
@@ -40,6 +42,7 @@ public class ProjectCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProjectCreate withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class ProjectCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding")
     public String funding;
+
     public ProjectCreate withFunding(String funding) {
         this.funding = funding;
         return this;
@@ -62,6 +66,7 @@ public class ProjectCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("funding_list")
     public FundingCreate[] fundingList;
+
     public ProjectCreate withFundingList(FundingCreate[] fundingList) {
         this.fundingList = fundingList;
         return this;
@@ -73,6 +78,7 @@ public class ProjectCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     public Long groupId;
+
     public ProjectCreate withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -83,9 +89,13 @@ public class ProjectCreate {
      */
     @JsonProperty("title")
     public String title;
+
     public ProjectCreate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectCreate(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

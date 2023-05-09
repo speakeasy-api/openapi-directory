@@ -15,6 +15,7 @@ public class ActivatedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public WafAction action;
+
     public ActivatedRule withAction(WafAction action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class ActivatedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludedRules")
     public ExcludedRule[] excludedRules;
+
     public ActivatedRule withExcludedRules(ExcludedRule[] excludedRules) {
         this.excludedRules = excludedRules;
         return this;
@@ -31,6 +33,7 @@ public class ActivatedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverrideAction")
     public WafOverrideAction overrideAction;
+
     public ActivatedRule withOverrideAction(WafOverrideAction overrideAction) {
         this.overrideAction = overrideAction;
         return this;
@@ -38,6 +41,7 @@ public class ActivatedRule {
     
     @JsonProperty("Priority")
     public Long priority;
+
     public ActivatedRule withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -45,6 +49,7 @@ public class ActivatedRule {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public ActivatedRule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -53,9 +58,14 @@ public class ActivatedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public WafRuleTypeEnum type;
+
     public ActivatedRule withType(WafRuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ActivatedRule(@JsonProperty("Priority") Long priority, @JsonProperty("RuleId") String ruleId) {
+        this.priority = priority;
+        this.ruleId = ruleId;
+  }
 }

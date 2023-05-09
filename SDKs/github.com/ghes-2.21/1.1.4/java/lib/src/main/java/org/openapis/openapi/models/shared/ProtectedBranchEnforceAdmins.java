@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedBranchEnforceAdmins {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ProtectedBranchEnforceAdmins withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -16,9 +17,14 @@ public class ProtectedBranchEnforceAdmins {
     
     @JsonProperty("url")
     public String url;
+
     public ProtectedBranchEnforceAdmins withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProtectedBranchEnforceAdmins(@JsonProperty("enabled") Boolean enabled, @JsonProperty("url") String url) {
+        this.enabled = enabled;
+        this.url = url;
+  }
 }

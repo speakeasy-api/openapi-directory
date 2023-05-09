@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetWebhookDeliveryResponse {
     
     public String contentType;
+
     public ReposGetWebhookDeliveryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetWebhookDeliveryResponse {
     
     
     public Integer statusCode;
+
     public ReposGetWebhookDeliveryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetWebhookDeliveryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetWebhookDeliveryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetWebhookDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetWebhookDeliveryResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposGetWebhookDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.HookDelivery hookDelivery;
+
     public ReposGetWebhookDeliveryResponse withHookDelivery(org.openapis.openapi.models.shared.HookDelivery hookDelivery) {
         this.hookDelivery = hookDelivery;
         return this;
@@ -53,6 +59,7 @@ public class ReposGetWebhookDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public ReposGetWebhookDeliveryResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
@@ -63,9 +70,14 @@ public class ReposGetWebhookDeliveryResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposGetWebhookDeliveryResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposGetWebhookDeliveryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

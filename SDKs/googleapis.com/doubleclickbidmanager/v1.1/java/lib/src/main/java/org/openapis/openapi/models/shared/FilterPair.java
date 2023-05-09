@@ -18,6 +18,7 @@ public class FilterPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FilterPairTypeEnum type;
+
     public FilterPair withType(FilterPairTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class FilterPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public FilterPair withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public FilterPair(){}
 }

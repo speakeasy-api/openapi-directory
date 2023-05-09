@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsJobsAggregatedSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsAggregatedSecurityOption1 option1;
+
     public DataflowProjectsJobsAggregatedSecurity withOption1(DataflowProjectsJobsAggregatedSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsJobsAggregatedSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsAggregatedSecurityOption2 option2;
+
     public DataflowProjectsJobsAggregatedSecurity withOption2(DataflowProjectsJobsAggregatedSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsJobsAggregatedSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsAggregatedSecurityOption3 option3;
+
     public DataflowProjectsJobsAggregatedSecurity withOption3(DataflowProjectsJobsAggregatedSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsJobsAggregatedSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsAggregatedSecurityOption4 option4;
+
     public DataflowProjectsJobsAggregatedSecurity withOption4(DataflowProjectsJobsAggregatedSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsJobsAggregatedSecurity(){}
 }

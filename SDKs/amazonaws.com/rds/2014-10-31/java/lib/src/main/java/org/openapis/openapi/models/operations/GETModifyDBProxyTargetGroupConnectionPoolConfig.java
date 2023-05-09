@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyDBProxyTargetGroupConnectionPoolConfig {
     @SpeakeasyMetadata("queryParam:name=ConnectionBorrowTimeout")
     public Long connectionBorrowTimeout;
+
     public GETModifyDBProxyTargetGroupConnectionPoolConfig withConnectionBorrowTimeout(Long connectionBorrowTimeout) {
         this.connectionBorrowTimeout = connectionBorrowTimeout;
         return this;
@@ -19,6 +20,7 @@ public class GETModifyDBProxyTargetGroupConnectionPoolConfig {
     
     @SpeakeasyMetadata("queryParam:name=InitQuery")
     public String initQuery;
+
     public GETModifyDBProxyTargetGroupConnectionPoolConfig withInitQuery(String initQuery) {
         this.initQuery = initQuery;
         return this;
@@ -26,6 +28,7 @@ public class GETModifyDBProxyTargetGroupConnectionPoolConfig {
     
     @SpeakeasyMetadata("queryParam:name=MaxConnectionsPercent")
     public Long maxConnectionsPercent;
+
     public GETModifyDBProxyTargetGroupConnectionPoolConfig withMaxConnectionsPercent(Long maxConnectionsPercent) {
         this.maxConnectionsPercent = maxConnectionsPercent;
         return this;
@@ -33,6 +36,7 @@ public class GETModifyDBProxyTargetGroupConnectionPoolConfig {
     
     @SpeakeasyMetadata("queryParam:name=MaxIdleConnectionsPercent")
     public Long maxIdleConnectionsPercent;
+
     public GETModifyDBProxyTargetGroupConnectionPoolConfig withMaxIdleConnectionsPercent(Long maxIdleConnectionsPercent) {
         this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
         return this;
@@ -40,9 +44,11 @@ public class GETModifyDBProxyTargetGroupConnectionPoolConfig {
     
     @SpeakeasyMetadata("queryParam:name=SessionPinningFilters")
     public String[] sessionPinningFilters;
+
     public GETModifyDBProxyTargetGroupConnectionPoolConfig withSessionPinningFilters(String[] sessionPinningFilters) {
         this.sessionPinningFilters = sessionPinningFilters;
         return this;
     }
     
+    public GETModifyDBProxyTargetGroupConnectionPoolConfig(){}
 }

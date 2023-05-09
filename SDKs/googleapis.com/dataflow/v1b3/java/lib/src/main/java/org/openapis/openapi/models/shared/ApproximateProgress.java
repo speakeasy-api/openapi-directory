@@ -18,6 +18,7 @@ public class ApproximateProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentComplete")
     public Float percentComplete;
+
     public ApproximateProgress withPercentComplete(Float percentComplete) {
         this.percentComplete = percentComplete;
         return this;
@@ -29,6 +30,7 @@ public class ApproximateProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Position position;
+
     public ApproximateProgress withPosition(Position position) {
         this.position = position;
         return this;
@@ -40,9 +42,11 @@ public class ApproximateProgress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingTime")
     public String remainingTime;
+
     public ApproximateProgress withRemainingTime(String remainingTime) {
         this.remainingTime = remainingTime;
         return this;
     }
     
+    public ApproximateProgress(){}
 }

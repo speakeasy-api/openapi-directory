@@ -18,6 +18,7 @@ public class SuggestedPositionedObjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionedObjectProperties")
     public PositionedObjectProperties positionedObjectProperties;
+
     public SuggestedPositionedObjectProperties withPositionedObjectProperties(PositionedObjectProperties positionedObjectProperties) {
         this.positionedObjectProperties = positionedObjectProperties;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedPositionedObjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionedObjectPropertiesSuggestionState")
     public PositionedObjectPropertiesSuggestionState positionedObjectPropertiesSuggestionState;
+
     public SuggestedPositionedObjectProperties withPositionedObjectPropertiesSuggestionState(PositionedObjectPropertiesSuggestionState positionedObjectPropertiesSuggestionState) {
         this.positionedObjectPropertiesSuggestionState = positionedObjectPropertiesSuggestionState;
         return this;
     }
     
+    public SuggestedPositionedObjectProperties(){}
 }

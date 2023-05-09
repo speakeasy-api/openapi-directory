@@ -15,6 +15,7 @@ public class GetServersId200ApplicationJSONServerServerTypePricesPriceMonthly {
      */
     @JsonProperty("gross")
     public String gross;
+
     public GetServersId200ApplicationJSONServerServerTypePricesPriceMonthly withGross(String gross) {
         this.gross = gross;
         return this;
@@ -25,9 +26,14 @@ public class GetServersId200ApplicationJSONServerServerTypePricesPriceMonthly {
      */
     @JsonProperty("net")
     public String net;
+
     public GetServersId200ApplicationJSONServerServerTypePricesPriceMonthly withNet(String net) {
         this.net = net;
         return this;
     }
     
+    public GetServersId200ApplicationJSONServerServerTypePricesPriceMonthly(@JsonProperty("gross") String gross, @JsonProperty("net") String net) {
+        this.gross = gross;
+        this.net = net;
+  }
 }

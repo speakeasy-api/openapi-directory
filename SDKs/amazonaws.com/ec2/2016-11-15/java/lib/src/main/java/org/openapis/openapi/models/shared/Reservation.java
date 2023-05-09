@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Reservation {
     
     public ReservationGroups[] groups;
+
     public Reservation withGroups(ReservationGroups[] groups) {
         this.groups = groups;
         return this;
@@ -19,6 +20,7 @@ public class Reservation {
     
     
     public ReservationInstances[] instances;
+
     public Reservation withInstances(ReservationInstances[] instances) {
         this.instances = instances;
         return this;
@@ -26,6 +28,7 @@ public class Reservation {
     
     
     public String ownerId;
+
     public Reservation withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class Reservation {
     
     
     public String requesterId;
+
     public Reservation withRequesterId(String requesterId) {
         this.requesterId = requesterId;
         return this;
@@ -40,9 +44,11 @@ public class Reservation {
     
     
     public String reservationId;
+
     public Reservation withReservationId(String reservationId) {
         this.reservationId = reservationId;
         return this;
     }
     
+    public Reservation(){}
 }

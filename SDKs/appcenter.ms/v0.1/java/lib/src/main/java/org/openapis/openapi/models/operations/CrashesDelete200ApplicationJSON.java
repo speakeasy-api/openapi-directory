@@ -15,6 +15,7 @@ public class CrashesDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_id")
     public String appId;
+
     public CrashesDelete200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class CrashesDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments_deleted")
     public Long attachmentsDeleted;
+
     public CrashesDelete200ApplicationJSON withAttachmentsDeleted(Long attachmentsDeleted) {
         this.attachmentsDeleted = attachmentsDeleted;
         return this;
@@ -31,6 +33,7 @@ public class CrashesDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobs_failed")
     public Long blobsFailed;
+
     public CrashesDelete200ApplicationJSON withBlobsFailed(Long blobsFailed) {
         this.blobsFailed = blobsFailed;
         return this;
@@ -39,6 +42,7 @@ public class CrashesDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobs_succeeded")
     public Long blobsSucceeded;
+
     public CrashesDelete200ApplicationJSON withBlobsSucceeded(Long blobsSucceeded) {
         this.blobsSucceeded = blobsSucceeded;
         return this;
@@ -47,6 +51,7 @@ public class CrashesDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_group_id")
     public String crashGroupId;
+
     public CrashesDelete200ApplicationJSON withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -55,6 +60,7 @@ public class CrashesDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_id")
     public String crashId;
+
     public CrashesDelete200ApplicationJSON withCrashId(String crashId) {
         this.crashId = crashId;
         return this;
@@ -63,9 +69,11 @@ public class CrashesDelete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashes_deleted")
     public Long crashesDeleted;
+
     public CrashesDelete200ApplicationJSON withCrashesDeleted(Long crashesDeleted) {
         this.crashesDeleted = crashesDeleted;
         return this;
     }
     
+    public CrashesDelete200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableCpuPlatforms")
     public String[] availableCpuPlatforms;
+
     public Zone withAvailableCpuPlatforms(String[] availableCpuPlatforms) {
         this.availableCpuPlatforms = availableCpuPlatforms;
         return this;
@@ -29,6 +30,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Zone withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public DeprecationStatus deprecated;
+
     public Zone withDeprecated(DeprecationStatus deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -51,6 +54,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Zone withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Zone withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Zone withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +90,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Zone withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Zone withRegion(String region) {
         this.region = region;
         return this;
@@ -106,6 +114,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Zone withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -117,6 +126,7 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ZoneStatusEnum status;
+
     public Zone withStatus(ZoneStatusEnum status) {
         this.status = status;
         return this;
@@ -128,9 +138,11 @@ public class Zone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportsPzs")
     public Boolean supportsPzs;
+
     public Zone withSupportsPzs(Boolean supportsPzs) {
         this.supportsPzs = supportsPzs;
         return this;
     }
     
+    public Zone(){}
 }

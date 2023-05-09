@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDeploymentGroupResponse {
@@ -12,6 +13,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object alarmsLimitExceededException;
+
     public CreateDeploymentGroupResponse withAlarmsLimitExceededException(Object alarmsLimitExceededException) {
         this.alarmsLimitExceededException = alarmsLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public CreateDeploymentGroupResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public CreateDeploymentGroupResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDeploymentGroupResponse {
     
     
     public String contentType;
+
     public CreateDeploymentGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDeploymentGroupOutput createDeploymentGroupOutput;
+
     public CreateDeploymentGroupResponse withCreateDeploymentGroupOutput(org.openapis.openapi.models.shared.CreateDeploymentGroupOutput createDeploymentGroupOutput) {
         this.createDeploymentGroupOutput = createDeploymentGroupOutput;
         return this;
@@ -59,6 +65,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object deploymentConfigDoesNotExistException;
+
     public CreateDeploymentGroupResponse withDeploymentConfigDoesNotExistException(Object deploymentConfigDoesNotExistException) {
         this.deploymentConfigDoesNotExistException = deploymentConfigDoesNotExistException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object deploymentGroupAlreadyExistsException;
+
     public CreateDeploymentGroupResponse withDeploymentGroupAlreadyExistsException(Object deploymentGroupAlreadyExistsException) {
         this.deploymentGroupAlreadyExistsException = deploymentGroupAlreadyExistsException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object deploymentGroupLimitExceededException;
+
     public CreateDeploymentGroupResponse withDeploymentGroupLimitExceededException(Object deploymentGroupLimitExceededException) {
         this.deploymentGroupLimitExceededException = deploymentGroupLimitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object deploymentGroupNameRequiredException;
+
     public CreateDeploymentGroupResponse withDeploymentGroupNameRequiredException(Object deploymentGroupNameRequiredException) {
         this.deploymentGroupNameRequiredException = deploymentGroupNameRequiredException;
         return this;
@@ -99,6 +109,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object ecsServiceMappingLimitExceededException;
+
     public CreateDeploymentGroupResponse withECSServiceMappingLimitExceededException(Object ecsServiceMappingLimitExceededException) {
         this.ecsServiceMappingLimitExceededException = ecsServiceMappingLimitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidAlarmConfigException;
+
     public CreateDeploymentGroupResponse withInvalidAlarmConfigException(Object invalidAlarmConfigException) {
         this.invalidAlarmConfigException = invalidAlarmConfigException;
         return this;
@@ -119,6 +131,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public CreateDeploymentGroupResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -129,6 +142,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidAutoRollbackConfigException;
+
     public CreateDeploymentGroupResponse withInvalidAutoRollbackConfigException(Object invalidAutoRollbackConfigException) {
         this.invalidAutoRollbackConfigException = invalidAutoRollbackConfigException;
         return this;
@@ -139,6 +153,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidAutoScalingGroupException;
+
     public CreateDeploymentGroupResponse withInvalidAutoScalingGroupException(Object invalidAutoScalingGroupException) {
         this.invalidAutoScalingGroupException = invalidAutoScalingGroupException;
         return this;
@@ -149,6 +164,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidBlueGreenDeploymentConfigurationException;
+
     public CreateDeploymentGroupResponse withInvalidBlueGreenDeploymentConfigurationException(Object invalidBlueGreenDeploymentConfigurationException) {
         this.invalidBlueGreenDeploymentConfigurationException = invalidBlueGreenDeploymentConfigurationException;
         return this;
@@ -159,6 +175,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentConfigNameException;
+
     public CreateDeploymentGroupResponse withInvalidDeploymentConfigNameException(Object invalidDeploymentConfigNameException) {
         this.invalidDeploymentConfigNameException = invalidDeploymentConfigNameException;
         return this;
@@ -169,6 +186,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentGroupNameException;
+
     public CreateDeploymentGroupResponse withInvalidDeploymentGroupNameException(Object invalidDeploymentGroupNameException) {
         this.invalidDeploymentGroupNameException = invalidDeploymentGroupNameException;
         return this;
@@ -179,6 +197,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentStyleException;
+
     public CreateDeploymentGroupResponse withInvalidDeploymentStyleException(Object invalidDeploymentStyleException) {
         this.invalidDeploymentStyleException = invalidDeploymentStyleException;
         return this;
@@ -189,6 +208,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidEc2TagCombinationException;
+
     public CreateDeploymentGroupResponse withInvalidEc2TagCombinationException(Object invalidEc2TagCombinationException) {
         this.invalidEc2TagCombinationException = invalidEc2TagCombinationException;
         return this;
@@ -199,6 +219,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidEc2TagException;
+
     public CreateDeploymentGroupResponse withInvalidEc2TagException(Object invalidEc2TagException) {
         this.invalidEc2TagException = invalidEc2TagException;
         return this;
@@ -209,6 +230,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidECSServiceException;
+
     public CreateDeploymentGroupResponse withInvalidECSServiceException(Object invalidECSServiceException) {
         this.invalidECSServiceException = invalidECSServiceException;
         return this;
@@ -219,6 +241,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDeploymentGroupResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -229,6 +252,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidLoadBalancerInfoException;
+
     public CreateDeploymentGroupResponse withInvalidLoadBalancerInfoException(Object invalidLoadBalancerInfoException) {
         this.invalidLoadBalancerInfoException = invalidLoadBalancerInfoException;
         return this;
@@ -239,6 +263,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidOnPremisesTagCombinationException;
+
     public CreateDeploymentGroupResponse withInvalidOnPremisesTagCombinationException(Object invalidOnPremisesTagCombinationException) {
         this.invalidOnPremisesTagCombinationException = invalidOnPremisesTagCombinationException;
         return this;
@@ -249,6 +274,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidRoleException;
+
     public CreateDeploymentGroupResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -259,6 +285,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidTagException;
+
     public CreateDeploymentGroupResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -269,6 +296,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidTagsToAddException;
+
     public CreateDeploymentGroupResponse withInvalidTagsToAddException(Object invalidTagsToAddException) {
         this.invalidTagsToAddException = invalidTagsToAddException;
         return this;
@@ -279,6 +307,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidTargetGroupPairException;
+
     public CreateDeploymentGroupResponse withInvalidTargetGroupPairException(Object invalidTargetGroupPairException) {
         this.invalidTargetGroupPairException = invalidTargetGroupPairException;
         return this;
@@ -289,6 +318,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidTrafficRoutingConfigurationException;
+
     public CreateDeploymentGroupResponse withInvalidTrafficRoutingConfigurationException(Object invalidTrafficRoutingConfigurationException) {
         this.invalidTrafficRoutingConfigurationException = invalidTrafficRoutingConfigurationException;
         return this;
@@ -299,6 +329,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object invalidTriggerConfigException;
+
     public CreateDeploymentGroupResponse withInvalidTriggerConfigException(Object invalidTriggerConfigException) {
         this.invalidTriggerConfigException = invalidTriggerConfigException;
         return this;
@@ -309,6 +340,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object lifecycleHookLimitExceededException;
+
     public CreateDeploymentGroupResponse withLifecycleHookLimitExceededException(Object lifecycleHookLimitExceededException) {
         this.lifecycleHookLimitExceededException = lifecycleHookLimitExceededException;
         return this;
@@ -319,6 +351,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object roleRequiredException;
+
     public CreateDeploymentGroupResponse withRoleRequiredException(Object roleRequiredException) {
         this.roleRequiredException = roleRequiredException;
         return this;
@@ -326,6 +359,7 @@ public class CreateDeploymentGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateDeploymentGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -333,6 +367,7 @@ public class CreateDeploymentGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDeploymentGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -343,6 +378,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object tagSetListLimitExceededException;
+
     public CreateDeploymentGroupResponse withTagSetListLimitExceededException(Object tagSetListLimitExceededException) {
         this.tagSetListLimitExceededException = tagSetListLimitExceededException;
         return this;
@@ -353,6 +389,7 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateDeploymentGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -363,9 +400,14 @@ public class CreateDeploymentGroupResponse {
      */
     
     public Object triggerTargetsLimitExceededException;
+
     public CreateDeploymentGroupResponse withTriggerTargetsLimitExceededException(Object triggerTargetsLimitExceededException) {
         this.triggerTargetsLimitExceededException = triggerTargetsLimitExceededException;
         return this;
     }
     
+    public CreateDeploymentGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

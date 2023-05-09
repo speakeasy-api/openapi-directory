@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateDeploymentStatusResponse {
     
     public String contentType;
+
     public ReposCreateDeploymentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateDeploymentStatusResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateDeploymentStatusResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateDeploymentStatusResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateDeploymentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateDeploymentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateDeploymentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposCreateDeploymentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DeploymentStatus deploymentStatus;
+
     public ReposCreateDeploymentStatusResponse withDeploymentStatus(org.openapis.openapi.models.shared.DeploymentStatus deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -50,9 +56,14 @@ public class ReposCreateDeploymentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateDeploymentStatusResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateDeploymentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

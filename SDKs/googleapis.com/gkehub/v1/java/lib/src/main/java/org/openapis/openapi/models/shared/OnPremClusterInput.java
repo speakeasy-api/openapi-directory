@@ -18,6 +18,7 @@ public class OnPremClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminCluster")
     public Boolean adminCluster;
+
     public OnPremClusterInput withAdminCluster(Boolean adminCluster) {
         this.adminCluster = adminCluster;
         return this;
@@ -29,20 +30,23 @@ public class OnPremClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterType")
     public OnPremClusterClusterTypeEnum clusterType;
+
     public OnPremClusterInput withClusterType(OnPremClusterClusterTypeEnum clusterType) {
         this.clusterType = clusterType;
         return this;
     }
     
     /**
-     * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+     * Immutable. Self-link of the Google Cloud resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLink")
     public String resourceLink;
+
     public OnPremClusterInput withResourceLink(String resourceLink) {
         this.resourceLink = resourceLink;
         return this;
     }
     
+    public OnPremClusterInput(){}
 }

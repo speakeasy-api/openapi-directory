@@ -55,10 +55,8 @@ public class CompanyCredits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyCreditsSearchReadResponse res = new org.openapis.openapi.models.operations.CompanyCreditsSearchReadResponse() {{
+        org.openapis.openapi.models.operations.CompanyCreditsSearchReadResponse res = new org.openapis.openapi.models.operations.CompanyCreditsSearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,10 +95,8 @@ public class CompanyCredits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyCreditsSearchallReadResponse res = new org.openapis.openapi.models.operations.CompanyCreditsSearchallReadResponse() {{
+        org.openapis.openapi.models.operations.CompanyCreditsSearchallReadResponse res = new org.openapis.openapi.models.operations.CompanyCreditsSearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class ProfileFilterLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterRef")
     public FilterRefInput filterRef;
+
     public ProfileFilterLinkInput withFilterRef(FilterRefInput filterRef) {
         this.filterRef = filterRef;
         return this;
@@ -29,6 +30,7 @@ public class ProfileFilterLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProfileFilterLinkInput withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class ProfileFilterLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileRef")
     public ProfileRef profileRef;
+
     public ProfileFilterLinkInput withProfileRef(ProfileRef profileRef) {
         this.profileRef = profileRef;
         return this;
@@ -53,9 +56,11 @@ public class ProfileFilterLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Integer rank;
+
     public ProfileFilterLinkInput withRank(Integer rank) {
         this.rank = rank;
         return this;
     }
     
+    public ProfileFilterLinkInput(){}
 }

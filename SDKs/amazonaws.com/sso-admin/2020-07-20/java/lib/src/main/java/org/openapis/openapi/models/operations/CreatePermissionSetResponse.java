@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePermissionSetResponse {
@@ -12,6 +13,7 @@ public class CreatePermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreatePermissionSetResponse {
      */
     
     public Object conflictException;
+
     public CreatePermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreatePermissionSetResponse {
     
     
     public String contentType;
+
     public CreatePermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreatePermissionSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePermissionSetResponse createPermissionSetResponse;
+
     public CreatePermissionSetResponse withCreatePermissionSetResponse(org.openapis.openapi.models.shared.CreatePermissionSetResponse createPermissionSetResponse) {
         this.createPermissionSetResponse = createPermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreatePermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public CreatePermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePermissionSetResponse {
     
     
     public Integer statusCode;
+
     public CreatePermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreatePermissionSetResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreatePermissionSetResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreatePermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public CreatePermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreatePermissionSetResponse {
      */
     
     public Object validationException;
+
     public CreatePermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

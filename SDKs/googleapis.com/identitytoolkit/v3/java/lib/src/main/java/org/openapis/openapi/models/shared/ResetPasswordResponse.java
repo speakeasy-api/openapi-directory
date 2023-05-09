@@ -18,6 +18,7 @@ public class ResetPasswordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ResetPasswordResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class ResetPasswordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ResetPasswordResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class ResetPasswordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newEmail")
     public String newEmail;
+
     public ResetPasswordResponse withNewEmail(String newEmail) {
         this.newEmail = newEmail;
         return this;
@@ -51,9 +54,11 @@ public class ResetPasswordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestType")
     public String requestType;
+
     public ResetPasswordResponse withRequestType(String requestType) {
         this.requestType = requestType;
         return this;
     }
     
+    public ResetPasswordResponse(){}
 }

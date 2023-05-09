@@ -15,6 +15,7 @@ public class ReturnAddressAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ReturnAddressAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class ReturnAddressAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public ReturnAddressAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -37,6 +39,7 @@ public class ReturnAddressAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public ReturnAddressAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -48,6 +51,7 @@ public class ReturnAddressAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipientName")
     public String recipientName;
+
     public ReturnAddressAddress withRecipientName(String recipientName) {
         this.recipientName = recipientName;
         return this;
@@ -59,6 +63,7 @@ public class ReturnAddressAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ReturnAddressAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -70,9 +75,11 @@ public class ReturnAddressAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetAddress")
     public String[] streetAddress;
+
     public ReturnAddressAddress withStreetAddress(String[] streetAddress) {
         this.streetAddress = streetAddress;
         return this;
     }
     
+    public ReturnAddressAddress(){}
 }

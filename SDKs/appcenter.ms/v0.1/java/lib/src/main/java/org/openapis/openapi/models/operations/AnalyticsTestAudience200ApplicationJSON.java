@@ -18,6 +18,7 @@ public class AnalyticsTestAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_properties")
     public java.util.Map<String, AnalyticsTestAudience200ApplicationJSONCustomPropertiesEnum> customProperties;
+
     public AnalyticsTestAudience200ApplicationJSON withCustomProperties(java.util.Map<String, AnalyticsTestAudience200ApplicationJSONCustomPropertiesEnum> customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -29,6 +30,7 @@ public class AnalyticsTestAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public AnalyticsTestAudience200ApplicationJSON withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -40,6 +42,7 @@ public class AnalyticsTestAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_count")
     public Long estimatedCount;
+
     public AnalyticsTestAudience200ApplicationJSON withEstimatedCount(Long estimatedCount) {
         this.estimatedCount = estimatedCount;
         return this;
@@ -51,9 +54,11 @@ public class AnalyticsTestAudience200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_total_count")
     public Long estimatedTotalCount;
+
     public AnalyticsTestAudience200ApplicationJSON withEstimatedTotalCount(Long estimatedTotalCount) {
         this.estimatedTotalCount = estimatedTotalCount;
         return this;
     }
     
+    public AnalyticsTestAudience200ApplicationJSON(){}
 }

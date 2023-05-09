@@ -15,6 +15,7 @@ public class GetOfferingStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public java.util.Map<String, OfferingStatus> current;
+
     public GetOfferingStatusResult withCurrent(java.util.Map<String, OfferingStatus> current) {
         this.current = current;
         return this;
@@ -23,6 +24,7 @@ public class GetOfferingStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPeriod")
     public java.util.Map<String, OfferingStatus> nextPeriod;
+
     public GetOfferingStatusResult withNextPeriod(java.util.Map<String, OfferingStatus> nextPeriod) {
         this.nextPeriod = nextPeriod;
         return this;
@@ -31,9 +33,11 @@ public class GetOfferingStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetOfferingStatusResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetOfferingStatusResult(){}
 }

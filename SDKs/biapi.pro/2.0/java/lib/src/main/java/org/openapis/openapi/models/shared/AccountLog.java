@@ -19,6 +19,7 @@ public class AccountLog {
      */
     @JsonProperty("balance")
     public Float balance;
+
     public AccountLog withBalance(Float balance) {
         this.balance = balance;
         return this;
@@ -30,6 +31,7 @@ public class AccountLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coming")
     public Float coming;
+
     public AccountLog withComing(Float coming) {
         this.coming = coming;
         return this;
@@ -41,6 +43,7 @@ public class AccountLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public AccountLog withError(String error) {
         this.error = error;
         return this;
@@ -52,6 +55,7 @@ public class AccountLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_message")
     public String errorMessage;
+
     public AccountLog withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -62,6 +66,7 @@ public class AccountLog {
      */
     @JsonProperty("id")
     public Long id;
+
     public AccountLog withId(Long id) {
         this.id = id;
         return this;
@@ -72,6 +77,7 @@ public class AccountLog {
      */
     @JsonProperty("id_account")
     public Long idAccount;
+
     public AccountLog withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -83,6 +89,7 @@ public class AccountLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_connection_log")
     public Long idConnectionLog;
+
     public AccountLog withIdConnectionLog(Long idConnectionLog) {
         this.idConnectionLog = idConnectionLog;
         return this;
@@ -94,6 +101,7 @@ public class AccountLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_connector")
     public Long idConnector;
+
     public AccountLog withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -106,9 +114,16 @@ public class AccountLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public AccountLog withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AccountLog(@JsonProperty("balance") Float balance, @JsonProperty("id") Long id, @JsonProperty("id_account") Long idAccount, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.balance = balance;
+        this.id = id;
+        this.idAccount = idAccount;
+        this.timestamp = timestamp;
+  }
 }

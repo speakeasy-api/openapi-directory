@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectTemplatesForTeamRequest {
@@ -13,6 +14,7 @@ public class GetProjectTemplatesForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetProjectTemplatesForTeamRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +27,7 @@ public class GetProjectTemplatesForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetProjectTemplatesForTeamRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetProjectTemplatesForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetProjectTemplatesForTeamRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +52,7 @@ public class GetProjectTemplatesForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetProjectTemplatesForTeamRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,9 +63,13 @@ public class GetProjectTemplatesForTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_gid")
     public String teamGid;
+
     public GetProjectTemplatesForTeamRequest withTeamGid(String teamGid) {
         this.teamGid = teamGid;
         return this;
     }
     
+    public GetProjectTemplatesForTeamRequest(@JsonProperty("team_gid") String teamGid) {
+        this.teamGid = teamGid;
+  }
 }

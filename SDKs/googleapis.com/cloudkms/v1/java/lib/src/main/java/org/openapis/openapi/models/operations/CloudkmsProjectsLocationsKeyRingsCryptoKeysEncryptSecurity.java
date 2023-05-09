@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1 option1;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity withOption1(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2 option2;
+
     public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity withOption2(CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysEncryptSecurity(){}
 }

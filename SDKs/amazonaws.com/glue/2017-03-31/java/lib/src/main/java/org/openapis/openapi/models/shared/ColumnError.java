@@ -15,6 +15,7 @@ public class ColumnError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnName")
     public String columnName;
+
     public ColumnError withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -23,9 +24,11 @@ public class ColumnError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public ErrorDetail error;
+
     public ColumnError withError(ErrorDetail error) {
         this.error = error;
         return this;
     }
     
+    public ColumnError(){}
 }

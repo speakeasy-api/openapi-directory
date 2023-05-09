@@ -18,6 +18,7 @@ public class AutoFillRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public AutoFillRequest withRange(GridRange range) {
         this.range = range;
         return this;
@@ -29,6 +30,7 @@ public class AutoFillRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAndDestination")
     public SourceAndDestination sourceAndDestination;
+
     public AutoFillRequest withSourceAndDestination(SourceAndDestination sourceAndDestination) {
         this.sourceAndDestination = sourceAndDestination;
         return this;
@@ -40,9 +42,11 @@ public class AutoFillRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAlternateSeries")
     public Boolean useAlternateSeries;
+
     public AutoFillRequest withUseAlternateSeries(Boolean useAlternateSeries) {
         this.useAlternateSeries = useAlternateSeries;
         return this;
     }
     
+    public AutoFillRequest(){}
 }

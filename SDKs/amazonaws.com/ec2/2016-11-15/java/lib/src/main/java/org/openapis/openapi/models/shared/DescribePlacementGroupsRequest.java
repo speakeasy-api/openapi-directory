@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePlacementGroupsRequest {
     
     public Boolean dryRun;
+
     public DescribePlacementGroupsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribePlacementGroupsRequest {
     
     
     public DescribePlacementGroupsRequestFilters[] filters;
+
     public DescribePlacementGroupsRequest withFilters(DescribePlacementGroupsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribePlacementGroupsRequest {
     
     
     public String[] groupIds;
+
     public DescribePlacementGroupsRequest withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -30,9 +33,11 @@ public class DescribePlacementGroupsRequest {
     
     
     public String[] groupNames;
+
     public DescribePlacementGroupsRequest withGroupNames(String[] groupNames) {
         this.groupNames = groupNames;
         return this;
     }
     
+    public DescribePlacementGroupsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestUrlRewritingRulesRequest {
@@ -12,6 +13,7 @@ public class TestUrlRewritingRulesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public TestUrlRewritingRulesRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -22,9 +24,14 @@ public class TestUrlRewritingRulesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public TestUrlRewritingRulesRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TestUrlRewritingRulesRequest(@JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

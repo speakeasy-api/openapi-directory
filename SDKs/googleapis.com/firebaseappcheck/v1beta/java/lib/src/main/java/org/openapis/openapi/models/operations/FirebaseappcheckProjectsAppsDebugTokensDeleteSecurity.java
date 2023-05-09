@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirebaseappcheckProjectsAppsDebugTokensDeleteSecurityOption1 option1;
+
     public FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity withOption1(FirebaseappcheckProjectsAppsDebugTokensDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaseappcheckProjectsAppsDebugTokensDeleteSecurityOption2 option2;
+
     public FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity withOption2(FirebaseappcheckProjectsAppsDebugTokensDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity(){}
 }

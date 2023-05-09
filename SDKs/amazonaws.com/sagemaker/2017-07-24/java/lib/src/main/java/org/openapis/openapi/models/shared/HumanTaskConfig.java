@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HumanTaskConfig {
     @JsonProperty("AnnotationConsolidationConfig")
     public AnnotationConsolidationConfig annotationConsolidationConfig;
+
     public HumanTaskConfig withAnnotationConsolidationConfig(AnnotationConsolidationConfig annotationConsolidationConfig) {
         this.annotationConsolidationConfig = annotationConsolidationConfig;
         return this;
@@ -22,6 +23,7 @@ public class HumanTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentTaskCount")
     public Long maxConcurrentTaskCount;
+
     public HumanTaskConfig withMaxConcurrentTaskCount(Long maxConcurrentTaskCount) {
         this.maxConcurrentTaskCount = maxConcurrentTaskCount;
         return this;
@@ -29,6 +31,7 @@ public class HumanTaskConfig {
     
     @JsonProperty("NumberOfHumanWorkersPerDataObject")
     public Long numberOfHumanWorkersPerDataObject;
+
     public HumanTaskConfig withNumberOfHumanWorkersPerDataObject(Long numberOfHumanWorkersPerDataObject) {
         this.numberOfHumanWorkersPerDataObject = numberOfHumanWorkersPerDataObject;
         return this;
@@ -36,6 +39,7 @@ public class HumanTaskConfig {
     
     @JsonProperty("PreHumanTaskLambdaArn")
     public String preHumanTaskLambdaArn;
+
     public HumanTaskConfig withPreHumanTaskLambdaArn(String preHumanTaskLambdaArn) {
         this.preHumanTaskLambdaArn = preHumanTaskLambdaArn;
         return this;
@@ -44,6 +48,7 @@ public class HumanTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicWorkforceTaskPrice")
     public PublicWorkforceTaskPrice publicWorkforceTaskPrice;
+
     public HumanTaskConfig withPublicWorkforceTaskPrice(PublicWorkforceTaskPrice publicWorkforceTaskPrice) {
         this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
         return this;
@@ -52,6 +57,7 @@ public class HumanTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskAvailabilityLifetimeInSeconds")
     public Long taskAvailabilityLifetimeInSeconds;
+
     public HumanTaskConfig withTaskAvailabilityLifetimeInSeconds(Long taskAvailabilityLifetimeInSeconds) {
         this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
         return this;
@@ -59,6 +65,7 @@ public class HumanTaskConfig {
     
     @JsonProperty("TaskDescription")
     public String taskDescription;
+
     public HumanTaskConfig withTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
         return this;
@@ -67,6 +74,7 @@ public class HumanTaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskKeywords")
     public String[] taskKeywords;
+
     public HumanTaskConfig withTaskKeywords(String[] taskKeywords) {
         this.taskKeywords = taskKeywords;
         return this;
@@ -74,6 +82,7 @@ public class HumanTaskConfig {
     
     @JsonProperty("TaskTimeLimitInSeconds")
     public Long taskTimeLimitInSeconds;
+
     public HumanTaskConfig withTaskTimeLimitInSeconds(Long taskTimeLimitInSeconds) {
         this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
         return this;
@@ -81,6 +90,7 @@ public class HumanTaskConfig {
     
     @JsonProperty("TaskTitle")
     public String taskTitle;
+
     public HumanTaskConfig withTaskTitle(String taskTitle) {
         this.taskTitle = taskTitle;
         return this;
@@ -88,6 +98,7 @@ public class HumanTaskConfig {
     
     @JsonProperty("UiConfig")
     public UiConfig uiConfig;
+
     public HumanTaskConfig withUiConfig(UiConfig uiConfig) {
         this.uiConfig = uiConfig;
         return this;
@@ -95,9 +106,20 @@ public class HumanTaskConfig {
     
     @JsonProperty("WorkteamArn")
     public String workteamArn;
+
     public HumanTaskConfig withWorkteamArn(String workteamArn) {
         this.workteamArn = workteamArn;
         return this;
     }
     
+    public HumanTaskConfig(@JsonProperty("AnnotationConsolidationConfig") AnnotationConsolidationConfig annotationConsolidationConfig, @JsonProperty("NumberOfHumanWorkersPerDataObject") Long numberOfHumanWorkersPerDataObject, @JsonProperty("PreHumanTaskLambdaArn") String preHumanTaskLambdaArn, @JsonProperty("TaskDescription") String taskDescription, @JsonProperty("TaskTimeLimitInSeconds") Long taskTimeLimitInSeconds, @JsonProperty("TaskTitle") String taskTitle, @JsonProperty("UiConfig") UiConfig uiConfig, @JsonProperty("WorkteamArn") String workteamArn) {
+        this.annotationConsolidationConfig = annotationConsolidationConfig;
+        this.numberOfHumanWorkersPerDataObject = numberOfHumanWorkersPerDataObject;
+        this.preHumanTaskLambdaArn = preHumanTaskLambdaArn;
+        this.taskDescription = taskDescription;
+        this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
+        this.taskTitle = taskTitle;
+        this.uiConfig = uiConfig;
+        this.workteamArn = workteamArn;
+  }
 }

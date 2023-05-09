@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFunctionConfigurationResponse {
     
     public String contentType;
+
     public GetFunctionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFunctionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration;
+
     public GetFunctionConfigurationResponse withFunctionConfiguration(org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class GetFunctionConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetFunctionConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetFunctionConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFunctionConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetFunctionConfigurationResponse {
      */
     
     public Object serviceException;
+
     public GetFunctionConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class GetFunctionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetFunctionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetFunctionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFunctionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetFunctionConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetFunctionConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetFunctionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

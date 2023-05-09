@@ -15,6 +15,7 @@ public class DeleteStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentVersion")
     public String currentVersion;
+
     public DeleteStreamRequestBody withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -25,9 +26,13 @@ public class DeleteStreamRequestBody {
      */
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DeleteStreamRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public DeleteStreamRequestBody(@JsonProperty("StreamARN") String streamARN) {
+        this.streamARN = streamARN;
+  }
 }

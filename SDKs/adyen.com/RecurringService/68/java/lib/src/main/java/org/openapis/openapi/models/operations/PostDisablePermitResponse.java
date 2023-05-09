@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDisablePermitResponse {
     
     public String contentType;
+
     public PostDisablePermitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostDisablePermitResponse {
      */
     
     public org.openapis.openapi.models.shared.DisablePermitResult disablePermitResult;
+
     public PostDisablePermitResponse withDisablePermitResult(org.openapis.openapi.models.shared.DisablePermitResult disablePermitResult) {
         this.disablePermitResult = disablePermitResult;
         return this;
@@ -29,6 +32,7 @@ public class PostDisablePermitResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostDisablePermitResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostDisablePermitResponse {
     
     
     public Integer statusCode;
+
     public PostDisablePermitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostDisablePermitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDisablePermitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDisablePermitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

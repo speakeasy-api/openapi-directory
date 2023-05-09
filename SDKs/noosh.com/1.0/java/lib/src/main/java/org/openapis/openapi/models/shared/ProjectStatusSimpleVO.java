@@ -15,6 +15,7 @@ public class ProjectStatusSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_status_id")
     public Long projectStatusId;
+
     public ProjectStatusSimpleVO withProjectStatusId(Long projectStatusId) {
         this.projectStatusId = projectStatusId;
         return this;
@@ -23,9 +24,11 @@ public class ProjectStatusSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_status_name")
     public String projectStatusName;
+
     public ProjectStatusSimpleVO withProjectStatusName(String projectStatusName) {
         this.projectStatusName = projectStatusName;
         return this;
     }
     
+    public ProjectStatusSimpleVO(){}
 }

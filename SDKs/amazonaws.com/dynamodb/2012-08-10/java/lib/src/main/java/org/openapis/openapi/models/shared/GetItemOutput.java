@@ -15,6 +15,7 @@ public class GetItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity consumedCapacity;
+
     public GetItemOutput withConsumedCapacity(ConsumedCapacity consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -23,9 +24,11 @@ public class GetItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Item")
     public java.util.Map<String, AttributeValue> item;
+
     public GetItemOutput withItem(java.util.Map<String, AttributeValue> item) {
         this.item = item;
         return this;
     }
     
+    public GetItemOutput(){}
 }

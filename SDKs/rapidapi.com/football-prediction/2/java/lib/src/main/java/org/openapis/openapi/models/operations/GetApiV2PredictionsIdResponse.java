@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV2PredictionsIdResponse {
     
     public String contentType;
+
     public GetApiV2PredictionsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetApiV2PredictionsIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiV2PredictionsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetApiV2PredictionsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV2PredictionsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetApiV2PredictionsIdResponse {
      */
     
     public GetApiV2PredictionsId200ApplicationJSON getApiV2PredictionsId200ApplicationJSONObject;
+
     public GetApiV2PredictionsIdResponse withGetApiV2PredictionsId200ApplicationJSONObject(GetApiV2PredictionsId200ApplicationJSON getApiV2PredictionsId200ApplicationJSONObject) {
         this.getApiV2PredictionsId200ApplicationJSONObject = getApiV2PredictionsId200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV2PredictionsIdResponse {
      */
     
     public GetApiV2PredictionsId404ApplicationJSON getApiV2PredictionsId404ApplicationJSONObject;
+
     public GetApiV2PredictionsIdResponse withGetApiV2PredictionsId404ApplicationJSONObject(GetApiV2PredictionsId404ApplicationJSON getApiV2PredictionsId404ApplicationJSONObject) {
         this.getApiV2PredictionsId404ApplicationJSONObject = getApiV2PredictionsId404ApplicationJSONObject;
         return this;
     }
     
+    public GetApiV2PredictionsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

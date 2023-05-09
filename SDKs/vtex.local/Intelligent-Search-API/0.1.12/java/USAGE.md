@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAutocompleteSuggestionsRequest;
 import org.openapis.openapi.models.operations.GetAutocompleteSuggestionsResponse;
 
@@ -16,15 +15,17 @@ public class Application {
             GetAutocompleteSuggestionsRequest req = new GetAutocompleteSuggestionsRequest() {{
                 locale = "corrupti";
                 query = "provident";
-            }}            
+            }};            
 
             GetAutocompleteSuggestionsResponse res = sdk.autocomplete.getAutocompleteSuggestions(req);
 
-            if (res.autocompleteSearchSuggestions.isPresent()) {
+            if (res.autocompleteSearchSuggestions != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,6 +18,7 @@ public class Registrierkasse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Benutzerschluessel")
     public String benutzerschluessel;
+
     public Registrierkasse withBenutzerschluessel(String benutzerschluessel) {
         this.benutzerschluessel = benutzerschluessel;
         return this;
@@ -29,6 +30,7 @@ public class Registrierkasse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Kassen-ID")
     public String kassenID;
+
     public Registrierkasse withKassenID(String kassenID) {
         this.kassenID = kassenID;
         return this;
@@ -40,6 +42,7 @@ public class Registrierkasse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Signaturerstellungseinheit-UUID")
     public String signaturerstellungseinheitUUID;
+
     public Registrierkasse withSignaturerstellungseinheitUUID(String signaturerstellungseinheitUUID) {
         this.signaturerstellungseinheitUUID = signaturerstellungseinheitUUID;
         return this;
@@ -51,6 +54,7 @@ public class Registrierkasse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_href")
     public String href;
+
     public Registrierkasse withHref(String href) {
         this.href = href;
         return this;
@@ -62,9 +66,11 @@ public class Registrierkasse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_uuid")
     public String uuid;
+
     public Registrierkasse withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public Registrierkasse(){}
 }

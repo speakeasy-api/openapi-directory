@@ -9,40 +9,44 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Subject - Represents a Kubernetes Subject.
+ * Subject - Represents a Kubernetes subject.
  */
 public class Subject {
     /**
-     * Authentication type for subject.
+     * Authentication type for the subject.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public SubjectKindEnum kind;
+
     public Subject withKind(SubjectKindEnum kind) {
         this.kind = kind;
         return this;
     }
     
     /**
-     * Name for subject.
+     * Name for the subject.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Subject withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Namespace for subject.
+     * Namespace for the subject.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ns")
     public String ns;
+
     public Subject withNs(String ns) {
         this.ns = ns;
         return this;
     }
     
+    public Subject(){}
 }

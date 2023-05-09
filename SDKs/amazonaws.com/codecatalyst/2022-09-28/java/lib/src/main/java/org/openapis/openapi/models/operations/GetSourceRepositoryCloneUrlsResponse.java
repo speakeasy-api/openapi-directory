@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSourceRepositoryCloneUrlsResponse {
@@ -12,6 +13,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSourceRepositoryCloneUrlsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
      */
     
     public Object conflictException;
+
     public GetSourceRepositoryCloneUrlsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
     
     
     public String contentType;
+
     public GetSourceRepositoryCloneUrlsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSourceRepositoryCloneUrlsResponse getSourceRepositoryCloneUrlsResponse;
+
     public GetSourceRepositoryCloneUrlsResponse withGetSourceRepositoryCloneUrlsResponse(org.openapis.openapi.models.shared.GetSourceRepositoryCloneUrlsResponse getSourceRepositoryCloneUrlsResponse) {
         this.getSourceRepositoryCloneUrlsResponse = getSourceRepositoryCloneUrlsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSourceRepositoryCloneUrlsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetSourceRepositoryCloneUrlsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
     
     
     public Integer statusCode;
+
     public GetSourceRepositoryCloneUrlsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSourceRepositoryCloneUrlsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetSourceRepositoryCloneUrlsResponse {
      */
     
     public Object throttlingException;
+
     public GetSourceRepositoryCloneUrlsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetSourceRepositoryCloneUrlsResponse {
      */
     
     public Object validationException;
+
     public GetSourceRepositoryCloneUrlsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSourceRepositoryCloneUrlsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

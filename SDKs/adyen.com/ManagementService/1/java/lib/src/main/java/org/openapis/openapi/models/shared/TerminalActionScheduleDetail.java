@@ -15,6 +15,7 @@ public class TerminalActionScheduleDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TerminalActionScheduleDetail withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class TerminalActionScheduleDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalId")
     public String terminalId;
+
     public TerminalActionScheduleDetail withTerminalId(String terminalId) {
         this.terminalId = terminalId;
         return this;
     }
     
+    public TerminalActionScheduleDetail(){}
 }

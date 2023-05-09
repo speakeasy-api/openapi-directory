@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatalakeExceptionsSubscriptionResponse {
@@ -12,6 +13,7 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object accountNotFoundException;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
     
     
     public String contentType;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
      */
     
     public java.util.Map<String, Object> updateDatalakeExceptionsSubscriptionResponse;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withUpdateDatalakeExceptionsSubscriptionResponse(java.util.Map<String, Object> updateDatalakeExceptionsSubscriptionResponse) {
         this.updateDatalakeExceptionsSubscriptionResponse = updateDatalakeExceptionsSubscriptionResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object validationException;
+
     public UpdateDatalakeExceptionsSubscriptionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateDatalakeExceptionsSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

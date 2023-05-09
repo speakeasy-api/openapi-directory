@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagsTagIdRequest {
@@ -12,9 +13,13 @@ public class GetTagsTagIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public Long tagId;
+
     public GetTagsTagIdRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public GetTagsTagIdRequest(@JsonProperty("tagId") Long tagId) {
+        this.tagId = tagId;
+  }
 }

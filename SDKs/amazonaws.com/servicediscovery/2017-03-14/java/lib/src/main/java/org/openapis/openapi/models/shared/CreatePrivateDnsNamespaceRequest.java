@@ -12,6 +12,7 @@ public class CreatePrivateDnsNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public CreatePrivateDnsNamespaceRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -20,6 +21,7 @@ public class CreatePrivateDnsNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreatePrivateDnsNamespaceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreatePrivateDnsNamespaceRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreatePrivateDnsNamespaceRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class CreatePrivateDnsNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public PrivateDnsNamespaceProperties properties;
+
     public CreatePrivateDnsNamespaceRequest withProperties(PrivateDnsNamespaceProperties properties) {
         this.properties = properties;
         return this;
@@ -43,6 +47,7 @@ public class CreatePrivateDnsNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePrivateDnsNamespaceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -50,9 +55,14 @@ public class CreatePrivateDnsNamespaceRequest {
     
     @JsonProperty("Vpc")
     public String vpc;
+
     public CreatePrivateDnsNamespaceRequest withVpc(String vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public CreatePrivateDnsNamespaceRequest(@JsonProperty("Name") String name, @JsonProperty("Vpc") String vpc) {
+        this.name = name;
+        this.vpc = vpc;
+  }
 }

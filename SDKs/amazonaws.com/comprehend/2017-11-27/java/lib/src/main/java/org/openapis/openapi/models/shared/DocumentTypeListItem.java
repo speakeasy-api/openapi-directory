@@ -15,6 +15,7 @@ public class DocumentTypeListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Long page;
+
     public DocumentTypeListItem withPage(Long page) {
         this.page = page;
         return this;
@@ -23,9 +24,11 @@ public class DocumentTypeListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public DocumentTypeEnum type;
+
     public DocumentTypeListItem withType(DocumentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DocumentTypeListItem(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateProjectRequest {
     @JsonProperty("arn")
     public String arn;
+
     public UpdateProjectRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class UpdateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultJobTimeoutMinutes")
     public Long defaultJobTimeoutMinutes;
+
     public UpdateProjectRequest withDefaultJobTimeoutMinutes(Long defaultJobTimeoutMinutes) {
         this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
         return this;
@@ -30,6 +32,7 @@ public class UpdateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateProjectRequest withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +41,13 @@ public class UpdateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VpcConfig vpcConfig;
+
     public UpdateProjectRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public UpdateProjectRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

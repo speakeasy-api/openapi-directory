@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity;
 import org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse;
+import org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity;
 import org.openapis.openapi.models.shared.BatchInputCallbackCompletionBatchRequest;
 import org.openapis.openapi.models.shared.CallbackCompletionBatchRequest;
 
@@ -28,33 +27,42 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.BatchInputCallbackCompletionBatchRequest req = new BatchInputCallbackCompletionBatchRequest() {{
-                inputs = new org.openapis.openapi.models.shared.CallbackCompletionBatchRequest[]{{
-                    add(new CallbackCompletionBatchRequest() {{
-                        callbackId = "provident";
-                        outputFields = new java.util.HashMap<String, String>() {{
-                            put("quibusdam", "unde");
-                            put("nulla", "corrupti");
-                            put("illum", "vel");
-                        }};
-                    }}),
-                    add(new CallbackCompletionBatchRequest() {{
-                        callbackId = "error";
-                        outputFields = new java.util.HashMap<String, String>() {{
-                            put("suscipit", "iure");
-                            put("magnam", "debitis");
-                            put("ipsa", "delectus");
-                        }};
-                    }}),
-                    add(new CallbackCompletionBatchRequest() {{
-                        callbackId = "tempora";
-                        outputFields = new java.util.HashMap<String, String>() {{
-                            put("molestiae", "minus");
-                            put("placeat", "voluptatum");
-                        }};
-                    }}),
-                }};
-            }}            
+            org.openapis.openapi.models.shared.BatchInputCallbackCompletionBatchRequest req = new BatchInputCallbackCompletionBatchRequest(                new org.openapis.openapi.models.shared.CallbackCompletionBatchRequest[]{{
+                                add(new CallbackCompletionBatchRequest("error",                 new java.util.HashMap<String, String>() {{
+                                                    put("suscipit", "iure");
+                                                    put("magnam", "debitis");
+                                                    put("ipsa", "delectus");
+                                                }}) {{
+                                    callbackId = "provident";
+                                    outputFields = new java.util.HashMap<String, String>() {{
+                                        put("quibusdam", "unde");
+                                        put("nulla", "corrupti");
+                                        put("illum", "vel");
+                                    }};
+                                }}),
+                                add(new CallbackCompletionBatchRequest("iusto",                 new java.util.HashMap<String, String>() {{
+                                                    put("nisi", "recusandae");
+                                                    put("temporibus", "ab");
+                                                    put("quis", "veritatis");
+                                                }}) {{
+                                    callbackId = "tempora";
+                                    outputFields = new java.util.HashMap<String, String>() {{
+                                        put("molestiae", "minus");
+                                        put("placeat", "voluptatum");
+                                    }};
+                                }}),
+                                add(new CallbackCompletionBatchRequest("sapiente",                 new java.util.HashMap<String, String>() {{
+                                                    put("odit", "at");
+                                                    put("at", "maiores");
+                                                    put("molestiae", "quod");
+                                                    put("quod", "esse");
+                                                }}) {{
+                                    callbackId = "deserunt";
+                                    outputFields = new java.util.HashMap<String, String>() {{
+                                        put("ipsam", "repellendus");
+                                    }};
+                                }}),
+                            }});            
 
             PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse res = sdk.callbacks.postAutomationV4ActionsCallbacksCompleteCompleteBatch(req, new PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity() {{
                 hapikey = "YOUR_API_KEY_HERE";
@@ -66,6 +74,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -73,33 +83,33 @@ public class Application {
 ## Available Resources and Operations
 
 
-### callbacks
+### [callbacks](docs/callbacks/README.md)
 
-* `postAutomationV4ActionsCallbacksCompleteCompleteBatch` - Complete a batch of callbacks
-* `postAutomationV4ActionsCallbacksCallbackIdCompleteComplete` - Complete a callback
+* [postAutomationV4ActionsCallbacksCompleteCompleteBatch](docs/callbacks/README.md#postautomationv4actionscallbackscompletecompletebatch) - Complete a batch of callbacks
+* [postAutomationV4ActionsCallbacksCallbackIdCompleteComplete](docs/callbacks/README.md#postautomationv4actionscallbackscallbackidcompletecomplete) - Complete a callback
 
-### definitions
+### [definitions](docs/definitions/README.md)
 
-* `deleteAutomationV4ActionsAppIdDefinitionIdArchive` - Archive a custom action
-* `getAutomationV4ActionsAppIdDefinitionIdGetById` - Get a custom action
-* `getAutomationV4ActionsAppIdGetPage` - Get all custom actions
-* `patchAutomationV4ActionsAppIdDefinitionIdUpdate` - Update a custom action
-* `postAutomationV4ActionsAppIdCreate` - Create new custom action
+* [deleteAutomationV4ActionsAppIdDefinitionIdArchive](docs/definitions/README.md#deleteautomationv4actionsappiddefinitionidarchive) - Archive a custom action
+* [getAutomationV4ActionsAppIdDefinitionIdGetById](docs/definitions/README.md#getautomationv4actionsappiddefinitionidgetbyid) - Get a custom action
+* [getAutomationV4ActionsAppIdGetPage](docs/definitions/README.md#getautomationv4actionsappidgetpage) - Get all custom actions
+* [patchAutomationV4ActionsAppIdDefinitionIdUpdate](docs/definitions/README.md#patchautomationv4actionsappiddefinitionidupdate) - Update a custom action
+* [postAutomationV4ActionsAppIdCreate](docs/definitions/README.md#postautomationv4actionsappidcreate) - Create new custom action
 
-### functions
+### [functions](docs/functions/README.md)
 
-* `deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchive` - Delete a custom action function
-* `deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionType` - Delete a custom action function
-* `getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetById` - Get a custom action function
-* `getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionType` - Get a custom action function
-* `getAutomationV4ActionsAppIdDefinitionIdFunctionsGetPage` - Get all custom action functions
-* `putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdCreateOrReplace` - Create or replace a custom action function
-* `putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionType` - Create or replace a custom action function
+* [deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchive](docs/functions/README.md#deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidarchive) - Delete a custom action function
+* [deleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionType](docs/functions/README.md#deleteautomationv4actionsappiddefinitionidfunctionsfunctiontypearchivebyfunctiontype) - Delete a custom action function
+* [getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdGetById](docs/functions/README.md#getautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidgetbyid) - Get a custom action function
+* [getAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeGetByFunctionType](docs/functions/README.md#getautomationv4actionsappiddefinitionidfunctionsfunctiontypegetbyfunctiontype) - Get a custom action function
+* [getAutomationV4ActionsAppIdDefinitionIdFunctionsGetPage](docs/functions/README.md#getautomationv4actionsappiddefinitionidfunctionsgetpage) - Get all custom action functions
+* [putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdCreateOrReplace](docs/functions/README.md#putautomationv4actionsappiddefinitionidfunctionsfunctiontypefunctionidcreateorreplace) - Create or replace a custom action function
+* [putAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionType](docs/functions/README.md#putautomationv4actionsappiddefinitionidfunctionsfunctiontypecreateorreplacebyfunctiontype) - Create or replace a custom action function
 
-### revisions
+### [revisions](docs/revisions/README.md)
 
-* `getAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetById` - Get a revision for a custom action
-* `getAutomationV4ActionsAppIdDefinitionIdRevisionsGetPage` - Get all revisions for a custom action
+* [getAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetById](docs/revisions/README.md#getautomationv4actionsappiddefinitionidrevisionsrevisionidgetbyid) - Get a revision for a custom action
+* [getAutomationV4ActionsAppIdDefinitionIdRevisionsGetPage](docs/revisions/README.md#getautomationv4actionsappiddefinitionidrevisionsgetpage) - Get all revisions for a custom action
 <!-- End SDK Available Operations -->
 
 ### Maturity

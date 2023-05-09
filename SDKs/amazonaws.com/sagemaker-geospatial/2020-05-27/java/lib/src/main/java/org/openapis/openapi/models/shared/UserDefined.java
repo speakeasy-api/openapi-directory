@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * UserDefined - &lt;p/&gt;
+ * UserDefined - The output resolution (in target georeferenced units) of the result of the operation
  */
 public class UserDefined {
     @JsonProperty("Unit")
     public UnitEnum unit;
+
     public UserDefined withUnit(UnitEnum unit) {
         this.unit = unit;
         return this;
@@ -19,9 +20,14 @@ public class UserDefined {
     
     @JsonProperty("Value")
     public Float value;
+
     public UserDefined withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public UserDefined(@JsonProperty("Unit") UnitEnum unit, @JsonProperty("Value") Float value) {
+        this.unit = unit;
+        this.value = value;
+  }
 }

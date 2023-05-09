@@ -21,6 +21,7 @@ public class ListKeysResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ListKeysResponseEntry withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class ListKeysResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ListKeysResponseEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class ListKeysResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpireTime")
     public OffsetDateTime expireTime;
+
     public ListKeysResponseEntry withExpireTime(OffsetDateTime expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -45,6 +48,7 @@ public class ListKeysResponseEntry {
     
     @JsonProperty("KeyName")
     public String keyName;
+
     public ListKeysResponseEntry withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -55,6 +59,7 @@ public class ListKeysResponseEntry {
      */
     @JsonProperty("Restrictions")
     public ApiKeyRestrictions restrictions;
+
     public ListKeysResponseEntry withRestrictions(ApiKeyRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -64,9 +69,17 @@ public class ListKeysResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ListKeysResponseEntry withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ListKeysResponseEntry(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("ExpireTime") OffsetDateTime expireTime, @JsonProperty("KeyName") String keyName, @JsonProperty("Restrictions") ApiKeyRestrictions restrictions, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+        this.keyName = keyName;
+        this.restrictions = restrictions;
+        this.updateTime = updateTime;
+  }
 }

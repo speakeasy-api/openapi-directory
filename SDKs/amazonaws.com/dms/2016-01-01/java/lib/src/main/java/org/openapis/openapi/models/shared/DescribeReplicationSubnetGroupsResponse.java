@@ -15,6 +15,7 @@ public class DescribeReplicationSubnetGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationSubnetGroupsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribeReplicationSubnetGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationSubnetGroups")
     public ReplicationSubnetGroup[] replicationSubnetGroups;
+
     public DescribeReplicationSubnetGroupsResponse withReplicationSubnetGroups(ReplicationSubnetGroup[] replicationSubnetGroups) {
         this.replicationSubnetGroups = replicationSubnetGroups;
         return this;
     }
     
+    public DescribeReplicationSubnetGroupsResponse(){}
 }

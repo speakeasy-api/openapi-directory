@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BatchDescribeTypeConfigurationsError {
     
     public String errorCode;
+
     public BatchDescribeTypeConfigurationsError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class BatchDescribeTypeConfigurationsError {
     
     
     public String errorMessage;
+
     public BatchDescribeTypeConfigurationsError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,9 +31,11 @@ public class BatchDescribeTypeConfigurationsError {
      */
     
     public TypeConfigurationIdentifier typeConfigurationIdentifier;
+
     public BatchDescribeTypeConfigurationsError withTypeConfigurationIdentifier(TypeConfigurationIdentifier typeConfigurationIdentifier) {
         this.typeConfigurationIdentifier = typeConfigurationIdentifier;
         return this;
     }
     
+    public BatchDescribeTypeConfigurationsError(){}
 }

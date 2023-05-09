@@ -18,6 +18,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTypes")
     public CategoryType[] categoryTypes;
+
     public FulfillmentPolicy withCategoryTypes(CategoryType[] categoryTypes) {
         this.categoryTypes = categoryTypes;
         return this;
@@ -29,6 +30,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FulfillmentPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freightShipping")
     public Boolean freightShipping;
+
     public FulfillmentPolicy withFreightShipping(Boolean freightShipping) {
         this.freightShipping = freightShipping;
         return this;
@@ -51,6 +54,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentPolicyId")
     public String fulfillmentPolicyId;
+
     public FulfillmentPolicy withFulfillmentPolicyId(String fulfillmentPolicyId) {
         this.fulfillmentPolicyId = fulfillmentPolicyId;
         return this;
@@ -62,6 +66,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalShipping")
     public Boolean globalShipping;
+
     public FulfillmentPolicy withGlobalShipping(Boolean globalShipping) {
         this.globalShipping = globalShipping;
         return this;
@@ -73,6 +78,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handlingTime")
     public TimeDuration handlingTime;
+
     public FulfillmentPolicy withHandlingTime(TimeDuration handlingTime) {
         this.handlingTime = handlingTime;
         return this;
@@ -84,6 +90,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPickup")
     public Boolean localPickup;
+
     public FulfillmentPolicy withLocalPickup(Boolean localPickup) {
         this.localPickup = localPickup;
         return this;
@@ -95,6 +102,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceId")
     public String marketplaceId;
+
     public FulfillmentPolicy withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -106,6 +114,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FulfillmentPolicy withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupDropOff")
     public Boolean pickupDropOff;
+
     public FulfillmentPolicy withPickupDropOff(Boolean pickupDropOff) {
         this.pickupDropOff = pickupDropOff;
         return this;
@@ -128,6 +138,7 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipToLocations")
     public RegionSet shipToLocations;
+
     public FulfillmentPolicy withShipToLocations(RegionSet shipToLocations) {
         this.shipToLocations = shipToLocations;
         return this;
@@ -139,9 +150,11 @@ public class FulfillmentPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingOptions")
     public ShippingOption[] shippingOptions;
+
     public FulfillmentPolicy withShippingOptions(ShippingOption[] shippingOptions) {
         this.shippingOptions = shippingOptions;
         return this;
     }
     
+    public FulfillmentPolicy(){}
 }

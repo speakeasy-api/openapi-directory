@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInsightImpactGraphResponse {
     
     public String contentType;
+
     public GetInsightImpactGraphResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInsightImpactGraphResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInsightImpactGraphResult getInsightImpactGraphResult;
+
     public GetInsightImpactGraphResponse withGetInsightImpactGraphResult(org.openapis.openapi.models.shared.GetInsightImpactGraphResult getInsightImpactGraphResult) {
         this.getInsightImpactGraphResult = getInsightImpactGraphResult;
         return this;
@@ -29,6 +32,7 @@ public class GetInsightImpactGraphResponse {
      */
     
     public Object invalidRequestException;
+
     public GetInsightImpactGraphResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class GetInsightImpactGraphResponse {
     
     
     public Integer statusCode;
+
     public GetInsightImpactGraphResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetInsightImpactGraphResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInsightImpactGraphResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetInsightImpactGraphResponse {
      */
     
     public Object throttledException;
+
     public GetInsightImpactGraphResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetInsightImpactGraphResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

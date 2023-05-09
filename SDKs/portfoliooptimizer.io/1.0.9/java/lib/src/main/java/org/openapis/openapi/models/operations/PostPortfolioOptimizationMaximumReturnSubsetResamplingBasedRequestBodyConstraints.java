@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroups")
     public Long[][] assetsGroups;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints withAssetsGroups(Long[][] assetsGroups) {
         this.assetsGroups = assetsGroups;
         return this;
@@ -23,6 +24,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsGroupsMatrix")
     public Double[][] assetsGroupsMatrix;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints withAssetsGroupsMatrix(Double[][] assetsGroupsMatrix) {
         this.assetsGroupsMatrix = assetsGroupsMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsGroupsWeights")
     public Double[] maximumAssetsGroupsWeights;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints withMaximumAssetsGroupsWeights(Double[] maximumAssetsGroupsWeights) {
         this.maximumAssetsGroupsWeights = maximumAssetsGroupsWeights;
         return this;
@@ -45,6 +48,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsWeights")
     public Double[] maximumAssetsWeights;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints withMaximumAssetsWeights(Double[] maximumAssetsWeights) {
         this.maximumAssetsWeights = maximumAssetsWeights;
         return this;
@@ -56,6 +60,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPortfolioExposure")
     public Double maximumPortfolioExposure;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints withMaximumPortfolioExposure(Double maximumPortfolioExposure) {
         this.maximumPortfolioExposure = maximumPortfolioExposure;
         return this;
@@ -67,6 +72,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumAssetsWeights")
     public Double[] minimumAssetsWeights;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints withMinimumAssetsWeights(Double[] minimumAssetsWeights) {
         this.minimumAssetsWeights = minimumAssetsWeights;
         return this;
@@ -78,9 +84,11 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumPortfolioExposure")
     public Double minimumPortfolioExposure;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints withMinimumPortfolioExposure(Double minimumPortfolioExposure) {
         this.minimumPortfolioExposure = minimumPortfolioExposure;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints(){}
 }

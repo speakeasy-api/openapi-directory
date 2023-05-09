@@ -15,6 +15,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public String aliases;
+
     public Network withAliases(String aliases) {
         this.aliases = aliases;
         return this;
@@ -26,6 +27,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointID")
     public String endpointID;
+
     public Network withEndpointID(String endpointID) {
         this.endpointID = endpointID;
         return this;
@@ -37,6 +39,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gateway")
     public String gateway;
+
     public Network withGateway(String gateway) {
         this.gateway = gateway;
         return this;
@@ -48,6 +51,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalIPv6Address")
     public String globalIPv6Address;
+
     public Network withGlobalIPv6Address(String globalIPv6Address) {
         this.globalIPv6Address = globalIPv6Address;
         return this;
@@ -59,6 +63,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalIPv6PrefixLen")
     public Long globalIPv6PrefixLen;
+
     public Network withGlobalIPv6PrefixLen(Long globalIPv6PrefixLen) {
         this.globalIPv6PrefixLen = globalIPv6PrefixLen;
         return this;
@@ -70,6 +75,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPAMConfig")
     public String ipamConfig;
+
     public Network withIPAMConfig(String ipamConfig) {
         this.ipamConfig = ipamConfig;
         return this;
@@ -81,6 +87,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPPrefixLen")
     public String ipPrefixLen;
+
     public Network withIPPrefixLen(String ipPrefixLen) {
         this.ipPrefixLen = ipPrefixLen;
         return this;
@@ -92,6 +99,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPv6Gateway")
     public String iPv6Gateway;
+
     public Network withIPv6Gateway(String iPv6Gateway) {
         this.iPv6Gateway = iPv6Gateway;
         return this;
@@ -103,6 +111,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public String links;
+
     public Network withLinks(String links) {
         this.links = links;
         return this;
@@ -114,6 +123,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MacAddress")
     public String macAddress;
+
     public Network withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -125,9 +135,11 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkID")
     public String networkID;
+
     public Network withNetworkID(String networkID) {
         this.networkID = networkID;
         return this;
     }
     
+    public Network(){}
 }

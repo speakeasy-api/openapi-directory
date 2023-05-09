@@ -12,6 +12,7 @@ public class RewardEarningResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public RewardEarningResourceRelationshipsGroup group;
+
     public RewardEarningResourceRelationships withGroup(RewardEarningResourceRelationshipsGroup group) {
         this.group = group;
         return this;
@@ -20,6 +21,7 @@ public class RewardEarningResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public RewardEarningResourceRelationshipsPatient patient;
+
     public RewardEarningResourceRelationships withPatient(RewardEarningResourceRelationshipsPatient patient) {
         this.patient = patient;
         return this;
@@ -27,6 +29,7 @@ public class RewardEarningResourceRelationships {
     
     @JsonProperty("reward")
     public RewardEarningResourceRelationshipsReward reward;
+
     public RewardEarningResourceRelationships withReward(RewardEarningResourceRelationshipsReward reward) {
         this.reward = reward;
         return this;
@@ -35,9 +38,13 @@ public class RewardEarningResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reward_program_activation")
     public RewardEarningResourceRelationshipsRewardProgramActivation rewardProgramActivation;
+
     public RewardEarningResourceRelationships withRewardProgramActivation(RewardEarningResourceRelationshipsRewardProgramActivation rewardProgramActivation) {
         this.rewardProgramActivation = rewardProgramActivation;
         return this;
     }
     
+    public RewardEarningResourceRelationships(@JsonProperty("reward") RewardEarningResourceRelationshipsReward reward) {
+        this.reward = reward;
+  }
 }

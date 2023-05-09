@@ -18,6 +18,7 @@ public class ListGoogleAudiencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAudiences")
     public GoogleAudience[] googleAudiences;
+
     public ListGoogleAudiencesResponse withGoogleAudiences(GoogleAudience[] googleAudiences) {
         this.googleAudiences = googleAudiences;
         return this;
@@ -29,9 +30,11 @@ public class ListGoogleAudiencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListGoogleAudiencesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListGoogleAudiencesResponse(){}
 }

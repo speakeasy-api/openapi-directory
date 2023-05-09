@@ -15,6 +15,7 @@ public class Coverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoverageCost")
     public CoverageCost coverageCost;
+
     public Coverage withCoverageCost(CoverageCost coverageCost) {
         this.coverageCost = coverageCost;
         return this;
@@ -23,6 +24,7 @@ public class Coverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoverageHours")
     public CoverageHours coverageHours;
+
     public Coverage withCoverageHours(CoverageHours coverageHours) {
         this.coverageHours = coverageHours;
         return this;
@@ -31,9 +33,11 @@ public class Coverage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoverageNormalizedUnits")
     public CoverageNormalizedUnits coverageNormalizedUnits;
+
     public Coverage withCoverageNormalizedUnits(CoverageNormalizedUnits coverageNormalizedUnits) {
         this.coverageNormalizedUnits = coverageNormalizedUnits;
         return this;
     }
     
+    public Coverage(){}
 }

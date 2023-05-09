@@ -57,10 +57,8 @@ public class TypeTypeEiaCategory {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeEiaCategoryResponse res = new org.openapis.openapi.models.operations.SearchTypeEiaCategoryResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeEiaCategoryResponse res = new org.openapis.openapi.models.operations.SearchTypeEiaCategoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

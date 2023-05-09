@@ -15,9 +15,11 @@ public class CreateCustomPluginRequestBodyLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public org.openapis.openapi.models.shared.S3Location s3Location;
+
     public CreateCustomPluginRequestBodyLocation withS3Location(org.openapis.openapi.models.shared.S3Location s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public CreateCustomPluginRequestBodyLocation(){}
 }

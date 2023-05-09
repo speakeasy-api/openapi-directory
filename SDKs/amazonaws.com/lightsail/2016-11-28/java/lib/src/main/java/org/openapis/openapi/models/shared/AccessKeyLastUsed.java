@@ -22,6 +22,7 @@ public class AccessKeyLastUsed {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUsedDate")
     public OffsetDateTime lastUsedDate;
+
     public AccessKeyLastUsed withLastUsedDate(OffsetDateTime lastUsedDate) {
         this.lastUsedDate = lastUsedDate;
         return this;
@@ -30,6 +31,7 @@ public class AccessKeyLastUsed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public AccessKeyLastUsed withRegion(String region) {
         this.region = region;
         return this;
@@ -38,9 +40,11 @@ public class AccessKeyLastUsed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public AccessKeyLastUsed withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public AccessKeyLastUsed(){}
 }

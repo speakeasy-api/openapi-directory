@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMailboxResponse {
     
     public String contentType;
+
     public GetMailboxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMailboxResponse {
      */
     
     public org.openapis.openapi.models.shared.MailboxDetail mailboxDetail;
+
     public GetMailboxResponse withMailboxDetail(org.openapis.openapi.models.shared.MailboxDetail mailboxDetail) {
         this.mailboxDetail = mailboxDetail;
         return this;
@@ -26,6 +29,7 @@ public class GetMailboxResponse {
     
     
     public Integer statusCode;
+
     public GetMailboxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetMailboxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMailboxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMailboxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

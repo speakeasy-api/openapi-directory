@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAutomationExecutionRequest {
     @JsonProperty("AutomationExecutionId")
     public String automationExecutionId;
+
     public GetAutomationExecutionRequest withAutomationExecutionId(String automationExecutionId) {
         this.automationExecutionId = automationExecutionId;
         return this;
     }
     
+    public GetAutomationExecutionRequest(@JsonProperty("AutomationExecutionId") String automationExecutionId) {
+        this.automationExecutionId = automationExecutionId;
+  }
 }

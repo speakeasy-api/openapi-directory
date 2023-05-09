@@ -12,6 +12,7 @@ public class GetSimCompareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_feature_set")
     public Boolean isFeatureSet;
+
     public GetSimCompareRequest withIsFeatureSet(Boolean isFeatureSet) {
         this.isFeatureSet = isFeatureSet;
         return this;
@@ -22,6 +23,7 @@ public class GetSimCompareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
     public GetSimCompareMetricEnum metric;
+
     public GetSimCompareRequest withMetric(GetSimCompareMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -32,6 +34,7 @@ public class GetSimCompareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_id")
     public String[] queryId;
+
     public GetSimCompareRequest withQueryId(String[] queryId) {
         this.queryId = queryId;
         return this;
@@ -42,9 +45,11 @@ public class GetSimCompareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref_id")
     public String[] refId;
+
     public GetSimCompareRequest withRefId(String[] refId) {
         this.refId = refId;
         return this;
     }
     
+    public GetSimCompareRequest(){}
 }

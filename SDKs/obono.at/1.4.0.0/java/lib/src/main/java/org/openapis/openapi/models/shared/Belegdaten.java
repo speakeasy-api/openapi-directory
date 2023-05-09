@@ -15,6 +15,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Externer-Beleg-Belegkreis")
     public String externerBelegBelegkreis;
+
     public Belegdaten withExternerBelegBelegkreis(String externerBelegBelegkreis) {
         this.externerBelegBelegkreis = externerBelegBelegkreis;
         return this;
@@ -23,6 +24,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Externer-Beleg-Bezeichnung")
     public String externerBelegBezeichnung;
+
     public Belegdaten withExternerBelegBezeichnung(String externerBelegBezeichnung) {
         this.externerBelegBezeichnung = externerBelegBezeichnung;
         return this;
@@ -31,6 +33,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Externer-Beleg-Referenz")
     public String externerBelegReferenz;
+
     public Belegdaten withExternerBelegReferenz(String externerBelegReferenz) {
         this.externerBelegReferenz = externerBelegReferenz;
         return this;
@@ -39,6 +42,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Kunde")
     public String kunde;
+
     public Belegdaten withKunde(String kunde) {
         this.kunde = kunde;
         return this;
@@ -47,6 +51,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notizen")
     public String[] notizen;
+
     public Belegdaten withNotizen(String[] notizen) {
         this.notizen = notizen;
         return this;
@@ -55,6 +60,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Posten")
     public Posten[] posten;
+
     public Belegdaten withPosten(Posten[] posten) {
         this.posten = posten;
         return this;
@@ -63,6 +69,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rabatte")
     public Rabatt[] rabatte;
+
     public Belegdaten withRabatte(Rabatt[] rabatte) {
         this.rabatte = rabatte;
         return this;
@@ -74,6 +81,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Storno")
     public Boolean storno;
+
     public Belegdaten withStorno(Boolean storno) {
         this.storno = storno;
         return this;
@@ -85,6 +93,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Storno-Beleg-UUID")
     public String stornoBelegUUID;
+
     public Belegdaten withStornoBelegUUID(String stornoBelegUUID) {
         this.stornoBelegUUID = stornoBelegUUID;
         return this;
@@ -93,6 +102,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Storno-Text")
     public String stornoText;
+
     public Belegdaten withStornoText(String stornoText) {
         this.stornoText = stornoText;
         return this;
@@ -104,6 +114,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Training")
     public Boolean training;
+
     public Belegdaten withTraining(Boolean training) {
         this.training = training;
         return this;
@@ -112,6 +123,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-Adresse1")
     public String unternehmenAdresse1;
+
     public Belegdaten withUnternehmenAdresse1(String unternehmenAdresse1) {
         this.unternehmenAdresse1 = unternehmenAdresse1;
         return this;
@@ -120,6 +132,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-Adresse2")
     public String unternehmenAdresse2;
+
     public Belegdaten withUnternehmenAdresse2(String unternehmenAdresse2) {
         this.unternehmenAdresse2 = unternehmenAdresse2;
         return this;
@@ -128,6 +141,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-Fusszeile")
     public String unternehmenFusszeile;
+
     public Belegdaten withUnternehmenFusszeile(String unternehmenFusszeile) {
         this.unternehmenFusszeile = unternehmenFusszeile;
         return this;
@@ -136,6 +150,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-ID")
     public String unternehmenID;
+
     public Belegdaten withUnternehmenID(String unternehmenID) {
         this.unternehmenID = unternehmenID;
         return this;
@@ -144,6 +159,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-ID-Typ")
     public BelegdatenUnternehmenIDTypEnum unternehmenIDTyp;
+
     public Belegdaten withUnternehmenIDTyp(BelegdatenUnternehmenIDTypEnum unternehmenIDTyp) {
         this.unternehmenIDTyp = unternehmenIDTyp;
         return this;
@@ -152,6 +168,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-Kopfzeile")
     public String unternehmenKopfzeile;
+
     public Belegdaten withUnternehmenKopfzeile(String unternehmenKopfzeile) {
         this.unternehmenKopfzeile = unternehmenKopfzeile;
         return this;
@@ -160,6 +177,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-Name")
     public String unternehmenName;
+
     public Belegdaten withUnternehmenName(String unternehmenName) {
         this.unternehmenName = unternehmenName;
         return this;
@@ -168,6 +186,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-Ort")
     public String unternehmenOrt;
+
     public Belegdaten withUnternehmenOrt(String unternehmenOrt) {
         this.unternehmenOrt = unternehmenOrt;
         return this;
@@ -176,6 +195,7 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unternehmen-PLZ")
     public String unternehmenPLZ;
+
     public Belegdaten withUnternehmenPLZ(String unternehmenPLZ) {
         this.unternehmenPLZ = unternehmenPLZ;
         return this;
@@ -184,9 +204,11 @@ public class Belegdaten {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zahlungen")
     public Zahlung[] zahlungen;
+
     public Belegdaten withZahlungen(Zahlung[] zahlungen) {
         this.zahlungen = zahlungen;
         return this;
     }
     
+    public Belegdaten(){}
 }

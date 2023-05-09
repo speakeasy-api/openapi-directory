@@ -15,9 +15,11 @@ public class UpdateGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public GroupType group;
+
     public UpdateGroupResponse withGroup(GroupType group) {
         this.group = group;
         return this;
     }
     
+    public UpdateGroupResponse(){}
 }

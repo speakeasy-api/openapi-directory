@@ -18,9 +18,11 @@ public class DataplexConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lakeResources")
     public java.util.Map<String, Lake> lakeResources;
+
     public DataplexConfig withLakeResources(java.util.Map<String, Lake> lakeResources) {
         this.lakeResources = lakeResources;
         return this;
     }
     
+    public DataplexConfig(){}
 }

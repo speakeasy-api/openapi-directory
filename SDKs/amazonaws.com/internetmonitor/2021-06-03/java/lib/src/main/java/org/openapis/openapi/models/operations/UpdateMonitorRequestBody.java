@@ -15,17 +15,31 @@ public class UpdateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public UpdateMonitorRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     * The maximum number of city-network combinations (that is, combinations of a city location and network, such as an ISP) to be monitored for your resources.
+     * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("InternetMeasurementsLogDelivery")
+    public UpdateMonitorRequestBodyInternetMeasurementsLogDelivery internetMeasurementsLogDelivery;
+
+    public UpdateMonitorRequestBody withInternetMeasurementsLogDelivery(UpdateMonitorRequestBodyInternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
+        this.internetMeasurementsLogDelivery = internetMeasurementsLogDelivery;
+        return this;
+    }
+    
+    /**
+     * The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where clients access your application resources from and the network or ASN, such as an internet service provider, that clients access the resources through.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCityNetworksToMonitor")
     public Long maxCityNetworksToMonitor;
+
     public UpdateMonitorRequestBody withMaxCityNetworksToMonitor(Long maxCityNetworksToMonitor) {
         this.maxCityNetworksToMonitor = maxCityNetworksToMonitor;
         return this;
@@ -37,6 +51,7 @@ public class UpdateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcesToAdd")
     public String[] resourcesToAdd;
+
     public UpdateMonitorRequestBody withResourcesToAdd(String[] resourcesToAdd) {
         this.resourcesToAdd = resourcesToAdd;
         return this;
@@ -48,6 +63,7 @@ public class UpdateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcesToRemove")
     public String[] resourcesToRemove;
+
     public UpdateMonitorRequestBody withResourcesToRemove(String[] resourcesToRemove) {
         this.resourcesToRemove = resourcesToRemove;
         return this;
@@ -59,9 +75,23 @@ public class UpdateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UpdateMonitorRequestBodyStatusEnum status;
+
     public UpdateMonitorRequestBody withStatus(UpdateMonitorRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    /**
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("TrafficPercentageToMonitor")
+    public Long trafficPercentageToMonitor;
+
+    public UpdateMonitorRequestBody withTrafficPercentageToMonitor(Long trafficPercentageToMonitor) {
+        this.trafficPercentageToMonitor = trafficPercentageToMonitor;
+        return this;
+    }
+    
+    public UpdateMonitorRequestBody(){}
 }

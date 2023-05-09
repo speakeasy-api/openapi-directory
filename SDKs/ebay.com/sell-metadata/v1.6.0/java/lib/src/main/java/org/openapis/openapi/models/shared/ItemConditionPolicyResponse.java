@@ -18,6 +18,7 @@ public class ItemConditionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemConditionPolicies")
     public ItemConditionPolicy[] itemConditionPolicies;
+
     public ItemConditionPolicyResponse withItemConditionPolicies(ItemConditionPolicy[] itemConditionPolicies) {
         this.itemConditionPolicies = itemConditionPolicies;
         return this;
@@ -29,9 +30,11 @@ public class ItemConditionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public Error[] warnings;
+
     public ItemConditionPolicyResponse withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ItemConditionPolicyResponse(){}
 }

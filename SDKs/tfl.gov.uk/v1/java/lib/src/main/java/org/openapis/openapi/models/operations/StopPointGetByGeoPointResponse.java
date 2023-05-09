@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPointGetByGeoPointResponse {
     
     public byte[] body;
+
     public StopPointGetByGeoPointResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopPointGetByGeoPointResponse {
     
     
     public String contentType;
+
     public StopPointGetByGeoPointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopPointGetByGeoPointResponse {
     
     
     public Integer statusCode;
+
     public StopPointGetByGeoPointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopPointGetByGeoPointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPointGetByGeoPointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class StopPointGetByGeoPointResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesStopPointsResponse tflApiPresentationEntitiesStopPointsResponse;
+
     public StopPointGetByGeoPointResponse withTflApiPresentationEntitiesStopPointsResponse(org.openapis.openapi.models.shared.TflApiPresentationEntitiesStopPointsResponse tflApiPresentationEntitiesStopPointsResponse) {
         this.tflApiPresentationEntitiesStopPointsResponse = tflApiPresentationEntitiesStopPointsResponse;
         return this;
     }
     
+    public StopPointGetByGeoPointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

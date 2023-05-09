@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCardRequest {
@@ -12,9 +13,13 @@ public class RetrieveCardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_id")
     public String cardId;
+
     public RetrieveCardRequest withCardId(String cardId) {
         this.cardId = cardId;
         return this;
     }
     
+    public RetrieveCardRequest(@JsonProperty("card_id") String cardId) {
+        this.cardId = cardId;
+  }
 }

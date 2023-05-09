@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsCraftablesDestinyCraftableSocketComponent {
     
     public Long plugSetHash;
+
     public DestinyComponentsCraftablesDestinyCraftableSocketComponent withPlugSetHash(Long plugSetHash) {
         this.plugSetHash = plugSetHash;
         return this;
@@ -19,9 +20,11 @@ public class DestinyComponentsCraftablesDestinyCraftableSocketComponent {
      */
     
     public DestinyComponentsCraftablesDestinyCraftableSocketPlugComponent[] plugs;
+
     public DestinyComponentsCraftablesDestinyCraftableSocketComponent withPlugs(DestinyComponentsCraftablesDestinyCraftableSocketPlugComponent[] plugs) {
         this.plugs = plugs;
         return this;
     }
     
+    public DestinyComponentsCraftablesDestinyCraftableSocketComponent(){}
 }

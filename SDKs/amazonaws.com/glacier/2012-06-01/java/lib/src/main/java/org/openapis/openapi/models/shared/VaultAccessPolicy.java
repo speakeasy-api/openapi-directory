@@ -15,9 +15,11 @@ public class VaultAccessPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public VaultAccessPolicy withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public VaultAccessPolicy(){}
 }

@@ -15,9 +15,11 @@ public class AnalyticsEventPropertiesDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public AnalyticsEventPropertiesDefaultApplicationJSONError error;
+
     public AnalyticsEventPropertiesDefaultApplicationJSON withError(AnalyticsEventPropertiesDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AnalyticsEventPropertiesDefaultApplicationJSON(){}
 }

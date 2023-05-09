@@ -14,6 +14,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public TeamsListApps200ApplicationJSON withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,6 +23,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public TeamsListApps200ApplicationJSONAzureSubscription azureSubscription;
+
     public TeamsListApps200ApplicationJSON withAzureSubscription(TeamsListApps200ApplicationJSONAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -33,6 +35,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TeamsListApps200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamsListApps200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsListApps200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -65,6 +70,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public TeamsListApps200ApplicationJSON withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -76,6 +82,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public TeamsListApps200ApplicationJSON withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -86,6 +93,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public TeamsListApps200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +105,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public TeamsListApps200ApplicationJSONMemberPermissionsEnum[] memberPermissions;
+
     public TeamsListApps200ApplicationJSON withMemberPermissions(TeamsListApps200ApplicationJSONMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -107,6 +116,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsListApps200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +127,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("origin")
     public TeamsListApps200ApplicationJSONOriginEnum origin;
+
     public TeamsListApps200ApplicationJSON withOrigin(TeamsListApps200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -127,6 +138,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("os")
     public TeamsListApps200ApplicationJSONOsEnum os;
+
     public TeamsListApps200ApplicationJSON withOs(TeamsListApps200ApplicationJSONOsEnum os) {
         this.os = os;
         return this;
@@ -137,6 +149,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("owner")
     public TeamsListApps200ApplicationJSONOwner owner;
+
     public TeamsListApps200ApplicationJSON withOwner(TeamsListApps200ApplicationJSONOwner owner) {
         this.owner = owner;
         return this;
@@ -147,6 +160,7 @@ public class TeamsListApps200ApplicationJSON {
      */
     @JsonProperty("platform")
     public TeamsListApps200ApplicationJSONPlatformEnum platform;
+
     public TeamsListApps200ApplicationJSON withPlatform(TeamsListApps200ApplicationJSONPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -158,6 +172,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public TeamsListApps200ApplicationJSON withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -169,6 +184,7 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_permissions")
     public TeamsListApps200ApplicationJSONTeamPermissionsEnum[] teamPermissions;
+
     public TeamsListApps200ApplicationJSON withTeamPermissions(TeamsListApps200ApplicationJSONTeamPermissionsEnum[] teamPermissions) {
         this.teamPermissions = teamPermissions;
         return this;
@@ -180,9 +196,20 @@ public class TeamsListApps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TeamsListApps200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TeamsListApps200ApplicationJSON(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") TeamsListApps200ApplicationJSONOriginEnum origin, @JsonProperty("os") TeamsListApps200ApplicationJSONOsEnum os, @JsonProperty("owner") TeamsListApps200ApplicationJSONOwner owner, @JsonProperty("platform") TeamsListApps200ApplicationJSONPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

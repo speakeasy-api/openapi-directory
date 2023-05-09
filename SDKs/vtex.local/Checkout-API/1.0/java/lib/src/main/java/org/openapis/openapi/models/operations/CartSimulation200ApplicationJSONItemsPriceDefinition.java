@@ -18,6 +18,7 @@ public class CartSimulation200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatedSellingPrice")
     public Long calculatedSellingPrice;
+
     public CartSimulation200ApplicationJSONItemsPriceDefinition withCalculatedSellingPrice(Long calculatedSellingPrice) {
         this.calculatedSellingPrice = calculatedSellingPrice;
         return this;
@@ -29,6 +30,7 @@ public class CartSimulation200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrices")
     public CartSimulation200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices;
+
     public CartSimulation200ApplicationJSONItemsPriceDefinition withSellingPrices(CartSimulation200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices) {
         this.sellingPrices = sellingPrices;
         return this;
@@ -40,9 +42,11 @@ public class CartSimulation200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public CartSimulation200ApplicationJSONItemsPriceDefinition withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONItemsPriceDefinition(){}
 }

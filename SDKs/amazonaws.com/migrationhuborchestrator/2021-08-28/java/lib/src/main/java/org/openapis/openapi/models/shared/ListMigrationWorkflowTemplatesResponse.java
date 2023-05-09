@@ -15,6 +15,7 @@ public class ListMigrationWorkflowTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMigrationWorkflowTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListMigrationWorkflowTemplatesResponse {
     
     @JsonProperty("templateSummary")
     public TemplateSummary[] templateSummary;
+
     public ListMigrationWorkflowTemplatesResponse withTemplateSummary(TemplateSummary[] templateSummary) {
         this.templateSummary = templateSummary;
         return this;
     }
     
+    public ListMigrationWorkflowTemplatesResponse(@JsonProperty("templateSummary") TemplateSummary[] templateSummary) {
+        this.templateSummary = templateSummary;
+  }
 }

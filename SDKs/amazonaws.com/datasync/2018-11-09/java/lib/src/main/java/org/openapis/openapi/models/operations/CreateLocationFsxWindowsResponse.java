@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationFsxWindowsResponse {
     
     public String contentType;
+
     public CreateLocationFsxWindowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationFsxWindowsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationFsxWindowsResponse createLocationFsxWindowsResponse;
+
     public CreateLocationFsxWindowsResponse withCreateLocationFsxWindowsResponse(org.openapis.openapi.models.shared.CreateLocationFsxWindowsResponse createLocationFsxWindowsResponse) {
         this.createLocationFsxWindowsResponse = createLocationFsxWindowsResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLocationFsxWindowsResponse {
      */
     
     public Object internalException;
+
     public CreateLocationFsxWindowsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLocationFsxWindowsResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLocationFsxWindowsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateLocationFsxWindowsResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationFsxWindowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateLocationFsxWindowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationFsxWindowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLocationFsxWindowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

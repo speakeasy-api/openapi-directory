@@ -12,6 +12,7 @@ public class DescribeLogGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIdentifiers")
     public String[] accountIdentifiers;
+
     public DescribeLogGroupsRequest withAccountIdentifiers(String[] accountIdentifiers) {
         this.accountIdentifiers = accountIdentifiers;
         return this;
@@ -20,6 +21,7 @@ public class DescribeLogGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeLinkedAccounts")
     public Boolean includeLinkedAccounts;
+
     public DescribeLogGroupsRequest withIncludeLinkedAccounts(Boolean includeLinkedAccounts) {
         this.includeLinkedAccounts = includeLinkedAccounts;
         return this;
@@ -28,6 +30,7 @@ public class DescribeLogGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public DescribeLogGroupsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,6 +39,7 @@ public class DescribeLogGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupNamePattern")
     public String logGroupNamePattern;
+
     public DescribeLogGroupsRequest withLogGroupNamePattern(String logGroupNamePattern) {
         this.logGroupNamePattern = logGroupNamePattern;
         return this;
@@ -44,6 +48,7 @@ public class DescribeLogGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logGroupNamePrefix")
     public String logGroupNamePrefix;
+
     public DescribeLogGroupsRequest withLogGroupNamePrefix(String logGroupNamePrefix) {
         this.logGroupNamePrefix = logGroupNamePrefix;
         return this;
@@ -52,9 +57,11 @@ public class DescribeLogGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeLogGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLogGroupsRequest(){}
 }

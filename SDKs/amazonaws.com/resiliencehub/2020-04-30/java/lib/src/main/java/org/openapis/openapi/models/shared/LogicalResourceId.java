@@ -15,6 +15,7 @@ public class LogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksSourceName")
     public String eksSourceName;
+
     public LogicalResourceId withEksSourceName(String eksSourceName) {
         this.eksSourceName = eksSourceName;
         return this;
@@ -22,6 +23,7 @@ public class LogicalResourceId {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public LogicalResourceId withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -30,6 +32,7 @@ public class LogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalStackName")
     public String logicalStackName;
+
     public LogicalResourceId withLogicalStackName(String logicalStackName) {
         this.logicalStackName = logicalStackName;
         return this;
@@ -38,6 +41,7 @@ public class LogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupName")
     public String resourceGroupName;
+
     public LogicalResourceId withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -46,9 +50,13 @@ public class LogicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terraformSourceName")
     public String terraformSourceName;
+
     public LogicalResourceId withTerraformSourceName(String terraformSourceName) {
         this.terraformSourceName = terraformSourceName;
         return this;
     }
     
+    public LogicalResourceId(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

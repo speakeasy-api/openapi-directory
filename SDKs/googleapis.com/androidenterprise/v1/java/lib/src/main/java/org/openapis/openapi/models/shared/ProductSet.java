@@ -18,6 +18,7 @@ public class ProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String[] productId;
+
     public ProductSet withProductId(String[] productId) {
         this.productId = productId;
         return this;
@@ -29,6 +30,7 @@ public class ProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productSetBehavior")
     public ProductSetProductSetBehaviorEnum productSetBehavior;
+
     public ProductSet withProductSetBehavior(ProductSetProductSetBehaviorEnum productSetBehavior) {
         this.productSetBehavior = productSetBehavior;
         return this;
@@ -40,9 +42,11 @@ public class ProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productVisibility")
     public ProductVisibility[] productVisibility;
+
     public ProductSet withProductVisibility(ProductVisibility[] productVisibility) {
         this.productVisibility = productVisibility;
         return this;
     }
     
+    public ProductSet(){}
 }

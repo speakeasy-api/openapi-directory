@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserTagsTagIdShowsRequest {
@@ -12,6 +13,7 @@ public class GetUserTagsTagIdShowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetUserTagsTagIdShowsEmbedEnum embed;
+
     public GetUserTagsTagIdShowsRequest withEmbed(GetUserTagsTagIdShowsEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -19,9 +21,13 @@ public class GetUserTagsTagIdShowsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_id")
     public Long tagId;
+
     public GetUserTagsTagIdShowsRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public GetUserTagsTagIdShowsRequest(@JsonProperty("tag_id") Long tagId) {
+        this.tagId = tagId;
+  }
 }

@@ -194,6 +194,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -231,7 +236,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddCustomRoutingEndpointsResponse res = new org.openapis.openapi.models.operations.AddCustomRoutingEndpointsResponse() {{
+        org.openapis.openapi.models.operations.AddCustomRoutingEndpointsResponse res = new org.openapis.openapi.models.operations.AddCustomRoutingEndpointsResponse(contentType, httpRes.statusCode()) {{
             addCustomRoutingEndpointsResponse = null;
             endpointAlreadyExistsException = null;
             endpointGroupNotFoundException = null;
@@ -241,8 +246,6 @@ public class SDK {
             accessDeniedException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,7 +342,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddEndpointsResponse res = new org.openapis.openapi.models.operations.AddEndpointsResponse() {{
+        org.openapis.openapi.models.operations.AddEndpointsResponse res = new org.openapis.openapi.models.operations.AddEndpointsResponse(contentType, httpRes.statusCode()) {{
             addEndpointsResponse = null;
             transactionInProgressException = null;
             endpointGroupNotFoundException = null;
@@ -348,8 +351,6 @@ public class SDK {
             limitExceededException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,7 +440,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdvertiseByoipCidrResponse res = new org.openapis.openapi.models.operations.AdvertiseByoipCidrResponse() {{
+        org.openapis.openapi.models.operations.AdvertiseByoipCidrResponse res = new org.openapis.openapi.models.operations.AdvertiseByoipCidrResponse(contentType, httpRes.statusCode()) {{
             advertiseByoipCidrResponse = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
@@ -447,8 +448,6 @@ public class SDK {
             byoipCidrNotFoundException = null;
             incorrectCidrStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,13 +530,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllowCustomRoutingTrafficResponse res = new org.openapis.openapi.models.operations.AllowCustomRoutingTrafficResponse() {{
+        org.openapis.openapi.models.operations.AllowCustomRoutingTrafficResponse res = new org.openapis.openapi.models.operations.AllowCustomRoutingTrafficResponse(contentType, httpRes.statusCode()) {{
             endpointGroupNotFoundException = null;
             invalidArgumentException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -601,14 +598,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAcceleratorResponse res = new org.openapis.openapi.models.operations.CreateAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.CreateAcceleratorResponse res = new org.openapis.openapi.models.operations.CreateAcceleratorResponse(contentType, httpRes.statusCode()) {{
             createAcceleratorResponse = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -677,15 +672,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.CreateCustomRoutingAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.CreateCustomRoutingAcceleratorResponse(contentType, httpRes.statusCode()) {{
             createCustomRoutingAcceleratorResponse = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
             limitExceededException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -761,7 +754,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomRoutingEndpointGroupResponse res = new org.openapis.openapi.models.operations.CreateCustomRoutingEndpointGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomRoutingEndpointGroupResponse res = new org.openapis.openapi.models.operations.CreateCustomRoutingEndpointGroupResponse(contentType, httpRes.statusCode()) {{
             createCustomRoutingEndpointGroupResponse = null;
             acceleratorNotFoundException = null;
             endpointGroupAlreadyExistsException = null;
@@ -772,8 +765,6 @@ public class SDK {
             limitExceededException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -877,7 +868,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.CreateCustomRoutingListenerResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.CreateCustomRoutingListenerResponse(contentType, httpRes.statusCode()) {{
             createCustomRoutingListenerResponse = null;
             invalidArgumentException = null;
             acceleratorNotFoundException = null;
@@ -885,8 +876,6 @@ public class SDK {
             internalServiceErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -969,7 +958,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEndpointGroupResponse res = new org.openapis.openapi.models.operations.CreateEndpointGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateEndpointGroupResponse res = new org.openapis.openapi.models.operations.CreateEndpointGroupResponse(contentType, httpRes.statusCode()) {{
             createEndpointGroupResponse = null;
             acceleratorNotFoundException = null;
             endpointGroupAlreadyExistsException = null;
@@ -979,8 +968,6 @@ public class SDK {
             limitExceededException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1077,7 +1064,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateListenerResponse res = new org.openapis.openapi.models.operations.CreateListenerResponse() {{
+        org.openapis.openapi.models.operations.CreateListenerResponse res = new org.openapis.openapi.models.operations.CreateListenerResponse(contentType, httpRes.statusCode()) {{
             createListenerResponse = null;
             invalidArgumentException = null;
             acceleratorNotFoundException = null;
@@ -1085,8 +1072,6 @@ public class SDK {
             internalServiceErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1169,15 +1154,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAcceleratorResponse res = new org.openapis.openapi.models.operations.DeleteAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.DeleteAcceleratorResponse res = new org.openapis.openapi.models.operations.DeleteAcceleratorResponse(contentType, httpRes.statusCode()) {{
             acceleratorNotFoundException = null;
             acceleratorNotDisabledException = null;
             associatedListenerFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1255,15 +1238,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.DeleteCustomRoutingAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.DeleteCustomRoutingAcceleratorResponse(contentType, httpRes.statusCode()) {{
             acceleratorNotFoundException = null;
             acceleratorNotDisabledException = null;
             associatedListenerFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1341,13 +1322,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomRoutingEndpointGroupResponse res = new org.openapis.openapi.models.operations.DeleteCustomRoutingEndpointGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomRoutingEndpointGroupResponse res = new org.openapis.openapi.models.operations.DeleteCustomRoutingEndpointGroupResponse(contentType, httpRes.statusCode()) {{
             invalidArgumentException = null;
             endpointGroupNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1411,14 +1390,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.DeleteCustomRoutingListenerResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.DeleteCustomRoutingListenerResponse(contentType, httpRes.statusCode()) {{
             invalidArgumentException = null;
             listenerNotFoundException = null;
             associatedEndpointGroupFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1489,13 +1466,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEndpointGroupResponse res = new org.openapis.openapi.models.operations.DeleteEndpointGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteEndpointGroupResponse res = new org.openapis.openapi.models.operations.DeleteEndpointGroupResponse(contentType, httpRes.statusCode()) {{
             invalidArgumentException = null;
             endpointGroupNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1559,14 +1534,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteListenerResponse res = new org.openapis.openapi.models.operations.DeleteListenerResponse() {{
+        org.openapis.openapi.models.operations.DeleteListenerResponse res = new org.openapis.openapi.models.operations.DeleteListenerResponse(contentType, httpRes.statusCode()) {{
             invalidArgumentException = null;
             listenerNotFoundException = null;
             associatedEndpointGroupFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1637,13 +1610,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DenyCustomRoutingTrafficResponse res = new org.openapis.openapi.models.operations.DenyCustomRoutingTrafficResponse() {{
+        org.openapis.openapi.models.operations.DenyCustomRoutingTrafficResponse res = new org.openapis.openapi.models.operations.DenyCustomRoutingTrafficResponse(contentType, httpRes.statusCode()) {{
             endpointGroupNotFoundException = null;
             invalidArgumentException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1707,7 +1678,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprovisionByoipCidrResponse res = new org.openapis.openapi.models.operations.DeprovisionByoipCidrResponse() {{
+        org.openapis.openapi.models.operations.DeprovisionByoipCidrResponse res = new org.openapis.openapi.models.operations.DeprovisionByoipCidrResponse(contentType, httpRes.statusCode()) {{
             deprovisionByoipCidrResponse = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
@@ -1715,8 +1686,6 @@ public class SDK {
             byoipCidrNotFoundException = null;
             incorrectCidrStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1799,14 +1768,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAcceleratorResponse res = new org.openapis.openapi.models.operations.DescribeAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.DescribeAcceleratorResponse res = new org.openapis.openapi.models.operations.DescribeAcceleratorResponse(contentType, httpRes.statusCode()) {{
             describeAcceleratorResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1875,14 +1842,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.DescribeAcceleratorAttributesResponse() {{
+        org.openapis.openapi.models.operations.DescribeAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.DescribeAcceleratorAttributesResponse(contentType, httpRes.statusCode()) {{
             describeAcceleratorAttributesResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1951,14 +1916,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorResponse(contentType, httpRes.statusCode()) {{
             describeCustomRoutingAcceleratorResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2027,14 +1990,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorAttributesResponse() {{
+        org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingAcceleratorAttributesResponse(contentType, httpRes.statusCode()) {{
             describeCustomRoutingAcceleratorAttributesResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2103,14 +2064,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCustomRoutingEndpointGroupResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingEndpointGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeCustomRoutingEndpointGroupResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingEndpointGroupResponse(contentType, httpRes.statusCode()) {{
             describeCustomRoutingEndpointGroupResponse = null;
             invalidArgumentException = null;
             endpointGroupNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2179,14 +2138,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingListenerResponse() {{
+        org.openapis.openapi.models.operations.DescribeCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.DescribeCustomRoutingListenerResponse(contentType, httpRes.statusCode()) {{
             describeCustomRoutingListenerResponse = null;
             invalidArgumentException = null;
             listenerNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2255,14 +2212,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEndpointGroupResponse res = new org.openapis.openapi.models.operations.DescribeEndpointGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeEndpointGroupResponse res = new org.openapis.openapi.models.operations.DescribeEndpointGroupResponse(contentType, httpRes.statusCode()) {{
             describeEndpointGroupResponse = null;
             invalidArgumentException = null;
             endpointGroupNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2331,14 +2286,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeListenerResponse res = new org.openapis.openapi.models.operations.DescribeListenerResponse() {{
+        org.openapis.openapi.models.operations.DescribeListenerResponse res = new org.openapis.openapi.models.operations.DescribeListenerResponse(contentType, httpRes.statusCode()) {{
             describeListenerResponse = null;
             invalidArgumentException = null;
             listenerNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2413,14 +2366,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAcceleratorsResponse res = new org.openapis.openapi.models.operations.ListAcceleratorsResponse() {{
+        org.openapis.openapi.models.operations.ListAcceleratorsResponse res = new org.openapis.openapi.models.operations.ListAcceleratorsResponse(contentType, httpRes.statusCode()) {{
             listAcceleratorsResponse = null;
             invalidArgumentException = null;
             invalidNextTokenException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2495,15 +2446,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListByoipCidrsResponse res = new org.openapis.openapi.models.operations.ListByoipCidrsResponse() {{
+        org.openapis.openapi.models.operations.ListByoipCidrsResponse res = new org.openapis.openapi.models.operations.ListByoipCidrsResponse(contentType, httpRes.statusCode()) {{
             listByoipCidrsResponse = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
             accessDeniedException = null;
             invalidNextTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2585,14 +2534,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomRoutingAcceleratorsResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingAcceleratorsResponse() {{
+        org.openapis.openapi.models.operations.ListCustomRoutingAcceleratorsResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingAcceleratorsResponse(contentType, httpRes.statusCode()) {{
             listCustomRoutingAcceleratorsResponse = null;
             invalidArgumentException = null;
             invalidNextTokenException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2667,15 +2614,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomRoutingEndpointGroupsResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingEndpointGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListCustomRoutingEndpointGroupsResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingEndpointGroupsResponse(contentType, httpRes.statusCode()) {{
             listCustomRoutingEndpointGroupsResponse = null;
             listenerNotFoundException = null;
             invalidNextTokenException = null;
             invalidArgumentException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2757,15 +2702,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomRoutingListenersResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingListenersResponse() {{
+        org.openapis.openapi.models.operations.ListCustomRoutingListenersResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingListenersResponse(contentType, httpRes.statusCode()) {{
             listCustomRoutingListenersResponse = null;
             invalidArgumentException = null;
             acceleratorNotFoundException = null;
             invalidNextTokenException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2847,7 +2790,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsResponse() {{
+        org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsResponse(contentType, httpRes.statusCode()) {{
             listCustomRoutingPortMappingsResponse = null;
             invalidArgumentException = null;
             invalidNextTokenException = null;
@@ -2855,8 +2798,6 @@ public class SDK {
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2945,15 +2886,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsByDestinationResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsByDestinationResponse() {{
+        org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsByDestinationResponse res = new org.openapis.openapi.models.operations.ListCustomRoutingPortMappingsByDestinationResponse(contentType, httpRes.statusCode()) {{
             listCustomRoutingPortMappingsByDestinationResponse = null;
             invalidArgumentException = null;
             invalidNextTokenException = null;
             endpointNotFoundException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3035,15 +2974,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEndpointGroupsResponse res = new org.openapis.openapi.models.operations.ListEndpointGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListEndpointGroupsResponse res = new org.openapis.openapi.models.operations.ListEndpointGroupsResponse(contentType, httpRes.statusCode()) {{
             listEndpointGroupsResponse = null;
             listenerNotFoundException = null;
             invalidNextTokenException = null;
             invalidArgumentException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3125,15 +3062,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListListenersResponse res = new org.openapis.openapi.models.operations.ListListenersResponse() {{
+        org.openapis.openapi.models.operations.ListListenersResponse res = new org.openapis.openapi.models.operations.ListListenersResponse(contentType, httpRes.statusCode()) {{
             listListenersResponse = null;
             invalidArgumentException = null;
             acceleratorNotFoundException = null;
             invalidNextTokenException = null;
             internalServiceErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3209,14 +3144,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3285,7 +3218,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProvisionByoipCidrResponse res = new org.openapis.openapi.models.operations.ProvisionByoipCidrResponse() {{
+        org.openapis.openapi.models.operations.ProvisionByoipCidrResponse res = new org.openapis.openapi.models.operations.ProvisionByoipCidrResponse(contentType, httpRes.statusCode()) {{
             provisionByoipCidrResponse = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
@@ -3293,8 +3226,6 @@ public class SDK {
             accessDeniedException = null;
             incorrectCidrStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3377,7 +3308,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveCustomRoutingEndpointsResponse res = new org.openapis.openapi.models.operations.RemoveCustomRoutingEndpointsResponse() {{
+        org.openapis.openapi.models.operations.RemoveCustomRoutingEndpointsResponse res = new org.openapis.openapi.models.operations.RemoveCustomRoutingEndpointsResponse(contentType, httpRes.statusCode()) {{
             endpointGroupNotFoundException = null;
             endpointNotFoundException = null;
             internalServiceErrorException = null;
@@ -3385,8 +3316,6 @@ public class SDK {
             accessDeniedException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3471,15 +3400,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveEndpointsResponse res = new org.openapis.openapi.models.operations.RemoveEndpointsResponse() {{
+        org.openapis.openapi.models.operations.RemoveEndpointsResponse res = new org.openapis.openapi.models.operations.RemoveEndpointsResponse(contentType, httpRes.statusCode()) {{
             endpointGroupNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
             accessDeniedException = null;
             transactionInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3557,14 +3484,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3633,14 +3558,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3709,15 +3632,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAcceleratorResponse res = new org.openapis.openapi.models.operations.UpdateAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.UpdateAcceleratorResponse res = new org.openapis.openapi.models.operations.UpdateAcceleratorResponse(contentType, httpRes.statusCode()) {{
             updateAcceleratorResponse = null;
             acceleratorNotFoundException = null;
             accessDeniedException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3793,15 +3714,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.UpdateAcceleratorAttributesResponse() {{
+        org.openapis.openapi.models.operations.UpdateAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.UpdateAcceleratorAttributesResponse(contentType, httpRes.statusCode()) {{
             updateAcceleratorAttributesResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3877,14 +3796,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorResponse res = new org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorResponse(contentType, httpRes.statusCode()) {{
             updateCustomRoutingAcceleratorResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3953,15 +3870,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorAttributesResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorAttributesResponse res = new org.openapis.openapi.models.operations.UpdateCustomRoutingAcceleratorAttributesResponse(contentType, httpRes.statusCode()) {{
             updateCustomRoutingAcceleratorAttributesResponse = null;
             acceleratorNotFoundException = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4037,7 +3952,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.UpdateCustomRoutingListenerResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomRoutingListenerResponse res = new org.openapis.openapi.models.operations.UpdateCustomRoutingListenerResponse(contentType, httpRes.statusCode()) {{
             updateCustomRoutingListenerResponse = null;
             invalidArgumentException = null;
             invalidPortRangeException = null;
@@ -4045,8 +3960,6 @@ public class SDK {
             internalServiceErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4129,7 +4042,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEndpointGroupResponse res = new org.openapis.openapi.models.operations.UpdateEndpointGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateEndpointGroupResponse res = new org.openapis.openapi.models.operations.UpdateEndpointGroupResponse(contentType, httpRes.statusCode()) {{
             updateEndpointGroupResponse = null;
             invalidArgumentException = null;
             endpointGroupNotFoundException = null;
@@ -4137,8 +4050,6 @@ public class SDK {
             limitExceededException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4221,7 +4132,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateListenerResponse res = new org.openapis.openapi.models.operations.UpdateListenerResponse() {{
+        org.openapis.openapi.models.operations.UpdateListenerResponse res = new org.openapis.openapi.models.operations.UpdateListenerResponse(contentType, httpRes.statusCode()) {{
             updateListenerResponse = null;
             invalidArgumentException = null;
             invalidPortRangeException = null;
@@ -4229,8 +4140,6 @@ public class SDK {
             internalServiceErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4313,7 +4222,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WithdrawByoipCidrResponse res = new org.openapis.openapi.models.operations.WithdrawByoipCidrResponse() {{
+        org.openapis.openapi.models.operations.WithdrawByoipCidrResponse res = new org.openapis.openapi.models.operations.WithdrawByoipCidrResponse(contentType, httpRes.statusCode()) {{
             withdrawByoipCidrResponse = null;
             internalServiceErrorException = null;
             invalidArgumentException = null;
@@ -4321,8 +4230,6 @@ public class SDK {
             byoipCidrNotFoundException = null;
             incorrectCidrStateException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

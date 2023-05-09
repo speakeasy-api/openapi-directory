@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Recommendation {
     @JsonProperty("allMatchesCount")
     public Long allMatchesCount;
+
     public Recommendation withAllMatchesCount(Long allMatchesCount) {
         this.allMatchesCount = allMatchesCount;
         return this;
@@ -24,6 +25,7 @@ public class Recommendation {
     
     @JsonProperty("allMatchesSum")
     public Double allMatchesSum;
+
     public Recommendation withAllMatchesSum(Double allMatchesSum) {
         this.allMatchesSum = allMatchesSum;
         return this;
@@ -33,6 +35,7 @@ public class Recommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public Recommendation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +43,7 @@ public class Recommendation {
     
     @JsonProperty("pattern")
     public Pattern pattern;
+
     public Recommendation withPattern(Pattern pattern) {
         this.pattern = pattern;
         return this;
@@ -49,6 +53,7 @@ public class Recommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public Recommendation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,9 +61,18 @@ public class Recommendation {
     
     @JsonProperty("topMatches")
     public Match[] topMatches;
+
     public Recommendation withTopMatches(Match[] topMatches) {
         this.topMatches = topMatches;
         return this;
     }
     
+    public Recommendation(@JsonProperty("allMatchesCount") Long allMatchesCount, @JsonProperty("allMatchesSum") Double allMatchesSum, @JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("pattern") Pattern pattern, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("topMatches") Match[] topMatches) {
+        this.allMatchesCount = allMatchesCount;
+        this.allMatchesSum = allMatchesSum;
+        this.endTime = endTime;
+        this.pattern = pattern;
+        this.startTime = startTime;
+        this.topMatches = topMatches;
+  }
 }

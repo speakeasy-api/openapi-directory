@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4FindThreatMatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public GoogleSecuritySafebrowsingV4ClientInfo client;
+
     public GoogleSecuritySafebrowsingV4FindThreatMatchesRequest withClient(GoogleSecuritySafebrowsingV4ClientInfo client) {
         this.client = client;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSecuritySafebrowsingV4FindThreatMatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatInfo")
     public GoogleSecuritySafebrowsingV4ThreatInfo threatInfo;
+
     public GoogleSecuritySafebrowsingV4FindThreatMatchesRequest withThreatInfo(GoogleSecuritySafebrowsingV4ThreatInfo threatInfo) {
         this.threatInfo = threatInfo;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4FindThreatMatchesRequest(){}
 }

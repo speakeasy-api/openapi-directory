@@ -59,11 +59,9 @@ public class V1beta1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterGetSettingsResponse res = new org.openapis.openapi.models.operations.AlertcenterGetSettingsResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterGetSettingsResponse res = new org.openapis.openapi.models.operations.AlertcenterGetSettingsResponse(contentType, httpRes.statusCode()) {{
             settings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class V1beta1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AlertcenterUpdateSettingsResponse res = new org.openapis.openapi.models.operations.AlertcenterUpdateSettingsResponse() {{
+        org.openapis.openapi.models.operations.AlertcenterUpdateSettingsResponse res = new org.openapis.openapi.models.operations.AlertcenterUpdateSettingsResponse(contentType, httpRes.statusCode()) {{
             settings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

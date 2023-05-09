@@ -15,6 +15,7 @@ public class EventReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedItemId")
     public String relatedItemId;
+
     public EventReference withRelatedItemId(String relatedItemId) {
         this.relatedItemId = relatedItemId;
         return this;
@@ -23,9 +24,11 @@ public class EventReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public EventReference withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public EventReference(){}
 }

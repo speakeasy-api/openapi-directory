@@ -15,6 +15,7 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnNames")
     public String[] columnNames;
+
     public UpdateDataCellsFilterRequestBodyTableData withColumnNames(String[] columnNames) {
         this.columnNames = columnNames;
         return this;
@@ -23,6 +24,7 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnWildcard")
     public org.openapis.openapi.models.shared.ColumnWildcard columnWildcard;
+
     public UpdateDataCellsFilterRequestBodyTableData withColumnWildcard(org.openapis.openapi.models.shared.ColumnWildcard columnWildcard) {
         this.columnWildcard = columnWildcard;
         return this;
@@ -31,6 +33,7 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateDataCellsFilterRequestBodyTableData withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateDataCellsFilterRequestBodyTableData withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowFilter")
     public org.openapis.openapi.models.shared.RowFilter rowFilter;
+
     public UpdateDataCellsFilterRequestBodyTableData withRowFilter(org.openapis.openapi.models.shared.RowFilter rowFilter) {
         this.rowFilter = rowFilter;
         return this;
@@ -55,6 +60,7 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableCatalogId")
     public String tableCatalogId;
+
     public UpdateDataCellsFilterRequestBodyTableData withTableCatalogId(String tableCatalogId) {
         this.tableCatalogId = tableCatalogId;
         return this;
@@ -63,6 +69,7 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateDataCellsFilterRequestBodyTableData withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -71,9 +78,11 @@ public class UpdateDataCellsFilterRequestBodyTableData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public UpdateDataCellsFilterRequestBodyTableData withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public UpdateDataCellsFilterRequestBodyTableData(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateThingResponse {
     
     public String contentType;
+
     public CreateThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateThingResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateThingResponse createThingResponse;
+
     public CreateThingResponse withCreateThingResponse(org.openapis.openapi.models.shared.CreateThingResponse createThingResponse) {
         this.createThingResponse = createThingResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateThingResponse {
      */
     
     public Object internalFailureException;
+
     public CreateThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateThingResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateThingResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateThingResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateThingResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateThingResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class CreateThingResponse {
     
     
     public Integer statusCode;
+
     public CreateThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateThingResponse {
      */
     
     public Object throttlingException;
+
     public CreateThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateThingResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateThingResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

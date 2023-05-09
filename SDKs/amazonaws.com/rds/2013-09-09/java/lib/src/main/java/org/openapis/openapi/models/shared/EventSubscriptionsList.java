@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class EventSubscriptionsList {
     
     public String custSubscriptionId;
+
     public EventSubscriptionsList withCustSubscriptionId(String custSubscriptionId) {
         this.custSubscriptionId = custSubscriptionId;
         return this;
@@ -16,6 +17,7 @@ public class EventSubscriptionsList {
     
     
     public String customerAwsId;
+
     public EventSubscriptionsList withCustomerAwsId(String customerAwsId) {
         this.customerAwsId = customerAwsId;
         return this;
@@ -23,6 +25,7 @@ public class EventSubscriptionsList {
     
     
     public Boolean enabled;
+
     public EventSubscriptionsList withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -30,6 +33,7 @@ public class EventSubscriptionsList {
     
     
     public String[] eventCategoriesList;
+
     public EventSubscriptionsList withEventCategoriesList(String[] eventCategoriesList) {
         this.eventCategoriesList = eventCategoriesList;
         return this;
@@ -37,6 +41,7 @@ public class EventSubscriptionsList {
     
     
     public String snsTopicArn;
+
     public EventSubscriptionsList withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -44,6 +49,7 @@ public class EventSubscriptionsList {
     
     
     public String[] sourceIdsList;
+
     public EventSubscriptionsList withSourceIdsList(String[] sourceIdsList) {
         this.sourceIdsList = sourceIdsList;
         return this;
@@ -51,6 +57,7 @@ public class EventSubscriptionsList {
     
     
     public String sourceType;
+
     public EventSubscriptionsList withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -58,6 +65,7 @@ public class EventSubscriptionsList {
     
     
     public String status;
+
     public EventSubscriptionsList withStatus(String status) {
         this.status = status;
         return this;
@@ -65,9 +73,11 @@ public class EventSubscriptionsList {
     
     
     public String subscriptionCreationTime;
+
     public EventSubscriptionsList withSubscriptionCreationTime(String subscriptionCreationTime) {
         this.subscriptionCreationTime = subscriptionCreationTime;
         return this;
     }
     
+    public EventSubscriptionsList(){}
 }

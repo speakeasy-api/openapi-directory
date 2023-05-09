@@ -18,6 +18,7 @@ public class OrganizationInvitationCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public OrganizationInvitationCreation withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class OrganizationInvitationCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationRole")
     public OrganizationRolesEnum organizationRole;
+
     public OrganizationInvitationCreation withOrganizationRole(OrganizationRolesEnum organizationRole) {
         this.organizationRole = organizationRole;
         return this;
     }
     
+    public OrganizationInvitationCreation(){}
 }

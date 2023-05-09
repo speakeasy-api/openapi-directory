@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartInstanceOnboardingJobResponse {
@@ -12,6 +13,7 @@ public class StartInstanceOnboardingJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartInstanceOnboardingJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartInstanceOnboardingJobResponse {
      */
     
     public Object conflictException;
+
     public StartInstanceOnboardingJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartInstanceOnboardingJobResponse {
     
     
     public String contentType;
+
     public StartInstanceOnboardingJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartInstanceOnboardingJobResponse {
      */
     
     public Object internalServerException;
+
     public StartInstanceOnboardingJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartInstanceOnboardingJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartInstanceOnboardingJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartInstanceOnboardingJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartInstanceOnboardingJobResponse startInstanceOnboardingJobResponse;
+
     public StartInstanceOnboardingJobResponse withStartInstanceOnboardingJobResponse(org.openapis.openapi.models.shared.StartInstanceOnboardingJobResponse startInstanceOnboardingJobResponse) {
         this.startInstanceOnboardingJobResponse = startInstanceOnboardingJobResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartInstanceOnboardingJobResponse {
     
     
     public Integer statusCode;
+
     public StartInstanceOnboardingJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartInstanceOnboardingJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartInstanceOnboardingJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartInstanceOnboardingJobResponse {
      */
     
     public Object throttlingException;
+
     public StartInstanceOnboardingJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartInstanceOnboardingJobResponse {
      */
     
     public Object validationException;
+
     public StartInstanceOnboardingJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartInstanceOnboardingJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

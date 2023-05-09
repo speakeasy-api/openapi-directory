@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetStateRequest {
@@ -12,6 +13,7 @@ public class SetStateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetStateRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class SetStateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public SetStateRequest withObject(String object) {
         this.object = object;
         return this;
@@ -32,9 +35,15 @@ public class SetStateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=state")
     public Integer state;
+
     public SetStateRequest withState(Integer state) {
         this.state = state;
         return this;
     }
     
+    public SetStateRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("object") String object, @JsonProperty("state") Integer state) {
+        this.agentNum = agentNum;
+        this.object = object;
+        this.state = state;
+  }
 }

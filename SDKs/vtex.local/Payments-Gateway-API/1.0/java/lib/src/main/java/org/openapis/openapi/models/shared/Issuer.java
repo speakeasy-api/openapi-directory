@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Issuer {
     @JsonProperty("name")
     public String name;
+
     public Issuer withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Issuer(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

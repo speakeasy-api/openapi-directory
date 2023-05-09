@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSecurityEventsRequest {
@@ -12,6 +13,7 @@ public class GetOrganizationSecurityEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
     public String endingBefore;
+
     public GetOrganizationSecurityEventsRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -19,6 +21,7 @@ public class GetOrganizationSecurityEventsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public GetOrganizationSecurityEventsRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -29,6 +32,7 @@ public class GetOrganizationSecurityEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetOrganizationSecurityEventsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,6 +43,7 @@ public class GetOrganizationSecurityEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
     public String startingAfter;
+
     public GetOrganizationSecurityEventsRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
@@ -49,6 +54,7 @@ public class GetOrganizationSecurityEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
     public String t0;
+
     public GetOrganizationSecurityEventsRequest withT0(String t0) {
         this.t0 = t0;
         return this;
@@ -59,6 +65,7 @@ public class GetOrganizationSecurityEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
     public String t1;
+
     public GetOrganizationSecurityEventsRequest withT1(String t1) {
         this.t1 = t1;
         return this;
@@ -69,9 +76,13 @@ public class GetOrganizationSecurityEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
     public Float timespan;
+
     public GetOrganizationSecurityEventsRequest withTimespan(Float timespan) {
         this.timespan = timespan;
         return this;
     }
     
+    public GetOrganizationSecurityEventsRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

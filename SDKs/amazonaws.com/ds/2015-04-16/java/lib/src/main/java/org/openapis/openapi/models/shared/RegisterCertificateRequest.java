@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterCertificateRequest {
     @JsonProperty("CertificateData")
     public String certificateData;
+
     public RegisterCertificateRequest withCertificateData(String certificateData) {
         this.certificateData = certificateData;
         return this;
@@ -19,6 +20,7 @@ public class RegisterCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCertAuthSettings")
     public ClientCertAuthSettings clientCertAuthSettings;
+
     public RegisterCertificateRequest withClientCertAuthSettings(ClientCertAuthSettings clientCertAuthSettings) {
         this.clientCertAuthSettings = clientCertAuthSettings;
         return this;
@@ -26,6 +28,7 @@ public class RegisterCertificateRequest {
     
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public RegisterCertificateRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -34,9 +37,14 @@ public class RegisterCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CertificateTypeEnum type;
+
     public RegisterCertificateRequest withType(CertificateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RegisterCertificateRequest(@JsonProperty("CertificateData") String certificateData, @JsonProperty("DirectoryId") String directoryId) {
+        this.certificateData = certificateData;
+        this.directoryId = directoryId;
+  }
 }

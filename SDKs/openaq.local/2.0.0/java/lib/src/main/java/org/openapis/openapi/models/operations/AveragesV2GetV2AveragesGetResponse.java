@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AveragesV2GetV2AveragesGetResponse {
     
     public String contentType;
+
     public AveragesV2GetV2AveragesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AveragesV2GetV2AveragesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public AveragesV2GetV2AveragesGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -29,6 +32,7 @@ public class AveragesV2GetV2AveragesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQResult openAQResult;
+
     public AveragesV2GetV2AveragesGetResponse withOpenAQResult(org.openapis.openapi.models.shared.OpenAQResult openAQResult) {
         this.openAQResult = openAQResult;
         return this;
@@ -36,6 +40,7 @@ public class AveragesV2GetV2AveragesGetResponse {
     
     
     public Integer statusCode;
+
     public AveragesV2GetV2AveragesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AveragesV2GetV2AveragesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AveragesV2GetV2AveragesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AveragesV2GetV2AveragesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

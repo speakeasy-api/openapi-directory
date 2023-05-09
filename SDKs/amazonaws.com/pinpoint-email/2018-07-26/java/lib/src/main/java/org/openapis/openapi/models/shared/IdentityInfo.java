@@ -15,6 +15,7 @@ public class IdentityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityName")
     public String identityName;
+
     public IdentityInfo withIdentityName(String identityName) {
         this.identityName = identityName;
         return this;
@@ -23,6 +24,7 @@ public class IdentityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public IdentityInfo withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -31,9 +33,11 @@ public class IdentityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingEnabled")
     public Boolean sendingEnabled;
+
     public IdentityInfo withSendingEnabled(Boolean sendingEnabled) {
         this.sendingEnabled = sendingEnabled;
         return this;
     }
     
+    public IdentityInfo(){}
 }

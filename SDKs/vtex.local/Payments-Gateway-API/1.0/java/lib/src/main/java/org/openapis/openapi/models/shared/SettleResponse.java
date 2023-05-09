@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SettleResponse {
     @JsonProperty("cancelledValue")
     public Integer cancelledValue;
+
     public SettleResponse withCancelledValue(Integer cancelledValue) {
         this.cancelledValue = cancelledValue;
         return this;
@@ -16,6 +17,7 @@ public class SettleResponse {
     
     @JsonProperty("connectorRefundedValue")
     public Integer connectorRefundedValue;
+
     public SettleResponse withConnectorRefundedValue(Integer connectorRefundedValue) {
         this.connectorRefundedValue = connectorRefundedValue;
         return this;
@@ -23,6 +25,7 @@ public class SettleResponse {
     
     @JsonProperty("message")
     public String message;
+
     public SettleResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -30,6 +33,7 @@ public class SettleResponse {
     
     @JsonProperty("processingDate")
     public String processingDate;
+
     public SettleResponse withProcessingDate(String processingDate) {
         this.processingDate = processingDate;
         return this;
@@ -37,6 +41,7 @@ public class SettleResponse {
     
     @JsonProperty("refundedToken")
     public String refundedToken;
+
     public SettleResponse withRefundedToken(String refundedToken) {
         this.refundedToken = refundedToken;
         return this;
@@ -44,6 +49,7 @@ public class SettleResponse {
     
     @JsonProperty("refundedValue")
     public Integer refundedValue;
+
     public SettleResponse withRefundedValue(Integer refundedValue) {
         this.refundedValue = refundedValue;
         return this;
@@ -51,6 +57,7 @@ public class SettleResponse {
     
     @JsonProperty("status")
     public Integer status;
+
     public SettleResponse withStatus(Integer status) {
         this.status = status;
         return this;
@@ -58,6 +65,7 @@ public class SettleResponse {
     
     @JsonProperty("statusDetail")
     public String statusDetail;
+
     public SettleResponse withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
@@ -65,9 +73,21 @@ public class SettleResponse {
     
     @JsonProperty("token")
     public String token;
+
     public SettleResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public SettleResponse(@JsonProperty("cancelledValue") Integer cancelledValue, @JsonProperty("connectorRefundedValue") Integer connectorRefundedValue, @JsonProperty("message") String message, @JsonProperty("processingDate") String processingDate, @JsonProperty("refundedToken") String refundedToken, @JsonProperty("refundedValue") Integer refundedValue, @JsonProperty("status") Integer status, @JsonProperty("statusDetail") String statusDetail, @JsonProperty("token") String token) {
+        this.cancelledValue = cancelledValue;
+        this.connectorRefundedValue = connectorRefundedValue;
+        this.message = message;
+        this.processingDate = processingDate;
+        this.refundedToken = refundedToken;
+        this.refundedValue = refundedValue;
+        this.status = status;
+        this.statusDetail = statusDetail;
+        this.token = token;
+  }
 }

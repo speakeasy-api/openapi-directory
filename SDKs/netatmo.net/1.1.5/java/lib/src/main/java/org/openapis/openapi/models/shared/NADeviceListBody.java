@@ -12,6 +12,7 @@ public class NADeviceListBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public NADevice[] devices;
+
     public NADeviceListBody withDevices(NADevice[] devices) {
         this.devices = devices;
         return this;
@@ -20,9 +21,11 @@ public class NADeviceListBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modules")
     public NAModule[] modules;
+
     public NADeviceListBody withModules(NAModule[] modules) {
         this.modules = modules;
         return this;
     }
     
+    public NADeviceListBody(){}
 }

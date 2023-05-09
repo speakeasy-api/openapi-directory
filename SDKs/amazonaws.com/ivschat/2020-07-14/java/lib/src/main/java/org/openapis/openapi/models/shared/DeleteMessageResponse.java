@@ -15,9 +15,11 @@ public class DeleteMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteMessageResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteMessageResponse(){}
 }

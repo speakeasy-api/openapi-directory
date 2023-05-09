@@ -15,6 +15,7 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public SecurityPoliciesAggregatedList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -26,6 +27,7 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SecurityPoliciesAggregatedList withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, SecurityPoliciesScopedList> items;
+
     public SecurityPoliciesAggregatedList withItems(java.util.Map<String, SecurityPoliciesScopedList> items) {
         this.items = items;
         return this;
@@ -48,6 +51,7 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SecurityPoliciesAggregatedList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,6 +63,7 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SecurityPoliciesAggregatedList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -70,6 +75,7 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public SecurityPoliciesAggregatedList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -81,6 +87,7 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachables")
     public String[] unreachables;
+
     public SecurityPoliciesAggregatedList withUnreachables(String[] unreachables) {
         this.unreachables = unreachables;
         return this;
@@ -92,9 +99,11 @@ public class SecurityPoliciesAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SecurityPoliciesAggregatedListWarning warning;
+
     public SecurityPoliciesAggregatedList withWarning(SecurityPoliciesAggregatedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SecurityPoliciesAggregatedList(){}
 }

@@ -18,6 +18,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public Action action;
+
     public Template withAction(Action action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthChecks")
     public HealthCheck[] healthChecks;
+
     public Template withHealthChecks(HealthCheck[] healthChecks) {
         this.healthChecks = healthChecks;
         return this;
@@ -40,6 +42,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Template withVersion(String version) {
         this.version = version;
         return this;
@@ -51,9 +54,11 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmParams")
     public VmParams vmParams;
+
     public Template withVmParams(VmParams vmParams) {
         this.vmParams = vmParams;
         return this;
     }
     
+    public Template(){}
 }

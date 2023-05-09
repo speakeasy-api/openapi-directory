@@ -15,6 +15,7 @@ public class LpgsvRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public LpgsvRequestBodyCertificateParameters certificateParameters;
+
     public LpgsvRequestBody withCertificateParameters(LpgsvRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class LpgsvRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public LpgsvRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class LpgsvRequestBody {
      */
     @JsonProperty("format")
     public LpgsvRequestBodyFormatEnum format;
+
     public LpgsvRequestBody withFormat(LpgsvRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class LpgsvRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public LpgsvRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public LpgsvRequestBody(@JsonProperty("format") LpgsvRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -89,4 +89,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResponse
 lib/src/main/java/org/openapis/openapi/models/shared/StartSuiteRunResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSuiteDefinitionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

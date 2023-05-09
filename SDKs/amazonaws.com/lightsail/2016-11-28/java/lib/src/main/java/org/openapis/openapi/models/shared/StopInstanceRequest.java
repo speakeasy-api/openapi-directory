@@ -12,6 +12,7 @@ public class StopInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public StopInstanceRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -19,9 +20,13 @@ public class StopInstanceRequest {
     
     @JsonProperty("instanceName")
     public String instanceName;
+
     public StopInstanceRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public StopInstanceRequest(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

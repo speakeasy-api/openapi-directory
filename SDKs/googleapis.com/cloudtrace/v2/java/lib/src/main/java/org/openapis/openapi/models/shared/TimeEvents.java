@@ -18,6 +18,7 @@ public class TimeEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("droppedAnnotationsCount")
     public Integer droppedAnnotationsCount;
+
     public TimeEvents withDroppedAnnotationsCount(Integer droppedAnnotationsCount) {
         this.droppedAnnotationsCount = droppedAnnotationsCount;
         return this;
@@ -29,6 +30,7 @@ public class TimeEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("droppedMessageEventsCount")
     public Integer droppedMessageEventsCount;
+
     public TimeEvents withDroppedMessageEventsCount(Integer droppedMessageEventsCount) {
         this.droppedMessageEventsCount = droppedMessageEventsCount;
         return this;
@@ -40,9 +42,11 @@ public class TimeEvents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeEvent")
     public TimeEvent[] timeEvent;
+
     public TimeEvents withTimeEvent(TimeEvent[] timeEvent) {
         this.timeEvent = timeEvent;
         return this;
     }
     
+    public TimeEvents(){}
 }

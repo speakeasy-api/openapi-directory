@@ -15,6 +15,7 @@ public class ActionsCacheUsageOrgEnterprise {
      */
     @JsonProperty("total_active_caches_count")
     public Long totalActiveCachesCount;
+
     public ActionsCacheUsageOrgEnterprise withTotalActiveCachesCount(Long totalActiveCachesCount) {
         this.totalActiveCachesCount = totalActiveCachesCount;
         return this;
@@ -25,9 +26,14 @@ public class ActionsCacheUsageOrgEnterprise {
      */
     @JsonProperty("total_active_caches_size_in_bytes")
     public Long totalActiveCachesSizeInBytes;
+
     public ActionsCacheUsageOrgEnterprise withTotalActiveCachesSizeInBytes(Long totalActiveCachesSizeInBytes) {
         this.totalActiveCachesSizeInBytes = totalActiveCachesSizeInBytes;
         return this;
     }
     
+    public ActionsCacheUsageOrgEnterprise(@JsonProperty("total_active_caches_count") Long totalActiveCachesCount, @JsonProperty("total_active_caches_size_in_bytes") Long totalActiveCachesSizeInBytes) {
+        this.totalActiveCachesCount = totalActiveCachesCount;
+        this.totalActiveCachesSizeInBytes = totalActiveCachesSizeInBytes;
+  }
 }

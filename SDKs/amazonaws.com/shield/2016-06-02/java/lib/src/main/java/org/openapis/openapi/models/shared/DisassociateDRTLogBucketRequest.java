@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateDRTLogBucketRequest {
     @JsonProperty("LogBucket")
     public String logBucket;
+
     public DisassociateDRTLogBucketRequest withLogBucket(String logBucket) {
         this.logBucket = logBucket;
         return this;
     }
     
+    public DisassociateDRTLogBucketRequest(@JsonProperty("LogBucket") String logBucket) {
+        this.logBucket = logBucket;
+  }
 }

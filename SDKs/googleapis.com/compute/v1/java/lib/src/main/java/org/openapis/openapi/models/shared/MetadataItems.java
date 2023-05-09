@@ -18,6 +18,7 @@ public class MetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public MetadataItems withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class MetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MetadataItems withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MetadataItems(){}
 }

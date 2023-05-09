@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCategoriesIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutCategoriesIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CategoryEdit categoryEdit;
+
     public PutCategoriesIdJsonRequest withCategoryEdit(org.openapis.openapi.models.shared.CategoryEdit categoryEdit) {
         this.categoryEdit = categoryEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutCategoriesIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutCategoriesIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutCategoriesIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutCategoriesIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PutCategoriesIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutCategoriesIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutCategoriesIdJsonRequest(@JsonProperty("CategoryEdit") org.openapis.openapi.models.shared.CategoryEdit categoryEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.categoryEdit = categoryEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

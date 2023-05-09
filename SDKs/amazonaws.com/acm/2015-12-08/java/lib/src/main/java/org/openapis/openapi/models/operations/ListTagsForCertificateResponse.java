@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsForCertificateResponse {
     
     public String contentType;
+
     public ListTagsForCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsForCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public ListTagsForCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsForCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsForCertificateResponse listTagsForCertificateResponse;
+
     public ListTagsForCertificateResponse withListTagsForCertificateResponse(org.openapis.openapi.models.shared.ListTagsForCertificateResponse listTagsForCertificateResponse) {
         this.listTagsForCertificateResponse = listTagsForCertificateResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsForCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsForCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListTagsForCertificateResponse {
     
     
     public Integer statusCode;
+
     public ListTagsForCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListTagsForCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsForCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTagsForCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaPlayIntegrityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppcheckV1betaPlayIntegrityConfig withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1betaPlayIntegrityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenTtl")
     public String tokenTtl;
+
     public GoogleFirebaseAppcheckV1betaPlayIntegrityConfig withTokenTtl(String tokenTtl) {
         this.tokenTtl = tokenTtl;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaPlayIntegrityConfig(){}
 }

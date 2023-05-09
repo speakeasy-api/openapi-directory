@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public String addressType;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withCity(String city) {
         this.city = city;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withCountry(String country) {
         this.country = country;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCoordinates")
     public Double[] geoCoordinates;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -81,6 +87,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisposable")
     public Boolean isDisposable;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withIsDisposable(Boolean isDisposable) {
         this.isDisposable = isDisposable;
         return this;
@@ -92,6 +99,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -103,6 +111,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withNumber(String number) {
         this.number = number;
         return this;
@@ -114,6 +123,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -125,6 +135,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverName")
     public String receiverName;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -136,6 +147,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withReference(String reference) {
         this.reference = reference;
         return this;
@@ -147,6 +159,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withState(String state) {
         this.state = state;
         return this;
@@ -158,9 +171,11 @@ public class PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses(){}
 }

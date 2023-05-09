@@ -10,56 +10,61 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget {
     /**
-     * List of health statuses of the services on this target
+     * List of health statuses of the services on this target. Only present for target types "server" and "ip".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health_status")
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatus[] healthStatus;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withHealthStatus(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetHealthStatus[] healthStatus) {
         this.healthStatus = healthStatus;
         return this;
     }
     
     /**
-     * IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
+     * IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
-    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetIp ip;
-    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withIp(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetIp ip) {
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetIP ip;
+
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withIp(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetIP ip) {
         this.ip = ip;
         return this;
     }
     
     /**
-     * Label selector and a list of selected targets
+     * Label selector used to determine targets. Only present for target type "label_selector".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_selector")
-    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLabelSelector labelSelector;
-    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withLabelSelector(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLabelSelector labelSelector) {
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetLabelSelector labelSelector;
+
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withLabelSelector(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetLabelSelector labelSelector) {
         this.labelSelector = labelSelector;
         return this;
     }
     
     /**
-     * Server where the traffic should be routed through
+     * Server where the traffic should be routed to. Only present for target type "server".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetServer server;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withServer(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetServer server) {
         this.server = server;
         return this;
     }
     
     /**
-     * List of selected targets
+     * List of resolved label selector target Servers. Only present for type "label_selector".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
-    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTargets[] targets;
-    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withTargets(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTargets[] targets) {
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetTarget[] targets;
+
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withTargets(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetLoadBalancerTargetTarget[] targets) {
         this.targets = targets;
         return this;
     }
@@ -69,20 +74,25 @@ public class GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget {
      */
     @JsonProperty("type")
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTypeEnum type;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withType(GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTypeEnum type) {
         this.type = type;
         return this;
     }
     
     /**
-     * Use the private network IP instead of the public IP. Default value is false.
+     * Use the private network IP instead of the public IP. Default value is false. Only present for target types "server" and "label_selector".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_private_ip")
     public Boolean usePrivateIp;
+
     public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget withUsePrivateIp(Boolean usePrivateIp) {
         this.usePrivateIp = usePrivateIp;
         return this;
     }
     
+    public GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTarget(@JsonProperty("type") GetLoadBalancers200ApplicationJSONLoadBalancersLoadBalancerTargetTypeEnum type) {
+        this.type = type;
+  }
 }

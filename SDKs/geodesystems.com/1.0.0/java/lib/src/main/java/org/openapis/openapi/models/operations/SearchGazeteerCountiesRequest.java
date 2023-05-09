@@ -13,6 +13,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchGazeteerCountiesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchGazeteerCountiesRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchGazeteerCountiesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchGazeteerCountiesRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchGazeteerCountiesRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchGazeteerCountiesRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchGazeteerCountiesRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchGazeteerCountiesRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchGazeteerCountiesRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchGazeteerCountiesRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchGazeteerCountiesRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchGazeteerCountiesRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchGazeteerCountiesRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchGazeteerCountiesRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.area_land")
     public Double searchDbGazeteerCountiesAreaLand;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesAreaLand(Double searchDbGazeteerCountiesAreaLand) {
         this.searchDbGazeteerCountiesAreaLand = searchDbGazeteerCountiesAreaLand;
         return this;
@@ -163,6 +178,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.area_water")
     public Double searchDbGazeteerCountiesAreaWater;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesAreaWater(Double searchDbGazeteerCountiesAreaWater) {
         this.searchDbGazeteerCountiesAreaWater = searchDbGazeteerCountiesAreaWater;
         return this;
@@ -173,6 +189,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.county_fips")
     public String searchDbGazeteerCountiesCountyFips;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesCountyFips(String searchDbGazeteerCountiesCountyFips) {
         this.searchDbGazeteerCountiesCountyFips = searchDbGazeteerCountiesCountyFips;
         return this;
@@ -183,6 +200,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.county_name")
     public String searchDbGazeteerCountiesCountyName;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesCountyName(String searchDbGazeteerCountiesCountyName) {
         this.searchDbGazeteerCountiesCountyName = searchDbGazeteerCountiesCountyName;
         return this;
@@ -193,6 +211,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.full_county_fips")
     public String searchDbGazeteerCountiesFullCountyFips;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesFullCountyFips(String searchDbGazeteerCountiesFullCountyFips) {
         this.searchDbGazeteerCountiesFullCountyFips = searchDbGazeteerCountiesFullCountyFips;
         return this;
@@ -203,6 +222,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.location")
     public String searchDbGazeteerCountiesLocation;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesLocation(String searchDbGazeteerCountiesLocation) {
         this.searchDbGazeteerCountiesLocation = searchDbGazeteerCountiesLocation;
         return this;
@@ -213,6 +233,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.state_abbreviation")
     public String searchDbGazeteerCountiesStateAbbreviation;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesStateAbbreviation(String searchDbGazeteerCountiesStateAbbreviation) {
         this.searchDbGazeteerCountiesStateAbbreviation = searchDbGazeteerCountiesStateAbbreviation;
         return this;
@@ -223,6 +244,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_gazeteer_counties.state_fips")
     public String searchDbGazeteerCountiesStateFips;
+
     public SearchGazeteerCountiesRequest withSearchDbGazeteerCountiesStateFips(String searchDbGazeteerCountiesStateFips) {
         this.searchDbGazeteerCountiesStateFips = searchDbGazeteerCountiesStateFips;
         return this;
@@ -233,6 +255,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchGazeteerCountiesRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -243,6 +266,7 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchGazeteerCountiesRequest withText(String text) {
         this.text = text;
         return this;
@@ -253,9 +277,11 @@ public class SearchGazeteerCountiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchGazeteerCountiesRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchGazeteerCountiesRequest(){}
 }

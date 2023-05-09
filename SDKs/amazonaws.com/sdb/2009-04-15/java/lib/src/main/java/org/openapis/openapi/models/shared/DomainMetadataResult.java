@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DomainMetadataResult {
     
     public Long attributeNameCount;
+
     public DomainMetadataResult withAttributeNameCount(Long attributeNameCount) {
         this.attributeNameCount = attributeNameCount;
         return this;
@@ -19,6 +20,7 @@ public class DomainMetadataResult {
     
     
     public Long attributeNamesSizeBytes;
+
     public DomainMetadataResult withAttributeNamesSizeBytes(Long attributeNamesSizeBytes) {
         this.attributeNamesSizeBytes = attributeNamesSizeBytes;
         return this;
@@ -26,6 +28,7 @@ public class DomainMetadataResult {
     
     
     public Long attributeValueCount;
+
     public DomainMetadataResult withAttributeValueCount(Long attributeValueCount) {
         this.attributeValueCount = attributeValueCount;
         return this;
@@ -33,6 +36,7 @@ public class DomainMetadataResult {
     
     
     public Long attributeValuesSizeBytes;
+
     public DomainMetadataResult withAttributeValuesSizeBytes(Long attributeValuesSizeBytes) {
         this.attributeValuesSizeBytes = attributeValuesSizeBytes;
         return this;
@@ -40,6 +44,7 @@ public class DomainMetadataResult {
     
     
     public Long itemCount;
+
     public DomainMetadataResult withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -47,6 +52,7 @@ public class DomainMetadataResult {
     
     
     public Long itemNamesSizeBytes;
+
     public DomainMetadataResult withItemNamesSizeBytes(Long itemNamesSizeBytes) {
         this.itemNamesSizeBytes = itemNamesSizeBytes;
         return this;
@@ -54,9 +60,11 @@ public class DomainMetadataResult {
     
     
     public Long timestamp;
+
     public DomainMetadataResult withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public DomainMetadataResult(){}
 }

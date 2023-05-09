@@ -12,6 +12,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ScriptProcessesListScriptProcessesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ScriptProcessesListScriptProcessesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ScriptProcessesListScriptProcessesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ScriptProcessesListScriptProcessesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ScriptProcessesListScriptProcessesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ScriptProcessesListScriptProcessesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +78,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ScriptProcessesListScriptProcessesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +89,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ScriptProcessesListScriptProcessesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,6 +100,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ScriptProcessesListScriptProcessesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +111,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ScriptProcessesListScriptProcessesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +122,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ScriptProcessesListScriptProcessesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +133,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptId")
     public String scriptId;
+
     public ScriptProcessesListScriptProcessesRequest withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -132,6 +144,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.deploymentId")
     public String scriptProcessFilterDeploymentId;
+
     public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterDeploymentId(String scriptProcessFilterDeploymentId) {
         this.scriptProcessFilterDeploymentId = scriptProcessFilterDeploymentId;
         return this;
@@ -142,6 +155,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.endTime")
     public String scriptProcessFilterEndTime;
+
     public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterEndTime(String scriptProcessFilterEndTime) {
         this.scriptProcessFilterEndTime = scriptProcessFilterEndTime;
         return this;
@@ -152,6 +166,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.functionName")
     public String scriptProcessFilterFunctionName;
+
     public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterFunctionName(String scriptProcessFilterFunctionName) {
         this.scriptProcessFilterFunctionName = scriptProcessFilterFunctionName;
         return this;
@@ -162,6 +177,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.startTime")
     public String scriptProcessFilterStartTime;
+
     public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterStartTime(String scriptProcessFilterStartTime) {
         this.scriptProcessFilterStartTime = scriptProcessFilterStartTime;
         return this;
@@ -172,6 +188,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.statuses")
     public ScriptProcessesListScriptProcessesScriptProcessFilterStatusesEnum[] scriptProcessFilterStatuses;
+
     public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterStatuses(ScriptProcessesListScriptProcessesScriptProcessFilterStatusesEnum[] scriptProcessFilterStatuses) {
         this.scriptProcessFilterStatuses = scriptProcessFilterStatuses;
         return this;
@@ -182,6 +199,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.types")
     public ScriptProcessesListScriptProcessesScriptProcessFilterTypesEnum[] scriptProcessFilterTypes;
+
     public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterTypes(ScriptProcessesListScriptProcessesScriptProcessFilterTypesEnum[] scriptProcessFilterTypes) {
         this.scriptProcessFilterTypes = scriptProcessFilterTypes;
         return this;
@@ -192,6 +210,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.userAccessLevels")
     public ScriptProcessesListScriptProcessesScriptProcessFilterUserAccessLevelsEnum[] scriptProcessFilterUserAccessLevels;
+
     public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterUserAccessLevels(ScriptProcessesListScriptProcessesScriptProcessFilterUserAccessLevelsEnum[] scriptProcessFilterUserAccessLevels) {
         this.scriptProcessFilterUserAccessLevels = scriptProcessFilterUserAccessLevels;
         return this;
@@ -202,6 +221,7 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ScriptProcessesListScriptProcessesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -212,9 +232,11 @@ public class ScriptProcessesListScriptProcessesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ScriptProcessesListScriptProcessesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ScriptProcessesListScriptProcessesRequest(){}
 }

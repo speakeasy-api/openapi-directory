@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteUsageLimitResponse {
@@ -12,6 +13,7 @@ public class DeleteUsageLimitResponse {
      */
     
     public Object conflictException;
+
     public DeleteUsageLimitResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteUsageLimitResponse {
     
     
     public String contentType;
+
     public DeleteUsageLimitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteUsageLimitResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteUsageLimitResponse deleteUsageLimitResponse;
+
     public DeleteUsageLimitResponse withDeleteUsageLimitResponse(org.openapis.openapi.models.shared.DeleteUsageLimitResponse deleteUsageLimitResponse) {
         this.deleteUsageLimitResponse = deleteUsageLimitResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteUsageLimitResponse {
      */
     
     public Object internalServerException;
+
     public DeleteUsageLimitResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteUsageLimitResponse {
     
     
     public Integer statusCode;
+
     public DeleteUsageLimitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteUsageLimitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteUsageLimitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteUsageLimitResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteUsageLimitResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteUsageLimitResponse {
      */
     
     public Object validationException;
+
     public DeleteUsageLimitResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteUsageLimitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

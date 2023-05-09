@@ -15,6 +15,7 @@ public class PutTargetsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public PutTargetsResultEntry withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class PutTargetsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public PutTargetsResultEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class PutTargetsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetId")
     public String targetId;
+
     public PutTargetsResultEntry withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public PutTargetsResultEntry(){}
 }

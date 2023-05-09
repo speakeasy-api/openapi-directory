@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGroupMembershipResponse {
@@ -12,6 +13,7 @@ public class DeleteGroupMembershipResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteGroupMembershipResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteGroupMembershipResponse {
      */
     
     public Object conflictException;
+
     public DeleteGroupMembershipResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGroupMembershipResponse {
     
     
     public String contentType;
+
     public DeleteGroupMembershipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGroupMembershipResponse {
      */
     
     public java.util.Map<String, Object> deleteGroupMembershipResponse;
+
     public DeleteGroupMembershipResponse withDeleteGroupMembershipResponse(java.util.Map<String, Object> deleteGroupMembershipResponse) {
         this.deleteGroupMembershipResponse = deleteGroupMembershipResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGroupMembershipResponse {
      */
     
     public Object internalServerException;
+
     public DeleteGroupMembershipResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteGroupMembershipResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteGroupMembershipResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteGroupMembershipResponse {
     
     
     public Integer statusCode;
+
     public DeleteGroupMembershipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteGroupMembershipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGroupMembershipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteGroupMembershipResponse {
      */
     
     public Object throttlingException;
+
     public DeleteGroupMembershipResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteGroupMembershipResponse {
      */
     
     public Object validationException;
+
     public DeleteGroupMembershipResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteGroupMembershipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

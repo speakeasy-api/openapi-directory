@@ -15,9 +15,11 @@ public class ListSourceCredentialsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCredentialsInfos")
     public SourceCredentialsInfo[] sourceCredentialsInfos;
+
     public ListSourceCredentialsOutput withSourceCredentialsInfos(SourceCredentialsInfo[] sourceCredentialsInfos) {
         this.sourceCredentialsInfos = sourceCredentialsInfos;
         return this;
     }
     
+    public ListSourceCredentialsOutput(){}
 }

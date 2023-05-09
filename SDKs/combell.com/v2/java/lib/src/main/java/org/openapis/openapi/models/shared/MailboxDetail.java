@@ -18,6 +18,7 @@ public class MailboxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_size")
     public Integer actualSize;
+
     public MailboxDetail withActualSize(Integer actualSize) {
         this.actualSize = actualSize;
         return this;
@@ -26,6 +27,7 @@ public class MailboxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_forward")
     public AutoForward autoForward;
+
     public MailboxDetail withAutoForward(AutoForward autoForward) {
         this.autoForward = autoForward;
         return this;
@@ -34,6 +36,7 @@ public class MailboxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_reply")
     public AutoReply autoReply;
+
     public MailboxDetail withAutoReply(AutoReply autoReply) {
         this.autoReply = autoReply;
         return this;
@@ -45,6 +48,7 @@ public class MailboxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public MailboxDetail withLogin(String login) {
         this.login = login;
         return this;
@@ -56,6 +60,7 @@ public class MailboxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_size")
     public Integer maxSize;
+
     public MailboxDetail withMaxSize(Integer maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -64,9 +69,11 @@ public class MailboxDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MailboxDetail withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MailboxDetail(){}
 }

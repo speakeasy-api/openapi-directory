@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRecommendationsResponse {
@@ -12,6 +13,7 @@ public class DescribeRecommendationsResponse {
      */
     
     public Object accessDeniedFault;
+
     public DescribeRecommendationsResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRecommendationsResponse {
     
     
     public String contentType;
+
     public DescribeRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRecommendationsResponse describeRecommendationsResponse;
+
     public DescribeRecommendationsResponse withDescribeRecommendationsResponse(org.openapis.openapi.models.shared.DescribeRecommendationsResponse describeRecommendationsResponse) {
         this.describeRecommendationsResponse = describeRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRecommendationsResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeRecommendationsResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

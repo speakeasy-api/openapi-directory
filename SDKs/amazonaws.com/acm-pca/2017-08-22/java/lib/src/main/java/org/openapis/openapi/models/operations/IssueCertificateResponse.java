@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssueCertificateResponse {
     
     public String contentType;
+
     public IssueCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IssueCertificateResponse {
      */
     
     public Object invalidArgsException;
+
     public IssueCertificateResponse withInvalidArgsException(Object invalidArgsException) {
         this.invalidArgsException = invalidArgsException;
         return this;
@@ -29,6 +32,7 @@ public class IssueCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public IssueCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class IssueCertificateResponse {
      */
     
     public Object invalidStateException;
+
     public IssueCertificateResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class IssueCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.IssueCertificateResponse issueCertificateResponse;
+
     public IssueCertificateResponse withIssueCertificateResponse(org.openapis.openapi.models.shared.IssueCertificateResponse issueCertificateResponse) {
         this.issueCertificateResponse = issueCertificateResponse;
         return this;
@@ -59,6 +65,7 @@ public class IssueCertificateResponse {
      */
     
     public Object limitExceededException;
+
     public IssueCertificateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class IssueCertificateResponse {
      */
     
     public Object malformedCSRException;
+
     public IssueCertificateResponse withMalformedCSRException(Object malformedCSRException) {
         this.malformedCSRException = malformedCSRException;
         return this;
@@ -76,6 +84,7 @@ public class IssueCertificateResponse {
     
     
     public Integer statusCode;
+
     public IssueCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class IssueCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssueCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class IssueCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public IssueCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public IssueCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

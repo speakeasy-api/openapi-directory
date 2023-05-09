@@ -18,6 +18,7 @@ public class CloudSqlPropertiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credential")
     public CloudSqlCredential credential;
+
     public CloudSqlPropertiesInput withCredential(CloudSqlCredential credential) {
         this.credential = credential;
         return this;
@@ -29,6 +30,7 @@ public class CloudSqlPropertiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public String database;
+
     public CloudSqlPropertiesInput withDatabase(String database) {
         this.database = database;
         return this;
@@ -40,6 +42,7 @@ public class CloudSqlPropertiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public CloudSqlPropertiesInput withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -51,9 +54,11 @@ public class CloudSqlPropertiesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CloudSqlPropertiesTypeEnum type;
+
     public CloudSqlPropertiesInput withType(CloudSqlPropertiesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CloudSqlPropertiesInput(){}
 }

@@ -18,6 +18,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyMaintenanceWindow")
     public DailyMaintenanceWindow dailyMaintenanceWindow;
+
     public MaintenanceWindow withDailyMaintenanceWindow(DailyMaintenanceWindow dailyMaintenanceWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         return this;
@@ -29,6 +30,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceExclusions")
     public java.util.Map<String, TimeWindow> maintenanceExclusions;
+
     public MaintenanceWindow withMaintenanceExclusions(java.util.Map<String, TimeWindow> maintenanceExclusions) {
         this.maintenanceExclusions = maintenanceExclusions;
         return this;
@@ -40,9 +42,11 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringWindow")
     public RecurringTimeWindow recurringWindow;
+
     public MaintenanceWindow withRecurringWindow(RecurringTimeWindow recurringWindow) {
         this.recurringWindow = recurringWindow;
         return this;
     }
     
+    public MaintenanceWindow(){}
 }

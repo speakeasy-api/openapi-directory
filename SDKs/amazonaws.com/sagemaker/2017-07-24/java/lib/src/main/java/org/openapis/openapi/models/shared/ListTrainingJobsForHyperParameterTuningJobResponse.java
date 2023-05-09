@@ -15,6 +15,7 @@ public class ListTrainingJobsForHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrainingJobsForHyperParameterTuningJobResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListTrainingJobsForHyperParameterTuningJobResponse {
     
     @JsonProperty("TrainingJobSummaries")
     public HyperParameterTrainingJobSummary[] trainingJobSummaries;
+
     public ListTrainingJobsForHyperParameterTuningJobResponse withTrainingJobSummaries(HyperParameterTrainingJobSummary[] trainingJobSummaries) {
         this.trainingJobSummaries = trainingJobSummaries;
         return this;
     }
     
+    public ListTrainingJobsForHyperParameterTuningJobResponse(@JsonProperty("TrainingJobSummaries") HyperParameterTrainingJobSummary[] trainingJobSummaries) {
+        this.trainingJobSummaries = trainingJobSummaries;
+  }
 }

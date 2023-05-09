@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListMetricsInput {
     
     public DimensionFilter[] dimensions;
+
     public ListMetricsInput withDimensions(DimensionFilter[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -16,6 +17,7 @@ public class ListMetricsInput {
     
     
     public Boolean includeLinkedAccounts;
+
     public ListMetricsInput withIncludeLinkedAccounts(Boolean includeLinkedAccounts) {
         this.includeLinkedAccounts = includeLinkedAccounts;
         return this;
@@ -23,6 +25,7 @@ public class ListMetricsInput {
     
     
     public String metricName;
+
     public ListMetricsInput withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +33,7 @@ public class ListMetricsInput {
     
     
     public String namespace;
+
     public ListMetricsInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -37,6 +41,7 @@ public class ListMetricsInput {
     
     
     public String nextToken;
+
     public ListMetricsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +49,7 @@ public class ListMetricsInput {
     
     
     public String owningAccount;
+
     public ListMetricsInput withOwningAccount(String owningAccount) {
         this.owningAccount = owningAccount;
         return this;
@@ -51,9 +57,11 @@ public class ListMetricsInput {
     
     
     public RecentlyActiveEnum recentlyActive;
+
     public ListMetricsInput withRecentlyActive(RecentlyActiveEnum recentlyActive) {
         this.recentlyActive = recentlyActive;
         return this;
     }
     
+    public ListMetricsInput(){}
 }

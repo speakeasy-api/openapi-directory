@@ -15,6 +15,7 @@ public class ListCACertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public CACertificate[] certificates;
+
     public ListCACertificatesResponse withCertificates(CACertificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -23,9 +24,11 @@ public class ListCACertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextMarker")
     public String nextMarker;
+
     public ListCACertificatesResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListCACertificatesResponse(){}
 }

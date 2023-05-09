@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore score;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry withScore(DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore score) {
         this.score = score;
         return this;
@@ -22,6 +23,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryStanding standing;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry withStanding(DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryStanding standing) {
         this.standing = standing;
         return this;
@@ -32,6 +34,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry {
      */
     
     public Integer teamId;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry withTeamId(Integer teamId) {
         this.teamId = teamId;
         return this;
@@ -42,9 +45,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry {
      */
     
     public String teamName;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntry(){}
 }

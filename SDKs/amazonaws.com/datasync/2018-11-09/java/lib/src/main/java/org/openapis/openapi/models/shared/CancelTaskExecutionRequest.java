@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelTaskExecutionRequest {
     @JsonProperty("TaskExecutionArn")
     public String taskExecutionArn;
+
     public CancelTaskExecutionRequest withTaskExecutionArn(String taskExecutionArn) {
         this.taskExecutionArn = taskExecutionArn;
         return this;
     }
     
+    public CancelTaskExecutionRequest(@JsonProperty("TaskExecutionArn") String taskExecutionArn) {
+        this.taskExecutionArn = taskExecutionArn;
+  }
 }

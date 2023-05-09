@@ -15,9 +15,11 @@ public class RouteStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RouteStatusCodeEnum status;
+
     public RouteStatus withStatus(RouteStatusCodeEnum status) {
         this.status = status;
         return this;
     }
     
+    public RouteStatus(){}
 }

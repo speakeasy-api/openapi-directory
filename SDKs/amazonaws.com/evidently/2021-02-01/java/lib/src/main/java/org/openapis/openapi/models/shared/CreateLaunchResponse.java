@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLaunchResponse {
     @JsonProperty("launch")
     public Launch launch;
+
     public CreateLaunchResponse withLaunch(Launch launch) {
         this.launch = launch;
         return this;
     }
     
+    public CreateLaunchResponse(@JsonProperty("launch") Launch launch) {
+        this.launch = launch;
+  }
 }

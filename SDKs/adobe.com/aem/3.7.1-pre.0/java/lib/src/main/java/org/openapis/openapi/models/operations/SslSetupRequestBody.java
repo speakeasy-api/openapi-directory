@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SslSetupRequestBody {
     @SpeakeasyMetadata("multipartForm:file")
     public SslSetupRequestBodyCertificateFile certificateFile;
+
     public SslSetupRequestBody withCertificateFile(SslSetupRequestBodyCertificateFile certificateFile) {
         this.certificateFile = certificateFile;
         return this;
@@ -16,9 +17,11 @@ public class SslSetupRequestBody {
     
     @SpeakeasyMetadata("multipartForm:file")
     public SslSetupRequestBodyPrivatekeyFile privatekeyFile;
+
     public SslSetupRequestBody withPrivatekeyFile(SslSetupRequestBodyPrivatekeyFile privatekeyFile) {
         this.privatekeyFile = privatekeyFile;
         return this;
     }
     
+    public SslSetupRequestBody(){}
 }

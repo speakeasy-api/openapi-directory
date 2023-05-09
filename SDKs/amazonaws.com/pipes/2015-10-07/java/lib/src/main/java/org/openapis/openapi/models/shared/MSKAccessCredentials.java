@@ -15,6 +15,7 @@ public class MSKAccessCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCertificateTlsAuth")
     public String clientCertificateTlsAuth;
+
     public MSKAccessCredentials withClientCertificateTlsAuth(String clientCertificateTlsAuth) {
         this.clientCertificateTlsAuth = clientCertificateTlsAuth;
         return this;
@@ -23,9 +24,11 @@ public class MSKAccessCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SaslScram512Auth")
     public String saslScram512Auth;
+
     public MSKAccessCredentials withSaslScram512Auth(String saslScram512Auth) {
         this.saslScram512Auth = saslScram512Auth;
         return this;
     }
     
+    public MSKAccessCredentials(){}
 }

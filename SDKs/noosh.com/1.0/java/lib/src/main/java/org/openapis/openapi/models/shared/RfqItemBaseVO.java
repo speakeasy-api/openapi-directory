@@ -15,6 +15,7 @@ public class RfqItemBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     public Long jobId;
+
     public RfqItemBaseVO withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -23,6 +24,7 @@ public class RfqItemBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq_item_id")
     public Long rfqItemId;
+
     public RfqItemBaseVO withRfqItemId(Long rfqItemId) {
         this.rfqItemId = rfqItemId;
         return this;
@@ -34,9 +36,11 @@ public class RfqItemBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public ErgoSpecSimpleVO spec;
+
     public RfqItemBaseVO withSpec(ErgoSpecSimpleVO spec) {
         this.spec = spec;
         return this;
     }
     
+    public RfqItemBaseVO(){}
 }

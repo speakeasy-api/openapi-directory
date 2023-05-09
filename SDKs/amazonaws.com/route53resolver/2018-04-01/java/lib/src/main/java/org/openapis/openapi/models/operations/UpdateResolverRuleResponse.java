@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResolverRuleResponse {
     
     public String contentType;
+
     public UpdateResolverRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResolverRuleResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateResolverRuleResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResolverRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateResolverRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateResolverRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateResolverRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateResolverRuleResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateResolverRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateResolverRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResolverRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateResolverRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateResolverRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateResolverRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResolverRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateResolverRuleResponse {
      */
     
     public Object resourceUnavailableException;
+
     public UpdateResolverRuleResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateResolverRuleResponse {
      */
     
     public Object throttlingException;
+
     public UpdateResolverRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateResolverRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateResolverRuleResponse updateResolverRuleResponse;
+
     public UpdateResolverRuleResponse withUpdateResolverRuleResponse(org.openapis.openapi.models.shared.UpdateResolverRuleResponse updateResolverRuleResponse) {
         this.updateResolverRuleResponse = updateResolverRuleResponse;
         return this;
     }
     
+    public UpdateResolverRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

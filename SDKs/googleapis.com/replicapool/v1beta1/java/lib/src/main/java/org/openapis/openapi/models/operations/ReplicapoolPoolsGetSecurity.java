@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ReplicapoolPoolsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsGetSecurityOption1 option1;
+
     public ReplicapoolPoolsGetSecurity withOption1(ReplicapoolPoolsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ReplicapoolPoolsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsGetSecurityOption2 option2;
+
     public ReplicapoolPoolsGetSecurity withOption2(ReplicapoolPoolsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class ReplicapoolPoolsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsGetSecurityOption3 option3;
+
     public ReplicapoolPoolsGetSecurity withOption3(ReplicapoolPoolsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class ReplicapoolPoolsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsGetSecurityOption4 option4;
+
     public ReplicapoolPoolsGetSecurity withOption4(ReplicapoolPoolsGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class ReplicapoolPoolsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsGetSecurityOption5 option5;
+
     public ReplicapoolPoolsGetSecurity withOption5(ReplicapoolPoolsGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class ReplicapoolPoolsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ReplicapoolPoolsGetSecurityOption6 option6;
+
     public ReplicapoolPoolsGetSecurity withOption6(ReplicapoolPoolsGetSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public ReplicapoolPoolsGetSecurity(){}
 }

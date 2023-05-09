@@ -15,9 +15,11 @@ public class LISTENOIREReponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public LISTENOIREReponseEtat etat;
+
     public LISTENOIREReponse withEtat(LISTENOIREReponseEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public LISTENOIREReponse(){}
 }

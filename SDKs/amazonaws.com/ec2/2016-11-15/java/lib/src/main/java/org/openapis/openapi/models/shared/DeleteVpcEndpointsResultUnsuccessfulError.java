@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpcEndpointsResultUnsuccessfulError {
     
     public String code;
+
     public DeleteVpcEndpointsResultUnsuccessfulError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteVpcEndpointsResultUnsuccessfulError {
     
     
     public String message;
+
     public DeleteVpcEndpointsResultUnsuccessfulError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteVpcEndpointsResultUnsuccessfulError(){}
 }

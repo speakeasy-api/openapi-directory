@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FileGetFromTaskResponse {
@@ -12,6 +13,7 @@ public class FileGetFromTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public FileGetFromTaskResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class FileGetFromTaskResponse {
     
     
     public String contentType;
+
     public FileGetFromTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FileGetFromTaskResponse {
     
     
     public byte[] fileGetFromTask200ApplicationJSONBinaryString;
+
     public FileGetFromTaskResponse withFileGetFromTask200ApplicationJSONBinaryString(byte[] fileGetFromTask200ApplicationJSONBinaryString) {
         this.fileGetFromTask200ApplicationJSONBinaryString = fileGetFromTask200ApplicationJSONBinaryString;
         return this;
@@ -33,6 +37,7 @@ public class FileGetFromTaskResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public FileGetFromTaskResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class FileGetFromTaskResponse {
     
     
     public Integer statusCode;
+
     public FileGetFromTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class FileGetFromTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FileGetFromTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FileGetFromTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

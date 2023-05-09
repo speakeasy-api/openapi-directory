@@ -18,6 +18,7 @@ public class PerformanceThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicSliPerformance")
     public BasicSli basicSliPerformance;
+
     public PerformanceThreshold withBasicSliPerformance(BasicSli basicSliPerformance) {
         this.basicSliPerformance = basicSliPerformance;
         return this;
@@ -29,6 +30,7 @@ public class PerformanceThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performance")
     public RequestBasedSli performance;
+
     public PerformanceThreshold withPerformance(RequestBasedSli performance) {
         this.performance = performance;
         return this;
@@ -40,9 +42,11 @@ public class PerformanceThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threshold")
     public Double threshold;
+
     public PerformanceThreshold withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public PerformanceThreshold(){}
 }

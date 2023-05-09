@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeOrganizationResponse {
@@ -12,6 +13,7 @@ public class DescribeOrganizationResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DescribeOrganizationResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DescribeOrganizationResponse {
      */
     
     public Object concurrentModificationException;
+
     public DescribeOrganizationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeOrganizationResponse {
     
     
     public String contentType;
+
     public DescribeOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DescribeOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeOrganizationResponse describeOrganizationResponse;
+
     public DescribeOrganizationResponse withDescribeOrganizationResponse(org.openapis.openapi.models.shared.DescribeOrganizationResponse describeOrganizationResponse) {
         this.describeOrganizationResponse = describeOrganizationResponse;
         return this;
@@ -59,6 +65,7 @@ public class DescribeOrganizationResponse {
      */
     
     public Object serviceException;
+
     public DescribeOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeOrganizationResponse {
     
     
     public Integer statusCode;
+
     public DescribeOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

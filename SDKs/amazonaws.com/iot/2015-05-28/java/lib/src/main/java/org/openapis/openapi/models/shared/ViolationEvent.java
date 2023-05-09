@@ -20,6 +20,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behavior")
     public Behavior behavior;
+
     public ViolationEvent withBehavior(Behavior behavior) {
         this.behavior = behavior;
         return this;
@@ -28,6 +29,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricValue")
     public MetricValue metricValue;
+
     public ViolationEvent withMetricValue(MetricValue metricValue) {
         this.metricValue = metricValue;
         return this;
@@ -36,6 +38,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileName")
     public String securityProfileName;
+
     public ViolationEvent withSecurityProfileName(String securityProfileName) {
         this.securityProfileName = securityProfileName;
         return this;
@@ -44,6 +47,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public ViolationEvent withThingName(String thingName) {
         this.thingName = thingName;
         return this;
@@ -52,6 +56,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationState")
     public VerificationStateEnum verificationState;
+
     public ViolationEvent withVerificationState(VerificationStateEnum verificationState) {
         this.verificationState = verificationState;
         return this;
@@ -60,6 +65,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStateDescription")
     public String verificationStateDescription;
+
     public ViolationEvent withVerificationStateDescription(String verificationStateDescription) {
         this.verificationStateDescription = verificationStateDescription;
         return this;
@@ -68,6 +74,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationEventAdditionalInfo")
     public ViolationEventAdditionalInfo violationEventAdditionalInfo;
+
     public ViolationEvent withViolationEventAdditionalInfo(ViolationEventAdditionalInfo violationEventAdditionalInfo) {
         this.violationEventAdditionalInfo = violationEventAdditionalInfo;
         return this;
@@ -78,6 +85,7 @@ public class ViolationEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("violationEventTime")
     public OffsetDateTime violationEventTime;
+
     public ViolationEvent withViolationEventTime(OffsetDateTime violationEventTime) {
         this.violationEventTime = violationEventTime;
         return this;
@@ -86,6 +94,7 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationEventType")
     public ViolationEventTypeEnum violationEventType;
+
     public ViolationEvent withViolationEventType(ViolationEventTypeEnum violationEventType) {
         this.violationEventType = violationEventType;
         return this;
@@ -94,9 +103,11 @@ public class ViolationEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationId")
     public String violationId;
+
     public ViolationEvent withViolationId(String violationId) {
         this.violationId = violationId;
         return this;
     }
     
+    public ViolationEvent(){}
 }

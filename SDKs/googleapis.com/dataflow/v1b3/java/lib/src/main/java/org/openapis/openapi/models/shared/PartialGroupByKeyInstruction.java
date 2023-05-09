@@ -18,6 +18,7 @@ public class PartialGroupByKeyInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public InstructionInput input;
+
     public PartialGroupByKeyInstruction withInput(InstructionInput input) {
         this.input = input;
         return this;
@@ -29,6 +30,7 @@ public class PartialGroupByKeyInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputElementCodec")
     public java.util.Map<String, Object> inputElementCodec;
+
     public PartialGroupByKeyInstruction withInputElementCodec(java.util.Map<String, Object> inputElementCodec) {
         this.inputElementCodec = inputElementCodec;
         return this;
@@ -40,6 +42,7 @@ public class PartialGroupByKeyInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalCombineValuesInputStoreName")
     public String originalCombineValuesInputStoreName;
+
     public PartialGroupByKeyInstruction withOriginalCombineValuesInputStoreName(String originalCombineValuesInputStoreName) {
         this.originalCombineValuesInputStoreName = originalCombineValuesInputStoreName;
         return this;
@@ -51,6 +54,7 @@ public class PartialGroupByKeyInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalCombineValuesStepName")
     public String originalCombineValuesStepName;
+
     public PartialGroupByKeyInstruction withOriginalCombineValuesStepName(String originalCombineValuesStepName) {
         this.originalCombineValuesStepName = originalCombineValuesStepName;
         return this;
@@ -62,6 +66,7 @@ public class PartialGroupByKeyInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sideInputs")
     public SideInputInfo[] sideInputs;
+
     public PartialGroupByKeyInstruction withSideInputs(SideInputInfo[] sideInputs) {
         this.sideInputs = sideInputs;
         return this;
@@ -73,9 +78,11 @@ public class PartialGroupByKeyInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueCombiningFn")
     public java.util.Map<String, Object> valueCombiningFn;
+
     public PartialGroupByKeyInstruction withValueCombiningFn(java.util.Map<String, Object> valueCombiningFn) {
         this.valueCombiningFn = valueCombiningFn;
         return this;
     }
     
+    public PartialGroupByKeyInstruction(){}
 }

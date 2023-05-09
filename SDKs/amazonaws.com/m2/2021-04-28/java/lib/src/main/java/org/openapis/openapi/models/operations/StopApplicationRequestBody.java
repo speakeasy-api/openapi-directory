@@ -15,9 +15,11 @@ public class StopApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceStop")
     public Boolean forceStop;
+
     public StopApplicationRequestBody withForceStop(Boolean forceStop) {
         this.forceStop = forceStop;
         return this;
     }
     
+    public StopApplicationRequestBody(){}
 }

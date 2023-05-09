@@ -12,6 +12,7 @@ public class ActionMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal")
     public java.util.Map<String, Object> goal;
+
     public ActionMetric withGoal(java.util.Map<String, Object> goal) {
         this.goal = goal;
         return this;
@@ -20,6 +21,7 @@ public class ActionMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric_type")
     public String metricType;
+
     public ActionMetric withMetricType(String metricType) {
         this.metricType = metricType;
         return this;
@@ -28,6 +30,7 @@ public class ActionMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ActionMetric withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -36,9 +39,11 @@ public class ActionMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validations")
     public ActionMetricValidations validations;
+
     public ActionMetric withValidations(ActionMetricValidations validations) {
         this.validations = validations;
         return this;
     }
     
+    public ActionMetric(){}
 }

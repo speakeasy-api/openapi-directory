@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootSecurity;
 import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootRequest;
 import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootResponse;
+import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest;
 import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1AccessTuple;
+import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -32,16 +31,16 @@ public class Application {
                 .build();
 
             PolicytroubleshooterIamTroubleshootRequest req = new PolicytroubleshooterIamTroubleshootRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest = new GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest() {{
                     accessTuple = new GoogleCloudPolicytroubleshooterV1AccessTuple() {{
                         fullResourceName = "provident";
                         permission = "distinctio";
                         principal = "quibusdam";
-                    }};
-                }};
+                    }};;
+                }};;
                 accessToken = "unde";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "corrupti";
                 fields = "illum";
                 key = "vel";
@@ -50,19 +49,21 @@ public class Application {
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
-            PolicytroubleshooterIamTroubleshootResponse res = sdk.iam.policytroubleshooterIamTroubleshoot(req, new PolicytroubleshooterIamTroubleshootSecurity() {{
+            PolicytroubleshooterIamTroubleshootResponse res = sdk.iam.policytroubleshooterIamTroubleshoot(req, new PolicytroubleshooterIamTroubleshootSecurity("magnam", "debitis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse.isPresent()) {
+            if (res.googleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -70,9 +71,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### iam
+### [iam](docs/iam/README.md)
 
-* `policytroubleshooterIamTroubleshoot` - Checks whether a principal has a specific permission for a specific resource, and explains why the principal does or does not have that permission.
+* [policytroubleshooterIamTroubleshoot](docs/iam/README.md#policytroubleshooteriamtroubleshoot) - Checks whether a principal has a specific permission for a specific resource, and explains why the principal does or does not have that permission.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetWebhookConfigForRepoRequest {
@@ -12,6 +13,7 @@ public class ReposGetWebhookConfigForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public ReposGetWebhookConfigForRepoRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
@@ -22,6 +24,7 @@ public class ReposGetWebhookConfigForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposGetWebhookConfigForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,9 +35,15 @@ public class ReposGetWebhookConfigForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposGetWebhookConfigForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposGetWebhookConfigForRepoRequest(@JsonProperty("hook_id") Long hookId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.hookId = hookId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

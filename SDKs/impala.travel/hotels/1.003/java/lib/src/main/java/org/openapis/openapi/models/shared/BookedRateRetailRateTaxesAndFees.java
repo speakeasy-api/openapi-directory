@@ -18,6 +18,7 @@ public class BookedRateRetailRateTaxesAndFees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedInRate")
     public TaxOrFee[] includedInRate;
+
     public BookedRateRetailRateTaxesAndFees withIncludedInRate(TaxOrFee[] includedInRate) {
         this.includedInRate = includedInRate;
         return this;
@@ -29,9 +30,11 @@ public class BookedRateRetailRateTaxesAndFees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payAtHotel")
     public TaxOrFee[] payAtHotel;
+
     public BookedRateRetailRateTaxesAndFees withPayAtHotel(TaxOrFee[] payAtHotel) {
         this.payAtHotel = payAtHotel;
         return this;
     }
     
+    public BookedRateRetailRateTaxesAndFees(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersBaseHexRequest {
@@ -12,6 +13,7 @@ public class GetNumbersBaseHexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Long from;
+
     public GetNumbersBaseHexRequest withFrom(Long from) {
         this.from = from;
         return this;
@@ -22,9 +24,13 @@ public class GetNumbersBaseHexRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersBaseHexRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersBaseHexRequest(@JsonProperty("number") Long number) {
+        this.number = number;
+  }
 }

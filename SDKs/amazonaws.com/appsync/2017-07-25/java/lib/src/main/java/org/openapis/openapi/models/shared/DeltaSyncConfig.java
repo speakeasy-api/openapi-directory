@@ -15,6 +15,7 @@ public class DeltaSyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseTableTTL")
     public Long baseTableTTL;
+
     public DeltaSyncConfig withBaseTableTTL(Long baseTableTTL) {
         this.baseTableTTL = baseTableTTL;
         return this;
@@ -23,6 +24,7 @@ public class DeltaSyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaSyncTableName")
     public String deltaSyncTableName;
+
     public DeltaSyncConfig withDeltaSyncTableName(String deltaSyncTableName) {
         this.deltaSyncTableName = deltaSyncTableName;
         return this;
@@ -31,9 +33,11 @@ public class DeltaSyncConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaSyncTableTTL")
     public Long deltaSyncTableTTL;
+
     public DeltaSyncConfig withDeltaSyncTableTTL(Long deltaSyncTableTTL) {
         this.deltaSyncTableTTL = deltaSyncTableTTL;
         return this;
     }
     
+    public DeltaSyncConfig(){}
 }

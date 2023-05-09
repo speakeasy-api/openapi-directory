@@ -12,6 +12,7 @@ public class OperatorWebhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbtCloud")
     public OperatorWebhookDbtCloud dbtCloud;
+
     public OperatorWebhook withDbtCloud(OperatorWebhookDbtCloud dbtCloud) {
         this.dbtCloud = dbtCloud;
         return this;
@@ -23,6 +24,7 @@ public class OperatorWebhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionBody")
     public String executionBody;
+
     public OperatorWebhook withExecutionBody(String executionBody) {
         this.executionBody = executionBody;
         return this;
@@ -34,6 +36,7 @@ public class OperatorWebhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionUrl")
     public String executionUrl;
+
     public OperatorWebhook withExecutionUrl(String executionUrl) {
         this.executionUrl = executionUrl;
         return this;
@@ -45,6 +48,7 @@ public class OperatorWebhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookConfigId")
     public String webhookConfigId;
+
     public OperatorWebhook withWebhookConfigId(String webhookConfigId) {
         this.webhookConfigId = webhookConfigId;
         return this;
@@ -53,9 +57,11 @@ public class OperatorWebhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookType")
     public OperatorWebhookWebhookTypeEnum webhookType;
+
     public OperatorWebhook withWebhookType(OperatorWebhookWebhookTypeEnum webhookType) {
         this.webhookType = webhookType;
         return this;
     }
     
+    public OperatorWebhook(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2TextLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLength")
     public Integer maxLength;
+
     public GoogleAppsDriveLabelsV2TextLimits withMaxLength(Integer maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2TextLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minLength")
     public Integer minLength;
+
     public GoogleAppsDriveLabelsV2TextLimits withMinLength(Integer minLength) {
         this.minLength = minLength;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2TextLimits(){}
 }

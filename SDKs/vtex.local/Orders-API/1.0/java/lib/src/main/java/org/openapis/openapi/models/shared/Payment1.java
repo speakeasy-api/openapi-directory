@@ -12,6 +12,7 @@ public class Payment1 {
      */
     @JsonProperty("cardHolder")
     public String cardHolder;
+
     public Payment1 withCardHolder(String cardHolder) {
         this.cardHolder = cardHolder;
         return this;
@@ -22,6 +23,7 @@ public class Payment1 {
      */
     @JsonProperty("cardNumber")
     public String cardNumber;
+
     public Payment1 withCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
         return this;
@@ -29,6 +31,7 @@ public class Payment1 {
     
     @JsonProperty("connectorResponses")
     public ConnectorResponses connectorResponses;
+
     public Payment1 withConnectorResponses(ConnectorResponses connectorResponses) {
         this.connectorResponses = connectorResponses;
         return this;
@@ -39,6 +42,7 @@ public class Payment1 {
      */
     @JsonProperty("cvv2")
     public String cvv2;
+
     public Payment1 withCvv2(String cvv2) {
         this.cvv2 = cvv2;
         return this;
@@ -49,6 +53,7 @@ public class Payment1 {
      */
     @JsonProperty("dueDate")
     public String dueDate;
+
     public Payment1 withDueDate(String dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -59,6 +64,7 @@ public class Payment1 {
      */
     @JsonProperty("expireMonth")
     public String expireMonth;
+
     public Payment1 withExpireMonth(String expireMonth) {
         this.expireMonth = expireMonth;
         return this;
@@ -69,6 +75,7 @@ public class Payment1 {
      */
     @JsonProperty("expireYear")
     public String expireYear;
+
     public Payment1 withExpireYear(String expireYear) {
         this.expireYear = expireYear;
         return this;
@@ -79,6 +86,7 @@ public class Payment1 {
      */
     @JsonProperty("firstDigits")
     public String firstDigits;
+
     public Payment1 withFirstDigits(String firstDigits) {
         this.firstDigits = firstDigits;
         return this;
@@ -89,6 +97,7 @@ public class Payment1 {
      */
     @JsonProperty("giftCardCaption")
     public String giftCardCaption;
+
     public Payment1 withGiftCardCaption(String giftCardCaption) {
         this.giftCardCaption = giftCardCaption;
         return this;
@@ -99,6 +108,7 @@ public class Payment1 {
      */
     @JsonProperty("giftCardId")
     public String giftCardId;
+
     public Payment1 withGiftCardId(String giftCardId) {
         this.giftCardId = giftCardId;
         return this;
@@ -109,6 +119,7 @@ public class Payment1 {
      */
     @JsonProperty("giftCardName")
     public String giftCardName;
+
     public Payment1 withGiftCardName(String giftCardName) {
         this.giftCardName = giftCardName;
         return this;
@@ -131,6 +142,7 @@ public class Payment1 {
      */
     @JsonProperty("group")
     public String group;
+
     public Payment1 withGroup(String group) {
         this.group = group;
         return this;
@@ -141,6 +153,7 @@ public class Payment1 {
      */
     @JsonProperty("id")
     public String id;
+
     public Payment1 withId(String id) {
         this.id = id;
         return this;
@@ -151,6 +164,7 @@ public class Payment1 {
      */
     @JsonProperty("installments")
     public Integer installments;
+
     public Payment1 withInstallments(Integer installments) {
         this.installments = installments;
         return this;
@@ -161,6 +175,7 @@ public class Payment1 {
      */
     @JsonProperty("lastDigits")
     public String lastDigits;
+
     public Payment1 withLastDigits(String lastDigits) {
         this.lastDigits = lastDigits;
         return this;
@@ -171,6 +186,7 @@ public class Payment1 {
      */
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public Payment1 withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -181,6 +197,7 @@ public class Payment1 {
      */
     @JsonProperty("paymentSystemName")
     public String paymentSystemName;
+
     public Payment1 withPaymentSystemName(String paymentSystemName) {
         this.paymentSystemName = paymentSystemName;
         return this;
@@ -191,6 +208,7 @@ public class Payment1 {
      */
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public Payment1 withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -201,6 +219,7 @@ public class Payment1 {
      */
     @JsonProperty("referenceValue")
     public Integer referenceValue;
+
     public Payment1 withReferenceValue(Integer referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -211,6 +230,7 @@ public class Payment1 {
      */
     @JsonProperty("tid")
     public String tid;
+
     public Payment1 withTid(String tid) {
         this.tid = tid;
         return this;
@@ -221,6 +241,7 @@ public class Payment1 {
      */
     @JsonProperty("url")
     public String url;
+
     public Payment1 withUrl(String url) {
         this.url = url;
         return this;
@@ -231,9 +252,34 @@ public class Payment1 {
      */
     @JsonProperty("value")
     public Integer value;
+
     public Payment1 withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public Payment1(@JsonProperty("cardHolder") String cardHolder, @JsonProperty("cardNumber") String cardNumber, @JsonProperty("connectorResponses") ConnectorResponses connectorResponses, @JsonProperty("cvv2") String cvv2, @JsonProperty("dueDate") String dueDate, @JsonProperty("expireMonth") String expireMonth, @JsonProperty("expireYear") String expireYear, @JsonProperty("firstDigits") String firstDigits, @JsonProperty("giftCardCaption") String giftCardCaption, @JsonProperty("giftCardId") String giftCardId, @JsonProperty("giftCardName") String giftCardName, @JsonProperty("group") String group, @JsonProperty("id") String id, @JsonProperty("installments") Integer installments, @JsonProperty("lastDigits") String lastDigits, @JsonProperty("paymentSystem") String paymentSystem, @JsonProperty("paymentSystemName") String paymentSystemName, @JsonProperty("redemptionCode") String redemptionCode, @JsonProperty("referenceValue") Integer referenceValue, @JsonProperty("tid") String tid, @JsonProperty("url") String url, @JsonProperty("value") Integer value) {
+        this.cardHolder = cardHolder;
+        this.cardNumber = cardNumber;
+        this.connectorResponses = connectorResponses;
+        this.cvv2 = cvv2;
+        this.dueDate = dueDate;
+        this.expireMonth = expireMonth;
+        this.expireYear = expireYear;
+        this.firstDigits = firstDigits;
+        this.giftCardCaption = giftCardCaption;
+        this.giftCardId = giftCardId;
+        this.giftCardName = giftCardName;
+        this.group = group;
+        this.id = id;
+        this.installments = installments;
+        this.lastDigits = lastDigits;
+        this.paymentSystem = paymentSystem;
+        this.paymentSystemName = paymentSystemName;
+        this.redemptionCode = redemptionCode;
+        this.referenceValue = referenceValue;
+        this.tid = tid;
+        this.url = url;
+        this.value = value;
+  }
 }

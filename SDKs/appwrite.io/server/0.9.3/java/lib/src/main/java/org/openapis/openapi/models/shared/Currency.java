@@ -15,6 +15,7 @@ public class Currency {
      */
     @JsonProperty("code")
     public String code;
+
     public Currency withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class Currency {
      */
     @JsonProperty("decimalDigits")
     public Integer decimalDigits;
+
     public Currency withDecimalDigits(Integer decimalDigits) {
         this.decimalDigits = decimalDigits;
         return this;
@@ -35,6 +37,7 @@ public class Currency {
      */
     @JsonProperty("name")
     public String name;
+
     public Currency withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class Currency {
      */
     @JsonProperty("namePlural")
     public String namePlural;
+
     public Currency withNamePlural(String namePlural) {
         this.namePlural = namePlural;
         return this;
@@ -55,6 +59,7 @@ public class Currency {
      */
     @JsonProperty("rounding")
     public Float rounding;
+
     public Currency withRounding(Float rounding) {
         this.rounding = rounding;
         return this;
@@ -65,6 +70,7 @@ public class Currency {
      */
     @JsonProperty("symbol")
     public String symbol;
+
     public Currency withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -75,9 +81,19 @@ public class Currency {
      */
     @JsonProperty("symbolNative")
     public String symbolNative;
+
     public Currency withSymbolNative(String symbolNative) {
         this.symbolNative = symbolNative;
         return this;
     }
     
+    public Currency(@JsonProperty("code") String code, @JsonProperty("decimalDigits") Integer decimalDigits, @JsonProperty("name") String name, @JsonProperty("namePlural") String namePlural, @JsonProperty("rounding") Float rounding, @JsonProperty("symbol") String symbol, @JsonProperty("symbolNative") String symbolNative) {
+        this.code = code;
+        this.decimalDigits = decimalDigits;
+        this.name = name;
+        this.namePlural = namePlural;
+        this.rounding = rounding;
+        this.symbol = symbol;
+        this.symbolNative = symbolNative;
+  }
 }

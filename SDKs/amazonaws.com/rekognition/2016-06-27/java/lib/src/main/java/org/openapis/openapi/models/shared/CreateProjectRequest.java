@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProjectRequest {
     @JsonProperty("ProjectName")
     public String projectName;
+
     public CreateProjectRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     
+    public CreateProjectRequest(@JsonProperty("ProjectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

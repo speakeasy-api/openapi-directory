@@ -18,6 +18,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathTemplate")
     public String pathTemplate;
+
     public Resource withPathTemplate(String pathTemplate) {
         this.pathTemplate = pathTemplate;
         return this;
@@ -29,9 +30,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ResourceTypeEnum type;
+
     public Resource withType(ResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Resource(){}
 }

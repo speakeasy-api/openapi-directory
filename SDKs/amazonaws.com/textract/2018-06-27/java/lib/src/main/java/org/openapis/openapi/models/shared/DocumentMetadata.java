@@ -15,9 +15,11 @@ public class DocumentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pages")
     public Long pages;
+
     public DocumentMetadata withPages(Long pages) {
         this.pages = pages;
         return this;
     }
     
+    public DocumentMetadata(){}
 }

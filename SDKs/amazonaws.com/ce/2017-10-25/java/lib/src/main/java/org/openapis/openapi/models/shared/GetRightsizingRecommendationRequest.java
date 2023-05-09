@@ -12,6 +12,7 @@ public class GetRightsizingRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public RightsizingRecommendationConfiguration configuration;
+
     public GetRightsizingRecommendationRequest withConfiguration(RightsizingRecommendationConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -23,6 +24,7 @@ public class GetRightsizingRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetRightsizingRecommendationRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -31,6 +33,7 @@ public class GetRightsizingRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetRightsizingRecommendationRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -39,6 +42,7 @@ public class GetRightsizingRecommendationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public GetRightsizingRecommendationRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -46,9 +50,13 @@ public class GetRightsizingRecommendationRequest {
     
     @JsonProperty("Service")
     public String service;
+
     public GetRightsizingRecommendationRequest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public GetRightsizingRecommendationRequest(@JsonProperty("Service") String service) {
+        this.service = service;
+  }
 }

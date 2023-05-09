@@ -22,6 +22,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionTime")
     public OffsetDateTime completionTime;
+
     public MedicalTranscriptionJobSummary withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -30,6 +31,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentIdentificationType")
     public MedicalContentIdentificationTypeEnum contentIdentificationType;
+
     public MedicalTranscriptionJobSummary withContentIdentificationType(MedicalContentIdentificationTypeEnum contentIdentificationType) {
         this.contentIdentificationType = contentIdentificationType;
         return this;
@@ -40,6 +42,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MedicalTranscriptionJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public MedicalTranscriptionJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -56,6 +60,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public MedicalTranscriptionJobSummary withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -64,6 +69,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MedicalTranscriptionJobName")
     public String medicalTranscriptionJobName;
+
     public MedicalTranscriptionJobSummary withMedicalTranscriptionJobName(String medicalTranscriptionJobName) {
         this.medicalTranscriptionJobName = medicalTranscriptionJobName;
         return this;
@@ -72,6 +78,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputLocationType")
     public OutputLocationTypeEnum outputLocationType;
+
     public MedicalTranscriptionJobSummary withOutputLocationType(OutputLocationTypeEnum outputLocationType) {
         this.outputLocationType = outputLocationType;
         return this;
@@ -80,6 +87,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Specialty")
     public SpecialtyEnum specialty;
+
     public MedicalTranscriptionJobSummary withSpecialty(SpecialtyEnum specialty) {
         this.specialty = specialty;
         return this;
@@ -90,6 +98,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public MedicalTranscriptionJobSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -98,6 +107,7 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptionJobStatus")
     public TranscriptionJobStatusEnum transcriptionJobStatus;
+
     public MedicalTranscriptionJobSummary withTranscriptionJobStatus(TranscriptionJobStatusEnum transcriptionJobStatus) {
         this.transcriptionJobStatus = transcriptionJobStatus;
         return this;
@@ -106,9 +116,11 @@ public class MedicalTranscriptionJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TypeEnum type;
+
     public MedicalTranscriptionJobSummary withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public MedicalTranscriptionJobSummary(){}
 }

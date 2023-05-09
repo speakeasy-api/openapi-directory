@@ -18,6 +18,7 @@ public class ResponsePoliciesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public ResponseHeader header;
+
     public ResponsePoliciesListResponse withHeader(ResponseHeader header) {
         this.header = header;
         return this;
@@ -29,6 +30,7 @@ public class ResponsePoliciesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ResponsePoliciesListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ResponsePoliciesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsePolicies")
     public ResponsePolicy[] responsePolicies;
+
     public ResponsePoliciesListResponse withResponsePolicies(ResponsePolicy[] responsePolicies) {
         this.responsePolicies = responsePolicies;
         return this;
     }
     
+    public ResponsePoliciesListResponse(){}
 }

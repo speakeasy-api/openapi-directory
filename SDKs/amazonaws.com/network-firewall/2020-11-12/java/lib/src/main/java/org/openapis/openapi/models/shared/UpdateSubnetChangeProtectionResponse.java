@@ -15,6 +15,7 @@ public class UpdateSubnetChangeProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public UpdateSubnetChangeProtectionResponse withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSubnetChangeProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public UpdateSubnetChangeProtectionResponse withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -31,6 +33,7 @@ public class UpdateSubnetChangeProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetChangeProtection")
     public Boolean subnetChangeProtection;
+
     public UpdateSubnetChangeProtectionResponse withSubnetChangeProtection(Boolean subnetChangeProtection) {
         this.subnetChangeProtection = subnetChangeProtection;
         return this;
@@ -39,9 +42,11 @@ public class UpdateSubnetChangeProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public UpdateSubnetChangeProtectionResponse withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public UpdateSubnetChangeProtectionResponse(){}
 }

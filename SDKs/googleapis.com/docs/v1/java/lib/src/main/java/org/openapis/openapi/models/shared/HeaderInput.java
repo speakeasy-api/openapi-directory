@@ -18,6 +18,7 @@ public class HeaderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElementInput[] content;
+
     public HeaderInput withContent(StructuralElementInput[] content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class HeaderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerId")
     public String headerId;
+
     public HeaderInput withHeaderId(String headerId) {
         this.headerId = headerId;
         return this;
     }
     
+    public HeaderInput(){}
 }

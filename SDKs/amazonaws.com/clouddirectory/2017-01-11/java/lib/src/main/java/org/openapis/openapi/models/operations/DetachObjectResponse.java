@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachObjectResponse {
@@ -12,6 +13,7 @@ public class DetachObjectResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachObjectResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetachObjectResponse {
     
     
     public String contentType;
+
     public DetachObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.DetachObjectResponse detachObjectResponse;
+
     public DetachObjectResponse withDetachObjectResponse(org.openapis.openapi.models.shared.DetachObjectResponse detachObjectResponse) {
         this.detachObjectResponse = detachObjectResponse;
         return this;
@@ -39,6 +43,7 @@ public class DetachObjectResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public DetachObjectResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class DetachObjectResponse {
      */
     
     public Object internalServiceException;
+
     public DetachObjectResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DetachObjectResponse {
      */
     
     public Object invalidArnException;
+
     public DetachObjectResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class DetachObjectResponse {
      */
     
     public Object limitExceededException;
+
     public DetachObjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DetachObjectResponse {
      */
     
     public Object notNodeException;
+
     public DetachObjectResponse withNotNodeException(Object notNodeException) {
         this.notNodeException = notNodeException;
         return this;
@@ -86,6 +95,7 @@ public class DetachObjectResponse {
     
     
     public Integer statusCode;
+
     public DetachObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DetachObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DetachObjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetachObjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class DetachObjectResponse {
      */
     
     public Object retryableConflictException;
+
     public DetachObjectResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class DetachObjectResponse {
      */
     
     public Object validationException;
+
     public DetachObjectResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DetachObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

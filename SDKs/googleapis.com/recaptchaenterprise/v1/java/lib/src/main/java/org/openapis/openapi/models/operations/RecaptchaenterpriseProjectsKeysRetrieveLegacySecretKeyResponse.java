@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse {
     
     public String contentType;
+
     public RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse googleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse;
+
     public RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse withGoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse(org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse googleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse) {
         this.googleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse = googleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse;
         return this;
@@ -26,6 +29,7 @@ public class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse {
     
     
     public Integer statusCode;
+
     public RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

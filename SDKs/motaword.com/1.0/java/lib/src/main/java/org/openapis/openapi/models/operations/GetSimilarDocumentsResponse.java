@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSimilarDocumentsResponse {
     
     public String contentType;
+
     public GetSimilarDocumentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSimilarDocumentsResponse {
      */
     
     public org.openapis.openapi.models.shared.DocumentList documentList;
+
     public GetSimilarDocumentsResponse withDocumentList(org.openapis.openapi.models.shared.DocumentList documentList) {
         this.documentList = documentList;
         return this;
@@ -26,6 +29,7 @@ public class GetSimilarDocumentsResponse {
     
     
     public Integer statusCode;
+
     public GetSimilarDocumentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSimilarDocumentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSimilarDocumentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSimilarDocumentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

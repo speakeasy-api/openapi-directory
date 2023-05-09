@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAddressesAttributeResultAddressesPtrRecordUpdate {
     
     public String reason;
+
     public DescribeAddressesAttributeResultAddressesPtrRecordUpdate withReason(String reason) {
         this.reason = reason;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAddressesAttributeResultAddressesPtrRecordUpdate {
     
     
     public String status;
+
     public DescribeAddressesAttributeResultAddressesPtrRecordUpdate withStatus(String status) {
         this.status = status;
         return this;
@@ -26,9 +28,11 @@ public class DescribeAddressesAttributeResultAddressesPtrRecordUpdate {
     
     
     public String value;
+
     public DescribeAddressesAttributeResultAddressesPtrRecordUpdate withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeAddressesAttributeResultAddressesPtrRecordUpdate(){}
 }

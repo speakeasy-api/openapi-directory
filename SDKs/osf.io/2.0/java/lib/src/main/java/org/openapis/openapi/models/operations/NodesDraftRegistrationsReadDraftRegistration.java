@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NodesDraftRegistrationsReadDraftRegistration - OK
@@ -15,6 +15,7 @@ public class NodesDraftRegistrationsReadDraftRegistration {
      */
     
     public NodesDraftRegistrationsReadDraftRegistrationAttributes attributes;
+
     public NodesDraftRegistrationsReadDraftRegistration withAttributes(NodesDraftRegistrationsReadDraftRegistrationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class NodesDraftRegistrationsReadDraftRegistration {
      */
     
     public String id;
+
     public NodesDraftRegistrationsReadDraftRegistration withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class NodesDraftRegistrationsReadDraftRegistration {
      */
     
     public NodesDraftRegistrationsReadDraftRegistrationLinks links;
+
     public NodesDraftRegistrationsReadDraftRegistration withLinks(NodesDraftRegistrationsReadDraftRegistrationLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class NodesDraftRegistrationsReadDraftRegistration {
      */
     
     public NodesDraftRegistrationsReadDraftRegistrationRelationships relationships;
+
     public NodesDraftRegistrationsReadDraftRegistration withRelationships(NodesDraftRegistrationsReadDraftRegistrationRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,17 @@ public class NodesDraftRegistrationsReadDraftRegistration {
      */
     
     public String type;
+
     public NodesDraftRegistrationsReadDraftRegistration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesDraftRegistrationsReadDraftRegistration(@JsonProperty("attributes") NodesDraftRegistrationsReadDraftRegistrationAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") NodesDraftRegistrationsReadDraftRegistrationLinks links, @JsonProperty("relationships") NodesDraftRegistrationsReadDraftRegistrationRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

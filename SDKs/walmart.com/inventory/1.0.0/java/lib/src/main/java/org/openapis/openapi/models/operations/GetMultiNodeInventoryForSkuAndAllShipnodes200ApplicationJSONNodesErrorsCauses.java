@@ -12,6 +12,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses withField(String field) {
         this.field = field;
         return this;
@@ -36,9 +39,11 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses(){}
 }

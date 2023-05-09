@@ -18,6 +18,7 @@ public class ImageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public ImageInput withAltText(String altText) {
         this.altText = altText;
         return this;
@@ -29,6 +30,7 @@ public class ImageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public MediaProperties properties;
+
     public ImageInput withProperties(MediaProperties properties) {
         this.properties = properties;
         return this;
@@ -40,9 +42,11 @@ public class ImageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUri")
     public String sourceUri;
+
     public ImageInput withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ImageInput(){}
 }

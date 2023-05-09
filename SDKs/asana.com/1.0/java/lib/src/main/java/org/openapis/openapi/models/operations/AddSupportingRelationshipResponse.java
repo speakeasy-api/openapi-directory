@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddSupportingRelationshipResponse {
     
     public String contentType;
+
     public AddSupportingRelationshipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddSupportingRelationshipResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public AddSupportingRelationshipResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class AddSupportingRelationshipResponse {
     
     
     public Integer statusCode;
+
     public AddSupportingRelationshipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AddSupportingRelationshipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddSupportingRelationshipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class AddSupportingRelationshipResponse {
      */
     
     public AddSupportingRelationship200ApplicationJSON addSupportingRelationship200ApplicationJSONObject;
+
     public AddSupportingRelationshipResponse withAddSupportingRelationship200ApplicationJSONObject(AddSupportingRelationship200ApplicationJSON addSupportingRelationship200ApplicationJSONObject) {
         this.addSupportingRelationship200ApplicationJSONObject = addSupportingRelationship200ApplicationJSONObject;
         return this;
     }
     
+    public AddSupportingRelationshipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

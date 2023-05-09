@@ -15,6 +15,7 @@ public class ListGatewaysOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gateways")
     public Gateway[] gateways;
+
     public ListGatewaysOutput withGateways(Gateway[] gateways) {
         this.gateways = gateways;
         return this;
@@ -23,9 +24,11 @@ public class ListGatewaysOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGatewaysOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGatewaysOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMetricSetsResponse {
@@ -12,6 +13,7 @@ public class ListMetricSetsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListMetricSetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListMetricSetsResponse {
     
     
     public String contentType;
+
     public ListMetricSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListMetricSetsResponse {
      */
     
     public Object internalServerException;
+
     public ListMetricSetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListMetricSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMetricSetsResponse listMetricSetsResponse;
+
     public ListMetricSetsResponse withListMetricSetsResponse(org.openapis.openapi.models.shared.ListMetricSetsResponse listMetricSetsResponse) {
         this.listMetricSetsResponse = listMetricSetsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListMetricSetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListMetricSetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListMetricSetsResponse {
     
     
     public Integer statusCode;
+
     public ListMetricSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListMetricSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMetricSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListMetricSetsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListMetricSetsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class ListMetricSetsResponse {
      */
     
     public Object validationException;
+
     public ListMetricSetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListMetricSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

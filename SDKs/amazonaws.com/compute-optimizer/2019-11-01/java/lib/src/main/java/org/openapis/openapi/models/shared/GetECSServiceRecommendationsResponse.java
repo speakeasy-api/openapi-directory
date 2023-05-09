@@ -15,6 +15,7 @@ public class GetECSServiceRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecsServiceRecommendations")
     public ECSServiceRecommendation[] ecsServiceRecommendations;
+
     public GetECSServiceRecommendationsResponse withEcsServiceRecommendations(ECSServiceRecommendation[] ecsServiceRecommendations) {
         this.ecsServiceRecommendations = ecsServiceRecommendations;
         return this;
@@ -23,6 +24,7 @@ public class GetECSServiceRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetRecommendationError[] errors;
+
     public GetECSServiceRecommendationsResponse withErrors(GetRecommendationError[] errors) {
         this.errors = errors;
         return this;
@@ -31,9 +33,11 @@ public class GetECSServiceRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetECSServiceRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetECSServiceRecommendationsResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecifications {
     
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecificationsResourceTypeEnum resourceType;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecifications withResourceType(DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTem
     
     
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecificationsTags[] tags;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecifications withTags(DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateDataTagSpecifications(){}
 }

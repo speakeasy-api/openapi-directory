@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailUrl")
     public String detailUrl;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -81,6 +87,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refId")
     public String refId;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -92,6 +99,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -103,9 +111,11 @@ public class PlaceOrder200ApplicationJSONOrdersItemMetadataItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuName")
     public String skuName;
+
     public PlaceOrder200ApplicationJSONOrdersItemMetadataItems withSkuName(String skuName) {
         this.skuName = skuName;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersItemMetadataItems(){}
 }

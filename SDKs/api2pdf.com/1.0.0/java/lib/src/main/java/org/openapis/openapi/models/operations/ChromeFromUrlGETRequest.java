@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromeFromUrlGETRequest {
@@ -12,6 +13,7 @@ public class ChromeFromUrlGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
     public String output;
+
     public ChromeFromUrlGETRequest withOutput(String output) {
         this.output = output;
         return this;
@@ -22,9 +24,13 @@ public class ChromeFromUrlGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public ChromeFromUrlGETRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ChromeFromUrlGETRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

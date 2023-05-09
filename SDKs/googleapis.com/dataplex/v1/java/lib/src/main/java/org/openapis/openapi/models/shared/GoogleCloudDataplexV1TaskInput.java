@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1TaskInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1TaskInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionSpec")
     public GoogleCloudDataplexV1TaskExecutionSpec executionSpec;
+
     public GoogleCloudDataplexV1TaskInput withExecutionSpec(GoogleCloudDataplexV1TaskExecutionSpec executionSpec) {
         this.executionSpec = executionSpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1TaskInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notebook")
     public GoogleCloudDataplexV1TaskNotebookTaskConfig notebook;
+
     public GoogleCloudDataplexV1TaskInput withNotebook(GoogleCloudDataplexV1TaskNotebookTaskConfig notebook) {
         this.notebook = notebook;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spark")
     public GoogleCloudDataplexV1TaskSparkTaskConfig spark;
+
     public GoogleCloudDataplexV1TaskInput withSpark(GoogleCloudDataplexV1TaskSparkTaskConfig spark) {
         this.spark = spark;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDataplexV1TaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerSpec")
     public GoogleCloudDataplexV1TaskTriggerSpec triggerSpec;
+
     public GoogleCloudDataplexV1TaskInput withTriggerSpec(GoogleCloudDataplexV1TaskTriggerSpec triggerSpec) {
         this.triggerSpec = triggerSpec;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskInput(){}
 }

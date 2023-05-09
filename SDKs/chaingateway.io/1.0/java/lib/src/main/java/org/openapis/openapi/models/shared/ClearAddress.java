@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClearAddress {
     @JsonProperty("amount")
     public Double amount;
+
     public ClearAddress withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -16,6 +17,7 @@ public class ClearAddress {
     
     @JsonProperty("ethereumaddress")
     public String ethereumaddress;
+
     public ClearAddress withEthereumaddress(String ethereumaddress) {
         this.ethereumaddress = ethereumaddress;
         return this;
@@ -23,6 +25,7 @@ public class ClearAddress {
     
     @JsonProperty("gas")
     public Double gas;
+
     public ClearAddress withGas(Double gas) {
         this.gas = gas;
         return this;
@@ -30,6 +33,7 @@ public class ClearAddress {
     
     @JsonProperty("newaddress")
     public String newaddress;
+
     public ClearAddress withNewaddress(String newaddress) {
         this.newaddress = newaddress;
         return this;
@@ -37,6 +41,7 @@ public class ClearAddress {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public ClearAddress withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -44,6 +49,7 @@ public class ClearAddress {
     
     @JsonProperty("total")
     public String total;
+
     public ClearAddress withTotal(String total) {
         this.total = total;
         return this;
@@ -51,9 +57,19 @@ public class ClearAddress {
     
     @JsonProperty("txid")
     public String txid;
+
     public ClearAddress withTxid(String txid) {
         this.txid = txid;
         return this;
     }
     
+    public ClearAddress(@JsonProperty("amount") Double amount, @JsonProperty("ethereumaddress") String ethereumaddress, @JsonProperty("gas") Double gas, @JsonProperty("newaddress") String newaddress, @JsonProperty("ok") Boolean ok, @JsonProperty("total") String total, @JsonProperty("txid") String txid) {
+        this.amount = amount;
+        this.ethereumaddress = ethereumaddress;
+        this.gas = gas;
+        this.newaddress = newaddress;
+        this.ok = ok;
+        this.total = total;
+        this.txid = txid;
+  }
 }

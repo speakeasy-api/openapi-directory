@@ -171,4 +171,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/SecondaryIpRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateConsumerConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/RangeReservation.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsumerProject.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/services/README.md
 USAGE.md

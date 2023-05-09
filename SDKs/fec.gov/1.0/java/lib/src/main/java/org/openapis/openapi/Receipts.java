@@ -40,7 +40,7 @@ public class Receipts {
 	}
 
     /**
-     *  - This description is for both \u200b`/schedules\u200b/schedule_a\u200b/` and \u200b `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/`. -  - This endpoint provides itemized receipts. Schedule A records describe itemized receipts, including contributions from individuals. If you are interested in contributions from an individual, use the `/schedules/schedule_a/` endpoint. For a more complete description of all Schedule A records visit [About receipts data](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/about-receipts-data/). If you are interested in our "is_individual" methodology visit our [methodology page](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/). -  - \u200bThe `/schedules\u200b/schedule_a\u200b/` endpoint is not paginated by page number. This endpoint uses keyset pagination to improve query performance and these indices are required to properly page through this large dataset. To request the next page, you should append the values found in the `last_indexes` object from pagination to the URL of your last request as additional parameters.  - For example, when sorting by `contribution_receipt_date`, you might receive a page of results with the two scenarios of following pagination information: -  - case #1: - ``` - pagination: { -     pages: 2152643, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880619", -         last_contribution_receipt_date: "2014-01-01" -     } - } - ``` - &lt;br/&gt; - case #2 (results which include contribution_receipt_date = NULL): -  - ``` - pagination: { -     pages: 2152644, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880639", -         sort_null_only: True -     } - } - ``` - To fetch the next page of sorted results, append `last_index=230880619` and `last_contribution_receipt_date=2014-01-01` to the URL and when reaching `contribution_receipt_date=NULL`, append `last_index=230880639` and `sort_null_only=True`. We strongly advise paging through these results using sort indices. The default sort is acending by `contribution_receipt_date` (`deprecated`, will be descending). If you do not page using sort indices, some transactions may be unintentionally filtered out. -  - Calls to \u200b`/schedules\u200b/schedule_a\u200b/` may return many records. For large result sets, the record counts found in the pagination object are approximate; you will need to page through the records until no records are returned. -  - To avoid throwing the "out of range" exception on the last page, one recommandation is to use total count and `per_page` to control the traverse loop of results. -  - \u200bThe `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/` endpoint returns a single transaction, but it does include a pagination object class. Please ignore the information in that object class. -  - 
+     *  - This description is for both \u200b`/schedules\u200b/schedule_a\u200b/` and \u200b `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/`. -  - This endpoint provides itemized receipts. Schedule A records describe itemized receipts, including contributions from individuals. If you are interested in contributions from an individual, use the `/schedules/schedule_a/` endpoint. For a more complete description of all Schedule A records visit [About receipts data](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/about-receipts-data/). If you are interested in our "is_individual" methodology visit our [methodology page](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/).  - \u200bThe `/schedules\u200b/schedule_a\u200b/` endpoint is not paginated by page number. This endpoint uses keyset pagination to improve query performance and these indices are required to properly page through this large dataset. To request the next page, you should append the values found in the `last_indexes` object from pagination to the URL of your last request as additional parameters.  - For example, when sorting by `contribution_receipt_date`, you might receive a page of results with the two scenarios of following pagination information: -  - case #1: - ``` - pagination: { -     pages: 2152643, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880619", -         last_contribution_receipt_date: "2014-01-01" -     } - } - ``` - &lt;br/&gt; - case #2 (results which include contribution_receipt_date = NULL): -  - ``` - pagination: { -     pages: 2152644, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880639", -         sort_null_only: True -     } - } - ``` - To fetch the next page of sorted results, append `last_index=230880619` and `last_contribution_receipt_date=2014-01-01` to the URL and when reaching `contribution_receipt_date=NULL`, append `last_index=230880639` and `sort_null_only=True`. We strongly advise paging through these results using sort indices. The default sort is acending by `contribution_receipt_date` (`deprecated`, will be descending). If you do not page using sort indices, some transactions may be unintentionally filtered out. -  - Calls to \u200b`/schedules\u200b/schedule_a\u200b/` may return many records. For large result sets, the record counts found in the pagination object are approximate; you will need to page through the records until no records are returned. -  - To avoid throwing the "out of range" exception on the last page, one recommandation is to use total count and `per_page` to control the traverse loop of results. -  - \u200bThe `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/` endpoint returns a single transaction, but it does include a pagination object class. Please ignore the information in that object class. -  - 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -66,11 +66,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAResponse(contentType, httpRes.statusCode()) {{
             scheduleAPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -111,11 +109,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAByEmployerResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByEmployerResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAByEmployerResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByEmployerResponse(contentType, httpRes.statusCode()) {{
             scheduleAByEmployerPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -156,11 +152,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAByOccupationResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByOccupationResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAByOccupationResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByOccupationResponse(contentType, httpRes.statusCode()) {{
             scheduleAByOccupationPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -201,11 +195,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeResponse(contentType, httpRes.statusCode()) {{
             scheduleABySizePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -246,11 +238,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleABySizeByCandidateResponse(contentType, httpRes.statusCode()) {{
             scheduleABySizeCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -291,11 +281,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateResponse(contentType, httpRes.statusCode()) {{
             scheduleAByStatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -336,11 +324,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateResponse(contentType, httpRes.statusCode()) {{
             scheduleAByStateCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -381,11 +367,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateTotalsResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateTotalsResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateTotalsResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateByCandidateTotalsResponse(contentType, httpRes.statusCode()) {{
             scheduleAByStateCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -426,11 +410,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateTotalsResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateTotalsResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateTotalsResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByStateTotalsResponse(contentType, httpRes.statusCode()) {{
             scheduleAByStateRecipientTotalsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -471,11 +453,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAByZipResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByZipResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAByZipResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAByZipResponse(contentType, httpRes.statusCode()) {{
             scheduleAByZipPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -516,11 +496,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleAEfileResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAEfileResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleAEfileResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleAEfileResponse(contentType, httpRes.statusCode()) {{
             scheduleAEfilePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -535,7 +513,7 @@ public class Receipts {
     }
 
     /**
-     *  - This description is for both \u200b`/schedules\u200b/schedule_a\u200b/` and \u200b `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/`. -  - This endpoint provides itemized receipts. Schedule A records describe itemized receipts, including contributions from individuals. If you are interested in contributions from an individual, use the `/schedules/schedule_a/` endpoint. For a more complete description of all Schedule A records visit [About receipts data](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/about-receipts-data/). If you are interested in our "is_individual" methodology visit our [methodology page](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/). -  - \u200bThe `/schedules\u200b/schedule_a\u200b/` endpoint is not paginated by page number. This endpoint uses keyset pagination to improve query performance and these indices are required to properly page through this large dataset. To request the next page, you should append the values found in the `last_indexes` object from pagination to the URL of your last request as additional parameters.  - For example, when sorting by `contribution_receipt_date`, you might receive a page of results with the two scenarios of following pagination information: -  - case #1: - ``` - pagination: { -     pages: 2152643, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880619", -         last_contribution_receipt_date: "2014-01-01" -     } - } - ``` - &lt;br/&gt; - case #2 (results which include contribution_receipt_date = NULL): -  - ``` - pagination: { -     pages: 2152644, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880639", -         sort_null_only: True -     } - } - ``` - To fetch the next page of sorted results, append `last_index=230880619` and `last_contribution_receipt_date=2014-01-01` to the URL and when reaching `contribution_receipt_date=NULL`, append `last_index=230880639` and `sort_null_only=True`. We strongly advise paging through these results using sort indices. The default sort is acending by `contribution_receipt_date` (`deprecated`, will be descending). If you do not page using sort indices, some transactions may be unintentionally filtered out. -  - Calls to \u200b`/schedules\u200b/schedule_a\u200b/` may return many records. For large result sets, the record counts found in the pagination object are approximate; you will need to page through the records until no records are returned. -  - To avoid throwing the "out of range" exception on the last page, one recommandation is to use total count and `per_page` to control the traverse loop of results. -  - \u200bThe `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/` endpoint returns a single transaction, but it does include a pagination object class. Please ignore the information in that object class. -  - 
+     *  - This description is for both \u200b`/schedules\u200b/schedule_a\u200b/` and \u200b `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/`. -  - This endpoint provides itemized receipts. Schedule A records describe itemized receipts, including contributions from individuals. If you are interested in contributions from an individual, use the `/schedules/schedule_a/` endpoint. For a more complete description of all Schedule A records visit [About receipts data](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/about-receipts-data/). If you are interested in our "is_individual" methodology visit our [methodology page](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/).  - \u200bThe `/schedules\u200b/schedule_a\u200b/` endpoint is not paginated by page number. This endpoint uses keyset pagination to improve query performance and these indices are required to properly page through this large dataset. To request the next page, you should append the values found in the `last_indexes` object from pagination to the URL of your last request as additional parameters.  - For example, when sorting by `contribution_receipt_date`, you might receive a page of results with the two scenarios of following pagination information: -  - case #1: - ``` - pagination: { -     pages: 2152643, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880619", -         last_contribution_receipt_date: "2014-01-01" -     } - } - ``` - &lt;br/&gt; - case #2 (results which include contribution_receipt_date = NULL): -  - ``` - pagination: { -     pages: 2152644, -     per_page: 20, -     count: 43052850, -     last_indexes: { -         last_index: "230880639", -         sort_null_only: True -     } - } - ``` - To fetch the next page of sorted results, append `last_index=230880619` and `last_contribution_receipt_date=2014-01-01` to the URL and when reaching `contribution_receipt_date=NULL`, append `last_index=230880639` and `sort_null_only=True`. We strongly advise paging through these results using sort indices. The default sort is acending by `contribution_receipt_date` (`deprecated`, will be descending). If you do not page using sort indices, some transactions may be unintentionally filtered out. -  - Calls to \u200b`/schedules\u200b/schedule_a\u200b/` may return many records. For large result sets, the record counts found in the pagination object are approximate; you will need to page through the records until no records are returned. -  - To avoid throwing the "out of range" exception on the last page, one recommandation is to use total count and `per_page` to control the traverse loop of results. -  - \u200bThe `/schedules\u200b/schedule_a\u200b/{sub_id}\u200b/` endpoint returns a single transaction, but it does include a pagination object class. Please ignore the information in that object class. -  - 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -561,11 +539,9 @@ public class Receipts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleASubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleASubIdResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleASubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleASubIdResponse(contentType, httpRes.statusCode()) {{
             scheduleAPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateReplaceRootVolumeTaskRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateReplaceRootVolumeTaskRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateReplaceRootVolumeTaskRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateReplaceRootVolumeTaskRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateReplaceRootVolumeTaskRequestTagSpecificationsTags(){}
 }

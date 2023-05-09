@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagRef {
     @JsonProperty("key")
     public String key;
+
     public TagRef withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class TagRef {
     
     @JsonProperty("value")
     public String value;
+
     public TagRef withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TagRef(@JsonProperty("key") String key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

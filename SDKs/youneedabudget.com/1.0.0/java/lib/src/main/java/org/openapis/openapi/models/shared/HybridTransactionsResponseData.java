@@ -15,6 +15,7 @@ public class HybridTransactionsResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server_knowledge")
     public Long serverKnowledge;
+
     public HybridTransactionsResponseData withServerKnowledge(Long serverKnowledge) {
         this.serverKnowledge = serverKnowledge;
         return this;
@@ -22,9 +23,13 @@ public class HybridTransactionsResponseData {
     
     @JsonProperty("transactions")
     public HybridTransaction[] transactions;
+
     public HybridTransactionsResponseData withTransactions(HybridTransaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public HybridTransactionsResponseData(@JsonProperty("transactions") HybridTransaction[] transactions) {
+        this.transactions = transactions;
+  }
 }

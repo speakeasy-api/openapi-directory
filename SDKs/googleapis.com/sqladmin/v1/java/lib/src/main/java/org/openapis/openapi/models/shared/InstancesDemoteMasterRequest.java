@@ -18,9 +18,11 @@ public class InstancesDemoteMasterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("demoteMasterContext")
     public DemoteMasterContext demoteMasterContext;
+
     public InstancesDemoteMasterRequest withDemoteMasterContext(DemoteMasterContext demoteMasterContext) {
         this.demoteMasterContext = demoteMasterContext;
         return this;
     }
     
+    public InstancesDemoteMasterRequest(){}
 }

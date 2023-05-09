@@ -15,9 +15,11 @@ public class EnterpriseAdminCreateImpersonationOAuthTokenRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public EnterpriseAdminCreateImpersonationOAuthTokenRequestBody withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public EnterpriseAdminCreateImpersonationOAuthTokenRequestBody(){}
 }

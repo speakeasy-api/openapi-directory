@@ -17,6 +17,7 @@ public class WebhookInputResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WebhookInputResourceAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,13 @@ public class WebhookInputResourceAttributes {
      */
     @JsonProperty("url")
     public String url;
+
     public WebhookInputResourceAttributes withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhookInputResourceAttributes(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

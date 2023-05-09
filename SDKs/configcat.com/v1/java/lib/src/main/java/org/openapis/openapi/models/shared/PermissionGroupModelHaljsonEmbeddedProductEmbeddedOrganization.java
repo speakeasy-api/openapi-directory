@@ -12,6 +12,7 @@ public class PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganizationLinks links;
+
     public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganization withLinks(PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganizationLinks links) {
         this.links = links;
         return this;
@@ -20,6 +21,7 @@ public class PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganization withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganization withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public PermissionGroupModelHaljsonEmbeddedProductEmbeddedOrganization(){}
 }

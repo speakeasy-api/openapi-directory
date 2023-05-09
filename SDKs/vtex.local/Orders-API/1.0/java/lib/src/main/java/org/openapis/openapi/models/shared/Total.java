@@ -12,6 +12,7 @@ public class Total {
      */
     @JsonProperty("id")
     public String id;
+
     public Total withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class Total {
      */
     @JsonProperty("name")
     public String name;
+
     public Total withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class Total {
      */
     @JsonProperty("value")
     public Integer value;
+
     public Total withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public Total(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("value") Integer value) {
+        this.id = id;
+        this.name = name;
+        this.value = value;
+  }
 }

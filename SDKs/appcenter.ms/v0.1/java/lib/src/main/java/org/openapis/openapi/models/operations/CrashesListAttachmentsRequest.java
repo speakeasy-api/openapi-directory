@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesListAttachmentsRequest {
@@ -12,6 +13,7 @@ public class CrashesListAttachmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CrashesListAttachmentsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class CrashesListAttachmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
     public String crashId;
+
     public CrashesListAttachmentsRequest withCrashId(String crashId) {
         this.crashId = crashId;
         return this;
@@ -32,9 +35,15 @@ public class CrashesListAttachmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CrashesListAttachmentsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CrashesListAttachmentsRequest(@JsonProperty("app_name") String appName, @JsonProperty("crash_id") String crashId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.crashId = crashId;
+        this.ownerName = ownerName;
+  }
 }

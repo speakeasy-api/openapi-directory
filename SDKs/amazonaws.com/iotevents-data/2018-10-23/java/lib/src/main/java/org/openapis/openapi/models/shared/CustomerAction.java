@@ -15,6 +15,7 @@ public class CustomerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgeActionConfiguration")
     public AcknowledgeActionConfiguration acknowledgeActionConfiguration;
+
     public CustomerAction withAcknowledgeActionConfiguration(AcknowledgeActionConfiguration acknowledgeActionConfiguration) {
         this.acknowledgeActionConfiguration = acknowledgeActionConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class CustomerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionName")
     public CustomerActionNameEnum actionName;
+
     public CustomerAction withActionName(CustomerActionNameEnum actionName) {
         this.actionName = actionName;
         return this;
@@ -31,6 +33,7 @@ public class CustomerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableActionConfiguration")
     public DisableActionConfiguration disableActionConfiguration;
+
     public CustomerAction withDisableActionConfiguration(DisableActionConfiguration disableActionConfiguration) {
         this.disableActionConfiguration = disableActionConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class CustomerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableActionConfiguration")
     public EnableActionConfiguration enableActionConfiguration;
+
     public CustomerAction withEnableActionConfiguration(EnableActionConfiguration enableActionConfiguration) {
         this.enableActionConfiguration = enableActionConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class CustomerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetActionConfiguration")
     public ResetActionConfiguration resetActionConfiguration;
+
     public CustomerAction withResetActionConfiguration(ResetActionConfiguration resetActionConfiguration) {
         this.resetActionConfiguration = resetActionConfiguration;
         return this;
@@ -55,9 +60,11 @@ public class CustomerAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snoozeActionConfiguration")
     public SnoozeActionConfiguration snoozeActionConfiguration;
+
     public CustomerAction withSnoozeActionConfiguration(SnoozeActionConfiguration snoozeActionConfiguration) {
         this.snoozeActionConfiguration = snoozeActionConfiguration;
         return this;
     }
     
+    public CustomerAction(){}
 }

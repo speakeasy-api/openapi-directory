@@ -18,9 +18,11 @@ public class WorkspaceCompactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkspaceCompactInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public WorkspaceCompactInput(){}
 }

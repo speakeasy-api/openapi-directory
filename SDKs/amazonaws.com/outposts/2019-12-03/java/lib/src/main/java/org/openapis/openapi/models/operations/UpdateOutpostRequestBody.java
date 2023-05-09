@@ -15,6 +15,7 @@ public class UpdateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateOutpostRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateOutpostRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class UpdateOutpostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedHardwareType")
     public UpdateOutpostRequestBodySupportedHardwareTypeEnum supportedHardwareType;
+
     public UpdateOutpostRequestBody withSupportedHardwareType(UpdateOutpostRequestBodySupportedHardwareTypeEnum supportedHardwareType) {
         this.supportedHardwareType = supportedHardwareType;
         return this;
     }
     
+    public UpdateOutpostRequestBody(){}
 }

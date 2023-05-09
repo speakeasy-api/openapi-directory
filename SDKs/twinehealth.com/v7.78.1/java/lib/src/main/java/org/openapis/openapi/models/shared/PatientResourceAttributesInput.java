@@ -14,6 +14,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public Address[] addresses;
+
     public PatientResourceAttributesInput withAddresses(Address[] addresses) {
         this.addresses = addresses;
         return this;
@@ -22,6 +23,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archive_history")
     public ArchiveHistory[] archiveHistory;
+
     public PatientResourceAttributesInput withArchiveHistory(ArchiveHistory[] archiveHistory) {
         this.archiveHistory = archiveHistory;
         return this;
@@ -31,6 +33,7 @@ public class PatientResourceAttributesInput {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("birth_date")
     public LocalDate birthDate;
+
     public PatientResourceAttributesInput withBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -39,6 +42,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public PatientResourceAttributesInput withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -47,6 +51,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public PatientResourceAttributesInput withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -55,6 +60,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public PatientResourceAttributesGenderEnum gender;
+
     public PatientResourceAttributesInput withGender(PatientResourceAttributesGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -63,6 +69,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public PatientIdentifier[] identifiers;
+
     public PatientResourceAttributesInput withIdentifiers(PatientIdentifier[] identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -71,6 +78,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public PatientResourceAttributesInput withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -82,6 +90,7 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PatientResourceAttributesInput withNote(String note) {
         this.note = note;
         return this;
@@ -90,9 +99,11 @@ public class PatientResourceAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_numbers")
     public PhoneNumber[] phoneNumbers;
+
     public PatientResourceAttributesInput withPhoneNumbers(PhoneNumber[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
     }
     
+    public PatientResourceAttributesInput(){}
 }

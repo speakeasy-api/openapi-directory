@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetVpnConnectionDeviceSampleConfigurationRequest {
     
     public Boolean dryRun;
+
     public GetVpnConnectionDeviceSampleConfigurationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetVpnConnectionDeviceSampleConfigurationRequest {
     
     
     public String internetKeyExchangeVersion;
+
     public GetVpnConnectionDeviceSampleConfigurationRequest withInternetKeyExchangeVersion(String internetKeyExchangeVersion) {
         this.internetKeyExchangeVersion = internetKeyExchangeVersion;
         return this;
@@ -23,6 +25,7 @@ public class GetVpnConnectionDeviceSampleConfigurationRequest {
     
     
     public String vpnConnectionDeviceTypeId;
+
     public GetVpnConnectionDeviceSampleConfigurationRequest withVpnConnectionDeviceTypeId(String vpnConnectionDeviceTypeId) {
         this.vpnConnectionDeviceTypeId = vpnConnectionDeviceTypeId;
         return this;
@@ -30,9 +33,14 @@ public class GetVpnConnectionDeviceSampleConfigurationRequest {
     
     
     public String vpnConnectionId;
+
     public GetVpnConnectionDeviceSampleConfigurationRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
     }
     
+    public GetVpnConnectionDeviceSampleConfigurationRequest(@JsonProperty("VpnConnectionDeviceTypeId") String vpnConnectionDeviceTypeId, @JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.vpnConnectionDeviceTypeId = vpnConnectionDeviceTypeId;
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

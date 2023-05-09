@@ -18,6 +18,7 @@ public class CreateOrderTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public CreateOrderTaskRequest withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -29,6 +30,7 @@ public class CreateOrderTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public OrderFilterCriteria filterCriteria;
+
     public CreateOrderTaskRequest withFilterCriteria(OrderFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -40,9 +42,11 @@ public class CreateOrderTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public CreateOrderTaskRequest withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public CreateOrderTaskRequest(){}
 }

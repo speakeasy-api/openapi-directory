@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GeneratePartialYaraRuleResponse {
     
     public byte[] body;
+
     public GeneratePartialYaraRuleResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GeneratePartialYaraRuleResponse {
     
     
     public String contentType;
+
     public GeneratePartialYaraRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GeneratePartialYaraRuleResponse {
     
     
     public Integer statusCode;
+
     public GeneratePartialYaraRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GeneratePartialYaraRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GeneratePartialYaraRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GeneratePartialYaraRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

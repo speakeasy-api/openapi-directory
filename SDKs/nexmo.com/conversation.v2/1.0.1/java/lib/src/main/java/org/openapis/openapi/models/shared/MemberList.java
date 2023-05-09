@@ -12,6 +12,7 @@ public class MemberList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public MemberListLinks links;
+
     public MemberList withLinks(MemberListLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class MemberList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public MemberList withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -34,6 +36,7 @@ public class MemberList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MemberList withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class MemberList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MemberList withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class MemberList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MemberListStateEnum state;
+
     public MemberList withState(MemberListStateEnum state) {
         this.state = state;
         return this;
@@ -67,9 +72,11 @@ public class MemberList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public MemberList withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public MemberList(){}
 }

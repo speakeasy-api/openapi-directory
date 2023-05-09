@@ -18,6 +18,7 @@ public class ListJobTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplates")
     public JobTemplate[] jobTemplates;
+
     public ListJobTemplatesResponse withJobTemplates(JobTemplate[] jobTemplates) {
         this.jobTemplates = jobTemplates;
         return this;
@@ -29,6 +30,7 @@ public class ListJobTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListJobTemplatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListJobTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListJobTemplatesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListJobTemplatesResponse(){}
 }

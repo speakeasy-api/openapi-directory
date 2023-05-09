@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OriginBatchResponse {
@@ -12,6 +13,7 @@ public class OriginBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchFirstLastNameOriginedOut batchFirstLastNameOriginedOut;
+
     public OriginBatchResponse withBatchFirstLastNameOriginedOut(org.openapis.openapi.models.shared.BatchFirstLastNameOriginedOut batchFirstLastNameOriginedOut) {
         this.batchFirstLastNameOriginedOut = batchFirstLastNameOriginedOut;
         return this;
@@ -19,6 +21,7 @@ public class OriginBatchResponse {
     
     
     public String contentType;
+
     public OriginBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class OriginBatchResponse {
     
     
     public Integer statusCode;
+
     public OriginBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class OriginBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OriginBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OriginBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

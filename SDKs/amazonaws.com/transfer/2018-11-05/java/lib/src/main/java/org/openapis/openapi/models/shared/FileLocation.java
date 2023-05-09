@@ -15,6 +15,7 @@ public class FileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EfsFileLocation")
     public EfsFileLocation efsFileLocation;
+
     public FileLocation withEfsFileLocation(EfsFileLocation efsFileLocation) {
         this.efsFileLocation = efsFileLocation;
         return this;
@@ -23,9 +24,11 @@ public class FileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3FileLocation")
     public S3FileLocation s3FileLocation;
+
     public FileLocation withS3FileLocation(S3FileLocation s3FileLocation) {
         this.s3FileLocation = s3FileLocation;
         return this;
     }
     
+    public FileLocation(){}
 }

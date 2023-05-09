@@ -12,6 +12,7 @@ public class ApiCoreDtoAccountingExtendedGrants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAllGrants")
     public Boolean allowAllGrants;
+
     public ApiCoreDtoAccountingExtendedGrants withAllowAllGrants(Boolean allowAllGrants) {
         this.allowAllGrants = allowAllGrants;
         return this;
@@ -20,9 +21,11 @@ public class ApiCoreDtoAccountingExtendedGrants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowGroupCreation")
     public Boolean allowGroupCreation;
+
     public ApiCoreDtoAccountingExtendedGrants withAllowGroupCreation(Boolean allowGroupCreation) {
         this.allowGroupCreation = allowGroupCreation;
         return this;
     }
     
+    public ApiCoreDtoAccountingExtendedGrants(){}
 }

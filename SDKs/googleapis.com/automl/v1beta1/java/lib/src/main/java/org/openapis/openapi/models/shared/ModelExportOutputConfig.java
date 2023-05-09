@@ -18,6 +18,7 @@ public class ModelExportOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcrDestination")
     public GcrDestination gcrDestination;
+
     public ModelExportOutputConfig withGcrDestination(GcrDestination gcrDestination) {
         this.gcrDestination = gcrDestination;
         return this;
@@ -29,6 +30,7 @@ public class ModelExportOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsDestination gcsDestination;
+
     public ModelExportOutputConfig withGcsDestination(GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
@@ -40,6 +42,7 @@ public class ModelExportOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelFormat")
     public String modelFormat;
+
     public ModelExportOutputConfig withModelFormat(String modelFormat) {
         this.modelFormat = modelFormat;
         return this;
@@ -51,9 +54,11 @@ public class ModelExportOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public ModelExportOutputConfig withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
     }
     
+    public ModelExportOutputConfig(){}
 }

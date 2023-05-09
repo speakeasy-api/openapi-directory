@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDomainResponse {
     
     public String contentType;
+
     public DescribeDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDomainResponse describeDomainResponse;
+
     public DescribeDomainResponse withDescribeDomainResponse(org.openapis.openapi.models.shared.DescribeDomainResponse describeDomainResponse) {
         this.describeDomainResponse = describeDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDomainResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeDomainResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDomainResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDomainResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeDomainResponse {
     
     
     public Integer statusCode;
+
     public DescribeDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDomainResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeDomainResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDomainResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeDomainResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

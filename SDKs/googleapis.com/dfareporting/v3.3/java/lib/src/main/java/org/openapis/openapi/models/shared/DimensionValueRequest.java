@@ -20,6 +20,7 @@ public class DimensionValueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionName")
     public String dimensionName;
+
     public DimensionValueRequest withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -29,6 +30,7 @@ public class DimensionValueRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public DimensionValueRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -40,6 +42,7 @@ public class DimensionValueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DimensionFilter[] filters;
+
     public DimensionValueRequest withFilters(DimensionFilter[] filters) {
         this.filters = filters;
         return this;
@@ -51,6 +54,7 @@ public class DimensionValueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DimensionValueRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -60,9 +64,11 @@ public class DimensionValueRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public DimensionValueRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public DimensionValueRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPresenceHistoryOfChannelRequest {
@@ -12,6 +13,7 @@ public class GetPresenceHistoryOfChannelRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetPresenceHistoryOfChannelRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +24,7 @@ public class GetPresenceHistoryOfChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
     public String channelId;
+
     public GetPresenceHistoryOfChannelRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,6 +32,7 @@ public class GetPresenceHistoryOfChannelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.FilterDirectionEnum direction;
+
     public GetPresenceHistoryOfChannelRequest withDirection(org.openapis.openapi.models.shared.FilterDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -36,6 +40,7 @@ public class GetPresenceHistoryOfChannelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public GetPresenceHistoryOfChannelRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -46,6 +51,7 @@ public class GetPresenceHistoryOfChannelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetPresenceHistoryOfChannelRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
@@ -53,6 +59,7 @@ public class GetPresenceHistoryOfChannelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPresenceHistoryOfChannelRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -60,9 +67,13 @@ public class GetPresenceHistoryOfChannelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public GetPresenceHistoryOfChannelRequest withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public GetPresenceHistoryOfChannelRequest(@JsonProperty("channel_id") String channelId) {
+        this.channelId = channelId;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeWorkspacesConnectionStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspacesConnectionStatusResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeWorkspacesConnectionStatusResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspacesConnectionStatus")
     public WorkspaceConnectionStatus[] workspacesConnectionStatus;
+
     public DescribeWorkspacesConnectionStatusResult withWorkspacesConnectionStatus(WorkspaceConnectionStatus[] workspacesConnectionStatus) {
         this.workspacesConnectionStatus = workspacesConnectionStatus;
         return this;
     }
     
+    public DescribeWorkspacesConnectionStatusResult(){}
 }

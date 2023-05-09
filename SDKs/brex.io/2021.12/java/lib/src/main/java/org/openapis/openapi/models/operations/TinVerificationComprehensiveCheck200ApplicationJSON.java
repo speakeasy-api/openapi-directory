@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TinVerificationComprehensiveCheck200ApplicationJSON {
     @JsonProperty("einResult")
     public String einResult;
+
     public TinVerificationComprehensiveCheck200ApplicationJSON withEinResult(String einResult) {
         this.einResult = einResult;
         return this;
@@ -19,6 +20,7 @@ public class TinVerificationComprehensiveCheck200ApplicationJSON {
     
     @JsonProperty("matchedCompanies")
     public org.openapis.openapi.models.shared.Oneapi1v11company1search1name1Percent7BcountryPercent7D1Percent7BnamePercent7DGetResponses200ContentApplication1jsonSchema[] matchedCompanies;
+
     public TinVerificationComprehensiveCheck200ApplicationJSON withMatchedCompanies(org.openapis.openapi.models.shared.Oneapi1v11company1search1name1Percent7BcountryPercent7D1Percent7BnamePercent7DGetResponses200ContentApplication1jsonSchema[] matchedCompanies) {
         this.matchedCompanies = matchedCompanies;
         return this;
@@ -26,9 +28,15 @@ public class TinVerificationComprehensiveCheck200ApplicationJSON {
     
     @JsonProperty("tinResult")
     public String tinResult;
+
     public TinVerificationComprehensiveCheck200ApplicationJSON withTinResult(String tinResult) {
         this.tinResult = tinResult;
         return this;
     }
     
+    public TinVerificationComprehensiveCheck200ApplicationJSON(@JsonProperty("einResult") String einResult, @JsonProperty("matchedCompanies") org.openapis.openapi.models.shared.Oneapi1v11company1search1name1Percent7BcountryPercent7D1Percent7BnamePercent7DGetResponses200ContentApplication1jsonSchema[] matchedCompanies, @JsonProperty("tinResult") String tinResult) {
+        this.einResult = einResult;
+        this.matchedCompanies = matchedCompanies;
+        this.tinResult = tinResult;
+  }
 }

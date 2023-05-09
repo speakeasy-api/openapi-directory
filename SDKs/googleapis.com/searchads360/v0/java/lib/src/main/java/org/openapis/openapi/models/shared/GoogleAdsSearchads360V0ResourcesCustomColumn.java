@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryable")
     public Boolean queryable;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withQueryable(Boolean queryable) {
         this.queryable = queryable;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencedSystemColumns")
     public String[] referencedSystemColumns;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withReferencedSystemColumns(String[] referencedSystemColumns) {
         this.referencedSystemColumns = referencedSystemColumns;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencesAttributes")
     public Boolean referencesAttributes;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withReferencesAttributes(Boolean referencesAttributes) {
         this.referencesAttributes = referencesAttributes;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencesMetrics")
     public Boolean referencesMetrics;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withReferencesMetrics(Boolean referencesMetrics) {
         this.referencesMetrics = referencesMetrics;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -106,9 +114,11 @@ public class GoogleAdsSearchads360V0ResourcesCustomColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum valueType;
+
     public GoogleAdsSearchads360V0ResourcesCustomColumn withValueType(GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCustomColumn(){}
 }

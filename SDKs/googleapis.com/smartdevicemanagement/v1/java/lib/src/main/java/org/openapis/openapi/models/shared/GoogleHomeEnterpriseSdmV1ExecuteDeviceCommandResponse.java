@@ -18,9 +18,11 @@ public class GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, Object> results;
+
     public GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse withResults(java.util.Map<String, Object> results) {
         this.results = results;
         return this;
     }
     
+    public GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse(){}
 }

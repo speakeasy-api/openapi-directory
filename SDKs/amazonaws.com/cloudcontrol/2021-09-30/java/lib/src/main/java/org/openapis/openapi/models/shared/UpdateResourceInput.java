@@ -12,6 +12,7 @@ public class UpdateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public UpdateResourceInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class UpdateResourceInput {
     
     @JsonProperty("Identifier")
     public String identifier;
+
     public UpdateResourceInput withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -26,6 +28,7 @@ public class UpdateResourceInput {
     
     @JsonProperty("PatchDocument")
     public String patchDocument;
+
     public UpdateResourceInput withPatchDocument(String patchDocument) {
         this.patchDocument = patchDocument;
         return this;
@@ -34,6 +37,7 @@ public class UpdateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateResourceInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -41,6 +45,7 @@ public class UpdateResourceInput {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public UpdateResourceInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -49,9 +54,15 @@ public class UpdateResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeVersionId")
     public String typeVersionId;
+
     public UpdateResourceInput withTypeVersionId(String typeVersionId) {
         this.typeVersionId = typeVersionId;
         return this;
     }
     
+    public UpdateResourceInput(@JsonProperty("Identifier") String identifier, @JsonProperty("PatchDocument") String patchDocument, @JsonProperty("TypeName") String typeName) {
+        this.identifier = identifier;
+        this.patchDocument = patchDocument;
+        this.typeName = typeName;
+  }
 }

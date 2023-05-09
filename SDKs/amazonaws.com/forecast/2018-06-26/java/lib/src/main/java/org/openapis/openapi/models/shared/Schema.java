@@ -15,9 +15,11 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public SchemaAttribute[] attributes;
+
     public Schema withAttributes(SchemaAttribute[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public Schema(){}
 }

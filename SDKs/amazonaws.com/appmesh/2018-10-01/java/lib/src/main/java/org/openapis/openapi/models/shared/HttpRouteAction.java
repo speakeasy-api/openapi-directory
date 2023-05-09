@@ -16,9 +16,11 @@ public class HttpRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightedTargets")
     public WeightedTarget[] weightedTargets;
+
     public HttpRouteAction withWeightedTargets(WeightedTarget[] weightedTargets) {
         this.weightedTargets = weightedTargets;
         return this;
     }
     
+    public HttpRouteAction(){}
 }

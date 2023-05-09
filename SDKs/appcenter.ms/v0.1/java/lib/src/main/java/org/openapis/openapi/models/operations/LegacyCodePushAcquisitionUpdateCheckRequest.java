@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class LegacyCodePushAcquisitionUpdateCheckRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appVersion")
     public String appVersion;
+
     public LegacyCodePushAcquisitionUpdateCheckRequest withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -16,6 +17,7 @@ public class LegacyCodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientUniqueId")
     public String clientUniqueId;
+
     public LegacyCodePushAcquisitionUpdateCheckRequest withClientUniqueId(String clientUniqueId) {
         this.clientUniqueId = clientUniqueId;
         return this;
@@ -23,6 +25,7 @@ public class LegacyCodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deploymentKey")
     public String deploymentKey;
+
     public LegacyCodePushAcquisitionUpdateCheckRequest withDeploymentKey(String deploymentKey) {
         this.deploymentKey = deploymentKey;
         return this;
@@ -30,6 +33,7 @@ public class LegacyCodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isCompanion")
     public String isCompanion;
+
     public LegacyCodePushAcquisitionUpdateCheckRequest withIsCompanion(String isCompanion) {
         this.isCompanion = isCompanion;
         return this;
@@ -37,6 +41,7 @@ public class LegacyCodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
     public String label;
+
     public LegacyCodePushAcquisitionUpdateCheckRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -44,9 +49,11 @@ public class LegacyCodePushAcquisitionUpdateCheckRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageHash")
     public String packageHash;
+
     public LegacyCodePushAcquisitionUpdateCheckRequest withPackageHash(String packageHash) {
         this.packageHash = packageHash;
         return this;
     }
     
+    public LegacyCodePushAcquisitionUpdateCheckRequest(){}
 }

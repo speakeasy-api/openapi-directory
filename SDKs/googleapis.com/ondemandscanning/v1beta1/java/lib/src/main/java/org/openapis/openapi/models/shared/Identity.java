@@ -18,6 +18,7 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Integer revision;
+
     public Identity withRevision(Integer revision) {
         this.revision = revision;
         return this;
@@ -29,9 +30,11 @@ public class Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateId")
     public String updateId;
+
     public Identity withUpdateId(String updateId) {
         this.updateId = updateId;
         return this;
     }
     
+    public Identity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecognizeCelebritiesResponse {
@@ -12,6 +13,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object accessDeniedException;
+
     public RecognizeCelebritiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RecognizeCelebritiesResponse {
     
     
     public String contentType;
+
     public RecognizeCelebritiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object imageTooLargeException;
+
     public RecognizeCelebritiesResponse withImageTooLargeException(Object imageTooLargeException) {
         this.imageTooLargeException = imageTooLargeException;
         return this;
@@ -39,6 +43,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object internalServerError;
+
     public RecognizeCelebritiesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object invalidImageFormatException;
+
     public RecognizeCelebritiesResponse withInvalidImageFormatException(Object invalidImageFormatException) {
         this.invalidImageFormatException = invalidImageFormatException;
         return this;
@@ -59,6 +65,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object invalidParameterException;
+
     public RecognizeCelebritiesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public RecognizeCelebritiesResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -79,6 +87,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public RecognizeCelebritiesResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -89,6 +98,7 @@ public class RecognizeCelebritiesResponse {
      */
     
     public org.openapis.openapi.models.shared.RecognizeCelebritiesResponse recognizeCelebritiesResponse;
+
     public RecognizeCelebritiesResponse withRecognizeCelebritiesResponse(org.openapis.openapi.models.shared.RecognizeCelebritiesResponse recognizeCelebritiesResponse) {
         this.recognizeCelebritiesResponse = recognizeCelebritiesResponse;
         return this;
@@ -96,6 +106,7 @@ public class RecognizeCelebritiesResponse {
     
     
     public Integer statusCode;
+
     public RecognizeCelebritiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class RecognizeCelebritiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecognizeCelebritiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class RecognizeCelebritiesResponse {
      */
     
     public Object throttlingException;
+
     public RecognizeCelebritiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public RecognizeCelebritiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

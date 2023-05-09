@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkspaceResponse {
     
     public String contentType;
+
     public DeleteWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public DeleteWorkspace200ApplicationJSON deleteWorkspace200ApplicationJSONObject;
+
     public DeleteWorkspaceResponse withDeleteWorkspace200ApplicationJSONObject(DeleteWorkspace200ApplicationJSON deleteWorkspace200ApplicationJSONObject) {
         this.deleteWorkspace200ApplicationJSONObject = deleteWorkspace200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public DeleteWorkspace401ApplicationJSON deleteWorkspace401ApplicationJSONObject;
+
     public DeleteWorkspaceResponse withDeleteWorkspace401ApplicationJSONObject(DeleteWorkspace401ApplicationJSON deleteWorkspace401ApplicationJSONObject) {
         this.deleteWorkspace401ApplicationJSONObject = deleteWorkspace401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public DeleteWorkspace403ApplicationJSON deleteWorkspace403ApplicationJSONObject;
+
     public DeleteWorkspaceResponse withDeleteWorkspace403ApplicationJSONObject(DeleteWorkspace403ApplicationJSON deleteWorkspace403ApplicationJSONObject) {
         this.deleteWorkspace403ApplicationJSONObject = deleteWorkspace403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public DeleteWorkspace404ApplicationJSON deleteWorkspace404ApplicationJSONObject;
+
     public DeleteWorkspaceResponse withDeleteWorkspace404ApplicationJSONObject(DeleteWorkspace404ApplicationJSON deleteWorkspace404ApplicationJSONObject) {
         this.deleteWorkspace404ApplicationJSONObject = deleteWorkspace404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWorkspaceResponse {
      */
     
     public DeleteWorkspace422ApplicationJSON deleteWorkspace422ApplicationJSONObject;
+
     public DeleteWorkspaceResponse withDeleteWorkspace422ApplicationJSONObject(DeleteWorkspace422ApplicationJSON deleteWorkspace422ApplicationJSONObject) {
         this.deleteWorkspace422ApplicationJSONObject = deleteWorkspace422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class DeleteWorkspaceResponse {
      */
     
     public DeleteWorkspace500ApplicationJSON deleteWorkspace500ApplicationJSONObject;
+
     public DeleteWorkspaceResponse withDeleteWorkspace500ApplicationJSONObject(DeleteWorkspace500ApplicationJSON deleteWorkspace500ApplicationJSONObject) {
         this.deleteWorkspace500ApplicationJSONObject = deleteWorkspace500ApplicationJSONObject;
         return this;
     }
     
+    public DeleteWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class ShardConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardCount")
     public Long shardCount;
+
     public ShardConfigurationRequest withShardCount(Long shardCount) {
         this.shardCount = shardCount;
         return this;
     }
     
+    public ShardConfigurationRequest(){}
 }

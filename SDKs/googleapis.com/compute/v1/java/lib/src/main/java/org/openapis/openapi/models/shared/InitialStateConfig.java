@@ -18,6 +18,7 @@ public class InitialStateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbs")
     public FileContentBuffer[] dbs;
+
     public InitialStateConfig withDbs(FileContentBuffer[] dbs) {
         this.dbs = dbs;
         return this;
@@ -29,6 +30,7 @@ public class InitialStateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbxs")
     public FileContentBuffer[] dbxs;
+
     public InitialStateConfig withDbxs(FileContentBuffer[] dbxs) {
         this.dbxs = dbxs;
         return this;
@@ -40,6 +42,7 @@ public class InitialStateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keks")
     public FileContentBuffer[] keks;
+
     public InitialStateConfig withKeks(FileContentBuffer[] keks) {
         this.keks = keks;
         return this;
@@ -48,9 +51,11 @@ public class InitialStateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pk")
     public FileContentBuffer pk;
+
     public InitialStateConfig withPk(FileContentBuffer pk) {
         this.pk = pk;
         return this;
     }
     
+    public InitialStateConfig(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceRecord {
     @JsonProperty("Name")
     public String name;
+
     public ResourceRecord withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class ResourceRecord {
     
     @JsonProperty("Type")
     public RecordTypeEnum type;
+
     public ResourceRecord withType(RecordTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +28,15 @@ public class ResourceRecord {
     
     @JsonProperty("Value")
     public String value;
+
     public ResourceRecord withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResourceRecord(@JsonProperty("Name") String name, @JsonProperty("Type") RecordTypeEnum type, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.type = type;
+        this.value = value;
+  }
 }

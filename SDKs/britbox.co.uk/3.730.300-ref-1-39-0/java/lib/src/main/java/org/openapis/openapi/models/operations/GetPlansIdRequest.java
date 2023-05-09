@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlansIdRequest {
@@ -12,6 +13,7 @@ public class GetPlansIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetPlansIdRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +44,7 @@ public class GetPlansIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetPlansIdRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,6 +55,7 @@ public class GetPlansIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetPlansIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -72,6 +76,7 @@ public class GetPlansIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetPlansIdRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -82,6 +87,7 @@ public class GetPlansIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetPlansIdRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -92,9 +98,13 @@ public class GetPlansIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetPlansIdRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetPlansIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

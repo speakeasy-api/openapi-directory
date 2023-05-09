@@ -12,6 +12,7 @@ public class ProjectLanguagesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombinations")
     public LanguageCombinationDto1[] languageCombinations;
+
     public ProjectLanguagesDTO withLanguageCombinations(LanguageCombinationDto1[] languageCombinations) {
         this.languageCombinations = languageCombinations;
         return this;
@@ -20,6 +21,7 @@ public class ProjectLanguagesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageId")
     public Long sourceLanguageId;
+
     public ProjectLanguagesDTO withSourceLanguageId(Long sourceLanguageId) {
         this.sourceLanguageId = sourceLanguageId;
         return this;
@@ -28,6 +30,7 @@ public class ProjectLanguagesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specializationId")
     public Long specializationId;
+
     public ProjectLanguagesDTO withSpecializationId(Long specializationId) {
         this.specializationId = specializationId;
         return this;
@@ -36,9 +39,11 @@ public class ProjectLanguagesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageIds")
     public Long[] targetLanguageIds;
+
     public ProjectLanguagesDTO withTargetLanguageIds(Long[] targetLanguageIds) {
         this.targetLanguageIds = targetLanguageIds;
         return this;
     }
     
+    public ProjectLanguagesDTO(){}
 }

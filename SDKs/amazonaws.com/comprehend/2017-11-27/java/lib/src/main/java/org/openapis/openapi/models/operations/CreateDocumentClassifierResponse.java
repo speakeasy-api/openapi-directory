@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDocumentClassifierResponse {
     
     public String contentType;
+
     public CreateDocumentClassifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDocumentClassifierResponse createDocumentClassifierResponse;
+
     public CreateDocumentClassifierResponse withCreateDocumentClassifierResponse(org.openapis.openapi.models.shared.CreateDocumentClassifierResponse createDocumentClassifierResponse) {
         this.createDocumentClassifierResponse = createDocumentClassifierResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object internalServerException;
+
     public CreateDocumentClassifierResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDocumentClassifierResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public CreateDocumentClassifierResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDocumentClassifierResponse {
     
     
     public Integer statusCode;
+
     public CreateDocumentClassifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDocumentClassifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDocumentClassifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateDocumentClassifierResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateDocumentClassifierResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateDocumentClassifierResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,6 +114,7 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateDocumentClassifierResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -113,9 +125,14 @@ public class CreateDocumentClassifierResponse {
      */
     
     public Object unsupportedLanguageException;
+
     public CreateDocumentClassifierResponse withUnsupportedLanguageException(Object unsupportedLanguageException) {
         this.unsupportedLanguageException = unsupportedLanguageException;
         return this;
     }
     
+    public CreateDocumentClassifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

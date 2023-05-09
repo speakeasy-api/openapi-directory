@@ -15,6 +15,7 @@ public class SelfManagedActiveDirectoryAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsIps")
     public String[] dnsIps;
+
     public SelfManagedActiveDirectoryAttributes withDnsIps(String[] dnsIps) {
         this.dnsIps = dnsIps;
         return this;
@@ -23,6 +24,7 @@ public class SelfManagedActiveDirectoryAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public SelfManagedActiveDirectoryAttributes withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -31,6 +33,7 @@ public class SelfManagedActiveDirectoryAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemAdministratorsGroup")
     public String fileSystemAdministratorsGroup;
+
     public SelfManagedActiveDirectoryAttributes withFileSystemAdministratorsGroup(String fileSystemAdministratorsGroup) {
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
         return this;
@@ -39,6 +42,7 @@ public class SelfManagedActiveDirectoryAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationalUnitDistinguishedName")
     public String organizationalUnitDistinguishedName;
+
     public SelfManagedActiveDirectoryAttributes withOrganizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
         return this;
@@ -47,9 +51,11 @@ public class SelfManagedActiveDirectoryAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public SelfManagedActiveDirectoryAttributes withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public SelfManagedActiveDirectoryAttributes(){}
 }

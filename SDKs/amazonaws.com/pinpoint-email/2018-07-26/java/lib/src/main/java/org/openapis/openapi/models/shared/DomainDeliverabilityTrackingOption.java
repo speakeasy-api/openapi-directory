@@ -20,6 +20,7 @@ public class DomainDeliverabilityTrackingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public DomainDeliverabilityTrackingOption withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -28,6 +29,7 @@ public class DomainDeliverabilityTrackingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboxPlacementTrackingOption")
     public InboxPlacementTrackingOption inboxPlacementTrackingOption;
+
     public DomainDeliverabilityTrackingOption withInboxPlacementTrackingOption(InboxPlacementTrackingOption inboxPlacementTrackingOption) {
         this.inboxPlacementTrackingOption = inboxPlacementTrackingOption;
         return this;
@@ -38,9 +40,11 @@ public class DomainDeliverabilityTrackingOption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubscriptionStartDate")
     public OffsetDateTime subscriptionStartDate;
+
     public DomainDeliverabilityTrackingOption withSubscriptionStartDate(OffsetDateTime subscriptionStartDate) {
         this.subscriptionStartDate = subscriptionStartDate;
         return this;
     }
     
+    public DomainDeliverabilityTrackingOption(){}
 }

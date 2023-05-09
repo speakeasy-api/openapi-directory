@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CheckResponse - OK
@@ -15,6 +15,7 @@ public class CheckResponse {
      */
     
     public Integer genuine;
+
     public CheckResponse withGenuine(Integer genuine) {
         this.genuine = genuine;
         return this;
@@ -22,9 +23,13 @@ public class CheckResponse {
     
     
     public GenuineToken token;
+
     public CheckResponse withToken(GenuineToken token) {
         this.token = token;
         return this;
     }
     
+    public CheckResponse(@JsonProperty("genuine") Integer genuine) {
+        this.genuine = genuine;
+  }
 }

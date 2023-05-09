@@ -12,6 +12,7 @@ public class CreateOpsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public java.util.Map<String, MetadataValue> metadata;
+
     public CreateOpsMetadataRequest withMetadata(java.util.Map<String, MetadataValue> metadata) {
         this.metadata = metadata;
         return this;
@@ -19,6 +20,7 @@ public class CreateOpsMetadataRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public CreateOpsMetadataRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -27,9 +29,13 @@ public class CreateOpsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateOpsMetadataRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOpsMetadataRequest(@JsonProperty("ResourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

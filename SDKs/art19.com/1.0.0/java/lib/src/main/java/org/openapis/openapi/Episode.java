@@ -66,12 +66,10 @@ public class Episode {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEpisodesResponse res = new org.openapis.openapi.models.operations.GetEpisodesResponse() {{
+        org.openapis.openapi.models.operations.GetEpisodesResponse res = new org.openapis.openapi.models.operations.GetEpisodesResponse(contentType, httpRes.statusCode()) {{
             getEpisodes200ApplicationVndApiPlusJsonObject = null;
             getEpisodes400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,11 +118,9 @@ public class Episode {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEpisodesIdResponse res = new org.openapis.openapi.models.operations.GetEpisodesIdResponse() {{
+        org.openapis.openapi.models.operations.GetEpisodesIdResponse res = new org.openapis.openapi.models.operations.GetEpisodesIdResponse(contentType, httpRes.statusCode()) {{
             getEpisodesId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +168,9 @@ public class Episode {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingResponse res = new org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingResponse() {{
+        org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingResponse res = new org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingResponse(contentType, httpRes.statusCode()) {{
             getEpisodesIdNextSibling200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,11 +218,9 @@ public class Episode {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingResponse res = new org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingResponse() {{
+        org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingResponse res = new org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingResponse(contentType, httpRes.statusCode()) {{
             getEpisodesIdPreviousSibling200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

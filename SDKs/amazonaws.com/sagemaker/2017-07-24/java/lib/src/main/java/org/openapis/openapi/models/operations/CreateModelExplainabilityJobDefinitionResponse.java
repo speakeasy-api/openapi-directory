@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelExplainabilityJobDefinitionResponse {
     
     public String contentType;
+
     public CreateModelExplainabilityJobDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateModelExplainabilityJobDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelExplainabilityJobDefinitionResponse createModelExplainabilityJobDefinitionResponse;
+
     public CreateModelExplainabilityJobDefinitionResponse withCreateModelExplainabilityJobDefinitionResponse(org.openapis.openapi.models.shared.CreateModelExplainabilityJobDefinitionResponse createModelExplainabilityJobDefinitionResponse) {
         this.createModelExplainabilityJobDefinitionResponse = createModelExplainabilityJobDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelExplainabilityJobDefinitionResponse {
      */
     
     public Object resourceInUse;
+
     public CreateModelExplainabilityJobDefinitionResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateModelExplainabilityJobDefinitionResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateModelExplainabilityJobDefinitionResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CreateModelExplainabilityJobDefinitionResponse {
     
     
     public Integer statusCode;
+
     public CreateModelExplainabilityJobDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateModelExplainabilityJobDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelExplainabilityJobDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateModelExplainabilityJobDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

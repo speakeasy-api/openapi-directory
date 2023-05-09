@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileGetNodeFilePropertiesFromTaskRequest {
@@ -12,6 +13,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public FileGetNodeFilePropertiesFromTaskRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -22,6 +24,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public FileGetNodeFilePropertiesFromTaskRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public FileGetNodeFilePropertiesFromTaskRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -42,6 +46,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public FileGetNodeFilePropertiesFromTaskRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -52,6 +57,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
     public String fileName;
+
     public FileGetNodeFilePropertiesFromTaskRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -62,6 +68,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public FileGetNodeFilePropertiesFromTaskRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -72,6 +79,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public FileGetNodeFilePropertiesFromTaskRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -82,6 +90,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public FileGetNodeFilePropertiesFromTaskRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -92,6 +101,7 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public FileGetNodeFilePropertiesFromTaskRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -102,9 +112,16 @@ public class FileGetNodeFilePropertiesFromTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public FileGetNodeFilePropertiesFromTaskRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FileGetNodeFilePropertiesFromTaskRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("fileName") String fileName, @JsonProperty("jobId") String jobId, @JsonProperty("taskId") String taskId) {
+        this.apiVersion = apiVersion;
+        this.fileName = fileName;
+        this.jobId = jobId;
+        this.taskId = taskId;
+  }
 }

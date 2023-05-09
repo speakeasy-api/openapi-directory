@@ -13,6 +13,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accounts_synced")
     public String accountsSynced;
+
     public GetInvoicingRequest withAccountsSynced(String accountsSynced) {
         this.accountsSynced = accountsSynced;
         return this;
@@ -23,6 +24,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public String all;
+
     public GetInvoicingRequest withAll(String all) {
         this.all = all;
         return this;
@@ -33,6 +35,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connections_account")
     public String connectionsAccount;
+
     public GetInvoicingRequest withConnectionsAccount(String connectionsAccount) {
         this.connectionsAccount = connectionsAccount;
         return this;
@@ -43,6 +46,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connections_synced")
     public String connectionsSynced;
+
     public GetInvoicingRequest withConnectionsSynced(String connectionsSynced) {
         this.connectionsSynced = connectionsSynced;
         return this;
@@ -53,6 +57,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detail")
     public String detail;
+
     public GetInvoicingRequest withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -63,6 +68,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetInvoicingRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -73,6 +79,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetInvoicingRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -83,6 +90,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payments_synced")
     public String paymentsSynced;
+
     public GetInvoicingRequest withPaymentsSynced(String paymentsSynced) {
         this.paymentsSynced = paymentsSynced;
         return this;
@@ -93,6 +101,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subscriptions_synced")
     public String subscriptionsSynced;
+
     public GetInvoicingRequest withSubscriptionsSynced(String subscriptionsSynced) {
         this.subscriptionsSynced = subscriptionsSynced;
         return this;
@@ -103,6 +112,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transfers_synced")
     public String transfersSynced;
+
     public GetInvoicingRequest withTransfersSynced(String transfersSynced) {
         this.transfersSynced = transfersSynced;
         return this;
@@ -113,6 +123,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=users_bank")
     public String usersBank;
+
     public GetInvoicingRequest withUsersBank(String usersBank) {
         this.usersBank = usersBank;
         return this;
@@ -123,6 +134,7 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=users_bill")
     public String usersBill;
+
     public GetInvoicingRequest withUsersBill(String usersBill) {
         this.usersBill = usersBill;
         return this;
@@ -133,9 +145,11 @@ public class GetInvoicingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=users_synced")
     public String usersSynced;
+
     public GetInvoicingRequest withUsersSynced(String usersSynced) {
         this.usersSynced = usersSynced;
         return this;
     }
     
+    public GetInvoicingRequest(){}
 }

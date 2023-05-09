@@ -18,6 +18,7 @@ public class SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -29,6 +30,7 @@ public class SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson withStatus(Long status) {
         this.status = status;
         return this;
@@ -40,6 +42,7 @@ public class SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson withTitle(String title) {
         this.title = title;
         return this;
@@ -51,9 +54,11 @@ public class SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SubmitTranscriptionJobMultipart400ApplicationProblemPlusJson(){}
 }

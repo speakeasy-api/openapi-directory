@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDirectoriesResponse {
     @JsonProperty("Directories")
     public Directory[] directories;
+
     public ListDirectoriesResponse withDirectories(Directory[] directories) {
         this.directories = directories;
         return this;
@@ -22,9 +23,13 @@ public class ListDirectoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDirectoriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDirectoriesResponse(@JsonProperty("Directories") Directory[] directories) {
+        this.directories = directories;
+  }
 }

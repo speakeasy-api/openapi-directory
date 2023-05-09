@@ -15,6 +15,7 @@ public class UpdateBulkInventory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAttributes")
     public java.util.Map<String, Object> additionalAttributes;
+
     public UpdateBulkInventory200ApplicationJSON withAdditionalAttributes(java.util.Map<String, Object> additionalAttributes) {
         this.additionalAttributes = additionalAttributes;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBulkInventory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object> errors;
+
     public UpdateBulkInventory200ApplicationJSON withErrors(java.util.Map<String, Object> errors) {
         this.errors = errors;
         return this;
@@ -34,9 +36,11 @@ public class UpdateBulkInventory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedId")
     public String feedId;
+
     public UpdateBulkInventory200ApplicationJSON withFeedId(String feedId) {
         this.feedId = feedId;
         return this;
     }
     
+    public UpdateBulkInventory200ApplicationJSON(){}
 }

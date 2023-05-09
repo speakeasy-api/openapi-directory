@@ -15,9 +15,11 @@ public class CreateNamespaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public Namespace namespace;
+
     public CreateNamespaceResponse withNamespace(Namespace namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public CreateNamespaceResponse(){}
 }

@@ -15,9 +15,11 @@ public class CreateLayerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerId")
     public String layerId;
+
     public CreateLayerResult withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
     }
     
+    public CreateLayerResult(){}
 }

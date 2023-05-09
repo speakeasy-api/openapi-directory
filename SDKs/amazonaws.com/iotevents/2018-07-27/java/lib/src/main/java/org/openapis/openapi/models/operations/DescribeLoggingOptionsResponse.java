@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLoggingOptionsResponse {
     
     public String contentType;
+
     public DescribeLoggingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLoggingOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLoggingOptionsResponse describeLoggingOptionsResponse;
+
     public DescribeLoggingOptionsResponse withDescribeLoggingOptionsResponse(org.openapis.openapi.models.shared.DescribeLoggingOptionsResponse describeLoggingOptionsResponse) {
         this.describeLoggingOptionsResponse = describeLoggingOptionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLoggingOptionsResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeLoggingOptionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLoggingOptionsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeLoggingOptionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeLoggingOptionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeLoggingOptionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeLoggingOptionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeLoggingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeLoggingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLoggingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeLoggingOptionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeLoggingOptionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DescribeLoggingOptionsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeLoggingOptionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeLoggingOptionsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeLoggingOptionsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeLoggingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

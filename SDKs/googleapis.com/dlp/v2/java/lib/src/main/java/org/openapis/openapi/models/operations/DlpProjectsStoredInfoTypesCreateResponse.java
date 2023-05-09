@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DlpProjectsStoredInfoTypesCreateResponse {
     
     public String contentType;
+
     public DlpProjectsStoredInfoTypesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DlpProjectsStoredInfoTypesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglePrivacyDlpV2StoredInfoType googlePrivacyDlpV2StoredInfoType;
+
     public DlpProjectsStoredInfoTypesCreateResponse withGooglePrivacyDlpV2StoredInfoType(org.openapis.openapi.models.shared.GooglePrivacyDlpV2StoredInfoType googlePrivacyDlpV2StoredInfoType) {
         this.googlePrivacyDlpV2StoredInfoType = googlePrivacyDlpV2StoredInfoType;
         return this;
@@ -26,6 +29,7 @@ public class DlpProjectsStoredInfoTypesCreateResponse {
     
     
     public Integer statusCode;
+
     public DlpProjectsStoredInfoTypesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DlpProjectsStoredInfoTypesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DlpProjectsStoredInfoTypesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DlpProjectsStoredInfoTypesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

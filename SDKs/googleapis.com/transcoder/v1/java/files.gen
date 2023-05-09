@@ -90,9 +90,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/AdBreak.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListJobTemplatesResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/JobModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Job.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListJobsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAuditMitigationActionsTaskResponse {
     
     public String contentType;
+
     public DescribeAuditMitigationActionsTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAuditMitigationActionsTaskResponse describeAuditMitigationActionsTaskResponse;
+
     public DescribeAuditMitigationActionsTaskResponse withDescribeAuditMitigationActionsTaskResponse(org.openapis.openapi.models.shared.DescribeAuditMitigationActionsTaskResponse describeAuditMitigationActionsTaskResponse) {
         this.describeAuditMitigationActionsTaskResponse = describeAuditMitigationActionsTaskResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAuditMitigationActionsTaskResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAuditMitigationActionsTaskResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     
     
     public Integer statusCode;
+
     public DescribeAuditMitigationActionsTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAuditMitigationActionsTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAuditMitigationActionsTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAuditMitigationActionsTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAuditMitigationActionsTaskResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAuditMitigationActionsTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeAuditMitigationActionsTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

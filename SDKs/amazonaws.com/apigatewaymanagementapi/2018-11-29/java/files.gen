@@ -39,4 +39,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostToConnectionRespons
 lib/src/main/java/org/openapis/openapi/models/shared/GetConnectionResponseIdentity.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetConnectionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

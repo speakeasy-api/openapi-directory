@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostCompileRequest;
 import org.openapis.openapi.models.operations.PostCompileResponse;
 
@@ -36,16 +35,18 @@ public class Application {
                 instrument = false;
                 metrics = false;
                 pretty = false;
-            }}            
+            }};            
 
             PostCompileResponse res = sdk.compileAPI.postCompile(req);
 
-            if (res.postCompile200ApplicationJSONObject.isPresent()) {
+            if (res.postCompile200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -53,39 +54,39 @@ public class Application {
 ## Available Resources and Operations
 
 
-### compileAPI
+### [compileAPI](docs/compileapi/README.md)
 
-* `postCompile` - Compile
+* [postCompile](docs/compileapi/README.md#postcompile) - Compile
 
-### configAPI
+### [configAPI](docs/configapi/README.md)
 
-* `getConfig` - Get configurations
+* [getConfig](docs/configapi/README.md#getconfig) - Get configurations
 
-### dataAPI
+### [dataAPI](docs/dataapi/README.md)
 
-* `deleteDocument` - Delete a document
-* `getDocument` - Get a document
-* `getDocumentWithPath` - Get a document (with input)
-* `getDocumentWithWebHook` - Get a document (with webhook)
-* `patchDocument` - Update a document
-* `putDocument` - Create or overwrite a document
+* [deleteDocument](docs/dataapi/README.md#deletedocument) - Delete a document
+* [getDocument](docs/dataapi/README.md#getdocument) - Get a document
+* [getDocumentWithPath](docs/dataapi/README.md#getdocumentwithpath) - Get a document (with input)
+* [getDocumentWithWebHook](docs/dataapi/README.md#getdocumentwithwebhook) - Get a document (with webhook)
+* [patchDocument](docs/dataapi/README.md#patchdocument) - Update a document
+* [putDocument](docs/dataapi/README.md#putdocument) - Create or overwrite a document
 
-### healthAPI
+### [healthAPI](docs/healthapi/README.md)
 
-* `getHealth` - Health
+* [getHealth](docs/healthapi/README.md#gethealth) - Health
 
-### policyAPI
+### [policyAPI](docs/policyapi/README.md)
 
-* `deletePolicyModule` - Delete a policy module
-* `getPolicies` - List policies
-* `getPolicyModule` - Get a policy module
-* `putPolicyModule` - Create or update a policy module
+* [deletePolicyModule](docs/policyapi/README.md#deletepolicymodule) - Delete a policy module
+* [getPolicies](docs/policyapi/README.md#getpolicies) - List policies
+* [getPolicyModule](docs/policyapi/README.md#getpolicymodule) - Get a policy module
+* [putPolicyModule](docs/policyapi/README.md#putpolicymodule) - Create or update a policy module
 
-### queryAPI
+### [queryAPI](docs/queryapi/README.md)
 
-* `getQuery` - Execute an ad-hoc query (simple)
-* `postQuery` - Execute an ad-hoc query (complex)
-* `postSimpleQuery` - Execute a simple query
+* [getQuery](docs/queryapi/README.md#getquery) - Execute an ad-hoc query (simple)
+* [postQuery](docs/queryapi/README.md#postquery) - Execute an ad-hoc query (complex)
+* [postSimpleQuery](docs/queryapi/README.md#postsimplequery) - Execute a simple query
 <!-- End SDK Available Operations -->
 
 ### Maturity

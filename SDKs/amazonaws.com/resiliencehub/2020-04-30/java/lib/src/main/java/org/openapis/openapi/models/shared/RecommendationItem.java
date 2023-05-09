@@ -15,6 +15,7 @@ public class RecommendationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alreadyImplemented")
     public Boolean alreadyImplemented;
+
     public RecommendationItem withAlreadyImplemented(Boolean alreadyImplemented) {
         this.alreadyImplemented = alreadyImplemented;
         return this;
@@ -23,6 +24,7 @@ public class RecommendationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public RecommendationItem withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -31,6 +33,7 @@ public class RecommendationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetAccountId")
     public String targetAccountId;
+
     public RecommendationItem withTargetAccountId(String targetAccountId) {
         this.targetAccountId = targetAccountId;
         return this;
@@ -39,9 +42,11 @@ public class RecommendationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetRegion")
     public String targetRegion;
+
     public RecommendationItem withTargetRegion(String targetRegion) {
         this.targetRegion = targetRegion;
         return this;
     }
     
+    public RecommendationItem(){}
 }

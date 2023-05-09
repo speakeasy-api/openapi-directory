@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TokensRewardDisplayProperties {
     
     public String description;
+
     public TokensRewardDisplayProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class TokensRewardDisplayProperties {
     
     
     public String imagePath;
+
     public TokensRewardDisplayProperties withImagePath(String imagePath) {
         this.imagePath = imagePath;
         return this;
@@ -23,9 +25,11 @@ public class TokensRewardDisplayProperties {
     
     
     public String name;
+
     public TokensRewardDisplayProperties withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TokensRewardDisplayProperties(){}
 }

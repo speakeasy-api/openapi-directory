@@ -56,12 +56,10 @@ public class AddSubaccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubaccountAddResponse res = new org.openapis.openapi.models.operations.SubaccountAddResponse() {{
+        org.openapis.openapi.models.operations.SubaccountAddResponse res = new org.openapis.openapi.models.operations.SubaccountAddResponse(contentType, httpRes.statusCode()) {{
             subaccountAddResponse = null;
             erreur = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

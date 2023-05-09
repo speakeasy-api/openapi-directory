@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingInfo")
     public GoogleCloudChannelV1MarketingInfo marketingInfo;
+
     public GoogleCloudChannelV1Product withMarketingInfo(GoogleCloudChannelV1MarketingInfo marketingInfo) {
         this.marketingInfo = marketingInfo;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudChannelV1Product withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudChannelV1Product(){}
 }

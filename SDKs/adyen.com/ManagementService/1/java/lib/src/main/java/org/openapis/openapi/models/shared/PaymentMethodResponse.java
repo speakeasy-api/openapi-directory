@@ -15,6 +15,7 @@ public class PaymentMethodResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PaginationLinks links;
+
     public PaymentMethodResponse withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class PaymentMethodResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PaymentMethod[] data;
+
     public PaymentMethodResponse withData(PaymentMethod[] data) {
         this.data = data;
         return this;
@@ -36,6 +38,7 @@ public class PaymentMethodResponse {
      */
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public PaymentMethodResponse withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -46,6 +49,7 @@ public class PaymentMethodResponse {
      */
     @JsonProperty("pagesTotal")
     public Integer pagesTotal;
+
     public PaymentMethodResponse withPagesTotal(Integer pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
@@ -57,9 +61,14 @@ public class PaymentMethodResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typesWithErrors")
     public PaymentMethodResponseTypesWithErrorsEnum[] typesWithErrors;
+
     public PaymentMethodResponse withTypesWithErrors(PaymentMethodResponseTypesWithErrorsEnum[] typesWithErrors) {
         this.typesWithErrors = typesWithErrors;
         return this;
     }
     
+    public PaymentMethodResponse(@JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("pagesTotal") Integer pagesTotal) {
+        this.itemsTotal = itemsTotal;
+        this.pagesTotal = pagesTotal;
+  }
 }

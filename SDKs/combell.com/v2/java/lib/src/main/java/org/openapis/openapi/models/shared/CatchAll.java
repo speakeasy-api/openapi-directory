@@ -15,9 +15,11 @@ public class CatchAll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_addresses")
     public String[] emailAddresses;
+
     public CatchAll withEmailAddresses(String[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
     }
     
+    public CatchAll(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class MessageDsn {
     
     public OffsetDateTime arrivalDate;
+
     public MessageDsn withArrivalDate(OffsetDateTime arrivalDate) {
         this.arrivalDate = arrivalDate;
         return this;
@@ -19,6 +21,7 @@ public class MessageDsn {
     
     
     public ExtensionField[] extensionFields;
+
     public MessageDsn withExtensionFields(ExtensionField[] extensionFields) {
         this.extensionFields = extensionFields;
         return this;
@@ -26,9 +29,13 @@ public class MessageDsn {
     
     
     public String reportingMta;
+
     public MessageDsn withReportingMta(String reportingMta) {
         this.reportingMta = reportingMta;
         return this;
     }
     
+    public MessageDsn(@JsonProperty("ReportingMta") String reportingMta) {
+        this.reportingMta = reportingMta;
+  }
 }

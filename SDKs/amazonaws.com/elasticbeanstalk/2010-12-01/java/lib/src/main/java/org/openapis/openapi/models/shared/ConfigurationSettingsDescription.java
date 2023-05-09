@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ConfigurationSettingsDescription {
     
     public String applicationName;
+
     public ConfigurationSettingsDescription withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class ConfigurationSettingsDescription {
     
     
     public OffsetDateTime dateCreated;
+
     public ConfigurationSettingsDescription withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -26,6 +28,7 @@ public class ConfigurationSettingsDescription {
     
     
     public OffsetDateTime dateUpdated;
+
     public ConfigurationSettingsDescription withDateUpdated(OffsetDateTime dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -33,6 +36,7 @@ public class ConfigurationSettingsDescription {
     
     
     public ConfigurationDeploymentStatusEnum deploymentStatus;
+
     public ConfigurationSettingsDescription withDeploymentStatus(ConfigurationDeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -40,6 +44,7 @@ public class ConfigurationSettingsDescription {
     
     
     public String description;
+
     public ConfigurationSettingsDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class ConfigurationSettingsDescription {
     
     
     public String environmentName;
+
     public ConfigurationSettingsDescription withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -54,6 +60,7 @@ public class ConfigurationSettingsDescription {
     
     
     public ConfigurationOptionSetting[] optionSettings;
+
     public ConfigurationSettingsDescription withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -61,6 +68,7 @@ public class ConfigurationSettingsDescription {
     
     
     public String platformArn;
+
     public ConfigurationSettingsDescription withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -68,6 +76,7 @@ public class ConfigurationSettingsDescription {
     
     
     public String solutionStackName;
+
     public ConfigurationSettingsDescription withSolutionStackName(String solutionStackName) {
         this.solutionStackName = solutionStackName;
         return this;
@@ -75,9 +84,11 @@ public class ConfigurationSettingsDescription {
     
     
     public String templateName;
+
     public ConfigurationSettingsDescription withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ConfigurationSettingsDescription(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeChangeSetInput - The input for the &lt;a&gt;DescribeChangeSet&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeChangeSetInput {
     
     public String changeSetName;
+
     public DescribeChangeSetInput withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeChangeSetInput {
     
     
     public String nextToken;
+
     public DescribeChangeSetInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,13 @@ public class DescribeChangeSetInput {
     
     
     public String stackName;
+
     public DescribeChangeSetInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DescribeChangeSetInput(@JsonProperty("ChangeSetName") String changeSetName) {
+        this.changeSetName = changeSetName;
+  }
 }

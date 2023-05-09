@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1CloudBigtableSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceDisplayName")
     public String instanceDisplayName;
+
     public GoogleCloudDatacatalogV1CloudBigtableSystemSpec withInstanceDisplayName(String instanceDisplayName) {
         this.instanceDisplayName = instanceDisplayName;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1CloudBigtableSystemSpec(){}
 }

@@ -18,6 +18,7 @@ public class ProductsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageInfo")
     public PageInfo pageInfo;
+
     public ProductsListResponse withPageInfo(PageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
@@ -29,6 +30,7 @@ public class ProductsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public Product[] product;
+
     public ProductsListResponse withProduct(Product[] product) {
         this.product = product;
         return this;
@@ -40,9 +42,11 @@ public class ProductsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenPagination")
     public TokenPagination tokenPagination;
+
     public ProductsListResponse withTokenPagination(TokenPagination tokenPagination) {
         this.tokenPagination = tokenPagination;
         return this;
     }
     
+    public ProductsListResponse(){}
 }

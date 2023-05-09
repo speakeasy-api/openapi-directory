@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Installation {
     @JsonProperty("access_tokens_url")
     public String accessTokensUrl;
+
     public Installation withAccessTokensUrl(String accessTokensUrl) {
         this.accessTokensUrl = accessTokensUrl;
         return this;
@@ -26,6 +27,7 @@ public class Installation {
     
     @JsonProperty("account")
     public Object account;
+
     public Installation withAccount(Object account) {
         this.account = account;
         return this;
@@ -33,6 +35,7 @@ public class Installation {
     
     @JsonProperty("app_id")
     public Long appId;
+
     public Installation withAppId(Long appId) {
         this.appId = appId;
         return this;
@@ -40,6 +43,7 @@ public class Installation {
     
     @JsonProperty("app_slug")
     public String appSlug;
+
     public Installation withAppSlug(String appSlug) {
         this.appSlug = appSlug;
         return this;
@@ -48,6 +52,7 @@ public class Installation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_email")
     public String contactEmail;
+
     public Installation withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -57,6 +62,7 @@ public class Installation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Installation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -64,6 +70,7 @@ public class Installation {
     
     @JsonProperty("events")
     public String[] events;
+
     public Installation withEvents(String[] events) {
         this.events = events;
         return this;
@@ -72,6 +79,7 @@ public class Installation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_multiple_single_files")
     public Boolean hasMultipleSingleFiles;
+
     public Installation withHasMultipleSingleFiles(Boolean hasMultipleSingleFiles) {
         this.hasMultipleSingleFiles = hasMultipleSingleFiles;
         return this;
@@ -79,6 +87,7 @@ public class Installation {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Installation withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -89,6 +98,7 @@ public class Installation {
      */
     @JsonProperty("id")
     public Long id;
+
     public Installation withId(Long id) {
         this.id = id;
         return this;
@@ -99,6 +109,7 @@ public class Installation {
      */
     @JsonProperty("permissions")
     public AppPermissions permissions;
+
     public Installation withPermissions(AppPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -106,6 +117,7 @@ public class Installation {
     
     @JsonProperty("repositories_url")
     public String repositoriesUrl;
+
     public Installation withRepositoriesUrl(String repositoriesUrl) {
         this.repositoriesUrl = repositoriesUrl;
         return this;
@@ -116,6 +128,7 @@ public class Installation {
      */
     @JsonProperty("repository_selection")
     public InstallationRepositorySelectionEnum repositorySelection;
+
     public Installation withRepositorySelection(InstallationRepositorySelectionEnum repositorySelection) {
         this.repositorySelection = repositorySelection;
         return this;
@@ -123,6 +136,7 @@ public class Installation {
     
     @JsonProperty("single_file_name")
     public String singleFileName;
+
     public Installation withSingleFileName(String singleFileName) {
         this.singleFileName = singleFileName;
         return this;
@@ -131,6 +145,7 @@ public class Installation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_file_paths")
     public String[] singleFilePaths;
+
     public Installation withSingleFilePaths(String[] singleFilePaths) {
         this.singleFilePaths = singleFilePaths;
         return this;
@@ -140,6 +155,7 @@ public class Installation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("suspended_at")
     public OffsetDateTime suspendedAt;
+
     public Installation withSuspendedAt(OffsetDateTime suspendedAt) {
         this.suspendedAt = suspendedAt;
         return this;
@@ -150,6 +166,7 @@ public class Installation {
      */
     @JsonProperty("suspended_by")
     public NullableSimpleUser suspendedBy;
+
     public Installation withSuspendedBy(NullableSimpleUser suspendedBy) {
         this.suspendedBy = suspendedBy;
         return this;
@@ -160,6 +177,7 @@ public class Installation {
      */
     @JsonProperty("target_id")
     public Long targetId;
+
     public Installation withTargetId(Long targetId) {
         this.targetId = targetId;
         return this;
@@ -167,6 +185,7 @@ public class Installation {
     
     @JsonProperty("target_type")
     public String targetType;
+
     public Installation withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
@@ -176,9 +195,29 @@ public class Installation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Installation withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Installation(@JsonProperty("access_tokens_url") String accessTokensUrl, @JsonProperty("account") Object account, @JsonProperty("app_id") Long appId, @JsonProperty("app_slug") String appSlug, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("events") String[] events, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("permissions") AppPermissions permissions, @JsonProperty("repositories_url") String repositoriesUrl, @JsonProperty("repository_selection") InstallationRepositorySelectionEnum repositorySelection, @JsonProperty("single_file_name") String singleFileName, @JsonProperty("suspended_at") OffsetDateTime suspendedAt, @JsonProperty("suspended_by") NullableSimpleUser suspendedBy, @JsonProperty("target_id") Long targetId, @JsonProperty("target_type") String targetType, @JsonProperty("updated_at") OffsetDateTime updatedAt) {
+        this.accessTokensUrl = accessTokensUrl;
+        this.account = account;
+        this.appId = appId;
+        this.appSlug = appSlug;
+        this.createdAt = createdAt;
+        this.events = events;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.permissions = permissions;
+        this.repositoriesUrl = repositoriesUrl;
+        this.repositorySelection = repositorySelection;
+        this.singleFileName = singleFileName;
+        this.suspendedAt = suspendedAt;
+        this.suspendedBy = suspendedBy;
+        this.targetId = targetId;
+        this.targetType = targetType;
+        this.updatedAt = updatedAt;
+  }
 }

@@ -18,9 +18,11 @@ public class InsertInlineSheetsChartResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public InsertInlineSheetsChartResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public InsertInlineSheetsChartResponse(){}
 }

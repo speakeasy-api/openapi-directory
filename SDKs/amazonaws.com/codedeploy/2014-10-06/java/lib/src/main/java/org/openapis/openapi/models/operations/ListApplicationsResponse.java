@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationsResponse {
     
     public String contentType;
+
     public ListApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListApplicationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListApplicationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListApplicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApplicationsOutput listApplicationsOutput;
+
     public ListApplicationsResponse withListApplicationsOutput(org.openapis.openapi.models.shared.ListApplicationsOutput listApplicationsOutput) {
         this.listApplicationsOutput = listApplicationsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListApplicationsResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSmsChannelResponse {
@@ -12,6 +13,7 @@ public class GetSmsChannelResponse {
      */
     
     public Object badRequestException;
+
     public GetSmsChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetSmsChannelResponse {
     
     
     public String contentType;
+
     public GetSmsChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSmsChannelResponse {
      */
     
     public Object forbiddenException;
+
     public GetSmsChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetSmsChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSmsChannelResponse getSmsChannelResponse;
+
     public GetSmsChannelResponse withGetSmsChannelResponse(org.openapis.openapi.models.shared.GetSmsChannelResponse getSmsChannelResponse) {
         this.getSmsChannelResponse = getSmsChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSmsChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetSmsChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetSmsChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetSmsChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetSmsChannelResponse {
      */
     
     public Object notFoundException;
+
     public GetSmsChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetSmsChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetSmsChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetSmsChannelResponse {
     
     
     public Integer statusCode;
+
     public GetSmsChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetSmsChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSmsChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetSmsChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetSmsChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetSmsChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

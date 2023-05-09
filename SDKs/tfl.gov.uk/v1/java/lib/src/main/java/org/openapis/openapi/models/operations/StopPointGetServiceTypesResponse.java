@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPointGetServiceTypesResponse {
     
     public byte[] body;
+
     public StopPointGetServiceTypesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class StopPointGetServiceTypesResponse {
     
     
     public String contentType;
+
     public StopPointGetServiceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class StopPointGetServiceTypesResponse {
     
     
     public Integer statusCode;
+
     public StopPointGetServiceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class StopPointGetServiceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPointGetServiceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class StopPointGetServiceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesLineServiceType[] tflApiPresentationEntitiesLineServiceTypes;
+
     public StopPointGetServiceTypesResponse withTflApiPresentationEntitiesLineServiceTypes(org.openapis.openapi.models.shared.TflApiPresentationEntitiesLineServiceType[] tflApiPresentationEntitiesLineServiceTypes) {
         this.tflApiPresentationEntitiesLineServiceTypes = tflApiPresentationEntitiesLineServiceTypes;
         return this;
     }
     
+    public StopPointGetServiceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

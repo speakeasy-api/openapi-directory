@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFindingsResponse {
     
     public String contentType;
+
     public GetFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFindingsResponse getFindingsResponse;
+
     public GetFindingsResponse withGetFindingsResponse(org.openapis.openapi.models.shared.GetFindingsResponse getFindingsResponse) {
         this.getFindingsResponse = getFindingsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetFindingsResponse {
      */
     
     public Object internalException;
+
     public GetFindingsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class GetFindingsResponse {
      */
     
     public Object invalidAccessException;
+
     public GetFindingsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class GetFindingsResponse {
      */
     
     public Object invalidInputException;
+
     public GetFindingsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetFindingsResponse {
      */
     
     public Object limitExceededException;
+
     public GetFindingsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetFindingsResponse {
     
     
     public Integer statusCode;
+
     public GetFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

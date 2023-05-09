@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Field {
     @JsonProperty("key")
     public String key;
+
     public Field withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refValue")
     public String refValue;
+
     public Field withRefValue(String refValue) {
         this.refValue = refValue;
         return this;
@@ -30,9 +32,13 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public Field withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public Field(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

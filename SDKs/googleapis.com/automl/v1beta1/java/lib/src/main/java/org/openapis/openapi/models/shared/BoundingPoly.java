@@ -18,9 +18,11 @@ public class BoundingPoly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedVertices")
     public NormalizedVertex[] normalizedVertices;
+
     public BoundingPoly withNormalizedVertices(NormalizedVertex[] normalizedVertices) {
         this.normalizedVertices = normalizedVertices;
         return this;
     }
     
+    public BoundingPoly(){}
 }

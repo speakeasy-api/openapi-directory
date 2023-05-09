@@ -15,6 +15,7 @@ public class Tdlcs500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Tdlcs500ApplicationJSONErrorEnum error;
+
     public Tdlcs500ApplicationJSON withError(Tdlcs500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Tdlcs500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Tdlcs500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Tdlcs500ApplicationJSON withErrorDescription(Tdlcs500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Tdlcs500ApplicationJSON(){}
 }

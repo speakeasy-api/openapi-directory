@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMatchZebraRequest {
@@ -12,6 +13,7 @@ public class GetMatchZebraRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetMatchZebraRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,9 +24,13 @@ public class GetMatchZebraRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=match_key")
     public String matchKey;
+
     public GetMatchZebraRequest withMatchKey(String matchKey) {
         this.matchKey = matchKey;
         return this;
     }
     
+    public GetMatchZebraRequest(@JsonProperty("match_key") String matchKey) {
+        this.matchKey = matchKey;
+  }
 }

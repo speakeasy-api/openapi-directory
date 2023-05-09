@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Payment {
     @JsonProperty("bin")
     public String bin;
+
     public Payment withBin(String bin) {
         this.bin = bin;
         return this;
@@ -16,6 +17,7 @@ public class Payment {
     
     @JsonProperty("id")
     public Integer id;
+
     public Payment withId(Integer id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class Payment {
     
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public Payment withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -30,6 +33,7 @@ public class Payment {
     
     @JsonProperty("name")
     public String name;
+
     public Payment withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +41,7 @@ public class Payment {
     
     @JsonProperty("self")
     public Self self;
+
     public Payment withSelf(Self self) {
         this.self = self;
         return this;
@@ -44,9 +49,18 @@ public class Payment {
     
     @JsonProperty("value")
     public Double value;
+
     public Payment withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Payment(@JsonProperty("bin") String bin, @JsonProperty("id") Integer id, @JsonProperty("isDefault") Boolean isDefault, @JsonProperty("name") String name, @JsonProperty("self") Self self, @JsonProperty("value") Double value) {
+        this.bin = bin;
+        this.id = id;
+        this.isDefault = isDefault;
+        this.name = name;
+        this.self = self;
+        this.value = value;
+  }
 }

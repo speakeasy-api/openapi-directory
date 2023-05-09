@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudassetAnalyzeMoveRequest {
@@ -12,6 +13,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudassetAnalyzeMoveRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudassetAnalyzeMoveRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudassetAnalyzeMoveRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudassetAnalyzeMoveRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationParent")
     public String destinationParent;
+
     public CloudassetAnalyzeMoveRequest withDestinationParent(String destinationParent) {
         this.destinationParent = destinationParent;
         return this;
@@ -62,6 +68,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudassetAnalyzeMoveRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudassetAnalyzeMoveRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudassetAnalyzeMoveRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudassetAnalyzeMoveRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudassetAnalyzeMoveRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
     public String resource;
+
     public CloudassetAnalyzeMoveRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -122,6 +134,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudassetAnalyzeMoveRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudassetAnalyzeMoveRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,9 +156,13 @@ public class CloudassetAnalyzeMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public CloudassetAnalyzeMoveViewEnum view;
+
     public CloudassetAnalyzeMoveRequest withView(CloudassetAnalyzeMoveViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public CloudassetAnalyzeMoveRequest(@JsonProperty("resource") String resource) {
+        this.resource = resource;
+  }
 }

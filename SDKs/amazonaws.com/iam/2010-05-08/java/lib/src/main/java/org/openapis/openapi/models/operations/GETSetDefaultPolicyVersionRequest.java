@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetDefaultPolicyVersionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetDefaultPolicyVersionActionEnum action;
+
     public GETSetDefaultPolicyVersionRequest withAction(GETSetDefaultPolicyVersionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetDefaultPolicyVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyArn")
     public String policyArn;
+
     public GETSetDefaultPolicyVersionRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -26,6 +29,7 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetDefaultPolicyVersionVersionEnum version;
+
     public GETSetDefaultPolicyVersionRequest withVersion(GETSetDefaultPolicyVersionVersionEnum version) {
         this.version = version;
         return this;
@@ -36,6 +40,7 @@ public class GETSetDefaultPolicyVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionId")
     public String versionId;
+
     public GETSetDefaultPolicyVersionRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
@@ -43,6 +48,7 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetDefaultPolicyVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetDefaultPolicyVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetDefaultPolicyVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetDefaultPolicyVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetDefaultPolicyVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetDefaultPolicyVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETSetDefaultPolicyVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetDefaultPolicyVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetDefaultPolicyVersionRequest(@JsonProperty("Action") GETSetDefaultPolicyVersionActionEnum action, @JsonProperty("PolicyArn") String policyArn, @JsonProperty("Version") GETSetDefaultPolicyVersionVersionEnum version, @JsonProperty("VersionId") String versionId) {
+        this.action = action;
+        this.policyArn = policyArn;
+        this.version = version;
+        this.versionId = versionId;
+  }
 }

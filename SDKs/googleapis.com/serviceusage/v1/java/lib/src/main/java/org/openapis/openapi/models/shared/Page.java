@@ -18,6 +18,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Page withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Page withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subpages")
     public Page[] subpages;
+
     public Page withSubpages(Page[] subpages) {
         this.subpages = subpages;
         return this;
     }
     
+    public Page(){}
 }

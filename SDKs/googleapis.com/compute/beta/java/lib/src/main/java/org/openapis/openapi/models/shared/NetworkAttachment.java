@@ -18,6 +18,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionEndpoints")
     public NetworkAttachmentConnectedEndpoint[] connectionEndpoints;
+
     public NetworkAttachment withConnectionEndpoints(NetworkAttachmentConnectedEndpoint[] connectionEndpoints) {
         this.connectionEndpoints = connectionEndpoints;
         return this;
@@ -26,6 +27,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionPreference")
     public NetworkAttachmentConnectionPreferenceEnum connectionPreference;
+
     public NetworkAttachment withConnectionPreference(NetworkAttachmentConnectionPreferenceEnum connectionPreference) {
         this.connectionPreference = connectionPreference;
         return this;
@@ -37,6 +39,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public NetworkAttachment withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NetworkAttachment withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public NetworkAttachment withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -70,6 +75,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkAttachment withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NetworkAttachment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -92,6 +99,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworkAttachment withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkAttachment withNetwork(String network) {
         this.network = network;
         return this;
@@ -114,6 +123,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerAcceptLists")
     public String[] producerAcceptLists;
+
     public NetworkAttachment withProducerAcceptLists(String[] producerAcceptLists) {
         this.producerAcceptLists = producerAcceptLists;
         return this;
@@ -125,6 +135,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerRejectLists")
     public String[] producerRejectLists;
+
     public NetworkAttachment withProducerRejectLists(String[] producerRejectLists) {
         this.producerRejectLists = producerRejectLists;
         return this;
@@ -136,6 +147,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public NetworkAttachment withRegion(String region) {
         this.region = region;
         return this;
@@ -147,6 +159,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NetworkAttachment withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -158,6 +171,7 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public NetworkAttachment withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -169,9 +183,11 @@ public class NetworkAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworks")
     public String[] subnetworks;
+
     public NetworkAttachment withSubnetworks(String[] subnetworks) {
         this.subnetworks = subnetworks;
         return this;
     }
     
+    public NetworkAttachment(){}
 }

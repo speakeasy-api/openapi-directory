@@ -12,6 +12,7 @@ public class FunctionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FunctionsListRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class FunctionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FunctionsListRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class FunctionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
     public String orderType;
+
     public FunctionsListRequest withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -42,9 +45,11 @@ public class FunctionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public FunctionsListRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public FunctionsListRequest(){}
 }

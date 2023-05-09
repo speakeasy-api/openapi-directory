@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public GoogleAnalyticsAdminV1alphaAccountInput account;
+
     public GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequestInput withAccount(GoogleAnalyticsAdminV1alphaAccountInput account) {
         this.account = account;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUri")
     public String redirectUri;
+
     public GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequestInput withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequestInput(){}
 }

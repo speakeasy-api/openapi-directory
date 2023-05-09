@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDisassociateResourceResponse {
     @JsonProperty("FailedItems")
     public FailedItem[] failedItems;
+
     public BatchDisassociateResourceResponse withFailedItems(FailedItem[] failedItems) {
         this.failedItems = failedItems;
         return this;
@@ -19,9 +20,14 @@ public class BatchDisassociateResourceResponse {
     
     @JsonProperty("ResourceSetIdentifier")
     public String resourceSetIdentifier;
+
     public BatchDisassociateResourceResponse withResourceSetIdentifier(String resourceSetIdentifier) {
         this.resourceSetIdentifier = resourceSetIdentifier;
         return this;
     }
     
+    public BatchDisassociateResourceResponse(@JsonProperty("FailedItems") FailedItem[] failedItems, @JsonProperty("ResourceSetIdentifier") String resourceSetIdentifier) {
+        this.failedItems = failedItems;
+        this.resourceSetIdentifier = resourceSetIdentifier;
+  }
 }

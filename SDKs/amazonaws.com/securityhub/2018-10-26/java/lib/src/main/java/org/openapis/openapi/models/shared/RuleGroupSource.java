@@ -15,6 +15,7 @@ public class RuleGroupSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesSourceList")
     public RuleGroupSourceListDetails rulesSourceList;
+
     public RuleGroupSource withRulesSourceList(RuleGroupSourceListDetails rulesSourceList) {
         this.rulesSourceList = rulesSourceList;
         return this;
@@ -23,6 +24,7 @@ public class RuleGroupSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RulesString")
     public String rulesString;
+
     public RuleGroupSource withRulesString(String rulesString) {
         this.rulesString = rulesString;
         return this;
@@ -31,6 +33,7 @@ public class RuleGroupSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulRules")
     public RuleGroupSourceStatefulRulesDetails[] statefulRules;
+
     public RuleGroupSource withStatefulRules(RuleGroupSourceStatefulRulesDetails[] statefulRules) {
         this.statefulRules = statefulRules;
         return this;
@@ -39,9 +42,11 @@ public class RuleGroupSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessRulesAndCustomActions")
     public RuleGroupSourceStatelessRulesAndCustomActionsDetails statelessRulesAndCustomActions;
+
     public RuleGroupSource withStatelessRulesAndCustomActions(RuleGroupSourceStatelessRulesAndCustomActionsDetails statelessRulesAndCustomActions) {
         this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
         return this;
     }
     
+    public RuleGroupSource(){}
 }

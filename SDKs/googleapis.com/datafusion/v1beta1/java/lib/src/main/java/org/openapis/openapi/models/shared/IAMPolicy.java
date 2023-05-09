@@ -18,6 +18,7 @@ public class IAMPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public IAMPolicy withPolicy(Policy policy) {
         this.policy = policy;
         return this;
@@ -29,9 +30,11 @@ public class IAMPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public IAMPolicy withStatus(Status status) {
         this.status = status;
         return this;
     }
     
+    public IAMPolicy(){}
 }

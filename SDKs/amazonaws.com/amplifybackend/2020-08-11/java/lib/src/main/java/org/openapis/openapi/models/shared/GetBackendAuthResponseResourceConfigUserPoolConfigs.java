@@ -15,6 +15,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForgotPassword")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword forgotPassword;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withForgotPassword(GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword forgotPassword) {
         this.forgotPassword = forgotPassword;
         return this;
@@ -23,6 +24,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mfa")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsMfa mfa;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withMfa(GetBackendAuthResponseResourceConfigUserPoolConfigsMfa mfa) {
         this.mfa = mfa;
         return this;
@@ -31,6 +33,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OAuth")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth oAuth;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withOAuth(GetBackendAuthResponseResourceConfigUserPoolConfigsOAuth oAuth) {
         this.oAuth = oAuth;
         return this;
@@ -39,6 +42,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasswordPolicy")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy passwordPolicy;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withPasswordPolicy(GetBackendAuthResponseResourceConfigUserPoolConfigsPasswordPolicy passwordPolicy) {
         this.passwordPolicy = passwordPolicy;
         return this;
@@ -46,6 +50,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     
     @JsonProperty("RequiredSignUpAttributes")
     public RequiredSignUpAttributesElementEnum[] requiredSignUpAttributes;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withRequiredSignUpAttributes(RequiredSignUpAttributesElementEnum[] requiredSignUpAttributes) {
         this.requiredSignUpAttributes = requiredSignUpAttributes;
         return this;
@@ -53,6 +58,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     
     @JsonProperty("SignInMethod")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsSignInMethodEnum signInMethod;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withSignInMethod(GetBackendAuthResponseResourceConfigUserPoolConfigsSignInMethodEnum signInMethod) {
         this.signInMethod = signInMethod;
         return this;
@@ -60,6 +66,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     
     @JsonProperty("UserPoolName")
     public String userPoolName;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withUserPoolName(String userPoolName) {
         this.userPoolName = userPoolName;
         return this;
@@ -68,9 +75,15 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerificationMessage")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage verificationMessage;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigs withVerificationMessage(GetBackendAuthResponseResourceConfigUserPoolConfigsVerificationMessage verificationMessage) {
         this.verificationMessage = verificationMessage;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigs(@JsonProperty("RequiredSignUpAttributes") RequiredSignUpAttributesElementEnum[] requiredSignUpAttributes, @JsonProperty("SignInMethod") GetBackendAuthResponseResourceConfigUserPoolConfigsSignInMethodEnum signInMethod, @JsonProperty("UserPoolName") String userPoolName) {
+        this.requiredSignUpAttributes = requiredSignUpAttributes;
+        this.signInMethod = signInMethod;
+        this.userPoolName = userPoolName;
+  }
 }

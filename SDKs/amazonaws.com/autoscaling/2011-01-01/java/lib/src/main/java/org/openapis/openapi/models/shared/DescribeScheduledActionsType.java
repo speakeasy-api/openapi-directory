@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DescribeScheduledActionsType {
     
     public String autoScalingGroupName;
+
     public DescribeScheduledActionsType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeScheduledActionsType {
     
     
     public OffsetDateTime endTime;
+
     public DescribeScheduledActionsType withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +25,7 @@ public class DescribeScheduledActionsType {
     
     
     public Long maxRecords;
+
     public DescribeScheduledActionsType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,6 +33,7 @@ public class DescribeScheduledActionsType {
     
     
     public String nextToken;
+
     public DescribeScheduledActionsType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +41,7 @@ public class DescribeScheduledActionsType {
     
     
     public String[] scheduledActionNames;
+
     public DescribeScheduledActionsType withScheduledActionNames(String[] scheduledActionNames) {
         this.scheduledActionNames = scheduledActionNames;
         return this;
@@ -44,9 +49,11 @@ public class DescribeScheduledActionsType {
     
     
     public OffsetDateTime startTime;
+
     public DescribeScheduledActionsType withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeScheduledActionsType(){}
 }

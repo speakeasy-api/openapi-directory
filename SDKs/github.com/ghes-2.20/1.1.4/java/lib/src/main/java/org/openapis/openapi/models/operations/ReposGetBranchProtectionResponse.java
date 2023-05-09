@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetBranchProtectionResponse {
     
     public String contentType;
+
     public ReposGetBranchProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetBranchProtectionResponse {
     
     
     public Integer statusCode;
+
     public ReposGetBranchProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetBranchProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetBranchProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetBranchProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetBranchProtectionResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetBranchProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.BranchProtection branchProtection;
+
     public ReposGetBranchProtectionResponse withBranchProtection(org.openapis.openapi.models.shared.BranchProtection branchProtection) {
         this.branchProtection = branchProtection;
         return this;
     }
     
+    public ReposGetBranchProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

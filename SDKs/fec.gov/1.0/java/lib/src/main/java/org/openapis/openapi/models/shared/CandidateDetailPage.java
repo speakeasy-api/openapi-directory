@@ -12,6 +12,7 @@ public class CandidateDetailPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public CandidateDetailPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class CandidateDetailPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CandidateDetail[] results;
+
     public CandidateDetailPage withResults(CandidateDetail[] results) {
         this.results = results;
         return this;
     }
     
+    public CandidateDetailPage(){}
 }

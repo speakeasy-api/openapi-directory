@@ -15,6 +15,7 @@ public class GetInstanceMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricData")
     public MetricDatapoint[] metricData;
+
     public GetInstanceMetricDataResult withMetricData(MetricDatapoint[] metricData) {
         this.metricData = metricData;
         return this;
@@ -23,9 +24,11 @@ public class GetInstanceMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public InstanceMetricNameEnum metricName;
+
     public GetInstanceMetricDataResult withMetricName(InstanceMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GetInstanceMetricDataResult(){}
 }

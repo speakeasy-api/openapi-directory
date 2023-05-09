@@ -15,6 +15,7 @@ public class PortOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointPort")
     public Long endpointPort;
+
     public PortOverride withEndpointPort(Long endpointPort) {
         this.endpointPort = endpointPort;
         return this;
@@ -23,9 +24,11 @@ public class PortOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListenerPort")
     public Long listenerPort;
+
     public PortOverride withListenerPort(Long listenerPort) {
         this.listenerPort = listenerPort;
         return this;
     }
     
+    public PortOverride(){}
 }

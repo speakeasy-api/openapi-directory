@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationsLinkedNodesListRequest {
@@ -12,9 +13,13 @@ public class RegistrationsLinkedNodesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_id")
     public String registrationId;
+
     public RegistrationsLinkedNodesListRequest withRegistrationId(String registrationId) {
         this.registrationId = registrationId;
         return this;
     }
     
+    public RegistrationsLinkedNodesListRequest(@JsonProperty("registration_id") String registrationId) {
+        this.registrationId = registrationId;
+  }
 }

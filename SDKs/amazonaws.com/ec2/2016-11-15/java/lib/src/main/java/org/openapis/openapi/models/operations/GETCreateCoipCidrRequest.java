@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateCoipCidrRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateCoipCidrActionEnum action;
+
     public GETCreateCoipCidrRequest withAction(GETCreateCoipCidrActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateCoipCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
     public String cidr;
+
     public GETCreateCoipCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateCoipCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CoipPoolId")
     public String coipPoolId;
+
     public GETCreateCoipCidrRequest withCoipPoolId(String coipPoolId) {
         this.coipPoolId = coipPoolId;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateCoipCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCreateCoipCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -46,6 +51,7 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateCoipCidrVersionEnum version;
+
     public GETCreateCoipCidrRequest withVersion(GETCreateCoipCidrVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateCoipCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateCoipCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateCoipCidrRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateCoipCidrRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateCoipCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateCoipCidrRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETCreateCoipCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateCoipCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateCoipCidrRequest(@JsonProperty("Action") GETCreateCoipCidrActionEnum action, @JsonProperty("Cidr") String cidr, @JsonProperty("CoipPoolId") String coipPoolId, @JsonProperty("Version") GETCreateCoipCidrVersionEnum version) {
+        this.action = action;
+        this.cidr = cidr;
+        this.coipPoolId = coipPoolId;
+        this.version = version;
+  }
 }

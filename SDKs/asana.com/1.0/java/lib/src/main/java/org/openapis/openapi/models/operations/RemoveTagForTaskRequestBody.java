@@ -15,9 +15,11 @@ public class RemoveTagForTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskRemoveTagRequest data;
+
     public RemoveTagForTaskRequestBody withData(org.openapis.openapi.models.shared.TaskRemoveTagRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveTagForTaskRequestBody(){}
 }

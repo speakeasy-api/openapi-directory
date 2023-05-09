@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBotLocaleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateBotLocaleRequestBody requestBody;
+
     public CreateBotLocaleRequest withRequestBody(CreateBotLocaleRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateBotLocaleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateBotLocaleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateBotLocaleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateBotLocaleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateBotLocaleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateBotLocaleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateBotLocaleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateBotLocaleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateBotLocaleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateBotLocaleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateBotLocaleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateBotLocaleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateBotLocaleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateBotLocaleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class CreateBotLocaleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
     public String botId;
+
     public CreateBotLocaleRequest withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -78,9 +88,15 @@ public class CreateBotLocaleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
     public String botVersion;
+
     public CreateBotLocaleRequest withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
     }
     
+    public CreateBotLocaleRequest(@JsonProperty("RequestBody") CreateBotLocaleRequestBody requestBody, @JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion) {
+        this.requestBody = requestBody;
+        this.botId = botId;
+        this.botVersion = botVersion;
+  }
 }

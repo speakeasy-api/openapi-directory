@@ -18,6 +18,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public DiskArchitectureEnum architecture;
+
     public Disk withArchitecture(DiskArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -26,6 +27,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncPrimaryDisk")
     public DiskAsyncReplication asyncPrimaryDisk;
+
     public Disk withAsyncPrimaryDisk(DiskAsyncReplication asyncPrimaryDisk) {
         this.asyncPrimaryDisk = asyncPrimaryDisk;
         return this;
@@ -37,6 +39,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncSecondaryDisks")
     public java.util.Map<String, DiskAsyncReplicationList> asyncSecondaryDisks;
+
     public Disk withAsyncSecondaryDisks(java.util.Map<String, DiskAsyncReplicationList> asyncSecondaryDisks) {
         this.asyncSecondaryDisks = asyncSecondaryDisks;
         return this;
@@ -48,6 +51,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Disk withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -59,6 +63,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Disk withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskEncryptionKey")
     public CustomerEncryptionKey diskEncryptionKey;
+
     public Disk withDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         return this;
@@ -78,6 +84,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eraseWindowsVssSignature")
     public Boolean eraseWindowsVssSignature;
+
     public Disk withEraseWindowsVssSignature(Boolean eraseWindowsVssSignature) {
         this.eraseWindowsVssSignature = eraseWindowsVssSignature;
         return this;
@@ -89,6 +96,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestOsFeatures")
     public GuestOsFeature[] guestOsFeatures;
+
     public Disk withGuestOsFeatures(GuestOsFeature[] guestOsFeatures) {
         this.guestOsFeatures = guestOsFeatures;
         return this;
@@ -100,6 +108,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Disk withId(String id) {
         this.id = id;
         return this;
@@ -111,6 +120,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interface")
     public DiskInterfaceEnum interface_;
+
     public Disk withInterface(DiskInterfaceEnum interface_) {
         this.interface_ = interface_;
         return this;
@@ -122,6 +132,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Disk withKind(String kind) {
         this.kind = kind;
         return this;
@@ -133,6 +144,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public Disk withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -144,6 +156,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Disk withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -155,6 +168,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastAttachTimestamp")
     public String lastAttachTimestamp;
+
     public Disk withLastAttachTimestamp(String lastAttachTimestamp) {
         this.lastAttachTimestamp = lastAttachTimestamp;
         return this;
@@ -166,6 +180,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDetachTimestamp")
     public String lastDetachTimestamp;
+
     public Disk withLastDetachTimestamp(String lastDetachTimestamp) {
         this.lastDetachTimestamp = lastDetachTimestamp;
         return this;
@@ -177,6 +192,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseCodes")
     public String[] licenseCodes;
+
     public Disk withLicenseCodes(String[] licenseCodes) {
         this.licenseCodes = licenseCodes;
         return this;
@@ -188,6 +204,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public Disk withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -199,6 +216,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationHint")
     public String locationHint;
+
     public Disk withLocationHint(String locationHint) {
         this.locationHint = locationHint;
         return this;
@@ -210,6 +228,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public Disk withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -221,6 +240,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiWriter")
     public Boolean multiWriter;
+
     public Disk withMultiWriter(Boolean multiWriter) {
         this.multiWriter = multiWriter;
         return this;
@@ -232,6 +252,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Disk withName(String name) {
         this.name = name;
         return this;
@@ -243,6 +264,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public String options;
+
     public Disk withOptions(String options) {
         this.options = options;
         return this;
@@ -254,6 +276,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public DiskParams params;
+
     public Disk withParams(DiskParams params) {
         this.params = params;
         return this;
@@ -265,6 +288,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalBlockSizeBytes")
     public String physicalBlockSizeBytes;
+
     public Disk withPhysicalBlockSizeBytes(String physicalBlockSizeBytes) {
         this.physicalBlockSizeBytes = physicalBlockSizeBytes;
         return this;
@@ -276,6 +300,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedIops")
     public String provisionedIops;
+
     public Disk withProvisionedIops(String provisionedIops) {
         this.provisionedIops = provisionedIops;
         return this;
@@ -287,6 +312,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedThroughput")
     public String provisionedThroughput;
+
     public Disk withProvisionedThroughput(String provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -298,6 +324,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Disk withRegion(String region) {
         this.region = region;
         return this;
@@ -309,6 +336,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicaZones")
     public String[] replicaZones;
+
     public Disk withReplicaZones(String[] replicaZones) {
         this.replicaZones = replicaZones;
         return this;
@@ -320,6 +348,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public String[] resourcePolicies;
+
     public Disk withResourcePolicies(String[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
@@ -328,6 +357,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceStatus")
     public DiskResourceStatus resourceStatus;
+
     public Disk withResourceStatus(DiskResourceStatus resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -339,6 +369,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Disk withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -350,6 +381,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Disk withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -361,6 +393,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public String sizeGb;
+
     public Disk withSizeGb(String sizeGb) {
         this.sizeGb = sizeGb;
         return this;
@@ -372,6 +405,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConsistencyGroupPolicy")
     public String sourceConsistencyGroupPolicy;
+
     public Disk withSourceConsistencyGroupPolicy(String sourceConsistencyGroupPolicy) {
         this.sourceConsistencyGroupPolicy = sourceConsistencyGroupPolicy;
         return this;
@@ -383,6 +417,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConsistencyGroupPolicyId")
     public String sourceConsistencyGroupPolicyId;
+
     public Disk withSourceConsistencyGroupPolicyId(String sourceConsistencyGroupPolicyId) {
         this.sourceConsistencyGroupPolicyId = sourceConsistencyGroupPolicyId;
         return this;
@@ -394,6 +429,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDisk")
     public String sourceDisk;
+
     public Disk withSourceDisk(String sourceDisk) {
         this.sourceDisk = sourceDisk;
         return this;
@@ -405,6 +441,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskId")
     public String sourceDiskId;
+
     public Disk withSourceDiskId(String sourceDiskId) {
         this.sourceDiskId = sourceDiskId;
         return this;
@@ -416,6 +453,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public String sourceImage;
+
     public Disk withSourceImage(String sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -424,6 +462,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImageEncryptionKey")
     public CustomerEncryptionKey sourceImageEncryptionKey;
+
     public Disk withSourceImageEncryptionKey(CustomerEncryptionKey sourceImageEncryptionKey) {
         this.sourceImageEncryptionKey = sourceImageEncryptionKey;
         return this;
@@ -435,6 +474,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImageId")
     public String sourceImageId;
+
     public Disk withSourceImageId(String sourceImageId) {
         this.sourceImageId = sourceImageId;
         return this;
@@ -446,6 +486,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshot")
     public String sourceSnapshot;
+
     public Disk withSourceSnapshot(String sourceSnapshot) {
         this.sourceSnapshot = sourceSnapshot;
         return this;
@@ -454,6 +495,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotEncryptionKey")
     public CustomerEncryptionKey sourceSnapshotEncryptionKey;
+
     public Disk withSourceSnapshotEncryptionKey(CustomerEncryptionKey sourceSnapshotEncryptionKey) {
         this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
         return this;
@@ -465,6 +507,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotId")
     public String sourceSnapshotId;
+
     public Disk withSourceSnapshotId(String sourceSnapshotId) {
         this.sourceSnapshotId = sourceSnapshotId;
         return this;
@@ -476,6 +519,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceStorageObject")
     public String sourceStorageObject;
+
     public Disk withSourceStorageObject(String sourceStorageObject) {
         this.sourceStorageObject = sourceStorageObject;
         return this;
@@ -487,6 +531,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DiskStatusEnum status;
+
     public Disk withStatus(DiskStatusEnum status) {
         this.status = status;
         return this;
@@ -498,6 +543,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageType")
     public DiskStorageTypeEnum storageType;
+
     public Disk withStorageType(DiskStorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
@@ -509,6 +555,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Disk withType(String type) {
         this.type = type;
         return this;
@@ -520,6 +567,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLicenses")
     public String[] userLicenses;
+
     public Disk withUserLicenses(String[] userLicenses) {
         this.userLicenses = userLicenses;
         return this;
@@ -531,6 +579,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public String[] users;
+
     public Disk withUsers(String[] users) {
         this.users = users;
         return this;
@@ -542,9 +591,11 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public Disk withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public Disk(){}
 }

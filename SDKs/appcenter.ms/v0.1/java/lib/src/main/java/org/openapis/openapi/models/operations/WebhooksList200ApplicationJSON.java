@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhooksList200ApplicationJSON {
     @JsonProperty("values")
     public WebhooksList200ApplicationJSONValues[] values;
+
     public WebhooksList200ApplicationJSON withValues(WebhooksList200ApplicationJSONValues[] values) {
         this.values = values;
         return this;
     }
     
+    public WebhooksList200ApplicationJSON(@JsonProperty("values") WebhooksList200ApplicationJSONValues[] values) {
+        this.values = values;
+  }
 }

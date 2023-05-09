@@ -18,6 +18,7 @@ public class MysqlSslConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificate")
     public String caCertificate;
+
     public MysqlSslConfigInput withCaCertificate(String caCertificate) {
         this.caCertificate = caCertificate;
         return this;
@@ -29,6 +30,7 @@ public class MysqlSslConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public String clientCertificate;
+
     public MysqlSslConfigInput withClientCertificate(String clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -40,9 +42,11 @@ public class MysqlSslConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientKey")
     public String clientKey;
+
     public MysqlSslConfigInput withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
     }
     
+    public MysqlSslConfigInput(){}
 }

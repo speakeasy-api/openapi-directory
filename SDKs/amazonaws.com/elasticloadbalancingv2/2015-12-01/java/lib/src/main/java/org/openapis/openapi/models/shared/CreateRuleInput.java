@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateRuleInput {
     
     public Action[] actions;
+
     public CreateRuleInput withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -16,6 +17,7 @@ public class CreateRuleInput {
     
     
     public RuleCondition[] conditions;
+
     public CreateRuleInput withConditions(RuleCondition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -23,6 +25,7 @@ public class CreateRuleInput {
     
     
     public String listenerArn;
+
     public CreateRuleInput withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -30,6 +33,7 @@ public class CreateRuleInput {
     
     
     public Long priority;
+
     public CreateRuleInput withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -37,9 +41,16 @@ public class CreateRuleInput {
     
     
     public Tag[] tags;
+
     public CreateRuleInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRuleInput(@JsonProperty("Actions") Action[] actions, @JsonProperty("Conditions") RuleCondition[] conditions, @JsonProperty("ListenerArn") String listenerArn, @JsonProperty("Priority") Long priority) {
+        this.actions = actions;
+        this.conditions = conditions;
+        this.listenerArn = listenerArn;
+        this.priority = priority;
+  }
 }

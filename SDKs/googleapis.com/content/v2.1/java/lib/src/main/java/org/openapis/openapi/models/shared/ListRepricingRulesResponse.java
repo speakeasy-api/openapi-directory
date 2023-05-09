@@ -18,6 +18,7 @@ public class ListRepricingRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRepricingRulesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRepricingRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repricingRules")
     public RepricingRule[] repricingRules;
+
     public ListRepricingRulesResponse withRepricingRules(RepricingRule[] repricingRules) {
         this.repricingRules = repricingRules;
         return this;
     }
     
+    public ListRepricingRulesResponse(){}
 }

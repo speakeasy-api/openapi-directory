@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSettingRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput;
+
     public UpdateSettingRequest withJsonPatchInput(org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput) {
         this.jsonPatchInput = jsonPatchInput;
         return this;
@@ -19,9 +21,14 @@ public class UpdateSettingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
     public Integer settingId;
+
     public UpdateSettingRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public UpdateSettingRequest(@JsonProperty("JsonPatchInput") org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput, @JsonProperty("settingId") Integer settingId) {
+        this.jsonPatchInput = jsonPatchInput;
+        this.settingId = settingId;
+  }
 }

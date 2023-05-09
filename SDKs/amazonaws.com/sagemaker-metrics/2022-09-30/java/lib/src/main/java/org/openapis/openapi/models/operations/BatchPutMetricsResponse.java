@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchPutMetricsResponse {
@@ -12,6 +13,7 @@ public class BatchPutMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPutMetricsResponse batchPutMetricsResponse;
+
     public BatchPutMetricsResponse withBatchPutMetricsResponse(org.openapis.openapi.models.shared.BatchPutMetricsResponse batchPutMetricsResponse) {
         this.batchPutMetricsResponse = batchPutMetricsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchPutMetricsResponse {
     
     
     public String contentType;
+
     public BatchPutMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BatchPutMetricsResponse {
     
     
     public Integer statusCode;
+
     public BatchPutMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BatchPutMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchPutMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchPutMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityVerificationAttributesResponse - The Amazon SES verification status of a list of identities. For domain identities, this response also contains the verification token.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityVerificationAttributesResponse {
     
     public java.util.Map<String, IdentityVerificationAttributes> verificationAttributes;
+
     public GetIdentityVerificationAttributesResponse withVerificationAttributes(java.util.Map<String, IdentityVerificationAttributes> verificationAttributes) {
         this.verificationAttributes = verificationAttributes;
         return this;
     }
     
+    public GetIdentityVerificationAttributesResponse(@JsonProperty("VerificationAttributes") java.util.Map<String, IdentityVerificationAttributes> verificationAttributes) {
+        this.verificationAttributes = verificationAttributes;
+  }
 }

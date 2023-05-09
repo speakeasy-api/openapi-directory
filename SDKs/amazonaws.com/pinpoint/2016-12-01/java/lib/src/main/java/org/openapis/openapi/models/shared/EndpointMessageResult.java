@@ -15,6 +15,7 @@ public class EndpointMessageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public EndpointMessageResult withAddress(String address) {
         this.address = address;
         return this;
@@ -22,6 +23,7 @@ public class EndpointMessageResult {
     
     @JsonProperty("DeliveryStatus")
     public DeliveryStatusEnum deliveryStatus;
+
     public EndpointMessageResult withDeliveryStatus(DeliveryStatusEnum deliveryStatus) {
         this.deliveryStatus = deliveryStatus;
         return this;
@@ -30,6 +32,7 @@ public class EndpointMessageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageId")
     public String messageId;
+
     public EndpointMessageResult withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -37,6 +40,7 @@ public class EndpointMessageResult {
     
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public EndpointMessageResult withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -45,6 +49,7 @@ public class EndpointMessageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public EndpointMessageResult withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -53,9 +58,14 @@ public class EndpointMessageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedToken")
     public String updatedToken;
+
     public EndpointMessageResult withUpdatedToken(String updatedToken) {
         this.updatedToken = updatedToken;
         return this;
     }
     
+    public EndpointMessageResult(@JsonProperty("DeliveryStatus") DeliveryStatusEnum deliveryStatus, @JsonProperty("StatusCode") Long statusCode) {
+        this.deliveryStatus = deliveryStatus;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class ThirdPartyFirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallDeploymentModel")
     public FirewallDeploymentModelEnum firewallDeploymentModel;
+
     public ThirdPartyFirewallPolicy withFirewallDeploymentModel(FirewallDeploymentModelEnum firewallDeploymentModel) {
         this.firewallDeploymentModel = firewallDeploymentModel;
         return this;
     }
     
+    public ThirdPartyFirewallPolicy(){}
 }

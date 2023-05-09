@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociation association;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withAssociation(DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociation association) {
         this.association = association;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public OffsetDateTime creationTime;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public String resourceId;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public String resourceOwnerId;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum resourceType;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withResourceType(DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum state;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withState(DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsTags[] tags;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withTags(DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsTags[] tags) {
         this.tags = tags;
         return this;
@@ -61,6 +68,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public String transitGatewayAttachmentId;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public String transitGatewayId;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -75,9 +84,11 @@ public class DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments {
     
     
     public String transitGatewayOwnerId;
+
     public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments withTransitGatewayOwnerId(String transitGatewayOwnerId) {
         this.transitGatewayOwnerId = transitGatewayOwnerId;
         return this;
     }
     
+    public DescribeTransitGatewayAttachmentsResultTransitGatewayAttachments(){}
 }

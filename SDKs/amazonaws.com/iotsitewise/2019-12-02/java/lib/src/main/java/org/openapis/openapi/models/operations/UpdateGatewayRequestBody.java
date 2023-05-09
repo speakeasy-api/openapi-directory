@@ -12,9 +12,13 @@ public class UpdateGatewayRequestBody {
      */
     @JsonProperty("gatewayName")
     public String gatewayName;
+
     public UpdateGatewayRequestBody withGatewayName(String gatewayName) {
         this.gatewayName = gatewayName;
         return this;
     }
     
+    public UpdateGatewayRequestBody(@JsonProperty("gatewayName") String gatewayName) {
+        this.gatewayName = gatewayName;
+  }
 }

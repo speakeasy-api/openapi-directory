@@ -15,9 +15,11 @@ public class DescribeVpcPeeringAuthorizationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcPeeringAuthorizations")
     public VpcPeeringAuthorization[] vpcPeeringAuthorizations;
+
     public DescribeVpcPeeringAuthorizationsOutput withVpcPeeringAuthorizations(VpcPeeringAuthorization[] vpcPeeringAuthorizations) {
         this.vpcPeeringAuthorizations = vpcPeeringAuthorizations;
         return this;
     }
     
+    public DescribeVpcPeeringAuthorizationsOutput(){}
 }

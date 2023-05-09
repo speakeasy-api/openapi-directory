@@ -12,6 +12,7 @@ public class UpdateAnomalySubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Frequency")
     public AnomalySubscriptionFrequencyEnum frequency;
+
     public UpdateAnomalySubscriptionRequest withFrequency(AnomalySubscriptionFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -20,6 +21,7 @@ public class UpdateAnomalySubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArnList")
     public String[] monitorArnList;
+
     public UpdateAnomalySubscriptionRequest withMonitorArnList(String[] monitorArnList) {
         this.monitorArnList = monitorArnList;
         return this;
@@ -28,6 +30,7 @@ public class UpdateAnomalySubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subscribers")
     public Subscriber[] subscribers;
+
     public UpdateAnomalySubscriptionRequest withSubscribers(Subscriber[] subscribers) {
         this.subscribers = subscribers;
         return this;
@@ -35,6 +38,7 @@ public class UpdateAnomalySubscriptionRequest {
     
     @JsonProperty("SubscriptionArn")
     public String subscriptionArn;
+
     public UpdateAnomalySubscriptionRequest withSubscriptionArn(String subscriptionArn) {
         this.subscriptionArn = subscriptionArn;
         return this;
@@ -43,6 +47,7 @@ public class UpdateAnomalySubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionName")
     public String subscriptionName;
+
     public UpdateAnomalySubscriptionRequest withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -51,6 +56,7 @@ public class UpdateAnomalySubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Threshold")
     public Double threshold;
+
     public UpdateAnomalySubscriptionRequest withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -59,9 +65,13 @@ public class UpdateAnomalySubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThresholdExpression")
     public Expression thresholdExpression;
+
     public UpdateAnomalySubscriptionRequest withThresholdExpression(Expression thresholdExpression) {
         this.thresholdExpression = thresholdExpression;
         return this;
     }
     
+    public UpdateAnomalySubscriptionRequest(@JsonProperty("SubscriptionArn") String subscriptionArn) {
+        this.subscriptionArn = subscriptionArn;
+  }
 }

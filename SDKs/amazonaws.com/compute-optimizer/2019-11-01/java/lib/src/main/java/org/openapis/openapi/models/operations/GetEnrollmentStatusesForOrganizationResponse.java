@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEnrollmentStatusesForOrganizationResponse {
@@ -12,6 +13,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEnrollmentStatusesForOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
     
     
     public String contentType;
+
     public GetEnrollmentStatusesForOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEnrollmentStatusesForOrganizationResponse getEnrollmentStatusesForOrganizationResponse;
+
     public GetEnrollmentStatusesForOrganizationResponse withGetEnrollmentStatusesForOrganizationResponse(org.openapis.openapi.models.shared.GetEnrollmentStatusesForOrganizationResponse getEnrollmentStatusesForOrganizationResponse) {
         this.getEnrollmentStatusesForOrganizationResponse = getEnrollmentStatusesForOrganizationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
      */
     
     public Object internalServerException;
+
     public GetEnrollmentStatusesForOrganizationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetEnrollmentStatusesForOrganizationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetEnrollmentStatusesForOrganizationResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -66,6 +73,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
     
     
     public Integer statusCode;
+
     public GetEnrollmentStatusesForOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEnrollmentStatusesForOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetEnrollmentStatusesForOrganizationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetEnrollmentStatusesForOrganizationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class GetEnrollmentStatusesForOrganizationResponse {
      */
     
     public Object throttlingException;
+
     public GetEnrollmentStatusesForOrganizationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetEnrollmentStatusesForOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

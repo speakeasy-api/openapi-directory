@@ -15,6 +15,7 @@ public class RDSDatabaseCredentials {
      */
     @JsonProperty("Password")
     public String password;
+
     public RDSDatabaseCredentials withPassword(String password) {
         this.password = password;
         return this;
@@ -25,9 +26,14 @@ public class RDSDatabaseCredentials {
      */
     @JsonProperty("Username")
     public String username;
+
     public RDSDatabaseCredentials withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public RDSDatabaseCredentials(@JsonProperty("Username") String username, @JsonProperty("Password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

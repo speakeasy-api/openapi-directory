@@ -18,9 +18,11 @@ public class CheckoutUtilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originKeys")
     public java.util.Map<String, String> originKeys;
+
     public CheckoutUtilityResponse withOriginKeys(java.util.Map<String, String> originKeys) {
         this.originKeys = originKeys;
         return this;
     }
     
+    public CheckoutUtilityResponse(){}
 }

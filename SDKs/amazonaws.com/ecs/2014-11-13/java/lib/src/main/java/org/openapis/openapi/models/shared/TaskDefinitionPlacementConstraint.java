@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TaskDefinitionPlacementConstraint - &lt;p&gt;An object representing a constraint on task placement in the task definition. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html"&gt;Task placement constraints&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Task placement constraints aren't supported for tasks run on Fargate.&lt;/p&gt; &lt;/note&gt;
+ * TaskDefinitionPlacementConstraint - &lt;p&gt;The constraint on task placement in the task definition. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html"&gt;Task placement constraints&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Task placement constraints aren't supported for tasks run on Fargate.&lt;/p&gt; &lt;/note&gt;
  */
 public class TaskDefinitionPlacementConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public TaskDefinitionPlacementConstraint withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -23,9 +24,11 @@ public class TaskDefinitionPlacementConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TaskDefinitionPlacementConstraintTypeEnum type;
+
     public TaskDefinitionPlacementConstraint withType(TaskDefinitionPlacementConstraintTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TaskDefinitionPlacementConstraint(){}
 }

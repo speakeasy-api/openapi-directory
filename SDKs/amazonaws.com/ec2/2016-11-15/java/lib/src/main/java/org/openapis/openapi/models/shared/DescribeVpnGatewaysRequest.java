@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpnGatewaysRequest {
     
     public Boolean dryRun;
+
     public DescribeVpnGatewaysRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpnGatewaysRequest {
     
     
     public DescribeVpnGatewaysRequestFilters[] filters;
+
     public DescribeVpnGatewaysRequest withFilters(DescribeVpnGatewaysRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -26,9 +28,11 @@ public class DescribeVpnGatewaysRequest {
     
     
     public String[] vpnGatewayIds;
+
     public DescribeVpnGatewaysRequest withVpnGatewayIds(String[] vpnGatewayIds) {
         this.vpnGatewayIds = vpnGatewayIds;
         return this;
     }
     
+    public DescribeVpnGatewaysRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EssentialcontactsProjectsContactsPatchResponse {
     
     public String contentType;
+
     public EssentialcontactsProjectsContactsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EssentialcontactsProjectsContactsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudEssentialcontactsV1Contact googleCloudEssentialcontactsV1Contact;
+
     public EssentialcontactsProjectsContactsPatchResponse withGoogleCloudEssentialcontactsV1Contact(org.openapis.openapi.models.shared.GoogleCloudEssentialcontactsV1Contact googleCloudEssentialcontactsV1Contact) {
         this.googleCloudEssentialcontactsV1Contact = googleCloudEssentialcontactsV1Contact;
         return this;
@@ -26,6 +29,7 @@ public class EssentialcontactsProjectsContactsPatchResponse {
     
     
     public Integer statusCode;
+
     public EssentialcontactsProjectsContactsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class EssentialcontactsProjectsContactsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EssentialcontactsProjectsContactsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EssentialcontactsProjectsContactsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchGetWorkflowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MissingWorkflows")
     public String[] missingWorkflows;
+
     public BatchGetWorkflowsResponse withMissingWorkflows(String[] missingWorkflows) {
         this.missingWorkflows = missingWorkflows;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetWorkflowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Workflows")
     public Workflow[] workflows;
+
     public BatchGetWorkflowsResponse withWorkflows(Workflow[] workflows) {
         this.workflows = workflows;
         return this;
     }
     
+    public BatchGetWorkflowsResponse(){}
 }

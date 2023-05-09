@@ -18,6 +18,7 @@ public class WebPropertyRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public WebPropertyRef withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class WebPropertyRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public WebPropertyRef withHref(String href) {
         this.href = href;
         return this;
@@ -40,6 +42,7 @@ public class WebPropertyRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WebPropertyRef withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class WebPropertyRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalWebPropertyId")
     public String internalWebPropertyId;
+
     public WebPropertyRef withInternalWebPropertyId(String internalWebPropertyId) {
         this.internalWebPropertyId = internalWebPropertyId;
         return this;
@@ -62,6 +66,7 @@ public class WebPropertyRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public WebPropertyRef withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,9 +78,11 @@ public class WebPropertyRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebPropertyRef withName(String name) {
         this.name = name;
         return this;
     }
     
+    public WebPropertyRef(){}
 }

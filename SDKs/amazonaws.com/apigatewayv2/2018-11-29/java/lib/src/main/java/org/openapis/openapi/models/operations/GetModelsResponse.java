@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetModelsResponse {
@@ -12,6 +13,7 @@ public class GetModelsResponse {
      */
     
     public Object badRequestException;
+
     public GetModelsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetModelsResponse {
     
     
     public String contentType;
+
     public GetModelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetModelsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetModelsResponse getModelsResponse;
+
     public GetModelsResponse withGetModelsResponse(org.openapis.openapi.models.shared.GetModelsResponse getModelsResponse) {
         this.getModelsResponse = getModelsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetModelsResponse {
      */
     
     public Object notFoundException;
+
     public GetModelsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetModelsResponse {
     
     
     public Integer statusCode;
+
     public GetModelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetModelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetModelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetModelsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetModelsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetModelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

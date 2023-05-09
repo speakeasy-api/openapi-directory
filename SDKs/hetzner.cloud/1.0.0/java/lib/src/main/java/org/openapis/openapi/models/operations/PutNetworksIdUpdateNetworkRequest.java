@@ -15,6 +15,7 @@ public class PutNetworksIdUpdateNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public PutNetworksIdUpdateNetworkRequestLabels labels;
+
     public PutNetworksIdUpdateNetworkRequest withLabels(PutNetworksIdUpdateNetworkRequestLabels labels) {
         this.labels = labels;
         return this;
@@ -26,9 +27,11 @@ public class PutNetworksIdUpdateNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PutNetworksIdUpdateNetworkRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutNetworksIdUpdateNetworkRequest(){}
 }

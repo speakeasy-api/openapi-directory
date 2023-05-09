@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderHistoryV3Response {
@@ -12,6 +13,7 @@ public class GetOrderHistoryV3Response {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderHistoryV3Response withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderHistoryV3Response {
     
     
     public String contentType;
+
     public GetOrderHistoryV3Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderHistoryV3Response {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrderHistoryV3Response withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderHistoryV3Response {
     
     
     public Integer statusCode;
+
     public GetOrderHistoryV3Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetOrderHistoryV3Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderHistoryV3Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,6 +56,7 @@ public class GetOrderHistoryV3Response {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GetOrderHistoryV3Response withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
@@ -60,9 +67,14 @@ public class GetOrderHistoryV3Response {
      */
     
     public org.openapis.openapi.models.shared.OrderHistory orderHistory;
+
     public GetOrderHistoryV3Response withOrderHistory(org.openapis.openapi.models.shared.OrderHistory orderHistory) {
         this.orderHistory = orderHistory;
         return this;
     }
     
+    public GetOrderHistoryV3Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

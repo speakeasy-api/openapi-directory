@@ -15,6 +15,7 @@ public class AwsVpcConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignPublicIp")
     public AssignPublicIpEnum assignPublicIp;
+
     public AwsVpcConfiguration withAssignPublicIp(AssignPublicIpEnum assignPublicIp) {
         this.assignPublicIp = assignPublicIp;
         return this;
@@ -23,6 +24,7 @@ public class AwsVpcConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public String[] securityGroups;
+
     public AwsVpcConfiguration withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -30,9 +32,13 @@ public class AwsVpcConfiguration {
     
     @JsonProperty("subnets")
     public String[] subnets;
+
     public AwsVpcConfiguration withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public AwsVpcConfiguration(@JsonProperty("subnets") String[] subnets) {
+        this.subnets = subnets;
+  }
 }

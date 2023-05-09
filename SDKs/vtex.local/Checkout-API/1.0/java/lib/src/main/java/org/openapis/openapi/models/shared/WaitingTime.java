@@ -12,9 +12,13 @@ public class WaitingTime {
      */
     @JsonProperty("waitingTime")
     public Long waitingTime;
+
     public WaitingTime withWaitingTime(Long waitingTime) {
         this.waitingTime = waitingTime;
         return this;
     }
     
+    public WaitingTime(@JsonProperty("waitingTime") Long waitingTime) {
+        this.waitingTime = waitingTime;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubscribePushDeviceToChannelRawResponse {
     
     public byte[] body;
+
     public SubscribePushDeviceToChannelRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class SubscribePushDeviceToChannelRawResponse {
     
     
     public String contentType;
+
     public SubscribePushDeviceToChannelRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SubscribePushDeviceToChannelRawResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public SubscribePushDeviceToChannelRawResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class SubscribePushDeviceToChannelRawResponse {
     
     
     public Integer statusCode;
+
     public SubscribePushDeviceToChannelRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class SubscribePushDeviceToChannelRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubscribePushDeviceToChannelRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SubscribePushDeviceToChannelRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

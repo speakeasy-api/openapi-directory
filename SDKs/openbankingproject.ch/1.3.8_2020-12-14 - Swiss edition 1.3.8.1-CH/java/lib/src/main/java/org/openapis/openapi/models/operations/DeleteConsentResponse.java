@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConsentResponse {
     
     public String contentType;
+
     public DeleteConsentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400AIS error400AIS;
+
     public DeleteConsentResponse withError400AIS(org.openapis.openapi.models.shared.Error400AIS error400AIS) {
         this.error400AIS = error400AIS;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGAIS error400NGAIS;
+
     public DeleteConsentResponse withError400NGAIS(org.openapis.openapi.models.shared.Error400NGAIS error400NGAIS) {
         this.error400NGAIS = error400NGAIS;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401AIS error401AIS;
+
     public DeleteConsentResponse withError401AIS(org.openapis.openapi.models.shared.Error401AIS error401AIS) {
         this.error401AIS = error401AIS;
         return this;
@@ -49,6 +54,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGAIS error401NGAIS;
+
     public DeleteConsentResponse withError401NGAIS(org.openapis.openapi.models.shared.Error401NGAIS error401NGAIS) {
         this.error401NGAIS = error401NGAIS;
         return this;
@@ -59,6 +65,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403AIS error403AIS;
+
     public DeleteConsentResponse withError403AIS(org.openapis.openapi.models.shared.Error403AIS error403AIS) {
         this.error403AIS = error403AIS;
         return this;
@@ -69,6 +76,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGAIS error403NGAIS;
+
     public DeleteConsentResponse withError403NGAIS(org.openapis.openapi.models.shared.Error403NGAIS error403NGAIS) {
         this.error403NGAIS = error403NGAIS;
         return this;
@@ -79,6 +87,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404AIS error404AIS;
+
     public DeleteConsentResponse withError404AIS(org.openapis.openapi.models.shared.Error404AIS error404AIS) {
         this.error404AIS = error404AIS;
         return this;
@@ -89,6 +98,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGAIS error404NGAIS;
+
     public DeleteConsentResponse withError404NGAIS(org.openapis.openapi.models.shared.Error404NGAIS error404NGAIS) {
         this.error404NGAIS = error404NGAIS;
         return this;
@@ -99,6 +109,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405AIS error405AIS;
+
     public DeleteConsentResponse withError405AIS(org.openapis.openapi.models.shared.Error405AIS error405AIS) {
         this.error405AIS = error405AIS;
         return this;
@@ -109,6 +120,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGAIS error405NGAIS;
+
     public DeleteConsentResponse withError405NGAIS(org.openapis.openapi.models.shared.Error405NGAIS error405NGAIS) {
         this.error405NGAIS = error405NGAIS;
         return this;
@@ -119,6 +131,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error406AIS error406AIS;
+
     public DeleteConsentResponse withError406AIS(org.openapis.openapi.models.shared.Error406AIS error406AIS) {
         this.error406AIS = error406AIS;
         return this;
@@ -129,6 +142,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error406NGAIS error406NGAIS;
+
     public DeleteConsentResponse withError406NGAIS(org.openapis.openapi.models.shared.Error406NGAIS error406NGAIS) {
         this.error406NGAIS = error406NGAIS;
         return this;
@@ -139,6 +153,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409AIS error409AIS;
+
     public DeleteConsentResponse withError409AIS(org.openapis.openapi.models.shared.Error409AIS error409AIS) {
         this.error409AIS = error409AIS;
         return this;
@@ -149,6 +164,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGAIS error409NGAIS;
+
     public DeleteConsentResponse withError409NGAIS(org.openapis.openapi.models.shared.Error409NGAIS error409NGAIS) {
         this.error409NGAIS = error409NGAIS;
         return this;
@@ -159,6 +175,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error429AIS error429AIS;
+
     public DeleteConsentResponse withError429AIS(org.openapis.openapi.models.shared.Error429AIS error429AIS) {
         this.error429AIS = error429AIS;
         return this;
@@ -169,6 +186,7 @@ public class DeleteConsentResponse {
      */
     
     public org.openapis.openapi.models.shared.Error429NGAIS error429NGAIS;
+
     public DeleteConsentResponse withError429NGAIS(org.openapis.openapi.models.shared.Error429NGAIS error429NGAIS) {
         this.error429NGAIS = error429NGAIS;
         return this;
@@ -176,6 +194,7 @@ public class DeleteConsentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DeleteConsentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -183,6 +202,7 @@ public class DeleteConsentResponse {
     
     
     public Integer statusCode;
+
     public DeleteConsentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -190,9 +210,14 @@ public class DeleteConsentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConsentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteConsentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

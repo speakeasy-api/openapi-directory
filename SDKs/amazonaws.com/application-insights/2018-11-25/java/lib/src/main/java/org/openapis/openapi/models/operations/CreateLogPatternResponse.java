@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLogPatternResponse {
     
     public String contentType;
+
     public CreateLogPatternResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLogPatternResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLogPatternResponse createLogPatternResponse;
+
     public CreateLogPatternResponse withCreateLogPatternResponse(org.openapis.openapi.models.shared.CreateLogPatternResponse createLogPatternResponse) {
         this.createLogPatternResponse = createLogPatternResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLogPatternResponse {
      */
     
     public Object internalServerException;
+
     public CreateLogPatternResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLogPatternResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateLogPatternResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -46,6 +51,7 @@ public class CreateLogPatternResponse {
     
     
     public Integer statusCode;
+
     public CreateLogPatternResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateLogPatternResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLogPatternResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateLogPatternResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateLogPatternResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class CreateLogPatternResponse {
      */
     
     public Object validationException;
+
     public CreateLogPatternResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLogPatternResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class SuspendUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public SuspendUserRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public SuspendUserRequest(){}
 }

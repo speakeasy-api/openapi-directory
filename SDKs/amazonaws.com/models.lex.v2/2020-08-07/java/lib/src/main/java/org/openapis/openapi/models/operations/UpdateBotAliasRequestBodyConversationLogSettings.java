@@ -15,6 +15,7 @@ public class UpdateBotAliasRequestBodyConversationLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioLogSettings")
     public org.openapis.openapi.models.shared.AudioLogSetting[] audioLogSettings;
+
     public UpdateBotAliasRequestBodyConversationLogSettings withAudioLogSettings(org.openapis.openapi.models.shared.AudioLogSetting[] audioLogSettings) {
         this.audioLogSettings = audioLogSettings;
         return this;
@@ -23,9 +24,11 @@ public class UpdateBotAliasRequestBodyConversationLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textLogSettings")
     public org.openapis.openapi.models.shared.TextLogSetting[] textLogSettings;
+
     public UpdateBotAliasRequestBodyConversationLogSettings withTextLogSettings(org.openapis.openapi.models.shared.TextLogSetting[] textLogSettings) {
         this.textLogSettings = textLogSettings;
         return this;
     }
     
+    public UpdateBotAliasRequestBodyConversationLogSettings(){}
 }

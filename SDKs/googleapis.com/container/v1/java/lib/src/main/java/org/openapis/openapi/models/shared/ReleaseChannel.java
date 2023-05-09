@@ -18,9 +18,11 @@ public class ReleaseChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public ReleaseChannelChannelEnum channel;
+
     public ReleaseChannel withChannel(ReleaseChannelChannelEnum channel) {
         this.channel = channel;
         return this;
     }
     
+    public ReleaseChannel(){}
 }

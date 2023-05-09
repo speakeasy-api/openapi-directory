@@ -15,6 +15,7 @@ public class UpdateThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedVersion")
     public Long expectedVersion;
+
     public UpdateThingGroupRequestBody withExpectedVersion(Long expectedVersion) {
         this.expectedVersion = expectedVersion;
         return this;
@@ -25,9 +26,13 @@ public class UpdateThingGroupRequestBody {
      */
     @JsonProperty("thingGroupProperties")
     public UpdateThingGroupRequestBodyThingGroupProperties thingGroupProperties;
+
     public UpdateThingGroupRequestBody withThingGroupProperties(UpdateThingGroupRequestBodyThingGroupProperties thingGroupProperties) {
         this.thingGroupProperties = thingGroupProperties;
         return this;
     }
     
+    public UpdateThingGroupRequestBody(@JsonProperty("thingGroupProperties") UpdateThingGroupRequestBodyThingGroupProperties thingGroupProperties) {
+        this.thingGroupProperties = thingGroupProperties;
+  }
 }

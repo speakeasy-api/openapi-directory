@@ -15,9 +15,11 @@ public class LifeCycleLastTestReverted {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCallDateTime")
     public String apiCallDateTime;
+
     public LifeCycleLastTestReverted withApiCallDateTime(String apiCallDateTime) {
         this.apiCallDateTime = apiCallDateTime;
         return this;
     }
     
+    public LifeCycleLastTestReverted(){}
 }

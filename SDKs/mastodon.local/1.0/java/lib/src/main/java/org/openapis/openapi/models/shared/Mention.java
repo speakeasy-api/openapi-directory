@@ -16,6 +16,7 @@ public class Mention {
      */
     @JsonProperty("acct")
     public String acct;
+
     public Mention withAcct(String acct) {
         this.acct = acct;
         return this;
@@ -26,6 +27,7 @@ public class Mention {
      */
     @JsonProperty("id")
     public String id;
+
     public Mention withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class Mention {
      */
     @JsonProperty("url")
     public String url;
+
     public Mention withUrl(String url) {
         this.url = url;
         return this;
@@ -46,9 +49,16 @@ public class Mention {
      */
     @JsonProperty("username")
     public String username;
+
     public Mention withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Mention(@JsonProperty("acct") String acct, @JsonProperty("id") String id, @JsonProperty("url") String url, @JsonProperty("username") String username) {
+        this.acct = acct;
+        this.id = id;
+        this.url = url;
+        this.username = username;
+  }
 }

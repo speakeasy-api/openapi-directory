@@ -3,10 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AllStarsFormatEnum;
 import org.openapis.openapi.models.operations.AllStarsRequest;
 import org.openapis.openapi.models.operations.AllStarsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +17,17 @@ public class Application {
                 }})
                 .build();
 
-            AllStarsRequest req = new AllStarsRequest() {{
-                format = "JSON";
-                season = "provident";
-            }}            
+            AllStarsRequest req = new AllStarsRequest(AllStarsFormatEnum.JSON, "provident");            
 
             AllStarsResponse res = sdk.allStars(req);
 
-            if (res.playerInfos.isPresent()) {
+            if (res.playerInfos != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotAttributeResult {
     
     public DescribeSnapshotAttributeResultCreateVolumePermissions[] createVolumePermissions;
+
     public DescribeSnapshotAttributeResult withCreateVolumePermissions(DescribeSnapshotAttributeResultCreateVolumePermissions[] createVolumePermissions) {
         this.createVolumePermissions = createVolumePermissions;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSnapshotAttributeResult {
     
     
     public DescribeSnapshotAttributeResultProductCodes[] productCodes;
+
     public DescribeSnapshotAttributeResult withProductCodes(DescribeSnapshotAttributeResultProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -26,9 +28,11 @@ public class DescribeSnapshotAttributeResult {
     
     
     public String snapshotId;
+
     public DescribeSnapshotAttributeResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public DescribeSnapshotAttributeResult(){}
 }

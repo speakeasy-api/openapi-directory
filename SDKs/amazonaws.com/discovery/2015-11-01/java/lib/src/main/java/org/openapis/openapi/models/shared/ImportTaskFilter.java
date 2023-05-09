@@ -15,6 +15,7 @@ public class ImportTaskFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ImportTaskFilterNameEnum name;
+
     public ImportTaskFilter withName(ImportTaskFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ImportTaskFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public ImportTaskFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ImportTaskFilter(){}
 }

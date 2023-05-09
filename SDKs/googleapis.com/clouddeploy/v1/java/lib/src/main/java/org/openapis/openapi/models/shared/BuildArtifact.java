@@ -18,6 +18,7 @@ public class BuildArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public BuildArtifact withImage(String image) {
         this.image = image;
         return this;
@@ -29,9 +30,11 @@ public class BuildArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public BuildArtifact withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public BuildArtifact(){}
 }

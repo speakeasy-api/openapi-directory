@@ -18,6 +18,7 @@ public class PacketMirroringAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public PacketMirroringAggregatedListWarningCodeEnum code;
+
     public PacketMirroringAggregatedListWarning withCode(PacketMirroringAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PacketMirroringAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PacketMirroringAggregatedListWarningData[] data;
+
     public PacketMirroringAggregatedListWarning withData(PacketMirroringAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class PacketMirroringAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PacketMirroringAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PacketMirroringAggregatedListWarning(){}
 }

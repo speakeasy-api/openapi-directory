@@ -13,6 +13,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connector_uuid")
     public String connectorUuid;
+
     public GetLogsRequest withConnectorUuid(String connectorUuid) {
         this.connectorUuid = connectorUuid;
         return this;
@@ -23,6 +24,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error")
     public String error;
+
     public GetLogsRequest withError(String error) {
         this.error = error;
         return this;
@@ -30,6 +32,7 @@ public class GetLogsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetLogsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -40,6 +43,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_connection")
     public Long idConnection;
+
     public GetLogsRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -50,6 +54,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_connector")
     public Long idConnector;
+
     public GetLogsRequest withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -60,6 +65,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_max")
     public Long idMax;
+
     public GetLogsRequest withIdMax(Long idMax) {
         this.idMax = idMax;
         return this;
@@ -70,6 +76,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_source")
     public Long idSource;
+
     public GetLogsRequest withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
@@ -80,6 +87,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_user")
     public Long idUser;
+
     public GetLogsRequest withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -90,6 +98,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetLogsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -100,6 +109,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetLogsRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -110,6 +120,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetLogsRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -120,6 +131,7 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetLogsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -130,9 +142,11 @@ public class GetLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public String period;
+
     public GetLogsRequest withPeriod(String period) {
         this.period = period;
         return this;
     }
     
+    public GetLogsRequest(){}
 }

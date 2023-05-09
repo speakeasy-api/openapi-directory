@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAssetsKurtosisResponse {
     
     public String contentType;
+
     public PostAssetsKurtosisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAssetsKurtosisResponse {
     
     
     public Integer statusCode;
+
     public PostAssetsKurtosisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAssetsKurtosisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAssetsKurtosisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAssetsKurtosisResponse {
      */
     
     public PostAssetsKurtosis200ApplicationJSON postAssetsKurtosis200ApplicationJSONObject;
+
     public PostAssetsKurtosisResponse withPostAssetsKurtosis200ApplicationJSONObject(PostAssetsKurtosis200ApplicationJSON postAssetsKurtosis200ApplicationJSONObject) {
         this.postAssetsKurtosis200ApplicationJSONObject = postAssetsKurtosis200ApplicationJSONObject;
         return this;
     }
     
+    public PostAssetsKurtosisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class PushItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public PushItemRequest withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -26,6 +27,7 @@ public class PushItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public PushItemRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -37,9 +39,11 @@ public class PushItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public PushItem item;
+
     public PushItemRequest withItem(PushItem item) {
         this.item = item;
         return this;
     }
     
+    public PushItemRequest(){}
 }

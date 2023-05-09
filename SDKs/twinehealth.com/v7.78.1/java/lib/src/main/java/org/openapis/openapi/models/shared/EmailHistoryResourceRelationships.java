@@ -12,6 +12,7 @@ public class EmailHistoryResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiver")
     public EmailHistoryResourceRelationshipsReceiver receiver;
+
     public EmailHistoryResourceRelationships withReceiver(EmailHistoryResourceRelationshipsReceiver receiver) {
         this.receiver = receiver;
         return this;
@@ -20,9 +21,11 @@ public class EmailHistoryResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sender")
     public EmailHistoryResourceRelationshipsSender sender;
+
     public EmailHistoryResourceRelationships withSender(EmailHistoryResourceRelationshipsSender sender) {
         this.sender = sender;
         return this;
     }
     
+    public EmailHistoryResourceRelationships(){}
 }

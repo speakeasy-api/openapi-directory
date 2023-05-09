@@ -15,9 +15,11 @@ public class GetProducers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producers")
     public org.openapis.openapi.models.shared.ProducerV1[] producers;
+
     public GetProducers200ApplicationJSON withProducers(org.openapis.openapi.models.shared.ProducerV1[] producers) {
         this.producers = producers;
         return this;
     }
     
+    public GetProducers200ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVirtualNodeRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateVirtualNodeRequestBody requestBody;
+
     public UpdateVirtualNodeRequest withRequestBody(UpdateVirtualNodeRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateVirtualNodeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateVirtualNodeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateVirtualNodeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateVirtualNodeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateVirtualNodeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateVirtualNodeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateVirtualNodeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateVirtualNodeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateVirtualNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meshName")
     public String meshName;
+
     public UpdateVirtualNodeRequest withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -78,6 +88,7 @@ public class UpdateVirtualNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meshOwner")
     public String meshOwner;
+
     public UpdateVirtualNodeRequest withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -88,9 +99,15 @@ public class UpdateVirtualNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualNodeName")
     public String virtualNodeName;
+
     public UpdateVirtualNodeRequest withVirtualNodeName(String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
         return this;
     }
     
+    public UpdateVirtualNodeRequest(@JsonProperty("RequestBody") UpdateVirtualNodeRequestBody requestBody, @JsonProperty("meshName") String meshName, @JsonProperty("virtualNodeName") String virtualNodeName) {
+        this.requestBody = requestBody;
+        this.meshName = meshName;
+        this.virtualNodeName = virtualNodeName;
+  }
 }

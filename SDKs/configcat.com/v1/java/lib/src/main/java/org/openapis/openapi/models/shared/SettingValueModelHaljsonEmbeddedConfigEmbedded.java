@@ -12,9 +12,11 @@ public class SettingValueModelHaljsonEmbeddedConfigEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public SettingValueModelHaljsonEmbeddedConfigEmbeddedProduct product;
+
     public SettingValueModelHaljsonEmbeddedConfigEmbedded withProduct(SettingValueModelHaljsonEmbeddedConfigEmbeddedProduct product) {
         this.product = product;
         return this;
     }
     
+    public SettingValueModelHaljsonEmbeddedConfigEmbedded(){}
 }

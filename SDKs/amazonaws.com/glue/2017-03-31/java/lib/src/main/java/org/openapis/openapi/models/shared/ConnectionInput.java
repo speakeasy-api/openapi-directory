@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionInput {
     @JsonProperty("ConnectionProperties")
     public java.util.Map<String, String> connectionProperties;
+
     public ConnectionInput withConnectionProperties(java.util.Map<String, String> connectionProperties) {
         this.connectionProperties = connectionProperties;
         return this;
@@ -21,6 +22,7 @@ public class ConnectionInput {
     
     @JsonProperty("ConnectionType")
     public ConnectionTypeEnum connectionType;
+
     public ConnectionInput withConnectionType(ConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -29,6 +31,7 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ConnectionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +40,7 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchCriteria")
     public String[] matchCriteria;
+
     public ConnectionInput withMatchCriteria(String[] matchCriteria) {
         this.matchCriteria = matchCriteria;
         return this;
@@ -44,6 +48,7 @@ public class ConnectionInput {
     
     @JsonProperty("Name")
     public String name;
+
     public ConnectionInput withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +57,15 @@ public class ConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhysicalConnectionRequirements")
     public PhysicalConnectionRequirements physicalConnectionRequirements;
+
     public ConnectionInput withPhysicalConnectionRequirements(PhysicalConnectionRequirements physicalConnectionRequirements) {
         this.physicalConnectionRequirements = physicalConnectionRequirements;
         return this;
     }
     
+    public ConnectionInput(@JsonProperty("ConnectionProperties") java.util.Map<String, String> connectionProperties, @JsonProperty("ConnectionType") ConnectionTypeEnum connectionType, @JsonProperty("Name") String name) {
+        this.connectionProperties = connectionProperties;
+        this.connectionType = connectionType;
+        this.name = name;
+  }
 }

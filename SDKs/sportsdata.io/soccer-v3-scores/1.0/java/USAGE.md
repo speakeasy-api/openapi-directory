@@ -3,10 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AreasCountriesFormatEnum;
 import org.openapis.openapi.models.operations.AreasCountriesRequest;
 import org.openapis.openapi.models.operations.AreasCountriesResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,17 +17,17 @@ public class Application {
                 }})
                 .build();
 
-            AreasCountriesRequest req = new AreasCountriesRequest() {{
-                format = "json";
-            }}            
+            AreasCountriesRequest req = new AreasCountriesRequest(AreasCountriesFormatEnum.JSON);            
 
             AreasCountriesResponse res = sdk.areasCountries(req);
 
-            if (res.areas.isPresent()) {
+            if (res.areas != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

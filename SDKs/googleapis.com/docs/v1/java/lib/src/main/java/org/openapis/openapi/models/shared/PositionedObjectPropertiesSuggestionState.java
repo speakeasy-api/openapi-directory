@@ -18,6 +18,7 @@ public class PositionedObjectPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedObjectSuggestionState")
     public EmbeddedObjectSuggestionState embeddedObjectSuggestionState;
+
     public PositionedObjectPropertiesSuggestionState withEmbeddedObjectSuggestionState(EmbeddedObjectSuggestionState embeddedObjectSuggestionState) {
         this.embeddedObjectSuggestionState = embeddedObjectSuggestionState;
         return this;
@@ -29,9 +30,11 @@ public class PositionedObjectPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positioningSuggestionState")
     public PositionedObjectPositioningSuggestionState positioningSuggestionState;
+
     public PositionedObjectPropertiesSuggestionState withPositioningSuggestionState(PositionedObjectPositioningSuggestionState positioningSuggestionState) {
         this.positioningSuggestionState = positioningSuggestionState;
         return this;
     }
     
+    public PositionedObjectPropertiesSuggestionState(){}
 }

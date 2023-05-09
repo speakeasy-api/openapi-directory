@@ -18,9 +18,11 @@ public class PhoneVerificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public PhoneVerificationData withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public PhoneVerificationData(){}
 }

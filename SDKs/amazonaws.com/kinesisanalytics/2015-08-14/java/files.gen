@@ -171,4 +171,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/InputLambdaProcessorUpdate.
 lib/src/main/java/org/openapis/openapi/models/shared/InputParallelismUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/CloudWatchLoggingOptionUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

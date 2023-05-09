@@ -55,10 +55,8 @@ public class Maintenance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMaintenanceIdResponse res = new org.openapis.openapi.models.operations.DeleteMaintenanceIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMaintenanceIdResponse res = new org.openapis.openapi.models.operations.DeleteMaintenanceIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class Maintenance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMaintenanceResponse res = new org.openapis.openapi.models.operations.GetMaintenanceResponse() {{
+        org.openapis.openapi.models.operations.GetMaintenanceResponse res = new org.openapis.openapi.models.operations.GetMaintenanceResponse(contentType, httpRes.statusCode()) {{
             maintenances = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Maintenance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMaintenanceResponse res = new org.openapis.openapi.models.operations.PostMaintenanceResponse() {{
+        org.openapis.openapi.models.operations.PostMaintenanceResponse res = new org.openapis.openapi.models.operations.PostMaintenanceResponse(contentType, httpRes.statusCode()) {{
             maintenance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -183,11 +177,9 @@ public class Maintenance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutMaintenanceIdResponse res = new org.openapis.openapi.models.operations.PutMaintenanceIdResponse() {{
+        org.openapis.openapi.models.operations.PutMaintenanceIdResponse res = new org.openapis.openapi.models.operations.PutMaintenanceIdResponse(contentType, httpRes.statusCode()) {{
             maintenance = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

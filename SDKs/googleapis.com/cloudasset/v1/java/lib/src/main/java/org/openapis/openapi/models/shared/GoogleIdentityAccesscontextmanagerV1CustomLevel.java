@@ -18,9 +18,11 @@ public class GoogleIdentityAccesscontextmanagerV1CustomLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expr")
     public Expr expr;
+
     public GoogleIdentityAccesscontextmanagerV1CustomLevel withExpr(Expr expr) {
         this.expr = expr;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1CustomLevel(){}
 }

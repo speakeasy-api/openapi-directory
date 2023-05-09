@@ -62,11 +62,9 @@ public class Presidential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPresidentialContributionsByCandidateResponse res = new org.openapis.openapi.models.operations.GetPresidentialContributionsByCandidateResponse() {{
+        org.openapis.openapi.models.operations.GetPresidentialContributionsByCandidateResponse res = new org.openapis.openapi.models.operations.GetPresidentialContributionsByCandidateResponse(contentType, httpRes.statusCode()) {{
             presidentialByCandidatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -107,11 +105,9 @@ public class Presidential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPresidentialContributionsBySizeResponse res = new org.openapis.openapi.models.operations.GetPresidentialContributionsBySizeResponse() {{
+        org.openapis.openapi.models.operations.GetPresidentialContributionsBySizeResponse res = new org.openapis.openapi.models.operations.GetPresidentialContributionsBySizeResponse(contentType, httpRes.statusCode()) {{
             presidentialBySizePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -152,11 +148,9 @@ public class Presidential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPresidentialContributionsByStateResponse res = new org.openapis.openapi.models.operations.GetPresidentialContributionsByStateResponse() {{
+        org.openapis.openapi.models.operations.GetPresidentialContributionsByStateResponse res = new org.openapis.openapi.models.operations.GetPresidentialContributionsByStateResponse(contentType, httpRes.statusCode()) {{
             presidentialByStatePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -197,11 +191,9 @@ public class Presidential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPresidentialCoverageEndDateResponse res = new org.openapis.openapi.models.operations.GetPresidentialCoverageEndDateResponse() {{
+        org.openapis.openapi.models.operations.GetPresidentialCoverageEndDateResponse res = new org.openapis.openapi.models.operations.GetPresidentialCoverageEndDateResponse(contentType, httpRes.statusCode()) {{
             presidentialCoveragePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -242,11 +234,9 @@ public class Presidential {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPresidentialFinancialSummaryResponse res = new org.openapis.openapi.models.operations.GetPresidentialFinancialSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetPresidentialFinancialSummaryResponse res = new org.openapis.openapi.models.operations.GetPresidentialFinancialSummaryResponse(contentType, httpRes.statusCode()) {{
             presidentialSummaryPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

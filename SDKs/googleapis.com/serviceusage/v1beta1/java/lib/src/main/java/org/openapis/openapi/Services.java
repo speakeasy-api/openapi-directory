@@ -61,11 +61,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse(contentType, httpRes.statusCode()) {{
             listAdminOverridesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +289,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse(contentType, httpRes.statusCode()) {{
             listConsumerOverridesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +467,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse(contentType, httpRes.statusCode()) {{
             consumerQuotaLimit = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,11 +511,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListResponse(contentType, httpRes.statusCode()) {{
             listConsumerQuotaMetricsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -579,11 +557,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -627,11 +603,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +647,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -719,11 +691,9 @@ public class Services {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServiceusageServicesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesListResponse() {{
+        org.openapis.openapi.models.operations.ServiceusageServicesListResponse res = new org.openapis.openapi.models.operations.ServiceusageServicesListResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

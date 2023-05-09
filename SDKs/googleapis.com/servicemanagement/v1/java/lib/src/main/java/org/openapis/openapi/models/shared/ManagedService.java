@@ -18,6 +18,7 @@ public class ManagedService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerProjectId")
     public String producerProjectId;
+
     public ManagedService withProducerProjectId(String producerProjectId) {
         this.producerProjectId = producerProjectId;
         return this;
@@ -29,9 +30,11 @@ public class ManagedService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ManagedService withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ManagedService(){}
 }

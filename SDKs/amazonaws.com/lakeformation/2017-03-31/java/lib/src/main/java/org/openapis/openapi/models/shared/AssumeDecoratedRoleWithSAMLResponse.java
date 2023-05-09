@@ -20,6 +20,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKeyId")
     public String accessKeyId;
+
     public AssumeDecoratedRoleWithSAMLResponse withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -30,6 +31,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Expiration")
     public OffsetDateTime expiration;
+
     public AssumeDecoratedRoleWithSAMLResponse withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -38,6 +40,7 @@ public class AssumeDecoratedRoleWithSAMLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretAccessKey")
     public String secretAccessKey;
+
     public AssumeDecoratedRoleWithSAMLResponse withSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
         return this;
@@ -46,9 +49,11 @@ public class AssumeDecoratedRoleWithSAMLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionToken")
     public String sessionToken;
+
     public AssumeDecoratedRoleWithSAMLResponse withSessionToken(String sessionToken) {
         this.sessionToken = sessionToken;
         return this;
     }
     
+    public AssumeDecoratedRoleWithSAMLResponse(){}
 }

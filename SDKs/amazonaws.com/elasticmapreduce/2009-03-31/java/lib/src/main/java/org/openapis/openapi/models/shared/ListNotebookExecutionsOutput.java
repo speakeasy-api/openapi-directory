@@ -15,6 +15,7 @@ public class ListNotebookExecutionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListNotebookExecutionsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class ListNotebookExecutionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookExecutions")
     public NotebookExecutionSummary[] notebookExecutions;
+
     public ListNotebookExecutionsOutput withNotebookExecutions(NotebookExecutionSummary[] notebookExecutions) {
         this.notebookExecutions = notebookExecutions;
         return this;
     }
     
+    public ListNotebookExecutionsOutput(){}
 }

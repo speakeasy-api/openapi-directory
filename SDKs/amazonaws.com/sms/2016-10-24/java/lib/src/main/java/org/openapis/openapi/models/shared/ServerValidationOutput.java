@@ -18,9 +18,11 @@ public class ServerValidationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public Server server;
+
     public ServerValidationOutput withServer(Server server) {
         this.server = server;
         return this;
     }
     
+    public ServerValidationOutput(){}
 }

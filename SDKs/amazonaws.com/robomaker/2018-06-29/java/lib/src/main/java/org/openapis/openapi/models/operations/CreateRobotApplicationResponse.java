@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRobotApplicationResponse {
     
     public String contentType;
+
     public CreateRobotApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRobotApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRobotApplicationResponse createRobotApplicationResponse;
+
     public CreateRobotApplicationResponse withCreateRobotApplicationResponse(org.openapis.openapi.models.shared.CreateRobotApplicationResponse createRobotApplicationResponse) {
         this.createRobotApplicationResponse = createRobotApplicationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRobotApplicationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateRobotApplicationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRobotApplicationResponse {
      */
     
     public Object internalServerException;
+
     public CreateRobotApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRobotApplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateRobotApplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRobotApplicationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRobotApplicationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateRobotApplicationResponse {
     
     
     public Integer statusCode;
+
     public CreateRobotApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateRobotApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRobotApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateRobotApplicationResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateRobotApplicationResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRobotApplicationResponse {
      */
     
     public Object throttlingException;
+
     public CreateRobotApplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateRobotApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

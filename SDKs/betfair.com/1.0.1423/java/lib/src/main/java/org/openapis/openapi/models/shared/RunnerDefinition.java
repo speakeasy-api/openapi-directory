@@ -17,6 +17,7 @@ public class RunnerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustmentFactor")
     public Double adjustmentFactor;
+
     public RunnerDefinition withAdjustmentFactor(Double adjustmentFactor) {
         this.adjustmentFactor = adjustmentFactor;
         return this;
@@ -25,6 +26,7 @@ public class RunnerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bsp")
     public Double bsp;
+
     public RunnerDefinition withBsp(Double bsp) {
         this.bsp = bsp;
         return this;
@@ -36,6 +38,7 @@ public class RunnerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hc")
     public Double hc;
+
     public RunnerDefinition withHc(Double hc) {
         this.hc = hc;
         return this;
@@ -47,6 +50,7 @@ public class RunnerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public RunnerDefinition withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +61,7 @@ public class RunnerDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("removalDate")
     public OffsetDateTime removalDate;
+
     public RunnerDefinition withRemovalDate(OffsetDateTime removalDate) {
         this.removalDate = removalDate;
         return this;
@@ -65,6 +70,7 @@ public class RunnerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortPriority")
     public Integer sortPriority;
+
     public RunnerDefinition withSortPriority(Integer sortPriority) {
         this.sortPriority = sortPriority;
         return this;
@@ -73,9 +79,11 @@ public class RunnerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RunnerDefinitionStatusEnum status;
+
     public RunnerDefinition withStatus(RunnerDefinitionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RunnerDefinition(){}
 }

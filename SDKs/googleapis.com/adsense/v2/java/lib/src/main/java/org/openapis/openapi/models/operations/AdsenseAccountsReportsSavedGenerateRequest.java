@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAccountsReportsSavedGenerateRequest {
@@ -12,6 +13,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AdsenseAccountsReportsSavedGenerateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AdsenseAccountsReportsSavedGenerateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsenseAccountsReportsSavedGenerateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AdsenseAccountsReportsSavedGenerateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
     public String currencyCode;
+
     public AdsenseAccountsReportsSavedGenerateRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -62,6 +68,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRange")
     public AdsenseAccountsReportsSavedGenerateDateRangeEnum dateRange;
+
     public AdsenseAccountsReportsSavedGenerateRequest withDateRange(AdsenseAccountsReportsSavedGenerateDateRangeEnum dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -72,6 +79,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.day")
     public Long endDateDay;
+
     public AdsenseAccountsReportsSavedGenerateRequest withEndDateDay(Long endDateDay) {
         this.endDateDay = endDateDay;
         return this;
@@ -82,6 +90,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.month")
     public Long endDateMonth;
+
     public AdsenseAccountsReportsSavedGenerateRequest withEndDateMonth(Long endDateMonth) {
         this.endDateMonth = endDateMonth;
         return this;
@@ -92,6 +101,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.year")
     public Long endDateYear;
+
     public AdsenseAccountsReportsSavedGenerateRequest withEndDateYear(Long endDateYear) {
         this.endDateYear = endDateYear;
         return this;
@@ -102,6 +112,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsenseAccountsReportsSavedGenerateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -112,6 +123,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsenseAccountsReportsSavedGenerateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -122,6 +134,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public AdsenseAccountsReportsSavedGenerateRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -132,6 +145,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public AdsenseAccountsReportsSavedGenerateRequest withName(String name) {
         this.name = name;
         return this;
@@ -142,6 +156,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsenseAccountsReportsSavedGenerateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -152,6 +167,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsenseAccountsReportsSavedGenerateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -162,6 +178,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsenseAccountsReportsSavedGenerateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reportingTimeZone")
     public AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum reportingTimeZone;
+
     public AdsenseAccountsReportsSavedGenerateRequest withReportingTimeZone(AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum reportingTimeZone) {
         this.reportingTimeZone = reportingTimeZone;
         return this;
@@ -182,6 +200,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.day")
     public Long startDateDay;
+
     public AdsenseAccountsReportsSavedGenerateRequest withStartDateDay(Long startDateDay) {
         this.startDateDay = startDateDay;
         return this;
@@ -192,6 +211,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.month")
     public Long startDateMonth;
+
     public AdsenseAccountsReportsSavedGenerateRequest withStartDateMonth(Long startDateMonth) {
         this.startDateMonth = startDateMonth;
         return this;
@@ -202,6 +222,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.year")
     public Long startDateYear;
+
     public AdsenseAccountsReportsSavedGenerateRequest withStartDateYear(Long startDateYear) {
         this.startDateYear = startDateYear;
         return this;
@@ -212,6 +233,7 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AdsenseAccountsReportsSavedGenerateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,9 +244,13 @@ public class AdsenseAccountsReportsSavedGenerateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AdsenseAccountsReportsSavedGenerateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AdsenseAccountsReportsSavedGenerateRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

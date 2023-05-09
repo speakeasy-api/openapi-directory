@@ -15,9 +15,11 @@ public class InstanceGroupsListInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceState")
     public InstanceGroupsListInstancesRequestInstanceStateEnum instanceState;
+
     public InstanceGroupsListInstancesRequest withInstanceState(InstanceGroupsListInstancesRequestInstanceStateEnum instanceState) {
         this.instanceState = instanceState;
         return this;
     }
     
+    public InstanceGroupsListInstancesRequest(){}
 }

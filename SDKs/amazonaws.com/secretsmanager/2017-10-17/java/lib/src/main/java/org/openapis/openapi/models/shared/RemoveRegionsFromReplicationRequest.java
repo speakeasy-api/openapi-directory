@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveRegionsFromReplicationRequest {
     @JsonProperty("RemoveReplicaRegions")
     public String[] removeReplicaRegions;
+
     public RemoveRegionsFromReplicationRequest withRemoveReplicaRegions(String[] removeReplicaRegions) {
         this.removeReplicaRegions = removeReplicaRegions;
         return this;
@@ -16,9 +17,14 @@ public class RemoveRegionsFromReplicationRequest {
     
     @JsonProperty("SecretId")
     public String secretId;
+
     public RemoveRegionsFromReplicationRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public RemoveRegionsFromReplicationRequest(@JsonProperty("RemoveReplicaRegions") String[] removeReplicaRegions, @JsonProperty("SecretId") String secretId) {
+        this.removeReplicaRegions = removeReplicaRegions;
+        this.secretId = secretId;
+  }
 }

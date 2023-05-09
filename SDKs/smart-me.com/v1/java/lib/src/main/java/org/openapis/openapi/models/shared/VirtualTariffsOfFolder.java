@@ -25,6 +25,7 @@ public class VirtualTariffsOfFolder {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public VirtualTariffsOfFolder withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -33,6 +34,7 @@ public class VirtualTariffsOfFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FolderId")
     public String folderId;
+
     public VirtualTariffsOfFolder withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -44,6 +46,7 @@ public class VirtualTariffsOfFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public VirtualTariffsOfFolder withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +55,11 @@ public class VirtualTariffsOfFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualTariffs")
     public VirtualTariff[] virtualTariffs;
+
     public VirtualTariffsOfFolder withVirtualTariffs(VirtualTariff[] virtualTariffs) {
         this.virtualTariffs = virtualTariffs;
         return this;
     }
     
+    public VirtualTariffsOfFolder(){}
 }

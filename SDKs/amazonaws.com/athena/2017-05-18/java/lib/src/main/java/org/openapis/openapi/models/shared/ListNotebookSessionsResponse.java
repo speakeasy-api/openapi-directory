@@ -15,6 +15,7 @@ public class ListNotebookSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotebookSessionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListNotebookSessionsResponse {
     
     @JsonProperty("NotebookSessionsList")
     public NotebookSessionSummary[] notebookSessionsList;
+
     public ListNotebookSessionsResponse withNotebookSessionsList(NotebookSessionSummary[] notebookSessionsList) {
         this.notebookSessionsList = notebookSessionsList;
         return this;
     }
     
+    public ListNotebookSessionsResponse(@JsonProperty("NotebookSessionsList") NotebookSessionSummary[] notebookSessionsList) {
+        this.notebookSessionsList = notebookSessionsList;
+  }
 }

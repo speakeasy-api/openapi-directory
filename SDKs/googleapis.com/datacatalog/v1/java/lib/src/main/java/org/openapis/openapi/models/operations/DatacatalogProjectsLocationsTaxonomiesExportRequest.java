@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
@@ -12,6 +13,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -92,6 +101,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serializedTaxonomies")
     public Boolean serializedTaxonomies;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withSerializedTaxonomies(Boolean serializedTaxonomies) {
         this.serializedTaxonomies = serializedTaxonomies;
         return this;
@@ -122,6 +134,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxonomies")
     public String[] taxonomies;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withTaxonomies(String[] taxonomies) {
         this.taxonomies = taxonomies;
         return this;
@@ -132,6 +145,7 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class DatacatalogProjectsLocationsTaxonomiesExportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatacatalogProjectsLocationsTaxonomiesExportRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatacatalogProjectsLocationsTaxonomiesExportRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

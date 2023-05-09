@@ -18,6 +18,7 @@ public class RevokedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public String certificate;
+
     public RevokedCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -29,6 +30,7 @@ public class RevokedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hexSerialNumber")
     public String hexSerialNumber;
+
     public RevokedCertificate withHexSerialNumber(String hexSerialNumber) {
         this.hexSerialNumber = hexSerialNumber;
         return this;
@@ -40,9 +42,11 @@ public class RevokedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revocationReason")
     public RevokedCertificateRevocationReasonEnum revocationReason;
+
     public RevokedCertificate withRevocationReason(RevokedCertificateRevocationReasonEnum revocationReason) {
         this.revocationReason = revocationReason;
         return this;
     }
     
+    public RevokedCertificate(){}
 }

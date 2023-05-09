@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataIntegrationAssociationsResponse {
@@ -12,6 +13,7 @@ public class ListDataIntegrationAssociationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDataIntegrationAssociationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDataIntegrationAssociationsResponse {
     
     
     public String contentType;
+
     public ListDataIntegrationAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDataIntegrationAssociationsResponse {
      */
     
     public Object internalServiceError;
+
     public ListDataIntegrationAssociationsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class ListDataIntegrationAssociationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDataIntegrationAssociationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListDataIntegrationAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataIntegrationAssociationsResponse listDataIntegrationAssociationsResponse;
+
     public ListDataIntegrationAssociationsResponse withListDataIntegrationAssociationsResponse(org.openapis.openapi.models.shared.ListDataIntegrationAssociationsResponse listDataIntegrationAssociationsResponse) {
         this.listDataIntegrationAssociationsResponse = listDataIntegrationAssociationsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListDataIntegrationAssociationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDataIntegrationAssociationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListDataIntegrationAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListDataIntegrationAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListDataIntegrationAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataIntegrationAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListDataIntegrationAssociationsResponse {
      */
     
     public Object throttlingException;
+
     public ListDataIntegrationAssociationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListDataIntegrationAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

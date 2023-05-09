@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaIssuedToPerson {
     
     public AcademicCertificateSchemaIssuedToPersonAddress address;
+
     public AcademicCertificateSchemaIssuedToPerson withAddress(AcademicCertificateSchemaIssuedToPersonAddress address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public AcademicCertificateSchemaIssuedToPersonPhoto photo;
+
     public AcademicCertificateSchemaIssuedToPerson withPhoto(AcademicCertificateSchemaIssuedToPersonPhoto photo) {
         this.photo = photo;
         return this;
@@ -23,6 +25,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String category;
+
     public AcademicCertificateSchemaIssuedToPerson withCategory(String category) {
         this.category = category;
         return this;
@@ -30,6 +33,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String disabilityStatus;
+
     public AcademicCertificateSchemaIssuedToPerson withDisabilityStatus(String disabilityStatus) {
         this.disabilityStatus = disabilityStatus;
         return this;
@@ -37,6 +41,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String dob;
+
     public AcademicCertificateSchemaIssuedToPerson withDob(String dob) {
         this.dob = dob;
         return this;
@@ -44,6 +49,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String email;
+
     public AcademicCertificateSchemaIssuedToPerson withEmail(String email) {
         this.email = email;
         return this;
@@ -51,6 +57,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String gender;
+
     public AcademicCertificateSchemaIssuedToPerson withGender(String gender) {
         this.gender = gender;
         return this;
@@ -58,6 +65,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String maritalStatus;
+
     public AcademicCertificateSchemaIssuedToPerson withMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
@@ -65,6 +73,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String motherName;
+
     public AcademicCertificateSchemaIssuedToPerson withMotherName(String motherName) {
         this.motherName = motherName;
         return this;
@@ -72,6 +81,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String name;
+
     public AcademicCertificateSchemaIssuedToPerson withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +89,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String phone;
+
     public AcademicCertificateSchemaIssuedToPerson withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -86,6 +97,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String religion;
+
     public AcademicCertificateSchemaIssuedToPerson withReligion(String religion) {
         this.religion = religion;
         return this;
@@ -93,6 +105,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String swd;
+
     public AcademicCertificateSchemaIssuedToPerson withSwd(String swd) {
         this.swd = swd;
         return this;
@@ -100,6 +113,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String swdIndicator;
+
     public AcademicCertificateSchemaIssuedToPerson withSwdIndicator(String swdIndicator) {
         this.swdIndicator = swdIndicator;
         return this;
@@ -107,6 +121,7 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String title;
+
     public AcademicCertificateSchemaIssuedToPerson withTitle(String title) {
         this.title = title;
         return this;
@@ -114,9 +129,28 @@ public class AcademicCertificateSchemaIssuedToPerson {
     
     
     public String uid;
+
     public AcademicCertificateSchemaIssuedToPerson withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public AcademicCertificateSchemaIssuedToPerson(@JsonProperty("Address") AcademicCertificateSchemaIssuedToPersonAddress address, @JsonProperty("Photo") AcademicCertificateSchemaIssuedToPersonPhoto photo, @JsonProperty("category") String category, @JsonProperty("disabilityStatus") String disabilityStatus, @JsonProperty("dob") String dob, @JsonProperty("email") String email, @JsonProperty("gender") String gender, @JsonProperty("maritalStatus") String maritalStatus, @JsonProperty("motherName") String motherName, @JsonProperty("name") String name, @JsonProperty("phone") String phone, @JsonProperty("religion") String religion, @JsonProperty("swd") String swd, @JsonProperty("swdIndicator") String swdIndicator, @JsonProperty("title") String title, @JsonProperty("uid") String uid) {
+        this.address = address;
+        this.photo = photo;
+        this.category = category;
+        this.disabilityStatus = disabilityStatus;
+        this.dob = dob;
+        this.email = email;
+        this.gender = gender;
+        this.maritalStatus = maritalStatus;
+        this.motherName = motherName;
+        this.name = name;
+        this.phone = phone;
+        this.religion = religion;
+        this.swd = swd;
+        this.swdIndicator = swdIndicator;
+        this.title = title;
+        this.uid = uid;
+  }
 }

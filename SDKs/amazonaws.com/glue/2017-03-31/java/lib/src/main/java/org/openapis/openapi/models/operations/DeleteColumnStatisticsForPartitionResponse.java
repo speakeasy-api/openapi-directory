@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteColumnStatisticsForPartitionResponse {
     
     public String contentType;
+
     public DeleteColumnStatisticsForPartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteColumnStatisticsForPartitionResponse {
      */
     
     public java.util.Map<String, Object> deleteColumnStatisticsForPartitionResponse;
+
     public DeleteColumnStatisticsForPartitionResponse withDeleteColumnStatisticsForPartitionResponse(java.util.Map<String, Object> deleteColumnStatisticsForPartitionResponse) {
         this.deleteColumnStatisticsForPartitionResponse = deleteColumnStatisticsForPartitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteColumnStatisticsForPartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteColumnStatisticsForPartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteColumnStatisticsForPartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public DeleteColumnStatisticsForPartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteColumnStatisticsForPartitionResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteColumnStatisticsForPartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteColumnStatisticsForPartitionResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteColumnStatisticsForPartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteColumnStatisticsForPartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteColumnStatisticsForPartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteColumnStatisticsForPartitionResponse {
     
     
     public Integer statusCode;
+
     public DeleteColumnStatisticsForPartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteColumnStatisticsForPartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteColumnStatisticsForPartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteColumnStatisticsForPartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

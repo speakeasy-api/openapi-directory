@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TranslateSecurity;
 import org.openapis.openapi.models.operations.TranslateResponse;
+import org.openapis.openapi.models.operations.TranslateSecurity;
 import org.openapis.openapi.models.shared.TranslateRequest;
 
 public class Application {
@@ -23,17 +22,19 @@ public class Application {
                 }};
                 to = "nulla";
                 translationContext = "corrupti";
-            }}            
+            }};            
 
-            TranslateResponse res = sdk.language.translate(req, new TranslateSecurity() {{
+            TranslateResponse res = sdk.language.translate(req, new TranslateSecurity("illum") {{
                 apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.translateResponse.isPresent()) {
+            if (res.translateResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

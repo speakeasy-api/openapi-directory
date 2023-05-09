@@ -18,6 +18,7 @@ public class Hat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public String product;
+
     public Hat withProduct(String product) {
         this.product = product;
         return this;
@@ -29,6 +30,7 @@ public class Hat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Hat withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -40,6 +42,7 @@ public class Hat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productVer")
     public String productVer;
+
     public Hat withProductVer(String productVer) {
         this.productVer = productVer;
         return this;
@@ -51,6 +54,7 @@ public class Hat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public Hat withUuid(String uuid) {
         this.uuid = uuid;
         return this;
@@ -62,9 +66,11 @@ public class Hat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public String vendor;
+
     public Hat withVendor(String vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public Hat(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectPHIRequest {
     @JsonProperty("Text")
     public String text;
+
     public DetectPHIRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DetectPHIRequest(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

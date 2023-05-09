@@ -15,6 +15,7 @@ public class GetConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionDetails")
     public ConnectionDetails connectionDetails;
+
     public GetConnectionResponse withConnectionDetails(ConnectionDetails connectionDetails) {
         this.connectionDetails = connectionDetails;
         return this;
@@ -23,9 +24,11 @@ public class GetConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionId")
     public String connectionId;
+
     public GetConnectionResponse withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
+    public GetConnectionResponse(){}
 }

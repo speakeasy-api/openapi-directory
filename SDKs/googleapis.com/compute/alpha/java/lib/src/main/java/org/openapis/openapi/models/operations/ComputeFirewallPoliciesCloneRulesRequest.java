@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeFirewallPoliciesCloneRulesRequest {
@@ -12,6 +13,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeFirewallPoliciesCloneRulesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeFirewallPoliciesCloneRulesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeFirewallPoliciesCloneRulesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeFirewallPoliciesCloneRulesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeFirewallPoliciesCloneRulesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firewallPolicy")
     public String firewallPolicy;
+
     public ComputeFirewallPoliciesCloneRulesRequest withFirewallPolicy(String firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -72,6 +79,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeFirewallPoliciesCloneRulesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeFirewallPoliciesCloneRulesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeFirewallPoliciesCloneRulesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeFirewallPoliciesCloneRulesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeFirewallPoliciesCloneRulesRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -122,6 +134,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceFirewallPolicy")
     public String sourceFirewallPolicy;
+
     public ComputeFirewallPoliciesCloneRulesRequest withSourceFirewallPolicy(String sourceFirewallPolicy) {
         this.sourceFirewallPolicy = sourceFirewallPolicy;
         return this;
@@ -132,6 +145,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeFirewallPoliciesCloneRulesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeFirewallPoliciesCloneRulesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,13 @@ public class ComputeFirewallPoliciesCloneRulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeFirewallPoliciesCloneRulesRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeFirewallPoliciesCloneRulesRequest(@JsonProperty("firewallPolicy") String firewallPolicy) {
+        this.firewallPolicy = firewallPolicy;
+  }
 }

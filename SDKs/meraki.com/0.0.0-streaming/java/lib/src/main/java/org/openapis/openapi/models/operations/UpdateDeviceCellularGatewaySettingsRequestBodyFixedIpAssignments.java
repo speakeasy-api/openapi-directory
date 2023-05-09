@@ -14,6 +14,7 @@ public class UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments {
      */
     @JsonProperty("ip")
     public String ip;
+
     public UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments withIp(String ip) {
         this.ip = ip;
         return this;
@@ -24,6 +25,7 @@ public class UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments {
      */
     @JsonProperty("mac")
     public String mac;
+
     public UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments withMac(String mac) {
         this.mac = mac;
         return this;
@@ -35,9 +37,14 @@ public class UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsRequestBodyFixedIpAssignments(@JsonProperty("ip") String ip, @JsonProperty("mac") String mac) {
+        this.ip = ip;
+        this.mac = mac;
+  }
 }

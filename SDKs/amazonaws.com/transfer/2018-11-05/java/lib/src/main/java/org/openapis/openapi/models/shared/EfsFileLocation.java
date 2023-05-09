@@ -15,6 +15,7 @@ public class EfsFileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public EfsFileLocation withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -23,9 +24,11 @@ public class EfsFileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public EfsFileLocation withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public EfsFileLocation(){}
 }

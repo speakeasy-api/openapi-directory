@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchTypePointGeomagIaga2002Response {
     
     public String contentType;
+
     public SearchTypePointGeomagIaga2002Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchTypePointGeomagIaga2002Response {
     
     
     public Integer statusCode;
+
     public SearchTypePointGeomagIaga2002Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class SearchTypePointGeomagIaga2002Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchTypePointGeomagIaga2002Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchTypePointGeomagIaga2002Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

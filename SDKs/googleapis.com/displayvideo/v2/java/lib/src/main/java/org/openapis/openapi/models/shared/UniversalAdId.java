@@ -18,6 +18,7 @@ public class UniversalAdId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UniversalAdId withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class UniversalAdId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registry")
     public UniversalAdIdRegistryEnum registry;
+
     public UniversalAdId withRegistry(UniversalAdIdRegistryEnum registry) {
         this.registry = registry;
         return this;
     }
     
+    public UniversalAdId(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudVisionV1p2beta1CropHintsAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cropHints")
     public GoogleCloudVisionV1p2beta1CropHint[] cropHints;
+
     public GoogleCloudVisionV1p2beta1CropHintsAnnotation withCropHints(GoogleCloudVisionV1p2beta1CropHint[] cropHints) {
         this.cropHints = cropHints;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1CropHintsAnnotation(){}
 }

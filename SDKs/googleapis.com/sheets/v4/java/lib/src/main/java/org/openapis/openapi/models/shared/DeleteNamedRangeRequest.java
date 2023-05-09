@@ -18,9 +18,11 @@ public class DeleteNamedRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRangeId")
     public String namedRangeId;
+
     public DeleteNamedRangeRequest withNamedRangeId(String namedRangeId) {
         this.namedRangeId = namedRangeId;
         return this;
     }
     
+    public DeleteNamedRangeRequest(){}
 }

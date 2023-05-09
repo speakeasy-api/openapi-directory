@@ -18,9 +18,11 @@ public class TextPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalAlignment")
     public TextPositionHorizontalAlignmentEnum horizontalAlignment;
+
     public TextPosition withHorizontalAlignment(TextPositionHorizontalAlignmentEnum horizontalAlignment) {
         this.horizontalAlignment = horizontalAlignment;
         return this;
     }
     
+    public TextPosition(){}
 }

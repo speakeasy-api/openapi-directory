@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDiseaseGeneAssociationsRequest {
@@ -12,6 +13,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=association_type")
     public GetDiseaseGeneAssociationsAssociationTypeEnum associationType;
+
     public GetDiseaseGeneAssociationsRequest withAssociationType(GetDiseaseGeneAssociationsAssociationTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -22,6 +24,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
     public Boolean direct;
+
     public GetDiseaseGeneAssociationsRequest withDirect(Boolean direct) {
         this.direct = direct;
         return this;
@@ -32,6 +35,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct_taxon")
     public Boolean directTaxon;
+
     public GetDiseaseGeneAssociationsRequest withDirectTaxon(Boolean directTaxon) {
         this.directTaxon = directTaxon;
         return this;
@@ -42,6 +46,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetDiseaseGeneAssociationsRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -52,6 +57,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetDiseaseGeneAssociationsRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -62,6 +68,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
     public Boolean facet;
+
     public GetDiseaseGeneAssociationsRequest withFacet(Boolean facet) {
         this.facet = facet;
         return this;
@@ -72,6 +79,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_fields")
     public String[] facetFields;
+
     public GetDiseaseGeneAssociationsRequest withFacetFields(String[] facetFields) {
         this.facetFields = facetFields;
         return this;
@@ -82,6 +90,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetch_objects")
     public Boolean fetchObjects;
+
     public GetDiseaseGeneAssociationsRequest withFetchObjects(Boolean fetchObjects) {
         this.fetchObjects = fetchObjects;
         return this;
@@ -92,6 +101,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetDiseaseGeneAssociationsRequest withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +112,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetDiseaseGeneAssociationsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -112,6 +123,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
     public String relation;
+
     public GetDiseaseGeneAssociationsRequest withRelation(String relation) {
         this.relation = relation;
         return this;
@@ -122,6 +134,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetDiseaseGeneAssociationsRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -132,6 +145,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
     public String[] slim;
+
     public GetDiseaseGeneAssociationsRequest withSlim(String[] slim) {
         this.slim = slim;
         return this;
@@ -142,6 +156,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetDiseaseGeneAssociationsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -152,6 +167,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetDiseaseGeneAssociationsRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -162,6 +178,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
     public String[] taxon;
+
     public GetDiseaseGeneAssociationsRequest withTaxon(String[] taxon) {
         this.taxon = taxon;
         return this;
@@ -172,6 +189,7 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetDiseaseGeneAssociationsRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -182,9 +200,13 @@ public class GetDiseaseGeneAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetDiseaseGeneAssociationsRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetDiseaseGeneAssociationsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

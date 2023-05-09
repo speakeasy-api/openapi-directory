@@ -15,6 +15,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public Rule withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,6 +24,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Rule withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class Rule {
     
     @JsonProperty("Predicates")
     public Predicate[] predicates;
+
     public Rule withPredicates(Predicate[] predicates) {
         this.predicates = predicates;
         return this;
@@ -37,9 +40,14 @@ public class Rule {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public Rule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public Rule(@JsonProperty("Predicates") Predicate[] predicates, @JsonProperty("RuleId") String ruleId) {
+        this.predicates = predicates;
+        this.ruleId = ruleId;
+  }
 }

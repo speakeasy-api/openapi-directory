@@ -12,9 +12,13 @@ public class ChangeEmailRequest {
      */
     @JsonProperty("newEmail")
     public String newEmail;
+
     public ChangeEmailRequest withNewEmail(String newEmail) {
         this.newEmail = newEmail;
         return this;
     }
     
+    public ChangeEmailRequest(@JsonProperty("newEmail") String newEmail) {
+        this.newEmail = newEmail;
+  }
 }

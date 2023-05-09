@@ -18,6 +18,7 @@ public class AuthorizedOrgsDesc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public AuthorizedOrgsDescAssetTypeEnum assetType;
+
     public AuthorizedOrgsDesc withAssetType(AuthorizedOrgsDescAssetTypeEnum assetType) {
         this.assetType = assetType;
         return this;
@@ -29,6 +30,7 @@ public class AuthorizedOrgsDesc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationDirection")
     public AuthorizedOrgsDescAuthorizationDirectionEnum authorizationDirection;
+
     public AuthorizedOrgsDesc withAuthorizationDirection(AuthorizedOrgsDescAuthorizationDirectionEnum authorizationDirection) {
         this.authorizationDirection = authorizationDirection;
         return this;
@@ -40,6 +42,7 @@ public class AuthorizedOrgsDesc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationType")
     public AuthorizedOrgsDescAuthorizationTypeEnum authorizationType;
+
     public AuthorizedOrgsDesc withAuthorizationType(AuthorizedOrgsDescAuthorizationTypeEnum authorizationType) {
         this.authorizationType = authorizationType;
         return this;
@@ -51,6 +54,7 @@ public class AuthorizedOrgsDesc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthorizedOrgsDesc withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class AuthorizedOrgsDesc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgs")
     public String[] orgs;
+
     public AuthorizedOrgsDesc withOrgs(String[] orgs) {
         this.orgs = orgs;
         return this;
     }
     
+    public AuthorizedOrgsDesc(){}
 }

@@ -15,9 +15,11 @@ public class CreateSystemInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public SystemInstanceSummary summary;
+
     public CreateSystemInstanceResponse withSummary(SystemInstanceSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public CreateSystemInstanceResponse(){}
 }

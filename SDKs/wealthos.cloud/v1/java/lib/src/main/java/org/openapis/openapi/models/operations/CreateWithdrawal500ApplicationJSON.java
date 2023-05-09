@@ -18,6 +18,7 @@ public class CreateWithdrawal500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public CreateWithdrawal500ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class CreateWithdrawal500ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public CreateWithdrawal500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateWithdrawal500ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImagesResultImagesBlockDeviceMappings {
     
     public String deviceName;
+
     public DescribeImagesResultImagesBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImagesResultImagesBlockDeviceMappings {
     
     
     public DescribeImagesResultImagesBlockDeviceMappingsEbs ebs;
+
     public DescribeImagesResultImagesBlockDeviceMappings withEbs(DescribeImagesResultImagesBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class DescribeImagesResultImagesBlockDeviceMappings {
     
     
     public String noDevice;
+
     public DescribeImagesResultImagesBlockDeviceMappings withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,11 @@ public class DescribeImagesResultImagesBlockDeviceMappings {
     
     
     public String virtualName;
+
     public DescribeImagesResultImagesBlockDeviceMappings withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public DescribeImagesResultImagesBlockDeviceMappings(){}
 }

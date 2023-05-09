@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdditionalInferenceSpecificationDefinition {
     @JsonProperty("Containers")
     public ModelPackageContainerDefinition[] containers;
+
     public AdditionalInferenceSpecificationDefinition withContainers(ModelPackageContainerDefinition[] containers) {
         this.containers = containers;
         return this;
@@ -22,6 +23,7 @@ public class AdditionalInferenceSpecificationDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AdditionalInferenceSpecificationDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class AdditionalInferenceSpecificationDefinition {
     
     @JsonProperty("Name")
     public String name;
+
     public AdditionalInferenceSpecificationDefinition withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class AdditionalInferenceSpecificationDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedContentTypes")
     public String[] supportedContentTypes;
+
     public AdditionalInferenceSpecificationDefinition withSupportedContentTypes(String[] supportedContentTypes) {
         this.supportedContentTypes = supportedContentTypes;
         return this;
@@ -45,6 +49,7 @@ public class AdditionalInferenceSpecificationDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedRealtimeInferenceInstanceTypes")
     public ProductionVariantInstanceTypeEnum[] supportedRealtimeInferenceInstanceTypes;
+
     public AdditionalInferenceSpecificationDefinition withSupportedRealtimeInferenceInstanceTypes(ProductionVariantInstanceTypeEnum[] supportedRealtimeInferenceInstanceTypes) {
         this.supportedRealtimeInferenceInstanceTypes = supportedRealtimeInferenceInstanceTypes;
         return this;
@@ -53,6 +58,7 @@ public class AdditionalInferenceSpecificationDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedResponseMIMETypes")
     public String[] supportedResponseMIMETypes;
+
     public AdditionalInferenceSpecificationDefinition withSupportedResponseMIMETypes(String[] supportedResponseMIMETypes) {
         this.supportedResponseMIMETypes = supportedResponseMIMETypes;
         return this;
@@ -61,9 +67,14 @@ public class AdditionalInferenceSpecificationDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedTransformInstanceTypes")
     public TransformInstanceTypeEnum[] supportedTransformInstanceTypes;
+
     public AdditionalInferenceSpecificationDefinition withSupportedTransformInstanceTypes(TransformInstanceTypeEnum[] supportedTransformInstanceTypes) {
         this.supportedTransformInstanceTypes = supportedTransformInstanceTypes;
         return this;
     }
     
+    public AdditionalInferenceSpecificationDefinition(@JsonProperty("Containers") ModelPackageContainerDefinition[] containers, @JsonProperty("Name") String name) {
+        this.containers = containers;
+        this.name = name;
+  }
 }

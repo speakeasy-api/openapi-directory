@@ -15,6 +15,7 @@ public class DatabaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public DatabaseSummary withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class DatabaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DatabaseSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class DatabaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentId")
     public String componentId;
+
     public DatabaseSummary withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -39,6 +42,7 @@ public class DatabaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public DatabaseSummary withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -47,6 +51,7 @@ public class DatabaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseType")
     public DatabaseTypeEnum databaseType;
+
     public DatabaseSummary withDatabaseType(DatabaseTypeEnum databaseType) {
         this.databaseType = databaseType;
         return this;
@@ -55,9 +60,11 @@ public class DatabaseSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DatabaseSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public DatabaseSummary(){}
 }

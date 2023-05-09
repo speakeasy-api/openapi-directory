@@ -15,9 +15,11 @@ public class PutStorageConfigurationRequestBodyMultiLayerStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedS3Storage")
     public org.openapis.openapi.models.shared.CustomerManagedS3Storage customerManagedS3Storage;
+
     public PutStorageConfigurationRequestBodyMultiLayerStorage withCustomerManagedS3Storage(org.openapis.openapi.models.shared.CustomerManagedS3Storage customerManagedS3Storage) {
         this.customerManagedS3Storage = customerManagedS3Storage;
         return this;
     }
     
+    public PutStorageConfigurationRequestBodyMultiLayerStorage(){}
 }

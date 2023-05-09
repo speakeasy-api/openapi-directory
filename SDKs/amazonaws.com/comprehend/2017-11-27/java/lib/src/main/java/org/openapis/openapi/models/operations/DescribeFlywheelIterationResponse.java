@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFlywheelIterationResponse {
     
     public String contentType;
+
     public DescribeFlywheelIterationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFlywheelIterationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFlywheelIterationResponse describeFlywheelIterationResponse;
+
     public DescribeFlywheelIterationResponse withDescribeFlywheelIterationResponse(org.openapis.openapi.models.shared.DescribeFlywheelIterationResponse describeFlywheelIterationResponse) {
         this.describeFlywheelIterationResponse = describeFlywheelIterationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFlywheelIterationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeFlywheelIterationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFlywheelIterationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFlywheelIterationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFlywheelIterationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFlywheelIterationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFlywheelIterationResponse {
     
     
     public Integer statusCode;
+
     public DescribeFlywheelIterationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFlywheelIterationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFlywheelIterationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFlywheelIterationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeFlywheelIterationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeFlywheelIterationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

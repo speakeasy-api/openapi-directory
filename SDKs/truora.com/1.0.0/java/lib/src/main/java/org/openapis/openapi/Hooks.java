@@ -92,11 +92,9 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHookResponse res = new org.openapis.openapi.models.operations.CreateHookResponse() {{
+        org.openapis.openapi.models.operations.CreateHookResponse res = new org.openapis.openapi.models.operations.CreateHookResponse(contentType, httpRes.statusCode()) {{
             hook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -135,11 +133,9 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletHookResponse res = new org.openapis.openapi.models.operations.DeletHookResponse() {{
+        org.openapis.openapi.models.operations.DeletHookResponse res = new org.openapis.openapi.models.operations.DeletHookResponse(contentType, httpRes.statusCode()) {{
             deletHook200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,10 +151,11 @@ public class Hooks {
     /**
      * Lists all hooks
      * Lists all the configured hooks in your account.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListHookResponse listHook() throws Exception {
+    public org.openapis.openapi.models.operations.ListHookResponse listHook(org.openapis.openapi.models.operations.ListHookSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hooks");
         
@@ -167,17 +164,15 @@ public class Hooks {
         req.setURL(url);
         
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHookResponse res = new org.openapis.openapi.models.operations.ListHookResponse() {{
+        org.openapis.openapi.models.operations.ListHookResponse res = new org.openapis.openapi.models.operations.ListHookResponse(contentType, httpRes.statusCode()) {{
             hookOutput = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,12 +214,10 @@ public class Hooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateHookResponse res = new org.openapis.openapi.models.operations.UpdateHookResponse() {{
+        org.openapis.openapi.models.operations.UpdateHookResponse res = new org.openapis.openapi.models.operations.UpdateHookResponse(contentType, httpRes.statusCode()) {{
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

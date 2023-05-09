@@ -15,6 +15,7 @@ public class ListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListCardsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -26,6 +27,7 @@ public class ListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer_id")
     public String customerId;
+
     public ListCardsRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -37,6 +39,7 @@ public class ListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_disabled")
     public Boolean includeDisabled;
+
     public ListCardsRequest withIncludeDisabled(Boolean includeDisabled) {
         this.includeDisabled = includeDisabled;
         return this;
@@ -47,6 +50,7 @@ public class ListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference_id")
     public String referenceId;
+
     public ListCardsRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -58,9 +62,11 @@ public class ListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public ListCardsRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListCardsRequest(){}
 }

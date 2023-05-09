@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatedWorkspaceImageRequest {
     @JsonProperty("Description")
     public String description;
+
     public CreateUpdatedWorkspaceImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -18,6 +19,7 @@ public class CreateUpdatedWorkspaceImageRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateUpdatedWorkspaceImageRequest withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +27,7 @@ public class CreateUpdatedWorkspaceImageRequest {
     
     @JsonProperty("SourceImageId")
     public String sourceImageId;
+
     public CreateUpdatedWorkspaceImageRequest withSourceImageId(String sourceImageId) {
         this.sourceImageId = sourceImageId;
         return this;
@@ -33,9 +36,15 @@ public class CreateUpdatedWorkspaceImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateUpdatedWorkspaceImageRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateUpdatedWorkspaceImageRequest(@JsonProperty("Description") String description, @JsonProperty("Name") String name, @JsonProperty("SourceImageId") String sourceImageId) {
+        this.description = description;
+        this.name = name;
+        this.sourceImageId = sourceImageId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1CalculateCoverageResponse googleCloudDialogflowCxV3beta1CalculateCoverageResponse;
+
     public DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse withGoogleCloudDialogflowCxV3beta1CalculateCoverageResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1CalculateCoverageResponse googleCloudDialogflowCxV3beta1CalculateCoverageResponse) {
         this.googleCloudDialogflowCxV3beta1CalculateCoverageResponse = googleCloudDialogflowCxV3beta1CalculateCoverageResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

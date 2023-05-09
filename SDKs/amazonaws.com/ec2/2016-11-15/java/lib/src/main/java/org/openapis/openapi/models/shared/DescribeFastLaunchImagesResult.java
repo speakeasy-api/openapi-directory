@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFastLaunchImagesResult {
     
     public DescribeFastLaunchImagesResultFastLaunchImages[] fastLaunchImages;
+
     public DescribeFastLaunchImagesResult withFastLaunchImages(DescribeFastLaunchImagesResultFastLaunchImages[] fastLaunchImages) {
         this.fastLaunchImages = fastLaunchImages;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFastLaunchImagesResult {
     
     
     public String nextToken;
+
     public DescribeFastLaunchImagesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFastLaunchImagesResult(){}
 }

@@ -15,6 +15,7 @@ public class CreateExperimentRequestBodyOnlineAbConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlTreatmentName")
     public String controlTreatmentName;
+
     public CreateExperimentRequestBodyOnlineAbConfig withControlTreatmentName(String controlTreatmentName) {
         this.controlTreatmentName = controlTreatmentName;
         return this;
@@ -23,9 +24,11 @@ public class CreateExperimentRequestBodyOnlineAbConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treatmentWeights")
     public java.util.Map<String, Long> treatmentWeights;
+
     public CreateExperimentRequestBodyOnlineAbConfig withTreatmentWeights(java.util.Map<String, Long> treatmentWeights) {
         this.treatmentWeights = treatmentWeights;
         return this;
     }
     
+    public CreateExperimentRequestBodyOnlineAbConfig(){}
 }

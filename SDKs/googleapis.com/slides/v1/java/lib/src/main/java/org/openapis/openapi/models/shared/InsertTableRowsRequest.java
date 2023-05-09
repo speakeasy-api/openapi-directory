@@ -18,6 +18,7 @@ public class InsertTableRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public InsertTableRowsRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -29,6 +30,7 @@ public class InsertTableRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertBelow")
     public Boolean insertBelow;
+
     public InsertTableRowsRequest withInsertBelow(Boolean insertBelow) {
         this.insertBelow = insertBelow;
         return this;
@@ -40,6 +42,7 @@ public class InsertTableRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public InsertTableRowsRequest withNumber(Integer number) {
         this.number = number;
         return this;
@@ -51,9 +54,11 @@ public class InsertTableRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableObjectId")
     public String tableObjectId;
+
     public InsertTableRowsRequest withTableObjectId(String tableObjectId) {
         this.tableObjectId = tableObjectId;
         return this;
     }
     
+    public InsertTableRowsRequest(){}
 }

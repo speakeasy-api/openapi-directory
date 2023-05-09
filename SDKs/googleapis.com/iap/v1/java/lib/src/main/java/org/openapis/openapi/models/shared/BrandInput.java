@@ -18,6 +18,7 @@ public class BrandInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationTitle")
     public String applicationTitle;
+
     public BrandInput withApplicationTitle(String applicationTitle) {
         this.applicationTitle = applicationTitle;
         return this;
@@ -29,9 +30,11 @@ public class BrandInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportEmail")
     public String supportEmail;
+
     public BrandInput withSupportEmail(String supportEmail) {
         this.supportEmail = supportEmail;
         return this;
     }
     
+    public BrandInput(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventWindowsResultInstanceEventWindows {
     
     public DescribeInstanceEventWindowsResultInstanceEventWindowsAssociationTarget associationTarget;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindows withAssociationTarget(DescribeInstanceEventWindowsResultInstanceEventWindowsAssociationTarget associationTarget) {
         this.associationTarget = associationTarget;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindows {
     
     
     public String cronExpression;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindows withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindows {
     
     
     public String instanceEventWindowId;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindows withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindows {
     
     
     public String name;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindows withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindows {
     
     
     public DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum state;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindows withState(DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindows {
     
     
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTags[] tags;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindows withTags(DescribeInstanceEventWindowsResultInstanceEventWindowsTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class DescribeInstanceEventWindowsResultInstanceEventWindows {
     
     
     public DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges[] timeRanges;
+
     public DescribeInstanceEventWindowsResultInstanceEventWindows withTimeRanges(DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRanges[] timeRanges) {
         this.timeRanges = timeRanges;
         return this;
     }
     
+    public DescribeInstanceEventWindowsResultInstanceEventWindows(){}
 }

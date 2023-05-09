@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveRevisionsPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Revision revision;
+
     public DriveRevisionsPatchRequest withRevision(org.openapis.openapi.models.shared.Revision revision) {
         this.revision = revision;
         return this;
@@ -19,6 +21,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveRevisionsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveRevisionsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveRevisionsPatchRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -49,6 +54,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveRevisionsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveRevisionsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveRevisionsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveRevisionsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,6 +98,7 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revisionId")
     public String revisionId;
+
     public DriveRevisionsPatchRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -99,9 +109,14 @@ public class DriveRevisionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveRevisionsPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveRevisionsPatchRequest(@JsonProperty("fileId") String fileId, @JsonProperty("revisionId") String revisionId) {
+        this.fileId = fileId;
+        this.revisionId = revisionId;
+  }
 }

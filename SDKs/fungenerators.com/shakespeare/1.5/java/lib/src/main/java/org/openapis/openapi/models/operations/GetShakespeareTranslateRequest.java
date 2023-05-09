@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShakespeareTranslateRequest {
@@ -12,9 +13,13 @@ public class GetShakespeareTranslateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public GetShakespeareTranslateRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GetShakespeareTranslateRequest(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

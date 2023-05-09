@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse {
     
     public String contentType;
+
     public FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse 
      */
     
     public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse googleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse;
+
     public FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse withGoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse googleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse) {
         this.googleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse = googleFirebaseAppcheckV1betaGeneratePlayIntegrityChallengeResponse;
         return this;
@@ -26,6 +29,7 @@ public class FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse 
     
     
     public Integer statusCode;
+
     public FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

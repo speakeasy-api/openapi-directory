@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public String database;
+
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecTypeEnum type;
+
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec withType(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec(){}
 }

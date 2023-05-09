@@ -15,6 +15,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public VoiceChannelResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public VoiceChannelResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +33,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public VoiceChannelResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -39,6 +42,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCredential")
     public Boolean hasCredential;
+
     public VoiceChannelResponse withHasCredential(Boolean hasCredential) {
         this.hasCredential = hasCredential;
         return this;
@@ -47,6 +51,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public VoiceChannelResponse withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsArchived")
     public Boolean isArchived;
+
     public VoiceChannelResponse withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -63,6 +69,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public VoiceChannelResponse withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -71,6 +78,7 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public VoiceChannelResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -78,6 +86,7 @@ public class VoiceChannelResponse {
     
     @JsonProperty("Platform")
     public String platform;
+
     public VoiceChannelResponse withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -86,9 +95,13 @@ public class VoiceChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public VoiceChannelResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public VoiceChannelResponse(@JsonProperty("Platform") String platform) {
+        this.platform = platform;
+  }
 }

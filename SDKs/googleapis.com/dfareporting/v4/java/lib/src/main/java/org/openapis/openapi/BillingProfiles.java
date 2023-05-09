@@ -59,11 +59,9 @@ public class BillingProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingBillingProfilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingBillingProfilesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingBillingProfilesGetResponse res = new org.openapis.openapi.models.operations.DfareportingBillingProfilesGetResponse(contentType, httpRes.statusCode()) {{
             billingProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class BillingProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingBillingProfilesListResponse res = new org.openapis.openapi.models.operations.DfareportingBillingProfilesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingBillingProfilesListResponse res = new org.openapis.openapi.models.operations.DfareportingBillingProfilesListResponse(contentType, httpRes.statusCode()) {{
             billingProfilesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class BillingProfiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateResponse(contentType, httpRes.statusCode()) {{
             billingProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -17,6 +17,7 @@ public class OBWriteDomesticResponse5DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteDomesticResponse5DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteDomesticResponse5DataInitiation withCreditorAccount(OBWriteDomesticResponse5DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteDomesticResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorPostalAddress")
     public OBPostalAddress6 creditorPostalAddress;
+
     public OBWriteDomesticResponse5DataInitiation withCreditorPostalAddress(OBPostalAddress6 creditorPostalAddress) {
         this.creditorPostalAddress = creditorPostalAddress;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteDomesticResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteDomesticResponse5DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteDomesticResponse5DataInitiation withDebtorAccount(OBWriteDomesticResponse5DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -51,6 +54,7 @@ public class OBWriteDomesticResponse5DataInitiation {
      */
     @JsonProperty("EndToEndIdentification")
     public String endToEndIdentification;
+
     public OBWriteDomesticResponse5DataInitiation withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -62,6 +66,7 @@ public class OBWriteDomesticResponse5DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteDomesticResponse5DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteDomesticResponse5DataInitiation withInstructedAmount(OBWriteDomesticResponse5DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -73,6 +78,7 @@ public class OBWriteDomesticResponse5DataInitiation {
      */
     @JsonProperty("InstructionIdentification")
     public String instructionIdentification;
+
     public OBWriteDomesticResponse5DataInitiation withInstructionIdentification(String instructionIdentification) {
         this.instructionIdentification = instructionIdentification;
         return this;
@@ -85,6 +91,7 @@ public class OBWriteDomesticResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteDomesticResponse5DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -96,6 +103,7 @@ public class OBWriteDomesticResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteDomesticResponse5DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteDomesticResponse5DataInitiation withRemittanceInformation(OBWriteDomesticResponse5DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -107,9 +115,16 @@ public class OBWriteDomesticResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteDomesticResponse5DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteDomesticResponse5DataInitiation(@JsonProperty("CreditorAccount") OBWriteDomesticResponse5DataInitiationCreditorAccount creditorAccount, @JsonProperty("EndToEndIdentification") String endToEndIdentification, @JsonProperty("InstructedAmount") OBWriteDomesticResponse5DataInitiationInstructedAmount instructedAmount, @JsonProperty("InstructionIdentification") String instructionIdentification) {
+        this.creditorAccount = creditorAccount;
+        this.endToEndIdentification = endToEndIdentification;
+        this.instructedAmount = instructedAmount;
+        this.instructionIdentification = instructionIdentification;
+  }
 }

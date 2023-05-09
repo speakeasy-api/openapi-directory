@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeClustersResponse {
@@ -12,6 +13,7 @@ public class DescribeClustersResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public DescribeClustersResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeClustersResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public DescribeClustersResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class DescribeClustersResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public DescribeClustersResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class DescribeClustersResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DescribeClustersResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -52,6 +57,7 @@ public class DescribeClustersResponse {
      */
     
     public Object cloudHsmTagException;
+
     public DescribeClustersResponse withCloudHsmTagException(Object cloudHsmTagException) {
         this.cloudHsmTagException = cloudHsmTagException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeClustersResponse {
     
     
     public String contentType;
+
     public DescribeClustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class DescribeClustersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeClustersResponse describeClustersResponse;
+
     public DescribeClustersResponse withDescribeClustersResponse(org.openapis.openapi.models.shared.DescribeClustersResponse describeClustersResponse) {
         this.describeClustersResponse = describeClustersResponse;
         return this;
@@ -76,6 +84,7 @@ public class DescribeClustersResponse {
     
     
     public Integer statusCode;
+
     public DescribeClustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeClustersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeClustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeClustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

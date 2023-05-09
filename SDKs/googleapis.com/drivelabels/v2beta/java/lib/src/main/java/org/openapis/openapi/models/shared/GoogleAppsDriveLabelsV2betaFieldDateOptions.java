@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaFieldDateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateFormat")
     public String dateFormat;
+
     public GoogleAppsDriveLabelsV2betaFieldDateOptions withDateFormat(String dateFormat) {
         this.dateFormat = dateFormat;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2betaFieldDateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateFormatType")
     public GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum dateFormatType;
+
     public GoogleAppsDriveLabelsV2betaFieldDateOptions withDateFormatType(GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum dateFormatType) {
         this.dateFormatType = dateFormatType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2betaFieldDateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public GoogleTypeDate maxValue;
+
     public GoogleAppsDriveLabelsV2betaFieldDateOptions withMaxValue(GoogleTypeDate maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsDriveLabelsV2betaFieldDateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public GoogleTypeDate minValue;
+
     public GoogleAppsDriveLabelsV2betaFieldDateOptions withMinValue(GoogleTypeDate minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaFieldDateOptions(){}
 }

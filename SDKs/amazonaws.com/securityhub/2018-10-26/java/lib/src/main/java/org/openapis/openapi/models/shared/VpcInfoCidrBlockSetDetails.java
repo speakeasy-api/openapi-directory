@@ -15,9 +15,11 @@ public class VpcInfoCidrBlockSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrBlock")
     public String cidrBlock;
+
     public VpcInfoCidrBlockSetDetails withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
     }
     
+    public VpcInfoCidrBlockSetDetails(){}
 }

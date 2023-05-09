@@ -15,9 +15,11 @@ public class GetUserAccessLoggingSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAccessLoggingSettings")
     public UserAccessLoggingSettings userAccessLoggingSettings;
+
     public GetUserAccessLoggingSettingsResponse withUserAccessLoggingSettings(UserAccessLoggingSettings userAccessLoggingSettings) {
         this.userAccessLoggingSettings = userAccessLoggingSettings;
         return this;
     }
     
+    public GetUserAccessLoggingSettingsResponse(){}
 }

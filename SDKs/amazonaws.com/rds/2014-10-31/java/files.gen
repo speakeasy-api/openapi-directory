@@ -1275,4 +1275,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StopDBInstanceAutomatedBack
 lib/src/main/java/org/openapis/openapi/models/shared/SwitchoverBlueGreenDeploymentRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SwitchoverReadReplicaMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class TagResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public TagResourceResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceResponse(){}
 }

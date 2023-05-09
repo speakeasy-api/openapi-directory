@@ -121,4 +121,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/AdjustmentConditionsRules.j
 lib/src/main/java/org/openapis/openapi/models/shared/AdjustmentConditionsTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdjustmentConditions.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/bookings/README.md
+docs/hotels/README.md
+docs/ratecalendar/README.md
 USAGE.md

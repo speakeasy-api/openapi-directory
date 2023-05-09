@@ -15,6 +15,7 @@ public class DealTermsNonGuaranteedAuctionTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoOptimizePrivateAuction")
     public Boolean autoOptimizePrivateAuction;
+
     public DealTermsNonGuaranteedAuctionTerms withAutoOptimizePrivateAuction(Boolean autoOptimizePrivateAuction) {
         this.autoOptimizePrivateAuction = autoOptimizePrivateAuction;
         return this;
@@ -26,9 +27,11 @@ public class DealTermsNonGuaranteedAuctionTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservePricePerBuyers")
     public PricePerBuyer[] reservePricePerBuyers;
+
     public DealTermsNonGuaranteedAuctionTerms withReservePricePerBuyers(PricePerBuyer[] reservePricePerBuyers) {
         this.reservePricePerBuyers = reservePricePerBuyers;
         return this;
     }
     
+    public DealTermsNonGuaranteedAuctionTerms(){}
 }

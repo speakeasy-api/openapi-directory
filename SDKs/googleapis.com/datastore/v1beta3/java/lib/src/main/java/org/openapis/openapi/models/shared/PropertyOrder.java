@@ -18,6 +18,7 @@ public class PropertyOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public PropertyOrderDirectionEnum direction;
+
     public PropertyOrder withDirection(PropertyOrderDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -29,9 +30,11 @@ public class PropertyOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public PropertyReference property;
+
     public PropertyOrder withProperty(PropertyReference property) {
         this.property = property;
         return this;
     }
     
+    public PropertyOrder(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteComponentRequest {
     @JsonProperty("ComponentName")
     public String componentName;
+
     public DeleteComponentRequest withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteComponentRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public DeleteComponentRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public DeleteComponentRequest(@JsonProperty("ComponentName") String componentName, @JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.componentName = componentName;
+        this.resourceGroupName = resourceGroupName;
+  }
 }

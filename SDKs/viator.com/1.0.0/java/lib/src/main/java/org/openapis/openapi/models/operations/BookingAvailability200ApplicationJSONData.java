@@ -18,6 +18,7 @@ public class BookingAvailability200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public BookingAvailability200ApplicationJSONDataAvailability[] availability;
+
     public BookingAvailability200ApplicationJSONData withAvailability(BookingAvailability200ApplicationJSONDataAvailability[] availability) {
         this.availability = availability;
         return this;
@@ -29,6 +30,7 @@ public class BookingAvailability200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstAvailableDate")
     public String firstAvailableDate;
+
     public BookingAvailability200ApplicationJSONData withFirstAvailableDate(String firstAvailableDate) {
         this.firstAvailableDate = firstAvailableDate;
         return this;
@@ -40,6 +42,7 @@ public class BookingAvailability200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastAvailableDate")
     public String lastAvailableDate;
+
     public BookingAvailability200ApplicationJSONData withLastAvailableDate(String lastAvailableDate) {
         this.lastAvailableDate = lastAvailableDate;
         return this;
@@ -51,9 +54,11 @@ public class BookingAvailability200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String productCode;
+
     public BookingAvailability200ApplicationJSONData withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
     
+    public BookingAvailability200ApplicationJSONData(){}
 }

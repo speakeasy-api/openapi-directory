@@ -18,6 +18,7 @@ public class SetNodePoolAutoscalingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscaling")
     public NodePoolAutoscaling autoscaling;
+
     public SetNodePoolAutoscalingRequest withAutoscaling(NodePoolAutoscaling autoscaling) {
         this.autoscaling = autoscaling;
         return this;
@@ -29,6 +30,7 @@ public class SetNodePoolAutoscalingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetNodePoolAutoscalingRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -40,6 +42,7 @@ public class SetNodePoolAutoscalingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetNodePoolAutoscalingRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetNodePoolAutoscalingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolId")
     public String nodePoolId;
+
     public SetNodePoolAutoscalingRequest withNodePoolId(String nodePoolId) {
         this.nodePoolId = nodePoolId;
         return this;
@@ -62,6 +66,7 @@ public class SetNodePoolAutoscalingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetNodePoolAutoscalingRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -73,9 +78,11 @@ public class SetNodePoolAutoscalingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetNodePoolAutoscalingRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetNodePoolAutoscalingRequest(){}
 }

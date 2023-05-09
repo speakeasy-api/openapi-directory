@@ -15,6 +15,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("dayOfWeekForDelivery")
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDelivery[] dayOfWeekForDelivery;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettings withDayOfWeekForDelivery(PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDelivery[] dayOfWeekForDelivery) {
         this.dayOfWeekForDelivery = dayOfWeekForDelivery;
         return this;
@@ -25,6 +26,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("maxRangeDelivery")
     public Double maxRangeDelivery;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettings withMaxRangeDelivery(Double maxRangeDelivery) {
         this.maxRangeDelivery = maxRangeDelivery;
         return this;
@@ -35,9 +37,15 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("useDeliverySchedule")
     public Boolean useDeliverySchedule;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettings withUseDeliverySchedule(Boolean useDeliverySchedule) {
         this.useDeliverySchedule = useDeliverySchedule;
         return this;
     }
     
+    public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettings(@JsonProperty("dayOfWeekForDelivery") PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDelivery[] dayOfWeekForDelivery, @JsonProperty("maxRangeDelivery") Double maxRangeDelivery, @JsonProperty("useDeliverySchedule") Boolean useDeliverySchedule) {
+        this.dayOfWeekForDelivery = dayOfWeekForDelivery;
+        this.maxRangeDelivery = maxRangeDelivery;
+        this.useDeliverySchedule = useDeliverySchedule;
+  }
 }

@@ -12,6 +12,7 @@ public class LineItemPricing {
      */
     @JsonProperty("discount")
     public Long discount;
+
     public LineItemPricing withDiscount(Long discount) {
         this.discount = discount;
         return this;
@@ -19,6 +20,7 @@ public class LineItemPricing {
     
     @JsonProperty("fees")
     public OrderFee fees;
+
     public LineItemPricing withFees(OrderFee fees) {
         this.fees = fees;
         return this;
@@ -29,6 +31,7 @@ public class LineItemPricing {
      */
     @JsonProperty("list")
     public Long list;
+
     public LineItemPricing withList(Long list) {
         this.list = list;
         return this;
@@ -39,6 +42,7 @@ public class LineItemPricing {
      */
     @JsonProperty("sale")
     public Long sale;
+
     public LineItemPricing withSale(Long sale) {
         this.sale = sale;
         return this;
@@ -49,6 +53,7 @@ public class LineItemPricing {
      */
     @JsonProperty("savings")
     public Long savings;
+
     public LineItemPricing withSavings(Long savings) {
         this.savings = savings;
         return this;
@@ -59,6 +64,7 @@ public class LineItemPricing {
      */
     @JsonProperty("subtotal")
     public Long subtotal;
+
     public LineItemPricing withSubtotal(Long subtotal) {
         this.subtotal = subtotal;
         return this;
@@ -69,6 +75,7 @@ public class LineItemPricing {
      */
     @JsonProperty("taxes")
     public Long taxes;
+
     public LineItemPricing withTaxes(Long taxes) {
         this.taxes = taxes;
         return this;
@@ -79,9 +86,20 @@ public class LineItemPricing {
      */
     @JsonProperty("unit")
     public java.util.Map<String, Object> unit;
+
     public LineItemPricing withUnit(java.util.Map<String, Object> unit) {
         this.unit = unit;
         return this;
     }
     
+    public LineItemPricing(@JsonProperty("discount") Long discount, @JsonProperty("fees") OrderFee fees, @JsonProperty("list") Long list, @JsonProperty("sale") Long sale, @JsonProperty("savings") Long savings, @JsonProperty("subtotal") Long subtotal, @JsonProperty("taxes") Long taxes, @JsonProperty("unit") java.util.Map<String, Object> unit) {
+        this.discount = discount;
+        this.fees = fees;
+        this.list = list;
+        this.sale = sale;
+        this.savings = savings;
+        this.subtotal = subtotal;
+        this.taxes = taxes;
+        this.unit = unit;
+  }
 }

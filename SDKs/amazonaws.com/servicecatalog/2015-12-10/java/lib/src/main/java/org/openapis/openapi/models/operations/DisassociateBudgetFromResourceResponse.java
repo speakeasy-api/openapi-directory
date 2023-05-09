@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateBudgetFromResourceResponse {
     
     public String contentType;
+
     public DisassociateBudgetFromResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateBudgetFromResourceResponse {
      */
     
     public java.util.Map<String, Object> disassociateBudgetFromResourceOutput;
+
     public DisassociateBudgetFromResourceResponse withDisassociateBudgetFromResourceOutput(java.util.Map<String, Object> disassociateBudgetFromResourceOutput) {
         this.disassociateBudgetFromResourceOutput = disassociateBudgetFromResourceOutput;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateBudgetFromResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateBudgetFromResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DisassociateBudgetFromResourceResponse {
     
     
     public Integer statusCode;
+
     public DisassociateBudgetFromResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DisassociateBudgetFromResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateBudgetFromResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateBudgetFromResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

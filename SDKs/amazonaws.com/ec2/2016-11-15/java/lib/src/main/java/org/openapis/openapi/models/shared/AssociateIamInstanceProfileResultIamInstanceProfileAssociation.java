@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class AssociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     public String associationId;
+
     public AssociateIamInstanceProfileResultIamInstanceProfileAssociation withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class AssociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public AssociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile;
+
     public AssociateIamInstanceProfileResultIamInstanceProfileAssociation withIamInstanceProfile(AssociateIamInstanceProfileResultIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -26,6 +28,7 @@ public class AssociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public String instanceId;
+
     public AssociateIamInstanceProfileResultIamInstanceProfileAssociation withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class AssociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public AssociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum state;
+
     public AssociateIamInstanceProfileResultIamInstanceProfileAssociation withState(AssociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +44,11 @@ public class AssociateIamInstanceProfileResultIamInstanceProfileAssociation {
     
     
     public OffsetDateTime timestamp;
+
     public AssociateIamInstanceProfileResultIamInstanceProfileAssociation withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AssociateIamInstanceProfileResultIamInstanceProfileAssociation(){}
 }

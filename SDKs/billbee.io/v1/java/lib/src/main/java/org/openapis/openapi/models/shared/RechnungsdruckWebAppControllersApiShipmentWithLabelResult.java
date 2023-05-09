@@ -17,6 +17,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Carrier")
     public String carrier;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -25,6 +26,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportDocsPdf")
     public String exportDocsPdf;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withExportDocsPdf(String exportDocsPdf) {
         this.exportDocsPdf = exportDocsPdf;
         return this;
@@ -33,6 +35,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelDataPdf")
     public String labelDataPdf;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withLabelDataPdf(String labelDataPdf) {
         this.labelDataPdf = labelDataPdf;
         return this;
@@ -41,6 +44,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderId")
     public Long orderId;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -49,6 +53,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderReference")
     public String orderReference;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withOrderReference(String orderReference) {
         this.orderReference = orderReference;
         return this;
@@ -59,6 +64,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ShippingDate")
     public OffsetDateTime shippingDate;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withShippingDate(OffsetDateTime shippingDate) {
         this.shippingDate = shippingDate;
         return this;
@@ -67,6 +73,7 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingId")
     public String shippingId;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withShippingId(String shippingId) {
         this.shippingId = shippingId;
         return this;
@@ -75,9 +82,11 @@ public class RechnungsdruckWebAppControllersApiShipmentWithLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackingUrl")
     public String trackingUrl;
+
     public RechnungsdruckWebAppControllersApiShipmentWithLabelResult withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiShipmentWithLabelResult(){}
 }

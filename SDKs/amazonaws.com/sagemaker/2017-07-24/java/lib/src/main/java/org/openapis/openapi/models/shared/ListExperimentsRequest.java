@@ -19,6 +19,7 @@ public class ListExperimentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListExperimentsRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListExperimentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListExperimentsRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListExperimentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,6 +48,7 @@ public class ListExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExperimentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -53,6 +57,7 @@ public class ListExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortExperimentsByEnum sortBy;
+
     public ListExperimentsRequest withSortBy(SortExperimentsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -61,9 +66,11 @@ public class ListExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListExperimentsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListExperimentsRequest(){}
 }

@@ -18,6 +18,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessConfigs")
     public AccessConfig[] accessConfigs;
+
     public NetworkInterface withAccessConfigs(AccessConfig[] accessConfigs) {
         this.accessConfigs = accessConfigs;
         return this;
@@ -29,6 +30,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasIpRanges")
     public AliasIpRange[] aliasIpRanges;
+
     public NetworkInterface withAliasIpRanges(AliasIpRange[] aliasIpRanges) {
         this.aliasIpRanges = aliasIpRanges;
         return this;
@@ -40,6 +42,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public NetworkInterface withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIpv6PrefixLength")
     public Integer internalIpv6PrefixLength;
+
     public NetworkInterface withInternalIpv6PrefixLength(Integer internalIpv6PrefixLength) {
         this.internalIpv6PrefixLength = internalIpv6PrefixLength;
         return this;
@@ -62,6 +66,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6AccessConfigs")
     public AccessConfig[] ipv6AccessConfigs;
+
     public NetworkInterface withIpv6AccessConfigs(AccessConfig[] ipv6AccessConfigs) {
         this.ipv6AccessConfigs = ipv6AccessConfigs;
         return this;
@@ -73,6 +78,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6AccessType")
     public NetworkInterfaceIpv6AccessTypeEnum ipv6AccessType;
+
     public NetworkInterface withIpv6AccessType(NetworkInterfaceIpv6AccessTypeEnum ipv6AccessType) {
         this.ipv6AccessType = ipv6AccessType;
         return this;
@@ -84,6 +90,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6Address")
     public String ipv6Address;
+
     public NetworkInterface withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
@@ -95,6 +102,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NetworkInterface withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworkInterface withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkInterface withNetwork(String network) {
         this.network = network;
         return this;
@@ -128,6 +138,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAttachment")
     public String networkAttachment;
+
     public NetworkInterface withNetworkAttachment(String networkAttachment) {
         this.networkAttachment = networkAttachment;
         return this;
@@ -139,6 +150,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkIP")
     public String networkIP;
+
     public NetworkInterface withNetworkIP(String networkIP) {
         this.networkIP = networkIP;
         return this;
@@ -150,6 +162,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nicType")
     public NetworkInterfaceNicTypeEnum nicType;
+
     public NetworkInterface withNicType(NetworkInterfaceNicTypeEnum nicType) {
         this.nicType = nicType;
         return this;
@@ -161,6 +174,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentNicName")
     public String parentNicName;
+
     public NetworkInterface withParentNicName(String parentNicName) {
         this.parentNicName = parentNicName;
         return this;
@@ -172,17 +186,19 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queueCount")
     public Integer queueCount;
+
     public NetworkInterface withQueueCount(Integer queueCount) {
         this.queueCount = queueCount;
         return this;
     }
     
     /**
-     * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used. This field can be both set at instance creation and update network interface operations.
+     * The stack type for this network interface. To assign only IPv4 addresses, use IPV4_ONLY. To assign both IPv4 and IPv6 addresses, use IPV4_IPV6. If not specified, IPV4_ONLY is used. This field can be both set at instance creation and update network interface operations.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackType")
     public NetworkInterfaceStackTypeEnum stackType;
+
     public NetworkInterface withStackType(NetworkInterfaceStackTypeEnum stackType) {
         this.stackType = stackType;
         return this;
@@ -194,6 +210,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subinterfaces")
     public NetworkInterfaceSubInterface[] subinterfaces;
+
     public NetworkInterface withSubinterfaces(NetworkInterfaceSubInterface[] subinterfaces) {
         this.subinterfaces = subinterfaces;
         return this;
@@ -205,6 +222,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkInterface withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -216,9 +234,11 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlan")
     public Integer vlan;
+
     public NetworkInterface withVlan(Integer vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public NetworkInterface(){}
 }

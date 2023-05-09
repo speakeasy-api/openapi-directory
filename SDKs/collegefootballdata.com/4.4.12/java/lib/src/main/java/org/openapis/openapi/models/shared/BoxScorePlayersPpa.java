@@ -12,6 +12,7 @@ public class BoxScorePlayersPpa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public BoxScorePlayersPpaAverage average;
+
     public BoxScorePlayersPpa withAverage(BoxScorePlayersPpaAverage average) {
         this.average = average;
         return this;
@@ -20,6 +21,7 @@ public class BoxScorePlayersPpa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulative")
     public BoxScorePlayersPpaCumulative cumulative;
+
     public BoxScorePlayersPpa withCumulative(BoxScorePlayersPpaCumulative cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -28,6 +30,7 @@ public class BoxScorePlayersPpa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("player")
     public String player;
+
     public BoxScorePlayersPpa withPlayer(String player) {
         this.player = player;
         return this;
@@ -36,6 +39,7 @@ public class BoxScorePlayersPpa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public BoxScorePlayersPpa withPosition(String position) {
         this.position = position;
         return this;
@@ -44,9 +48,11 @@ public class BoxScorePlayersPpa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public BoxScorePlayersPpa withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public BoxScorePlayersPpa(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2AccountsIdJsonRequestBody {
@@ -12,6 +13,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=account_tier_id")
     public Long accountTierId;
+
     public PutV2AccountsIdJsonRequestBody withAccountTierId(Long accountTierId) {
         this.accountTierId = accountTierId;
         return this;
@@ -22,6 +24,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=archived")
     public Boolean archived;
+
     public PutV2AccountsIdJsonRequestBody withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -32,6 +35,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=city")
     public String city;
+
     public PutV2AccountsIdJsonRequestBody withCity(String city) {
         this.city = city;
         return this;
@@ -42,6 +46,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=company_stage_id")
     public Long companyStageId;
+
     public PutV2AccountsIdJsonRequestBody withCompanyStageId(Long companyStageId) {
         this.companyStageId = companyStageId;
         return this;
@@ -52,6 +57,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=company_type")
     public String companyType;
+
     public PutV2AccountsIdJsonRequestBody withCompanyType(String companyType) {
         this.companyType = companyType;
         return this;
@@ -62,6 +68,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=conversational_name")
     public String conversationalName;
+
     public PutV2AccountsIdJsonRequestBody withConversationalName(String conversationalName) {
         this.conversationalName = conversationalName;
         return this;
@@ -72,6 +79,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=country")
     public String country;
+
     public PutV2AccountsIdJsonRequestBody withCountry(String country) {
         this.country = country;
         return this;
@@ -90,6 +98,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=crm_id")
     public String crmId;
+
     public PutV2AccountsIdJsonRequestBody withCrmId(String crmId) {
         this.crmId = crmId;
         return this;
@@ -100,6 +109,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=crm_id_type")
     public String crmIdType;
+
     public PutV2AccountsIdJsonRequestBody withCrmIdType(String crmIdType) {
         this.crmIdType = crmIdType;
         return this;
@@ -110,6 +120,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=custom_fields,json")
     public java.util.Map<String, Object>[] customFields;
+
     public PutV2AccountsIdJsonRequestBody withCustomFields(java.util.Map<String, Object>[] customFields) {
         this.customFields = customFields;
         return this;
@@ -120,6 +131,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public PutV2AccountsIdJsonRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -130,6 +142,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=do_not_contact")
     public Boolean doNotContact;
+
     public PutV2AccountsIdJsonRequestBody withDoNotContact(Boolean doNotContact) {
         this.doNotContact = doNotContact;
         return this;
@@ -140,6 +153,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=domain")
     public String domain;
+
     public PutV2AccountsIdJsonRequestBody withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -150,6 +164,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=founded")
     public String founded;
+
     public PutV2AccountsIdJsonRequestBody withFounded(String founded) {
         this.founded = founded;
         return this;
@@ -160,6 +175,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=industry")
     public String industry;
+
     public PutV2AccountsIdJsonRequestBody withIndustry(String industry) {
         this.industry = industry;
         return this;
@@ -170,6 +186,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=linkedin_url")
     public String linkedinUrl;
+
     public PutV2AccountsIdJsonRequestBody withLinkedinUrl(String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
@@ -180,6 +197,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=locale")
     public String locale;
+
     public PutV2AccountsIdJsonRequestBody withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -190,6 +208,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PutV2AccountsIdJsonRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -200,6 +219,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=owner_id")
     public Long ownerId;
+
     public PutV2AccountsIdJsonRequestBody withOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -210,6 +230,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=phone")
     public String phone;
+
     public PutV2AccountsIdJsonRequestBody withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -220,6 +241,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=postal_code")
     public String postalCode;
+
     public PutV2AccountsIdJsonRequestBody withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -230,6 +252,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=revenue_range")
     public String revenueRange;
+
     public PutV2AccountsIdJsonRequestBody withRevenueRange(String revenueRange) {
         this.revenueRange = revenueRange;
         return this;
@@ -240,6 +263,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=size")
     public String size;
+
     public PutV2AccountsIdJsonRequestBody withSize(String size) {
         this.size = size;
         return this;
@@ -250,6 +274,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=state")
     public String state;
+
     public PutV2AccountsIdJsonRequestBody withState(String state) {
         this.state = state;
         return this;
@@ -260,6 +285,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=street")
     public String street;
+
     public PutV2AccountsIdJsonRequestBody withStreet(String street) {
         this.street = street;
         return this;
@@ -270,6 +296,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=tags")
     public String[] tags;
+
     public PutV2AccountsIdJsonRequestBody withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -280,6 +307,7 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=twitter_handle")
     public String twitterHandle;
+
     public PutV2AccountsIdJsonRequestBody withTwitterHandle(String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
@@ -290,9 +318,14 @@ public class PutV2AccountsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=website")
     public String website;
+
     public PutV2AccountsIdJsonRequestBody withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public PutV2AccountsIdJsonRequestBody(@JsonProperty("domain") String domain, @JsonProperty("name") String name) {
+        this.domain = domain;
+        this.name = name;
+  }
 }

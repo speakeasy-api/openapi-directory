@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImagesRequest {
     
     public Boolean dryRun;
+
     public DescribeImagesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeImagesRequest {
     
     
     public String[] executableUsers;
+
     public DescribeImagesRequest withExecutableUsers(String[] executableUsers) {
         this.executableUsers = executableUsers;
         return this;
@@ -23,6 +25,7 @@ public class DescribeImagesRequest {
     
     
     public DescribeImagesRequestFilters[] filters;
+
     public DescribeImagesRequest withFilters(DescribeImagesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeImagesRequest {
     
     
     public String[] imageIds;
+
     public DescribeImagesRequest withImageIds(String[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -37,6 +41,7 @@ public class DescribeImagesRequest {
     
     
     public Boolean includeDeprecated;
+
     public DescribeImagesRequest withIncludeDeprecated(Boolean includeDeprecated) {
         this.includeDeprecated = includeDeprecated;
         return this;
@@ -44,6 +49,7 @@ public class DescribeImagesRequest {
     
     
     public Long maxResults;
+
     public DescribeImagesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -51,6 +57,7 @@ public class DescribeImagesRequest {
     
     
     public String nextToken;
+
     public DescribeImagesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,9 +65,11 @@ public class DescribeImagesRequest {
     
     
     public String[] owners;
+
     public DescribeImagesRequest withOwners(String[] owners) {
         this.owners = owners;
         return this;
     }
     
+    public DescribeImagesRequest(){}
 }

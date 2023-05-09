@@ -13,6 +13,7 @@ public class PostFoldersPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=mkdir_parents")
     public Boolean mkdirParents;
+
     public PostFoldersPathRequestBody withMkdirParents(Boolean mkdirParents) {
         this.mkdirParents = mkdirParents;
         return this;
@@ -23,9 +24,11 @@ public class PostFoldersPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=provided_mtime")
     public OffsetDateTime providedMtime;
+
     public PostFoldersPathRequestBody withProvidedMtime(OffsetDateTime providedMtime) {
         this.providedMtime = providedMtime;
         return this;
     }
     
+    public PostFoldersPathRequestBody(){}
 }

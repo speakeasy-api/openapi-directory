@@ -12,6 +12,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Game[] games;
+
     public Tournament withGames(Game[] games) {
         this.games = games;
         return this;
@@ -20,6 +21,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeftBottomBracketConference")
     public String leftBottomBracketConference;
+
     public Tournament withLeftBottomBracketConference(String leftBottomBracketConference) {
         this.leftBottomBracketConference = leftBottomBracketConference;
         return this;
@@ -28,6 +30,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeftTopBracketConference")
     public String leftTopBracketConference;
+
     public Tournament withLeftTopBracketConference(String leftTopBracketConference) {
         this.leftTopBracketConference = leftTopBracketConference;
         return this;
@@ -36,6 +39,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public Tournament withLocation(String location) {
         this.location = location;
         return this;
@@ -44,6 +48,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Tournament withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RightBottomBracketConference")
     public String rightBottomBracketConference;
+
     public Tournament withRightBottomBracketConference(String rightBottomBracketConference) {
         this.rightBottomBracketConference = rightBottomBracketConference;
         return this;
@@ -60,6 +66,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RightTopBracketConference")
     public String rightTopBracketConference;
+
     public Tournament withRightTopBracketConference(String rightTopBracketConference) {
         this.rightTopBracketConference = rightTopBracketConference;
         return this;
@@ -68,6 +75,7 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Tournament withSeason(Long season) {
         this.season = season;
         return this;
@@ -76,9 +84,11 @@ public class Tournament {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TournamentID")
     public Long tournamentID;
+
     public Tournament withTournamentID(Long tournamentID) {
         this.tournamentID = tournamentID;
         return this;
     }
     
+    public Tournament(){}
 }

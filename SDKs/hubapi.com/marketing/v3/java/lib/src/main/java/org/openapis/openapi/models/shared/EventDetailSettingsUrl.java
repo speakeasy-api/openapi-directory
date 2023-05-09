@@ -12,9 +12,13 @@ public class EventDetailSettingsUrl {
      */
     @JsonProperty("eventDetailsUrl")
     public String eventDetailsUrl;
+
     public EventDetailSettingsUrl withEventDetailsUrl(String eventDetailsUrl) {
         this.eventDetailsUrl = eventDetailsUrl;
         return this;
     }
     
+    public EventDetailSettingsUrl(@JsonProperty("eventDetailsUrl") String eventDetailsUrl) {
+        this.eventDetailsUrl = eventDetailsUrl;
+  }
 }

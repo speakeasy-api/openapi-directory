@@ -15,6 +15,7 @@ public class PostServersCreateServerResponseServerPublicNetServerPublicNetFirewa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PostServersCreateServerResponseServerPublicNetServerPublicNetFirewall withId(Long id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class PostServersCreateServerResponseServerPublicNetServerPublicNetFirewa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum status;
+
     public PostServersCreateServerResponseServerPublicNetServerPublicNetFirewall withStatus(PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostServersCreateServerResponseServerPublicNetServerPublicNetFirewall(){}
 }

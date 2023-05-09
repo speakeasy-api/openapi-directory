@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AlsfcResponse {
     
     public String contentType;
+
     public AlsfcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AlsfcResponse {
     
     
     public Integer statusCode;
+
     public AlsfcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AlsfcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AlsfcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AlsfcResponse {
      */
     
     public Alsfc400ApplicationJSON alsfc400ApplicationJSONObject;
+
     public AlsfcResponse withAlsfc400ApplicationJSONObject(Alsfc400ApplicationJSON alsfc400ApplicationJSONObject) {
         this.alsfc400ApplicationJSONObject = alsfc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AlsfcResponse {
      */
     
     public Alsfc401ApplicationJSON alsfc401ApplicationJSONObject;
+
     public AlsfcResponse withAlsfc401ApplicationJSONObject(Alsfc401ApplicationJSON alsfc401ApplicationJSONObject) {
         this.alsfc401ApplicationJSONObject = alsfc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AlsfcResponse {
      */
     
     public Alsfc404ApplicationJSON alsfc404ApplicationJSONObject;
+
     public AlsfcResponse withAlsfc404ApplicationJSONObject(Alsfc404ApplicationJSON alsfc404ApplicationJSONObject) {
         this.alsfc404ApplicationJSONObject = alsfc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AlsfcResponse {
      */
     
     public Alsfc500ApplicationJSON alsfc500ApplicationJSONObject;
+
     public AlsfcResponse withAlsfc500ApplicationJSONObject(Alsfc500ApplicationJSON alsfc500ApplicationJSONObject) {
         this.alsfc500ApplicationJSONObject = alsfc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AlsfcResponse {
      */
     
     public Alsfc502ApplicationJSON alsfc502ApplicationJSONObject;
+
     public AlsfcResponse withAlsfc502ApplicationJSONObject(Alsfc502ApplicationJSON alsfc502ApplicationJSONObject) {
         this.alsfc502ApplicationJSONObject = alsfc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class AlsfcResponse {
      */
     
     public Alsfc503ApplicationJSON alsfc503ApplicationJSONObject;
+
     public AlsfcResponse withAlsfc503ApplicationJSONObject(Alsfc503ApplicationJSON alsfc503ApplicationJSONObject) {
         this.alsfc503ApplicationJSONObject = alsfc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class AlsfcResponse {
      */
     
     public Alsfc504ApplicationJSON alsfc504ApplicationJSONObject;
+
     public AlsfcResponse withAlsfc504ApplicationJSONObject(Alsfc504ApplicationJSON alsfc504ApplicationJSONObject) {
         this.alsfc504ApplicationJSONObject = alsfc504ApplicationJSONObject;
         return this;
     }
     
+    public AlsfcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

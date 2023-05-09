@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiFindResponse {
     
     public String contentType;
+
     public OrderApiFindResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OrderApiFindResponse {
      */
     
     public java.util.Map<String, Object> orderApiFind200ApplicationJSONObject;
+
     public OrderApiFindResponse withOrderApiFind200ApplicationJSONObject(java.util.Map<String, Object> orderApiFind200ApplicationJSONObject) {
         this.orderApiFind200ApplicationJSONObject = orderApiFind200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class OrderApiFindResponse {
      */
     
     public java.util.Map<String, Object> orderApiFind200TextJSONObject;
+
     public OrderApiFindResponse withOrderApiFind200TextJSONObject(java.util.Map<String, Object> orderApiFind200TextJSONObject) {
         this.orderApiFind200TextJSONObject = orderApiFind200TextJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class OrderApiFindResponse {
     
     
     public Integer statusCode;
+
     public OrderApiFindResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class OrderApiFindResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiFindResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiFindResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

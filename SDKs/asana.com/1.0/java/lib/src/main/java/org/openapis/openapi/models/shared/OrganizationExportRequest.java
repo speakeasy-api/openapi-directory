@@ -18,9 +18,11 @@ public class OrganizationExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public OrganizationExportRequest withOrganization(String organization) {
         this.organization = organization;
         return this;
     }
     
+    public OrganizationExportRequest(){}
 }

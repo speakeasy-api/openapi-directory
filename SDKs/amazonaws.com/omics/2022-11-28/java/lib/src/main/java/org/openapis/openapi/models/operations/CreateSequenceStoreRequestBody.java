@@ -15,6 +15,7 @@ public class CreateSequenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateSequenceStoreRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateSequenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSequenceStoreRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateSequenceStoreRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateSequenceStoreRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class CreateSequenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseConfig")
     public CreateSequenceStoreRequestBodySseConfig sseConfig;
+
     public CreateSequenceStoreRequestBody withSseConfig(CreateSequenceStoreRequestBodySseConfig sseConfig) {
         this.sseConfig = sseConfig;
         return this;
@@ -58,9 +62,13 @@ public class CreateSequenceStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSequenceStoreRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSequenceStoreRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

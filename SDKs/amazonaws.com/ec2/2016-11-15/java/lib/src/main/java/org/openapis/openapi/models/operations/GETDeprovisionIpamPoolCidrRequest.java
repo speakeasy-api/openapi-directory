@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeprovisionIpamPoolCidrRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeprovisionIpamPoolCidrActionEnum action;
+
     public GETDeprovisionIpamPoolCidrRequest withAction(GETDeprovisionIpamPoolCidrActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
     public String cidr;
+
     public GETDeprovisionIpamPoolCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -29,6 +32,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeprovisionIpamPoolCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamPoolId")
     public String ipamPoolId;
+
     public GETDeprovisionIpamPoolCidrRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -46,6 +51,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeprovisionIpamPoolCidrVersionEnum version;
+
     public GETDeprovisionIpamPoolCidrRequest withVersion(GETDeprovisionIpamPoolCidrVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeprovisionIpamPoolCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeprovisionIpamPoolCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeprovisionIpamPoolCidrRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeprovisionIpamPoolCidrRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeprovisionIpamPoolCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeprovisionIpamPoolCidrRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETDeprovisionIpamPoolCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeprovisionIpamPoolCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeprovisionIpamPoolCidrRequest(@JsonProperty("Action") GETDeprovisionIpamPoolCidrActionEnum action, @JsonProperty("IpamPoolId") String ipamPoolId, @JsonProperty("Version") GETDeprovisionIpamPoolCidrVersionEnum version) {
+        this.action = action;
+        this.ipamPoolId = ipamPoolId;
+        this.version = version;
+  }
 }

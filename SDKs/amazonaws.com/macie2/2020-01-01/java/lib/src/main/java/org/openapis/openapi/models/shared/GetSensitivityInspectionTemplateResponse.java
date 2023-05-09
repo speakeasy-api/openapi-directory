@@ -15,6 +15,7 @@ public class GetSensitivityInspectionTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetSensitivityInspectionTemplateResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class GetSensitivityInspectionTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public SensitivityInspectionTemplateExcludes excludes;
+
     public GetSensitivityInspectionTemplateResponse withExcludes(SensitivityInspectionTemplateExcludes excludes) {
         this.excludes = excludes;
         return this;
@@ -31,6 +33,7 @@ public class GetSensitivityInspectionTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includes")
     public SensitivityInspectionTemplateIncludes includes;
+
     public GetSensitivityInspectionTemplateResponse withIncludes(SensitivityInspectionTemplateIncludes includes) {
         this.includes = includes;
         return this;
@@ -39,6 +42,7 @@ public class GetSensitivityInspectionTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetSensitivityInspectionTemplateResponse withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class GetSensitivityInspectionTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivityInspectionTemplateId")
     public String sensitivityInspectionTemplateId;
+
     public GetSensitivityInspectionTemplateResponse withSensitivityInspectionTemplateId(String sensitivityInspectionTemplateId) {
         this.sensitivityInspectionTemplateId = sensitivityInspectionTemplateId;
         return this;
     }
     
+    public GetSensitivityInspectionTemplateResponse(){}
 }

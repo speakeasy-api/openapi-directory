@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleConfig {
     @JsonProperty("Inverted")
     public Boolean inverted;
+
     public RuleConfig withInverted(Boolean inverted) {
         this.inverted = inverted;
         return this;
@@ -19,6 +20,7 @@ public class RuleConfig {
     
     @JsonProperty("Threshold")
     public Long threshold;
+
     public RuleConfig withThreshold(Long threshold) {
         this.threshold = threshold;
         return this;
@@ -26,9 +28,15 @@ public class RuleConfig {
     
     @JsonProperty("Type")
     public RuleTypeEnum type;
+
     public RuleConfig withType(RuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RuleConfig(@JsonProperty("Inverted") Boolean inverted, @JsonProperty("Threshold") Long threshold, @JsonProperty("Type") RuleTypeEnum type) {
+        this.inverted = inverted;
+        this.threshold = threshold;
+        this.type = type;
+  }
 }

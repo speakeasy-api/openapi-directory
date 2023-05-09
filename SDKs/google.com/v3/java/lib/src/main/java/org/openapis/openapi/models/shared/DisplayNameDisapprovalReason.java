@@ -18,6 +18,7 @@ public class DisplayNameDisapprovalReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovalReason")
     public DisplayNameDisapprovalReasonDisapprovalReasonEnum disapprovalReason;
+
     public DisplayNameDisapprovalReason withDisapprovalReason(DisplayNameDisapprovalReasonDisapprovalReasonEnum disapprovalReason) {
         this.disapprovalReason = disapprovalReason;
         return this;
@@ -29,9 +30,11 @@ public class DisplayNameDisapprovalReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public DisplayNameDisapprovalReason withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public DisplayNameDisapprovalReason(){}
 }

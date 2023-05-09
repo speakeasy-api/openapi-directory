@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferIcd10CMRequest {
     @JsonProperty("Text")
     public String text;
+
     public InferIcd10CMRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public InferIcd10CMRequest(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

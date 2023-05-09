@@ -15,6 +15,7 @@ public class Items200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Items200ApplicationJSONItemsBundleItems withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class Items200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Items200ApplicationJSONItemsBundleItems withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class Items200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public Items200ApplicationJSONItemsBundleItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -48,9 +51,11 @@ public class Items200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Items200ApplicationJSONItemsBundleItems withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Items200ApplicationJSONItemsBundleItems(){}
 }

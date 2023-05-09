@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotTierStatusResult {
     
     public String nextToken;
+
     public DescribeSnapshotTierStatusResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSnapshotTierStatusResult {
     
     
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses[] snapshotTierStatuses;
+
     public DescribeSnapshotTierStatusResult withSnapshotTierStatuses(DescribeSnapshotTierStatusResultSnapshotTierStatuses[] snapshotTierStatuses) {
         this.snapshotTierStatuses = snapshotTierStatuses;
         return this;
     }
     
+    public DescribeSnapshotTierStatusResult(){}
 }

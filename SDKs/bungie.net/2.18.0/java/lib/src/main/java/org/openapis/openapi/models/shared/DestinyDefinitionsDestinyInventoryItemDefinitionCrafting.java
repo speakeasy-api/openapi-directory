@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionCrafting {
      */
     
     public Long baseMaterialRequirements;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionCrafting withBaseMaterialRequirements(Long baseMaterialRequirements) {
         this.baseMaterialRequirements = baseMaterialRequirements;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionCrafting {
      */
     
     public DestinyDefinitionsDestinyItemCraftingBlockBonusPlugDefinition[] bonusPlugs;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionCrafting withBonusPlugs(DestinyDefinitionsDestinyItemCraftingBlockBonusPlugDefinition[] bonusPlugs) {
         this.bonusPlugs = bonusPlugs;
         return this;
@@ -32,6 +34,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionCrafting {
     
     
     public String[] failedRequirementStrings;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionCrafting withFailedRequirementStrings(String[] failedRequirementStrings) {
         this.failedRequirementStrings = failedRequirementStrings;
         return this;
@@ -42,6 +45,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionCrafting {
      */
     
     public Long outputItemHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionCrafting withOutputItemHash(Long outputItemHash) {
         this.outputItemHash = outputItemHash;
         return this;
@@ -52,9 +56,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionCrafting {
      */
     
     public Long[] requiredSocketTypeHashes;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionCrafting withRequiredSocketTypeHashes(Long[] requiredSocketTypeHashes) {
         this.requiredSocketTypeHashes = requiredSocketTypeHashes;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionCrafting(){}
 }

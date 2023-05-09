@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAlarmModelResponse {
     
     public String contentType;
+
     public UpdateAlarmModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAlarmModelResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateAlarmModelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAlarmModelResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAlarmModelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAlarmModelResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateAlarmModelResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAlarmModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAlarmModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAlarmModelResponse {
     
     
     public Integer statusCode;
+
     public UpdateAlarmModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAlarmModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAlarmModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAlarmModelResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateAlarmModelResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAlarmModelResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAlarmModelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateAlarmModelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAlarmModelResponse updateAlarmModelResponse;
+
     public UpdateAlarmModelResponse withUpdateAlarmModelResponse(org.openapis.openapi.models.shared.UpdateAlarmModelResponse updateAlarmModelResponse) {
         this.updateAlarmModelResponse = updateAlarmModelResponse;
         return this;
     }
     
+    public UpdateAlarmModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

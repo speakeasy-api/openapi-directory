@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1SchemaPartitionField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1SchemaPartitionField withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1SchemaPartitionField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum type;
+
     public GoogleCloudDataplexV1SchemaPartitionField withType(GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDataplexV1SchemaPartitionField(){}
 }

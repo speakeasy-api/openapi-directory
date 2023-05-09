@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesOfferingsResult {
     
     public String nextToken;
+
     public DescribeReservedInstancesOfferingsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReservedInstancesOfferingsResult {
     
     
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferings[] reservedInstancesOfferings;
+
     public DescribeReservedInstancesOfferingsResult withReservedInstancesOfferings(DescribeReservedInstancesOfferingsResultReservedInstancesOfferings[] reservedInstancesOfferings) {
         this.reservedInstancesOfferings = reservedInstancesOfferings;
         return this;
     }
     
+    public DescribeReservedInstancesOfferingsResult(){}
 }

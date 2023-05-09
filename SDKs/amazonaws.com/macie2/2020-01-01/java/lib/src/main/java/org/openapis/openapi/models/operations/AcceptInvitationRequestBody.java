@@ -15,6 +15,7 @@ public class AcceptInvitationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administratorAccountId")
     public String administratorAccountId;
+
     public AcceptInvitationRequestBody withAdministratorAccountId(String administratorAccountId) {
         this.administratorAccountId = administratorAccountId;
         return this;
@@ -25,6 +26,7 @@ public class AcceptInvitationRequestBody {
      */
     @JsonProperty("invitationId")
     public String invitationId;
+
     public AcceptInvitationRequestBody withInvitationId(String invitationId) {
         this.invitationId = invitationId;
         return this;
@@ -36,9 +38,13 @@ public class AcceptInvitationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterAccount")
     public String masterAccount;
+
     public AcceptInvitationRequestBody withMasterAccount(String masterAccount) {
         this.masterAccount = masterAccount;
         return this;
     }
     
+    public AcceptInvitationRequestBody(@JsonProperty("invitationId") String invitationId) {
+        this.invitationId = invitationId;
+  }
 }

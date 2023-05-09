@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateApplicationsResponse {
@@ -12,6 +13,7 @@ public class DisassociateApplicationsResponse {
      */
     
     public Object conflictException;
+
     public DisassociateApplicationsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateApplicationsResponse {
     
     
     public String contentType;
+
     public DisassociateApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateApplicationsResponse {
      */
     
     public java.util.Map<String, Object> disassociateApplicationsResponse;
+
     public DisassociateApplicationsResponse withDisassociateApplicationsResponse(java.util.Map<String, Object> disassociateApplicationsResponse) {
         this.disassociateApplicationsResponse = disassociateApplicationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateApplicationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateApplicationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateApplicationsResponse {
     
     
     public Integer statusCode;
+
     public DisassociateApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DisassociateApplicationsResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DisassociateApplicationsResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DisassociateApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

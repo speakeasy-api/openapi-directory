@@ -15,6 +15,7 @@ public class ElasticsearchBufferingHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntervalInSeconds")
     public Long intervalInSeconds;
+
     public ElasticsearchBufferingHints withIntervalInSeconds(Long intervalInSeconds) {
         this.intervalInSeconds = intervalInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class ElasticsearchBufferingHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInMBs")
     public Long sizeInMBs;
+
     public ElasticsearchBufferingHints withSizeInMBs(Long sizeInMBs) {
         this.sizeInMBs = sizeInMBs;
         return this;
     }
     
+    public ElasticsearchBufferingHints(){}
 }

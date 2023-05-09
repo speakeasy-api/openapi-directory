@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitCommentJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Comment comment;
+
     public SubmitCommentJsonRequest withComment(org.openapis.openapi.models.shared.Comment comment) {
         this.comment = comment;
         return this;
@@ -19,6 +21,7 @@ public class SubmitCommentJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
     public Long activityId;
+
     public SubmitCommentJsonRequest withActivityId(Long activityId) {
         this.activityId = activityId;
         return this;
@@ -29,9 +32,14 @@ public class SubmitCommentJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public SubmitCommentJsonRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public SubmitCommentJsonRequest(@JsonProperty("activityId") Long activityId, @JsonProperty("projectId") Long projectId) {
+        this.activityId = activityId;
+        this.projectId = projectId;
+  }
 }

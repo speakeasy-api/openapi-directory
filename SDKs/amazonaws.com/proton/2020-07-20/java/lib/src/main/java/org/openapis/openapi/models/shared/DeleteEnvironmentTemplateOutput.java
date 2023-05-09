@@ -15,9 +15,11 @@ public class DeleteEnvironmentTemplateOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentTemplate")
     public EnvironmentTemplate environmentTemplate;
+
     public DeleteEnvironmentTemplateOutput withEnvironmentTemplate(EnvironmentTemplate environmentTemplate) {
         this.environmentTemplate = environmentTemplate;
         return this;
     }
     
+    public DeleteEnvironmentTemplateOutput(){}
 }

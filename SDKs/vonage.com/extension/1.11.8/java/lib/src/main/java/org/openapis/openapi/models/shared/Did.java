@@ -15,6 +15,7 @@ public class Did {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_tag")
     public String customTag;
+
     public Did withCustomTag(String customTag) {
         this.customTag = customTag;
         return this;
@@ -26,9 +27,11 @@ public class Did {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public Did withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public Did(){}
 }

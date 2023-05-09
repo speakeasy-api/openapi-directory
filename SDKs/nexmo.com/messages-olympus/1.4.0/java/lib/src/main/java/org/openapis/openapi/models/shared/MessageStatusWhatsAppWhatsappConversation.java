@@ -18,6 +18,7 @@ public class MessageStatusWhatsAppWhatsappConversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MessageStatusWhatsAppWhatsappConversation withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class MessageStatusWhatsAppWhatsappConversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public MessageStatusWhatsAppWhatsappConversationOrigin origin;
+
     public MessageStatusWhatsAppWhatsappConversation withOrigin(MessageStatusWhatsAppWhatsappConversationOrigin origin) {
         this.origin = origin;
         return this;
     }
     
+    public MessageStatusWhatsAppWhatsappConversation(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHealthEventRequest {
@@ -12,6 +13,7 @@ public class GetHealthEventRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EventId")
     public String eventId;
+
     public GetHealthEventRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -22,6 +24,7 @@ public class GetHealthEventRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MonitorName")
     public String monitorName;
+
     public GetHealthEventRequest withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
@@ -29,6 +32,7 @@ public class GetHealthEventRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetHealthEventRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -36,6 +40,7 @@ public class GetHealthEventRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetHealthEventRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -43,6 +48,7 @@ public class GetHealthEventRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetHealthEventRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -50,6 +56,7 @@ public class GetHealthEventRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetHealthEventRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -57,6 +64,7 @@ public class GetHealthEventRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetHealthEventRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -64,6 +72,7 @@ public class GetHealthEventRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetHealthEventRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -71,9 +80,14 @@ public class GetHealthEventRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetHealthEventRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetHealthEventRequest(@JsonProperty("EventId") String eventId, @JsonProperty("MonitorName") String monitorName) {
+        this.eventId = eventId;
+        this.monitorName = monitorName;
+  }
 }

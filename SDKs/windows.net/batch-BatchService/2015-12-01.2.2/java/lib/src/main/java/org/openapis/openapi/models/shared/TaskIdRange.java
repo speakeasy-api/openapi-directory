@@ -12,6 +12,7 @@ public class TaskIdRange {
      */
     @JsonProperty("end")
     public Integer end;
+
     public TaskIdRange withEnd(Integer end) {
         this.end = end;
         return this;
@@ -22,9 +23,14 @@ public class TaskIdRange {
      */
     @JsonProperty("start")
     public Integer start;
+
     public TaskIdRange withStart(Integer start) {
         this.start = start;
         return this;
     }
     
+    public TaskIdRange(@JsonProperty("end") Integer end, @JsonProperty("start") Integer start) {
+        this.end = end;
+        this.start = start;
+  }
 }

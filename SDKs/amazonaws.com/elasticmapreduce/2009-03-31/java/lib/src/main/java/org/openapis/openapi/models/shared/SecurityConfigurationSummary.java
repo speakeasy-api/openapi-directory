@@ -22,6 +22,7 @@ public class SecurityConfigurationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public SecurityConfigurationSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,9 +31,11 @@ public class SecurityConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SecurityConfigurationSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SecurityConfigurationSummary(){}
 }

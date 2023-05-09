@@ -18,6 +18,7 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkusGift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gifts")
     public Long gifts;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkusGift withGifts(Long gifts) {
         this.gifts = gifts;
         return this;
@@ -29,9 +30,11 @@ public class CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkusGift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantitySelectable")
     public Long quantitySelectable;
+
     public CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkusGift withQuantitySelectable(Long quantitySelectable) {
         this.quantitySelectable = quantitySelectable;
         return this;
     }
     
+    public CreateOrUpdateCalculatorConfiguration200ApplicationJSONSkusGift(){}
 }

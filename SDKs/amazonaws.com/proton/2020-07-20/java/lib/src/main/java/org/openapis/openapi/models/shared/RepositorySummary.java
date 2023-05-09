@@ -12,13 +12,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositorySummary {
     @JsonProperty("arn")
     public String arn;
+
     public RepositorySummary withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    @JsonProperty("connectionArn")
+    public String connectionArn;
+
+    public RepositorySummary withConnectionArn(String connectionArn) {
+        this.connectionArn = connectionArn;
+        return this;
+    }
+    
     @JsonProperty("name")
     public String name;
+
     public RepositorySummary withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +36,16 @@ public class RepositorySummary {
     
     @JsonProperty("provider")
     public RepositoryProviderEnum provider;
+
     public RepositorySummary withProvider(RepositoryProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public RepositorySummary(@JsonProperty("arn") String arn, @JsonProperty("connectionArn") String connectionArn, @JsonProperty("name") String name, @JsonProperty("provider") RepositoryProviderEnum provider) {
+        this.arn = arn;
+        this.connectionArn = connectionArn;
+        this.name = name;
+        this.provider = provider;
+  }
 }

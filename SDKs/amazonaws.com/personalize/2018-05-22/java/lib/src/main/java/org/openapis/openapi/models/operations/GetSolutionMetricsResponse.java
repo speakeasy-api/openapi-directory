@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSolutionMetricsResponse {
     
     public String contentType;
+
     public GetSolutionMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSolutionMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSolutionMetricsResponse getSolutionMetricsResponse;
+
     public GetSolutionMetricsResponse withGetSolutionMetricsResponse(org.openapis.openapi.models.shared.GetSolutionMetricsResponse getSolutionMetricsResponse) {
         this.getSolutionMetricsResponse = getSolutionMetricsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSolutionMetricsResponse {
      */
     
     public Object invalidInputException;
+
     public GetSolutionMetricsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class GetSolutionMetricsResponse {
      */
     
     public Object resourceInUseException;
+
     public GetSolutionMetricsResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -46,6 +51,7 @@ public class GetSolutionMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetSolutionMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSolutionMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSolutionMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSolutionMetricsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSolutionMetricsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetSolutionMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

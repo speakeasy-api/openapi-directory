@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportVolumeResultConversionTask {
     
     public String conversionTaskId;
+
     public ImportVolumeResultConversionTask withConversionTaskId(String conversionTaskId) {
         this.conversionTaskId = conversionTaskId;
         return this;
@@ -19,6 +20,7 @@ public class ImportVolumeResultConversionTask {
     
     
     public String expirationTime;
+
     public ImportVolumeResultConversionTask withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -26,6 +28,7 @@ public class ImportVolumeResultConversionTask {
     
     
     public ImportVolumeResultConversionTaskImportInstance importInstance;
+
     public ImportVolumeResultConversionTask withImportInstance(ImportVolumeResultConversionTaskImportInstance importInstance) {
         this.importInstance = importInstance;
         return this;
@@ -33,6 +36,7 @@ public class ImportVolumeResultConversionTask {
     
     
     public ImportVolumeResultConversionTaskImportVolume importVolume;
+
     public ImportVolumeResultConversionTask withImportVolume(ImportVolumeResultConversionTaskImportVolume importVolume) {
         this.importVolume = importVolume;
         return this;
@@ -40,6 +44,7 @@ public class ImportVolumeResultConversionTask {
     
     
     public ImportVolumeResultConversionTaskStateEnum state;
+
     public ImportVolumeResultConversionTask withState(ImportVolumeResultConversionTaskStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class ImportVolumeResultConversionTask {
     
     
     public String statusMessage;
+
     public ImportVolumeResultConversionTask withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +60,11 @@ public class ImportVolumeResultConversionTask {
     
     
     public ImportVolumeResultConversionTaskTags[] tags;
+
     public ImportVolumeResultConversionTask withTags(ImportVolumeResultConversionTaskTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportVolumeResultConversionTask(){}
 }

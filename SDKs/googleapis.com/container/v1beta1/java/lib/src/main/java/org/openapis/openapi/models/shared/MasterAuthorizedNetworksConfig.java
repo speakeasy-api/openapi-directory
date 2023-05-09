@@ -18,6 +18,7 @@ public class MasterAuthorizedNetworksConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidrBlocks")
     public CidrBlock[] cidrBlocks;
+
     public MasterAuthorizedNetworksConfig withCidrBlocks(CidrBlock[] cidrBlocks) {
         this.cidrBlocks = cidrBlocks;
         return this;
@@ -29,6 +30,7 @@ public class MasterAuthorizedNetworksConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public MasterAuthorizedNetworksConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,9 +42,11 @@ public class MasterAuthorizedNetworksConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcpPublicCidrsAccessEnabled")
     public Boolean gcpPublicCidrsAccessEnabled;
+
     public MasterAuthorizedNetworksConfig withGcpPublicCidrsAccessEnabled(Boolean gcpPublicCidrsAccessEnabled) {
         this.gcpPublicCidrsAccessEnabled = gcpPublicCidrsAccessEnabled;
         return this;
     }
     
+    public MasterAuthorizedNetworksConfig(){}
 }

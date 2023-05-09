@@ -18,6 +18,7 @@ public class GroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GroupInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GroupInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class GroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GroupInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public GroupInput(){}
 }

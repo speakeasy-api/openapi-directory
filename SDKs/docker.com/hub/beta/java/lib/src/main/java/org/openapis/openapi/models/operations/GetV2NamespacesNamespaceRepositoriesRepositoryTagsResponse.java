@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse {
     
     public String contentType;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse {
     
     
     public Integer statusCode;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedTags paginatedTags;
+
     public GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse withPaginatedTags(org.openapis.openapi.models.shared.PaginatedTags paginatedTags) {
         this.paginatedTags = paginatedTags;
         return this;
     }
     
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

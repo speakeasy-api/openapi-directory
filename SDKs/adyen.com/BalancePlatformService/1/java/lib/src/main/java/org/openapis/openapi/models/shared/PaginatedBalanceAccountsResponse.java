@@ -15,6 +15,7 @@ public class PaginatedBalanceAccountsResponse {
      */
     @JsonProperty("balanceAccounts")
     public BalanceAccount[] balanceAccounts;
+
     public PaginatedBalanceAccountsResponse withBalanceAccounts(BalanceAccount[] balanceAccounts) {
         this.balanceAccounts = balanceAccounts;
         return this;
@@ -25,6 +26,7 @@ public class PaginatedBalanceAccountsResponse {
      */
     @JsonProperty("hasNext")
     public Boolean hasNext;
+
     public PaginatedBalanceAccountsResponse withHasNext(Boolean hasNext) {
         this.hasNext = hasNext;
         return this;
@@ -35,9 +37,15 @@ public class PaginatedBalanceAccountsResponse {
      */
     @JsonProperty("hasPrevious")
     public Boolean hasPrevious;
+
     public PaginatedBalanceAccountsResponse withHasPrevious(Boolean hasPrevious) {
         this.hasPrevious = hasPrevious;
         return this;
     }
     
+    public PaginatedBalanceAccountsResponse(@JsonProperty("balanceAccounts") BalanceAccount[] balanceAccounts, @JsonProperty("hasNext") Boolean hasNext, @JsonProperty("hasPrevious") Boolean hasPrevious) {
+        this.balanceAccounts = balanceAccounts;
+        this.hasNext = hasNext;
+        this.hasPrevious = hasPrevious;
+  }
 }

@@ -15,6 +15,7 @@ public class IpGeoLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public IpGeoLocation withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -23,9 +24,11 @@ public class IpGeoLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public IpGeoLocation withLon(Double lon) {
         this.lon = lon;
         return this;
     }
     
+    public IpGeoLocation(){}
 }

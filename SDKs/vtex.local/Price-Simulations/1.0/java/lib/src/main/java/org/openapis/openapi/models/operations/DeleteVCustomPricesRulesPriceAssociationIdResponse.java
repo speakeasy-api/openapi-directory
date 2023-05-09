@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVCustomPricesRulesPriceAssociationIdResponse {
     
     public String contentType;
+
     public DeleteVCustomPricesRulesPriceAssociationIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteVCustomPricesRulesPriceAssociationIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteVCustomPricesRulesPriceAssociationIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteVCustomPricesRulesPriceAssociationIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVCustomPricesRulesPriceAssociationIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DeleteVCustomPricesRulesPriceAssociationIdResponse {
      */
     
     public String deleteVCustomPricesRulesPriceAssociationId200ApplicationJSONString;
+
     public DeleteVCustomPricesRulesPriceAssociationIdResponse withDeleteVCustomPricesRulesPriceAssociationId200ApplicationJSONString(String deleteVCustomPricesRulesPriceAssociationId200ApplicationJSONString) {
         this.deleteVCustomPricesRulesPriceAssociationId200ApplicationJSONString = deleteVCustomPricesRulesPriceAssociationId200ApplicationJSONString;
         return this;
     }
     
+    public DeleteVCustomPricesRulesPriceAssociationIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomRoutingEndpointGroupsResponse {
     
     public String contentType;
+
     public ListCustomRoutingEndpointGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomRoutingEndpointGroupsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListCustomRoutingEndpointGroupsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomRoutingEndpointGroupsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListCustomRoutingEndpointGroupsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomRoutingEndpointGroupsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListCustomRoutingEndpointGroupsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomRoutingEndpointGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomRoutingEndpointGroupsResponse listCustomRoutingEndpointGroupsResponse;
+
     public ListCustomRoutingEndpointGroupsResponse withListCustomRoutingEndpointGroupsResponse(org.openapis.openapi.models.shared.ListCustomRoutingEndpointGroupsResponse listCustomRoutingEndpointGroupsResponse) {
         this.listCustomRoutingEndpointGroupsResponse = listCustomRoutingEndpointGroupsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListCustomRoutingEndpointGroupsResponse {
      */
     
     public Object listenerNotFoundException;
+
     public ListCustomRoutingEndpointGroupsResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListCustomRoutingEndpointGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomRoutingEndpointGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListCustomRoutingEndpointGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomRoutingEndpointGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCustomRoutingEndpointGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

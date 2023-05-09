@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateGetEntitlementRequest {
@@ -12,6 +13,7 @@ public class CertificateGetEntitlementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entitlementId")
     public String entitlementId;
+
     public CertificateGetEntitlementRequest withEntitlementId(String entitlementId) {
         this.entitlementId = entitlementId;
         return this;
@@ -22,9 +24,13 @@ public class CertificateGetEntitlementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latest")
     public Boolean latest;
+
     public CertificateGetEntitlementRequest withLatest(Boolean latest) {
         this.latest = latest;
         return this;
     }
     
+    public CertificateGetEntitlementRequest(@JsonProperty("entitlementId") String entitlementId) {
+        this.entitlementId = entitlementId;
+  }
 }

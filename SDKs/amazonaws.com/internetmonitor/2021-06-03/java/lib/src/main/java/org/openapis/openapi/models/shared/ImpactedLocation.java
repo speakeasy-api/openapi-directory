@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImpactedLocation {
     @JsonProperty("ASName")
     public String asName;
+
     public ImpactedLocation withASName(String asName) {
         this.asName = asName;
         return this;
@@ -21,6 +22,7 @@ public class ImpactedLocation {
     
     @JsonProperty("ASNumber")
     public Long asNumber;
+
     public ImpactedLocation withASNumber(Long asNumber) {
         this.asNumber = asNumber;
         return this;
@@ -29,6 +31,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CausedBy")
     public NetworkImpairment causedBy;
+
     public ImpactedLocation withCausedBy(NetworkImpairment causedBy) {
         this.causedBy = causedBy;
         return this;
@@ -37,6 +40,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public ImpactedLocation withCity(String city) {
         this.city = city;
         return this;
@@ -44,6 +48,7 @@ public class ImpactedLocation {
     
     @JsonProperty("Country")
     public String country;
+
     public ImpactedLocation withCountry(String country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public ImpactedLocation withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -60,6 +66,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InternetHealth")
     public InternetHealth internetHealth;
+
     public ImpactedLocation withInternetHealth(InternetHealth internetHealth) {
         this.internetHealth = internetHealth;
         return this;
@@ -68,6 +75,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latitude")
     public Double latitude;
+
     public ImpactedLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -76,6 +84,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Longitude")
     public Double longitude;
+
     public ImpactedLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -84,6 +93,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metro")
     public String metro;
+
     public ImpactedLocation withMetro(String metro) {
         this.metro = metro;
         return this;
@@ -92,6 +102,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceLocation")
     public String serviceLocation;
+
     public ImpactedLocation withServiceLocation(String serviceLocation) {
         this.serviceLocation = serviceLocation;
         return this;
@@ -99,6 +110,7 @@ public class ImpactedLocation {
     
     @JsonProperty("Status")
     public HealthEventStatusEnum status;
+
     public ImpactedLocation withStatus(HealthEventStatusEnum status) {
         this.status = status;
         return this;
@@ -107,6 +119,7 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdivision")
     public String subdivision;
+
     public ImpactedLocation withSubdivision(String subdivision) {
         this.subdivision = subdivision;
         return this;
@@ -115,9 +128,16 @@ public class ImpactedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubdivisionCode")
     public String subdivisionCode;
+
     public ImpactedLocation withSubdivisionCode(String subdivisionCode) {
         this.subdivisionCode = subdivisionCode;
         return this;
     }
     
+    public ImpactedLocation(@JsonProperty("ASName") String asName, @JsonProperty("ASNumber") Long asNumber, @JsonProperty("Country") String country, @JsonProperty("Status") HealthEventStatusEnum status) {
+        this.asName = asName;
+        this.asNumber = asNumber;
+        this.country = country;
+        this.status = status;
+  }
 }

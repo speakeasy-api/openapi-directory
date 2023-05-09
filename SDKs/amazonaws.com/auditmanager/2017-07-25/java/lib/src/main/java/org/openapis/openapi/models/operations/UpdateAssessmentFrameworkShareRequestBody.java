@@ -12,6 +12,7 @@ public class UpdateAssessmentFrameworkShareRequestBody {
      */
     @JsonProperty("action")
     public UpdateAssessmentFrameworkShareRequestBodyActionEnum action;
+
     public UpdateAssessmentFrameworkShareRequestBody withAction(UpdateAssessmentFrameworkShareRequestBodyActionEnum action) {
         this.action = action;
         return this;
@@ -22,9 +23,14 @@ public class UpdateAssessmentFrameworkShareRequestBody {
      */
     @JsonProperty("requestType")
     public UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum requestType;
+
     public UpdateAssessmentFrameworkShareRequestBody withRequestType(UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum requestType) {
         this.requestType = requestType;
         return this;
     }
     
+    public UpdateAssessmentFrameworkShareRequestBody(@JsonProperty("action") UpdateAssessmentFrameworkShareRequestBodyActionEnum action, @JsonProperty("requestType") UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum requestType) {
+        this.action = action;
+        this.requestType = requestType;
+  }
 }

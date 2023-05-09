@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListRunsRequest {
     @JsonProperty("arn")
     public String arn;
+
     public ListRunsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,13 @@ public class ListRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRunsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRunsRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

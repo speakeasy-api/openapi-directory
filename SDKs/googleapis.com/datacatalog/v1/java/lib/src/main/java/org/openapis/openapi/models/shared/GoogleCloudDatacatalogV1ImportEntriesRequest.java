@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1ImportEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsBucketPath")
     public String gcsBucketPath;
+
     public GoogleCloudDatacatalogV1ImportEntriesRequest withGcsBucketPath(String gcsBucketPath) {
         this.gcsBucketPath = gcsBucketPath;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ImportEntriesRequest(){}
 }

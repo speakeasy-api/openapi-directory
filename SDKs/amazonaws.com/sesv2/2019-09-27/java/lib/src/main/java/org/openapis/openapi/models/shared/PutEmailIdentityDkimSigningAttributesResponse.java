@@ -15,6 +15,7 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DkimStatus")
     public DkimStatusEnum dkimStatus;
+
     public PutEmailIdentityDkimSigningAttributesResponse withDkimStatus(DkimStatusEnum dkimStatus) {
         this.dkimStatus = dkimStatus;
         return this;
@@ -23,9 +24,11 @@ public class PutEmailIdentityDkimSigningAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DkimTokens")
     public String[] dkimTokens;
+
     public PutEmailIdentityDkimSigningAttributesResponse withDkimTokens(String[] dkimTokens) {
         this.dkimTokens = dkimTokens;
         return this;
     }
     
+    public PutEmailIdentityDkimSigningAttributesResponse(){}
 }

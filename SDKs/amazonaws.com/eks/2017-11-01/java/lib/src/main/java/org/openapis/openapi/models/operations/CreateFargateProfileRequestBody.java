@@ -15,6 +15,7 @@ public class CreateFargateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateFargateProfileRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateFargateProfileRequestBody {
      */
     @JsonProperty("fargateProfileName")
     public String fargateProfileName;
+
     public CreateFargateProfileRequestBody withFargateProfileName(String fargateProfileName) {
         this.fargateProfileName = fargateProfileName;
         return this;
@@ -35,6 +37,7 @@ public class CreateFargateProfileRequestBody {
      */
     @JsonProperty("podExecutionRoleArn")
     public String podExecutionRoleArn;
+
     public CreateFargateProfileRequestBody withPodExecutionRoleArn(String podExecutionRoleArn) {
         this.podExecutionRoleArn = podExecutionRoleArn;
         return this;
@@ -46,6 +49,7 @@ public class CreateFargateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectors")
     public org.openapis.openapi.models.shared.FargateProfileSelector[] selectors;
+
     public CreateFargateProfileRequestBody withSelectors(org.openapis.openapi.models.shared.FargateProfileSelector[] selectors) {
         this.selectors = selectors;
         return this;
@@ -57,6 +61,7 @@ public class CreateFargateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public String[] subnets;
+
     public CreateFargateProfileRequestBody withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -68,9 +73,14 @@ public class CreateFargateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateFargateProfileRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFargateProfileRequestBody(@JsonProperty("fargateProfileName") String fargateProfileName, @JsonProperty("podExecutionRoleArn") String podExecutionRoleArn) {
+        this.fargateProfileName = fargateProfileName;
+        this.podExecutionRoleArn = podExecutionRoleArn;
+  }
 }

@@ -18,6 +18,7 @@ public class GroupItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public GroupItem withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -29,6 +30,7 @@ public class GroupItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GroupItem withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class GroupItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public String groupId;
+
     public GroupItem withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -51,6 +54,7 @@ public class GroupItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GroupItem withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class GroupItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GroupItem withKind(String kind) {
         this.kind = kind;
         return this;
@@ -70,9 +75,11 @@ public class GroupItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public GroupItemResource resource;
+
     public GroupItem withResource(GroupItemResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public GroupItem(){}
 }

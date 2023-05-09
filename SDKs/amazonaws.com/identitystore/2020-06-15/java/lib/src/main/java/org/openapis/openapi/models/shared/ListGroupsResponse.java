@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListGroupsResponse {
     @JsonProperty("Groups")
     public Group[] groups;
+
     public ListGroupsResponse withGroups(Group[] groups) {
         this.groups = groups;
         return this;
@@ -22,9 +23,13 @@ public class ListGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGroupsResponse(@JsonProperty("Groups") Group[] groups) {
+        this.groups = groups;
+  }
 }

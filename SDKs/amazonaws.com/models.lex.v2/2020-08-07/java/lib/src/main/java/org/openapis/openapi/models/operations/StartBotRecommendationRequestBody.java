@@ -15,6 +15,7 @@ public class StartBotRecommendationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSetting")
     public StartBotRecommendationRequestBodyEncryptionSetting encryptionSetting;
+
     public StartBotRecommendationRequestBody withEncryptionSetting(StartBotRecommendationRequestBodyEncryptionSetting encryptionSetting) {
         this.encryptionSetting = encryptionSetting;
         return this;
@@ -25,9 +26,13 @@ public class StartBotRecommendationRequestBody {
      */
     @JsonProperty("transcriptSourceSetting")
     public StartBotRecommendationRequestBodyTranscriptSourceSetting transcriptSourceSetting;
+
     public StartBotRecommendationRequestBody withTranscriptSourceSetting(StartBotRecommendationRequestBodyTranscriptSourceSetting transcriptSourceSetting) {
         this.transcriptSourceSetting = transcriptSourceSetting;
         return this;
     }
     
+    public StartBotRecommendationRequestBody(@JsonProperty("transcriptSourceSetting") StartBotRecommendationRequestBodyTranscriptSourceSetting transcriptSourceSetting) {
+        this.transcriptSourceSetting = transcriptSourceSetting;
+  }
 }

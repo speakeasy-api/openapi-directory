@@ -15,6 +15,7 @@ public class AutoScalingTargetTrackingScalingPolicyConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableScaleIn")
     public Boolean disableScaleIn;
+
     public AutoScalingTargetTrackingScalingPolicyConfigurationUpdate withDisableScaleIn(Boolean disableScaleIn) {
         this.disableScaleIn = disableScaleIn;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingTargetTrackingScalingPolicyConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleInCooldown")
     public Long scaleInCooldown;
+
     public AutoScalingTargetTrackingScalingPolicyConfigurationUpdate withScaleInCooldown(Long scaleInCooldown) {
         this.scaleInCooldown = scaleInCooldown;
         return this;
@@ -31,6 +33,7 @@ public class AutoScalingTargetTrackingScalingPolicyConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleOutCooldown")
     public Long scaleOutCooldown;
+
     public AutoScalingTargetTrackingScalingPolicyConfigurationUpdate withScaleOutCooldown(Long scaleOutCooldown) {
         this.scaleOutCooldown = scaleOutCooldown;
         return this;
@@ -38,9 +41,13 @@ public class AutoScalingTargetTrackingScalingPolicyConfigurationUpdate {
     
     @JsonProperty("TargetValue")
     public Double targetValue;
+
     public AutoScalingTargetTrackingScalingPolicyConfigurationUpdate withTargetValue(Double targetValue) {
         this.targetValue = targetValue;
         return this;
     }
     
+    public AutoScalingTargetTrackingScalingPolicyConfigurationUpdate(@JsonProperty("TargetValue") Double targetValue) {
+        this.targetValue = targetValue;
+  }
 }

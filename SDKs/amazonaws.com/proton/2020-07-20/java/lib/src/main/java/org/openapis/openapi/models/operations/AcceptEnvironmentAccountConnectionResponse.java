@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptEnvironmentAccountConnectionResponse {
@@ -12,6 +13,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.AcceptEnvironmentAccountConnectionOutput acceptEnvironmentAccountConnectionOutput;
+
     public AcceptEnvironmentAccountConnectionResponse withAcceptEnvironmentAccountConnectionOutput(org.openapis.openapi.models.shared.AcceptEnvironmentAccountConnectionOutput acceptEnvironmentAccountConnectionOutput) {
         this.acceptEnvironmentAccountConnectionOutput = acceptEnvironmentAccountConnectionOutput;
         return this;
@@ -22,6 +24,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
      */
     
     public Object accessDeniedException;
+
     public AcceptEnvironmentAccountConnectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
      */
     
     public Object conflictException;
+
     public AcceptEnvironmentAccountConnectionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
     
     
     public String contentType;
+
     public AcceptEnvironmentAccountConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
      */
     
     public Object internalServerException;
+
     public AcceptEnvironmentAccountConnectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AcceptEnvironmentAccountConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
     
     
     public Integer statusCode;
+
     public AcceptEnvironmentAccountConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptEnvironmentAccountConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AcceptEnvironmentAccountConnectionResponse {
      */
     
     public Object throttlingException;
+
     public AcceptEnvironmentAccountConnectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AcceptEnvironmentAccountConnectionResponse {
      */
     
     public Object validationException;
+
     public AcceptEnvironmentAccountConnectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AcceptEnvironmentAccountConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

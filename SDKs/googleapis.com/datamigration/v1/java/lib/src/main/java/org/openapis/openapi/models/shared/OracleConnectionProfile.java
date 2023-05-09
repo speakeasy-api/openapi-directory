@@ -18,6 +18,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseService")
     public String databaseService;
+
     public OracleConnectionProfile withDatabaseService(String databaseService) {
         this.databaseService = databaseService;
         return this;
@@ -29,6 +30,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardSshConnectivity")
     public ForwardSshTunnelConnectivity forwardSshConnectivity;
+
     public OracleConnectionProfile withForwardSshConnectivity(ForwardSshTunnelConnectivity forwardSshConnectivity) {
         this.forwardSshConnectivity = forwardSshConnectivity;
         return this;
@@ -40,6 +42,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public OracleConnectionProfile withHost(String host) {
         this.host = host;
         return this;
@@ -51,6 +54,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public OracleConnectionProfile withPassword(String password) {
         this.password = password;
         return this;
@@ -62,6 +66,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordSet")
     public Boolean passwordSet;
+
     public OracleConnectionProfile withPasswordSet(Boolean passwordSet) {
         this.passwordSet = passwordSet;
         return this;
@@ -73,6 +78,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public OracleConnectionProfile withPort(Integer port) {
         this.port = port;
         return this;
@@ -84,6 +90,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateConnectivity")
     public PrivateConnectivity privateConnectivity;
+
     public OracleConnectionProfile withPrivateConnectivity(PrivateConnectivity privateConnectivity) {
         this.privateConnectivity = privateConnectivity;
         return this;
@@ -95,6 +102,7 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staticServiceIpConnectivity")
     public java.util.Map<String, Object> staticServiceIpConnectivity;
+
     public OracleConnectionProfile withStaticServiceIpConnectivity(java.util.Map<String, Object> staticServiceIpConnectivity) {
         this.staticServiceIpConnectivity = staticServiceIpConnectivity;
         return this;
@@ -106,9 +114,11 @@ public class OracleConnectionProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public OracleConnectionProfile withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public OracleConnectionProfile(){}
 }

@@ -4,17 +4,29 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TrafficSourceIdentifier - &lt;p&gt;Describes the identifier of a traffic source.&lt;/p&gt; &lt;p&gt;Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group.&lt;/p&gt;
+ * TrafficSourceIdentifier - Identifying information for a traffic source.
  */
 public class TrafficSourceIdentifier {
     
     public String identifier;
+
     public TrafficSourceIdentifier withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    
+    public String type;
+
+    public TrafficSourceIdentifier withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    public TrafficSourceIdentifier(@JsonProperty("Identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

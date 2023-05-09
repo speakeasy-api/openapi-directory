@@ -15,9 +15,11 @@ public class IotSiteWiseInputIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotSiteWiseAssetModelPropertyIdentifier")
     public IotSiteWiseAssetModelPropertyIdentifier iotSiteWiseAssetModelPropertyIdentifier;
+
     public IotSiteWiseInputIdentifier withIotSiteWiseAssetModelPropertyIdentifier(IotSiteWiseAssetModelPropertyIdentifier iotSiteWiseAssetModelPropertyIdentifier) {
         this.iotSiteWiseAssetModelPropertyIdentifier = iotSiteWiseAssetModelPropertyIdentifier;
         return this;
     }
     
+    public IotSiteWiseInputIdentifier(){}
 }

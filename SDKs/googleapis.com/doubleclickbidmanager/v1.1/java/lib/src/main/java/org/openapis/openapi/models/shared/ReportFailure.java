@@ -18,9 +18,11 @@ public class ReportFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ReportFailureErrorCodeEnum errorCode;
+
     public ReportFailure withErrorCode(ReportFailureErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
     }
     
+    public ReportFailure(){}
 }

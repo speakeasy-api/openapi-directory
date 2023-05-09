@@ -20,6 +20,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignee")
     public UserCompact assignee;
+
     public StoryResponse withAssignee(UserCompact assignee) {
         this.assignee = assignee;
         return this;
@@ -33,6 +34,7 @@ public class StoryResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public StoryResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public UserCompact createdBy;
+
     public StoryResponse withCreatedBy(UserCompact createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -49,6 +52,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_field")
     public CustomFieldCompact customField;
+
     public StoryResponse withCustomField(CustomFieldCompact customField) {
         this.customField = customField;
         return this;
@@ -57,6 +61,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependency")
     public TaskCompact dependency;
+
     public StoryResponse withDependency(TaskCompact dependency) {
         this.dependency = dependency;
         return this;
@@ -65,6 +70,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicate_of")
     public TaskCompact duplicateOf;
+
     public StoryResponse withDuplicateOf(TaskCompact duplicateOf) {
         this.duplicateOf = duplicateOf;
         return this;
@@ -73,6 +79,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicated_from")
     public TaskCompact duplicatedFrom;
+
     public StoryResponse withDuplicatedFrom(TaskCompact duplicatedFrom) {
         this.duplicatedFrom = duplicatedFrom;
         return this;
@@ -81,6 +88,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("follower")
     public UserCompact follower;
+
     public StoryResponse withFollower(UserCompact follower) {
         this.follower = follower;
         return this;
@@ -92,6 +100,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public StoryResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -104,6 +113,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hearted")
     public Boolean hearted;
+
     public StoryResponse withHearted(Boolean hearted) {
         this.hearted = hearted;
         return this;
@@ -117,6 +127,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hearts")
     public Like[] hearts;
+
     public StoryResponse withHearts(Like[] hearts) {
         this.hearts = hearts;
         return this;
@@ -128,6 +139,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public StoryResponse withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -139,6 +151,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_editable")
     public Boolean isEditable;
+
     public StoryResponse withIsEditable(Boolean isEditable) {
         this.isEditable = isEditable;
         return this;
@@ -150,6 +163,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_edited")
     public Boolean isEdited;
+
     public StoryResponse withIsEdited(Boolean isEdited) {
         this.isEdited = isEdited;
         return this;
@@ -161,6 +175,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_pinned")
     public Boolean isPinned;
+
     public StoryResponse withIsPinned(Boolean isPinned) {
         this.isPinned = isPinned;
         return this;
@@ -172,6 +187,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liked")
     public Boolean liked;
+
     public StoryResponse withLiked(Boolean liked) {
         this.liked = liked;
         return this;
@@ -183,6 +199,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("likes")
     public Like[] likes;
+
     public StoryResponse withLikes(Like[] likes) {
         this.likes = likes;
         return this;
@@ -194,6 +211,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_approval_status")
     public String newApprovalStatus;
+
     public StoryResponse withNewApprovalStatus(String newApprovalStatus) {
         this.newApprovalStatus = newApprovalStatus;
         return this;
@@ -202,6 +220,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_date_value")
     public StoryResponseNewDateValue newDateValue;
+
     public StoryResponse withNewDateValue(StoryResponseNewDateValue newDateValue) {
         this.newDateValue = newDateValue;
         return this;
@@ -213,6 +232,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_dates")
     public StoryResponseDates newDates;
+
     public StoryResponse withNewDates(StoryResponseDates newDates) {
         this.newDates = newDates;
         return this;
@@ -221,6 +241,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_enum_value")
     public EnumOption newEnumValue;
+
     public StoryResponse withNewEnumValue(EnumOption newEnumValue) {
         this.newEnumValue = newEnumValue;
         return this;
@@ -232,6 +253,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_multi_enum_values")
     public EnumOption[] newMultiEnumValues;
+
     public StoryResponse withNewMultiEnumValues(EnumOption[] newMultiEnumValues) {
         this.newMultiEnumValues = newMultiEnumValues;
         return this;
@@ -243,6 +265,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_name")
     public String newName;
+
     public StoryResponse withNewName(String newName) {
         this.newName = newName;
         return this;
@@ -254,6 +277,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_number_value")
     public Long newNumberValue;
+
     public StoryResponse withNewNumberValue(Long newNumberValue) {
         this.newNumberValue = newNumberValue;
         return this;
@@ -265,6 +289,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_people_value")
     public UserCompact[] newPeopleValue;
+
     public StoryResponse withNewPeopleValue(UserCompact[] newPeopleValue) {
         this.newPeopleValue = newPeopleValue;
         return this;
@@ -276,6 +301,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_resource_subtype")
     public String newResourceSubtype;
+
     public StoryResponse withNewResourceSubtype(String newResourceSubtype) {
         this.newResourceSubtype = newResourceSubtype;
         return this;
@@ -284,6 +310,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_section")
     public SectionCompact newSection;
+
     public StoryResponse withNewSection(SectionCompact newSection) {
         this.newSection = newSection;
         return this;
@@ -295,6 +322,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_text_value")
     public String newTextValue;
+
     public StoryResponse withNewTextValue(String newTextValue) {
         this.newTextValue = newTextValue;
         return this;
@@ -308,6 +336,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_hearts")
     public Long numHearts;
+
     public StoryResponse withNumHearts(Long numHearts) {
         this.numHearts = numHearts;
         return this;
@@ -319,6 +348,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_likes")
     public Long numLikes;
+
     public StoryResponse withNumLikes(Long numLikes) {
         this.numLikes = numLikes;
         return this;
@@ -330,6 +360,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_approval_status")
     public String oldApprovalStatus;
+
     public StoryResponse withOldApprovalStatus(String oldApprovalStatus) {
         this.oldApprovalStatus = oldApprovalStatus;
         return this;
@@ -338,6 +369,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_date_value")
     public StoryResponseOldDateValue oldDateValue;
+
     public StoryResponse withOldDateValue(StoryResponseOldDateValue oldDateValue) {
         this.oldDateValue = oldDateValue;
         return this;
@@ -349,6 +381,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_dates")
     public StoryResponseDates oldDates;
+
     public StoryResponse withOldDates(StoryResponseDates oldDates) {
         this.oldDates = oldDates;
         return this;
@@ -357,6 +390,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_enum_value")
     public EnumOption oldEnumValue;
+
     public StoryResponse withOldEnumValue(EnumOption oldEnumValue) {
         this.oldEnumValue = oldEnumValue;
         return this;
@@ -368,6 +402,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_multi_enum_values")
     public EnumOption[] oldMultiEnumValues;
+
     public StoryResponse withOldMultiEnumValues(EnumOption[] oldMultiEnumValues) {
         this.oldMultiEnumValues = oldMultiEnumValues;
         return this;
@@ -379,6 +414,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_name")
     public String oldName;
+
     public StoryResponse withOldName(String oldName) {
         this.oldName = oldName;
         return this;
@@ -390,6 +426,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_number_value")
     public Long oldNumberValue;
+
     public StoryResponse withOldNumberValue(Long oldNumberValue) {
         this.oldNumberValue = oldNumberValue;
         return this;
@@ -401,6 +438,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_people_value")
     public UserCompact[] oldPeopleValue;
+
     public StoryResponse withOldPeopleValue(UserCompact[] oldPeopleValue) {
         this.oldPeopleValue = oldPeopleValue;
         return this;
@@ -412,6 +450,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_resource_subtype")
     public String oldResourceSubtype;
+
     public StoryResponse withOldResourceSubtype(String oldResourceSubtype) {
         this.oldResourceSubtype = oldResourceSubtype;
         return this;
@@ -420,6 +459,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_section")
     public SectionCompact oldSection;
+
     public StoryResponse withOldSection(SectionCompact oldSection) {
         this.oldSection = oldSection;
         return this;
@@ -431,6 +471,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_text_value")
     public String oldTextValue;
+
     public StoryResponse withOldTextValue(String oldTextValue) {
         this.oldTextValue = oldTextValue;
         return this;
@@ -444,6 +485,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previews")
     public Preview[] previews;
+
     public StoryResponse withPreviews(Preview[] previews) {
         this.previews = previews;
         return this;
@@ -452,6 +494,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectCompact project;
+
     public StoryResponse withProject(ProjectCompact project) {
         this.project = project;
         return this;
@@ -463,6 +506,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public String resourceSubtype;
+
     public StoryResponse withResourceSubtype(String resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -474,6 +518,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public StoryResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -485,6 +530,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public StoryResponseSourceEnum source;
+
     public StoryResponse withSource(StoryResponseSourceEnum source) {
         this.source = source;
         return this;
@@ -496,6 +542,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sticker_name")
     public StoryResponseStickerNameEnum stickerName;
+
     public StoryResponse withStickerName(StoryResponseStickerNameEnum stickerName) {
         this.stickerName = stickerName;
         return this;
@@ -504,6 +551,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("story")
     public StoryCompact story;
+
     public StoryResponse withStory(StoryCompact story) {
         this.story = story;
         return this;
@@ -512,6 +560,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public TagCompact tag;
+
     public StoryResponse withTag(TagCompact tag) {
         this.tag = tag;
         return this;
@@ -520,6 +569,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public StoryResponseTarget target;
+
     public StoryResponse withTarget(StoryResponseTarget target) {
         this.target = target;
         return this;
@@ -528,6 +578,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public TaskCompact task;
+
     public StoryResponse withTask(TaskCompact task) {
         this.task = task;
         return this;
@@ -539,6 +590,7 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public StoryResponse withText(String text) {
         this.text = text;
         return this;
@@ -547,9 +599,11 @@ public class StoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public StoryResponseTypeEnum type;
+
     public StoryResponse withType(StoryResponseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public StoryResponse(){}
 }

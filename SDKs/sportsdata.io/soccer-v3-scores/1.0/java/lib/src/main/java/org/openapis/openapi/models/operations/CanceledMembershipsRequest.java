@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CanceledMembershipsRequest {
@@ -12,9 +13,13 @@ public class CanceledMembershipsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public CanceledMembershipsFormatEnum format;
+
     public CanceledMembershipsRequest withFormat(CanceledMembershipsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public CanceledMembershipsRequest(@JsonProperty("format") CanceledMembershipsFormatEnum format) {
+        this.format = format;
+  }
 }

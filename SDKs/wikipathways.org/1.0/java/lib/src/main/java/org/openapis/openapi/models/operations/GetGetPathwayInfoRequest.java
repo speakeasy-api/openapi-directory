@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetPathwayInfoRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetGetPathwayInfoFormatEnum format;
+
     public GetGetPathwayInfoRequest withFormat(GetGetPathwayInfoFormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +21,13 @@ public class GetGetPathwayInfoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetGetPathwayInfoRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
     }
     
+    public GetGetPathwayInfoRequest(@JsonProperty("pwId") String pwId) {
+        this.pwId = pwId;
+  }
 }

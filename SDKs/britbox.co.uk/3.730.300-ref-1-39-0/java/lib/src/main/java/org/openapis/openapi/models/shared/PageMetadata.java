@@ -15,6 +15,7 @@ public class PageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PageMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class PageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public PageMetadata withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -31,9 +33,11 @@ public class PageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public String[] segments;
+
     public PageMetadata withSegments(String[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public PageMetadata(){}
 }

@@ -12,6 +12,7 @@ public class AccountHolderCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedSettings")
     public JSONObject allowedSettings;
+
     public AccountHolderCapabilityInput withAllowedSettings(JSONObject allowedSettings) {
         this.allowedSettings = allowedSettings;
         return this;
@@ -23,6 +24,7 @@ public class AccountHolderCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AccountHolderCapabilityInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -34,6 +36,7 @@ public class AccountHolderCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public Boolean requested;
+
     public AccountHolderCapabilityInput withRequested(Boolean requested) {
         this.requested = requested;
         return this;
@@ -47,6 +50,7 @@ public class AccountHolderCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLevel")
     public AccountHolderCapabilityRequestedLevelEnum requestedLevel;
+
     public AccountHolderCapabilityInput withRequestedLevel(AccountHolderCapabilityRequestedLevelEnum requestedLevel) {
         this.requestedLevel = requestedLevel;
         return this;
@@ -55,6 +59,7 @@ public class AccountHolderCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedSettings")
     public JSONObject requestedSettings;
+
     public AccountHolderCapabilityInput withRequestedSettings(JSONObject requestedSettings) {
         this.requestedSettings = requestedSettings;
         return this;
@@ -66,9 +71,11 @@ public class AccountHolderCapabilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferInstruments")
     public AccountSupportingEntityCapabilityInput[] transferInstruments;
+
     public AccountHolderCapabilityInput withTransferInstruments(AccountSupportingEntityCapabilityInput[] transferInstruments) {
         this.transferInstruments = transferInstruments;
         return this;
     }
     
+    public AccountHolderCapabilityInput(){}
 }

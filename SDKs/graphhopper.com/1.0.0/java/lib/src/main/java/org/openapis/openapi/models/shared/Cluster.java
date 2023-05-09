@@ -15,6 +15,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public Cluster withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -26,9 +27,11 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public Cluster withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public Cluster(){}
 }

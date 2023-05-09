@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class TrendingTrendingCategories {
     
     public TrendingTrendingCategory[] categories;
+
     public TrendingTrendingCategories withCategories(TrendingTrendingCategory[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public TrendingTrendingCategories(){}
 }

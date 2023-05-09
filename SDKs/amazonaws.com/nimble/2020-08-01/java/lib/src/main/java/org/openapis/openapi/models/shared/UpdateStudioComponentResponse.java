@@ -15,9 +15,11 @@ public class UpdateStudioComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponent")
     public StudioComponent studioComponent;
+
     public UpdateStudioComponentResponse withStudioComponent(StudioComponent studioComponent) {
         this.studioComponent = studioComponent;
         return this;
     }
     
+    public UpdateStudioComponentResponse(){}
 }

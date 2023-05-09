@@ -12,6 +12,7 @@ public class BoxScoreV3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDefenseGames")
     public FantasyDefenseGame[] fantasyDefenseGames;
+
     public BoxScoreV3 withFantasyDefenseGames(FantasyDefenseGame[] fantasyDefenseGames) {
         this.fantasyDefenseGames = fantasyDefenseGames;
         return this;
@@ -20,6 +21,7 @@ public class BoxScoreV3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGames")
     public PlayerGame[] playerGames;
+
     public BoxScoreV3 withPlayerGames(PlayerGame[] playerGames) {
         this.playerGames = playerGames;
         return this;
@@ -28,6 +30,7 @@ public class BoxScoreV3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quarters")
     public Quarter[] quarters;
+
     public BoxScoreV3 withQuarters(Quarter[] quarters) {
         this.quarters = quarters;
         return this;
@@ -36,6 +39,7 @@ public class BoxScoreV3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Score score;
+
     public BoxScoreV3 withScore(Score score) {
         this.score = score;
         return this;
@@ -44,6 +48,7 @@ public class BoxScoreV3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringDetails")
     public ScoringDetail[] scoringDetails;
+
     public BoxScoreV3 withScoringDetails(ScoringDetail[] scoringDetails) {
         this.scoringDetails = scoringDetails;
         return this;
@@ -52,6 +57,7 @@ public class BoxScoreV3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringPlays")
     public ScoringPlay[] scoringPlays;
+
     public BoxScoreV3 withScoringPlays(ScoringPlay[] scoringPlays) {
         this.scoringPlays = scoringPlays;
         return this;
@@ -60,9 +66,11 @@ public class BoxScoreV3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamGames")
     public TeamGame[] teamGames;
+
     public BoxScoreV3 withTeamGames(TeamGame[] teamGames) {
         this.teamGames = teamGames;
         return this;
     }
     
+    public BoxScoreV3(){}
 }

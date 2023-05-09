@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMemberSessionResponse {
@@ -12,6 +13,7 @@ public class UpdateMemberSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMemberSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateMemberSessionResponse {
      */
     
     public Object conflictException;
+
     public UpdateMemberSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMemberSessionResponse {
     
     
     public String contentType;
+
     public UpdateMemberSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMemberSessionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateMemberSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateMemberSessionResponse {
     
     
     public Integer statusCode;
+
     public UpdateMemberSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMemberSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMemberSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMemberSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMemberSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMemberSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateMemberSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateMemberSessionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateMemberSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateMemberSessionResponse {
      */
     
     public java.util.Map<String, Object> updateMemberSessionResponse;
+
     public UpdateMemberSessionResponse withUpdateMemberSessionResponse(java.util.Map<String, Object> updateMemberSessionResponse) {
         this.updateMemberSessionResponse = updateMemberSessionResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateMemberSessionResponse {
      */
     
     public Object validationException;
+
     public UpdateMemberSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateMemberSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TaskStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_status_id")
     public Long taskStatusId;
+
     public TaskStatusVO withTaskStatusId(Long taskStatusId) {
         this.taskStatusId = taskStatusId;
         return this;
@@ -23,9 +24,11 @@ public class TaskStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_status_name")
     public String taskStatusName;
+
     public TaskStatusVO withTaskStatusName(String taskStatusName) {
         this.taskStatusName = taskStatusName;
         return this;
     }
     
+    public TaskStatusVO(){}
 }

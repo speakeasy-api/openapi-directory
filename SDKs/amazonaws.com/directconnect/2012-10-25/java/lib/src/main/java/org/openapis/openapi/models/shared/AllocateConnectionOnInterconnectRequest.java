@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllocateConnectionOnInterconnectRequest {
     @JsonProperty("bandwidth")
     public String bandwidth;
+
     public AllocateConnectionOnInterconnectRequest withBandwidth(String bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -16,6 +17,7 @@ public class AllocateConnectionOnInterconnectRequest {
     
     @JsonProperty("connectionName")
     public String connectionName;
+
     public AllocateConnectionOnInterconnectRequest withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -23,6 +25,7 @@ public class AllocateConnectionOnInterconnectRequest {
     
     @JsonProperty("interconnectId")
     public String interconnectId;
+
     public AllocateConnectionOnInterconnectRequest withInterconnectId(String interconnectId) {
         this.interconnectId = interconnectId;
         return this;
@@ -30,6 +33,7 @@ public class AllocateConnectionOnInterconnectRequest {
     
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public AllocateConnectionOnInterconnectRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -37,9 +41,17 @@ public class AllocateConnectionOnInterconnectRequest {
     
     @JsonProperty("vlan")
     public Long vlan;
+
     public AllocateConnectionOnInterconnectRequest withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public AllocateConnectionOnInterconnectRequest(@JsonProperty("bandwidth") String bandwidth, @JsonProperty("connectionName") String connectionName, @JsonProperty("interconnectId") String interconnectId, @JsonProperty("ownerAccount") String ownerAccount, @JsonProperty("vlan") Long vlan) {
+        this.bandwidth = bandwidth;
+        this.connectionName = connectionName;
+        this.interconnectId = interconnectId;
+        this.ownerAccount = ownerAccount;
+        this.vlan = vlan;
+  }
 }

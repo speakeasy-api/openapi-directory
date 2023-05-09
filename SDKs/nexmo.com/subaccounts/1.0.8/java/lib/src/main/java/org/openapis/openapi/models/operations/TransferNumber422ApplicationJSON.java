@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferNumber422ApplicationJSON {
     @JsonProperty("detail")
     public String detail;
+
     public TransferNumber422ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class TransferNumber422ApplicationJSON {
     
     @JsonProperty("instance")
     public String instance;
+
     public TransferNumber422ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -26,6 +28,7 @@ public class TransferNumber422ApplicationJSON {
     
     @JsonProperty("invalid_parameters")
     public TransferNumber422ApplicationJSONInvalidParameters[] invalidParameters;
+
     public TransferNumber422ApplicationJSON withInvalidParameters(TransferNumber422ApplicationJSONInvalidParameters[] invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -33,6 +36,7 @@ public class TransferNumber422ApplicationJSON {
     
     @JsonProperty("title")
     public String title;
+
     public TransferNumber422ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +44,17 @@ public class TransferNumber422ApplicationJSON {
     
     @JsonProperty("type")
     public String type;
+
     public TransferNumber422ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TransferNumber422ApplicationJSON(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("invalid_parameters") TransferNumber422ApplicationJSONInvalidParameters[] invalidParameters, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.invalidParameters = invalidParameters;
+        this.title = title;
+        this.type = type;
+  }
 }

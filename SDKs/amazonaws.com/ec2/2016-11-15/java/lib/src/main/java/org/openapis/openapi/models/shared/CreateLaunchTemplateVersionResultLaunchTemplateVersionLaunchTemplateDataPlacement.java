@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement {
     
     public String affinity;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -19,6 +20,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String availabilityZone;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String groupId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String groupName;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,6 +44,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String hostId;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -47,6 +52,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String hostResourceGroupArn;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Long partitionNumber;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -61,6 +68,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String spreadDomain;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withSpreadDomain(String spreadDomain) {
         this.spreadDomain = spreadDomain;
         return this;
@@ -68,9 +76,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum tenancy;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement withTenancy(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacement(){}
 }

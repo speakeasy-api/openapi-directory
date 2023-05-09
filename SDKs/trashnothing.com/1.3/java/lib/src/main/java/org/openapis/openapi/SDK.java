@@ -30,26 +30,9 @@ public class SDK {
      */
     public Groups groups;
     /**
-     * Manage conversations and messages with other users. &lt;br /&gt;&lt;br /&gt; It's important to note that messages are always sent by email to the users.   So it's possible to create a fully functional app using the trash nothing API without using any of the conversations or messages API endpoints.  These API endpoints are useful for developers who want to build a complete messaging interface into their app.
-     * 
-     */
-    public Messages messages;
-    /**
-     * Miscellaneous functionality.
-     */
-    public Misc misc;
-    /**
-     * Upload, delete and rotate photos.
-     */
-    public Photos photos;
-    /**
      * Retrieve and update posts.
      */
     public Posts posts;
-    /**
-     * Retrieve and submit stories.
-     */
-    public Stories stories;
     /**
      * Retrieve and update user data.
      */
@@ -57,7 +40,7 @@ public class SDK {
 
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
-	private org.openapis.openapi.models.shared.Security _security;
+	
 	private String _serverUrl;
 	private String _language = "java";
 	private String _sdkVersion = "0.0.1";
@@ -67,7 +50,7 @@ public class SDK {
 	 */
 	public static class Builder {
 		private HTTPClient client;
-		private org.openapis.openapi.models.shared.Security security;
+		
 		private String serverUrl;
 		private java.util.Map<String, String> params = new java.util.HashMap<String, String>();
 
@@ -81,16 +64,6 @@ public class SDK {
 		 */
 		public Builder setClient(HTTPClient client) {
 			this.client = client;
-			return this;
-		}
-		
-		/**
-		 * Configures the SDK to use the provided security details.
-		 * @param security The security details to use for all requests.
-		 * @return The builder instance.
-		 */
-		public Builder setSecurity(org.openapis.openapi.models.shared.Security security) {
-			this.security = security;
 			return this;
 		}
 		
@@ -122,7 +95,7 @@ public class SDK {
 		 * @throws Exception Thrown if the SDK could not be built.
 		 */
 		public SDK build() throws Exception {
-			return new SDK(this.client, this.security, this.serverUrl, this.params);
+			return new SDK(this.client, this.serverUrl, this.params);
 		}
 	}
 
@@ -134,16 +107,11 @@ public class SDK {
 		return new Builder();
 	}
 
-	private SDK(HTTPClient client, org.openapis.openapi.models.shared.Security security, String serverUrl, java.util.Map<String, String> params) throws Exception {
+	private SDK(HTTPClient client, String serverUrl, java.util.Map<String, String> params) throws Exception {
 		this._defaultClient = client;
 		
 		if (this._defaultClient == null) {
 			this._defaultClient = new SpeakeasyHTTPClient();
-		}
-		
-		if (security != null) {
-			this._security = security;
-			this._securityClient = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, this._security);
 		}
 		
 		if (this._securityClient == null) {
@@ -157,6 +125,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.groups = new Groups(
@@ -168,43 +141,7 @@ public class SDK {
 			this._genVersion
 		);
 		
-		this.messages = new Messages(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
-		this.misc = new Misc(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
-		this.photos = new Photos(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
 		this.posts = new Posts(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion
-		);
-		
-		this.stories = new Stories(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

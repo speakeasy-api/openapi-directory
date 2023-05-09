@@ -18,6 +18,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aptPackage")
     public VersionedPackage aptPackage;
+
     public SoftwarePackage withAptPackage(VersionedPackage aptPackage) {
         this.aptPackage = aptPackage;
         return this;
@@ -29,6 +30,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cosPackage")
     public VersionedPackage cosPackage;
+
     public SoftwarePackage withCosPackage(VersionedPackage cosPackage) {
         this.cosPackage = cosPackage;
         return this;
@@ -40,6 +42,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googetPackage")
     public VersionedPackage googetPackage;
+
     public SoftwarePackage withGoogetPackage(VersionedPackage googetPackage) {
         this.googetPackage = googetPackage;
         return this;
@@ -51,6 +54,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qfePackage")
     public WindowsQuickFixEngineeringPackage qfePackage;
+
     public SoftwarePackage withQfePackage(WindowsQuickFixEngineeringPackage qfePackage) {
         this.qfePackage = qfePackage;
         return this;
@@ -62,6 +66,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsApplication")
     public WindowsApplication windowsApplication;
+
     public SoftwarePackage withWindowsApplication(WindowsApplication windowsApplication) {
         this.windowsApplication = windowsApplication;
         return this;
@@ -73,6 +78,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wuaPackage")
     public WindowsUpdatePackage wuaPackage;
+
     public SoftwarePackage withWuaPackage(WindowsUpdatePackage wuaPackage) {
         this.wuaPackage = wuaPackage;
         return this;
@@ -84,6 +90,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yumPackage")
     public VersionedPackage yumPackage;
+
     public SoftwarePackage withYumPackage(VersionedPackage yumPackage) {
         this.yumPackage = yumPackage;
         return this;
@@ -95,6 +102,7 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zypperPackage")
     public VersionedPackage zypperPackage;
+
     public SoftwarePackage withZypperPackage(VersionedPackage zypperPackage) {
         this.zypperPackage = zypperPackage;
         return this;
@@ -106,9 +114,11 @@ public class SoftwarePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zypperPatch")
     public ZypperPatch zypperPatch;
+
     public SoftwarePackage withZypperPatch(ZypperPatch zypperPatch) {
         this.zypperPatch = zypperPatch;
         return this;
     }
     
+    public SoftwarePackage(){}
 }

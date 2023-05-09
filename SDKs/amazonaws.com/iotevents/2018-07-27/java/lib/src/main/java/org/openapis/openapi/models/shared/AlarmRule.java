@@ -15,9 +15,11 @@ public class AlarmRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleRule")
     public SimpleRule simpleRule;
+
     public AlarmRule withSimpleRule(SimpleRule simpleRule) {
         this.simpleRule = simpleRule;
         return this;
     }
     
+    public AlarmRule(){}
 }

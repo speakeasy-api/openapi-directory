@@ -12,9 +12,13 @@ public class GiroPayInfo {
      */
     @JsonProperty("supportEmail")
     public String supportEmail;
+
     public GiroPayInfo withSupportEmail(String supportEmail) {
         this.supportEmail = supportEmail;
         return this;
     }
     
+    public GiroPayInfo(@JsonProperty("supportEmail") String supportEmail) {
+        this.supportEmail = supportEmail;
+  }
 }

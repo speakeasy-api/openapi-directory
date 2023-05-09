@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeRegionSecurityPoliciesPatchRuleRequest {
@@ -12,6 +13,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SecurityPolicyRule securityPolicyRule;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withSecurityPolicyRule(org.openapis.openapi.models.shared.SecurityPolicyRule securityPolicyRule) {
         this.securityPolicyRule = securityPolicyRule;
         return this;
@@ -29,6 +32,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
     public Long priority;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -109,6 +120,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +153,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityPolicy")
     public String securityPolicy;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withSecurityPolicy(String securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -149,6 +164,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -159,6 +175,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,6 +186,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -179,6 +197,7 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -189,9 +208,15 @@ public class ComputeRegionSecurityPoliciesPatchRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
     public Boolean validateOnly;
+
     public ComputeRegionSecurityPoliciesPatchRuleRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public ComputeRegionSecurityPoliciesPatchRuleRequest(@JsonProperty("project") String project, @JsonProperty("region") String region, @JsonProperty("securityPolicy") String securityPolicy) {
+        this.project = project;
+        this.region = region;
+        this.securityPolicy = securityPolicy;
+  }
 }

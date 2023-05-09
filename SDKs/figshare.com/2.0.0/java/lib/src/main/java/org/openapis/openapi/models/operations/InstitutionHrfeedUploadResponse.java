@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InstitutionHrfeedUploadResponse {
     
     public String contentType;
+
     public InstitutionHrfeedUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InstitutionHrfeedUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public InstitutionHrfeedUploadResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,6 +32,7 @@ public class InstitutionHrfeedUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseMessage responseMessage;
+
     public InstitutionHrfeedUploadResponse withResponseMessage(org.openapis.openapi.models.shared.ResponseMessage responseMessage) {
         this.responseMessage = responseMessage;
         return this;
@@ -36,6 +40,7 @@ public class InstitutionHrfeedUploadResponse {
     
     
     public Integer statusCode;
+
     public InstitutionHrfeedUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class InstitutionHrfeedUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InstitutionHrfeedUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InstitutionHrfeedUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

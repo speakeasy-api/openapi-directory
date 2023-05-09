@@ -12,6 +12,7 @@ public class StartBgpFailoverTestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpPeers")
     public String[] bgpPeers;
+
     public StartBgpFailoverTestRequest withBgpPeers(String[] bgpPeers) {
         this.bgpPeers = bgpPeers;
         return this;
@@ -20,6 +21,7 @@ public class StartBgpFailoverTestRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testDurationInMinutes")
     public Long testDurationInMinutes;
+
     public StartBgpFailoverTestRequest withTestDurationInMinutes(Long testDurationInMinutes) {
         this.testDurationInMinutes = testDurationInMinutes;
         return this;
@@ -27,9 +29,13 @@ public class StartBgpFailoverTestRequest {
     
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public StartBgpFailoverTestRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public StartBgpFailoverTestRequest(@JsonProperty("virtualInterfaceId") String virtualInterfaceId) {
+        this.virtualInterfaceId = virtualInterfaceId;
+  }
 }

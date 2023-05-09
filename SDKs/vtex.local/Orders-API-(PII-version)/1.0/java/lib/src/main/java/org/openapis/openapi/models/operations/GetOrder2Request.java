@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrder2Request {
@@ -12,6 +13,7 @@ public class GetOrder2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetOrder2Request withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetOrder2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetOrder2Request withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetOrder2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public GetOrder2Request withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -42,9 +46,15 @@ public class GetOrder2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public GetOrder2Request withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public GetOrder2Request(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("orderId") String orderId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.orderId = orderId;
+  }
 }

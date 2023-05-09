@@ -50,7 +50,7 @@ public class Rfq {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRfqResponse res = new org.openapis.openapi.models.operations.GetRfqResponse() {{
+        org.openapis.openapi.models.operations.GetRfqResponse res = new org.openapis.openapi.models.operations.GetRfqResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class Rfq {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,7 +167,7 @@ public class Rfq {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRfqListResponse res = new org.openapis.openapi.models.operations.GetRfqListResponse() {{
+        org.openapis.openapi.models.operations.GetRfqListResponse res = new org.openapis.openapi.models.operations.GetRfqListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -187,8 +185,6 @@ public class Rfq {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

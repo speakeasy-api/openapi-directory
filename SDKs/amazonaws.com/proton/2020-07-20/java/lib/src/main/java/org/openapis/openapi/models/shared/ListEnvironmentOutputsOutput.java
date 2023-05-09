@@ -15,6 +15,7 @@ public class ListEnvironmentOutputsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnvironmentOutputsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListEnvironmentOutputsOutput {
     
     @JsonProperty("outputs")
     public Output[] outputs;
+
     public ListEnvironmentOutputsOutput withOutputs(Output[] outputs) {
         this.outputs = outputs;
         return this;
     }
     
+    public ListEnvironmentOutputsOutput(@JsonProperty("outputs") Output[] outputs) {
+        this.outputs = outputs;
+  }
 }

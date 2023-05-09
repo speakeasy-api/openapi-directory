@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.PremiumNewsFormatEnum;
 import org.openapis.openapi.models.operations.PremiumNewsRequest;
 import org.openapis.openapi.models.operations.PremiumNewsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,30 +30,30 @@ public class Application {
                 }})
                 .build();
 
-            PremiumNewsRequest req = new PremiumNewsRequest() {{
-                format = "json";
-            }}            
+            PremiumNewsRequest req = new PremiumNewsRequest(PremiumNewsFormatEnum.JSON);            
 
             PremiumNewsResponse res = sdk.premiumNews(req);
 
-            if (res.news.isPresent()) {
+            if (res.news != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `premiumNews` - Premium News
-* `premiumNewsByDate` - Premium News by Date
-* `premiumNewsByPlayer` - Premium News by Player
-* `premiumNewsByTeam` - Premium News by Team
+* [premiumNews](docs/sdk/README.md#premiumnews) - Premium News
+* [premiumNewsByDate](docs/sdk/README.md#premiumnewsbydate) - Premium News by Date
+* [premiumNewsByPlayer](docs/sdk/README.md#premiumnewsbyplayer) - Premium News by Player
+* [premiumNewsByTeam](docs/sdk/README.md#premiumnewsbyteam) - Premium News by Team
 <!-- End SDK Available Operations -->
 
 ### Maturity

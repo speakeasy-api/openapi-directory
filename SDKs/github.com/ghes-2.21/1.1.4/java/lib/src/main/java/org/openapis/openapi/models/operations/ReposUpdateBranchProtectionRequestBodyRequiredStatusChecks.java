@@ -15,6 +15,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks {
      */
     @JsonProperty("contexts")
     public String[] contexts;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks withContexts(String[] contexts) {
         this.contexts = contexts;
         return this;
@@ -25,9 +26,14 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks {
      */
     @JsonProperty("strict")
     public Boolean strict;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks withStrict(Boolean strict) {
         this.strict = strict;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequestBodyRequiredStatusChecks(@JsonProperty("contexts") String[] contexts, @JsonProperty("strict") Boolean strict) {
+        this.contexts = contexts;
+        this.strict = strict;
+  }
 }

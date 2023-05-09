@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTranscriptResponse {
@@ -12,6 +13,7 @@ public class GetTranscriptResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTranscriptResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTranscriptResponse {
     
     
     public String contentType;
+
     public GetTranscriptResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTranscriptResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTranscriptResponse getTranscriptResponse;
+
     public GetTranscriptResponse withGetTranscriptResponse(org.openapis.openapi.models.shared.GetTranscriptResponse getTranscriptResponse) {
         this.getTranscriptResponse = getTranscriptResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTranscriptResponse {
      */
     
     public Object internalServerException;
+
     public GetTranscriptResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetTranscriptResponse {
     
     
     public Integer statusCode;
+
     public GetTranscriptResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetTranscriptResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTranscriptResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetTranscriptResponse {
      */
     
     public Object throttlingException;
+
     public GetTranscriptResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetTranscriptResponse {
      */
     
     public Object validationException;
+
     public GetTranscriptResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTranscriptResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

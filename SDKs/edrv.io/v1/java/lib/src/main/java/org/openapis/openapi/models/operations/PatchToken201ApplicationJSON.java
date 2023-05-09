@@ -15,6 +15,7 @@ public class PatchToken201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PatchToken201ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class PatchToken201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public PatchToken201ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -31,9 +33,11 @@ public class PatchToken201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object[] result;
+
     public PatchToken201ApplicationJSON withResult(Object[] result) {
         this.result = result;
         return this;
     }
     
+    public PatchToken201ApplicationJSON(){}
 }

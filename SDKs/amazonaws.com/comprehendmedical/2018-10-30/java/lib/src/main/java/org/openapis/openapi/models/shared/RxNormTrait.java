@@ -15,6 +15,7 @@ public class RxNormTrait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public RxNormTraitNameEnum name;
+
     public RxNormTrait withName(RxNormTraitNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class RxNormTrait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public RxNormTrait withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public RxNormTrait(){}
 }

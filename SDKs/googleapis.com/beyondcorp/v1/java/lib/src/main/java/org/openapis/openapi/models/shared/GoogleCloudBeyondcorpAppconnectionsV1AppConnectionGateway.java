@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appGateway")
     public String appGateway;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway withAppGateway(String appGateway) {
         this.appGateway = appGateway;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressPort")
     public Integer ingressPort;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway withIngressPort(Integer ingressPort) {
         this.ingressPort = ingressPort;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l7psc")
     public String l7psc;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway withL7psc(String l7psc) {
         this.l7psc = l7psc;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum type;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway withType(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway(){}
 }

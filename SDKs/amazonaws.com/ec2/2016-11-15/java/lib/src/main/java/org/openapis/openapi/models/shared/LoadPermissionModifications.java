@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LoadPermissionModifications {
     
     public LoadPermissionListRequest[] add;
+
     public LoadPermissionModifications withAdd(LoadPermissionListRequest[] add) {
         this.add = add;
         return this;
@@ -19,9 +20,11 @@ public class LoadPermissionModifications {
     
     
     public LoadPermissionListRequest[] remove;
+
     public LoadPermissionModifications withRemove(LoadPermissionListRequest[] remove) {
         this.remove = remove;
         return this;
     }
     
+    public LoadPermissionModifications(){}
 }

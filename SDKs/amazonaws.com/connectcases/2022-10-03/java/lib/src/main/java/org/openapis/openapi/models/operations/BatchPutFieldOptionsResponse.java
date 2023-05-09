@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchPutFieldOptionsResponse {
@@ -12,6 +13,7 @@ public class BatchPutFieldOptionsResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchPutFieldOptionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchPutFieldOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPutFieldOptionsResponse batchPutFieldOptionsResponse;
+
     public BatchPutFieldOptionsResponse withBatchPutFieldOptionsResponse(org.openapis.openapi.models.shared.BatchPutFieldOptionsResponse batchPutFieldOptionsResponse) {
         this.batchPutFieldOptionsResponse = batchPutFieldOptionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchPutFieldOptionsResponse {
     
     
     public String contentType;
+
     public BatchPutFieldOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchPutFieldOptionsResponse {
      */
     
     public Object internalServerException;
+
     public BatchPutFieldOptionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchPutFieldOptionsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public BatchPutFieldOptionsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class BatchPutFieldOptionsResponse {
     
     
     public Integer statusCode;
+
     public BatchPutFieldOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchPutFieldOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchPutFieldOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchPutFieldOptionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchPutFieldOptionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class BatchPutFieldOptionsResponse {
      */
     
     public Object throttlingException;
+
     public BatchPutFieldOptionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class BatchPutFieldOptionsResponse {
      */
     
     public Object validationException;
+
     public BatchPutFieldOptionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchPutFieldOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

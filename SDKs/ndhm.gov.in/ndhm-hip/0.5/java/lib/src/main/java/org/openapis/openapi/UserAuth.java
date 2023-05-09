@@ -97,12 +97,10 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -161,12 +159,10 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -244,12 +240,10 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -327,12 +321,10 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnConfirmRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -391,13 +383,11 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -463,13 +453,11 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnFetchModesRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -610,12 +598,10 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -749,12 +735,10 @@ public class UserAuth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

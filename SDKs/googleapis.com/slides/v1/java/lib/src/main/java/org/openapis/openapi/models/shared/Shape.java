@@ -18,6 +18,7 @@ public class Shape {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public Placeholder placeholder;
+
     public Shape withPlaceholder(Placeholder placeholder) {
         this.placeholder = placeholder;
         return this;
@@ -29,6 +30,7 @@ public class Shape {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shapeProperties")
     public ShapeProperties shapeProperties;
+
     public Shape withShapeProperties(ShapeProperties shapeProperties) {
         this.shapeProperties = shapeProperties;
         return this;
@@ -40,6 +42,7 @@ public class Shape {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shapeType")
     public ShapeShapeTypeEnum shapeType;
+
     public Shape withShapeType(ShapeShapeTypeEnum shapeType) {
         this.shapeType = shapeType;
         return this;
@@ -51,9 +54,11 @@ public class Shape {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public TextContent text;
+
     public Shape withText(TextContent text) {
         this.text = text;
         return this;
     }
     
+    public Shape(){}
 }

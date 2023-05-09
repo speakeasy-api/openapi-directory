@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetIdentityProviderByIdentifierRequest {
     @JsonProperty("IdpIdentifier")
     public String idpIdentifier;
+
     public GetIdentityProviderByIdentifierRequest withIdpIdentifier(String idpIdentifier) {
         this.idpIdentifier = idpIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class GetIdentityProviderByIdentifierRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public GetIdentityProviderByIdentifierRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public GetIdentityProviderByIdentifierRequest(@JsonProperty("IdpIdentifier") String idpIdentifier, @JsonProperty("UserPoolId") String userPoolId) {
+        this.idpIdentifier = idpIdentifier;
+        this.userPoolId = userPoolId;
+  }
 }

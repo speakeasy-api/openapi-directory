@@ -79,4 +79,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReturnPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReturnPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReturnPolicyDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimeDuration.java
+docs/sdk/README.md
+docs/country/README.md
+docs/marketplace/README.md
 USAGE.md

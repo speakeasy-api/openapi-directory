@@ -18,6 +18,7 @@ public class ZoneChildContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public ZoneChildContainer withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -29,9 +30,11 @@ public class ZoneChildContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicId")
     public String publicId;
+
     public ZoneChildContainer withPublicId(String publicId) {
         this.publicId = publicId;
         return this;
     }
     
+    public ZoneChildContainer(){}
 }

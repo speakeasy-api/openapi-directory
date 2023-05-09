@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUpdateResponse {
@@ -12,6 +13,7 @@ public class DescribeUpdateResponse {
      */
     
     public Object clientException;
+
     public DescribeUpdateResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUpdateResponse {
     
     
     public String contentType;
+
     public DescribeUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUpdateResponse describeUpdateResponse;
+
     public DescribeUpdateResponse withDescribeUpdateResponse(org.openapis.openapi.models.shared.DescribeUpdateResponse describeUpdateResponse) {
         this.describeUpdateResponse = describeUpdateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUpdateResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeUpdateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeUpdateResponse {
     
     
     public Integer statusCode;
+
     public DescribeUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeUpdateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeUpdateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeUpdateResponse {
      */
     
     public Object serverException;
+
     public DescribeUpdateResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DescribeUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class AntennaDemodDecodeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputNode")
     public String outputNode;
+
     public AntennaDemodDecodeDetails withOutputNode(String outputNode) {
         this.outputNode = outputNode;
         return this;
     }
     
+    public AntennaDemodDecodeDetails(){}
 }

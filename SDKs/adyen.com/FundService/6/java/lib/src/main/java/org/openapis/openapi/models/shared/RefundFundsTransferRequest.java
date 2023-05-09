@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RefundFundsTransferRequest {
     @JsonProperty("amount")
     public Amount amount;
+
     public RefundFundsTransferRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class RefundFundsTransferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public RefundFundsTransferRequest withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -32,9 +34,14 @@ public class RefundFundsTransferRequest {
      */
     @JsonProperty("originalReference")
     public String originalReference;
+
     public RefundFundsTransferRequest withOriginalReference(String originalReference) {
         this.originalReference = originalReference;
         return this;
     }
     
+    public RefundFundsTransferRequest(@JsonProperty("amount") Amount amount, @JsonProperty("originalReference") String originalReference) {
+        this.amount = amount;
+        this.originalReference = originalReference;
+  }
 }

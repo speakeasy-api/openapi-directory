@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntityTypesListItem {
     @JsonProperty("Type")
     public String type;
+
     public EntityTypesListItem withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EntityTypesListItem(@JsonProperty("Type") String type) {
+        this.type = type;
+  }
 }

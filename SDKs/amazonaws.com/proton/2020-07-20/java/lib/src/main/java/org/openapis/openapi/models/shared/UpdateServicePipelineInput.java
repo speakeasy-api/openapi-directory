@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateServicePipelineInput {
     @JsonProperty("deploymentType")
     public DeploymentUpdateTypeEnum deploymentType;
+
     public UpdateServicePipelineInput withDeploymentType(DeploymentUpdateTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -18,6 +19,7 @@ public class UpdateServicePipelineInput {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public UpdateServicePipelineInput withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -25,6 +27,7 @@ public class UpdateServicePipelineInput {
     
     @JsonProperty("spec")
     public String spec;
+
     public UpdateServicePipelineInput withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -33,6 +36,7 @@ public class UpdateServicePipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public UpdateServicePipelineInput withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -41,9 +45,15 @@ public class UpdateServicePipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public UpdateServicePipelineInput withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
     }
     
+    public UpdateServicePipelineInput(@JsonProperty("deploymentType") DeploymentUpdateTypeEnum deploymentType, @JsonProperty("serviceName") String serviceName, @JsonProperty("spec") String spec) {
+        this.deploymentType = deploymentType;
+        this.serviceName = serviceName;
+        this.spec = spec;
+  }
 }

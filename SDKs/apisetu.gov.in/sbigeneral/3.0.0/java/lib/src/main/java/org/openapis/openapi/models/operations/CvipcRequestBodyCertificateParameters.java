@@ -12,6 +12,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public CvipcRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
@@ -22,9 +23,14 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF2")
     public String udf2;
+
     public CvipcRequestBodyCertificateParameters withUdf2(String udf2) {
         this.udf2 = udf2;
         return this;
     }
     
+    public CvipcRequestBodyCertificateParameters(@JsonProperty("UDF1") String udf1, @JsonProperty("UDF2") String udf2) {
+        this.udf1 = udf1;
+        this.udf2 = udf2;
+  }
 }

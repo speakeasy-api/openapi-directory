@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BranchWithProtection {
     @JsonProperty("_links")
     public BranchWithProtectionLinks links;
+
     public BranchWithProtection withLinks(BranchWithProtectionLinks links) {
         this.links = links;
         return this;
@@ -24,6 +25,7 @@ public class BranchWithProtection {
      */
     @JsonProperty("commit")
     public Commit commit;
+
     public BranchWithProtection withCommit(Commit commit) {
         this.commit = commit;
         return this;
@@ -31,6 +33,7 @@ public class BranchWithProtection {
     
     @JsonProperty("name")
     public String name;
+
     public BranchWithProtection withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class BranchWithProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public BranchWithProtection withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -46,6 +50,7 @@ public class BranchWithProtection {
     
     @JsonProperty("protected")
     public Boolean protected_;
+
     public BranchWithProtection withProtected(Boolean protected_) {
         this.protected_ = protected_;
         return this;
@@ -56,6 +61,7 @@ public class BranchWithProtection {
      */
     @JsonProperty("protection")
     public BranchProtection protection;
+
     public BranchWithProtection withProtection(BranchProtection protection) {
         this.protection = protection;
         return this;
@@ -63,6 +69,7 @@ public class BranchWithProtection {
     
     @JsonProperty("protection_url")
     public String protectionUrl;
+
     public BranchWithProtection withProtectionUrl(String protectionUrl) {
         this.protectionUrl = protectionUrl;
         return this;
@@ -71,9 +78,18 @@ public class BranchWithProtection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_approving_review_count")
     public Long requiredApprovingReviewCount;
+
     public BranchWithProtection withRequiredApprovingReviewCount(Long requiredApprovingReviewCount) {
         this.requiredApprovingReviewCount = requiredApprovingReviewCount;
         return this;
     }
     
+    public BranchWithProtection(@JsonProperty("_links") BranchWithProtectionLinks links, @JsonProperty("commit") Commit commit, @JsonProperty("name") String name, @JsonProperty("protected") Boolean protected_, @JsonProperty("protection") BranchProtection protection, @JsonProperty("protection_url") String protectionUrl) {
+        this.links = links;
+        this.commit = commit;
+        this.name = name;
+        this.protected_ = protected_;
+        this.protection = protection;
+        this.protectionUrl = protectionUrl;
+  }
 }

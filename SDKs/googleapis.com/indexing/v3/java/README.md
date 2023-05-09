@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataSecurity;
 import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataRequest;
 import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse;
+import org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,9 +29,9 @@ public class Application {
                 .build();
 
             IndexingUrlNotificationsGetMetadataRequest req = new IndexingUrlNotificationsGetMetadataRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -42,19 +41,21 @@ public class Application {
                 uploadType = "vel";
                 uploadProtocol = "error";
                 url = "deserunt";
-            }}            
+            }};            
 
-            IndexingUrlNotificationsGetMetadataResponse res = sdk.urlNotifications.indexingUrlNotificationsGetMetadata(req, new IndexingUrlNotificationsGetMetadataSecurity() {{
+            IndexingUrlNotificationsGetMetadataResponse res = sdk.urlNotifications.indexingUrlNotificationsGetMetadata(req, new IndexingUrlNotificationsGetMetadataSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.urlNotificationMetadata.isPresent()) {
+            if (res.urlNotificationMetadata != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,10 +63,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### urlNotifications
+### [urlNotifications](docs/urlnotifications/README.md)
 
-* `indexingUrlNotificationsGetMetadata` - Gets metadata about a Web Document. This method can _only_ be used to query URLs that were previously seen in successful Indexing API notifications. Includes the latest `UrlNotification` received via this API.
-* `indexingUrlNotificationsPublish` - Notifies that a URL has been updated or deleted.
+* [indexingUrlNotificationsGetMetadata](docs/urlnotifications/README.md#indexingurlnotificationsgetmetadata) - Gets metadata about a Web Document. This method can _only_ be used to query URLs that were previously seen in successful Indexing API notifications. Includes the latest `UrlNotification` received via this API.
+* [indexingUrlNotificationsPublish](docs/urlnotifications/README.md#indexingurlnotificationspublish) - Notifies that a URL has been updated or deleted.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,6 +12,7 @@ public class GenerateRandomRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomKeyStoreId")
     public String customKeyStoreId;
+
     public GenerateRandomRequest withCustomKeyStoreId(String customKeyStoreId) {
         this.customKeyStoreId = customKeyStoreId;
         return this;
@@ -20,9 +21,11 @@ public class GenerateRandomRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfBytes")
     public Long numberOfBytes;
+
     public GenerateRandomRequest withNumberOfBytes(Long numberOfBytes) {
         this.numberOfBytes = numberOfBytes;
         return this;
     }
     
+    public GenerateRandomRequest(){}
 }

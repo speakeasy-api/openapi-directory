@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PredictiveScalingCustomizedScalingMetric - Describes a custom scaling metric for a predictive scaling policy.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class PredictiveScalingCustomizedScalingMetric {
     
     public MetricDataQuery[] metricDataQueries;
+
     public PredictiveScalingCustomizedScalingMetric withMetricDataQueries(MetricDataQuery[] metricDataQueries) {
         this.metricDataQueries = metricDataQueries;
         return this;
     }
     
+    public PredictiveScalingCustomizedScalingMetric(@JsonProperty("MetricDataQueries") MetricDataQuery[] metricDataQueries) {
+        this.metricDataQueries = metricDataQueries;
+  }
 }

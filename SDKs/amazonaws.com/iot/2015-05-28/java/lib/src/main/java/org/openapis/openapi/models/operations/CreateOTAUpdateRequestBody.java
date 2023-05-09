@@ -15,6 +15,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalParameters")
     public java.util.Map<String, String> additionalParameters;
+
     public CreateOTAUpdateRequestBody withAdditionalParameters(java.util.Map<String, String> additionalParameters) {
         this.additionalParameters = additionalParameters;
         return this;
@@ -26,6 +27,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsJobAbortConfig")
     public CreateOTAUpdateRequestBodyAwsJobAbortConfig awsJobAbortConfig;
+
     public CreateOTAUpdateRequestBody withAwsJobAbortConfig(CreateOTAUpdateRequestBodyAwsJobAbortConfig awsJobAbortConfig) {
         this.awsJobAbortConfig = awsJobAbortConfig;
         return this;
@@ -37,6 +39,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsJobExecutionsRolloutConfig")
     public CreateOTAUpdateRequestBodyAwsJobExecutionsRolloutConfig awsJobExecutionsRolloutConfig;
+
     public CreateOTAUpdateRequestBody withAwsJobExecutionsRolloutConfig(CreateOTAUpdateRequestBodyAwsJobExecutionsRolloutConfig awsJobExecutionsRolloutConfig) {
         this.awsJobExecutionsRolloutConfig = awsJobExecutionsRolloutConfig;
         return this;
@@ -48,6 +51,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsJobPresignedUrlConfig")
     public CreateOTAUpdateRequestBodyAwsJobPresignedUrlConfig awsJobPresignedUrlConfig;
+
     public CreateOTAUpdateRequestBody withAwsJobPresignedUrlConfig(CreateOTAUpdateRequestBodyAwsJobPresignedUrlConfig awsJobPresignedUrlConfig) {
         this.awsJobPresignedUrlConfig = awsJobPresignedUrlConfig;
         return this;
@@ -59,6 +63,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsJobTimeoutConfig")
     public CreateOTAUpdateRequestBodyAwsJobTimeoutConfig awsJobTimeoutConfig;
+
     public CreateOTAUpdateRequestBody withAwsJobTimeoutConfig(CreateOTAUpdateRequestBodyAwsJobTimeoutConfig awsJobTimeoutConfig) {
         this.awsJobTimeoutConfig = awsJobTimeoutConfig;
         return this;
@@ -70,6 +75,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateOTAUpdateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -80,6 +86,7 @@ public class CreateOTAUpdateRequestBody {
      */
     @JsonProperty("files")
     public org.openapis.openapi.models.shared.OTAUpdateFile[] files;
+
     public CreateOTAUpdateRequestBody withFiles(org.openapis.openapi.models.shared.OTAUpdateFile[] files) {
         this.files = files;
         return this;
@@ -91,6 +98,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocols")
     public org.openapis.openapi.models.shared.ProtocolEnum[] protocols;
+
     public CreateOTAUpdateRequestBody withProtocols(org.openapis.openapi.models.shared.ProtocolEnum[] protocols) {
         this.protocols = protocols;
         return this;
@@ -101,6 +109,7 @@ public class CreateOTAUpdateRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateOTAUpdateRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -112,6 +121,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateOTAUpdateRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -123,6 +133,7 @@ public class CreateOTAUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSelection")
     public CreateOTAUpdateRequestBodyTargetSelectionEnum targetSelection;
+
     public CreateOTAUpdateRequestBody withTargetSelection(CreateOTAUpdateRequestBodyTargetSelectionEnum targetSelection) {
         this.targetSelection = targetSelection;
         return this;
@@ -133,9 +144,15 @@ public class CreateOTAUpdateRequestBody {
      */
     @JsonProperty("targets")
     public String[] targets;
+
     public CreateOTAUpdateRequestBody withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public CreateOTAUpdateRequestBody(@JsonProperty("files") org.openapis.openapi.models.shared.OTAUpdateFile[] files, @JsonProperty("roleArn") String roleArn, @JsonProperty("targets") String[] targets) {
+        this.files = files;
+        this.roleArn = roleArn;
+        this.targets = targets;
+  }
 }

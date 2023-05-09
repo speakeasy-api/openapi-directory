@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1ListReleasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirebaseAppdistroV1ListReleasesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppdistroV1ListReleasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releases")
     public GoogleFirebaseAppdistroV1Release[] releases;
+
     public GoogleFirebaseAppdistroV1ListReleasesResponse withReleases(GoogleFirebaseAppdistroV1Release[] releases) {
         this.releases = releases;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1ListReleasesResponse(){}
 }

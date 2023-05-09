@@ -18,9 +18,11 @@ public class BatchNameMatchedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedNames")
     public NameMatchedOut[] matchedNames;
+
     public BatchNameMatchedOut withMatchedNames(NameMatchedOut[] matchedNames) {
         this.matchedNames = matchedNames;
         return this;
     }
     
+    public BatchNameMatchedOut(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RateBasedRule {
     @JsonProperty("MatchPredicates")
     public Predicate[] matchPredicates;
+
     public RateBasedRule withMatchPredicates(Predicate[] matchPredicates) {
         this.matchPredicates = matchPredicates;
         return this;
@@ -22,6 +23,7 @@ public class RateBasedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public RateBasedRule withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -30,6 +32,7 @@ public class RateBasedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RateBasedRule withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +40,7 @@ public class RateBasedRule {
     
     @JsonProperty("RateKey")
     public RateKeyEnum rateKey;
+
     public RateBasedRule withRateKey(RateKeyEnum rateKey) {
         this.rateKey = rateKey;
         return this;
@@ -44,6 +48,7 @@ public class RateBasedRule {
     
     @JsonProperty("RateLimit")
     public Long rateLimit;
+
     public RateBasedRule withRateLimit(Long rateLimit) {
         this.rateLimit = rateLimit;
         return this;
@@ -51,9 +56,16 @@ public class RateBasedRule {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public RateBasedRule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public RateBasedRule(@JsonProperty("MatchPredicates") Predicate[] matchPredicates, @JsonProperty("RateKey") RateKeyEnum rateKey, @JsonProperty("RateLimit") Long rateLimit, @JsonProperty("RuleId") String ruleId) {
+        this.matchPredicates = matchPredicates;
+        this.rateKey = rateKey;
+        this.rateLimit = rateLimit;
+        this.ruleId = ruleId;
+  }
 }

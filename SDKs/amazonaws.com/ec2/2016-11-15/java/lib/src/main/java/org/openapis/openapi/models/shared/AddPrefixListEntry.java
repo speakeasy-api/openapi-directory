@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AddPrefixListEntry - An entry for a prefix list.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AddPrefixListEntry {
     
     public String cidr;
+
     public AddPrefixListEntry withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,9 +20,13 @@ public class AddPrefixListEntry {
     
     
     public String description;
+
     public AddPrefixListEntry withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public AddPrefixListEntry(@JsonProperty("Cidr") String cidr) {
+        this.cidr = cidr;
+  }
 }

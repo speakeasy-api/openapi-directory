@@ -61,4 +61,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/SentryImpactRiskObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/PageMetaData.java
 lib/src/main/java/org/openapis/openapi/models/shared/Statistics.java
 lib/src/main/java/org/openapis/openapi/models/shared/Url.java
+docs/sdk/README.md
+docs/feed/README.md
+docs/neo/README.md
+docs/neosentry/README.md
+docs/stats/README.md
 USAGE.md

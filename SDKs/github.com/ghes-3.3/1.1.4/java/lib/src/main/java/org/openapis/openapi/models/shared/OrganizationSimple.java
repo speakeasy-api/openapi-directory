@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrganizationSimple {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public OrganizationSimple withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -19,6 +20,7 @@ public class OrganizationSimple {
     
     @JsonProperty("description")
     public String description;
+
     public OrganizationSimple withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class OrganizationSimple {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public OrganizationSimple withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -33,6 +36,7 @@ public class OrganizationSimple {
     
     @JsonProperty("hooks_url")
     public String hooksUrl;
+
     public OrganizationSimple withHooksUrl(String hooksUrl) {
         this.hooksUrl = hooksUrl;
         return this;
@@ -40,6 +44,7 @@ public class OrganizationSimple {
     
     @JsonProperty("id")
     public Long id;
+
     public OrganizationSimple withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +52,7 @@ public class OrganizationSimple {
     
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public OrganizationSimple withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -54,6 +60,7 @@ public class OrganizationSimple {
     
     @JsonProperty("login")
     public String login;
+
     public OrganizationSimple withLogin(String login) {
         this.login = login;
         return this;
@@ -61,6 +68,7 @@ public class OrganizationSimple {
     
     @JsonProperty("members_url")
     public String membersUrl;
+
     public OrganizationSimple withMembersUrl(String membersUrl) {
         this.membersUrl = membersUrl;
         return this;
@@ -68,6 +76,7 @@ public class OrganizationSimple {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public OrganizationSimple withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -75,6 +84,7 @@ public class OrganizationSimple {
     
     @JsonProperty("public_members_url")
     public String publicMembersUrl;
+
     public OrganizationSimple withPublicMembersUrl(String publicMembersUrl) {
         this.publicMembersUrl = publicMembersUrl;
         return this;
@@ -82,6 +92,7 @@ public class OrganizationSimple {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public OrganizationSimple withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -89,9 +100,24 @@ public class OrganizationSimple {
     
     @JsonProperty("url")
     public String url;
+
     public OrganizationSimple withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OrganizationSimple(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("description") String description, @JsonProperty("events_url") String eventsUrl, @JsonProperty("hooks_url") String hooksUrl, @JsonProperty("id") Long id, @JsonProperty("issues_url") String issuesUrl, @JsonProperty("login") String login, @JsonProperty("members_url") String membersUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("public_members_url") String publicMembersUrl, @JsonProperty("repos_url") String reposUrl, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.description = description;
+        this.eventsUrl = eventsUrl;
+        this.hooksUrl = hooksUrl;
+        this.id = id;
+        this.issuesUrl = issuesUrl;
+        this.login = login;
+        this.membersUrl = membersUrl;
+        this.nodeId = nodeId;
+        this.publicMembersUrl = publicMembersUrl;
+        this.reposUrl = reposUrl;
+        this.url = url;
+  }
 }

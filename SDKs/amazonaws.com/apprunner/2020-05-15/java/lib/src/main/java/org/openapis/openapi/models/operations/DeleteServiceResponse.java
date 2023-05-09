@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteServiceResponse {
     
     public String contentType;
+
     public DeleteServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteServiceResponse deleteServiceResponse;
+
     public DeleteServiceResponse withDeleteServiceResponse(org.openapis.openapi.models.shared.DeleteServiceResponse deleteServiceResponse) {
         this.deleteServiceResponse = deleteServiceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteServiceResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteServiceResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteServiceResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteServiceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteServiceResponse {
      */
     
     public Object invalidStateException;
+
     public DeleteServiceResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteServiceResponse {
     
     
     public Integer statusCode;
+
     public DeleteServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteServiceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteServiceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

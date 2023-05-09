@@ -20,6 +20,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedPattern")
     public String allowedPattern;
+
     public ParameterHistory withAllowedPattern(String allowedPattern) {
         this.allowedPattern = allowedPattern;
         return this;
@@ -28,6 +29,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public String dataType;
+
     public ParameterHistory withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -36,6 +38,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ParameterHistory withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public ParameterHistory withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -52,6 +56,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public String[] labels;
+
     public ParameterHistory withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -62,6 +67,7 @@ public class ParameterHistory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public ParameterHistory withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -70,6 +76,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedUser")
     public String lastModifiedUser;
+
     public ParameterHistory withLastModifiedUser(String lastModifiedUser) {
         this.lastModifiedUser = lastModifiedUser;
         return this;
@@ -78,6 +85,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ParameterHistory withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policies")
     public ParameterInlinePolicy[] policies;
+
     public ParameterHistory withPolicies(ParameterInlinePolicy[] policies) {
         this.policies = policies;
         return this;
@@ -94,6 +103,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public ParameterTierEnum tier;
+
     public ParameterHistory withTier(ParameterTierEnum tier) {
         this.tier = tier;
         return this;
@@ -102,6 +112,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ParameterTypeEnum type;
+
     public ParameterHistory withType(ParameterTypeEnum type) {
         this.type = type;
         return this;
@@ -110,6 +121,7 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ParameterHistory withValue(String value) {
         this.value = value;
         return this;
@@ -118,9 +130,11 @@ public class ParameterHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public ParameterHistory withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ParameterHistory(){}
 }

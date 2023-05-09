@@ -18,6 +18,7 @@ public class GalleryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public GalleryReference withHost(String host) {
         this.host = host;
         return this;
@@ -29,6 +30,7 @@ public class GalleryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isModified")
     public Boolean isModified;
+
     public GalleryReference withIsModified(Boolean isModified) {
         this.isModified = isModified;
         return this;
@@ -40,6 +42,7 @@ public class GalleryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public GalleryReference withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -51,6 +54,7 @@ public class GalleryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public GalleryReference withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -62,6 +66,7 @@ public class GalleryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public GalleryReference withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -73,9 +78,11 @@ public class GalleryReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GalleryReference withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GalleryReference(){}
 }

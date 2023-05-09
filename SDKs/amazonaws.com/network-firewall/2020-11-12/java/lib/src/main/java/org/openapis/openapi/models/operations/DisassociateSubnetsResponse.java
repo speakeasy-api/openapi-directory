@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateSubnetsResponse {
     
     public String contentType;
+
     public DisassociateSubnetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateSubnetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateSubnetsResponse disassociateSubnetsResponse;
+
     public DisassociateSubnetsResponse withDisassociateSubnetsResponse(org.openapis.openapi.models.shared.DisassociateSubnetsResponse disassociateSubnetsResponse) {
         this.disassociateSubnetsResponse = disassociateSubnetsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateSubnetsResponse {
      */
     
     public Object internalServerError;
+
     public DisassociateSubnetsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateSubnetsResponse {
      */
     
     public Object invalidOperationException;
+
     public DisassociateSubnetsResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateSubnetsResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateSubnetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateSubnetsResponse {
      */
     
     public Object invalidTokenException;
+
     public DisassociateSubnetsResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateSubnetsResponse {
     
     
     public Integer statusCode;
+
     public DisassociateSubnetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateSubnetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateSubnetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateSubnetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateSubnetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateSubnetsResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateSubnetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DisassociateSubnetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

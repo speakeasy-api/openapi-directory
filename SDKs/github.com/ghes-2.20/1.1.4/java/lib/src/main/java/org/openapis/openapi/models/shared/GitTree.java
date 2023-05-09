@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GitTree {
     @JsonProperty("sha")
     public String sha;
+
     public GitTree withSha(String sha) {
         this.sha = sha;
         return this;
@@ -22,6 +23,7 @@ public class GitTree {
      */
     @JsonProperty("tree")
     public GitTreeTree[] tree;
+
     public GitTree withTree(GitTreeTree[] tree) {
         this.tree = tree;
         return this;
@@ -29,6 +31,7 @@ public class GitTree {
     
     @JsonProperty("truncated")
     public Boolean truncated;
+
     public GitTree withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
@@ -36,9 +39,16 @@ public class GitTree {
     
     @JsonProperty("url")
     public String url;
+
     public GitTree withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GitTree(@JsonProperty("sha") String sha, @JsonProperty("tree") GitTreeTree[] tree, @JsonProperty("truncated") Boolean truncated, @JsonProperty("url") String url) {
+        this.sha = sha;
+        this.tree = tree;
+        this.truncated = truncated;
+        this.url = url;
+  }
 }

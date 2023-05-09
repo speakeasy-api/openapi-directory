@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelRootCategory {
     @JsonProperty("firstLevelCategories")
     public ChannelFirstLevelCategory[] firstLevelCategories;
+
     public ChannelRootCategory withFirstLevelCategories(ChannelFirstLevelCategory[] firstLevelCategories) {
         this.firstLevelCategories = firstLevelCategories;
         return this;
     }
     
+    public ChannelRootCategory(@JsonProperty("firstLevelCategories") ChannelFirstLevelCategory[] firstLevelCategories) {
+        this.firstLevelCategories = firstLevelCategories;
+  }
 }

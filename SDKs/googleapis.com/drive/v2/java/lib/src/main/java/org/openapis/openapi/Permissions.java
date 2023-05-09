@@ -60,10 +60,8 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePermissionsDeleteResponse res = new org.openapis.openapi.models.operations.DrivePermissionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DrivePermissionsDeleteResponse res = new org.openapis.openapi.models.operations.DrivePermissionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePermissionsGetResponse res = new org.openapis.openapi.models.operations.DrivePermissionsGetResponse() {{
+        org.openapis.openapi.models.operations.DrivePermissionsGetResponse res = new org.openapis.openapi.models.operations.DrivePermissionsGetResponse(contentType, httpRes.statusCode()) {{
             permission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePermissionsGetIdForEmailResponse res = new org.openapis.openapi.models.operations.DrivePermissionsGetIdForEmailResponse() {{
+        org.openapis.openapi.models.operations.DrivePermissionsGetIdForEmailResponse res = new org.openapis.openapi.models.operations.DrivePermissionsGetIdForEmailResponse(contentType, httpRes.statusCode()) {{
             permissionId = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePermissionsInsertResponse res = new org.openapis.openapi.models.operations.DrivePermissionsInsertResponse() {{
+        org.openapis.openapi.models.operations.DrivePermissionsInsertResponse res = new org.openapis.openapi.models.operations.DrivePermissionsInsertResponse(contentType, httpRes.statusCode()) {{
             permission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePermissionsListResponse res = new org.openapis.openapi.models.operations.DrivePermissionsListResponse() {{
+        org.openapis.openapi.models.operations.DrivePermissionsListResponse res = new org.openapis.openapi.models.operations.DrivePermissionsListResponse(contentType, httpRes.statusCode()) {{
             permissionList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePermissionsPatchResponse res = new org.openapis.openapi.models.operations.DrivePermissionsPatchResponse() {{
+        org.openapis.openapi.models.operations.DrivePermissionsPatchResponse res = new org.openapis.openapi.models.operations.DrivePermissionsPatchResponse(contentType, httpRes.statusCode()) {{
             permission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +324,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DrivePermissionsUpdateResponse res = new org.openapis.openapi.models.operations.DrivePermissionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DrivePermissionsUpdateResponse res = new org.openapis.openapi.models.operations.DrivePermissionsUpdateResponse(contentType, httpRes.statusCode()) {{
             permission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

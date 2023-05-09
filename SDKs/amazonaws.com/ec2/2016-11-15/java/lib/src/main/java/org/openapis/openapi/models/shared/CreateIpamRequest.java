@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamRequest {
     
     public String clientToken;
+
     public CreateIpamRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateIpamRequest {
     
     
     public String description;
+
     public CreateIpamRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateIpamRequest {
     
     
     public Boolean dryRun;
+
     public CreateIpamRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateIpamRequest {
     
     
     public AddIpamOperatingRegion[] operatingRegions;
+
     public CreateIpamRequest withOperatingRegions(AddIpamOperatingRegion[] operatingRegions) {
         this.operatingRegions = operatingRegions;
         return this;
@@ -37,9 +41,11 @@ public class CreateIpamRequest {
     
     
     public CreateIpamRequestTagSpecifications[] tagSpecifications;
+
     public CreateIpamRequest withTagSpecifications(CreateIpamRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateIpamRequest(){}
 }

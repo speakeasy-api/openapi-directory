@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios {
      */
     @JsonProperty("portfolioValues")
     public Double[] portfolioValues;
+
     public PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios withPortfolioValues(Double[] portfolioValues) {
         this.portfolioValues = portfolioValues;
         return this;
     }
     
+    public PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios(@JsonProperty("portfolioValues") Double[] portfolioValues) {
+        this.portfolioValues = portfolioValues;
+  }
 }

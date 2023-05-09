@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachThingPrincipalResponse {
@@ -12,6 +13,7 @@ public class AttachThingPrincipalResponse {
      */
     
     public java.util.Map<String, Object> attachThingPrincipalResponse;
+
     public AttachThingPrincipalResponse withAttachThingPrincipalResponse(java.util.Map<String, Object> attachThingPrincipalResponse) {
         this.attachThingPrincipalResponse = attachThingPrincipalResponse;
         return this;
@@ -19,6 +21,7 @@ public class AttachThingPrincipalResponse {
     
     
     public String contentType;
+
     public AttachThingPrincipalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AttachThingPrincipalResponse {
      */
     
     public Object internalFailureException;
+
     public AttachThingPrincipalResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class AttachThingPrincipalResponse {
      */
     
     public Object invalidRequestException;
+
     public AttachThingPrincipalResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AttachThingPrincipalResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachThingPrincipalResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class AttachThingPrincipalResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AttachThingPrincipalResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class AttachThingPrincipalResponse {
     
     
     public Integer statusCode;
+
     public AttachThingPrincipalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AttachThingPrincipalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachThingPrincipalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AttachThingPrincipalResponse {
      */
     
     public Object throttlingException;
+
     public AttachThingPrincipalResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AttachThingPrincipalResponse {
      */
     
     public Object unauthorizedException;
+
     public AttachThingPrincipalResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public AttachThingPrincipalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

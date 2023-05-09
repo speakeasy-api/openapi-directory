@@ -15,6 +15,7 @@ public class BudgetedAndActualAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActualAmount")
     public Spend actualAmount;
+
     public BudgetedAndActualAmounts withActualAmount(Spend actualAmount) {
         this.actualAmount = actualAmount;
         return this;
@@ -23,6 +24,7 @@ public class BudgetedAndActualAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BudgetedAmount")
     public Spend budgetedAmount;
+
     public BudgetedAndActualAmounts withBudgetedAmount(Spend budgetedAmount) {
         this.budgetedAmount = budgetedAmount;
         return this;
@@ -31,9 +33,11 @@ public class BudgetedAndActualAmounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public TimePeriod timePeriod;
+
     public BudgetedAndActualAmounts withTimePeriod(TimePeriod timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public BudgetedAndActualAmounts(){}
 }

@@ -18,6 +18,7 @@ public class ModifyMembershipRolesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addRoles")
     public MembershipRoleInput[] addRoles;
+
     public ModifyMembershipRolesRequestInput withAddRoles(MembershipRoleInput[] addRoles) {
         this.addRoles = addRoles;
         return this;
@@ -29,6 +30,7 @@ public class ModifyMembershipRolesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeRoles")
     public String[] removeRoles;
+
     public ModifyMembershipRolesRequestInput withRemoveRoles(String[] removeRoles) {
         this.removeRoles = removeRoles;
         return this;
@@ -40,9 +42,11 @@ public class ModifyMembershipRolesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateRolesParams")
     public UpdateMembershipRolesParamsInput[] updateRolesParams;
+
     public ModifyMembershipRolesRequestInput withUpdateRolesParams(UpdateMembershipRolesParamsInput[] updateRolesParams) {
         this.updateRolesParams = updateRolesParams;
         return this;
     }
     
+    public ModifyMembershipRolesRequestInput(){}
 }

@@ -12,9 +12,11 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefault default_;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses withDefault(ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefault default_) {
         this.default_ = default_;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses(){}
 }

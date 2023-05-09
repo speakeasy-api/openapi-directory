@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CatalogGetBeezUPColumnsResponse {
@@ -12,6 +13,7 @@ public class CatalogGetBeezUPColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public CatalogGetBeezUPColumnsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class CatalogGetBeezUPColumnsResponse {
     
     
     public String contentType;
+
     public CatalogGetBeezUPColumnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CatalogGetBeezUPColumnsResponse {
     
     
     public Integer statusCode;
+
     public CatalogGetBeezUPColumnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CatalogGetBeezUPColumnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CatalogGetBeezUPColumnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CatalogGetBeezUPColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPColumnConfiguration[] beezUPColumnConfigurations;
+
     public CatalogGetBeezUPColumnsResponse withBeezUPColumnConfigurations(org.openapis.openapi.models.shared.BeezUPColumnConfiguration[] beezUPColumnConfigurations) {
         this.beezUPColumnConfigurations = beezUPColumnConfigurations;
         return this;
     }
     
+    public CatalogGetBeezUPColumnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

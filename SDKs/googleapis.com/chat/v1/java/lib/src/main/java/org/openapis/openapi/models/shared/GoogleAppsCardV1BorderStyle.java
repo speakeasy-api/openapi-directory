@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleAppsCardV1BorderStyle - Represents the complete border style applied to items in a widget.
+ * GoogleAppsCardV1BorderStyle - The style options for the border of a card or widget, including the border type and color.
  */
 public class GoogleAppsCardV1BorderStyle {
     /**
@@ -18,6 +18,7 @@ public class GoogleAppsCardV1BorderStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cornerRadius")
     public Integer cornerRadius;
+
     public GoogleAppsCardV1BorderStyle withCornerRadius(Integer cornerRadius) {
         this.cornerRadius = cornerRadius;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1BorderStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strokeColor")
     public Color strokeColor;
+
     public GoogleAppsCardV1BorderStyle withStrokeColor(Color strokeColor) {
         this.strokeColor = strokeColor;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsCardV1BorderStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAppsCardV1BorderStyleTypeEnum type;
+
     public GoogleAppsCardV1BorderStyle withType(GoogleAppsCardV1BorderStyleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleAppsCardV1BorderStyle(){}
 }

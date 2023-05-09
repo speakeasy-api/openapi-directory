@@ -15,6 +15,7 @@ public class CreateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCpus")
     public Long maxCpus;
+
     public CreateRunGroupRequestBody withMaxCpus(Long maxCpus) {
         this.maxCpus = maxCpus;
         return this;
@@ -26,6 +27,7 @@ public class CreateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDuration")
     public Long maxDuration;
+
     public CreateRunGroupRequestBody withMaxDuration(Long maxDuration) {
         this.maxDuration = maxDuration;
         return this;
@@ -37,6 +39,7 @@ public class CreateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRuns")
     public Long maxRuns;
+
     public CreateRunGroupRequestBody withMaxRuns(Long maxRuns) {
         this.maxRuns = maxRuns;
         return this;
@@ -48,6 +51,7 @@ public class CreateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateRunGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +62,7 @@ public class CreateRunGroupRequestBody {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateRunGroupRequestBody withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -69,9 +74,13 @@ public class CreateRunGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateRunGroupRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRunGroupRequestBody(@JsonProperty("requestId") String requestId) {
+        this.requestId = requestId;
+  }
 }

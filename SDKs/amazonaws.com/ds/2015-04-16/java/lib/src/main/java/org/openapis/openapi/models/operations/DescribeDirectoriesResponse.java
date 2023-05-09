@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDirectoriesResponse {
@@ -12,6 +13,7 @@ public class DescribeDirectoriesResponse {
      */
     
     public Object clientException;
+
     public DescribeDirectoriesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDirectoriesResponse {
     
     
     public String contentType;
+
     public DescribeDirectoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDirectoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDirectoriesResult describeDirectoriesResult;
+
     public DescribeDirectoriesResponse withDescribeDirectoriesResult(org.openapis.openapi.models.shared.DescribeDirectoriesResult describeDirectoriesResult) {
         this.describeDirectoriesResult = describeDirectoriesResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDirectoriesResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DescribeDirectoriesResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDirectoriesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeDirectoriesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeDirectoriesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeDirectoriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeDirectoriesResponse {
      */
     
     public Object serviceException;
+
     public DescribeDirectoriesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeDirectoriesResponse {
     
     
     public Integer statusCode;
+
     public DescribeDirectoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDirectoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDirectoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDirectoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

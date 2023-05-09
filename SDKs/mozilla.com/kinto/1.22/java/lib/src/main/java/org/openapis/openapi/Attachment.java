@@ -40,10 +40,8 @@ public class Attachment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAttachmentResponse res = new org.openapis.openapi.models.operations.CreateAttachmentResponse() {{
+        org.openapis.openapi.models.operations.CreateAttachmentResponse res = new org.openapis.openapi.models.operations.CreateAttachmentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -66,10 +64,8 @@ public class Attachment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAttachmentResponse res = new org.openapis.openapi.models.operations.DeleteAttachmentResponse() {{
+        org.openapis.openapi.models.operations.DeleteAttachmentResponse res = new org.openapis.openapi.models.operations.DeleteAttachmentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

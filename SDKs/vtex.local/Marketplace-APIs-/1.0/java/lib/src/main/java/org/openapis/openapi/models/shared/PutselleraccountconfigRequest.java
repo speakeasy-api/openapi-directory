@@ -20,6 +20,7 @@ public class PutselleraccountconfigRequest {
      */
     @JsonProperty("mapping")
     public java.util.Map<String, Object> mapping;
+
     public PutselleraccountconfigRequest withMapping(java.util.Map<String, Object> mapping) {
         this.mapping = mapping;
         return this;
@@ -36,6 +37,7 @@ public class PutselleraccountconfigRequest {
      */
     @JsonProperty("matchFlux")
     public String matchFlux;
+
     public PutselleraccountconfigRequest withMatchFlux(String matchFlux) {
         this.matchFlux = matchFlux;
         return this;
@@ -46,9 +48,15 @@ public class PutselleraccountconfigRequest {
      */
     @JsonProperty("sellerId")
     public String sellerId;
+
     public PutselleraccountconfigRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public PutselleraccountconfigRequest(@JsonProperty("mapping") java.util.Map<String, Object> mapping, @JsonProperty("matchFlux") String matchFlux, @JsonProperty("sellerId") String sellerId) {
+        this.mapping = mapping;
+        this.matchFlux = matchFlux;
+        this.sellerId = sellerId;
+  }
 }

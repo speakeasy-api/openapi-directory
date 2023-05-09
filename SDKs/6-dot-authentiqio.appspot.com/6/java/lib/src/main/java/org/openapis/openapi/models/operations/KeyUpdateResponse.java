@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KeyUpdateResponse {
     
     public byte[] body;
+
     public KeyUpdateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class KeyUpdateResponse {
     
     
     public String contentType;
+
     public KeyUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class KeyUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public KeyUpdateResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class KeyUpdateResponse {
     
     
     public Integer statusCode;
+
     public KeyUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class KeyUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KeyUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class KeyUpdateResponse {
      */
     
     public KeyUpdate200ApplicationJSON keyUpdate200ApplicationJSONObject;
+
     public KeyUpdateResponse withKeyUpdate200ApplicationJSONObject(KeyUpdate200ApplicationJSON keyUpdate200ApplicationJSONObject) {
         this.keyUpdate200ApplicationJSONObject = keyUpdate200ApplicationJSONObject;
         return this;
     }
     
+    public KeyUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

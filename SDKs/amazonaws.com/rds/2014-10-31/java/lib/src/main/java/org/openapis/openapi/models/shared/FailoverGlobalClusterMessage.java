@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FailoverGlobalClusterMessage {
     
     public String globalClusterIdentifier;
+
     public FailoverGlobalClusterMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -16,9 +17,14 @@ public class FailoverGlobalClusterMessage {
     
     
     public String targetDbClusterIdentifier;
+
     public FailoverGlobalClusterMessage withTargetDbClusterIdentifier(String targetDbClusterIdentifier) {
         this.targetDbClusterIdentifier = targetDbClusterIdentifier;
         return this;
     }
     
+    public FailoverGlobalClusterMessage(@JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier, @JsonProperty("TargetDbClusterIdentifier") String targetDbClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+        this.targetDbClusterIdentifier = targetDbClusterIdentifier;
+  }
 }

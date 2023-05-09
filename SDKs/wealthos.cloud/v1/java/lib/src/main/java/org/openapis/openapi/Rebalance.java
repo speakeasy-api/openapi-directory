@@ -66,7 +66,7 @@ public class Rebalance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRebalanceResponse res = new org.openapis.openapi.models.operations.CreateRebalanceResponse() {{
+        org.openapis.openapi.models.operations.CreateRebalanceResponse res = new org.openapis.openapi.models.operations.CreateRebalanceResponse(contentType, httpRes.statusCode()) {{
             createRebalance201ApplicationJSONObject = null;
             createRebalance400ApplicationJSONObject = null;
             createRebalance401ApplicationJSONObject = null;
@@ -76,8 +76,6 @@ public class Rebalance {
             createRebalance429ApplicationJSONObject = null;
             createRebalance500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -173,7 +171,7 @@ public class Rebalance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EvaluateRebalanceResponse res = new org.openapis.openapi.models.operations.EvaluateRebalanceResponse() {{
+        org.openapis.openapi.models.operations.EvaluateRebalanceResponse res = new org.openapis.openapi.models.operations.EvaluateRebalanceResponse(contentType, httpRes.statusCode()) {{
             thisIsTheReturnObjectWithEvaluationPerPot = null;
             evaluateRebalance400ApplicationJSONObject = null;
             evaluateRebalance401ApplicationJSONObject = null;
@@ -183,8 +181,6 @@ public class Rebalance {
             evaluateRebalance429ApplicationJSONObject = null;
             evaluateRebalance500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -278,7 +274,7 @@ public class Rebalance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRebalanceDetailsResponse res = new org.openapis.openapi.models.operations.GetRebalanceDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetRebalanceDetailsResponse res = new org.openapis.openapi.models.operations.GetRebalanceDetailsResponse(contentType, httpRes.statusCode()) {{
             getRebalanceDetails200ApplicationJSONObject = null;
             getRebalanceDetails400ApplicationJSONObject = null;
             getRebalanceDetails401ApplicationJSONObject = null;
@@ -288,8 +284,6 @@ public class Rebalance {
             getRebalanceDetails429ApplicationJSONObject = null;
             getRebalanceDetails500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

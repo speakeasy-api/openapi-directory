@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PrivateDestinationDefinitionRead {
     @JsonProperty("destinationDefinition")
     public DestinationDefinitionRead destinationDefinition;
+
     public PrivateDestinationDefinitionRead withDestinationDefinition(DestinationDefinitionRead destinationDefinition) {
         this.destinationDefinition = destinationDefinition;
         return this;
@@ -19,9 +20,14 @@ public class PrivateDestinationDefinitionRead {
     
     @JsonProperty("granted")
     public Boolean granted;
+
     public PrivateDestinationDefinitionRead withGranted(Boolean granted) {
         this.granted = granted;
         return this;
     }
     
+    public PrivateDestinationDefinitionRead(@JsonProperty("destinationDefinition") DestinationDefinitionRead destinationDefinition, @JsonProperty("granted") Boolean granted) {
+        this.destinationDefinition = destinationDefinition;
+        this.granted = granted;
+  }
 }

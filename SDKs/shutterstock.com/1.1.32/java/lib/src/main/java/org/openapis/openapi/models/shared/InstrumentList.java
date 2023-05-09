@@ -15,9 +15,13 @@ public class InstrumentList {
      */
     @JsonProperty("data")
     public String[] data;
+
     public InstrumentList withData(String[] data) {
         this.data = data;
         return this;
     }
     
+    public InstrumentList(@JsonProperty("data") String[] data) {
+        this.data = data;
+  }
 }

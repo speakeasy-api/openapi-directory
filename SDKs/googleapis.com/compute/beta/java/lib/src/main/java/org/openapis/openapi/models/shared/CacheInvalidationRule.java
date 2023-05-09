@@ -15,6 +15,7 @@ public class CacheInvalidationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public CacheInvalidationRule withHost(String host) {
         this.host = host;
         return this;
@@ -23,9 +24,11 @@ public class CacheInvalidationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public CacheInvalidationRule withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public CacheInvalidationRule(){}
 }

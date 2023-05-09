@@ -18,6 +18,7 @@ public class WarningWarningSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("example")
     public String example;
+
     public WarningWarningSource withExample(String example) {
         this.example = example;
         return this;
@@ -29,6 +30,7 @@ public class WarningWarningSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public WarningWarningSource withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -40,9 +42,11 @@ public class WarningWarningSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointer")
     public String pointer;
+
     public WarningWarningSource withPointer(String pointer) {
         this.pointer = pointer;
         return this;
     }
     
+    public WarningWarningSource(){}
 }

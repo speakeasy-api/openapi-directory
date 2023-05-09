@@ -12,6 +12,7 @@ public class BusinessHoursInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri")
     public BusinessHourInputModel fri;
+
     public BusinessHoursInputModel withFri(BusinessHourInputModel fri) {
         this.fri = fri;
         return this;
@@ -20,6 +21,7 @@ public class BusinessHoursInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon")
     public BusinessHourInputModel mon;
+
     public BusinessHoursInputModel withMon(BusinessHourInputModel mon) {
         this.mon = mon;
         return this;
@@ -28,6 +30,7 @@ public class BusinessHoursInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat")
     public BusinessHourInputModel sat;
+
     public BusinessHoursInputModel withSat(BusinessHourInputModel sat) {
         this.sat = sat;
         return this;
@@ -36,6 +39,7 @@ public class BusinessHoursInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun")
     public BusinessHourInputModel sun;
+
     public BusinessHoursInputModel withSun(BusinessHourInputModel sun) {
         this.sun = sun;
         return this;
@@ -44,6 +48,7 @@ public class BusinessHoursInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu")
     public BusinessHourInputModel thu;
+
     public BusinessHoursInputModel withThu(BusinessHourInputModel thu) {
         this.thu = thu;
         return this;
@@ -52,6 +57,7 @@ public class BusinessHoursInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue")
     public BusinessHourInputModel tue;
+
     public BusinessHoursInputModel withTue(BusinessHourInputModel tue) {
         this.tue = tue;
         return this;
@@ -60,9 +66,11 @@ public class BusinessHoursInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed")
     public BusinessHourInputModel wed;
+
     public BusinessHoursInputModel withWed(BusinessHourInputModel wed) {
         this.wed = wed;
         return this;
     }
     
+    public BusinessHoursInputModel(){}
 }

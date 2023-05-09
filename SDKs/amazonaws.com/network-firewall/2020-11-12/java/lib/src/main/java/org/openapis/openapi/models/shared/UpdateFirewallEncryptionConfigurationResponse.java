@@ -18,6 +18,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public UpdateFirewallEncryptionConfigurationResponse withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public UpdateFirewallEncryptionConfigurationResponse withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -34,6 +36,7 @@ public class UpdateFirewallEncryptionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public UpdateFirewallEncryptionConfigurationResponse withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
@@ -42,9 +45,11 @@ public class UpdateFirewallEncryptionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public UpdateFirewallEncryptionConfigurationResponse withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public UpdateFirewallEncryptionConfigurationResponse(){}
 }

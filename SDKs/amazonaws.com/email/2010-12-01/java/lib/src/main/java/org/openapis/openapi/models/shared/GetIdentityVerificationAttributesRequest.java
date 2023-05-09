@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityVerificationAttributesRequest - Represents a request to return the Amazon SES verification status of a list of identities. For domain identities, this request also returns the verification token. For information about verifying identities with Amazon SES, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityVerificationAttributesRequest {
     
     public String[] identities;
+
     public GetIdentityVerificationAttributesRequest withIdentities(String[] identities) {
         this.identities = identities;
         return this;
     }
     
+    public GetIdentityVerificationAttributesRequest(@JsonProperty("Identities") String[] identities) {
+        this.identities = identities;
+  }
 }

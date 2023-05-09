@@ -15,6 +15,7 @@ public class GetCriticsResourceTypeJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GetCriticsResourceTypeJSON200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -23,6 +24,7 @@ public class GetCriticsResourceTypeJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GetCriticsResourceTypeJSON200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -31,6 +33,7 @@ public class GetCriticsResourceTypeJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Critic[] results;
+
     public GetCriticsResourceTypeJSON200ApplicationJSON withResults(org.openapis.openapi.models.shared.Critic[] results) {
         this.results = results;
         return this;
@@ -39,9 +42,11 @@ public class GetCriticsResourceTypeJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetCriticsResourceTypeJSON200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetCriticsResourceTypeJSON200ApplicationJSON(){}
 }

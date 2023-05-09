@@ -18,6 +18,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cppSettings")
     public CppSettings cppSettings;
+
     public ClientLibrarySettings withCppSettings(CppSettings cppSettings) {
         this.cppSettings = cppSettings;
         return this;
@@ -29,6 +30,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dotnetSettings")
     public DotnetSettings dotnetSettings;
+
     public ClientLibrarySettings withDotnetSettings(DotnetSettings dotnetSettings) {
         this.dotnetSettings = dotnetSettings;
         return this;
@@ -40,6 +42,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goSettings")
     public GoSettings goSettings;
+
     public ClientLibrarySettings withGoSettings(GoSettings goSettings) {
         this.goSettings = goSettings;
         return this;
@@ -51,6 +54,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javaSettings")
     public JavaSettings javaSettings;
+
     public ClientLibrarySettings withJavaSettings(JavaSettings javaSettings) {
         this.javaSettings = javaSettings;
         return this;
@@ -62,6 +66,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStage")
     public ClientLibrarySettingsLaunchStageEnum launchStage;
+
     public ClientLibrarySettings withLaunchStage(ClientLibrarySettingsLaunchStageEnum launchStage) {
         this.launchStage = launchStage;
         return this;
@@ -73,6 +78,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeSettings")
     public NodeSettings nodeSettings;
+
     public ClientLibrarySettings withNodeSettings(NodeSettings nodeSettings) {
         this.nodeSettings = nodeSettings;
         return this;
@@ -84,6 +90,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phpSettings")
     public PhpSettings phpSettings;
+
     public ClientLibrarySettings withPhpSettings(PhpSettings phpSettings) {
         this.phpSettings = phpSettings;
         return this;
@@ -95,6 +102,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pythonSettings")
     public PythonSettings pythonSettings;
+
     public ClientLibrarySettings withPythonSettings(PythonSettings pythonSettings) {
         this.pythonSettings = pythonSettings;
         return this;
@@ -106,6 +114,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restNumericEnums")
     public Boolean restNumericEnums;
+
     public ClientLibrarySettings withRestNumericEnums(Boolean restNumericEnums) {
         this.restNumericEnums = restNumericEnums;
         return this;
@@ -117,6 +126,7 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rubySettings")
     public RubySettings rubySettings;
+
     public ClientLibrarySettings withRubySettings(RubySettings rubySettings) {
         this.rubySettings = rubySettings;
         return this;
@@ -128,9 +138,11 @@ public class ClientLibrarySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ClientLibrarySettings withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ClientLibrarySettings(){}
 }

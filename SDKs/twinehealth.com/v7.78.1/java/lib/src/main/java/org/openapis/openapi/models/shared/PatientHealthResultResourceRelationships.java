@@ -12,6 +12,7 @@ public class PatientHealthResultResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public PatientHealthResultResourceRelationshipsAction action;
+
     public PatientHealthResultResourceRelationships withAction(PatientHealthResultResourceRelationshipsAction action) {
         this.action = action;
         return this;
@@ -20,6 +21,7 @@ public class PatientHealthResultResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public PatientHealthResultResourceRelationshipsMetric metric;
+
     public PatientHealthResultResourceRelationships withMetric(PatientHealthResultResourceRelationshipsMetric metric) {
         this.metric = metric;
         return this;
@@ -28,9 +30,11 @@ public class PatientHealthResultResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public PatientHealthResultResourceRelationshipsPatient patient;
+
     public PatientHealthResultResourceRelationships withPatient(PatientHealthResultResourceRelationshipsPatient patient) {
         this.patient = patient;
         return this;
     }
     
+    public PatientHealthResultResourceRelationships(){}
 }

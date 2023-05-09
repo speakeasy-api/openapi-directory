@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatePolygonCreateUpdatePolygonRequestGeoShape {
     @JsonProperty("coordinates")
     public Double[][] coordinates;
+
     public CreateUpdatePolygonCreateUpdatePolygonRequestGeoShape withCoordinates(Double[][] coordinates) {
         this.coordinates = coordinates;
         return this;
     }
     
+    public CreateUpdatePolygonCreateUpdatePolygonRequestGeoShape(@JsonProperty("coordinates") Double[][] coordinates) {
+        this.coordinates = coordinates;
+  }
 }

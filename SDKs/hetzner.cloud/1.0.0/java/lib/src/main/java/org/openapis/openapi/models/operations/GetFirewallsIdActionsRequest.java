@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFirewallsIdActionsRequest {
@@ -12,6 +13,7 @@ public class GetFirewallsIdActionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetFirewallsIdActionsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetFirewallsIdActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetFirewallsIdActionsSortParameterSortEnum sort;
+
     public GetFirewallsIdActionsRequest withSort(GetFirewallsIdActionsSortParameterSortEnum sort) {
         this.sort = sort;
         return this;
@@ -32,9 +35,13 @@ public class GetFirewallsIdActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetFirewallsIdActionsStatusParameterStatusEnum status;
+
     public GetFirewallsIdActionsRequest withStatus(GetFirewallsIdActionsStatusParameterStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetFirewallsIdActionsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

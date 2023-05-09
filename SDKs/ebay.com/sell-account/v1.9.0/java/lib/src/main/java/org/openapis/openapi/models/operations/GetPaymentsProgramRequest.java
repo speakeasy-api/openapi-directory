@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentsProgramRequest {
@@ -12,6 +13,7 @@ public class GetPaymentsProgramRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
     public String marketplaceId;
+
     public GetPaymentsProgramRequest withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -22,9 +24,14 @@ public class GetPaymentsProgramRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payments_program_type")
     public String paymentsProgramType;
+
     public GetPaymentsProgramRequest withPaymentsProgramType(String paymentsProgramType) {
         this.paymentsProgramType = paymentsProgramType;
         return this;
     }
     
+    public GetPaymentsProgramRequest(@JsonProperty("marketplace_id") String marketplaceId, @JsonProperty("payments_program_type") String paymentsProgramType) {
+        this.marketplaceId = marketplaceId;
+        this.paymentsProgramType = paymentsProgramType;
+  }
 }

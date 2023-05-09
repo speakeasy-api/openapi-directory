@@ -18,9 +18,11 @@ public class ActivityContentDetailsBulletin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public ResourceId resourceId;
+
     public ActivityContentDetailsBulletin withResourceId(ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ActivityContentDetailsBulletin(){}
 }

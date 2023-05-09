@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResolverConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateResolverConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResolverConfigResponse {
     
     
     public String contentType;
+
     public UpdateResolverConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateResolverConfigResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateResolverConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateResolverConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateResolverConfigResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateResolverConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateResolverConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateResolverConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateResolverConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResolverConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object resourceUnavailableException;
+
     public UpdateResolverConfigResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object throttlingException;
+
     public UpdateResolverConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateResolverConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateResolverConfigResponse updateResolverConfigResponse;
+
     public UpdateResolverConfigResponse withUpdateResolverConfigResponse(org.openapis.openapi.models.shared.UpdateResolverConfigResponse updateResolverConfigResponse) {
         this.updateResolverConfigResponse = updateResolverConfigResponse;
         return this;
@@ -123,9 +136,14 @@ public class UpdateResolverConfigResponse {
      */
     
     public Object validationException;
+
     public UpdateResolverConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateResolverConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

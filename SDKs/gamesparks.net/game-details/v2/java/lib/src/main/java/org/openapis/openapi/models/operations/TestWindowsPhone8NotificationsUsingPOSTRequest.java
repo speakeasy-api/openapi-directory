@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestWindowsPhone8NotificationsUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class TestWindowsPhone8NotificationsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel;
+
     public TestWindowsPhone8NotificationsUsingPOSTRequest withPushNotificationTestModel(org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel) {
         this.pushNotificationTestModel = pushNotificationTestModel;
         return this;
@@ -22,9 +24,14 @@ public class TestWindowsPhone8NotificationsUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public TestWindowsPhone8NotificationsUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public TestWindowsPhone8NotificationsUsingPOSTRequest(@JsonProperty("PushNotificationTestModel") org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel, @JsonProperty("apiKey") String apiKey) {
+        this.pushNotificationTestModel = pushNotificationTestModel;
+        this.apiKey = apiKey;
+  }
 }

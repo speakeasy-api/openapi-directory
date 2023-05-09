@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsListForRepoResponse {
     
     public String contentType;
+
     public ProjectsListForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsListForRepoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ProjectsListForRepoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsListForRepoResponse {
     
     
     public Integer statusCode;
+
     public ProjectsListForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ProjectsListForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsListForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ProjectsListForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsListForRepoResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ProjectsListForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.Project[] projects;
+
     public ProjectsListForRepoResponse withProjects(org.openapis.openapi.models.shared.Project[] projects) {
         this.projects = projects;
         return this;
@@ -60,9 +67,14 @@ public class ProjectsListForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public ProjectsListForRepoResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public ProjectsListForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

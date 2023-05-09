@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRoutingControlStateResponse {
     @JsonProperty("RoutingControlArn")
     public String routingControlArn;
+
     public GetRoutingControlStateResponse withRoutingControlArn(String routingControlArn) {
         this.routingControlArn = routingControlArn;
         return this;
@@ -22,6 +23,7 @@ public class GetRoutingControlStateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControlName")
     public String routingControlName;
+
     public GetRoutingControlStateResponse withRoutingControlName(String routingControlName) {
         this.routingControlName = routingControlName;
         return this;
@@ -29,9 +31,14 @@ public class GetRoutingControlStateResponse {
     
     @JsonProperty("RoutingControlState")
     public RoutingControlStateEnum routingControlState;
+
     public GetRoutingControlStateResponse withRoutingControlState(RoutingControlStateEnum routingControlState) {
         this.routingControlState = routingControlState;
         return this;
     }
     
+    public GetRoutingControlStateResponse(@JsonProperty("RoutingControlArn") String routingControlArn, @JsonProperty("RoutingControlState") RoutingControlStateEnum routingControlState) {
+        this.routingControlArn = routingControlArn;
+        this.routingControlState = routingControlState;
+  }
 }

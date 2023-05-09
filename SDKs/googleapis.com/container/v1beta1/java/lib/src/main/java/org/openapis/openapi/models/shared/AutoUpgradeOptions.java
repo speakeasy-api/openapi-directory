@@ -18,6 +18,7 @@ public class AutoUpgradeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpgradeStartTime")
     public String autoUpgradeStartTime;
+
     public AutoUpgradeOptions withAutoUpgradeStartTime(String autoUpgradeStartTime) {
         this.autoUpgradeStartTime = autoUpgradeStartTime;
         return this;
@@ -29,9 +30,11 @@ public class AutoUpgradeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AutoUpgradeOptions withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public AutoUpgradeOptions(){}
 }

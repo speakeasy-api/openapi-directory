@@ -15,9 +15,11 @@ public class DisassociateServiceRoleFromAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociatedAt")
     public String disassociatedAt;
+
     public DisassociateServiceRoleFromAccountResponse withDisassociatedAt(String disassociatedAt) {
         this.disassociatedAt = disassociatedAt;
         return this;
     }
     
+    public DisassociateServiceRoleFromAccountResponse(){}
 }

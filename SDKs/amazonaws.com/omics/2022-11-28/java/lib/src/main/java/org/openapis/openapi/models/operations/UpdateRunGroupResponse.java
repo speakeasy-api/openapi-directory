@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRunGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateRunGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRunGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRunGroupResponse {
      */
     
     public Object conflictException;
+
     public UpdateRunGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRunGroupResponse {
     
     
     public String contentType;
+
     public UpdateRunGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRunGroupResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRunGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRunGroupResponse {
      */
     
     public Object requestTimeoutException;
+
     public UpdateRunGroupResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRunGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRunGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateRunGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateRunGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateRunGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateRunGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRunGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRunGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRunGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRunGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateRunGroupResponse {
      */
     
     public Object validationException;
+
     public UpdateRunGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRunGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

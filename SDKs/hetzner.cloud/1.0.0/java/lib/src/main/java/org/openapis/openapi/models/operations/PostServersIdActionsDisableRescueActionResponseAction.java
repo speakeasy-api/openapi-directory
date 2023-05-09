@@ -12,6 +12,7 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostServersIdActionsDisableRescueActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("error")
     public PostServersIdActionsDisableRescueActionResponseActionError error;
+
     public PostServersIdActionsDisableRescueActionResponseAction withError(PostServersIdActionsDisableRescueActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostServersIdActionsDisableRescueActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsDisableRescueActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostServersIdActionsDisableRescueActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("resources")
     public PostServersIdActionsDisableRescueActionResponseActionResources[] resources;
+
     public PostServersIdActionsDisableRescueActionResponseAction withResources(PostServersIdActionsDisableRescueActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostServersIdActionsDisableRescueActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostServersIdActionsDisableRescueActionResponseAction {
      */
     @JsonProperty("status")
     public PostServersIdActionsDisableRescueActionResponseActionStatusEnum status;
+
     public PostServersIdActionsDisableRescueActionResponseAction withStatus(PostServersIdActionsDisableRescueActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostServersIdActionsDisableRescueActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostServersIdActionsDisableRescueActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostServersIdActionsDisableRescueActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostServersIdActionsDisableRescueActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

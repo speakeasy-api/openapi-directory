@@ -18,6 +18,7 @@ public class Election {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electionDay")
     public String electionDay;
+
     public Election withElectionDay(String electionDay) {
         this.electionDay = electionDay;
         return this;
@@ -29,6 +30,7 @@ public class Election {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Election withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Election {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Election withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Election {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ocdDivisionId")
     public String ocdDivisionId;
+
     public Election withOcdDivisionId(String ocdDivisionId) {
         this.ocdDivisionId = ocdDivisionId;
         return this;
@@ -59,9 +63,11 @@ public class Election {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shapeLookupBehavior")
     public ElectionShapeLookupBehaviorEnum shapeLookupBehavior;
+
     public Election withShapeLookupBehavior(ElectionShapeLookupBehaviorEnum shapeLookupBehavior) {
         this.shapeLookupBehavior = shapeLookupBehavior;
         return this;
     }
     
+    public Election(){}
 }

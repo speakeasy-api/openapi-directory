@@ -15,6 +15,7 @@ public class RestoreFromRecoveryPointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public Namespace namespace;
+
     public RestoreFromRecoveryPointResponse withNamespace(Namespace namespace) {
         this.namespace = namespace;
         return this;
@@ -23,9 +24,11 @@ public class RestoreFromRecoveryPointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryPointId")
     public String recoveryPointId;
+
     public RestoreFromRecoveryPointResponse withRecoveryPointId(String recoveryPointId) {
         this.recoveryPointId = recoveryPointId;
         return this;
     }
     
+    public RestoreFromRecoveryPointResponse(){}
 }

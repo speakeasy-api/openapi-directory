@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Distribution -  Defines the settings for a specific Region.
+ * Distribution - Defines the settings for a specific Region.
  */
 public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amiDistributionConfiguration")
     public AmiDistributionConfiguration amiDistributionConfiguration;
+
     public Distribution withAmiDistributionConfiguration(AmiDistributionConfiguration amiDistributionConfiguration) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerDistributionConfiguration")
     public ContainerDistributionConfiguration containerDistributionConfiguration;
+
     public Distribution withContainerDistributionConfiguration(ContainerDistributionConfiguration containerDistributionConfiguration) {
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fastLaunchConfigurations")
     public FastLaunchConfiguration[] fastLaunchConfigurations;
+
     public Distribution withFastLaunchConfigurations(FastLaunchConfiguration[] fastLaunchConfigurations) {
         this.fastLaunchConfigurations = fastLaunchConfigurations;
         return this;
@@ -39,6 +42,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplateConfigurations")
     public LaunchTemplateConfiguration[] launchTemplateConfigurations;
+
     public Distribution withLaunchTemplateConfigurations(LaunchTemplateConfiguration[] launchTemplateConfigurations) {
         this.launchTemplateConfigurations = launchTemplateConfigurations;
         return this;
@@ -47,6 +51,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseConfigurationArns")
     public String[] licenseConfigurationArns;
+
     public Distribution withLicenseConfigurationArns(String[] licenseConfigurationArns) {
         this.licenseConfigurationArns = licenseConfigurationArns;
         return this;
@@ -54,6 +59,7 @@ public class Distribution {
     
     @JsonProperty("region")
     public String region;
+
     public Distribution withRegion(String region) {
         this.region = region;
         return this;
@@ -62,9 +68,13 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3ExportConfiguration")
     public S3ExportConfiguration s3ExportConfiguration;
+
     public Distribution withS3ExportConfiguration(S3ExportConfiguration s3ExportConfiguration) {
         this.s3ExportConfiguration = s3ExportConfiguration;
         return this;
     }
     
+    public Distribution(@JsonProperty("region") String region) {
+        this.region = region;
+  }
 }

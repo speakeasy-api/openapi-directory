@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartNextPendingJobExecutionResponse {
@@ -12,6 +13,7 @@ public class StartNextPendingJobExecutionResponse {
      */
     
     public Object certificateValidationException;
+
     public StartNextPendingJobExecutionResponse withCertificateValidationException(Object certificateValidationException) {
         this.certificateValidationException = certificateValidationException;
         return this;
@@ -19,6 +21,7 @@ public class StartNextPendingJobExecutionResponse {
     
     
     public String contentType;
+
     public StartNextPendingJobExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartNextPendingJobExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public StartNextPendingJobExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartNextPendingJobExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartNextPendingJobExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartNextPendingJobExecutionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public StartNextPendingJobExecutionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -59,6 +65,7 @@ public class StartNextPendingJobExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartNextPendingJobExecutionResponse startNextPendingJobExecutionResponse;
+
     public StartNextPendingJobExecutionResponse withStartNextPendingJobExecutionResponse(org.openapis.openapi.models.shared.StartNextPendingJobExecutionResponse startNextPendingJobExecutionResponse) {
         this.startNextPendingJobExecutionResponse = startNextPendingJobExecutionResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartNextPendingJobExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartNextPendingJobExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartNextPendingJobExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartNextPendingJobExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartNextPendingJobExecutionResponse {
      */
     
     public Object throttlingException;
+
     public StartNextPendingJobExecutionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartNextPendingJobExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

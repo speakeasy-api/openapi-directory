@@ -41,4 +41,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DocKeywords.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocMultimedia.java
 lib/src/main/java/org/openapis/openapi/models/shared/Doc.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/archive/README.md
 USAGE.md

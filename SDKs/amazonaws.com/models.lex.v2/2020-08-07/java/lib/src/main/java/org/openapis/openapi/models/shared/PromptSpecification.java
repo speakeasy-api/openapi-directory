@@ -15,6 +15,7 @@ public class PromptSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInterrupt")
     public Boolean allowInterrupt;
+
     public PromptSpecification withAllowInterrupt(Boolean allowInterrupt) {
         this.allowInterrupt = allowInterrupt;
         return this;
@@ -22,6 +23,7 @@ public class PromptSpecification {
     
     @JsonProperty("maxRetries")
     public Long maxRetries;
+
     public PromptSpecification withMaxRetries(Long maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -29,6 +31,7 @@ public class PromptSpecification {
     
     @JsonProperty("messageGroups")
     public MessageGroup[] messageGroups;
+
     public PromptSpecification withMessageGroups(MessageGroup[] messageGroups) {
         this.messageGroups = messageGroups;
         return this;
@@ -37,6 +40,7 @@ public class PromptSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageSelectionStrategy")
     public MessageSelectionStrategyEnum messageSelectionStrategy;
+
     public PromptSpecification withMessageSelectionStrategy(MessageSelectionStrategyEnum messageSelectionStrategy) {
         this.messageSelectionStrategy = messageSelectionStrategy;
         return this;
@@ -45,9 +49,14 @@ public class PromptSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promptAttemptsSpecification")
     public java.util.Map<String, PromptAttemptSpecification> promptAttemptsSpecification;
+
     public PromptSpecification withPromptAttemptsSpecification(java.util.Map<String, PromptAttemptSpecification> promptAttemptsSpecification) {
         this.promptAttemptsSpecification = promptAttemptsSpecification;
         return this;
     }
     
+    public PromptSpecification(@JsonProperty("maxRetries") Long maxRetries, @JsonProperty("messageGroups") MessageGroup[] messageGroups) {
+        this.maxRetries = maxRetries;
+        this.messageGroups = messageGroups;
+  }
 }

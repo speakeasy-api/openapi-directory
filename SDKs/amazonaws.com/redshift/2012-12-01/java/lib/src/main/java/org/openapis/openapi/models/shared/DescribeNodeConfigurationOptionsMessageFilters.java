@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNodeConfigurationOptionsMessageFilters {
     
     public NodeConfigurationOptionsFilterNameEnum name;
+
     public DescribeNodeConfigurationOptionsMessageFilters withName(NodeConfigurationOptionsFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNodeConfigurationOptionsMessageFilters {
     
     
     public OperatorTypeEnum operator;
+
     public DescribeNodeConfigurationOptionsMessageFilters withOperator(OperatorTypeEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,11 @@ public class DescribeNodeConfigurationOptionsMessageFilters {
     
     
     public String[] values;
+
     public DescribeNodeConfigurationOptionsMessageFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeNodeConfigurationOptionsMessageFilters(){}
 }

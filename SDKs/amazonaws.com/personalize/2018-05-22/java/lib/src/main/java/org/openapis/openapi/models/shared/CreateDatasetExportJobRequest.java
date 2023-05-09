@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDatasetExportJobRequest {
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public CreateDatasetExportJobRequest withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateDatasetExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingestionMode")
     public IngestionModeEnum ingestionMode;
+
     public CreateDatasetExportJobRequest withIngestionMode(IngestionModeEnum ingestionMode) {
         this.ingestionMode = ingestionMode;
         return this;
@@ -26,6 +28,7 @@ public class CreateDatasetExportJobRequest {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateDatasetExportJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -33,6 +36,7 @@ public class CreateDatasetExportJobRequest {
     
     @JsonProperty("jobOutput")
     public DatasetExportJobOutput jobOutput;
+
     public CreateDatasetExportJobRequest withJobOutput(DatasetExportJobOutput jobOutput) {
         this.jobOutput = jobOutput;
         return this;
@@ -40,6 +44,7 @@ public class CreateDatasetExportJobRequest {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateDatasetExportJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -48,9 +53,16 @@ public class CreateDatasetExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDatasetExportJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetExportJobRequest(@JsonProperty("datasetArn") String datasetArn, @JsonProperty("jobName") String jobName, @JsonProperty("jobOutput") DatasetExportJobOutput jobOutput, @JsonProperty("roleArn") String roleArn) {
+        this.datasetArn = datasetArn;
+        this.jobName = jobName;
+        this.jobOutput = jobOutput;
+        this.roleArn = roleArn;
+  }
 }

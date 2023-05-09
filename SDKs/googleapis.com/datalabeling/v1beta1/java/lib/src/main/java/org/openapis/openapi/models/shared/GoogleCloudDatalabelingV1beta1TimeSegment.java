@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1TimeSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeOffset")
     public String endTimeOffset;
+
     public GoogleCloudDatalabelingV1beta1TimeSegment withEndTimeOffset(String endTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1TimeSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOffset")
     public String startTimeOffset;
+
     public GoogleCloudDatalabelingV1beta1TimeSegment withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1TimeSegment(){}
 }

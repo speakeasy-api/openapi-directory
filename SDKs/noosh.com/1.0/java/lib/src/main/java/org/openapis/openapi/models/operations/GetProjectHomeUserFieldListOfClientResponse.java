@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectHomeUserFieldListOfClientResponse {
     
     public byte[] body;
+
     public GetProjectHomeUserFieldListOfClientResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetProjectHomeUserFieldListOfClientResponse {
     
     
     public String contentType;
+
     public GetProjectHomeUserFieldListOfClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetProjectHomeUserFieldListOfClientResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetProjectHomeUserFieldListOfClientResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetProjectHomeUserFieldListOfClientResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectHomeUserFieldsListVO projectHomeUserFieldsListVO;
+
     public GetProjectHomeUserFieldListOfClientResponse withProjectHomeUserFieldsListVO(org.openapis.openapi.models.shared.ProjectHomeUserFieldsListVO projectHomeUserFieldsListVO) {
         this.projectHomeUserFieldsListVO = projectHomeUserFieldsListVO;
         return this;
@@ -43,6 +48,7 @@ public class GetProjectHomeUserFieldListOfClientResponse {
     
     
     public Integer statusCode;
+
     public GetProjectHomeUserFieldListOfClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetProjectHomeUserFieldListOfClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectHomeUserFieldListOfClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProjectHomeUserFieldListOfClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

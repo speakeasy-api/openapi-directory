@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTeamMemberOfProjectResponse {
     
     public byte[] body;
+
     public DeleteTeamMemberOfProjectResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DeleteTeamMemberOfProjectResponse {
     
     
     public String contentType;
+
     public DeleteTeamMemberOfProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteTeamMemberOfProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public DeleteTeamMemberOfProjectResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class DeleteTeamMemberOfProjectResponse {
     
     
     public Integer statusCode;
+
     public DeleteTeamMemberOfProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class DeleteTeamMemberOfProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTeamMemberOfProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class DeleteTeamMemberOfProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamMemberBaseInfVO teamMemberBaseInfVO;
+
     public DeleteTeamMemberOfProjectResponse withTeamMemberBaseInfVO(org.openapis.openapi.models.shared.TeamMemberBaseInfVO teamMemberBaseInfVO) {
         this.teamMemberBaseInfVO = teamMemberBaseInfVO;
         return this;
     }
     
+    public DeleteTeamMemberOfProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

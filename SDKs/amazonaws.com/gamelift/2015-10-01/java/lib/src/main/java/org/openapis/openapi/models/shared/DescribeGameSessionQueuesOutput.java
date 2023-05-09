@@ -15,6 +15,7 @@ public class DescribeGameSessionQueuesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionQueues")
     public GameSessionQueue[] gameSessionQueues;
+
     public DescribeGameSessionQueuesOutput withGameSessionQueues(GameSessionQueue[] gameSessionQueues) {
         this.gameSessionQueues = gameSessionQueues;
         return this;
@@ -23,9 +24,11 @@ public class DescribeGameSessionQueuesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeGameSessionQueuesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeGameSessionQueuesOutput(){}
 }

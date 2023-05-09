@@ -22,6 +22,7 @@ public class ImportsListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public ImportsListItem withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class ImportsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destinations")
     public String[] destinations;
+
     public ImportsListItem withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -38,6 +40,7 @@ public class ImportsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportId")
     public String importId;
+
     public ImportsListItem withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -46,6 +49,7 @@ public class ImportsListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatus")
     public ImportStatusEnum importStatus;
+
     public ImportsListItem withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -56,9 +60,11 @@ public class ImportsListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedTimestamp")
     public OffsetDateTime updatedTimestamp;
+
     public ImportsListItem withUpdatedTimestamp(OffsetDateTime updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
         return this;
     }
     
+    public ImportsListItem(){}
 }

@@ -12,6 +12,7 @@ public class PatchAs2StationsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PatchAs2StationsIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class PatchAs2StationsIdRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=private_key")
     public String privateKey;
+
     public PatchAs2StationsIdRequestBody withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -26,6 +28,7 @@ public class PatchAs2StationsIdRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=private_key_password")
     public String privateKeyPassword;
+
     public PatchAs2StationsIdRequestBody withPrivateKeyPassword(String privateKeyPassword) {
         this.privateKeyPassword = privateKeyPassword;
         return this;
@@ -33,9 +36,11 @@ public class PatchAs2StationsIdRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=public_certificate")
     public String publicCertificate;
+
     public PatchAs2StationsIdRequestBody withPublicCertificate(String publicCertificate) {
         this.publicCertificate = publicCertificate;
         return this;
     }
     
+    public PatchAs2StationsIdRequestBody(){}
 }

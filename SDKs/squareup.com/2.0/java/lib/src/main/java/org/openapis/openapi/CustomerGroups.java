@@ -61,11 +61,9 @@ public class CustomerGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCustomerGroupResponse res = new org.openapis.openapi.models.operations.CreateCustomerGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateCustomerGroupResponse res = new org.openapis.openapi.models.operations.CreateCustomerGroupResponse(contentType, httpRes.statusCode()) {{
             createCustomerGroupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class CustomerGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomerGroupResponse res = new org.openapis.openapi.models.operations.DeleteCustomerGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomerGroupResponse res = new org.openapis.openapi.models.operations.DeleteCustomerGroupResponse(contentType, httpRes.statusCode()) {{
             deleteCustomerGroupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,11 +145,9 @@ public class CustomerGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCustomerGroupsResponse res = new org.openapis.openapi.models.operations.ListCustomerGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListCustomerGroupsResponse res = new org.openapis.openapi.models.operations.ListCustomerGroupsResponse(contentType, httpRes.statusCode()) {{
             listCustomerGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class CustomerGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveCustomerGroupResponse res = new org.openapis.openapi.models.operations.RetrieveCustomerGroupResponse() {{
+        org.openapis.openapi.models.operations.RetrieveCustomerGroupResponse res = new org.openapis.openapi.models.operations.RetrieveCustomerGroupResponse(contentType, httpRes.statusCode()) {{
             retrieveCustomerGroupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,11 +228,9 @@ public class CustomerGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomerGroupResponse res = new org.openapis.openapi.models.operations.UpdateCustomerGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateCustomerGroupResponse res = new org.openapis.openapi.models.operations.UpdateCustomerGroupResponse(contentType, httpRes.statusCode()) {{
             updateCustomerGroupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

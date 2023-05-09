@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApplicationPresignedUrlResponse {
     
     public String contentType;
+
     public CreateApplicationPresignedUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateApplicationPresignedUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApplicationPresignedUrlResponse createApplicationPresignedUrlResponse;
+
     public CreateApplicationPresignedUrlResponse withCreateApplicationPresignedUrlResponse(org.openapis.openapi.models.shared.CreateApplicationPresignedUrlResponse createApplicationPresignedUrlResponse) {
         this.createApplicationPresignedUrlResponse = createApplicationPresignedUrlResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateApplicationPresignedUrlResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateApplicationPresignedUrlResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class CreateApplicationPresignedUrlResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateApplicationPresignedUrlResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -49,6 +54,7 @@ public class CreateApplicationPresignedUrlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateApplicationPresignedUrlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateApplicationPresignedUrlResponse {
     
     
     public Integer statusCode;
+
     public CreateApplicationPresignedUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateApplicationPresignedUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApplicationPresignedUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateApplicationPresignedUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

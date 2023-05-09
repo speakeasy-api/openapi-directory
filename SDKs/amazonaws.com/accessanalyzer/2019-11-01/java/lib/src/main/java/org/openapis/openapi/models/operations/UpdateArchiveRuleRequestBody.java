@@ -15,6 +15,7 @@ public class UpdateArchiveRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateArchiveRuleRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class UpdateArchiveRuleRequestBody {
      */
     @JsonProperty("filter")
     public java.util.Map<String, org.openapis.openapi.models.shared.Criterion> filter;
+
     public UpdateArchiveRuleRequestBody withFilter(java.util.Map<String, org.openapis.openapi.models.shared.Criterion> filter) {
         this.filter = filter;
         return this;
     }
     
+    public UpdateArchiveRuleRequestBody(@JsonProperty("filter") java.util.Map<String, org.openapis.openapi.models.shared.Criterion> filter) {
+        this.filter = filter;
+  }
 }

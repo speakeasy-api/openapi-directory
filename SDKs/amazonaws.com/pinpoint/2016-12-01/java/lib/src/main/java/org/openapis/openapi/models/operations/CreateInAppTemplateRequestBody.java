@@ -12,9 +12,13 @@ public class CreateInAppTemplateRequestBody {
      */
     @JsonProperty("InAppTemplateRequest")
     public CreateInAppTemplateRequestBodyInAppTemplateRequest inAppTemplateRequest;
+
     public CreateInAppTemplateRequestBody withInAppTemplateRequest(CreateInAppTemplateRequestBodyInAppTemplateRequest inAppTemplateRequest) {
         this.inAppTemplateRequest = inAppTemplateRequest;
         return this;
     }
     
+    public CreateInAppTemplateRequestBody(@JsonProperty("InAppTemplateRequest") CreateInAppTemplateRequestBodyInAppTemplateRequest inAppTemplateRequest) {
+        this.inAppTemplateRequest = inAppTemplateRequest;
+  }
 }

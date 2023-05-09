@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public EnterpriseCrmEventbusProtoAttributesDataTypeEnum dataType;
+
     public EnterpriseCrmEventbusProtoAttributes withDataType(EnterpriseCrmEventbusProtoAttributesDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public EnterpriseCrmEventbusProtoValueType defaultValue;
+
     public EnterpriseCrmEventbusProtoAttributes withDefaultValue(EnterpriseCrmEventbusProtoValueType defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmEventbusProtoAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRequired")
     public Boolean isRequired;
+
     public EnterpriseCrmEventbusProtoAttributes withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -51,6 +54,7 @@ public class EnterpriseCrmEventbusProtoAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSearchable")
     public Boolean isSearchable;
+
     public EnterpriseCrmEventbusProtoAttributes withIsSearchable(Boolean isSearchable) {
         this.isSearchable = isSearchable;
         return this;
@@ -62,6 +66,7 @@ public class EnterpriseCrmEventbusProtoAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logSettings")
     public EnterpriseCrmEventbusProtoLogSettings logSettings;
+
     public EnterpriseCrmEventbusProtoAttributes withLogSettings(EnterpriseCrmEventbusProtoLogSettings logSettings) {
         this.logSettings = logSettings;
         return this;
@@ -70,6 +75,7 @@ public class EnterpriseCrmEventbusProtoAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchable")
     public EnterpriseCrmEventbusProtoAttributesSearchableEnum searchable;
+
     public EnterpriseCrmEventbusProtoAttributes withSearchable(EnterpriseCrmEventbusProtoAttributesSearchableEnum searchable) {
         this.searchable = searchable;
         return this;
@@ -81,9 +87,11 @@ public class EnterpriseCrmEventbusProtoAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskVisibility")
     public String[] taskVisibility;
+
     public EnterpriseCrmEventbusProtoAttributes withTaskVisibility(String[] taskVisibility) {
         this.taskVisibility = taskVisibility;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoAttributes(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connector_uuid")
     public String connectorUuid;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withConnectorUuid(String connectorUuid) {
         this.connectorUuid = connectorUuid;
         return this;
@@ -23,6 +25,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error")
     public String error;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withError(String error) {
         this.error = error;
         return this;
@@ -30,6 +33,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -37,6 +41,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnectionPathParameter;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withIdConnectionPathParameter(Long idConnectionPathParameter) {
         this.idConnectionPathParameter = idConnectionPathParameter;
         return this;
@@ -47,6 +52,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_connection")
     public Long idConnectionQueryParameter;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withIdConnectionQueryParameter(Long idConnectionQueryParameter) {
         this.idConnectionQueryParameter = idConnectionQueryParameter;
         return this;
@@ -57,6 +63,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_connector")
     public Long idConnector;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -67,6 +74,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_max")
     public Long idMax;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withIdMax(Long idMax) {
         this.idMax = idMax;
         return this;
@@ -77,6 +85,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_source")
     public Long idSource;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withIdSource(Long idSource) {
         this.idSource = idSource;
         return this;
@@ -87,6 +96,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUserPathParameter;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withIdUserPathParameter(String idUserPathParameter) {
         this.idUserPathParameter = idUserPathParameter;
         return this;
@@ -97,6 +107,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_user")
     public Long idUserQueryParameter;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withIdUserQueryParameter(Long idUserQueryParameter) {
         this.idUserQueryParameter = idUserQueryParameter;
         return this;
@@ -107,6 +118,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -117,6 +129,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -127,6 +140,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -137,6 +151,7 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -147,9 +162,14 @@ public class GetUsersIdUserConnectionsIdConnectionLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public String period;
+
     public GetUsersIdUserConnectionsIdConnectionLogsRequest withPeriod(String period) {
         this.period = period;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionLogsRequest(@JsonProperty("id_connectionPathParameter") Long idConnectionPathParameter, @JsonProperty("id_userPathParameter") String idUserPathParameter) {
+        this.idConnectionPathParameter = idConnectionPathParameter;
+        this.idUserPathParameter = idUserPathParameter;
+  }
 }

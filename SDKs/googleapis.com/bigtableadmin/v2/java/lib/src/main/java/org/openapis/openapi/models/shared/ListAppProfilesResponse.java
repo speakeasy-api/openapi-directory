@@ -18,6 +18,7 @@ public class ListAppProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appProfiles")
     public AppProfile[] appProfiles;
+
     public ListAppProfilesResponse withAppProfiles(AppProfile[] appProfiles) {
         this.appProfiles = appProfiles;
         return this;
@@ -29,6 +30,7 @@ public class ListAppProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedLocations")
     public String[] failedLocations;
+
     public ListAppProfilesResponse withFailedLocations(String[] failedLocations) {
         this.failedLocations = failedLocations;
         return this;
@@ -40,9 +42,11 @@ public class ListAppProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAppProfilesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAppProfilesResponse(){}
 }

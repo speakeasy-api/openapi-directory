@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ViewOffNadirInput - &lt;p/&gt;
+ * ViewOffNadirInput - The input structure for specifying ViewOffNadir property filter. ViewOffNadir refers to the angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
  */
 public class ViewOffNadirInput {
     @JsonProperty("LowerBound")
     public Float lowerBound;
+
     public ViewOffNadirInput withLowerBound(Float lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -19,9 +20,14 @@ public class ViewOffNadirInput {
     
     @JsonProperty("UpperBound")
     public Float upperBound;
+
     public ViewOffNadirInput withUpperBound(Float upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public ViewOffNadirInput(@JsonProperty("LowerBound") Float lowerBound, @JsonProperty("UpperBound") Float upperBound) {
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
+  }
 }

@@ -18,6 +18,7 @@ public class SpeechRecognitionAlternative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public SpeechRecognitionAlternative withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class SpeechRecognitionAlternative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript")
     public String transcript;
+
     public SpeechRecognitionAlternative withTranscript(String transcript) {
         this.transcript = transcript;
         return this;
@@ -40,9 +42,11 @@ public class SpeechRecognitionAlternative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words")
     public WordInfo[] words;
+
     public SpeechRecognitionAlternative withWords(WordInfo[] words) {
         this.words = words;
         return this;
     }
     
+    public SpeechRecognitionAlternative(){}
 }

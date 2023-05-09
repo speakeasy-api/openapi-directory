@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetInstanceProtectionQuery {
     
     public String autoScalingGroupName;
+
     public SetInstanceProtectionQuery withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class SetInstanceProtectionQuery {
     
     
     public String[] instanceIds;
+
     public SetInstanceProtectionQuery withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -23,9 +25,15 @@ public class SetInstanceProtectionQuery {
     
     
     public Boolean protectedFromScaleIn;
+
     public SetInstanceProtectionQuery withProtectedFromScaleIn(Boolean protectedFromScaleIn) {
         this.protectedFromScaleIn = protectedFromScaleIn;
         return this;
     }
     
+    public SetInstanceProtectionQuery(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("InstanceIds") String[] instanceIds, @JsonProperty("ProtectedFromScaleIn") Boolean protectedFromScaleIn) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.instanceIds = instanceIds;
+        this.protectedFromScaleIn = protectedFromScaleIn;
+  }
 }

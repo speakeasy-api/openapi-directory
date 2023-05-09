@@ -18,9 +18,11 @@ public class VerifyListingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parsedListing")
     public ParsedListing parsedListing;
+
     public VerifyListingsResponse withParsedListing(ParsedListing parsedListing) {
         this.parsedListing = parsedListing;
         return this;
     }
     
+    public VerifyListingsResponse(){}
 }

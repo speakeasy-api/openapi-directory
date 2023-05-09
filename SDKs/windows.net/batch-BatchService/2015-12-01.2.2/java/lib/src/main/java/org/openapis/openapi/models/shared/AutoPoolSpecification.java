@@ -18,6 +18,7 @@ public class AutoPoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoPoolIdPrefix")
     public String autoPoolIdPrefix;
+
     public AutoPoolSpecification withAutoPoolIdPrefix(String autoPoolIdPrefix) {
         this.autoPoolIdPrefix = autoPoolIdPrefix;
         return this;
@@ -29,6 +30,7 @@ public class AutoPoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepAlive")
     public Boolean keepAlive;
+
     public AutoPoolSpecification withKeepAlive(Boolean keepAlive) {
         this.keepAlive = keepAlive;
         return this;
@@ -40,6 +42,7 @@ public class AutoPoolSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pool")
     public PoolSpecification pool;
+
     public AutoPoolSpecification withPool(PoolSpecification pool) {
         this.pool = pool;
         return this;
@@ -50,9 +53,13 @@ public class AutoPoolSpecification {
      */
     @JsonProperty("poolLifetimeOption")
     public AutoPoolSpecificationPoolLifetimeOptionEnum poolLifetimeOption;
+
     public AutoPoolSpecification withPoolLifetimeOption(AutoPoolSpecificationPoolLifetimeOptionEnum poolLifetimeOption) {
         this.poolLifetimeOption = poolLifetimeOption;
         return this;
     }
     
+    public AutoPoolSpecification(@JsonProperty("poolLifetimeOption") AutoPoolSpecificationPoolLifetimeOptionEnum poolLifetimeOption) {
+        this.poolLifetimeOption = poolLifetimeOption;
+  }
 }

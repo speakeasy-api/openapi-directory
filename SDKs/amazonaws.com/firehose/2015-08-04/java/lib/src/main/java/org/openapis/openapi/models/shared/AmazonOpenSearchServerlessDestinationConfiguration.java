@@ -15,6 +15,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public AmazonOpenSearchServerlessBufferingHints bufferingHints;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withBufferingHints(AmazonOpenSearchServerlessBufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -26,6 +27,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -34,6 +36,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionEndpoint")
     public String collectionEndpoint;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withCollectionEndpoint(String collectionEndpoint) {
         this.collectionEndpoint = collectionEndpoint;
         return this;
@@ -41,6 +44,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     
     @JsonProperty("IndexName")
     public String indexName;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -52,6 +56,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -60,6 +65,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public AmazonOpenSearchServerlessRetryOptions retryOptions;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withRetryOptions(AmazonOpenSearchServerlessRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -67,6 +73,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -75,6 +82,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public AmazonOpenSearchServerlessS3BackupModeEnum s3BackupMode;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withS3BackupMode(AmazonOpenSearchServerlessS3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
@@ -85,6 +93,7 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
      */
     @JsonProperty("S3Configuration")
     public S3DestinationConfiguration s3Configuration;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withS3Configuration(S3DestinationConfiguration s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
@@ -96,9 +105,15 @@ public class AmazonOpenSearchServerlessDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public AmazonOpenSearchServerlessDestinationConfiguration withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public AmazonOpenSearchServerlessDestinationConfiguration(@JsonProperty("IndexName") String indexName, @JsonProperty("RoleARN") String roleARN, @JsonProperty("S3Configuration") S3DestinationConfiguration s3Configuration) {
+        this.indexName = indexName;
+        this.roleARN = roleARN;
+        this.s3Configuration = s3Configuration;
+  }
 }

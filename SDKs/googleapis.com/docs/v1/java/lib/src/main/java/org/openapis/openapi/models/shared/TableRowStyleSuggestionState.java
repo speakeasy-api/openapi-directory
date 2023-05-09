@@ -18,9 +18,11 @@ public class TableRowStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRowHeightSuggested")
     public Boolean minRowHeightSuggested;
+
     public TableRowStyleSuggestionState withMinRowHeightSuggested(Boolean minRowHeightSuggested) {
         this.minRowHeightSuggested = minRowHeightSuggested;
         return this;
     }
     
+    public TableRowStyleSuggestionState(){}
 }

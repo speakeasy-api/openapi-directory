@@ -61,11 +61,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ArchivebycouponcodeResponse res = new org.openapis.openapi.models.operations.ArchivebycouponcodeResponse() {{
+        org.openapis.openapi.models.operations.ArchivebycouponcodeResponse res = new org.openapis.openapi.models.operations.ArchivebycouponcodeResponse(contentType, httpRes.statusCode()) {{
             couponCode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetallResponse res = new org.openapis.openapi.models.operations.GetallResponse() {{
+        org.openapis.openapi.models.operations.GetallResponse res = new org.openapis.openapi.models.operations.GetallResponse(contentType, httpRes.statusCode()) {{
             getall200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,11 +155,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetarchivedbycouponcodeResponse res = new org.openapis.openapi.models.operations.GetarchivedbycouponcodeResponse() {{
+        org.openapis.openapi.models.operations.GetarchivedbycouponcodeResponse res = new org.openapis.openapi.models.operations.GetarchivedbycouponcodeResponse(contentType, httpRes.statusCode()) {{
             getarchivedbycouponcode200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,11 +201,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetbycouponcodeResponse res = new org.openapis.openapi.models.operations.GetbycouponcodeResponse() {{
+        org.openapis.openapi.models.operations.GetbycouponcodeResponse res = new org.openapis.openapi.models.operations.GetbycouponcodeResponse(contentType, httpRes.statusCode()) {{
             getbycouponcode200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,11 +247,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetusageResponse res = new org.openapis.openapi.models.operations.GetusageResponse() {{
+        org.openapis.openapi.models.operations.GetusageResponse res = new org.openapis.openapi.models.operations.GetusageResponse(contentType, httpRes.statusCode()) {{
             getusage200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -314,11 +304,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MassiveGenerationResponse res = new org.openapis.openapi.models.operations.MassiveGenerationResponse() {{
+        org.openapis.openapi.models.operations.MassiveGenerationResponse res = new org.openapis.openapi.models.operations.MassiveGenerationResponse(contentType, httpRes.statusCode()) {{
             couponCodes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -362,11 +350,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnarchivebycouponcodeResponse res = new org.openapis.openapi.models.operations.UnarchivebycouponcodeResponse() {{
+        org.openapis.openapi.models.operations.UnarchivebycouponcodeResponse res = new org.openapis.openapi.models.operations.UnarchivebycouponcodeResponse(contentType, httpRes.statusCode()) {{
             couponCode = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,11 +400,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateResponse res = new org.openapis.openapi.models.operations.UpdateResponse() {{
+        org.openapis.openapi.models.operations.UpdateResponse res = new org.openapis.openapi.models.operations.UpdateResponse(contentType, httpRes.statusCode()) {{
             update200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -464,11 +448,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiRnbPvtCouponResponse res = new org.openapis.openapi.models.operations.PostApiRnbPvtCouponResponse() {{
+        org.openapis.openapi.models.operations.PostApiRnbPvtCouponResponse res = new org.openapis.openapi.models.operations.PostApiRnbPvtCouponResponse(contentType, httpRes.statusCode()) {{
             postApiRnbPvtCoupon201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -514,11 +496,9 @@ public class Coupons {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiRnbPvtMultipleCouponsResponse res = new org.openapis.openapi.models.operations.PostApiRnbPvtMultipleCouponsResponse() {{
+        org.openapis.openapi.models.operations.PostApiRnbPvtMultipleCouponsResponse res = new org.openapis.openapi.models.operations.PostApiRnbPvtMultipleCouponsResponse(contentType, httpRes.statusCode()) {{
             items = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetParameterGroupResponse {
     
     public String contentType;
+
     public ResetParameterGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResetParameterGroupResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public ResetParameterGroupResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -29,6 +32,7 @@ public class ResetParameterGroupResponse {
      */
     
     public Object invalidParameterGroupStateFault;
+
     public ResetParameterGroupResponse withInvalidParameterGroupStateFault(Object invalidParameterGroupStateFault) {
         this.invalidParameterGroupStateFault = invalidParameterGroupStateFault;
         return this;
@@ -39,6 +43,7 @@ public class ResetParameterGroupResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ResetParameterGroupResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ResetParameterGroupResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public ResetParameterGroupResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -59,6 +65,7 @@ public class ResetParameterGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ResetParameterGroupResponse resetParameterGroupResponse;
+
     public ResetParameterGroupResponse withResetParameterGroupResponse(org.openapis.openapi.models.shared.ResetParameterGroupResponse resetParameterGroupResponse) {
         this.resetParameterGroupResponse = resetParameterGroupResponse;
         return this;
@@ -66,6 +73,7 @@ public class ResetParameterGroupResponse {
     
     
     public Integer statusCode;
+
     public ResetParameterGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ResetParameterGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetParameterGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ResetParameterGroupResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public ResetParameterGroupResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
     }
     
+    public ResetParameterGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

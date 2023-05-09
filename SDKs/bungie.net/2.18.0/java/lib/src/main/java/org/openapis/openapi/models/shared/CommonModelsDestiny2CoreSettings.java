@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CommonModelsDestiny2CoreSettings {
     
     public Long activeSealsRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withActiveSealsRootNodeHash(Long activeSealsRootNodeHash) {
         this.activeSealsRootNodeHash = activeSealsRootNodeHash;
         return this;
@@ -16,6 +17,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long activeTriumphsRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withActiveTriumphsRootNodeHash(Long activeTriumphsRootNodeHash) {
         this.activeTriumphsRootNodeHash = activeTriumphsRootNodeHash;
         return this;
@@ -23,6 +25,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public String ammoTypeHeavyIcon;
+
     public CommonModelsDestiny2CoreSettings withAmmoTypeHeavyIcon(String ammoTypeHeavyIcon) {
         this.ammoTypeHeavyIcon = ammoTypeHeavyIcon;
         return this;
@@ -30,6 +33,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public String ammoTypePrimaryIcon;
+
     public CommonModelsDestiny2CoreSettings withAmmoTypePrimaryIcon(String ammoTypePrimaryIcon) {
         this.ammoTypePrimaryIcon = ammoTypePrimaryIcon;
         return this;
@@ -37,6 +41,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public String ammoTypeSpecialIcon;
+
     public CommonModelsDestiny2CoreSettings withAmmoTypeSpecialIcon(String ammoTypeSpecialIcon) {
         this.ammoTypeSpecialIcon = ammoTypeSpecialIcon;
         return this;
@@ -44,6 +49,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long badgesRootNode;
+
     public CommonModelsDestiny2CoreSettings withBadgesRootNode(Long badgesRootNode) {
         this.badgesRootNode = badgesRootNode;
         return this;
@@ -51,6 +57,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long collectionRootNode;
+
     public CommonModelsDestiny2CoreSettings withCollectionRootNode(Long collectionRootNode) {
         this.collectionRootNode = collectionRootNode;
         return this;
@@ -58,6 +65,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long craftingRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withCraftingRootNodeHash(Long craftingRootNodeHash) {
         this.craftingRootNodeHash = craftingRootNodeHash;
         return this;
@@ -65,6 +73,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long[] currentRankProgressionHashes;
+
     public CommonModelsDestiny2CoreSettings withCurrentRankProgressionHashes(Long[] currentRankProgressionHashes) {
         this.currentRankProgressionHashes = currentRankProgressionHashes;
         return this;
@@ -72,6 +81,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long currentSeasonHash;
+
     public CommonModelsDestiny2CoreSettings withCurrentSeasonHash(Long currentSeasonHash) {
         this.currentSeasonHash = currentSeasonHash;
         return this;
@@ -79,6 +89,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long currentSeasonalArtifactHash;
+
     public CommonModelsDestiny2CoreSettings withCurrentSeasonalArtifactHash(Long currentSeasonalArtifactHash) {
         this.currentSeasonalArtifactHash = currentSeasonalArtifactHash;
         return this;
@@ -86,6 +97,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long exoticCatalystsRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withExoticCatalystsRootNodeHash(Long exoticCatalystsRootNodeHash) {
         this.exoticCatalystsRootNodeHash = exoticCatalystsRootNodeHash;
         return this;
@@ -93,6 +105,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long[] futureSeasonHashes;
+
     public CommonModelsDestiny2CoreSettings withFutureSeasonHashes(Long[] futureSeasonHashes) {
         this.futureSeasonHashes = futureSeasonHashes;
         return this;
@@ -100,6 +113,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long guardianRankConstantsHash;
+
     public CommonModelsDestiny2CoreSettings withGuardianRankConstantsHash(Long guardianRankConstantsHash) {
         this.guardianRankConstantsHash = guardianRankConstantsHash;
         return this;
@@ -107,6 +121,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long guardianRanksRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withGuardianRanksRootNodeHash(Long guardianRanksRootNodeHash) {
         this.guardianRanksRootNodeHash = guardianRanksRootNodeHash;
         return this;
@@ -114,6 +129,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long[] insertPlugFreeBlockedSocketTypeHashes;
+
     public CommonModelsDestiny2CoreSettings withInsertPlugFreeBlockedSocketTypeHashes(Long[] insertPlugFreeBlockedSocketTypeHashes) {
         this.insertPlugFreeBlockedSocketTypeHashes = insertPlugFreeBlockedSocketTypeHashes;
         return this;
@@ -121,6 +137,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long[] insertPlugFreeProtectedPlugItemHashes;
+
     public CommonModelsDestiny2CoreSettings withInsertPlugFreeProtectedPlugItemHashes(Long[] insertPlugFreeProtectedPlugItemHashes) {
         this.insertPlugFreeProtectedPlugItemHashes = insertPlugFreeProtectedPlugItemHashes;
         return this;
@@ -128,6 +145,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long legacySealsRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withLegacySealsRootNodeHash(Long legacySealsRootNodeHash) {
         this.legacySealsRootNodeHash = legacySealsRootNodeHash;
         return this;
@@ -135,6 +153,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long legacyTriumphsRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withLegacyTriumphsRootNodeHash(Long legacyTriumphsRootNodeHash) {
         this.legacyTriumphsRootNodeHash = legacyTriumphsRootNodeHash;
         return this;
@@ -142,6 +161,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long loadoutConstantsHash;
+
     public CommonModelsDestiny2CoreSettings withLoadoutConstantsHash(Long loadoutConstantsHash) {
         this.loadoutConstantsHash = loadoutConstantsHash;
         return this;
@@ -149,6 +169,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long loreRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withLoreRootNodeHash(Long loreRootNodeHash) {
         this.loreRootNodeHash = loreRootNodeHash;
         return this;
@@ -156,6 +177,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long medalsRootNode;
+
     public CommonModelsDestiny2CoreSettings withMedalsRootNode(Long medalsRootNode) {
         this.medalsRootNode = medalsRootNode;
         return this;
@@ -163,6 +185,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long medalsRootNodeHash;
+
     public CommonModelsDestiny2CoreSettings withMedalsRootNodeHash(Long medalsRootNodeHash) {
         this.medalsRootNodeHash = medalsRootNodeHash;
         return this;
@@ -170,6 +193,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long metricsRootNode;
+
     public CommonModelsDestiny2CoreSettings withMetricsRootNode(Long metricsRootNode) {
         this.metricsRootNode = metricsRootNode;
         return this;
@@ -177,6 +201,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long[] pastSeasonHashes;
+
     public CommonModelsDestiny2CoreSettings withPastSeasonHashes(Long[] pastSeasonHashes) {
         this.pastSeasonHashes = pastSeasonHashes;
         return this;
@@ -184,6 +209,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long recordsRootNode;
+
     public CommonModelsDestiny2CoreSettings withRecordsRootNode(Long recordsRootNode) {
         this.recordsRootNode = recordsRootNode;
         return this;
@@ -191,6 +217,7 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public Long seasonalChallengesPresentationNodeHash;
+
     public CommonModelsDestiny2CoreSettings withSeasonalChallengesPresentationNodeHash(Long seasonalChallengesPresentationNodeHash) {
         this.seasonalChallengesPresentationNodeHash = seasonalChallengesPresentationNodeHash;
         return this;
@@ -198,9 +225,11 @@ public class CommonModelsDestiny2CoreSettings {
     
     
     public String undiscoveredCollectibleImage;
+
     public CommonModelsDestiny2CoreSettings withUndiscoveredCollectibleImage(String undiscoveredCollectibleImage) {
         this.undiscoveredCollectibleImage = undiscoveredCollectibleImage;
         return this;
     }
     
+    public CommonModelsDestiny2CoreSettings(){}
 }

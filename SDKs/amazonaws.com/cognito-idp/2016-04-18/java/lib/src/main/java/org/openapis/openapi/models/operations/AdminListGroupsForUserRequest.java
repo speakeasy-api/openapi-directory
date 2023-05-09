@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminListGroupsForUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdminListGroupsForUserRequest adminListGroupsForUserRequest;
+
     public AdminListGroupsForUserRequest withAdminListGroupsForUserRequest(org.openapis.openapi.models.shared.AdminListGroupsForUserRequest adminListGroupsForUserRequest) {
         this.adminListGroupsForUserRequest = adminListGroupsForUserRequest;
         return this;
@@ -19,6 +21,7 @@ public class AdminListGroupsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
     public String limit;
+
     public AdminListGroupsForUserRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -29,6 +32,7 @@ public class AdminListGroupsForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public AdminListGroupsForUserRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AdminListGroupsForUserRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AdminListGroupsForUserRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AdminListGroupsForUserRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AdminListGroupsForUserRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AdminListGroupsForUserRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AdminListGroupsForUserRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AdminListGroupsForUserRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class AdminListGroupsForUserRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public AdminListGroupsForUserXAmzTargetEnum xAmzTarget;
+
     public AdminListGroupsForUserRequest withXAmzTarget(AdminListGroupsForUserXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public AdminListGroupsForUserRequest(@JsonProperty("AdminListGroupsForUserRequest") org.openapis.openapi.models.shared.AdminListGroupsForUserRequest adminListGroupsForUserRequest, @JsonProperty("X-Amz-Target") AdminListGroupsForUserXAmzTargetEnum xAmzTarget) {
+        this.adminListGroupsForUserRequest = adminListGroupsForUserRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

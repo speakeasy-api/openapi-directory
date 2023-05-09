@@ -8,7 +8,7 @@ import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * The Veteran Confirmation API allows you to confirm Veteran status for a given person. This can be useful for offering Veterans discounts or other benefits.
+ * The Deprecated Veteran Confirmation API allows you to confirm Veteran status for a given person. This can be useful for offering Veterans discounts or other benefits.
  * 
  * The API will only return \u201cConfirmed\u201d or \u201cNot Confirmed\u201d.
  * 
@@ -167,6 +167,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.veteranConfirmationStatus = new VeteranConfirmationStatus(

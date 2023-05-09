@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1DataSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public GoogleCloudDatacatalogV1DataSourceInput withResource(String resource) {
         this.resource = resource;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1DataSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public GoogleCloudDatacatalogV1DataSourceServiceEnum service;
+
     public GoogleCloudDatacatalogV1DataSourceInput withService(GoogleCloudDatacatalogV1DataSourceServiceEnum service) {
         this.service = service;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1DataSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageProperties")
     public GoogleCloudDatacatalogV1StorageProperties storageProperties;
+
     public GoogleCloudDatacatalogV1DataSourceInput withStorageProperties(GoogleCloudDatacatalogV1StorageProperties storageProperties) {
         this.storageProperties = storageProperties;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1DataSourceInput(){}
 }

@@ -15,6 +15,7 @@ public class PipeTargetCloudWatchLogsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogStreamName")
     public String logStreamName;
+
     public PipeTargetCloudWatchLogsParameters withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -23,9 +24,11 @@ public class PipeTargetCloudWatchLogsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public String timestamp;
+
     public PipeTargetCloudWatchLogsParameters withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PipeTargetCloudWatchLogsParameters(){}
 }

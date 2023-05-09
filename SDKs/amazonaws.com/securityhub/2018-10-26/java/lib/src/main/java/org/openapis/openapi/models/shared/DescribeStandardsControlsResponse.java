@@ -15,6 +15,7 @@ public class DescribeStandardsControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Controls")
     public StandardsControl[] controls;
+
     public DescribeStandardsControlsResponse withControls(StandardsControl[] controls) {
         this.controls = controls;
         return this;
@@ -23,9 +24,11 @@ public class DescribeStandardsControlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeStandardsControlsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeStandardsControlsResponse(){}
 }

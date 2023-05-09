@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTextAutoReplyResponse {
     
     public String contentType;
+
     public GetTextAutoReplyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTextAutoReplyResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetTextAutoReplyResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetTextAutoReplyResponse {
     
     
     public Integer statusCode;
+
     public GetTextAutoReplyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetTextAutoReplyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTextAutoReplyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetTextAutoReplyResponse {
      */
     
     public org.openapis.openapi.models.shared.TextAutoReply textAutoReply;
+
     public GetTextAutoReplyResponse withTextAutoReply(org.openapis.openapi.models.shared.TextAutoReply textAutoReply) {
         this.textAutoReply = textAutoReply;
         return this;
     }
     
+    public GetTextAutoReplyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

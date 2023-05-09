@@ -12,6 +12,7 @@ public class TransferCredit422ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TransferCredit422ApplicationJSONInvalidParameters withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class TransferCredit422ApplicationJSONInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public TransferCredit422ApplicationJSONInvalidParameters withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public TransferCredit422ApplicationJSONInvalidParameters(){}
 }

@@ -58,11 +58,9 @@ public class Userinfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Oauth2UserinfoGetResponse res = new org.openapis.openapi.models.operations.Oauth2UserinfoGetResponse() {{
+        org.openapis.openapi.models.operations.Oauth2UserinfoGetResponse res = new org.openapis.openapi.models.operations.Oauth2UserinfoGetResponse(contentType, httpRes.statusCode()) {{
             userinfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Userinfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetResponse res = new org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetResponse() {{
+        org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetResponse res = new org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetResponse(contentType, httpRes.statusCode()) {{
             userinfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

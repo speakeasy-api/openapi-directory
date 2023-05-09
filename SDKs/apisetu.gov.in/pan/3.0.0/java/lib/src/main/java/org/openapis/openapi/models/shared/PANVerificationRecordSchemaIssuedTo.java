@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PANVerificationRecordSchemaIssuedTo {
     
     public PANVerificationRecordSchemaIssuedToPerson person;
+
     public PANVerificationRecordSchemaIssuedTo withPerson(PANVerificationRecordSchemaIssuedToPerson person) {
         this.person = person;
         return this;
     }
     
+    public PANVerificationRecordSchemaIssuedTo(@JsonProperty("Person") PANVerificationRecordSchemaIssuedToPerson person) {
+        this.person = person;
+  }
 }

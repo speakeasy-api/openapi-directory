@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStreamKeyResponse {
@@ -12,6 +13,7 @@ public class DeleteStreamKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteStreamKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteStreamKeyResponse {
     
     
     public String contentType;
+
     public DeleteStreamKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStreamKeyResponse {
      */
     
     public Object pendingVerification;
+
     public DeleteStreamKeyResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStreamKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteStreamKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteStreamKeyResponse {
     
     
     public Integer statusCode;
+
     public DeleteStreamKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteStreamKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStreamKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteStreamKeyResponse {
      */
     
     public Object validationException;
+
     public DeleteStreamKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteStreamKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -55,11 +55,9 @@ public class Team {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamTeamnameResponse res = new org.openapis.openapi.models.operations.GetTeamTeamnameResponse() {{
+        org.openapis.openapi.models.operations.GetTeamTeamnameResponse res = new org.openapis.openapi.models.operations.GetTeamTeamnameResponse(contentType, httpRes.statusCode()) {{
             getTeamTeamname200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

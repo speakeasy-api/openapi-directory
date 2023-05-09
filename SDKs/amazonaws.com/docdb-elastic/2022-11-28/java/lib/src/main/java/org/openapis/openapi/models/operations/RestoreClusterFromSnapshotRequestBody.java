@@ -14,6 +14,7 @@ public class RestoreClusterFromSnapshotRequestBody {
      */
     @JsonProperty("clusterName")
     public String clusterName;
+
     public RestoreClusterFromSnapshotRequestBody withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -25,6 +26,7 @@ public class RestoreClusterFromSnapshotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public RestoreClusterFromSnapshotRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -36,6 +38,7 @@ public class RestoreClusterFromSnapshotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public RestoreClusterFromSnapshotRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -47,6 +50,7 @@ public class RestoreClusterFromSnapshotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public RestoreClusterFromSnapshotRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,9 +62,13 @@ public class RestoreClusterFromSnapshotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public RestoreClusterFromSnapshotRequestBody withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public RestoreClusterFromSnapshotRequestBody(@JsonProperty("clusterName") String clusterName) {
+        this.clusterName = clusterName;
+  }
 }

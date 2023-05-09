@@ -12,6 +12,7 @@ public class SearchSystemInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public SystemInstanceFilter[] filters;
+
     public SearchSystemInstancesRequest withFilters(SystemInstanceFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class SearchSystemInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchSystemInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class SearchSystemInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchSystemInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchSystemInstancesRequest(){}
 }

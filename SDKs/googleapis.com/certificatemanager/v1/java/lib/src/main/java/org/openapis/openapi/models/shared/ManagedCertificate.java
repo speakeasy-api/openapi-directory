@@ -18,6 +18,7 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationAttemptInfo")
     public AuthorizationAttemptInfo[] authorizationAttemptInfo;
+
     public ManagedCertificate withAuthorizationAttemptInfo(AuthorizationAttemptInfo[] authorizationAttemptInfo) {
         this.authorizationAttemptInfo = authorizationAttemptInfo;
         return this;
@@ -29,6 +30,7 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsAuthorizations")
     public String[] dnsAuthorizations;
+
     public ManagedCertificate withDnsAuthorizations(String[] dnsAuthorizations) {
         this.dnsAuthorizations = dnsAuthorizations;
         return this;
@@ -40,6 +42,7 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public ManagedCertificate withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -51,6 +54,7 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuanceConfig")
     public String issuanceConfig;
+
     public ManagedCertificate withIssuanceConfig(String issuanceConfig) {
         this.issuanceConfig = issuanceConfig;
         return this;
@@ -62,6 +66,7 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningIssue")
     public ProvisioningIssue provisioningIssue;
+
     public ManagedCertificate withProvisioningIssue(ProvisioningIssue provisioningIssue) {
         this.provisioningIssue = provisioningIssue;
         return this;
@@ -73,9 +78,11 @@ public class ManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ManagedCertificateStateEnum state;
+
     public ManagedCertificate withState(ManagedCertificateStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ManagedCertificate(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScoreCommentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ScoreCommentUpdate scoreCommentUpdate;
+
     public UpdateScoreCommentRequest withScoreCommentUpdate(org.openapis.openapi.models.shared.ScoreCommentUpdate scoreCommentUpdate) {
         this.scoreCommentUpdate = scoreCommentUpdate;
         return this;
@@ -20,6 +22,7 @@ public class UpdateScoreCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
     public String comment;
+
     public UpdateScoreCommentRequest withComment(String comment) {
         this.comment = comment;
         return this;
@@ -31,6 +34,7 @@ public class UpdateScoreCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public UpdateScoreCommentRequest withScore(String score) {
         this.score = score;
         return this;
@@ -42,9 +46,15 @@ public class UpdateScoreCommentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
     public String sharingKey;
+
     public UpdateScoreCommentRequest withSharingKey(String sharingKey) {
         this.sharingKey = sharingKey;
         return this;
     }
     
+    public UpdateScoreCommentRequest(@JsonProperty("ScoreCommentUpdate") org.openapis.openapi.models.shared.ScoreCommentUpdate scoreCommentUpdate, @JsonProperty("comment") String comment, @JsonProperty("score") String score) {
+        this.scoreCommentUpdate = scoreCommentUpdate;
+        this.comment = comment;
+        this.score = score;
+  }
 }

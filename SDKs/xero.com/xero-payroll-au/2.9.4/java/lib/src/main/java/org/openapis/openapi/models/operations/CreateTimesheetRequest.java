@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTimesheetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TimesheetInput[] requestBody;
+
     public CreateTimesheetRequest withRequestBody(org.openapis.openapi.models.shared.TimesheetInput[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreateTimesheetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public CreateTimesheetRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public CreateTimesheetRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.TimesheetInput[] requestBody, @JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.requestBody = requestBody;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

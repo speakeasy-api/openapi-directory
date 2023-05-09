@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PurchaseReservedDBInstancesOfferingMessage {
     
     public Long dbInstanceCount;
+
     public PurchaseReservedDBInstancesOfferingMessage withDBInstanceCount(Long dbInstanceCount) {
         this.dbInstanceCount = dbInstanceCount;
         return this;
@@ -16,6 +17,7 @@ public class PurchaseReservedDBInstancesOfferingMessage {
     
     
     public String reservedDBInstanceId;
+
     public PurchaseReservedDBInstancesOfferingMessage withReservedDBInstanceId(String reservedDBInstanceId) {
         this.reservedDBInstanceId = reservedDBInstanceId;
         return this;
@@ -23,6 +25,7 @@ public class PurchaseReservedDBInstancesOfferingMessage {
     
     
     public String reservedDBInstancesOfferingId;
+
     public PurchaseReservedDBInstancesOfferingMessage withReservedDBInstancesOfferingId(String reservedDBInstancesOfferingId) {
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
@@ -30,9 +33,13 @@ public class PurchaseReservedDBInstancesOfferingMessage {
     
     
     public TagList[] tags;
+
     public PurchaseReservedDBInstancesOfferingMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PurchaseReservedDBInstancesOfferingMessage(@JsonProperty("ReservedDBInstancesOfferingId") String reservedDBInstancesOfferingId) {
+        this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
+  }
 }

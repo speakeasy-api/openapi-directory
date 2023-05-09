@@ -15,6 +15,7 @@ public class GetReplicationRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetReplicationRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class GetReplicationRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationJob")
     public ReplicationJob replicationJob;
+
     public GetReplicationRunsResponse withReplicationJob(ReplicationJob replicationJob) {
         this.replicationJob = replicationJob;
         return this;
@@ -31,9 +33,11 @@ public class GetReplicationRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationRunList")
     public ReplicationRun[] replicationRunList;
+
     public GetReplicationRunsResponse withReplicationRunList(ReplicationRun[] replicationRunList) {
         this.replicationRunList = replicationRunList;
         return this;
     }
     
+    public GetReplicationRunsResponse(){}
 }

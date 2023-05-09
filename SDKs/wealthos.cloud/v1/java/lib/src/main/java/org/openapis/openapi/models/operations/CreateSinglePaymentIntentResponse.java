@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSinglePaymentIntentResponse {
     
     public String contentType;
+
     public CreateSinglePaymentIntentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateSinglePaymentIntentResponse {
     
     
     public Integer statusCode;
+
     public CreateSinglePaymentIntentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateSinglePaymentIntentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSinglePaymentIntentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateSinglePaymentIntentResponse {
      */
     
     public CreateSinglePaymentIntent201ApplicationJSON createSinglePaymentIntent201ApplicationJSONObject;
+
     public CreateSinglePaymentIntentResponse withCreateSinglePaymentIntent201ApplicationJSONObject(CreateSinglePaymentIntent201ApplicationJSON createSinglePaymentIntent201ApplicationJSONObject) {
         this.createSinglePaymentIntent201ApplicationJSONObject = createSinglePaymentIntent201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateSinglePaymentIntentResponse {
      */
     
     public CreateSinglePaymentIntent400ApplicationJSON createSinglePaymentIntent400ApplicationJSONObject;
+
     public CreateSinglePaymentIntentResponse withCreateSinglePaymentIntent400ApplicationJSONObject(CreateSinglePaymentIntent400ApplicationJSON createSinglePaymentIntent400ApplicationJSONObject) {
         this.createSinglePaymentIntent400ApplicationJSONObject = createSinglePaymentIntent400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateSinglePaymentIntentResponse {
      */
     
     public CreateSinglePaymentIntent401ApplicationJSON createSinglePaymentIntent401ApplicationJSONObject;
+
     public CreateSinglePaymentIntentResponse withCreateSinglePaymentIntent401ApplicationJSONObject(CreateSinglePaymentIntent401ApplicationJSON createSinglePaymentIntent401ApplicationJSONObject) {
         this.createSinglePaymentIntent401ApplicationJSONObject = createSinglePaymentIntent401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CreateSinglePaymentIntentResponse {
      */
     
     public CreateSinglePaymentIntent403ApplicationJSON createSinglePaymentIntent403ApplicationJSONObject;
+
     public CreateSinglePaymentIntentResponse withCreateSinglePaymentIntent403ApplicationJSONObject(CreateSinglePaymentIntent403ApplicationJSON createSinglePaymentIntent403ApplicationJSONObject) {
         this.createSinglePaymentIntent403ApplicationJSONObject = createSinglePaymentIntent403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CreateSinglePaymentIntentResponse {
      */
     
     public CreateSinglePaymentIntent409ApplicationJSON createSinglePaymentIntent409ApplicationJSONObject;
+
     public CreateSinglePaymentIntentResponse withCreateSinglePaymentIntent409ApplicationJSONObject(CreateSinglePaymentIntent409ApplicationJSON createSinglePaymentIntent409ApplicationJSONObject) {
         this.createSinglePaymentIntent409ApplicationJSONObject = createSinglePaymentIntent409ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CreateSinglePaymentIntentResponse {
      */
     
     public CreateSinglePaymentIntent429ApplicationJSON createSinglePaymentIntent429ApplicationJSONObject;
+
     public CreateSinglePaymentIntentResponse withCreateSinglePaymentIntent429ApplicationJSONObject(CreateSinglePaymentIntent429ApplicationJSON createSinglePaymentIntent429ApplicationJSONObject) {
         this.createSinglePaymentIntent429ApplicationJSONObject = createSinglePaymentIntent429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CreateSinglePaymentIntentResponse {
      */
     
     public CreateSinglePaymentIntent500ApplicationJSON createSinglePaymentIntent500ApplicationJSONObject;
+
     public CreateSinglePaymentIntentResponse withCreateSinglePaymentIntent500ApplicationJSONObject(CreateSinglePaymentIntent500ApplicationJSON createSinglePaymentIntent500ApplicationJSONObject) {
         this.createSinglePaymentIntent500ApplicationJSONObject = createSinglePaymentIntent500ApplicationJSONObject;
         return this;
     }
     
+    public CreateSinglePaymentIntentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

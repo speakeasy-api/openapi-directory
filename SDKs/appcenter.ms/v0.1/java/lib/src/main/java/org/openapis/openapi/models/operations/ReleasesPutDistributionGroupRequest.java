@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesPutDistributionGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReleasesPutDistributionGroupRequestBody requestBody;
+
     public ReleasesPutDistributionGroupRequest withRequestBody(ReleasesPutDistributionGroupRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReleasesPutDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesPutDistributionGroupRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class ReleasesPutDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
     public String groupId;
+
     public ReleasesPutDistributionGroupRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -39,6 +43,7 @@ public class ReleasesPutDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesPutDistributionGroupRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -49,9 +54,16 @@ public class ReleasesPutDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReleasesPutDistributionGroupRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
     }
     
+    public ReleasesPutDistributionGroupRequest(@JsonProperty("app_name") String appName, @JsonProperty("group_id") String groupId, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") Long releaseId) {
+        this.appName = appName;
+        this.groupId = groupId;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+  }
 }

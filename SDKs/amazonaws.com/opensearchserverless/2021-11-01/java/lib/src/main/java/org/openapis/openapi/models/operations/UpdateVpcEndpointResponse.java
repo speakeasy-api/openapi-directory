@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVpcEndpointResponse {
@@ -12,6 +13,7 @@ public class UpdateVpcEndpointResponse {
      */
     
     public Object conflictException;
+
     public UpdateVpcEndpointResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVpcEndpointResponse {
     
     
     public String contentType;
+
     public UpdateVpcEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVpcEndpointResponse {
      */
     
     public Object internalServerException;
+
     public UpdateVpcEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateVpcEndpointResponse {
     
     
     public Integer statusCode;
+
     public UpdateVpcEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateVpcEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVpcEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateVpcEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVpcEndpointResponse updateVpcEndpointResponse;
+
     public UpdateVpcEndpointResponse withUpdateVpcEndpointResponse(org.openapis.openapi.models.shared.UpdateVpcEndpointResponse updateVpcEndpointResponse) {
         this.updateVpcEndpointResponse = updateVpcEndpointResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateVpcEndpointResponse {
      */
     
     public Object validationException;
+
     public UpdateVpcEndpointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateVpcEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

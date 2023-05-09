@@ -18,6 +18,7 @@ public class SandboxUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public SandboxBankAccount[] accounts;
+
     public SandboxUser withAccounts(SandboxBankAccount[] accounts) {
         this.accounts = accounts;
         return this;
@@ -29,6 +30,7 @@ public class SandboxUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public SandboxCard[] cards;
+
     public SandboxUser withCards(SandboxCard[] cards) {
         this.cards = cards;
         return this;
@@ -40,6 +42,7 @@ public class SandboxUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryCacheEntries")
     public SandboxRetryCacheEntry[] retryCacheEntries;
+
     public SandboxUser withRetryCacheEntries(SandboxRetryCacheEntry[] retryCacheEntries) {
         this.retryCacheEntries = retryCacheEntries;
         return this;
@@ -51,9 +54,11 @@ public class SandboxUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public SandboxUser withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public SandboxUser(){}
 }

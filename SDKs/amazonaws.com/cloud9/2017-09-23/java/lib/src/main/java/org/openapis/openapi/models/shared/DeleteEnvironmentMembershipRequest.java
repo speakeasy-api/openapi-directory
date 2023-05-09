@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEnvironmentMembershipRequest {
     @JsonProperty("environmentId")
     public String environmentId;
+
     public DeleteEnvironmentMembershipRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteEnvironmentMembershipRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public DeleteEnvironmentMembershipRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public DeleteEnvironmentMembershipRequest(@JsonProperty("environmentId") String environmentId, @JsonProperty("userArn") String userArn) {
+        this.environmentId = environmentId;
+        this.userArn = userArn;
+  }
 }

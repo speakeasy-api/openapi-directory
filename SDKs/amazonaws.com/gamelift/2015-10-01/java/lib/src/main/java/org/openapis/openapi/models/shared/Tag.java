@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Tag - &lt;p&gt;A label that can be assigned to a GameLift resource. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
+ * Tag - &lt;p&gt;A label that you can assign to a Amazon GameLift resource. &lt;/p&gt; &lt;p&gt; &lt;b&gt;Learn more&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services Resources&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"&gt; Amazon Web Services Tagging Strategies&lt;/a&gt; &lt;/p&gt; &lt;p&gt; &lt;b&gt;Related actions&lt;/b&gt; &lt;/p&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html#reference-awssdk-resources-fleets"&gt;All APIs by task&lt;/a&gt; &lt;/p&gt;
  */
 public class Tag {
     @JsonProperty("Key")
     public String key;
+
     public Tag withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class Tag {
     
     @JsonProperty("Value")
     public String value;
+
     public Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Tag(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

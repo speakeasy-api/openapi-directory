@@ -18,9 +18,11 @@ public class SasPortalProvisionDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public SasPortalProvisionDeploymentResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public SasPortalProvisionDeploymentResponse(){}
 }

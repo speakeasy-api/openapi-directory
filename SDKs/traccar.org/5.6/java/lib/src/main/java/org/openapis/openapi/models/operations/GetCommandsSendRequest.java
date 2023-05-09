@@ -12,9 +12,11 @@ public class GetCommandsSendRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public Long deviceId;
+
     public GetCommandsSendRequest withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public GetCommandsSendRequest(){}
 }

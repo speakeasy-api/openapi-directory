@@ -14,6 +14,7 @@ public class UpdateBudgetActionRequest {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public UpdateBudgetActionRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class UpdateBudgetActionRequest {
     
     @JsonProperty("ActionId")
     public String actionId;
+
     public UpdateBudgetActionRequest withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -32,6 +34,7 @@ public class UpdateBudgetActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionThreshold")
     public ActionThreshold actionThreshold;
+
     public UpdateBudgetActionRequest withActionThreshold(ActionThreshold actionThreshold) {
         this.actionThreshold = actionThreshold;
         return this;
@@ -40,6 +43,7 @@ public class UpdateBudgetActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovalModel")
     public ApprovalModelEnum approvalModel;
+
     public UpdateBudgetActionRequest withApprovalModel(ApprovalModelEnum approvalModel) {
         this.approvalModel = approvalModel;
         return this;
@@ -50,6 +54,7 @@ public class UpdateBudgetActionRequest {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public UpdateBudgetActionRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -61,6 +66,7 @@ public class UpdateBudgetActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public Definition definition;
+
     public UpdateBudgetActionRequest withDefinition(Definition definition) {
         this.definition = definition;
         return this;
@@ -69,6 +75,7 @@ public class UpdateBudgetActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public UpdateBudgetActionRequest withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -80,6 +87,7 @@ public class UpdateBudgetActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationType")
     public NotificationTypeEnum notificationType;
+
     public UpdateBudgetActionRequest withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -91,9 +99,15 @@ public class UpdateBudgetActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subscribers")
     public Subscriber[] subscribers;
+
     public UpdateBudgetActionRequest withSubscribers(Subscriber[] subscribers) {
         this.subscribers = subscribers;
         return this;
     }
     
+    public UpdateBudgetActionRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("ActionId") String actionId, @JsonProperty("BudgetName") String budgetName) {
+        this.accountId = accountId;
+        this.actionId = actionId;
+        this.budgetName = budgetName;
+  }
 }

@@ -12,6 +12,7 @@ public class CalculateReachableRangePostDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowVignette")
     public String[] allowVignette;
+
     public CalculateReachableRangePostDataParameters withAllowVignette(String[] allowVignette) {
         this.allowVignette = allowVignette;
         return this;
@@ -20,6 +21,7 @@ public class CalculateReachableRangePostDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidAreas")
     public CalculateReachableRangePostDataParametersAvoidAreas avoidAreas;
+
     public CalculateReachableRangePostDataParameters withAvoidAreas(CalculateReachableRangePostDataParametersAvoidAreas avoidAreas) {
         this.avoidAreas = avoidAreas;
         return this;
@@ -28,9 +30,11 @@ public class CalculateReachableRangePostDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avoidVignette")
     public String[] avoidVignette;
+
     public CalculateReachableRangePostDataParameters withAvoidVignette(String[] avoidVignette) {
         this.avoidVignette = avoidVignette;
         return this;
     }
     
+    public CalculateReachableRangePostDataParameters(){}
 }

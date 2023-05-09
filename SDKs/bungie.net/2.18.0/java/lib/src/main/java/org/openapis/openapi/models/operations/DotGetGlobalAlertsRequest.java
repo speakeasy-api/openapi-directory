@@ -12,9 +12,11 @@ public class DotGetGlobalAlertsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includestreaming")
     public Boolean includestreaming;
+
     public DotGetGlobalAlertsRequest withIncludestreaming(Boolean includestreaming) {
         this.includestreaming = includestreaming;
         return this;
     }
     
+    public DotGetGlobalAlertsRequest(){}
 }

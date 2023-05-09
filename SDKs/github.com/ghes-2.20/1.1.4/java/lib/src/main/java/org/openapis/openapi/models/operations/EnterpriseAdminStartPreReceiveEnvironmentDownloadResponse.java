@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse {
     
     public String contentType;
+
     public EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse {
      */
     
     public EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSON enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject;
+
     public EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse withEnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject(EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSON enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject) {
         this.enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject = enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse {
      */
     
     public org.openapis.openapi.models.shared.PreReceiveEnvironmentDownloadStatus preReceiveEnvironmentDownloadStatus;
+
     public EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse withPreReceiveEnvironmentDownloadStatus(org.openapis.openapi.models.shared.PreReceiveEnvironmentDownloadStatus preReceiveEnvironmentDownloadStatus) {
         this.preReceiveEnvironmentDownloadStatus = preReceiveEnvironmentDownloadStatus;
         return this;
     }
     
+    public EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

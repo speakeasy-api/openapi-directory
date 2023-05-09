@@ -3,44 +3,43 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption1;
-import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption2;
-import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurity;
 import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsRequest;
 import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsResponse;
+import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurity;
+import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption1;
+import org.openapis.openapi.models.operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchRunPivotReportsRequest;
-import org.openapis.openapi.models.shared.RunPivotReportRequest;
-import org.openapis.openapi.models.shared.PivotMetricAggregationsEnum;
-import org.openapis.openapi.models.shared.Pivot;
-import org.openapis.openapi.models.shared.OrderBy;
-import org.openapis.openapi.models.shared.PivotOrderBy;
-import org.openapis.openapi.models.shared.PivotSelection;
-import org.openapis.openapi.models.shared.MetricOrderBy;
-import org.openapis.openapi.models.shared.DimensionOrderByOrderTypeEnum;
-import org.openapis.openapi.models.shared.DimensionOrderBy;
-import org.openapis.openapi.models.shared.Metric;
-import org.openapis.openapi.models.shared.FilterExpression;
-import org.openapis.openapi.models.shared.FilterExpressionList;
-import org.openapis.openapi.models.shared.Filter;
-import org.openapis.openapi.models.shared.StringFilterMatchTypeEnum;
-import org.openapis.openapi.models.shared.StringFilter;
-import org.openapis.openapi.models.shared.NumericFilterOperationEnum;
-import org.openapis.openapi.models.shared.NumericFilter;
-import org.openapis.openapi.models.shared.NumericValue;
-import org.openapis.openapi.models.shared.InListFilter;
 import org.openapis.openapi.models.shared.BetweenFilter;
-import org.openapis.openapi.models.shared.Dimension;
-import org.openapis.openapi.models.shared.DimensionExpression;
 import org.openapis.openapi.models.shared.CaseExpression;
-import org.openapis.openapi.models.shared.ConcatenateExpression;
-import org.openapis.openapi.models.shared.DateRange;
-import org.openapis.openapi.models.shared.CohortSpec;
-import org.openapis.openapi.models.shared.CohortsRangeGranularityEnum;
-import org.openapis.openapi.models.shared.CohortsRange;
 import org.openapis.openapi.models.shared.Cohort;
 import org.openapis.openapi.models.shared.CohortReportSettings;
+import org.openapis.openapi.models.shared.CohortSpec;
+import org.openapis.openapi.models.shared.CohortsRange;
+import org.openapis.openapi.models.shared.CohortsRangeGranularityEnum;
+import org.openapis.openapi.models.shared.ConcatenateExpression;
+import org.openapis.openapi.models.shared.DateRange;
+import org.openapis.openapi.models.shared.Dimension;
+import org.openapis.openapi.models.shared.DimensionExpression;
+import org.openapis.openapi.models.shared.DimensionOrderBy;
+import org.openapis.openapi.models.shared.DimensionOrderByOrderTypeEnum;
+import org.openapis.openapi.models.shared.Filter;
+import org.openapis.openapi.models.shared.FilterExpression;
+import org.openapis.openapi.models.shared.FilterExpressionList;
+import org.openapis.openapi.models.shared.InListFilter;
+import org.openapis.openapi.models.shared.Metric;
+import org.openapis.openapi.models.shared.MetricOrderBy;
+import org.openapis.openapi.models.shared.NumericFilter;
+import org.openapis.openapi.models.shared.NumericFilterOperationEnum;
+import org.openapis.openapi.models.shared.NumericValue;
+import org.openapis.openapi.models.shared.OrderBy;
+import org.openapis.openapi.models.shared.Pivot;
+import org.openapis.openapi.models.shared.PivotMetricAggregationsEnum;
+import org.openapis.openapi.models.shared.PivotOrderBy;
+import org.openapis.openapi.models.shared.PivotSelection;
+import org.openapis.openapi.models.shared.RunPivotReportRequest;
+import org.openapis.openapi.models.shared.StringFilter;
+import org.openapis.openapi.models.shared.StringFilterMatchTypeEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -49,8 +48,8 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AnalyticsdataPropertiesBatchRunPivotReportsRequest req = new AnalyticsdataPropertiesBatchRunPivotReportsRequest() {{
-                dollarXgafv = "2";
+            AnalyticsdataPropertiesBatchRunPivotReportsRequest req = new AnalyticsdataPropertiesBatchRunPivotReportsRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 batchRunPivotReportsRequest = new BatchRunPivotReportsRequest() {{
                     requests = new org.openapis.openapi.models.shared.RunPivotReportRequest[]{{
                         add(new RunPivotReportRequest() {{
@@ -61,54 +60,63 @@ public class Application {
                                 cohorts = new org.openapis.openapi.models.shared.Cohort[]{{
                                     add(new Cohort() {{
                                         dateRange = new DateRange() {{
-                                            endDate = "quibusdam";
-                                            name = "unde";
-                                            startDate = "nulla";
-                                        }};
-                                        dimension = "corrupti";
-                                        name = "illum";
-                                    }}),
-                                    add(new Cohort() {{
-                                        dateRange = new DateRange() {{
-                                            endDate = "vel";
-                                            name = "error";
+                                            endDate = "unde";
+                                            name = "Johnnie Stamm";
                                             startDate = "deserunt";
                                         }};
                                         dimension = "suscipit";
-                                        name = "iure";
+                                        name = "Dr. Valerie Toy";
                                     }}),
                                     add(new Cohort() {{
                                         dateRange = new DateRange() {{
-                                            endDate = "magnam";
-                                            name = "debitis";
-                                            startDate = "ipsa";
+                                            endDate = "suscipit";
+                                            name = "Alexandra Schulist";
+                                            startDate = "excepturi";
                                         }};
-                                        dimension = "delectus";
-                                        name = "tempora";
+                                        dimension = "nisi";
+                                        name = "Jake Bernier MD";
+                                    }}),
+                                    add(new Cohort() {{
+                                        dateRange = new DateRange() {{
+                                            endDate = "perferendis";
+                                            name = "Estelle Will";
+                                            startDate = "at";
+                                        }};
+                                        dimension = "at";
+                                        name = "Javier Schmidt";
+                                    }}),
+                                    add(new Cohort() {{
+                                        dateRange = new DateRange() {{
+                                            endDate = "totam";
+                                            name = "Omar Carroll";
+                                            startDate = "occaecati";
+                                        }};
+                                        dimension = "fugit";
+                                        name = "Irvin Rosenbaum III";
                                     }}),
                                 }};
                                 cohortsRange = new CohortsRange() {{
-                                    endOffset = 383441;
-                                    granularity = "DAILY";
-                                    startOffset = 791725;
+                                    endOffset = 473600;
+                                    granularity = CohortsRangeGranularityEnum.DAILY;
+                                    startOffset = 186332;
                                 }};
                             }};
-                            currencyCode = "placeat";
+                            currencyCode = "impedit";
                             dateRanges = new org.openapis.openapi.models.shared.DateRange[]{{
                                 add(new DateRange() {{
-                                    endDate = "iusto";
-                                    name = "excepturi";
-                                    startDate = "nisi";
+                                    endDate = "esse";
+                                    name = "Mrs. Miriam Collier";
+                                    startDate = "sed";
                                 }}),
                                 add(new DateRange() {{
-                                    endDate = "recusandae";
-                                    name = "temporibus";
-                                    startDate = "ab";
+                                    endDate = "iste";
+                                    name = "Faye Howe";
+                                    startDate = "fuga";
                                 }}),
                                 add(new DateRange() {{
-                                    endDate = "quis";
-                                    name = "veritatis";
-                                    startDate = "deserunt";
+                                    endDate = "in";
+                                    name = "Sheryl Kertzmann";
+                                    startDate = "architecto";
                                 }}),
                             }};
                             dimensionFilter = new FilterExpression() {{
@@ -120,35 +128,138 @@ public class Application {
                                 filter = new Filter() {{
                                     betweenFilter = new BetweenFilter() {{
                                         fromValue = new NumericValue() {{
-                                            doubleValue = 3682.41;
-                                            int64Value = "repellendus";
+                                            doubleValue = 9698.1;
+                                            int64Value = "est";
                                         }};
                                         toValue = new NumericValue() {{
-                                            doubleValue = 9571.56;
-                                            int64Value = "quo";
+                                            doubleValue = 6531.4;
+                                            int64Value = "laborum";
                                         }};
                                     }};
-                                    fieldName = "odit";
+                                    fieldName = "dolores";
                                     inListFilter = new InListFilter() {{
                                         caseSensitive = false;
                                         values = new String[]{{
-                                            add("at"),
-                                            add("maiores"),
-                                            add("molestiae"),
-                                            add("quod"),
+                                            add("corporis"),
                                         }};
                                     }};
                                     numericFilter = new NumericFilter() {{
-                                        operation = "GREATER_THAN";
+                                        operation = NumericFilterOperationEnum.OPERATION_UNSPECIFIED;
                                         value = new NumericValue() {{
-                                            doubleValue = 4614.79;
-                                            int64Value = "totam";
+                                            doubleValue = 7506.86;
+                                            int64Value = "enim";
                                         }};
                                     }};
                                     stringFilter = new StringFilter() {{
                                         caseSensitive = false;
-                                        matchType = "FULL_REGEXP";
-                                        value = "dolorum";
+                                        matchType = StringFilterMatchTypeEnum.CONTAINS;
+                                        value = "nemo";
+                                    }};
+                                }};
+                                notExpression = new FilterExpression() {{}};
+                                orGroup = new FilterExpressionList() {{
+                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                    }};
+                                }};
+                            }};
+                            dimensions = new org.openapis.openapi.models.shared.Dimension[]{{
+                                add(new Dimension() {{
+                                    dimensionExpression = new DimensionExpression() {{
+                                        concatenate = new ConcatenateExpression() {{
+                                            delimiter = "accusantium";
+                                            dimensionNames = new String[]{{
+                                                add("culpa"),
+                                                add("doloribus"),
+                                            }};
+                                        }};
+                                        lowerCase = new CaseExpression() {{
+                                            dimensionName = "sapiente";
+                                        }};
+                                        upperCase = new CaseExpression() {{
+                                            dimensionName = "architecto";
+                                        }};
+                                    }};
+                                    name = "Mike Nicolas";
+                                }}),
+                                add(new Dimension() {{
+                                    dimensionExpression = new DimensionExpression() {{
+                                        concatenate = new ConcatenateExpression() {{
+                                            delimiter = "mollitia";
+                                            dimensionNames = new String[]{{
+                                                add("numquam"),
+                                                add("commodi"),
+                                                add("quam"),
+                                            }};
+                                        }};
+                                        lowerCase = new CaseExpression() {{
+                                            dimensionName = "molestiae";
+                                        }};
+                                        upperCase = new CaseExpression() {{
+                                            dimensionName = "velit";
+                                        }};
+                                    }};
+                                    name = "Miss Eugene Hauck";
+                                }}),
+                                add(new Dimension() {{
+                                    dimensionExpression = new DimensionExpression() {{
+                                        concatenate = new ConcatenateExpression() {{
+                                            delimiter = "enim";
+                                            dimensionNames = new String[]{{
+                                                add("quo"),
+                                            }};
+                                        }};
+                                        lowerCase = new CaseExpression() {{
+                                            dimensionName = "sequi";
+                                        }};
+                                        upperCase = new CaseExpression() {{
+                                            dimensionName = "tenetur";
+                                        }};
+                                    }};
+                                    name = "Mr. Alberta Schuster";
+                                }}),
+                            }};
+                            keepEmptyRows = false;
+                            metricFilter = new FilterExpression() {{
+                                andGroup = new FilterExpressionList() {{
+                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                    }};
+                                }};
+                                filter = new Filter() {{
+                                    betweenFilter = new BetweenFilter() {{
+                                        fromValue = new NumericValue() {{
+                                            doubleValue = 6736.6;
+                                            int64Value = "quasi";
+                                        }};
+                                        toValue = new NumericValue() {{
+                                            doubleValue = 9719.45;
+                                            int64Value = "voluptatibus";
+                                        }};
+                                    }};
+                                    fieldName = "vero";
+                                    inListFilter = new InListFilter() {{
+                                        caseSensitive = false;
+                                        values = new String[]{{
+                                            add("praesentium"),
+                                            add("voluptatibus"),
+                                        }};
+                                    }};
+                                    numericFilter = new NumericFilter() {{
+                                        operation = NumericFilterOperationEnum.OPERATION_UNSPECIFIED;
+                                        value = new NumericValue() {{
+                                            doubleValue = 6048.46;
+                                            int64Value = "voluptate";
+                                        }};
+                                    }};
+                                    stringFilter = new StringFilter() {{
+                                        caseSensitive = false;
+                                        matchType = StringFilterMatchTypeEnum.FULL_REGEXP;
+                                        value = "perferendis";
                                     }};
                                 }};
                                 notExpression = new FilterExpression() {{}};
@@ -158,62 +269,330 @@ public class Application {
                                     }};
                                 }};
                             }};
+                            metrics = new org.openapis.openapi.models.shared.Metric[]{{
+                                add(new Metric() {{
+                                    expression = "ut";
+                                    invisible = false;
+                                    name = "Willie Hessel";
+                                }}),
+                                add(new Metric() {{
+                                    expression = "dicta";
+                                    invisible = false;
+                                    name = "Bill Thompson";
+                                }}),
+                            }};
+                            pivots = new org.openapis.openapi.models.shared.Pivot[]{{
+                                add(new Pivot() {{
+                                    fieldNames = new String[]{{
+                                        add("quidem"),
+                                    }};
+                                    limit = "molestias";
+                                    metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
+                                        add(PivotMetricAggregationsEnum.COUNT),
+                                        add(PivotMetricAggregationsEnum.TOTAL),
+                                        add(PivotMetricAggregationsEnum.MINIMUM),
+                                    }};
+                                    offset = "rem";
+                                    orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "quasi";
+                                                orderType = DimensionOrderByOrderTypeEnum.NUMERIC;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "sint";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "veritatis";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "incidunt";
+                                                        dimensionValue = "enim";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "consequatur";
+                                                        dimensionValue = "est";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "quibusdam";
+                                                        dimensionValue = "explicabo";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "deserunt";
+                                                        dimensionValue = "distinctio";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "quibusdam";
+                                                orderType = DimensionOrderByOrderTypeEnum.ALPHANUMERIC;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "modi";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "qui";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "cupiditate";
+                                                        dimensionValue = "quos";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "perferendis";
+                                                        dimensionValue = "magni";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "assumenda";
+                                                orderType = DimensionOrderByOrderTypeEnum.ALPHANUMERIC;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "alias";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "fugit";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "excepturi";
+                                                        dimensionValue = "tempora";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "facilis";
+                                                        dimensionValue = "tempore";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "labore";
+                                                        dimensionValue = "delectus";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "eum";
+                                                orderType = DimensionOrderByOrderTypeEnum.ORDER_TYPE_UNSPECIFIED;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "eligendi";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "sint";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "provident";
+                                                        dimensionValue = "necessitatibus";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "sint";
+                                                        dimensionValue = "officia";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                    }};
+                                }}),
+                            }};
+                            property = "dolor";
+                            returnPropertyQuota = false;
+                        }}),
+                        add(new RunPivotReportRequest() {{
+                            cohortSpec = new CohortSpec() {{
+                                cohortReportSettings = new CohortReportSettings() {{
+                                    accumulate = false;
+                                }};
+                                cohorts = new org.openapis.openapi.models.shared.Cohort[]{{
+                                    add(new Cohort() {{
+                                        dateRange = new DateRange() {{
+                                            endDate = "a";
+                                            name = "Arnold Kirlin";
+                                            startDate = "rerum";
+                                        }};
+                                        dimension = "dicta";
+                                        name = "Blanca Schulist";
+                                    }}),
+                                    add(new Cohort() {{
+                                        dateRange = new DateRange() {{
+                                            endDate = "laborum";
+                                            name = "Alfred McClure";
+                                            startDate = "delectus";
+                                        }};
+                                        dimension = "quidem";
+                                        name = "Marco Olson";
+                                    }}),
+                                    add(new Cohort() {{
+                                        dateRange = new DateRange() {{
+                                            endDate = "sapiente";
+                                            name = "Sandy Huels";
+                                            startDate = "omnis";
+                                        }};
+                                        dimension = "molestiae";
+                                        name = "Marcia Gutkowski";
+                                    }}),
+                                    add(new Cohort() {{
+                                        dateRange = new DateRange() {{
+                                            endDate = "labore";
+                                            name = "Laurie Mosciski";
+                                            startDate = "vero";
+                                        }};
+                                        dimension = "aspernatur";
+                                        name = "Danielle Bosco";
+                                    }}),
+                                }};
+                                cohortsRange = new CohortsRange() {{
+                                    endOffset = 590873;
+                                    granularity = CohortsRangeGranularityEnum.WEEKLY;
+                                    startOffset = 574325;
+                                }};
+                            }};
+                            currencyCode = "accusantium";
+                            dateRanges = new org.openapis.openapi.models.shared.DateRange[]{{
+                                add(new DateRange() {{
+                                    endDate = "reiciendis";
+                                    name = "Tommy Kemmer";
+                                    startDate = "odit";
+                                }}),
+                                add(new DateRange() {{
+                                    endDate = "nemo";
+                                    name = "Vera Wyman";
+                                    startDate = "maxime";
+                                }}),
+                                add(new DateRange() {{
+                                    endDate = "deleniti";
+                                    name = "Dr. Arnold Bradtke";
+                                    startDate = "expedita";
+                                }}),
+                            }};
+                            dimensionFilter = new FilterExpression() {{
+                                andGroup = new FilterExpressionList() {{
+                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                    }};
+                                }};
+                                filter = new Filter() {{
+                                    betweenFilter = new BetweenFilter() {{
+                                        fromValue = new NumericValue() {{
+                                            doubleValue = 9988.48;
+                                            int64Value = "quibusdam";
+                                        }};
+                                        toValue = new NumericValue() {{
+                                            doubleValue = 1494.48;
+                                            int64Value = "saepe";
+                                        }};
+                                    }};
+                                    fieldName = "pariatur";
+                                    inListFilter = new InListFilter() {{
+                                        caseSensitive = false;
+                                        values = new String[]{{
+                                            add("consequuntur"),
+                                        }};
+                                    }};
+                                    numericFilter = new NumericFilter() {{
+                                        operation = NumericFilterOperationEnum.LESS_THAN_OR_EQUAL;
+                                        value = new NumericValue() {{
+                                            doubleValue = 6155.6;
+                                            int64Value = "magni";
+                                        }};
+                                    }};
+                                    stringFilter = new StringFilter() {{
+                                        caseSensitive = false;
+                                        matchType = StringFilterMatchTypeEnum.MATCH_TYPE_UNSPECIFIED;
+                                        value = "quo";
+                                    }};
+                                }};
+                                notExpression = new FilterExpression() {{}};
+                                orGroup = new FilterExpressionList() {{
+                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
+                                    }};
+                                }};
+                            }};
                             dimensions = new org.openapis.openapi.models.shared.Dimension[]{{
                                 add(new Dimension() {{
                                     dimensionExpression = new DimensionExpression() {{
                                         concatenate = new ConcatenateExpression() {{
-                                            delimiter = "officia";
+                                            delimiter = "maxime";
                                             dimensionNames = new String[]{{
-                                                add("fugit"),
-                                                add("deleniti"),
-                                                add("hic"),
+                                                add("excepturi"),
+                                                add("odit"),
                                             }};
                                         }};
                                         lowerCase = new CaseExpression() {{
-                                            dimensionName = "optio";
+                                            dimensionName = "ea";
                                         }};
                                         upperCase = new CaseExpression() {{
+                                            dimensionName = "accusantium";
+                                        }};
+                                    }};
+                                    name = "Ebony Predovic";
+                                }}),
+                                add(new Dimension() {{
+                                    dimensionExpression = new DimensionExpression() {{
+                                        concatenate = new ConcatenateExpression() {{
+                                            delimiter = "autem";
+                                            dimensionNames = new String[]{{
+                                                add("eaque"),
+                                                add("pariatur"),
+                                                add("nemo"),
+                                            }};
+                                        }};
+                                        lowerCase = new CaseExpression() {{
+                                            dimensionName = "voluptatibus";
+                                        }};
+                                        upperCase = new CaseExpression() {{
+                                            dimensionName = "perferendis";
+                                        }};
+                                    }};
+                                    name = "Vincent Anderson";
+                                }}),
+                                add(new Dimension() {{
+                                    dimensionExpression = new DimensionExpression() {{
+                                        concatenate = new ConcatenateExpression() {{
+                                            delimiter = "hic";
+                                            dimensionNames = new String[]{{
+                                                add("nobis"),
+                                                add("dolores"),
+                                                add("quis"),
+                                            }};
+                                        }};
+                                        lowerCase = new CaseExpression() {{
                                             dimensionName = "totam";
                                         }};
+                                        upperCase = new CaseExpression() {{
+                                            dimensionName = "dignissimos";
+                                        }};
                                     }};
-                                    name = "beatae";
+                                    name = "Beatrice Dooley Sr.";
                                 }}),
                                 add(new Dimension() {{
                                     dimensionExpression = new DimensionExpression() {{
                                         concatenate = new ConcatenateExpression() {{
-                                            delimiter = "commodi";
+                                            delimiter = "minus";
                                             dimensionNames = new String[]{{
-                                                add("modi"),
-                                                add("qui"),
+                                                add("dolor"),
+                                                add("vero"),
                                             }};
                                         }};
                                         lowerCase = new CaseExpression() {{
-                                            dimensionName = "impedit";
+                                            dimensionName = "nostrum";
                                         }};
                                         upperCase = new CaseExpression() {{
-                                            dimensionName = "cum";
+                                            dimensionName = "hic";
                                         }};
                                     }};
-                                    name = "esse";
-                                }}),
-                                add(new Dimension() {{
-                                    dimensionExpression = new DimensionExpression() {{
-                                        concatenate = new ConcatenateExpression() {{
-                                            delimiter = "ipsum";
-                                            dimensionNames = new String[]{{
-                                                add("aspernatur"),
-                                                add("perferendis"),
-                                                add("ad"),
-                                            }};
-                                        }};
-                                        lowerCase = new CaseExpression() {{
-                                            dimensionName = "natus";
-                                        }};
-                                        upperCase = new CaseExpression() {{
-                                            dimensionName = "sed";
-                                        }};
-                                    }};
-                                    name = "iste";
+                                    name = "Alejandro Purdy DDS";
                                 }}),
                             }};
                             keepEmptyRows = false;
@@ -226,33 +605,32 @@ public class Application {
                                 filter = new Filter() {{
                                     betweenFilter = new BetweenFilter() {{
                                         fromValue = new NumericValue() {{
-                                            doubleValue = 6169.34;
-                                            int64Value = "laboriosam";
+                                            doubleValue = 5000.26;
+                                            int64Value = "error";
                                         }};
                                         toValue = new NumericValue() {{
-                                            doubleValue = 9437.49;
-                                            int64Value = "saepe";
+                                            doubleValue = 503.7;
+                                            int64Value = "occaecati";
                                         }};
                                     }};
-                                    fieldName = "fuga";
+                                    fieldName = "rerum";
                                     inListFilter = new InListFilter() {{
                                         caseSensitive = false;
                                         values = new String[]{{
-                                            add("corporis"),
-                                            add("iste"),
+                                            add("asperiores"),
                                         }};
                                     }};
                                     numericFilter = new NumericFilter() {{
-                                        operation = "LESS_THAN";
+                                        operation = NumericFilterOperationEnum.GREATER_THAN_OR_EQUAL;
                                         value = new NumericValue() {{
-                                            doubleValue = 9023.49;
-                                            int64Value = "quidem";
+                                            doubleValue = 2672.62;
+                                            int64Value = "iste";
                                         }};
                                     }};
                                     stringFilter = new StringFilter() {{
                                         caseSensitive = false;
-                                        matchType = "MATCH_TYPE_UNSPECIFIED";
-                                        value = "ipsa";
+                                        matchType = StringFilterMatchTypeEnum.CONTAINS;
+                                        value = "deleniti";
                                     }};
                                 }};
                                 notExpression = new FilterExpression() {{}};
@@ -267,50 +645,57 @@ public class Application {
                             }};
                             metrics = new org.openapis.openapi.models.shared.Metric[]{{
                                 add(new Metric() {{
-                                    expression = "mollitia";
+                                    expression = "nobis";
                                     invisible = false;
-                                    name = "laborum";
+                                    name = "Toby Hahn";
                                 }}),
                                 add(new Metric() {{
-                                    expression = "dolores";
+                                    expression = "dolorem";
                                     invisible = false;
-                                    name = "dolorem";
+                                    name = "Rosa Dibbert";
                                 }}),
                                 add(new Metric() {{
-                                    expression = "corporis";
+                                    expression = "excepturi";
                                     invisible = false;
-                                    name = "explicabo";
+                                    name = "Adrian Kuhn";
                                 }}),
                             }};
                             pivots = new org.openapis.openapi.models.shared.Pivot[]{{
                                 add(new Pivot() {{
                                     fieldNames = new String[]{{
-                                        add("omnis"),
-                                        add("nemo"),
+                                        add("veritatis"),
+                                        add("ipsa"),
                                     }};
-                                    limit = "minima";
+                                    limit = "ipsa";
                                     metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("METRIC_AGGREGATION_UNSPECIFIED"),
-                                        add("MINIMUM"),
-                                        add("MAXIMUM"),
+                                        add(PivotMetricAggregationsEnum.MINIMUM),
+                                        add(PivotMetricAggregationsEnum.TOTAL),
                                     }};
-                                    offset = "doloribus";
+                                    offset = "accusamus";
                                     orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "architecto";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
+                                                dimensionName = "voluptatibus";
+                                                orderType = DimensionOrderByOrderTypeEnum.ALPHANUMERIC;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "dolorem";
+                                                metricName = "natus";
                                             }};
                                             pivot = new PivotOrderBy() {{
-                                                metricName = "culpa";
+                                                metricName = "eos";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "repellat";
-                                                        dimensionValue = "mollitia";
+                                                        dimensionName = "sit";
+                                                        dimensionValue = "fugiat";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "ab";
+                                                        dimensionValue = "soluta";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "dolorum";
+                                                        dimensionValue = "iusto";
                                                     }}),
                                                 }};
                                             }};
@@ -318,41 +703,30 @@ public class Application {
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "occaecati";
-                                                orderType = "ALPHANUMERIC";
+                                                dimensionName = "voluptate";
+                                                orderType = DimensionOrderByOrderTypeEnum.CASE_INSENSITIVE_ALPHANUMERIC;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "commodi";
+                                                metricName = "deleniti";
                                             }};
                                             pivot = new PivotOrderBy() {{
-                                                metricName = "quam";
+                                                metricName = "omnis";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "velit";
-                                                        dimensionValue = "error";
+                                                        dimensionName = "distinctio";
+                                                        dimensionValue = "asperiores";
                                                     }}),
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "quia";
-                                                        dimensionValue = "quis";
+                                                        dimensionName = "nihil";
+                                                        dimensionValue = "ipsum";
                                                     }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "vitae";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "animi";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "enim";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "quo";
-                                                        dimensionValue = "sequi";
+                                                        dimensionName = "voluptate";
+                                                        dimensionValue = "id";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "saepe";
+                                                        dimensionValue = "eius";
                                                     }}),
                                                 }};
                                             }};
@@ -360,18 +734,30 @@ public class Application {
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "tenetur";
-                                                orderType = "ALPHANUMERIC";
+                                                dimensionName = "aspernatur";
+                                                orderType = DimensionOrderByOrderTypeEnum.ORDER_TYPE_UNSPECIFIED;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "id";
+                                                metricName = "amet";
                                             }};
                                             pivot = new PivotOrderBy() {{
-                                                metricName = "possimus";
+                                                metricName = "optio";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "quasi";
-                                                        dimensionValue = "error";
+                                                        dimensionName = "ad";
+                                                        dimensionValue = "saepe";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "suscipit";
+                                                        dimensionValue = "deserunt";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "provident";
+                                                        dimensionValue = "minima";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "repellendus";
+                                                        dimensionValue = "totam";
                                                     }}),
                                                 }};
                                             }};
@@ -380,60 +766,32 @@ public class Application {
                                 }}),
                                 add(new Pivot() {{
                                     fieldNames = new String[]{{
-                                        add("laborum"),
-                                        add("quasi"),
-                                        add("reiciendis"),
-                                        add("voluptatibus"),
+                                        add("alias"),
+                                        add("at"),
+                                        add("quaerat"),
                                     }};
-                                    limit = "vero";
+                                    limit = "tempora";
                                     metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("MINIMUM"),
-                                        add("COUNT"),
+                                        add(PivotMetricAggregationsEnum.MAXIMUM),
+                                        add(PivotMetricAggregationsEnum.COUNT),
                                     }};
-                                    offset = "ipsa";
+                                    offset = "qui";
                                     orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "voluptate";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
+                                                dimensionName = "a";
+                                                orderType = DimensionOrderByOrderTypeEnum.ALPHANUMERIC;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "perferendis";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "doloremque";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "ut";
-                                                        dimensionValue = "maiores";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "dicta";
-                                                        dimensionValue = "corporis";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "dolore";
-                                                orderType = "ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "dicta";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
                                                 metricName = "harum";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "iusto";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "accusamus";
-                                                        dimensionValue = "commodi";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "repudiandae";
-                                                        dimensionValue = "quae";
+                                                        dimensionName = "quisquam";
+                                                        dimensionValue = "tenetur";
                                                     }}),
                                                 }};
                                             }};
@@ -441,30 +799,45 @@ public class Application {
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "ipsum";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
+                                                dimensionName = "amet";
+                                                orderType = DimensionOrderByOrderTypeEnum.CASE_INSENSITIVE_ALPHANUMERIC;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "molestias";
+                                                metricName = "accusamus";
                                             }};
                                             pivot = new PivotOrderBy() {{
-                                                metricName = "excepturi";
+                                                metricName = "numquam";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "modi";
-                                                        dimensionValue = "praesentium";
+                                                        dimensionName = "dolorem";
+                                                        dimensionValue = "sapiente";
                                                     }}),
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "rem";
-                                                        dimensionValue = "voluptates";
+                                                        dimensionName = "totam";
+                                                        dimensionValue = "nihil";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "sit";
+                                                orderType = DimensionOrderByOrderTypeEnum.CASE_INSENSITIVE_ALPHANUMERIC;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "neque";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "sed";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "libero";
+                                                        dimensionValue = "voluptas";
                                                     }}),
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "quasi";
-                                                        dimensionValue = "repudiandae";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "sint";
-                                                        dimensionValue = "veritatis";
+                                                        dimensionName = "deserunt";
+                                                        dimensionValue = "quam";
                                                     }}),
                                                 }};
                                             }};
@@ -474,206 +847,84 @@ public class Application {
                                 add(new Pivot() {{
                                     fieldNames = new String[]{{
                                         add("incidunt"),
-                                        add("enim"),
-                                        add("consequatur"),
-                                        add("est"),
                                     }};
-                                    limit = "quibusdam";
+                                    limit = "qui";
                                     metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("MAXIMUM"),
+                                        add(PivotMetricAggregationsEnum.COUNT),
+                                        add(PivotMetricAggregationsEnum.COUNT),
+                                        add(PivotMetricAggregationsEnum.MAXIMUM),
                                     }};
-                                    offset = "distinctio";
+                                    offset = "dicta";
                                     orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "labore";
-                                                orderType = "ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "qui";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "aliquid";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "quos";
-                                                        dimensionValue = "perferendis";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "magni";
-                                                        dimensionValue = "assumenda";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "ipsam";
-                                                        dimensionValue = "alias";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "fugit";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "excepturi";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "tempora";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "tempore";
-                                                        dimensionValue = "labore";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "delectus";
-                                                        dimensionValue = "eum";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "non";
-                                                        dimensionValue = "eligendi";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "sint";
-                                                orderType = "ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "provident";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "necessitatibus";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "officia";
-                                                        dimensionValue = "dolor";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "debitis";
-                                                        dimensionValue = "a";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "dolorum";
-                                                        dimensionValue = "in";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "in";
-                                                orderType = "NUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "maiores";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "rerum";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "magnam";
-                                                        dimensionValue = "cumque";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                    }};
-                                }}),
-                                add(new Pivot() {{
-                                    fieldNames = new String[]{{
-                                        add("ea"),
-                                        add("aliquid"),
-                                        add("laborum"),
-                                        add("accusamus"),
-                                    }};
-                                    limit = "non";
-                                    metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("TOTAL"),
-                                        add("COUNT"),
-                                        add("COUNT"),
-                                    }};
-                                    offset = "quidem";
-                                    orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "nam";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "blanditiis";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "deleniti";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "amet";
-                                                        dimensionValue = "deserunt";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "nisi";
-                                                        dimensionValue = "vel";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "natus";
-                                                        dimensionValue = "omnis";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "molestiae";
-                                                        dimensionValue = "perferendis";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "nihil";
-                                                orderType = "ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "distinctio";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "id";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "labore";
-                                                        dimensionValue = "suscipit";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "natus";
-                                                        dimensionValue = "nobis";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "eum";
-                                                orderType = "NUMERIC";
+                                                dimensionName = "totam";
+                                                orderType = DimensionOrderByOrderTypeEnum.ALPHANUMERIC;
                                             }};
                                             metric = new MetricOrderBy() {{
                                                 metricName = "aspernatur";
                                             }};
                                             pivot = new PivotOrderBy() {{
-                                                metricName = "architecto";
+                                                metricName = "dolores";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "facilis";
+                                                        dimensionValue = "aliquid";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "quam";
+                                                        dimensionValue = "molestias";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "temporibus";
+                                                        dimensionValue = "qui";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "neque";
+                                                orderType = DimensionOrderByOrderTypeEnum.ORDER_TYPE_UNSPECIFIED;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "magni";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "odio";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "ullam";
+                                                        dimensionValue = "nam";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "hic";
+                                                orderType = DimensionOrderByOrderTypeEnum.ORDER_TYPE_UNSPECIFIED;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "cumque";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "soluta";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
                                                         dimensionName = "et";
-                                                        dimensionValue = "excepturi";
+                                                        dimensionValue = "saepe";
                                                     }}),
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "ullam";
-                                                        dimensionValue = "provident";
+                                                        dimensionName = "ipsum";
+                                                        dimensionValue = "veritatis";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "nobis";
+                                                        dimensionValue = "quos";
                                                     }}),
                                                 }};
                                             }};
@@ -681,7 +932,7 @@ public class Application {
                                     }};
                                 }}),
                             }};
-                            property = "quos";
+                            property = "tempore";
                             returnPropertyQuota = false;
                         }}),
                         add(new RunPivotReportRequest() {{
@@ -692,44 +943,49 @@ public class Application {
                                 cohorts = new org.openapis.openapi.models.shared.Cohort[]{{
                                     add(new Cohort() {{
                                         dateRange = new DateRange() {{
-                                            endDate = "accusantium";
-                                            name = "mollitia";
-                                            startDate = "reiciendis";
+                                            endDate = "aperiam";
+                                            name = "Mike Greenholt";
+                                            startDate = "dolorum";
                                         }};
-                                        dimension = "mollitia";
-                                        name = "ad";
+                                        dimension = "architecto";
+                                        name = "Margaret Luettgen MD";
                                     }}),
                                     add(new Cohort() {{
                                         dateRange = new DateRange() {{
-                                            endDate = "eum";
-                                            name = "dolor";
-                                            startDate = "necessitatibus";
+                                            endDate = "repellendus";
+                                            name = "Domingo Grady";
+                                            startDate = "qui";
                                         }};
-                                        dimension = "odit";
-                                        name = "nemo";
+                                        dimension = "quae";
+                                        name = "Darren McClure";
                                     }}),
                                     add(new Cohort() {{
                                         dateRange = new DateRange() {{
-                                            endDate = "quasi";
-                                            name = "iure";
-                                            startDate = "doloribus";
+                                            endDate = "vero";
+                                            name = "Tim Erdman";
+                                            startDate = "consectetur";
                                         }};
-                                        dimension = "debitis";
-                                        name = "eius";
+                                        dimension = "vero";
+                                        name = "Julio Weissnat";
                                     }}),
                                 }};
                                 cohortsRange = new CohortsRange() {{
-                                    endOffset = 806194;
-                                    granularity = "WEEKLY";
-                                    startOffset = 703889;
+                                    endOffset = 486160;
+                                    granularity = CohortsRangeGranularityEnum.WEEKLY;
+                                    startOffset = 708548;
                                 }};
                             }};
-                            currencyCode = "in";
+                            currencyCode = "vero";
                             dateRanges = new org.openapis.openapi.models.shared.DateRange[]{{
                                 add(new DateRange() {{
-                                    endDate = "architecto";
-                                    name = "repudiandae";
-                                    startDate = "ullam";
+                                    endDate = "dolore";
+                                    name = "Gilberto Dickinson";
+                                    startDate = "aut";
+                                }}),
+                                add(new DateRange() {{
+                                    endDate = "voluptatibus";
+                                    name = "Freda Cormier";
+                                    startDate = "doloribus";
                                 }}),
                             }};
                             dimensionFilter = new FilterExpression() {{
@@ -737,47 +993,43 @@ public class Application {
                                     expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
                                         add(new FilterExpression() {{}}),
                                         add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
                                     }};
                                 }};
                                 filter = new Filter() {{
                                     betweenFilter = new BetweenFilter() {{
                                         fromValue = new NumericValue() {{
-                                            doubleValue = 4692.49;
-                                            int64Value = "repellat";
+                                            doubleValue = 7535.7;
+                                            int64Value = "ducimus";
                                         }};
                                         toValue = new NumericValue() {{
-                                            doubleValue = 8411.4;
-                                            int64Value = "sed";
+                                            doubleValue = 40.48;
+                                            int64Value = "officia";
                                         }};
                                     }};
-                                    fieldName = "saepe";
+                                    fieldName = "tempora";
                                     inListFilter = new InListFilter() {{
                                         caseSensitive = false;
                                         values = new String[]{{
-                                            add("accusantium"),
-                                            add("consequuntur"),
-                                            add("praesentium"),
-                                            add("natus"),
+                                            add("ea"),
+                                            add("aspernatur"),
                                         }};
                                     }};
                                     numericFilter = new NumericFilter() {{
-                                        operation = "EQUAL";
+                                        operation = NumericFilterOperationEnum.LESS_THAN;
                                         value = new NumericValue() {{
-                                            doubleValue = 1238.2;
-                                            int64Value = "quo";
+                                            doubleValue = 8221.18;
+                                            int64Value = "magnam";
                                         }};
                                     }};
                                     stringFilter = new StringFilter() {{
                                         caseSensitive = false;
-                                        matchType = "FULL_REGEXP";
-                                        value = "pariatur";
+                                        matchType = StringFilterMatchTypeEnum.EXACT;
+                                        value = "ex";
                                     }};
                                 }};
                                 notExpression = new FilterExpression() {{}};
                                 orGroup = new FilterExpressionList() {{
                                     expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
-                                        add(new FilterExpression() {{}}),
                                         add(new FilterExpression() {{}}),
                                         add(new FilterExpression() {{}}),
                                         add(new FilterExpression() {{}}),
@@ -788,37 +1040,22 @@ public class Application {
                                 add(new Dimension() {{
                                     dimensionExpression = new DimensionExpression() {{
                                         concatenate = new ConcatenateExpression() {{
-                                            delimiter = "excepturi";
+                                            delimiter = "dolor";
                                             dimensionNames = new String[]{{
-                                                add("ea"),
+                                                add("quasi"),
+                                                add("ex"),
+                                                add("nulla"),
+                                                add("excepturi"),
                                             }};
                                         }};
                                         lowerCase = new CaseExpression() {{
-                                            dimensionName = "accusantium";
+                                            dimensionName = "voluptatibus";
                                         }};
                                         upperCase = new CaseExpression() {{
-                                            dimensionName = "ab";
+                                            dimensionName = "nostrum";
                                         }};
                                     }};
-                                    name = "maiores";
-                                }}),
-                                add(new Dimension() {{
-                                    dimensionExpression = new DimensionExpression() {{
-                                        concatenate = new ConcatenateExpression() {{
-                                            delimiter = "quidem";
-                                            dimensionNames = new String[]{{
-                                                add("voluptate"),
-                                                add("autem"),
-                                            }};
-                                        }};
-                                        lowerCase = new CaseExpression() {{
-                                            dimensionName = "nam";
-                                        }};
-                                        upperCase = new CaseExpression() {{
-                                            dimensionName = "eaque";
-                                        }};
-                                    }};
-                                    name = "pariatur";
+                                    name = "Devin Ullrich";
                                 }}),
                             }};
                             keepEmptyRows = false;
@@ -832,35 +1069,35 @@ public class Application {
                                 filter = new Filter() {{
                                     betweenFilter = new BetweenFilter() {{
                                         fromValue = new NumericValue() {{
-                                            doubleValue = 9755.22;
-                                            int64Value = "perferendis";
+                                            doubleValue = 3331.45;
+                                            int64Value = "aliquid";
                                         }};
                                         toValue = new NumericValue() {{
-                                            doubleValue = 8558.04;
-                                            int64Value = "amet";
+                                            doubleValue = 811.01;
+                                            int64Value = "magnam";
                                         }};
                                     }};
-                                    fieldName = "aut";
+                                    fieldName = "ea";
                                     inListFilter = new InListFilter() {{
                                         caseSensitive = false;
                                         values = new String[]{{
-                                            add("corporis"),
-                                            add("hic"),
-                                            add("libero"),
-                                            add("nobis"),
+                                            add("consectetur"),
+                                            add("recusandae"),
+                                            add("aspernatur"),
+                                            add("minima"),
                                         }};
                                     }};
                                     numericFilter = new NumericFilter() {{
-                                        operation = "EQUAL";
+                                        operation = NumericFilterOperationEnum.OPERATION_UNSPECIFIED;
                                         value = new NumericValue() {{
-                                            doubleValue = 3394.04;
-                                            int64Value = "totam";
+                                            doubleValue = 9528.71;
+                                            int64Value = "libero";
                                         }};
                                     }};
                                     stringFilter = new StringFilter() {{
                                         caseSensitive = false;
-                                        matchType = "ENDS_WITH";
-                                        value = "eaque";
+                                        matchType = StringFilterMatchTypeEnum.MATCH_TYPE_UNSPECIFIED;
+                                        value = "aut";
                                     }};
                                 }};
                                 notExpression = new FilterExpression() {{}};
@@ -868,526 +1105,193 @@ public class Application {
                                     expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
                                         add(new FilterExpression() {{}}),
                                         add(new FilterExpression() {{}}),
+                                        add(new FilterExpression() {{}}),
                                     }};
                                 }};
                             }};
                             metrics = new org.openapis.openapi.models.shared.Metric[]{{
                                 add(new Metric() {{
-                                    expression = "eos";
+                                    expression = "aliquam";
                                     invisible = false;
-                                    name = "perferendis";
+                                    name = "Eloise Block MD";
+                                }}),
+                                add(new Metric() {{
+                                    expression = "laborum";
+                                    invisible = false;
+                                    name = "Lee Kemmer";
+                                }}),
+                                add(new Metric() {{
+                                    expression = "quas";
+                                    invisible = false;
+                                    name = "Drew Hoeger I";
+                                }}),
+                                add(new Metric() {{
+                                    expression = "numquam";
+                                    invisible = false;
+                                    name = "Ramona Bednar";
                                 }}),
                             }};
                             pivots = new org.openapis.openapi.models.shared.Pivot[]{{
                                 add(new Pivot() {{
                                     fieldNames = new String[]{{
-                                        add("quam"),
-                                        add("dolor"),
-                                        add("vero"),
-                                        add("nostrum"),
+                                        add("esse"),
+                                        add("esse"),
                                     }};
-                                    limit = "hic";
+                                    limit = "rem";
                                     metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("MAXIMUM"),
-                                        add("MAXIMUM"),
-                                        add("MINIMUM"),
-                                        add("METRIC_AGGREGATION_UNSPECIFIED"),
+                                        add(PivotMetricAggregationsEnum.MINIMUM),
+                                        add(PivotMetricAggregationsEnum.MAXIMUM),
+                                        add(PivotMetricAggregationsEnum.COUNT),
                                     }};
-                                    offset = "porro";
+                                    offset = "ut";
                                     orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "blanditiis";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
+                                                dimensionName = "suscipit";
+                                                orderType = DimensionOrderByOrderTypeEnum.NUMERIC;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "eaque";
+                                                metricName = "eos";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "praesentium";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "veritatis";
+                                                        dimensionValue = "ipsa";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "id";
+                                                        dimensionValue = "quidem";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "neque";
+                                                        dimensionValue = "quo";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "illum";
+                                                        dimensionValue = "quo";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "fuga";
+                                                orderType = DimensionOrderByOrderTypeEnum.ALPHANUMERIC;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "eos";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "voluptas";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "cupiditate";
+                                                        dimensionValue = "consequatur";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                    }};
+                                }}),
+                                add(new Pivot() {{
+                                    fieldNames = new String[]{{
+                                        add("debitis"),
+                                        add("ipsam"),
+                                    }};
+                                    limit = "aspernatur";
+                                    metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
+                                        add(PivotMetricAggregationsEnum.MAXIMUM),
+                                    }};
+                                    offset = "esse";
+                                    orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "aperiam";
+                                                orderType = DimensionOrderByOrderTypeEnum.CASE_INSENSITIVE_ALPHANUMERIC;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "quod";
+                                            }};
+                                            pivot = new PivotOrderBy() {{
+                                                metricName = "dignissimos";
+                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "nihil";
+                                                        dimensionValue = "totam";
+                                                    }}),
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new OrderBy() {{
+                                            desc = false;
+                                            dimension = new DimensionOrderBy() {{
+                                                dimensionName = "accusamus";
+                                                orderType = DimensionOrderByOrderTypeEnum.ALPHANUMERIC;
+                                            }};
+                                            metric = new MetricOrderBy() {{
+                                                metricName = "odio";
                                             }};
                                             pivot = new PivotOrderBy() {{
                                                 metricName = "occaecati";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "adipisci";
-                                                        dimensionValue = "asperiores";
+                                                        dimensionName = "sapiente";
+                                                        dimensionValue = "dolores";
                                                     }}),
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "earum";
-                                                        dimensionValue = "modi";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "iste";
-                                                        dimensionValue = "dolorum";
+                                                        dimensionName = "deserunt";
+                                                        dimensionValue = "molestiae";
                                                     }}),
                                                 }};
                                             }};
                                         }}),
-                                    }};
-                                }}),
-                            }};
-                            property = "deleniti";
-                            returnPropertyQuota = false;
-                        }}),
-                        add(new RunPivotReportRequest() {{
-                            cohortSpec = new CohortSpec() {{
-                                cohortReportSettings = new CohortReportSettings() {{
-                                    accumulate = false;
-                                }};
-                                cohorts = new org.openapis.openapi.models.shared.Cohort[]{{
-                                    add(new Cohort() {{
-                                        dateRange = new DateRange() {{
-                                            endDate = "provident";
-                                            name = "nobis";
-                                            startDate = "libero";
-                                        }};
-                                        dimension = "delectus";
-                                        name = "quaerat";
-                                    }}),
-                                    add(new Cohort() {{
-                                        dateRange = new DateRange() {{
-                                            endDate = "quos";
-                                            name = "aliquid";
-                                            startDate = "dolorem";
-                                        }};
-                                        dimension = "dolorem";
-                                        name = "dolor";
-                                    }}),
-                                    add(new Cohort() {{
-                                        dateRange = new DateRange() {{
-                                            endDate = "qui";
-                                            name = "ipsum";
-                                            startDate = "hic";
-                                        }};
-                                        dimension = "excepturi";
-                                        name = "cum";
-                                    }}),
-                                    add(new Cohort() {{
-                                        dateRange = new DateRange() {{
-                                            endDate = "voluptate";
-                                            name = "dignissimos";
-                                            startDate = "reiciendis";
-                                        }};
-                                        dimension = "amet";
-                                        name = "dolorum";
-                                    }}),
-                                }};
-                                cohortsRange = new CohortsRange() {{
-                                    endOffset = 254356;
-                                    granularity = "GRANULARITY_UNSPECIFIED";
-                                    startOffset = 58029;
-                                }};
-                            }};
-                            currencyCode = "ipsa";
-                            dateRanges = new org.openapis.openapi.models.shared.DateRange[]{{
-                                add(new DateRange() {{
-                                    endDate = "odio";
-                                    name = "quaerat";
-                                    startDate = "accusamus";
-                                }}),
-                                add(new DateRange() {{
-                                    endDate = "quidem";
-                                    name = "voluptatibus";
-                                    startDate = "voluptas";
-                                }}),
-                            }};
-                            dimensionFilter = new FilterExpression() {{
-                                andGroup = new FilterExpressionList() {{
-                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                    }};
-                                }};
-                                filter = new Filter() {{
-                                    betweenFilter = new BetweenFilter() {{
-                                        fromValue = new NumericValue() {{
-                                            doubleValue = 1796.03;
-                                            int64Value = "atque";
-                                        }};
-                                        toValue = new NumericValue() {{
-                                            doubleValue = 246.78;
-                                            int64Value = "fugiat";
-                                        }};
-                                    }};
-                                    fieldName = "ab";
-                                    inListFilter = new InListFilter() {{
-                                        caseSensitive = false;
-                                        values = new String[]{{
-                                            add("dolorum"),
-                                            add("iusto"),
-                                            add("voluptate"),
-                                        }};
-                                    }};
-                                    numericFilter = new NumericFilter() {{
-                                        operation = "GREATER_THAN";
-                                        value = new NumericValue() {{
-                                            doubleValue = 5365.79;
-                                            int64Value = "omnis";
-                                        }};
-                                    }};
-                                    stringFilter = new StringFilter() {{
-                                        caseSensitive = false;
-                                        matchType = "PARTIAL_REGEXP";
-                                        value = "distinctio";
-                                    }};
-                                }};
-                                notExpression = new FilterExpression() {{}};
-                                orGroup = new FilterExpressionList() {{
-                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                    }};
-                                }};
-                            }};
-                            dimensions = new org.openapis.openapi.models.shared.Dimension[]{{
-                                add(new Dimension() {{
-                                    dimensionExpression = new DimensionExpression() {{
-                                        concatenate = new ConcatenateExpression() {{
-                                            delimiter = "ipsum";
-                                            dimensionNames = new String[]{{
-                                                add("id"),
-                                                add("saepe"),
-                                            }};
-                                        }};
-                                        lowerCase = new CaseExpression() {{
-                                            dimensionName = "eius";
-                                        }};
-                                        upperCase = new CaseExpression() {{
-                                            dimensionName = "aspernatur";
-                                        }};
-                                    }};
-                                    name = "perferendis";
-                                }}),
-                                add(new Dimension() {{
-                                    dimensionExpression = new DimensionExpression() {{
-                                        concatenate = new ConcatenateExpression() {{
-                                            delimiter = "amet";
-                                            dimensionNames = new String[]{{
-                                                add("accusamus"),
-                                                add("ad"),
-                                                add("saepe"),
-                                                add("suscipit"),
-                                            }};
-                                        }};
-                                        lowerCase = new CaseExpression() {{
-                                            dimensionName = "deserunt";
-                                        }};
-                                        upperCase = new CaseExpression() {{
-                                            dimensionName = "provident";
-                                        }};
-                                    }};
-                                    name = "minima";
-                                }}),
-                            }};
-                            keepEmptyRows = false;
-                            metricFilter = new FilterExpression() {{
-                                andGroup = new FilterExpressionList() {{
-                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                    }};
-                                }};
-                                filter = new Filter() {{
-                                    betweenFilter = new BetweenFilter() {{
-                                        fromValue = new NumericValue() {{
-                                            doubleValue = 5197.11;
-                                            int64Value = "similique";
-                                        }};
-                                        toValue = new NumericValue() {{
-                                            doubleValue = 0.55;
-                                            int64Value = "at";
-                                        }};
-                                    }};
-                                    fieldName = "quaerat";
-                                    inListFilter = new InListFilter() {{
-                                        caseSensitive = false;
-                                        values = new String[]{{
-                                            add("vel"),
-                                            add("quod"),
-                                        }};
-                                    }};
-                                    numericFilter = new NumericFilter() {{
-                                        operation = "GREATER_THAN_OR_EQUAL";
-                                        value = new NumericValue() {{
-                                            doubleValue = 1856.36;
-                                            int64Value = "dolorum";
-                                        }};
-                                    }};
-                                    stringFilter = new StringFilter() {{
-                                        caseSensitive = false;
-                                        matchType = "PARTIAL_REGEXP";
-                                        value = "esse";
-                                    }};
-                                }};
-                                notExpression = new FilterExpression() {{}};
-                                orGroup = new FilterExpressionList() {{
-                                    expressions = new org.openapis.openapi.models.shared.FilterExpression[]{{
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                        add(new FilterExpression() {{}}),
-                                    }};
-                                }};
-                            }};
-                            metrics = new org.openapis.openapi.models.shared.Metric[]{{
-                                add(new Metric() {{
-                                    expression = "ipsum";
-                                    invisible = false;
-                                    name = "quisquam";
-                                }}),
-                                add(new Metric() {{
-                                    expression = "tenetur";
-                                    invisible = false;
-                                    name = "amet";
-                                }}),
-                            }};
-                            pivots = new org.openapis.openapi.models.shared.Pivot[]{{
-                                add(new Pivot() {{
-                                    fieldNames = new String[]{{
-                                        add("numquam"),
-                                        add("enim"),
-                                        add("dolorem"),
-                                        add("sapiente"),
-                                    }};
-                                    limit = "totam";
-                                    metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("METRIC_AGGREGATION_UNSPECIFIED"),
-                                        add("MAXIMUM"),
-                                    }};
-                                    offset = "neque";
-                                    orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "vel";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
+                                                dimensionName = "accusantium";
+                                                orderType = DimensionOrderByOrderTypeEnum.NUMERIC;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "voluptas";
+                                                metricName = "eum";
                                             }};
                                             pivot = new PivotOrderBy() {{
-                                                metricName = "deserunt";
+                                                metricName = "quas";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "ipsum";
+                                                        dimensionName = "consequuntur";
+                                                        dimensionValue = "deleniti";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "fugit";
+                                                        dimensionValue = "fuga";
+                                                    }}),
+                                                    add(new PivotSelection() {{
+                                                        dimensionName = "mollitia";
                                                         dimensionValue = "incidunt";
                                                     }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "qui";
-                                                        dimensionValue = "cupiditate";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                    }};
-                                }}),
-                                add(new Pivot() {{
-                                    fieldNames = new String[]{{
-                                        add("pariatur"),
-                                        add("soluta"),
-                                        add("dicta"),
-                                        add("laborum"),
-                                    }};
-                                    limit = "totam";
-                                    metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("METRIC_AGGREGATION_UNSPECIFIED"),
-                                        add("METRIC_AGGREGATION_UNSPECIFIED"),
-                                    }};
-                                    offset = "distinctio";
-                                    orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "aliquid";
-                                                orderType = "ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "molestias";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "temporibus";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "neque";
-                                                        dimensionValue = "fugit";
-                                                    }}),
                                                 }};
                                             }};
                                         }}),
                                         add(new OrderBy() {{
                                             desc = false;
                                             dimension = new DimensionOrderBy() {{
-                                                dimensionName = "magni";
-                                                orderType = "ALPHANUMERIC";
+                                                dimensionName = "atque";
+                                                orderType = DimensionOrderByOrderTypeEnum.ORDER_TYPE_UNSPECIFIED;
                                             }};
                                             metric = new MetricOrderBy() {{
-                                                metricName = "sunt";
+                                                metricName = "minima";
                                             }};
                                             pivot = new PivotOrderBy() {{
-                                                metricName = "ullam";
+                                                metricName = "nisi";
                                                 pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
                                                     add(new PivotSelection() {{
-                                                        dimensionName = "hic";
-                                                        dimensionValue = "voluptatem";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "cumque";
-                                                        dimensionValue = "soluta";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "nobis";
-                                                        dimensionValue = "et";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "saepe";
-                                                orderType = "ORDER_TYPE_UNSPECIFIED";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "veritatis";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "nobis";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "tempore";
-                                                        dimensionValue = "cupiditate";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "aperiam";
-                                                        dimensionValue = "delectus";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "dolorem";
-                                                        dimensionValue = "dolore";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                    }};
-                                }}),
-                                add(new Pivot() {{
-                                    fieldNames = new String[]{{
-                                        add("adipisci"),
-                                        add("dolorum"),
-                                    }};
-                                    limit = "architecto";
-                                    metricAggregations = new org.openapis.openapi.models.shared.PivotMetricAggregationsEnum[]{{
-                                        add("METRIC_AGGREGATION_UNSPECIFIED"),
-                                    }};
-                                    offset = "quas";
-                                    orderBys = new org.openapis.openapi.models.shared.OrderBy[]{{
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "consequatur";
-                                                orderType = "CASE_INSENSITIVE_ALPHANUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "repellendus";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "porro";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "ut";
-                                                        dimensionValue = "facilis";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "cupiditate";
-                                                        dimensionValue = "qui";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "quae";
-                                                        dimensionValue = "laudantium";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "odio";
-                                                        dimensionValue = "occaecati";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "voluptatibus";
-                                                orderType = "NUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "vero";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "omnis";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "ipsum";
-                                                        dimensionValue = "delectus";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "voluptate";
-                                                        dimensionValue = "consectetur";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "vero";
-                                                orderType = "NUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "dignissimos";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "hic";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "quod";
-                                                        dimensionValue = "odio";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "similique";
-                                                        dimensionValue = "facilis";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "vero";
-                                                        dimensionValue = "ducimus";
-                                                    }}),
-                                                }};
-                                            }};
-                                        }}),
-                                        add(new OrderBy() {{
-                                            desc = false;
-                                            dimension = new DimensionOrderBy() {{
-                                                dimensionName = "dolore";
-                                                orderType = "NUMERIC";
-                                            }};
-                                            metric = new MetricOrderBy() {{
-                                                metricName = "illum";
-                                            }};
-                                            pivot = new PivotOrderBy() {{
-                                                metricName = "sequi";
-                                                pivotSelections = new org.openapis.openapi.models.shared.PivotSelection[]{{
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "impedit";
-                                                        dimensionValue = "aut";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "voluptatibus";
-                                                        dimensionValue = "exercitationem";
-                                                    }}),
-                                                    add(new PivotSelection() {{
-                                                        dimensionName = "nulla";
-                                                        dimensionValue = "fugit";
+                                                        dimensionName = "sapiente";
+                                                        dimensionValue = "consequuntur";
                                                     }}),
                                                 }};
                                             }};
@@ -1395,36 +1299,37 @@ public class Application {
                                     }};
                                 }}),
                             }};
-                            property = "porro";
+                            property = "ratione";
                             returnPropertyQuota = false;
                         }}),
                     }};
-                }};
-                accessToken = "maiores";
-                alt = "proto";
-                callback = "iusto";
-                fields = "eligendi";
-                key = "ducimus";
-                oauthToken = "alias";
+                }};;
+                accessToken = "explicabo";
+                alt = AltEnum.PROTO;
+                callback = "occaecati";
+                fields = "atque";
+                key = "et";
+                oauthToken = "esse";
                 prettyPrint = false;
-                property = "officia";
-                quotaUser = "tempora";
-                uploadType = "ipsam";
-                uploadProtocol = "ea";
-            }}            
+                quotaUser = "eveniet";
+                uploadType = "accusamus";
+                uploadProtocol = "veritatis";
+            }};            
 
             AnalyticsdataPropertiesBatchRunPivotReportsResponse res = sdk.properties.analyticsdataPropertiesBatchRunPivotReports(req, new AnalyticsdataPropertiesBatchRunPivotReportsSecurity() {{
-                option1 = new AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption1() {{
+                option1 = new AnalyticsdataPropertiesBatchRunPivotReportsSecurityOption1("esse", "quod") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.batchRunPivotReportsResponse.isPresent()) {
+            if (res.batchRunPivotReportsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

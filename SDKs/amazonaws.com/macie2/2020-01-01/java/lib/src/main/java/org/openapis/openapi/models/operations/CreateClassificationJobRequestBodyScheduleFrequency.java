@@ -15,6 +15,7 @@ public class CreateClassificationJobRequestBodyScheduleFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailySchedule")
     public java.util.Map<String, Object> dailySchedule;
+
     public CreateClassificationJobRequestBodyScheduleFrequency withDailySchedule(java.util.Map<String, Object> dailySchedule) {
         this.dailySchedule = dailySchedule;
         return this;
@@ -23,6 +24,7 @@ public class CreateClassificationJobRequestBodyScheduleFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthlySchedule")
     public org.openapis.openapi.models.shared.MonthlySchedule monthlySchedule;
+
     public CreateClassificationJobRequestBodyScheduleFrequency withMonthlySchedule(org.openapis.openapi.models.shared.MonthlySchedule monthlySchedule) {
         this.monthlySchedule = monthlySchedule;
         return this;
@@ -31,9 +33,11 @@ public class CreateClassificationJobRequestBodyScheduleFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklySchedule")
     public org.openapis.openapi.models.shared.WeeklySchedule weeklySchedule;
+
     public CreateClassificationJobRequestBodyScheduleFrequency withWeeklySchedule(org.openapis.openapi.models.shared.WeeklySchedule weeklySchedule) {
         this.weeklySchedule = weeklySchedule;
         return this;
     }
     
+    public CreateClassificationJobRequestBodyScheduleFrequency(){}
 }

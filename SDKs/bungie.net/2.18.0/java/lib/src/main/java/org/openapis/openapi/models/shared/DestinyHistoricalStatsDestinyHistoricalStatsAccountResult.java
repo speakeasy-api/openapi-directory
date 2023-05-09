@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyHistoricalStatsDestinyHistoricalStatsAccountResult {
     
     public DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter[] characters;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsAccountResult withCharacters(DestinyHistoricalStatsDestinyHistoricalStatsPerCharacter[] characters) {
         this.characters = characters;
         return this;
@@ -16,6 +17,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsAccountResult {
     
     
     public DestinyHistoricalStatsDestinyHistoricalStatsWithMerged mergedAllCharacters;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsAccountResult withMergedAllCharacters(DestinyHistoricalStatsDestinyHistoricalStatsWithMerged mergedAllCharacters) {
         this.mergedAllCharacters = mergedAllCharacters;
         return this;
@@ -23,9 +25,11 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsAccountResult {
     
     
     public DestinyHistoricalStatsDestinyHistoricalStatsWithMerged mergedDeletedCharacters;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsAccountResult withMergedDeletedCharacters(DestinyHistoricalStatsDestinyHistoricalStatsWithMerged mergedDeletedCharacters) {
         this.mergedDeletedCharacters = mergedDeletedCharacters;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalStatsAccountResult(){}
 }

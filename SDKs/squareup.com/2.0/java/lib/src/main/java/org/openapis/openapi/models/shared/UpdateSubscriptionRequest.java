@@ -22,9 +22,11 @@ public class UpdateSubscriptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public Subscription subscription;
+
     public UpdateSubscriptionRequest withSubscription(Subscription subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public UpdateSubscriptionRequest(){}
 }

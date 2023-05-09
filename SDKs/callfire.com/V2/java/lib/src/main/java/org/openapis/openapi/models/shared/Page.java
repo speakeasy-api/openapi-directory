@@ -18,6 +18,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, Object>[] items;
+
     public Page withItems(java.util.Map<String, Object>[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public Page withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public Page withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -51,9 +54,11 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public Page withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public Page(){}
 }

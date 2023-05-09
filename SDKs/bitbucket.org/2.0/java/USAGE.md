@@ -3,8 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteAddonResponse;
+import org.openapis.openapi.models.operations.DeleteAddonSecurity;
+import org.openapis.openapi.models.shared.SchemeBasic;
 
 public class Application {
     public static void main(String[] args) {
@@ -12,7 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteAddonResponse res = sdk.addon.deleteAddon();
+            DeleteAddonResponse res = sdk.addon.deleteAddon(new DeleteAddonSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -20,5 +23,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

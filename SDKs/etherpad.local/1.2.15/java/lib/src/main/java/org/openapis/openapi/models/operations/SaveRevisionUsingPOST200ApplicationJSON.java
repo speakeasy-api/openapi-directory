@@ -15,6 +15,7 @@ public class SaveRevisionUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public SaveRevisionUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class SaveRevisionUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public SaveRevisionUsingPOST200ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class SaveRevisionUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SaveRevisionUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SaveRevisionUsingPOST200ApplicationJSON(){}
 }

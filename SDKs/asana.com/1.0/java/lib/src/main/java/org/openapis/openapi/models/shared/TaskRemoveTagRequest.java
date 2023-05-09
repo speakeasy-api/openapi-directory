@@ -12,9 +12,13 @@ public class TaskRemoveTagRequest {
      */
     @JsonProperty("tag")
     public String tag;
+
     public TaskRemoveTagRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public TaskRemoveTagRequest(@JsonProperty("tag") String tag) {
+        this.tag = tag;
+  }
 }

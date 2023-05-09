@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagCertificateAuthorityResponse {
     
     public String contentType;
+
     public TagCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagCertificateAuthorityResponse {
      */
     
     public Object invalidArnException;
+
     public TagCertificateAuthorityResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class TagCertificateAuthorityResponse {
      */
     
     public Object invalidStateException;
+
     public TagCertificateAuthorityResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class TagCertificateAuthorityResponse {
      */
     
     public Object invalidTagException;
+
     public TagCertificateAuthorityResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -49,6 +54,7 @@ public class TagCertificateAuthorityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TagCertificateAuthorityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class TagCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public TagCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class TagCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class TagCertificateAuthorityResponse {
      */
     
     public Object tooManyTagsException;
+
     public TagCertificateAuthorityResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public TagCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

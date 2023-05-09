@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAggregateConfigRuleComplianceSummaryResponse {
     
     public String contentType;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryResponse getAggregateConfigRuleComplianceSummaryResponse;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withGetAggregateConfigRuleComplianceSummaryResponse(org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryResponse getAggregateConfigRuleComplianceSummaryResponse) {
         this.getAggregateConfigRuleComplianceSummaryResponse = getAggregateConfigRuleComplianceSummaryResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
      */
     
     public Object invalidLimitException;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -56,6 +62,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
     
     
     public Integer statusCode;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetAggregateConfigRuleComplianceSummaryResponse {
      */
     
     public Object validationException;
+
     public GetAggregateConfigRuleComplianceSummaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAggregateConfigRuleComplianceSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

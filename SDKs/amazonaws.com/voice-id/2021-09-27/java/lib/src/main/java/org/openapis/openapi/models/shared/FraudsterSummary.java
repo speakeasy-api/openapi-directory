@@ -22,6 +22,7 @@ public class FraudsterSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public FraudsterSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class FraudsterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public FraudsterSummary withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -38,6 +40,7 @@ public class FraudsterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedFraudsterId")
     public String generatedFraudsterId;
+
     public FraudsterSummary withGeneratedFraudsterId(String generatedFraudsterId) {
         this.generatedFraudsterId = generatedFraudsterId;
         return this;
@@ -46,9 +49,11 @@ public class FraudsterSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WatchlistIds")
     public String[] watchlistIds;
+
     public FraudsterSummary withWatchlistIds(String[] watchlistIds) {
         this.watchlistIds = watchlistIds;
         return this;
     }
     
+    public FraudsterSummary(){}
 }

@@ -9,15 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput - Represents a link between a Merchant Center account and a branch. Once a link is established, products from the linked merchant center account will be streamed to the linked branch. LINT.IfChange(MerchantCenterAccountLink)
+ * GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput - Represents a link between a Merchant Center account and a branch. After a link is established, products from the linked Merchant Center account are streamed to the linked branch.
  */
 public class GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput {
     /**
-     * Required. The branch id (e.g. 0/1/2) within the catalog that products from merchant_center_account_id are streamed to. When updating this field, an empty value will use the currently configured default branch. However, changing the default branch later on won't change the linked branch here. A single branch id can only have one linked merchant center account id.
+     * Required. The branch ID (e.g. 0/1/2) within the catalog that products from merchant_center_account_id are streamed to. When updating this field, an empty value will use the currently configured default branch. However, changing the default branch later on won't change the linked branch here. A single branch ID can only have one linked Merchant Center account ID.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchId")
     public String branchId;
+
     public GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput withBranchId(String branchId) {
         this.branchId = branchId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedFilters")
     public GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter[] feedFilters;
+
     public GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput withFeedFilters(GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter[] feedFilters) {
         this.feedFilters = feedFilters;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedLabel")
     public String feedLabel;
+
     public GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput withFeedLabel(String feedLabel) {
         this.feedLabel = feedLabel;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCenterAccountId")
     public String merchantCenterAccountId;
+
     public GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput withMerchantCenterAccountId(String merchantCenterAccountId) {
         this.merchantCenterAccountId = merchantCenterAccountId;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput(){}
 }

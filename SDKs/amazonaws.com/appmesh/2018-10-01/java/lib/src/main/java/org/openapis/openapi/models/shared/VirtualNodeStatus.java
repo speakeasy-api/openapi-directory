@@ -15,9 +15,11 @@ public class VirtualNodeStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VirtualNodeStatusCodeEnum status;
+
     public VirtualNodeStatus withStatus(VirtualNodeStatusCodeEnum status) {
         this.status = status;
         return this;
     }
     
+    public VirtualNodeStatus(){}
 }

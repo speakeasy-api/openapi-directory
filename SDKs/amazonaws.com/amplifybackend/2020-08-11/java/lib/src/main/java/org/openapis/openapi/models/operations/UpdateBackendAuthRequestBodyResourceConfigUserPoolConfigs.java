@@ -15,6 +15,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForgotPassword")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword forgotPassword;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs withForgotPassword(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPassword forgotPassword) {
         this.forgotPassword = forgotPassword;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mfa")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa mfa;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs withMfa(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa mfa) {
         this.mfa = mfa;
         return this;
@@ -31,6 +33,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OAuth")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth oAuth;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs withOAuth(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuth oAuth) {
         this.oAuth = oAuth;
         return this;
@@ -39,6 +42,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasswordPolicy")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPolicy passwordPolicy;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs withPasswordPolicy(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsPasswordPolicy passwordPolicy) {
         this.passwordPolicy = passwordPolicy;
         return this;
@@ -47,9 +51,11 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerificationMessage")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage verificationMessage;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs withVerificationMessage(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessage verificationMessage) {
         this.verificationMessage = verificationMessage;
         return this;
     }
     
+    public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigs(){}
 }

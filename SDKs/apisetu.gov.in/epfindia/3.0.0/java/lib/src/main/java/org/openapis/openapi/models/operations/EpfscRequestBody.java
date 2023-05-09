@@ -15,6 +15,7 @@ public class EpfscRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public EpfscRequestBodyCertificateParameters certificateParameters;
+
     public EpfscRequestBody withCertificateParameters(EpfscRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class EpfscRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public EpfscRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class EpfscRequestBody {
      */
     @JsonProperty("format")
     public EpfscRequestBodyFormatEnum format;
+
     public EpfscRequestBody withFormat(EpfscRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class EpfscRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public EpfscRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public EpfscRequestBody(@JsonProperty("format") EpfscRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

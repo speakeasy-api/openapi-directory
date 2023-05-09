@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProductsProductIdFieldsFieldIdJsonResponse {
     
     public String contentType;
+
     public DeleteProductsProductIdFieldsFieldIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProductsProductIdFieldsFieldIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageObject messageObject;
+
     public DeleteProductsProductIdFieldsFieldIdJsonResponse withMessageObject(org.openapis.openapi.models.shared.MessageObject messageObject) {
         this.messageObject = messageObject;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProductsProductIdFieldsFieldIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteProductsProductIdFieldsFieldIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class DeleteProductsProductIdFieldsFieldIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteProductsProductIdFieldsFieldIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteProductsProductIdFieldsFieldIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProductsProductIdFieldsFieldIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteProductsProductIdFieldsFieldIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

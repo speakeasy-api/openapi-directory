@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("andGroup")
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpressionList andGroup;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression withAndGroup(GoogleAnalyticsAdminV1alphaAudienceFilterExpressionList andGroup) {
         this.andGroup = andGroup;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionOrMetricFilter")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter dimensionOrMetricFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression withDimensionOrMetricFilter(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter dimensionOrMetricFilter) {
         this.dimensionOrMetricFilter = dimensionOrMetricFilter;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventFilter")
     public GoogleAnalyticsAdminV1alphaAudienceEventFilter eventFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression withEventFilter(GoogleAnalyticsAdminV1alphaAudienceEventFilter eventFilter) {
         this.eventFilter = eventFilter;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notExpression")
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression notExpression;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression withNotExpression(GoogleAnalyticsAdminV1alphaAudienceFilterExpression notExpression) {
         this.notExpression = notExpression;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orGroup")
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpressionList orGroup;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterExpression withOrGroup(GoogleAnalyticsAdminV1alphaAudienceFilterExpressionList orGroup) {
         this.orGroup = orGroup;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceFilterExpression(){}
 }

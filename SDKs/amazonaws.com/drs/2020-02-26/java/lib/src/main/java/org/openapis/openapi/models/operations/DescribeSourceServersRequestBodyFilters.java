@@ -15,6 +15,7 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardwareId")
     public String hardwareId;
+
     public DescribeSourceServersRequestBodyFilters withHardwareId(String hardwareId) {
         this.hardwareId = hardwareId;
         return this;
@@ -23,6 +24,7 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerIDs")
     public String[] sourceServerIDs;
+
     public DescribeSourceServersRequestBodyFilters withSourceServerIDs(String[] sourceServerIDs) {
         this.sourceServerIDs = sourceServerIDs;
         return this;
@@ -31,9 +33,11 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAccountIDs")
     public String[] stagingAccountIDs;
+
     public DescribeSourceServersRequestBodyFilters withStagingAccountIDs(String[] stagingAccountIDs) {
         this.stagingAccountIDs = stagingAccountIDs;
         return this;
     }
     
+    public DescribeSourceServersRequestBodyFilters(){}
 }

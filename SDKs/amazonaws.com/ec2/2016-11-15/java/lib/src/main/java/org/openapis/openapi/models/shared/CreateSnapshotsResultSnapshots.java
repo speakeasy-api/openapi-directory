@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateSnapshotsResultSnapshots {
     
     public String description;
+
     public CreateSnapshotsResultSnapshots withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public Boolean encrypted;
+
     public CreateSnapshotsResultSnapshots withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public String outpostArn;
+
     public CreateSnapshotsResultSnapshots withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -33,6 +36,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public String ownerId;
+
     public CreateSnapshotsResultSnapshots withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public String progress;
+
     public CreateSnapshotsResultSnapshots withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -47,6 +52,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public String snapshotId;
+
     public CreateSnapshotsResultSnapshots withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public OffsetDateTime startTime;
+
     public CreateSnapshotsResultSnapshots withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -61,6 +68,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public CreateSnapshotsResultSnapshotsStateEnum state;
+
     public CreateSnapshotsResultSnapshots withState(CreateSnapshotsResultSnapshotsStateEnum state) {
         this.state = state;
         return this;
@@ -68,6 +76,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public CreateSnapshotsResultSnapshotsTags[] tags;
+
     public CreateSnapshotsResultSnapshots withTags(CreateSnapshotsResultSnapshotsTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,6 +84,7 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public String volumeId;
+
     public CreateSnapshotsResultSnapshots withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -82,9 +92,11 @@ public class CreateSnapshotsResultSnapshots {
     
     
     public Long volumeSize;
+
     public CreateSnapshotsResultSnapshots withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
     }
     
+    public CreateSnapshotsResultSnapshots(){}
 }

@@ -15,6 +15,7 @@ public class RegisterOnPremisesInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamSessionArn")
     public String iamSessionArn;
+
     public RegisterOnPremisesInstanceInput withIamSessionArn(String iamSessionArn) {
         this.iamSessionArn = iamSessionArn;
         return this;
@@ -23,6 +24,7 @@ public class RegisterOnPremisesInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamUserArn")
     public String iamUserArn;
+
     public RegisterOnPremisesInstanceInput withIamUserArn(String iamUserArn) {
         this.iamUserArn = iamUserArn;
         return this;
@@ -30,9 +32,13 @@ public class RegisterOnPremisesInstanceInput {
     
     @JsonProperty("instanceName")
     public String instanceName;
+
     public RegisterOnPremisesInstanceInput withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public RegisterOnPremisesInstanceInput(@JsonProperty("instanceName") String instanceName) {
+        this.instanceName = instanceName;
+  }
 }

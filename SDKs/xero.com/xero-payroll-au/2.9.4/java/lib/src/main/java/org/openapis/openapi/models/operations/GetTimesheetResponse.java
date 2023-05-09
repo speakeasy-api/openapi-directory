@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTimesheetResponse {
     
     public String contentType;
+
     public GetTimesheetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTimesheetResponse {
     
     
     public Integer statusCode;
+
     public GetTimesheetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTimesheetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTimesheetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetTimesheetResponse {
      */
     
     public org.openapis.openapi.models.shared.TimesheetObject timesheetObject;
+
     public GetTimesheetResponse withTimesheetObject(org.openapis.openapi.models.shared.TimesheetObject timesheetObject) {
         this.timesheetObject = timesheetObject;
         return this;
     }
     
+    public GetTimesheetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

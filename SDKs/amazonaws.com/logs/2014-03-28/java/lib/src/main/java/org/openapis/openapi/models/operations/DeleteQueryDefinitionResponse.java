@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteQueryDefinitionResponse {
     
     public String contentType;
+
     public DeleteQueryDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteQueryDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteQueryDefinitionResponse deleteQueryDefinitionResponse;
+
     public DeleteQueryDefinitionResponse withDeleteQueryDefinitionResponse(org.openapis.openapi.models.shared.DeleteQueryDefinitionResponse deleteQueryDefinitionResponse) {
         this.deleteQueryDefinitionResponse = deleteQueryDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteQueryDefinitionResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteQueryDefinitionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteQueryDefinitionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteQueryDefinitionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteQueryDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeleteQueryDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteQueryDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteQueryDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteQueryDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteQueryDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteQueryDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

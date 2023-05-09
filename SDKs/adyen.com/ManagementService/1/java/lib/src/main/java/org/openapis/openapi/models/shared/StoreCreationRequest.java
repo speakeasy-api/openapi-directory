@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StoreCreationRequest {
     @JsonProperty("address")
     public StoreLocation address;
+
     public StoreCreationRequest withAddress(StoreLocation address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class StoreCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineIds")
     public String[] businessLineIds;
+
     public StoreCreationRequest withBusinessLineIds(String[] businessLineIds) {
         this.businessLineIds = businessLineIds;
         return this;
@@ -33,6 +35,7 @@ public class StoreCreationRequest {
      */
     @JsonProperty("description")
     public String description;
+
     public StoreCreationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class StoreCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalReferenceId")
     public String externalReferenceId;
+
     public StoreCreationRequest withExternalReferenceId(String externalReferenceId) {
         this.externalReferenceId = externalReferenceId;
         return this;
@@ -54,6 +58,7 @@ public class StoreCreationRequest {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public StoreCreationRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -66,6 +71,7 @@ public class StoreCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public StoreCreationRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -77,6 +83,7 @@ public class StoreCreationRequest {
      */
     @JsonProperty("shopperStatement")
     public String shopperStatement;
+
     public StoreCreationRequest withShopperStatement(String shopperStatement) {
         this.shopperStatement = shopperStatement;
         return this;
@@ -85,9 +92,16 @@ public class StoreCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitConfiguration")
     public StoreSplitConfiguration splitConfiguration;
+
     public StoreCreationRequest withSplitConfiguration(StoreSplitConfiguration splitConfiguration) {
         this.splitConfiguration = splitConfiguration;
         return this;
     }
     
+    public StoreCreationRequest(@JsonProperty("address") StoreLocation address, @JsonProperty("description") String description, @JsonProperty("phoneNumber") String phoneNumber, @JsonProperty("shopperStatement") String shopperStatement) {
+        this.address = address;
+        this.description = description;
+        this.phoneNumber = phoneNumber;
+        this.shopperStatement = shopperStatement;
+  }
 }

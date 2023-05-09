@@ -52,11 +52,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiPagesIdResponse res = new org.openapis.openapi.models.operations.DeleteApiPagesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiPagesIdResponse res = new org.openapis.openapi.models.operations.DeleteApiPagesIdResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiPagesResponse res = new org.openapis.openapi.models.operations.GetApiPagesResponse() {{
+        org.openapis.openapi.models.operations.GetApiPagesResponse res = new org.openapis.openapi.models.operations.GetApiPagesResponse(contentType, httpRes.statusCode()) {{
             pages = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiPagesIdResponse res = new org.openapis.openapi.models.operations.GetApiPagesIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiPagesIdResponse res = new org.openapis.openapi.models.operations.GetApiPagesIdResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,8 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiPagesResponse res = new org.openapis.openapi.models.operations.PostApiPagesResponse() {{
+        org.openapis.openapi.models.operations.PostApiPagesResponse res = new org.openapis.openapi.models.operations.PostApiPagesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 422) {
@@ -211,11 +203,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiPagesIdResponse res = new org.openapis.openapi.models.operations.PutApiPagesIdResponse() {{
+        org.openapis.openapi.models.operations.PutApiPagesIdResponse res = new org.openapis.openapi.models.operations.PutApiPagesIdResponse(contentType, httpRes.statusCode()) {{
             page = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

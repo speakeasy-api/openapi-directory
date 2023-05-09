@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse {
     
     public String contentType;
+
     public CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsRespon
      */
     
     public org.openapis.openapi.models.shared.ListAvailableOrgPolicyConstraintsResponse listAvailableOrgPolicyConstraintsResponse;
+
     public CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse withListAvailableOrgPolicyConstraintsResponse(org.openapis.openapi.models.shared.ListAvailableOrgPolicyConstraintsResponse listAvailableOrgPolicyConstraintsResponse) {
         this.listAvailableOrgPolicyConstraintsResponse = listAvailableOrgPolicyConstraintsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsRespon
     
     
     public Integer statusCode;
+
     public CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudresourcemanagerProjectsListAvailableOrgPolicyConstraintsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

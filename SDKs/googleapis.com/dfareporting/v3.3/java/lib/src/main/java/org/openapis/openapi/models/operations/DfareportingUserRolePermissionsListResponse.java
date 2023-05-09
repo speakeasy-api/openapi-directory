@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingUserRolePermissionsListResponse {
     
     public String contentType;
+
     public DfareportingUserRolePermissionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DfareportingUserRolePermissionsListResponse {
     
     
     public Integer statusCode;
+
     public DfareportingUserRolePermissionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DfareportingUserRolePermissionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingUserRolePermissionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingUserRolePermissionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.UserRolePermissionsListResponse userRolePermissionsListResponse;
+
     public DfareportingUserRolePermissionsListResponse withUserRolePermissionsListResponse(org.openapis.openapi.models.shared.UserRolePermissionsListResponse userRolePermissionsListResponse) {
         this.userRolePermissionsListResponse = userRolePermissionsListResponse;
         return this;
     }
     
+    public DfareportingUserRolePermissionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

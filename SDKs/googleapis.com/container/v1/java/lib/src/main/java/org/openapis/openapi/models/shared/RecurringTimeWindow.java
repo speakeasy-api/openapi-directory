@@ -18,6 +18,7 @@ public class RecurringTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurrence")
     public String recurrence;
+
     public RecurringTimeWindow withRecurrence(String recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -29,9 +30,11 @@ public class RecurringTimeWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("window")
     public TimeWindow window;
+
     public RecurringTimeWindow withWindow(TimeWindow window) {
         this.window = window;
         return this;
     }
     
+    public RecurringTimeWindow(){}
 }

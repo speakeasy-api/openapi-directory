@@ -15,9 +15,13 @@ public class ListTemplatesResponse {
      */
     @JsonProperty("TemplatesResponse")
     public TemplatesResponse templatesResponse;
+
     public ListTemplatesResponse withTemplatesResponse(TemplatesResponse templatesResponse) {
         this.templatesResponse = templatesResponse;
         return this;
     }
     
+    public ListTemplatesResponse(@JsonProperty("TemplatesResponse") TemplatesResponse templatesResponse) {
+        this.templatesResponse = templatesResponse;
+  }
 }

@@ -15,6 +15,7 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorInfo")
     public ErrorInfo errorInfo;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails withErrorInfo(ErrorInfo errorInfo) {
         this.errorInfo = errorInfo;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("help")
     public Help help;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails withHelp(Help help) {
         this.help = help;
         return this;
@@ -37,6 +39,7 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedMessage")
     public LocalizedMessage localizedMessage;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails withLocalizedMessage(LocalizedMessage localizedMessage) {
         this.localizedMessage = localizedMessage;
         return this;
@@ -48,9 +51,11 @@ public class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaInfo")
     public QuotaExceededInfo quotaInfo;
+
     public InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails withQuotaInfo(QuotaExceededInfo quotaInfo) {
         this.quotaInfo = quotaInfo;
         return this;
     }
     
+    public InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails(){}
 }

@@ -12,9 +12,13 @@ public class EnterpriseAdminUpdateOrgNameRequestBody {
      */
     @JsonProperty("login")
     public String login;
+
     public EnterpriseAdminUpdateOrgNameRequestBody withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public EnterpriseAdminUpdateOrgNameRequestBody(@JsonProperty("login") String login) {
+        this.login = login;
+  }
 }

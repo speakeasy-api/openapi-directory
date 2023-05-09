@@ -18,6 +18,7 @@ public class LineItemFlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public LineItemFlight withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,9 +30,11 @@ public class LineItemFlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightDateType")
     public LineItemFlightFlightDateTypeEnum flightDateType;
+
     public LineItemFlight withFlightDateType(LineItemFlightFlightDateTypeEnum flightDateType) {
         this.flightDateType = flightDateType;
         return this;
     }
     
+    public LineItemFlight(){}
 }

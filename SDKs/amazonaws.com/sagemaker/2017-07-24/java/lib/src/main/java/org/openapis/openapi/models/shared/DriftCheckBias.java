@@ -15,6 +15,7 @@ public class DriftCheckBias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigFile")
     public FileSource configFile;
+
     public DriftCheckBias withConfigFile(FileSource configFile) {
         this.configFile = configFile;
         return this;
@@ -23,6 +24,7 @@ public class DriftCheckBias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostTrainingConstraints")
     public MetricsSource postTrainingConstraints;
+
     public DriftCheckBias withPostTrainingConstraints(MetricsSource postTrainingConstraints) {
         this.postTrainingConstraints = postTrainingConstraints;
         return this;
@@ -31,9 +33,11 @@ public class DriftCheckBias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreTrainingConstraints")
     public MetricsSource preTrainingConstraints;
+
     public DriftCheckBias withPreTrainingConstraints(MetricsSource preTrainingConstraints) {
         this.preTrainingConstraints = preTrainingConstraints;
         return this;
     }
     
+    public DriftCheckBias(){}
 }

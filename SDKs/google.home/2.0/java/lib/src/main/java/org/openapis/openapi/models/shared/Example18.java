@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example18 {
     @JsonProperty("alarm")
     public Alarm[] alarm;
+
     public Example18 withAlarm(Alarm[] alarm) {
         this.alarm = alarm;
         return this;
@@ -16,9 +17,14 @@ public class Example18 {
     
     @JsonProperty("timer")
     public Timer[] timer;
+
     public Example18 withTimer(Timer[] timer) {
         this.timer = timer;
         return this;
     }
     
+    public Example18(@JsonProperty("alarm") Alarm[] alarm, @JsonProperty("timer") Timer[] timer) {
+        this.alarm = alarm;
+        this.timer = timer;
+  }
 }

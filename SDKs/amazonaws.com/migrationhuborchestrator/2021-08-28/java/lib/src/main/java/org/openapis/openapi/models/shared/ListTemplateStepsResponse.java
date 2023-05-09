@@ -15,6 +15,7 @@ public class ListTemplateStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTemplateStepsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTemplateStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateStepSummaryList")
     public TemplateStepSummary[] templateStepSummaryList;
+
     public ListTemplateStepsResponse withTemplateStepSummaryList(TemplateStepSummary[] templateStepSummaryList) {
         this.templateStepSummaryList = templateStepSummaryList;
         return this;
     }
     
+    public ListTemplateStepsResponse(){}
 }

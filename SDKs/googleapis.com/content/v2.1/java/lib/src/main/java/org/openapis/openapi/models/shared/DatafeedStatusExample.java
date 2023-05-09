@@ -18,6 +18,7 @@ public class DatafeedStatusExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public DatafeedStatusExample withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -29,6 +30,7 @@ public class DatafeedStatusExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineNumber")
     public String lineNumber;
+
     public DatafeedStatusExample withLineNumber(String lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -40,9 +42,11 @@ public class DatafeedStatusExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DatafeedStatusExample withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DatafeedStatusExample(){}
 }

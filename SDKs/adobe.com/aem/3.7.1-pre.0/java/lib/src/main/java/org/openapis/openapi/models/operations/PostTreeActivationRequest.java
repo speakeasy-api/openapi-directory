@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTreeActivationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cmd")
     public String cmd;
+
     public PostTreeActivationRequest withCmd(String cmd) {
         this.cmd = cmd;
         return this;
@@ -16,6 +18,7 @@ public class PostTreeActivationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignoredeactivated")
     public Boolean ignoredeactivated;
+
     public PostTreeActivationRequest withIgnoredeactivated(Boolean ignoredeactivated) {
         this.ignoredeactivated = ignoredeactivated;
         return this;
@@ -23,6 +26,7 @@ public class PostTreeActivationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlymodified")
     public Boolean onlymodified;
+
     public PostTreeActivationRequest withOnlymodified(Boolean onlymodified) {
         this.onlymodified = onlymodified;
         return this;
@@ -30,9 +34,16 @@ public class PostTreeActivationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public PostTreeActivationRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PostTreeActivationRequest(@JsonProperty("cmd") String cmd, @JsonProperty("ignoredeactivated") Boolean ignoredeactivated, @JsonProperty("onlymodified") Boolean onlymodified, @JsonProperty("path") String path) {
+        this.cmd = cmd;
+        this.ignoredeactivated = ignoredeactivated;
+        this.onlymodified = onlymodified;
+        this.path = path;
+  }
 }

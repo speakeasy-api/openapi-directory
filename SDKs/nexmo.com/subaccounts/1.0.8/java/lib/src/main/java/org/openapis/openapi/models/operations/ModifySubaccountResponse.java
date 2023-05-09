@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifySubaccountResponse {
     
     public String contentType;
+
     public ModifySubaccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ModifySubaccountResponse {
     
     
     public Integer statusCode;
+
     public ModifySubaccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ModifySubaccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifySubaccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ModifySubaccountResponse {
      */
     
     public org.openapis.openapi.models.shared.SubaccountResponse subaccountResponse;
+
     public ModifySubaccountResponse withSubaccountResponse(org.openapis.openapi.models.shared.SubaccountResponse subaccountResponse) {
         this.subaccountResponse = subaccountResponse;
         return this;
@@ -43,6 +48,7 @@ public class ModifySubaccountResponse {
      */
     
     public org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse;
+
     public ModifySubaccountResponse withUnprovisionedErrorResponse(org.openapis.openapi.models.shared.UnprovisionedErrorResponse unprovisionedErrorResponse) {
         this.unprovisionedErrorResponse = unprovisionedErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class ModifySubaccountResponse {
      */
     
     public ModifySubaccount401ApplicationJSON modifySubaccount401ApplicationJSONObject;
+
     public ModifySubaccountResponse withModifySubaccount401ApplicationJSONObject(ModifySubaccount401ApplicationJSON modifySubaccount401ApplicationJSONObject) {
         this.modifySubaccount401ApplicationJSONObject = modifySubaccount401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ModifySubaccountResponse {
      */
     
     public ModifySubaccount404ApplicationJSON modifySubaccount404ApplicationJSONObject;
+
     public ModifySubaccountResponse withModifySubaccount404ApplicationJSONObject(ModifySubaccount404ApplicationJSON modifySubaccount404ApplicationJSONObject) {
         this.modifySubaccount404ApplicationJSONObject = modifySubaccount404ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class ModifySubaccountResponse {
      */
     
     public ModifySubaccount422ApplicationJSON modifySubaccount422ApplicationJSONObject;
+
     public ModifySubaccountResponse withModifySubaccount422ApplicationJSONObject(ModifySubaccount422ApplicationJSON modifySubaccount422ApplicationJSONObject) {
         this.modifySubaccount422ApplicationJSONObject = modifySubaccount422ApplicationJSONObject;
         return this;
     }
     
+    public ModifySubaccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

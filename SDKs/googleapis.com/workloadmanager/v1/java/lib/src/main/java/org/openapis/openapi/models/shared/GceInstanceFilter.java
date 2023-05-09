@@ -18,9 +18,11 @@ public class GceInstanceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccounts")
     public String[] serviceAccounts;
+
     public GceInstanceFilter withServiceAccounts(String[] serviceAccounts) {
         this.serviceAccounts = serviceAccounts;
         return this;
     }
     
+    public GceInstanceFilter(){}
 }

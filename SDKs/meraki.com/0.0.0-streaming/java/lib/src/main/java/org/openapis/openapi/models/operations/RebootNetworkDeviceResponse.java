@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RebootNetworkDeviceResponse {
     
     public String contentType;
+
     public RebootNetworkDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RebootNetworkDeviceResponse {
     
     
     public Integer statusCode;
+
     public RebootNetworkDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RebootNetworkDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RebootNetworkDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class RebootNetworkDeviceResponse {
      */
     
     public java.util.Map<String, Object> rebootNetworkDevice200ApplicationJSONObject;
+
     public RebootNetworkDeviceResponse withRebootNetworkDevice200ApplicationJSONObject(java.util.Map<String, Object> rebootNetworkDevice200ApplicationJSONObject) {
         this.rebootNetworkDevice200ApplicationJSONObject = rebootNetworkDevice200ApplicationJSONObject;
         return this;
     }
     
+    public RebootNetworkDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

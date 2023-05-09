@@ -12,9 +12,11 @@ public class PermissionGroupModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public PermissionGroupModelHaljsonEmbeddedProduct product;
+
     public PermissionGroupModelHaljsonEmbedded withProduct(PermissionGroupModelHaljsonEmbeddedProduct product) {
         this.product = product;
         return this;
     }
     
+    public PermissionGroupModelHaljsonEmbedded(){}
 }

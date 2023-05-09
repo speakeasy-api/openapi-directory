@@ -21,9 +21,11 @@ public class PostUsersLoginSuccessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public PostUsersLoginSuccessResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PostUsersLoginSuccessResponse(){}
 }

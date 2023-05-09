@@ -18,9 +18,11 @@ public class ResponseMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ResponseMetadata withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ResponseMetadata(){}
 }

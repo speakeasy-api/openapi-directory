@@ -15,6 +15,7 @@ public class ListHsmsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmList")
     public String[] hsmList;
+
     public ListHsmsResponse withHsmList(String[] hsmList) {
         this.hsmList = hsmList;
         return this;
@@ -23,9 +24,11 @@ public class ListHsmsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHsmsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHsmsResponse(){}
 }

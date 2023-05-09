@@ -15,6 +15,7 @@ public class ApprovalStateChangedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalStatus")
     public ApprovalStateEnum approvalStatus;
+
     public ApprovalStateChangedEventMetadata withApprovalStatus(ApprovalStateEnum approvalStatus) {
         this.approvalStatus = approvalStatus;
         return this;
@@ -23,9 +24,11 @@ public class ApprovalStateChangedEventMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public ApprovalStateChangedEventMetadata withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public ApprovalStateChangedEventMetadata(){}
 }

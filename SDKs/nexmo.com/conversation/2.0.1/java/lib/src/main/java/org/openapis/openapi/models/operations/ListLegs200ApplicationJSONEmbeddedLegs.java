@@ -12,6 +12,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public java.util.Map<String, Object> embedded;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withEmbedded(java.util.Map<String, Object> embedded) {
         this.embedded = embedded;
         return this;
@@ -20,6 +21,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, Object> links;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
@@ -31,6 +33,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversation_uuid")
     public String conversationUuid;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withConversationUuid(String conversationUuid) {
         this.conversationUuid = conversationUuid;
         return this;
@@ -39,6 +42,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public java.util.Map<String, Object> from;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withFrom(java.util.Map<String, Object> from) {
         this.from = from;
         return this;
@@ -50,6 +54,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_end")
     public String startEnd;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withStartEnd(String startEnd) {
         this.startEnd = startEnd;
         return this;
@@ -61,6 +66,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_time")
     public String startTime;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -72,6 +78,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.LegStateEnum state;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withState(org.openapis.openapi.models.shared.LegStateEnum state) {
         this.state = state;
         return this;
@@ -80,6 +87,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public java.util.Map<String, Object> to;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withTo(java.util.Map<String, Object> to) {
         this.to = to;
         return this;
@@ -91,6 +99,7 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.ChannelTypeEnum type;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withType(org.openapis.openapi.models.shared.ChannelTypeEnum type) {
         this.type = type;
         return this;
@@ -101,9 +110,13 @@ public class ListLegs200ApplicationJSONEmbeddedLegs {
      */
     @JsonProperty("uuid")
     public String uuid;
+
     public ListLegs200ApplicationJSONEmbeddedLegs withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public ListLegs200ApplicationJSONEmbeddedLegs(@JsonProperty("uuid") String uuid) {
+        this.uuid = uuid;
+  }
 }

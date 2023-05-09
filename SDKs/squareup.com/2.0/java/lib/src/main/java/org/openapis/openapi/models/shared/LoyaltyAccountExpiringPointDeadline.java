@@ -15,6 +15,7 @@ public class LoyaltyAccountExpiringPointDeadline {
      */
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public LoyaltyAccountExpiringPointDeadline withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -25,9 +26,14 @@ public class LoyaltyAccountExpiringPointDeadline {
      */
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyAccountExpiringPointDeadline withPoints(Long points) {
         this.points = points;
         return this;
     }
     
+    public LoyaltyAccountExpiringPointDeadline(@JsonProperty("expires_at") String expiresAt, @JsonProperty("points") Long points) {
+        this.expiresAt = expiresAt;
+        this.points = points;
+  }
 }

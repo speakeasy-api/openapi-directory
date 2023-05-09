@@ -15,6 +15,7 @@ public class GetSpins200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetSpins200ApplicationJSONLinks links;
+
     public GetSpins200ApplicationJSON withLinks(GetSpins200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class GetSpins200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_meta")
     public org.openapis.openapi.models.shared.Pagination meta;
+
     public GetSpins200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Pagination meta) {
         this.meta = meta;
         return this;
@@ -31,9 +33,11 @@ public class GetSpins200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.Spin[] items;
+
     public GetSpins200ApplicationJSON withItems(org.openapis.openapi.models.shared.Spin[] items) {
         this.items = items;
         return this;
     }
     
+    public GetSpins200ApplicationJSON(){}
 }

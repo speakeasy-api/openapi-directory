@@ -18,6 +18,7 @@ public class ProceduresList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.BillingLineItem[] data;
+
     public ProceduresList200ApplicationJSON withData(org.openapis.openapi.models.shared.BillingLineItem[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class ProceduresList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ProceduresList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -40,9 +42,11 @@ public class ProceduresList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public ProceduresList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public ProceduresList200ApplicationJSON(){}
 }

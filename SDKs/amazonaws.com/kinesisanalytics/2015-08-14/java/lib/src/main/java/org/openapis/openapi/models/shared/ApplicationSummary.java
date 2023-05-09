@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationSummary {
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public ApplicationSummary withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -19,6 +20,7 @@ public class ApplicationSummary {
     
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public ApplicationSummary withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -26,9 +28,15 @@ public class ApplicationSummary {
     
     @JsonProperty("ApplicationStatus")
     public ApplicationStatusEnum applicationStatus;
+
     public ApplicationSummary withApplicationStatus(ApplicationStatusEnum applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
     }
     
+    public ApplicationSummary(@JsonProperty("ApplicationARN") String applicationARN, @JsonProperty("ApplicationName") String applicationName, @JsonProperty("ApplicationStatus") ApplicationStatusEnum applicationStatus) {
+        this.applicationARN = applicationARN;
+        this.applicationName = applicationName;
+        this.applicationStatus = applicationStatus;
+  }
 }

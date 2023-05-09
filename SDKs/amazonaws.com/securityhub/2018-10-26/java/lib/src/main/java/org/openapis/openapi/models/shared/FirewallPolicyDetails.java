@@ -15,6 +15,7 @@ public class FirewallPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulRuleGroupReferences")
     public FirewallPolicyStatefulRuleGroupReferencesDetails[] statefulRuleGroupReferences;
+
     public FirewallPolicyDetails withStatefulRuleGroupReferences(FirewallPolicyStatefulRuleGroupReferencesDetails[] statefulRuleGroupReferences) {
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;
         return this;
@@ -23,6 +24,7 @@ public class FirewallPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessCustomActions")
     public FirewallPolicyStatelessCustomActionsDetails[] statelessCustomActions;
+
     public FirewallPolicyDetails withStatelessCustomActions(FirewallPolicyStatelessCustomActionsDetails[] statelessCustomActions) {
         this.statelessCustomActions = statelessCustomActions;
         return this;
@@ -31,6 +33,7 @@ public class FirewallPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessDefaultActions")
     public String[] statelessDefaultActions;
+
     public FirewallPolicyDetails withStatelessDefaultActions(String[] statelessDefaultActions) {
         this.statelessDefaultActions = statelessDefaultActions;
         return this;
@@ -39,6 +42,7 @@ public class FirewallPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessFragmentDefaultActions")
     public String[] statelessFragmentDefaultActions;
+
     public FirewallPolicyDetails withStatelessFragmentDefaultActions(String[] statelessFragmentDefaultActions) {
         this.statelessFragmentDefaultActions = statelessFragmentDefaultActions;
         return this;
@@ -47,9 +51,11 @@ public class FirewallPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatelessRuleGroupReferences")
     public FirewallPolicyStatelessRuleGroupReferencesDetails[] statelessRuleGroupReferences;
+
     public FirewallPolicyDetails withStatelessRuleGroupReferences(FirewallPolicyStatelessRuleGroupReferencesDetails[] statelessRuleGroupReferences) {
         this.statelessRuleGroupReferences = statelessRuleGroupReferences;
         return this;
     }
     
+    public FirewallPolicyDetails(){}
 }

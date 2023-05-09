@@ -12,6 +12,7 @@ public class CreateDataSourceFromRDSInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeStatistics")
     public Boolean computeStatistics;
+
     public CreateDataSourceFromRDSInput withComputeStatistics(Boolean computeStatistics) {
         this.computeStatistics = computeStatistics;
         return this;
@@ -19,6 +20,7 @@ public class CreateDataSourceFromRDSInput {
     
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public CreateDataSourceFromRDSInput withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -27,6 +29,7 @@ public class CreateDataSourceFromRDSInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceName")
     public String dataSourceName;
+
     public CreateDataSourceFromRDSInput withDataSourceName(String dataSourceName) {
         this.dataSourceName = dataSourceName;
         return this;
@@ -34,6 +37,7 @@ public class CreateDataSourceFromRDSInput {
     
     @JsonProperty("RDSData")
     public RDSDataSpec rdsData;
+
     public CreateDataSourceFromRDSInput withRDSData(RDSDataSpec rdsData) {
         this.rdsData = rdsData;
         return this;
@@ -41,9 +45,15 @@ public class CreateDataSourceFromRDSInput {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public CreateDataSourceFromRDSInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public CreateDataSourceFromRDSInput(@JsonProperty("DataSourceId") String dataSourceId, @JsonProperty("RDSData") RDSDataSpec rdsData, @JsonProperty("RoleARN") String roleARN) {
+        this.dataSourceId = dataSourceId;
+        this.rdsData = rdsData;
+        this.roleARN = roleARN;
+  }
 }

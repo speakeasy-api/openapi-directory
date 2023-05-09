@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegisterDBProxyTargetsRequest {
     
     public String[] dbClusterIdentifiers;
+
     public RegisterDBProxyTargetsRequest withDBClusterIdentifiers(String[] dbClusterIdentifiers) {
         this.dbClusterIdentifiers = dbClusterIdentifiers;
         return this;
@@ -16,6 +17,7 @@ public class RegisterDBProxyTargetsRequest {
     
     
     public String[] dbInstanceIdentifiers;
+
     public RegisterDBProxyTargetsRequest withDBInstanceIdentifiers(String[] dbInstanceIdentifiers) {
         this.dbInstanceIdentifiers = dbInstanceIdentifiers;
         return this;
@@ -23,6 +25,7 @@ public class RegisterDBProxyTargetsRequest {
     
     
     public String dbProxyName;
+
     public RegisterDBProxyTargetsRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -30,9 +33,13 @@ public class RegisterDBProxyTargetsRequest {
     
     
     public String targetGroupName;
+
     public RegisterDBProxyTargetsRequest withTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
         return this;
     }
     
+    public RegisterDBProxyTargetsRequest(@JsonProperty("DBProxyName") String dbProxyName) {
+        this.dbProxyName = dbProxyName;
+  }
 }

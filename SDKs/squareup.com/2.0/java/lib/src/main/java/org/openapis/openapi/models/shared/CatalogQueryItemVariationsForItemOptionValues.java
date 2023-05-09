@@ -20,9 +20,11 @@ public class CatalogQueryItemVariationsForItemOptionValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_value_ids")
     public String[] itemOptionValueIds;
+
     public CatalogQueryItemVariationsForItemOptionValues withItemOptionValueIds(String[] itemOptionValueIds) {
         this.itemOptionValueIds = itemOptionValueIds;
         return this;
     }
     
+    public CatalogQueryItemVariationsForItemOptionValues(){}
 }

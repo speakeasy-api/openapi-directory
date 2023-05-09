@@ -17,6 +17,7 @@ public class HIPHealthInformationRequestAcknowledgement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public HIPHealthInformationRequestAcknowledgement withError(Error error) {
         this.error = error;
         return this;
@@ -25,6 +26,7 @@ public class HIPHealthInformationRequestAcknowledgement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiRequest")
     public HIPHealthInformationRequestAcknowledgementHiRequest hiRequest;
+
     public HIPHealthInformationRequestAcknowledgement withHiRequest(HIPHealthInformationRequestAcknowledgementHiRequest hiRequest) {
         this.hiRequest = hiRequest;
         return this;
@@ -35,6 +37,7 @@ public class HIPHealthInformationRequestAcknowledgement {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public HIPHealthInformationRequestAcknowledgement withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class HIPHealthInformationRequestAcknowledgement {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public HIPHealthInformationRequestAcknowledgement withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class HIPHealthInformationRequestAcknowledgement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIPHealthInformationRequestAcknowledgement withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIPHealthInformationRequestAcknowledgement(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveAutoScalingPolicyInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public RemoveAutoScalingPolicyInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -16,9 +17,14 @@ public class RemoveAutoScalingPolicyInput {
     
     @JsonProperty("InstanceGroupId")
     public String instanceGroupId;
+
     public RemoveAutoScalingPolicyInput withInstanceGroupId(String instanceGroupId) {
         this.instanceGroupId = instanceGroupId;
         return this;
     }
     
+    public RemoveAutoScalingPolicyInput(@JsonProperty("ClusterId") String clusterId, @JsonProperty("InstanceGroupId") String instanceGroupId) {
+        this.clusterId = clusterId;
+        this.instanceGroupId = instanceGroupId;
+  }
 }

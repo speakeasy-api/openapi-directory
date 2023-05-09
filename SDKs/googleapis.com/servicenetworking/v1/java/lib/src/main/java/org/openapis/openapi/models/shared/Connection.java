@@ -18,6 +18,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Connection withNetwork(String network) {
         this.network = network;
         return this;
@@ -29,6 +30,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peering")
     public String peering;
+
     public Connection withPeering(String peering) {
         this.peering = peering;
         return this;
@@ -40,6 +42,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedPeeringRanges")
     public String[] reservedPeeringRanges;
+
     public Connection withReservedPeeringRanges(String[] reservedPeeringRanges) {
         this.reservedPeeringRanges = reservedPeeringRanges;
         return this;
@@ -51,9 +54,11 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public Connection withService(String service) {
         this.service = service;
         return this;
     }
     
+    public Connection(){}
 }

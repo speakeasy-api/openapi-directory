@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlUsersDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlUsersDeleteSecurityOption1 option1;
+
     public SqlUsersDeleteSecurity withOption1(SqlUsersDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlUsersDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlUsersDeleteSecurityOption2 option2;
+
     public SqlUsersDeleteSecurity withOption2(SqlUsersDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlUsersDeleteSecurity(){}
 }

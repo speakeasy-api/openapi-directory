@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContainerDependency {
     @JsonProperty("condition")
     public ContainerConditionEnum condition;
+
     public ContainerDependency withCondition(ContainerConditionEnum condition) {
         this.condition = condition;
         return this;
@@ -19,9 +20,14 @@ public class ContainerDependency {
     
     @JsonProperty("containerName")
     public String containerName;
+
     public ContainerDependency withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
     }
     
+    public ContainerDependency(@JsonProperty("condition") ContainerConditionEnum condition, @JsonProperty("containerName") String containerName) {
+        this.condition = condition;
+        this.containerName = containerName;
+  }
 }

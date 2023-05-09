@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnlinkDeveloperIdentityInput {
     @JsonProperty("DeveloperProviderName")
     public String developerProviderName;
+
     public UnlinkDeveloperIdentityInput withDeveloperProviderName(String developerProviderName) {
         this.developerProviderName = developerProviderName;
         return this;
@@ -19,6 +20,7 @@ public class UnlinkDeveloperIdentityInput {
     
     @JsonProperty("DeveloperUserIdentifier")
     public String developerUserIdentifier;
+
     public UnlinkDeveloperIdentityInput withDeveloperUserIdentifier(String developerUserIdentifier) {
         this.developerUserIdentifier = developerUserIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class UnlinkDeveloperIdentityInput {
     
     @JsonProperty("IdentityId")
     public String identityId;
+
     public UnlinkDeveloperIdentityInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -33,9 +36,16 @@ public class UnlinkDeveloperIdentityInput {
     
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public UnlinkDeveloperIdentityInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
     }
     
+    public UnlinkDeveloperIdentityInput(@JsonProperty("DeveloperProviderName") String developerProviderName, @JsonProperty("DeveloperUserIdentifier") String developerUserIdentifier, @JsonProperty("IdentityId") String identityId, @JsonProperty("IdentityPoolId") String identityPoolId) {
+        this.developerProviderName = developerProviderName;
+        this.developerUserIdentifier = developerUserIdentifier;
+        this.identityId = identityId;
+        this.identityPoolId = identityPoolId;
+  }
 }

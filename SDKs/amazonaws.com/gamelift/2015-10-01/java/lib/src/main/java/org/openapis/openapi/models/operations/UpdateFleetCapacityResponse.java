@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFleetCapacityResponse {
@@ -12,6 +13,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object conflictException;
+
     public UpdateFleetCapacityResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFleetCapacityResponse {
     
     
     public String contentType;
+
     public UpdateFleetCapacityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateFleetCapacityResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object invalidFleetStatusException;
+
     public UpdateFleetCapacityResponse withInvalidFleetStatusException(Object invalidFleetStatusException) {
         this.invalidFleetStatusException = invalidFleetStatusException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFleetCapacityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateFleetCapacityResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object notFoundException;
+
     public UpdateFleetCapacityResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateFleetCapacityResponse {
     
     
     public Integer statusCode;
+
     public UpdateFleetCapacityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFleetCapacityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFleetCapacityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateFleetCapacityResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateFleetCapacityResponse {
      */
     
     public Object unsupportedRegionException;
+
     public UpdateFleetCapacityResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateFleetCapacityResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFleetCapacityOutput updateFleetCapacityOutput;
+
     public UpdateFleetCapacityResponse withUpdateFleetCapacityOutput(org.openapis.openapi.models.shared.UpdateFleetCapacityOutput updateFleetCapacityOutput) {
         this.updateFleetCapacityOutput = updateFleetCapacityOutput;
         return this;
     }
     
+    public UpdateFleetCapacityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

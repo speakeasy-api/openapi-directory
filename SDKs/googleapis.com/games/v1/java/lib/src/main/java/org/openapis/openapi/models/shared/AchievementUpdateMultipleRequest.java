@@ -18,6 +18,7 @@ public class AchievementUpdateMultipleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AchievementUpdateMultipleRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class AchievementUpdateMultipleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updates")
     public AchievementUpdateRequest[] updates;
+
     public AchievementUpdateMultipleRequest withUpdates(AchievementUpdateRequest[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public AchievementUpdateMultipleRequest(){}
 }

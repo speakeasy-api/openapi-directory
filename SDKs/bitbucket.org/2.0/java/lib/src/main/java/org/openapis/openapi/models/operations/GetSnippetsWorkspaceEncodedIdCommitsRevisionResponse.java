@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse {
     
     public String contentType;
+
     public GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse {
     
     
     public Integer statusCode;
+
     public GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse {
      */
     
     public java.util.Map<String, Object> snippetCommit;
+
     public GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse withSnippetCommit(java.util.Map<String, Object> snippetCommit) {
         this.snippetCommit = snippetCommit;
         return this;
     }
     
+    public GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

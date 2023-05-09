@@ -18,6 +18,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPAddress")
     public String ipAddress;
+
     public ForwardingRule withIPAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,6 +30,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPProtocol")
     public ForwardingRuleIPProtocolEnum ipProtocol;
+
     public ForwardingRule withIPProtocol(ForwardingRuleIPProtocolEnum ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -40,6 +42,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allPorts")
     public Boolean allPorts;
+
     public ForwardingRule withAllPorts(Boolean allPorts) {
         this.allPorts = allPorts;
         return this;
@@ -51,8 +54,21 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowGlobalAccess")
     public Boolean allowGlobalAccess;
+
     public ForwardingRule withAllowGlobalAccess(Boolean allowGlobalAccess) {
         this.allowGlobalAccess = allowGlobalAccess;
+        return this;
+    }
+    
+    /**
+     * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allowPscGlobalAccess")
+    public Boolean allowPscGlobalAccess;
+
+    public ForwardingRule withAllowPscGlobalAccess(Boolean allowPscGlobalAccess) {
+        this.allowPscGlobalAccess = allowPscGlobalAccess;
         return this;
     }
     
@@ -62,6 +78,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendService")
     public String backendService;
+
     public ForwardingRule withBackendService(String backendService) {
         this.backendService = backendService;
         return this;
@@ -73,6 +90,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseForwardingRule")
     public String baseForwardingRule;
+
     public ForwardingRule withBaseForwardingRule(String baseForwardingRule) {
         this.baseForwardingRule = baseForwardingRule;
         return this;
@@ -84,6 +102,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public ForwardingRule withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -95,6 +114,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ForwardingRule withDescription(String description) {
         this.description = description;
         return this;
@@ -106,6 +126,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public ForwardingRule withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -117,6 +138,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ForwardingRule withId(String id) {
         this.id = id;
         return this;
@@ -128,6 +150,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipVersion")
     public ForwardingRuleIpVersionEnum ipVersion;
+
     public ForwardingRule withIpVersion(ForwardingRuleIpVersionEnum ipVersion) {
         this.ipVersion = ipVersion;
         return this;
@@ -139,6 +162,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMirroringCollector")
     public Boolean isMirroringCollector;
+
     public ForwardingRule withIsMirroringCollector(Boolean isMirroringCollector) {
         this.isMirroringCollector = isMirroringCollector;
         return this;
@@ -150,6 +174,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ForwardingRule withKind(String kind) {
         this.kind = kind;
         return this;
@@ -161,6 +186,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public ForwardingRule withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -172,6 +198,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ForwardingRule withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -183,6 +210,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancingScheme")
     public ForwardingRuleLoadBalancingSchemeEnum loadBalancingScheme;
+
     public ForwardingRule withLoadBalancingScheme(ForwardingRuleLoadBalancingSchemeEnum loadBalancingScheme) {
         this.loadBalancingScheme = loadBalancingScheme;
         return this;
@@ -194,6 +222,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataFilters")
     public MetadataFilter[] metadataFilters;
+
     public ForwardingRule withMetadataFilters(MetadataFilter[] metadataFilters) {
         this.metadataFilters = metadataFilters;
         return this;
@@ -205,17 +234,19 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ForwardingRule withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If this field is not specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
+     * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither subnetwork nor this field is specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public ForwardingRule withNetwork(String network) {
         this.network = network;
         return this;
@@ -227,6 +258,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTier")
     public ForwardingRuleNetworkTierEnum networkTier;
+
     public ForwardingRule withNetworkTier(ForwardingRuleNetworkTierEnum networkTier) {
         this.networkTier = networkTier;
         return this;
@@ -238,6 +270,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noAutomateDnsZone")
     public Boolean noAutomateDnsZone;
+
     public ForwardingRule withNoAutomateDnsZone(Boolean noAutomateDnsZone) {
         this.noAutomateDnsZone = noAutomateDnsZone;
         return this;
@@ -249,6 +282,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portRange")
     public String portRange;
+
     public ForwardingRule withPortRange(String portRange) {
         this.portRange = portRange;
         return this;
@@ -260,6 +294,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public String[] ports;
+
     public ForwardingRule withPorts(String[] ports) {
         this.ports = ports;
         return this;
@@ -271,6 +306,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscConnectionId")
     public String pscConnectionId;
+
     public ForwardingRule withPscConnectionId(String pscConnectionId) {
         this.pscConnectionId = pscConnectionId;
         return this;
@@ -279,6 +315,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscConnectionStatus")
     public ForwardingRulePscConnectionStatusEnum pscConnectionStatus;
+
     public ForwardingRule withPscConnectionStatus(ForwardingRulePscConnectionStatusEnum pscConnectionStatus) {
         this.pscConnectionStatus = pscConnectionStatus;
         return this;
@@ -290,6 +327,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ForwardingRule withRegion(String region) {
         this.region = region;
         return this;
@@ -301,6 +339,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ForwardingRule withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -312,6 +351,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDirectoryRegistrations")
     public ForwardingRuleServiceDirectoryRegistration[] serviceDirectoryRegistrations;
+
     public ForwardingRule withServiceDirectoryRegistrations(ForwardingRuleServiceDirectoryRegistration[] serviceDirectoryRegistrations) {
         this.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
         return this;
@@ -323,6 +363,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLabel")
     public String serviceLabel;
+
     public ForwardingRule withServiceLabel(String serviceLabel) {
         this.serviceLabel = serviceLabel;
         return this;
@@ -334,6 +375,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ForwardingRule withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -345,6 +387,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceIpRanges")
     public String[] sourceIpRanges;
+
     public ForwardingRule withSourceIpRanges(String[] sourceIpRanges) {
         this.sourceIpRanges = sourceIpRanges;
         return this;
@@ -356,6 +399,7 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public ForwardingRule withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -367,9 +411,11 @@ public class ForwardingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public ForwardingRule withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public ForwardingRule(){}
 }

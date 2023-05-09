@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AbortConfig {
     @JsonProperty("criteriaList")
     public AbortCriteria[] criteriaList;
+
     public AbortConfig withCriteriaList(AbortCriteria[] criteriaList) {
         this.criteriaList = criteriaList;
         return this;
     }
     
+    public AbortConfig(@JsonProperty("criteriaList") AbortCriteria[] criteriaList) {
+        this.criteriaList = criteriaList;
+  }
 }

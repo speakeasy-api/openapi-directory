@@ -18,6 +18,7 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceId")
     public String instanceId;
+
     public InstanceReference withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -29,6 +30,7 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public InstanceReference withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -40,6 +42,7 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicEciesKey")
     public String publicEciesKey;
+
     public InstanceReference withPublicEciesKey(String publicEciesKey) {
         this.publicEciesKey = publicEciesKey;
         return this;
@@ -51,9 +54,11 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public String publicKey;
+
     public InstanceReference withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public InstanceReference(){}
 }

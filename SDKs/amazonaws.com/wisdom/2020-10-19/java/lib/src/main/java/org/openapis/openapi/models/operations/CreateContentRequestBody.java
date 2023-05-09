@@ -15,6 +15,7 @@ public class CreateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateContentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public CreateContentRequestBody withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -36,6 +38,7 @@ public class CreateContentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateContentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class CreateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideLinkOutUri")
     public String overrideLinkOutUri;
+
     public CreateContentRequestBody withOverrideLinkOutUri(String overrideLinkOutUri) {
         this.overrideLinkOutUri = overrideLinkOutUri;
         return this;
@@ -58,6 +62,7 @@ public class CreateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateContentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -69,6 +74,7 @@ public class CreateContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CreateContentRequestBody withTitle(String title) {
         this.title = title;
         return this;
@@ -79,9 +85,14 @@ public class CreateContentRequestBody {
      */
     @JsonProperty("uploadId")
     public String uploadId;
+
     public CreateContentRequestBody withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public CreateContentRequestBody(@JsonProperty("name") String name, @JsonProperty("uploadId") String uploadId) {
+        this.name = name;
+        this.uploadId = uploadId;
+  }
 }

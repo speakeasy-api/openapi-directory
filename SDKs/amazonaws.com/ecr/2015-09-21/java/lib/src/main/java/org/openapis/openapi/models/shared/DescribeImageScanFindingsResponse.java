@@ -18,6 +18,7 @@ public class DescribeImageScanFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public ImageIdentifier imageId;
+
     public DescribeImageScanFindingsResponse withImageId(ImageIdentifier imageId) {
         this.imageId = imageId;
         return this;
@@ -26,6 +27,7 @@ public class DescribeImageScanFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageScanFindings")
     public ImageScanFindings imageScanFindings;
+
     public DescribeImageScanFindingsResponse withImageScanFindings(ImageScanFindings imageScanFindings) {
         this.imageScanFindings = imageScanFindings;
         return this;
@@ -34,6 +36,7 @@ public class DescribeImageScanFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageScanStatus")
     public ImageScanStatus imageScanStatus;
+
     public DescribeImageScanFindingsResponse withImageScanStatus(ImageScanStatus imageScanStatus) {
         this.imageScanStatus = imageScanStatus;
         return this;
@@ -42,6 +45,7 @@ public class DescribeImageScanFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeImageScanFindingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -50,6 +54,7 @@ public class DescribeImageScanFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DescribeImageScanFindingsResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -58,9 +63,11 @@ public class DescribeImageScanFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DescribeImageScanFindingsResponse withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DescribeImageScanFindingsResponse(){}
 }

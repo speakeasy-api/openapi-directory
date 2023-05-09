@@ -61,11 +61,9 @@ public class Accountstatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentAccountstatusesCustombatchResponse res = new org.openapis.openapi.models.operations.ContentAccountstatusesCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentAccountstatusesCustombatchResponse res = new org.openapis.openapi.models.operations.ContentAccountstatusesCustombatchResponse(contentType, httpRes.statusCode()) {{
             accountstatusesCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Accountstatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentAccountstatusesGetResponse res = new org.openapis.openapi.models.operations.ContentAccountstatusesGetResponse() {{
+        org.openapis.openapi.models.operations.ContentAccountstatusesGetResponse res = new org.openapis.openapi.models.operations.ContentAccountstatusesGetResponse(contentType, httpRes.statusCode()) {{
             accountStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Accountstatuses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentAccountstatusesListResponse res = new org.openapis.openapi.models.operations.ContentAccountstatusesListResponse() {{
+        org.openapis.openapi.models.operations.ContentAccountstatusesListResponse res = new org.openapis.openapi.models.operations.ContentAccountstatusesListResponse(contentType, httpRes.statusCode()) {{
             accountstatusesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -62,11 +62,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateResponse() {{
+        org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclicksearchReportsGetResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGetResponse() {{
+        org.openapis.openapi.models.operations.DoubleclicksearchReportsGetResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGetResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,10 +150,8 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileResponse() {{
+        org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileResponse() {{
+        org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileResponse(contentType, httpRes.statusCode()) {{
             idMappingFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestResponse() {{
+        org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestResponse res = new org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

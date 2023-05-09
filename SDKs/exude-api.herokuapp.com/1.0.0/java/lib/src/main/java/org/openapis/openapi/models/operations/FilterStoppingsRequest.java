@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilterStoppingsRequest {
@@ -12,6 +13,7 @@ public class FilterStoppingsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public org.openapis.openapi.models.shared.ExudeBean exudeBean;
+
     public FilterStoppingsRequest withExudeBean(org.openapis.openapi.models.shared.ExudeBean exudeBean) {
         this.exudeBean = exudeBean;
         return this;
@@ -22,9 +24,14 @@ public class FilterStoppingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public FilterStoppingsRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FilterStoppingsRequest(@JsonProperty("ExudeBean") org.openapis.openapi.models.shared.ExudeBean exudeBean, @JsonProperty("type") String type) {
+        this.exudeBean = exudeBean;
+        this.type = type;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBInstanceMessage {
     
     public DBInstanceList[] dbInstances;
+
     public DBInstanceMessage withDBInstances(DBInstanceList[] dbInstances) {
         this.dbInstances = dbInstances;
         return this;
@@ -19,9 +20,11 @@ public class DBInstanceMessage {
     
     
     public String marker;
+
     public DBInstanceMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBInstanceMessage(){}
 }

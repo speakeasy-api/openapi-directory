@@ -15,6 +15,7 @@ public class UserEmailOptInDefinition {
      */
     
     public UserEmailSubscriptionDefinition[] dependentSubscriptions;
+
     public UserEmailOptInDefinition withDependentSubscriptions(UserEmailSubscriptionDefinition[] dependentSubscriptions) {
         this.dependentSubscriptions = dependentSubscriptions;
         return this;
@@ -25,6 +26,7 @@ public class UserEmailOptInDefinition {
      */
     
     public String name;
+
     public UserEmailOptInDefinition withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class UserEmailOptInDefinition {
      */
     
     public Boolean setByDefault;
+
     public UserEmailOptInDefinition withSetByDefault(Boolean setByDefault) {
         this.setByDefault = setByDefault;
         return this;
@@ -45,9 +48,11 @@ public class UserEmailOptInDefinition {
      */
     
     public Long value;
+
     public UserEmailOptInDefinition withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public UserEmailOptInDefinition(){}
 }

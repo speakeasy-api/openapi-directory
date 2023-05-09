@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSigningCertificateResponse {
     
     public String contentType;
+
     public GetSigningCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSigningCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSigningCertificateResponse getSigningCertificateResponse;
+
     public GetSigningCertificateResponse withGetSigningCertificateResponse(org.openapis.openapi.models.shared.GetSigningCertificateResponse getSigningCertificateResponse) {
         this.getSigningCertificateResponse = getSigningCertificateResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSigningCertificateResponse {
      */
     
     public Object internalErrorException;
+
     public GetSigningCertificateResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetSigningCertificateResponse {
      */
     
     public Object invalidParameterException;
+
     public GetSigningCertificateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetSigningCertificateResponse {
     
     
     public Integer statusCode;
+
     public GetSigningCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSigningCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSigningCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSigningCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSigningCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetSigningCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

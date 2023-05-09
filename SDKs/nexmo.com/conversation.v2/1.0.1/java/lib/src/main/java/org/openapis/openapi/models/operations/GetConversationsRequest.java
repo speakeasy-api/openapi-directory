@@ -15,6 +15,7 @@ public class GetConversationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetConversationsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -25,6 +26,7 @@ public class GetConversationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
     public String dateEnd;
+
     public GetConversationsRequest withDateEnd(String dateEnd) {
         this.dateEnd = dateEnd;
         return this;
@@ -35,6 +37,7 @@ public class GetConversationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
     public String dateStart;
+
     public GetConversationsRequest withDateStart(String dateStart) {
         this.dateStart = dateStart;
         return this;
@@ -45,6 +48,7 @@ public class GetConversationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.OrderEnum order;
+
     public GetConversationsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
         this.order = order;
         return this;
@@ -55,9 +59,11 @@ public class GetConversationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetConversationsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetConversationsRequest(){}
 }

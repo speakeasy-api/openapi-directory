@@ -18,6 +18,7 @@ public class CloudWorkspaceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CloudWorkspaceId withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class CloudWorkspaceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repoId")
     public RepoId repoId;
+
     public CloudWorkspaceId withRepoId(RepoId repoId) {
         this.repoId = repoId;
         return this;
     }
     
+    public CloudWorkspaceId(){}
 }

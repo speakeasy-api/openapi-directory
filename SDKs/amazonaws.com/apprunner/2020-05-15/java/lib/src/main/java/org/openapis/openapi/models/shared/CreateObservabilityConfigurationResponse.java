@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateObservabilityConfigurationResponse {
     @JsonProperty("ObservabilityConfiguration")
     public ObservabilityConfiguration observabilityConfiguration;
+
     public CreateObservabilityConfigurationResponse withObservabilityConfiguration(ObservabilityConfiguration observabilityConfiguration) {
         this.observabilityConfiguration = observabilityConfiguration;
         return this;
     }
     
+    public CreateObservabilityConfigurationResponse(@JsonProperty("ObservabilityConfiguration") ObservabilityConfiguration observabilityConfiguration) {
+        this.observabilityConfiguration = observabilityConfiguration;
+  }
 }

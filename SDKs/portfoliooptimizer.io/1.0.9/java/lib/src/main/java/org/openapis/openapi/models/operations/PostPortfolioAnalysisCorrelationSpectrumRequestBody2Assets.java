@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisCorrelationSpectrumRequestBody2Assets {
      */
     @JsonProperty("assetPrices")
     public Double[] assetPrices;
+
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody2Assets withAssetPrices(Double[] assetPrices) {
         this.assetPrices = assetPrices;
         return this;
     }
     
+    public PostPortfolioAnalysisCorrelationSpectrumRequestBody2Assets(@JsonProperty("assetPrices") Double[] assetPrices) {
+        this.assetPrices = assetPrices;
+  }
 }

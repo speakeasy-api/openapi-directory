@@ -12,6 +12,7 @@ public class ListVocabulariesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListVocabulariesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListVocabulariesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListVocabulariesRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -28,6 +30,7 @@ public class ListVocabulariesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVocabulariesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListVocabulariesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateEquals")
     public VocabularyStateEnum stateEquals;
+
     public ListVocabulariesRequest withStateEquals(VocabularyStateEnum stateEquals) {
         this.stateEquals = stateEquals;
         return this;
     }
     
+    public ListVocabulariesRequest(){}
 }

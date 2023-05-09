@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAnomaliesRequest {
     @JsonProperty("DateInterval")
     public AnomalyDateInterval dateInterval;
+
     public GetAnomaliesRequest withDateInterval(AnomalyDateInterval dateInterval) {
         this.dateInterval = dateInterval;
         return this;
@@ -19,6 +20,7 @@ public class GetAnomaliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Feedback")
     public AnomalyFeedbackTypeEnum feedback;
+
     public GetAnomaliesRequest withFeedback(AnomalyFeedbackTypeEnum feedback) {
         this.feedback = feedback;
         return this;
@@ -27,6 +29,7 @@ public class GetAnomaliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetAnomaliesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class GetAnomaliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public GetAnomaliesRequest withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -43,6 +47,7 @@ public class GetAnomaliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetAnomaliesRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,9 +56,13 @@ public class GetAnomaliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalImpact")
     public TotalImpactFilter totalImpact;
+
     public GetAnomaliesRequest withTotalImpact(TotalImpactFilter totalImpact) {
         this.totalImpact = totalImpact;
         return this;
     }
     
+    public GetAnomaliesRequest(@JsonProperty("DateInterval") AnomalyDateInterval dateInterval) {
+        this.dateInterval = dateInterval;
+  }
 }

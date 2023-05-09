@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackThreads")
     public GoogleCloudDatalabelingV1beta1FeedbackThread[] feedbackThreads;
+
     public GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse withFeedbackThreads(GoogleCloudDatalabelingV1beta1FeedbackThread[] feedbackThreads) {
         this.feedbackThreads = feedbackThreads;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse(){}
 }

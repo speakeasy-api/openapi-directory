@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEnvironmentTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteEnvironmentTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteEnvironmentTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteEnvironmentTemplateResponse {
      */
     
     public Object conflictException;
+
     public DeleteEnvironmentTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEnvironmentTemplateResponse {
     
     
     public String contentType;
+
     public DeleteEnvironmentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEnvironmentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteEnvironmentTemplateOutput deleteEnvironmentTemplateOutput;
+
     public DeleteEnvironmentTemplateResponse withDeleteEnvironmentTemplateOutput(org.openapis.openapi.models.shared.DeleteEnvironmentTemplateOutput deleteEnvironmentTemplateOutput) {
         this.deleteEnvironmentTemplateOutput = deleteEnvironmentTemplateOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteEnvironmentTemplateResponse {
      */
     
     public Object internalServerException;
+
     public DeleteEnvironmentTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteEnvironmentTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEnvironmentTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteEnvironmentTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteEnvironmentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEnvironmentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEnvironmentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteEnvironmentTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteEnvironmentTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteEnvironmentTemplateResponse {
      */
     
     public Object validationException;
+
     public DeleteEnvironmentTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteEnvironmentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

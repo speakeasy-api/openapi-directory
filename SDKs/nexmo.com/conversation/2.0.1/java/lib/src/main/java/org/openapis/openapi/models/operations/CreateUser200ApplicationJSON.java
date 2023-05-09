@@ -18,6 +18,7 @@ public class CreateUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public CreateUser200ApplicationJSON withHref(String href) {
         this.href = href;
         return this;
@@ -29,9 +30,11 @@ public class CreateUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateUser200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateUser200ApplicationJSON(){}
 }

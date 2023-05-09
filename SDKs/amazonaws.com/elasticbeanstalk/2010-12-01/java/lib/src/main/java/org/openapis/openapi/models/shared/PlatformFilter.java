@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PlatformFilter {
     
     public String operator;
+
     public PlatformFilter withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -19,6 +20,7 @@ public class PlatformFilter {
     
     
     public String type;
+
     public PlatformFilter withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +28,11 @@ public class PlatformFilter {
     
     
     public String[] values;
+
     public PlatformFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PlatformFilter(){}
 }

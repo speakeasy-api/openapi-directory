@@ -15,6 +15,7 @@ public class DescribeAccountAttributesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountAttributes")
     public AccountAttribute[] accountAttributes;
+
     public DescribeAccountAttributesResult withAccountAttributes(AccountAttribute[] accountAttributes) {
         this.accountAttributes = accountAttributes;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAccountAttributesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAccountAttributesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAccountAttributesResult(){}
 }

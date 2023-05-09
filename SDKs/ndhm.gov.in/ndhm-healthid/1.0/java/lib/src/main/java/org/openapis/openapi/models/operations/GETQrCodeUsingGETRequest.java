@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETQrCodeUsingGETRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public GETQrCodeUsingGETRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class GETQrCodeUsingGETRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
     public String xToken;
+
     public GETQrCodeUsingGETRequest withXToken(String xToken) {
         this.xToken = xToken;
         return this;
     }
     
+    public GETQrCodeUsingGETRequest(@JsonProperty("X-Token") String xToken) {
+        this.xToken = xToken;
+  }
 }

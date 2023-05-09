@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRaritiesRarityRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rarity")
     public String rarity;
+
     public GetRaritiesRarityRequest withRarity(String rarity) {
         this.rarity = rarity;
         return this;
     }
     
+    public GetRaritiesRarityRequest(@JsonProperty("rarity") String rarity) {
+        this.rarity = rarity;
+  }
 }

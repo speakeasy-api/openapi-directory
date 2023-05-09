@@ -68,11 +68,9 @@ public class Asset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAssetResponse res = new org.openapis.openapi.models.operations.CreateAssetResponse() {{
+        org.openapis.openapi.models.operations.CreateAssetResponse res = new org.openapis.openapi.models.operations.CreateAssetResponse(contentType, httpRes.statusCode()) {{
             asset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class Asset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAssetTypeResponse res = new org.openapis.openapi.models.operations.CreateAssetTypeResponse() {{
+        org.openapis.openapi.models.operations.CreateAssetTypeResponse res = new org.openapis.openapi.models.operations.CreateAssetTypeResponse(contentType, httpRes.statusCode()) {{
             assetType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +170,9 @@ public class Asset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssetByIdResponse res = new org.openapis.openapi.models.operations.GetAssetByIdResponse() {{
+        org.openapis.openapi.models.operations.GetAssetByIdResponse res = new org.openapis.openapi.models.operations.GetAssetByIdResponse(contentType, httpRes.statusCode()) {{
             asset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +219,9 @@ public class Asset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssetSettingsResponse res = new org.openapis.openapi.models.operations.GetAssetSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetAssetSettingsResponse res = new org.openapis.openapi.models.operations.GetAssetSettingsResponse(contentType, httpRes.statusCode()) {{
             setting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,11 +268,9 @@ public class Asset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssetTypesResponse res = new org.openapis.openapi.models.operations.GetAssetTypesResponse() {{
+        org.openapis.openapi.models.operations.GetAssetTypesResponse res = new org.openapis.openapi.models.operations.GetAssetTypesResponse(contentType, httpRes.statusCode()) {{
             assetTypes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,11 +323,9 @@ public class Asset {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssetsResponse res = new org.openapis.openapi.models.operations.GetAssetsResponse() {{
+        org.openapis.openapi.models.operations.GetAssetsResponse res = new org.openapis.openapi.models.operations.GetAssetsResponse(contentType, httpRes.statusCode()) {{
             assets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAModule withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_percent")
     public Integer batteryPercent;
+
     public NAModule withBatteryPercent(Integer batteryPercent) {
         this.batteryPercent = batteryPercent;
         return this;
@@ -55,6 +57,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("battery_vp")
     public Integer batteryVp;
+
     public NAModule withBatteryVp(Integer batteryVp) {
         this.batteryVp = batteryVp;
         return this;
@@ -63,6 +66,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboard_data")
     public NADashboardData dashboardData;
+
     public NAModule withDashboardData(NADashboardData dashboardData) {
         this.dashboardData = dashboardData;
         return this;
@@ -71,6 +75,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_type")
     public String[] dataType;
+
     public NAModule withDataType(String[] dataType) {
         this.dataType = dataType;
         return this;
@@ -79,6 +84,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_setup")
     public NADate dateSetup;
+
     public NAModule withDateSetup(NADate dateSetup) {
         this.dateSetup = dateSetup;
         return this;
@@ -87,6 +93,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public Integer firmware;
+
     public NAModule withFirmware(Integer firmware) {
         this.firmware = firmware;
         return this;
@@ -95,6 +102,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_message")
     public Integer lastMessage;
+
     public NAModule withLastMessage(Integer lastMessage) {
         this.lastMessage = lastMessage;
         return this;
@@ -103,6 +111,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_seen")
     public Integer lastSeen;
+
     public NAModule withLastSeen(Integer lastSeen) {
         this.lastSeen = lastSeen;
         return this;
@@ -111,6 +120,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("main_device")
     public String mainDevice;
+
     public NAModule withMainDevice(String mainDevice) {
         this.mainDevice = mainDevice;
         return this;
@@ -119,6 +129,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module_name")
     public String moduleName;
+
     public NAModule withModuleName(String moduleName) {
         this.moduleName = moduleName;
         return this;
@@ -127,6 +138,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_ext_data")
     public Boolean publicExtData;
+
     public NAModule withPublicExtData(Boolean publicExtData) {
         this.publicExtData = publicExtData;
         return this;
@@ -143,6 +155,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rf_status")
     public Integer rfStatus;
+
     public NAModule withRfStatus(Integer rfStatus) {
         this.rfStatus = rfStatus;
         return this;
@@ -151,6 +164,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_orientation")
     public Integer thermOrientation;
+
     public NAModule withThermOrientation(Integer thermOrientation) {
         this.thermOrientation = thermOrientation;
         return this;
@@ -159,6 +173,7 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("therm_relay_cmd")
     public Integer thermRelayCmd;
+
     public NAModule withThermRelayCmd(Integer thermRelayCmd) {
         this.thermRelayCmd = thermRelayCmd;
         return this;
@@ -177,9 +192,11 @@ public class NAModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAModule withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NAModule(){}
 }

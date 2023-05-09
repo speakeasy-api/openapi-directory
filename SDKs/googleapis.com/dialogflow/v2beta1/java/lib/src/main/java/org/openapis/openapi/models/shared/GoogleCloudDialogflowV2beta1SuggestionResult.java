@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1SuggestionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GoogleRpcStatus error;
+
     public GoogleCloudDialogflowV2beta1SuggestionResult withError(GoogleRpcStatus error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1SuggestionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestArticlesResponse")
     public GoogleCloudDialogflowV2beta1SuggestArticlesResponse suggestArticlesResponse;
+
     public GoogleCloudDialogflowV2beta1SuggestionResult withSuggestArticlesResponse(GoogleCloudDialogflowV2beta1SuggestArticlesResponse suggestArticlesResponse) {
         this.suggestArticlesResponse = suggestArticlesResponse;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1SuggestionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestFaqAnswersResponse")
     public GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse suggestFaqAnswersResponse;
+
     public GoogleCloudDialogflowV2beta1SuggestionResult withSuggestFaqAnswersResponse(GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse suggestFaqAnswersResponse) {
         this.suggestFaqAnswersResponse = suggestFaqAnswersResponse;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1SuggestionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestSmartRepliesResponse")
     public GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse suggestSmartRepliesResponse;
+
     public GoogleCloudDialogflowV2beta1SuggestionResult withSuggestSmartRepliesResponse(GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse suggestSmartRepliesResponse) {
         this.suggestSmartRepliesResponse = suggestSmartRepliesResponse;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1SuggestionResult(){}
 }

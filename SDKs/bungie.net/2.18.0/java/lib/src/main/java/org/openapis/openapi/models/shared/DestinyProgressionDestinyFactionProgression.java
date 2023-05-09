@@ -15,6 +15,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer currentProgress;
+
     public DestinyProgressionDestinyFactionProgression withCurrentProgress(Integer currentProgress) {
         this.currentProgress = currentProgress;
         return this;
@@ -25,6 +26,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer currentResetCount;
+
     public DestinyProgressionDestinyFactionProgression withCurrentResetCount(Integer currentResetCount) {
         this.currentResetCount = currentResetCount;
         return this;
@@ -35,6 +37,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer dailyLimit;
+
     public DestinyProgressionDestinyFactionProgression withDailyLimit(Integer dailyLimit) {
         this.dailyLimit = dailyLimit;
         return this;
@@ -45,6 +48,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer dailyProgress;
+
     public DestinyProgressionDestinyFactionProgression withDailyProgress(Integer dailyProgress) {
         this.dailyProgress = dailyProgress;
         return this;
@@ -55,6 +59,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Long factionHash;
+
     public DestinyProgressionDestinyFactionProgression withFactionHash(Long factionHash) {
         this.factionHash = factionHash;
         return this;
@@ -65,6 +70,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer factionVendorIndex;
+
     public DestinyProgressionDestinyFactionProgression withFactionVendorIndex(Integer factionVendorIndex) {
         this.factionVendorIndex = factionVendorIndex;
         return this;
@@ -75,6 +81,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer level;
+
     public DestinyProgressionDestinyFactionProgression withLevel(Integer level) {
         this.level = level;
         return this;
@@ -85,6 +92,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer levelCap;
+
     public DestinyProgressionDestinyFactionProgression withLevelCap(Integer levelCap) {
         this.levelCap = levelCap;
         return this;
@@ -95,6 +103,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer nextLevelAt;
+
     public DestinyProgressionDestinyFactionProgression withNextLevelAt(Integer nextLevelAt) {
         this.nextLevelAt = nextLevelAt;
         return this;
@@ -105,6 +114,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer progressToNextLevel;
+
     public DestinyProgressionDestinyFactionProgression withProgressToNextLevel(Integer progressToNextLevel) {
         this.progressToNextLevel = progressToNextLevel;
         return this;
@@ -115,6 +125,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Long progressionHash;
+
     public DestinyProgressionDestinyFactionProgression withProgressionHash(Long progressionHash) {
         this.progressionHash = progressionHash;
         return this;
@@ -125,6 +136,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer[] rewardItemStates;
+
     public DestinyProgressionDestinyFactionProgression withRewardItemStates(Integer[] rewardItemStates) {
         this.rewardItemStates = rewardItemStates;
         return this;
@@ -135,6 +147,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public DestinyDestinyProgressionResetEntry[] seasonResets;
+
     public DestinyProgressionDestinyFactionProgression withSeasonResets(DestinyDestinyProgressionResetEntry[] seasonResets) {
         this.seasonResets = seasonResets;
         return this;
@@ -145,6 +158,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer stepIndex;
+
     public DestinyProgressionDestinyFactionProgression withStepIndex(Integer stepIndex) {
         this.stepIndex = stepIndex;
         return this;
@@ -155,6 +169,7 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer weeklyLimit;
+
     public DestinyProgressionDestinyFactionProgression withWeeklyLimit(Integer weeklyLimit) {
         this.weeklyLimit = weeklyLimit;
         return this;
@@ -165,9 +180,11 @@ public class DestinyProgressionDestinyFactionProgression {
      */
     
     public Integer weeklyProgress;
+
     public DestinyProgressionDestinyFactionProgression withWeeklyProgress(Integer weeklyProgress) {
         this.weeklyProgress = weeklyProgress;
         return this;
     }
     
+    public DestinyProgressionDestinyFactionProgression(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCustomerGatewaysRequestFilters {
     
     public String name;
+
     public DescribeCustomerGatewaysRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCustomerGatewaysRequestFilters {
     
     
     public String[] values;
+
     public DescribeCustomerGatewaysRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeCustomerGatewaysRequestFilters(){}
 }

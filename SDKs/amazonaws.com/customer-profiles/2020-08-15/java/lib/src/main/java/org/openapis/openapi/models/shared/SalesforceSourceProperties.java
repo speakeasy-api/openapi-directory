@@ -15,6 +15,7 @@ public class SalesforceSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDynamicFieldUpdate")
     public Boolean enableDynamicFieldUpdate;
+
     public SalesforceSourceProperties withEnableDynamicFieldUpdate(Boolean enableDynamicFieldUpdate) {
         this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
         return this;
@@ -23,6 +24,7 @@ public class SalesforceSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeDeletedRecords")
     public Boolean includeDeletedRecords;
+
     public SalesforceSourceProperties withIncludeDeletedRecords(Boolean includeDeletedRecords) {
         this.includeDeletedRecords = includeDeletedRecords;
         return this;
@@ -30,9 +32,13 @@ public class SalesforceSourceProperties {
     
     @JsonProperty("Object")
     public String object;
+
     public SalesforceSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public SalesforceSourceProperties(@JsonProperty("Object") String object) {
+        this.object = object;
+  }
 }

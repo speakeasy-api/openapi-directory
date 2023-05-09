@@ -62,11 +62,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateResponse(contentType, httpRes.statusCode()) {{
             clientUserInvitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetResponse(contentType, httpRes.statusCode()) {{
             clientUserInvitation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListResponse(contentType, httpRes.statusCode()) {{
             listClientUserInvitationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListResponse(contentType, httpRes.statusCode()) {{
             listClientsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetResponse(contentType, httpRes.statusCode()) {{
             clientUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListResponse(contentType, httpRes.statusCode()) {{
             listClientUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateResponse(contentType, httpRes.statusCode()) {{
             clientUser = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -624,11 +600,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListResponse(contentType, httpRes.statusCode()) {{
             listDealAssociationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,11 +690,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +734,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListResponse(contentType, httpRes.statusCode()) {{
             listCreativesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,11 +780,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +826,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateResponse(contentType, httpRes.statusCode()) {{
             creative = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -908,11 +872,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -954,11 +916,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListResponse(contentType, httpRes.statusCode()) {{
             listProposalsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1002,11 +962,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1050,11 +1008,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1096,11 +1052,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetResponse(contentType, httpRes.statusCode()) {{
             product = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1142,11 +1096,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListResponse(contentType, httpRes.statusCode()) {{
             listProductsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1190,11 +1142,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1238,11 +1188,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteResponse(contentType, httpRes.statusCode()) {{
             note = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1286,11 +1234,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1334,11 +1280,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1382,11 +1326,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1428,11 +1370,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1474,11 +1414,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListResponse(contentType, httpRes.statusCode()) {{
             listProposalsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1522,11 +1460,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1570,11 +1506,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1618,11 +1552,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateResponse(contentType, httpRes.statusCode()) {{
             proposal = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1664,11 +1596,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetResponse(contentType, httpRes.statusCode()) {{
             publisherProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1710,11 +1640,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListResponse() {{
+        org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListResponse res = new org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListResponse(contentType, httpRes.statusCode()) {{
             listPublisherProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

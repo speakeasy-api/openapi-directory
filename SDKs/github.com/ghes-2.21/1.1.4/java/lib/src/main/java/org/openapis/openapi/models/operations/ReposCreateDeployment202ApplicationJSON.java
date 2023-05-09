@@ -15,9 +15,11 @@ public class ReposCreateDeployment202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReposCreateDeployment202ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReposCreateDeployment202ApplicationJSON(){}
 }

@@ -15,9 +15,11 @@ public class UpdateValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OSUpdateSettings")
     public OSUpdateSettings osUpdateSettings;
+
     public UpdateValue withOSUpdateSettings(OSUpdateSettings osUpdateSettings) {
         this.osUpdateSettings = osUpdateSettings;
         return this;
     }
     
+    public UpdateValue(){}
 }

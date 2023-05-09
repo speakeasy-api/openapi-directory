@@ -18,6 +18,7 @@ public class LocalTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptions")
     public Double exemptions;
+
     public LocalTax withExemptions(Double exemptions) {
         this.exemptions = exemptions;
         return this;
@@ -29,6 +30,7 @@ public class LocalTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptions2")
     public Double exemptions2;
+
     public LocalTax withExemptions2(Double exemptions2) {
         this.exemptions2 = exemptions2;
         return this;
@@ -40,6 +42,7 @@ public class LocalTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filingStatus")
     public String filingStatus;
+
     public LocalTax withFilingStatus(String filingStatus) {
         this.filingStatus = filingStatus;
         return this;
@@ -51,6 +54,7 @@ public class LocalTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("residentPSD")
     public String residentPSD;
+
     public LocalTax withResidentPSD(String residentPSD) {
         this.residentPSD = residentPSD;
         return this;
@@ -62,6 +66,7 @@ public class LocalTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxCode")
     public String taxCode;
+
     public LocalTax withTaxCode(String taxCode) {
         this.taxCode = taxCode;
         return this;
@@ -73,9 +78,11 @@ public class LocalTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workPSD")
     public String workPSD;
+
     public LocalTax withWorkPSD(String workPSD) {
         this.workPSD = workPSD;
         return this;
     }
     
+    public LocalTax(){}
 }

@@ -12,6 +12,7 @@ public class BillbeeInterfacesOrderMultiLanguageString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public BillbeeInterfacesOrderMultiLanguageString withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -20,9 +21,11 @@ public class BillbeeInterfacesOrderMultiLanguageString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public BillbeeInterfacesOrderMultiLanguageString withText(String text) {
         this.text = text;
         return this;
     }
     
+    public BillbeeInterfacesOrderMultiLanguageString(){}
 }

@@ -15,9 +15,11 @@ public class CompetenciesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombinations")
     public CommonLanguageCombinationDTO[] languageCombinations;
+
     public CompetenciesDTO withLanguageCombinations(CommonLanguageCombinationDTO[] languageCombinations) {
         this.languageCombinations = languageCombinations;
         return this;
     }
     
+    public CompetenciesDTO(){}
 }

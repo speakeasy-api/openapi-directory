@@ -18,6 +18,7 @@ public class ListPartnerAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedTargetingOptions")
     public AssignedTargetingOption[] assignedTargetingOptions;
+
     public ListPartnerAssignedTargetingOptionsResponse withAssignedTargetingOptions(AssignedTargetingOption[] assignedTargetingOptions) {
         this.assignedTargetingOptions = assignedTargetingOptions;
         return this;
@@ -29,9 +30,11 @@ public class ListPartnerAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPartnerAssignedTargetingOptionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListPartnerAssignedTargetingOptionsResponse(){}
 }

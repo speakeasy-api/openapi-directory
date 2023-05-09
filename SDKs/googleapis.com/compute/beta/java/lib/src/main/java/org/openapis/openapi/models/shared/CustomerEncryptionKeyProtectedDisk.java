@@ -12,6 +12,7 @@ public class CustomerEncryptionKeyProtectedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskEncryptionKey")
     public CustomerEncryptionKey diskEncryptionKey;
+
     public CustomerEncryptionKeyProtectedDisk withDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         return this;
@@ -23,9 +24,11 @@ public class CustomerEncryptionKeyProtectedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public CustomerEncryptionKeyProtectedDisk withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public CustomerEncryptionKeyProtectedDisk(){}
 }

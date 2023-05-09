@@ -18,9 +18,11 @@ public class GoogleCloudConnectorsV1Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretVersion")
     public String secretVersion;
+
     public GoogleCloudConnectorsV1Secret withSecretVersion(String secretVersion) {
         this.secretVersion = secretVersion;
         return this;
     }
     
+    public GoogleCloudConnectorsV1Secret(){}
 }

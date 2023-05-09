@@ -15,6 +15,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2Invent
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("expirationDate")
     public LocalDate expirationDate;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2InventoryDetails withExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -23,6 +24,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2Invent
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lotNum")
     public String lotNum;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2InventoryDetails withLotNum(String lotNum) {
         this.lotNum = lotNum;
         return this;
@@ -31,6 +33,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2Invent
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2InventoryDetails withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -39,9 +42,11 @@ public class GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2Invent
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNum")
     public String serialNum;
+
     public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2InventoryDetails withSerialNum(String serialNum) {
         this.serialNum = serialNum;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2LineItemsResponseV2InventoryDetails(){}
 }

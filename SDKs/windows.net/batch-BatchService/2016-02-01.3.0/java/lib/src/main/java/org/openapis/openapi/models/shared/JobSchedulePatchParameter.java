@@ -18,6 +18,7 @@ public class JobSchedulePatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobSpecification")
     public JobSpecification jobSpecification;
+
     public JobSchedulePatchParameter withJobSpecification(JobSpecification jobSpecification) {
         this.jobSpecification = jobSpecification;
         return this;
@@ -29,6 +30,7 @@ public class JobSchedulePatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public JobSchedulePatchParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class JobSchedulePatchParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public Schedule schedule;
+
     public JobSchedulePatchParameter withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public JobSchedulePatchParameter(){}
 }

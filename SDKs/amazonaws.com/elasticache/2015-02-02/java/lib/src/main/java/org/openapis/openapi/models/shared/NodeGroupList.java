@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NodeGroupList {
     
     public String nodeGroupId;
+
     public NodeGroupList withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -19,6 +20,7 @@ public class NodeGroupList {
     
     
     public NodeGroupMemberList[] nodeGroupMembers;
+
     public NodeGroupList withNodeGroupMembers(NodeGroupMemberList[] nodeGroupMembers) {
         this.nodeGroupMembers = nodeGroupMembers;
         return this;
@@ -26,6 +28,7 @@ public class NodeGroupList {
     
     
     public Endpoint primaryEndpoint;
+
     public NodeGroupList withPrimaryEndpoint(Endpoint primaryEndpoint) {
         this.primaryEndpoint = primaryEndpoint;
         return this;
@@ -33,6 +36,7 @@ public class NodeGroupList {
     
     
     public Endpoint readerEndpoint;
+
     public NodeGroupList withReaderEndpoint(Endpoint readerEndpoint) {
         this.readerEndpoint = readerEndpoint;
         return this;
@@ -40,6 +44,7 @@ public class NodeGroupList {
     
     
     public String slots;
+
     public NodeGroupList withSlots(String slots) {
         this.slots = slots;
         return this;
@@ -47,9 +52,11 @@ public class NodeGroupList {
     
     
     public String status;
+
     public NodeGroupList withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public NodeGroupList(){}
 }

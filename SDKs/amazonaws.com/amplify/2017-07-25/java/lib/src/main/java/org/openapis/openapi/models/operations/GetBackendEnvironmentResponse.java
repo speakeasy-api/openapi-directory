@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBackendEnvironmentResponse {
@@ -12,6 +13,7 @@ public class GetBackendEnvironmentResponse {
      */
     
     public Object badRequestException;
+
     public GetBackendEnvironmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetBackendEnvironmentResponse {
     
     
     public String contentType;
+
     public GetBackendEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBackendEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBackendEnvironmentResult getBackendEnvironmentResult;
+
     public GetBackendEnvironmentResponse withGetBackendEnvironmentResult(org.openapis.openapi.models.shared.GetBackendEnvironmentResult getBackendEnvironmentResult) {
         this.getBackendEnvironmentResult = getBackendEnvironmentResult;
         return this;
@@ -39,6 +43,7 @@ public class GetBackendEnvironmentResponse {
      */
     
     public Object internalFailureException;
+
     public GetBackendEnvironmentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetBackendEnvironmentResponse {
      */
     
     public Object notFoundException;
+
     public GetBackendEnvironmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetBackendEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public GetBackendEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetBackendEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBackendEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetBackendEnvironmentResponse {
      */
     
     public Object unauthorizedException;
+
     public GetBackendEnvironmentResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetBackendEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

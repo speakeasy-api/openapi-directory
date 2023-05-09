@@ -18,6 +18,7 @@ public class BinaryAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BinaryAuthorization withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class BinaryAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMode")
     public BinaryAuthorizationEvaluationModeEnum evaluationMode;
+
     public BinaryAuthorization withEvaluationMode(BinaryAuthorizationEvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
     }
     
+    public BinaryAuthorization(){}
 }

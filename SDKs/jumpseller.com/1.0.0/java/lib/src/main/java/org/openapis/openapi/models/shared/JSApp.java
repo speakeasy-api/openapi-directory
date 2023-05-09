@@ -18,6 +18,7 @@ public class JSApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("element")
     public String element;
+
     public JSApp withElement(String element) {
         this.element = element;
         return this;
@@ -29,6 +30,7 @@ public class JSApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public JSApp withTemplate(String template) {
         this.template = template;
         return this;
@@ -40,9 +42,11 @@ public class JSApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public JSApp withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public JSApp(){}
 }

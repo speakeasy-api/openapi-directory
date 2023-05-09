@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBulkImportJobResponse {
     @JsonProperty("jobId")
     public String jobId;
+
     public CreateBulkImportJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +20,7 @@ public class CreateBulkImportJobResponse {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateBulkImportJobResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -26,9 +28,15 @@ public class CreateBulkImportJobResponse {
     
     @JsonProperty("jobStatus")
     public JobStatusEnum jobStatus;
+
     public CreateBulkImportJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public CreateBulkImportJobResponse(@JsonProperty("jobId") String jobId, @JsonProperty("jobName") String jobName, @JsonProperty("jobStatus") JobStatusEnum jobStatus) {
+        this.jobId = jobId;
+        this.jobName = jobName;
+        this.jobStatus = jobStatus;
+  }
 }

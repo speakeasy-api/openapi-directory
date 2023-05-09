@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolSnmptcpGetStatisticsResponse {
     
     public String contentType;
+
     public ProtocolSnmptcpGetStatisticsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProtocolSnmptcpGetStatisticsResponse {
     
     
     public Integer statusCode;
+
     public ProtocolSnmptcpGetStatisticsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProtocolSnmptcpGetStatisticsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolSnmptcpGetStatisticsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolSnmptcpGetStatisticsResponse {
      */
     
     public Integer[] protocolSnmptcpGetStatistics200ApplicationJSONInt32Integers;
+
     public ProtocolSnmptcpGetStatisticsResponse withProtocolSnmptcpGetStatistics200ApplicationJSONInt32Integers(Integer[] protocolSnmptcpGetStatistics200ApplicationJSONInt32Integers) {
         this.protocolSnmptcpGetStatistics200ApplicationJSONInt32Integers = protocolSnmptcpGetStatistics200ApplicationJSONInt32Integers;
         return this;
     }
     
+    public ProtocolSnmptcpGetStatisticsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

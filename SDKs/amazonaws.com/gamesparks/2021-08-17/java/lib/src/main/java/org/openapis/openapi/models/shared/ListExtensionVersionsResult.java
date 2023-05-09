@@ -15,6 +15,7 @@ public class ListExtensionVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtensionVersions")
     public ExtensionVersionDetails[] extensionVersions;
+
     public ListExtensionVersionsResult withExtensionVersions(ExtensionVersionDetails[] extensionVersions) {
         this.extensionVersions = extensionVersions;
         return this;
@@ -23,9 +24,11 @@ public class ListExtensionVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExtensionVersionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExtensionVersionsResult(){}
 }

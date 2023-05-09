@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTApplySecurityGroupsToClientVpnTargetNetworkResponse {
     
     public byte[] body;
+
     public POSTApplySecurityGroupsToClientVpnTargetNetworkResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTApplySecurityGroupsToClientVpnTargetNetworkResponse {
     
     
     public String contentType;
+
     public POSTApplySecurityGroupsToClientVpnTargetNetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTApplySecurityGroupsToClientVpnTargetNetworkResponse {
     
     
     public Integer statusCode;
+
     public POSTApplySecurityGroupsToClientVpnTargetNetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTApplySecurityGroupsToClientVpnTargetNetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTApplySecurityGroupsToClientVpnTargetNetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTApplySecurityGroupsToClientVpnTargetNetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

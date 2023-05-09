@@ -15,6 +15,7 @@ public class GroupOwnerSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAddGroupOwner")
     public Boolean autoAddGroupOwner;
+
     public GroupOwnerSetting withAutoAddGroupOwner(Boolean autoAddGroupOwner) {
         this.autoAddGroupOwner = autoAddGroupOwner;
         return this;
@@ -23,9 +24,11 @@ public class GroupOwnerSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupOwner")
     public String groupOwner;
+
     public GroupOwnerSetting withGroupOwner(String groupOwner) {
         this.groupOwner = groupOwner;
         return this;
     }
     
+    public GroupOwnerSetting(){}
 }

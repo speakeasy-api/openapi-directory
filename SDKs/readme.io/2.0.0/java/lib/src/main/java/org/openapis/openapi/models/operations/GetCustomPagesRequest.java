@@ -12,6 +12,7 @@ public class GetCustomPagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetCustomPagesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class GetCustomPagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetCustomPagesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetCustomPagesRequest(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyInstancePlacementRequest {
     
     public ModifyInstancePlacementRequestAffinityEnum affinity;
+
     public ModifyInstancePlacementRequest withAffinity(ModifyInstancePlacementRequestAffinityEnum affinity) {
         this.affinity = affinity;
         return this;
@@ -16,6 +17,7 @@ public class ModifyInstancePlacementRequest {
     
     
     public String groupId;
+
     public ModifyInstancePlacementRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,6 +25,7 @@ public class ModifyInstancePlacementRequest {
     
     
     public String groupName;
+
     public ModifyInstancePlacementRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -30,6 +33,7 @@ public class ModifyInstancePlacementRequest {
     
     
     public String hostId;
+
     public ModifyInstancePlacementRequest withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -37,6 +41,7 @@ public class ModifyInstancePlacementRequest {
     
     
     public String hostResourceGroupArn;
+
     public ModifyInstancePlacementRequest withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -44,6 +49,7 @@ public class ModifyInstancePlacementRequest {
     
     
     public String instanceId;
+
     public ModifyInstancePlacementRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -51,6 +57,7 @@ public class ModifyInstancePlacementRequest {
     
     
     public Long partitionNumber;
+
     public ModifyInstancePlacementRequest withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -58,9 +65,13 @@ public class ModifyInstancePlacementRequest {
     
     
     public ModifyInstancePlacementRequestTenancyEnum tenancy;
+
     public ModifyInstancePlacementRequest withTenancy(ModifyInstancePlacementRequestTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public ModifyInstancePlacementRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

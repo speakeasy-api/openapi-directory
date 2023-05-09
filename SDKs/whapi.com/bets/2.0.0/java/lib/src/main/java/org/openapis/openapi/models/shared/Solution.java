@@ -15,6 +15,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betNum")
     public String betNum;
+
     public Solution withBetNum(String betNum) {
         this.betNum = betNum;
         return this;
@@ -26,6 +27,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public Solution withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -37,6 +39,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handicap")
     public String handicap;
+
     public Solution withHandicap(String handicap) {
         this.handicap = handicap;
         return this;
@@ -48,6 +51,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handicapPrecision")
     public String handicapPrecision;
+
     public Solution withHandicapPrecision(String handicapPrecision) {
         this.handicapPrecision = handicapPrecision;
         return this;
@@ -59,6 +63,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDen")
     public String priceDen;
+
     public Solution withPriceDen(String priceDen) {
         this.priceDen = priceDen;
         return this;
@@ -70,6 +75,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceNum")
     public String priceNum;
+
     public Solution withPriceNum(String priceNum) {
         this.priceNum = priceNum;
         return this;
@@ -81,6 +87,7 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectionHandicap")
     public String selectionHandicap;
+
     public Solution withSelectionHandicap(String selectionHandicap) {
         this.selectionHandicap = selectionHandicap;
         return this;
@@ -92,9 +99,11 @@ public class Solution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectionId")
     public String selectionId;
+
     public Solution withSelectionId(String selectionId) {
         this.selectionId = selectionId;
         return this;
     }
     
+    public Solution(){}
 }

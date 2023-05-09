@@ -18,6 +18,7 @@ public class GridLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public String columns;
+
     public GridLayout withColumns(String columns) {
         this.columns = columns;
         return this;
@@ -29,9 +30,11 @@ public class GridLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widgets")
     public Widget[] widgets;
+
     public GridLayout withWidgets(Widget[] widgets) {
         this.widgets = widgets;
         return this;
     }
     
+    public GridLayout(){}
 }

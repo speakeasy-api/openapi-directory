@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GistsForkResponse {
     
     public String contentType;
+
     public GistsForkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GistsForkResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GistsForkResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GistsForkResponse {
     
     
     public Integer statusCode;
+
     public GistsForkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GistsForkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GistsForkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GistsForkResponse {
      */
     
     public org.openapis.openapi.models.shared.BaseGist baseGist;
+
     public GistsForkResponse withBaseGist(org.openapis.openapi.models.shared.BaseGist baseGist) {
         this.baseGist = baseGist;
         return this;
@@ -50,6 +56,7 @@ public class GistsForkResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GistsForkResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -60,9 +67,14 @@ public class GistsForkResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GistsForkResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GistsForkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

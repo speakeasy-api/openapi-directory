@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservedNodeOffering {
     
     public String currencyCode;
+
     public ReservedNodeOffering withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class ReservedNodeOffering {
     
     
     public Long duration;
+
     public ReservedNodeOffering withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class ReservedNodeOffering {
     
     
     public Double fixedPrice;
+
     public ReservedNodeOffering withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -33,6 +36,7 @@ public class ReservedNodeOffering {
     
     
     public String nodeType;
+
     public ReservedNodeOffering withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -40,6 +44,7 @@ public class ReservedNodeOffering {
     
     
     public String offeringType;
+
     public ReservedNodeOffering withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -47,6 +52,7 @@ public class ReservedNodeOffering {
     
     
     public RecurringChargeList[] recurringCharges;
+
     public ReservedNodeOffering withRecurringCharges(RecurringChargeList[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -54,6 +60,7 @@ public class ReservedNodeOffering {
     
     
     public String reservedNodeOfferingId;
+
     public ReservedNodeOffering withReservedNodeOfferingId(String reservedNodeOfferingId) {
         this.reservedNodeOfferingId = reservedNodeOfferingId;
         return this;
@@ -61,6 +68,7 @@ public class ReservedNodeOffering {
     
     
     public ReservedNodeOfferingTypeEnum reservedNodeOfferingType;
+
     public ReservedNodeOffering withReservedNodeOfferingType(ReservedNodeOfferingTypeEnum reservedNodeOfferingType) {
         this.reservedNodeOfferingType = reservedNodeOfferingType;
         return this;
@@ -68,9 +76,11 @@ public class ReservedNodeOffering {
     
     
     public Double usagePrice;
+
     public ReservedNodeOffering withUsagePrice(Double usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public ReservedNodeOffering(){}
 }

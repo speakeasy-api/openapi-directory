@@ -15,6 +15,7 @@ public class GetTheMinimumPaymentAmount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_from")
     public String currencyFrom;
+
     public GetTheMinimumPaymentAmount200ApplicationJSON withCurrencyFrom(String currencyFrom) {
         this.currencyFrom = currencyFrom;
         return this;
@@ -23,6 +24,7 @@ public class GetTheMinimumPaymentAmount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_to")
     public String currencyTo;
+
     public GetTheMinimumPaymentAmount200ApplicationJSON withCurrencyTo(String currencyTo) {
         this.currencyTo = currencyTo;
         return this;
@@ -31,6 +33,7 @@ public class GetTheMinimumPaymentAmount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fiat_equivalent")
     public Double fiatEquivalent;
+
     public GetTheMinimumPaymentAmount200ApplicationJSON withFiatEquivalent(Double fiatEquivalent) {
         this.fiatEquivalent = fiatEquivalent;
         return this;
@@ -39,9 +42,11 @@ public class GetTheMinimumPaymentAmount200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_amount")
     public Double minAmount;
+
     public GetTheMinimumPaymentAmount200ApplicationJSON withMinAmount(Double minAmount) {
         this.minAmount = minAmount;
         return this;
     }
     
+    public GetTheMinimumPaymentAmount200ApplicationJSON(){}
 }

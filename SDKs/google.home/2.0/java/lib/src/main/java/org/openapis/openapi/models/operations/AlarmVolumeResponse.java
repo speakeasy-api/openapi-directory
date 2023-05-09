@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AlarmVolumeResponse {
     
     public String contentType;
+
     public AlarmVolumeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AlarmVolumeResponse {
     
     
     public org.openapis.openapi.models.shared.Getvolume getvolume;
+
     public AlarmVolumeResponse withGetvolume(org.openapis.openapi.models.shared.Getvolume getvolume) {
         this.getvolume = getvolume;
         return this;
@@ -23,6 +26,7 @@ public class AlarmVolumeResponse {
     
     
     public Integer statusCode;
+
     public AlarmVolumeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class AlarmVolumeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AlarmVolumeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AlarmVolumeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

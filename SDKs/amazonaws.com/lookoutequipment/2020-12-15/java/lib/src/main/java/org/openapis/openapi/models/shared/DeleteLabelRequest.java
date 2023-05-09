@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteLabelRequest {
     @JsonProperty("LabelGroupName")
     public String labelGroupName;
+
     public DeleteLabelRequest withLabelGroupName(String labelGroupName) {
         this.labelGroupName = labelGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteLabelRequest {
     
     @JsonProperty("LabelId")
     public String labelId;
+
     public DeleteLabelRequest withLabelId(String labelId) {
         this.labelId = labelId;
         return this;
     }
     
+    public DeleteLabelRequest(@JsonProperty("LabelGroupName") String labelGroupName, @JsonProperty("LabelId") String labelId) {
+        this.labelGroupName = labelGroupName;
+        this.labelId = labelId;
+  }
 }

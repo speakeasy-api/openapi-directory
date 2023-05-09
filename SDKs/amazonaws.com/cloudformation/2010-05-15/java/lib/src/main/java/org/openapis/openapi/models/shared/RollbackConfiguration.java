@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RollbackConfiguration {
     
     public Long monitoringTimeInMinutes;
+
     public RollbackConfiguration withMonitoringTimeInMinutes(Long monitoringTimeInMinutes) {
         this.monitoringTimeInMinutes = monitoringTimeInMinutes;
         return this;
@@ -19,9 +20,11 @@ public class RollbackConfiguration {
     
     
     public RollbackTrigger[] rollbackTriggers;
+
     public RollbackConfiguration withRollbackTriggers(RollbackTrigger[] rollbackTriggers) {
         this.rollbackTriggers = rollbackTriggers;
         return this;
     }
     
+    public RollbackConfiguration(){}
 }

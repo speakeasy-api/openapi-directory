@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityMailFromDomainAttributesRequest - Represents a request to return the Amazon SES custom MAIL FROM attributes for a list of identities. For information about using a custom MAIL FROM domain, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityMailFromDomainAttributesRequest {
     
     public String[] identities;
+
     public GetIdentityMailFromDomainAttributesRequest withIdentities(String[] identities) {
         this.identities = identities;
         return this;
     }
     
+    public GetIdentityMailFromDomainAttributesRequest(@JsonProperty("Identities") String[] identities) {
+        this.identities = identities;
+  }
 }

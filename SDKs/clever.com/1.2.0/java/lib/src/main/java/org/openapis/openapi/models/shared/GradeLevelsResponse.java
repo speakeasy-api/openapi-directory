@@ -15,9 +15,11 @@ public class GradeLevelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String[] data;
+
     public GradeLevelsResponse withData(String[] data) {
         this.data = data;
         return this;
     }
     
+    public GradeLevelsResponse(){}
 }

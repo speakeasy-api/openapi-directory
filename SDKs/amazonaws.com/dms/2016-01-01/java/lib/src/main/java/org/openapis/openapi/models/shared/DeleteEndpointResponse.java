@@ -15,9 +15,11 @@ public class DeleteEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public Endpoint endpoint;
+
     public DeleteEndpointResponse withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public DeleteEndpointResponse(){}
 }

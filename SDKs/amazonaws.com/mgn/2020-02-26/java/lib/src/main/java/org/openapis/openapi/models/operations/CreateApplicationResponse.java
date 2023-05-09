@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApplicationResponse {
@@ -12,6 +13,7 @@ public class CreateApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.Application application;
+
     public CreateApplicationResponse withApplication(org.openapis.openapi.models.shared.Application application) {
         this.application = application;
         return this;
@@ -22,6 +24,7 @@ public class CreateApplicationResponse {
      */
     
     public Object conflictException;
+
     public CreateApplicationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateApplicationResponse {
     
     
     public String contentType;
+
     public CreateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateApplicationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateApplicationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateApplicationResponse {
     
     
     public Integer statusCode;
+
     public CreateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateApplicationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public CreateApplicationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public CreateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class DatabaseInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseUrl")
     public String databaseUrl;
+
     public DatabaseInstance withDatabaseUrl(String databaseUrl) {
         this.databaseUrl = databaseUrl;
         return this;
@@ -29,6 +30,7 @@ public class DatabaseInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DatabaseInstance withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class DatabaseInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public DatabaseInstance withProject(String project) {
         this.project = project;
         return this;
@@ -51,6 +54,7 @@ public class DatabaseInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DatabaseInstanceStateEnum state;
+
     public DatabaseInstance withState(DatabaseInstanceStateEnum state) {
         this.state = state;
         return this;
@@ -62,9 +66,11 @@ public class DatabaseInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DatabaseInstanceTypeEnum type;
+
     public DatabaseInstance withType(DatabaseInstanceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DatabaseInstance(){}
 }

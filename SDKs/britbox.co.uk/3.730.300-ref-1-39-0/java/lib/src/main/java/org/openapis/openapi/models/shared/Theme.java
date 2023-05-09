@@ -12,6 +12,7 @@ public class Theme {
      */
     @JsonProperty("colors")
     public ThemeColor[] colors;
+
     public Theme withColors(ThemeColor[] colors) {
         this.colors = colors;
         return this;
@@ -22,9 +23,14 @@ public class Theme {
      */
     @JsonProperty("type")
     public ThemeTypeEnum type;
+
     public Theme withType(ThemeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Theme(@JsonProperty("colors") ThemeColor[] colors, @JsonProperty("type") ThemeTypeEnum type) {
+        this.colors = colors;
+        this.type = type;
+  }
 }

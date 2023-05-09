@@ -15,6 +15,7 @@ public class Slot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subSlots")
     public java.util.Map<String, Slot> subSlots;
+
     public Slot withSubSlots(java.util.Map<String, Slot> subSlots) {
         this.subSlots = subSlots;
         return this;
@@ -23,6 +24,7 @@ public class Slot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value value;
+
     public Slot withValue(Value value) {
         this.value = value;
         return this;
@@ -31,9 +33,11 @@ public class Slot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Slot[] values;
+
     public Slot withValues(Slot[] values) {
         this.values = values;
         return this;
     }
     
+    public Slot(){}
 }

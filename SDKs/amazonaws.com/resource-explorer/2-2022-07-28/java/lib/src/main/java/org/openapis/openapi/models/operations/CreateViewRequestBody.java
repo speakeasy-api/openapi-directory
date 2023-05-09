@@ -15,6 +15,7 @@ public class CreateViewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateViewRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateViewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public CreateViewRequestBodyFilters filters;
+
     public CreateViewRequestBody withFilters(CreateViewRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class CreateViewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludedProperties")
     public org.openapis.openapi.models.shared.IncludedProperty[] includedProperties;
+
     public CreateViewRequestBody withIncludedProperties(org.openapis.openapi.models.shared.IncludedProperty[] includedProperties) {
         this.includedProperties = includedProperties;
         return this;
@@ -48,6 +51,7 @@ public class CreateViewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateViewRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,9 +62,13 @@ public class CreateViewRequestBody {
      */
     @JsonProperty("ViewName")
     public String viewName;
+
     public CreateViewRequestBody withViewName(String viewName) {
         this.viewName = viewName;
         return this;
     }
     
+    public CreateViewRequestBody(@JsonProperty("ViewName") String viewName) {
+        this.viewName = viewName;
+  }
 }

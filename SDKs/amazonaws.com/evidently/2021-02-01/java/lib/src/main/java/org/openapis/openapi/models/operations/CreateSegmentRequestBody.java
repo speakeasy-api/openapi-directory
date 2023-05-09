@@ -15,6 +15,7 @@ public class CreateSegmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSegmentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateSegmentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateSegmentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class CreateSegmentRequestBody {
      */
     @JsonProperty("pattern")
     public String pattern;
+
     public CreateSegmentRequestBody withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -46,9 +49,14 @@ public class CreateSegmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSegmentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSegmentRequestBody(@JsonProperty("name") String name, @JsonProperty("pattern") String pattern) {
+        this.name = name;
+        this.pattern = pattern;
+  }
 }

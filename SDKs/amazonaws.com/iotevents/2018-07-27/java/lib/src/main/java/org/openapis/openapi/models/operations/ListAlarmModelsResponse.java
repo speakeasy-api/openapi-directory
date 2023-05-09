@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAlarmModelsResponse {
     
     public String contentType;
+
     public ListAlarmModelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAlarmModelsResponse {
      */
     
     public Object internalFailureException;
+
     public ListAlarmModelsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAlarmModelsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAlarmModelsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAlarmModelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAlarmModelsResponse listAlarmModelsResponse;
+
     public ListAlarmModelsResponse withListAlarmModelsResponse(org.openapis.openapi.models.shared.ListAlarmModelsResponse listAlarmModelsResponse) {
         this.listAlarmModelsResponse = listAlarmModelsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAlarmModelsResponse {
     
     
     public Integer statusCode;
+
     public ListAlarmModelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAlarmModelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAlarmModelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAlarmModelsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListAlarmModelsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class ListAlarmModelsResponse {
      */
     
     public Object throttlingException;
+
     public ListAlarmModelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAlarmModelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

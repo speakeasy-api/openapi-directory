@@ -15,6 +15,7 @@ public class AssociateIdentityProviderConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public AssociateIdentityProviderConfigRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class AssociateIdentityProviderConfigRequestBody {
      */
     @JsonProperty("oidc")
     public AssociateIdentityProviderConfigRequestBodyOidc oidc;
+
     public AssociateIdentityProviderConfigRequestBody withOidc(AssociateIdentityProviderConfigRequestBodyOidc oidc) {
         this.oidc = oidc;
         return this;
@@ -36,9 +38,13 @@ public class AssociateIdentityProviderConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public AssociateIdentityProviderConfigRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public AssociateIdentityProviderConfigRequestBody(@JsonProperty("oidc") AssociateIdentityProviderConfigRequestBodyOidc oidc) {
+        this.oidc = oidc;
+  }
 }

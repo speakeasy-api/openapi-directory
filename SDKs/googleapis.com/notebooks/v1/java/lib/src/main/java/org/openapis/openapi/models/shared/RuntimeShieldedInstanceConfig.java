@@ -18,6 +18,7 @@ public class RuntimeShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIntegrityMonitoring")
     public Boolean enableIntegrityMonitoring;
+
     public RuntimeShieldedInstanceConfig withEnableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         return this;
@@ -29,6 +30,7 @@ public class RuntimeShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSecureBoot")
     public Boolean enableSecureBoot;
+
     public RuntimeShieldedInstanceConfig withEnableSecureBoot(Boolean enableSecureBoot) {
         this.enableSecureBoot = enableSecureBoot;
         return this;
@@ -40,9 +42,11 @@ public class RuntimeShieldedInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableVtpm")
     public Boolean enableVtpm;
+
     public RuntimeShieldedInstanceConfig withEnableVtpm(Boolean enableVtpm) {
         this.enableVtpm = enableVtpm;
         return this;
     }
     
+    public RuntimeShieldedInstanceConfig(){}
 }

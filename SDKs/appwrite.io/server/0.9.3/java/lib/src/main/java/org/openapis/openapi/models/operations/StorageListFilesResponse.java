@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StorageListFilesResponse {
     
     public String contentType;
+
     public StorageListFilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StorageListFilesResponse {
     
     
     public Integer statusCode;
+
     public StorageListFilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StorageListFilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StorageListFilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class StorageListFilesResponse {
      */
     
     public org.openapis.openapi.models.shared.FileList fileList;
+
     public StorageListFilesResponse withFileList(org.openapis.openapi.models.shared.FileList fileList) {
         this.fileList = fileList;
         return this;
     }
     
+    public StorageListFilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

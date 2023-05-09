@@ -12,6 +12,7 @@ public class NAPidAlgo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gain")
     public Integer gain;
+
     public NAPidAlgo withGain(Integer gain) {
         this.gain = gain;
         return this;
@@ -20,6 +21,7 @@ public class NAPidAlgo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Integer period;
+
     public NAPidAlgo withPeriod(Integer period) {
         this.period = period;
         return this;
@@ -28,6 +30,7 @@ public class NAPidAlgo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("td")
     public Integer td;
+
     public NAPidAlgo withTd(Integer td) {
         this.td = td;
         return this;
@@ -36,9 +39,11 @@ public class NAPidAlgo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ti")
     public Integer ti;
+
     public NAPidAlgo withTi(Integer ti) {
         this.ti = ti;
         return this;
     }
     
+    public NAPidAlgo(){}
 }

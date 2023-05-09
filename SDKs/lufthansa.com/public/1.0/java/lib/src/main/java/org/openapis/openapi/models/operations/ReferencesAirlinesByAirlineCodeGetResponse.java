@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReferencesAirlinesByAirlineCodeGetResponse {
     
     public String contentType;
+
     public ReferencesAirlinesByAirlineCodeGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReferencesAirlinesByAirlineCodeGetResponse {
     
     
     public java.util.Map<String, Object> referencesAirlinesByAirlineCodeGet200ApplicationJSONObject;
+
     public ReferencesAirlinesByAirlineCodeGetResponse withReferencesAirlinesByAirlineCodeGet200ApplicationJSONObject(java.util.Map<String, Object> referencesAirlinesByAirlineCodeGet200ApplicationJSONObject) {
         this.referencesAirlinesByAirlineCodeGet200ApplicationJSONObject = referencesAirlinesByAirlineCodeGet200ApplicationJSONObject;
         return this;
@@ -23,6 +26,7 @@ public class ReferencesAirlinesByAirlineCodeGetResponse {
     
     
     public Integer statusCode;
+
     public ReferencesAirlinesByAirlineCodeGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ReferencesAirlinesByAirlineCodeGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReferencesAirlinesByAirlineCodeGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReferencesAirlinesByAirlineCodeGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

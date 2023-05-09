@@ -15,6 +15,7 @@ public class ConversationLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioLogSettings")
     public AudioLogSetting[] audioLogSettings;
+
     public ConversationLogSettings withAudioLogSettings(AudioLogSetting[] audioLogSettings) {
         this.audioLogSettings = audioLogSettings;
         return this;
@@ -23,9 +24,11 @@ public class ConversationLogSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textLogSettings")
     public TextLogSetting[] textLogSettings;
+
     public ConversationLogSettings withTextLogSettings(TextLogSetting[] textLogSettings) {
         this.textLogSettings = textLogSettings;
         return this;
     }
     
+    public ConversationLogSettings(){}
 }

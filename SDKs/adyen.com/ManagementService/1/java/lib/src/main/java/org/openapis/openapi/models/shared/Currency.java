@@ -15,6 +15,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Integer amount;
+
     public Currency withAmount(Integer amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class Currency {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Currency withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -33,9 +35,13 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public java.util.Map<String, Object> percentage;
+
     public Currency withPercentage(java.util.Map<String, Object> percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public Currency(@JsonProperty("currencyCode") String currencyCode) {
+        this.currencyCode = currencyCode;
+  }
 }

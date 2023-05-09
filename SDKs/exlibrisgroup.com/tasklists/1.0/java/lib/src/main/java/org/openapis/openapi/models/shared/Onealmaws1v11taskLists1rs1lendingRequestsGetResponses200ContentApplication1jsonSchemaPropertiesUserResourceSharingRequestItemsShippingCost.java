@@ -12,6 +12,7 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
      */
     @JsonProperty("currency")
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsShippingCostCurrency currency;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsShippingCost withCurrency(Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsShippingCostCurrency currency) {
         this.currency = currency;
         return this;
@@ -22,9 +23,14 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
      */
     @JsonProperty("sum")
     public Double sum;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsShippingCost withSum(Double sum) {
         this.sum = sum;
         return this;
     }
     
+    public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsShippingCost(@JsonProperty("currency") Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaPropertiesUserResourceSharingRequestItemsShippingCostCurrency currency, @JsonProperty("sum") Double sum) {
+        this.currency = currency;
+        this.sum = sum;
+  }
 }

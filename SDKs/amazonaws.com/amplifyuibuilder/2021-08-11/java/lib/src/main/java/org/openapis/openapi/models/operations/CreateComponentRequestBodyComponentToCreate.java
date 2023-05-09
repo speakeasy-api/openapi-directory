@@ -15,6 +15,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindingProperties")
     public java.util.Map<String, org.openapis.openapi.models.shared.ComponentBindingPropertiesValue> bindingProperties;
+
     public CreateComponentRequestBodyComponentToCreate withBindingProperties(java.util.Map<String, org.openapis.openapi.models.shared.ComponentBindingPropertiesValue> bindingProperties) {
         this.bindingProperties = bindingProperties;
         return this;
@@ -23,6 +24,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public org.openapis.openapi.models.shared.ComponentChild[] children;
+
     public CreateComponentRequestBodyComponentToCreate withChildren(org.openapis.openapi.models.shared.ComponentChild[] children) {
         this.children = children;
         return this;
@@ -31,6 +33,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionProperties")
     public java.util.Map<String, org.openapis.openapi.models.shared.ComponentDataConfiguration> collectionProperties;
+
     public CreateComponentRequestBodyComponentToCreate withCollectionProperties(java.util.Map<String, org.openapis.openapi.models.shared.ComponentDataConfiguration> collectionProperties) {
         this.collectionProperties = collectionProperties;
         return this;
@@ -39,6 +42,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentType")
     public String componentType;
+
     public CreateComponentRequestBodyComponentToCreate withComponentType(String componentType) {
         this.componentType = componentType;
         return this;
@@ -47,6 +51,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public java.util.Map<String, org.openapis.openapi.models.shared.ComponentEvent> events;
+
     public CreateComponentRequestBodyComponentToCreate withEvents(java.util.Map<String, org.openapis.openapi.models.shared.ComponentEvent> events) {
         this.events = events;
         return this;
@@ -55,6 +60,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateComponentRequestBodyComponentToCreate withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public java.util.Map<String, java.util.Map<String, String>> overrides;
+
     public CreateComponentRequestBodyComponentToCreate withOverrides(java.util.Map<String, java.util.Map<String, String>> overrides) {
         this.overrides = overrides;
         return this;
@@ -74,6 +81,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public CreateComponentRequestBodyComponentToCreate withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -82,6 +90,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public CreateComponentRequestBodyComponentToCreate withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -90,6 +99,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public CreateComponentRequestBodyComponentToCreate withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -98,6 +108,7 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateComponentRequestBodyComponentToCreate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -106,9 +117,11 @@ public class CreateComponentRequestBodyComponentToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public org.openapis.openapi.models.shared.ComponentVariant[] variants;
+
     public CreateComponentRequestBodyComponentToCreate withVariants(org.openapis.openapi.models.shared.ComponentVariant[] variants) {
         this.variants = variants;
         return this;
     }
     
+    public CreateComponentRequestBodyComponentToCreate(){}
 }

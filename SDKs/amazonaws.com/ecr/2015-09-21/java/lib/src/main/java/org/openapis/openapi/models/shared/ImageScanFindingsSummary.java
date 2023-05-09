@@ -20,6 +20,7 @@ public class ImageScanFindingsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingSeverityCounts")
     public java.util.Map<String, Long> findingSeverityCounts;
+
     public ImageScanFindingsSummary withFindingSeverityCounts(java.util.Map<String, Long> findingSeverityCounts) {
         this.findingSeverityCounts = findingSeverityCounts;
         return this;
@@ -30,6 +31,7 @@ public class ImageScanFindingsSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("imageScanCompletedAt")
     public OffsetDateTime imageScanCompletedAt;
+
     public ImageScanFindingsSummary withImageScanCompletedAt(OffsetDateTime imageScanCompletedAt) {
         this.imageScanCompletedAt = imageScanCompletedAt;
         return this;
@@ -40,9 +42,11 @@ public class ImageScanFindingsSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("vulnerabilitySourceUpdatedAt")
     public OffsetDateTime vulnerabilitySourceUpdatedAt;
+
     public ImageScanFindingsSummary withVulnerabilitySourceUpdatedAt(OffsetDateTime vulnerabilitySourceUpdatedAt) {
         this.vulnerabilitySourceUpdatedAt = vulnerabilitySourceUpdatedAt;
         return this;
     }
     
+    public ImageScanFindingsSummary(){}
 }

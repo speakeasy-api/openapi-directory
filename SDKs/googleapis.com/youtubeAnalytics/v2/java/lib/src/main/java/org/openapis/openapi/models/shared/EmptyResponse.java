@@ -18,9 +18,11 @@ public class EmptyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public EmptyResponse withErrors(Errors errors) {
         this.errors = errors;
         return this;
     }
     
+    public EmptyResponse(){}
 }

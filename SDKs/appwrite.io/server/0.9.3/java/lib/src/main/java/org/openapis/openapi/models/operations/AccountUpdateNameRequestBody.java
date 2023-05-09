@@ -12,9 +12,13 @@ public class AccountUpdateNameRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public AccountUpdateNameRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AccountUpdateNameRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

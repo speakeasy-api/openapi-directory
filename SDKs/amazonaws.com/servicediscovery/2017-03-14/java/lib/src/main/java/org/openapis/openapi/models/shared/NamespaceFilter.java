@@ -15,6 +15,7 @@ public class NamespaceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public FilterConditionEnum condition;
+
     public NamespaceFilter withCondition(FilterConditionEnum condition) {
         this.condition = condition;
         return this;
@@ -22,6 +23,7 @@ public class NamespaceFilter {
     
     @JsonProperty("Name")
     public NamespaceFilterNameEnum name;
+
     public NamespaceFilter withName(NamespaceFilterNameEnum name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class NamespaceFilter {
     
     @JsonProperty("Values")
     public String[] values;
+
     public NamespaceFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public NamespaceFilter(@JsonProperty("Name") NamespaceFilterNameEnum name, @JsonProperty("Values") String[] values) {
+        this.name = name;
+        this.values = values;
+  }
 }

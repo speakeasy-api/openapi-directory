@@ -15,6 +15,7 @@ public class FlinkApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CheckpointConfigurationUpdate")
     public CheckpointConfigurationUpdate checkpointConfigurationUpdate;
+
     public FlinkApplicationConfigurationUpdate withCheckpointConfigurationUpdate(CheckpointConfigurationUpdate checkpointConfigurationUpdate) {
         this.checkpointConfigurationUpdate = checkpointConfigurationUpdate;
         return this;
@@ -23,6 +24,7 @@ public class FlinkApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringConfigurationUpdate")
     public MonitoringConfigurationUpdate monitoringConfigurationUpdate;
+
     public FlinkApplicationConfigurationUpdate withMonitoringConfigurationUpdate(MonitoringConfigurationUpdate monitoringConfigurationUpdate) {
         this.monitoringConfigurationUpdate = monitoringConfigurationUpdate;
         return this;
@@ -31,9 +33,11 @@ public class FlinkApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfigurationUpdate")
     public ParallelismConfigurationUpdate parallelismConfigurationUpdate;
+
     public FlinkApplicationConfigurationUpdate withParallelismConfigurationUpdate(ParallelismConfigurationUpdate parallelismConfigurationUpdate) {
         this.parallelismConfigurationUpdate = parallelismConfigurationUpdate;
         return this;
     }
     
+    public FlinkApplicationConfigurationUpdate(){}
 }

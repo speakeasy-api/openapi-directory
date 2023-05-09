@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContentFile {
     @JsonProperty("_links")
     public ContentFileLinks links;
+
     public ContentFile withLinks(ContentFileLinks links) {
         this.links = links;
         return this;
@@ -21,6 +22,7 @@ public class ContentFile {
     
     @JsonProperty("content")
     public String content;
+
     public ContentFile withContent(String content) {
         this.content = content;
         return this;
@@ -28,6 +30,7 @@ public class ContentFile {
     
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public ContentFile withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -35,6 +38,7 @@ public class ContentFile {
     
     @JsonProperty("encoding")
     public String encoding;
+
     public ContentFile withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -42,6 +46,7 @@ public class ContentFile {
     
     @JsonProperty("git_url")
     public String gitUrl;
+
     public ContentFile withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -49,6 +54,7 @@ public class ContentFile {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public ContentFile withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -56,6 +62,7 @@ public class ContentFile {
     
     @JsonProperty("name")
     public String name;
+
     public ContentFile withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +70,7 @@ public class ContentFile {
     
     @JsonProperty("path")
     public String path;
+
     public ContentFile withPath(String path) {
         this.path = path;
         return this;
@@ -70,6 +78,7 @@ public class ContentFile {
     
     @JsonProperty("sha")
     public String sha;
+
     public ContentFile withSha(String sha) {
         this.sha = sha;
         return this;
@@ -77,6 +86,7 @@ public class ContentFile {
     
     @JsonProperty("size")
     public Long size;
+
     public ContentFile withSize(Long size) {
         this.size = size;
         return this;
@@ -85,6 +95,7 @@ public class ContentFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submodule_git_url")
     public String submoduleGitUrl;
+
     public ContentFile withSubmoduleGitUrl(String submoduleGitUrl) {
         this.submoduleGitUrl = submoduleGitUrl;
         return this;
@@ -93,6 +104,7 @@ public class ContentFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public ContentFile withTarget(String target) {
         this.target = target;
         return this;
@@ -100,6 +112,7 @@ public class ContentFile {
     
     @JsonProperty("type")
     public ContentFileTypeEnum type;
+
     public ContentFile withType(ContentFileTypeEnum type) {
         this.type = type;
         return this;
@@ -107,9 +120,24 @@ public class ContentFile {
     
     @JsonProperty("url")
     public String url;
+
     public ContentFile withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ContentFile(@JsonProperty("_links") ContentFileLinks links, @JsonProperty("content") String content, @JsonProperty("download_url") String downloadUrl, @JsonProperty("encoding") String encoding, @JsonProperty("git_url") String gitUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("name") String name, @JsonProperty("path") String path, @JsonProperty("sha") String sha, @JsonProperty("size") Long size, @JsonProperty("type") ContentFileTypeEnum type, @JsonProperty("url") String url) {
+        this.links = links;
+        this.content = content;
+        this.downloadUrl = downloadUrl;
+        this.encoding = encoding;
+        this.gitUrl = gitUrl;
+        this.htmlUrl = htmlUrl;
+        this.name = name;
+        this.path = path;
+        this.sha = sha;
+        this.size = size;
+        this.type = type;
+        this.url = url;
+  }
 }

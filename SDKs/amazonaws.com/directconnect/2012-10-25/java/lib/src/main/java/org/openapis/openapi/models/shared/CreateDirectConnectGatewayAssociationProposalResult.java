@@ -15,9 +15,11 @@ public class CreateDirectConnectGatewayAssociationProposalResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayAssociationProposal")
     public DirectConnectGatewayAssociationProposal directConnectGatewayAssociationProposal;
+
     public CreateDirectConnectGatewayAssociationProposalResult withDirectConnectGatewayAssociationProposal(DirectConnectGatewayAssociationProposal directConnectGatewayAssociationProposal) {
         this.directConnectGatewayAssociationProposal = directConnectGatewayAssociationProposal;
         return this;
     }
     
+    public CreateDirectConnectGatewayAssociationProposalResult(){}
 }

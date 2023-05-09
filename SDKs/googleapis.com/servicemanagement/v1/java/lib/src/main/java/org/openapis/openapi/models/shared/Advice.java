@@ -18,9 +18,11 @@ public class Advice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Advice withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public Advice(){}
 }

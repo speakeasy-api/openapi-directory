@@ -12,9 +12,13 @@ public class CreateTagsRequestBody {
      */
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateTagsRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateTagsRequestBody(@JsonProperty("Tags") org.openapis.openapi.models.shared.Tag[] tags) {
+        this.tags = tags;
+  }
 }

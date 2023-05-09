@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PropertyControllerGetPropertiesPhotosRequest {
@@ -12,6 +13,7 @@ public class PropertyControllerGetPropertiesPhotosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public PropertyControllerGetPropertiesPhotosRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -22,6 +24,7 @@ public class PropertyControllerGetPropertiesPhotosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public PropertyControllerGetPropertiesPhotosRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,6 +35,7 @@ public class PropertyControllerGetPropertiesPhotosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyID")
     public String propertyID;
+
     public PropertyControllerGetPropertiesPhotosRequest withPropertyID(String propertyID) {
         this.propertyID = propertyID;
         return this;
@@ -42,6 +46,7 @@ public class PropertyControllerGetPropertiesPhotosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public PropertyControllerGetPropertiesPhotosRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -52,9 +57,17 @@ public class PropertyControllerGetPropertiesPhotosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public PropertyControllerGetPropertiesPhotosRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PropertyControllerGetPropertiesPhotosRequest(@JsonProperty("count") Integer count, @JsonProperty("offset") Integer offset, @JsonProperty("propertyID") String propertyID, @JsonProperty("shortName") String shortName, @JsonProperty("token") String token) {
+        this.count = count;
+        this.offset = offset;
+        this.propertyID = propertyID;
+        this.shortName = shortName;
+        this.token = token;
+  }
 }

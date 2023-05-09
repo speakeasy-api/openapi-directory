@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1EgressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identities")
     public String[] identities;
+
     public GoogleIdentityAccesscontextmanagerV1EgressFrom withIdentities(String[] identities) {
         this.identities = identities;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIdentityAccesscontextmanagerV1EgressFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityType")
     public GoogleIdentityAccesscontextmanagerV1EgressFromIdentityTypeEnum identityType;
+
     public GoogleIdentityAccesscontextmanagerV1EgressFrom withIdentityType(GoogleIdentityAccesscontextmanagerV1EgressFromIdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1EgressFrom(){}
 }

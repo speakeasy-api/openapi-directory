@@ -15,6 +15,7 @@ public class ActiveDirectoryBackupAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryId")
     public String activeDirectoryId;
+
     public ActiveDirectoryBackupAttributes withActiveDirectoryId(String activeDirectoryId) {
         this.activeDirectoryId = activeDirectoryId;
         return this;
@@ -23,6 +24,7 @@ public class ActiveDirectoryBackupAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public ActiveDirectoryBackupAttributes withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -34,9 +36,11 @@ public class ActiveDirectoryBackupAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public ActiveDirectoryBackupAttributes withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public ActiveDirectoryBackupAttributes(){}
 }

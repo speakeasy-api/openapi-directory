@@ -18,9 +18,11 @@ public class Aes128Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyUri")
     public String keyUri;
+
     public Aes128Encryption withKeyUri(String keyUri) {
         this.keyUri = keyUri;
         return this;
     }
     
+    public Aes128Encryption(){}
 }

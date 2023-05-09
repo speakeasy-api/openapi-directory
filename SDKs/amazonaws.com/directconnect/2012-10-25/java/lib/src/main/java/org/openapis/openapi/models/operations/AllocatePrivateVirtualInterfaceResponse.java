@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AllocatePrivateVirtualInterfaceResponse {
     
     public String contentType;
+
     public AllocatePrivateVirtualInterfaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AllocatePrivateVirtualInterfaceResponse {
      */
     
     public Object directConnectClientException;
+
     public AllocatePrivateVirtualInterfaceResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class AllocatePrivateVirtualInterfaceResponse {
      */
     
     public Object directConnectServerException;
+
     public AllocatePrivateVirtualInterfaceResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class AllocatePrivateVirtualInterfaceResponse {
      */
     
     public Object duplicateTagKeysException;
+
     public AllocatePrivateVirtualInterfaceResponse withDuplicateTagKeysException(Object duplicateTagKeysException) {
         this.duplicateTagKeysException = duplicateTagKeysException;
         return this;
@@ -46,6 +51,7 @@ public class AllocatePrivateVirtualInterfaceResponse {
     
     
     public Integer statusCode;
+
     public AllocatePrivateVirtualInterfaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AllocatePrivateVirtualInterfaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AllocatePrivateVirtualInterfaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AllocatePrivateVirtualInterfaceResponse {
      */
     
     public Object tooManyTagsException;
+
     public AllocatePrivateVirtualInterfaceResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -73,9 +81,14 @@ public class AllocatePrivateVirtualInterfaceResponse {
      */
     
     public org.openapis.openapi.models.shared.VirtualInterface virtualInterface;
+
     public AllocatePrivateVirtualInterfaceResponse withVirtualInterface(org.openapis.openapi.models.shared.VirtualInterface virtualInterface) {
         this.virtualInterface = virtualInterface;
         return this;
     }
     
+    public AllocatePrivateVirtualInterfaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

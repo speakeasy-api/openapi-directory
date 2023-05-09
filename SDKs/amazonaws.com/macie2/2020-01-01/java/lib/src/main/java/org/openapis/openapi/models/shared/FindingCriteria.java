@@ -15,9 +15,11 @@ public class FindingCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criterion")
     public java.util.Map<String, CriterionAdditionalProperties> criterion;
+
     public FindingCriteria withCriterion(java.util.Map<String, CriterionAdditionalProperties> criterion) {
         this.criterion = criterion;
         return this;
     }
     
+    public FindingCriteria(){}
 }

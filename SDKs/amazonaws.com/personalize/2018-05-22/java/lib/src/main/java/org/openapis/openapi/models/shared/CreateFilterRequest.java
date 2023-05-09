@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFilterRequest {
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public CreateFilterRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -18,6 +19,7 @@ public class CreateFilterRequest {
     
     @JsonProperty("filterExpression")
     public String filterExpression;
+
     public CreateFilterRequest withFilterExpression(String filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -25,6 +27,7 @@ public class CreateFilterRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateFilterRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,15 @@ public class CreateFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateFilterRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFilterRequest(@JsonProperty("datasetGroupArn") String datasetGroupArn, @JsonProperty("filterExpression") String filterExpression, @JsonProperty("name") String name) {
+        this.datasetGroupArn = datasetGroupArn;
+        this.filterExpression = filterExpression;
+        this.name = name;
+  }
 }

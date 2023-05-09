@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppsTransferOwnershipRawDefaultApplicationJSONError {
     @JsonProperty("code")
     public AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum code;
+
     public AppsTransferOwnershipRawDefaultApplicationJSONError withCode(AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class AppsTransferOwnershipRawDefaultApplicationJSONError {
     
     @JsonProperty("message")
     public String message;
+
     public AppsTransferOwnershipRawDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AppsTransferOwnershipRawDefaultApplicationJSONError(@JsonProperty("code") AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

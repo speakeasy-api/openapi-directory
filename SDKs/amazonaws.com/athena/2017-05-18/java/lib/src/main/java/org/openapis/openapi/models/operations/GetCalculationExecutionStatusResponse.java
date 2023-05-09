@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCalculationExecutionStatusResponse {
     
     public String contentType;
+
     public GetCalculationExecutionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCalculationExecutionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCalculationExecutionStatusResponse getCalculationExecutionStatusResponse;
+
     public GetCalculationExecutionStatusResponse withGetCalculationExecutionStatusResponse(org.openapis.openapi.models.shared.GetCalculationExecutionStatusResponse getCalculationExecutionStatusResponse) {
         this.getCalculationExecutionStatusResponse = getCalculationExecutionStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCalculationExecutionStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetCalculationExecutionStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetCalculationExecutionStatusResponse {
      */
     
     public Object invalidRequestException;
+
     public GetCalculationExecutionStatusResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetCalculationExecutionStatusResponse {
     
     
     public Integer statusCode;
+
     public GetCalculationExecutionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCalculationExecutionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCalculationExecutionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetCalculationExecutionStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCalculationExecutionStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetCalculationExecutionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

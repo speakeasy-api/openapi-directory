@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateFacilityOTPUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class GenerateFacilityOTPUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad;
+
     public GenerateFacilityOTPUsingPOSTRequest withAadharOtpGenerateRequestPayLoad(org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad) {
         this.aadharOtpGenerateRequestPayLoad = aadharOtpGenerateRequestPayLoad;
         return this;
@@ -19,6 +21,7 @@ public class GenerateFacilityOTPUsingPOSTRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public GenerateFacilityOTPUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -29,9 +32,14 @@ public class GenerateFacilityOTPUsingPOSTRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
     public String xToken;
+
     public GenerateFacilityOTPUsingPOSTRequest withXToken(String xToken) {
         this.xToken = xToken;
         return this;
     }
     
+    public GenerateFacilityOTPUsingPOSTRequest(@JsonProperty("AadharOtpGenerateRequestPayLoad") org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad, @JsonProperty("X-Token") String xToken) {
+        this.aadharOtpGenerateRequestPayLoad = aadharOtpGenerateRequestPayLoad;
+        this.xToken = xToken;
+  }
 }

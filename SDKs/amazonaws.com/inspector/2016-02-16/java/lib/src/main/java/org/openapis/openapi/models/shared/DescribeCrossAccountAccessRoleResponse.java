@@ -19,6 +19,7 @@ public class DescribeCrossAccountAccessRoleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registeredAt")
     public OffsetDateTime registeredAt;
+
     public DescribeCrossAccountAccessRoleResponse withRegisteredAt(OffsetDateTime registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -26,6 +27,7 @@ public class DescribeCrossAccountAccessRoleResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DescribeCrossAccountAccessRoleResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -33,9 +35,15 @@ public class DescribeCrossAccountAccessRoleResponse {
     
     @JsonProperty("valid")
     public Boolean valid;
+
     public DescribeCrossAccountAccessRoleResponse withValid(Boolean valid) {
         this.valid = valid;
         return this;
     }
     
+    public DescribeCrossAccountAccessRoleResponse(@JsonProperty("registeredAt") OffsetDateTime registeredAt, @JsonProperty("roleArn") String roleArn, @JsonProperty("valid") Boolean valid) {
+        this.registeredAt = registeredAt;
+        this.roleArn = roleArn;
+        this.valid = valid;
+  }
 }

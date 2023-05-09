@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdStoresReferenceTerminalSettingsRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdStoresReferenceTerminalSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -22,9 +24,14 @@ public class GetMerchantsMerchantIdStoresReferenceTerminalSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reference")
     public String reference;
+
     public GetMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public GetMerchantsMerchantIdStoresReferenceTerminalSettingsRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("reference") String reference) {
+        this.merchantId = merchantId;
+        this.reference = reference;
+  }
 }

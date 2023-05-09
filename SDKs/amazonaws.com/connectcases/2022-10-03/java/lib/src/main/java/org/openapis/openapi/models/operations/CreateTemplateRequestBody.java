@@ -15,6 +15,7 @@ public class CreateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateTemplateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutConfiguration")
     public CreateTemplateRequestBodyLayoutConfiguration layoutConfiguration;
+
     public CreateTemplateRequestBody withLayoutConfiguration(CreateTemplateRequestBodyLayoutConfiguration layoutConfiguration) {
         this.layoutConfiguration = layoutConfiguration;
         return this;
@@ -36,6 +38,7 @@ public class CreateTemplateRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateTemplateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +50,7 @@ public class CreateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredFields")
     public org.openapis.openapi.models.shared.RequiredField[] requiredFields;
+
     public CreateTemplateRequestBody withRequiredFields(org.openapis.openapi.models.shared.RequiredField[] requiredFields) {
         this.requiredFields = requiredFields;
         return this;
@@ -58,9 +62,13 @@ public class CreateTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateTemplateRequestBodyStatusEnum status;
+
     public CreateTemplateRequestBody withStatus(CreateTemplateRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateTemplateRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

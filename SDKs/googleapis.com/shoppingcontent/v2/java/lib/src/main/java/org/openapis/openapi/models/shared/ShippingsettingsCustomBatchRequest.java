@@ -15,9 +15,11 @@ public class ShippingsettingsCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public ShippingsettingsCustomBatchRequestEntry[] entries;
+
     public ShippingsettingsCustomBatchRequest withEntries(ShippingsettingsCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public ShippingsettingsCustomBatchRequest(){}
 }

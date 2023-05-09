@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransformResources {
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public TransformResources withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -21,6 +22,7 @@ public class TransformResources {
     
     @JsonProperty("InstanceType")
     public TransformInstanceTypeEnum instanceType;
+
     public TransformResources withInstanceType(TransformInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -29,9 +31,14 @@ public class TransformResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public TransformResources withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
     }
     
+    public TransformResources(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("InstanceType") TransformInstanceTypeEnum instanceType) {
+        this.instanceCount = instanceCount;
+        this.instanceType = instanceType;
+  }
 }

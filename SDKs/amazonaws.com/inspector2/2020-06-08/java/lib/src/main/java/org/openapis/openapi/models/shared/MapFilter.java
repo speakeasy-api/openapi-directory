@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MapFilter {
     @JsonProperty("comparison")
     public MapComparisonEnum comparison;
+
     public MapFilter withComparison(MapComparisonEnum comparison) {
         this.comparison = comparison;
         return this;
@@ -21,6 +22,7 @@ public class MapFilter {
     
     @JsonProperty("key")
     public String key;
+
     public MapFilter withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +31,14 @@ public class MapFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public MapFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public MapFilter(@JsonProperty("comparison") MapComparisonEnum comparison, @JsonProperty("key") String key) {
+        this.comparison = comparison;
+        this.key = key;
+  }
 }

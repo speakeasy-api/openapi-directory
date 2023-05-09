@@ -12,6 +12,7 @@ public class DeleteBackendStorageRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public DeleteBackendStorageRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -22,9 +23,14 @@ public class DeleteBackendStorageRequestBody {
      */
     @JsonProperty("serviceName")
     public DeleteBackendStorageRequestBodyServiceNameEnum serviceName;
+
     public DeleteBackendStorageRequestBody withServiceName(DeleteBackendStorageRequestBodyServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public DeleteBackendStorageRequestBody(@JsonProperty("resourceName") String resourceName, @JsonProperty("serviceName") DeleteBackendStorageRequestBodyServiceNameEnum serviceName) {
+        this.resourceName = resourceName;
+        this.serviceName = serviceName;
+  }
 }

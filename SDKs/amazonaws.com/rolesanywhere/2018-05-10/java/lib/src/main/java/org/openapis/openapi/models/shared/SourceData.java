@@ -15,6 +15,7 @@ public class SourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acmPcaArn")
     public String acmPcaArn;
+
     public SourceData withAcmPcaArn(String acmPcaArn) {
         this.acmPcaArn = acmPcaArn;
         return this;
@@ -23,9 +24,11 @@ public class SourceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509CertificateData")
     public String x509CertificateData;
+
     public SourceData withX509CertificateData(String x509CertificateData) {
         this.x509CertificateData = x509CertificateData;
         return this;
     }
     
+    public SourceData(){}
 }

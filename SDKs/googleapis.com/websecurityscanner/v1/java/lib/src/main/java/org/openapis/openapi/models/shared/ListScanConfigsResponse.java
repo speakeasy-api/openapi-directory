@@ -18,6 +18,7 @@ public class ListScanConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListScanConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListScanConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanConfigs")
     public ScanConfig[] scanConfigs;
+
     public ListScanConfigsResponse withScanConfigs(ScanConfig[] scanConfigs) {
         this.scanConfigs = scanConfigs;
         return this;
     }
     
+    public ListScanConfigsResponse(){}
 }

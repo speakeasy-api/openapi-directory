@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListServerCertificateTagsRequest {
     
     public String marker;
+
     public ListServerCertificateTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListServerCertificateTagsRequest {
     
     
     public Long maxItems;
+
     public ListServerCertificateTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,13 @@ public class ListServerCertificateTagsRequest {
     
     
     public String serverCertificateName;
+
     public ListServerCertificateTagsRequest withServerCertificateName(String serverCertificateName) {
         this.serverCertificateName = serverCertificateName;
         return this;
     }
     
+    public ListServerCertificateTagsRequest(@JsonProperty("ServerCertificateName") String serverCertificateName) {
+        this.serverCertificateName = serverCertificateName;
+  }
 }

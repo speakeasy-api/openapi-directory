@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword {
     @JsonProperty("DeliveryMethod")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum deliveryMethod;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword withDeliveryMethod(GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum deliveryMethod) {
         this.deliveryMethod = deliveryMethod;
         return this;
@@ -22,6 +23,7 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSettings")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordEmailSettings emailSettings;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword withEmailSettings(GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordEmailSettings emailSettings) {
         this.emailSettings = emailSettings;
         return this;
@@ -30,9 +32,13 @@ public class GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SmsSettings")
     public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordSmsSettings smsSettings;
+
     public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword withSmsSettings(GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordSmsSettings smsSettings) {
         this.smsSettings = smsSettings;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPassword(@JsonProperty("DeliveryMethod") GetBackendAuthResponseResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum deliveryMethod) {
+        this.deliveryMethod = deliveryMethod;
+  }
 }

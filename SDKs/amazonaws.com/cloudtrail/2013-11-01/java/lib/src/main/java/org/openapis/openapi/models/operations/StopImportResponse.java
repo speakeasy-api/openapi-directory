@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopImportResponse {
     
     public String contentType;
+
     public StopImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopImportResponse {
      */
     
     public Object importNotFoundException;
+
     public StopImportResponse withImportNotFoundException(Object importNotFoundException) {
         this.importNotFoundException = importNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StopImportResponse {
      */
     
     public Object invalidParameterException;
+
     public StopImportResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StopImportResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StopImportResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class StopImportResponse {
     
     
     public Integer statusCode;
+
     public StopImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopImportResponse {
      */
     
     public org.openapis.openapi.models.shared.StopImportResponse stopImportResponse;
+
     public StopImportResponse withStopImportResponse(org.openapis.openapi.models.shared.StopImportResponse stopImportResponse) {
         this.stopImportResponse = stopImportResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopImportResponse {
      */
     
     public Object unsupportedOperationException;
+
     public StopImportResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public StopImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

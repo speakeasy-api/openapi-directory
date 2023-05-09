@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplateIamInstanceProfileSpecificationRequest {
     
     public String arn;
+
     public LaunchTemplateIamInstanceProfileSpecificationRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class LaunchTemplateIamInstanceProfileSpecificationRequest {
     
     
     public String name;
+
     public LaunchTemplateIamInstanceProfileSpecificationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LaunchTemplateIamInstanceProfileSpecificationRequest(){}
 }

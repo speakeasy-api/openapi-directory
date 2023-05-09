@@ -12,9 +12,11 @@ public class EventSubscriptionsResponseResultMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatus")
     public String httpStatus;
+
     public EventSubscriptionsResponseResultMeta withHttpStatus(String httpStatus) {
         this.httpStatus = httpStatus;
         return this;
     }
     
+    public EventSubscriptionsResponseResultMeta(){}
 }

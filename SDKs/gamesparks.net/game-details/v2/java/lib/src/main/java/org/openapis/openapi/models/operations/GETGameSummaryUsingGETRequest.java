@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GETGameSummaryUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETGameSummaryUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +25,7 @@ public class GETGameSummaryUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public LocalDate endDate;
+
     public GETGameSummaryUsingGETRequest withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +36,7 @@ public class GETGameSummaryUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
     public GETGameSummaryUsingGETStageEnum stage;
+
     public GETGameSummaryUsingGETRequest withStage(GETGameSummaryUsingGETStageEnum stage) {
         this.stage = stage;
         return this;
@@ -43,9 +47,16 @@ public class GETGameSummaryUsingGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public LocalDate startDate;
+
     public GETGameSummaryUsingGETRequest withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GETGameSummaryUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("endDate") LocalDate endDate, @JsonProperty("stage") GETGameSummaryUsingGETStageEnum stage, @JsonProperty("startDate") LocalDate startDate) {
+        this.apiKey = apiKey;
+        this.endDate = endDate;
+        this.stage = stage;
+        this.startDate = startDate;
+  }
 }

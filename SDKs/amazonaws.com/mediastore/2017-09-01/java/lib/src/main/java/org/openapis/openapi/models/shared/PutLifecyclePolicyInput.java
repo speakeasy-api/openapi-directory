@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutLifecyclePolicyInput {
     @JsonProperty("ContainerName")
     public String containerName;
+
     public PutLifecyclePolicyInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -16,9 +17,14 @@ public class PutLifecyclePolicyInput {
     
     @JsonProperty("LifecyclePolicy")
     public String lifecyclePolicy;
+
     public PutLifecyclePolicyInput withLifecyclePolicy(String lifecyclePolicy) {
         this.lifecyclePolicy = lifecyclePolicy;
         return this;
     }
     
+    public PutLifecyclePolicyInput(@JsonProperty("ContainerName") String containerName, @JsonProperty("LifecyclePolicy") String lifecyclePolicy) {
+        this.containerName = containerName;
+        this.lifecyclePolicy = lifecyclePolicy;
+  }
 }

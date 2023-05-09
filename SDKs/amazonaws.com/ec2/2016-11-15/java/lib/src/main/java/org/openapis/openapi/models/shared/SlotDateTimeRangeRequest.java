@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class SlotDateTimeRangeRequest {
     
     public OffsetDateTime earliestTime;
+
     public SlotDateTimeRangeRequest withEarliestTime(OffsetDateTime earliestTime) {
         this.earliestTime = earliestTime;
         return this;
@@ -19,9 +21,14 @@ public class SlotDateTimeRangeRequest {
     
     
     public OffsetDateTime latestTime;
+
     public SlotDateTimeRangeRequest withLatestTime(OffsetDateTime latestTime) {
         this.latestTime = latestTime;
         return this;
     }
     
+    public SlotDateTimeRangeRequest(@JsonProperty("EarliestTime") OffsetDateTime earliestTime, @JsonProperty("LatestTime") OffsetDateTime latestTime) {
+        this.earliestTime = earliestTime;
+        this.latestTime = latestTime;
+  }
 }

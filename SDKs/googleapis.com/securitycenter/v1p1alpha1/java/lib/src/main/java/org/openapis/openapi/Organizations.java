@@ -59,11 +59,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

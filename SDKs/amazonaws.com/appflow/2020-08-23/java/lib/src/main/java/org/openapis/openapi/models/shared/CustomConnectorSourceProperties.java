@@ -15,6 +15,7 @@ public class CustomConnectorSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public java.util.Map<String, String> customProperties;
+
     public CustomConnectorSourceProperties withCustomProperties(java.util.Map<String, String> customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -22,9 +23,13 @@ public class CustomConnectorSourceProperties {
     
     @JsonProperty("entityName")
     public String entityName;
+
     public CustomConnectorSourceProperties withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
     }
     
+    public CustomConnectorSourceProperties(@JsonProperty("entityName") String entityName) {
+        this.entityName = entityName;
+  }
 }

@@ -18,9 +18,11 @@ public class GetAncestryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestor")
     public Ancestor[] ancestor;
+
     public GetAncestryResponse withAncestor(Ancestor[] ancestor) {
         this.ancestor = ancestor;
         return this;
     }
     
+    public GetAncestryResponse(){}
 }

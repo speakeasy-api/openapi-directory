@@ -15,9 +15,11 @@ public class GetApiV2ListFederations404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object> errors;
+
     public GetApiV2ListFederations404ApplicationJSON withErrors(java.util.Map<String, Object> errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetApiV2ListFederations404ApplicationJSON(){}
 }

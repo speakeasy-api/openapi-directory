@@ -18,6 +18,7 @@ public class OrderInvoiceDesignSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerContentHtml")
     public String footerContentHtml;
+
     public OrderInvoiceDesignSettings withFooterContentHtml(String footerContentHtml) {
         this.footerContentHtml = footerContentHtml;
         return this;
@@ -29,9 +30,11 @@ public class OrderInvoiceDesignSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerContentHtml")
     public String headerContentHtml;
+
     public OrderInvoiceDesignSettings withHeaderContentHtml(String headerContentHtml) {
         this.headerContentHtml = headerContentHtml;
         return this;
     }
     
+    public OrderInvoiceDesignSettings(){}
 }

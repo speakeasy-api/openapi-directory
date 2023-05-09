@@ -15,6 +15,7 @@ public class Paging {
      */
     @JsonProperty("page")
     public Long page;
+
     public Paging withPage(Long page) {
         this.page = page;
         return this;
@@ -25,6 +26,7 @@ public class Paging {
      */
     @JsonProperty("pages")
     public Long pages;
+
     public Paging withPages(Long pages) {
         this.pages = pages;
         return this;
@@ -35,6 +37,7 @@ public class Paging {
      */
     @JsonProperty("perPage")
     public Long perPage;
+
     public Paging withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -45,9 +48,16 @@ public class Paging {
      */
     @JsonProperty("total")
     public Long total;
+
     public Paging withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public Paging(@JsonProperty("page") Long page, @JsonProperty("pages") Long pages, @JsonProperty("perPage") Long perPage, @JsonProperty("total") Long total) {
+        this.page = page;
+        this.pages = pages;
+        this.perPage = perPage;
+        this.total = total;
+  }
 }

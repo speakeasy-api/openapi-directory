@@ -15,9 +15,11 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorEntries")
     public DisassociateClientDeviceFromCoreDeviceErrorEntry[] errorEntries;
+
     public BatchDisassociateClientDeviceFromCoreDeviceResponse withErrorEntries(DisassociateClientDeviceFromCoreDeviceErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
     }
     
+    public BatchDisassociateClientDeviceFromCoreDeviceResponse(){}
 }

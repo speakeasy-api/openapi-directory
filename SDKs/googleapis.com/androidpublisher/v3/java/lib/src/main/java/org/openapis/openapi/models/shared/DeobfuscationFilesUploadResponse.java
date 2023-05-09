@@ -18,9 +18,11 @@ public class DeobfuscationFilesUploadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deobfuscationFile")
     public DeobfuscationFile deobfuscationFile;
+
     public DeobfuscationFilesUploadResponse withDeobfuscationFile(DeobfuscationFile deobfuscationFile) {
         this.deobfuscationFile = deobfuscationFile;
         return this;
     }
     
+    public DeobfuscationFilesUploadResponse(){}
 }

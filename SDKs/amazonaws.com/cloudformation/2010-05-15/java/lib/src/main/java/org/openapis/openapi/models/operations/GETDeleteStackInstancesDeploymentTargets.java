@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETDeleteStackInstancesDeploymentTargets {
     @SpeakeasyMetadata("queryParam:name=AccountFilterType")
     public org.openapis.openapi.models.shared.AccountFilterTypeEnum accountFilterType;
+
     public GETDeleteStackInstancesDeploymentTargets withAccountFilterType(org.openapis.openapi.models.shared.AccountFilterTypeEnum accountFilterType) {
         this.accountFilterType = accountFilterType;
         return this;
@@ -19,6 +20,7 @@ public class GETDeleteStackInstancesDeploymentTargets {
     
     @SpeakeasyMetadata("queryParam:name=Accounts")
     public String[] accounts;
+
     public GETDeleteStackInstancesDeploymentTargets withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -26,6 +28,7 @@ public class GETDeleteStackInstancesDeploymentTargets {
     
     @SpeakeasyMetadata("queryParam:name=AccountsUrl")
     public String accountsUrl;
+
     public GETDeleteStackInstancesDeploymentTargets withAccountsUrl(String accountsUrl) {
         this.accountsUrl = accountsUrl;
         return this;
@@ -33,9 +36,11 @@ public class GETDeleteStackInstancesDeploymentTargets {
     
     @SpeakeasyMetadata("queryParam:name=OrganizationalUnitIds")
     public String[] organizationalUnitIds;
+
     public GETDeleteStackInstancesDeploymentTargets withOrganizationalUnitIds(String[] organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
         return this;
     }
     
+    public GETDeleteStackInstancesDeploymentTargets(){}
 }

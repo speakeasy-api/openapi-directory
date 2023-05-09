@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutputArtifact {
     @JsonProperty("name")
     public String name;
+
     public OutputArtifact withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OutputArtifact(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

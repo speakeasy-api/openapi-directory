@@ -18,9 +18,11 @@ public class SearchDeveloperMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchedDeveloperMetadata")
     public MatchedDeveloperMetadata[] matchedDeveloperMetadata;
+
     public SearchDeveloperMetadataResponse withMatchedDeveloperMetadata(MatchedDeveloperMetadata[] matchedDeveloperMetadata) {
         this.matchedDeveloperMetadata = matchedDeveloperMetadata;
         return this;
     }
     
+    public SearchDeveloperMetadataResponse(){}
 }

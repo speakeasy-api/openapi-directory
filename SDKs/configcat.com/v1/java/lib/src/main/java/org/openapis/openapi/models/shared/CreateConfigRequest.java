@@ -12,6 +12,7 @@ public class CreateConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateConfigRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,13 @@ public class CreateConfigRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateConfigRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateConfigRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

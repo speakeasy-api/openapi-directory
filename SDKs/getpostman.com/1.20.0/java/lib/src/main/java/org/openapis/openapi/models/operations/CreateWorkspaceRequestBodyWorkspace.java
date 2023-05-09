@@ -12,6 +12,7 @@ public class CreateWorkspaceRequestBodyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
     public CreateWorkspaceRequestBodyWorkspaceCollections[] collections;
+
     public CreateWorkspaceRequestBodyWorkspace withCollections(CreateWorkspaceRequestBodyWorkspaceCollections[] collections) {
         this.collections = collections;
         return this;
@@ -20,6 +21,7 @@ public class CreateWorkspaceRequestBodyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkspaceRequestBodyWorkspace withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CreateWorkspaceRequestBodyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environments")
     public CreateWorkspaceRequestBodyWorkspaceEnvironments[] environments;
+
     public CreateWorkspaceRequestBodyWorkspace withEnvironments(CreateWorkspaceRequestBodyWorkspaceEnvironments[] environments) {
         this.environments = environments;
         return this;
@@ -36,6 +39,7 @@ public class CreateWorkspaceRequestBodyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mocks")
     public CreateWorkspaceRequestBodyWorkspaceMocks[] mocks;
+
     public CreateWorkspaceRequestBodyWorkspace withMocks(CreateWorkspaceRequestBodyWorkspaceMocks[] mocks) {
         this.mocks = mocks;
         return this;
@@ -44,6 +48,7 @@ public class CreateWorkspaceRequestBodyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitors")
     public CreateWorkspaceRequestBodyWorkspaceMonitors[] monitors;
+
     public CreateWorkspaceRequestBodyWorkspace withMonitors(CreateWorkspaceRequestBodyWorkspaceMonitors[] monitors) {
         this.monitors = monitors;
         return this;
@@ -52,6 +57,7 @@ public class CreateWorkspaceRequestBodyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkspaceRequestBodyWorkspace withName(String name) {
         this.name = name;
         return this;
@@ -60,9 +66,11 @@ public class CreateWorkspaceRequestBodyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CreateWorkspaceRequestBodyWorkspace withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateWorkspaceRequestBodyWorkspace(){}
 }

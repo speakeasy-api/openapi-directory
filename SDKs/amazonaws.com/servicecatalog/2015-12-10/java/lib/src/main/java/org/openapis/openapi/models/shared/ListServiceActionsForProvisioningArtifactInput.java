@@ -12,6 +12,7 @@ public class ListServiceActionsForProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListServiceActionsForProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class ListServiceActionsForProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListServiceActionsForProvisioningArtifactInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,6 +30,7 @@ public class ListServiceActionsForProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListServiceActionsForProvisioningArtifactInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -35,6 +38,7 @@ public class ListServiceActionsForProvisioningArtifactInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public ListServiceActionsForProvisioningArtifactInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -42,9 +46,14 @@ public class ListServiceActionsForProvisioningArtifactInput {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ListServiceActionsForProvisioningArtifactInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
     }
     
+    public ListServiceActionsForProvisioningArtifactInput(@JsonProperty("ProductId") String productId, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId) {
+        this.productId = productId;
+        this.provisioningArtifactId = provisioningArtifactId;
+  }
 }

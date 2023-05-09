@@ -15,9 +15,11 @@ public class ReadPresetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Preset")
     public Preset preset;
+
     public ReadPresetResponse withPreset(Preset preset) {
         this.preset = preset;
         return this;
     }
     
+    public ReadPresetResponse(){}
 }

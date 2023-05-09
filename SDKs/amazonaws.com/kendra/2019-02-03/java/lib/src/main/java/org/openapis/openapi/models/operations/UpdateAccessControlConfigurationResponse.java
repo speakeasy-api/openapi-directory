@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAccessControlConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAccessControlConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public Object conflictException;
+
     public UpdateAccessControlConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAccessControlConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateAccessControlConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAccessControlConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAccessControlConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateAccessControlConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAccessControlConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAccessControlConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAccessControlConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateAccessControlConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAccessControlConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateAccessControlConfigurationResponse;
+
     public UpdateAccessControlConfigurationResponse withUpdateAccessControlConfigurationResponse(java.util.Map<String, Object> updateAccessControlConfigurationResponse) {
         this.updateAccessControlConfigurationResponse = updateAccessControlConfigurationResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateAccessControlConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateAccessControlConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAccessControlConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

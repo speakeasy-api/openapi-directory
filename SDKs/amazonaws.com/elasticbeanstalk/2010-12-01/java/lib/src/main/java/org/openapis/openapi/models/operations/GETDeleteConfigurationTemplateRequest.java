@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteConfigurationTemplateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteConfigurationTemplateActionEnum action;
+
     public GETDeleteConfigurationTemplateRequest withAction(GETDeleteConfigurationTemplateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteConfigurationTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
     public String applicationName;
+
     public GETDeleteConfigurationTemplateRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteConfigurationTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
     public String templateName;
+
     public GETDeleteConfigurationTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteConfigurationTemplateVersionEnum version;
+
     public GETDeleteConfigurationTemplateRequest withVersion(GETDeleteConfigurationTemplateVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteConfigurationTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteConfigurationTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteConfigurationTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteConfigurationTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteConfigurationTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteConfigurationTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeleteConfigurationTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteConfigurationTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteConfigurationTemplateRequest(@JsonProperty("Action") GETDeleteConfigurationTemplateActionEnum action, @JsonProperty("ApplicationName") String applicationName, @JsonProperty("TemplateName") String templateName, @JsonProperty("Version") GETDeleteConfigurationTemplateVersionEnum version) {
+        this.action = action;
+        this.applicationName = applicationName;
+        this.templateName = templateName;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ public class GetApiProofsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider")
     public String provider;
+
     public GetApiProofsRequest withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -22,9 +23,11 @@ public class GetApiProofsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetApiProofsRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetApiProofsRequest(){}
 }

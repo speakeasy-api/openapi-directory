@@ -15,6 +15,7 @@ public class ListContainerRecipesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipeSummaryList")
     public ContainerRecipeSummary[] containerRecipeSummaryList;
+
     public ListContainerRecipesResponse withContainerRecipeSummaryList(ContainerRecipeSummary[] containerRecipeSummaryList) {
         this.containerRecipeSummaryList = containerRecipeSummaryList;
         return this;
@@ -23,6 +24,7 @@ public class ListContainerRecipesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListContainerRecipesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListContainerRecipesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ListContainerRecipesResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ListContainerRecipesResponse(){}
 }

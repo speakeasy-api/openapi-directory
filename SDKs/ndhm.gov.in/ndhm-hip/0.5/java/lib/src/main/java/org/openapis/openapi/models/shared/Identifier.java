@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Identifier {
     @JsonProperty("type")
     public IdentifierTypeEnum type;
+
     public Identifier withType(IdentifierTypeEnum type) {
         this.type = type;
         return this;
@@ -16,9 +17,14 @@ public class Identifier {
     
     @JsonProperty("value")
     public String value;
+
     public Identifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Identifier(@JsonProperty("type") IdentifierTypeEnum type, @JsonProperty("value") String value) {
+        this.type = type;
+        this.value = value;
+  }
 }

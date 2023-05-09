@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IngestionInputConfiguration {
     @JsonProperty("S3InputConfiguration")
     public IngestionS3InputConfiguration s3InputConfiguration;
+
     public IngestionInputConfiguration withS3InputConfiguration(IngestionS3InputConfiguration s3InputConfiguration) {
         this.s3InputConfiguration = s3InputConfiguration;
         return this;
     }
     
+    public IngestionInputConfiguration(@JsonProperty("S3InputConfiguration") IngestionS3InputConfiguration s3InputConfiguration) {
+        this.s3InputConfiguration = s3InputConfiguration;
+  }
 }

@@ -18,6 +18,7 @@ public class PriceAccuracyView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PriceAccuracyView withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class PriceAccuracyView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public PriceAccuracyRow[] results;
+
     public PriceAccuracyView withResults(PriceAccuracyRow[] results) {
         this.results = results;
         return this;
     }
     
+    public PriceAccuracyView(){}
 }

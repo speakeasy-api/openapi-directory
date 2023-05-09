@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStageResponse {
@@ -12,6 +13,7 @@ public class CreateStageResponse {
      */
     
     public Object badRequestException;
+
     public CreateStageResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateStageResponse {
      */
     
     public Object conflictException;
+
     public CreateStageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateStageResponse {
     
     
     public String contentType;
+
     public CreateStageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateStageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStageResponse createStageResponse;
+
     public CreateStageResponse withCreateStageResponse(org.openapis.openapi.models.shared.CreateStageResponse createStageResponse) {
         this.createStageResponse = createStageResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateStageResponse {
      */
     
     public Object notFoundException;
+
     public CreateStageResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateStageResponse {
     
     
     public Integer statusCode;
+
     public CreateStageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateStageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateStageResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateStageResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateStageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceInfo")
     public ResourceInfo resourceInfo;
+
     public DescribeResourceResponse withResourceInfo(ResourceInfo resourceInfo) {
         this.resourceInfo = resourceInfo;
         return this;
     }
     
+    public DescribeResourceResponse(){}
 }

@@ -15,6 +15,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Shard withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nodes")
     public Node[] nodes;
+
     public Shard withNodes(Node[] nodes) {
         this.nodes = nodes;
         return this;
@@ -31,6 +33,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfNodes")
     public Long numberOfNodes;
+
     public Shard withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -39,6 +42,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Slots")
     public String slots;
+
     public Shard withSlots(String slots) {
         this.slots = slots;
         return this;
@@ -47,9 +51,11 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Shard withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Shard(){}
 }

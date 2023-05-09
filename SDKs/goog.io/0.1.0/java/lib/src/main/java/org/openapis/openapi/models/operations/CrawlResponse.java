@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrawlResponse {
     
     public String contentType;
+
     public CrawlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CrawlResponse {
      */
     
     public Crawl200ApplicationJSON crawl200ApplicationJSONObject;
+
     public CrawlResponse withCrawl200ApplicationJSONObject(Crawl200ApplicationJSON crawl200ApplicationJSONObject) {
         this.crawl200ApplicationJSONObject = crawl200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CrawlResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public CrawlResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class CrawlResponse {
     
     
     public Integer statusCode;
+
     public CrawlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CrawlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrawlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CrawlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

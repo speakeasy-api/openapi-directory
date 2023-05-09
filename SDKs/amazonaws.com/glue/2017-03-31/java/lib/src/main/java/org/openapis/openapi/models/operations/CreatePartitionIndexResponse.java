@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePartitionIndexResponse {
@@ -12,6 +13,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreatePartitionIndexResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreatePartitionIndexResponse {
     
     
     public String contentType;
+
     public CreatePartitionIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public java.util.Map<String, Object> createPartitionIndexResponse;
+
     public CreatePartitionIndexResponse withCreatePartitionIndexResponse(java.util.Map<String, Object> createPartitionIndexResponse) {
         this.createPartitionIndexResponse = createPartitionIndexResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreatePartitionIndexResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public Object glueEncryptionException;
+
     public CreatePartitionIndexResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public Object internalServiceException;
+
     public CreatePartitionIndexResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public Object invalidInputException;
+
     public CreatePartitionIndexResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreatePartitionIndexResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class CreatePartitionIndexResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreatePartitionIndexResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreatePartitionIndexResponse {
     
     
     public Integer statusCode;
+
     public CreatePartitionIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreatePartitionIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePartitionIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePartitionIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromeFromUrlGETSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=apikey")
     public String queryApiKey;
+
     public ChromeFromUrlGETSecurity withQueryApiKey(String queryApiKey) {
         this.queryApiKey = queryApiKey;
         return this;
     }
     
+    public ChromeFromUrlGETSecurity(@JsonProperty("QueryApiKey") String queryApiKey) {
+        this.queryApiKey = queryApiKey;
+  }
 }

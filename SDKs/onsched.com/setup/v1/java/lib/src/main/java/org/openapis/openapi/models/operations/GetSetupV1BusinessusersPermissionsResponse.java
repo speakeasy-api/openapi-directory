@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1BusinessusersPermissionsResponse {
@@ -12,6 +13,7 @@ public class GetSetupV1BusinessusersPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessPermissionListViewModel businessPermissionListViewModel;
+
     public GetSetupV1BusinessusersPermissionsResponse withBusinessPermissionListViewModel(org.openapis.openapi.models.shared.BusinessPermissionListViewModel businessPermissionListViewModel) {
         this.businessPermissionListViewModel = businessPermissionListViewModel;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1BusinessusersPermissionsResponse {
     
     
     public String contentType;
+
     public GetSetupV1BusinessusersPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1BusinessusersPermissionsResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1BusinessusersPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1BusinessusersPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1BusinessusersPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1BusinessusersPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

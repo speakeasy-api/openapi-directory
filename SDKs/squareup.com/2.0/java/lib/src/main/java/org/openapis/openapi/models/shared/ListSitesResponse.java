@@ -18,6 +18,7 @@ public class ListSitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListSitesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class ListSitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public Site[] sites;
+
     public ListSitesResponse withSites(Site[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public ListSitesResponse(){}
 }

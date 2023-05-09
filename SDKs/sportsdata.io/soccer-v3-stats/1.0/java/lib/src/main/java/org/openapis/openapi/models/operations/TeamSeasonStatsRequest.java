@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamSeasonStatsRequest {
@@ -12,6 +13,7 @@ public class TeamSeasonStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public TeamSeasonStatsFormatEnum format;
+
     public TeamSeasonStatsRequest withFormat(TeamSeasonStatsFormatEnum format) {
         this.format = format;
         return this;
@@ -23,9 +25,14 @@ public class TeamSeasonStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roundid")
     public String roundid;
+
     public TeamSeasonStatsRequest withRoundid(String roundid) {
         this.roundid = roundid;
         return this;
     }
     
+    public TeamSeasonStatsRequest(@JsonProperty("format") TeamSeasonStatsFormatEnum format, @JsonProperty("roundid") String roundid) {
+        this.format = format;
+        this.roundid = roundid;
+  }
 }

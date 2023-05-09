@@ -15,6 +15,7 @@ public class HPOObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public HPOObjective withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,6 +24,7 @@ public class HPOObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricRegex")
     public String metricRegex;
+
     public HPOObjective withMetricRegex(String metricRegex) {
         this.metricRegex = metricRegex;
         return this;
@@ -31,9 +33,11 @@ public class HPOObjective {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public HPOObjective withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HPOObjective(){}
 }

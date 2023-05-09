@@ -18,6 +18,7 @@ public class AddressListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AddressListWarningCodeEnum code;
+
     public AddressListWarning withCode(AddressListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class AddressListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AddressListWarningData[] data;
+
     public AddressListWarning withData(AddressListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class AddressListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AddressListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AddressListWarning(){}
 }

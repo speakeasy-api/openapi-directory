@@ -18,6 +18,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Endpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public Endpoint withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -40,6 +42,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Endpoint withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Endpoint withNetwork(String network) {
         this.network = network;
         return this;
@@ -62,6 +66,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public Endpoint withPort(Integer port) {
         this.port = port;
         return this;
@@ -73,9 +78,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Endpoint withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public Endpoint(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcsResultVpcs {
     
     public String cidrBlock;
+
     public DescribeVpcsResultVpcs withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public DescribeVpcsResultVpcsCidrBlockAssociationSet[] cidrBlockAssociationSet;
+
     public DescribeVpcsResultVpcs withCidrBlockAssociationSet(DescribeVpcsResultVpcsCidrBlockAssociationSet[] cidrBlockAssociationSet) {
         this.cidrBlockAssociationSet = cidrBlockAssociationSet;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public String dhcpOptionsId;
+
     public DescribeVpcsResultVpcs withDhcpOptionsId(String dhcpOptionsId) {
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public DescribeVpcsResultVpcsInstanceTenancyEnum instanceTenancy;
+
     public DescribeVpcsResultVpcs withInstanceTenancy(DescribeVpcsResultVpcsInstanceTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public DescribeVpcsResultVpcsIpv6CidrBlockAssociationSet[] ipv6CidrBlockAssociationSet;
+
     public DescribeVpcsResultVpcs withIpv6CidrBlockAssociationSet(DescribeVpcsResultVpcsIpv6CidrBlockAssociationSet[] ipv6CidrBlockAssociationSet) {
         this.ipv6CidrBlockAssociationSet = ipv6CidrBlockAssociationSet;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public Boolean isDefault;
+
     public DescribeVpcsResultVpcs withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public String ownerId;
+
     public DescribeVpcsResultVpcs withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public DescribeVpcsResultVpcsStateEnum state;
+
     public DescribeVpcsResultVpcs withState(DescribeVpcsResultVpcsStateEnum state) {
         this.state = state;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVpcsResultVpcs {
     
     
     public DescribeVpcsResultVpcsTags[] tags;
+
     public DescribeVpcsResultVpcs withTags(DescribeVpcsResultVpcsTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class DescribeVpcsResultVpcs {
     
     
     public String vpcId;
+
     public DescribeVpcsResultVpcs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeVpcsResultVpcs(){}
 }

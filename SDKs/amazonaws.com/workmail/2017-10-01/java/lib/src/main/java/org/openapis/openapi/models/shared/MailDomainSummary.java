@@ -15,6 +15,7 @@ public class MailDomainSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultDomain")
     public Boolean defaultDomain;
+
     public MailDomainSummary withDefaultDomain(Boolean defaultDomain) {
         this.defaultDomain = defaultDomain;
         return this;
@@ -23,9 +24,11 @@ public class MailDomainSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public MailDomainSummary withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public MailDomainSummary(){}
 }

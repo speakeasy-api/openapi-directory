@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLensShareRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
     public String lensAlias;
+
     public CreateLensShareRequest withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -16,6 +18,7 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateLensShareRequestBody requestBody;
+
     public CreateLensShareRequest withRequestBody(CreateLensShareRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateLensShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -30,6 +34,7 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateLensShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -37,6 +42,7 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateLensShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -44,6 +50,7 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateLensShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -51,6 +58,7 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateLensShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -58,6 +66,7 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateLensShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -65,9 +74,14 @@ public class CreateLensShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateLensShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public CreateLensShareRequest(@JsonProperty("LensAlias") String lensAlias, @JsonProperty("RequestBody") CreateLensShareRequestBody requestBody) {
+        this.lensAlias = lensAlias;
+        this.requestBody = requestBody;
+  }
 }

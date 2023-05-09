@@ -15,9 +15,11 @@ public class AwsElasticsearchDomainNodeToNodeEncryptionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsElasticsearchDomainNodeToNodeEncryptionOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AwsElasticsearchDomainNodeToNodeEncryptionOptions(){}
 }

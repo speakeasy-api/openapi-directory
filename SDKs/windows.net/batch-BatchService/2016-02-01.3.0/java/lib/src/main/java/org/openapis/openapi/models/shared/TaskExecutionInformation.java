@@ -25,6 +25,7 @@ public class TaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public TaskExecutionInformation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -36,6 +37,7 @@ public class TaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public TaskExecutionInformation withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -49,6 +51,7 @@ public class TaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRequeueTime")
     public OffsetDateTime lastRequeueTime;
+
     public TaskExecutionInformation withLastRequeueTime(OffsetDateTime lastRequeueTime) {
         this.lastRequeueTime = lastRequeueTime;
         return this;
@@ -62,6 +65,7 @@ public class TaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRetryTime")
     public OffsetDateTime lastRetryTime;
+
     public TaskExecutionInformation withLastRetryTime(OffsetDateTime lastRetryTime) {
         this.lastRetryTime = lastRetryTime;
         return this;
@@ -72,6 +76,7 @@ public class TaskExecutionInformation {
      */
     @JsonProperty("requeueCount")
     public Integer requeueCount;
+
     public TaskExecutionInformation withRequeueCount(Integer requeueCount) {
         this.requeueCount = requeueCount;
         return this;
@@ -82,6 +87,7 @@ public class TaskExecutionInformation {
      */
     @JsonProperty("retryCount")
     public Integer retryCount;
+
     public TaskExecutionInformation withRetryCount(Integer retryCount) {
         this.retryCount = retryCount;
         return this;
@@ -93,6 +99,7 @@ public class TaskExecutionInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingError")
     public TaskSchedulingError schedulingError;
+
     public TaskExecutionInformation withSchedulingError(TaskSchedulingError schedulingError) {
         this.schedulingError = schedulingError;
         return this;
@@ -106,9 +113,14 @@ public class TaskExecutionInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public TaskExecutionInformation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TaskExecutionInformation(@JsonProperty("requeueCount") Integer requeueCount, @JsonProperty("retryCount") Integer retryCount) {
+        this.requeueCount = requeueCount;
+        this.retryCount = retryCount;
+  }
 }

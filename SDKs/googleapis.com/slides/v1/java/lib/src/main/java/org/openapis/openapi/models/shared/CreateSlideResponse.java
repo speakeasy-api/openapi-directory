@@ -18,9 +18,11 @@ public class CreateSlideResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateSlideResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public CreateSlideResponse(){}
 }

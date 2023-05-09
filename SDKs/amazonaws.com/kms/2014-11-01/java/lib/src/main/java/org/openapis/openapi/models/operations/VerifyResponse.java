@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifyResponse {
     
     public String contentType;
+
     public VerifyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VerifyResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public VerifyResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class VerifyResponse {
      */
     
     public Object disabledException;
+
     public VerifyResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class VerifyResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public VerifyResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -49,6 +54,7 @@ public class VerifyResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public VerifyResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -59,6 +65,7 @@ public class VerifyResponse {
      */
     
     public Object kmsInternalException;
+
     public VerifyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -69,6 +76,7 @@ public class VerifyResponse {
      */
     
     public Object kmsInvalidSignatureException;
+
     public VerifyResponse withKMSInvalidSignatureException(Object kmsInvalidSignatureException) {
         this.kmsInvalidSignatureException = kmsInvalidSignatureException;
         return this;
@@ -79,6 +87,7 @@ public class VerifyResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public VerifyResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class VerifyResponse {
      */
     
     public Object keyUnavailableException;
+
     public VerifyResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class VerifyResponse {
      */
     
     public Object notFoundException;
+
     public VerifyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class VerifyResponse {
     
     
     public Integer statusCode;
+
     public VerifyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class VerifyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class VerifyResponse {
      */
     
     public org.openapis.openapi.models.shared.VerifyResponse verifyResponse;
+
     public VerifyResponse withVerifyResponse(org.openapis.openapi.models.shared.VerifyResponse verifyResponse) {
         this.verifyResponse = verifyResponse;
         return this;
     }
     
+    public VerifyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

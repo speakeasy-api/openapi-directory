@@ -20,6 +20,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcmCertificateArn")
     public String acmCertificateArn;
+
     public DescribeDomainResponse withAcmCertificateArn(String acmCertificateArn) {
         this.acmCertificateArn = acmCertificateArn;
         return this;
@@ -30,6 +31,7 @@ public class DescribeDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public DescribeDomainResponse withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeDomainResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public DescribeDomainResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -54,9 +58,11 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainStatus")
     public DomainStatusEnum domainStatus;
+
     public DescribeDomainResponse withDomainStatus(DomainStatusEnum domainStatus) {
         this.domainStatus = domainStatus;
         return this;
     }
     
+    public DescribeDomainResponse(){}
 }

@@ -18,6 +18,7 @@ public class ParameterTextV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent_facing_text")
     public String agentFacingText;
+
     public ParameterTextV1 withAgentFacingText(String agentFacingText) {
         this.agentFacingText = agentFacingText;
         return this;
@@ -29,9 +30,11 @@ public class ParameterTextV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicant_facing_text")
     public String applicantFacingText;
+
     public ParameterTextV1 withApplicantFacingText(String applicantFacingText) {
         this.applicantFacingText = applicantFacingText;
         return this;
     }
     
+    public ParameterTextV1(){}
 }

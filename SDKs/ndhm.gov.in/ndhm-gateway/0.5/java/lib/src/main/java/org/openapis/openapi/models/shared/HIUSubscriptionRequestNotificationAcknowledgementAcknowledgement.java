@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIUSubscriptionRequestNotificationAcknowledgementAcknowledgement {
     @JsonProperty("status")
     public HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum status;
+
     public HIUSubscriptionRequestNotificationAcknowledgementAcknowledgement withStatus(HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum status) {
         this.status = status;
         return this;
@@ -16,9 +17,14 @@ public class HIUSubscriptionRequestNotificationAcknowledgementAcknowledgement {
     
     @JsonProperty("subscriptionRequestId")
     public String subscriptionRequestId;
+
     public HIUSubscriptionRequestNotificationAcknowledgementAcknowledgement withSubscriptionRequestId(String subscriptionRequestId) {
         this.subscriptionRequestId = subscriptionRequestId;
         return this;
     }
     
+    public HIUSubscriptionRequestNotificationAcknowledgementAcknowledgement(@JsonProperty("status") HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum status, @JsonProperty("subscriptionRequestId") String subscriptionRequestId) {
+        this.status = status;
+        this.subscriptionRequestId = subscriptionRequestId;
+  }
 }

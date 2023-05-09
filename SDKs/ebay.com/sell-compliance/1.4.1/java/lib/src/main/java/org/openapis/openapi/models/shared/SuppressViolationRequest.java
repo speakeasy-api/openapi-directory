@@ -18,6 +18,7 @@ public class SuppressViolationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public SuppressViolationRequest withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -29,9 +30,11 @@ public class SuppressViolationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingId")
     public String listingId;
+
     public SuppressViolationRequest withListingId(String listingId) {
         this.listingId = listingId;
         return this;
     }
     
+    public SuppressViolationRequest(){}
 }

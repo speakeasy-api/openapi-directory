@@ -15,9 +15,11 @@ public class BetSlipRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legs")
     public Leg[] legs;
+
     public BetSlipRequest withLegs(Leg[] legs) {
         this.legs = legs;
         return this;
     }
     
+    public BetSlipRequest(){}
 }

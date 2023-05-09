@@ -15,9 +15,11 @@ public class DeleteByteMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteByteMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public DeleteByteMatchSetResponse(){}
 }

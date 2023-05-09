@@ -12,6 +12,7 @@ public class NewVsReturning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public NewVsReturning withDate(String date) {
         this.date = date;
         return this;
@@ -20,6 +21,7 @@ public class NewVsReturning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new")
     public Long new_;
+
     public NewVsReturning withNew(Long new_) {
         this.new_ = new_;
         return this;
@@ -28,9 +30,11 @@ public class NewVsReturning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returning")
     public Long returning;
+
     public NewVsReturning withReturning(Long returning) {
         this.returning = returning;
         return this;
     }
     
+    public NewVsReturning(){}
 }

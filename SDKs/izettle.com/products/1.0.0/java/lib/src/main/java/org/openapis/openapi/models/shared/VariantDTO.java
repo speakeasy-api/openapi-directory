@@ -12,6 +12,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcode")
     public String barcode;
+
     public VariantDTO withBarcode(String barcode) {
         this.barcode = barcode;
         return this;
@@ -20,6 +21,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costPrice")
     public Price costPrice;
+
     public VariantDTO withCostPrice(Price costPrice) {
         this.costPrice = costPrice;
         return this;
@@ -28,6 +30,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VariantDTO withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VariantDTO withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public VariantOption[] options;
+
     public VariantDTO withOptions(VariantOption[] options) {
         this.options = options;
         return this;
@@ -52,6 +57,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentation")
     public PresentationDTO presentation;
+
     public VariantDTO withPresentation(PresentationDTO presentation) {
         this.presentation = presentation;
         return this;
@@ -60,6 +66,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public VariantDTO withPrice(Price price) {
         this.price = price;
         return this;
@@ -68,6 +75,7 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public VariantDTO withSku(String sku) {
         this.sku = sku;
         return this;
@@ -75,6 +83,7 @@ public class VariantDTO {
     
     @JsonProperty("uuid")
     public String uuid;
+
     public VariantDTO withUuid(String uuid) {
         this.uuid = uuid;
         return this;
@@ -83,9 +92,13 @@ public class VariantDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatPercentage")
     public Double vatPercentage;
+
     public VariantDTO withVatPercentage(Double vatPercentage) {
         this.vatPercentage = vatPercentage;
         return this;
     }
     
+    public VariantDTO(@JsonProperty("uuid") String uuid) {
+        this.uuid = uuid;
+  }
 }

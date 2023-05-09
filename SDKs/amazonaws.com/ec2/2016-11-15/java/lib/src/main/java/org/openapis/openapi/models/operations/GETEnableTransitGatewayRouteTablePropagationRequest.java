@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableTransitGatewayRouteTablePropagationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableTransitGatewayRouteTablePropagationActionEnum action;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withAction(GETEnableTransitGatewayRouteTablePropagationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
     public String transitGatewayAttachmentId;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -39,6 +43,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayRouteTableAnnouncementId")
     public String transitGatewayRouteTableAnnouncementId;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -49,6 +54,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayRouteTableId")
     public String transitGatewayRouteTableId;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
@@ -56,6 +62,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableTransitGatewayRouteTablePropagationVersionEnum version;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withVersion(GETEnableTransitGatewayRouteTablePropagationVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETEnableTransitGatewayRouteTablePropagationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableTransitGatewayRouteTablePropagationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableTransitGatewayRouteTablePropagationRequest(@JsonProperty("Action") GETEnableTransitGatewayRouteTablePropagationActionEnum action, @JsonProperty("TransitGatewayRouteTableId") String transitGatewayRouteTableId, @JsonProperty("Version") GETEnableTransitGatewayRouteTablePropagationVersionEnum version) {
+        this.action = action;
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+        this.version = version;
+  }
 }

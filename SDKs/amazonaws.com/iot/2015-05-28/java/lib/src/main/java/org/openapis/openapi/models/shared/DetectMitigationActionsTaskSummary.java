@@ -20,6 +20,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionsDefinition")
     public MitigationAction[] actionsDefinition;
+
     public DetectMitigationActionsTaskSummary withActionsDefinition(MitigationAction[] actionsDefinition) {
         this.actionsDefinition = actionsDefinition;
         return this;
@@ -28,6 +29,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyActiveViolationsIncluded")
     public Boolean onlyActiveViolationsIncluded;
+
     public DetectMitigationActionsTaskSummary withOnlyActiveViolationsIncluded(Boolean onlyActiveViolationsIncluded) {
         this.onlyActiveViolationsIncluded = onlyActiveViolationsIncluded;
         return this;
@@ -36,6 +38,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppressedAlertsIncluded")
     public Boolean suppressedAlertsIncluded;
+
     public DetectMitigationActionsTaskSummary withSuppressedAlertsIncluded(Boolean suppressedAlertsIncluded) {
         this.suppressedAlertsIncluded = suppressedAlertsIncluded;
         return this;
@@ -44,6 +47,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public DetectMitigationActionsTaskTarget target;
+
     public DetectMitigationActionsTaskSummary withTarget(DetectMitigationActionsTaskTarget target) {
         this.target = target;
         return this;
@@ -54,6 +58,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("taskEndTime")
     public OffsetDateTime taskEndTime;
+
     public DetectMitigationActionsTaskSummary withTaskEndTime(OffsetDateTime taskEndTime) {
         this.taskEndTime = taskEndTime;
         return this;
@@ -62,6 +67,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public DetectMitigationActionsTaskSummary withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -72,6 +78,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("taskStartTime")
     public OffsetDateTime taskStartTime;
+
     public DetectMitigationActionsTaskSummary withTaskStartTime(OffsetDateTime taskStartTime) {
         this.taskStartTime = taskStartTime;
         return this;
@@ -80,6 +87,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatistics")
     public DetectMitigationActionsTaskStatistics taskStatistics;
+
     public DetectMitigationActionsTaskSummary withTaskStatistics(DetectMitigationActionsTaskStatistics taskStatistics) {
         this.taskStatistics = taskStatistics;
         return this;
@@ -88,6 +96,7 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskStatus")
     public DetectMitigationActionsTaskStatusEnum taskStatus;
+
     public DetectMitigationActionsTaskSummary withTaskStatus(DetectMitigationActionsTaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
@@ -96,9 +105,11 @@ public class DetectMitigationActionsTaskSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationEventOccurrenceRange")
     public ViolationEventOccurrenceRange violationEventOccurrenceRange;
+
     public DetectMitigationActionsTaskSummary withViolationEventOccurrenceRange(ViolationEventOccurrenceRange violationEventOccurrenceRange) {
         this.violationEventOccurrenceRange = violationEventOccurrenceRange;
         return this;
     }
     
+    public DetectMitigationActionsTaskSummary(){}
 }

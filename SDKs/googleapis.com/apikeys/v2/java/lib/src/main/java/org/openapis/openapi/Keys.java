@@ -58,11 +58,9 @@ public class Keys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApikeysKeysLookupKeyResponse res = new org.openapis.openapi.models.operations.ApikeysKeysLookupKeyResponse() {{
+        org.openapis.openapi.models.operations.ApikeysKeysLookupKeyResponse res = new org.openapis.openapi.models.operations.ApikeysKeysLookupKeyResponse(contentType, httpRes.statusCode()) {{
             v2LookupKeyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

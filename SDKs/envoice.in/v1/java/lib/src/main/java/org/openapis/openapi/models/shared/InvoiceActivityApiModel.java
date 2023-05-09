@@ -15,6 +15,7 @@ public class InvoiceActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public InvoiceActivityApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class InvoiceActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceNumber")
     public String invoiceNumber;
+
     public InvoiceActivityApiModel withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -37,6 +39,7 @@ public class InvoiceActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public InvoiceActivityApiModel withLink(String link) {
         this.link = link;
         return this;
@@ -48,6 +51,7 @@ public class InvoiceActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InvoiceActivityApiModel withMessage(String message) {
         this.message = message;
         return this;
@@ -59,9 +63,11 @@ public class InvoiceActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InvoiceActivityApiModelTypeEnum type;
+
     public InvoiceActivityApiModel withType(InvoiceActivityApiModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InvoiceActivityApiModel(){}
 }

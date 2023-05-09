@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFacetsFacetsRequest {
@@ -29,6 +30,7 @@ public class GetFacetsFacetsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=facets")
     public String facets;
+
     public GetFacetsFacetsRequest withFacets(String facets) {
         this.facets = facets;
         return this;
@@ -39,6 +41,7 @@ public class GetFacetsFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hideUnavailableItems")
     public Boolean hideUnavailableItems;
+
     public GetFacetsFacetsRequest withHideUnavailableItems(Boolean hideUnavailableItems) {
         this.hideUnavailableItems = hideUnavailableItems;
         return this;
@@ -49,6 +52,7 @@ public class GetFacetsFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetFacetsFacetsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -59,9 +63,13 @@ public class GetFacetsFacetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetFacetsFacetsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetFacetsFacetsRequest(@JsonProperty("facets") String facets) {
+        this.facets = facets;
+  }
 }

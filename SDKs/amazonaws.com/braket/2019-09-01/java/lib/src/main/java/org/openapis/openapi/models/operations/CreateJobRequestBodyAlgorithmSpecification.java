@@ -15,6 +15,7 @@ public class CreateJobRequestBodyAlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public org.openapis.openapi.models.shared.ContainerImage containerImage;
+
     public CreateJobRequestBodyAlgorithmSpecification withContainerImage(org.openapis.openapi.models.shared.ContainerImage containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -23,9 +24,11 @@ public class CreateJobRequestBodyAlgorithmSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptModeConfig")
     public org.openapis.openapi.models.shared.ScriptModeConfig scriptModeConfig;
+
     public CreateJobRequestBodyAlgorithmSpecification withScriptModeConfig(org.openapis.openapi.models.shared.ScriptModeConfig scriptModeConfig) {
         this.scriptModeConfig = scriptModeConfig;
         return this;
     }
     
+    public CreateJobRequestBodyAlgorithmSpecification(){}
 }

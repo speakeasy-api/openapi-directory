@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableOrganizationAdminAccountResponse {
     
     public String contentType;
+
     public EnableOrganizationAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public java.util.Map<String, Object> enableOrganizationAdminAccountResponse;
+
     public EnableOrganizationAdminAccountResponse withEnableOrganizationAdminAccountResponse(java.util.Map<String, Object> enableOrganizationAdminAccountResponse) {
         this.enableOrganizationAdminAccountResponse = enableOrganizationAdminAccountResponse;
         return this;
@@ -29,6 +32,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object internalException;
+
     public EnableOrganizationAdminAccountResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object invalidAccessException;
+
     public EnableOrganizationAdminAccountResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object invalidInputException;
+
     public EnableOrganizationAdminAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class EnableOrganizationAdminAccountResponse {
      */
     
     public Object limitExceededException;
+
     public EnableOrganizationAdminAccountResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class EnableOrganizationAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public EnableOrganizationAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class EnableOrganizationAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableOrganizationAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnableOrganizationAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

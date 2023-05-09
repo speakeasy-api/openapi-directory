@@ -18,6 +18,7 @@ public class WebhookResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public WebhookResource withResource(String resource) {
         this.resource = resource;
         return this;
@@ -29,9 +30,11 @@ public class WebhookResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedEvents")
     public String[] supportedEvents;
+
     public WebhookResource withSupportedEvents(String[] supportedEvents) {
         this.supportedEvents = supportedEvents;
         return this;
     }
     
+    public WebhookResource(){}
 }

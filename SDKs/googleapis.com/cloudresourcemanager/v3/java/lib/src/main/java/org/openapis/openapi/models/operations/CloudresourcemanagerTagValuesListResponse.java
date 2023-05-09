@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudresourcemanagerTagValuesListResponse {
     
     public String contentType;
+
     public CloudresourcemanagerTagValuesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudresourcemanagerTagValuesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagValuesResponse listTagValuesResponse;
+
     public CloudresourcemanagerTagValuesListResponse withListTagValuesResponse(org.openapis.openapi.models.shared.ListTagValuesResponse listTagValuesResponse) {
         this.listTagValuesResponse = listTagValuesResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudresourcemanagerTagValuesListResponse {
     
     
     public Integer statusCode;
+
     public CloudresourcemanagerTagValuesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudresourcemanagerTagValuesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudresourcemanagerTagValuesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudresourcemanagerTagValuesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

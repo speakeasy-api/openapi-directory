@@ -15,9 +15,13 @@ public class CertificateRevoke {
      */
     @JsonProperty("reason")
     public CertificateRevokeReasonEnum reason;
+
     public CertificateRevoke withReason(CertificateRevokeReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public CertificateRevoke(@JsonProperty("reason") CertificateRevokeReasonEnum reason) {
+        this.reason = reason;
+  }
 }

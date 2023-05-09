@@ -15,9 +15,11 @@ public class GooglePrivacyDlpV2ImageTransformations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transforms")
     public GooglePrivacyDlpV2ImageTransformation[] transforms;
+
     public GooglePrivacyDlpV2ImageTransformations withTransforms(GooglePrivacyDlpV2ImageTransformation[] transforms) {
         this.transforms = transforms;
         return this;
     }
     
+    public GooglePrivacyDlpV2ImageTransformations(){}
 }

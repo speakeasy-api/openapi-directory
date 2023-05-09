@@ -15,6 +15,7 @@ public class PrincipalPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public PermissionEnum[] permissions;
+
     public PrincipalPermissions withPermissions(PermissionEnum[] permissions) {
         this.permissions = permissions;
         return this;
@@ -23,9 +24,11 @@ public class PrincipalPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Principal")
     public DataLakePrincipal principal;
+
     public PrincipalPermissions withPrincipal(DataLakePrincipal principal) {
         this.principal = principal;
         return this;
     }
     
+    public PrincipalPermissions(){}
 }

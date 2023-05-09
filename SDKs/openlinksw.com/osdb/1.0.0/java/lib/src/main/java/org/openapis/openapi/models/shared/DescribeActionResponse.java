@@ -15,6 +15,7 @@ public class DescribeActionResponse {
      */
     @JsonProperty("api")
     public String api;
+
     public DescribeActionResponse withApi(String api) {
         this.api = api;
         return this;
@@ -25,6 +26,7 @@ public class DescribeActionResponse {
      */
     @JsonProperty("method")
     public String method;
+
     public DescribeActionResponse withMethod(String method) {
         this.method = method;
         return this;
@@ -32,6 +34,7 @@ public class DescribeActionResponse {
     
     @JsonProperty("response")
     public ActionDescription response;
+
     public DescribeActionResponse withResponse(ActionDescription response) {
         this.response = response;
         return this;
@@ -39,9 +42,16 @@ public class DescribeActionResponse {
     
     @JsonProperty("status")
     public DescribeActionResponseStatusEnum status;
+
     public DescribeActionResponse withStatus(DescribeActionResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeActionResponse(@JsonProperty("api") String api, @JsonProperty("method") String method, @JsonProperty("response") ActionDescription response, @JsonProperty("status") DescribeActionResponseStatusEnum status) {
+        this.api = api;
+        this.method = method;
+        this.response = response;
+        this.status = status;
+  }
 }

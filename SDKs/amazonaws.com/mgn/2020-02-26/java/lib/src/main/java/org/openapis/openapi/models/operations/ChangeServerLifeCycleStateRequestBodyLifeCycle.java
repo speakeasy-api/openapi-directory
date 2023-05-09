@@ -15,9 +15,11 @@ public class ChangeServerLifeCycleStateRequestBodyLifeCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.ChangeServerLifeCycleStateSourceServerLifecycleStateEnum state;
+
     public ChangeServerLifeCycleStateRequestBodyLifeCycle withState(org.openapis.openapi.models.shared.ChangeServerLifeCycleStateSourceServerLifecycleStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ChangeServerLifeCycleStateRequestBodyLifeCycle(){}
 }

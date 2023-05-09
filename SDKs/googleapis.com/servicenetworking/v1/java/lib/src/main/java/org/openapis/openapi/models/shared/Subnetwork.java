@@ -18,6 +18,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public Subnetwork withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -29,6 +30,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Subnetwork withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Subnetwork withNetwork(String network) {
         this.network = network;
         return this;
@@ -51,6 +54,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outsideAllocation")
     public Boolean outsideAllocation;
+
     public Subnetwork withOutsideAllocation(Boolean outsideAllocation) {
         this.outsideAllocation = outsideAllocation;
         return this;
@@ -62,6 +66,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Subnetwork withRegion(String region) {
         this.region = region;
         return this;
@@ -73,9 +78,11 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryIpRanges")
     public SecondaryIpRange[] secondaryIpRanges;
+
     public Subnetwork withSecondaryIpRanges(SecondaryIpRange[] secondaryIpRanges) {
         this.secondaryIpRanges = secondaryIpRanges;
         return this;
     }
     
+    public Subnetwork(){}
 }

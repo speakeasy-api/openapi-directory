@@ -15,6 +15,7 @@ public class BeezUPCommonChannelBasicInfo {
      */
     @JsonProperty("channelId")
     public String channelId;
+
     public BeezUPCommonChannelBasicInfo withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -25,6 +26,7 @@ public class BeezUPCommonChannelBasicInfo {
      */
     @JsonProperty("channelImageUrl")
     public String channelImageUrl;
+
     public BeezUPCommonChannelBasicInfo withChannelImageUrl(String channelImageUrl) {
         this.channelImageUrl = channelImageUrl;
         return this;
@@ -35,9 +37,15 @@ public class BeezUPCommonChannelBasicInfo {
      */
     @JsonProperty("channelName")
     public String channelName;
+
     public BeezUPCommonChannelBasicInfo withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
     }
     
+    public BeezUPCommonChannelBasicInfo(@JsonProperty("channelId") String channelId, @JsonProperty("channelImageUrl") String channelImageUrl, @JsonProperty("channelName") String channelName) {
+        this.channelId = channelId;
+        this.channelImageUrl = channelImageUrl;
+        this.channelName = channelName;
+  }
 }

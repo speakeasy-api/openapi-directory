@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListNodegroupsResponse {
@@ -12,6 +13,7 @@ public class ListNodegroupsResponse {
      */
     
     public Object clientException;
+
     public ListNodegroupsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListNodegroupsResponse {
     
     
     public String contentType;
+
     public ListNodegroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListNodegroupsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListNodegroupsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListNodegroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListNodegroupsResponse listNodegroupsResponse;
+
     public ListNodegroupsResponse withListNodegroupsResponse(org.openapis.openapi.models.shared.ListNodegroupsResponse listNodegroupsResponse) {
         this.listNodegroupsResponse = listNodegroupsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListNodegroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListNodegroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListNodegroupsResponse {
     
     
     public Integer statusCode;
+
     public ListNodegroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListNodegroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListNodegroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListNodegroupsResponse {
      */
     
     public Object serverException;
+
     public ListNodegroupsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -83,9 +92,14 @@ public class ListNodegroupsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListNodegroupsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListNodegroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

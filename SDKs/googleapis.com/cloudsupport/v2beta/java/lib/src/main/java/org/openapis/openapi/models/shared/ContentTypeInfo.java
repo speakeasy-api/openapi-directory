@@ -18,6 +18,7 @@ public class ContentTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestGuess")
     public String bestGuess;
+
     public ContentTypeInfo withBestGuess(String bestGuess) {
         this.bestGuess = bestGuess;
         return this;
@@ -29,6 +30,7 @@ public class ContentTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromBytes")
     public String fromBytes;
+
     public ContentTypeInfo withFromBytes(String fromBytes) {
         this.fromBytes = fromBytes;
         return this;
@@ -40,6 +42,7 @@ public class ContentTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromFileName")
     public String fromFileName;
+
     public ContentTypeInfo withFromFileName(String fromFileName) {
         this.fromFileName = fromFileName;
         return this;
@@ -51,6 +54,7 @@ public class ContentTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromHeader")
     public String fromHeader;
+
     public ContentTypeInfo withFromHeader(String fromHeader) {
         this.fromHeader = fromHeader;
         return this;
@@ -62,9 +66,11 @@ public class ContentTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromUrlPath")
     public String fromUrlPath;
+
     public ContentTypeInfo withFromUrlPath(String fromUrlPath) {
         this.fromUrlPath = fromUrlPath;
         return this;
     }
     
+    public ContentTypeInfo(){}
 }

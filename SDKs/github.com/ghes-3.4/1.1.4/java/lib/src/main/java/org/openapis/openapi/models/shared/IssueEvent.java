@@ -22,6 +22,7 @@ public class IssueEvent {
      */
     @JsonProperty("actor")
     public NullableSimpleUser actor;
+
     public IssueEvent withActor(NullableSimpleUser actor) {
         this.actor = actor;
         return this;
@@ -33,6 +34,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignee")
     public NullableSimpleUser assignee;
+
     public IssueEvent withAssignee(NullableSimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -44,6 +46,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigner")
     public NullableSimpleUser assigner;
+
     public IssueEvent withAssigner(NullableSimpleUser assigner) {
         this.assigner = assigner;
         return this;
@@ -55,6 +58,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public IssueEvent withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -62,6 +66,7 @@ public class IssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public IssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -69,6 +74,7 @@ public class IssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public IssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -78,6 +84,7 @@ public class IssueEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public IssueEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -86,6 +93,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissed_review")
     public IssueEventDismissedReview dismissedReview;
+
     public IssueEvent withDismissedReview(IssueEventDismissedReview dismissedReview) {
         this.dismissedReview = dismissedReview;
         return this;
@@ -93,6 +101,7 @@ public class IssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public IssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -100,6 +109,7 @@ public class IssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public IssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -111,6 +121,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public NullableIssue issue;
+
     public IssueEvent withIssue(NullableIssue issue) {
         this.issue = issue;
         return this;
@@ -122,6 +133,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public IssueEventLabel label;
+
     public IssueEvent withLabel(IssueEventLabel label) {
         this.label = label;
         return this;
@@ -130,6 +142,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lock_reason")
     public String lockReason;
+
     public IssueEvent withLockReason(String lockReason) {
         this.lockReason = lockReason;
         return this;
@@ -141,6 +154,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("milestone")
     public IssueEventMilestone milestone;
+
     public IssueEvent withMilestone(IssueEventMilestone milestone) {
         this.milestone = milestone;
         return this;
@@ -148,6 +162,7 @@ public class IssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public IssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -159,6 +174,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public IssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -170,6 +186,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_card")
     public IssueEventProjectCard projectCard;
+
     public IssueEvent withProjectCard(IssueEventProjectCard projectCard) {
         this.projectCard = projectCard;
         return this;
@@ -181,6 +198,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rename")
     public IssueEventRename rename;
+
     public IssueEvent withRename(IssueEventRename rename) {
         this.rename = rename;
         return this;
@@ -192,6 +210,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_reviewer")
     public NullableSimpleUser requestedReviewer;
+
     public IssueEvent withRequestedReviewer(NullableSimpleUser requestedReviewer) {
         this.requestedReviewer = requestedReviewer;
         return this;
@@ -203,6 +222,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_team")
     public Team requestedTeam;
+
     public IssueEvent withRequestedTeam(Team requestedTeam) {
         this.requestedTeam = requestedTeam;
         return this;
@@ -214,6 +234,7 @@ public class IssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("review_requester")
     public NullableSimpleUser reviewRequester;
+
     public IssueEvent withReviewRequester(NullableSimpleUser reviewRequester) {
         this.reviewRequester = reviewRequester;
         return this;
@@ -221,9 +242,20 @@ public class IssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public IssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public IssueEvent(@JsonProperty("actor") NullableSimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.url = url;
+  }
 }

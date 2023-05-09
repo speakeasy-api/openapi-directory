@@ -15,6 +15,7 @@ public class GenerateMacResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public GenerateMacResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -23,6 +24,7 @@ public class GenerateMacResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mac")
     public String mac;
+
     public GenerateMacResponse withMac(String mac) {
         this.mac = mac;
         return this;
@@ -31,9 +33,11 @@ public class GenerateMacResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MacAlgorithm")
     public MacAlgorithmSpecEnum macAlgorithm;
+
     public GenerateMacResponse withMacAlgorithm(MacAlgorithmSpecEnum macAlgorithm) {
         this.macAlgorithm = macAlgorithm;
         return this;
     }
     
+    public GenerateMacResponse(){}
 }

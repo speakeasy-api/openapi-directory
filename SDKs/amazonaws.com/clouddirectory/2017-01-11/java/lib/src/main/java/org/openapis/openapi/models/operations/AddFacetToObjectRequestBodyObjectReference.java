@@ -15,9 +15,11 @@ public class AddFacetToObjectRequestBodyObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public AddFacetToObjectRequestBodyObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public AddFacetToObjectRequestBodyObjectReference(){}
 }

@@ -13,6 +13,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=clickwrap_id")
     public Integer clickwrapId;
+
     public PatchBundlesIdRequestBody withClickwrapId(Integer clickwrapId) {
         this.clickwrapId = clickwrapId;
         return this;
@@ -23,6 +24,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=code")
     public String code;
+
     public PatchBundlesIdRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -33,6 +35,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PatchBundlesIdRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=dont_separate_submissions_by_folder")
     public Boolean dontSeparateSubmissionsByFolder;
+
     public PatchBundlesIdRequestBody withDontSeparateSubmissionsByFolder(Boolean dontSeparateSubmissionsByFolder) {
         this.dontSeparateSubmissionsByFolder = dontSeparateSubmissionsByFolder;
         return this;
@@ -53,6 +57,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expires_at")
     public OffsetDateTime expiresAt;
+
     public PatchBundlesIdRequestBody withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -63,6 +68,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=form_field_set_id")
     public Integer formFieldSetId;
+
     public PatchBundlesIdRequestBody withFormFieldSetId(Integer formFieldSetId) {
         this.formFieldSetId = formFieldSetId;
         return this;
@@ -73,6 +79,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=inbox_id")
     public Integer inboxId;
+
     public PatchBundlesIdRequestBody withInboxId(Integer inboxId) {
         this.inboxId = inboxId;
         return this;
@@ -83,6 +90,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=max_uses")
     public Integer maxUses;
+
     public PatchBundlesIdRequestBody withMaxUses(Integer maxUses) {
         this.maxUses = maxUses;
         return this;
@@ -93,6 +101,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=note")
     public String note;
+
     public PatchBundlesIdRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -103,6 +112,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public PatchBundlesIdRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -113,6 +123,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path_template")
     public String pathTemplate;
+
     public PatchBundlesIdRequestBody withPathTemplate(String pathTemplate) {
         this.pathTemplate = pathTemplate;
         return this;
@@ -123,6 +134,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=paths")
     public String[] paths;
+
     public PatchBundlesIdRequestBody withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -133,6 +145,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=permissions")
     public PatchBundlesIdRequestBodyPermissionsEnum permissions;
+
     public PatchBundlesIdRequestBody withPermissions(PatchBundlesIdRequestBodyPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -143,6 +156,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=preview_only")
     public Boolean previewOnly;
+
     public PatchBundlesIdRequestBody withPreviewOnly(Boolean previewOnly) {
         this.previewOnly = previewOnly;
         return this;
@@ -153,6 +167,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=require_registration")
     public Boolean requireRegistration;
+
     public PatchBundlesIdRequestBody withRequireRegistration(Boolean requireRegistration) {
         this.requireRegistration = requireRegistration;
         return this;
@@ -163,6 +178,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=require_share_recipient")
     public Boolean requireShareRecipient;
+
     public PatchBundlesIdRequestBody withRequireShareRecipient(Boolean requireShareRecipient) {
         this.requireShareRecipient = requireShareRecipient;
         return this;
@@ -173,6 +189,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=send_email_receipt_to_uploader")
     public Boolean sendEmailReceiptToUploader;
+
     public PatchBundlesIdRequestBody withSendEmailReceiptToUploader(Boolean sendEmailReceiptToUploader) {
         this.sendEmailReceiptToUploader = sendEmailReceiptToUploader;
         return this;
@@ -183,6 +200,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=skip_company")
     public Boolean skipCompany;
+
     public PatchBundlesIdRequestBody withSkipCompany(Boolean skipCompany) {
         this.skipCompany = skipCompany;
         return this;
@@ -193,6 +211,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=skip_email")
     public Boolean skipEmail;
+
     public PatchBundlesIdRequestBody withSkipEmail(Boolean skipEmail) {
         this.skipEmail = skipEmail;
         return this;
@@ -203,6 +222,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=skip_name")
     public Boolean skipName;
+
     public PatchBundlesIdRequestBody withSkipName(Boolean skipName) {
         this.skipName = skipName;
         return this;
@@ -213,6 +233,7 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=watermark_attachment_delete")
     public Boolean watermarkAttachmentDelete;
+
     public PatchBundlesIdRequestBody withWatermarkAttachmentDelete(Boolean watermarkAttachmentDelete) {
         this.watermarkAttachmentDelete = watermarkAttachmentDelete;
         return this;
@@ -223,9 +244,11 @@ public class PatchBundlesIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PatchBundlesIdRequestBodyWatermarkAttachmentFile watermarkAttachmentFile;
+
     public PatchBundlesIdRequestBody withWatermarkAttachmentFile(PatchBundlesIdRequestBodyWatermarkAttachmentFile watermarkAttachmentFile) {
         this.watermarkAttachmentFile = watermarkAttachmentFile;
         return this;
     }
     
+    public PatchBundlesIdRequestBody(){}
 }

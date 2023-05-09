@@ -148,4 +148,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GcpUserAccessBinding.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListGcpUserAccessBindingsResponse.java
+docs/sdk/README.md
+docs/accesspolicies/README.md
+docs/operations/README.md
+docs/organizations/README.md
 USAGE.md

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionAliasRequest {
     @JsonProperty("ConnectionString")
     public String connectionString;
+
     public CreateConnectionAliasRequest withConnectionString(String connectionString) {
         this.connectionString = connectionString;
         return this;
@@ -19,9 +20,13 @@ public class CreateConnectionAliasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateConnectionAliasRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateConnectionAliasRequest(@JsonProperty("ConnectionString") String connectionString) {
+        this.connectionString = connectionString;
+  }
 }

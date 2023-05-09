@@ -15,6 +15,7 @@ public class ImageProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public ImageProperty withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -26,9 +27,11 @@ public class ImageProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ImageProperty withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ImageProperty(){}
 }

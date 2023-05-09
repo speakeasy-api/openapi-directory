@@ -15,6 +15,7 @@ public class CreateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateTrackerRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateTrackerRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -37,6 +39,7 @@ public class CreateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionFiltering")
     public CreateTrackerRequestBodyPositionFilteringEnum positionFiltering;
+
     public CreateTrackerRequestBody withPositionFiltering(CreateTrackerRequestBodyPositionFilteringEnum positionFiltering) {
         this.positionFiltering = positionFiltering;
         return this;
@@ -48,6 +51,7 @@ public class CreateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public CreateTrackerRequestBodyPricingPlanEnum pricingPlan;
+
     public CreateTrackerRequestBody withPricingPlan(CreateTrackerRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -59,6 +63,7 @@ public class CreateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public CreateTrackerRequestBody withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
@@ -70,6 +75,7 @@ public class CreateTrackerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateTrackerRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -80,9 +86,13 @@ public class CreateTrackerRequestBody {
      */
     @JsonProperty("TrackerName")
     public String trackerName;
+
     public CreateTrackerRequestBody withTrackerName(String trackerName) {
         this.trackerName = trackerName;
         return this;
     }
     
+    public CreateTrackerRequestBody(@JsonProperty("TrackerName") String trackerName) {
+        this.trackerName = trackerName;
+  }
 }

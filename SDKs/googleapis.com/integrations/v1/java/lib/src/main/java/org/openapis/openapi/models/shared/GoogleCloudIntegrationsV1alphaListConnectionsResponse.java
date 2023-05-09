@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaListConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connections")
     public GoogleCloudConnectorsV1Connection[] connections;
+
     public GoogleCloudIntegrationsV1alphaListConnectionsResponse withConnections(GoogleCloudConnectorsV1Connection[] connections) {
         this.connections = connections;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaListConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIntegrationsV1alphaListConnectionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaListConnectionsResponse(){}
 }

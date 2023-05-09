@@ -15,6 +15,7 @@ public class ManagedPolicyDetail {
      */
     
     public String arn;
+
     public ManagedPolicyDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class ManagedPolicyDetail {
     
     
     public Long attachmentCount;
+
     public ManagedPolicyDetail withAttachmentCount(Long attachmentCount) {
         this.attachmentCount = attachmentCount;
         return this;
@@ -29,6 +31,7 @@ public class ManagedPolicyDetail {
     
     
     public OffsetDateTime createDate;
+
     public ManagedPolicyDetail withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -36,6 +39,7 @@ public class ManagedPolicyDetail {
     
     
     public String defaultVersionId;
+
     public ManagedPolicyDetail withDefaultVersionId(String defaultVersionId) {
         this.defaultVersionId = defaultVersionId;
         return this;
@@ -43,6 +47,7 @@ public class ManagedPolicyDetail {
     
     
     public String description;
+
     public ManagedPolicyDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +55,7 @@ public class ManagedPolicyDetail {
     
     
     public Boolean isAttachable;
+
     public ManagedPolicyDetail withIsAttachable(Boolean isAttachable) {
         this.isAttachable = isAttachable;
         return this;
@@ -57,6 +63,7 @@ public class ManagedPolicyDetail {
     
     
     public String path;
+
     public ManagedPolicyDetail withPath(String path) {
         this.path = path;
         return this;
@@ -64,6 +71,7 @@ public class ManagedPolicyDetail {
     
     
     public Long permissionsBoundaryUsageCount;
+
     public ManagedPolicyDetail withPermissionsBoundaryUsageCount(Long permissionsBoundaryUsageCount) {
         this.permissionsBoundaryUsageCount = permissionsBoundaryUsageCount;
         return this;
@@ -71,6 +79,7 @@ public class ManagedPolicyDetail {
     
     
     public String policyId;
+
     public ManagedPolicyDetail withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -78,6 +87,7 @@ public class ManagedPolicyDetail {
     
     
     public String policyName;
+
     public ManagedPolicyDetail withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -85,6 +95,7 @@ public class ManagedPolicyDetail {
     
     
     public PolicyVersion[] policyVersionList;
+
     public ManagedPolicyDetail withPolicyVersionList(PolicyVersion[] policyVersionList) {
         this.policyVersionList = policyVersionList;
         return this;
@@ -92,9 +103,11 @@ public class ManagedPolicyDetail {
     
     
     public OffsetDateTime updateDate;
+
     public ManagedPolicyDetail withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public ManagedPolicyDetail(){}
 }

@@ -18,6 +18,7 @@ public class ResourceUtilizationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public java.util.Map<String, ResourceUtilizationReport> containers;
+
     public ResourceUtilizationReport withContainers(java.util.Map<String, ResourceUtilizationReport> containers) {
         this.containers = containers;
         return this;
@@ -29,6 +30,7 @@ public class ResourceUtilizationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuTime")
     public CPUTime[] cpuTime;
+
     public ResourceUtilizationReport withCpuTime(CPUTime[] cpuTime) {
         this.cpuTime = cpuTime;
         return this;
@@ -40,9 +42,11 @@ public class ResourceUtilizationReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryInfo")
     public MemInfo[] memoryInfo;
+
     public ResourceUtilizationReport withMemoryInfo(MemInfo[] memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
     }
     
+    public ResourceUtilizationReport(){}
 }

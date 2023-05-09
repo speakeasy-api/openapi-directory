@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class CreateCapacityReservationFleetRequest {
     
     public String allocationStrategy;
+
     public CreateCapacityReservationFleetRequest withAllocationStrategy(String allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -16,6 +18,7 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public String clientToken;
+
     public CreateCapacityReservationFleetRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +26,7 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public Boolean dryRun;
+
     public CreateCapacityReservationFleetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +34,7 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public OffsetDateTime endDate;
+
     public CreateCapacityReservationFleetRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -37,6 +42,7 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public FleetInstanceMatchCriteriaEnum instanceMatchCriteria;
+
     public CreateCapacityReservationFleetRequest withInstanceMatchCriteria(FleetInstanceMatchCriteriaEnum instanceMatchCriteria) {
         this.instanceMatchCriteria = instanceMatchCriteria;
         return this;
@@ -44,6 +50,7 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public ReservationFleetInstanceSpecification[] instanceTypeSpecifications;
+
     public CreateCapacityReservationFleetRequest withInstanceTypeSpecifications(ReservationFleetInstanceSpecification[] instanceTypeSpecifications) {
         this.instanceTypeSpecifications = instanceTypeSpecifications;
         return this;
@@ -51,6 +58,7 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public CreateCapacityReservationFleetRequestTagSpecifications[] tagSpecifications;
+
     public CreateCapacityReservationFleetRequest withTagSpecifications(CreateCapacityReservationFleetRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -58,6 +66,7 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public FleetCapacityReservationTenancyEnum tenancy;
+
     public CreateCapacityReservationFleetRequest withTenancy(FleetCapacityReservationTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -65,9 +74,14 @@ public class CreateCapacityReservationFleetRequest {
     
     
     public Long totalTargetCapacity;
+
     public CreateCapacityReservationFleetRequest withTotalTargetCapacity(Long totalTargetCapacity) {
         this.totalTargetCapacity = totalTargetCapacity;
         return this;
     }
     
+    public CreateCapacityReservationFleetRequest(@JsonProperty("InstanceTypeSpecifications") ReservationFleetInstanceSpecification[] instanceTypeSpecifications, @JsonProperty("TotalTargetCapacity") Long totalTargetCapacity) {
+        this.instanceTypeSpecifications = instanceTypeSpecifications;
+        this.totalTargetCapacity = totalTargetCapacity;
+  }
 }

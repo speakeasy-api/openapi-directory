@@ -57,12 +57,10 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCustomersIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteCustomersIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteCustomersIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteCustomersIdJsonResponse(contentType, httpRes.statusCode()) {{
             deleteCustomersIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersJsonResponse(contentType, httpRes.statusCode()) {{
             customers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersCountJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersCountJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersCountJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersCountJsonResponse(contentType, httpRes.statusCode()) {{
             count = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,12 +190,10 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersEmailEmailJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersEmailEmailJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersEmailEmailJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersEmailEmailJsonResponse(contentType, httpRes.statusCode()) {{
             customer = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,12 +240,10 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersIdJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersIdJsonResponse res = new org.openapis.openapi.models.operations.GetCustomersIdJsonResponse(contentType, httpRes.statusCode()) {{
             customer = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,12 +295,10 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCustomersJsonResponse res = new org.openapis.openapi.models.operations.PostCustomersJsonResponse() {{
+        org.openapis.openapi.models.operations.PostCustomersJsonResponse res = new org.openapis.openapi.models.operations.PostCustomersJsonResponse(contentType, httpRes.statusCode()) {{
             customer = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -362,12 +350,10 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCustomersIdJsonResponse res = new org.openapis.openapi.models.operations.PutCustomersIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutCustomersIdJsonResponse res = new org.openapis.openapi.models.operations.PutCustomersIdJsonResponse(contentType, httpRes.statusCode()) {{
             customer = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

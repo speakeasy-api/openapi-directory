@@ -15,9 +15,11 @@ public class GetVaultAccessPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public VaultAccessPolicy policy;
+
     public GetVaultAccessPolicyOutput withPolicy(VaultAccessPolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetVaultAccessPolicyOutput(){}
 }

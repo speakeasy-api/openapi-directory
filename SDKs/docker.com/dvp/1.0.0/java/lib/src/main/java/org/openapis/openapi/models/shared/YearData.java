@@ -15,9 +15,11 @@ public class YearData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("years")
     public YearModel[] years;
+
     public YearData withYears(YearModel[] years) {
         this.years = years;
         return this;
     }
     
+    public YearData(){}
 }

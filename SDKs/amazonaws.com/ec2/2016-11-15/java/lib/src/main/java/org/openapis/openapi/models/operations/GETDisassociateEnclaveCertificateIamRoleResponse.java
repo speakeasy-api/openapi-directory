@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDisassociateEnclaveCertificateIamRoleResponse {
     
     public byte[] body;
+
     public GETDisassociateEnclaveCertificateIamRoleResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDisassociateEnclaveCertificateIamRoleResponse {
     
     
     public String contentType;
+
     public GETDisassociateEnclaveCertificateIamRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDisassociateEnclaveCertificateIamRoleResponse {
     
     
     public Integer statusCode;
+
     public GETDisassociateEnclaveCertificateIamRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDisassociateEnclaveCertificateIamRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDisassociateEnclaveCertificateIamRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDisassociateEnclaveCertificateIamRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

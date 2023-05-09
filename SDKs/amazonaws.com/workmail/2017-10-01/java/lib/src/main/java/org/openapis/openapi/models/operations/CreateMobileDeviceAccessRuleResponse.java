@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMobileDeviceAccessRuleResponse {
     
     public String contentType;
+
     public CreateMobileDeviceAccessRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMobileDeviceAccessRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMobileDeviceAccessRuleResponse createMobileDeviceAccessRuleResponse;
+
     public CreateMobileDeviceAccessRuleResponse withCreateMobileDeviceAccessRuleResponse(org.openapis.openapi.models.shared.CreateMobileDeviceAccessRuleResponse createMobileDeviceAccessRuleResponse) {
         this.createMobileDeviceAccessRuleResponse = createMobileDeviceAccessRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateMobileDeviceAccessRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateMobileDeviceAccessRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMobileDeviceAccessRuleResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMobileDeviceAccessRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMobileDeviceAccessRuleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public CreateMobileDeviceAccessRuleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMobileDeviceAccessRuleResponse {
      */
     
     public Object organizationStateException;
+
     public CreateMobileDeviceAccessRuleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class CreateMobileDeviceAccessRuleResponse {
     
     
     public Integer statusCode;
+
     public CreateMobileDeviceAccessRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateMobileDeviceAccessRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMobileDeviceAccessRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateMobileDeviceAccessRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

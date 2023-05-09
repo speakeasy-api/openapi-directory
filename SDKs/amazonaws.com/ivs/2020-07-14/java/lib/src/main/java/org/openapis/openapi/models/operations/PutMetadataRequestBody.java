@@ -12,6 +12,7 @@ public class PutMetadataRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public PutMetadataRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -22,9 +23,14 @@ public class PutMetadataRequestBody {
      */
     @JsonProperty("metadata")
     public String metadata;
+
     public PutMetadataRequestBody withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public PutMetadataRequestBody(@JsonProperty("channelArn") String channelArn, @JsonProperty("metadata") String metadata) {
+        this.channelArn = channelArn;
+        this.metadata = metadata;
+  }
 }

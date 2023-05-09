@@ -18,6 +18,7 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apt")
     public OSPolicyResourcePackageResourceAPT apt;
+
     public OSPolicyResourcePackageResource withApt(OSPolicyResourcePackageResourceAPT apt) {
         this.apt = apt;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deb")
     public OSPolicyResourcePackageResourceDeb deb;
+
     public OSPolicyResourcePackageResource withDeb(OSPolicyResourcePackageResourceDeb deb) {
         this.deb = deb;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredState")
     public OSPolicyResourcePackageResourceDesiredStateEnum desiredState;
+
     public OSPolicyResourcePackageResource withDesiredState(OSPolicyResourcePackageResourceDesiredStateEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googet")
     public OSPolicyResourcePackageResourceGooGet googet;
+
     public OSPolicyResourcePackageResource withGooget(OSPolicyResourcePackageResourceGooGet googet) {
         this.googet = googet;
         return this;
@@ -62,6 +66,7 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msi")
     public OSPolicyResourcePackageResourceMSI msi;
+
     public OSPolicyResourcePackageResource withMsi(OSPolicyResourcePackageResourceMSI msi) {
         this.msi = msi;
         return this;
@@ -73,6 +78,7 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rpm")
     public OSPolicyResourcePackageResourceRPM rpm;
+
     public OSPolicyResourcePackageResource withRpm(OSPolicyResourcePackageResourceRPM rpm) {
         this.rpm = rpm;
         return this;
@@ -84,6 +90,7 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yum")
     public OSPolicyResourcePackageResourceYUM yum;
+
     public OSPolicyResourcePackageResource withYum(OSPolicyResourcePackageResourceYUM yum) {
         this.yum = yum;
         return this;
@@ -95,9 +102,11 @@ public class OSPolicyResourcePackageResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zypper")
     public OSPolicyResourcePackageResourceZypper zypper;
+
     public OSPolicyResourcePackageResource withZypper(OSPolicyResourcePackageResourceZypper zypper) {
         this.zypper = zypper;
         return this;
     }
     
+    public OSPolicyResourcePackageResource(){}
 }

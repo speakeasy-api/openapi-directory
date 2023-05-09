@@ -15,6 +15,7 @@ public class PutServersId200ApplicationJSONServerDatacenter {
      */
     @JsonProperty("description")
     public String description;
+
     public PutServersId200ApplicationJSONServerDatacenter withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class PutServersId200ApplicationJSONServerDatacenter {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutServersId200ApplicationJSONServerDatacenter withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PutServersId200ApplicationJSONServerDatacenter {
     
     @JsonProperty("location")
     public PutServersId200ApplicationJSONServerDatacenterLocation location;
+
     public PutServersId200ApplicationJSONServerDatacenter withLocation(PutServersId200ApplicationJSONServerDatacenterLocation location) {
         this.location = location;
         return this;
@@ -42,6 +45,7 @@ public class PutServersId200ApplicationJSONServerDatacenter {
      */
     @JsonProperty("name")
     public String name;
+
     public PutServersId200ApplicationJSONServerDatacenter withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,17 @@ public class PutServersId200ApplicationJSONServerDatacenter {
      */
     @JsonProperty("server_types")
     public PutServersId200ApplicationJSONServerDatacenterServerTypes serverTypes;
+
     public PutServersId200ApplicationJSONServerDatacenter withServerTypes(PutServersId200ApplicationJSONServerDatacenterServerTypes serverTypes) {
         this.serverTypes = serverTypes;
         return this;
     }
     
+    public PutServersId200ApplicationJSONServerDatacenter(@JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("location") PutServersId200ApplicationJSONServerDatacenterLocation location, @JsonProperty("name") String name, @JsonProperty("server_types") PutServersId200ApplicationJSONServerDatacenterServerTypes serverTypes) {
+        this.description = description;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.serverTypes = serverTypes;
+  }
 }

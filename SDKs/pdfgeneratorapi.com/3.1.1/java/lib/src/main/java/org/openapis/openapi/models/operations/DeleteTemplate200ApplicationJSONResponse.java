@@ -12,9 +12,11 @@ public class DeleteTemplate200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public DeleteTemplate200ApplicationJSONResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public DeleteTemplate200ApplicationJSONResponse(){}
 }

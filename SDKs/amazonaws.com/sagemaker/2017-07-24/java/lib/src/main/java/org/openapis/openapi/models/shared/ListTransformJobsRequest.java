@@ -19,6 +19,7 @@ public class ListTransformJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListTransformJobsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListTransformJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListTransformJobsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -39,6 +41,7 @@ public class ListTransformJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListTransformJobsRequest withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -49,6 +52,7 @@ public class ListTransformJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListTransformJobsRequest withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -57,6 +61,7 @@ public class ListTransformJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTransformJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +70,7 @@ public class ListTransformJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListTransformJobsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -73,6 +79,7 @@ public class ListTransformJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTransformJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +88,7 @@ public class ListTransformJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortByEnum sortBy;
+
     public ListTransformJobsRequest withSortBy(SortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -89,6 +97,7 @@ public class ListTransformJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListTransformJobsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -97,9 +106,11 @@ public class ListTransformJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public TransformJobStatusEnum statusEquals;
+
     public ListTransformJobsRequest withStatusEquals(TransformJobStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListTransformJobsRequest(){}
 }

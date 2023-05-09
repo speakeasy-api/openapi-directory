@@ -18,6 +18,7 @@ public class KafkaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPass")
     public String keyPass;
+
     public KafkaConfig withKeyPass(String keyPass) {
         this.keyPass = keyPass;
         return this;
@@ -29,6 +30,7 @@ public class KafkaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyStore")
     public String keyStore;
+
     public KafkaConfig withKeyStore(String keyStore) {
         this.keyStore = keyStore;
         return this;
@@ -39,6 +41,7 @@ public class KafkaConfig {
      */
     @JsonProperty("servers")
     public String[] servers;
+
     public KafkaConfig withServers(String[] servers) {
         this.servers = servers;
         return this;
@@ -50,6 +53,7 @@ public class KafkaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public KafkaConfig withTopic(String topic) {
         this.topic = topic;
         return this;
@@ -61,9 +65,13 @@ public class KafkaConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustore")
     public String trustore;
+
     public KafkaConfig withTrustore(String trustore) {
         this.trustore = trustore;
         return this;
     }
     
+    public KafkaConfig(@JsonProperty("servers") String[] servers) {
+        this.servers = servers;
+  }
 }

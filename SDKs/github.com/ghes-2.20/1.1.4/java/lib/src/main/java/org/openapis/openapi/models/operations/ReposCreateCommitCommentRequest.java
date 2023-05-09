@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateCommitCommentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposCreateCommitCommentRequestBody requestBody;
+
     public ReposCreateCommitCommentRequest withRequestBody(ReposCreateCommitCommentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReposCreateCommitCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
     public String commitSha;
+
     public ReposCreateCommitCommentRequest withCommitSha(String commitSha) {
         this.commitSha = commitSha;
         return this;
@@ -26,6 +29,7 @@ public class ReposCreateCommitCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposCreateCommitCommentRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,9 +37,16 @@ public class ReposCreateCommitCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposCreateCommitCommentRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposCreateCommitCommentRequest(@JsonProperty("RequestBody") ReposCreateCommitCommentRequestBody requestBody, @JsonProperty("commit_sha") String commitSha, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.commitSha = commitSha;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

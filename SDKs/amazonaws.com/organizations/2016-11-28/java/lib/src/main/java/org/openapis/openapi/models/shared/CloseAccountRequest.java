@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloseAccountRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public CloseAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public CloseAccountRequest(@JsonProperty("AccountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

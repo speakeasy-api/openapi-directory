@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeploymentmanagerTypeProvidersUpdateRequest {
@@ -12,6 +13,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TypeProvider typeProvider1;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withTypeProvider1(org.openapis.openapi.models.shared.TypeProvider typeProvider1) {
         this.typeProvider1 = typeProvider1;
         return this;
@@ -29,6 +32,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withProject(String project) {
         this.project = project;
         return this;
@@ -109,6 +120,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=typeProvider")
     public String typeProviderPathParameter;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withTypeProviderPathParameter(String typeProviderPathParameter) {
         this.typeProviderPathParameter = typeProviderPathParameter;
         return this;
@@ -129,6 +142,7 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class DeploymentmanagerTypeProvidersUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DeploymentmanagerTypeProvidersUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DeploymentmanagerTypeProvidersUpdateRequest(@JsonProperty("project") String project, @JsonProperty("typeProviderPathParameter") String typeProviderPathParameter) {
+        this.project = project;
+        this.typeProviderPathParameter = typeProviderPathParameter;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateMacieSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingPublishingFrequency")
     public UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum findingPublishingFrequency;
+
     public UpdateMacieSessionRequestBody withFindingPublishingFrequency(UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum findingPublishingFrequency) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         return this;
@@ -26,9 +27,11 @@ public class UpdateMacieSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdateMacieSessionRequestBodyStatusEnum status;
+
     public UpdateMacieSessionRequestBody withStatus(UpdateMacieSessionRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateMacieSessionRequestBody(){}
 }

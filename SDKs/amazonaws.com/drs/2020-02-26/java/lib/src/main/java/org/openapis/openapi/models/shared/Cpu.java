@@ -15,6 +15,7 @@ public class Cpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cores")
     public Long cores;
+
     public Cpu withCores(Long cores) {
         this.cores = cores;
         return this;
@@ -23,9 +24,11 @@ public class Cpu {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelName")
     public String modelName;
+
     public Cpu withModelName(String modelName) {
         this.modelName = modelName;
         return this;
     }
     
+    public Cpu(){}
 }

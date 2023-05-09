@@ -19,6 +19,7 @@ public class ListTrialComponentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListTrialComponentsRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListTrialComponentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListTrialComponentsRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListTrialComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public ListTrialComponentsRequest withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -45,6 +48,7 @@ public class ListTrialComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTrialComponentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListTrialComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrialComponentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +66,7 @@ public class ListTrialComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortTrialComponentsByEnum sortBy;
+
     public ListTrialComponentsRequest withSortBy(SortTrialComponentsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,6 +75,7 @@ public class ListTrialComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListTrialComponentsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -77,6 +84,7 @@ public class ListTrialComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public ListTrialComponentsRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -85,9 +93,11 @@ public class ListTrialComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialName")
     public String trialName;
+
     public ListTrialComponentsRequest withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public ListTrialComponentsRequest(){}
 }

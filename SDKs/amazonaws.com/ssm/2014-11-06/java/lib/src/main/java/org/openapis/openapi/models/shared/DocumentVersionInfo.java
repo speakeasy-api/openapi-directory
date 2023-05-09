@@ -22,6 +22,7 @@ public class DocumentVersionInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public DocumentVersionInfo withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -30,6 +31,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DocumentVersionInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,6 +40,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFormat")
     public DocumentFormatEnum documentFormat;
+
     public DocumentVersionInfo withDocumentFormat(DocumentFormatEnum documentFormat) {
         this.documentFormat = documentFormat;
         return this;
@@ -46,6 +49,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public DocumentVersionInfo withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -54,6 +58,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsDefaultVersion")
     public Boolean isDefaultVersion;
+
     public DocumentVersionInfo withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -62,6 +67,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DocumentVersionInfo withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewStatus")
     public ReviewStatusEnum reviewStatus;
+
     public DocumentVersionInfo withReviewStatus(ReviewStatusEnum reviewStatus) {
         this.reviewStatus = reviewStatus;
         return this;
@@ -78,6 +85,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DocumentStatusEnum status;
+
     public DocumentVersionInfo withStatus(DocumentStatusEnum status) {
         this.status = status;
         return this;
@@ -86,6 +94,7 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusInformation")
     public String statusInformation;
+
     public DocumentVersionInfo withStatusInformation(String statusInformation) {
         this.statusInformation = statusInformation;
         return this;
@@ -94,9 +103,11 @@ public class DocumentVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public DocumentVersionInfo withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public DocumentVersionInfo(){}
 }

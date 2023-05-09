@@ -15,9 +15,11 @@ public class GetCallsResponseEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calls")
     public GetCallResponse[] calls;
+
     public GetCallsResponseEmbedded withCalls(GetCallResponse[] calls) {
         this.calls = calls;
         return this;
     }
     
+    public GetCallsResponseEmbedded(){}
 }

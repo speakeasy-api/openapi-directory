@@ -15,6 +15,7 @@ public class AwsS3BucketWebsiteConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDocument")
     public String errorDocument;
+
     public AwsS3BucketWebsiteConfiguration withErrorDocument(String errorDocument) {
         this.errorDocument = errorDocument;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3BucketWebsiteConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexDocumentSuffix")
     public String indexDocumentSuffix;
+
     public AwsS3BucketWebsiteConfiguration withIndexDocumentSuffix(String indexDocumentSuffix) {
         this.indexDocumentSuffix = indexDocumentSuffix;
         return this;
@@ -31,6 +33,7 @@ public class AwsS3BucketWebsiteConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedirectAllRequestsTo")
     public AwsS3BucketWebsiteConfigurationRedirectTo redirectAllRequestsTo;
+
     public AwsS3BucketWebsiteConfiguration withRedirectAllRequestsTo(AwsS3BucketWebsiteConfigurationRedirectTo redirectAllRequestsTo) {
         this.redirectAllRequestsTo = redirectAllRequestsTo;
         return this;
@@ -39,9 +42,11 @@ public class AwsS3BucketWebsiteConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingRules")
     public AwsS3BucketWebsiteConfigurationRoutingRule[] routingRules;
+
     public AwsS3BucketWebsiteConfiguration withRoutingRules(AwsS3BucketWebsiteConfigurationRoutingRule[] routingRules) {
         this.routingRules = routingRules;
         return this;
     }
     
+    public AwsS3BucketWebsiteConfiguration(){}
 }

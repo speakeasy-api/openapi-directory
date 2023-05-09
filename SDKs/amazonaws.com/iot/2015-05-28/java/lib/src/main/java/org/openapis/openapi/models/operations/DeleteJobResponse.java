@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteJobResponse {
     
     public String contentType;
+
     public DeleteJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteJobResponse {
      */
     
     public Object invalidStateTransitionException;
+
     public DeleteJobResponse withInvalidStateTransitionException(Object invalidStateTransitionException) {
         this.invalidStateTransitionException = invalidStateTransitionException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteJobResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteJobResponse {
      */
     
     public Object throttlingException;
+
     public DeleteJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringProjectsUptimeCheckConfigsCreateResponse {
     
     public String contentType;
+
     public MonitoringProjectsUptimeCheckConfigsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MonitoringProjectsUptimeCheckConfigsCreateResponse {
     
     
     public Integer statusCode;
+
     public MonitoringProjectsUptimeCheckConfigsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MonitoringProjectsUptimeCheckConfigsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringProjectsUptimeCheckConfigsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringProjectsUptimeCheckConfigsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.UptimeCheckConfig uptimeCheckConfig;
+
     public MonitoringProjectsUptimeCheckConfigsCreateResponse withUptimeCheckConfig(org.openapis.openapi.models.shared.UptimeCheckConfig uptimeCheckConfig) {
         this.uptimeCheckConfig = uptimeCheckConfig;
         return this;
     }
     
+    public MonitoringProjectsUptimeCheckConfigsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

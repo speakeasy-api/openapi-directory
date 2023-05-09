@@ -15,6 +15,7 @@ public class CreateApplication406ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public CreateApplication406ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class CreateApplication406ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public CreateApplication406ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -34,6 +36,7 @@ public class CreateApplication406ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CreateApplication406ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -42,9 +45,11 @@ public class CreateApplication406ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CreateApplication406ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateApplication406ApplicationJSON(){}
 }

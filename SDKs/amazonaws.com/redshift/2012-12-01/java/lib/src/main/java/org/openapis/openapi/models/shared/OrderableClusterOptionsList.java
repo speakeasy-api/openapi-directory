@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OrderableClusterOptionsList {
     
     public AvailabilityZoneList[] availabilityZones;
+
     public OrderableClusterOptionsList withAvailabilityZones(AvailabilityZoneList[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -19,6 +20,7 @@ public class OrderableClusterOptionsList {
     
     
     public String clusterType;
+
     public OrderableClusterOptionsList withClusterType(String clusterType) {
         this.clusterType = clusterType;
         return this;
@@ -26,6 +28,7 @@ public class OrderableClusterOptionsList {
     
     
     public String clusterVersion;
+
     public OrderableClusterOptionsList withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -33,9 +36,11 @@ public class OrderableClusterOptionsList {
     
     
     public String nodeType;
+
     public OrderableClusterOptionsList withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
     }
     
+    public OrderableClusterOptionsList(){}
 }

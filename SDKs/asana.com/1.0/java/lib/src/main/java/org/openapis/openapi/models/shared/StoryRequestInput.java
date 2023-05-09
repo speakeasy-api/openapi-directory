@@ -18,6 +18,7 @@ public class StoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public StoryRequestInput withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -29,6 +30,7 @@ public class StoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_pinned")
     public Boolean isPinned;
+
     public StoryRequestInput withIsPinned(Boolean isPinned) {
         this.isPinned = isPinned;
         return this;
@@ -40,6 +42,7 @@ public class StoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sticker_name")
     public StoryRequestStickerNameEnum stickerName;
+
     public StoryRequestInput withStickerName(StoryRequestStickerNameEnum stickerName) {
         this.stickerName = stickerName;
         return this;
@@ -51,9 +54,11 @@ public class StoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public StoryRequestInput withText(String text) {
         this.text = text;
         return this;
     }
     
+    public StoryRequestInput(){}
 }

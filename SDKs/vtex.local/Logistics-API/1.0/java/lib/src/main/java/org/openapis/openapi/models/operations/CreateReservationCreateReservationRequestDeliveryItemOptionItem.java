@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservationCreateReservationRequestDeliveryItemOptionItem {
     @JsonProperty("additionalHandlingTime")
     public String additionalHandlingTime;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem withAdditionalHandlingTime(String additionalHandlingTime) {
         this.additionalHandlingTime = additionalHandlingTime;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItem {
     
     @JsonProperty("dimension")
     public CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension dimension;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem withDimension(CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension dimension) {
         this.dimension = dimension;
         return this;
@@ -23,6 +25,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItem {
     
     @JsonProperty("groupItemId")
     public String groupItemId;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem withGroupItemId(String groupItemId) {
         this.groupItemId = groupItemId;
         return this;
@@ -30,6 +33,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItem {
     
     @JsonProperty("id")
     public String id;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItem {
     
     @JsonProperty("kitItem")
     public String[] kitItem;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem withKitItem(String[] kitItem) {
         this.kitItem = kitItem;
         return this;
@@ -44,6 +49,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItem {
     
     @JsonProperty("price")
     public Integer price;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem withPrice(Integer price) {
         this.price = price;
         return this;
@@ -51,9 +57,19 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItem {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItem withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public CreateReservationCreateReservationRequestDeliveryItemOptionItem(@JsonProperty("additionalHandlingTime") String additionalHandlingTime, @JsonProperty("dimension") CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension dimension, @JsonProperty("groupItemId") String groupItemId, @JsonProperty("id") String id, @JsonProperty("kitItem") String[] kitItem, @JsonProperty("price") Integer price, @JsonProperty("quantity") Integer quantity) {
+        this.additionalHandlingTime = additionalHandlingTime;
+        this.dimension = dimension;
+        this.groupItemId = groupItemId;
+        this.id = id;
+        this.kitItem = kitItem;
+        this.price = price;
+        this.quantity = quantity;
+  }
 }

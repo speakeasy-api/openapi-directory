@@ -15,9 +15,11 @@ public class ListAnnotationStoresRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public org.openapis.openapi.models.shared.StoreStatusEnum status;
+
     public ListAnnotationStoresRequestBodyFilter withStatus(org.openapis.openapi.models.shared.StoreStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListAnnotationStoresRequestBodyFilter(){}
 }

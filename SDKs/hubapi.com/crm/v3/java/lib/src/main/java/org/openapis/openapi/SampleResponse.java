@@ -52,12 +52,10 @@ public class SampleResponse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse res = new org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse() {{
+        org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse res = new org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse(contentType, httpRes.statusCode()) {{
             integratorCardPayloadResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

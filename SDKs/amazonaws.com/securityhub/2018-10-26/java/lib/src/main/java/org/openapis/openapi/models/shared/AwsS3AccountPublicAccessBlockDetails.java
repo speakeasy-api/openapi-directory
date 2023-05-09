@@ -15,6 +15,7 @@ public class AwsS3AccountPublicAccessBlockDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockPublicAcls")
     public Boolean blockPublicAcls;
+
     public AwsS3AccountPublicAccessBlockDetails withBlockPublicAcls(Boolean blockPublicAcls) {
         this.blockPublicAcls = blockPublicAcls;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3AccountPublicAccessBlockDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockPublicPolicy")
     public Boolean blockPublicPolicy;
+
     public AwsS3AccountPublicAccessBlockDetails withBlockPublicPolicy(Boolean blockPublicPolicy) {
         this.blockPublicPolicy = blockPublicPolicy;
         return this;
@@ -31,6 +33,7 @@ public class AwsS3AccountPublicAccessBlockDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IgnorePublicAcls")
     public Boolean ignorePublicAcls;
+
     public AwsS3AccountPublicAccessBlockDetails withIgnorePublicAcls(Boolean ignorePublicAcls) {
         this.ignorePublicAcls = ignorePublicAcls;
         return this;
@@ -39,9 +42,11 @@ public class AwsS3AccountPublicAccessBlockDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestrictPublicBuckets")
     public Boolean restrictPublicBuckets;
+
     public AwsS3AccountPublicAccessBlockDetails withRestrictPublicBuckets(Boolean restrictPublicBuckets) {
         this.restrictPublicBuckets = restrictPublicBuckets;
         return this;
     }
     
+    public AwsS3AccountPublicAccessBlockDetails(){}
 }

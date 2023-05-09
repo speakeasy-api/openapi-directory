@@ -15,6 +15,7 @@ public class NetworksAddPeeringRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCreateRoutes")
     public Boolean autoCreateRoutes;
+
     public NetworksAddPeeringRequest withAutoCreateRoutes(Boolean autoCreateRoutes) {
         this.autoCreateRoutes = autoCreateRoutes;
         return this;
@@ -26,6 +27,7 @@ public class NetworksAddPeeringRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworksAddPeeringRequest withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class NetworksAddPeeringRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkPeering")
     public NetworkPeering networkPeering;
+
     public NetworksAddPeeringRequest withNetworkPeering(NetworkPeering networkPeering) {
         this.networkPeering = networkPeering;
         return this;
@@ -48,9 +51,11 @@ public class NetworksAddPeeringRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerNetwork")
     public String peerNetwork;
+
     public NetworksAddPeeringRequest withPeerNetwork(String peerNetwork) {
         this.peerNetwork = peerNetwork;
         return this;
     }
     
+    public NetworksAddPeeringRequest(){}
 }

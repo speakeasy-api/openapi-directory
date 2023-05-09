@@ -18,9 +18,11 @@ public class ServiceAccountKeysListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountKey")
     public ServiceAccountKey[] serviceAccountKey;
+
     public ServiceAccountKeysListResponse withServiceAccountKey(ServiceAccountKey[] serviceAccountKey) {
         this.serviceAccountKey = serviceAccountKey;
         return this;
     }
     
+    public ServiceAccountKeysListResponse(){}
 }

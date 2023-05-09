@@ -18,9 +18,11 @@ public class V2ServerKeyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedIps")
     public String[] allowedIps;
+
     public V2ServerKeyRestrictions withAllowedIps(String[] allowedIps) {
         this.allowedIps = allowedIps;
         return this;
     }
     
+    public V2ServerKeyRestrictions(){}
 }

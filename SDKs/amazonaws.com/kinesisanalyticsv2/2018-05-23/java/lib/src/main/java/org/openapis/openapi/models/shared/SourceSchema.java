@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceSchema {
     @JsonProperty("RecordColumns")
     public RecordColumn[] recordColumns;
+
     public SourceSchema withRecordColumns(RecordColumn[] recordColumns) {
         this.recordColumns = recordColumns;
         return this;
@@ -22,6 +23,7 @@ public class SourceSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordEncoding")
     public String recordEncoding;
+
     public SourceSchema withRecordEncoding(String recordEncoding) {
         this.recordEncoding = recordEncoding;
         return this;
@@ -29,9 +31,14 @@ public class SourceSchema {
     
     @JsonProperty("RecordFormat")
     public RecordFormat recordFormat;
+
     public SourceSchema withRecordFormat(RecordFormat recordFormat) {
         this.recordFormat = recordFormat;
         return this;
     }
     
+    public SourceSchema(@JsonProperty("RecordColumns") RecordColumn[] recordColumns, @JsonProperty("RecordFormat") RecordFormat recordFormat) {
+        this.recordColumns = recordColumns;
+        this.recordFormat = recordFormat;
+  }
 }

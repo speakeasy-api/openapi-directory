@@ -10,15 +10,15 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * NewMessageMessageClassEnum - **Advanced**: The Data Coding Scheme value of the message
  */
 public enum NewMessageMessageClassEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3");
+    ZERO(0L),
+    ONE(1L),
+    TWO(2L),
+    THREE(3L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private NewMessageMessageClassEnum(String value) {
+    private NewMessageMessageClassEnum(Long value) {
         this.value = value;
     }
 }

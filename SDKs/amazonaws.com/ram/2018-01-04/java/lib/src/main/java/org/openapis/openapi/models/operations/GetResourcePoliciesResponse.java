@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcePoliciesResponse {
     
     public String contentType;
+
     public GetResourcePoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourcePoliciesResponse getResourcePoliciesResponse;
+
     public GetResourcePoliciesResponse withGetResourcePoliciesResponse(org.openapis.openapi.models.shared.GetResourcePoliciesResponse getResourcePoliciesResponse) {
         this.getResourcePoliciesResponse = getResourcePoliciesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetResourcePoliciesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResourcePoliciesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object malformedArnException;
+
     public GetResourcePoliciesResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -59,6 +65,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object resourceArnNotFoundException;
+
     public GetResourcePoliciesResponse withResourceArnNotFoundException(Object resourceArnNotFoundException) {
         this.resourceArnNotFoundException = resourceArnNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object serverInternalException;
+
     public GetResourcePoliciesResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -79,6 +87,7 @@ public class GetResourcePoliciesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetResourcePoliciesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class GetResourcePoliciesResponse {
     
     
     public Integer statusCode;
+
     public GetResourcePoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetResourcePoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcePoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetResourcePoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

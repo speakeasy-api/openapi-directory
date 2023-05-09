@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomDescriptorsResponse {
     
     public String contentType;
+
     public ListCustomDescriptorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomDescriptorsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescriptorsListResult descriptorsListResult;
+
     public ListCustomDescriptorsResponse withDescriptorsListResult(org.openapis.openapi.models.shared.DescriptorsListResult descriptorsListResult) {
         this.descriptorsListResult = descriptorsListResult;
         return this;
@@ -26,6 +29,7 @@ public class ListCustomDescriptorsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomDescriptorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListCustomDescriptorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomDescriptorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCustomDescriptorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DeleteMLModelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public DeleteMLModelOutput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
     }
     
+    public DeleteMLModelOutput(){}
 }

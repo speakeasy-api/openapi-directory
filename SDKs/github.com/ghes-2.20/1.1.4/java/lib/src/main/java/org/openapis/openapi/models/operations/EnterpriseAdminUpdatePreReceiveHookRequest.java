@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdatePreReceiveHookRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminUpdatePreReceiveHookRequestBody requestBody;
+
     public EnterpriseAdminUpdatePreReceiveHookRequest withRequestBody(EnterpriseAdminUpdatePreReceiveHookRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class EnterpriseAdminUpdatePreReceiveHookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
     public Long preReceiveHookId;
+
     public EnterpriseAdminUpdatePreReceiveHookRequest withPreReceiveHookId(Long preReceiveHookId) {
         this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     
+    public EnterpriseAdminUpdatePreReceiveHookRequest(@JsonProperty("pre_receive_hook_id") Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
+  }
 }

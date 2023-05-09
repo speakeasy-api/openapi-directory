@@ -12,6 +12,7 @@ public class BatchDeleteTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public BatchDeleteTableRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class BatchDeleteTableRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public BatchDeleteTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class BatchDeleteTableRequest {
     
     @JsonProperty("TablesToDelete")
     public String[] tablesToDelete;
+
     public BatchDeleteTableRequest withTablesToDelete(String[] tablesToDelete) {
         this.tablesToDelete = tablesToDelete;
         return this;
@@ -34,9 +37,14 @@ public class BatchDeleteTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public BatchDeleteTableRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public BatchDeleteTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TablesToDelete") String[] tablesToDelete) {
+        this.databaseName = databaseName;
+        this.tablesToDelete = tablesToDelete;
+  }
 }

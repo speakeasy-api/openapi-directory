@@ -20,6 +20,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public Member withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdministratorId")
     public String administratorId;
+
     public Member withAdministratorId(String administratorId) {
         this.administratorId = administratorId;
         return this;
@@ -36,6 +38,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Member withEmail(String email) {
         this.email = email;
         return this;
@@ -46,6 +49,7 @@ public class Member {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InvitedAt")
     public OffsetDateTime invitedAt;
+
     public Member withInvitedAt(OffsetDateTime invitedAt) {
         this.invitedAt = invitedAt;
         return this;
@@ -54,6 +58,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterId")
     public String masterId;
+
     public Member withMasterId(String masterId) {
         this.masterId = masterId;
         return this;
@@ -62,6 +67,7 @@ public class Member {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberStatus")
     public String memberStatus;
+
     public Member withMemberStatus(String memberStatus) {
         this.memberStatus = memberStatus;
         return this;
@@ -72,9 +78,11 @@ public class Member {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public Member withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Member(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetSecurity;
 import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetRequest;
 import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetResponse;
+import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -28,30 +27,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AndroidpublisherInapppurchasesGetRequest req = new AndroidpublisherInapppurchasesGetRequest() {{
-                alt = "json";
-                fields = "corrupti";
-                key = "provident";
-                oauthToken = "distinctio";
-                packageName = "quibusdam";
+            AndroidpublisherInapppurchasesGetRequest req = new AndroidpublisherInapppurchasesGetRequest("corrupti", "provident", "distinctio") {{
+                alt = AltEnum.JSON;
+                fields = "quibusdam";
+                key = "unde";
+                oauthToken = "nulla";
                 prettyPrint = false;
-                productId = "unde";
-                quotaUser = "nulla";
-                token = "corrupti";
+                quotaUser = "corrupti";
                 userIp = "illum";
-            }}            
+            }};            
 
-            AndroidpublisherInapppurchasesGetResponse res = sdk.inapppurchases.androidpublisherInapppurchasesGet(req, new AndroidpublisherInapppurchasesGetSecurity() {{
+            AndroidpublisherInapppurchasesGetResponse res = sdk.inapppurchases.androidpublisherInapppurchasesGet(req, new AndroidpublisherInapppurchasesGetSecurity("vel", "error") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -59,14 +57,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### inapppurchases
+### [inapppurchases](docs/inapppurchases/README.md)
 
-* `androidpublisherInapppurchasesGet` - Checks the purchase and consumption status of an inapp item.
+* [androidpublisherInapppurchasesGet](docs/inapppurchases/README.md#androidpublisherinapppurchasesget) - Checks the purchase and consumption status of an inapp item.
 
-### purchases
+### [purchases](docs/purchases/README.md)
 
-* `androidpublisherPurchasesCancel` - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-* `androidpublisherPurchasesGet` - Checks whether a user's subscription purchase is valid and returns its expiry time.
+* [androidpublisherPurchasesCancel](docs/purchases/README.md#androidpublisherpurchasescancel) - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
+* [androidpublisherPurchasesGet](docs/purchases/README.md#androidpublisherpurchasesget) - Checks whether a user's subscription purchase is valid and returns its expiry time.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationSummary {
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public ApplicationSummary withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -22,6 +23,7 @@ public class ApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationMode")
     public ApplicationModeEnum applicationMode;
+
     public ApplicationSummary withApplicationMode(ApplicationModeEnum applicationMode) {
         this.applicationMode = applicationMode;
         return this;
@@ -29,6 +31,7 @@ public class ApplicationSummary {
     
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public ApplicationSummary withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -36,6 +39,7 @@ public class ApplicationSummary {
     
     @JsonProperty("ApplicationStatus")
     public ApplicationStatusEnum applicationStatus;
+
     public ApplicationSummary withApplicationStatus(ApplicationStatusEnum applicationStatus) {
         this.applicationStatus = applicationStatus;
         return this;
@@ -43,6 +47,7 @@ public class ApplicationSummary {
     
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public ApplicationSummary withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -50,9 +55,17 @@ public class ApplicationSummary {
     
     @JsonProperty("RuntimeEnvironment")
     public RuntimeEnvironmentEnum runtimeEnvironment;
+
     public ApplicationSummary withRuntimeEnvironment(RuntimeEnvironmentEnum runtimeEnvironment) {
         this.runtimeEnvironment = runtimeEnvironment;
         return this;
     }
     
+    public ApplicationSummary(@JsonProperty("ApplicationARN") String applicationARN, @JsonProperty("ApplicationName") String applicationName, @JsonProperty("ApplicationStatus") ApplicationStatusEnum applicationStatus, @JsonProperty("ApplicationVersionId") Long applicationVersionId, @JsonProperty("RuntimeEnvironment") RuntimeEnvironmentEnum runtimeEnvironment) {
+        this.applicationARN = applicationARN;
+        this.applicationName = applicationName;
+        this.applicationStatus = applicationStatus;
+        this.applicationVersionId = applicationVersionId;
+        this.runtimeEnvironment = runtimeEnvironment;
+  }
 }

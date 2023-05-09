@@ -15,6 +15,7 @@ public class CurrencyHistoryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateFrom")
     public TimeDTO dateFrom;
+
     public CurrencyHistoryDTO withDateFrom(TimeDTO dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -23,6 +24,7 @@ public class CurrencyHistoryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeRate")
     public String exchangeRate;
+
     public CurrencyHistoryDTO withExchangeRate(String exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -31,6 +33,7 @@ public class CurrencyHistoryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModification")
     public TimeDTO lastModification;
+
     public CurrencyHistoryDTO withLastModification(TimeDTO lastModification) {
         this.lastModification = lastModification;
         return this;
@@ -39,6 +42,7 @@ public class CurrencyHistoryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originDetails")
     public String originDetails;
+
     public CurrencyHistoryDTO withOriginDetails(String originDetails) {
         this.originDetails = originDetails;
         return this;
@@ -47,9 +51,11 @@ public class CurrencyHistoryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicationDate")
     public TimeDTO publicationDate;
+
     public CurrencyHistoryDTO withPublicationDate(TimeDTO publicationDate) {
         this.publicationDate = publicationDate;
         return this;
     }
     
+    public CurrencyHistoryDTO(){}
 }

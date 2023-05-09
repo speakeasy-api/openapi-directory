@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTemplateSummaryOutput {
     
     public CapabilityEnum[] capabilities;
+
     public GetTemplateSummaryOutput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -19,6 +20,7 @@ public class GetTemplateSummaryOutput {
     
     
     public String capabilitiesReason;
+
     public GetTemplateSummaryOutput withCapabilitiesReason(String capabilitiesReason) {
         this.capabilitiesReason = capabilitiesReason;
         return this;
@@ -26,6 +28,7 @@ public class GetTemplateSummaryOutput {
     
     
     public String[] declaredTransforms;
+
     public GetTemplateSummaryOutput withDeclaredTransforms(String[] declaredTransforms) {
         this.declaredTransforms = declaredTransforms;
         return this;
@@ -33,6 +36,7 @@ public class GetTemplateSummaryOutput {
     
     
     public String description;
+
     public GetTemplateSummaryOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class GetTemplateSummaryOutput {
     
     
     public String metadata;
+
     public GetTemplateSummaryOutput withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
@@ -47,6 +52,7 @@ public class GetTemplateSummaryOutput {
     
     
     public ParameterDeclaration[] parameters;
+
     public GetTemplateSummaryOutput withParameters(ParameterDeclaration[] parameters) {
         this.parameters = parameters;
         return this;
@@ -54,6 +60,7 @@ public class GetTemplateSummaryOutput {
     
     
     public ResourceIdentifierSummary[] resourceIdentifierSummaries;
+
     public GetTemplateSummaryOutput withResourceIdentifierSummaries(ResourceIdentifierSummary[] resourceIdentifierSummaries) {
         this.resourceIdentifierSummaries = resourceIdentifierSummaries;
         return this;
@@ -61,6 +68,7 @@ public class GetTemplateSummaryOutput {
     
     
     public String[] resourceTypes;
+
     public GetTemplateSummaryOutput withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -68,9 +76,11 @@ public class GetTemplateSummaryOutput {
     
     
     public String version;
+
     public GetTemplateSummaryOutput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetTemplateSummaryOutput(){}
 }

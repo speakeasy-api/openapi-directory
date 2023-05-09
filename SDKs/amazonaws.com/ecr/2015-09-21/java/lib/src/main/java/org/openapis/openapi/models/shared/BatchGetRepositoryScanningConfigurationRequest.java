@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetRepositoryScanningConfigurationRequest {
     @JsonProperty("repositoryNames")
     public String[] repositoryNames;
+
     public BatchGetRepositoryScanningConfigurationRequest withRepositoryNames(String[] repositoryNames) {
         this.repositoryNames = repositoryNames;
         return this;
     }
     
+    public BatchGetRepositoryScanningConfigurationRequest(@JsonProperty("repositoryNames") String[] repositoryNames) {
+        this.repositoryNames = repositoryNames;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetThingShadowResponse {
     
     public String contentType;
+
     public GetThingShadowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetThingShadowResponse {
      */
     
     public org.openapis.openapi.models.shared.GetThingShadowResponse getThingShadowResponse;
+
     public GetThingShadowResponse withGetThingShadowResponse(org.openapis.openapi.models.shared.GetThingShadowResponse getThingShadowResponse) {
         this.getThingShadowResponse = getThingShadowResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetThingShadowResponse {
      */
     
     public Object internalFailureException;
+
     public GetThingShadowResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetThingShadowResponse {
      */
     
     public Object invalidRequestException;
+
     public GetThingShadowResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetThingShadowResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetThingShadowResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -56,6 +62,7 @@ public class GetThingShadowResponse {
     
     
     public Integer statusCode;
+
     public GetThingShadowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetThingShadowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetThingShadowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetThingShadowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetThingShadowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class GetThingShadowResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetThingShadowResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class GetThingShadowResponse {
      */
     
     public Object throttlingException;
+
     public GetThingShadowResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,6 +114,7 @@ public class GetThingShadowResponse {
      */
     
     public Object unauthorizedException;
+
     public GetThingShadowResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -113,9 +125,14 @@ public class GetThingShadowResponse {
      */
     
     public Object unsupportedDocumentEncodingException;
+
     public GetThingShadowResponse withUnsupportedDocumentEncodingException(Object unsupportedDocumentEncodingException) {
         this.unsupportedDocumentEncodingException = unsupportedDocumentEncodingException;
         return this;
     }
     
+    public GetThingShadowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

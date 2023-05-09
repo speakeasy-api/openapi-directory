@@ -18,6 +18,7 @@ public class DiskUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetReadBytesPerSecond")
     public Integer targetReadBytesPerSecond;
+
     public DiskUtilization withTargetReadBytesPerSecond(Integer targetReadBytesPerSecond) {
         this.targetReadBytesPerSecond = targetReadBytesPerSecond;
         return this;
@@ -29,6 +30,7 @@ public class DiskUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetReadOpsPerSecond")
     public Integer targetReadOpsPerSecond;
+
     public DiskUtilization withTargetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
         this.targetReadOpsPerSecond = targetReadOpsPerSecond;
         return this;
@@ -40,6 +42,7 @@ public class DiskUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetWriteBytesPerSecond")
     public Integer targetWriteBytesPerSecond;
+
     public DiskUtilization withTargetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
         this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
         return this;
@@ -51,9 +54,11 @@ public class DiskUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetWriteOpsPerSecond")
     public Integer targetWriteOpsPerSecond;
+
     public DiskUtilization withTargetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
         this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
         return this;
     }
     
+    public DiskUtilization(){}
 }

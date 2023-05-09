@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetSelfHostedRunnerForOrgRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsGetSelfHostedRunnerForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -19,9 +21,14 @@ public class ActionsGetSelfHostedRunnerForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public ActionsGetSelfHostedRunnerForOrgRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public ActionsGetSelfHostedRunnerForOrgRequest(@JsonProperty("org") String org, @JsonProperty("runner_id") Long runnerId) {
+        this.org = org;
+        this.runnerId = runnerId;
+  }
 }

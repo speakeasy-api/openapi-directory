@@ -12,6 +12,7 @@ public class StartFaceSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartFaceSearchRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartFaceSearchRequest {
     
     @JsonProperty("CollectionId")
     public String collectionId;
+
     public StartFaceSearchRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -27,6 +29,7 @@ public class StartFaceSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceMatchThreshold")
     public Float faceMatchThreshold;
+
     public StartFaceSearchRequest withFaceMatchThreshold(Float faceMatchThreshold) {
         this.faceMatchThreshold = faceMatchThreshold;
         return this;
@@ -35,6 +38,7 @@ public class StartFaceSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartFaceSearchRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -43,6 +47,7 @@ public class StartFaceSearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartFaceSearchRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -50,9 +55,14 @@ public class StartFaceSearchRequest {
     
     @JsonProperty("Video")
     public Video video;
+
     public StartFaceSearchRequest withVideo(Video video) {
         this.video = video;
         return this;
     }
     
+    public StartFaceSearchRequest(@JsonProperty("CollectionId") String collectionId, @JsonProperty("Video") Video video) {
+        this.collectionId = collectionId;
+        this.video = video;
+  }
 }

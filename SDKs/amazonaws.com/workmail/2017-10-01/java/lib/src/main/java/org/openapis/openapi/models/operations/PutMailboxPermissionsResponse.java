@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutMailboxPermissionsResponse {
     
     public String contentType;
+
     public PutMailboxPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutMailboxPermissionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public PutMailboxPermissionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutMailboxPermissionsResponse {
      */
     
     public Object entityStateException;
+
     public PutMailboxPermissionsResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class PutMailboxPermissionsResponse {
      */
     
     public Object invalidParameterException;
+
     public PutMailboxPermissionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutMailboxPermissionsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public PutMailboxPermissionsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutMailboxPermissionsResponse {
      */
     
     public Object organizationStateException;
+
     public PutMailboxPermissionsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -69,6 +76,7 @@ public class PutMailboxPermissionsResponse {
      */
     
     public java.util.Map<String, Object> putMailboxPermissionsResponse;
+
     public PutMailboxPermissionsResponse withPutMailboxPermissionsResponse(java.util.Map<String, Object> putMailboxPermissionsResponse) {
         this.putMailboxPermissionsResponse = putMailboxPermissionsResponse;
         return this;
@@ -76,6 +84,7 @@ public class PutMailboxPermissionsResponse {
     
     
     public Integer statusCode;
+
     public PutMailboxPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutMailboxPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutMailboxPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutMailboxPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

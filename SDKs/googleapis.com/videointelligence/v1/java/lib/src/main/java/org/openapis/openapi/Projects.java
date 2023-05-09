@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.VideointelligenceProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2SpConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUri")
     public String callbackUri;
+
     public GoogleCloudIdentitytoolkitAdminV2SpConfigInput withCallbackUri(String callbackUri) {
         this.callbackUri = callbackUri;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2SpConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spEntityId")
     public String spEntityId;
+
     public GoogleCloudIdentitytoolkitAdminV2SpConfigInput withSpEntityId(String spEntityId) {
         this.spEntityId = spEntityId;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2SpConfigInput(){}
 }

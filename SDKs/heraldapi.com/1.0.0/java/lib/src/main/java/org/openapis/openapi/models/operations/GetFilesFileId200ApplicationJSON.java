@@ -18,9 +18,11 @@ public class GetFilesFileId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public org.openapis.openapi.models.shared.FileV1 file;
+
     public GetFilesFileId200ApplicationJSON withFile(org.openapis.openapi.models.shared.FileV1 file) {
         this.file = file;
         return this;
     }
     
+    public GetFilesFileId200ApplicationJSON(){}
 }

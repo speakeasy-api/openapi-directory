@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetManagedPrefixListAssociationsRequest {
     
     public Boolean dryRun;
+
     public GetManagedPrefixListAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetManagedPrefixListAssociationsRequest {
     
     
     public Long maxResults;
+
     public GetManagedPrefixListAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +25,7 @@ public class GetManagedPrefixListAssociationsRequest {
     
     
     public String nextToken;
+
     public GetManagedPrefixListAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +33,13 @@ public class GetManagedPrefixListAssociationsRequest {
     
     
     public String prefixListId;
+
     public GetManagedPrefixListAssociationsRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
     }
     
+    public GetManagedPrefixListAssociationsRequest(@JsonProperty("PrefixListId") String prefixListId) {
+        this.prefixListId = prefixListId;
+  }
 }

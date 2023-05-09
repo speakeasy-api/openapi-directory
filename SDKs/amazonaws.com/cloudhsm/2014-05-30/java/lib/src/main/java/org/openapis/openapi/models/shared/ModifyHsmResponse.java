@@ -15,9 +15,11 @@ public class ModifyHsmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmArn")
     public String hsmArn;
+
     public ModifyHsmResponse withHsmArn(String hsmArn) {
         this.hsmArn = hsmArn;
         return this;
     }
     
+    public ModifyHsmResponse(){}
 }

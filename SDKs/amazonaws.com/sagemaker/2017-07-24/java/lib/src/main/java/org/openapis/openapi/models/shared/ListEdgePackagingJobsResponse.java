@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEdgePackagingJobsResponse {
     @JsonProperty("EdgePackagingJobSummaries")
     public EdgePackagingJobSummary[] edgePackagingJobSummaries;
+
     public ListEdgePackagingJobsResponse withEdgePackagingJobSummaries(EdgePackagingJobSummary[] edgePackagingJobSummaries) {
         this.edgePackagingJobSummaries = edgePackagingJobSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListEdgePackagingJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEdgePackagingJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEdgePackagingJobsResponse(@JsonProperty("EdgePackagingJobSummaries") EdgePackagingJobSummary[] edgePackagingJobSummaries) {
+        this.edgePackagingJobSummaries = edgePackagingJobSummaries;
+  }
 }

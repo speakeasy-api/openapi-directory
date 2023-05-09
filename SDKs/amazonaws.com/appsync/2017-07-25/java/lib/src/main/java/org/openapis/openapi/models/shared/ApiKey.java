@@ -15,6 +15,7 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletes")
     public Long deletes;
+
     public ApiKey withDeletes(Long deletes) {
         this.deletes = deletes;
         return this;
@@ -23,6 +24,7 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ApiKey withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires")
     public Long expires;
+
     public ApiKey withExpires(Long expires) {
         this.expires = expires;
         return this;
@@ -39,9 +42,11 @@ public class ApiKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApiKey withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ApiKey(){}
 }

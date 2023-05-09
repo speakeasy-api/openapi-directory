@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteApplicationCloudWatchLoggingOptionRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public DeleteApplicationCloudWatchLoggingOptionRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -18,6 +19,7 @@ public class DeleteApplicationCloudWatchLoggingOptionRequest {
     
     @JsonProperty("CloudWatchLoggingOptionId")
     public String cloudWatchLoggingOptionId;
+
     public DeleteApplicationCloudWatchLoggingOptionRequest withCloudWatchLoggingOptionId(String cloudWatchLoggingOptionId) {
         this.cloudWatchLoggingOptionId = cloudWatchLoggingOptionId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteApplicationCloudWatchLoggingOptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalToken")
     public String conditionalToken;
+
     public DeleteApplicationCloudWatchLoggingOptionRequest withConditionalToken(String conditionalToken) {
         this.conditionalToken = conditionalToken;
         return this;
@@ -34,9 +37,14 @@ public class DeleteApplicationCloudWatchLoggingOptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public DeleteApplicationCloudWatchLoggingOptionRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
     }
     
+    public DeleteApplicationCloudWatchLoggingOptionRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("CloudWatchLoggingOptionId") String cloudWatchLoggingOptionId) {
+        this.applicationName = applicationName;
+        this.cloudWatchLoggingOptionId = cloudWatchLoggingOptionId;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstanceLoggingConfigurationsRequestFilters {
     
     public String name;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessInstanceLoggingConfigurationsRequestFilters {
     
     
     public String[] values;
+
     public DescribeVerifiedAccessInstanceLoggingConfigurationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVerifiedAccessInstanceLoggingConfigurationsRequestFilters(){}
 }

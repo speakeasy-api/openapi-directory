@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRecordHistoryResponse {
     
     public String contentType;
+
     public ListRecordHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRecordHistoryResponse {
      */
     
     public Object invalidParametersException;
+
     public ListRecordHistoryResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListRecordHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRecordHistoryOutput listRecordHistoryOutput;
+
     public ListRecordHistoryResponse withListRecordHistoryOutput(org.openapis.openapi.models.shared.ListRecordHistoryOutput listRecordHistoryOutput) {
         this.listRecordHistoryOutput = listRecordHistoryOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListRecordHistoryResponse {
     
     
     public Integer statusCode;
+
     public ListRecordHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListRecordHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRecordHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRecordHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SignJwtResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyId")
     public String keyId;
+
     public SignJwtResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -29,9 +30,11 @@ public class SignJwtResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signedJwt")
     public String signedJwt;
+
     public SignJwtResponse withSignedJwt(String signedJwt) {
         this.signedJwt = signedJwt;
         return this;
     }
     
+    public SignJwtResponse(){}
 }

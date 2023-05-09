@@ -20,6 +20,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public PiiEntitiesDetectionJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -30,6 +31,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public PiiEntitiesDetectionJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public PiiEntitiesDetectionJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -46,6 +49,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public PiiEntitiesDetectionJobProperties withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -54,6 +58,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public PiiEntitiesDetectionJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +67,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public PiiEntitiesDetectionJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public PiiEntitiesDetectionJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -78,6 +85,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public PiiEntitiesDetectionJobProperties withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -86,6 +94,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PiiEntitiesDetectionJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -94,6 +103,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public PiiEntitiesDetectionModeEnum mode;
+
     public PiiEntitiesDetectionJobProperties withMode(PiiEntitiesDetectionModeEnum mode) {
         this.mode = mode;
         return this;
@@ -102,6 +112,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public PiiOutputDataConfig outputDataConfig;
+
     public PiiEntitiesDetectionJobProperties withOutputDataConfig(PiiOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -110,6 +121,7 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedactionConfig")
     public RedactionConfig redactionConfig;
+
     public PiiEntitiesDetectionJobProperties withRedactionConfig(RedactionConfig redactionConfig) {
         this.redactionConfig = redactionConfig;
         return this;
@@ -120,9 +132,11 @@ public class PiiEntitiesDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public PiiEntitiesDetectionJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
     }
     
+    public PiiEntitiesDetectionJobProperties(){}
 }

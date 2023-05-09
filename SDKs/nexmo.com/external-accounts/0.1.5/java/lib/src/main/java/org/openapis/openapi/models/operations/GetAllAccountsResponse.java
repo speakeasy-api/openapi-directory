@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllAccountsResponse {
@@ -12,6 +13,7 @@ public class GetAllAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse;
+
     public GetAllAccountsResponse withFourHundredAndOneResponse(org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse) {
         this.fourHundredAndOneResponse = fourHundredAndOneResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetAllAccountsResponse {
     
     
     public String contentType;
+
     public GetAllAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAllAccountsResponse {
      */
     
     public GetAllAccounts200ApplicationJSON getAllAccounts200ApplicationJSONObject;
+
     public GetAllAccountsResponse withGetAllAccounts200ApplicationJSONObject(GetAllAccounts200ApplicationJSON getAllAccounts200ApplicationJSONObject) {
         this.getAllAccounts200ApplicationJSONObject = getAllAccounts200ApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class GetAllAccountsResponse {
     
     
     public Integer statusCode;
+
     public GetAllAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetAllAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAllAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

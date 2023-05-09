@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1StorageFormatJsonOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     public String encoding;
+
     public GoogleCloudDataplexV1StorageFormatJsonOptions withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
     }
     
+    public GoogleCloudDataplexV1StorageFormatJsonOptions(){}
 }

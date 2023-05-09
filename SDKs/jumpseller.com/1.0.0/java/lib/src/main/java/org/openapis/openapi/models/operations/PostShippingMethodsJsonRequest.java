@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostShippingMethodsJsonRequest {
@@ -12,6 +13,7 @@ public class PostShippingMethodsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit;
+
     public PostShippingMethodsJsonRequest withShippingMethodEdit(org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit) {
         this.shippingMethodEdit = shippingMethodEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostShippingMethodsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostShippingMethodsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,9 +35,15 @@ public class PostShippingMethodsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostShippingMethodsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostShippingMethodsJsonRequest(@JsonProperty("ShippingMethodEdit") org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.shippingMethodEdit = shippingMethodEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

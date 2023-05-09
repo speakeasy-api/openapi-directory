@@ -66,12 +66,10 @@ public class Link {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -127,12 +125,10 @@ public class Link {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -191,12 +187,10 @@ public class Link {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -255,12 +249,10 @@ public class Link {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -343,13 +335,11 @@ public class Link {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -439,13 +429,11 @@ public class Link {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

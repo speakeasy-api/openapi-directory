@@ -18,6 +18,7 @@ public class ConfidentialInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialInstanceType")
     public ConfidentialInstanceConfigConfidentialInstanceTypeEnum confidentialInstanceType;
+
     public ConfidentialInstanceConfig withConfidentialInstanceType(ConfidentialInstanceConfigConfidentialInstanceTypeEnum confidentialInstanceType) {
         this.confidentialInstanceType = confidentialInstanceType;
         return this;
@@ -29,9 +30,11 @@ public class ConfidentialInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableConfidentialCompute")
     public Boolean enableConfidentialCompute;
+
     public ConfidentialInstanceConfig withEnableConfidentialCompute(Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
         return this;
     }
     
+    public ConfidentialInstanceConfig(){}
 }

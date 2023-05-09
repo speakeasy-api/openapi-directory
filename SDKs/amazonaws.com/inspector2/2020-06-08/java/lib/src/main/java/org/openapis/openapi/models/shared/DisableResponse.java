@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableResponse {
     @JsonProperty("accounts")
     public Account[] accounts;
+
     public DisableResponse withAccounts(Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -22,9 +23,13 @@ public class DisableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedAccounts")
     public FailedAccount[] failedAccounts;
+
     public DisableResponse withFailedAccounts(FailedAccount[] failedAccounts) {
         this.failedAccounts = failedAccounts;
         return this;
     }
     
+    public DisableResponse(@JsonProperty("accounts") Account[] accounts) {
+        this.accounts = accounts;
+  }
 }

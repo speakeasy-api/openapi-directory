@@ -15,6 +15,7 @@ public class StartEarthObservationJobRequestBodyInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceConfig")
     public org.openapis.openapi.models.shared.EojDataSourceConfigInput dataSourceConfig;
+
     public StartEarthObservationJobRequestBodyInputConfig withDataSourceConfig(org.openapis.openapi.models.shared.EojDataSourceConfigInput dataSourceConfig) {
         this.dataSourceConfig = dataSourceConfig;
         return this;
@@ -23,6 +24,7 @@ public class StartEarthObservationJobRequestBodyInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreviousEarthObservationJobArn")
     public String previousEarthObservationJobArn;
+
     public StartEarthObservationJobRequestBodyInputConfig withPreviousEarthObservationJobArn(String previousEarthObservationJobArn) {
         this.previousEarthObservationJobArn = previousEarthObservationJobArn;
         return this;
@@ -31,9 +33,11 @@ public class StartEarthObservationJobRequestBodyInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RasterDataCollectionQuery")
     public org.openapis.openapi.models.shared.RasterDataCollectionQueryInput rasterDataCollectionQuery;
+
     public StartEarthObservationJobRequestBodyInputConfig withRasterDataCollectionQuery(org.openapis.openapi.models.shared.RasterDataCollectionQueryInput rasterDataCollectionQuery) {
         this.rasterDataCollectionQuery = rasterDataCollectionQuery;
         return this;
     }
     
+    public StartEarthObservationJobRequestBodyInputConfig(){}
 }

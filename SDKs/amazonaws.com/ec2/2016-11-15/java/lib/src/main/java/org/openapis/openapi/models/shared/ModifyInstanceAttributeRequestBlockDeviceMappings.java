@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceAttributeRequestBlockDeviceMappings {
     
     public String deviceName;
+
     public ModifyInstanceAttributeRequestBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,6 +20,7 @@ public class ModifyInstanceAttributeRequestBlockDeviceMappings {
     
     
     public ModifyInstanceAttributeRequestBlockDeviceMappingsEbs ebs;
+
     public ModifyInstanceAttributeRequestBlockDeviceMappings withEbs(ModifyInstanceAttributeRequestBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
@@ -26,6 +28,7 @@ public class ModifyInstanceAttributeRequestBlockDeviceMappings {
     
     
     public String noDevice;
+
     public ModifyInstanceAttributeRequestBlockDeviceMappings withNoDevice(String noDevice) {
         this.noDevice = noDevice;
         return this;
@@ -33,9 +36,11 @@ public class ModifyInstanceAttributeRequestBlockDeviceMappings {
     
     
     public String virtualName;
+
     public ModifyInstanceAttributeRequestBlockDeviceMappings withVirtualName(String virtualName) {
         this.virtualName = virtualName;
         return this;
     }
     
+    public ModifyInstanceAttributeRequestBlockDeviceMappings(){}
 }

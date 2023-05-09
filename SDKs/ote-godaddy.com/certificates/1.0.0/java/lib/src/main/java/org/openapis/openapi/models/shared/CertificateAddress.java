@@ -14,6 +14,7 @@ public class CertificateAddress {
      */
     @JsonProperty("address1")
     public String address1;
+
     public CertificateAddress withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -25,6 +26,7 @@ public class CertificateAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     public String address2;
+
     public CertificateAddress withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -36,6 +38,7 @@ public class CertificateAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public CertificateAddress withCity(String city) {
         this.city = city;
         return this;
@@ -46,6 +49,7 @@ public class CertificateAddress {
      */
     @JsonProperty("country")
     public CertificateAddressCountryEnum country;
+
     public CertificateAddress withCountry(CertificateAddressCountryEnum country) {
         this.country = country;
         return this;
@@ -57,6 +61,7 @@ public class CertificateAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CertificateAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -68,9 +73,14 @@ public class CertificateAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CertificateAddress withState(String state) {
         this.state = state;
         return this;
     }
     
+    public CertificateAddress(@JsonProperty("address1") String address1, @JsonProperty("country") CertificateAddressCountryEnum country) {
+        this.address1 = address1;
+        this.country = country;
+  }
 }

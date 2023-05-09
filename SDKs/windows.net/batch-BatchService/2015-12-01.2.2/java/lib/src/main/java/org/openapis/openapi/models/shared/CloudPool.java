@@ -23,6 +23,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocationState")
     public CloudPoolAllocationStateEnum allocationState;
+
     public CloudPool withAllocationState(CloudPoolAllocationStateEnum allocationState) {
         this.allocationState = allocationState;
         return this;
@@ -36,6 +37,7 @@ public class CloudPool {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("allocationStateTransitionTime")
     public OffsetDateTime allocationStateTransitionTime;
+
     public CloudPool withAllocationStateTransitionTime(OffsetDateTime allocationStateTransitionTime) {
         this.allocationStateTransitionTime = allocationStateTransitionTime;
         return this;
@@ -47,6 +49,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationPackageReferences")
     public ApplicationPackageReference[] applicationPackageReferences;
+
     public CloudPool withApplicationPackageReferences(ApplicationPackageReference[] applicationPackageReferences) {
         this.applicationPackageReferences = applicationPackageReferences;
         return this;
@@ -58,6 +61,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaleEvaluationInterval")
     public String autoScaleEvaluationInterval;
+
     public CloudPool withAutoScaleEvaluationInterval(String autoScaleEvaluationInterval) {
         this.autoScaleEvaluationInterval = autoScaleEvaluationInterval;
         return this;
@@ -69,6 +73,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaleFormula")
     public String autoScaleFormula;
+
     public CloudPool withAutoScaleFormula(String autoScaleFormula) {
         this.autoScaleFormula = autoScaleFormula;
         return this;
@@ -80,6 +85,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaleRun")
     public AutoScaleRun autoScaleRun;
+
     public CloudPool withAutoScaleRun(AutoScaleRun autoScaleRun) {
         this.autoScaleRun = autoScaleRun;
         return this;
@@ -91,6 +97,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateReferences")
     public CertificateReference[] certificateReferences;
+
     public CloudPool withCertificateReferences(CertificateReference[] certificateReferences) {
         this.certificateReferences = certificateReferences;
         return this;
@@ -104,6 +111,7 @@ public class CloudPool {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CloudPool withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -115,6 +123,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentDedicated")
     public Integer currentDedicated;
+
     public CloudPool withCurrentDedicated(Integer currentDedicated) {
         this.currentDedicated = currentDedicated;
         return this;
@@ -126,6 +135,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentOSVersion")
     public String currentOSVersion;
+
     public CloudPool withCurrentOSVersion(String currentOSVersion) {
         this.currentOSVersion = currentOSVersion;
         return this;
@@ -137,6 +147,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CloudPool withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -148,6 +159,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eTag")
     public String eTag;
+
     public CloudPool withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -159,6 +171,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAutoScale")
     public Boolean enableAutoScale;
+
     public CloudPool withEnableAutoScale(Boolean enableAutoScale) {
         this.enableAutoScale = enableAutoScale;
         return this;
@@ -170,6 +183,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableInterNodeCommunication")
     public Boolean enableInterNodeCommunication;
+
     public CloudPool withEnableInterNodeCommunication(Boolean enableInterNodeCommunication) {
         this.enableInterNodeCommunication = enableInterNodeCommunication;
         return this;
@@ -181,6 +195,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CloudPool withId(String id) {
         this.id = id;
         return this;
@@ -194,6 +209,7 @@ public class CloudPool {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModified")
     public OffsetDateTime lastModified;
+
     public CloudPool withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -205,6 +221,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTasksPerNode")
     public Integer maxTasksPerNode;
+
     public CloudPool withMaxTasksPerNode(Integer maxTasksPerNode) {
         this.maxTasksPerNode = maxTasksPerNode;
         return this;
@@ -216,6 +233,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public CloudPool withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -227,6 +245,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osFamily")
     public String osFamily;
+
     public CloudPool withOsFamily(String osFamily) {
         this.osFamily = osFamily;
         return this;
@@ -238,6 +257,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resizeError")
     public ResizeError resizeError;
+
     public CloudPool withResizeError(ResizeError resizeError) {
         this.resizeError = resizeError;
         return this;
@@ -249,6 +269,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resizeTimeout")
     public String resizeTimeout;
+
     public CloudPool withResizeTimeout(String resizeTimeout) {
         this.resizeTimeout = resizeTimeout;
         return this;
@@ -260,6 +281,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTask")
     public StartTask startTask;
+
     public CloudPool withStartTask(StartTask startTask) {
         this.startTask = startTask;
         return this;
@@ -271,6 +293,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public CloudPoolStateEnum state;
+
     public CloudPool withState(CloudPoolStateEnum state) {
         this.state = state;
         return this;
@@ -284,6 +307,7 @@ public class CloudPool {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateTransitionTime")
     public OffsetDateTime stateTransitionTime;
+
     public CloudPool withStateTransitionTime(OffsetDateTime stateTransitionTime) {
         this.stateTransitionTime = stateTransitionTime;
         return this;
@@ -295,6 +319,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public PoolStatistics stats;
+
     public CloudPool withStats(PoolStatistics stats) {
         this.stats = stats;
         return this;
@@ -306,6 +331,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDedicated")
     public Integer targetDedicated;
+
     public CloudPool withTargetDedicated(Integer targetDedicated) {
         this.targetDedicated = targetDedicated;
         return this;
@@ -317,6 +343,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetOSVersion")
     public String targetOSVersion;
+
     public CloudPool withTargetOSVersion(String targetOSVersion) {
         this.targetOSVersion = targetOSVersion;
         return this;
@@ -328,6 +355,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSchedulingPolicy")
     public TaskSchedulingPolicy taskSchedulingPolicy;
+
     public CloudPool withTaskSchedulingPolicy(TaskSchedulingPolicy taskSchedulingPolicy) {
         this.taskSchedulingPolicy = taskSchedulingPolicy;
         return this;
@@ -339,6 +367,7 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CloudPool withUrl(String url) {
         this.url = url;
         return this;
@@ -350,9 +379,11 @@ public class CloudPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmSize")
     public String vmSize;
+
     public CloudPool withVmSize(String vmSize) {
         this.vmSize = vmSize;
         return this;
     }
     
+    public CloudPool(){}
 }

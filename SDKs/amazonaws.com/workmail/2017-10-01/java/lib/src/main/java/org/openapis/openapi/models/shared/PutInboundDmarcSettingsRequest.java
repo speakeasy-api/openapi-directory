@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutInboundDmarcSettingsRequest {
     @JsonProperty("Enforced")
     public Boolean enforced;
+
     public PutInboundDmarcSettingsRequest withEnforced(Boolean enforced) {
         this.enforced = enforced;
         return this;
@@ -16,9 +17,14 @@ public class PutInboundDmarcSettingsRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public PutInboundDmarcSettingsRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public PutInboundDmarcSettingsRequest(@JsonProperty("Enforced") Boolean enforced, @JsonProperty("OrganizationId") String organizationId) {
+        this.enforced = enforced;
+        this.organizationId = organizationId;
+  }
 }

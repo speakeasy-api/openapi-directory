@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePiiEntitiesDetectionJobResponse {
     
     public String contentType;
+
     public DescribePiiEntitiesDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePiiEntitiesDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePiiEntitiesDetectionJobResponse describePiiEntitiesDetectionJobResponse;
+
     public DescribePiiEntitiesDetectionJobResponse withDescribePiiEntitiesDetectionJobResponse(org.openapis.openapi.models.shared.DescribePiiEntitiesDetectionJobResponse describePiiEntitiesDetectionJobResponse) {
         this.describePiiEntitiesDetectionJobResponse = describePiiEntitiesDetectionJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePiiEntitiesDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribePiiEntitiesDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePiiEntitiesDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribePiiEntitiesDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePiiEntitiesDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public DescribePiiEntitiesDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePiiEntitiesDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public DescribePiiEntitiesDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribePiiEntitiesDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePiiEntitiesDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribePiiEntitiesDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribePiiEntitiesDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribePiiEntitiesDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

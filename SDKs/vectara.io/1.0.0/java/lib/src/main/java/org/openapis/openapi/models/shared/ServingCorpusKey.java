@@ -15,6 +15,7 @@ public class ServingCorpusKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpusId")
     public Long corpusId;
+
     public ServingCorpusKey withCorpusId(Long corpusId) {
         this.corpusId = corpusId;
         return this;
@@ -26,6 +27,7 @@ public class ServingCorpusKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public ServingCorpusKey withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -37,6 +39,7 @@ public class ServingCorpusKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dim")
     public VectaraservingCustomDimension[] dim;
+
     public ServingCorpusKey withDim(VectaraservingCustomDimension[] dim) {
         this.dim = dim;
         return this;
@@ -45,6 +48,7 @@ public class ServingCorpusKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataFilter")
     public String metadataFilter;
+
     public ServingCorpusKey withMetadataFilter(String metadataFilter) {
         this.metadataFilter = metadataFilter;
         return this;
@@ -65,9 +69,11 @@ public class ServingCorpusKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("semantics")
     public CorpusKeySemanticsEnum semantics;
+
     public ServingCorpusKey withSemantics(CorpusKeySemanticsEnum semantics) {
         this.semantics = semantics;
         return this;
     }
     
+    public ServingCorpusKey(){}
 }

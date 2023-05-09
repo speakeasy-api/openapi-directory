@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDataSourceSyncJobsRequest {
     @JsonProperty("Id")
     public String id;
+
     public ListDataSourceSyncJobsRequest withId(String id) {
         this.id = id;
         return this;
@@ -18,6 +19,7 @@ public class ListDataSourceSyncJobsRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public ListDataSourceSyncJobsRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -26,6 +28,7 @@ public class ListDataSourceSyncJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDataSourceSyncJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,6 +37,7 @@ public class ListDataSourceSyncJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataSourceSyncJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,6 +46,7 @@ public class ListDataSourceSyncJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTimeFilter")
     public TimeRange startTimeFilter;
+
     public ListDataSourceSyncJobsRequest withStartTimeFilter(TimeRange startTimeFilter) {
         this.startTimeFilter = startTimeFilter;
         return this;
@@ -50,9 +55,14 @@ public class ListDataSourceSyncJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusFilter")
     public DataSourceSyncJobStatusEnum statusFilter;
+
     public ListDataSourceSyncJobsRequest withStatusFilter(DataSourceSyncJobStatusEnum statusFilter) {
         this.statusFilter = statusFilter;
         return this;
     }
     
+    public ListDataSourceSyncJobsRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

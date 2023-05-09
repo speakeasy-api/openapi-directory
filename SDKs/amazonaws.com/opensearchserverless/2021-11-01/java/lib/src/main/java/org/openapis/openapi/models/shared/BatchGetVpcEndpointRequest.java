@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetVpcEndpointRequest {
     @JsonProperty("ids")
     public String[] ids;
+
     public BatchGetVpcEndpointRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public BatchGetVpcEndpointRequest(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

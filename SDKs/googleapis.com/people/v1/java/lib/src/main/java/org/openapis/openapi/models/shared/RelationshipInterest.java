@@ -18,6 +18,7 @@ public class RelationshipInterest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedValue")
     public String formattedValue;
+
     public RelationshipInterest withFormattedValue(String formattedValue) {
         this.formattedValue = formattedValue;
         return this;
@@ -29,6 +30,7 @@ public class RelationshipInterest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public FieldMetadata metadata;
+
     public RelationshipInterest withMetadata(FieldMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class RelationshipInterest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public RelationshipInterest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RelationshipInterest(){}
 }

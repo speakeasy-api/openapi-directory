@@ -18,6 +18,7 @@ public class WorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_domains")
     public String[] emailDomains;
+
     public WorkspaceResponse withEmailDomains(String[] emailDomains) {
         this.emailDomains = emailDomains;
         return this;
@@ -29,6 +30,7 @@ public class WorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public WorkspaceResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -40,6 +42,7 @@ public class WorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_organization")
     public Boolean isOrganization;
+
     public WorkspaceResponse withIsOrganization(Boolean isOrganization) {
         this.isOrganization = isOrganization;
         return this;
@@ -51,6 +54,7 @@ public class WorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WorkspaceResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class WorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public WorkspaceResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public WorkspaceResponse(){}
 }

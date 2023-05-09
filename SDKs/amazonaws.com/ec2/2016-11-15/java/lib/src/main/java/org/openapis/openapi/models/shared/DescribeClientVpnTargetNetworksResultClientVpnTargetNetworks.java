@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks {
     
     public String associationId;
+
     public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks {
     
     
     public String clientVpnEndpointId;
+
     public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks {
     
     
     public String[] securityGroups;
+
     public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks {
     
     
     public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworksStatus status;
+
     public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks withStatus(DescribeClientVpnTargetNetworksResultClientVpnTargetNetworksStatus status) {
         this.status = status;
         return this;
@@ -40,6 +44,7 @@ public class DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks {
     
     
     public String targetNetworkId;
+
     public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks withTargetNetworkId(String targetNetworkId) {
         this.targetNetworkId = targetNetworkId;
         return this;
@@ -47,9 +52,11 @@ public class DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks {
     
     
     public String vpcId;
+
     public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeClientVpnTargetNetworksResultClientVpnTargetNetworks(){}
 }

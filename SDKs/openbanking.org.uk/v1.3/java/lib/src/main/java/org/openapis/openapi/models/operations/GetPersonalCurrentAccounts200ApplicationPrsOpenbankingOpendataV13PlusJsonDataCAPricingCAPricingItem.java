@@ -18,6 +18,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateOfChange")
     public String dateOfChange;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem withDateOfChange(String dateOfChange) {
         this.dateOfChange = dateOfChange;
         return this;
@@ -29,6 +30,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRateAdjustment")
     public String exchangeRateAdjustment;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem withExchangeRateAdjustment(String exchangeRateAdjustment) {
         this.exchangeRateAdjustment = exchangeRateAdjustment;
         return this;
@@ -40,6 +42,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LengthPromotionalInDays")
     public Long lengthPromotionalInDays;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem withLengthPromotionalInDays(Long lengthPromotionalInDays) {
         this.lengthPromotionalInDays = lengthPromotionalInDays;
         return this;
@@ -51,6 +54,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPromotionOrFutureTerms")
     public String startPromotionOrFutureTerms;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem withStartPromotionOrFutureTerms(String startPromotionOrFutureTerms) {
         this.startPromotionOrFutureTerms = startPromotionOrFutureTerms;
         return this;
@@ -62,9 +66,11 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopPromotionOrFutureTerms")
     public String stopPromotionOrFutureTerms;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem withStopPromotionOrFutureTerms(String stopPromotionOrFutureTerms) {
         this.stopPromotionOrFutureTerms = stopPromotionOrFutureTerms;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem(){}
 }

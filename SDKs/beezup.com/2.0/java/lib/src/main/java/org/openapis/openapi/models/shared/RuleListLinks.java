@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleListLinks {
     @JsonProperty("create")
     public LinksCreateRuleLink create;
+
     public RuleListLinks withCreate(LinksCreateRuleLink create) {
         this.create = create;
         return this;
@@ -19,6 +20,7 @@ public class RuleListLinks {
     
     @JsonProperty("history")
     public LinksGetRulesExecutionsLink history;
+
     public RuleListLinks withHistory(LinksGetRulesExecutionsLink history) {
         this.history = history;
         return this;
@@ -26,6 +28,7 @@ public class RuleListLinks {
     
     @JsonProperty("run")
     public LinksRunRulesLink run;
+
     public RuleListLinks withRun(LinksRunRulesLink run) {
         this.run = run;
         return this;
@@ -33,9 +36,16 @@ public class RuleListLinks {
     
     @JsonProperty("self")
     public LinksGetRulesLink self;
+
     public RuleListLinks withSelf(LinksGetRulesLink self) {
         this.self = self;
         return this;
     }
     
+    public RuleListLinks(@JsonProperty("create") LinksCreateRuleLink create, @JsonProperty("history") LinksGetRulesExecutionsLink history, @JsonProperty("run") LinksRunRulesLink run, @JsonProperty("self") LinksGetRulesLink self) {
+        this.create = create;
+        this.history = history;
+        this.run = run;
+        this.self = self;
+  }
 }

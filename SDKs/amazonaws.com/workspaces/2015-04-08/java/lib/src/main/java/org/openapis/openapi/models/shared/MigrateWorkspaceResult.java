@@ -15,6 +15,7 @@ public class MigrateWorkspaceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceWorkspaceId")
     public String sourceWorkspaceId;
+
     public MigrateWorkspaceResult withSourceWorkspaceId(String sourceWorkspaceId) {
         this.sourceWorkspaceId = sourceWorkspaceId;
         return this;
@@ -23,9 +24,11 @@ public class MigrateWorkspaceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetWorkspaceId")
     public String targetWorkspaceId;
+
     public MigrateWorkspaceResult withTargetWorkspaceId(String targetWorkspaceId) {
         this.targetWorkspaceId = targetWorkspaceId;
         return this;
     }
     
+    public MigrateWorkspaceResult(){}
 }

@@ -12,6 +12,7 @@ public class CfltrRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public CfltrRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class CfltrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CfltrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class CfltrRequestBodyCertificateParameters {
      */
     @JsonProperty("RegNum")
     public String regNum;
+
     public CfltrRequestBodyCertificateParameters withRegNum(String regNum) {
         this.regNum = regNum;
         return this;
@@ -42,9 +45,16 @@ public class CfltrRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public CfltrRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CfltrRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RegNum") String regNum, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.regNum = regNum;
+        this.uid = uid;
+  }
 }

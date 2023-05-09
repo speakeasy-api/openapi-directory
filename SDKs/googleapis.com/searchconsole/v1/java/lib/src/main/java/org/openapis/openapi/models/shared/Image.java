@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public Image withData(String data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public Image withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public Image(){}
 }

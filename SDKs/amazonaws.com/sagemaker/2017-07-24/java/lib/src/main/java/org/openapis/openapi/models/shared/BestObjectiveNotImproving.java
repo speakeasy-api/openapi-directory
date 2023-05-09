@@ -15,9 +15,11 @@ public class BestObjectiveNotImproving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxNumberOfTrainingJobsNotImproving")
     public Long maxNumberOfTrainingJobsNotImproving;
+
     public BestObjectiveNotImproving withMaxNumberOfTrainingJobsNotImproving(Long maxNumberOfTrainingJobsNotImproving) {
         this.maxNumberOfTrainingJobsNotImproving = maxNumberOfTrainingJobsNotImproving;
         return this;
     }
     
+    public BestObjectiveNotImproving(){}
 }

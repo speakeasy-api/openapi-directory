@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectedHomeSettings {
     @JsonProperty("Labels")
     public String[] labels;
+
     public ConnectedHomeSettings withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -22,9 +23,13 @@ public class ConnectedHomeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public ConnectedHomeSettings withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
     }
     
+    public ConnectedHomeSettings(@JsonProperty("Labels") String[] labels) {
+        this.labels = labels;
+  }
 }

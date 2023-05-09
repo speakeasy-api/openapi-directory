@@ -12,6 +12,7 @@ public class ListLaunchPathsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListLaunchPathsInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class ListLaunchPathsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListLaunchPathsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,6 +30,7 @@ public class ListLaunchPathsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListLaunchPathsInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -35,9 +38,13 @@ public class ListLaunchPathsInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public ListLaunchPathsInput withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ListLaunchPathsInput(@JsonProperty("ProductId") String productId) {
+        this.productId = productId;
+  }
 }

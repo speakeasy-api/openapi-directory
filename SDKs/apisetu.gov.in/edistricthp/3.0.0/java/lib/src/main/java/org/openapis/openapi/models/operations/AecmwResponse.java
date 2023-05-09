@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AecmwResponse {
     
     public String contentType;
+
     public AecmwResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AecmwResponse {
     
     
     public Integer statusCode;
+
     public AecmwResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AecmwResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AecmwResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AecmwResponse {
      */
     
     public Aecmw400ApplicationJSON aecmw400ApplicationJSONObject;
+
     public AecmwResponse withAecmw400ApplicationJSONObject(Aecmw400ApplicationJSON aecmw400ApplicationJSONObject) {
         this.aecmw400ApplicationJSONObject = aecmw400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AecmwResponse {
      */
     
     public Aecmw401ApplicationJSON aecmw401ApplicationJSONObject;
+
     public AecmwResponse withAecmw401ApplicationJSONObject(Aecmw401ApplicationJSON aecmw401ApplicationJSONObject) {
         this.aecmw401ApplicationJSONObject = aecmw401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class AecmwResponse {
      */
     
     public Aecmw404ApplicationJSON aecmw404ApplicationJSONObject;
+
     public AecmwResponse withAecmw404ApplicationJSONObject(Aecmw404ApplicationJSON aecmw404ApplicationJSONObject) {
         this.aecmw404ApplicationJSONObject = aecmw404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class AecmwResponse {
      */
     
     public Aecmw500ApplicationJSON aecmw500ApplicationJSONObject;
+
     public AecmwResponse withAecmw500ApplicationJSONObject(Aecmw500ApplicationJSON aecmw500ApplicationJSONObject) {
         this.aecmw500ApplicationJSONObject = aecmw500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class AecmwResponse {
      */
     
     public Aecmw502ApplicationJSON aecmw502ApplicationJSONObject;
+
     public AecmwResponse withAecmw502ApplicationJSONObject(Aecmw502ApplicationJSON aecmw502ApplicationJSONObject) {
         this.aecmw502ApplicationJSONObject = aecmw502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class AecmwResponse {
      */
     
     public Aecmw503ApplicationJSON aecmw503ApplicationJSONObject;
+
     public AecmwResponse withAecmw503ApplicationJSONObject(Aecmw503ApplicationJSON aecmw503ApplicationJSONObject) {
         this.aecmw503ApplicationJSONObject = aecmw503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class AecmwResponse {
      */
     
     public Aecmw504ApplicationJSON aecmw504ApplicationJSONObject;
+
     public AecmwResponse withAecmw504ApplicationJSONObject(Aecmw504ApplicationJSON aecmw504ApplicationJSONObject) {
         this.aecmw504ApplicationJSONObject = aecmw504ApplicationJSONObject;
         return this;
     }
     
+    public AecmwResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

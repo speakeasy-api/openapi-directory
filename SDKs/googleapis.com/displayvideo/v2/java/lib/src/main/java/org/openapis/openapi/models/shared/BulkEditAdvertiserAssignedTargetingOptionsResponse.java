@@ -18,9 +18,11 @@ public class BulkEditAdvertiserAssignedTargetingOptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAssignedTargetingOptions")
     public AssignedTargetingOption[] createdAssignedTargetingOptions;
+
     public BulkEditAdvertiserAssignedTargetingOptionsResponse withCreatedAssignedTargetingOptions(AssignedTargetingOption[] createdAssignedTargetingOptions) {
         this.createdAssignedTargetingOptions = createdAssignedTargetingOptions;
         return this;
     }
     
+    public BulkEditAdvertiserAssignedTargetingOptionsResponse(){}
 }

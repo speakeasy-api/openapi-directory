@@ -15,9 +15,11 @@ public class DescribeAlertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alert")
     public Alert alert;
+
     public DescribeAlertResponse withAlert(Alert alert) {
         this.alert = alert;
         return this;
     }
     
+    public DescribeAlertResponse(){}
 }

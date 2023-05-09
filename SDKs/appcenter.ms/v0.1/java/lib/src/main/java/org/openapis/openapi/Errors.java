@@ -61,12 +61,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsAppBuildsListResponse res = new org.openapis.openapi.models.operations.ErrorsAppBuildsListResponse() {{
+        org.openapis.openapi.models.operations.ErrorsAppBuildsListResponse res = new org.openapis.openapi.models.operations.ErrorsAppBuildsListResponse(contentType, httpRes.statusCode()) {{
             errorsAppBuildsList200ApplicationJSONObject = null;
             errorsAppBuildsListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsAvailableVersionsResponse res = new org.openapis.openapi.models.operations.ErrorsAvailableVersionsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsAvailableVersionsResponse res = new org.openapis.openapi.models.operations.ErrorsAvailableVersionsResponse(contentType, httpRes.statusCode()) {{
             errorsAvailableVersions200ApplicationJSONObject = null;
             errorsAvailableVersionsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,12 +165,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsCountsPerDayResponse res = new org.openapis.openapi.models.operations.ErrorsCountsPerDayResponse() {{
+        org.openapis.openapi.models.operations.ErrorsCountsPerDayResponse res = new org.openapis.openapi.models.operations.ErrorsCountsPerDayResponse(contentType, httpRes.statusCode()) {{
             errorsCountsPerDay200ApplicationJSONObject = null;
             errorsCountsPerDayDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,12 +211,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsDeleteErrorResponse res = new org.openapis.openapi.models.operations.ErrorsDeleteErrorResponse() {{
+        org.openapis.openapi.models.operations.ErrorsDeleteErrorResponse res = new org.openapis.openapi.models.operations.ErrorsDeleteErrorResponse(contentType, httpRes.statusCode()) {{
             errorsDeleteError200ApplicationJSONObject = null;
             errorsDeleteErrorDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,12 +257,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationResponse res = new org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationResponse res = new org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationResponse(contentType, httpRes.statusCode()) {{
             errorsErrorAttachmentLocation200ApplicationJSONObject = null;
             errorsErrorAttachmentLocationDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,12 +303,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextResponse res = new org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextResponse res = new org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextResponse(contentType, httpRes.statusCode()) {{
             errorsErrorAttachmentText200ApplicationJSONObject = null;
             errorsErrorAttachmentTextDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,12 +349,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorAttachmentsResponse res = new org.openapis.openapi.models.operations.ErrorsErrorAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorAttachmentsResponse res = new org.openapis.openapi.models.operations.ErrorsErrorAttachmentsResponse(contentType, httpRes.statusCode()) {{
             errorsErrorAttachments200ApplicationJSONObjects = null;
             errorsErrorAttachmentsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,12 +401,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorDownloadResponse res = new org.openapis.openapi.models.operations.ErrorsErrorDownloadResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorDownloadResponse res = new org.openapis.openapi.models.operations.ErrorsErrorDownloadResponse(contentType, httpRes.statusCode()) {{
             errorsErrorDownload200ApplicationJSONFileObject = null;
             errorsErrorDownloadDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,6 +419,58 @@ public class Errors {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.ErrorsErrorDownloadDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.ErrorsErrorDownloadDefaultApplicationJSON.class);
                 res.errorsErrorDownloadDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Percentage of error-free devices by day in the time range based on the selected versions. If SingleErrorTypeParameter is not provided, defaults to handlederror. API will return -1 if crash devices is greater than active devices
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesResponse errorsErrorFreeDevicePercentages(org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesRequest request, org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorfreeDevicePercentages", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesResponse res = new org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesResponse(contentType, httpRes.statusCode()) {{
+            errorsErrorFreeDevicePercentages200ApplicationJSONObject = null;
+            errorsErrorFreeDevicePercentagesDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentages200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentages200ApplicationJSON.class);
+                res.errorsErrorFreeDevicePercentages200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.ErrorsErrorFreeDevicePercentagesDefaultApplicationJSON.class);
+                res.errorsErrorFreeDevicePercentagesDefaultApplicationJSONObject = out;
             }
         }
 
@@ -469,12 +505,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchResponse res = new org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchResponse res = new org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchResponse(contentType, httpRes.statusCode()) {{
             errorsErrorGroupsSearch200ApplicationJSONObject = null;
             errorsErrorGroupsSearchDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,12 +551,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorLocationResponse res = new org.openapis.openapi.models.operations.ErrorsErrorLocationResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorLocationResponse res = new org.openapis.openapi.models.operations.ErrorsErrorLocationResponse(contentType, httpRes.statusCode()) {{
             errorsErrorLocation200ApplicationJSONObject = null;
             errorsErrorLocationDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,12 +603,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorSearchResponse res = new org.openapis.openapi.models.operations.ErrorsErrorSearchResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorSearchResponse res = new org.openapis.openapi.models.operations.ErrorsErrorSearchResponse(contentType, httpRes.statusCode()) {{
             errorsErrorSearch200ApplicationJSONObject = null;
             errorsErrorSearchDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -619,12 +649,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsErrorStackTraceResponse res = new org.openapis.openapi.models.operations.ErrorsErrorStackTraceResponse() {{
+        org.openapis.openapi.models.operations.ErrorsErrorStackTraceResponse res = new org.openapis.openapi.models.operations.ErrorsErrorStackTraceResponse(contentType, httpRes.statusCode()) {{
             diagnosticsStackTrace = null;
             errorsErrorStackTraceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -667,12 +695,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGetErrorDetailsResponse res = new org.openapis.openapi.models.operations.ErrorsGetErrorDetailsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGetErrorDetailsResponse res = new org.openapis.openapi.models.operations.ErrorsGetErrorDetailsResponse(contentType, httpRes.statusCode()) {{
             errorsGetErrorDetails200ApplicationJSONObject = null;
             errorsGetErrorDetailsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,12 +747,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayResponse res = new org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayResponse res = new org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayResponse(contentType, httpRes.statusCode()) {{
             errorsGroupCountsPerDay200ApplicationJSONObject = null;
             errorsGroupCountsPerDayDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -769,12 +793,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGroupDetailsResponse res = new org.openapis.openapi.models.operations.ErrorsGroupDetailsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGroupDetailsResponse res = new org.openapis.openapi.models.operations.ErrorsGroupDetailsResponse(contentType, httpRes.statusCode()) {{
             errorsGroupDetails200ApplicationJSONObject = null;
             errorsGroupDetailsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -823,12 +845,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesResponse res = new org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesResponse res = new org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesResponse(contentType, httpRes.statusCode()) {{
             errorsGroupErrorFreeDevicePercentages200ApplicationJSONObject = null;
             errorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -871,12 +891,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceResponse res = new org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceResponse res = new org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceResponse(contentType, httpRes.statusCode()) {{
             diagnosticsStackTrace = null;
             errorsGroupErrorStackTraceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -925,12 +943,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGroupListResponse res = new org.openapis.openapi.models.operations.ErrorsGroupListResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGroupListResponse res = new org.openapis.openapi.models.operations.ErrorsGroupListResponse(contentType, httpRes.statusCode()) {{
             errorsGroupList200ApplicationJSONObject = null;
             errorsGroupListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -979,12 +995,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGroupModelCountsResponse res = new org.openapis.openapi.models.operations.ErrorsGroupModelCountsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGroupModelCountsResponse res = new org.openapis.openapi.models.operations.ErrorsGroupModelCountsResponse(contentType, httpRes.statusCode()) {{
             errorsGroupModelCounts200ApplicationJSONObject = null;
             errorsGroupModelCountsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1033,12 +1047,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsResponse res = new org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsResponse res = new org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsResponse(contentType, httpRes.statusCode()) {{
             errorsGroupOperatingSystemCounts200ApplicationJSONObject = null;
             errorsGroupOperatingSystemCountsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1081,12 +1093,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsResponse res = new org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsResponse res = new org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsResponse(contentType, httpRes.statusCode()) {{
             errorsLatestErrorDetails200ApplicationJSONObject = null;
             errorsLatestErrorDetailsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1135,12 +1145,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsListForGroupResponse res = new org.openapis.openapi.models.operations.ErrorsListForGroupResponse() {{
+        org.openapis.openapi.models.operations.ErrorsListForGroupResponse res = new org.openapis.openapi.models.operations.ErrorsListForGroupResponse(contentType, httpRes.statusCode()) {{
             errorsListForGroup200ApplicationJSONObject = null;
             errorsListForGroupDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1189,12 +1197,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsListSessionLogsResponse res = new org.openapis.openapi.models.operations.ErrorsListSessionLogsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsListSessionLogsResponse res = new org.openapis.openapi.models.operations.ErrorsListSessionLogsResponse(contentType, httpRes.statusCode()) {{
             errorsListSessionLogs200ApplicationJSONObject = null;
             errorsListSessionLogsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1242,12 +1248,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsUpdateStateResponse res = new org.openapis.openapi.models.operations.ErrorsUpdateStateResponse() {{
+        org.openapis.openapi.models.operations.ErrorsUpdateStateResponse res = new org.openapis.openapi.models.operations.ErrorsUpdateStateResponse(contentType, httpRes.statusCode()) {{
             errorsUpdateState200ApplicationJSONObject = null;
             errorsUpdateStateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1291,12 +1295,10 @@ public class Errors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsResponse res = new org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsResponse() {{
+        org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsResponse res = new org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsResponse(contentType, httpRes.statusCode()) {{
             errorsGetRetentionSettings200ApplicationJSONObject = null;
             errorsGetRetentionSettingsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

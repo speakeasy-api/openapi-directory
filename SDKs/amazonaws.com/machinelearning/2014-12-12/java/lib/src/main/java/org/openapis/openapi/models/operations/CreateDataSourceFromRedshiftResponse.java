@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataSourceFromRedshiftResponse {
     
     public String contentType;
+
     public CreateDataSourceFromRedshiftResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataSourceFromRedshiftResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataSourceFromRedshiftOutput createDataSourceFromRedshiftOutput;
+
     public CreateDataSourceFromRedshiftResponse withCreateDataSourceFromRedshiftOutput(org.openapis.openapi.models.shared.CreateDataSourceFromRedshiftOutput createDataSourceFromRedshiftOutput) {
         this.createDataSourceFromRedshiftOutput = createDataSourceFromRedshiftOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataSourceFromRedshiftResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateDataSourceFromRedshiftResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataSourceFromRedshiftResponse {
      */
     
     public Object internalServerException;
+
     public CreateDataSourceFromRedshiftResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataSourceFromRedshiftResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDataSourceFromRedshiftResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDataSourceFromRedshiftResponse {
     
     
     public Integer statusCode;
+
     public CreateDataSourceFromRedshiftResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateDataSourceFromRedshiftResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataSourceFromRedshiftResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDataSourceFromRedshiftResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

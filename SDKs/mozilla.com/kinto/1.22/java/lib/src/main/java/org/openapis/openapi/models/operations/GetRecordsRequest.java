@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecordsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public GetRecordsRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -16,6 +18,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetRecordsRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -23,6 +26,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_before")
     public Long before;
+
     public GetRecordsRequest withBefore(Long before) {
         this.before = before;
         return this;
@@ -30,6 +34,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
     public String[] fields;
+
     public GetRecordsRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -37,6 +42,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_limit")
     public Long limit;
+
     public GetRecordsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -44,6 +50,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_since")
     public Long since;
+
     public GetRecordsRequest withSince(Long since) {
         this.since = since;
         return this;
@@ -51,6 +58,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_sort")
     public String[] sort;
+
     public GetRecordsRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -58,6 +66,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
     public Long to;
+
     public GetRecordsRequest withTo(Long to) {
         this.to = to;
         return this;
@@ -65,6 +74,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_token")
     public String token;
+
     public GetRecordsRequest withToken(String token) {
         this.token = token;
         return this;
@@ -72,6 +82,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
     public String bucketId;
+
     public GetRecordsRequest withBucketId(String bucketId) {
         this.bucketId = bucketId;
         return this;
@@ -79,6 +90,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public GetRecordsRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -86,6 +98,7 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetRecordsRequest withId(String id) {
         this.id = id;
         return this;
@@ -93,9 +106,14 @@ public class GetRecordsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_modified")
     public Long lastModified;
+
     public GetRecordsRequest withLastModified(Long lastModified) {
         this.lastModified = lastModified;
         return this;
     }
     
+    public GetRecordsRequest(@JsonProperty("bucket_id") String bucketId, @JsonProperty("collection_id") String collectionId) {
+        this.bucketId = bucketId;
+        this.collectionId = collectionId;
+  }
 }

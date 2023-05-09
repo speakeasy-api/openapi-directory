@@ -15,6 +15,7 @@ public class Ec2InstanceCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ACTIVE")
     public Long active;
+
     public Ec2InstanceCounts withActive(Long active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class Ec2InstanceCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DESIRED")
     public Long desired;
+
     public Ec2InstanceCounts withDesired(Long desired) {
         this.desired = desired;
         return this;
@@ -31,6 +33,7 @@ public class Ec2InstanceCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IDLE")
     public Long idle;
+
     public Ec2InstanceCounts withIdle(Long idle) {
         this.idle = idle;
         return this;
@@ -39,6 +42,7 @@ public class Ec2InstanceCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MAXIMUM")
     public Long maximum;
+
     public Ec2InstanceCounts withMaximum(Long maximum) {
         this.maximum = maximum;
         return this;
@@ -47,6 +51,7 @@ public class Ec2InstanceCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MINIMUM")
     public Long minimum;
+
     public Ec2InstanceCounts withMinimum(Long minimum) {
         this.minimum = minimum;
         return this;
@@ -55,6 +60,7 @@ public class Ec2InstanceCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PENDING")
     public Long pending;
+
     public Ec2InstanceCounts withPending(Long pending) {
         this.pending = pending;
         return this;
@@ -63,9 +69,11 @@ public class Ec2InstanceCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TERMINATING")
     public Long terminating;
+
     public Ec2InstanceCounts withTerminating(Long terminating) {
         this.terminating = terminating;
         return this;
     }
     
+    public Ec2InstanceCounts(){}
 }

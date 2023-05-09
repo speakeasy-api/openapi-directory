@@ -15,6 +15,7 @@ public class ErrorV1 {
      */
     @JsonProperty("code")
     public ErrorV1CodeEnum code;
+
     public ErrorV1 withCode(ErrorV1CodeEnum code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class ErrorV1 {
      */
     @JsonProperty("id")
     public String id;
+
     public ErrorV1 withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +37,15 @@ public class ErrorV1 {
      */
     @JsonProperty("message")
     public String message;
+
     public ErrorV1 withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorV1(@JsonProperty("code") ErrorV1CodeEnum code, @JsonProperty("id") String id, @JsonProperty("message") String message) {
+        this.code = code;
+        this.id = id;
+        this.message = message;
+  }
 }

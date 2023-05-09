@@ -25,6 +25,7 @@ public class NotificationConfig {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deliveryTime")
     public OffsetDateTime deliveryTime;
+
     public NotificationConfig withDeliveryTime(OffsetDateTime deliveryTime) {
         this.deliveryTime = deliveryTime;
         return this;
@@ -37,9 +38,11 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public String level;
+
     public NotificationConfig withLevel(String level) {
         this.level = level;
         return this;
     }
     
+    public NotificationConfig(){}
 }

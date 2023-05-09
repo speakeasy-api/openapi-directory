@@ -15,6 +15,7 @@ public class AdminListCorporaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpus")
     public AdminCorpus[] corpus;
+
     public AdminListCorporaResponse withCorpus(AdminCorpus[] corpus) {
         this.corpus = corpus;
         return this;
@@ -27,6 +28,7 @@ public class AdminListCorporaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageKey")
     public String pageKey;
+
     public AdminListCorporaResponse withPageKey(String pageKey) {
         this.pageKey = pageKey;
         return this;
@@ -35,9 +37,11 @@ public class AdminListCorporaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComvectaraStatus status;
+
     public AdminListCorporaResponse withStatus(ComvectaraStatus status) {
         this.status = status;
         return this;
     }
     
+    public AdminListCorporaResponse(){}
 }

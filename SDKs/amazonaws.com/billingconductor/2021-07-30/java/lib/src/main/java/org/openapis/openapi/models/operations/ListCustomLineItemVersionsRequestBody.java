@@ -14,6 +14,7 @@ public class ListCustomLineItemVersionsRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public ListCustomLineItemVersionsRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class ListCustomLineItemVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ListCustomLineItemVersionsRequestBodyFilters filters;
+
     public ListCustomLineItemVersionsRequestBody withFilters(ListCustomLineItemVersionsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -36,6 +38,7 @@ public class ListCustomLineItemVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCustomLineItemVersionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,9 +50,13 @@ public class ListCustomLineItemVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomLineItemVersionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomLineItemVersionsRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

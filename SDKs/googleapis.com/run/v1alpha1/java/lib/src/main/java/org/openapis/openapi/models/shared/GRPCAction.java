@@ -18,6 +18,7 @@ public class GRPCAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public GRPCAction withPort(Integer port) {
         this.port = port;
         return this;
@@ -29,9 +30,11 @@ public class GRPCAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public GRPCAction withService(String service) {
         this.service = service;
         return this;
     }
     
+    public GRPCAction(){}
 }

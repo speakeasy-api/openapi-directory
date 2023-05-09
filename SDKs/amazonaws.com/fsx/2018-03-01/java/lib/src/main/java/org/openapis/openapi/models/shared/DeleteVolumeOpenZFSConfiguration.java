@@ -15,9 +15,11 @@ public class DeleteVolumeOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public DeleteOpenZFSVolumeOptionEnum[] options;
+
     public DeleteVolumeOpenZFSConfiguration withOptions(DeleteOpenZFSVolumeOptionEnum[] options) {
         this.options = options;
         return this;
     }
     
+    public DeleteVolumeOpenZFSConfiguration(){}
 }

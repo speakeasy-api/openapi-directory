@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ConversationTurnUserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSentimentAnalysis")
     public Boolean enableSentimentAnalysis;
+
     public GoogleCloudDialogflowCxV3ConversationTurnUserInput withEnableSentimentAnalysis(Boolean enableSentimentAnalysis) {
         this.enableSentimentAnalysis = enableSentimentAnalysis;
         return this;
@@ -29,17 +30,19 @@ public class GoogleCloudDialogflowCxV3ConversationTurnUserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("injectedParameters")
     public java.util.Map<String, Object> injectedParameters;
+
     public GoogleCloudDialogflowCxV3ConversationTurnUserInput withInjectedParameters(java.util.Map<String, Object> injectedParameters) {
         this.injectedParameters = injectedParameters;
         return this;
     }
     
     /**
-     * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 
+     * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 5. DTMF digits to invoke an intent and fill in parameter value.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public GoogleCloudDialogflowCxV3QueryInput input;
+
     public GoogleCloudDialogflowCxV3ConversationTurnUserInput withInput(GoogleCloudDialogflowCxV3QueryInput input) {
         this.input = input;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3ConversationTurnUserInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isWebhookEnabled")
     public Boolean isWebhookEnabled;
+
     public GoogleCloudDialogflowCxV3ConversationTurnUserInput withIsWebhookEnabled(Boolean isWebhookEnabled) {
         this.isWebhookEnabled = isWebhookEnabled;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ConversationTurnUserInput(){}
 }

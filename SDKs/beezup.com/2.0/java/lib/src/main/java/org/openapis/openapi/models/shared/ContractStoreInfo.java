@@ -18,6 +18,7 @@ public class ContractStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalStorePrice")
     public Double additionalStorePrice;
+
     public ContractStoreInfo withAdditionalStorePrice(Double additionalStorePrice) {
         this.additionalStorePrice = additionalStorePrice;
         return this;
@@ -29,6 +30,7 @@ public class ContractStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxStoreCount")
     public Integer maxStoreCount;
+
     public ContractStoreInfo withMaxStoreCount(Integer maxStoreCount) {
         this.maxStoreCount = maxStoreCount;
         return this;
@@ -40,6 +42,7 @@ public class ContractStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minStoreCount")
     public Integer minStoreCount;
+
     public ContractStoreInfo withMinStoreCount(Integer minStoreCount) {
         this.minStoreCount = minStoreCount;
         return this;
@@ -51,6 +54,7 @@ public class ContractStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownedStoreCount")
     public Integer ownedStoreCount;
+
     public ContractStoreInfo withOwnedStoreCount(Integer ownedStoreCount) {
         this.ownedStoreCount = ownedStoreCount;
         return this;
@@ -62,6 +66,7 @@ public class ContractStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCount")
     public Integer storeCount;
+
     public ContractStoreInfo withStoreCount(Integer storeCount) {
         this.storeCount = storeCount;
         return this;
@@ -73,9 +78,11 @@ public class ContractStoreInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeIncluded")
     public Integer storeIncluded;
+
     public ContractStoreInfo withStoreIncluded(Integer storeIncluded) {
         this.storeIncluded = storeIncluded;
         return this;
     }
     
+    public ContractStoreInfo(){}
 }

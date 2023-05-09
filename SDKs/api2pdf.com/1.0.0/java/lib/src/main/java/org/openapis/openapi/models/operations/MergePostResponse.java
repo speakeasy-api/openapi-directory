@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergePostResponse {
@@ -12,6 +13,7 @@ public class MergePostResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure;
+
     public MergePostResponse withApiResponseFailure(org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure) {
         this.apiResponseFailure = apiResponseFailure;
         return this;
@@ -22,6 +24,7 @@ public class MergePostResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess;
+
     public MergePostResponse withApiResponseSuccess(org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess) {
         this.apiResponseSuccess = apiResponseSuccess;
         return this;
@@ -29,6 +32,7 @@ public class MergePostResponse {
     
     
     public String contentType;
+
     public MergePostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class MergePostResponse {
     
     
     public Integer statusCode;
+
     public MergePostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class MergePostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergePostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MergePostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class IngredientObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public IngredientObjectItems[] items;
+
     public IngredientObject withItems(IngredientObjectItems[] items) {
         this.items = items;
         return this;
     }
     
+    public IngredientObject(){}
 }

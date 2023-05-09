@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGameConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateGameConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateGameConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGameConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateGameConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGameConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateGameConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateGameConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateGameConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateGameConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGameConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGameConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateGameConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGameConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateGameConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGameConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateGameConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateGameConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGameConfigurationResult updateGameConfigurationResult;
+
     public UpdateGameConfigurationResponse withUpdateGameConfigurationResult(org.openapis.openapi.models.shared.UpdateGameConfigurationResult updateGameConfigurationResult) {
         this.updateGameConfigurationResult = updateGameConfigurationResult;
         return this;
@@ -93,9 +103,14 @@ public class UpdateGameConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateGameConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateGameConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

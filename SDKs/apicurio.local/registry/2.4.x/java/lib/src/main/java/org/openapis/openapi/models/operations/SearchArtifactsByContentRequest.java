@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchArtifactsByContentRequest {
@@ -12,6 +13,7 @@ public class SearchArtifactsByContentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
     public byte[] requestBody;
+
     public SearchArtifactsByContentRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class SearchArtifactsByContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=artifactType")
     public String artifactType;
+
     public SearchArtifactsByContentRequest withArtifactType(String artifactType) {
         this.artifactType = artifactType;
         return this;
@@ -32,6 +35,7 @@ public class SearchArtifactsByContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canonical")
     public Boolean canonical;
+
     public SearchArtifactsByContentRequest withCanonical(Boolean canonical) {
         this.canonical = canonical;
         return this;
@@ -42,6 +46,7 @@ public class SearchArtifactsByContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public SearchArtifactsByContentRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class SearchArtifactsByContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public SearchArtifactsByContentRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -62,6 +68,7 @@ public class SearchArtifactsByContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public SearchArtifactsByContentOrderEnum order;
+
     public SearchArtifactsByContentRequest withOrder(SearchArtifactsByContentOrderEnum order) {
         this.order = order;
         return this;
@@ -76,9 +83,13 @@ public class SearchArtifactsByContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderby")
     public SearchArtifactsByContentOrderbyEnum orderby;
+
     public SearchArtifactsByContentRequest withOrderby(SearchArtifactsByContentOrderbyEnum orderby) {
         this.orderby = orderby;
         return this;
     }
     
+    public SearchArtifactsByContentRequest(@JsonProperty("RequestBody") byte[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

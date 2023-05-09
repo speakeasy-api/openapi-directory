@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StoreReleasesGetLatestResponse {
     
     public String contentType;
+
     public StoreReleasesGetLatestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StoreReleasesGetLatestResponse {
     
     
     public Integer statusCode;
+
     public StoreReleasesGetLatestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StoreReleasesGetLatestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StoreReleasesGetLatestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class StoreReleasesGetLatestResponse {
      */
     
     public StoreReleasesGetLatest200ApplicationJSON[] storeReleasesGetLatest200ApplicationJSONObjects;
+
     public StoreReleasesGetLatestResponse withStoreReleasesGetLatest200ApplicationJSONObjects(StoreReleasesGetLatest200ApplicationJSON[] storeReleasesGetLatest200ApplicationJSONObjects) {
         this.storeReleasesGetLatest200ApplicationJSONObjects = storeReleasesGetLatest200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class StoreReleasesGetLatestResponse {
      */
     
     public StoreReleasesGetLatestDefaultApplicationJSON storeReleasesGetLatestDefaultApplicationJSONObject;
+
     public StoreReleasesGetLatestResponse withStoreReleasesGetLatestDefaultApplicationJSONObject(StoreReleasesGetLatestDefaultApplicationJSON storeReleasesGetLatestDefaultApplicationJSONObject) {
         this.storeReleasesGetLatestDefaultApplicationJSONObject = storeReleasesGetLatestDefaultApplicationJSONObject;
         return this;
     }
     
+    public StoreReleasesGetLatestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

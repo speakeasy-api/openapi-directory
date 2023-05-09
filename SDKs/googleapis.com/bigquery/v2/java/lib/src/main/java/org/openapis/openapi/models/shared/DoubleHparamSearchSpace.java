@@ -18,6 +18,7 @@ public class DoubleHparamSearchSpace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public DoubleCandidates candidates;
+
     public DoubleHparamSearchSpace withCandidates(DoubleCandidates candidates) {
         this.candidates = candidates;
         return this;
@@ -29,9 +30,11 @@ public class DoubleHparamSearchSpace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public DoubleRange range;
+
     public DoubleHparamSearchSpace withRange(DoubleRange range) {
         this.range = range;
         return this;
     }
     
+    public DoubleHparamSearchSpace(){}
 }

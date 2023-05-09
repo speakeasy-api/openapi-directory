@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1CustomEmojisResponse {
     
     public String contentType;
+
     public GetApiV1CustomEmojisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1CustomEmojisResponse {
      */
     
     public org.openapis.openapi.models.shared.Emoji[] emojis;
+
     public GetApiV1CustomEmojisResponse withEmojis(org.openapis.openapi.models.shared.Emoji[] emojis) {
         this.emojis = emojis;
         return this;
@@ -26,6 +29,7 @@ public class GetApiV1CustomEmojisResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1CustomEmojisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetApiV1CustomEmojisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1CustomEmojisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1CustomEmojisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

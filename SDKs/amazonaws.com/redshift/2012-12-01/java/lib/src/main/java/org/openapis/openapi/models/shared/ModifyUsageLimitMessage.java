@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyUsageLimitMessage {
     
     public Long amount;
+
     public ModifyUsageLimitMessage withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -16,6 +17,7 @@ public class ModifyUsageLimitMessage {
     
     
     public UsageLimitBreachActionEnum breachAction;
+
     public ModifyUsageLimitMessage withBreachAction(UsageLimitBreachActionEnum breachAction) {
         this.breachAction = breachAction;
         return this;
@@ -23,9 +25,13 @@ public class ModifyUsageLimitMessage {
     
     
     public String usageLimitId;
+
     public ModifyUsageLimitMessage withUsageLimitId(String usageLimitId) {
         this.usageLimitId = usageLimitId;
         return this;
     }
     
+    public ModifyUsageLimitMessage(@JsonProperty("UsageLimitId") String usageLimitId) {
+        this.usageLimitId = usageLimitId;
+  }
 }

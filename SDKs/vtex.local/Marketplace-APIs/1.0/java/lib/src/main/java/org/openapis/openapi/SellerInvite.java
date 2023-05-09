@@ -78,10 +78,8 @@ public class SellerInvite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptSellerLeadResponse res = new org.openapis.openapi.models.operations.AcceptSellerLeadResponse() {{
+        org.openapis.openapi.models.operations.AcceptSellerLeadResponse res = new org.openapis.openapi.models.operations.AcceptSellerLeadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,10 +132,8 @@ public class SellerInvite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSellerFromSellerLeadResponse res = new org.openapis.openapi.models.operations.CreateSellerFromSellerLeadResponse() {{
+        org.openapis.openapi.models.operations.CreateSellerFromSellerLeadResponse res = new org.openapis.openapi.models.operations.CreateSellerFromSellerLeadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,10 +185,8 @@ public class SellerInvite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSellerLeadResponse res = new org.openapis.openapi.models.operations.CreateSellerLeadResponse() {{
+        org.openapis.openapi.models.operations.CreateSellerLeadResponse res = new org.openapis.openapi.models.operations.CreateSellerLeadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,10 +247,8 @@ public class SellerInvite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSellerLeadsResponse res = new org.openapis.openapi.models.operations.ListSellerLeadsResponse() {{
+        org.openapis.openapi.models.operations.ListSellerLeadsResponse res = new org.openapis.openapi.models.operations.ListSellerLeadsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,10 +293,8 @@ public class SellerInvite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveSellerLeadResponse res = new org.openapis.openapi.models.operations.RemoveSellerLeadResponse() {{
+        org.openapis.openapi.models.operations.RemoveSellerLeadResponse res = new org.openapis.openapi.models.operations.RemoveSellerLeadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,10 +344,8 @@ public class SellerInvite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResendSellerLeadRequestResponse res = new org.openapis.openapi.models.operations.ResendSellerLeadRequestResponse() {{
+        org.openapis.openapi.models.operations.ResendSellerLeadRequestResponse res = new org.openapis.openapi.models.operations.ResendSellerLeadRequestResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -418,10 +406,8 @@ public class SellerInvite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveSellerLeadResponse res = new org.openapis.openapi.models.operations.RetrieveSellerLeadResponse() {{
+        org.openapis.openapi.models.operations.RetrieveSellerLeadResponse res = new org.openapis.openapi.models.operations.RetrieveSellerLeadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

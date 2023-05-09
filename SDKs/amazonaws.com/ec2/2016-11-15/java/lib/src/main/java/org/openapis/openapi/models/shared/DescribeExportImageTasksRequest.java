@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportImageTasksRequest {
     
     public Boolean dryRun;
+
     public DescribeExportImageTasksRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeExportImageTasksRequest {
     
     
     public String[] exportImageTaskIds;
+
     public DescribeExportImageTasksRequest withExportImageTaskIds(String[] exportImageTaskIds) {
         this.exportImageTaskIds = exportImageTaskIds;
         return this;
@@ -23,6 +25,7 @@ public class DescribeExportImageTasksRequest {
     
     
     public DescribeExportImageTasksRequestFilters[] filters;
+
     public DescribeExportImageTasksRequest withFilters(DescribeExportImageTasksRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeExportImageTasksRequest {
     
     
     public Long maxResults;
+
     public DescribeExportImageTasksRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeExportImageTasksRequest {
     
     
     public String nextToken;
+
     public DescribeExportImageTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeExportImageTasksRequest(){}
 }

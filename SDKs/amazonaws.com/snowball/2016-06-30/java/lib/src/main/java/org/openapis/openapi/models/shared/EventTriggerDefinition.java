@@ -15,9 +15,11 @@ public class EventTriggerDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventResourceARN")
     public String eventResourceARN;
+
     public EventTriggerDefinition withEventResourceARN(String eventResourceARN) {
         this.eventResourceARN = eventResourceARN;
         return this;
     }
     
+    public EventTriggerDefinition(){}
 }

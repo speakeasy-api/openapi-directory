@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class PublishMessagesToChannelForm2XXApplicationXMsgpack {
     
     public String channel;
+
     public PublishMessagesToChannelForm2XXApplicationXMsgpack withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -19,9 +20,11 @@ public class PublishMessagesToChannelForm2XXApplicationXMsgpack {
     
     
     public String messageId;
+
     public PublishMessagesToChannelForm2XXApplicationXMsgpack withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public PublishMessagesToChannelForm2XXApplicationXMsgpack(){}
 }

@@ -18,6 +18,7 @@ public class InputFileFetchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressedRelativePath")
     public String compressedRelativePath;
+
     public InputFileFetchConfiguration withCompressedRelativePath(String compressedRelativePath) {
         this.compressedRelativePath = compressedRelativePath;
         return this;
@@ -29,6 +30,7 @@ public class InputFileFetchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionFormatStrategy")
     public CompressionFormatStrategyEnum compressionFormatStrategy;
+
     public InputFileFetchConfiguration withCompressionFormatStrategy(CompressionFormatStrategyEnum compressionFormatStrategy) {
         this.compressionFormatStrategy = compressionFormatStrategy;
         return this;
@@ -40,6 +42,7 @@ public class InputFileFetchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credential")
     public Credential credential;
+
     public InputFileFetchConfiguration withCredential(Credential credential) {
         this.credential = credential;
         return this;
@@ -50,6 +53,7 @@ public class InputFileFetchConfiguration {
      */
     @JsonProperty("downloadCatalogStrategy")
     public DownloadCatalogStrategyEnum downloadCatalogStrategy;
+
     public InputFileFetchConfiguration withDownloadCatalogStrategy(DownloadCatalogStrategyEnum downloadCatalogStrategy) {
         this.downloadCatalogStrategy = downloadCatalogStrategy;
         return this;
@@ -61,6 +65,7 @@ public class InputFileFetchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadTimeout")
     public Integer downloadTimeout;
+
     public InputFileFetchConfiguration withDownloadTimeout(Integer downloadTimeout) {
         this.downloadTimeout = downloadTimeout;
         return this;
@@ -71,9 +76,14 @@ public class InputFileFetchConfiguration {
      */
     @JsonProperty("uri")
     public String uri;
+
     public InputFileFetchConfiguration withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public InputFileFetchConfiguration(@JsonProperty("downloadCatalogStrategy") DownloadCatalogStrategyEnum downloadCatalogStrategy, @JsonProperty("uri") String uri) {
+        this.downloadCatalogStrategy = downloadCatalogStrategy;
+        this.uri = uri;
+  }
 }

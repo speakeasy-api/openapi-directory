@@ -20,6 +20,7 @@ public class HostKeyAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public String algorithm;
+
     public HostKeyAttributes withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -28,6 +29,7 @@ public class HostKeyAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprintSHA1")
     public String fingerprintSha1;
+
     public HostKeyAttributes withFingerprintSha1(String fingerprintSha1) {
         this.fingerprintSha1 = fingerprintSha1;
         return this;
@@ -36,6 +38,7 @@ public class HostKeyAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprintSHA256")
     public String fingerprintSha256;
+
     public HostKeyAttributes withFingerprintSha256(String fingerprintSha256) {
         this.fingerprintSha256 = fingerprintSha256;
         return this;
@@ -46,6 +49,7 @@ public class HostKeyAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notValidAfter")
     public OffsetDateTime notValidAfter;
+
     public HostKeyAttributes withNotValidAfter(OffsetDateTime notValidAfter) {
         this.notValidAfter = notValidAfter;
         return this;
@@ -56,6 +60,7 @@ public class HostKeyAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("notValidBefore")
     public OffsetDateTime notValidBefore;
+
     public HostKeyAttributes withNotValidBefore(OffsetDateTime notValidBefore) {
         this.notValidBefore = notValidBefore;
         return this;
@@ -64,6 +69,7 @@ public class HostKeyAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public String publicKey;
+
     public HostKeyAttributes withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -74,9 +80,11 @@ public class HostKeyAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("witnessedAt")
     public OffsetDateTime witnessedAt;
+
     public HostKeyAttributes withWitnessedAt(OffsetDateTime witnessedAt) {
         this.witnessedAt = witnessedAt;
         return this;
     }
     
+    public HostKeyAttributes(){}
 }

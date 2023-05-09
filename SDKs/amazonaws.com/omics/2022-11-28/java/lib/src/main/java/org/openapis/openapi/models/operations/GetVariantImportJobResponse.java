@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVariantImportJobResponse {
@@ -12,6 +13,7 @@ public class GetVariantImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public GetVariantImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetVariantImportJobResponse {
     
     
     public String contentType;
+
     public GetVariantImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetVariantImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVariantImportResponse getVariantImportResponse;
+
     public GetVariantImportJobResponse withGetVariantImportResponse(org.openapis.openapi.models.shared.GetVariantImportResponse getVariantImportResponse) {
         this.getVariantImportResponse = getVariantImportResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetVariantImportJobResponse {
      */
     
     public Object internalServerException;
+
     public GetVariantImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetVariantImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetVariantImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetVariantImportJobResponse {
     
     
     public Integer statusCode;
+
     public GetVariantImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetVariantImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVariantImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetVariantImportJobResponse {
      */
     
     public Object throttlingException;
+
     public GetVariantImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetVariantImportJobResponse {
      */
     
     public Object validationException;
+
     public GetVariantImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetVariantImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

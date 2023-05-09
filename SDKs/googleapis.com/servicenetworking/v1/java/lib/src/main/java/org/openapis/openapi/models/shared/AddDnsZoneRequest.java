@@ -18,6 +18,7 @@ public class AddDnsZoneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public AddDnsZoneRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -29,6 +30,7 @@ public class AddDnsZoneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsSuffix")
     public String dnsSuffix;
+
     public AddDnsZoneRequest withDnsSuffix(String dnsSuffix) {
         this.dnsSuffix = dnsSuffix;
         return this;
@@ -40,9 +42,11 @@ public class AddDnsZoneRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddDnsZoneRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AddDnsZoneRequest(){}
 }

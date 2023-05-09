@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaAccountInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GoogleAnalyticsAdminV1alphaAccountInput withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccountInput(){}
 }

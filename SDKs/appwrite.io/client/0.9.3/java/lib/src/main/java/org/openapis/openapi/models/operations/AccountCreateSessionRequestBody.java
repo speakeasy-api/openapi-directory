@@ -12,6 +12,7 @@ public class AccountCreateSessionRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public AccountCreateSessionRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -22,9 +23,14 @@ public class AccountCreateSessionRequestBody {
      */
     @JsonProperty("password")
     public String password;
+
     public AccountCreateSessionRequestBody withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public AccountCreateSessionRequestBody(@JsonProperty("email") String email, @JsonProperty("password") String password) {
+        this.email = email;
+        this.password = password;
+  }
 }

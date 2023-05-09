@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserPoolClientResponse {
     
     public String contentType;
+
     public CreateUserPoolClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserPoolClientResponse createUserPoolClientResponse;
+
     public CreateUserPoolClientResponse withCreateUserPoolClientResponse(org.openapis.openapi.models.shared.CreateUserPoolClientResponse createUserPoolClientResponse) {
         this.createUserPoolClientResponse = createUserPoolClientResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object internalErrorException;
+
     public CreateUserPoolClientResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object invalidOAuthFlowException;
+
     public CreateUserPoolClientResponse withInvalidOAuthFlowException(Object invalidOAuthFlowException) {
         this.invalidOAuthFlowException = invalidOAuthFlowException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateUserPoolClientResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUserPoolClientResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object notAuthorizedException;
+
     public CreateUserPoolClientResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -76,6 +84,7 @@ public class CreateUserPoolClientResponse {
     
     
     public Integer statusCode;
+
     public CreateUserPoolClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateUserPoolClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserPoolClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUserPoolClientResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object scopeDoesNotExistException;
+
     public CreateUserPoolClientResponse withScopeDoesNotExistException(Object scopeDoesNotExistException) {
         this.scopeDoesNotExistException = scopeDoesNotExistException;
         return this;
@@ -113,9 +125,14 @@ public class CreateUserPoolClientResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateUserPoolClientResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateUserPoolClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

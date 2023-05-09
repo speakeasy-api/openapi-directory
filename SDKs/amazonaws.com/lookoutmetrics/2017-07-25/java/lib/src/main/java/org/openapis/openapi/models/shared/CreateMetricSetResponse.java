@@ -15,9 +15,11 @@ public class CreateMetricSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetArn")
     public String metricSetArn;
+
     public CreateMetricSetResponse withMetricSetArn(String metricSetArn) {
         this.metricSetArn = metricSetArn;
         return this;
     }
     
+    public CreateMetricSetResponse(){}
 }

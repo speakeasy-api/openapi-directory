@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAuditFindingResponse {
     
     public String contentType;
+
     public DescribeAuditFindingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAuditFindingResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAuditFindingResponse describeAuditFindingResponse;
+
     public DescribeAuditFindingResponse withDescribeAuditFindingResponse(org.openapis.openapi.models.shared.DescribeAuditFindingResponse describeAuditFindingResponse) {
         this.describeAuditFindingResponse = describeAuditFindingResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAuditFindingResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAuditFindingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAuditFindingResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAuditFindingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAuditFindingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAuditFindingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAuditFindingResponse {
     
     
     public Integer statusCode;
+
     public DescribeAuditFindingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAuditFindingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAuditFindingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAuditFindingResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAuditFindingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeAuditFindingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

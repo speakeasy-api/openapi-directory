@@ -12,6 +12,7 @@ public class Language {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Language withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class Language {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Language withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Language(){}
 }

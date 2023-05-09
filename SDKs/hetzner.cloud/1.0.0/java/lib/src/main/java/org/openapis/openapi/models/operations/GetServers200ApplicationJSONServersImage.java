@@ -14,6 +14,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("bound_to")
     public Long boundTo;
+
     public GetServers200ApplicationJSONServersImage withBoundTo(Long boundTo) {
         this.boundTo = boundTo;
         return this;
@@ -24,6 +25,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("created")
     public String created;
+
     public GetServers200ApplicationJSONServersImage withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("created_from")
     public GetServers200ApplicationJSONServersImageCreatedFrom createdFrom;
+
     public GetServers200ApplicationJSONServersImage withCreatedFrom(GetServers200ApplicationJSONServersImageCreatedFrom createdFrom) {
         this.createdFrom = createdFrom;
         return this;
@@ -44,6 +47,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("deleted")
     public String deleted;
+
     public GetServers200ApplicationJSONServersImage withDeleted(String deleted) {
         this.deleted = deleted;
         return this;
@@ -54,6 +58,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("deprecated")
     public String deprecated;
+
     public GetServers200ApplicationJSONServersImage withDeprecated(String deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -64,6 +69,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("description")
     public String description;
+
     public GetServers200ApplicationJSONServersImage withDescription(String description) {
         this.description = description;
         return this;
@@ -74,6 +80,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("disk_size")
     public Double diskSize;
+
     public GetServers200ApplicationJSONServersImage withDiskSize(Double diskSize) {
         this.diskSize = diskSize;
         return this;
@@ -84,6 +91,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetServers200ApplicationJSONServersImage withId(Long id) {
         this.id = id;
         return this;
@@ -94,6 +102,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("image_size")
     public Double imageSize;
+
     public GetServers200ApplicationJSONServersImage withImageSize(Double imageSize) {
         this.imageSize = imageSize;
         return this;
@@ -104,6 +113,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GetServers200ApplicationJSONServersImage withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -114,6 +124,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("name")
     public String name;
+
     public GetServers200ApplicationJSONServersImage withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +135,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("os_flavor")
     public GetServers200ApplicationJSONServersImageOsFlavorEnum osFlavor;
+
     public GetServers200ApplicationJSONServersImage withOsFlavor(GetServers200ApplicationJSONServersImageOsFlavorEnum osFlavor) {
         this.osFlavor = osFlavor;
         return this;
@@ -134,6 +146,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("os_version")
     public String osVersion;
+
     public GetServers200ApplicationJSONServersImage withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -144,6 +157,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("protection")
     public GetServers200ApplicationJSONServersImageProtection protection;
+
     public GetServers200ApplicationJSONServersImage withProtection(GetServers200ApplicationJSONServersImageProtection protection) {
         this.protection = protection;
         return this;
@@ -155,6 +169,7 @@ public class GetServers200ApplicationJSONServersImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rapid_deploy")
     public Boolean rapidDeploy;
+
     public GetServers200ApplicationJSONServersImage withRapidDeploy(Boolean rapidDeploy) {
         this.rapidDeploy = rapidDeploy;
         return this;
@@ -165,6 +180,7 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("status")
     public GetServers200ApplicationJSONServersImageStatusEnum status;
+
     public GetServers200ApplicationJSONServersImage withStatus(GetServers200ApplicationJSONServersImageStatusEnum status) {
         this.status = status;
         return this;
@@ -175,9 +191,28 @@ public class GetServers200ApplicationJSONServersImage {
      */
     @JsonProperty("type")
     public GetServers200ApplicationJSONServersImageTypeEnum type;
+
     public GetServers200ApplicationJSONServersImage withType(GetServers200ApplicationJSONServersImageTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetServers200ApplicationJSONServersImage(@JsonProperty("bound_to") Long boundTo, @JsonProperty("created") String created, @JsonProperty("created_from") GetServers200ApplicationJSONServersImageCreatedFrom createdFrom, @JsonProperty("deleted") String deleted, @JsonProperty("deprecated") String deprecated, @JsonProperty("description") String description, @JsonProperty("disk_size") Double diskSize, @JsonProperty("id") Long id, @JsonProperty("image_size") Double imageSize, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("os_flavor") GetServers200ApplicationJSONServersImageOsFlavorEnum osFlavor, @JsonProperty("os_version") String osVersion, @JsonProperty("protection") GetServers200ApplicationJSONServersImageProtection protection, @JsonProperty("status") GetServers200ApplicationJSONServersImageStatusEnum status, @JsonProperty("type") GetServers200ApplicationJSONServersImageTypeEnum type) {
+        this.boundTo = boundTo;
+        this.created = created;
+        this.createdFrom = createdFrom;
+        this.deleted = deleted;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.diskSize = diskSize;
+        this.id = id;
+        this.imageSize = imageSize;
+        this.labels = labels;
+        this.name = name;
+        this.osFlavor = osFlavor;
+        this.osVersion = osVersion;
+        this.protection = protection;
+        this.status = status;
+        this.type = type;
+  }
 }

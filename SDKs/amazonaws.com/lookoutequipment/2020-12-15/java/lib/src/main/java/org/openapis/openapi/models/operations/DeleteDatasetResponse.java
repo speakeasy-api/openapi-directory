@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatasetResponse {
@@ -12,6 +13,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDatasetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object conflictException;
+
     public DeleteDatasetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatasetResponse {
     
     
     public String contentType;
+
     public DeleteDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object internalServerException;
+
     public DeleteDatasetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDatasetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDatasetResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteDatasetResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDatasetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteDatasetResponse {
      */
     
     public Object validationException;
+
     public DeleteDatasetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

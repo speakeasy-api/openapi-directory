@@ -18,6 +18,7 @@ public class RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionDuration")
     public String exclusionDuration;
+
     public RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions withExclusionDuration(String exclusionDuration) {
         this.exclusionDuration = exclusionDuration;
         return this;
@@ -29,9 +30,11 @@ public class RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment")
     public String segment;
+
     public RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions withSegment(String segment) {
         this.segment = segment;
         return this;
     }
     
+    public RemarketingAudienceStateBasedAudienceDefinitionExcludeConditions(){}
 }

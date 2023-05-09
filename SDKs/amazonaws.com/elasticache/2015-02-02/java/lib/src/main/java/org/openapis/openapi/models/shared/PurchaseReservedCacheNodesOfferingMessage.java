@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PurchaseReservedCacheNodesOfferingMessage - Represents the input of a &lt;code&gt;PurchaseReservedCacheNodesOffering&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseReservedCacheNodesOfferingMessage {
     
     public Long cacheNodeCount;
+
     public PurchaseReservedCacheNodesOfferingMessage withCacheNodeCount(Long cacheNodeCount) {
         this.cacheNodeCount = cacheNodeCount;
         return this;
@@ -19,6 +20,7 @@ public class PurchaseReservedCacheNodesOfferingMessage {
     
     
     public String reservedCacheNodeId;
+
     public PurchaseReservedCacheNodesOfferingMessage withReservedCacheNodeId(String reservedCacheNodeId) {
         this.reservedCacheNodeId = reservedCacheNodeId;
         return this;
@@ -26,6 +28,7 @@ public class PurchaseReservedCacheNodesOfferingMessage {
     
     
     public String reservedCacheNodesOfferingId;
+
     public PurchaseReservedCacheNodesOfferingMessage withReservedCacheNodesOfferingId(String reservedCacheNodesOfferingId) {
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
@@ -33,9 +36,13 @@ public class PurchaseReservedCacheNodesOfferingMessage {
     
     
     public TagList[] tags;
+
     public PurchaseReservedCacheNodesOfferingMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PurchaseReservedCacheNodesOfferingMessage(@JsonProperty("ReservedCacheNodesOfferingId") String reservedCacheNodesOfferingId) {
+        this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
+  }
 }

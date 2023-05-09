@@ -15,6 +15,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateAuthChallenge")
     public String createAuthChallenge;
+
     public LambdaConfigType withCreateAuthChallenge(String createAuthChallenge) {
         this.createAuthChallenge = createAuthChallenge;
         return this;
@@ -23,6 +24,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomEmailSender")
     public CustomEmailLambdaVersionConfigType customEmailSender;
+
     public LambdaConfigType withCustomEmailSender(CustomEmailLambdaVersionConfigType customEmailSender) {
         this.customEmailSender = customEmailSender;
         return this;
@@ -31,6 +33,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomMessage")
     public String customMessage;
+
     public LambdaConfigType withCustomMessage(String customMessage) {
         this.customMessage = customMessage;
         return this;
@@ -39,6 +42,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomSMSSender")
     public CustomSMSLambdaVersionConfigType customSMSSender;
+
     public LambdaConfigType withCustomSMSSender(CustomSMSLambdaVersionConfigType customSMSSender) {
         this.customSMSSender = customSMSSender;
         return this;
@@ -47,6 +51,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefineAuthChallenge")
     public String defineAuthChallenge;
+
     public LambdaConfigType withDefineAuthChallenge(String defineAuthChallenge) {
         this.defineAuthChallenge = defineAuthChallenge;
         return this;
@@ -55,6 +60,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyID")
     public String kmsKeyID;
+
     public LambdaConfigType withKMSKeyID(String kmsKeyID) {
         this.kmsKeyID = kmsKeyID;
         return this;
@@ -63,6 +69,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostAuthentication")
     public String postAuthentication;
+
     public LambdaConfigType withPostAuthentication(String postAuthentication) {
         this.postAuthentication = postAuthentication;
         return this;
@@ -71,6 +78,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostConfirmation")
     public String postConfirmation;
+
     public LambdaConfigType withPostConfirmation(String postConfirmation) {
         this.postConfirmation = postConfirmation;
         return this;
@@ -79,6 +87,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreAuthentication")
     public String preAuthentication;
+
     public LambdaConfigType withPreAuthentication(String preAuthentication) {
         this.preAuthentication = preAuthentication;
         return this;
@@ -87,6 +96,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreSignUp")
     public String preSignUp;
+
     public LambdaConfigType withPreSignUp(String preSignUp) {
         this.preSignUp = preSignUp;
         return this;
@@ -95,6 +105,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreTokenGeneration")
     public String preTokenGeneration;
+
     public LambdaConfigType withPreTokenGeneration(String preTokenGeneration) {
         this.preTokenGeneration = preTokenGeneration;
         return this;
@@ -103,6 +114,7 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserMigration")
     public String userMigration;
+
     public LambdaConfigType withUserMigration(String userMigration) {
         this.userMigration = userMigration;
         return this;
@@ -111,9 +123,11 @@ public class LambdaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerifyAuthChallengeResponse")
     public String verifyAuthChallengeResponse;
+
     public LambdaConfigType withVerifyAuthChallengeResponse(String verifyAuthChallengeResponse) {
         this.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
         return this;
     }
     
+    public LambdaConfigType(){}
 }

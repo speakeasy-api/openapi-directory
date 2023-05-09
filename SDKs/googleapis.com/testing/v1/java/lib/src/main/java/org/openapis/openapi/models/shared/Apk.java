@@ -18,6 +18,7 @@ public class Apk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public FileReference location;
+
     public Apk withLocation(FileReference location) {
         this.location = location;
         return this;
@@ -29,9 +30,11 @@ public class Apk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public Apk withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public Apk(){}
 }

@@ -15,9 +15,11 @@ public class ReplacementTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacementTemplateData")
     public String replacementTemplateData;
+
     public ReplacementTemplate withReplacementTemplateData(String replacementTemplateData) {
         this.replacementTemplateData = replacementTemplateData;
         return this;
     }
     
+    public ReplacementTemplate(){}
 }

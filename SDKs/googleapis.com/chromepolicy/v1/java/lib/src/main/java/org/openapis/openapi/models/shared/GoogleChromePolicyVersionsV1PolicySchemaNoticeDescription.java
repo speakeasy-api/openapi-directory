@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgementRequired")
     public Boolean acknowledgementRequired;
+
     public GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription withAcknowledgementRequired(Boolean acknowledgementRequired) {
         this.acknowledgementRequired = acknowledgementRequired;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription withField(String field) {
         this.field = field;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noticeMessage")
     public String noticeMessage;
+
     public GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription withNoticeMessage(String noticeMessage) {
         this.noticeMessage = noticeMessage;
         return this;
@@ -51,9 +54,11 @@ public class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noticeValue")
     public String noticeValue;
+
     public GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription withNoticeValue(String noticeValue) {
         this.noticeValue = noticeValue;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription(){}
 }

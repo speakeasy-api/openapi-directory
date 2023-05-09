@@ -15,6 +15,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2KeyName")
     public String ec2KeyName;
+
     public JobFlowInstancesDetail withEc2KeyName(String ec2KeyName) {
         this.ec2KeyName = ec2KeyName;
         return this;
@@ -23,6 +24,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SubnetId")
     public String ec2SubnetId;
+
     public JobFlowInstancesDetail withEc2SubnetId(String ec2SubnetId) {
         this.ec2SubnetId = ec2SubnetId;
         return this;
@@ -31,6 +33,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HadoopVersion")
     public String hadoopVersion;
+
     public JobFlowInstancesDetail withHadoopVersion(String hadoopVersion) {
         this.hadoopVersion = hadoopVersion;
         return this;
@@ -38,6 +41,7 @@ public class JobFlowInstancesDetail {
     
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public JobFlowInstancesDetail withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -46,6 +50,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroups")
     public InstanceGroupDetail[] instanceGroups;
+
     public JobFlowInstancesDetail withInstanceGroups(InstanceGroupDetail[] instanceGroups) {
         this.instanceGroups = instanceGroups;
         return this;
@@ -54,6 +59,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeepJobFlowAliveWhenNoSteps")
     public Boolean keepJobFlowAliveWhenNoSteps;
+
     public JobFlowInstancesDetail withKeepJobFlowAliveWhenNoSteps(Boolean keepJobFlowAliveWhenNoSteps) {
         this.keepJobFlowAliveWhenNoSteps = keepJobFlowAliveWhenNoSteps;
         return this;
@@ -62,6 +68,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterInstanceId")
     public String masterInstanceId;
+
     public JobFlowInstancesDetail withMasterInstanceId(String masterInstanceId) {
         this.masterInstanceId = masterInstanceId;
         return this;
@@ -69,6 +76,7 @@ public class JobFlowInstancesDetail {
     
     @JsonProperty("MasterInstanceType")
     public String masterInstanceType;
+
     public JobFlowInstancesDetail withMasterInstanceType(String masterInstanceType) {
         this.masterInstanceType = masterInstanceType;
         return this;
@@ -77,6 +85,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterPublicDnsName")
     public String masterPublicDnsName;
+
     public JobFlowInstancesDetail withMasterPublicDnsName(String masterPublicDnsName) {
         this.masterPublicDnsName = masterPublicDnsName;
         return this;
@@ -85,6 +94,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NormalizedInstanceHours")
     public Long normalizedInstanceHours;
+
     public JobFlowInstancesDetail withNormalizedInstanceHours(Long normalizedInstanceHours) {
         this.normalizedInstanceHours = normalizedInstanceHours;
         return this;
@@ -93,6 +103,7 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Placement")
     public PlacementType placement;
+
     public JobFlowInstancesDetail withPlacement(PlacementType placement) {
         this.placement = placement;
         return this;
@@ -100,6 +111,7 @@ public class JobFlowInstancesDetail {
     
     @JsonProperty("SlaveInstanceType")
     public String slaveInstanceType;
+
     public JobFlowInstancesDetail withSlaveInstanceType(String slaveInstanceType) {
         this.slaveInstanceType = slaveInstanceType;
         return this;
@@ -108,9 +120,15 @@ public class JobFlowInstancesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationProtected")
     public Boolean terminationProtected;
+
     public JobFlowInstancesDetail withTerminationProtected(Boolean terminationProtected) {
         this.terminationProtected = terminationProtected;
         return this;
     }
     
+    public JobFlowInstancesDetail(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("MasterInstanceType") String masterInstanceType, @JsonProperty("SlaveInstanceType") String slaveInstanceType) {
+        this.instanceCount = instanceCount;
+        this.masterInstanceType = masterInstanceType;
+        this.slaveInstanceType = slaveInstanceType;
+  }
 }

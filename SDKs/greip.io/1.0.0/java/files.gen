@@ -29,6 +29,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
+lib/src/main/java/org/openapis/openapi/models/operations/GetASNLookupRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetASNLookupResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetBINLookupRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetBINLookupResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBulkLookupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBulkLookupResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCountryRequest.java
@@ -39,4 +43,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetIPLookupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIPLookupResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBadWordsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBadWordsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetValidateEmailRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetValidateEmailResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetValidatePhoneRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetValidatePhoneResponse.java
+docs/sdk/README.md
 USAGE.md

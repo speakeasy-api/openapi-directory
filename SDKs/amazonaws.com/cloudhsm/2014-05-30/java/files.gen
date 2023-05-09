@@ -134,4 +134,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ModifyLunaClientRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/RemoveTagsFromResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RemoveTagsFromResourceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

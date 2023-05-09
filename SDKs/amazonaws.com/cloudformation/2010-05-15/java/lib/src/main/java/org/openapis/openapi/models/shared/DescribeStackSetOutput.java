@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackSetOutput {
     
     public StackSet stackSet;
+
     public DescribeStackSetOutput withStackSet(StackSet stackSet) {
         this.stackSet = stackSet;
         return this;
     }
     
+    public DescribeStackSetOutput(){}
 }

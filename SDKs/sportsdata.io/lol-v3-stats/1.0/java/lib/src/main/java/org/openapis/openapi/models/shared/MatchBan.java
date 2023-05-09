@@ -12,6 +12,7 @@ public class MatchBan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Champion")
     public ChampionInfo champion;
+
     public MatchBan withChampion(ChampionInfo champion) {
         this.champion = champion;
         return this;
@@ -20,6 +21,7 @@ public class MatchBan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChampionId")
     public Long championId;
+
     public MatchBan withChampionId(Long championId) {
         this.championId = championId;
         return this;
@@ -28,6 +30,7 @@ public class MatchBan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchId")
     public Long matchId;
+
     public MatchBan withMatchId(Long matchId) {
         this.matchId = matchId;
         return this;
@@ -36,9 +39,11 @@ public class MatchBan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public MatchBan withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public MatchBan(){}
 }

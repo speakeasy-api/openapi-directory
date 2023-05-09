@@ -15,6 +15,7 @@ public class GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completion")
     public String completion;
+
     public GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON withCompletion(String completion) {
         this.completion = completion;
         return this;
@@ -23,6 +24,7 @@ public class GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -31,6 +33,7 @@ public class GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -39,6 +42,7 @@ public class GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -47,9 +51,11 @@ public class GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSON(){}
 }

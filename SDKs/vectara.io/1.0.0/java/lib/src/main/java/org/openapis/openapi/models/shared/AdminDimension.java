@@ -21,6 +21,7 @@ public class AdminDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AdminDimension withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +33,7 @@ public class AdminDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexingDefault")
     public Double indexingDefault;
+
     public AdminDimension withIndexingDefault(Double indexingDefault) {
         this.indexingDefault = indexingDefault;
         return this;
@@ -44,6 +46,7 @@ public class AdminDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdminDimension withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +59,11 @@ public class AdminDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingDefault")
     public Double servingDefault;
+
     public AdminDimension withServingDefault(Double servingDefault) {
         this.servingDefault = servingDefault;
         return this;
     }
     
+    public AdminDimension(){}
 }

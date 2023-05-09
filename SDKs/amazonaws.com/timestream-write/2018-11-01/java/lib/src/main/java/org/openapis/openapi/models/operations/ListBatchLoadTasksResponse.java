@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBatchLoadTasksResponse {
@@ -12,6 +13,7 @@ public class ListBatchLoadTasksResponse {
      */
     
     public Object accessDeniedException;
+
     public ListBatchLoadTasksResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListBatchLoadTasksResponse {
     
     
     public String contentType;
+
     public ListBatchLoadTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListBatchLoadTasksResponse {
      */
     
     public Object internalServerException;
+
     public ListBatchLoadTasksResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListBatchLoadTasksResponse {
      */
     
     public Object invalidEndpointException;
+
     public ListBatchLoadTasksResponse withInvalidEndpointException(Object invalidEndpointException) {
         this.invalidEndpointException = invalidEndpointException;
         return this;
@@ -49,6 +54,7 @@ public class ListBatchLoadTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBatchLoadTasksResponse listBatchLoadTasksResponse;
+
     public ListBatchLoadTasksResponse withListBatchLoadTasksResponse(org.openapis.openapi.models.shared.ListBatchLoadTasksResponse listBatchLoadTasksResponse) {
         this.listBatchLoadTasksResponse = listBatchLoadTasksResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListBatchLoadTasksResponse {
     
     
     public Integer statusCode;
+
     public ListBatchLoadTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListBatchLoadTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBatchLoadTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListBatchLoadTasksResponse {
      */
     
     public Object throttlingException;
+
     public ListBatchLoadTasksResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListBatchLoadTasksResponse {
      */
     
     public Object validationException;
+
     public ListBatchLoadTasksResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBatchLoadTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

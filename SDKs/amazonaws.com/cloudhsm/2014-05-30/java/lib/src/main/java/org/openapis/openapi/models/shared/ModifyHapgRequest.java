@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModifyHapgRequest {
     @JsonProperty("HapgArn")
     public String hapgArn;
+
     public ModifyHapgRequest withHapgArn(String hapgArn) {
         this.hapgArn = hapgArn;
         return this;
@@ -19,6 +20,7 @@ public class ModifyHapgRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public ModifyHapgRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -27,9 +29,13 @@ public class ModifyHapgRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionSerialList")
     public String[] partitionSerialList;
+
     public ModifyHapgRequest withPartitionSerialList(String[] partitionSerialList) {
         this.partitionSerialList = partitionSerialList;
         return this;
     }
     
+    public ModifyHapgRequest(@JsonProperty("HapgArn") String hapgArn) {
+        this.hapgArn = hapgArn;
+  }
 }

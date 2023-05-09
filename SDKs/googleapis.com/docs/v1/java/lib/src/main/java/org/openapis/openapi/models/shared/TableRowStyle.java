@@ -18,6 +18,7 @@ public class TableRowStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRowHeight")
     public Dimension minRowHeight;
+
     public TableRowStyle withMinRowHeight(Dimension minRowHeight) {
         this.minRowHeight = minRowHeight;
         return this;
@@ -29,6 +30,7 @@ public class TableRowStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preventOverflow")
     public Boolean preventOverflow;
+
     public TableRowStyle withPreventOverflow(Boolean preventOverflow) {
         this.preventOverflow = preventOverflow;
         return this;
@@ -40,9 +42,11 @@ public class TableRowStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableHeader")
     public Boolean tableHeader;
+
     public TableRowStyle withTableHeader(Boolean tableHeader) {
         this.tableHeader = tableHeader;
         return this;
     }
     
+    public TableRowStyle(){}
 }

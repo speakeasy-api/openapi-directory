@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposSetAdminBranchProtectionResponse {
     
     public String contentType;
+
     public ReposSetAdminBranchProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposSetAdminBranchProtectionResponse {
     
     
     public Integer statusCode;
+
     public ReposSetAdminBranchProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposSetAdminBranchProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposSetAdminBranchProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ReposSetAdminBranchProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.ProtectedBranchAdminEnforced protectedBranchAdminEnforced;
+
     public ReposSetAdminBranchProtectionResponse withProtectedBranchAdminEnforced(org.openapis.openapi.models.shared.ProtectedBranchAdminEnforced protectedBranchAdminEnforced) {
         this.protectedBranchAdminEnforced = protectedBranchAdminEnforced;
         return this;
     }
     
+    public ReposSetAdminBranchProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

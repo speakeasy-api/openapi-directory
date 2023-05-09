@@ -15,6 +15,7 @@ public class GetAuthorNameUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GetAuthorNameUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class GetAuthorNameUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetAuthorNameUsingPOST200ApplicationJSONData data;
+
     public GetAuthorNameUsingPOST200ApplicationJSON withData(GetAuthorNameUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class GetAuthorNameUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetAuthorNameUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetAuthorNameUsingPOST200ApplicationJSON(){}
 }

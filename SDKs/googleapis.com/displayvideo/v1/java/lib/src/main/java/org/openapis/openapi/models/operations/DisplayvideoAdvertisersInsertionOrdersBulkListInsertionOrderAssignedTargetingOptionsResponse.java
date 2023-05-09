@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssigne
      */
     
     public org.openapis.openapi.models.shared.BulkListInsertionOrderAssignedTargetingOptionsResponse bulkListInsertionOrderAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse withBulkListInsertionOrderAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.BulkListInsertionOrderAssignedTargetingOptionsResponse bulkListInsertionOrderAssignedTargetingOptionsResponse) {
         this.bulkListInsertionOrderAssignedTargetingOptionsResponse = bulkListInsertionOrderAssignedTargetingOptionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssigne
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssigne
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssigne
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersInsertionOrdersBulkListInsertionOrderAssignedTargetingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

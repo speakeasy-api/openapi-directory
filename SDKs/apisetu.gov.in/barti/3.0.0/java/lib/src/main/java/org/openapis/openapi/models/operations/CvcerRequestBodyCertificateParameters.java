@@ -12,6 +12,7 @@ public class CvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public CvcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,9 +23,14 @@ public class CvcerRequestBodyCertificateParameters {
      */
     @JsonProperty("VCNo")
     public String vcNo;
+
     public CvcerRequestBodyCertificateParameters withVCNo(String vcNo) {
         this.vcNo = vcNo;
         return this;
     }
     
+    public CvcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("VCNo") String vcNo) {
+        this.dob = dob;
+        this.vcNo = vcNo;
+  }
 }

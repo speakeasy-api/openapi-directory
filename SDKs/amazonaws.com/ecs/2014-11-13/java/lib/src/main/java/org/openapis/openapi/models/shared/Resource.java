@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public Resource withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -23,6 +24,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerValue")
     public Long integerValue;
+
     public Resource withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -31,6 +33,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longValue")
     public Long longValue;
+
     public Resource withLongValue(Long longValue) {
         this.longValue = longValue;
         return this;
@@ -39,6 +42,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Resource withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringSetValue")
     public String[] stringSetValue;
+
     public Resource withStringSetValue(String[] stringSetValue) {
         this.stringSetValue = stringSetValue;
         return this;
@@ -55,9 +60,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Resource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Resource(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReadabilityAssessmentRequestBody {
@@ -12,6 +13,7 @@ public class ReadabilityAssessmentRequestBody {
      */
     @SpeakeasyMetadata("form:name=api_key")
     public String apiKey;
+
     public ReadabilityAssessmentRequestBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,13 @@ public class ReadabilityAssessmentRequestBody {
      */
     @SpeakeasyMetadata("form:name=text")
     public String text;
+
     public ReadabilityAssessmentRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ReadabilityAssessmentRequestBody(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

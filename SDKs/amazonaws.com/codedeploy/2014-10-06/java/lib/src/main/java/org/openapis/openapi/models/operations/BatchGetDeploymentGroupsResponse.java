@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetDeploymentGroupsResponse {
@@ -12,6 +13,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public BatchGetDeploymentGroupsResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public BatchGetDeploymentGroupsResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -32,6 +35,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetDeploymentGroupsOutput batchGetDeploymentGroupsOutput;
+
     public BatchGetDeploymentGroupsResponse withBatchGetDeploymentGroupsOutput(org.openapis.openapi.models.shared.BatchGetDeploymentGroupsOutput batchGetDeploymentGroupsOutput) {
         this.batchGetDeploymentGroupsOutput = batchGetDeploymentGroupsOutput;
         return this;
@@ -42,6 +46,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public Object batchLimitExceededException;
+
     public BatchGetDeploymentGroupsResponse withBatchLimitExceededException(Object batchLimitExceededException) {
         this.batchLimitExceededException = batchLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetDeploymentGroupsResponse {
     
     
     public String contentType;
+
     public BatchGetDeploymentGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public Object deploymentConfigDoesNotExistException;
+
     public BatchGetDeploymentGroupsResponse withDeploymentConfigDoesNotExistException(Object deploymentConfigDoesNotExistException) {
         this.deploymentConfigDoesNotExistException = deploymentConfigDoesNotExistException;
         return this;
@@ -69,6 +76,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public Object deploymentGroupNameRequiredException;
+
     public BatchGetDeploymentGroupsResponse withDeploymentGroupNameRequiredException(Object deploymentGroupNameRequiredException) {
         this.deploymentGroupNameRequiredException = deploymentGroupNameRequiredException;
         return this;
@@ -79,6 +87,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public BatchGetDeploymentGroupsResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -89,6 +98,7 @@ public class BatchGetDeploymentGroupsResponse {
      */
     
     public Object invalidDeploymentGroupNameException;
+
     public BatchGetDeploymentGroupsResponse withInvalidDeploymentGroupNameException(Object invalidDeploymentGroupNameException) {
         this.invalidDeploymentGroupNameException = invalidDeploymentGroupNameException;
         return this;
@@ -96,6 +106,7 @@ public class BatchGetDeploymentGroupsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetDeploymentGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class BatchGetDeploymentGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetDeploymentGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetDeploymentGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

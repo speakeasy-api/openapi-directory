@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMLModelResponse {
     
     public String contentType;
+
     public DeleteMLModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMLModelResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteMLModelOutput deleteMLModelOutput;
+
     public DeleteMLModelResponse withDeleteMLModelOutput(org.openapis.openapi.models.shared.DeleteMLModelOutput deleteMLModelOutput) {
         this.deleteMLModelOutput = deleteMLModelOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMLModelResponse {
      */
     
     public Object internalServerException;
+
     public DeleteMLModelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMLModelResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteMLModelResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteMLModelResponse {
     
     
     public Integer statusCode;
+
     public DeleteMLModelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteMLModelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMLModelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteMLModelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteMLModelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteMLModelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

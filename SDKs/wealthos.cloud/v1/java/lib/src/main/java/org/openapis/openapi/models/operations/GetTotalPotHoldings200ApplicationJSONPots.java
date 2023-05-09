@@ -12,6 +12,7 @@ public class GetTotalPotHoldings200ApplicationJSONPots {
      */
     @JsonProperty("holdings")
     public GetTotalPotHoldings200ApplicationJSONPotsHoldings[] holdings;
+
     public GetTotalPotHoldings200ApplicationJSONPots withHoldings(GetTotalPotHoldings200ApplicationJSONPotsHoldings[] holdings) {
         this.holdings = holdings;
         return this;
@@ -19,9 +20,14 @@ public class GetTotalPotHoldings200ApplicationJSONPots {
     
     @JsonProperty("pot_id")
     public String potId;
+
     public GetTotalPotHoldings200ApplicationJSONPots withPotId(String potId) {
         this.potId = potId;
         return this;
     }
     
+    public GetTotalPotHoldings200ApplicationJSONPots(@JsonProperty("holdings") GetTotalPotHoldings200ApplicationJSONPotsHoldings[] holdings, @JsonProperty("pot_id") String potId) {
+        this.holdings = holdings;
+        this.potId = potId;
+  }
 }

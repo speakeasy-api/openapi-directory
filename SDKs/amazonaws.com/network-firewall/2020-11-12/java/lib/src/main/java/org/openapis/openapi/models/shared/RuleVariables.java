@@ -15,6 +15,7 @@ public class RuleVariables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPSets")
     public java.util.Map<String, IPSet> ipSets;
+
     public RuleVariables withIPSets(java.util.Map<String, IPSet> ipSets) {
         this.ipSets = ipSets;
         return this;
@@ -23,9 +24,11 @@ public class RuleVariables {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortSets")
     public java.util.Map<String, PortSet> portSets;
+
     public RuleVariables withPortSets(java.util.Map<String, PortSet> portSets) {
         this.portSets = portSets;
         return this;
     }
     
+    public RuleVariables(){}
 }

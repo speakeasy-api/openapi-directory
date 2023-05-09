@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchCodeResponse {
     
     public String contentType;
+
     public SearchCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchCodeResponse {
     
     
     public Integer statusCode;
+
     public SearchCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SearchCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SearchCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public SearchCodeResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class SearchCodeResponse {
      */
     
     public SearchCode200ApplicationJSON searchCode200ApplicationJSONObject;
+
     public SearchCodeResponse withSearchCode200ApplicationJSONObject(SearchCode200ApplicationJSON searchCode200ApplicationJSONObject) {
         this.searchCode200ApplicationJSONObject = searchCode200ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SearchCodeResponse {
      */
     
     public SearchCode503ApplicationJSON searchCode503ApplicationJSONObject;
+
     public SearchCodeResponse withSearchCode503ApplicationJSONObject(SearchCode503ApplicationJSON searchCode503ApplicationJSONObject) {
         this.searchCode503ApplicationJSONObject = searchCode503ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SearchCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public SearchCodeResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public SearchCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

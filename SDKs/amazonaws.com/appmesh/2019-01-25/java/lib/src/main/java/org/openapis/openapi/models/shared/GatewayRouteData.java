@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GatewayRouteData {
     @JsonProperty("gatewayRouteName")
     public String gatewayRouteName;
+
     public GatewayRouteData withGatewayRouteName(String gatewayRouteName) {
         this.gatewayRouteName = gatewayRouteName;
         return this;
@@ -19,6 +20,7 @@ public class GatewayRouteData {
     
     @JsonProperty("meshName")
     public String meshName;
+
     public GatewayRouteData withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -29,6 +31,7 @@ public class GatewayRouteData {
      */
     @JsonProperty("metadata")
     public ResourceMetadata metadata;
+
     public GatewayRouteData withMetadata(ResourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -36,6 +39,7 @@ public class GatewayRouteData {
     
     @JsonProperty("spec")
     public GatewayRouteSpec spec;
+
     public GatewayRouteData withSpec(GatewayRouteSpec spec) {
         this.spec = spec;
         return this;
@@ -43,6 +47,7 @@ public class GatewayRouteData {
     
     @JsonProperty("status")
     public GatewayRouteStatus status;
+
     public GatewayRouteData withStatus(GatewayRouteStatus status) {
         this.status = status;
         return this;
@@ -50,9 +55,18 @@ public class GatewayRouteData {
     
     @JsonProperty("virtualGatewayName")
     public String virtualGatewayName;
+
     public GatewayRouteData withVirtualGatewayName(String virtualGatewayName) {
         this.virtualGatewayName = virtualGatewayName;
         return this;
     }
     
+    public GatewayRouteData(@JsonProperty("gatewayRouteName") String gatewayRouteName, @JsonProperty("meshName") String meshName, @JsonProperty("metadata") ResourceMetadata metadata, @JsonProperty("spec") GatewayRouteSpec spec, @JsonProperty("status") GatewayRouteStatus status, @JsonProperty("virtualGatewayName") String virtualGatewayName) {
+        this.gatewayRouteName = gatewayRouteName;
+        this.meshName = meshName;
+        this.metadata = metadata;
+        this.spec = spec;
+        this.status = status;
+        this.virtualGatewayName = virtualGatewayName;
+  }
 }

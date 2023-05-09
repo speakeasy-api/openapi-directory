@@ -104,4 +104,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/NetworkReportSpecSortCondit
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkReportSpecSortCondition.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkReportSpecDimensionFilterDimensionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkReportSpecDimensionFilter.java
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

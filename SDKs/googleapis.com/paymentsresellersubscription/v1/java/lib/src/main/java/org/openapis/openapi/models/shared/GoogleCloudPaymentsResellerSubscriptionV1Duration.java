@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public GoogleCloudPaymentsResellerSubscriptionV1Duration withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum unit;
+
     public GoogleCloudPaymentsResellerSubscriptionV1Duration withUnit(GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1Duration(){}
 }

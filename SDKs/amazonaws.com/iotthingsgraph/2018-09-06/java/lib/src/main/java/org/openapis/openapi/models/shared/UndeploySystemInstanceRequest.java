@@ -12,9 +12,11 @@ public class UndeploySystemInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UndeploySystemInstanceRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UndeploySystemInstanceRequest(){}
 }

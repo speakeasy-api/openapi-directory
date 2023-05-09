@@ -18,6 +18,7 @@ public class IntHparamSearchSpace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public IntCandidates candidates;
+
     public IntHparamSearchSpace withCandidates(IntCandidates candidates) {
         this.candidates = candidates;
         return this;
@@ -29,9 +30,11 @@ public class IntHparamSearchSpace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public IntRange range;
+
     public IntHparamSearchSpace withRange(IntRange range) {
         this.range = range;
         return this;
     }
     
+    public IntHparamSearchSpace(){}
 }

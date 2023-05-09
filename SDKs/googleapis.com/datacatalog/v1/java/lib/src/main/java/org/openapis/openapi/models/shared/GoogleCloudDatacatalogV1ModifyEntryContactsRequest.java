@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1ModifyEntryContactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public GoogleCloudDatacatalogV1Contacts contacts;
+
     public GoogleCloudDatacatalogV1ModifyEntryContactsRequest withContacts(GoogleCloudDatacatalogV1Contacts contacts) {
         this.contacts = contacts;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ModifyEntryContactsRequest(){}
 }

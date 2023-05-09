@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkflowsResponse {
     
     public String contentType;
+
     public ListWorkflowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object internalServiceError;
+
     public ListWorkflowsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListWorkflowsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListWorkflowsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListWorkflowsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkflowsResponse listWorkflowsResponse;
+
     public ListWorkflowsResponse withListWorkflowsResponse(org.openapis.openapi.models.shared.ListWorkflowsResponse listWorkflowsResponse) {
         this.listWorkflowsResponse = listWorkflowsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListWorkflowsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListWorkflowsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class ListWorkflowsResponse {
     
     
     public Integer statusCode;
+
     public ListWorkflowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListWorkflowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkflowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListWorkflowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

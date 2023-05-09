@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEventDataStoreRequest {
     @JsonProperty("EventDataStore")
     public String eventDataStore;
+
     public GetEventDataStoreRequest withEventDataStore(String eventDataStore) {
         this.eventDataStore = eventDataStore;
         return this;
     }
     
+    public GetEventDataStoreRequest(@JsonProperty("EventDataStore") String eventDataStore) {
+        this.eventDataStore = eventDataStore;
+  }
 }

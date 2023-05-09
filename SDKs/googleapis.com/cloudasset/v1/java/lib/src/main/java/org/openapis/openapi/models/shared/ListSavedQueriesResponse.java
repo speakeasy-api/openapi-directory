@@ -18,6 +18,7 @@ public class ListSavedQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSavedQueriesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSavedQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savedQueries")
     public SavedQuery[] savedQueries;
+
     public ListSavedQueriesResponse withSavedQueries(SavedQuery[] savedQueries) {
         this.savedQueries = savedQueries;
         return this;
     }
     
+    public ListSavedQueriesResponse(){}
 }

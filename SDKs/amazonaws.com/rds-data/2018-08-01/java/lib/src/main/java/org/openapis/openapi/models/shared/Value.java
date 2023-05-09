@@ -15,6 +15,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayValues")
     public Value[] arrayValues;
+
     public Value withArrayValues(Value[] arrayValues) {
         this.arrayValues = arrayValues;
         return this;
@@ -23,6 +24,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigIntValue")
     public Long bigIntValue;
+
     public Value withBigIntValue(Long bigIntValue) {
         this.bigIntValue = bigIntValue;
         return this;
@@ -31,6 +33,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bitValue")
     public Boolean bitValue;
+
     public Value withBitValue(Boolean bitValue) {
         this.bitValue = bitValue;
         return this;
@@ -39,6 +42,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobValue")
     public String blobValue;
+
     public Value withBlobValue(String blobValue) {
         this.blobValue = blobValue;
         return this;
@@ -47,6 +51,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public Value withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -55,6 +60,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public Long intValue;
+
     public Value withIntValue(Long intValue) {
         this.intValue = intValue;
         return this;
@@ -63,6 +69,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isNull")
     public Boolean isNull;
+
     public Value withIsNull(Boolean isNull) {
         this.isNull = isNull;
         return this;
@@ -71,6 +78,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realValue")
     public Float realValue;
+
     public Value withRealValue(Float realValue) {
         this.realValue = realValue;
         return this;
@@ -79,6 +87,7 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public Value withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
@@ -87,9 +96,11 @@ public class Value {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structValue")
     public StructValue structValue;
+
     public Value withStructValue(StructValue structValue) {
         this.structValue = structValue;
         return this;
     }
     
+    public Value(){}
 }

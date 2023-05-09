@@ -12,6 +12,7 @@ public class ListProvisioningArtifactsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListProvisioningArtifactsInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +20,13 @@ public class ListProvisioningArtifactsInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public ListProvisioningArtifactsInput withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ListProvisioningArtifactsInput(@JsonProperty("ProductId") String productId) {
+        this.productId = productId;
+  }
 }

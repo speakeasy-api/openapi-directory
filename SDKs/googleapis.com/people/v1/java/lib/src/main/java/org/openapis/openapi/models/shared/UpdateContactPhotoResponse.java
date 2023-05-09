@@ -18,9 +18,11 @@ public class UpdateContactPhotoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public Person person;
+
     public UpdateContactPhotoResponse withPerson(Person person) {
         this.person = person;
         return this;
     }
     
+    public UpdateContactPhotoResponse(){}
 }

@@ -15,9 +15,11 @@ public class DescribeContinuousBackupsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContinuousBackupsDescription")
     public ContinuousBackupsDescription continuousBackupsDescription;
+
     public DescribeContinuousBackupsOutput withContinuousBackupsDescription(ContinuousBackupsDescription continuousBackupsDescription) {
         this.continuousBackupsDescription = continuousBackupsDescription;
         return this;
     }
     
+    public DescribeContinuousBackupsOutput(){}
 }

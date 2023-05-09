@@ -59,11 +59,9 @@ public class BackupRuns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse() {{
+        org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class BackupRuns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlBackupRunsGetResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsGetResponse() {{
+        org.openapis.openapi.models.operations.SqlBackupRunsGetResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsGetResponse(contentType, httpRes.statusCode()) {{
             backupRun = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class BackupRuns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlBackupRunsInsertResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsInsertResponse() {{
+        org.openapis.openapi.models.operations.SqlBackupRunsInsertResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class BackupRuns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlBackupRunsListResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsListResponse() {{
+        org.openapis.openapi.models.operations.SqlBackupRunsListResponse res = new org.openapis.openapi.models.operations.SqlBackupRunsListResponse(contentType, httpRes.statusCode()) {{
             backupRunsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

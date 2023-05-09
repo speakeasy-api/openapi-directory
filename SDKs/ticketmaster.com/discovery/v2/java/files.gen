@@ -143,4 +143,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Market.java
 lib/src/main/java/org/openapis/openapi/models/shared/VenueGeneralInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/Dma.java
 lib/src/main/java/org/openapis/openapi/models/shared/VenueBoxOfficeInfo.java
+docs/sdk/README.md
+docs/v2/README.md
 USAGE.md

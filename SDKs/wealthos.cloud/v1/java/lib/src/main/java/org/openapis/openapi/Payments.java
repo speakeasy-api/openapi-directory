@@ -90,7 +90,7 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSinglePaymentIntentResponse res = new org.openapis.openapi.models.operations.CreateSinglePaymentIntentResponse() {{
+        org.openapis.openapi.models.operations.CreateSinglePaymentIntentResponse res = new org.openapis.openapi.models.operations.CreateSinglePaymentIntentResponse(contentType, httpRes.statusCode()) {{
             createSinglePaymentIntent201ApplicationJSONObject = null;
             createSinglePaymentIntent400ApplicationJSONObject = null;
             createSinglePaymentIntent401ApplicationJSONObject = null;
@@ -99,8 +99,6 @@ public class Payments {
             createSinglePaymentIntent429ApplicationJSONObject = null;
             createSinglePaymentIntent500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -193,7 +191,7 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllPaymentsResponse res = new org.openapis.openapi.models.operations.GetAllPaymentsResponse() {{
+        org.openapis.openapi.models.operations.GetAllPaymentsResponse res = new org.openapis.openapi.models.operations.GetAllPaymentsResponse(contentType, httpRes.statusCode()) {{
             getAllPayments200ApplicationJSONObject = null;
             getAllPayments400ApplicationJSONObject = null;
             getAllPayments401ApplicationJSONObject = null;
@@ -202,8 +200,6 @@ public class Payments {
             getAllPayments429ApplicationJSONObject = null;
             getAllPayments500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,7 +286,7 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentResponse res = new org.openapis.openapi.models.operations.GetPaymentResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentResponse res = new org.openapis.openapi.models.operations.GetPaymentResponse(contentType, httpRes.statusCode()) {{
             rootTypeForPayments = null;
             getPayment400ApplicationJSONObject = null;
             getPayment401ApplicationJSONObject = null;
@@ -299,8 +295,6 @@ public class Payments {
             getPayment429ApplicationJSONObject = null;
             getPayment500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,7 +387,7 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPotPaymentsResponse res = new org.openapis.openapi.models.operations.GetPotPaymentsResponse() {{
+        org.openapis.openapi.models.operations.GetPotPaymentsResponse res = new org.openapis.openapi.models.operations.GetPotPaymentsResponse(contentType, httpRes.statusCode()) {{
             getPotPayments200ApplicationJSONObject = null;
             getPotPayments401ApplicationJSONObject = null;
             getPotPayments403ApplicationJSONObject = null;
@@ -401,8 +395,6 @@ public class Payments {
             getPotPayments429ApplicationJSONObject = null;
             getPotPayments500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

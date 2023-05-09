@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Opencast {
     @JsonProperty("pin_code")
     public String pinCode;
+
     public Opencast withPinCode(String pinCode) {
         this.pinCode = pinCode;
         return this;
     }
     
+    public Opencast(@JsonProperty("pin_code") String pinCode) {
+        this.pinCode = pinCode;
+  }
 }

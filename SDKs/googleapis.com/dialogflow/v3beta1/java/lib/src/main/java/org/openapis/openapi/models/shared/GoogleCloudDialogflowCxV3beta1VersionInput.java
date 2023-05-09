@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1VersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3beta1VersionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1VersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1VersionInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1VersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1VersionInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3beta1VersionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluSettings")
     public GoogleCloudDialogflowCxV3beta1NluSettings nluSettings;
+
     public GoogleCloudDialogflowCxV3beta1VersionInput withNluSettings(GoogleCloudDialogflowCxV3beta1NluSettings nluSettings) {
         this.nluSettings = nluSettings;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1VersionInput(){}
 }

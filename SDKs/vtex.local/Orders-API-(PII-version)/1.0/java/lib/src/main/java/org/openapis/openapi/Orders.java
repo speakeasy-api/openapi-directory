@@ -73,11 +73,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelOrder2Response res = new org.openapis.openapi.models.operations.CancelOrder2Response() {{
+        org.openapis.openapi.models.operations.CancelOrder2Response res = new org.openapis.openapi.models.operations.CancelOrder2Response(contentType, httpRes.statusCode()) {{
             cancelOrder2200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -462,11 +460,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrder2Response res = new org.openapis.openapi.models.operations.GetOrder2Response() {{
+        org.openapis.openapi.models.operations.GetOrder2Response res = new org.openapis.openapi.models.operations.GetOrder2Response(contentType, httpRes.statusCode()) {{
             getOrder2200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -858,7 +854,7 @@ public class Orders {
      * 
      * | Order Status Description avaible to filter |
      * | --------------------- |
-     * | `Aguardando+autoriza\u00e7\u00e3o+para+despachar` | 
+     * | `Aguardando+autorização+para+despachar` | 
      * | `Pagamento+Pendente` | 
      * | `Pagamento+Aprovado` | 
      * | `Pronto+para+o+manuseio` | 
@@ -1079,11 +1075,9 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListOrders2Response res = new org.openapis.openapi.models.operations.ListOrders2Response() {{
+        org.openapis.openapi.models.operations.ListOrders2Response res = new org.openapis.openapi.models.operations.ListOrders2Response(contentType, httpRes.statusCode()) {{
             listOrders = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1133,10 +1127,8 @@ public class Orders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartHandling2Response res = new org.openapis.openapi.models.operations.StartHandling2Response() {{
+        org.openapis.openapi.models.operations.StartHandling2Response res = new org.openapis.openapi.models.operations.StartHandling2Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {

@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0CommonManualCpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedCpcEnabled")
     public Boolean enhancedCpcEnabled;
+
     public GoogleAdsSearchads360V0CommonManualCpc withEnhancedCpcEnabled(Boolean enhancedCpcEnabled) {
         this.enhancedCpcEnabled = enhancedCpcEnabled;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonManualCpc(){}
 }

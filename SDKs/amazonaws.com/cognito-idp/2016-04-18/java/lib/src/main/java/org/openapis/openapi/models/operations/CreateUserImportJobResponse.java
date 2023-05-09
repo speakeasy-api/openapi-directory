@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserImportJobResponse {
     
     public String contentType;
+
     public CreateUserImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserImportJobResponse createUserImportJobResponse;
+
     public CreateUserImportJobResponse withCreateUserImportJobResponse(org.openapis.openapi.models.shared.CreateUserImportJobResponse createUserImportJobResponse) {
         this.createUserImportJobResponse = createUserImportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserImportJobResponse {
      */
     
     public Object internalErrorException;
+
     public CreateUserImportJobResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserImportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateUserImportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserImportJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUserImportJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserImportJobResponse {
      */
     
     public Object notAuthorizedException;
+
     public CreateUserImportJobResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUserImportJobResponse {
      */
     
     public Object preconditionNotMetException;
+
     public CreateUserImportJobResponse withPreconditionNotMetException(Object preconditionNotMetException) {
         this.preconditionNotMetException = preconditionNotMetException;
         return this;
@@ -79,6 +87,7 @@ public class CreateUserImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUserImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateUserImportJobResponse {
     
     
     public Integer statusCode;
+
     public CreateUserImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateUserImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateUserImportJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateUserImportJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateUserImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

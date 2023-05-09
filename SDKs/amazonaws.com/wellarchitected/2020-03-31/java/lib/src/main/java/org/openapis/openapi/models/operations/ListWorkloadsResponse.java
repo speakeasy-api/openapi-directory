@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkloadsResponse {
@@ -12,6 +13,7 @@ public class ListWorkloadsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListWorkloadsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkloadsResponse {
     
     
     public String contentType;
+
     public ListWorkloadsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkloadsResponse {
      */
     
     public Object internalServerException;
+
     public ListWorkloadsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkloadsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkloadsOutput listWorkloadsOutput;
+
     public ListWorkloadsResponse withListWorkloadsOutput(org.openapis.openapi.models.shared.ListWorkloadsOutput listWorkloadsOutput) {
         this.listWorkloadsOutput = listWorkloadsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListWorkloadsResponse {
     
     
     public Integer statusCode;
+
     public ListWorkloadsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListWorkloadsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkloadsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListWorkloadsResponse {
      */
     
     public Object throttlingException;
+
     public ListWorkloadsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListWorkloadsResponse {
      */
     
     public Object validationException;
+
     public ListWorkloadsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListWorkloadsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

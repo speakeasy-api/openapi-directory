@@ -15,6 +15,7 @@ public class UpdateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLocationConstraint")
     public UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum dataLocationConstraint;
+
     public UpdateResiliencyPolicyRequestBody withDataLocationConstraint(UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum dataLocationConstraint) {
         this.dataLocationConstraint = dataLocationConstraint;
         return this;
@@ -26,6 +27,7 @@ public class UpdateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public java.util.Map<String, org.openapis.openapi.models.shared.FailurePolicy> policy;
+
     public UpdateResiliencyPolicyRequestBody withPolicy(java.util.Map<String, org.openapis.openapi.models.shared.FailurePolicy> policy) {
         this.policy = policy;
         return this;
@@ -36,6 +38,7 @@ public class UpdateResiliencyPolicyRequestBody {
      */
     @JsonProperty("policyArn")
     public String policyArn;
+
     public UpdateResiliencyPolicyRequestBody withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -47,6 +50,7 @@ public class UpdateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDescription")
     public String policyDescription;
+
     public UpdateResiliencyPolicyRequestBody withPolicyDescription(String policyDescription) {
         this.policyDescription = policyDescription;
         return this;
@@ -58,6 +62,7 @@ public class UpdateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public UpdateResiliencyPolicyRequestBody withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -69,9 +74,13 @@ public class UpdateResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public UpdateResiliencyPolicyRequestBodyTierEnum tier;
+
     public UpdateResiliencyPolicyRequestBody withTier(UpdateResiliencyPolicyRequestBodyTierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public UpdateResiliencyPolicyRequestBody(@JsonProperty("policyArn") String policyArn) {
+        this.policyArn = policyArn;
+  }
 }

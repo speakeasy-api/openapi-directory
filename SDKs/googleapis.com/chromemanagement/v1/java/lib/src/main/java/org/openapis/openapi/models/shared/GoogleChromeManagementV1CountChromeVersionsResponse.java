@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1CountChromeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserVersions")
     public GoogleChromeManagementV1BrowserVersion[] browserVersions;
+
     public GoogleChromeManagementV1CountChromeVersionsResponse withBrowserVersions(GoogleChromeManagementV1BrowserVersion[] browserVersions) {
         this.browserVersions = browserVersions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1CountChromeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleChromeManagementV1CountChromeVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1CountChromeVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GoogleChromeManagementV1CountChromeVersionsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GoogleChromeManagementV1CountChromeVersionsResponse(){}
 }

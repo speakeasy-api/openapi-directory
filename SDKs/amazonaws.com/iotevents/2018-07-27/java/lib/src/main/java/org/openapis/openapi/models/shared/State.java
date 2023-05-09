@@ -15,6 +15,7 @@ public class State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onEnter")
     public OnEnterLifecycle onEnter;
+
     public State withOnEnter(OnEnterLifecycle onEnter) {
         this.onEnter = onEnter;
         return this;
@@ -23,6 +24,7 @@ public class State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onExit")
     public OnExitLifecycle onExit;
+
     public State withOnExit(OnExitLifecycle onExit) {
         this.onExit = onExit;
         return this;
@@ -31,6 +33,7 @@ public class State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onInput")
     public OnInputLifecycle onInput;
+
     public State withOnInput(OnInputLifecycle onInput) {
         this.onInput = onInput;
         return this;
@@ -38,9 +41,13 @@ public class State {
     
     @JsonProperty("stateName")
     public String stateName;
+
     public State withStateName(String stateName) {
         this.stateName = stateName;
         return this;
     }
     
+    public State(@JsonProperty("stateName") String stateName) {
+        this.stateName = stateName;
+  }
 }

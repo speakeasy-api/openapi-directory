@@ -12,6 +12,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2IsoCountryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2IsoCountryV2 withId(Long id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2IsoCountryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iso2")
     public String iso2;
+
     public GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2IsoCountryV2 withIso2(String iso2) {
         this.iso2 = iso2;
         return this;
@@ -34,9 +36,11 @@ public class GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2IsoCountryV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2IsoCountryV2 withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2ConsigneeV2IsoCountryV2(){}
 }

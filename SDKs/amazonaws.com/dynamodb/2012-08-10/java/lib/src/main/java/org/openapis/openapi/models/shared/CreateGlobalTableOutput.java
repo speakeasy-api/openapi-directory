@@ -15,9 +15,11 @@ public class CreateGlobalTableOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTableDescription")
     public GlobalTableDescription globalTableDescription;
+
     public CreateGlobalTableOutput withGlobalTableDescription(GlobalTableDescription globalTableDescription) {
         this.globalTableDescription = globalTableDescription;
         return this;
     }
     
+    public CreateGlobalTableOutput(){}
 }

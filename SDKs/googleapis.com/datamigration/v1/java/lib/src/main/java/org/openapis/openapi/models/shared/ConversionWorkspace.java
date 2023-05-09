@@ -18,6 +18,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ConversionWorkspace withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public DatabaseEngineInfo destination;
+
     public ConversionWorkspace withDestination(DatabaseEngineInfo destination) {
         this.destination = destination;
         return this;
@@ -40,6 +42,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ConversionWorkspace withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalSettings")
     public java.util.Map<String, String> globalSettings;
+
     public ConversionWorkspace withGlobalSettings(java.util.Map<String, String> globalSettings) {
         this.globalSettings = globalSettings;
         return this;
@@ -62,6 +66,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasUncommittedChanges")
     public Boolean hasUncommittedChanges;
+
     public ConversionWorkspace withHasUncommittedChanges(Boolean hasUncommittedChanges) {
         this.hasUncommittedChanges = hasUncommittedChanges;
         return this;
@@ -73,6 +78,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCommitId")
     public String latestCommitId;
+
     public ConversionWorkspace withLatestCommitId(String latestCommitId) {
         this.latestCommitId = latestCommitId;
         return this;
@@ -84,6 +90,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCommitTime")
     public String latestCommitTime;
+
     public ConversionWorkspace withLatestCommitTime(String latestCommitTime) {
         this.latestCommitTime = latestCommitTime;
         return this;
@@ -95,6 +102,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConversionWorkspace withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public DatabaseEngineInfo source;
+
     public ConversionWorkspace withSource(DatabaseEngineInfo source) {
         this.source = source;
         return this;
@@ -117,9 +126,11 @@ public class ConversionWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ConversionWorkspace withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ConversionWorkspace(){}
 }

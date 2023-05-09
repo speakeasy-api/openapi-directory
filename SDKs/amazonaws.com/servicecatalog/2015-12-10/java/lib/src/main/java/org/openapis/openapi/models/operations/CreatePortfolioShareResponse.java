@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePortfolioShareResponse {
     
     public String contentType;
+
     public CreatePortfolioShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePortfolioShareResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePortfolioShareOutput createPortfolioShareOutput;
+
     public CreatePortfolioShareResponse withCreatePortfolioShareOutput(org.openapis.openapi.models.shared.CreatePortfolioShareOutput createPortfolioShareOutput) {
         this.createPortfolioShareOutput = createPortfolioShareOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreatePortfolioShareResponse {
      */
     
     public Object invalidParametersException;
+
     public CreatePortfolioShareResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class CreatePortfolioShareResponse {
      */
     
     public Object invalidStateException;
+
     public CreatePortfolioShareResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePortfolioShareResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePortfolioShareResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePortfolioShareResponse {
      */
     
     public Object operationNotSupportedException;
+
     public CreatePortfolioShareResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePortfolioShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePortfolioShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreatePortfolioShareResponse {
     
     
     public Integer statusCode;
+
     public CreatePortfolioShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreatePortfolioShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePortfolioShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePortfolioShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

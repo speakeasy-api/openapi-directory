@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1AccessControlList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accesses")
     public GoogleCloudAssetV1Access[] accesses;
+
     public GoogleCloudAssetV1AccessControlList withAccesses(GoogleCloudAssetV1Access[] accesses) {
         this.accesses = accesses;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1AccessControlList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionEvaluation")
     public ConditionEvaluation conditionEvaluation;
+
     public GoogleCloudAssetV1AccessControlList withConditionEvaluation(ConditionEvaluation conditionEvaluation) {
         this.conditionEvaluation = conditionEvaluation;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1AccessControlList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceEdges")
     public GoogleCloudAssetV1Edge[] resourceEdges;
+
     public GoogleCloudAssetV1AccessControlList withResourceEdges(GoogleCloudAssetV1Edge[] resourceEdges) {
         this.resourceEdges = resourceEdges;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudAssetV1AccessControlList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public GoogleCloudAssetV1Resource[] resources;
+
     public GoogleCloudAssetV1AccessControlList withResources(GoogleCloudAssetV1Resource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public GoogleCloudAssetV1AccessControlList(){}
 }

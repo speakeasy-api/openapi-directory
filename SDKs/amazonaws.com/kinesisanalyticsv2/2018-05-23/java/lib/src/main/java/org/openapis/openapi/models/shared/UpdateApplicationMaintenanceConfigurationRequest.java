@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateApplicationMaintenanceConfigurationRequest {
     @JsonProperty("ApplicationMaintenanceConfigurationUpdate")
     public ApplicationMaintenanceConfigurationUpdate applicationMaintenanceConfigurationUpdate;
+
     public UpdateApplicationMaintenanceConfigurationRequest withApplicationMaintenanceConfigurationUpdate(ApplicationMaintenanceConfigurationUpdate applicationMaintenanceConfigurationUpdate) {
         this.applicationMaintenanceConfigurationUpdate = applicationMaintenanceConfigurationUpdate;
         return this;
@@ -16,9 +17,14 @@ public class UpdateApplicationMaintenanceConfigurationRequest {
     
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public UpdateApplicationMaintenanceConfigurationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
     }
     
+    public UpdateApplicationMaintenanceConfigurationRequest(@JsonProperty("ApplicationMaintenanceConfigurationUpdate") ApplicationMaintenanceConfigurationUpdate applicationMaintenanceConfigurationUpdate, @JsonProperty("ApplicationName") String applicationName) {
+        this.applicationMaintenanceConfigurationUpdate = applicationMaintenanceConfigurationUpdate;
+        this.applicationName = applicationName;
+  }
 }

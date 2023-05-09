@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMapGlyphsResponse {
@@ -12,6 +13,7 @@ public class GetMapGlyphsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMapGlyphsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetMapGlyphsResponse {
     
     
     public String contentType;
+
     public GetMapGlyphsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMapGlyphsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMapGlyphsResponse getMapGlyphsResponse;
+
     public GetMapGlyphsResponse withGetMapGlyphsResponse(org.openapis.openapi.models.shared.GetMapGlyphsResponse getMapGlyphsResponse) {
         this.getMapGlyphsResponse = getMapGlyphsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMapGlyphsResponse {
      */
     
     public Object internalServerException;
+
     public GetMapGlyphsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetMapGlyphsResponse {
     
     
     public Integer statusCode;
+
     public GetMapGlyphsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetMapGlyphsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMapGlyphsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetMapGlyphsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMapGlyphsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetMapGlyphsResponse {
      */
     
     public Object throttlingException;
+
     public GetMapGlyphsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetMapGlyphsResponse {
      */
     
     public Object validationException;
+
     public GetMapGlyphsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMapGlyphsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

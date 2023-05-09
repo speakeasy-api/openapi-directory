@@ -25,6 +25,7 @@ public class StoryCompact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public StoryCompact withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,6 +34,7 @@ public class StoryCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public UserCompact createdBy;
+
     public StoryCompact withCreatedBy(UserCompact createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -44,6 +46,7 @@ public class StoryCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public StoryCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -55,6 +58,7 @@ public class StoryCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public String resourceSubtype;
+
     public StoryCompact withResourceSubtype(String resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -66,6 +70,7 @@ public class StoryCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public StoryCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -80,9 +85,11 @@ public class StoryCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public StoryCompact withText(String text) {
         this.text = text;
         return this;
     }
     
+    public StoryCompact(){}
 }

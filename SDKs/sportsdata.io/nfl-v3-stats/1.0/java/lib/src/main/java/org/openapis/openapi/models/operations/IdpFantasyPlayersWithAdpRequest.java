@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IdpFantasyPlayersWithAdpRequest {
@@ -12,9 +13,13 @@ public class IdpFantasyPlayersWithAdpRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public IdpFantasyPlayersWithAdpFormatEnum format;
+
     public IdpFantasyPlayersWithAdpRequest withFormat(IdpFantasyPlayersWithAdpFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public IdpFantasyPlayersWithAdpRequest(@JsonProperty("format") IdpFantasyPlayersWithAdpFormatEnum format) {
+        this.format = format;
+  }
 }

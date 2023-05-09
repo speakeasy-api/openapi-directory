@@ -18,9 +18,11 @@ public class TextQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraph")
     public Boolean paragraph;
+
     public TextQuestion withParagraph(Boolean paragraph) {
         this.paragraph = paragraph;
         return this;
     }
     
+    public TextQuestion(){}
 }

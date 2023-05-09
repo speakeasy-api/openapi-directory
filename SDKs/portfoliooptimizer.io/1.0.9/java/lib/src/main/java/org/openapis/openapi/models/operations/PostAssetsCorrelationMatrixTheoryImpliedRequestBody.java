@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCorrelationMatrixTheoryImpliedRequestBody {
     @JsonProperty("assets")
     public PostAssetsCorrelationMatrixTheoryImpliedRequestBodyAssets[] assets;
+
     public PostAssetsCorrelationMatrixTheoryImpliedRequestBody withAssets(PostAssetsCorrelationMatrixTheoryImpliedRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -21,6 +22,7 @@ public class PostAssetsCorrelationMatrixTheoryImpliedRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixTheoryImpliedRequestBody withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
@@ -32,9 +34,14 @@ public class PostAssetsCorrelationMatrixTheoryImpliedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteringMethod")
     public PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum clusteringMethod;
+
     public PostAssetsCorrelationMatrixTheoryImpliedRequestBody withClusteringMethod(PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum clusteringMethod) {
         this.clusteringMethod = clusteringMethod;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixTheoryImpliedRequestBody(@JsonProperty("assets") PostAssetsCorrelationMatrixTheoryImpliedRequestBodyAssets[] assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+  }
 }

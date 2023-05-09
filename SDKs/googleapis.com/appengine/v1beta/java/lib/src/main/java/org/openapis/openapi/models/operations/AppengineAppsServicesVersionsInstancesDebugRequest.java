@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsServicesVersionsInstancesDebugRequest {
@@ -12,6 +13,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DebugInstanceRequest debugInstanceRequest;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withDebugInstanceRequest(org.openapis.openapi.models.shared.DebugInstanceRequest debugInstanceRequest) {
         this.debugInstanceRequest = debugInstanceRequest;
         return this;
@@ -29,6 +32,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
     public String appsId;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withAppsId(String appsId) {
         this.appsId = appsId;
         return this;
@@ -59,6 +65,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instancesId")
     public String instancesId;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withInstancesId(String instancesId) {
         this.instancesId = instancesId;
         return this;
@@ -89,6 +98,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=servicesId")
     public String servicesId;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withServicesId(String servicesId) {
         this.servicesId = servicesId;
         return this;
@@ -139,6 +153,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -159,9 +175,16 @@ public class AppengineAppsServicesVersionsInstancesDebugRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionsId")
     public String versionsId;
+
     public AppengineAppsServicesVersionsInstancesDebugRequest withVersionsId(String versionsId) {
         this.versionsId = versionsId;
         return this;
     }
     
+    public AppengineAppsServicesVersionsInstancesDebugRequest(@JsonProperty("appsId") String appsId, @JsonProperty("instancesId") String instancesId, @JsonProperty("servicesId") String servicesId, @JsonProperty("versionsId") String versionsId) {
+        this.appsId = appsId;
+        this.instancesId = instancesId;
+        this.servicesId = servicesId;
+        this.versionsId = versionsId;
+  }
 }

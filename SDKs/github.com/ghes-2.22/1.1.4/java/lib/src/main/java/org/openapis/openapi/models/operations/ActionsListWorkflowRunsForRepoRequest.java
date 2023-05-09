@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor")
     public String actor;
+
     public ActionsListWorkflowRunsForRepoRequest withActor(String actor) {
         this.actor = actor;
         return this;
@@ -23,6 +25,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branch")
     public String branch;
+
     public ActionsListWorkflowRunsForRepoRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -30,6 +33,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
     public OffsetDateTime created;
+
     public ActionsListWorkflowRunsForRepoRequest withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -40,6 +44,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
     public String event;
+
     public ActionsListWorkflowRunsForRepoRequest withEvent(String event) {
         this.event = event;
         return this;
@@ -50,6 +55,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_pull_requests")
     public Boolean excludePullRequests;
+
     public ActionsListWorkflowRunsForRepoRequest withExcludePullRequests(Boolean excludePullRequests) {
         this.excludePullRequests = excludePullRequests;
         return this;
@@ -57,6 +63,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsListWorkflowRunsForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -67,6 +74,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListWorkflowRunsForRepoRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -77,6 +85,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListWorkflowRunsForRepoRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -84,6 +93,7 @@ public class ActionsListWorkflowRunsForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsListWorkflowRunsForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -94,9 +104,14 @@ public class ActionsListWorkflowRunsForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public org.openapis.openapi.models.shared.WorkflowRunStatusEnum status;
+
     public ActionsListWorkflowRunsForRepoRequest withStatus(org.openapis.openapi.models.shared.WorkflowRunStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ActionsListWorkflowRunsForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateClusterRequest {
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public UpdateClusterRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateClusterRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationTopicArn")
     public String notificationTopicArn;
+
     public UpdateClusterRequest withNotificationTopicArn(String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
         return this;
@@ -35,6 +38,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationTopicStatus")
     public String notificationTopicStatus;
+
     public UpdateClusterRequest withNotificationTopicStatus(String notificationTopicStatus) {
         this.notificationTopicStatus = notificationTopicStatus;
         return this;
@@ -43,6 +47,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public UpdateClusterRequest withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -51,6 +56,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public UpdateClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -59,9 +65,13 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateClusterRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
     
+    public UpdateClusterRequest(@JsonProperty("ClusterName") String clusterName) {
+        this.clusterName = clusterName;
+  }
 }

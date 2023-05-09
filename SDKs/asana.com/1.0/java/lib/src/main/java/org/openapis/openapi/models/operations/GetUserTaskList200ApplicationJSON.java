@@ -15,9 +15,11 @@ public class GetUserTaskList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.UserTaskListResponse data;
+
     public GetUserTaskList200ApplicationJSON withData(org.openapis.openapi.models.shared.UserTaskListResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetUserTaskList200ApplicationJSON(){}
 }

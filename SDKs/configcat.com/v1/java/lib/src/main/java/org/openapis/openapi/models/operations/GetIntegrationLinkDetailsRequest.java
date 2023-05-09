@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntegrationLinkDetailsRequest {
@@ -12,6 +13,7 @@ public class GetIntegrationLinkDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationLinkType")
     public org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType;
+
     public GetIntegrationLinkDetailsRequest withIntegrationLinkType(org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType) {
         this.integrationLinkType = integrationLinkType;
         return this;
@@ -22,9 +24,14 @@ public class GetIntegrationLinkDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public GetIntegrationLinkDetailsRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GetIntegrationLinkDetailsRequest(@JsonProperty("integrationLinkType") org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType, @JsonProperty("key") String key) {
+        this.integrationLinkType = integrationLinkType;
+        this.key = key;
+  }
 }

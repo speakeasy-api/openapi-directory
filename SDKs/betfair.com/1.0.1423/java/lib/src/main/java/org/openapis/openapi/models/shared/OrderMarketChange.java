@@ -12,6 +12,7 @@ public class OrderMarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public Long accountId;
+
     public OrderMarketChange withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -20,6 +21,7 @@ public class OrderMarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed")
     public Boolean closed;
+
     public OrderMarketChange withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -28,6 +30,7 @@ public class OrderMarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullImage")
     public Boolean fullImage;
+
     public OrderMarketChange withFullImage(Boolean fullImage) {
         this.fullImage = fullImage;
         return this;
@@ -39,6 +42,7 @@ public class OrderMarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrderMarketChange withId(String id) {
         this.id = id;
         return this;
@@ -50,9 +54,11 @@ public class OrderMarketChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orc")
     public OrderRunnerChange[] orc;
+
     public OrderMarketChange withOrc(OrderRunnerChange[] orc) {
         this.orc = orc;
         return this;
     }
     
+    public OrderMarketChange(){}
 }

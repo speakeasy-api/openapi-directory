@@ -18,6 +18,7 @@ public class UserLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public UserLocale withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class UserLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public UserLocale withLanguage(String language) {
         this.language = language;
         return this;
@@ -40,9 +42,11 @@ public class UserLocale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant")
     public String variant;
+
     public UserLocale withVariant(String variant) {
         this.variant = variant;
         return this;
     }
     
+    public UserLocale(){}
 }

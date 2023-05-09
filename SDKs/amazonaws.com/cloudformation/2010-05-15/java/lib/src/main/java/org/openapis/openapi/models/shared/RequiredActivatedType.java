@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequiredActivatedType {
     
     public String originalTypeName;
+
     public RequiredActivatedType withOriginalTypeName(String originalTypeName) {
         this.originalTypeName = originalTypeName;
         return this;
@@ -19,6 +20,7 @@ public class RequiredActivatedType {
     
     
     public String publisherId;
+
     public RequiredActivatedType withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -26,6 +28,7 @@ public class RequiredActivatedType {
     
     
     public Long[] supportedMajorVersions;
+
     public RequiredActivatedType withSupportedMajorVersions(Long[] supportedMajorVersions) {
         this.supportedMajorVersions = supportedMajorVersions;
         return this;
@@ -33,9 +36,11 @@ public class RequiredActivatedType {
     
     
     public String typeNameAlias;
+
     public RequiredActivatedType withTypeNameAlias(String typeNameAlias) {
         this.typeNameAlias = typeNameAlias;
         return this;
     }
     
+    public RequiredActivatedType(){}
 }

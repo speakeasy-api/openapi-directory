@@ -12,6 +12,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public UserLinks links;
+
     public UserList withLinks(UserLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UserList withId(String id) {
         this.id = id;
         return this;
@@ -34,9 +36,11 @@ public class UserList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserList withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UserList(){}
 }

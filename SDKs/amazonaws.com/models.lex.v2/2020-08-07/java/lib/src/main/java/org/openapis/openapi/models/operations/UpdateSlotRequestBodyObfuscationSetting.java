@@ -15,9 +15,11 @@ public class UpdateSlotRequestBodyObfuscationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscationSettingType")
     public org.openapis.openapi.models.shared.ObfuscationSettingTypeEnum obfuscationSettingType;
+
     public UpdateSlotRequestBodyObfuscationSetting withObfuscationSettingType(org.openapis.openapi.models.shared.ObfuscationSettingTypeEnum obfuscationSettingType) {
         this.obfuscationSettingType = obfuscationSettingType;
         return this;
     }
     
+    public UpdateSlotRequestBodyObfuscationSetting(){}
 }

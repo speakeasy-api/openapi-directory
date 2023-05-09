@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CopyPadUsingPOSTResponse {
     
     public String contentType;
+
     public CopyPadUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CopyPadUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CopyPadUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CopyPadUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CopyPadUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CopyPadUsingPOSTResponse {
      */
     
     public CopyPadUsingPOST200ApplicationJSON copyPadUsingPOST200ApplicationJSONObject;
+
     public CopyPadUsingPOSTResponse withCopyPadUsingPOST200ApplicationJSONObject(CopyPadUsingPOST200ApplicationJSON copyPadUsingPOST200ApplicationJSONObject) {
         this.copyPadUsingPOST200ApplicationJSONObject = copyPadUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CopyPadUsingPOSTResponse {
      */
     
     public CopyPadUsingPOST400ApplicationJSON copyPadUsingPOST400ApplicationJSONObject;
+
     public CopyPadUsingPOSTResponse withCopyPadUsingPOST400ApplicationJSONObject(CopyPadUsingPOST400ApplicationJSON copyPadUsingPOST400ApplicationJSONObject) {
         this.copyPadUsingPOST400ApplicationJSONObject = copyPadUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CopyPadUsingPOSTResponse {
      */
     
     public CopyPadUsingPOST401ApplicationJSON copyPadUsingPOST401ApplicationJSONObject;
+
     public CopyPadUsingPOSTResponse withCopyPadUsingPOST401ApplicationJSONObject(CopyPadUsingPOST401ApplicationJSON copyPadUsingPOST401ApplicationJSONObject) {
         this.copyPadUsingPOST401ApplicationJSONObject = copyPadUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CopyPadUsingPOSTResponse {
      */
     
     public CopyPadUsingPOST500ApplicationJSON copyPadUsingPOST500ApplicationJSONObject;
+
     public CopyPadUsingPOSTResponse withCopyPadUsingPOST500ApplicationJSONObject(CopyPadUsingPOST500ApplicationJSON copyPadUsingPOST500ApplicationJSONObject) {
         this.copyPadUsingPOST500ApplicationJSONObject = copyPadUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CopyPadUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

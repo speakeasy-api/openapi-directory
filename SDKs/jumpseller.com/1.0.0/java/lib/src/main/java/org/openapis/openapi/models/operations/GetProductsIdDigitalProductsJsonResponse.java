@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProductsIdDigitalProductsJsonResponse {
     
     public String contentType;
+
     public GetProductsIdDigitalProductsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProductsIdDigitalProductsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.DigitalProduct[] digitalProducts;
+
     public GetProductsIdDigitalProductsJsonResponse withDigitalProducts(org.openapis.openapi.models.shared.DigitalProduct[] digitalProducts) {
         this.digitalProducts = digitalProducts;
         return this;
@@ -29,6 +32,7 @@ public class GetProductsIdDigitalProductsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetProductsIdDigitalProductsJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetProductsIdDigitalProductsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetProductsIdDigitalProductsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetProductsIdDigitalProductsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProductsIdDigitalProductsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProductsIdDigitalProductsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

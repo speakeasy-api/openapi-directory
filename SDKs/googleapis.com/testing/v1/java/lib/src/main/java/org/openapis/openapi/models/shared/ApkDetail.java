@@ -18,9 +18,11 @@ public class ApkDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apkManifest")
     public ApkManifest apkManifest;
+
     public ApkDetail withApkManifest(ApkManifest apkManifest) {
         this.apkManifest = apkManifest;
         return this;
     }
     
+    public ApkDetail(){}
 }

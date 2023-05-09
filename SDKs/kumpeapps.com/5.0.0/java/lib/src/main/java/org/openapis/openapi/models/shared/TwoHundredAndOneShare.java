@@ -15,6 +15,7 @@ public class TwoHundredAndOneShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_link")
     public String authLink;
+
     public TwoHundredAndOneShare withAuthLink(String authLink) {
         this.authLink = authLink;
         return this;
@@ -23,9 +24,11 @@ public class TwoHundredAndOneShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public TwoHundredAndOneShare withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public TwoHundredAndOneShare(){}
 }

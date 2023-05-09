@@ -15,6 +15,7 @@ public class LiveChatUserBannedMessageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banDurationSeconds")
     public String banDurationSeconds;
+
     public LiveChatUserBannedMessageDetails withBanDurationSeconds(String banDurationSeconds) {
         this.banDurationSeconds = banDurationSeconds;
         return this;
@@ -26,6 +27,7 @@ public class LiveChatUserBannedMessageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("banType")
     public LiveChatUserBannedMessageDetailsBanTypeEnum banType;
+
     public LiveChatUserBannedMessageDetails withBanType(LiveChatUserBannedMessageDetailsBanTypeEnum banType) {
         this.banType = banType;
         return this;
@@ -34,9 +36,11 @@ public class LiveChatUserBannedMessageDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bannedUserDetails")
     public ChannelProfileDetails bannedUserDetails;
+
     public LiveChatUserBannedMessageDetails withBannedUserDetails(ChannelProfileDetails bannedUserDetails) {
         this.bannedUserDetails = bannedUserDetails;
         return this;
     }
     
+    public LiveChatUserBannedMessageDetails(){}
 }

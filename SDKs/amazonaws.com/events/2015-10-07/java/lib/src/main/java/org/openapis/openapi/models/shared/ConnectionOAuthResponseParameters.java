@@ -15,6 +15,7 @@ public class ConnectionOAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationEndpoint")
     public String authorizationEndpoint;
+
     public ConnectionOAuthResponseParameters withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionOAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientParameters")
     public ConnectionOAuthClientResponseParameters clientParameters;
+
     public ConnectionOAuthResponseParameters withClientParameters(ConnectionOAuthClientResponseParameters clientParameters) {
         this.clientParameters = clientParameters;
         return this;
@@ -31,6 +33,7 @@ public class ConnectionOAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpMethod")
     public ConnectionOAuthHttpMethodEnum httpMethod;
+
     public ConnectionOAuthResponseParameters withHttpMethod(ConnectionOAuthHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -39,9 +42,11 @@ public class ConnectionOAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OAuthHttpParameters")
     public ConnectionHttpParameters oAuthHttpParameters;
+
     public ConnectionOAuthResponseParameters withOAuthHttpParameters(ConnectionHttpParameters oAuthHttpParameters) {
         this.oAuthHttpParameters = oAuthHttpParameters;
         return this;
     }
     
+    public ConnectionOAuthResponseParameters(){}
 }

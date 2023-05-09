@@ -18,6 +18,7 @@ public class AttributeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeId")
     public String attributeId;
+
     public AttributeMetadata withAttributeId(String attributeId) {
         this.attributeId = attributeId;
         return this;
@@ -29,6 +30,7 @@ public class AttributeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AttributeMetadata withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class AttributeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupDisplayName")
     public String groupDisplayName;
+
     public AttributeMetadata withGroupDisplayName(String groupDisplayName) {
         this.groupDisplayName = groupDisplayName;
         return this;
@@ -51,6 +54,7 @@ public class AttributeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeprecated")
     public Boolean isDeprecated;
+
     public AttributeMetadata withIsDeprecated(Boolean isDeprecated) {
         this.isDeprecated = isDeprecated;
         return this;
@@ -62,6 +66,7 @@ public class AttributeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRepeatable")
     public Boolean isRepeatable;
+
     public AttributeMetadata withIsRepeatable(Boolean isRepeatable) {
         this.isRepeatable = isRepeatable;
         return this;
@@ -73,6 +78,7 @@ public class AttributeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueMetadata")
     public AttributeValueMetadata[] valueMetadata;
+
     public AttributeMetadata withValueMetadata(AttributeValueMetadata[] valueMetadata) {
         this.valueMetadata = valueMetadata;
         return this;
@@ -84,9 +90,11 @@ public class AttributeMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public AttributeMetadataValueTypeEnum valueType;
+
     public AttributeMetadata withValueType(AttributeMetadataValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public AttributeMetadata(){}
 }

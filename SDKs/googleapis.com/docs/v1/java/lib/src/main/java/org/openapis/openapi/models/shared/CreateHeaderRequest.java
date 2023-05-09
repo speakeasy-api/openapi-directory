@@ -18,6 +18,7 @@ public class CreateHeaderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionBreakLocation")
     public Location sectionBreakLocation;
+
     public CreateHeaderRequest withSectionBreakLocation(Location sectionBreakLocation) {
         this.sectionBreakLocation = sectionBreakLocation;
         return this;
@@ -29,9 +30,11 @@ public class CreateHeaderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreateHeaderRequestTypeEnum type;
+
     public CreateHeaderRequest withType(CreateHeaderRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateHeaderRequest(){}
 }

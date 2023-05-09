@@ -12,6 +12,7 @@ public class GetExamplesByLabelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public String count;
+
     public GetExamplesByLabelRequest withCount(String count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class GetExamplesByLabelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelId")
     public String labelId;
+
     public GetExamplesByLabelRequest withLabelId(String labelId) {
         this.labelId = labelId;
         return this;
@@ -32,9 +34,11 @@ public class GetExamplesByLabelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetExamplesByLabelRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetExamplesByLabelRequest(){}
 }

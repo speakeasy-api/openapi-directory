@@ -12,6 +12,7 @@ public class ApiCoreDtoDatapointsBrowserBaseDestinationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailDestinationUrl")
     public String emailDestinationUrl;
+
     public ApiCoreDtoDatapointsBrowserBaseDestinationItem withEmailDestinationUrl(String emailDestinationUrl) {
         this.emailDestinationUrl = emailDestinationUrl;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoDatapointsBrowserBaseDestinationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileDestinationUrl")
     public String mobileDestinationUrl;
+
     public ApiCoreDtoDatapointsBrowserBaseDestinationItem withMobileDestinationUrl(String mobileDestinationUrl) {
         this.mobileDestinationUrl = mobileDestinationUrl;
         return this;
@@ -28,9 +30,11 @@ public class ApiCoreDtoDatapointsBrowserBaseDestinationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spidersDestinationUrl")
     public String spidersDestinationUrl;
+
     public ApiCoreDtoDatapointsBrowserBaseDestinationItem withSpidersDestinationUrl(String spidersDestinationUrl) {
         this.spidersDestinationUrl = spidersDestinationUrl;
         return this;
     }
     
+    public ApiCoreDtoDatapointsBrowserBaseDestinationItem(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResultNetworkInterfaceGroups {
     
     public String groupId;
+
     public CreateNetworkInterfaceResultNetworkInterfaceGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInterfaceResultNetworkInterfaceGroups {
     
     
     public String groupName;
+
     public CreateNetworkInterfaceResultNetworkInterfaceGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterfaceGroups(){}
 }

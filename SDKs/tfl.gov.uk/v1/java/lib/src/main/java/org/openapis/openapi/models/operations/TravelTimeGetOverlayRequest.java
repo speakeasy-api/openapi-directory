@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TravelTimeGetOverlayRequest {
@@ -12,6 +13,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public TravelTimeGetOverlayDirectionEnum direction;
+
     public TravelTimeGetOverlayRequest withDirection(TravelTimeGetOverlayDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +24,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=height")
     public Integer height;
+
     public TravelTimeGetOverlayRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -32,6 +35,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLat")
     public Double mapCenterLat;
+
     public TravelTimeGetOverlayRequest withMapCenterLat(Double mapCenterLat) {
         this.mapCenterLat = mapCenterLat;
         return this;
@@ -42,6 +46,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLon")
     public Double mapCenterLon;
+
     public TravelTimeGetOverlayRequest withMapCenterLon(Double mapCenterLon) {
         this.mapCenterLon = mapCenterLon;
         return this;
@@ -52,6 +57,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modeId")
     public String modeId;
+
     public TravelTimeGetOverlayRequest withModeId(String modeId) {
         this.modeId = modeId;
         return this;
@@ -62,6 +68,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLat")
     public Double pinLat;
+
     public TravelTimeGetOverlayRequest withPinLat(Double pinLat) {
         this.pinLat = pinLat;
         return this;
@@ -72,6 +79,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLon")
     public Double pinLon;
+
     public TravelTimeGetOverlayRequest withPinLon(Double pinLon) {
         this.pinLon = pinLon;
         return this;
@@ -82,6 +90,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scenarioTitle")
     public String scenarioTitle;
+
     public TravelTimeGetOverlayRequest withScenarioTitle(String scenarioTitle) {
         this.scenarioTitle = scenarioTitle;
         return this;
@@ -92,6 +101,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOfDayId")
     public String timeOfDayId;
+
     public TravelTimeGetOverlayRequest withTimeOfDayId(String timeOfDayId) {
         this.timeOfDayId = timeOfDayId;
         return this;
@@ -102,6 +112,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelTimeInterval")
     public Integer travelTimeInterval;
+
     public TravelTimeGetOverlayRequest withTravelTimeInterval(Integer travelTimeInterval) {
         this.travelTimeInterval = travelTimeInterval;
         return this;
@@ -112,6 +123,7 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=width")
     public Integer width;
+
     public TravelTimeGetOverlayRequest withWidth(Integer width) {
         this.width = width;
         return this;
@@ -122,9 +134,24 @@ public class TravelTimeGetOverlayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
     public Integer z;
+
     public TravelTimeGetOverlayRequest withZ(Integer z) {
         this.z = z;
         return this;
     }
     
+    public TravelTimeGetOverlayRequest(@JsonProperty("direction") TravelTimeGetOverlayDirectionEnum direction, @JsonProperty("height") Integer height, @JsonProperty("mapCenterLat") Double mapCenterLat, @JsonProperty("mapCenterLon") Double mapCenterLon, @JsonProperty("modeId") String modeId, @JsonProperty("pinLat") Double pinLat, @JsonProperty("pinLon") Double pinLon, @JsonProperty("scenarioTitle") String scenarioTitle, @JsonProperty("timeOfDayId") String timeOfDayId, @JsonProperty("travelTimeInterval") Integer travelTimeInterval, @JsonProperty("width") Integer width, @JsonProperty("z") Integer z) {
+        this.direction = direction;
+        this.height = height;
+        this.mapCenterLat = mapCenterLat;
+        this.mapCenterLon = mapCenterLon;
+        this.modeId = modeId;
+        this.pinLat = pinLat;
+        this.pinLon = pinLon;
+        this.scenarioTitle = scenarioTitle;
+        this.timeOfDayId = timeOfDayId;
+        this.travelTimeInterval = travelTimeInterval;
+        this.width = width;
+        this.z = z;
+  }
 }

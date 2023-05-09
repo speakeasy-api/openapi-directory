@@ -20,6 +20,7 @@ public class WorkspaceConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionState")
     public ConnectionStateEnum connectionState;
+
     public WorkspaceConnectionStatus withConnectionState(ConnectionStateEnum connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -30,6 +31,7 @@ public class WorkspaceConnectionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ConnectionStateCheckTimestamp")
     public OffsetDateTime connectionStateCheckTimestamp;
+
     public WorkspaceConnectionStatus withConnectionStateCheckTimestamp(OffsetDateTime connectionStateCheckTimestamp) {
         this.connectionStateCheckTimestamp = connectionStateCheckTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class WorkspaceConnectionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastKnownUserConnectionTimestamp")
     public OffsetDateTime lastKnownUserConnectionTimestamp;
+
     public WorkspaceConnectionStatus withLastKnownUserConnectionTimestamp(OffsetDateTime lastKnownUserConnectionTimestamp) {
         this.lastKnownUserConnectionTimestamp = lastKnownUserConnectionTimestamp;
         return this;
@@ -48,9 +51,11 @@ public class WorkspaceConnectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public WorkspaceConnectionStatus withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceConnectionStatus(){}
 }

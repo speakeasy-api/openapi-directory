@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterResourceResponse {
     
     public String contentType;
+
     public DeregisterResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterResourceResponse {
      */
     
     public java.util.Map<String, Object> deregisterResourceResponse;
+
     public DeregisterResourceResponse withDeregisterResourceResponse(java.util.Map<String, Object> deregisterResourceResponse) {
         this.deregisterResourceResponse = deregisterResourceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterResourceResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeregisterResourceResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterResourceResponse {
      */
     
     public Object internalServiceException;
+
     public DeregisterResourceResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterResourceResponse {
      */
     
     public Object invalidInputException;
+
     public DeregisterResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterResourceResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeregisterResourceResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeregisterResourceResponse {
     
     
     public Integer statusCode;
+
     public DeregisterResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

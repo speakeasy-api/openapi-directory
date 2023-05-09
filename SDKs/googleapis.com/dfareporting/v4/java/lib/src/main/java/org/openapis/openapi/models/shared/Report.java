@@ -18,6 +18,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Report withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public ReportCriteria criteria;
+
     public Report withCriteria(ReportCriteria criteria) {
         this.criteria = criteria;
         return this;
@@ -40,6 +42,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossDimensionReachCriteria")
     public ReportCrossDimensionReachCriteria crossDimensionReachCriteria;
+
     public Report withCrossDimensionReachCriteria(ReportCrossDimensionReachCriteria crossDimensionReachCriteria) {
         this.crossDimensionReachCriteria = crossDimensionReachCriteria;
         return this;
@@ -51,6 +54,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery")
     public ReportDelivery delivery;
+
     public Report withDelivery(ReportDelivery delivery) {
         this.delivery = delivery;
         return this;
@@ -62,6 +66,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Report withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +78,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public Report withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -84,6 +90,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightCriteria")
     public ReportFloodlightCriteria floodlightCriteria;
+
     public Report withFloodlightCriteria(ReportFloodlightCriteria floodlightCriteria) {
         this.floodlightCriteria = floodlightCriteria;
         return this;
@@ -95,6 +102,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public ReportFormatEnum format;
+
     public Report withFormat(ReportFormatEnum format) {
         this.format = format;
         return this;
@@ -106,6 +114,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Report withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +126,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Report withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +138,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public Report withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -139,6 +150,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Report withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerProfileId")
     public String ownerProfileId;
+
     public Report withOwnerProfileId(String ownerProfileId) {
         this.ownerProfileId = ownerProfileId;
         return this;
@@ -161,6 +174,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathAttributionCriteria")
     public ReportPathAttributionCriteria pathAttributionCriteria;
+
     public Report withPathAttributionCriteria(ReportPathAttributionCriteria pathAttributionCriteria) {
         this.pathAttributionCriteria = pathAttributionCriteria;
         return this;
@@ -172,6 +186,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathCriteria")
     public ReportPathCriteria pathCriteria;
+
     public Report withPathCriteria(ReportPathCriteria pathCriteria) {
         this.pathCriteria = pathCriteria;
         return this;
@@ -183,6 +198,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathToConversionCriteria")
     public ReportPathToConversionCriteria pathToConversionCriteria;
+
     public Report withPathToConversionCriteria(ReportPathToConversionCriteria pathToConversionCriteria) {
         this.pathToConversionCriteria = pathToConversionCriteria;
         return this;
@@ -194,6 +210,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reachCriteria")
     public ReportReachCriteria reachCriteria;
+
     public Report withReachCriteria(ReportReachCriteria reachCriteria) {
         this.reachCriteria = reachCriteria;
         return this;
@@ -205,6 +222,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ReportSchedule schedule;
+
     public Report withSchedule(ReportSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -216,6 +234,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountId")
     public String subAccountId;
+
     public Report withSubAccountId(String subAccountId) {
         this.subAccountId = subAccountId;
         return this;
@@ -227,9 +246,11 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReportTypeEnum type;
+
     public Report withType(ReportTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Report(){}
 }

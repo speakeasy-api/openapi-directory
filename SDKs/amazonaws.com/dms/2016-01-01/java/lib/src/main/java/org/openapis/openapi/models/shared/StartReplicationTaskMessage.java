@@ -20,6 +20,7 @@ public class StartReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CdcStartPosition")
     public String cdcStartPosition;
+
     public StartReplicationTaskMessage withCdcStartPosition(String cdcStartPosition) {
         this.cdcStartPosition = cdcStartPosition;
         return this;
@@ -30,6 +31,7 @@ public class StartReplicationTaskMessage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CdcStartTime")
     public OffsetDateTime cdcStartTime;
+
     public StartReplicationTaskMessage withCdcStartTime(OffsetDateTime cdcStartTime) {
         this.cdcStartTime = cdcStartTime;
         return this;
@@ -38,6 +40,7 @@ public class StartReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CdcStopPosition")
     public String cdcStopPosition;
+
     public StartReplicationTaskMessage withCdcStopPosition(String cdcStopPosition) {
         this.cdcStopPosition = cdcStopPosition;
         return this;
@@ -45,6 +48,7 @@ public class StartReplicationTaskMessage {
     
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public StartReplicationTaskMessage withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
@@ -52,9 +56,14 @@ public class StartReplicationTaskMessage {
     
     @JsonProperty("StartReplicationTaskType")
     public StartReplicationTaskTypeValueEnum startReplicationTaskType;
+
     public StartReplicationTaskMessage withStartReplicationTaskType(StartReplicationTaskTypeValueEnum startReplicationTaskType) {
         this.startReplicationTaskType = startReplicationTaskType;
         return this;
     }
     
+    public StartReplicationTaskMessage(@JsonProperty("ReplicationTaskArn") String replicationTaskArn, @JsonProperty("StartReplicationTaskType") StartReplicationTaskTypeValueEnum startReplicationTaskType) {
+        this.replicationTaskArn = replicationTaskArn;
+        this.startReplicationTaskType = startReplicationTaskType;
+  }
 }

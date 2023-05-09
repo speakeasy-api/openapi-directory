@@ -54,11 +54,9 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllEnvironmentsResponse res = new org.openapis.openapi.models.operations.AllEnvironmentsResponse() {{
+        org.openapis.openapi.models.operations.AllEnvironmentsResponse res = new org.openapis.openapi.models.operations.AllEnvironmentsResponse(contentType, httpRes.statusCode()) {{
             allEnvironments200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,12 +137,10 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.CreateEnvironmentResponse res = new org.openapis.openapi.models.operations.CreateEnvironmentResponse(contentType, httpRes.statusCode()) {{
             createEnvironment200ApplicationJSONObject = null;
             createEnvironment400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,12 +184,10 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.DeleteEnvironmentResponse res = new org.openapis.openapi.models.operations.DeleteEnvironmentResponse(contentType, httpRes.statusCode()) {{
             deleteEnvironment200ApplicationJSONObject = null;
             deleteEnvironment404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,11 +231,9 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SingleEnvironmentResponse res = new org.openapis.openapi.models.operations.SingleEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.SingleEnvironmentResponse res = new org.openapis.openapi.models.operations.SingleEnvironmentResponse(contentType, httpRes.statusCode()) {{
             singleEnvironment200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,12 +327,10 @@ public class Environments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentResponse() {{
+        org.openapis.openapi.models.operations.UpdateEnvironmentResponse res = new org.openapis.openapi.models.operations.UpdateEnvironmentResponse(contentType, httpRes.statusCode()) {{
             updateEnvironment200ApplicationJSONObject = null;
             updateEnvironment400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

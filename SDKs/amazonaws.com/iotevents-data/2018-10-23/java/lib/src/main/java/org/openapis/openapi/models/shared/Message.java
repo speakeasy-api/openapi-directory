@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Message {
     @JsonProperty("inputName")
     public String inputName;
+
     public Message withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -21,6 +22,7 @@ public class Message {
     
     @JsonProperty("messageId")
     public String messageId;
+
     public Message withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -28,6 +30,7 @@ public class Message {
     
     @JsonProperty("payload")
     public String payload;
+
     public Message withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -36,9 +39,15 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public TimestampValue timestamp;
+
     public Message withTimestamp(TimestampValue timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Message(@JsonProperty("inputName") String inputName, @JsonProperty("messageId") String messageId, @JsonProperty("payload") String payload) {
+        this.inputName = inputName;
+        this.messageId = messageId;
+        this.payload = payload;
+  }
 }

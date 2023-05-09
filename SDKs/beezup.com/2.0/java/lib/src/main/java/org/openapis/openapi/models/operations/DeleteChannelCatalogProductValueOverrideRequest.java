@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelCatalogProductValueOverrideRequest {
@@ -12,6 +13,7 @@ public class DeleteChannelCatalogProductValueOverrideRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public DeleteChannelCatalogProductValueOverrideRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteChannelCatalogProductValueOverrideRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelColumnId")
     public String channelColumnId;
+
     public DeleteChannelCatalogProductValueOverrideRequest withChannelColumnId(String channelColumnId) {
         this.channelColumnId = channelColumnId;
         return this;
@@ -32,9 +35,15 @@ public class DeleteChannelCatalogProductValueOverrideRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public DeleteChannelCatalogProductValueOverrideRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public DeleteChannelCatalogProductValueOverrideRequest(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("channelColumnId") String channelColumnId, @JsonProperty("productId") String productId) {
+        this.channelCatalogId = channelCatalogId;
+        this.channelColumnId = channelColumnId;
+        this.productId = productId;
+  }
 }

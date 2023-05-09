@@ -18,6 +18,7 @@ public class ContentProviderEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public ContentProviderEndpoint withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -29,6 +30,7 @@ public class ContentProviderEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingCertsSha256")
     public String[] signingCertsSha256;
+
     public ContentProviderEndpoint withSigningCertsSha256(String[] signingCertsSha256) {
         this.signingCertsSha256 = signingCertsSha256;
         return this;
@@ -40,9 +42,11 @@ public class ContentProviderEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ContentProviderEndpoint withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ContentProviderEndpoint(){}
 }

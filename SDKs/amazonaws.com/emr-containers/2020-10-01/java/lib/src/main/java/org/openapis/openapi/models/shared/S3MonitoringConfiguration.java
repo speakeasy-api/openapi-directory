@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3MonitoringConfiguration {
     @JsonProperty("logUri")
     public String logUri;
+
     public S3MonitoringConfiguration withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
     }
     
+    public S3MonitoringConfiguration(@JsonProperty("logUri") String logUri) {
+        this.logUri = logUri;
+  }
 }

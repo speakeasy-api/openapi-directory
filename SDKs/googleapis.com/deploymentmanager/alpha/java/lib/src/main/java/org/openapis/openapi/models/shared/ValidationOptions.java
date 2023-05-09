@@ -18,6 +18,7 @@ public class ValidationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaValidation")
     public ValidationOptionsSchemaValidationEnum schemaValidation;
+
     public ValidationOptions withSchemaValidation(ValidationOptionsSchemaValidationEnum schemaValidation) {
         this.schemaValidation = schemaValidation;
         return this;
@@ -29,9 +30,11 @@ public class ValidationOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("undeclaredProperties")
     public ValidationOptionsUndeclaredPropertiesEnum undeclaredProperties;
+
     public ValidationOptions withUndeclaredProperties(ValidationOptionsUndeclaredPropertiesEnum undeclaredProperties) {
         this.undeclaredProperties = undeclaredProperties;
         return this;
     }
     
+    public ValidationOptions(){}
 }

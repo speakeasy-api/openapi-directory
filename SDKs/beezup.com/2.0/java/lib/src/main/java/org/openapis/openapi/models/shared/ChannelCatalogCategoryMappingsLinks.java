@@ -15,6 +15,7 @@ public class ChannelCatalogCategoryMappingsLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable")
     public LinksDisableChannelCatalogCategoryMappingLink disable;
+
     public ChannelCatalogCategoryMappingsLinks withDisable(LinksDisableChannelCatalogCategoryMappingLink disable) {
         this.disable = disable;
         return this;
@@ -23,6 +24,7 @@ public class ChannelCatalogCategoryMappingsLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reenable")
     public LinksReenableChannelCatalogCategoryMappingLink reenable;
+
     public ChannelCatalogCategoryMappingsLinks withReenable(LinksReenableChannelCatalogCategoryMappingLink reenable) {
         this.reenable = reenable;
         return this;
@@ -30,9 +32,13 @@ public class ChannelCatalogCategoryMappingsLinks {
     
     @JsonProperty("self")
     public LinksGetChannelCatalogCategoriesLink self;
+
     public ChannelCatalogCategoryMappingsLinks withSelf(LinksGetChannelCatalogCategoriesLink self) {
         this.self = self;
         return this;
     }
     
+    public ChannelCatalogCategoryMappingsLinks(@JsonProperty("self") LinksGetChannelCatalogCategoriesLink self) {
+        this.self = self;
+  }
 }

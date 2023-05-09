@@ -15,6 +15,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesNoncurrentVersionTransi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Days")
     public Long days;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesNoncurrentVersionTransitionsDetails withDays(Long days) {
         this.days = days;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesNoncurrentVersionTransi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageClass")
     public String storageClass;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesNoncurrentVersionTransitionsDetails withStorageClass(String storageClass) {
         this.storageClass = storageClass;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationRulesNoncurrentVersionTransitionsDetails(){}
 }

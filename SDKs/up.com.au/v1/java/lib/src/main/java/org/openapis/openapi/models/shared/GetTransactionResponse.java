@@ -17,9 +17,13 @@ public class GetTransactionResponse {
      */
     @JsonProperty("data")
     public TransactionResource data;
+
     public GetTransactionResponse withData(TransactionResource data) {
         this.data = data;
         return this;
     }
     
+    public GetTransactionResponse(@JsonProperty("data") TransactionResource data) {
+        this.data = data;
+  }
 }

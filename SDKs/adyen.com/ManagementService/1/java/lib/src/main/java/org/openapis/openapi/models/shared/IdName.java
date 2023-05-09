@@ -15,6 +15,7 @@ public class IdName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public IdName withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class IdName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IdName withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IdName(){}
 }

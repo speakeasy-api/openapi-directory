@@ -12,6 +12,7 @@ public class PutV2OrgsNameSettingsRequestBodyRestrictedImages {
      */
     @JsonProperty("allow_official_images")
     public Boolean allowOfficialImages;
+
     public PutV2OrgsNameSettingsRequestBodyRestrictedImages withAllowOfficialImages(Boolean allowOfficialImages) {
         this.allowOfficialImages = allowOfficialImages;
         return this;
@@ -22,6 +23,7 @@ public class PutV2OrgsNameSettingsRequestBodyRestrictedImages {
      */
     @JsonProperty("allow_verified_publishers")
     public Boolean allowVerifiedPublishers;
+
     public PutV2OrgsNameSettingsRequestBodyRestrictedImages withAllowVerifiedPublishers(Boolean allowVerifiedPublishers) {
         this.allowVerifiedPublishers = allowVerifiedPublishers;
         return this;
@@ -32,9 +34,15 @@ public class PutV2OrgsNameSettingsRequestBodyRestrictedImages {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PutV2OrgsNameSettingsRequestBodyRestrictedImages withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public PutV2OrgsNameSettingsRequestBodyRestrictedImages(@JsonProperty("allow_official_images") Boolean allowOfficialImages, @JsonProperty("allow_verified_publishers") Boolean allowVerifiedPublishers, @JsonProperty("enabled") Boolean enabled) {
+        this.allowOfficialImages = allowOfficialImages;
+        this.allowVerifiedPublishers = allowVerifiedPublishers;
+        this.enabled = enabled;
+  }
 }

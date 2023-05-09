@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenewOfferingRequest {
     @JsonProperty("offeringId")
     public String offeringId;
+
     public RenewOfferingRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -19,9 +20,14 @@ public class RenewOfferingRequest {
     
     @JsonProperty("quantity")
     public Long quantity;
+
     public RenewOfferingRequest withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public RenewOfferingRequest(@JsonProperty("offeringId") String offeringId, @JsonProperty("quantity") Long quantity) {
+        this.offeringId = offeringId;
+        this.quantity = quantity;
+  }
 }

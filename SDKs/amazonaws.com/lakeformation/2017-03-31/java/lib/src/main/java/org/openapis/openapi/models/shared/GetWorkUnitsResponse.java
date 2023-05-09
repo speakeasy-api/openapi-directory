@@ -15,6 +15,7 @@ public class GetWorkUnitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetWorkUnitsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class GetWorkUnitsResponse {
     
     @JsonProperty("QueryId")
     public String queryId;
+
     public GetWorkUnitsResponse withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -29,9 +31,14 @@ public class GetWorkUnitsResponse {
     
     @JsonProperty("WorkUnitRanges")
     public WorkUnitRange[] workUnitRanges;
+
     public GetWorkUnitsResponse withWorkUnitRanges(WorkUnitRange[] workUnitRanges) {
         this.workUnitRanges = workUnitRanges;
         return this;
     }
     
+    public GetWorkUnitsResponse(@JsonProperty("QueryId") String queryId, @JsonProperty("WorkUnitRanges") WorkUnitRange[] workUnitRanges) {
+        this.queryId = queryId;
+        this.workUnitRanges = workUnitRanges;
+  }
 }

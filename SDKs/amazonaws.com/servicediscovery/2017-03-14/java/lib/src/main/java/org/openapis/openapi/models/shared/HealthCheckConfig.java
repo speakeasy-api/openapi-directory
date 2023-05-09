@@ -15,6 +15,7 @@ public class HealthCheckConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureThreshold")
     public Long failureThreshold;
+
     public HealthCheckConfig withFailureThreshold(Long failureThreshold) {
         this.failureThreshold = failureThreshold;
         return this;
@@ -23,6 +24,7 @@ public class HealthCheckConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePath")
     public String resourcePath;
+
     public HealthCheckConfig withResourcePath(String resourcePath) {
         this.resourcePath = resourcePath;
         return this;
@@ -30,9 +32,13 @@ public class HealthCheckConfig {
     
     @JsonProperty("Type")
     public HealthCheckTypeEnum type;
+
     public HealthCheckConfig withType(HealthCheckTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public HealthCheckConfig(@JsonProperty("Type") HealthCheckTypeEnum type) {
+        this.type = type;
+  }
 }

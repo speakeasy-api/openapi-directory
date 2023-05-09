@@ -15,6 +15,7 @@ public class TimeInNanos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetInNanos")
     public Long offsetInNanos;
+
     public TimeInNanos withOffsetInNanos(Long offsetInNanos) {
         this.offsetInNanos = offsetInNanos;
         return this;
@@ -22,9 +23,13 @@ public class TimeInNanos {
     
     @JsonProperty("timeInSeconds")
     public Long timeInSeconds;
+
     public TimeInNanos withTimeInSeconds(Long timeInSeconds) {
         this.timeInSeconds = timeInSeconds;
         return this;
     }
     
+    public TimeInNanos(@JsonProperty("timeInSeconds") Long timeInSeconds) {
+        this.timeInSeconds = timeInSeconds;
+  }
 }

@@ -18,6 +18,7 @@ public class OSPolicyResourceCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSteps")
     public OSPolicyResourceConfigStep[] configSteps;
+
     public OSPolicyResourceCompliance withConfigSteps(OSPolicyResourceConfigStep[] configSteps) {
         this.configSteps = configSteps;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execResourceOutput")
     public OSPolicyResourceComplianceExecResourceOutput execResourceOutput;
+
     public OSPolicyResourceCompliance withExecResourceOutput(OSPolicyResourceComplianceExecResourceOutput execResourceOutput) {
         this.execResourceOutput = execResourceOutput;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResourceCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osPolicyResourceId")
     public String osPolicyResourceId;
+
     public OSPolicyResourceCompliance withOsPolicyResourceId(String osPolicyResourceId) {
         this.osPolicyResourceId = osPolicyResourceId;
         return this;
@@ -51,9 +54,11 @@ public class OSPolicyResourceCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public OSPolicyResourceComplianceStateEnum state;
+
     public OSPolicyResourceCompliance withState(OSPolicyResourceComplianceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public OSPolicyResourceCompliance(){}
 }

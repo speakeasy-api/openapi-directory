@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DelinkHidBenefitUsingPOSTResponse {
     
     public byte[] body;
+
     public DelinkHidBenefitUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DelinkHidBenefitUsingPOSTResponse {
     
     
     public String contentType;
+
     public DelinkHidBenefitUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DelinkHidBenefitUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public DelinkHidBenefitUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DelinkHidBenefitUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DelinkHidBenefitUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DelinkHidBenefitUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

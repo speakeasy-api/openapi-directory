@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -26,20 +25,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                xMarketId = "corrupti";
-                xShopperId = "provident";
-                orderId = "distinctio";
-            }}            
+            GetRequest req = new GetRequest("corrupti") {{
+                xMarketId = "provident";
+                xShopperId = "distinctio";
+            }};            
 
             GetResponse res = sdk.v1.get(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,10 +47,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `get` - Retrieve details for specified order
-* `list` - Retrieve a list of orders for the authenticated shopper. Only one filter may be used at a time
+* [get](docs/v1/README.md#get) - Retrieve details for specified order
+* [list](docs/v1/README.md#list) - Retrieve a list of orders for the authenticated shopper. Only one filter may be used at a time
 <!-- End SDK Available Operations -->
 
 ### Maturity

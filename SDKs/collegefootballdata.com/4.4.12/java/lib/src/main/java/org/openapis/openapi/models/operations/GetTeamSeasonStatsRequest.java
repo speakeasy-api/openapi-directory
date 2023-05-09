@@ -12,6 +12,7 @@ public class GetTeamSeasonStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetTeamSeasonStatsRequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -22,6 +23,7 @@ public class GetTeamSeasonStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endWeek")
     public Long endWeek;
+
     public GetTeamSeasonStatsRequest withEndWeek(Long endWeek) {
         this.endWeek = endWeek;
         return this;
@@ -32,6 +34,7 @@ public class GetTeamSeasonStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startWeek")
     public Long startWeek;
+
     public GetTeamSeasonStatsRequest withStartWeek(Long startWeek) {
         this.startWeek = startWeek;
         return this;
@@ -42,6 +45,7 @@ public class GetTeamSeasonStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetTeamSeasonStatsRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -52,9 +56,11 @@ public class GetTeamSeasonStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetTeamSeasonStatsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetTeamSeasonStatsRequest(){}
 }

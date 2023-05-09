@@ -18,6 +18,7 @@ public class ValueMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolMatch")
     public Boolean boolMatch;
+
     public ValueMatcher withBoolMatch(Boolean boolMatch) {
         this.boolMatch = boolMatch;
         return this;
@@ -29,6 +30,7 @@ public class ValueMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleMatch")
     public DoubleMatcher doubleMatch;
+
     public ValueMatcher withDoubleMatch(DoubleMatcher doubleMatch) {
         this.doubleMatch = doubleMatch;
         return this;
@@ -40,6 +42,7 @@ public class ValueMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listMatch")
     public ListMatcher listMatch;
+
     public ValueMatcher withListMatch(ListMatcher listMatch) {
         this.listMatch = listMatch;
         return this;
@@ -51,6 +54,7 @@ public class ValueMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullMatch")
     public java.util.Map<String, Object> nullMatch;
+
     public ValueMatcher withNullMatch(java.util.Map<String, Object> nullMatch) {
         this.nullMatch = nullMatch;
         return this;
@@ -62,6 +66,7 @@ public class ValueMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentMatch")
     public Boolean presentMatch;
+
     public ValueMatcher withPresentMatch(Boolean presentMatch) {
         this.presentMatch = presentMatch;
         return this;
@@ -73,9 +78,11 @@ public class ValueMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringMatch")
     public StringMatcher stringMatch;
+
     public ValueMatcher withStringMatch(StringMatcher stringMatch) {
         this.stringMatch = stringMatch;
         return this;
     }
     
+    public ValueMatcher(){}
 }

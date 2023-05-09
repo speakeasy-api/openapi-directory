@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveTagsFromResourceMessage {
     
     public String resourceName;
+
     public RemoveTagsFromResourceMessage withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -16,9 +17,14 @@ public class RemoveTagsFromResourceMessage {
     
     
     public String[] tagKeys;
+
     public RemoveTagsFromResourceMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public RemoveTagsFromResourceMessage(@JsonProperty("ResourceName") String resourceName, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.resourceName = resourceName;
+        this.tagKeys = tagKeys;
+  }
 }

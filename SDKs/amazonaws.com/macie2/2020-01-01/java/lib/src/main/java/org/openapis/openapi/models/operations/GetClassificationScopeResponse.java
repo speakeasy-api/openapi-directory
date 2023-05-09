@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationScopeResponse {
@@ -12,6 +13,7 @@ public class GetClassificationScopeResponse {
      */
     
     public Object accessDeniedException;
+
     public GetClassificationScopeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetClassificationScopeResponse {
     
     
     public String contentType;
+
     public GetClassificationScopeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetClassificationScopeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetClassificationScopeResponse getClassificationScopeResponse;
+
     public GetClassificationScopeResponse withGetClassificationScopeResponse(org.openapis.openapi.models.shared.GetClassificationScopeResponse getClassificationScopeResponse) {
         this.getClassificationScopeResponse = getClassificationScopeResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetClassificationScopeResponse {
      */
     
     public Object internalServerException;
+
     public GetClassificationScopeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetClassificationScopeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetClassificationScopeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetClassificationScopeResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationScopeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetClassificationScopeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationScopeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetClassificationScopeResponse {
      */
     
     public Object throttlingException;
+
     public GetClassificationScopeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetClassificationScopeResponse {
      */
     
     public Object validationException;
+
     public GetClassificationScopeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetClassificationScopeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

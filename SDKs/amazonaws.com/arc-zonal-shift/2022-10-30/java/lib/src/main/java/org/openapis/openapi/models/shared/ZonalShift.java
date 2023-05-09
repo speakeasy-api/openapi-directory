@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ZonalShift {
     @JsonProperty("awayFrom")
     public String awayFrom;
+
     public ZonalShift withAwayFrom(String awayFrom) {
         this.awayFrom = awayFrom;
         return this;
@@ -24,6 +25,7 @@ public class ZonalShift {
     
     @JsonProperty("comment")
     public String comment;
+
     public ZonalShift withComment(String comment) {
         this.comment = comment;
         return this;
@@ -33,6 +35,7 @@ public class ZonalShift {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiryTime")
     public OffsetDateTime expiryTime;
+
     public ZonalShift withExpiryTime(OffsetDateTime expiryTime) {
         this.expiryTime = expiryTime;
         return this;
@@ -40,6 +43,7 @@ public class ZonalShift {
     
     @JsonProperty("resourceIdentifier")
     public String resourceIdentifier;
+
     public ZonalShift withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -49,6 +53,7 @@ public class ZonalShift {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ZonalShift withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,6 +61,7 @@ public class ZonalShift {
     
     @JsonProperty("status")
     public ZonalShiftStatusEnum status;
+
     public ZonalShift withStatus(ZonalShiftStatusEnum status) {
         this.status = status;
         return this;
@@ -63,9 +69,19 @@ public class ZonalShift {
     
     @JsonProperty("zonalShiftId")
     public String zonalShiftId;
+
     public ZonalShift withZonalShiftId(String zonalShiftId) {
         this.zonalShiftId = zonalShiftId;
         return this;
     }
     
+    public ZonalShift(@JsonProperty("awayFrom") String awayFrom, @JsonProperty("comment") String comment, @JsonProperty("expiryTime") OffsetDateTime expiryTime, @JsonProperty("resourceIdentifier") String resourceIdentifier, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("status") ZonalShiftStatusEnum status, @JsonProperty("zonalShiftId") String zonalShiftId) {
+        this.awayFrom = awayFrom;
+        this.comment = comment;
+        this.expiryTime = expiryTime;
+        this.resourceIdentifier = resourceIdentifier;
+        this.startTime = startTime;
+        this.status = status;
+        this.zonalShiftId = zonalShiftId;
+  }
 }

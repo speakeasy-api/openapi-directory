@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachDiskResponse {
@@ -12,6 +13,7 @@ public class AttachDiskResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachDiskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachDiskResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public AttachDiskResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -32,6 +35,7 @@ public class AttachDiskResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachDiskResult attachDiskResult;
+
     public AttachDiskResponse withAttachDiskResult(org.openapis.openapi.models.shared.AttachDiskResult attachDiskResult) {
         this.attachDiskResult = attachDiskResult;
         return this;
@@ -39,6 +43,7 @@ public class AttachDiskResponse {
     
     
     public String contentType;
+
     public AttachDiskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AttachDiskResponse {
      */
     
     public Object invalidInputException;
+
     public AttachDiskResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class AttachDiskResponse {
      */
     
     public Object notFoundException;
+
     public AttachDiskResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AttachDiskResponse {
      */
     
     public Object operationFailureException;
+
     public AttachDiskResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class AttachDiskResponse {
      */
     
     public Object serviceException;
+
     public AttachDiskResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class AttachDiskResponse {
     
     
     public Integer statusCode;
+
     public AttachDiskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AttachDiskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachDiskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class AttachDiskResponse {
      */
     
     public Object unauthenticatedException;
+
     public AttachDiskResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public AttachDiskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

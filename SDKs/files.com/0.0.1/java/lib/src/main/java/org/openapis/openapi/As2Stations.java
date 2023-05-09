@@ -55,10 +55,8 @@ public class As2Stations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAs2StationsIdResponse res = new org.openapis.openapi.models.operations.DeleteAs2StationsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteAs2StationsIdResponse res = new org.openapis.openapi.models.operations.DeleteAs2StationsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class As2Stations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAs2StationsResponse res = new org.openapis.openapi.models.operations.GetAs2StationsResponse() {{
+        org.openapis.openapi.models.operations.GetAs2StationsResponse res = new org.openapis.openapi.models.operations.GetAs2StationsResponse(contentType, httpRes.statusCode()) {{
             as2StationEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class As2Stations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAs2StationsIdResponse res = new org.openapis.openapi.models.operations.GetAs2StationsIdResponse() {{
+        org.openapis.openapi.models.operations.GetAs2StationsIdResponse res = new org.openapis.openapi.models.operations.GetAs2StationsIdResponse(contentType, httpRes.statusCode()) {{
             as2StationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class As2Stations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchAs2StationsIdResponse res = new org.openapis.openapi.models.operations.PatchAs2StationsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchAs2StationsIdResponse res = new org.openapis.openapi.models.operations.PatchAs2StationsIdResponse(contentType, httpRes.statusCode()) {{
             as2StationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,11 +216,9 @@ public class As2Stations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAs2StationsResponse res = new org.openapis.openapi.models.operations.PostAs2StationsResponse() {{
+        org.openapis.openapi.models.operations.PostAs2StationsResponse res = new org.openapis.openapi.models.operations.PostAs2StationsResponse(contentType, httpRes.statusCode()) {{
             as2StationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SrcSearchlyApiV1ControllersSimilarityBySongResponse {
@@ -12,6 +13,7 @@ public class SrcSearchlyApiV1ControllersSimilarityBySongResponse {
      */
     
     public org.openapis.openapi.models.shared.APIResponseSimilarity apiResponseSimilarity;
+
     public SrcSearchlyApiV1ControllersSimilarityBySongResponse withAPIResponseSimilarity(org.openapis.openapi.models.shared.APIResponseSimilarity apiResponseSimilarity) {
         this.apiResponseSimilarity = apiResponseSimilarity;
         return this;
@@ -19,6 +21,7 @@ public class SrcSearchlyApiV1ControllersSimilarityBySongResponse {
     
     
     public String contentType;
+
     public SrcSearchlyApiV1ControllersSimilarityBySongResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SrcSearchlyApiV1ControllersSimilarityBySongResponse {
     
     
     public Integer statusCode;
+
     public SrcSearchlyApiV1ControllersSimilarityBySongResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class SrcSearchlyApiV1ControllersSimilarityBySongResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SrcSearchlyApiV1ControllersSimilarityBySongResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class SrcSearchlyApiV1ControllersSimilarityBySongResponse {
      */
     
     public String srcSearchlyApiV1ControllersSimilarityBySongDefaultApplicationTextString;
+
     public SrcSearchlyApiV1ControllersSimilarityBySongResponse withSrcSearchlyApiV1ControllersSimilarityBySongDefaultApplicationTextString(String srcSearchlyApiV1ControllersSimilarityBySongDefaultApplicationTextString) {
         this.srcSearchlyApiV1ControllersSimilarityBySongDefaultApplicationTextString = srcSearchlyApiV1ControllersSimilarityBySongDefaultApplicationTextString;
         return this;
     }
     
+    public SrcSearchlyApiV1ControllersSimilarityBySongResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

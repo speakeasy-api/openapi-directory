@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsdataPropertiesRunPivotReportRequest {
@@ -12,6 +13,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RunPivotReportRequest runPivotReportRequest;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withRunPivotReportRequest(org.openapis.openapi.models.shared.RunPivotReportRequest runPivotReportRequest) {
         this.runPivotReportRequest = runPivotReportRequest;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property")
     public String property;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withProperty(String property) {
         this.property = property;
         return this;
@@ -109,6 +120,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class AnalyticsdataPropertiesRunPivotReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AnalyticsdataPropertiesRunPivotReportRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AnalyticsdataPropertiesRunPivotReportRequest(@JsonProperty("property") String property) {
+        this.property = property;
+  }
 }

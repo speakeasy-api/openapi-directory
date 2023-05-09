@@ -15,6 +15,7 @@ public class CreatePresetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Preset")
     public Preset preset;
+
     public CreatePresetResponse withPreset(Preset preset) {
         this.preset = preset;
         return this;
@@ -23,9 +24,11 @@ public class CreatePresetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Warning")
     public String warning;
+
     public CreatePresetResponse withWarning(String warning) {
         this.warning = warning;
         return this;
     }
     
+    public CreatePresetResponse(){}
 }

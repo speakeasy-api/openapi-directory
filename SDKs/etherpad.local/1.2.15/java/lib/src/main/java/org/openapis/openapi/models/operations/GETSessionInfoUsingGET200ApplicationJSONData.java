@@ -12,9 +12,11 @@ public class GETSessionInfoUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public GETSessionInfoUsingGET200ApplicationJSONDataInfo info;
+
     public GETSessionInfoUsingGET200ApplicationJSONData withInfo(GETSessionInfoUsingGET200ApplicationJSONDataInfo info) {
         this.info = info;
         return this;
     }
     
+    public GETSessionInfoUsingGET200ApplicationJSONData(){}
 }

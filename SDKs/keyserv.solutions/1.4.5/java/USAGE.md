@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.KeysApiCurrentRequest;
 import org.openapis.openapi.models.operations.KeysApiCurrentResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            KeysApiCurrentRequest req = new KeysApiCurrentRequest() {{
-                serial = "corrupti";
-            }}            
+            KeysApiCurrentRequest req = new KeysApiCurrentRequest("corrupti");            
 
             KeysApiCurrentResponse res = sdk.keysApi.keysApiCurrent(req);
 
-            if (res.keysApiCurrent200ApplicationJSONOneOf.isPresent()) {
+            if (res.keysApiCurrent200ApplicationJSONOneOf != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

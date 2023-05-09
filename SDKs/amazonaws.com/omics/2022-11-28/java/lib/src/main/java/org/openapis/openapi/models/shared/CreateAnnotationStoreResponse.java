@@ -21,6 +21,7 @@ public class CreateAnnotationStoreResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CreateAnnotationStoreResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class CreateAnnotationStoreResponse {
     
     @JsonProperty("id")
     public String id;
+
     public CreateAnnotationStoreResponse withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class CreateAnnotationStoreResponse {
     
     @JsonProperty("name")
     public String name;
+
     public CreateAnnotationStoreResponse withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +46,7 @@ public class CreateAnnotationStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public ReferenceItem reference;
+
     public CreateAnnotationStoreResponse withReference(ReferenceItem reference) {
         this.reference = reference;
         return this;
@@ -50,6 +54,7 @@ public class CreateAnnotationStoreResponse {
     
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public CreateAnnotationStoreResponse withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
@@ -58,6 +63,7 @@ public class CreateAnnotationStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeFormat")
     public StoreFormatEnum storeFormat;
+
     public CreateAnnotationStoreResponse withStoreFormat(StoreFormatEnum storeFormat) {
         this.storeFormat = storeFormat;
         return this;
@@ -66,9 +72,16 @@ public class CreateAnnotationStoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeOptions")
     public StoreOptions storeOptions;
+
     public CreateAnnotationStoreResponse withStoreOptions(StoreOptions storeOptions) {
         this.storeOptions = storeOptions;
         return this;
     }
     
+    public CreateAnnotationStoreResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("status") StoreStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+  }
 }

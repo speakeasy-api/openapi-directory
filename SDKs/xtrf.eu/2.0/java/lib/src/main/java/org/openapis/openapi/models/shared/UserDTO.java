@@ -15,6 +15,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDTO[] customFields;
+
     public UserDTO withCustomFields(CustomFieldDTO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserDTO withEmail(String email) {
         this.email = email;
         return this;
@@ -31,6 +33,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public UserDTO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -39,6 +42,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public UserDTO withGender(String gender) {
         this.gender = gender;
         return this;
@@ -47,6 +51,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public UserDTO withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public UserDTO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -63,6 +69,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public UserDTO withLogin(String login) {
         this.login = login;
         return this;
@@ -71,6 +78,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilePhone")
     public String mobilePhone;
+
     public UserDTO withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
         return this;
@@ -79,6 +87,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public UserDTO withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -87,6 +96,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionName")
     public String positionName;
+
     public UserDTO withPositionName(String positionName) {
         this.positionName = positionName;
         return this;
@@ -95,6 +105,7 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneId")
     public String timeZoneId;
+
     public UserDTO withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
@@ -103,9 +114,11 @@ public class UserDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userGroupName")
     public String userGroupName;
+
     public UserDTO withUserGroupName(String userGroupName) {
         this.userGroupName = userGroupName;
         return this;
     }
     
+    public UserDTO(){}
 }

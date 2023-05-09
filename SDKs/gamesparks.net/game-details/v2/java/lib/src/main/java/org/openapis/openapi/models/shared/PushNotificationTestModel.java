@@ -15,6 +15,7 @@ public class PushNotificationTestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customJson")
     public String customJson;
+
     public PushNotificationTestModel withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -23,6 +24,7 @@ public class PushNotificationTestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public PushNotificationTestModel withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -31,6 +33,7 @@ public class PushNotificationTestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushId")
     public String pushId;
+
     public PushNotificationTestModel withPushId(String pushId) {
         this.pushId = pushId;
         return this;
@@ -39,6 +42,7 @@ public class PushNotificationTestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public PushNotificationTestModel withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -47,6 +51,7 @@ public class PushNotificationTestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public PushNotificationTestModel withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -55,9 +60,11 @@ public class PushNotificationTestModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PushNotificationTestModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PushNotificationTestModel(){}
 }

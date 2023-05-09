@@ -15,6 +15,7 @@ public class Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Data withId(Long id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Data withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Data(){}
 }

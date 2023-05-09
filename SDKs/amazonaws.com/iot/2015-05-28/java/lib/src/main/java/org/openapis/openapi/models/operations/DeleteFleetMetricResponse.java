@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFleetMetricResponse {
     
     public String contentType;
+
     public DeleteFleetMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFleetMetricResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteFleetMetricResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFleetMetricResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteFleetMetricResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteFleetMetricResponse {
     
     
     public Integer statusCode;
+
     public DeleteFleetMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteFleetMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFleetMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DeleteFleetMetricResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteFleetMetricResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFleetMetricResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFleetMetricResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFleetMetricResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteFleetMetricResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFleetMetricResponse {
      */
     
     public Object versionConflictException;
+
     public DeleteFleetMetricResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public DeleteFleetMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

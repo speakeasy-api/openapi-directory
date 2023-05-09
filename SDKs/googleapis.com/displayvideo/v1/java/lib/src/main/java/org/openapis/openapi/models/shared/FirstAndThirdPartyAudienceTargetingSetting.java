@@ -18,6 +18,7 @@ public class FirstAndThirdPartyAudienceTargetingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstAndThirdPartyAudienceId")
     public String firstAndThirdPartyAudienceId;
+
     public FirstAndThirdPartyAudienceTargetingSetting withFirstAndThirdPartyAudienceId(String firstAndThirdPartyAudienceId) {
         this.firstAndThirdPartyAudienceId = firstAndThirdPartyAudienceId;
         return this;
@@ -29,9 +30,11 @@ public class FirstAndThirdPartyAudienceTargetingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recency")
     public FirstAndThirdPartyAudienceTargetingSettingRecencyEnum recency;
+
     public FirstAndThirdPartyAudienceTargetingSetting withRecency(FirstAndThirdPartyAudienceTargetingSettingRecencyEnum recency) {
         this.recency = recency;
         return this;
     }
     
+    public FirstAndThirdPartyAudienceTargetingSetting(){}
 }

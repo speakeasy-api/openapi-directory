@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailedAccount {
     @JsonProperty("accountId")
     public String accountId;
+
     public FailedAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class FailedAccount {
     
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public FailedAccount withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,6 +30,7 @@ public class FailedAccount {
     
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public FailedAccount withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -36,6 +39,7 @@ public class FailedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceStatus")
     public ResourceStatus resourceStatus;
+
     public FailedAccount withResourceStatus(ResourceStatus resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -44,9 +48,15 @@ public class FailedAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusEnum status;
+
     public FailedAccount withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public FailedAccount(@JsonProperty("accountId") String accountId, @JsonProperty("errorCode") ErrorCodeEnum errorCode, @JsonProperty("errorMessage") String errorMessage) {
+        this.accountId = accountId;
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+  }
 }

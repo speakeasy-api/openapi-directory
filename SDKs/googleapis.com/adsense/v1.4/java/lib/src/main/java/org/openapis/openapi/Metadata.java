@@ -58,11 +58,9 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListResponse res = new org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListResponse res = new org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListResponse(contentType, httpRes.statusCode()) {{
             metadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Metadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseMetadataMetricsListResponse res = new org.openapis.openapi.models.operations.AdsenseMetadataMetricsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseMetadataMetricsListResponse res = new org.openapis.openapi.models.operations.AdsenseMetadataMetricsListResponse(contentType, httpRes.statusCode()) {{
             metadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

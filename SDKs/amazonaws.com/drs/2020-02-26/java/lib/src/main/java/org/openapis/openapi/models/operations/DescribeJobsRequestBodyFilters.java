@@ -15,6 +15,7 @@ public class DescribeJobsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromDate")
     public String fromDate;
+
     public DescribeJobsRequestBodyFilters withFromDate(String fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -23,6 +24,7 @@ public class DescribeJobsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobIDs")
     public String[] jobIDs;
+
     public DescribeJobsRequestBodyFilters withJobIDs(String[] jobIDs) {
         this.jobIDs = jobIDs;
         return this;
@@ -31,9 +33,11 @@ public class DescribeJobsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toDate")
     public String toDate;
+
     public DescribeJobsRequestBodyFilters withToDate(String toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public DescribeJobsRequestBodyFilters(){}
 }

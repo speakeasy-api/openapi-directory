@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCallAnalyticsJobResponse {
@@ -12,6 +13,7 @@ public class StartCallAnalyticsJobResponse {
      */
     
     public Object badRequestException;
+
     public StartCallAnalyticsJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class StartCallAnalyticsJobResponse {
      */
     
     public Object conflictException;
+
     public StartCallAnalyticsJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartCallAnalyticsJobResponse {
     
     
     public String contentType;
+
     public StartCallAnalyticsJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartCallAnalyticsJobResponse {
      */
     
     public Object internalFailureException;
+
     public StartCallAnalyticsJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class StartCallAnalyticsJobResponse {
      */
     
     public Object limitExceededException;
+
     public StartCallAnalyticsJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartCallAnalyticsJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartCallAnalyticsJobResponse startCallAnalyticsJobResponse;
+
     public StartCallAnalyticsJobResponse withStartCallAnalyticsJobResponse(org.openapis.openapi.models.shared.StartCallAnalyticsJobResponse startCallAnalyticsJobResponse) {
         this.startCallAnalyticsJobResponse = startCallAnalyticsJobResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartCallAnalyticsJobResponse {
     
     
     public Integer statusCode;
+
     public StartCallAnalyticsJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class StartCallAnalyticsJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCallAnalyticsJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartCallAnalyticsJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

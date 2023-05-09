@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListChangeSetsResponse {
@@ -12,6 +13,7 @@ public class ListChangeSetsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListChangeSetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListChangeSetsResponse {
     
     
     public String contentType;
+
     public ListChangeSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListChangeSetsResponse {
      */
     
     public Object internalServiceException;
+
     public ListChangeSetsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListChangeSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListChangeSetsResponse listChangeSetsResponse;
+
     public ListChangeSetsResponse withListChangeSetsResponse(org.openapis.openapi.models.shared.ListChangeSetsResponse listChangeSetsResponse) {
         this.listChangeSetsResponse = listChangeSetsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListChangeSetsResponse {
     
     
     public Integer statusCode;
+
     public ListChangeSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListChangeSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListChangeSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListChangeSetsResponse {
      */
     
     public Object throttlingException;
+
     public ListChangeSetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListChangeSetsResponse {
      */
     
     public Object validationException;
+
     public ListChangeSetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListChangeSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

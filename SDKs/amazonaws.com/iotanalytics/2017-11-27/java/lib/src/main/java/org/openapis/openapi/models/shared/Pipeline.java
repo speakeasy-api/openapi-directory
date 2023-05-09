@@ -20,6 +20,7 @@ public class Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public PipelineActivity[] activities;
+
     public Pipeline withActivities(PipelineActivity[] activities) {
         this.activities = activities;
         return this;
@@ -28,6 +29,7 @@ public class Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Pipeline withArn(String arn) {
         this.arn = arn;
         return this;
@@ -38,6 +40,7 @@ public class Pipeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public Pipeline withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class Pipeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public Pipeline withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -56,6 +60,7 @@ public class Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Pipeline withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class Pipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reprocessingSummaries")
     public ReprocessingSummary[] reprocessingSummaries;
+
     public Pipeline withReprocessingSummaries(ReprocessingSummary[] reprocessingSummaries) {
         this.reprocessingSummaries = reprocessingSummaries;
         return this;
     }
     
+    public Pipeline(){}
 }

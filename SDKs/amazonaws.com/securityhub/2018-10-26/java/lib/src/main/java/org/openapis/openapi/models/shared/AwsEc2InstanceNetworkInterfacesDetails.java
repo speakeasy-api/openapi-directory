@@ -15,9 +15,11 @@ public class AwsEc2InstanceNetworkInterfacesDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceId")
     public String networkInterfaceId;
+
     public AwsEc2InstanceNetworkInterfacesDetails withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     
+    public AwsEc2InstanceNetworkInterfacesDetails(){}
 }

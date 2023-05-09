@@ -15,6 +15,7 @@ public class LinkAttributeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeAction")
     public LinkAttributeAction attributeAction;
+
     public LinkAttributeUpdate withAttributeAction(LinkAttributeAction attributeAction) {
         this.attributeAction = attributeAction;
         return this;
@@ -23,9 +24,11 @@ public class LinkAttributeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeKey")
     public AttributeKey attributeKey;
+
     public LinkAttributeUpdate withAttributeKey(AttributeKey attributeKey) {
         this.attributeKey = attributeKey;
         return this;
     }
     
+    public LinkAttributeUpdate(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchIndexResponse {
     
     public String contentType;
+
     public SearchIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchIndexResponse {
      */
     
     public Object indexNotReadyException;
+
     public SearchIndexResponse withIndexNotReadyException(Object indexNotReadyException) {
         this.indexNotReadyException = indexNotReadyException;
         return this;
@@ -29,6 +32,7 @@ public class SearchIndexResponse {
      */
     
     public Object internalFailureException;
+
     public SearchIndexResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class SearchIndexResponse {
      */
     
     public Object invalidQueryException;
+
     public SearchIndexResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -49,6 +54,7 @@ public class SearchIndexResponse {
      */
     
     public Object invalidRequestException;
+
     public SearchIndexResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class SearchIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class SearchIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchIndexResponse searchIndexResponse;
+
     public SearchIndexResponse withSearchIndexResponse(org.openapis.openapi.models.shared.SearchIndexResponse searchIndexResponse) {
         this.searchIndexResponse = searchIndexResponse;
         return this;
@@ -79,6 +87,7 @@ public class SearchIndexResponse {
      */
     
     public Object serviceUnavailableException;
+
     public SearchIndexResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class SearchIndexResponse {
     
     
     public Integer statusCode;
+
     public SearchIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SearchIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class SearchIndexResponse {
      */
     
     public Object throttlingException;
+
     public SearchIndexResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class SearchIndexResponse {
      */
     
     public Object unauthorizedException;
+
     public SearchIndexResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public SearchIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

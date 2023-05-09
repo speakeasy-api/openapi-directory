@@ -15,9 +15,11 @@ public class DescribeAlarmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarm")
     public Alarm alarm;
+
     public DescribeAlarmResponse withAlarm(Alarm alarm) {
         this.alarm = alarm;
         return this;
     }
     
+    public DescribeAlarmResponse(){}
 }

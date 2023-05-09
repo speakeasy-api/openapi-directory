@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReplicationConfigurationTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
      */
     
     public Object conflictException;
+
     public DeleteReplicationConfigurationTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
     
     
     public String contentType;
+
     public DeleteReplicationConfigurationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
      */
     
     public java.util.Map<String, Object> deleteReplicationConfigurationTemplateResponse;
+
     public DeleteReplicationConfigurationTemplateResponse withDeleteReplicationConfigurationTemplateResponse(java.util.Map<String, Object> deleteReplicationConfigurationTemplateResponse) {
         this.deleteReplicationConfigurationTemplateResponse = deleteReplicationConfigurationTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
      */
     
     public Object internalServerException;
+
     public DeleteReplicationConfigurationTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteReplicationConfigurationTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteReplicationConfigurationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReplicationConfigurationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteReplicationConfigurationTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteReplicationConfigurationTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteReplicationConfigurationTemplateResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DeleteReplicationConfigurationTemplateResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DeleteReplicationConfigurationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

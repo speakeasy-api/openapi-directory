@@ -15,6 +15,7 @@ public class EbsVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Device")
     public String device;
+
     public EbsVolume withDevice(String device) {
         this.device = device;
         return this;
@@ -23,9 +24,11 @@ public class EbsVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public EbsVolume withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public EbsVolume(){}
 }

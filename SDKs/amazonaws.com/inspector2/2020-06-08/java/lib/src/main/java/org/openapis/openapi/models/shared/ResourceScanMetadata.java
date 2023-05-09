@@ -15,6 +15,7 @@ public class ResourceScanMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2")
     public Ec2Metadata ec2;
+
     public ResourceScanMetadata withEc2(Ec2Metadata ec2) {
         this.ec2 = ec2;
         return this;
@@ -23,6 +24,7 @@ public class ResourceScanMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrImage")
     public EcrContainerImageMetadata ecrImage;
+
     public ResourceScanMetadata withEcrImage(EcrContainerImageMetadata ecrImage) {
         this.ecrImage = ecrImage;
         return this;
@@ -31,6 +33,7 @@ public class ResourceScanMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrRepository")
     public EcrRepositoryMetadata ecrRepository;
+
     public ResourceScanMetadata withEcrRepository(EcrRepositoryMetadata ecrRepository) {
         this.ecrRepository = ecrRepository;
         return this;
@@ -39,9 +42,11 @@ public class ResourceScanMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunction")
     public LambdaFunctionMetadata lambdaFunction;
+
     public ResourceScanMetadata withLambdaFunction(LambdaFunctionMetadata lambdaFunction) {
         this.lambdaFunction = lambdaFunction;
         return this;
     }
     
+    public ResourceScanMetadata(){}
 }

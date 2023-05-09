@@ -15,9 +15,11 @@ public class StartSpeechSynthesisTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SynthesisTask")
     public SynthesisTask synthesisTask;
+
     public StartSpeechSynthesisTaskOutput withSynthesisTask(SynthesisTask synthesisTask) {
         this.synthesisTask = synthesisTask;
         return this;
     }
     
+    public StartSpeechSynthesisTaskOutput(){}
 }

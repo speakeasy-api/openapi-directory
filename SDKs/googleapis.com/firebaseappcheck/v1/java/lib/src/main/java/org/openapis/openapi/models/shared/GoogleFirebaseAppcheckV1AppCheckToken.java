@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1AppCheckToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GoogleFirebaseAppcheckV1AppCheckToken withToken(String token) {
         this.token = token;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1AppCheckToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public GoogleFirebaseAppcheckV1AppCheckToken withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1AppCheckToken(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAccountsAdclientsGetAdCodeRequest {
@@ -12,6 +13,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
     public String adClientId;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withAdClientId(String adClientId) {
         this.adClientId = adClientId;
         return this;
@@ -32,6 +35,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagPartner")
     public String tagPartner;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withTagPartner(String tagPartner) {
         this.tagPartner = tagPartner;
         return this;
@@ -102,9 +112,14 @@ public class AdsenseAccountsAdclientsGetAdCodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsenseAccountsAdclientsGetAdCodeRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsenseAccountsAdclientsGetAdCodeRequest(@JsonProperty("accountId") String accountId, @JsonProperty("adClientId") String adClientId) {
+        this.accountId = accountId;
+        this.adClientId = adClientId;
+  }
 }

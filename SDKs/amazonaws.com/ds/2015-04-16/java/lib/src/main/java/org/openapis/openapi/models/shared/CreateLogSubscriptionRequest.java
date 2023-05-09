@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLogSubscriptionRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CreateLogSubscriptionRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,9 +17,14 @@ public class CreateLogSubscriptionRequest {
     
     @JsonProperty("LogGroupName")
     public String logGroupName;
+
     public CreateLogSubscriptionRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
     }
     
+    public CreateLogSubscriptionRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("LogGroupName") String logGroupName) {
+        this.directoryId = directoryId;
+        this.logGroupName = logGroupName;
+  }
 }

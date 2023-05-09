@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HighAvailabilityConfig {
     @JsonProperty("desiredCapacity")
     public Long desiredCapacity;
+
     public HighAvailabilityConfig withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
     }
     
+    public HighAvailabilityConfig(@JsonProperty("desiredCapacity") Long desiredCapacity) {
+        this.desiredCapacity = desiredCapacity;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateDataIntegrationRequestBodyFileConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public java.util.Map<String, String[]> filters;
+
     public CreateDataIntegrationRequestBodyFileConfiguration withFilters(java.util.Map<String, String[]> filters) {
         this.filters = filters;
         return this;
@@ -23,9 +24,11 @@ public class CreateDataIntegrationRequestBodyFileConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Folders")
     public String[] folders;
+
     public CreateDataIntegrationRequestBodyFileConfiguration withFolders(String[] folders) {
         this.folders = folders;
         return this;
     }
     
+    public CreateDataIntegrationRequestBodyFileConfiguration(){}
 }

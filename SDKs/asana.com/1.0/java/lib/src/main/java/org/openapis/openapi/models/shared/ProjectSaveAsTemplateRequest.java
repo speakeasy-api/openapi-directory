@@ -14,6 +14,7 @@ public class ProjectSaveAsTemplateRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectSaveAsTemplateRequest withName(String name) {
         this.name = name;
         return this;
@@ -24,6 +25,7 @@ public class ProjectSaveAsTemplateRequest {
      */
     @JsonProperty("public")
     public Boolean public_;
+
     public ProjectSaveAsTemplateRequest withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -35,6 +37,7 @@ public class ProjectSaveAsTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public ProjectSaveAsTemplateRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -46,9 +49,14 @@ public class ProjectSaveAsTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public String workspace;
+
     public ProjectSaveAsTemplateRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public ProjectSaveAsTemplateRequest(@JsonProperty("name") String name, @JsonProperty("public") Boolean public_) {
+        this.name = name;
+        this.public_ = public_;
+  }
 }

@@ -15,6 +15,7 @@ public class InCookie {
      */
     @JsonProperty("name")
     public String name;
+
     public InCookie withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class InCookie {
      */
     @JsonProperty("type")
     public String type;
+
     public InCookie withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InCookie(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

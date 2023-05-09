@@ -15,6 +15,7 @@ public class TrafficRoutingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeBasedCanary")
     public TimeBasedCanary timeBasedCanary;
+
     public TrafficRoutingConfig withTimeBasedCanary(TimeBasedCanary timeBasedCanary) {
         this.timeBasedCanary = timeBasedCanary;
         return this;
@@ -23,6 +24,7 @@ public class TrafficRoutingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeBasedLinear")
     public TimeBasedLinear timeBasedLinear;
+
     public TrafficRoutingConfig withTimeBasedLinear(TimeBasedLinear timeBasedLinear) {
         this.timeBasedLinear = timeBasedLinear;
         return this;
@@ -31,9 +33,11 @@ public class TrafficRoutingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TrafficRoutingTypeEnum type;
+
     public TrafficRoutingConfig withType(TrafficRoutingTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TrafficRoutingConfig(){}
 }

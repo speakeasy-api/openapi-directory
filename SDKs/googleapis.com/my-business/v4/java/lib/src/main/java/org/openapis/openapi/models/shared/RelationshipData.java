@@ -18,9 +18,11 @@ public class RelationshipData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentChain")
     public String parentChain;
+
     public RelationshipData withParentChain(String parentChain) {
         this.parentChain = parentChain;
         return this;
     }
     
+    public RelationshipData(){}
 }

@@ -19,6 +19,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public Pagination withCount(Integer count) {
         this.count = count;
         return this;
@@ -30,6 +31,7 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public Pagination withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -41,9 +43,11 @@ public class Pagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Integer totalCount;
+
     public Pagination withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public Pagination(){}
 }

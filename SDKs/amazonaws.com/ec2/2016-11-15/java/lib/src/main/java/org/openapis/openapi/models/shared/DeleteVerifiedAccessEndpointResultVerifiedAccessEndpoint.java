@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Amazon Web Services Verified Access endpoint.
+ * DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Verified Access endpoint.
  */
 public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     public String applicationDomain;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withApplicationDomain(String applicationDomain) {
         this.applicationDomain = applicationDomain;
         return this;
@@ -19,6 +20,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum attachmentType;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withAttachmentType(DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum attachmentType) {
         this.attachmentType = attachmentType;
         return this;
@@ -26,6 +28,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String creationTime;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +36,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String deletionTime;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -40,6 +44,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String description;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String deviceValidationDomain;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withDeviceValidationDomain(String deviceValidationDomain) {
         this.deviceValidationDomain = deviceValidationDomain;
         return this;
@@ -54,6 +60,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String domainCertificateArn;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withDomainCertificateArn(String domainCertificateArn) {
         this.domainCertificateArn = domainCertificateArn;
         return this;
@@ -61,6 +68,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String endpointDomain;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withEndpointDomain(String endpointDomain) {
         this.endpointDomain = endpointDomain;
         return this;
@@ -68,6 +76,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum endpointType;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withEndpointType(DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -75,6 +84,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String lastUpdatedTime;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -82,6 +92,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withLoadBalancerOptions(DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions) {
         this.loadBalancerOptions = loadBalancerOptions;
         return this;
@@ -89,6 +100,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions networkInterfaceOptions;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withNetworkInterfaceOptions(DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions networkInterfaceOptions) {
         this.networkInterfaceOptions = networkInterfaceOptions;
         return this;
@@ -96,6 +108,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String[] securityGroupIds;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -103,6 +116,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatus status;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withStatus(DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatus status) {
         this.status = status;
         return this;
@@ -110,6 +124,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointTags[] tags;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withTags(DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,6 +132,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String verifiedAccessEndpointId;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
@@ -124,6 +140,7 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String verifiedAccessGroupId;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -131,9 +148,11 @@ public class DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint {
     
     
     public String verifiedAccessInstanceId;
+
     public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint(){}
 }

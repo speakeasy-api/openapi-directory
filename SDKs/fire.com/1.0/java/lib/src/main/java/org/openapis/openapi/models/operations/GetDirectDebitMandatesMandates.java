@@ -15,6 +15,7 @@ public class GetDirectDebitMandatesMandates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandates")
     public GetDirectDebitMandatesMandatesMandate[] mandates;
+
     public GetDirectDebitMandatesMandates withMandates(GetDirectDebitMandatesMandatesMandate[] mandates) {
         this.mandates = mandates;
         return this;
@@ -26,9 +27,11 @@ public class GetDirectDebitMandatesMandates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetDirectDebitMandatesMandates withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetDirectDebitMandatesMandates(){}
 }

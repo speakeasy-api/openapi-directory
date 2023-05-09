@@ -15,6 +15,7 @@ public class GetParameterHistoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetParameterHistoryResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetParameterHistoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public ParameterHistory[] parameters;
+
     public GetParameterHistoryResult withParameters(ParameterHistory[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GetParameterHistoryResult(){}
 }

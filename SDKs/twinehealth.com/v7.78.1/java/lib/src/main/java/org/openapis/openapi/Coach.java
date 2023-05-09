@@ -54,12 +54,10 @@ public class Coach {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchCoachResponse res = new org.openapis.openapi.models.operations.FetchCoachResponse() {{
+        org.openapis.openapi.models.operations.FetchCoachResponse res = new org.openapis.openapi.models.operations.FetchCoachResponse(contentType, httpRes.statusCode()) {{
             fetchCoachResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class Coach {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchCoachesResponse res = new org.openapis.openapi.models.operations.FetchCoachesResponse() {{
+        org.openapis.openapi.models.operations.FetchCoachesResponse res = new org.openapis.openapi.models.operations.FetchCoachesResponse(contentType, httpRes.statusCode()) {{
             fetchCoachesResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

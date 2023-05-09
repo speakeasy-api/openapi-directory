@@ -12,6 +12,7 @@ public class DescribePhoneNumbersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public PhoneNumberFilter[] filters;
+
     public DescribePhoneNumbersRequest withFilters(PhoneNumberFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribePhoneNumbersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribePhoneNumbersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribePhoneNumbersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePhoneNumbersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribePhoneNumbersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumberIds")
     public String[] phoneNumberIds;
+
     public DescribePhoneNumbersRequest withPhoneNumberIds(String[] phoneNumberIds) {
         this.phoneNumberIds = phoneNumberIds;
         return this;
     }
     
+    public DescribePhoneNumbersRequest(){}
 }

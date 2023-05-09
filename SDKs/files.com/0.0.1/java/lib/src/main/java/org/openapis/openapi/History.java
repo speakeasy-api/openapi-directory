@@ -60,11 +60,9 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HistoryListResponse res = new org.openapis.openapi.models.operations.HistoryListResponse() {{
+        org.openapis.openapi.models.operations.HistoryListResponse res = new org.openapis.openapi.models.operations.HistoryListResponse(contentType, httpRes.statusCode()) {{
             actionEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HistoryListForFileResponse res = new org.openapis.openapi.models.operations.HistoryListForFileResponse() {{
+        org.openapis.openapi.models.operations.HistoryListForFileResponse res = new org.openapis.openapi.models.operations.HistoryListForFileResponse(contentType, httpRes.statusCode()) {{
             actionEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HistoryListForFolderResponse res = new org.openapis.openapi.models.operations.HistoryListForFolderResponse() {{
+        org.openapis.openapi.models.operations.HistoryListForFolderResponse res = new org.openapis.openapi.models.operations.HistoryListForFolderResponse(contentType, httpRes.statusCode()) {{
             actionEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HistoryListForUserResponse res = new org.openapis.openapi.models.operations.HistoryListForUserResponse() {{
+        org.openapis.openapi.models.operations.HistoryListForUserResponse res = new org.openapis.openapi.models.operations.HistoryListForUserResponse(contentType, httpRes.statusCode()) {{
             actionEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class History {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HistoryListLoginsResponse res = new org.openapis.openapi.models.operations.HistoryListLoginsResponse() {{
+        org.openapis.openapi.models.operations.HistoryListLoginsResponse res = new org.openapis.openapi.models.operations.HistoryListLoginsResponse(contentType, httpRes.statusCode()) {{
             actionEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

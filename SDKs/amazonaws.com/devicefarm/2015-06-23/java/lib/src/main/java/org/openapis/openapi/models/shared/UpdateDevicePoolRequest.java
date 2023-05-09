@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDevicePoolRequest {
     @JsonProperty("arn")
     public String arn;
+
     public UpdateDevicePoolRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class UpdateDevicePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clearMaxDevices")
     public Boolean clearMaxDevices;
+
     public UpdateDevicePoolRequest withClearMaxDevices(Boolean clearMaxDevices) {
         this.clearMaxDevices = clearMaxDevices;
         return this;
@@ -30,6 +32,7 @@ public class UpdateDevicePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateDevicePoolRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +41,7 @@ public class UpdateDevicePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDevices")
     public Long maxDevices;
+
     public UpdateDevicePoolRequest withMaxDevices(Long maxDevices) {
         this.maxDevices = maxDevices;
         return this;
@@ -46,6 +50,7 @@ public class UpdateDevicePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateDevicePoolRequest withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +59,13 @@ public class UpdateDevicePoolRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public Rule[] rules;
+
     public UpdateDevicePoolRequest withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateDevicePoolRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

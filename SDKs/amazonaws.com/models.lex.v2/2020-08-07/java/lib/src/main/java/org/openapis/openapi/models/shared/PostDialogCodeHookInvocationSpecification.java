@@ -15,6 +15,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureConditional")
     public ConditionalSpecification failureConditional;
+
     public PostDialogCodeHookInvocationSpecification withFailureConditional(ConditionalSpecification failureConditional) {
         this.failureConditional = failureConditional;
         return this;
@@ -23,6 +24,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureNextStep")
     public DialogState failureNextStep;
+
     public PostDialogCodeHookInvocationSpecification withFailureNextStep(DialogState failureNextStep) {
         this.failureNextStep = failureNextStep;
         return this;
@@ -34,6 +36,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureResponse")
     public ResponseSpecification failureResponse;
+
     public PostDialogCodeHookInvocationSpecification withFailureResponse(ResponseSpecification failureResponse) {
         this.failureResponse = failureResponse;
         return this;
@@ -42,6 +45,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successConditional")
     public ConditionalSpecification successConditional;
+
     public PostDialogCodeHookInvocationSpecification withSuccessConditional(ConditionalSpecification successConditional) {
         this.successConditional = successConditional;
         return this;
@@ -50,6 +54,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successNextStep")
     public DialogState successNextStep;
+
     public PostDialogCodeHookInvocationSpecification withSuccessNextStep(DialogState successNextStep) {
         this.successNextStep = successNextStep;
         return this;
@@ -61,6 +66,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successResponse")
     public ResponseSpecification successResponse;
+
     public PostDialogCodeHookInvocationSpecification withSuccessResponse(ResponseSpecification successResponse) {
         this.successResponse = successResponse;
         return this;
@@ -69,6 +75,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConditional")
     public ConditionalSpecification timeoutConditional;
+
     public PostDialogCodeHookInvocationSpecification withTimeoutConditional(ConditionalSpecification timeoutConditional) {
         this.timeoutConditional = timeoutConditional;
         return this;
@@ -77,6 +84,7 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutNextStep")
     public DialogState timeoutNextStep;
+
     public PostDialogCodeHookInvocationSpecification withTimeoutNextStep(DialogState timeoutNextStep) {
         this.timeoutNextStep = timeoutNextStep;
         return this;
@@ -88,9 +96,11 @@ public class PostDialogCodeHookInvocationSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutResponse")
     public ResponseSpecification timeoutResponse;
+
     public PostDialogCodeHookInvocationSpecification withTimeoutResponse(ResponseSpecification timeoutResponse) {
         this.timeoutResponse = timeoutResponse;
         return this;
     }
     
+    public PostDialogCodeHookInvocationSpecification(){}
 }

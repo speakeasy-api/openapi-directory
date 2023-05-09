@@ -18,6 +18,7 @@ public class EkmConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public EkmConnection withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class EkmConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoSpacePath")
     public String cryptoSpacePath;
+
     public EkmConnection withCryptoSpacePath(String cryptoSpacePath) {
         this.cryptoSpacePath = cryptoSpacePath;
         return this;
@@ -40,6 +42,7 @@ public class EkmConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public EkmConnection withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class EkmConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyManagementMode")
     public EkmConnectionKeyManagementModeEnum keyManagementMode;
+
     public EkmConnection withKeyManagementMode(EkmConnectionKeyManagementModeEnum keyManagementMode) {
         this.keyManagementMode = keyManagementMode;
         return this;
@@ -62,6 +66,7 @@ public class EkmConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EkmConnection withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class EkmConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceResolvers")
     public ServiceResolver[] serviceResolvers;
+
     public EkmConnection withServiceResolvers(ServiceResolver[] serviceResolvers) {
         this.serviceResolvers = serviceResolvers;
         return this;
     }
     
+    public EkmConnection(){}
 }

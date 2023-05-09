@@ -15,6 +15,7 @@ public class SearchedLogStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamName")
     public String logStreamName;
+
     public SearchedLogStream withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -23,9 +24,11 @@ public class SearchedLogStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchedCompletely")
     public Boolean searchedCompletely;
+
     public SearchedLogStream withSearchedCompletely(Boolean searchedCompletely) {
         this.searchedCompletely = searchedCompletely;
         return this;
     }
     
+    public SearchedLogStream(){}
 }

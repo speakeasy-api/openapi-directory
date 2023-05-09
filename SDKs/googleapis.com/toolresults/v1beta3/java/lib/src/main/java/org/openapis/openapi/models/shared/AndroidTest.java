@@ -18,6 +18,7 @@ public class AndroidTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidAppInfo")
     public AndroidAppInfo androidAppInfo;
+
     public AndroidTest withAndroidAppInfo(AndroidAppInfo androidAppInfo) {
         this.androidAppInfo = androidAppInfo;
         return this;
@@ -29,6 +30,7 @@ public class AndroidTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidInstrumentationTest")
     public AndroidInstrumentationTest androidInstrumentationTest;
+
     public AndroidTest withAndroidInstrumentationTest(AndroidInstrumentationTest androidInstrumentationTest) {
         this.androidInstrumentationTest = androidInstrumentationTest;
         return this;
@@ -40,6 +42,7 @@ public class AndroidTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidRoboTest")
     public AndroidRoboTest androidRoboTest;
+
     public AndroidTest withAndroidRoboTest(AndroidRoboTest androidRoboTest) {
         this.androidRoboTest = androidRoboTest;
         return this;
@@ -51,6 +54,7 @@ public class AndroidTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidTestLoop")
     public java.util.Map<String, Object> androidTestLoop;
+
     public AndroidTest withAndroidTestLoop(java.util.Map<String, Object> androidTestLoop) {
         this.androidTestLoop = androidTestLoop;
         return this;
@@ -62,9 +66,11 @@ public class AndroidTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTimeout")
     public Duration testTimeout;
+
     public AndroidTest withTestTimeout(Duration testTimeout) {
         this.testTimeout = testTimeout;
         return this;
     }
     
+    public AndroidTest(){}
 }

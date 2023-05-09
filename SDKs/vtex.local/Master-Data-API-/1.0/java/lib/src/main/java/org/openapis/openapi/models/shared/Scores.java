@@ -7,11 +7,15 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Scores {
-    @JsonProperty("Ar e Ventila\u00e7\u00e3o")
+    @JsonProperty("Ar e Ventilação")
     public ArEVentilaO[] arEVentilacao;
+
     public Scores withArEVentilacao(ArEVentilaO[] arEVentilacao) {
         this.arEVentilacao = arEVentilacao;
         return this;
     }
     
+    public Scores(@JsonProperty("Ar e Ventilação") ArEVentilaO[] arEVentilacao) {
+        this.arEVentilacao = arEVentilacao;
+  }
 }

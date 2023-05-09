@@ -18,9 +18,11 @@ public class FileReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPath")
     public String gcsPath;
+
     public FileReference withGcsPath(String gcsPath) {
         this.gcsPath = gcsPath;
         return this;
     }
     
+    public FileReference(){}
 }

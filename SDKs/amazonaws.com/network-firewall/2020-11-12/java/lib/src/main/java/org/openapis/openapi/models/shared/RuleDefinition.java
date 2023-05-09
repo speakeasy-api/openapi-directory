@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RuleDefinition {
     @JsonProperty("Actions")
     public String[] actions;
+
     public RuleDefinition withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -19,9 +20,14 @@ public class RuleDefinition {
     
     @JsonProperty("MatchAttributes")
     public MatchAttributes matchAttributes;
+
     public RuleDefinition withMatchAttributes(MatchAttributes matchAttributes) {
         this.matchAttributes = matchAttributes;
         return this;
     }
     
+    public RuleDefinition(@JsonProperty("Actions") String[] actions, @JsonProperty("MatchAttributes") MatchAttributes matchAttributes) {
+        this.actions = actions;
+        this.matchAttributes = matchAttributes;
+  }
 }

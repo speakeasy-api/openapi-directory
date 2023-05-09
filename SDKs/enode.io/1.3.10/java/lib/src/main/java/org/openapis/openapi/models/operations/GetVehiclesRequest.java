@@ -14,9 +14,11 @@ public class GetVehiclesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field[]")
     public Object[] field;
+
     public GetVehiclesRequest withField(Object[] field) {
         this.field = field;
         return this;
     }
     
+    public GetVehiclesRequest(){}
 }

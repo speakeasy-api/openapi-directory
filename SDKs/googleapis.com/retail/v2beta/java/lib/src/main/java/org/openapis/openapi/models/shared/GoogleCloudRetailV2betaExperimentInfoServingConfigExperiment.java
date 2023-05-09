@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experimentServingConfig")
     public String experimentServingConfig;
+
     public GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment withExperimentServingConfig(String experimentServingConfig) {
         this.experimentServingConfig = experimentServingConfig;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalServingConfig")
     public String originalServingConfig;
+
     public GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment withOriginalServingConfig(String originalServingConfig) {
         this.originalServingConfig = originalServingConfig;
         return this;
     }
     
+    public GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBillingHistoryRequest {
@@ -12,6 +13,7 @@ public class GetBillingHistoryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvBillingHistoryRequest itvBillingHistoryRequest;
+
     public GetBillingHistoryRequest withItvBillingHistoryRequest(org.openapis.openapi.models.shared.ItvBillingHistoryRequest itvBillingHistoryRequest) {
         this.itvBillingHistoryRequest = itvBillingHistoryRequest;
         return this;
@@ -32,6 +34,7 @@ public class GetBillingHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetBillingHistoryRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class GetBillingHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public GetBillingHistoryRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public GetBillingHistoryRequest(@JsonProperty("ItvBillingHistoryRequest") org.openapis.openapi.models.shared.ItvBillingHistoryRequest itvBillingHistoryRequest, @JsonProperty("platform") String platform) {
+        this.itvBillingHistoryRequest = itvBillingHistoryRequest;
+        this.platform = platform;
+  }
 }

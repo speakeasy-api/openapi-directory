@@ -20,6 +20,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public SessionCommand command;
+
     public Session withCommand(SessionCommand command) {
         this.command = command;
         return this;
@@ -28,6 +29,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connections")
     public ConnectionsList connections;
+
     public Session withConnections(ConnectionsList connections) {
         this.connections = connections;
         return this;
@@ -38,6 +40,7 @@ public class Session {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public Session withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -46,6 +49,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultArguments")
     public java.util.Map<String, String> defaultArguments;
+
     public Session withDefaultArguments(java.util.Map<String, String> defaultArguments) {
         this.defaultArguments = defaultArguments;
         return this;
@@ -54,6 +58,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Session withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public Session withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -70,6 +76,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public Session withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -78,6 +85,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Session withId(String id) {
         this.id = id;
         return this;
@@ -86,6 +94,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Double maxCapacity;
+
     public Session withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -94,6 +103,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Progress")
     public Double progress;
+
     public Session withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -102,6 +112,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public Session withRole(String role) {
         this.role = role;
         return this;
@@ -110,6 +121,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public Session withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -118,9 +130,11 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SessionStatusEnum status;
+
     public Session withStatus(SessionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Session(){}
 }

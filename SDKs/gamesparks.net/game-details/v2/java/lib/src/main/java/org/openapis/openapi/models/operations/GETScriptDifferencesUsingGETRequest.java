@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETScriptDifferencesUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETScriptDifferencesUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GETScriptDifferencesUsingGETRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GETScriptDifferencesUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId1")
     public String snapshotId1;
+
     public GETScriptDifferencesUsingGETRequest withSnapshotId1(String snapshotId1) {
         this.snapshotId1 = snapshotId1;
         return this;
@@ -32,9 +35,15 @@ public class GETScriptDifferencesUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId2")
     public String snapshotId2;
+
     public GETScriptDifferencesUsingGETRequest withSnapshotId2(String snapshotId2) {
         this.snapshotId2 = snapshotId2;
         return this;
     }
     
+    public GETScriptDifferencesUsingGETRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("snapshotId1") String snapshotId1, @JsonProperty("snapshotId2") String snapshotId2) {
+        this.apiKey = apiKey;
+        this.snapshotId1 = snapshotId1;
+        this.snapshotId2 = snapshotId2;
+  }
 }

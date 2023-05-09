@@ -18,6 +18,7 @@ public class AccessDeniedPageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessDeniedPageUri")
     public String accessDeniedPageUri;
+
     public AccessDeniedPageSettings withAccessDeniedPageUri(String accessDeniedPageUri) {
         this.accessDeniedPageUri = accessDeniedPageUri;
         return this;
@@ -29,6 +30,7 @@ public class AccessDeniedPageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generateTroubleshootingUri")
     public Boolean generateTroubleshootingUri;
+
     public AccessDeniedPageSettings withGenerateTroubleshootingUri(Boolean generateTroubleshootingUri) {
         this.generateTroubleshootingUri = generateTroubleshootingUri;
         return this;
@@ -40,9 +42,11 @@ public class AccessDeniedPageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediationTokenGenerationEnabled")
     public Boolean remediationTokenGenerationEnabled;
+
     public AccessDeniedPageSettings withRemediationTokenGenerationEnabled(Boolean remediationTokenGenerationEnabled) {
         this.remediationTokenGenerationEnabled = remediationTokenGenerationEnabled;
         return this;
     }
     
+    public AccessDeniedPageSettings(){}
 }

@@ -12,6 +12,7 @@ public class UpdateAgentStatusRequestBody {
      */
     @JsonProperty("aggregateStatus")
     public UpdateAgentStatusRequestBodyAggregateStatus aggregateStatus;
+
     public UpdateAgentStatusRequestBody withAggregateStatus(UpdateAgentStatusRequestBodyAggregateStatus aggregateStatus) {
         this.aggregateStatus = aggregateStatus;
         return this;
@@ -22,6 +23,7 @@ public class UpdateAgentStatusRequestBody {
      */
     @JsonProperty("componentStatuses")
     public org.openapis.openapi.models.shared.ComponentStatusData[] componentStatuses;
+
     public UpdateAgentStatusRequestBody withComponentStatuses(org.openapis.openapi.models.shared.ComponentStatusData[] componentStatuses) {
         this.componentStatuses = componentStatuses;
         return this;
@@ -32,9 +34,15 @@ public class UpdateAgentStatusRequestBody {
      */
     @JsonProperty("taskId")
     public String taskId;
+
     public UpdateAgentStatusRequestBody withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public UpdateAgentStatusRequestBody(@JsonProperty("aggregateStatus") UpdateAgentStatusRequestBodyAggregateStatus aggregateStatus, @JsonProperty("componentStatuses") org.openapis.openapi.models.shared.ComponentStatusData[] componentStatuses, @JsonProperty("taskId") String taskId) {
+        this.aggregateStatus = aggregateStatus;
+        this.componentStatuses = componentStatuses;
+        this.taskId = taskId;
+  }
 }

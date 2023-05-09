@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV05ConsentsFetchResponse {
     
     public byte[] body;
+
     public PostV05ConsentsFetchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostV05ConsentsFetchResponse {
     
     
     public String contentType;
+
     public PostV05ConsentsFetchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +31,7 @@ public class PostV05ConsentsFetchResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public PostV05ConsentsFetchResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -35,6 +39,7 @@ public class PostV05ConsentsFetchResponse {
     
     
     public Integer statusCode;
+
     public PostV05ConsentsFetchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -42,9 +47,14 @@ public class PostV05ConsentsFetchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV05ConsentsFetchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostV05ConsentsFetchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

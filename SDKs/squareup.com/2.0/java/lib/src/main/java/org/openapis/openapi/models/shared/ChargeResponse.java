@@ -21,6 +21,7 @@ public class ChargeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ChargeResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -36,9 +37,11 @@ public class ChargeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public Transaction transaction;
+
     public ChargeResponse withTransaction(Transaction transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public ChargeResponse(){}
 }

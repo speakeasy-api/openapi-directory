@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIndexingConfigurationResponse {
     
     public String contentType;
+
     public UpdateIndexingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateIndexingConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateIndexingConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIndexingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateIndexingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateIndexingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateIndexingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateIndexingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIndexingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateIndexingConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateIndexingConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateIndexingConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateIndexingConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateIndexingConfigurationResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateIndexingConfigurationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateIndexingConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateIndexingConfigurationResponse;
+
     public UpdateIndexingConfigurationResponse withUpdateIndexingConfigurationResponse(java.util.Map<String, Object> updateIndexingConfigurationResponse) {
         this.updateIndexingConfigurationResponse = updateIndexingConfigurationResponse;
         return this;
     }
     
+    public UpdateIndexingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

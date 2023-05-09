@@ -15,6 +15,7 @@ public class RedshiftDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public RedshiftDestinationProperties withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
@@ -23,6 +24,7 @@ public class RedshiftDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public RedshiftDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -30,6 +32,7 @@ public class RedshiftDestinationProperties {
     
     @JsonProperty("intermediateBucketName")
     public String intermediateBucketName;
+
     public RedshiftDestinationProperties withIntermediateBucketName(String intermediateBucketName) {
         this.intermediateBucketName = intermediateBucketName;
         return this;
@@ -37,9 +40,14 @@ public class RedshiftDestinationProperties {
     
     @JsonProperty("object")
     public String object;
+
     public RedshiftDestinationProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public RedshiftDestinationProperties(@JsonProperty("intermediateBucketName") String intermediateBucketName, @JsonProperty("object") String object) {
+        this.intermediateBucketName = intermediateBucketName;
+        this.object = object;
+  }
 }

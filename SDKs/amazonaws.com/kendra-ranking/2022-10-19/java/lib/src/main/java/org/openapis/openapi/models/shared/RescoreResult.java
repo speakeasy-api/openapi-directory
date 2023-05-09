@@ -15,6 +15,7 @@ public class RescoreResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RescoreId")
     public String rescoreId;
+
     public RescoreResult withRescoreId(String rescoreId) {
         this.rescoreId = rescoreId;
         return this;
@@ -23,9 +24,11 @@ public class RescoreResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultItems")
     public RescoreResultItem[] resultItems;
+
     public RescoreResult withResultItems(RescoreResultItem[] resultItems) {
         this.resultItems = resultItems;
         return this;
     }
     
+    public RescoreResult(){}
 }

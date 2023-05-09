@@ -12,9 +12,11 @@ public class AccountResourceRelationshipsTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public AccountResourceRelationshipsTransactionsLinks links;
+
     public AccountResourceRelationshipsTransactions withLinks(AccountResourceRelationshipsTransactionsLinks links) {
         this.links = links;
         return this;
     }
     
+    public AccountResourceRelationshipsTransactions(){}
 }

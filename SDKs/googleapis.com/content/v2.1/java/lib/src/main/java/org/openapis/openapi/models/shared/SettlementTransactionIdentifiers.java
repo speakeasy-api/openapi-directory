@@ -15,6 +15,7 @@ public class SettlementTransactionIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustmentId")
     public String adjustmentId;
+
     public SettlementTransactionIdentifiers withAdjustmentId(String adjustmentId) {
         this.adjustmentId = adjustmentId;
         return this;
@@ -26,6 +27,7 @@ public class SettlementTransactionIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public SettlementTransactionIdentifiers withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -37,6 +39,7 @@ public class SettlementTransactionIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItemId")
     public String orderItemId;
+
     public SettlementTransactionIdentifiers withOrderItemId(String orderItemId) {
         this.orderItemId = orderItemId;
         return this;
@@ -48,6 +51,7 @@ public class SettlementTransactionIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settlementEntryId")
     public String settlementEntryId;
+
     public SettlementTransactionIdentifiers withSettlementEntryId(String settlementEntryId) {
         this.settlementEntryId = settlementEntryId;
         return this;
@@ -59,6 +63,7 @@ public class SettlementTransactionIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentIds")
     public String[] shipmentIds;
+
     public SettlementTransactionIdentifiers withShipmentIds(String[] shipmentIds) {
         this.shipmentIds = shipmentIds;
         return this;
@@ -70,9 +75,11 @@ public class SettlementTransactionIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public SettlementTransactionIdentifiers withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public SettlementTransactionIdentifiers(){}
 }

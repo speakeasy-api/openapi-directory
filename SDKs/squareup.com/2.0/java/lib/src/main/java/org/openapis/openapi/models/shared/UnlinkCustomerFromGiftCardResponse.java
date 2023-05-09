@@ -19,6 +19,7 @@ public class UnlinkCustomerFromGiftCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UnlinkCustomerFromGiftCardResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class UnlinkCustomerFromGiftCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gift_card")
     public GiftCard giftCard;
+
     public UnlinkCustomerFromGiftCardResponse withGiftCard(GiftCard giftCard) {
         this.giftCard = giftCard;
         return this;
     }
     
+    public UnlinkCustomerFromGiftCardResponse(){}
 }

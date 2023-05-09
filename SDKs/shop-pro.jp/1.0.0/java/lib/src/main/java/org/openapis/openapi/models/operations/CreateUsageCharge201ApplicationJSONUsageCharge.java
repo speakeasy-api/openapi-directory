@@ -15,6 +15,7 @@ public class CreateUsageCharge201ApplicationJSONUsageCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateUsageCharge201ApplicationJSONUsageCharge withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateUsageCharge201ApplicationJSONUsageCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateUsageCharge201ApplicationJSONUsageCharge withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class CreateUsageCharge201ApplicationJSONUsageCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("make_date")
     public Long makeDate;
+
     public CreateUsageCharge201ApplicationJSONUsageCharge withMakeDate(Long makeDate) {
         this.makeDate = makeDate;
         return this;
@@ -48,6 +51,7 @@ public class CreateUsageCharge201ApplicationJSONUsageCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("point")
     public Long point;
+
     public CreateUsageCharge201ApplicationJSONUsageCharge withPoint(Long point) {
         this.point = point;
         return this;
@@ -59,9 +63,11 @@ public class CreateUsageCharge201ApplicationJSONUsageCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_date")
     public Long updateDate;
+
     public CreateUsageCharge201ApplicationJSONUsageCharge withUpdateDate(Long updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public CreateUsageCharge201ApplicationJSONUsageCharge(){}
 }

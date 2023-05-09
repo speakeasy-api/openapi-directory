@@ -15,6 +15,7 @@ public class VaultNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public String[] events;
+
     public VaultNotificationConfig withEvents(String[] events) {
         this.events = events;
         return this;
@@ -23,9 +24,11 @@ public class VaultNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNSTopic")
     public String snsTopic;
+
     public VaultNotificationConfig withSNSTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
     }
     
+    public VaultNotificationConfig(){}
 }

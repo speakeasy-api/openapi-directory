@@ -20,6 +20,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public KeyPhrasesDetectionJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -30,6 +31,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public KeyPhrasesDetectionJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public KeyPhrasesDetectionJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -46,6 +49,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobArn")
     public String jobArn;
+
     public KeyPhrasesDetectionJobProperties withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -54,6 +58,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public KeyPhrasesDetectionJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +67,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public KeyPhrasesDetectionJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public KeyPhrasesDetectionJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -78,6 +85,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public KeyPhrasesDetectionJobProperties withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -86,6 +94,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public KeyPhrasesDetectionJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -94,6 +103,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public KeyPhrasesDetectionJobProperties withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -104,6 +114,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public KeyPhrasesDetectionJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -112,6 +123,7 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public KeyPhrasesDetectionJobProperties withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -120,9 +132,11 @@ public class KeyPhrasesDetectionJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public KeyPhrasesDetectionJobProperties withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public KeyPhrasesDetectionJobProperties(){}
 }

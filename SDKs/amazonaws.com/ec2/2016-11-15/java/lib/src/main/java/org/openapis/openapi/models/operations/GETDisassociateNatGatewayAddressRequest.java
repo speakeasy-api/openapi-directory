@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateNatGatewayAddressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisassociateNatGatewayAddressActionEnum action;
+
     public GETDisassociateNatGatewayAddressRequest withAction(GETDisassociateNatGatewayAddressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisassociateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
     public String[] associationId;
+
     public GETDisassociateNatGatewayAddressRequest withAssociationId(String[] associationId) {
         this.associationId = associationId;
         return this;
@@ -29,6 +32,7 @@ public class GETDisassociateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisassociateNatGatewayAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETDisassociateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxDrainDurationSeconds")
     public Long maxDrainDurationSeconds;
+
     public GETDisassociateNatGatewayAddressRequest withMaxDrainDurationSeconds(Long maxDrainDurationSeconds) {
         this.maxDrainDurationSeconds = maxDrainDurationSeconds;
         return this;
@@ -49,6 +54,7 @@ public class GETDisassociateNatGatewayAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NatGatewayId")
     public String natGatewayId;
+
     public GETDisassociateNatGatewayAddressRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -56,6 +62,7 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisassociateNatGatewayAddressVersionEnum version;
+
     public GETDisassociateNatGatewayAddressRequest withVersion(GETDisassociateNatGatewayAddressVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisassociateNatGatewayAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisassociateNatGatewayAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisassociateNatGatewayAddressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisassociateNatGatewayAddressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisassociateNatGatewayAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisassociateNatGatewayAddressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETDisassociateNatGatewayAddressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisassociateNatGatewayAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisassociateNatGatewayAddressRequest(@JsonProperty("Action") GETDisassociateNatGatewayAddressActionEnum action, @JsonProperty("AssociationId") String[] associationId, @JsonProperty("NatGatewayId") String natGatewayId, @JsonProperty("Version") GETDisassociateNatGatewayAddressVersionEnum version) {
+        this.action = action;
+        this.associationId = associationId;
+        this.natGatewayId = natGatewayId;
+        this.version = version;
+  }
 }

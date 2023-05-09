@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNetworkAttachmentsGetResponse {
     
     public String contentType;
+
     public ComputeNetworkAttachmentsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNetworkAttachmentsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkAttachment networkAttachment;
+
     public ComputeNetworkAttachmentsGetResponse withNetworkAttachment(org.openapis.openapi.models.shared.NetworkAttachment networkAttachment) {
         this.networkAttachment = networkAttachment;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNetworkAttachmentsGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeNetworkAttachmentsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeNetworkAttachmentsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNetworkAttachmentsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNetworkAttachmentsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

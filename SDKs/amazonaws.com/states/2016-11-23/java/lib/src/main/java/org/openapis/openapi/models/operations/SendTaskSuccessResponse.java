@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendTaskSuccessResponse {
     
     public String contentType;
+
     public SendTaskSuccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendTaskSuccessResponse {
      */
     
     public Object invalidOutput;
+
     public SendTaskSuccessResponse withInvalidOutput(Object invalidOutput) {
         this.invalidOutput = invalidOutput;
         return this;
@@ -29,6 +32,7 @@ public class SendTaskSuccessResponse {
      */
     
     public Object invalidToken;
+
     public SendTaskSuccessResponse withInvalidToken(Object invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -39,6 +43,7 @@ public class SendTaskSuccessResponse {
      */
     
     public java.util.Map<String, Object> sendTaskSuccessOutput;
+
     public SendTaskSuccessResponse withSendTaskSuccessOutput(java.util.Map<String, Object> sendTaskSuccessOutput) {
         this.sendTaskSuccessOutput = sendTaskSuccessOutput;
         return this;
@@ -46,6 +51,7 @@ public class SendTaskSuccessResponse {
     
     
     public Integer statusCode;
+
     public SendTaskSuccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SendTaskSuccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendTaskSuccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class SendTaskSuccessResponse {
      */
     
     public Object taskDoesNotExist;
+
     public SendTaskSuccessResponse withTaskDoesNotExist(Object taskDoesNotExist) {
         this.taskDoesNotExist = taskDoesNotExist;
         return this;
@@ -73,9 +81,14 @@ public class SendTaskSuccessResponse {
      */
     
     public Object taskTimedOut;
+
     public SendTaskSuccessResponse withTaskTimedOut(Object taskTimedOut) {
         this.taskTimedOut = taskTimedOut;
         return this;
     }
     
+    public SendTaskSuccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

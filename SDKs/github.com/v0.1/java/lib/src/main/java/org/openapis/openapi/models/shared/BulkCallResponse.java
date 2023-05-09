@@ -15,6 +15,7 @@ public class BulkCallResponse {
      */
     @JsonProperty("Message")
     public BulkCallResponseMessageEnum message;
+
     public BulkCallResponse withMessage(BulkCallResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class BulkCallResponse {
      */
     @JsonProperty("RequestUUID")
     public String[] requestUUID;
+
     public BulkCallResponse withRequestUUID(String[] requestUUID) {
         this.requestUUID = requestUUID;
         return this;
@@ -35,6 +37,7 @@ public class BulkCallResponse {
      */
     @JsonProperty("RestApiServer")
     public String restApiServer;
+
     public BulkCallResponse withRestApiServer(String restApiServer) {
         this.restApiServer = restApiServer;
         return this;
@@ -45,9 +48,16 @@ public class BulkCallResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public BulkCallResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public BulkCallResponse(@JsonProperty("Message") BulkCallResponseMessageEnum message, @JsonProperty("RequestUUID") String[] requestUUID, @JsonProperty("RestApiServer") String restApiServer, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.requestUUID = requestUUID;
+        this.restApiServer = restApiServer;
+        this.success = success;
+  }
 }

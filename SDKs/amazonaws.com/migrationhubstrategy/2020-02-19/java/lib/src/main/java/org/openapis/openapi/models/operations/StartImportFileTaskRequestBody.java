@@ -14,6 +14,7 @@ public class StartImportFileTaskRequestBody {
      */
     @JsonProperty("S3Bucket")
     public String s3Bucket;
+
     public StartImportFileTaskRequestBody withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -25,6 +26,7 @@ public class StartImportFileTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceType")
     public StartImportFileTaskRequestBodyDataSourceTypeEnum dataSourceType;
+
     public StartImportFileTaskRequestBody withDataSourceType(StartImportFileTaskRequestBodyDataSourceTypeEnum dataSourceType) {
         this.dataSourceType = dataSourceType;
         return this;
@@ -36,6 +38,7 @@ public class StartImportFileTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public org.openapis.openapi.models.shared.Group[] groupId;
+
     public StartImportFileTaskRequestBody withGroupId(org.openapis.openapi.models.shared.Group[] groupId) {
         this.groupId = groupId;
         return this;
@@ -46,6 +49,7 @@ public class StartImportFileTaskRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public StartImportFileTaskRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +61,7 @@ public class StartImportFileTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3bucketForReportData")
     public String s3bucketForReportData;
+
     public StartImportFileTaskRequestBody withS3bucketForReportData(String s3bucketForReportData) {
         this.s3bucketForReportData = s3bucketForReportData;
         return this;
@@ -67,9 +72,15 @@ public class StartImportFileTaskRequestBody {
      */
     @JsonProperty("s3key")
     public String s3key;
+
     public StartImportFileTaskRequestBody withS3key(String s3key) {
         this.s3key = s3key;
         return this;
     }
     
+    public StartImportFileTaskRequestBody(@JsonProperty("S3Bucket") String s3Bucket, @JsonProperty("name") String name, @JsonProperty("s3key") String s3key) {
+        this.s3Bucket = s3Bucket;
+        this.name = name;
+        this.s3key = s3key;
+  }
 }

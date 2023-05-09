@@ -12,9 +12,13 @@ public class LineItemSummary {
      */
     @JsonProperty("label")
     public String label;
+
     public LineItemSummary withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public LineItemSummary(@JsonProperty("label") String label) {
+        this.label = label;
+  }
 }

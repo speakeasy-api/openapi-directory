@@ -12,6 +12,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest googleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withGoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest googleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest) {
         this.googleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest = googleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest;
         return this;
@@ -29,6 +31,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +75,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +86,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +97,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +108,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +119,7 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -119,9 +130,11 @@ public class AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest(){}
 }

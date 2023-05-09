@@ -15,6 +15,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentId")
     public String agentId;
+
     public AgentInfo withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -23,6 +24,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentNetworkInfoList")
     public AgentNetworkInfo[] agentNetworkInfoList;
+
     public AgentInfo withAgentNetworkInfoList(AgentNetworkInfo[] agentNetworkInfoList) {
         this.agentNetworkInfoList = agentNetworkInfoList;
         return this;
@@ -31,6 +33,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentType")
     public String agentType;
+
     public AgentInfo withAgentType(String agentType) {
         this.agentType = agentType;
         return this;
@@ -39,6 +42,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionStatus")
     public String collectionStatus;
+
     public AgentInfo withCollectionStatus(String collectionStatus) {
         this.collectionStatus = collectionStatus;
         return this;
@@ -47,6 +51,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorId")
     public String connectorId;
+
     public AgentInfo withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -55,6 +60,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public AgentStatusEnum health;
+
     public AgentInfo withHealth(AgentStatusEnum health) {
         this.health = health;
         return this;
@@ -63,6 +69,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostName")
     public String hostName;
+
     public AgentInfo withHostName(String hostName) {
         this.hostName = hostName;
         return this;
@@ -71,6 +78,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastHealthPingTime")
     public String lastHealthPingTime;
+
     public AgentInfo withLastHealthPingTime(String lastHealthPingTime) {
         this.lastHealthPingTime = lastHealthPingTime;
         return this;
@@ -79,6 +87,7 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredTime")
     public String registeredTime;
+
     public AgentInfo withRegisteredTime(String registeredTime) {
         this.registeredTime = registeredTime;
         return this;
@@ -87,9 +96,11 @@ public class AgentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public AgentInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AgentInfo(){}
 }

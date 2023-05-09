@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateMonitorOutput {
     @JsonProperty("Arn")
     public String arn;
+
     public CreateMonitorOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class CreateMonitorOutput {
     
     @JsonProperty("Status")
     public MonitorConfigStateEnum status;
+
     public CreateMonitorOutput withStatus(MonitorConfigStateEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateMonitorOutput(@JsonProperty("Arn") String arn, @JsonProperty("Status") MonitorConfigStateEnum status) {
+        this.arn = arn;
+        this.status = status;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BillingGetGithubAdvancedSecurityBillingGheRequest {
@@ -12,6 +13,7 @@ public class BillingGetGithubAdvancedSecurityBillingGheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public BillingGetGithubAdvancedSecurityBillingGheRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,6 +24,7 @@ public class BillingGetGithubAdvancedSecurityBillingGheRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public BillingGetGithubAdvancedSecurityBillingGheRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class BillingGetGithubAdvancedSecurityBillingGheRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public BillingGetGithubAdvancedSecurityBillingGheRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public BillingGetGithubAdvancedSecurityBillingGheRequest(@JsonProperty("enterprise") String enterprise) {
+        this.enterprise = enterprise;
+  }
 }

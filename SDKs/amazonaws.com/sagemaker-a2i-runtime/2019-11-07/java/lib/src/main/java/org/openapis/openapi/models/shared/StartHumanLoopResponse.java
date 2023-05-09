@@ -15,9 +15,11 @@ public class StartHumanLoopResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopArn")
     public String humanLoopArn;
+
     public StartHumanLoopResponse withHumanLoopArn(String humanLoopArn) {
         this.humanLoopArn = humanLoopArn;
         return this;
     }
     
+    public StartHumanLoopResponse(){}
 }

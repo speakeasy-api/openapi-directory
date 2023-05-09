@@ -18,6 +18,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numShards")
     public Integer numShards;
+
     public Shard withNumShards(Integer numShards) {
         this.numShards = numShards;
         return this;
@@ -29,6 +30,7 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardIndex")
     public Integer shardIndex;
+
     public Shard withShardIndex(Integer shardIndex) {
         this.shardIndex = shardIndex;
         return this;
@@ -40,9 +42,11 @@ public class Shard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTargetsForShard")
     public TestTargetsForShard testTargetsForShard;
+
     public Shard withTestTargetsForShard(TestTargetsForShard testTargetsForShard) {
         this.testTargetsForShard = testTargetsForShard;
         return this;
     }
     
+    public Shard(){}
 }

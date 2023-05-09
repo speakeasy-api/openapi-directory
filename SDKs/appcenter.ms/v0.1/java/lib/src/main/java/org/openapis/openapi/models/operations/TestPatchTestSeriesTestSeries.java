@@ -18,6 +18,7 @@ public class TestPatchTestSeriesTestSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostRecentActivity")
     public String mostRecentActivity;
+
     public TestPatchTestSeriesTestSeries withMostRecentActivity(String mostRecentActivity) {
         this.mostRecentActivity = mostRecentActivity;
         return this;
@@ -28,6 +29,7 @@ public class TestPatchTestSeriesTestSeries {
      */
     @JsonProperty("name")
     public String name;
+
     public TestPatchTestSeriesTestSeries withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +40,7 @@ public class TestPatchTestSeriesTestSeries {
      */
     @JsonProperty("slug")
     public String slug;
+
     public TestPatchTestSeriesTestSeries withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -49,9 +52,14 @@ public class TestPatchTestSeriesTestSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testRuns")
     public TestPatchTestSeriesTestSeriesTestRunSummary[] testRuns;
+
     public TestPatchTestSeriesTestSeries withTestRuns(TestPatchTestSeriesTestSeriesTestRunSummary[] testRuns) {
         this.testRuns = testRuns;
         return this;
     }
     
+    public TestPatchTestSeriesTestSeries(@JsonProperty("name") String name, @JsonProperty("slug") String slug) {
+        this.name = name;
+        this.slug = slug;
+  }
 }

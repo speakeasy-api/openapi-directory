@@ -15,6 +15,7 @@ public class ResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu_limit")
     public String cpuLimit;
+
     public ResourceRequirements withCpuLimit(String cpuLimit) {
         this.cpuLimit = cpuLimit;
         return this;
@@ -23,6 +24,7 @@ public class ResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu_request")
     public String cpuRequest;
+
     public ResourceRequirements withCpuRequest(String cpuRequest) {
         this.cpuRequest = cpuRequest;
         return this;
@@ -31,6 +33,7 @@ public class ResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory_limit")
     public String memoryLimit;
+
     public ResourceRequirements withMemoryLimit(String memoryLimit) {
         this.memoryLimit = memoryLimit;
         return this;
@@ -39,9 +42,11 @@ public class ResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory_request")
     public String memoryRequest;
+
     public ResourceRequirements withMemoryRequest(String memoryRequest) {
         this.memoryRequest = memoryRequest;
         return this;
     }
     
+    public ResourceRequirements(){}
 }

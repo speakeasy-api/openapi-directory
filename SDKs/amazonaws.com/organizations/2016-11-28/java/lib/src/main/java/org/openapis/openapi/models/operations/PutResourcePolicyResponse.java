@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResourcePolicyResponse {
@@ -12,6 +13,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public PutResourcePolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public PutResourcePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public PutResourcePolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object constraintViolationException;
+
     public PutResourcePolicyResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class PutResourcePolicyResponse {
     
     
     public String contentType;
+
     public PutResourcePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object invalidInputException;
+
     public PutResourcePolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class PutResourcePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutResourcePolicyResponse putResourcePolicyResponse;
+
     public PutResourcePolicyResponse withPutResourcePolicyResponse(org.openapis.openapi.models.shared.PutResourcePolicyResponse putResourcePolicyResponse) {
         this.putResourcePolicyResponse = putResourcePolicyResponse;
         return this;
@@ -76,6 +84,7 @@ public class PutResourcePolicyResponse {
     
     
     public Integer statusCode;
+
     public PutResourcePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutResourcePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResourcePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object serviceException;
+
     public PutResourcePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,6 +114,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutResourcePolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class PutResourcePolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public PutResourcePolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public PutResourcePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

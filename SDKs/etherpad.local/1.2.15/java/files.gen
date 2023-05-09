@@ -662,4 +662,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/SaveRevisionUsingPOST40
 lib/src/main/java/org/openapis/openapi/models/operations/SaveRevisionUsingPOST200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/SaveRevisionUsingPOSTResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/author/README.md
+docs/group/README.md
+docs/pad/README.md
+docs/session/README.md
 USAGE.md

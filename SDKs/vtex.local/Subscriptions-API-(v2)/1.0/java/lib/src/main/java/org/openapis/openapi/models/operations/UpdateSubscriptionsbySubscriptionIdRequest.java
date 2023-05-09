@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubscriptionsbySubscriptionIdRequest {
@@ -12,6 +13,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateSubscriptionsbySubscriptionIdRequest updateSubscriptionsbySubscriptionIdRequest;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withUpdateSubscriptionsbySubscriptionIdRequest(org.openapis.openapi.models.shared.UpdateSubscriptionsbySubscriptionIdRequest updateSubscriptionsbySubscriptionIdRequest) {
         this.updateSubscriptionsbySubscriptionIdRequest = updateSubscriptionsbySubscriptionIdRequest;
         return this;
@@ -39,9 +43,16 @@ public class UpdateSubscriptionsbySubscriptionIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
     public String subscriptionId;
+
     public UpdateSubscriptionsbySubscriptionIdRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public UpdateSubscriptionsbySubscriptionIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpdateSubscriptionsbySubscriptionIdRequest") org.openapis.openapi.models.shared.UpdateSubscriptionsbySubscriptionIdRequest updateSubscriptionsbySubscriptionIdRequest, @JsonProperty("subscriptionId") String subscriptionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.updateSubscriptionsbySubscriptionIdRequest = updateSubscriptionsbySubscriptionIdRequest;
+        this.subscriptionId = subscriptionId;
+  }
 }

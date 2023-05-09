@@ -12,6 +12,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appIds")
     public String[] appIds;
+
     public ListAppsRequest withAppIds(String[] appIds) {
         this.appIds = appIds;
         return this;
@@ -20,6 +21,7 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAppsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListAppsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppsRequest(){}
 }

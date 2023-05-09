@@ -15,6 +15,7 @@ public class GetFirewallsIdFirewallResponseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetFirewallsIdFirewallResponseFirewallRule withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class GetFirewallsIdFirewallResponseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_ips")
     public String[] destinationIps;
+
     public GetFirewallsIdFirewallResponseFirewallRule withDestinationIps(String[] destinationIps) {
         this.destinationIps = destinationIps;
         return this;
@@ -36,6 +38,7 @@ public class GetFirewallsIdFirewallResponseFirewallRule {
      */
     @JsonProperty("direction")
     public GetFirewallsIdFirewallResponseFirewallRuleDirectionEnum direction;
+
     public GetFirewallsIdFirewallResponseFirewallRule withDirection(GetFirewallsIdFirewallResponseFirewallRuleDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -47,6 +50,7 @@ public class GetFirewallsIdFirewallResponseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public GetFirewallsIdFirewallResponseFirewallRule withPort(String port) {
         this.port = port;
         return this;
@@ -57,6 +61,7 @@ public class GetFirewallsIdFirewallResponseFirewallRule {
      */
     @JsonProperty("protocol")
     public GetFirewallsIdFirewallResponseFirewallRuleProtocolEnum protocol;
+
     public GetFirewallsIdFirewallResponseFirewallRule withProtocol(GetFirewallsIdFirewallResponseFirewallRuleProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -68,9 +73,14 @@ public class GetFirewallsIdFirewallResponseFirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_ips")
     public String[] sourceIps;
+
     public GetFirewallsIdFirewallResponseFirewallRule withSourceIps(String[] sourceIps) {
         this.sourceIps = sourceIps;
         return this;
     }
     
+    public GetFirewallsIdFirewallResponseFirewallRule(@JsonProperty("direction") GetFirewallsIdFirewallResponseFirewallRuleDirectionEnum direction, @JsonProperty("protocol") GetFirewallsIdFirewallResponseFirewallRuleProtocolEnum protocol) {
+        this.direction = direction;
+        this.protocol = protocol;
+  }
 }

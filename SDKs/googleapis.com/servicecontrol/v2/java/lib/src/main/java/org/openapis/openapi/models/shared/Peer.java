@@ -18,6 +18,7 @@ public class Peer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public Peer withIp(String ip) {
         this.ip = ip;
         return this;
@@ -29,6 +30,7 @@ public class Peer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Peer withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class Peer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public Peer withPort(String port) {
         this.port = port;
         return this;
@@ -51,6 +54,7 @@ public class Peer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principal")
     public String principal;
+
     public Peer withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -62,9 +66,11 @@ public class Peer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public Peer withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public Peer(){}
 }

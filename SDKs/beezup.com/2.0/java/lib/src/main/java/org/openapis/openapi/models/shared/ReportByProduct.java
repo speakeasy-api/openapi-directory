@@ -14,6 +14,7 @@ public class ReportByProduct {
      */
     @JsonProperty("channelCount")
     public Long channelCount;
+
     public ReportByProduct withChannelCount(Long channelCount) {
         this.channelCount = channelCount;
         return this;
@@ -24,6 +25,7 @@ public class ReportByProduct {
      */
     @JsonProperty("clickCount")
     public Long clickCount;
+
     public ReportByProduct withClickCount(Long clickCount) {
         this.clickCount = clickCount;
         return this;
@@ -34,6 +36,7 @@ public class ReportByProduct {
      */
     @JsonProperty("cost")
     public Double cost;
+
     public ReportByProduct withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -44,6 +47,7 @@ public class ReportByProduct {
      */
     @JsonProperty("enabledOnChannelCount")
     public Long enabledOnChannelCount;
+
     public ReportByProduct withEnabledOnChannelCount(Long enabledOnChannelCount) {
         this.enabledOnChannelCount = enabledOnChannelCount;
         return this;
@@ -54,6 +58,7 @@ public class ReportByProduct {
      */
     @JsonProperty("links")
     public ReportByProductLinks links;
+
     public ReportByProduct withLinks(ReportByProductLinks links) {
         this.links = links;
         return this;
@@ -65,6 +70,7 @@ public class ReportByProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("margin")
     public Double margin;
+
     public ReportByProduct withMargin(Double margin) {
         this.margin = margin;
         return this;
@@ -75,6 +81,7 @@ public class ReportByProduct {
      */
     @JsonProperty("orderCount")
     public Long orderCount;
+
     public ReportByProduct withOrderCount(Long orderCount) {
         this.orderCount = orderCount;
         return this;
@@ -85,6 +92,7 @@ public class ReportByProduct {
      */
     @JsonProperty("performanceIndicator")
     public Double performanceIndicator;
+
     public ReportByProduct withPerformanceIndicator(Double performanceIndicator) {
         this.performanceIndicator = performanceIndicator;
         return this;
@@ -95,6 +103,7 @@ public class ReportByProduct {
      */
     @JsonProperty("product")
     public BeezUPCommonProductBasicInfo product;
+
     public ReportByProduct withProduct(BeezUPCommonProductBasicInfo product) {
         this.product = product;
         return this;
@@ -106,6 +115,7 @@ public class ReportByProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roi")
     public Double roi;
+
     public ReportByProduct withRoi(Double roi) {
         this.roi = roi;
         return this;
@@ -116,6 +126,7 @@ public class ReportByProduct {
      */
     @JsonProperty("soldProductCount")
     public Long soldProductCount;
+
     public ReportByProduct withSoldProductCount(Long soldProductCount) {
         this.soldProductCount = soldProductCount;
         return this;
@@ -126,9 +137,22 @@ public class ReportByProduct {
      */
     @JsonProperty("totalSales")
     public Double totalSales;
+
     public ReportByProduct withTotalSales(Double totalSales) {
         this.totalSales = totalSales;
         return this;
     }
     
+    public ReportByProduct(@JsonProperty("channelCount") Long channelCount, @JsonProperty("clickCount") Long clickCount, @JsonProperty("cost") Double cost, @JsonProperty("enabledOnChannelCount") Long enabledOnChannelCount, @JsonProperty("links") ReportByProductLinks links, @JsonProperty("orderCount") Long orderCount, @JsonProperty("performanceIndicator") Double performanceIndicator, @JsonProperty("product") BeezUPCommonProductBasicInfo product, @JsonProperty("soldProductCount") Long soldProductCount, @JsonProperty("totalSales") Double totalSales) {
+        this.channelCount = channelCount;
+        this.clickCount = clickCount;
+        this.cost = cost;
+        this.enabledOnChannelCount = enabledOnChannelCount;
+        this.links = links;
+        this.orderCount = orderCount;
+        this.performanceIndicator = performanceIndicator;
+        this.product = product;
+        this.soldProductCount = soldProductCount;
+        this.totalSales = totalSales;
+  }
 }

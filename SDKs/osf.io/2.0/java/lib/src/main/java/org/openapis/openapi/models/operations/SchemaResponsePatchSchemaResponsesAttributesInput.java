@@ -18,6 +18,7 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_created")
     public Long dateCreated;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withDateCreated(Long dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -29,6 +30,7 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_modified")
     public Long dateModified;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withDateModified(Long dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -40,6 +42,7 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_submitted")
     public Long dateSubmitted;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withDateSubmitted(Long dateSubmitted) {
         this.dateSubmitted = dateSubmitted;
         return this;
@@ -51,6 +54,7 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_original_response")
     public Boolean isOriginalResponse;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withIsOriginalResponse(Boolean isOriginalResponse) {
         this.isOriginalResponse = isOriginalResponse;
         return this;
@@ -62,6 +66,7 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_pending_current_user_approval")
     public Boolean isPendingCurrentUserApproval;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withIsPendingCurrentUserApproval(Boolean isPendingCurrentUserApproval) {
         this.isPendingCurrentUserApproval = isPendingCurrentUserApproval;
         return this;
@@ -73,6 +78,7 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviews_state")
     public SchemaResponsePatchSchemaResponsesAttributesReviewsStateEnum reviewsState;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withReviewsState(SchemaResponsePatchSchemaResponsesAttributesReviewsStateEnum reviewsState) {
         this.reviewsState = reviewsState;
         return this;
@@ -84,6 +90,7 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision_justification")
     public String revisionJustification;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withRevisionJustification(String revisionJustification) {
         this.revisionJustification = revisionJustification;
         return this;
@@ -95,9 +102,11 @@ public class SchemaResponsePatchSchemaResponsesAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision_responses")
     public java.util.Map<String, Object> revisionResponses;
+
     public SchemaResponsePatchSchemaResponsesAttributesInput withRevisionResponses(java.util.Map<String, Object> revisionResponses) {
         this.revisionResponses = revisionResponses;
         return this;
     }
     
+    public SchemaResponsePatchSchemaResponsesAttributesInput(){}
 }

@@ -15,9 +15,11 @@ public class DeleteRegexPatternSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public DeleteRegexPatternSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
     }
     
+    public DeleteRegexPatternSetResponse(){}
 }

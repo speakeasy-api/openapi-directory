@@ -15,6 +15,7 @@ public class DeleteImageRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipeArn")
     public String imageRecipeArn;
+
     public DeleteImageRecipeResponse withImageRecipeArn(String imageRecipeArn) {
         this.imageRecipeArn = imageRecipeArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteImageRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DeleteImageRecipeResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DeleteImageRecipeResponse(){}
 }

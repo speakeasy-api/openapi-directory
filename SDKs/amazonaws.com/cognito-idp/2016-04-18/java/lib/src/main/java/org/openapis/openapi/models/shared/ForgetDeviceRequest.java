@@ -15,6 +15,7 @@ public class ForgetDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public ForgetDeviceRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,9 +23,13 @@ public class ForgetDeviceRequest {
     
     @JsonProperty("DeviceKey")
     public String deviceKey;
+
     public ForgetDeviceRequest withDeviceKey(String deviceKey) {
         this.deviceKey = deviceKey;
         return this;
     }
     
+    public ForgetDeviceRequest(@JsonProperty("DeviceKey") String deviceKey) {
+        this.deviceKey = deviceKey;
+  }
 }

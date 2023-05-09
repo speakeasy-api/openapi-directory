@@ -18,9 +18,11 @@ public class GoogleCloudAssetV1p7beta1PartitionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionKey")
     public GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum partitionKey;
+
     public GoogleCloudAssetV1p7beta1PartitionSpec withPartitionKey(GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum partitionKey) {
         this.partitionKey = partitionKey;
         return this;
     }
     
+    public GoogleCloudAssetV1p7beta1PartitionSpec(){}
 }

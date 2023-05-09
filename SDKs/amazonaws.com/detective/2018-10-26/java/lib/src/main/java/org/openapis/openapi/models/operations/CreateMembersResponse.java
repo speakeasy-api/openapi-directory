@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMembersResponse {
@@ -12,6 +13,7 @@ public class CreateMembersResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateMembersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateMembersResponse {
     
     
     public String contentType;
+
     public CreateMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMembersResponse createMembersResponse;
+
     public CreateMembersResponse withCreateMembersResponse(org.openapis.openapi.models.shared.CreateMembersResponse createMembersResponse) {
         this.createMembersResponse = createMembersResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateMembersResponse {
      */
     
     public Object internalServerException;
+
     public CreateMembersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMembersResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateMembersResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateMembersResponse {
     
     
     public Integer statusCode;
+
     public CreateMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateMembersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateMembersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class CreateMembersResponse {
      */
     
     public Object validationException;
+
     public CreateMembersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

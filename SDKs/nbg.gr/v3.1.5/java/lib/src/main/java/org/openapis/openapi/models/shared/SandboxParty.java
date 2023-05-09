@@ -18,6 +18,7 @@ public class SandboxParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SandboxParty withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class SandboxParty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SandboxParty withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SandboxParty(){}
 }

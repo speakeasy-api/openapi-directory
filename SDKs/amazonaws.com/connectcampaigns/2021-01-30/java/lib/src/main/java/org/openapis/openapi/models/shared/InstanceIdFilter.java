@@ -15,6 +15,7 @@ public class InstanceIdFilter {
      */
     @JsonProperty("operator")
     public InstanceIdFilterOperatorEnum operator;
+
     public InstanceIdFilter withOperator(InstanceIdFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -25,9 +26,14 @@ public class InstanceIdFilter {
      */
     @JsonProperty("value")
     public String value;
+
     public InstanceIdFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceIdFilter(@JsonProperty("operator") InstanceIdFilterOperatorEnum operator, @JsonProperty("value") String value) {
+        this.operator = operator;
+        this.value = value;
+  }
 }

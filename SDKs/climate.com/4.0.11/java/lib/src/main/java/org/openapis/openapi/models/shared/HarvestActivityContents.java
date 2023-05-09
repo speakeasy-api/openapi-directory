@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * HarvestActivityContents - OK
@@ -15,9 +15,13 @@ public class HarvestActivityContents {
      */
     
     public byte[] body;
+
     public HarvestActivityContents withBody(byte[] body) {
         this.body = body;
         return this;
     }
     
+    public HarvestActivityContents(@JsonProperty("body") byte[] body) {
+        this.body = body;
+  }
 }

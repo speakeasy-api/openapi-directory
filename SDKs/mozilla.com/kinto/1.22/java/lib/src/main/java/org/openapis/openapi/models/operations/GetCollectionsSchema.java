@@ -15,9 +15,11 @@ public class GetCollectionsSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetCollectionsSchemaData[] data;
+
     public GetCollectionsSchema withData(GetCollectionsSchemaData[] data) {
         this.data = data;
         return this;
     }
     
+    public GetCollectionsSchema(){}
 }

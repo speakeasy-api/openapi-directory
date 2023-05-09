@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesUpdateDetailsResponse {
     
     public String contentType;
+
     public ReleasesUpdateDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesUpdateDetailsResponse {
     
     
     public Integer statusCode;
+
     public ReleasesUpdateDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesUpdateDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesUpdateDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesUpdateDetailsResponse {
      */
     
     public ReleasesUpdateDetails200ApplicationJSON releasesUpdateDetails200ApplicationJSONObject;
+
     public ReleasesUpdateDetailsResponse withReleasesUpdateDetails200ApplicationJSONObject(ReleasesUpdateDetails200ApplicationJSON releasesUpdateDetails200ApplicationJSONObject) {
         this.releasesUpdateDetails200ApplicationJSONObject = releasesUpdateDetails200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ReleasesUpdateDetailsResponse {
      */
     
     public ReleasesUpdateDetails400ApplicationJSON releasesUpdateDetails400ApplicationJSONObject;
+
     public ReleasesUpdateDetailsResponse withReleasesUpdateDetails400ApplicationJSONObject(ReleasesUpdateDetails400ApplicationJSON releasesUpdateDetails400ApplicationJSONObject) {
         this.releasesUpdateDetails400ApplicationJSONObject = releasesUpdateDetails400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class ReleasesUpdateDetailsResponse {
      */
     
     public ReleasesUpdateDetails404ApplicationJSON releasesUpdateDetails404ApplicationJSONObject;
+
     public ReleasesUpdateDetailsResponse withReleasesUpdateDetails404ApplicationJSONObject(ReleasesUpdateDetails404ApplicationJSON releasesUpdateDetails404ApplicationJSONObject) {
         this.releasesUpdateDetails404ApplicationJSONObject = releasesUpdateDetails404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesUpdateDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

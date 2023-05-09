@@ -15,6 +15,7 @@ public class AmiAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AmiAggregationResponse withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class AmiAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affectedInstances")
     public Long affectedInstances;
+
     public AmiAggregationResponse withAffectedInstances(Long affectedInstances) {
         this.affectedInstances = affectedInstances;
         return this;
@@ -30,6 +32,7 @@ public class AmiAggregationResponse {
     
     @JsonProperty("ami")
     public String ami;
+
     public AmiAggregationResponse withAmi(String ami) {
         this.ami = ami;
         return this;
@@ -38,9 +41,13 @@ public class AmiAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severityCounts")
     public SeverityCounts severityCounts;
+
     public AmiAggregationResponse withSeverityCounts(SeverityCounts severityCounts) {
         this.severityCounts = severityCounts;
         return this;
     }
     
+    public AmiAggregationResponse(@JsonProperty("ami") String ami) {
+        this.ami = ami;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BloggerPostsGetByPathRequest {
@@ -12,6 +13,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BloggerPostsGetByPathRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BloggerPostsGetByPathRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BloggerPostsGetByPathRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class BloggerPostsGetByPathRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blogId")
     public String blogId;
+
     public BloggerPostsGetByPathRequest withBlogId(String blogId) {
         this.blogId = blogId;
         return this;
@@ -49,6 +54,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BloggerPostsGetByPathRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BloggerPostsGetByPathRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BloggerPostsGetByPathRequest withKey(String key) {
         this.key = key;
         return this;
@@ -76,6 +84,7 @@ public class BloggerPostsGetByPathRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxComments")
     public Long maxComments;
+
     public BloggerPostsGetByPathRequest withMaxComments(Long maxComments) {
         this.maxComments = maxComments;
         return this;
@@ -86,6 +95,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BloggerPostsGetByPathRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -93,6 +103,7 @@ public class BloggerPostsGetByPathRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public BloggerPostsGetByPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -103,6 +114,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BloggerPostsGetByPathRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -113,6 +125,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BloggerPostsGetByPathRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -123,6 +136,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BloggerPostsGetByPathRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -133,6 +147,7 @@ public class BloggerPostsGetByPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BloggerPostsGetByPathRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -140,9 +155,14 @@ public class BloggerPostsGetByPathRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public BloggerPostsGetByPathViewEnum view;
+
     public BloggerPostsGetByPathRequest withView(BloggerPostsGetByPathViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public BloggerPostsGetByPathRequest(@JsonProperty("blogId") String blogId, @JsonProperty("path") String path) {
+        this.blogId = blogId;
+        this.path = path;
+  }
 }

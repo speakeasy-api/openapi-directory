@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopPipeResponse {
@@ -12,6 +13,7 @@ public class StopPipeResponse {
      */
     
     public Object conflictException;
+
     public StopPipeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StopPipeResponse {
     
     
     public String contentType;
+
     public StopPipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopPipeResponse {
      */
     
     public Object internalException;
+
     public StopPipeResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class StopPipeResponse {
      */
     
     public Object notFoundException;
+
     public StopPipeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopPipeResponse {
     
     
     public Integer statusCode;
+
     public StopPipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopPipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopPipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopPipeResponse {
      */
     
     public org.openapis.openapi.models.shared.StopPipeResponse stopPipeResponse;
+
     public StopPipeResponse withStopPipeResponse(org.openapis.openapi.models.shared.StopPipeResponse stopPipeResponse) {
         this.stopPipeResponse = stopPipeResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopPipeResponse {
      */
     
     public Object throttlingException;
+
     public StopPipeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StopPipeResponse {
      */
     
     public Object validationException;
+
     public StopPipeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopPipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

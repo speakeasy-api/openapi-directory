@@ -17,6 +17,7 @@ public class CustomNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public CustomNotification withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -43,6 +44,7 @@ public class CustomNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCode")
     public String eventCode;
+
     public CustomNotification withEventCode(String eventCode) {
         this.eventCode = eventCode;
         return this;
@@ -56,6 +58,7 @@ public class CustomNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventDate")
     public OffsetDateTime eventDate;
+
     public CustomNotification withEventDate(OffsetDateTime eventDate) {
         this.eventDate = eventDate;
         return this;
@@ -67,6 +70,7 @@ public class CustomNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public CustomNotification withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -92,6 +96,7 @@ public class CustomNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethod")
     public String paymentMethod;
+
     public CustomNotification withPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -103,6 +108,7 @@ public class CustomNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CustomNotification withReason(String reason) {
         this.reason = reason;
         return this;
@@ -114,9 +120,11 @@ public class CustomNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public CustomNotification withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public CustomNotification(){}
 }

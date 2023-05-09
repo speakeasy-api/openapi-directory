@@ -16,8 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DeleteAddonResponse;
+import org.openapis.openapi.models.operations.DeleteAddonSecurity;
+import org.openapis.openapi.models.shared.SchemeBasic;
 
 public class Application {
     public static void main(String[] args) {
@@ -25,7 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteAddonResponse res = sdk.addon.deleteAddon();
+            DeleteAddonResponse res = sdk.addon.deleteAddon(new DeleteAddonSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -33,6 +36,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,400 +45,402 @@ public class Application {
 ## Available Resources and Operations
 
 
-### addon
+### [addon](docs/addon/README.md)
 
-* `deleteAddon` - Delete an app
-* `deleteAddonLinkersLinkerKeyValues` - Delete all linker values
-* `deleteAddonLinkersLinkerKeyValuesValueId` - Delete a linker value
-* `getAddonLinkers` - List linkers for an app
-* `getAddonLinkersLinkerKey` - Get a linker for an app
-* `getAddonLinkersLinkerKeyValues` - List linker values for a linker
-* `getAddonLinkersLinkerKeyValuesValueId` - Get a linker value
-* `postAddonLinkersLinkerKeyValues` - Create a linker value
-* `putAddon` - Update an installed app
-* `putAddonLinkersLinkerKeyValues` - Update a linker value
+* [deleteAddon](docs/addon/README.md#deleteaddon) - Delete an app
+* [deleteAddonLinkersLinkerKeyValues](docs/addon/README.md#deleteaddonlinkerslinkerkeyvalues) - Delete all linker values
+* [deleteAddonLinkersLinkerKeyValuesValueId](docs/addon/README.md#deleteaddonlinkerslinkerkeyvaluesvalueid) - Delete a linker value
+* [getAddonLinkers](docs/addon/README.md#getaddonlinkers) - List linkers for an app
+* [getAddonLinkersLinkerKey](docs/addon/README.md#getaddonlinkerslinkerkey) - Get a linker for an app
+* [getAddonLinkersLinkerKeyValues](docs/addon/README.md#getaddonlinkerslinkerkeyvalues) - List linker values for a linker
+* [getAddonLinkersLinkerKeyValuesValueId](docs/addon/README.md#getaddonlinkerslinkerkeyvaluesvalueid) - Get a linker value
+* [postAddonLinkersLinkerKeyValues](docs/addon/README.md#postaddonlinkerslinkerkeyvalues) - Create a linker value
+* [putAddon](docs/addon/README.md#putaddon) - Update an installed app
+* [putAddonLinkersLinkerKeyValues](docs/addon/README.md#putaddonlinkerslinkerkeyvalues) - Update a linker value
 
-### branchRestrictions
+### [branchRestrictions](docs/branchrestrictions/README.md)
 
-* `deleteRepositoriesWorkspaceRepoSlugBranchRestrictionsId` - Delete a branch restriction rule
-* `getRepositoriesWorkspaceRepoSlugBranchRestrictions` - List branch restrictions
-* `getRepositoriesWorkspaceRepoSlugBranchRestrictionsId` - Get a branch restriction rule
-* `postRepositoriesWorkspaceRepoSlugBranchRestrictions` - Create a branch restriction rule
-* `putRepositoriesWorkspaceRepoSlugBranchRestrictionsId` - Update a branch restriction rule
+* [deleteRepositoriesWorkspaceRepoSlugBranchRestrictionsId](docs/branchrestrictions/README.md#deleterepositoriesworkspacereposlugbranchrestrictionsid) - Delete a branch restriction rule
+* [getRepositoriesWorkspaceRepoSlugBranchRestrictions](docs/branchrestrictions/README.md#getrepositoriesworkspacereposlugbranchrestrictions) - List branch restrictions
+* [getRepositoriesWorkspaceRepoSlugBranchRestrictionsId](docs/branchrestrictions/README.md#getrepositoriesworkspacereposlugbranchrestrictionsid) - Get a branch restriction rule
+* [postRepositoriesWorkspaceRepoSlugBranchRestrictions](docs/branchrestrictions/README.md#postrepositoriesworkspacereposlugbranchrestrictions) - Create a branch restriction rule
+* [putRepositoriesWorkspaceRepoSlugBranchRestrictionsId](docs/branchrestrictions/README.md#putrepositoriesworkspacereposlugbranchrestrictionsid) - Update a branch restriction rule
 
-### branchingModel
+### [branchingModel](docs/branchingmodel/README.md)
 
-* `getRepositoriesWorkspaceRepoSlugBranchingModel` - Get the branching model for a repository
-* `getRepositoriesWorkspaceRepoSlugBranchingModelSettings` - Get the branching model config for a repository
-* `getRepositoriesWorkspaceRepoSlugEffectiveBranchingModel` - Get the effective, or currently applied, branching model for a repository
-* `getWorkspacesWorkspaceProjectsProjectKeyBranchingModel` - Get the branching model for a project
-* `getWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings` - Get the branching model config for a project
-* `putRepositoriesWorkspaceRepoSlugBranchingModelSettings` - Update the branching model config for a repository
-* `putWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings` - Update the branching model config for a project
+* [getRepositoriesWorkspaceRepoSlugBranchingModel](docs/branchingmodel/README.md#getrepositoriesworkspacereposlugbranchingmodel) - Get the branching model for a repository
+* [getRepositoriesWorkspaceRepoSlugBranchingModelSettings](docs/branchingmodel/README.md#getrepositoriesworkspacereposlugbranchingmodelsettings) - Get the branching model config for a repository
+* [getRepositoriesWorkspaceRepoSlugEffectiveBranchingModel](docs/branchingmodel/README.md#getrepositoriesworkspacereposlugeffectivebranchingmodel) - Get the effective, or currently applied, branching model for a repository
+* [getWorkspacesWorkspaceProjectsProjectKeyBranchingModel](docs/branchingmodel/README.md#getworkspacesworkspaceprojectsprojectkeybranchingmodel) - Get the branching model for a project
+* [getWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings](docs/branchingmodel/README.md#getworkspacesworkspaceprojectsprojectkeybranchingmodelsettings) - Get the branching model config for a project
+* [putRepositoriesWorkspaceRepoSlugBranchingModelSettings](docs/branchingmodel/README.md#putrepositoriesworkspacereposlugbranchingmodelsettings) - Update the branching model config for a repository
+* [putWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings](docs/branchingmodel/README.md#putworkspacesworkspaceprojectsprojectkeybranchingmodelsettings) - Update the branching model config for a project
 
-### commitStatuses
+### [commitStatuses](docs/commitstatuses/README.md)
 
-* `getRepositoriesWorkspaceRepoSlugCommitCommitStatuses` - List commit statuses for a commit
-* `getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey` - Get a build status for a commit
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses` - List commit statuses for a pull request
-* `postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild` - Create a build status for a commit
-* `putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey` - Update a build status for a commit
+* [getRepositoriesWorkspaceRepoSlugCommitCommitStatuses](docs/commitstatuses/README.md#getrepositoriesworkspacereposlugcommitcommitstatuses) - List commit statuses for a commit
+* [getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey](docs/commitstatuses/README.md#getrepositoriesworkspacereposlugcommitcommitstatusesbuildkey) - Get a build status for a commit
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses](docs/commitstatuses/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidstatuses) - List commit statuses for a pull request
+* [postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild](docs/commitstatuses/README.md#postrepositoriesworkspacereposlugcommitcommitstatusesbuild) - Create a build status for a commit
+* [putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey](docs/commitstatuses/README.md#putrepositoriesworkspacereposlugcommitcommitstatusesbuildkey) - Update a build status for a commit
 
-### commits
+### [commits](docs/commits/README.md)
 
-* `bulkCreateOrUpdateAnnotations` - Bulk create or update annotations
-* `createOrUpdateAnnotation` - Create or update an annotation
-* `createOrUpdateReport` - Create or update a report
-* `deleteAnnotation` - Delete an annotation
-* `deleteReport` - Delete a report
-* `deleteRepositoriesWorkspaceRepoSlugCommitCommitApprove` - Unapprove a commit
-* `deleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId` - Delete a commit comment
-* `getAnnotation` - Get an annotation
-* `getAnnotationsForReport` - List annotations
-* `getReport` - Get a report
-* `getReportsForCommit` - List reports
-* `getRepositoriesWorkspaceRepoSlugCommitCommit` - Get a commit
-* `getRepositoriesWorkspaceRepoSlugCommitCommitComments` - List a commit's comments
-* `getRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId` - Get a commit comment
-* `getRepositoriesWorkspaceRepoSlugCommits` - List commits
-* `getRepositoriesWorkspaceRepoSlugCommitsRevision` - List commits for revision
-* `getRepositoriesWorkspaceRepoSlugDiffSpec` - Compare two commits
-* `getRepositoriesWorkspaceRepoSlugDiffstatSpec` - Compare two commit diff stats
-* `getRepositoriesWorkspaceRepoSlugMergeBaseRevspec` - Get the common ancestor between two commits
-* `getRepositoriesWorkspaceRepoSlugPatchSpec` - Get a patch for two commits
-* `postRepositoriesWorkspaceRepoSlugCommitCommitApprove` - Approve a commit
-* `postRepositoriesWorkspaceRepoSlugCommitCommitComments` - Create comment for a commit
-* `postRepositoriesWorkspaceRepoSlugCommits` - List commits with include/exclude
-* `postRepositoriesWorkspaceRepoSlugCommitsRevision` - List commits for revision using include/exclude
-* `putRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId` - Update a commit comment
+* [bulkCreateOrUpdateAnnotations](docs/commits/README.md#bulkcreateorupdateannotations) - Bulk create or update annotations
+* [createOrUpdateAnnotation](docs/commits/README.md#createorupdateannotation) - Create or update an annotation
+* [createOrUpdateReport](docs/commits/README.md#createorupdatereport) - Create or update a report
+* [deleteAnnotation](docs/commits/README.md#deleteannotation) - Delete an annotation
+* [deleteReport](docs/commits/README.md#deletereport) - Delete a report
+* [deleteRepositoriesWorkspaceRepoSlugCommitCommitApprove](docs/commits/README.md#deleterepositoriesworkspacereposlugcommitcommitapprove) - Unapprove a commit
+* [deleteRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId](docs/commits/README.md#deleterepositoriesworkspacereposlugcommitcommitcommentscommentid) - Delete a commit comment
+* [getAnnotation](docs/commits/README.md#getannotation) - Get an annotation
+* [getAnnotationsForReport](docs/commits/README.md#getannotationsforreport) - List annotations
+* [getReport](docs/commits/README.md#getreport) - Get a report
+* [getReportsForCommit](docs/commits/README.md#getreportsforcommit) - List reports
+* [getRepositoriesWorkspaceRepoSlugCommitCommit](docs/commits/README.md#getrepositoriesworkspacereposlugcommitcommit) - Get a commit
+* [getRepositoriesWorkspaceRepoSlugCommitCommitComments](docs/commits/README.md#getrepositoriesworkspacereposlugcommitcommitcomments) - List a commit's comments
+* [getRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId](docs/commits/README.md#getrepositoriesworkspacereposlugcommitcommitcommentscommentid) - Get a commit comment
+* [getRepositoriesWorkspaceRepoSlugCommits](docs/commits/README.md#getrepositoriesworkspacereposlugcommits) - List commits
+* [getRepositoriesWorkspaceRepoSlugCommitsRevision](docs/commits/README.md#getrepositoriesworkspacereposlugcommitsrevision) - List commits for revision
+* [getRepositoriesWorkspaceRepoSlugDiffSpec](docs/commits/README.md#getrepositoriesworkspacereposlugdiffspec) - Compare two commits
+* [getRepositoriesWorkspaceRepoSlugDiffstatSpec](docs/commits/README.md#getrepositoriesworkspacereposlugdiffstatspec) - Compare two commit diff stats
+* [getRepositoriesWorkspaceRepoSlugMergeBaseRevspec](docs/commits/README.md#getrepositoriesworkspacereposlugmergebaserevspec) - Get the common ancestor between two commits
+* [getRepositoriesWorkspaceRepoSlugPatchSpec](docs/commits/README.md#getrepositoriesworkspacereposlugpatchspec) - Get a patch for two commits
+* [postRepositoriesWorkspaceRepoSlugCommitCommitApprove](docs/commits/README.md#postrepositoriesworkspacereposlugcommitcommitapprove) - Approve a commit
+* [postRepositoriesWorkspaceRepoSlugCommitCommitComments](docs/commits/README.md#postrepositoriesworkspacereposlugcommitcommitcomments) - Create comment for a commit
+* [postRepositoriesWorkspaceRepoSlugCommits](docs/commits/README.md#postrepositoriesworkspacereposlugcommits) - List commits with include/exclude
+* [postRepositoriesWorkspaceRepoSlugCommitsRevision](docs/commits/README.md#postrepositoriesworkspacereposlugcommitsrevision) - List commits for revision using include/exclude
+* [putRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentId](docs/commits/README.md#putrepositoriesworkspacereposlugcommitcommitcommentscommentid) - Update a commit comment
 
-### deployments
+### [deployments](docs/deployments/README.md)
 
-* `createEnvironment` - Create an environment
-* `deleteEnvironmentForRepository` - Delete an environment
-* `deleteRepositoriesWorkspaceRepoSlugDeployKeysKeyId` - Delete a repository deploy key
-* `deleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId` - Delete a deploy key from a project
-* `getDeploymentForRepository` - Get a deployment
-* `getDeploymentsForRepository` - List deployments
-* `getEnvironmentForRepository` - Get an environment
-* `getEnvironmentsForRepository` - List environments
-* `getRepositoriesWorkspaceRepoSlugDeployKeys` - List repository deploy keys
-* `getRepositoriesWorkspaceRepoSlugDeployKeysKeyId` - Get a repository deploy key
-* `getWorkspacesWorkspaceProjectsProjectKeyDeployKeys` - List project deploy keys
-* `getWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId` - Get a project deploy key
-* `postRepositoriesWorkspaceRepoSlugDeployKeys` - Add a repository deploy key
-* `postWorkspacesWorkspaceProjectsProjectKeyDeployKeys` - Create a project deploy key
-* `putRepositoriesWorkspaceRepoSlugDeployKeysKeyId` - Update a repository deploy key
-* `updateEnvironmentForRepository` - Update an environment
+* [createEnvironment](docs/deployments/README.md#createenvironment) - Create an environment
+* [deleteEnvironmentForRepository](docs/deployments/README.md#deleteenvironmentforrepository) - Delete an environment
+* [deleteRepositoriesWorkspaceRepoSlugDeployKeysKeyId](docs/deployments/README.md#deleterepositoriesworkspacereposlugdeploykeyskeyid) - Delete a repository deploy key
+* [deleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId](docs/deployments/README.md#deleteworkspacesworkspaceprojectsprojectkeydeploykeyskeyid) - Delete a deploy key from a project
+* [getDeploymentForRepository](docs/deployments/README.md#getdeploymentforrepository) - Get a deployment
+* [getDeploymentsForRepository](docs/deployments/README.md#getdeploymentsforrepository) - List deployments
+* [getEnvironmentForRepository](docs/deployments/README.md#getenvironmentforrepository) - Get an environment
+* [getEnvironmentsForRepository](docs/deployments/README.md#getenvironmentsforrepository) - List environments
+* [getRepositoriesWorkspaceRepoSlugDeployKeys](docs/deployments/README.md#getrepositoriesworkspacereposlugdeploykeys) - List repository deploy keys
+* [getRepositoriesWorkspaceRepoSlugDeployKeysKeyId](docs/deployments/README.md#getrepositoriesworkspacereposlugdeploykeyskeyid) - Get a repository deploy key
+* [getWorkspacesWorkspaceProjectsProjectKeyDeployKeys](docs/deployments/README.md#getworkspacesworkspaceprojectsprojectkeydeploykeys) - List project deploy keys
+* [getWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId](docs/deployments/README.md#getworkspacesworkspaceprojectsprojectkeydeploykeyskeyid) - Get a project deploy key
+* [postRepositoriesWorkspaceRepoSlugDeployKeys](docs/deployments/README.md#postrepositoriesworkspacereposlugdeploykeys) - Add a repository deploy key
+* [postWorkspacesWorkspaceProjectsProjectKeyDeployKeys](docs/deployments/README.md#postworkspacesworkspaceprojectsprojectkeydeploykeys) - Create a project deploy key
+* [putRepositoriesWorkspaceRepoSlugDeployKeysKeyId](docs/deployments/README.md#putrepositoriesworkspacereposlugdeploykeyskeyid) - Update a repository deploy key
+* [updateEnvironmentForRepository](docs/deployments/README.md#updateenvironmentforrepository) - Update an environment
 
-### downloads
+### [downloads](docs/downloads/README.md)
 
-* `deleteRepositoriesWorkspaceRepoSlugDownloadsFilename` - Delete a download artifact
-* `getRepositoriesWorkspaceRepoSlugDownloads` - List download artifacts
-* `getRepositoriesWorkspaceRepoSlugDownloadsFilename` - Get a download artifact link
-* `postRepositoriesWorkspaceRepoSlugDownloads` - Upload a download artifact
+* [deleteRepositoriesWorkspaceRepoSlugDownloadsFilename](docs/downloads/README.md#deleterepositoriesworkspacereposlugdownloadsfilename) - Delete a download artifact
+* [getRepositoriesWorkspaceRepoSlugDownloads](docs/downloads/README.md#getrepositoriesworkspacereposlugdownloads) - List download artifacts
+* [getRepositoriesWorkspaceRepoSlugDownloadsFilename](docs/downloads/README.md#getrepositoriesworkspacereposlugdownloadsfilename) - Get a download artifact link
+* [postRepositoriesWorkspaceRepoSlugDownloads](docs/downloads/README.md#postrepositoriesworkspacereposlugdownloads) - Upload a download artifact
 
-### issueTracker
+### [issueTracker](docs/issuetracker/README.md)
 
-* `deleteRepositoriesWorkspaceRepoSlugIssuesIssueId` - Delete an issue
-* `deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath` - Delete an attachment for an issue
-* `deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId` - Delete a comment on an issue
-* `deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVote` - Remove vote for an issue
-* `deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch` - Stop watching an issue
-* `getRepositoriesWorkspaceRepoSlugComponents` - List components
-* `getRepositoriesWorkspaceRepoSlugComponentsComponentId` - Get a component for issues
-* `getRepositoriesWorkspaceRepoSlugIssues` - List issues
-* `getRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip` - Check issue export status
-* `getRepositoriesWorkspaceRepoSlugIssuesImport` - Check issue import status
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueId` - Get an issue
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments` - List attachments for an issue
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath` - Get attachment for an issue
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges` - List changes on an issue
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeId` - Get issue change object
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdComments` - List comments on an issue
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId` - Get a comment on an issue
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdVote` - Check if current user voted for an issue
-* `getRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch` - Check if current user is watching a issue
-* `getRepositoriesWorkspaceRepoSlugMilestones` - List milestones
-* `getRepositoriesWorkspaceRepoSlugMilestonesMilestoneId` - Get a milestone
-* `getRepositoriesWorkspaceRepoSlugVersions` - List defined versions for issues
-* `getRepositoriesWorkspaceRepoSlugVersionsVersionId` - Get a defined version for issues
-* `postRepositoriesWorkspaceRepoSlugIssues` - Create an issue
-* `postRepositoriesWorkspaceRepoSlugIssuesExport` - Export issues
-* `postRepositoriesWorkspaceRepoSlugIssuesImport` - Import issues
-* `postRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments` - Upload an attachment to an issue
-* `postRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges` - Modify the state of an issue
-* `postRepositoriesWorkspaceRepoSlugIssuesIssueIdComments` - Create a comment on an issue
-* `putRepositoriesWorkspaceRepoSlugIssuesIssueId` - Update an issue
-* `putRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId` - Update a comment on an issue
-* `putRepositoriesWorkspaceRepoSlugIssuesIssueIdVote` - Vote for an issue
-* `putRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch` - Watch an issue
+* [deleteRepositoriesWorkspaceRepoSlugIssuesIssueId](docs/issuetracker/README.md#deleterepositoriesworkspacereposlugissuesissueid) - Delete an issue
+* [deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath](docs/issuetracker/README.md#deleterepositoriesworkspacereposlugissuesissueidattachmentspath) - Delete an attachment for an issue
+* [deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId](docs/issuetracker/README.md#deleterepositoriesworkspacereposlugissuesissueidcommentscommentid) - Delete a comment on an issue
+* [deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVote](docs/issuetracker/README.md#deleterepositoriesworkspacereposlugissuesissueidvote) - Remove vote for an issue
+* [deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch](docs/issuetracker/README.md#deleterepositoriesworkspacereposlugissuesissueidwatch) - Stop watching an issue
+* [getRepositoriesWorkspaceRepoSlugComponents](docs/issuetracker/README.md#getrepositoriesworkspacereposlugcomponents) - List components
+* [getRepositoriesWorkspaceRepoSlugComponentsComponentId](docs/issuetracker/README.md#getrepositoriesworkspacereposlugcomponentscomponentid) - Get a component for issues
+* [getRepositoriesWorkspaceRepoSlugIssues](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissues) - List issues
+* [getRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesexportreponameissuestaskidzip) - Check issue export status
+* [getRepositoriesWorkspaceRepoSlugIssuesImport](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesimport) - Check issue import status
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueId](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueid) - Get an issue
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidattachments) - List attachments for an issue
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidattachmentspath) - Get attachment for an issue
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidchanges) - List changes on an issue
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeId](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidchangeschangeid) - Get issue change object
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdComments](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidcomments) - List comments on an issue
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidcommentscommentid) - Get a comment on an issue
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdVote](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidvote) - Check if current user voted for an issue
+* [getRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch](docs/issuetracker/README.md#getrepositoriesworkspacereposlugissuesissueidwatch) - Check if current user is watching a issue
+* [getRepositoriesWorkspaceRepoSlugMilestones](docs/issuetracker/README.md#getrepositoriesworkspacereposlugmilestones) - List milestones
+* [getRepositoriesWorkspaceRepoSlugMilestonesMilestoneId](docs/issuetracker/README.md#getrepositoriesworkspacereposlugmilestonesmilestoneid) - Get a milestone
+* [getRepositoriesWorkspaceRepoSlugVersions](docs/issuetracker/README.md#getrepositoriesworkspacereposlugversions) - List defined versions for issues
+* [getRepositoriesWorkspaceRepoSlugVersionsVersionId](docs/issuetracker/README.md#getrepositoriesworkspacereposlugversionsversionid) - Get a defined version for issues
+* [postRepositoriesWorkspaceRepoSlugIssues](docs/issuetracker/README.md#postrepositoriesworkspacereposlugissues) - Create an issue
+* [postRepositoriesWorkspaceRepoSlugIssuesExport](docs/issuetracker/README.md#postrepositoriesworkspacereposlugissuesexport) - Export issues
+* [postRepositoriesWorkspaceRepoSlugIssuesImport](docs/issuetracker/README.md#postrepositoriesworkspacereposlugissuesimport) - Import issues
+* [postRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments](docs/issuetracker/README.md#postrepositoriesworkspacereposlugissuesissueidattachments) - Upload an attachment to an issue
+* [postRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges](docs/issuetracker/README.md#postrepositoriesworkspacereposlugissuesissueidchanges) - Modify the state of an issue
+* [postRepositoriesWorkspaceRepoSlugIssuesIssueIdComments](docs/issuetracker/README.md#postrepositoriesworkspacereposlugissuesissueidcomments) - Create a comment on an issue
+* [putRepositoriesWorkspaceRepoSlugIssuesIssueId](docs/issuetracker/README.md#putrepositoriesworkspacereposlugissuesissueid) - Update an issue
+* [putRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId](docs/issuetracker/README.md#putrepositoriesworkspacereposlugissuesissueidcommentscommentid) - Update a comment on an issue
+* [putRepositoriesWorkspaceRepoSlugIssuesIssueIdVote](docs/issuetracker/README.md#putrepositoriesworkspacereposlugissuesissueidvote) - Vote for an issue
+* [putRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch](docs/issuetracker/README.md#putrepositoriesworkspacereposlugissuesissueidwatch) - Watch an issue
 
-### pipelines
+### [pipelines](docs/pipelines/README.md)
 
-* `createDeploymentVariable` - Create a variable for an environment
-* `createPipelineForRepository` - Run a pipeline
-* `createPipelineVariableForTeam` - Create a variable for a user
-* `createPipelineVariableForUser` - Create a variable for a user
-* `createPipelineVariableForWorkspace` - Create a variable for a workspace
-* `createRepositoryPipelineKnownHost` - Create a known host
-* `createRepositoryPipelineSchedule` - Create a schedule
-* `createRepositoryPipelineVariable` - Create a variable for a repository
-* `deleteDeploymentVariable` - Delete a variable for an environment
-* `deletePipelineVariableForTeam` - Delete a variable for a team
-* `deletePipelineVariableForUser` - Delete a variable for a user
-* `deletePipelineVariableForWorkspace` - Delete a variable for a workspace
-* `deleteRepositoryPipelineCache` - Delete a cache
-* `deleteRepositoryPipelineCaches` - Delete caches
-* `deleteRepositoryPipelineKeyPair` - Delete SSH key pair
-* `deleteRepositoryPipelineKnownHost` - Delete a known host
-* `deleteRepositoryPipelineSchedule` - Delete a schedule
-* `deleteRepositoryPipelineVariable` - Delete a variable for a repository
-* `getDeploymentVariables` - List variables for an environment
-* `getOIDCConfiguration` - Get OpenID configuration for OIDC in Pipelines
-* `getOIDCKeys` - Get keys for OIDC in Pipelines
-* `getPipelineContainerLog` - Get the logs for the build container or a service container for a given step of a pipeline.
-* `getPipelineForRepository` - Get a pipeline
-* `getPipelineStepForRepository` - Get a step of a pipeline
-* `getPipelineStepLogForRepository` - Get log file for a step
-* `getPipelineStepsForRepository` - List steps for a pipeline
-* `getPipelineTestReportTestCaseReasons` - Get test case reasons (output) for a given test case in a step of a pipeline.
-* `getPipelineTestReportTestCases` - Get test cases for a given step of a pipeline.
-* `getPipelineTestReports` - Get a summary of test reports for a given step of a pipeline.
-* `getPipelineVariableForTeam` - Get a variable for a team
-* `getPipelineVariableForUser` - Get a variable for a user
-* `getPipelineVariableForWorkspace` - Get variable for a workspace
-* `getPipelineVariablesForTeam` - List variables for an account
-* `getPipelineVariablesForUser` - List variables for a user
-* `getPipelineVariablesForWorkspace` - List variables for a workspace
-* `getPipelinesForRepository` - List pipelines
-* `getRepositoryPipelineCacheContentURI` - Get cache content URI
-* `getRepositoryPipelineCaches` - List caches
-* `getRepositoryPipelineConfig` - Get configuration
-* `getRepositoryPipelineKnownHost` - Get a known host
-* `getRepositoryPipelineKnownHosts` - List known hosts
-* `getRepositoryPipelineSchedule` - Get a schedule
-* `getRepositoryPipelineScheduleExecutions` - List executions of a schedule
-* `getRepositoryPipelineSchedules` - List schedules
-* `getRepositoryPipelineSshKeyPair` - Get SSH key pair
-* `getRepositoryPipelineVariable` - Get a variable for a repository
-* `getRepositoryPipelineVariables` - List variables for a repository
-* `stopPipeline` - Stop a pipeline
-* `updateDeploymentVariable` - Update a variable for an environment
-* `updatePipelineVariableForTeam` - Update a variable for a team
-* `updatePipelineVariableForUser` - Update a variable for a user
-* `updatePipelineVariableForWorkspace` - Update variable for a workspace
-* `updateRepositoryBuildNumber` - Update the next build number
-* `updateRepositoryPipelineConfig` - Update configuration
-* `updateRepositoryPipelineKeyPair` - Update SSH key pair
-* `updateRepositoryPipelineKnownHost` - Update a known host
-* `updateRepositoryPipelineSchedule` - Update a schedule
-* `updateRepositoryPipelineVariable` - Update a variable for a repository
+* [createDeploymentVariable](docs/pipelines/README.md#createdeploymentvariable) - Create a variable for an environment
+* [createPipelineForRepository](docs/pipelines/README.md#createpipelineforrepository) - Run a pipeline
+* [~~createPipelineVariableForTeam~~](docs/pipelines/README.md#createpipelinevariableforteam) - Create a variable for a user :warning: **Deprecated**
+* [~~createPipelineVariableForUser~~](docs/pipelines/README.md#createpipelinevariableforuser) - Create a variable for a user :warning: **Deprecated**
+* [createPipelineVariableForWorkspace](docs/pipelines/README.md#createpipelinevariableforworkspace) - Create a variable for a workspace
+* [createRepositoryPipelineKnownHost](docs/pipelines/README.md#createrepositorypipelineknownhost) - Create a known host
+* [createRepositoryPipelineSchedule](docs/pipelines/README.md#createrepositorypipelineschedule) - Create a schedule
+* [createRepositoryPipelineVariable](docs/pipelines/README.md#createrepositorypipelinevariable) - Create a variable for a repository
+* [deleteDeploymentVariable](docs/pipelines/README.md#deletedeploymentvariable) - Delete a variable for an environment
+* [~~deletePipelineVariableForTeam~~](docs/pipelines/README.md#deletepipelinevariableforteam) - Delete a variable for a team :warning: **Deprecated**
+* [~~deletePipelineVariableForUser~~](docs/pipelines/README.md#deletepipelinevariableforuser) - Delete a variable for a user :warning: **Deprecated**
+* [deletePipelineVariableForWorkspace](docs/pipelines/README.md#deletepipelinevariableforworkspace) - Delete a variable for a workspace
+* [deleteRepositoryPipelineCache](docs/pipelines/README.md#deleterepositorypipelinecache) - Delete a cache
+* [deleteRepositoryPipelineCaches](docs/pipelines/README.md#deleterepositorypipelinecaches) - Delete caches
+* [deleteRepositoryPipelineKeyPair](docs/pipelines/README.md#deleterepositorypipelinekeypair) - Delete SSH key pair
+* [deleteRepositoryPipelineKnownHost](docs/pipelines/README.md#deleterepositorypipelineknownhost) - Delete a known host
+* [deleteRepositoryPipelineSchedule](docs/pipelines/README.md#deleterepositorypipelineschedule) - Delete a schedule
+* [deleteRepositoryPipelineVariable](docs/pipelines/README.md#deleterepositorypipelinevariable) - Delete a variable for a repository
+* [getDeploymentVariables](docs/pipelines/README.md#getdeploymentvariables) - List variables for an environment
+* [getOIDCConfiguration](docs/pipelines/README.md#getoidcconfiguration) - Get OpenID configuration for OIDC in Pipelines
+* [getOIDCKeys](docs/pipelines/README.md#getoidckeys) - Get keys for OIDC in Pipelines
+* [getPipelineContainerLog](docs/pipelines/README.md#getpipelinecontainerlog) - Get the logs for the build container or a service container for a given step of a pipeline.
+* [getPipelineForRepository](docs/pipelines/README.md#getpipelineforrepository) - Get a pipeline
+* [getPipelineStepForRepository](docs/pipelines/README.md#getpipelinestepforrepository) - Get a step of a pipeline
+* [getPipelineStepLogForRepository](docs/pipelines/README.md#getpipelinesteplogforrepository) - Get log file for a step
+* [getPipelineStepsForRepository](docs/pipelines/README.md#getpipelinestepsforrepository) - List steps for a pipeline
+* [getPipelineTestReportTestCaseReasons](docs/pipelines/README.md#getpipelinetestreporttestcasereasons) - Get test case reasons (output) for a given test case in a step of a pipeline.
+* [getPipelineTestReportTestCases](docs/pipelines/README.md#getpipelinetestreporttestcases) - Get test cases for a given step of a pipeline.
+* [getPipelineTestReports](docs/pipelines/README.md#getpipelinetestreports) - Get a summary of test reports for a given step of a pipeline.
+* [~~getPipelineVariableForTeam~~](docs/pipelines/README.md#getpipelinevariableforteam) - Get a variable for a team :warning: **Deprecated**
+* [~~getPipelineVariableForUser~~](docs/pipelines/README.md#getpipelinevariableforuser) - Get a variable for a user :warning: **Deprecated**
+* [getPipelineVariableForWorkspace](docs/pipelines/README.md#getpipelinevariableforworkspace) - Get variable for a workspace
+* [~~getPipelineVariablesForTeam~~](docs/pipelines/README.md#getpipelinevariablesforteam) - List variables for an account :warning: **Deprecated**
+* [~~getPipelineVariablesForUser~~](docs/pipelines/README.md#getpipelinevariablesforuser) - List variables for a user :warning: **Deprecated**
+* [getPipelineVariablesForWorkspace](docs/pipelines/README.md#getpipelinevariablesforworkspace) - List variables for a workspace
+* [getPipelinesForRepository](docs/pipelines/README.md#getpipelinesforrepository) - List pipelines
+* [getRepositoryPipelineCacheContentURI](docs/pipelines/README.md#getrepositorypipelinecachecontenturi) - Get cache content URI
+* [getRepositoryPipelineCaches](docs/pipelines/README.md#getrepositorypipelinecaches) - List caches
+* [getRepositoryPipelineConfig](docs/pipelines/README.md#getrepositorypipelineconfig) - Get configuration
+* [getRepositoryPipelineKnownHost](docs/pipelines/README.md#getrepositorypipelineknownhost) - Get a known host
+* [getRepositoryPipelineKnownHosts](docs/pipelines/README.md#getrepositorypipelineknownhosts) - List known hosts
+* [getRepositoryPipelineSchedule](docs/pipelines/README.md#getrepositorypipelineschedule) - Get a schedule
+* [getRepositoryPipelineScheduleExecutions](docs/pipelines/README.md#getrepositorypipelinescheduleexecutions) - List executions of a schedule
+* [getRepositoryPipelineSchedules](docs/pipelines/README.md#getrepositorypipelineschedules) - List schedules
+* [getRepositoryPipelineSshKeyPair](docs/pipelines/README.md#getrepositorypipelinesshkeypair) - Get SSH key pair
+* [getRepositoryPipelineVariable](docs/pipelines/README.md#getrepositorypipelinevariable) - Get a variable for a repository
+* [getRepositoryPipelineVariables](docs/pipelines/README.md#getrepositorypipelinevariables) - List variables for a repository
+* [stopPipeline](docs/pipelines/README.md#stoppipeline) - Stop a pipeline
+* [updateDeploymentVariable](docs/pipelines/README.md#updatedeploymentvariable) - Update a variable for an environment
+* [~~updatePipelineVariableForTeam~~](docs/pipelines/README.md#updatepipelinevariableforteam) - Update a variable for a team :warning: **Deprecated**
+* [~~updatePipelineVariableForUser~~](docs/pipelines/README.md#updatepipelinevariableforuser) - Update a variable for a user :warning: **Deprecated**
+* [updatePipelineVariableForWorkspace](docs/pipelines/README.md#updatepipelinevariableforworkspace) - Update variable for a workspace
+* [updateRepositoryBuildNumber](docs/pipelines/README.md#updaterepositorybuildnumber) - Update the next build number
+* [updateRepositoryPipelineConfig](docs/pipelines/README.md#updaterepositorypipelineconfig) - Update configuration
+* [updateRepositoryPipelineKeyPair](docs/pipelines/README.md#updaterepositorypipelinekeypair) - Update SSH key pair
+* [updateRepositoryPipelineKnownHost](docs/pipelines/README.md#updaterepositorypipelineknownhost) - Update a known host
+* [updateRepositoryPipelineSchedule](docs/pipelines/README.md#updaterepositorypipelineschedule) - Update a schedule
+* [updateRepositoryPipelineVariable](docs/pipelines/README.md#updaterepositorypipelinevariable) - Update a variable for a repository
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `deleteWorkspacesWorkspaceProjectsProjectKey` - Delete a project for a workspace
-* `deleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser` - Remove the specific user from the project's default reviewers
-* `getWorkspacesWorkspaceProjectsProjectKey` - Get a project for a workspace
-* `getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers` - List the default reviewers in a project
-* `getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser` - Get a default reviewer
-* `postWorkspacesWorkspaceProjects` - Create a project in a workspace
-* `putWorkspacesWorkspaceProjectsProjectKey` - Update a project for a workspace
-* `putWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser` - Add the specific user as a default reviewer for the project
+* [deleteWorkspacesWorkspaceProjectsProjectKey](docs/projects/README.md#deleteworkspacesworkspaceprojectsprojectkey) - Delete a project for a workspace
+* [deleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser](docs/projects/README.md#deleteworkspacesworkspaceprojectsprojectkeydefaultreviewersselecteduser) - Remove the specific user from the project's default reviewers
+* [getWorkspacesWorkspaceProjectsProjectKey](docs/projects/README.md#getworkspacesworkspaceprojectsprojectkey) - Get a project for a workspace
+* [getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers](docs/projects/README.md#getworkspacesworkspaceprojectsprojectkeydefaultreviewers) - List the default reviewers in a project
+* [getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser](docs/projects/README.md#getworkspacesworkspaceprojectsprojectkeydefaultreviewersselecteduser) - Get a default reviewer
+* [postWorkspacesWorkspaceProjects](docs/projects/README.md#postworkspacesworkspaceprojects) - Create a project in a workspace
+* [putWorkspacesWorkspaceProjectsProjectKey](docs/projects/README.md#putworkspacesworkspaceprojectsprojectkey) - Update a project for a workspace
+* [putWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser](docs/projects/README.md#putworkspacesworkspaceprojectsprojectkeydefaultreviewersselecteduser) - Add the specific user as a default reviewer for the project
 
-### pullrequests
+### [pullrequests](docs/pullrequests/README.md)
 
-* `deleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername` - Remove a user from the default reviewers
-* `deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove` - Unapprove a pull request
-* `deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId` - Delete a comment on a pull request
-* `deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges` - Remove change request for a pull request
-* `getPullrequestsForCommit` - List pull requests that contain a commit
-* `getPullrequestsSelectedUser` - List pull requests for a user
-* `getRepositoriesWorkspaceRepoSlugDefaultReviewers` - List default reviewers
-* `getRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername` - Get a default reviewer
-* `getRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers` - List effective default reviewers
-* `getRepositoriesWorkspaceRepoSlugPullrequests` - List pull requests
-* `getRepositoriesWorkspaceRepoSlugPullrequestsActivity` - List a pull request activity log
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId` - Get a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivity` - List a pull request activity log
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments` - List comments on a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId` - Get a comment on a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommits` - List commits on a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiff` - List changes in a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstat` - Get the diff stat for a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskId` - Get the merge task status for a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatch` - Get the patch for a pull request
-* `getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses` - List commit statuses for a pull request
-* `postRepositoriesWorkspaceRepoSlugPullrequests` - Create a pull request
-* `postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove` - Approve a pull request
-* `postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments` - Create a comment on a pull request
-* `postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDecline` - Decline a pull request
-* `postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMerge` - Merge a pull request
-* `postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges` - Request changes for a pull request
-* `putRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername` - Add a user to the default reviewers
-* `putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId` - Update a pull request
-* `putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId` - Update a comment on a pull request
+* [deleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername](docs/pullrequests/README.md#deleterepositoriesworkspacereposlugdefaultreviewerstargetusername) - Remove a user from the default reviewers
+* [deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove](docs/pullrequests/README.md#deleterepositoriesworkspacereposlugpullrequestspullrequestidapprove) - Unapprove a pull request
+* [deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId](docs/pullrequests/README.md#deleterepositoriesworkspacereposlugpullrequestspullrequestidcommentscommentid) - Delete a comment on a pull request
+* [deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolve](docs/pullrequests/README.md#deleterepositoriesworkspacereposlugpullrequestspullrequestidcommentscommentidresolve) - Reopen a comment thread
+* [deleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges](docs/pullrequests/README.md#deleterepositoriesworkspacereposlugpullrequestspullrequestidrequestchanges) - Remove change request for a pull request
+* [getPullrequestsForCommit](docs/pullrequests/README.md#getpullrequestsforcommit) - List pull requests that contain a commit
+* [getPullrequestsSelectedUser](docs/pullrequests/README.md#getpullrequestsselecteduser) - List pull requests for a user
+* [getRepositoriesWorkspaceRepoSlugDefaultReviewers](docs/pullrequests/README.md#getrepositoriesworkspacereposlugdefaultreviewers) - List default reviewers
+* [getRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername](docs/pullrequests/README.md#getrepositoriesworkspacereposlugdefaultreviewerstargetusername) - Get a default reviewer
+* [getRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers](docs/pullrequests/README.md#getrepositoriesworkspacereposlugeffectivedefaultreviewers) - List effective default reviewers
+* [getRepositoriesWorkspaceRepoSlugPullrequests](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequests) - List pull requests
+* [getRepositoriesWorkspaceRepoSlugPullrequestsActivity](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestsactivity) - List a pull request activity log
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestid) - Get a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivity](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidactivity) - List a pull request activity log
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidcomments) - List comments on a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidcommentscommentid) - Get a comment on a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommits](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidcommits) - List commits on a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiff](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestiddiff) - List changes in a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDiffstat](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestiddiffstat) - Get the diff stat for a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskId](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidmergetaskstatustaskid) - Get the merge task status for a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdPatch](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidpatch) - Get the patch for a pull request
+* [getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses](docs/pullrequests/README.md#getrepositoriesworkspacereposlugpullrequestspullrequestidstatuses) - List commit statuses for a pull request
+* [postRepositoriesWorkspaceRepoSlugPullrequests](docs/pullrequests/README.md#postrepositoriesworkspacereposlugpullrequests) - Create a pull request
+* [postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdApprove](docs/pullrequests/README.md#postrepositoriesworkspacereposlugpullrequestspullrequestidapprove) - Approve a pull request
+* [postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdComments](docs/pullrequests/README.md#postrepositoriesworkspacereposlugpullrequestspullrequestidcomments) - Create a comment on a pull request
+* [postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResolve](docs/pullrequests/README.md#postrepositoriesworkspacereposlugpullrequestspullrequestidcommentscommentidresolve) - Resolve a comment thread
+* [postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdDecline](docs/pullrequests/README.md#postrepositoriesworkspacereposlugpullrequestspullrequestiddecline) - Decline a pull request
+* [postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMerge](docs/pullrequests/README.md#postrepositoriesworkspacereposlugpullrequestspullrequestidmerge) - Merge a pull request
+* [postRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChanges](docs/pullrequests/README.md#postrepositoriesworkspacereposlugpullrequestspullrequestidrequestchanges) - Request changes for a pull request
+* [putRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername](docs/pullrequests/README.md#putrepositoriesworkspacereposlugdefaultreviewerstargetusername) - Add a user to the default reviewers
+* [putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestId](docs/pullrequests/README.md#putrepositoriesworkspacereposlugpullrequestspullrequestid) - Update a pull request
+* [putRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentId](docs/pullrequests/README.md#putrepositoriesworkspacereposlugpullrequestspullrequestidcommentscommentid) - Update a comment on a pull request
 
-### refs
+### [refs](docs/refs/README.md)
 
-* `deleteRepositoriesWorkspaceRepoSlugRefsBranchesName` - Delete a branch
-* `deleteRepositoriesWorkspaceRepoSlugRefsTagsName` - Delete a tag
-* `getRepositoriesWorkspaceRepoSlugRefs` - List branches and tags
-* `getRepositoriesWorkspaceRepoSlugRefsBranches` - List open branches
-* `getRepositoriesWorkspaceRepoSlugRefsBranchesName` - Get a branch
-* `getRepositoriesWorkspaceRepoSlugRefsTags` - List tags
-* `getRepositoriesWorkspaceRepoSlugRefsTagsName` - Get a tag
-* `postRepositoriesWorkspaceRepoSlugRefsBranches` - Create a branch
-* `postRepositoriesWorkspaceRepoSlugRefsTags` - Create a tag
+* [deleteRepositoriesWorkspaceRepoSlugRefsBranchesName](docs/refs/README.md#deleterepositoriesworkspacereposlugrefsbranchesname) - Delete a branch
+* [deleteRepositoriesWorkspaceRepoSlugRefsTagsName](docs/refs/README.md#deleterepositoriesworkspacereposlugrefstagsname) - Delete a tag
+* [getRepositoriesWorkspaceRepoSlugRefs](docs/refs/README.md#getrepositoriesworkspacereposlugrefs) - List branches and tags
+* [getRepositoriesWorkspaceRepoSlugRefsBranches](docs/refs/README.md#getrepositoriesworkspacereposlugrefsbranches) - List open branches
+* [getRepositoriesWorkspaceRepoSlugRefsBranchesName](docs/refs/README.md#getrepositoriesworkspacereposlugrefsbranchesname) - Get a branch
+* [getRepositoriesWorkspaceRepoSlugRefsTags](docs/refs/README.md#getrepositoriesworkspacereposlugrefstags) - List tags
+* [getRepositoriesWorkspaceRepoSlugRefsTagsName](docs/refs/README.md#getrepositoriesworkspacereposlugrefstagsname) - Get a tag
+* [postRepositoriesWorkspaceRepoSlugRefsBranches](docs/refs/README.md#postrepositoriesworkspacereposlugrefsbranches) - Create a branch
+* [postRepositoriesWorkspaceRepoSlugRefsTags](docs/refs/README.md#postrepositoriesworkspacereposlugrefstags) - Create a tag
 
-### reports
+### [reports](docs/reports/README.md)
 
-* `bulkCreateOrUpdateAnnotations` - Bulk create or update annotations
-* `createOrUpdateAnnotation` - Create or update an annotation
-* `createOrUpdateReport` - Create or update a report
-* `deleteAnnotation` - Delete an annotation
-* `deleteReport` - Delete a report
-* `getAnnotation` - Get an annotation
-* `getAnnotationsForReport` - List annotations
-* `getReport` - Get a report
-* `getReportsForCommit` - List reports
+* [bulkCreateOrUpdateAnnotations](docs/reports/README.md#bulkcreateorupdateannotations) - Bulk create or update annotations
+* [createOrUpdateAnnotation](docs/reports/README.md#createorupdateannotation) - Create or update an annotation
+* [createOrUpdateReport](docs/reports/README.md#createorupdatereport) - Create or update a report
+* [deleteAnnotation](docs/reports/README.md#deleteannotation) - Delete an annotation
+* [deleteReport](docs/reports/README.md#deletereport) - Delete a report
+* [getAnnotation](docs/reports/README.md#getannotation) - Get an annotation
+* [getAnnotationsForReport](docs/reports/README.md#getannotationsforreport) - List annotations
+* [getReport](docs/reports/README.md#getreport) - Get a report
+* [getReportsForCommit](docs/reports/README.md#getreportsforcommit) - List reports
 
-### repositories
+### [repositories](docs/repositories/README.md)
 
-* `deleteRepositoriesWorkspaceRepoSlug` - Delete a repository
-* `deleteRepositoriesWorkspaceRepoSlugHooksUid` - Delete a webhook for a repository
-* `deleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug` - Delete an explicit group permission for a repository
-* `deleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId` - Delete an explicit user permission for a repository
-* `getRepositories` - List public repositories
-* `getRepositoriesWorkspace` - List repositories in a workspace
-* `getRepositoriesWorkspaceRepoSlug` - Get a repository
-* `getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath` - List commits that modified a file
-* `getRepositoriesWorkspaceRepoSlugForks` - List repository forks
-* `getRepositoriesWorkspaceRepoSlugHooks` - List webhooks for a repository
-* `getRepositoriesWorkspaceRepoSlugHooksUid` - Get a webhook for a repository
-* `getRepositoriesWorkspaceRepoSlugOverrideSettings` - Retrieve the inheritance state for repository settings
-* `getRepositoriesWorkspaceRepoSlugPermissionsConfigGroups` - List explicit group permissions for a repository
-* `getRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug` - Get an explicit group permission for a repository
-* `getRepositoriesWorkspaceRepoSlugPermissionsConfigUsers` - List explicit user permissions for a repository
-* `getRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId` - Get an explicit user permission for a repository
-* `getRepositoriesWorkspaceRepoSlugSrc` - Get the root directory of the main branch
-* `getRepositoriesWorkspaceRepoSlugSrcCommitPath` - Get file or directory contents
-* `getRepositoriesWorkspaceRepoSlugWatchers` - List repositories watchers
-* `getUserPermissionsRepositories` - List repository permissions for a user
-* `postRepositoriesWorkspaceRepoSlug` - Create a repository
-* `postRepositoriesWorkspaceRepoSlugForks` - Fork a repository
-* `postRepositoriesWorkspaceRepoSlugHooks` - Create a webhook for a repository
-* `postRepositoriesWorkspaceRepoSlugSrc` - Create a commit by uploading a file
-* `putRepositoriesWorkspaceRepoSlug` - Update a repository
-* `putRepositoriesWorkspaceRepoSlugHooksUid` - Update a webhook for a repository
-* `putRepositoriesWorkspaceRepoSlugOverrideSettings` - Set the inheritance state for repository settings
+* [deleteRepositoriesWorkspaceRepoSlug](docs/repositories/README.md#deleterepositoriesworkspacereposlug) - Delete a repository
+* [deleteRepositoriesWorkspaceRepoSlugHooksUid](docs/repositories/README.md#deleterepositoriesworkspacereposlughooksuid) - Delete a webhook for a repository
+* [deleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug](docs/repositories/README.md#deleterepositoriesworkspacereposlugpermissionsconfiggroupsgroupslug) - Delete an explicit group permission for a repository
+* [deleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId](docs/repositories/README.md#deleterepositoriesworkspacereposlugpermissionsconfigusersselecteduserid) - Delete an explicit user permission for a repository
+* [getRepositories](docs/repositories/README.md#getrepositories) - List public repositories
+* [getRepositoriesWorkspace](docs/repositories/README.md#getrepositoriesworkspace) - List repositories in a workspace
+* [getRepositoriesWorkspaceRepoSlug](docs/repositories/README.md#getrepositoriesworkspacereposlug) - Get a repository
+* [getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath](docs/repositories/README.md#getrepositoriesworkspacereposlugfilehistorycommitpath) - List commits that modified a file
+* [getRepositoriesWorkspaceRepoSlugForks](docs/repositories/README.md#getrepositoriesworkspacereposlugforks) - List repository forks
+* [getRepositoriesWorkspaceRepoSlugHooks](docs/repositories/README.md#getrepositoriesworkspacereposlughooks) - List webhooks for a repository
+* [getRepositoriesWorkspaceRepoSlugHooksUid](docs/repositories/README.md#getrepositoriesworkspacereposlughooksuid) - Get a webhook for a repository
+* [getRepositoriesWorkspaceRepoSlugOverrideSettings](docs/repositories/README.md#getrepositoriesworkspacereposlugoverridesettings) - Retrieve the inheritance state for repository settings
+* [getRepositoriesWorkspaceRepoSlugPermissionsConfigGroups](docs/repositories/README.md#getrepositoriesworkspacereposlugpermissionsconfiggroups) - List explicit group permissions for a repository
+* [getRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug](docs/repositories/README.md#getrepositoriesworkspacereposlugpermissionsconfiggroupsgroupslug) - Get an explicit group permission for a repository
+* [getRepositoriesWorkspaceRepoSlugPermissionsConfigUsers](docs/repositories/README.md#getrepositoriesworkspacereposlugpermissionsconfigusers) - List explicit user permissions for a repository
+* [getRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId](docs/repositories/README.md#getrepositoriesworkspacereposlugpermissionsconfigusersselecteduserid) - Get an explicit user permission for a repository
+* [getRepositoriesWorkspaceRepoSlugSrc](docs/repositories/README.md#getrepositoriesworkspacereposlugsrc) - Get the root directory of the main branch
+* [getRepositoriesWorkspaceRepoSlugSrcCommitPath](docs/repositories/README.md#getrepositoriesworkspacereposlugsrccommitpath) - Get file or directory contents
+* [getRepositoriesWorkspaceRepoSlugWatchers](docs/repositories/README.md#getrepositoriesworkspacereposlugwatchers) - List repositories watchers
+* [getUserPermissionsRepositories](docs/repositories/README.md#getuserpermissionsrepositories) - List repository permissions for a user
+* [postRepositoriesWorkspaceRepoSlug](docs/repositories/README.md#postrepositoriesworkspacereposlug) - Create a repository
+* [postRepositoriesWorkspaceRepoSlugForks](docs/repositories/README.md#postrepositoriesworkspacereposlugforks) - Fork a repository
+* [postRepositoriesWorkspaceRepoSlugHooks](docs/repositories/README.md#postrepositoriesworkspacereposlughooks) - Create a webhook for a repository
+* [postRepositoriesWorkspaceRepoSlugSrc](docs/repositories/README.md#postrepositoriesworkspacereposlugsrc) - Create a commit by uploading a file
+* [putRepositoriesWorkspaceRepoSlug](docs/repositories/README.md#putrepositoriesworkspacereposlug) - Update a repository
+* [putRepositoriesWorkspaceRepoSlugHooksUid](docs/repositories/README.md#putrepositoriesworkspacereposlughooksuid) - Update a webhook for a repository
+* [putRepositoriesWorkspaceRepoSlugOverrideSettings](docs/repositories/README.md#putrepositoriesworkspacereposlugoverridesettings) - Set the inheritance state for repository settings
                 
-* `putRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug` - Update an explicit group permission for a repository
-* `putRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId` - Update an explicit user permission for a repository
+* [putRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug](docs/repositories/README.md#putrepositoriesworkspacereposlugpermissionsconfiggroupsgroupslug) - Update an explicit group permission for a repository
+* [putRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId](docs/repositories/README.md#putrepositoriesworkspacereposlugpermissionsconfigusersselecteduserid) - Update an explicit user permission for a repository
 
-### search
+### [search](docs/search/README.md)
 
-* `searchAccount` - Search for code in a user's repositories
-* `searchTeam` - Search for code in a team's repositories
-* `searchWorkspace` - Search for code in a workspace
+* [searchAccount](docs/search/README.md#searchaccount) - Search for code in a user's repositories
+* [searchTeam](docs/search/README.md#searchteam) - Search for code in a team's repositories
+* [searchWorkspace](docs/search/README.md#searchworkspace) - Search for code in a workspace
 
-### snippets
+### [snippets](docs/snippets/README.md)
 
-* `deleteSnippetsWorkspaceEncodedId` - Delete a snippet
-* `deleteSnippetsWorkspaceEncodedIdCommentsCommentId` - Delete a comment on a snippet
-* `deleteSnippetsWorkspaceEncodedIdWatch` - Stop watching a snippet
-* `deleteSnippetsWorkspaceEncodedIdNodeId` - Delete a previous revision of a snippet
-* `getSnippets` - List snippets
-* `getSnippetsWorkspace` - List snippets in a workspace
-* `getSnippetsWorkspaceEncodedId` - Get a snippet
-* `getSnippetsWorkspaceEncodedIdComments` - List comments on a snippet
-* `getSnippetsWorkspaceEncodedIdCommentsCommentId` - Get a comment on a snippet
-* `getSnippetsWorkspaceEncodedIdCommits` - List snippet changes
-* `getSnippetsWorkspaceEncodedIdCommitsRevision` - Get a previous snippet change
-* `getSnippetsWorkspaceEncodedIdFilesPath` - Get a snippet's raw file at HEAD
-* `getSnippetsWorkspaceEncodedIdWatch` - Check if the current user is watching a snippet
-* `getSnippetsWorkspaceEncodedIdWatchers` - List users watching a snippet
-* `getSnippetsWorkspaceEncodedIdNodeId` - Get a previous revision of a snippet
-* `getSnippetsWorkspaceEncodedIdNodeIdFilesPath` - Get a snippet's raw file
-* `getSnippetsWorkspaceEncodedIdRevisionDiff` - Get snippet changes between versions
-* `getSnippetsWorkspaceEncodedIdRevisionPatch` - Get snippet patch between versions
-* `postSnippets` - Create a snippet
-* `postSnippetsWorkspace` - Create a snippet for a workspace
-* `postSnippetsWorkspaceEncodedIdComments` - Create a comment on a snippet
-* `putSnippetsWorkspaceEncodedId` - Update a snippet
-* `putSnippetsWorkspaceEncodedIdCommentsCommentId` - Update a comment on a snippet
-* `putSnippetsWorkspaceEncodedIdWatch` - Watch a snippet
-* `putSnippetsWorkspaceEncodedIdNodeId` - Update a previous revision of a snippet
+* [deleteSnippetsWorkspaceEncodedId](docs/snippets/README.md#deletesnippetsworkspaceencodedid) - Delete a snippet
+* [deleteSnippetsWorkspaceEncodedIdCommentsCommentId](docs/snippets/README.md#deletesnippetsworkspaceencodedidcommentscommentid) - Delete a comment on a snippet
+* [deleteSnippetsWorkspaceEncodedIdWatch](docs/snippets/README.md#deletesnippetsworkspaceencodedidwatch) - Stop watching a snippet
+* [deleteSnippetsWorkspaceEncodedIdNodeId](docs/snippets/README.md#deletesnippetsworkspaceencodedidnodeid) - Delete a previous revision of a snippet
+* [getSnippets](docs/snippets/README.md#getsnippets) - List snippets
+* [getSnippetsWorkspace](docs/snippets/README.md#getsnippetsworkspace) - List snippets in a workspace
+* [getSnippetsWorkspaceEncodedId](docs/snippets/README.md#getsnippetsworkspaceencodedid) - Get a snippet
+* [getSnippetsWorkspaceEncodedIdComments](docs/snippets/README.md#getsnippetsworkspaceencodedidcomments) - List comments on a snippet
+* [getSnippetsWorkspaceEncodedIdCommentsCommentId](docs/snippets/README.md#getsnippetsworkspaceencodedidcommentscommentid) - Get a comment on a snippet
+* [getSnippetsWorkspaceEncodedIdCommits](docs/snippets/README.md#getsnippetsworkspaceencodedidcommits) - List snippet changes
+* [getSnippetsWorkspaceEncodedIdCommitsRevision](docs/snippets/README.md#getsnippetsworkspaceencodedidcommitsrevision) - Get a previous snippet change
+* [getSnippetsWorkspaceEncodedIdFilesPath](docs/snippets/README.md#getsnippetsworkspaceencodedidfilespath) - Get a snippet's raw file at HEAD
+* [getSnippetsWorkspaceEncodedIdWatch](docs/snippets/README.md#getsnippetsworkspaceencodedidwatch) - Check if the current user is watching a snippet
+* [~~getSnippetsWorkspaceEncodedIdWatchers~~](docs/snippets/README.md#getsnippetsworkspaceencodedidwatchers) - List users watching a snippet :warning: **Deprecated**
+* [getSnippetsWorkspaceEncodedIdNodeId](docs/snippets/README.md#getsnippetsworkspaceencodedidnodeid) - Get a previous revision of a snippet
+* [getSnippetsWorkspaceEncodedIdNodeIdFilesPath](docs/snippets/README.md#getsnippetsworkspaceencodedidnodeidfilespath) - Get a snippet's raw file
+* [getSnippetsWorkspaceEncodedIdRevisionDiff](docs/snippets/README.md#getsnippetsworkspaceencodedidrevisiondiff) - Get snippet changes between versions
+* [getSnippetsWorkspaceEncodedIdRevisionPatch](docs/snippets/README.md#getsnippetsworkspaceencodedidrevisionpatch) - Get snippet patch between versions
+* [postSnippets](docs/snippets/README.md#postsnippets) - Create a snippet
+* [postSnippetsWorkspace](docs/snippets/README.md#postsnippetsworkspace) - Create a snippet for a workspace
+* [postSnippetsWorkspaceEncodedIdComments](docs/snippets/README.md#postsnippetsworkspaceencodedidcomments) - Create a comment on a snippet
+* [putSnippetsWorkspaceEncodedId](docs/snippets/README.md#putsnippetsworkspaceencodedid) - Update a snippet
+* [putSnippetsWorkspaceEncodedIdCommentsCommentId](docs/snippets/README.md#putsnippetsworkspaceencodedidcommentscommentid) - Update a comment on a snippet
+* [putSnippetsWorkspaceEncodedIdWatch](docs/snippets/README.md#putsnippetsworkspaceencodedidwatch) - Watch a snippet
+* [putSnippetsWorkspaceEncodedIdNodeId](docs/snippets/README.md#putsnippetsworkspaceencodedidnodeid) - Update a previous revision of a snippet
 
-### source
+### [source](docs/source/README.md)
 
-* `getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath` - List commits that modified a file
-* `getRepositoriesWorkspaceRepoSlugSrc` - Get the root directory of the main branch
-* `getRepositoriesWorkspaceRepoSlugSrcCommitPath` - Get file or directory contents
-* `postRepositoriesWorkspaceRepoSlugSrc` - Create a commit by uploading a file
+* [getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath](docs/source/README.md#getrepositoriesworkspacereposlugfilehistorycommitpath) - List commits that modified a file
+* [getRepositoriesWorkspaceRepoSlugSrc](docs/source/README.md#getrepositoriesworkspacereposlugsrc) - Get the root directory of the main branch
+* [getRepositoriesWorkspaceRepoSlugSrcCommitPath](docs/source/README.md#getrepositoriesworkspacereposlugsrccommitpath) - Get file or directory contents
+* [postRepositoriesWorkspaceRepoSlugSrc](docs/source/README.md#postrepositoriesworkspacereposlugsrc) - Create a commit by uploading a file
 
-### ssh
+### [ssh](docs/ssh/README.md)
 
-* `deleteUsersSelectedUserSshKeysKeyId` - Delete a SSH key
-* `getUsersSelectedUserSshKeys` - List SSH keys
-* `getUsersSelectedUserSshKeysKeyId` - Get a SSH key
-* `postUsersSelectedUserSshKeys` - Add a new SSH key
-* `putUsersSelectedUserSshKeysKeyId` - Update a SSH key
+* [deleteUsersSelectedUserSshKeysKeyId](docs/ssh/README.md#deleteusersselectedusersshkeyskeyid) - Delete a SSH key
+* [getUsersSelectedUserSshKeys](docs/ssh/README.md#getusersselectedusersshkeys) - List SSH keys
+* [getUsersSelectedUserSshKeysKeyId](docs/ssh/README.md#getusersselectedusersshkeyskeyid) - Get a SSH key
+* [postUsersSelectedUserSshKeys](docs/ssh/README.md#postusersselectedusersshkeys) - Add a new SSH key
+* [putUsersSelectedUserSshKeysKeyId](docs/ssh/README.md#putusersselectedusersshkeyskeyid) - Update a SSH key
 
-### users
+### [users](docs/users/README.md)
 
-* `getUser` - Get current user
-* `getUserEmails` - List email addresses for current user
-* `getUserEmailsEmail` - Get an email address for current user
-* `getUsersSelectedUser` - Get a user
+* [getUser](docs/users/README.md#getuser) - Get current user
+* [getUserEmails](docs/users/README.md#getuseremails) - List email addresses for current user
+* [getUserEmailsEmail](docs/users/README.md#getuseremailsemail) - Get an email address for current user
+* [getUsersSelectedUser](docs/users/README.md#getusersselecteduser) - Get a user
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `deleteRepositoriesWorkspaceRepoSlugHooksUid` - Delete a webhook for a repository
-* `deleteWorkspacesWorkspaceHooksUid` - Delete a webhook for a workspace
-* `getHookEvents` - Get a webhook resource
-* `getHookEventsSubjectType` - List subscribable webhook types
-* `getRepositoriesWorkspaceRepoSlugHooks` - List webhooks for a repository
-* `getRepositoriesWorkspaceRepoSlugHooksUid` - Get a webhook for a repository
-* `getWorkspacesWorkspaceHooks` - List webhooks for a workspace
-* `getWorkspacesWorkspaceHooksUid` - Get a webhook for a workspace
-* `postRepositoriesWorkspaceRepoSlugHooks` - Create a webhook for a repository
-* `postWorkspacesWorkspaceHooks` - Create a webhook for a workspace
-* `putRepositoriesWorkspaceRepoSlugHooksUid` - Update a webhook for a repository
-* `putWorkspacesWorkspaceHooksUid` - Update a webhook for a workspace
+* [deleteRepositoriesWorkspaceRepoSlugHooksUid](docs/webhooks/README.md#deleterepositoriesworkspacereposlughooksuid) - Delete a webhook for a repository
+* [deleteWorkspacesWorkspaceHooksUid](docs/webhooks/README.md#deleteworkspacesworkspacehooksuid) - Delete a webhook for a workspace
+* [getHookEvents](docs/webhooks/README.md#gethookevents) - Get a webhook resource
+* [getHookEventsSubjectType](docs/webhooks/README.md#gethookeventssubjecttype) - List subscribable webhook types
+* [getRepositoriesWorkspaceRepoSlugHooks](docs/webhooks/README.md#getrepositoriesworkspacereposlughooks) - List webhooks for a repository
+* [getRepositoriesWorkspaceRepoSlugHooksUid](docs/webhooks/README.md#getrepositoriesworkspacereposlughooksuid) - Get a webhook for a repository
+* [getWorkspacesWorkspaceHooks](docs/webhooks/README.md#getworkspacesworkspacehooks) - List webhooks for a workspace
+* [getWorkspacesWorkspaceHooksUid](docs/webhooks/README.md#getworkspacesworkspacehooksuid) - Get a webhook for a workspace
+* [postRepositoriesWorkspaceRepoSlugHooks](docs/webhooks/README.md#postrepositoriesworkspacereposlughooks) - Create a webhook for a repository
+* [postWorkspacesWorkspaceHooks](docs/webhooks/README.md#postworkspacesworkspacehooks) - Create a webhook for a workspace
+* [putRepositoriesWorkspaceRepoSlugHooksUid](docs/webhooks/README.md#putrepositoriesworkspacereposlughooksuid) - Update a webhook for a repository
+* [putWorkspacesWorkspaceHooksUid](docs/webhooks/README.md#putworkspacesworkspacehooksuid) - Update a webhook for a workspace
 
-### workspaces
+### [workspaces](docs/workspaces/README.md)
 
-* `deleteWorkspacesWorkspaceHooksUid` - Delete a webhook for a workspace
-* `getUserPermissionsWorkspaces` - List workspaces for the current user
-* `getWorkspaces` - List workspaces for user
-* `getWorkspacesWorkspace` - Get a workspace
-* `getWorkspacesWorkspaceHooks` - List webhooks for a workspace
-* `getWorkspacesWorkspaceHooksUid` - Get a webhook for a workspace
-* `getWorkspacesWorkspaceMembers` - List users in a workspace
-* `getWorkspacesWorkspaceMembersMember` - Get user membership for a workspace
-* `getWorkspacesWorkspacePermissions` - List user permissions in a workspace
-* `getWorkspacesWorkspacePermissionsRepositories` - List all repository permissions for a workspace
-* `getWorkspacesWorkspacePermissionsRepositoriesRepoSlug` - List a repository permissions for a workspace
-* `getWorkspacesWorkspaceProjects` - List projects in a workspace
-* `getWorkspacesWorkspaceProjectsProjectKey` - Get a project for a workspace
-* `postWorkspacesWorkspaceHooks` - Create a webhook for a workspace
-* `putWorkspacesWorkspaceHooksUid` - Update a webhook for a workspace
+* [deleteWorkspacesWorkspaceHooksUid](docs/workspaces/README.md#deleteworkspacesworkspacehooksuid) - Delete a webhook for a workspace
+* [getUserPermissionsWorkspaces](docs/workspaces/README.md#getuserpermissionsworkspaces) - List workspaces for the current user
+* [getWorkspaces](docs/workspaces/README.md#getworkspaces) - List workspaces for user
+* [getWorkspacesWorkspace](docs/workspaces/README.md#getworkspacesworkspace) - Get a workspace
+* [getWorkspacesWorkspaceHooks](docs/workspaces/README.md#getworkspacesworkspacehooks) - List webhooks for a workspace
+* [getWorkspacesWorkspaceHooksUid](docs/workspaces/README.md#getworkspacesworkspacehooksuid) - Get a webhook for a workspace
+* [getWorkspacesWorkspaceMembers](docs/workspaces/README.md#getworkspacesworkspacemembers) - List users in a workspace
+* [getWorkspacesWorkspaceMembersMember](docs/workspaces/README.md#getworkspacesworkspacemembersmember) - Get user membership for a workspace
+* [getWorkspacesWorkspacePermissions](docs/workspaces/README.md#getworkspacesworkspacepermissions) - List user permissions in a workspace
+* [getWorkspacesWorkspacePermissionsRepositories](docs/workspaces/README.md#getworkspacesworkspacepermissionsrepositories) - List all repository permissions for a workspace
+* [getWorkspacesWorkspacePermissionsRepositoriesRepoSlug](docs/workspaces/README.md#getworkspacesworkspacepermissionsrepositoriesreposlug) - List a repository permissions for a workspace
+* [getWorkspacesWorkspaceProjects](docs/workspaces/README.md#getworkspacesworkspaceprojects) - List projects in a workspace
+* [getWorkspacesWorkspaceProjectsProjectKey](docs/workspaces/README.md#getworkspacesworkspaceprojectsprojectkey) - Get a project for a workspace
+* [postWorkspacesWorkspaceHooks](docs/workspaces/README.md#postworkspacesworkspacehooks) - Create a webhook for a workspace
+* [putWorkspacesWorkspaceHooksUid](docs/workspaces/README.md#putworkspacesworkspacehooksuid) - Update a webhook for a workspace
 
-### properties
+### [properties](docs/properties/README.md)
 
-* `deleteCommitHostedPropertyValue` - Delete a commit application property
-* `deletePullRequestHostedPropertyValue` - Delete a pull request application property
-* `deleteRepositoryHostedPropertyValue` - Delete a repository application property
-* `deleteUserHostedPropertyValue` - Delete a user application property
-* `getCommitHostedPropertyValue` - Get a commit application property
-* `getPullRequestHostedPropertyValue` - Get a pull request application property
-* `getRepositoryHostedPropertyValue` - Get a repository application property
-* `retrieveUserHostedPropertyValue` - Get a user application property
-* `updateCommitHostedPropertyValue` - Update a commit application property
-* `updatePullRequestHostedPropertyValue` - Update a pull request application property
-* `updateRepositoryHostedPropertyValue` - Update a repository application property
-* `updateUserHostedPropertyValue` - Update a user application property
+* [deleteCommitHostedPropertyValue](docs/properties/README.md#deletecommithostedpropertyvalue) - Delete a commit application property
+* [deletePullRequestHostedPropertyValue](docs/properties/README.md#deletepullrequesthostedpropertyvalue) - Delete a pull request application property
+* [deleteRepositoryHostedPropertyValue](docs/properties/README.md#deleterepositoryhostedpropertyvalue) - Delete a repository application property
+* [deleteUserHostedPropertyValue](docs/properties/README.md#deleteuserhostedpropertyvalue) - Delete a user application property
+* [getCommitHostedPropertyValue](docs/properties/README.md#getcommithostedpropertyvalue) - Get a commit application property
+* [getPullRequestHostedPropertyValue](docs/properties/README.md#getpullrequesthostedpropertyvalue) - Get a pull request application property
+* [getRepositoryHostedPropertyValue](docs/properties/README.md#getrepositoryhostedpropertyvalue) - Get a repository application property
+* [retrieveUserHostedPropertyValue](docs/properties/README.md#retrieveuserhostedpropertyvalue) - Get a user application property
+* [updateCommitHostedPropertyValue](docs/properties/README.md#updatecommithostedpropertyvalue) - Update a commit application property
+* [updatePullRequestHostedPropertyValue](docs/properties/README.md#updatepullrequesthostedpropertyvalue) - Update a pull request application property
+* [updateRepositoryHostedPropertyValue](docs/properties/README.md#updaterepositoryhostedpropertyvalue) - Update a repository application property
+* [updateUserHostedPropertyValue](docs/properties/README.md#updateuserhostedpropertyvalue) - Update a user application property
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSubnetResultSubnetIpv6CidrBlockAssociationSet {
     
     public String associationId;
+
     public CreateSubnetResultSubnetIpv6CidrBlockAssociationSet withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,6 +20,7 @@ public class CreateSubnetResultSubnetIpv6CidrBlockAssociationSet {
     
     
     public String ipv6CidrBlock;
+
     public CreateSubnetResultSubnetIpv6CidrBlockAssociationSet withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -26,9 +28,11 @@ public class CreateSubnetResultSubnetIpv6CidrBlockAssociationSet {
     
     
     public CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockState ipv6CidrBlockState;
+
     public CreateSubnetResultSubnetIpv6CidrBlockAssociationSet withIpv6CidrBlockState(CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockState ipv6CidrBlockState) {
         this.ipv6CidrBlockState = ipv6CidrBlockState;
         return this;
     }
     
+    public CreateSubnetResultSubnetIpv6CidrBlockAssociationSet(){}
 }

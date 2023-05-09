@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsUri")
     public String gcsUri;
+
     public GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest withGcsUri(String gcsUri) {
         this.gcsUri = gcsUri;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest(){}
 }

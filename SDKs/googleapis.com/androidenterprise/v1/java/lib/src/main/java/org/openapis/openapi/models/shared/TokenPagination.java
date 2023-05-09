@@ -18,6 +18,7 @@ public class TokenPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public TokenPagination withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -26,9 +27,11 @@ public class TokenPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousPageToken")
     public String previousPageToken;
+
     public TokenPagination withPreviousPageToken(String previousPageToken) {
         this.previousPageToken = previousPageToken;
         return this;
     }
     
+    public TokenPagination(){}
 }

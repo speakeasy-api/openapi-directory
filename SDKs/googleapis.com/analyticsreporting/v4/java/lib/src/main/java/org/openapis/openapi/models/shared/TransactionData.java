@@ -18,6 +18,7 @@ public class TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public TransactionData withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -29,6 +30,7 @@ public class TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionRevenue")
     public Double transactionRevenue;
+
     public TransactionData withTransactionRevenue(Double transactionRevenue) {
         this.transactionRevenue = transactionRevenue;
         return this;
@@ -40,6 +42,7 @@ public class TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionShipping")
     public Double transactionShipping;
+
     public TransactionData withTransactionShipping(Double transactionShipping) {
         this.transactionShipping = transactionShipping;
         return this;
@@ -51,9 +54,11 @@ public class TransactionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionTax")
     public Double transactionTax;
+
     public TransactionData withTransactionTax(Double transactionTax) {
         this.transactionTax = transactionTax;
         return this;
     }
     
+    public TransactionData(){}
 }

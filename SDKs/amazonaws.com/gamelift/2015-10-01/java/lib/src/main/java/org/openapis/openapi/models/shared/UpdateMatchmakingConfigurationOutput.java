@@ -15,9 +15,11 @@ public class UpdateMatchmakingConfigurationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public MatchmakingConfiguration configuration;
+
     public UpdateMatchmakingConfigurationOutput withConfiguration(MatchmakingConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public UpdateMatchmakingConfigurationOutput(){}
 }

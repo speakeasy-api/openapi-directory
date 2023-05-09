@@ -15,9 +15,11 @@ public class BatchDisableAlarmResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorEntries")
     public BatchAlarmActionErrorEntry[] errorEntries;
+
     public BatchDisableAlarmResponse withErrorEntries(BatchAlarmActionErrorEntry[] errorEntries) {
         this.errorEntries = errorEntries;
         return this;
     }
     
+    public BatchDisableAlarmResponse(){}
 }

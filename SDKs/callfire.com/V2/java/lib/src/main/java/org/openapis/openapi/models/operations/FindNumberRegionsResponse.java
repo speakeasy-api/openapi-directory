@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindNumberRegionsResponse {
     
     public String contentType;
+
     public FindNumberRegionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindNumberRegionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindNumberRegionsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FindNumberRegionsResponse {
      */
     
     public org.openapis.openapi.models.shared.RegionPage regionPage;
+
     public FindNumberRegionsResponse withRegionPage(org.openapis.openapi.models.shared.RegionPage regionPage) {
         this.regionPage = regionPage;
         return this;
@@ -36,6 +40,7 @@ public class FindNumberRegionsResponse {
     
     
     public Integer statusCode;
+
     public FindNumberRegionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FindNumberRegionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindNumberRegionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindNumberRegionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateTrunkInterfaceRequest {
     
     public String associationId;
+
     public DisassociateTrunkInterfaceRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateTrunkInterfaceRequest {
     
     
     public String clientToken;
+
     public DisassociateTrunkInterfaceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,9 +25,13 @@ public class DisassociateTrunkInterfaceRequest {
     
     
     public Boolean dryRun;
+
     public DisassociateTrunkInterfaceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DisassociateTrunkInterfaceRequest(@JsonProperty("AssociationId") String associationId) {
+        this.associationId = associationId;
+  }
 }

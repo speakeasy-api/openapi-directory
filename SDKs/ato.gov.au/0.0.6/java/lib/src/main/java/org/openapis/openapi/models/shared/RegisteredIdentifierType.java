@@ -18,6 +18,7 @@ public class RegisteredIdentifierType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RegisteredIdentifierType withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class RegisteredIdentifierType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RegisteredIdentifierType withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class RegisteredIdentifierType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RegisteredIdentifierType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RegisteredIdentifierType(){}
 }

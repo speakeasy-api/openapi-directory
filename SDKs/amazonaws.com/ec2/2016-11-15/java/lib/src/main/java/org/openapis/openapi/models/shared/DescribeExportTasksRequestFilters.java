@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportTasksRequestFilters {
     
     public String name;
+
     public DescribeExportTasksRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeExportTasksRequestFilters {
     
     
     public String[] values;
+
     public DescribeExportTasksRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeExportTasksRequestFilters(){}
 }

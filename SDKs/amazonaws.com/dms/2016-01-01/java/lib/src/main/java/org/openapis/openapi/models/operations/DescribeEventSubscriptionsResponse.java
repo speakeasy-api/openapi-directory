@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEventSubscriptionsResponse {
     
     public String contentType;
+
     public DescribeEventSubscriptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEventSubscriptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEventSubscriptionsResponse describeEventSubscriptionsResponse;
+
     public DescribeEventSubscriptionsResponse withDescribeEventSubscriptionsResponse(org.openapis.openapi.models.shared.DescribeEventSubscriptionsResponse describeEventSubscriptionsResponse) {
         this.describeEventSubscriptionsResponse = describeEventSubscriptionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEventSubscriptionsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DescribeEventSubscriptionsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribeEventSubscriptionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEventSubscriptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeEventSubscriptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEventSubscriptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeEventSubscriptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListViolationEventsResponse {
     
     public String contentType;
+
     public ListViolationEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListViolationEventsResponse {
      */
     
     public Object internalFailureException;
+
     public ListViolationEventsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListViolationEventsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListViolationEventsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListViolationEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListViolationEventsResponse listViolationEventsResponse;
+
     public ListViolationEventsResponse withListViolationEventsResponse(org.openapis.openapi.models.shared.ListViolationEventsResponse listViolationEventsResponse) {
         this.listViolationEventsResponse = listViolationEventsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListViolationEventsResponse {
     
     
     public Integer statusCode;
+
     public ListViolationEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListViolationEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListViolationEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListViolationEventsResponse {
      */
     
     public Object throttlingException;
+
     public ListViolationEventsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListViolationEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

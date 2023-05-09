@@ -12,6 +12,7 @@ public class CreateServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public CreateServiceActionInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class CreateServiceActionInput {
     
     @JsonProperty("Definition")
     public java.util.Map<String, String> definition;
+
     public CreateServiceActionInput withDefinition(java.util.Map<String, String> definition) {
         this.definition = definition;
         return this;
@@ -26,6 +28,7 @@ public class CreateServiceActionInput {
     
     @JsonProperty("DefinitionType")
     public ServiceActionDefinitionTypeEnum definitionType;
+
     public CreateServiceActionInput withDefinitionType(ServiceActionDefinitionTypeEnum definitionType) {
         this.definitionType = definitionType;
         return this;
@@ -34,6 +37,7 @@ public class CreateServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateServiceActionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -41,6 +45,7 @@ public class CreateServiceActionInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateServiceActionInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -48,9 +53,16 @@ public class CreateServiceActionInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateServiceActionInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateServiceActionInput(@JsonProperty("Definition") java.util.Map<String, String> definition, @JsonProperty("DefinitionType") ServiceActionDefinitionTypeEnum definitionType, @JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("Name") String name) {
+        this.definition = definition;
+        this.definitionType = definitionType;
+        this.idempotencyToken = idempotencyToken;
+        this.name = name;
+  }
 }

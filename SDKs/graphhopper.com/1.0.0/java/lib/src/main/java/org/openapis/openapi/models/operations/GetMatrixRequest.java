@@ -12,6 +12,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=curbside")
     public GetMatrixCurbsideEnum[] curbside;
+
     public GetMatrixRequest withCurbside(GetMatrixCurbsideEnum[] curbside) {
         this.curbside = curbside;
         return this;
@@ -22,6 +23,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fail_fast")
     public Boolean failFast;
+
     public GetMatrixRequest withFailFast(Boolean failFast) {
         this.failFast = failFast;
         return this;
@@ -32,6 +34,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from_curbside")
     public GetMatrixFromCurbsideEnum[] fromCurbside;
+
     public GetMatrixRequest withFromCurbside(GetMatrixFromCurbsideEnum[] fromCurbside) {
         this.fromCurbside = fromCurbside;
         return this;
@@ -42,6 +45,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from_point")
     public String[] fromPoint;
+
     public GetMatrixRequest withFromPoint(String[] fromPoint) {
         this.fromPoint = fromPoint;
         return this;
@@ -52,6 +56,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from_point_hint")
     public String[] fromPointHint;
+
     public GetMatrixRequest withFromPointHint(String[] fromPointHint) {
         this.fromPointHint = fromPointHint;
         return this;
@@ -62,6 +67,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=out_array")
     public String[] outArray;
+
     public GetMatrixRequest withOutArray(String[] outArray) {
         this.outArray = outArray;
         return this;
@@ -72,6 +78,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
     public String[] point;
+
     public GetMatrixRequest withPoint(String[] point) {
         this.point = point;
         return this;
@@ -82,6 +89,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point_hint")
     public String[] pointHint;
+
     public GetMatrixRequest withPointHint(String[] pointHint) {
         this.pointHint = pointHint;
         return this;
@@ -93,6 +101,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=snap_prevention")
     public String[] snapPrevention;
+
     public GetMatrixRequest withSnapPrevention(String[] snapPrevention) {
         this.snapPrevention = snapPrevention;
         return this;
@@ -103,6 +112,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_curbside")
     public GetMatrixToCurbsideEnum[] toCurbside;
+
     public GetMatrixRequest withToCurbside(GetMatrixToCurbsideEnum[] toCurbside) {
         this.toCurbside = toCurbside;
         return this;
@@ -113,6 +123,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_point")
     public String[] toPoint;
+
     public GetMatrixRequest withToPoint(String[] toPoint) {
         this.toPoint = toPoint;
         return this;
@@ -123,6 +134,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_point_hint")
     public String[] toPointHint;
+
     public GetMatrixRequest withToPointHint(String[] toPointHint) {
         this.toPointHint = toPointHint;
         return this;
@@ -133,6 +145,7 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=turn_costs")
     public Boolean turnCosts;
+
     public GetMatrixRequest withTurnCosts(Boolean turnCosts) {
         this.turnCosts = turnCosts;
         return this;
@@ -143,9 +156,11 @@ public class GetMatrixRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle")
     public org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle;
+
     public GetMatrixRequest withVehicle(org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle) {
         this.vehicle = vehicle;
         return this;
     }
     
+    public GetMatrixRequest(){}
 }

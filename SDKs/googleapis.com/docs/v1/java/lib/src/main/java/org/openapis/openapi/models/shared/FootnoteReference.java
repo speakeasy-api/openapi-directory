@@ -18,6 +18,7 @@ public class FootnoteReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footnoteId")
     public String footnoteId;
+
     public FootnoteReference withFootnoteId(String footnoteId) {
         this.footnoteId = footnoteId;
         return this;
@@ -29,6 +30,7 @@ public class FootnoteReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footnoteNumber")
     public String footnoteNumber;
+
     public FootnoteReference withFootnoteNumber(String footnoteNumber) {
         this.footnoteNumber = footnoteNumber;
         return this;
@@ -40,6 +42,7 @@ public class FootnoteReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public FootnoteReference withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -51,6 +54,7 @@ public class FootnoteReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public FootnoteReference withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -62,6 +66,7 @@ public class FootnoteReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedTextStyleChanges")
     public java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges;
+
     public FootnoteReference withSuggestedTextStyleChanges(java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges) {
         this.suggestedTextStyleChanges = suggestedTextStyleChanges;
         return this;
@@ -73,9 +78,11 @@ public class FootnoteReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public FootnoteReference withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public FootnoteReference(){}
 }

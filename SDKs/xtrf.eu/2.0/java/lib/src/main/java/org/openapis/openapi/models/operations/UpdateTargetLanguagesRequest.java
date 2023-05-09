@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTargetLanguagesRequest {
@@ -12,6 +13,7 @@ public class UpdateTargetLanguagesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TargetLanguagesDTO targetLanguagesDTO;
+
     public UpdateTargetLanguagesRequest withTargetLanguagesDTO(org.openapis.openapi.models.shared.TargetLanguagesDTO targetLanguagesDTO) {
         this.targetLanguagesDTO = targetLanguagesDTO;
         return this;
@@ -22,9 +24,14 @@ public class UpdateTargetLanguagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public UpdateTargetLanguagesRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public UpdateTargetLanguagesRequest(@JsonProperty("TargetLanguagesDTO") org.openapis.openapi.models.shared.TargetLanguagesDTO targetLanguagesDTO, @JsonProperty("projectId") String projectId) {
+        this.targetLanguagesDTO = targetLanguagesDTO;
+        this.projectId = projectId;
+  }
 }

@@ -18,9 +18,11 @@ public class GdataDiffDownloadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectLocation")
     public GdataCompositeMedia objectLocation;
+
     public GdataDiffDownloadResponse withObjectLocation(GdataCompositeMedia objectLocation) {
         this.objectLocation = objectLocation;
         return this;
     }
     
+    public GdataDiffDownloadResponse(){}
 }

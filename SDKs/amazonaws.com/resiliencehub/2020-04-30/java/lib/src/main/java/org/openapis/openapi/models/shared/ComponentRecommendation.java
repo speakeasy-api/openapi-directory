@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComponentRecommendation {
     @JsonProperty("appComponentName")
     public String appComponentName;
+
     public ComponentRecommendation withAppComponentName(String appComponentName) {
         this.appComponentName = appComponentName;
         return this;
@@ -19,6 +20,7 @@ public class ComponentRecommendation {
     
     @JsonProperty("configRecommendations")
     public ConfigRecommendation[] configRecommendations;
+
     public ComponentRecommendation withConfigRecommendations(ConfigRecommendation[] configRecommendations) {
         this.configRecommendations = configRecommendations;
         return this;
@@ -26,9 +28,15 @@ public class ComponentRecommendation {
     
     @JsonProperty("recommendationStatus")
     public RecommendationComplianceStatusEnum recommendationStatus;
+
     public ComponentRecommendation withRecommendationStatus(RecommendationComplianceStatusEnum recommendationStatus) {
         this.recommendationStatus = recommendationStatus;
         return this;
     }
     
+    public ComponentRecommendation(@JsonProperty("appComponentName") String appComponentName, @JsonProperty("configRecommendations") ConfigRecommendation[] configRecommendations, @JsonProperty("recommendationStatus") RecommendationComplianceStatusEnum recommendationStatus) {
+        this.appComponentName = appComponentName;
+        this.configRecommendations = configRecommendations;
+        this.recommendationStatus = recommendationStatus;
+  }
 }

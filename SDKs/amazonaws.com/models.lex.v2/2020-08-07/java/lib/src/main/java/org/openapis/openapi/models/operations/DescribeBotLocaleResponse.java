@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBotLocaleResponse {
     
     public String contentType;
+
     public DescribeBotLocaleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBotLocaleResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBotLocaleResponse describeBotLocaleResponse;
+
     public DescribeBotLocaleResponse withDescribeBotLocaleResponse(org.openapis.openapi.models.shared.DescribeBotLocaleResponse describeBotLocaleResponse) {
         this.describeBotLocaleResponse = describeBotLocaleResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBotLocaleResponse {
      */
     
     public Object internalServerException;
+
     public DescribeBotLocaleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBotLocaleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBotLocaleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBotLocaleResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DescribeBotLocaleResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeBotLocaleResponse {
     
     
     public Integer statusCode;
+
     public DescribeBotLocaleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeBotLocaleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBotLocaleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeBotLocaleResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBotLocaleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeBotLocaleResponse {
      */
     
     public Object validationException;
+
     public DescribeBotLocaleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeBotLocaleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class JobStatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public JobStatusDTO withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -23,9 +24,11 @@ public class JobStatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public JobStatusDTO withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public JobStatusDTO(){}
 }

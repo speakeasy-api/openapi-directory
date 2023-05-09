@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV1ListPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allValues")
     public GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum allValues;
+
     public GoogleCloudOrgpolicyV1ListPolicy withAllValues(GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum allValues) {
         this.allValues = allValues;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudOrgpolicyV1ListPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public String[] allowedValues;
+
     public GoogleCloudOrgpolicyV1ListPolicy withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudOrgpolicyV1ListPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deniedValues")
     public String[] deniedValues;
+
     public GoogleCloudOrgpolicyV1ListPolicy withDeniedValues(String[] deniedValues) {
         this.deniedValues = deniedValues;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudOrgpolicyV1ListPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inheritFromParent")
     public Boolean inheritFromParent;
+
     public GoogleCloudOrgpolicyV1ListPolicy withInheritFromParent(Boolean inheritFromParent) {
         this.inheritFromParent = inheritFromParent;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudOrgpolicyV1ListPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedValue")
     public String suggestedValue;
+
     public GoogleCloudOrgpolicyV1ListPolicy withSuggestedValue(String suggestedValue) {
         this.suggestedValue = suggestedValue;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV1ListPolicy(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStripeGatewayDeveloperDeveloperIdAccountsRequest {
@@ -12,6 +13,7 @@ public class PostStripeGatewayDeveloperDeveloperIdAccountsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
     public String developerId;
+
     public PostStripeGatewayDeveloperDeveloperIdAccountsRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -22,9 +24,14 @@ public class PostStripeGatewayDeveloperDeveloperIdAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirectUrl")
     public String redirectUrl;
+
     public PostStripeGatewayDeveloperDeveloperIdAccountsRequest withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
     }
     
+    public PostStripeGatewayDeveloperDeveloperIdAccountsRequest(@JsonProperty("developerId") String developerId, @JsonProperty("redirectUrl") String redirectUrl) {
+        this.developerId = developerId;
+        this.redirectUrl = redirectUrl;
+  }
 }

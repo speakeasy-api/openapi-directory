@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishEntitlementsRequest {
@@ -12,6 +13,7 @@ public class PublishEntitlementsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Entitlement entitlement;
+
     public PublishEntitlementsRequest withEntitlement(org.openapis.openapi.models.shared.Entitlement entitlement) {
         this.entitlement = entitlement;
         return this;
@@ -22,9 +24,14 @@ public class PublishEntitlementsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
     public String tmpsCorrelationId;
+
     public PublishEntitlementsRequest withTMPSCorrelationId(String tmpsCorrelationId) {
         this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     
+    public PublishEntitlementsRequest(@JsonProperty("Entitlement") org.openapis.openapi.models.shared.Entitlement entitlement, @JsonProperty("TMPS-Correlation-Id") String tmpsCorrelationId) {
+        this.entitlement = entitlement;
+        this.tmpsCorrelationId = tmpsCorrelationId;
+  }
 }

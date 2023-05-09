@@ -18,6 +18,7 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowlist")
     public OracleRdbms allowlist;
+
     public OracleSourceConfig withAllowlist(OracleRdbms allowlist) {
         this.allowlist = allowlist;
         return this;
@@ -29,6 +30,7 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropLargeObjects")
     public java.util.Map<String, Object> dropLargeObjects;
+
     public OracleSourceConfig withDropLargeObjects(java.util.Map<String, Object> dropLargeObjects) {
         this.dropLargeObjects = dropLargeObjects;
         return this;
@@ -40,9 +42,11 @@ public class OracleSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejectlist")
     public OracleRdbms rejectlist;
+
     public OracleSourceConfig withRejectlist(OracleRdbms rejectlist) {
         this.rejectlist = rejectlist;
         return this;
     }
     
+    public OracleSourceConfig(){}
 }

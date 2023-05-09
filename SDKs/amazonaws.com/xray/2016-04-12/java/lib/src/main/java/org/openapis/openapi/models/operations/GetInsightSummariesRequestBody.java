@@ -21,6 +21,7 @@ public class GetInsightSummariesRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetInsightSummariesRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +33,7 @@ public class GetInsightSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupARN")
     public String groupARN;
+
     public GetInsightSummariesRequestBody withGroupARN(String groupARN) {
         this.groupARN = groupARN;
         return this;
@@ -43,6 +45,7 @@ public class GetInsightSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public GetInsightSummariesRequestBody withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -54,6 +57,7 @@ public class GetInsightSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetInsightSummariesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +69,7 @@ public class GetInsightSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInsightSummariesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -77,6 +82,7 @@ public class GetInsightSummariesRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetInsightSummariesRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -88,9 +94,14 @@ public class GetInsightSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("States")
     public org.openapis.openapi.models.shared.InsightStateEnum[] states;
+
     public GetInsightSummariesRequestBody withStates(org.openapis.openapi.models.shared.InsightStateEnum[] states) {
         this.states = states;
         return this;
     }
     
+    public GetInsightSummariesRequestBody(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

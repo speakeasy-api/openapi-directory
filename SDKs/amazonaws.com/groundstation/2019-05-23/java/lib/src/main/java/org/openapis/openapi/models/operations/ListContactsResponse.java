@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListContactsResponse {
     
     public String contentType;
+
     public ListContactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListContactsResponse {
      */
     
     public Object dependencyException;
+
     public ListContactsResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class ListContactsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListContactsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListContactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListContactsResponse listContactsResponse;
+
     public ListContactsResponse withListContactsResponse(org.openapis.openapi.models.shared.ListContactsResponse listContactsResponse) {
         this.listContactsResponse = listContactsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListContactsResponse {
     
     
     public Integer statusCode;
+
     public ListContactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListContactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListContactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListContactsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListContactsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListContactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

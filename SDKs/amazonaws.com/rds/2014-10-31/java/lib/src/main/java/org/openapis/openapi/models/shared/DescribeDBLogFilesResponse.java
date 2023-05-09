@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBLogFilesResponse {
     
     public DescribeDBLogFilesList[] describeDBLogFiles;
+
     public DescribeDBLogFilesResponse withDescribeDBLogFiles(DescribeDBLogFilesList[] describeDBLogFiles) {
         this.describeDBLogFiles = describeDBLogFiles;
         return this;
@@ -19,9 +20,11 @@ public class DescribeDBLogFilesResponse {
     
     
     public String marker;
+
     public DescribeDBLogFilesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeDBLogFilesResponse(){}
 }

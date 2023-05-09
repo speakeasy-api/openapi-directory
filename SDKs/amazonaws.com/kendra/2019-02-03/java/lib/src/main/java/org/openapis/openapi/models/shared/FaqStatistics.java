@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FaqStatistics {
     @JsonProperty("IndexedQuestionAnswersCount")
     public Long indexedQuestionAnswersCount;
+
     public FaqStatistics withIndexedQuestionAnswersCount(Long indexedQuestionAnswersCount) {
         this.indexedQuestionAnswersCount = indexedQuestionAnswersCount;
         return this;
     }
     
+    public FaqStatistics(@JsonProperty("IndexedQuestionAnswersCount") Long indexedQuestionAnswersCount) {
+        this.indexedQuestionAnswersCount = indexedQuestionAnswersCount;
+  }
 }

@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * HealthStatusHealthStateEnum - Health state of the instance.
+ * HealthStatusHealthStateEnum - Health state of the IPv4 address of the instance.
  */
 public enum HealthStatusHealthStateEnum {
     HEALTHY("HEALTHY"),

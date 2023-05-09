@@ -35,7 +35,7 @@ public class QuotesSmartV2 {
 
     /**
      * Adds files to the quote as added by PM.
-     * Adds files to the quote as added by PM. The files have to be uploaded beforehand (see "POST v2/quotes/{quoteId}/files/upload" operation). The following properties can be specified for each file:&lt;ul&gt;&lt;li&gt;category (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;languageIds \u2013 when the file category depends on a list of languages&lt;/li&gt;&lt;li&gt;languageCombinationIds \u2013 when the file category depends on a list of language combinations&lt;/li&gt;&lt;/ul&gt;
+     * Adds files to the quote as added by PM. The files have to be uploaded beforehand (see "POST v2/quotes/{quoteId}/files/upload" operation). The following properties can be specified for each file:&lt;ul&gt;&lt;li&gt;category (required, 400 Bad Request is returned otherwise)&lt;/li&gt;&lt;li&gt;languageIds – when the file category depends on a list of languages&lt;/li&gt;&lt;li&gt;languageCombinationIds – when the file category depends on a list of language combinations&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -60,10 +60,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddFiles2Response res = new org.openapis.openapi.models.operations.AddFiles2Response() {{
+        org.openapis.openapi.models.operations.AddFiles2Response res = new org.openapis.openapi.models.operations.AddFiles2Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -99,11 +97,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Archive1Response res = new org.openapis.openapi.models.operations.Archive1Response() {{
+        org.openapis.openapi.models.operations.Archive1Response res = new org.openapis.openapi.models.operations.Archive1Response(contentType, httpRes.statusCode()) {{
             filesArchiveDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -119,7 +115,7 @@ public class QuotesSmartV2 {
 
     /**
      * Changes quote status if possible (400 Bad Request is returned otherwise).
-     * Changes quote status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys: &lt;ul&gt;&lt;li&gt;PENDING \u2013 available when the job has one of the following statuses: REQUESTED, REJECTED&lt;/li&gt;&lt;li&gt;SENT \u2013 available when the job has one of the following statuses: PENDING&lt;/li&gt;&lt;li&gt;APPROVED \u2013 available when the job has one of the following statuses: REQUESTED, PENDING, SENT, APPROVED_BY_CLIENT&lt;/li&gt;&lt;li&gt;REJECTED \u2013 available when the job has one of the following statuses: REQUESTED, PENDING, SENT&lt;/li&gt;&lt;/ul&gt;
+     * Changes quote status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys: &lt;ul&gt;&lt;li&gt;PENDING – available when the job has one of the following statuses: REQUESTED, REJECTED&lt;/li&gt;&lt;li&gt;SENT – available when the job has one of the following statuses: PENDING&lt;/li&gt;&lt;li&gt;APPROVED – available when the job has one of the following statuses: REQUESTED, PENDING, SENT, APPROVED_BY_CLIENT&lt;/li&gt;&lt;li&gt;REJECTED – available when the job has one of the following statuses: REQUESTED, PENDING, SENT&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -144,10 +140,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeStatus3Response res = new org.openapis.openapi.models.operations.ChangeStatus3Response() {{
+        org.openapis.openapi.models.operations.ChangeStatus3Response res = new org.openapis.openapi.models.operations.ChangeStatus3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -183,11 +177,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePayable3Response res = new org.openapis.openapi.models.operations.CreatePayable3Response() {{
+        org.openapis.openapi.models.operations.CreatePayable3Response res = new org.openapis.openapi.models.operations.CreatePayable3Response(contentType, httpRes.statusCode()) {{
             payableDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -228,11 +220,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateReceivable3Response res = new org.openapis.openapi.models.operations.CreateReceivable3Response() {{
+        org.openapis.openapi.models.operations.CreateReceivable3Response res = new org.openapis.openapi.models.operations.CreateReceivable3Response(contentType, httpRes.statusCode()) {{
             receivableDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -270,11 +260,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Create7Response res = new org.openapis.openapi.models.operations.Create7Response() {{
+        org.openapis.openapi.models.operations.Create7Response res = new org.openapis.openapi.models.operations.Create7Response(contentType, httpRes.statusCode()) {{
             quoteDTOv2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -310,10 +298,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePayable3Response res = new org.openapis.openapi.models.operations.DeletePayable3Response() {{
+        org.openapis.openapi.models.operations.DeletePayable3Response res = new org.openapis.openapi.models.operations.DeletePayable3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -344,10 +330,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteReceivable3Response res = new org.openapis.openapi.models.operations.DeleteReceivable3Response() {{
+        org.openapis.openapi.models.operations.DeleteReceivable3Response res = new org.openapis.openapi.models.operations.DeleteReceivable3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -378,11 +362,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetById10Response res = new org.openapis.openapi.models.operations.GetById10Response() {{
+        org.openapis.openapi.models.operations.GetById10Response res = new org.openapis.openapi.models.operations.GetById10Response(contentType, httpRes.statusCode()) {{
             quoteDTOv2 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -418,11 +400,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContacts3Response res = new org.openapis.openapi.models.operations.GetContacts3Response() {{
+        org.openapis.openapi.models.operations.GetContacts3Response res = new org.openapis.openapi.models.operations.GetContacts3Response(contentType, httpRes.statusCode()) {{
             smartContactsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -458,11 +438,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFields9Response res = new org.openapis.openapi.models.operations.GetCustomFields9Response() {{
+        org.openapis.openapi.models.operations.GetCustomFields9Response res = new org.openapis.openapi.models.operations.GetCustomFields9Response(contentType, httpRes.statusCode()) {{
             customFieldsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -498,11 +476,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFileById3Response res = new org.openapis.openapi.models.operations.GetFileById3Response() {{
+        org.openapis.openapi.models.operations.GetFileById3Response res = new org.openapis.openapi.models.operations.GetFileById3Response(contentType, httpRes.statusCode()) {{
             projectFileDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -538,10 +514,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFileContentById1Response res = new org.openapis.openapi.models.operations.GetFileContentById1Response() {{
+        org.openapis.openapi.models.operations.GetFileContentById1Response res = new org.openapis.openapi.models.operations.GetFileContentById1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -572,11 +546,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFiles1Response res = new org.openapis.openapi.models.operations.GetFiles1Response() {{
+        org.openapis.openapi.models.operations.GetFiles1Response res = new org.openapis.openapi.models.operations.GetFiles1Response(contentType, httpRes.statusCode()) {{
             projectFileDtos = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -612,11 +584,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFinance3Response res = new org.openapis.openapi.models.operations.GetFinance3Response() {{
+        org.openapis.openapi.models.operations.GetFinance3Response res = new org.openapis.openapi.models.operations.GetFinance3Response(contentType, httpRes.statusCode()) {{
             financeDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -652,11 +622,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobs1Response res = new org.openapis.openapi.models.operations.GetJobs1Response() {{
+        org.openapis.openapi.models.operations.GetJobs1Response res = new org.openapis.openapi.models.operations.GetJobs1Response(contentType, httpRes.statusCode()) {{
             jobDtos = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -697,10 +665,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBusinessDaysResponse res = new org.openapis.openapi.models.operations.UpdateBusinessDaysResponse() {{
+        org.openapis.openapi.models.operations.UpdateBusinessDaysResponse res = new org.openapis.openapi.models.operations.UpdateBusinessDaysResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -736,10 +702,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClientNotes1Response res = new org.openapis.openapi.models.operations.UpdateClientNotes1Response() {{
+        org.openapis.openapi.models.operations.UpdateClientNotes1Response res = new org.openapis.openapi.models.operations.UpdateClientNotes1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -775,10 +739,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClientReferenceNumber1Response res = new org.openapis.openapi.models.operations.UpdateClientReferenceNumber1Response() {{
+        org.openapis.openapi.models.operations.UpdateClientReferenceNumber1Response res = new org.openapis.openapi.models.operations.UpdateClientReferenceNumber1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -814,11 +776,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContacts3Response res = new org.openapis.openapi.models.operations.UpdateContacts3Response() {{
+        org.openapis.openapi.models.operations.UpdateContacts3Response res = new org.openapis.openapi.models.operations.UpdateContacts3Response(contentType, httpRes.statusCode()) {{
             smartContactsDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -859,10 +819,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCustomField3Response res = new org.openapis.openapi.models.operations.UpdateCustomField3Response() {{
+        org.openapis.openapi.models.operations.UpdateCustomField3Response res = new org.openapis.openapi.models.operations.UpdateCustomField3Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -898,10 +856,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateExpectedDeliveryDateResponse res = new org.openapis.openapi.models.operations.UpdateExpectedDeliveryDateResponse() {{
+        org.openapis.openapi.models.operations.UpdateExpectedDeliveryDateResponse res = new org.openapis.openapi.models.operations.UpdateExpectedDeliveryDateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -937,10 +893,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateInternalNotes1Response res = new org.openapis.openapi.models.operations.UpdateInternalNotes1Response() {{
+        org.openapis.openapi.models.operations.UpdateInternalNotes1Response res = new org.openapis.openapi.models.operations.UpdateInternalNotes1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -976,11 +930,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePayable3Response res = new org.openapis.openapi.models.operations.UpdatePayable3Response() {{
+        org.openapis.openapi.models.operations.UpdatePayable3Response res = new org.openapis.openapi.models.operations.UpdatePayable3Response(contentType, httpRes.statusCode()) {{
             payableDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -1021,10 +973,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateQuoteExpiryResponse res = new org.openapis.openapi.models.operations.UpdateQuoteExpiryResponse() {{
+        org.openapis.openapi.models.operations.UpdateQuoteExpiryResponse res = new org.openapis.openapi.models.operations.UpdateQuoteExpiryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1060,11 +1010,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateReceivable3Response res = new org.openapis.openapi.models.operations.UpdateReceivable3Response() {{
+        org.openapis.openapi.models.operations.UpdateReceivable3Response res = new org.openapis.openapi.models.operations.UpdateReceivable3Response(contentType, httpRes.statusCode()) {{
             receivableDTO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -1105,10 +1053,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSourceLanguage1Response res = new org.openapis.openapi.models.operations.UpdateSourceLanguage1Response() {{
+        org.openapis.openapi.models.operations.UpdateSourceLanguage1Response res = new org.openapis.openapi.models.operations.UpdateSourceLanguage1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1144,10 +1090,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSpecialization1Response res = new org.openapis.openapi.models.operations.UpdateSpecialization1Response() {{
+        org.openapis.openapi.models.operations.UpdateSpecialization1Response res = new org.openapis.openapi.models.operations.UpdateSpecialization1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1183,10 +1127,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTargetLanguages1Response res = new org.openapis.openapi.models.operations.UpdateTargetLanguages1Response() {{
+        org.openapis.openapi.models.operations.UpdateTargetLanguages1Response res = new org.openapis.openapi.models.operations.UpdateTargetLanguages1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1222,10 +1164,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVendorInstructions1Response res = new org.openapis.openapi.models.operations.UpdateVendorInstructions1Response() {{
+        org.openapis.openapi.models.operations.UpdateVendorInstructions1Response res = new org.openapis.openapi.models.operations.UpdateVendorInstructions1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1261,10 +1201,8 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVolume1Response res = new org.openapis.openapi.models.operations.UpdateVolume1Response() {{
+        org.openapis.openapi.models.operations.UpdateVolume1Response res = new org.openapis.openapi.models.operations.UpdateVolume1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1300,11 +1238,9 @@ public class QuotesSmartV2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadFile3Response res = new org.openapis.openapi.models.operations.UploadFile3Response() {{
+        org.openapis.openapi.models.operations.UploadFile3Response res = new org.openapis.openapi.models.operations.UploadFile3Response(contentType, httpRes.statusCode()) {{
             fileDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

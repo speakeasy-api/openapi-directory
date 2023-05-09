@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetDropsRequest {
@@ -12,6 +13,7 @@ public class SetDropsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetDropsRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetDropsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=drops")
     public Integer drops;
+
     public SetDropsRequest withDrops(Integer drops) {
         this.drops = drops;
         return this;
     }
     
+    public SetDropsRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("drops") Integer drops) {
+        this.agentNum = agentNum;
+        this.drops = drops;
+  }
 }

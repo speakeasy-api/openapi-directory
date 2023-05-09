@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesElasticGpuAssociations {
     
     public String elasticGpuAssociationId;
+
     public DescribeInstancesResultReservationsInstancesElasticGpuAssociations withElasticGpuAssociationId(String elasticGpuAssociationId) {
         this.elasticGpuAssociationId = elasticGpuAssociationId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesElasticGpuAssociations 
     
     
     public String elasticGpuAssociationState;
+
     public DescribeInstancesResultReservationsInstancesElasticGpuAssociations withElasticGpuAssociationState(String elasticGpuAssociationState) {
         this.elasticGpuAssociationState = elasticGpuAssociationState;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstancesResultReservationsInstancesElasticGpuAssociations 
     
     
     public String elasticGpuAssociationTime;
+
     public DescribeInstancesResultReservationsInstancesElasticGpuAssociations withElasticGpuAssociationTime(String elasticGpuAssociationTime) {
         this.elasticGpuAssociationTime = elasticGpuAssociationTime;
         return this;
@@ -33,9 +36,11 @@ public class DescribeInstancesResultReservationsInstancesElasticGpuAssociations 
     
     
     public String elasticGpuId;
+
     public DescribeInstancesResultReservationsInstancesElasticGpuAssociations withElasticGpuId(String elasticGpuId) {
         this.elasticGpuId = elasticGpuId;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesElasticGpuAssociations(){}
 }

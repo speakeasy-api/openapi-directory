@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteOrganizationalUnitResponse {
@@ -12,6 +13,7 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DeleteOrganizationalUnitResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteOrganizationalUnitResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteOrganizationalUnitResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteOrganizationalUnitResponse {
     
     
     public String contentType;
+
     public DeleteOrganizationalUnitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteOrganizationalUnitResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object organizationalUnitNotEmptyException;
+
     public DeleteOrganizationalUnitResponse withOrganizationalUnitNotEmptyException(Object organizationalUnitNotEmptyException) {
         this.organizationalUnitNotEmptyException = organizationalUnitNotEmptyException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object organizationalUnitNotFoundException;
+
     public DeleteOrganizationalUnitResponse withOrganizationalUnitNotFoundException(Object organizationalUnitNotFoundException) {
         this.organizationalUnitNotFoundException = organizationalUnitNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object serviceException;
+
     public DeleteOrganizationalUnitResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteOrganizationalUnitResponse {
     
     
     public Integer statusCode;
+
     public DeleteOrganizationalUnitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteOrganizationalUnitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteOrganizationalUnitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteOrganizationalUnitResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteOrganizationalUnitResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteOrganizationalUnitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

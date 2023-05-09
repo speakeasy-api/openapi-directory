@@ -18,6 +18,7 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessible")
     public Boolean mobilityAccessible;
+
     public Accessibility withMobilityAccessible(Boolean mobilityAccessible) {
         this.mobilityAccessible = mobilityAccessible;
         return this;
@@ -29,6 +30,7 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessibleElevator")
     public Boolean mobilityAccessibleElevator;
+
     public Accessibility withMobilityAccessibleElevator(Boolean mobilityAccessibleElevator) {
         this.mobilityAccessibleElevator = mobilityAccessibleElevator;
         return this;
@@ -40,6 +42,7 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessibleElevatorException")
     public AccessibilityMobilityAccessibleElevatorExceptionEnum mobilityAccessibleElevatorException;
+
     public Accessibility withMobilityAccessibleElevatorException(AccessibilityMobilityAccessibleElevatorExceptionEnum mobilityAccessibleElevatorException) {
         this.mobilityAccessibleElevatorException = mobilityAccessibleElevatorException;
         return this;
@@ -51,6 +54,7 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessibleException")
     public AccessibilityMobilityAccessibleExceptionEnum mobilityAccessibleException;
+
     public Accessibility withMobilityAccessibleException(AccessibilityMobilityAccessibleExceptionEnum mobilityAccessibleException) {
         this.mobilityAccessibleException = mobilityAccessibleException;
         return this;
@@ -62,6 +66,7 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessibleParking")
     public Boolean mobilityAccessibleParking;
+
     public Accessibility withMobilityAccessibleParking(Boolean mobilityAccessibleParking) {
         this.mobilityAccessibleParking = mobilityAccessibleParking;
         return this;
@@ -73,6 +78,7 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessibleParkingException")
     public AccessibilityMobilityAccessibleParkingExceptionEnum mobilityAccessibleParkingException;
+
     public Accessibility withMobilityAccessibleParkingException(AccessibilityMobilityAccessibleParkingExceptionEnum mobilityAccessibleParkingException) {
         this.mobilityAccessibleParkingException = mobilityAccessibleParkingException;
         return this;
@@ -84,6 +90,7 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessiblePool")
     public Boolean mobilityAccessiblePool;
+
     public Accessibility withMobilityAccessiblePool(Boolean mobilityAccessiblePool) {
         this.mobilityAccessiblePool = mobilityAccessiblePool;
         return this;
@@ -95,9 +102,11 @@ public class Accessibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilityAccessiblePoolException")
     public AccessibilityMobilityAccessiblePoolExceptionEnum mobilityAccessiblePoolException;
+
     public Accessibility withMobilityAccessiblePoolException(AccessibilityMobilityAccessiblePoolExceptionEnum mobilityAccessiblePoolException) {
         this.mobilityAccessiblePoolException = mobilityAccessiblePoolException;
         return this;
     }
     
+    public Accessibility(){}
 }

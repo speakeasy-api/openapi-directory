@@ -18,6 +18,7 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentSource")
     public ComponentSource[] componentSource;
+
     public ExecutionStageSummary withComponentSource(ComponentSource[] componentSource) {
         this.componentSource = componentSource;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTransform")
     public ComponentTransform[] componentTransform;
+
     public ExecutionStageSummary withComponentTransform(ComponentTransform[] componentTransform) {
         this.componentTransform = componentTransform;
         return this;
@@ -40,6 +42,7 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ExecutionStageSummary withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputSource")
     public StageSource[] inputSource;
+
     public ExecutionStageSummary withInputSource(StageSource[] inputSource) {
         this.inputSource = inputSource;
         return this;
@@ -62,6 +66,7 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public ExecutionStageSummaryKindEnum kind;
+
     public ExecutionStageSummary withKind(ExecutionStageSummaryKindEnum kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExecutionStageSummary withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputSource")
     public StageSource[] outputSource;
+
     public ExecutionStageSummary withOutputSource(StageSource[] outputSource) {
         this.outputSource = outputSource;
         return this;
@@ -95,9 +102,11 @@ public class ExecutionStageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prerequisiteStage")
     public String[] prerequisiteStage;
+
     public ExecutionStageSummary withPrerequisiteStage(String[] prerequisiteStage) {
         this.prerequisiteStage = prerequisiteStage;
         return this;
     }
     
+    public ExecutionStageSummary(){}
 }

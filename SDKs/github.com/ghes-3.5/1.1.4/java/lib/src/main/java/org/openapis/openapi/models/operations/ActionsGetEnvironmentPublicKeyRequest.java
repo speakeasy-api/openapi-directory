@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetEnvironmentPublicKeyRequest {
@@ -12,6 +13,7 @@ public class ActionsGetEnvironmentPublicKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ActionsGetEnvironmentPublicKeyRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -22,9 +24,14 @@ public class ActionsGetEnvironmentPublicKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
     public Long repositoryId;
+
     public ActionsGetEnvironmentPublicKeyRequest withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
     }
     
+    public ActionsGetEnvironmentPublicKeyRequest(@JsonProperty("environment_name") String environmentName, @JsonProperty("repository_id") Long repositoryId) {
+        this.environmentName = environmentName;
+        this.repositoryId = repositoryId;
+  }
 }

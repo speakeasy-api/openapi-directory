@@ -62,12 +62,10 @@ public class Token {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse() {{
+        org.openapis.openapi.models.operations.CreateTokenResponse res = new org.openapis.openapi.models.operations.CreateTokenResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Token {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTokenResponse res = new org.openapis.openapi.models.operations.DeleteTokenResponse() {{
+        org.openapis.openapi.models.operations.DeleteTokenResponse res = new org.openapis.openapi.models.operations.DeleteTokenResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,12 +154,10 @@ public class Token {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTokenResponse res = new org.openapis.openapi.models.operations.GetTokenResponse() {{
+        org.openapis.openapi.models.operations.GetTokenResponse res = new org.openapis.openapi.models.operations.GetTokenResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,10 +180,11 @@ public class Token {
     /**
      * List Tokens
      * Return a list of all tokens for the current Vendor
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListTokensResponse listTokens() throws Exception {
+    public org.openapis.openapi.models.operations.ListTokensResponse listTokens(org.openapis.openapi.models.operations.ListTokensSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/token");
         
@@ -198,17 +193,16 @@ public class Token {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTokensResponse res = new org.openapis.openapi.models.operations.ListTokensResponse() {{
+        org.openapis.openapi.models.operations.ListTokensResponse res = new org.openapis.openapi.models.operations.ListTokensResponse(contentType, httpRes.statusCode()) {{
             netlicensings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

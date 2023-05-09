@@ -18,6 +18,7 @@ public class EventCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public EventCreator withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class EventCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public EventCreator withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class EventCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EventCreator withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class EventCreator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Boolean self;
+
     public EventCreator withSelf(Boolean self) {
         this.self = self;
         return this;
     }
     
+    public EventCreator(){}
 }

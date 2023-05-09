@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProvisionPublicIpv4PoolCidrResult {
     
     public ProvisionPublicIpv4PoolCidrResultPoolAddressRange poolAddressRange;
+
     public ProvisionPublicIpv4PoolCidrResult withPoolAddressRange(ProvisionPublicIpv4PoolCidrResultPoolAddressRange poolAddressRange) {
         this.poolAddressRange = poolAddressRange;
         return this;
@@ -19,9 +20,11 @@ public class ProvisionPublicIpv4PoolCidrResult {
     
     
     public String poolId;
+
     public ProvisionPublicIpv4PoolCidrResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public ProvisionPublicIpv4PoolCidrResult(){}
 }

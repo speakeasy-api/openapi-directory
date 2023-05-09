@@ -15,6 +15,7 @@ public class StandardsManagedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Company")
     public String company;
+
     public StandardsManagedBy withCompany(String company) {
         this.company = company;
         return this;
@@ -23,9 +24,11 @@ public class StandardsManagedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Product")
     public String product;
+
     public StandardsManagedBy withProduct(String product) {
         this.product = product;
         return this;
     }
     
+    public StandardsManagedBy(){}
 }

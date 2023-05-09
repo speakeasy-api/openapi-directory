@@ -13,6 +13,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountNumber")
     public String accountNumber;
+
     public UserUpdateUserRequest withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -24,6 +25,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExternalEntityNumber")
     public String externalEntityNumber;
+
     public UserUpdateUserRequest withExternalEntityNumber(String externalEntityNumber) {
         this.externalEntityNumber = externalEntityNumber;
         return this;
@@ -35,6 +37,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Guardian")
     public Integer guardian;
+
     public UserUpdateUserRequest withGuardian(Integer guardian) {
         this.guardian = guardian;
         return this;
@@ -46,6 +49,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GymNumber")
     public String gymNumber;
+
     public UserUpdateUserRequest withGymNumber(String gymNumber) {
         this.gymNumber = gymNumber;
         return this;
@@ -57,6 +61,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IntroduceBy")
     public Integer introduceBy;
+
     public UserUpdateUserRequest withIntroduceBy(Integer introduceBy) {
         this.introduceBy = introduceBy;
         return this;
@@ -68,6 +73,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
     public String name;
+
     public UserUpdateUserRequest withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +85,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Number")
     public String number;
+
     public UserUpdateUserRequest withNumber(String number) {
         this.number = number;
         return this;
@@ -90,6 +97,7 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeId")
     public Integer typeId;
+
     public UserUpdateUserRequest withTypeId(Integer typeId) {
         this.typeId = typeId;
         return this;
@@ -101,9 +109,11 @@ public class UserUpdateUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserId")
     public Integer userId;
+
     public UserUpdateUserRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public UserUpdateUserRequest(){}
 }

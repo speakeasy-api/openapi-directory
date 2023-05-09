@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListArchivesResponse {
     
     public String contentType;
+
     public ListArchivesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListArchivesResponse {
      */
     
     public Object internalException;
+
     public ListArchivesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListArchivesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListArchivesResponse listArchivesResponse;
+
     public ListArchivesResponse withListArchivesResponse(org.openapis.openapi.models.shared.ListArchivesResponse listArchivesResponse) {
         this.listArchivesResponse = listArchivesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListArchivesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListArchivesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListArchivesResponse {
     
     
     public Integer statusCode;
+
     public ListArchivesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListArchivesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListArchivesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListArchivesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

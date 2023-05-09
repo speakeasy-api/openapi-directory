@@ -15,6 +15,7 @@ public class PaginatedPaymentReadList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public PaginatedPaymentReadList withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PaginatedPaymentReadList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PaginatedPaymentReadList withNext(String next) {
         this.next = next;
         return this;
@@ -31,6 +33,7 @@ public class PaginatedPaymentReadList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PaginatedPaymentReadList withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -39,9 +42,11 @@ public class PaginatedPaymentReadList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public PaymentRead[] results;
+
     public PaginatedPaymentReadList withResults(PaymentRead[] results) {
         this.results = results;
         return this;
     }
     
+    public PaginatedPaymentReadList(){}
 }

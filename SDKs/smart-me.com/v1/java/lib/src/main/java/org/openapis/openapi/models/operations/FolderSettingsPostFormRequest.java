@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FolderSettingsPostFormRequest {
@@ -12,6 +13,7 @@ public class FolderSettingsPostFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.FolderSettings folderSettings;
+
     public FolderSettingsPostFormRequest withFolderSettings(org.openapis.openapi.models.shared.FolderSettings folderSettings) {
         this.folderSettings = folderSettings;
         return this;
@@ -22,9 +24,14 @@ public class FolderSettingsPostFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public FolderSettingsPostFormRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public FolderSettingsPostFormRequest(@JsonProperty("FolderSettings") org.openapis.openapi.models.shared.FolderSettings folderSettings, @JsonProperty("id") String id) {
+        this.folderSettings = folderSettings;
+        this.id = id;
+  }
 }

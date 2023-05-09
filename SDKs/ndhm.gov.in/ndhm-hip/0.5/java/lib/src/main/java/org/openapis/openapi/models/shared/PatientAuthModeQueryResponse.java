@@ -17,6 +17,7 @@ public class PatientAuthModeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth")
     public PatientAuthModeQueryResponseAuth auth;
+
     public PatientAuthModeQueryResponse withAuth(PatientAuthModeQueryResponseAuth auth) {
         this.auth = auth;
         return this;
@@ -25,6 +26,7 @@ public class PatientAuthModeQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public PatientAuthModeQueryResponse withError(Error error) {
         this.error = error;
         return this;
@@ -35,6 +37,7 @@ public class PatientAuthModeQueryResponse {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientAuthModeQueryResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class PatientAuthModeQueryResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public PatientAuthModeQueryResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class PatientAuthModeQueryResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientAuthModeQueryResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientAuthModeQueryResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

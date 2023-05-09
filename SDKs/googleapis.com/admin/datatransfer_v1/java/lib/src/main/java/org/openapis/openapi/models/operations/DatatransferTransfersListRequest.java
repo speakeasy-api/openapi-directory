@@ -12,6 +12,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatatransferTransfersListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatatransferTransfersListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatatransferTransfersListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatatransferTransfersListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerId")
     public String customerId;
+
     public DatatransferTransfersListRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -62,6 +67,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatatransferTransfersListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +78,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatatransferTransfersListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +89,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DatatransferTransfersListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +100,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newOwnerUserId")
     public String newOwnerUserId;
+
     public DatatransferTransfersListRequest withNewOwnerUserId(String newOwnerUserId) {
         this.newOwnerUserId = newOwnerUserId;
         return this;
@@ -102,6 +111,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatatransferTransfersListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +122,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oldOwnerUserId")
     public String oldOwnerUserId;
+
     public DatatransferTransfersListRequest withOldOwnerUserId(String oldOwnerUserId) {
         this.oldOwnerUserId = oldOwnerUserId;
         return this;
@@ -122,6 +133,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DatatransferTransfersListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +144,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatatransferTransfersListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +155,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatatransferTransfersListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +166,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public DatatransferTransfersListRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -162,6 +177,7 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatatransferTransfersListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +188,11 @@ public class DatatransferTransfersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatatransferTransfersListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatatransferTransfersListRequest(){}
 }

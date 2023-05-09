@@ -15,9 +15,11 @@ public class CreateAppResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppArn")
     public String appArn;
+
     public CreateAppResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
     }
     
+    public CreateAppResponse(){}
 }

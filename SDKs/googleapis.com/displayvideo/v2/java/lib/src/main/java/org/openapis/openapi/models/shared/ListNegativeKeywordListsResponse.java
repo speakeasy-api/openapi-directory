@@ -18,6 +18,7 @@ public class ListNegativeKeywordListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeKeywordLists")
     public NegativeKeywordList[] negativeKeywordLists;
+
     public ListNegativeKeywordListsResponse withNegativeKeywordLists(NegativeKeywordList[] negativeKeywordLists) {
         this.negativeKeywordLists = negativeKeywordLists;
         return this;
@@ -29,9 +30,11 @@ public class ListNegativeKeywordListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListNegativeKeywordListsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListNegativeKeywordListsResponse(){}
 }

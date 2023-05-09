@@ -15,9 +15,13 @@ public class MoneyCurrencyDetails {
      */
     @JsonProperty("code")
     public String code;
+
     public MoneyCurrencyDetails withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public MoneyCurrencyDetails(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

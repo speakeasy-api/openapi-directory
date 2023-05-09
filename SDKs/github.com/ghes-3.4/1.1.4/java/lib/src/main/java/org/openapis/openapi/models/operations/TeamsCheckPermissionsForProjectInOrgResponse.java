@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsCheckPermissionsForProjectInOrgResponse {
     
     public String contentType;
+
     public TeamsCheckPermissionsForProjectInOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsCheckPermissionsForProjectInOrgResponse {
     
     
     public Integer statusCode;
+
     public TeamsCheckPermissionsForProjectInOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsCheckPermissionsForProjectInOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsCheckPermissionsForProjectInOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TeamsCheckPermissionsForProjectInOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamProject teamProject;
+
     public TeamsCheckPermissionsForProjectInOrgResponse withTeamProject(org.openapis.openapi.models.shared.TeamProject teamProject) {
         this.teamProject = teamProject;
         return this;
     }
     
+    public TeamsCheckPermissionsForProjectInOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

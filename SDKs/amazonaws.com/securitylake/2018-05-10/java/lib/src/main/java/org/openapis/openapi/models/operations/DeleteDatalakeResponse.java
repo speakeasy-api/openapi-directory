@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDatalakeResponse {
@@ -12,6 +13,7 @@ public class DeleteDatalakeResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDatalakeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDatalakeResponse {
      */
     
     public Object conflictException;
+
     public DeleteDatalakeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDatalakeResponse {
     
     
     public String contentType;
+
     public DeleteDatalakeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatalakeResponse {
      */
     
     public java.util.Map<String, Object> deleteDatalakeResponse;
+
     public DeleteDatalakeResponse withDeleteDatalakeResponse(java.util.Map<String, Object> deleteDatalakeResponse) {
         this.deleteDatalakeResponse = deleteDatalakeResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDatalakeResponse {
      */
     
     public Object internalServerException;
+
     public DeleteDatalakeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDatalakeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDatalakeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDatalakeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteDatalakeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteDatalakeResponse {
     
     
     public Integer statusCode;
+
     public DeleteDatalakeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteDatalakeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDatalakeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteDatalakeResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDatalakeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteDatalakeResponse {
      */
     
     public Object validationException;
+
     public DeleteDatalakeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDatalakeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

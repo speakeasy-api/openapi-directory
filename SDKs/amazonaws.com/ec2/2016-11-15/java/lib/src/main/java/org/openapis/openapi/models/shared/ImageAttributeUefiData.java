@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeUefiData {
     
     public String value;
+
     public ImageAttributeUefiData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImageAttributeUefiData(){}
 }

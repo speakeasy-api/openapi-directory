@@ -12,6 +12,7 @@ public class RoutePoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinates")
     public java.util.Map<String, Object>[] coordinates;
+
     public RoutePoint withCoordinates(java.util.Map<String, Object>[] coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -20,9 +21,11 @@ public class RoutePoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RoutePoint withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RoutePoint(){}
 }

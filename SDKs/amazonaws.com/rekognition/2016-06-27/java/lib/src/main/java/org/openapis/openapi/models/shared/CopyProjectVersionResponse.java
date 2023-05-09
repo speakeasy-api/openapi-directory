@@ -15,9 +15,11 @@ public class CopyProjectVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectVersionArn")
     public String projectVersionArn;
+
     public CopyProjectVersionResponse withProjectVersionArn(String projectVersionArn) {
         this.projectVersionArn = projectVersionArn;
         return this;
     }
     
+    public CopyProjectVersionResponse(){}
 }

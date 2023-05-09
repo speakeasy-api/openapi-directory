@@ -15,6 +15,7 @@ public class DescribeEcsClustersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsClusters")
     public EcsCluster[] ecsClusters;
+
     public DescribeEcsClustersResult withEcsClusters(EcsCluster[] ecsClusters) {
         this.ecsClusters = ecsClusters;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEcsClustersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEcsClustersResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEcsClustersResult(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Engagement {
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public Engagement withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -26,6 +27,7 @@ public class Engagement {
     
     @JsonProperty("EngagementArn")
     public String engagementArn;
+
     public Engagement withEngagementArn(String engagementArn) {
         this.engagementArn = engagementArn;
         return this;
@@ -34,6 +36,7 @@ public class Engagement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncidentId")
     public String incidentId;
+
     public Engagement withIncidentId(String incidentId) {
         this.incidentId = incidentId;
         return this;
@@ -41,6 +44,7 @@ public class Engagement {
     
     @JsonProperty("Sender")
     public String sender;
+
     public Engagement withSender(String sender) {
         this.sender = sender;
         return this;
@@ -51,6 +55,7 @@ public class Engagement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public Engagement withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -61,9 +66,15 @@ public class Engagement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StopTime")
     public OffsetDateTime stopTime;
+
     public Engagement withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
     }
     
+    public Engagement(@JsonProperty("ContactArn") String contactArn, @JsonProperty("EngagementArn") String engagementArn, @JsonProperty("Sender") String sender) {
+        this.contactArn = contactArn;
+        this.engagementArn = engagementArn;
+        this.sender = sender;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch {
     
     public Boolean enableResourceNameDnsAAAARecord;
+
     public CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch withEnableResourceNameDnsAAAARecord(Boolean enableResourceNameDnsAAAARecord) {
         this.enableResourceNameDnsAAAARecord = enableResourceNameDnsAAAARecord;
         return this;
@@ -19,6 +20,7 @@ public class CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch {
     
     
     public Boolean enableResourceNameDnsARecord;
+
     public CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch withEnableResourceNameDnsARecord(Boolean enableResourceNameDnsARecord) {
         this.enableResourceNameDnsARecord = enableResourceNameDnsARecord;
         return this;
@@ -26,9 +28,11 @@ public class CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch {
     
     
     public CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunchHostnameTypeEnum hostnameType;
+
     public CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch withHostnameType(CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunchHostnameTypeEnum hostnameType) {
         this.hostnameType = hostnameType;
         return this;
     }
     
+    public CreateDefaultSubnetResultSubnetPrivateDnsNameOptionsOnLaunch(){}
 }

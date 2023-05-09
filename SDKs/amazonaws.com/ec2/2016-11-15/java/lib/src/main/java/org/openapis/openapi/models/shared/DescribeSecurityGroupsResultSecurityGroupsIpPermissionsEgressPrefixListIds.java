@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressPrefixListIds {
     
     public String description;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressPrefixListIds withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressPrefix
     
     
     public String prefixListId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressPrefixListIds withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
     }
     
+    public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressPrefixListIds(){}
 }

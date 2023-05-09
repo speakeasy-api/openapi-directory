@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetthermostatsdataSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String codeOauth;
+
     public GetthermostatsdataSecurity withCodeOauth(String codeOauth) {
         this.codeOauth = codeOauth;
         return this;
@@ -16,9 +17,11 @@ public class GetthermostatsdataSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String passwordOauth;
+
     public GetthermostatsdataSecurity withPasswordOauth(String passwordOauth) {
         this.passwordOauth = passwordOauth;
         return this;
     }
     
+    public GetthermostatsdataSecurity(){}
 }

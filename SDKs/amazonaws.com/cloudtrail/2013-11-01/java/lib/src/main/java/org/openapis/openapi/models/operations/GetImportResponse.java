@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImportResponse {
     
     public String contentType;
+
     public GetImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetImportResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImportResponse getImportResponse;
+
     public GetImportResponse withGetImportResponse(org.openapis.openapi.models.shared.GetImportResponse getImportResponse) {
         this.getImportResponse = getImportResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetImportResponse {
      */
     
     public Object importNotFoundException;
+
     public GetImportResponse withImportNotFoundException(Object importNotFoundException) {
         this.importNotFoundException = importNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetImportResponse {
      */
     
     public Object invalidParameterException;
+
     public GetImportResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetImportResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetImportResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class GetImportResponse {
     
     
     public Integer statusCode;
+
     public GetImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetImportResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetImportResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

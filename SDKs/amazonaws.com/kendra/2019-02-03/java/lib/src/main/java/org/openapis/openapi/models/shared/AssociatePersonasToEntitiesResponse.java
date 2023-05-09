@@ -15,9 +15,11 @@ public class AssociatePersonasToEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntityList")
     public FailedEntity[] failedEntityList;
+
     public AssociatePersonasToEntitiesResponse withFailedEntityList(FailedEntity[] failedEntityList) {
         this.failedEntityList = failedEntityList;
         return this;
     }
     
+    public AssociatePersonasToEntitiesResponse(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class VaultMattersSavedQueriesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public VaultMattersSavedQueriesGetSecurityOption1 option1;
+
     public VaultMattersSavedQueriesGetSecurity withOption1(VaultMattersSavedQueriesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class VaultMattersSavedQueriesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public VaultMattersSavedQueriesGetSecurityOption2 option2;
+
     public VaultMattersSavedQueriesGetSecurity withOption2(VaultMattersSavedQueriesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public VaultMattersSavedQueriesGetSecurity(){}
 }

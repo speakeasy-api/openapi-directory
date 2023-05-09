@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFindPathwaysByLiteratureRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetFindPathwaysByLiteratureFormatEnum format;
+
     public GetFindPathwaysByLiteratureRequest withFormat(GetFindPathwaysByLiteratureFormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +21,13 @@ public class GetFindPathwaysByLiteratureRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetFindPathwaysByLiteratureRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetFindPathwaysByLiteratureRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

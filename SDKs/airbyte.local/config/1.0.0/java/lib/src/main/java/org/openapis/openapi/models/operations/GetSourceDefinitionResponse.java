@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSourceDefinitionResponse {
     
     public String contentType;
+
     public GetSourceDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSourceDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetSourceDefinitionResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetSourceDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetSourceDefinitionResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class GetSourceDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceDefinitionRead sourceDefinitionRead;
+
     public GetSourceDefinitionResponse withSourceDefinitionRead(org.openapis.openapi.models.shared.SourceDefinitionRead sourceDefinitionRead) {
         this.sourceDefinitionRead = sourceDefinitionRead;
         return this;
@@ -46,6 +51,7 @@ public class GetSourceDefinitionResponse {
     
     
     public Integer statusCode;
+
     public GetSourceDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetSourceDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSourceDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSourceDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GistsGet403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block")
     public GistsGet403ApplicationJSONBlock block;
+
     public GistsGet403ApplicationJSON withBlock(GistsGet403ApplicationJSONBlock block) {
         this.block = block;
         return this;
@@ -23,6 +24,7 @@ public class GistsGet403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public GistsGet403ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -31,9 +33,11 @@ public class GistsGet403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GistsGet403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GistsGet403ApplicationJSON(){}
 }

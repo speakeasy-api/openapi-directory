@@ -12,6 +12,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datasource")
     public String datasource;
+
     public GetAssociationFilterRequest withDatasource(String datasource) {
         this.datasource = datasource;
         return this;
@@ -22,6 +23,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datastructure")
     public String datastructure;
+
     public GetAssociationFilterRequest withDatastructure(String datastructure) {
         this.datastructure = datastructure;
         return this;
@@ -32,6 +34,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datatype")
     public String datatype;
+
     public GetAssociationFilterRequest withDatatype(String datatype) {
         this.datatype = datatype;
         return this;
@@ -42,6 +45,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
     public Boolean direct;
+
     public GetAssociationFilterRequest withDirect(Boolean direct) {
         this.direct = direct;
         return this;
@@ -52,6 +56,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disease")
     public String disease;
+
     public GetAssociationFilterRequest withDisease(String disease) {
         this.disease = disease;
         return this;
@@ -62,6 +67,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
     public Boolean facets;
+
     public GetAssociationFilterRequest withFacets(Boolean facets) {
         this.facets = facets;
         return this;
@@ -72,6 +78,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetAssociationFilterRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +89,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetAssociationFilterRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -92,6 +100,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Double from;
+
     public GetAssociationFilterRequest withFrom(Double from) {
         this.from = from;
         return this;
@@ -102,6 +111,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pathway")
     public String pathway;
+
     public GetAssociationFilterRequest withPathway(String pathway) {
         this.pathway = pathway;
         return this;
@@ -112,6 +122,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_max")
     public Float scorevalueMax;
+
     public GetAssociationFilterRequest withScorevalueMax(Float scorevalueMax) {
         this.scorevalueMax = scorevalueMax;
         return this;
@@ -122,6 +133,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_min")
     public Float scorevalueMin;
+
     public GetAssociationFilterRequest withScorevalueMin(Float scorevalueMin) {
         this.scorevalueMin = scorevalueMin;
         return this;
@@ -132,6 +144,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_types")
     public String scorevalueTypes;
+
     public GetAssociationFilterRequest withScorevalueTypes(String scorevalueTypes) {
         this.scorevalueTypes = scorevalueTypes;
         return this;
@@ -144,6 +157,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetAssociationFilterRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -154,6 +168,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public GetAssociationFilterRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -167,6 +182,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetAssociationFilterRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -177,6 +193,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
     public String target;
+
     public GetAssociationFilterRequest withTarget(String target) {
         this.target = target;
         return this;
@@ -187,6 +204,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target_class")
     public String targetClass;
+
     public GetAssociationFilterRequest withTargetClass(String targetClass) {
         this.targetClass = targetClass;
         return this;
@@ -197,6 +215,7 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=therapeutic_area")
     public String therapeuticArea;
+
     public GetAssociationFilterRequest withTherapeuticArea(String therapeuticArea) {
         this.therapeuticArea = therapeuticArea;
         return this;
@@ -207,9 +226,11 @@ public class GetAssociationFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uniprotkw")
     public String uniprotkw;
+
     public GetAssociationFilterRequest withUniprotkw(String uniprotkw) {
         this.uniprotkw = uniprotkw;
         return this;
     }
     
+    public GetAssociationFilterRequest(){}
 }

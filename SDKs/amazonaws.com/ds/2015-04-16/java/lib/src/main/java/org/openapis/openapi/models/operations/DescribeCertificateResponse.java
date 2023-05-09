@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCertificateResponse {
@@ -12,6 +13,7 @@ public class DescribeCertificateResponse {
      */
     
     public Object certificateDoesNotExistException;
+
     public DescribeCertificateResponse withCertificateDoesNotExistException(Object certificateDoesNotExistException) {
         this.certificateDoesNotExistException = certificateDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeCertificateResponse {
      */
     
     public Object clientException;
+
     public DescribeCertificateResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCertificateResponse {
     
     
     public String contentType;
+
     public DescribeCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCertificateResult describeCertificateResult;
+
     public DescribeCertificateResponse withDescribeCertificateResult(org.openapis.openapi.models.shared.DescribeCertificateResult describeCertificateResult) {
         this.describeCertificateResult = describeCertificateResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCertificateResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public DescribeCertificateResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeCertificateResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeCertificateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeCertificateResponse {
     
     
     public Integer statusCode;
+
     public DescribeCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeCertificateResponse {
      */
     
     public Object serviceException;
+
     public DescribeCertificateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeCertificateResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeCertificateResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

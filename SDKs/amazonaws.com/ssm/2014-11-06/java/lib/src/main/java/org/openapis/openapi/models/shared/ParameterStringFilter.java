@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParameterStringFilter {
     @JsonProperty("Key")
     public String key;
+
     public ParameterStringFilter withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class ParameterStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Option")
     public String option;
+
     public ParameterStringFilter withOption(String option) {
         this.option = option;
         return this;
@@ -30,9 +32,13 @@ public class ParameterStringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public ParameterStringFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ParameterStringFilter(@JsonProperty("Key") String key) {
+        this.key = key;
+  }
 }

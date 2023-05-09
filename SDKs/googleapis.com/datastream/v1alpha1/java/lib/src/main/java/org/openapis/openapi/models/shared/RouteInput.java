@@ -18,6 +18,7 @@ public class RouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationAddress")
     public String destinationAddress;
+
     public RouteInput withDestinationAddress(String destinationAddress) {
         this.destinationAddress = destinationAddress;
         return this;
@@ -29,6 +30,7 @@ public class RouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationPort")
     public Integer destinationPort;
+
     public RouteInput withDestinationPort(Integer destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -40,6 +42,7 @@ public class RouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public RouteInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,9 +54,11 @@ public class RouteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RouteInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public RouteInput(){}
 }

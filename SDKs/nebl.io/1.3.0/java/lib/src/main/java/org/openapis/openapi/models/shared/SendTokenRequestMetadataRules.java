@@ -18,6 +18,7 @@ public class SendTokenRequestMetadataRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration")
     public SendTokenRequestMetadataRulesExpiration expiration;
+
     public SendTokenRequestMetadataRules withExpiration(SendTokenRequestMetadataRulesExpiration expiration) {
         this.expiration = expiration;
         return this;
@@ -26,6 +27,7 @@ public class SendTokenRequestMetadataRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fees")
     public SendTokenRequestMetadataRulesFees fees;
+
     public SendTokenRequestMetadataRules withFees(SendTokenRequestMetadataRulesFees fees) {
         this.fees = fees;
         return this;
@@ -37,9 +39,11 @@ public class SendTokenRequestMetadataRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holders")
     public SendTokenRequestMetadataRulesHolders[] holders;
+
     public SendTokenRequestMetadataRules withHolders(SendTokenRequestMetadataRulesHolders[] holders) {
         this.holders = holders;
         return this;
     }
     
+    public SendTokenRequestMetadataRules(){}
 }

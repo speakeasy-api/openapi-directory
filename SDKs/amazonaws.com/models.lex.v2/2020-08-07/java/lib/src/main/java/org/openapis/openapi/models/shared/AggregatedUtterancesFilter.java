@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AggregatedUtterancesFilter {
     @JsonProperty("name")
     public AggregatedUtterancesFilterNameEnum name;
+
     public AggregatedUtterancesFilter withName(AggregatedUtterancesFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class AggregatedUtterancesFilter {
     
     @JsonProperty("operator")
     public AggregatedUtterancesFilterOperatorEnum operator;
+
     public AggregatedUtterancesFilter withOperator(AggregatedUtterancesFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class AggregatedUtterancesFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public AggregatedUtterancesFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AggregatedUtterancesFilter(@JsonProperty("name") AggregatedUtterancesFilterNameEnum name, @JsonProperty("operator") AggregatedUtterancesFilterOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

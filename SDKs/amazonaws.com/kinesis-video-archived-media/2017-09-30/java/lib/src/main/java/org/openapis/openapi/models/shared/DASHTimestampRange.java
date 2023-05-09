@@ -22,6 +22,7 @@ public class DASHTimestampRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTimestamp")
     public OffsetDateTime endTimestamp;
+
     public DASHTimestampRange withEndTimestamp(OffsetDateTime endTimestamp) {
         this.endTimestamp = endTimestamp;
         return this;
@@ -32,9 +33,11 @@ public class DASHTimestampRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTimestamp")
     public OffsetDateTime startTimestamp;
+
     public DASHTimestampRange withStartTimestamp(OffsetDateTime startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
     }
     
+    public DASHTimestampRange(){}
 }

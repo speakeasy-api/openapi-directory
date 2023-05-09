@@ -18,6 +18,7 @@ public class LogEntryOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public Boolean first;
+
     public LogEntryOperation withFirst(Boolean first) {
         this.first = first;
         return this;
@@ -29,6 +30,7 @@ public class LogEntryOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LogEntryOperation withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class LogEntryOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public Boolean last;
+
     public LogEntryOperation withLast(Boolean last) {
         this.last = last;
         return this;
@@ -51,9 +54,11 @@ public class LogEntryOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producer")
     public String producer;
+
     public LogEntryOperation withProducer(String producer) {
         this.producer = producer;
         return this;
     }
     
+    public LogEntryOperation(){}
 }

@@ -18,6 +18,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Product200ApplicationJSONData data;
+
     public Product200ApplicationJSON withData(Product200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateStamp")
     public String dateStamp;
+
     public Product200ApplicationJSON withDateStamp(String dateStamp) {
         this.dateStamp = dateStamp;
         return this;
@@ -42,6 +44,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCodes")
     public String[] errorCodes;
+
     public Product200ApplicationJSON withErrorCodes(String[] errorCodes) {
         this.errorCodes = errorCodes;
         return this;
@@ -53,6 +56,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public Object[] errorMessage;
+
     public Product200ApplicationJSON withErrorMessage(Object[] errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -64,6 +68,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessageText")
     public String errorMessageText;
+
     public Product200ApplicationJSON withErrorMessageText(String errorMessageText) {
         this.errorMessageText = errorMessageText;
         return this;
@@ -75,6 +80,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorName")
     public String errorName;
+
     public Product200ApplicationJSON withErrorName(String errorName) {
         this.errorName = errorName;
         return this;
@@ -86,6 +92,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorReference")
     public String errorReference;
+
     public Product200ApplicationJSON withErrorReference(String errorReference) {
         this.errorReference = errorReference;
         return this;
@@ -97,6 +104,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public String errorType;
+
     public Product200ApplicationJSON withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -108,6 +116,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraInfo")
     public java.util.Map<String, Object> extraInfo;
+
     public Product200ApplicationJSON withExtraInfo(java.util.Map<String, Object> extraInfo) {
         this.extraInfo = extraInfo;
         return this;
@@ -119,6 +128,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraObject")
     public java.util.Map<String, Object> extraObject;
+
     public Product200ApplicationJSON withExtraObject(java.util.Map<String, Object> extraObject) {
         this.extraObject = extraObject;
         return this;
@@ -133,6 +143,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public Product200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -145,6 +156,7 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public Product200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -156,9 +168,11 @@ public class Product200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmid")
     public String vmid;
+
     public Product200ApplicationJSON withVmid(String vmid) {
         this.vmid = vmid;
         return this;
     }
     
+    public Product200ApplicationJSON(){}
 }

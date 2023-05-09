@@ -18,9 +18,11 @@ public class AnomalousService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceId")
     public ServiceId serviceId;
+
     public AnomalousService withServiceId(ServiceId serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public AnomalousService(){}
 }

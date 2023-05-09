@@ -18,9 +18,11 @@ public class ManagedPropertyBundle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedProperty")
     public ManagedProperty[] managedProperty;
+
     public ManagedPropertyBundle withManagedProperty(ManagedProperty[] managedProperty) {
         this.managedProperty = managedProperty;
         return this;
     }
     
+    public ManagedPropertyBundle(){}
 }

@@ -18,6 +18,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulative")
     public Boolean cumulative;
+
     public MetricUpdate withCumulative(Boolean cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -29,6 +30,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution")
     public Object distribution;
+
     public MetricUpdate withDistribution(Object distribution) {
         this.distribution = distribution;
         return this;
@@ -40,6 +42,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gauge")
     public Object gauge;
+
     public MetricUpdate withGauge(Object gauge) {
         this.gauge = gauge;
         return this;
@@ -51,6 +54,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internal")
     public Object internal;
+
     public MetricUpdate withInternal(Object internal) {
         this.internal = internal;
         return this;
@@ -62,6 +66,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MetricUpdate withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanCount")
     public Object meanCount;
+
     public MetricUpdate withMeanCount(Object meanCount) {
         this.meanCount = meanCount;
         return this;
@@ -84,6 +90,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanSum")
     public Object meanSum;
+
     public MetricUpdate withMeanSum(Object meanSum) {
         this.meanSum = meanSum;
         return this;
@@ -95,6 +102,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public MetricStructuredName name;
+
     public MetricUpdate withName(MetricStructuredName name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scalar")
     public Object scalar;
+
     public MetricUpdate withScalar(Object scalar) {
         this.scalar = scalar;
         return this;
@@ -117,6 +126,7 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("set")
     public Object set;
+
     public MetricUpdate withSet(Object set) {
         this.set = set;
         return this;
@@ -128,9 +138,11 @@ public class MetricUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public MetricUpdate withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MetricUpdate(){}
 }

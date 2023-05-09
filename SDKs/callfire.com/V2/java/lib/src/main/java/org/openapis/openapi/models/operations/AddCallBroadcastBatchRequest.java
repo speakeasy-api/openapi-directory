@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddCallBroadcastBatchRequest {
@@ -12,6 +13,7 @@ public class AddCallBroadcastBatchRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchRequest batchRequest;
+
     public AddCallBroadcastBatchRequest withBatchRequest(org.openapis.openapi.models.shared.BatchRequest batchRequest) {
         this.batchRequest = batchRequest;
         return this;
@@ -22,6 +24,7 @@ public class AddCallBroadcastBatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public AddCallBroadcastBatchRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,9 +35,13 @@ public class AddCallBroadcastBatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
     public Boolean strictValidation;
+
     public AddCallBroadcastBatchRequest withStrictValidation(Boolean strictValidation) {
         this.strictValidation = strictValidation;
         return this;
     }
     
+    public AddCallBroadcastBatchRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

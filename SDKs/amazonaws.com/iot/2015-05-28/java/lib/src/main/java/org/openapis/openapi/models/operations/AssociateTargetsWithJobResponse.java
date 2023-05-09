@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateTargetsWithJobResponse {
@@ -12,6 +13,7 @@ public class AssociateTargetsWithJobResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateTargetsWithJobResponse associateTargetsWithJobResponse;
+
     public AssociateTargetsWithJobResponse withAssociateTargetsWithJobResponse(org.openapis.openapi.models.shared.AssociateTargetsWithJobResponse associateTargetsWithJobResponse) {
         this.associateTargetsWithJobResponse = associateTargetsWithJobResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateTargetsWithJobResponse {
     
     
     public String contentType;
+
     public AssociateTargetsWithJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateTargetsWithJobResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateTargetsWithJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateTargetsWithJobResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateTargetsWithJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateTargetsWithJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AssociateTargetsWithJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateTargetsWithJobResponse {
     
     
     public Integer statusCode;
+
     public AssociateTargetsWithJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateTargetsWithJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateTargetsWithJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateTargetsWithJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateTargetsWithJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class AssociateTargetsWithJobResponse {
      */
     
     public Object throttlingException;
+
     public AssociateTargetsWithJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateTargetsWithJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

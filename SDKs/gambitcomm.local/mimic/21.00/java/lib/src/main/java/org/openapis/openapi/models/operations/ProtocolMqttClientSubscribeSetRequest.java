@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSubscribeSetRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSubscribeSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSubscribeSetRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class ProtocolMqttClientSubscribeSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
     public String attr;
+
     public ProtocolMqttClientSubscribeSetRequest withAttr(String attr) {
         this.attr = attr;
         return this;
@@ -32,6 +35,7 @@ public class ProtocolMqttClientSubscribeSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subNum")
     public Integer subNum;
+
     public ProtocolMqttClientSubscribeSetRequest withSubNum(Integer subNum) {
         this.subNum = subNum;
         return this;
@@ -42,9 +46,16 @@ public class ProtocolMqttClientSubscribeSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
     public String value;
+
     public ProtocolMqttClientSubscribeSetRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProtocolMqttClientSubscribeSetRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("attr") String attr, @JsonProperty("subNum") Integer subNum, @JsonProperty("value") String value) {
+        this.agentNum = agentNum;
+        this.attr = attr;
+        this.subNum = subNum;
+        this.value = value;
+  }
 }

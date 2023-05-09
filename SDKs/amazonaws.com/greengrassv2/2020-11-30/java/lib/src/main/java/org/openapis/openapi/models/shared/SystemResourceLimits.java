@@ -15,6 +15,7 @@ public class SystemResourceLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpus")
     public Double cpus;
+
     public SystemResourceLimits withCpus(Double cpus) {
         this.cpus = cpus;
         return this;
@@ -23,9 +24,11 @@ public class SystemResourceLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public SystemResourceLimits withMemory(Long memory) {
         this.memory = memory;
         return this;
     }
     
+    public SystemResourceLimits(){}
 }

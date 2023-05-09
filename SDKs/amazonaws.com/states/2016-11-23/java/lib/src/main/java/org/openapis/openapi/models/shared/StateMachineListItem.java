@@ -19,6 +19,7 @@ public class StateMachineListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public StateMachineListItem withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -26,6 +27,7 @@ public class StateMachineListItem {
     
     @JsonProperty("name")
     public String name;
+
     public StateMachineListItem withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +35,7 @@ public class StateMachineListItem {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public StateMachineListItem withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -40,9 +43,16 @@ public class StateMachineListItem {
     
     @JsonProperty("type")
     public StateMachineTypeEnum type;
+
     public StateMachineListItem withType(StateMachineTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public StateMachineListItem(@JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("name") String name, @JsonProperty("stateMachineArn") String stateMachineArn, @JsonProperty("type") StateMachineTypeEnum type) {
+        this.creationDate = creationDate;
+        this.name = name;
+        this.stateMachineArn = stateMachineArn;
+        this.type = type;
+  }
 }

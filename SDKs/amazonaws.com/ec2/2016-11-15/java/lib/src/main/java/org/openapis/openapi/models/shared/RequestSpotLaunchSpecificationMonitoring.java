@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RequestSpotLaunchSpecificationMonitoring - &lt;p&gt;Indicates whether basic or detailed monitoring is enabled for the instance.&lt;/p&gt; &lt;p&gt;Default: Disabled&lt;/p&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotLaunchSpecificationMonitoring {
     
     public Boolean enabled;
+
     public RequestSpotLaunchSpecificationMonitoring withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public RequestSpotLaunchSpecificationMonitoring(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

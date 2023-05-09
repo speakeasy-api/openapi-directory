@@ -55,11 +55,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomerResponse res = new org.openapis.openapi.models.operations.GetCustomerResponse() {{
+        org.openapis.openapi.models.operations.GetCustomerResponse res = new org.openapis.openapi.models.operations.GetCustomerResponse(contentType, httpRes.statusCode()) {{
             getCustomer200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomersResponse res = new org.openapis.openapi.models.operations.GetCustomersResponse() {{
+        org.openapis.openapi.models.operations.GetCustomersResponse res = new org.openapis.openapi.models.operations.GetCustomersResponse(contentType, httpRes.statusCode()) {{
             getCustomers302ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {

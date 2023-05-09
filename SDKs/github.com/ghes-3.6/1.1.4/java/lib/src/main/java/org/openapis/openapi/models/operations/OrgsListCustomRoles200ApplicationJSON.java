@@ -15,6 +15,7 @@ public class OrgsListCustomRoles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_roles")
     public org.openapis.openapi.models.shared.OrganizationCustomRepositoryRole[] customRoles;
+
     public OrgsListCustomRoles200ApplicationJSON withCustomRoles(org.openapis.openapi.models.shared.OrganizationCustomRepositoryRole[] customRoles) {
         this.customRoles = customRoles;
         return this;
@@ -26,9 +27,11 @@ public class OrgsListCustomRoles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public OrgsListCustomRoles200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public OrgsListCustomRoles200ApplicationJSON(){}
 }

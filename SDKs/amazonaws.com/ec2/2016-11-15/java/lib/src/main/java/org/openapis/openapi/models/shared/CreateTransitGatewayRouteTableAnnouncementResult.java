@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayRouteTableAnnouncementResult {
     
     public CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement transitGatewayRouteTableAnnouncement;
+
     public CreateTransitGatewayRouteTableAnnouncementResult withTransitGatewayRouteTableAnnouncement(CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncement transitGatewayRouteTableAnnouncement) {
         this.transitGatewayRouteTableAnnouncement = transitGatewayRouteTableAnnouncement;
         return this;
     }
     
+    public CreateTransitGatewayRouteTableAnnouncementResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetMembershipDatasourcesResponse {
@@ -12,6 +13,7 @@ public class BatchGetMembershipDatasourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetMembershipDatasourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetMembershipDatasourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetMembershipDatasourcesResponse batchGetMembershipDatasourcesResponse;
+
     public BatchGetMembershipDatasourcesResponse withBatchGetMembershipDatasourcesResponse(org.openapis.openapi.models.shared.BatchGetMembershipDatasourcesResponse batchGetMembershipDatasourcesResponse) {
         this.batchGetMembershipDatasourcesResponse = batchGetMembershipDatasourcesResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetMembershipDatasourcesResponse {
     
     
     public String contentType;
+
     public BatchGetMembershipDatasourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetMembershipDatasourcesResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetMembershipDatasourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetMembershipDatasourcesResponse {
     
     
     public Integer statusCode;
+
     public BatchGetMembershipDatasourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchGetMembershipDatasourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetMembershipDatasourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetMembershipDatasourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetMembershipDatasourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetMembershipDatasourcesResponse {
      */
     
     public Object validationException;
+
     public BatchGetMembershipDatasourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetMembershipDatasourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BeginTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public String database;
+
     public BeginTransactionRequestBody withDatabase(String database) {
         this.database = database;
         return this;
@@ -25,6 +26,7 @@ public class BeginTransactionRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public BeginTransactionRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -36,6 +38,7 @@ public class BeginTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public BeginTransactionRequestBody withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -46,9 +49,14 @@ public class BeginTransactionRequestBody {
      */
     @JsonProperty("secretArn")
     public String secretArn;
+
     public BeginTransactionRequestBody withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
     }
     
+    public BeginTransactionRequestBody(@JsonProperty("resourceArn") String resourceArn, @JsonProperty("secretArn") String secretArn) {
+        this.resourceArn = resourceArn;
+        this.secretArn = secretArn;
+  }
 }

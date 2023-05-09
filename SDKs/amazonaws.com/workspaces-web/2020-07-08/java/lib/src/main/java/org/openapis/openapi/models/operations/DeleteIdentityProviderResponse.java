@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIdentityProviderResponse {
@@ -12,6 +13,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteIdentityProviderResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object conflictException;
+
     public DeleteIdentityProviderResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteIdentityProviderResponse {
     
     
     public String contentType;
+
     public DeleteIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public java.util.Map<String, Object> deleteIdentityProviderResponse;
+
     public DeleteIdentityProviderResponse withDeleteIdentityProviderResponse(java.util.Map<String, Object> deleteIdentityProviderResponse) {
         this.deleteIdentityProviderResponse = deleteIdentityProviderResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object internalServerException;
+
     public DeleteIdentityProviderResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public DeleteIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object throttlingException;
+
     public DeleteIdentityProviderResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object validationException;
+
     public DeleteIdentityProviderResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

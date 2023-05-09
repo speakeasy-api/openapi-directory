@@ -15,6 +15,7 @@ public class ReplicaGlobalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public ReplicaGlobalSecondaryIndexDescription withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -23,9 +24,11 @@ public class ReplicaGlobalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputOverride")
     public ProvisionedThroughputOverride provisionedThroughputOverride;
+
     public ReplicaGlobalSecondaryIndexDescription withProvisionedThroughputOverride(ProvisionedThroughputOverride provisionedThroughputOverride) {
         this.provisionedThroughputOverride = provisionedThroughputOverride;
         return this;
     }
     
+    public ReplicaGlobalSecondaryIndexDescription(){}
 }

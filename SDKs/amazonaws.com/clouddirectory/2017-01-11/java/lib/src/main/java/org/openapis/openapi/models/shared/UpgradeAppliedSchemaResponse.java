@@ -15,6 +15,7 @@ public class UpgradeAppliedSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryArn")
     public String directoryArn;
+
     public UpgradeAppliedSchemaResponse withDirectoryArn(String directoryArn) {
         this.directoryArn = directoryArn;
         return this;
@@ -23,9 +24,11 @@ public class UpgradeAppliedSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpgradedSchemaArn")
     public String upgradedSchemaArn;
+
     public UpgradeAppliedSchemaResponse withUpgradedSchemaArn(String upgradedSchemaArn) {
         this.upgradedSchemaArn = upgradedSchemaArn;
         return this;
     }
     
+    public UpgradeAppliedSchemaResponse(){}
 }

@@ -15,6 +15,7 @@ public class BatchDeleteBuildsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildsDeleted")
     public String[] buildsDeleted;
+
     public BatchDeleteBuildsOutput withBuildsDeleted(String[] buildsDeleted) {
         this.buildsDeleted = buildsDeleted;
         return this;
@@ -23,9 +24,11 @@ public class BatchDeleteBuildsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildsNotDeleted")
     public BuildNotDeleted[] buildsNotDeleted;
+
     public BatchDeleteBuildsOutput withBuildsNotDeleted(BuildNotDeleted[] buildsNotDeleted) {
         this.buildsNotDeleted = buildsNotDeleted;
         return this;
     }
     
+    public BatchDeleteBuildsOutput(){}
 }

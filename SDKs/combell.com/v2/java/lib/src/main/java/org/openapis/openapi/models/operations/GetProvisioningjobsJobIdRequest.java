@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProvisioningjobsJobIdRequest {
@@ -12,6 +13,7 @@ public class GetProvisioningjobsJobIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobIdPathParameter;
+
     public GetProvisioningjobsJobIdRequest withJobIdPathParameter(String jobIdPathParameter) {
         this.jobIdPathParameter = jobIdPathParameter;
         return this;
@@ -19,9 +21,14 @@ public class GetProvisioningjobsJobIdRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     public String jobIdQueryParameter;
+
     public GetProvisioningjobsJobIdRequest withJobIdQueryParameter(String jobIdQueryParameter) {
         this.jobIdQueryParameter = jobIdQueryParameter;
         return this;
     }
     
+    public GetProvisioningjobsJobIdRequest(@JsonProperty("jobIdPathParameter") String jobIdPathParameter, @JsonProperty("job_idQueryParameter") String jobIdQueryParameter) {
+        this.jobIdPathParameter = jobIdPathParameter;
+        this.jobIdQueryParameter = jobIdQueryParameter;
+  }
 }

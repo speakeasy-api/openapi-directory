@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     public String allocationId;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String associationId;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String failureMessage;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -33,6 +36,7 @@ public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public Boolean isPrimary;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -40,6 +44,7 @@ public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String networkInterfaceId;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -47,6 +52,7 @@ public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String privateIp;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -54,6 +60,7 @@ public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String publicIp;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -61,9 +68,11 @@ public class AssignPrivateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public AssignPrivateNatGatewayAddressResultNatGatewayAddressesStatusEnum status;
+
     public AssignPrivateNatGatewayAddressResultNatGatewayAddresses withStatus(AssignPrivateNatGatewayAddressResultNatGatewayAddressesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssignPrivateNatGatewayAddressResultNatGatewayAddresses(){}
 }

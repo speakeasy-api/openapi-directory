@@ -12,6 +12,7 @@ public class ExtendLicenseConsumptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public ExtendLicenseConsumptionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class ExtendLicenseConsumptionRequest {
     
     @JsonProperty("LicenseConsumptionToken")
     public String licenseConsumptionToken;
+
     public ExtendLicenseConsumptionRequest withLicenseConsumptionToken(String licenseConsumptionToken) {
         this.licenseConsumptionToken = licenseConsumptionToken;
         return this;
     }
     
+    public ExtendLicenseConsumptionRequest(@JsonProperty("LicenseConsumptionToken") String licenseConsumptionToken) {
+        this.licenseConsumptionToken = licenseConsumptionToken;
+  }
 }

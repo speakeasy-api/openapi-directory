@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIdentityProvidersResponse {
@@ -12,6 +13,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListIdentityProvidersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object conflictException;
+
     public ListIdentityProvidersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListIdentityProvidersResponse {
     
     
     public String contentType;
+
     public ListIdentityProvidersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object internalServerException;
+
     public ListIdentityProvidersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIdentityProvidersResponse listIdentityProvidersResponse;
+
     public ListIdentityProvidersResponse withListIdentityProvidersResponse(org.openapis.openapi.models.shared.ListIdentityProvidersResponse listIdentityProvidersResponse) {
         this.listIdentityProvidersResponse = listIdentityProvidersResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListIdentityProvidersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListIdentityProvidersResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListIdentityProvidersResponse {
     
     
     public Integer statusCode;
+
     public ListIdentityProvidersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListIdentityProvidersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIdentityProvidersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object throttlingException;
+
     public ListIdentityProvidersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListIdentityProvidersResponse {
      */
     
     public Object validationException;
+
     public ListIdentityProvidersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListIdentityProvidersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RebootDBInstanceMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RebootDBInstanceMessage {
     
     public String dbInstanceIdentifier;
+
     public RebootDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -19,9 +20,13 @@ public class RebootDBInstanceMessage {
     
     
     public Boolean forceFailover;
+
     public RebootDBInstanceMessage withForceFailover(Boolean forceFailover) {
         this.forceFailover = forceFailover;
         return this;
     }
     
+    public RebootDBInstanceMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

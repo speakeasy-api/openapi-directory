@@ -20,6 +20,7 @@ public class DailyVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainIspPlacements")
     public DomainIspPlacement[] domainIspPlacements;
+
     public DailyVolume withDomainIspPlacements(DomainIspPlacement[] domainIspPlacements) {
         this.domainIspPlacements = domainIspPlacements;
         return this;
@@ -30,6 +31,7 @@ public class DailyVolume {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDate")
     public OffsetDateTime startDate;
+
     public DailyVolume withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -38,9 +40,11 @@ public class DailyVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeStatistics")
     public VolumeStatistics volumeStatistics;
+
     public DailyVolume withVolumeStatistics(VolumeStatistics volumeStatistics) {
         this.volumeStatistics = volumeStatistics;
         return this;
     }
     
+    public DailyVolume(){}
 }

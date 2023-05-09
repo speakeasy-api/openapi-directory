@@ -20,6 +20,7 @@ public class ServerReplicationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted")
     public Boolean encrypted;
+
     public ServerReplicationParameters withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -28,6 +29,7 @@ public class ServerReplicationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public Long frequency;
+
     public ServerReplicationParameters withFrequency(Long frequency) {
         this.frequency = frequency;
         return this;
@@ -36,6 +38,7 @@ public class ServerReplicationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public ServerReplicationParameters withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -44,6 +47,7 @@ public class ServerReplicationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseType")
     public LicenseTypeEnum licenseType;
+
     public ServerReplicationParameters withLicenseType(LicenseTypeEnum licenseType) {
         this.licenseType = licenseType;
         return this;
@@ -52,6 +56,7 @@ public class ServerReplicationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRecentAmisToKeep")
     public Long numberOfRecentAmisToKeep;
+
     public ServerReplicationParameters withNumberOfRecentAmisToKeep(Long numberOfRecentAmisToKeep) {
         this.numberOfRecentAmisToKeep = numberOfRecentAmisToKeep;
         return this;
@@ -60,6 +65,7 @@ public class ServerReplicationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runOnce")
     public Boolean runOnce;
+
     public ServerReplicationParameters withRunOnce(Boolean runOnce) {
         this.runOnce = runOnce;
         return this;
@@ -70,9 +76,11 @@ public class ServerReplicationParameters {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("seedTime")
     public OffsetDateTime seedTime;
+
     public ServerReplicationParameters withSeedTime(OffsetDateTime seedTime) {
         this.seedTime = seedTime;
         return this;
     }
     
+    public ServerReplicationParameters(){}
 }

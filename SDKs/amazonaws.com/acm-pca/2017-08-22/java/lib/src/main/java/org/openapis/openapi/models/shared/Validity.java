@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Validity {
     @JsonProperty("Type")
     public ValidityPeriodTypeEnum type;
+
     public Validity withType(ValidityPeriodTypeEnum type) {
         this.type = type;
         return this;
@@ -19,9 +20,14 @@ public class Validity {
     
     @JsonProperty("Value")
     public Long value;
+
     public Validity withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Validity(@JsonProperty("Type") ValidityPeriodTypeEnum type, @JsonProperty("Value") Long value) {
+        this.type = type;
+        this.value = value;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LogDeliveryConfigurationList {
     
     public DestinationDetails destinationDetails;
+
     public LogDeliveryConfigurationList withDestinationDetails(DestinationDetails destinationDetails) {
         this.destinationDetails = destinationDetails;
         return this;
@@ -19,6 +20,7 @@ public class LogDeliveryConfigurationList {
     
     
     public DestinationTypeEnum destinationType;
+
     public LogDeliveryConfigurationList withDestinationType(DestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -26,6 +28,7 @@ public class LogDeliveryConfigurationList {
     
     
     public LogFormatEnum logFormat;
+
     public LogDeliveryConfigurationList withLogFormat(LogFormatEnum logFormat) {
         this.logFormat = logFormat;
         return this;
@@ -33,6 +36,7 @@ public class LogDeliveryConfigurationList {
     
     
     public LogTypeEnum logType;
+
     public LogDeliveryConfigurationList withLogType(LogTypeEnum logType) {
         this.logType = logType;
         return this;
@@ -40,6 +44,7 @@ public class LogDeliveryConfigurationList {
     
     
     public String message;
+
     public LogDeliveryConfigurationList withMessage(String message) {
         this.message = message;
         return this;
@@ -47,9 +52,11 @@ public class LogDeliveryConfigurationList {
     
     
     public LogDeliveryConfigurationStatusEnum status;
+
     public LogDeliveryConfigurationList withStatus(LogDeliveryConfigurationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public LogDeliveryConfigurationList(){}
 }

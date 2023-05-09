@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAppsResponse {
     
     public String contentType;
+
     public DescribeAppsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAppsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAppsResult describeAppsResult;
+
     public DescribeAppsResponse withDescribeAppsResult(org.openapis.openapi.models.shared.DescribeAppsResult describeAppsResult) {
         this.describeAppsResult = describeAppsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAppsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAppsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeAppsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAppsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeAppsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAppsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeAppsResponse {
      */
     
     public Object validationException;
+
     public DescribeAppsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAppsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCompanyTimeOffsIdResponse {
     
     public String contentType;
+
     public DeleteCompanyTimeOffsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCompanyTimeOffsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public DeleteCompanyTimeOffsIdResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCompanyTimeOffsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Response response;
+
     public DeleteCompanyTimeOffsIdResponse withResponse(org.openapis.openapi.models.shared.Response response) {
         this.response = response;
         return this;
@@ -36,6 +40,7 @@ public class DeleteCompanyTimeOffsIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteCompanyTimeOffsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteCompanyTimeOffsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCompanyTimeOffsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCompanyTimeOffsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

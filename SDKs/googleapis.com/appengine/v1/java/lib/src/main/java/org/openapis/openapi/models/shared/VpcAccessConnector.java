@@ -18,6 +18,7 @@ public class VpcAccessConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressSetting")
     public VpcAccessConnectorEgressSettingEnum egressSetting;
+
     public VpcAccessConnector withEgressSetting(VpcAccessConnectorEgressSettingEnum egressSetting) {
         this.egressSetting = egressSetting;
         return this;
@@ -29,9 +30,11 @@ public class VpcAccessConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VpcAccessConnector withName(String name) {
         this.name = name;
         return this;
     }
     
+    public VpcAccessConnector(){}
 }

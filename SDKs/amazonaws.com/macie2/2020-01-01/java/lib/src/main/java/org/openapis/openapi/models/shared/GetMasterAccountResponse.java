@@ -15,9 +15,11 @@ public class GetMasterAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("master")
     public Invitation master;
+
     public GetMasterAccountResponse withMaster(Invitation master) {
         this.master = master;
         return this;
     }
     
+    public GetMasterAccountResponse(){}
 }

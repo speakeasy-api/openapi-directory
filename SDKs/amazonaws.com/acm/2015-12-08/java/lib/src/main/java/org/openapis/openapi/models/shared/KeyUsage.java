@@ -15,9 +15,11 @@ public class KeyUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public KeyUsageNameEnum name;
+
     public KeyUsage withName(KeyUsageNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public KeyUsage(){}
 }

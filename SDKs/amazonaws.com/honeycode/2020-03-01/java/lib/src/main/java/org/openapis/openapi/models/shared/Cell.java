@@ -15,6 +15,7 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public FormatEnum format;
+
     public Cell withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -23,6 +24,7 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedValue")
     public String formattedValue;
+
     public Cell withFormattedValue(String formattedValue) {
         this.formattedValue = formattedValue;
         return this;
@@ -31,6 +33,7 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedValues")
     public String[] formattedValues;
+
     public Cell withFormattedValues(String[] formattedValues) {
         this.formattedValues = formattedValues;
         return this;
@@ -39,6 +42,7 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formula")
     public String formula;
+
     public Cell withFormula(String formula) {
         this.formula = formula;
         return this;
@@ -47,9 +51,11 @@ public class Cell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawValue")
     public String rawValue;
+
     public Cell withRawValue(String rawValue) {
         this.rawValue = rawValue;
         return this;
     }
     
+    public Cell(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVerifiedAccessInstanceRequest {
     
     public String clientToken;
+
     public CreateVerifiedAccessInstanceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateVerifiedAccessInstanceRequest {
     
     
     public String description;
+
     public CreateVerifiedAccessInstanceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateVerifiedAccessInstanceRequest {
     
     
     public Boolean dryRun;
+
     public CreateVerifiedAccessInstanceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,9 +33,11 @@ public class CreateVerifiedAccessInstanceRequest {
     
     
     public CreateVerifiedAccessInstanceRequestTagSpecifications[] tagSpecifications;
+
     public CreateVerifiedAccessInstanceRequest withTagSpecifications(CreateVerifiedAccessInstanceRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateVerifiedAccessInstanceRequest(){}
 }

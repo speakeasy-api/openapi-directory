@@ -15,6 +15,7 @@ public class AssetHierarchyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childAssetId")
     public String childAssetId;
+
     public AssetHierarchyInfo withChildAssetId(String childAssetId) {
         this.childAssetId = childAssetId;
         return this;
@@ -23,9 +24,11 @@ public class AssetHierarchyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAssetId")
     public String parentAssetId;
+
     public AssetHierarchyInfo withParentAssetId(String parentAssetId) {
         this.parentAssetId = parentAssetId;
         return this;
     }
     
+    public AssetHierarchyInfo(){}
 }

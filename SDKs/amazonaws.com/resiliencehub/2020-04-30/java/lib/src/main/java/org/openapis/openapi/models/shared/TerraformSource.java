@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TerraformSource {
     @JsonProperty("s3StateFileUrl")
     public String s3StateFileUrl;
+
     public TerraformSource withS3StateFileUrl(String s3StateFileUrl) {
         this.s3StateFileUrl = s3StateFileUrl;
         return this;
     }
     
+    public TerraformSource(@JsonProperty("s3StateFileUrl") String s3StateFileUrl) {
+        this.s3StateFileUrl = s3StateFileUrl;
+  }
 }

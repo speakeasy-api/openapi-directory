@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy withCategories(String[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy(){}
 }

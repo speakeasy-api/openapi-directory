@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillbeeId")
     public Long billbeeId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withBillbeeId(Long billbeeId) {
         this.billbeeId = billbeeId;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Company")
     public String company;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withCompany(String company) {
         this.company = company;
         return this;
@@ -36,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withCountry(String country) {
         this.country = country;
         return this;
@@ -44,6 +48,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryISO2")
     public String countryIso2;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -52,6 +57,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withEmail(String email) {
         this.email = email;
         return this;
@@ -60,6 +66,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -68,6 +75,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HouseNumber")
     public String houseNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withHouseNumber(String houseNumber) {
         this.houseNumber = houseNumber;
         return this;
@@ -76,6 +84,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -84,6 +93,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Line2")
     public String line2;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -92,6 +102,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameAddition")
     public String nameAddition;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withNameAddition(String nameAddition) {
         this.nameAddition = nameAddition;
         return this;
@@ -100,6 +111,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Phone")
     public String phone;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -108,6 +120,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withState(String state) {
         this.state = state;
         return this;
@@ -116,6 +129,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Street")
     public String street;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withStreet(String street) {
         this.street = street;
         return this;
@@ -124,9 +138,11 @@ public class BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zip")
     public String zip;
+
     public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelOrderAddressAPIModel(){}
 }

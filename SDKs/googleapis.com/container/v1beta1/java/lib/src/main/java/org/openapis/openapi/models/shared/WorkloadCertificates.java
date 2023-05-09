@@ -18,9 +18,11 @@ public class WorkloadCertificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableCertificates")
     public Boolean enableCertificates;
+
     public WorkloadCertificates withEnableCertificates(Boolean enableCertificates) {
         this.enableCertificates = enableCertificates;
         return this;
     }
     
+    public WorkloadCertificates(){}
 }

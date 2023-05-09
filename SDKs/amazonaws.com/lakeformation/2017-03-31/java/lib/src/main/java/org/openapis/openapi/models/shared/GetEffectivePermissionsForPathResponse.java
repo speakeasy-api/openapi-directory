@@ -15,6 +15,7 @@ public class GetEffectivePermissionsForPathResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetEffectivePermissionsForPathResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetEffectivePermissionsForPathResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public PrincipalResourcePermissions[] permissions;
+
     public GetEffectivePermissionsForPathResponse withPermissions(PrincipalResourcePermissions[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GetEffectivePermissionsForPathResponse(){}
 }

@@ -12,6 +12,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all-properties")
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProperties[] allProperties;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withAllProperties(GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProperties[] allProperties) {
         this.allProperties = allProperties;
         return this;
@@ -20,6 +21,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetID")
     public Long assetID;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withAssetID(Long assetID) {
         this.assetID = assetID;
         return this;
@@ -28,6 +30,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetTitle")
     public String assetTitle;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withAssetTitle(String assetTitle) {
         this.assetTitle = assetTitle;
         return this;
@@ -36,6 +39,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetURL")
     public String assetURL;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withAssetURL(String assetURL) {
         this.assetURL = assetURL;
         return this;
@@ -44,6 +48,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDate")
     public String createDate;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withCreateDate(String createDate) {
         this.createDate = createDate;
         return this;
@@ -52,6 +57,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetLabels[] labels;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withLabels(GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetLabels[] labels) {
         this.labels = labels;
         return this;
@@ -60,6 +66,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetProperties properties;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withProperties(GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetProperties properties) {
         this.properties = properties;
         return this;
@@ -68,6 +75,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withSource(String source) {
         this.source = source;
         return this;
@@ -76,6 +84,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomy")
     public String taxonomy;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withTaxonomy(String taxonomy) {
         this.taxonomy = taxonomy;
         return this;
@@ -84,6 +93,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public java.util.Map<String, Object>[] text;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withText(java.util.Map<String, Object>[] text) {
         this.text = text;
         return this;
@@ -92,6 +102,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateDate")
     public String updateDate;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withUpdateDate(String updateDate) {
         this.updateDate = updateDate;
         return this;
@@ -100,9 +111,11 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorID")
     public String vendorID;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset withVendorID(String vendorID) {
         this.vendorID = vendorID;
         return this;
     }
     
+    public GETUserContentUserJSON200ApplicationJSONResultsCommentsAsset(){}
 }

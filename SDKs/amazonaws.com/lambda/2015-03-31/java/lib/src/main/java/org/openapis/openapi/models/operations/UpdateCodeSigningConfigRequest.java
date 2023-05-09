@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCodeSigningConfigRequest {
@@ -12,6 +13,7 @@ public class UpdateCodeSigningConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CodeSigningConfigArn")
     public String codeSigningConfigArn;
+
     public UpdateCodeSigningConfigRequest withCodeSigningConfigArn(String codeSigningConfigArn) {
         this.codeSigningConfigArn = codeSigningConfigArn;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateCodeSigningConfigRequestBody requestBody;
+
     public UpdateCodeSigningConfigRequest withRequestBody(UpdateCodeSigningConfigRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateCodeSigningConfigRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateCodeSigningConfigRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateCodeSigningConfigRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateCodeSigningConfigRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateCodeSigningConfigRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateCodeSigningConfigRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class UpdateCodeSigningConfigRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateCodeSigningConfigRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateCodeSigningConfigRequest(@JsonProperty("CodeSigningConfigArn") String codeSigningConfigArn, @JsonProperty("RequestBody") UpdateCodeSigningConfigRequestBody requestBody) {
+        this.codeSigningConfigArn = codeSigningConfigArn;
+        this.requestBody = requestBody;
+  }
 }

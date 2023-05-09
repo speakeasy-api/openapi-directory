@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicaSettingsUpdate {
     @JsonProperty("RegionName")
     public String regionName;
+
     public ReplicaSettingsUpdate withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -22,6 +23,7 @@ public class ReplicaSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaGlobalSecondaryIndexSettingsUpdate")
     public ReplicaGlobalSecondaryIndexSettingsUpdate[] replicaGlobalSecondaryIndexSettingsUpdate;
+
     public ReplicaSettingsUpdate withReplicaGlobalSecondaryIndexSettingsUpdate(ReplicaGlobalSecondaryIndexSettingsUpdate[] replicaGlobalSecondaryIndexSettingsUpdate) {
         this.replicaGlobalSecondaryIndexSettingsUpdate = replicaGlobalSecondaryIndexSettingsUpdate;
         return this;
@@ -30,6 +32,7 @@ public class ReplicaSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedReadCapacityAutoScalingSettingsUpdate")
     public AutoScalingSettingsUpdate replicaProvisionedReadCapacityAutoScalingSettingsUpdate;
+
     public ReplicaSettingsUpdate withReplicaProvisionedReadCapacityAutoScalingSettingsUpdate(AutoScalingSettingsUpdate replicaProvisionedReadCapacityAutoScalingSettingsUpdate) {
         this.replicaProvisionedReadCapacityAutoScalingSettingsUpdate = replicaProvisionedReadCapacityAutoScalingSettingsUpdate;
         return this;
@@ -38,6 +41,7 @@ public class ReplicaSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaProvisionedReadCapacityUnits")
     public Long replicaProvisionedReadCapacityUnits;
+
     public ReplicaSettingsUpdate withReplicaProvisionedReadCapacityUnits(Long replicaProvisionedReadCapacityUnits) {
         this.replicaProvisionedReadCapacityUnits = replicaProvisionedReadCapacityUnits;
         return this;
@@ -46,9 +50,13 @@ public class ReplicaSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaTableClass")
     public TableClassEnum replicaTableClass;
+
     public ReplicaSettingsUpdate withReplicaTableClass(TableClassEnum replicaTableClass) {
         this.replicaTableClass = replicaTableClass;
         return this;
     }
     
+    public ReplicaSettingsUpdate(@JsonProperty("RegionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

@@ -18,6 +18,7 @@ public class RichLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public RichLinkInput withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -29,6 +30,7 @@ public class RichLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public RichLinkInput withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -40,6 +42,7 @@ public class RichLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedTextStyleChanges")
     public java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges;
+
     public RichLinkInput withSuggestedTextStyleChanges(java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges) {
         this.suggestedTextStyleChanges = suggestedTextStyleChanges;
         return this;
@@ -51,9 +54,11 @@ public class RichLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public RichLinkInput withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public RichLinkInput(){}
 }

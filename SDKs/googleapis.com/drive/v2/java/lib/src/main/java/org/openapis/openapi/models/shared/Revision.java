@@ -20,6 +20,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public Revision withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -31,6 +32,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Revision withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -42,6 +44,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportLinks")
     public java.util.Map<String, String> exportLinks;
+
     public Revision withExportLinks(java.util.Map<String, String> exportLinks) {
         this.exportLinks = exportLinks;
         return this;
@@ -53,6 +56,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSize")
     public String fileSize;
+
     public Revision withFileSize(String fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -64,6 +68,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Revision withId(String id) {
         this.id = id;
         return this;
@@ -75,6 +80,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Revision withKind(String kind) {
         this.kind = kind;
         return this;
@@ -86,6 +92,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifyingUser")
     public User lastModifyingUser;
+
     public Revision withLastModifyingUser(User lastModifyingUser) {
         this.lastModifyingUser = lastModifyingUser;
         return this;
@@ -97,6 +104,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifyingUserName")
     public String lastModifyingUserName;
+
     public Revision withLastModifyingUserName(String lastModifyingUserName) {
         this.lastModifyingUserName = lastModifyingUserName;
         return this;
@@ -108,6 +116,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5Checksum")
     public String md5Checksum;
+
     public Revision withMd5Checksum(String md5Checksum) {
         this.md5Checksum = md5Checksum;
         return this;
@@ -119,6 +128,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public Revision withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -132,6 +142,7 @@ public class Revision {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedDate")
     public OffsetDateTime modifiedDate;
+
     public Revision withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -143,6 +154,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalFilename")
     public String originalFilename;
+
     public Revision withOriginalFilename(String originalFilename) {
         this.originalFilename = originalFilename;
         return this;
@@ -154,6 +166,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinned")
     public Boolean pinned;
+
     public Revision withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -165,6 +178,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishAuto")
     public Boolean publishAuto;
+
     public Revision withPublishAuto(Boolean publishAuto) {
         this.publishAuto = publishAuto;
         return this;
@@ -176,6 +190,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
+
     public Revision withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -187,6 +202,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishedLink")
     public String publishedLink;
+
     public Revision withPublishedLink(String publishedLink) {
         this.publishedLink = publishedLink;
         return this;
@@ -198,6 +214,7 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishedOutsideDomain")
     public Boolean publishedOutsideDomain;
+
     public Revision withPublishedOutsideDomain(Boolean publishedOutsideDomain) {
         this.publishedOutsideDomain = publishedOutsideDomain;
         return this;
@@ -209,9 +226,11 @@ public class Revision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Revision withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public Revision(){}
 }

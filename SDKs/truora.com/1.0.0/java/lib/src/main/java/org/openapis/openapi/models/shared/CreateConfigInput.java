@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=country")
     public CreateConfigInputCountryEnum country;
+
     public CreateConfigInput withCountry(CreateConfigInputCountryEnum country) {
         this.country = country;
         return this;
@@ -25,6 +27,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_affiliations_and_insurances")
     public Float datasetAffiliationsAndInsurances;
+
     public CreateConfigInput withDatasetAffiliationsAndInsurances(Float datasetAffiliationsAndInsurances) {
         this.datasetAffiliationsAndInsurances = datasetAffiliationsAndInsurances;
         return this;
@@ -35,6 +38,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_alert_in_media")
     public Float datasetAlertInMedia;
+
     public CreateConfigInput withDatasetAlertInMedia(Float datasetAlertInMedia) {
         this.datasetAlertInMedia = datasetAlertInMedia;
         return this;
@@ -45,6 +49,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_business_background")
     public Float datasetBusinessBackground;
+
     public CreateConfigInput withDatasetBusinessBackground(Float datasetBusinessBackground) {
         this.datasetBusinessBackground = datasetBusinessBackground;
         return this;
@@ -55,6 +60,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_criminal_record")
     public Float datasetCriminalRecord;
+
     public CreateConfigInput withDatasetCriminalRecord(Float datasetCriminalRecord) {
         this.datasetCriminalRecord = datasetCriminalRecord;
         return this;
@@ -65,6 +71,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_driving_licenses")
     public Float datasetDrivingLicenses;
+
     public CreateConfigInput withDatasetDrivingLicenses(Float datasetDrivingLicenses) {
         this.datasetDrivingLicenses = datasetDrivingLicenses;
         return this;
@@ -75,6 +82,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_international_background")
     public Float datasetInternationalBackground;
+
     public CreateConfigInput withDatasetInternationalBackground(Float datasetInternationalBackground) {
         this.datasetInternationalBackground = datasetInternationalBackground;
         return this;
@@ -85,6 +93,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_legal_background")
     public Float datasetLegalBackground;
+
     public CreateConfigInput withDatasetLegalBackground(Float datasetLegalBackground) {
         this.datasetLegalBackground = datasetLegalBackground;
         return this;
@@ -95,6 +104,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_personal_identity")
     public Float datasetPersonalIdentity;
+
     public CreateConfigInput withDatasetPersonalIdentity(Float datasetPersonalIdentity) {
         this.datasetPersonalIdentity = datasetPersonalIdentity;
         return this;
@@ -105,6 +115,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_professional_background")
     public Float datasetProfessionalBackground;
+
     public CreateConfigInput withDatasetProfessionalBackground(Float datasetProfessionalBackground) {
         this.datasetProfessionalBackground = datasetProfessionalBackground;
         return this;
@@ -115,6 +126,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_taxes_and_finances")
     public Float datasetTaxesAndFinances;
+
     public CreateConfigInput withDatasetTaxesAndFinances(Float datasetTaxesAndFinances) {
         this.datasetTaxesAndFinances = datasetTaxesAndFinances;
         return this;
@@ -125,6 +137,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_traffic_fines")
     public Float datasetTrafficFines;
+
     public CreateConfigInput withDatasetTrafficFines(Float datasetTrafficFines) {
         this.datasetTrafficFines = datasetTrafficFines;
         return this;
@@ -135,6 +148,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_vehicle_information")
     public Float datasetVehicleInformation;
+
     public CreateConfigInput withDatasetVehicleInformation(Float datasetVehicleInformation) {
         this.datasetVehicleInformation = datasetVehicleInformation;
         return this;
@@ -145,6 +159,7 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=dataset_vehicle_permits")
     public Float datasetVehiclePermits;
+
     public CreateConfigInput withDatasetVehiclePermits(Float datasetVehiclePermits) {
         this.datasetVehiclePermits = datasetVehiclePermits;
         return this;
@@ -155,9 +170,14 @@ public class CreateConfigInput {
      */
     @SpeakeasyMetadata("form:name=type")
     public String type;
+
     public CreateConfigInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateConfigInput(@JsonProperty("country") CreateConfigInputCountryEnum country, @JsonProperty("type") String type) {
+        this.country = country;
+        this.type = type;
+  }
 }

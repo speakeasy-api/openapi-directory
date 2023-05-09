@@ -19,6 +19,7 @@ public class AuditLogEventActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actor_type")
     public AuditLogEventActorActorTypeEnum actorType;
+
     public AuditLogEventActor withActorType(AuditLogEventActorActorTypeEnum actorType) {
         this.actorType = actorType;
         return this;
@@ -30,6 +31,7 @@ public class AuditLogEventActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AuditLogEventActor withEmail(String email) {
         this.email = email;
         return this;
@@ -41,6 +43,7 @@ public class AuditLogEventActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public AuditLogEventActor withGid(String gid) {
         this.gid = gid;
         return this;
@@ -52,9 +55,11 @@ public class AuditLogEventActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuditLogEventActor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AuditLogEventActor(){}
 }

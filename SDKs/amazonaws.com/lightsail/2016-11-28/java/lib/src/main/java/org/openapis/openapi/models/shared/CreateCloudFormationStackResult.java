@@ -15,9 +15,11 @@ public class CreateCloudFormationStackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public CreateCloudFormationStackResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public CreateCloudFormationStackResult(){}
 }

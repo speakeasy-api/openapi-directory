@@ -12,6 +12,7 @@ public class UpdateUserDefinedFunctionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public UpdateUserDefinedFunctionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateUserDefinedFunctionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public UpdateUserDefinedFunctionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class UpdateUserDefinedFunctionRequest {
     
     @JsonProperty("FunctionInput")
     public UserDefinedFunctionInput functionInput;
+
     public UpdateUserDefinedFunctionRequest withFunctionInput(UserDefinedFunctionInput functionInput) {
         this.functionInput = functionInput;
         return this;
@@ -33,9 +36,15 @@ public class UpdateUserDefinedFunctionRequest {
     
     @JsonProperty("FunctionName")
     public String functionName;
+
     public UpdateUserDefinedFunctionRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
     }
     
+    public UpdateUserDefinedFunctionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("FunctionInput") UserDefinedFunctionInput functionInput, @JsonProperty("FunctionName") String functionName) {
+        this.databaseName = databaseName;
+        this.functionInput = functionInput;
+        this.functionName = functionName;
+  }
 }

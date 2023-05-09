@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public GoogleCloudAssetV1BigQueryDestination withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionKey")
     public GoogleCloudAssetV1BigQueryDestinationPartitionKeyEnum partitionKey;
+
     public GoogleCloudAssetV1BigQueryDestination withPartitionKey(GoogleCloudAssetV1BigQueryDestinationPartitionKeyEnum partitionKey) {
         this.partitionKey = partitionKey;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tablePrefix")
     public String tablePrefix;
+
     public GoogleCloudAssetV1BigQueryDestination withTablePrefix(String tablePrefix) {
         this.tablePrefix = tablePrefix;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudAssetV1BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeDisposition")
     public String writeDisposition;
+
     public GoogleCloudAssetV1BigQueryDestination withWriteDisposition(String writeDisposition) {
         this.writeDisposition = writeDisposition;
         return this;
     }
     
+    public GoogleCloudAssetV1BigQueryDestination(){}
 }

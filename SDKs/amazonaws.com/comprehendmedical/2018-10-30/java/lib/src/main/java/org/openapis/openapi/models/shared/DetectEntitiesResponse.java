@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectEntitiesResponse {
     @JsonProperty("Entities")
     public Entity[] entities;
+
     public DetectEntitiesResponse withEntities(Entity[] entities) {
         this.entities = entities;
         return this;
@@ -21,6 +22,7 @@ public class DetectEntitiesResponse {
     
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public DetectEntitiesResponse withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -29,6 +31,7 @@ public class DetectEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public DetectEntitiesResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -37,9 +40,14 @@ public class DetectEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnmappedAttributes")
     public UnmappedAttribute[] unmappedAttributes;
+
     public DetectEntitiesResponse withUnmappedAttributes(UnmappedAttribute[] unmappedAttributes) {
         this.unmappedAttributes = unmappedAttributes;
         return this;
     }
     
+    public DetectEntitiesResponse(@JsonProperty("Entities") Entity[] entities, @JsonProperty("ModelVersion") String modelVersion) {
+        this.entities = entities;
+        this.modelVersion = modelVersion;
+  }
 }

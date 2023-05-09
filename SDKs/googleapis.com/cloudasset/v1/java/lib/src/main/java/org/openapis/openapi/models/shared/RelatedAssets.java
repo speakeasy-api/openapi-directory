@@ -18,6 +18,7 @@ public class RelatedAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public RelatedAsset[] assets;
+
     public RelatedAssets withAssets(RelatedAsset[] assets) {
         this.assets = assets;
         return this;
@@ -29,9 +30,11 @@ public class RelatedAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipAttributes")
     public RelationshipAttributes relationshipAttributes;
+
     public RelatedAssets withRelationshipAttributes(RelationshipAttributes relationshipAttributes) {
         this.relationshipAttributes = relationshipAttributes;
         return this;
     }
     
+    public RelatedAssets(){}
 }

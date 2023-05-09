@@ -19,6 +19,7 @@ public class BillbeeInterfacesOrderHistoryEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public BillbeeInterfacesOrderHistoryEntry withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class BillbeeInterfacesOrderHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmployeeName")
     public String employeeName;
+
     public BillbeeInterfacesOrderHistoryEntry withEmployeeName(String employeeName) {
         this.employeeName = employeeName;
         return this;
@@ -35,6 +37,7 @@ public class BillbeeInterfacesOrderHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTypeName")
     public String eventTypeName;
+
     public BillbeeInterfacesOrderHistoryEntry withEventTypeName(String eventTypeName) {
         this.eventTypeName = eventTypeName;
         return this;
@@ -43,6 +46,7 @@ public class BillbeeInterfacesOrderHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public BillbeeInterfacesOrderHistoryEntry withText(String text) {
         this.text = text;
         return this;
@@ -51,9 +55,11 @@ public class BillbeeInterfacesOrderHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeId")
     public Integer typeId;
+
     public BillbeeInterfacesOrderHistoryEntry withTypeId(Integer typeId) {
         this.typeId = typeId;
         return this;
     }
     
+    public BillbeeInterfacesOrderHistoryEntry(){}
 }

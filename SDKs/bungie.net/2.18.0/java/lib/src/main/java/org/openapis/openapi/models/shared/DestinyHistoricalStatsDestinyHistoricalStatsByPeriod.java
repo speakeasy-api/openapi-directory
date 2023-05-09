@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyHistoricalStatsDestinyHistoricalStatsByPeriod {
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTime;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod withAllTime(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTime) {
         this.allTime = allTime;
         return this;
@@ -16,6 +17,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsByPeriod {
     
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTimeTier1;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod withAllTimeTier1(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTimeTier1) {
         this.allTimeTier1 = allTimeTier1;
         return this;
@@ -23,6 +25,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsByPeriod {
     
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTimeTier2;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod withAllTimeTier2(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTimeTier2) {
         this.allTimeTier2 = allTimeTier2;
         return this;
@@ -30,6 +33,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsByPeriod {
     
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTimeTier3;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod withAllTimeTier3(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> allTimeTier3) {
         this.allTimeTier3 = allTimeTier3;
         return this;
@@ -37,6 +41,7 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsByPeriod {
     
     
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup[] daily;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod withDaily(DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup[] daily) {
         this.daily = daily;
         return this;
@@ -44,9 +49,11 @@ public class DestinyHistoricalStatsDestinyHistoricalStatsByPeriod {
     
     
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup[] monthly;
+
     public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod withMonthly(DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup[] monthly) {
         this.monthly = monthly;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalStatsByPeriod(){}
 }

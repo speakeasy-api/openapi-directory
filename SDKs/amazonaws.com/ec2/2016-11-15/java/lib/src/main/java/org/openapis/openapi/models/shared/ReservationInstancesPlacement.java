@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesPlacement {
     
     public String affinity;
+
     public ReservationInstancesPlacement withAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -19,6 +20,7 @@ public class ReservationInstancesPlacement {
     
     
     public String availabilityZone;
+
     public ReservationInstancesPlacement withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class ReservationInstancesPlacement {
     
     
     public String groupId;
+
     public ReservationInstancesPlacement withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class ReservationInstancesPlacement {
     
     
     public String groupName;
+
     public ReservationInstancesPlacement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,6 +44,7 @@ public class ReservationInstancesPlacement {
     
     
     public String hostId;
+
     public ReservationInstancesPlacement withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -47,6 +52,7 @@ public class ReservationInstancesPlacement {
     
     
     public String hostResourceGroupArn;
+
     public ReservationInstancesPlacement withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class ReservationInstancesPlacement {
     
     
     public Long partitionNumber;
+
     public ReservationInstancesPlacement withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -61,6 +68,7 @@ public class ReservationInstancesPlacement {
     
     
     public String spreadDomain;
+
     public ReservationInstancesPlacement withSpreadDomain(String spreadDomain) {
         this.spreadDomain = spreadDomain;
         return this;
@@ -68,9 +76,11 @@ public class ReservationInstancesPlacement {
     
     
     public ReservationInstancesPlacementTenancyEnum tenancy;
+
     public ReservationInstancesPlacement withTenancy(ReservationInstancesPlacementTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public ReservationInstancesPlacement(){}
 }

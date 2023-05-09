@@ -50,11 +50,9 @@ public class VatCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VatCategoriesGetResponse res = new org.openapis.openapi.models.operations.VatCategoriesGetResponse() {{
+        org.openapis.openapi.models.operations.VatCategoriesGetResponse res = new org.openapis.openapi.models.operations.VatCategoriesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultVatCategoryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class VatCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VatCategoriesProcessVatRatesResponse res = new org.openapis.openapi.models.operations.VatCategoriesProcessVatRatesResponse() {{
+        org.openapis.openapi.models.operations.VatCategoriesProcessVatRatesResponse res = new org.openapis.openapi.models.operations.VatCategoriesProcessVatRatesResponse(contentType, httpRes.statusCode()) {{
             vatCategoriesProcessVatRates200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

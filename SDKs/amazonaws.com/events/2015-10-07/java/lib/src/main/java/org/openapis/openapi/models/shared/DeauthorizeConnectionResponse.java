@@ -20,6 +20,7 @@ public class DeauthorizeConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public DeauthorizeConnectionResponse withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -28,6 +29,7 @@ public class DeauthorizeConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionState")
     public ConnectionStateEnum connectionState;
+
     public DeauthorizeConnectionResponse withConnectionState(ConnectionStateEnum connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -38,6 +40,7 @@ public class DeauthorizeConnectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DeauthorizeConnectionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class DeauthorizeConnectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAuthorizedTime")
     public OffsetDateTime lastAuthorizedTime;
+
     public DeauthorizeConnectionResponse withLastAuthorizedTime(OffsetDateTime lastAuthorizedTime) {
         this.lastAuthorizedTime = lastAuthorizedTime;
         return this;
@@ -58,9 +62,11 @@ public class DeauthorizeConnectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DeauthorizeConnectionResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public DeauthorizeConnectionResponse(){}
 }

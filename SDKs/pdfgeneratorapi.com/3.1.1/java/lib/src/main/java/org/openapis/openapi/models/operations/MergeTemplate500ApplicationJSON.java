@@ -18,6 +18,7 @@ public class MergeTemplate500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public MergeTemplate500ApplicationJSON withError(String error) {
         this.error = error;
         return this;
@@ -29,9 +30,11 @@ public class MergeTemplate500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public MergeTemplate500ApplicationJSON withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public MergeTemplate500ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public Attachment withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -23,6 +24,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AttachmentStatusEnum status;
+
     public Attachment withStatus(AttachmentStatusEnum status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public Attachment withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -39,9 +42,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public Attachment withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public Attachment(){}
 }

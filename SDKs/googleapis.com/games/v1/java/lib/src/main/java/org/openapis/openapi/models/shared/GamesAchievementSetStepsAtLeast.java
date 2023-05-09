@@ -18,6 +18,7 @@ public class GamesAchievementSetStepsAtLeast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GamesAchievementSetStepsAtLeast withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class GamesAchievementSetStepsAtLeast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public Integer steps;
+
     public GamesAchievementSetStepsAtLeast withSteps(Integer steps) {
         this.steps = steps;
         return this;
     }
     
+    public GamesAchievementSetStepsAtLeast(){}
 }

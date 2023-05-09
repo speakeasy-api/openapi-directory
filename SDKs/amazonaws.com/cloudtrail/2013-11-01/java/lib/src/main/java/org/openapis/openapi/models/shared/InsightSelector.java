@@ -15,9 +15,11 @@ public class InsightSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightType")
     public InsightTypeEnum insightType;
+
     public InsightSelector withInsightType(InsightTypeEnum insightType) {
         this.insightType = insightType;
         return this;
     }
     
+    public InsightSelector(){}
 }

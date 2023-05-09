@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteBlueGreenDeploymentRequest {
     
     public String blueGreenDeploymentIdentifier;
+
     public DeleteBlueGreenDeploymentRequest withBlueGreenDeploymentIdentifier(String blueGreenDeploymentIdentifier) {
         this.blueGreenDeploymentIdentifier = blueGreenDeploymentIdentifier;
         return this;
@@ -16,9 +17,13 @@ public class DeleteBlueGreenDeploymentRequest {
     
     
     public Boolean deleteTarget;
+
     public DeleteBlueGreenDeploymentRequest withDeleteTarget(Boolean deleteTarget) {
         this.deleteTarget = deleteTarget;
         return this;
     }
     
+    public DeleteBlueGreenDeploymentRequest(@JsonProperty("BlueGreenDeploymentIdentifier") String blueGreenDeploymentIdentifier) {
+        this.blueGreenDeploymentIdentifier = blueGreenDeploymentIdentifier;
+  }
 }

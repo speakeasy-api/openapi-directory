@@ -15,6 +15,7 @@ public class AssociateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public AssociateUserRequestBody withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -25,6 +26,7 @@ public class AssociateUserRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public AssociateUserRequestBodyIdentityProvider identityProvider;
+
     public AssociateUserRequestBody withIdentityProvider(AssociateUserRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -35,6 +37,7 @@ public class AssociateUserRequestBody {
      */
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AssociateUserRequestBody withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -45,9 +48,15 @@ public class AssociateUserRequestBody {
      */
     @JsonProperty("Username")
     public String username;
+
     public AssociateUserRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AssociateUserRequestBody(@JsonProperty("IdentityProvider") AssociateUserRequestBodyIdentityProvider identityProvider, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Username") String username) {
+        this.identityProvider = identityProvider;
+        this.instanceId = instanceId;
+        this.username = username;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPolicyResponse {
     
     public String contentType;
+
     public GetPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPolicyResponse getPolicyResponse;
+
     public GetPolicyResponse withGetPolicyResponse(org.openapis.openapi.models.shared.GetPolicyResponse getPolicyResponse) {
         this.getPolicyResponse = getPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetPolicyResponse {
      */
     
     public Object invalidArnException;
+
     public GetPolicyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class GetPolicyResponse {
      */
     
     public Object invalidStateException;
+
     public GetPolicyResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -46,6 +51,7 @@ public class GetPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetPolicyResponse {
      */
     
     public Object requestFailedException;
+
     public GetPolicyResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -73,9 +81,14 @@ public class GetPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

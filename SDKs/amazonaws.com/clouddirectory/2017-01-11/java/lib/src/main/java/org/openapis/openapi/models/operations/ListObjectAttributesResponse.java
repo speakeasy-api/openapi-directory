@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListObjectAttributesResponse {
@@ -12,6 +13,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListObjectAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListObjectAttributesResponse {
     
     
     public String contentType;
+
     public ListObjectAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public ListObjectAttributesResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object facetValidationException;
+
     public ListObjectAttributesResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public ListObjectAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object invalidArnException;
+
     public ListObjectAttributesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListObjectAttributesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -79,6 +87,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object limitExceededException;
+
     public ListObjectAttributesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class ListObjectAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListObjectAttributesResponse listObjectAttributesResponse;
+
     public ListObjectAttributesResponse withListObjectAttributesResponse(org.openapis.openapi.models.shared.ListObjectAttributesResponse listObjectAttributesResponse) {
         this.listObjectAttributesResponse = listObjectAttributesResponse;
         return this;
@@ -96,6 +106,7 @@ public class ListObjectAttributesResponse {
     
     
     public Integer statusCode;
+
     public ListObjectAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class ListObjectAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListObjectAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListObjectAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class ListObjectAttributesResponse {
      */
     
     public Object retryableConflictException;
+
     public ListObjectAttributesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,9 +147,14 @@ public class ListObjectAttributesResponse {
      */
     
     public Object validationException;
+
     public ListObjectAttributesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListObjectAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

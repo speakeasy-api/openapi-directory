@@ -15,6 +15,7 @@ public class FulfillmentUpdateResponseSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInterrupt")
     public Boolean allowInterrupt;
+
     public FulfillmentUpdateResponseSpecification withAllowInterrupt(Boolean allowInterrupt) {
         this.allowInterrupt = allowInterrupt;
         return this;
@@ -22,6 +23,7 @@ public class FulfillmentUpdateResponseSpecification {
     
     @JsonProperty("frequencyInSeconds")
     public Long frequencyInSeconds;
+
     public FulfillmentUpdateResponseSpecification withFrequencyInSeconds(Long frequencyInSeconds) {
         this.frequencyInSeconds = frequencyInSeconds;
         return this;
@@ -29,9 +31,14 @@ public class FulfillmentUpdateResponseSpecification {
     
     @JsonProperty("messageGroups")
     public MessageGroup[] messageGroups;
+
     public FulfillmentUpdateResponseSpecification withMessageGroups(MessageGroup[] messageGroups) {
         this.messageGroups = messageGroups;
         return this;
     }
     
+    public FulfillmentUpdateResponseSpecification(@JsonProperty("frequencyInSeconds") Long frequencyInSeconds, @JsonProperty("messageGroups") MessageGroup[] messageGroups) {
+        this.frequencyInSeconds = frequencyInSeconds;
+        this.messageGroups = messageGroups;
+  }
 }

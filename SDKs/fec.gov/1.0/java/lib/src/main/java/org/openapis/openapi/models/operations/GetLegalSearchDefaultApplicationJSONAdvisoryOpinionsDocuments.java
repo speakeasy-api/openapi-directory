@@ -14,6 +14,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments withCategory(String category) {
         this.category = category;
         return this;
@@ -23,6 +24,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -31,6 +33,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_id")
     public Long documentId;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -47,9 +51,11 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsDocuments(){}
 }

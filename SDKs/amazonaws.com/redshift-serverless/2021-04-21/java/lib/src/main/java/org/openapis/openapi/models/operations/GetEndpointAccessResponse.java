@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEndpointAccessResponse {
@@ -12,6 +13,7 @@ public class GetEndpointAccessResponse {
      */
     
     public Object conflictException;
+
     public GetEndpointAccessResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class GetEndpointAccessResponse {
     
     
     public String contentType;
+
     public GetEndpointAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEndpointAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEndpointAccessResponse getEndpointAccessResponse;
+
     public GetEndpointAccessResponse withGetEndpointAccessResponse(org.openapis.openapi.models.shared.GetEndpointAccessResponse getEndpointAccessResponse) {
         this.getEndpointAccessResponse = getEndpointAccessResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEndpointAccessResponse {
      */
     
     public Object internalServerException;
+
     public GetEndpointAccessResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetEndpointAccessResponse {
     
     
     public Integer statusCode;
+
     public GetEndpointAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEndpointAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEndpointAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetEndpointAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEndpointAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetEndpointAccessResponse {
      */
     
     public Object validationException;
+
     public GetEndpointAccessResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEndpointAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GetPagesbyContentType200ApplicationJSONDataSections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public GetPagesbyContentType200ApplicationJSONDataSections withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class GetPagesbyContentType200ApplicationJSONDataSections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetPagesbyContentType200ApplicationJSONDataSections withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class GetPagesbyContentType200ApplicationJSONDataSections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetPagesbyContentType200ApplicationJSONDataSections withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetPagesbyContentType200ApplicationJSONDataSections(){}
 }

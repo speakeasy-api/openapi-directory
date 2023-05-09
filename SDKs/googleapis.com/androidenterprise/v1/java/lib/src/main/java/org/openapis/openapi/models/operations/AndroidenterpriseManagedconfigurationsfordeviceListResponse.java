@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidenterpriseManagedconfigurationsfordeviceListResponse {
     
     public String contentType;
+
     public AndroidenterpriseManagedconfigurationsfordeviceListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidenterpriseManagedconfigurationsfordeviceListResponse {
      */
     
     public org.openapis.openapi.models.shared.ManagedConfigurationsForDeviceListResponse managedConfigurationsForDeviceListResponse;
+
     public AndroidenterpriseManagedconfigurationsfordeviceListResponse withManagedConfigurationsForDeviceListResponse(org.openapis.openapi.models.shared.ManagedConfigurationsForDeviceListResponse managedConfigurationsForDeviceListResponse) {
         this.managedConfigurationsForDeviceListResponse = managedConfigurationsForDeviceListResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidenterpriseManagedconfigurationsfordeviceListResponse {
     
     
     public Integer statusCode;
+
     public AndroidenterpriseManagedconfigurationsfordeviceListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidenterpriseManagedconfigurationsfordeviceListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidenterpriseManagedconfigurationsfordeviceListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidenterpriseManagedconfigurationsfordeviceListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

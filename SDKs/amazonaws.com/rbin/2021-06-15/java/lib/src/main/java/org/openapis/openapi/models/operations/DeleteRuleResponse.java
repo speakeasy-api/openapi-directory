@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRuleResponse {
@@ -12,6 +13,7 @@ public class DeleteRuleResponse {
      */
     
     public Object conflictException;
+
     public DeleteRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRuleResponse {
     
     
     public String contentType;
+
     public DeleteRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRuleResponse {
      */
     
     public java.util.Map<String, Object> deleteRuleResponse;
+
     public DeleteRuleResponse withDeleteRuleResponse(java.util.Map<String, Object> deleteRuleResponse) {
         this.deleteRuleResponse = deleteRuleResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRuleResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteRuleResponse {
      */
     
     public Object validationException;
+
     public DeleteRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayLosses")
     public Long awayLosses;
+
     public Standing withAwayLosses(Long awayLosses) {
         this.awayLosses = awayLosses;
         return this;
@@ -20,6 +21,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayWins")
     public Long awayWins;
+
     public Standing withAwayWins(Long awayWins) {
         this.awayWins = awayWins;
         return this;
@@ -28,6 +30,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Standing withCity(String city) {
         this.city = city;
         return this;
@@ -36,6 +39,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Conference")
     public String conference;
+
     public Standing withConference(String conference) {
         this.conference = conference;
         return this;
@@ -44,6 +48,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceLosses")
     public Long conferenceLosses;
+
     public Standing withConferenceLosses(Long conferenceLosses) {
         this.conferenceLosses = conferenceLosses;
         return this;
@@ -52,6 +57,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceRank")
     public Long conferenceRank;
+
     public Standing withConferenceRank(Long conferenceRank) {
         this.conferenceRank = conferenceRank;
         return this;
@@ -60,6 +66,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConferenceWins")
     public Long conferenceWins;
+
     public Standing withConferenceWins(Long conferenceWins) {
         this.conferenceWins = conferenceWins;
         return this;
@@ -68,6 +75,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Division")
     public String division;
+
     public Standing withDivision(String division) {
         this.division = division;
         return this;
@@ -76,6 +84,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DivisionLosses")
     public Long divisionLosses;
+
     public Standing withDivisionLosses(Long divisionLosses) {
         this.divisionLosses = divisionLosses;
         return this;
@@ -84,6 +93,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DivisionRank")
     public Long divisionRank;
+
     public Standing withDivisionRank(Long divisionRank) {
         this.divisionRank = divisionRank;
         return this;
@@ -92,6 +102,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DivisionWins")
     public Long divisionWins;
+
     public Standing withDivisionWins(Long divisionWins) {
         this.divisionWins = divisionWins;
         return this;
@@ -100,6 +111,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GamesBack")
     public Double gamesBack;
+
     public Standing withGamesBack(Double gamesBack) {
         this.gamesBack = gamesBack;
         return this;
@@ -108,6 +120,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public Standing withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -116,6 +129,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeLosses")
     public Long homeLosses;
+
     public Standing withHomeLosses(Long homeLosses) {
         this.homeLosses = homeLosses;
         return this;
@@ -124,6 +138,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeWins")
     public Long homeWins;
+
     public Standing withHomeWins(Long homeWins) {
         this.homeWins = homeWins;
         return this;
@@ -132,6 +147,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Standing withKey(String key) {
         this.key = key;
         return this;
@@ -140,6 +156,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastTenLosses")
     public Long lastTenLosses;
+
     public Standing withLastTenLosses(Long lastTenLosses) {
         this.lastTenLosses = lastTenLosses;
         return this;
@@ -148,6 +165,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastTenWins")
     public Long lastTenWins;
+
     public Standing withLastTenWins(Long lastTenWins) {
         this.lastTenWins = lastTenWins;
         return this;
@@ -156,6 +174,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Losses")
     public Long losses;
+
     public Standing withLosses(Long losses) {
         this.losses = losses;
         return this;
@@ -164,6 +183,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Standing withName(String name) {
         this.name = name;
         return this;
@@ -172,6 +192,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public Double percentage;
+
     public Standing withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -180,6 +201,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsPerGameAgainst")
     public Double pointsPerGameAgainst;
+
     public Standing withPointsPerGameAgainst(Double pointsPerGameAgainst) {
         this.pointsPerGameAgainst = pointsPerGameAgainst;
         return this;
@@ -188,6 +210,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsPerGameFor")
     public Double pointsPerGameFor;
+
     public Standing withPointsPerGameFor(Double pointsPerGameFor) {
         this.pointsPerGameFor = pointsPerGameFor;
         return this;
@@ -196,6 +219,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Standing withSeason(Long season) {
         this.season = season;
         return this;
@@ -204,6 +228,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public Standing withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -212,6 +237,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Streak")
     public Long streak;
+
     public Standing withStreak(Long streak) {
         this.streak = streak;
         return this;
@@ -220,6 +246,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreakDescription")
     public String streakDescription;
+
     public Standing withStreakDescription(String streakDescription) {
         this.streakDescription = streakDescription;
         return this;
@@ -228,6 +255,7 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public Standing withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -236,9 +264,11 @@ public class Standing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wins")
     public Long wins;
+
     public Standing withWins(Long wins) {
         this.wins = wins;
         return this;
     }
     
+    public Standing(){}
 }

@@ -15,6 +15,7 @@ public class RenderResponse {
      */
     @JsonProperty("message")
     public String message;
+
     public RenderResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class RenderResponse {
      */
     @JsonProperty("response")
     public RenderResponseData response;
+
     public RenderResponse withResponse(RenderResponseData response) {
         this.response = response;
         return this;
@@ -35,9 +37,15 @@ public class RenderResponse {
      */
     @JsonProperty("success")
     public Boolean success;
+
     public RenderResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public RenderResponse(@JsonProperty("message") String message, @JsonProperty("response") RenderResponseData response, @JsonProperty("success") Boolean success) {
+        this.message = message;
+        this.response = response;
+        this.success = success;
+  }
 }

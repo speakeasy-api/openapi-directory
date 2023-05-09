@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTUpdateSigningCertificateResponse {
     
     public byte[] body;
+
     public POSTUpdateSigningCertificateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTUpdateSigningCertificateResponse {
     
     
     public String contentType;
+
     public POSTUpdateSigningCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTUpdateSigningCertificateResponse {
     
     
     public Integer statusCode;
+
     public POSTUpdateSigningCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTUpdateSigningCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTUpdateSigningCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTUpdateSigningCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

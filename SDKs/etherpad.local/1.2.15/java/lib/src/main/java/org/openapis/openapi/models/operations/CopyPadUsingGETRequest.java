@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CopyPadUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationID")
     public String destinationID;
+
     public CopyPadUsingGETRequest withDestinationID(String destinationID) {
         this.destinationID = destinationID;
         return this;
@@ -16,6 +17,7 @@ public class CopyPadUsingGETRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
     public String force;
+
     public CopyPadUsingGETRequest withForce(String force) {
         this.force = force;
         return this;
@@ -23,9 +25,11 @@ public class CopyPadUsingGETRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceID")
     public String sourceID;
+
     public CopyPadUsingGETRequest withSourceID(String sourceID) {
         this.sourceID = sourceID;
         return this;
     }
     
+    public CopyPadUsingGETRequest(){}
 }

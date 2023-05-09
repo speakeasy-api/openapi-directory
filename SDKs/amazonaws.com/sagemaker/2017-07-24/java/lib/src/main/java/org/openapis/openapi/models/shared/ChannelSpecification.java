@@ -15,6 +15,7 @@ public class ChannelSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ChannelSpecification withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ChannelSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRequired")
     public Boolean isRequired;
+
     public ChannelSpecification withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -30,6 +32,7 @@ public class ChannelSpecification {
     
     @JsonProperty("Name")
     public String name;
+
     public ChannelSpecification withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class ChannelSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedCompressionTypes")
     public CompressionTypeEnum[] supportedCompressionTypes;
+
     public ChannelSpecification withSupportedCompressionTypes(CompressionTypeEnum[] supportedCompressionTypes) {
         this.supportedCompressionTypes = supportedCompressionTypes;
         return this;
@@ -45,6 +49,7 @@ public class ChannelSpecification {
     
     @JsonProperty("SupportedContentTypes")
     public String[] supportedContentTypes;
+
     public ChannelSpecification withSupportedContentTypes(String[] supportedContentTypes) {
         this.supportedContentTypes = supportedContentTypes;
         return this;
@@ -52,9 +57,15 @@ public class ChannelSpecification {
     
     @JsonProperty("SupportedInputModes")
     public TrainingInputModeEnum[] supportedInputModes;
+
     public ChannelSpecification withSupportedInputModes(TrainingInputModeEnum[] supportedInputModes) {
         this.supportedInputModes = supportedInputModes;
         return this;
     }
     
+    public ChannelSpecification(@JsonProperty("Name") String name, @JsonProperty("SupportedContentTypes") String[] supportedContentTypes, @JsonProperty("SupportedInputModes") TrainingInputModeEnum[] supportedInputModes) {
+        this.name = name;
+        this.supportedContentTypes = supportedContentTypes;
+        this.supportedInputModes = supportedInputModes;
+  }
 }

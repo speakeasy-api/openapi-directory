@@ -18,9 +18,11 @@ public class ListTriggersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public Trigger[] triggers;
+
     public ListTriggersResponse withTriggers(Trigger[] triggers) {
         this.triggers = triggers;
         return this;
     }
     
+    public ListTriggersResponse(){}
 }

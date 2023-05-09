@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitAccountsMfaEnrollmentStartResponse {
     
     public String contentType;
+
     public IdentitytoolkitAccountsMfaEnrollmentStartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitAccountsMfaEnrollmentStartResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse googleCloudIdentitytoolkitV2StartMfaEnrollmentResponse;
+
     public IdentitytoolkitAccountsMfaEnrollmentStartResponse withGoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse googleCloudIdentitytoolkitV2StartMfaEnrollmentResponse) {
         this.googleCloudIdentitytoolkitV2StartMfaEnrollmentResponse = googleCloudIdentitytoolkitV2StartMfaEnrollmentResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitAccountsMfaEnrollmentStartResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitAccountsMfaEnrollmentStartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitAccountsMfaEnrollmentStartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitAccountsMfaEnrollmentStartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitAccountsMfaEnrollmentStartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

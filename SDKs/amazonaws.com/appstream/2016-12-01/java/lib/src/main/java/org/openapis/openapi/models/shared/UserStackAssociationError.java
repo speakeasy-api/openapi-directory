@@ -15,6 +15,7 @@ public class UserStackAssociationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public UserStackAssociationErrorCodeEnum errorCode;
+
     public UserStackAssociationError withErrorCode(UserStackAssociationErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class UserStackAssociationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public UserStackAssociationError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class UserStackAssociationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserStackAssociation")
     public UserStackAssociation userStackAssociation;
+
     public UserStackAssociationError withUserStackAssociation(UserStackAssociation userStackAssociation) {
         this.userStackAssociation = userStackAssociation;
         return this;
     }
     
+    public UserStackAssociationError(){}
 }

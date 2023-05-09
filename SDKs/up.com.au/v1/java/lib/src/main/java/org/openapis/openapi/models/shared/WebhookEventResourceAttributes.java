@@ -20,6 +20,7 @@ public class WebhookEventResourceAttributes {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WebhookEventResourceAttributes withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,9 +33,14 @@ public class WebhookEventResourceAttributes {
      */
     @JsonProperty("eventType")
     public WebhookEventTypeEnumEnum eventType;
+
     public WebhookEventResourceAttributes withEventType(WebhookEventTypeEnumEnum eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public WebhookEventResourceAttributes(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("eventType") WebhookEventTypeEnumEnum eventType) {
+        this.createdAt = createdAt;
+        this.eventType = eventType;
+  }
 }

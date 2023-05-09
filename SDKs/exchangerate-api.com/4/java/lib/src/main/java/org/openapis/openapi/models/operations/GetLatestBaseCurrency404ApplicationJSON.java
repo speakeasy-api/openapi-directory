@@ -15,6 +15,7 @@ public class GetLatestBaseCurrency404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_type")
     public String errorType;
+
     public GetLatestBaseCurrency404ApplicationJSON withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -23,9 +24,11 @@ public class GetLatestBaseCurrency404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public GetLatestBaseCurrency404ApplicationJSON withResult(String result) {
         this.result = result;
         return this;
     }
     
+    public GetLatestBaseCurrency404ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class UpdateSMSChannelRequestBodySMSChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateSMSChannelRequestBodySMSChannelRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSMSChannelRequestBodySMSChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SenderId")
     public String senderId;
+
     public UpdateSMSChannelRequestBodySMSChannelRequest withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -31,9 +33,11 @@ public class UpdateSMSChannelRequestBodySMSChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortCode")
     public String shortCode;
+
     public UpdateSMSChannelRequestBodySMSChannelRequest withShortCode(String shortCode) {
         this.shortCode = shortCode;
         return this;
     }
     
+    public UpdateSMSChannelRequestBodySMSChannelRequest(){}
 }

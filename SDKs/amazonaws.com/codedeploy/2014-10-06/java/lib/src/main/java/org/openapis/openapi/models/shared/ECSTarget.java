@@ -20,6 +20,7 @@ public class ECSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public ECSTarget withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -30,6 +31,7 @@ public class ECSTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ECSTarget withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,6 +40,7 @@ public class ECSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEvents")
     public LifecycleEvent[] lifecycleEvents;
+
     public ECSTarget withLifecycleEvents(LifecycleEvent[] lifecycleEvents) {
         this.lifecycleEvents = lifecycleEvents;
         return this;
@@ -46,6 +49,7 @@ public class ECSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TargetStatusEnum status;
+
     public ECSTarget withStatus(TargetStatusEnum status) {
         this.status = status;
         return this;
@@ -54,6 +58,7 @@ public class ECSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public ECSTarget withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
@@ -62,6 +67,7 @@ public class ECSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public ECSTarget withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -70,9 +76,11 @@ public class ECSTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSetsInfo")
     public ECSTaskSet[] taskSetsInfo;
+
     public ECSTarget withTaskSetsInfo(ECSTaskSet[] taskSetsInfo) {
         this.taskSetsInfo = taskSetsInfo;
         return this;
     }
     
+    public ECSTarget(){}
 }

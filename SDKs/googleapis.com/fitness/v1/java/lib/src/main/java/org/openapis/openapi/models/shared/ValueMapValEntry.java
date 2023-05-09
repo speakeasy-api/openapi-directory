@@ -12,6 +12,7 @@ public class ValueMapValEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ValueMapValEntry withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class ValueMapValEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public MapValue value;
+
     public ValueMapValEntry withValue(MapValue value) {
         this.value = value;
         return this;
     }
     
+    public ValueMapValEntry(){}
 }

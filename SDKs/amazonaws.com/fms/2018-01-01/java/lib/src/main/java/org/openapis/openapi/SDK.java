@@ -16,7 +16,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;p&gt;This is the &lt;i&gt;Firewall Manager API Reference&lt;/i&gt;. This guide is for developers who need detailed information about the Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the &lt;a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html"&gt;Firewall Manager Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Some API actions require explicit resource permissions. For information, see the developer guide topic &lt;a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html"&gt;Firewall Manager required permissions for API actions&lt;/a&gt;. &lt;/p&gt;
+ * &lt;p&gt;This is the &lt;i&gt;Firewall Manager API Reference&lt;/i&gt;. This guide is for developers who need detailed information about the Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the &lt;a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html"&gt;Firewall Manager Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Some API actions require explicit resource permissions. For information, see the developer guide topic &lt;a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-security_iam_service-with-iam.html#fms-security_iam_service-with-iam-roles-service"&gt;Service roles for Firewall Manager&lt;/a&gt;. &lt;/p&gt;
  * https://docs.aws.amazon.com/fms/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -41,6 +41,10 @@ public class SDK {
          */
         "https://fms.{region}.amazonaws.com.cn",
 	};
+	
+	
+	
+	
 	
 	
 	
@@ -183,11 +187,16 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
     /**
-     * &lt;p&gt;Sets the Firewall Manager administrator account. The account must be a member of the organization in Organizations whose resources you want to protect. Firewall Manager sets the permissions that allow the account to administer your Firewall Manager policies.&lt;/p&gt; &lt;p&gt;The account that you associate with Firewall Manager is called the Firewall Manager administrator account. &lt;/p&gt;
+     * &lt;p&gt;Sets a Firewall Manager default administrator account. The Firewall Manager default administrator account can manage third-party firewalls and has full administrative scope that allows administration of all policy types, accounts, organizational units, and Regions. This account must be a member account of the organization in Organizations whose resources you want to protect.&lt;/p&gt; &lt;p&gt;For information about working with Firewall Manager administrator accounts, see &lt;a href="https://docs.aws.amazon.com/organizations/latest/userguide/fms-administrators.html"&gt;Managing Firewall Manager administrators&lt;/a&gt; in the &lt;i&gt;Firewall Manager Developer Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -220,15 +229,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateAdminAccountResponse res = new org.openapis.openapi.models.operations.AssociateAdminAccountResponse() {{
+        org.openapis.openapi.models.operations.AssociateAdminAccountResponse res = new org.openapis.openapi.models.operations.AssociateAdminAccountResponse(contentType, httpRes.statusCode()) {{
             invalidOperationException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,15 +313,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateThirdPartyFirewallResponse res = new org.openapis.openapi.models.operations.AssociateThirdPartyFirewallResponse() {{
+        org.openapis.openapi.models.operations.AssociateThirdPartyFirewallResponse res = new org.openapis.openapi.models.operations.AssociateThirdPartyFirewallResponse(contentType, httpRes.statusCode()) {{
             associateThirdPartyFirewallResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,7 +395,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchAssociateResourceResponse res = new org.openapis.openapi.models.operations.BatchAssociateResourceResponse() {{
+        org.openapis.openapi.models.operations.BatchAssociateResourceResponse res = new org.openapis.openapi.models.operations.BatchAssociateResourceResponse(contentType, httpRes.statusCode()) {{
             batchAssociateResourceResponse = null;
             invalidOperationException = null;
             internalErrorException = null;
@@ -398,8 +403,6 @@ public class SDK {
             limitExceededException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,15 +485,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchDisassociateResourceResponse res = new org.openapis.openapi.models.operations.BatchDisassociateResourceResponse() {{
+        org.openapis.openapi.models.operations.BatchDisassociateResourceResponse res = new org.openapis.openapi.models.operations.BatchDisassociateResourceResponse(contentType, httpRes.statusCode()) {{
             batchDisassociateResourceResponse = null;
             invalidOperationException = null;
             internalErrorException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,13 +567,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAppsListResponse res = new org.openapis.openapi.models.operations.DeleteAppsListResponse() {{
+        org.openapis.openapi.models.operations.DeleteAppsListResponse res = new org.openapis.openapi.models.operations.DeleteAppsListResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -636,13 +635,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNotificationChannelResponse res = new org.openapis.openapi.models.operations.DeleteNotificationChannelResponse() {{
+        org.openapis.openapi.models.operations.DeleteNotificationChannelResponse res = new org.openapis.openapi.models.operations.DeleteNotificationChannelResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -706,15 +703,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePolicyResponse res = new org.openapis.openapi.models.operations.DeletePolicyResponse() {{
+        org.openapis.openapi.models.operations.DeletePolicyResponse res = new org.openapis.openapi.models.operations.DeletePolicyResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
             invalidInputException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -792,13 +787,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProtocolsListResponse res = new org.openapis.openapi.models.operations.DeleteProtocolsListResponse() {{
+        org.openapis.openapi.models.operations.DeleteProtocolsListResponse res = new org.openapis.openapi.models.operations.DeleteProtocolsListResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -862,14 +855,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResourceSetResponse res = new org.openapis.openapi.models.operations.DeleteResourceSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteResourceSetResponse res = new org.openapis.openapi.models.operations.DeleteResourceSetResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -907,7 +898,7 @@ public class SDK {
     }
 
     /**
-     * Disassociates the account that has been set as the Firewall Manager administrator account. To set a different account as the administrator account, you must submit an &lt;code&gt;AssociateAdminAccount&lt;/code&gt; request.
+     * &lt;p&gt;Disassociates an Firewall Manager administrator account. To set a different account as an Firewall Manager administrator, submit a &lt;a&gt;PutAdminAccount&lt;/a&gt; request. To set an account as a default administrator account, you must submit an &lt;a&gt;AssociateAdminAccount&lt;/a&gt; request.&lt;/p&gt; &lt;p&gt;Disassociation of the default administrator account follows the first in, last out principle. If you are the default administrator, all Firewall Manager administrators within the organization must first disassociate their accounts before you can disassociate your account.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -940,13 +931,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateAdminAccountResponse res = new org.openapis.openapi.models.operations.DisassociateAdminAccountResponse() {{
+        org.openapis.openapi.models.operations.DisassociateAdminAccountResponse res = new org.openapis.openapi.models.operations.DisassociateAdminAccountResponse(contentType, httpRes.statusCode()) {{
             invalidOperationException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1010,15 +999,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateThirdPartyFirewallResponse res = new org.openapis.openapi.models.operations.DisassociateThirdPartyFirewallResponse() {{
+        org.openapis.openapi.models.operations.DisassociateThirdPartyFirewallResponse res = new org.openapis.openapi.models.operations.DisassociateThirdPartyFirewallResponse(contentType, httpRes.statusCode()) {{
             disassociateThirdPartyFirewallResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1061,7 +1048,7 @@ public class SDK {
     }
 
     /**
-     * Returns the Organizations account that is associated with Firewall Manager as the Firewall Manager administrator.
+     * Returns the Organizations account that is associated with Firewall Manager as the Firewall Manager default administrator.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1094,14 +1081,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminAccountResponse res = new org.openapis.openapi.models.operations.GetAdminAccountResponse() {{
+        org.openapis.openapi.models.operations.GetAdminAccountResponse res = new org.openapis.openapi.models.operations.GetAdminAccountResponse(contentType, httpRes.statusCode()) {{
             getAdminAccountResponse = null;
             invalidOperationException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1126,6 +1111,88 @@ public class SDK {
             }
         }
         else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalErrorException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns information about the specified account's administrative scope. The admistrative scope defines the resources that an Firewall Manager administrator can manage.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetAdminScopeResponse getAdminScope(org.openapis.openapi.models.operations.GetAdminScopeRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=AWSFMS_20180101.GetAdminScope");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getAdminScopeRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetAdminScopeResponse res = new org.openapis.openapi.models.operations.GetAdminScopeResponse(contentType, httpRes.statusCode()) {{
+            getAdminScopeResponse = null;
+            invalidOperationException = null;
+            invalidInputException = null;
+            resourceNotFoundException = null;
+            internalErrorException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GetAdminScopeResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetAdminScopeResponse.class);
+                res.getAdminScopeResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidOperationException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidInputException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
@@ -1170,14 +1237,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAppsListResponse res = new org.openapis.openapi.models.operations.GetAppsListResponse() {{
+        org.openapis.openapi.models.operations.GetAppsListResponse res = new org.openapis.openapi.models.operations.GetAppsListResponse(contentType, httpRes.statusCode()) {{
             getAppsListResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1246,15 +1311,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetComplianceDetailResponse res = new org.openapis.openapi.models.operations.GetComplianceDetailResponse() {{
+        org.openapis.openapi.models.operations.GetComplianceDetailResponse res = new org.openapis.openapi.models.operations.GetComplianceDetailResponse(contentType, httpRes.statusCode()) {{
             getComplianceDetailResponse = null;
             resourceNotFoundException = null;
             internalErrorException = null;
             invalidInputException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1330,14 +1393,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNotificationChannelResponse res = new org.openapis.openapi.models.operations.GetNotificationChannelResponse() {{
+        org.openapis.openapi.models.operations.GetNotificationChannelResponse res = new org.openapis.openapi.models.operations.GetNotificationChannelResponse(contentType, httpRes.statusCode()) {{
             getNotificationChannelResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1406,15 +1467,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPolicyResponse res = new org.openapis.openapi.models.operations.GetPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetPolicyResponse res = new org.openapis.openapi.models.operations.GetPolicyResponse(contentType, httpRes.statusCode()) {{
             getPolicyResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
             invalidTypeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1490,14 +1549,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProtectionStatusResponse res = new org.openapis.openapi.models.operations.GetProtectionStatusResponse() {{
+        org.openapis.openapi.models.operations.GetProtectionStatusResponse res = new org.openapis.openapi.models.operations.GetProtectionStatusResponse(contentType, httpRes.statusCode()) {{
             getProtectionStatusResponse = null;
             invalidInputException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1566,14 +1623,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProtocolsListResponse res = new org.openapis.openapi.models.operations.GetProtocolsListResponse() {{
+        org.openapis.openapi.models.operations.GetProtocolsListResponse res = new org.openapis.openapi.models.operations.GetProtocolsListResponse(contentType, httpRes.statusCode()) {{
             getProtocolsListResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1642,15 +1697,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceSetResponse res = new org.openapis.openapi.models.operations.GetResourceSetResponse() {{
+        org.openapis.openapi.models.operations.GetResourceSetResponse res = new org.openapis.openapi.models.operations.GetResourceSetResponse(contentType, httpRes.statusCode()) {{
             getResourceSetResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1726,15 +1779,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetThirdPartyFirewallAssociationStatusResponse res = new org.openapis.openapi.models.operations.GetThirdPartyFirewallAssociationStatusResponse() {{
+        org.openapis.openapi.models.operations.GetThirdPartyFirewallAssociationStatusResponse res = new org.openapis.openapi.models.operations.GetThirdPartyFirewallAssociationStatusResponse(contentType, httpRes.statusCode()) {{
             getThirdPartyFirewallAssociationStatusResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1810,14 +1861,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetViolationDetailsResponse res = new org.openapis.openapi.models.operations.GetViolationDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetViolationDetailsResponse res = new org.openapis.openapi.models.operations.GetViolationDetailsResponse(contentType, httpRes.statusCode()) {{
             getViolationDetailsResponse = null;
             resourceNotFoundException = null;
             invalidInputException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1825,6 +1874,166 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.GetViolationDetailsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetViolationDetailsResponse.class);
                 res.getViolationDetailsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidInputException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalErrorException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Returns a &lt;code&gt;AdminAccounts&lt;/code&gt; object that lists the Firewall Manager administrators within the organization that are onboarded to Firewall Manager by &lt;a&gt;AssociateAdminAccount&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;This operation can be called only from the organization's management account.&lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListAdminAccountsForOrganizationResponse listAdminAccountsForOrganization(org.openapis.openapi.models.operations.ListAdminAccountsForOrganizationRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=AWSFMS_20180101.ListAdminAccountsForOrganization");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listAdminAccountsForOrganizationRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAdminAccountsForOrganizationRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListAdminAccountsForOrganizationResponse res = new org.openapis.openapi.models.operations.ListAdminAccountsForOrganizationResponse(contentType, httpRes.statusCode()) {{
+            listAdminAccountsForOrganizationResponse = null;
+            invalidOperationException = null;
+            resourceNotFoundException = null;
+            internalErrorException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListAdminAccountsForOrganizationResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListAdminAccountsForOrganizationResponse.class);
+                res.listAdminAccountsForOrganizationResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidOperationException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalErrorException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Lists the accounts that are managing the specified Organizations member account. This is useful for any member account so that they can view the accounts who are managing their account. This operation only returns the managing administrators that have the requested account within their &lt;a&gt;AdminScope&lt;/a&gt;.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListAdminsManagingAccountResponse listAdminsManagingAccount(org.openapis.openapi.models.operations.ListAdminsManagingAccountRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=AWSFMS_20180101.ListAdminsManagingAccount");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listAdminsManagingAccountRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAdminsManagingAccountRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListAdminsManagingAccountResponse res = new org.openapis.openapi.models.operations.ListAdminsManagingAccountResponse(contentType, httpRes.statusCode()) {{
+            listAdminsManagingAccountResponse = null;
+            resourceNotFoundException = null;
+            invalidInputException = null;
+            internalErrorException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListAdminsManagingAccountResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListAdminsManagingAccountResponse.class);
+                res.listAdminsManagingAccountResponse = out;
             }
         }
         else if (httpRes.statusCode() == 480) {
@@ -1892,15 +2101,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAppsListsResponse res = new org.openapis.openapi.models.operations.ListAppsListsResponse() {{
+        org.openapis.openapi.models.operations.ListAppsListsResponse res = new org.openapis.openapi.models.operations.ListAppsListsResponse(contentType, httpRes.statusCode()) {{
             listAppsListsResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             limitExceededException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1982,13 +2189,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListComplianceStatusResponse res = new org.openapis.openapi.models.operations.ListComplianceStatusResponse() {{
+        org.openapis.openapi.models.operations.ListComplianceStatusResponse res = new org.openapis.openapi.models.operations.ListComplianceStatusResponse(contentType, httpRes.statusCode()) {{
             listComplianceStatusResponse = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2050,14 +2255,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDiscoveredResourcesResponse res = new org.openapis.openapi.models.operations.ListDiscoveredResourcesResponse() {{
+        org.openapis.openapi.models.operations.ListDiscoveredResourcesResponse res = new org.openapis.openapi.models.operations.ListDiscoveredResourcesResponse(contentType, httpRes.statusCode()) {{
             listDiscoveredResourcesResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2093,7 +2296,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Returns a &lt;code&gt;MemberAccounts&lt;/code&gt; object that lists the member accounts in the administrator's Amazon Web Services organization.&lt;/p&gt; &lt;p&gt;The &lt;code&gt;ListMemberAccounts&lt;/code&gt; must be submitted by the account that is set as the Firewall Manager administrator.&lt;/p&gt;
+     * &lt;p&gt;Returns a &lt;code&gt;MemberAccounts&lt;/code&gt; object that lists the member accounts in the administrator's Amazon Web Services organization.&lt;/p&gt; &lt;p&gt;Either an Firewall Manager administrator or the organization's management account can make this request.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2132,13 +2335,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMemberAccountsResponse res = new org.openapis.openapi.models.operations.ListMemberAccountsResponse() {{
+        org.openapis.openapi.models.operations.ListMemberAccountsResponse res = new org.openapis.openapi.models.operations.ListMemberAccountsResponse(contentType, httpRes.statusCode()) {{
             listMemberAccountsResponse = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2206,15 +2407,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPoliciesResponse res = new org.openapis.openapi.models.operations.ListPoliciesResponse() {{
+        org.openapis.openapi.models.operations.ListPoliciesResponse res = new org.openapis.openapi.models.operations.ListPoliciesResponse(contentType, httpRes.statusCode()) {{
             listPoliciesResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             limitExceededException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2296,14 +2495,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListProtocolsListsResponse res = new org.openapis.openapi.models.operations.ListProtocolsListsResponse() {{
+        org.openapis.openapi.models.operations.ListProtocolsListsResponse res = new org.openapis.openapi.models.operations.ListProtocolsListsResponse(contentType, httpRes.statusCode()) {{
             listProtocolsListsResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2372,15 +2569,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListResourceSetResourcesResponse res = new org.openapis.openapi.models.operations.ListResourceSetResourcesResponse() {{
+        org.openapis.openapi.models.operations.ListResourceSetResourcesResponse res = new org.openapis.openapi.models.operations.ListResourceSetResourcesResponse(contentType, httpRes.statusCode()) {{
             listResourceSetResourcesResponse = null;
             invalidOperationException = null;
             internalErrorException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2456,14 +2651,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListResourceSetsResponse res = new org.openapis.openapi.models.operations.ListResourceSetsResponse() {{
+        org.openapis.openapi.models.operations.ListResourceSetsResponse res = new org.openapis.openapi.models.operations.ListResourceSetsResponse(contentType, httpRes.statusCode()) {{
             listResourceSetsResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2532,15 +2725,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2622,15 +2813,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListThirdPartyFirewallFirewallPoliciesResponse res = new org.openapis.openapi.models.operations.ListThirdPartyFirewallFirewallPoliciesResponse() {{
+        org.openapis.openapi.models.operations.ListThirdPartyFirewallFirewallPoliciesResponse res = new org.openapis.openapi.models.operations.ListThirdPartyFirewallFirewallPoliciesResponse(contentType, httpRes.statusCode()) {{
             listThirdPartyFirewallFirewallPoliciesResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             resourceNotFoundException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2673,6 +2862,82 @@ public class SDK {
     }
 
     /**
+     * Creates or updates an Firewall Manager administrator account. The account must be a member of the organization that was onboarded to Firewall Manager by &lt;a&gt;AssociateAdminAccount&lt;/a&gt;. Only the organization's management account can create an Firewall Manager administrator account. When you create an Firewall Manager administrator account, the service checks to see if the account is already a delegated administrator within Organizations. If the account isn't a delegated administrator, Firewall Manager calls Organizations to delegate the account within Organizations. For more information about administrator accounts within Organizations, see &lt;a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts.html"&gt;Managing the Amazon Web Services Accounts in Your Organization&lt;/a&gt;.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PutAdminAccountResponse putAdminAccount(org.openapis.openapi.models.operations.PutAdminAccountRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=AWSFMS_20180101.PutAdminAccount");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putAdminAccountRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PutAdminAccountResponse res = new org.openapis.openapi.models.operations.PutAdminAccountResponse(contentType, httpRes.statusCode()) {{
+            invalidOperationException = null;
+            invalidInputException = null;
+            internalErrorException = null;
+            limitExceededException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidOperationException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidInputException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalErrorException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.limitExceededException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Creates an Firewall Manager applications list.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -2706,7 +2971,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAppsListResponse res = new org.openapis.openapi.models.operations.PutAppsListResponse() {{
+        org.openapis.openapi.models.operations.PutAppsListResponse res = new org.openapis.openapi.models.operations.PutAppsListResponse(contentType, httpRes.statusCode()) {{
             putAppsListResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
@@ -2714,8 +2979,6 @@ public class SDK {
             limitExceededException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2765,7 +3028,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Designates the IAM role and Amazon Simple Notification Service (SNS) topic that Firewall Manager uses to record SNS logs.&lt;/p&gt; &lt;p&gt;To perform this action outside of the console, you must configure the SNS topic to allow the Firewall Manager role &lt;code&gt;AWSServiceRoleForFMS&lt;/code&gt; to publish SNS logs. For more information, see &lt;a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html"&gt;Firewall Manager required permissions for API actions&lt;/a&gt; in the &lt;i&gt;Firewall Manager Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;p&gt;Designates the IAM role and Amazon Simple Notification Service (SNS) topic that Firewall Manager uses to record SNS logs.&lt;/p&gt; &lt;p&gt;To perform this action outside of the console, you must first configure the SNS topic's access policy to allow the &lt;code&gt;SnsRoleName&lt;/code&gt; to publish SNS logs. If the &lt;code&gt;SnsRoleName&lt;/code&gt; provided is a role other than the &lt;code&gt;AWSServiceRoleForFMS&lt;/code&gt; service-linked role, this role must have a trust relationship configured to allow the Firewall Manager service principal &lt;code&gt;fms.amazonaws.com&lt;/code&gt; to assume this role. For information about configuring an SNS access policy, see &lt;a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-security_iam_service-with-iam.html#fms-security_iam_service-with-iam-roles-service"&gt;Service roles for Firewall Manager&lt;/a&gt; in the &lt;i&gt;Firewall Manager Developer Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2798,13 +3061,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutNotificationChannelResponse res = new org.openapis.openapi.models.operations.PutNotificationChannelResponse() {{
+        org.openapis.openapi.models.operations.PutNotificationChannelResponse res = new org.openapis.openapi.models.operations.PutNotificationChannelResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2868,7 +3129,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPolicyResponse res = new org.openapis.openapi.models.operations.PutPolicyResponse() {{
+        org.openapis.openapi.models.operations.PutPolicyResponse res = new org.openapis.openapi.models.operations.PutPolicyResponse(contentType, httpRes.statusCode()) {{
             putPolicyResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
@@ -2877,8 +3138,6 @@ public class SDK {
             internalErrorException = null;
             invalidTypeException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2968,7 +3227,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutProtocolsListResponse res = new org.openapis.openapi.models.operations.PutProtocolsListResponse() {{
+        org.openapis.openapi.models.operations.PutProtocolsListResponse res = new org.openapis.openapi.models.operations.PutProtocolsListResponse(contentType, httpRes.statusCode()) {{
             putProtocolsListResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
@@ -2976,8 +3235,6 @@ public class SDK {
             limitExceededException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3060,15 +3317,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutResourceSetResponse res = new org.openapis.openapi.models.operations.PutResourceSetResponse() {{
+        org.openapis.openapi.models.operations.PutResourceSetResponse res = new org.openapis.openapi.models.operations.PutResourceSetResponse(contentType, httpRes.statusCode()) {{
             putResourceSetResponse = null;
             invalidOperationException = null;
             invalidInputException = null;
             limitExceededException = null;
             internalErrorException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3144,7 +3399,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
@@ -3152,8 +3407,6 @@ public class SDK {
             invalidInputException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3236,15 +3489,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             resourceNotFoundException = null;
             invalidOperationException = null;
             internalErrorException = null;
             invalidInputException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

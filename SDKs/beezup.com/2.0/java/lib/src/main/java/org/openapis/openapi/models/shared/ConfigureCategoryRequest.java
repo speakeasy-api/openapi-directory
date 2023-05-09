@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfigureCategoryRequest {
     @JsonProperty("channelCatalogCategories")
     public ChannelCatalogCategoryConfiguration[] channelCatalogCategories;
+
     public ConfigureCategoryRequest withChannelCatalogCategories(ChannelCatalogCategoryConfiguration[] channelCatalogCategories) {
         this.channelCatalogCategories = channelCatalogCategories;
         return this;
@@ -22,9 +23,14 @@ public class ConfigureCategoryRequest {
      */
     @JsonProperty("overrideSubCategoryMappings")
     public Boolean overrideSubCategoryMappings;
+
     public ConfigureCategoryRequest withOverrideSubCategoryMappings(Boolean overrideSubCategoryMappings) {
         this.overrideSubCategoryMappings = overrideSubCategoryMappings;
         return this;
     }
     
+    public ConfigureCategoryRequest(@JsonProperty("channelCatalogCategories") ChannelCatalogCategoryConfiguration[] channelCatalogCategories, @JsonProperty("overrideSubCategoryMappings") Boolean overrideSubCategoryMappings) {
+        this.channelCatalogCategories = channelCatalogCategories;
+        this.overrideSubCategoryMappings = overrideSubCategoryMappings;
+  }
 }

@@ -59,10 +59,8 @@ public class CalendarList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarCalendarListDeleteResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListDeleteResponse() {{
+        org.openapis.openapi.models.operations.CalendarCalendarListDeleteResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class CalendarList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarCalendarListGetResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListGetResponse() {{
+        org.openapis.openapi.models.operations.CalendarCalendarListGetResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListGetResponse(contentType, httpRes.statusCode()) {{
             calendarListEntry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class CalendarList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarCalendarListInsertResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListInsertResponse() {{
+        org.openapis.openapi.models.operations.CalendarCalendarListInsertResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListInsertResponse(contentType, httpRes.statusCode()) {{
             calendarListEntry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class CalendarList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarCalendarListListResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListListResponse() {{
+        org.openapis.openapi.models.operations.CalendarCalendarListListResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListListResponse(contentType, httpRes.statusCode()) {{
             calendarList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class CalendarList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarCalendarListPatchResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListPatchResponse() {{
+        org.openapis.openapi.models.operations.CalendarCalendarListPatchResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListPatchResponse(contentType, httpRes.statusCode()) {{
             calendarListEntry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class CalendarList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarCalendarListUpdateResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListUpdateResponse() {{
+        org.openapis.openapi.models.operations.CalendarCalendarListUpdateResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListUpdateResponse(contentType, httpRes.statusCode()) {{
             calendarListEntry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class CalendarList {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarCalendarListWatchResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListWatchResponse() {{
+        org.openapis.openapi.models.operations.CalendarCalendarListWatchResponse res = new org.openapis.openapi.models.operations.CalendarCalendarListWatchResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

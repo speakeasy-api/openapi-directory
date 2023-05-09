@@ -15,6 +15,7 @@ public class EstimationActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimationNumber")
     public String estimationNumber;
+
     public EstimationActivityApiModel withEstimationNumber(String estimationNumber) {
         this.estimationNumber = estimationNumber;
         return this;
@@ -26,6 +27,7 @@ public class EstimationActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public EstimationActivityApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class EstimationActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public EstimationActivityApiModel withLink(String link) {
         this.link = link;
         return this;
@@ -48,6 +51,7 @@ public class EstimationActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public EstimationActivityApiModel withMessage(String message) {
         this.message = message;
         return this;
@@ -59,9 +63,11 @@ public class EstimationActivityApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EstimationActivityApiModelTypeEnum type;
+
     public EstimationActivityApiModel withType(EstimationActivityApiModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EstimationActivityApiModel(){}
 }

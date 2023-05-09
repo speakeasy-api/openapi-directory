@@ -12,6 +12,7 @@ public class ActivityAndIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activity")
     public Object activity;
+
     public ActivityAndIdentity withActivity(Object activity) {
         this.activity = activity;
         return this;
@@ -23,9 +24,11 @@ public class ActivityAndIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public Identity identity;
+
     public ActivityAndIdentity withIdentity(Identity identity) {
         this.identity = identity;
         return this;
     }
     
+    public ActivityAndIdentity(){}
 }

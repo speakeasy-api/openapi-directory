@@ -15,6 +15,7 @@ public class V1x1SpecPamAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute_id")
     public Long attributeId;
+
     public V1x1SpecPamAndAttVO withAttributeId(Long attributeId) {
         this.attributeId = attributeId;
         return this;
@@ -26,6 +27,7 @@ public class V1x1SpecPamAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute_value")
     public Object attributeValue;
+
     public V1x1SpecPamAndAttVO withAttributeValue(Object attributeValue) {
         this.attributeValue = attributeValue;
         return this;
@@ -34,6 +36,7 @@ public class V1x1SpecPamAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public V1x1SpecPamAndAttVO withLabel(String label) {
         this.label = label;
         return this;
@@ -42,6 +45,7 @@ public class V1x1SpecPamAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param_id")
     public Long paramId;
+
     public V1x1SpecPamAndAttVO withParamId(Long paramId) {
         this.paramId = paramId;
         return this;
@@ -50,9 +54,11 @@ public class V1x1SpecPamAndAttVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param_name")
     public String paramName;
+
     public V1x1SpecPamAndAttVO withParamName(String paramName) {
         this.paramName = paramName;
         return this;
     }
     
+    public V1x1SpecPamAndAttVO(){}
 }

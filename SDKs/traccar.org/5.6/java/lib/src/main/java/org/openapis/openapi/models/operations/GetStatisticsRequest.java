@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetStatisticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public OffsetDateTime from;
+
     public GetStatisticsRequest withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -23,9 +25,14 @@ public class GetStatisticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public OffsetDateTime to;
+
     public GetStatisticsRequest withTo(OffsetDateTime to) {
         this.to = to;
         return this;
     }
     
+    public GetStatisticsRequest(@JsonProperty("from") OffsetDateTime from, @JsonProperty("to") OffsetDateTime to) {
+        this.from = from;
+        this.to = to;
+  }
 }

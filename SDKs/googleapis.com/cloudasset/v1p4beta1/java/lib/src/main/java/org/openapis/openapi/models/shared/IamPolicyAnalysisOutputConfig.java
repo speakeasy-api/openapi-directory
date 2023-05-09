@@ -18,9 +18,11 @@ public class IamPolicyAnalysisOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsDestination gcsDestination;
+
     public IamPolicyAnalysisOutputConfig withGcsDestination(GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public IamPolicyAnalysisOutputConfig(){}
 }

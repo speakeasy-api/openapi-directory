@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1ResolveResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleChromePolicyVersionsV1ResolveResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1ResolveResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolvedPolicies")
     public GoogleChromePolicyVersionsV1ResolvedPolicy[] resolvedPolicies;
+
     public GoogleChromePolicyVersionsV1ResolveResponse withResolvedPolicies(GoogleChromePolicyVersionsV1ResolvedPolicy[] resolvedPolicies) {
         this.resolvedPolicies = resolvedPolicies;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1ResolveResponse(){}
 }

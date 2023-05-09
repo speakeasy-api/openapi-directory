@@ -18,6 +18,7 @@ public class AuthenticationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origins")
     public OriginAuthenticationMethod[] origins;
+
     public AuthenticationPolicy withOrigins(OriginAuthenticationMethod[] origins) {
         this.origins = origins;
         return this;
@@ -29,6 +30,7 @@ public class AuthenticationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peers")
     public PeerAuthenticationMethod[] peers;
+
     public AuthenticationPolicy withPeers(PeerAuthenticationMethod[] peers) {
         this.peers = peers;
         return this;
@@ -40,6 +42,7 @@ public class AuthenticationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalBinding")
     public AuthenticationPolicyPrincipalBindingEnum principalBinding;
+
     public AuthenticationPolicy withPrincipalBinding(AuthenticationPolicyPrincipalBindingEnum principalBinding) {
         this.principalBinding = principalBinding;
         return this;
@@ -51,9 +54,11 @@ public class AuthenticationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverTlsContext")
     public TlsContext serverTlsContext;
+
     public AuthenticationPolicy withServerTlsContext(TlsContext serverTlsContext) {
         this.serverTlsContext = serverTlsContext;
         return this;
     }
     
+    public AuthenticationPolicy(){}
 }

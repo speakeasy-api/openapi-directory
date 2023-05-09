@@ -15,6 +15,7 @@ public class StartStageDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartStageDeploymentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class StartStageDeploymentRequestBody {
      */
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public StartStageDeploymentRequestBody withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public StartStageDeploymentRequestBody(@JsonProperty("SnapshotId") String snapshotId) {
+        this.snapshotId = snapshotId;
+  }
 }

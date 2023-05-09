@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute {
     
     public String carrierGatewayId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String coreNetworkArn;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String destinationCidr;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withDestinationCidr(String destinationCidr) {
         this.destinationCidr = destinationCidr;
         return this;
@@ -33,6 +36,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String destinationPrefixListId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String egressOnlyInternetGatewayId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String gatewayId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String instanceId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String localGatewayId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String natGatewayId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -75,6 +84,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String networkInterfaceId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -82,6 +92,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String origin;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -89,6 +100,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String state;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withState(String state) {
         this.state = state;
         return this;
@@ -96,6 +108,7 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String transitGatewayId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -103,9 +116,11 @@ public class DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplana
     
     
     public String vpcPeeringConnectionId;
+
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesExplanationsRouteTableRoute(){}
 }

@@ -18,6 +18,7 @@ public class PodcastSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public PodcastFilters filters;
+
     public PodcastSearchParams withFilters(PodcastFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class PodcastSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hitsPerPage")
     public Integer hitsPerPage;
+
     public PodcastSearchParams withHitsPerPage(Integer hitsPerPage) {
         this.hitsPerPage = hitsPerPage;
         return this;
@@ -34,6 +36,7 @@ public class PodcastSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Integer page;
+
     public PodcastSearchParams withPage(Integer page) {
         this.page = page;
         return this;
@@ -42,9 +45,11 @@ public class PodcastSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public PodcastSearchParams withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public PodcastSearchParams(){}
 }

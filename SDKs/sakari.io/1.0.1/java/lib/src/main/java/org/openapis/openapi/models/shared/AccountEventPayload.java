@@ -12,9 +12,11 @@ public class AccountEventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Double balance;
+
     public AccountEventPayload withBalance(Double balance) {
         this.balance = balance;
         return this;
     }
     
+    public AccountEventPayload(){}
 }

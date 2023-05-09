@@ -15,6 +15,7 @@ public class Product200ApplicationJSONDataMerchantTermsAndConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountRefundable")
     public Long amountRefundable;
+
     public Product200ApplicationJSONDataMerchantTermsAndConditions withAmountRefundable(Long amountRefundable) {
         this.amountRefundable = amountRefundable;
         return this;
@@ -23,6 +24,7 @@ public class Product200ApplicationJSONDataMerchantTermsAndConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationFromTourDate")
     public Product200ApplicationJSONDataMerchantTermsAndConditionsCancellationFromTourDate[] cancellationFromTourDate;
+
     public Product200ApplicationJSONDataMerchantTermsAndConditions withCancellationFromTourDate(Product200ApplicationJSONDataMerchantTermsAndConditionsCancellationFromTourDate[] cancellationFromTourDate) {
         this.cancellationFromTourDate = cancellationFromTourDate;
         return this;
@@ -34,6 +36,7 @@ public class Product200ApplicationJSONDataMerchantTermsAndConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantTermsAndConditionsType")
     public Long merchantTermsAndConditionsType;
+
     public Product200ApplicationJSONDataMerchantTermsAndConditions withMerchantTermsAndConditionsType(Long merchantTermsAndConditionsType) {
         this.merchantTermsAndConditionsType = merchantTermsAndConditionsType;
         return this;
@@ -45,9 +48,11 @@ public class Product200ApplicationJSONDataMerchantTermsAndConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termsAndConditions")
     public String termsAndConditions;
+
     public Product200ApplicationJSONDataMerchantTermsAndConditions withTermsAndConditions(String termsAndConditions) {
         this.termsAndConditions = termsAndConditions;
         return this;
     }
     
+    public Product200ApplicationJSONDataMerchantTermsAndConditions(){}
 }

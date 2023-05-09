@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrackResponse {
@@ -12,6 +13,7 @@ public class GetTrackResponse {
      */
     
     public org.openapis.openapi.models.shared.Audio audio;
+
     public GetTrackResponse withAudio(org.openapis.openapi.models.shared.Audio audio) {
         this.audio = audio;
         return this;
@@ -19,6 +21,7 @@ public class GetTrackResponse {
     
     
     public String contentType;
+
     public GetTrackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTrackResponse {
     
     
     public Integer statusCode;
+
     public GetTrackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetTrackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTrackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

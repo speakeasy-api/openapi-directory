@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ChangeMessageVisibilityBatchRequestEntryList - &lt;p&gt;Encloses a receipt handle and an entry id for each message in &lt;code&gt; &lt;a&gt;ChangeMessageVisibilityBatch&lt;/a&gt;.&lt;/code&gt; &lt;/p&gt; &lt;important&gt; &lt;p&gt;All of the following list parameters must be prefixed with &lt;code&gt;ChangeMessageVisibilityBatchRequestEntry.n&lt;/code&gt;, where &lt;code&gt;n&lt;/code&gt; is an integer value starting with &lt;code&gt;1&lt;/code&gt;. For example, a parameter list for this action might look like this:&lt;/p&gt; &lt;/important&gt; &lt;p&gt; &lt;code&gt;&amp;amp;ChangeMessageVisibilityBatchRequestEntry.1.Id=change_visibility_msg_2&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;&amp;amp;ChangeMessageVisibilityBatchRequestEntry.1.ReceiptHandle=your_receipt_handle&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;&amp;amp;ChangeMessageVisibilityBatchRequestEntry.1.VisibilityTimeout=45&lt;/code&gt; &lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ChangeMessageVisibilityBatchRequestEntryList {
     
     public String id;
+
     public ChangeMessageVisibilityBatchRequestEntryList withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class ChangeMessageVisibilityBatchRequestEntryList {
     
     
     public String receiptHandle;
+
     public ChangeMessageVisibilityBatchRequestEntryList withReceiptHandle(String receiptHandle) {
         this.receiptHandle = receiptHandle;
         return this;
@@ -26,9 +28,14 @@ public class ChangeMessageVisibilityBatchRequestEntryList {
     
     
     public Long visibilityTimeout;
+
     public ChangeMessageVisibilityBatchRequestEntryList withVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
     }
     
+    public ChangeMessageVisibilityBatchRequestEntryList(@JsonProperty("Id") String id, @JsonProperty("ReceiptHandle") String receiptHandle) {
+        this.id = id;
+        this.receiptHandle = receiptHandle;
+  }
 }

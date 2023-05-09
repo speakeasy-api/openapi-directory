@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePolicyResponse {
@@ -12,6 +13,7 @@ public class DeletePolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeletePolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePolicyResponse {
     
     
     public String contentType;
+
     public DeletePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePolicyResponse {
      */
     
     public Object invalidArnException;
+
     public DeletePolicyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePolicyResponse {
      */
     
     public Object invalidStateException;
+
     public DeletePolicyResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePolicyResponse {
      */
     
     public Object lockoutPreventedException;
+
     public DeletePolicyResponse withLockoutPreventedException(Object lockoutPreventedException) {
         this.lockoutPreventedException = lockoutPreventedException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePolicyResponse {
      */
     
     public Object requestFailedException;
+
     public DeletePolicyResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -69,6 +76,7 @@ public class DeletePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeletePolicyResponse {
     
     
     public Integer statusCode;
+
     public DeletePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeletePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeletePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

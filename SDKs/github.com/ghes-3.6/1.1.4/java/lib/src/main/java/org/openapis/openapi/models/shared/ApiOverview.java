@@ -15,6 +15,7 @@ public class ApiOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependabot")
     public String[] dependabot;
+
     public ApiOverview withDependabot(String[] dependabot) {
         this.dependabot = dependabot;
         return this;
@@ -23,6 +24,7 @@ public class ApiOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installed_version")
     public String installedVersion;
+
     public ApiOverview withInstalledVersion(String installedVersion) {
         this.installedVersion = installedVersion;
         return this;
@@ -31,6 +33,7 @@ public class ApiOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public String[] packages;
+
     public ApiOverview withPackages(String[] packages) {
         this.packages = packages;
         return this;
@@ -38,9 +41,13 @@ public class ApiOverview {
     
     @JsonProperty("verifiable_password_authentication")
     public Boolean verifiablePasswordAuthentication;
+
     public ApiOverview withVerifiablePasswordAuthentication(Boolean verifiablePasswordAuthentication) {
         this.verifiablePasswordAuthentication = verifiablePasswordAuthentication;
         return this;
     }
     
+    public ApiOverview(@JsonProperty("verifiable_password_authentication") Boolean verifiablePasswordAuthentication) {
+        this.verifiablePasswordAuthentication = verifiablePasswordAuthentication;
+  }
 }

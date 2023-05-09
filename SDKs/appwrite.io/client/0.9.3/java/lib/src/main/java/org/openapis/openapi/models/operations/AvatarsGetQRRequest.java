@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetQRRequest {
@@ -12,6 +13,7 @@ public class AvatarsGetQRRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download")
     public Boolean download;
+
     public AvatarsGetQRRequest withDownload(Boolean download) {
         this.download = download;
         return this;
@@ -22,6 +24,7 @@ public class AvatarsGetQRRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=margin")
     public Integer margin;
+
     public AvatarsGetQRRequest withMargin(Integer margin) {
         this.margin = margin;
         return this;
@@ -32,6 +35,7 @@ public class AvatarsGetQRRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Integer size;
+
     public AvatarsGetQRRequest withSize(Integer size) {
         this.size = size;
         return this;
@@ -42,9 +46,13 @@ public class AvatarsGetQRRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public AvatarsGetQRRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public AvatarsGetQRRequest(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

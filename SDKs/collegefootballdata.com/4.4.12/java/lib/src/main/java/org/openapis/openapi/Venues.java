@@ -53,11 +53,9 @@ public class Venues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVenuesResponse res = new org.openapis.openapi.models.operations.GetVenuesResponse() {{
+        org.openapis.openapi.models.operations.GetVenuesResponse res = new org.openapis.openapi.models.operations.GetVenuesResponse(contentType, httpRes.statusCode()) {{
             venues = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

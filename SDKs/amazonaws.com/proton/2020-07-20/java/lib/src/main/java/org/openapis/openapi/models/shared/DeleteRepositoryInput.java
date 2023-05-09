@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRepositoryInput {
     @JsonProperty("name")
     public String name;
+
     public DeleteRepositoryInput withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class DeleteRepositoryInput {
     
     @JsonProperty("provider")
     public RepositoryProviderEnum provider;
+
     public DeleteRepositoryInput withProvider(RepositoryProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public DeleteRepositoryInput(@JsonProperty("name") String name, @JsonProperty("provider") RepositoryProviderEnum provider) {
+        this.name = name;
+        this.provider = provider;
+  }
 }

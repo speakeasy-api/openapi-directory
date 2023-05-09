@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CacheNonceGetRequest {
@@ -12,9 +13,13 @@ public class CacheNonceGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nonce")
     public String nonce;
+
     public CacheNonceGetRequest withNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     
+    public CacheNonceGetRequest(@JsonProperty("nonce") String nonce) {
+        this.nonce = nonce;
+  }
 }

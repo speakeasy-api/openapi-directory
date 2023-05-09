@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddLogRequest {
@@ -12,6 +13,7 @@ public class AddLogRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public AddLogRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class AddLogRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddLogRequest addLogRequest;
+
     public AddLogRequest withAddLogRequest(org.openapis.openapi.models.shared.AddLogRequest addLogRequest) {
         this.addLogRequest = addLogRequest;
         return this;
@@ -29,6 +32,7 @@ public class AddLogRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public AddLogRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,9 +43,16 @@ public class AddLogRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public AddLogRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public AddLogRequest(@JsonProperty("Accept") String accept, @JsonProperty("AddLogRequest") org.openapis.openapi.models.shared.AddLogRequest addLogRequest, @JsonProperty("Content-Type") String contentType, @JsonProperty("orderId") String orderId) {
+        this.accept = accept;
+        this.addLogRequest = addLogRequest;
+        this.contentType = contentType;
+        this.orderId = orderId;
+  }
 }

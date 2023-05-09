@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AreasGetRequest;
 import org.openapis.openapi.models.operations.AreasGetResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AreasGetRequest req = new AreasGetRequest() {{
-                version = "corrupti";
-            }}            
+            AreasGetRequest req = new AreasGetRequest("corrupti");            
 
             AreasGetResponse res = sdk.areas.areasGet(req);
 
-            if (res.areaResponse.isPresent()) {
+            if (res.areaResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

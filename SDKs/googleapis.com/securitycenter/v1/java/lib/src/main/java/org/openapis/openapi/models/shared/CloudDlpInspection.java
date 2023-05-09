@@ -18,17 +18,19 @@ public class CloudDlpInspection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullScan")
     public Boolean fullScan;
+
     public CloudDlpInspection withFullScan(Boolean fullScan) {
         this.fullScan = fullScan;
         return this;
     }
     
     /**
-     * The [type of information](https://cloud.google.com/dlp/docs/infotypes-reference) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
+     * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoType")
     public String infoType;
+
     public CloudDlpInspection withInfoType(String infoType) {
         this.infoType = infoType;
         return this;
@@ -40,6 +42,7 @@ public class CloudDlpInspection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoTypeCount")
     public String infoTypeCount;
+
     public CloudDlpInspection withInfoTypeCount(String infoTypeCount) {
         this.infoTypeCount = infoTypeCount;
         return this;
@@ -51,9 +54,11 @@ public class CloudDlpInspection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectJob")
     public String inspectJob;
+
     public CloudDlpInspection withInspectJob(String inspectJob) {
         this.inspectJob = inspectJob;
         return this;
     }
     
+    public CloudDlpInspection(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TransitGatewayRequestOptions {
     
     public Long amazonSideAsn;
+
     public TransitGatewayRequestOptions withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -19,6 +20,7 @@ public class TransitGatewayRequestOptions {
     
     
     public AutoAcceptSharedAttachmentsValueEnum autoAcceptSharedAttachments;
+
     public TransitGatewayRequestOptions withAutoAcceptSharedAttachments(AutoAcceptSharedAttachmentsValueEnum autoAcceptSharedAttachments) {
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         return this;
@@ -26,6 +28,7 @@ public class TransitGatewayRequestOptions {
     
     
     public DefaultRouteTableAssociationValueEnum defaultRouteTableAssociation;
+
     public TransitGatewayRequestOptions withDefaultRouteTableAssociation(DefaultRouteTableAssociationValueEnum defaultRouteTableAssociation) {
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;
         return this;
@@ -33,6 +36,7 @@ public class TransitGatewayRequestOptions {
     
     
     public DefaultRouteTablePropagationValueEnum defaultRouteTablePropagation;
+
     public TransitGatewayRequestOptions withDefaultRouteTablePropagation(DefaultRouteTablePropagationValueEnum defaultRouteTablePropagation) {
         this.defaultRouteTablePropagation = defaultRouteTablePropagation;
         return this;
@@ -40,6 +44,7 @@ public class TransitGatewayRequestOptions {
     
     
     public DnsSupportValueEnum dnsSupport;
+
     public TransitGatewayRequestOptions withDnsSupport(DnsSupportValueEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -47,6 +52,7 @@ public class TransitGatewayRequestOptions {
     
     
     public MulticastSupportValueEnum multicastSupport;
+
     public TransitGatewayRequestOptions withMulticastSupport(MulticastSupportValueEnum multicastSupport) {
         this.multicastSupport = multicastSupport;
         return this;
@@ -54,6 +60,7 @@ public class TransitGatewayRequestOptions {
     
     
     public String[] transitGatewayCidrBlocks;
+
     public TransitGatewayRequestOptions withTransitGatewayCidrBlocks(String[] transitGatewayCidrBlocks) {
         this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
         return this;
@@ -61,9 +68,11 @@ public class TransitGatewayRequestOptions {
     
     
     public VpnEcmpSupportValueEnum vpnEcmpSupport;
+
     public TransitGatewayRequestOptions withVpnEcmpSupport(VpnEcmpSupportValueEnum vpnEcmpSupport) {
         this.vpnEcmpSupport = vpnEcmpSupport;
         return this;
     }
     
+    public TransitGatewayRequestOptions(){}
 }

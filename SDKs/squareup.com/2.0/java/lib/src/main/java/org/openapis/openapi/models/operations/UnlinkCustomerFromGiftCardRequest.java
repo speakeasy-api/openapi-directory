@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnlinkCustomerFromGiftCardRequest {
@@ -14,6 +15,7 @@ public class UnlinkCustomerFromGiftCardRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UnlinkCustomerFromGiftCardRequest unlinkCustomerFromGiftCardRequest;
+
     public UnlinkCustomerFromGiftCardRequest withUnlinkCustomerFromGiftCardRequest(org.openapis.openapi.models.shared.UnlinkCustomerFromGiftCardRequest unlinkCustomerFromGiftCardRequest) {
         this.unlinkCustomerFromGiftCardRequest = unlinkCustomerFromGiftCardRequest;
         return this;
@@ -21,9 +23,14 @@ public class UnlinkCustomerFromGiftCardRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gift_card_id")
     public String giftCardId;
+
     public UnlinkCustomerFromGiftCardRequest withGiftCardId(String giftCardId) {
         this.giftCardId = giftCardId;
         return this;
     }
     
+    public UnlinkCustomerFromGiftCardRequest(@JsonProperty("UnlinkCustomerFromGiftCardRequest") org.openapis.openapi.models.shared.UnlinkCustomerFromGiftCardRequest unlinkCustomerFromGiftCardRequest, @JsonProperty("gift_card_id") String giftCardId) {
+        this.unlinkCustomerFromGiftCardRequest = unlinkCustomerFromGiftCardRequest;
+        this.giftCardId = giftCardId;
+  }
 }

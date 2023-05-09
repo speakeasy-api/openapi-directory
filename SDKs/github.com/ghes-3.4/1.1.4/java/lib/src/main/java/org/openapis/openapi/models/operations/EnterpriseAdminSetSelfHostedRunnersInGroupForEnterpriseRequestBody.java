@@ -12,9 +12,13 @@ public class EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody 
      */
     @JsonProperty("runners")
     public Long[] runners;
+
     public EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody withRunners(Long[] runners) {
         this.runners = runners;
         return this;
     }
     
+    public EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody(@JsonProperty("runners") Long[] runners) {
+        this.runners = runners;
+  }
 }

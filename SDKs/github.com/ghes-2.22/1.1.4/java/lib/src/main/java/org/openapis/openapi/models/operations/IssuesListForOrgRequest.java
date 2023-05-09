@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public IssuesListForOrgRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -28,6 +30,7 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public IssuesListForOrgFilterEnum filter;
+
     public IssuesListForOrgRequest withFilter(IssuesListForOrgFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -38,6 +41,7 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
     public String labels;
+
     public IssuesListForOrgRequest withLabels(String labels) {
         this.labels = labels;
         return this;
@@ -45,6 +49,7 @@ public class IssuesListForOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public IssuesListForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -55,6 +60,7 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public IssuesListForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -65,6 +71,7 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public IssuesListForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -75,6 +82,7 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public IssuesListForOrgRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -85,6 +93,7 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public IssuesListForOrgSortEnum sort;
+
     public IssuesListForOrgRequest withSort(IssuesListForOrgSortEnum sort) {
         this.sort = sort;
         return this;
@@ -95,9 +104,13 @@ public class IssuesListForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public IssuesListForOrgStateEnum state;
+
     public IssuesListForOrgRequest withState(IssuesListForOrgStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public IssuesListForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

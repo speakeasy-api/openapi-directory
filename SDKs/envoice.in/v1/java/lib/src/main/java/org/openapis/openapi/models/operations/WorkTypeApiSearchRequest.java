@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiSearchRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.order")
     public WorkTypeApiSearchQueryOptionsOrderEnum queryOptionsOrder;
+
     public WorkTypeApiSearchRequest withQueryOptionsOrder(WorkTypeApiSearchQueryOptionsOrderEnum queryOptionsOrder) {
         this.queryOptionsOrder = queryOptionsOrder;
         return this;
@@ -16,6 +18,7 @@ public class WorkTypeApiSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.orderBy")
     public String queryOptionsOrderBy;
+
     public WorkTypeApiSearchRequest withQueryOptionsOrderBy(String queryOptionsOrderBy) {
         this.queryOptionsOrderBy = queryOptionsOrderBy;
         return this;
@@ -23,6 +26,7 @@ public class WorkTypeApiSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.page")
     public Integer queryOptionsPage;
+
     public WorkTypeApiSearchRequest withQueryOptionsPage(Integer queryOptionsPage) {
         this.queryOptionsPage = queryOptionsPage;
         return this;
@@ -30,6 +34,7 @@ public class WorkTypeApiSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.pageSize")
     public Integer queryOptionsPageSize;
+
     public WorkTypeApiSearchRequest withQueryOptionsPageSize(Integer queryOptionsPageSize) {
         this.queryOptionsPageSize = queryOptionsPageSize;
         return this;
@@ -37,6 +42,7 @@ public class WorkTypeApiSearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.query")
     public String queryOptionsQuery;
+
     public WorkTypeApiSearchRequest withQueryOptionsQuery(String queryOptionsQuery) {
         this.queryOptionsQuery = queryOptionsQuery;
         return this;
@@ -44,6 +50,7 @@ public class WorkTypeApiSearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public WorkTypeApiSearchRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -51,9 +58,14 @@ public class WorkTypeApiSearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public WorkTypeApiSearchRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public WorkTypeApiSearchRequest(@JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

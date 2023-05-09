@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveUserFromGroupRequest {
     
     public String groupName;
+
     public RemoveUserFromGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,9 +17,14 @@ public class RemoveUserFromGroupRequest {
     
     
     public String userName;
+
     public RemoveUserFromGroupRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public RemoveUserFromGroupRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("UserName") String userName) {
+        this.groupName = groupName;
+        this.userName = userName;
+  }
 }

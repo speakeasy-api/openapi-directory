@@ -59,10 +59,8 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -100,10 +98,8 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -135,11 +131,9 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdResponse(contentType, httpRes.statusCode()) {{
             cdDriveFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentResponse(contentType, httpRes.statusCode()) {{
             getApiV2CddriveFilesFileIdContent200ApplicationOctetStreamBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +224,9 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdResponse(contentType, httpRes.statusCode()) {{
             cdDriveFolder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsResponse res = new org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsResponse(contentType, httpRes.statusCode()) {{
             getApiV2CddriveFoldersFolderIdItems200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentResponse res = new org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentResponse() {{
+        org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentResponse res = new org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentResponse(contentType, httpRes.statusCode()) {{
             cdDriveFile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -379,11 +365,9 @@ public class CDDrive {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV2CddriveFoldersResponse res = new org.openapis.openapi.models.operations.PostApiV2CddriveFoldersResponse() {{
+        org.openapis.openapi.models.operations.PostApiV2CddriveFoldersResponse res = new org.openapis.openapi.models.operations.PostApiV2CddriveFoldersResponse(contentType, httpRes.statusCode()) {{
             cdDriveFolder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

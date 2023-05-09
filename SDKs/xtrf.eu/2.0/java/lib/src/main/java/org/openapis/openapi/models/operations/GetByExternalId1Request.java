@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetByExternalId1Request {
@@ -12,9 +13,13 @@ public class GetByExternalId1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalProjectId")
     public String externalProjectId;
+
     public GetByExternalId1Request withExternalProjectId(String externalProjectId) {
         this.externalProjectId = externalProjectId;
         return this;
     }
     
+    public GetByExternalId1Request(@JsonProperty("externalProjectId") String externalProjectId) {
+        this.externalProjectId = externalProjectId;
+  }
 }

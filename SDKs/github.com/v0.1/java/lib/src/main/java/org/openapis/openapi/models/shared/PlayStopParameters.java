@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,9 +16,13 @@ public class PlayStopParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public PlayStopParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
     }
     
+    public PlayStopParameters(@JsonProperty("CallUUID") String callUUID) {
+        this.callUUID = callUUID;
+  }
 }

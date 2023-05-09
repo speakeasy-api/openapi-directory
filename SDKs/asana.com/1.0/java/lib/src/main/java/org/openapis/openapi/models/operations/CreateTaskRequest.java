@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTaskRequest {
@@ -12,6 +13,7 @@ public class CreateTaskRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateTaskRequestBodyInput requestBody;
+
     public CreateTaskRequest withRequestBody(CreateTaskRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class CreateTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateTaskRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,9 +38,13 @@ public class CreateTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateTaskRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public CreateTaskRequest(@JsonProperty("RequestBody") CreateTaskRequestBodyInput requestBody) {
+        this.requestBody = requestBody;
+  }
 }

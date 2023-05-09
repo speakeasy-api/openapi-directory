@@ -12,6 +12,7 @@ public class CreateCollectionRequestBodyCollectionItemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateCollectionRequestBodyCollectionItemItem withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class CreateCollectionRequestBodyCollectionItemItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public CreateCollectionRequestBodyCollectionItemItemRequest request;
+
     public CreateCollectionRequestBodyCollectionItemItem withRequest(CreateCollectionRequestBodyCollectionItemItemRequest request) {
         this.request = request;
         return this;
     }
     
+    public CreateCollectionRequestBodyCollectionItemItem(){}
 }

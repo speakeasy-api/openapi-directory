@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlayByPlayResponse {
     
     public String contentType;
+
     public PlayByPlayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PlayByPlayResponse {
     
     
     public org.openapis.openapi.models.shared.PlayByPlay playByPlay;
+
     public PlayByPlayResponse withPlayByPlay(org.openapis.openapi.models.shared.PlayByPlay playByPlay) {
         this.playByPlay = playByPlay;
         return this;
@@ -23,6 +26,7 @@ public class PlayByPlayResponse {
     
     
     public Integer statusCode;
+
     public PlayByPlayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PlayByPlayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlayByPlayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlayByPlayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendBulkTemplatedEmailResponse - Success
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class SendBulkTemplatedEmailResponse {
     
     public BulkEmailDestinationStatus[] status;
+
     public SendBulkTemplatedEmailResponse withStatus(BulkEmailDestinationStatus[] status) {
         this.status = status;
         return this;
     }
     
+    public SendBulkTemplatedEmailResponse(@JsonProperty("Status") BulkEmailDestinationStatus[] status) {
+        this.status = status;
+  }
 }

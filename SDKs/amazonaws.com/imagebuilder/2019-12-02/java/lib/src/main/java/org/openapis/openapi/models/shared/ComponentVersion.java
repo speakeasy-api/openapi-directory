@@ -15,6 +15,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ComponentVersion withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateCreated")
     public String dateCreated;
+
     public ComponentVersion withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -31,6 +33,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ComponentVersion withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ComponentVersion withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public ComponentVersion withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -55,6 +60,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public PlatformEnum platform;
+
     public ComponentVersion withPlatform(PlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -63,6 +69,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedOsVersions")
     public String[] supportedOsVersions;
+
     public ComponentVersion withSupportedOsVersions(String[] supportedOsVersions) {
         this.supportedOsVersions = supportedOsVersions;
         return this;
@@ -71,6 +78,7 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ComponentTypeEnum type;
+
     public ComponentVersion withType(ComponentTypeEnum type) {
         this.type = type;
         return this;
@@ -79,9 +87,11 @@ public class ComponentVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ComponentVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ComponentVersion(){}
 }

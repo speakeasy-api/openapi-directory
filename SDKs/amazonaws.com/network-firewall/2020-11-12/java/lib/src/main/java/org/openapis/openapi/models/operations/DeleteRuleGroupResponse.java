@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRuleGroupResponse {
     
     public String contentType;
+
     public DeleteRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRuleGroupResponse deleteRuleGroupResponse;
+
     public DeleteRuleGroupResponse withDeleteRuleGroupResponse(org.openapis.openapi.models.shared.DeleteRuleGroupResponse deleteRuleGroupResponse) {
         this.deleteRuleGroupResponse = deleteRuleGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object internalServerError;
+
     public DeleteRuleGroupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object invalidOperationException;
+
     public DeleteRuleGroupResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteRuleGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRuleGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRuleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteRuleGroupResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class ColumnLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Column[] columns;
+
     public ColumnLayout withColumns(Column[] columns) {
         this.columns = columns;
         return this;
     }
     
+    public ColumnLayout(){}
 }

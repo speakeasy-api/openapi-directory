@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferenceS3OutputConfiguration {
     @JsonProperty("Bucket")
     public String bucket;
+
     public InferenceS3OutputConfiguration withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -22,9 +23,13 @@ public class InferenceS3OutputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public InferenceS3OutputConfiguration withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public InferenceS3OutputConfiguration(@JsonProperty("Bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

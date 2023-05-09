@@ -20,6 +20,7 @@ public class ResourceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public java.util.Map<String, Object> data;
+
     public ResourceProperty withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -30,6 +31,7 @@ public class ResourceProperty {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastReportedAt")
     public OffsetDateTime lastReportedAt;
+
     public ResourceProperty withLastReportedAt(OffsetDateTime lastReportedAt) {
         this.lastReportedAt = lastReportedAt;
         return this;
@@ -38,9 +40,11 @@ public class ResourceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResourceProperty withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ResourceProperty(){}
 }

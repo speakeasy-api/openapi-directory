@@ -15,6 +15,7 @@ public class FundSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalData")
     public java.util.Map<String, String> additionalData;
+
     public FundSource withAdditionalData(java.util.Map<String, String> additionalData) {
         this.additionalData = additionalData;
         return this;
@@ -23,6 +24,7 @@ public class FundSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public Address billingAddress;
+
     public FundSource withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -31,6 +33,7 @@ public class FundSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public FundSource withCard(Card card) {
         this.card = card;
         return this;
@@ -42,6 +45,7 @@ public class FundSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperEmail")
     public String shopperEmail;
+
     public FundSource withShopperEmail(String shopperEmail) {
         this.shopperEmail = shopperEmail;
         return this;
@@ -50,6 +54,7 @@ public class FundSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperName")
     public Name shopperName;
+
     public FundSource withShopperName(Name shopperName) {
         this.shopperName = shopperName;
         return this;
@@ -61,9 +66,11 @@ public class FundSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephoneNumber")
     public String telephoneNumber;
+
     public FundSource withTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
         return this;
     }
     
+    public FundSource(){}
 }

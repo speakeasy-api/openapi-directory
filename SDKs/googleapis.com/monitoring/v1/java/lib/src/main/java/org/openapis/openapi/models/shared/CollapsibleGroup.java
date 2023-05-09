@@ -18,9 +18,11 @@ public class CollapsibleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collapsed")
     public Boolean collapsed;
+
     public CollapsibleGroup withCollapsed(Boolean collapsed) {
         this.collapsed = collapsed;
         return this;
     }
     
+    public CollapsibleGroup(){}
 }

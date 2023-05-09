@@ -15,9 +15,11 @@ public class DeleteContextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextArn")
     public String contextArn;
+
     public DeleteContextResponse withContextArn(String contextArn) {
         this.contextArn = contextArn;
         return this;
     }
     
+    public DeleteContextResponse(){}
 }

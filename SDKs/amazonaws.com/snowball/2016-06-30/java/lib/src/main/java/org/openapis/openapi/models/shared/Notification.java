@@ -15,6 +15,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatesToNotify")
     public JobStateEnum[] jobStatesToNotify;
+
     public Notification withJobStatesToNotify(JobStateEnum[] jobStatesToNotify) {
         this.jobStatesToNotify = jobStatesToNotify;
         return this;
@@ -23,6 +24,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotifyAll")
     public Boolean notifyAll;
+
     public Notification withNotifyAll(Boolean notifyAll) {
         this.notifyAll = notifyAll;
         return this;
@@ -31,9 +33,11 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicARN")
     public String snsTopicARN;
+
     public Notification withSnsTopicARN(String snsTopicARN) {
         this.snsTopicARN = snsTopicARN;
         return this;
     }
     
+    public Notification(){}
 }

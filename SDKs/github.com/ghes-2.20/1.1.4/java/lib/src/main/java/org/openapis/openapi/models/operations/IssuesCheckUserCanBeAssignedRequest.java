@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesCheckUserCanBeAssignedRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignee")
     public String assignee;
+
     public IssuesCheckUserCanBeAssignedRequest withAssignee(String assignee) {
         this.assignee = assignee;
         return this;
@@ -16,6 +18,7 @@ public class IssuesCheckUserCanBeAssignedRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesCheckUserCanBeAssignedRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -23,9 +26,15 @@ public class IssuesCheckUserCanBeAssignedRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesCheckUserCanBeAssignedRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public IssuesCheckUserCanBeAssignedRequest(@JsonProperty("assignee") String assignee, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.assignee = assignee;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

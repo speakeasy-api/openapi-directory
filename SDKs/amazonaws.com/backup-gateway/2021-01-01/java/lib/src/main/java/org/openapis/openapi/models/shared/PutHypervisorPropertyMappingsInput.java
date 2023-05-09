@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutHypervisorPropertyMappingsInput {
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public PutHypervisorPropertyMappingsInput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
@@ -16,6 +17,7 @@ public class PutHypervisorPropertyMappingsInput {
     
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public PutHypervisorPropertyMappingsInput withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -23,9 +25,15 @@ public class PutHypervisorPropertyMappingsInput {
     
     @JsonProperty("VmwareToAwsTagMappings")
     public VmwareToAwsTagMapping[] vmwareToAwsTagMappings;
+
     public PutHypervisorPropertyMappingsInput withVmwareToAwsTagMappings(VmwareToAwsTagMapping[] vmwareToAwsTagMappings) {
         this.vmwareToAwsTagMappings = vmwareToAwsTagMappings;
         return this;
     }
     
+    public PutHypervisorPropertyMappingsInput(@JsonProperty("HypervisorArn") String hypervisorArn, @JsonProperty("IamRoleArn") String iamRoleArn, @JsonProperty("VmwareToAwsTagMappings") VmwareToAwsTagMapping[] vmwareToAwsTagMappings) {
+        this.hypervisorArn = hypervisorArn;
+        this.iamRoleArn = iamRoleArn;
+        this.vmwareToAwsTagMappings = vmwareToAwsTagMappings;
+  }
 }

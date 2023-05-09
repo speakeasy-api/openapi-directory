@@ -15,9 +15,13 @@ public class DownloadHistoryUserDetails {
      */
     @JsonProperty("username")
     public String username;
+
     public DownloadHistoryUserDetails withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public DownloadHistoryUserDetails(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

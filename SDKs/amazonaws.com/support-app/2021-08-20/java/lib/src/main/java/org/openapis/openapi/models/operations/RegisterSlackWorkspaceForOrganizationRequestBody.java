@@ -12,9 +12,13 @@ public class RegisterSlackWorkspaceForOrganizationRequestBody {
      */
     @JsonProperty("teamId")
     public String teamId;
+
     public RegisterSlackWorkspaceForOrganizationRequestBody withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public RegisterSlackWorkspaceForOrganizationRequestBody(@JsonProperty("teamId") String teamId) {
+        this.teamId = teamId;
+  }
 }

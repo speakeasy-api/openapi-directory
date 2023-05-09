@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddDraftAppVersionResourceMappingsResponse {
@@ -12,6 +13,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
      */
     
     public Object accessDeniedException;
+
     public AddDraftAppVersionResourceMappingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddDraftAppVersionResourceMappingsResponse addDraftAppVersionResourceMappingsResponse;
+
     public AddDraftAppVersionResourceMappingsResponse withAddDraftAppVersionResourceMappingsResponse(org.openapis.openapi.models.shared.AddDraftAppVersionResourceMappingsResponse addDraftAppVersionResourceMappingsResponse) {
         this.addDraftAppVersionResourceMappingsResponse = addDraftAppVersionResourceMappingsResponse;
         return this;
@@ -32,6 +35,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
      */
     
     public Object conflictException;
+
     public AddDraftAppVersionResourceMappingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
     
     
     public String contentType;
+
     public AddDraftAppVersionResourceMappingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
      */
     
     public Object internalServerException;
+
     public AddDraftAppVersionResourceMappingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
     
     
     public Integer statusCode;
+
     public AddDraftAppVersionResourceMappingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddDraftAppVersionResourceMappingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddDraftAppVersionResourceMappingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
      */
     
     public Object throttlingException;
+
     public AddDraftAppVersionResourceMappingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AddDraftAppVersionResourceMappingsResponse {
      */
     
     public Object validationException;
+
     public AddDraftAppVersionResourceMappingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AddDraftAppVersionResourceMappingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GlueSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Columns")
     public GlueStudioSchemaColumn[] columns;
+
     public GlueSchema withColumns(GlueStudioSchemaColumn[] columns) {
         this.columns = columns;
         return this;
     }
     
+    public GlueSchema(){}
 }

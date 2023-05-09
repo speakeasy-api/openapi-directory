@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basemap")
     public String basemap;
+
     public EnterpriseSettingsEnterpriseMapping withBasemap(String basemap) {
         this.basemap = basemap;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterpriseMapping withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterpriseMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tileserver")
     public String tileserver;
+
     public EnterpriseSettingsEnterpriseMapping withTileserver(String tileserver) {
         this.tileserver = tileserver;
         return this;
@@ -36,9 +39,11 @@ public class EnterpriseSettingsEnterpriseMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public EnterpriseSettingsEnterpriseMapping withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseMapping(){}
 }

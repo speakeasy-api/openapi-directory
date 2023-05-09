@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ConfigurationSettingsValidationMessages {
     
     public ValidationMessage[] messages;
+
     public ConfigurationSettingsValidationMessages withMessages(ValidationMessage[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public ConfigurationSettingsValidationMessages(){}
 }

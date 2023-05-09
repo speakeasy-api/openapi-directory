@@ -12,6 +12,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age_group")
     public String ageGroup;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withAgeGroup(String ageGroup) {
         this.ageGroup = ageGroup;
         return this;
@@ -20,6 +21,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withAuthor(String author) {
         this.author = author;
         return this;
@@ -28,6 +30,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor")
     public String contributor;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -36,6 +39,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor_note")
     public String contributorNote;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withContributorNote(String contributorNote) {
         this.contributorNote = contributorNote;
         return this;
@@ -44,6 +48,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +57,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbns")
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsIsbns[] isbns;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withIsbns(GETListsBestSellersHistoryJSON200ApplicationJSONResultsIsbns[] isbns) {
         this.isbns = isbns;
         return this;
@@ -60,6 +66,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withPrice(Long price) {
         this.price = price;
         return this;
@@ -68,6 +75,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -76,6 +84,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranks_history")
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory[] ranksHistory;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withRanksHistory(GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory[] ranksHistory) {
         this.ranksHistory = ranksHistory;
         return this;
@@ -84,6 +93,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviews")
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews[] reviews;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withReviews(GETListsBestSellersHistoryJSON200ApplicationJSONResultsReviews[] reviews) {
         this.reviews = reviews;
         return this;
@@ -92,9 +102,11 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResults withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GETListsBestSellersHistoryJSON200ApplicationJSONResults(){}
 }

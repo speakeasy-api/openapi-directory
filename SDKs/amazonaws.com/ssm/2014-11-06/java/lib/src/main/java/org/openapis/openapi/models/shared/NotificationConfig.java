@@ -15,6 +15,7 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationArn")
     public String notificationArn;
+
     public NotificationConfig withNotificationArn(String notificationArn) {
         this.notificationArn = notificationArn;
         return this;
@@ -23,6 +24,7 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationEvents")
     public NotificationEventEnum[] notificationEvents;
+
     public NotificationConfig withNotificationEvents(NotificationEventEnum[] notificationEvents) {
         this.notificationEvents = notificationEvents;
         return this;
@@ -31,9 +33,11 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationType")
     public NotificationTypeEnum notificationType;
+
     public NotificationConfig withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
     }
     
+    public NotificationConfig(){}
 }

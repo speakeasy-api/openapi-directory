@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListDataStreamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataStreams")
     public GoogleAnalyticsAdminV1alphaDataStream[] dataStreams;
+
     public GoogleAnalyticsAdminV1alphaListDataStreamsResponse withDataStreams(GoogleAnalyticsAdminV1alphaDataStream[] dataStreams) {
         this.dataStreams = dataStreams;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListDataStreamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListDataStreamsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListDataStreamsResponse(){}
 }

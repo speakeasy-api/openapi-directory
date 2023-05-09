@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1RemoveNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkId")
     public String networkId;
+
     public GoogleChromePolicyVersionsV1RemoveNetworkRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromePolicyVersionsV1RemoveNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResource")
     public String targetResource;
+
     public GoogleChromePolicyVersionsV1RemoveNetworkRequest withTargetResource(String targetResource) {
         this.targetResource = targetResource;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1RemoveNetworkRequest(){}
 }

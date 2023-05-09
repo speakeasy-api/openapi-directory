@@ -21,6 +21,7 @@ public class EmbeddedRecordingResource {
      */
     
     public String recordingStatus;
+
     public EmbeddedRecordingResource withRecordingStatus(String recordingStatus) {
         this.recordingStatus = recordingStatus;
         return this;
@@ -44,6 +45,7 @@ public class EmbeddedRecordingResource {
      */
     
     public String status;
+
     public EmbeddedRecordingResource withStatus(String status) {
         this.status = status;
         return this;
@@ -54,9 +56,11 @@ public class EmbeddedRecordingResource {
      */
     
     public String url;
+
     public EmbeddedRecordingResource withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public EmbeddedRecordingResource(){}
 }

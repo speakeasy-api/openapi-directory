@@ -12,9 +12,11 @@ public class GetStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetStatusRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetStatusRequest(){}
 }

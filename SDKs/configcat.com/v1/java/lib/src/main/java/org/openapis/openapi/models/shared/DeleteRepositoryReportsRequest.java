@@ -15,6 +15,7 @@ public class DeleteRepositoryReportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public DeleteRepositoryReportsRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -25,6 +26,7 @@ public class DeleteRepositoryReportsRequest {
      */
     @JsonProperty("configId")
     public String configId;
+
     public DeleteRepositoryReportsRequest withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -35,6 +37,7 @@ public class DeleteRepositoryReportsRequest {
      */
     @JsonProperty("repository")
     public String repository;
+
     public DeleteRepositoryReportsRequest withRepository(String repository) {
         this.repository = repository;
         return this;
@@ -46,9 +49,14 @@ public class DeleteRepositoryReportsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingId")
     public Integer settingId;
+
     public DeleteRepositoryReportsRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public DeleteRepositoryReportsRequest(@JsonProperty("configId") String configId, @JsonProperty("repository") String repository) {
+        this.configId = configId;
+        this.repository = repository;
+  }
 }

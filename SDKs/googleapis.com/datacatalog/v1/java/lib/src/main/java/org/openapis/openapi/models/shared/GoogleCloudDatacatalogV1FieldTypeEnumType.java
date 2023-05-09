@@ -15,9 +15,11 @@ public class GoogleCloudDatacatalogV1FieldTypeEnumType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedValues")
     public GoogleCloudDatacatalogV1FieldTypeEnumTypeEnumValue[] allowedValues;
+
     public GoogleCloudDatacatalogV1FieldTypeEnumType withAllowedValues(GoogleCloudDatacatalogV1FieldTypeEnumTypeEnumValue[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1FieldTypeEnumType(){}
 }

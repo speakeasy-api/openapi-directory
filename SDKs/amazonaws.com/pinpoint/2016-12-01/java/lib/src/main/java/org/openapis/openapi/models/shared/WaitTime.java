@@ -15,6 +15,7 @@ public class WaitTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitFor")
     public String waitFor;
+
     public WaitTime withWaitFor(String waitFor) {
         this.waitFor = waitFor;
         return this;
@@ -23,9 +24,11 @@ public class WaitTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitUntil")
     public String waitUntil;
+
     public WaitTime withWaitUntil(String waitUntil) {
         this.waitUntil = waitUntil;
         return this;
     }
     
+    public WaitTime(){}
 }

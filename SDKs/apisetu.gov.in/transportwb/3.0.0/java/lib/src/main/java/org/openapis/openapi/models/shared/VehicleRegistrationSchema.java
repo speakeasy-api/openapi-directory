@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VehicleRegistrationSchema - The certificate data in response body in PDF, XML or JSON format as requested in format parameter.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VehicleRegistrationSchema {
     
     public VehicleRegistrationSchemaCertificateData certificateData;
+
     public VehicleRegistrationSchema withCertificateData(VehicleRegistrationSchemaCertificateData certificateData) {
         this.certificateData = certificateData;
         return this;
@@ -19,6 +20,7 @@ public class VehicleRegistrationSchema {
     
     
     public VehicleRegistrationSchemaIssuedBy issuedBy;
+
     public VehicleRegistrationSchema withIssuedBy(VehicleRegistrationSchemaIssuedBy issuedBy) {
         this.issuedBy = issuedBy;
         return this;
@@ -26,6 +28,7 @@ public class VehicleRegistrationSchema {
     
     
     public VehicleRegistrationSchemaIssuedTo issuedTo;
+
     public VehicleRegistrationSchema withIssuedTo(VehicleRegistrationSchemaIssuedTo issuedTo) {
         this.issuedTo = issuedTo;
         return this;
@@ -33,6 +36,7 @@ public class VehicleRegistrationSchema {
     
     
     public String expiryDate;
+
     public VehicleRegistrationSchema withExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -40,6 +44,7 @@ public class VehicleRegistrationSchema {
     
     
     public String issueDate;
+
     public VehicleRegistrationSchema withIssueDate(String issueDate) {
         this.issueDate = issueDate;
         return this;
@@ -47,6 +52,7 @@ public class VehicleRegistrationSchema {
     
     
     public String issuedAt;
+
     public VehicleRegistrationSchema withIssuedAt(String issuedAt) {
         this.issuedAt = issuedAt;
         return this;
@@ -54,6 +60,7 @@ public class VehicleRegistrationSchema {
     
     
     public String language;
+
     public VehicleRegistrationSchema withLanguage(String language) {
         this.language = language;
         return this;
@@ -61,6 +68,7 @@ public class VehicleRegistrationSchema {
     
     
     public String name;
+
     public VehicleRegistrationSchema withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +76,7 @@ public class VehicleRegistrationSchema {
     
     
     public Long number;
+
     public VehicleRegistrationSchema withNumber(Long number) {
         this.number = number;
         return this;
@@ -75,6 +84,7 @@ public class VehicleRegistrationSchema {
     
     
     public String status;
+
     public VehicleRegistrationSchema withStatus(String status) {
         this.status = status;
         return this;
@@ -82,6 +92,7 @@ public class VehicleRegistrationSchema {
     
     
     public String type;
+
     public VehicleRegistrationSchema withType(String type) {
         this.type = type;
         return this;
@@ -89,9 +100,23 @@ public class VehicleRegistrationSchema {
     
     
     public String validFromDate;
+
     public VehicleRegistrationSchema withValidFromDate(String validFromDate) {
         this.validFromDate = validFromDate;
         return this;
     }
     
+    public VehicleRegistrationSchema(@JsonProperty("CertificateData") VehicleRegistrationSchemaCertificateData certificateData, @JsonProperty("IssuedBy") VehicleRegistrationSchemaIssuedBy issuedBy, @JsonProperty("IssuedTo") VehicleRegistrationSchemaIssuedTo issuedTo, @JsonProperty("issueDate") String issueDate, @JsonProperty("issuedAt") String issuedAt, @JsonProperty("language") String language, @JsonProperty("name") String name, @JsonProperty("number") Long number, @JsonProperty("status") String status, @JsonProperty("type") String type, @JsonProperty("validFromDate") String validFromDate) {
+        this.certificateData = certificateData;
+        this.issuedBy = issuedBy;
+        this.issuedTo = issuedTo;
+        this.issueDate = issueDate;
+        this.issuedAt = issuedAt;
+        this.language = language;
+        this.name = name;
+        this.number = number;
+        this.status = status;
+        this.type = type;
+        this.validFromDate = validFromDate;
+  }
 }

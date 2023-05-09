@@ -18,6 +18,7 @@ public class GoogleTypeLocalizedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleTypeLocalizedText withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleTypeLocalizedText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleTypeLocalizedText withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleTypeLocalizedText(){}
 }

@@ -12,6 +12,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("error")
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseActionError error;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withError(PostServersIdActionsRemoveFromPlacementGroupActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("resources")
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseActionResources[] resources;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withResources(PostServersIdActionsRemoveFromPlacementGroupActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostServersIdActionsRemoveFromPlacementGroupActionResponseAction {
      */
     @JsonProperty("status")
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseActionStatusEnum status;
+
     public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction withStatus(PostServersIdActionsRemoveFromPlacementGroupActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostServersIdActionsRemoveFromPlacementGroupActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostServersIdActionsRemoveFromPlacementGroupActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostServersIdActionsRemoveFromPlacementGroupActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostServersIdActionsRemoveFromPlacementGroupActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

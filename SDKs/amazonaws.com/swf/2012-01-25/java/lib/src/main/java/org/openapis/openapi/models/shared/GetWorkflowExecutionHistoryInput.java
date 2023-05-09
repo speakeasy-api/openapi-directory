@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetWorkflowExecutionHistoryInput {
     @JsonProperty("domain")
     public String domain;
+
     public GetWorkflowExecutionHistoryInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -18,6 +19,7 @@ public class GetWorkflowExecutionHistoryInput {
     
     @JsonProperty("execution")
     public WorkflowExecution execution;
+
     public GetWorkflowExecutionHistoryInput withExecution(WorkflowExecution execution) {
         this.execution = execution;
         return this;
@@ -26,6 +28,7 @@ public class GetWorkflowExecutionHistoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPageSize")
     public Long maximumPageSize;
+
     public GetWorkflowExecutionHistoryInput withMaximumPageSize(Long maximumPageSize) {
         this.maximumPageSize = maximumPageSize;
         return this;
@@ -34,6 +37,7 @@ public class GetWorkflowExecutionHistoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetWorkflowExecutionHistoryInput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -42,9 +46,14 @@ public class GetWorkflowExecutionHistoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverseOrder")
     public Boolean reverseOrder;
+
     public GetWorkflowExecutionHistoryInput withReverseOrder(Boolean reverseOrder) {
         this.reverseOrder = reverseOrder;
         return this;
     }
     
+    public GetWorkflowExecutionHistoryInput(@JsonProperty("domain") String domain, @JsonProperty("execution") WorkflowExecution execution) {
+        this.domain = domain;
+        this.execution = execution;
+  }
 }

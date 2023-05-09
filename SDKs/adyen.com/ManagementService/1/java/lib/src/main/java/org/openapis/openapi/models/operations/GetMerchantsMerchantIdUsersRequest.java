@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdUsersRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdUsersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdUsersRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -22,6 +24,7 @@ public class GetMerchantsMerchantIdUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetMerchantsMerchantIdUsersRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,6 +35,7 @@ public class GetMerchantsMerchantIdUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetMerchantsMerchantIdUsersRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -42,9 +46,13 @@ public class GetMerchantsMerchantIdUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetMerchantsMerchantIdUsersRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetMerchantsMerchantIdUsersRequest(@JsonProperty("merchantId") String merchantId) {
+        this.merchantId = merchantId;
+  }
 }

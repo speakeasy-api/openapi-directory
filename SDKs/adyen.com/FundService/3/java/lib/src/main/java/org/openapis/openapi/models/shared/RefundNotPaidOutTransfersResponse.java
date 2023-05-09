@@ -18,6 +18,7 @@ public class RefundNotPaidOutTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public RefundNotPaidOutTransfersResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -29,6 +30,7 @@ public class RefundNotPaidOutTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public RefundNotPaidOutTransfersResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -42,9 +44,11 @@ public class RefundNotPaidOutTransfersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public RefundNotPaidOutTransfersResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public RefundNotPaidOutTransfersResponse(){}
 }

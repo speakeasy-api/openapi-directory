@@ -15,6 +15,7 @@ public class SectionTaskInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public SectionTaskInsertRequest withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -26,6 +27,7 @@ public class SectionTaskInsertRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public SectionTaskInsertRequest withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -36,9 +38,13 @@ public class SectionTaskInsertRequest {
      */
     @JsonProperty("task")
     public String task;
+
     public SectionTaskInsertRequest withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public SectionTaskInsertRequest(@JsonProperty("task") String task) {
+        this.task = task;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastRecommendationsRequest {
@@ -12,6 +13,7 @@ public class GetPodcastRecommendationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetPodcastRecommendationsRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -22,6 +24,7 @@ public class GetPodcastRecommendationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetPodcastRecommendationsRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +35,14 @@ public class GetPodcastRecommendationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe_mode")
     public org.openapis.openapi.models.shared.SafeModeParamEnum safeMode;
+
     public GetPodcastRecommendationsRequest withSafeMode(org.openapis.openapi.models.shared.SafeModeParamEnum safeMode) {
         this.safeMode = safeMode;
         return this;
     }
     
+    public GetPodcastRecommendationsRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey, @JsonProperty("id") String id) {
+        this.xListenAPIKey = xListenAPIKey;
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class RecoveryInstanceDataReplicationInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateTime")
     public String startDateTime;
+
     public RecoveryInstanceDataReplicationInitiation withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -23,9 +24,11 @@ public class RecoveryInstanceDataReplicationInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public RecoveryInstanceDataReplicationInitiationStep[] steps;
+
     public RecoveryInstanceDataReplicationInitiation withSteps(RecoveryInstanceDataReplicationInitiationStep[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public RecoveryInstanceDataReplicationInitiation(){}
 }

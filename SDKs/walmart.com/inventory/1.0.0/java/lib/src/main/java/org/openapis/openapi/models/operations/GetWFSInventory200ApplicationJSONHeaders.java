@@ -15,6 +15,7 @@ public class GetWFSInventory200ApplicationJSONHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public GetWFSInventory200ApplicationJSONHeaders withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -26,6 +27,7 @@ public class GetWFSInventory200ApplicationJSONHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public GetWFSInventory200ApplicationJSONHeaders withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -37,9 +39,11 @@ public class GetWFSInventory200ApplicationJSONHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public GetWFSInventory200ApplicationJSONHeaders withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public GetWFSInventory200ApplicationJSONHeaders(){}
 }

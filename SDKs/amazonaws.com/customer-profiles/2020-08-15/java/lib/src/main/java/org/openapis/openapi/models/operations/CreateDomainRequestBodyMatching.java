@@ -15,6 +15,7 @@ public class CreateDomainRequestBodyMatching {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMerging")
     public org.openapis.openapi.models.shared.AutoMerging autoMerging;
+
     public CreateDomainRequestBodyMatching withAutoMerging(org.openapis.openapi.models.shared.AutoMerging autoMerging) {
         this.autoMerging = autoMerging;
         return this;
@@ -23,6 +24,7 @@ public class CreateDomainRequestBodyMatching {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public CreateDomainRequestBodyMatching withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class CreateDomainRequestBodyMatching {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportingConfig")
     public org.openapis.openapi.models.shared.ExportingConfig exportingConfig;
+
     public CreateDomainRequestBodyMatching withExportingConfig(org.openapis.openapi.models.shared.ExportingConfig exportingConfig) {
         this.exportingConfig = exportingConfig;
         return this;
@@ -39,9 +42,11 @@ public class CreateDomainRequestBodyMatching {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobSchedule")
     public org.openapis.openapi.models.shared.JobSchedule jobSchedule;
+
     public CreateDomainRequestBodyMatching withJobSchedule(org.openapis.openapi.models.shared.JobSchedule jobSchedule) {
         this.jobSchedule = jobSchedule;
         return this;
     }
     
+    public CreateDomainRequestBodyMatching(){}
 }

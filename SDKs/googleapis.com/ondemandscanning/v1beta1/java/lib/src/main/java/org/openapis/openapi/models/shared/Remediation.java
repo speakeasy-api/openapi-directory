@@ -18,6 +18,7 @@ public class Remediation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public Remediation withDetails(String details) {
         this.details = details;
         return this;
@@ -29,6 +30,7 @@ public class Remediation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediationType")
     public RemediationRemediationTypeEnum remediationType;
+
     public Remediation withRemediationType(RemediationRemediationTypeEnum remediationType) {
         this.remediationType = remediationType;
         return this;
@@ -40,9 +42,11 @@ public class Remediation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remediationUri")
     public RelatedUrl remediationUri;
+
     public Remediation withRemediationUri(RelatedUrl remediationUri) {
         this.remediationUri = remediationUri;
         return this;
     }
     
+    public Remediation(){}
 }

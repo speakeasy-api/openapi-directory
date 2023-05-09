@@ -15,9 +15,11 @@ public class CreateBlueGreenDeploymentResponse {
      */
     
     public BlueGreenDeployment blueGreenDeployment;
+
     public CreateBlueGreenDeploymentResponse withBlueGreenDeployment(BlueGreenDeployment blueGreenDeployment) {
         this.blueGreenDeployment = blueGreenDeployment;
         return this;
     }
     
+    public CreateBlueGreenDeploymentResponse(){}
 }

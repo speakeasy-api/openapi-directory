@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePartitionIndexResponse {
@@ -12,6 +13,7 @@ public class DeletePartitionIndexResponse {
      */
     
     public Object conflictException;
+
     public DeletePartitionIndexResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePartitionIndexResponse {
     
     
     public String contentType;
+
     public DeletePartitionIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePartitionIndexResponse {
      */
     
     public java.util.Map<String, Object> deletePartitionIndexResponse;
+
     public DeletePartitionIndexResponse withDeletePartitionIndexResponse(java.util.Map<String, Object> deletePartitionIndexResponse) {
         this.deletePartitionIndexResponse = deletePartitionIndexResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePartitionIndexResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeletePartitionIndexResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePartitionIndexResponse {
      */
     
     public Object glueEncryptionException;
+
     public DeletePartitionIndexResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePartitionIndexResponse {
      */
     
     public Object internalServiceException;
+
     public DeletePartitionIndexResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class DeletePartitionIndexResponse {
      */
     
     public Object invalidInputException;
+
     public DeletePartitionIndexResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class DeletePartitionIndexResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeletePartitionIndexResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class DeletePartitionIndexResponse {
     
     
     public Integer statusCode;
+
     public DeletePartitionIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DeletePartitionIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePartitionIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeletePartitionIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

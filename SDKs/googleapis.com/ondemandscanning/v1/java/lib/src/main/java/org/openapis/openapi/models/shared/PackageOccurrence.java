@@ -18,6 +18,7 @@ public class PackageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public PackageOccurrenceArchitectureEnum architecture;
+
     public PackageOccurrence withArchitecture(PackageOccurrenceArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class PackageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpeUri")
     public String cpeUri;
+
     public PackageOccurrence withCpeUri(String cpeUri) {
         this.cpeUri = cpeUri;
         return this;
@@ -40,6 +42,7 @@ public class PackageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public License license;
+
     public PackageOccurrence withLicense(License license) {
         this.license = license;
         return this;
@@ -51,6 +54,7 @@ public class PackageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location[] location;
+
     public PackageOccurrence withLocation(Location[] location) {
         this.location = location;
         return this;
@@ -62,6 +66,7 @@ public class PackageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PackageOccurrence withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class PackageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageType")
     public String packageType;
+
     public PackageOccurrence withPackageType(String packageType) {
         this.packageType = packageType;
         return this;
@@ -84,9 +90,11 @@ public class PackageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Version version;
+
     public PackageOccurrence withVersion(Version version) {
         this.version = version;
         return this;
     }
     
+    public PackageOccurrence(){}
 }

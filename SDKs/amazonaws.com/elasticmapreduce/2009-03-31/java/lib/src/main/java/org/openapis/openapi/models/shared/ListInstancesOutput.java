@@ -15,6 +15,7 @@ public class ListInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instances")
     public Instance[] instances;
+
     public ListInstancesOutput withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -23,9 +24,11 @@ public class ListInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListInstancesOutput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListInstancesOutput(){}
 }

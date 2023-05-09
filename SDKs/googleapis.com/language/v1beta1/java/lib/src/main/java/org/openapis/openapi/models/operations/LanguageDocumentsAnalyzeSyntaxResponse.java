@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LanguageDocumentsAnalyzeSyntaxResponse {
@@ -12,6 +13,7 @@ public class LanguageDocumentsAnalyzeSyntaxResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyzeSyntaxResponse analyzeSyntaxResponse;
+
     public LanguageDocumentsAnalyzeSyntaxResponse withAnalyzeSyntaxResponse(org.openapis.openapi.models.shared.AnalyzeSyntaxResponse analyzeSyntaxResponse) {
         this.analyzeSyntaxResponse = analyzeSyntaxResponse;
         return this;
@@ -19,6 +21,7 @@ public class LanguageDocumentsAnalyzeSyntaxResponse {
     
     
     public String contentType;
+
     public LanguageDocumentsAnalyzeSyntaxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class LanguageDocumentsAnalyzeSyntaxResponse {
     
     
     public Integer statusCode;
+
     public LanguageDocumentsAnalyzeSyntaxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LanguageDocumentsAnalyzeSyntaxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LanguageDocumentsAnalyzeSyntaxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LanguageDocumentsAnalyzeSyntaxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

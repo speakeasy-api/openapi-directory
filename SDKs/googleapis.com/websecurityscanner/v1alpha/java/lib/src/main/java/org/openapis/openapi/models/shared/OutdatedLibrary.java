@@ -18,6 +18,7 @@ public class OutdatedLibrary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnMoreUrls")
     public String[] learnMoreUrls;
+
     public OutdatedLibrary withLearnMoreUrls(String[] learnMoreUrls) {
         this.learnMoreUrls = learnMoreUrls;
         return this;
@@ -29,6 +30,7 @@ public class OutdatedLibrary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("libraryName")
     public String libraryName;
+
     public OutdatedLibrary withLibraryName(String libraryName) {
         this.libraryName = libraryName;
         return this;
@@ -40,9 +42,11 @@ public class OutdatedLibrary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public OutdatedLibrary withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public OutdatedLibrary(){}
 }

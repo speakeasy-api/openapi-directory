@@ -15,6 +15,7 @@ public class ParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CategoricalParameterRangeSpecification")
     public CategoricalParameterRangeSpecification categoricalParameterRangeSpecification;
+
     public ParameterRange withCategoricalParameterRangeSpecification(CategoricalParameterRangeSpecification categoricalParameterRangeSpecification) {
         this.categoricalParameterRangeSpecification = categoricalParameterRangeSpecification;
         return this;
@@ -23,6 +24,7 @@ public class ParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContinuousParameterRangeSpecification")
     public ContinuousParameterRangeSpecification continuousParameterRangeSpecification;
+
     public ParameterRange withContinuousParameterRangeSpecification(ContinuousParameterRangeSpecification continuousParameterRangeSpecification) {
         this.continuousParameterRangeSpecification = continuousParameterRangeSpecification;
         return this;
@@ -31,9 +33,11 @@ public class ParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegerParameterRangeSpecification")
     public IntegerParameterRangeSpecification integerParameterRangeSpecification;
+
     public ParameterRange withIntegerParameterRangeSpecification(IntegerParameterRangeSpecification integerParameterRangeSpecification) {
         this.integerParameterRangeSpecification = integerParameterRangeSpecification;
         return this;
     }
     
+    public ParameterRange(){}
 }

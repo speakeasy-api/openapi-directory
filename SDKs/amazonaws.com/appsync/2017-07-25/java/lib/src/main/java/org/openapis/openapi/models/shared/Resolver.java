@@ -15,6 +15,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cachingConfig")
     public CachingConfig cachingConfig;
+
     public Resolver withCachingConfig(CachingConfig cachingConfig) {
         this.cachingConfig = cachingConfig;
         return this;
@@ -23,6 +24,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Resolver withCode(String code) {
         this.code = code;
         return this;
@@ -31,6 +33,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceName")
     public String dataSourceName;
+
     public Resolver withDataSourceName(String dataSourceName) {
         this.dataSourceName = dataSourceName;
         return this;
@@ -39,6 +42,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public Resolver withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -47,6 +51,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public ResolverKindEnum kind;
+
     public Resolver withKind(ResolverKindEnum kind) {
         this.kind = kind;
         return this;
@@ -55,6 +60,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBatchSize")
     public Long maxBatchSize;
+
     public Resolver withMaxBatchSize(Long maxBatchSize) {
         this.maxBatchSize = maxBatchSize;
         return this;
@@ -63,6 +69,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineConfig")
     public PipelineConfig pipelineConfig;
+
     public Resolver withPipelineConfig(PipelineConfig pipelineConfig) {
         this.pipelineConfig = pipelineConfig;
         return this;
@@ -71,6 +78,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMappingTemplate")
     public String requestMappingTemplate;
+
     public Resolver withRequestMappingTemplate(String requestMappingTemplate) {
         this.requestMappingTemplate = requestMappingTemplate;
         return this;
@@ -79,6 +87,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolverArn")
     public String resolverArn;
+
     public Resolver withResolverArn(String resolverArn) {
         this.resolverArn = resolverArn;
         return this;
@@ -87,6 +96,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseMappingTemplate")
     public String responseMappingTemplate;
+
     public Resolver withResponseMappingTemplate(String responseMappingTemplate) {
         this.responseMappingTemplate = responseMappingTemplate;
         return this;
@@ -98,6 +108,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public AppSyncRuntime runtime;
+
     public Resolver withRuntime(AppSyncRuntime runtime) {
         this.runtime = runtime;
         return this;
@@ -106,6 +117,7 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncConfig")
     public SyncConfig syncConfig;
+
     public Resolver withSyncConfig(SyncConfig syncConfig) {
         this.syncConfig = syncConfig;
         return this;
@@ -114,9 +126,11 @@ public class Resolver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeName")
     public String typeName;
+
     public Resolver withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public Resolver(){}
 }

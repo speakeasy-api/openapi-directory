@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RunInstancesMonitoringEnabled - Describes the monitoring of an instance.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class RunInstancesMonitoringEnabled {
     
     public Boolean enabled;
+
     public RunInstancesMonitoringEnabled withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public RunInstancesMonitoringEnabled(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

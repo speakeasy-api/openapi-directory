@@ -17,6 +17,7 @@ public class ProgramInformationBatch {
      */
     @JsonProperty("createdDate")
     public String createdDate;
+
     public ProgramInformationBatch withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -28,6 +29,7 @@ public class ProgramInformationBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishedDate")
     public String finishedDate;
+
     public ProgramInformationBatch withFinishedDate(String finishedDate) {
         this.finishedDate = finishedDate;
         return this;
@@ -38,6 +40,7 @@ public class ProgramInformationBatch {
      */
     @JsonProperty("format")
     public ProgramInformationBatchFormatEnum format;
+
     public ProgramInformationBatch withFormat(ProgramInformationBatchFormatEnum format) {
         this.format = format;
         return this;
@@ -48,6 +51,7 @@ public class ProgramInformationBatch {
      */
     @JsonProperty("id")
     public Long id;
+
     public ProgramInformationBatch withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class ProgramInformationBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ProgramInformationBatch withMessage(String message) {
         this.message = message;
         return this;
@@ -70,6 +75,7 @@ public class ProgramInformationBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProgramInformationBatch withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class ProgramInformationBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("program")
     public ProgramInformationBatchProgram program;
+
     public ProgramInformationBatch withProgram(ProgramInformationBatchProgram program) {
         this.program = program;
         return this;
@@ -91,6 +98,7 @@ public class ProgramInformationBatch {
      */
     @JsonProperty("status")
     public ProgramInformationBatchStatusEnum status;
+
     public ProgramInformationBatch withStatus(ProgramInformationBatchStatusEnum status) {
         this.status = status;
         return this;
@@ -102,9 +110,16 @@ public class ProgramInformationBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public ProgramInformationBatch withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ProgramInformationBatch(@JsonProperty("createdDate") String createdDate, @JsonProperty("format") ProgramInformationBatchFormatEnum format, @JsonProperty("id") Long id, @JsonProperty("status") ProgramInformationBatchStatusEnum status) {
+        this.createdDate = createdDate;
+        this.format = format;
+        this.id = id;
+        this.status = status;
+  }
 }

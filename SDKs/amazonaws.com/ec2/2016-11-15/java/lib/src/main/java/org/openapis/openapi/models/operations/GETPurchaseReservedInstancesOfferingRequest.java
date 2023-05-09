@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPurchaseReservedInstancesOfferingRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPurchaseReservedInstancesOfferingActionEnum action;
+
     public GETPurchaseReservedInstancesOfferingRequest withAction(GETPurchaseReservedInstancesOfferingActionEnum action) {
         this.action = action;
         return this;
@@ -20,6 +22,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETPurchaseReservedInstancesOfferingRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceCount")
     public Long instanceCount;
+
     public GETPurchaseReservedInstancesOfferingRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -40,6 +44,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LimitPrice")
     public GETPurchaseReservedInstancesOfferingLimitPrice limitPrice;
+
     public GETPurchaseReservedInstancesOfferingRequest withLimitPrice(GETPurchaseReservedInstancesOfferingLimitPrice limitPrice) {
         this.limitPrice = limitPrice;
         return this;
@@ -50,6 +55,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PurchaseTime")
     public OffsetDateTime purchaseTime;
+
     public GETPurchaseReservedInstancesOfferingRequest withPurchaseTime(OffsetDateTime purchaseTime) {
         this.purchaseTime = purchaseTime;
         return this;
@@ -60,6 +66,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedInstancesOfferingId")
     public String reservedInstancesOfferingId;
+
     public GETPurchaseReservedInstancesOfferingRequest withReservedInstancesOfferingId(String reservedInstancesOfferingId) {
         this.reservedInstancesOfferingId = reservedInstancesOfferingId;
         return this;
@@ -67,6 +74,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPurchaseReservedInstancesOfferingVersionEnum version;
+
     public GETPurchaseReservedInstancesOfferingRequest withVersion(GETPurchaseReservedInstancesOfferingVersionEnum version) {
         this.version = version;
         return this;
@@ -74,6 +82,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPurchaseReservedInstancesOfferingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -81,6 +90,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPurchaseReservedInstancesOfferingRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -88,6 +98,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPurchaseReservedInstancesOfferingRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -95,6 +106,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPurchaseReservedInstancesOfferingRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -102,6 +114,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPurchaseReservedInstancesOfferingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -109,6 +122,7 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPurchaseReservedInstancesOfferingRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -116,9 +130,16 @@ public class GETPurchaseReservedInstancesOfferingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPurchaseReservedInstancesOfferingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPurchaseReservedInstancesOfferingRequest(@JsonProperty("Action") GETPurchaseReservedInstancesOfferingActionEnum action, @JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("ReservedInstancesOfferingId") String reservedInstancesOfferingId, @JsonProperty("Version") GETPurchaseReservedInstancesOfferingVersionEnum version) {
+        this.action = action;
+        this.instanceCount = instanceCount;
+        this.reservedInstancesOfferingId = reservedInstancesOfferingId;
+        this.version = version;
+  }
 }

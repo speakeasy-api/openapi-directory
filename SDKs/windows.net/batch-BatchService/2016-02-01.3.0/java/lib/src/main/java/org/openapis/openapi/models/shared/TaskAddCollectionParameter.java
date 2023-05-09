@@ -15,9 +15,13 @@ public class TaskAddCollectionParameter {
      */
     @JsonProperty("value")
     public TaskAddParameter[] value;
+
     public TaskAddCollectionParameter withValue(TaskAddParameter[] value) {
         this.value = value;
         return this;
     }
     
+    public TaskAddCollectionParameter(@JsonProperty("value") TaskAddParameter[] value) {
+        this.value = value;
+  }
 }

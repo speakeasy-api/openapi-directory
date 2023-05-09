@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInterconnectResponse {
     
     public String contentType;
+
     public DeleteInterconnectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteInterconnectResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInterconnectResponse deleteInterconnectResponse;
+
     public DeleteInterconnectResponse withDeleteInterconnectResponse(org.openapis.openapi.models.shared.DeleteInterconnectResponse deleteInterconnectResponse) {
         this.deleteInterconnectResponse = deleteInterconnectResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInterconnectResponse {
      */
     
     public Object directConnectClientException;
+
     public DeleteInterconnectResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInterconnectResponse {
      */
     
     public Object directConnectServerException;
+
     public DeleteInterconnectResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteInterconnectResponse {
     
     
     public Integer statusCode;
+
     public DeleteInterconnectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteInterconnectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInterconnectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteInterconnectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

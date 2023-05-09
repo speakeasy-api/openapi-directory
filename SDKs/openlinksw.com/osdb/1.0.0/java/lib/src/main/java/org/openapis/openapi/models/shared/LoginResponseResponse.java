@@ -12,9 +12,13 @@ public class LoginResponseResponse {
      */
     @JsonProperty("user")
     public String user;
+
     public LoginResponseResponse withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public LoginResponseResponse(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

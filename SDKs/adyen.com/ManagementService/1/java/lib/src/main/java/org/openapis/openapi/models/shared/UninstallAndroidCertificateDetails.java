@@ -18,6 +18,7 @@ public class UninstallAndroidCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public UninstallAndroidCertificateDetails withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -29,9 +30,11 @@ public class UninstallAndroidCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UninstallAndroidCertificateDetailsTypeEnum type;
+
     public UninstallAndroidCertificateDetails withType(UninstallAndroidCertificateDetailsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UninstallAndroidCertificateDetails(){}
 }

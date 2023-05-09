@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDatasetImportJobsResponse {
     
     public String contentType;
+
     public ListDatasetImportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDatasetImportJobsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDatasetImportJobsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListDatasetImportJobsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDatasetImportJobsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListDatasetImportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDatasetImportJobsResponse listDatasetImportJobsResponse;
+
     public ListDatasetImportJobsResponse withListDatasetImportJobsResponse(org.openapis.openapi.models.shared.ListDatasetImportJobsResponse listDatasetImportJobsResponse) {
         this.listDatasetImportJobsResponse = listDatasetImportJobsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDatasetImportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListDatasetImportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListDatasetImportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDatasetImportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDatasetImportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class ValidateCreateMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationResults")
     public ValidationResult[] validationResults;
+
     public ValidateCreateMembershipResponse withValidationResults(ValidationResult[] validationResults) {
         this.validationResults = validationResults;
         return this;
     }
     
+    public ValidateCreateMembershipResponse(){}
 }

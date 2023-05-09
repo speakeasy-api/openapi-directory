@@ -16,42 +16,43 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetOrganizationApiRequestsRequest;
 import org.openapis.openapi.models.operations.GetOrganizationApiRequestsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     merakiApiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetOrganizationApiRequestsRequest req = new GetOrganizationApiRequestsRequest() {{
-                adminId = "corrupti";
-                endingBefore = "provident";
-                method = "distinctio";
-                organizationId = "quibusdam";
-                path = "unde";
-                perPage = 857946;
-                responseCode = 544883;
-                sourceIp = "illum";
-                startingAfter = "vel";
-                t0 = "error";
-                t1 = "deserunt";
-                timespan = 3843.82;
-            }}            
+            GetOrganizationApiRequestsRequest req = new GetOrganizationApiRequestsRequest("provident") {{
+                adminId = "distinctio";
+                endingBefore = "quibusdam";
+                method = "unde";
+                path = "nulla";
+                perPage = 544883L;
+                responseCode = 847252L;
+                sourceIp = "vel";
+                startingAfter = "error";
+                t0 = "deserunt";
+                t1 = "suscipit";
+                timespan = 4375.87;
+            }};            
 
             GetOrganizationApiRequestsResponse res = sdk.apiUsage.getOrganizationApiRequests(req);
 
-            if (res.getOrganizationApiRequests200ApplicationJSONObjects.isPresent()) {
+            if (res.getOrganizationApiRequests200ApplicationJSONObjects != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -59,457 +60,439 @@ public class Application {
 ## Available Resources and Operations
 
 
-### apiUsage
+### [apiUsage](docs/apiusage/README.md)
 
-* `getOrganizationApiRequests` - List the API requests made by an organization
-* `getOrganizationApiRequestsOverview` - Return an aggregated overview of API requests data
+* [getOrganizationApiRequests](docs/apiusage/README.md#getorganizationapirequests) - List the API requests made by an organization
+* [getOrganizationApiRequestsOverview](docs/apiusage/README.md#getorganizationapirequestsoverview) - Return an aggregated overview of API requests data
 
-### actionBatches
+### [actionBatches](docs/actionbatches/README.md)
 
-* `createOrganizationActionBatch` - Create an action batch
-* `deleteOrganizationActionBatch` - Delete an action batch
-* `getOrganizationActionBatches` - Return the list of action batches in the organization
-* `updateOrganizationActionBatch` - Update an action batch
+* [createOrganizationActionBatch](docs/actionbatches/README.md#createorganizationactionbatch) - Create an action batch
+* [deleteOrganizationActionBatch](docs/actionbatches/README.md#deleteorganizationactionbatch) - Delete an action batch
+* [getOrganizationActionBatches](docs/actionbatches/README.md#getorganizationactionbatches) - Return the list of action batches in the organization
+* [updateOrganizationActionBatch](docs/actionbatches/README.md#updateorganizationactionbatch) - Update an action batch
 
-### admins
+### [admins](docs/admins/README.md)
 
-* `createOrganizationAdmin` - Create a new dashboard administrator
-* `deleteOrganizationAdmin` - Revoke all access for a dashboard administrator within this organization
-* `getOrganizationAdmins` - List the dashboard administrators in this organization
-* `updateOrganizationAdmin` - Update an administrator
+* [createOrganizationAdmin](docs/admins/README.md#createorganizationadmin) - Create a new dashboard administrator
+* [deleteOrganizationAdmin](docs/admins/README.md#deleteorganizationadmin) - Revoke all access for a dashboard administrator within this organization
+* [getOrganizationAdmins](docs/admins/README.md#getorganizationadmins) - List the dashboard administrators in this organization
+* [updateOrganizationAdmin](docs/admins/README.md#updateorganizationadmin) - Update an administrator
 
-### alertSettings
+### [alertSettings](docs/alertsettings/README.md)
 
-* `getNetworkAlertSettings` - Return the alert configuration for this network
-* `updateNetworkAlertSettings` - Update the alert configuration for this network
+* [getNetworkAlertSettings](docs/alertsettings/README.md#getnetworkalertsettings) - Return the alert configuration for this network
+* [updateNetworkAlertSettings](docs/alertsettings/README.md#updatenetworkalertsettings) - Update the alert configuration for this network
 
-### bluetoothClients
+### [bluetoothClients](docs/bluetoothclients/README.md)
 
-* `getNetworkBluetoothClient` - Return a Bluetooth client
-* `getNetworkBluetoothClients` - List the Bluetooth clients seen by APs in this network
+* [getNetworkBluetoothClient](docs/bluetoothclients/README.md#getnetworkbluetoothclient) - Return a Bluetooth client
+* [getNetworkBluetoothClients](docs/bluetoothclients/README.md#getnetworkbluetoothclients) - List the Bluetooth clients seen by APs in this network
 
-### bluetoothSettings
+### [bluetoothSettings](docs/bluetoothsettings/README.md)
 
-* `getNetworkBluetoothSettings` - Return the Bluetooth settings for a network. <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.
-* `updateDeviceWirelessBluetoothSettings` - Update the bluetooth settings for a wireless device
-* `updateNetworkBluetoothSettings` - Update the Bluetooth settings for a network
+* [getNetworkBluetoothSettings](docs/bluetoothsettings/README.md#getnetworkbluetoothsettings) - Return the Bluetooth settings for a network. <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.
+* [updateDeviceWirelessBluetoothSettings](docs/bluetoothsettings/README.md#updatedevicewirelessbluetoothsettings) - Update the bluetooth settings for a wireless device
+* [updateNetworkBluetoothSettings](docs/bluetoothsettings/README.md#updatenetworkbluetoothsettings) - Update the Bluetooth settings for a network
 
-### cameraQualityRetentionProfiles
+### [cameraQualityRetentionProfiles](docs/cameraqualityretentionprofiles/README.md)
 
-* `createNetworkCameraQualityRetentionProfile` - Creates new quality retention profile for this network.
-* `deleteNetworkCameraQualityRetentionProfile` - Delete an existing quality retention profile for this network.
-* `getNetworkCameraQualityRetentionProfile` - Retrieve a single quality retention profile
-* `getNetworkCameraQualityRetentionProfiles` - List the quality retention profiles for this network
-* `updateNetworkCameraQualityRetentionProfile` - Update an existing quality retention profile for this network.
+* [createNetworkCameraQualityRetentionProfile](docs/cameraqualityretentionprofiles/README.md#createnetworkcameraqualityretentionprofile) - Creates new quality retention profile for this network.
+* [deleteNetworkCameraQualityRetentionProfile](docs/cameraqualityretentionprofiles/README.md#deletenetworkcameraqualityretentionprofile) - Delete an existing quality retention profile for this network.
+* [getNetworkCameraQualityRetentionProfile](docs/cameraqualityretentionprofiles/README.md#getnetworkcameraqualityretentionprofile) - Retrieve a single quality retention profile
+* [getNetworkCameraQualityRetentionProfiles](docs/cameraqualityretentionprofiles/README.md#getnetworkcameraqualityretentionprofiles) - List the quality retention profiles for this network
+* [updateNetworkCameraQualityRetentionProfile](docs/cameraqualityretentionprofiles/README.md#updatenetworkcameraqualityretentionprofile) - Update an existing quality retention profile for this network.
 
-### cameras
+### [cameras](docs/cameras/README.md)
 
-* `generateNetworkCameraSnapshot` - Generate a snapshot of what the camera sees at the specified time and return a link to that image.
-* `getDeviceCameraQualityAndRetentionSettings` - Returns quality and retention settings for the given camera
-* `getDeviceCameraVideoSettings` - Returns video settings for the given camera
-* `getNetworkCameraSchedules` - Returns a list of all camera recording schedules.
-* `getNetworkCameraVideoLink` - Returns video link to the specified camera
-* `updateDeviceCameraQualityAndRetentionSettings` - Update quality and retention settings for the given camera
-* `updateDeviceCameraVideoSettings` - Update video settings for the given camera
+* [generateNetworkCameraSnapshot](docs/cameras/README.md#generatenetworkcamerasnapshot) - Generate a snapshot of what the camera sees at the specified time and return a link to that image.
+* [getDeviceCameraVideoSettings](docs/cameras/README.md#getdevicecameravideosettings) - Returns video settings for the given camera
+* [getNetworkCameraSchedules](docs/cameras/README.md#getnetworkcameraschedules) - Returns a list of all camera recording schedules.
+* [getNetworkCameraVideoLink](docs/cameras/README.md#getnetworkcameravideolink) - Returns video link to the specified camera
+* [updateDeviceCameraVideoSettings](docs/cameras/README.md#updatedevicecameravideosettings) - Update video settings for the given camera
 
-### changeLog
+### [changeLog](docs/changelog/README.md)
 
-* `getOrganizationConfigurationChanges` - View the Change Log for your organization
+* [getOrganizationConfigurationChanges](docs/changelog/README.md#getorganizationconfigurationchanges) - View the Change Log for your organization
 
-### clients
+### [clients](docs/clients/README.md)
 
-* `getDeviceClients` - List the clients of a device, up to a maximum of a month ago
-* `getNetworkClient` - Return the client associated with the given identifier
-* `getNetworkClientEvents` - Return the events associated with this client
-* `getNetworkClientLatencyHistory` - Return the latency history for a client
-* `getNetworkClientPolicy` - Return the policy assigned to a client on the network
-* `getNetworkClientSplashAuthorizationStatus` - Return the splash authorization for a client, for each SSID they've associated with through splash
-* `getNetworkClientUsageHistory` - Return the client's daily usage history
-* `getNetworkClients` - List the clients that have used this network in the timespan
-* `provisionNetworkClients` - Provisions a client with a name and policy
-* `updateNetworkClientPolicy` - Update the policy assigned to a client on the network
-* `updateNetworkClientSplashAuthorizationStatus` - Update a client's splash authorization
+* [getDeviceClients](docs/clients/README.md#getdeviceclients) - List the clients of a device, up to a maximum of a month ago
+* [getNetworkClient](docs/clients/README.md#getnetworkclient) - Return the client associated with the given identifier
+* [getNetworkClientEvents](docs/clients/README.md#getnetworkclientevents) - Return the events associated with this client
+* [getNetworkClientLatencyHistory](docs/clients/README.md#getnetworkclientlatencyhistory) - Return the latency history for a client
+* [getNetworkClientPolicy](docs/clients/README.md#getnetworkclientpolicy) - Return the policy assigned to a client on the network
+* [getNetworkClientSplashAuthorizationStatus](docs/clients/README.md#getnetworkclientsplashauthorizationstatus) - Return the splash authorization for a client, for each SSID they've associated with through splash
+* [getNetworkClientUsageHistory](docs/clients/README.md#getnetworkclientusagehistory) - Return the client's daily usage history
+* [getNetworkClients](docs/clients/README.md#getnetworkclients) - List the clients that have used this network in the timespan
+* [provisionNetworkClients](docs/clients/README.md#provisionnetworkclients) - Provisions a client with a name and policy
+* [updateNetworkClientPolicy](docs/clients/README.md#updatenetworkclientpolicy) - Update the policy assigned to a client on the network
+* [updateNetworkClientSplashAuthorizationStatus](docs/clients/README.md#updatenetworkclientsplashauthorizationstatus) - Update a client's splash authorization
 
-### configTemplates
+### [configTemplates](docs/configtemplates/README.md)
 
-* `deleteOrganizationConfigTemplate` - Remove a configuration template
-* `getOrganizationConfigTemplates` - List the configuration templates for this organization
+* [deleteOrganizationConfigTemplate](docs/configtemplates/README.md#deleteorganizationconfigtemplate) - Remove a configuration template
+* [getOrganizationConfigTemplates](docs/configtemplates/README.md#getorganizationconfigtemplates) - List the configuration templates for this organization
 
-### contentFilteringCategories
+### [contentFilteringCategories](docs/contentfilteringcategories/README.md)
 
-* `getNetworkContentFilteringCategories` - List all available content filtering categories for an MX network
+* [getNetworkContentFilteringCategories](docs/contentfilteringcategories/README.md#getnetworkcontentfilteringcategories) - List all available content filtering categories for an MX network
 
-### contentFilteringRules
+### [contentFilteringRules](docs/contentfilteringrules/README.md)
 
-* `getNetworkContentFiltering` - Return the content filtering settings for an MX network
-* `updateNetworkContentFiltering` - Update the content filtering settings for an MX network
+* [getNetworkContentFiltering](docs/contentfilteringrules/README.md#getnetworkcontentfiltering) - Return the content filtering settings for an MX network
+* [updateNetworkContentFiltering](docs/contentfilteringrules/README.md#updatenetworkcontentfiltering) - Update the content filtering settings for an MX network
 
-### devices
+### [devices](docs/devices/README.md)
 
-* `claimNetworkDevices` - Claim devices into a network. (Note: for recently claimed devices, it may take a few minutes for API requests against that device to succeed)
-* `cycleDeviceSwitchPorts` - Cycle a set of switch ports
-* `getNetworkDevice` - Return a single device
-* `getNetworkDeviceLossAndLatencyHistory` - Get the uplink loss percentage and latency in milliseconds for a wired network device.
-* `getNetworkDevicePerformance` - Return the performance score for a single MX
-* `getNetworkDeviceUplink` - Return the uplink information for a device.
-* `getNetworkDevices` - List the devices in a network
-* `getOrganizationDevices` - List the devices in an organization
-* `rebootNetworkDevice` - Reboot a device
-* `removeNetworkDevice` - Remove a single device
-* `updateNetworkDevice` - Update the attributes of a device
+* [claimNetworkDevices](docs/devices/README.md#claimnetworkdevices) - Claim devices into a network. (Note: for recently claimed devices, it may take a few minutes for API requests against that device to succeed)
+* [cycleDeviceSwitchPorts](docs/devices/README.md#cycledeviceswitchports) - Cycle a set of switch ports
+* [getNetworkDevice](docs/devices/README.md#getnetworkdevice) - Return a single device
+* [getNetworkDeviceLossAndLatencyHistory](docs/devices/README.md#getnetworkdevicelossandlatencyhistory) - Get the uplink loss percentage and latency in milliseconds for a wired network device.
+* [getNetworkDevicePerformance](docs/devices/README.md#getnetworkdeviceperformance) - Return the performance score for a single MX
+* [getNetworkDeviceUplink](docs/devices/README.md#getnetworkdeviceuplink) - Return the uplink information for a device.
+* [getNetworkDevices](docs/devices/README.md#getnetworkdevices) - List the devices in a network
+* [getOrganizationDevices](docs/devices/README.md#getorganizationdevices) - List the devices in an organization
+* [rebootNetworkDevice](docs/devices/README.md#rebootnetworkdevice) - Reboot a device
+* [removeNetworkDevice](docs/devices/README.md#removenetworkdevice) - Remove a single device
+* [updateNetworkDevice](docs/devices/README.md#updatenetworkdevice) - Update the attributes of a device
 
-### events
+### [events](docs/events/README.md)
 
-* `getNetworkEvents` - List the events for the network
-* `getNetworkEventsEventTypes` - List the event type to human-readable description
+* [getNetworkEvents](docs/events/README.md#getnetworkevents) - List the events for the network
+* [getNetworkEventsEventTypes](docs/events/README.md#getnetworkeventseventtypes) - List the event type to human-readable description
 
-### firewalledServices
+### [firewalledServices](docs/firewalledservices/README.md)
 
-* `getNetworkFirewalledService` - Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
-* `getNetworkFirewalledServices` - List the appliance services and their accessibility rules
-* `updateNetworkFirewalledService` - Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
+* [getNetworkFirewalledService](docs/firewalledservices/README.md#getnetworkfirewalledservice) - Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
+* [getNetworkFirewalledServices](docs/firewalledservices/README.md#getnetworkfirewalledservices) - List the appliance services and their accessibility rules
 
-### floorPlans
+### [floorPlans](docs/floorplans/README.md)
 
-* `createNetworkFloorPlan` - Upload a floor plan
-* `deleteNetworkFloorPlan` - Destroy a floor plan
-* `getNetworkFloorPlan` - Find a floor plan by ID
-* `getNetworkFloorPlans` - List the floor plans that belong to your network
-* `updateNetworkFloorPlan` - Update a floor plan's geolocation and other meta data
+* [createNetworkFloorPlan](docs/floorplans/README.md#createnetworkfloorplan) - Upload a floor plan
+* [deleteNetworkFloorPlan](docs/floorplans/README.md#deletenetworkfloorplan) - Destroy a floor plan
+* [getNetworkFloorPlan](docs/floorplans/README.md#getnetworkfloorplan) - Find a floor plan by ID
+* [getNetworkFloorPlans](docs/floorplans/README.md#getnetworkfloorplans) - List the floor plans that belong to your network
+* [updateNetworkFloorPlan](docs/floorplans/README.md#updatenetworkfloorplan) - Update a floor plan's geolocation and other meta data
 
-### intrusionSettings
+### [intrusionSettings](docs/intrusionsettings/README.md)
 
-* `getNetworkSecurityIntrusionSettings` - Returns all supported intrusion settings for an MX network
-* `getOrganizationSecurityIntrusionSettings` - Returns all supported intrusion settings for an organization
-* `updateNetworkSecurityIntrusionSettings` - Set the supported intrusion settings for an MX network
-* `updateOrganizationSecurityIntrusionSettings` - Sets supported intrusion settings for an organization
+* [getNetworkSecurityIntrusionSettings](docs/intrusionsettings/README.md#getnetworksecurityintrusionsettings) - Returns all supported intrusion settings for an MX network
+* [getOrganizationSecurityIntrusionSettings](docs/intrusionsettings/README.md#getorganizationsecurityintrusionsettings) - Returns all supported intrusion settings for an organization
+* [updateNetworkSecurityIntrusionSettings](docs/intrusionsettings/README.md#updatenetworksecurityintrusionsettings) - Set the supported intrusion settings for an MX network
+* [updateOrganizationSecurityIntrusionSettings](docs/intrusionsettings/README.md#updateorganizationsecurityintrusionsettings) - Sets supported intrusion settings for an organization
 
-### licenses
+### [licenses](docs/licenses/README.md)
 
-* `assignOrganizationLicensesSeats` - Assign SM seats to a network
-* `getOrganizationLicense` - Display a license
-* `getOrganizationLicenseState` - Return an overview of the license state for an organization
-* `getOrganizationLicenses` - List the licenses for an organization
-* `moveOrganizationLicensesSeats` - Move SM seats to another organization
-* `renewOrganizationLicensesSeats` - Renew SM seats of a license
+* [assignOrganizationLicensesSeats](docs/licenses/README.md#assignorganizationlicensesseats) - Assign SM seats to a network
+* [getOrganizationLicense](docs/licenses/README.md#getorganizationlicense) - Display a license
+* [getOrganizationLicenseState](docs/licenses/README.md#getorganizationlicensestate) - Return an overview of the license state for an organization
+* [getOrganizationLicenses](docs/licenses/README.md#getorganizationlicenses) - List the licenses for an organization
+* [moveOrganizationLicensesSeats](docs/licenses/README.md#moveorganizationlicensesseats) - Move SM seats to another organization
+* [renewOrganizationLicensesSeats](docs/licenses/README.md#reneworganizationlicensesseats) - Renew SM seats of a license
 
-### linkAggregations
+### [linkAggregations](docs/linkaggregations/README.md)
 
-* `createNetworkSwitchLinkAggregation` - Create a link aggregation group
-* `deleteNetworkSwitchLinkAggregation` - Split a link aggregation group into separate ports
-* `getNetworkSwitchLinkAggregations` - List link aggregation groups
-* `updateNetworkSwitchLinkAggregation` - Update a link aggregation group
+* [createNetworkSwitchLinkAggregation](docs/linkaggregations/README.md#createnetworkswitchlinkaggregation) - Create a link aggregation group
+* [deleteNetworkSwitchLinkAggregation](docs/linkaggregations/README.md#deletenetworkswitchlinkaggregation) - Split a link aggregation group into separate ports
+* [getNetworkSwitchLinkAggregations](docs/linkaggregations/README.md#getnetworkswitchlinkaggregations) - List link aggregation groups
+* [updateNetworkSwitchLinkAggregation](docs/linkaggregations/README.md#updatenetworkswitchlinkaggregation) - Update a link aggregation group
 
-### mgLANSettings
+### [mgLANSettings](docs/mglansettings/README.md)
 
-* `getDeviceCellularGatewaySettings` - Show the LAN Settings of a MG
-* `updateDeviceCellularGatewaySettings` - Update the LAN Settings for a single MG.
+* [getDeviceCellularGatewaySettings](docs/mglansettings/README.md#getdevicecellulargatewaysettings) - Show the LAN Settings of a MG
+* [updateDeviceCellularGatewaySettings](docs/mglansettings/README.md#updatedevicecellulargatewaysettings) - Update the LAN Settings for a single MG.
 
-### mgPortForwardingRules
+### [mgPortForwardingRules](docs/mgportforwardingrules/README.md)
 
-* `getDeviceCellularGatewaySettingsPortForwardingRules` - Returns the port forwarding rules for a single MG.
-* `updateDeviceCellularGatewaySettingsPortForwardingRules` - Updates the port forwarding rules for a single MG.
+* [getDeviceCellularGatewaySettingsPortForwardingRules](docs/mgportforwardingrules/README.md#getdevicecellulargatewaysettingsportforwardingrules) - Returns the port forwarding rules for a single MG.
+* [updateDeviceCellularGatewaySettingsPortForwardingRules](docs/mgportforwardingrules/README.md#updatedevicecellulargatewaysettingsportforwardingrules) - Updates the port forwarding rules for a single MG.
 
-### mrL3Firewall
+### [mrL3Firewall](docs/mrl3firewall/README.md)
 
-* `getNetworkSsidL3FirewallRules` - Return the L3 firewall rules for an SSID on an MR network
-* `updateNetworkSsidL3FirewallRules` - Update the L3 firewall rules of an SSID on an MR network
+* [getNetworkSsidL3FirewallRules](docs/mrl3firewall/README.md#getnetworkssidl3firewallrules) - Return the L3 firewall rules for an SSID on an MR network
+* [updateNetworkSsidL3FirewallRules](docs/mrl3firewall/README.md#updatenetworkssidl3firewallrules) - Update the L3 firewall rules of an SSID on an MR network
 
-### mvSense
+### [mvSense](docs/mvsense/README.md)
 
-* `getDeviceCameraAnalyticsLive` - Returns live state from camera of analytics zones
-* `getDeviceCameraAnalyticsOverview` - Returns an overview of aggregate analytics data for a timespan
-* `getDeviceCameraAnalyticsRecent` - Returns most recent record for analytics zones
-* `getDeviceCameraAnalyticsZoneHistory` - Return historical records for analytic zones
-* `getDeviceCameraAnalyticsZones` - Returns all configured analytic zones for this camera
+* [getDeviceCameraAnalyticsLive](docs/mvsense/README.md#getdevicecameraanalyticslive) - Returns live state from camera of analytics zones
+* [getDeviceCameraAnalyticsOverview](docs/mvsense/README.md#getdevicecameraanalyticsoverview) - Returns an overview of aggregate analytics data for a timespan
+* [getDeviceCameraAnalyticsRecent](docs/mvsense/README.md#getdevicecameraanalyticsrecent) - Returns most recent record for analytics zones
+* [getDeviceCameraAnalyticsZoneHistory](docs/mvsense/README.md#getdevicecameraanalyticszonehistory) - Return historical records for analytic zones
+* [getDeviceCameraAnalyticsZones](docs/mvsense/README.md#getdevicecameraanalyticszones) - Returns all configured analytic zones for this camera
 
-### mx11NATRules
+### [mx11NATRules](docs/mx11natrules/README.md)
 
-* `getNetworkOneToOneNatRules` - Return the 1:1 NAT mapping rules for an MX network
-* `updateNetworkOneToOneNatRules` - Set the 1:1 NAT mapping rules for an MX network
+* [getNetworkOneToOneNatRules](docs/mx11natrules/README.md#getnetworkonetoonenatrules) - Return the 1:1 NAT mapping rules for an MX network
+* [updateNetworkOneToOneNatRules](docs/mx11natrules/README.md#updatenetworkonetoonenatrules) - Set the 1:1 NAT mapping rules for an MX network
 
-### mx1ManyNATRules
+### [mx1ManyNATRules](docs/mx1manynatrules/README.md)
 
-* `getNetworkOneToManyNatRules` - Return the 1:Many NAT mapping rules for an MX network
-* `updateNetworkOneToManyNatRules` - Set the 1:Many NAT mapping rules for an MX network
+* [getNetworkOneToManyNatRules](docs/mx1manynatrules/README.md#getnetworkonetomanynatrules) - Return the 1:Many NAT mapping rules for an MX network
+* [updateNetworkOneToManyNatRules](docs/mx1manynatrules/README.md#updatenetworkonetomanynatrules) - Set the 1:Many NAT mapping rules for an MX network
 
-### mxL3InboundFirewall
+### [mxL3InboundFirewall](docs/mxl3inboundfirewall/README.md)
 
-* `getNetworkApplianceFirewallInboundFirewallRules` - Return the inbound firewall rules for an MX network
-* `updateNetworkApplianceFirewallInboundFirewallRules` - Update the inbound firewall rules of an MX network
+* [getNetworkApplianceFirewallInboundFirewallRules](docs/mxl3inboundfirewall/README.md#getnetworkappliancefirewallinboundfirewallrules) - Return the inbound firewall rules for an MX network
+* [updateNetworkApplianceFirewallInboundFirewallRules](docs/mxl3inboundfirewall/README.md#updatenetworkappliancefirewallinboundfirewallrules) - Update the inbound firewall rules of an MX network
 
-### mxL3OutboundFirewall
+### [mxL3OutboundFirewall](docs/mxl3outboundfirewall/README.md)
 
-* `getNetworkL3FirewallRules` - Return the L3 firewall rules for an MX network
-* `updateNetworkL3FirewallRules` - Update the L3 firewall rules of an MX network
+* [getNetworkL3FirewallRules](docs/mxl3outboundfirewall/README.md#getnetworkl3firewallrules) - Return the L3 firewall rules for an MX network
+* [updateNetworkL3FirewallRules](docs/mxl3outboundfirewall/README.md#updatenetworkl3firewallrules) - Update the L3 firewall rules of an MX network
 
-### mxL7ApplicationCategories
+### [mxL7ApplicationCategories](docs/mxl7applicationcategories/README.md)
 
-* `getNetworkL7FirewallRulesApplicationCategories` - Return the L7 firewall application categories and their associated applications for an MX network
+* [getNetworkL7FirewallRulesApplicationCategories](docs/mxl7applicationcategories/README.md#getnetworkl7firewallrulesapplicationcategories) - Return the L7 firewall application categories and their associated applications for an MX network
 
-### mxL7Firewall
+### [mxL7Firewall](docs/mxl7firewall/README.md)
 
-* `getNetworkL7FirewallRules` - List the MX L7 firewall rules for an MX network
-* `updateNetworkL7FirewallRules` - Update the MX L7 firewall rules for an MX network
+* [getNetworkL7FirewallRules](docs/mxl7firewall/README.md#getnetworkl7firewallrules) - List the MX L7 firewall rules for an MX network
+* [updateNetworkL7FirewallRules](docs/mxl7firewall/README.md#updatenetworkl7firewallrules) - Update the MX L7 firewall rules for an MX network
 
-### mxVLANPorts
+### [mxVLANPorts](docs/mxvlanports/README.md)
 
-* `getNetworkAppliancePort` - Return per-port VLAN settings for a single MX port.
-* `getNetworkAppliancePorts` - List per-port VLAN settings for all ports of a MX.
-* `updateNetworkAppliancePort` - Update the per-port VLAN settings for a single MX port.
+* [getNetworkAppliancePort](docs/mxvlanports/README.md#getnetworkapplianceport) - Return per-port VLAN settings for a single MX port.
+* [getNetworkAppliancePorts](docs/mxvlanports/README.md#getnetworkapplianceports) - List per-port VLAN settings for all ports of a MX.
+* [updateNetworkAppliancePort](docs/mxvlanports/README.md#updatenetworkapplianceport) - Update the per-port VLAN settings for a single MX port.
 
-### mxVPNFirewall
+### [mxVPNFirewall](docs/mxvpnfirewall/README.md)
 
-* `getOrganizationVpnFirewallRules` - Return the firewall rules for an organization's site-to-site VPN
-* `updateOrganizationVpnFirewallRules` - Update the firewall rules of an organization's site-to-site VPN
+* [getOrganizationVpnFirewallRules](docs/mxvpnfirewall/README.md#getorganizationvpnfirewallrules) - Return the firewall rules for an organization's site-to-site VPN
+* [updateOrganizationVpnFirewallRules](docs/mxvpnfirewall/README.md#updateorganizationvpnfirewallrules) - Update the firewall rules of an organization's site-to-site VPN
 
-### mxCellularFirewall
+### [mxCellularFirewall](docs/mxcellularfirewall/README.md)
 
-* `getNetworkCellularFirewallRules` - Return the cellular firewall rules for an MX network
-* `updateNetworkCellularFirewallRules` - Update the cellular firewall rules of an MX network
+* [getNetworkCellularFirewallRules](docs/mxcellularfirewall/README.md#getnetworkcellularfirewallrules) - Return the cellular firewall rules for an MX network
+* [updateNetworkCellularFirewallRules](docs/mxcellularfirewall/README.md#updatenetworkcellularfirewallrules) - Update the cellular firewall rules of an MX network
 
-### mxPortForwardingRules
+### [mxPortForwardingRules](docs/mxportforwardingrules/README.md)
 
-* `getNetworkPortForwardingRules` - Return the port forwarding rules for an MX network
-* `updateNetworkPortForwardingRules` - Update the port forwarding rules for an MX network
+* [getNetworkPortForwardingRules](docs/mxportforwardingrules/README.md#getnetworkportforwardingrules) - Return the port forwarding rules for an MX network
+* [updateNetworkPortForwardingRules](docs/mxportforwardingrules/README.md#updatenetworkportforwardingrules) - Update the port forwarding rules for an MX network
 
-### mxStaticRoutes
+### [mxStaticRoutes](docs/mxstaticroutes/README.md)
 
-* `createNetworkStaticRoute` - Add a static route for an MX or teleworker network
-* `deleteNetworkStaticRoute` - Delete a static route from an MX or teleworker network
-* `getNetworkStaticRoute` - Return a static route for an MX or teleworker network
-* `getNetworkStaticRoutes` - List the static routes for an MX or teleworker network
-* `updateNetworkStaticRoute` - Update a static route for an MX or teleworker network
+* [createNetworkStaticRoute](docs/mxstaticroutes/README.md#createnetworkstaticroute) - Add a static route for an MX or teleworker network
+* [deleteNetworkStaticRoute](docs/mxstaticroutes/README.md#deletenetworkstaticroute) - Delete a static route from an MX or teleworker network
+* [getNetworkStaticRoute](docs/mxstaticroutes/README.md#getnetworkstaticroute) - Return a static route for an MX or teleworker network
+* [getNetworkStaticRoutes](docs/mxstaticroutes/README.md#getnetworkstaticroutes) - List the static routes for an MX or teleworker network
+* [updateNetworkStaticRoute](docs/mxstaticroutes/README.md#updatenetworkstaticroute) - Update a static route for an MX or teleworker network
 
-### mxWarmSpareSettings
+### [mxWarmSpareSettings](docs/mxwarmsparesettings/README.md)
 
-* `getNetworkWarmSpareSettings` - Return MX warm spare settings
-* `swapNetworkWarmSpare` - Swap MX primary and warm spare appliances
-* `updateNetworkWarmSpareSettings` - Update MX warm spare settings
+* [getNetworkWarmSpareSettings](docs/mxwarmsparesettings/README.md#getnetworkwarmsparesettings) - Return MX warm spare settings
+* [swapNetworkWarmSpare](docs/mxwarmsparesettings/README.md#swapnetworkwarmspare) - Swap MX primary and warm spare appliances
+* [updateNetworkWarmSpareSettings](docs/mxwarmsparesettings/README.md#updatenetworkwarmsparesettings) - Update MX warm spare settings
 
-### malwareSettings
+### [malwareSettings](docs/malwaresettings/README.md)
 
-* `getNetworkSecurityMalwareSettings` - Returns all supported malware settings for an MX network
-* `updateNetworkSecurityMalwareSettings` - Set the supported malware settings for an MX network
+* [getNetworkSecurityMalwareSettings](docs/malwaresettings/README.md#getnetworksecuritymalwaresettings) - Returns all supported malware settings for an MX network
+* [updateNetworkSecurityMalwareSettings](docs/malwaresettings/README.md#updatenetworksecuritymalwaresettings) - Set the supported malware settings for an MX network
 
-### merakiAuthUsers
+### [merakiAuthUsers](docs/merakiauthusers/README.md)
 
-* `getNetworkMerakiAuthUser` - Return the Meraki Auth splash or RADIUS user
-* `getNetworkMerakiAuthUsers` - List the splash or RADIUS users configured under Meraki Authentication for a network
+* [getNetworkMerakiAuthUser](docs/merakiauthusers/README.md#getnetworkmerakiauthuser) - Return the Meraki Auth splash or RADIUS user
+* [getNetworkMerakiAuthUsers](docs/merakiauthusers/README.md#getnetworkmerakiauthusers) - List the splash or RADIUS users configured under Meraki Authentication for a network
 
-### monitoredMediaServers
+### [namedTagScope](docs/namedtagscope/README.md)
 
-* `createOrganizationInsightMonitoredMediaServer` - Add a media server to be monitored for this organization
-* `deleteOrganizationInsightMonitoredMediaServer` - Delete a monitored media server from this organization
-* `getOrganizationInsightMonitoredMediaServer` - Return a monitored media server for this organization
-* `getOrganizationInsightMonitoredMediaServers` - List the monitored media servers for this organization
-* `updateOrganizationInsightMonitoredMediaServer` - Update a monitored media server for this organization
+* [createNetworkSmTargetGroup](docs/namedtagscope/README.md#createnetworksmtargetgroup) - Add a target group
+* [deleteNetworkSmTargetGroup](docs/namedtagscope/README.md#deletenetworksmtargetgroup) - Delete a target group from a network
+* [getNetworkSmTargetGroup](docs/namedtagscope/README.md#getnetworksmtargetgroup) - Return a target group
+* [getNetworkSmTargetGroups](docs/namedtagscope/README.md#getnetworksmtargetgroups) - List the target groups in this network
+* [updateNetworkSmTargetGroup](docs/namedtagscope/README.md#updatenetworksmtargetgroup) - Update a target group
 
-### namedTagScope
+### [networks](docs/networks/README.md)
 
-* `createNetworkSmTargetGroup` - Add a target group
-* `deleteNetworkSmTargetGroup` - Delete a target group from a network
-* `getNetworkSmTargetGroup` - Return a target group
-* `getNetworkSmTargetGroups` - List the target groups in this network
-* `updateNetworkSmTargetGroup` - Update a target group
+* [bindNetwork](docs/networks/README.md#bindnetwork) - Bind a network to a template.
+* [combineOrganizationNetworks](docs/networks/README.md#combineorganizationnetworks) - Combine multiple networks into a single network
+* [createOrganizationNetwork](docs/networks/README.md#createorganizationnetwork) - Create a network
+* [deleteNetwork](docs/networks/README.md#deletenetwork) - Delete a network
+* [getNetwork](docs/networks/README.md#getnetwork) - Return a network
+* [getNetworkAirMarshal](docs/networks/README.md#getnetworkairmarshal) - List Air Marshal scan results from a network
+* [getNetworkSiteToSiteVpn](docs/networks/README.md#getnetworksitetositevpn) - Return the site-to-site VPN settings of a network
+* [getNetworkTraffic](docs/networks/README.md#getnetworktraffic) - Return the traffic analysis data for this network
+* [getOrganizationNetworks](docs/networks/README.md#getorganizationnetworks) - List the networks in an organization
+* [splitNetwork](docs/networks/README.md#splitnetwork) - Split a combined network into individual networks for each type of device
+* [unbindNetwork](docs/networks/README.md#unbindnetwork) - Unbind a network from a template.
+* [updateNetwork](docs/networks/README.md#updatenetwork) - Update a network
+* [updateNetworkSiteToSiteVpn](docs/networks/README.md#updatenetworksitetositevpn) - Update the site-to-site VPN settings of a network
 
-### networks
+### [openAPISpec](docs/openapispec/README.md)
 
-* `bindNetwork` - Bind a network to a template.
-* `combineOrganizationNetworks` - Combine multiple networks into a single network
-* `createOrganizationNetwork` - Create a network
-* `deleteNetwork` - Delete a network
-* `getNetwork` - Return a network
-* `getNetworkAirMarshal` - List Air Marshal scan results from a network
-* `getNetworkSiteToSiteVpn` - Return the site-to-site VPN settings of a network
-* `getNetworkTraffic` - Return the traffic analysis data for this network
-* `getOrganizationNetworks` - List the networks in an organization
-* `splitNetwork` - Split a combined network into individual networks for each type of device
-* `unbindNetwork` - Unbind a network from a template.
-* `updateNetwork` - Update a network
-* `updateNetworkSiteToSiteVpn` - Update the site-to-site VPN settings of a network
+* [getOrganizationOpenapiSpec](docs/openapispec/README.md#getorganizationopenapispec) - Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON
 
-### openAPISpec
+### [organizations](docs/organizations/README.md)
 
-* `getOrganizationOpenapiSpec` - Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON
+* [claimIntoOrganization](docs/organizations/README.md#claimintoorganization) - Claim a list of devices, licenses, and/or orders into an organization
+* [cloneOrganization](docs/organizations/README.md#cloneorganization) - Create a new organization by cloning the addressed organization
+* [getOrganization](docs/organizations/README.md#getorganization) - Return an organization
+* [getOrganizationDeviceStatuses](docs/organizations/README.md#getorganizationdevicestatuses) - List the status of every Meraki device in the organization
+* [getOrganizationInventory](docs/organizations/README.md#getorganizationinventory) - Return the inventory for an organization
+* [getOrganizationThirdPartyVPNPeers](docs/organizations/README.md#getorganizationthirdpartyvpnpeers) - Return the third party VPN peers for an organization
+* [getOrganizationUplinksLossAndLatency](docs/organizations/README.md#getorganizationuplinkslossandlatency) - Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
+* [getOrganizations](docs/organizations/README.md#getorganizations) - List the organizations that the user has privileges on
+* [updateOrganizationThirdPartyVPNPeers](docs/organizations/README.md#updateorganizationthirdpartyvpnpeers) - Update the third party VPN peers for an organization
 
-### organizations
+### [pii](docs/pii/README.md)
 
-* `claimIntoOrganization` - Claim a list of devices, licenses, and/or orders into an organization
-* `cloneOrganization` - Create a new organization by cloning the addressed organization
-* `getOrganization` - Return an organization
-* `getOrganizationDeviceStatuses` - List the status of every Meraki device in the organization
-* `getOrganizationInventory` - Return the inventory for an organization
-* `getOrganizationThirdPartyVPNPeers` - Return the third party VPN peers for an organization
-* `getOrganizationUplinksLossAndLatency` - Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
-* `getOrganizations` - List the organizations that the user has privileges on
-* `updateOrganizationThirdPartyVPNPeers` - Update the third party VPN peers for an organization
+* [createNetworkPiiRequest](docs/pii/README.md#createnetworkpiirequest) - Submit a new delete or restrict processing PII request
+* [deleteNetworkPiiRequest](docs/pii/README.md#deletenetworkpiirequest) - Delete a restrict processing PII request
+* [getNetworkPiiPiiKeys](docs/pii/README.md#getnetworkpiipiikeys) - List the keys required to access Personally Identifiable Information (PII) for a given identifier
+* [getNetworkPiiRequest](docs/pii/README.md#getnetworkpiirequest) - Return a PII request
+* [getNetworkPiiRequests](docs/pii/README.md#getnetworkpiirequests) - List the PII requests for this network or organization
+* [getNetworkPiiSmDevicesForKey](docs/pii/README.md#getnetworkpiismdevicesforkey) - Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier
+* [getNetworkPiiSmOwnersForKey](docs/pii/README.md#getnetworkpiismownersforkey) - Given a piece of Personally Identifiable Information (PII), return the Systems Manager owner ID(s) associated with that identifier
 
-### pii
+### [radioSettings](docs/radiosettings/README.md)
 
-* `createNetworkPiiRequest` - Submit a new delete or restrict processing PII request
-* `deleteNetworkPiiRequest` - Delete a restrict processing PII request
-* `getNetworkPiiPiiKeys` - List the keys required to access Personally Identifiable Information (PII) for a given identifier
-* `getNetworkPiiRequest` - Return a PII request
-* `getNetworkPiiRequests` - List the PII requests for this network or organization
-* `getNetworkPiiSmDevicesForKey` - Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier
-* `getNetworkPiiSmOwnersForKey` - Given a piece of Personally Identifiable Information (PII), return the Systems Manager owner ID(s) associated with that identifier
+* [createNetworkWirelessRfProfile](docs/radiosettings/README.md#createnetworkwirelessrfprofile) - Creates new RF profile for this network
+* [deleteNetworkWirelessRfProfile](docs/radiosettings/README.md#deletenetworkwirelessrfprofile) - Delete a RF Profile
+* [getNetworkWirelessRfProfile](docs/radiosettings/README.md#getnetworkwirelessrfprofile) - Return a RF profile
+* [getNetworkWirelessRfProfiles](docs/radiosettings/README.md#getnetworkwirelessrfprofiles) - List the non-basic RF profiles for this network
+* [updateNetworkWirelessRfProfile](docs/radiosettings/README.md#updatenetworkwirelessrfprofile) - Updates specified RF profile for this network
 
-### radioSettings
+### [samlRoles](docs/samlroles/README.md)
 
-* `createNetworkWirelessRfProfile` - Creates new RF profile for this network
-* `deleteNetworkWirelessRfProfile` - Delete a RF Profile
-* `getNetworkWirelessRfProfile` - Return a RF profile
-* `getNetworkWirelessRfProfiles` - List the non-basic RF profiles for this network
-* `updateNetworkWirelessRfProfile` - Updates specified RF profile for this network
+* [createOrganizationSamlRole](docs/samlroles/README.md#createorganizationsamlrole) - Create a SAML role
+* [getOrganizationSamlRole](docs/samlroles/README.md#getorganizationsamlrole) - Return a SAML role
+* [getOrganizationSamlRoles](docs/samlroles/README.md#getorganizationsamlroles) - List the SAML roles for this organization
+* [updateOrganizationSamlRole](docs/samlroles/README.md#updateorganizationsamlrole) - Update a SAML role
 
-### samlRoles
+### [sm](docs/sm/README.md)
 
-* `createOrganizationSamlRole` - Create a SAML role
-* `getOrganizationSamlRole` - Return a SAML role
-* `getOrganizationSamlRoles` - List the SAML roles for this organization
-* `updateOrganizationSamlRole` - Update a SAML role
+* [createNetworkSmBypassActivationLockAttempt](docs/sm/README.md#createnetworksmbypassactivationlockattempt) - Bypass activation lock attempt
+* [getNetworkSmBypassActivationLockAttempt](docs/sm/README.md#getnetworksmbypassactivationlockattempt) - Bypass activation lock attempt status
+* [getNetworkSmCellularUsageHistory](docs/sm/README.md#getnetworksmcellularusagehistory) - Return the client's daily cellular data usage history
+* [getNetworkSmCerts](docs/sm/README.md#getnetworksmcerts) - List the certs on a device
+* [getNetworkSmConnectivity](docs/sm/README.md#getnetworksmconnectivity) - Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
+* [getNetworkSmDesktopLogs](docs/sm/README.md#getnetworksmdesktoplogs) - Return historical records of various Systems Manager network connection details for desktop devices.
+* [getNetworkSmDeviceCommandLogs](docs/sm/README.md#getnetworksmdevicecommandlogs) - Return historical records of commands sent to Systems Manager devices
+* [getNetworkSmDeviceProfiles](docs/sm/README.md#getnetworksmdeviceprofiles) - Get the profiles associated with a device
+* [getNetworkSmDevices](docs/sm/README.md#getnetworksmdevices) - List the devices enrolled in an SM network with various specified fields and filters
+* [getNetworkSmNetworkAdapters](docs/sm/README.md#getnetworksmnetworkadapters) - List the network adapters of a device
+* [getNetworkSmPerformanceHistory](docs/sm/README.md#getnetworksmperformancehistory) - Return historical records of various Systems Manager client metrics for desktop devices.
+* [getNetworkSmProfiles](docs/sm/README.md#getnetworksmprofiles) - List all the profiles in the network
+* [getNetworkSmRestrictions](docs/sm/README.md#getnetworksmrestrictions) - List the restrictions on a device
+* [getNetworkSmSecurityCenters](docs/sm/README.md#getnetworksmsecuritycenters) - List the security centers on a device
+* [getNetworkSmSoftwares](docs/sm/README.md#getnetworksmsoftwares) - Get a list of softwares associated with a device
+* [getNetworkSmUserDeviceProfiles](docs/sm/README.md#getnetworksmuserdeviceprofiles) - Get the profiles associated with a user
+* [getNetworkSmUserSoftwares](docs/sm/README.md#getnetworksmusersoftwares) - Get a list of softwares associated with a user
+* [getNetworkSmUsers](docs/sm/README.md#getnetworksmusers) - List the owners in an SM network with various specified fields and filters
+* [getNetworkSmWlanLists](docs/sm/README.md#getnetworksmwlanlists) - List the saved SSID names on a device
+* [lockNetworkSmDevices](docs/sm/README.md#locknetworksmdevices) - Lock a set of devices
+* [refreshNetworkSmDeviceDetails](docs/sm/README.md#refreshnetworksmdevicedetails) - Refresh the details of a device
+* [unenrollNetworkSmDevice](docs/sm/README.md#unenrollnetworksmdevice) - Unenroll a device
+* [updateNetworkSmDeviceFields](docs/sm/README.md#updatenetworksmdevicefields) - Modify the fields of a device
+* [updateNetworkSmDevicesTags](docs/sm/README.md#updatenetworksmdevicestags) - Add, delete, or update the tags of a set of devices
+* [wipeNetworkSmDevice](docs/sm/README.md#wipenetworksmdevice) - Wipe a device
 
-### sm
+### [snmpSettings](docs/snmpsettings/README.md)
 
-* `checkinNetworkSmDevices` - Force check-in a set of devices
-* `createNetworkSmBypassActivationLockAttempt` - Bypass activation lock attempt
-* `getNetworkSmBypassActivationLockAttempt` - Bypass activation lock attempt status
-* `getNetworkSmCellularUsageHistory` - Return the client's daily cellular data usage history
-* `getNetworkSmCerts` - List the certs on a device
-* `getNetworkSmConnectivity` - Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
-* `getNetworkSmDesktopLogs` - Return historical records of various Systems Manager network connection details for desktop devices.
-* `getNetworkSmDeviceCommandLogs` - Return historical records of commands sent to Systems Manager devices
-* `getNetworkSmDeviceProfiles` - Get the profiles associated with a device
-* `getNetworkSmDevices` - List the devices enrolled in an SM network with various specified fields and filters
-* `getNetworkSmNetworkAdapters` - List the network adapters of a device
-* `getNetworkSmPerformanceHistory` - Return historical records of various Systems Manager client metrics for desktop devices.
-* `getNetworkSmProfiles` - List all the profiles in the network
-* `getNetworkSmRestrictions` - List the restrictions on a device
-* `getNetworkSmSecurityCenters` - List the security centers on a device
-* `getNetworkSmSoftwares` - Get a list of softwares associated with a device
-* `getNetworkSmUserDeviceProfiles` - Get the profiles associated with a user
-* `getNetworkSmUserSoftwares` - Get a list of softwares associated with a user
-* `getNetworkSmUsers` - List the owners in an SM network with various specified fields and filters
-* `getNetworkSmWlanLists` - List the saved SSID names on a device
-* `lockNetworkSmDevices` - Lock a set of devices
-* `refreshNetworkSmDeviceDetails` - Refresh the details of a device
-* `unenrollNetworkSmDevice` - Unenroll a device
-* `updateNetworkSmDeviceFields` - Modify the fields of a device
-* `updateNetworkSmDevicesTags` - Add, delete, or update the tags of a set of devices
-* `wipeNetworkSmDevice` - Wipe a device
+* [getNetworkSnmpSettings](docs/snmpsettings/README.md#getnetworksnmpsettings) - Return the SNMP settings for a network
+* [getOrganizationSnmp](docs/snmpsettings/README.md#getorganizationsnmp) - Return the SNMP settings for an organization
 
-### snmpSettings
+### [ssiDs](docs/ssids/README.md)
 
-* `getNetworkSnmpSettings` - Return the SNMP settings for a network
-* `getOrganizationSnmp` - Return the SNMP settings for an organization
+* [getNetworkDeviceWirelessStatus](docs/ssids/README.md#getnetworkdevicewirelessstatus) - Return the SSID statuses of an access point
+* [getNetworkSsid](docs/ssids/README.md#getnetworkssid) - Return a single SSID
+* [getNetworkSsids](docs/ssids/README.md#getnetworkssids) - List the SSIDs in a network
+* [updateNetworkSsid](docs/ssids/README.md#updatenetworkssid) - Update the attributes of an SSID
 
-### ssiDs
+### [securityEvents](docs/securityevents/README.md)
 
-* `getNetworkDeviceWirelessStatus` - Return the SSID statuses of an access point
-* `getNetworkSsid` - Return a single SSID
-* `getNetworkSsids` - List the SSIDs in a network
-* `updateNetworkSsid` - Update the attributes of an SSID
+* [getNetworkSecurityEvents](docs/securityevents/README.md#getnetworksecurityevents) - List the security events (intrusion detection only) for a network
+* [getOrganizationSecurityEvents](docs/securityevents/README.md#getorganizationsecurityevents) - List the security events (intrusion detection only) for an organization
 
-### securityEvents
+### [splashLoginAttempts](docs/splashloginattempts/README.md)
 
-* `getNetworkSecurityEvents` - List the security events (intrusion detection only) for a network
-* `getOrganizationSecurityEvents` - List the security events (intrusion detection only) for an organization
+* [getNetworkSplashLoginAttempts](docs/splashloginattempts/README.md#getnetworksplashloginattempts) - List the splash login attempts for a network
 
-### splashLoginAttempts
+### [splashSettings](docs/splashsettings/README.md)
 
-* `getNetworkSplashLoginAttempts` - List the splash login attempts for a network
+* [getNetworkSsidSplashSettings](docs/splashsettings/README.md#getnetworkssidsplashsettings) - Display the splash page settings for the given SSID
+* [updateNetworkSsidSplashSettings](docs/splashsettings/README.md#updatenetworkssidsplashsettings) - Modify the splash page settings for the given SSID
 
-### splashSettings
+### [switchAccessPolicies](docs/switchaccesspolicies/README.md)
 
-* `getNetworkSsidSplashSettings` - Display the splash page settings for the given SSID
-* `updateNetworkSsidSplashSettings` - Modify the splash page settings for the given SSID
+* [getNetworkAccessPolicies](docs/switchaccesspolicies/README.md#getnetworkaccesspolicies) - List the access policies for this network
 
-### switchAccessPolicies
+### [switchPortSchedules](docs/switchportschedules/README.md)
 
-* `getNetworkAccessPolicies` - List the access policies for this network
+* [createNetworkSwitchPortSchedule](docs/switchportschedules/README.md#createnetworkswitchportschedule) - Add a switch port schedule
+* [deleteNetworkSwitchPortSchedule](docs/switchportschedules/README.md#deletenetworkswitchportschedule) - Delete a switch port schedule
+* [getNetworkSwitchPortSchedules](docs/switchportschedules/README.md#getnetworkswitchportschedules) - List switch port schedules
+* [updateNetworkSwitchPortSchedule](docs/switchportschedules/README.md#updatenetworkswitchportschedule) - Update a switch port schedule
 
-### switchPortSchedules
+### [switchPorts](docs/switchports/README.md)
 
-* `createNetworkSwitchPortSchedule` - Add a switch port schedule
-* `deleteNetworkSwitchPortSchedule` - Delete a switch port schedule
-* `getNetworkSwitchPortSchedules` - List switch port schedules
-* `updateNetworkSwitchPortSchedule` - Update a switch port schedule
+* [getDeviceSwitchPortStatuses](docs/switchports/README.md#getdeviceswitchportstatuses) - Return the status for all the ports of a switch
+* [getDeviceSwitchPortStatusesPackets](docs/switchports/README.md#getdeviceswitchportstatusespackets) - Return the packet counters for all the ports of a switch
 
-### switchPorts
+### [switchProfiles](docs/switchprofiles/README.md)
 
-* `getDeviceSwitchPortStatuses` - Return the status for all the ports of a switch
-* `getDeviceSwitchPortStatusesPackets` - Return the packet counters for all the ports of a switch
+* [getOrganizationConfigTemplateSwitchProfiles](docs/switchprofiles/README.md#getorganizationconfigtemplateswitchprofiles) - List the switch profiles for your switch template configuration
 
-### switchProfiles
+### [switchSettings](docs/switchsettings/README.md)
 
-* `getOrganizationConfigTemplateSwitchProfiles` - List the switch profiles for your switch template configuration
+* [createNetworkSwitchSettingsQosRule](docs/switchsettings/README.md#createnetworkswitchsettingsqosrule) - Add a quality of service rule
+* [deleteNetworkSwitchSettingsQosRule](docs/switchsettings/README.md#deletenetworkswitchsettingsqosrule) - Delete a quality of service rule
+* [getNetworkSwitchSettings](docs/switchsettings/README.md#getnetworkswitchsettings) - Returns the switch network settings
+* [getNetworkSwitchSettingsMtu](docs/switchsettings/README.md#getnetworkswitchsettingsmtu) - Return the MTU configuration
+* [getNetworkSwitchSettingsMulticast](docs/switchsettings/README.md#getnetworkswitchsettingsmulticast) - Return multicast settings for a network
+* [getNetworkSwitchSettingsQosRule](docs/switchsettings/README.md#getnetworkswitchsettingsqosrule) - Return a quality of service rule
+* [getNetworkSwitchSettingsQosRules](docs/switchsettings/README.md#getnetworkswitchsettingsqosrules) - List quality of service rules
+* [getNetworkSwitchSettingsQosRulesOrder](docs/switchsettings/README.md#getnetworkswitchsettingsqosrulesorder) - Return the quality of service rule IDs by order in which they will be processed by the switch
+* [getNetworkSwitchSettingsStormControl](docs/switchsettings/README.md#getnetworkswitchsettingsstormcontrol) - Return the storm control configuration for a switch network
+* [updateNetworkSwitchSettings](docs/switchsettings/README.md#updatenetworkswitchsettings) - Update switch network settings
+* [updateNetworkSwitchSettingsMulticast](docs/switchsettings/README.md#updatenetworkswitchsettingsmulticast) - Update multicast settings for a network
+* [updateNetworkSwitchSettingsQosRule](docs/switchsettings/README.md#updatenetworkswitchsettingsqosrule) - Update a quality of service rule
+* [updateNetworkSwitchSettingsQosRulesOrder](docs/switchsettings/README.md#updatenetworkswitchsettingsqosrulesorder) - Update the order in which the rules should be processed by the switch
+* [updateNetworkSwitchSettingsStormControl](docs/switchsettings/README.md#updatenetworkswitchsettingsstormcontrol) - Update the storm control configuration for a switch network
 
-### switchSettings
+### [switchStacks](docs/switchstacks/README.md)
 
-* `createNetworkSwitchSettingsQosRule` - Add a quality of service rule
-* `deleteNetworkSwitchSettingsQosRule` - Delete a quality of service rule
-* `getNetworkSwitchSettings` - Returns the switch network settings
-* `getNetworkSwitchSettingsMtu` - Return the MTU configuration
-* `getNetworkSwitchSettingsMulticast` - Return multicast settings for a network
-* `getNetworkSwitchSettingsQosRule` - Return a quality of service rule
-* `getNetworkSwitchSettingsQosRules` - List quality of service rules
-* `getNetworkSwitchSettingsQosRulesOrder` - Return the quality of service rule IDs by order in which they will be processed by the switch
-* `getNetworkSwitchSettingsStormControl` - Return the storm control configuration for a switch network
-* `updateNetworkSwitchSettings` - Update switch network settings
-* `updateNetworkSwitchSettingsMtu` - Update the MTU configuration
-* `updateNetworkSwitchSettingsMulticast` - Update multicast settings for a network
-* `updateNetworkSwitchSettingsQosRule` - Update a quality of service rule
-* `updateNetworkSwitchSettingsQosRulesOrder` - Update the order in which the rules should be processed by the switch
-* `updateNetworkSwitchSettingsStormControl` - Update the storm control configuration for a switch network
+* [getNetworkSwitchStacks](docs/switchstacks/README.md#getnetworkswitchstacks) - List the switch stacks in a network
 
-### switchStacks
+### [syslogServers](docs/syslogservers/README.md)
 
-* `addNetworkSwitchStack` - Add a switch to a stack
-* `createNetworkSwitchStack` - Create a stack
-* `deleteNetworkSwitchStack` - Delete a stack
-* `getNetworkSwitchStack` - Show a switch stack
-* `getNetworkSwitchStacks` - List the switch stacks in a network
-* `removeNetworkSwitchStack` - Remove a switch from a stack
+* [getNetworkSyslogServers](docs/syslogservers/README.md#getnetworksyslogservers) - List the syslog servers for a network
+* [updateNetworkSyslogServers](docs/syslogservers/README.md#updatenetworksyslogservers) - Update the syslog servers for a network
 
-### syslogServers
+### [trafficShapingUplinkSettings](docs/trafficshapinguplinksettings/README.md)
 
-* `getNetworkSyslogServers` - List the syslog servers for a network
-* `updateNetworkSyslogServers` - Update the syslog servers for a network
+* [getNetworkUplinkSettings](docs/trafficshapinguplinksettings/README.md#getnetworkuplinksettings) - Returns the uplink settings for your MX network.
+* [updateNetworkUplinkSettings](docs/trafficshapinguplinksettings/README.md#updatenetworkuplinksettings) - Updates the uplink settings for your MX network.
 
-### trafficShapingUplinkSettings
+### [vlaNs](docs/vlans/README.md)
 
-* `getNetworkUplinkSettings` - Returns the uplink settings for your MX network.
-* `updateNetworkUplinkSettings` - Updates the uplink settings for your MX network.
+* [createNetworkVlan](docs/vlans/README.md#createnetworkvlan) - Add a VLAN
+* [deleteNetworkVlan](docs/vlans/README.md#deletenetworkvlan) - Delete a VLAN from a network
+* [getNetworkVlan](docs/vlans/README.md#getnetworkvlan) - Return a VLAN
+* [getNetworkVlans](docs/vlans/README.md#getnetworkvlans) - List the VLANs for an MX network
+* [getNetworkVlansEnabledState](docs/vlans/README.md#getnetworkvlansenabledstate) - Returns the enabled status of VLANs for the network
+* [updateNetworkVlan](docs/vlans/README.md#updatenetworkvlan) - Update a VLAN
+* [updateNetworkVlansEnabledState](docs/vlans/README.md#updatenetworkvlansenabledstate) - Enable/Disable VLANs for the given network
 
-### vlaNs
+### [wirelessHealth](docs/wirelesshealth/README.md)
 
-* `createNetworkVlan` - Add a VLAN
-* `deleteNetworkVlan` - Delete a VLAN from a network
-* `getNetworkVlan` - Return a VLAN
-* `getNetworkVlans` - List the VLANs for an MX network
-* `getNetworkVlansEnabledState` - Returns the enabled status of VLANs for the network
-* `updateNetworkVlan` - Update a VLAN
-* `updateNetworkVlansEnabledState` - Enable/Disable VLANs for the given network
+* [getNetworkClientConnectionStats](docs/wirelesshealth/README.md#getnetworkclientconnectionstats) - Aggregated connectivity info for a given client on this network
+* [getNetworkClientLatencyStats](docs/wirelesshealth/README.md#getnetworkclientlatencystats) - Aggregated latency info for a given client on this network
+* [getNetworkClientsConnectionStats](docs/wirelesshealth/README.md#getnetworkclientsconnectionstats) - Aggregated connectivity info for this network, grouped by clients
+* [getNetworkClientsLatencyStats](docs/wirelesshealth/README.md#getnetworkclientslatencystats) - Aggregated latency info for this network, grouped by clients
+* [getNetworkConnectionStats](docs/wirelesshealth/README.md#getnetworkconnectionstats) - Aggregated connectivity info for this network
+* [getNetworkDeviceConnectionStats](docs/wirelesshealth/README.md#getnetworkdeviceconnectionstats) - Aggregated connectivity info for a given AP on this network
+* [getNetworkDeviceLatencyStats](docs/wirelesshealth/README.md#getnetworkdevicelatencystats) - Aggregated latency info for a given AP on this network
+* [getNetworkDevicesConnectionStats](docs/wirelesshealth/README.md#getnetworkdevicesconnectionstats) - Aggregated connectivity info for this network, grouped by node
+* [getNetworkDevicesLatencyStats](docs/wirelesshealth/README.md#getnetworkdeviceslatencystats) - Aggregated latency info for this network, grouped by node
+* [getNetworkFailedConnections](docs/wirelesshealth/README.md#getnetworkfailedconnections) - List of all failed client connection events on this network in a given time range
+* [getNetworkLatencyStats](docs/wirelesshealth/README.md#getnetworklatencystats) - Aggregated latency info for this network
 
-### wirelessHealth
+### [wirelessSettings](docs/wirelesssettings/README.md)
 
-* `getNetworkClientConnectionStats` - Aggregated connectivity info for a given client on this network
-* `getNetworkClientLatencyStats` - Aggregated latency info for a given client on this network
-* `getNetworkClientsConnectionStats` - Aggregated connectivity info for this network, grouped by clients
-* `getNetworkClientsLatencyStats` - Aggregated latency info for this network, grouped by clients
-* `getNetworkConnectionStats` - Aggregated connectivity info for this network
-* `getNetworkDeviceConnectionStats` - Aggregated connectivity info for a given AP on this network
-* `getNetworkDeviceLatencyStats` - Aggregated latency info for a given AP on this network
-* `getNetworkDevicesConnectionStats` - Aggregated connectivity info for this network, grouped by node
-* `getNetworkDevicesLatencyStats` - Aggregated latency info for this network, grouped by node
-* `getNetworkFailedConnections` - List of all failed client connection events on this network in a given time range
-* `getNetworkLatencyStats` - Aggregated latency info for this network
-
-### wirelessSettings
-
-* `getNetworkWirelessSettings` - Return the wireless settings for a network
-* `updateNetworkWirelessSettings` - Update the wireless settings for a network
+* [getNetworkWirelessSettings](docs/wirelesssettings/README.md#getnetworkwirelesssettings) - Return the wireless settings for a network
+* [updateNetworkWirelessSettings](docs/wirelesssettings/README.md#updatenetworkwirelesssettings) - Update the wireless settings for a network
 <!-- End SDK Available Operations -->
 
 ### Maturity

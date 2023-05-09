@@ -18,9 +18,11 @@ public class ManualSharding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTargetsForShard")
     public TestTargetsForShard[] testTargetsForShard;
+
     public ManualSharding withTestTargetsForShard(TestTargetsForShard[] testTargetsForShard) {
         this.testTargetsForShard = testTargetsForShard;
         return this;
     }
     
+    public ManualSharding(){}
 }

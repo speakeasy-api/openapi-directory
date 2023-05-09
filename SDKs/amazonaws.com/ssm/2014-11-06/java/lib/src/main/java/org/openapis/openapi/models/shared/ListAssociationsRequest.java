@@ -12,6 +12,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationFilterList")
     public AssociationFilter[] associationFilterList;
+
     public ListAssociationsRequest withAssociationFilterList(AssociationFilter[] associationFilterList) {
         this.associationFilterList = associationFilterList;
         return this;
@@ -20,6 +21,7 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListAssociationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociationsRequest(){}
 }

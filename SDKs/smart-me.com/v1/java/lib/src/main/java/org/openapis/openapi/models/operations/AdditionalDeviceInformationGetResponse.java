@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdditionalDeviceInformationGetResponse {
@@ -12,6 +13,7 @@ public class AdditionalDeviceInformationGetResponse {
      */
     
     public org.openapis.openapi.models.shared.AdditionalDeviceInformation additionalDeviceInformation;
+
     public AdditionalDeviceInformationGetResponse withAdditionalDeviceInformation(org.openapis.openapi.models.shared.AdditionalDeviceInformation additionalDeviceInformation) {
         this.additionalDeviceInformation = additionalDeviceInformation;
         return this;
@@ -19,6 +21,7 @@ public class AdditionalDeviceInformationGetResponse {
     
     
     public String contentType;
+
     public AdditionalDeviceInformationGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AdditionalDeviceInformationGetResponse {
     
     
     public Integer statusCode;
+
     public AdditionalDeviceInformationGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdditionalDeviceInformationGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdditionalDeviceInformationGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdditionalDeviceInformationGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

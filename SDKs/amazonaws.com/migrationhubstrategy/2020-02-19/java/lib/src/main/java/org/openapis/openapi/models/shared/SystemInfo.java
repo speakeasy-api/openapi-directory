@@ -15,6 +15,7 @@ public class SystemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuArchitecture")
     public String cpuArchitecture;
+
     public SystemInfo withCpuArchitecture(String cpuArchitecture) {
         this.cpuArchitecture = cpuArchitecture;
         return this;
@@ -23,6 +24,7 @@ public class SystemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSystemType")
     public String fileSystemType;
+
     public SystemInfo withFileSystemType(String fileSystemType) {
         this.fileSystemType = fileSystemType;
         return this;
@@ -31,6 +33,7 @@ public class SystemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInfoList")
     public NetworkInfo[] networkInfoList;
+
     public SystemInfo withNetworkInfoList(NetworkInfo[] networkInfoList) {
         this.networkInfoList = networkInfoList;
         return this;
@@ -39,9 +42,11 @@ public class SystemInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osInfo")
     public OSInfo osInfo;
+
     public SystemInfo withOsInfo(OSInfo osInfo) {
         this.osInfo = osInfo;
         return this;
     }
     
+    public SystemInfo(){}
 }

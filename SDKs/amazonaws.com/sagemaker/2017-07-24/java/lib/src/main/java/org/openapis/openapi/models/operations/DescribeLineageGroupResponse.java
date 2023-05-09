@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLineageGroupResponse {
     
     public String contentType;
+
     public DescribeLineageGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLineageGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLineageGroupResponse describeLineageGroupResponse;
+
     public DescribeLineageGroupResponse withDescribeLineageGroupResponse(org.openapis.openapi.models.shared.DescribeLineageGroupResponse describeLineageGroupResponse) {
         this.describeLineageGroupResponse = describeLineageGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLineageGroupResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeLineageGroupResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeLineageGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeLineageGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeLineageGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLineageGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLineageGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

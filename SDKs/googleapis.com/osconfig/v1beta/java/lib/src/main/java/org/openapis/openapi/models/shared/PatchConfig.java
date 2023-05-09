@@ -18,6 +18,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apt")
     public AptSettings apt;
+
     public PatchConfig withApt(AptSettings apt) {
         this.apt = apt;
         return this;
@@ -29,6 +30,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goo")
     public java.util.Map<String, Object> goo;
+
     public PatchConfig withGoo(java.util.Map<String, Object> goo) {
         this.goo = goo;
         return this;
@@ -40,6 +42,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migInstancesAllowed")
     public Boolean migInstancesAllowed;
+
     public PatchConfig withMigInstancesAllowed(Boolean migInstancesAllowed) {
         this.migInstancesAllowed = migInstancesAllowed;
         return this;
@@ -51,6 +54,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postStep")
     public ExecStep postStep;
+
     public PatchConfig withPostStep(ExecStep postStep) {
         this.postStep = postStep;
         return this;
@@ -62,6 +66,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preStep")
     public ExecStep preStep;
+
     public PatchConfig withPreStep(ExecStep preStep) {
         this.preStep = preStep;
         return this;
@@ -73,6 +78,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebootConfig")
     public PatchConfigRebootConfigEnum rebootConfig;
+
     public PatchConfig withRebootConfig(PatchConfigRebootConfigEnum rebootConfig) {
         this.rebootConfig = rebootConfig;
         return this;
@@ -84,6 +90,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsUpdate")
     public WindowsUpdateSettings windowsUpdate;
+
     public PatchConfig withWindowsUpdate(WindowsUpdateSettings windowsUpdate) {
         this.windowsUpdate = windowsUpdate;
         return this;
@@ -95,6 +102,7 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yum")
     public YumSettings yum;
+
     public PatchConfig withYum(YumSettings yum) {
         this.yum = yum;
         return this;
@@ -106,9 +114,11 @@ public class PatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zypper")
     public ZypperSettings zypper;
+
     public PatchConfig withZypper(ZypperSettings zypper) {
         this.zypper = zypper;
         return this;
     }
     
+    public PatchConfig(){}
 }

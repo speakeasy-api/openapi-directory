@@ -15,6 +15,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public Playlist withFormat(String format) {
         this.format = format;
         return this;
@@ -23,6 +24,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HlsContentProtection")
     public HlsContentProtection hlsContentProtection;
+
     public Playlist withHlsContentProtection(HlsContentProtection hlsContentProtection) {
         this.hlsContentProtection = hlsContentProtection;
         return this;
@@ -31,6 +33,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Playlist withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKeys")
     public String[] outputKeys;
+
     public Playlist withOutputKeys(String[] outputKeys) {
         this.outputKeys = outputKeys;
         return this;
@@ -47,6 +51,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayReadyDrm")
     public PlayReadyDrm playReadyDrm;
+
     public Playlist withPlayReadyDrm(PlayReadyDrm playReadyDrm) {
         this.playReadyDrm = playReadyDrm;
         return this;
@@ -55,6 +60,7 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Playlist withStatus(String status) {
         this.status = status;
         return this;
@@ -63,9 +69,11 @@ public class Playlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetail")
     public String statusDetail;
+
     public Playlist withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
     }
     
+    public Playlist(){}
 }

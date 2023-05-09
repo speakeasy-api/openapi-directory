@@ -15,6 +15,7 @@ public class ValidateAssessmentReportIntegrityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureAlgorithm")
     public String signatureAlgorithm;
+
     public ValidateAssessmentReportIntegrityResponse withSignatureAlgorithm(String signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
         return this;
@@ -23,6 +24,7 @@ public class ValidateAssessmentReportIntegrityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureDateTime")
     public String signatureDateTime;
+
     public ValidateAssessmentReportIntegrityResponse withSignatureDateTime(String signatureDateTime) {
         this.signatureDateTime = signatureDateTime;
         return this;
@@ -31,6 +33,7 @@ public class ValidateAssessmentReportIntegrityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureKeyId")
     public String signatureKeyId;
+
     public ValidateAssessmentReportIntegrityResponse withSignatureKeyId(String signatureKeyId) {
         this.signatureKeyId = signatureKeyId;
         return this;
@@ -39,6 +42,7 @@ public class ValidateAssessmentReportIntegrityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureValid")
     public Boolean signatureValid;
+
     public ValidateAssessmentReportIntegrityResponse withSignatureValid(Boolean signatureValid) {
         this.signatureValid = signatureValid;
         return this;
@@ -47,9 +51,11 @@ public class ValidateAssessmentReportIntegrityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationErrors")
     public String[] validationErrors;
+
     public ValidateAssessmentReportIntegrityResponse withValidationErrors(String[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public ValidateAssessmentReportIntegrityResponse(){}
 }

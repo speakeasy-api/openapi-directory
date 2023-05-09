@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeModelCardResponse {
     @JsonProperty("Content")
     public String content;
+
     public DescribeModelCardResponse withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class DescribeModelCardResponse {
      */
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeModelCardResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -38,6 +40,7 @@ public class DescribeModelCardResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeModelCardResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -49,6 +52,7 @@ public class DescribeModelCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeModelCardResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -59,6 +63,7 @@ public class DescribeModelCardResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeModelCardResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -66,6 +71,7 @@ public class DescribeModelCardResponse {
     
     @JsonProperty("ModelCardArn")
     public String modelCardArn;
+
     public DescribeModelCardResponse withModelCardArn(String modelCardArn) {
         this.modelCardArn = modelCardArn;
         return this;
@@ -73,6 +79,7 @@ public class DescribeModelCardResponse {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public DescribeModelCardResponse withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -81,6 +88,7 @@ public class DescribeModelCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardProcessingStatus")
     public ModelCardProcessingStatusEnum modelCardProcessingStatus;
+
     public DescribeModelCardResponse withModelCardProcessingStatus(ModelCardProcessingStatusEnum modelCardProcessingStatus) {
         this.modelCardProcessingStatus = modelCardProcessingStatus;
         return this;
@@ -88,6 +96,7 @@ public class DescribeModelCardResponse {
     
     @JsonProperty("ModelCardStatus")
     public ModelCardStatusEnum modelCardStatus;
+
     public DescribeModelCardResponse withModelCardStatus(ModelCardStatusEnum modelCardStatus) {
         this.modelCardStatus = modelCardStatus;
         return this;
@@ -95,6 +104,7 @@ public class DescribeModelCardResponse {
     
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public DescribeModelCardResponse withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
@@ -103,9 +113,19 @@ public class DescribeModelCardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfig")
     public ModelCardSecurityConfig securityConfig;
+
     public DescribeModelCardResponse withSecurityConfig(ModelCardSecurityConfig securityConfig) {
         this.securityConfig = securityConfig;
         return this;
     }
     
+    public DescribeModelCardResponse(@JsonProperty("Content") String content, @JsonProperty("CreatedBy") UserContext createdBy, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ModelCardArn") String modelCardArn, @JsonProperty("ModelCardName") String modelCardName, @JsonProperty("ModelCardStatus") ModelCardStatusEnum modelCardStatus, @JsonProperty("ModelCardVersion") Long modelCardVersion) {
+        this.content = content;
+        this.createdBy = createdBy;
+        this.creationTime = creationTime;
+        this.modelCardArn = modelCardArn;
+        this.modelCardName = modelCardName;
+        this.modelCardStatus = modelCardStatus;
+        this.modelCardVersion = modelCardVersion;
+  }
 }

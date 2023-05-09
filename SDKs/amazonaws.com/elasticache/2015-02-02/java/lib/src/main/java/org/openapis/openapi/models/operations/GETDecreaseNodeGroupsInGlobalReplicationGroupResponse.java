@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDecreaseNodeGroupsInGlobalReplicationGroupResponse {
     
     public byte[] body;
+
     public GETDecreaseNodeGroupsInGlobalReplicationGroupResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDecreaseNodeGroupsInGlobalReplicationGroupResponse {
     
     
     public String contentType;
+
     public GETDecreaseNodeGroupsInGlobalReplicationGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDecreaseNodeGroupsInGlobalReplicationGroupResponse {
     
     
     public Integer statusCode;
+
     public GETDecreaseNodeGroupsInGlobalReplicationGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDecreaseNodeGroupsInGlobalReplicationGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDecreaseNodeGroupsInGlobalReplicationGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

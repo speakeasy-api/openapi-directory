@@ -12,9 +12,11 @@ public class SecurityAndAnalysisSecretScanning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SecurityAndAnalysisSecretScanningStatusEnum status;
+
     public SecurityAndAnalysisSecretScanning withStatus(SecurityAndAnalysisSecretScanningStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SecurityAndAnalysisSecretScanning(){}
 }

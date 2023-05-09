@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateHealthCheckRequest {
     @JsonProperty("HealthCheckArn")
     public String healthCheckArn;
+
     public DisassociateHealthCheckRequest withHealthCheckArn(String healthCheckArn) {
         this.healthCheckArn = healthCheckArn;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateHealthCheckRequest {
     
     @JsonProperty("ProtectionId")
     public String protectionId;
+
     public DisassociateHealthCheckRequest withProtectionId(String protectionId) {
         this.protectionId = protectionId;
         return this;
     }
     
+    public DisassociateHealthCheckRequest(@JsonProperty("HealthCheckArn") String healthCheckArn, @JsonProperty("ProtectionId") String protectionId) {
+        this.healthCheckArn = healthCheckArn;
+        this.protectionId = protectionId;
+  }
 }

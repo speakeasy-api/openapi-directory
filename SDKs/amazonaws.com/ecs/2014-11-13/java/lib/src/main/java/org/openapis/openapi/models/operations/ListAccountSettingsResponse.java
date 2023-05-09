@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccountSettingsResponse {
@@ -12,6 +13,7 @@ public class ListAccountSettingsResponse {
      */
     
     public Object clientException;
+
     public ListAccountSettingsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ListAccountSettingsResponse {
     
     
     public String contentType;
+
     public ListAccountSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAccountSettingsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListAccountSettingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListAccountSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccountSettingsResponse listAccountSettingsResponse;
+
     public ListAccountSettingsResponse withListAccountSettingsResponse(org.openapis.openapi.models.shared.ListAccountSettingsResponse listAccountSettingsResponse) {
         this.listAccountSettingsResponse = listAccountSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAccountSettingsResponse {
      */
     
     public Object serverException;
+
     public ListAccountSettingsResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class ListAccountSettingsResponse {
     
     
     public Integer statusCode;
+
     public ListAccountSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListAccountSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccountSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAccountSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccessControlRulesResponse {
     
     public String contentType;
+
     public ListAccessControlRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAccessControlRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccessControlRulesResponse listAccessControlRulesResponse;
+
     public ListAccessControlRulesResponse withListAccessControlRulesResponse(org.openapis.openapi.models.shared.ListAccessControlRulesResponse listAccessControlRulesResponse) {
         this.listAccessControlRulesResponse = listAccessControlRulesResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListAccessControlRulesResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListAccessControlRulesResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListAccessControlRulesResponse {
      */
     
     public Object organizationStateException;
+
     public ListAccessControlRulesResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -46,6 +51,7 @@ public class ListAccessControlRulesResponse {
     
     
     public Integer statusCode;
+
     public ListAccessControlRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListAccessControlRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccessControlRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAccessControlRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SubscriptionPurchasesAcknowledgeRequest subscriptionPurchasesAcknowledgeRequest;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withSubscriptionPurchasesAcknowledgeRequest(org.openapis.openapi.models.shared.SubscriptionPurchasesAcknowledgeRequest subscriptionPurchasesAcknowledgeRequest) {
         this.subscriptionPurchasesAcknowledgeRequest = subscriptionPurchasesAcknowledgeRequest;
         return this;
@@ -29,6 +32,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -99,6 +109,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
     public String subscriptionId;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -129,6 +142,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withToken(String token) {
         this.token = token;
         return this;
@@ -139,6 +153,7 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,15 @@ public class AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidpublisherPurchasesSubscriptionsAcknowledgeRequest(@JsonProperty("packageName") String packageName, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("token") String token) {
+        this.packageName = packageName;
+        this.subscriptionId = subscriptionId;
+        this.token = token;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1SessionEntityType googleCloudDialogflowV2beta1SessionEntityType;
+
     public DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse withGoogleCloudDialogflowV2beta1SessionEntityType(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1SessionEntityType googleCloudDialogflowV2beta1SessionEntityType) {
         this.googleCloudDialogflowV2beta1SessionEntityType = googleCloudDialogflowV2beta1SessionEntityType;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse {
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsAgentSessionsEntityTypesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

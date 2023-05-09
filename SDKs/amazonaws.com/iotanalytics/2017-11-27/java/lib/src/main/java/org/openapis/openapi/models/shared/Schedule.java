@@ -15,9 +15,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public Schedule withExpression(String expression) {
         this.expression = expression;
         return this;
     }
     
+    public Schedule(){}
 }

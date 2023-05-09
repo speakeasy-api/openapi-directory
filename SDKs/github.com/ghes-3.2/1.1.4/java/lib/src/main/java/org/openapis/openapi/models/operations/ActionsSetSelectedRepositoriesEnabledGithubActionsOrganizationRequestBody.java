@@ -12,9 +12,13 @@ public class ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationReque
      */
     @JsonProperty("selected_repository_ids")
     public Long[] selectedRepositoryIds;
+
     public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody withSelectedRepositoryIds(Long[] selectedRepositoryIds) {
         this.selectedRepositoryIds = selectedRepositoryIds;
         return this;
     }
     
+    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody(@JsonProperty("selected_repository_ids") Long[] selectedRepositoryIds) {
+        this.selectedRepositoryIds = selectedRepositoryIds;
+  }
 }

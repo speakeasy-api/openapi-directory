@@ -20,6 +20,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacitySpecification")
     public CapacitySpecificationSummary capacitySpecification;
+
     public GetTableResponse withCapacitySpecification(CapacitySpecificationSummary capacitySpecification) {
         this.capacitySpecification = capacitySpecification;
         return this;
@@ -28,6 +29,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSideTimestamps")
     public ClientSideTimestamps clientSideTimestamps;
+
     public GetTableResponse withClientSideTimestamps(ClientSideTimestamps clientSideTimestamps) {
         this.clientSideTimestamps = clientSideTimestamps;
         return this;
@@ -36,6 +38,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public Comment comment;
+
     public GetTableResponse withComment(Comment comment) {
         this.comment = comment;
         return this;
@@ -46,6 +49,7 @@ public class GetTableResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public GetTableResponse withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -54,6 +58,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTimeToLive")
     public Long defaultTimeToLive;
+
     public GetTableResponse withDefaultTimeToLive(Long defaultTimeToLive) {
         this.defaultTimeToLive = defaultTimeToLive;
         return this;
@@ -62,6 +67,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionSpecification")
     public EncryptionSpecification encryptionSpecification;
+
     public GetTableResponse withEncryptionSpecification(EncryptionSpecification encryptionSpecification) {
         this.encryptionSpecification = encryptionSpecification;
         return this;
@@ -69,6 +75,7 @@ public class GetTableResponse {
     
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public GetTableResponse withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
@@ -77,6 +84,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointInTimeRecovery")
     public PointInTimeRecoverySummary pointInTimeRecovery;
+
     public GetTableResponse withPointInTimeRecovery(PointInTimeRecoverySummary pointInTimeRecovery) {
         this.pointInTimeRecovery = pointInTimeRecovery;
         return this;
@@ -84,6 +92,7 @@ public class GetTableResponse {
     
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public GetTableResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -92,6 +101,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaDefinition")
     public SchemaDefinition schemaDefinition;
+
     public GetTableResponse withSchemaDefinition(SchemaDefinition schemaDefinition) {
         this.schemaDefinition = schemaDefinition;
         return this;
@@ -100,6 +110,7 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TableStatusEnum status;
+
     public GetTableResponse withStatus(TableStatusEnum status) {
         this.status = status;
         return this;
@@ -107,6 +118,7 @@ public class GetTableResponse {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public GetTableResponse withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -115,9 +127,15 @@ public class GetTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public TimeToLive ttl;
+
     public GetTableResponse withTtl(TimeToLive ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public GetTableResponse(@JsonProperty("keyspaceName") String keyspaceName, @JsonProperty("resourceArn") String resourceArn, @JsonProperty("tableName") String tableName) {
+        this.keyspaceName = keyspaceName;
+        this.resourceArn = resourceArn;
+        this.tableName = tableName;
+  }
 }

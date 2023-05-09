@@ -12,6 +12,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
     public Boolean deleted;
+
     public GetSetupV1ResourcesRequest withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -22,6 +23,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetSetupV1ResourcesRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
     public String googleAuthReturnUrl;
+
     public GetSetupV1ResourcesRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
         this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
@@ -42,6 +45,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1ResourcesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetSetupV1ResourcesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -62,6 +67,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetSetupV1ResourcesRequest withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1ResourcesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -82,6 +89,7 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
     public String outlookAuthReturnUrl;
+
     public GetSetupV1ResourcesRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
         this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
@@ -92,9 +100,11 @@ public class GetSetupV1ResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceGroupId")
     public String resourceGroupId;
+
     public GetSetupV1ResourcesRequest withResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     
+    public GetSetupV1ResourcesRequest(){}
 }

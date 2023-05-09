@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApproveACheckTransferResponse {
     
     public String contentType;
+
     public ApproveACheckTransferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ApproveACheckTransferResponse {
     
     
     public Integer statusCode;
+
     public ApproveACheckTransferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ApproveACheckTransferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApproveACheckTransferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ApproveACheckTransferResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckTransfer checkTransfer;
+
     public ApproveACheckTransferResponse withCheckTransfer(org.openapis.openapi.models.shared.CheckTransfer checkTransfer) {
         this.checkTransfer = checkTransfer;
         return this;
@@ -43,9 +48,14 @@ public class ApproveACheckTransferResponse {
      */
     
     public Object error;
+
     public ApproveACheckTransferResponse withError(Object error) {
         this.error = error;
         return this;
     }
     
+    public ApproveACheckTransferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

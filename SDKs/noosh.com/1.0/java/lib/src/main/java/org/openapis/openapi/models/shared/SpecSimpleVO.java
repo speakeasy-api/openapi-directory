@@ -17,6 +17,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_status")
     public String clientStatus;
+
     public SpecSimpleVO withClientStatus(String clientStatus) {
         this.clientStatus = clientStatus;
         return this;
@@ -26,6 +27,7 @@ public class SpecSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("create_date")
     public LocalDate createDate;
+
     public SpecSimpleVO withCreateDate(LocalDate createDate) {
         this.createDate = createDate;
         return this;
@@ -37,6 +39,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public PersonVO createdBy;
+
     public SpecSimpleVO withCreatedBy(PersonVO createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -45,6 +48,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     public Long jobId;
+
     public SpecSimpleVO withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -54,6 +58,7 @@ public class SpecSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_updated")
     public LocalDate lastUpdated;
+
     public SpecSimpleVO withLastUpdated(LocalDate lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -62,6 +67,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
     public String referenceNumber;
+
     public SpecSimpleVO withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
@@ -70,6 +76,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public SpecSimpleVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -78,6 +85,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public SpecSimpleVO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -86,6 +94,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_options_complete")
     public SpecSimpleVO[] specOptionsComplete;
+
     public SpecSimpleVO withSpecOptionsComplete(SpecSimpleVO[] specOptionsComplete) {
         this.specOptionsComplete = specOptionsComplete;
         return this;
@@ -94,6 +103,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_status")
     public String supplierStatus;
+
     public SpecSimpleVO withSupplierStatus(String supplierStatus) {
         this.supplierStatus = supplierStatus;
         return this;
@@ -102,6 +112,7 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uofms")
     public UofmSimpleVO[] uofms;
+
     public SpecSimpleVO withUofms(UofmSimpleVO[] uofms) {
         this.uofms = uofms;
         return this;
@@ -110,9 +121,11 @@ public class SpecSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_state")
     public String userState;
+
     public SpecSimpleVO withUserState(String userState) {
         this.userState = userState;
         return this;
     }
     
+    public SpecSimpleVO(){}
 }

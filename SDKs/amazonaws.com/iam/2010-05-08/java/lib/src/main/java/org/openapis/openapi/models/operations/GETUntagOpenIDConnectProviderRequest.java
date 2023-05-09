@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUntagOpenIDConnectProviderRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUntagOpenIDConnectProviderActionEnum action;
+
     public GETUntagOpenIDConnectProviderRequest withAction(GETUntagOpenIDConnectProviderActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUntagOpenIDConnectProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OpenIDConnectProviderArn")
     public String openIDConnectProviderArn;
+
     public GETUntagOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
@@ -29,6 +32,7 @@ public class GETUntagOpenIDConnectProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
     public String[] tagKeys;
+
     public GETUntagOpenIDConnectProviderRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -36,6 +40,7 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUntagOpenIDConnectProviderVersionEnum version;
+
     public GETUntagOpenIDConnectProviderRequest withVersion(GETUntagOpenIDConnectProviderVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUntagOpenIDConnectProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUntagOpenIDConnectProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUntagOpenIDConnectProviderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUntagOpenIDConnectProviderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUntagOpenIDConnectProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUntagOpenIDConnectProviderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUntagOpenIDConnectProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUntagOpenIDConnectProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUntagOpenIDConnectProviderRequest(@JsonProperty("Action") GETUntagOpenIDConnectProviderActionEnum action, @JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn, @JsonProperty("TagKeys") String[] tagKeys, @JsonProperty("Version") GETUntagOpenIDConnectProviderVersionEnum version) {
+        this.action = action;
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+        this.tagKeys = tagKeys;
+        this.version = version;
+  }
 }

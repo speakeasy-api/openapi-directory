@@ -18,6 +18,7 @@ public class BackupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backup")
     public String backup;
+
     public BackupInfo withBackup(String backup) {
         this.backup = backup;
         return this;
@@ -29,6 +30,7 @@ public class BackupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public BackupInfo withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class BackupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceBackup")
     public String sourceBackup;
+
     public BackupInfo withSourceBackup(String sourceBackup) {
         this.sourceBackup = sourceBackup;
         return this;
@@ -51,6 +54,7 @@ public class BackupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTable")
     public String sourceTable;
+
     public BackupInfo withSourceTable(String sourceTable) {
         this.sourceTable = sourceTable;
         return this;
@@ -62,9 +66,11 @@ public class BackupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public BackupInfo withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public BackupInfo(){}
 }

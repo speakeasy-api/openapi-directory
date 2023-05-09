@@ -18,9 +18,11 @@ public class ListAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alerts")
     public Alert[] alerts;
+
     public ListAlertsResponse withAlerts(Alert[] alerts) {
         this.alerts = alerts;
         return this;
     }
     
+    public ListAlertsResponse(){}
 }

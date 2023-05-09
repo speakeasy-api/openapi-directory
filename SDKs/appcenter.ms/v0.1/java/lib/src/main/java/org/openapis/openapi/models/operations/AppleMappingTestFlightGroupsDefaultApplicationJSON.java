@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppleMappingTestFlightGroupsDefaultApplicationJSON {
     @JsonProperty("code")
     public AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum code;
+
     public AppleMappingTestFlightGroupsDefaultApplicationJSON withCode(AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class AppleMappingTestFlightGroupsDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public AppleMappingTestFlightGroupsDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AppleMappingTestFlightGroupsDefaultApplicationJSON(@JsonProperty("code") AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

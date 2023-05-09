@@ -15,6 +15,7 @@ public class GetBulkDeploymentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BulkDeploymentMetrics")
     public BulkDeploymentMetrics bulkDeploymentMetrics;
+
     public GetBulkDeploymentStatusResponse withBulkDeploymentMetrics(BulkDeploymentMetrics bulkDeploymentMetrics) {
         this.bulkDeploymentMetrics = bulkDeploymentMetrics;
         return this;
@@ -23,6 +24,7 @@ public class GetBulkDeploymentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BulkDeploymentStatus")
     public BulkDeploymentStatusEnum bulkDeploymentStatus;
+
     public GetBulkDeploymentStatusResponse withBulkDeploymentStatus(BulkDeploymentStatusEnum bulkDeploymentStatus) {
         this.bulkDeploymentStatus = bulkDeploymentStatus;
         return this;
@@ -31,6 +33,7 @@ public class GetBulkDeploymentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public GetBulkDeploymentStatusResponse withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class GetBulkDeploymentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetails")
     public ErrorDetail[] errorDetails;
+
     public GetBulkDeploymentStatusResponse withErrorDetails(ErrorDetail[] errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -47,6 +51,7 @@ public class GetBulkDeploymentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public GetBulkDeploymentStatusResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -55,9 +60,11 @@ public class GetBulkDeploymentStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetBulkDeploymentStatusResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetBulkDeploymentStatusResponse(){}
 }

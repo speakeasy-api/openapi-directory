@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrganizationUpdateAvatarResponse {
     
     public String contentType;
+
     public OrganizationUpdateAvatarResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrganizationUpdateAvatarResponse {
     
     
     public Integer statusCode;
+
     public OrganizationUpdateAvatarResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrganizationUpdateAvatarResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrganizationUpdateAvatarResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrganizationUpdateAvatarResponse {
      */
     
     public OrganizationUpdateAvatar200ApplicationJSON organizationUpdateAvatar200ApplicationJSONObject;
+
     public OrganizationUpdateAvatarResponse withOrganizationUpdateAvatar200ApplicationJSONObject(OrganizationUpdateAvatar200ApplicationJSON organizationUpdateAvatar200ApplicationJSONObject) {
         this.organizationUpdateAvatar200ApplicationJSONObject = organizationUpdateAvatar200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class OrganizationUpdateAvatarResponse {
      */
     
     public OrganizationUpdateAvatarDefaultApplicationJSON organizationUpdateAvatarDefaultApplicationJSONObject;
+
     public OrganizationUpdateAvatarResponse withOrganizationUpdateAvatarDefaultApplicationJSONObject(OrganizationUpdateAvatarDefaultApplicationJSON organizationUpdateAvatarDefaultApplicationJSONObject) {
         this.organizationUpdateAvatarDefaultApplicationJSONObject = organizationUpdateAvatarDefaultApplicationJSONObject;
         return this;
     }
     
+    public OrganizationUpdateAvatarResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

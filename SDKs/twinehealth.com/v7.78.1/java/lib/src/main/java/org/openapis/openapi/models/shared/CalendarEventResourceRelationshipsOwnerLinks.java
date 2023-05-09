@@ -12,9 +12,11 @@ public class CalendarEventResourceRelationshipsOwnerLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related")
     public String related;
+
     public CalendarEventResourceRelationshipsOwnerLinks withRelated(String related) {
         this.related = related;
         return this;
     }
     
+    public CalendarEventResourceRelationshipsOwnerLinks(){}
 }

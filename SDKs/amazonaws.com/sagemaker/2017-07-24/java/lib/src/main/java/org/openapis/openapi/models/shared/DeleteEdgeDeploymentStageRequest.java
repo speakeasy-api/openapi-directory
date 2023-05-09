@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteEdgeDeploymentStageRequest {
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public DeleteEdgeDeploymentStageRequest withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteEdgeDeploymentStageRequest {
     
     @JsonProperty("StageName")
     public String stageName;
+
     public DeleteEdgeDeploymentStageRequest withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public DeleteEdgeDeploymentStageRequest(@JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName, @JsonProperty("StageName") String stageName) {
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+        this.stageName = stageName;
+  }
 }

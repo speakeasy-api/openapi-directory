@@ -18,9 +18,11 @@ public class Intersection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GcRule[] rules;
+
     public Intersection withRules(GcRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Intersection(){}
 }

@@ -15,6 +15,7 @@ public class CategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public Category category;
+
     public CategoryRule withCategory(Category category) {
         this.category = category;
         return this;
@@ -26,6 +27,7 @@ public class CategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public CategoryRule withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -37,6 +39,7 @@ public class CategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CategoryRule withId(Long id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class CategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_matches")
     public String payeeMatches;
+
     public CategoryRule withPayeeMatches(String payeeMatches) {
         this.payeeMatches = payeeMatches;
         return this;
@@ -59,9 +63,11 @@ public class CategoryRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public CategoryRule withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CategoryRule(){}
 }

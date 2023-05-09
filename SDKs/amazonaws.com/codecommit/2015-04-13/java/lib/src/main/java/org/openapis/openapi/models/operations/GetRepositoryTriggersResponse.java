@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoryTriggersResponse {
     
     public String contentType;
+
     public GetRepositoryTriggersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetRepositoryTriggersResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -29,6 +32,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetRepositoryTriggersResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -39,6 +43,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetRepositoryTriggersResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetRepositoryTriggersResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetRepositoryTriggersResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRepositoryTriggersOutput getRepositoryTriggersOutput;
+
     public GetRepositoryTriggersResponse withGetRepositoryTriggersOutput(org.openapis.openapi.models.shared.GetRepositoryTriggersOutput getRepositoryTriggersOutput) {
         this.getRepositoryTriggersOutput = getRepositoryTriggersOutput;
         return this;
@@ -79,6 +87,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetRepositoryTriggersResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -89,6 +98,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetRepositoryTriggersResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -99,6 +109,7 @@ public class GetRepositoryTriggersResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetRepositoryTriggersResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -106,6 +117,7 @@ public class GetRepositoryTriggersResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoryTriggersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class GetRepositoryTriggersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoryTriggersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRepositoryTriggersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

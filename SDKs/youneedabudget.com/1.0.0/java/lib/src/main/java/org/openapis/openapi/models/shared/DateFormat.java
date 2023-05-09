@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DateFormat {
     @JsonProperty("format")
     public String format;
+
     public DateFormat withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public DateFormat(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

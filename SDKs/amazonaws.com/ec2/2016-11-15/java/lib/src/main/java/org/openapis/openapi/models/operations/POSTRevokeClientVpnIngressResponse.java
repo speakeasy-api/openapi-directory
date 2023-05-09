@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTRevokeClientVpnIngressResponse {
     
     public byte[] body;
+
     public POSTRevokeClientVpnIngressResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTRevokeClientVpnIngressResponse {
     
     
     public String contentType;
+
     public POSTRevokeClientVpnIngressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTRevokeClientVpnIngressResponse {
     
     
     public Integer statusCode;
+
     public POSTRevokeClientVpnIngressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTRevokeClientVpnIngressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTRevokeClientVpnIngressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTRevokeClientVpnIngressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

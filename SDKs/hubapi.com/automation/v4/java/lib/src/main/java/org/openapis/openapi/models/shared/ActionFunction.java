@@ -17,6 +17,7 @@ public class ActionFunction {
      */
     @JsonProperty("functionSource")
     public String functionSource;
+
     public ActionFunction withFunctionSource(String functionSource) {
         this.functionSource = functionSource;
         return this;
@@ -27,6 +28,7 @@ public class ActionFunction {
      */
     @JsonProperty("functionType")
     public ActionFunctionFunctionTypeEnum functionType;
+
     public ActionFunction withFunctionType(ActionFunctionFunctionTypeEnum functionType) {
         this.functionType = functionType;
         return this;
@@ -38,9 +40,14 @@ public class ActionFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ActionFunction withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ActionFunction(@JsonProperty("functionSource") String functionSource, @JsonProperty("functionType") ActionFunctionFunctionTypeEnum functionType) {
+        this.functionSource = functionSource;
+        this.functionType = functionType;
+  }
 }

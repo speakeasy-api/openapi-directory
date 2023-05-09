@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionStateCreateOrUpdate {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ConnectionStateCreateOrUpdate withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -19,9 +20,14 @@ public class ConnectionStateCreateOrUpdate {
      */
     @JsonProperty("connectionState")
     public ConnectionState connectionState;
+
     public ConnectionStateCreateOrUpdate withConnectionState(ConnectionState connectionState) {
         this.connectionState = connectionState;
         return this;
     }
     
+    public ConnectionStateCreateOrUpdate(@JsonProperty("connectionId") String connectionId, @JsonProperty("connectionState") ConnectionState connectionState) {
+        this.connectionId = connectionId;
+        this.connectionState = connectionState;
+  }
 }

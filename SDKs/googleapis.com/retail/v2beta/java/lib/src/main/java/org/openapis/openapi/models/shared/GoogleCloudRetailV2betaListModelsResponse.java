@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("models")
     public GoogleCloudRetailV2betaModel[] models;
+
     public GoogleCloudRetailV2betaListModelsResponse withModels(GoogleCloudRetailV2betaModel[] models) {
         this.models = models;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2betaListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRetailV2betaListModelsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudRetailV2betaListModelsResponse(){}
 }

@@ -17,6 +17,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_codes")
     public String[] budgetCodes;
+
     public QaFilter withBudgetCodes(String[] budgetCodes) {
         this.budgetCodes = budgetCodes;
         return this;
@@ -25,6 +26,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public QaFilter withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -33,6 +35,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clients")
     public Double[] clients;
+
     public QaFilter withClients(Double[] clients) {
         this.clients = clients;
         return this;
@@ -46,6 +49,7 @@ public class QaFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_from")
     public OffsetDateTime dateFrom;
+
     public QaFilter withDateFrom(OffsetDateTime dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -59,6 +63,7 @@ public class QaFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_to")
     public OffsetDateTime dateTo;
+
     public QaFilter withDateTo(OffsetDateTime dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -67,6 +72,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public Double[] documents;
+
     public QaFilter withDocuments(Double[] documents) {
         this.documents = documents;
         return this;
@@ -75,6 +81,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public Double[] projects;
+
     public QaFilter withProjects(Double[] projects) {
         this.projects = projects;
         return this;
@@ -83,6 +90,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severities")
     public String[] severities;
+
     public QaFilter withSeverities(String[] severities) {
         this.severities = severities;
         return this;
@@ -91,6 +99,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_languages")
     public String[] sourceLanguages;
+
     public QaFilter withSourceLanguages(String[] sourceLanguages) {
         this.sourceLanguages = sourceLanguages;
         return this;
@@ -99,6 +108,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjects")
     public String[] subjects;
+
     public QaFilter withSubjects(String[] subjects) {
         this.subjects = subjects;
         return this;
@@ -107,6 +117,7 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_languages")
     public String[] targetLanguages;
+
     public QaFilter withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
@@ -115,9 +126,11 @@ public class QaFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendors")
     public Double[] vendors;
+
     public QaFilter withVendors(Double[] vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public QaFilter(){}
 }

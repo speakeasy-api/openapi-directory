@@ -12,6 +12,7 @@ public class TotalByOffice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_year")
     public Integer electionYear;
+
     public TotalByOffice withElectionYear(Integer electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -20,6 +21,7 @@ public class TotalByOffice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office")
     public String office;
+
     public TotalByOffice withOffice(String office) {
         this.office = office;
         return this;
@@ -28,6 +30,7 @@ public class TotalByOffice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_disbursements")
     public Double totalDisbursements;
+
     public TotalByOffice withTotalDisbursements(Double totalDisbursements) {
         this.totalDisbursements = totalDisbursements;
         return this;
@@ -36,6 +39,7 @@ public class TotalByOffice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_individual_itemized_contributions")
     public Double totalIndividualItemizedContributions;
+
     public TotalByOffice withTotalIndividualItemizedContributions(Double totalIndividualItemizedContributions) {
         this.totalIndividualItemizedContributions = totalIndividualItemizedContributions;
         return this;
@@ -44,6 +48,7 @@ public class TotalByOffice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_other_political_committee_contributions")
     public Double totalOtherPoliticalCommitteeContributions;
+
     public TotalByOffice withTotalOtherPoliticalCommitteeContributions(Double totalOtherPoliticalCommitteeContributions) {
         this.totalOtherPoliticalCommitteeContributions = totalOtherPoliticalCommitteeContributions;
         return this;
@@ -52,6 +57,7 @@ public class TotalByOffice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_receipts")
     public Double totalReceipts;
+
     public TotalByOffice withTotalReceipts(Double totalReceipts) {
         this.totalReceipts = totalReceipts;
         return this;
@@ -60,9 +66,11 @@ public class TotalByOffice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_transfers_from_other_authorized_committee")
     public Double totalTransfersFromOtherAuthorizedCommittee;
+
     public TotalByOffice withTotalTransfersFromOtherAuthorizedCommittee(Double totalTransfersFromOtherAuthorizedCommittee) {
         this.totalTransfersFromOtherAuthorizedCommittee = totalTransfersFromOtherAuthorizedCommittee;
         return this;
     }
     
+    public TotalByOffice(){}
 }

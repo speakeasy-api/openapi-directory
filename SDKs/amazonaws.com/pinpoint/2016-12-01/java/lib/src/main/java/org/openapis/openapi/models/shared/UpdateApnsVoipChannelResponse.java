@@ -15,9 +15,13 @@ public class UpdateApnsVoipChannelResponse {
      */
     @JsonProperty("APNSVoipChannelResponse")
     public APNSVoipChannelResponse apnsVoipChannelResponse;
+
     public UpdateApnsVoipChannelResponse withAPNSVoipChannelResponse(APNSVoipChannelResponse apnsVoipChannelResponse) {
         this.apnsVoipChannelResponse = apnsVoipChannelResponse;
         return this;
     }
     
+    public UpdateApnsVoipChannelResponse(@JsonProperty("APNSVoipChannelResponse") APNSVoipChannelResponse apnsVoipChannelResponse) {
+        this.apnsVoipChannelResponse = apnsVoipChannelResponse;
+  }
 }

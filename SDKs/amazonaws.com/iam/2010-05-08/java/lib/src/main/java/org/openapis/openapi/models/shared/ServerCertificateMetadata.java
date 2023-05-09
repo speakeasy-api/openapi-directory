@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class ServerCertificateMetadata {
     
     public String arn;
+
     public ServerCertificateMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +21,7 @@ public class ServerCertificateMetadata {
     
     
     public OffsetDateTime expiration;
+
     public ServerCertificateMetadata withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -26,6 +29,7 @@ public class ServerCertificateMetadata {
     
     
     public String path;
+
     public ServerCertificateMetadata withPath(String path) {
         this.path = path;
         return this;
@@ -33,6 +37,7 @@ public class ServerCertificateMetadata {
     
     
     public String serverCertificateId;
+
     public ServerCertificateMetadata withServerCertificateId(String serverCertificateId) {
         this.serverCertificateId = serverCertificateId;
         return this;
@@ -40,6 +45,7 @@ public class ServerCertificateMetadata {
     
     
     public String serverCertificateName;
+
     public ServerCertificateMetadata withServerCertificateName(String serverCertificateName) {
         this.serverCertificateName = serverCertificateName;
         return this;
@@ -47,9 +53,16 @@ public class ServerCertificateMetadata {
     
     
     public OffsetDateTime uploadDate;
+
     public ServerCertificateMetadata withUploadDate(OffsetDateTime uploadDate) {
         this.uploadDate = uploadDate;
         return this;
     }
     
+    public ServerCertificateMetadata(@JsonProperty("Arn") String arn, @JsonProperty("Path") String path, @JsonProperty("ServerCertificateId") String serverCertificateId, @JsonProperty("ServerCertificateName") String serverCertificateName) {
+        this.arn = arn;
+        this.path = path;
+        this.serverCertificateId = serverCertificateId;
+        this.serverCertificateName = serverCertificateName;
+  }
 }

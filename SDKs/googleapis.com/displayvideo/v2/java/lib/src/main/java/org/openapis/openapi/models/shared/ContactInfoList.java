@@ -18,9 +18,11 @@ public class ContactInfoList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactInfos")
     public ContactInfo[] contactInfos;
+
     public ContactInfoList withContactInfos(ContactInfo[] contactInfos) {
         this.contactInfos = contactInfos;
         return this;
     }
     
+    public ContactInfoList(){}
 }

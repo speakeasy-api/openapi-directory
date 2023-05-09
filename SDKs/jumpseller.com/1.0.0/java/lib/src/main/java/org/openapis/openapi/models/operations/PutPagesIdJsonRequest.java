@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPagesIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutPagesIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PageModify pageModify;
+
     public PutPagesIdJsonRequest withPageModify(org.openapis.openapi.models.shared.PageModify pageModify) {
         this.pageModify = pageModify;
         return this;
@@ -22,6 +24,7 @@ public class PutPagesIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutPagesIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutPagesIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutPagesIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PutPagesIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutPagesIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PutPagesIdJsonRequest(@JsonProperty("PageModify") org.openapis.openapi.models.shared.PageModify pageModify, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.pageModify = pageModify;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

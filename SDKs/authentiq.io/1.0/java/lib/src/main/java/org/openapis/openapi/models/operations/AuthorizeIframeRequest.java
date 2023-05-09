@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizeIframeRequest {
@@ -12,9 +13,13 @@ public class AuthorizeIframeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
     public String clientId;
+
     public AuthorizeIframeRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public AuthorizeIframeRequest(@JsonProperty("client_id") String clientId) {
+        this.clientId = clientId;
+  }
 }

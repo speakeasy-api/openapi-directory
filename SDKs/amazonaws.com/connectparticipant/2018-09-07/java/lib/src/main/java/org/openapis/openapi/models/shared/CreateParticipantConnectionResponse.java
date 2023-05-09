@@ -15,6 +15,7 @@ public class CreateParticipantConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionCredentials")
     public ConnectionCredentials connectionCredentials;
+
     public CreateParticipantConnectionResponse withConnectionCredentials(ConnectionCredentials connectionCredentials) {
         this.connectionCredentials = connectionCredentials;
         return this;
@@ -23,9 +24,11 @@ public class CreateParticipantConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Websocket")
     public Websocket websocket;
+
     public CreateParticipantConnectionResponse withWebsocket(Websocket websocket) {
         this.websocket = websocket;
         return this;
     }
     
+    public CreateParticipantConnectionResponse(){}
 }

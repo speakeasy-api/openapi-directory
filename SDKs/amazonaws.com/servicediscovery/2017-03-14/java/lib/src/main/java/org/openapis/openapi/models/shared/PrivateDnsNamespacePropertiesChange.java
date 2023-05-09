@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PrivateDnsNamespacePropertiesChange {
     @JsonProperty("DnsProperties")
     public PrivateDnsPropertiesMutableChange dnsProperties;
+
     public PrivateDnsNamespacePropertiesChange withDnsProperties(PrivateDnsPropertiesMutableChange dnsProperties) {
         this.dnsProperties = dnsProperties;
         return this;
     }
     
+    public PrivateDnsNamespacePropertiesChange(@JsonProperty("DnsProperties") PrivateDnsPropertiesMutableChange dnsProperties) {
+        this.dnsProperties = dnsProperties;
+  }
 }

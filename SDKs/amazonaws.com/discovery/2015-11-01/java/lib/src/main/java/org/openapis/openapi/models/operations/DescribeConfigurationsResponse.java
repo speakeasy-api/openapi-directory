@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConfigurationsResponse {
@@ -12,6 +13,7 @@ public class DescribeConfigurationsResponse {
      */
     
     public Object authorizationErrorException;
+
     public DescribeConfigurationsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigurationsResponse {
     
     
     public String contentType;
+
     public DescribeConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConfigurationsResponse describeConfigurationsResponse;
+
     public DescribeConfigurationsResponse withDescribeConfigurationsResponse(org.openapis.openapi.models.shared.DescribeConfigurationsResponse describeConfigurationsResponse) {
         this.describeConfigurationsResponse = describeConfigurationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConfigurationsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DescribeConfigurationsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConfigurationsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeConfigurationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeConfigurationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeConfigurationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeConfigurationsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public DescribeConfigurationsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

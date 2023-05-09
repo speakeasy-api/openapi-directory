@@ -15,6 +15,7 @@ public class UDPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public UDPHealthCheck withPort(Integer port) {
         this.port = port;
         return this;
@@ -26,6 +27,7 @@ public class UDPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portName")
     public String portName;
+
     public UDPHealthCheck withPortName(String portName) {
         this.portName = portName;
         return this;
@@ -37,6 +39,7 @@ public class UDPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public String request;
+
     public UDPHealthCheck withRequest(String request) {
         this.request = request;
         return this;
@@ -48,9 +51,11 @@ public class UDPHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public UDPHealthCheck withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public UDPHealthCheck(){}
 }

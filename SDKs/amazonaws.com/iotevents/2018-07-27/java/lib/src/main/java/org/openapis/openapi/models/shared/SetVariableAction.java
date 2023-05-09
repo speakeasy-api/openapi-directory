@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetVariableAction {
     @JsonProperty("value")
     public String value;
+
     public SetVariableAction withValue(String value) {
         this.value = value;
         return this;
@@ -19,9 +20,14 @@ public class SetVariableAction {
     
     @JsonProperty("variableName")
     public String variableName;
+
     public SetVariableAction withVariableName(String variableName) {
         this.variableName = variableName;
         return this;
     }
     
+    public SetVariableAction(@JsonProperty("value") String value, @JsonProperty("variableName") String variableName) {
+        this.value = value;
+        this.variableName = variableName;
+  }
 }

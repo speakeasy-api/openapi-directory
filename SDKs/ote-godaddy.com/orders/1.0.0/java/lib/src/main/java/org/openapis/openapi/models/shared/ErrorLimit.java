@@ -17,6 +17,7 @@ public class ErrorLimit {
      */
     @JsonProperty("code")
     public String code;
+
     public ErrorLimit withCode(String code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class ErrorLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public ErrorField[] fields;
+
     public ErrorLimit withFields(ErrorField[] fields) {
         this.fields = fields;
         return this;
@@ -39,6 +41,7 @@ public class ErrorLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorLimit withMessage(String message) {
         this.message = message;
         return this;
@@ -49,9 +52,14 @@ public class ErrorLimit {
      */
     @JsonProperty("retryAfterSec")
     public Long retryAfterSec;
+
     public ErrorLimit withRetryAfterSec(Long retryAfterSec) {
         this.retryAfterSec = retryAfterSec;
         return this;
     }
     
+    public ErrorLimit(@JsonProperty("code") String code, @JsonProperty("retryAfterSec") Long retryAfterSec) {
+        this.code = code;
+        this.retryAfterSec = retryAfterSec;
+  }
 }

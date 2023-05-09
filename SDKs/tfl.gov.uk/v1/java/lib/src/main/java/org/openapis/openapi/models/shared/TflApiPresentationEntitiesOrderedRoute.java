@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesOrderedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesOrderedRoute withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesOrderedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanIds")
     public String[] naptanIds;
+
     public TflApiPresentationEntitiesOrderedRoute withNaptanIds(String[] naptanIds) {
         this.naptanIds = naptanIds;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesOrderedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public String serviceType;
+
     public TflApiPresentationEntitiesOrderedRoute withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public TflApiPresentationEntitiesOrderedRoute(){}
 }

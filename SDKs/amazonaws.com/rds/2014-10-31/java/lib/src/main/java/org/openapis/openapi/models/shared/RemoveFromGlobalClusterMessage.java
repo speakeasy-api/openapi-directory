@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class RemoveFromGlobalClusterMessage {
     
     public String dbClusterIdentifier;
+
     public RemoveFromGlobalClusterMessage withDbClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,9 +17,11 @@ public class RemoveFromGlobalClusterMessage {
     
     
     public String globalClusterIdentifier;
+
     public RemoveFromGlobalClusterMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
     }
     
+    public RemoveFromGlobalClusterMessage(){}
 }

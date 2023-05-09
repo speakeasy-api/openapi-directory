@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StorageProjectsHmacKeysUpdateResponse {
     
     public String contentType;
+
     public StorageProjectsHmacKeysUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StorageProjectsHmacKeysUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.HmacKeyMetadata hmacKeyMetadata;
+
     public StorageProjectsHmacKeysUpdateResponse withHmacKeyMetadata(org.openapis.openapi.models.shared.HmacKeyMetadata hmacKeyMetadata) {
         this.hmacKeyMetadata = hmacKeyMetadata;
         return this;
@@ -26,6 +29,7 @@ public class StorageProjectsHmacKeysUpdateResponse {
     
     
     public Integer statusCode;
+
     public StorageProjectsHmacKeysUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StorageProjectsHmacKeysUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StorageProjectsHmacKeysUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StorageProjectsHmacKeysUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

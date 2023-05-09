@@ -15,9 +15,11 @@ public class UpdateIntegrationResultTlsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerNameToVerify")
     public String serverNameToVerify;
+
     public UpdateIntegrationResultTlsConfig withServerNameToVerify(String serverNameToVerify) {
         this.serverNameToVerify = serverNameToVerify;
         return this;
     }
     
+    public UpdateIntegrationResultTlsConfig(){}
 }

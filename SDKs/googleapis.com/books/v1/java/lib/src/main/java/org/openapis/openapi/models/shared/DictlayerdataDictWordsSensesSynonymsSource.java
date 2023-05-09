@@ -12,6 +12,7 @@ public class DictlayerdataDictWordsSensesSynonymsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribution")
     public String attribution;
+
     public DictlayerdataDictWordsSensesSynonymsSource withAttribution(String attribution) {
         this.attribution = attribution;
         return this;
@@ -20,9 +21,11 @@ public class DictlayerdataDictWordsSensesSynonymsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public DictlayerdataDictWordsSensesSynonymsSource withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DictlayerdataDictWordsSensesSynonymsSource(){}
 }

@@ -15,6 +15,7 @@ public class EstimateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_id")
     public Long estimateId;
+
     public EstimateSimpleVO withEstimateId(Long estimateId) {
         this.estimateId = estimateId;
         return this;
@@ -23,9 +24,11 @@ public class EstimateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_title")
     public String estimateTitle;
+
     public EstimateSimpleVO withEstimateTitle(String estimateTitle) {
         this.estimateTitle = estimateTitle;
         return this;
     }
     
+    public EstimateSimpleVO(){}
 }

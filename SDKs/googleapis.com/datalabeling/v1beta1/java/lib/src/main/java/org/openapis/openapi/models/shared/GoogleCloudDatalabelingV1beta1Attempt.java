@@ -15,6 +15,7 @@ public class GoogleCloudDatalabelingV1beta1Attempt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptTime")
     public String attemptTime;
+
     public GoogleCloudDatalabelingV1beta1Attempt withAttemptTime(String attemptTime) {
         this.attemptTime = attemptTime;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudDatalabelingV1beta1Attempt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partialFailures")
     public GoogleRpcStatus[] partialFailures;
+
     public GoogleCloudDatalabelingV1beta1Attempt withPartialFailures(GoogleRpcStatus[] partialFailures) {
         this.partialFailures = partialFailures;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1Attempt(){}
 }

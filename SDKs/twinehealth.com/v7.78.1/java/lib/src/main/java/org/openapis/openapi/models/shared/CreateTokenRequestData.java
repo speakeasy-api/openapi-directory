@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTokenRequestData {
     @JsonProperty("attributes")
     public CreateTokenRequestDataAttributes attributes;
+
     public CreateTokenRequestData withAttributes(CreateTokenRequestDataAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -19,9 +20,13 @@ public class CreateTokenRequestData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreateTokenRequestDataTypeEnum type;
+
     public CreateTokenRequestData withType(CreateTokenRequestDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateTokenRequestData(@JsonProperty("attributes") CreateTokenRequestDataAttributes attributes) {
+        this.attributes = attributes;
+  }
 }

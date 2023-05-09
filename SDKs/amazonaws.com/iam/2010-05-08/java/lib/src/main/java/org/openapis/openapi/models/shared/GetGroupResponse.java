@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetGroupResponse - Contains the response to a successful &lt;a&gt;GetGroup&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetGroupResponse {
     
     public Group group;
+
     public GetGroupResponse withGroup(Group group) {
         this.group = group;
         return this;
@@ -19,6 +20,7 @@ public class GetGroupResponse {
     
     
     public Boolean isTruncated;
+
     public GetGroupResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,6 +28,7 @@ public class GetGroupResponse {
     
     
     public String marker;
+
     public GetGroupResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -33,9 +36,14 @@ public class GetGroupResponse {
     
     
     public User[] users;
+
     public GetGroupResponse withUsers(User[] users) {
         this.users = users;
         return this;
     }
     
+    public GetGroupResponse(@JsonProperty("Group") Group group, @JsonProperty("Users") User[] users) {
+        this.group = group;
+        this.users = users;
+  }
 }

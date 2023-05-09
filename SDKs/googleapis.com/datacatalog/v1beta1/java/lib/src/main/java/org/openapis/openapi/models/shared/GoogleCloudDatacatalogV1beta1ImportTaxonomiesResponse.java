@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomies")
     public GoogleCloudDatacatalogV1beta1Taxonomy[] taxonomies;
+
     public GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse withTaxonomies(GoogleCloudDatacatalogV1beta1Taxonomy[] taxonomies) {
         this.taxonomies = taxonomies;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1ImportTaxonomiesResponse(){}
 }

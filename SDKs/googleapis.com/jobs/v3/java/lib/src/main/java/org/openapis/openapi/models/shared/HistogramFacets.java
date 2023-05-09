@@ -18,6 +18,7 @@ public class HistogramFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compensationHistogramFacets")
     public CompensationHistogramRequest[] compensationHistogramFacets;
+
     public HistogramFacets withCompensationHistogramFacets(CompensationHistogramRequest[] compensationHistogramFacets) {
         this.compensationHistogramFacets = compensationHistogramFacets;
         return this;
@@ -29,6 +30,7 @@ public class HistogramFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customAttributeHistogramFacets")
     public CustomAttributeHistogramRequest[] customAttributeHistogramFacets;
+
     public HistogramFacets withCustomAttributeHistogramFacets(CustomAttributeHistogramRequest[] customAttributeHistogramFacets) {
         this.customAttributeHistogramFacets = customAttributeHistogramFacets;
         return this;
@@ -40,9 +42,11 @@ public class HistogramFacets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleHistogramFacets")
     public HistogramFacetsSimpleHistogramFacetsEnum[] simpleHistogramFacets;
+
     public HistogramFacets withSimpleHistogramFacets(HistogramFacetsSimpleHistogramFacetsEnum[] simpleHistogramFacets) {
         this.simpleHistogramFacets = simpleHistogramFacets;
         return this;
     }
     
+    public HistogramFacets(){}
 }

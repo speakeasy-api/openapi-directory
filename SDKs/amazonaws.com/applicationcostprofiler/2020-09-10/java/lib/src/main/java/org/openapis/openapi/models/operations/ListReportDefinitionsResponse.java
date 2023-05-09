@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReportDefinitionsResponse {
@@ -12,6 +13,7 @@ public class ListReportDefinitionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReportDefinitionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListReportDefinitionsResponse {
     
     
     public String contentType;
+
     public ListReportDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListReportDefinitionsResponse {
      */
     
     public Object internalServerException;
+
     public ListReportDefinitionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListReportDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReportDefinitionsResult listReportDefinitionsResult;
+
     public ListReportDefinitionsResponse withListReportDefinitionsResult(org.openapis.openapi.models.shared.ListReportDefinitionsResult listReportDefinitionsResult) {
         this.listReportDefinitionsResult = listReportDefinitionsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListReportDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public ListReportDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListReportDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReportDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListReportDefinitionsResponse {
      */
     
     public Object throttlingException;
+
     public ListReportDefinitionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListReportDefinitionsResponse {
      */
     
     public Object validationException;
+
     public ListReportDefinitionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReportDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

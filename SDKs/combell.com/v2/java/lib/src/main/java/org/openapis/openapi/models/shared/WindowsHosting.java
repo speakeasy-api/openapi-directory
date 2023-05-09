@@ -15,6 +15,7 @@ public class WindowsHosting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public WindowsHosting withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,9 +27,11 @@ public class WindowsHosting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servicepack_id")
     public Integer servicepackId;
+
     public WindowsHosting withServicepackId(Integer servicepackId) {
         this.servicepackId = servicepackId;
         return this;
     }
     
+    public WindowsHosting(){}
 }

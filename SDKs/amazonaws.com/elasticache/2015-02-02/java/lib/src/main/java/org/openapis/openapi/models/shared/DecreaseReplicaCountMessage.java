@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DecreaseReplicaCountMessage {
     
     public Boolean applyImmediately;
+
     public DecreaseReplicaCountMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,6 +17,7 @@ public class DecreaseReplicaCountMessage {
     
     
     public Long newReplicaCount;
+
     public DecreaseReplicaCountMessage withNewReplicaCount(Long newReplicaCount) {
         this.newReplicaCount = newReplicaCount;
         return this;
@@ -23,6 +25,7 @@ public class DecreaseReplicaCountMessage {
     
     
     public ReplicaConfigurationList[] replicaConfiguration;
+
     public DecreaseReplicaCountMessage withReplicaConfiguration(ReplicaConfigurationList[] replicaConfiguration) {
         this.replicaConfiguration = replicaConfiguration;
         return this;
@@ -30,6 +33,7 @@ public class DecreaseReplicaCountMessage {
     
     
     public String[] replicasToRemove;
+
     public DecreaseReplicaCountMessage withReplicasToRemove(String[] replicasToRemove) {
         this.replicasToRemove = replicasToRemove;
         return this;
@@ -37,9 +41,14 @@ public class DecreaseReplicaCountMessage {
     
     
     public String replicationGroupId;
+
     public DecreaseReplicaCountMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
     }
     
+    public DecreaseReplicaCountMessage(@JsonProperty("ApplyImmediately") Boolean applyImmediately, @JsonProperty("ReplicationGroupId") String replicationGroupId) {
+        this.applyImmediately = applyImmediately;
+        this.replicationGroupId = replicationGroupId;
+  }
 }

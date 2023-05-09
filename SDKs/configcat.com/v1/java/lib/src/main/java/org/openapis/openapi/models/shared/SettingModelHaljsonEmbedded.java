@@ -12,9 +12,11 @@ public class SettingModelHaljsonEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public SettingModelHaljsonEmbeddedTags[] tags;
+
     public SettingModelHaljsonEmbedded withTags(SettingModelHaljsonEmbeddedTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public SettingModelHaljsonEmbedded(){}
 }

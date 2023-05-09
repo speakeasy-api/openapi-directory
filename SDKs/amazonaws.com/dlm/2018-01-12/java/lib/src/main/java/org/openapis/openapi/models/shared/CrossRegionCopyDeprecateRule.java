@@ -15,6 +15,7 @@ public class CrossRegionCopyDeprecateRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public Long interval;
+
     public CrossRegionCopyDeprecateRule withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -23,9 +24,11 @@ public class CrossRegionCopyDeprecateRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntervalUnit")
     public RetentionIntervalUnitValuesEnum intervalUnit;
+
     public CrossRegionCopyDeprecateRule withIntervalUnit(RetentionIntervalUnitValuesEnum intervalUnit) {
         this.intervalUnit = intervalUnit;
         return this;
     }
     
+    public CrossRegionCopyDeprecateRule(){}
 }

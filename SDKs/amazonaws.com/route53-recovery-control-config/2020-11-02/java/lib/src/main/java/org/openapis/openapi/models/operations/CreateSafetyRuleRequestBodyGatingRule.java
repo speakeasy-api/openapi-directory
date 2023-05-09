@@ -15,6 +15,7 @@ public class CreateSafetyRuleRequestBodyGatingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public CreateSafetyRuleRequestBodyGatingRule withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateSafetyRuleRequestBodyGatingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatingControls")
     public String[] gatingControls;
+
     public CreateSafetyRuleRequestBodyGatingRule withGatingControls(String[] gatingControls) {
         this.gatingControls = gatingControls;
         return this;
@@ -31,6 +33,7 @@ public class CreateSafetyRuleRequestBodyGatingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateSafetyRuleRequestBodyGatingRule withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class CreateSafetyRuleRequestBodyGatingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleConfig")
     public org.openapis.openapi.models.shared.RuleConfig ruleConfig;
+
     public CreateSafetyRuleRequestBodyGatingRule withRuleConfig(org.openapis.openapi.models.shared.RuleConfig ruleConfig) {
         this.ruleConfig = ruleConfig;
         return this;
@@ -47,6 +51,7 @@ public class CreateSafetyRuleRequestBodyGatingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetControls")
     public String[] targetControls;
+
     public CreateSafetyRuleRequestBodyGatingRule withTargetControls(String[] targetControls) {
         this.targetControls = targetControls;
         return this;
@@ -55,9 +60,11 @@ public class CreateSafetyRuleRequestBodyGatingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitPeriodMs")
     public Long waitPeriodMs;
+
     public CreateSafetyRuleRequestBodyGatingRule withWaitPeriodMs(Long waitPeriodMs) {
         this.waitPeriodMs = waitPeriodMs;
         return this;
     }
     
+    public CreateSafetyRuleRequestBodyGatingRule(){}
 }

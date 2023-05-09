@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartImportTaskResponse {
@@ -12,6 +13,7 @@ public class StartImportTaskResponse {
      */
     
     public Object authorizationErrorException;
+
     public StartImportTaskResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class StartImportTaskResponse {
     
     
     public String contentType;
+
     public StartImportTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartImportTaskResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public StartImportTaskResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class StartImportTaskResponse {
      */
     
     public Object invalidParameterException;
+
     public StartImportTaskResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartImportTaskResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartImportTaskResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class StartImportTaskResponse {
      */
     
     public Object resourceInUseException;
+
     public StartImportTaskResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class StartImportTaskResponse {
      */
     
     public Object serverInternalErrorException;
+
     public StartImportTaskResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -79,6 +87,7 @@ public class StartImportTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartImportTaskResponse startImportTaskResponse;
+
     public StartImportTaskResponse withStartImportTaskResponse(org.openapis.openapi.models.shared.StartImportTaskResponse startImportTaskResponse) {
         this.startImportTaskResponse = startImportTaskResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartImportTaskResponse {
     
     
     public Integer statusCode;
+
     public StartImportTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class StartImportTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartImportTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartImportTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

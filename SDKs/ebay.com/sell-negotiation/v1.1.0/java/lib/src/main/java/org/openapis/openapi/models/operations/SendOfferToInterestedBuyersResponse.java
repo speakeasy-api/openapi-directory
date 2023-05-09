@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendOfferToInterestedBuyersResponse {
     
     public String contentType;
+
     public SendOfferToInterestedBuyersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendOfferToInterestedBuyersResponse {
      */
     
     public org.openapis.openapi.models.shared.SendOfferToInterestedBuyersCollectionResponse sendOfferToInterestedBuyersCollectionResponse;
+
     public SendOfferToInterestedBuyersResponse withSendOfferToInterestedBuyersCollectionResponse(org.openapis.openapi.models.shared.SendOfferToInterestedBuyersCollectionResponse sendOfferToInterestedBuyersCollectionResponse) {
         this.sendOfferToInterestedBuyersCollectionResponse = sendOfferToInterestedBuyersCollectionResponse;
         return this;
@@ -26,6 +29,7 @@ public class SendOfferToInterestedBuyersResponse {
     
     
     public Integer statusCode;
+
     public SendOfferToInterestedBuyersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SendOfferToInterestedBuyersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendOfferToInterestedBuyersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendOfferToInterestedBuyersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CardPaymentTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorized_at")
     public String authorizedAt;
+
     public CardPaymentTimeline withAuthorizedAt(String authorizedAt) {
         this.authorizedAt = authorizedAt;
         return this;
@@ -29,6 +30,7 @@ public class CardPaymentTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captured_at")
     public String capturedAt;
+
     public CardPaymentTimeline withCapturedAt(String capturedAt) {
         this.capturedAt = capturedAt;
         return this;
@@ -40,9 +42,11 @@ public class CardPaymentTimeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voided_at")
     public String voidedAt;
+
     public CardPaymentTimeline withVoidedAt(String voidedAt) {
         this.voidedAt = voidedAt;
         return this;
     }
     
+    public CardPaymentTimeline(){}
 }

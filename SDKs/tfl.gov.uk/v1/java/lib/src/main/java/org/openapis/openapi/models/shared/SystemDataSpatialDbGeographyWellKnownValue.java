@@ -12,6 +12,7 @@ public class SystemDataSpatialDbGeographyWellKnownValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinateSystemId")
     public Integer coordinateSystemId;
+
     public SystemDataSpatialDbGeographyWellKnownValue withCoordinateSystemId(Integer coordinateSystemId) {
         this.coordinateSystemId = coordinateSystemId;
         return this;
@@ -20,6 +21,7 @@ public class SystemDataSpatialDbGeographyWellKnownValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wellKnownBinary")
     public String wellKnownBinary;
+
     public SystemDataSpatialDbGeographyWellKnownValue withWellKnownBinary(String wellKnownBinary) {
         this.wellKnownBinary = wellKnownBinary;
         return this;
@@ -28,9 +30,11 @@ public class SystemDataSpatialDbGeographyWellKnownValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wellKnownText")
     public String wellKnownText;
+
     public SystemDataSpatialDbGeographyWellKnownValue withWellKnownText(String wellKnownText) {
         this.wellKnownText = wellKnownText;
         return this;
     }
     
+    public SystemDataSpatialDbGeographyWellKnownValue(){}
 }

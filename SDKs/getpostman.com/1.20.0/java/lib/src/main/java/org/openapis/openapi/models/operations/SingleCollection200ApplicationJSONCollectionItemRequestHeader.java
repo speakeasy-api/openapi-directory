@@ -12,6 +12,7 @@ public class SingleCollection200ApplicationJSONCollectionItemRequestHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SingleCollection200ApplicationJSONCollectionItemRequestHeader withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class SingleCollection200ApplicationJSONCollectionItemRequestHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SingleCollection200ApplicationJSONCollectionItemRequestHeader withKey(String key) {
         this.key = key;
         return this;
@@ -28,9 +30,11 @@ public class SingleCollection200ApplicationJSONCollectionItemRequestHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SingleCollection200ApplicationJSONCollectionItemRequestHeader withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SingleCollection200ApplicationJSONCollectionItemRequestHeader(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterWebhookWithThirdPartyResponse {
     
     public String contentType;
+
     public RegisterWebhookWithThirdPartyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterWebhookWithThirdPartyResponse {
      */
     
     public java.util.Map<String, Object> registerWebhookWithThirdPartyOutput;
+
     public RegisterWebhookWithThirdPartyResponse withRegisterWebhookWithThirdPartyOutput(java.util.Map<String, Object> registerWebhookWithThirdPartyOutput) {
         this.registerWebhookWithThirdPartyOutput = registerWebhookWithThirdPartyOutput;
         return this;
@@ -26,6 +29,7 @@ public class RegisterWebhookWithThirdPartyResponse {
     
     
     public Integer statusCode;
+
     public RegisterWebhookWithThirdPartyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RegisterWebhookWithThirdPartyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterWebhookWithThirdPartyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RegisterWebhookWithThirdPartyResponse {
      */
     
     public Object validationException;
+
     public RegisterWebhookWithThirdPartyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
@@ -53,9 +59,14 @@ public class RegisterWebhookWithThirdPartyResponse {
      */
     
     public Object webhookNotFoundException;
+
     public RegisterWebhookWithThirdPartyResponse withWebhookNotFoundException(Object webhookNotFoundException) {
         this.webhookNotFoundException = webhookNotFoundException;
         return this;
     }
     
+    public RegisterWebhookWithThirdPartyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

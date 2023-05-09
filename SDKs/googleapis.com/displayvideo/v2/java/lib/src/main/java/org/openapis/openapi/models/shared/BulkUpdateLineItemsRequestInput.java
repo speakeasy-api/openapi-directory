@@ -18,6 +18,7 @@ public class BulkUpdateLineItemsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemIds")
     public String[] lineItemIds;
+
     public BulkUpdateLineItemsRequestInput withLineItemIds(String[] lineItemIds) {
         this.lineItemIds = lineItemIds;
         return this;
@@ -29,6 +30,7 @@ public class BulkUpdateLineItemsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLineItem")
     public LineItemInput targetLineItem;
+
     public BulkUpdateLineItemsRequestInput withTargetLineItem(LineItemInput targetLineItem) {
         this.targetLineItem = targetLineItem;
         return this;
@@ -40,9 +42,11 @@ public class BulkUpdateLineItemsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public BulkUpdateLineItemsRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public BulkUpdateLineItemsRequestInput(){}
 }

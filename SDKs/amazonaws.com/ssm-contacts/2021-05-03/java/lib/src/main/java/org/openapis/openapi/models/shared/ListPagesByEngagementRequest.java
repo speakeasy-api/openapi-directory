@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPagesByEngagementRequest {
     @JsonProperty("EngagementId")
     public String engagementId;
+
     public ListPagesByEngagementRequest withEngagementId(String engagementId) {
         this.engagementId = engagementId;
         return this;
@@ -19,6 +20,7 @@ public class ListPagesByEngagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPagesByEngagementRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListPagesByEngagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPagesByEngagementRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPagesByEngagementRequest(@JsonProperty("EngagementId") String engagementId) {
+        this.engagementId = engagementId;
+  }
 }

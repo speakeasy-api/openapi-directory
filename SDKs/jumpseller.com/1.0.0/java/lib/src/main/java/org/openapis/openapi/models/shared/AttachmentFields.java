@@ -15,6 +15,7 @@ public class AttachmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public AttachmentFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class AttachmentFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AttachmentFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AttachmentFields(){}
 }

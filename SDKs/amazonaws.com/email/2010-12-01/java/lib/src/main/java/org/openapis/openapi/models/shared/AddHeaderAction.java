@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AddHeaderAction - &lt;p&gt;When included in a receipt rule, this action adds a header to the received email.&lt;/p&gt; &lt;p&gt;For information about adding a header using a receipt rule, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-add-header.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AddHeaderAction {
     
     public String headerName;
+
     public AddHeaderAction withHeaderName(String headerName) {
         this.headerName = headerName;
         return this;
@@ -19,9 +20,14 @@ public class AddHeaderAction {
     
     
     public String headerValue;
+
     public AddHeaderAction withHeaderValue(String headerValue) {
         this.headerValue = headerValue;
         return this;
     }
     
+    public AddHeaderAction(@JsonProperty("HeaderName") String headerName, @JsonProperty("HeaderValue") String headerValue) {
+        this.headerName = headerName;
+        this.headerValue = headerValue;
+  }
 }

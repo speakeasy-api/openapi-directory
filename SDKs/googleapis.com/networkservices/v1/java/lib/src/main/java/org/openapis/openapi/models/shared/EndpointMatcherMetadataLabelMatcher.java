@@ -18,6 +18,7 @@ public class EndpointMatcherMetadataLabelMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataLabelMatchCriteria")
     public EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum metadataLabelMatchCriteria;
+
     public EndpointMatcherMetadataLabelMatcher withMetadataLabelMatchCriteria(EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum metadataLabelMatchCriteria) {
         this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
         return this;
@@ -29,9 +30,11 @@ public class EndpointMatcherMetadataLabelMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataLabels")
     public EndpointMatcherMetadataLabelMatcherMetadataLabels[] metadataLabels;
+
     public EndpointMatcherMetadataLabelMatcher withMetadataLabels(EndpointMatcherMetadataLabelMatcherMetadataLabels[] metadataLabels) {
         this.metadataLabels = metadataLabels;
         return this;
     }
     
+    public EndpointMatcherMetadataLabelMatcher(){}
 }

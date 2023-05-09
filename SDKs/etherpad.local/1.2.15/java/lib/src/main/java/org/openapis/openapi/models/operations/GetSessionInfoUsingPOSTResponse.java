@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSessionInfoUsingPOSTResponse {
     
     public String contentType;
+
     public GetSessionInfoUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSessionInfoUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetSessionInfoUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSessionInfoUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSessionInfoUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSessionInfoUsingPOSTResponse {
      */
     
     public GetSessionInfoUsingPOST200ApplicationJSON getSessionInfoUsingPOST200ApplicationJSONObject;
+
     public GetSessionInfoUsingPOSTResponse withGetSessionInfoUsingPOST200ApplicationJSONObject(GetSessionInfoUsingPOST200ApplicationJSON getSessionInfoUsingPOST200ApplicationJSONObject) {
         this.getSessionInfoUsingPOST200ApplicationJSONObject = getSessionInfoUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetSessionInfoUsingPOSTResponse {
      */
     
     public GetSessionInfoUsingPOST400ApplicationJSON getSessionInfoUsingPOST400ApplicationJSONObject;
+
     public GetSessionInfoUsingPOSTResponse withGetSessionInfoUsingPOST400ApplicationJSONObject(GetSessionInfoUsingPOST400ApplicationJSON getSessionInfoUsingPOST400ApplicationJSONObject) {
         this.getSessionInfoUsingPOST400ApplicationJSONObject = getSessionInfoUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetSessionInfoUsingPOSTResponse {
      */
     
     public GetSessionInfoUsingPOST401ApplicationJSON getSessionInfoUsingPOST401ApplicationJSONObject;
+
     public GetSessionInfoUsingPOSTResponse withGetSessionInfoUsingPOST401ApplicationJSONObject(GetSessionInfoUsingPOST401ApplicationJSON getSessionInfoUsingPOST401ApplicationJSONObject) {
         this.getSessionInfoUsingPOST401ApplicationJSONObject = getSessionInfoUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetSessionInfoUsingPOSTResponse {
      */
     
     public GetSessionInfoUsingPOST500ApplicationJSON getSessionInfoUsingPOST500ApplicationJSONObject;
+
     public GetSessionInfoUsingPOSTResponse withGetSessionInfoUsingPOST500ApplicationJSONObject(GetSessionInfoUsingPOST500ApplicationJSON getSessionInfoUsingPOST500ApplicationJSONObject) {
         this.getSessionInfoUsingPOST500ApplicationJSONObject = getSessionInfoUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetSessionInfoUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

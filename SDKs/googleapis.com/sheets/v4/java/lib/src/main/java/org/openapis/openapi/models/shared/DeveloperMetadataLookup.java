@@ -18,6 +18,7 @@ public class DeveloperMetadataLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationMatchingStrategy")
     public DeveloperMetadataLookupLocationMatchingStrategyEnum locationMatchingStrategy;
+
     public DeveloperMetadataLookup withLocationMatchingStrategy(DeveloperMetadataLookupLocationMatchingStrategyEnum locationMatchingStrategy) {
         this.locationMatchingStrategy = locationMatchingStrategy;
         return this;
@@ -29,6 +30,7 @@ public class DeveloperMetadataLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationType")
     public DeveloperMetadataLookupLocationTypeEnum locationType;
+
     public DeveloperMetadataLookup withLocationType(DeveloperMetadataLookupLocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
@@ -40,6 +42,7 @@ public class DeveloperMetadataLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataId")
     public Integer metadataId;
+
     public DeveloperMetadataLookup withMetadataId(Integer metadataId) {
         this.metadataId = metadataId;
         return this;
@@ -51,6 +54,7 @@ public class DeveloperMetadataLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataKey")
     public String metadataKey;
+
     public DeveloperMetadataLookup withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;
@@ -62,6 +66,7 @@ public class DeveloperMetadataLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataLocation")
     public DeveloperMetadataLocation metadataLocation;
+
     public DeveloperMetadataLookup withMetadataLocation(DeveloperMetadataLocation metadataLocation) {
         this.metadataLocation = metadataLocation;
         return this;
@@ -73,6 +78,7 @@ public class DeveloperMetadataLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataValue")
     public String metadataValue;
+
     public DeveloperMetadataLookup withMetadataValue(String metadataValue) {
         this.metadataValue = metadataValue;
         return this;
@@ -84,9 +90,11 @@ public class DeveloperMetadataLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public DeveloperMetadataLookupVisibilityEnum visibility;
+
     public DeveloperMetadataLookup withVisibility(DeveloperMetadataLookupVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public DeveloperMetadataLookup(){}
 }

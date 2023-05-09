@@ -60,10 +60,8 @@ public class Drives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveDrivesDeleteResponse res = new org.openapis.openapi.models.operations.DriveDrivesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DriveDrivesDeleteResponse res = new org.openapis.openapi.models.operations.DriveDrivesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Drives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveDrivesGetResponse res = new org.openapis.openapi.models.operations.DriveDrivesGetResponse() {{
+        org.openapis.openapi.models.operations.DriveDrivesGetResponse res = new org.openapis.openapi.models.operations.DriveDrivesGetResponse(contentType, httpRes.statusCode()) {{
             drive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,11 +142,9 @@ public class Drives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveDrivesHideResponse res = new org.openapis.openapi.models.operations.DriveDrivesHideResponse() {{
+        org.openapis.openapi.models.operations.DriveDrivesHideResponse res = new org.openapis.openapi.models.operations.DriveDrivesHideResponse(contentType, httpRes.statusCode()) {{
             drive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Drives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveDrivesInsertResponse res = new org.openapis.openapi.models.operations.DriveDrivesInsertResponse() {{
+        org.openapis.openapi.models.operations.DriveDrivesInsertResponse res = new org.openapis.openapi.models.operations.DriveDrivesInsertResponse(contentType, httpRes.statusCode()) {{
             drive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Drives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveDrivesListResponse res = new org.openapis.openapi.models.operations.DriveDrivesListResponse() {{
+        org.openapis.openapi.models.operations.DriveDrivesListResponse res = new org.openapis.openapi.models.operations.DriveDrivesListResponse(contentType, httpRes.statusCode()) {{
             driveList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +276,9 @@ public class Drives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveDrivesUnhideResponse res = new org.openapis.openapi.models.operations.DriveDrivesUnhideResponse() {{
+        org.openapis.openapi.models.operations.DriveDrivesUnhideResponse res = new org.openapis.openapi.models.operations.DriveDrivesUnhideResponse(contentType, httpRes.statusCode()) {{
             drive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Drives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveDrivesUpdateResponse res = new org.openapis.openapi.models.operations.DriveDrivesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DriveDrivesUpdateResponse res = new org.openapis.openapi.models.operations.DriveDrivesUpdateResponse(contentType, httpRes.statusCode()) {{
             drive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

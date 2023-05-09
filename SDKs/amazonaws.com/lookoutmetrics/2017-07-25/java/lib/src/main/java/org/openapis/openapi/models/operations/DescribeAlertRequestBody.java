@@ -12,9 +12,13 @@ public class DescribeAlertRequestBody {
      */
     @JsonProperty("AlertArn")
     public String alertArn;
+
     public DescribeAlertRequestBody withAlertArn(String alertArn) {
         this.alertArn = alertArn;
         return this;
     }
     
+    public DescribeAlertRequestBody(@JsonProperty("AlertArn") String alertArn) {
+        this.alertArn = alertArn;
+  }
 }

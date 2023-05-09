@@ -15,6 +15,7 @@ public class CustomFieldSelectOptionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CustomFieldSelectOptionFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class CustomFieldSelectOptionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomFieldSelectOptionFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomFieldSelectOptionFields(){}
 }

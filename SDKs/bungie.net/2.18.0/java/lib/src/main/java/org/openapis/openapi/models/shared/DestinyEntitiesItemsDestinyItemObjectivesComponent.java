@@ -15,6 +15,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponent {
      */
     
     public OffsetDateTime dateCompleted;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponent withDateCompleted(OffsetDateTime dateCompleted) {
         this.dateCompleted = dateCompleted;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponent {
      */
     
     public DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective flavorObjective;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponent withFlavorObjective(DestinyEntitiesItemsDestinyItemObjectivesComponentFlavorObjective flavorObjective) {
         this.flavorObjective = flavorObjective;
         return this;
@@ -36,9 +38,11 @@ public class DestinyEntitiesItemsDestinyItemObjectivesComponent {
      */
     
     public DestinyQuestsDestinyObjectiveProgress[] objectives;
+
     public DestinyEntitiesItemsDestinyItemObjectivesComponent withObjectives(DestinyQuestsDestinyObjectiveProgress[] objectives) {
         this.objectives = objectives;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemObjectivesComponent(){}
 }

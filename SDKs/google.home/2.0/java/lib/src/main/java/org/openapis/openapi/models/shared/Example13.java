@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example13 {
     @JsonProperty("can_enroll")
     public Boolean canEnroll;
+
     public Example13 withCanEnroll(Boolean canEnroll) {
         this.canEnroll = canEnroll;
         return this;
@@ -16,6 +17,7 @@ public class Example13 {
     
     @JsonProperty("enrollment_state")
     public Integer enrollmentState;
+
     public Example13 withEnrollmentState(Integer enrollmentState) {
         this.enrollmentState = enrollmentState;
         return this;
@@ -23,6 +25,7 @@ public class Example13 {
     
     @JsonProperty("error_code")
     public Integer errorCode;
+
     public Example13 withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -30,6 +33,7 @@ public class Example13 {
     
     @JsonProperty("ready")
     public Boolean ready;
+
     public Example13 withReady(Boolean ready) {
         this.ready = ready;
         return this;
@@ -37,9 +41,17 @@ public class Example13 {
     
     @JsonProperty("retryable")
     public Boolean retryable;
+
     public Example13 withRetryable(Boolean retryable) {
         this.retryable = retryable;
         return this;
     }
     
+    public Example13(@JsonProperty("can_enroll") Boolean canEnroll, @JsonProperty("enrollment_state") Integer enrollmentState, @JsonProperty("error_code") Integer errorCode, @JsonProperty("ready") Boolean ready, @JsonProperty("retryable") Boolean retryable) {
+        this.canEnroll = canEnroll;
+        this.enrollmentState = enrollmentState;
+        this.errorCode = errorCode;
+        this.ready = ready;
+        this.retryable = retryable;
+  }
 }

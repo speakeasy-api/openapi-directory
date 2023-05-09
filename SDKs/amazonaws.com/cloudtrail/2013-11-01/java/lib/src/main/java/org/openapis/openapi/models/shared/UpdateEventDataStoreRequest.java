@@ -12,6 +12,7 @@ public class UpdateEventDataStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedEventSelectors")
     public AdvancedEventSelector[] advancedEventSelectors;
+
     public UpdateEventDataStoreRequest withAdvancedEventSelectors(AdvancedEventSelector[] advancedEventSelectors) {
         this.advancedEventSelectors = advancedEventSelectors;
         return this;
@@ -19,6 +20,7 @@ public class UpdateEventDataStoreRequest {
     
     @JsonProperty("EventDataStore")
     public String eventDataStore;
+
     public UpdateEventDataStoreRequest withEventDataStore(String eventDataStore) {
         this.eventDataStore = eventDataStore;
         return this;
@@ -27,6 +29,7 @@ public class UpdateEventDataStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public UpdateEventDataStoreRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -35,6 +38,7 @@ public class UpdateEventDataStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiRegionEnabled")
     public Boolean multiRegionEnabled;
+
     public UpdateEventDataStoreRequest withMultiRegionEnabled(Boolean multiRegionEnabled) {
         this.multiRegionEnabled = multiRegionEnabled;
         return this;
@@ -43,6 +47,7 @@ public class UpdateEventDataStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateEventDataStoreRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class UpdateEventDataStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationEnabled")
     public Boolean organizationEnabled;
+
     public UpdateEventDataStoreRequest withOrganizationEnabled(Boolean organizationEnabled) {
         this.organizationEnabled = organizationEnabled;
         return this;
@@ -59,6 +65,7 @@ public class UpdateEventDataStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public Long retentionPeriod;
+
     public UpdateEventDataStoreRequest withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -67,9 +74,13 @@ public class UpdateEventDataStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationProtectionEnabled")
     public Boolean terminationProtectionEnabled;
+
     public UpdateEventDataStoreRequest withTerminationProtectionEnabled(Boolean terminationProtectionEnabled) {
         this.terminationProtectionEnabled = terminationProtectionEnabled;
         return this;
     }
     
+    public UpdateEventDataStoreRequest(@JsonProperty("EventDataStore") String eventDataStore) {
+        this.eventDataStore = eventDataStore;
+  }
 }

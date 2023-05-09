@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBanksIdConnectorConnectionsResponse {
     
     public String contentType;
+
     public GetBanksIdConnectorConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBanksIdConnectorConnectionsResponse {
     
     
     public Integer statusCode;
+
     public GetBanksIdConnectorConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBanksIdConnectorConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBanksIdConnectorConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetBanksIdConnectorConnectionsResponse {
      */
     
     public GetBanksIdConnectorConnections200ApplicationJSON getBanksIdConnectorConnections200ApplicationJSONObject;
+
     public GetBanksIdConnectorConnectionsResponse withGetBanksIdConnectorConnections200ApplicationJSONObject(GetBanksIdConnectorConnections200ApplicationJSON getBanksIdConnectorConnections200ApplicationJSONObject) {
         this.getBanksIdConnectorConnections200ApplicationJSONObject = getBanksIdConnectorConnections200ApplicationJSONObject;
         return this;
     }
     
+    public GetBanksIdConnectorConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

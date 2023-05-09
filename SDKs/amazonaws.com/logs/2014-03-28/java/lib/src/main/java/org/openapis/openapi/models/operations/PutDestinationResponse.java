@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDestinationResponse {
     
     public String contentType;
+
     public PutDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutDestinationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutDestinationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutDestinationResponse {
      */
     
     public Object operationAbortedException;
+
     public PutDestinationResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -39,6 +43,7 @@ public class PutDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutDestinationResponse putDestinationResponse;
+
     public PutDestinationResponse withPutDestinationResponse(org.openapis.openapi.models.shared.PutDestinationResponse putDestinationResponse) {
         this.putDestinationResponse = putDestinationResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutDestinationResponse {
     
     
     public Integer statusCode;
+
     public PutDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutDestinationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutDestinationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public PutDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

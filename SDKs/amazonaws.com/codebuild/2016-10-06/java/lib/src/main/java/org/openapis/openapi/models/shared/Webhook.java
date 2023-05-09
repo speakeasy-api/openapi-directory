@@ -20,6 +20,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchFilter")
     public String branchFilter;
+
     public Webhook withBranchFilter(String branchFilter) {
         this.branchFilter = branchFilter;
         return this;
@@ -28,6 +29,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildType")
     public WebhookBuildTypeEnum buildType;
+
     public Webhook withBuildType(WebhookBuildTypeEnum buildType) {
         this.buildType = buildType;
         return this;
@@ -36,6 +38,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterGroups")
     public WebhookFilter[][] filterGroups;
+
     public Webhook withFilterGroups(WebhookFilter[][] filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -46,6 +49,7 @@ public class Webhook {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedSecret")
     public OffsetDateTime lastModifiedSecret;
+
     public Webhook withLastModifiedSecret(OffsetDateTime lastModifiedSecret) {
         this.lastModifiedSecret = lastModifiedSecret;
         return this;
@@ -54,6 +58,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadUrl")
     public String payloadUrl;
+
     public Webhook withPayloadUrl(String payloadUrl) {
         this.payloadUrl = payloadUrl;
         return this;
@@ -62,6 +67,7 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public Webhook withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -70,9 +76,11 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Webhook withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Webhook(){}
 }

@@ -14,9 +14,11 @@ public class GetUpcomingScheduledCampaignsAndCanvasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public GetUpcomingScheduledCampaignsAndCanvasesRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     
+    public GetUpcomingScheduledCampaignsAndCanvasesRequest(){}
 }

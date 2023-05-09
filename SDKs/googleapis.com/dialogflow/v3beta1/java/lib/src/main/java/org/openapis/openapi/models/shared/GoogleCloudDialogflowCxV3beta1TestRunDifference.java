@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1TestRunDifference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3beta1TestRunDifference withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1TestRunDifference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDialogflowCxV3beta1TestRunDifferenceTypeEnum type;
+
     public GoogleCloudDialogflowCxV3beta1TestRunDifference withType(GoogleCloudDialogflowCxV3beta1TestRunDifferenceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1TestRunDifference(){}
 }

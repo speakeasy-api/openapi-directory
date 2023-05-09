@@ -15,9 +15,11 @@ public class ProviderInvoiceCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobsIds")
     public Long[] jobsIds;
+
     public ProviderInvoiceCreateDTO withJobsIds(Long[] jobsIds) {
         this.jobsIds = jobsIds;
         return this;
     }
     
+    public ProviderInvoiceCreateDTO(){}
 }

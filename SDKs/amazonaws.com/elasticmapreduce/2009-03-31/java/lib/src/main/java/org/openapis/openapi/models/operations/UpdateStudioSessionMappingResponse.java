@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStudioSessionMappingResponse {
     
     public String contentType;
+
     public UpdateStudioSessionMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStudioSessionMappingResponse {
      */
     
     public Object internalServerError;
+
     public UpdateStudioSessionMappingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStudioSessionMappingResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateStudioSessionMappingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateStudioSessionMappingResponse {
     
     
     public Integer statusCode;
+
     public UpdateStudioSessionMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateStudioSessionMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStudioSessionMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateStudioSessionMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

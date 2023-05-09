@@ -18,6 +18,7 @@ public class UpdateNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisingEnabled")
     public Boolean advertisingEnabled;
+
     public UpdateNetworkBluetoothSettings200ApplicationJSON withAdvertisingEnabled(Boolean advertisingEnabled) {
         this.advertisingEnabled = advertisingEnabled;
         return this;
@@ -29,6 +30,7 @@ public class UpdateNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("major")
     public Long major;
+
     public UpdateNetworkBluetoothSettings200ApplicationJSON withMajor(Long major) {
         this.major = major;
         return this;
@@ -40,6 +42,7 @@ public class UpdateNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorMinorAssignmentMode")
     public String majorMinorAssignmentMode;
+
     public UpdateNetworkBluetoothSettings200ApplicationJSON withMajorMinorAssignmentMode(String majorMinorAssignmentMode) {
         this.majorMinorAssignmentMode = majorMinorAssignmentMode;
         return this;
@@ -51,6 +54,7 @@ public class UpdateNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minor")
     public Long minor;
+
     public UpdateNetworkBluetoothSettings200ApplicationJSON withMinor(Long minor) {
         this.minor = minor;
         return this;
@@ -62,6 +66,7 @@ public class UpdateNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanningEnabled")
     public Boolean scanningEnabled;
+
     public UpdateNetworkBluetoothSettings200ApplicationJSON withScanningEnabled(Boolean scanningEnabled) {
         this.scanningEnabled = scanningEnabled;
         return this;
@@ -73,9 +78,11 @@ public class UpdateNetworkBluetoothSettings200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public UpdateNetworkBluetoothSettings200ApplicationJSON withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public UpdateNetworkBluetoothSettings200ApplicationJSON(){}
 }

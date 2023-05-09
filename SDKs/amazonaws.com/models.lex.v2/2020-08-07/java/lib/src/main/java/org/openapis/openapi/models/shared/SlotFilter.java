@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SlotFilter {
     @JsonProperty("name")
     public SlotFilterNameEnum name;
+
     public SlotFilter withName(SlotFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class SlotFilter {
     
     @JsonProperty("operator")
     public SlotFilterOperatorEnum operator;
+
     public SlotFilter withOperator(SlotFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class SlotFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public SlotFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SlotFilter(@JsonProperty("name") SlotFilterNameEnum name, @JsonProperty("operator") SlotFilterOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

@@ -15,9 +15,11 @@ public class GetConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public AppRegistryConfiguration configuration;
+
     public GetConfigurationResponse withConfiguration(AppRegistryConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public GetConfigurationResponse(){}
 }

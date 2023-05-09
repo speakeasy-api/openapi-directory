@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaGenerateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GoogleCloudIntegrationsV1alphaGenerateTokenResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaGenerateTokenResponse(){}
 }

@@ -18,6 +18,7 @@ public class HealthProfileAnswerResourceAttributesLatest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_created_by")
     public String createdBy;
+
     public HealthProfileAnswerResourceAttributesLatest withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -29,6 +30,7 @@ public class HealthProfileAnswerResourceAttributesLatest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answered_at")
     public String answeredAt;
+
     public HealthProfileAnswerResourceAttributesLatest withAnsweredAt(String answeredAt) {
         this.answeredAt = answeredAt;
         return this;
@@ -40,9 +42,11 @@ public class HealthProfileAnswerResourceAttributesLatest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public HealthProfileAnswerResourceAttributesLatest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public HealthProfileAnswerResourceAttributesLatest(){}
 }

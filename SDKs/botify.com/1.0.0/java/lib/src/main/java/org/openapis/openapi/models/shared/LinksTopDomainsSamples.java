@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LinksTopDomainsSamples {
     @JsonProperty("sources")
     public String[] sources;
+
     public LinksTopDomainsSamples withSources(String[] sources) {
         this.sources = sources;
         return this;
@@ -16,6 +17,7 @@ public class LinksTopDomainsSamples {
     
     @JsonProperty("unique_links")
     public Long uniqueLinks;
+
     public LinksTopDomainsSamples withUniqueLinks(Long uniqueLinks) {
         this.uniqueLinks = uniqueLinks;
         return this;
@@ -23,9 +25,15 @@ public class LinksTopDomainsSamples {
     
     @JsonProperty("url")
     public String url;
+
     public LinksTopDomainsSamples withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LinksTopDomainsSamples(@JsonProperty("sources") String[] sources, @JsonProperty("unique_links") Long uniqueLinks, @JsonProperty("url") String url) {
+        this.sources = sources;
+        this.uniqueLinks = uniqueLinks;
+        this.url = url;
+  }
 }

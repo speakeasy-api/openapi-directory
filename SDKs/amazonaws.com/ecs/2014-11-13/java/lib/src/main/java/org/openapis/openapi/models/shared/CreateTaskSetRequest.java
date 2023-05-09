@@ -12,6 +12,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderStrategy")
     public CapacityProviderStrategyItem[] capacityProviderStrategy;
+
     public CreateTaskSetRequest withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         return this;
@@ -20,6 +21,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateTaskSetRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -27,6 +29,7 @@ public class CreateTaskSetRequest {
     
     @JsonProperty("cluster")
     public String cluster;
+
     public CreateTaskSetRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -35,6 +38,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public CreateTaskSetRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -43,6 +47,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchType")
     public LaunchTypeEnum launchType;
+
     public CreateTaskSetRequest withLaunchType(LaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -51,6 +56,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancers")
     public LoadBalancer[] loadBalancers;
+
     public CreateTaskSetRequest withLoadBalancers(LoadBalancer[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -59,6 +65,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public CreateTaskSetRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -67,6 +74,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public CreateTaskSetRequest withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -75,6 +83,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Scale scale;
+
     public CreateTaskSetRequest withScale(Scale scale) {
         this.scale = scale;
         return this;
@@ -82,6 +91,7 @@ public class CreateTaskSetRequest {
     
     @JsonProperty("service")
     public String service;
+
     public CreateTaskSetRequest withService(String service) {
         this.service = service;
         return this;
@@ -90,6 +100,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRegistries")
     public ServiceRegistry[] serviceRegistries;
+
     public CreateTaskSetRequest withServiceRegistries(ServiceRegistry[] serviceRegistries) {
         this.serviceRegistries = serviceRegistries;
         return this;
@@ -98,6 +109,7 @@ public class CreateTaskSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateTaskSetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -105,9 +117,15 @@ public class CreateTaskSetRequest {
     
     @JsonProperty("taskDefinition")
     public String taskDefinition;
+
     public CreateTaskSetRequest withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public CreateTaskSetRequest(@JsonProperty("cluster") String cluster, @JsonProperty("service") String service, @JsonProperty("taskDefinition") String taskDefinition) {
+        this.cluster = cluster;
+        this.service = service;
+        this.taskDefinition = taskDefinition;
+  }
 }

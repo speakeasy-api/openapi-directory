@@ -13,6 +13,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
     public GetSfxLicenseListDownloadAvailabilityEnum downloadAvailability;
+
     public GetSfxLicenseListRequest withDownloadAvailability(GetSfxLicenseListDownloadAvailabilityEnum downloadAvailability) {
         this.downloadAvailability = downloadAvailability;
         return this;
@@ -23,6 +24,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public OffsetDateTime endDate;
+
     public GetSfxLicenseListRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +35,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetSfxLicenseListRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -43,6 +46,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license_id")
     public String licenseId;
+
     public GetSfxLicenseListRequest withLicenseId(String licenseId) {
         this.licenseId = licenseId;
         return this;
@@ -53,6 +57,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSfxLicenseListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -63,6 +68,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetSfxLicenseListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,6 +79,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sfx_id")
     public String sfxId;
+
     public GetSfxLicenseListRequest withSfxId(String sfxId) {
         this.sfxId = sfxId;
         return this;
@@ -83,6 +90,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetSfxLicenseListSortEnum sort;
+
     public GetSfxLicenseListRequest withSort(GetSfxLicenseListSortEnum sort) {
         this.sort = sort;
         return this;
@@ -93,6 +101,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public OffsetDateTime startDate;
+
     public GetSfxLicenseListRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -103,6 +112,7 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
     public Boolean teamHistory;
+
     public GetSfxLicenseListRequest withTeamHistory(Boolean teamHistory) {
         this.teamHistory = teamHistory;
         return this;
@@ -113,9 +123,11 @@ public class GetSfxLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetSfxLicenseListRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetSfxLicenseListRequest(){}
 }

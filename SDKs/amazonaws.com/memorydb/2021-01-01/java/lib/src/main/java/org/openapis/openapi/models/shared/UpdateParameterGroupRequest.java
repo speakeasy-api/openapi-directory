@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateParameterGroupRequest {
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public UpdateParameterGroupRequest withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateParameterGroupRequest {
     
     @JsonProperty("ParameterNameValues")
     public ParameterNameValue[] parameterNameValues;
+
     public UpdateParameterGroupRequest withParameterNameValues(ParameterNameValue[] parameterNameValues) {
         this.parameterNameValues = parameterNameValues;
         return this;
     }
     
+    public UpdateParameterGroupRequest(@JsonProperty("ParameterGroupName") String parameterGroupName, @JsonProperty("ParameterNameValues") ParameterNameValue[] parameterNameValues) {
+        this.parameterGroupName = parameterGroupName;
+        this.parameterNameValues = parameterNameValues;
+  }
 }

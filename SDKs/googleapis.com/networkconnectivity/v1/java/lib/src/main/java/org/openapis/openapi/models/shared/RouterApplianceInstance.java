@@ -18,6 +18,7 @@ public class RouterApplianceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public RouterApplianceInstance withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,9 +30,11 @@ public class RouterApplianceInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachine")
     public String virtualMachine;
+
     public RouterApplianceInstance withVirtualMachine(String virtualMachine) {
         this.virtualMachine = virtualMachine;
         return this;
     }
     
+    public RouterApplianceInstance(){}
 }

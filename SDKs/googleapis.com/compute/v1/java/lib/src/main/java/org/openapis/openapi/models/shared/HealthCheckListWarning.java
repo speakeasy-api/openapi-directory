@@ -18,6 +18,7 @@ public class HealthCheckListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public HealthCheckListWarningCodeEnum code;
+
     public HealthCheckListWarning withCode(HealthCheckListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class HealthCheckListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public HealthCheckListWarningData[] data;
+
     public HealthCheckListWarning withData(HealthCheckListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class HealthCheckListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public HealthCheckListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public HealthCheckListWarning(){}
 }

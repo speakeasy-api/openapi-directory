@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutUserPermissionsBoundaryRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETPutUserPermissionsBoundaryActionEnum action;
+
     public GETPutUserPermissionsBoundaryRequest withAction(GETPutUserPermissionsBoundaryActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETPutUserPermissionsBoundaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PermissionsBoundary")
     public String permissionsBoundary;
+
     public GETPutUserPermissionsBoundaryRequest withPermissionsBoundary(String permissionsBoundary) {
         this.permissionsBoundary = permissionsBoundary;
         return this;
@@ -29,6 +32,7 @@ public class GETPutUserPermissionsBoundaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETPutUserPermissionsBoundaryRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -36,6 +40,7 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETPutUserPermissionsBoundaryVersionEnum version;
+
     public GETPutUserPermissionsBoundaryRequest withVersion(GETPutUserPermissionsBoundaryVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETPutUserPermissionsBoundaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETPutUserPermissionsBoundaryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETPutUserPermissionsBoundaryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETPutUserPermissionsBoundaryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETPutUserPermissionsBoundaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETPutUserPermissionsBoundaryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETPutUserPermissionsBoundaryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETPutUserPermissionsBoundaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETPutUserPermissionsBoundaryRequest(@JsonProperty("Action") GETPutUserPermissionsBoundaryActionEnum action, @JsonProperty("PermissionsBoundary") String permissionsBoundary, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETPutUserPermissionsBoundaryVersionEnum version) {
+        this.action = action;
+        this.permissionsBoundary = permissionsBoundary;
+        this.userName = userName;
+        this.version = version;
+  }
 }

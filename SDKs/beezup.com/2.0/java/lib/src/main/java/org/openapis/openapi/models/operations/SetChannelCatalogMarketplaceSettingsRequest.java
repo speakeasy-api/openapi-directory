@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetChannelCatalogMarketplaceSettingsRequest {
@@ -12,6 +13,7 @@ public class SetChannelCatalogMarketplaceSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public SetChannelCatalogMarketplaceSettingsRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -22,9 +24,14 @@ public class SetChannelCatalogMarketplaceSettingsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SetChannelCatalogMarketplaceSettingsRequest setChannelCatalogMarketplaceSettingsRequest;
+
     public SetChannelCatalogMarketplaceSettingsRequest withSetChannelCatalogMarketplaceSettingsRequest(org.openapis.openapi.models.shared.SetChannelCatalogMarketplaceSettingsRequest setChannelCatalogMarketplaceSettingsRequest) {
         this.setChannelCatalogMarketplaceSettingsRequest = setChannelCatalogMarketplaceSettingsRequest;
         return this;
     }
     
+    public SetChannelCatalogMarketplaceSettingsRequest(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("setChannelCatalogMarketplaceSettingsRequest") org.openapis.openapi.models.shared.SetChannelCatalogMarketplaceSettingsRequest setChannelCatalogMarketplaceSettingsRequest) {
+        this.channelCatalogId = channelCatalogId;
+        this.setChannelCatalogMarketplaceSettingsRequest = setChannelCatalogMarketplaceSettingsRequest;
+  }
 }

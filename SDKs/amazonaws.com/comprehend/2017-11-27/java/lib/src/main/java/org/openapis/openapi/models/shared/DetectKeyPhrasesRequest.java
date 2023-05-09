@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectKeyPhrasesRequest {
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public DetectKeyPhrasesRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -16,9 +17,14 @@ public class DetectKeyPhrasesRequest {
     
     @JsonProperty("Text")
     public String text;
+
     public DetectKeyPhrasesRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DetectKeyPhrasesRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("Text") String text) {
+        this.languageCode = languageCode;
+        this.text = text;
+  }
 }

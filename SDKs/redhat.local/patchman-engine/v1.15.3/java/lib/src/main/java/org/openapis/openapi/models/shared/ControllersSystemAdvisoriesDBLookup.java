@@ -12,6 +12,7 @@ public class ControllersSystemAdvisoriesDBLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisory_type")
     public Long advisoryType;
+
     public ControllersSystemAdvisoriesDBLookup withAdvisoryType(Long advisoryType) {
         this.advisoryType = advisoryType;
         return this;
@@ -20,6 +21,7 @@ public class ControllersSystemAdvisoriesDBLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cve_count")
     public Long cveCount;
+
     public ControllersSystemAdvisoriesDBLookup withCveCount(Long cveCount) {
         this.cveCount = cveCount;
         return this;
@@ -28,6 +30,7 @@ public class ControllersSystemAdvisoriesDBLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ControllersSystemAdvisoriesDBLookup withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class ControllersSystemAdvisoriesDBLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControllersSystemAdvisoriesDBLookup withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class ControllersSystemAdvisoriesDBLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_date")
     public String publicDate;
+
     public ControllersSystemAdvisoriesDBLookup withPublicDate(String publicDate) {
         this.publicDate = publicDate;
         return this;
@@ -52,6 +57,7 @@ public class ControllersSystemAdvisoriesDBLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public Long severity;
+
     public ControllersSystemAdvisoriesDBLookup withSeverity(Long severity) {
         this.severity = severity;
         return this;
@@ -60,9 +66,11 @@ public class ControllersSystemAdvisoriesDBLookup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synopsis")
     public String synopsis;
+
     public ControllersSystemAdvisoriesDBLookup withSynopsis(String synopsis) {
         this.synopsis = synopsis;
         return this;
     }
     
+    public ControllersSystemAdvisoriesDBLookup(){}
 }

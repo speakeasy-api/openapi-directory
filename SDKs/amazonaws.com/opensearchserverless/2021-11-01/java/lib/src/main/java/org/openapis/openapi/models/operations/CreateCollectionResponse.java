@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCollectionResponse {
@@ -12,6 +13,7 @@ public class CreateCollectionResponse {
      */
     
     public Object conflictException;
+
     public CreateCollectionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateCollectionResponse {
     
     
     public String contentType;
+
     public CreateCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateCollectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCollectionResponse createCollectionResponse;
+
     public CreateCollectionResponse withCreateCollectionResponse(org.openapis.openapi.models.shared.CreateCollectionResponse createCollectionResponse) {
         this.createCollectionResponse = createCollectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateCollectionResponse {
      */
     
     public Object internalServerException;
+
     public CreateCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCollectionResponse {
      */
     
     public Object ocuLimitExceededException;
+
     public CreateCollectionResponse withOcuLimitExceededException(Object ocuLimitExceededException) {
         this.ocuLimitExceededException = ocuLimitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateCollectionResponse {
     
     
     public Integer statusCode;
+
     public CreateCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateCollectionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateCollectionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class CreateCollectionResponse {
      */
     
     public Object validationException;
+
     public CreateCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

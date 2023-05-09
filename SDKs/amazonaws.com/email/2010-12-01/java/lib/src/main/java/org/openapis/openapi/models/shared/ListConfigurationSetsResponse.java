@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListConfigurationSetsResponse {
     
     public ConfigurationSet[] configurationSets;
+
     public ListConfigurationSetsResponse withConfigurationSets(ConfigurationSet[] configurationSets) {
         this.configurationSets = configurationSets;
         return this;
@@ -19,9 +20,11 @@ public class ListConfigurationSetsResponse {
     
     
     public String nextToken;
+
     public ListConfigurationSetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConfigurationSetsResponse(){}
 }

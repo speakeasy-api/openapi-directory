@@ -15,6 +15,7 @@ public class TransformEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MlUserDataEncryption")
     public MLUserDataEncryption mlUserDataEncryption;
+
     public TransformEncryption withMlUserDataEncryption(MLUserDataEncryption mlUserDataEncryption) {
         this.mlUserDataEncryption = mlUserDataEncryption;
         return this;
@@ -23,9 +24,11 @@ public class TransformEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunSecurityConfigurationName")
     public String taskRunSecurityConfigurationName;
+
     public TransformEncryption withTaskRunSecurityConfigurationName(String taskRunSecurityConfigurationName) {
         this.taskRunSecurityConfigurationName = taskRunSecurityConfigurationName;
         return this;
     }
     
+    public TransformEncryption(){}
 }

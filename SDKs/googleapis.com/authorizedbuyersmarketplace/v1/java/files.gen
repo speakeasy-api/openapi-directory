@@ -202,4 +202,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/PublisherProfile.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublisherProfileMobileApplicationAppStoreEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublisherProfileMobileApplication.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListPublisherProfilesResponse.java
+docs/sdk/README.md
+docs/buyers/README.md
 USAGE.md

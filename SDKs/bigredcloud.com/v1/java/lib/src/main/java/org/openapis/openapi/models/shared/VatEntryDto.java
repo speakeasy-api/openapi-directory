@@ -12,6 +12,7 @@ public class VatEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public VatEntryDto withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class VatEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VatEntryDto withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class VatEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Double percentage;
+
     public VatEntryDto withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -36,9 +39,11 @@ public class VatEntryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatRateId")
     public Long vatRateId;
+
     public VatEntryDto withVatRateId(Long vatRateId) {
         this.vatRateId = vatRateId;
         return this;
     }
     
+    public VatEntryDto(){}
 }

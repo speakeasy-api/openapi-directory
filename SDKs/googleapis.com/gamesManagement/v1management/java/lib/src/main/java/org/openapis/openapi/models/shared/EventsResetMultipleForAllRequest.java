@@ -18,6 +18,7 @@ public class EventsResetMultipleForAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_ids")
     public String[] eventIds;
+
     public EventsResetMultipleForAllRequest withEventIds(String[] eventIds) {
         this.eventIds = eventIds;
         return this;
@@ -29,9 +30,11 @@ public class EventsResetMultipleForAllRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventsResetMultipleForAllRequest withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public EventsResetMultipleForAllRequest(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeHistoryEvents")
     public GoogleAnalyticsAdminV1alphaChangeHistoryEvent[] changeHistoryEvents;
+
     public GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse withChangeHistoryEvents(GoogleAnalyticsAdminV1alphaChangeHistoryEvent[] changeHistoryEvents) {
         this.changeHistoryEvents = changeHistoryEvents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse(){}
 }

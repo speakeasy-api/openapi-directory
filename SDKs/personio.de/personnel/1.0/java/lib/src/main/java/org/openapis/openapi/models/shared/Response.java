@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Response {
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public Response withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class Response {
     
     @JsonProperty("success")
     public Boolean success;
+
     public Response withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public Response(@JsonProperty("data") java.util.Map<String, Object> data, @JsonProperty("success") Boolean success) {
+        this.data = data;
+        this.success = success;
+  }
 }

@@ -15,6 +15,7 @@ public class ItvSubscriptionState {
      */
     @JsonProperty("effective_entitlements")
     public ItvEntitlement[] effectiveEntitlements;
+
     public ItvSubscriptionState withEffectiveEntitlements(ItvEntitlement[] effectiveEntitlements) {
         this.effectiveEntitlements = effectiveEntitlements;
         return this;
@@ -25,6 +26,7 @@ public class ItvSubscriptionState {
      */
     @JsonProperty("failed_availability_checks")
     public String[] failedAvailabilityChecks;
+
     public ItvSubscriptionState withFailedAvailabilityChecks(String[] failedAvailabilityChecks) {
         this.failedAvailabilityChecks = failedAvailabilityChecks;
         return this;
@@ -35,6 +37,7 @@ public class ItvSubscriptionState {
      */
     @JsonProperty("purchased")
     public String[] purchased;
+
     public ItvSubscriptionState withPurchased(String[] purchased) {
         this.purchased = purchased;
         return this;
@@ -45,9 +48,16 @@ public class ItvSubscriptionState {
      */
     @JsonProperty("source")
     public String source;
+
     public ItvSubscriptionState withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public ItvSubscriptionState(@JsonProperty("effective_entitlements") ItvEntitlement[] effectiveEntitlements, @JsonProperty("failed_availability_checks") String[] failedAvailabilityChecks, @JsonProperty("purchased") String[] purchased, @JsonProperty("source") String source) {
+        this.effectiveEntitlements = effectiveEntitlements;
+        this.failedAvailabilityChecks = failedAvailabilityChecks;
+        this.purchased = purchased;
+        this.source = source;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateQuerySuggestionsBlockListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateQuerySuggestionsBlockListResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateQuerySuggestionsBlockListResponse(){}
 }

@@ -12,6 +12,7 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointConfigurations")
     public EndpointConfiguration[] endpointConfigurations;
+
     public CreateEndpointGroupRequest withEndpointConfigurations(EndpointConfiguration[] endpointConfigurations) {
         this.endpointConfigurations = endpointConfigurations;
         return this;
@@ -19,6 +20,7 @@ public class CreateEndpointGroupRequest {
     
     @JsonProperty("EndpointGroupRegion")
     public String endpointGroupRegion;
+
     public CreateEndpointGroupRequest withEndpointGroupRegion(String endpointGroupRegion) {
         this.endpointGroupRegion = endpointGroupRegion;
         return this;
@@ -27,6 +29,7 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckIntervalSeconds")
     public Long healthCheckIntervalSeconds;
+
     public CreateEndpointGroupRequest withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
         this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
         return this;
@@ -35,6 +38,7 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckPath")
     public String healthCheckPath;
+
     public CreateEndpointGroupRequest withHealthCheckPath(String healthCheckPath) {
         this.healthCheckPath = healthCheckPath;
         return this;
@@ -43,6 +47,7 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckPort")
     public Long healthCheckPort;
+
     public CreateEndpointGroupRequest withHealthCheckPort(Long healthCheckPort) {
         this.healthCheckPort = healthCheckPort;
         return this;
@@ -51,6 +56,7 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckProtocol")
     public HealthCheckProtocolEnum healthCheckProtocol;
+
     public CreateEndpointGroupRequest withHealthCheckProtocol(HealthCheckProtocolEnum healthCheckProtocol) {
         this.healthCheckProtocol = healthCheckProtocol;
         return this;
@@ -58,6 +64,7 @@ public class CreateEndpointGroupRequest {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateEndpointGroupRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -65,6 +72,7 @@ public class CreateEndpointGroupRequest {
     
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public CreateEndpointGroupRequest withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -73,6 +81,7 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortOverrides")
     public PortOverride[] portOverrides;
+
     public CreateEndpointGroupRequest withPortOverrides(PortOverride[] portOverrides) {
         this.portOverrides = portOverrides;
         return this;
@@ -81,6 +90,7 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThresholdCount")
     public Long thresholdCount;
+
     public CreateEndpointGroupRequest withThresholdCount(Long thresholdCount) {
         this.thresholdCount = thresholdCount;
         return this;
@@ -89,9 +99,15 @@ public class CreateEndpointGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrafficDialPercentage")
     public Float trafficDialPercentage;
+
     public CreateEndpointGroupRequest withTrafficDialPercentage(Float trafficDialPercentage) {
         this.trafficDialPercentage = trafficDialPercentage;
         return this;
     }
     
+    public CreateEndpointGroupRequest(@JsonProperty("EndpointGroupRegion") String endpointGroupRegion, @JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("ListenerArn") String listenerArn) {
+        this.endpointGroupRegion = endpointGroupRegion;
+        this.idempotencyToken = idempotencyToken;
+        this.listenerArn = listenerArn;
+  }
 }

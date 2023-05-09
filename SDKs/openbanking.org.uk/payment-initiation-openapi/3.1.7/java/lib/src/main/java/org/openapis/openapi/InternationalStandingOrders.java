@@ -67,7 +67,7 @@ public class InternationalStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalStandingOrderConsentResponse7 = null;
             obWriteInternationalStandingOrderConsentResponse7 = null;
@@ -75,8 +75,6 @@ public class InternationalStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -156,7 +154,7 @@ public class InternationalStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalStandingOrderConsentResponse7 = null;
             obWriteInternationalStandingOrderConsentResponse7 = null;
@@ -164,8 +162,6 @@ public class InternationalStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -245,7 +241,7 @@ public class InternationalStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalStandingOrderResponse7 = null;
             obWriteInternationalStandingOrderResponse7 = null;
@@ -253,8 +249,6 @@ public class InternationalStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -334,7 +328,7 @@ public class InternationalStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalStandingOrderResponse7 = null;
             obWriteInternationalStandingOrderResponse7 = null;
@@ -342,8 +336,6 @@ public class InternationalStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -418,7 +410,7 @@ public class InternationalStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalStandingOrderConsentResponse7 = null;
             obWriteInternationalStandingOrderConsentResponse7 = null;
@@ -426,8 +418,6 @@ public class InternationalStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -502,7 +492,7 @@ public class InternationalStandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalStandingOrderResponse7 = null;
             obWriteInternationalStandingOrderResponse7 = null;
@@ -510,8 +500,6 @@ public class InternationalStandingOrders {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

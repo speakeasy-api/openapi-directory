@@ -18,6 +18,7 @@ public class Getaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchFlux")
     public String matchFlux;
+
     public Getaccountconfig200ApplicationJSON withMatchFlux(String matchFlux) {
         this.matchFlux = matchFlux;
         return this;
@@ -29,6 +30,7 @@ public class Getaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Matchers")
     public Object[] matchers;
+
     public Getaccountconfig200ApplicationJSON withMatchers(Object[] matchers) {
         this.matchers = matchers;
         return this;
@@ -40,6 +42,7 @@ public class Getaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public java.util.Map<String, Object> rules;
+
     public Getaccountconfig200ApplicationJSON withRules(java.util.Map<String, Object> rules) {
         this.rules = rules;
         return this;
@@ -51,6 +54,7 @@ public class Getaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public java.util.Map<String, Object> score;
+
     public Getaccountconfig200ApplicationJSON withScore(java.util.Map<String, Object> score) {
         this.score = score;
         return this;
@@ -62,9 +66,11 @@ public class Getaccountconfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpecificationsMapping")
     public Object[] specificationsMapping;
+
     public Getaccountconfig200ApplicationJSON withSpecificationsMapping(Object[] specificationsMapping) {
         this.specificationsMapping = specificationsMapping;
         return this;
     }
     
+    public Getaccountconfig200ApplicationJSON(){}
 }

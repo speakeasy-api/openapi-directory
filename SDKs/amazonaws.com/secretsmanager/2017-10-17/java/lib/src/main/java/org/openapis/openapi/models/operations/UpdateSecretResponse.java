@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSecretResponse {
     
     public String contentType;
+
     public UpdateSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSecretResponse {
      */
     
     public Object decryptionFailure;
+
     public UpdateSecretResponse withDecryptionFailure(Object decryptionFailure) {
         this.decryptionFailure = decryptionFailure;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSecretResponse {
      */
     
     public Object encryptionFailure;
+
     public UpdateSecretResponse withEncryptionFailure(Object encryptionFailure) {
         this.encryptionFailure = encryptionFailure;
         return this;
@@ -39,6 +43,7 @@ public class UpdateSecretResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateSecretResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -49,6 +54,7 @@ public class UpdateSecretResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateSecretResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateSecretResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateSecretResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateSecretResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateSecretResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateSecretResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public UpdateSecretResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateSecretResponse {
      */
     
     public Object preconditionNotMetException;
+
     public UpdateSecretResponse withPreconditionNotMetException(Object preconditionNotMetException) {
         this.preconditionNotMetException = preconditionNotMetException;
         return this;
@@ -96,6 +106,7 @@ public class UpdateSecretResponse {
     
     
     public Integer statusCode;
+
     public UpdateSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class UpdateSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class UpdateSecretResponse {
      */
     
     public Object resourceExistsException;
+
     public UpdateSecretResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -123,6 +136,7 @@ public class UpdateSecretResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSecretResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,9 +147,14 @@ public class UpdateSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSecretResponse updateSecretResponse;
+
     public UpdateSecretResponse withUpdateSecretResponse(org.openapis.openapi.models.shared.UpdateSecretResponse updateSecretResponse) {
         this.updateSecretResponse = updateSecretResponse;
         return this;
     }
     
+    public UpdateSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

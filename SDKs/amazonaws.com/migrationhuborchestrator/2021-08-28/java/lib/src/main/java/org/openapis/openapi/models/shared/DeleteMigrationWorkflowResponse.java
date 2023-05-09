@@ -15,6 +15,7 @@ public class DeleteMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DeleteMigrationWorkflowResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DeleteMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteMigrationWorkflowResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class DeleteMigrationWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MigrationWorkflowStatusEnumEnum status;
+
     public DeleteMigrationWorkflowResponse withStatus(MigrationWorkflowStatusEnumEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeleteMigrationWorkflowResponse(){}
 }

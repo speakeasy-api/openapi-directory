@@ -12,6 +12,7 @@ public class ListTargetedSentimentDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public TargetedSentimentDetectionJobFilter filter;
+
     public ListTargetedSentimentDetectionJobsRequest withFilter(TargetedSentimentDetectionJobFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListTargetedSentimentDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTargetedSentimentDetectionJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListTargetedSentimentDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTargetedSentimentDetectionJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTargetedSentimentDetectionJobsRequest(){}
 }

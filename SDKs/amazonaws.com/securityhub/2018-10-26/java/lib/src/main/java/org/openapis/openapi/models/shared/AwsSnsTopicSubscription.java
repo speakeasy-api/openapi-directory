@@ -15,6 +15,7 @@ public class AwsSnsTopicSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public String endpoint;
+
     public AwsSnsTopicSubscription withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -23,9 +24,11 @@ public class AwsSnsTopicSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public AwsSnsTopicSubscription withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public AwsSnsTopicSubscription(){}
 }

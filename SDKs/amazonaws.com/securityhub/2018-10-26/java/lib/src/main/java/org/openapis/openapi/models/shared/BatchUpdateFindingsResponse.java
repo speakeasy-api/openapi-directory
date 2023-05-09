@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchUpdateFindingsResponse {
     @JsonProperty("ProcessedFindings")
     public AwsSecurityFindingIdentifier[] processedFindings;
+
     public BatchUpdateFindingsResponse withProcessedFindings(AwsSecurityFindingIdentifier[] processedFindings) {
         this.processedFindings = processedFindings;
         return this;
@@ -19,9 +20,14 @@ public class BatchUpdateFindingsResponse {
     
     @JsonProperty("UnprocessedFindings")
     public BatchUpdateFindingsUnprocessedFinding[] unprocessedFindings;
+
     public BatchUpdateFindingsResponse withUnprocessedFindings(BatchUpdateFindingsUnprocessedFinding[] unprocessedFindings) {
         this.unprocessedFindings = unprocessedFindings;
         return this;
     }
     
+    public BatchUpdateFindingsResponse(@JsonProperty("ProcessedFindings") AwsSecurityFindingIdentifier[] processedFindings, @JsonProperty("UnprocessedFindings") BatchUpdateFindingsUnprocessedFinding[] unprocessedFindings) {
+        this.processedFindings = processedFindings;
+        this.unprocessedFindings = unprocessedFindings;
+  }
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity;
 import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest;
 import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse;
+import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,12 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest req = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest() {{
-                appId = 548814;
-                cardId = "provident";
-            }}            
+            DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest req = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest(548814, "provident");            
 
-            DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse res = sdk.cards.deleteCrmV3ExtensionsCardsAppIdCardIdArchive(req, new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity() {{
+            DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse res = sdk.cards.deleteCrmV3ExtensionsCardsAppIdCardIdArchive(req, new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity("distinctio") {{
                 developerHapikey = "YOUR_API_KEY_HERE";
             }});
 
@@ -42,6 +38,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -49,17 +47,17 @@ public class Application {
 ## Available Resources and Operations
 
 
-### cards
+### [cards](docs/cards/README.md)
 
-* `deleteCrmV3ExtensionsCardsAppIdCardIdArchive` - Delete a card
-* `getCrmV3ExtensionsCardsAppIdCardIdGetById` - Get a card.
-* `getCrmV3ExtensionsCardsAppIdGetAll` - Get all cards
-* `patchCrmV3ExtensionsCardsAppIdCardIdUpdate` - Update a card
-* `postCrmV3ExtensionsCardsAppIdCreate` - Create a new card
+* [deleteCrmV3ExtensionsCardsAppIdCardIdArchive](docs/cards/README.md#deletecrmv3extensionscardsappidcardidarchive) - Delete a card
+* [getCrmV3ExtensionsCardsAppIdCardIdGetById](docs/cards/README.md#getcrmv3extensionscardsappidcardidgetbyid) - Get a card.
+* [getCrmV3ExtensionsCardsAppIdGetAll](docs/cards/README.md#getcrmv3extensionscardsappidgetall) - Get all cards
+* [patchCrmV3ExtensionsCardsAppIdCardIdUpdate](docs/cards/README.md#patchcrmv3extensionscardsappidcardidupdate) - Update a card
+* [postCrmV3ExtensionsCardsAppIdCreate](docs/cards/README.md#postcrmv3extensionscardsappidcreate) - Create a new card
 
-### sampleResponse
+### [sampleResponse](docs/sampleresponse/README.md)
 
-* `getCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponse` - Get sample card detail response
+* [getCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponse](docs/sampleresponse/README.md#getcrmv3extensionscardssampleresponsegetcardssampleresponse) - Get sample card detail response
 <!-- End SDK Available Operations -->
 
 ### Maturity

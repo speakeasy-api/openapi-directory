@@ -12,6 +12,7 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateProjectRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateProjectRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateProjectRequest {
     
     @JsonProperty("id")
     public String id;
+
     public CreateProjectRequest withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +37,7 @@ public class CreateProjectRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateProjectRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCode")
     public Code[] sourceCode;
+
     public CreateProjectRequest withSourceCode(Code[] sourceCode) {
         this.sourceCode = sourceCode;
         return this;
@@ -50,6 +55,7 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateProjectRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,9 +64,14 @@ public class CreateProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolchain")
     public Toolchain toolchain;
+
     public CreateProjectRequest withToolchain(Toolchain toolchain) {
         this.toolchain = toolchain;
         return this;
     }
     
+    public CreateProjectRequest(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

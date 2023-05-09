@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PreprintsBibliographicContributorsListResponse {
     
     public byte[] body;
+
     public PreprintsBibliographicContributorsListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PreprintsBibliographicContributorsListResponse {
     
     
     public String contentType;
+
     public PreprintsBibliographicContributorsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PreprintsBibliographicContributorsListResponse {
     
     
     public Integer statusCode;
+
     public PreprintsBibliographicContributorsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PreprintsBibliographicContributorsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PreprintsBibliographicContributorsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PreprintsBibliographicContributorsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

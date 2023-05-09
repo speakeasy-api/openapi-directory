@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaListConversionEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionEvents")
     public GoogleAnalyticsAdminV1betaConversionEvent[] conversionEvents;
+
     public GoogleAnalyticsAdminV1betaListConversionEventsResponse withConversionEvents(GoogleAnalyticsAdminV1betaConversionEvent[] conversionEvents) {
         this.conversionEvents = conversionEvents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1betaListConversionEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1betaListConversionEventsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaListConversionEventsResponse(){}
 }

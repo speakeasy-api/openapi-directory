@@ -18,6 +18,7 @@ public class ListAcceleratorTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorTypes")
     public AcceleratorType[] acceleratorTypes;
+
     public ListAcceleratorTypesResponse withAcceleratorTypes(AcceleratorType[] acceleratorTypes) {
         this.acceleratorTypes = acceleratorTypes;
         return this;
@@ -29,6 +30,7 @@ public class ListAcceleratorTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAcceleratorTypesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListAcceleratorTypesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListAcceleratorTypesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListAcceleratorTypesResponse(){}
 }

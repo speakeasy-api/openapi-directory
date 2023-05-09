@@ -12,6 +12,7 @@ public class ServiceCalendarInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarId")
     public String calendarId;
+
     public ServiceCalendarInputModel withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -20,6 +21,7 @@ public class ServiceCalendarInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ServiceCalendarInputModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -28,9 +30,11 @@ public class ServiceCalendarInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public ServiceCalendarInputModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public ServiceCalendarInputModel(){}
 }

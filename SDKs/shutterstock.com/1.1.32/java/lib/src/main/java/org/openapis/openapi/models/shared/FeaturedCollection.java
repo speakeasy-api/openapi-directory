@@ -23,6 +23,7 @@ public class FeaturedCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover_item")
     public FeaturedCollectionCoverItem coverItem;
+
     public FeaturedCollection withCoverItem(FeaturedCollectionCoverItem coverItem) {
         this.coverItem = coverItem;
         return this;
@@ -36,6 +37,7 @@ public class FeaturedCollection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_time")
     public OffsetDateTime createdTime;
+
     public FeaturedCollection withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -47,6 +49,7 @@ public class FeaturedCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hero_item")
     public FeaturedCollectionCoverItem heroItem;
+
     public FeaturedCollection withHeroItem(FeaturedCollectionCoverItem heroItem) {
         this.heroItem = heroItem;
         return this;
@@ -57,6 +60,7 @@ public class FeaturedCollection {
      */
     @JsonProperty("id")
     public String id;
+
     public FeaturedCollection withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +74,7 @@ public class FeaturedCollection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("items_updated_time")
     public OffsetDateTime itemsUpdatedTime;
+
     public FeaturedCollection withItemsUpdatedTime(OffsetDateTime itemsUpdatedTime) {
         this.itemsUpdatedTime = itemsUpdatedTime;
         return this;
@@ -80,6 +85,7 @@ public class FeaturedCollection {
      */
     @JsonProperty("name")
     public String name;
+
     public FeaturedCollection withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +97,7 @@ public class FeaturedCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("share_url")
     public String shareUrl;
+
     public FeaturedCollection withShareUrl(String shareUrl) {
         this.shareUrl = shareUrl;
         return this;
@@ -101,6 +108,7 @@ public class FeaturedCollection {
      */
     @JsonProperty("total_item_count")
     public Long totalItemCount;
+
     public FeaturedCollection withTotalItemCount(Long totalItemCount) {
         this.totalItemCount = totalItemCount;
         return this;
@@ -114,9 +122,15 @@ public class FeaturedCollection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_time")
     public OffsetDateTime updatedTime;
+
     public FeaturedCollection withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
     
+    public FeaturedCollection(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("total_item_count") Long totalItemCount) {
+        this.id = id;
+        this.name = name;
+        this.totalItemCount = totalItemCount;
+  }
 }

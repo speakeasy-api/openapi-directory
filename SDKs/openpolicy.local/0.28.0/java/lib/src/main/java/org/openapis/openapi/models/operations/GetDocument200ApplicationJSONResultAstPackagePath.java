@@ -15,6 +15,7 @@ public class GetDocument200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetDocument200ApplicationJSONResultAstPackagePathTypeEnum type;
+
     public GetDocument200ApplicationJSONResultAstPackagePath withType(GetDocument200ApplicationJSONResultAstPackagePathTypeEnum type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class GetDocument200ApplicationJSONResultAstPackagePath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetDocument200ApplicationJSONResultAstPackagePath withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetDocument200ApplicationJSONResultAstPackagePath(){}
 }

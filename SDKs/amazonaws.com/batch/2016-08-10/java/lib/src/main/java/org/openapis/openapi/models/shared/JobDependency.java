@@ -15,6 +15,7 @@ public class JobDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public JobDependency withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -23,9 +24,11 @@ public class JobDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ArrayJobDependencyEnum type;
+
     public JobDependency withType(ArrayJobDependencyEnum type) {
         this.type = type;
         return this;
     }
     
+    public JobDependency(){}
 }

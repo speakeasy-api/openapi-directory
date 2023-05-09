@@ -12,6 +12,7 @@ public class TerminalRefundQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public TerminalRefundQueryFilter filter;
+
     public TerminalRefundQuery withFilter(TerminalRefundQueryFilter filter) {
         this.filter = filter;
         return this;
@@ -20,9 +21,11 @@ public class TerminalRefundQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public TerminalRefundQuerySort sort;
+
     public TerminalRefundQuery withSort(TerminalRefundQuerySort sort) {
         this.sort = sort;
         return this;
     }
     
+    public TerminalRefundQuery(){}
 }

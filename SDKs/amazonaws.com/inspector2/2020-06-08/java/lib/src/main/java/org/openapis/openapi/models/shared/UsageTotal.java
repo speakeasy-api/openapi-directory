@@ -15,6 +15,7 @@ public class UsageTotal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public UsageTotal withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class UsageTotal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public Usage[] usage;
+
     public UsageTotal withUsage(Usage[] usage) {
         this.usage = usage;
         return this;
     }
     
+    public UsageTotal(){}
 }

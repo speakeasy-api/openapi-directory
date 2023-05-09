@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RoleUsageType {
     
     public String region;
+
     public RoleUsageType withRegion(String region) {
         this.region = region;
         return this;
@@ -19,9 +20,11 @@ public class RoleUsageType {
     
     
     public String[] resources;
+
     public RoleUsageType withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public RoleUsageType(){}
 }

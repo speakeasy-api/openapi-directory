@@ -18,6 +18,7 @@ public class RoutingVPC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredForNewSiteToSiteDataTransferSpokes")
     public Boolean requiredForNewSiteToSiteDataTransferSpokes;
+
     public RoutingVPC withRequiredForNewSiteToSiteDataTransferSpokes(Boolean requiredForNewSiteToSiteDataTransferSpokes) {
         this.requiredForNewSiteToSiteDataTransferSpokes = requiredForNewSiteToSiteDataTransferSpokes;
         return this;
@@ -29,9 +30,11 @@ public class RoutingVPC {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public RoutingVPC withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public RoutingVPC(){}
 }

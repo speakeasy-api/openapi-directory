@@ -19,6 +19,7 @@ public class ListProjectsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListProjectsInput withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListProjectsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListProjectsInput withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListProjectsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,6 +48,7 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListProjectsInput withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -53,6 +57,7 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProjectsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +66,7 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ProjectSortByEnum sortBy;
+
     public ListProjectsInput withSortBy(ProjectSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,9 +75,11 @@ public class ListProjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public ProjectSortOrderEnum sortOrder;
+
     public ListProjectsInput withSortOrder(ProjectSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListProjectsInput(){}
 }

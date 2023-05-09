@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCustomFieldsIdJsonResponse {
     
     public String contentType;
+
     public PutCustomFieldsIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutCustomFieldsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomField customField;
+
     public PutCustomFieldsIdJsonResponse withCustomField(org.openapis.openapi.models.shared.CustomField customField) {
         this.customField = customField;
         return this;
@@ -29,6 +32,7 @@ public class PutCustomFieldsIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutCustomFieldsIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class PutCustomFieldsIdJsonResponse {
     
     
     public Integer statusCode;
+
     public PutCustomFieldsIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutCustomFieldsIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCustomFieldsIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutCustomFieldsIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

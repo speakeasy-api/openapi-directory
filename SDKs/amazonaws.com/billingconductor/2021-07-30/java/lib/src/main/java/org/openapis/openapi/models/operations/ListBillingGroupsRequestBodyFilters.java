@@ -15,6 +15,7 @@ public class ListBillingGroupsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arns")
     public String[] arns;
+
     public ListBillingGroupsRequestBodyFilters withArns(String[] arns) {
         this.arns = arns;
         return this;
@@ -23,6 +24,7 @@ public class ListBillingGroupsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public String pricingPlan;
+
     public ListBillingGroupsRequestBodyFilters withPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -31,9 +33,11 @@ public class ListBillingGroupsRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statuses")
     public org.openapis.openapi.models.shared.BillingGroupStatusEnum[] statuses;
+
     public ListBillingGroupsRequestBodyFilters withStatuses(org.openapis.openapi.models.shared.BillingGroupStatusEnum[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public ListBillingGroupsRequestBodyFilters(){}
 }

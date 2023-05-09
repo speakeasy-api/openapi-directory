@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableImportFindingsForProductResponse {
     
     public String contentType;
+
     public EnableImportFindingsForProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnableImportFindingsForProductResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableImportFindingsForProductResponse enableImportFindingsForProductResponse;
+
     public EnableImportFindingsForProductResponse withEnableImportFindingsForProductResponse(org.openapis.openapi.models.shared.EnableImportFindingsForProductResponse enableImportFindingsForProductResponse) {
         this.enableImportFindingsForProductResponse = enableImportFindingsForProductResponse;
         return this;
@@ -29,6 +32,7 @@ public class EnableImportFindingsForProductResponse {
      */
     
     public Object internalException;
+
     public EnableImportFindingsForProductResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class EnableImportFindingsForProductResponse {
      */
     
     public Object invalidAccessException;
+
     public EnableImportFindingsForProductResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class EnableImportFindingsForProductResponse {
      */
     
     public Object invalidInputException;
+
     public EnableImportFindingsForProductResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class EnableImportFindingsForProductResponse {
      */
     
     public Object limitExceededException;
+
     public EnableImportFindingsForProductResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class EnableImportFindingsForProductResponse {
      */
     
     public Object resourceConflictException;
+
     public EnableImportFindingsForProductResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -76,6 +84,7 @@ public class EnableImportFindingsForProductResponse {
     
     
     public Integer statusCode;
+
     public EnableImportFindingsForProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class EnableImportFindingsForProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableImportFindingsForProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EnableImportFindingsForProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ListNotificationChannelDescriptorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelDescriptors")
     public NotificationChannelDescriptor[] channelDescriptors;
+
     public ListNotificationChannelDescriptorsResponse withChannelDescriptors(NotificationChannelDescriptor[] channelDescriptors) {
         this.channelDescriptors = channelDescriptors;
         return this;
@@ -29,9 +30,11 @@ public class ListNotificationChannelDescriptorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListNotificationChannelDescriptorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListNotificationChannelDescriptorsResponse(){}
 }

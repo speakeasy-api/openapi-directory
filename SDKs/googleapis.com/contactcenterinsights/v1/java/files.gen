@@ -52,6 +52,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsPr
 lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsConversationsListViewEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsConversationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsConversationsListResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsConversationsUploadSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsConversationsUploadRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsConversationsUploadResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsInsightsdataExportSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsInsightsdataExportRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsProjectsLocationsInsightsdataExportResponse.java
@@ -104,9 +107,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/ContactcenterinsightsPr
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningOperation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleRpcStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1Analysis.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnalysisInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1Analysis.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnnotatorSelector.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfigSummarizationModelEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnalysisResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationLevelSentiment.java
@@ -131,8 +136,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterins
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeries.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesInterval.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationMediumEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1Conversation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1Conversation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationTranscript.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo.java
@@ -144,15 +149,16 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterins
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1FaqAnswerData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1DialogflowInteractionData.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ArticleSuggestionData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1AnswerFeedback.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1DialogflowIntent.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationDataSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationDataSourceInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationDataSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1GcsSource.java
-lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1DialogflowSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1DialogflowSourceInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1DialogflowSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ConversationCallMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1IngestConversationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum.java
@@ -160,6 +166,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterins
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ListConversationsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1UploadConversationRequestInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1RedactionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination.java
@@ -190,4 +198,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterins
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ViewInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1View.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudContactcenterinsightsV1ListViewsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

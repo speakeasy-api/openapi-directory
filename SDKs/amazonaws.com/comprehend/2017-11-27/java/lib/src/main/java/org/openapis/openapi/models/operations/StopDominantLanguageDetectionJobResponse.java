@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopDominantLanguageDetectionJobResponse {
     
     public String contentType;
+
     public StopDominantLanguageDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopDominantLanguageDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StopDominantLanguageDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopDominantLanguageDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopDominantLanguageDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopDominantLanguageDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public StopDominantLanguageDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopDominantLanguageDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StopDominantLanguageDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopDominantLanguageDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopDominantLanguageDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopDominantLanguageDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopDominantLanguageDetectionJobResponse stopDominantLanguageDetectionJobResponse;
+
     public StopDominantLanguageDetectionJobResponse withStopDominantLanguageDetectionJobResponse(org.openapis.openapi.models.shared.StopDominantLanguageDetectionJobResponse stopDominantLanguageDetectionJobResponse) {
         this.stopDominantLanguageDetectionJobResponse = stopDominantLanguageDetectionJobResponse;
         return this;
     }
     
+    public StopDominantLanguageDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CustomizedMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public MetricDimension[] dimensions;
+
     public CustomizedMetricSpecification withDimensions(MetricDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +24,7 @@ public class CustomizedMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public CustomizedMetricSpecification withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,6 +33,7 @@ public class CustomizedMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public TargetTrackingMetricDataQuery[] metrics;
+
     public CustomizedMetricSpecification withMetrics(TargetTrackingMetricDataQuery[] metrics) {
         this.metrics = metrics;
         return this;
@@ -39,6 +42,7 @@ public class CustomizedMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public CustomizedMetricSpecification withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -47,6 +51,7 @@ public class CustomizedMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistic")
     public MetricStatisticEnum statistic;
+
     public CustomizedMetricSpecification withStatistic(MetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -55,9 +60,11 @@ public class CustomizedMetricSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public CustomizedMetricSpecification withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public CustomizedMetricSpecification(){}
 }

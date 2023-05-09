@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyIpamScopeRequest {
     
     public String description;
+
     public ModifyIpamScopeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class ModifyIpamScopeRequest {
     
     
     public Boolean dryRun;
+
     public ModifyIpamScopeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class ModifyIpamScopeRequest {
     
     
     public String ipamScopeId;
+
     public ModifyIpamScopeRequest withIpamScopeId(String ipamScopeId) {
         this.ipamScopeId = ipamScopeId;
         return this;
     }
     
+    public ModifyIpamScopeRequest(@JsonProperty("IpamScopeId") String ipamScopeId) {
+        this.ipamScopeId = ipamScopeId;
+  }
 }

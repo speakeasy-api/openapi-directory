@@ -18,6 +18,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicableCountries")
     public String[] applicableCountries;
+
     public CollectionStatusItemLevelIssue withApplicableCountries(String[] applicableCountries) {
         this.applicableCountries = applicableCountries;
         return this;
@@ -29,6 +30,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeName")
     public String attributeName;
+
     public CollectionStatusItemLevelIssue withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -40,6 +42,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CollectionStatusItemLevelIssue withCode(String code) {
         this.code = code;
         return this;
@@ -51,6 +54,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CollectionStatusItemLevelIssue withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public CollectionStatusItemLevelIssue withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -73,6 +78,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public CollectionStatusItemLevelIssue withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -84,6 +90,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation")
     public String documentation;
+
     public CollectionStatusItemLevelIssue withDocumentation(String documentation) {
         this.documentation = documentation;
         return this;
@@ -95,6 +102,7 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public String resolution;
+
     public CollectionStatusItemLevelIssue withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -106,9 +114,11 @@ public class CollectionStatusItemLevelIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servability")
     public String servability;
+
     public CollectionStatusItemLevelIssue withServability(String servability) {
         this.servability = servability;
         return this;
     }
     
+    public CollectionStatusItemLevelIssue(){}
 }

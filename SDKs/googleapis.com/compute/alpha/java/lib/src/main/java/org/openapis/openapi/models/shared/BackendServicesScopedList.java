@@ -15,6 +15,7 @@ public class BackendServicesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendServices")
     public BackendService[] backendServices;
+
     public BackendServicesScopedList withBackendServices(BackendService[] backendServices) {
         this.backendServices = backendServices;
         return this;
@@ -26,9 +27,11 @@ public class BackendServicesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public BackendServicesScopedListWarning warning;
+
     public BackendServicesScopedList withWarning(BackendServicesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public BackendServicesScopedList(){}
 }

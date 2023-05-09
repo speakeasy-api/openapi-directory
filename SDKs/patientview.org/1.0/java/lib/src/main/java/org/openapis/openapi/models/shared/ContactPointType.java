@@ -12,6 +12,7 @@ public class ContactPointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ContactPointType withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class ContactPointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ContactPointType withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class ContactPointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookupType")
     public LookupType lookupType;
+
     public ContactPointType withLookupType(LookupType lookupType) {
         this.lookupType = lookupType;
         return this;
@@ -36,9 +39,11 @@ public class ContactPointType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public ContactPointTypeValueEnum value;
+
     public ContactPointType withValue(ContactPointTypeValueEnum value) {
         this.value = value;
         return this;
     }
     
+    public ContactPointType(){}
 }

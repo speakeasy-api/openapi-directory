@@ -15,9 +15,11 @@ public class SnsTopicConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicPolicy")
     public String topicPolicy;
+
     public SnsTopicConfiguration withTopicPolicy(String topicPolicy) {
         this.topicPolicy = topicPolicy;
         return this;
     }
     
+    public SnsTopicConfiguration(){}
 }

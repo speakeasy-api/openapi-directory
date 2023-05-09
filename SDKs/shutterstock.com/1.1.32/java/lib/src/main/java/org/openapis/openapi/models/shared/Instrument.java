@@ -18,6 +18,7 @@ public class Instrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Instrument withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Instrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Instrument withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Instrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previews")
     public Preview[] previews;
+
     public Instrument withPreviews(Preview[] previews) {
         this.previews = previews;
         return this;
@@ -51,9 +54,11 @@ public class Instrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public Instrument withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Instrument(){}
 }

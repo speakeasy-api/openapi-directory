@@ -15,6 +15,7 @@ public class Gicer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Gicer500ApplicationJSONErrorEnum error;
+
     public Gicer500ApplicationJSON withError(Gicer500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Gicer500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Gicer500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Gicer500ApplicationJSON withErrorDescription(Gicer500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Gicer500ApplicationJSON(){}
 }

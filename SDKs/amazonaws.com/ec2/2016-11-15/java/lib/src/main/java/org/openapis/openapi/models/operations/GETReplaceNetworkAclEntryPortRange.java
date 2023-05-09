@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETReplaceNetworkAclEntryPortRange {
     @SpeakeasyMetadata("queryParam:name=From")
     public Long from;
+
     public GETReplaceNetworkAclEntryPortRange withFrom(Long from) {
         this.from = from;
         return this;
@@ -19,9 +20,11 @@ public class GETReplaceNetworkAclEntryPortRange {
     
     @SpeakeasyMetadata("queryParam:name=To")
     public Long to;
+
     public GETReplaceNetworkAclEntryPortRange withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public GETReplaceNetworkAclEntryPortRange(){}
 }

@@ -15,6 +15,7 @@ public class CancelthetransactionRequestMinicart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freight")
     public Integer freight;
+
     public CancelthetransactionRequestMinicart withFreight(Integer freight) {
         this.freight = freight;
         return this;
@@ -23,6 +24,7 @@ public class CancelthetransactionRequestMinicart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Object[] items;
+
     public CancelthetransactionRequestMinicart withItems(Object[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class CancelthetransactionRequestMinicart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Integer tax;
+
     public CancelthetransactionRequestMinicart withTax(Integer tax) {
         this.tax = tax;
         return this;
     }
     
+    public CancelthetransactionRequestMinicart(){}
 }

@@ -15,9 +15,11 @@ public class DescribeServiceActionExecutionParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceActionParameters")
     public ExecutionParameter[] serviceActionParameters;
+
     public DescribeServiceActionExecutionParametersOutput withServiceActionParameters(ExecutionParameter[] serviceActionParameters) {
         this.serviceActionParameters = serviceActionParameters;
         return this;
     }
     
+    public DescribeServiceActionExecutionParametersOutput(){}
 }

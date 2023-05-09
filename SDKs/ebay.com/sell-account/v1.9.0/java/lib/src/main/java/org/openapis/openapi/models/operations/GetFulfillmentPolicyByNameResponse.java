@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFulfillmentPolicyByNameResponse {
     
     public String contentType;
+
     public GetFulfillmentPolicyByNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFulfillmentPolicyByNameResponse {
      */
     
     public org.openapis.openapi.models.shared.FulfillmentPolicy fulfillmentPolicy;
+
     public GetFulfillmentPolicyByNameResponse withFulfillmentPolicy(org.openapis.openapi.models.shared.FulfillmentPolicy fulfillmentPolicy) {
         this.fulfillmentPolicy = fulfillmentPolicy;
         return this;
@@ -26,6 +29,7 @@ public class GetFulfillmentPolicyByNameResponse {
     
     
     public Integer statusCode;
+
     public GetFulfillmentPolicyByNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetFulfillmentPolicyByNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFulfillmentPolicyByNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFulfillmentPolicyByNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

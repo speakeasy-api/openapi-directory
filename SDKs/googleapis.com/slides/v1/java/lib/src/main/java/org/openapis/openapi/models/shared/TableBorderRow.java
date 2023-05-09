@@ -18,9 +18,11 @@ public class TableBorderRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableBorderCells")
     public TableBorderCell[] tableBorderCells;
+
     public TableBorderRow withTableBorderCells(TableBorderCell[] tableBorderCells) {
         this.tableBorderCells = tableBorderCells;
         return this;
     }
     
+    public TableBorderRow(){}
 }

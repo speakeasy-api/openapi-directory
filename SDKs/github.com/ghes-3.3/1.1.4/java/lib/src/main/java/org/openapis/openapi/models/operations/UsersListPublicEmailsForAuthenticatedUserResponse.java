@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersListPublicEmailsForAuthenticatedUserResponse {
     
     public String contentType;
+
     public UsersListPublicEmailsForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersListPublicEmailsForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UsersListPublicEmailsForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UsersListPublicEmailsForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public UsersListPublicEmailsForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UsersListPublicEmailsForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersListPublicEmailsForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class UsersListPublicEmailsForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersListPublicEmailsForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class UsersListPublicEmailsForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Email[] emails;
+
     public UsersListPublicEmailsForAuthenticatedUserResponse withEmails(org.openapis.openapi.models.shared.Email[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public UsersListPublicEmailsForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

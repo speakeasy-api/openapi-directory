@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DrivingLicenseSchemaIssuedBy {
     
     public DrivingLicenseSchemaIssuedByOrganization organization;
+
     public DrivingLicenseSchemaIssuedBy withOrganization(DrivingLicenseSchemaIssuedByOrganization organization) {
         this.organization = organization;
         return this;
     }
     
+    public DrivingLicenseSchemaIssuedBy(@JsonProperty("Organization") DrivingLicenseSchemaIssuedByOrganization organization) {
+        this.organization = organization;
+  }
 }

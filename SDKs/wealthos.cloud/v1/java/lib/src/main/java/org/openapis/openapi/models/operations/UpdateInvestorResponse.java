@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInvestorResponse {
     
     public String contentType;
+
     public UpdateInvestorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestorRootTypeForInvestor rootTypeForInvestor;
+
     public UpdateInvestorResponse withRootTypeForInvestor(UpdateInvestorRootTypeForInvestor rootTypeForInvestor) {
         this.rootTypeForInvestor = rootTypeForInvestor;
         return this;
@@ -26,6 +29,7 @@ public class UpdateInvestorResponse {
     
     
     public Integer statusCode;
+
     public UpdateInvestorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateInvestorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInvestorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestor400ApplicationJSON updateInvestor400ApplicationJSONObject;
+
     public UpdateInvestorResponse withUpdateInvestor400ApplicationJSONObject(UpdateInvestor400ApplicationJSON updateInvestor400ApplicationJSONObject) {
         this.updateInvestor400ApplicationJSONObject = updateInvestor400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestor401ApplicationJSON updateInvestor401ApplicationJSONObject;
+
     public UpdateInvestorResponse withUpdateInvestor401ApplicationJSONObject(UpdateInvestor401ApplicationJSON updateInvestor401ApplicationJSONObject) {
         this.updateInvestor401ApplicationJSONObject = updateInvestor401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestor403ApplicationJSON updateInvestor403ApplicationJSONObject;
+
     public UpdateInvestorResponse withUpdateInvestor403ApplicationJSONObject(UpdateInvestor403ApplicationJSON updateInvestor403ApplicationJSONObject) {
         this.updateInvestor403ApplicationJSONObject = updateInvestor403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestor404ApplicationJSON updateInvestor404ApplicationJSONObject;
+
     public UpdateInvestorResponse withUpdateInvestor404ApplicationJSONObject(UpdateInvestor404ApplicationJSON updateInvestor404ApplicationJSONObject) {
         this.updateInvestor404ApplicationJSONObject = updateInvestor404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestor409ApplicationJSON updateInvestor409ApplicationJSONObject;
+
     public UpdateInvestorResponse withUpdateInvestor409ApplicationJSONObject(UpdateInvestor409ApplicationJSON updateInvestor409ApplicationJSONObject) {
         this.updateInvestor409ApplicationJSONObject = updateInvestor409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestor429ApplicationJSON updateInvestor429ApplicationJSONObject;
+
     public UpdateInvestorResponse withUpdateInvestor429ApplicationJSONObject(UpdateInvestor429ApplicationJSON updateInvestor429ApplicationJSONObject) {
         this.updateInvestor429ApplicationJSONObject = updateInvestor429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class UpdateInvestorResponse {
      */
     
     public UpdateInvestor500ApplicationJSON updateInvestor500ApplicationJSONObject;
+
     public UpdateInvestorResponse withUpdateInvestor500ApplicationJSONObject(UpdateInvestor500ApplicationJSON updateInvestor500ApplicationJSONObject) {
         this.updateInvestor500ApplicationJSONObject = updateInvestor500ApplicationJSONObject;
         return this;
     }
     
+    public UpdateInvestorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

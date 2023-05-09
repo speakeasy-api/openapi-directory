@@ -23,6 +23,7 @@ public class UserDetailsAdminLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public UserDetailsAdminLicense withActive(Boolean active) {
         this.active = active;
         return this;
@@ -36,6 +37,7 @@ public class UserDetailsAdminLicense {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public UserDetailsAdminLicense withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -47,6 +49,7 @@ public class UserDetailsAdminLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UserDetailsAdminLicense withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +61,7 @@ public class UserDetailsAdminLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public LicenseModeEnum mode;
+
     public UserDetailsAdminLicense withMode(LicenseModeEnum mode) {
         this.mode = mode;
         return this;
@@ -69,9 +73,11 @@ public class UserDetailsAdminLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public LicenseSourcesEnum source;
+
     public UserDetailsAdminLicense withSource(LicenseSourcesEnum source) {
         this.source = source;
         return this;
     }
     
+    public UserDetailsAdminLicense(){}
 }

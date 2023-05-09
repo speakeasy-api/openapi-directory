@@ -12,6 +12,7 @@ public class GetBucketsSchemaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection:schema")
     public java.util.Map<String, Object> collectionSchema;
+
     public GetBucketsSchemaData withCollectionSchema(java.util.Map<String, Object> collectionSchema) {
         this.collectionSchema = collectionSchema;
         return this;
@@ -20,6 +21,7 @@ public class GetBucketsSchemaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group:schema")
     public java.util.Map<String, Object> groupSchema;
+
     public GetBucketsSchemaData withGroupSchema(java.util.Map<String, Object> groupSchema) {
         this.groupSchema = groupSchema;
         return this;
@@ -28,9 +30,11 @@ public class GetBucketsSchemaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record:schema")
     public java.util.Map<String, Object> recordSchema;
+
     public GetBucketsSchemaData withRecordSchema(java.util.Map<String, Object> recordSchema) {
         this.recordSchema = recordSchema;
         return this;
     }
     
+    public GetBucketsSchemaData(){}
 }

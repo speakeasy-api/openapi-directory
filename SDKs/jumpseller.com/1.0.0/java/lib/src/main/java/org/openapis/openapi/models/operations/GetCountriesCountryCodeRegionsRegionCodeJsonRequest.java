@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountriesCountryCodeRegionsRegionCodeJsonRequest {
@@ -12,6 +13,7 @@ public class GetCountriesCountryCodeRegionsRegionCodeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetCountriesCountryCodeRegionsRegionCodeJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country_code")
     public String countryCode;
+
     public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -32,6 +35,7 @@ public class GetCountriesCountryCodeRegionsRegionCodeJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -42,9 +46,16 @@ public class GetCountriesCountryCodeRegionsRegionCodeJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region_code")
     public String regionCode;
+
     public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public GetCountriesCountryCodeRegionsRegionCodeJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("country_code") String countryCode, @JsonProperty("login") String login, @JsonProperty("region_code") String regionCode) {
+        this.authtoken = authtoken;
+        this.countryCode = countryCode;
+        this.login = login;
+        this.regionCode = regionCode;
+  }
 }

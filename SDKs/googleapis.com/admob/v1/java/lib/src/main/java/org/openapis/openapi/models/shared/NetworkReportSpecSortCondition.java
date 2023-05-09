@@ -18,6 +18,7 @@ public class NetworkReportSpecSortCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public NetworkReportSpecSortConditionDimensionEnum dimension;
+
     public NetworkReportSpecSortCondition withDimension(NetworkReportSpecSortConditionDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -29,6 +30,7 @@ public class NetworkReportSpecSortCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public NetworkReportSpecSortConditionMetricEnum metric;
+
     public NetworkReportSpecSortCondition withMetric(NetworkReportSpecSortConditionMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -40,9 +42,11 @@ public class NetworkReportSpecSortCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public NetworkReportSpecSortConditionOrderEnum order;
+
     public NetworkReportSpecSortCondition withOrder(NetworkReportSpecSortConditionOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public NetworkReportSpecSortCondition(){}
 }

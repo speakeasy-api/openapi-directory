@@ -15,6 +15,7 @@ public class AutoInstallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoInstallConstraint")
     public AutoInstallConstraint[] autoInstallConstraint;
+
     public AutoInstallPolicy withAutoInstallConstraint(AutoInstallConstraint[] autoInstallConstraint) {
         this.autoInstallConstraint = autoInstallConstraint;
         return this;
@@ -26,6 +27,7 @@ public class AutoInstallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoInstallMode")
     public AutoInstallPolicyAutoInstallModeEnum autoInstallMode;
+
     public AutoInstallPolicy withAutoInstallMode(AutoInstallPolicyAutoInstallModeEnum autoInstallMode) {
         this.autoInstallMode = autoInstallMode;
         return this;
@@ -37,6 +39,7 @@ public class AutoInstallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoInstallPriority")
     public Integer autoInstallPriority;
+
     public AutoInstallPolicy withAutoInstallPriority(Integer autoInstallPriority) {
         this.autoInstallPriority = autoInstallPriority;
         return this;
@@ -48,9 +51,11 @@ public class AutoInstallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumVersionCode")
     public Integer minimumVersionCode;
+
     public AutoInstallPolicy withMinimumVersionCode(Integer minimumVersionCode) {
         this.minimumVersionCode = minimumVersionCode;
         return this;
     }
     
+    public AutoInstallPolicy(){}
 }

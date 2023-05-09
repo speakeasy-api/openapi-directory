@@ -12,6 +12,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseExact")
     public Boolean caseExact;
+
     public ScimSchemaAttribute withCaseExact(Boolean caseExact) {
         this.caseExact = caseExact;
         return this;
@@ -20,6 +21,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScimSchemaAttribute withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiValued")
     public Boolean multiValued;
+
     public ScimSchemaAttribute withMultiValued(Boolean multiValued) {
         this.multiValued = multiValued;
         return this;
@@ -36,6 +39,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutability")
     public String mutability;
+
     public ScimSchemaAttribute withMutability(String mutability) {
         this.mutability = mutability;
         return this;
@@ -44,6 +48,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScimSchemaAttribute withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public ScimSchemaAttribute withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -60,6 +66,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returned")
     public String returned;
+
     public ScimSchemaAttribute withReturned(String returned) {
         this.returned = returned;
         return this;
@@ -68,6 +75,7 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ScimSchemaAttributeTypeEnum type;
+
     public ScimSchemaAttribute withType(ScimSchemaAttributeTypeEnum type) {
         this.type = type;
         return this;
@@ -76,9 +84,11 @@ public class ScimSchemaAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueness")
     public String uniqueness;
+
     public ScimSchemaAttribute withUniqueness(String uniqueness) {
         this.uniqueness = uniqueness;
         return this;
     }
     
+    public ScimSchemaAttribute(){}
 }

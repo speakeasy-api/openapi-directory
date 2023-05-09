@@ -15,6 +15,7 @@ public class SignalExternalWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public SignalExternalWorkflowExecutionDecisionAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -23,6 +24,7 @@ public class SignalExternalWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public SignalExternalWorkflowExecutionDecisionAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -31,6 +33,7 @@ public class SignalExternalWorkflowExecutionDecisionAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public SignalExternalWorkflowExecutionDecisionAttributes withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -38,6 +41,7 @@ public class SignalExternalWorkflowExecutionDecisionAttributes {
     
     @JsonProperty("signalName")
     public String signalName;
+
     public SignalExternalWorkflowExecutionDecisionAttributes withSignalName(String signalName) {
         this.signalName = signalName;
         return this;
@@ -45,9 +49,14 @@ public class SignalExternalWorkflowExecutionDecisionAttributes {
     
     @JsonProperty("workflowId")
     public String workflowId;
+
     public SignalExternalWorkflowExecutionDecisionAttributes withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public SignalExternalWorkflowExecutionDecisionAttributes(@JsonProperty("signalName") String signalName, @JsonProperty("workflowId") String workflowId) {
+        this.signalName = signalName;
+        this.workflowId = workflowId;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetServerCertificateResponse - Contains the response to a successful &lt;a&gt;GetServerCertificate&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetServerCertificateResponse {
     
     public ServerCertificate serverCertificate;
+
     public GetServerCertificateResponse withServerCertificate(ServerCertificate serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
     }
     
+    public GetServerCertificateResponse(@JsonProperty("ServerCertificate") ServerCertificate serverCertificate) {
+        this.serverCertificate = serverCertificate;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStackResponse {
@@ -12,6 +13,7 @@ public class DeleteStackResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteStackResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteStackResponse {
     
     
     public String contentType;
+
     public DeleteStackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStackResponse {
      */
     
     public java.util.Map<String, Object> deleteStackResult;
+
     public DeleteStackResponse withDeleteStackResult(java.util.Map<String, Object> deleteStackResult) {
         this.deleteStackResult = deleteStackResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStackResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteStackResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteStackResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteStackResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteStackResponse {
     
     
     public Integer statusCode;
+
     public DeleteStackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteStackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteStackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteStackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteStackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

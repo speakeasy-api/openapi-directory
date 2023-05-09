@@ -69,11 +69,9 @@ public class MobileAuthorization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeResponse res = new org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeResponse() {{
+        org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeResponse res = new org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeResponse(contentType, httpRes.statusCode()) {{
             createMobileAuthorizationCodeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class AllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstancePolicyOrTemplate[] instances;
+
     public AllocationPolicy withInstances(InstancePolicyOrTemplate[] instances) {
         this.instances = instances;
         return this;
@@ -29,6 +30,7 @@ public class AllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AllocationPolicy withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -37,6 +39,7 @@ public class AllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public LocationPolicy location;
+
     public AllocationPolicy withLocation(LocationPolicy location) {
         this.location = location;
         return this;
@@ -48,8 +51,21 @@ public class AllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public NetworkPolicy network;
+
     public AllocationPolicy withNetwork(NetworkPolicy network) {
         this.network = network;
+        return this;
+    }
+    
+    /**
+     * PlacementPolicy describes a group placement policy for the VMs controlled by this AllocationPolicy.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("placement")
+    public PlacementPolicy placement;
+
+    public AllocationPolicy withPlacement(PlacementPolicy placement) {
+        this.placement = placement;
         return this;
     }
     
@@ -59,9 +75,11 @@ public class AllocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public ServiceAccount serviceAccount;
+
     public AllocationPolicy withServiceAccount(ServiceAccount serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
     }
     
+    public AllocationPolicy(){}
 }

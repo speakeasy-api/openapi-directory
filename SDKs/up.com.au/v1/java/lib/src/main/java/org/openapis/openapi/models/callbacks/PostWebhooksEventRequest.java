@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.callbacks;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksEventRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WebhookEventCallback webhookEventCallback;
+
     public PostWebhooksEventRequest withWebhookEventCallback(org.openapis.openapi.models.shared.WebhookEventCallback webhookEventCallback) {
         this.webhookEventCallback = webhookEventCallback;
         return this;
@@ -21,6 +23,7 @@ public class PostWebhooksEventRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Up-Authenticity-Signature")
     public String xUpAuthenticitySignature;
+
     public PostWebhooksEventRequest withXUpAuthenticitySignature(String xUpAuthenticitySignature) {
         this.xUpAuthenticitySignature = xUpAuthenticitySignature;
         return this;
@@ -31,9 +34,13 @@ public class PostWebhooksEventRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookURL")
     public String webhookURL;
+
     public PostWebhooksEventRequest withWebhookURL(String webhookURL) {
         this.webhookURL = webhookURL;
         return this;
     }
     
+    public PostWebhooksEventRequest(@JsonProperty("webhookURL") String webhookURL) {
+        this.webhookURL = webhookURL;
+  }
 }

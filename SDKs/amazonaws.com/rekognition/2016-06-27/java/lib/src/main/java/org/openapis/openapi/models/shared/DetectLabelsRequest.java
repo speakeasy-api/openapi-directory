@@ -12,6 +12,7 @@ public class DetectLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Features")
     public DetectLabelsFeatureNameEnum[] features;
+
     public DetectLabelsRequest withFeatures(DetectLabelsFeatureNameEnum[] features) {
         this.features = features;
         return this;
@@ -19,6 +20,7 @@ public class DetectLabelsRequest {
     
     @JsonProperty("Image")
     public Image image;
+
     public DetectLabelsRequest withImage(Image image) {
         this.image = image;
         return this;
@@ -27,6 +29,7 @@ public class DetectLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxLabels")
     public Long maxLabels;
+
     public DetectLabelsRequest withMaxLabels(Long maxLabels) {
         this.maxLabels = maxLabels;
         return this;
@@ -35,6 +38,7 @@ public class DetectLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public DetectLabelsRequest withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
@@ -43,9 +47,13 @@ public class DetectLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public DetectLabelsSettings settings;
+
     public DetectLabelsRequest withSettings(DetectLabelsSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public DetectLabelsRequest(@JsonProperty("Image") Image image) {
+        this.image = image;
+  }
 }

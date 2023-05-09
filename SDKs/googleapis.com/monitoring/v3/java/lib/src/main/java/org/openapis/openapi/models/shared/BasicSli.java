@@ -18,6 +18,7 @@ public class BasicSli {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public java.util.Map<String, Object> availability;
+
     public BasicSli withAvailability(java.util.Map<String, Object> availability) {
         this.availability = availability;
         return this;
@@ -29,6 +30,7 @@ public class BasicSli {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latency")
     public LatencyCriteria latency;
+
     public BasicSli withLatency(LatencyCriteria latency) {
         this.latency = latency;
         return this;
@@ -40,6 +42,7 @@ public class BasicSli {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String[] location;
+
     public BasicSli withLocation(String[] location) {
         this.location = location;
         return this;
@@ -51,6 +54,7 @@ public class BasicSli {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String[] method;
+
     public BasicSli withMethod(String[] method) {
         this.method = method;
         return this;
@@ -62,9 +66,11 @@ public class BasicSli {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String[] version;
+
     public BasicSli withVersion(String[] version) {
         this.version = version;
         return this;
     }
     
+    public BasicSli(){}
 }

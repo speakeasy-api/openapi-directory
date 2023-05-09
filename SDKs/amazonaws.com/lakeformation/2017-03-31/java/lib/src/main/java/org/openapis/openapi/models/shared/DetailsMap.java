@@ -15,9 +15,11 @@ public class DetailsMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceShare")
     public String[] resourceShare;
+
     public DetailsMap withResourceShare(String[] resourceShare) {
         this.resourceShare = resourceShare;
         return this;
     }
     
+    public DetailsMap(){}
 }

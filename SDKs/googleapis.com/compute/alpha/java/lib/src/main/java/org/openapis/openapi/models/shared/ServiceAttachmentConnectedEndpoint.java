@@ -18,6 +18,7 @@ public class ServiceAttachmentConnectedEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public ServiceAttachmentConnectedEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -29,6 +30,7 @@ public class ServiceAttachmentConnectedEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pscConnectionId")
     public String pscConnectionId;
+
     public ServiceAttachmentConnectedEndpoint withPscConnectionId(String pscConnectionId) {
         this.pscConnectionId = pscConnectionId;
         return this;
@@ -40,9 +42,11 @@ public class ServiceAttachmentConnectedEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ServiceAttachmentConnectedEndpointStatusEnum status;
+
     public ServiceAttachmentConnectedEndpoint withStatus(ServiceAttachmentConnectedEndpointStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ServiceAttachmentConnectedEndpoint(){}
 }

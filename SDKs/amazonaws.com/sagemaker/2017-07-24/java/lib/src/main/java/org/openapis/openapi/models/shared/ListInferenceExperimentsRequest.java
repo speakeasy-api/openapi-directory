@@ -19,6 +19,7 @@ public class ListInferenceExperimentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListInferenceExperimentsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListInferenceExperimentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListInferenceExperimentsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -39,6 +41,7 @@ public class ListInferenceExperimentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListInferenceExperimentsRequest withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -49,6 +52,7 @@ public class ListInferenceExperimentsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListInferenceExperimentsRequest withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -57,6 +61,7 @@ public class ListInferenceExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInferenceExperimentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +70,7 @@ public class ListInferenceExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListInferenceExperimentsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -73,6 +79,7 @@ public class ListInferenceExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceExperimentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +88,7 @@ public class ListInferenceExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortInferenceExperimentsByEnum sortBy;
+
     public ListInferenceExperimentsRequest withSortBy(SortInferenceExperimentsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -89,6 +97,7 @@ public class ListInferenceExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListInferenceExperimentsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -97,6 +106,7 @@ public class ListInferenceExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public InferenceExperimentStatusEnum statusEquals;
+
     public ListInferenceExperimentsRequest withStatusEquals(InferenceExperimentStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
@@ -105,9 +115,11 @@ public class ListInferenceExperimentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public InferenceExperimentTypeEnum type;
+
     public ListInferenceExperimentsRequest withType(InferenceExperimentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListInferenceExperimentsRequest(){}
 }

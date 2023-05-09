@@ -18,6 +18,7 @@ public class DoubleRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Double end;
+
     public DoubleRange withEnd(Double end) {
         this.end = end;
         return this;
@@ -29,9 +30,11 @@ public class DoubleRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Double start;
+
     public DoubleRange withStart(Double start) {
         this.start = start;
         return this;
     }
     
+    public DoubleRange(){}
 }

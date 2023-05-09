@@ -15,6 +15,7 @@ public class RecommendationRelatedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RecommendationRelatedEvent withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationRelatedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public RecommendationRelatedEventResource[] resources;
+
     public RecommendationRelatedEvent withResources(RecommendationRelatedEventResource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public RecommendationRelatedEvent(){}
 }

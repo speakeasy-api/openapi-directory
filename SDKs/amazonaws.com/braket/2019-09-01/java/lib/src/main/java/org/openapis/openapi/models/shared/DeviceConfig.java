@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeviceConfig {
     @JsonProperty("device")
     public String device;
+
     public DeviceConfig withDevice(String device) {
         this.device = device;
         return this;
     }
     
+    public DeviceConfig(@JsonProperty("device") String device) {
+        this.device = device;
+  }
 }

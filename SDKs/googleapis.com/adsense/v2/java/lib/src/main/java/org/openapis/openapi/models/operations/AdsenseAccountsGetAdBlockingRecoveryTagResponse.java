@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdsenseAccountsGetAdBlockingRecoveryTagResponse {
@@ -12,6 +13,7 @@ public class AdsenseAccountsGetAdBlockingRecoveryTagResponse {
      */
     
     public org.openapis.openapi.models.shared.AdBlockingRecoveryTag adBlockingRecoveryTag;
+
     public AdsenseAccountsGetAdBlockingRecoveryTagResponse withAdBlockingRecoveryTag(org.openapis.openapi.models.shared.AdBlockingRecoveryTag adBlockingRecoveryTag) {
         this.adBlockingRecoveryTag = adBlockingRecoveryTag;
         return this;
@@ -19,6 +21,7 @@ public class AdsenseAccountsGetAdBlockingRecoveryTagResponse {
     
     
     public String contentType;
+
     public AdsenseAccountsGetAdBlockingRecoveryTagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AdsenseAccountsGetAdBlockingRecoveryTagResponse {
     
     
     public Integer statusCode;
+
     public AdsenseAccountsGetAdBlockingRecoveryTagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdsenseAccountsGetAdBlockingRecoveryTagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdsenseAccountsGetAdBlockingRecoveryTagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdsenseAccountsGetAdBlockingRecoveryTagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

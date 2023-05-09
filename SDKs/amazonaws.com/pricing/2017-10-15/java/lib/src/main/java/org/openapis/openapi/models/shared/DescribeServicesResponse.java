@@ -15,6 +15,7 @@ public class DescribeServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FormatVersion")
     public String formatVersion;
+
     public DescribeServicesResponse withFormatVersion(String formatVersion) {
         this.formatVersion = formatVersion;
         return this;
@@ -23,6 +24,7 @@ public class DescribeServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeServicesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class DescribeServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Services")
     public Service[] services;
+
     public DescribeServicesResponse withServices(Service[] services) {
         this.services = services;
         return this;
     }
     
+    public DescribeServicesResponse(){}
 }

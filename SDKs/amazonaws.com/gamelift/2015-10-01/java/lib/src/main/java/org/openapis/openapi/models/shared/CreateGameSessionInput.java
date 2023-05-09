@@ -12,6 +12,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AliasId")
     public String aliasId;
+
     public CreateGameSessionInput withAliasId(String aliasId) {
         this.aliasId = aliasId;
         return this;
@@ -20,6 +21,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorId")
     public String creatorId;
+
     public CreateGameSessionInput withCreatorId(String creatorId) {
         this.creatorId = creatorId;
         return this;
@@ -28,6 +30,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public CreateGameSessionInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -36,6 +39,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameProperties")
     public GameProperty[] gameProperties;
+
     public CreateGameSessionInput withGameProperties(GameProperty[] gameProperties) {
         this.gameProperties = gameProperties;
         return this;
@@ -44,6 +48,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionData")
     public String gameSessionData;
+
     public CreateGameSessionInput withGameSessionData(String gameSessionData) {
         this.gameSessionData = gameSessionData;
         return this;
@@ -52,6 +57,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionId")
     public String gameSessionId;
+
     public CreateGameSessionInput withGameSessionId(String gameSessionId) {
         this.gameSessionId = gameSessionId;
         return this;
@@ -60,6 +66,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateGameSessionInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -68,6 +75,7 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public CreateGameSessionInput withLocation(String location) {
         this.location = location;
         return this;
@@ -75,6 +83,7 @@ public class CreateGameSessionInput {
     
     @JsonProperty("MaximumPlayerSessionCount")
     public Long maximumPlayerSessionCount;
+
     public CreateGameSessionInput withMaximumPlayerSessionCount(Long maximumPlayerSessionCount) {
         this.maximumPlayerSessionCount = maximumPlayerSessionCount;
         return this;
@@ -83,9 +92,13 @@ public class CreateGameSessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateGameSessionInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateGameSessionInput(@JsonProperty("MaximumPlayerSessionCount") Long maximumPlayerSessionCount) {
+        this.maximumPlayerSessionCount = maximumPlayerSessionCount;
+  }
 }

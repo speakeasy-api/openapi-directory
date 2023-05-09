@@ -15,6 +15,7 @@ public class ModelExplainabilityBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseliningJobName")
     public String baseliningJobName;
+
     public ModelExplainabilityBaselineConfig withBaseliningJobName(String baseliningJobName) {
         this.baseliningJobName = baseliningJobName;
         return this;
@@ -26,9 +27,11 @@ public class ModelExplainabilityBaselineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintsResource")
     public MonitoringConstraintsResource constraintsResource;
+
     public ModelExplainabilityBaselineConfig withConstraintsResource(MonitoringConstraintsResource constraintsResource) {
         this.constraintsResource = constraintsResource;
         return this;
     }
     
+    public ModelExplainabilityBaselineConfig(){}
 }

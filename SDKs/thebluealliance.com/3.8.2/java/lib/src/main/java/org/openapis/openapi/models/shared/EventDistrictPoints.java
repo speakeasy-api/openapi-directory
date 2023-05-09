@@ -17,6 +17,7 @@ public class EventDistrictPoints {
      */
     @JsonProperty("points")
     public java.util.Map<String, EventDistrictPointsPoints> points;
+
     public EventDistrictPoints withPoints(java.util.Map<String, EventDistrictPointsPoints> points) {
         this.points = points;
         return this;
@@ -28,9 +29,13 @@ public class EventDistrictPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tiebreakers")
     public java.util.Map<String, EventDistrictPointsTiebreakers> tiebreakers;
+
     public EventDistrictPoints withTiebreakers(java.util.Map<String, EventDistrictPointsTiebreakers> tiebreakers) {
         this.tiebreakers = tiebreakers;
         return this;
     }
     
+    public EventDistrictPoints(@JsonProperty("points") java.util.Map<String, EventDistrictPointsPoints> points) {
+        this.points = points;
+  }
 }

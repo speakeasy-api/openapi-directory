@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrossRegionCopyAction {
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public CrossRegionCopyAction withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -25,6 +26,7 @@ public class CrossRegionCopyAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetainRule")
     public CrossRegionCopyRetainRule retainRule;
+
     public CrossRegionCopyAction withRetainRule(CrossRegionCopyRetainRule retainRule) {
         this.retainRule = retainRule;
         return this;
@@ -32,9 +34,14 @@ public class CrossRegionCopyAction {
     
     @JsonProperty("Target")
     public String target;
+
     public CrossRegionCopyAction withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public CrossRegionCopyAction(@JsonProperty("EncryptionConfiguration") EncryptionConfiguration encryptionConfiguration, @JsonProperty("Target") String target) {
+        this.encryptionConfiguration = encryptionConfiguration;
+        this.target = target;
+  }
 }

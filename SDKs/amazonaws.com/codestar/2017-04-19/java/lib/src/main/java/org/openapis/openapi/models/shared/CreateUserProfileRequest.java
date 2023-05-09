@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUserProfileRequest {
     @JsonProperty("displayName")
     public String displayName;
+
     public CreateUserProfileRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -18,6 +19,7 @@ public class CreateUserProfileRequest {
     
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public CreateUserProfileRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -26,6 +28,7 @@ public class CreateUserProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public CreateUserProfileRequest withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -33,9 +36,15 @@ public class CreateUserProfileRequest {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public CreateUserProfileRequest withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public CreateUserProfileRequest(@JsonProperty("displayName") String displayName, @JsonProperty("emailAddress") String emailAddress, @JsonProperty("userArn") String userArn) {
+        this.displayName = displayName;
+        this.emailAddress = emailAddress;
+        this.userArn = userArn;
+  }
 }

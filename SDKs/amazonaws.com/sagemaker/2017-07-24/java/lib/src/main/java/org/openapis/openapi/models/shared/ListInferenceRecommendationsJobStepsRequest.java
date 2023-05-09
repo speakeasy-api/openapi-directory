@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListInferenceRecommendationsJobStepsRequest {
     @JsonProperty("JobName")
     public String jobName;
+
     public ListInferenceRecommendationsJobStepsRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -19,6 +20,7 @@ public class ListInferenceRecommendationsJobStepsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInferenceRecommendationsJobStepsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListInferenceRecommendationsJobStepsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceRecommendationsJobStepsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,6 +38,7 @@ public class ListInferenceRecommendationsJobStepsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RecommendationJobStatusEnum status;
+
     public ListInferenceRecommendationsJobStepsRequest withStatus(RecommendationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -43,9 +47,13 @@ public class ListInferenceRecommendationsJobStepsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepType")
     public RecommendationStepTypeEnum stepType;
+
     public ListInferenceRecommendationsJobStepsRequest withStepType(RecommendationStepTypeEnum stepType) {
         this.stepType = stepType;
         return this;
     }
     
+    public ListInferenceRecommendationsJobStepsRequest(@JsonProperty("JobName") String jobName) {
+        this.jobName = jobName;
+  }
 }

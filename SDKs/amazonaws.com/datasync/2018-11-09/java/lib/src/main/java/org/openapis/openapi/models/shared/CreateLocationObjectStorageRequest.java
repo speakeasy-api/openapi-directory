@@ -15,6 +15,7 @@ public class CreateLocationObjectStorageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKey")
     public String accessKey;
+
     public CreateLocationObjectStorageRequest withAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
@@ -22,6 +23,7 @@ public class CreateLocationObjectStorageRequest {
     
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public CreateLocationObjectStorageRequest withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -29,6 +31,7 @@ public class CreateLocationObjectStorageRequest {
     
     @JsonProperty("BucketName")
     public String bucketName;
+
     public CreateLocationObjectStorageRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -37,6 +40,7 @@ public class CreateLocationObjectStorageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretKey")
     public String secretKey;
+
     public CreateLocationObjectStorageRequest withSecretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
@@ -45,6 +49,7 @@ public class CreateLocationObjectStorageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerCertificate")
     public String serverCertificate;
+
     public CreateLocationObjectStorageRequest withServerCertificate(String serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
@@ -52,6 +57,7 @@ public class CreateLocationObjectStorageRequest {
     
     @JsonProperty("ServerHostname")
     public String serverHostname;
+
     public CreateLocationObjectStorageRequest withServerHostname(String serverHostname) {
         this.serverHostname = serverHostname;
         return this;
@@ -60,6 +66,7 @@ public class CreateLocationObjectStorageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerPort")
     public Long serverPort;
+
     public CreateLocationObjectStorageRequest withServerPort(Long serverPort) {
         this.serverPort = serverPort;
         return this;
@@ -68,6 +75,7 @@ public class CreateLocationObjectStorageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerProtocol")
     public ObjectStorageServerProtocolEnum serverProtocol;
+
     public CreateLocationObjectStorageRequest withServerProtocol(ObjectStorageServerProtocolEnum serverProtocol) {
         this.serverProtocol = serverProtocol;
         return this;
@@ -76,6 +84,7 @@ public class CreateLocationObjectStorageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public CreateLocationObjectStorageRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -84,9 +93,15 @@ public class CreateLocationObjectStorageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagListEntry[] tags;
+
     public CreateLocationObjectStorageRequest withTags(TagListEntry[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocationObjectStorageRequest(@JsonProperty("AgentArns") String[] agentArns, @JsonProperty("BucketName") String bucketName, @JsonProperty("ServerHostname") String serverHostname) {
+        this.agentArns = agentArns;
+        this.bucketName = bucketName;
+        this.serverHostname = serverHostname;
+  }
 }

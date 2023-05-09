@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpcPeeringConnectionResult {
     
     public Boolean return_;
+
     public DeleteVpcPeeringConnectionResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public DeleteVpcPeeringConnectionResult(){}
 }

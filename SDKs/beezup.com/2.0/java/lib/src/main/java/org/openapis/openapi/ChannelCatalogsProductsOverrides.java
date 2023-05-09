@@ -50,11 +50,9 @@ public class ChannelCatalogsProductsOverrides {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyResponse() {{
+        org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyResponse res = new org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -90,11 +88,9 @@ public class ChannelCatalogsProductsOverrides {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverrideResponse res = new org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverrideResponse() {{
+        org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverrideResponse res = new org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverrideResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -130,11 +126,9 @@ public class ChannelCatalogsProductsOverrides {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -175,11 +169,9 @@ public class ChannelCatalogsProductsOverrides {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesResponse res = new org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesResponse() {{
+        org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesResponse res = new org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMedicalVocabularyResponse {
@@ -12,6 +13,7 @@ public class CreateMedicalVocabularyResponse {
      */
     
     public Object badRequestException;
+
     public CreateMedicalVocabularyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateMedicalVocabularyResponse {
      */
     
     public Object conflictException;
+
     public CreateMedicalVocabularyResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateMedicalVocabularyResponse {
     
     
     public String contentType;
+
     public CreateMedicalVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMedicalVocabularyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMedicalVocabularyResponse createMedicalVocabularyResponse;
+
     public CreateMedicalVocabularyResponse withCreateMedicalVocabularyResponse(org.openapis.openapi.models.shared.CreateMedicalVocabularyResponse createMedicalVocabularyResponse) {
         this.createMedicalVocabularyResponse = createMedicalVocabularyResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateMedicalVocabularyResponse {
      */
     
     public Object internalFailureException;
+
     public CreateMedicalVocabularyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMedicalVocabularyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMedicalVocabularyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateMedicalVocabularyResponse {
     
     
     public Integer statusCode;
+
     public CreateMedicalVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateMedicalVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMedicalVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateMedicalVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

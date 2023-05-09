@@ -12,9 +12,11 @@ public class PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeformAddress")
     public String freeformAddress;
+
     public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListAddress withFreeformAddress(String freeformAddress) {
         this.freeformAddress = freeformAddress;
         return this;
     }
     
+    public PostSearchVersionNumberGeometryFilterExtRequestBodyPoiListAddress(){}
 }

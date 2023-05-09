@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindListingRecommendationsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FindListingRecommendationRequest findListingRecommendationRequest;
+
     public FindListingRecommendationsRequest withFindListingRecommendationRequest(org.openapis.openapi.models.shared.FindListingRecommendationRequest findListingRecommendationRequest) {
         this.findListingRecommendationRequest = findListingRecommendationRequest;
         return this;
@@ -19,6 +21,7 @@ public class FindListingRecommendationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public FindListingRecommendationsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -29,6 +32,7 @@ public class FindListingRecommendationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public FindListingRecommendationsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -39,6 +43,7 @@ public class FindListingRecommendationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public FindListingRecommendationsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -49,9 +54,13 @@ public class FindListingRecommendationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public FindListingRecommendationsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public FindListingRecommendationsRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

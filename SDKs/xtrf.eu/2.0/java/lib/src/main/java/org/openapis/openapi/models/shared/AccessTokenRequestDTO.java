@@ -15,9 +15,11 @@ public class AccessTokenRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loginOrEmail")
     public String loginOrEmail;
+
     public AccessTokenRequestDTO withLoginOrEmail(String loginOrEmail) {
         this.loginOrEmail = loginOrEmail;
         return this;
     }
     
+    public AccessTokenRequestDTO(){}
 }

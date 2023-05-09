@@ -15,6 +15,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@Href")
     public String atHref;
+
     public Link withAtHref(String atHref) {
         this.atHref = atHref;
         return this;
@@ -26,9 +27,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@Rel")
     public String atRel;
+
     public Link withAtRel(String atRel) {
         this.atRel = atRel;
         return this;
     }
     
+    public Link(){}
 }

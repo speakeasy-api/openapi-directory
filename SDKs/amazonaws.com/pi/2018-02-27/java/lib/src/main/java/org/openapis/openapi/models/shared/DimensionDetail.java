@@ -15,9 +15,11 @@ public class DimensionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public DimensionDetail withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public DimensionDetail(){}
 }

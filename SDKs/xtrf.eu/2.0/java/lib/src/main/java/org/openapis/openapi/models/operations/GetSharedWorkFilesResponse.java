@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSharedWorkFilesResponse {
     
     public String contentType;
+
     public GetSharedWorkFilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSharedWorkFilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectFileDto[] projectFileDtos;
+
     public GetSharedWorkFilesResponse withProjectFileDtos(org.openapis.openapi.models.shared.ProjectFileDto[] projectFileDtos) {
         this.projectFileDtos = projectFileDtos;
         return this;
@@ -26,6 +29,7 @@ public class GetSharedWorkFilesResponse {
     
     
     public Integer statusCode;
+
     public GetSharedWorkFilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSharedWorkFilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSharedWorkFilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSharedWorkFilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse {
@@ -12,6 +13,7 @@ public class SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetecti
      */
     
     public org.openapis.openapi.models.shared.ContainerThreatDetectionSettings containerThreatDetectionSettings;
+
     public SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse withContainerThreatDetectionSettings(org.openapis.openapi.models.shared.ContainerThreatDetectionSettings containerThreatDetectionSettings) {
         this.containerThreatDetectionSettings = containerThreatDetectionSettings;
         return this;
@@ -19,6 +21,7 @@ public class SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetecti
     
     
     public String contentType;
+
     public SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetecti
     
     
     public Integer statusCode;
+
     public SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetecti
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

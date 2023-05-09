@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInstanceSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteInstanceSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DeleteInstanceSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInstanceSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteInstanceSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInstanceSnapshotResult deleteInstanceSnapshotResult;
+
     public DeleteInstanceSnapshotResponse withDeleteInstanceSnapshotResult(org.openapis.openapi.models.shared.DeleteInstanceSnapshotResult deleteInstanceSnapshotResult) {
         this.deleteInstanceSnapshotResult = deleteInstanceSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteInstanceSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public DeleteInstanceSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteInstanceSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public Object serviceException;
+
     public DeleteInstanceSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteInstanceSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteInstanceSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteInstanceSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInstanceSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteInstanceSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteInstanceSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteInstanceSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

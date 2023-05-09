@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1LocationsIdEmailTemplatesResponse {
     
     public String contentType;
+
     public GetSetupV1LocationsIdEmailTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1LocationsIdEmailTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.EmailTemplateListViewModel emailTemplateListViewModel;
+
     public GetSetupV1LocationsIdEmailTemplatesResponse withEmailTemplateListViewModel(org.openapis.openapi.models.shared.EmailTemplateListViewModel emailTemplateListViewModel) {
         this.emailTemplateListViewModel = emailTemplateListViewModel;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1LocationsIdEmailTemplatesResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1LocationsIdEmailTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1LocationsIdEmailTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1LocationsIdEmailTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1LocationsIdEmailTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

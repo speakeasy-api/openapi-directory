@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPortfolioPreferencesResponse {
@@ -12,6 +13,7 @@ public class GetPortfolioPreferencesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPortfolioPreferencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPortfolioPreferencesResponse {
     
     
     public String contentType;
+
     public GetPortfolioPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPortfolioPreferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPortfolioPreferencesResponse getPortfolioPreferencesResponse;
+
     public GetPortfolioPreferencesResponse withGetPortfolioPreferencesResponse(org.openapis.openapi.models.shared.GetPortfolioPreferencesResponse getPortfolioPreferencesResponse) {
         this.getPortfolioPreferencesResponse = getPortfolioPreferencesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPortfolioPreferencesResponse {
      */
     
     public Object internalServerException;
+
     public GetPortfolioPreferencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetPortfolioPreferencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPortfolioPreferencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetPortfolioPreferencesResponse {
     
     
     public Integer statusCode;
+
     public GetPortfolioPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetPortfolioPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPortfolioPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetPortfolioPreferencesResponse {
      */
     
     public Object throttlingException;
+
     public GetPortfolioPreferencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetPortfolioPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

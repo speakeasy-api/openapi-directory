@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantName")
     public String merchantName;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payments")
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments[] payments;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions withPayments(PlaceOrder200ApplicationJSONTransactionDataMerchantTransactionsPayments[] payments) {
         this.payments = payments;
         return this;
@@ -48,9 +51,11 @@ public class PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONTransactionDataMerchantTransactions(){}
 }

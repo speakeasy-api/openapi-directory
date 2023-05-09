@@ -15,6 +15,7 @@ public class FulfillmentStartResponseSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowInterrupt")
     public Boolean allowInterrupt;
+
     public FulfillmentStartResponseSpecification withAllowInterrupt(Boolean allowInterrupt) {
         this.allowInterrupt = allowInterrupt;
         return this;
@@ -22,6 +23,7 @@ public class FulfillmentStartResponseSpecification {
     
     @JsonProperty("delayInSeconds")
     public Long delayInSeconds;
+
     public FulfillmentStartResponseSpecification withDelayInSeconds(Long delayInSeconds) {
         this.delayInSeconds = delayInSeconds;
         return this;
@@ -29,9 +31,14 @@ public class FulfillmentStartResponseSpecification {
     
     @JsonProperty("messageGroups")
     public MessageGroup[] messageGroups;
+
     public FulfillmentStartResponseSpecification withMessageGroups(MessageGroup[] messageGroups) {
         this.messageGroups = messageGroups;
         return this;
     }
     
+    public FulfillmentStartResponseSpecification(@JsonProperty("delayInSeconds") Long delayInSeconds, @JsonProperty("messageGroups") MessageGroup[] messageGroups) {
+        this.delayInSeconds = delayInSeconds;
+        this.messageGroups = messageGroups;
+  }
 }

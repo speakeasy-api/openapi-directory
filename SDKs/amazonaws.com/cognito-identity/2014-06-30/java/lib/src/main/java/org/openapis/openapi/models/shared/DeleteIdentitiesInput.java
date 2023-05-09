@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteIdentitiesInput {
     @JsonProperty("IdentityIdsToDelete")
     public String[] identityIdsToDelete;
+
     public DeleteIdentitiesInput withIdentityIdsToDelete(String[] identityIdsToDelete) {
         this.identityIdsToDelete = identityIdsToDelete;
         return this;
     }
     
+    public DeleteIdentitiesInput(@JsonProperty("IdentityIdsToDelete") String[] identityIdsToDelete) {
+        this.identityIdsToDelete = identityIdsToDelete;
+  }
 }

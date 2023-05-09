@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateFpgaImageRequest {
     
     public String clientToken;
+
     public CreateFpgaImageRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateFpgaImageRequest {
     
     
     public String description;
+
     public CreateFpgaImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateFpgaImageRequest {
     
     
     public Boolean dryRun;
+
     public CreateFpgaImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateFpgaImageRequest {
     
     
     public StorageLocation inputStorageLocation;
+
     public CreateFpgaImageRequest withInputStorageLocation(StorageLocation inputStorageLocation) {
         this.inputStorageLocation = inputStorageLocation;
         return this;
@@ -37,6 +41,7 @@ public class CreateFpgaImageRequest {
     
     
     public StorageLocation logsStorageLocation;
+
     public CreateFpgaImageRequest withLogsStorageLocation(StorageLocation logsStorageLocation) {
         this.logsStorageLocation = logsStorageLocation;
         return this;
@@ -44,6 +49,7 @@ public class CreateFpgaImageRequest {
     
     
     public String name;
+
     public CreateFpgaImageRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +57,13 @@ public class CreateFpgaImageRequest {
     
     
     public CreateFpgaImageRequestTagSpecifications[] tagSpecifications;
+
     public CreateFpgaImageRequest withTagSpecifications(CreateFpgaImageRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateFpgaImageRequest(@JsonProperty("InputStorageLocation") StorageLocation inputStorageLocation) {
+        this.inputStorageLocation = inputStorageLocation;
+  }
 }

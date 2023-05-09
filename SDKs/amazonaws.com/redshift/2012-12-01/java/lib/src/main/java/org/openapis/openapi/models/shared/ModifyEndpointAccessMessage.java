@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyEndpointAccessMessage {
     
     public String endpointName;
+
     public ModifyEndpointAccessMessage withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -16,9 +17,13 @@ public class ModifyEndpointAccessMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public ModifyEndpointAccessMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public ModifyEndpointAccessMessage(@JsonProperty("EndpointName") String endpointName) {
+        this.endpointName = endpointName;
+  }
 }

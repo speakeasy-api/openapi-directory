@@ -15,6 +15,7 @@ public class GetEpisodesIdNextSibling200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Episode data;
+
     public GetEpisodesIdNextSibling200ApplicationVndApiPlusJson withData(org.openapis.openapi.models.shared.Episode data) {
         this.data = data;
         return this;
@@ -26,9 +27,11 @@ public class GetEpisodesIdNextSibling200ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public org.openapis.openapi.models.shared.ResourceLink links;
+
     public GetEpisodesIdNextSibling200ApplicationVndApiPlusJson withLinks(org.openapis.openapi.models.shared.ResourceLink links) {
         this.links = links;
         return this;
     }
     
+    public GetEpisodesIdNextSibling200ApplicationVndApiPlusJson(){}
 }

@@ -15,6 +15,7 @@ public class WikiReadWikiLinks {
      */
     
     public String download;
+
     public WikiReadWikiLinks withDownload(String download) {
         this.download = download;
         return this;
@@ -25,6 +26,7 @@ public class WikiReadWikiLinks {
      */
     
     public String info;
+
     public WikiReadWikiLinks withInfo(String info) {
         this.info = info;
         return this;
@@ -35,9 +37,11 @@ public class WikiReadWikiLinks {
      */
     
     public String self;
+
     public WikiReadWikiLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public WikiReadWikiLinks(){}
 }

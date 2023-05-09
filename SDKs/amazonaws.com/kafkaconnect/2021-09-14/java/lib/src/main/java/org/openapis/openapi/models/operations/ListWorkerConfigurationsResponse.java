@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkerConfigurationsResponse {
@@ -12,6 +13,7 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public Object badRequestException;
+
     public ListWorkerConfigurationsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkerConfigurationsResponse {
     
     
     public String contentType;
+
     public ListWorkerConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public Object forbiddenException;
+
     public ListWorkerConfigurationsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListWorkerConfigurationsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkerConfigurationsResponse listWorkerConfigurationsResponse;
+
     public ListWorkerConfigurationsResponse withListWorkerConfigurationsResponse(org.openapis.openapi.models.shared.ListWorkerConfigurationsResponse listWorkerConfigurationsResponse) {
         this.listWorkerConfigurationsResponse = listWorkerConfigurationsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public Object notFoundException;
+
     public ListWorkerConfigurationsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListWorkerConfigurationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class ListWorkerConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListWorkerConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListWorkerConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkerConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListWorkerConfigurationsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class ListWorkerConfigurationsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListWorkerConfigurationsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListWorkerConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

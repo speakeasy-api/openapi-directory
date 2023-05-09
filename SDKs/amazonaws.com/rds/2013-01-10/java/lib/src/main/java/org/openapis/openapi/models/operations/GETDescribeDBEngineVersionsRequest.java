@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeDBEngineVersionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeDBEngineVersionsActionEnum action;
+
     public GETDescribeDBEngineVersionsRequest withAction(GETDescribeDBEngineVersionsActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBParameterGroupFamily")
     public String dbParameterGroupFamily;
+
     public GETDescribeDBEngineVersionsRequest withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultOnly")
     public Boolean defaultOnly;
+
     public GETDescribeDBEngineVersionsRequest withDefaultOnly(Boolean defaultOnly) {
         this.defaultOnly = defaultOnly;
         return this;
@@ -30,6 +34,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
     public String engine;
+
     public GETDescribeDBEngineVersionsRequest withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -37,6 +42,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
     public String engineVersion;
+
     public GETDescribeDBEngineVersionsRequest withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -44,6 +50,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ListSupportedCharacterSets")
     public Boolean listSupportedCharacterSets;
+
     public GETDescribeDBEngineVersionsRequest withListSupportedCharacterSets(Boolean listSupportedCharacterSets) {
         this.listSupportedCharacterSets = listSupportedCharacterSets;
         return this;
@@ -51,6 +58,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeDBEngineVersionsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -58,6 +66,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeDBEngineVersionsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -65,6 +74,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeDBEngineVersionsVersionEnum version;
+
     public GETDescribeDBEngineVersionsRequest withVersion(GETDescribeDBEngineVersionsVersionEnum version) {
         this.version = version;
         return this;
@@ -72,6 +82,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeDBEngineVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -79,6 +90,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeDBEngineVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -86,6 +98,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeDBEngineVersionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -93,6 +106,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeDBEngineVersionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -100,6 +114,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeDBEngineVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -107,6 +122,7 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeDBEngineVersionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -114,9 +130,14 @@ public class GETDescribeDBEngineVersionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeDBEngineVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeDBEngineVersionsRequest(@JsonProperty("Action") GETDescribeDBEngineVersionsActionEnum action, @JsonProperty("Version") GETDescribeDBEngineVersionsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

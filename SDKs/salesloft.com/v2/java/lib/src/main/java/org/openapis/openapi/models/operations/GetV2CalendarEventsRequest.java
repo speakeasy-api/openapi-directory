@@ -8,6 +8,18 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2CalendarEventsRequest {
     /**
+     * calendar_id of the user who created or included as a guest to the event.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendar_id")
+    public String calendarId;
+
+    public GetV2CalendarEventsRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
+    
+    /**
      * Upper bound (exclusive) for a calendar event's start time to filter by.
      * Must be in ISO 8601 format.
      * 
@@ -16,6 +28,7 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public GetV2CalendarEventsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +39,7 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2CalendarEventsRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -36,6 +50,7 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2CalendarEventsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -46,6 +61,7 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2CalendarEventsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -56,6 +72,7 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2CalendarEventsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -66,6 +83,7 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2CalendarEventsRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -80,6 +98,7 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
     public String startTime;
+
     public GetV2CalendarEventsRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -91,9 +110,11 @@ public class GetV2CalendarEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_guid")
     public String userGuid;
+
     public GetV2CalendarEventsRequest withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public GetV2CalendarEventsRequest(){}
 }

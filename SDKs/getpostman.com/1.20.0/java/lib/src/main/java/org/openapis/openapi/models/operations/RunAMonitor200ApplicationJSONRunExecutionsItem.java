@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RunAMonitor200ApplicationJSONRunExecutionsItem withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class RunAMonitor200ApplicationJSONRunExecutionsItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RunAMonitor200ApplicationJSONRunExecutionsItem withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunExecutionsItem(){}
 }

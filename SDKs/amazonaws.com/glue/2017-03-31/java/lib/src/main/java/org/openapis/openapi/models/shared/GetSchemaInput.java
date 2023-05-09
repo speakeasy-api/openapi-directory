@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSchemaInput {
     @JsonProperty("SchemaId")
     public SchemaId schemaId;
+
     public GetSchemaInput withSchemaId(SchemaId schemaId) {
         this.schemaId = schemaId;
         return this;
     }
     
+    public GetSchemaInput(@JsonProperty("SchemaId") SchemaId schemaId) {
+        this.schemaId = schemaId;
+  }
 }

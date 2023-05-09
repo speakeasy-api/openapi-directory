@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAutoSnapshotResponse {
@@ -12,6 +13,7 @@ public class DeleteAutoSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAutoSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAutoSnapshotResponse {
     
     
     public String contentType;
+
     public DeleteAutoSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAutoSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAutoSnapshotResult deleteAutoSnapshotResult;
+
     public DeleteAutoSnapshotResponse withDeleteAutoSnapshotResult(org.openapis.openapi.models.shared.DeleteAutoSnapshotResult deleteAutoSnapshotResult) {
         this.deleteAutoSnapshotResult = deleteAutoSnapshotResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAutoSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteAutoSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAutoSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public DeleteAutoSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAutoSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteAutoSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteAutoSnapshotResponse {
      */
     
     public Object serviceException;
+
     public DeleteAutoSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteAutoSnapshotResponse {
     
     
     public Integer statusCode;
+
     public DeleteAutoSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAutoSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAutoSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DeleteAutoSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteAutoSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteAutoSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

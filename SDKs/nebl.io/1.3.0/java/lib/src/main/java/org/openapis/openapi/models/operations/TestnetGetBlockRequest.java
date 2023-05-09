@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetBlockRequest {
@@ -12,9 +13,13 @@ public class TestnetGetBlockRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blockhash")
     public String blockhash;
+
     public TestnetGetBlockRequest withBlockhash(String blockhash) {
         this.blockhash = blockhash;
         return this;
     }
     
+    public TestnetGetBlockRequest(@JsonProperty("blockhash") String blockhash) {
+        this.blockhash = blockhash;
+  }
 }

@@ -15,6 +15,7 @@ public class SupportedProductConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Args")
     public String[] args;
+
     public SupportedProductConfig withArgs(String[] args) {
         this.args = args;
         return this;
@@ -23,9 +24,11 @@ public class SupportedProductConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SupportedProductConfig withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SupportedProductConfig(){}
 }

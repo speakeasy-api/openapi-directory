@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountCreateOAuth2SessionRequest {
@@ -12,6 +13,7 @@ public class AccountCreateOAuth2SessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failure")
     public String failure;
+
     public AccountCreateOAuth2SessionRequest withFailure(String failure) {
         this.failure = failure;
         return this;
@@ -22,6 +24,7 @@ public class AccountCreateOAuth2SessionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
     public String provider;
+
     public AccountCreateOAuth2SessionRequest withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -32,6 +35,7 @@ public class AccountCreateOAuth2SessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scopes")
     public String[] scopes;
+
     public AccountCreateOAuth2SessionRequest withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -42,9 +46,13 @@ public class AccountCreateOAuth2SessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=success")
     public String success;
+
     public AccountCreateOAuth2SessionRequest withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public AccountCreateOAuth2SessionRequest(@JsonProperty("provider") String provider) {
+        this.provider = provider;
+  }
 }

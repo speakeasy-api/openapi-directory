@@ -15,6 +15,7 @@ public class ResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public AppInstanceTypeEnum instanceType;
+
     public ResourceSpec withInstanceType(AppInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -23,6 +24,7 @@ public class ResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleConfigArn")
     public String lifecycleConfigArn;
+
     public ResourceSpec withLifecycleConfigArn(String lifecycleConfigArn) {
         this.lifecycleConfigArn = lifecycleConfigArn;
         return this;
@@ -31,6 +33,7 @@ public class ResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerImageArn")
     public String sageMakerImageArn;
+
     public ResourceSpec withSageMakerImageArn(String sageMakerImageArn) {
         this.sageMakerImageArn = sageMakerImageArn;
         return this;
@@ -39,9 +42,11 @@ public class ResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerImageVersionArn")
     public String sageMakerImageVersionArn;
+
     public ResourceSpec withSageMakerImageVersionArn(String sageMakerImageVersionArn) {
         this.sageMakerImageVersionArn = sageMakerImageVersionArn;
         return this;
     }
     
+    public ResourceSpec(){}
 }

@@ -12,6 +12,7 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpDnsPtr {
      */
     @JsonProperty("dns_ptr")
     public String dnsPtr;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpDnsPtr withDnsPtr(String dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -22,9 +23,14 @@ public class GetFloatingIpsId200ApplicationJSONFloatingIpDnsPtr {
      */
     @JsonProperty("ip")
     public String ip;
+
     public GetFloatingIpsId200ApplicationJSONFloatingIpDnsPtr withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public GetFloatingIpsId200ApplicationJSONFloatingIpDnsPtr(@JsonProperty("dns_ptr") String dnsPtr, @JsonProperty("ip") String ip) {
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

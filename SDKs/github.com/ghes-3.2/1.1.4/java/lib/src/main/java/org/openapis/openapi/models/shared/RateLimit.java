@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RateLimit {
     @JsonProperty("limit")
     public Long limit;
+
     public RateLimit withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -16,6 +17,7 @@ public class RateLimit {
     
     @JsonProperty("remaining")
     public Long remaining;
+
     public RateLimit withRemaining(Long remaining) {
         this.remaining = remaining;
         return this;
@@ -23,6 +25,7 @@ public class RateLimit {
     
     @JsonProperty("reset")
     public Long reset;
+
     public RateLimit withReset(Long reset) {
         this.reset = reset;
         return this;
@@ -30,9 +33,16 @@ public class RateLimit {
     
     @JsonProperty("used")
     public Long used;
+
     public RateLimit withUsed(Long used) {
         this.used = used;
         return this;
     }
     
+    public RateLimit(@JsonProperty("limit") Long limit, @JsonProperty("remaining") Long remaining, @JsonProperty("reset") Long reset, @JsonProperty("used") Long used) {
+        this.limit = limit;
+        this.remaining = remaining;
+        this.reset = reset;
+        this.used = used;
+  }
 }

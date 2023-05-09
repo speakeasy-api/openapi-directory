@@ -59,11 +59,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsResponse() {{
+        org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsResponse(contentType, httpRes.statusCode()) {{
             dynamicLinkStats = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionResponse() {{
+        org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionResponse(contentType, httpRes.statusCode()) {{
             getIosPostInstallAttributionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionResponse() {{
+        org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionResponse(contentType, httpRes.statusCode()) {{
             getIosReopenAttributionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

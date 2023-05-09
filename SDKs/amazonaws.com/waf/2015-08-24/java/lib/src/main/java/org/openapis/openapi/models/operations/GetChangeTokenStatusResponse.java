@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChangeTokenStatusResponse {
     
     public String contentType;
+
     public GetChangeTokenStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetChangeTokenStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetChangeTokenStatusResponse getChangeTokenStatusResponse;
+
     public GetChangeTokenStatusResponse withGetChangeTokenStatusResponse(org.openapis.openapi.models.shared.GetChangeTokenStatusResponse getChangeTokenStatusResponse) {
         this.getChangeTokenStatusResponse = getChangeTokenStatusResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetChangeTokenStatusResponse {
     
     
     public Integer statusCode;
+
     public GetChangeTokenStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChangeTokenStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChangeTokenStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetChangeTokenStatusResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetChangeTokenStatusResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class GetChangeTokenStatusResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetChangeTokenStatusResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetChangeTokenStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

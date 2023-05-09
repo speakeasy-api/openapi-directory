@@ -18,6 +18,7 @@ public class GrpcRouteHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GrpcRouteHeaderMatch withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class GrpcRouteHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GrpcRouteHeaderMatchTypeEnum type;
+
     public GrpcRouteHeaderMatch withType(GrpcRouteHeaderMatchTypeEnum type) {
         this.type = type;
         return this;
@@ -40,9 +42,11 @@ public class GrpcRouteHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GrpcRouteHeaderMatch withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GrpcRouteHeaderMatch(){}
 }

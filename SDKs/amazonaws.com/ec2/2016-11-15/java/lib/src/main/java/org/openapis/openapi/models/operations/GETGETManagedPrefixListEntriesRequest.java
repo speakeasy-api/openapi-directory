@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETManagedPrefixListEntriesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETManagedPrefixListEntriesActionEnum action;
+
     public GETGETManagedPrefixListEntriesRequest withAction(GETGETManagedPrefixListEntriesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETManagedPrefixListEntriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETGETManagedPrefixListEntriesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETGETManagedPrefixListEntriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public GETGETManagedPrefixListEntriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -39,6 +43,7 @@ public class GETGETManagedPrefixListEntriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public GETGETManagedPrefixListEntriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -49,6 +54,7 @@ public class GETGETManagedPrefixListEntriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrefixListId")
     public String prefixListId;
+
     public GETGETManagedPrefixListEntriesRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -59,6 +65,7 @@ public class GETGETManagedPrefixListEntriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetVersion")
     public Long targetVersion;
+
     public GETGETManagedPrefixListEntriesRequest withTargetVersion(Long targetVersion) {
         this.targetVersion = targetVersion;
         return this;
@@ -66,6 +73,7 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETManagedPrefixListEntriesVersionEnum version;
+
     public GETGETManagedPrefixListEntriesRequest withVersion(GETGETManagedPrefixListEntriesVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETManagedPrefixListEntriesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETManagedPrefixListEntriesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETManagedPrefixListEntriesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETManagedPrefixListEntriesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETManagedPrefixListEntriesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETManagedPrefixListEntriesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETGETManagedPrefixListEntriesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETManagedPrefixListEntriesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETManagedPrefixListEntriesRequest(@JsonProperty("Action") GETGETManagedPrefixListEntriesActionEnum action, @JsonProperty("PrefixListId") String prefixListId, @JsonProperty("Version") GETGETManagedPrefixListEntriesVersionEnum version) {
+        this.action = action;
+        this.prefixListId = prefixListId;
+        this.version = version;
+  }
 }

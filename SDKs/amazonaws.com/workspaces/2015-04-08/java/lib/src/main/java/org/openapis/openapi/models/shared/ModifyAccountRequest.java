@@ -12,6 +12,7 @@ public class ModifyAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedTenancyManagementCidrRange")
     public String dedicatedTenancyManagementCidrRange;
+
     public ModifyAccountRequest withDedicatedTenancyManagementCidrRange(String dedicatedTenancyManagementCidrRange) {
         this.dedicatedTenancyManagementCidrRange = dedicatedTenancyManagementCidrRange;
         return this;
@@ -20,9 +21,11 @@ public class ModifyAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedTenancySupport")
     public DedicatedTenancySupportEnumEnum dedicatedTenancySupport;
+
     public ModifyAccountRequest withDedicatedTenancySupport(DedicatedTenancySupportEnumEnum dedicatedTenancySupport) {
         this.dedicatedTenancySupport = dedicatedTenancySupport;
         return this;
     }
     
+    public ModifyAccountRequest(){}
 }

@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolute")
     public String absolute;
+
     public EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue withAbsolute(String absolute) {
         this.absolute = absolute;
         return this;
@@ -23,9 +24,11 @@ public class EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue(){}
 }

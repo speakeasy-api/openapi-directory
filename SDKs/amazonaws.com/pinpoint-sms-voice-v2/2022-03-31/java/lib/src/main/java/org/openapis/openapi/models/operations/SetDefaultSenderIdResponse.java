@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetDefaultSenderIdResponse {
@@ -12,6 +13,7 @@ public class SetDefaultSenderIdResponse {
      */
     
     public Object accessDeniedException;
+
     public SetDefaultSenderIdResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SetDefaultSenderIdResponse {
     
     
     public String contentType;
+
     public SetDefaultSenderIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetDefaultSenderIdResponse {
      */
     
     public Object internalServerException;
+
     public SetDefaultSenderIdResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class SetDefaultSenderIdResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetDefaultSenderIdResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SetDefaultSenderIdResponse {
      */
     
     public org.openapis.openapi.models.shared.SetDefaultSenderIdResult setDefaultSenderIdResult;
+
     public SetDefaultSenderIdResponse withSetDefaultSenderIdResult(org.openapis.openapi.models.shared.SetDefaultSenderIdResult setDefaultSenderIdResult) {
         this.setDefaultSenderIdResult = setDefaultSenderIdResult;
         return this;
@@ -56,6 +62,7 @@ public class SetDefaultSenderIdResponse {
     
     
     public Integer statusCode;
+
     public SetDefaultSenderIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SetDefaultSenderIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetDefaultSenderIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SetDefaultSenderIdResponse {
      */
     
     public Object throttlingException;
+
     public SetDefaultSenderIdResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class SetDefaultSenderIdResponse {
      */
     
     public Object validationException;
+
     public SetDefaultSenderIdResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SetDefaultSenderIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

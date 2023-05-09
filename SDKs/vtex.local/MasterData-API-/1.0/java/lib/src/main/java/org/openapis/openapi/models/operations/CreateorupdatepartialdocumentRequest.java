@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateorupdatepartialdocumentRequest {
@@ -12,6 +13,7 @@ public class CreateorupdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateorupdatepartialdocumentRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class CreateorupdatepartialdocumentRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CreateorupdatepartialdocumentRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,9 +32,15 @@ public class CreateorupdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public CreateorupdatepartialdocumentRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
     }
     
+    public CreateorupdatepartialdocumentRequest(@JsonProperty("Accept") String accept, @JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("acronym") String acronym) {
+        this.accept = accept;
+        this.requestBody = requestBody;
+        this.acronym = acronym;
+  }
 }

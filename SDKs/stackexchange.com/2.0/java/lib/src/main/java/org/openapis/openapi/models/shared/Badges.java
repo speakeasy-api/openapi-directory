@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Badges {
     
     public Long awardCount;
+
     public Badges withAwardCount(Long awardCount) {
         this.awardCount = awardCount;
         return this;
@@ -16,6 +17,7 @@ public class Badges {
     
     
     public Long badgeId;
+
     public Badges withBadgeId(Long badgeId) {
         this.badgeId = badgeId;
         return this;
@@ -23,6 +25,7 @@ public class Badges {
     
     
     public String badgeType;
+
     public Badges withBadgeType(String badgeType) {
         this.badgeType = badgeType;
         return this;
@@ -30,6 +33,7 @@ public class Badges {
     
     
     public String description;
+
     public Badges withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +41,7 @@ public class Badges {
     
     
     public String link;
+
     public Badges withLink(String link) {
         this.link = link;
         return this;
@@ -44,6 +49,7 @@ public class Badges {
     
     
     public String name;
+
     public Badges withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +57,7 @@ public class Badges {
     
     
     public String rank;
+
     public Badges withRank(String rank) {
         this.rank = rank;
         return this;
@@ -58,9 +65,11 @@ public class Badges {
     
     
     public BadgesUser user;
+
     public Badges withUser(BadgesUser user) {
         this.user = user;
         return this;
     }
     
+    public Badges(){}
 }

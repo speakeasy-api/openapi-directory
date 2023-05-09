@@ -15,9 +15,11 @@ public class CreateParticipantTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participantToken")
     public ParticipantToken participantToken;
+
     public CreateParticipantTokenResponse withParticipantToken(ParticipantToken participantToken) {
         this.participantToken = participantToken;
         return this;
     }
     
+    public CreateParticipantTokenResponse(){}
 }

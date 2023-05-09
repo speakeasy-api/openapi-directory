@@ -21,6 +21,7 @@ public class GetImagesRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTimestamp")
     public OffsetDateTime endTimestamp;
+
     public GetImagesRequestBody withEndTimestamp(OffsetDateTime endTimestamp) {
         this.endTimestamp = endTimestamp;
         return this;
@@ -31,6 +32,7 @@ public class GetImagesRequestBody {
      */
     @JsonProperty("Format")
     public GetImagesRequestBodyFormatEnum format;
+
     public GetImagesRequestBody withFormat(GetImagesRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -42,6 +44,7 @@ public class GetImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FormatConfig")
     public java.util.Map<String, String> formatConfig;
+
     public GetImagesRequestBody withFormatConfig(java.util.Map<String, String> formatConfig) {
         this.formatConfig = formatConfig;
         return this;
@@ -53,6 +56,7 @@ public class GetImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeightPixels")
     public Long heightPixels;
+
     public GetImagesRequestBody withHeightPixels(Long heightPixels) {
         this.heightPixels = heightPixels;
         return this;
@@ -63,6 +67,7 @@ public class GetImagesRequestBody {
      */
     @JsonProperty("ImageSelectorType")
     public GetImagesRequestBodyImageSelectorTypeEnum imageSelectorType;
+
     public GetImagesRequestBody withImageSelectorType(GetImagesRequestBodyImageSelectorTypeEnum imageSelectorType) {
         this.imageSelectorType = imageSelectorType;
         return this;
@@ -74,6 +79,7 @@ public class GetImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetImagesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -85,6 +91,7 @@ public class GetImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetImagesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -95,6 +102,7 @@ public class GetImagesRequestBody {
      */
     @JsonProperty("SamplingInterval")
     public Long samplingInterval;
+
     public GetImagesRequestBody withSamplingInterval(Long samplingInterval) {
         this.samplingInterval = samplingInterval;
         return this;
@@ -107,6 +115,7 @@ public class GetImagesRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTimestamp")
     public OffsetDateTime startTimestamp;
+
     public GetImagesRequestBody withStartTimestamp(OffsetDateTime startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
@@ -118,6 +127,7 @@ public class GetImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetImagesRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -129,6 +139,7 @@ public class GetImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetImagesRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -140,9 +151,17 @@ public class GetImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WidthPixels")
     public Long widthPixels;
+
     public GetImagesRequestBody withWidthPixels(Long widthPixels) {
         this.widthPixels = widthPixels;
         return this;
     }
     
+    public GetImagesRequestBody(@JsonProperty("EndTimestamp") OffsetDateTime endTimestamp, @JsonProperty("Format") GetImagesRequestBodyFormatEnum format, @JsonProperty("ImageSelectorType") GetImagesRequestBodyImageSelectorTypeEnum imageSelectorType, @JsonProperty("SamplingInterval") Long samplingInterval, @JsonProperty("StartTimestamp") OffsetDateTime startTimestamp) {
+        this.endTimestamp = endTimestamp;
+        this.format = format;
+        this.imageSelectorType = imageSelectorType;
+        this.samplingInterval = samplingInterval;
+        this.startTimestamp = startTimestamp;
+  }
 }

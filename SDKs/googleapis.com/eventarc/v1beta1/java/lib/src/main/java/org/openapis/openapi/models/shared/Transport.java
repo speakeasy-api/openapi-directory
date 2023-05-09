@@ -18,9 +18,11 @@ public class Transport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsub")
     public Pubsub pubsub;
+
     public Transport withPubsub(Pubsub pubsub) {
         this.pubsub = pubsub;
         return this;
     }
     
+    public Transport(){}
 }

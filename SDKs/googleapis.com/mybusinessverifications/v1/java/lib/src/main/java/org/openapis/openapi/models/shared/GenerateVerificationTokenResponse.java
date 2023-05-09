@@ -18,9 +18,11 @@ public class GenerateVerificationTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public VerificationToken token;
+
     public GenerateVerificationTokenResponse withToken(VerificationToken token) {
         this.token = token;
         return this;
     }
     
+    public GenerateVerificationTokenResponse(){}
 }

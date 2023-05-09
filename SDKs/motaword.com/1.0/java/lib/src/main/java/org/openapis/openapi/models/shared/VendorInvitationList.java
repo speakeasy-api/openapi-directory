@@ -15,9 +15,11 @@ public class VendorInvitationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendors")
     public VendorWithNeeds[] vendors;
+
     public VendorInvitationList withVendors(VendorWithNeeds[] vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public VendorInvitationList(){}
 }

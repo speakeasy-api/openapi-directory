@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2BatchDeleteEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityValues")
     public String[] entityValues;
+
     public GoogleCloudDialogflowV2BatchDeleteEntitiesRequest withEntityValues(String[] entityValues) {
         this.entityValues = entityValues;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2BatchDeleteEntitiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2BatchDeleteEntitiesRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudDialogflowV2BatchDeleteEntitiesRequest(){}
 }

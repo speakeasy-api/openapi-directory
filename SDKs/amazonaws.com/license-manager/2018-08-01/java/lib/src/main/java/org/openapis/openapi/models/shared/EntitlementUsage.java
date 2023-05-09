@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntitlementUsage {
     @JsonProperty("ConsumedValue")
     public String consumedValue;
+
     public EntitlementUsage withConsumedValue(String consumedValue) {
         this.consumedValue = consumedValue;
         return this;
@@ -22,6 +23,7 @@ public class EntitlementUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCount")
     public String maxCount;
+
     public EntitlementUsage withMaxCount(String maxCount) {
         this.maxCount = maxCount;
         return this;
@@ -29,6 +31,7 @@ public class EntitlementUsage {
     
     @JsonProperty("Name")
     public String name;
+
     public EntitlementUsage withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class EntitlementUsage {
     
     @JsonProperty("Unit")
     public EntitlementDataUnitEnum unit;
+
     public EntitlementUsage withUnit(EntitlementDataUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public EntitlementUsage(@JsonProperty("ConsumedValue") String consumedValue, @JsonProperty("Name") String name, @JsonProperty("Unit") EntitlementDataUnitEnum unit) {
+        this.consumedValue = consumedValue;
+        this.name = name;
+        this.unit = unit;
+  }
 }

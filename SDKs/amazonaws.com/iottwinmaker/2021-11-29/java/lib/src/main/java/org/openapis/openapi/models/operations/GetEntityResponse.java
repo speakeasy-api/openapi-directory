@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEntityResponse {
     
     public String contentType;
+
     public GetEntityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEntityResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEntityResponse getEntityResponse;
+
     public GetEntityResponse withGetEntityResponse(org.openapis.openapi.models.shared.GetEntityResponse getEntityResponse) {
         this.getEntityResponse = getEntityResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetEntityResponse {
      */
     
     public Object internalServerException;
+
     public GetEntityResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class GetEntityResponse {
     
     
     public Integer statusCode;
+
     public GetEntityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetEntityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEntityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetEntityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEntityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class GetEntityResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetEntityResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class GetEntityResponse {
      */
     
     public Object throttlingException;
+
     public GetEntityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetEntityResponse {
      */
     
     public Object validationException;
+
     public GetEntityResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEntityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

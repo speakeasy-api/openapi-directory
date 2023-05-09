@@ -19,6 +19,7 @@ public class SDK {
     public Dumps dumps;
     public Indexes indexes;
     public KeyManagement keyManagement;
+    public MultiSearch multiSearch;
     public Search search;
     public Settings settings;
     public Stats stats;
@@ -112,6 +113,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.documents = new Documents(
@@ -142,6 +148,15 @@ public class SDK {
 		);
 		
 		this.keyManagement = new KeyManagement(
+			this._defaultClient,
+			this._securityClient,
+			this._serverUrl,
+			this._language,
+			this._sdkVersion,
+			this._genVersion
+		);
+		
+		this.multiSearch = new MultiSearch(
 			this._defaultClient,
 			this._securityClient,
 			this._serverUrl,

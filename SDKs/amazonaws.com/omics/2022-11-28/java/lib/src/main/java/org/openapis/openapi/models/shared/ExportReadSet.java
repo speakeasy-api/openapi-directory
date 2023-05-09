@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportReadSet {
     @JsonProperty("readSetId")
     public String readSetId;
+
     public ExportReadSet withReadSetId(String readSetId) {
         this.readSetId = readSetId;
         return this;
     }
     
+    public ExportReadSet(@JsonProperty("readSetId") String readSetId) {
+        this.readSetId = readSetId;
+  }
 }

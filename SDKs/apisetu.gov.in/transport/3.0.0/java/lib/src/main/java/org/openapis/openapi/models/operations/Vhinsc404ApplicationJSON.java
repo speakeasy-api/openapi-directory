@@ -15,6 +15,7 @@ public class Vhinsc404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Vhinsc404ApplicationJSONErrorEnum error;
+
     public Vhinsc404ApplicationJSON withError(Vhinsc404ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Vhinsc404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Vhinsc404ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Vhinsc404ApplicationJSON withErrorDescription(Vhinsc404ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Vhinsc404ApplicationJSON(){}
 }

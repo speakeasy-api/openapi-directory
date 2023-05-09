@@ -18,6 +18,7 @@ public class MemberMediaAudioSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earmuffed")
     public Boolean earmuffed;
+
     public MemberMediaAudioSettings withEarmuffed(Boolean earmuffed) {
         this.earmuffed = earmuffed;
         return this;
@@ -29,6 +30,7 @@ public class MemberMediaAudioSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public MemberMediaAudioSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,9 +42,11 @@ public class MemberMediaAudioSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("muted")
     public Boolean muted;
+
     public MemberMediaAudioSettings withMuted(Boolean muted) {
         this.muted = muted;
         return this;
     }
     
+    public MemberMediaAudioSettings(){}
 }

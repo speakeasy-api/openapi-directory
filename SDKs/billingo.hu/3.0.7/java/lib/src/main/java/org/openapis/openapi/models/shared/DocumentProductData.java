@@ -12,6 +12,7 @@ public class DocumentProductData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public DocumentProductData withComment(String comment) {
         this.comment = comment;
         return this;
@@ -19,6 +20,7 @@ public class DocumentProductData {
     
     @JsonProperty("name")
     public String name;
+
     public DocumentProductData withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class DocumentProductData {
     
     @JsonProperty("quantity")
     public Float quantity;
+
     public DocumentProductData withQuantity(Float quantity) {
         this.quantity = quantity;
         return this;
@@ -33,6 +36,7 @@ public class DocumentProductData {
     
     @JsonProperty("unit")
     public String unit;
+
     public DocumentProductData withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -40,6 +44,7 @@ public class DocumentProductData {
     
     @JsonProperty("unit_price")
     public Float unitPrice;
+
     public DocumentProductData withUnitPrice(Float unitPrice) {
         this.unitPrice = unitPrice;
         return this;
@@ -47,6 +52,7 @@ public class DocumentProductData {
     
     @JsonProperty("unit_price_type")
     public UnitPriceTypeEnum unitPriceType;
+
     public DocumentProductData withUnitPriceType(UnitPriceTypeEnum unitPriceType) {
         this.unitPriceType = unitPriceType;
         return this;
@@ -54,9 +60,18 @@ public class DocumentProductData {
     
     @JsonProperty("vat")
     public VatEnum vat;
+
     public DocumentProductData withVat(VatEnum vat) {
         this.vat = vat;
         return this;
     }
     
+    public DocumentProductData(@JsonProperty("name") String name, @JsonProperty("quantity") Float quantity, @JsonProperty("unit") String unit, @JsonProperty("unit_price") Float unitPrice, @JsonProperty("unit_price_type") UnitPriceTypeEnum unitPriceType, @JsonProperty("vat") VatEnum vat) {
+        this.name = name;
+        this.quantity = quantity;
+        this.unit = unit;
+        this.unitPrice = unitPrice;
+        this.unitPriceType = unitPriceType;
+        this.vat = vat;
+  }
 }

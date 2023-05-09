@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EndpointEventBus {
     @JsonProperty("EventBusArn")
     public String eventBusArn;
+
     public EndpointEventBus withEventBusArn(String eventBusArn) {
         this.eventBusArn = eventBusArn;
         return this;
     }
     
+    public EndpointEventBus(@JsonProperty("EventBusArn") String eventBusArn) {
+        this.eventBusArn = eventBusArn;
+  }
 }

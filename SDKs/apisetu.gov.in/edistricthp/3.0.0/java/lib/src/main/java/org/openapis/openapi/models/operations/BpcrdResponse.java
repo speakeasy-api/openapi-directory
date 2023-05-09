@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BpcrdResponse {
     
     public String contentType;
+
     public BpcrdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BpcrdResponse {
     
     
     public Integer statusCode;
+
     public BpcrdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BpcrdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BpcrdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BpcrdResponse {
      */
     
     public Bpcrd400ApplicationJSON bpcrd400ApplicationJSONObject;
+
     public BpcrdResponse withBpcrd400ApplicationJSONObject(Bpcrd400ApplicationJSON bpcrd400ApplicationJSONObject) {
         this.bpcrd400ApplicationJSONObject = bpcrd400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class BpcrdResponse {
      */
     
     public Bpcrd401ApplicationJSON bpcrd401ApplicationJSONObject;
+
     public BpcrdResponse withBpcrd401ApplicationJSONObject(Bpcrd401ApplicationJSON bpcrd401ApplicationJSONObject) {
         this.bpcrd401ApplicationJSONObject = bpcrd401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class BpcrdResponse {
      */
     
     public Bpcrd404ApplicationJSON bpcrd404ApplicationJSONObject;
+
     public BpcrdResponse withBpcrd404ApplicationJSONObject(Bpcrd404ApplicationJSON bpcrd404ApplicationJSONObject) {
         this.bpcrd404ApplicationJSONObject = bpcrd404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class BpcrdResponse {
      */
     
     public Bpcrd500ApplicationJSON bpcrd500ApplicationJSONObject;
+
     public BpcrdResponse withBpcrd500ApplicationJSONObject(Bpcrd500ApplicationJSON bpcrd500ApplicationJSONObject) {
         this.bpcrd500ApplicationJSONObject = bpcrd500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class BpcrdResponse {
      */
     
     public Bpcrd502ApplicationJSON bpcrd502ApplicationJSONObject;
+
     public BpcrdResponse withBpcrd502ApplicationJSONObject(Bpcrd502ApplicationJSON bpcrd502ApplicationJSONObject) {
         this.bpcrd502ApplicationJSONObject = bpcrd502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class BpcrdResponse {
      */
     
     public Bpcrd503ApplicationJSON bpcrd503ApplicationJSONObject;
+
     public BpcrdResponse withBpcrd503ApplicationJSONObject(Bpcrd503ApplicationJSON bpcrd503ApplicationJSONObject) {
         this.bpcrd503ApplicationJSONObject = bpcrd503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class BpcrdResponse {
      */
     
     public Bpcrd504ApplicationJSON bpcrd504ApplicationJSONObject;
+
     public BpcrdResponse withBpcrd504ApplicationJSONObject(Bpcrd504ApplicationJSON bpcrd504ApplicationJSONObject) {
         this.bpcrd504ApplicationJSONObject = bpcrd504ApplicationJSONObject;
         return this;
     }
     
+    public BpcrdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

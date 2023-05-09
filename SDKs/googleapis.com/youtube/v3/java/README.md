@@ -16,17 +16,16 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption1;
-import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption2;
-import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurity;
 import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertRequest;
 import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertResponse;
-import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurity;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption1;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption2;
 import org.openapis.openapi.models.shared.AbuseReport;
+import org.openapis.openapi.models.shared.AbuseType;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.Entity;
 import org.openapis.openapi.models.shared.RelatedEntity;
-import org.openapis.openapi.models.shared.AbuseType;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -35,79 +34,84 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            YoutubeAbuseReportsInsertRequest req = new YoutubeAbuseReportsInsertRequest() {{
-                dollarXgafv = "2";
+            YoutubeAbuseReportsInsertRequest req = new YoutubeAbuseReportsInsertRequest(                new String[]{{
+                                add("provident"),
+                                add("distinctio"),
+                                add("quibusdam"),
+                            }}) {{
+                dollarXgafv = XgafvEnum.TWO;
                 abuseReport = new AbuseReport() {{
                     abuseTypes = new org.openapis.openapi.models.shared.AbuseType[]{{
                         add(new AbuseType() {{
-                            id = "distinctio";
+                            id = "8d69a674-e0f4-467c-8879-6ed151a05dfc";
                         }}),
                         add(new AbuseType() {{
-                            id = "quibusdam";
+                            id = "2ddf7cc7-8ca1-4ba9-a8fc-816742cb7392";
                         }}),
                         add(new AbuseType() {{
-                            id = "unde";
+                            id = "05929396-fea7-4596-ab10-faaa2352c595";
+                        }}),
+                        add(new AbuseType() {{
+                            id = "5907aff1-a3a2-4fa9-8677-39251aa52c3f";
                         }}),
                     }};
-                    description = "nulla";
+                    description = "ipsam";
                     relatedEntities = new org.openapis.openapi.models.shared.RelatedEntity[]{{
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "illum";
-                                typeId = "vel";
-                                url = "error";
+                                id = "d019da1f-fe78-4f09-bb00-74f15471b5e6";
+                                typeId = "repudiandae";
+                                url = "quae";
                             }};
                         }}),
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "deserunt";
-                                typeId = "suscipit";
-                                url = "iure";
+                                id = "3b99d488-e1e9-41e4-90ad-2abd44269802";
+                                typeId = "assumenda";
+                                url = "ipsam";
                             }};
                         }}),
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "magnam";
-                                typeId = "debitis";
-                                url = "ipsa";
+                                id = "02a94bb4-f63c-4969-a9a3-efa77dfb14cd";
+                                typeId = "ea";
+                                url = "aliquid";
                             }};
                         }}),
                     }};
                     subject = new Entity() {{
-                        id = "delectus";
-                        typeId = "tempora";
-                        url = "suscipit";
-                    }};
-                }};
-                accessToken = "molestiae";
-                alt = "proto";
-                callback = "placeat";
-                fields = "voluptatum";
-                key = "iusto";
-                oauthToken = "excepturi";
-                part = new String[]{{
-                    add("recusandae"),
-                    add("temporibus"),
-                }};
+                        id = "ae395efb-9ba8-48f3-a669-97074ba4469b";
+                        typeId = "eum";
+                        url = "vero";
+                    }};;
+                }};;
+                accessToken = "aspernatur";
+                alt = AltEnum.JSON;
+                callback = "magnam";
+                fields = "et";
+                key = "excepturi";
+                oauthToken = "ullam";
                 prettyPrint = false;
-                quotaUser = "ab";
-                uploadType = "quis";
-                uploadProtocol = "veritatis";
-            }}            
+                quotaUser = "provident";
+                uploadType = "quos";
+                uploadProtocol = "sint";
+            }};            
 
             YoutubeAbuseReportsInsertResponse res = sdk.abuseReports.youtubeAbuseReportsInsert(req, new YoutubeAbuseReportsInsertSecurity() {{
-                option1 = new YoutubeAbuseReportsInsertSecurityOption1() {{
+                option1 = new YoutubeAbuseReportsInsertSecurityOption1("accusantium", "mollitia") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.abuseReport.isPresent()) {
+            if (res.abuseReport != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -115,171 +119,171 @@ public class Application {
 ## Available Resources and Operations
 
 
-### abuseReports
+### [abuseReports](docs/abusereports/README.md)
 
-* `youtubeAbuseReportsInsert` - Inserts a new resource into this collection.
+* [youtubeAbuseReportsInsert](docs/abusereports/README.md#youtubeabusereportsinsert) - Inserts a new resource into this collection.
 
-### activities
+### [activities](docs/activities/README.md)
 
-* `youtubeActivitiesList` - Retrieves a list of resources, possibly filtered.
+* [youtubeActivitiesList](docs/activities/README.md#youtubeactivitieslist) - Retrieves a list of resources, possibly filtered.
 
-### captions
+### [captions](docs/captions/README.md)
 
-* `youtubeCaptionsDelete` - Deletes a resource.
-* `youtubeCaptionsDownload` - Downloads a caption track.
-* `youtubeCaptionsInsert` - Inserts a new resource into this collection.
-* `youtubeCaptionsList` - Retrieves a list of resources, possibly filtered.
-* `youtubeCaptionsUpdate` - Updates an existing resource.
+* [youtubeCaptionsDelete](docs/captions/README.md#youtubecaptionsdelete) - Deletes a resource.
+* [youtubeCaptionsDownload](docs/captions/README.md#youtubecaptionsdownload) - Downloads a caption track.
+* [youtubeCaptionsInsert](docs/captions/README.md#youtubecaptionsinsert) - Inserts a new resource into this collection.
+* [youtubeCaptionsList](docs/captions/README.md#youtubecaptionslist) - Retrieves a list of resources, possibly filtered.
+* [youtubeCaptionsUpdate](docs/captions/README.md#youtubecaptionsupdate) - Updates an existing resource.
 
-### channelBanners
+### [channelBanners](docs/channelbanners/README.md)
 
-* `youtubeChannelBannersInsert` - Inserts a new resource into this collection.
+* [youtubeChannelBannersInsert](docs/channelbanners/README.md#youtubechannelbannersinsert) - Inserts a new resource into this collection.
 
-### channelSections
+### [channelSections](docs/channelsections/README.md)
 
-* `youtubeChannelSectionsDelete` - Deletes a resource.
-* `youtubeChannelSectionsInsert` - Inserts a new resource into this collection.
-* `youtubeChannelSectionsList` - Retrieves a list of resources, possibly filtered.
-* `youtubeChannelSectionsUpdate` - Updates an existing resource.
+* [youtubeChannelSectionsDelete](docs/channelsections/README.md#youtubechannelsectionsdelete) - Deletes a resource.
+* [youtubeChannelSectionsInsert](docs/channelsections/README.md#youtubechannelsectionsinsert) - Inserts a new resource into this collection.
+* [youtubeChannelSectionsList](docs/channelsections/README.md#youtubechannelsectionslist) - Retrieves a list of resources, possibly filtered.
+* [youtubeChannelSectionsUpdate](docs/channelsections/README.md#youtubechannelsectionsupdate) - Updates an existing resource.
 
-### channels
+### [channels](docs/channels/README.md)
 
-* `youtubeChannelsList` - Retrieves a list of resources, possibly filtered.
-* `youtubeChannelsUpdate` - Updates an existing resource.
+* [youtubeChannelsList](docs/channels/README.md#youtubechannelslist) - Retrieves a list of resources, possibly filtered.
+* [youtubeChannelsUpdate](docs/channels/README.md#youtubechannelsupdate) - Updates an existing resource.
 
-### commentThreads
+### [commentThreads](docs/commentthreads/README.md)
 
-* `youtubeCommentThreadsInsert` - Inserts a new resource into this collection.
-* `youtubeCommentThreadsList` - Retrieves a list of resources, possibly filtered.
+* [youtubeCommentThreadsInsert](docs/commentthreads/README.md#youtubecommentthreadsinsert) - Inserts a new resource into this collection.
+* [youtubeCommentThreadsList](docs/commentthreads/README.md#youtubecommentthreadslist) - Retrieves a list of resources, possibly filtered.
 
-### comments
+### [comments](docs/comments/README.md)
 
-* `youtubeCommentsDelete` - Deletes a resource.
-* `youtubeCommentsInsert` - Inserts a new resource into this collection.
-* `youtubeCommentsList` - Retrieves a list of resources, possibly filtered.
-* `youtubeCommentsMarkAsSpam` - Expresses the caller's opinion that one or more comments should be flagged as spam.
-* `youtubeCommentsSetModerationStatus` - Sets the moderation status of one or more comments.
-* `youtubeCommentsUpdate` - Updates an existing resource.
+* [youtubeCommentsDelete](docs/comments/README.md#youtubecommentsdelete) - Deletes a resource.
+* [youtubeCommentsInsert](docs/comments/README.md#youtubecommentsinsert) - Inserts a new resource into this collection.
+* [youtubeCommentsList](docs/comments/README.md#youtubecommentslist) - Retrieves a list of resources, possibly filtered.
+* [youtubeCommentsMarkAsSpam](docs/comments/README.md#youtubecommentsmarkasspam) - Expresses the caller's opinion that one or more comments should be flagged as spam.
+* [youtubeCommentsSetModerationStatus](docs/comments/README.md#youtubecommentssetmoderationstatus) - Sets the moderation status of one or more comments.
+* [youtubeCommentsUpdate](docs/comments/README.md#youtubecommentsupdate) - Updates an existing resource.
 
-### i18nLanguages
+### [i18nLanguages](docs/i18nlanguages/README.md)
 
-* `youtubeI18nLanguagesList` - Retrieves a list of resources, possibly filtered.
+* [youtubeI18nLanguagesList](docs/i18nlanguages/README.md#youtubei18nlanguageslist) - Retrieves a list of resources, possibly filtered.
 
-### i18nRegions
+### [i18nRegions](docs/i18nregions/README.md)
 
-* `youtubeI18nRegionsList` - Retrieves a list of resources, possibly filtered.
+* [youtubeI18nRegionsList](docs/i18nregions/README.md#youtubei18nregionslist) - Retrieves a list of resources, possibly filtered.
 
-### liveBroadcasts
+### [liveBroadcasts](docs/livebroadcasts/README.md)
 
-* `youtubeLiveBroadcastsBind` - Bind a broadcast to a stream.
-* `youtubeLiveBroadcastsDelete` - Delete a given broadcast.
-* `youtubeLiveBroadcastsInsert` - Inserts a new stream for the authenticated user.
-* `youtubeLiveBroadcastsInsertCuepoint` - Insert cuepoints in a broadcast
-* `youtubeLiveBroadcastsList` - Retrieve the list of broadcasts associated with the given channel.
-* `youtubeLiveBroadcastsTransition` - Transition a broadcast to a given status.
-* `youtubeLiveBroadcastsUpdate` - Updates an existing broadcast for the authenticated user.
+* [youtubeLiveBroadcastsBind](docs/livebroadcasts/README.md#youtubelivebroadcastsbind) - Bind a broadcast to a stream.
+* [youtubeLiveBroadcastsDelete](docs/livebroadcasts/README.md#youtubelivebroadcastsdelete) - Delete a given broadcast.
+* [youtubeLiveBroadcastsInsert](docs/livebroadcasts/README.md#youtubelivebroadcastsinsert) - Inserts a new stream for the authenticated user.
+* [youtubeLiveBroadcastsInsertCuepoint](docs/livebroadcasts/README.md#youtubelivebroadcastsinsertcuepoint) - Insert cuepoints in a broadcast
+* [youtubeLiveBroadcastsList](docs/livebroadcasts/README.md#youtubelivebroadcastslist) - Retrieve the list of broadcasts associated with the given channel.
+* [youtubeLiveBroadcastsTransition](docs/livebroadcasts/README.md#youtubelivebroadcaststransition) - Transition a broadcast to a given status.
+* [youtubeLiveBroadcastsUpdate](docs/livebroadcasts/README.md#youtubelivebroadcastsupdate) - Updates an existing broadcast for the authenticated user.
 
-### liveChatBans
+### [liveChatBans](docs/livechatbans/README.md)
 
-* `youtubeLiveChatBansDelete` - Deletes a chat ban.
-* `youtubeLiveChatBansInsert` - Inserts a new resource into this collection.
+* [youtubeLiveChatBansDelete](docs/livechatbans/README.md#youtubelivechatbansdelete) - Deletes a chat ban.
+* [youtubeLiveChatBansInsert](docs/livechatbans/README.md#youtubelivechatbansinsert) - Inserts a new resource into this collection.
 
-### liveChatMessages
+### [liveChatMessages](docs/livechatmessages/README.md)
 
-* `youtubeLiveChatMessagesDelete` - Deletes a chat message.
-* `youtubeLiveChatMessagesInsert` - Inserts a new resource into this collection.
-* `youtubeLiveChatMessagesList` - Retrieves a list of resources, possibly filtered.
+* [youtubeLiveChatMessagesDelete](docs/livechatmessages/README.md#youtubelivechatmessagesdelete) - Deletes a chat message.
+* [youtubeLiveChatMessagesInsert](docs/livechatmessages/README.md#youtubelivechatmessagesinsert) - Inserts a new resource into this collection.
+* [youtubeLiveChatMessagesList](docs/livechatmessages/README.md#youtubelivechatmessageslist) - Retrieves a list of resources, possibly filtered.
 
-### liveChatModerators
+### [liveChatModerators](docs/livechatmoderators/README.md)
 
-* `youtubeLiveChatModeratorsDelete` - Deletes a chat moderator.
-* `youtubeLiveChatModeratorsInsert` - Inserts a new resource into this collection.
-* `youtubeLiveChatModeratorsList` - Retrieves a list of resources, possibly filtered.
+* [youtubeLiveChatModeratorsDelete](docs/livechatmoderators/README.md#youtubelivechatmoderatorsdelete) - Deletes a chat moderator.
+* [youtubeLiveChatModeratorsInsert](docs/livechatmoderators/README.md#youtubelivechatmoderatorsinsert) - Inserts a new resource into this collection.
+* [youtubeLiveChatModeratorsList](docs/livechatmoderators/README.md#youtubelivechatmoderatorslist) - Retrieves a list of resources, possibly filtered.
 
-### liveStreams
+### [liveStreams](docs/livestreams/README.md)
 
-* `youtubeLiveStreamsDelete` - Deletes an existing stream for the authenticated user.
-* `youtubeLiveStreamsInsert` - Inserts a new stream for the authenticated user.
-* `youtubeLiveStreamsList` - Retrieve the list of streams associated with the given channel. --
-* `youtubeLiveStreamsUpdate` - Updates an existing stream for the authenticated user.
+* [youtubeLiveStreamsDelete](docs/livestreams/README.md#youtubelivestreamsdelete) - Deletes an existing stream for the authenticated user.
+* [youtubeLiveStreamsInsert](docs/livestreams/README.md#youtubelivestreamsinsert) - Inserts a new stream for the authenticated user.
+* [youtubeLiveStreamsList](docs/livestreams/README.md#youtubelivestreamslist) - Retrieve the list of streams associated with the given channel. --
+* [youtubeLiveStreamsUpdate](docs/livestreams/README.md#youtubelivestreamsupdate) - Updates an existing stream for the authenticated user.
 
-### members
+### [members](docs/members/README.md)
 
-* `youtubeMembersList` - Retrieves a list of members that match the request criteria for a channel.
+* [youtubeMembersList](docs/members/README.md#youtubememberslist) - Retrieves a list of members that match the request criteria for a channel.
 
-### membershipsLevels
+### [membershipsLevels](docs/membershipslevels/README.md)
 
-* `youtubeMembershipsLevelsList` - Retrieves a list of all pricing levels offered by a creator to the fans.
+* [youtubeMembershipsLevelsList](docs/membershipslevels/README.md#youtubemembershipslevelslist) - Retrieves a list of all pricing levels offered by a creator to the fans.
 
-### playlistItems
+### [playlistItems](docs/playlistitems/README.md)
 
-* `youtubePlaylistItemsDelete` - Deletes a resource.
-* `youtubePlaylistItemsInsert` - Inserts a new resource into this collection.
-* `youtubePlaylistItemsList` - Retrieves a list of resources, possibly filtered.
-* `youtubePlaylistItemsUpdate` - Updates an existing resource.
+* [youtubePlaylistItemsDelete](docs/playlistitems/README.md#youtubeplaylistitemsdelete) - Deletes a resource.
+* [youtubePlaylistItemsInsert](docs/playlistitems/README.md#youtubeplaylistitemsinsert) - Inserts a new resource into this collection.
+* [youtubePlaylistItemsList](docs/playlistitems/README.md#youtubeplaylistitemslist) - Retrieves a list of resources, possibly filtered.
+* [youtubePlaylistItemsUpdate](docs/playlistitems/README.md#youtubeplaylistitemsupdate) - Updates an existing resource.
 
-### playlists
+### [playlists](docs/playlists/README.md)
 
-* `youtubePlaylistsDelete` - Deletes a resource.
-* `youtubePlaylistsInsert` - Inserts a new resource into this collection.
-* `youtubePlaylistsList` - Retrieves a list of resources, possibly filtered.
-* `youtubePlaylistsUpdate` - Updates an existing resource.
+* [youtubePlaylistsDelete](docs/playlists/README.md#youtubeplaylistsdelete) - Deletes a resource.
+* [youtubePlaylistsInsert](docs/playlists/README.md#youtubeplaylistsinsert) - Inserts a new resource into this collection.
+* [youtubePlaylistsList](docs/playlists/README.md#youtubeplaylistslist) - Retrieves a list of resources, possibly filtered.
+* [youtubePlaylistsUpdate](docs/playlists/README.md#youtubeplaylistsupdate) - Updates an existing resource.
 
-### search
+### [search](docs/search/README.md)
 
-* `youtubeSearchList` - Retrieves a list of search resources
+* [youtubeSearchList](docs/search/README.md#youtubesearchlist) - Retrieves a list of search resources
 
-### subscriptions
+### [subscriptions](docs/subscriptions/README.md)
 
-* `youtubeSubscriptionsDelete` - Deletes a resource.
-* `youtubeSubscriptionsInsert` - Inserts a new resource into this collection.
-* `youtubeSubscriptionsList` - Retrieves a list of resources, possibly filtered.
+* [youtubeSubscriptionsDelete](docs/subscriptions/README.md#youtubesubscriptionsdelete) - Deletes a resource.
+* [youtubeSubscriptionsInsert](docs/subscriptions/README.md#youtubesubscriptionsinsert) - Inserts a new resource into this collection.
+* [youtubeSubscriptionsList](docs/subscriptions/README.md#youtubesubscriptionslist) - Retrieves a list of resources, possibly filtered.
 
-### superChatEvents
+### [superChatEvents](docs/superchatevents/README.md)
 
-* `youtubeSuperChatEventsList` - Retrieves a list of resources, possibly filtered.
+* [youtubeSuperChatEventsList](docs/superchatevents/README.md#youtubesuperchateventslist) - Retrieves a list of resources, possibly filtered.
 
-### tests
+### [tests](docs/tests/README.md)
 
-* `youtubeTestsInsert` - POST method.
+* [youtubeTestsInsert](docs/tests/README.md#youtubetestsinsert) - POST method.
 
-### thirdPartyLinks
+### [thirdPartyLinks](docs/thirdpartylinks/README.md)
 
-* `youtubeThirdPartyLinksDelete` - Deletes a resource.
-* `youtubeThirdPartyLinksInsert` - Inserts a new resource into this collection.
-* `youtubeThirdPartyLinksList` - Retrieves a list of resources, possibly filtered.
-* `youtubeThirdPartyLinksUpdate` - Updates an existing resource.
+* [youtubeThirdPartyLinksDelete](docs/thirdpartylinks/README.md#youtubethirdpartylinksdelete) - Deletes a resource.
+* [youtubeThirdPartyLinksInsert](docs/thirdpartylinks/README.md#youtubethirdpartylinksinsert) - Inserts a new resource into this collection.
+* [youtubeThirdPartyLinksList](docs/thirdpartylinks/README.md#youtubethirdpartylinkslist) - Retrieves a list of resources, possibly filtered.
+* [youtubeThirdPartyLinksUpdate](docs/thirdpartylinks/README.md#youtubethirdpartylinksupdate) - Updates an existing resource.
 
-### thumbnails
+### [thumbnails](docs/thumbnails/README.md)
 
-* `youtubeThumbnailsSet` - As this is not an insert in a strict sense (it supports uploading/setting of a thumbnail for multiple videos, which doesn't result in creation of a single resource), I use a custom verb here.
+* [youtubeThumbnailsSet](docs/thumbnails/README.md#youtubethumbnailsset) - As this is not an insert in a strict sense (it supports uploading/setting of a thumbnail for multiple videos, which doesn't result in creation of a single resource), I use a custom verb here.
 
-### videoAbuseReportReasons
+### [videoAbuseReportReasons](docs/videoabusereportreasons/README.md)
 
-* `youtubeVideoAbuseReportReasonsList` - Retrieves a list of resources, possibly filtered.
+* [youtubeVideoAbuseReportReasonsList](docs/videoabusereportreasons/README.md#youtubevideoabusereportreasonslist) - Retrieves a list of resources, possibly filtered.
 
-### videoCategories
+### [videoCategories](docs/videocategories/README.md)
 
-* `youtubeVideoCategoriesList` - Retrieves a list of resources, possibly filtered.
+* [youtubeVideoCategoriesList](docs/videocategories/README.md#youtubevideocategorieslist) - Retrieves a list of resources, possibly filtered.
 
-### videos
+### [videos](docs/videos/README.md)
 
-* `youtubeVideosDelete` - Deletes a resource.
-* `youtubeVideosGetRating` - Retrieves the ratings that the authorized user gave to a list of specified videos.
-* `youtubeVideosInsert` - Inserts a new resource into this collection.
-* `youtubeVideosList` - Retrieves a list of resources, possibly filtered.
-* `youtubeVideosRate` - Adds a like or dislike rating to a video or removes a rating from a video.
-* `youtubeVideosReportAbuse` - Report abuse for a video.
-* `youtubeVideosUpdate` - Updates an existing resource.
+* [youtubeVideosDelete](docs/videos/README.md#youtubevideosdelete) - Deletes a resource.
+* [youtubeVideosGetRating](docs/videos/README.md#youtubevideosgetrating) - Retrieves the ratings that the authorized user gave to a list of specified videos.
+* [youtubeVideosInsert](docs/videos/README.md#youtubevideosinsert) - Inserts a new resource into this collection.
+* [youtubeVideosList](docs/videos/README.md#youtubevideoslist) - Retrieves a list of resources, possibly filtered.
+* [youtubeVideosRate](docs/videos/README.md#youtubevideosrate) - Adds a like or dislike rating to a video or removes a rating from a video.
+* [youtubeVideosReportAbuse](docs/videos/README.md#youtubevideosreportabuse) - Report abuse for a video.
+* [youtubeVideosUpdate](docs/videos/README.md#youtubevideosupdate) - Updates an existing resource.
 
-### watermarks
+### [watermarks](docs/watermarks/README.md)
 
-* `youtubeWatermarksSet` - Allows upload of watermark image and setting it for a channel.
-* `youtubeWatermarksUnset` - Allows removal of channel watermark.
+* [youtubeWatermarksSet](docs/watermarks/README.md#youtubewatermarksset) - Allows upload of watermark image and setting it for a channel.
+* [youtubeWatermarksUnset](docs/watermarks/README.md#youtubewatermarksunset) - Allows removal of channel watermark.
 
-### youtube
+### [youtube](docs/youtube/README.md)
 
-* `youtubeYoutubeV3UpdateCommentThreads` - Updates an existing resource.
+* [youtubeYoutubeV3UpdateCommentThreads](docs/youtube/README.md#youtubeyoutubev3updatecommentthreads) - Updates an existing resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Comments {
     
     public String body;
+
     public Comments withBody(String body) {
         this.body = body;
         return this;
@@ -16,6 +17,7 @@ public class Comments {
     
     
     public String bodyMarkdown;
+
     public Comments withBodyMarkdown(String bodyMarkdown) {
         this.bodyMarkdown = bodyMarkdown;
         return this;
@@ -23,6 +25,7 @@ public class Comments {
     
     
     public Boolean canFlag;
+
     public Comments withCanFlag(Boolean canFlag) {
         this.canFlag = canFlag;
         return this;
@@ -30,6 +33,7 @@ public class Comments {
     
     
     public Long commentId;
+
     public Comments withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -37,6 +41,7 @@ public class Comments {
     
     
     public Long creationDate;
+
     public Comments withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -44,6 +49,7 @@ public class Comments {
     
     
     public Boolean edited;
+
     public Comments withEdited(Boolean edited) {
         this.edited = edited;
         return this;
@@ -51,6 +57,7 @@ public class Comments {
     
     
     public String link;
+
     public Comments withLink(String link) {
         this.link = link;
         return this;
@@ -58,6 +65,7 @@ public class Comments {
     
     
     public CommentsOwner owner;
+
     public Comments withOwner(CommentsOwner owner) {
         this.owner = owner;
         return this;
@@ -65,6 +73,7 @@ public class Comments {
     
     
     public Long postId;
+
     public Comments withPostId(Long postId) {
         this.postId = postId;
         return this;
@@ -72,6 +81,7 @@ public class Comments {
     
     
     public String postType;
+
     public Comments withPostType(String postType) {
         this.postType = postType;
         return this;
@@ -79,6 +89,7 @@ public class Comments {
     
     
     public CommentsReplyToUser replyToUser;
+
     public Comments withReplyToUser(CommentsReplyToUser replyToUser) {
         this.replyToUser = replyToUser;
         return this;
@@ -86,6 +97,7 @@ public class Comments {
     
     
     public Long score;
+
     public Comments withScore(Long score) {
         this.score = score;
         return this;
@@ -93,9 +105,11 @@ public class Comments {
     
     
     public Boolean upvoted;
+
     public Comments withUpvoted(Boolean upvoted) {
         this.upvoted = upvoted;
         return this;
     }
     
+    public Comments(){}
 }

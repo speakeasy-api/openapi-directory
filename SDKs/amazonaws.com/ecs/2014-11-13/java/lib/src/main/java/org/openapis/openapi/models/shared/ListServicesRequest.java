@@ -12,6 +12,7 @@ public class ListServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public ListServicesRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -20,6 +21,7 @@ public class ListServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchType")
     public LaunchTypeEnum launchType;
+
     public ListServicesRequest withLaunchType(LaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -28,6 +30,7 @@ public class ListServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListServicesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class ListServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServicesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class ListServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingStrategy")
     public SchedulingStrategyEnum schedulingStrategy;
+
     public ListServicesRequest withSchedulingStrategy(SchedulingStrategyEnum schedulingStrategy) {
         this.schedulingStrategy = schedulingStrategy;
         return this;
     }
     
+    public ListServicesRequest(){}
 }

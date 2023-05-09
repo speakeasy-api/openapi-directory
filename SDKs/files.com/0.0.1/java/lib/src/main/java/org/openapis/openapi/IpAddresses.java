@@ -60,11 +60,9 @@ public class IpAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpAddressesResponse res = new org.openapis.openapi.models.operations.GetIpAddressesResponse() {{
+        org.openapis.openapi.models.operations.GetIpAddressesResponse res = new org.openapis.openapi.models.operations.GetIpAddressesResponse(contentType, httpRes.statusCode()) {{
             ipAddressEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class IpAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpAddressesExavaultReservedResponse res = new org.openapis.openapi.models.operations.GetIpAddressesExavaultReservedResponse() {{
+        org.openapis.openapi.models.operations.GetIpAddressesExavaultReservedResponse res = new org.openapis.openapi.models.operations.GetIpAddressesExavaultReservedResponse(contentType, httpRes.statusCode()) {{
             publicIpAddressEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class IpAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIpAddressesReservedResponse res = new org.openapis.openapi.models.operations.GetIpAddressesReservedResponse() {{
+        org.openapis.openapi.models.operations.GetIpAddressesReservedResponse res = new org.openapis.openapi.models.operations.GetIpAddressesReservedResponse(contentType, httpRes.statusCode()) {{
             publicIpAddressEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

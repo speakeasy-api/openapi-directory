@@ -15,6 +15,7 @@ public class Racer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Racer502ApplicationJSONErrorEnum error;
+
     public Racer502ApplicationJSON withError(Racer502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Racer502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Racer502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Racer502ApplicationJSON withErrorDescription(Racer502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Racer502ApplicationJSON(){}
 }

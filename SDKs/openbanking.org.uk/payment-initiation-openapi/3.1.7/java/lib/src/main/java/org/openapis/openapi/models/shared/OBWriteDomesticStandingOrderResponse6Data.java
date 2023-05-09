@@ -17,6 +17,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteDomesticStandingOrderResponse6DataCharges[] charges;
+
     public OBWriteDomesticStandingOrderResponse6Data withCharges(OBWriteDomesticStandingOrderResponse6DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -27,6 +28,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteDomesticStandingOrderResponse6Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -41,6 +43,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteDomesticStandingOrderResponse6Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteDomesticStandingOrderResponse6Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -62,6 +66,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
      */
     @JsonProperty("DomesticStandingOrderId")
     public String domesticStandingOrderId;
+
     public OBWriteDomesticStandingOrderResponse6Data withDomesticStandingOrderId(String domesticStandingOrderId) {
         this.domesticStandingOrderId = domesticStandingOrderId;
         return this;
@@ -72,6 +77,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticStandingOrderResponse6DataInitiation initiation;
+
     public OBWriteDomesticStandingOrderResponse6Data withInitiation(OBWriteDomesticStandingOrderResponse6DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -83,6 +89,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultiAuthorisation")
     public OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation multiAuthorisation;
+
     public OBWriteDomesticStandingOrderResponse6Data withMultiAuthorisation(OBWriteDomesticStandingOrderResponse6DataMultiAuthorisation multiAuthorisation) {
         this.multiAuthorisation = multiAuthorisation;
         return this;
@@ -94,6 +101,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Refund")
     public OBWriteDomesticStandingOrderResponse6DataRefund refund;
+
     public OBWriteDomesticStandingOrderResponse6Data withRefund(OBWriteDomesticStandingOrderResponse6DataRefund refund) {
         this.refund = refund;
         return this;
@@ -104,6 +112,7 @@ public class OBWriteDomesticStandingOrderResponse6Data {
      */
     @JsonProperty("Status")
     public OBWriteDomesticStandingOrderResponse6DataStatusEnum status;
+
     public OBWriteDomesticStandingOrderResponse6Data withStatus(OBWriteDomesticStandingOrderResponse6DataStatusEnum status) {
         this.status = status;
         return this;
@@ -118,9 +127,18 @@ public class OBWriteDomesticStandingOrderResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteDomesticStandingOrderResponse6Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderResponse6Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("DomesticStandingOrderId") String domesticStandingOrderId, @JsonProperty("Initiation") OBWriteDomesticStandingOrderResponse6DataInitiation initiation, @JsonProperty("Status") OBWriteDomesticStandingOrderResponse6DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.domesticStandingOrderId = domesticStandingOrderId;
+        this.initiation = initiation;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

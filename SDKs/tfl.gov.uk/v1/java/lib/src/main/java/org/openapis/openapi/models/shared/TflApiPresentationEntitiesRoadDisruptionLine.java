@@ -19,6 +19,7 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -27,6 +28,7 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withId(Integer id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDiversion")
     public Boolean isDiversion;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withIsDiversion(Boolean isDiversion) {
         this.isDiversion = isDiversion;
         return this;
@@ -51,6 +55,7 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiLineString")
     public SystemDataSpatialDbGeography multiLineString;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withMultiLineString(SystemDataSpatialDbGeography multiLineString) {
         this.multiLineString = multiLineString;
         return this;
@@ -59,6 +64,7 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roadDisruptionId")
     public String roadDisruptionId;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withRoadDisruptionId(String roadDisruptionId) {
         this.roadDisruptionId = roadDisruptionId;
         return this;
@@ -69,6 +75,7 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -77,9 +84,11 @@ public class TflApiPresentationEntitiesRoadDisruptionLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TflApiPresentationEntitiesRoadDisruptionLine withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TflApiPresentationEntitiesRoadDisruptionLine(){}
 }

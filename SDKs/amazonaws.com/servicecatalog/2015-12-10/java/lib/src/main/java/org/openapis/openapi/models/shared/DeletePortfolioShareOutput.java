@@ -15,9 +15,11 @@ public class DeletePortfolioShareOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioShareToken")
     public String portfolioShareToken;
+
     public DeletePortfolioShareOutput withPortfolioShareToken(String portfolioShareToken) {
         this.portfolioShareToken = portfolioShareToken;
         return this;
     }
     
+    public DeletePortfolioShareOutput(){}
 }

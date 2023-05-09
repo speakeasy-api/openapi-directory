@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     public String description;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public String ipamResourceDiscoveryArn;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withIpamResourceDiscoveryArn(String ipamResourceDiscoveryArn) {
         this.ipamResourceDiscoveryArn = ipamResourceDiscoveryArn;
         return this;
@@ -26,6 +28,7 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public String ipamResourceDiscoveryId;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public String ipamResourceDiscoveryRegion;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withIpamResourceDiscoveryRegion(String ipamResourceDiscoveryRegion) {
         this.ipamResourceDiscoveryRegion = ipamResourceDiscoveryRegion;
         return this;
@@ -40,6 +44,7 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public Boolean isDefault;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -47,6 +52,7 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscoveryOperatingRegions[] operatingRegions;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withOperatingRegions(DeleteIpamResourceDiscoveryResultIpamResourceDiscoveryOperatingRegions[] operatingRegions) {
         this.operatingRegions = operatingRegions;
         return this;
@@ -54,6 +60,7 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public String ownerId;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -61,6 +68,7 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscoveryStateEnum state;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withState(DeleteIpamResourceDiscoveryResultIpamResourceDiscoveryStateEnum state) {
         this.state = state;
         return this;
@@ -68,9 +76,11 @@ public class DeleteIpamResourceDiscoveryResultIpamResourceDiscovery {
     
     
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscoveryTags[] tags;
+
     public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery withTags(DeleteIpamResourceDiscoveryResultIpamResourceDiscoveryTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteIpamResourceDiscoveryResultIpamResourceDiscovery(){}
 }

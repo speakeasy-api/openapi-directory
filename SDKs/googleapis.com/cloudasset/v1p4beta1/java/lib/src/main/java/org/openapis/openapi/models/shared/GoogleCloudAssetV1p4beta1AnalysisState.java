@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1p4beta1AnalysisState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public GoogleCloudAssetV1p4beta1AnalysisState withCause(String cause) {
         this.cause = cause;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1p4beta1AnalysisState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum code;
+
     public GoogleCloudAssetV1p4beta1AnalysisState withCode(GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public GoogleCloudAssetV1p4beta1AnalysisState(){}
 }

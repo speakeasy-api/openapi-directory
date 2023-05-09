@@ -15,9 +15,13 @@ public class Location {
      */
     @JsonProperty("location")
     public String location;
+
     public Location withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public Location(@JsonProperty("location") String location) {
+        this.location = location;
+  }
 }

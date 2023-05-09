@@ -12,6 +12,7 @@ public class Item1 {
      */
     @JsonProperty("itemIndex")
     public String itemIndex;
+
     public Item1 withItemIndex(String itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -22,6 +23,7 @@ public class Item1 {
      */
     @JsonProperty("price")
     public Integer price;
+
     public Item1 withPrice(Integer price) {
         this.price = price;
         return this;
@@ -32,9 +34,15 @@ public class Item1 {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item1 withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public Item1(@JsonProperty("itemIndex") String itemIndex, @JsonProperty("price") Integer price, @JsonProperty("quantity") Integer quantity) {
+        this.itemIndex = itemIndex;
+        this.price = price;
+        this.quantity = quantity;
+  }
 }

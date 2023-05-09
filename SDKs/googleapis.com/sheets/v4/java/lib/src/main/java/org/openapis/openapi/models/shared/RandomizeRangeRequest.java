@@ -18,9 +18,11 @@ public class RandomizeRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public RandomizeRangeRequest withRange(GridRange range) {
         this.range = range;
         return this;
     }
     
+    public RandomizeRangeRequest(){}
 }

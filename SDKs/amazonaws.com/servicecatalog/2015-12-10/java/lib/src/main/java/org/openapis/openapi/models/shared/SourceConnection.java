@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceConnection {
     @JsonProperty("ConnectionParameters")
     public SourceConnectionParameters connectionParameters;
+
     public SourceConnection withConnectionParameters(SourceConnectionParameters connectionParameters) {
         this.connectionParameters = connectionParameters;
         return this;
@@ -22,9 +23,13 @@ public class SourceConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SourceTypeEnum type;
+
     public SourceConnection withType(SourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SourceConnection(@JsonProperty("ConnectionParameters") SourceConnectionParameters connectionParameters) {
+        this.connectionParameters = connectionParameters;
+  }
 }

@@ -15,6 +15,7 @@ public class PaymentDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public PaymentDTO withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class PaymentDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public PaymentDTO withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -31,6 +33,7 @@ public class PaymentDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentDate")
     public TimeDTO paymentDate;
+
     public PaymentDTO withPaymentDate(TimeDTO paymentDate) {
         this.paymentDate = paymentDate;
         return this;
@@ -39,9 +42,11 @@ public class PaymentDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodId")
     public Long paymentMethodId;
+
     public PaymentDTO withPaymentMethodId(Long paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
     }
     
+    public PaymentDTO(){}
 }

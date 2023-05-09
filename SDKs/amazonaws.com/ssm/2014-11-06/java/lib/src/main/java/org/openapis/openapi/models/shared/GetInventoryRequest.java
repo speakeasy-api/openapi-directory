@@ -12,6 +12,7 @@ public class GetInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aggregators")
     public InventoryAggregator[] aggregators;
+
     public GetInventoryRequest withAggregators(InventoryAggregator[] aggregators) {
         this.aggregators = aggregators;
         return this;
@@ -20,6 +21,7 @@ public class GetInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public InventoryFilter[] filters;
+
     public GetInventoryRequest withFilters(InventoryFilter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class GetInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetInventoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetInventoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class GetInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultAttributes")
     public ResultAttribute[] resultAttributes;
+
     public GetInventoryRequest withResultAttributes(ResultAttribute[] resultAttributes) {
         this.resultAttributes = resultAttributes;
         return this;
     }
     
+    public GetInventoryRequest(){}
 }

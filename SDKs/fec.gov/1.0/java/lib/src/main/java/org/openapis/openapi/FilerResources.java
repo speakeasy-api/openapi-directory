@@ -62,11 +62,9 @@ public class FilerResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRadAnalystResponse res = new org.openapis.openapi.models.operations.GetRadAnalystResponse() {{
+        org.openapis.openapi.models.operations.GetRadAnalystResponse res = new org.openapis.openapi.models.operations.GetRadAnalystResponse(contentType, httpRes.statusCode()) {{
             radAnalystPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -107,11 +105,9 @@ public class FilerResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStateElectionOfficeResponse res = new org.openapis.openapi.models.operations.GetStateElectionOfficeResponse() {{
+        org.openapis.openapi.models.operations.GetStateElectionOfficeResponse res = new org.openapis.openapi.models.operations.GetStateElectionOfficeResponse(contentType, httpRes.statusCode()) {{
             stateElectionOfficeInfoPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

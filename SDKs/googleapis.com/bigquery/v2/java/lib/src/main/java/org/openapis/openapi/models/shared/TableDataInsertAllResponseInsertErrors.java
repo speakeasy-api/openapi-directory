@@ -15,6 +15,7 @@ public class TableDataInsertAllResponseInsertErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorProto[] errors;
+
     public TableDataInsertAllResponseInsertErrors withErrors(ErrorProto[] errors) {
         this.errors = errors;
         return this;
@@ -26,9 +27,11 @@ public class TableDataInsertAllResponseInsertErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public TableDataInsertAllResponseInsertErrors withIndex(Long index) {
         this.index = index;
         return this;
     }
     
+    public TableDataInsertAllResponseInsertErrors(){}
 }

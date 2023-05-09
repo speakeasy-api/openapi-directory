@@ -15,6 +15,7 @@ public class Http2HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public Http2HealthCheck withHost(String host) {
         this.host = host;
         return this;
@@ -26,6 +27,7 @@ public class Http2HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public Http2HealthCheck withPort(Integer port) {
         this.port = port;
         return this;
@@ -37,6 +39,7 @@ public class Http2HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portName")
     public String portName;
+
     public Http2HealthCheck withPortName(String portName) {
         this.portName = portName;
         return this;
@@ -48,6 +51,7 @@ public class Http2HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portSpecification")
     public Http2HealthCheckPortSpecificationEnum portSpecification;
+
     public Http2HealthCheck withPortSpecification(Http2HealthCheckPortSpecificationEnum portSpecification) {
         this.portSpecification = portSpecification;
         return this;
@@ -59,6 +63,7 @@ public class Http2HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyHeader")
     public Http2HealthCheckProxyHeaderEnum proxyHeader;
+
     public Http2HealthCheck withProxyHeader(Http2HealthCheckProxyHeaderEnum proxyHeader) {
         this.proxyHeader = proxyHeader;
         return this;
@@ -70,6 +75,7 @@ public class Http2HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestPath")
     public String requestPath;
+
     public Http2HealthCheck withRequestPath(String requestPath) {
         this.requestPath = requestPath;
         return this;
@@ -81,9 +87,11 @@ public class Http2HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public Http2HealthCheck withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public Http2HealthCheck(){}
 }

@@ -15,6 +15,7 @@ public class S3BucketConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPoints")
     public java.util.Map<String, S3AccessPointConfiguration> accessPoints;
+
     public S3BucketConfiguration withAccessPoints(java.util.Map<String, S3AccessPointConfiguration> accessPoints) {
         this.accessPoints = accessPoints;
         return this;
@@ -23,6 +24,7 @@ public class S3BucketConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketAclGrants")
     public S3BucketAclGrantConfiguration[] bucketAclGrants;
+
     public S3BucketConfiguration withBucketAclGrants(S3BucketAclGrantConfiguration[] bucketAclGrants) {
         this.bucketAclGrants = bucketAclGrants;
         return this;
@@ -31,6 +33,7 @@ public class S3BucketConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPolicy")
     public String bucketPolicy;
+
     public S3BucketConfiguration withBucketPolicy(String bucketPolicy) {
         this.bucketPolicy = bucketPolicy;
         return this;
@@ -39,9 +42,11 @@ public class S3BucketConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPublicAccessBlock")
     public S3PublicAccessBlockConfiguration bucketPublicAccessBlock;
+
     public S3BucketConfiguration withBucketPublicAccessBlock(S3PublicAccessBlockConfiguration bucketPublicAccessBlock) {
         this.bucketPublicAccessBlock = bucketPublicAccessBlock;
         return this;
     }
     
+    public S3BucketConfiguration(){}
 }

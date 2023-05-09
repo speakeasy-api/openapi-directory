@@ -15,6 +15,7 @@ public class ListConnectorEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public ListConnectorEntitiesRequestBody withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -26,6 +27,7 @@ public class ListConnectorEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public ListConnectorEntitiesRequestBody withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -37,6 +39,7 @@ public class ListConnectorEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorType")
     public ListConnectorEntitiesRequestBodyConnectorTypeEnum connectorType;
+
     public ListConnectorEntitiesRequestBody withConnectorType(ListConnectorEntitiesRequestBodyConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -48,6 +51,7 @@ public class ListConnectorEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitiesPath")
     public String entitiesPath;
+
     public ListConnectorEntitiesRequestBody withEntitiesPath(String entitiesPath) {
         this.entitiesPath = entitiesPath;
         return this;
@@ -59,6 +63,7 @@ public class ListConnectorEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListConnectorEntitiesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -70,9 +75,11 @@ public class ListConnectorEntitiesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListConnectorEntitiesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConnectorEntitiesRequestBody(){}
 }

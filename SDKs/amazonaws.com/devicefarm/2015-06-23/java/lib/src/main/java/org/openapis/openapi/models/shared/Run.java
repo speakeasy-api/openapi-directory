@@ -20,6 +20,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appUpload")
     public String appUpload;
+
     public Run withAppUpload(String appUpload) {
         this.appUpload = appUpload;
         return this;
@@ -28,6 +29,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Run withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingMethod")
     public BillingMethodEnum billingMethod;
+
     public Run withBillingMethod(BillingMethodEnum billingMethod) {
         this.billingMethod = billingMethod;
         return this;
@@ -44,6 +47,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedJobs")
     public Long completedJobs;
+
     public Run withCompletedJobs(Long completedJobs) {
         this.completedJobs = completedJobs;
         return this;
@@ -52,6 +56,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counters")
     public Counters counters;
+
     public Run withCounters(Counters counters) {
         this.counters = counters;
         return this;
@@ -62,6 +67,7 @@ public class Run {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Run withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -70,6 +76,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerArtifactPaths")
     public CustomerArtifactPaths customerArtifactPaths;
+
     public Run withCustomerArtifactPaths(CustomerArtifactPaths customerArtifactPaths) {
         this.customerArtifactPaths = customerArtifactPaths;
         return this;
@@ -78,6 +85,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceMinutes")
     public DeviceMinutes deviceMinutes;
+
     public Run withDeviceMinutes(DeviceMinutes deviceMinutes) {
         this.deviceMinutes = deviceMinutes;
         return this;
@@ -86,6 +94,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePoolArn")
     public String devicePoolArn;
+
     public Run withDevicePoolArn(String devicePoolArn) {
         this.devicePoolArn = devicePoolArn;
         return this;
@@ -94,6 +103,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSelectionResult")
     public DeviceSelectionResult deviceSelectionResult;
+
     public Run withDeviceSelectionResult(DeviceSelectionResult deviceSelectionResult) {
         this.deviceSelectionResult = deviceSelectionResult;
         return this;
@@ -102,6 +112,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCount")
     public Long eventCount;
+
     public Run withEventCount(Long eventCount) {
         this.eventCount = eventCount;
         return this;
@@ -110,6 +121,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTimeoutMinutes")
     public Long jobTimeoutMinutes;
+
     public Run withJobTimeoutMinutes(Long jobTimeoutMinutes) {
         this.jobTimeoutMinutes = jobTimeoutMinutes;
         return this;
@@ -118,6 +130,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public Run withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -126,6 +139,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public Run withLocation(Location location) {
         this.location = location;
         return this;
@@ -134,6 +148,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Run withMessage(String message) {
         this.message = message;
         return this;
@@ -142,6 +157,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Run withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +166,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkProfile")
     public NetworkProfile networkProfile;
+
     public Run withNetworkProfile(NetworkProfile networkProfile) {
         this.networkProfile = networkProfile;
         return this;
@@ -158,6 +175,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parsingResultUrl")
     public String parsingResultUrl;
+
     public Run withParsingResultUrl(String parsingResultUrl) {
         this.parsingResultUrl = parsingResultUrl;
         return this;
@@ -166,6 +184,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public DevicePlatformEnum platform;
+
     public Run withPlatform(DevicePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -174,6 +193,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radios")
     public Radios radios;
+
     public Run withRadios(Radios radios) {
         this.radios = radios;
         return this;
@@ -182,6 +202,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public ExecutionResultEnum result;
+
     public Run withResult(ExecutionResultEnum result) {
         this.result = result;
         return this;
@@ -190,6 +211,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public ExecutionResultCodeEnum resultCode;
+
     public Run withResultCode(ExecutionResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -198,6 +220,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seed")
     public Long seed;
+
     public Run withSeed(Long seed) {
         this.seed = seed;
         return this;
@@ -206,6 +229,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipAppResign")
     public Boolean skipAppResign;
+
     public Run withSkipAppResign(Boolean skipAppResign) {
         this.skipAppResign = skipAppResign;
         return this;
@@ -216,6 +240,7 @@ public class Run {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("started")
     public OffsetDateTime started;
+
     public Run withStarted(OffsetDateTime started) {
         this.started = started;
         return this;
@@ -224,6 +249,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExecutionStatusEnum status;
+
     public Run withStatus(ExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -234,6 +260,7 @@ public class Run {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopped")
     public OffsetDateTime stopped;
+
     public Run withStopped(OffsetDateTime stopped) {
         this.stopped = stopped;
         return this;
@@ -242,6 +269,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSpecArn")
     public String testSpecArn;
+
     public Run withTestSpecArn(String testSpecArn) {
         this.testSpecArn = testSpecArn;
         return this;
@@ -250,6 +278,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalJobs")
     public Long totalJobs;
+
     public Run withTotalJobs(Long totalJobs) {
         this.totalJobs = totalJobs;
         return this;
@@ -258,6 +287,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TestTypeEnum type;
+
     public Run withType(TestTypeEnum type) {
         this.type = type;
         return this;
@@ -266,6 +296,7 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VpcConfig vpcConfig;
+
     public Run withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
@@ -274,9 +305,11 @@ public class Run {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webUrl")
     public String webUrl;
+
     public Run withWebUrl(String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
     
+    public Run(){}
 }

@@ -15,9 +15,11 @@ public class PayRuns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayRuns")
     public PayRun[] payRuns;
+
     public PayRuns withPayRuns(PayRun[] payRuns) {
         this.payRuns = payRuns;
         return this;
     }
     
+    public PayRuns(){}
 }

@@ -15,9 +15,11 @@ public class DataSourceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntendedUse")
     public IntendedUseEnum intendedUse;
+
     public DataSourceConfiguration withIntendedUse(IntendedUseEnum intendedUse) {
         this.intendedUse = intendedUse;
         return this;
     }
     
+    public DataSourceConfiguration(){}
 }

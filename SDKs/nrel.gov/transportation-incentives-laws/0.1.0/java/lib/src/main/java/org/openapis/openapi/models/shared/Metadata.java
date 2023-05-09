@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Metadata - The identifying metadata.
@@ -15,6 +15,7 @@ public class Metadata {
      */
     
     public Long count;
+
     public Metadata withCount(Long count) {
         this.count = count;
         return this;
@@ -25,9 +26,13 @@ public class Metadata {
      */
     
     public String version;
+
     public Metadata withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Metadata(@JsonProperty("version") String version) {
+        this.version = version;
+  }
 }

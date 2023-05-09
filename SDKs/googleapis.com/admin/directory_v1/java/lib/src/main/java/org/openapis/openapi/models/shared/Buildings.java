@@ -18,6 +18,7 @@ public class Buildings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildings")
     public Building[] buildings;
+
     public Buildings withBuildings(Building[] buildings) {
         this.buildings = buildings;
         return this;
@@ -29,6 +30,7 @@ public class Buildings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Buildings withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class Buildings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Buildings withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class Buildings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Buildings withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Buildings(){}
 }

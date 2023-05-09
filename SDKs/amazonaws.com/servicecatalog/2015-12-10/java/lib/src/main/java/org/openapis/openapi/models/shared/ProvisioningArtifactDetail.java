@@ -20,6 +20,7 @@ public class ProvisioningArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public ProvisioningArtifactDetail withActive(Boolean active) {
         this.active = active;
         return this;
@@ -30,6 +31,7 @@ public class ProvisioningArtifactDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ProvisioningArtifactDetail withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class ProvisioningArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ProvisioningArtifactDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class ProvisioningArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Guidance")
     public ProvisioningArtifactGuidanceEnum guidance;
+
     public ProvisioningArtifactDetail withGuidance(ProvisioningArtifactGuidanceEnum guidance) {
         this.guidance = guidance;
         return this;
@@ -54,6 +58,7 @@ public class ProvisioningArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProvisioningArtifactDetail withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class ProvisioningArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProvisioningArtifactDetail withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class ProvisioningArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRevision")
     public String sourceRevision;
+
     public ProvisioningArtifactDetail withSourceRevision(String sourceRevision) {
         this.sourceRevision = sourceRevision;
         return this;
@@ -78,9 +85,11 @@ public class ProvisioningArtifactDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ProvisioningArtifactTypeEnum type;
+
     public ProvisioningArtifactDetail withType(ProvisioningArtifactTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ProvisioningArtifactDetail(){}
 }

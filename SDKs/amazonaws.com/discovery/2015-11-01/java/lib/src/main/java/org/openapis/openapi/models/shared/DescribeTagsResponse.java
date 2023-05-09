@@ -15,6 +15,7 @@ public class DescribeTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeTagsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public ConfigurationTag[] tags;
+
     public DescribeTagsResponse withTags(ConfigurationTag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeTagsResponse(){}
 }

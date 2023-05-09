@@ -18,6 +18,7 @@ public class CycleStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public CycleStep withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,6 +30,7 @@ public class CycleStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializingReplication")
     public java.util.Map<String, Object> initializingReplication;
+
     public CycleStep withInitializingReplication(java.util.Map<String, Object> initializingReplication) {
         this.initializingReplication = initializingReplication;
         return this;
@@ -40,6 +42,7 @@ public class CycleStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postProcessing")
     public java.util.Map<String, Object> postProcessing;
+
     public CycleStep withPostProcessing(java.util.Map<String, Object> postProcessing) {
         this.postProcessing = postProcessing;
         return this;
@@ -51,6 +54,7 @@ public class CycleStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicating")
     public ReplicatingStep replicating;
+
     public CycleStep withReplicating(ReplicatingStep replicating) {
         this.replicating = replicating;
         return this;
@@ -62,9 +66,11 @@ public class CycleStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public CycleStep withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CycleStep(){}
 }

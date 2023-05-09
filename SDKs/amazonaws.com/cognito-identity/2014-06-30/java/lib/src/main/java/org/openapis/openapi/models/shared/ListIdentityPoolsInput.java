@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListIdentityPoolsInput {
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListIdentityPoolsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,9 +23,13 @@ public class ListIdentityPoolsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentityPoolsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentityPoolsInput(@JsonProperty("MaxResults") Long maxResults) {
+        this.maxResults = maxResults;
+  }
 }

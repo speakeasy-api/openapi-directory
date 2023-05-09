@@ -18,6 +18,7 @@ public class HttpRouteRuleMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPathMatch")
     public String fullPathMatch;
+
     public HttpRouteRuleMatch withFullPathMatch(String fullPathMatch) {
         this.fullPathMatch = fullPathMatch;
         return this;
@@ -29,6 +30,7 @@ public class HttpRouteRuleMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerMatches")
     public HttpHeaderMatch[] headerMatches;
+
     public HttpRouteRuleMatch withHeaderMatches(HttpHeaderMatch[] headerMatches) {
         this.headerMatches = headerMatches;
         return this;
@@ -40,6 +42,7 @@ public class HttpRouteRuleMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreCase")
     public Boolean ignoreCase;
+
     public HttpRouteRuleMatch withIgnoreCase(Boolean ignoreCase) {
         this.ignoreCase = ignoreCase;
         return this;
@@ -51,6 +54,7 @@ public class HttpRouteRuleMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataFilters")
     public MetadataFilter[] metadataFilters;
+
     public HttpRouteRuleMatch withMetadataFilters(MetadataFilter[] metadataFilters) {
         this.metadataFilters = metadataFilters;
         return this;
@@ -62,6 +66,7 @@ public class HttpRouteRuleMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixMatch")
     public String prefixMatch;
+
     public HttpRouteRuleMatch withPrefixMatch(String prefixMatch) {
         this.prefixMatch = prefixMatch;
         return this;
@@ -73,6 +78,7 @@ public class HttpRouteRuleMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameterMatches")
     public HttpQueryParameterMatch[] queryParameterMatches;
+
     public HttpRouteRuleMatch withQueryParameterMatches(HttpQueryParameterMatch[] queryParameterMatches) {
         this.queryParameterMatches = queryParameterMatches;
         return this;
@@ -84,9 +90,11 @@ public class HttpRouteRuleMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexMatch")
     public String regexMatch;
+
     public HttpRouteRuleMatch withRegexMatch(String regexMatch) {
         this.regexMatch = regexMatch;
         return this;
     }
     
+    public HttpRouteRuleMatch(){}
 }

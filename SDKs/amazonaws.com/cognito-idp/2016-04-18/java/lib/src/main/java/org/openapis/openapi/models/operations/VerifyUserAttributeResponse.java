@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifyUserAttributeResponse {
@@ -12,6 +13,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object aliasExistsException;
+
     public VerifyUserAttributeResponse withAliasExistsException(Object aliasExistsException) {
         this.aliasExistsException = aliasExistsException;
         return this;
@@ -22,6 +24,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object codeMismatchException;
+
     public VerifyUserAttributeResponse withCodeMismatchException(Object codeMismatchException) {
         this.codeMismatchException = codeMismatchException;
         return this;
@@ -29,6 +32,7 @@ public class VerifyUserAttributeResponse {
     
     
     public String contentType;
+
     public VerifyUserAttributeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object expiredCodeException;
+
     public VerifyUserAttributeResponse withExpiredCodeException(Object expiredCodeException) {
         this.expiredCodeException = expiredCodeException;
         return this;
@@ -49,6 +54,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object forbiddenException;
+
     public VerifyUserAttributeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object internalErrorException;
+
     public VerifyUserAttributeResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -69,6 +76,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object invalidParameterException;
+
     public VerifyUserAttributeResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object limitExceededException;
+
     public VerifyUserAttributeResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object notAuthorizedException;
+
     public VerifyUserAttributeResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -99,6 +109,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public VerifyUserAttributeResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -106,6 +117,7 @@ public class VerifyUserAttributeResponse {
     
     
     public Integer statusCode;
+
     public VerifyUserAttributeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class VerifyUserAttributeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifyUserAttributeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public VerifyUserAttributeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public VerifyUserAttributeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -143,6 +158,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object userNotConfirmedException;
+
     public VerifyUserAttributeResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -153,6 +169,7 @@ public class VerifyUserAttributeResponse {
      */
     
     public Object userNotFoundException;
+
     public VerifyUserAttributeResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
@@ -163,9 +180,14 @@ public class VerifyUserAttributeResponse {
      */
     
     public java.util.Map<String, Object> verifyUserAttributeResponse;
+
     public VerifyUserAttributeResponse withVerifyUserAttributeResponse(java.util.Map<String, Object> verifyUserAttributeResponse) {
         this.verifyUserAttributeResponse = verifyUserAttributeResponse;
         return this;
     }
     
+    public VerifyUserAttributeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ResourceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ResourceSummary withId(String id) {
         this.id = id;
         return this;
@@ -30,9 +32,13 @@ public class ResourceSummary {
     
     @JsonProperty("resourceType")
     public String resourceType;
+
     public ResourceSummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceSummary(@JsonProperty("resourceType") String resourceType) {
+        this.resourceType = resourceType;
+  }
 }

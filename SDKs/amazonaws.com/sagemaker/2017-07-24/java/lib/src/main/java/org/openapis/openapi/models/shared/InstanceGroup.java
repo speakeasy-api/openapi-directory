@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceGroup {
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public InstanceGroup withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -19,6 +20,7 @@ public class InstanceGroup {
     
     @JsonProperty("InstanceGroupName")
     public String instanceGroupName;
+
     public InstanceGroup withInstanceGroupName(String instanceGroupName) {
         this.instanceGroupName = instanceGroupName;
         return this;
@@ -26,9 +28,15 @@ public class InstanceGroup {
     
     @JsonProperty("InstanceType")
     public TrainingInstanceTypeEnum instanceType;
+
     public InstanceGroup withInstanceType(TrainingInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public InstanceGroup(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("InstanceGroupName") String instanceGroupName, @JsonProperty("InstanceType") TrainingInstanceTypeEnum instanceType) {
+        this.instanceCount = instanceCount;
+        this.instanceGroupName = instanceGroupName;
+        this.instanceType = instanceType;
+  }
 }

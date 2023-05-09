@@ -15,6 +15,7 @@ public class GetItemsBatchInternalTrasnferBatchItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GetItemsBatchInternalTrasnferBatchItemsBatchItem[] items;
+
     public GetItemsBatchInternalTrasnferBatchItems withItems(GetItemsBatchInternalTrasnferBatchItemsBatchItem[] items) {
         this.items = items;
         return this;
@@ -26,9 +27,11 @@ public class GetItemsBatchInternalTrasnferBatchItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetItemsBatchInternalTrasnferBatchItems withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetItemsBatchInternalTrasnferBatchItems(){}
 }

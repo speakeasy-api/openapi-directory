@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse {
     
     public String contentType;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.OrgPreReceiveHook orgPreReceiveHook;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse withOrgPreReceiveHook(org.openapis.openapi.models.shared.OrgPreReceiveHook orgPreReceiveHook) {
         this.orgPreReceiveHook = orgPreReceiveHook;
         return this;
     }
     
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

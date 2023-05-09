@@ -20,6 +20,7 @@ public class UICustomizationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CSS")
     public String css;
+
     public UICustomizationType withCss(String css) {
         this.css = css;
         return this;
@@ -28,6 +29,7 @@ public class UICustomizationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CSSVersion")
     public String cssVersion;
+
     public UICustomizationType withCSSVersion(String cssVersion) {
         this.cssVersion = cssVersion;
         return this;
@@ -36,6 +38,7 @@ public class UICustomizationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public UICustomizationType withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -46,6 +49,7 @@ public class UICustomizationType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public UICustomizationType withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -54,6 +58,7 @@ public class UICustomizationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public UICustomizationType withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -64,6 +69,7 @@ public class UICustomizationType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public UICustomizationType withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -72,9 +78,11 @@ public class UICustomizationType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public UICustomizationType withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public UICustomizationType(){}
 }

@@ -15,9 +15,11 @@ public class DescribeClientPropertiesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientPropertiesList")
     public ClientPropertiesResult[] clientPropertiesList;
+
     public DescribeClientPropertiesResult withClientPropertiesList(ClientPropertiesResult[] clientPropertiesList) {
         this.clientPropertiesList = clientPropertiesList;
         return this;
     }
     
+    public DescribeClientPropertiesResult(){}
 }

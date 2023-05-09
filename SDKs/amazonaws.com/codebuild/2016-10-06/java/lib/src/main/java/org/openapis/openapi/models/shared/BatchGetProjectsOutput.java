@@ -15,6 +15,7 @@ public class BatchGetProjectsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public Project[] projects;
+
     public BatchGetProjectsOutput withProjects(Project[] projects) {
         this.projects = projects;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetProjectsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectsNotFound")
     public String[] projectsNotFound;
+
     public BatchGetProjectsOutput withProjectsNotFound(String[] projectsNotFound) {
         this.projectsNotFound = projectsNotFound;
         return this;
     }
     
+    public BatchGetProjectsOutput(){}
 }

@@ -18,6 +18,7 @@ public class CampaignSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public CampaignSound withCreated(Long created) {
         this.created = created;
         return this;
@@ -29,6 +30,7 @@ public class CampaignSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicate")
     public Boolean duplicate;
+
     public CampaignSound withDuplicate(Boolean duplicate) {
         this.duplicate = duplicate;
         return this;
@@ -40,6 +42,7 @@ public class CampaignSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CampaignSound withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class CampaignSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthInSeconds")
     public Integer lengthInSeconds;
+
     public CampaignSound withLengthInSeconds(Integer lengthInSeconds) {
         this.lengthInSeconds = lengthInSeconds;
         return this;
@@ -62,6 +66,7 @@ public class CampaignSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CampaignSound withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class CampaignSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CampaignSoundStatusEnum status;
+
     public CampaignSound withStatus(CampaignSoundStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CampaignSound(){}
 }

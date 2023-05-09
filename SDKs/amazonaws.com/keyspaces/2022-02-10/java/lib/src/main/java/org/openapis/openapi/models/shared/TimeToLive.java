@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimeToLive {
     @JsonProperty("status")
     public TimeToLiveStatusEnum status;
+
     public TimeToLive withStatus(TimeToLiveStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public TimeToLive(@JsonProperty("status") TimeToLiveStatusEnum status) {
+        this.status = status;
+  }
 }

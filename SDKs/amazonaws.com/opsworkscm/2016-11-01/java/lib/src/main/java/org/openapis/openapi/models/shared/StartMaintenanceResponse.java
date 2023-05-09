@@ -15,9 +15,11 @@ public class StartMaintenanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Server")
     public Server server;
+
     public StartMaintenanceResponse withServer(Server server) {
         this.server = server;
         return this;
     }
     
+    public StartMaintenanceResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResellerResellernotifyGetwatchdetailsResponse {
     
     public String contentType;
+
     public ResellerResellernotifyGetwatchdetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResellerResellernotifyGetwatchdetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.ResellernotifyGetwatchdetailsResponse resellernotifyGetwatchdetailsResponse;
+
     public ResellerResellernotifyGetwatchdetailsResponse withResellernotifyGetwatchdetailsResponse(org.openapis.openapi.models.shared.ResellernotifyGetwatchdetailsResponse resellernotifyGetwatchdetailsResponse) {
         this.resellernotifyGetwatchdetailsResponse = resellernotifyGetwatchdetailsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ResellerResellernotifyGetwatchdetailsResponse {
     
     
     public Integer statusCode;
+
     public ResellerResellernotifyGetwatchdetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ResellerResellernotifyGetwatchdetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResellerResellernotifyGetwatchdetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResellerResellernotifyGetwatchdetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

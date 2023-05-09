@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNamespaceDeletionStatusResponse {
     
     public String contentType;
+
     public GetNamespaceDeletionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNamespaceDeletionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNamespaceDeletionStatusResponse getNamespaceDeletionStatusResponse;
+
     public GetNamespaceDeletionStatusResponse withGetNamespaceDeletionStatusResponse(org.openapis.openapi.models.shared.GetNamespaceDeletionStatusResponse getNamespaceDeletionStatusResponse) {
         this.getNamespaceDeletionStatusResponse = getNamespaceDeletionStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetNamespaceDeletionStatusResponse {
      */
     
     public Object internalFailureException;
+
     public GetNamespaceDeletionStatusResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetNamespaceDeletionStatusResponse {
      */
     
     public Object invalidRequestException;
+
     public GetNamespaceDeletionStatusResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetNamespaceDeletionStatusResponse {
     
     
     public Integer statusCode;
+
     public GetNamespaceDeletionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetNamespaceDeletionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNamespaceDeletionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetNamespaceDeletionStatusResponse {
      */
     
     public Object throttlingException;
+
     public GetNamespaceDeletionStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetNamespaceDeletionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

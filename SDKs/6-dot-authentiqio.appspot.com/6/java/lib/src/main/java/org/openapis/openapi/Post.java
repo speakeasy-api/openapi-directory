@@ -56,13 +56,11 @@ public class Post {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeyRegisterResponse res = new org.openapis.openapi.models.operations.KeyRegisterResponse() {{
+        org.openapis.openapi.models.operations.KeyRegisterResponse res = new org.openapis.openapi.models.operations.KeyRegisterResponse(contentType, httpRes.statusCode()) {{
             keyRegister201ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -114,13 +112,11 @@ public class Post {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeyUpdateResponse res = new org.openapis.openapi.models.operations.KeyUpdateResponse() {{
+        org.openapis.openapi.models.operations.KeyUpdateResponse res = new org.openapis.openapi.models.operations.KeyUpdateResponse(contentType, httpRes.statusCode()) {{
             keyUpdate200ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,13 +174,11 @@ public class Post {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PushLoginRequestResponse res = new org.openapis.openapi.models.operations.PushLoginRequestResponse() {{
+        org.openapis.openapi.models.operations.PushLoginRequestResponse res = new org.openapis.openapi.models.operations.PushLoginRequestResponse(contentType, httpRes.statusCode()) {{
             pushLoginRequest200ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,13 +225,11 @@ public class Post {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignConfirmResponse res = new org.openapis.openapi.models.operations.SignConfirmResponse() {{
+        org.openapis.openapi.models.operations.SignConfirmResponse res = new org.openapis.openapi.models.operations.SignConfirmResponse(contentType, httpRes.statusCode()) {{
             signConfirm202ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -295,13 +287,11 @@ public class Post {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignRequestResponse res = new org.openapis.openapi.models.operations.SignRequestResponse() {{
+        org.openapis.openapi.models.operations.SignRequestResponse res = new org.openapis.openapi.models.operations.SignRequestResponse(contentType, httpRes.statusCode()) {{
             signRequest201ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

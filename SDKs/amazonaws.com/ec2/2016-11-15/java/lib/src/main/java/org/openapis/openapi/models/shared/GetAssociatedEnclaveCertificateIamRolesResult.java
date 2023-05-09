@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetAssociatedEnclaveCertificateIamRolesResult {
     
     public GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles[] associatedRoles;
+
     public GetAssociatedEnclaveCertificateIamRolesResult withAssociatedRoles(GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles[] associatedRoles) {
         this.associatedRoles = associatedRoles;
         return this;
     }
     
+    public GetAssociatedEnclaveCertificateIamRolesResult(){}
 }

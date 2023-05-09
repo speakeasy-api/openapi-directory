@@ -15,9 +15,11 @@ public class GetOrders200ApplicationJSONOrderResponseV2ParentOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetOrders200ApplicationJSONOrderResponseV2ParentOrder withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetOrders200ApplicationJSONOrderResponseV2ParentOrder(){}
 }

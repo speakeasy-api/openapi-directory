@@ -12,6 +12,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public Store withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -20,6 +21,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public Store withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -28,6 +30,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Store withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public Store withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -43,6 +47,7 @@ public class Store {
     
     @JsonProperty("name")
     public String name;
+
     public Store withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,13 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Store withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public Store(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

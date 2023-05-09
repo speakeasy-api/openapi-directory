@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SocialGetPlatformFriendListRequest {
@@ -12,6 +13,7 @@ public class SocialGetPlatformFriendListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=friendPlatform")
     public Integer friendPlatform;
+
     public SocialGetPlatformFriendListRequest withFriendPlatform(Integer friendPlatform) {
         this.friendPlatform = friendPlatform;
         return this;
@@ -22,9 +24,14 @@ public class SocialGetPlatformFriendListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public String page;
+
     public SocialGetPlatformFriendListRequest withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public SocialGetPlatformFriendListRequest(@JsonProperty("friendPlatform") Integer friendPlatform, @JsonProperty("page") String page) {
+        this.friendPlatform = friendPlatform;
+        this.page = page;
+  }
 }

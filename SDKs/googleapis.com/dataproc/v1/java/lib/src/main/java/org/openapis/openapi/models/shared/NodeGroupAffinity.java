@@ -18,9 +18,11 @@ public class NodeGroupAffinity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroupUri")
     public String nodeGroupUri;
+
     public NodeGroupAffinity withNodeGroupUri(String nodeGroupUri) {
         this.nodeGroupUri = nodeGroupUri;
         return this;
     }
     
+    public NodeGroupAffinity(){}
 }

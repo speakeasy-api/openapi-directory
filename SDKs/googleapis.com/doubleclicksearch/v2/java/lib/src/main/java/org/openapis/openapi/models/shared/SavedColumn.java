@@ -18,6 +18,7 @@ public class SavedColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SavedColumn withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class SavedColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savedColumnName")
     public String savedColumnName;
+
     public SavedColumn withSavedColumnName(String savedColumnName) {
         this.savedColumnName = savedColumnName;
         return this;
@@ -40,9 +42,11 @@ public class SavedColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SavedColumn withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SavedColumn(){}
 }

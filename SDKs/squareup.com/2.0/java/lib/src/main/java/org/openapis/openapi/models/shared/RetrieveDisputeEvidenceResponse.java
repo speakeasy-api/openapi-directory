@@ -18,6 +18,7 @@ public class RetrieveDisputeEvidenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveDisputeEvidenceResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -26,9 +27,11 @@ public class RetrieveDisputeEvidenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence")
     public DisputeEvidence evidence;
+
     public RetrieveDisputeEvidenceResponse withEvidence(DisputeEvidence evidence) {
         this.evidence = evidence;
         return this;
     }
     
+    public RetrieveDisputeEvidenceResponse(){}
 }

@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PropertyFilter - &lt;p/&gt;
+ * PropertyFilter - The structure representing a single PropertyFilter.
  */
 public class PropertyFilter {
     @JsonProperty("Property")
     public Property property;
+
     public PropertyFilter withProperty(Property property) {
         this.property = property;
         return this;
     }
     
+    public PropertyFilter(@JsonProperty("Property") Property property) {
+        this.property = property;
+  }
 }

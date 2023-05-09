@@ -12,9 +12,11 @@ public class AuditCommitteeSearchList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public AuditCommitteeSearch[] results;
+
     public AuditCommitteeSearchList withResults(AuditCommitteeSearch[] results) {
         this.results = results;
         return this;
     }
     
+    public AuditCommitteeSearchList(){}
 }

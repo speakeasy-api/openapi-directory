@@ -20,6 +20,7 @@ public class SchemaSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisMethod")
     public AnalysisMethodEnum analysisMethod;
+
     public SchemaSummary withAnalysisMethod(AnalysisMethodEnum analysisMethod) {
         this.analysisMethod = analysisMethod;
         return this;
@@ -27,6 +28,7 @@ public class SchemaSummary {
     
     @JsonProperty("analysisRuleTypes")
     public AnalysisRuleTypeEnum[] analysisRuleTypes;
+
     public SchemaSummary withAnalysisRuleTypes(AnalysisRuleTypeEnum[] analysisRuleTypes) {
         this.analysisRuleTypes = analysisRuleTypes;
         return this;
@@ -34,6 +36,7 @@ public class SchemaSummary {
     
     @JsonProperty("collaborationArn")
     public String collaborationArn;
+
     public SchemaSummary withCollaborationArn(String collaborationArn) {
         this.collaborationArn = collaborationArn;
         return this;
@@ -41,6 +44,7 @@ public class SchemaSummary {
     
     @JsonProperty("collaborationId")
     public String collaborationId;
+
     public SchemaSummary withCollaborationId(String collaborationId) {
         this.collaborationId = collaborationId;
         return this;
@@ -50,6 +54,7 @@ public class SchemaSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public SchemaSummary withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -57,6 +62,7 @@ public class SchemaSummary {
     
     @JsonProperty("creatorAccountId")
     public String creatorAccountId;
+
     public SchemaSummary withCreatorAccountId(String creatorAccountId) {
         this.creatorAccountId = creatorAccountId;
         return this;
@@ -64,6 +70,7 @@ public class SchemaSummary {
     
     @JsonProperty("name")
     public String name;
+
     public SchemaSummary withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class SchemaSummary {
     
     @JsonProperty("type")
     public SchemaTypeEnum type;
+
     public SchemaSummary withType(SchemaTypeEnum type) {
         this.type = type;
         return this;
@@ -80,9 +88,20 @@ public class SchemaSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public SchemaSummary withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public SchemaSummary(@JsonProperty("analysisRuleTypes") AnalysisRuleTypeEnum[] analysisRuleTypes, @JsonProperty("collaborationArn") String collaborationArn, @JsonProperty("collaborationId") String collaborationId, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("creatorAccountId") String creatorAccountId, @JsonProperty("name") String name, @JsonProperty("type") SchemaTypeEnum type, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.analysisRuleTypes = analysisRuleTypes;
+        this.collaborationArn = collaborationArn;
+        this.collaborationId = collaborationId;
+        this.createTime = createTime;
+        this.creatorAccountId = creatorAccountId;
+        this.name = name;
+        this.type = type;
+        this.updateTime = updateTime;
+  }
 }

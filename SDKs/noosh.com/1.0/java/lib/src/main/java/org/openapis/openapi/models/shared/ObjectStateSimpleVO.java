@@ -15,6 +15,7 @@ public class ObjectStateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_state_id")
     public Long objectStateId;
+
     public ObjectStateSimpleVO withObjectStateId(Long objectStateId) {
         this.objectStateId = objectStateId;
         return this;
@@ -23,9 +24,11 @@ public class ObjectStateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_state_name")
     public String objectStateName;
+
     public ObjectStateSimpleVO withObjectStateName(String objectStateName) {
         this.objectStateName = objectStateName;
         return this;
     }
     
+    public ObjectStateSimpleVO(){}
 }

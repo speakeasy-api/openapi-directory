@@ -18,6 +18,7 @@ public class CreateRotationOverrideRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public CreateRotationOverrideRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +27,7 @@ public class CreateRotationOverrideRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateRotationOverrideRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -33,6 +35,7 @@ public class CreateRotationOverrideRequest {
     
     @JsonProperty("NewContactIds")
     public String[] newContactIds;
+
     public CreateRotationOverrideRequest withNewContactIds(String[] newContactIds) {
         this.newContactIds = newContactIds;
         return this;
@@ -40,6 +43,7 @@ public class CreateRotationOverrideRequest {
     
     @JsonProperty("RotationId")
     public String rotationId;
+
     public CreateRotationOverrideRequest withRotationId(String rotationId) {
         this.rotationId = rotationId;
         return this;
@@ -49,9 +53,16 @@ public class CreateRotationOverrideRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CreateRotationOverrideRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CreateRotationOverrideRequest(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("NewContactIds") String[] newContactIds, @JsonProperty("RotationId") String rotationId, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.newContactIds = newContactIds;
+        this.rotationId = rotationId;
+        this.startTime = startTime;
+  }
 }

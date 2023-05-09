@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateAadharOTPUsingPOSTResponse {
     
     public byte[] body;
+
     public GenerateAadharOTPUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GenerateAadharOTPUsingPOSTResponse {
     
     
     public String contentType;
+
     public GenerateAadharOTPUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GenerateAadharOTPUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GenerateAadharOTPUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GenerateAadharOTPUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateAadharOTPUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateAadharOTPUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

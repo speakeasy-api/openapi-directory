@@ -151,6 +151,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -183,15 +188,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHumanLoopResponse res = new org.openapis.openapi.models.operations.DeleteHumanLoopResponse() {{
+        org.openapis.openapi.models.operations.DeleteHumanLoopResponse res = new org.openapis.openapi.models.operations.DeleteHumanLoopResponse(contentType, httpRes.statusCode()) {{
             deleteHumanLoopResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,15 +265,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHumanLoopResponse res = new org.openapis.openapi.models.operations.DescribeHumanLoopResponse() {{
+        org.openapis.openapi.models.operations.DescribeHumanLoopResponse res = new org.openapis.openapi.models.operations.DescribeHumanLoopResponse(contentType, httpRes.statusCode()) {{
             describeHumanLoopResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,15 +348,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHumanLoopsResponse res = new org.openapis.openapi.models.operations.ListHumanLoopsResponse() {{
+        org.openapis.openapi.models.operations.ListHumanLoopsResponse res = new org.openapis.openapi.models.operations.ListHumanLoopsResponse(contentType, httpRes.statusCode()) {{
             listHumanLoopsResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -431,7 +430,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartHumanLoopResponse res = new org.openapis.openapi.models.operations.StartHumanLoopResponse() {{
+        org.openapis.openapi.models.operations.StartHumanLoopResponse res = new org.openapis.openapi.models.operations.StartHumanLoopResponse(contentType, httpRes.statusCode()) {{
             startHumanLoopResponse = null;
             validationException = null;
             throttlingException = null;
@@ -439,8 +438,6 @@ public class SDK {
             internalServerException = null;
             conflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -523,15 +520,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopHumanLoopResponse res = new org.openapis.openapi.models.operations.StopHumanLoopResponse() {{
+        org.openapis.openapi.models.operations.StopHumanLoopResponse res = new org.openapis.openapi.models.operations.StopHumanLoopResponse(contentType, httpRes.statusCode()) {{
             stopHumanLoopResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

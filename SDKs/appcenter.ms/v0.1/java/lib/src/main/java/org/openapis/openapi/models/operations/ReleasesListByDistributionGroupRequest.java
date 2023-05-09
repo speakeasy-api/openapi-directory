@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesListByDistributionGroupRequest {
@@ -12,6 +13,7 @@ public class ReleasesListByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesListByDistributionGroupRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesListByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public ReleasesListByDistributionGroupRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -32,9 +35,15 @@ public class ReleasesListByDistributionGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesListByDistributionGroupRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ReleasesListByDistributionGroupRequest(@JsonProperty("app_name") String appName, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.distributionGroupName = distributionGroupName;
+        this.ownerName = ownerName;
+  }
 }

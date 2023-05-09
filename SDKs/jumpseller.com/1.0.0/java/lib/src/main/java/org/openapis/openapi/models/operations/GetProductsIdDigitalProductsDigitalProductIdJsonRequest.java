@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdDigitalProductsDigitalProductIdJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsIdDigitalProductsDigitalProductIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsIdDigitalProductsDigitalProductIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=digital_product_id")
     public Integer digitalProductId;
+
     public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withDigitalProductId(Integer digitalProductId) {
         this.digitalProductId = digitalProductId;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsIdDigitalProductsDigitalProductIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class GetProductsIdDigitalProductsDigitalProductIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetProductsIdDigitalProductsDigitalProductIdJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("digital_product_id") Integer digitalProductId, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.digitalProductId = digitalProductId;
+        this.id = id;
+        this.login = login;
+  }
 }

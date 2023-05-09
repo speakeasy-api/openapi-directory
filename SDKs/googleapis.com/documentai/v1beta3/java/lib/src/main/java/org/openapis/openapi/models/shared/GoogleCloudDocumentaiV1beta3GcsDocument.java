@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3GcsDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsUri")
     public String gcsUri;
+
     public GoogleCloudDocumentaiV1beta3GcsDocument withGcsUri(String gcsUri) {
         this.gcsUri = gcsUri;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta3GcsDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDocumentaiV1beta3GcsDocument withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3GcsDocument(){}
 }

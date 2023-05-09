@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SpcerResponse {
     
     public String contentType;
+
     public SpcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SpcerResponse {
     
     
     public Integer statusCode;
+
     public SpcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SpcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SpcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SpcerResponse {
      */
     
     public Spcer400ApplicationJSON spcer400ApplicationJSONObject;
+
     public SpcerResponse withSpcer400ApplicationJSONObject(Spcer400ApplicationJSON spcer400ApplicationJSONObject) {
         this.spcer400ApplicationJSONObject = spcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SpcerResponse {
      */
     
     public Spcer401ApplicationJSON spcer401ApplicationJSONObject;
+
     public SpcerResponse withSpcer401ApplicationJSONObject(Spcer401ApplicationJSON spcer401ApplicationJSONObject) {
         this.spcer401ApplicationJSONObject = spcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SpcerResponse {
      */
     
     public Spcer404ApplicationJSON spcer404ApplicationJSONObject;
+
     public SpcerResponse withSpcer404ApplicationJSONObject(Spcer404ApplicationJSON spcer404ApplicationJSONObject) {
         this.spcer404ApplicationJSONObject = spcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class SpcerResponse {
      */
     
     public Spcer500ApplicationJSON spcer500ApplicationJSONObject;
+
     public SpcerResponse withSpcer500ApplicationJSONObject(Spcer500ApplicationJSON spcer500ApplicationJSONObject) {
         this.spcer500ApplicationJSONObject = spcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class SpcerResponse {
      */
     
     public Spcer502ApplicationJSON spcer502ApplicationJSONObject;
+
     public SpcerResponse withSpcer502ApplicationJSONObject(Spcer502ApplicationJSON spcer502ApplicationJSONObject) {
         this.spcer502ApplicationJSONObject = spcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class SpcerResponse {
      */
     
     public Spcer503ApplicationJSON spcer503ApplicationJSONObject;
+
     public SpcerResponse withSpcer503ApplicationJSONObject(Spcer503ApplicationJSON spcer503ApplicationJSONObject) {
         this.spcer503ApplicationJSONObject = spcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class SpcerResponse {
      */
     
     public Spcer504ApplicationJSON spcer504ApplicationJSONObject;
+
     public SpcerResponse withSpcer504ApplicationJSONObject(Spcer504ApplicationJSON spcer504ApplicationJSONObject) {
         this.spcer504ApplicationJSONObject = spcer504ApplicationJSONObject;
         return this;
     }
     
+    public SpcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

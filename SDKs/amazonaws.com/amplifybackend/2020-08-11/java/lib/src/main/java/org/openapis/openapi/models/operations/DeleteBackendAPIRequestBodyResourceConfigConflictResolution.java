@@ -15,9 +15,11 @@ public class DeleteBackendAPIRequestBodyResourceConfigConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolutionStrategy")
     public DeleteBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum resolutionStrategy;
+
     public DeleteBackendAPIRequestBodyResourceConfigConflictResolution withResolutionStrategy(DeleteBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum resolutionStrategy) {
         this.resolutionStrategy = resolutionStrategy;
         return this;
     }
     
+    public DeleteBackendAPIRequestBodyResourceConfigConflictResolution(){}
 }

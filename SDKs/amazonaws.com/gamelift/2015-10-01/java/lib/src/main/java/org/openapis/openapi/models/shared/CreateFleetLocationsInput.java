@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFleetLocationsInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public CreateFleetLocationsInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -16,9 +17,14 @@ public class CreateFleetLocationsInput {
     
     @JsonProperty("Locations")
     public LocationConfiguration[] locations;
+
     public CreateFleetLocationsInput withLocations(LocationConfiguration[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public CreateFleetLocationsInput(@JsonProperty("FleetId") String fleetId, @JsonProperty("Locations") LocationConfiguration[] locations) {
+        this.fleetId = fleetId;
+        this.locations = locations;
+  }
 }

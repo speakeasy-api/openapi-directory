@@ -103,6 +103,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeBearer")
     public ChargeBearerEnum chargeBearer;
+
     public PeriodicPaymentInitiationJson withChargeBearer(ChargeBearerEnum chargeBearer) {
         this.chargeBearer = chargeBearer;
         return this;
@@ -117,6 +118,7 @@ public class PeriodicPaymentInitiationJson {
      */
     @JsonProperty("creditorAccount")
     public AccountReference16CH creditorAccount;
+
     public PeriodicPaymentInitiationJson withCreditorAccount(AccountReference16CH creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -125,6 +127,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAddress")
     public Address creditorAddress;
+
     public PeriodicPaymentInitiationJson withCreditorAddress(Address creditorAddress) {
         this.creditorAddress = creditorAddress;
         return this;
@@ -142,6 +145,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAgent")
     public CreditorAgent7CH creditorAgent;
+
     public PeriodicPaymentInitiationJson withCreditorAgent(CreditorAgent7CH creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -153,6 +157,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAgentName")
     public String creditorAgentName;
+
     public PeriodicPaymentInitiationJson withCreditorAgentName(String creditorAgentName) {
         this.creditorAgentName = creditorAgentName;
         return this;
@@ -164,6 +169,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorId")
     public String creditorId;
+
     public PeriodicPaymentInitiationJson withCreditorId(String creditorId) {
         this.creditorId = creditorId;
         return this;
@@ -174,6 +180,7 @@ public class PeriodicPaymentInitiationJson {
      */
     @JsonProperty("creditorName")
     public String creditorName;
+
     public PeriodicPaymentInitiationJson withCreditorName(String creditorName) {
         this.creditorName = creditorName;
         return this;
@@ -185,6 +192,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorNameAndAddress")
     public String creditorNameAndAddress;
+
     public PeriodicPaymentInitiationJson withCreditorNameAndAddress(String creditorNameAndAddress) {
         this.creditorNameAndAddress = creditorNameAndAddress;
         return this;
@@ -202,6 +210,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfExecution")
     public DayOfExecutionEnum dayOfExecution;
+
     public PeriodicPaymentInitiationJson withDayOfExecution(DayOfExecutionEnum dayOfExecution) {
         this.dayOfExecution = dayOfExecution;
         return this;
@@ -216,6 +225,7 @@ public class PeriodicPaymentInitiationJson {
      */
     @JsonProperty("debtorAccount")
     public AccountReference16CH debtorAccount;
+
     public PeriodicPaymentInitiationJson withDebtorAccount(AccountReference16CH debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -231,6 +241,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorAgent")
     public DebtorAgent7CH debtorAgent;
+
     public PeriodicPaymentInitiationJson withDebtorAgent(DebtorAgent7CH debtorAgent) {
         this.debtorAgent = debtorAgent;
         return this;
@@ -242,6 +253,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorId")
     public String debtorId;
+
     public PeriodicPaymentInitiationJson withDebtorId(String debtorId) {
         this.debtorId = debtorId;
         return this;
@@ -252,6 +264,7 @@ public class PeriodicPaymentInitiationJson {
      */
     @JsonProperty("debtorName")
     public String debtorName;
+
     public PeriodicPaymentInitiationJson withDebtorName(String debtorName) {
         this.debtorName = debtorName;
         return this;
@@ -266,6 +279,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public PeriodicPaymentInitiationJson withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -273,6 +287,7 @@ public class PeriodicPaymentInitiationJson {
     
     @JsonProperty("endToEndIdentification")
     public String endToEndIdentification;
+
     public PeriodicPaymentInitiationJson withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -281,6 +296,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equivalentAmount")
     public Amount equivalentAmount;
+
     public PeriodicPaymentInitiationJson withEquivalentAmount(Amount equivalentAmount) {
         this.equivalentAmount = equivalentAmount;
         return this;
@@ -292,6 +308,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeRateInformation")
     public ExchangeRateInformation1 exchangeRateInformation;
+
     public PeriodicPaymentInitiationJson withExchangeRateInformation(ExchangeRateInformation1 exchangeRateInformation) {
         this.exchangeRateInformation = exchangeRateInformation;
         return this;
@@ -308,6 +325,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRule")
     public ExecutionRuleEnum executionRule;
+
     public PeriodicPaymentInitiationJson withExecutionRule(ExecutionRuleEnum executionRule) {
         this.executionRule = executionRule;
         return this;
@@ -328,6 +346,7 @@ public class PeriodicPaymentInitiationJson {
      */
     @JsonProperty("frequency")
     public FrequencyCodeEnum frequency;
+
     public PeriodicPaymentInitiationJson withFrequency(FrequencyCodeEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -336,6 +355,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructedAmount")
     public Amount instructedAmount;
+
     public PeriodicPaymentInitiationJson withInstructedAmount(Amount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -348,6 +368,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intermediaryAgent")
     public String intermediaryAgent;
+
     public PeriodicPaymentInitiationJson withIntermediaryAgent(String intermediaryAgent) {
         this.intermediaryAgent = intermediaryAgent;
         return this;
@@ -362,6 +383,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purposeCode")
     public PurposeCodeEnum purposeCode;
+
     public PeriodicPaymentInitiationJson withPurposeCode(PurposeCodeEnum purposeCode) {
         this.purposeCode = purposeCode;
         return this;
@@ -374,6 +396,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationStructured")
     public RemittanceInformationStructured remittanceInformationStructured;
+
     public PeriodicPaymentInitiationJson withRemittanceInformationStructured(RemittanceInformationStructured remittanceInformationStructured) {
         this.remittanceInformationStructured = remittanceInformationStructured;
         return this;
@@ -386,6 +409,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructured")
     public String remittanceInformationUnstructured;
+
     public PeriodicPaymentInitiationJson withRemittanceInformationUnstructured(String remittanceInformationUnstructured) {
         this.remittanceInformationUnstructured = remittanceInformationUnstructured;
         return this;
@@ -397,6 +421,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLevel")
     public ExternalServiceLevel1CodeEnum serviceLevel;
+
     public PeriodicPaymentInitiationJson withServiceLevel(ExternalServiceLevel1CodeEnum serviceLevel) {
         this.serviceLevel = serviceLevel;
         return this;
@@ -409,6 +434,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public PeriodicPaymentInitiationJson withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -421,6 +447,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionCurrency")
     public String transactionCurrency;
+
     public PeriodicPaymentInitiationJson withTransactionCurrency(String transactionCurrency) {
         this.transactionCurrency = transactionCurrency;
         return this;
@@ -432,6 +459,7 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateCreditor")
     public String ultimateCreditor;
+
     public PeriodicPaymentInitiationJson withUltimateCreditor(String ultimateCreditor) {
         this.ultimateCreditor = ultimateCreditor;
         return this;
@@ -443,9 +471,19 @@ public class PeriodicPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateDebtor")
     public String ultimateDebtor;
+
     public PeriodicPaymentInitiationJson withUltimateDebtor(String ultimateDebtor) {
         this.ultimateDebtor = ultimateDebtor;
         return this;
     }
     
+    public PeriodicPaymentInitiationJson(@JsonProperty("creditorAccount") AccountReference16CH creditorAccount, @JsonProperty("creditorName") String creditorName, @JsonProperty("debtorAccount") AccountReference16CH debtorAccount, @JsonProperty("debtorName") String debtorName, @JsonProperty("endToEndIdentification") String endToEndIdentification, @JsonProperty("frequency") FrequencyCodeEnum frequency, @JsonProperty("startDate") LocalDate startDate) {
+        this.creditorAccount = creditorAccount;
+        this.creditorName = creditorName;
+        this.debtorAccount = debtorAccount;
+        this.debtorName = debtorName;
+        this.endToEndIdentification = endToEndIdentification;
+        this.frequency = frequency;
+        this.startDate = startDate;
+  }
 }

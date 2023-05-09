@@ -58,11 +58,9 @@ public class MobileApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingMobileAppsGetResponse res = new org.openapis.openapi.models.operations.DfareportingMobileAppsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingMobileAppsGetResponse res = new org.openapis.openapi.models.operations.DfareportingMobileAppsGetResponse(contentType, httpRes.statusCode()) {{
             mobileApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class MobileApps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingMobileAppsListResponse res = new org.openapis.openapi.models.operations.DfareportingMobileAppsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingMobileAppsListResponse res = new org.openapis.openapi.models.operations.DfareportingMobileAppsListResponse(contentType, httpRes.statusCode()) {{
             mobileAppsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

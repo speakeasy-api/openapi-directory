@@ -18,6 +18,7 @@ public class ExportConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backfill")
     public Boolean backfill;
+
     public ExportConfigurationsCreateRequestBody withBackfill(Boolean backfill) {
         this.backfill = backfill;
         return this;
@@ -26,6 +27,7 @@ public class ExportConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_entities")
     public ExportConfigurationsCreateRequestBodyExportEntitiesEnum[] exportEntities;
+
     public ExportConfigurationsCreateRequestBody withExportEntities(ExportConfigurationsCreateRequestBodyExportEntitiesEnum[] exportEntities) {
         this.exportEntities = exportEntities;
         return this;
@@ -37,6 +39,7 @@ public class ExportConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_group")
     public String resourceGroup;
+
     public ExportConfigurationsCreateRequestBody withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -48,6 +51,7 @@ public class ExportConfigurationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_name")
     public String resourceName;
+
     public ExportConfigurationsCreateRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -58,9 +62,13 @@ public class ExportConfigurationsCreateRequestBody {
      */
     @JsonProperty("type")
     public ExportConfigurationsCreateRequestBodyTypeEnum type;
+
     public ExportConfigurationsCreateRequestBody withType(ExportConfigurationsCreateRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExportConfigurationsCreateRequestBody(@JsonProperty("type") ExportConfigurationsCreateRequestBodyTypeEnum type) {
+        this.type = type;
+  }
 }

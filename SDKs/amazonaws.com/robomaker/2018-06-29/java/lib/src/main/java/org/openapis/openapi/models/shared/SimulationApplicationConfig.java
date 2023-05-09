@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SimulationApplicationConfig {
     @JsonProperty("application")
     public String application;
+
     public SimulationApplicationConfig withApplication(String application) {
         this.application = application;
         return this;
@@ -22,6 +23,7 @@ public class SimulationApplicationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationVersion")
     public String applicationVersion;
+
     public SimulationApplicationConfig withApplicationVersion(String applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
@@ -29,6 +31,7 @@ public class SimulationApplicationConfig {
     
     @JsonProperty("launchConfig")
     public LaunchConfig launchConfig;
+
     public SimulationApplicationConfig withLaunchConfig(LaunchConfig launchConfig) {
         this.launchConfig = launchConfig;
         return this;
@@ -37,6 +40,7 @@ public class SimulationApplicationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tools")
     public Tool[] tools;
+
     public SimulationApplicationConfig withTools(Tool[] tools) {
         this.tools = tools;
         return this;
@@ -45,6 +49,7 @@ public class SimulationApplicationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadConfigurations")
     public UploadConfiguration[] uploadConfigurations;
+
     public SimulationApplicationConfig withUploadConfigurations(UploadConfiguration[] uploadConfigurations) {
         this.uploadConfigurations = uploadConfigurations;
         return this;
@@ -53,6 +58,7 @@ public class SimulationApplicationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDefaultTools")
     public Boolean useDefaultTools;
+
     public SimulationApplicationConfig withUseDefaultTools(Boolean useDefaultTools) {
         this.useDefaultTools = useDefaultTools;
         return this;
@@ -61,6 +67,7 @@ public class SimulationApplicationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDefaultUploadConfigurations")
     public Boolean useDefaultUploadConfigurations;
+
     public SimulationApplicationConfig withUseDefaultUploadConfigurations(Boolean useDefaultUploadConfigurations) {
         this.useDefaultUploadConfigurations = useDefaultUploadConfigurations;
         return this;
@@ -69,9 +76,14 @@ public class SimulationApplicationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldConfigs")
     public WorldConfig[] worldConfigs;
+
     public SimulationApplicationConfig withWorldConfigs(WorldConfig[] worldConfigs) {
         this.worldConfigs = worldConfigs;
         return this;
     }
     
+    public SimulationApplicationConfig(@JsonProperty("application") String application, @JsonProperty("launchConfig") LaunchConfig launchConfig) {
+        this.application = application;
+        this.launchConfig = launchConfig;
+  }
 }

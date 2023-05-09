@@ -12,6 +12,7 @@ public class CreateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateBuildInput withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class CreateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public CreateBuildInput withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -28,6 +30,7 @@ public class CreateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSdkVersion")
     public String serverSDKVersion;
+
     public CreateBuildInput withServerSDKVersion(String serverSDKVersion) {
         this.serverSDKVersion = serverSDKVersion;
         return this;
@@ -36,6 +39,7 @@ public class CreateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageLocation")
     public S3Location storageLocation;
+
     public CreateBuildInput withStorageLocation(S3Location storageLocation) {
         this.storageLocation = storageLocation;
         return this;
@@ -44,6 +48,7 @@ public class CreateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateBuildInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -52,9 +57,11 @@ public class CreateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public CreateBuildInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateBuildInput(){}
 }

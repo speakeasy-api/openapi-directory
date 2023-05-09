@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugMembersFindRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetWorkspaceSlugMembersFindRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceSlugMembersFindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=github")
     public String github;
+
     public GetWorkspaceSlugMembersFindRequest withGithub(String github) {
         this.github = github;
         return this;
@@ -26,6 +29,7 @@ public class GetWorkspaceSlugMembersFindRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public GetWorkspaceSlugMembersFindRequest withSource(String source) {
         this.source = source;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspaceSlugMembersFindRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_host")
     public String sourceHost;
+
     public GetWorkspaceSlugMembersFindRequest withSourceHost(String sourceHost) {
         this.sourceHost = sourceHost;
         return this;
@@ -40,6 +45,7 @@ public class GetWorkspaceSlugMembersFindRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uid")
     public String uid;
+
     public GetWorkspaceSlugMembersFindRequest withUid(String uid) {
         this.uid = uid;
         return this;
@@ -47,6 +53,7 @@ public class GetWorkspaceSlugMembersFindRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetWorkspaceSlugMembersFindRequest withUsername(String username) {
         this.username = username;
         return this;
@@ -54,9 +61,13 @@ public class GetWorkspaceSlugMembersFindRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspaceSlugMembersFindRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspaceSlugMembersFindRequest(@JsonProperty("workspace_slug") String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
+  }
 }

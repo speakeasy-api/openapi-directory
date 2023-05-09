@@ -15,6 +15,7 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public DateRangeUnitEnum unit;
+
     public DateRange withUnit(DateRangeUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -23,9 +24,11 @@ public class DateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Long value;
+
     public DateRange withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public DateRange(){}
 }

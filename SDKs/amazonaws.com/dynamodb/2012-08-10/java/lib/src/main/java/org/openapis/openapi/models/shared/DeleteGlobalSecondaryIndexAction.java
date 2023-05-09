@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteGlobalSecondaryIndexAction {
     @JsonProperty("IndexName")
     public String indexName;
+
     public DeleteGlobalSecondaryIndexAction withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
     }
     
+    public DeleteGlobalSecondaryIndexAction(@JsonProperty("IndexName") String indexName) {
+        this.indexName = indexName;
+  }
 }

@@ -15,9 +15,13 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
      */
     @JsonProperty("assetsWeights")
     public Double[] assetsWeights;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSON withAssetsWeights(Double[] assetsWeights) {
         this.assetsWeights = assetsWeights;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased200ApplicationJSON(@JsonProperty("assetsWeights") Double[] assetsWeights) {
+        this.assetsWeights = assetsWeights;
+  }
 }

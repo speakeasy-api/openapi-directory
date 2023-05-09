@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData {
     @JsonProperty("Agreement")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withAgreement(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement) {
         this.agreement = agreement;
         return this;
@@ -23,6 +24,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData 
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -33,6 +35,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData 
      */
     @JsonProperty("License")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withLicense(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license) {
         this.license = license;
         return this;
@@ -43,6 +46,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData 
      */
     @JsonProperty("TermsOfUse")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withTermsOfUse(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse) {
         this.termsOfUse = termsOfUse;
         return this;
@@ -50,9 +54,17 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData 
     
     @JsonProperty("TotalResults")
     public Long totalResults;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData withTotalResults(Long totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData(@JsonProperty("Agreement") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum agreement, @JsonProperty("LastUpdated") OffsetDateTime lastUpdated, @JsonProperty("License") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataLicenseEnum license, @JsonProperty("TermsOfUse") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataTermsOfUseEnum termsOfUse, @JsonProperty("TotalResults") Long totalResults) {
+        this.agreement = agreement;
+        this.lastUpdated = lastUpdated;
+        this.license = license;
+        this.termsOfUse = termsOfUse;
+        this.totalResults = totalResults;
+  }
 }

@@ -14,6 +14,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
      */
     @JsonProperty("ATMID")
     public String atmid;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withAtmid(String atmid) {
         this.atmid = atmid;
         return this;
@@ -24,6 +25,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
      */
     @JsonProperty("ATMServices")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMATMServicesEnum[] atmServices;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withATMServices(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMATMServicesEnum[] atmServices) {
         this.atmServices = atmServices;
         return this;
@@ -35,6 +37,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessibilityTypes")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAccessibilityTypesEnum[] accessibilityTypes;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withAccessibilityTypes(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAccessibilityTypesEnum[] accessibilityTypes) {
         this.accessibilityTypes = accessibilityTypes;
         return this;
@@ -46,6 +49,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalATMServices")
     public String[] additionalATMServices;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withAdditionalATMServices(String[] additionalATMServices) {
         this.additionalATMServices = additionalATMServices;
         return this;
@@ -56,6 +60,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
      */
     @JsonProperty("Address")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress address;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withAddress(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress address) {
         this.address = address;
         return this;
@@ -67,6 +72,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BranchIdentification")
     public String branchIdentification;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withBranchIdentification(String branchIdentification) {
         this.branchIdentification = branchIdentification;
         return this;
@@ -77,6 +83,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
      */
     @JsonProperty("Currency")
     public String[] currency;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withCurrency(String[] currency) {
         this.currency = currency;
         return this;
@@ -87,6 +94,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
      */
     @JsonProperty("GeographicLocation")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographicLocation geographicLocation;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withGeographicLocation(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographicLocation geographicLocation) {
         this.geographicLocation = geographicLocation;
         return this;
@@ -98,6 +106,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationCategory")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMLocationCategoryEnum locationCategory;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withLocationCategory(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMLocationCategoryEnum locationCategory) {
         this.locationCategory = locationCategory;
         return this;
@@ -109,6 +118,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumValueDispensed")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMMinimumValueDispensedEnum minimumValueDispensed;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withMinimumValueDispensed(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMMinimumValueDispensedEnum minimumValueDispensed) {
         this.minimumValueDispensed = minimumValueDispensed;
         return this;
@@ -119,6 +129,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
      */
     @JsonProperty("Organisation")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisation organisation;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withOrganisation(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisation organisation) {
         this.organisation = organisation;
         return this;
@@ -130,6 +141,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SiteID")
     public String siteID;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withSiteID(String siteID) {
         this.siteID = siteID;
         return this;
@@ -141,6 +153,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SiteName")
     public String siteName;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withSiteName(String siteName) {
         this.siteName = siteName;
         return this;
@@ -151,9 +164,19 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM {
      */
     @JsonProperty("SupportedLanguages")
     public String[] supportedLanguages;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM withSupportedLanguages(String[] supportedLanguages) {
         this.supportedLanguages = supportedLanguages;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATM(@JsonProperty("ATMID") String atmid, @JsonProperty("ATMServices") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMATMServicesEnum[] atmServices, @JsonProperty("Address") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMAddress address, @JsonProperty("Currency") String[] currency, @JsonProperty("GeographicLocation") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMGeographicLocation geographicLocation, @JsonProperty("Organisation") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisation organisation, @JsonProperty("SupportedLanguages") String[] supportedLanguages) {
+        this.atmid = atmid;
+        this.atmServices = atmServices;
+        this.address = address;
+        this.currency = currency;
+        this.geographicLocation = geographicLocation;
+        this.organisation = organisation;
+        this.supportedLanguages = supportedLanguages;
+  }
 }

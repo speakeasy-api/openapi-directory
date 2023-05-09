@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOwnedNumbersResponse {
     
     public byte[] body;
+
     public GetOwnedNumbersResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetOwnedNumbersResponse {
     
     
     public String contentType;
+
     public GetOwnedNumbersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetOwnedNumbersResponse {
     
     
     public Integer statusCode;
+
     public GetOwnedNumbersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOwnedNumbersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOwnedNumbersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetOwnedNumbersResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountUnauthorized accountUnauthorized;
+
     public GetOwnedNumbersResponse withAccountUnauthorized(org.openapis.openapi.models.shared.AccountUnauthorized accountUnauthorized) {
         this.accountUnauthorized = accountUnauthorized;
         return this;
@@ -50,9 +56,14 @@ public class GetOwnedNumbersResponse {
      */
     
     public org.openapis.openapi.models.shared.InboundNumbers inboundNumbers;
+
     public GetOwnedNumbersResponse withInboundNumbers(org.openapis.openapi.models.shared.InboundNumbers inboundNumbers) {
         this.inboundNumbers = inboundNumbers;
         return this;
     }
     
+    public GetOwnedNumbersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

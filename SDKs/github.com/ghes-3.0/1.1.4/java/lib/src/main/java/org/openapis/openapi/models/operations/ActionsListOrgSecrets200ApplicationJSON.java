@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionsListOrgSecrets200ApplicationJSON {
     @JsonProperty("secrets")
     public org.openapis.openapi.models.shared.OrganizationActionsSecret[] secrets;
+
     public ActionsListOrgSecrets200ApplicationJSON withSecrets(org.openapis.openapi.models.shared.OrganizationActionsSecret[] secrets) {
         this.secrets = secrets;
         return this;
@@ -19,9 +20,14 @@ public class ActionsListOrgSecrets200ApplicationJSON {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ActionsListOrgSecrets200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ActionsListOrgSecrets200ApplicationJSON(@JsonProperty("secrets") org.openapis.openapi.models.shared.OrganizationActionsSecret[] secrets, @JsonProperty("total_count") Long totalCount) {
+        this.secrets = secrets;
+        this.totalCount = totalCount;
+  }
 }

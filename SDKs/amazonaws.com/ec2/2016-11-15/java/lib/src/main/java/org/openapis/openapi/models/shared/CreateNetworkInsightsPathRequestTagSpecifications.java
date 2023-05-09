@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsPathRequestTagSpecifications {
     
     public CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateNetworkInsightsPathRequestTagSpecifications withResourceType(CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInsightsPathRequestTagSpecifications {
     
     
     public CreateNetworkInsightsPathRequestTagSpecificationsTags[] tags;
+
     public CreateNetworkInsightsPathRequestTagSpecifications withTags(CreateNetworkInsightsPathRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateNetworkInsightsPathRequestTagSpecifications(){}
 }

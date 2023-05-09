@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessLog")
     public AwsElbLoadBalancerAccessLog accessLog;
+
     public AwsElbLoadBalancerAttributes withAccessLog(AwsElbLoadBalancerAccessLog accessLog) {
         this.accessLog = accessLog;
         return this;
@@ -23,6 +24,7 @@ public class AwsElbLoadBalancerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAttributes")
     public AwsElbLoadBalancerAdditionalAttribute[] additionalAttributes;
+
     public AwsElbLoadBalancerAttributes withAdditionalAttributes(AwsElbLoadBalancerAdditionalAttribute[] additionalAttributes) {
         this.additionalAttributes = additionalAttributes;
         return this;
@@ -31,6 +33,7 @@ public class AwsElbLoadBalancerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionDraining")
     public AwsElbLoadBalancerConnectionDraining connectionDraining;
+
     public AwsElbLoadBalancerAttributes withConnectionDraining(AwsElbLoadBalancerConnectionDraining connectionDraining) {
         this.connectionDraining = connectionDraining;
         return this;
@@ -39,6 +42,7 @@ public class AwsElbLoadBalancerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionSettings")
     public AwsElbLoadBalancerConnectionSettings connectionSettings;
+
     public AwsElbLoadBalancerAttributes withConnectionSettings(AwsElbLoadBalancerConnectionSettings connectionSettings) {
         this.connectionSettings = connectionSettings;
         return this;
@@ -47,9 +51,11 @@ public class AwsElbLoadBalancerAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrossZoneLoadBalancing")
     public AwsElbLoadBalancerCrossZoneLoadBalancing crossZoneLoadBalancing;
+
     public AwsElbLoadBalancerAttributes withCrossZoneLoadBalancing(AwsElbLoadBalancerCrossZoneLoadBalancing crossZoneLoadBalancing) {
         this.crossZoneLoadBalancing = crossZoneLoadBalancing;
         return this;
     }
     
+    public AwsElbLoadBalancerAttributes(){}
 }

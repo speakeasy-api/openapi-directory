@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1WebDetectionWebImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudVisionV1p1beta1WebDetectionWebImage withScore(Float score) {
         this.score = score;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1WebDetectionWebImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoogleCloudVisionV1p1beta1WebDetectionWebImage withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1WebDetectionWebImage(){}
 }

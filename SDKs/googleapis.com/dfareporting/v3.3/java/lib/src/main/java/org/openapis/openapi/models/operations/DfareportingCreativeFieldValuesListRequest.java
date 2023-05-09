@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingCreativeFieldValuesListRequest {
@@ -12,6 +13,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingCreativeFieldValuesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingCreativeFieldValuesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingCreativeFieldValuesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingCreativeFieldValuesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=creativeFieldId")
     public String creativeFieldId;
+
     public DfareportingCreativeFieldValuesListRequest withCreativeFieldId(String creativeFieldId) {
         this.creativeFieldId = creativeFieldId;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingCreativeFieldValuesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public DfareportingCreativeFieldValuesListRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingCreativeFieldValuesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DfareportingCreativeFieldValuesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingCreativeFieldValuesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DfareportingCreativeFieldValuesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingCreativeFieldValuesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingCreativeFieldValuesListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingCreativeFieldValuesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
     public String searchString;
+
     public DfareportingCreativeFieldValuesListRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingCreativeFieldValuesListSortFieldEnum sortField;
+
     public DfareportingCreativeFieldValuesListRequest withSortField(DfareportingCreativeFieldValuesListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingCreativeFieldValuesListSortOrderEnum sortOrder;
+
     public DfareportingCreativeFieldValuesListRequest withSortOrder(DfareportingCreativeFieldValuesListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingCreativeFieldValuesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -192,9 +211,14 @@ public class DfareportingCreativeFieldValuesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingCreativeFieldValuesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingCreativeFieldValuesListRequest(@JsonProperty("creativeFieldId") String creativeFieldId, @JsonProperty("profileId") String profileId) {
+        this.creativeFieldId = creativeFieldId;
+        this.profileId = profileId;
+  }
 }

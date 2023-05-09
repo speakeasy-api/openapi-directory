@@ -22,6 +22,7 @@ public class HyperParameterTuningJobCompletionDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ConvergenceDetectedTime")
     public OffsetDateTime convergenceDetectedTime;
+
     public HyperParameterTuningJobCompletionDetails withConvergenceDetectedTime(OffsetDateTime convergenceDetectedTime) {
         this.convergenceDetectedTime = convergenceDetectedTime;
         return this;
@@ -30,9 +31,11 @@ public class HyperParameterTuningJobCompletionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTrainingJobsObjectiveNotImproving")
     public Long numberOfTrainingJobsObjectiveNotImproving;
+
     public HyperParameterTuningJobCompletionDetails withNumberOfTrainingJobsObjectiveNotImproving(Long numberOfTrainingJobsObjectiveNotImproving) {
         this.numberOfTrainingJobsObjectiveNotImproving = numberOfTrainingJobsObjectiveNotImproving;
         return this;
     }
     
+    public HyperParameterTuningJobCompletionDetails(){}
 }

@@ -15,6 +15,7 @@ public class CustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public CustomEventLinks links;
+
     public CustomEvent withLinks(CustomEventLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class CustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public java.util.Map<String, Object> body;
+
     public CustomEvent withBody(java.util.Map<String, Object> body) {
         this.body = body;
         return this;
@@ -37,6 +39,7 @@ public class CustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public CustomEvent withFrom(String from) {
         this.from = from;
         return this;
@@ -48,6 +51,7 @@ public class CustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CustomEvent withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class CustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public CustomEvent withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -70,9 +75,11 @@ public class CustomEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CustomEvent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CustomEvent(){}
 }

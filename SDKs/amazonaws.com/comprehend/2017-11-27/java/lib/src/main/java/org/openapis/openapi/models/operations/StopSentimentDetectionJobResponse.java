@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopSentimentDetectionJobResponse {
     
     public String contentType;
+
     public StopSentimentDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopSentimentDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StopSentimentDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StopSentimentDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StopSentimentDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StopSentimentDetectionJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public StopSentimentDetectionJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class StopSentimentDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StopSentimentDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopSentimentDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopSentimentDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopSentimentDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopSentimentDetectionJobResponse stopSentimentDetectionJobResponse;
+
     public StopSentimentDetectionJobResponse withStopSentimentDetectionJobResponse(org.openapis.openapi.models.shared.StopSentimentDetectionJobResponse stopSentimentDetectionJobResponse) {
         this.stopSentimentDetectionJobResponse = stopSentimentDetectionJobResponse;
         return this;
     }
     
+    public StopSentimentDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

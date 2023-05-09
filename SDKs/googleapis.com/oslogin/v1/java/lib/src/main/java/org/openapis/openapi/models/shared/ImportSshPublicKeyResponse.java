@@ -18,6 +18,7 @@ public class ImportSshPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public ImportSshPublicKeyResponse withDetails(String details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class ImportSshPublicKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loginProfile")
     public LoginProfile loginProfile;
+
     public ImportSshPublicKeyResponse withLoginProfile(LoginProfile loginProfile) {
         this.loginProfile = loginProfile;
         return this;
     }
     
+    public ImportSshPublicKeyResponse(){}
 }

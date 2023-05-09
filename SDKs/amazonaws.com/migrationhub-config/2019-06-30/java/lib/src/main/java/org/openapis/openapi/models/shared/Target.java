@@ -15,6 +15,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Target withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,13 @@ public class Target {
     
     @JsonProperty("Type")
     public TargetTypeEnum type;
+
     public Target withType(TargetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Target(@JsonProperty("Type") TargetTypeEnum type) {
+        this.type = type;
+  }
 }

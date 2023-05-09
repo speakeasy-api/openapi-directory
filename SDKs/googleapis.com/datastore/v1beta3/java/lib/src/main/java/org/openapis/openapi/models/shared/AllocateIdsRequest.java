@@ -18,9 +18,11 @@ public class AllocateIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public Key[] keys;
+
     public AllocateIdsRequest withKeys(Key[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public AllocateIdsRequest(){}
 }

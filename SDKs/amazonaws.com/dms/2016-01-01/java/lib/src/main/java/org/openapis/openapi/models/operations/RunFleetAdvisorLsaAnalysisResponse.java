@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunFleetAdvisorLsaAnalysisResponse {
     
     public String contentType;
+
     public RunFleetAdvisorLsaAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RunFleetAdvisorLsaAnalysisResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public RunFleetAdvisorLsaAnalysisResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -29,6 +32,7 @@ public class RunFleetAdvisorLsaAnalysisResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public RunFleetAdvisorLsaAnalysisResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -39,6 +43,7 @@ public class RunFleetAdvisorLsaAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.RunFleetAdvisorLsaAnalysisResponse runFleetAdvisorLsaAnalysisResponse;
+
     public RunFleetAdvisorLsaAnalysisResponse withRunFleetAdvisorLsaAnalysisResponse(org.openapis.openapi.models.shared.RunFleetAdvisorLsaAnalysisResponse runFleetAdvisorLsaAnalysisResponse) {
         this.runFleetAdvisorLsaAnalysisResponse = runFleetAdvisorLsaAnalysisResponse;
         return this;
@@ -46,6 +51,7 @@ public class RunFleetAdvisorLsaAnalysisResponse {
     
     
     public Integer statusCode;
+
     public RunFleetAdvisorLsaAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class RunFleetAdvisorLsaAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunFleetAdvisorLsaAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RunFleetAdvisorLsaAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

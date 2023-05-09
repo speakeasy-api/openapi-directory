@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetExperimentResultsResponse {
@@ -12,6 +13,7 @@ public class GetExperimentResultsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetExperimentResultsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetExperimentResultsResponse {
      */
     
     public Object conflictException;
+
     public GetExperimentResultsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetExperimentResultsResponse {
     
     
     public String contentType;
+
     public GetExperimentResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetExperimentResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetExperimentResultsResponse getExperimentResultsResponse;
+
     public GetExperimentResultsResponse withGetExperimentResultsResponse(org.openapis.openapi.models.shared.GetExperimentResultsResponse getExperimentResultsResponse) {
         this.getExperimentResultsResponse = getExperimentResultsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetExperimentResultsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetExperimentResultsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetExperimentResultsResponse {
     
     
     public Integer statusCode;
+
     public GetExperimentResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetExperimentResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetExperimentResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetExperimentResultsResponse {
      */
     
     public Object throttlingException;
+
     public GetExperimentResultsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetExperimentResultsResponse {
      */
     
     public Object validationException;
+
     public GetExperimentResultsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetExperimentResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

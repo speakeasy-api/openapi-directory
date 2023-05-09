@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutConfigurationSetSuppressionOptionsResponse {
@@ -12,6 +13,7 @@ public class PutConfigurationSetSuppressionOptionsResponse {
      */
     
     public Object badRequestException;
+
     public PutConfigurationSetSuppressionOptionsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigurationSetSuppressionOptionsResponse {
     
     
     public String contentType;
+
     public PutConfigurationSetSuppressionOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutConfigurationSetSuppressionOptionsResponse {
      */
     
     public Object notFoundException;
+
     public PutConfigurationSetSuppressionOptionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -39,6 +43,7 @@ public class PutConfigurationSetSuppressionOptionsResponse {
      */
     
     public java.util.Map<String, Object> putConfigurationSetSuppressionOptionsResponse;
+
     public PutConfigurationSetSuppressionOptionsResponse withPutConfigurationSetSuppressionOptionsResponse(java.util.Map<String, Object> putConfigurationSetSuppressionOptionsResponse) {
         this.putConfigurationSetSuppressionOptionsResponse = putConfigurationSetSuppressionOptionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutConfigurationSetSuppressionOptionsResponse {
     
     
     public Integer statusCode;
+
     public PutConfigurationSetSuppressionOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutConfigurationSetSuppressionOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutConfigurationSetSuppressionOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutConfigurationSetSuppressionOptionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutConfigurationSetSuppressionOptionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutConfigurationSetSuppressionOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

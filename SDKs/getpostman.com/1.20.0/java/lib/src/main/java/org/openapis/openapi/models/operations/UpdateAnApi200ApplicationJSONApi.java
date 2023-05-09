@@ -12,6 +12,7 @@ public class UpdateAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public String createdAt;
+
     public UpdateAnApi200ApplicationJSONApi withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -20,6 +21,7 @@ public class UpdateAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public UpdateAnApi200ApplicationJSONApi withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -28,6 +30,7 @@ public class UpdateAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateAnApi200ApplicationJSONApi withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class UpdateAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateAnApi200ApplicationJSONApi withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class UpdateAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateAnApi200ApplicationJSONApi withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class UpdateAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public UpdateAnApi200ApplicationJSONApi withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -60,9 +66,11 @@ public class UpdateAnApi200ApplicationJSONApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public UpdateAnApi200ApplicationJSONApi withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public UpdateAnApi200ApplicationJSONApi(){}
 }

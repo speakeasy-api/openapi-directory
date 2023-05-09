@@ -12,6 +12,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line1")
     public String addressLine1;
+
     public StateElectionOfficeInfo withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -20,6 +21,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line2")
     public String addressLine2;
+
     public StateElectionOfficeInfo withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -28,6 +30,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public StateElectionOfficeInfo withCity(String city) {
         this.city = city;
         return this;
@@ -36,6 +39,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public StateElectionOfficeInfo withEmail(String email) {
         this.email = email;
         return this;
@@ -44,6 +48,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax_number")
     public String faxNumber;
+
     public StateElectionOfficeInfo withFaxNumber(String faxNumber) {
         this.faxNumber = faxNumber;
         return this;
@@ -52,6 +57,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailing_address1")
     public String mailingAddress1;
+
     public StateElectionOfficeInfo withMailingAddress1(String mailingAddress1) {
         this.mailingAddress1 = mailingAddress1;
         return this;
@@ -60,6 +66,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailing_address2")
     public String mailingAddress2;
+
     public StateElectionOfficeInfo withMailingAddress2(String mailingAddress2) {
         this.mailingAddress2 = mailingAddress2;
         return this;
@@ -68,6 +75,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailing_city")
     public String mailingCity;
+
     public StateElectionOfficeInfo withMailingCity(String mailingCity) {
         this.mailingCity = mailingCity;
         return this;
@@ -76,6 +84,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailing_state")
     public String mailingState;
+
     public StateElectionOfficeInfo withMailingState(String mailingState) {
         this.mailingState = mailingState;
         return this;
@@ -84,6 +93,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailing_zipcode")
     public String mailingZipcode;
+
     public StateElectionOfficeInfo withMailingZipcode(String mailingZipcode) {
         this.mailingZipcode = mailingZipcode;
         return this;
@@ -92,6 +102,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office_name")
     public String officeName;
+
     public StateElectionOfficeInfo withOfficeName(String officeName) {
         this.officeName = officeName;
         return this;
@@ -99,6 +110,7 @@ public class StateElectionOfficeInfo {
     
     @JsonProperty("office_type")
     public String officeType;
+
     public StateElectionOfficeInfo withOfficeType(String officeType) {
         this.officeType = officeType;
         return this;
@@ -107,6 +119,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_phone_number")
     public String primaryPhoneNumber;
+
     public StateElectionOfficeInfo withPrimaryPhoneNumber(String primaryPhoneNumber) {
         this.primaryPhoneNumber = primaryPhoneNumber;
         return this;
@@ -115,6 +128,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondary_phone_number")
     public String secondaryPhoneNumber;
+
     public StateElectionOfficeInfo withSecondaryPhoneNumber(String secondaryPhoneNumber) {
         this.secondaryPhoneNumber = secondaryPhoneNumber;
         return this;
@@ -122,6 +136,7 @@ public class StateElectionOfficeInfo {
     
     @JsonProperty("state")
     public String state;
+
     public StateElectionOfficeInfo withState(String state) {
         this.state = state;
         return this;
@@ -130,6 +145,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_full_name")
     public String stateFullName;
+
     public StateElectionOfficeInfo withStateFullName(String stateFullName) {
         this.stateFullName = stateFullName;
         return this;
@@ -138,6 +154,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url1")
     public String websiteUrl1;
+
     public StateElectionOfficeInfo withWebsiteUrl1(String websiteUrl1) {
         this.websiteUrl1 = websiteUrl1;
         return this;
@@ -146,6 +163,7 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url2")
     public String websiteUrl2;
+
     public StateElectionOfficeInfo withWebsiteUrl2(String websiteUrl2) {
         this.websiteUrl2 = websiteUrl2;
         return this;
@@ -154,9 +172,14 @@ public class StateElectionOfficeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip_code")
     public String zipCode;
+
     public StateElectionOfficeInfo withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public StateElectionOfficeInfo(@JsonProperty("office_type") String officeType, @JsonProperty("state") String state) {
+        this.officeType = officeType;
+        this.state = state;
+  }
 }

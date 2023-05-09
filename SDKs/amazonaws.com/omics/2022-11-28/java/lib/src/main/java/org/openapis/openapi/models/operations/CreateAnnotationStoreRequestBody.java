@@ -15,6 +15,7 @@ public class CreateAnnotationStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAnnotationStoreRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateAnnotationStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateAnnotationStoreRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class CreateAnnotationStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public CreateAnnotationStoreRequestBodyReference reference;
+
     public CreateAnnotationStoreRequestBody withReference(CreateAnnotationStoreRequestBodyReference reference) {
         this.reference = reference;
         return this;
@@ -48,6 +51,7 @@ public class CreateAnnotationStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseConfig")
     public CreateAnnotationStoreRequestBodySseConfig sseConfig;
+
     public CreateAnnotationStoreRequestBody withSseConfig(CreateAnnotationStoreRequestBodySseConfig sseConfig) {
         this.sseConfig = sseConfig;
         return this;
@@ -58,6 +62,7 @@ public class CreateAnnotationStoreRequestBody {
      */
     @JsonProperty("storeFormat")
     public CreateAnnotationStoreRequestBodyStoreFormatEnum storeFormat;
+
     public CreateAnnotationStoreRequestBody withStoreFormat(CreateAnnotationStoreRequestBodyStoreFormatEnum storeFormat) {
         this.storeFormat = storeFormat;
         return this;
@@ -69,6 +74,7 @@ public class CreateAnnotationStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeOptions")
     public CreateAnnotationStoreRequestBodyStoreOptions storeOptions;
+
     public CreateAnnotationStoreRequestBody withStoreOptions(CreateAnnotationStoreRequestBodyStoreOptions storeOptions) {
         this.storeOptions = storeOptions;
         return this;
@@ -80,9 +86,13 @@ public class CreateAnnotationStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAnnotationStoreRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAnnotationStoreRequestBody(@JsonProperty("storeFormat") CreateAnnotationStoreRequestBodyStoreFormatEnum storeFormat) {
+        this.storeFormat = storeFormat;
+  }
 }

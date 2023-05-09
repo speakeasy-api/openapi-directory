@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateNetworkAclRequest {
     
     public Boolean dryRun;
+
     public CreateNetworkAclRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateNetworkAclRequest {
     
     
     public CreateNetworkAclRequestTagSpecifications[] tagSpecifications;
+
     public CreateNetworkAclRequest withTagSpecifications(CreateNetworkAclRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -23,9 +25,13 @@ public class CreateNetworkAclRequest {
     
     
     public String vpcId;
+
     public CreateNetworkAclRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateNetworkAclRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

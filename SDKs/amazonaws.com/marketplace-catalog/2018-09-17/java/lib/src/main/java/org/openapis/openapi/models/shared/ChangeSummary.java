@@ -15,6 +15,7 @@ public class ChangeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeName")
     public String changeName;
+
     public ChangeSummary withChangeName(String changeName) {
         this.changeName = changeName;
         return this;
@@ -23,6 +24,7 @@ public class ChangeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeType")
     public String changeType;
+
     public ChangeSummary withChangeType(String changeType) {
         this.changeType = changeType;
         return this;
@@ -31,6 +33,7 @@ public class ChangeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public String details;
+
     public ChangeSummary withDetails(String details) {
         this.details = details;
         return this;
@@ -39,6 +42,7 @@ public class ChangeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entity")
     public Entity entity;
+
     public ChangeSummary withEntity(Entity entity) {
         this.entity = entity;
         return this;
@@ -47,9 +51,11 @@ public class ChangeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetailList")
     public ErrorDetail[] errorDetailList;
+
     public ChangeSummary withErrorDetailList(ErrorDetail[] errorDetailList) {
         this.errorDetailList = errorDetailList;
         return this;
     }
     
+    public ChangeSummary(){}
 }

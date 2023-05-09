@@ -15,6 +15,7 @@ public class ListSinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListSinksItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListSinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ListSinksItem withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class ListSinksItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ListSinksItem withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ListSinksItem(){}
 }

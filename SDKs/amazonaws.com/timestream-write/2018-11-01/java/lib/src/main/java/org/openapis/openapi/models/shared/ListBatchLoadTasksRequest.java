@@ -12,6 +12,7 @@ public class ListBatchLoadTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListBatchLoadTasksRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListBatchLoadTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBatchLoadTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListBatchLoadTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskStatus")
     public BatchLoadStatusEnum taskStatus;
+
     public ListBatchLoadTasksRequest withTaskStatus(BatchLoadStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
     
+    public ListBatchLoadTasksRequest(){}
 }

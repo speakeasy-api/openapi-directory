@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyNetworkInterfaceAttributeRequest - Contains the parameters for ModifyNetworkInterfaceAttribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyNetworkInterfaceAttributeRequest {
     
     public ModifyNetworkInterfaceAttributeRequestAttachment attachment;
+
     public ModifyNetworkInterfaceAttributeRequest withAttachment(ModifyNetworkInterfaceAttributeRequestAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -19,6 +20,7 @@ public class ModifyNetworkInterfaceAttributeRequest {
     
     
     public ModifyNetworkInterfaceAttributeRequestDescription description;
+
     public ModifyNetworkInterfaceAttributeRequest withDescription(ModifyNetworkInterfaceAttributeRequestDescription description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ModifyNetworkInterfaceAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ModifyNetworkInterfaceAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -33,6 +36,7 @@ public class ModifyNetworkInterfaceAttributeRequest {
     
     
     public EnaSrdSpecification enaSrdSpecification;
+
     public ModifyNetworkInterfaceAttributeRequest withEnaSrdSpecification(EnaSrdSpecification enaSrdSpecification) {
         this.enaSrdSpecification = enaSrdSpecification;
         return this;
@@ -40,6 +44,7 @@ public class ModifyNetworkInterfaceAttributeRequest {
     
     
     public String[] groups;
+
     public ModifyNetworkInterfaceAttributeRequest withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -47,6 +52,7 @@ public class ModifyNetworkInterfaceAttributeRequest {
     
     
     public String networkInterfaceId;
+
     public ModifyNetworkInterfaceAttributeRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -54,9 +60,13 @@ public class ModifyNetworkInterfaceAttributeRequest {
     
     
     public ModifyNetworkInterfaceAttributeRequestSourceDestCheck sourceDestCheck;
+
     public ModifyNetworkInterfaceAttributeRequest withSourceDestCheck(ModifyNetworkInterfaceAttributeRequestSourceDestCheck sourceDestCheck) {
         this.sourceDestCheck = sourceDestCheck;
         return this;
     }
     
+    public ModifyNetworkInterfaceAttributeRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

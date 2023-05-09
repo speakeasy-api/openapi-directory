@@ -50,10 +50,8 @@ public class FolderSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderSettingsDeleteResponse res = new org.openapis.openapi.models.operations.FolderSettingsDeleteResponse() {{
+        org.openapis.openapi.models.operations.FolderSettingsDeleteResponse res = new org.openapis.openapi.models.operations.FolderSettingsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -82,14 +80,12 @@ public class FolderSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderSettingsGetResponse res = new org.openapis.openapi.models.operations.FolderSettingsGetResponse() {{
+        org.openapis.openapi.models.operations.FolderSettingsGetResponse res = new org.openapis.openapi.models.operations.FolderSettingsGetResponse(contentType, httpRes.statusCode()) {{
             folderSettings = null;
             folderSettings = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,14 +137,12 @@ public class FolderSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderSettingsPostFormResponse res = new org.openapis.openapi.models.operations.FolderSettingsPostFormResponse() {{
+        org.openapis.openapi.models.operations.FolderSettingsPostFormResponse res = new org.openapis.openapi.models.operations.FolderSettingsPostFormResponse(contentType, httpRes.statusCode()) {{
             folderMenuItem = null;
             folderMenuItem = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,14 +194,12 @@ public class FolderSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderSettingsPostJsonResponse res = new org.openapis.openapi.models.operations.FolderSettingsPostJsonResponse() {{
+        org.openapis.openapi.models.operations.FolderSettingsPostJsonResponse res = new org.openapis.openapi.models.operations.FolderSettingsPostJsonResponse(contentType, httpRes.statusCode()) {{
             folderMenuItem = null;
             folderMenuItem = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,14 +251,12 @@ public class FolderSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderSettingsPostRawResponse res = new org.openapis.openapi.models.operations.FolderSettingsPostRawResponse() {{
+        org.openapis.openapi.models.operations.FolderSettingsPostRawResponse res = new org.openapis.openapi.models.operations.FolderSettingsPostRawResponse(contentType, httpRes.statusCode()) {{
             folderMenuItem = null;
             folderMenuItem = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

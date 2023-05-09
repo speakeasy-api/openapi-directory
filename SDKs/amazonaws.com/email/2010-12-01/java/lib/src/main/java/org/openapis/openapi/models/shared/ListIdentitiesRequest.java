@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListIdentitiesRequest {
     
     public IdentityTypeEnum identityType;
+
     public ListIdentitiesRequest withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -19,6 +20,7 @@ public class ListIdentitiesRequest {
     
     
     public Long maxItems;
+
     public ListIdentitiesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -26,9 +28,11 @@ public class ListIdentitiesRequest {
     
     
     public String nextToken;
+
     public ListIdentitiesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentitiesRequest(){}
 }

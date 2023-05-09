@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesRequestFilters {
     
     public String name;
+
     public DescribeNetworkInsightsAnalysesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInsightsAnalysesRequestFilters {
     
     
     public String[] values;
+
     public DescribeNetworkInsightsAnalysesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesRequestFilters(){}
 }

@@ -15,9 +15,11 @@ public class GetInstanceAccessDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessDetails")
     public InstanceAccessDetails accessDetails;
+
     public GetInstanceAccessDetailsResult withAccessDetails(InstanceAccessDetails accessDetails) {
         this.accessDetails = accessDetails;
         return this;
     }
     
+    public GetInstanceAccessDetailsResult(){}
 }

@@ -55,11 +55,9 @@ public class Servers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteServersIdResponse res = new org.openapis.openapi.models.operations.DeleteServersIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteServersIdResponse res = new org.openapis.openapi.models.operations.DeleteServersIdResponse(contentType, httpRes.statusCode()) {{
             deleteServersId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Servers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServersResponse res = new org.openapis.openapi.models.operations.GetServersResponse() {{
+        org.openapis.openapi.models.operations.GetServersResponse res = new org.openapis.openapi.models.operations.GetServersResponse(contentType, httpRes.statusCode()) {{
             getServers200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Servers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServersIdResponse res = new org.openapis.openapi.models.operations.GetServersIdResponse() {{
+        org.openapis.openapi.models.operations.GetServersIdResponse res = new org.openapis.openapi.models.operations.GetServersIdResponse(contentType, httpRes.statusCode()) {{
             getServersId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,11 +201,9 @@ public class Servers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServersIdMetricsResponse res = new org.openapis.openapi.models.operations.GetServersIdMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetServersIdMetricsResponse res = new org.openapis.openapi.models.operations.GetServersIdMetricsResponse(contentType, httpRes.statusCode()) {{
             getServersIdMetrics200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Servers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersResponse res = new org.openapis.openapi.models.operations.PostServersResponse() {{
+        org.openapis.openapi.models.operations.PostServersResponse res = new org.openapis.openapi.models.operations.PostServersResponse(contentType, httpRes.statusCode()) {{
             createServerResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -291,11 +281,9 @@ public class Servers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutServersIdResponse res = new org.openapis.openapi.models.operations.PutServersIdResponse() {{
+        org.openapis.openapi.models.operations.PutServersIdResponse res = new org.openapis.openapi.models.operations.PutServersIdResponse(contentType, httpRes.statusCode()) {{
             putServersId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

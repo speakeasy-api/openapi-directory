@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddCommentResponse {
@@ -12,6 +13,7 @@ public class AddCommentResponse {
      */
     
     public Object addComment200ApplicationJSONAny;
+
     public AddCommentResponse withAddComment200ApplicationJSONAny(Object addComment200ApplicationJSONAny) {
         this.addComment200ApplicationJSONAny = addComment200ApplicationJSONAny;
         return this;
@@ -19,6 +21,7 @@ public class AddCommentResponse {
     
     
     public String contentType;
+
     public AddCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AddCommentResponse {
     
     
     public Integer statusCode;
+
     public AddCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AddCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

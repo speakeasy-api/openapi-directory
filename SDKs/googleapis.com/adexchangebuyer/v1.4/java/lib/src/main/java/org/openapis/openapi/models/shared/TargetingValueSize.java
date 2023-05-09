@@ -15,6 +15,7 @@ public class TargetingValueSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public TargetingValueSize withHeight(Integer height) {
         this.height = height;
         return this;
@@ -26,9 +27,11 @@ public class TargetingValueSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public TargetingValueSize withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public TargetingValueSize(){}
 }

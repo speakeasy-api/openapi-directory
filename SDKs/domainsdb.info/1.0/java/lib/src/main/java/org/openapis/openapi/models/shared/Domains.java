@@ -17,6 +17,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("A")
     public String[] a;
+
     public Domains withA(String[] a) {
         this.a = a;
         return this;
@@ -25,6 +26,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CNAME")
     public String[] cname;
+
     public Domains withCname(String[] cname) {
         this.cname = cname;
         return this;
@@ -33,6 +35,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MX")
     public MXRecords[] mx;
+
     public Domains withMx(MXRecords[] mx) {
         this.mx = mx;
         return this;
@@ -41,6 +44,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NS")
     public String[] ns;
+
     public Domains withNs(String[] ns) {
         this.ns = ns;
         return this;
@@ -49,6 +53,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TXT")
     public String[] txt;
+
     public Domains withTxt(String[] txt) {
         this.txt = txt;
         return this;
@@ -60,6 +65,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Domains withCountry(String country) {
         this.country = country;
         return this;
@@ -73,6 +79,7 @@ public class Domains {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("create_date")
     public OffsetDateTime createDate;
+
     public Domains withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -84,6 +91,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public Domains withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -95,6 +103,7 @@ public class Domains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDead")
     public String isDead;
+
     public Domains withIsDead(String isDead) {
         this.isDead = isDead;
         return this;
@@ -108,9 +117,11 @@ public class Domains {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("update_date")
     public OffsetDateTime updateDate;
+
     public Domains withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public Domains(){}
 }

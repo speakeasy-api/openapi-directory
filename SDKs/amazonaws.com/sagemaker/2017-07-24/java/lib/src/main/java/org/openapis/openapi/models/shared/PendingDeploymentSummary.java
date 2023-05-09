@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PendingDeploymentSummary {
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public PendingDeploymentSummary withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -27,6 +28,7 @@ public class PendingDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductionVariants")
     public PendingProductionVariantSummary[] productionVariants;
+
     public PendingDeploymentSummary withProductionVariants(PendingProductionVariantSummary[] productionVariants) {
         this.productionVariants = productionVariants;
         return this;
@@ -35,6 +37,7 @@ public class PendingDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShadowProductionVariants")
     public PendingProductionVariantSummary[] shadowProductionVariants;
+
     public PendingDeploymentSummary withShadowProductionVariants(PendingProductionVariantSummary[] shadowProductionVariants) {
         this.shadowProductionVariants = shadowProductionVariants;
         return this;
@@ -45,9 +48,13 @@ public class PendingDeploymentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public PendingDeploymentSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PendingDeploymentSummary(@JsonProperty("EndpointConfigName") String endpointConfigName) {
+        this.endpointConfigName = endpointConfigName;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobRun")
     public JobRun jobRun;
+
     public DescribeJobRunResponse withJobRun(JobRun jobRun) {
         this.jobRun = jobRun;
         return this;
     }
     
+    public DescribeJobRunResponse(){}
 }

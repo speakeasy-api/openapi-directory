@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchAddFacetToObject {
     @JsonProperty("ObjectAttributeList")
     public AttributeKeyAndValue[] objectAttributeList;
+
     public BatchAddFacetToObject withObjectAttributeList(AttributeKeyAndValue[] objectAttributeList) {
         this.objectAttributeList = objectAttributeList;
         return this;
@@ -19,6 +20,7 @@ public class BatchAddFacetToObject {
     
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchAddFacetToObject withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -26,9 +28,15 @@ public class BatchAddFacetToObject {
     
     @JsonProperty("SchemaFacet")
     public SchemaFacet schemaFacet;
+
     public BatchAddFacetToObject withSchemaFacet(SchemaFacet schemaFacet) {
         this.schemaFacet = schemaFacet;
         return this;
     }
     
+    public BatchAddFacetToObject(@JsonProperty("ObjectAttributeList") AttributeKeyAndValue[] objectAttributeList, @JsonProperty("ObjectReference") ObjectReference objectReference, @JsonProperty("SchemaFacet") SchemaFacet schemaFacet) {
+        this.objectAttributeList = objectAttributeList;
+        this.objectReference = objectReference;
+        this.schemaFacet = schemaFacet;
+  }
 }

@@ -12,9 +12,11 @@ public class DestinyHistoricalStatsDestinyHistoricalWeaponStatsData {
      */
     
     public DestinyHistoricalStatsDestinyHistoricalWeaponStats[] weapons;
+
     public DestinyHistoricalStatsDestinyHistoricalWeaponStatsData withWeapons(DestinyHistoricalStatsDestinyHistoricalWeaponStats[] weapons) {
         this.weapons = weapons;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyHistoricalWeaponStatsData(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateCarrierGatewayRequest {
     
     public String clientToken;
+
     public CreateCarrierGatewayRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateCarrierGatewayRequest {
     
     
     public Boolean dryRun;
+
     public CreateCarrierGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateCarrierGatewayRequest {
     
     
     public CreateCarrierGatewayRequestTagSpecifications[] tagSpecifications;
+
     public CreateCarrierGatewayRequest withTagSpecifications(CreateCarrierGatewayRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -30,9 +33,13 @@ public class CreateCarrierGatewayRequest {
     
     
     public String vpcId;
+
     public CreateCarrierGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateCarrierGatewayRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

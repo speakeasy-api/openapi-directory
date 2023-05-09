@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectBuildNumCancelRequest {
@@ -13,6 +14,7 @@ public class PostProjectUsernameProjectBuildNumCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build_num")
     public Long buildNum;
+
     public PostProjectUsernameProjectBuildNumCancelRequest withBuildNum(Long buildNum) {
         this.buildNum = buildNum;
         return this;
@@ -24,6 +26,7 @@ public class PostProjectUsernameProjectBuildNumCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public PostProjectUsernameProjectBuildNumCancelRequest withProject(String project) {
         this.project = project;
         return this;
@@ -35,9 +38,15 @@ public class PostProjectUsernameProjectBuildNumCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public PostProjectUsernameProjectBuildNumCancelRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostProjectUsernameProjectBuildNumCancelRequest(@JsonProperty("build_num") Long buildNum, @JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.buildNum = buildNum;
+        this.project = project;
+        this.username = username;
+  }
 }

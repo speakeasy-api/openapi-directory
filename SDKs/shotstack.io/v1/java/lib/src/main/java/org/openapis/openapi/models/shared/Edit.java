@@ -18,6 +18,7 @@ public class Edit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback")
     public String callback;
+
     public Edit withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -32,6 +33,7 @@ public class Edit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public EditDiskEnum disk;
+
     public Edit withDisk(EditDiskEnum disk) {
         this.disk = disk;
         return this;
@@ -42,6 +44,7 @@ public class Edit {
      */
     @JsonProperty("output")
     public Output output;
+
     public Edit withOutput(Output output) {
         this.output = output;
         return this;
@@ -52,9 +55,14 @@ public class Edit {
      */
     @JsonProperty("timeline")
     public Timeline timeline;
+
     public Edit withTimeline(Timeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public Edit(@JsonProperty("output") Output output, @JsonProperty("timeline") Timeline timeline) {
+        this.output = output;
+        this.timeline = timeline;
+  }
 }

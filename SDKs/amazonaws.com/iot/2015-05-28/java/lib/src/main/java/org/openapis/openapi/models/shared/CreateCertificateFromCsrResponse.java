@@ -15,6 +15,7 @@ public class CreateCertificateFromCsrResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public CreateCertificateFromCsrResponse withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateCertificateFromCsrResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateId")
     public String certificateId;
+
     public CreateCertificateFromCsrResponse withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -31,9 +33,11 @@ public class CreateCertificateFromCsrResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePem")
     public String certificatePem;
+
     public CreateCertificateFromCsrResponse withCertificatePem(String certificatePem) {
         this.certificatePem = certificatePem;
         return this;
     }
     
+    public CreateCertificateFromCsrResponse(){}
 }

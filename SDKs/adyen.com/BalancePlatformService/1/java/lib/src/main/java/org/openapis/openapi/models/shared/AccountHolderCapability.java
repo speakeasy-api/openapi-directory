@@ -15,6 +15,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Boolean allowed;
+
     public AccountHolderCapability withAllowed(Boolean allowed) {
         this.allowed = allowed;
         return this;
@@ -28,6 +29,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedLevel")
     public AccountHolderCapabilityAllowedLevelEnum allowedLevel;
+
     public AccountHolderCapability withAllowedLevel(AccountHolderCapabilityAllowedLevelEnum allowedLevel) {
         this.allowedLevel = allowedLevel;
         return this;
@@ -36,6 +38,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedSettings")
     public JSONObject allowedSettings;
+
     public AccountHolderCapability withAllowedSettings(JSONObject allowedSettings) {
         this.allowedSettings = allowedSettings;
         return this;
@@ -47,6 +50,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AccountHolderCapability withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -58,6 +62,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("problems")
     public java.util.Map<String, Object>[] problems;
+
     public AccountHolderCapability withProblems(java.util.Map<String, Object>[] problems) {
         this.problems = problems;
         return this;
@@ -69,6 +74,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public Boolean requested;
+
     public AccountHolderCapability withRequested(Boolean requested) {
         this.requested = requested;
         return this;
@@ -82,6 +88,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLevel")
     public AccountHolderCapabilityRequestedLevelEnum requestedLevel;
+
     public AccountHolderCapability withRequestedLevel(AccountHolderCapabilityRequestedLevelEnum requestedLevel) {
         this.requestedLevel = requestedLevel;
         return this;
@@ -90,6 +97,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedSettings")
     public JSONObject requestedSettings;
+
     public AccountHolderCapability withRequestedSettings(JSONObject requestedSettings) {
         this.requestedSettings = requestedSettings;
         return this;
@@ -101,6 +109,7 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferInstruments")
     public AccountSupportingEntityCapability[] transferInstruments;
+
     public AccountHolderCapability withTransferInstruments(AccountSupportingEntityCapability[] transferInstruments) {
         this.transferInstruments = transferInstruments;
         return this;
@@ -123,9 +132,11 @@ public class AccountHolderCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStatus")
     public AccountHolderCapabilityVerificationStatusEnum verificationStatus;
+
     public AccountHolderCapability withVerificationStatus(AccountHolderCapabilityVerificationStatusEnum verificationStatus) {
         this.verificationStatus = verificationStatus;
         return this;
     }
     
+    public AccountHolderCapability(){}
 }

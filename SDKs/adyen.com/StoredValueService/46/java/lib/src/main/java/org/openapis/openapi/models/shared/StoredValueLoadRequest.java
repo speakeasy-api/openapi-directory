@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StoredValueLoadRequest {
     @JsonProperty("amount")
     public Amount amount;
+
     public StoredValueLoadRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class StoredValueLoadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadType")
     public StoredValueLoadRequestLoadTypeEnum loadType;
+
     public StoredValueLoadRequest withLoadType(StoredValueLoadRequestLoadTypeEnum loadType) {
         this.loadType = loadType;
         return this;
@@ -32,6 +34,7 @@ public class StoredValueLoadRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoredValueLoadRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -42,6 +45,7 @@ public class StoredValueLoadRequest {
      */
     @JsonProperty("paymentMethod")
     public java.util.Map<String, String> paymentMethod;
+
     public StoredValueLoadRequest withPaymentMethod(java.util.Map<String, String> paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -50,6 +54,7 @@ public class StoredValueLoadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public StoredValueLoadRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -62,6 +67,7 @@ public class StoredValueLoadRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public StoredValueLoadRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -80,6 +86,7 @@ public class StoredValueLoadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public StoredValueLoadRequestShopperInteractionEnum shopperInteraction;
+
     public StoredValueLoadRequest withShopperInteraction(StoredValueLoadRequestShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -88,6 +95,7 @@ public class StoredValueLoadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public StoredValueLoadRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -99,9 +107,16 @@ public class StoredValueLoadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public StoredValueLoadRequest withStore(String store) {
         this.store = store;
         return this;
     }
     
+    public StoredValueLoadRequest(@JsonProperty("amount") Amount amount, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("paymentMethod") java.util.Map<String, String> paymentMethod, @JsonProperty("reference") String reference) {
+        this.amount = amount;
+        this.merchantAccount = merchantAccount;
+        this.paymentMethod = paymentMethod;
+        this.reference = reference;
+  }
 }

@@ -12,9 +12,13 @@ public class PutClassificationExportConfigurationRequestBody {
      */
     @JsonProperty("configuration")
     public PutClassificationExportConfigurationRequestBodyConfiguration configuration;
+
     public PutClassificationExportConfigurationRequestBody withConfiguration(PutClassificationExportConfigurationRequestBodyConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public PutClassificationExportConfigurationRequestBody(@JsonProperty("configuration") PutClassificationExportConfigurationRequestBodyConfiguration configuration) {
+        this.configuration = configuration;
+  }
 }

@@ -18,6 +18,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_claim_office_number")
     public String insuranceClaimOfficeNumber;
+
     public PatientPrimaryInsurance withInsuranceClaimOfficeNumber(String insuranceClaimOfficeNumber) {
         this.insuranceClaimOfficeNumber = insuranceClaimOfficeNumber;
         return this;
@@ -26,6 +27,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_company")
     public String insuranceCompany;
+
     public PatientPrimaryInsurance withInsuranceCompany(String insuranceCompany) {
         this.insuranceCompany = insuranceCompany;
         return this;
@@ -34,6 +36,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_group_name")
     public String insuranceGroupName;
+
     public PatientPrimaryInsurance withInsuranceGroupName(String insuranceGroupName) {
         this.insuranceGroupName = insuranceGroupName;
         return this;
@@ -42,6 +45,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_group_number")
     public String insuranceGroupNumber;
+
     public PatientPrimaryInsurance withInsuranceGroupNumber(String insuranceGroupNumber) {
         this.insuranceGroupNumber = insuranceGroupNumber;
         return this;
@@ -50,6 +54,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_id_number")
     public String insuranceIdNumber;
+
     public PatientPrimaryInsurance withInsuranceIdNumber(String insuranceIdNumber) {
         this.insuranceIdNumber = insuranceIdNumber;
         return this;
@@ -58,6 +63,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_payer_id")
     public String insurancePayerId;
+
     public PatientPrimaryInsurance withInsurancePayerId(String insurancePayerId) {
         this.insurancePayerId = insurancePayerId;
         return this;
@@ -69,6 +75,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_plan_name")
     public String insurancePlanName;
+
     public PatientPrimaryInsurance withInsurancePlanName(String insurancePlanName) {
         this.insurancePlanName = insurancePlanName;
         return this;
@@ -77,6 +84,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_plan_type")
     public PatientPrimaryInsuranceInsurancePlanTypeEnum insurancePlanType;
+
     public PatientPrimaryInsurance withInsurancePlanType(PatientPrimaryInsuranceInsurancePlanTypeEnum insurancePlanType) {
         this.insurancePlanType = insurancePlanType;
         return this;
@@ -88,6 +96,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_subscriber_the_patient")
     public Boolean isSubscriberThePatient;
+
     public PatientPrimaryInsurance withIsSubscriberThePatient(Boolean isSubscriberThePatient) {
         this.isSubscriberThePatient = isSubscriberThePatient;
         return this;
@@ -99,6 +108,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient_relationship_to_subscriber")
     public PatientPrimaryInsurancePatientRelationshipToSubscriberEnum patientRelationshipToSubscriber;
+
     public PatientPrimaryInsurance withPatientRelationshipToSubscriber(PatientPrimaryInsurancePatientRelationshipToSubscriberEnum patientRelationshipToSubscriber) {
         this.patientRelationshipToSubscriber = patientRelationshipToSubscriber;
         return this;
@@ -110,6 +120,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photo_back")
     public String photoBack;
+
     public PatientPrimaryInsurance withPhotoBack(String photoBack) {
         this.photoBack = photoBack;
         return this;
@@ -121,6 +132,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photo_front")
     public String photoFront;
+
     public PatientPrimaryInsurance withPhotoFront(String photoFront) {
         this.photoFront = photoFront;
         return this;
@@ -129,6 +141,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_address")
     public String subscriberAddress;
+
     public PatientPrimaryInsurance withSubscriberAddress(String subscriberAddress) {
         this.subscriberAddress = subscriberAddress;
         return this;
@@ -137,6 +150,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_city")
     public String subscriberCity;
+
     public PatientPrimaryInsurance withSubscriberCity(String subscriberCity) {
         this.subscriberCity = subscriberCity;
         return this;
@@ -148,6 +162,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_country")
     public PatientPrimaryInsuranceSubscriberCountryEnum subscriberCountry;
+
     public PatientPrimaryInsurance withSubscriberCountry(PatientPrimaryInsuranceSubscriberCountryEnum subscriberCountry) {
         this.subscriberCountry = subscriberCountry;
         return this;
@@ -156,6 +171,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_date_of_birth")
     public String subscriberDateOfBirth;
+
     public PatientPrimaryInsurance withSubscriberDateOfBirth(String subscriberDateOfBirth) {
         this.subscriberDateOfBirth = subscriberDateOfBirth;
         return this;
@@ -164,6 +180,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_first_name")
     public String subscriberFirstName;
+
     public PatientPrimaryInsurance withSubscriberFirstName(String subscriberFirstName) {
         this.subscriberFirstName = subscriberFirstName;
         return this;
@@ -175,6 +192,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_gender")
     public PatientPrimaryInsuranceSubscriberGenderEnum subscriberGender;
+
     public PatientPrimaryInsurance withSubscriberGender(PatientPrimaryInsuranceSubscriberGenderEnum subscriberGender) {
         this.subscriberGender = subscriberGender;
         return this;
@@ -183,6 +201,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_last_name")
     public String subscriberLastName;
+
     public PatientPrimaryInsurance withSubscriberLastName(String subscriberLastName) {
         this.subscriberLastName = subscriberLastName;
         return this;
@@ -191,6 +210,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_middle_name")
     public String subscriberMiddleName;
+
     public PatientPrimaryInsurance withSubscriberMiddleName(String subscriberMiddleName) {
         this.subscriberMiddleName = subscriberMiddleName;
         return this;
@@ -199,6 +219,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_social_security")
     public String subscriberSocialSecurity;
+
     public PatientPrimaryInsurance withSubscriberSocialSecurity(String subscriberSocialSecurity) {
         this.subscriberSocialSecurity = subscriberSocialSecurity;
         return this;
@@ -210,6 +231,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_state")
     public PatientPrimaryInsuranceSubscriberStateEnum subscriberState;
+
     public PatientPrimaryInsurance withSubscriberState(PatientPrimaryInsuranceSubscriberStateEnum subscriberState) {
         this.subscriberState = subscriberState;
         return this;
@@ -221,6 +243,7 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_suffix")
     public String subscriberSuffix;
+
     public PatientPrimaryInsurance withSubscriberSuffix(String subscriberSuffix) {
         this.subscriberSuffix = subscriberSuffix;
         return this;
@@ -229,9 +252,11 @@ public class PatientPrimaryInsurance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriber_zip_code")
     public String subscriberZipCode;
+
     public PatientPrimaryInsurance withSubscriberZipCode(String subscriberZipCode) {
         this.subscriberZipCode = subscriberZipCode;
         return this;
     }
     
+    public PatientPrimaryInsurance(){}
 }

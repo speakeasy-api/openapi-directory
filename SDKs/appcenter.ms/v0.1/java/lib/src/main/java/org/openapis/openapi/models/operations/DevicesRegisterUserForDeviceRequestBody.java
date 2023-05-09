@@ -18,6 +18,7 @@ public class DevicesRegisterUserForDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imei")
     public String imei;
+
     public DevicesRegisterUserForDeviceRequestBody withImei(String imei) {
         this.imei = imei;
         return this;
@@ -28,6 +29,7 @@ public class DevicesRegisterUserForDeviceRequestBody {
      */
     @JsonProperty("model")
     public String model;
+
     public DevicesRegisterUserForDeviceRequestBody withModel(String model) {
         this.model = model;
         return this;
@@ -39,6 +41,7 @@ public class DevicesRegisterUserForDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_build")
     public String osBuild;
+
     public DevicesRegisterUserForDeviceRequestBody withOsBuild(String osBuild) {
         this.osBuild = osBuild;
         return this;
@@ -50,6 +53,7 @@ public class DevicesRegisterUserForDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_version")
     public String osVersion;
+
     public DevicesRegisterUserForDeviceRequestBody withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -61,6 +65,7 @@ public class DevicesRegisterUserForDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner_id")
     public String ownerId;
+
     public DevicesRegisterUserForDeviceRequestBody withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -72,6 +77,7 @@ public class DevicesRegisterUserForDeviceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public DevicesRegisterUserForDeviceRequestBody withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -82,9 +88,14 @@ public class DevicesRegisterUserForDeviceRequestBody {
      */
     @JsonProperty("udid")
     public String udid;
+
     public DevicesRegisterUserForDeviceRequestBody withUdid(String udid) {
         this.udid = udid;
         return this;
     }
     
+    public DevicesRegisterUserForDeviceRequestBody(@JsonProperty("model") String model, @JsonProperty("udid") String udid) {
+        this.model = model;
+        this.udid = udid;
+  }
 }

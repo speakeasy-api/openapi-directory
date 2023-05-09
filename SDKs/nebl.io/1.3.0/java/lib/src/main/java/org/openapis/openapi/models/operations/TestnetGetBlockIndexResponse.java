@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestnetGetBlockIndexResponse {
     
     public String contentType;
+
     public TestnetGetBlockIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TestnetGetBlockIndexResponse {
     
     
     public Integer statusCode;
+
     public TestnetGetBlockIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TestnetGetBlockIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestnetGetBlockIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TestnetGetBlockIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBlockIndexResponse getBlockIndexResponse;
+
     public TestnetGetBlockIndexResponse withGetBlockIndexResponse(org.openapis.openapi.models.shared.GetBlockIndexResponse getBlockIndexResponse) {
         this.getBlockIndexResponse = getBlockIndexResponse;
         return this;
     }
     
+    public TestnetGetBlockIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

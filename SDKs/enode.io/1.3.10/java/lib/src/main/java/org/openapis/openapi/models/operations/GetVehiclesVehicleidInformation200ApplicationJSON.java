@@ -18,6 +18,7 @@ public class GetVehiclesVehicleidInformation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public GetVehiclesVehicleidInformation200ApplicationJSON withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class GetVehiclesVehicleidInformation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetVehiclesVehicleidInformation200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GetVehiclesVehicleidInformation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GetVehiclesVehicleidInformation200ApplicationJSON withModel(String model) {
         this.model = model;
         return this;
@@ -51,9 +54,11 @@ public class GetVehiclesVehicleidInformation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public GetVehiclesVehicleidInformation200ApplicationJSON withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetVehiclesVehicleidInformation200ApplicationJSON(){}
 }

@@ -15,9 +15,11 @@ public class PreprintsBibliographicContributorsListContributorLinks {
      */
     
     public String self;
+
     public PreprintsBibliographicContributorsListContributorLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public PreprintsBibliographicContributorsListContributorLinks(){}
 }

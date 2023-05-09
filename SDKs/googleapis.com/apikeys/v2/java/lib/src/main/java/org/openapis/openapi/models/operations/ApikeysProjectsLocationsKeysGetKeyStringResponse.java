@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApikeysProjectsLocationsKeysGetKeyStringResponse {
     
     public String contentType;
+
     public ApikeysProjectsLocationsKeysGetKeyStringResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ApikeysProjectsLocationsKeysGetKeyStringResponse {
     
     
     public Integer statusCode;
+
     public ApikeysProjectsLocationsKeysGetKeyStringResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ApikeysProjectsLocationsKeysGetKeyStringResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApikeysProjectsLocationsKeysGetKeyStringResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ApikeysProjectsLocationsKeysGetKeyStringResponse {
      */
     
     public org.openapis.openapi.models.shared.V2GetKeyStringResponse v2GetKeyStringResponse;
+
     public ApikeysProjectsLocationsKeysGetKeyStringResponse withV2GetKeyStringResponse(org.openapis.openapi.models.shared.V2GetKeyStringResponse v2GetKeyStringResponse) {
         this.v2GetKeyStringResponse = v2GetKeyStringResponse;
         return this;
     }
     
+    public ApikeysProjectsLocationsKeysGetKeyStringResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

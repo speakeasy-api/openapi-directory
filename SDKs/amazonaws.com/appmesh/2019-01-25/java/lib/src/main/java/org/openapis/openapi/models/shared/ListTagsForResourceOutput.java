@@ -15,6 +15,7 @@ public class ListTagsForResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTagsForResourceOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListTagsForResourceOutput {
     
     @JsonProperty("tags")
     public TagRef[] tags;
+
     public ListTagsForResourceOutput withTags(TagRef[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListTagsForResourceOutput(@JsonProperty("tags") TagRef[] tags) {
+        this.tags = tags;
+  }
 }

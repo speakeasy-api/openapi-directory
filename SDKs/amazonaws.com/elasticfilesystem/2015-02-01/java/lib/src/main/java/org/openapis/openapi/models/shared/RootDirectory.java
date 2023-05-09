@@ -15,6 +15,7 @@ public class RootDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationInfo")
     public CreationInfo creationInfo;
+
     public RootDirectory withCreationInfo(CreationInfo creationInfo) {
         this.creationInfo = creationInfo;
         return this;
@@ -23,9 +24,11 @@ public class RootDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public RootDirectory withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public RootDirectory(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoreByScoreidVRequest {
@@ -12,6 +13,7 @@ public class BoxScoreByScoreidVRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public BoxScoreByScoreidVFormatEnum format;
+
     public BoxScoreByScoreidVRequest withFormat(BoxScoreByScoreidVFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class BoxScoreByScoreidVRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoreid")
     public String scoreid;
+
     public BoxScoreByScoreidVRequest withScoreid(String scoreid) {
         this.scoreid = scoreid;
         return this;
     }
     
+    public BoxScoreByScoreidVRequest(@JsonProperty("format") BoxScoreByScoreidVFormatEnum format, @JsonProperty("scoreid") String scoreid) {
+        this.format = format;
+        this.scoreid = scoreid;
+  }
 }

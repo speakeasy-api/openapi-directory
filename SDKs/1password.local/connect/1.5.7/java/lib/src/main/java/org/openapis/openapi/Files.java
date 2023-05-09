@@ -54,12 +54,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadFileByIDResponse res = new org.openapis.openapi.models.operations.DownloadFileByIDResponse() {{
+        org.openapis.openapi.models.operations.DownloadFileByIDResponse res = new org.openapis.openapi.models.operations.DownloadFileByIDResponse(contentType, httpRes.statusCode()) {{
             downloadFileByID200ApplicationOctetStreamBinaryString = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDetailsOfFileByIdResponse res = new org.openapis.openapi.models.operations.GetDetailsOfFileByIdResponse() {{
+        org.openapis.openapi.models.operations.GetDetailsOfFileByIdResponse res = new org.openapis.openapi.models.operations.GetDetailsOfFileByIdResponse(contentType, httpRes.statusCode()) {{
             file = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,12 +159,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemFilesResponse res = new org.openapis.openapi.models.operations.GetItemFilesResponse() {{
+        org.openapis.openapi.models.operations.GetItemFilesResponse res = new org.openapis.openapi.models.operations.GetItemFilesResponse(contentType, httpRes.statusCode()) {{
             files = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

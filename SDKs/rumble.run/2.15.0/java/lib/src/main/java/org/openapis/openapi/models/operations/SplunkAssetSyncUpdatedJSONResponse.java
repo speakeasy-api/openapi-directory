@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SplunkAssetSyncUpdatedJSONResponse {
@@ -12,6 +13,7 @@ public class SplunkAssetSyncUpdatedJSONResponse {
      */
     
     public org.openapis.openapi.models.shared.AssetsWithCheckpoint assetsWithCheckpoint;
+
     public SplunkAssetSyncUpdatedJSONResponse withAssetsWithCheckpoint(org.openapis.openapi.models.shared.AssetsWithCheckpoint assetsWithCheckpoint) {
         this.assetsWithCheckpoint = assetsWithCheckpoint;
         return this;
@@ -19,6 +21,7 @@ public class SplunkAssetSyncUpdatedJSONResponse {
     
     
     public String contentType;
+
     public SplunkAssetSyncUpdatedJSONResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SplunkAssetSyncUpdatedJSONResponse {
     
     
     public Integer statusCode;
+
     public SplunkAssetSyncUpdatedJSONResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SplunkAssetSyncUpdatedJSONResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SplunkAssetSyncUpdatedJSONResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SplunkAssetSyncUpdatedJSONResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

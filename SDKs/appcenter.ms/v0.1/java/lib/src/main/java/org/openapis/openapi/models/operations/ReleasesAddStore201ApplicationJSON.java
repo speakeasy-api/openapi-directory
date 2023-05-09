@@ -15,9 +15,13 @@ public class ReleasesAddStore201ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesAddStore201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ReleasesAddStore201ApplicationJSON(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

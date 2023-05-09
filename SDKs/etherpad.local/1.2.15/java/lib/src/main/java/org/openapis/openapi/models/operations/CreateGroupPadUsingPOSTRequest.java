@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateGroupPadUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
     public String groupID;
+
     public CreateGroupPadUsingPOSTRequest withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
@@ -16,6 +17,7 @@ public class CreateGroupPadUsingPOSTRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padName")
     public String padName;
+
     public CreateGroupPadUsingPOSTRequest withPadName(String padName) {
         this.padName = padName;
         return this;
@@ -23,9 +25,11 @@ public class CreateGroupPadUsingPOSTRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public CreateGroupPadUsingPOSTRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CreateGroupPadUsingPOSTRequest(){}
 }

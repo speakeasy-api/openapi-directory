@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteNetworkInterfacePermissionRequest - Contains the parameters for DeleteNetworkInterfacePermission.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteNetworkInterfacePermissionRequest {
     
     public Boolean dryRun;
+
     public DeleteNetworkInterfacePermissionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DeleteNetworkInterfacePermissionRequest {
     
     
     public Boolean force;
+
     public DeleteNetworkInterfacePermissionRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -26,9 +28,13 @@ public class DeleteNetworkInterfacePermissionRequest {
     
     
     public String networkInterfacePermissionId;
+
     public DeleteNetworkInterfacePermissionRequest withNetworkInterfacePermissionId(String networkInterfacePermissionId) {
         this.networkInterfacePermissionId = networkInterfacePermissionId;
         return this;
     }
     
+    public DeleteNetworkInterfacePermissionRequest(@JsonProperty("NetworkInterfacePermissionId") String networkInterfacePermissionId) {
+        this.networkInterfacePermissionId = networkInterfacePermissionId;
+  }
 }

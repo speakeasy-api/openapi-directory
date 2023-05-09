@@ -12,6 +12,7 @@ public class MarketingEventExternalUniqueIdentifier {
      */
     @JsonProperty("appId")
     public Integer appId;
+
     public MarketingEventExternalUniqueIdentifier withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -22,6 +23,7 @@ public class MarketingEventExternalUniqueIdentifier {
      */
     @JsonProperty("externalAccountId")
     public String externalAccountId;
+
     public MarketingEventExternalUniqueIdentifier withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -32,9 +34,15 @@ public class MarketingEventExternalUniqueIdentifier {
      */
     @JsonProperty("externalEventId")
     public String externalEventId;
+
     public MarketingEventExternalUniqueIdentifier withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
     }
     
+    public MarketingEventExternalUniqueIdentifier(@JsonProperty("appId") Integer appId, @JsonProperty("externalAccountId") String externalAccountId, @JsonProperty("externalEventId") String externalEventId) {
+        this.appId = appId;
+        this.externalAccountId = externalAccountId;
+        this.externalEventId = externalEventId;
+  }
 }

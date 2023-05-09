@@ -12,9 +12,13 @@ public class ReposRenameBranchRequestBody {
      */
     @JsonProperty("new_name")
     public String newName;
+
     public ReposRenameBranchRequestBody withNewName(String newName) {
         this.newName = newName;
         return this;
     }
     
+    public ReposRenameBranchRequestBody(@JsonProperty("new_name") String newName) {
+        this.newName = newName;
+  }
 }

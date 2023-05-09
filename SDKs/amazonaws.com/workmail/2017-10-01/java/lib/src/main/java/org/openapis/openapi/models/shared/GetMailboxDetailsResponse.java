@@ -15,6 +15,7 @@ public class GetMailboxDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MailboxQuota")
     public Long mailboxQuota;
+
     public GetMailboxDetailsResponse withMailboxQuota(Long mailboxQuota) {
         this.mailboxQuota = mailboxQuota;
         return this;
@@ -23,9 +24,11 @@ public class GetMailboxDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MailboxSize")
     public Double mailboxSize;
+
     public GetMailboxDetailsResponse withMailboxSize(Double mailboxSize) {
         this.mailboxSize = mailboxSize;
         return this;
     }
     
+    public GetMailboxDetailsResponse(){}
 }

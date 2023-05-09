@@ -18,6 +18,7 @@ public class TransferCreditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public TransferCreditResponse withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class TransferCreditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TransferCreditResponse withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class TransferCreditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credit_transfer_id")
     public String creditTransferId;
+
     public TransferCreditResponse withCreditTransferId(String creditTransferId) {
         this.creditTransferId = creditTransferId;
         return this;
@@ -51,6 +54,7 @@ public class TransferCreditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public TransferCreditResponse withFrom(String from) {
         this.from = from;
         return this;
@@ -62,6 +66,7 @@ public class TransferCreditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public TransferCreditResponse withReference(String reference) {
         this.reference = reference;
         return this;
@@ -73,9 +78,11 @@ public class TransferCreditResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public TransferCreditResponse withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public TransferCreditResponse(){}
 }

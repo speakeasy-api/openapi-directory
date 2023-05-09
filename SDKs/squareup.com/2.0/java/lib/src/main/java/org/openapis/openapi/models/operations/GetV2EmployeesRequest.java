@@ -12,6 +12,7 @@ public class GetV2EmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetV2EmployeesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class GetV2EmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetV2EmployeesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -29,6 +31,7 @@ public class GetV2EmployeesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public GetV2EmployeesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -39,9 +42,11 @@ public class GetV2EmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetV2EmployeesRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetV2EmployeesRequest(){}
 }

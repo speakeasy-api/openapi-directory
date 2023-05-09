@@ -15,6 +15,7 @@ public class UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public org.openapis.openapi.models.shared.Field[] customFields;
+
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration withCustomFields(org.openapis.openapi.models.shared.Field[] customFields) {
         this.customFields = customFields;
         return this;
@@ -23,6 +24,7 @@ public class UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceDefenderIndexingMode")
     public org.openapis.openapi.models.shared.DeviceDefenderIndexingModeEnum deviceDefenderIndexingMode;
+
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration withDeviceDefenderIndexingMode(org.openapis.openapi.models.shared.DeviceDefenderIndexingModeEnum deviceDefenderIndexingMode) {
         this.deviceDefenderIndexingMode = deviceDefenderIndexingMode;
         return this;
@@ -31,6 +33,7 @@ public class UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public org.openapis.openapi.models.shared.IndexingFilter filter;
+
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration withFilter(org.openapis.openapi.models.shared.IndexingFilter filter) {
         this.filter = filter;
         return this;
@@ -39,6 +42,7 @@ public class UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedFields")
     public org.openapis.openapi.models.shared.Field[] managedFields;
+
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration withManagedFields(org.openapis.openapi.models.shared.Field[] managedFields) {
         this.managedFields = managedFields;
         return this;
@@ -47,6 +51,7 @@ public class UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedShadowIndexingMode")
     public org.openapis.openapi.models.shared.NamedShadowIndexingModeEnum namedShadowIndexingMode;
+
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration withNamedShadowIndexingMode(org.openapis.openapi.models.shared.NamedShadowIndexingModeEnum namedShadowIndexingMode) {
         this.namedShadowIndexingMode = namedShadowIndexingMode;
         return this;
@@ -55,6 +60,7 @@ public class UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingConnectivityIndexingMode")
     public org.openapis.openapi.models.shared.ThingConnectivityIndexingModeEnum thingConnectivityIndexingMode;
+
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration withThingConnectivityIndexingMode(org.openapis.openapi.models.shared.ThingConnectivityIndexingModeEnum thingConnectivityIndexingMode) {
         this.thingConnectivityIndexingMode = thingConnectivityIndexingMode;
         return this;
@@ -63,9 +69,11 @@ public class UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingIndexingMode")
     public org.openapis.openapi.models.shared.ThingIndexingModeEnum thingIndexingMode;
+
     public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration withThingIndexingMode(org.openapis.openapi.models.shared.ThingIndexingModeEnum thingIndexingMode) {
         this.thingIndexingMode = thingIndexingMode;
         return this;
     }
     
+    public UpdateIndexingConfigurationRequestBodyThingIndexingConfiguration(){}
 }

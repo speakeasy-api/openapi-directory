@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSnapshotScheduleMessage {
     
     public Boolean dryRun;
+
     public CreateSnapshotScheduleMessage withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateSnapshotScheduleMessage {
     
     
     public Long nextInvocations;
+
     public CreateSnapshotScheduleMessage withNextInvocations(Long nextInvocations) {
         this.nextInvocations = nextInvocations;
         return this;
@@ -23,6 +25,7 @@ public class CreateSnapshotScheduleMessage {
     
     
     public String[] scheduleDefinitions;
+
     public CreateSnapshotScheduleMessage withScheduleDefinitions(String[] scheduleDefinitions) {
         this.scheduleDefinitions = scheduleDefinitions;
         return this;
@@ -30,6 +33,7 @@ public class CreateSnapshotScheduleMessage {
     
     
     public String scheduleDescription;
+
     public CreateSnapshotScheduleMessage withScheduleDescription(String scheduleDescription) {
         this.scheduleDescription = scheduleDescription;
         return this;
@@ -37,6 +41,7 @@ public class CreateSnapshotScheduleMessage {
     
     
     public String scheduleIdentifier;
+
     public CreateSnapshotScheduleMessage withScheduleIdentifier(String scheduleIdentifier) {
         this.scheduleIdentifier = scheduleIdentifier;
         return this;
@@ -44,9 +49,11 @@ public class CreateSnapshotScheduleMessage {
     
     
     public TagList[] tags;
+
     public CreateSnapshotScheduleMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSnapshotScheduleMessage(){}
 }

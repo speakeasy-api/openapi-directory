@@ -25,6 +25,7 @@ public class UpdateRuleRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endUtcDate")
     public OffsetDateTime endUtcDate;
+
     public UpdateRuleRequest withEndUtcDate(OffsetDateTime endUtcDate) {
         this.endUtcDate = endUtcDate;
         return this;
@@ -35,6 +36,7 @@ public class UpdateRuleRequest {
      */
     @JsonProperty("ruleName")
     public String ruleName;
+
     public UpdateRuleRequest withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -48,9 +50,13 @@ public class UpdateRuleRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startUtcDate")
     public OffsetDateTime startUtcDate;
+
     public UpdateRuleRequest withStartUtcDate(OffsetDateTime startUtcDate) {
         this.startUtcDate = startUtcDate;
         return this;
     }
     
+    public UpdateRuleRequest(@JsonProperty("ruleName") String ruleName) {
+        this.ruleName = ruleName;
+  }
 }

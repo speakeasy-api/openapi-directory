@@ -12,9 +12,13 @@ public class HIUSubscriptionRequestReceiptSubscriptionRequest {
      */
     @JsonProperty("id")
     public String id;
+
     public HIUSubscriptionRequestReceiptSubscriptionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public HIUSubscriptionRequestReceiptSubscriptionRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

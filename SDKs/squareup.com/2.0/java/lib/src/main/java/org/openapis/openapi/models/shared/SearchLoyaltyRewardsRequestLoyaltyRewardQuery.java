@@ -17,6 +17,7 @@ public class SearchLoyaltyRewardsRequestLoyaltyRewardQuery {
      */
     @JsonProperty("loyalty_account_id")
     public String loyaltyAccountId;
+
     public SearchLoyaltyRewardsRequestLoyaltyRewardQuery withLoyaltyAccountId(String loyaltyAccountId) {
         this.loyaltyAccountId = loyaltyAccountId;
         return this;
@@ -28,9 +29,13 @@ public class SearchLoyaltyRewardsRequestLoyaltyRewardQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SearchLoyaltyRewardsRequestLoyaltyRewardQuery withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SearchLoyaltyRewardsRequestLoyaltyRewardQuery(@JsonProperty("loyalty_account_id") String loyaltyAccountId) {
+        this.loyaltyAccountId = loyaltyAccountId;
+  }
 }

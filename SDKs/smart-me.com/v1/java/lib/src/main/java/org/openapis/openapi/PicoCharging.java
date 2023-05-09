@@ -50,12 +50,10 @@ public class PicoCharging {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PicoChargingGetResponse res = new org.openapis.openapi.models.operations.PicoChargingGetResponse() {{
+        org.openapis.openapi.models.operations.PicoChargingGetResponse res = new org.openapis.openapi.models.operations.PicoChargingGetResponse(contentType, httpRes.statusCode()) {{
             picoChargingData = null;
             picoChargingData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

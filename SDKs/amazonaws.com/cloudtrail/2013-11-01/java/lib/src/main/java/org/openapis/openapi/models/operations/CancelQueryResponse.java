@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelQueryResponse {
@@ -12,6 +13,7 @@ public class CancelQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelQueryResponse cancelQueryResponse;
+
     public CancelQueryResponse withCancelQueryResponse(org.openapis.openapi.models.shared.CancelQueryResponse cancelQueryResponse) {
         this.cancelQueryResponse = cancelQueryResponse;
         return this;
@@ -22,6 +24,7 @@ public class CancelQueryResponse {
      */
     
     public Object conflictException;
+
     public CancelQueryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CancelQueryResponse {
     
     
     public String contentType;
+
     public CancelQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelQueryResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public CancelQueryResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -49,6 +54,7 @@ public class CancelQueryResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public CancelQueryResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CancelQueryResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public CancelQueryResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -69,6 +76,7 @@ public class CancelQueryResponse {
      */
     
     public Object inactiveQueryException;
+
     public CancelQueryResponse withInactiveQueryException(Object inactiveQueryException) {
         this.inactiveQueryException = inactiveQueryException;
         return this;
@@ -79,6 +87,7 @@ public class CancelQueryResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelQueryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class CancelQueryResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public CancelQueryResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -99,6 +109,7 @@ public class CancelQueryResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CancelQueryResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -109,6 +120,7 @@ public class CancelQueryResponse {
      */
     
     public Object queryIdNotFoundException;
+
     public CancelQueryResponse withQueryIdNotFoundException(Object queryIdNotFoundException) {
         this.queryIdNotFoundException = queryIdNotFoundException;
         return this;
@@ -116,6 +128,7 @@ public class CancelQueryResponse {
     
     
     public Integer statusCode;
+
     public CancelQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class CancelQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class CancelQueryResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CancelQueryResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CancelQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

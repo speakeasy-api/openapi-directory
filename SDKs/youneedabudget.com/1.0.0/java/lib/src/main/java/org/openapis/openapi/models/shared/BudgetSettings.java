@@ -12,6 +12,7 @@ public class BudgetSettings {
      */
     @JsonProperty("currency_format")
     public CurrencyFormat currencyFormat;
+
     public BudgetSettings withCurrencyFormat(CurrencyFormat currencyFormat) {
         this.currencyFormat = currencyFormat;
         return this;
@@ -22,9 +23,14 @@ public class BudgetSettings {
      */
     @JsonProperty("date_format")
     public DateFormat dateFormat;
+
     public BudgetSettings withDateFormat(DateFormat dateFormat) {
         this.dateFormat = dateFormat;
         return this;
     }
     
+    public BudgetSettings(@JsonProperty("currency_format") CurrencyFormat currencyFormat, @JsonProperty("date_format") DateFormat dateFormat) {
+        this.currencyFormat = currencyFormat;
+        this.dateFormat = dateFormat;
+  }
 }

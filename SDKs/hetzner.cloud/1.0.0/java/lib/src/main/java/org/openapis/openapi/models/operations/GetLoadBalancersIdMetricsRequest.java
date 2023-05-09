@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancersIdMetricsRequest {
@@ -12,6 +13,7 @@ public class GetLoadBalancersIdMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public GetLoadBalancersIdMetricsRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -22,6 +24,7 @@ public class GetLoadBalancersIdMetricsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetLoadBalancersIdMetricsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetLoadBalancersIdMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public GetLoadBalancersIdMetricsRequest withStart(String start) {
         this.start = start;
         return this;
@@ -42,6 +46,7 @@ public class GetLoadBalancersIdMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=step")
     public String step;
+
     public GetLoadBalancersIdMetricsRequest withStep(String step) {
         this.step = step;
         return this;
@@ -52,9 +57,16 @@ public class GetLoadBalancersIdMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetLoadBalancersIdMetricsTypeEnum type;
+
     public GetLoadBalancersIdMetricsRequest withType(GetLoadBalancersIdMetricsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetLoadBalancersIdMetricsRequest(@JsonProperty("end") String end, @JsonProperty("id") Long id, @JsonProperty("start") String start, @JsonProperty("type") GetLoadBalancersIdMetricsTypeEnum type) {
+        this.end = end;
+        this.id = id;
+        this.start = start;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachInstancesToLoadBalancerResponse {
@@ -12,6 +13,7 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachInstancesToLoadBalancerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public AttachInstancesToLoadBalancerResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -32,6 +35,7 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachInstancesToLoadBalancerResult attachInstancesToLoadBalancerResult;
+
     public AttachInstancesToLoadBalancerResponse withAttachInstancesToLoadBalancerResult(org.openapis.openapi.models.shared.AttachInstancesToLoadBalancerResult attachInstancesToLoadBalancerResult) {
         this.attachInstancesToLoadBalancerResult = attachInstancesToLoadBalancerResult;
         return this;
@@ -39,6 +43,7 @@ public class AttachInstancesToLoadBalancerResponse {
     
     
     public String contentType;
+
     public AttachInstancesToLoadBalancerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public Object invalidInputException;
+
     public AttachInstancesToLoadBalancerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public Object notFoundException;
+
     public AttachInstancesToLoadBalancerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public Object operationFailureException;
+
     public AttachInstancesToLoadBalancerResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public Object serviceException;
+
     public AttachInstancesToLoadBalancerResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class AttachInstancesToLoadBalancerResponse {
     
     
     public Integer statusCode;
+
     public AttachInstancesToLoadBalancerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AttachInstancesToLoadBalancerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachInstancesToLoadBalancerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class AttachInstancesToLoadBalancerResponse {
      */
     
     public Object unauthenticatedException;
+
     public AttachInstancesToLoadBalancerResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public AttachInstancesToLoadBalancerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class SurveyQuestionQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SurveyQuestionQuestion withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -20,6 +21,7 @@ public class SurveyQuestionQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public SurveyQuestionQuestion withFormat(String format) {
         this.format = format;
         return this;
@@ -28,6 +30,7 @@ public class SurveyQuestionQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public SurveyQuestionQuestion withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class SurveyQuestionQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public String question;
+
     public SurveyQuestionQuestion withQuestion(String question) {
         this.question = question;
         return this;
@@ -44,9 +48,11 @@ public class SurveyQuestionQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SurveyQuestionQuestion withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SurveyQuestionQuestion(){}
 }

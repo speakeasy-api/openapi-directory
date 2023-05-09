@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     public String clientToken;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public OffsetDateTime createDate;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +28,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public CreateReservedInstancesListingResultReservedInstancesListingsInstanceCounts[] instanceCounts;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withInstanceCounts(CreateReservedInstancesListingResultReservedInstancesListingsInstanceCounts[] instanceCounts) {
         this.instanceCounts = instanceCounts;
         return this;
@@ -33,6 +36,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public CreateReservedInstancesListingResultReservedInstancesListingsPriceSchedules[] priceSchedules;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withPriceSchedules(CreateReservedInstancesListingResultReservedInstancesListingsPriceSchedules[] priceSchedules) {
         this.priceSchedules = priceSchedules;
         return this;
@@ -40,6 +44,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public String reservedInstancesId;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withReservedInstancesId(String reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
@@ -47,6 +52,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public String reservedInstancesListingId;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withReservedInstancesListingId(String reservedInstancesListingId) {
         this.reservedInstancesListingId = reservedInstancesListingId;
         return this;
@@ -54,6 +60,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public CreateReservedInstancesListingResultReservedInstancesListingsStatusEnum status;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withStatus(CreateReservedInstancesListingResultReservedInstancesListingsStatusEnum status) {
         this.status = status;
         return this;
@@ -61,6 +68,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public String statusMessage;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -68,6 +76,7 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public CreateReservedInstancesListingResultReservedInstancesListingsTags[] tags;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withTags(CreateReservedInstancesListingResultReservedInstancesListingsTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class CreateReservedInstancesListingResultReservedInstancesListings {
     
     
     public OffsetDateTime updateDate;
+
     public CreateReservedInstancesListingResultReservedInstancesListings withUpdateDate(OffsetDateTime updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public CreateReservedInstancesListingResultReservedInstancesListings(){}
 }

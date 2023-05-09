@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeDBClusterParametersMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBClusterParametersMessage {
     
     public String dbClusterParameterGroupName;
+
     public DescribeDBClusterParametersMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDBClusterParametersMessage {
     
     
     public FilterList[] filters;
+
     public DescribeDBClusterParametersMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeDBClusterParametersMessage {
     
     
     public String marker;
+
     public DescribeDBClusterParametersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -33,6 +36,7 @@ public class DescribeDBClusterParametersMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBClusterParametersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -40,9 +44,13 @@ public class DescribeDBClusterParametersMessage {
     
     
     public String source;
+
     public DescribeDBClusterParametersMessage withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public DescribeDBClusterParametersMessage(@JsonProperty("DBClusterParameterGroupName") String dbClusterParameterGroupName) {
+        this.dbClusterParameterGroupName = dbClusterParameterGroupName;
+  }
 }

@@ -20,6 +20,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactMediaType")
     public String artifactMediaType;
+
     public ImageDetail withArtifactMediaType(String artifactMediaType) {
         this.artifactMediaType = artifactMediaType;
         return this;
@@ -28,6 +29,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public ImageDetail withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -36,6 +38,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageManifestMediaType")
     public String imageManifestMediaType;
+
     public ImageDetail withImageManifestMediaType(String imageManifestMediaType) {
         this.imageManifestMediaType = imageManifestMediaType;
         return this;
@@ -46,6 +49,7 @@ public class ImageDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("imagePushedAt")
     public OffsetDateTime imagePushedAt;
+
     public ImageDetail withImagePushedAt(OffsetDateTime imagePushedAt) {
         this.imagePushedAt = imagePushedAt;
         return this;
@@ -54,6 +58,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageScanFindingsSummary")
     public ImageScanFindingsSummary imageScanFindingsSummary;
+
     public ImageDetail withImageScanFindingsSummary(ImageScanFindingsSummary imageScanFindingsSummary) {
         this.imageScanFindingsSummary = imageScanFindingsSummary;
         return this;
@@ -62,6 +67,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageScanStatus")
     public ImageScanStatus imageScanStatus;
+
     public ImageDetail withImageScanStatus(ImageScanStatus imageScanStatus) {
         this.imageScanStatus = imageScanStatus;
         return this;
@@ -70,6 +76,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageSizeInBytes")
     public Long imageSizeInBytes;
+
     public ImageDetail withImageSizeInBytes(Long imageSizeInBytes) {
         this.imageSizeInBytes = imageSizeInBytes;
         return this;
@@ -78,6 +85,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTags")
     public String[] imageTags;
+
     public ImageDetail withImageTags(String[] imageTags) {
         this.imageTags = imageTags;
         return this;
@@ -88,6 +96,7 @@ public class ImageDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRecordedPullTime")
     public OffsetDateTime lastRecordedPullTime;
+
     public ImageDetail withLastRecordedPullTime(OffsetDateTime lastRecordedPullTime) {
         this.lastRecordedPullTime = lastRecordedPullTime;
         return this;
@@ -96,6 +105,7 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public ImageDetail withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -104,9 +114,11 @@ public class ImageDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public ImageDetail withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public ImageDetail(){}
 }

@@ -15,6 +15,7 @@ public class EnrollmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public EnrollmentFilterNameEnum name;
+
     public EnrollmentFilter withName(EnrollmentFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class EnrollmentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public EnrollmentFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public EnrollmentFilter(){}
 }

@@ -15,6 +15,7 @@ public class ExperimentActionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ExperimentActionState withReason(String reason) {
         this.reason = reason;
         return this;
@@ -23,9 +24,11 @@ public class ExperimentActionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ExperimentActionStatusEnum status;
+
     public ExperimentActionState withStatus(ExperimentActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ExperimentActionState(){}
 }

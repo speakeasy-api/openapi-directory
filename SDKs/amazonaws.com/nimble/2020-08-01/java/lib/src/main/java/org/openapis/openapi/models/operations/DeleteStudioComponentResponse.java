@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStudioComponentResponse {
@@ -12,6 +13,7 @@ public class DeleteStudioComponentResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteStudioComponentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteStudioComponentResponse {
      */
     
     public Object conflictException;
+
     public DeleteStudioComponentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStudioComponentResponse {
     
     
     public String contentType;
+
     public DeleteStudioComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStudioComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteStudioComponentResponse deleteStudioComponentResponse;
+
     public DeleteStudioComponentResponse withDeleteStudioComponentResponse(org.openapis.openapi.models.shared.DeleteStudioComponentResponse deleteStudioComponentResponse) {
         this.deleteStudioComponentResponse = deleteStudioComponentResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteStudioComponentResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteStudioComponentResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteStudioComponentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteStudioComponentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteStudioComponentResponse {
     
     
     public Integer statusCode;
+
     public DeleteStudioComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteStudioComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStudioComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteStudioComponentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteStudioComponentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteStudioComponentResponse {
      */
     
     public Object throttlingException;
+
     public DeleteStudioComponentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteStudioComponentResponse {
      */
     
     public Object validationException;
+
     public DeleteStudioComponentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteStudioComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

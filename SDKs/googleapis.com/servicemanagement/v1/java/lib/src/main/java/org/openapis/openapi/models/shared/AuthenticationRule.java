@@ -18,6 +18,7 @@ public class AuthenticationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowWithoutCredential")
     public Boolean allowWithoutCredential;
+
     public AuthenticationRule withAllowWithoutCredential(Boolean allowWithoutCredential) {
         this.allowWithoutCredential = allowWithoutCredential;
         return this;
@@ -29,6 +30,7 @@ public class AuthenticationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth")
     public OAuthRequirements oauth;
+
     public AuthenticationRule withOauth(OAuthRequirements oauth) {
         this.oauth = oauth;
         return this;
@@ -40,6 +42,7 @@ public class AuthenticationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requirements")
     public AuthRequirement[] requirements;
+
     public AuthenticationRule withRequirements(AuthRequirement[] requirements) {
         this.requirements = requirements;
         return this;
@@ -51,9 +54,11 @@ public class AuthenticationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public AuthenticationRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public AuthenticationRule(){}
 }

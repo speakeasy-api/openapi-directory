@@ -15,6 +15,7 @@ public class CompanyDomainListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CompanyDomainViewModel[] data;
+
     public CompanyDomainListViewModel withData(CompanyDomainViewModel[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class CompanyDomainListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public CompanyDomainListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -31,9 +33,11 @@ public class CompanyDomainListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CompanyDomainListViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CompanyDomainListViewModel(){}
 }

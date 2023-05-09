@@ -15,6 +15,7 @@ public class GistsUpdateRequestBody1Files3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GistsUpdateRequestBody1Files3 withContent(String content) {
         this.content = content;
         return this;
@@ -26,9 +27,11 @@ public class GistsUpdateRequestBody1Files3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public GistsUpdateRequestBody1Files3 withFilename(String filename) {
         this.filename = filename;
         return this;
     }
     
+    public GistsUpdateRequestBody1Files3(){}
 }

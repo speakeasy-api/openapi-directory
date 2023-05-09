@@ -15,9 +15,11 @@ public class DescribeEventsDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventsDetectionJobProperties")
     public EventsDetectionJobProperties eventsDetectionJobProperties;
+
     public DescribeEventsDetectionJobResponse withEventsDetectionJobProperties(EventsDetectionJobProperties eventsDetectionJobProperties) {
         this.eventsDetectionJobProperties = eventsDetectionJobProperties;
         return this;
     }
     
+    public DescribeEventsDetectionJobResponse(){}
 }

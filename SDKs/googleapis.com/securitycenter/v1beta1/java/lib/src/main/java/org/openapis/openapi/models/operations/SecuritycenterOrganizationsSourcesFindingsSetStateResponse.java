@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecuritycenterOrganizationsSourcesFindingsSetStateResponse {
     
     public String contentType;
+
     public SecuritycenterOrganizationsSourcesFindingsSetStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SecuritycenterOrganizationsSourcesFindingsSetStateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1beta1Finding googleCloudSecuritycenterV1beta1Finding;
+
     public SecuritycenterOrganizationsSourcesFindingsSetStateResponse withGoogleCloudSecuritycenterV1beta1Finding(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1beta1Finding googleCloudSecuritycenterV1beta1Finding) {
         this.googleCloudSecuritycenterV1beta1Finding = googleCloudSecuritycenterV1beta1Finding;
         return this;
@@ -26,6 +29,7 @@ public class SecuritycenterOrganizationsSourcesFindingsSetStateResponse {
     
     
     public Integer statusCode;
+
     public SecuritycenterOrganizationsSourcesFindingsSetStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SecuritycenterOrganizationsSourcesFindingsSetStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecuritycenterOrganizationsSourcesFindingsSetStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SecuritycenterOrganizationsSourcesFindingsSetStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

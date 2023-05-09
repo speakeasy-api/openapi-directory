@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBranchResponse {
@@ -12,6 +13,7 @@ public class GetBranchResponse {
      */
     
     public Object branchDoesNotExistException;
+
     public GetBranchResponse withBranchDoesNotExistException(Object branchDoesNotExistException) {
         this.branchDoesNotExistException = branchDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetBranchResponse {
      */
     
     public Object branchNameRequiredException;
+
     public GetBranchResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetBranchResponse {
     
     
     public String contentType;
+
     public GetBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetBranchResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetBranchResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class GetBranchResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetBranchResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class GetBranchResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetBranchResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class GetBranchResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetBranchResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetBranchResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetBranchResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class GetBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBranchOutput getBranchOutput;
+
     public GetBranchResponse withGetBranchOutput(org.openapis.openapi.models.shared.GetBranchOutput getBranchOutput) {
         this.getBranchOutput = getBranchOutput;
         return this;
@@ -99,6 +109,7 @@ public class GetBranchResponse {
      */
     
     public Object invalidBranchNameException;
+
     public GetBranchResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -109,6 +120,7 @@ public class GetBranchResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetBranchResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -119,6 +131,7 @@ public class GetBranchResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetBranchResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -129,6 +142,7 @@ public class GetBranchResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetBranchResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -136,6 +150,7 @@ public class GetBranchResponse {
     
     
     public Integer statusCode;
+
     public GetBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,9 +158,14 @@ public class GetBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

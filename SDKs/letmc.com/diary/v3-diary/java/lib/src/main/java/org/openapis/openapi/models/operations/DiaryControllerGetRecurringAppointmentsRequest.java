@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerGetRecurringAppointmentsRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerGetRecurringAppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentTypesToSearch")
     public String[] appointmentTypesToSearch;
+
     public DiaryControllerGetRecurringAppointmentsRequest withAppointmentTypesToSearch(String[] appointmentTypesToSearch) {
         this.appointmentTypesToSearch = appointmentTypesToSearch;
         return this;
@@ -22,6 +24,7 @@ public class DiaryControllerGetRecurringAppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
     public String branchID;
+
     public DiaryControllerGetRecurringAppointmentsRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -32,6 +35,7 @@ public class DiaryControllerGetRecurringAppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public DiaryControllerGetRecurringAppointmentsRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -42,6 +46,7 @@ public class DiaryControllerGetRecurringAppointmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public DiaryControllerGetRecurringAppointmentsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,17 @@ public class DiaryControllerGetRecurringAppointmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerGetRecurringAppointmentsRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerGetRecurringAppointmentsRequest(@JsonProperty("appointmentTypesToSearch") String[] appointmentTypesToSearch, @JsonProperty("branchID") String branchID, @JsonProperty("count") Integer count, @JsonProperty("offset") Integer offset, @JsonProperty("shortName") String shortName) {
+        this.appointmentTypesToSearch = appointmentTypesToSearch;
+        this.branchID = branchID;
+        this.count = count;
+        this.offset = offset;
+        this.shortName = shortName;
+  }
 }

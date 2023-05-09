@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchAlarmDefinition {
     @JsonProperty("ComparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public CloudWatchAlarmDefinition withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -22,6 +23,7 @@ public class CloudWatchAlarmDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public MetricDimension[] dimensions;
+
     public CloudWatchAlarmDefinition withDimensions(MetricDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -30,6 +32,7 @@ public class CloudWatchAlarmDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationPeriods")
     public Long evaluationPeriods;
+
     public CloudWatchAlarmDefinition withEvaluationPeriods(Long evaluationPeriods) {
         this.evaluationPeriods = evaluationPeriods;
         return this;
@@ -37,6 +40,7 @@ public class CloudWatchAlarmDefinition {
     
     @JsonProperty("MetricName")
     public String metricName;
+
     public CloudWatchAlarmDefinition withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -45,6 +49,7 @@ public class CloudWatchAlarmDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public CloudWatchAlarmDefinition withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -52,6 +57,7 @@ public class CloudWatchAlarmDefinition {
     
     @JsonProperty("Period")
     public Long period;
+
     public CloudWatchAlarmDefinition withPeriod(Long period) {
         this.period = period;
         return this;
@@ -60,6 +66,7 @@ public class CloudWatchAlarmDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistic")
     public StatisticEnum statistic;
+
     public CloudWatchAlarmDefinition withStatistic(StatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -67,6 +74,7 @@ public class CloudWatchAlarmDefinition {
     
     @JsonProperty("Threshold")
     public Double threshold;
+
     public CloudWatchAlarmDefinition withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -75,9 +83,16 @@ public class CloudWatchAlarmDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public UnitEnum unit;
+
     public CloudWatchAlarmDefinition withUnit(UnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public CloudWatchAlarmDefinition(@JsonProperty("ComparisonOperator") ComparisonOperatorEnum comparisonOperator, @JsonProperty("MetricName") String metricName, @JsonProperty("Period") Long period, @JsonProperty("Threshold") Double threshold) {
+        this.comparisonOperator = comparisonOperator;
+        this.metricName = metricName;
+        this.period = period;
+        this.threshold = threshold;
+  }
 }

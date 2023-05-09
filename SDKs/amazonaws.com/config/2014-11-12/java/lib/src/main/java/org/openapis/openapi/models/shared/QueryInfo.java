@@ -15,9 +15,11 @@ public class QueryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectFields")
     public FieldInfo[] selectFields;
+
     public QueryInfo withSelectFields(FieldInfo[] selectFields) {
         this.selectFields = selectFields;
         return this;
     }
     
+    public QueryInfo(){}
 }

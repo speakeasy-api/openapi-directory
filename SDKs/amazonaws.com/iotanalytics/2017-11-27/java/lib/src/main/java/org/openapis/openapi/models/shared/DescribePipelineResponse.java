@@ -15,9 +15,11 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline")
     public Pipeline pipeline;
+
     public DescribePipelineResponse withPipeline(Pipeline pipeline) {
         this.pipeline = pipeline;
         return this;
     }
     
+    public DescribePipelineResponse(){}
 }

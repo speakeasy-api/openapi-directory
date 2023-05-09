@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleFirebaseAppdistroV1Group withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppdistroV1Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inviteLinkCount")
     public Integer inviteLinkCount;
+
     public GoogleFirebaseAppdistroV1Group withInviteLinkCount(Integer inviteLinkCount) {
         this.inviteLinkCount = inviteLinkCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirebaseAppdistroV1Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppdistroV1Group withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleFirebaseAppdistroV1Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseCount")
     public Integer releaseCount;
+
     public GoogleFirebaseAppdistroV1Group withReleaseCount(Integer releaseCount) {
         this.releaseCount = releaseCount;
         return this;
@@ -62,9 +66,11 @@ public class GoogleFirebaseAppdistroV1Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testerCount")
     public Integer testerCount;
+
     public GoogleFirebaseAppdistroV1Group withTesterCount(Integer testerCount) {
         this.testerCount = testerCount;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1Group(){}
 }

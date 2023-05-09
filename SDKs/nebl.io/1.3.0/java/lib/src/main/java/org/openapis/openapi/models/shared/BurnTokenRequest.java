@@ -17,6 +17,7 @@ public class BurnTokenRequest {
      */
     @JsonProperty("burn")
     public BurnTokenRequestBurn[] burn;
+
     public BurnTokenRequest withBurn(BurnTokenRequestBurn[] burn) {
         this.burn = burn;
         return this;
@@ -27,6 +28,7 @@ public class BurnTokenRequest {
      */
     @JsonProperty("fee")
     public Double fee;
+
     public BurnTokenRequest withFee(Double fee) {
         this.fee = fee;
         return this;
@@ -38,6 +40,7 @@ public class BurnTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String[] from;
+
     public BurnTokenRequest withFrom(String[] from) {
         this.from = from;
         return this;
@@ -46,9 +49,14 @@ public class BurnTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer")
     public BurnTokenRequestTransfer[] transfer;
+
     public BurnTokenRequest withTransfer(BurnTokenRequestTransfer[] transfer) {
         this.transfer = transfer;
         return this;
     }
     
+    public BurnTokenRequest(@JsonProperty("burn") BurnTokenRequestBurn[] burn, @JsonProperty("fee") Double fee) {
+        this.burn = burn;
+        this.fee = fee;
+  }
 }

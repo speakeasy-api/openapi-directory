@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QuickTestImageUrlRawResponse {
     
     public byte[] body;
+
     public QuickTestImageUrlRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class QuickTestImageUrlRawResponse {
     
     
     public String contentType;
+
     public QuickTestImageUrlRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class QuickTestImageUrlRawResponse {
      */
     
     public org.openapis.openapi.models.shared.ImagePredictionResult imagePredictionResult;
+
     public QuickTestImageUrlRawResponse withImagePredictionResult(org.openapis.openapi.models.shared.ImagePredictionResult imagePredictionResult) {
         this.imagePredictionResult = imagePredictionResult;
         return this;
@@ -33,6 +37,7 @@ public class QuickTestImageUrlRawResponse {
     
     
     public Integer statusCode;
+
     public QuickTestImageUrlRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class QuickTestImageUrlRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QuickTestImageUrlRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QuickTestImageUrlRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

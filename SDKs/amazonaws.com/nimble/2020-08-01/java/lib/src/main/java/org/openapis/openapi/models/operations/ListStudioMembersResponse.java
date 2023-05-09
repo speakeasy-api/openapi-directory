@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStudioMembersResponse {
@@ -12,6 +13,7 @@ public class ListStudioMembersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListStudioMembersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListStudioMembersResponse {
      */
     
     public Object conflictException;
+
     public ListStudioMembersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListStudioMembersResponse {
     
     
     public String contentType;
+
     public ListStudioMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListStudioMembersResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListStudioMembersResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListStudioMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStudioMembersResponse listStudioMembersResponse;
+
     public ListStudioMembersResponse withListStudioMembersResponse(org.openapis.openapi.models.shared.ListStudioMembersResponse listStudioMembersResponse) {
         this.listStudioMembersResponse = listStudioMembersResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListStudioMembersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListStudioMembersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListStudioMembersResponse {
     
     
     public Integer statusCode;
+
     public ListStudioMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListStudioMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStudioMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListStudioMembersResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListStudioMembersResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class ListStudioMembersResponse {
      */
     
     public Object throttlingException;
+
     public ListStudioMembersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListStudioMembersResponse {
      */
     
     public Object validationException;
+
     public ListStudioMembersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListStudioMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

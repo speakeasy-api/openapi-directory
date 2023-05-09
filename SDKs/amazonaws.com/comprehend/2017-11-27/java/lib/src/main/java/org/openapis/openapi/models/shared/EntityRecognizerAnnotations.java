@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntityRecognizerAnnotations {
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public EntityRecognizerAnnotations withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
@@ -22,9 +23,13 @@ public class EntityRecognizerAnnotations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestS3Uri")
     public String testS3Uri;
+
     public EntityRecognizerAnnotations withTestS3Uri(String testS3Uri) {
         this.testS3Uri = testS3Uri;
         return this;
     }
     
+    public EntityRecognizerAnnotations(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

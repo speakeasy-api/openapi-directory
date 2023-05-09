@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricDimension {
     @JsonProperty("ComparisonOperator")
     public String comparisonOperator;
+
     public MetricDimension withComparisonOperator(String comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -19,9 +20,14 @@ public class MetricDimension {
     
     @JsonProperty("Value")
     public Double value;
+
     public MetricDimension withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public MetricDimension(@JsonProperty("ComparisonOperator") String comparisonOperator, @JsonProperty("Value") Double value) {
+        this.comparisonOperator = comparisonOperator;
+        this.value = value;
+  }
 }

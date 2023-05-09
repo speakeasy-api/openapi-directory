@@ -15,6 +15,7 @@ public class RangePartitioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public RangePartitioning withField(String field) {
         this.field = field;
         return this;
@@ -26,9 +27,11 @@ public class RangePartitioning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public RangePartitioningRange range;
+
     public RangePartitioning withRange(RangePartitioningRange range) {
         this.range = range;
         return this;
     }
     
+    public RangePartitioning(){}
 }

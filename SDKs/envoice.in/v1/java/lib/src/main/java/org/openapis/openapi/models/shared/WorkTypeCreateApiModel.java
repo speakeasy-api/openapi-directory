@@ -17,9 +17,11 @@ public class WorkTypeCreateApiModel {
     @JsonProperty("Title")
     @SpeakeasyMetadata("form:name=Title")
     public String title;
+
     public WorkTypeCreateApiModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public WorkTypeCreateApiModel(){}
 }

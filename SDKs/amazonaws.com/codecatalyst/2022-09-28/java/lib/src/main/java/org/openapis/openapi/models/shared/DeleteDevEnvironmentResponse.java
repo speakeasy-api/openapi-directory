@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDevEnvironmentResponse {
     @JsonProperty("id")
     public String id;
+
     public DeleteDevEnvironmentResponse withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class DeleteDevEnvironmentResponse {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public DeleteDevEnvironmentResponse withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -26,9 +28,15 @@ public class DeleteDevEnvironmentResponse {
     
     @JsonProperty("spaceName")
     public String spaceName;
+
     public DeleteDevEnvironmentResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public DeleteDevEnvironmentResponse(@JsonProperty("id") String id, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName) {
+        this.id = id;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+  }
 }

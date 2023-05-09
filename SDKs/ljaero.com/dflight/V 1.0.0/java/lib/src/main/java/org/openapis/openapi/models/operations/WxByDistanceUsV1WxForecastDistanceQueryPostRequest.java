@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WxByDistanceUsV1WxForecastDistanceQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WxByDistance wxByDistance;
+
     public WxByDistanceUsV1WxForecastDistanceQueryPostRequest withWxByDistance(org.openapis.openapi.models.shared.WxByDistance wxByDistance) {
         this.wxByDistance = wxByDistance;
         return this;
@@ -16,9 +18,13 @@ public class WxByDistanceUsV1WxForecastDistanceQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public WxByDistanceUsV1WxForecastDistanceQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public WxByDistanceUsV1WxForecastDistanceQueryPostRequest(@JsonProperty("WxByDistance") org.openapis.openapi.models.shared.WxByDistance wxByDistance) {
+        this.wxByDistance = wxByDistance;
+  }
 }

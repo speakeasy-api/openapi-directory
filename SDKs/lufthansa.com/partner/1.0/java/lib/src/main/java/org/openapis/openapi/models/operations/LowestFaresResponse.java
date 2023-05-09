@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LowestFaresResponse {
     
     public String contentType;
+
     public LowestFaresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LowestFaresResponse {
     
     
     public String lowestFares200ApplicationJSONString;
+
     public LowestFaresResponse withLowestFares200ApplicationJSONString(String lowestFares200ApplicationJSONString) {
         this.lowestFares200ApplicationJSONString = lowestFares200ApplicationJSONString;
         return this;
@@ -23,6 +26,7 @@ public class LowestFaresResponse {
     
     
     public Integer statusCode;
+
     public LowestFaresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class LowestFaresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LowestFaresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LowestFaresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

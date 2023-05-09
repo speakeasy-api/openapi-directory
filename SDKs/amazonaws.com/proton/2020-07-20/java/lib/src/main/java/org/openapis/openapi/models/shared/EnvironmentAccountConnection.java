@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EnvironmentAccountConnection {
     @JsonProperty("arn")
     public String arn;
+
     public EnvironmentAccountConnection withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class EnvironmentAccountConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codebuildRoleArn")
     public String codebuildRoleArn;
+
     public EnvironmentAccountConnection withCodebuildRoleArn(String codebuildRoleArn) {
         this.codebuildRoleArn = codebuildRoleArn;
         return this;
@@ -35,6 +37,7 @@ public class EnvironmentAccountConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentRoleArn")
     public String componentRoleArn;
+
     public EnvironmentAccountConnection withComponentRoleArn(String componentRoleArn) {
         this.componentRoleArn = componentRoleArn;
         return this;
@@ -42,6 +45,7 @@ public class EnvironmentAccountConnection {
     
     @JsonProperty("environmentAccountId")
     public String environmentAccountId;
+
     public EnvironmentAccountConnection withEnvironmentAccountId(String environmentAccountId) {
         this.environmentAccountId = environmentAccountId;
         return this;
@@ -49,6 +53,7 @@ public class EnvironmentAccountConnection {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public EnvironmentAccountConnection withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -56,6 +61,7 @@ public class EnvironmentAccountConnection {
     
     @JsonProperty("id")
     public String id;
+
     public EnvironmentAccountConnection withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +71,7 @@ public class EnvironmentAccountConnection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public EnvironmentAccountConnection withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -72,6 +79,7 @@ public class EnvironmentAccountConnection {
     
     @JsonProperty("managementAccountId")
     public String managementAccountId;
+
     public EnvironmentAccountConnection withManagementAccountId(String managementAccountId) {
         this.managementAccountId = managementAccountId;
         return this;
@@ -81,6 +89,7 @@ public class EnvironmentAccountConnection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedAt")
     public OffsetDateTime requestedAt;
+
     public EnvironmentAccountConnection withRequestedAt(OffsetDateTime requestedAt) {
         this.requestedAt = requestedAt;
         return this;
@@ -88,6 +97,7 @@ public class EnvironmentAccountConnection {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public EnvironmentAccountConnection withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -95,9 +105,21 @@ public class EnvironmentAccountConnection {
     
     @JsonProperty("status")
     public EnvironmentAccountConnectionStatusEnum status;
+
     public EnvironmentAccountConnection withStatus(EnvironmentAccountConnectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EnvironmentAccountConnection(@JsonProperty("arn") String arn, @JsonProperty("environmentAccountId") String environmentAccountId, @JsonProperty("environmentName") String environmentName, @JsonProperty("id") String id, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("managementAccountId") String managementAccountId, @JsonProperty("requestedAt") OffsetDateTime requestedAt, @JsonProperty("roleArn") String roleArn, @JsonProperty("status") EnvironmentAccountConnectionStatusEnum status) {
+        this.arn = arn;
+        this.environmentAccountId = environmentAccountId;
+        this.environmentName = environmentName;
+        this.id = id;
+        this.lastModifiedAt = lastModifiedAt;
+        this.managementAccountId = managementAccountId;
+        this.requestedAt = requestedAt;
+        this.roleArn = roleArn;
+        this.status = status;
+  }
 }

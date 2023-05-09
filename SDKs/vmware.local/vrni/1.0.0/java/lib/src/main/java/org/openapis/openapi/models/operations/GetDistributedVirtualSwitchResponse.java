@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistributedVirtualSwitchResponse {
@@ -12,6 +13,7 @@ public class GetDistributedVirtualSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetDistributedVirtualSwitchResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class GetDistributedVirtualSwitchResponse {
     
     
     public String contentType;
+
     public GetDistributedVirtualSwitchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDistributedVirtualSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.DistributedVirtualSwitch distributedVirtualSwitch;
+
     public GetDistributedVirtualSwitchResponse withDistributedVirtualSwitch(org.openapis.openapi.models.shared.DistributedVirtualSwitch distributedVirtualSwitch) {
         this.distributedVirtualSwitch = distributedVirtualSwitch;
         return this;
@@ -36,6 +40,7 @@ public class GetDistributedVirtualSwitchResponse {
     
     
     public Integer statusCode;
+
     public GetDistributedVirtualSwitchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetDistributedVirtualSwitchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistributedVirtualSwitchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDistributedVirtualSwitchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

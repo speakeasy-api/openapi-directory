@@ -15,6 +15,7 @@ public class AnnotationClientVersionRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cfiRange")
     public BooksAnnotationsRange cfiRange;
+
     public AnnotationClientVersionRanges withCfiRange(BooksAnnotationsRange cfiRange) {
         this.cfiRange = cfiRange;
         return this;
@@ -26,6 +27,7 @@ public class AnnotationClientVersionRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentVersion")
     public String contentVersion;
+
     public AnnotationClientVersionRanges withContentVersion(String contentVersion) {
         this.contentVersion = contentVersion;
         return this;
@@ -34,6 +36,7 @@ public class AnnotationClientVersionRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gbImageRange")
     public BooksAnnotationsRange gbImageRange;
+
     public AnnotationClientVersionRanges withGbImageRange(BooksAnnotationsRange gbImageRange) {
         this.gbImageRange = gbImageRange;
         return this;
@@ -42,6 +45,7 @@ public class AnnotationClientVersionRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gbTextRange")
     public BooksAnnotationsRange gbTextRange;
+
     public AnnotationClientVersionRanges withGbTextRange(BooksAnnotationsRange gbTextRange) {
         this.gbTextRange = gbTextRange;
         return this;
@@ -50,9 +54,11 @@ public class AnnotationClientVersionRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageCfiRange")
     public BooksAnnotationsRange imageCfiRange;
+
     public AnnotationClientVersionRanges withImageCfiRange(BooksAnnotationsRange imageCfiRange) {
         this.imageCfiRange = imageCfiRange;
         return this;
     }
     
+    public AnnotationClientVersionRanges(){}
 }

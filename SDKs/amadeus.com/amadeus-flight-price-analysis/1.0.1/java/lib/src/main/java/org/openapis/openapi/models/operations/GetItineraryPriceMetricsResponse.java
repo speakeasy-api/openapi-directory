@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItineraryPriceMetricsResponse {
     
     public String contentType;
+
     public GetItineraryPriceMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +25,7 @@ public class GetItineraryPriceMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400 error400;
+
     public GetItineraryPriceMetricsResponse withError400(org.openapis.openapi.models.shared.Error400 error400) {
         this.error400 = error400;
         return this;
@@ -33,6 +36,7 @@ public class GetItineraryPriceMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error500 error500;
+
     public GetItineraryPriceMetricsResponse withError500(org.openapis.openapi.models.shared.Error500 error500) {
         this.error500 = error500;
         return this;
@@ -40,6 +44,7 @@ public class GetItineraryPriceMetricsResponse {
     
     
     public Integer statusCode;
+
     public GetItineraryPriceMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,6 +52,7 @@ public class GetItineraryPriceMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItineraryPriceMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -57,9 +63,14 @@ public class GetItineraryPriceMetricsResponse {
      */
     
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject;
+
     public GetItineraryPriceMetricsResponse withGetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject(GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject) {
         this.getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject = getItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonObject;
         return this;
     }
     
+    public GetItineraryPriceMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InferenceMetrics {
     @JsonProperty("MaxInvocations")
     public Long maxInvocations;
+
     public InferenceMetrics withMaxInvocations(Long maxInvocations) {
         this.maxInvocations = maxInvocations;
         return this;
@@ -19,9 +20,14 @@ public class InferenceMetrics {
     
     @JsonProperty("ModelLatency")
     public Long modelLatency;
+
     public InferenceMetrics withModelLatency(Long modelLatency) {
         this.modelLatency = modelLatency;
         return this;
     }
     
+    public InferenceMetrics(@JsonProperty("MaxInvocations") Long maxInvocations, @JsonProperty("ModelLatency") Long modelLatency) {
+        this.maxInvocations = maxInvocations;
+        this.modelLatency = modelLatency;
+  }
 }

@@ -18,6 +18,7 @@ public class StateCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public StateConditionCodeEnum code;
+
     public StateCondition withCode(StateConditionCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class StateCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StateCondition withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StateCondition(){}
 }

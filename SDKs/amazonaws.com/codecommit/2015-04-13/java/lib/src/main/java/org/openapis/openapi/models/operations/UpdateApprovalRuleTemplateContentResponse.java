@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApprovalRuleTemplateContentResponse {
@@ -12,6 +13,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
      */
     
     public Object approvalRuleTemplateContentRequiredException;
+
     public UpdateApprovalRuleTemplateContentResponse withApprovalRuleTemplateContentRequiredException(Object approvalRuleTemplateContentRequiredException) {
         this.approvalRuleTemplateContentRequiredException = approvalRuleTemplateContentRequiredException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
      */
     
     public Object approvalRuleTemplateDoesNotExistException;
+
     public UpdateApprovalRuleTemplateContentResponse withApprovalRuleTemplateDoesNotExistException(Object approvalRuleTemplateDoesNotExistException) {
         this.approvalRuleTemplateDoesNotExistException = approvalRuleTemplateDoesNotExistException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
      */
     
     public Object approvalRuleTemplateNameRequiredException;
+
     public UpdateApprovalRuleTemplateContentResponse withApprovalRuleTemplateNameRequiredException(Object approvalRuleTemplateNameRequiredException) {
         this.approvalRuleTemplateNameRequiredException = approvalRuleTemplateNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
     
     
     public String contentType;
+
     public UpdateApprovalRuleTemplateContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
      */
     
     public Object invalidApprovalRuleTemplateContentException;
+
     public UpdateApprovalRuleTemplateContentResponse withInvalidApprovalRuleTemplateContentException(Object invalidApprovalRuleTemplateContentException) {
         this.invalidApprovalRuleTemplateContentException = invalidApprovalRuleTemplateContentException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
      */
     
     public Object invalidApprovalRuleTemplateNameException;
+
     public UpdateApprovalRuleTemplateContentResponse withInvalidApprovalRuleTemplateNameException(Object invalidApprovalRuleTemplateNameException) {
         this.invalidApprovalRuleTemplateNameException = invalidApprovalRuleTemplateNameException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
      */
     
     public Object invalidRuleContentSha256Exception;
+
     public UpdateApprovalRuleTemplateContentResponse withInvalidRuleContentSha256Exception(Object invalidRuleContentSha256Exception) {
         this.invalidRuleContentSha256Exception = invalidRuleContentSha256Exception;
         return this;
@@ -76,6 +84,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
     
     
     public Integer statusCode;
+
     public UpdateApprovalRuleTemplateContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateApprovalRuleTemplateContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApprovalRuleTemplateContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateApprovalRuleTemplateContentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApprovalRuleTemplateContentOutput updateApprovalRuleTemplateContentOutput;
+
     public UpdateApprovalRuleTemplateContentResponse withUpdateApprovalRuleTemplateContentOutput(org.openapis.openapi.models.shared.UpdateApprovalRuleTemplateContentOutput updateApprovalRuleTemplateContentOutput) {
         this.updateApprovalRuleTemplateContentOutput = updateApprovalRuleTemplateContentOutput;
         return this;
     }
     
+    public UpdateApprovalRuleTemplateContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

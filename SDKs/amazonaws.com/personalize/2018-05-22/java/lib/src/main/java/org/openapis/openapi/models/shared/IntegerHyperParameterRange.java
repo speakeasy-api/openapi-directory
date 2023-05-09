@@ -15,6 +15,7 @@ public class IntegerHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Long maxValue;
+
     public IntegerHyperParameterRange withMaxValue(Long maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -23,6 +24,7 @@ public class IntegerHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Long minValue;
+
     public IntegerHyperParameterRange withMinValue(Long minValue) {
         this.minValue = minValue;
         return this;
@@ -31,9 +33,11 @@ public class IntegerHyperParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IntegerHyperParameterRange withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IntegerHyperParameterRange(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCarrierGatewayRequestTagSpecifications {
     
     public CreateCarrierGatewayRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateCarrierGatewayRequestTagSpecifications withResourceType(CreateCarrierGatewayRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateCarrierGatewayRequestTagSpecifications {
     
     
     public CreateCarrierGatewayRequestTagSpecificationsTags[] tags;
+
     public CreateCarrierGatewayRequestTagSpecifications withTags(CreateCarrierGatewayRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCarrierGatewayRequestTagSpecifications(){}
 }

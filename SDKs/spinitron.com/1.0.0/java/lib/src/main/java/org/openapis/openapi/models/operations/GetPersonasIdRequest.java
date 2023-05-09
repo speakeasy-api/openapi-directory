@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPersonasIdRequest {
@@ -12,6 +13,7 @@ public class GetPersonasIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String[] expand;
+
     public GetPersonasIdRequest withExpand(String[] expand) {
         this.expand = expand;
         return this;
@@ -22,6 +24,7 @@ public class GetPersonasIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String[] fields;
+
     public GetPersonasIdRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -29,9 +32,13 @@ public class GetPersonasIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetPersonasIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetPersonasIdRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

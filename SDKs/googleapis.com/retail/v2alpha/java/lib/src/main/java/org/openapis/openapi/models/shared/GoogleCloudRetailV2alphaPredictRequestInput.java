@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaPredictRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudRetailV2alphaPredictRequestInput withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaPredictRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRetailV2alphaPredictRequestInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaPredictRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleCloudRetailV2alphaPredictRequestInput withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaPredictRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleCloudRetailV2alphaPredictRequestInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2alphaPredictRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public GoogleCloudRetailV2alphaPredictRequestInput withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2alphaPredictRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEvent")
     public GoogleCloudRetailV2alphaUserEventInput userEvent;
+
     public GoogleCloudRetailV2alphaPredictRequestInput withUserEvent(GoogleCloudRetailV2alphaUserEventInput userEvent) {
         this.userEvent = userEvent;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudRetailV2alphaPredictRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public GoogleCloudRetailV2alphaPredictRequestInput withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaPredictRequestInput(){}
 }

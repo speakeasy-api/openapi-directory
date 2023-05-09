@@ -13,6 +13,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public GetV2PaymentsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -23,6 +24,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_brand")
     public String cardBrand;
+
     public GetV2PaymentsRequest withCardBrand(String cardBrand) {
         this.cardBrand = cardBrand;
         return this;
@@ -36,6 +38,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetV2PaymentsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -48,6 +51,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public GetV2PaymentsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -58,6 +62,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_4")
     public String last4;
+
     public GetV2PaymentsRequest withLast4(String last4) {
         this.last4 = last4;
         return this;
@@ -74,6 +79,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetV2PaymentsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -85,6 +91,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public GetV2PaymentsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -97,6 +104,7 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public GetV2PaymentsRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -107,9 +115,11 @@ public class GetV2PaymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total")
     public Long total;
+
     public GetV2PaymentsRequest withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetV2PaymentsRequest(){}
 }

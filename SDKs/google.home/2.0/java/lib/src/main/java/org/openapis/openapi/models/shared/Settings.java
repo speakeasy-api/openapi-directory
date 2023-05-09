@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Settings {
     @JsonProperty("closed_caption")
     public java.util.Map<String, Object> closedCaption;
+
     public Settings withClosedCaption(java.util.Map<String, Object> closedCaption) {
         this.closedCaption = closedCaption;
         return this;
@@ -16,6 +17,7 @@ public class Settings {
     
     @JsonProperty("control_notifications")
     public Integer controlNotifications;
+
     public Settings withControlNotifications(Integer controlNotifications) {
         this.controlNotifications = controlNotifications;
         return this;
@@ -23,6 +25,7 @@ public class Settings {
     
     @JsonProperty("country_code")
     public String countryCode;
+
     public Settings withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -30,6 +33,7 @@ public class Settings {
     
     @JsonProperty("locale")
     public String locale;
+
     public Settings withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -37,6 +41,7 @@ public class Settings {
     
     @JsonProperty("network_standby")
     public Integer networkStandby;
+
     public Settings withNetworkStandby(Integer networkStandby) {
         this.networkStandby = networkStandby;
         return this;
@@ -44,6 +49,7 @@ public class Settings {
     
     @JsonProperty("system_sound_effects")
     public Boolean systemSoundEffects;
+
     public Settings withSystemSoundEffects(Boolean systemSoundEffects) {
         this.systemSoundEffects = systemSoundEffects;
         return this;
@@ -51,6 +57,7 @@ public class Settings {
     
     @JsonProperty("time_format")
     public Integer timeFormat;
+
     public Settings withTimeFormat(Integer timeFormat) {
         this.timeFormat = timeFormat;
         return this;
@@ -58,6 +65,7 @@ public class Settings {
     
     @JsonProperty("timezone")
     public String timezone;
+
     public Settings withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -65,9 +73,21 @@ public class Settings {
     
     @JsonProperty("wake_on_cast")
     public Integer wakeOnCast;
+
     public Settings withWakeOnCast(Integer wakeOnCast) {
         this.wakeOnCast = wakeOnCast;
         return this;
     }
     
+    public Settings(@JsonProperty("closed_caption") java.util.Map<String, Object> closedCaption, @JsonProperty("control_notifications") Integer controlNotifications, @JsonProperty("country_code") String countryCode, @JsonProperty("locale") String locale, @JsonProperty("network_standby") Integer networkStandby, @JsonProperty("system_sound_effects") Boolean systemSoundEffects, @JsonProperty("time_format") Integer timeFormat, @JsonProperty("timezone") String timezone, @JsonProperty("wake_on_cast") Integer wakeOnCast) {
+        this.closedCaption = closedCaption;
+        this.controlNotifications = controlNotifications;
+        this.countryCode = countryCode;
+        this.locale = locale;
+        this.networkStandby = networkStandby;
+        this.systemSoundEffects = systemSoundEffects;
+        this.timeFormat = timeFormat;
+        this.timezone = timezone;
+        this.wakeOnCast = wakeOnCast;
+  }
 }

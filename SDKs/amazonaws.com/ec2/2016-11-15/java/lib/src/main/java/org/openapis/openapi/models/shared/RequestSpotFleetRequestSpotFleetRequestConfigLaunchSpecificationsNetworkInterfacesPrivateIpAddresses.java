@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsNetworkInterfacesPrivateIpAddresses {
     
     public Boolean primary;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsNetworkInterfacesPrivateIpAddresses withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsNe
     
     
     public String privateIpAddress;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsNetworkInterfacesPrivateIpAddresses withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsNetworkInterfacesPrivateIpAddresses(){}
 }

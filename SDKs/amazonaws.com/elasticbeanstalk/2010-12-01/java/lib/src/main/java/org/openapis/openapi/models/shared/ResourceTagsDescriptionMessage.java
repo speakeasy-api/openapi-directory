@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceTagsDescriptionMessage {
     
     public String resourceArn;
+
     public ResourceTagsDescriptionMessage withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -19,9 +20,11 @@ public class ResourceTagsDescriptionMessage {
     
     
     public Tag[] resourceTags;
+
     public ResourceTagsDescriptionMessage withResourceTags(Tag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
     }
     
+    public ResourceTagsDescriptionMessage(){}
 }

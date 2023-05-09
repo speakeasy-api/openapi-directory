@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchCreatePartitionResponse {
@@ -12,6 +13,7 @@ public class BatchCreatePartitionResponse {
      */
     
     public Object alreadyExistsException;
+
     public BatchCreatePartitionResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class BatchCreatePartitionResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCreatePartitionResponse batchCreatePartitionResponse;
+
     public BatchCreatePartitionResponse withBatchCreatePartitionResponse(org.openapis.openapi.models.shared.BatchCreatePartitionResponse batchCreatePartitionResponse) {
         this.batchCreatePartitionResponse = batchCreatePartitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchCreatePartitionResponse {
     
     
     public String contentType;
+
     public BatchCreatePartitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchCreatePartitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public BatchCreatePartitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class BatchCreatePartitionResponse {
      */
     
     public Object glueEncryptionException;
+
     public BatchCreatePartitionResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -59,6 +65,7 @@ public class BatchCreatePartitionResponse {
      */
     
     public Object internalServiceException;
+
     public BatchCreatePartitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class BatchCreatePartitionResponse {
      */
     
     public Object invalidInputException;
+
     public BatchCreatePartitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class BatchCreatePartitionResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchCreatePartitionResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -86,6 +95,7 @@ public class BatchCreatePartitionResponse {
     
     
     public Integer statusCode;
+
     public BatchCreatePartitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class BatchCreatePartitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchCreatePartitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class BatchCreatePartitionResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public BatchCreatePartitionResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
     }
     
+    public BatchCreatePartitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed")
     public Boolean completed;
+
     public GetWatchedListRequest withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -25,6 +26,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetWatchedListRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -55,6 +57,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetWatchedListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -65,6 +68,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
     public org.openapis.openapi.models.shared.ItemTypeEnum itemType;
+
     public GetWatchedListRequest withItemType(org.openapis.openapi.models.shared.ItemTypeEnum itemType) {
         this.itemType = itemType;
         return this;
@@ -85,6 +89,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetWatchedListRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -95,6 +100,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.ListOrderEnum order;
+
     public GetWatchedListRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
         this.order = order;
         return this;
@@ -108,6 +114,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public GetWatchedListOrderByEnum orderBy;
+
     public GetWatchedListRequest withOrderBy(GetWatchedListOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -118,6 +125,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetWatchedListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -128,6 +136,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetWatchedListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -138,6 +147,7 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetWatchedListRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -148,9 +158,11 @@ public class GetWatchedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetWatchedListRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetWatchedListRequest(){}
 }

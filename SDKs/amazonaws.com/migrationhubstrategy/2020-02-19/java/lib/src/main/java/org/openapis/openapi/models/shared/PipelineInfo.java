@@ -15,6 +15,7 @@ public class PipelineInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineConfigurationTimeStamp")
     public String pipelineConfigurationTimeStamp;
+
     public PipelineInfo withPipelineConfigurationTimeStamp(String pipelineConfigurationTimeStamp) {
         this.pipelineConfigurationTimeStamp = pipelineConfigurationTimeStamp;
         return this;
@@ -23,9 +24,11 @@ public class PipelineInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineType")
     public PipelineTypeEnum pipelineType;
+
     public PipelineInfo withPipelineType(PipelineTypeEnum pipelineType) {
         this.pipelineType = pipelineType;
         return this;
     }
     
+    public PipelineInfo(){}
 }

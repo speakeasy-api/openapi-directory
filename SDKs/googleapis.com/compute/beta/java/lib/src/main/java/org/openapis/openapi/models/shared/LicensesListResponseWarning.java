@@ -18,6 +18,7 @@ public class LicensesListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public LicensesListResponseWarningCodeEnum code;
+
     public LicensesListResponseWarning withCode(LicensesListResponseWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class LicensesListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public LicensesListResponseWarningData[] data;
+
     public LicensesListResponseWarning withData(LicensesListResponseWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class LicensesListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public LicensesListResponseWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public LicensesListResponseWarning(){}
 }

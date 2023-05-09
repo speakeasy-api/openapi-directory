@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutImageTagMutabilityResponse {
     
     public String contentType;
+
     public PutImageTagMutabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutImageTagMutabilityResponse {
      */
     
     public Object invalidParameterException;
+
     public PutImageTagMutabilityResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutImageTagMutabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.PutImageTagMutabilityResponse putImageTagMutabilityResponse;
+
     public PutImageTagMutabilityResponse withPutImageTagMutabilityResponse(org.openapis.openapi.models.shared.PutImageTagMutabilityResponse putImageTagMutabilityResponse) {
         this.putImageTagMutabilityResponse = putImageTagMutabilityResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutImageTagMutabilityResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public PutImageTagMutabilityResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutImageTagMutabilityResponse {
      */
     
     public Object serverException;
+
     public PutImageTagMutabilityResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class PutImageTagMutabilityResponse {
     
     
     public Integer statusCode;
+
     public PutImageTagMutabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PutImageTagMutabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutImageTagMutabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutImageTagMutabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

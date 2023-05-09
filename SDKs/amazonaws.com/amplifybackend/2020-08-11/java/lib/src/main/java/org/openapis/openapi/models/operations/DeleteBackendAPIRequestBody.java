@@ -15,6 +15,7 @@ public class DeleteBackendAPIRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceConfig")
     public DeleteBackendAPIRequestBodyResourceConfig resourceConfig;
+
     public DeleteBackendAPIRequestBody withResourceConfig(DeleteBackendAPIRequestBodyResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -25,9 +26,13 @@ public class DeleteBackendAPIRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public DeleteBackendAPIRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public DeleteBackendAPIRequestBody(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

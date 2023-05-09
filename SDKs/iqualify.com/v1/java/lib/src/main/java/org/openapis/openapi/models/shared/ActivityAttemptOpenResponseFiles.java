@@ -12,6 +12,7 @@ public class ActivityAttemptOpenResponseFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public ActivityAttemptOpenResponseFiles withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -20,6 +21,7 @@ public class ActivityAttemptOpenResponseFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimetype")
     public String mimetype;
+
     public ActivityAttemptOpenResponseFiles withMimetype(String mimetype) {
         this.mimetype = mimetype;
         return this;
@@ -28,6 +30,7 @@ public class ActivityAttemptOpenResponseFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public ActivityAttemptOpenResponseFiles withSize(String size) {
         this.size = size;
         return this;
@@ -36,9 +39,11 @@ public class ActivityAttemptOpenResponseFiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ActivityAttemptOpenResponseFiles withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ActivityAttemptOpenResponseFiles(){}
 }

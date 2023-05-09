@@ -18,9 +18,11 @@ public class SearchBackgroundJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public BackgroundJobLogEntry[] jobs;
+
     public SearchBackgroundJobsResponse withJobs(BackgroundJobLogEntry[] jobs) {
         this.jobs = jobs;
         return this;
     }
     
+    public SearchBackgroundJobsResponse(){}
 }

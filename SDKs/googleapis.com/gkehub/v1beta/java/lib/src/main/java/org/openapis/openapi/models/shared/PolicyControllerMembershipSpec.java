@@ -18,6 +18,7 @@ public class PolicyControllerMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyControllerHubConfig")
     public PolicyControllerHubConfig policyControllerHubConfig;
+
     public PolicyControllerMembershipSpec withPolicyControllerHubConfig(PolicyControllerHubConfig policyControllerHubConfig) {
         this.policyControllerHubConfig = policyControllerHubConfig;
         return this;
@@ -29,9 +30,11 @@ public class PolicyControllerMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public PolicyControllerMembershipSpec withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PolicyControllerMembershipSpec(){}
 }

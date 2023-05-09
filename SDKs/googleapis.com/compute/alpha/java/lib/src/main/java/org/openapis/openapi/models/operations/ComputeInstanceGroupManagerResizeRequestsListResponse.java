@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeInstanceGroupManagerResizeRequestsListResponse {
     
     public String contentType;
+
     public ComputeInstanceGroupManagerResizeRequestsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstanceGroupManagerResizeRequestsListResponse {
      */
     
     public org.openapis.openapi.models.shared.InstanceGroupManagerResizeRequestsListResponse instanceGroupManagerResizeRequestsListResponse;
+
     public ComputeInstanceGroupManagerResizeRequestsListResponse withInstanceGroupManagerResizeRequestsListResponse(org.openapis.openapi.models.shared.InstanceGroupManagerResizeRequestsListResponse instanceGroupManagerResizeRequestsListResponse) {
         this.instanceGroupManagerResizeRequestsListResponse = instanceGroupManagerResizeRequestsListResponse;
         return this;
@@ -26,6 +29,7 @@ public class ComputeInstanceGroupManagerResizeRequestsListResponse {
     
     
     public Integer statusCode;
+
     public ComputeInstanceGroupManagerResizeRequestsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeInstanceGroupManagerResizeRequestsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeInstanceGroupManagerResizeRequestsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeInstanceGroupManagerResizeRequestsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

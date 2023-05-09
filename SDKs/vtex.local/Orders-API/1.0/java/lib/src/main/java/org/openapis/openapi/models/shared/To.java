@@ -15,6 +15,7 @@ public class To {
      */
     @JsonProperty("aliasMaskType")
     public Integer aliasMaskType;
+
     public To withAliasMaskType(Integer aliasMaskType) {
         this.aliasMaskType = aliasMaskType;
         return this;
@@ -25,6 +26,7 @@ public class To {
      */
     @JsonProperty("conversationRelatedTo")
     public String conversationRelatedTo;
+
     public To withConversationRelatedTo(String conversationRelatedTo) {
         this.conversationRelatedTo = conversationRelatedTo;
         return this;
@@ -35,6 +37,7 @@ public class To {
      */
     @JsonProperty("conversationSubject")
     public String conversationSubject;
+
     public To withConversationSubject(String conversationSubject) {
         this.conversationSubject = conversationSubject;
         return this;
@@ -45,6 +48,7 @@ public class To {
      */
     @JsonProperty("email")
     public String email;
+
     public To withEmail(String email) {
         this.email = email;
         return this;
@@ -55,6 +59,7 @@ public class To {
      */
     @JsonProperty("emailAlias")
     public String emailAlias;
+
     public To withEmailAlias(String emailAlias) {
         this.emailAlias = emailAlias;
         return this;
@@ -65,6 +70,7 @@ public class To {
      */
     @JsonProperty("name")
     public String name;
+
     public To withName(String name) {
         this.name = name;
         return this;
@@ -75,9 +81,19 @@ public class To {
      */
     @JsonProperty("role")
     public String role;
+
     public To withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public To(@JsonProperty("aliasMaskType") Integer aliasMaskType, @JsonProperty("conversationRelatedTo") String conversationRelatedTo, @JsonProperty("conversationSubject") String conversationSubject, @JsonProperty("email") String email, @JsonProperty("emailAlias") String emailAlias, @JsonProperty("name") String name, @JsonProperty("role") String role) {
+        this.aliasMaskType = aliasMaskType;
+        this.conversationRelatedTo = conversationRelatedTo;
+        this.conversationSubject = conversationSubject;
+        this.email = email;
+        this.emailAlias = emailAlias;
+        this.name = name;
+        this.role = role;
+  }
 }

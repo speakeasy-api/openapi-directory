@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GenerateTokenV2RequestBodyGrantTypeEnum;
 import org.openapis.openapi.models.operations.GenerateTokenV2RequestBody;
+import org.openapis.openapi.models.operations.GenerateTokenV2RequestBodyGrantTypeEnum;
 import org.openapis.openapi.models.operations.GenerateTokenV2Response;
 
 public class Application {
@@ -16,19 +15,21 @@ public class Application {
 
             GenerateTokenV2RequestBody req = new GenerateTokenV2RequestBody() {{
                 assertion = "SOME_ASSERTION_STRING";
-                grantType = "urn:ietf:params:oauth:grant-type:jwt-bearer";
+                grantType = GenerateTokenV2RequestBodyGrantTypeEnum.URN_IETF_PARAMS_OAUTH_GRANT_TYPE_JWT_BEARER;
                 refreshToken = "SomeRefreshToken";
                 scope = "offline";
                 validFor = 120;
-            }}            
+            }};            
 
             GenerateTokenV2Response res = sdk.authorization.generateTokenV2(req);
 
-            if (res.generateAccessTokenResponse.isPresent()) {
+            if (res.generateAccessTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

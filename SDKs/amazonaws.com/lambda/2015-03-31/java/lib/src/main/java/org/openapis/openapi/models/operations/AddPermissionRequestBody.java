@@ -14,6 +14,7 @@ public class AddPermissionRequestBody {
      */
     @JsonProperty("Action")
     public String action;
+
     public AddPermissionRequestBody withAction(String action) {
         this.action = action;
         return this;
@@ -25,6 +26,7 @@ public class AddPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceToken")
     public String eventSourceToken;
+
     public AddPermissionRequestBody withEventSourceToken(String eventSourceToken) {
         this.eventSourceToken = eventSourceToken;
         return this;
@@ -36,6 +38,7 @@ public class AddPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionUrlAuthType")
     public AddPermissionRequestBodyFunctionUrlAuthTypeEnum functionUrlAuthType;
+
     public AddPermissionRequestBody withFunctionUrlAuthType(AddPermissionRequestBodyFunctionUrlAuthTypeEnum functionUrlAuthType) {
         this.functionUrlAuthType = functionUrlAuthType;
         return this;
@@ -46,6 +49,7 @@ public class AddPermissionRequestBody {
      */
     @JsonProperty("Principal")
     public String principal;
+
     public AddPermissionRequestBody withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -57,6 +61,7 @@ public class AddPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalOrgID")
     public String principalOrgID;
+
     public AddPermissionRequestBody withPrincipalOrgID(String principalOrgID) {
         this.principalOrgID = principalOrgID;
         return this;
@@ -68,6 +73,7 @@ public class AddPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RevisionId")
     public String revisionId;
+
     public AddPermissionRequestBody withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -79,6 +85,7 @@ public class AddPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAccount")
     public String sourceAccount;
+
     public AddPermissionRequestBody withSourceAccount(String sourceAccount) {
         this.sourceAccount = sourceAccount;
         return this;
@@ -90,6 +97,7 @@ public class AddPermissionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public AddPermissionRequestBody withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -100,9 +108,15 @@ public class AddPermissionRequestBody {
      */
     @JsonProperty("StatementId")
     public String statementId;
+
     public AddPermissionRequestBody withStatementId(String statementId) {
         this.statementId = statementId;
         return this;
     }
     
+    public AddPermissionRequestBody(@JsonProperty("Action") String action, @JsonProperty("Principal") String principal, @JsonProperty("StatementId") String statementId) {
+        this.action = action;
+        this.principal = principal;
+        this.statementId = statementId;
+  }
 }

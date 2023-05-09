@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CommitActivity {
     @JsonProperty("days")
     public Long[] days;
+
     public CommitActivity withDays(Long[] days) {
         this.days = days;
         return this;
@@ -19,6 +20,7 @@ public class CommitActivity {
     
     @JsonProperty("total")
     public Long total;
+
     public CommitActivity withTotal(Long total) {
         this.total = total;
         return this;
@@ -26,9 +28,15 @@ public class CommitActivity {
     
     @JsonProperty("week")
     public Long week;
+
     public CommitActivity withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public CommitActivity(@JsonProperty("days") Long[] days, @JsonProperty("total") Long total, @JsonProperty("week") Long week) {
+        this.days = days;
+        this.total = total;
+        this.week = week;
+  }
 }

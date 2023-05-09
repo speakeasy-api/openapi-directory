@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInventoryDeletionsResponse {
     
     public String contentType;
+
     public DescribeInventoryDeletionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInventoryDeletionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeInventoryDeletionsResult describeInventoryDeletionsResult;
+
     public DescribeInventoryDeletionsResponse withDescribeInventoryDeletionsResult(org.openapis.openapi.models.shared.DescribeInventoryDeletionsResult describeInventoryDeletionsResult) {
         this.describeInventoryDeletionsResult = describeInventoryDeletionsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInventoryDeletionsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeInventoryDeletionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInventoryDeletionsResponse {
      */
     
     public Object invalidDeletionIdException;
+
     public DescribeInventoryDeletionsResponse withInvalidDeletionIdException(Object invalidDeletionIdException) {
         this.invalidDeletionIdException = invalidDeletionIdException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeInventoryDeletionsResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeInventoryDeletionsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -56,6 +62,7 @@ public class DescribeInventoryDeletionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeInventoryDeletionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeInventoryDeletionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInventoryDeletionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeInventoryDeletionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

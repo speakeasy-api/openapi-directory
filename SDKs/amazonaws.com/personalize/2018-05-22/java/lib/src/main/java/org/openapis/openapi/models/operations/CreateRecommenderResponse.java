@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRecommenderResponse {
     
     public String contentType;
+
     public CreateRecommenderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRecommenderResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRecommenderResponse createRecommenderResponse;
+
     public CreateRecommenderResponse withCreateRecommenderResponse(org.openapis.openapi.models.shared.CreateRecommenderResponse createRecommenderResponse) {
         this.createRecommenderResponse = createRecommenderResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateRecommenderResponse {
      */
     
     public Object invalidInputException;
+
     public CreateRecommenderResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRecommenderResponse {
      */
     
     public Object limitExceededException;
+
     public CreateRecommenderResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateRecommenderResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateRecommenderResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRecommenderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateRecommenderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateRecommenderResponse {
     
     
     public Integer statusCode;
+
     public CreateRecommenderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateRecommenderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRecommenderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateRecommenderResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateRecommenderResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRecommenderResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateRecommenderResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateRecommenderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

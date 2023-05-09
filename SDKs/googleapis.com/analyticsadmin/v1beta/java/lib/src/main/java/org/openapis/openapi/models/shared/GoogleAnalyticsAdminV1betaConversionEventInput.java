@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1betaConversionEventInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public String eventName;
+
     public GoogleAnalyticsAdminV1betaConversionEventInput withEventName(String eventName) {
         this.eventName = eventName;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaConversionEventInput(){}
 }

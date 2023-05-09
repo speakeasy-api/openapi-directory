@@ -59,11 +59,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesGetResponse(contentType, httpRes.statusCode()) {{
             targetSslProxy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesListResponse(contentType, httpRes.statusCode()) {{
             targetSslProxyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetBackendServiceResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetBackendServiceResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetBackendServiceResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetBackendServiceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetCertificateMapResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetCertificateMapResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetCertificateMapResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetCertificateMapResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetProxyHeaderResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetProxyHeaderResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetProxyHeaderResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetProxyHeaderResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslCertificatesResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslCertificatesResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslCertificatesResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslCertificatesResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +423,9 @@ public class TargetSslProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslPolicyResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslPolicyResponse res = new org.openapis.openapi.models.operations.ComputeTargetSslProxiesSetSslPolicyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

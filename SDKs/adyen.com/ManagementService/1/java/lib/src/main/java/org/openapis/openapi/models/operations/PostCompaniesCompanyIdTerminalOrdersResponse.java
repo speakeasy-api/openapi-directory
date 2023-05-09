@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCompaniesCompanyIdTerminalOrdersResponse {
     
     public String contentType;
+
     public PostCompaniesCompanyIdTerminalOrdersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostCompaniesCompanyIdTerminalOrdersResponse {
     
     
     public Integer statusCode;
+
     public PostCompaniesCompanyIdTerminalOrdersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostCompaniesCompanyIdTerminalOrdersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCompaniesCompanyIdTerminalOrdersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostCompaniesCompanyIdTerminalOrdersResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostCompaniesCompanyIdTerminalOrdersResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class PostCompaniesCompanyIdTerminalOrdersResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminalOrder terminalOrder;
+
     public PostCompaniesCompanyIdTerminalOrdersResponse withTerminalOrder(org.openapis.openapi.models.shared.TerminalOrder terminalOrder) {
         this.terminalOrder = terminalOrder;
         return this;
     }
     
+    public PostCompaniesCompanyIdTerminalOrdersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class TopicSearchResultItemRelated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic_relation")
     public TopicSearchResultItemRelatedTopicRelation topicRelation;
+
     public TopicSearchResultItemRelated withTopicRelation(TopicSearchResultItemRelatedTopicRelation topicRelation) {
         this.topicRelation = topicRelation;
         return this;
     }
     
+    public TopicSearchResultItemRelated(){}
 }

@@ -18,9 +18,11 @@ public class LiveBroadcastStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentViewers")
     public String concurrentViewers;
+
     public LiveBroadcastStatistics withConcurrentViewers(String concurrentViewers) {
         this.concurrentViewers = concurrentViewers;
         return this;
     }
     
+    public LiveBroadcastStatistics(){}
 }

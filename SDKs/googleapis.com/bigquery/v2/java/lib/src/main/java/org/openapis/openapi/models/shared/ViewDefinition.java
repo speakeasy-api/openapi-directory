@@ -15,6 +15,7 @@ public class ViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public ViewDefinition withQuery(String query) {
         this.query = query;
         return this;
@@ -26,6 +27,7 @@ public class ViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useExplicitColumnNames")
     public Boolean useExplicitColumnNames;
+
     public ViewDefinition withUseExplicitColumnNames(Boolean useExplicitColumnNames) {
         this.useExplicitColumnNames = useExplicitColumnNames;
         return this;
@@ -37,6 +39,7 @@ public class ViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useLegacySql")
     public Boolean useLegacySql;
+
     public ViewDefinition withUseLegacySql(Boolean useLegacySql) {
         this.useLegacySql = useLegacySql;
         return this;
@@ -48,9 +51,11 @@ public class ViewDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDefinedFunctionResources")
     public UserDefinedFunctionResource[] userDefinedFunctionResources;
+
     public ViewDefinition withUserDefinedFunctionResources(UserDefinedFunctionResource[] userDefinedFunctionResources) {
         this.userDefinedFunctionResources = userDefinedFunctionResources;
         return this;
     }
     
+    public ViewDefinition(){}
 }

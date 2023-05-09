@@ -18,9 +18,11 @@ public class CustomerListDpcsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpcs")
     public Dpc[] dpcs;
+
     public CustomerListDpcsResponse withDpcs(Dpc[] dpcs) {
         this.dpcs = dpcs;
         return this;
     }
     
+    public CustomerListDpcsResponse(){}
 }

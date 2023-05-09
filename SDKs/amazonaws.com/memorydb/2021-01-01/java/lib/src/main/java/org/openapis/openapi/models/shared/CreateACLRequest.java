@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateACLRequest {
     @JsonProperty("ACLName")
     public String aclName;
+
     public CreateACLRequest withACLName(String aclName) {
         this.aclName = aclName;
         return this;
@@ -19,6 +20,7 @@ public class CreateACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateACLRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -27,9 +29,13 @@ public class CreateACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserNames")
     public String[] userNames;
+
     public CreateACLRequest withUserNames(String[] userNames) {
         this.userNames = userNames;
         return this;
     }
     
+    public CreateACLRequest(@JsonProperty("ACLName") String aclName) {
+        this.aclName = aclName;
+  }
 }

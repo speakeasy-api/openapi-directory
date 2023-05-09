@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateUserRequest {
     
     public String newPath;
+
     public UpdateUserRequest withNewPath(String newPath) {
         this.newPath = newPath;
         return this;
@@ -16,6 +17,7 @@ public class UpdateUserRequest {
     
     
     public String newUserName;
+
     public UpdateUserRequest withNewUserName(String newUserName) {
         this.newUserName = newUserName;
         return this;
@@ -23,9 +25,13 @@ public class UpdateUserRequest {
     
     
     public String userName;
+
     public UpdateUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UpdateUserRequest(@JsonProperty("UserName") String userName) {
+        this.userName = userName;
+  }
 }

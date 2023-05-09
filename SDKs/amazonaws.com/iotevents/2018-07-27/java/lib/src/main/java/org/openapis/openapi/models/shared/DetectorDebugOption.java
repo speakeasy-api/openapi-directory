@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectorDebugOption {
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public DetectorDebugOption withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
@@ -22,9 +23,13 @@ public class DetectorDebugOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public DetectorDebugOption withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
     }
     
+    public DetectorDebugOption(@JsonProperty("detectorModelName") String detectorModelName) {
+        this.detectorModelName = detectorModelName;
+  }
 }

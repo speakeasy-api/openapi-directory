@@ -20,6 +20,7 @@ public class GetRunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpus")
     public Long cpus;
+
     public GetRunTaskResponse withCpus(Long cpus) {
         this.cpus = cpus;
         return this;
@@ -30,6 +31,7 @@ public class GetRunTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetRunTaskResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetRunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStream")
     public String logStream;
+
     public GetRunTaskResponse withLogStream(String logStream) {
         this.logStream = logStream;
         return this;
@@ -46,6 +49,7 @@ public class GetRunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public GetRunTaskResponse withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -54,6 +58,7 @@ public class GetRunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetRunTaskResponse withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class GetRunTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetRunTaskResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -72,6 +78,7 @@ public class GetRunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskStatusEnum status;
+
     public GetRunTaskResponse withStatus(TaskStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +87,7 @@ public class GetRunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetRunTaskResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -90,6 +98,7 @@ public class GetRunTaskResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopTime")
     public OffsetDateTime stopTime;
+
     public GetRunTaskResponse withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
@@ -98,9 +107,11 @@ public class GetRunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public GetRunTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public GetRunTaskResponse(){}
 }

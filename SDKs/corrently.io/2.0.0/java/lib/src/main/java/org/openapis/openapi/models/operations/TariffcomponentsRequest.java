@@ -12,6 +12,7 @@ public class TariffcomponentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public TariffcomponentsRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class TariffcomponentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kwha")
     public Long kwha;
+
     public TariffcomponentsRequest withKwha(Long kwha) {
         this.kwha = kwha;
         return this;
@@ -32,6 +34,7 @@ public class TariffcomponentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=milliseconds")
     public Long milliseconds;
+
     public TariffcomponentsRequest withMilliseconds(Long milliseconds) {
         this.milliseconds = milliseconds;
         return this;
@@ -42,6 +45,7 @@ public class TariffcomponentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wh")
     public Long wh;
+
     public TariffcomponentsRequest withWh(Long wh) {
         this.wh = wh;
         return this;
@@ -52,9 +56,11 @@ public class TariffcomponentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
     public String zipcode;
+
     public TariffcomponentsRequest withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public TariffcomponentsRequest(){}
 }

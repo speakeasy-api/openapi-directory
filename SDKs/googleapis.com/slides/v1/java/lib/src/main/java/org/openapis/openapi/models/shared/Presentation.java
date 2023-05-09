@@ -18,6 +18,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layouts")
     public Page[] layouts;
+
     public Presentation withLayouts(Page[] layouts) {
         this.layouts = layouts;
         return this;
@@ -29,6 +30,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public Presentation withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -40,6 +42,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masters")
     public Page[] masters;
+
     public Presentation withMasters(Page[] masters) {
         this.masters = masters;
         return this;
@@ -51,6 +54,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notesMaster")
     public Page notesMaster;
+
     public Presentation withNotesMaster(Page notesMaster) {
         this.notesMaster = notesMaster;
         return this;
@@ -62,6 +66,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Size pageSize;
+
     public Presentation withPageSize(Size pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -73,6 +78,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentationId")
     public String presentationId;
+
     public Presentation withPresentationId(String presentationId) {
         this.presentationId = presentationId;
         return this;
@@ -84,6 +90,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public Presentation withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -95,6 +102,7 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slides")
     public Page[] slides;
+
     public Presentation withSlides(Page[] slides) {
         this.slides = slides;
         return this;
@@ -106,9 +114,11 @@ public class Presentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Presentation withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Presentation(){}
 }

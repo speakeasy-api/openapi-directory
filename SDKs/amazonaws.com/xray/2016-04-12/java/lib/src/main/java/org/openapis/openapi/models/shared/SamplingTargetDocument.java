@@ -20,6 +20,7 @@ public class SamplingTargetDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FixedRate")
     public Double fixedRate;
+
     public SamplingTargetDocument withFixedRate(Double fixedRate) {
         this.fixedRate = fixedRate;
         return this;
@@ -28,6 +29,7 @@ public class SamplingTargetDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public Long interval;
+
     public SamplingTargetDocument withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -36,6 +38,7 @@ public class SamplingTargetDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservoirQuota")
     public Long reservoirQuota;
+
     public SamplingTargetDocument withReservoirQuota(Long reservoirQuota) {
         this.reservoirQuota = reservoirQuota;
         return this;
@@ -46,6 +49,7 @@ public class SamplingTargetDocument {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReservoirQuotaTTL")
     public OffsetDateTime reservoirQuotaTTL;
+
     public SamplingTargetDocument withReservoirQuotaTTL(OffsetDateTime reservoirQuotaTTL) {
         this.reservoirQuotaTTL = reservoirQuotaTTL;
         return this;
@@ -54,9 +58,11 @@ public class SamplingTargetDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleName")
     public String ruleName;
+
     public SamplingTargetDocument withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
     }
     
+    public SamplingTargetDocument(){}
 }

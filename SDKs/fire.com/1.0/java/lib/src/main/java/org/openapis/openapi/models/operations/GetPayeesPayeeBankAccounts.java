@@ -15,6 +15,7 @@ public class GetPayeesPayeeBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundingSources")
     public GetPayeesPayeeBankAccountsPayee[] fundingSources;
+
     public GetPayeesPayeeBankAccounts withFundingSources(GetPayeesPayeeBankAccountsPayee[] fundingSources) {
         this.fundingSources = fundingSources;
         return this;
@@ -26,9 +27,11 @@ public class GetPayeesPayeeBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public GetPayeesPayeeBankAccounts withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public GetPayeesPayeeBankAccounts(){}
 }

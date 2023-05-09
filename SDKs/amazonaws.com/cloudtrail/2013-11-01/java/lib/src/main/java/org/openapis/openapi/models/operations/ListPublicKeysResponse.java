@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPublicKeysResponse {
     
     public String contentType;
+
     public ListPublicKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPublicKeysResponse {
      */
     
     public Object invalidTimeRangeException;
+
     public ListPublicKeysResponse withInvalidTimeRangeException(Object invalidTimeRangeException) {
         this.invalidTimeRangeException = invalidTimeRangeException;
         return this;
@@ -29,6 +32,7 @@ public class ListPublicKeysResponse {
      */
     
     public Object invalidTokenException;
+
     public ListPublicKeysResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListPublicKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPublicKeysResponse listPublicKeysResponse;
+
     public ListPublicKeysResponse withListPublicKeysResponse(org.openapis.openapi.models.shared.ListPublicKeysResponse listPublicKeysResponse) {
         this.listPublicKeysResponse = listPublicKeysResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListPublicKeysResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListPublicKeysResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class ListPublicKeysResponse {
     
     
     public Integer statusCode;
+
     public ListPublicKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListPublicKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPublicKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListPublicKeysResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListPublicKeysResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListPublicKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

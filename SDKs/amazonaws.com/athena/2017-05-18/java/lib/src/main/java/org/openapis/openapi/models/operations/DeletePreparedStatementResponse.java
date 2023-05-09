@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePreparedStatementResponse {
     
     public String contentType;
+
     public DeletePreparedStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePreparedStatementResponse {
      */
     
     public java.util.Map<String, Object> deletePreparedStatementOutput;
+
     public DeletePreparedStatementResponse withDeletePreparedStatementOutput(java.util.Map<String, Object> deletePreparedStatementOutput) {
         this.deletePreparedStatementOutput = deletePreparedStatementOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeletePreparedStatementResponse {
      */
     
     public Object internalServerException;
+
     public DeletePreparedStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePreparedStatementResponse {
      */
     
     public Object invalidRequestException;
+
     public DeletePreparedStatementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeletePreparedStatementResponse {
     
     
     public Integer statusCode;
+
     public DeletePreparedStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeletePreparedStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePreparedStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeletePreparedStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePreparedStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeletePreparedStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

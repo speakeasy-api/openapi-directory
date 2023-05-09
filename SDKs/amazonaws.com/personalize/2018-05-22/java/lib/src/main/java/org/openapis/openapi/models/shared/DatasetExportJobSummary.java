@@ -22,6 +22,7 @@ public class DatasetExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DatasetExportJobSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetExportJobArn")
     public String datasetExportJobArn;
+
     public DatasetExportJobSummary withDatasetExportJobArn(String datasetExportJobArn) {
         this.datasetExportJobArn = datasetExportJobArn;
         return this;
@@ -38,6 +40,7 @@ public class DatasetExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DatasetExportJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class DatasetExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public DatasetExportJobSummary withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -56,6 +60,7 @@ public class DatasetExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DatasetExportJobSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,9 +69,11 @@ public class DatasetExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DatasetExportJobSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DatasetExportJobSummary(){}
 }

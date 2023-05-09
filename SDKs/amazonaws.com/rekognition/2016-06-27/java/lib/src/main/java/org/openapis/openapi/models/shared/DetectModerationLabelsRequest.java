@@ -12,6 +12,7 @@ public class DetectModerationLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopConfig")
     public HumanLoopConfig humanLoopConfig;
+
     public DetectModerationLabelsRequest withHumanLoopConfig(HumanLoopConfig humanLoopConfig) {
         this.humanLoopConfig = humanLoopConfig;
         return this;
@@ -19,6 +20,7 @@ public class DetectModerationLabelsRequest {
     
     @JsonProperty("Image")
     public Image image;
+
     public DetectModerationLabelsRequest withImage(Image image) {
         this.image = image;
         return this;
@@ -27,9 +29,13 @@ public class DetectModerationLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public DetectModerationLabelsRequest withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
     }
     
+    public DetectModerationLabelsRequest(@JsonProperty("Image") Image image) {
+        this.image = image;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItemGroupFeedResponse {
     
     public byte[] body;
+
     public GetItemGroupFeedResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetItemGroupFeedResponse {
     
     
     public String contentType;
+
     public GetItemGroupFeedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetItemGroupFeedResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetItemGroupFeedResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetItemGroupFeedResponse {
      */
     
     public org.openapis.openapi.models.shared.ItemGroupResponse itemGroupResponse;
+
     public GetItemGroupFeedResponse withItemGroupResponse(org.openapis.openapi.models.shared.ItemGroupResponse itemGroupResponse) {
         this.itemGroupResponse = itemGroupResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetItemGroupFeedResponse {
     
     
     public Integer statusCode;
+
     public GetItemGroupFeedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class GetItemGroupFeedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItemGroupFeedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetItemGroupFeedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

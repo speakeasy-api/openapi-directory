@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * ModifyVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Amazon Web Services Verified Access instance.
+ * ModifyVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Verified Access instance.
  */
 public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     public String creationTime;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public String description;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public String lastUpdatedTime;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceTags[] tags;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance withTags(ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public String verifiedAccessInstanceId;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
@@ -47,9 +52,11 @@ public class ModifyVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders[] verifiedAccessTrustProviders;
+
     public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance withVerifiedAccessTrustProviders(ModifyVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders[] verifiedAccessTrustProviders) {
         this.verifiedAccessTrustProviders = verifiedAccessTrustProviders;
         return this;
     }
     
+    public ModifyVerifiedAccessInstanceResultVerifiedAccessInstance(){}
 }

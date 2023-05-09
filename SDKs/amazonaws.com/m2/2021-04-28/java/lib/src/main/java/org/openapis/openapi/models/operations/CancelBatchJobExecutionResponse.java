@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelBatchJobExecutionResponse {
@@ -12,6 +13,7 @@ public class CancelBatchJobExecutionResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelBatchJobExecutionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelBatchJobExecutionResponse {
      */
     
     public java.util.Map<String, Object> cancelBatchJobExecutionResponse;
+
     public CancelBatchJobExecutionResponse withCancelBatchJobExecutionResponse(java.util.Map<String, Object> cancelBatchJobExecutionResponse) {
         this.cancelBatchJobExecutionResponse = cancelBatchJobExecutionResponse;
         return this;
@@ -32,6 +35,7 @@ public class CancelBatchJobExecutionResponse {
      */
     
     public Object conflictException;
+
     public CancelBatchJobExecutionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class CancelBatchJobExecutionResponse {
     
     
     public String contentType;
+
     public CancelBatchJobExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CancelBatchJobExecutionResponse {
      */
     
     public Object internalServerException;
+
     public CancelBatchJobExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CancelBatchJobExecutionResponse {
     
     
     public Integer statusCode;
+
     public CancelBatchJobExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelBatchJobExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelBatchJobExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CancelBatchJobExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelBatchJobExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CancelBatchJobExecutionResponse {
      */
     
     public Object throttlingException;
+
     public CancelBatchJobExecutionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CancelBatchJobExecutionResponse {
      */
     
     public Object validationException;
+
     public CancelBatchJobExecutionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelBatchJobExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

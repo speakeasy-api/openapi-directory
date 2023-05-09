@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualityScore")
     public Integer qualityScore;
+
     public GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo withQualityScore(Integer qualityScore) {
         this.qualityScore = qualityScore;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo(){}
 }

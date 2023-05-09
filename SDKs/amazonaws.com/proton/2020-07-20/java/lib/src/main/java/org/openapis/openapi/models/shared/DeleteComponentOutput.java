@@ -15,9 +15,11 @@ public class DeleteComponentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("component")
     public Component component;
+
     public DeleteComponentOutput withComponent(Component component) {
         this.component = component;
         return this;
     }
     
+    public DeleteComponentOutput(){}
 }

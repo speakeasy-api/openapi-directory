@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMaintenanceWindowExecutionResponse {
     
     public String contentType;
+
     public GetMaintenanceWindowExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMaintenanceWindowExecutionResponse {
      */
     
     public Object doesNotExistException;
+
     public GetMaintenanceWindowExecutionResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class GetMaintenanceWindowExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMaintenanceWindowExecutionResult getMaintenanceWindowExecutionResult;
+
     public GetMaintenanceWindowExecutionResponse withGetMaintenanceWindowExecutionResult(org.openapis.openapi.models.shared.GetMaintenanceWindowExecutionResult getMaintenanceWindowExecutionResult) {
         this.getMaintenanceWindowExecutionResult = getMaintenanceWindowExecutionResult;
         return this;
@@ -39,6 +43,7 @@ public class GetMaintenanceWindowExecutionResponse {
      */
     
     public Object internalServerError;
+
     public GetMaintenanceWindowExecutionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class GetMaintenanceWindowExecutionResponse {
     
     
     public Integer statusCode;
+
     public GetMaintenanceWindowExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetMaintenanceWindowExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMaintenanceWindowExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMaintenanceWindowExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetApiV2PredictionsId404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object> errors;
+
     public GetApiV2PredictionsId404ApplicationJSON withErrors(java.util.Map<String, Object> errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetApiV2PredictionsId404ApplicationJSON(){}
 }

@@ -146,4 +146,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipeSourceKinesisStre
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipeSourceDynamoDBStreamParameters.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePipeSourceActiveMQBrokerParameters.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

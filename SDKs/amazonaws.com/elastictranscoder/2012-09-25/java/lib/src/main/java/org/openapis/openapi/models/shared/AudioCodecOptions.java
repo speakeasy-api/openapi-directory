@@ -15,6 +15,7 @@ public class AudioCodecOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BitDepth")
     public String bitDepth;
+
     public AudioCodecOptions withBitDepth(String bitDepth) {
         this.bitDepth = bitDepth;
         return this;
@@ -23,6 +24,7 @@ public class AudioCodecOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BitOrder")
     public String bitOrder;
+
     public AudioCodecOptions withBitOrder(String bitOrder) {
         this.bitOrder = bitOrder;
         return this;
@@ -31,6 +33,7 @@ public class AudioCodecOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Profile")
     public String profile;
+
     public AudioCodecOptions withProfile(String profile) {
         this.profile = profile;
         return this;
@@ -39,9 +42,11 @@ public class AudioCodecOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Signed")
     public String signed;
+
     public AudioCodecOptions withSigned(String signed) {
         this.signed = signed;
         return this;
     }
     
+    public AudioCodecOptions(){}
 }

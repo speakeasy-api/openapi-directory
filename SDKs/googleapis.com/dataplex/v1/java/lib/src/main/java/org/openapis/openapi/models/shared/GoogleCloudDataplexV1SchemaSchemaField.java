@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1SchemaSchemaField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1SchemaSchemaField withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1SchemaSchemaField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public GoogleCloudDataplexV1SchemaSchemaField[] fields;
+
     public GoogleCloudDataplexV1SchemaSchemaField withFields(GoogleCloudDataplexV1SchemaSchemaField[] fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1SchemaSchemaField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public GoogleCloudDataplexV1SchemaSchemaFieldModeEnum mode;
+
     public GoogleCloudDataplexV1SchemaSchemaField withMode(GoogleCloudDataplexV1SchemaSchemaFieldModeEnum mode) {
         this.mode = mode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1SchemaSchemaField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1SchemaSchemaField withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1SchemaSchemaField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum type;
+
     public GoogleCloudDataplexV1SchemaSchemaField withType(GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDataplexV1SchemaSchemaField(){}
 }

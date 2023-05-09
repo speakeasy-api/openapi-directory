@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderTaskSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String apiAuth;
+
     public GetOrderTaskSecurity withApiAuth(String apiAuth) {
         this.apiAuth = apiAuth;
         return this;
     }
     
+    public GetOrderTaskSecurity(@JsonProperty("api_auth") String apiAuth) {
+        this.apiAuth = apiAuth;
+  }
 }

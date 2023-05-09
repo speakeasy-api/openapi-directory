@@ -23,6 +23,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collaborator")
     public StoryCollaborator collaborator;
+
     public Session withCollaborator(StoryCollaborator collaborator) {
         this.collaborator = collaborator;
         return this;
@@ -31,6 +32,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collaborator_id")
     public String collaboratorId;
+
     public Session withCollaboratorId(String collaboratorId) {
         this.collaboratorId = collaboratorId;
         return this;
@@ -41,6 +43,7 @@ public class Session {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Session withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -49,6 +52,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public String createdBy;
+
     public Session withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -57,6 +61,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public Session withHost(String host) {
         this.host = host;
         return this;
@@ -65,6 +70,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Session withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +79,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outline_revision")
     public Long outlineRevision;
+
     public Session withOutlineRevision(Long outlineRevision) {
         this.outlineRevision = outlineRevision;
         return this;
@@ -83,6 +90,7 @@ public class Session {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Session withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -91,6 +99,7 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_by")
     public String updatedBy;
+
     public Session withUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -99,9 +108,11 @@ public class Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("views")
     public View[] views;
+
     public Session withViews(View[] views) {
         this.views = views;
         return this;
     }
     
+    public Session(){}
 }

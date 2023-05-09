@@ -12,6 +12,7 @@ public class ProblemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public ProblemDetails withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -20,6 +21,7 @@ public class ProblemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extensions")
     public java.util.Map<String, Object> extensions;
+
     public ProblemDetails withExtensions(java.util.Map<String, Object> extensions) {
         this.extensions = extensions;
         return this;
@@ -28,6 +30,7 @@ public class ProblemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public ProblemDetails withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -36,6 +39,7 @@ public class ProblemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Integer status;
+
     public ProblemDetails withStatus(Integer status) {
         this.status = status;
         return this;
@@ -44,6 +48,7 @@ public class ProblemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProblemDetails withTitle(String title) {
         this.title = title;
         return this;
@@ -52,9 +57,11 @@ public class ProblemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ProblemDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ProblemDetails(){}
 }

@@ -20,6 +20,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Resource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Resource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public Resource withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class Resource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Resource withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -48,6 +51,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupArn")
     public String resourceGroupArn;
+
     public Resource withResourceGroupArn(String resourceGroupArn) {
         this.resourceGroupArn = resourceGroupArn;
         return this;
@@ -56,6 +60,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRegionScope")
     public ResourceRegionScopeEnum resourceRegionScope;
+
     public Resource withResourceRegionScope(ResourceRegionScopeEnum resourceRegionScope) {
         this.resourceRegionScope = resourceRegionScope;
         return this;
@@ -64,6 +69,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public Resource withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
@@ -72,6 +78,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ResourceStatusEnum status;
+
     public Resource withStatus(ResourceStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +87,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Resource withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -88,9 +96,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Resource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Resource(){}
 }

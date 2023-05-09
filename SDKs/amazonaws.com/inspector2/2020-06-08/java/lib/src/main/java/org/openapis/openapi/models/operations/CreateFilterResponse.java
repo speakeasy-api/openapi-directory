@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFilterResponse {
@@ -12,6 +13,7 @@ public class CreateFilterResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFilterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateFilterResponse {
      */
     
     public Object badRequestException;
+
     public CreateFilterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class CreateFilterResponse {
     
     
     public String contentType;
+
     public CreateFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFilterResponse createFilterResponse;
+
     public CreateFilterResponse withCreateFilterResponse(org.openapis.openapi.models.shared.CreateFilterResponse createFilterResponse) {
         this.createFilterResponse = createFilterResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateFilterResponse {
      */
     
     public Object internalServerException;
+
     public CreateFilterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFilterResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateFilterResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateFilterResponse {
     
     
     public Integer statusCode;
+
     public CreateFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateFilterResponse {
      */
     
     public Object throttlingException;
+
     public CreateFilterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateFilterResponse {
      */
     
     public Object validationException;
+
     public CreateFilterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

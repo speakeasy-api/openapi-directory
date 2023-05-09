@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRolesinUserResponse {
     
     public String contentType;
+
     public PutRolesinUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRolesinUserResponse {
      */
     
     public PutRolesinUser400ApplicationJSON putRolesinUser400ApplicationJSONObject;
+
     public PutRolesinUserResponse withPutRolesinUser400ApplicationJSONObject(PutRolesinUser400ApplicationJSON putRolesinUser400ApplicationJSONObject) {
         this.putRolesinUser400ApplicationJSONObject = putRolesinUser400ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class PutRolesinUserResponse {
      */
     
     public PutRolesinUser500ApplicationJSON putRolesinUser500ApplicationJSONObject;
+
     public PutRolesinUserResponse withPutRolesinUser500ApplicationJSONObject(PutRolesinUser500ApplicationJSON putRolesinUser500ApplicationJSONObject) {
         this.putRolesinUser500ApplicationJSONObject = putRolesinUser500ApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class PutRolesinUserResponse {
     
     
     public Integer statusCode;
+
     public PutRolesinUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PutRolesinUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRolesinUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRolesinUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

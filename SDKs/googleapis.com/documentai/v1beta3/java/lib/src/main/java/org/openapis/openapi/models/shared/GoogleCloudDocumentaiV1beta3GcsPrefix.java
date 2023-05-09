@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3GcsPrefix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsUriPrefix")
     public String gcsUriPrefix;
+
     public GoogleCloudDocumentaiV1beta3GcsPrefix withGcsUriPrefix(String gcsUriPrefix) {
         this.gcsUriPrefix = gcsUriPrefix;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3GcsPrefix(){}
 }

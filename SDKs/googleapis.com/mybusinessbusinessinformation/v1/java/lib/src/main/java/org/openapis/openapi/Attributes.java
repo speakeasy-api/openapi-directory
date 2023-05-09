@@ -56,11 +56,9 @@ public class Attributes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessbusinessinformationAttributesListResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationAttributesListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessbusinessinformationAttributesListResponse res = new org.openapis.openapi.models.operations.MybusinessbusinessinformationAttributesListResponse(contentType, httpRes.statusCode()) {{
             listAttributeMetadataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

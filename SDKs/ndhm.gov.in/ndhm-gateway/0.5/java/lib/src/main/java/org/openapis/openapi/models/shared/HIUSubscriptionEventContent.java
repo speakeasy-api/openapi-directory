@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIUSubscriptionEventContent {
     @JsonProperty("context")
     public EventCategoryDetail[] context;
+
     public HIUSubscriptionEventContent withContext(EventCategoryDetail[] context) {
         this.context = context;
         return this;
@@ -16,6 +17,7 @@ public class HIUSubscriptionEventContent {
     
     @JsonProperty("hip")
     public OrganizationRepresentation hip;
+
     public HIUSubscriptionEventContent withHip(OrganizationRepresentation hip) {
         this.hip = hip;
         return this;
@@ -23,9 +25,15 @@ public class HIUSubscriptionEventContent {
     
     @JsonProperty("patient")
     public ConsentManagerPatientID patient;
+
     public HIUSubscriptionEventContent withPatient(ConsentManagerPatientID patient) {
         this.patient = patient;
         return this;
     }
     
+    public HIUSubscriptionEventContent(@JsonProperty("context") EventCategoryDetail[] context, @JsonProperty("hip") OrganizationRepresentation hip, @JsonProperty("patient") ConsentManagerPatientID patient) {
+        this.context = context;
+        this.hip = hip;
+        this.patient = patient;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DataTransferProgress {
     
     public Double currentRateInMegaBytesPerSecond;
+
     public DataTransferProgress withCurrentRateInMegaBytesPerSecond(Double currentRateInMegaBytesPerSecond) {
         this.currentRateInMegaBytesPerSecond = currentRateInMegaBytesPerSecond;
         return this;
@@ -19,6 +20,7 @@ public class DataTransferProgress {
     
     
     public Long dataTransferredInMegaBytes;
+
     public DataTransferProgress withDataTransferredInMegaBytes(Long dataTransferredInMegaBytes) {
         this.dataTransferredInMegaBytes = dataTransferredInMegaBytes;
         return this;
@@ -26,6 +28,7 @@ public class DataTransferProgress {
     
     
     public Long elapsedTimeInSeconds;
+
     public DataTransferProgress withElapsedTimeInSeconds(Long elapsedTimeInSeconds) {
         this.elapsedTimeInSeconds = elapsedTimeInSeconds;
         return this;
@@ -33,6 +36,7 @@ public class DataTransferProgress {
     
     
     public Long estimatedTimeToCompletionInSeconds;
+
     public DataTransferProgress withEstimatedTimeToCompletionInSeconds(Long estimatedTimeToCompletionInSeconds) {
         this.estimatedTimeToCompletionInSeconds = estimatedTimeToCompletionInSeconds;
         return this;
@@ -40,6 +44,7 @@ public class DataTransferProgress {
     
     
     public String status;
+
     public DataTransferProgress withStatus(String status) {
         this.status = status;
         return this;
@@ -47,9 +52,11 @@ public class DataTransferProgress {
     
     
     public Long totalDataInMegaBytes;
+
     public DataTransferProgress withTotalDataInMegaBytes(Long totalDataInMegaBytes) {
         this.totalDataInMegaBytes = totalDataInMegaBytes;
         return this;
     }
     
+    public DataTransferProgress(){}
 }

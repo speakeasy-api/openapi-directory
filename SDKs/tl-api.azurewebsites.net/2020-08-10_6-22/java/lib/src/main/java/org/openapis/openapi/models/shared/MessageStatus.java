@@ -15,6 +15,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public MessageStatus withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -23,6 +24,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceId")
     public Integer referenceId;
+
     public MessageStatus withReferenceId(Integer referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -31,6 +33,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Object source;
+
     public MessageStatus withSource(Object source) {
         this.source = source;
         return this;
@@ -39,6 +42,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusId")
     public Integer statusId;
+
     public MessageStatus withStatusId(Integer statusId) {
         this.statusId = statusId;
         return this;
@@ -47,9 +51,11 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusText")
     public String statusText;
+
     public MessageStatus withStatusText(String statusText) {
         this.statusText = statusText;
         return this;
     }
     
+    public MessageStatus(){}
 }

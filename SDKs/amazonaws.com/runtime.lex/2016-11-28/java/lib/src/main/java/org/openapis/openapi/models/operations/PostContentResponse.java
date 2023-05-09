@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostContentResponse {
@@ -12,6 +13,7 @@ public class PostContentResponse {
      */
     
     public Object badGatewayException;
+
     public PostContentResponse withBadGatewayException(Object badGatewayException) {
         this.badGatewayException = badGatewayException;
         return this;
@@ -22,6 +24,7 @@ public class PostContentResponse {
      */
     
     public Object badRequestException;
+
     public PostContentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class PostContentResponse {
      */
     
     public Object conflictException;
+
     public PostContentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class PostContentResponse {
     
     
     public String contentType;
+
     public PostContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class PostContentResponse {
      */
     
     public Object dependencyFailedException;
+
     public PostContentResponse withDependencyFailedException(Object dependencyFailedException) {
         this.dependencyFailedException = dependencyFailedException;
         return this;
@@ -59,6 +65,7 @@ public class PostContentResponse {
      */
     
     public Object internalFailureException;
+
     public PostContentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class PostContentResponse {
      */
     
     public Object limitExceededException;
+
     public PostContentResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PostContentResponse {
      */
     
     public Object loopDetectedException;
+
     public PostContentResponse withLoopDetectedException(Object loopDetectedException) {
         this.loopDetectedException = loopDetectedException;
         return this;
@@ -89,6 +98,7 @@ public class PostContentResponse {
      */
     
     public Object notAcceptableException;
+
     public PostContentResponse withNotAcceptableException(Object notAcceptableException) {
         this.notAcceptableException = notAcceptableException;
         return this;
@@ -99,6 +109,7 @@ public class PostContentResponse {
      */
     
     public Object notFoundException;
+
     public PostContentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -109,6 +120,7 @@ public class PostContentResponse {
      */
     
     public org.openapis.openapi.models.shared.PostContentResponse postContentResponse;
+
     public PostContentResponse withPostContentResponse(org.openapis.openapi.models.shared.PostContentResponse postContentResponse) {
         this.postContentResponse = postContentResponse;
         return this;
@@ -119,6 +131,7 @@ public class PostContentResponse {
      */
     
     public Object requestTimeoutException;
+
     public PostContentResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -126,6 +139,7 @@ public class PostContentResponse {
     
     
     public Integer statusCode;
+
     public PostContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class PostContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class PostContentResponse {
      */
     
     public Object unsupportedMediaTypeException;
+
     public PostContentResponse withUnsupportedMediaTypeException(Object unsupportedMediaTypeException) {
         this.unsupportedMediaTypeException = unsupportedMediaTypeException;
         return this;
     }
     
+    public PostContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

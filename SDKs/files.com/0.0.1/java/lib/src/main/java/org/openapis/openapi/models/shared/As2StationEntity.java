@@ -18,6 +18,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public As2StationEntity withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -29,6 +30,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hex_public_certificate_serial")
     public String hexPublicCertificateSerial;
+
     public As2StationEntity withHexPublicCertificateSerial(String hexPublicCertificateSerial) {
         this.hexPublicCertificateSerial = hexPublicCertificateSerial;
         return this;
@@ -40,6 +42,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public As2StationEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public As2StationEntity withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key_md5")
     public String privateKeyMd5;
+
     public As2StationEntity withPrivateKeyMd5(String privateKeyMd5) {
         this.privateKeyMd5 = privateKeyMd5;
         return this;
@@ -73,6 +78,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key_password_md5")
     public String privateKeyPasswordMd5;
+
     public As2StationEntity withPrivateKeyPasswordMd5(String privateKeyPasswordMd5) {
         this.privateKeyPasswordMd5 = privateKeyPasswordMd5;
         return this;
@@ -84,6 +90,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_issuer")
     public String publicCertificateIssuer;
+
     public As2StationEntity withPublicCertificateIssuer(String publicCertificateIssuer) {
         this.publicCertificateIssuer = publicCertificateIssuer;
         return this;
@@ -95,6 +102,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_md5")
     public String publicCertificateMd5;
+
     public As2StationEntity withPublicCertificateMd5(String publicCertificateMd5) {
         this.publicCertificateMd5 = publicCertificateMd5;
         return this;
@@ -106,6 +114,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_not_after")
     public String publicCertificateNotAfter;
+
     public As2StationEntity withPublicCertificateNotAfter(String publicCertificateNotAfter) {
         this.publicCertificateNotAfter = publicCertificateNotAfter;
         return this;
@@ -117,6 +126,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_not_before")
     public String publicCertificateNotBefore;
+
     public As2StationEntity withPublicCertificateNotBefore(String publicCertificateNotBefore) {
         this.publicCertificateNotBefore = publicCertificateNotBefore;
         return this;
@@ -128,6 +138,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_serial")
     public String publicCertificateSerial;
+
     public As2StationEntity withPublicCertificateSerial(String publicCertificateSerial) {
         this.publicCertificateSerial = publicCertificateSerial;
         return this;
@@ -139,6 +150,7 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_certificate_subject")
     public String publicCertificateSubject;
+
     public As2StationEntity withPublicCertificateSubject(String publicCertificateSubject) {
         this.publicCertificateSubject = publicCertificateSubject;
         return this;
@@ -150,9 +162,11 @@ public class As2StationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public As2StationEntity withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public As2StationEntity(){}
 }

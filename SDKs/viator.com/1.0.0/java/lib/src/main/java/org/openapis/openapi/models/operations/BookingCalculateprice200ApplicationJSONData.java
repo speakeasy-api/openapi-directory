@@ -15,6 +15,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public BookingCalculateprice200ApplicationJSONData withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +27,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasPromoCode")
     public Boolean hasPromoCode;
+
     public BookingCalculateprice200ApplicationJSONData withHasPromoCode(Boolean hasPromoCode) {
         this.hasPromoCode = hasPromoCode;
         return this;
@@ -37,6 +39,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itinerary")
     public BookingCalculateprice200ApplicationJSONDataItinerary itinerary;
+
     public BookingCalculateprice200ApplicationJSONData withItinerary(BookingCalculateprice200ApplicationJSONDataItinerary itinerary) {
         this.itinerary = itinerary;
         return this;
@@ -48,6 +51,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryFromPrice")
     public Double itineraryFromPrice;
+
     public BookingCalculateprice200ApplicationJSONData withItineraryFromPrice(Double itineraryFromPrice) {
         this.itineraryFromPrice = itineraryFromPrice;
         return this;
@@ -59,6 +63,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryFromPriceFormatted")
     public String itineraryFromPriceFormatted;
+
     public BookingCalculateprice200ApplicationJSONData withItineraryFromPriceFormatted(String itineraryFromPriceFormatted) {
         this.itineraryFromPriceFormatted = itineraryFromPriceFormatted;
         return this;
@@ -70,6 +75,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryNewPrice")
     public Double itineraryNewPrice;
+
     public BookingCalculateprice200ApplicationJSONData withItineraryNewPrice(Double itineraryNewPrice) {
         this.itineraryNewPrice = itineraryNewPrice;
         return this;
@@ -81,6 +87,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itineraryNewPriceFormatted")
     public String itineraryNewPriceFormatted;
+
     public BookingCalculateprice200ApplicationJSONData withItineraryNewPriceFormatted(String itineraryNewPriceFormatted) {
         this.itineraryNewPriceFormatted = itineraryNewPriceFormatted;
         return this;
@@ -92,6 +99,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itinerarySaving")
     public Long itinerarySaving;
+
     public BookingCalculateprice200ApplicationJSONData withItinerarySaving(Long itinerarySaving) {
         this.itinerarySaving = itinerarySaving;
         return this;
@@ -103,6 +111,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itinerarySavingFormatted")
     public String itinerarySavingFormatted;
+
     public BookingCalculateprice200ApplicationJSONData withItinerarySavingFormatted(String itinerarySavingFormatted) {
         this.itinerarySavingFormatted = itinerarySavingFormatted;
         return this;
@@ -114,6 +123,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentGatewayInfo")
     public String paymentGatewayInfo;
+
     public BookingCalculateprice200ApplicationJSONData withPaymentGatewayInfo(String paymentGatewayInfo) {
         this.paymentGatewayInfo = paymentGatewayInfo;
         return this;
@@ -125,6 +135,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promoCode")
     public String promoCode;
+
     public BookingCalculateprice200ApplicationJSONData withPromoCode(String promoCode) {
         this.promoCode = promoCode;
         return this;
@@ -136,6 +147,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promoCodeExpired")
     public Boolean promoCodeExpired;
+
     public BookingCalculateprice200ApplicationJSONData withPromoCodeExpired(Boolean promoCodeExpired) {
         this.promoCodeExpired = promoCodeExpired;
         return this;
@@ -147,6 +159,7 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promoCodeValid")
     public Boolean promoCodeValid;
+
     public BookingCalculateprice200ApplicationJSONData withPromoCodeValid(Boolean promoCodeValid) {
         this.promoCodeValid = promoCodeValid;
         return this;
@@ -158,9 +171,11 @@ public class BookingCalculateprice200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesApplied")
     public String[] rulesApplied;
+
     public BookingCalculateprice200ApplicationJSONData withRulesApplied(String[] rulesApplied) {
         this.rulesApplied = rulesApplied;
         return this;
     }
     
+    public BookingCalculateprice200ApplicationJSONData(){}
 }

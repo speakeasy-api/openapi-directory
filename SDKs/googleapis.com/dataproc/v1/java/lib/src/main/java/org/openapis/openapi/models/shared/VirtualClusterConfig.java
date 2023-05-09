@@ -18,6 +18,7 @@ public class VirtualClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auxiliaryServicesConfig")
     public AuxiliaryServicesConfig auxiliaryServicesConfig;
+
     public VirtualClusterConfig withAuxiliaryServicesConfig(AuxiliaryServicesConfig auxiliaryServicesConfig) {
         this.auxiliaryServicesConfig = auxiliaryServicesConfig;
         return this;
@@ -29,6 +30,7 @@ public class VirtualClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubernetesClusterConfig")
     public KubernetesClusterConfig kubernetesClusterConfig;
+
     public VirtualClusterConfig withKubernetesClusterConfig(KubernetesClusterConfig kubernetesClusterConfig) {
         this.kubernetesClusterConfig = kubernetesClusterConfig;
         return this;
@@ -40,9 +42,11 @@ public class VirtualClusterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingBucket")
     public String stagingBucket;
+
     public VirtualClusterConfig withStagingBucket(String stagingBucket) {
         this.stagingBucket = stagingBucket;
         return this;
     }
     
+    public VirtualClusterConfig(){}
 }

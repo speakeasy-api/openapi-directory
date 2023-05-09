@@ -15,9 +15,11 @@ public class StopUserImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserImportJob")
     public UserImportJobType userImportJob;
+
     public StopUserImportJobResponse withUserImportJob(UserImportJobType userImportJob) {
         this.userImportJob = userImportJob;
         return this;
     }
     
+    public StopUserImportJobResponse(){}
 }

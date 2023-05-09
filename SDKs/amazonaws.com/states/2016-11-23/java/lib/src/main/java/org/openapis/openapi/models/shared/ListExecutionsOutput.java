@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListExecutionsOutput {
     @JsonProperty("executions")
     public ExecutionListItem[] executions;
+
     public ListExecutionsOutput withExecutions(ExecutionListItem[] executions) {
         this.executions = executions;
         return this;
@@ -22,9 +23,13 @@ public class ListExecutionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExecutionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExecutionsOutput(@JsonProperty("executions") ExecutionListItem[] executions) {
+        this.executions = executions;
+  }
 }

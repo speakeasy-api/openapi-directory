@@ -51,7 +51,7 @@ public class MyInfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomaticInvitationListResponse res = new org.openapis.openapi.models.operations.GetAutomaticInvitationListResponse() {{
+        org.openapis.openapi.models.operations.GetAutomaticInvitationListResponse res = new org.openapis.openapi.models.operations.GetAutomaticInvitationListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -69,8 +69,6 @@ public class MyInfo {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,7 +168,7 @@ public class MyInfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamTemplateDetailResponse res = new org.openapis.openapi.models.operations.GetTeamTemplateDetailResponse() {{
+        org.openapis.openapi.models.operations.GetTeamTemplateDetailResponse res = new org.openapis.openapi.models.operations.GetTeamTemplateDetailResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -188,8 +186,6 @@ public class MyInfo {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,7 +285,7 @@ public class MyInfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTeamTemplateListResponse res = new org.openapis.openapi.models.operations.GetTeamTemplateListResponse() {{
+        org.openapis.openapi.models.operations.GetTeamTemplateListResponse res = new org.openapis.openapi.models.operations.GetTeamTemplateListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -307,8 +303,6 @@ public class MyInfo {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,7 +404,7 @@ public class MyInfo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadProfileImageResponse res = new org.openapis.openapi.models.operations.UploadProfileImageResponse() {{
+        org.openapis.openapi.models.operations.UploadProfileImageResponse res = new org.openapis.openapi.models.operations.UploadProfileImageResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -428,8 +422,6 @@ public class MyInfo {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

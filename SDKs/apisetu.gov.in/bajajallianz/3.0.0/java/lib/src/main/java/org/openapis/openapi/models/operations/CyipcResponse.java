@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CyipcResponse {
     
     public String contentType;
+
     public CyipcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CyipcResponse {
     
     
     public Integer statusCode;
+
     public CyipcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CyipcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CyipcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CyipcResponse {
      */
     
     public Cyipc400ApplicationJSON cyipc400ApplicationJSONObject;
+
     public CyipcResponse withCyipc400ApplicationJSONObject(Cyipc400ApplicationJSON cyipc400ApplicationJSONObject) {
         this.cyipc400ApplicationJSONObject = cyipc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CyipcResponse {
      */
     
     public Cyipc401ApplicationJSON cyipc401ApplicationJSONObject;
+
     public CyipcResponse withCyipc401ApplicationJSONObject(Cyipc401ApplicationJSON cyipc401ApplicationJSONObject) {
         this.cyipc401ApplicationJSONObject = cyipc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CyipcResponse {
      */
     
     public Cyipc404ApplicationJSON cyipc404ApplicationJSONObject;
+
     public CyipcResponse withCyipc404ApplicationJSONObject(Cyipc404ApplicationJSON cyipc404ApplicationJSONObject) {
         this.cyipc404ApplicationJSONObject = cyipc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CyipcResponse {
      */
     
     public Cyipc500ApplicationJSON cyipc500ApplicationJSONObject;
+
     public CyipcResponse withCyipc500ApplicationJSONObject(Cyipc500ApplicationJSON cyipc500ApplicationJSONObject) {
         this.cyipc500ApplicationJSONObject = cyipc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CyipcResponse {
      */
     
     public Cyipc502ApplicationJSON cyipc502ApplicationJSONObject;
+
     public CyipcResponse withCyipc502ApplicationJSONObject(Cyipc502ApplicationJSON cyipc502ApplicationJSONObject) {
         this.cyipc502ApplicationJSONObject = cyipc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CyipcResponse {
      */
     
     public Cyipc503ApplicationJSON cyipc503ApplicationJSONObject;
+
     public CyipcResponse withCyipc503ApplicationJSONObject(Cyipc503ApplicationJSON cyipc503ApplicationJSONObject) {
         this.cyipc503ApplicationJSONObject = cyipc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CyipcResponse {
      */
     
     public Cyipc504ApplicationJSON cyipc504ApplicationJSONObject;
+
     public CyipcResponse withCyipc504ApplicationJSONObject(Cyipc504ApplicationJSON cyipc504ApplicationJSONObject) {
         this.cyipc504ApplicationJSONObject = cyipc504ApplicationJSONObject;
         return this;
     }
     
+    public CyipcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

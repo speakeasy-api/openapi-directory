@@ -15,6 +15,7 @@ public class TransitTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeGroupNames")
     public String[] postalCodeGroupNames;
+
     public TransitTable withPostalCodeGroupNames(String[] postalCodeGroupNames) {
         this.postalCodeGroupNames = postalCodeGroupNames;
         return this;
@@ -23,6 +24,7 @@ public class TransitTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public TransitTableTransitTimeRow[] rows;
+
     public TransitTable withRows(TransitTableTransitTimeRow[] rows) {
         this.rows = rows;
         return this;
@@ -34,9 +36,11 @@ public class TransitTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitTimeLabels")
     public String[] transitTimeLabels;
+
     public TransitTable withTransitTimeLabels(String[] transitTimeLabels) {
         this.transitTimeLabels = transitTimeLabels;
         return this;
     }
     
+    public TransitTable(){}
 }

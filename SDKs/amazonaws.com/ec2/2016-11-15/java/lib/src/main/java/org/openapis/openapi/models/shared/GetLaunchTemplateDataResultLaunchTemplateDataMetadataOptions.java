@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions {
     
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsHttpEndpointEnum httpEndpoint;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions withHttpEndpoint(GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsHttpEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions withHttpProtocolIpv6(GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -26,6 +28,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions {
     
     
     public Long httpPutResponseHopLimit;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -33,6 +36,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsHttpTokensEnum httpTokens;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions withHttpTokens(GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsHttpTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -40,6 +44,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions withInstanceMetadataTags(GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
@@ -47,9 +52,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions {
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsStateEnum state;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions withState(GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptionsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataMetadataOptions(){}
 }

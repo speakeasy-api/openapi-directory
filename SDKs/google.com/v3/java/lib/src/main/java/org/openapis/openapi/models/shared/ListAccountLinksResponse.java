@@ -18,9 +18,11 @@ public class ListAccountLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountLinks")
     public AccountLink[] accountLinks;
+
     public ListAccountLinksResponse withAccountLinks(AccountLink[] accountLinks) {
         this.accountLinks = accountLinks;
         return this;
     }
     
+    public ListAccountLinksResponse(){}
 }

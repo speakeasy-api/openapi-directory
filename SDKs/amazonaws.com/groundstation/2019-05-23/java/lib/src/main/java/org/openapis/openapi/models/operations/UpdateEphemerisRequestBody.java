@@ -14,6 +14,7 @@ public class UpdateEphemerisRequestBody {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateEphemerisRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,6 +26,7 @@ public class UpdateEphemerisRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateEphemerisRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class UpdateEphemerisRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public UpdateEphemerisRequestBody withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public UpdateEphemerisRequestBody(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

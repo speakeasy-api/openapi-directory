@@ -18,6 +18,7 @@ public class ListInboundSamlSsoProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundSamlSsoProfiles")
     public InboundSamlSsoProfile[] inboundSamlSsoProfiles;
+
     public ListInboundSamlSsoProfilesResponse withInboundSamlSsoProfiles(InboundSamlSsoProfile[] inboundSamlSsoProfiles) {
         this.inboundSamlSsoProfiles = inboundSamlSsoProfiles;
         return this;
@@ -29,9 +30,11 @@ public class ListInboundSamlSsoProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInboundSamlSsoProfilesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListInboundSamlSsoProfilesResponse(){}
 }

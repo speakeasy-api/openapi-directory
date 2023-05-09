@@ -17,6 +17,7 @@ public class CatalogModifierOverride {
      */
     @JsonProperty("modifier_id")
     public String modifierId;
+
     public CatalogModifierOverride withModifierId(String modifierId) {
         this.modifierId = modifierId;
         return this;
@@ -28,9 +29,13 @@ public class CatalogModifierOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_by_default")
     public Boolean onByDefault;
+
     public CatalogModifierOverride withOnByDefault(Boolean onByDefault) {
         this.onByDefault = onByDefault;
         return this;
     }
     
+    public CatalogModifierOverride(@JsonProperty("modifier_id") String modifierId) {
+        this.modifierId = modifierId;
+  }
 }

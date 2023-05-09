@@ -15,6 +15,7 @@ public class GetPatchBaselineForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public GetPatchBaselineForPatchGroupResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -23,6 +24,7 @@ public class GetPatchBaselineForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystemEnum operatingSystem;
+
     public GetPatchBaselineForPatchGroupResult withOperatingSystem(OperatingSystemEnum operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -31,9 +33,11 @@ public class GetPatchBaselineForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public GetPatchBaselineForPatchGroupResult withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public GetPatchBaselineForPatchGroupResult(){}
 }

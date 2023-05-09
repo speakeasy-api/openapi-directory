@@ -12,6 +12,7 @@ public class SearchCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_type")
     public SearchCatalogAssetTypeEnum[] assetType;
+
     public SearchCatalogRequest withAssetType(SearchCatalogAssetTypeEnum[] assetType) {
         this.assetType = assetType;
         return this;
@@ -22,6 +23,7 @@ public class SearchCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection_id")
     public String[] collectionId;
+
     public SearchCatalogRequest withCollectionId(String[] collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -32,6 +34,7 @@ public class SearchCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchCatalogRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class SearchCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchCatalogRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +56,7 @@ public class SearchCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchCatalogRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -62,9 +67,11 @@ public class SearchCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchCatalogSortEnum sort;
+
     public SearchCatalogRequest withSort(SearchCatalogSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public SearchCatalogRequest(){}
 }

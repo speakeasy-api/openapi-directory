@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateQuerySuggestionsBlockListResponse {
@@ -12,6 +13,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateQuerySuggestionsBlockListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
      */
     
     public Object conflictException;
+
     public UpdateQuerySuggestionsBlockListResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
     
     
     public String contentType;
+
     public UpdateQuerySuggestionsBlockListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
      */
     
     public Object internalServerException;
+
     public UpdateQuerySuggestionsBlockListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
     
     
     public Integer statusCode;
+
     public UpdateQuerySuggestionsBlockListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateQuerySuggestionsBlockListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateQuerySuggestionsBlockListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateQuerySuggestionsBlockListResponse {
      */
     
     public Object throttlingException;
+
     public UpdateQuerySuggestionsBlockListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateQuerySuggestionsBlockListResponse {
      */
     
     public Object validationException;
+
     public UpdateQuerySuggestionsBlockListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateQuerySuggestionsBlockListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

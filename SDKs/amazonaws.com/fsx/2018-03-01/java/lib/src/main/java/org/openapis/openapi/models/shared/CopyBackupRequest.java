@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CopyBackupRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CopyBackupRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -23,6 +24,7 @@ public class CopyBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTags")
     public Boolean copyTags;
+
     public CopyBackupRequest withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -34,6 +36,7 @@ public class CopyBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CopyBackupRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -41,6 +44,7 @@ public class CopyBackupRequest {
     
     @JsonProperty("SourceBackupId")
     public String sourceBackupId;
+
     public CopyBackupRequest withSourceBackupId(String sourceBackupId) {
         this.sourceBackupId = sourceBackupId;
         return this;
@@ -49,6 +53,7 @@ public class CopyBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRegion")
     public String sourceRegion;
+
     public CopyBackupRequest withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -60,9 +65,13 @@ public class CopyBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CopyBackupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CopyBackupRequest(@JsonProperty("SourceBackupId") String sourceBackupId) {
+        this.sourceBackupId = sourceBackupId;
+  }
 }

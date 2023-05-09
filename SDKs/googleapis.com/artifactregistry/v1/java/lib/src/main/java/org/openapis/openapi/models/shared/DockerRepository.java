@@ -18,9 +18,11 @@ public class DockerRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicRepository")
     public DockerRepositoryPublicRepositoryEnum publicRepository;
+
     public DockerRepository withPublicRepository(DockerRepositoryPublicRepositoryEnum publicRepository) {
         this.publicRepository = publicRepository;
         return this;
     }
     
+    public DockerRepository(){}
 }

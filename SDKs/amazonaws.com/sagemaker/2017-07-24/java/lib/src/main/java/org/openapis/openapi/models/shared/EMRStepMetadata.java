@@ -15,6 +15,7 @@ public class EMRStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public EMRStepMetadata withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -23,6 +24,7 @@ public class EMRStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFilePath")
     public String logFilePath;
+
     public EMRStepMetadata withLogFilePath(String logFilePath) {
         this.logFilePath = logFilePath;
         return this;
@@ -31,6 +33,7 @@ public class EMRStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepId")
     public String stepId;
+
     public EMRStepMetadata withStepId(String stepId) {
         this.stepId = stepId;
         return this;
@@ -39,9 +42,11 @@ public class EMRStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepName")
     public String stepName;
+
     public EMRStepMetadata withStepName(String stepName) {
         this.stepName = stepName;
         return this;
     }
     
+    public EMRStepMetadata(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMessagesByChannelResponse {
     
     public byte[] body;
+
     public GetMessagesByChannelResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetMessagesByChannelResponse {
     
     
     public String contentType;
+
     public GetMessagesByChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetMessagesByChannelResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetMessagesByChannelResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetMessagesByChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.Message[] messages;
+
     public GetMessagesByChannelResponse withMessages(org.openapis.openapi.models.shared.Message[] messages) {
         this.messages = messages;
         return this;
@@ -40,6 +45,7 @@ public class GetMessagesByChannelResponse {
     
     
     public Integer statusCode;
+
     public GetMessagesByChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,6 +53,7 @@ public class GetMessagesByChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMessagesByChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -57,9 +64,14 @@ public class GetMessagesByChannelResponse {
      */
     
     public String getMessagesByChannel2XXTextHTMLString;
+
     public GetMessagesByChannelResponse withGetMessagesByChannel2XXTextHTMLString(String getMessagesByChannel2XXTextHTMLString) {
         this.getMessagesByChannel2XXTextHTMLString = getMessagesByChannel2XXTextHTMLString;
         return this;
     }
     
+    public GetMessagesByChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SuggestedTextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public SuggestedTextStyle withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedTextStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyleSuggestionState")
     public TextStyleSuggestionState textStyleSuggestionState;
+
     public SuggestedTextStyle withTextStyleSuggestionState(TextStyleSuggestionState textStyleSuggestionState) {
         this.textStyleSuggestionState = textStyleSuggestionState;
         return this;
     }
     
+    public SuggestedTextStyle(){}
 }

@@ -15,6 +15,7 @@ public class ImpersonationMatchedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImpersonationRuleId")
     public String impersonationRuleId;
+
     public ImpersonationMatchedRule withImpersonationRuleId(String impersonationRuleId) {
         this.impersonationRuleId = impersonationRuleId;
         return this;
@@ -23,9 +24,11 @@ public class ImpersonationMatchedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ImpersonationMatchedRule withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ImpersonationMatchedRule(){}
 }

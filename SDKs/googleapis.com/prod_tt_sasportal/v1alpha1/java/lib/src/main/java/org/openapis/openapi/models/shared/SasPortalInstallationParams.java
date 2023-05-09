@@ -18,6 +18,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaAzimuth")
     public Integer antennaAzimuth;
+
     public SasPortalInstallationParams withAntennaAzimuth(Integer antennaAzimuth) {
         this.antennaAzimuth = antennaAzimuth;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaBeamwidth")
     public Integer antennaBeamwidth;
+
     public SasPortalInstallationParams withAntennaBeamwidth(Integer antennaBeamwidth) {
         this.antennaBeamwidth = antennaBeamwidth;
         return this;
@@ -40,6 +42,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaDowntilt")
     public Integer antennaDowntilt;
+
     public SasPortalInstallationParams withAntennaDowntilt(Integer antennaDowntilt) {
         this.antennaDowntilt = antennaDowntilt;
         return this;
@@ -51,6 +54,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaGain")
     public Integer antennaGain;
+
     public SasPortalInstallationParams withAntennaGain(Integer antennaGain) {
         this.antennaGain = antennaGain;
         return this;
@@ -62,6 +66,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaGainNewField")
     public Double antennaGainNewField;
+
     public SasPortalInstallationParams withAntennaGainNewField(Double antennaGainNewField) {
         this.antennaGainNewField = antennaGainNewField;
         return this;
@@ -73,6 +78,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("antennaModel")
     public String antennaModel;
+
     public SasPortalInstallationParams withAntennaModel(String antennaModel) {
         this.antennaModel = antennaModel;
         return this;
@@ -84,6 +90,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpeCbsdIndication")
     public Boolean cpeCbsdIndication;
+
     public SasPortalInstallationParams withCpeCbsdIndication(Boolean cpeCbsdIndication) {
         this.cpeCbsdIndication = cpeCbsdIndication;
         return this;
@@ -95,6 +102,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eirpCapability")
     public Integer eirpCapability;
+
     public SasPortalInstallationParams withEirpCapability(Integer eirpCapability) {
         this.eirpCapability = eirpCapability;
         return this;
@@ -106,6 +114,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eirpCapabilityNewField")
     public Double eirpCapabilityNewField;
+
     public SasPortalInstallationParams withEirpCapabilityNewField(Double eirpCapabilityNewField) {
         this.eirpCapabilityNewField = eirpCapabilityNewField;
         return this;
@@ -117,6 +126,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Double height;
+
     public SasPortalInstallationParams withHeight(Double height) {
         this.height = height;
         return this;
@@ -128,6 +138,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heightType")
     public SasPortalInstallationParamsHeightTypeEnum heightType;
+
     public SasPortalInstallationParams withHeightType(SasPortalInstallationParamsHeightTypeEnum heightType) {
         this.heightType = heightType;
         return this;
@@ -139,6 +150,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalAccuracy")
     public Double horizontalAccuracy;
+
     public SasPortalInstallationParams withHorizontalAccuracy(Double horizontalAccuracy) {
         this.horizontalAccuracy = horizontalAccuracy;
         return this;
@@ -150,6 +162,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indoorDeployment")
     public Boolean indoorDeployment;
+
     public SasPortalInstallationParams withIndoorDeployment(Boolean indoorDeployment) {
         this.indoorDeployment = indoorDeployment;
         return this;
@@ -161,6 +174,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public SasPortalInstallationParams withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -172,6 +186,7 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public SasPortalInstallationParams withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -183,9 +198,11 @@ public class SasPortalInstallationParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verticalAccuracy")
     public Double verticalAccuracy;
+
     public SasPortalInstallationParams withVerticalAccuracy(Double verticalAccuracy) {
         this.verticalAccuracy = verticalAccuracy;
         return this;
     }
     
+    public SasPortalInstallationParams(){}
 }

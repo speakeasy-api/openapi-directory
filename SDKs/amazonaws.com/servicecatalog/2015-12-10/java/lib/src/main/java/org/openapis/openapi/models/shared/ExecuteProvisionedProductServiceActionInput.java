@@ -12,6 +12,7 @@ public class ExecuteProvisionedProductServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ExecuteProvisionedProductServiceActionInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class ExecuteProvisionedProductServiceActionInput {
     
     @JsonProperty("ExecuteToken")
     public String executeToken;
+
     public ExecuteProvisionedProductServiceActionInput withExecuteToken(String executeToken) {
         this.executeToken = executeToken;
         return this;
@@ -27,6 +29,7 @@ public class ExecuteProvisionedProductServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String[]> parameters;
+
     public ExecuteProvisionedProductServiceActionInput withParameters(java.util.Map<String, String[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -34,6 +37,7 @@ public class ExecuteProvisionedProductServiceActionInput {
     
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public ExecuteProvisionedProductServiceActionInput withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -41,9 +45,15 @@ public class ExecuteProvisionedProductServiceActionInput {
     
     @JsonProperty("ServiceActionId")
     public String serviceActionId;
+
     public ExecuteProvisionedProductServiceActionInput withServiceActionId(String serviceActionId) {
         this.serviceActionId = serviceActionId;
         return this;
     }
     
+    public ExecuteProvisionedProductServiceActionInput(@JsonProperty("ExecuteToken") String executeToken, @JsonProperty("ProvisionedProductId") String provisionedProductId, @JsonProperty("ServiceActionId") String serviceActionId) {
+        this.executeToken = executeToken;
+        this.provisionedProductId = provisionedProductId;
+        this.serviceActionId = serviceActionId;
+  }
 }

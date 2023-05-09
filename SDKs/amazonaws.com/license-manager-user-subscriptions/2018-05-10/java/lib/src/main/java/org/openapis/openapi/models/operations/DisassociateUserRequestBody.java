@@ -15,6 +15,7 @@ public class DisassociateUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public DisassociateUserRequestBody withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -25,6 +26,7 @@ public class DisassociateUserRequestBody {
      */
     @JsonProperty("IdentityProvider")
     public DisassociateUserRequestBodyIdentityProvider identityProvider;
+
     public DisassociateUserRequestBody withIdentityProvider(DisassociateUserRequestBodyIdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -35,6 +37,7 @@ public class DisassociateUserRequestBody {
      */
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DisassociateUserRequestBody withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -45,9 +48,15 @@ public class DisassociateUserRequestBody {
      */
     @JsonProperty("Username")
     public String username;
+
     public DisassociateUserRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public DisassociateUserRequestBody(@JsonProperty("IdentityProvider") DisassociateUserRequestBodyIdentityProvider identityProvider, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Username") String username) {
+        this.identityProvider = identityProvider;
+        this.instanceId = instanceId;
+        this.username = username;
+  }
 }

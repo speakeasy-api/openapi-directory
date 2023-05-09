@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeKeyResponse {
@@ -12,6 +13,7 @@ public class DescribeKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeKeyResponse {
     
     
     public String contentType;
+
     public DescribeKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeKeyResponse describeKeyResponse;
+
     public DescribeKeyResponse withDescribeKeyResponse(org.openapis.openapi.models.shared.DescribeKeyResponse describeKeyResponse) {
         this.describeKeyResponse = describeKeyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeKeyResponse {
      */
     
     public Object internalServerException;
+
     public DescribeKeyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeKeyResponse {
     
     
     public Integer statusCode;
+
     public DescribeKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeKeyResponse {
      */
     
     public Object throttlingException;
+
     public DescribeKeyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeKeyResponse {
      */
     
     public Object validationException;
+
     public DescribeKeyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

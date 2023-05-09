@@ -15,9 +15,11 @@ public class AsyncInferenceClientConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentInvocationsPerInstance")
     public Long maxConcurrentInvocationsPerInstance;
+
     public AsyncInferenceClientConfig withMaxConcurrentInvocationsPerInstance(Long maxConcurrentInvocationsPerInstance) {
         this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
         return this;
     }
     
+    public AsyncInferenceClientConfig(){}
 }

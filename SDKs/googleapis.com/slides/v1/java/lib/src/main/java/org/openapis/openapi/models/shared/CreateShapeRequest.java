@@ -18,6 +18,7 @@ public class CreateShapeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementProperties")
     public PageElementProperties elementProperties;
+
     public CreateShapeRequest withElementProperties(PageElementProperties elementProperties) {
         this.elementProperties = elementProperties;
         return this;
@@ -29,6 +30,7 @@ public class CreateShapeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateShapeRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class CreateShapeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shapeType")
     public CreateShapeRequestShapeTypeEnum shapeType;
+
     public CreateShapeRequest withShapeType(CreateShapeRequestShapeTypeEnum shapeType) {
         this.shapeType = shapeType;
         return this;
     }
     
+    public CreateShapeRequest(){}
 }

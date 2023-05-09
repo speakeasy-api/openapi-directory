@@ -15,9 +15,11 @@ public class StatisticalThreshold {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public String statistic;
+
     public StatisticalThreshold withStatistic(String statistic) {
         this.statistic = statistic;
         return this;
     }
     
+    public StatisticalThreshold(){}
 }

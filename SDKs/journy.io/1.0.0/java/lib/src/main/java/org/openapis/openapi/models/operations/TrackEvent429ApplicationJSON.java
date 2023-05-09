@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrackEvent429ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public TrackEvent429ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class TrackEvent429ApplicationJSON {
     
     @JsonProperty("meta")
     public TrackEvent429ApplicationJSONMeta meta;
+
     public TrackEvent429ApplicationJSON withMeta(TrackEvent429ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public TrackEvent429ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("meta") TrackEvent429ApplicationJSONMeta meta) {
+        this.message = message;
+        this.meta = meta;
+  }
 }

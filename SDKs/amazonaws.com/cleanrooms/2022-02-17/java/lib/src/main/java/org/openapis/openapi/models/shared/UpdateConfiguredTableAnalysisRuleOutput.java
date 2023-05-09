@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateConfiguredTableAnalysisRuleOutput {
     @JsonProperty("analysisRule")
     public ConfiguredTableAnalysisRule analysisRule;
+
     public UpdateConfiguredTableAnalysisRuleOutput withAnalysisRule(ConfiguredTableAnalysisRule analysisRule) {
         this.analysisRule = analysisRule;
         return this;
     }
     
+    public UpdateConfiguredTableAnalysisRuleOutput(@JsonProperty("analysisRule") ConfiguredTableAnalysisRule analysisRule) {
+        this.analysisRule = analysisRule;
+  }
 }

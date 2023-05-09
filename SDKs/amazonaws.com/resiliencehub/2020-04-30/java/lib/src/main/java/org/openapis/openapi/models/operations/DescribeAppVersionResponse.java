@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAppVersionResponse {
@@ -12,6 +13,7 @@ public class DescribeAppVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAppVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAppVersionResponse {
     
     
     public String contentType;
+
     public DescribeAppVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAppVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAppVersionResponse describeAppVersionResponse;
+
     public DescribeAppVersionResponse withDescribeAppVersionResponse(org.openapis.openapi.models.shared.DescribeAppVersionResponse describeAppVersionResponse) {
         this.describeAppVersionResponse = describeAppVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAppVersionResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAppVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAppVersionResponse {
     
     
     public Integer statusCode;
+
     public DescribeAppVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAppVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAppVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAppVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAppVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAppVersionResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAppVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAppVersionResponse {
      */
     
     public Object validationException;
+
     public DescribeAppVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAppVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

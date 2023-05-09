@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListSSHPublicKeysRequest {
     
     public String marker;
+
     public ListSSHPublicKeysRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListSSHPublicKeysRequest {
     
     
     public Long maxItems;
+
     public ListSSHPublicKeysRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,11 @@ public class ListSSHPublicKeysRequest {
     
     
     public String userName;
+
     public ListSSHPublicKeysRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ListSSHPublicKeysRequest(){}
 }

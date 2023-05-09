@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTime")
     public String eventTime;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionEvent withEventTime(String eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum eventType;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionEvent withEventType(GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionEvent withReason(String reason) {
         this.reason = reason;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionEvent withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1TransactionEvent(){}
 }

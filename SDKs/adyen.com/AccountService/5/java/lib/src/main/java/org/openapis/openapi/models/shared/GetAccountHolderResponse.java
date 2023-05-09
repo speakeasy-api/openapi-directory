@@ -23,6 +23,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetAccountHolderResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -31,6 +32,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderDetails")
     public AccountHolderDetails accountHolderDetails;
+
     public GetAccountHolderResponse withAccountHolderDetails(AccountHolderDetails accountHolderDetails) {
         this.accountHolderDetails = accountHolderDetails;
         return this;
@@ -39,6 +41,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public GetAccountHolderResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -50,6 +53,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public Account[] accounts;
+
     public GetAccountHolderResponse withAccounts(Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -61,6 +65,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetAccountHolderResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -72,6 +77,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public GetAccountHolderResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -83,6 +89,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntity")
     public GetAccountHolderResponseLegalEntityEnum legalEntity;
+
     public GetAccountHolderResponse withLegalEntity(GetAccountHolderResponseLegalEntityEnum legalEntity) {
         this.legalEntity = legalEntity;
         return this;
@@ -91,6 +98,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationData")
     public MigrationData migrationData;
+
     public GetAccountHolderResponse withMigrationData(MigrationData migrationData) {
         this.migrationData = migrationData;
         return this;
@@ -102,6 +110,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCurrency")
     public String primaryCurrency;
+
     public GetAccountHolderResponse withPrimaryCurrency(String primaryCurrency) {
         this.primaryCurrency = primaryCurrency;
         return this;
@@ -113,6 +122,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public GetAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -124,6 +134,7 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public GetAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -137,6 +148,7 @@ public class GetAccountHolderResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("systemUpToDateTime")
     public OffsetDateTime systemUpToDateTime;
+
     public GetAccountHolderResponse withSystemUpToDateTime(OffsetDateTime systemUpToDateTime) {
         this.systemUpToDateTime = systemUpToDateTime;
         return this;
@@ -145,9 +157,11 @@ public class GetAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public KYCVerificationResult verification;
+
     public GetAccountHolderResponse withVerification(KYCVerificationResult verification) {
         this.verification = verification;
         return this;
     }
     
+    public GetAccountHolderResponse(){}
 }

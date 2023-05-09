@@ -4,21 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Gender1Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
     public String firstName;
+
     public Gender1Request withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
     
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
-    public String lastName;
-    public Gender1Request withLastName(String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
-    
+    public Gender1Request(@JsonProperty("firstName") String firstName) {
+        this.firstName = firstName;
+  }
 }

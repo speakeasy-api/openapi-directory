@@ -15,6 +15,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BandMathConfig")
     public BandMathConfigInput bandMathConfig;
+
     public JobConfigInput withBandMathConfig(BandMathConfigInput bandMathConfig) {
         this.bandMathConfig = bandMathConfig;
         return this;
@@ -23,6 +24,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudMaskingConfig")
     public java.util.Map<String, Object> cloudMaskingConfig;
+
     public JobConfigInput withCloudMaskingConfig(java.util.Map<String, Object> cloudMaskingConfig) {
         this.cloudMaskingConfig = cloudMaskingConfig;
         return this;
@@ -31,6 +33,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudRemovalConfig")
     public CloudRemovalConfigInput cloudRemovalConfig;
+
     public JobConfigInput withCloudRemovalConfig(CloudRemovalConfigInput cloudRemovalConfig) {
         this.cloudRemovalConfig = cloudRemovalConfig;
         return this;
@@ -39,6 +42,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoMosaicConfig")
     public GeoMosaicConfigInput geoMosaicConfig;
+
     public JobConfigInput withGeoMosaicConfig(GeoMosaicConfigInput geoMosaicConfig) {
         this.geoMosaicConfig = geoMosaicConfig;
         return this;
@@ -47,6 +51,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LandCoverSegmentationConfig")
     public java.util.Map<String, Object> landCoverSegmentationConfig;
+
     public JobConfigInput withLandCoverSegmentationConfig(java.util.Map<String, Object> landCoverSegmentationConfig) {
         this.landCoverSegmentationConfig = landCoverSegmentationConfig;
         return this;
@@ -55,6 +60,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResamplingConfig")
     public ResamplingConfigInput resamplingConfig;
+
     public JobConfigInput withResamplingConfig(ResamplingConfigInput resamplingConfig) {
         this.resamplingConfig = resamplingConfig;
         return this;
@@ -63,6 +69,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackConfig")
     public StackConfigInput stackConfig;
+
     public JobConfigInput withStackConfig(StackConfigInput stackConfig) {
         this.stackConfig = stackConfig;
         return this;
@@ -71,6 +78,7 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemporalStatisticsConfig")
     public TemporalStatisticsConfigInput temporalStatisticsConfig;
+
     public JobConfigInput withTemporalStatisticsConfig(TemporalStatisticsConfigInput temporalStatisticsConfig) {
         this.temporalStatisticsConfig = temporalStatisticsConfig;
         return this;
@@ -79,9 +87,11 @@ public class JobConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZonalStatisticsConfig")
     public ZonalStatisticsConfigInput zonalStatisticsConfig;
+
     public JobConfigInput withZonalStatisticsConfig(ZonalStatisticsConfigInput zonalStatisticsConfig) {
         this.zonalStatisticsConfig = zonalStatisticsConfig;
         return this;
     }
     
+    public JobConfigInput(){}
 }

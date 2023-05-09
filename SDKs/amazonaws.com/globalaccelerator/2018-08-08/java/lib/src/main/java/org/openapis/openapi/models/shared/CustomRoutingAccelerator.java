@@ -20,6 +20,7 @@ public class CustomRoutingAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public CustomRoutingAccelerator withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -30,6 +31,7 @@ public class CustomRoutingAccelerator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public CustomRoutingAccelerator withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class CustomRoutingAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public CustomRoutingAccelerator withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -46,6 +49,7 @@ public class CustomRoutingAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public CustomRoutingAccelerator withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -54,6 +58,7 @@ public class CustomRoutingAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public CustomRoutingAccelerator withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -62,6 +67,7 @@ public class CustomRoutingAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpSets")
     public IpSet[] ipSets;
+
     public CustomRoutingAccelerator withIpSets(IpSet[] ipSets) {
         this.ipSets = ipSets;
         return this;
@@ -72,6 +78,7 @@ public class CustomRoutingAccelerator {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public CustomRoutingAccelerator withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -80,6 +87,7 @@ public class CustomRoutingAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CustomRoutingAccelerator withName(String name) {
         this.name = name;
         return this;
@@ -88,9 +96,11 @@ public class CustomRoutingAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CustomRoutingAcceleratorStatusEnum status;
+
     public CustomRoutingAccelerator withStatus(CustomRoutingAcceleratorStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CustomRoutingAccelerator(){}
 }

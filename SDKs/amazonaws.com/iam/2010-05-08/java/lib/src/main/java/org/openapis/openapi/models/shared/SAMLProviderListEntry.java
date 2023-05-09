@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class SAMLProviderListEntry {
     
     public String arn;
+
     public SAMLProviderListEntry withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class SAMLProviderListEntry {
     
     
     public OffsetDateTime createDate;
+
     public SAMLProviderListEntry withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,9 +28,11 @@ public class SAMLProviderListEntry {
     
     
     public OffsetDateTime validUntil;
+
     public SAMLProviderListEntry withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public SAMLProviderListEntry(){}
 }

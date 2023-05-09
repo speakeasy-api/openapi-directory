@@ -15,6 +15,7 @@ public class ErrorRootCauseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public ErrorRootCauseService withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ErrorRootCauseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityPath")
     public ErrorRootCauseEntity[] entityPath;
+
     public ErrorRootCauseService withEntityPath(ErrorRootCauseEntity[] entityPath) {
         this.entityPath = entityPath;
         return this;
@@ -31,6 +33,7 @@ public class ErrorRootCauseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Inferred")
     public Boolean inferred;
+
     public ErrorRootCauseService withInferred(Boolean inferred) {
         this.inferred = inferred;
         return this;
@@ -39,6 +42,7 @@ public class ErrorRootCauseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ErrorRootCauseService withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ErrorRootCauseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public ErrorRootCauseService withNames(String[] names) {
         this.names = names;
         return this;
@@ -55,9 +60,11 @@ public class ErrorRootCauseService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ErrorRootCauseService withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorRootCauseService(){}
 }

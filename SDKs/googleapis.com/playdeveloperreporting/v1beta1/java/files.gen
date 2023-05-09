@@ -73,4 +73,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GooglePlayDeveloperReportin
 lib/src/main/java/org/openapis/openapi/models/shared/GooglePlayDeveloperReportingV1beta1MetricsRow.java
 lib/src/main/java/org/openapis/openapi/models/shared/GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequestUserCohortEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.java
+docs/sdk/README.md
+docs/anomalies/README.md
+docs/vitals/README.md
 USAGE.md

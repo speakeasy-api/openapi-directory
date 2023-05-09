@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateMembershipForUserLegacyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsAddOrUpdateMembershipForUserLegacyRequestBody requestBody;
+
     public TeamsAddOrUpdateMembershipForUserLegacyRequest withRequestBody(TeamsAddOrUpdateMembershipForUserLegacyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class TeamsAddOrUpdateMembershipForUserLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsAddOrUpdateMembershipForUserLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -23,9 +26,14 @@ public class TeamsAddOrUpdateMembershipForUserLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public TeamsAddOrUpdateMembershipForUserLegacyRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public TeamsAddOrUpdateMembershipForUserLegacyRequest(@JsonProperty("team_id") Long teamId, @JsonProperty("username") String username) {
+        this.teamId = teamId;
+        this.username = username;
+  }
 }

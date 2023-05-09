@@ -18,9 +18,11 @@ public class RefreshDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public RefreshDataSourceObjectExecutionStatus[] statuses;
+
     public RefreshDataSourceResponse withStatuses(RefreshDataSourceObjectExecutionStatus[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public RefreshDataSourceResponse(){}
 }

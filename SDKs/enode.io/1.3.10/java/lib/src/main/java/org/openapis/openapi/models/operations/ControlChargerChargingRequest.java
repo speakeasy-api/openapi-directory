@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ControlChargerChargingRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ControlChargerChargingRequestBody requestBody;
+
     public ControlChargerChargingRequest withRequestBody(ControlChargerChargingRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class ControlChargerChargingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chargerId")
     public String chargerId;
+
     public ControlChargerChargingRequest withChargerId(String chargerId) {
         this.chargerId = chargerId;
         return this;
     }
     
+    public ControlChargerChargingRequest(@JsonProperty("chargerId") String chargerId) {
+        this.chargerId = chargerId;
+  }
 }

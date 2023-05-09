@@ -21,6 +21,7 @@ public class ListTrackersResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public ListTrackersResponseEntry withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -28,6 +29,7 @@ public class ListTrackersResponseEntry {
     
     @JsonProperty("Description")
     public String description;
+
     public ListTrackersResponseEntry withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class ListTrackersResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public ListTrackersResponseEntryPricingPlanEnum pricingPlan;
+
     public ListTrackersResponseEntry withPricingPlan(ListTrackersResponseEntryPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -44,6 +47,7 @@ public class ListTrackersResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public ListTrackersResponseEntry withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
@@ -51,6 +55,7 @@ public class ListTrackersResponseEntry {
     
     @JsonProperty("TrackerName")
     public String trackerName;
+
     public ListTrackersResponseEntry withTrackerName(String trackerName) {
         this.trackerName = trackerName;
         return this;
@@ -60,9 +65,16 @@ public class ListTrackersResponseEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public ListTrackersResponseEntry withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ListTrackersResponseEntry(@JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("Description") String description, @JsonProperty("TrackerName") String trackerName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.createTime = createTime;
+        this.description = description;
+        this.trackerName = trackerName;
+        this.updateTime = updateTime;
+  }
 }

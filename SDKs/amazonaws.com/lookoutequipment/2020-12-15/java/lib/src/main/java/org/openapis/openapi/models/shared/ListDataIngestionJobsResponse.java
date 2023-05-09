@@ -15,6 +15,7 @@ public class ListDataIngestionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataIngestionJobSummaries")
     public DataIngestionJobSummary[] dataIngestionJobSummaries;
+
     public ListDataIngestionJobsResponse withDataIngestionJobSummaries(DataIngestionJobSummary[] dataIngestionJobSummaries) {
         this.dataIngestionJobSummaries = dataIngestionJobSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListDataIngestionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataIngestionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataIngestionJobsResponse(){}
 }

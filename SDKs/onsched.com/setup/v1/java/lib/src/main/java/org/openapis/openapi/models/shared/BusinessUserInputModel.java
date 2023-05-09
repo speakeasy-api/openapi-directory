@@ -12,6 +12,7 @@ public class BusinessUserInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public BusinessUserInputModel withEmail(String email) {
         this.email = email;
         return this;
@@ -20,6 +21,7 @@ public class BusinessUserInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public BusinessUserInputModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -28,6 +30,7 @@ public class BusinessUserInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BusinessUserInputModel withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class BusinessUserInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public BusinessUserInputModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -44,6 +48,7 @@ public class BusinessUserInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public BusinessUserInputModel withRole(String role) {
         this.role = role;
         return this;
@@ -52,9 +57,11 @@ public class BusinessUserInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendRegistrationInvite")
     public Boolean sendRegistrationInvite;
+
     public BusinessUserInputModel withSendRegistrationInvite(Boolean sendRegistrationInvite) {
         this.sendRegistrationInvite = sendRegistrationInvite;
         return this;
     }
     
+    public BusinessUserInputModel(){}
 }

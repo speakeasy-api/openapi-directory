@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientAuthNotificationAcknowledgementAcknowledgement {
     @JsonProperty("status")
     public PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum status;
+
     public PatientAuthNotificationAcknowledgementAcknowledgement withStatus(PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PatientAuthNotificationAcknowledgementAcknowledgement(@JsonProperty("status") PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum status) {
+        this.status = status;
+  }
 }

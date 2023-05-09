@@ -16,6 +16,7 @@ public class GetAutomaticTransitionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetAutomaticTransitionsRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -26,9 +27,11 @@ public class GetAutomaticTransitionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
     public String storeId;
+
     public GetAutomaticTransitionsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetAutomaticTransitionsRequest(){}
 }

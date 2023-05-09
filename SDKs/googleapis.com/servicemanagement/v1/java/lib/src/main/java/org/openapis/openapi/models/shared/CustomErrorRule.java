@@ -18,6 +18,7 @@ public class CustomErrorRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isErrorType")
     public Boolean isErrorType;
+
     public CustomErrorRule withIsErrorType(Boolean isErrorType) {
         this.isErrorType = isErrorType;
         return this;
@@ -29,9 +30,11 @@ public class CustomErrorRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public CustomErrorRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public CustomErrorRule(){}
 }

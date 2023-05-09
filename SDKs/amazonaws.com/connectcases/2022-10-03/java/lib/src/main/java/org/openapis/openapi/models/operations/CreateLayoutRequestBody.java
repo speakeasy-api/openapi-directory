@@ -12,6 +12,7 @@ public class CreateLayoutRequestBody {
      */
     @JsonProperty("content")
     public CreateLayoutRequestBodyContent content;
+
     public CreateLayoutRequestBody withContent(CreateLayoutRequestBodyContent content) {
         this.content = content;
         return this;
@@ -22,9 +23,14 @@ public class CreateLayoutRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateLayoutRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateLayoutRequestBody(@JsonProperty("content") CreateLayoutRequestBodyContent content, @JsonProperty("name") String name) {
+        this.content = content;
+        this.name = name;
+  }
 }

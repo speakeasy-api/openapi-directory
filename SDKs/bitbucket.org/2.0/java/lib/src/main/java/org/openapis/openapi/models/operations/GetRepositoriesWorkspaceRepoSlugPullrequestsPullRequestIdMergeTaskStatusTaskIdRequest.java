@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskS
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
     public Long pullRequestId;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest withPullRequestId(Long pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskS
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -34,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskS
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
     public String taskId;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -46,9 +50,16 @@ public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskS
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeTaskStatusTaskIdRequest(@JsonProperty("pull_request_id") Long pullRequestId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("task_id") String taskId, @JsonProperty("workspace") String workspace) {
+        this.pullRequestId = pullRequestId;
+        this.repoSlug = repoSlug;
+        this.taskId = taskId;
+        this.workspace = workspace;
+  }
 }

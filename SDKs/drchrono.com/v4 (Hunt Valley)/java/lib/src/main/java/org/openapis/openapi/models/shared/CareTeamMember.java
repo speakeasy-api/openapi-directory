@@ -15,6 +15,7 @@ public class CareTeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointment")
     public String appointment;
+
     public CareTeamMember withAppointment(String appointment) {
         this.appointment = appointment;
         return this;
@@ -23,6 +24,7 @@ public class CareTeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public CareTeamMember withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class CareTeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CareTeamMember withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class CareTeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public String patient;
+
     public CareTeamMember withPatient(String patient) {
         this.patient = patient;
         return this;
@@ -47,9 +51,11 @@ public class CareTeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public CareTeamMember withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CareTeamMember(){}
 }

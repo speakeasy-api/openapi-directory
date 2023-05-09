@@ -15,6 +15,7 @@ public class EndpointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientIPPreservationEnabled")
     public Boolean clientIPPreservationEnabled;
+
     public EndpointConfiguration withClientIPPreservationEnabled(Boolean clientIPPreservationEnabled) {
         this.clientIPPreservationEnabled = clientIPPreservationEnabled;
         return this;
@@ -23,6 +24,7 @@ public class EndpointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public EndpointConfiguration withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -31,9 +33,11 @@ public class EndpointConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public Long weight;
+
     public EndpointConfiguration withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public EndpointConfiguration(){}
 }

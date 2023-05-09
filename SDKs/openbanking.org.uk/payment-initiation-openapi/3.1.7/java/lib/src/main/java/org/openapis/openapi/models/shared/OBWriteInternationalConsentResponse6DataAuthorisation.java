@@ -22,6 +22,7 @@ public class OBWriteInternationalConsentResponse6DataAuthorisation {
      */
     @JsonProperty("AuthorisationType")
     public OBWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum authorisationType;
+
     public OBWriteInternationalConsentResponse6DataAuthorisation withAuthorisationType(OBWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum authorisationType) {
         this.authorisationType = authorisationType;
         return this;
@@ -37,9 +38,13 @@ public class OBWriteInternationalConsentResponse6DataAuthorisation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionDateTime")
     public OffsetDateTime completionDateTime;
+
     public OBWriteInternationalConsentResponse6DataAuthorisation withCompletionDateTime(OffsetDateTime completionDateTime) {
         this.completionDateTime = completionDateTime;
         return this;
     }
     
+    public OBWriteInternationalConsentResponse6DataAuthorisation(@JsonProperty("AuthorisationType") OBWriteInternationalConsentResponse6DataAuthorisationAuthorisationTypeEnum authorisationType) {
+        this.authorisationType = authorisationType;
+  }
 }

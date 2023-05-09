@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTracksTrackIdCommentsRequest {
@@ -13,6 +14,7 @@ public class PostTracksTrackIdCommentsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostTracksTrackIdCommentsRequestBody requestBody;
+
     public PostTracksTrackIdCommentsRequest withRequestBody(PostTracksTrackIdCommentsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,9 +25,14 @@ public class PostTracksTrackIdCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
     public Long trackId;
+
     public PostTracksTrackIdCommentsRequest withTrackId(Long trackId) {
         this.trackId = trackId;
         return this;
     }
     
+    public PostTracksTrackIdCommentsRequest(@JsonProperty("RequestBody") PostTracksTrackIdCommentsRequestBody requestBody, @JsonProperty("track_id") Long trackId) {
+        this.requestBody = requestBody;
+        this.trackId = trackId;
+  }
 }

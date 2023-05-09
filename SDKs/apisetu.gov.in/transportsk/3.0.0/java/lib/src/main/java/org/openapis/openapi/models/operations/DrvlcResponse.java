@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DrvlcResponse {
     
     public byte[] body;
+
     public DrvlcResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DrvlcResponse {
     
     
     public String contentType;
+
     public DrvlcResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DrvlcResponse {
     
     
     public Integer statusCode;
+
     public DrvlcResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DrvlcResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DrvlcResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class DrvlcResponse {
      */
     
     public Drvlc400ApplicationJSON drvlc400ApplicationJSONObject;
+
     public DrvlcResponse withDrvlc400ApplicationJSONObject(Drvlc400ApplicationJSON drvlc400ApplicationJSONObject) {
         this.drvlc400ApplicationJSONObject = drvlc400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class DrvlcResponse {
      */
     
     public Drvlc401ApplicationJSON drvlc401ApplicationJSONObject;
+
     public DrvlcResponse withDrvlc401ApplicationJSONObject(Drvlc401ApplicationJSON drvlc401ApplicationJSONObject) {
         this.drvlc401ApplicationJSONObject = drvlc401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class DrvlcResponse {
      */
     
     public Drvlc404ApplicationJSON drvlc404ApplicationJSONObject;
+
     public DrvlcResponse withDrvlc404ApplicationJSONObject(Drvlc404ApplicationJSON drvlc404ApplicationJSONObject) {
         this.drvlc404ApplicationJSONObject = drvlc404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class DrvlcResponse {
      */
     
     public Drvlc500ApplicationJSON drvlc500ApplicationJSONObject;
+
     public DrvlcResponse withDrvlc500ApplicationJSONObject(Drvlc500ApplicationJSON drvlc500ApplicationJSONObject) {
         this.drvlc500ApplicationJSONObject = drvlc500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class DrvlcResponse {
      */
     
     public Drvlc502ApplicationJSON drvlc502ApplicationJSONObject;
+
     public DrvlcResponse withDrvlc502ApplicationJSONObject(Drvlc502ApplicationJSON drvlc502ApplicationJSONObject) {
         this.drvlc502ApplicationJSONObject = drvlc502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class DrvlcResponse {
      */
     
     public Drvlc503ApplicationJSON drvlc503ApplicationJSONObject;
+
     public DrvlcResponse withDrvlc503ApplicationJSONObject(Drvlc503ApplicationJSON drvlc503ApplicationJSONObject) {
         this.drvlc503ApplicationJSONObject = drvlc503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class DrvlcResponse {
      */
     
     public Drvlc504ApplicationJSON drvlc504ApplicationJSONObject;
+
     public DrvlcResponse withDrvlc504ApplicationJSONObject(Drvlc504ApplicationJSON drvlc504ApplicationJSONObject) {
         this.drvlc504ApplicationJSONObject = drvlc504ApplicationJSONObject;
         return this;
     }
     
+    public DrvlcResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

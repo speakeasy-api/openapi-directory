@@ -15,6 +15,7 @@ public class TaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassificationConfig")
     public DocumentClassificationConfig documentClassificationConfig;
+
     public TaskConfig withDocumentClassificationConfig(DocumentClassificationConfig documentClassificationConfig) {
         this.documentClassificationConfig = documentClassificationConfig;
         return this;
@@ -23,6 +24,7 @@ public class TaskConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityRecognitionConfig")
     public EntityRecognitionConfig entityRecognitionConfig;
+
     public TaskConfig withEntityRecognitionConfig(EntityRecognitionConfig entityRecognitionConfig) {
         this.entityRecognitionConfig = entityRecognitionConfig;
         return this;
@@ -30,9 +32,13 @@ public class TaskConfig {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public TaskConfig withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public TaskConfig(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode) {
+        this.languageCode = languageCode;
+  }
 }

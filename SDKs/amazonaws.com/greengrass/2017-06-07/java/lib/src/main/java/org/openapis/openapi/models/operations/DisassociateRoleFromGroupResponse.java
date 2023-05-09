@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateRoleFromGroupResponse {
@@ -12,6 +13,7 @@ public class DisassociateRoleFromGroupResponse {
      */
     
     public Object badRequestException;
+
     public DisassociateRoleFromGroupResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateRoleFromGroupResponse {
     
     
     public String contentType;
+
     public DisassociateRoleFromGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateRoleFromGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateRoleFromGroupResponse disassociateRoleFromGroupResponse;
+
     public DisassociateRoleFromGroupResponse withDisassociateRoleFromGroupResponse(org.openapis.openapi.models.shared.DisassociateRoleFromGroupResponse disassociateRoleFromGroupResponse) {
         this.disassociateRoleFromGroupResponse = disassociateRoleFromGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateRoleFromGroupResponse {
      */
     
     public Object internalServerErrorException;
+
     public DisassociateRoleFromGroupResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateRoleFromGroupResponse {
     
     
     public Integer statusCode;
+
     public DisassociateRoleFromGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DisassociateRoleFromGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateRoleFromGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisassociateRoleFromGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFieldSettingsForProjectRequest {
@@ -13,6 +14,7 @@ public class GetCustomFieldSettingsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetCustomFieldSettingsForProjectRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +27,7 @@ public class GetCustomFieldSettingsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetCustomFieldSettingsForProjectRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetCustomFieldSettingsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetCustomFieldSettingsForProjectRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +52,7 @@ public class GetCustomFieldSettingsForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetCustomFieldSettingsForProjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,9 +63,13 @@ public class GetCustomFieldSettingsForProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public GetCustomFieldSettingsForProjectRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
     }
     
+    public GetCustomFieldSettingsForProjectRequest(@JsonProperty("project_gid") String projectGid) {
+        this.projectGid = projectGid;
+  }
 }

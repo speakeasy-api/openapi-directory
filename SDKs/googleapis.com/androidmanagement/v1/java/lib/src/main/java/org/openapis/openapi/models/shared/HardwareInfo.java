@@ -18,6 +18,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryShutdownTemperatures")
     public Float[] batteryShutdownTemperatures;
+
     public HardwareInfo withBatteryShutdownTemperatures(Float[] batteryShutdownTemperatures) {
         this.batteryShutdownTemperatures = batteryShutdownTemperatures;
         return this;
@@ -29,6 +30,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryThrottlingTemperatures")
     public Float[] batteryThrottlingTemperatures;
+
     public HardwareInfo withBatteryThrottlingTemperatures(Float[] batteryThrottlingTemperatures) {
         this.batteryThrottlingTemperatures = batteryThrottlingTemperatures;
         return this;
@@ -40,6 +42,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public HardwareInfo withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -51,6 +54,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuShutdownTemperatures")
     public Float[] cpuShutdownTemperatures;
+
     public HardwareInfo withCpuShutdownTemperatures(Float[] cpuShutdownTemperatures) {
         this.cpuShutdownTemperatures = cpuShutdownTemperatures;
         return this;
@@ -62,6 +66,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuThrottlingTemperatures")
     public Float[] cpuThrottlingTemperatures;
+
     public HardwareInfo withCpuThrottlingTemperatures(Float[] cpuThrottlingTemperatures) {
         this.cpuThrottlingTemperatures = cpuThrottlingTemperatures;
         return this;
@@ -73,6 +78,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceBasebandVersion")
     public String deviceBasebandVersion;
+
     public HardwareInfo withDeviceBasebandVersion(String deviceBasebandVersion) {
         this.deviceBasebandVersion = deviceBasebandVersion;
         return this;
@@ -84,6 +90,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterpriseSpecificId")
     public String enterpriseSpecificId;
+
     public HardwareInfo withEnterpriseSpecificId(String enterpriseSpecificId) {
         this.enterpriseSpecificId = enterpriseSpecificId;
         return this;
@@ -95,6 +102,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuShutdownTemperatures")
     public Float[] gpuShutdownTemperatures;
+
     public HardwareInfo withGpuShutdownTemperatures(Float[] gpuShutdownTemperatures) {
         this.gpuShutdownTemperatures = gpuShutdownTemperatures;
         return this;
@@ -106,6 +114,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuThrottlingTemperatures")
     public Float[] gpuThrottlingTemperatures;
+
     public HardwareInfo withGpuThrottlingTemperatures(Float[] gpuThrottlingTemperatures) {
         this.gpuThrottlingTemperatures = gpuThrottlingTemperatures;
         return this;
@@ -117,6 +126,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardware")
     public String hardware;
+
     public HardwareInfo withHardware(String hardware) {
         this.hardware = hardware;
         return this;
@@ -128,6 +138,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public HardwareInfo withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -139,6 +150,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public HardwareInfo withModel(String model) {
         this.model = model;
         return this;
@@ -150,6 +162,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public HardwareInfo withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -161,6 +174,7 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skinShutdownTemperatures")
     public Float[] skinShutdownTemperatures;
+
     public HardwareInfo withSkinShutdownTemperatures(Float[] skinShutdownTemperatures) {
         this.skinShutdownTemperatures = skinShutdownTemperatures;
         return this;
@@ -172,9 +186,11 @@ public class HardwareInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skinThrottlingTemperatures")
     public Float[] skinThrottlingTemperatures;
+
     public HardwareInfo withSkinThrottlingTemperatures(Float[] skinThrottlingTemperatures) {
         this.skinThrottlingTemperatures = skinThrottlingTemperatures;
         return this;
     }
     
+    public HardwareInfo(){}
 }

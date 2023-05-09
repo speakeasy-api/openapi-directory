@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorParameter.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Translation.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslateRequest.java
+docs/sdk/README.md
+docs/language/README.md
 USAGE.md

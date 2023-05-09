@@ -15,6 +15,7 @@ public class DescribeDefaultParametersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDefaultParametersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDefaultParametersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public Parameter[] parameters;
+
     public DescribeDefaultParametersResponse withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public DescribeDefaultParametersResponse(){}
 }

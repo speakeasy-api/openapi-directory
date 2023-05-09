@@ -15,9 +15,11 @@ public class IncrementalPullConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatetimeTypeFieldName")
     public String datetimeTypeFieldName;
+
     public IncrementalPullConfig withDatetimeTypeFieldName(String datetimeTypeFieldName) {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
         return this;
     }
     
+    public IncrementalPullConfig(){}
 }

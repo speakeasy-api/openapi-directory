@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiRnbPvtImportCalculatorConfigurationRequest {
@@ -12,6 +13,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/csv")
     public byte[] requestBody;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-accumulate-with-manual-prices")
     public Boolean xVTEXAccumulateWithManualPrices;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXAccumulateWithManualPrices(Boolean xVTEXAccumulateWithManualPrices) {
         this.xVTEXAccumulateWithManualPrices = xVTEXAccumulateWithManualPrices;
         return this;
@@ -49,6 +54,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-calculator-name")
     public String xVTEXCalculatorName;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXCalculatorName(String xVTEXCalculatorName) {
         this.xVTEXCalculatorName = xVTEXCalculatorName;
         return this;
@@ -59,6 +65,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-cluster-expression")
     public String xVTEXClusterExpression;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXClusterExpression(String xVTEXClusterExpression) {
         this.xVTEXClusterExpression = xVTEXClusterExpression;
         return this;
@@ -69,6 +76,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-cluster-operator")
     public String xVTEXClusterOperator;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXClusterOperator(String xVTEXClusterOperator) {
         this.xVTEXClusterOperator = xVTEXClusterOperator;
         return this;
@@ -79,6 +87,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-cumulative")
     public Boolean xVTEXCumulative;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXCumulative(Boolean xVTEXCumulative) {
         this.xVTEXCumulative = xVTEXCumulative;
         return this;
@@ -89,6 +98,7 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-end-date")
     public String xVTEXEndDate;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXEndDate(String xVTEXEndDate) {
         this.xVTEXEndDate = xVTEXEndDate;
         return this;
@@ -99,9 +109,18 @@ public class PostApiRnbPvtImportCalculatorConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-start-date")
     public String xVTEXStartDate;
+
     public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXStartDate(String xVTEXStartDate) {
         this.xVTEXStartDate = xVTEXStartDate;
         return this;
     }
     
+    public PostApiRnbPvtImportCalculatorConfigurationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("X-VTEX-accumulate-with-manual-prices") Boolean xVTEXAccumulateWithManualPrices, @JsonProperty("X-VTEX-calculator-name") String xVTEXCalculatorName, @JsonProperty("X-VTEX-end-date") String xVTEXEndDate, @JsonProperty("X-VTEX-start-date") String xVTEXStartDate) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.xVTEXAccumulateWithManualPrices = xVTEXAccumulateWithManualPrices;
+        this.xVTEXCalculatorName = xVTEXCalculatorName;
+        this.xVTEXEndDate = xVTEXEndDate;
+        this.xVTEXStartDate = xVTEXStartDate;
+  }
 }

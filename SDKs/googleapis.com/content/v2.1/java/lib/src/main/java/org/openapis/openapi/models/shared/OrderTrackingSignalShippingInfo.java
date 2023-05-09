@@ -18,6 +18,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualDeliveryTime")
     public DateTime actualDeliveryTime;
+
     public OrderTrackingSignalShippingInfo withActualDeliveryTime(DateTime actualDeliveryTime) {
         this.actualDeliveryTime = actualDeliveryTime;
         return this;
@@ -29,6 +30,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierName")
     public String carrierName;
+
     public OrderTrackingSignalShippingInfo withCarrierName(String carrierName) {
         this.carrierName = carrierName;
         return this;
@@ -40,6 +42,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierServiceName")
     public String carrierServiceName;
+
     public OrderTrackingSignalShippingInfo withCarrierServiceName(String carrierServiceName) {
         this.carrierServiceName = carrierServiceName;
         return this;
@@ -51,6 +54,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earliestDeliveryPromiseTime")
     public DateTime earliestDeliveryPromiseTime;
+
     public OrderTrackingSignalShippingInfo withEarliestDeliveryPromiseTime(DateTime earliestDeliveryPromiseTime) {
         this.earliestDeliveryPromiseTime = earliestDeliveryPromiseTime;
         return this;
@@ -62,6 +66,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestDeliveryPromiseTime")
     public DateTime latestDeliveryPromiseTime;
+
     public OrderTrackingSignalShippingInfo withLatestDeliveryPromiseTime(DateTime latestDeliveryPromiseTime) {
         this.latestDeliveryPromiseTime = latestDeliveryPromiseTime;
         return this;
@@ -73,6 +78,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originPostalCode")
     public String originPostalCode;
+
     public OrderTrackingSignalShippingInfo withOriginPostalCode(String originPostalCode) {
         this.originPostalCode = originPostalCode;
         return this;
@@ -84,6 +90,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originRegionCode")
     public String originRegionCode;
+
     public OrderTrackingSignalShippingInfo withOriginRegionCode(String originRegionCode) {
         this.originRegionCode = originRegionCode;
         return this;
@@ -95,6 +102,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentId")
     public String shipmentId;
+
     public OrderTrackingSignalShippingInfo withShipmentId(String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
@@ -106,6 +114,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippedTime")
     public DateTime shippedTime;
+
     public OrderTrackingSignalShippingInfo withShippedTime(DateTime shippedTime) {
         this.shippedTime = shippedTime;
         return this;
@@ -117,6 +126,7 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingStatus")
     public OrderTrackingSignalShippingInfoShippingStatusEnum shippingStatus;
+
     public OrderTrackingSignalShippingInfo withShippingStatus(OrderTrackingSignalShippingInfoShippingStatusEnum shippingStatus) {
         this.shippingStatus = shippingStatus;
         return this;
@@ -128,9 +138,11 @@ public class OrderTrackingSignalShippingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public OrderTrackingSignalShippingInfo withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public OrderTrackingSignalShippingInfo(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAttachedLinksOutput {
     @JsonProperty("Items")
     public ListAttachedLinksItem[] items;
+
     public ListAttachedLinksOutput withItems(ListAttachedLinksItem[] items) {
         this.items = items;
         return this;
@@ -22,9 +23,13 @@ public class ListAttachedLinksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAttachedLinksOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAttachedLinksOutput(@JsonProperty("Items") ListAttachedLinksItem[] items) {
+        this.items = items;
+  }
 }

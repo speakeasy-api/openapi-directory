@@ -12,6 +12,7 @@ public class ListProtectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionFilters")
     public InclusionProtectionFilters inclusionFilters;
+
     public ListProtectionsRequest withInclusionFilters(InclusionProtectionFilters inclusionFilters) {
         this.inclusionFilters = inclusionFilters;
         return this;
@@ -20,6 +21,7 @@ public class ListProtectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListProtectionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListProtectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListProtectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListProtectionsRequest(){}
 }

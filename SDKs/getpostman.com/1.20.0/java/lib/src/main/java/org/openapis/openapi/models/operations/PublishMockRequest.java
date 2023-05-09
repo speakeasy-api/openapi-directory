@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishMockRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mock_uid")
     public String mockUid;
+
     public PublishMockRequest withMockUid(String mockUid) {
         this.mockUid = mockUid;
         return this;
     }
     
+    public PublishMockRequest(@JsonProperty("mock_uid") String mockUid) {
+        this.mockUid = mockUid;
+  }
 }

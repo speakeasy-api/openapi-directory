@@ -22,6 +22,7 @@ public class EventTrackerSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public EventTrackerSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class EventTrackerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTrackerArn")
     public String eventTrackerArn;
+
     public EventTrackerSummary withEventTrackerArn(String eventTrackerArn) {
         this.eventTrackerArn = eventTrackerArn;
         return this;
@@ -40,6 +42,7 @@ public class EventTrackerSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public EventTrackerSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -48,6 +51,7 @@ public class EventTrackerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EventTrackerSummary withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,11 @@ public class EventTrackerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EventTrackerSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public EventTrackerSummary(){}
 }

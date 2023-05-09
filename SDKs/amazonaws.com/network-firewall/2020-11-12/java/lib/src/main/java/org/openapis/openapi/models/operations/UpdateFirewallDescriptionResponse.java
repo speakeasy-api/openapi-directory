@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFirewallDescriptionResponse {
     
     public String contentType;
+
     public UpdateFirewallDescriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFirewallDescriptionResponse {
      */
     
     public Object internalServerError;
+
     public UpdateFirewallDescriptionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFirewallDescriptionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFirewallDescriptionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFirewallDescriptionResponse {
      */
     
     public Object invalidTokenException;
+
     public UpdateFirewallDescriptionResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFirewallDescriptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFirewallDescriptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateFirewallDescriptionResponse {
     
     
     public Integer statusCode;
+
     public UpdateFirewallDescriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFirewallDescriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFirewallDescriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFirewallDescriptionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFirewallDescriptionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateFirewallDescriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFirewallDescriptionResponse updateFirewallDescriptionResponse;
+
     public UpdateFirewallDescriptionResponse withUpdateFirewallDescriptionResponse(org.openapis.openapi.models.shared.UpdateFirewallDescriptionResponse updateFirewallDescriptionResponse) {
         this.updateFirewallDescriptionResponse = updateFirewallDescriptionResponse;
         return this;
     }
     
+    public UpdateFirewallDescriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

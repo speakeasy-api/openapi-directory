@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListCustomVerificationEmailTemplatesRequest {
     
     public Long maxResults;
+
     public ListCustomVerificationEmailTemplatesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,9 +20,11 @@ public class ListCustomVerificationEmailTemplatesRequest {
     
     
     public String nextToken;
+
     public ListCustomVerificationEmailTemplatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomVerificationEmailTemplatesRequest(){}
 }

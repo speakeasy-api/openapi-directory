@@ -15,6 +15,7 @@ public class DescribeImageBuildersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageBuilders")
     public ImageBuilder[] imageBuilders;
+
     public DescribeImageBuildersResult withImageBuilders(ImageBuilder[] imageBuilders) {
         this.imageBuilders = imageBuilders;
         return this;
@@ -23,9 +24,11 @@ public class DescribeImageBuildersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeImageBuildersResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeImageBuildersResult(){}
 }

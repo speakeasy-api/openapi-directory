@@ -15,6 +15,7 @@ public class SufficiencyPostInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public Feature[] features;
+
     public SufficiencyPostInput withFeatures(Feature[] features) {
         this.features = features;
         return this;
@@ -26,9 +27,11 @@ public class SufficiencyPostInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SufficiencyPostInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public SufficiencyPostInput(){}
 }

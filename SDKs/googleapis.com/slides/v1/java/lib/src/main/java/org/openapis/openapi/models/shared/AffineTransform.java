@@ -18,6 +18,7 @@ public class AffineTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleX")
     public Double scaleX;
+
     public AffineTransform withScaleX(Double scaleX) {
         this.scaleX = scaleX;
         return this;
@@ -29,6 +30,7 @@ public class AffineTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleY")
     public Double scaleY;
+
     public AffineTransform withScaleY(Double scaleY) {
         this.scaleY = scaleY;
         return this;
@@ -40,6 +42,7 @@ public class AffineTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shearX")
     public Double shearX;
+
     public AffineTransform withShearX(Double shearX) {
         this.shearX = shearX;
         return this;
@@ -51,6 +54,7 @@ public class AffineTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shearY")
     public Double shearY;
+
     public AffineTransform withShearY(Double shearY) {
         this.shearY = shearY;
         return this;
@@ -62,6 +66,7 @@ public class AffineTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translateX")
     public Double translateX;
+
     public AffineTransform withTranslateX(Double translateX) {
         this.translateX = translateX;
         return this;
@@ -73,6 +78,7 @@ public class AffineTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translateY")
     public Double translateY;
+
     public AffineTransform withTranslateY(Double translateY) {
         this.translateY = translateY;
         return this;
@@ -84,9 +90,11 @@ public class AffineTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public AffineTransformUnitEnum unit;
+
     public AffineTransform withUnit(AffineTransformUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public AffineTransform(){}
 }

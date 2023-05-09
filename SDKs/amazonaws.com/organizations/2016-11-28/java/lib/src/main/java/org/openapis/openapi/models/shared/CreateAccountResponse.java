@@ -15,9 +15,11 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateAccountStatus")
     public CreateAccountStatus createAccountStatus;
+
     public CreateAccountResponse withCreateAccountStatus(CreateAccountStatus createAccountStatus) {
         this.createAccountStatus = createAccountStatus;
         return this;
     }
     
+    public CreateAccountResponse(){}
 }

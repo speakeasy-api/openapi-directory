@@ -12,9 +12,13 @@ public class CloseAccountRequest {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public CloseAccountRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
     }
     
+    public CloseAccountRequest(@JsonProperty("accountCode") String accountCode) {
+        this.accountCode = accountCode;
+  }
 }

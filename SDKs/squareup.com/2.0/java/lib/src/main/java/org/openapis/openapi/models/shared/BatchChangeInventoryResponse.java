@@ -18,6 +18,7 @@ public class BatchChangeInventoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public InventoryChange[] changes;
+
     public BatchChangeInventoryResponse withChanges(InventoryChange[] changes) {
         this.changes = changes;
         return this;
@@ -29,6 +30,7 @@ public class BatchChangeInventoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counts")
     public InventoryCount[] counts;
+
     public BatchChangeInventoryResponse withCounts(InventoryCount[] counts) {
         this.counts = counts;
         return this;
@@ -40,9 +42,11 @@ public class BatchChangeInventoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BatchChangeInventoryResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchChangeInventoryResponse(){}
 }

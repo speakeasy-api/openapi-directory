@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPreferredRequest {
@@ -12,6 +13,7 @@ public class SetPreferredRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PreferredRequestDTO preferredRequestDTO;
+
     public SetPreferredRequest withPreferredRequestDTO(org.openapis.openapi.models.shared.PreferredRequestDTO preferredRequestDTO) {
         this.preferredRequestDTO = preferredRequestDTO;
         return this;
@@ -22,9 +24,14 @@ public class SetPreferredRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public Long reportId;
+
     public SetPreferredRequest withReportId(Long reportId) {
         this.reportId = reportId;
         return this;
     }
     
+    public SetPreferredRequest(@JsonProperty("PreferredRequestDTO") org.openapis.openapi.models.shared.PreferredRequestDTO preferredRequestDTO, @JsonProperty("reportId") Long reportId) {
+        this.preferredRequestDTO = preferredRequestDTO;
+        this.reportId = reportId;
+  }
 }

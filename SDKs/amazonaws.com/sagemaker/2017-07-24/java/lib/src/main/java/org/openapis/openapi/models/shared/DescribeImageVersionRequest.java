@@ -12,6 +12,7 @@ public class DescribeImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public DescribeImageVersionRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImageVersionRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public DescribeImageVersionRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -27,9 +29,13 @@ public class DescribeImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public DescribeImageVersionRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DescribeImageVersionRequest(@JsonProperty("ImageName") String imageName) {
+        this.imageName = imageName;
+  }
 }

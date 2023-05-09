@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFastSnapshotRestoresResult {
     
     public DescribeFastSnapshotRestoresResultFastSnapshotRestores[] fastSnapshotRestores;
+
     public DescribeFastSnapshotRestoresResult withFastSnapshotRestores(DescribeFastSnapshotRestoresResultFastSnapshotRestores[] fastSnapshotRestores) {
         this.fastSnapshotRestores = fastSnapshotRestores;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFastSnapshotRestoresResult {
     
     
     public String nextToken;
+
     public DescribeFastSnapshotRestoresResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFastSnapshotRestoresResult(){}
 }

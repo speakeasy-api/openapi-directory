@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeGatewayCapabilityConfigurationRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeGatewayCapabilityConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DescribeGatewayCapabilityConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeGatewayCapabilityConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DescribeGatewayCapabilityConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeGatewayCapabilityConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DescribeGatewayCapabilityConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeGatewayCapabilityConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DescribeGatewayCapabilityConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeGatewayCapabilityConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DescribeGatewayCapabilityConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeGatewayCapabilityConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DescribeGatewayCapabilityConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeGatewayCapabilityConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DescribeGatewayCapabilityConfigurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=capabilityNamespace")
     public String capabilityNamespace;
+
     public DescribeGatewayCapabilityConfigurationRequest withCapabilityNamespace(String capabilityNamespace) {
         this.capabilityNamespace = capabilityNamespace;
         return this;
@@ -71,9 +80,14 @@ public class DescribeGatewayCapabilityConfigurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gatewayId")
     public String gatewayId;
+
     public DescribeGatewayCapabilityConfigurationRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
     
+    public DescribeGatewayCapabilityConfigurationRequest(@JsonProperty("capabilityNamespace") String capabilityNamespace, @JsonProperty("gatewayId") String gatewayId) {
+        this.capabilityNamespace = capabilityNamespace;
+        this.gatewayId = gatewayId;
+  }
 }

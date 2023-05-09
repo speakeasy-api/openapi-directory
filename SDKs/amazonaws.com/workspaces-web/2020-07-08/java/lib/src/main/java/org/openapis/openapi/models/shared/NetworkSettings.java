@@ -15,6 +15,7 @@ public class NetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedPortalArns")
     public String[] associatedPortalArns;
+
     public NetworkSettings withAssociatedPortalArns(String[] associatedPortalArns) {
         this.associatedPortalArns = associatedPortalArns;
         return this;
@@ -22,6 +23,7 @@ public class NetworkSettings {
     
     @JsonProperty("networkSettingsArn")
     public String networkSettingsArn;
+
     public NetworkSettings withNetworkSettingsArn(String networkSettingsArn) {
         this.networkSettingsArn = networkSettingsArn;
         return this;
@@ -30,6 +32,7 @@ public class NetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public NetworkSettings withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -38,6 +41,7 @@ public class NetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public NetworkSettings withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -46,9 +50,13 @@ public class NetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public NetworkSettings withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public NetworkSettings(@JsonProperty("networkSettingsArn") String networkSettingsArn) {
+        this.networkSettingsArn = networkSettingsArn;
+  }
 }

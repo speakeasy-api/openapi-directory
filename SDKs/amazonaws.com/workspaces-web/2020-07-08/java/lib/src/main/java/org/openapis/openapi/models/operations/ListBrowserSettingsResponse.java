@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBrowserSettingsResponse {
@@ -12,6 +13,7 @@ public class ListBrowserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListBrowserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListBrowserSettingsResponse {
     
     
     public String contentType;
+
     public ListBrowserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListBrowserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public ListBrowserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListBrowserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBrowserSettingsResponse listBrowserSettingsResponse;
+
     public ListBrowserSettingsResponse withListBrowserSettingsResponse(org.openapis.openapi.models.shared.ListBrowserSettingsResponse listBrowserSettingsResponse) {
         this.listBrowserSettingsResponse = listBrowserSettingsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListBrowserSettingsResponse {
     
     
     public Integer statusCode;
+
     public ListBrowserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBrowserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBrowserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBrowserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public ListBrowserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListBrowserSettingsResponse {
      */
     
     public Object validationException;
+
     public ListBrowserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBrowserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

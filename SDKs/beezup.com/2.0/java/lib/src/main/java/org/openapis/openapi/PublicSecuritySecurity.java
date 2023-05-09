@@ -56,12 +56,10 @@ public class PublicSecuritySecurity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LoginResponse res = new org.openapis.openapi.models.operations.LoginResponse() {{
+        org.openapis.openapi.models.operations.LoginResponse res = new org.openapis.openapi.models.operations.LoginResponse(contentType, httpRes.statusCode()) {{
             apiCredentials = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class PublicSecuritySecurity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LostPasswordResponse res = new org.openapis.openapi.models.operations.LostPasswordResponse() {{
+        org.openapis.openapi.models.operations.LostPasswordResponse res = new org.openapis.openapi.models.operations.LostPasswordResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -156,11 +152,9 @@ public class PublicSecuritySecurity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterResponse res = new org.openapis.openapi.models.operations.RegisterResponse() {{
+        org.openapis.openapi.models.operations.RegisterResponse res = new org.openapis.openapi.models.operations.RegisterResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 409) {

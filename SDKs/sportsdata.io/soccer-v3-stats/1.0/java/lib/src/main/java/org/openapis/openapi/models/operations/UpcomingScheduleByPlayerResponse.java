@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpcomingScheduleByPlayerResponse {
     
     public String contentType;
+
     public UpcomingScheduleByPlayerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpcomingScheduleByPlayerResponse {
     
     
     public org.openapis.openapi.models.shared.Game[] games;
+
     public UpcomingScheduleByPlayerResponse withGames(org.openapis.openapi.models.shared.Game[] games) {
         this.games = games;
         return this;
@@ -23,6 +26,7 @@ public class UpcomingScheduleByPlayerResponse {
     
     
     public Integer statusCode;
+
     public UpcomingScheduleByPlayerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class UpcomingScheduleByPlayerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpcomingScheduleByPlayerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpcomingScheduleByPlayerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

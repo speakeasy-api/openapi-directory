@@ -18,6 +18,7 @@ public class LaunchFlexTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchParameter")
     public LaunchFlexTemplateParameter launchParameter;
+
     public LaunchFlexTemplateRequest withLaunchParameter(LaunchFlexTemplateParameter launchParameter) {
         this.launchParameter = launchParameter;
         return this;
@@ -29,9 +30,11 @@ public class LaunchFlexTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public LaunchFlexTemplateRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public LaunchFlexTemplateRequest(){}
 }

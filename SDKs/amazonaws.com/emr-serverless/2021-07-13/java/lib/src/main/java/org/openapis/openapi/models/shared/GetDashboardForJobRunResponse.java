@@ -15,9 +15,11 @@ public class GetDashboardForJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetDashboardForJobRunResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetDashboardForJobRunResponse(){}
 }

@@ -18,9 +18,11 @@ public class AnalyticsDataimportDeleteUploadDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDataImportUids")
     public String[] customDataImportUids;
+
     public AnalyticsDataimportDeleteUploadDataRequest withCustomDataImportUids(String[] customDataImportUids) {
         this.customDataImportUids = customDataImportUids;
         return this;
     }
     
+    public AnalyticsDataimportDeleteUploadDataRequest(){}
 }

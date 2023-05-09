@@ -15,9 +15,11 @@ public class ValidateTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authToken")
     public String authToken;
+
     public ValidateTokenRequest withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
     }
     
+    public ValidateTokenRequest(){}
 }

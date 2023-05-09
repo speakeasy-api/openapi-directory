@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blocks")
     public GoogleCloudVisionV1p2beta1Block[] blocks;
+
     public GoogleCloudVisionV1p2beta1Page withBlocks(GoogleCloudVisionV1p2beta1Block[] blocks) {
         this.blocks = blocks;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudVisionV1p2beta1Page withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p2beta1Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public GoogleCloudVisionV1p2beta1Page withHeight(Integer height) {
         this.height = height;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVisionV1p2beta1Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public GoogleCloudVisionV1p2beta1TextAnnotationTextProperty property;
+
     public GoogleCloudVisionV1p2beta1Page withProperty(GoogleCloudVisionV1p2beta1TextAnnotationTextProperty property) {
         this.property = property;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudVisionV1p2beta1Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public GoogleCloudVisionV1p2beta1Page withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1Page(){}
 }

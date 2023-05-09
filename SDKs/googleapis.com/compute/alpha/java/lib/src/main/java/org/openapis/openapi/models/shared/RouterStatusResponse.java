@@ -18,6 +18,7 @@ public class RouterStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RouterStatusResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -26,9 +27,11 @@ public class RouterStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public RouterStatus result;
+
     public RouterStatusResponse withResult(RouterStatus result) {
         this.result = result;
         return this;
     }
     
+    public RouterStatusResponse(){}
 }

@@ -12,6 +12,7 @@ public class DeleteCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteCollectionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,13 @@ public class DeleteCollectionRequest {
     
     @JsonProperty("id")
     public String id;
+
     public DeleteCollectionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteCollectionRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

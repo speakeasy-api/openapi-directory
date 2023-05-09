@@ -18,6 +18,7 @@ public class TransferFundsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public TransferFundsResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -29,6 +30,7 @@ public class TransferFundsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public TransferFundsResponse withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -40,6 +42,7 @@ public class TransferFundsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public TransferFundsResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -51,9 +54,11 @@ public class TransferFundsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public TransferFundsResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
     
+    public TransferFundsResponse(){}
 }

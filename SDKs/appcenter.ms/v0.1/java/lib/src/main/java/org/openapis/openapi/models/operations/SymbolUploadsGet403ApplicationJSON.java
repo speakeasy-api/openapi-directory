@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SymbolUploadsGet403ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public SymbolUploadsGet403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SymbolUploadsGet403ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

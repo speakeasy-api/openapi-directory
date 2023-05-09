@@ -20,6 +20,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public UpdateSimulationApplicationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public UpdateSimulationApplicationResponse withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
@@ -38,6 +40,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public UpdateSimulationApplicationResponse withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateSimulationApplicationResponse withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingEngine")
     public RenderingEngine renderingEngine;
+
     public UpdateSimulationApplicationResponse withRenderingEngine(RenderingEngine renderingEngine) {
         this.renderingEngine = renderingEngine;
         return this;
@@ -62,6 +67,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public UpdateSimulationApplicationResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -70,6 +76,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotSoftwareSuite")
     public RobotSoftwareSuite robotSoftwareSuite;
+
     public UpdateSimulationApplicationResponse withRobotSoftwareSuite(RobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -78,6 +85,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationSoftwareSuite")
     public SimulationSoftwareSuite simulationSoftwareSuite;
+
     public UpdateSimulationApplicationResponse withSimulationSoftwareSuite(SimulationSoftwareSuite simulationSoftwareSuite) {
         this.simulationSoftwareSuite = simulationSoftwareSuite;
         return this;
@@ -86,6 +94,7 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public UpdateSimulationApplicationResponse withSources(Source[] sources) {
         this.sources = sources;
         return this;
@@ -94,9 +103,11 @@ public class UpdateSimulationApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public UpdateSimulationApplicationResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateSimulationApplicationResponse(){}
 }

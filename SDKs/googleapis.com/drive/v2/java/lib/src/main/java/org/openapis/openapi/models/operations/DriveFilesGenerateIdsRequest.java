@@ -12,6 +12,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveFilesGenerateIdsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveFilesGenerateIdsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +34,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveFilesGenerateIdsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +45,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DriveFilesGenerateIdsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -52,6 +56,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveFilesGenerateIdsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +67,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveFilesGenerateIdsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +78,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveFilesGenerateIdsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,6 +89,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=space")
     public String space;
+
     public DriveFilesGenerateIdsRequest withSpace(String space) {
         this.space = space;
         return this;
@@ -92,6 +100,7 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public DriveFilesGenerateIdsRequest withType(String type) {
         this.type = type;
         return this;
@@ -102,9 +111,11 @@ public class DriveFilesGenerateIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveFilesGenerateIdsRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveFilesGenerateIdsRequest(){}
 }

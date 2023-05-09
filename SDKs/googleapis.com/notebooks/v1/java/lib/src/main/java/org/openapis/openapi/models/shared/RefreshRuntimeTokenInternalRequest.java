@@ -18,9 +18,11 @@ public class RefreshRuntimeTokenInternalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmId")
     public String vmId;
+
     public RefreshRuntimeTokenInternalRequest withVmId(String vmId) {
         this.vmId = vmId;
         return this;
     }
     
+    public RefreshRuntimeTokenInternalRequest(){}
 }

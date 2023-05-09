@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchDocsRequest {
@@ -12,6 +13,7 @@ public class SearchDocsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public SearchDocsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -22,9 +24,14 @@ public class SearchDocsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
     public String xReadmeVersion;
+
     public SearchDocsRequest withXReadmeVersion(String xReadmeVersion) {
         this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     
+    public SearchDocsRequest(@JsonProperty("search") String search, @JsonProperty("x-readme-version") String xReadmeVersion) {
+        this.search = search;
+        this.xReadmeVersion = xReadmeVersion;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstancesResultVerifiedAccessInstances {
     
     public String creationTime;
+
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVerifiedAccessInstancesResultVerifiedAccessInstances {
     
     
     public String description;
+
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVerifiedAccessInstancesResultVerifiedAccessInstances {
     
     
     public String lastUpdatedTime;
+
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVerifiedAccessInstancesResultVerifiedAccessInstances {
     
     
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesTags[] tags;
+
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances withTags(DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVerifiedAccessInstancesResultVerifiedAccessInstances {
     
     
     public String verifiedAccessInstanceId;
+
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
@@ -47,9 +52,11 @@ public class DescribeVerifiedAccessInstancesResultVerifiedAccessInstances {
     
     
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProviders[] verifiedAccessTrustProviders;
+
     public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances withVerifiedAccessTrustProviders(DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProviders[] verifiedAccessTrustProviders) {
         this.verifiedAccessTrustProviders = verifiedAccessTrustProviders;
         return this;
     }
     
+    public DescribeVerifiedAccessInstancesResultVerifiedAccessInstances(){}
 }

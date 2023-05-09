@@ -18,6 +18,7 @@ public class ApplyJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionProfile")
     public String connectionProfile;
+
     public ApplyJobDetails withConnectionProfile(String connectionProfile) {
         this.connectionProfile = connectionProfile;
         return this;
@@ -29,9 +30,11 @@ public class ApplyJobDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public ApplyJobDetails withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public ApplyJobDetails(){}
 }

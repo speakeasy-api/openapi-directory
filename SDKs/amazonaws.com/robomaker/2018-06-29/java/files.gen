@@ -339,4 +339,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateRobotApplicationRespo
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSimulationApplicationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorldTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

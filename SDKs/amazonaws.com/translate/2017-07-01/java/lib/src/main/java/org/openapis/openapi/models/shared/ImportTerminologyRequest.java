@@ -12,6 +12,7 @@ public class ImportTerminologyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ImportTerminologyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class ImportTerminologyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionKey")
     public EncryptionKey encryptionKey;
+
     public ImportTerminologyRequest withEncryptionKey(EncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -27,6 +29,7 @@ public class ImportTerminologyRequest {
     
     @JsonProperty("MergeStrategy")
     public MergeStrategyEnum mergeStrategy;
+
     public ImportTerminologyRequest withMergeStrategy(MergeStrategyEnum mergeStrategy) {
         this.mergeStrategy = mergeStrategy;
         return this;
@@ -34,6 +37,7 @@ public class ImportTerminologyRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public ImportTerminologyRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class ImportTerminologyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ImportTerminologyRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -49,9 +54,15 @@ public class ImportTerminologyRequest {
     
     @JsonProperty("TerminologyData")
     public TerminologyData terminologyData;
+
     public ImportTerminologyRequest withTerminologyData(TerminologyData terminologyData) {
         this.terminologyData = terminologyData;
         return this;
     }
     
+    public ImportTerminologyRequest(@JsonProperty("MergeStrategy") MergeStrategyEnum mergeStrategy, @JsonProperty("Name") String name, @JsonProperty("TerminologyData") TerminologyData terminologyData) {
+        this.mergeStrategy = mergeStrategy;
+        this.name = name;
+        this.terminologyData = terminologyData;
+  }
 }

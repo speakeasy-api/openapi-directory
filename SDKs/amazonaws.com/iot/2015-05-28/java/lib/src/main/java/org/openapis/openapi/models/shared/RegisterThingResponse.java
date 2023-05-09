@@ -15,6 +15,7 @@ public class RegisterThingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePem")
     public String certificatePem;
+
     public RegisterThingResponse withCertificatePem(String certificatePem) {
         this.certificatePem = certificatePem;
         return this;
@@ -23,9 +24,11 @@ public class RegisterThingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceArns")
     public java.util.Map<String, String> resourceArns;
+
     public RegisterThingResponse withResourceArns(java.util.Map<String, String> resourceArns) {
         this.resourceArns = resourceArns;
         return this;
     }
     
+    public RegisterThingResponse(){}
 }

@@ -18,9 +18,11 @@ public class DatafeedsFetchNowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DatafeedsFetchNowResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DatafeedsFetchNowResponse(){}
 }

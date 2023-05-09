@@ -15,6 +15,7 @@ public class PendingModifiedRelationalDatabaseValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupRetentionEnabled")
     public Boolean backupRetentionEnabled;
+
     public PendingModifiedRelationalDatabaseValues withBackupRetentionEnabled(Boolean backupRetentionEnabled) {
         this.backupRetentionEnabled = backupRetentionEnabled;
         return this;
@@ -23,6 +24,7 @@ public class PendingModifiedRelationalDatabaseValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public PendingModifiedRelationalDatabaseValues withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -31,9 +33,11 @@ public class PendingModifiedRelationalDatabaseValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterUserPassword")
     public String masterUserPassword;
+
     public PendingModifiedRelationalDatabaseValues withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
     }
     
+    public PendingModifiedRelationalDatabaseValues(){}
 }

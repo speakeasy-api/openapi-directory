@@ -15,6 +15,7 @@ public class SetV2LoggingLevelRequestBodyLogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetName")
     public String targetName;
+
     public SetV2LoggingLevelRequestBodyLogTarget withTargetName(String targetName) {
         this.targetName = targetName;
         return this;
@@ -23,9 +24,11 @@ public class SetV2LoggingLevelRequestBodyLogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetType")
     public org.openapis.openapi.models.shared.LogTargetTypeEnum targetType;
+
     public SetV2LoggingLevelRequestBodyLogTarget withTargetType(org.openapis.openapi.models.shared.LogTargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public SetV2LoggingLevelRequestBodyLogTarget(){}
 }

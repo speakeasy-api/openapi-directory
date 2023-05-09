@@ -15,9 +15,11 @@ public class InstanceReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public InstanceReference withInstance(String instance) {
         this.instance = instance;
         return this;
     }
     
+    public InstanceReference(){}
 }

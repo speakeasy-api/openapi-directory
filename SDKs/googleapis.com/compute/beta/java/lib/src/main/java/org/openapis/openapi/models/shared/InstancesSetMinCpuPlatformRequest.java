@@ -15,9 +15,11 @@ public class InstancesSetMinCpuPlatformRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public InstancesSetMinCpuPlatformRequest withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
     }
     
+    public InstancesSetMinCpuPlatformRequest(){}
 }

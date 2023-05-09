@@ -18,6 +18,7 @@ public class ActorDefinitionResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public ResourceRequirements default_;
+
     public ActorDefinitionResourceRequirements withDefault(ResourceRequirements default_) {
         this.default_ = default_;
         return this;
@@ -26,9 +27,11 @@ public class ActorDefinitionResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobSpecific")
     public JobTypeResourceLimit[] jobSpecific;
+
     public ActorDefinitionResourceRequirements withJobSpecific(JobTypeResourceLimit[] jobSpecific) {
         this.jobSpecific = jobSpecific;
         return this;
     }
     
+    public ActorDefinitionResourceRequirements(){}
 }

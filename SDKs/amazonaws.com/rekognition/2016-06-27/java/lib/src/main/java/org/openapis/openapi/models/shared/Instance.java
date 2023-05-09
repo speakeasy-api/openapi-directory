@@ -15,6 +15,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public Instance withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,6 +24,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Instance withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -31,9 +33,11 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DominantColors")
     public DominantColor[] dominantColors;
+
     public Instance withDominantColors(DominantColor[] dominantColors) {
         this.dominantColors = dominantColors;
         return this;
     }
     
+    public Instance(){}
 }

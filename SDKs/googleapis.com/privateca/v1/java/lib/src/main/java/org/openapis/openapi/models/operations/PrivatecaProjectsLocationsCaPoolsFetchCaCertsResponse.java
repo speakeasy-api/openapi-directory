@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse {
     
     public String contentType;
+
     public PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchCaCertsResponse fetchCaCertsResponse;
+
     public PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse withFetchCaCertsResponse(org.openapis.openapi.models.shared.FetchCaCertsResponse fetchCaCertsResponse) {
         this.fetchCaCertsResponse = fetchCaCertsResponse;
         return this;
@@ -26,6 +29,7 @@ public class PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse {
     
     
     public Integer statusCode;
+
     public PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteTrafficMirrorFilterRuleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteTrafficMirrorFilterRuleActionEnum action;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withAction(GETDeleteTrafficMirrorFilterRuleActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficMirrorFilterRuleId")
     public String trafficMirrorFilterRuleId;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withTrafficMirrorFilterRuleId(String trafficMirrorFilterRuleId) {
         this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteTrafficMirrorFilterRuleVersionEnum version;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withVersion(GETDeleteTrafficMirrorFilterRuleVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteTrafficMirrorFilterRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteTrafficMirrorFilterRuleRequest(@JsonProperty("Action") GETDeleteTrafficMirrorFilterRuleActionEnum action, @JsonProperty("TrafficMirrorFilterRuleId") String trafficMirrorFilterRuleId, @JsonProperty("Version") GETDeleteTrafficMirrorFilterRuleVersionEnum version) {
+        this.action = action;
+        this.trafficMirrorFilterRuleId = trafficMirrorFilterRuleId;
+        this.version = version;
+  }
 }

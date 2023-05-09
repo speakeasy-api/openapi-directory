@@ -17,6 +17,7 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public QuoteSimpleVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -28,6 +29,7 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public QuoteSimpleVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -36,6 +38,7 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Long quoteId;
+
     public QuoteSimpleVO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -44,6 +47,7 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_title")
     public String quoteTitle;
+
     public QuoteSimpleVO withQuoteTitle(String quoteTitle) {
         this.quoteTitle = quoteTitle;
         return this;
@@ -55,6 +59,7 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq")
     public RfqBaseVO rfq;
+
     public QuoteSimpleVO withRfq(RfqBaseVO rfq) {
         this.rfq = rfq;
         return this;
@@ -63,6 +68,7 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public QuoteSimpleVO withStatus(String status) {
         this.status = status;
         return this;
@@ -72,6 +78,7 @@ public class QuoteSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("submit_date")
     public LocalDate submitDate;
+
     public QuoteSimpleVO withSubmitDate(LocalDate submitDate) {
         this.submitDate = submitDate;
         return this;
@@ -80,6 +87,7 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public QuoteSimpleVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -91,9 +99,11 @@ public class QuoteSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public QuoteSimpleVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
     }
     
+    public QuoteSimpleVO(){}
 }

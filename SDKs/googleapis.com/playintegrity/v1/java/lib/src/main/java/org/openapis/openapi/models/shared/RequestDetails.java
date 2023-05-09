@@ -18,6 +18,7 @@ public class RequestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonce")
     public String nonce;
+
     public RequestDetails withNonce(String nonce) {
         this.nonce = nonce;
         return this;
@@ -29,6 +30,7 @@ public class RequestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestHash")
     public String requestHash;
+
     public RequestDetails withRequestHash(String requestHash) {
         this.requestHash = requestHash;
         return this;
@@ -40,6 +42,7 @@ public class RequestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestPackageName")
     public String requestPackageName;
+
     public RequestDetails withRequestPackageName(String requestPackageName) {
         this.requestPackageName = requestPackageName;
         return this;
@@ -51,9 +54,11 @@ public class RequestDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampMillis")
     public String timestampMillis;
+
     public RequestDetails withTimestampMillis(String timestampMillis) {
         this.timestampMillis = timestampMillis;
         return this;
     }
     
+    public RequestDetails(){}
 }

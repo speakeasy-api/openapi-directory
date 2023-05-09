@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImagesResultFpgaImagesProductCodes {
     
     public String productCodeId;
+
     public DescribeFpgaImagesResultFpgaImagesProductCodes withProductCodeId(String productCodeId) {
         this.productCodeId = productCodeId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFpgaImagesResultFpgaImagesProductCodes {
     
     
     public DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum productCodeType;
+
     public DescribeFpgaImagesResultFpgaImagesProductCodes withProductCodeType(DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum productCodeType) {
         this.productCodeType = productCodeType;
         return this;
     }
     
+    public DescribeFpgaImagesResultFpgaImagesProductCodes(){}
 }

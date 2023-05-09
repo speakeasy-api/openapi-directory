@@ -15,6 +15,7 @@ public class LambdaFunctionFailedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public LambdaFunctionFailedEventDetails withCause(String cause) {
         this.cause = cause;
         return this;
@@ -23,9 +24,11 @@ public class LambdaFunctionFailedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public LambdaFunctionFailedEventDetails withError(String error) {
         this.error = error;
         return this;
     }
     
+    public LambdaFunctionFailedEventDetails(){}
 }

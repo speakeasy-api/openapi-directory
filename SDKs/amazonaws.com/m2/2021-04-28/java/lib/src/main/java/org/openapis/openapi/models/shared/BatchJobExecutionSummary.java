@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BatchJobExecutionSummary {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public BatchJobExecutionSummary withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -30,6 +31,7 @@ public class BatchJobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchJobIdentifier")
     public BatchJobIdentifier batchJobIdentifier;
+
     public BatchJobExecutionSummary withBatchJobIdentifier(BatchJobIdentifier batchJobIdentifier) {
         this.batchJobIdentifier = batchJobIdentifier;
         return this;
@@ -40,6 +42,7 @@ public class BatchJobExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public BatchJobExecutionSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -47,6 +50,7 @@ public class BatchJobExecutionSummary {
     
     @JsonProperty("executionId")
     public String executionId;
+
     public BatchJobExecutionSummary withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -55,6 +59,7 @@ public class BatchJobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public BatchJobExecutionSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -63,6 +68,7 @@ public class BatchJobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public BatchJobExecutionSummary withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -71,6 +77,7 @@ public class BatchJobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public BatchJobTypeEnum jobType;
+
     public BatchJobExecutionSummary withJobType(BatchJobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -79,6 +86,7 @@ public class BatchJobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnCode")
     public String returnCode;
+
     public BatchJobExecutionSummary withReturnCode(String returnCode) {
         this.returnCode = returnCode;
         return this;
@@ -88,6 +96,7 @@ public class BatchJobExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public BatchJobExecutionSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -95,9 +104,16 @@ public class BatchJobExecutionSummary {
     
     @JsonProperty("status")
     public BatchJobExecutionStatusEnum status;
+
     public BatchJobExecutionSummary withStatus(BatchJobExecutionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BatchJobExecutionSummary(@JsonProperty("applicationId") String applicationId, @JsonProperty("executionId") String executionId, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("status") BatchJobExecutionStatusEnum status) {
+        this.applicationId = applicationId;
+        this.executionId = executionId;
+        this.startTime = startTime;
+        this.status = status;
+  }
 }

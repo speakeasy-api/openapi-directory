@@ -14,6 +14,7 @@ public class ListCasesForContactRequestBody {
      */
     @JsonProperty("contactArn")
     public String contactArn;
+
     public ListCasesForContactRequestBody withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -25,6 +26,7 @@ public class ListCasesForContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListCasesForContactRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListCasesForContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCasesForContactRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCasesForContactRequestBody(@JsonProperty("contactArn") String contactArn) {
+        this.contactArn = contactArn;
+  }
 }

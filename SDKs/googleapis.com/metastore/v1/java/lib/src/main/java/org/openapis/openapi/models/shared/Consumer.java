@@ -18,6 +18,7 @@ public class Consumer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointUri")
     public String endpointUri;
+
     public Consumer withEndpointUri(String endpointUri) {
         this.endpointUri = endpointUri;
         return this;
@@ -29,9 +30,11 @@ public class Consumer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public Consumer withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public Consumer(){}
 }

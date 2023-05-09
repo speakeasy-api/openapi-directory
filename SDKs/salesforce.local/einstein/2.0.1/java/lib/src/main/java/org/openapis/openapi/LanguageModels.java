@@ -57,11 +57,9 @@ public class LanguageModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteModelResponse res = new org.openapis.openapi.models.operations.DeleteModelResponse() {{
+        org.openapis.openapi.models.operations.DeleteModelResponse res = new org.openapis.openapi.models.operations.DeleteModelResponse(contentType, httpRes.statusCode()) {{
             deletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -104,11 +102,9 @@ public class LanguageModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainedModelLearningCurveResponse res = new org.openapis.openapi.models.operations.GetTrainedModelLearningCurveResponse() {{
+        org.openapis.openapi.models.operations.GetTrainedModelLearningCurveResponse res = new org.openapis.openapi.models.operations.GetTrainedModelLearningCurveResponse(contentType, httpRes.statusCode()) {{
             learningCurveList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -145,11 +141,9 @@ public class LanguageModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainedModelMetricsResponse res = new org.openapis.openapi.models.operations.GetTrainedModelMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetTrainedModelMetricsResponse res = new org.openapis.openapi.models.operations.GetTrainedModelMetricsResponse(contentType, httpRes.statusCode()) {{
             metrics = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class LanguageModels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrainedModelsResponse res = new org.openapis.openapi.models.operations.GetTrainedModelsResponse() {{
+        org.openapis.openapi.models.operations.GetTrainedModelsResponse res = new org.openapis.openapi.models.operations.GetTrainedModelsResponse(contentType, httpRes.statusCode()) {{
             modelList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

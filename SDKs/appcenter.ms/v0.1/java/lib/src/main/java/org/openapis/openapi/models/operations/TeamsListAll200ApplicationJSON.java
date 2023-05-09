@@ -15,6 +15,7 @@ public class TeamsListAll200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamsListAll200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class TeamsListAll200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsListAll200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +37,7 @@ public class TeamsListAll200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public TeamsListAll200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,15 @@ public class TeamsListAll200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsListAll200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TeamsListAll200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+  }
 }

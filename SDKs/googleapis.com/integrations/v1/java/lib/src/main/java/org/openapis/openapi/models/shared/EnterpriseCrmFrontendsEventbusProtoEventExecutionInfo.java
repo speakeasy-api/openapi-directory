@@ -18,6 +18,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public CrmlogErrorCode errorCode;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withErrorCode(CrmlogErrorCode errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -51,6 +54,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public EnterpriseCrmEventbusProtoErrorDetail[] errors;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withErrors(EnterpriseCrmEventbusProtoErrorDetail[] errors) {
         this.errors = errors;
         return this;
@@ -62,6 +66,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionDetails")
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails eventExecutionDetails;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withEventExecutionDetails(EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails eventExecutionDetails) {
         this.eventExecutionDetails = eventExecutionDetails;
         return this;
@@ -73,6 +78,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionInfoId")
     public String eventExecutionInfoId;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withEventExecutionInfoId(String eventExecutionInfoId) {
         this.eventExecutionInfoId = eventExecutionInfoId;
         return this;
@@ -84,6 +90,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionTraceInfo")
     public EnterpriseCrmEventbusProtoExecutionTraceInfo executionTraceInfo;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withExecutionTraceInfo(EnterpriseCrmEventbusProtoExecutionTraceInfo executionTraceInfo) {
         this.executionTraceInfo = executionTraceInfo;
         return this;
@@ -95,6 +102,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedTime")
     public String lastModifiedTime;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -106,6 +114,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postMethod")
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum postMethod;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withPostMethod(EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum postMethod) {
         this.postMethod = postMethod;
         return this;
@@ -117,6 +126,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum product;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withProduct(EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum product) {
         this.product = product;
         return this;
@@ -128,6 +138,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +150,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestParams")
     public EnterpriseCrmFrontendsEventbusProtoEventParameters requestParams;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withRequestParams(EnterpriseCrmFrontendsEventbusProtoEventParameters requestParams) {
         this.requestParams = requestParams;
         return this;
@@ -150,6 +162,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseParams")
     public EnterpriseCrmFrontendsEventbusProtoEventParameters responseParams;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withResponseParams(EnterpriseCrmFrontendsEventbusProtoEventParameters responseParams) {
         this.responseParams = responseParams;
         return this;
@@ -161,6 +174,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotNumber")
     public String snapshotNumber;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withSnapshotNumber(String snapshotNumber) {
         this.snapshotNumber = snapshotNumber;
         return this;
@@ -172,6 +186,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenant")
     public String tenant;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withTenant(String tenant) {
         this.tenant = tenant;
         return this;
@@ -183,6 +198,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -194,6 +210,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -205,6 +222,7 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowName")
     public String workflowName;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withWorkflowName(String workflowName) {
         this.workflowName = workflowName;
         return this;
@@ -216,9 +234,11 @@ public class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowRetryBackoffIntervalSeconds")
     public String workflowRetryBackoffIntervalSeconds;
+
     public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo withWorkflowRetryBackoffIntervalSeconds(String workflowRetryBackoffIntervalSeconds) {
         this.workflowRetryBackoffIntervalSeconds = workflowRetryBackoffIntervalSeconds;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo(){}
 }

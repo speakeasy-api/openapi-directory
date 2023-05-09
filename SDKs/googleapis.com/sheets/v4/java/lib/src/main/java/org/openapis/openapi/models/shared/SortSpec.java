@@ -18,6 +18,7 @@ public class SortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColor")
     public Color backgroundColor;
+
     public SortSpec withBackgroundColor(Color backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -29,6 +30,7 @@ public class SortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColorStyle")
     public ColorStyle backgroundColorStyle;
+
     public SortSpec withBackgroundColorStyle(ColorStyle backgroundColorStyle) {
         this.backgroundColorStyle = backgroundColorStyle;
         return this;
@@ -40,6 +42,7 @@ public class SortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceColumnReference")
     public DataSourceColumnReference dataSourceColumnReference;
+
     public SortSpec withDataSourceColumnReference(DataSourceColumnReference dataSourceColumnReference) {
         this.dataSourceColumnReference = dataSourceColumnReference;
         return this;
@@ -51,6 +54,7 @@ public class SortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionIndex")
     public Integer dimensionIndex;
+
     public SortSpec withDimensionIndex(Integer dimensionIndex) {
         this.dimensionIndex = dimensionIndex;
         return this;
@@ -62,6 +66,7 @@ public class SortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foregroundColor")
     public Color foregroundColor;
+
     public SortSpec withForegroundColor(Color foregroundColor) {
         this.foregroundColor = foregroundColor;
         return this;
@@ -73,6 +78,7 @@ public class SortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foregroundColorStyle")
     public ColorStyle foregroundColorStyle;
+
     public SortSpec withForegroundColorStyle(ColorStyle foregroundColorStyle) {
         this.foregroundColorStyle = foregroundColorStyle;
         return this;
@@ -84,9 +90,11 @@ public class SortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortSpecSortOrderEnum sortOrder;
+
     public SortSpec withSortOrder(SortSpecSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SortSpec(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayMulticastDomainRequestOptions {
     
     public AutoAcceptSharedAssociationsValueEnum autoAcceptSharedAssociations;
+
     public CreateTransitGatewayMulticastDomainRequestOptions withAutoAcceptSharedAssociations(AutoAcceptSharedAssociationsValueEnum autoAcceptSharedAssociations) {
         this.autoAcceptSharedAssociations = autoAcceptSharedAssociations;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayMulticastDomainRequestOptions {
     
     
     public Igmpv2SupportValueEnum igmpv2Support;
+
     public CreateTransitGatewayMulticastDomainRequestOptions withIgmpv2Support(Igmpv2SupportValueEnum igmpv2Support) {
         this.igmpv2Support = igmpv2Support;
         return this;
@@ -26,9 +28,11 @@ public class CreateTransitGatewayMulticastDomainRequestOptions {
     
     
     public StaticSourcesSupportValueEnum staticSourcesSupport;
+
     public CreateTransitGatewayMulticastDomainRequestOptions withStaticSourcesSupport(StaticSourcesSupportValueEnum staticSourcesSupport) {
         this.staticSourcesSupport = staticSourcesSupport;
         return this;
     }
     
+    public CreateTransitGatewayMulticastDomainRequestOptions(){}
 }

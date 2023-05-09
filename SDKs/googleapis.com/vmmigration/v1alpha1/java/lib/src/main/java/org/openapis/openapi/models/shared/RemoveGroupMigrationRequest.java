@@ -18,9 +18,11 @@ public class RemoveGroupMigrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migratingVm")
     public String migratingVm;
+
     public RemoveGroupMigrationRequest withMigratingVm(String migratingVm) {
         this.migratingVm = migratingVm;
         return this;
     }
     
+    public RemoveGroupMigrationRequest(){}
 }

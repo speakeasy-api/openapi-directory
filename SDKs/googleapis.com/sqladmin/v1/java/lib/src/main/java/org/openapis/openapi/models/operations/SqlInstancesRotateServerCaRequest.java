@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SqlInstancesRotateServerCaRequest {
@@ -12,6 +13,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SqlInstancesRotateServerCaRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class SqlInstancesRotateServerCaRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InstancesRotateServerCaRequest instancesRotateServerCaRequest;
+
     public SqlInstancesRotateServerCaRequest withInstancesRotateServerCaRequest(org.openapis.openapi.models.shared.InstancesRotateServerCaRequest instancesRotateServerCaRequest) {
         this.instancesRotateServerCaRequest = instancesRotateServerCaRequest;
         return this;
@@ -29,6 +32,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SqlInstancesRotateServerCaRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SqlInstancesRotateServerCaRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SqlInstancesRotateServerCaRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SqlInstancesRotateServerCaRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public SqlInstancesRotateServerCaRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -79,6 +87,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SqlInstancesRotateServerCaRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SqlInstancesRotateServerCaRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SqlInstancesRotateServerCaRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public SqlInstancesRotateServerCaRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SqlInstancesRotateServerCaRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SqlInstancesRotateServerCaRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class SqlInstancesRotateServerCaRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SqlInstancesRotateServerCaRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SqlInstancesRotateServerCaRequest(@JsonProperty("instance") String instance, @JsonProperty("project") String project) {
+        this.instance = instance;
+        this.project = project;
+  }
 }

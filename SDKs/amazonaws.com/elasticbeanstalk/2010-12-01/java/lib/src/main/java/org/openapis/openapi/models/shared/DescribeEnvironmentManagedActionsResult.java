@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeEnvironmentManagedActionsResult {
     
     public ManagedAction[] managedActions;
+
     public DescribeEnvironmentManagedActionsResult withManagedActions(ManagedAction[] managedActions) {
         this.managedActions = managedActions;
         return this;
     }
     
+    public DescribeEnvironmentManagedActionsResult(){}
 }

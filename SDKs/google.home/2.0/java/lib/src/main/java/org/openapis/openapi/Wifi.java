@@ -60,10 +60,8 @@ public class Wifi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConnecttoWiFiNetworkResponse res = new org.openapis.openapi.models.operations.ConnecttoWiFiNetworkResponse() {{
+        org.openapis.openapi.models.operations.ConnecttoWiFiNetworkResponse res = new org.openapis.openapi.models.operations.ConnecttoWiFiNetworkResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Wifi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ForgetWiFiNetworkResponse res = new org.openapis.openapi.models.operations.ForgetWiFiNetworkResponse() {{
+        org.openapis.openapi.models.operations.ForgetWiFiNetworkResponse res = new org.openapis.openapi.models.operations.ForgetWiFiNetworkResponse(contentType, httpRes.statusCode()) {{
             forgetWiFiNetwork200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Wifi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSavedNetworksResponse res = new org.openapis.openapi.models.operations.GetSavedNetworksResponse() {{
+        org.openapis.openapi.models.operations.GetSavedNetworksResponse res = new org.openapis.openapi.models.operations.GetSavedNetworksResponse(contentType, httpRes.statusCode()) {{
             example113s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class Wifi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWiFiScanResultsResponse res = new org.openapis.openapi.models.operations.GetWiFiScanResultsResponse() {{
+        org.openapis.openapi.models.operations.GetWiFiScanResultsResponse res = new org.openapis.openapi.models.operations.GetWiFiScanResultsResponse(contentType, httpRes.statusCode()) {{
             example114s = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,11 +215,9 @@ public class Wifi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScanforNetworksResponse res = new org.openapis.openapi.models.operations.ScanforNetworksResponse() {{
+        org.openapis.openapi.models.operations.ScanforNetworksResponse res = new org.openapis.openapi.models.operations.ScanforNetworksResponse(contentType, httpRes.statusCode()) {{
             scanforNetworks200TextPlainObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class GetOnePlan200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetOnePlan200ApplicationJSONResult result;
+
     public GetOnePlan200ApplicationJSON withResult(GetOnePlan200ApplicationJSONResult result) {
         this.result = result;
         return this;
     }
     
+    public GetOnePlan200ApplicationJSON(){}
 }

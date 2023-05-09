@@ -18,6 +18,7 @@ public class MessageStatusMessengerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public MessageStatusMessengerError withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class MessageStatusMessengerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public MessageStatusMessengerError withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -40,6 +42,7 @@ public class MessageStatusMessengerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public MessageStatusMessengerError withTitle(String title) {
         this.title = title;
         return this;
@@ -51,9 +54,11 @@ public class MessageStatusMessengerError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MessageStatusMessengerError withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MessageStatusMessengerError(){}
 }

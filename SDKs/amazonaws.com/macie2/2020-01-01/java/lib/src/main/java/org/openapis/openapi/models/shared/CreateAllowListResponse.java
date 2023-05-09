@@ -15,6 +15,7 @@ public class CreateAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateAllowListResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class CreateAllowListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateAllowListResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateAllowListResponse(){}
 }

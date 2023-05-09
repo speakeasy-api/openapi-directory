@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynamoDBAction {
     @JsonProperty("hashKeyField")
     public String hashKeyField;
+
     public DynamoDBAction withHashKeyField(String hashKeyField) {
         this.hashKeyField = hashKeyField;
         return this;
@@ -22,6 +23,7 @@ public class DynamoDBAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashKeyType")
     public DynamoKeyTypeEnum hashKeyType;
+
     public DynamoDBAction withHashKeyType(DynamoKeyTypeEnum hashKeyType) {
         this.hashKeyType = hashKeyType;
         return this;
@@ -29,6 +31,7 @@ public class DynamoDBAction {
     
     @JsonProperty("hashKeyValue")
     public String hashKeyValue;
+
     public DynamoDBAction withHashKeyValue(String hashKeyValue) {
         this.hashKeyValue = hashKeyValue;
         return this;
@@ -37,6 +40,7 @@ public class DynamoDBAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public String operation;
+
     public DynamoDBAction withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -45,6 +49,7 @@ public class DynamoDBAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadField")
     public String payloadField;
+
     public DynamoDBAction withPayloadField(String payloadField) {
         this.payloadField = payloadField;
         return this;
@@ -53,6 +58,7 @@ public class DynamoDBAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeKeyField")
     public String rangeKeyField;
+
     public DynamoDBAction withRangeKeyField(String rangeKeyField) {
         this.rangeKeyField = rangeKeyField;
         return this;
@@ -61,6 +67,7 @@ public class DynamoDBAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeKeyType")
     public DynamoKeyTypeEnum rangeKeyType;
+
     public DynamoDBAction withRangeKeyType(DynamoKeyTypeEnum rangeKeyType) {
         this.rangeKeyType = rangeKeyType;
         return this;
@@ -69,6 +76,7 @@ public class DynamoDBAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeKeyValue")
     public String rangeKeyValue;
+
     public DynamoDBAction withRangeKeyValue(String rangeKeyValue) {
         this.rangeKeyValue = rangeKeyValue;
         return this;
@@ -76,6 +84,7 @@ public class DynamoDBAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DynamoDBAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -83,9 +92,16 @@ public class DynamoDBAction {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public DynamoDBAction withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DynamoDBAction(@JsonProperty("hashKeyField") String hashKeyField, @JsonProperty("hashKeyValue") String hashKeyValue, @JsonProperty("roleArn") String roleArn, @JsonProperty("tableName") String tableName) {
+        this.hashKeyField = hashKeyField;
+        this.hashKeyValue = hashKeyValue;
+        this.roleArn = roleArn;
+        this.tableName = tableName;
+  }
 }

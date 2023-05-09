@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DonationsCryptoCalculateRequest {
@@ -12,6 +13,7 @@ public class GetApiV1DonationsCryptoCalculateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Double count;
+
     public GetApiV1DonationsCryptoCalculateRequest withCount(Double count) {
         this.count = count;
         return this;
@@ -22,9 +24,13 @@ public class GetApiV1DonationsCryptoCalculateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
     public GetApiV1DonationsCryptoCalculateCurrencyEnum currency;
+
     public GetApiV1DonationsCryptoCalculateRequest withCurrency(GetApiV1DonationsCryptoCalculateCurrencyEnum currency) {
         this.currency = currency;
         return this;
     }
     
+    public GetApiV1DonationsCryptoCalculateRequest(@JsonProperty("currency") GetApiV1DonationsCryptoCalculateCurrencyEnum currency) {
+        this.currency = currency;
+  }
 }

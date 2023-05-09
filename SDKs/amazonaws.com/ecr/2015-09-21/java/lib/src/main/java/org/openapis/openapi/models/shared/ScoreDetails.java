@@ -15,9 +15,11 @@ public class ScoreDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvss")
     public CvssScoreDetails cvss;
+
     public ScoreDetails withCvss(CvssScoreDetails cvss) {
         this.cvss = cvss;
         return this;
     }
     
+    public ScoreDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourceResponse {
@@ -12,6 +13,7 @@ public class TagResourceResponse {
      */
     
     public Object aclNotFoundFault;
+
     public TagResourceResponse withACLNotFoundFault(Object aclNotFoundFault) {
         this.aclNotFoundFault = aclNotFoundFault;
         return this;
@@ -22,6 +24,7 @@ public class TagResourceResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public TagResourceResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -29,6 +32,7 @@ public class TagResourceResponse {
     
     
     public String contentType;
+
     public TagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class TagResourceResponse {
      */
     
     public Object invalidARNFault;
+
     public TagResourceResponse withInvalidARNFault(Object invalidARNFault) {
         this.invalidARNFault = invalidARNFault;
         return this;
@@ -49,6 +54,7 @@ public class TagResourceResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public TagResourceResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -59,6 +65,7 @@ public class TagResourceResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public TagResourceResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -69,6 +76,7 @@ public class TagResourceResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public TagResourceResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -79,6 +87,7 @@ public class TagResourceResponse {
      */
     
     public Object snapshotNotFoundFault;
+
     public TagResourceResponse withSnapshotNotFoundFault(Object snapshotNotFoundFault) {
         this.snapshotNotFoundFault = snapshotNotFoundFault;
         return this;
@@ -86,6 +95,7 @@ public class TagResourceResponse {
     
     
     public Integer statusCode;
+
     public TagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class TagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class TagResourceResponse {
      */
     
     public Object subnetGroupNotFoundFault;
+
     public TagResourceResponse withSubnetGroupNotFoundFault(Object subnetGroupNotFoundFault) {
         this.subnetGroupNotFoundFault = subnetGroupNotFoundFault;
         return this;
@@ -113,6 +125,7 @@ public class TagResourceResponse {
      */
     
     public Object tagQuotaPerResourceExceeded;
+
     public TagResourceResponse withTagQuotaPerResourceExceeded(Object tagQuotaPerResourceExceeded) {
         this.tagQuotaPerResourceExceeded = tagQuotaPerResourceExceeded;
         return this;
@@ -123,6 +136,7 @@ public class TagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.TagResourceResponse tagResourceResponse;
+
     public TagResourceResponse withTagResourceResponse(org.openapis.openapi.models.shared.TagResourceResponse tagResourceResponse) {
         this.tagResourceResponse = tagResourceResponse;
         return this;
@@ -133,9 +147,14 @@ public class TagResourceResponse {
      */
     
     public Object userNotFoundFault;
+
     public TagResourceResponse withUserNotFoundFault(Object userNotFoundFault) {
         this.userNotFoundFault = userNotFoundFault;
         return this;
     }
     
+    public TagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

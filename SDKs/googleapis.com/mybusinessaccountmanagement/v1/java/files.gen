@@ -76,4 +76,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AdminInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Admin.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationAdminsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferLocationRequest.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/locations/README.md
 USAGE.md

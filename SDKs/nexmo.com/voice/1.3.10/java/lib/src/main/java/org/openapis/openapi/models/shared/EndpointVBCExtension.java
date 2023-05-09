@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EndpointVBCExtension {
     @JsonProperty("extension")
     public String extension;
+
     public EndpointVBCExtension withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -22,9 +23,14 @@ public class EndpointVBCExtension {
      */
     @JsonProperty("type")
     public String type;
+
     public EndpointVBCExtension withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EndpointVBCExtension(@JsonProperty("extension") String extension, @JsonProperty("type") String type) {
+        this.extension = extension;
+        this.type = type;
+  }
 }

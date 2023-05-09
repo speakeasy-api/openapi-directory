@@ -12,6 +12,7 @@ public class ListResolverQueryLogConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public ListResolverQueryLogConfigsRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListResolverQueryLogConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResolverQueryLogConfigsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListResolverQueryLogConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResolverQueryLogConfigsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListResolverQueryLogConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public String sortBy;
+
     public ListResolverQueryLogConfigsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -44,9 +48,11 @@ public class ListResolverQueryLogConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListResolverQueryLogConfigsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListResolverQueryLogConfigsRequest(){}
 }

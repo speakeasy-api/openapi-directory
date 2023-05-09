@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReligionFullRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
     public String countryIso2;
+
     public ReligionFullRequest withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -16,6 +18,7 @@ public class ReligionFullRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personalNameFull")
     public String personalNameFull;
+
     public ReligionFullRequest withPersonalNameFull(String personalNameFull) {
         this.personalNameFull = personalNameFull;
         return this;
@@ -23,9 +26,15 @@ public class ReligionFullRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subDivisionIso31662")
     public String subDivisionIso31662;
+
     public ReligionFullRequest withSubDivisionIso31662(String subDivisionIso31662) {
         this.subDivisionIso31662 = subDivisionIso31662;
         return this;
     }
     
+    public ReligionFullRequest(@JsonProperty("countryIso2") String countryIso2, @JsonProperty("personalNameFull") String personalNameFull, @JsonProperty("subDivisionIso31662") String subDivisionIso31662) {
+        this.countryIso2 = countryIso2;
+        this.personalNameFull = personalNameFull;
+        this.subDivisionIso31662 = subDivisionIso31662;
+  }
 }

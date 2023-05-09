@@ -15,9 +15,11 @@ public class RemoveBgJsonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RemoveBgJsonResponseData data;
+
     public RemoveBgJsonResponse withData(RemoveBgJsonResponseData data) {
         this.data = data;
         return this;
     }
     
+    public RemoveBgJsonResponse(){}
 }

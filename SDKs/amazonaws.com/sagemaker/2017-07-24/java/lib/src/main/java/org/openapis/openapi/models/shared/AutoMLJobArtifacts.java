@@ -15,6 +15,7 @@ public class AutoMLJobArtifacts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CandidateDefinitionNotebookLocation")
     public String candidateDefinitionNotebookLocation;
+
     public AutoMLJobArtifacts withCandidateDefinitionNotebookLocation(String candidateDefinitionNotebookLocation) {
         this.candidateDefinitionNotebookLocation = candidateDefinitionNotebookLocation;
         return this;
@@ -23,9 +24,11 @@ public class AutoMLJobArtifacts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataExplorationNotebookLocation")
     public String dataExplorationNotebookLocation;
+
     public AutoMLJobArtifacts withDataExplorationNotebookLocation(String dataExplorationNotebookLocation) {
         this.dataExplorationNotebookLocation = dataExplorationNotebookLocation;
         return this;
     }
     
+    public AutoMLJobArtifacts(){}
 }

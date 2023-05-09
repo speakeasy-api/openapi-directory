@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileDownloadsEnabled")
     public Boolean fileDownloadsEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withFileDownloadsEnabled(Boolean fileDownloadsEnabled) {
         this.fileDownloadsEnabled = fileDownloadsEnabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formInteractionsEnabled")
     public Boolean formInteractionsEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withFormInteractionsEnabled(Boolean formInteractionsEnabled) {
         this.formInteractionsEnabled = formInteractionsEnabled;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outboundClicksEnabled")
     public Boolean outboundClicksEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withOutboundClicksEnabled(Boolean outboundClicksEnabled) {
         this.outboundClicksEnabled = outboundClicksEnabled;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageChangesEnabled")
     public Boolean pageChangesEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withPageChangesEnabled(Boolean pageChangesEnabled) {
         this.pageChangesEnabled = pageChangesEnabled;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scrollsEnabled")
     public Boolean scrollsEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withScrollsEnabled(Boolean scrollsEnabled) {
         this.scrollsEnabled = scrollsEnabled;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchQueryParameter")
     public String searchQueryParameter;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withSearchQueryParameter(String searchQueryParameter) {
         this.searchQueryParameter = searchQueryParameter;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteSearchEnabled")
     public Boolean siteSearchEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withSiteSearchEnabled(Boolean siteSearchEnabled) {
         this.siteSearchEnabled = siteSearchEnabled;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamEnabled")
     public Boolean streamEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withStreamEnabled(Boolean streamEnabled) {
         this.streamEnabled = streamEnabled;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriQueryParameter")
     public String uriQueryParameter;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withUriQueryParameter(String uriQueryParameter) {
         this.uriQueryParameter = uriQueryParameter;
         return this;
@@ -128,9 +138,11 @@ public class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoEngagementEnabled")
     public Boolean videoEngagementEnabled;
+
     public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings withVideoEngagementEnabled(Boolean videoEngagementEnabled) {
         this.videoEngagementEnabled = videoEngagementEnabled;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings(){}
 }

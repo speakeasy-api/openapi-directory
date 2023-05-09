@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVPCEConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateVPCEConfigurationResponse {
      */
     
     public Object argumentException;
+
     public UpdateVPCEConfigurationResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVPCEConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateVPCEConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVPCEConfigurationResponse {
      */
     
     public Object invalidOperationException;
+
     public UpdateVPCEConfigurationResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVPCEConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public UpdateVPCEConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVPCEConfigurationResponse {
      */
     
     public Object serviceAccountException;
+
     public UpdateVPCEConfigurationResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateVPCEConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateVPCEConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateVPCEConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVPCEConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateVPCEConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVPCEConfigurationResult updateVPCEConfigurationResult;
+
     public UpdateVPCEConfigurationResponse withUpdateVPCEConfigurationResult(org.openapis.openapi.models.shared.UpdateVPCEConfigurationResult updateVPCEConfigurationResult) {
         this.updateVPCEConfigurationResult = updateVPCEConfigurationResult;
         return this;
     }
     
+    public UpdateVPCEConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

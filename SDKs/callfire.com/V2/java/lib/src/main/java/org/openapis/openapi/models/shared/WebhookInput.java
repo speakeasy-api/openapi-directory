@@ -18,6 +18,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback")
     public String callback;
+
     public WebhookInput withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -29,6 +30,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public WebhookInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public String[] events;
+
     public WebhookInput withEvents(String[] events) {
         this.events = events;
         return this;
@@ -51,6 +54,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresAt")
     public Long expiresAt;
+
     public WebhookInput withExpiresAt(Long expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -62,6 +66,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public WebhookInput withFields(String fields) {
         this.fields = fields;
         return this;
@@ -73,6 +78,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public WebhookInput withId(Long id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebhookInput withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonStrictSsl")
     public Boolean nonStrictSsl;
+
     public WebhookInput withNonStrictSsl(Boolean nonStrictSsl) {
         this.nonStrictSsl = nonStrictSsl;
         return this;
@@ -106,6 +114,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public WebhookInput withResource(String resource) {
         this.resource = resource;
         return this;
@@ -117,6 +126,7 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public WebhookInput withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -128,9 +138,11 @@ public class WebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUse")
     public Boolean singleUse;
+
     public WebhookInput withSingleUse(Boolean singleUse) {
         this.singleUse = singleUse;
         return this;
     }
     
+    public WebhookInput(){}
 }

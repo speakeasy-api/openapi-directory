@@ -18,6 +18,7 @@ public class ConfigFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileContents")
     public String fileContents;
+
     public ConfigFile withFileContents(String fileContents) {
         this.fileContents = fileContents;
         return this;
@@ -29,6 +30,7 @@ public class ConfigFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public ConfigFile withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -40,9 +42,11 @@ public class ConfigFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public ConfigFileFileTypeEnum fileType;
+
     public ConfigFile withFileType(ConfigFileFileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
     }
     
+    public ConfigFile(){}
 }

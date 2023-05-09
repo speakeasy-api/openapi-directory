@@ -18,9 +18,11 @@ public class TeamDriveInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamDriveIds")
     public String[] teamDriveIds;
+
     public TeamDriveInfo withTeamDriveIds(String[] teamDriveIds) {
         this.teamDriveIds = teamDriveIds;
         return this;
     }
     
+    public TeamDriveInfo(){}
 }

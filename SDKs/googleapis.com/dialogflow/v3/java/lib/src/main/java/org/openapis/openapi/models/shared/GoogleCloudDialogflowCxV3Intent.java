@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDialogflowCxV3Intent withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3Intent withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFallback")
     public Boolean isFallback;
+
     public GoogleCloudDialogflowCxV3Intent withIsFallback(Boolean isFallback) {
         this.isFallback = isFallback;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDialogflowCxV3Intent withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3Intent withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudDialogflowCxV3IntentParameter[] parameters;
+
     public GoogleCloudDialogflowCxV3Intent withParameters(GoogleCloudDialogflowCxV3IntentParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public GoogleCloudDialogflowCxV3Intent withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDialogflowCxV3Intent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingPhrases")
     public GoogleCloudDialogflowCxV3IntentTrainingPhrase[] trainingPhrases;
+
     public GoogleCloudDialogflowCxV3Intent withTrainingPhrases(GoogleCloudDialogflowCxV3IntentTrainingPhrase[] trainingPhrases) {
         this.trainingPhrases = trainingPhrases;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3Intent(){}
 }

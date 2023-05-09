@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsRequest {
@@ -14,6 +15,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetEventsRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetEventsRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,6 +38,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource")
     public String resource;
+
     public GetEventsRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -46,9 +50,13 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sync")
     public String sync;
+
     public GetEventsRequest withSync(String sync) {
         this.sync = sync;
         return this;
     }
     
+    public GetEventsRequest(@JsonProperty("resource") String resource) {
+        this.resource = resource;
+  }
 }

@@ -93,6 +93,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/LogsPolicyDestinationEnum.j
 lib/src/main/java/org/openapis/openapi/models/shared/LogsPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/AllocationPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceAccount.java
+lib/src/main/java/org/openapis/openapi/models/shared/PlacementPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkInterface.java
 lib/src/main/java/org/openapis/openapi/models/shared/LocationPolicy.java
@@ -115,6 +116,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportAgentStateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AgentTaskIntendedStateEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/AgentTaskTaskSourceEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AgentTask.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportAgentStateRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AgentMetadata.java
@@ -122,4 +124,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AgentTimingInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/AgentInfoStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AgentInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/AgentTaskInfo.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

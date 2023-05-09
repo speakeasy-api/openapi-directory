@@ -12,6 +12,7 @@ public class ChatCompletionResponseMessage {
      */
     @JsonProperty("content")
     public String content;
+
     public ChatCompletionResponseMessage withContent(String content) {
         this.content = content;
         return this;
@@ -22,9 +23,14 @@ public class ChatCompletionResponseMessage {
      */
     @JsonProperty("role")
     public ChatCompletionResponseMessageRoleEnum role;
+
     public ChatCompletionResponseMessage withRole(ChatCompletionResponseMessageRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public ChatCompletionResponseMessage(@JsonProperty("content") String content, @JsonProperty("role") ChatCompletionResponseMessageRoleEnum role) {
+        this.content = content;
+        this.role = role;
+  }
 }

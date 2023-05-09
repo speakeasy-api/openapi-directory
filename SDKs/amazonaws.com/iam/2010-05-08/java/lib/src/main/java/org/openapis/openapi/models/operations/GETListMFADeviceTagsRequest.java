@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListMFADeviceTagsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETListMFADeviceTagsActionEnum action;
+
     public GETListMFADeviceTagsRequest withAction(GETListMFADeviceTagsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETListMFADeviceTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETListMFADeviceTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -29,6 +32,7 @@ public class GETListMFADeviceTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public GETListMFADeviceTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -39,6 +43,7 @@ public class GETListMFADeviceTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SerialNumber")
     public String serialNumber;
+
     public GETListMFADeviceTagsRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -46,6 +51,7 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETListMFADeviceTagsVersionEnum version;
+
     public GETListMFADeviceTagsRequest withVersion(GETListMFADeviceTagsVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETListMFADeviceTagsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETListMFADeviceTagsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETListMFADeviceTagsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETListMFADeviceTagsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETListMFADeviceTagsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETListMFADeviceTagsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETListMFADeviceTagsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETListMFADeviceTagsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETListMFADeviceTagsRequest(@JsonProperty("Action") GETListMFADeviceTagsActionEnum action, @JsonProperty("SerialNumber") String serialNumber, @JsonProperty("Version") GETListMFADeviceTagsVersionEnum version) {
+        this.action = action;
+        this.serialNumber = serialNumber;
+        this.version = version;
+  }
 }

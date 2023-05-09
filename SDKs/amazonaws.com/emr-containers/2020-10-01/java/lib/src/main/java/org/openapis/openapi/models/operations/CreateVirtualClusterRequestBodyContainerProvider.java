@@ -15,6 +15,7 @@ public class CreateVirtualClusterRequestBodyContainerProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateVirtualClusterRequestBodyContainerProvider withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class CreateVirtualClusterRequestBodyContainerProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public org.openapis.openapi.models.shared.ContainerInfo info;
+
     public CreateVirtualClusterRequestBodyContainerProvider withInfo(org.openapis.openapi.models.shared.ContainerInfo info) {
         this.info = info;
         return this;
@@ -31,9 +33,11 @@ public class CreateVirtualClusterRequestBodyContainerProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.ContainerProviderTypeEnum type;
+
     public CreateVirtualClusterRequestBodyContainerProvider withType(org.openapis.openapi.models.shared.ContainerProviderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateVirtualClusterRequestBodyContainerProvider(){}
 }

@@ -15,9 +15,11 @@ public class PutResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePolicy")
     public ResourcePolicy resourcePolicy;
+
     public PutResourcePolicyResponse withResourcePolicy(ResourcePolicy resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public PutResourcePolicyResponse(){}
 }

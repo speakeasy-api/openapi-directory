@@ -15,9 +15,11 @@ public class ReportFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReportStatusTypeEnum status;
+
     public ReportFilter withStatus(ReportStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReportFilter(){}
 }

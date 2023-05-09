@@ -25,6 +25,7 @@ public class MarketingEventDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public PropertyValue[] customProperties;
+
     public MarketingEventDefaultResponse withCustomProperties(PropertyValue[] customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -38,6 +39,7 @@ public class MarketingEventDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public MarketingEventDefaultResponse withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -49,6 +51,7 @@ public class MarketingEventDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventCancelled")
     public Boolean eventCancelled;
+
     public MarketingEventDefaultResponse withEventCancelled(Boolean eventCancelled) {
         this.eventCancelled = eventCancelled;
         return this;
@@ -60,6 +63,7 @@ public class MarketingEventDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDescription")
     public String eventDescription;
+
     public MarketingEventDefaultResponse withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -70,6 +74,7 @@ public class MarketingEventDefaultResponse {
      */
     @JsonProperty("eventName")
     public String eventName;
+
     public MarketingEventDefaultResponse withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -80,6 +85,7 @@ public class MarketingEventDefaultResponse {
      */
     @JsonProperty("eventOrganizer")
     public String eventOrganizer;
+
     public MarketingEventDefaultResponse withEventOrganizer(String eventOrganizer) {
         this.eventOrganizer = eventOrganizer;
         return this;
@@ -91,6 +97,7 @@ public class MarketingEventDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public String eventType;
+
     public MarketingEventDefaultResponse withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -102,6 +109,7 @@ public class MarketingEventDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventUrl")
     public String eventUrl;
+
     public MarketingEventDefaultResponse withEventUrl(String eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -115,9 +123,14 @@ public class MarketingEventDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public MarketingEventDefaultResponse withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public MarketingEventDefaultResponse(@JsonProperty("eventName") String eventName, @JsonProperty("eventOrganizer") String eventOrganizer) {
+        this.eventName = eventName;
+        this.eventOrganizer = eventOrganizer;
+  }
 }

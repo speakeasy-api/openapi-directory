@@ -12,9 +12,11 @@ public class GetLoadBalancerTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetLoadBalancerTypesRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetLoadBalancerTypesRequest(){}
 }

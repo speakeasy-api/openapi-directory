@@ -15,6 +15,7 @@ public class SelectParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public SelectParameters withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -23,6 +24,7 @@ public class SelectParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionType")
     public ExpressionTypeEnum expressionType;
+
     public SelectParameters withExpressionType(ExpressionTypeEnum expressionType) {
         this.expressionType = expressionType;
         return this;
@@ -31,6 +33,7 @@ public class SelectParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputSerialization")
     public InputSerialization inputSerialization;
+
     public SelectParameters withInputSerialization(InputSerialization inputSerialization) {
         this.inputSerialization = inputSerialization;
         return this;
@@ -39,9 +42,11 @@ public class SelectParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSerialization")
     public OutputSerialization outputSerialization;
+
     public SelectParameters withOutputSerialization(OutputSerialization outputSerialization) {
         this.outputSerialization = outputSerialization;
         return this;
     }
     
+    public SelectParameters(){}
 }

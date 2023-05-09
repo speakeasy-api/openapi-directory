@@ -18,6 +18,7 @@ public class CompanionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companionsDisabled")
     public Boolean companionsDisabled;
+
     public CompanionSetting withCompanionsDisabled(Boolean companionsDisabled) {
         this.companionsDisabled = companionsDisabled;
         return this;
@@ -29,6 +30,7 @@ public class CompanionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledSizes")
     public Size[] enabledSizes;
+
     public CompanionSetting withEnabledSizes(Size[] enabledSizes) {
         this.enabledSizes = enabledSizes;
         return this;
@@ -40,6 +42,7 @@ public class CompanionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageOnly")
     public Boolean imageOnly;
+
     public CompanionSetting withImageOnly(Boolean imageOnly) {
         this.imageOnly = imageOnly;
         return this;
@@ -51,9 +54,11 @@ public class CompanionSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CompanionSetting withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public CompanionSetting(){}
 }

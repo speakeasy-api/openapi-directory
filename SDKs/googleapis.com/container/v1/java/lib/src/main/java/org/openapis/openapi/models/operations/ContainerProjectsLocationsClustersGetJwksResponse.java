@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContainerProjectsLocationsClustersGetJwksResponse {
     
     public String contentType;
+
     public ContainerProjectsLocationsClustersGetJwksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContainerProjectsLocationsClustersGetJwksResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJSONWebKeysResponse getJSONWebKeysResponse;
+
     public ContainerProjectsLocationsClustersGetJwksResponse withGetJSONWebKeysResponse(org.openapis.openapi.models.shared.GetJSONWebKeysResponse getJSONWebKeysResponse) {
         this.getJSONWebKeysResponse = getJSONWebKeysResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContainerProjectsLocationsClustersGetJwksResponse {
     
     
     public Integer statusCode;
+
     public ContainerProjectsLocationsClustersGetJwksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContainerProjectsLocationsClustersGetJwksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContainerProjectsLocationsClustersGetJwksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContainerProjectsLocationsClustersGetJwksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

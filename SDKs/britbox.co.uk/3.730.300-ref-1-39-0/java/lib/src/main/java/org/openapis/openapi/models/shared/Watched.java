@@ -21,6 +21,7 @@ public class Watched {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstWatchedDate")
     public OffsetDateTime firstWatchedDate;
+
     public Watched withFirstWatchedDate(OffsetDateTime firstWatchedDate) {
         this.firstWatchedDate = firstWatchedDate;
         return this;
@@ -32,6 +33,7 @@ public class Watched {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFullyWatched")
     public Boolean isFullyWatched;
+
     public Watched withIsFullyWatched(Boolean isFullyWatched) {
         this.isFullyWatched = isFullyWatched;
         return this;
@@ -43,6 +45,7 @@ public class Watched {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public Watched withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -52,6 +55,7 @@ public class Watched {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastWatchedDate")
     public OffsetDateTime lastWatchedDate;
+
     public Watched withLastWatchedDate(OffsetDateTime lastWatchedDate) {
         this.lastWatchedDate = lastWatchedDate;
         return this;
@@ -62,9 +66,15 @@ public class Watched {
      */
     @JsonProperty("position")
     public Integer position;
+
     public Watched withPosition(Integer position) {
         this.position = position;
         return this;
     }
     
+    public Watched(@JsonProperty("firstWatchedDate") OffsetDateTime firstWatchedDate, @JsonProperty("lastWatchedDate") OffsetDateTime lastWatchedDate, @JsonProperty("position") Integer position) {
+        this.firstWatchedDate = firstWatchedDate;
+        this.lastWatchedDate = lastWatchedDate;
+        this.position = position;
+  }
 }

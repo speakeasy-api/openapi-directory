@@ -48,4 +48,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConceptTaxonomy.java
 lib/src/main/java/org/openapis/openapi/models/shared/Concept.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConceptRelation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

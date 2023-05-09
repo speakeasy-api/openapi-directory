@@ -15,6 +15,7 @@ public class MessagesCapabilityWebhooksInboundUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public MessagesCapabilityWebhooksInboundUrl withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class MessagesCapabilityWebhooksInboundUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_method")
     public MessagesCapabilityWebhooksInboundUrlHttpMethodEnum httpMethod;
+
     public MessagesCapabilityWebhooksInboundUrl withHttpMethod(MessagesCapabilityWebhooksInboundUrlHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
     }
     
+    public MessagesCapabilityWebhooksInboundUrl(){}
 }

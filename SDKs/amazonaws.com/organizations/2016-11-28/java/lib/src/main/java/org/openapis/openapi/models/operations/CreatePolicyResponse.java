@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePolicyResponse {
@@ -12,6 +13,7 @@ public class CreatePolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public CreatePolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class CreatePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class CreatePolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreatePolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -42,6 +46,7 @@ public class CreatePolicyResponse {
      */
     
     public Object constraintViolationException;
+
     public CreatePolicyResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePolicyResponse {
     
     
     public String contentType;
+
     public CreatePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreatePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePolicyResponse createPolicyResponse;
+
     public CreatePolicyResponse withCreatePolicyResponse(org.openapis.openapi.models.shared.CreatePolicyResponse createPolicyResponse) {
         this.createPolicyResponse = createPolicyResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreatePolicyResponse {
      */
     
     public Object duplicatePolicyException;
+
     public CreatePolicyResponse withDuplicatePolicyException(Object duplicatePolicyException) {
         this.duplicatePolicyException = duplicatePolicyException;
         return this;
@@ -79,6 +87,7 @@ public class CreatePolicyResponse {
      */
     
     public Object invalidInputException;
+
     public CreatePolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreatePolicyResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public CreatePolicyResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -99,6 +109,7 @@ public class CreatePolicyResponse {
      */
     
     public Object policyTypeNotAvailableForOrganizationException;
+
     public CreatePolicyResponse withPolicyTypeNotAvailableForOrganizationException(Object policyTypeNotAvailableForOrganizationException) {
         this.policyTypeNotAvailableForOrganizationException = policyTypeNotAvailableForOrganizationException;
         return this;
@@ -106,6 +117,7 @@ public class CreatePolicyResponse {
     
     
     public Integer statusCode;
+
     public CreatePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreatePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreatePolicyResponse {
      */
     
     public Object serviceException;
+
     public CreatePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -133,6 +147,7 @@ public class CreatePolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreatePolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -143,9 +158,14 @@ public class CreatePolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public CreatePolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public CreatePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

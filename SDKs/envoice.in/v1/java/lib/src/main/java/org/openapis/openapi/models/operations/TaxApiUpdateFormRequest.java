@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxApiUpdateFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.TaxUpdateApiModel taxUpdateApiModel;
+
     public TaxApiUpdateFormRequest withTaxUpdateApiModel(org.openapis.openapi.models.shared.TaxUpdateApiModel taxUpdateApiModel) {
         this.taxUpdateApiModel = taxUpdateApiModel;
         return this;
@@ -16,6 +18,7 @@ public class TaxApiUpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public TaxApiUpdateFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class TaxApiUpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public TaxApiUpdateFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public TaxApiUpdateFormRequest(@JsonProperty("TaxUpdateApiModel") org.openapis.openapi.models.shared.TaxUpdateApiModel taxUpdateApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.taxUpdateApiModel = taxUpdateApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

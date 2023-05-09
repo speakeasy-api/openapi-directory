@@ -69,12 +69,10 @@ public class TextAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommunicationResponse res = new org.openapis.openapi.models.operations.CommunicationResponse() {{
+        org.openapis.openapi.models.operations.CommunicationResponse res = new org.openapis.openapi.models.operations.CommunicationResponse(contentType, httpRes.statusCode()) {{
             predictionResults = null;
             validationErrors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,12 +134,10 @@ public class TextAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EkmanEmotionResponse res = new org.openapis.openapi.models.operations.EkmanEmotionResponse() {{
+        org.openapis.openapi.models.operations.EkmanEmotionResponse res = new org.openapis.openapi.models.operations.EkmanEmotionResponse(contentType, httpRes.statusCode()) {{
             predictionResults = null;
             validationErrors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,12 +198,10 @@ public class TextAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EmotionResponse res = new org.openapis.openapi.models.operations.EmotionResponse() {{
+        org.openapis.openapi.models.operations.EmotionResponse res = new org.openapis.openapi.models.operations.EmotionResponse(contentType, httpRes.statusCode()) {{
             predictionResults = null;
             validationErrors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,12 +249,10 @@ public class TextAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDetectionResponse res = new org.openapis.openapi.models.operations.LanguageDetectionResponse() {{
+        org.openapis.openapi.models.operations.LanguageDetectionResponse res = new org.openapis.openapi.models.operations.LanguageDetectionResponse(contentType, httpRes.statusCode()) {{
             languageDetectionResponse = null;
             validationErrors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,12 +310,10 @@ public class TextAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PersonalityResponse res = new org.openapis.openapi.models.operations.PersonalityResponse() {{
+        org.openapis.openapi.models.operations.PersonalityResponse res = new org.openapis.openapi.models.operations.PersonalityResponse(contentType, httpRes.statusCode()) {{
             predictionResults = null;
             validationErrors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -380,12 +370,10 @@ public class TextAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SentimentResponse res = new org.openapis.openapi.models.operations.SentimentResponse() {{
+        org.openapis.openapi.models.operations.SentimentResponse res = new org.openapis.openapi.models.operations.SentimentResponse(contentType, httpRes.statusCode()) {{
             predictionResults = null;
             validationErrors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +423,9 @@ public class TextAnalysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TopicSentimentResponse res = new org.openapis.openapi.models.operations.TopicSentimentResponse() {{
+        org.openapis.openapi.models.operations.TopicSentimentResponse res = new org.openapis.openapi.models.operations.TopicSentimentResponse(contentType, httpRes.statusCode()) {{
             topicSentimentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

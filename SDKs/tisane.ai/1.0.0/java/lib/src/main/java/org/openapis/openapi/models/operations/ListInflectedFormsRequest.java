@@ -12,6 +12,7 @@ public class ListInflectedFormsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
     public String ocpApimSubscriptionKey;
+
     public ListInflectedFormsRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
         this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
@@ -22,6 +23,7 @@ public class ListInflectedFormsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
     public String family;
+
     public ListInflectedFormsRequest withFamily(String family) {
         this.family = family;
         return this;
@@ -32,6 +34,7 @@ public class ListInflectedFormsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public ListInflectedFormsRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -42,9 +45,11 @@ public class ListInflectedFormsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lexeme")
     public String lexeme;
+
     public ListInflectedFormsRequest withLexeme(String lexeme) {
         this.lexeme = lexeme;
         return this;
     }
     
+    public ListInflectedFormsRequest(){}
 }

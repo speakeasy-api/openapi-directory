@@ -15,6 +15,7 @@ public class PortalStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MonitorErrorDetails error;
+
     public PortalStatus withError(MonitorErrorDetails error) {
         this.error = error;
         return this;
@@ -22,9 +23,13 @@ public class PortalStatus {
     
     @JsonProperty("state")
     public PortalStateEnum state;
+
     public PortalStatus withState(PortalStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public PortalStatus(@JsonProperty("state") PortalStateEnum state) {
+        this.state = state;
+  }
 }

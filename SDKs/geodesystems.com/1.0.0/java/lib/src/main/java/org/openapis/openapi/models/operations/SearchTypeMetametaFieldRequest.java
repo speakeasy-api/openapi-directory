@@ -13,6 +13,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypeMetametaFieldRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypeMetametaFieldRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypeMetametaFieldRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypeMetametaFieldRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypeMetametaFieldRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypeMetametaFieldRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypeMetametaFieldRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypeMetametaFieldRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypeMetametaFieldRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypeMetametaFieldRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypeMetametaFieldRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypeMetametaFieldRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypeMetametaFieldRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypeMetametaFieldRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.database_column_size")
     public Long searchTypeMetametaFieldDatabaseColumnSize;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldDatabaseColumnSize(Long searchTypeMetametaFieldDatabaseColumnSize) {
         this.searchTypeMetametaFieldDatabaseColumnSize = searchTypeMetametaFieldDatabaseColumnSize;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.datatype")
     public String searchTypeMetametaFieldDatatype;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldDatatype(String searchTypeMetametaFieldDatatype) {
         this.searchTypeMetametaFieldDatatype = searchTypeMetametaFieldDatatype;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.enumeration_values")
     public String searchTypeMetametaFieldEnumerationValues;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldEnumerationValues(String searchTypeMetametaFieldEnumerationValues) {
         this.searchTypeMetametaFieldEnumerationValues = searchTypeMetametaFieldEnumerationValues;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.field_id")
     public String searchTypeMetametaFieldFieldId;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldFieldId(String searchTypeMetametaFieldFieldId) {
         this.searchTypeMetametaFieldFieldId = searchTypeMetametaFieldFieldId;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.field_index")
     public Long searchTypeMetametaFieldFieldIndex;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldFieldIndex(Long searchTypeMetametaFieldFieldIndex) {
         this.searchTypeMetametaFieldFieldIndex = searchTypeMetametaFieldFieldIndex;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.missing")
     public String searchTypeMetametaFieldMissing;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldMissing(String searchTypeMetametaFieldMissing) {
         this.searchTypeMetametaFieldMissing = searchTypeMetametaFieldMissing;
         return this;
@@ -213,6 +233,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.properties")
     public String searchTypeMetametaFieldProperties;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldProperties(String searchTypeMetametaFieldProperties) {
         this.searchTypeMetametaFieldProperties = searchTypeMetametaFieldProperties;
         return this;
@@ -223,6 +244,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_metameta_field.unit")
     public String searchTypeMetametaFieldUnit;
+
     public SearchTypeMetametaFieldRequest withSearchTypeMetametaFieldUnit(String searchTypeMetametaFieldUnit) {
         this.searchTypeMetametaFieldUnit = searchTypeMetametaFieldUnit;
         return this;
@@ -233,6 +255,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypeMetametaFieldRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -243,6 +266,7 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypeMetametaFieldRequest withText(String text) {
         this.text = text;
         return this;
@@ -253,9 +277,11 @@ public class SearchTypeMetametaFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypeMetametaFieldRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypeMetametaFieldRequest(){}
 }

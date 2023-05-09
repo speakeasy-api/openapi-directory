@@ -15,9 +15,11 @@ public class UpdateAnomalyDetectorRequestBodyAnomalyDetectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorFrequency")
     public org.openapis.openapi.models.shared.FrequencyEnum anomalyDetectorFrequency;
+
     public UpdateAnomalyDetectorRequestBodyAnomalyDetectorConfig withAnomalyDetectorFrequency(org.openapis.openapi.models.shared.FrequencyEnum anomalyDetectorFrequency) {
         this.anomalyDetectorFrequency = anomalyDetectorFrequency;
         return this;
     }
     
+    public UpdateAnomalyDetectorRequestBodyAnomalyDetectorConfig(){}
 }

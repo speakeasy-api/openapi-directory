@@ -15,6 +15,7 @@ public class StartGeneratedCodeJobRequestBodyGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSdkVersion")
     public String gameSDKVersion;
+
     public StartGeneratedCodeJobRequestBodyGenerator withGameSDKVersion(String gameSDKVersion) {
         this.gameSDKVersion = gameSDKVersion;
         return this;
@@ -23,6 +24,7 @@ public class StartGeneratedCodeJobRequestBodyGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public StartGeneratedCodeJobRequestBodyGenerator withLanguage(String language) {
         this.language = language;
         return this;
@@ -31,9 +33,11 @@ public class StartGeneratedCodeJobRequestBodyGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetPlatform")
     public String targetPlatform;
+
     public StartGeneratedCodeJobRequestBodyGenerator withTargetPlatform(String targetPlatform) {
         this.targetPlatform = targetPlatform;
         return this;
     }
     
+    public StartGeneratedCodeJobRequestBodyGenerator(){}
 }

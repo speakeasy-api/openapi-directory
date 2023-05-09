@@ -11,7 +11,8 @@ public enum ServiceActionAssociationErrorCodeEnum {
     INTERNAL_FAILURE("INTERNAL_FAILURE"),
     LIMIT_EXCEEDED("LIMIT_EXCEEDED"),
     RESOURCE_NOT_FOUND("RESOURCE_NOT_FOUND"),
-    THROTTLING("THROTTLING");
+    THROTTLING("THROTTLING"),
+    INVALID_PARAMETER("INVALID_PARAMETER");
 
     @JsonValue
     public final String value;

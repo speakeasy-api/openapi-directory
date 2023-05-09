@@ -15,9 +15,11 @@ public class AccountSynchronizationList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountSynchronizations")
     public AccountSynchronization[] accountSynchronizations;
+
     public AccountSynchronizationList withAccountSynchronizations(AccountSynchronization[] accountSynchronizations) {
         this.accountSynchronizations = accountSynchronizations;
         return this;
     }
     
+    public AccountSynchronizationList(){}
 }

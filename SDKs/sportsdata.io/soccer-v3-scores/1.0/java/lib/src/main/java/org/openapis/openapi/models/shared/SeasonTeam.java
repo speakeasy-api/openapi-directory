@@ -12,6 +12,7 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public SeasonTeam withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public String gender;
+
     public SeasonTeam withGender(String gender) {
         this.gender = gender;
         return this;
@@ -28,6 +30,7 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonId")
     public Long seasonId;
+
     public SeasonTeam withSeasonId(Long seasonId) {
         this.seasonId = seasonId;
         return this;
@@ -36,6 +39,7 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonTeamId")
     public Long seasonTeamId;
+
     public SeasonTeam withSeasonTeamId(Long seasonTeamId) {
         this.seasonTeamId = seasonTeamId;
         return this;
@@ -44,6 +48,7 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public Team team;
+
     public SeasonTeam withTeam(Team team) {
         this.team = team;
         return this;
@@ -52,6 +57,7 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public SeasonTeam withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -60,6 +66,7 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamName")
     public String teamName;
+
     public SeasonTeam withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
@@ -68,9 +75,11 @@ public class SeasonTeam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public SeasonTeam withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SeasonTeam(){}
 }

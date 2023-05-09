@@ -17,6 +17,7 @@ public class OBErrorResponse1 {
      */
     @JsonProperty("Code")
     public String code;
+
     public OBErrorResponse1 withCode(String code) {
         this.code = code;
         return this;
@@ -27,6 +28,7 @@ public class OBErrorResponse1 {
      */
     @JsonProperty("Errors")
     public OBError1[] errors;
+
     public OBErrorResponse1 withErrors(OBError1[] errors) {
         this.errors = errors;
         return this;
@@ -38,6 +40,7 @@ public class OBErrorResponse1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public OBErrorResponse1 withId(String id) {
         this.id = id;
         return this;
@@ -48,9 +51,15 @@ public class OBErrorResponse1 {
      */
     @JsonProperty("Message")
     public String message;
+
     public OBErrorResponse1 withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OBErrorResponse1(@JsonProperty("Code") String code, @JsonProperty("Errors") OBError1[] errors, @JsonProperty("Message") String message) {
+        this.code = code;
+        this.errors = errors;
+        this.message = message;
+  }
 }

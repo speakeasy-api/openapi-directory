@@ -12,6 +12,7 @@ public class CoachResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public CoachResourceAttributes withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -20,9 +21,11 @@ public class CoachResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public CoachResourceAttributes withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public CoachResourceAttributes(){}
 }

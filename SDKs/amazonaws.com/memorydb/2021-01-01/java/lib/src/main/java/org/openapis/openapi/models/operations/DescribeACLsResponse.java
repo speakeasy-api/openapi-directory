@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeACLsResponse {
@@ -12,6 +13,7 @@ public class DescribeACLsResponse {
      */
     
     public Object aclNotFoundFault;
+
     public DescribeACLsResponse withACLNotFoundFault(Object aclNotFoundFault) {
         this.aclNotFoundFault = aclNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class DescribeACLsResponse {
     
     
     public String contentType;
+
     public DescribeACLsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeACLsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeACLsResponse describeACLsResponse;
+
     public DescribeACLsResponse withDescribeACLsResponse(org.openapis.openapi.models.shared.DescribeACLsResponse describeACLsResponse) {
         this.describeACLsResponse = describeACLsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeACLsResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeACLsResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeACLsResponse {
     
     
     public Integer statusCode;
+
     public DescribeACLsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeACLsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeACLsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeACLsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

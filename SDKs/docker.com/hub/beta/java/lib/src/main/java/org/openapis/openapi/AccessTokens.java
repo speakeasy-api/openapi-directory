@@ -72,11 +72,9 @@ public class AccessTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidResponse res = new org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidResponse res = new org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -119,13 +117,11 @@ public class AccessTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2AccessTokensResponse res = new org.openapis.openapi.models.operations.GetV2AccessTokensResponse() {{
+        org.openapis.openapi.models.operations.GetV2AccessTokensResponse res = new org.openapis.openapi.models.operations.GetV2AccessTokensResponse(contentType, httpRes.statusCode()) {{
             getAccessTokensResponse = null;
             valueError = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,12 +170,10 @@ public class AccessTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2AccessTokensUuidResponse res = new org.openapis.openapi.models.operations.GetV2AccessTokensUuidResponse() {{
+        org.openapis.openapi.models.operations.GetV2AccessTokensUuidResponse res = new org.openapis.openapi.models.operations.GetV2AccessTokensUuidResponse(contentType, httpRes.statusCode()) {{
             getV2AccessTokensUuid200ApplicationJSONObject = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,13 +222,11 @@ public class AccessTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchV2AccessTokensUuidResponse res = new org.openapis.openapi.models.operations.PatchV2AccessTokensUuidResponse() {{
+        org.openapis.openapi.models.operations.PatchV2AccessTokensUuidResponse res = new org.openapis.openapi.models.operations.PatchV2AccessTokensUuidResponse(contentType, httpRes.statusCode()) {{
             patchAccessTokenResponse = null;
             valueError = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,13 +280,11 @@ public class AccessTokens {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2AccessTokensResponse res = new org.openapis.openapi.models.operations.PostV2AccessTokensResponse() {{
+        org.openapis.openapi.models.operations.PostV2AccessTokensResponse res = new org.openapis.openapi.models.operations.PostV2AccessTokensResponse(contentType, httpRes.statusCode()) {{
             createAccessTokensResponse = null;
             valueError = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

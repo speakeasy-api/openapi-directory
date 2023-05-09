@@ -15,9 +15,11 @@ public class CreatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CreatePricingRuleOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public CreatePricingRuleOutput(){}
 }

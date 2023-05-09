@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVolumePermissionModifications {
     
     public CreateVolumePermissionList[] add;
+
     public CreateVolumePermissionModifications withAdd(CreateVolumePermissionList[] add) {
         this.add = add;
         return this;
@@ -19,9 +20,11 @@ public class CreateVolumePermissionModifications {
     
     
     public CreateVolumePermissionList[] remove;
+
     public CreateVolumePermissionModifications withRemove(CreateVolumePermissionList[] remove) {
         this.remove = remove;
         return this;
     }
     
+    public CreateVolumePermissionModifications(){}
 }

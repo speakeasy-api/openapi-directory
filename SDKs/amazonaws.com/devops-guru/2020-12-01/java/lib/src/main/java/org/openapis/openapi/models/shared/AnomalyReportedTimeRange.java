@@ -22,6 +22,7 @@ public class AnomalyReportedTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CloseTime")
     public OffsetDateTime closeTime;
+
     public AnomalyReportedTimeRange withCloseTime(OffsetDateTime closeTime) {
         this.closeTime = closeTime;
         return this;
@@ -31,9 +32,13 @@ public class AnomalyReportedTimeRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OpenTime")
     public OffsetDateTime openTime;
+
     public AnomalyReportedTimeRange withOpenTime(OffsetDateTime openTime) {
         this.openTime = openTime;
         return this;
     }
     
+    public AnomalyReportedTimeRange(@JsonProperty("OpenTime") OffsetDateTime openTime) {
+        this.openTime = openTime;
+  }
 }

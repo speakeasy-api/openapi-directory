@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogChangeCatalogColumnUserNameRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ChangeUserColumnNameRequest changeUserColumnNameRequest;
+
     public CatalogChangeCatalogColumnUserNameRequest withChangeUserColumnNameRequest(org.openapis.openapi.models.shared.ChangeUserColumnNameRequest changeUserColumnNameRequest) {
         this.changeUserColumnNameRequest = changeUserColumnNameRequest;
         return this;
@@ -19,6 +21,7 @@ public class CatalogChangeCatalogColumnUserNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public CatalogChangeCatalogColumnUserNameRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -29,9 +32,15 @@ public class CatalogChangeCatalogColumnUserNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CatalogChangeCatalogColumnUserNameRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CatalogChangeCatalogColumnUserNameRequest(@JsonProperty("changeUserColumnNameRequest") org.openapis.openapi.models.shared.ChangeUserColumnNameRequest changeUserColumnNameRequest, @JsonProperty("columnId") String columnId, @JsonProperty("storeId") String storeId) {
+        this.changeUserColumnNameRequest = changeUserColumnNameRequest;
+        this.columnId = columnId;
+        this.storeId = storeId;
+  }
 }

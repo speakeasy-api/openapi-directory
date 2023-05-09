@@ -18,9 +18,13 @@ public class CreateWebhookRequest {
      */
     @JsonProperty("data")
     public WebhookInputResource data;
+
     public CreateWebhookRequest withData(WebhookInputResource data) {
         this.data = data;
         return this;
     }
     
+    public CreateWebhookRequest(@JsonProperty("data") WebhookInputResource data) {
+        this.data = data;
+  }
 }

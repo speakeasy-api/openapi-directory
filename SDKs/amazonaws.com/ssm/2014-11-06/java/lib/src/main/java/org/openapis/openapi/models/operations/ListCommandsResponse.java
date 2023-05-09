@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCommandsResponse {
     
     public String contentType;
+
     public ListCommandsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCommandsResponse {
      */
     
     public Object internalServerError;
+
     public ListCommandsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListCommandsResponse {
      */
     
     public Object invalidCommandId;
+
     public ListCommandsResponse withInvalidCommandId(Object invalidCommandId) {
         this.invalidCommandId = invalidCommandId;
         return this;
@@ -39,6 +43,7 @@ public class ListCommandsResponse {
      */
     
     public Object invalidFilterKey;
+
     public ListCommandsResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -49,6 +54,7 @@ public class ListCommandsResponse {
      */
     
     public Object invalidInstanceId;
+
     public ListCommandsResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -59,6 +65,7 @@ public class ListCommandsResponse {
      */
     
     public Object invalidNextToken;
+
     public ListCommandsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -69,6 +76,7 @@ public class ListCommandsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCommandsResult listCommandsResult;
+
     public ListCommandsResponse withListCommandsResult(org.openapis.openapi.models.shared.ListCommandsResult listCommandsResult) {
         this.listCommandsResult = listCommandsResult;
         return this;
@@ -76,6 +84,7 @@ public class ListCommandsResponse {
     
     
     public Integer statusCode;
+
     public ListCommandsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListCommandsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCommandsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCommandsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

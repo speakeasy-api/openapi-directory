@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTCreateConfigurationSetTrackingOptionsResponse {
     
     public byte[] body;
+
     public POSTCreateConfigurationSetTrackingOptionsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTCreateConfigurationSetTrackingOptionsResponse {
     
     
     public String contentType;
+
     public POSTCreateConfigurationSetTrackingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTCreateConfigurationSetTrackingOptionsResponse {
     
     
     public Integer statusCode;
+
     public POSTCreateConfigurationSetTrackingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTCreateConfigurationSetTrackingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTCreateConfigurationSetTrackingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTCreateConfigurationSetTrackingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

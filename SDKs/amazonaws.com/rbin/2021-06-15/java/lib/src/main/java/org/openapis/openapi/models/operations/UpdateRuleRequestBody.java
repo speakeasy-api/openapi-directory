@@ -15,6 +15,7 @@ public class UpdateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateRuleRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public org.openapis.openapi.models.shared.ResourceTag[] resourceTags;
+
     public UpdateRuleRequestBody withResourceTags(org.openapis.openapi.models.shared.ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -37,6 +39,7 @@ public class UpdateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public UpdateRuleRequestBodyResourceTypeEnum resourceType;
+
     public UpdateRuleRequestBody withResourceType(UpdateRuleRequestBodyResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -48,9 +51,11 @@ public class UpdateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public UpdateRuleRequestBodyRetentionPeriod retentionPeriod;
+
     public UpdateRuleRequestBody withRetentionPeriod(UpdateRuleRequestBodyRetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
     }
     
+    public UpdateRuleRequestBody(){}
 }

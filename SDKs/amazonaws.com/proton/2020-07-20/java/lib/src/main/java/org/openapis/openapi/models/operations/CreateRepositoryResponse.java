@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRepositoryResponse {
@@ -12,6 +13,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRepositoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object conflictException;
+
     public CreateRepositoryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRepositoryResponse {
     
     
     public String contentType;
+
     public CreateRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRepositoryOutput createRepositoryOutput;
+
     public CreateRepositoryResponse withCreateRepositoryOutput(org.openapis.openapi.models.shared.CreateRepositoryOutput createRepositoryOutput) {
         this.createRepositoryOutput = createRepositoryOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object internalServerException;
+
     public CreateRepositoryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRepositoryResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateRepositoryResponse {
     
     
     public Integer statusCode;
+
     public CreateRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateRepositoryResponse {
      */
     
     public Object throttlingException;
+
     public CreateRepositoryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRepositoryResponse {
      */
     
     public Object validationException;
+
     public CreateRepositoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

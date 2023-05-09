@@ -15,6 +15,7 @@ public class AccountDetailBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public AccountDetailBalance withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -23,9 +24,11 @@ public class AccountDetailBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailBalance")
     public DetailBalance detailBalance;
+
     public AccountDetailBalance withDetailBalance(DetailBalance detailBalance) {
         this.detailBalance = detailBalance;
         return this;
     }
     
+    public AccountDetailBalance(){}
 }

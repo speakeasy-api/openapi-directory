@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFileOutput {
     @JsonProperty("blobId")
     public String blobId;
+
     public GetFileOutput withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -19,6 +20,7 @@ public class GetFileOutput {
     
     @JsonProperty("commitId")
     public String commitId;
+
     public GetFileOutput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -26,6 +28,7 @@ public class GetFileOutput {
     
     @JsonProperty("fileContent")
     public String fileContent;
+
     public GetFileOutput withFileContent(String fileContent) {
         this.fileContent = fileContent;
         return this;
@@ -33,6 +36,7 @@ public class GetFileOutput {
     
     @JsonProperty("fileMode")
     public FileModeTypeEnumEnum fileMode;
+
     public GetFileOutput withFileMode(FileModeTypeEnumEnum fileMode) {
         this.fileMode = fileMode;
         return this;
@@ -40,6 +44,7 @@ public class GetFileOutput {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public GetFileOutput withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -47,9 +52,18 @@ public class GetFileOutput {
     
     @JsonProperty("fileSize")
     public Long fileSize;
+
     public GetFileOutput withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }
     
+    public GetFileOutput(@JsonProperty("blobId") String blobId, @JsonProperty("commitId") String commitId, @JsonProperty("fileContent") String fileContent, @JsonProperty("fileMode") FileModeTypeEnumEnum fileMode, @JsonProperty("filePath") String filePath, @JsonProperty("fileSize") Long fileSize) {
+        this.blobId = blobId;
+        this.commitId = commitId;
+        this.fileContent = fileContent;
+        this.fileMode = fileMode;
+        this.filePath = filePath;
+        this.fileSize = fileSize;
+  }
 }

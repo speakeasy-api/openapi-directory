@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetSessionTokenResponse {
     
     public Credentials credentials;
+
     public GetSessionTokenResponse withCredentials(Credentials credentials) {
         this.credentials = credentials;
         return this;
     }
     
+    public GetSessionTokenResponse(){}
 }

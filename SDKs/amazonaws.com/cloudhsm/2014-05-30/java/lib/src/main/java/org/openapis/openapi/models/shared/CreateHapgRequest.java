@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHapgRequest {
     @JsonProperty("Label")
     public String label;
+
     public CreateHapgRequest withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public CreateHapgRequest(@JsonProperty("Label") String label) {
+        this.label = label;
+  }
 }

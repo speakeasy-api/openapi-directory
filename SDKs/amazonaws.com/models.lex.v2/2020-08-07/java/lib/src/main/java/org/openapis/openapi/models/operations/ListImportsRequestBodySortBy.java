@@ -15,6 +15,7 @@ public class ListImportsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public org.openapis.openapi.models.shared.ImportSortAttributeEnum attribute;
+
     public ListImportsRequestBodySortBy withAttribute(org.openapis.openapi.models.shared.ImportSortAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,9 +24,11 @@ public class ListImportsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListImportsRequestBodySortBy withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public ListImportsRequestBodySortBy(){}
 }

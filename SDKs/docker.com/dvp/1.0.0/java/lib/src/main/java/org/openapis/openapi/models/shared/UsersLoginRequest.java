@@ -15,6 +15,7 @@ public class UsersLoginRequest {
      */
     @JsonProperty("password")
     public String password;
+
     public UsersLoginRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -25,9 +26,14 @@ public class UsersLoginRequest {
      */
     @JsonProperty("username")
     public String username;
+
     public UsersLoginRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UsersLoginRequest(@JsonProperty("username") String username, @JsonProperty("password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

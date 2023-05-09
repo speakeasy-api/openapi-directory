@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class FileContentHints {
     /**
-     * Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in length and may contain HTML elements. For more information, see Manage file metadata.
+     * Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in length and might contain HTML elements. For more information, see Manage file metadata.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexableText")
     public String indexableText;
+
     public FileContentHints withIndexableText(String indexableText) {
         this.indexableText = indexableText;
         return this;
@@ -29,9 +30,11 @@ public class FileContentHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public FileContentHintsThumbnail thumbnail;
+
     public FileContentHints withThumbnail(FileContentHintsThumbnail thumbnail) {
         this.thumbnail = thumbnail;
         return this;
     }
     
+    public FileContentHints(){}
 }

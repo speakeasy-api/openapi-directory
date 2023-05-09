@@ -15,9 +15,11 @@ public class NotifyWorkersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotifyWorkersFailureStatuses")
     public NotifyWorkersFailureStatus[] notifyWorkersFailureStatuses;
+
     public NotifyWorkersResponse withNotifyWorkersFailureStatuses(NotifyWorkersFailureStatus[] notifyWorkersFailureStatuses) {
         this.notifyWorkersFailureStatuses = notifyWorkersFailureStatuses;
         return this;
     }
     
+    public NotifyWorkersResponse(){}
 }

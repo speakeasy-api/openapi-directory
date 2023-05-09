@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetArchiveRuleResponse {
@@ -12,6 +13,7 @@ public class GetArchiveRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public GetArchiveRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetArchiveRuleResponse {
     
     
     public String contentType;
+
     public GetArchiveRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetArchiveRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetArchiveRuleResponse getArchiveRuleResponse;
+
     public GetArchiveRuleResponse withGetArchiveRuleResponse(org.openapis.openapi.models.shared.GetArchiveRuleResponse getArchiveRuleResponse) {
         this.getArchiveRuleResponse = getArchiveRuleResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetArchiveRuleResponse {
      */
     
     public Object internalServerException;
+
     public GetArchiveRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetArchiveRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetArchiveRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetArchiveRuleResponse {
     
     
     public Integer statusCode;
+
     public GetArchiveRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetArchiveRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetArchiveRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetArchiveRuleResponse {
      */
     
     public Object throttlingException;
+
     public GetArchiveRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetArchiveRuleResponse {
      */
     
     public Object validationException;
+
     public GetArchiveRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetArchiveRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShareDirectoryRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public ShareDirectoryRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -18,6 +19,7 @@ public class ShareDirectoryRequest {
     
     @JsonProperty("ShareMethod")
     public ShareMethodEnum shareMethod;
+
     public ShareDirectoryRequest withShareMethod(ShareMethodEnum shareMethod) {
         this.shareMethod = shareMethod;
         return this;
@@ -26,6 +28,7 @@ public class ShareDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareNotes")
     public String shareNotes;
+
     public ShareDirectoryRequest withShareNotes(String shareNotes) {
         this.shareNotes = shareNotes;
         return this;
@@ -33,9 +36,15 @@ public class ShareDirectoryRequest {
     
     @JsonProperty("ShareTarget")
     public ShareTarget shareTarget;
+
     public ShareDirectoryRequest withShareTarget(ShareTarget shareTarget) {
         this.shareTarget = shareTarget;
         return this;
     }
     
+    public ShareDirectoryRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("ShareMethod") ShareMethodEnum shareMethod, @JsonProperty("ShareTarget") ShareTarget shareTarget) {
+        this.directoryId = directoryId;
+        this.shareMethod = shareMethod;
+        this.shareTarget = shareTarget;
+  }
 }

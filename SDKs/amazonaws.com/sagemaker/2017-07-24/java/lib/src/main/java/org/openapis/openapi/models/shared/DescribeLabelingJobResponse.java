@@ -21,6 +21,7 @@ public class DescribeLabelingJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLabelingJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeLabelingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeLabelingJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -36,6 +38,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("HumanTaskConfig")
     public HumanTaskConfig humanTaskConfig;
+
     public DescribeLabelingJobResponse withHumanTaskConfig(HumanTaskConfig humanTaskConfig) {
         this.humanTaskConfig = humanTaskConfig;
         return this;
@@ -43,6 +46,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("InputConfig")
     public LabelingJobInputConfig inputConfig;
+
     public DescribeLabelingJobResponse withInputConfig(LabelingJobInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -50,6 +54,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("JobReferenceCode")
     public String jobReferenceCode;
+
     public DescribeLabelingJobResponse withJobReferenceCode(String jobReferenceCode) {
         this.jobReferenceCode = jobReferenceCode;
         return this;
@@ -58,6 +63,7 @@ public class DescribeLabelingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelAttributeName")
     public String labelAttributeName;
+
     public DescribeLabelingJobResponse withLabelAttributeName(String labelAttributeName) {
         this.labelAttributeName = labelAttributeName;
         return this;
@@ -66,6 +72,7 @@ public class DescribeLabelingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelCategoryConfigS3Uri")
     public String labelCategoryConfigS3Uri;
+
     public DescribeLabelingJobResponse withLabelCategoryConfigS3Uri(String labelCategoryConfigS3Uri) {
         this.labelCategoryConfigS3Uri = labelCategoryConfigS3Uri;
         return this;
@@ -73,6 +80,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("LabelCounters")
     public LabelCounters labelCounters;
+
     public DescribeLabelingJobResponse withLabelCounters(LabelCounters labelCounters) {
         this.labelCounters = labelCounters;
         return this;
@@ -81,6 +89,7 @@ public class DescribeLabelingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobAlgorithmsConfig")
     public LabelingJobAlgorithmsConfig labelingJobAlgorithmsConfig;
+
     public DescribeLabelingJobResponse withLabelingJobAlgorithmsConfig(LabelingJobAlgorithmsConfig labelingJobAlgorithmsConfig) {
         this.labelingJobAlgorithmsConfig = labelingJobAlgorithmsConfig;
         return this;
@@ -88,6 +97,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("LabelingJobArn")
     public String labelingJobArn;
+
     public DescribeLabelingJobResponse withLabelingJobArn(String labelingJobArn) {
         this.labelingJobArn = labelingJobArn;
         return this;
@@ -95,6 +105,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("LabelingJobName")
     public String labelingJobName;
+
     public DescribeLabelingJobResponse withLabelingJobName(String labelingJobName) {
         this.labelingJobName = labelingJobName;
         return this;
@@ -103,6 +114,7 @@ public class DescribeLabelingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobOutput")
     public LabelingJobOutput labelingJobOutput;
+
     public DescribeLabelingJobResponse withLabelingJobOutput(LabelingJobOutput labelingJobOutput) {
         this.labelingJobOutput = labelingJobOutput;
         return this;
@@ -110,6 +122,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("LabelingJobStatus")
     public LabelingJobStatusEnum labelingJobStatus;
+
     public DescribeLabelingJobResponse withLabelingJobStatus(LabelingJobStatusEnum labelingJobStatus) {
         this.labelingJobStatus = labelingJobStatus;
         return this;
@@ -119,6 +132,7 @@ public class DescribeLabelingJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeLabelingJobResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -126,6 +140,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("OutputConfig")
     public LabelingJobOutputConfig outputConfig;
+
     public DescribeLabelingJobResponse withOutputConfig(LabelingJobOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -133,6 +148,7 @@ public class DescribeLabelingJobResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeLabelingJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -141,6 +157,7 @@ public class DescribeLabelingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingConditions")
     public LabelingJobStoppingConditions stoppingConditions;
+
     public DescribeLabelingJobResponse withStoppingConditions(LabelingJobStoppingConditions stoppingConditions) {
         this.stoppingConditions = stoppingConditions;
         return this;
@@ -149,9 +166,23 @@ public class DescribeLabelingJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribeLabelingJobResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeLabelingJobResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("HumanTaskConfig") HumanTaskConfig humanTaskConfig, @JsonProperty("InputConfig") LabelingJobInputConfig inputConfig, @JsonProperty("JobReferenceCode") String jobReferenceCode, @JsonProperty("LabelCounters") LabelCounters labelCounters, @JsonProperty("LabelingJobArn") String labelingJobArn, @JsonProperty("LabelingJobName") String labelingJobName, @JsonProperty("LabelingJobStatus") LabelingJobStatusEnum labelingJobStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("OutputConfig") LabelingJobOutputConfig outputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.creationTime = creationTime;
+        this.humanTaskConfig = humanTaskConfig;
+        this.inputConfig = inputConfig;
+        this.jobReferenceCode = jobReferenceCode;
+        this.labelCounters = labelCounters;
+        this.labelingJobArn = labelingJobArn;
+        this.labelingJobName = labelingJobName;
+        this.labelingJobStatus = labelingJobStatus;
+        this.lastModifiedTime = lastModifiedTime;
+        this.outputConfig = outputConfig;
+        this.roleArn = roleArn;
+  }
 }

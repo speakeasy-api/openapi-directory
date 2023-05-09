@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteTransitGatewayConnectPeerRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteTransitGatewayConnectPeerActionEnum action;
+
     public GETDeleteTransitGatewayConnectPeerRequest withAction(GETDeleteTransitGatewayConnectPeerActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDeleteTransitGatewayConnectPeerRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayConnectPeerId")
     public String transitGatewayConnectPeerId;
+
     public GETDeleteTransitGatewayConnectPeerRequest withTransitGatewayConnectPeerId(String transitGatewayConnectPeerId) {
         this.transitGatewayConnectPeerId = transitGatewayConnectPeerId;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteTransitGatewayConnectPeerVersionEnum version;
+
     public GETDeleteTransitGatewayConnectPeerRequest withVersion(GETDeleteTransitGatewayConnectPeerVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteTransitGatewayConnectPeerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteTransitGatewayConnectPeerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteTransitGatewayConnectPeerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteTransitGatewayConnectPeerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteTransitGatewayConnectPeerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteTransitGatewayConnectPeerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDeleteTransitGatewayConnectPeerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteTransitGatewayConnectPeerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteTransitGatewayConnectPeerRequest(@JsonProperty("Action") GETDeleteTransitGatewayConnectPeerActionEnum action, @JsonProperty("TransitGatewayConnectPeerId") String transitGatewayConnectPeerId, @JsonProperty("Version") GETDeleteTransitGatewayConnectPeerVersionEnum version) {
+        this.action = action;
+        this.transitGatewayConnectPeerId = transitGatewayConnectPeerId;
+        this.version = version;
+  }
 }

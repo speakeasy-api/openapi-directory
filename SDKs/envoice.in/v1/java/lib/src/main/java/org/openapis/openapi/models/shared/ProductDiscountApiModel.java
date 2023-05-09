@@ -20,6 +20,7 @@ public class ProductDiscountApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountAmount")
     public Double discountAmount;
+
     public ProductDiscountApiModel withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -31,6 +32,7 @@ public class ProductDiscountApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiscountPercentage")
     public Double discountPercentage;
+
     public ProductDiscountApiModel withDiscountPercentage(Double discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -42,6 +44,7 @@ public class ProductDiscountApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public ProductDiscountApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -53,6 +56,7 @@ public class ProductDiscountApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProductDiscountApiModel withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +70,7 @@ public class ProductDiscountApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValidFrom")
     public OffsetDateTime validFrom;
+
     public ProductDiscountApiModel withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -79,9 +84,11 @@ public class ProductDiscountApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValidTo")
     public OffsetDateTime validTo;
+
     public ProductDiscountApiModel withValidTo(OffsetDateTime validTo) {
         this.validTo = validTo;
         return this;
     }
     
+    public ProductDiscountApiModel(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CashPaymentsDeleteRequest {
@@ -12,6 +13,7 @@ public class CashPaymentsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CashPaymentsDeleteRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class CashPaymentsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
     public String timestamp;
+
     public CashPaymentsDeleteRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public CashPaymentsDeleteRequest(@JsonProperty("id") Long id, @JsonProperty("timestamp") String timestamp) {
+        this.id = id;
+        this.timestamp = timestamp;
+  }
 }

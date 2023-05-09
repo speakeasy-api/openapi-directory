@@ -18,9 +18,11 @@ public class InventorySourceGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InventorySourceGroupInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public InventorySourceGroupInput(){}
 }

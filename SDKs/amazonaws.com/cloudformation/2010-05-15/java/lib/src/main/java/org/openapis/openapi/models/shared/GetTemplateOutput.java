@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTemplateOutput {
     
     public TemplateStageEnum[] stagesAvailable;
+
     public GetTemplateOutput withStagesAvailable(TemplateStageEnum[] stagesAvailable) {
         this.stagesAvailable = stagesAvailable;
         return this;
@@ -19,9 +20,11 @@ public class GetTemplateOutput {
     
     
     public String templateBody;
+
     public GetTemplateOutput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
     
+    public GetTemplateOutput(){}
 }

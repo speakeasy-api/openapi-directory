@@ -15,6 +15,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLevel")
     public StartRunRequestBodyLogLevelEnum logLevel;
+
     public StartRunRequestBody withLogLevel(StartRunRequestBodyLogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -26,6 +27,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StartRunRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUri")
     public String outputUri;
+
     public StartRunRequestBody withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
@@ -48,6 +51,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public StartRunRequestBody withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -59,6 +63,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public StartRunRequestBody withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -69,6 +74,7 @@ public class StartRunRequestBody {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public StartRunRequestBody withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -79,6 +85,7 @@ public class StartRunRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartRunRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -90,6 +97,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runGroupId")
     public String runGroupId;
+
     public StartRunRequestBody withRunGroupId(String runGroupId) {
         this.runGroupId = runGroupId;
         return this;
@@ -101,6 +109,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runId")
     public String runId;
+
     public StartRunRequestBody withRunId(String runId) {
         this.runId = runId;
         return this;
@@ -112,6 +121,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageCapacity")
     public Long storageCapacity;
+
     public StartRunRequestBody withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
@@ -123,6 +133,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartRunRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -134,6 +145,7 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public StartRunRequestBody withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -145,9 +157,14 @@ public class StartRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowType")
     public StartRunRequestBodyWorkflowTypeEnum workflowType;
+
     public StartRunRequestBody withWorkflowType(StartRunRequestBodyWorkflowTypeEnum workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public StartRunRequestBody(@JsonProperty("requestId") String requestId, @JsonProperty("roleArn") String roleArn) {
+        this.requestId = requestId;
+        this.roleArn = roleArn;
+  }
 }

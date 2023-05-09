@@ -18,6 +18,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalVariables")
     public ConfigVariable[] additionalVariables;
+
     public SslConfig withAdditionalVariables(ConfigVariable[] additionalVariables) {
         this.additionalVariables = additionalVariables;
         return this;
@@ -29,6 +30,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertType")
     public SslConfigClientCertTypeEnum clientCertType;
+
     public SslConfig withClientCertType(SslConfigClientCertTypeEnum clientCertType) {
         this.clientCertType = clientCertType;
         return this;
@@ -40,6 +42,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public Secret clientCertificate;
+
     public SslConfig withClientCertificate(Secret clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -51,6 +54,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPrivateKey")
     public Secret clientPrivateKey;
+
     public SslConfig withClientPrivateKey(Secret clientPrivateKey) {
         this.clientPrivateKey = clientPrivateKey;
         return this;
@@ -62,6 +66,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPrivateKeyPass")
     public Secret clientPrivateKeyPass;
+
     public SslConfig withClientPrivateKeyPass(Secret clientPrivateKeyPass) {
         this.clientPrivateKeyPass = clientPrivateKeyPass;
         return this;
@@ -73,6 +78,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateServerCertificate")
     public Secret privateServerCertificate;
+
     public SslConfig withPrivateServerCertificate(Secret privateServerCertificate) {
         this.privateServerCertificate = privateServerCertificate;
         return this;
@@ -84,6 +90,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertType")
     public SslConfigServerCertTypeEnum serverCertType;
+
     public SslConfig withServerCertType(SslConfigServerCertTypeEnum serverCertType) {
         this.serverCertType = serverCertType;
         return this;
@@ -95,6 +102,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustModel")
     public SslConfigTrustModelEnum trustModel;
+
     public SslConfig withTrustModel(SslConfigTrustModelEnum trustModel) {
         this.trustModel = trustModel;
         return this;
@@ -106,6 +114,7 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SslConfigTypeEnum type;
+
     public SslConfig withType(SslConfigTypeEnum type) {
         this.type = type;
         return this;
@@ -117,9 +126,11 @@ public class SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useSsl")
     public Boolean useSsl;
+
     public SslConfig withUseSsl(Boolean useSsl) {
         this.useSsl = useSsl;
         return this;
     }
     
+    public SslConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhookRequest {
@@ -14,6 +15,7 @@ public class GetWebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetWebhookRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -25,6 +27,7 @@ public class GetWebhookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetWebhookRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -35,9 +38,13 @@ public class GetWebhookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_gid")
     public String webhookGid;
+
     public GetWebhookRequest withWebhookGid(String webhookGid) {
         this.webhookGid = webhookGid;
         return this;
     }
     
+    public GetWebhookRequest(@JsonProperty("webhook_gid") String webhookGid) {
+        this.webhookGid = webhookGid;
+  }
 }

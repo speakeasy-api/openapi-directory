@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRecommendationExportJobsResponse {
@@ -12,6 +13,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeRecommendationExportJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRecommendationExportJobsResponse {
     
     
     public String contentType;
+
     public DescribeRecommendationExportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRecommendationExportJobsResponse describeRecommendationExportJobsResponse;
+
     public DescribeRecommendationExportJobsResponse withDescribeRecommendationExportJobsResponse(org.openapis.openapi.models.shared.DescribeRecommendationExportJobsResponse describeRecommendationExportJobsResponse) {
         this.describeRecommendationExportJobsResponse = describeRecommendationExportJobsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRecommendationExportJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeRecommendationExportJobsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public DescribeRecommendationExportJobsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object optInRequiredException;
+
     public DescribeRecommendationExportJobsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeRecommendationExportJobsResponse {
     
     
     public Integer statusCode;
+
     public DescribeRecommendationExportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeRecommendationExportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRecommendationExportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRecommendationExportJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeRecommendationExportJobsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class DescribeRecommendationExportJobsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRecommendationExportJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeRecommendationExportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

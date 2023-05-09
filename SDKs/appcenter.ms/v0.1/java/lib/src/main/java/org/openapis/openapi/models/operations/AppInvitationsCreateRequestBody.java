@@ -18,6 +18,7 @@ public class AppInvitationsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public AppInvitationsCreateRequestBodyRoleEnum role;
+
     public AppInvitationsCreateRequestBody withRole(AppInvitationsCreateRequestBodyRoleEnum role) {
         this.role = role;
         return this;
@@ -28,9 +29,13 @@ public class AppInvitationsCreateRequestBody {
      */
     @JsonProperty("user_email")
     public String userEmail;
+
     public AppInvitationsCreateRequestBody withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public AppInvitationsCreateRequestBody(@JsonProperty("user_email") String userEmail) {
+        this.userEmail = userEmail;
+  }
 }

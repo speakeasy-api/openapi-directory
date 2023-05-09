@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInvitationsCountResponse {
     
     public String contentType;
+
     public GetInvitationsCountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInvitationsCountResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInvitationsCountResponse getInvitationsCountResponse;
+
     public GetInvitationsCountResponse withGetInvitationsCountResponse(org.openapis.openapi.models.shared.GetInvitationsCountResponse getInvitationsCountResponse) {
         this.getInvitationsCountResponse = getInvitationsCountResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetInvitationsCountResponse {
      */
     
     public Object internalException;
+
     public GetInvitationsCountResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class GetInvitationsCountResponse {
      */
     
     public Object invalidAccessException;
+
     public GetInvitationsCountResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class GetInvitationsCountResponse {
      */
     
     public Object invalidInputException;
+
     public GetInvitationsCountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetInvitationsCountResponse {
      */
     
     public Object limitExceededException;
+
     public GetInvitationsCountResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class GetInvitationsCountResponse {
     
     
     public Integer statusCode;
+
     public GetInvitationsCountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetInvitationsCountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInvitationsCountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInvitationsCountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

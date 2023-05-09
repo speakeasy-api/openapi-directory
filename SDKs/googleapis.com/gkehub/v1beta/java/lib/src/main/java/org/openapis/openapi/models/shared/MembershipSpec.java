@@ -18,6 +18,7 @@ public class MembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicy")
     public MembershipSpecSecurityPolicyEnum securityPolicy;
+
     public MembershipSpec withSecurityPolicy(MembershipSpecSecurityPolicyEnum securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -29,9 +30,11 @@ public class MembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public MembershipSpec withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public MembershipSpec(){}
 }

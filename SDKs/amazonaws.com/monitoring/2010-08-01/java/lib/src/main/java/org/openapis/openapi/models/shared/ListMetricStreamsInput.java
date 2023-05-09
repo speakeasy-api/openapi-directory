@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListMetricStreamsInput {
     
     public Long maxResults;
+
     public ListMetricStreamsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -16,9 +17,11 @@ public class ListMetricStreamsInput {
     
     
     public String nextToken;
+
     public ListMetricStreamsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMetricStreamsInput(){}
 }

@@ -12,9 +12,13 @@ public class DescribeTransactionRequestBody {
      */
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public DescribeTransactionRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public DescribeTransactionRequestBody(@JsonProperty("TransactionId") String transactionId) {
+        this.transactionId = transactionId;
+  }
 }

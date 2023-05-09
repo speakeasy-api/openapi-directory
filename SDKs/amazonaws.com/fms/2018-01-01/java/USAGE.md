@@ -3,34 +3,30 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateAdminAccountXAmzTargetEnum;
 import org.openapis.openapi.models.operations.AssociateAdminAccountRequest;
 import org.openapis.openapi.models.operations.AssociateAdminAccountResponse;
+import org.openapis.openapi.models.operations.AssociateAdminAccountXAmzTargetEnum;
 import org.openapis.openapi.models.shared.AssociateAdminAccountRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AssociateAdminAccountRequest req = new AssociateAdminAccountRequest() {{
-                associateAdminAccountRequest = new AssociateAdminAccountRequest() {{
-                    adminAccount = "corrupti";
-                }};
-                xAmzAlgorithm = "provident";
-                xAmzContentSha256 = "distinctio";
-                xAmzCredential = "quibusdam";
-                xAmzDate = "unde";
-                xAmzSecurityToken = "nulla";
-                xAmzSignature = "corrupti";
-                xAmzSignedHeaders = "illum";
-                xAmzTarget = "AWSFMS_20180101.AssociateAdminAccount";
-            }}            
+            AssociateAdminAccountRequest req = new AssociateAdminAccountRequest(                new AssociateAdminAccountRequest("provident");, AssociateAdminAccountXAmzTargetEnum.AWSFMS20180101_ASSOCIATE_ADMIN_ACCOUNT) {{
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }};            
 
             AssociateAdminAccountResponse res = sdk.associateAdminAccount(req);
 
@@ -40,5 +36,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

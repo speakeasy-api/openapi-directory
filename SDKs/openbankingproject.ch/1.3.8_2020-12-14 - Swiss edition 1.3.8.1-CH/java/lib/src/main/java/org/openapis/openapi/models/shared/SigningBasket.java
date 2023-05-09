@@ -20,6 +20,7 @@ public class SigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentIds")
     public String[] consentIds;
+
     public SigningBasket withConsentIds(String[] consentIds) {
         this.consentIds = consentIds;
         return this;
@@ -31,9 +32,11 @@ public class SigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentIds")
     public String[] paymentIds;
+
     public SigningBasket withPaymentIds(String[] paymentIds) {
         this.paymentIds = paymentIds;
         return this;
     }
     
+    public SigningBasket(){}
 }

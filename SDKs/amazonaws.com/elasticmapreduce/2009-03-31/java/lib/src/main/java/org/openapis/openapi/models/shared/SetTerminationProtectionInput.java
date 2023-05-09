@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetTerminationProtectionInput {
     @JsonProperty("JobFlowIds")
     public String[] jobFlowIds;
+
     public SetTerminationProtectionInput withJobFlowIds(String[] jobFlowIds) {
         this.jobFlowIds = jobFlowIds;
         return this;
@@ -19,9 +20,14 @@ public class SetTerminationProtectionInput {
     
     @JsonProperty("TerminationProtected")
     public Boolean terminationProtected;
+
     public SetTerminationProtectionInput withTerminationProtected(Boolean terminationProtected) {
         this.terminationProtected = terminationProtected;
         return this;
     }
     
+    public SetTerminationProtectionInput(@JsonProperty("JobFlowIds") String[] jobFlowIds, @JsonProperty("TerminationProtected") Boolean terminationProtected) {
+        this.jobFlowIds = jobFlowIds;
+        this.terminationProtected = terminationProtected;
+  }
 }

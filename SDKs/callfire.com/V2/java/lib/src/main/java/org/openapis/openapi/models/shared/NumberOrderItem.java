@@ -18,6 +18,7 @@ public class NumberOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfilled")
     public String[] fulfilled;
+
     public NumberOrderItem withFulfilled(String[] fulfilled) {
         this.fulfilled = fulfilled;
         return this;
@@ -29,6 +30,7 @@ public class NumberOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordered")
     public Integer ordered;
+
     public NumberOrderItem withOrdered(Integer ordered) {
         this.ordered = ordered;
         return this;
@@ -40,9 +42,11 @@ public class NumberOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitCost")
     public Float unitCost;
+
     public NumberOrderItem withUnitCost(Float unitCost) {
         this.unitCost = unitCost;
         return this;
     }
     
+    public NumberOrderItem(){}
 }

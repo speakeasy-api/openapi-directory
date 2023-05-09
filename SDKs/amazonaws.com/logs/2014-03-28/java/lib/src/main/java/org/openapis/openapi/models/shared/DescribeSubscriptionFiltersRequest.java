@@ -12,6 +12,7 @@ public class DescribeSubscriptionFiltersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterNamePrefix")
     public String filterNamePrefix;
+
     public DescribeSubscriptionFiltersRequest withFilterNamePrefix(String filterNamePrefix) {
         this.filterNamePrefix = filterNamePrefix;
         return this;
@@ -20,6 +21,7 @@ public class DescribeSubscriptionFiltersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public DescribeSubscriptionFiltersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class DescribeSubscriptionFiltersRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public DescribeSubscriptionFiltersRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -35,9 +38,13 @@ public class DescribeSubscriptionFiltersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSubscriptionFiltersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeSubscriptionFiltersRequest(@JsonProperty("logGroupName") String logGroupName) {
+        this.logGroupName = logGroupName;
+  }
 }

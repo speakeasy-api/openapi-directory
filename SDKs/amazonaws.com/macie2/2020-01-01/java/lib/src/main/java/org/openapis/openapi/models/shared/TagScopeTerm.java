@@ -15,6 +15,7 @@ public class TagScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public JobComparatorEnum comparator;
+
     public TagScopeTerm withComparator(JobComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class TagScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TagScopeTerm withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class TagScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagValues")
     public TagValuePair[] tagValues;
+
     public TagScopeTerm withTagValues(TagValuePair[] tagValues) {
         this.tagValues = tagValues;
         return this;
@@ -39,9 +42,11 @@ public class TagScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public TagTargetEnum target;
+
     public TagScopeTerm withTarget(TagTargetEnum target) {
         this.target = target;
         return this;
     }
     
+    public TagScopeTerm(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddInstanceGroupsInput {
     @JsonProperty("InstanceGroups")
     public InstanceGroupConfig[] instanceGroups;
+
     public AddInstanceGroupsInput withInstanceGroups(InstanceGroupConfig[] instanceGroups) {
         this.instanceGroups = instanceGroups;
         return this;
@@ -19,9 +20,14 @@ public class AddInstanceGroupsInput {
     
     @JsonProperty("JobFlowId")
     public String jobFlowId;
+
     public AddInstanceGroupsInput withJobFlowId(String jobFlowId) {
         this.jobFlowId = jobFlowId;
         return this;
     }
     
+    public AddInstanceGroupsInput(@JsonProperty("InstanceGroups") InstanceGroupConfig[] instanceGroups, @JsonProperty("JobFlowId") String jobFlowId) {
+        this.instanceGroups = instanceGroups;
+        this.jobFlowId = jobFlowId;
+  }
 }

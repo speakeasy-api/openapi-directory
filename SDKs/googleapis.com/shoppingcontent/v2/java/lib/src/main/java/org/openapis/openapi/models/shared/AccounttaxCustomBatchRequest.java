@@ -15,9 +15,11 @@ public class AccounttaxCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public AccounttaxCustomBatchRequestEntry[] entries;
+
     public AccounttaxCustomBatchRequest withEntries(AccounttaxCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public AccounttaxCustomBatchRequest(){}
 }

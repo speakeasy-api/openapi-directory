@@ -18,9 +18,11 @@ public class CreateLensShareOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareId")
     public String shareId;
+
     public CreateLensShareOutput withShareId(String shareId) {
         this.shareId = shareId;
         return this;
     }
     
+    public CreateLensShareOutput(){}
 }

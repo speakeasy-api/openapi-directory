@@ -17,6 +17,7 @@ public class PoolUpdatePropertiesParameter {
      */
     @JsonProperty("applicationPackageReferences")
     public ApplicationPackageReference[] applicationPackageReferences;
+
     public PoolUpdatePropertiesParameter withApplicationPackageReferences(ApplicationPackageReference[] applicationPackageReferences) {
         this.applicationPackageReferences = applicationPackageReferences;
         return this;
@@ -27,6 +28,7 @@ public class PoolUpdatePropertiesParameter {
      */
     @JsonProperty("certificateReferences")
     public CertificateReference[] certificateReferences;
+
     public PoolUpdatePropertiesParameter withCertificateReferences(CertificateReference[] certificateReferences) {
         this.certificateReferences = certificateReferences;
         return this;
@@ -37,6 +39,7 @@ public class PoolUpdatePropertiesParameter {
      */
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public PoolUpdatePropertiesParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -48,9 +51,15 @@ public class PoolUpdatePropertiesParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTask")
     public StartTask startTask;
+
     public PoolUpdatePropertiesParameter withStartTask(StartTask startTask) {
         this.startTask = startTask;
         return this;
     }
     
+    public PoolUpdatePropertiesParameter(@JsonProperty("applicationPackageReferences") ApplicationPackageReference[] applicationPackageReferences, @JsonProperty("certificateReferences") CertificateReference[] certificateReferences, @JsonProperty("metadata") MetadataItem[] metadata) {
+        this.applicationPackageReferences = applicationPackageReferences;
+        this.certificateReferences = certificateReferences;
+        this.metadata = metadata;
+  }
 }

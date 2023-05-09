@@ -20,6 +20,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public CertificateAuthority withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateAuthorityConfiguration")
     public CertificateAuthorityConfiguration certificateAuthorityConfiguration;
+
     public CertificateAuthority withCertificateAuthorityConfiguration(CertificateAuthorityConfiguration certificateAuthorityConfiguration) {
         this.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
         return this;
@@ -38,6 +40,7 @@ public class CertificateAuthority {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public CertificateAuthority withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public FailureReasonEnum failureReason;
+
     public CertificateAuthority withFailureReason(FailureReasonEnum failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyStorageSecurityStandard")
     public KeyStorageSecurityStandardEnum keyStorageSecurityStandard;
+
     public CertificateAuthority withKeyStorageSecurityStandard(KeyStorageSecurityStandardEnum keyStorageSecurityStandard) {
         this.keyStorageSecurityStandard = keyStorageSecurityStandard;
         return this;
@@ -64,6 +69,7 @@ public class CertificateAuthority {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastStateChangeAt")
     public OffsetDateTime lastStateChangeAt;
+
     public CertificateAuthority withLastStateChangeAt(OffsetDateTime lastStateChangeAt) {
         this.lastStateChangeAt = lastStateChangeAt;
         return this;
@@ -74,6 +80,7 @@ public class CertificateAuthority {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NotAfter")
     public OffsetDateTime notAfter;
+
     public CertificateAuthority withNotAfter(OffsetDateTime notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -84,6 +91,7 @@ public class CertificateAuthority {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NotBefore")
     public OffsetDateTime notBefore;
+
     public CertificateAuthority withNotBefore(OffsetDateTime notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -92,6 +100,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerAccount")
     public String ownerAccount;
+
     public CertificateAuthority withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -102,6 +111,7 @@ public class CertificateAuthority {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RestorableUntil")
     public OffsetDateTime restorableUntil;
+
     public CertificateAuthority withRestorableUntil(OffsetDateTime restorableUntil) {
         this.restorableUntil = restorableUntil;
         return this;
@@ -110,6 +120,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RevocationConfiguration")
     public RevocationConfiguration revocationConfiguration;
+
     public CertificateAuthority withRevocationConfiguration(RevocationConfiguration revocationConfiguration) {
         this.revocationConfiguration = revocationConfiguration;
         return this;
@@ -118,6 +129,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Serial")
     public String serial;
+
     public CertificateAuthority withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -126,6 +138,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CertificateAuthorityStatusEnum status;
+
     public CertificateAuthority withStatus(CertificateAuthorityStatusEnum status) {
         this.status = status;
         return this;
@@ -134,6 +147,7 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CertificateAuthorityTypeEnum type;
+
     public CertificateAuthority withType(CertificateAuthorityTypeEnum type) {
         this.type = type;
         return this;
@@ -142,9 +156,11 @@ public class CertificateAuthority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageMode")
     public CertificateAuthorityUsageModeEnum usageMode;
+
     public CertificateAuthority withUsageMode(CertificateAuthorityUsageModeEnum usageMode) {
         this.usageMode = usageMode;
         return this;
     }
     
+    public CertificateAuthority(){}
 }

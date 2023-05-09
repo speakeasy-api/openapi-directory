@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent")
     public String agent;
+
     public GoogleCloudDocumentaiV1beta2DocumentRevision withAgent(String agent) {
         this.agent = agent;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDocumentaiV1beta2DocumentRevision withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanReview")
     public GoogleCloudDocumentaiV1beta2DocumentRevisionHumanReview humanReview;
+
     public GoogleCloudDocumentaiV1beta2DocumentRevision withHumanReview(GoogleCloudDocumentaiV1beta2DocumentRevisionHumanReview humanReview) {
         this.humanReview = humanReview;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDocumentaiV1beta2DocumentRevision withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public Integer[] parent;
+
     public GoogleCloudDocumentaiV1beta2DocumentRevision withParent(Integer[] parent) {
         this.parent = parent;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentIds")
     public String[] parentIds;
+
     public GoogleCloudDocumentaiV1beta2DocumentRevision withParentIds(String[] parentIds) {
         this.parentIds = parentIds;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processor")
     public String processor;
+
     public GoogleCloudDocumentaiV1beta2DocumentRevision withProcessor(String processor) {
         this.processor = processor;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentRevision(){}
 }

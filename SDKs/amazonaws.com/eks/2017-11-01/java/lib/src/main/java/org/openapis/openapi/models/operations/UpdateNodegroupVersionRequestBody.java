@@ -15,6 +15,7 @@ public class UpdateNodegroupVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public UpdateNodegroupVersionRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNodegroupVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public UpdateNodegroupVersionRequestBody withForce(Boolean force) {
         this.force = force;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNodegroupVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplate")
     public UpdateNodegroupVersionRequestBodyLaunchTemplate launchTemplate;
+
     public UpdateNodegroupVersionRequestBody withLaunchTemplate(UpdateNodegroupVersionRequestBodyLaunchTemplate launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNodegroupVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseVersion")
     public String releaseVersion;
+
     public UpdateNodegroupVersionRequestBody withReleaseVersion(String releaseVersion) {
         this.releaseVersion = releaseVersion;
         return this;
@@ -59,9 +63,11 @@ public class UpdateNodegroupVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public UpdateNodegroupVersionRequestBody withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateNodegroupVersionRequestBody(){}
 }

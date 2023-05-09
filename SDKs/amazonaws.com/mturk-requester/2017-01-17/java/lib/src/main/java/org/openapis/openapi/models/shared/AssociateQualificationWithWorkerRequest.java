@@ -12,6 +12,7 @@ public class AssociateQualificationWithWorkerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegerValue")
     public Long integerValue;
+
     public AssociateQualificationWithWorkerRequest withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -19,6 +20,7 @@ public class AssociateQualificationWithWorkerRequest {
     
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public AssociateQualificationWithWorkerRequest withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -27,6 +29,7 @@ public class AssociateQualificationWithWorkerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendNotification")
     public Boolean sendNotification;
+
     public AssociateQualificationWithWorkerRequest withSendNotification(Boolean sendNotification) {
         this.sendNotification = sendNotification;
         return this;
@@ -34,9 +37,14 @@ public class AssociateQualificationWithWorkerRequest {
     
     @JsonProperty("WorkerId")
     public String workerId;
+
     public AssociateQualificationWithWorkerRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public AssociateQualificationWithWorkerRequest(@JsonProperty("QualificationTypeId") String qualificationTypeId, @JsonProperty("WorkerId") String workerId) {
+        this.qualificationTypeId = qualificationTypeId;
+        this.workerId = workerId;
+  }
 }

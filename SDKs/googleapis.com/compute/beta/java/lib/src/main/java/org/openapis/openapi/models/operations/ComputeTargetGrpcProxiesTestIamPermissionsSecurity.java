@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeTargetGrpcProxiesTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetGrpcProxiesTestIamPermissionsSecurityOption1 option1;
+
     public ComputeTargetGrpcProxiesTestIamPermissionsSecurity withOption1(ComputeTargetGrpcProxiesTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeTargetGrpcProxiesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetGrpcProxiesTestIamPermissionsSecurityOption2 option2;
+
     public ComputeTargetGrpcProxiesTestIamPermissionsSecurity withOption2(ComputeTargetGrpcProxiesTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeTargetGrpcProxiesTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeTargetGrpcProxiesTestIamPermissionsSecurityOption3 option3;
+
     public ComputeTargetGrpcProxiesTestIamPermissionsSecurity withOption3(ComputeTargetGrpcProxiesTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeTargetGrpcProxiesTestIamPermissionsSecurity(){}
 }

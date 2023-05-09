@@ -15,9 +15,11 @@ public class UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v1")
     public org.openapis.openapi.models.shared.ConfiguredTableAnalysisRulePolicyV1 v1;
+
     public UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy withV1(org.openapis.openapi.models.shared.ConfiguredTableAnalysisRulePolicyV1 v1) {
         this.v1 = v1;
         return this;
     }
     
+    public UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy(){}
 }

@@ -15,6 +15,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Preset withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Audio")
     public AudioParameters audio;
+
     public Preset withAudio(AudioParameters audio) {
         this.audio = audio;
         return this;
@@ -31,6 +33,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Container")
     public String container;
+
     public Preset withContainer(String container) {
         this.container = container;
         return this;
@@ -39,6 +42,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Preset withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Preset withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Preset withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Thumbnails")
     public Thumbnails thumbnails;
+
     public Preset withThumbnails(Thumbnails thumbnails) {
         this.thumbnails = thumbnails;
         return this;
@@ -71,6 +78,7 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Preset withType(String type) {
         this.type = type;
         return this;
@@ -79,9 +87,11 @@ public class Preset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Video")
     public VideoParameters video;
+
     public Preset withVideo(VideoParameters video) {
         this.video = video;
         return this;
     }
     
+    public Preset(){}
 }

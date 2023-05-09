@@ -18,6 +18,7 @@ public class PartitionQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public PartitionQueryResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class PartitionQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitions")
     public Cursor[] partitions;
+
     public PartitionQueryResponse withPartitions(Cursor[] partitions) {
         this.partitions = partitions;
         return this;
     }
     
+    public PartitionQueryResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentGetContentByTagAndTypeRequest {
@@ -12,6 +13,7 @@ public class ContentGetContentByTagAndTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
     public Boolean head;
+
     public ContentGetContentByTagAndTypeRequest withHead(Boolean head) {
         this.head = head;
         return this;
@@ -19,6 +21,7 @@ public class ContentGetContentByTagAndTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
     public String locale;
+
     public ContentGetContentByTagAndTypeRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -26,6 +29,7 @@ public class ContentGetContentByTagAndTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
     public String tag;
+
     public ContentGetContentByTagAndTypeRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -33,9 +37,15 @@ public class ContentGetContentByTagAndTypeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public String type;
+
     public ContentGetContentByTagAndTypeRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ContentGetContentByTagAndTypeRequest(@JsonProperty("locale") String locale, @JsonProperty("tag") String tag, @JsonProperty("type") String type) {
+        this.locale = locale;
+        this.tag = tag;
+        this.type = type;
+  }
 }

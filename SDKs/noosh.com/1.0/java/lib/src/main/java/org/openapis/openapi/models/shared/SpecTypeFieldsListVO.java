@@ -18,6 +18,7 @@ public class SpecTypeFieldsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object result;
+
     public SpecTypeFieldsListVO withResult(Object result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class SpecTypeFieldsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public SpecTypeFieldsListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class SpecTypeFieldsListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public SpecTypeFieldsListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public SpecTypeFieldsListVO(){}
 }

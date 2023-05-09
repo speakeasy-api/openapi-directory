@@ -18,6 +18,7 @@ public class RequestActivationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public RequestActivationResponse withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -29,9 +30,11 @@ public class RequestActivationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public RequestActivationResponse withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public RequestActivationResponse(){}
 }

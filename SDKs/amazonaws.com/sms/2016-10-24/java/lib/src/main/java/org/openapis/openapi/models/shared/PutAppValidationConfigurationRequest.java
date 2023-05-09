@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAppValidationConfigurationRequest {
     @JsonProperty("appId")
     public String appId;
+
     public PutAppValidationConfigurationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -19,6 +20,7 @@ public class PutAppValidationConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appValidationConfigurations")
     public AppValidationConfiguration[] appValidationConfigurations;
+
     public PutAppValidationConfigurationRequest withAppValidationConfigurations(AppValidationConfiguration[] appValidationConfigurations) {
         this.appValidationConfigurations = appValidationConfigurations;
         return this;
@@ -27,9 +29,13 @@ public class PutAppValidationConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupValidationConfigurations")
     public ServerGroupValidationConfiguration[] serverGroupValidationConfigurations;
+
     public PutAppValidationConfigurationRequest withServerGroupValidationConfigurations(ServerGroupValidationConfiguration[] serverGroupValidationConfigurations) {
         this.serverGroupValidationConfigurations = serverGroupValidationConfigurations;
         return this;
     }
     
+    public PutAppValidationConfigurationRequest(@JsonProperty("appId") String appId) {
+        this.appId = appId;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutItemInput {
     @JsonProperty("tableName")
     public String tableName;
+
     public PutItemInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public PutItemInput(@JsonProperty("tableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SegmentOverride {
     @JsonProperty("evaluationOrder")
     public Long evaluationOrder;
+
     public SegmentOverride withEvaluationOrder(Long evaluationOrder) {
         this.evaluationOrder = evaluationOrder;
         return this;
@@ -19,6 +20,7 @@ public class SegmentOverride {
     
     @JsonProperty("segment")
     public String segment;
+
     public SegmentOverride withSegment(String segment) {
         this.segment = segment;
         return this;
@@ -26,9 +28,15 @@ public class SegmentOverride {
     
     @JsonProperty("weights")
     public java.util.Map<String, Long> weights;
+
     public SegmentOverride withWeights(java.util.Map<String, Long> weights) {
         this.weights = weights;
         return this;
     }
     
+    public SegmentOverride(@JsonProperty("evaluationOrder") Long evaluationOrder, @JsonProperty("segment") String segment, @JsonProperty("weights") java.util.Map<String, Long> weights) {
+        this.evaluationOrder = evaluationOrder;
+        this.segment = segment;
+        this.weights = weights;
+  }
 }

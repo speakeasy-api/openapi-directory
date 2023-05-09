@@ -15,6 +15,7 @@ public class DescribeDRTAccessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogBucketList")
     public String[] logBucketList;
+
     public DescribeDRTAccessResponse withLogBucketList(String[] logBucketList) {
         this.logBucketList = logBucketList;
         return this;
@@ -23,9 +24,11 @@ public class DescribeDRTAccessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeDRTAccessResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeDRTAccessResponse(){}
 }

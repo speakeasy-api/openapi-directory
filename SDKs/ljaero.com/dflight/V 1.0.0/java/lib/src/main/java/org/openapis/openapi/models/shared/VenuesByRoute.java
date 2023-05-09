@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VenuesByRoute {
     @JsonProperty("route")
     public java.util.Map<String, Object> route;
+
     public VenuesByRoute withRoute(java.util.Map<String, Object> route) {
         this.route = route;
         return this;
     }
     
+    public VenuesByRoute(@JsonProperty("route") java.util.Map<String, Object> route) {
+        this.route = route;
+  }
 }

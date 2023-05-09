@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNsxvControllerClusterRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NSXControllerDataCollection nsxControllerDataCollection;
+
     public UpdateNsxvControllerClusterRequest withNSXControllerDataCollection(org.openapis.openapi.models.shared.NSXControllerDataCollection nsxControllerDataCollection) {
         this.nsxControllerDataCollection = nsxControllerDataCollection;
         return this;
@@ -19,9 +21,13 @@ public class UpdateNsxvControllerClusterRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateNsxvControllerClusterRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateNsxvControllerClusterRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

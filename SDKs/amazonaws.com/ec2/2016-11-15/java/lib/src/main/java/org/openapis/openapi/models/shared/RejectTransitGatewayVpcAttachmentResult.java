@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RejectTransitGatewayVpcAttachmentResult {
     
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment transitGatewayVpcAttachment;
+
     public RejectTransitGatewayVpcAttachmentResult withTransitGatewayVpcAttachment(RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment transitGatewayVpcAttachment) {
         this.transitGatewayVpcAttachment = transitGatewayVpcAttachment;
         return this;
     }
     
+    public RejectTransitGatewayVpcAttachmentResult(){}
 }

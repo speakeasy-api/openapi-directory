@@ -15,9 +15,11 @@ public class AcceptEulasRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eulaIds")
     public String[] eulaIds;
+
     public AcceptEulasRequestBody withEulaIds(String[] eulaIds) {
         this.eulaIds = eulaIds;
         return this;
     }
     
+    public AcceptEulasRequestBody(){}
 }

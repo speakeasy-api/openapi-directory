@@ -15,6 +15,7 @@ public class BatchListObjectAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public AttributeKeyAndValue[] attributes;
+
     public BatchListObjectAttributesResponse withAttributes(AttributeKeyAndValue[] attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class BatchListObjectAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListObjectAttributesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public BatchListObjectAttributesResponse(){}
 }

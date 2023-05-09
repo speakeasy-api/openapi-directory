@@ -67,12 +67,10 @@ public class MarketplacesChannelCatalogsSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesResponse(contentType, httpRes.statusCode()) {{
             channelCatalogMarketplaceProperties = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,12 +117,10 @@ public class MarketplacesChannelCatalogsSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsResponse(contentType, httpRes.statusCode()) {{
             channelCatalogMarketplaceSettings = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +175,9 @@ public class MarketplacesChannelCatalogsSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsResponse res = new org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsResponse() {{
+        org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsResponse res = new org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {

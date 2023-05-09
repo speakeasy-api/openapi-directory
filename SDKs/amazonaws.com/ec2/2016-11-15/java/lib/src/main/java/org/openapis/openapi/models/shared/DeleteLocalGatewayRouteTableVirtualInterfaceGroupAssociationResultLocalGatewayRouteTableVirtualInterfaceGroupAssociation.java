@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation {
     
     public String localGatewayId;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultL
     
     
     public String localGatewayRouteTableArn;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -26,6 +28,7 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultL
     
     
     public String localGatewayRouteTableId;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultL
     
     
     public String localGatewayRouteTableVirtualInterfaceGroupAssociationId;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withLocalGatewayRouteTableVirtualInterfaceGroupAssociationId(String localGatewayRouteTableVirtualInterfaceGroupAssociationId) {
         this.localGatewayRouteTableVirtualInterfaceGroupAssociationId = localGatewayRouteTableVirtualInterfaceGroupAssociationId;
         return this;
@@ -40,6 +44,7 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultL
     
     
     public String localGatewayVirtualInterfaceGroupId;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -47,6 +52,7 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultL
     
     
     public String ownerId;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -54,6 +60,7 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultL
     
     
     public String state;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withState(String state) {
         this.state = state;
         return this;
@@ -61,9 +68,11 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultL
     
     
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociationTags[] tags;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation withTags(DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociationTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation(){}
 }

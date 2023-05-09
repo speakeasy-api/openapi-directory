@@ -18,6 +18,7 @@ public class InstantSnapshotListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public InstantSnapshotListWarningCodeEnum code;
+
     public InstantSnapshotListWarning withCode(InstantSnapshotListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class InstantSnapshotListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public InstantSnapshotListWarningData[] data;
+
     public InstantSnapshotListWarning withData(InstantSnapshotListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class InstantSnapshotListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InstantSnapshotListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InstantSnapshotListWarning(){}
 }

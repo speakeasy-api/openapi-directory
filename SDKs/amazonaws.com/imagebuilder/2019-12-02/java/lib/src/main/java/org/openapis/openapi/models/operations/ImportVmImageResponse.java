@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportVmImageResponse {
@@ -12,6 +13,7 @@ public class ImportVmImageResponse {
      */
     
     public Object clientException;
+
     public ImportVmImageResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class ImportVmImageResponse {
     
     
     public String contentType;
+
     public ImportVmImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ImportVmImageResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportVmImageResponse importVmImageResponse;
+
     public ImportVmImageResponse withImportVmImageResponse(org.openapis.openapi.models.shared.ImportVmImageResponse importVmImageResponse) {
         this.importVmImageResponse = importVmImageResponse;
         return this;
@@ -39,6 +43,7 @@ public class ImportVmImageResponse {
      */
     
     public Object serviceException;
+
     public ImportVmImageResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class ImportVmImageResponse {
     
     
     public Integer statusCode;
+
     public ImportVmImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ImportVmImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportVmImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ImportVmImageResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ImportVmImageResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ImportVmImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

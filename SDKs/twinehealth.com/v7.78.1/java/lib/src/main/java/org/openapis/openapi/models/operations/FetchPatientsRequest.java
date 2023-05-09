@@ -12,6 +12,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[archived]")
     public Boolean filterArchived;
+
     public FetchPatientsRequest withFilterArchived(Boolean filterArchived) {
         this.filterArchived = filterArchived;
         return this;
@@ -23,6 +24,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created_at]")
     public String filterCreatedAt;
+
     public FetchPatientsRequest withFilterCreatedAt(String filterCreatedAt) {
         this.filterCreatedAt = filterCreatedAt;
         return this;
@@ -33,6 +35,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
     public String filterGroups;
+
     public FetchPatientsRequest withFilterGroups(String filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -43,6 +46,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[identifier][system]")
     public String filterIdentifierSystem;
+
     public FetchPatientsRequest withFilterIdentifierSystem(String filterIdentifierSystem) {
         this.filterIdentifierSystem = filterIdentifierSystem;
         return this;
@@ -53,6 +57,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[identifier][value]")
     public String filterIdentifierValue;
+
     public FetchPatientsRequest withFilterIdentifierValue(String filterIdentifierValue) {
         this.filterIdentifierValue = filterIdentifierValue;
         return this;
@@ -63,6 +68,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
     public String filterOrganization;
+
     public FetchPatientsRequest withFilterOrganization(String filterOrganization) {
         this.filterOrganization = filterOrganization;
         return this;
@@ -74,6 +80,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updated_at]")
     public String filterUpdatedAt;
+
     public FetchPatientsRequest withFilterUpdatedAt(String filterUpdatedAt) {
         this.filterUpdatedAt = filterUpdatedAt;
         return this;
@@ -84,6 +91,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
     public String pageCursor;
+
     public FetchPatientsRequest withPageCursor(String pageCursor) {
         this.pageCursor = pageCursor;
         return this;
@@ -94,6 +102,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
     public Long pageLimit;
+
     public FetchPatientsRequest withPageLimit(Long pageLimit) {
         this.pageLimit = pageLimit;
         return this;
@@ -104,6 +113,7 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public FetchPatientsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -114,9 +124,11 @@ public class FetchPatientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public FetchPatientsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public FetchPatientsRequest(){}
 }

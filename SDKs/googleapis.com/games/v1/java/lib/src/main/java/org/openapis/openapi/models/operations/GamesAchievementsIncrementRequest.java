@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesAchievementsIncrementRequest {
@@ -12,6 +13,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public GamesAchievementsIncrementRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public GamesAchievementsIncrementRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=achievementId")
     public String achievementId;
+
     public GamesAchievementsIncrementRequest withAchievementId(String achievementId) {
         this.achievementId = achievementId;
         return this;
@@ -42,6 +46,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public GamesAchievementsIncrementRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GamesAchievementsIncrementRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GamesAchievementsIncrementRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GamesAchievementsIncrementRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public GamesAchievementsIncrementRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public GamesAchievementsIncrementRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public GamesAchievementsIncrementRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public GamesAchievementsIncrementRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -122,6 +134,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stepsToIncrement")
     public Long stepsToIncrement;
+
     public GamesAchievementsIncrementRequest withStepsToIncrement(Long stepsToIncrement) {
         this.stepsToIncrement = stepsToIncrement;
         return this;
@@ -132,6 +145,7 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public GamesAchievementsIncrementRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,14 @@ public class GamesAchievementsIncrementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public GamesAchievementsIncrementRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public GamesAchievementsIncrementRequest(@JsonProperty("achievementId") String achievementId, @JsonProperty("stepsToIncrement") Long stepsToIncrement) {
+        this.achievementId = achievementId;
+        this.stepsToIncrement = stepsToIncrement;
+  }
 }

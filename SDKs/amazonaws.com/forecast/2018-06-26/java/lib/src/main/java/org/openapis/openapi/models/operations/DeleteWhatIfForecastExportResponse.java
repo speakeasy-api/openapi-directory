@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWhatIfForecastExportResponse {
     
     public String contentType;
+
     public DeleteWhatIfForecastExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWhatIfForecastExportResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteWhatIfForecastExportResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWhatIfForecastExportResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteWhatIfForecastExportResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWhatIfForecastExportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWhatIfForecastExportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteWhatIfForecastExportResponse {
     
     
     public Integer statusCode;
+
     public DeleteWhatIfForecastExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteWhatIfForecastExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWhatIfForecastExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteWhatIfForecastExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

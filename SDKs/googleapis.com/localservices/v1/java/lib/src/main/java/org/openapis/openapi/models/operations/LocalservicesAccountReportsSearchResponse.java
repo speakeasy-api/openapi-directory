@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LocalservicesAccountReportsSearchResponse {
     
     public String contentType;
+
     public LocalservicesAccountReportsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LocalservicesAccountReportsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse googleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse;
+
     public LocalservicesAccountReportsSearchResponse withGoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse(org.openapis.openapi.models.shared.GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse googleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse) {
         this.googleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse = googleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse;
         return this;
@@ -26,6 +29,7 @@ public class LocalservicesAccountReportsSearchResponse {
     
     
     public Integer statusCode;
+
     public LocalservicesAccountReportsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LocalservicesAccountReportsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LocalservicesAccountReportsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LocalservicesAccountReportsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

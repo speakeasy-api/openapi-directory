@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTMoveByoipCidrToIpamRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTMoveByoipCidrToIpamActionEnum action;
+
     public POSTMoveByoipCidrToIpamRequest withAction(POSTMoveByoipCidrToIpamActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTMoveByoipCidrToIpamRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTMoveByoipCidrToIpamVersionEnum version;
+
     public POSTMoveByoipCidrToIpamRequest withVersion(POSTMoveByoipCidrToIpamVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTMoveByoipCidrToIpamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTMoveByoipCidrToIpamRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTMoveByoipCidrToIpamRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTMoveByoipCidrToIpamRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTMoveByoipCidrToIpamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTMoveByoipCidrToIpamRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTMoveByoipCidrToIpamRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTMoveByoipCidrToIpamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTMoveByoipCidrToIpamRequest(@JsonProperty("Action") POSTMoveByoipCidrToIpamActionEnum action, @JsonProperty("Version") POSTMoveByoipCidrToIpamVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

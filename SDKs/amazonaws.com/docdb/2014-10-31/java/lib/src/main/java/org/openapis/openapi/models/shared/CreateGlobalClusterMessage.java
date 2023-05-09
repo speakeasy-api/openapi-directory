@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateGlobalClusterMessage - Represents the input to &lt;a&gt;CreateGlobalCluster&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateGlobalClusterMessage {
     
     public String databaseName;
+
     public CreateGlobalClusterMessage withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,6 +20,7 @@ public class CreateGlobalClusterMessage {
     
     
     public Boolean deletionProtection;
+
     public CreateGlobalClusterMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -26,6 +28,7 @@ public class CreateGlobalClusterMessage {
     
     
     public String engine;
+
     public CreateGlobalClusterMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -33,6 +36,7 @@ public class CreateGlobalClusterMessage {
     
     
     public String engineVersion;
+
     public CreateGlobalClusterMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +44,7 @@ public class CreateGlobalClusterMessage {
     
     
     public String globalClusterIdentifier;
+
     public CreateGlobalClusterMessage withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -47,6 +52,7 @@ public class CreateGlobalClusterMessage {
     
     
     public String sourceDBClusterIdentifier;
+
     public CreateGlobalClusterMessage withSourceDBClusterIdentifier(String sourceDBClusterIdentifier) {
         this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
         return this;
@@ -54,9 +60,13 @@ public class CreateGlobalClusterMessage {
     
     
     public Boolean storageEncrypted;
+
     public CreateGlobalClusterMessage withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
     }
     
+    public CreateGlobalClusterMessage(@JsonProperty("GlobalClusterIdentifier") String globalClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+  }
 }

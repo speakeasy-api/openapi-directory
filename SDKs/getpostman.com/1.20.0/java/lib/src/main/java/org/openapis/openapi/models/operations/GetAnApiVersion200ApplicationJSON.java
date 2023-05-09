@@ -15,9 +15,11 @@ public class GetAnApiVersion200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public GetAnApiVersion200ApplicationJSONVersion version;
+
     public GetAnApiVersion200ApplicationJSON withVersion(GetAnApiVersion200ApplicationJSONVersion version) {
         this.version = version;
         return this;
     }
     
+    public GetAnApiVersion200ApplicationJSON(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class JourneyDateRangeKpiResponse {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public JourneyDateRangeKpiResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -28,6 +29,7 @@ public class JourneyDateRangeKpiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public JourneyDateRangeKpiResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class JourneyDateRangeKpiResponse {
     
     @JsonProperty("JourneyId")
     public String journeyId;
+
     public JourneyDateRangeKpiResponse withJourneyId(String journeyId) {
         this.journeyId = journeyId;
         return this;
@@ -42,6 +45,7 @@ public class JourneyDateRangeKpiResponse {
     
     @JsonProperty("KpiName")
     public String kpiName;
+
     public JourneyDateRangeKpiResponse withKpiName(String kpiName) {
         this.kpiName = kpiName;
         return this;
@@ -49,6 +53,7 @@ public class JourneyDateRangeKpiResponse {
     
     @JsonProperty("KpiResult")
     public BaseKpiResult kpiResult;
+
     public JourneyDateRangeKpiResponse withKpiResult(BaseKpiResult kpiResult) {
         this.kpiResult = kpiResult;
         return this;
@@ -57,6 +62,7 @@ public class JourneyDateRangeKpiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public JourneyDateRangeKpiResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -66,9 +72,18 @@ public class JourneyDateRangeKpiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public JourneyDateRangeKpiResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public JourneyDateRangeKpiResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("JourneyId") String journeyId, @JsonProperty("KpiName") String kpiName, @JsonProperty("KpiResult") BaseKpiResult kpiResult, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.applicationId = applicationId;
+        this.endTime = endTime;
+        this.journeyId = journeyId;
+        this.kpiName = kpiName;
+        this.kpiResult = kpiResult;
+        this.startTime = startTime;
+  }
 }

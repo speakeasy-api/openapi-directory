@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeObservabilityConfigurationResponse {
     
     public String contentType;
+
     public DescribeObservabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeObservabilityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeObservabilityConfigurationResponse describeObservabilityConfigurationResponse;
+
     public DescribeObservabilityConfigurationResponse withDescribeObservabilityConfigurationResponse(org.openapis.openapi.models.shared.DescribeObservabilityConfigurationResponse describeObservabilityConfigurationResponse) {
         this.describeObservabilityConfigurationResponse = describeObservabilityConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeObservabilityConfigurationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeObservabilityConfigurationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeObservabilityConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeObservabilityConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeObservabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeObservabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeObservabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeObservabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeObservabilityConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeObservabilityConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeObservabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

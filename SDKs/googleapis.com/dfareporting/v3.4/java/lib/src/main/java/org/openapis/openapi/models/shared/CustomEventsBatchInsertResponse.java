@@ -18,6 +18,7 @@ public class CustomEventsBatchInsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasFailures")
     public Boolean hasFailures;
+
     public CustomEventsBatchInsertResponse withHasFailures(Boolean hasFailures) {
         this.hasFailures = hasFailures;
         return this;
@@ -29,6 +30,7 @@ public class CustomEventsBatchInsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CustomEventsBatchInsertResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class CustomEventsBatchInsertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CustomEventStatus[] status;
+
     public CustomEventsBatchInsertResponse withStatus(CustomEventStatus[] status) {
         this.status = status;
         return this;
     }
     
+    public CustomEventsBatchInsertResponse(){}
 }

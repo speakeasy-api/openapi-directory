@@ -18,6 +18,7 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public DataSource dataSource;
+
     public UpdateDataSourceRequest withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -29,9 +30,11 @@ public class UpdateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateDataSourceRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public UpdateDataSourceRequest(){}
 }

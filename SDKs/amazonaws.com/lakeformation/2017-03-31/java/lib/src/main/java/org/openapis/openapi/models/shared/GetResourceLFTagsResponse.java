@@ -15,6 +15,7 @@ public class GetResourceLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagOnDatabase")
     public LFTagPair[] lfTagOnDatabase;
+
     public GetResourceLFTagsResponse withLFTagOnDatabase(LFTagPair[] lfTagOnDatabase) {
         this.lfTagOnDatabase = lfTagOnDatabase;
         return this;
@@ -23,6 +24,7 @@ public class GetResourceLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagsOnColumns")
     public ColumnLFTag[] lfTagsOnColumns;
+
     public GetResourceLFTagsResponse withLFTagsOnColumns(ColumnLFTag[] lfTagsOnColumns) {
         this.lfTagsOnColumns = lfTagsOnColumns;
         return this;
@@ -31,9 +33,11 @@ public class GetResourceLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LFTagsOnTable")
     public LFTagPair[] lfTagsOnTable;
+
     public GetResourceLFTagsResponse withLFTagsOnTable(LFTagPair[] lfTagsOnTable) {
         this.lfTagsOnTable = lfTagsOnTable;
         return this;
     }
     
+    public GetResourceLFTagsResponse(){}
 }

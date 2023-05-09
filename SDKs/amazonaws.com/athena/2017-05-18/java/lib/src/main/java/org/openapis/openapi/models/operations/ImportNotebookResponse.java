@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportNotebookResponse {
     
     public String contentType;
+
     public ImportNotebookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportNotebookResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportNotebookOutput importNotebookOutput;
+
     public ImportNotebookResponse withImportNotebookOutput(org.openapis.openapi.models.shared.ImportNotebookOutput importNotebookOutput) {
         this.importNotebookOutput = importNotebookOutput;
         return this;
@@ -29,6 +32,7 @@ public class ImportNotebookResponse {
      */
     
     public Object internalServerException;
+
     public ImportNotebookResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ImportNotebookResponse {
      */
     
     public Object invalidRequestException;
+
     public ImportNotebookResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class ImportNotebookResponse {
     
     
     public Integer statusCode;
+
     public ImportNotebookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ImportNotebookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportNotebookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ImportNotebookResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ImportNotebookResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ImportNotebookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

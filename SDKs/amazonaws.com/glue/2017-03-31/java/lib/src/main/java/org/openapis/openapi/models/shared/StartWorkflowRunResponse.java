@@ -15,9 +15,11 @@ public class StartWorkflowRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public StartWorkflowRunResponse withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public StartWorkflowRunResponse(){}
 }

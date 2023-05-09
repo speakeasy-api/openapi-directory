@@ -12,6 +12,7 @@ public class ListEnvironmentAccountConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentName")
     public String environmentName;
+
     public ListEnvironmentAccountConnectionsInput withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -20,6 +21,7 @@ public class ListEnvironmentAccountConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListEnvironmentAccountConnectionsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListEnvironmentAccountConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnvironmentAccountConnectionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,6 +38,7 @@ public class ListEnvironmentAccountConnectionsInput {
     
     @JsonProperty("requestedBy")
     public EnvironmentAccountConnectionRequesterAccountTypeEnum requestedBy;
+
     public ListEnvironmentAccountConnectionsInput withRequestedBy(EnvironmentAccountConnectionRequesterAccountTypeEnum requestedBy) {
         this.requestedBy = requestedBy;
         return this;
@@ -43,9 +47,13 @@ public class ListEnvironmentAccountConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public EnvironmentAccountConnectionStatusEnum[] statuses;
+
     public ListEnvironmentAccountConnectionsInput withStatuses(EnvironmentAccountConnectionStatusEnum[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public ListEnvironmentAccountConnectionsInput(@JsonProperty("requestedBy") EnvironmentAccountConnectionRequesterAccountTypeEnum requestedBy) {
+        this.requestedBy = requestedBy;
+  }
 }

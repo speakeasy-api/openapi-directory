@@ -18,6 +18,7 @@ public class As2Transport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDescription")
     public String contentDescription;
+
     public As2Transport withContentDescription(String contentDescription) {
         this.contentDescription = contentDescription;
         return this;
@@ -29,6 +30,7 @@ public class As2Transport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public As2Transport withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -39,6 +41,7 @@ public class As2Transport {
      */
     @JsonProperty("receiverId")
     public String receiverId;
+
     public As2Transport withReceiverId(String receiverId) {
         this.receiverId = receiverId;
         return this;
@@ -49,6 +52,7 @@ public class As2Transport {
      */
     @JsonProperty("receiverUrl")
     public String receiverUrl;
+
     public As2Transport withReceiverUrl(String receiverUrl) {
         this.receiverUrl = receiverUrl;
         return this;
@@ -60,6 +64,7 @@ public class As2Transport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("senderEmail")
     public String senderEmail;
+
     public As2Transport withSenderEmail(String senderEmail) {
         this.senderEmail = senderEmail;
         return this;
@@ -70,6 +75,7 @@ public class As2Transport {
      */
     @JsonProperty("senderId")
     public String senderId;
+
     public As2Transport withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -80,9 +86,16 @@ public class As2Transport {
      */
     @JsonProperty("type")
     public String type;
+
     public As2Transport withType(String type) {
         this.type = type;
         return this;
     }
     
+    public As2Transport(@JsonProperty("receiverId") String receiverId, @JsonProperty("receiverUrl") String receiverUrl, @JsonProperty("senderId") String senderId, @JsonProperty("type") String type) {
+        this.receiverId = receiverId;
+        this.receiverUrl = receiverUrl;
+        this.senderId = senderId;
+        this.type = type;
+  }
 }

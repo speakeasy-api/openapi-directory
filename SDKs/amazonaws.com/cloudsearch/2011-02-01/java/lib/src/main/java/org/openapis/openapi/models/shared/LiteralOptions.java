@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LiteralOptions {
     
     public String defaultValue;
+
     public LiteralOptions withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class LiteralOptions {
     
     
     public Boolean facetEnabled;
+
     public LiteralOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class LiteralOptions {
     
     
     public Boolean resultEnabled;
+
     public LiteralOptions withResultEnabled(Boolean resultEnabled) {
         this.resultEnabled = resultEnabled;
         return this;
@@ -33,9 +36,11 @@ public class LiteralOptions {
     
     
     public Boolean searchEnabled;
+
     public LiteralOptions withSearchEnabled(Boolean searchEnabled) {
         this.searchEnabled = searchEnabled;
         return this;
     }
     
+    public LiteralOptions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetContextForUserRequest {
@@ -12,6 +13,7 @@ public class UsersGetContextForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_id")
     public String subjectId;
+
     public UsersGetContextForUserRequest withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
@@ -22,6 +24,7 @@ public class UsersGetContextForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_type")
     public UsersGetContextForUserSubjectTypeEnum subjectType;
+
     public UsersGetContextForUserRequest withSubjectType(UsersGetContextForUserSubjectTypeEnum subjectType) {
         this.subjectType = subjectType;
         return this;
@@ -29,9 +32,13 @@ public class UsersGetContextForUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public UsersGetContextForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UsersGetContextForUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

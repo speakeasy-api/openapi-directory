@@ -15,6 +15,7 @@ public class UpdateProjectDataDeliveryRequestBodyS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public UpdateProjectDataDeliveryRequestBodyS3Destination withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,9 +24,11 @@ public class UpdateProjectDataDeliveryRequestBodyS3Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public UpdateProjectDataDeliveryRequestBodyS3Destination withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public UpdateProjectDataDeliveryRequestBodyS3Destination(){}
 }

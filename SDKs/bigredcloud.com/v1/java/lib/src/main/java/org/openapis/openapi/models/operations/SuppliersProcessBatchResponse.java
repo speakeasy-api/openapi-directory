@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SuppliersProcessBatchResponse {
     
     public String contentType;
+
     public SuppliersProcessBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SuppliersProcessBatchResponse {
     
     
     public Integer statusCode;
+
     public SuppliersProcessBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SuppliersProcessBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SuppliersProcessBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SuppliersProcessBatchResponse {
      */
     
     public java.util.Map<String, Object> suppliersProcessBatch200ApplicationJSONObject;
+
     public SuppliersProcessBatchResponse withSuppliersProcessBatch200ApplicationJSONObject(java.util.Map<String, Object> suppliersProcessBatch200ApplicationJSONObject) {
         this.suppliersProcessBatch200ApplicationJSONObject = suppliersProcessBatch200ApplicationJSONObject;
         return this;
     }
     
+    public SuppliersProcessBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +282,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.PrivatecaProjectsLocationsReusableConfigsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

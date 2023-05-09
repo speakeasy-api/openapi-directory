@@ -16,6 +16,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetECSServiceRecommendationProjectedMetricsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetECSServiceRecommendationProjectedMetricsRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -30,6 +32,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest {
     
     @JsonProperty("serviceArn")
     public String serviceArn;
+
     public GetECSServiceRecommendationProjectedMetricsRequest withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -39,6 +42,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetECSServiceRecommendationProjectedMetricsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -46,9 +50,17 @@ public class GetECSServiceRecommendationProjectedMetricsRequest {
     
     @JsonProperty("stat")
     public MetricStatisticEnum stat;
+
     public GetECSServiceRecommendationProjectedMetricsRequest withStat(MetricStatisticEnum stat) {
         this.stat = stat;
         return this;
     }
     
+    public GetECSServiceRecommendationProjectedMetricsRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("period") Long period, @JsonProperty("serviceArn") String serviceArn, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("stat") MetricStatisticEnum stat) {
+        this.endTime = endTime;
+        this.period = period;
+        this.serviceArn = serviceArn;
+        this.startTime = startTime;
+        this.stat = stat;
+  }
 }

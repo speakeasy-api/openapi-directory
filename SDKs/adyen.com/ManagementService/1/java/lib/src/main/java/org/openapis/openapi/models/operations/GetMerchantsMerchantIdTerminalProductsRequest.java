@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdTerminalProductsRequest {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetMerchantsMerchantIdTerminalProductsRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -22,6 +24,7 @@ public class GetMerchantsMerchantIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetMerchantsMerchantIdTerminalProductsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetMerchantsMerchantIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public GetMerchantsMerchantIdTerminalProductsRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -42,6 +46,7 @@ public class GetMerchantsMerchantIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetMerchantsMerchantIdTerminalProductsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,14 @@ public class GetMerchantsMerchantIdTerminalProductsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terminalModelId")
     public String terminalModelId;
+
     public GetMerchantsMerchantIdTerminalProductsRequest withTerminalModelId(String terminalModelId) {
         this.terminalModelId = terminalModelId;
         return this;
     }
     
+    public GetMerchantsMerchantIdTerminalProductsRequest(@JsonProperty("country") String country, @JsonProperty("merchantId") String merchantId) {
+        this.country = country;
+        this.merchantId = merchantId;
+  }
 }

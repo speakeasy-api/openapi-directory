@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ResourcesAllocationsIdRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1ResourcesAllocationsIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourceAllocationUpdateModel resourceAllocationUpdateModel;
+
     public PutSetupV1ResourcesAllocationsIdRequest withResourceAllocationUpdateModel(org.openapis.openapi.models.shared.ResourceAllocationUpdateModel resourceAllocationUpdateModel) {
         this.resourceAllocationUpdateModel = resourceAllocationUpdateModel;
         return this;
@@ -22,9 +24,13 @@ public class PutSetupV1ResourcesAllocationsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1ResourcesAllocationsIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1ResourcesAllocationsIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

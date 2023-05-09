@@ -67,14 +67,12 @@ public class Statements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsResponse(contentType, httpRes.statusCode()) {{
             obReadStatement2 = null;
             obReadStatement2 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -138,14 +136,12 @@ public class Statements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdResponse(contentType, httpRes.statusCode()) {{
             obReadStatement2 = null;
             obReadStatement2 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -209,12 +205,10 @@ public class Statements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileResponse(contentType, httpRes.statusCode()) {{
             getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

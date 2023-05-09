@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPresenceOfChannelRequest {
@@ -12,6 +13,7 @@ public class GetPresenceOfChannelRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetPresenceOfChannelRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +24,7 @@ public class GetPresenceOfChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
     public String channelId;
+
     public GetPresenceOfChannelRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,6 +32,7 @@ public class GetPresenceOfChannelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
     public String clientId;
+
     public GetPresenceOfChannelRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -36,6 +40,7 @@ public class GetPresenceOfChannelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectionId")
     public String connectionId;
+
     public GetPresenceOfChannelRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -46,6 +51,7 @@ public class GetPresenceOfChannelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetPresenceOfChannelRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
@@ -53,9 +59,13 @@ public class GetPresenceOfChannelRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPresenceOfChannelRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetPresenceOfChannelRequest(@JsonProperty("channel_id") String channelId) {
+        this.channelId = channelId;
+  }
 }

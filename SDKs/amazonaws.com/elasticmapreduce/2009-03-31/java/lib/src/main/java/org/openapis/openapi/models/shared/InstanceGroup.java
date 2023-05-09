@@ -15,6 +15,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingPolicy")
     public AutoScalingPolicyDescription autoScalingPolicy;
+
     public InstanceGroup withAutoScalingPolicy(AutoScalingPolicyDescription autoScalingPolicy) {
         this.autoScalingPolicy = autoScalingPolicy;
         return this;
@@ -23,6 +24,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BidPrice")
     public String bidPrice;
+
     public InstanceGroup withBidPrice(String bidPrice) {
         this.bidPrice = bidPrice;
         return this;
@@ -31,6 +33,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public InstanceGroup withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -39,6 +42,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationsVersion")
     public Long configurationsVersion;
+
     public InstanceGroup withConfigurationsVersion(Long configurationsVersion) {
         this.configurationsVersion = configurationsVersion;
         return this;
@@ -47,6 +51,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAmiId")
     public String customAmiId;
+
     public InstanceGroup withCustomAmiId(String customAmiId) {
         this.customAmiId = customAmiId;
         return this;
@@ -55,6 +60,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsBlockDevices")
     public EbsBlockDevice[] ebsBlockDevices;
+
     public InstanceGroup withEbsBlockDevices(EbsBlockDevice[] ebsBlockDevices) {
         this.ebsBlockDevices = ebsBlockDevices;
         return this;
@@ -63,6 +69,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsOptimized")
     public Boolean ebsOptimized;
+
     public InstanceGroup withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -71,6 +78,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public InstanceGroup withId(String id) {
         this.id = id;
         return this;
@@ -79,6 +87,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupType")
     public InstanceGroupTypeEnum instanceGroupType;
+
     public InstanceGroup withInstanceGroupType(InstanceGroupTypeEnum instanceGroupType) {
         this.instanceGroupType = instanceGroupType;
         return this;
@@ -87,6 +96,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public InstanceGroup withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -95,6 +105,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSuccessfullyAppliedConfigurations")
     public Configuration[] lastSuccessfullyAppliedConfigurations;
+
     public InstanceGroup withLastSuccessfullyAppliedConfigurations(Configuration[] lastSuccessfullyAppliedConfigurations) {
         this.lastSuccessfullyAppliedConfigurations = lastSuccessfullyAppliedConfigurations;
         return this;
@@ -103,6 +114,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSuccessfullyAppliedConfigurationsVersion")
     public Long lastSuccessfullyAppliedConfigurationsVersion;
+
     public InstanceGroup withLastSuccessfullyAppliedConfigurationsVersion(Long lastSuccessfullyAppliedConfigurationsVersion) {
         this.lastSuccessfullyAppliedConfigurationsVersion = lastSuccessfullyAppliedConfigurationsVersion;
         return this;
@@ -111,6 +123,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Market")
     public MarketTypeEnum market;
+
     public InstanceGroup withMarket(MarketTypeEnum market) {
         this.market = market;
         return this;
@@ -119,6 +132,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InstanceGroup withName(String name) {
         this.name = name;
         return this;
@@ -127,6 +141,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedInstanceCount")
     public Long requestedInstanceCount;
+
     public InstanceGroup withRequestedInstanceCount(Long requestedInstanceCount) {
         this.requestedInstanceCount = requestedInstanceCount;
         return this;
@@ -135,6 +150,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningInstanceCount")
     public Long runningInstanceCount;
+
     public InstanceGroup withRunningInstanceCount(Long runningInstanceCount) {
         this.runningInstanceCount = runningInstanceCount;
         return this;
@@ -143,6 +159,7 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShrinkPolicy")
     public ShrinkPolicy shrinkPolicy;
+
     public InstanceGroup withShrinkPolicy(ShrinkPolicy shrinkPolicy) {
         this.shrinkPolicy = shrinkPolicy;
         return this;
@@ -151,9 +168,11 @@ public class InstanceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InstanceGroupStatus status;
+
     public InstanceGroup withStatus(InstanceGroupStatus status) {
         this.status = status;
         return this;
     }
     
+    public InstanceGroup(){}
 }

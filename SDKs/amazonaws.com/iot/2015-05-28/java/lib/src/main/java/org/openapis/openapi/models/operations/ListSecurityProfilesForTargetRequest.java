@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSecurityProfilesForTargetRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListSecurityProfilesForTargetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListSecurityProfilesForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListSecurityProfilesForTargetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListSecurityProfilesForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListSecurityProfilesForTargetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListSecurityProfilesForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListSecurityProfilesForTargetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListSecurityProfilesForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListSecurityProfilesForTargetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListSecurityProfilesForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListSecurityProfilesForTargetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListSecurityProfilesForTargetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListSecurityProfilesForTargetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListSecurityProfilesForTargetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListSecurityProfilesForTargetRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -71,6 +80,7 @@ public class ListSecurityProfilesForTargetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListSecurityProfilesForTargetRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +91,7 @@ public class ListSecurityProfilesForTargetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public ListSecurityProfilesForTargetRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -91,9 +102,13 @@ public class ListSecurityProfilesForTargetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=securityProfileTargetArn")
     public String securityProfileTargetArn;
+
     public ListSecurityProfilesForTargetRequest withSecurityProfileTargetArn(String securityProfileTargetArn) {
         this.securityProfileTargetArn = securityProfileTargetArn;
         return this;
     }
     
+    public ListSecurityProfilesForTargetRequest(@JsonProperty("securityProfileTargetArn") String securityProfileTargetArn) {
+        this.securityProfileTargetArn = securityProfileTargetArn;
+  }
 }

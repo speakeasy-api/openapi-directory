@@ -15,6 +15,7 @@ public class AwsSqsQueueDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterTargetArn")
     public String deadLetterTargetArn;
+
     public AwsSqsQueueDetails withDeadLetterTargetArn(String deadLetterTargetArn) {
         this.deadLetterTargetArn = deadLetterTargetArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsSqsQueueDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsDataKeyReusePeriodSeconds")
     public Long kmsDataKeyReusePeriodSeconds;
+
     public AwsSqsQueueDetails withKmsDataKeyReusePeriodSeconds(Long kmsDataKeyReusePeriodSeconds) {
         this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
         return this;
@@ -31,6 +33,7 @@ public class AwsSqsQueueDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsMasterKeyId")
     public String kmsMasterKeyId;
+
     public AwsSqsQueueDetails withKmsMasterKeyId(String kmsMasterKeyId) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         return this;
@@ -39,9 +42,11 @@ public class AwsSqsQueueDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueueName")
     public String queueName;
+
     public AwsSqsQueueDetails withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
     }
     
+    public AwsSqsQueueDetails(){}
 }

@@ -15,6 +15,7 @@ public class ListServiceTemplateVersionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServiceTemplateVersionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListServiceTemplateVersionsOutput {
     
     @JsonProperty("templateVersions")
     public ServiceTemplateVersionSummary[] templateVersions;
+
     public ListServiceTemplateVersionsOutput withTemplateVersions(ServiceTemplateVersionSummary[] templateVersions) {
         this.templateVersions = templateVersions;
         return this;
     }
     
+    public ListServiceTemplateVersionsOutput(@JsonProperty("templateVersions") ServiceTemplateVersionSummary[] templateVersions) {
+        this.templateVersions = templateVersions;
+  }
 }

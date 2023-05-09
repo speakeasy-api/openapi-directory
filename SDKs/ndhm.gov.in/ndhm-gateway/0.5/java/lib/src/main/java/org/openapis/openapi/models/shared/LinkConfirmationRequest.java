@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class LinkConfirmationRequest {
     @JsonProperty("confirmation")
     public LinkConfirmationRequestConfirmation confirmation;
+
     public LinkConfirmationRequest withConfirmation(LinkConfirmationRequestConfirmation confirmation) {
         this.confirmation = confirmation;
         return this;
@@ -21,6 +22,7 @@ public class LinkConfirmationRequest {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public LinkConfirmationRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -33,9 +35,15 @@ public class LinkConfirmationRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public LinkConfirmationRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public LinkConfirmationRequest(@JsonProperty("confirmation") LinkConfirmationRequestConfirmation confirmation, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.confirmation = confirmation;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

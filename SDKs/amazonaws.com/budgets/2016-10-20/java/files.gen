@@ -171,4 +171,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateBudgetActionRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateNotificationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSubscriberRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

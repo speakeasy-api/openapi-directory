@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCorporaRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdminListCorporaRequest adminListCorporaRequest;
+
     public ListCorporaRequest withAdminListCorporaRequest(org.openapis.openapi.models.shared.AdminListCorporaRequest adminListCorporaRequest) {
         this.adminListCorporaRequest = adminListCorporaRequest;
         return this;
@@ -19,9 +21,14 @@ public class ListCorporaRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
     public Long customerId;
+
     public ListCorporaRequest withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public ListCorporaRequest(@JsonProperty("adminListCorporaRequest") org.openapis.openapi.models.shared.AdminListCorporaRequest adminListCorporaRequest, @JsonProperty("customer-id") Long customerId) {
+        this.adminListCorporaRequest = adminListCorporaRequest;
+        this.customerId = customerId;
+  }
 }

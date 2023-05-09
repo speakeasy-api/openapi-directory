@@ -117,6 +117,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -140,10 +145,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAMediaItemResponse res = new org.openapis.openapi.models.operations.DeleteAMediaItemResponse() {{
+        org.openapis.openapi.models.operations.DeleteAMediaItemResponse res = new org.openapis.openapi.models.operations.DeleteAMediaItemResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -179,11 +182,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAndSearchMediaItemsResponse res = new org.openapis.openapi.models.operations.ListAndSearchMediaItemsResponse() {{
+        org.openapis.openapi.models.operations.ListAndSearchMediaItemsResponse res = new org.openapis.openapi.models.operations.ListAndSearchMediaItemsResponse(contentType, httpRes.statusCode()) {{
             listAndSearchMediaItems200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,11 +218,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveAMediaItemResponse res = new org.openapis.openapi.models.operations.RetrieveAMediaItemResponse() {{
+        org.openapis.openapi.models.operations.RetrieveAMediaItemResponse res = new org.openapis.openapi.models.operations.RetrieveAMediaItemResponse(contentType, httpRes.statusCode()) {{
             media = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,10 +257,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAMediaItemResponse res = new org.openapis.openapi.models.operations.UpdateAMediaItemResponse() {{
+        org.openapis.openapi.models.operations.UpdateAMediaItemResponse res = new org.openapis.openapi.models.operations.UpdateAMediaItemResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

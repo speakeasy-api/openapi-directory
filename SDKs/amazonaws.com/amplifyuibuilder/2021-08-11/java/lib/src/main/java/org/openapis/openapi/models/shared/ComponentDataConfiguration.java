@@ -15,6 +15,7 @@ public class ComponentDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public String[] identifiers;
+
     public ComponentDataConfiguration withIdentifiers(String[] identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -22,6 +23,7 @@ public class ComponentDataConfiguration {
     
     @JsonProperty("model")
     public String model;
+
     public ComponentDataConfiguration withModel(String model) {
         this.model = model;
         return this;
@@ -30,6 +32,7 @@ public class ComponentDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predicate")
     public Predicate predicate;
+
     public ComponentDataConfiguration withPredicate(Predicate predicate) {
         this.predicate = predicate;
         return this;
@@ -38,9 +41,13 @@ public class ComponentDataConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public SortProperty[] sort;
+
     public ComponentDataConfiguration withSort(SortProperty[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public ComponentDataConfiguration(@JsonProperty("model") String model) {
+        this.model = model;
+  }
 }

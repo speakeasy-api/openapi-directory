@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFailedIPNsRequest {
@@ -12,6 +13,7 @@ public class ListFailedIPNsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public ListFailedIPNsRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class ListFailedIPNsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListFailedIPNsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public ListFailedIPNsRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("Content-Type") String contentType) {
+        this.authorization = authorization;
+        this.contentType = contentType;
+  }
 }

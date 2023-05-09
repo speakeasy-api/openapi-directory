@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiDeleteJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InvoiceDeleteApiModel invoiceDeleteApiModel;
+
     public InvoiceApiDeleteJsonRequest withInvoiceDeleteApiModel(org.openapis.openapi.models.shared.InvoiceDeleteApiModel invoiceDeleteApiModel) {
         this.invoiceDeleteApiModel = invoiceDeleteApiModel;
         return this;
@@ -16,6 +18,7 @@ public class InvoiceApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public InvoiceApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class InvoiceApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public InvoiceApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public InvoiceApiDeleteJsonRequest(@JsonProperty("InvoiceDeleteApiModel") org.openapis.openapi.models.shared.InvoiceDeleteApiModel invoiceDeleteApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.invoiceDeleteApiModel = invoiceDeleteApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

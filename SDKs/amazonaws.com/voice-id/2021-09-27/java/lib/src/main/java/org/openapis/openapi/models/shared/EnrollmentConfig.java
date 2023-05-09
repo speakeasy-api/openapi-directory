@@ -15,6 +15,7 @@ public class EnrollmentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExistingEnrollmentAction")
     public ExistingEnrollmentActionEnum existingEnrollmentAction;
+
     public EnrollmentConfig withExistingEnrollmentAction(ExistingEnrollmentActionEnum existingEnrollmentAction) {
         this.existingEnrollmentAction = existingEnrollmentAction;
         return this;
@@ -23,9 +24,11 @@ public class EnrollmentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FraudDetectionConfig")
     public EnrollmentJobFraudDetectionConfig fraudDetectionConfig;
+
     public EnrollmentConfig withFraudDetectionConfig(EnrollmentJobFraudDetectionConfig fraudDetectionConfig) {
         this.fraudDetectionConfig = fraudDetectionConfig;
         return this;
     }
     
+    public EnrollmentConfig(){}
 }

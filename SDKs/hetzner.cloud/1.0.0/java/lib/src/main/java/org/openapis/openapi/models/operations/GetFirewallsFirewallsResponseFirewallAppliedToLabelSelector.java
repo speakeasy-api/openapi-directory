@@ -12,9 +12,13 @@ public class GetFirewallsFirewallsResponseFirewallAppliedToLabelSelector {
      */
     @JsonProperty("selector")
     public String selector;
+
     public GetFirewallsFirewallsResponseFirewallAppliedToLabelSelector withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public GetFirewallsFirewallsResponseFirewallAppliedToLabelSelector(@JsonProperty("selector") String selector) {
+        this.selector = selector;
+  }
 }

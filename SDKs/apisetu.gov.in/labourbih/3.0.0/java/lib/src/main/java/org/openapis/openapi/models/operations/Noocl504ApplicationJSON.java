@@ -15,6 +15,7 @@ public class Noocl504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Noocl504ApplicationJSONErrorEnum error;
+
     public Noocl504ApplicationJSON withError(Noocl504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Noocl504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Noocl504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Noocl504ApplicationJSON withErrorDescription(Noocl504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Noocl504ApplicationJSON(){}
 }

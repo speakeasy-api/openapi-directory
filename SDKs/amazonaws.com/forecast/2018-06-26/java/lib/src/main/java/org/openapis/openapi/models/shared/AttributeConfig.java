@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttributeConfig {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public AttributeConfig withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,14 @@ public class AttributeConfig {
     
     @JsonProperty("Transformations")
     public java.util.Map<String, String> transformations;
+
     public AttributeConfig withTransformations(java.util.Map<String, String> transformations) {
         this.transformations = transformations;
         return this;
     }
     
+    public AttributeConfig(@JsonProperty("AttributeName") String attributeName, @JsonProperty("Transformations") java.util.Map<String, String> transformations) {
+        this.attributeName = attributeName;
+        this.transformations = transformations;
+  }
 }

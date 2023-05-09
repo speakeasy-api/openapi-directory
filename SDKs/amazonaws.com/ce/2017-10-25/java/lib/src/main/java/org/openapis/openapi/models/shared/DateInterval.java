@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DateInterval {
     @JsonProperty("End")
     public String end;
+
     public DateInterval withEnd(String end) {
         this.end = end;
         return this;
@@ -19,9 +20,14 @@ public class DateInterval {
     
     @JsonProperty("Start")
     public String start;
+
     public DateInterval withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public DateInterval(@JsonProperty("End") String end, @JsonProperty("Start") String start) {
+        this.end = end;
+        this.start = start;
+  }
 }

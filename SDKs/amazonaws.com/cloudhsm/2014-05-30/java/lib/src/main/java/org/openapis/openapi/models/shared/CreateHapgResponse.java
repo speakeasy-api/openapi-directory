@@ -15,9 +15,11 @@ public class CreateHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HapgArn")
     public String hapgArn;
+
     public CreateHapgResponse withHapgArn(String hapgArn) {
         this.hapgArn = hapgArn;
         return this;
     }
     
+    public CreateHapgResponse(){}
 }

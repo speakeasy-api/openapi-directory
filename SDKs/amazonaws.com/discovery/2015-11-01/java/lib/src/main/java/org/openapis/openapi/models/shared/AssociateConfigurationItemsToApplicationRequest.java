@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateConfigurationItemsToApplicationRequest {
     @JsonProperty("applicationConfigurationId")
     public String applicationConfigurationId;
+
     public AssociateConfigurationItemsToApplicationRequest withApplicationConfigurationId(String applicationConfigurationId) {
         this.applicationConfigurationId = applicationConfigurationId;
         return this;
@@ -16,9 +17,14 @@ public class AssociateConfigurationItemsToApplicationRequest {
     
     @JsonProperty("configurationIds")
     public String[] configurationIds;
+
     public AssociateConfigurationItemsToApplicationRequest withConfigurationIds(String[] configurationIds) {
         this.configurationIds = configurationIds;
         return this;
     }
     
+    public AssociateConfigurationItemsToApplicationRequest(@JsonProperty("applicationConfigurationId") String applicationConfigurationId, @JsonProperty("configurationIds") String[] configurationIds) {
+        this.applicationConfigurationId = applicationConfigurationId;
+        this.configurationIds = configurationIds;
+  }
 }

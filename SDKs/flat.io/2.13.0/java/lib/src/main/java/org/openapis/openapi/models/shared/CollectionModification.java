@@ -20,6 +20,7 @@ public class CollectionModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public CollectionPrivacyEnum privacy;
+
     public CollectionModification withPrivacy(CollectionPrivacyEnum privacy) {
         this.privacy = privacy;
         return this;
@@ -31,9 +32,11 @@ public class CollectionModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CollectionModification withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CollectionModification(){}
 }

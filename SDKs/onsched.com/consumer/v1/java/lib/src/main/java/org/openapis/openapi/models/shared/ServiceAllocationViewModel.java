@@ -15,6 +15,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingCount")
     public Integer bookingCount;
+
     public ServiceAllocationViewModel withBookingCount(Integer bookingCount) {
         this.bookingCount = bookingCount;
         return this;
@@ -23,6 +24,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingLimit")
     public Integer bookingLimit;
+
     public ServiceAllocationViewModel withBookingLimit(Integer bookingLimit) {
         this.bookingLimit = bookingLimit;
         return this;
@@ -31,6 +33,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedStatus")
     public Boolean deletedStatus;
+
     public ServiceAllocationViewModel withDeletedStatus(Boolean deletedStatus) {
         this.deletedStatus = deletedStatus;
         return this;
@@ -39,6 +42,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedTime")
     public String deletedTime;
+
     public ServiceAllocationViewModel withDeletedTime(String deletedTime) {
         this.deletedTime = deletedTime;
         return this;
@@ -47,6 +51,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public ServiceAllocationViewModel withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -55,6 +60,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public ServiceAllocationViewModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -63,6 +69,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ServiceAllocationViewModel withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ServiceAllocationViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -79,6 +87,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ServiceAllocationViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -87,6 +96,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ServiceAllocationViewModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -95,6 +105,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatViewModel repeat;
+
     public ServiceAllocationViewModel withRepeat(RepeatViewModel repeat) {
         this.repeat = repeat;
         return this;
@@ -103,6 +114,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public ServiceAllocationViewModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -111,6 +123,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceAddress")
     public AddressViewModel resourceAddress;
+
     public ServiceAllocationViewModel withResourceAddress(AddressViewModel resourceAddress) {
         this.resourceAddress = resourceAddress;
         return this;
@@ -119,6 +132,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDescription")
     public String resourceDescription;
+
     public ServiceAllocationViewModel withResourceDescription(String resourceDescription) {
         this.resourceDescription = resourceDescription;
         return this;
@@ -127,6 +141,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public ServiceAllocationViewModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -135,6 +150,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceImageUrl")
     public String resourceImageUrl;
+
     public ServiceAllocationViewModel withResourceImageUrl(String resourceImageUrl) {
         this.resourceImageUrl = resourceImageUrl;
         return this;
@@ -143,6 +159,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public ServiceAllocationViewModel withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -151,6 +168,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePhone")
     public PhoneViewModel resourcePhone;
+
     public ServiceAllocationViewModel withResourcePhone(PhoneViewModel resourcePhone) {
         this.resourcePhone = resourcePhone;
         return this;
@@ -159,6 +177,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDescription")
     public String serviceDescription;
+
     public ServiceAllocationViewModel withServiceDescription(String serviceDescription) {
         this.serviceDescription = serviceDescription;
         return this;
@@ -167,6 +186,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDuration")
     public Integer serviceDuration;
+
     public ServiceAllocationViewModel withServiceDuration(Integer serviceDuration) {
         this.serviceDuration = serviceDuration;
         return this;
@@ -175,6 +195,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public ServiceAllocationViewModel withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -183,6 +204,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceImageUrl")
     public String serviceImageUrl;
+
     public ServiceAllocationViewModel withServiceImageUrl(String serviceImageUrl) {
         this.serviceImageUrl = serviceImageUrl;
         return this;
@@ -191,6 +213,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ServiceAllocationViewModel withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -199,6 +222,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public ServiceAllocationViewModel withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -207,6 +231,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public ServiceAllocationViewModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
@@ -215,6 +240,7 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneName")
     public String timezoneName;
+
     public ServiceAllocationViewModel withTimezoneName(String timezoneName) {
         this.timezoneName = timezoneName;
         return this;
@@ -223,9 +249,11 @@ public class ServiceAllocationViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezoneOffset")
     public Integer timezoneOffset;
+
     public ServiceAllocationViewModel withTimezoneOffset(Integer timezoneOffset) {
         this.timezoneOffset = timezoneOffset;
         return this;
     }
     
+    public ServiceAllocationViewModel(){}
 }

@@ -20,6 +20,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public TerminologyProperties withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class TerminologyProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public TerminologyProperties withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public TerminologyProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Directionality")
     public DirectionalityEnum directionality;
+
     public TerminologyProperties withDirectionality(DirectionalityEnum directionality) {
         this.directionality = directionality;
         return this;
@@ -54,6 +58,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionKey")
     public EncryptionKey encryptionKey;
+
     public TerminologyProperties withEncryptionKey(EncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -62,6 +67,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public TerminologyDataFormatEnum format;
+
     public TerminologyProperties withFormat(TerminologyDataFormatEnum format) {
         this.format = format;
         return this;
@@ -72,6 +78,7 @@ public class TerminologyProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public TerminologyProperties withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -80,6 +87,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TerminologyProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -88,6 +96,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TerminologyProperties withName(String name) {
         this.name = name;
         return this;
@@ -96,6 +105,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeBytes")
     public Long sizeBytes;
+
     public TerminologyProperties withSizeBytes(Long sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -104,6 +114,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkippedTermCount")
     public Long skippedTermCount;
+
     public TerminologyProperties withSkippedTermCount(Long skippedTermCount) {
         this.skippedTermCount = skippedTermCount;
         return this;
@@ -112,6 +123,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceLanguageCode")
     public String sourceLanguageCode;
+
     public TerminologyProperties withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -120,6 +132,7 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetLanguageCodes")
     public String[] targetLanguageCodes;
+
     public TerminologyProperties withTargetLanguageCodes(String[] targetLanguageCodes) {
         this.targetLanguageCodes = targetLanguageCodes;
         return this;
@@ -128,9 +141,11 @@ public class TerminologyProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TermCount")
     public Long termCount;
+
     public TerminologyProperties withTermCount(Long termCount) {
         this.termCount = termCount;
         return this;
     }
     
+    public TerminologyProperties(){}
 }

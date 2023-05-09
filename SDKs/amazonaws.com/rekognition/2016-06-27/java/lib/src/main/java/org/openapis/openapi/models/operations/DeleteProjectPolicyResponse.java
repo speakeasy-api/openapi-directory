@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProjectPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteProjectPolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteProjectPolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProjectPolicyResponse {
     
     
     public String contentType;
+
     public DeleteProjectPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProjectPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteProjectPolicyResponse;
+
     public DeleteProjectPolicyResponse withDeleteProjectPolicyResponse(java.util.Map<String, Object> deleteProjectPolicyResponse) {
         this.deleteProjectPolicyResponse = deleteProjectPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProjectPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DeleteProjectPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProjectPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteProjectPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteProjectPolicyResponse {
      */
     
     public Object invalidPolicyRevisionIdException;
+
     public DeleteProjectPolicyResponse withInvalidPolicyRevisionIdException(Object invalidPolicyRevisionIdException) {
         this.invalidPolicyRevisionIdException = invalidPolicyRevisionIdException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteProjectPolicyResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DeleteProjectPolicyResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteProjectPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProjectPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteProjectPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteProjectPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteProjectPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProjectPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteProjectPolicyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteProjectPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteProjectPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableInteractionLogging")
     public Boolean enableInteractionLogging;
+
     public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings withEnableInteractionLogging(Boolean enableInteractionLogging) {
         this.enableInteractionLogging = enableInteractionLogging;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStackdriverLogging")
     public Boolean enableStackdriverLogging;
+
     public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings withEnableStackdriverLogging(Boolean enableStackdriverLogging) {
         this.enableStackdriverLogging = enableStackdriverLogging;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings(){}
 }

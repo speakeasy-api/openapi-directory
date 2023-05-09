@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetByRenderIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
     public String developerKey;
+
     public GetAssetByRenderIdSecurity withDeveloperKey(String developerKey) {
         this.developerKey = developerKey;
         return this;
     }
     
+    public GetAssetByRenderIdSecurity(@JsonProperty("DeveloperKey") String developerKey) {
+        this.developerKey = developerKey;
+  }
 }

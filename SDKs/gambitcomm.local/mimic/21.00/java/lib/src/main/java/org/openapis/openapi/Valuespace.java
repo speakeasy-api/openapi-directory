@@ -52,11 +52,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddResponse res = new org.openapis.openapi.models.operations.AddResponse() {{
+        org.openapis.openapi.models.operations.AddResponse res = new org.openapis.openapi.models.operations.AddResponse(contentType, httpRes.statusCode()) {{
             add200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EvalValueResponse res = new org.openapis.openapi.models.operations.EvalValueResponse() {{
+        org.openapis.openapi.models.operations.EvalValueResponse res = new org.openapis.openapi.models.operations.EvalValueResponse(contentType, httpRes.statusCode()) {{
             evalValue200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInfoResponse res = new org.openapis.openapi.models.operations.GetInfoResponse() {{
+        org.openapis.openapi.models.operations.GetInfoResponse res = new org.openapis.openapi.models.operations.GetInfoResponse(contentType, httpRes.statusCode()) {{
             getInfo200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,11 +169,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInstancesResponse res = new org.openapis.openapi.models.operations.GetInstancesResponse() {{
+        org.openapis.openapi.models.operations.GetInstancesResponse res = new org.openapis.openapi.models.operations.GetInstancesResponse(contentType, httpRes.statusCode()) {{
             getInstances200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,11 +209,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMibResponse res = new org.openapis.openapi.models.operations.GetMibResponse() {{
+        org.openapis.openapi.models.operations.GetMibResponse res = new org.openapis.openapi.models.operations.GetMibResponse(contentType, httpRes.statusCode()) {{
             getMib200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,11 +248,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNameResponse res = new org.openapis.openapi.models.operations.GetNameResponse() {{
+        org.openapis.openapi.models.operations.GetNameResponse res = new org.openapis.openapi.models.operations.GetNameResponse(contentType, httpRes.statusCode()) {{
             getName200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +287,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetObjectsResponse res = new org.openapis.openapi.models.operations.GetObjectsResponse() {{
+        org.openapis.openapi.models.operations.GetObjectsResponse res = new org.openapis.openapi.models.operations.GetObjectsResponse(contentType, httpRes.statusCode()) {{
             getObjects200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +327,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOidResponse res = new org.openapis.openapi.models.operations.GetOidResponse() {{
+        org.openapis.openapi.models.operations.GetOidResponse res = new org.openapis.openapi.models.operations.GetOidResponse(contentType, httpRes.statusCode()) {{
             getOid200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -382,11 +366,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStateResponse res = new org.openapis.openapi.models.operations.GetStateResponse() {{
+        org.openapis.openapi.models.operations.GetStateResponse res = new org.openapis.openapi.models.operations.GetStateResponse(contentType, httpRes.statusCode()) {{
             getState200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,11 +405,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetValueResponse res = new org.openapis.openapi.models.operations.GetValueResponse() {{
+        org.openapis.openapi.models.operations.GetValueResponse res = new org.openapis.openapi.models.operations.GetValueResponse(contentType, httpRes.statusCode()) {{
             getValue200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -464,11 +444,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariablesResponse res = new org.openapis.openapi.models.operations.GetVariablesResponse() {{
+        org.openapis.openapi.models.operations.GetVariablesResponse res = new org.openapis.openapi.models.operations.GetVariablesResponse(contentType, httpRes.statusCode()) {{
             getVariables200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -508,11 +486,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MsetValueResponse res = new org.openapis.openapi.models.operations.MsetValueResponse() {{
+        org.openapis.openapi.models.operations.MsetValueResponse res = new org.openapis.openapi.models.operations.MsetValueResponse(contentType, httpRes.statusCode()) {{
             msetValue200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -551,11 +527,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MunsetValueResponse res = new org.openapis.openapi.models.operations.MunsetValueResponse() {{
+        org.openapis.openapi.models.operations.MunsetValueResponse res = new org.openapis.openapi.models.operations.MunsetValueResponse(contentType, httpRes.statusCode()) {{
             munsetValue200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -592,11 +566,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveResponse res = new org.openapis.openapi.models.operations.RemoveResponse() {{
+        org.openapis.openapi.models.operations.RemoveResponse res = new org.openapis.openapi.models.operations.RemoveResponse(contentType, httpRes.statusCode()) {{
             remove200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,11 +605,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetStateResponse res = new org.openapis.openapi.models.operations.SetStateResponse() {{
+        org.openapis.openapi.models.operations.SetStateResponse res = new org.openapis.openapi.models.operations.SetStateResponse(contentType, httpRes.statusCode()) {{
             setState200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +646,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetValueResponse res = new org.openapis.openapi.models.operations.SetValueResponse() {{
+        org.openapis.openapi.models.operations.SetValueResponse res = new org.openapis.openapi.models.operations.SetValueResponse(contentType, httpRes.statusCode()) {{
             setValue200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -717,11 +685,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SplitOidResponse res = new org.openapis.openapi.models.operations.SplitOidResponse() {{
+        org.openapis.openapi.models.operations.SplitOidResponse res = new org.openapis.openapi.models.operations.SplitOidResponse(contentType, httpRes.statusCode()) {{
             splitOid200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -759,11 +725,9 @@ public class Valuespace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnsetValueResponse res = new org.openapis.openapi.models.operations.UnsetValueResponse() {{
+        org.openapis.openapi.models.operations.UnsetValueResponse res = new org.openapis.openapi.models.operations.UnsetValueResponse(contentType, httpRes.statusCode()) {{
             unsetValue200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

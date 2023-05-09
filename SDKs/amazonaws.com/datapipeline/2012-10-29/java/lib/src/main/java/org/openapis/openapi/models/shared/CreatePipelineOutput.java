@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePipelineOutput {
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public CreatePipelineOutput withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
     }
     
+    public CreatePipelineOutput(@JsonProperty("pipelineId") String pipelineId) {
+        this.pipelineId = pipelineId;
+  }
 }

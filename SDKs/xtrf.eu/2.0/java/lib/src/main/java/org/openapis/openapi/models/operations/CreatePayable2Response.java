@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePayable2Response {
     
     public String contentType;
+
     public CreatePayable2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePayable2Response {
      */
     
     public org.openapis.openapi.models.shared.PayableDTO payableDTO;
+
     public CreatePayable2Response withPayableDTO(org.openapis.openapi.models.shared.PayableDTO payableDTO) {
         this.payableDTO = payableDTO;
         return this;
@@ -26,6 +29,7 @@ public class CreatePayable2Response {
     
     
     public Integer statusCode;
+
     public CreatePayable2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreatePayable2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePayable2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePayable2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

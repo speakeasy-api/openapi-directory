@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendMessageBatchResult - For each message in the batch, the response contains a &lt;code&gt; &lt;a&gt;SendMessageBatchResultEntry&lt;/a&gt; &lt;/code&gt; tag if the message succeeds or a &lt;code&gt; &lt;a&gt;BatchResultErrorEntry&lt;/a&gt; &lt;/code&gt; tag if the message fails.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendMessageBatchResult {
     
     public BatchResultErrorEntryList[] failed;
+
     public SendMessageBatchResult withFailed(BatchResultErrorEntryList[] failed) {
         this.failed = failed;
         return this;
@@ -19,9 +20,14 @@ public class SendMessageBatchResult {
     
     
     public SendMessageBatchResultEntryList[] successful;
+
     public SendMessageBatchResult withSuccessful(SendMessageBatchResultEntryList[] successful) {
         this.successful = successful;
         return this;
     }
     
+    public SendMessageBatchResult(@JsonProperty("Failed") BatchResultErrorEntryList[] failed, @JsonProperty("Successful") SendMessageBatchResultEntryList[] successful) {
+        this.failed = failed;
+        this.successful = successful;
+  }
 }

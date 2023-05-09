@@ -14,6 +14,7 @@ public class ExecuteSqlRequestBody {
      */
     @JsonProperty("awsSecretStoreArn")
     public String awsSecretStoreArn;
+
     public ExecuteSqlRequestBody withAwsSecretStoreArn(String awsSecretStoreArn) {
         this.awsSecretStoreArn = awsSecretStoreArn;
         return this;
@@ -25,6 +26,7 @@ public class ExecuteSqlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public String database;
+
     public ExecuteSqlRequestBody withDatabase(String database) {
         this.database = database;
         return this;
@@ -35,6 +37,7 @@ public class ExecuteSqlRequestBody {
      */
     @JsonProperty("dbClusterOrInstanceArn")
     public String dbClusterOrInstanceArn;
+
     public ExecuteSqlRequestBody withDbClusterOrInstanceArn(String dbClusterOrInstanceArn) {
         this.dbClusterOrInstanceArn = dbClusterOrInstanceArn;
         return this;
@@ -46,6 +49,7 @@ public class ExecuteSqlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public ExecuteSqlRequestBody withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -56,9 +60,15 @@ public class ExecuteSqlRequestBody {
      */
     @JsonProperty("sqlStatements")
     public String sqlStatements;
+
     public ExecuteSqlRequestBody withSqlStatements(String sqlStatements) {
         this.sqlStatements = sqlStatements;
         return this;
     }
     
+    public ExecuteSqlRequestBody(@JsonProperty("awsSecretStoreArn") String awsSecretStoreArn, @JsonProperty("dbClusterOrInstanceArn") String dbClusterOrInstanceArn, @JsonProperty("sqlStatements") String sqlStatements) {
+        this.awsSecretStoreArn = awsSecretStoreArn;
+        this.dbClusterOrInstanceArn = dbClusterOrInstanceArn;
+        this.sqlStatements = sqlStatements;
+  }
 }

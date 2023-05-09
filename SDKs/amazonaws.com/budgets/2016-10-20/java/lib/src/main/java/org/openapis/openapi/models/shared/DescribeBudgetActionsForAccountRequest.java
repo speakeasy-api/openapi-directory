@@ -14,6 +14,7 @@ public class DescribeBudgetActionsForAccountRequest {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public DescribeBudgetActionsForAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class DescribeBudgetActionsForAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeBudgetActionsForAccountRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class DescribeBudgetActionsForAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBudgetActionsForAccountRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBudgetActionsForAccountRequest(@JsonProperty("AccountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

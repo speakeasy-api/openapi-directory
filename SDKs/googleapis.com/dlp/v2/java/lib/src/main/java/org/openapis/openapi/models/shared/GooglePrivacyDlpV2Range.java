@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public GooglePrivacyDlpV2Range withEnd(String end) {
         this.end = end;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Range {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public GooglePrivacyDlpV2Range withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public GooglePrivacyDlpV2Range(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RefreshSchemasResponse {
     
     public String contentType;
+
     public RefreshSchemasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RefreshSchemasResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public RefreshSchemasResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -29,6 +32,7 @@ public class RefreshSchemasResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public RefreshSchemasResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -39,6 +43,7 @@ public class RefreshSchemasResponse {
      */
     
     public org.openapis.openapi.models.shared.RefreshSchemasResponse refreshSchemasResponse;
+
     public RefreshSchemasResponse withRefreshSchemasResponse(org.openapis.openapi.models.shared.RefreshSchemasResponse refreshSchemasResponse) {
         this.refreshSchemasResponse = refreshSchemasResponse;
         return this;
@@ -46,6 +51,7 @@ public class RefreshSchemasResponse {
     
     
     public Integer statusCode;
+
     public RefreshSchemasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RefreshSchemasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RefreshSchemasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RefreshSchemasResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public RefreshSchemasResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -73,9 +81,14 @@ public class RefreshSchemasResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public RefreshSchemasResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
     }
     
+    public RefreshSchemasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

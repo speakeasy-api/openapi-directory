@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilities
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Add")
     public String[] add;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails withAdd(String[] add) {
         this.add = add;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilities
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Drop")
     public String[] drop;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails withDrop(String[] drop) {
         this.drop = drop;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersCapabilitiesDetails(){}
 }

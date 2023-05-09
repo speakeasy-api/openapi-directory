@@ -18,6 +18,7 @@ public class PerAndroidVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceCapacity")
     public PerAndroidVersionInfoDeviceCapacityEnum deviceCapacity;
+
     public PerAndroidVersionInfo withDeviceCapacity(PerAndroidVersionInfoDeviceCapacityEnum deviceCapacity) {
         this.deviceCapacity = deviceCapacity;
         return this;
@@ -29,9 +30,11 @@ public class PerAndroidVersionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public PerAndroidVersionInfo withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public PerAndroidVersionInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEligibleOffersRequest {
@@ -12,6 +13,7 @@ public class GetEligibleOffersRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EeOffersRequest eeOffersRequest;
+
     public GetEligibleOffersRequest withEeOffersRequest(org.openapis.openapi.models.shared.EeOffersRequest eeOffersRequest) {
         this.eeOffersRequest = eeOffersRequest;
         return this;
@@ -42,6 +44,7 @@ public class GetEligibleOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetEligibleOffersRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class GetEligibleOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetEligibleOffersRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetEligibleOffersRequest(@JsonProperty("EeOffersRequest") org.openapis.openapi.models.shared.EeOffersRequest eeOffersRequest) {
+        this.eeOffersRequest = eeOffersRequest;
+  }
 }

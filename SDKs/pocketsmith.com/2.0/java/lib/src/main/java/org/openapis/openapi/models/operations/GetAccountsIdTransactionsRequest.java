@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsIdTransactionsRequest {
@@ -12,6 +13,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetAccountsIdTransactionsRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +24,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetAccountsIdTransactionsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=needs_review")
     public Long needsReview;
+
     public GetAccountsIdTransactionsRequest withNeedsReview(Long needsReview) {
         this.needsReview = needsReview;
         return this;
@@ -42,6 +46,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetAccountsIdTransactionsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +57,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetAccountsIdTransactionsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -62,6 +68,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public GetAccountsIdTransactionsRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -72,6 +79,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetAccountsIdTransactionsTypeEnum type;
+
     public GetAccountsIdTransactionsRequest withType(GetAccountsIdTransactionsTypeEnum type) {
         this.type = type;
         return this;
@@ -82,6 +90,7 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uncategorised")
     public Long uncategorised;
+
     public GetAccountsIdTransactionsRequest withUncategorised(Long uncategorised) {
         this.uncategorised = uncategorised;
         return this;
@@ -92,9 +101,13 @@ public class GetAccountsIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_since")
     public String updatedSince;
+
     public GetAccountsIdTransactionsRequest withUpdatedSince(String updatedSince) {
         this.updatedSince = updatedSince;
         return this;
     }
     
+    public GetAccountsIdTransactionsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

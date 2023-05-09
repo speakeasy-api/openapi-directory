@@ -17,6 +17,7 @@ public class LanguagesResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public LanguagesResource withLanguage(String language) {
         this.language = language;
         return this;
@@ -28,9 +29,11 @@ public class LanguagesResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LanguagesResource withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LanguagesResource(){}
 }

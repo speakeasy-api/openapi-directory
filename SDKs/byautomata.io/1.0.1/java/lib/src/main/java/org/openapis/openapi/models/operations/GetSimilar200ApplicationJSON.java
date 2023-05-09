@@ -15,6 +15,7 @@ public class GetSimilar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calls_per_month")
     public String callsPerMonth;
+
     public GetSimilar200ApplicationJSON withCallsPerMonth(String callsPerMonth) {
         this.callsPerMonth = callsPerMonth;
         return this;
@@ -23,6 +24,7 @@ public class GetSimilar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companies")
     public org.openapis.openapi.models.shared.SimilarCompany[] companies;
+
     public GetSimilar200ApplicationJSON withCompanies(org.openapis.openapi.models.shared.SimilarCompany[] companies) {
         this.companies = companies;
         return this;
@@ -31,6 +33,7 @@ public class GetSimilar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count_remaining")
     public String countRemaining;
+
     public GetSimilar200ApplicationJSON withCountRemaining(String countRemaining) {
         this.countRemaining = countRemaining;
         return this;
@@ -39,6 +42,7 @@ public class GetSimilar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input_company")
     public org.openapis.openapi.models.shared.InputCompany inputCompany;
+
     public GetSimilar200ApplicationJSON withInputCompany(org.openapis.openapi.models.shared.InputCompany inputCompany) {
         this.inputCompany = inputCompany;
         return this;
@@ -47,9 +51,11 @@ public class GetSimilar200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewal_date")
     public String renewalDate;
+
     public GetSimilar200ApplicationJSON withRenewalDate(String renewalDate) {
         this.renewalDate = renewalDate;
         return this;
     }
     
+    public GetSimilar200ApplicationJSON(){}
 }

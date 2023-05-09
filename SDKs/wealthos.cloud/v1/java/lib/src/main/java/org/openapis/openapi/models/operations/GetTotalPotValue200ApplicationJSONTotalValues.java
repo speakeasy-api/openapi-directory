@@ -14,6 +14,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("pot_currency")
     public String potCurrency;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withPotCurrency(String potCurrency) {
         this.potCurrency = potCurrency;
         return this;
@@ -25,6 +26,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pots")
     public GetTotalPotValue200ApplicationJSONTotalValuesPots[] pots;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withPots(GetTotalPotValue200ApplicationJSONTotalValuesPots[] pots) {
         this.pots = pots;
         return this;
@@ -35,6 +37,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("total_cash_value")
     public String totalCashValue;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withTotalCashValue(String totalCashValue) {
         this.totalCashValue = totalCashValue;
         return this;
@@ -45,6 +48,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("total_free_cash_value")
     public String totalFreeCashValue;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withTotalFreeCashValue(String totalFreeCashValue) {
         this.totalFreeCashValue = totalFreeCashValue;
         return this;
@@ -55,6 +59,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("total_free_value")
     public String totalFreeValue;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withTotalFreeValue(String totalFreeValue) {
         this.totalFreeValue = totalFreeValue;
         return this;
@@ -65,6 +70,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("total_locked_cash_value")
     public String totalLockedCashValue;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withTotalLockedCashValue(String totalLockedCashValue) {
         this.totalLockedCashValue = totalLockedCashValue;
         return this;
@@ -75,6 +81,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("total_locked_value")
     public String totalLockedValue;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withTotalLockedValue(String totalLockedValue) {
         this.totalLockedValue = totalLockedValue;
         return this;
@@ -85,6 +92,7 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("total_settled_cash_position")
     public String totalSettledCashPosition;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withTotalSettledCashPosition(String totalSettledCashPosition) {
         this.totalSettledCashPosition = totalSettledCashPosition;
         return this;
@@ -95,9 +103,20 @@ public class GetTotalPotValue200ApplicationJSONTotalValues {
      */
     @JsonProperty("total_value")
     public String totalValue;
+
     public GetTotalPotValue200ApplicationJSONTotalValues withTotalValue(String totalValue) {
         this.totalValue = totalValue;
         return this;
     }
     
+    public GetTotalPotValue200ApplicationJSONTotalValues(@JsonProperty("pot_currency") String potCurrency, @JsonProperty("total_cash_value") String totalCashValue, @JsonProperty("total_free_cash_value") String totalFreeCashValue, @JsonProperty("total_free_value") String totalFreeValue, @JsonProperty("total_locked_cash_value") String totalLockedCashValue, @JsonProperty("total_locked_value") String totalLockedValue, @JsonProperty("total_settled_cash_position") String totalSettledCashPosition, @JsonProperty("total_value") String totalValue) {
+        this.potCurrency = potCurrency;
+        this.totalCashValue = totalCashValue;
+        this.totalFreeCashValue = totalFreeCashValue;
+        this.totalFreeValue = totalFreeValue;
+        this.totalLockedCashValue = totalLockedCashValue;
+        this.totalLockedValue = totalLockedValue;
+        this.totalSettledCashPosition = totalSettledCashPosition;
+        this.totalValue = totalValue;
+  }
 }

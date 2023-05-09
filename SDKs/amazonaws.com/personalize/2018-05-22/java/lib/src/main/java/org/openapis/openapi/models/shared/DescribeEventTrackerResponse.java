@@ -15,9 +15,11 @@ public class DescribeEventTrackerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTracker")
     public EventTracker eventTracker;
+
     public DescribeEventTrackerResponse withEventTracker(EventTracker eventTracker) {
         this.eventTracker = eventTracker;
         return this;
     }
     
+    public DescribeEventTrackerResponse(){}
 }

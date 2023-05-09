@@ -15,6 +15,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalServices")
     public ExtendedPriceAdditionalService[] additionalServices;
+
     public ExtendedPrice withAdditionalServices(ExtendedPriceAdditionalService[] additionalServices) {
         this.additionalServices = additionalServices;
         return this;
@@ -26,6 +27,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public String base;
+
     public ExtendedPrice withBase(String base) {
         this.base = base;
         return this;
@@ -37,6 +39,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingCurrency")
     public String billingCurrency;
+
     public ExtendedPrice withBillingCurrency(String billingCurrency) {
         this.billingCurrency = billingCurrency;
         return this;
@@ -45,6 +48,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public ExtendedPrice withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -56,6 +60,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fees")
     public Fee[] fees;
+
     public ExtendedPrice withFees(Fee[] fees) {
         this.fees = fees;
         return this;
@@ -67,6 +72,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grandTotal")
     public String grandTotal;
+
     public ExtendedPrice withGrandTotal(String grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -78,6 +84,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("margin")
     public String margin;
+
     public ExtendedPrice withMargin(String margin) {
         this.margin = margin;
         return this;
@@ -89,6 +96,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundableTaxes")
     public String refundableTaxes;
+
     public ExtendedPrice withRefundableTaxes(String refundableTaxes) {
         this.refundableTaxes = refundableTaxes;
         return this;
@@ -97,6 +105,7 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public Tax[] taxes;
+
     public ExtendedPrice withTaxes(Tax[] taxes) {
         this.taxes = taxes;
         return this;
@@ -108,9 +117,11 @@ public class ExtendedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public String total;
+
     public ExtendedPrice withTotal(String total) {
         this.total = total;
         return this;
     }
     
+    public ExtendedPrice(){}
 }

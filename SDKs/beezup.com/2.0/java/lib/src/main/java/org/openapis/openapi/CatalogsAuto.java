@@ -58,11 +58,9 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalResponse res = new org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalResponse() {{
+        org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalResponse res = new org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -98,11 +96,9 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutoDeleteAutoImportResponse res = new org.openapis.openapi.models.operations.AutoDeleteAutoImportResponse() {{
+        org.openapis.openapi.models.operations.AutoDeleteAutoImportResponse res = new org.openapis.openapi.models.operations.AutoDeleteAutoImportResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -138,12 +134,10 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationResponse res = new org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationResponse() {{
+        org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationResponse res = new org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationResponse(contentType, httpRes.statusCode()) {{
             autoImportConfiguration = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,11 +178,9 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutoPauseAutoImportResponse res = new org.openapis.openapi.models.operations.AutoPauseAutoImportResponse() {{
+        org.openapis.openapi.models.operations.AutoPauseAutoImportResponse res = new org.openapis.openapi.models.operations.AutoPauseAutoImportResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -224,11 +216,9 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutoResumeAutoImportResponse res = new org.openapis.openapi.models.operations.AutoResumeAutoImportResponse() {{
+        org.openapis.openapi.models.operations.AutoResumeAutoImportResponse res = new org.openapis.openapi.models.operations.AutoResumeAutoImportResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -269,11 +259,9 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutoScheduleAutoImportResponse res = new org.openapis.openapi.models.operations.AutoScheduleAutoImportResponse() {{
+        org.openapis.openapi.models.operations.AutoScheduleAutoImportResponse res = new org.openapis.openapi.models.operations.AutoScheduleAutoImportResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -309,12 +297,10 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AutoStartAutoImportResponse res = new org.openapis.openapi.models.operations.AutoStartAutoImportResponse() {{
+        org.openapis.openapi.models.operations.AutoStartAutoImportResponse res = new org.openapis.openapi.models.operations.AutoStartAutoImportResponse(contentType, httpRes.statusCode()) {{
             linksImportationGetImportationMonitoringLink = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -358,11 +344,9 @@ public class CatalogsAuto {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportationActivateAutoImportResponse res = new org.openapis.openapi.models.operations.ImportationActivateAutoImportResponse() {{
+        org.openapis.openapi.models.operations.ImportationActivateAutoImportResponse res = new org.openapis.openapi.models.operations.ImportationActivateAutoImportResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

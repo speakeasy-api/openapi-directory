@@ -15,6 +15,7 @@ public class TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurationsImage image;
+
     public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations withImage(TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurationsImage image) {
         this.image = image;
         return this;
@@ -31,6 +33,7 @@ public class TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurationsModel model;
+
     public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations withModel(TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurationsModel model) {
         this.model = model;
         return this;
@@ -39,6 +42,7 @@ public class TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations withOs(String os) {
         this.os = os;
         return this;
@@ -47,9 +51,11 @@ public class TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osName")
     public String osName;
+
     public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations withOsName(String osName) {
         this.osName = osName;
         return this;
     }
     
+    public TestListDeviceSetsOfOwnerDeviceSetDeviceConfigurations(){}
 }

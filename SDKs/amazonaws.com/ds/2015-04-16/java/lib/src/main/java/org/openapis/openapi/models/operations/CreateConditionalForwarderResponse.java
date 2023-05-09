@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConditionalForwarderResponse {
@@ -12,6 +13,7 @@ public class CreateConditionalForwarderResponse {
      */
     
     public Object clientException;
+
     public CreateConditionalForwarderResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateConditionalForwarderResponse {
     
     
     public String contentType;
+
     public CreateConditionalForwarderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateConditionalForwarderResponse {
      */
     
     public java.util.Map<String, Object> createConditionalForwarderResult;
+
     public CreateConditionalForwarderResponse withCreateConditionalForwarderResult(java.util.Map<String, Object> createConditionalForwarderResult) {
         this.createConditionalForwarderResult = createConditionalForwarderResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateConditionalForwarderResponse {
      */
     
     public Object directoryUnavailableException;
+
     public CreateConditionalForwarderResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class CreateConditionalForwarderResponse {
      */
     
     public Object entityAlreadyExistsException;
+
     public CreateConditionalForwarderResponse withEntityAlreadyExistsException(Object entityAlreadyExistsException) {
         this.entityAlreadyExistsException = entityAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConditionalForwarderResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public CreateConditionalForwarderResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -69,6 +76,7 @@ public class CreateConditionalForwarderResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateConditionalForwarderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -76,6 +84,7 @@ public class CreateConditionalForwarderResponse {
     
     
     public Integer statusCode;
+
     public CreateConditionalForwarderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateConditionalForwarderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConditionalForwarderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateConditionalForwarderResponse {
      */
     
     public Object serviceException;
+
     public CreateConditionalForwarderResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,9 +114,14 @@ public class CreateConditionalForwarderResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateConditionalForwarderResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateConditionalForwarderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

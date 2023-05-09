@@ -20,6 +20,7 @@ public class ExportInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationsDownloadUrl")
     public String configurationsDownloadUrl;
+
     public ExportInfo withConfigurationsDownloadUrl(String configurationsDownloadUrl) {
         this.configurationsDownloadUrl = configurationsDownloadUrl;
         return this;
@@ -27,6 +28,7 @@ public class ExportInfo {
     
     @JsonProperty("exportId")
     public String exportId;
+
     public ExportInfo withExportId(String exportId) {
         this.exportId = exportId;
         return this;
@@ -36,6 +38,7 @@ public class ExportInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("exportRequestTime")
     public OffsetDateTime exportRequestTime;
+
     public ExportInfo withExportRequestTime(OffsetDateTime exportRequestTime) {
         this.exportRequestTime = exportRequestTime;
         return this;
@@ -43,6 +46,7 @@ public class ExportInfo {
     
     @JsonProperty("exportStatus")
     public ExportStatusEnum exportStatus;
+
     public ExportInfo withExportStatus(ExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -51,6 +55,7 @@ public class ExportInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTruncated")
     public Boolean isTruncated;
+
     public ExportInfo withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -61,6 +66,7 @@ public class ExportInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedEndTime")
     public OffsetDateTime requestedEndTime;
+
     public ExportInfo withRequestedEndTime(OffsetDateTime requestedEndTime) {
         this.requestedEndTime = requestedEndTime;
         return this;
@@ -71,6 +77,7 @@ public class ExportInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedStartTime")
     public OffsetDateTime requestedStartTime;
+
     public ExportInfo withRequestedStartTime(OffsetDateTime requestedStartTime) {
         this.requestedStartTime = requestedStartTime;
         return this;
@@ -78,9 +85,16 @@ public class ExportInfo {
     
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ExportInfo withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ExportInfo(@JsonProperty("exportId") String exportId, @JsonProperty("exportRequestTime") OffsetDateTime exportRequestTime, @JsonProperty("exportStatus") ExportStatusEnum exportStatus, @JsonProperty("statusMessage") String statusMessage) {
+        this.exportId = exportId;
+        this.exportRequestTime = exportRequestTime;
+        this.exportStatus = exportStatus;
+        this.statusMessage = statusMessage;
+  }
 }

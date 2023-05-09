@@ -12,9 +12,13 @@ public class AppConfigI18n {
      */
     @JsonProperty("languages")
     public Language[] languages;
+
     public AppConfigI18n withLanguages(Language[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public AppConfigI18n(@JsonProperty("languages") Language[] languages) {
+        this.languages = languages;
+  }
 }

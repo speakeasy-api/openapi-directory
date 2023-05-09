@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCalendarResponse {
     
     public String contentType;
+
     public GetCalendarResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCalendarResponse {
     
     
     public Integer statusCode;
+
     public GetCalendarResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCalendarResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCalendarResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetCalendarResponse {
      */
     
     public org.openapis.openapi.models.shared.Week[] weeks;
+
     public GetCalendarResponse withWeeks(org.openapis.openapi.models.shared.Week[] weeks) {
         this.weeks = weeks;
         return this;
     }
     
+    public GetCalendarResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

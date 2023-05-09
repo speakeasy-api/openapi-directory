@@ -12,6 +12,7 @@ public class EmailValidation200ApplicationJSONDomainAge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("human")
     public String human;
+
     public EmailValidation200ApplicationJSONDomainAge withHuman(String human) {
         this.human = human;
         return this;
@@ -20,6 +21,7 @@ public class EmailValidation200ApplicationJSONDomainAge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iso")
     public String iso;
+
     public EmailValidation200ApplicationJSONDomainAge withIso(String iso) {
         this.iso = iso;
         return this;
@@ -28,9 +30,11 @@ public class EmailValidation200ApplicationJSONDomainAge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Double timestamp;
+
     public EmailValidation200ApplicationJSONDomainAge withTimestamp(Double timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public EmailValidation200ApplicationJSONDomainAge(){}
 }

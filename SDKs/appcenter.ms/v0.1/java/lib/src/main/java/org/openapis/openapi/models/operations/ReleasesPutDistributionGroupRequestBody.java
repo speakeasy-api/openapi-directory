@@ -12,9 +12,13 @@ public class ReleasesPutDistributionGroupRequestBody {
      */
     @JsonProperty("mandatory_update")
     public Boolean mandatoryUpdate;
+
     public ReleasesPutDistributionGroupRequestBody withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
     }
     
+    public ReleasesPutDistributionGroupRequestBody(@JsonProperty("mandatory_update") Boolean mandatoryUpdate) {
+        this.mandatoryUpdate = mandatoryUpdate;
+  }
 }

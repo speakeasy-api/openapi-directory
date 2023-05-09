@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ContentLocation {
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public S3ContentLocation withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -21,6 +22,7 @@ public class S3ContentLocation {
     
     @JsonProperty("FileKey")
     public String fileKey;
+
     public S3ContentLocation withFileKey(String fileKey) {
         this.fileKey = fileKey;
         return this;
@@ -29,9 +31,14 @@ public class S3ContentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectVersion")
     public String objectVersion;
+
     public S3ContentLocation withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
     }
     
+    public S3ContentLocation(@JsonProperty("BucketARN") String bucketARN, @JsonProperty("FileKey") String fileKey) {
+        this.bucketARN = bucketARN;
+        this.fileKey = fileKey;
+  }
 }

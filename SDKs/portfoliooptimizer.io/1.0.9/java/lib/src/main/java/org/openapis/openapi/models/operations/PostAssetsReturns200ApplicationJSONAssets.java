@@ -12,9 +12,13 @@ public class PostAssetsReturns200ApplicationJSONAssets {
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostAssetsReturns200ApplicationJSONAssets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostAssetsReturns200ApplicationJSONAssets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

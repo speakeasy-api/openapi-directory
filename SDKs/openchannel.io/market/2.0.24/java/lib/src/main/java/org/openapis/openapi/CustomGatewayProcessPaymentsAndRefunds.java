@@ -57,11 +57,9 @@ public class CustomGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdResponse() {{
+        org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {
@@ -106,11 +104,9 @@ public class CustomGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdResponse() {{
+        org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdResponse res = new org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {

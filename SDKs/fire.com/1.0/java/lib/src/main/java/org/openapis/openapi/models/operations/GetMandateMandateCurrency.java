@@ -18,6 +18,7 @@ public class GetMandateMandateCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GetMandateMandateCurrencyCodeEnum code;
+
     public GetMandateMandateCurrency withCode(GetMandateMandateCurrencyCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetMandateMandateCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetMandateMandateCurrency withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetMandateMandateCurrency(){}
 }

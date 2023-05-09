@@ -18,6 +18,7 @@ public class JobReleaseTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandLine")
     public String commandLine;
+
     public JobReleaseTask withCommandLine(String commandLine) {
         this.commandLine = commandLine;
         return this;
@@ -29,6 +30,7 @@ public class JobReleaseTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentSettings")
     public EnvironmentSetting[] environmentSettings;
+
     public JobReleaseTask withEnvironmentSettings(EnvironmentSetting[] environmentSettings) {
         this.environmentSettings = environmentSettings;
         return this;
@@ -40,6 +42,7 @@ public class JobReleaseTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public JobReleaseTask withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class JobReleaseTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWallClockTime")
     public String maxWallClockTime;
+
     public JobReleaseTask withMaxWallClockTime(String maxWallClockTime) {
         this.maxWallClockTime = maxWallClockTime;
         return this;
@@ -62,6 +66,7 @@ public class JobReleaseTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFiles")
     public ResourceFile[] resourceFiles;
+
     public JobReleaseTask withResourceFiles(ResourceFile[] resourceFiles) {
         this.resourceFiles = resourceFiles;
         return this;
@@ -73,6 +78,7 @@ public class JobReleaseTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionTime")
     public String retentionTime;
+
     public JobReleaseTask withRetentionTime(String retentionTime) {
         this.retentionTime = retentionTime;
         return this;
@@ -84,9 +90,11 @@ public class JobReleaseTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runElevated")
     public Boolean runElevated;
+
     public JobReleaseTask withRunElevated(Boolean runElevated) {
         this.runElevated = runElevated;
         return this;
     }
     
+    public JobReleaseTask(){}
 }

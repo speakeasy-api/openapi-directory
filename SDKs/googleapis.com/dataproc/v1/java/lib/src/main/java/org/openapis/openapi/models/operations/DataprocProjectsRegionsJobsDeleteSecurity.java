@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataprocProjectsRegionsJobsDeleteSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2;
+
     public DataprocProjectsRegionsJobsDeleteSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
@@ -16,9 +18,14 @@ public class DataprocProjectsRegionsJobsDeleteSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2c;
+
     public DataprocProjectsRegionsJobsDeleteSecurity withOauth2c(String oauth2c) {
         this.oauth2c = oauth2c;
         return this;
     }
     
+    public DataprocProjectsRegionsJobsDeleteSecurity(@JsonProperty("Oauth2") String oauth2, @JsonProperty("Oauth2c") String oauth2c) {
+        this.oauth2 = oauth2;
+        this.oauth2c = oauth2c;
+  }
 }

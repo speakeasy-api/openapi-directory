@@ -18,6 +18,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ContainerVersionHeader withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public ContainerVersionHeader withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersionId")
     public String containerVersionId;
+
     public ContainerVersionHeader withContainerVersionId(String containerVersionId) {
         this.containerVersionId = containerVersionId;
         return this;
@@ -51,6 +54,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ContainerVersionHeader withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -62,6 +66,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerVersionHeader withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numMacros")
     public String numMacros;
+
     public ContainerVersionHeader withNumMacros(String numMacros) {
         this.numMacros = numMacros;
         return this;
@@ -84,6 +90,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRules")
     public String numRules;
+
     public ContainerVersionHeader withNumRules(String numRules) {
         this.numRules = numRules;
         return this;
@@ -95,6 +102,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTags")
     public String numTags;
+
     public ContainerVersionHeader withNumTags(String numTags) {
         this.numTags = numTags;
         return this;
@@ -106,6 +114,7 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTriggers")
     public String numTriggers;
+
     public ContainerVersionHeader withNumTriggers(String numTriggers) {
         this.numTriggers = numTriggers;
         return this;
@@ -117,9 +126,11 @@ public class ContainerVersionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numVariables")
     public String numVariables;
+
     public ContainerVersionHeader withNumVariables(String numVariables) {
         this.numVariables = numVariables;
         return this;
     }
     
+    public ContainerVersionHeader(){}
 }

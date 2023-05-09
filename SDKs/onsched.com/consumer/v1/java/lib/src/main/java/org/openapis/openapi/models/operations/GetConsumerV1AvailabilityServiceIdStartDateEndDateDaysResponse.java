@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse {
@@ -12,6 +13,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse {
      */
     
     public org.openapis.openapi.models.shared.AvailabilityDayViewModel availabilityDayViewModel;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse withAvailabilityDayViewModel(org.openapis.openapi.models.shared.AvailabilityDayViewModel availabilityDayViewModel) {
         this.availabilityDayViewModel = availabilityDayViewModel;
         return this;
@@ -19,6 +21,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse {
     
     
     public String contentType;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse {
     
     
     public Integer statusCode;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SqlServerAuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public SqlServerAuditConfig withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,6 +30,7 @@ public class SqlServerAuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SqlServerAuditConfig withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class SqlServerAuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionInterval")
     public String retentionInterval;
+
     public SqlServerAuditConfig withRetentionInterval(String retentionInterval) {
         this.retentionInterval = retentionInterval;
         return this;
@@ -51,9 +54,11 @@ public class SqlServerAuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadInterval")
     public String uploadInterval;
+
     public SqlServerAuditConfig withUploadInterval(String uploadInterval) {
         this.uploadInterval = uploadInterval;
         return this;
     }
     
+    public SqlServerAuditConfig(){}
 }

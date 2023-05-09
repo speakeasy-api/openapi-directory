@@ -45,11 +45,9 @@ public class Console {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAemProductInfoResponse res = new org.openapis.openapi.models.operations.GetAemProductInfoResponse() {{
+        org.openapis.openapi.models.operations.GetAemProductInfoResponse res = new org.openapis.openapi.models.operations.GetAemProductInfoResponse(contentType, httpRes.statusCode()) {{
             getAemProductInfoDefaultApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -78,12 +76,10 @@ public class Console {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBundleInfoResponse res = new org.openapis.openapi.models.operations.GetBundleInfoResponse() {{
+        org.openapis.openapi.models.operations.GetBundleInfoResponse res = new org.openapis.openapi.models.operations.GetBundleInfoResponse(contentType, httpRes.statusCode()) {{
             bundleInfo = null;
             getBundleInfoDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,11 +114,9 @@ public class Console {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigMgrResponse res = new org.openapis.openapi.models.operations.GetConfigMgrResponse() {{
+        org.openapis.openapi.models.operations.GetConfigMgrResponse res = new org.openapis.openapi.models.operations.GetConfigMgrResponse(contentType, httpRes.statusCode()) {{
             getConfigMgr200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,10 +152,8 @@ public class Console {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBundleResponse res = new org.openapis.openapi.models.operations.PostBundleResponse() {{
+        org.openapis.openapi.models.operations.PostBundleResponse res = new org.openapis.openapi.models.operations.PostBundleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -185,10 +177,8 @@ public class Console {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostJmxRepositoryResponse res = new org.openapis.openapi.models.operations.PostJmxRepositoryResponse() {{
+        org.openapis.openapi.models.operations.PostJmxRepositoryResponse res = new org.openapis.openapi.models.operations.PostJmxRepositoryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -218,13 +208,11 @@ public class Console {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSamlConfigurationResponse res = new org.openapis.openapi.models.operations.PostSamlConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PostSamlConfigurationResponse res = new org.openapis.openapi.models.operations.PostSamlConfigurationResponse(contentType, httpRes.statusCode()) {{
             samlConfigurationInfo = null;
             postSamlConfiguration302TextPlainString = null;
             postSamlConfigurationDefaultTextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

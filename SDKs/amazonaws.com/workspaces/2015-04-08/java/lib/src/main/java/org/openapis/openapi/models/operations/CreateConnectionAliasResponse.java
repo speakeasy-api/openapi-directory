@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConnectionAliasResponse {
@@ -12,6 +13,7 @@ public class CreateConnectionAliasResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateConnectionAliasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateConnectionAliasResponse {
     
     
     public String contentType;
+
     public CreateConnectionAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateConnectionAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateConnectionAliasResult createConnectionAliasResult;
+
     public CreateConnectionAliasResponse withCreateConnectionAliasResult(org.openapis.openapi.models.shared.CreateConnectionAliasResult createConnectionAliasResult) {
         this.createConnectionAliasResult = createConnectionAliasResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateConnectionAliasResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public CreateConnectionAliasResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class CreateConnectionAliasResponse {
      */
     
     public Object invalidResourceStateException;
+
     public CreateConnectionAliasResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -59,6 +65,7 @@ public class CreateConnectionAliasResponse {
      */
     
     public Object operationNotSupportedException;
+
     public CreateConnectionAliasResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -69,6 +76,7 @@ public class CreateConnectionAliasResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateConnectionAliasResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -79,6 +87,7 @@ public class CreateConnectionAliasResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateConnectionAliasResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class CreateConnectionAliasResponse {
     
     
     public Integer statusCode;
+
     public CreateConnectionAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateConnectionAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConnectionAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateConnectionAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

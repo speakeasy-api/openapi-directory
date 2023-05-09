@@ -15,6 +15,7 @@ public class SplitDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public SplitDocument withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,9 +24,11 @@ public class SplitDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pages")
     public Long[] pages;
+
     public SplitDocument withPages(Long[] pages) {
         this.pages = pages;
         return this;
     }
     
+    public SplitDocument(){}
 }

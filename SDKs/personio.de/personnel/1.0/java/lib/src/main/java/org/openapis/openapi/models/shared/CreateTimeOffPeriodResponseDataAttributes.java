@@ -12,6 +12,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public CreateTimeOffPeriodResponseDataAttributesCertificate certificate;
+
     public CreateTimeOffPeriodResponseDataAttributes withCertificate(CreateTimeOffPeriodResponseDataAttributesCertificate certificate) {
         this.certificate = certificate;
         return this;
@@ -20,6 +21,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public CreateTimeOffPeriodResponseDataAttributes withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +30,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("days_count")
     public Double daysCount;
+
     public CreateTimeOffPeriodResponseDataAttributes withDaysCount(Double daysCount) {
         this.daysCount = daysCount;
         return this;
@@ -36,6 +39,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee")
     public CreateTimeOffPeriodResponseDataAttributesEmployee employee;
+
     public CreateTimeOffPeriodResponseDataAttributes withEmployee(CreateTimeOffPeriodResponseDataAttributesEmployee employee) {
         this.employee = employee;
         return this;
@@ -44,6 +48,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_date")
     public String endDate;
+
     public CreateTimeOffPeriodResponseDataAttributes withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -52,6 +57,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("half_day_end")
     public Double halfDayEnd;
+
     public CreateTimeOffPeriodResponseDataAttributes withHalfDayEnd(Double halfDayEnd) {
         this.halfDayEnd = halfDayEnd;
         return this;
@@ -60,6 +66,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("half_day_start")
     public Double halfDayStart;
+
     public CreateTimeOffPeriodResponseDataAttributes withHalfDayStart(Double halfDayStart) {
         this.halfDayStart = halfDayStart;
         return this;
@@ -68,6 +75,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CreateTimeOffPeriodResponseDataAttributes withId(Long id) {
         this.id = id;
         return this;
@@ -76,6 +84,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_date")
     public String startDate;
+
     public CreateTimeOffPeriodResponseDataAttributes withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -84,6 +93,7 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CreateTimeOffPeriodResponseDataAttributes withStatus(String status) {
         this.status = status;
         return this;
@@ -92,9 +102,11 @@ public class CreateTimeOffPeriodResponseDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_off_type")
     public CreateTimeOffPeriodResponseDataAttributesTimeOffType timeOffType;
+
     public CreateTimeOffPeriodResponseDataAttributes withTimeOffType(CreateTimeOffPeriodResponseDataAttributesTimeOffType timeOffType) {
         this.timeOffType = timeOffType;
         return this;
     }
     
+    public CreateTimeOffPeriodResponseDataAttributes(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchOperationsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsGetSecurityOption1 option1;
+
     public CloudsearchOperationsGetSecurity withOption1(CloudsearchOperationsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudsearchOperationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsGetSecurityOption2 option2;
+
     public CloudsearchOperationsGetSecurity withOption2(CloudsearchOperationsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class CloudsearchOperationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsGetSecurityOption3 option3;
+
     public CloudsearchOperationsGetSecurity withOption3(CloudsearchOperationsGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class CloudsearchOperationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsGetSecurityOption4 option4;
+
     public CloudsearchOperationsGetSecurity withOption4(CloudsearchOperationsGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class CloudsearchOperationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsGetSecurityOption5 option5;
+
     public CloudsearchOperationsGetSecurity withOption5(CloudsearchOperationsGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class CloudsearchOperationsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsGetSecurityOption6 option6;
+
     public CloudsearchOperationsGetSecurity withOption6(CloudsearchOperationsGetSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public CloudsearchOperationsGetSecurity(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeneratedPolicyRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetGeneratedPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetGeneratedPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetGeneratedPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetGeneratedPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetGeneratedPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetGeneratedPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetGeneratedPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetGeneratedPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetGeneratedPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetGeneratedPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetGeneratedPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetGeneratedPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetGeneratedPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetGeneratedPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeResourcePlaceholders")
     public Boolean includeResourcePlaceholders;
+
     public GetGeneratedPolicyRequest withIncludeResourcePlaceholders(Boolean includeResourcePlaceholders) {
         this.includeResourcePlaceholders = includeResourcePlaceholders;
         return this;
@@ -71,6 +80,7 @@ public class GetGeneratedPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeServiceLevelTemplate")
     public Boolean includeServiceLevelTemplate;
+
     public GetGeneratedPolicyRequest withIncludeServiceLevelTemplate(Boolean includeServiceLevelTemplate) {
         this.includeServiceLevelTemplate = includeServiceLevelTemplate;
         return this;
@@ -81,9 +91,13 @@ public class GetGeneratedPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public GetGeneratedPolicyRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public GetGeneratedPolicyRequest(@JsonProperty("jobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

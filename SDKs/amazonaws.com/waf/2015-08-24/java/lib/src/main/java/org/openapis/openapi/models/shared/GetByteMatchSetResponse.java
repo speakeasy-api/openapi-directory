@@ -15,9 +15,11 @@ public class GetByteMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ByteMatchSet")
     public ByteMatchSet byteMatchSet;
+
     public GetByteMatchSetResponse withByteMatchSet(ByteMatchSet byteMatchSet) {
         this.byteMatchSet = byteMatchSet;
         return this;
     }
     
+    public GetByteMatchSetResponse(){}
 }

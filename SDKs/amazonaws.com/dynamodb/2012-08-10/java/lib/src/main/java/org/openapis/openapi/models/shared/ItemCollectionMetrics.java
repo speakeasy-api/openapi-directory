@@ -15,6 +15,7 @@ public class ItemCollectionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCollectionKey")
     public java.util.Map<String, AttributeValue> itemCollectionKey;
+
     public ItemCollectionMetrics withItemCollectionKey(java.util.Map<String, AttributeValue> itemCollectionKey) {
         this.itemCollectionKey = itemCollectionKey;
         return this;
@@ -23,9 +24,11 @@ public class ItemCollectionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeEstimateRangeGB")
     public Double[] sizeEstimateRangeGB;
+
     public ItemCollectionMetrics withSizeEstimateRangeGB(Double[] sizeEstimateRangeGB) {
         this.sizeEstimateRangeGB = sizeEstimateRangeGB;
         return this;
     }
     
+    public ItemCollectionMetrics(){}
 }

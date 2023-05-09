@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthIdpConfigs")
     public GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig[] oauthIdpConfigs;
+
     public GoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse withOauthIdpConfigs(GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig[] oauthIdpConfigs) {
         this.oauthIdpConfigs = oauthIdpConfigs;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2ListOAuthIdpConfigsResponse(){}
 }

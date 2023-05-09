@@ -12,6 +12,7 @@ public class OpenAQCountriesResultMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("found")
     public Long found;
+
     public OpenAQCountriesResultMeta withFound(Long found) {
         this.found = found;
         return this;
@@ -20,6 +21,7 @@ public class OpenAQCountriesResultMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public OpenAQCountriesResultMeta withLicense(String license) {
         this.license = license;
         return this;
@@ -28,6 +30,7 @@ public class OpenAQCountriesResultMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public OpenAQCountriesResultMeta withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,6 +39,7 @@ public class OpenAQCountriesResultMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OpenAQCountriesResultMeta withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class OpenAQCountriesResultMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public OpenAQCountriesResultMeta withPage(Long page) {
         this.page = page;
         return this;
@@ -52,9 +57,11 @@ public class OpenAQCountriesResultMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public OpenAQCountriesResultMeta withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public OpenAQCountriesResultMeta(){}
 }

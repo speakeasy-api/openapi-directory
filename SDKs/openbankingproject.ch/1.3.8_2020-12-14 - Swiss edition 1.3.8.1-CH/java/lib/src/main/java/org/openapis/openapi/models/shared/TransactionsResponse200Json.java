@@ -27,6 +27,7 @@ public class TransactionsResponse200Json {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public TransactionsResponse200Json withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -42,6 +43,7 @@ public class TransactionsResponse200Json {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public AccountReference16CH account;
+
     public TransactionsResponse200Json withAccount(AccountReference16CH account) {
         this.account = account;
         return this;
@@ -55,6 +57,7 @@ public class TransactionsResponse200Json {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balances")
     public Balance[] balances;
+
     public TransactionsResponse200Json withBalances(Balance[] balances) {
         this.balances = balances;
         return this;
@@ -74,9 +77,11 @@ public class TransactionsResponse200Json {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public AccountReport transactions;
+
     public TransactionsResponse200Json withTransactions(AccountReport transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public TransactionsResponse200Json(){}
 }

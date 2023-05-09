@@ -15,9 +15,11 @@ public class UpdateComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public Component entity;
+
     public UpdateComponentResponse withEntity(Component entity) {
         this.entity = entity;
         return this;
     }
     
+    public UpdateComponentResponse(){}
 }

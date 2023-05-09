@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemGroupFeedSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String clientCredentials;
+
     public GetItemGroupFeedSecurity withClientCredentials(String clientCredentials) {
         this.clientCredentials = clientCredentials;
         return this;
     }
     
+    public GetItemGroupFeedSecurity(@JsonProperty("Client_Credentials") String clientCredentials) {
+        this.clientCredentials = clientCredentials;
+  }
 }

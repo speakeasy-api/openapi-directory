@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishCatalogToMarketplaceRequest {
@@ -12,6 +13,7 @@ public class PublishCatalogToMarketplaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public PublishCatalogToMarketplaceRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class PublishCatalogToMarketplaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public PublishCatalogToMarketplaceRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -29,9 +32,15 @@ public class PublishCatalogToMarketplaceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PublishCatalogToMarketplaceRequest publishCatalogToMarketplaceRequest;
+
     public PublishCatalogToMarketplaceRequest withPublishCatalogToMarketplaceRequest(org.openapis.openapi.models.shared.PublishCatalogToMarketplaceRequest publishCatalogToMarketplaceRequest) {
         this.publishCatalogToMarketplaceRequest = publishCatalogToMarketplaceRequest;
         return this;
     }
     
+    public PublishCatalogToMarketplaceRequest(@JsonProperty("accountId") Integer accountId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("publishCatalogToMarketplaceRequest") org.openapis.openapi.models.shared.PublishCatalogToMarketplaceRequest publishCatalogToMarketplaceRequest) {
+        this.accountId = accountId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.publishCatalogToMarketplaceRequest = publishCatalogToMarketplaceRequest;
+  }
 }

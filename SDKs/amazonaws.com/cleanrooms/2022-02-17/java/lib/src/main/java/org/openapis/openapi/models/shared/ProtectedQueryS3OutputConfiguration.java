@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedQueryS3OutputConfiguration {
     @JsonProperty("bucket")
     public String bucket;
+
     public ProtectedQueryS3OutputConfiguration withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -22,6 +23,7 @@ public class ProtectedQueryS3OutputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public ProtectedQueryS3OutputConfiguration withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -29,9 +31,14 @@ public class ProtectedQueryS3OutputConfiguration {
     
     @JsonProperty("resultFormat")
     public ResultFormatEnum resultFormat;
+
     public ProtectedQueryS3OutputConfiguration withResultFormat(ResultFormatEnum resultFormat) {
         this.resultFormat = resultFormat;
         return this;
     }
     
+    public ProtectedQueryS3OutputConfiguration(@JsonProperty("bucket") String bucket, @JsonProperty("resultFormat") ResultFormatEnum resultFormat) {
+        this.bucket = bucket;
+        this.resultFormat = resultFormat;
+  }
 }

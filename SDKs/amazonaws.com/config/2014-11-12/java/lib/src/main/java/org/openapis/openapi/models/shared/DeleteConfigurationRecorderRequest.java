@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteConfigurationRecorderRequest {
     @JsonProperty("ConfigurationRecorderName")
     public String configurationRecorderName;
+
     public DeleteConfigurationRecorderRequest withConfigurationRecorderName(String configurationRecorderName) {
         this.configurationRecorderName = configurationRecorderName;
         return this;
     }
     
+    public DeleteConfigurationRecorderRequest(@JsonProperty("ConfigurationRecorderName") String configurationRecorderName) {
+        this.configurationRecorderName = configurationRecorderName;
+  }
 }

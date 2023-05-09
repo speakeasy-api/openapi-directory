@@ -12,6 +12,7 @@ public class PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryLis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList withPosition(String position) {
         this.position = position;
         return this;
@@ -20,6 +21,7 @@ public class PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryLis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("radius")
     public Long radius;
+
     public PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -28,6 +30,7 @@ public class PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryLis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList withType(String type) {
         this.type = type;
         return this;
@@ -36,9 +39,11 @@ public class PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryLis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertices")
     public String[] vertices;
+
     public PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList withVertices(String[] vertices) {
         this.vertices = vertices;
         return this;
     }
     
+    public PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList(){}
 }

@@ -15,6 +15,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocationStrategy")
     public CRAllocationStrategyEnum allocationStrategy;
+
     public ComputeResource withAllocationStrategy(CRAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -23,6 +24,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidPercentage")
     public Long bidPercentage;
+
     public ComputeResource withBidPercentage(Long bidPercentage) {
         this.bidPercentage = bidPercentage;
         return this;
@@ -31,6 +33,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredvCpus")
     public Long desiredvCpus;
+
     public ComputeResource withDesiredvCpus(Long desiredvCpus) {
         this.desiredvCpus = desiredvCpus;
         return this;
@@ -39,6 +42,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2Configuration")
     public Ec2Configuration[] ec2Configuration;
+
     public ComputeResource withEc2Configuration(Ec2Configuration[] ec2Configuration) {
         this.ec2Configuration = ec2Configuration;
         return this;
@@ -47,6 +51,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2KeyPair")
     public String ec2KeyPair;
+
     public ComputeResource withEc2KeyPair(String ec2KeyPair) {
         this.ec2KeyPair = ec2KeyPair;
         return this;
@@ -55,6 +60,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public String imageId;
+
     public ComputeResource withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -63,6 +69,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceRole")
     public String instanceRole;
+
     public ComputeResource withInstanceRole(String instanceRole) {
         this.instanceRole = instanceRole;
         return this;
@@ -71,6 +78,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTypes")
     public String[] instanceTypes;
+
     public ComputeResource withInstanceTypes(String[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -79,6 +87,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplate")
     public LaunchTemplateSpecification launchTemplate;
+
     public ComputeResource withLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
@@ -86,6 +95,7 @@ public class ComputeResource {
     
     @JsonProperty("maxvCpus")
     public Long maxvCpus;
+
     public ComputeResource withMaxvCpus(Long maxvCpus) {
         this.maxvCpus = maxvCpus;
         return this;
@@ -94,6 +104,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minvCpus")
     public Long minvCpus;
+
     public ComputeResource withMinvCpus(Long minvCpus) {
         this.minvCpus = minvCpus;
         return this;
@@ -102,6 +113,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementGroup")
     public String placementGroup;
+
     public ComputeResource withPlacementGroup(String placementGroup) {
         this.placementGroup = placementGroup;
         return this;
@@ -110,6 +122,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public ComputeResource withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -118,6 +131,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spotIamFleetRole")
     public String spotIamFleetRole;
+
     public ComputeResource withSpotIamFleetRole(String spotIamFleetRole) {
         this.spotIamFleetRole = spotIamFleetRole;
         return this;
@@ -125,6 +139,7 @@ public class ComputeResource {
     
     @JsonProperty("subnets")
     public String[] subnets;
+
     public ComputeResource withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -133,6 +148,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ComputeResource withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -140,9 +156,15 @@ public class ComputeResource {
     
     @JsonProperty("type")
     public CRTypeEnum type;
+
     public ComputeResource withType(CRTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ComputeResource(@JsonProperty("maxvCpus") Long maxvCpus, @JsonProperty("subnets") String[] subnets, @JsonProperty("type") CRTypeEnum type) {
+        this.maxvCpus = maxvCpus;
+        this.subnets = subnets;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateResolverRuleResponse {
@@ -12,6 +13,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateResolverRuleResponse associateResolverRuleResponse;
+
     public AssociateResolverRuleResponse withAssociateResolverRuleResponse(org.openapis.openapi.models.shared.AssociateResolverRuleResponse associateResolverRuleResponse) {
         this.associateResolverRuleResponse = associateResolverRuleResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateResolverRuleResponse {
     
     
     public String contentType;
+
     public AssociateResolverRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object internalServiceErrorException;
+
     public AssociateResolverRuleResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateResolverRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateResolverRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateResolverRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object resourceExistsException;
+
     public AssociateResolverRuleResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -79,6 +87,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateResolverRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object resourceUnavailableException;
+
     public AssociateResolverRuleResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class AssociateResolverRuleResponse {
     
     
     public Integer statusCode;
+
     public AssociateResolverRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class AssociateResolverRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateResolverRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class AssociateResolverRuleResponse {
      */
     
     public Object throttlingException;
+
     public AssociateResolverRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateResolverRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

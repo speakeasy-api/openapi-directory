@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposReplaceAllTopicsResponse {
     
     public String contentType;
+
     public ReposReplaceAllTopicsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposReplaceAllTopicsResponse {
     
     
     public Integer statusCode;
+
     public ReposReplaceAllTopicsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposReplaceAllTopicsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposReplaceAllTopicsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposReplaceAllTopicsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposReplaceAllTopicsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposReplaceAllTopicsResponse {
      */
     
     public ReposReplaceAllTopics415ApplicationJSON reposReplaceAllTopics415ApplicationJSONObject;
+
     public ReposReplaceAllTopicsResponse withReposReplaceAllTopics415ApplicationJSONObject(ReposReplaceAllTopics415ApplicationJSON reposReplaceAllTopics415ApplicationJSONObject) {
         this.reposReplaceAllTopics415ApplicationJSONObject = reposReplaceAllTopics415ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ReposReplaceAllTopicsResponse {
      */
     
     public org.openapis.openapi.models.shared.Topic topic;
+
     public ReposReplaceAllTopicsResponse withTopic(org.openapis.openapi.models.shared.Topic topic) {
         this.topic = topic;
         return this;
@@ -63,9 +70,14 @@ public class ReposReplaceAllTopicsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public ReposReplaceAllTopicsResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public ReposReplaceAllTopicsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

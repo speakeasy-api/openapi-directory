@@ -15,6 +15,7 @@ public class OutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationSchemaUpdate")
     public DestinationSchema destinationSchemaUpdate;
+
     public OutputUpdate withDestinationSchemaUpdate(DestinationSchema destinationSchemaUpdate) {
         this.destinationSchemaUpdate = destinationSchemaUpdate;
         return this;
@@ -23,6 +24,7 @@ public class OutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseOutputUpdate")
     public KinesisFirehoseOutputUpdate kinesisFirehoseOutputUpdate;
+
     public OutputUpdate withKinesisFirehoseOutputUpdate(KinesisFirehoseOutputUpdate kinesisFirehoseOutputUpdate) {
         this.kinesisFirehoseOutputUpdate = kinesisFirehoseOutputUpdate;
         return this;
@@ -31,6 +33,7 @@ public class OutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamsOutputUpdate")
     public KinesisStreamsOutputUpdate kinesisStreamsOutputUpdate;
+
     public OutputUpdate withKinesisStreamsOutputUpdate(KinesisStreamsOutputUpdate kinesisStreamsOutputUpdate) {
         this.kinesisStreamsOutputUpdate = kinesisStreamsOutputUpdate;
         return this;
@@ -39,6 +42,7 @@ public class OutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaOutputUpdate")
     public LambdaOutputUpdate lambdaOutputUpdate;
+
     public OutputUpdate withLambdaOutputUpdate(LambdaOutputUpdate lambdaOutputUpdate) {
         this.lambdaOutputUpdate = lambdaOutputUpdate;
         return this;
@@ -47,6 +51,7 @@ public class OutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameUpdate")
     public String nameUpdate;
+
     public OutputUpdate withNameUpdate(String nameUpdate) {
         this.nameUpdate = nameUpdate;
         return this;
@@ -54,9 +59,13 @@ public class OutputUpdate {
     
     @JsonProperty("OutputId")
     public String outputId;
+
     public OutputUpdate withOutputId(String outputId) {
         this.outputId = outputId;
         return this;
     }
     
+    public OutputUpdate(@JsonProperty("OutputId") String outputId) {
+        this.outputId = outputId;
+  }
 }

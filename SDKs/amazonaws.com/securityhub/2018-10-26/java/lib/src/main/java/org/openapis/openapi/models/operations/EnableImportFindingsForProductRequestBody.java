@@ -12,9 +12,13 @@ public class EnableImportFindingsForProductRequestBody {
      */
     @JsonProperty("ProductArn")
     public String productArn;
+
     public EnableImportFindingsForProductRequestBody withProductArn(String productArn) {
         this.productArn = productArn;
         return this;
     }
     
+    public EnableImportFindingsForProductRequestBody(@JsonProperty("ProductArn") String productArn) {
+        this.productArn = productArn;
+  }
 }

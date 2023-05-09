@@ -18,6 +18,7 @@ public class RunAggregationQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public RunAggregationQueryResponse withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -29,6 +30,7 @@ public class RunAggregationQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public AggregationResult result;
+
     public RunAggregationQueryResponse withResult(AggregationResult result) {
         this.result = result;
         return this;
@@ -40,9 +42,11 @@ public class RunAggregationQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RunAggregationQueryResponse withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RunAggregationQueryResponse(){}
 }

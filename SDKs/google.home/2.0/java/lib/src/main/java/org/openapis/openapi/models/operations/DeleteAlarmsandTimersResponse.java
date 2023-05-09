@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAlarmsandTimersResponse {
     
     public String contentType;
+
     public DeleteAlarmsandTimersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteAlarmsandTimersResponse {
     
     
     public org.openapis.openapi.models.shared.Example19 example19;
+
     public DeleteAlarmsandTimersResponse withExample19(org.openapis.openapi.models.shared.Example19 example19) {
         this.example19 = example19;
         return this;
@@ -23,6 +26,7 @@ public class DeleteAlarmsandTimersResponse {
     
     
     public Integer statusCode;
+
     public DeleteAlarmsandTimersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DeleteAlarmsandTimersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAlarmsandTimersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAlarmsandTimersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

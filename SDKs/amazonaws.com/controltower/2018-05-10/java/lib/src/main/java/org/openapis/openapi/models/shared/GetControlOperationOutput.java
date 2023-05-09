@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetControlOperationOutput {
     @JsonProperty("controlOperation")
     public ControlOperation controlOperation;
+
     public GetControlOperationOutput withControlOperation(ControlOperation controlOperation) {
         this.controlOperation = controlOperation;
         return this;
     }
     
+    public GetControlOperationOutput(@JsonProperty("controlOperation") ControlOperation controlOperation) {
+        this.controlOperation = controlOperation;
+  }
 }

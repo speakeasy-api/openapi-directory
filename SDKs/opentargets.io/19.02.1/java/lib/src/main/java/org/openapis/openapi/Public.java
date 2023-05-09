@@ -66,10 +66,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationByIdResponse res = new org.openapis.openapi.models.operations.GetAssociationByIdResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationByIdResponse res = new org.openapis.openapi.models.operations.GetAssociationByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,10 +106,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationFilterResponse res = new org.openapis.openapi.models.operations.GetAssociationFilterResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationFilterResponse res = new org.openapis.openapi.models.operations.GetAssociationFilterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,10 +137,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDataMetricsResponse res = new org.openapis.openapi.models.operations.GetDataMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetDataMetricsResponse res = new org.openapis.openapi.models.operations.GetDataMetricsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,10 +168,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDataStatsResponse res = new org.openapis.openapi.models.operations.GetDataStatsResponse() {{
+        org.openapis.openapi.models.operations.GetDataStatsResponse res = new org.openapis.openapi.models.operations.GetDataStatsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,10 +215,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEvidenceByIdResponse res = new org.openapis.openapi.models.operations.GetEvidenceByIdResponse() {{
+        org.openapis.openapi.models.operations.GetEvidenceByIdResponse res = new org.openapis.openapi.models.operations.GetEvidenceByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -267,10 +257,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEvidenceFilterResponse res = new org.openapis.openapi.models.operations.GetEvidenceFilterResponse() {{
+        org.openapis.openapi.models.operations.GetEvidenceFilterResponse res = new org.openapis.openapi.models.operations.GetEvidenceFilterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,10 +288,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPingResponse res = new org.openapis.openapi.models.operations.GetPingResponse() {{
+        org.openapis.openapi.models.operations.GetPingResponse res = new org.openapis.openapi.models.operations.GetPingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,10 +328,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchResponse res = new org.openapis.openapi.models.operations.GetSearchResponse() {{
+        org.openapis.openapi.models.operations.GetSearchResponse res = new org.openapis.openapi.models.operations.GetSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -375,10 +359,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTherapeuticAreasResponse res = new org.openapis.openapi.models.operations.GetTherapeuticAreasResponse() {{
+        org.openapis.openapi.models.operations.GetTherapeuticAreasResponse res = new org.openapis.openapi.models.operations.GetTherapeuticAreasResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -408,10 +390,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse() {{
+        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,10 +428,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssociationFilterResponse res = new org.openapis.openapi.models.operations.PostAssociationFilterResponse() {{
+        org.openapis.openapi.models.operations.PostAssociationFilterResponse res = new org.openapis.openapi.models.operations.PostAssociationFilterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,10 +466,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostEvidenceByIdResponse res = new org.openapis.openapi.models.operations.PostEvidenceByIdResponse() {{
+        org.openapis.openapi.models.operations.PostEvidenceByIdResponse res = new org.openapis.openapi.models.operations.PostEvidenceByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,10 +504,8 @@ public class Public {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostEvidenceFilterResponse res = new org.openapis.openapi.models.operations.PostEvidenceFilterResponse() {{
+        org.openapis.openapi.models.operations.PostEvidenceFilterResponse res = new org.openapis.openapi.models.operations.PostEvidenceFilterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

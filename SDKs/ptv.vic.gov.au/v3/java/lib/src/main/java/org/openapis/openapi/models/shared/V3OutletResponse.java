@@ -18,6 +18,7 @@ public class V3OutletResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outlets")
     public V3Outlet[] outlets;
+
     public V3OutletResponse withOutlets(V3Outlet[] outlets) {
         this.outlets = outlets;
         return this;
@@ -26,9 +27,11 @@ public class V3OutletResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public V3Status status;
+
     public V3OutletResponse withStatus(V3Status status) {
         this.status = status;
         return this;
     }
     
+    public V3OutletResponse(){}
 }

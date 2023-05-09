@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyPrivateDnsNameOptionsRequest {
     
     public Boolean dryRun;
+
     public ModifyPrivateDnsNameOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyPrivateDnsNameOptionsRequest {
     
     
     public Boolean enableResourceNameDnsAAAARecord;
+
     public ModifyPrivateDnsNameOptionsRequest withEnableResourceNameDnsAAAARecord(Boolean enableResourceNameDnsAAAARecord) {
         this.enableResourceNameDnsAAAARecord = enableResourceNameDnsAAAARecord;
         return this;
@@ -23,6 +25,7 @@ public class ModifyPrivateDnsNameOptionsRequest {
     
     
     public Boolean enableResourceNameDnsARecord;
+
     public ModifyPrivateDnsNameOptionsRequest withEnableResourceNameDnsARecord(Boolean enableResourceNameDnsARecord) {
         this.enableResourceNameDnsARecord = enableResourceNameDnsARecord;
         return this;
@@ -30,6 +33,7 @@ public class ModifyPrivateDnsNameOptionsRequest {
     
     
     public String instanceId;
+
     public ModifyPrivateDnsNameOptionsRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -37,9 +41,13 @@ public class ModifyPrivateDnsNameOptionsRequest {
     
     
     public HostnameTypeEnum privateDnsHostnameType;
+
     public ModifyPrivateDnsNameOptionsRequest withPrivateDnsHostnameType(HostnameTypeEnum privateDnsHostnameType) {
         this.privateDnsHostnameType = privateDnsHostnameType;
         return this;
     }
     
+    public ModifyPrivateDnsNameOptionsRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

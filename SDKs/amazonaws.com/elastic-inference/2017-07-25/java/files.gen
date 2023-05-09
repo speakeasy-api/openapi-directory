@@ -58,4 +58,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ElasticInferenceAccelerator
 lib/src/main/java/org/openapis/openapi/models/shared/Filter.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

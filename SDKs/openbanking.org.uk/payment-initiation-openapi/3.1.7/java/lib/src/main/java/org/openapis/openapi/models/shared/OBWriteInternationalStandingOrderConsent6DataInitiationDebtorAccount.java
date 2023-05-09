@@ -17,6 +17,7 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccoun
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccount withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccount withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccoun
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccount withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -51,9 +54,14 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccount withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBWriteInternationalStandingOrderConsent6DataInitiationDebtorAccount(@JsonProperty("Identification") String identification, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.schemeName = schemeName;
+  }
 }

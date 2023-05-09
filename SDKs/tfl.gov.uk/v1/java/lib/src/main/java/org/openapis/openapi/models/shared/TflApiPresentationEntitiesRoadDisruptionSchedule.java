@@ -19,6 +19,7 @@ public class TflApiPresentationEntitiesRoadDisruptionSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public TflApiPresentationEntitiesRoadDisruptionSchedule withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class TflApiPresentationEntitiesRoadDisruptionSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public TflApiPresentationEntitiesRoadDisruptionSchedule withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TflApiPresentationEntitiesRoadDisruptionSchedule(){}
 }

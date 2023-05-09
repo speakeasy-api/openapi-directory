@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatastoreProjectsRunQueryResponse {
     
     public String contentType;
+
     public DatastoreProjectsRunQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatastoreProjectsRunQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.RunQueryResponse runQueryResponse;
+
     public DatastoreProjectsRunQueryResponse withRunQueryResponse(org.openapis.openapi.models.shared.RunQueryResponse runQueryResponse) {
         this.runQueryResponse = runQueryResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatastoreProjectsRunQueryResponse {
     
     
     public Integer statusCode;
+
     public DatastoreProjectsRunQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatastoreProjectsRunQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatastoreProjectsRunQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatastoreProjectsRunQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

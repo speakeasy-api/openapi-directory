@@ -12,6 +12,7 @@ public class StartSegmentDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartSegmentDetectionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class StartSegmentDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public StartSegmentDetectionFilters filters;
+
     public StartSegmentDetectionRequest withFilters(StartSegmentDetectionFilters filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class StartSegmentDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartSegmentDetectionRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -36,6 +39,7 @@ public class StartSegmentDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartSegmentDetectionRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -43,6 +47,7 @@ public class StartSegmentDetectionRequest {
     
     @JsonProperty("SegmentTypes")
     public SegmentTypeEnum[] segmentTypes;
+
     public StartSegmentDetectionRequest withSegmentTypes(SegmentTypeEnum[] segmentTypes) {
         this.segmentTypes = segmentTypes;
         return this;
@@ -53,9 +58,14 @@ public class StartSegmentDetectionRequest {
      */
     @JsonProperty("Video")
     public Video video;
+
     public StartSegmentDetectionRequest withVideo(Video video) {
         this.video = video;
         return this;
     }
     
+    public StartSegmentDetectionRequest(@JsonProperty("SegmentTypes") SegmentTypeEnum[] segmentTypes, @JsonProperty("Video") Video video) {
+        this.segmentTypes = segmentTypes;
+        this.video = video;
+  }
 }

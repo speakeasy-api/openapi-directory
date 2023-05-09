@@ -17,6 +17,7 @@ public class ListActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public String actionType;
+
     public ListActionsRequest withActionType(String actionType) {
         this.actionType = actionType;
         return this;
@@ -27,6 +28,7 @@ public class ListActionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public ListActionsRequest withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -37,6 +39,7 @@ public class ListActionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public ListActionsRequest withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -45,6 +48,7 @@ public class ListActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListActionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class ListActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListActionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,6 +66,7 @@ public class ListActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortActionsByEnum sortBy;
+
     public ListActionsRequest withSortBy(SortActionsByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -69,6 +75,7 @@ public class ListActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListActionsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -77,9 +84,11 @@ public class ListActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceUri")
     public String sourceUri;
+
     public ListActionsRequest withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ListActionsRequest(){}
 }

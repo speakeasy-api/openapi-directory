@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugSrcRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetRepositoriesWorkspaceRepoSlugSrcFormatEnum format;
+
     public GetRepositoriesWorkspaceRepoSlugSrcRequest withFormat(GetRepositoriesWorkspaceRepoSlugSrcFormatEnum format) {
         this.format = format;
         return this;
@@ -24,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugSrcRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,14 @@ public class GetRepositoriesWorkspaceRepoSlugSrcRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugSrcRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugSrcRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

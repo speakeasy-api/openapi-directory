@@ -15,6 +15,7 @@ public class InterconnectDiagnosticsLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arpCaches")
     public InterconnectDiagnosticsARPEntry[] arpCaches;
+
     public InterconnectDiagnosticsLinkStatus withArpCaches(InterconnectDiagnosticsARPEntry[] arpCaches) {
         this.arpCaches = arpCaches;
         return this;
@@ -26,6 +27,7 @@ public class InterconnectDiagnosticsLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("circuitId")
     public String circuitId;
+
     public InterconnectDiagnosticsLinkStatus withCircuitId(String circuitId) {
         this.circuitId = circuitId;
         return this;
@@ -37,6 +39,7 @@ public class InterconnectDiagnosticsLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleDemarc")
     public String googleDemarc;
+
     public InterconnectDiagnosticsLinkStatus withGoogleDemarc(String googleDemarc) {
         this.googleDemarc = googleDemarc;
         return this;
@@ -45,6 +48,7 @@ public class InterconnectDiagnosticsLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lacpStatus")
     public InterconnectDiagnosticsLinkLACPStatus lacpStatus;
+
     public InterconnectDiagnosticsLinkStatus withLacpStatus(InterconnectDiagnosticsLinkLACPStatus lacpStatus) {
         this.lacpStatus = lacpStatus;
         return this;
@@ -56,6 +60,7 @@ public class InterconnectDiagnosticsLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationalStatus")
     public InterconnectDiagnosticsLinkStatusOperationalStatusEnum operationalStatus;
+
     public InterconnectDiagnosticsLinkStatus withOperationalStatus(InterconnectDiagnosticsLinkStatusOperationalStatusEnum operationalStatus) {
         this.operationalStatus = operationalStatus;
         return this;
@@ -64,6 +69,7 @@ public class InterconnectDiagnosticsLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receivingOpticalPower")
     public InterconnectDiagnosticsLinkOpticalPower receivingOpticalPower;
+
     public InterconnectDiagnosticsLinkStatus withReceivingOpticalPower(InterconnectDiagnosticsLinkOpticalPower receivingOpticalPower) {
         this.receivingOpticalPower = receivingOpticalPower;
         return this;
@@ -72,9 +78,11 @@ public class InterconnectDiagnosticsLinkStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transmittingOpticalPower")
     public InterconnectDiagnosticsLinkOpticalPower transmittingOpticalPower;
+
     public InterconnectDiagnosticsLinkStatus withTransmittingOpticalPower(InterconnectDiagnosticsLinkOpticalPower transmittingOpticalPower) {
         this.transmittingOpticalPower = transmittingOpticalPower;
         return this;
     }
     
+    public InterconnectDiagnosticsLinkStatus(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApplySchemaResponse {
@@ -12,6 +13,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public ApplySchemaResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.ApplySchemaResponse applySchemaResponse;
+
     public ApplySchemaResponse withApplySchemaResponse(org.openapis.openapi.models.shared.ApplySchemaResponse applySchemaResponse) {
         this.applySchemaResponse = applySchemaResponse;
         return this;
@@ -29,6 +32,7 @@ public class ApplySchemaResponse {
     
     
     public String contentType;
+
     public ApplySchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public ApplySchemaResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public ApplySchemaResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException;
+
     public ApplySchemaResponse withInvalidAttachmentException(org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -69,6 +76,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public ApplySchemaResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ApplySchemaResponse {
     
     
     public Integer statusCode;
+
     public ApplySchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ApplySchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApplySchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public ApplySchemaResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public ApplySchemaResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ApplySchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public ApplySchemaResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ApplySchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

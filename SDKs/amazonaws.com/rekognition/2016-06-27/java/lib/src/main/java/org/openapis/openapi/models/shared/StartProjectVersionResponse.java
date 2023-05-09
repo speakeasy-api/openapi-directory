@@ -15,9 +15,11 @@ public class StartProjectVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProjectVersionStatusEnum status;
+
     public StartProjectVersionResponse withStatus(ProjectVersionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StartProjectVersionResponse(){}
 }

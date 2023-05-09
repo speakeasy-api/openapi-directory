@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllSshKeysResponse {
     
     public String contentType;
+
     public GetAllSshKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllSshKeysResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetAllSshKeysResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetAllSshKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.SshKeyDetail[] sshKeyDetails;
+
     public GetAllSshKeysResponse withSshKeyDetails(org.openapis.openapi.models.shared.SshKeyDetail[] sshKeyDetails) {
         this.sshKeyDetails = sshKeyDetails;
         return this;
@@ -33,6 +37,7 @@ public class GetAllSshKeysResponse {
     
     
     public Integer statusCode;
+
     public GetAllSshKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetAllSshKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllSshKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAllSshKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

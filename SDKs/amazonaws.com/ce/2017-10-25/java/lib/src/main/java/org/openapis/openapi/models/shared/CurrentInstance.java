@@ -15,6 +15,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public CurrentInstance withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -23,6 +24,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceName")
     public String instanceName;
+
     public CurrentInstance withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -31,6 +33,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonthlyCost")
     public String monthlyCost;
+
     public CurrentInstance withMonthlyCost(String monthlyCost) {
         this.monthlyCost = monthlyCost;
         return this;
@@ -39,6 +42,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandHoursInLookbackPeriod")
     public String onDemandHoursInLookbackPeriod;
+
     public CurrentInstance withOnDemandHoursInLookbackPeriod(String onDemandHoursInLookbackPeriod) {
         this.onDemandHoursInLookbackPeriod = onDemandHoursInLookbackPeriod;
         return this;
@@ -47,6 +51,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservationCoveredHoursInLookbackPeriod")
     public String reservationCoveredHoursInLookbackPeriod;
+
     public CurrentInstance withReservationCoveredHoursInLookbackPeriod(String reservationCoveredHoursInLookbackPeriod) {
         this.reservationCoveredHoursInLookbackPeriod = reservationCoveredHoursInLookbackPeriod;
         return this;
@@ -55,6 +60,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDetails")
     public ResourceDetails resourceDetails;
+
     public CurrentInstance withResourceDetails(ResourceDetails resourceDetails) {
         this.resourceDetails = resourceDetails;
         return this;
@@ -63,6 +69,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public CurrentInstance withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -71,6 +78,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceUtilization")
     public ResourceUtilization resourceUtilization;
+
     public CurrentInstance withResourceUtilization(ResourceUtilization resourceUtilization) {
         this.resourceUtilization = resourceUtilization;
         return this;
@@ -79,6 +87,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlansCoveredHoursInLookbackPeriod")
     public String savingsPlansCoveredHoursInLookbackPeriod;
+
     public CurrentInstance withSavingsPlansCoveredHoursInLookbackPeriod(String savingsPlansCoveredHoursInLookbackPeriod) {
         this.savingsPlansCoveredHoursInLookbackPeriod = savingsPlansCoveredHoursInLookbackPeriod;
         return this;
@@ -87,6 +96,7 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagValues[] tags;
+
     public CurrentInstance withTags(TagValues[] tags) {
         this.tags = tags;
         return this;
@@ -95,9 +105,11 @@ public class CurrentInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRunningHoursInLookbackPeriod")
     public String totalRunningHoursInLookbackPeriod;
+
     public CurrentInstance withTotalRunningHoursInLookbackPeriod(String totalRunningHoursInLookbackPeriod) {
         this.totalRunningHoursInLookbackPeriod = totalRunningHoursInLookbackPeriod;
         return this;
     }
     
+    public CurrentInstance(){}
 }

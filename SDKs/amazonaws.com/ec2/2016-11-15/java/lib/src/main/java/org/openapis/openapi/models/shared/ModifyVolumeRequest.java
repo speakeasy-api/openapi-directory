@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVolumeRequest {
     
     public Boolean dryRun;
+
     public ModifyVolumeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVolumeRequest {
     
     
     public Long iops;
+
     public ModifyVolumeRequest withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVolumeRequest {
     
     
     public Boolean multiAttachEnabled;
+
     public ModifyVolumeRequest withMultiAttachEnabled(Boolean multiAttachEnabled) {
         this.multiAttachEnabled = multiAttachEnabled;
         return this;
@@ -30,6 +33,7 @@ public class ModifyVolumeRequest {
     
     
     public Long size;
+
     public ModifyVolumeRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -37,6 +41,7 @@ public class ModifyVolumeRequest {
     
     
     public Long throughput;
+
     public ModifyVolumeRequest withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -44,6 +49,7 @@ public class ModifyVolumeRequest {
     
     
     public String volumeId;
+
     public ModifyVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -51,9 +57,13 @@ public class ModifyVolumeRequest {
     
     
     public VolumeTypeEnum volumeType;
+
     public ModifyVolumeRequest withVolumeType(VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public ModifyVolumeRequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

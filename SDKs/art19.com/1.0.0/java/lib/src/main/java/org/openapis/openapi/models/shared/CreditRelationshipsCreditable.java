@@ -12,9 +12,11 @@ public class CreditRelationshipsCreditable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier data;
+
     public CreditRelationshipsCreditable withData(ResourceIdentifier data) {
         this.data = data;
         return this;
     }
     
+    public CreditRelationshipsCreditable(){}
 }

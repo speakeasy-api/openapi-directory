@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientAuthRequester {
     @JsonProperty("id")
     public String id;
+
     public PatientAuthRequester withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class PatientAuthRequester {
     
     @JsonProperty("type")
     public PatientAuthRequesterTypeEnum type;
+
     public PatientAuthRequester withType(PatientAuthRequesterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientAuthRequester(@JsonProperty("id") String id, @JsonProperty("type") PatientAuthRequesterTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

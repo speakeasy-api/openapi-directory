@@ -12,6 +12,7 @@ public class UpdateOrganizationAdminRequestBodyTags {
      */
     @JsonProperty("access")
     public String access;
+
     public UpdateOrganizationAdminRequestBodyTags withAccess(String access) {
         this.access = access;
         return this;
@@ -22,9 +23,14 @@ public class UpdateOrganizationAdminRequestBodyTags {
      */
     @JsonProperty("tag")
     public String tag;
+
     public UpdateOrganizationAdminRequestBodyTags withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public UpdateOrganizationAdminRequestBodyTags(@JsonProperty("access") String access, @JsonProperty("tag") String tag) {
+        this.access = access;
+        this.tag = tag;
+  }
 }

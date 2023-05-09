@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public Image withError(Status error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public ToolOutputReference sourceImage;
+
     public Image withSourceImage(ToolOutputReference sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -40,6 +42,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepId")
     public String stepId;
+
     public Image withStepId(String stepId) {
         this.stepId = stepId;
         return this;
@@ -51,9 +54,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public Thumbnail thumbnail;
+
     public Image withThumbnail(Thumbnail thumbnail) {
         this.thumbnail = thumbnail;
         return this;
     }
     
+    public Image(){}
 }

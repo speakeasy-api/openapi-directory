@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSigninResponse {
     
     public String contentType;
+
     public PostSigninResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostSigninResponse {
     
     
     public Integer statusCode;
+
     public PostSigninResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostSigninResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSigninResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostSigninResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidToken invalidToken;
+
     public PostSigninResponse withInvalidToken(org.openapis.openapi.models.shared.InvalidToken invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -43,6 +48,7 @@ public class PostSigninResponse {
      */
     
     public org.openapis.openapi.models.shared.KeyFailure keyFailure;
+
     public PostSigninResponse withKeyFailure(org.openapis.openapi.models.shared.KeyFailure keyFailure) {
         this.keyFailure = keyFailure;
         return this;
@@ -53,9 +59,14 @@ public class PostSigninResponse {
      */
     
     public org.openapis.openapi.models.shared.SigninResponse signinResponse;
+
     public PostSigninResponse withSigninResponse(org.openapis.openapi.models.shared.SigninResponse signinResponse) {
         this.signinResponse = signinResponse;
         return this;
     }
     
+    public PostSigninResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

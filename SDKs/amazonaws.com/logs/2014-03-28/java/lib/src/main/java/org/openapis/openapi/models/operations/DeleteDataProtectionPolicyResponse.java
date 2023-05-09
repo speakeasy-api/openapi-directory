@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDataProtectionPolicyResponse {
     
     public String contentType;
+
     public DeleteDataProtectionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDataProtectionPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteDataProtectionPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDataProtectionPolicyResponse {
      */
     
     public Object operationAbortedException;
+
     public DeleteDataProtectionPolicyResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDataProtectionPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteDataProtectionPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDataProtectionPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteDataProtectionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDataProtectionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDataProtectionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteDataProtectionPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDataProtectionPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteDataProtectionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

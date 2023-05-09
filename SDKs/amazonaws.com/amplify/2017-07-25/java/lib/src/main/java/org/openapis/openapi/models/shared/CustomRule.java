@@ -15,6 +15,7 @@ public class CustomRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public CustomRule withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -22,6 +23,7 @@ public class CustomRule {
     
     @JsonProperty("source")
     public String source;
+
     public CustomRule withSource(String source) {
         this.source = source;
         return this;
@@ -30,6 +32,7 @@ public class CustomRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public CustomRule withStatus(String status) {
         this.status = status;
         return this;
@@ -37,9 +40,14 @@ public class CustomRule {
     
     @JsonProperty("target")
     public String target;
+
     public CustomRule withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public CustomRule(@JsonProperty("source") String source, @JsonProperty("target") String target) {
+        this.source = source;
+        this.target = target;
+  }
 }

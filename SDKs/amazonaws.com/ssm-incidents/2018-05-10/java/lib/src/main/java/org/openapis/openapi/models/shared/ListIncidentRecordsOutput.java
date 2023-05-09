@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListIncidentRecordsOutput {
     @JsonProperty("incidentRecordSummaries")
     public IncidentRecordSummary[] incidentRecordSummaries;
+
     public ListIncidentRecordsOutput withIncidentRecordSummaries(IncidentRecordSummary[] incidentRecordSummaries) {
         this.incidentRecordSummaries = incidentRecordSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListIncidentRecordsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListIncidentRecordsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIncidentRecordsOutput(@JsonProperty("incidentRecordSummaries") IncidentRecordSummary[] incidentRecordSummaries) {
+        this.incidentRecordSummaries = incidentRecordSummaries;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLensSharesResponse {
@@ -12,6 +13,7 @@ public class ListLensSharesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLensSharesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListLensSharesResponse {
     
     
     public String contentType;
+
     public ListLensSharesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLensSharesResponse {
      */
     
     public Object internalServerException;
+
     public ListLensSharesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListLensSharesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLensSharesOutput listLensSharesOutput;
+
     public ListLensSharesResponse withListLensSharesOutput(org.openapis.openapi.models.shared.ListLensSharesOutput listLensSharesOutput) {
         this.listLensSharesOutput = listLensSharesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListLensSharesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListLensSharesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListLensSharesResponse {
     
     
     public Integer statusCode;
+
     public ListLensSharesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListLensSharesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLensSharesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListLensSharesResponse {
      */
     
     public Object throttlingException;
+
     public ListLensSharesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListLensSharesResponse {
      */
     
     public Object validationException;
+
     public ListLensSharesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLensSharesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

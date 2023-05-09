@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDiskSnapshotResponse {
@@ -12,6 +13,7 @@ public class GetDiskSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDiskSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetDiskSnapshotResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetDiskSnapshotResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetDiskSnapshotResponse {
     
     
     public String contentType;
+
     public GetDiskSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDiskSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDiskSnapshotResult getDiskSnapshotResult;
+
     public GetDiskSnapshotResponse withGetDiskSnapshotResult(org.openapis.openapi.models.shared.GetDiskSnapshotResult getDiskSnapshotResult) {
         this.getDiskSnapshotResult = getDiskSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class GetDiskSnapshotResponse {
      */
     
     public Object invalidInputException;
+
     public GetDiskSnapshotResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetDiskSnapshotResponse {
      */
     
     public Object notFoundException;
+
     public GetDiskSnapshotResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetDiskSnapshotResponse {
      */
     
     public Object operationFailureException;
+
     public GetDiskSnapshotResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetDiskSnapshotResponse {
      */
     
     public Object serviceException;
+
     public GetDiskSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetDiskSnapshotResponse {
     
     
     public Integer statusCode;
+
     public GetDiskSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetDiskSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDiskSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetDiskSnapshotResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetDiskSnapshotResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetDiskSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProvisioningTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateProvisioningTemplateResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public UpdateProvisioningTemplateResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProvisioningTemplateResponse {
     
     
     public String contentType;
+
     public UpdateProvisioningTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProvisioningTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateProvisioningTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateProvisioningTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateProvisioningTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateProvisioningTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProvisioningTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateProvisioningTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateProvisioningTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateProvisioningTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProvisioningTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateProvisioningTemplateResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateProvisioningTemplateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateProvisioningTemplateResponse {
      */
     
     public java.util.Map<String, Object> updateProvisioningTemplateResponse;
+
     public UpdateProvisioningTemplateResponse withUpdateProvisioningTemplateResponse(java.util.Map<String, Object> updateProvisioningTemplateResponse) {
         this.updateProvisioningTemplateResponse = updateProvisioningTemplateResponse;
         return this;
     }
     
+    public UpdateProvisioningTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

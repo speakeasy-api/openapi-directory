@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesCreateReleaseUploadResponse {
     
     public String contentType;
+
     public ReleasesCreateReleaseUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesCreateReleaseUploadResponse {
     
     
     public Integer statusCode;
+
     public ReleasesCreateReleaseUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesCreateReleaseUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesCreateReleaseUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReleasesCreateReleaseUploadResponse {
      */
     
     public ReleasesCreateReleaseUpload201ApplicationJSON releasesCreateReleaseUpload201ApplicationJSONObject;
+
     public ReleasesCreateReleaseUploadResponse withReleasesCreateReleaseUpload201ApplicationJSONObject(ReleasesCreateReleaseUpload201ApplicationJSON releasesCreateReleaseUpload201ApplicationJSONObject) {
         this.releasesCreateReleaseUpload201ApplicationJSONObject = releasesCreateReleaseUpload201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ReleasesCreateReleaseUploadResponse {
      */
     
     public ReleasesCreateReleaseUpload400ApplicationJSON releasesCreateReleaseUpload400ApplicationJSONObject;
+
     public ReleasesCreateReleaseUploadResponse withReleasesCreateReleaseUpload400ApplicationJSONObject(ReleasesCreateReleaseUpload400ApplicationJSON releasesCreateReleaseUpload400ApplicationJSONObject) {
         this.releasesCreateReleaseUpload400ApplicationJSONObject = releasesCreateReleaseUpload400ApplicationJSONObject;
         return this;
@@ -55,9 +61,14 @@ public class ReleasesCreateReleaseUploadResponse {
      */
     
     public ReleasesCreateReleaseUpload404ApplicationJSON releasesCreateReleaseUpload404ApplicationJSONObject;
+
     public ReleasesCreateReleaseUploadResponse withReleasesCreateReleaseUpload404ApplicationJSONObject(ReleasesCreateReleaseUpload404ApplicationJSON releasesCreateReleaseUpload404ApplicationJSONObject) {
         this.releasesCreateReleaseUpload404ApplicationJSONObject = releasesCreateReleaseUpload404ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesCreateReleaseUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

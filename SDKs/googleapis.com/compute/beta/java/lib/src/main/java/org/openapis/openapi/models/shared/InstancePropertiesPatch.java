@@ -18,6 +18,7 @@ public class InstancePropertiesPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public InstancePropertiesPatch withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,9 +30,11 @@ public class InstancePropertiesPatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public InstancePropertiesPatch withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public InstancePropertiesPatch(){}
 }

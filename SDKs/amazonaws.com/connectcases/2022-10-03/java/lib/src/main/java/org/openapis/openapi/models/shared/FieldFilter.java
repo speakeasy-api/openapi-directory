@@ -15,6 +15,7 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contains")
     public FieldValue contains;
+
     public FieldFilter withContains(FieldValue contains) {
         this.contains = contains;
         return this;
@@ -23,6 +24,7 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equalTo")
     public FieldValue equalTo;
+
     public FieldFilter withEqualTo(FieldValue equalTo) {
         this.equalTo = equalTo;
         return this;
@@ -31,6 +33,7 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greaterThan")
     public FieldValue greaterThan;
+
     public FieldFilter withGreaterThan(FieldValue greaterThan) {
         this.greaterThan = greaterThan;
         return this;
@@ -39,6 +42,7 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greaterThanOrEqualTo")
     public FieldValue greaterThanOrEqualTo;
+
     public FieldFilter withGreaterThanOrEqualTo(FieldValue greaterThanOrEqualTo) {
         this.greaterThanOrEqualTo = greaterThanOrEqualTo;
         return this;
@@ -47,6 +51,7 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lessThan")
     public FieldValue lessThan;
+
     public FieldFilter withLessThan(FieldValue lessThan) {
         this.lessThan = lessThan;
         return this;
@@ -55,9 +60,11 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lessThanOrEqualTo")
     public FieldValue lessThanOrEqualTo;
+
     public FieldFilter withLessThanOrEqualTo(FieldValue lessThanOrEqualTo) {
         this.lessThanOrEqualTo = lessThanOrEqualTo;
         return this;
     }
     
+    public FieldFilter(){}
 }

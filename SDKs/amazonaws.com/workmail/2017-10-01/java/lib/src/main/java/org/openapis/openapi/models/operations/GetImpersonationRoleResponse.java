@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImpersonationRoleResponse {
     
     public String contentType;
+
     public GetImpersonationRoleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetImpersonationRoleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImpersonationRoleResponse getImpersonationRoleResponse;
+
     public GetImpersonationRoleResponse withGetImpersonationRoleResponse(org.openapis.openapi.models.shared.GetImpersonationRoleResponse getImpersonationRoleResponse) {
         this.getImpersonationRoleResponse = getImpersonationRoleResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetImpersonationRoleResponse {
      */
     
     public Object invalidParameterException;
+
     public GetImpersonationRoleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetImpersonationRoleResponse {
      */
     
     public Object organizationNotFoundException;
+
     public GetImpersonationRoleResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetImpersonationRoleResponse {
      */
     
     public Object organizationStateException;
+
     public GetImpersonationRoleResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -59,6 +65,7 @@ public class GetImpersonationRoleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetImpersonationRoleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetImpersonationRoleResponse {
     
     
     public Integer statusCode;
+
     public GetImpersonationRoleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetImpersonationRoleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImpersonationRoleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetImpersonationRoleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

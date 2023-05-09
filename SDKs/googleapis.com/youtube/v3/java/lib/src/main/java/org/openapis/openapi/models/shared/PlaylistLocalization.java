@@ -18,6 +18,7 @@ public class PlaylistLocalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PlaylistLocalization withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class PlaylistLocalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PlaylistLocalization withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PlaylistLocalization(){}
 }

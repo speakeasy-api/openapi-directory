@@ -15,6 +15,7 @@ public class ListJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayJobId")
     public String arrayJobId;
+
     public ListJobsRequestBody withArrayJobId(String arrayJobId) {
         this.arrayJobId = arrayJobId;
         return this;
@@ -26,6 +27,7 @@ public class ListJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.KeyValuesPair[] filters;
+
     public ListJobsRequestBody withFilters(org.openapis.openapi.models.shared.KeyValuesPair[] filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class ListJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobQueue")
     public String jobQueue;
+
     public ListJobsRequestBody withJobQueue(String jobQueue) {
         this.jobQueue = jobQueue;
         return this;
@@ -48,6 +51,7 @@ public class ListJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobStatus")
     public ListJobsRequestBodyJobStatusEnum jobStatus;
+
     public ListJobsRequestBody withJobStatus(ListJobsRequestBodyJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -59,6 +63,7 @@ public class ListJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListJobsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -70,6 +75,7 @@ public class ListJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiNodeJobId")
     public String multiNodeJobId;
+
     public ListJobsRequestBody withMultiNodeJobId(String multiNodeJobId) {
         this.multiNodeJobId = multiNodeJobId;
         return this;
@@ -81,9 +87,11 @@ public class ListJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListJobsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListJobsRequestBody(){}
 }

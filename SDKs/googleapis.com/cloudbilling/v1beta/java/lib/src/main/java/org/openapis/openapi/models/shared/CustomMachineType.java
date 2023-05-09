@@ -18,6 +18,7 @@ public class CustomMachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineSeries")
     public String machineSeries;
+
     public CustomMachineType withMachineSeries(String machineSeries) {
         this.machineSeries = machineSeries;
         return this;
@@ -29,6 +30,7 @@ public class CustomMachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memorySizeGb")
     public Double memorySizeGb;
+
     public CustomMachineType withMemorySizeGb(Double memorySizeGb) {
         this.memorySizeGb = memorySizeGb;
         return this;
@@ -40,9 +42,11 @@ public class CustomMachineType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualCpuCount")
     public String virtualCpuCount;
+
     public CustomMachineType withVirtualCpuCount(String virtualCpuCount) {
         this.virtualCpuCount = virtualCpuCount;
         return this;
     }
     
+    public CustomMachineType(){}
 }

@@ -15,9 +15,11 @@ public class SshConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SshConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public SshConfiguration(){}
 }

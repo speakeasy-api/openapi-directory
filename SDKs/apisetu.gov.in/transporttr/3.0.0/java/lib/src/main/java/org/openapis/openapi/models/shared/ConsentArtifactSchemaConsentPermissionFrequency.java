@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConsentArtifactSchemaConsentPermissionFrequency {
     @JsonProperty("repeats")
     public Double repeats;
+
     public ConsentArtifactSchemaConsentPermissionFrequency withRepeats(Double repeats) {
         this.repeats = repeats;
         return this;
@@ -16,6 +17,7 @@ public class ConsentArtifactSchemaConsentPermissionFrequency {
     
     @JsonProperty("unit")
     public String unit;
+
     public ConsentArtifactSchemaConsentPermissionFrequency withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -23,9 +25,15 @@ public class ConsentArtifactSchemaConsentPermissionFrequency {
     
     @JsonProperty("value")
     public Double value;
+
     public ConsentArtifactSchemaConsentPermissionFrequency withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ConsentArtifactSchemaConsentPermissionFrequency(@JsonProperty("repeats") Double repeats, @JsonProperty("unit") String unit, @JsonProperty("value") Double value) {
+        this.repeats = repeats;
+        this.unit = unit;
+        this.value = value;
+  }
 }

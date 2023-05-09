@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTPutAttributesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public POSTPutAttributesRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class POSTPutAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTPutAttributesActionEnum action;
+
     public POSTPutAttributesRequest withAction(POSTPutAttributesActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +26,7 @@ public class POSTPutAttributesRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTPutAttributesRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -30,6 +34,7 @@ public class POSTPutAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public POSTPutAttributesRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -37,6 +42,7 @@ public class POSTPutAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public POSTPutAttributesRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -44,6 +50,7 @@ public class POSTPutAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public POSTPutAttributesRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -51,6 +58,7 @@ public class POSTPutAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public POSTPutAttributesRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -58,9 +66,19 @@ public class POSTPutAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTPutAttributesVersionEnum version;
+
     public POSTPutAttributesRequest withVersion(POSTPutAttributesVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public POSTPutAttributesRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") POSTPutAttributesActionEnum action, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") POSTPutAttributesVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ public class MessagesWebhooks {
      */
     @JsonProperty("endpoint")
     public String endpoint;
+
     public MessagesWebhooks withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,6 +20,7 @@ public class MessagesWebhooks {
     
     @JsonProperty("endpoint_type")
     public MessagesWebhooksEndpointTypeEnum endpointType;
+
     public MessagesWebhooks withEndpointType(MessagesWebhooksEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -29,9 +31,15 @@ public class MessagesWebhooks {
      */
     @JsonProperty("http_method")
     public MessagesWebhooksHttpMethodEnum httpMethod;
+
     public MessagesWebhooks withHttpMethod(MessagesWebhooksHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
     }
     
+    public MessagesWebhooks(@JsonProperty("endpoint") String endpoint, @JsonProperty("endpoint_type") MessagesWebhooksEndpointTypeEnum endpointType, @JsonProperty("http_method") MessagesWebhooksHttpMethodEnum httpMethod) {
+        this.endpoint = endpoint;
+        this.endpointType = endpointType;
+        this.httpMethod = httpMethod;
+  }
 }

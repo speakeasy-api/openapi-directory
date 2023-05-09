@@ -18,6 +18,7 @@ public class CmTrackingAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmAdId")
     public String cmAdId;
+
     public CmTrackingAd withCmAdId(String cmAdId) {
         this.cmAdId = cmAdId;
         return this;
@@ -29,6 +30,7 @@ public class CmTrackingAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmCreativeId")
     public String cmCreativeId;
+
     public CmTrackingAd withCmCreativeId(String cmCreativeId) {
         this.cmCreativeId = cmCreativeId;
         return this;
@@ -40,9 +42,11 @@ public class CmTrackingAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cmPlacementId")
     public String cmPlacementId;
+
     public CmTrackingAd withCmPlacementId(String cmPlacementId) {
         this.cmPlacementId = cmPlacementId;
         return this;
     }
     
+    public CmTrackingAd(){}
 }

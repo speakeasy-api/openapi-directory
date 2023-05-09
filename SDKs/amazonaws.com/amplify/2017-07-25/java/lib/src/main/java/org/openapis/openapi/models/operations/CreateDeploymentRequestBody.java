@@ -15,9 +15,11 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMap")
     public java.util.Map<String, String> fileMap;
+
     public CreateDeploymentRequestBody withFileMap(java.util.Map<String, String> fileMap) {
         this.fileMap = fileMap;
         return this;
     }
     
+    public CreateDeploymentRequestBody(){}
 }

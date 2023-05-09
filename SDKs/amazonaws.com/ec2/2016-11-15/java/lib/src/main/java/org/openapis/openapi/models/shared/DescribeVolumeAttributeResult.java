@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeAttributeResult {
     
     public DescribeVolumeAttributeResultAutoEnableIO autoEnableIO;
+
     public DescribeVolumeAttributeResult withAutoEnableIO(DescribeVolumeAttributeResultAutoEnableIO autoEnableIO) {
         this.autoEnableIO = autoEnableIO;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVolumeAttributeResult {
     
     
     public DescribeVolumeAttributeResultProductCodes[] productCodes;
+
     public DescribeVolumeAttributeResult withProductCodes(DescribeVolumeAttributeResultProductCodes[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -26,9 +28,11 @@ public class DescribeVolumeAttributeResult {
     
     
     public String volumeId;
+
     public DescribeVolumeAttributeResult withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public DescribeVolumeAttributeResult(){}
 }

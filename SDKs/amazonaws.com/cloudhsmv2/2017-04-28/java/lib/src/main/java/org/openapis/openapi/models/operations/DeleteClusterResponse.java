@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteClusterResponse {
@@ -12,6 +13,7 @@ public class DeleteClusterResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public DeleteClusterResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteClusterResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public DeleteClusterResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteClusterResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public DeleteClusterResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class DeleteClusterResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public DeleteClusterResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class DeleteClusterResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DeleteClusterResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -62,6 +68,7 @@ public class DeleteClusterResponse {
      */
     
     public Object cloudHsmTagException;
+
     public DeleteClusterResponse withCloudHsmTagException(Object cloudHsmTagException) {
         this.cloudHsmTagException = cloudHsmTagException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteClusterResponse {
     
     
     public String contentType;
+
     public DeleteClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class DeleteClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteClusterResponse deleteClusterResponse;
+
     public DeleteClusterResponse withDeleteClusterResponse(org.openapis.openapi.models.shared.DeleteClusterResponse deleteClusterResponse) {
         this.deleteClusterResponse = deleteClusterResponse;
         return this;
@@ -86,6 +95,7 @@ public class DeleteClusterResponse {
     
     
     public Integer statusCode;
+
     public DeleteClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DeleteClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

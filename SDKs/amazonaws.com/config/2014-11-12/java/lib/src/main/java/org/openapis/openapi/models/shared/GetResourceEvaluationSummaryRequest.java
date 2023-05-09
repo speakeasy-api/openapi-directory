@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetResourceEvaluationSummaryRequest {
     @JsonProperty("ResourceEvaluationId")
     public String resourceEvaluationId;
+
     public GetResourceEvaluationSummaryRequest withResourceEvaluationId(String resourceEvaluationId) {
         this.resourceEvaluationId = resourceEvaluationId;
         return this;
     }
     
+    public GetResourceEvaluationSummaryRequest(@JsonProperty("ResourceEvaluationId") String resourceEvaluationId) {
+        this.resourceEvaluationId = resourceEvaluationId;
+  }
 }

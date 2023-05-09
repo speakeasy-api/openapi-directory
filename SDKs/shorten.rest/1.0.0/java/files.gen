@@ -63,4 +63,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetClicksModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClickModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClickModelPg.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClicksFilterModel.java
+docs/sdk/README.md
+docs/alias/README.md
+docs/click/README.md
+docs/statistics/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class ClientTlsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTlsContext")
     public TlsContext clientTlsContext;
+
     public ClientTlsSettings withClientTlsContext(TlsContext clientTlsContext) {
         this.clientTlsContext = clientTlsContext;
         return this;
@@ -29,6 +30,7 @@ public class ClientTlsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public ClientTlsSettingsModeEnum mode;
+
     public ClientTlsSettings withMode(ClientTlsSettingsModeEnum mode) {
         this.mode = mode;
         return this;
@@ -40,6 +42,7 @@ public class ClientTlsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sni")
     public String sni;
+
     public ClientTlsSettings withSni(String sni) {
         this.sni = sni;
         return this;
@@ -51,9 +54,11 @@ public class ClientTlsSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAltNames")
     public String[] subjectAltNames;
+
     public ClientTlsSettings withSubjectAltNames(String[] subjectAltNames) {
         this.subjectAltNames = subjectAltNames;
         return this;
     }
     
+    public ClientTlsSettings(){}
 }

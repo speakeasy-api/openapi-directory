@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ScannedDataIncrementalField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public GoogleCloudDataplexV1ScannedDataIncrementalField withEnd(String end) {
         this.end = end;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ScannedDataIncrementalField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public GoogleCloudDataplexV1ScannedDataIncrementalField withField(String field) {
         this.field = field;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ScannedDataIncrementalField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public GoogleCloudDataplexV1ScannedDataIncrementalField withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public GoogleCloudDataplexV1ScannedDataIncrementalField(){}
 }

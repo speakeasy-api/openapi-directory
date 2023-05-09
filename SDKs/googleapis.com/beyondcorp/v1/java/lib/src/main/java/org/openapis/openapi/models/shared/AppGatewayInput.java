@@ -18,6 +18,7 @@ public class AppGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AppGatewayInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class AppGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostType")
     public AppGatewayHostTypeEnum hostType;
+
     public AppGatewayInput withHostType(AppGatewayHostTypeEnum hostType) {
         this.hostType = hostType;
         return this;
@@ -40,6 +42,7 @@ public class AppGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AppGatewayInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class AppGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppGatewayInput withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class AppGatewayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AppGatewayTypeEnum type;
+
     public AppGatewayInput withType(AppGatewayTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppGatewayInput(){}
 }

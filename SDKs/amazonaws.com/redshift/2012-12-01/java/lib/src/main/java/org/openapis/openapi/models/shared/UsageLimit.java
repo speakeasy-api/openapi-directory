@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UsageLimit {
     
     public Long amount;
+
     public UsageLimit withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -19,6 +20,7 @@ public class UsageLimit {
     
     
     public UsageLimitBreachActionEnum breachAction;
+
     public UsageLimit withBreachAction(UsageLimitBreachActionEnum breachAction) {
         this.breachAction = breachAction;
         return this;
@@ -26,6 +28,7 @@ public class UsageLimit {
     
     
     public String clusterIdentifier;
+
     public UsageLimit withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -33,6 +36,7 @@ public class UsageLimit {
     
     
     public UsageLimitFeatureTypeEnum featureType;
+
     public UsageLimit withFeatureType(UsageLimitFeatureTypeEnum featureType) {
         this.featureType = featureType;
         return this;
@@ -40,6 +44,7 @@ public class UsageLimit {
     
     
     public UsageLimitLimitTypeEnum limitType;
+
     public UsageLimit withLimitType(UsageLimitLimitTypeEnum limitType) {
         this.limitType = limitType;
         return this;
@@ -47,6 +52,7 @@ public class UsageLimit {
     
     
     public UsageLimitPeriodEnum period;
+
     public UsageLimit withPeriod(UsageLimitPeriodEnum period) {
         this.period = period;
         return this;
@@ -54,6 +60,7 @@ public class UsageLimit {
     
     
     public TagList[] tags;
+
     public UsageLimit withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -61,9 +68,11 @@ public class UsageLimit {
     
     
     public String usageLimitId;
+
     public UsageLimit withUsageLimitId(String usageLimitId) {
         this.usageLimitId = usageLimitId;
         return this;
     }
     
+    public UsageLimit(){}
 }

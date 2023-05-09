@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePullRequestResponse {
@@ -12,6 +13,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object clientRequestTokenRequiredException;
+
     public CreatePullRequestResponse withClientRequestTokenRequiredException(Object clientRequestTokenRequiredException) {
         this.clientRequestTokenRequiredException = clientRequestTokenRequiredException;
         return this;
@@ -19,6 +21,7 @@ public class CreatePullRequestResponse {
     
     
     public String contentType;
+
     public CreatePullRequestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePullRequestResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePullRequestOutput createPullRequestOutput;
+
     public CreatePullRequestResponse withCreatePullRequestOutput(org.openapis.openapi.models.shared.CreatePullRequestOutput createPullRequestOutput) {
         this.createPullRequestOutput = createPullRequestOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public CreatePullRequestResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public CreatePullRequestResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public CreatePullRequestResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public CreatePullRequestResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public CreatePullRequestResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object idempotencyParameterMismatchException;
+
     public CreatePullRequestResponse withIdempotencyParameterMismatchException(Object idempotencyParameterMismatchException) {
         this.idempotencyParameterMismatchException = idempotencyParameterMismatchException;
         return this;
@@ -99,6 +109,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object invalidClientRequestTokenException;
+
     public CreatePullRequestResponse withInvalidClientRequestTokenException(Object invalidClientRequestTokenException) {
         this.invalidClientRequestTokenException = invalidClientRequestTokenException;
         return this;
@@ -109,6 +120,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object invalidDescriptionException;
+
     public CreatePullRequestResponse withInvalidDescriptionException(Object invalidDescriptionException) {
         this.invalidDescriptionException = invalidDescriptionException;
         return this;
@@ -119,6 +131,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object invalidReferenceNameException;
+
     public CreatePullRequestResponse withInvalidReferenceNameException(Object invalidReferenceNameException) {
         this.invalidReferenceNameException = invalidReferenceNameException;
         return this;
@@ -129,6 +142,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public CreatePullRequestResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -139,6 +153,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object invalidTargetException;
+
     public CreatePullRequestResponse withInvalidTargetException(Object invalidTargetException) {
         this.invalidTargetException = invalidTargetException;
         return this;
@@ -149,6 +164,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object invalidTargetsException;
+
     public CreatePullRequestResponse withInvalidTargetsException(Object invalidTargetsException) {
         this.invalidTargetsException = invalidTargetsException;
         return this;
@@ -159,6 +175,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object invalidTitleException;
+
     public CreatePullRequestResponse withInvalidTitleException(Object invalidTitleException) {
         this.invalidTitleException = invalidTitleException;
         return this;
@@ -169,6 +186,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object maximumOpenPullRequestsExceededException;
+
     public CreatePullRequestResponse withMaximumOpenPullRequestsExceededException(Object maximumOpenPullRequestsExceededException) {
         this.maximumOpenPullRequestsExceededException = maximumOpenPullRequestsExceededException;
         return this;
@@ -179,6 +197,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object multipleRepositoriesInPullRequestException;
+
     public CreatePullRequestResponse withMultipleRepositoriesInPullRequestException(Object multipleRepositoriesInPullRequestException) {
         this.multipleRepositoriesInPullRequestException = multipleRepositoriesInPullRequestException;
         return this;
@@ -189,6 +208,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object referenceDoesNotExistException;
+
     public CreatePullRequestResponse withReferenceDoesNotExistException(Object referenceDoesNotExistException) {
         this.referenceDoesNotExistException = referenceDoesNotExistException;
         return this;
@@ -199,6 +219,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object referenceNameRequiredException;
+
     public CreatePullRequestResponse withReferenceNameRequiredException(Object referenceNameRequiredException) {
         this.referenceNameRequiredException = referenceNameRequiredException;
         return this;
@@ -209,6 +230,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object referenceTypeNotSupportedException;
+
     public CreatePullRequestResponse withReferenceTypeNotSupportedException(Object referenceTypeNotSupportedException) {
         this.referenceTypeNotSupportedException = referenceTypeNotSupportedException;
         return this;
@@ -219,6 +241,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public CreatePullRequestResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -229,6 +252,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public CreatePullRequestResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -239,6 +263,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object sourceAndDestinationAreSameException;
+
     public CreatePullRequestResponse withSourceAndDestinationAreSameException(Object sourceAndDestinationAreSameException) {
         this.sourceAndDestinationAreSameException = sourceAndDestinationAreSameException;
         return this;
@@ -246,6 +271,7 @@ public class CreatePullRequestResponse {
     
     
     public Integer statusCode;
+
     public CreatePullRequestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -253,6 +279,7 @@ public class CreatePullRequestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePullRequestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -263,6 +290,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object targetRequiredException;
+
     public CreatePullRequestResponse withTargetRequiredException(Object targetRequiredException) {
         this.targetRequiredException = targetRequiredException;
         return this;
@@ -273,6 +301,7 @@ public class CreatePullRequestResponse {
      */
     
     public Object targetsRequiredException;
+
     public CreatePullRequestResponse withTargetsRequiredException(Object targetsRequiredException) {
         this.targetsRequiredException = targetsRequiredException;
         return this;
@@ -283,9 +312,14 @@ public class CreatePullRequestResponse {
      */
     
     public Object titleRequiredException;
+
     public CreatePullRequestResponse withTitleRequiredException(Object titleRequiredException) {
         this.titleRequiredException = titleRequiredException;
         return this;
     }
     
+    public CreatePullRequestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

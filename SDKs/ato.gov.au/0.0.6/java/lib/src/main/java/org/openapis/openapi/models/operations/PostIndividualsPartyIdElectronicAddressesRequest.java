@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsPartyIdElectronicAddressesRequest {
@@ -12,6 +13,7 @@ public class PostIndividualsPartyIdElectronicAddressesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PostIndividualsPartyIdElectronicAddressesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PostIndividualsPartyIdElectronicAddressesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput;
+
     public PostIndividualsPartyIdElectronicAddressesRequest withElectronicAddressInput(org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput) {
         this.electronicAddressInput = electronicAddressInput;
         return this;
@@ -32,9 +35,15 @@ public class PostIndividualsPartyIdElectronicAddressesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PostIndividualsPartyIdElectronicAddressesRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PostIndividualsPartyIdElectronicAddressesRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("electronic-addressInput") org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput, @JsonProperty("partyId") String partyId) {
+        this.apiKey = apiKey;
+        this.electronicAddressInput = electronicAddressInput;
+        this.partyId = partyId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSqlInjectionMatchSetResponse {
     
     public String contentType;
+
     public CreateSqlInjectionMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSqlInjectionMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSqlInjectionMatchSetResponse createSqlInjectionMatchSetResponse;
+
     public CreateSqlInjectionMatchSetResponse withCreateSqlInjectionMatchSetResponse(org.openapis.openapi.models.shared.CreateSqlInjectionMatchSetResponse createSqlInjectionMatchSetResponse) {
         this.createSqlInjectionMatchSetResponse = createSqlInjectionMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateSqlInjectionMatchSetResponse {
     
     
     public Integer statusCode;
+
     public CreateSqlInjectionMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateSqlInjectionMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSqlInjectionMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateSqlInjectionMatchSetResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateSqlInjectionMatchSetResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -53,6 +59,7 @@ public class CreateSqlInjectionMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateSqlInjectionMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class CreateSqlInjectionMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public CreateSqlInjectionMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -73,6 +81,7 @@ public class CreateSqlInjectionMatchSetResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public CreateSqlInjectionMatchSetResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -83,6 +92,7 @@ public class CreateSqlInjectionMatchSetResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateSqlInjectionMatchSetResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSqlInjectionMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateSqlInjectionMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public CreateSqlInjectionMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

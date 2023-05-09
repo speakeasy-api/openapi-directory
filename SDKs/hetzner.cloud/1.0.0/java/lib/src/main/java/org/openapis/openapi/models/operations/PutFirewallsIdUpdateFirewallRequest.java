@@ -15,6 +15,7 @@ public class PutFirewallsIdUpdateFirewallRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PutFirewallsIdUpdateFirewallRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -26,9 +27,11 @@ public class PutFirewallsIdUpdateFirewallRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PutFirewallsIdUpdateFirewallRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutFirewallsIdUpdateFirewallRequest(){}
 }

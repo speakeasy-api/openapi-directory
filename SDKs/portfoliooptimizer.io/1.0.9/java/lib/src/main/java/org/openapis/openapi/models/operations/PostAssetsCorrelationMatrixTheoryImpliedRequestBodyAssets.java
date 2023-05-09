@@ -12,9 +12,13 @@ public class PostAssetsCorrelationMatrixTheoryImpliedRequestBodyAssets {
      */
     @JsonProperty("assetHierarchicalClassification")
     public Object[] assetHierarchicalClassification;
+
     public PostAssetsCorrelationMatrixTheoryImpliedRequestBodyAssets withAssetHierarchicalClassification(Object[] assetHierarchicalClassification) {
         this.assetHierarchicalClassification = assetHierarchicalClassification;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixTheoryImpliedRequestBodyAssets(@JsonProperty("assetHierarchicalClassification") Object[] assetHierarchicalClassification) {
+        this.assetHierarchicalClassification = assetHierarchicalClassification;
+  }
 }

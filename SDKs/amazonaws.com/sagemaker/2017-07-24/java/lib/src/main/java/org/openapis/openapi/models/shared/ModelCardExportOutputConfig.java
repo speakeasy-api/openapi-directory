@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelCardExportOutputConfig {
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public ModelCardExportOutputConfig withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public ModelCardExportOutputConfig(@JsonProperty("S3OutputPath") String s3OutputPath) {
+        this.s3OutputPath = s3OutputPath;
+  }
 }

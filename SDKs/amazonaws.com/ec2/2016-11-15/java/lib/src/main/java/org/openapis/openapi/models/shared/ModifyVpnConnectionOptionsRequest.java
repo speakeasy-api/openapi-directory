@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpnConnectionOptionsRequest {
     
     public Boolean dryRun;
+
     public ModifyVpnConnectionOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpnConnectionOptionsRequest {
     
     
     public String localIpv4NetworkCidr;
+
     public ModifyVpnConnectionOptionsRequest withLocalIpv4NetworkCidr(String localIpv4NetworkCidr) {
         this.localIpv4NetworkCidr = localIpv4NetworkCidr;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpnConnectionOptionsRequest {
     
     
     public String localIpv6NetworkCidr;
+
     public ModifyVpnConnectionOptionsRequest withLocalIpv6NetworkCidr(String localIpv6NetworkCidr) {
         this.localIpv6NetworkCidr = localIpv6NetworkCidr;
         return this;
@@ -30,6 +33,7 @@ public class ModifyVpnConnectionOptionsRequest {
     
     
     public String remoteIpv4NetworkCidr;
+
     public ModifyVpnConnectionOptionsRequest withRemoteIpv4NetworkCidr(String remoteIpv4NetworkCidr) {
         this.remoteIpv4NetworkCidr = remoteIpv4NetworkCidr;
         return this;
@@ -37,6 +41,7 @@ public class ModifyVpnConnectionOptionsRequest {
     
     
     public String remoteIpv6NetworkCidr;
+
     public ModifyVpnConnectionOptionsRequest withRemoteIpv6NetworkCidr(String remoteIpv6NetworkCidr) {
         this.remoteIpv6NetworkCidr = remoteIpv6NetworkCidr;
         return this;
@@ -44,9 +49,13 @@ public class ModifyVpnConnectionOptionsRequest {
     
     
     public String vpnConnectionId;
+
     public ModifyVpnConnectionOptionsRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
     }
     
+    public ModifyVpnConnectionOptionsRequest(@JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

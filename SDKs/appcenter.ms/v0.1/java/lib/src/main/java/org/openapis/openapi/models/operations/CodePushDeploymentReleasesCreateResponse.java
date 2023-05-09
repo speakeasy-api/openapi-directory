@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentReleasesCreateResponse {
     
     public String contentType;
+
     public CodePushDeploymentReleasesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentReleasesCreateResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentReleasesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentReleasesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentReleasesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushDeploymentReleasesCreateResponse {
      */
     
     public CodePushDeploymentReleasesCreate201ApplicationJSON codePushDeploymentReleasesCreate201ApplicationJSONObject;
+
     public CodePushDeploymentReleasesCreateResponse withCodePushDeploymentReleasesCreate201ApplicationJSONObject(CodePushDeploymentReleasesCreate201ApplicationJSON codePushDeploymentReleasesCreate201ApplicationJSONObject) {
         this.codePushDeploymentReleasesCreate201ApplicationJSONObject = codePushDeploymentReleasesCreate201ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CodePushDeploymentReleasesCreateResponse {
      */
     
     public CodePushDeploymentReleasesCreateDefaultApplicationJSON codePushDeploymentReleasesCreateDefaultApplicationJSONObject;
+
     public CodePushDeploymentReleasesCreateResponse withCodePushDeploymentReleasesCreateDefaultApplicationJSONObject(CodePushDeploymentReleasesCreateDefaultApplicationJSON codePushDeploymentReleasesCreateDefaultApplicationJSONObject) {
         this.codePushDeploymentReleasesCreateDefaultApplicationJSONObject = codePushDeploymentReleasesCreateDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentReleasesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

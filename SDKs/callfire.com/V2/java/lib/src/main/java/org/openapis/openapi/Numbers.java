@@ -60,12 +60,10 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindNumberLeaseConfigsResponse res = new org.openapis.openapi.models.operations.FindNumberLeaseConfigsResponse() {{
+        org.openapis.openapi.models.operations.FindNumberLeaseConfigsResponse res = new org.openapis.openapi.models.operations.FindNumberLeaseConfigsResponse(contentType, httpRes.statusCode()) {{
             numberConfigPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindNumberLeasesResponse res = new org.openapis.openapi.models.operations.FindNumberLeasesResponse() {{
+        org.openapis.openapi.models.operations.FindNumberLeasesResponse res = new org.openapis.openapi.models.operations.FindNumberLeasesResponse(contentType, httpRes.statusCode()) {{
             numberLeasePage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,12 +166,10 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindNumberRegionsResponse res = new org.openapis.openapi.models.operations.FindNumberRegionsResponse() {{
+        org.openapis.openapi.models.operations.FindNumberRegionsResponse res = new org.openapis.openapi.models.operations.FindNumberRegionsResponse(contentType, httpRes.statusCode()) {{
             regionPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,12 +219,10 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindNumbersLocalResponse res = new org.openapis.openapi.models.operations.FindNumbersLocalResponse() {{
+        org.openapis.openapi.models.operations.FindNumbersLocalResponse res = new org.openapis.openapi.models.operations.FindNumbersLocalResponse(contentType, httpRes.statusCode()) {{
             numberList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -280,12 +272,10 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindNumbersTollfreeResponse res = new org.openapis.openapi.models.operations.FindNumbersTollfreeResponse() {{
+        org.openapis.openapi.models.operations.FindNumbersTollfreeResponse res = new org.openapis.openapi.models.operations.FindNumbersTollfreeResponse(contentType, httpRes.statusCode()) {{
             numberList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,12 +325,10 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumberLeaseResponse res = new org.openapis.openapi.models.operations.GetNumberLeaseResponse() {{
+        org.openapis.openapi.models.operations.GetNumberLeaseResponse res = new org.openapis.openapi.models.operations.GetNumberLeaseResponse(contentType, httpRes.statusCode()) {{
             numberLease = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,12 +378,10 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumberLeaseConfigResponse res = new org.openapis.openapi.models.operations.GetNumberLeaseConfigResponse() {{
+        org.openapis.openapi.models.operations.GetNumberLeaseConfigResponse res = new org.openapis.openapi.models.operations.GetNumberLeaseConfigResponse(contentType, httpRes.statusCode()) {{
             numberConfig = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,11 +427,9 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNumberLeaseResponse res = new org.openapis.openapi.models.operations.UpdateNumberLeaseResponse() {{
+        org.openapis.openapi.models.operations.UpdateNumberLeaseResponse res = new org.openapis.openapi.models.operations.UpdateNumberLeaseResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -484,11 +468,9 @@ public class Numbers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNumberLeaseConfigResponse res = new org.openapis.openapi.models.operations.UpdateNumberLeaseConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateNumberLeaseConfigResponse res = new org.openapis.openapi.models.operations.UpdateNumberLeaseConfigResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

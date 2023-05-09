@@ -12,6 +12,7 @@ public class IssueCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiPassthrough")
     public ApiPassthrough apiPassthrough;
+
     public IssueCertificateRequest withApiPassthrough(ApiPassthrough apiPassthrough) {
         this.apiPassthrough = apiPassthrough;
         return this;
@@ -19,6 +20,7 @@ public class IssueCertificateRequest {
     
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public IssueCertificateRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -26,6 +28,7 @@ public class IssueCertificateRequest {
     
     @JsonProperty("Csr")
     public String csr;
+
     public IssueCertificateRequest withCsr(String csr) {
         this.csr = csr;
         return this;
@@ -34,6 +37,7 @@ public class IssueCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public IssueCertificateRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -41,6 +45,7 @@ public class IssueCertificateRequest {
     
     @JsonProperty("SigningAlgorithm")
     public SigningAlgorithmEnum signingAlgorithm;
+
     public IssueCertificateRequest withSigningAlgorithm(SigningAlgorithmEnum signingAlgorithm) {
         this.signingAlgorithm = signingAlgorithm;
         return this;
@@ -49,6 +54,7 @@ public class IssueCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateArn")
     public String templateArn;
+
     public IssueCertificateRequest withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -56,6 +62,7 @@ public class IssueCertificateRequest {
     
     @JsonProperty("Validity")
     public Validity validity;
+
     public IssueCertificateRequest withValidity(Validity validity) {
         this.validity = validity;
         return this;
@@ -64,9 +71,16 @@ public class IssueCertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidityNotBefore")
     public Validity validityNotBefore;
+
     public IssueCertificateRequest withValidityNotBefore(Validity validityNotBefore) {
         this.validityNotBefore = validityNotBefore;
         return this;
     }
     
+    public IssueCertificateRequest(@JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn, @JsonProperty("Csr") String csr, @JsonProperty("SigningAlgorithm") SigningAlgorithmEnum signingAlgorithm, @JsonProperty("Validity") Validity validity) {
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        this.csr = csr;
+        this.signingAlgorithm = signingAlgorithm;
+        this.validity = validity;
+  }
 }

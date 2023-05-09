@@ -22,6 +22,7 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("archived_at")
     public OffsetDateTime archivedAt;
+
     public Source withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -30,6 +31,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability_message")
     public String availabilityMessage;
+
     public Source withAvailabilityMessage(String availabilityMessage) {
         this.availabilityMessage = availabilityMessage;
         return this;
@@ -38,6 +40,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability_status")
     public String availabilityStatus;
+
     public Source withAvailabilityStatus(String availabilityStatus) {
         this.availabilityStatus = availabilityStatus;
         return this;
@@ -46,6 +49,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloud_connector_id")
     public String cloudConnectorId;
+
     public Source withCloudConnectorId(String cloudConnectorId) {
         this.cloudConnectorId = cloudConnectorId;
         return this;
@@ -56,6 +60,7 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Source withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -64,6 +69,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Source withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -75,6 +81,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Source withId(String id) {
         this.id = id;
         return this;
@@ -83,6 +90,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public java.util.Map<String, Object> info;
+
     public Source withInfo(java.util.Map<String, Object> info) {
         this.info = info;
         return this;
@@ -93,6 +101,7 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_available_at")
     public OffsetDateTime lastAvailableAt;
+
     public Source withLastAvailableAt(OffsetDateTime lastAvailableAt) {
         this.lastAvailableAt = lastAvailableAt;
         return this;
@@ -103,6 +112,7 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_checked_at")
     public OffsetDateTime lastCheckedAt;
+
     public Source withLastCheckedAt(OffsetDateTime lastCheckedAt) {
         this.lastCheckedAt = lastCheckedAt;
         return this;
@@ -111,6 +121,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_refresh_message")
     public String lastRefreshMessage;
+
     public Source withLastRefreshMessage(String lastRefreshMessage) {
         this.lastRefreshMessage = lastRefreshMessage;
         return this;
@@ -121,6 +132,7 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_successful_refresh_at")
     public OffsetDateTime lastSuccessfulRefreshAt;
+
     public Source withLastSuccessfulRefreshAt(OffsetDateTime lastSuccessfulRefreshAt) {
         this.lastSuccessfulRefreshAt = lastSuccessfulRefreshAt;
         return this;
@@ -129,6 +141,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Source withName(String name) {
         this.name = name;
         return this;
@@ -137,6 +150,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_sha")
     public String previousSha;
+
     public Source withPreviousSha(String previousSha) {
         this.previousSha = previousSha;
         return this;
@@ -145,6 +159,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_size")
     public Long previousSize;
+
     public Source withPreviousSize(Long previousSize) {
         this.previousSize = previousSize;
         return this;
@@ -155,6 +170,7 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("refresh_finished_at")
     public OffsetDateTime refreshFinishedAt;
+
     public Source withRefreshFinishedAt(OffsetDateTime refreshFinishedAt) {
         this.refreshFinishedAt = refreshFinishedAt;
         return this;
@@ -165,6 +181,7 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("refresh_started_at")
     public OffsetDateTime refreshStartedAt;
+
     public Source withRefreshStartedAt(OffsetDateTime refreshStartedAt) {
         this.refreshStartedAt = refreshStartedAt;
         return this;
@@ -173,6 +190,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_state")
     public String refreshState;
+
     public Source withRefreshState(String refreshState) {
         this.refreshState = refreshState;
         return this;
@@ -181,6 +199,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_task_id")
     public String refreshTaskId;
+
     public Source withRefreshTaskId(String refreshTaskId) {
         this.refreshTaskId = refreshTaskId;
         return this;
@@ -189,6 +208,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Source withUid(String uid) {
         this.uid = uid;
         return this;
@@ -199,9 +219,11 @@ public class Source {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Source withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Source(){}
 }

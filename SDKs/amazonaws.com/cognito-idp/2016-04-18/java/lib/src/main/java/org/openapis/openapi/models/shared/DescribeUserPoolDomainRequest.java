@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeUserPoolDomainRequest {
     @JsonProperty("Domain")
     public String domain;
+
     public DescribeUserPoolDomainRequest withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public DescribeUserPoolDomainRequest(@JsonProperty("Domain") String domain) {
+        this.domain = domain;
+  }
 }

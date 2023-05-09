@@ -15,6 +15,7 @@ public class CountryList {
      */
     @JsonProperty("countries")
     public Country[] countries;
+
     public CountryList withCountries(Country[] countries) {
         this.countries = countries;
         return this;
@@ -25,9 +26,14 @@ public class CountryList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public CountryList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public CountryList(@JsonProperty("countries") Country[] countries, @JsonProperty("sum") Integer sum) {
+        this.countries = countries;
+        this.sum = sum;
+  }
 }

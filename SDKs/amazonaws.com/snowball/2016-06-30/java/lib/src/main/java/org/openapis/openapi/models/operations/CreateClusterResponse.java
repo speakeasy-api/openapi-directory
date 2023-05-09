@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateClusterResponse {
     
     public String contentType;
+
     public CreateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateClusterResult createClusterResult;
+
     public CreateClusterResponse withCreateClusterResult(org.openapis.openapi.models.shared.CreateClusterResult createClusterResult) {
         this.createClusterResult = createClusterResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateClusterResponse {
      */
     
     public Object ec2RequestFailedException;
+
     public CreateClusterResponse withEc2RequestFailedException(Object ec2RequestFailedException) {
         this.ec2RequestFailedException = ec2RequestFailedException;
         return this;
@@ -39,6 +43,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidInputCombinationException;
+
     public CreateClusterResponse withInvalidInputCombinationException(Object invalidInputCombinationException) {
         this.invalidInputCombinationException = invalidInputCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidResourceException;
+
     public CreateClusterResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -59,6 +65,7 @@ public class CreateClusterResponse {
      */
     
     public Object kmsRequestFailedException;
+
     public CreateClusterResponse withKMSRequestFailedException(Object kmsRequestFailedException) {
         this.kmsRequestFailedException = kmsRequestFailedException;
         return this;
@@ -66,6 +73,7 @@ public class CreateClusterResponse {
     
     
     public Integer statusCode;
+
     public CreateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

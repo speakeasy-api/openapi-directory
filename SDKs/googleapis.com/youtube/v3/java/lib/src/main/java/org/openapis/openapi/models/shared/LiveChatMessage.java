@@ -15,6 +15,7 @@ public class LiveChatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorDetails")
     public LiveChatMessageAuthorDetails authorDetails;
+
     public LiveChatMessage withAuthorDetails(LiveChatMessageAuthorDetails authorDetails) {
         this.authorDetails = authorDetails;
         return this;
@@ -26,6 +27,7 @@ public class LiveChatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public LiveChatMessage withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,6 +39,7 @@ public class LiveChatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LiveChatMessage withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class LiveChatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LiveChatMessage withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,9 +63,11 @@ public class LiveChatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public LiveChatMessageSnippet snippet;
+
     public LiveChatMessage withSnippet(LiveChatMessageSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public LiveChatMessage(){}
 }

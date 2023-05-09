@@ -15,6 +15,7 @@ public class MetricDimensionGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public DimensionGroupDetail[] groups;
+
     public MetricDimensionGroups withGroups(DimensionGroupDetail[] groups) {
         this.groups = groups;
         return this;
@@ -23,9 +24,11 @@ public class MetricDimensionGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metric")
     public String metric;
+
     public MetricDimensionGroups withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public MetricDimensionGroups(){}
 }

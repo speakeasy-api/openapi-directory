@@ -18,6 +18,7 @@ public class IpOwnerListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public IpOwnerListWarningCodeEnum code;
+
     public IpOwnerListWarning withCode(IpOwnerListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class IpOwnerListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public IpOwnerListWarningData[] data;
+
     public IpOwnerListWarning withData(IpOwnerListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class IpOwnerListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public IpOwnerListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public IpOwnerListWarning(){}
 }

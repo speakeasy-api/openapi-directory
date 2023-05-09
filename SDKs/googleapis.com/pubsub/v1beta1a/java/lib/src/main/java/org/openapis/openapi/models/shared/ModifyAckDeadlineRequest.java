@@ -18,6 +18,7 @@ public class ModifyAckDeadlineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ackDeadlineSeconds")
     public Integer ackDeadlineSeconds;
+
     public ModifyAckDeadlineRequest withAckDeadlineSeconds(Integer ackDeadlineSeconds) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         return this;
@@ -29,6 +30,7 @@ public class ModifyAckDeadlineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ackId")
     public String ackId;
+
     public ModifyAckDeadlineRequest withAckId(String ackId) {
         this.ackId = ackId;
         return this;
@@ -40,6 +42,7 @@ public class ModifyAckDeadlineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ackIds")
     public String[] ackIds;
+
     public ModifyAckDeadlineRequest withAckIds(String[] ackIds) {
         this.ackIds = ackIds;
         return this;
@@ -51,9 +54,11 @@ public class ModifyAckDeadlineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public ModifyAckDeadlineRequest withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public ModifyAckDeadlineRequest(){}
 }

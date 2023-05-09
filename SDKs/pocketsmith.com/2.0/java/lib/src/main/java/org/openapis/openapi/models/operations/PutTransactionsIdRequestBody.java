@@ -15,6 +15,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public PutTransactionsIdRequestBody withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -26,6 +27,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public Long categoryId;
+
     public PutTransactionsIdRequestBody withCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -37,6 +39,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cheque_number")
     public String chequeNumber;
+
     public PutTransactionsIdRequestBody withChequeNumber(String chequeNumber) {
         this.chequeNumber = chequeNumber;
         return this;
@@ -48,6 +51,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public PutTransactionsIdRequestBody withDate(String date) {
         this.date = date;
         return this;
@@ -59,6 +63,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_transfer")
     public Boolean isTransfer;
+
     public PutTransactionsIdRequestBody withIsTransfer(Boolean isTransfer) {
         this.isTransfer = isTransfer;
         return this;
@@ -70,6 +75,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String labels;
+
     public PutTransactionsIdRequestBody withLabels(String labels) {
         this.labels = labels;
         return this;
@@ -81,6 +87,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public PutTransactionsIdRequestBody withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -92,6 +99,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("needs_review")
     public Boolean needsReview;
+
     public PutTransactionsIdRequestBody withNeedsReview(Boolean needsReview) {
         this.needsReview = needsReview;
         return this;
@@ -103,6 +111,7 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public PutTransactionsIdRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -114,9 +123,11 @@ public class PutTransactionsIdRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee")
     public String payee;
+
     public PutTransactionsIdRequestBody withPayee(String payee) {
         this.payee = payee;
         return this;
     }
     
+    public PutTransactionsIdRequestBody(){}
 }

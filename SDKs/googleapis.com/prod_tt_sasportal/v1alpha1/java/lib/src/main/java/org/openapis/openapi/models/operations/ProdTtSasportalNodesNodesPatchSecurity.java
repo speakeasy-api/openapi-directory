@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ProdTtSasportalNodesNodesPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ProdTtSasportalNodesNodesPatchSecurityOption1 option1;
+
     public ProdTtSasportalNodesNodesPatchSecurity withOption1(ProdTtSasportalNodesNodesPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ProdTtSasportalNodesNodesPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ProdTtSasportalNodesNodesPatchSecurityOption2 option2;
+
     public ProdTtSasportalNodesNodesPatchSecurity withOption2(ProdTtSasportalNodesNodesPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ProdTtSasportalNodesNodesPatchSecurity(){}
 }

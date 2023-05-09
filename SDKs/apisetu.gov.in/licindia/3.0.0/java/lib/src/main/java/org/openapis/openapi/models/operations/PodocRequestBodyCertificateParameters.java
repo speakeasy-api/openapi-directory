@@ -12,6 +12,7 @@ public class PodocRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public PodocRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class PodocRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public PodocRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class PodocRequestBodyCertificateParameters {
      */
     @JsonProperty("PolDOB")
     public String polDOB;
+
     public PodocRequestBodyCertificateParameters withPolDOB(String polDOB) {
         this.polDOB = polDOB;
         return this;
@@ -42,9 +45,16 @@ public class PodocRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public PodocRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
     }
     
+    public PodocRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("PolDOB") String polDOB, @JsonProperty("PolicyNo") String policyNo) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.polDOB = polDOB;
+        this.policyNo = policyNo;
+  }
 }

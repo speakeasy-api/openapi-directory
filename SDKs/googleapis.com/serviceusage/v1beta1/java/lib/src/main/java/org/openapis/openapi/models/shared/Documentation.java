@@ -18,6 +18,7 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentationRootUrl")
     public String documentationRootUrl;
+
     public Documentation withDocumentationRootUrl(String documentationRootUrl) {
         this.documentationRootUrl = documentationRootUrl;
         return this;
@@ -29,6 +30,7 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overview")
     public String overview;
+
     public Documentation withOverview(String overview) {
         this.overview = overview;
         return this;
@@ -40,6 +42,7 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public Page[] pages;
+
     public Documentation withPages(Page[] pages) {
         this.pages = pages;
         return this;
@@ -51,6 +54,7 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public DocumentationRule[] rules;
+
     public Documentation withRules(DocumentationRule[] rules) {
         this.rules = rules;
         return this;
@@ -62,6 +66,7 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRootUrl")
     public String serviceRootUrl;
+
     public Documentation withServiceRootUrl(String serviceRootUrl) {
         this.serviceRootUrl = serviceRootUrl;
         return this;
@@ -73,9 +78,11 @@ public class Documentation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public Documentation withSummary(String summary) {
         this.summary = summary;
         return this;
     }
     
+    public Documentation(){}
 }

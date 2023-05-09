@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesRequest {
@@ -15,9 +16,13 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetImagesRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public GetImagesRequest(@JsonProperty("ids[]") String[] ids) {
+        this.ids = ids;
+  }
 }

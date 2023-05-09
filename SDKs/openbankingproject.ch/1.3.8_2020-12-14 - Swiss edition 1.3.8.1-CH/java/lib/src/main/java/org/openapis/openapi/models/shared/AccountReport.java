@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountReport {
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public AccountReport withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -33,6 +34,7 @@ public class AccountReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booked")
     public Transactions[] booked;
+
     public AccountReport withBooked(Transactions[] booked) {
         this.booked = booked;
         return this;
@@ -44,6 +46,7 @@ public class AccountReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("information")
     public Transactions[] information;
+
     public AccountReport withInformation(Transactions[] information) {
         this.information = information;
         return this;
@@ -55,9 +58,13 @@ public class AccountReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pending")
     public Transactions[] pending;
+
     public AccountReport withPending(Transactions[] pending) {
         this.pending = pending;
         return this;
     }
     
+    public AccountReport(@JsonProperty("_links") java.util.Map<String, HrefType> links) {
+        this.links = links;
+  }
 }

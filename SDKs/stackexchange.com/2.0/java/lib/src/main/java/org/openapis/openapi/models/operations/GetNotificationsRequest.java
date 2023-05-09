@@ -13,6 +13,7 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetNotificationsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +54,7 @@ public class GetNotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetNotificationsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -60,6 +62,7 @@ public class GetNotificationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetNotificationsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -67,9 +70,11 @@ public class GetNotificationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetNotificationsRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
     }
     
+    public GetNotificationsRequest(){}
 }

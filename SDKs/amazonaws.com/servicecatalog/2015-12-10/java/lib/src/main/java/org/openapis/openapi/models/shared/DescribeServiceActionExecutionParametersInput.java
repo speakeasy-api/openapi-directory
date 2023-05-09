@@ -12,6 +12,7 @@ public class DescribeServiceActionExecutionParametersInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DescribeServiceActionExecutionParametersInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class DescribeServiceActionExecutionParametersInput {
     
     @JsonProperty("ProvisionedProductId")
     public String provisionedProductId;
+
     public DescribeServiceActionExecutionParametersInput withProvisionedProductId(String provisionedProductId) {
         this.provisionedProductId = provisionedProductId;
         return this;
@@ -26,9 +28,14 @@ public class DescribeServiceActionExecutionParametersInput {
     
     @JsonProperty("ServiceActionId")
     public String serviceActionId;
+
     public DescribeServiceActionExecutionParametersInput withServiceActionId(String serviceActionId) {
         this.serviceActionId = serviceActionId;
         return this;
     }
     
+    public DescribeServiceActionExecutionParametersInput(@JsonProperty("ProvisionedProductId") String provisionedProductId, @JsonProperty("ServiceActionId") String serviceActionId) {
+        this.provisionedProductId = provisionedProductId;
+        this.serviceActionId = serviceActionId;
+  }
 }

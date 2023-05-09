@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CopyOptionGroupMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CopyOptionGroupMessage {
     
     public String sourceOptionGroupIdentifier;
+
     public CopyOptionGroupMessage withSourceOptionGroupIdentifier(String sourceOptionGroupIdentifier) {
         this.sourceOptionGroupIdentifier = sourceOptionGroupIdentifier;
         return this;
@@ -22,6 +23,7 @@ public class CopyOptionGroupMessage {
      */
     
     public TagList[] tags;
+
     public CopyOptionGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -29,6 +31,7 @@ public class CopyOptionGroupMessage {
     
     
     public String targetOptionGroupDescription;
+
     public CopyOptionGroupMessage withTargetOptionGroupDescription(String targetOptionGroupDescription) {
         this.targetOptionGroupDescription = targetOptionGroupDescription;
         return this;
@@ -36,9 +39,15 @@ public class CopyOptionGroupMessage {
     
     
     public String targetOptionGroupIdentifier;
+
     public CopyOptionGroupMessage withTargetOptionGroupIdentifier(String targetOptionGroupIdentifier) {
         this.targetOptionGroupIdentifier = targetOptionGroupIdentifier;
         return this;
     }
     
+    public CopyOptionGroupMessage(@JsonProperty("SourceOptionGroupIdentifier") String sourceOptionGroupIdentifier, @JsonProperty("TargetOptionGroupDescription") String targetOptionGroupDescription, @JsonProperty("TargetOptionGroupIdentifier") String targetOptionGroupIdentifier) {
+        this.sourceOptionGroupIdentifier = sourceOptionGroupIdentifier;
+        this.targetOptionGroupDescription = targetOptionGroupDescription;
+        this.targetOptionGroupIdentifier = targetOptionGroupIdentifier;
+  }
 }

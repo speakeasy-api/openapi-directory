@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetTextMessageSpendLimitOverrideResponse {
@@ -12,6 +13,7 @@ public class SetTextMessageSpendLimitOverrideResponse {
      */
     
     public Object accessDeniedException;
+
     public SetTextMessageSpendLimitOverrideResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SetTextMessageSpendLimitOverrideResponse {
     
     
     public String contentType;
+
     public SetTextMessageSpendLimitOverrideResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SetTextMessageSpendLimitOverrideResponse {
      */
     
     public Object internalServerException;
+
     public SetTextMessageSpendLimitOverrideResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class SetTextMessageSpendLimitOverrideResponse {
      */
     
     public org.openapis.openapi.models.shared.SetTextMessageSpendLimitOverrideResult setTextMessageSpendLimitOverrideResult;
+
     public SetTextMessageSpendLimitOverrideResponse withSetTextMessageSpendLimitOverrideResult(org.openapis.openapi.models.shared.SetTextMessageSpendLimitOverrideResult setTextMessageSpendLimitOverrideResult) {
         this.setTextMessageSpendLimitOverrideResult = setTextMessageSpendLimitOverrideResult;
         return this;
@@ -46,6 +51,7 @@ public class SetTextMessageSpendLimitOverrideResponse {
     
     
     public Integer statusCode;
+
     public SetTextMessageSpendLimitOverrideResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SetTextMessageSpendLimitOverrideResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetTextMessageSpendLimitOverrideResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class SetTextMessageSpendLimitOverrideResponse {
      */
     
     public Object throttlingException;
+
     public SetTextMessageSpendLimitOverrideResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class SetTextMessageSpendLimitOverrideResponse {
      */
     
     public Object validationException;
+
     public SetTextMessageSpendLimitOverrideResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SetTextMessageSpendLimitOverrideResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

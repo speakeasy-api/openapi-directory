@@ -23,6 +23,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalClickPrice")
     public Double additionalClickPrice;
+
     public NextContractInfo withAdditionalClickPrice(Double additionalClickPrice) {
         this.additionalClickPrice = additionalClickPrice;
         return this;
@@ -34,6 +35,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodInMonth")
     public Integer billingPeriodInMonth;
+
     public NextContractInfo withBillingPeriodInMonth(Integer billingPeriodInMonth) {
         this.billingPeriodInMonth = billingPeriodInMonth;
         return this;
@@ -45,6 +47,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodPercentDiscount")
     public Double billingPeriodPercentDiscount;
+
     public NextContractInfo withBillingPeriodPercentDiscount(Double billingPeriodPercentDiscount) {
         this.billingPeriodPercentDiscount = billingPeriodPercentDiscount;
         return this;
@@ -56,6 +59,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickIncluded")
     public Integer clickIncluded;
+
     public NextContractInfo withClickIncluded(Integer clickIncluded) {
         this.clickIncluded = clickIncluded;
         return this;
@@ -69,6 +73,7 @@ public class NextContractInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("commitmentCalculatedFinishUtcDate")
     public OffsetDateTime commitmentCalculatedFinishUtcDate;
+
     public NextContractInfo withCommitmentCalculatedFinishUtcDate(OffsetDateTime commitmentCalculatedFinishUtcDate) {
         this.commitmentCalculatedFinishUtcDate = commitmentCalculatedFinishUtcDate;
         return this;
@@ -80,6 +85,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitmentPeriodInMonth")
     public Integer commitmentPeriodInMonth;
+
     public NextContractInfo withCommitmentPeriodInMonth(Integer commitmentPeriodInMonth) {
         this.commitmentPeriodInMonth = commitmentPeriodInMonth;
         return this;
@@ -91,6 +97,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contractId")
     public String contractId;
+
     public NextContractInfo withContractId(String contractId) {
         this.contractId = contractId;
         return this;
@@ -103,6 +110,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public NextContractInfo withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -114,6 +122,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountDurationInMonth")
     public Integer discountDurationInMonth;
+
     public NextContractInfo withDiscountDurationInMonth(Integer discountDurationInMonth) {
         this.discountDurationInMonth = discountDurationInMonth;
         return this;
@@ -127,6 +136,7 @@ public class NextContractInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("discountEndUtcDate")
     public OffsetDateTime discountEndUtcDate;
+
     public NextContractInfo withDiscountEndUtcDate(OffsetDateTime discountEndUtcDate) {
         this.discountEndUtcDate = discountEndUtcDate;
         return this;
@@ -138,6 +148,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedAndVariableClickInfo")
     public FixedAndVariableClickModelInfo fixedAndVariableClickInfo;
+
     public NextContractInfo withFixedAndVariableClickInfo(FixedAndVariableClickModelInfo fixedAndVariableClickInfo) {
         this.fixedAndVariableClickInfo = fixedAndVariableClickInfo;
         return this;
@@ -149,6 +160,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedPrice")
     public Double fixedPrice;
+
     public NextContractInfo withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -160,6 +172,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipUserCreation")
     public String ipUserCreation;
+
     public NextContractInfo withIpUserCreation(String ipUserCreation) {
         this.ipUserCreation = ipUserCreation;
         return this;
@@ -171,6 +184,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipUserModification")
     public String ipUserModification;
+
     public NextContractInfo withIpUserModification(String ipUserModification) {
         this.ipUserModification = ipUserModification;
         return this;
@@ -182,6 +196,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCommitmentRenewalAutomatically")
     public Boolean isCommitmentRenewalAutomatically;
+
     public NextContractInfo withIsCommitmentRenewalAutomatically(Boolean isCommitmentRenewalAutomatically) {
         this.isCommitmentRenewalAutomatically = isCommitmentRenewalAutomatically;
         return this;
@@ -193,6 +208,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isModifiableContract")
     public Boolean isModifiableContract;
+
     public NextContractInfo withIsModifiableContract(Boolean isModifiableContract) {
         this.isModifiableContract = isModifiableContract;
         return this;
@@ -200,6 +216,7 @@ public class NextContractInfo {
     
     @JsonProperty("links")
     public NextContractInfoLinks links;
+
     public NextContractInfo withLinks(NextContractInfoLinks links) {
         this.links = links;
         return this;
@@ -211,6 +228,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public Integer offerId;
+
     public NextContractInfo withOfferId(Integer offerId) {
         this.offerId = offerId;
         return this;
@@ -222,6 +240,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerName")
     public String offerName;
+
     public NextContractInfo withOfferName(String offerName) {
         this.offerName = offerName;
         return this;
@@ -233,6 +252,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentDiscount")
     public Double percentDiscount;
+
     public NextContractInfo withPercentDiscount(Double percentDiscount) {
         this.percentDiscount = percentDiscount;
         return this;
@@ -246,6 +266,7 @@ public class NextContractInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startUtcDate")
     public OffsetDateTime startUtcDate;
+
     public NextContractInfo withStartUtcDate(OffsetDateTime startUtcDate) {
         this.startUtcDate = startUtcDate;
         return this;
@@ -257,6 +278,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeCount")
     public Integer storeCount;
+
     public NextContractInfo withStoreCount(Integer storeCount) {
         this.storeCount = storeCount;
         return this;
@@ -268,6 +290,7 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialPeriodInMonth")
     public Integer trialPeriodInMonth;
+
     public NextContractInfo withTrialPeriodInMonth(Integer trialPeriodInMonth) {
         this.trialPeriodInMonth = trialPeriodInMonth;
         return this;
@@ -279,9 +302,13 @@ public class NextContractInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableModelInfo")
     public VariableModelInfo variableModelInfo;
+
     public NextContractInfo withVariableModelInfo(VariableModelInfo variableModelInfo) {
         this.variableModelInfo = variableModelInfo;
         return this;
     }
     
+    public NextContractInfo(@JsonProperty("links") NextContractInfoLinks links) {
+        this.links = links;
+  }
 }

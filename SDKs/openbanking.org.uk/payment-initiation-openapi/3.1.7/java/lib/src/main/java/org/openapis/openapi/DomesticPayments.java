@@ -67,7 +67,7 @@ public class DomesticPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticConsentResponse5 = null;
             obWriteDomesticConsentResponse5 = null;
@@ -75,8 +75,6 @@ public class DomesticPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -156,7 +154,7 @@ public class DomesticPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticConsentResponse5 = null;
             obWriteDomesticConsentResponse5 = null;
@@ -164,8 +162,6 @@ public class DomesticPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -245,7 +241,7 @@ public class DomesticPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticResponse5 = null;
             obWriteDomesticResponse5 = null;
@@ -253,8 +249,6 @@ public class DomesticPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -334,7 +328,7 @@ public class DomesticPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDomesticPaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateDomesticPaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateDomesticPaymentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticResponse5 = null;
             obWriteDomesticResponse5 = null;
@@ -342,8 +336,6 @@ public class DomesticPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -418,7 +410,7 @@ public class DomesticPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticConsentResponse5 = null;
             obWriteDomesticConsentResponse5 = null;
@@ -426,8 +418,6 @@ public class DomesticPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -502,7 +492,7 @@ public class DomesticPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFundsConfirmationResponse1 = null;
             obWriteFundsConfirmationResponse1 = null;
@@ -510,8 +500,6 @@ public class DomesticPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,7 +574,7 @@ public class DomesticPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdResponse() {{
+        org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdResponse res = new org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteDomesticResponse5 = null;
             obWriteDomesticResponse5 = null;
@@ -594,8 +582,6 @@ public class DomesticPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScheduleResponse {
     
     public String contentType;
+
     public GetScheduleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetScheduleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetScheduleOutput getScheduleOutput;
+
     public GetScheduleResponse withGetScheduleOutput(org.openapis.openapi.models.shared.GetScheduleOutput getScheduleOutput) {
         this.getScheduleOutput = getScheduleOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetScheduleResponse {
      */
     
     public Object internalServerException;
+
     public GetScheduleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetScheduleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetScheduleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetScheduleResponse {
     
     
     public Integer statusCode;
+
     public GetScheduleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetScheduleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScheduleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetScheduleResponse {
      */
     
     public Object throttlingException;
+
     public GetScheduleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetScheduleResponse {
      */
     
     public Object validationException;
+
     public GetScheduleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetScheduleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

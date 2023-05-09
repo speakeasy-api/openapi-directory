@@ -18,6 +18,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Region withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geotargetArea")
     public RegionGeoTargetArea geotargetArea;
+
     public Region withGeotargetArea(RegionGeoTargetArea geotargetArea) {
         this.geotargetArea = geotargetArea;
         return this;
@@ -40,6 +42,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public Region withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -51,6 +54,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeArea")
     public RegionPostalCodeArea postalCodeArea;
+
     public Region withPostalCodeArea(RegionPostalCodeArea postalCodeArea) {
         this.postalCodeArea = postalCodeArea;
         return this;
@@ -62,6 +66,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionId")
     public String regionId;
+
     public Region withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -73,6 +78,7 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionalInventoryEligible")
     public Boolean regionalInventoryEligible;
+
     public Region withRegionalInventoryEligible(Boolean regionalInventoryEligible) {
         this.regionalInventoryEligible = regionalInventoryEligible;
         return this;
@@ -84,9 +90,11 @@ public class Region {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEligible")
     public Boolean shippingEligible;
+
     public Region withShippingEligible(Boolean shippingEligible) {
         this.shippingEligible = shippingEligible;
         return this;
     }
     
+    public Region(){}
 }

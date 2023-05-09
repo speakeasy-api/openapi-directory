@@ -15,6 +15,7 @@ public class LaunchProfileInitializationActiveDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computerAttributes")
     public ActiveDirectoryComputerAttribute[] computerAttributes;
+
     public LaunchProfileInitializationActiveDirectory withComputerAttributes(ActiveDirectoryComputerAttribute[] computerAttributes) {
         this.computerAttributes = computerAttributes;
         return this;
@@ -23,6 +24,7 @@ public class LaunchProfileInitializationActiveDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directoryId")
     public String directoryId;
+
     public LaunchProfileInitializationActiveDirectory withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -31,6 +33,7 @@ public class LaunchProfileInitializationActiveDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directoryName")
     public String directoryName;
+
     public LaunchProfileInitializationActiveDirectory withDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
@@ -39,6 +42,7 @@ public class LaunchProfileInitializationActiveDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsIpAddresses")
     public String[] dnsIpAddresses;
+
     public LaunchProfileInitializationActiveDirectory withDnsIpAddresses(String[] dnsIpAddresses) {
         this.dnsIpAddresses = dnsIpAddresses;
         return this;
@@ -47,6 +51,7 @@ public class LaunchProfileInitializationActiveDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationalUnitDistinguishedName")
     public String organizationalUnitDistinguishedName;
+
     public LaunchProfileInitializationActiveDirectory withOrganizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
         return this;
@@ -55,6 +60,7 @@ public class LaunchProfileInitializationActiveDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentId")
     public String studioComponentId;
+
     public LaunchProfileInitializationActiveDirectory withStudioComponentId(String studioComponentId) {
         this.studioComponentId = studioComponentId;
         return this;
@@ -63,9 +69,11 @@ public class LaunchProfileInitializationActiveDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studioComponentName")
     public String studioComponentName;
+
     public LaunchProfileInitializationActiveDirectory withStudioComponentName(String studioComponentName) {
         this.studioComponentName = studioComponentName;
         return this;
     }
     
+    public LaunchProfileInitializationActiveDirectory(){}
 }

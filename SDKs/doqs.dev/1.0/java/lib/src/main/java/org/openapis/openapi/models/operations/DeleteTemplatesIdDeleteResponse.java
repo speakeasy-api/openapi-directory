@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTemplatesIdDeleteResponse {
     
     public String contentType;
+
     public DeleteTemplatesIdDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTemplatesIdDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseError responseError;
+
     public DeleteTemplatesIdDeleteResponse withResponseError(org.openapis.openapi.models.shared.ResponseError responseError) {
         this.responseError = responseError;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTemplatesIdDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseOkNoneType responseOkNoneType;
+
     public DeleteTemplatesIdDeleteResponse withResponseOkNoneType(org.openapis.openapi.models.shared.ResponseOkNoneType responseOkNoneType) {
         this.responseOkNoneType = responseOkNoneType;
         return this;
@@ -36,6 +40,7 @@ public class DeleteTemplatesIdDeleteResponse {
     
     
     public Integer statusCode;
+
     public DeleteTemplatesIdDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteTemplatesIdDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTemplatesIdDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteTemplatesIdDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

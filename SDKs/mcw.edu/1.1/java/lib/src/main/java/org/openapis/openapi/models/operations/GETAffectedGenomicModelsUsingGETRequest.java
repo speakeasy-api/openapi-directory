@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAffectedGenomicModelsUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETAffectedGenomicModelsUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonId")
     public String taxonId;
+
     public GETAffectedGenomicModelsUsingGETRequest withTaxonId(String taxonId) {
         this.taxonId = taxonId;
         return this;
     }
     
+    public GETAffectedGenomicModelsUsingGETRequest(@JsonProperty("taxonId") String taxonId) {
+        this.taxonId = taxonId;
+  }
 }

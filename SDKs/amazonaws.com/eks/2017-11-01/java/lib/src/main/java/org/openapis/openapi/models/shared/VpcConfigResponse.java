@@ -15,6 +15,7 @@ public class VpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterSecurityGroupId")
     public String clusterSecurityGroupId;
+
     public VpcConfigResponse withClusterSecurityGroupId(String clusterSecurityGroupId) {
         this.clusterSecurityGroupId = clusterSecurityGroupId;
         return this;
@@ -23,6 +24,7 @@ public class VpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointPrivateAccess")
     public Boolean endpointPrivateAccess;
+
     public VpcConfigResponse withEndpointPrivateAccess(Boolean endpointPrivateAccess) {
         this.endpointPrivateAccess = endpointPrivateAccess;
         return this;
@@ -31,6 +33,7 @@ public class VpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointPublicAccess")
     public Boolean endpointPublicAccess;
+
     public VpcConfigResponse withEndpointPublicAccess(Boolean endpointPublicAccess) {
         this.endpointPublicAccess = endpointPublicAccess;
         return this;
@@ -39,6 +42,7 @@ public class VpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicAccessCidrs")
     public String[] publicAccessCidrs;
+
     public VpcConfigResponse withPublicAccessCidrs(String[] publicAccessCidrs) {
         this.publicAccessCidrs = publicAccessCidrs;
         return this;
@@ -47,6 +51,7 @@ public class VpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public VpcConfigResponse withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -55,6 +60,7 @@ public class VpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public VpcConfigResponse withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -63,9 +69,11 @@ public class VpcConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public VpcConfigResponse withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcConfigResponse(){}
 }

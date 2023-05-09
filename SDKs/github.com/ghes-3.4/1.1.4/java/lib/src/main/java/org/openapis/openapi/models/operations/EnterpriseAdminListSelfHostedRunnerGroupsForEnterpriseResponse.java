@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse {
      */
     
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSON enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse withEnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject(EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSON enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject) {
         this.enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject = enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject;
         return this;
     }
     
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

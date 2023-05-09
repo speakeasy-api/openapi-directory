@@ -18,6 +18,7 @@ public class CommitmentsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public CommitmentsScopedListWarningCodeEnum code;
+
     public CommitmentsScopedListWarning withCode(CommitmentsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class CommitmentsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CommitmentsScopedListWarningData[] data;
+
     public CommitmentsScopedListWarning withData(CommitmentsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class CommitmentsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CommitmentsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CommitmentsScopedListWarning(){}
 }

@@ -15,6 +15,7 @@ public class GetManyRecurringPayments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public GetManyRecurringPayments200ApplicationJSON withCount(Double count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class GetManyRecurringPayments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetManyRecurringPayments200ApplicationJSONResult[] result;
+
     public GetManyRecurringPayments200ApplicationJSON withResult(GetManyRecurringPayments200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
     }
     
+    public GetManyRecurringPayments200ApplicationJSON(){}
 }

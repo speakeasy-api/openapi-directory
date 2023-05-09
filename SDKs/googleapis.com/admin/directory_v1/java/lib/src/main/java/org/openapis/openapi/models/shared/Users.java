@@ -18,6 +18,7 @@ public class Users {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Users withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Users {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Users withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class Users {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Users withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,6 +54,7 @@ public class Users {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger_event")
     public String triggerEvent;
+
     public Users withTriggerEvent(String triggerEvent) {
         this.triggerEvent = triggerEvent;
         return this;
@@ -62,9 +66,11 @@ public class Users {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public User[] users;
+
     public Users withUsers(User[] users) {
         this.users = users;
         return this;
     }
     
+    public Users(){}
 }

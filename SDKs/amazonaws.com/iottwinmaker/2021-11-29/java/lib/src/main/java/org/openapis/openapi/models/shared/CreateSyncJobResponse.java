@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateSyncJobResponse {
     @JsonProperty("arn")
     public String arn;
+
     public CreateSyncJobResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class CreateSyncJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateSyncJobResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -33,9 +35,15 @@ public class CreateSyncJobResponse {
     
     @JsonProperty("state")
     public SyncJobStateEnum state;
+
     public CreateSyncJobResponse withState(SyncJobStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateSyncJobResponse(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("state") SyncJobStateEnum state) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+        this.state = state;
+  }
 }

@@ -18,6 +18,7 @@ public class ImageCaption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Double confidence;
+
     public ImageCaption withConfidence(Double confidence) {
         this.confidence = confidence;
         return this;
@@ -29,9 +30,11 @@ public class ImageCaption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ImageCaption withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ImageCaption(){}
 }

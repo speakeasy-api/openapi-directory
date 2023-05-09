@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgement")
     public String acknowledgement;
+
     public GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest withAcknowledgement(String acknowledgement) {
         this.acknowledgement = acknowledgement;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest(){}
 }

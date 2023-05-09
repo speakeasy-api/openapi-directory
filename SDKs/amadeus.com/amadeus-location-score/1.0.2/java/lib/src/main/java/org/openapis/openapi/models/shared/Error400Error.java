@@ -18,6 +18,7 @@ public class Error400Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public Error400Error withCode(Long code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class Error400Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error400Error withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -37,6 +39,7 @@ public class Error400Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Error400ErrorErrorSource source;
+
     public Error400Error withSource(Error400ErrorErrorSource source) {
         this.source = source;
         return this;
@@ -48,6 +51,7 @@ public class Error400Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public Error400Error withStatus(Long status) {
         this.status = status;
         return this;
@@ -59,9 +63,11 @@ public class Error400Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error400Error withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error400Error(){}
 }

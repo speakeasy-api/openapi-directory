@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSourceRepositoryCloneUrlsResponse {
     @JsonProperty("https")
     public String https;
+
     public GetSourceRepositoryCloneUrlsResponse withHttps(String https) {
         this.https = https;
         return this;
     }
     
+    public GetSourceRepositoryCloneUrlsResponse(@JsonProperty("https") String https) {
+        this.https = https;
+  }
 }

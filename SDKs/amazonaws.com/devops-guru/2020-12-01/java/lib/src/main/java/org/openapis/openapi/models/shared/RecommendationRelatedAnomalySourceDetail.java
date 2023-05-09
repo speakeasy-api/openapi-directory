@@ -15,9 +15,11 @@ public class RecommendationRelatedAnomalySourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchMetrics")
     public RecommendationRelatedCloudWatchMetricsSourceDetail[] cloudWatchMetrics;
+
     public RecommendationRelatedAnomalySourceDetail withCloudWatchMetrics(RecommendationRelatedCloudWatchMetricsSourceDetail[] cloudWatchMetrics) {
         this.cloudWatchMetrics = cloudWatchMetrics;
         return this;
     }
     
+    public RecommendationRelatedAnomalySourceDetail(){}
 }

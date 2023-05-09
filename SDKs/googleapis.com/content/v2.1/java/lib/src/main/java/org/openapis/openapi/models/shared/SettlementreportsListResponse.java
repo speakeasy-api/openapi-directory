@@ -18,6 +18,7 @@ public class SettlementreportsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SettlementreportsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class SettlementreportsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SettlementreportsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -37,9 +39,11 @@ public class SettlementreportsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public SettlementReport[] resources;
+
     public SettlementreportsListResponse withResources(SettlementReport[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public SettlementreportsListResponse(){}
 }

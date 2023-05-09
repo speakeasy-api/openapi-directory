@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConsentArtifactSchemaConsentUser {
     @JsonProperty("email")
     public String email;
+
     public ConsentArtifactSchemaConsentUser withEmail(String email) {
         this.email = email;
         return this;
@@ -16,6 +17,7 @@ public class ConsentArtifactSchemaConsentUser {
     
     @JsonProperty("idNumber")
     public String idNumber;
+
     public ConsentArtifactSchemaConsentUser withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -23,6 +25,7 @@ public class ConsentArtifactSchemaConsentUser {
     
     @JsonProperty("idType")
     public String idType;
+
     public ConsentArtifactSchemaConsentUser withIdType(String idType) {
         this.idType = idType;
         return this;
@@ -30,9 +33,16 @@ public class ConsentArtifactSchemaConsentUser {
     
     @JsonProperty("mobile")
     public String mobile;
+
     public ConsentArtifactSchemaConsentUser withMobile(String mobile) {
         this.mobile = mobile;
         return this;
     }
     
+    public ConsentArtifactSchemaConsentUser(@JsonProperty("email") String email, @JsonProperty("idNumber") String idNumber, @JsonProperty("idType") String idType, @JsonProperty("mobile") String mobile) {
+        this.email = email;
+        this.idNumber = idNumber;
+        this.idType = idType;
+        this.mobile = mobile;
+  }
 }

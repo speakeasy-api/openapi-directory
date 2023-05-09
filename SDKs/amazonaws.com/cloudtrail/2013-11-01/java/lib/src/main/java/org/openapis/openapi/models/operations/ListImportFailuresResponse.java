@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImportFailuresResponse {
     
     public String contentType;
+
     public ListImportFailuresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListImportFailuresResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListImportFailuresResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListImportFailuresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImportFailuresResponse listImportFailuresResponse;
+
     public ListImportFailuresResponse withListImportFailuresResponse(org.openapis.openapi.models.shared.ListImportFailuresResponse listImportFailuresResponse) {
         this.listImportFailuresResponse = listImportFailuresResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListImportFailuresResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListImportFailuresResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class ListImportFailuresResponse {
     
     
     public Integer statusCode;
+
     public ListImportFailuresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListImportFailuresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImportFailuresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListImportFailuresResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListImportFailuresResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListImportFailuresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

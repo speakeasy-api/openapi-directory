@@ -18,9 +18,11 @@ public class DeleteDisputeEvidenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public DeleteDisputeEvidenceResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteDisputeEvidenceResponse(){}
 }

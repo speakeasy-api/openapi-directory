@@ -15,6 +15,7 @@ public class BackendServiceIAPOAuth2ClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationName")
     public String applicationName;
+
     public BackendServiceIAPOAuth2ClientInfo withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -26,6 +27,7 @@ public class BackendServiceIAPOAuth2ClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientName")
     public String clientName;
+
     public BackendServiceIAPOAuth2ClientInfo withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -37,9 +39,11 @@ public class BackendServiceIAPOAuth2ClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerEmailAddress")
     public String developerEmailAddress;
+
     public BackendServiceIAPOAuth2ClientInfo withDeveloperEmailAddress(String developerEmailAddress) {
         this.developerEmailAddress = developerEmailAddress;
         return this;
     }
     
+    public BackendServiceIAPOAuth2ClientInfo(){}
 }

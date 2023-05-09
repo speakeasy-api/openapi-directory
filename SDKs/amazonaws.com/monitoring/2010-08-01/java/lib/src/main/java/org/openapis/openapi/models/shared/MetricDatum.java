@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class MetricDatum {
     
     public Double[] counts;
+
     public MetricDatum withCounts(Double[] counts) {
         this.counts = counts;
         return this;
@@ -19,6 +21,7 @@ public class MetricDatum {
     
     
     public Dimension[] dimensions;
+
     public MetricDatum withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -26,6 +29,7 @@ public class MetricDatum {
     
     
     public String metricName;
+
     public MetricDatum withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -33,6 +37,7 @@ public class MetricDatum {
     
     
     public StatisticSet statisticValues;
+
     public MetricDatum withStatisticValues(StatisticSet statisticValues) {
         this.statisticValues = statisticValues;
         return this;
@@ -40,6 +45,7 @@ public class MetricDatum {
     
     
     public Long storageResolution;
+
     public MetricDatum withStorageResolution(Long storageResolution) {
         this.storageResolution = storageResolution;
         return this;
@@ -47,6 +53,7 @@ public class MetricDatum {
     
     
     public OffsetDateTime timestamp;
+
     public MetricDatum withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -54,6 +61,7 @@ public class MetricDatum {
     
     
     public StandardUnitEnum unit;
+
     public MetricDatum withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -61,6 +69,7 @@ public class MetricDatum {
     
     
     public Double value;
+
     public MetricDatum withValue(Double value) {
         this.value = value;
         return this;
@@ -68,9 +77,13 @@ public class MetricDatum {
     
     
     public Double[] values;
+
     public MetricDatum withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public MetricDatum(@JsonProperty("MetricName") String metricName) {
+        this.metricName = metricName;
+  }
 }

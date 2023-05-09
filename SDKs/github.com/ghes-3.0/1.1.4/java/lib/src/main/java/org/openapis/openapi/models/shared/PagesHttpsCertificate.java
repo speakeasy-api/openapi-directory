@@ -13,6 +13,7 @@ import java.time.LocalDate;
 public class PagesHttpsCertificate {
     @JsonProperty("description")
     public String description;
+
     public PagesHttpsCertificate withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class PagesHttpsCertificate {
      */
     @JsonProperty("domains")
     public String[] domains;
+
     public PagesHttpsCertificate withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -32,6 +34,7 @@ public class PagesHttpsCertificate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("expires_at")
     public LocalDate expiresAt;
+
     public PagesHttpsCertificate withExpiresAt(LocalDate expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -39,9 +42,15 @@ public class PagesHttpsCertificate {
     
     @JsonProperty("state")
     public PagesHttpsCertificateStateEnum state;
+
     public PagesHttpsCertificate withState(PagesHttpsCertificateStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public PagesHttpsCertificate(@JsonProperty("description") String description, @JsonProperty("domains") String[] domains, @JsonProperty("state") PagesHttpsCertificateStateEnum state) {
+        this.description = description;
+        this.domains = domains;
+        this.state = state;
+  }
 }

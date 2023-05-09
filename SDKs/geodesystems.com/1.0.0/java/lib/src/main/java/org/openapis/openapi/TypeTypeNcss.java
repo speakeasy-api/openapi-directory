@@ -57,10 +57,8 @@ public class TypeTypeNcss {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeNcssResponse res = new org.openapis.openapi.models.operations.SearchTypeNcssResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeNcssResponse res = new org.openapis.openapi.models.operations.SearchTypeNcssResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

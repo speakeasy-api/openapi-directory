@@ -18,6 +18,7 @@ public class LocationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public LocationAssociationCategoryEnum category;
+
     public LocationAssociation withCategory(LocationAssociationCategoryEnum category) {
         this.category = category;
         return this;
@@ -29,9 +30,11 @@ public class LocationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceListItemId")
     public String priceListItemId;
+
     public LocationAssociation withPriceListItemId(String priceListItemId) {
         this.priceListItemId = priceListItemId;
         return this;
     }
     
+    public LocationAssociation(){}
 }

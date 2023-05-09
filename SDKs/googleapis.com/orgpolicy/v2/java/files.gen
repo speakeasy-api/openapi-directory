@@ -79,4 +79,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeExpr.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudOrgpolicyV2AlternatePolicySpecInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudOrgpolicyV2AlternatePolicySpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudOrgpolicyV2ListPoliciesResponse.java
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

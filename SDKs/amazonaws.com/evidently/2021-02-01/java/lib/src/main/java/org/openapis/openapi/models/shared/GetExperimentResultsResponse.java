@@ -16,6 +16,7 @@ public class GetExperimentResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public GetExperimentResultsResponse withDetails(String details) {
         this.details = details;
         return this;
@@ -24,6 +25,7 @@ public class GetExperimentResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reports")
     public ExperimentReport[] reports;
+
     public GetExperimentResultsResponse withReports(ExperimentReport[] reports) {
         this.reports = reports;
         return this;
@@ -32,6 +34,7 @@ public class GetExperimentResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultsData")
     public ExperimentResultsData[] resultsData;
+
     public GetExperimentResultsResponse withResultsData(ExperimentResultsData[] resultsData) {
         this.resultsData = resultsData;
         return this;
@@ -40,9 +43,11 @@ public class GetExperimentResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamps")
     public OffsetDateTime[] timestamps;
+
     public GetExperimentResultsResponse withTimestamps(OffsetDateTime[] timestamps) {
         this.timestamps = timestamps;
         return this;
     }
     
+    public GetExperimentResultsResponse(){}
 }

@@ -8,10 +8,22 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesRequest {
     /**
+     * Return only Images with the given architecture.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=architecture")
+    public String architecture;
+
+    public GetImagesRequest withArchitecture(String architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    
+    /**
      * Can be used multiple times. Server ID linked to the Image. Only available for Images of type `backup`
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bound_to")
     public String boundTo;
+
     public GetImagesRequest withBoundTo(String boundTo) {
         this.boundTo = boundTo;
         return this;
@@ -22,6 +34,7 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_deprecated")
     public Boolean includeDeprecated;
+
     public GetImagesRequest withIncludeDeprecated(Boolean includeDeprecated) {
         this.includeDeprecated = includeDeprecated;
         return this;
@@ -32,6 +45,7 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetImagesRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -42,6 +56,7 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetImagesRequest withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +67,7 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetImagesSortEnum sort;
+
     public GetImagesRequest withSort(GetImagesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -62,6 +78,7 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetImagesStatusEnum status;
+
     public GetImagesRequest withStatus(GetImagesStatusEnum status) {
         this.status = status;
         return this;
@@ -72,9 +89,11 @@ public class GetImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetImagesTypeEnum type;
+
     public GetImagesRequest withType(GetImagesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetImagesRequest(){}
 }

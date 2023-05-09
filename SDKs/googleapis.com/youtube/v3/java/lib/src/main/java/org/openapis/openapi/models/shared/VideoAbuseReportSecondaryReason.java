@@ -15,6 +15,7 @@ public class VideoAbuseReportSecondaryReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VideoAbuseReportSecondaryReason withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class VideoAbuseReportSecondaryReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public VideoAbuseReportSecondaryReason withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public VideoAbuseReportSecondaryReason(){}
 }

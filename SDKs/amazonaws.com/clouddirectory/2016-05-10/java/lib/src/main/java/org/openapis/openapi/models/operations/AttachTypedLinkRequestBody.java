@@ -12,6 +12,7 @@ public class AttachTypedLinkRequestBody {
      */
     @JsonProperty("Attributes")
     public org.openapis.openapi.models.shared.AttributeNameAndValue[] attributes;
+
     public AttachTypedLinkRequestBody withAttributes(org.openapis.openapi.models.shared.AttributeNameAndValue[] attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class AttachTypedLinkRequestBody {
      */
     @JsonProperty("SourceObjectReference")
     public AttachTypedLinkRequestBodySourceObjectReference sourceObjectReference;
+
     public AttachTypedLinkRequestBody withSourceObjectReference(AttachTypedLinkRequestBodySourceObjectReference sourceObjectReference) {
         this.sourceObjectReference = sourceObjectReference;
         return this;
@@ -32,6 +34,7 @@ public class AttachTypedLinkRequestBody {
      */
     @JsonProperty("TargetObjectReference")
     public AttachTypedLinkRequestBodyTargetObjectReference targetObjectReference;
+
     public AttachTypedLinkRequestBody withTargetObjectReference(AttachTypedLinkRequestBodyTargetObjectReference targetObjectReference) {
         this.targetObjectReference = targetObjectReference;
         return this;
@@ -42,9 +45,16 @@ public class AttachTypedLinkRequestBody {
      */
     @JsonProperty("TypedLinkFacet")
     public AttachTypedLinkRequestBodyTypedLinkFacet typedLinkFacet;
+
     public AttachTypedLinkRequestBody withTypedLinkFacet(AttachTypedLinkRequestBodyTypedLinkFacet typedLinkFacet) {
         this.typedLinkFacet = typedLinkFacet;
         return this;
     }
     
+    public AttachTypedLinkRequestBody(@JsonProperty("Attributes") org.openapis.openapi.models.shared.AttributeNameAndValue[] attributes, @JsonProperty("SourceObjectReference") AttachTypedLinkRequestBodySourceObjectReference sourceObjectReference, @JsonProperty("TargetObjectReference") AttachTypedLinkRequestBodyTargetObjectReference targetObjectReference, @JsonProperty("TypedLinkFacet") AttachTypedLinkRequestBodyTypedLinkFacet typedLinkFacet) {
+        this.attributes = attributes;
+        this.sourceObjectReference = sourceObjectReference;
+        this.targetObjectReference = targetObjectReference;
+        this.typedLinkFacet = typedLinkFacet;
+  }
 }

@@ -18,6 +18,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupFormat")
     public YoutubeAdGroupAdGroupFormatEnum adGroupFormat;
+
     public YoutubeAdGroup withAdGroupFormat(YoutubeAdGroupAdGroupFormatEnum adGroupFormat) {
         this.adGroupFormat = adGroupFormat;
         return this;
@@ -29,6 +30,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adGroupId")
     public String adGroupId;
+
     public YoutubeAdGroup withAdGroupId(String adGroupId) {
         this.adGroupId = adGroupId;
         return this;
@@ -40,6 +42,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public YoutubeAdGroup withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -51,6 +54,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biddingStrategy")
     public YoutubeAndPartnersBiddingStrategy biddingStrategy;
+
     public YoutubeAdGroup withBiddingStrategy(YoutubeAndPartnersBiddingStrategy biddingStrategy) {
         this.biddingStrategy = biddingStrategy;
         return this;
@@ -62,6 +66,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public YoutubeAdGroup withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public YoutubeAdGroupEntityStatusEnum entityStatus;
+
     public YoutubeAdGroup withEntityStatus(YoutubeAdGroupEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
@@ -84,6 +90,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public YoutubeAdGroup withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -95,6 +102,7 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public YoutubeAdGroup withName(String name) {
         this.name = name;
         return this;
@@ -106,17 +114,19 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productFeedData")
     public ProductFeedData productFeedData;
+
     public YoutubeAdGroup withProductFeedData(ProductFeedData productFeedData) {
         this.productFeedData = productFeedData;
         return this;
     }
     
     /**
-     * Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
+     * Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by early May 2023.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingExpansion")
     public TargetingExpansionConfig targetingExpansion;
+
     public YoutubeAdGroup withTargetingExpansion(TargetingExpansionConfig targetingExpansion) {
         this.targetingExpansion = targetingExpansion;
         return this;
@@ -128,9 +138,11 @@ public class YoutubeAdGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeAdIds")
     public String[] youtubeAdIds;
+
     public YoutubeAdGroup withYoutubeAdIds(String[] youtubeAdIds) {
         this.youtubeAdIds = youtubeAdIds;
         return this;
     }
     
+    public YoutubeAdGroup(){}
 }

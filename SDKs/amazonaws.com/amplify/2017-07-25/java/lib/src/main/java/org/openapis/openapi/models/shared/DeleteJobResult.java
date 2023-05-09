@@ -15,9 +15,13 @@ public class DeleteJobResult {
      */
     @JsonProperty("jobSummary")
     public JobSummary jobSummary;
+
     public DeleteJobResult withJobSummary(JobSummary jobSummary) {
         this.jobSummary = jobSummary;
         return this;
     }
     
+    public DeleteJobResult(@JsonProperty("jobSummary") JobSummary jobSummary) {
+        this.jobSummary = jobSummary;
+  }
 }

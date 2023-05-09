@@ -68,12 +68,10 @@ public class BankFeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFeedConnectionsResponse res = new org.openapis.openapi.models.operations.CreateFeedConnectionsResponse() {{
+        org.openapis.openapi.models.operations.CreateFeedConnectionsResponse res = new org.openapis.openapi.models.operations.CreateFeedConnectionsResponse(contentType, httpRes.statusCode()) {{
             feedConnections = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -128,13 +126,11 @@ public class BankFeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStatementsResponse res = new org.openapis.openapi.models.operations.CreateStatementsResponse() {{
+        org.openapis.openapi.models.operations.CreateStatementsResponse res = new org.openapis.openapi.models.operations.CreateStatementsResponse(contentType, httpRes.statusCode()) {{
             statements = null;
             statements = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -198,11 +194,9 @@ public class BankFeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFeedConnectionsResponse res = new org.openapis.openapi.models.operations.DeleteFeedConnectionsResponse() {{
+        org.openapis.openapi.models.operations.DeleteFeedConnectionsResponse res = new org.openapis.openapi.models.operations.DeleteFeedConnectionsResponse(contentType, httpRes.statusCode()) {{
             feedConnections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -249,11 +243,9 @@ public class BankFeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeedConnectionResponse res = new org.openapis.openapi.models.operations.GetFeedConnectionResponse() {{
+        org.openapis.openapi.models.operations.GetFeedConnectionResponse res = new org.openapis.openapi.models.operations.GetFeedConnectionResponse(contentType, httpRes.statusCode()) {{
             feedConnection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +298,9 @@ public class BankFeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFeedConnectionsResponse res = new org.openapis.openapi.models.operations.GetFeedConnectionsResponse() {{
+        org.openapis.openapi.models.operations.GetFeedConnectionsResponse res = new org.openapis.openapi.models.operations.GetFeedConnectionsResponse(contentType, httpRes.statusCode()) {{
             feedConnections = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -363,11 +353,9 @@ public class BankFeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatementResponse res = new org.openapis.openapi.models.operations.GetStatementResponse() {{
+        org.openapis.openapi.models.operations.GetStatementResponse res = new org.openapis.openapi.models.operations.GetStatementResponse(contentType, httpRes.statusCode()) {{
             statement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,12 +408,10 @@ public class BankFeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStatementsResponse res = new org.openapis.openapi.models.operations.GetStatementsResponse() {{
+        org.openapis.openapi.models.operations.GetStatementsResponse res = new org.openapis.openapi.models.operations.GetStatementsResponse(contentType, httpRes.statusCode()) {{
             statements = null;
             statements = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

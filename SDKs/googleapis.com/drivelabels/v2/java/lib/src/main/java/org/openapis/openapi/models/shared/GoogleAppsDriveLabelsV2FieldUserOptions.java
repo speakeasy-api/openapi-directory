@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2FieldUserOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listOptions")
     public GoogleAppsDriveLabelsV2FieldListOptions listOptions;
+
     public GoogleAppsDriveLabelsV2FieldUserOptions withListOptions(GoogleAppsDriveLabelsV2FieldListOptions listOptions) {
         this.listOptions = listOptions;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2FieldUserOptions(){}
 }

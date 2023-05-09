@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAppAssessmentResponse {
@@ -12,6 +13,7 @@ public class DeleteAppAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAppAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAppAssessmentResponse {
      */
     
     public Object conflictException;
+
     public DeleteAppAssessmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAppAssessmentResponse {
     
     
     public String contentType;
+
     public DeleteAppAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAppAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteAppAssessmentResponse deleteAppAssessmentResponse;
+
     public DeleteAppAssessmentResponse withDeleteAppAssessmentResponse(org.openapis.openapi.models.shared.DeleteAppAssessmentResponse deleteAppAssessmentResponse) {
         this.deleteAppAssessmentResponse = deleteAppAssessmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAppAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAppAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAppAssessmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteAppAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAppAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAppAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteAppAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAppAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteAppAssessmentResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAppAssessmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteAppAssessmentResponse {
      */
     
     public Object validationException;
+
     public DeleteAppAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAppAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -57,12 +57,10 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportConfigurationsCreateResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsCreateResponse() {{
+        org.openapis.openapi.models.operations.ExportConfigurationsCreateResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsCreateResponse(contentType, httpRes.statusCode()) {{
             exportConfigurationsCreate202ApplicationJSONObject = null;
             exportConfigurationsCreateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -105,11 +103,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ExportConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsDeleteResponse(contentType, httpRes.statusCode()) {{
             exportConfigurationsDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportConfigurationsDisableResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsDisableResponse() {{
+        org.openapis.openapi.models.operations.ExportConfigurationsDisableResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsDisableResponse(contentType, httpRes.statusCode()) {{
             exportConfigurationsDisableDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,11 +183,9 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportConfigurationsEnableResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsEnableResponse() {{
+        org.openapis.openapi.models.operations.ExportConfigurationsEnableResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsEnableResponse(contentType, httpRes.statusCode()) {{
             exportConfigurationsEnableDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,12 +223,10 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportConfigurationsGetResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsGetResponse() {{
+        org.openapis.openapi.models.operations.ExportConfigurationsGetResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsGetResponse(contentType, httpRes.statusCode()) {{
             exportConfigurationsGet200ApplicationJSONObject = null;
             exportConfigurationsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -279,12 +269,10 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportConfigurationsListResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsListResponse() {{
+        org.openapis.openapi.models.operations.ExportConfigurationsListResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsListResponse(contentType, httpRes.statusCode()) {{
             exportConfigurationsList200ApplicationJSONObject = null;
             exportConfigurationsListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,12 +320,10 @@ public class Export {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateResponse res = new org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
             exportConfigurationsPartialUpdate200ApplicationJSONObject = null;
             exportConfigurationsPartialUpdateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

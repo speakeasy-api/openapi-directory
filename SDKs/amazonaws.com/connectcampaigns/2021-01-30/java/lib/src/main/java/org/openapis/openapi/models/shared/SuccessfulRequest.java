@@ -18,6 +18,7 @@ public class SuccessfulRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public SuccessfulRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,9 +30,11 @@ public class SuccessfulRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SuccessfulRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public SuccessfulRequest(){}
 }

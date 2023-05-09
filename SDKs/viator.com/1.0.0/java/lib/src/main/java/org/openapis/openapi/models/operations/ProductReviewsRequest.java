@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductReviewsRequest {
@@ -13,6 +14,7 @@ public class ProductReviewsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public ProductReviewsRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -23,6 +25,7 @@ public class ProductReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String code;
+
     public ProductReviewsRequest withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +40,7 @@ public class ProductReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showUnavailable")
     public Boolean showUnavailable;
+
     public ProductReviewsRequest withShowUnavailable(Boolean showUnavailable) {
         this.showUnavailable = showUnavailable;
         return this;
@@ -54,6 +58,7 @@ public class ProductReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder;
+
     public ProductReviewsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -70,9 +75,13 @@ public class ProductReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topX")
     public String topX;
+
     public ProductReviewsRequest withTopX(String topX) {
         this.topX = topX;
         return this;
     }
     
+    public ProductReviewsRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

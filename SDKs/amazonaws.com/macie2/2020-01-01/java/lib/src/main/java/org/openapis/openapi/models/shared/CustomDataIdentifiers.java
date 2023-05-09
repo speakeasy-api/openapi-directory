@@ -15,6 +15,7 @@ public class CustomDataIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detections")
     public CustomDetection[] detections;
+
     public CustomDataIdentifiers withDetections(CustomDetection[] detections) {
         this.detections = detections;
         return this;
@@ -23,9 +24,11 @@ public class CustomDataIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public CustomDataIdentifiers withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public CustomDataIdentifiers(){}
 }

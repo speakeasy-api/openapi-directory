@@ -18,6 +18,7 @@ public class HotKeyDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotKeyAge")
     public String hotKeyAge;
+
     public HotKeyDetection withHotKeyAge(String hotKeyAge) {
         this.hotKeyAge = hotKeyAge;
         return this;
@@ -29,6 +30,7 @@ public class HotKeyDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemName")
     public String systemName;
+
     public HotKeyDetection withSystemName(String systemName) {
         this.systemName = systemName;
         return this;
@@ -40,9 +42,11 @@ public class HotKeyDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userStepName")
     public String userStepName;
+
     public HotKeyDetection withUserStepName(String userStepName) {
         this.userStepName = userStepName;
         return this;
     }
     
+    public HotKeyDetection(){}
 }

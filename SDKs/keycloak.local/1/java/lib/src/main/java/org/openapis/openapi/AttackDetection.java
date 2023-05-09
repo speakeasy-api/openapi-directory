@@ -51,10 +51,8 @@ public class AttackDetection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersResponse res = new org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersResponse res = new org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -84,10 +82,8 @@ public class AttackDetection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -117,11 +113,9 @@ public class AttackDetection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdResponse() {{
+        org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdResponse res = new org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdResponse(contentType, httpRes.statusCode()) {{
             getRealmAttackDetectionBruteForceUsersUserId2XXApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

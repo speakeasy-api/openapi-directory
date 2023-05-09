@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SuggestArticlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assistQueryParams")
     public GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
+
     public GoogleCloudDialogflowV2SuggestArticlesRequest withAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
         this.assistQueryParams = assistQueryParams;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2SuggestArticlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextSize")
     public Integer contextSize;
+
     public GoogleCloudDialogflowV2SuggestArticlesRequest withContextSize(Integer contextSize) {
         this.contextSize = contextSize;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2SuggestArticlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestMessage")
     public String latestMessage;
+
     public GoogleCloudDialogflowV2SuggestArticlesRequest withLatestMessage(String latestMessage) {
         this.latestMessage = latestMessage;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SuggestArticlesRequest(){}
 }

@@ -33,4 +33,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetLatestBaseCurrencyRe
 lib/src/main/java/org/openapis/openapi/models/operations/GetLatestBaseCurrency404ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLatestBaseCurrency200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLatestBaseCurrencyResponse.java
+docs/sdk/README.md
 USAGE.md

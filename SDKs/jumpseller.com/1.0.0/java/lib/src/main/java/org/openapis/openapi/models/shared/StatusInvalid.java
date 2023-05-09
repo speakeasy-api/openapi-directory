@@ -15,9 +15,11 @@ public class StatusInvalid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StatusInvalid withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StatusInvalid(){}
 }

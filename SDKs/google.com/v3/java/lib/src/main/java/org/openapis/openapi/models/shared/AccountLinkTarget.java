@@ -18,6 +18,7 @@ public class AccountLinkTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allHotels")
     public Boolean allHotels;
+
     public AccountLinkTarget withAllHotels(Boolean allHotels) {
         this.allHotels = allHotels;
         return this;
@@ -29,9 +30,11 @@ public class AccountLinkTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelList")
     public HotelList hotelList;
+
     public AccountLinkTarget withHotelList(HotelList hotelList) {
         this.hotelList = hotelList;
         return this;
     }
     
+    public AccountLinkTarget(){}
 }

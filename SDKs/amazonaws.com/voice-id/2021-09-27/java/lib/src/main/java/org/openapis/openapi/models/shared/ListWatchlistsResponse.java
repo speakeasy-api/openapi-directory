@@ -15,6 +15,7 @@ public class ListWatchlistsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWatchlistsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListWatchlistsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WatchlistSummaries")
     public WatchlistSummary[] watchlistSummaries;
+
     public ListWatchlistsResponse withWatchlistSummaries(WatchlistSummary[] watchlistSummaries) {
         this.watchlistSummaries = watchlistSummaries;
         return this;
     }
     
+    public ListWatchlistsResponse(){}
 }

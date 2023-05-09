@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportLibraryV2Security {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String zettleOauth;
+
     public ImportLibraryV2Security withZettleOauth(String zettleOauth) {
         this.zettleOauth = zettleOauth;
         return this;
     }
     
+    public ImportLibraryV2Security(@JsonProperty("ZettleOauth") String zettleOauth) {
+        this.zettleOauth = zettleOauth;
+  }
 }

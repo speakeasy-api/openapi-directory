@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddApplicationCloudWatchLoggingOptionRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public AddApplicationCloudWatchLoggingOptionRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,6 +17,7 @@ public class AddApplicationCloudWatchLoggingOptionRequest {
     
     @JsonProperty("CloudWatchLoggingOption")
     public CloudWatchLoggingOption cloudWatchLoggingOption;
+
     public AddApplicationCloudWatchLoggingOptionRequest withCloudWatchLoggingOption(CloudWatchLoggingOption cloudWatchLoggingOption) {
         this.cloudWatchLoggingOption = cloudWatchLoggingOption;
         return this;
@@ -23,9 +25,15 @@ public class AddApplicationCloudWatchLoggingOptionRequest {
     
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public AddApplicationCloudWatchLoggingOptionRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
     }
     
+    public AddApplicationCloudWatchLoggingOptionRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("CloudWatchLoggingOption") CloudWatchLoggingOption cloudWatchLoggingOption, @JsonProperty("CurrentApplicationVersionId") Long currentApplicationVersionId) {
+        this.applicationName = applicationName;
+        this.cloudWatchLoggingOption = cloudWatchLoggingOption;
+        this.currentApplicationVersionId = currentApplicationVersionId;
+  }
 }

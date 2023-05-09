@@ -15,6 +15,7 @@ public class GetRecommendationReportDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetRecommendationReportDetailsResponse withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class GetRecommendationReportDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationReportDetails")
     public RecommendationReportDetails recommendationReportDetails;
+
     public GetRecommendationReportDetailsResponse withRecommendationReportDetails(RecommendationReportDetails recommendationReportDetails) {
         this.recommendationReportDetails = recommendationReportDetails;
         return this;
     }
     
+    public GetRecommendationReportDetailsResponse(){}
 }

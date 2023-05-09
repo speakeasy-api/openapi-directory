@@ -12,9 +12,13 @@ public class FunctionsUpdateTagRequestBody {
      */
     @JsonProperty("tag")
     public String tag;
+
     public FunctionsUpdateTagRequestBody withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public FunctionsUpdateTagRequestBody(@JsonProperty("tag") String tag) {
+        this.tag = tag;
+  }
 }

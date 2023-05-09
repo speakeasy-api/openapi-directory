@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRespo
     
     
     public Integer statusCode;
+
     public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRespo
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRespo
      */
     
     public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprise200ApplicationJSON enterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprise200ApplicationJSONObject;
+
     public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse withEnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprise200ApplicationJSONObject(EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprise200ApplicationJSON enterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprise200ApplicationJSONObject) {
         this.enterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprise200ApplicationJSONObject = enterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprise200ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRespo
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

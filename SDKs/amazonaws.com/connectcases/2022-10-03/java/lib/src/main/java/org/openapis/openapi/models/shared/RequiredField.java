@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RequiredField {
     @JsonProperty("fieldId")
     public String fieldId;
+
     public RequiredField withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
     }
     
+    public RequiredField(@JsonProperty("fieldId") String fieldId) {
+        this.fieldId = fieldId;
+  }
 }

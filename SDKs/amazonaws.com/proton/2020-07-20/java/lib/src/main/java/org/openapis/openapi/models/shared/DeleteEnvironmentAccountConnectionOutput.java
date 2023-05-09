@@ -15,9 +15,11 @@ public class DeleteEnvironmentAccountConnectionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccountConnection")
     public EnvironmentAccountConnection environmentAccountConnection;
+
     public DeleteEnvironmentAccountConnectionOutput withEnvironmentAccountConnection(EnvironmentAccountConnection environmentAccountConnection) {
         this.environmentAccountConnection = environmentAccountConnection;
         return this;
     }
     
+    public DeleteEnvironmentAccountConnectionOutput(){}
 }

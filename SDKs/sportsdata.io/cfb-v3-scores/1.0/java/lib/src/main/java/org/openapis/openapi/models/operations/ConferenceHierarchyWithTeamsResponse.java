@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConferenceHierarchyWithTeamsResponse {
     
     public org.openapis.openapi.models.shared.Conference[] conferences;
+
     public ConferenceHierarchyWithTeamsResponse withConferences(org.openapis.openapi.models.shared.Conference[] conferences) {
         this.conferences = conferences;
         return this;
@@ -16,6 +18,7 @@ public class ConferenceHierarchyWithTeamsResponse {
     
     
     public String contentType;
+
     public ConferenceHierarchyWithTeamsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ConferenceHierarchyWithTeamsResponse {
     
     
     public Integer statusCode;
+
     public ConferenceHierarchyWithTeamsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ConferenceHierarchyWithTeamsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConferenceHierarchyWithTeamsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConferenceHierarchyWithTeamsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

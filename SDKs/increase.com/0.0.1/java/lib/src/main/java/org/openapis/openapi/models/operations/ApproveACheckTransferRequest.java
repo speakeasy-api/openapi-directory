@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApproveACheckTransferRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_transfer_id")
     public String checkTransferId;
+
     public ApproveACheckTransferRequest withCheckTransferId(String checkTransferId) {
         this.checkTransferId = checkTransferId;
         return this;
     }
     
+    public ApproveACheckTransferRequest(@JsonProperty("check_transfer_id") String checkTransferId) {
+        this.checkTransferId = checkTransferId;
+  }
 }

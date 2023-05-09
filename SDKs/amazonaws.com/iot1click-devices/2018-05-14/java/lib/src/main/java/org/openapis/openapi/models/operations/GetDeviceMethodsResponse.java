@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeviceMethodsResponse {
     
     public String contentType;
+
     public GetDeviceMethodsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDeviceMethodsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeviceMethodsResponse getDeviceMethodsResponse;
+
     public GetDeviceMethodsResponse withGetDeviceMethodsResponse(org.openapis.openapi.models.shared.GetDeviceMethodsResponse getDeviceMethodsResponse) {
         this.getDeviceMethodsResponse = getDeviceMethodsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDeviceMethodsResponse {
      */
     
     public Object internalFailureException;
+
     public GetDeviceMethodsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetDeviceMethodsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetDeviceMethodsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetDeviceMethodsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDeviceMethodsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetDeviceMethodsResponse {
     
     
     public Integer statusCode;
+
     public GetDeviceMethodsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetDeviceMethodsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeviceMethodsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDeviceMethodsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

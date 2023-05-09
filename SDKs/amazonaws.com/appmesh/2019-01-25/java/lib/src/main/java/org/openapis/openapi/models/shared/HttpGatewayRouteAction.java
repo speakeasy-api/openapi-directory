@@ -15,6 +15,7 @@ public class HttpGatewayRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewrite")
     public HttpGatewayRouteRewrite rewrite;
+
     public HttpGatewayRouteAction withRewrite(HttpGatewayRouteRewrite rewrite) {
         this.rewrite = rewrite;
         return this;
@@ -22,9 +23,13 @@ public class HttpGatewayRouteAction {
     
     @JsonProperty("target")
     public GatewayRouteTarget target;
+
     public HttpGatewayRouteAction withTarget(GatewayRouteTarget target) {
         this.target = target;
         return this;
     }
     
+    public HttpGatewayRouteAction(@JsonProperty("target") GatewayRouteTarget target) {
+        this.target = target;
+  }
 }

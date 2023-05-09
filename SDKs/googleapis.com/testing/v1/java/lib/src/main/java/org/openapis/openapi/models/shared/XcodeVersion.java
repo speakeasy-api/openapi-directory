@@ -18,6 +18,7 @@ public class XcodeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public XcodeVersion withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -29,9 +30,11 @@ public class XcodeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public XcodeVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public XcodeVersion(){}
 }

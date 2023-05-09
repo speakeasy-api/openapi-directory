@@ -12,6 +12,7 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conjugations")
     public DictlayerdataDictWordsSensesConjugations[] conjugations;
+
     public DictlayerdataDictWordsSenses withConjugations(DictlayerdataDictWordsSensesConjugations[] conjugations) {
         this.conjugations = conjugations;
         return this;
@@ -20,6 +21,7 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitions")
     public DictlayerdataDictWordsSensesDefinitions[] definitions;
+
     public DictlayerdataDictWordsSenses withDefinitions(DictlayerdataDictWordsSensesDefinitions[] definitions) {
         this.definitions = definitions;
         return this;
@@ -28,6 +30,7 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partOfSpeech")
     public String partOfSpeech;
+
     public DictlayerdataDictWordsSenses withPartOfSpeech(String partOfSpeech) {
         this.partOfSpeech = partOfSpeech;
         return this;
@@ -36,6 +39,7 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pronunciation")
     public String pronunciation;
+
     public DictlayerdataDictWordsSenses withPronunciation(String pronunciation) {
         this.pronunciation = pronunciation;
         return this;
@@ -44,6 +48,7 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pronunciationUrl")
     public String pronunciationUrl;
+
     public DictlayerdataDictWordsSenses withPronunciationUrl(String pronunciationUrl) {
         this.pronunciationUrl = pronunciationUrl;
         return this;
@@ -52,6 +57,7 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public DictlayerdataDictWordsSensesSource source;
+
     public DictlayerdataDictWordsSenses withSource(DictlayerdataDictWordsSensesSource source) {
         this.source = source;
         return this;
@@ -60,6 +66,7 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syllabification")
     public String syllabification;
+
     public DictlayerdataDictWordsSenses withSyllabification(String syllabification) {
         this.syllabification = syllabification;
         return this;
@@ -68,9 +75,11 @@ public class DictlayerdataDictWordsSenses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synonyms")
     public DictlayerdataDictWordsSensesSynonyms[] synonyms;
+
     public DictlayerdataDictWordsSenses withSynonyms(DictlayerdataDictWordsSensesSynonyms[] synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public DictlayerdataDictWordsSenses(){}
 }

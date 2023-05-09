@@ -15,6 +15,7 @@ public class PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUn
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lower")
     public Long lower;
+
     public PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUniform withLower(Long lower) {
         this.lower = lower;
         return this;
@@ -23,6 +24,7 @@ public class PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUn
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUniformTypeEnum type;
+
     public PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUniform withType(PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUniformTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUn
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upper")
     public Long upper;
+
     public PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUniform withUpper(Long upper) {
         this.upper = upper;
         return this;
     }
     
+    public PutAdminMappingsStubMappingIdRequestBodyResponseDelayDistributionUniform(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReplicationSubnetGroupMessage {
     @JsonProperty("ReplicationSubnetGroupDescription")
     public String replicationSubnetGroupDescription;
+
     public CreateReplicationSubnetGroupMessage withReplicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
         this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
         return this;
@@ -21,6 +22,7 @@ public class CreateReplicationSubnetGroupMessage {
     
     @JsonProperty("ReplicationSubnetGroupIdentifier")
     public String replicationSubnetGroupIdentifier;
+
     public CreateReplicationSubnetGroupMessage withReplicationSubnetGroupIdentifier(String replicationSubnetGroupIdentifier) {
         this.replicationSubnetGroupIdentifier = replicationSubnetGroupIdentifier;
         return this;
@@ -28,6 +30,7 @@ public class CreateReplicationSubnetGroupMessage {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateReplicationSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -36,9 +39,15 @@ public class CreateReplicationSubnetGroupMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateReplicationSubnetGroupMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateReplicationSubnetGroupMessage(@JsonProperty("ReplicationSubnetGroupDescription") String replicationSubnetGroupDescription, @JsonProperty("ReplicationSubnetGroupIdentifier") String replicationSubnetGroupIdentifier, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
+        this.replicationSubnetGroupIdentifier = replicationSubnetGroupIdentifier;
+        this.subnetIds = subnetIds;
+  }
 }

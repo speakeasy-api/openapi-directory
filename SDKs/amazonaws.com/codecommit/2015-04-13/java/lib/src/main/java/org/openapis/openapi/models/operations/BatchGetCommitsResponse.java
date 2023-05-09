@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetCommitsResponse {
@@ -12,6 +13,7 @@ public class BatchGetCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetCommitsOutput batchGetCommitsOutput;
+
     public BatchGetCommitsResponse withBatchGetCommitsOutput(org.openapis.openapi.models.shared.BatchGetCommitsOutput batchGetCommitsOutput) {
         this.batchGetCommitsOutput = batchGetCommitsOutput;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object commitIdsLimitExceededException;
+
     public BatchGetCommitsResponse withCommitIdsLimitExceededException(Object commitIdsLimitExceededException) {
         this.commitIdsLimitExceededException = commitIdsLimitExceededException;
         return this;
@@ -32,6 +35,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object commitIdsListRequiredException;
+
     public BatchGetCommitsResponse withCommitIdsListRequiredException(Object commitIdsListRequiredException) {
         this.commitIdsListRequiredException = commitIdsListRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetCommitsResponse {
     
     
     public String contentType;
+
     public BatchGetCommitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public BatchGetCommitsResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public BatchGetCommitsResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public BatchGetCommitsResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -79,6 +87,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public BatchGetCommitsResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public BatchGetCommitsResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public BatchGetCommitsResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -106,6 +117,7 @@ public class BatchGetCommitsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetCommitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class BatchGetCommitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetCommitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class BatchGetCommitsResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public BatchGetCommitsResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -133,9 +147,14 @@ public class BatchGetCommitsResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public BatchGetCommitsResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
     }
     
+    public BatchGetCommitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

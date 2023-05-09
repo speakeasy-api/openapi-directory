@@ -12,9 +12,13 @@ public class CancelDeploymentJobRequestBody {
      */
     @JsonProperty("job")
     public String job;
+
     public CancelDeploymentJobRequestBody withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public CancelDeploymentJobRequestBody(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

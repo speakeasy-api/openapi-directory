@@ -18,9 +18,11 @@ public class GenerateConsistencyTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consistencyToken")
     public String consistencyToken;
+
     public GenerateConsistencyTokenResponse withConsistencyToken(String consistencyToken) {
         this.consistencyToken = consistencyToken;
         return this;
     }
     
+    public GenerateConsistencyTokenResponse(){}
 }

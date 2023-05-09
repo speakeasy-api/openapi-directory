@@ -12,6 +12,7 @@ public class ExternalGroupTeams {
      */
     @JsonProperty("team_id")
     public Long teamId;
+
     public ExternalGroupTeams withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -22,9 +23,14 @@ public class ExternalGroupTeams {
      */
     @JsonProperty("team_name")
     public String teamName;
+
     public ExternalGroupTeams withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
     }
     
+    public ExternalGroupTeams(@JsonProperty("team_id") Long teamId, @JsonProperty("team_name") String teamName) {
+        this.teamId = teamId;
+        this.teamName = teamName;
+  }
 }

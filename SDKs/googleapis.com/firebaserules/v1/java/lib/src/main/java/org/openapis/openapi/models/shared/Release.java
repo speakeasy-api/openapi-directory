@@ -18,6 +18,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Release withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Release withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesetName")
     public String rulesetName;
+
     public Release withRulesetName(String rulesetName) {
         this.rulesetName = rulesetName;
         return this;
@@ -51,9 +54,11 @@ public class Release {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Release withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Release(){}
 }

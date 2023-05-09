@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppInvitationsList200ApplicationJSON {
     @JsonProperty("app")
     public AppInvitationsList200ApplicationJSONApp app;
+
     public AppInvitationsList200ApplicationJSON withApp(AppInvitationsList200ApplicationJSONApp app) {
         this.app = app;
         return this;
@@ -25,6 +26,7 @@ public class AppInvitationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_count")
     public Double appCount;
+
     public AppInvitationsList200ApplicationJSON withAppCount(Double appCount) {
         this.appCount = appCount;
         return this;
@@ -36,6 +38,7 @@ public class AppInvitationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution_group")
     public AppInvitationsList200ApplicationJSONDistributionGroup distributionGroup;
+
     public AppInvitationsList200ApplicationJSON withDistributionGroup(AppInvitationsList200ApplicationJSONDistributionGroup distributionGroup) {
         this.distributionGroup = distributionGroup;
         return this;
@@ -46,6 +49,7 @@ public class AppInvitationsList200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public AppInvitationsList200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -56,6 +60,7 @@ public class AppInvitationsList200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppInvitationsList200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +71,7 @@ public class AppInvitationsList200ApplicationJSON {
      */
     @JsonProperty("invite_type")
     public AppInvitationsList200ApplicationJSONInviteTypeEnum inviteType;
+
     public AppInvitationsList200ApplicationJSON withInviteType(AppInvitationsList200ApplicationJSONInviteTypeEnum inviteType) {
         this.inviteType = inviteType;
         return this;
@@ -73,6 +79,7 @@ public class AppInvitationsList200ApplicationJSON {
     
     @JsonProperty("invited_by")
     public AppInvitationsList200ApplicationJSONInvitedBy invitedBy;
+
     public AppInvitationsList200ApplicationJSON withInvitedBy(AppInvitationsList200ApplicationJSONInvitedBy invitedBy) {
         this.invitedBy = invitedBy;
         return this;
@@ -83,6 +90,7 @@ public class AppInvitationsList200ApplicationJSON {
      */
     @JsonProperty("is_existing_user")
     public Boolean isExistingUser;
+
     public AppInvitationsList200ApplicationJSON withIsExistingUser(Boolean isExistingUser) {
         this.isExistingUser = isExistingUser;
         return this;
@@ -94,9 +102,18 @@ public class AppInvitationsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public AppInvitationsList200ApplicationJSONPermissionsEnum[] permissions;
+
     public AppInvitationsList200ApplicationJSON withPermissions(AppInvitationsList200ApplicationJSONPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public AppInvitationsList200ApplicationJSON(@JsonProperty("app") AppInvitationsList200ApplicationJSONApp app, @JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("invite_type") AppInvitationsList200ApplicationJSONInviteTypeEnum inviteType, @JsonProperty("invited_by") AppInvitationsList200ApplicationJSONInvitedBy invitedBy, @JsonProperty("is_existing_user") Boolean isExistingUser) {
+        this.app = app;
+        this.email = email;
+        this.id = id;
+        this.inviteType = inviteType;
+        this.invitedBy = invitedBy;
+        this.isExistingUser = isExistingUser;
+  }
 }

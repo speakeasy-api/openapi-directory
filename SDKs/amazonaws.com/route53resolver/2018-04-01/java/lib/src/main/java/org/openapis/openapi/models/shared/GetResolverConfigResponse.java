@@ -15,9 +15,11 @@ public class GetResolverConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverConfig")
     public ResolverConfig resolverConfig;
+
     public GetResolverConfigResponse withResolverConfig(ResolverConfig resolverConfig) {
         this.resolverConfig = resolverConfig;
         return this;
     }
     
+    public GetResolverConfigResponse(){}
 }

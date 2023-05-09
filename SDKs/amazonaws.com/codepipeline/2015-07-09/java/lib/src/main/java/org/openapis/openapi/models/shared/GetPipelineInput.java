@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPipelineInput {
     @JsonProperty("name")
     public String name;
+
     public GetPipelineInput withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class GetPipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public GetPipelineInput withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public GetPipelineInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

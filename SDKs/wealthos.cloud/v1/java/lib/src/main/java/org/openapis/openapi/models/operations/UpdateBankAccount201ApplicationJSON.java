@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UpdateBankAccount201ApplicationJSON {
     @JsonProperty("account_name")
     public String accountName;
+
     public UpdateBankAccount201ApplicationJSON withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -30,6 +31,7 @@ public class UpdateBankAccount201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_status")
     public UpdateBankAccount201ApplicationJSONAccountStatusEnum accountStatus;
+
     public UpdateBankAccount201ApplicationJSON withAccountStatus(UpdateBankAccount201ApplicationJSONAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -41,6 +43,7 @@ public class UpdateBankAccount201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_account_id")
     public String bankAccountId;
+
     public UpdateBankAccount201ApplicationJSON withBankAccountId(String bankAccountId) {
         this.bankAccountId = bankAccountId;
         return this;
@@ -51,6 +54,7 @@ public class UpdateBankAccount201ApplicationJSON {
      */
     @JsonProperty("bank_account_number")
     public String bankAccountNumber;
+
     public UpdateBankAccount201ApplicationJSON withBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
         return this;
@@ -59,6 +63,7 @@ public class UpdateBankAccount201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("building_society_roll_number")
     public String buildingSocietyRollNumber;
+
     public UpdateBankAccount201ApplicationJSON withBuildingSocietyRollNumber(String buildingSocietyRollNumber) {
         this.buildingSocietyRollNumber = buildingSocietyRollNumber;
         return this;
@@ -69,6 +74,7 @@ public class UpdateBankAccount201ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public UpdateBankAccount201ApplicationJSON withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -79,6 +85,7 @@ public class UpdateBankAccount201ApplicationJSON {
      */
     @JsonProperty("default_account")
     public UpdateBankAccount201ApplicationJSONDefaultAccountEnum defaultAccount;
+
     public UpdateBankAccount201ApplicationJSON withDefaultAccount(UpdateBankAccount201ApplicationJSONDefaultAccountEnum defaultAccount) {
         this.defaultAccount = defaultAccount;
         return this;
@@ -86,6 +93,7 @@ public class UpdateBankAccount201ApplicationJSON {
     
     @JsonProperty("investor_id")
     public String investorId;
+
     public UpdateBankAccount201ApplicationJSON withInvestorId(String investorId) {
         this.investorId = investorId;
         return this;
@@ -94,6 +102,7 @@ public class UpdateBankAccount201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_version")
     public Long referenceVersion;
+
     public UpdateBankAccount201ApplicationJSON withReferenceVersion(Long referenceVersion) {
         this.referenceVersion = referenceVersion;
         return this;
@@ -102,6 +111,7 @@ public class UpdateBankAccount201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_code")
     public String sortCode;
+
     public UpdateBankAccount201ApplicationJSON withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
@@ -112,9 +122,16 @@ public class UpdateBankAccount201ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public UpdateBankAccount201ApplicationJSON withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public UpdateBankAccount201ApplicationJSON(@JsonProperty("account_name") String accountName, @JsonProperty("bank_account_number") String bankAccountNumber, @JsonProperty("default_account") UpdateBankAccount201ApplicationJSONDefaultAccountEnum defaultAccount, @JsonProperty("investor_id") String investorId) {
+        this.accountName = accountName;
+        this.bankAccountNumber = bankAccountNumber;
+        this.defaultAccount = defaultAccount;
+        this.investorId = investorId;
+  }
 }

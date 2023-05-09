@@ -19,6 +19,7 @@ public class DestinyResponsesDestinyProfileResponseProfileKiosks {
      */
     
     public DestinyComponentsKiosksDestinyKiosksComponent data;
+
     public DestinyResponsesDestinyProfileResponseProfileKiosks withData(DestinyComponentsKiosksDestinyKiosksComponent data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class DestinyResponsesDestinyProfileResponseProfileKiosks {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseProfileKiosks withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -36,9 +38,11 @@ public class DestinyResponsesDestinyProfileResponseProfileKiosks {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseProfileKiosks withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseProfileKiosks(){}
 }

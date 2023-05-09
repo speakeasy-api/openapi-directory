@@ -15,6 +15,7 @@ public class ConnectorRuntimeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorSuppliedValueOptions")
     public String[] connectorSuppliedValueOptions;
+
     public ConnectorRuntimeSetting withConnectorSuppliedValueOptions(String[] connectorSuppliedValueOptions) {
         this.connectorSuppliedValueOptions = connectorSuppliedValueOptions;
         return this;
@@ -23,6 +24,7 @@ public class ConnectorRuntimeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public String dataType;
+
     public ConnectorRuntimeSetting withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -31,6 +33,7 @@ public class ConnectorRuntimeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConnectorRuntimeSetting withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class ConnectorRuntimeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRequired")
     public Boolean isRequired;
+
     public ConnectorRuntimeSetting withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -47,6 +51,7 @@ public class ConnectorRuntimeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ConnectorRuntimeSetting withKey(String key) {
         this.key = key;
         return this;
@@ -55,6 +60,7 @@ public class ConnectorRuntimeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ConnectorRuntimeSetting withLabel(String label) {
         this.label = label;
         return this;
@@ -63,9 +69,11 @@ public class ConnectorRuntimeSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public ConnectorRuntimeSetting withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public ConnectorRuntimeSetting(){}
 }

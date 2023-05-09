@@ -15,6 +15,7 @@ public class UpdateorderFormconfigurationRequestApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public UpdateorderFormconfigurationRequestApps withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -26,6 +27,7 @@ public class UpdateorderFormconfigurationRequestApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdateorderFormconfigurationRequestApps withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class UpdateorderFormconfigurationRequestApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("major")
     public Long major;
+
     public UpdateorderFormconfigurationRequestApps withMajor(Long major) {
         this.major = major;
         return this;
     }
     
+    public UpdateorderFormconfigurationRequestApps(){}
 }

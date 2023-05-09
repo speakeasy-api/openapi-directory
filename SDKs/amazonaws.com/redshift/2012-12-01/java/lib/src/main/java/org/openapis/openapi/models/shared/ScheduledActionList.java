@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ScheduledActionList {
     
     public OffsetDateTime endTime;
+
     public ScheduledActionList withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledActionList {
     
     
     public String iamRole;
+
     public ScheduledActionList withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -26,6 +28,7 @@ public class ScheduledActionList {
     
     
     public OffsetDateTime[] nextInvocations;
+
     public ScheduledActionList withNextInvocations(OffsetDateTime[] nextInvocations) {
         this.nextInvocations = nextInvocations;
         return this;
@@ -33,6 +36,7 @@ public class ScheduledActionList {
     
     
     public String schedule;
+
     public ScheduledActionList withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -40,6 +44,7 @@ public class ScheduledActionList {
     
     
     public String scheduledActionDescription;
+
     public ScheduledActionList withScheduledActionDescription(String scheduledActionDescription) {
         this.scheduledActionDescription = scheduledActionDescription;
         return this;
@@ -47,6 +52,7 @@ public class ScheduledActionList {
     
     
     public String scheduledActionName;
+
     public ScheduledActionList withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -54,6 +60,7 @@ public class ScheduledActionList {
     
     
     public OffsetDateTime startTime;
+
     public ScheduledActionList withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -61,6 +68,7 @@ public class ScheduledActionList {
     
     
     public ScheduledActionStateEnum state;
+
     public ScheduledActionList withState(ScheduledActionStateEnum state) {
         this.state = state;
         return this;
@@ -68,9 +76,11 @@ public class ScheduledActionList {
     
     
     public ScheduledActionType targetAction;
+
     public ScheduledActionList withTargetAction(ScheduledActionType targetAction) {
         this.targetAction = targetAction;
         return this;
     }
     
+    public ScheduledActionList(){}
 }

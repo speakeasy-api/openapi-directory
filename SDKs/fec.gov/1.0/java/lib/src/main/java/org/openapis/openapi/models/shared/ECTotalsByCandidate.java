@@ -12,6 +12,7 @@ public class ECTotalsByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public ECTotalsByCandidate withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -20,6 +21,7 @@ public class ECTotalsByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ECTotalsByCandidate withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -28,9 +30,11 @@ public class ECTotalsByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ECTotalsByCandidate withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ECTotalsByCandidate(){}
 }

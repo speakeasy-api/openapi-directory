@@ -23,6 +23,7 @@ public class GiftCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_money")
     public Money balanceMoney;
+
     public GiftCard withBalanceMoney(Money balanceMoney) {
         this.balanceMoney = balanceMoney;
         return this;
@@ -38,6 +39,7 @@ public class GiftCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GiftCard withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -49,6 +51,7 @@ public class GiftCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_ids")
     public String[] customerIds;
+
     public GiftCard withCustomerIds(String[] customerIds) {
         this.customerIds = customerIds;
         return this;
@@ -60,6 +63,7 @@ public class GiftCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gan")
     public String gan;
+
     public GiftCard withGan(String gan) {
         this.gan = gan;
         return this;
@@ -68,6 +72,7 @@ public class GiftCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gan_source")
     public Object ganSource;
+
     public GiftCard withGanSource(Object ganSource) {
         this.ganSource = ganSource;
         return this;
@@ -79,6 +84,7 @@ public class GiftCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GiftCard withId(String id) {
         this.id = id;
         return this;
@@ -87,6 +93,7 @@ public class GiftCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public Object state;
+
     public GiftCard withState(Object state) {
         this.state = state;
         return this;
@@ -94,9 +101,13 @@ public class GiftCard {
     
     @JsonProperty("type")
     public Object type;
+
     public GiftCard withType(Object type) {
         this.type = type;
         return this;
     }
     
+    public GiftCard(@JsonProperty("type") Object type) {
+        this.type = type;
+  }
 }

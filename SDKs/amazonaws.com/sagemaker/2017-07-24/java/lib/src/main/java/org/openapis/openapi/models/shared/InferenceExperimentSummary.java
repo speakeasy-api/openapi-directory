@@ -22,6 +22,7 @@ public class InferenceExperimentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionTime")
     public OffsetDateTime completionTime;
+
     public InferenceExperimentSummary withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class InferenceExperimentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public InferenceExperimentSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -39,6 +41,7 @@ public class InferenceExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public InferenceExperimentSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class InferenceExperimentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public InferenceExperimentSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -55,6 +59,7 @@ public class InferenceExperimentSummary {
     
     @JsonProperty("Name")
     public String name;
+
     public InferenceExperimentSummary withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +68,7 @@ public class InferenceExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public InferenceExperimentSummary withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -71,6 +77,7 @@ public class InferenceExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public InferenceExperimentSchedule schedule;
+
     public InferenceExperimentSummary withSchedule(InferenceExperimentSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -78,6 +85,7 @@ public class InferenceExperimentSummary {
     
     @JsonProperty("Status")
     public InferenceExperimentStatusEnum status;
+
     public InferenceExperimentSummary withStatus(InferenceExperimentStatusEnum status) {
         this.status = status;
         return this;
@@ -86,6 +94,7 @@ public class InferenceExperimentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public InferenceExperimentSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -93,9 +102,17 @@ public class InferenceExperimentSummary {
     
     @JsonProperty("Type")
     public InferenceExperimentTypeEnum type;
+
     public InferenceExperimentSummary withType(InferenceExperimentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InferenceExperimentSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("Name") String name, @JsonProperty("Status") InferenceExperimentStatusEnum status, @JsonProperty("Type") InferenceExperimentTypeEnum type) {
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

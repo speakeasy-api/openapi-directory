@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDedicatedIpPoolResponse {
@@ -12,6 +13,7 @@ public class CreateDedicatedIpPoolResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateDedicatedIpPoolResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDedicatedIpPoolResponse {
      */
     
     public Object badRequestException;
+
     public CreateDedicatedIpPoolResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class CreateDedicatedIpPoolResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateDedicatedIpPoolResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDedicatedIpPoolResponse {
     
     
     public String contentType;
+
     public CreateDedicatedIpPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateDedicatedIpPoolResponse {
      */
     
     public java.util.Map<String, Object> createDedicatedIpPoolResponse;
+
     public CreateDedicatedIpPoolResponse withCreateDedicatedIpPoolResponse(java.util.Map<String, Object> createDedicatedIpPoolResponse) {
         this.createDedicatedIpPoolResponse = createDedicatedIpPoolResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateDedicatedIpPoolResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDedicatedIpPoolResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateDedicatedIpPoolResponse {
     
     
     public Integer statusCode;
+
     public CreateDedicatedIpPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateDedicatedIpPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDedicatedIpPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateDedicatedIpPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateDedicatedIpPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateDedicatedIpPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

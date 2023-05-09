@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminSetUserSettingsResponse {
@@ -12,6 +13,7 @@ public class AdminSetUserSettingsResponse {
      */
     
     public java.util.Map<String, Object> adminSetUserSettingsResponse;
+
     public AdminSetUserSettingsResponse withAdminSetUserSettingsResponse(java.util.Map<String, Object> adminSetUserSettingsResponse) {
         this.adminSetUserSettingsResponse = adminSetUserSettingsResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminSetUserSettingsResponse {
     
     
     public String contentType;
+
     public AdminSetUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminSetUserSettingsResponse {
      */
     
     public Object internalErrorException;
+
     public AdminSetUserSettingsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminSetUserSettingsResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminSetUserSettingsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminSetUserSettingsResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminSetUserSettingsResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class AdminSetUserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminSetUserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AdminSetUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public AdminSetUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AdminSetUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminSetUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class AdminSetUserSettingsResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminSetUserSettingsResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminSetUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

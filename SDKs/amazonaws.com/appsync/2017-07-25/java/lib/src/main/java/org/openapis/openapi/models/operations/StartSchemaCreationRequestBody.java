@@ -12,9 +12,13 @@ public class StartSchemaCreationRequestBody {
      */
     @JsonProperty("definition")
     public String definition;
+
     public StartSchemaCreationRequestBody withDefinition(String definition) {
         this.definition = definition;
         return this;
     }
     
+    public StartSchemaCreationRequestBody(@JsonProperty("definition") String definition) {
+        this.definition = definition;
+  }
 }

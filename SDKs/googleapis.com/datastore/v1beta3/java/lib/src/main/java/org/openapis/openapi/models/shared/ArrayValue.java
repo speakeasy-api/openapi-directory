@@ -18,9 +18,11 @@ public class ArrayValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Value[] values;
+
     public ArrayValue withValues(Value[] values) {
         this.values = values;
         return this;
     }
     
+    public ArrayValue(){}
 }

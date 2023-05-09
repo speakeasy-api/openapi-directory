@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersScoutingObservationsScoutingObservationIdRequest {
@@ -12,9 +13,13 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoutingObservationId")
     public String scoutingObservationId;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdRequest withScoutingObservationId(String scoutingObservationId) {
         this.scoutingObservationId = scoutingObservationId;
         return this;
     }
     
+    public GetV4LayersScoutingObservationsScoutingObservationIdRequest(@JsonProperty("scoutingObservationId") String scoutingObservationId) {
+        this.scoutingObservationId = scoutingObservationId;
+  }
 }

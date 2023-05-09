@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelInstanceRefreshType {
     
     public String autoScalingGroupName;
+
     public CancelInstanceRefreshType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
     }
     
+    public CancelInstanceRefreshType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

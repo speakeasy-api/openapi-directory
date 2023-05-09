@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ReadSetListItem {
     @JsonProperty("arn")
     public String arn;
+
     public ReadSetListItem withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ReadSetListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ReadSetListItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class ReadSetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReadSetListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class ReadSetListItem {
     
     @JsonProperty("fileType")
     public FileTypeEnum fileType;
+
     public ReadSetListItem withFileType(FileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
@@ -50,6 +54,7 @@ public class ReadSetListItem {
     
     @JsonProperty("id")
     public String id;
+
     public ReadSetListItem withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +63,7 @@ public class ReadSetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReadSetListItem withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +72,7 @@ public class ReadSetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public ReadSetListItem withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
@@ -74,6 +81,7 @@ public class ReadSetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleId")
     public String sampleId;
+
     public ReadSetListItem withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
@@ -85,6 +93,7 @@ public class ReadSetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceInformation")
     public SequenceInformation sequenceInformation;
+
     public ReadSetListItem withSequenceInformation(SequenceInformation sequenceInformation) {
         this.sequenceInformation = sequenceInformation;
         return this;
@@ -92,6 +101,7 @@ public class ReadSetListItem {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public ReadSetListItem withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -99,6 +109,7 @@ public class ReadSetListItem {
     
     @JsonProperty("status")
     public ReadSetStatusEnum status;
+
     public ReadSetListItem withStatus(ReadSetStatusEnum status) {
         this.status = status;
         return this;
@@ -107,9 +118,18 @@ public class ReadSetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectId")
     public String subjectId;
+
     public ReadSetListItem withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
     }
     
+    public ReadSetListItem(@JsonProperty("arn") String arn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("fileType") FileTypeEnum fileType, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetStatusEnum status) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.fileType = fileType;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

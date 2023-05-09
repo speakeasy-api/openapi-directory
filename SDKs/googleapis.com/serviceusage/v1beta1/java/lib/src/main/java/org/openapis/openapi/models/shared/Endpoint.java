@@ -18,6 +18,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public String[] aliases;
+
     public Endpoint withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -29,6 +30,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCors")
     public Boolean allowCors;
+
     public Endpoint withAllowCors(Boolean allowCors) {
         this.allowCors = allowCors;
         return this;
@@ -40,6 +42,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Endpoint withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public Endpoint withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public Endpoint(){}
 }

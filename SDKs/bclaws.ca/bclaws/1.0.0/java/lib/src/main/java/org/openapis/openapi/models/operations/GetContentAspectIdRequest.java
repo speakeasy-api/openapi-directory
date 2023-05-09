@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentAspectIdRequest {
@@ -12,9 +13,13 @@ public class GetContentAspectIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
     public GetContentAspectIDAspectIDEnum aspectId;
+
     public GetContentAspectIdRequest withAspectId(GetContentAspectIDAspectIDEnum aspectId) {
         this.aspectId = aspectId;
         return this;
     }
     
+    public GetContentAspectIdRequest(@JsonProperty("aspectId") GetContentAspectIDAspectIDEnum aspectId) {
+        this.aspectId = aspectId;
+  }
 }

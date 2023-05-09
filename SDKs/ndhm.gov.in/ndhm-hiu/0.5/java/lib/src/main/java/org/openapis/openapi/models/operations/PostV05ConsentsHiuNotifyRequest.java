@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentsHiuNotifyRequest {
@@ -12,6 +13,7 @@ public class PostV05ConsentsHiuNotifyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05ConsentsHiuNotifyRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05ConsentsHiuNotifyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIUConsentNotificationEvent hiuConsentNotificationEvent;
+
     public PostV05ConsentsHiuNotifyRequest withHIUConsentNotificationEvent(org.openapis.openapi.models.shared.HIUConsentNotificationEvent hiuConsentNotificationEvent) {
         this.hiuConsentNotificationEvent = hiuConsentNotificationEvent;
         return this;
@@ -29,9 +32,15 @@ public class PostV05ConsentsHiuNotifyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05ConsentsHiuNotifyRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05ConsentsHiuNotifyRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIUConsentNotificationEvent") org.openapis.openapi.models.shared.HIUConsentNotificationEvent hiuConsentNotificationEvent, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.hiuConsentNotificationEvent = hiuConsentNotificationEvent;
+        this.xHiuId = xHiuId;
+  }
 }

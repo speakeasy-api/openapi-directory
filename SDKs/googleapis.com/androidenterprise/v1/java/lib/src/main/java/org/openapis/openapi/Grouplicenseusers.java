@@ -58,11 +58,9 @@ public class Grouplicenseusers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseGrouplicenseusersListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseGrouplicenseusersListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseGrouplicenseusersListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseGrouplicenseusersListResponse(contentType, httpRes.statusCode()) {{
             groupLicenseUsersListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

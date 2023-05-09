@@ -15,6 +15,7 @@ public class CreateGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantId")
     public String grantId;
+
     public CreateGrantResponse withGrantId(String grantId) {
         this.grantId = grantId;
         return this;
@@ -23,9 +24,11 @@ public class CreateGrantResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantToken")
     public String grantToken;
+
     public CreateGrantResponse withGrantToken(String grantToken) {
         this.grantToken = grantToken;
         return this;
     }
     
+    public CreateGrantResponse(){}
 }

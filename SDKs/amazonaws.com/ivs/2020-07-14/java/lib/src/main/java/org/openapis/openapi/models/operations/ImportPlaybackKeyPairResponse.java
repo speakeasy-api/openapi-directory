@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportPlaybackKeyPairResponse {
@@ -12,6 +13,7 @@ public class ImportPlaybackKeyPairResponse {
      */
     
     public Object accessDeniedException;
+
     public ImportPlaybackKeyPairResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ImportPlaybackKeyPairResponse {
      */
     
     public Object conflictException;
+
     public ImportPlaybackKeyPairResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ImportPlaybackKeyPairResponse {
     
     
     public String contentType;
+
     public ImportPlaybackKeyPairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ImportPlaybackKeyPairResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportPlaybackKeyPairResponse importPlaybackKeyPairResponse;
+
     public ImportPlaybackKeyPairResponse withImportPlaybackKeyPairResponse(org.openapis.openapi.models.shared.ImportPlaybackKeyPairResponse importPlaybackKeyPairResponse) {
         this.importPlaybackKeyPairResponse = importPlaybackKeyPairResponse;
         return this;
@@ -49,6 +54,7 @@ public class ImportPlaybackKeyPairResponse {
      */
     
     public Object pendingVerification;
+
     public ImportPlaybackKeyPairResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -56,6 +62,7 @@ public class ImportPlaybackKeyPairResponse {
     
     
     public Integer statusCode;
+
     public ImportPlaybackKeyPairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ImportPlaybackKeyPairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportPlaybackKeyPairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ImportPlaybackKeyPairResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ImportPlaybackKeyPairResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class ImportPlaybackKeyPairResponse {
      */
     
     public Object validationException;
+
     public ImportPlaybackKeyPairResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ImportPlaybackKeyPairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

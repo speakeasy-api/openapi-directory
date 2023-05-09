@@ -12,6 +12,7 @@ public class IssuesUpdateRequestBodyLabels2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public IssuesUpdateRequestBodyLabels2 withColor(String color) {
         this.color = color;
         return this;
@@ -20,6 +21,7 @@ public class IssuesUpdateRequestBodyLabels2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public IssuesUpdateRequestBodyLabels2 withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class IssuesUpdateRequestBodyLabels2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public IssuesUpdateRequestBodyLabels2 withId(Long id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class IssuesUpdateRequestBodyLabels2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IssuesUpdateRequestBodyLabels2 withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IssuesUpdateRequestBodyLabels2(){}
 }

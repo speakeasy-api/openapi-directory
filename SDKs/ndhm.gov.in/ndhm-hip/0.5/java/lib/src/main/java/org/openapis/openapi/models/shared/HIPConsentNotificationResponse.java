@@ -17,6 +17,7 @@ public class HIPConsentNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgement")
     public ConsentAcknowledgement acknowledgement;
+
     public HIPConsentNotificationResponse withAcknowledgement(ConsentAcknowledgement acknowledgement) {
         this.acknowledgement = acknowledgement;
         return this;
@@ -25,6 +26,7 @@ public class HIPConsentNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public HIPConsentNotificationResponse withError(Error error) {
         this.error = error;
         return this;
@@ -35,6 +37,7 @@ public class HIPConsentNotificationResponse {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public HIPConsentNotificationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class HIPConsentNotificationResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public HIPConsentNotificationResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class HIPConsentNotificationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIPConsentNotificationResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIPConsentNotificationResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

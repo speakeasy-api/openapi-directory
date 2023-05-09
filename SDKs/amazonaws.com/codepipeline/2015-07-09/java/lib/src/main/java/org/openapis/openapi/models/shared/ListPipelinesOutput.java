@@ -15,6 +15,7 @@ public class ListPipelinesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPipelinesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPipelinesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelines")
     public PipelineSummary[] pipelines;
+
     public ListPipelinesOutput withPipelines(PipelineSummary[] pipelines) {
         this.pipelines = pipelines;
         return this;
     }
     
+    public ListPipelinesOutput(){}
 }

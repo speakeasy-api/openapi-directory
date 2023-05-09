@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartBuildResponse {
@@ -12,6 +13,7 @@ public class StartBuildResponse {
      */
     
     public Object accountLimitExceededException;
+
     public StartBuildResponse withAccountLimitExceededException(Object accountLimitExceededException) {
         this.accountLimitExceededException = accountLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class StartBuildResponse {
     
     
     public String contentType;
+
     public StartBuildResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartBuildResponse {
      */
     
     public Object invalidInputException;
+
     public StartBuildResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class StartBuildResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartBuildResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartBuildResponse {
      */
     
     public org.openapis.openapi.models.shared.StartBuildOutput startBuildOutput;
+
     public StartBuildResponse withStartBuildOutput(org.openapis.openapi.models.shared.StartBuildOutput startBuildOutput) {
         this.startBuildOutput = startBuildOutput;
         return this;
@@ -56,6 +62,7 @@ public class StartBuildResponse {
     
     
     public Integer statusCode;
+
     public StartBuildResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartBuildResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartBuildResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartBuildResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

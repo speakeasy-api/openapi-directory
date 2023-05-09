@@ -15,6 +15,7 @@ public class ModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelOptions")
     public ModelDefinitionModelOptions modelOptions;
+
     public ModelDefinition withModelOptions(ModelDefinitionModelOptions modelOptions) {
         this.modelOptions = modelOptions;
         return this;
@@ -26,9 +27,11 @@ public class ModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingRuns")
     public BqmlTrainingRun[] trainingRuns;
+
     public ModelDefinition withTrainingRuns(BqmlTrainingRun[] trainingRuns) {
         this.trainingRuns = trainingRuns;
         return this;
     }
     
+    public ModelDefinition(){}
 }

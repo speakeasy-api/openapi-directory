@@ -15,9 +15,11 @@ public class ConfirmPublicVirtualInterfaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceState")
     public VirtualInterfaceStateEnum virtualInterfaceState;
+
     public ConfirmPublicVirtualInterfaceResponse withVirtualInterfaceState(VirtualInterfaceStateEnum virtualInterfaceState) {
         this.virtualInterfaceState = virtualInterfaceState;
         return this;
     }
     
+    public ConfirmPublicVirtualInterfaceResponse(){}
 }

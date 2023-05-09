@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SearchInIndexRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributesToCrop")
     public String attributesToCrop;
+
     public SearchInIndexRequest withAttributesToCrop(String attributesToCrop) {
         this.attributesToCrop = attributesToCrop;
         return this;
@@ -16,6 +17,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributesToHighlight")
     public String attributesToHighlight;
+
     public SearchInIndexRequest withAttributesToHighlight(String attributesToHighlight) {
         this.attributesToHighlight = attributesToHighlight;
         return this;
@@ -23,6 +25,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributesToRetrieve")
     public String attributesToRetrieve;
+
     public SearchInIndexRequest withAttributesToRetrieve(String attributesToRetrieve) {
         this.attributesToRetrieve = attributesToRetrieve;
         return this;
@@ -30,6 +33,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cropLength")
     public String cropLength;
+
     public SearchInIndexRequest withCropLength(String cropLength) {
         this.cropLength = cropLength;
         return this;
@@ -37,6 +41,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cropMarker")
     public String cropMarker;
+
     public SearchInIndexRequest withCropMarker(String cropMarker) {
         this.cropMarker = cropMarker;
         return this;
@@ -44,6 +49,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
     public String facets;
+
     public SearchInIndexRequest withFacets(String facets) {
         this.facets = facets;
         return this;
@@ -51,6 +57,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public SearchInIndexRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -58,6 +65,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlightPostTag")
     public String highlightPostTag;
+
     public SearchInIndexRequest withHighlightPostTag(String highlightPostTag) {
         this.highlightPostTag = highlightPostTag;
         return this;
@@ -65,6 +73,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlightPreTag")
     public String highlightPreTag;
+
     public SearchInIndexRequest withHighlightPreTag(String highlightPreTag) {
         this.highlightPreTag = highlightPreTag;
         return this;
@@ -72,6 +81,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hitsPerPage")
     public String hitsPerPage;
+
     public SearchInIndexRequest withHitsPerPage(String hitsPerPage) {
         this.hitsPerPage = hitsPerPage;
         return this;
@@ -79,6 +89,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public SearchInIndexRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -86,6 +97,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matchingStrategy")
     public String matchingStrategy;
+
     public SearchInIndexRequest withMatchingStrategy(String matchingStrategy) {
         this.matchingStrategy = matchingStrategy;
         return this;
@@ -93,6 +105,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public SearchInIndexRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -100,6 +113,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public SearchInIndexRequest withPage(String page) {
         this.page = page;
         return this;
@@ -107,6 +121,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchInIndexRequest withQ(String q) {
         this.q = q;
         return this;
@@ -114,6 +129,7 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showMatchesPosition")
     public String showMatchesPosition;
+
     public SearchInIndexRequest withShowMatchesPosition(String showMatchesPosition) {
         this.showMatchesPosition = showMatchesPosition;
         return this;
@@ -121,9 +137,11 @@ public class SearchInIndexRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public SearchInIndexRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public SearchInIndexRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudWatchDimensionConfiguration {
     @JsonProperty("DefaultDimensionValue")
     public String defaultDimensionValue;
+
     public CloudWatchDimensionConfiguration withDefaultDimensionValue(String defaultDimensionValue) {
         this.defaultDimensionValue = defaultDimensionValue;
         return this;
@@ -19,6 +20,7 @@ public class CloudWatchDimensionConfiguration {
     
     @JsonProperty("DimensionName")
     public String dimensionName;
+
     public CloudWatchDimensionConfiguration withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -26,9 +28,15 @@ public class CloudWatchDimensionConfiguration {
     
     @JsonProperty("DimensionValueSource")
     public DimensionValueSourceEnum dimensionValueSource;
+
     public CloudWatchDimensionConfiguration withDimensionValueSource(DimensionValueSourceEnum dimensionValueSource) {
         this.dimensionValueSource = dimensionValueSource;
         return this;
     }
     
+    public CloudWatchDimensionConfiguration(@JsonProperty("DefaultDimensionValue") String defaultDimensionValue, @JsonProperty("DimensionName") String dimensionName, @JsonProperty("DimensionValueSource") DimensionValueSourceEnum dimensionValueSource) {
+        this.defaultDimensionValue = defaultDimensionValue;
+        this.dimensionName = dimensionName;
+        this.dimensionValueSource = dimensionValueSource;
+  }
 }

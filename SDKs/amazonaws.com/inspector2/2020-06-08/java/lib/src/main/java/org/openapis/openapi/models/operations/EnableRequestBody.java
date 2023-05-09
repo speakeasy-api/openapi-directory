@@ -15,6 +15,7 @@ public class EnableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public EnableRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,6 +27,7 @@ public class EnableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public EnableRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,9 +38,13 @@ public class EnableRequestBody {
      */
     @JsonProperty("resourceTypes")
     public org.openapis.openapi.models.shared.ResourceScanTypeEnum[] resourceTypes;
+
     public EnableRequestBody withResourceTypes(org.openapis.openapi.models.shared.ResourceScanTypeEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public EnableRequestBody(@JsonProperty("resourceTypes") org.openapis.openapi.models.shared.ResourceScanTypeEnum[] resourceTypes) {
+        this.resourceTypes = resourceTypes;
+  }
 }

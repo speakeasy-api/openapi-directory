@@ -15,9 +15,13 @@ public class PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestServer {
      */
     @JsonProperty("id")
     public Double id;
+
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestServer withId(Double id) {
         this.id = id;
         return this;
     }
     
+    public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestServer(@JsonProperty("id") Double id) {
+        this.id = id;
+  }
 }

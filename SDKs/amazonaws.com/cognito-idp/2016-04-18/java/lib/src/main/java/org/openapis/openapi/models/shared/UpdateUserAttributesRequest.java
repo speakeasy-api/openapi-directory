@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUserAttributesRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public UpdateUserAttributesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,6 +23,7 @@ public class UpdateUserAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public UpdateUserAttributesRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -29,9 +31,14 @@ public class UpdateUserAttributesRequest {
     
     @JsonProperty("UserAttributes")
     public AttributeType[] userAttributes;
+
     public UpdateUserAttributesRequest withUserAttributes(AttributeType[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
     }
     
+    public UpdateUserAttributesRequest(@JsonProperty("AccessToken") String accessToken, @JsonProperty("UserAttributes") AttributeType[] userAttributes) {
+        this.accessToken = accessToken;
+        this.userAttributes = userAttributes;
+  }
 }

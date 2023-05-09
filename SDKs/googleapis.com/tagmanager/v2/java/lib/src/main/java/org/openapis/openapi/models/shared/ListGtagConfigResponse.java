@@ -18,6 +18,7 @@ public class ListGtagConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtagConfig")
     public GtagConfig[] gtagConfig;
+
     public ListGtagConfigResponse withGtagConfig(GtagConfig[] gtagConfig) {
         this.gtagConfig = gtagConfig;
         return this;
@@ -29,9 +30,11 @@ public class ListGtagConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListGtagConfigResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListGtagConfigResponse(){}
 }

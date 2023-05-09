@@ -22,6 +22,7 @@ public class CreateSecurityConfigurationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public CreateSecurityConfigurationResponse withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,9 +31,11 @@ public class CreateSecurityConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateSecurityConfigurationResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSecurityConfigurationResponse(){}
 }

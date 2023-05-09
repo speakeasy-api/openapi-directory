@@ -15,6 +15,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marketo")
     public MarketoConnectorOperatorEnum marketo;
+
     public ConnectorOperator withMarketo(MarketoConnectorOperatorEnum marketo) {
         this.marketo = marketo;
         return this;
@@ -23,6 +24,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3ConnectorOperatorEnum s3;
+
     public ConnectorOperator withS3(S3ConnectorOperatorEnum s3) {
         this.s3 = s3;
         return this;
@@ -31,6 +33,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salesforce")
     public SalesforceConnectorOperatorEnum salesforce;
+
     public ConnectorOperator withSalesforce(SalesforceConnectorOperatorEnum salesforce) {
         this.salesforce = salesforce;
         return this;
@@ -39,6 +42,7 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNow")
     public ServiceNowConnectorOperatorEnum serviceNow;
+
     public ConnectorOperator withServiceNow(ServiceNowConnectorOperatorEnum serviceNow) {
         this.serviceNow = serviceNow;
         return this;
@@ -47,9 +51,11 @@ public class ConnectorOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zendesk")
     public ZendeskConnectorOperatorEnum zendesk;
+
     public ConnectorOperator withZendesk(ZendeskConnectorOperatorEnum zendesk) {
         this.zendesk = zendesk;
         return this;
     }
     
+    public ConnectorOperator(){}
 }

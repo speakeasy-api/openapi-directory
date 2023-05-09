@@ -18,6 +18,7 @@ public class AclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public AclRule withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class AclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AclRule withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class AclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AclRule withKind(String kind) {
         this.kind = kind;
         return this;
@@ -56,6 +59,7 @@ public class AclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public AclRule withRole(String role) {
         this.role = role;
         return this;
@@ -67,9 +71,11 @@ public class AclRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public AclRuleScope scope;
+
     public AclRule withScope(AclRuleScope scope) {
         this.scope = scope;
         return this;
     }
     
+    public AclRule(){}
 }

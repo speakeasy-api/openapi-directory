@@ -18,6 +18,7 @@ public class TlsContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateContext")
     public TlsCertificateContext certificateContext;
+
     public TlsContext withCertificateContext(TlsCertificateContext certificateContext) {
         this.certificateContext = certificateContext;
         return this;
@@ -29,9 +30,11 @@ public class TlsContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationContext")
     public TlsValidationContext validationContext;
+
     public TlsContext withValidationContext(TlsValidationContext validationContext) {
         this.validationContext = validationContext;
         return this;
     }
     
+    public TlsContext(){}
 }

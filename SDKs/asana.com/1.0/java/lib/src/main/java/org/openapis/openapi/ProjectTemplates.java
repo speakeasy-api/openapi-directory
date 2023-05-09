@@ -69,12 +69,10 @@ public class ProjectTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectTemplateResponse res = new org.openapis.openapi.models.operations.GetProjectTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetProjectTemplateResponse res = new org.openapis.openapi.models.operations.GetProjectTemplateResponse(contentType, httpRes.statusCode()) {{
             getProjectTemplate200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,12 +121,10 @@ public class ProjectTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectTemplatesResponse res = new org.openapis.openapi.models.operations.GetProjectTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GetProjectTemplatesResponse res = new org.openapis.openapi.models.operations.GetProjectTemplatesResponse(contentType, httpRes.statusCode()) {{
             getProjectTemplates200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,12 +173,10 @@ public class ProjectTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectTemplatesForTeamResponse res = new org.openapis.openapi.models.operations.GetProjectTemplatesForTeamResponse() {{
+        org.openapis.openapi.models.operations.GetProjectTemplatesForTeamResponse res = new org.openapis.openapi.models.operations.GetProjectTemplatesForTeamResponse(contentType, httpRes.statusCode()) {{
             getProjectTemplatesForTeam200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,12 +231,10 @@ public class ProjectTemplates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InstantiateProjectResponse res = new org.openapis.openapi.models.operations.InstantiateProjectResponse() {{
+        org.openapis.openapi.models.operations.InstantiateProjectResponse res = new org.openapis.openapi.models.operations.InstantiateProjectResponse(contentType, httpRes.statusCode()) {{
             instantiateProject201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

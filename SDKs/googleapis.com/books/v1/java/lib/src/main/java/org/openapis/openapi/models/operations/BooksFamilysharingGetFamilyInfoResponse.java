@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksFamilysharingGetFamilyInfoResponse {
     
     public String contentType;
+
     public BooksFamilysharingGetFamilyInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BooksFamilysharingGetFamilyInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.FamilyInfo familyInfo;
+
     public BooksFamilysharingGetFamilyInfoResponse withFamilyInfo(org.openapis.openapi.models.shared.FamilyInfo familyInfo) {
         this.familyInfo = familyInfo;
         return this;
@@ -26,6 +29,7 @@ public class BooksFamilysharingGetFamilyInfoResponse {
     
     
     public Integer statusCode;
+
     public BooksFamilysharingGetFamilyInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksFamilysharingGetFamilyInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksFamilysharingGetFamilyInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksFamilysharingGetFamilyInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

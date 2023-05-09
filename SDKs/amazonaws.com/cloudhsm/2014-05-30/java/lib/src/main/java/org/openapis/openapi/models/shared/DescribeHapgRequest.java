@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeHapgRequest {
     @JsonProperty("HapgArn")
     public String hapgArn;
+
     public DescribeHapgRequest withHapgArn(String hapgArn) {
         this.hapgArn = hapgArn;
         return this;
     }
     
+    public DescribeHapgRequest(@JsonProperty("HapgArn") String hapgArn) {
+        this.hapgArn = hapgArn;
+  }
 }

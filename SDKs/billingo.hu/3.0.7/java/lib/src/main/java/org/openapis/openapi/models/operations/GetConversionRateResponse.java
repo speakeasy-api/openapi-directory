@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConversionRateResponse {
@@ -12,6 +13,7 @@ public class GetConversionRateResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public GetConversionRateResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetConversionRateResponse {
     
     
     public String contentType;
+
     public GetConversionRateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetConversionRateResponse {
      */
     
     public org.openapis.openapi.models.shared.ConversationRate conversationRate;
+
     public GetConversionRateResponse withConversationRate(org.openapis.openapi.models.shared.ConversationRate conversationRate) {
         this.conversationRate = conversationRate;
         return this;
@@ -36,6 +40,7 @@ public class GetConversionRateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetConversionRateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class GetConversionRateResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public GetConversionRateResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetConversionRateResponse {
     
     
     public Integer statusCode;
+
     public GetConversionRateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class GetConversionRateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConversionRateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class GetConversionRateResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public GetConversionRateResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public GetConversionRateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class FindCampaignSoundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindCampaignSoundsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindCampaignSoundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public FindCampaignSoundsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +34,7 @@ public class FindCampaignSoundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeArchived")
     public Boolean includeArchived;
+
     public FindCampaignSoundsRequest withIncludeArchived(Boolean includeArchived) {
         this.includeArchived = includeArchived;
         return this;
@@ -42,6 +45,7 @@ public class FindCampaignSoundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePending")
     public Boolean includePending;
+
     public FindCampaignSoundsRequest withIncludePending(Boolean includePending) {
         this.includePending = includePending;
         return this;
@@ -52,6 +56,7 @@ public class FindCampaignSoundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeScrubbed")
     public Boolean includeScrubbed;
+
     public FindCampaignSoundsRequest withIncludeScrubbed(Boolean includeScrubbed) {
         this.includeScrubbed = includeScrubbed;
         return this;
@@ -62,6 +67,7 @@ public class FindCampaignSoundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindCampaignSoundsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -72,9 +78,11 @@ public class FindCampaignSoundsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindCampaignSoundsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public FindCampaignSoundsRequest(){}
 }

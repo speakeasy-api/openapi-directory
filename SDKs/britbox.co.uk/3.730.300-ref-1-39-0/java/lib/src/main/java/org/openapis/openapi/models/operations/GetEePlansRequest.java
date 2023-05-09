@@ -22,9 +22,11 @@ public class GetEePlansRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetEePlansRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetEePlansRequest(){}
 }

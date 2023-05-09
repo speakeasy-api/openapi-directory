@@ -48,10 +48,8 @@ public class IdentifierPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrefixCollectionResponse res = new org.openapis.openapi.models.operations.GetPrefixCollectionResponse() {{
+        org.openapis.openapi.models.operations.GetPrefixCollectionResponse res = new org.openapis.openapi.models.operations.GetPrefixCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -80,10 +78,8 @@ public class IdentifierPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrefixContractResponse res = new org.openapis.openapi.models.operations.GetPrefixContractResponse() {{
+        org.openapis.openapi.models.operations.GetPrefixContractResponse res = new org.openapis.openapi.models.operations.GetPrefixContractResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,10 +108,8 @@ public class IdentifierPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrefixExpandResponse res = new org.openapis.openapi.models.operations.GetPrefixExpandResponse() {{
+        org.openapis.openapi.models.operations.GetPrefixExpandResponse res = new org.openapis.openapi.models.operations.GetPrefixExpandResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

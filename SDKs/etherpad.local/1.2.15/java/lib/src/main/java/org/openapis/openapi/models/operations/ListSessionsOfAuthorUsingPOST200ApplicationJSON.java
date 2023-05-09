@@ -15,6 +15,7 @@ public class ListSessionsOfAuthorUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ListSessionsOfAuthorUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ListSessionsOfAuthorUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ListSessionsOfAuthorUsingPOST200ApplicationJSONData data;
+
     public ListSessionsOfAuthorUsingPOST200ApplicationJSON withData(ListSessionsOfAuthorUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class ListSessionsOfAuthorUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ListSessionsOfAuthorUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ListSessionsOfAuthorUsingPOST200ApplicationJSON(){}
 }

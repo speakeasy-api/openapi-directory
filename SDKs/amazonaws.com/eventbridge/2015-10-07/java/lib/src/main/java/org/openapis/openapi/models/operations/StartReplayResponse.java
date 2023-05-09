@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartReplayResponse {
     
     public String contentType;
+
     public StartReplayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartReplayResponse {
      */
     
     public Object internalException;
+
     public StartReplayResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class StartReplayResponse {
      */
     
     public Object invalidEventPatternException;
+
     public StartReplayResponse withInvalidEventPatternException(Object invalidEventPatternException) {
         this.invalidEventPatternException = invalidEventPatternException;
         return this;
@@ -39,6 +43,7 @@ public class StartReplayResponse {
      */
     
     public Object limitExceededException;
+
     public StartReplayResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartReplayResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public StartReplayResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class StartReplayResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartReplayResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class StartReplayResponse {
      */
     
     public org.openapis.openapi.models.shared.StartReplayResponse startReplayResponse;
+
     public StartReplayResponse withStartReplayResponse(org.openapis.openapi.models.shared.StartReplayResponse startReplayResponse) {
         this.startReplayResponse = startReplayResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartReplayResponse {
     
     
     public Integer statusCode;
+
     public StartReplayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartReplayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartReplayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartReplayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

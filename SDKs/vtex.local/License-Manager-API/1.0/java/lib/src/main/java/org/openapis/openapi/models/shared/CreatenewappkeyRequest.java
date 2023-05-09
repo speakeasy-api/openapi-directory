@@ -15,9 +15,13 @@ public class CreatenewappkeyRequest {
      */
     @JsonProperty("label")
     public String label;
+
     public CreatenewappkeyRequest withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public CreatenewappkeyRequest(@JsonProperty("label") String label) {
+        this.label = label;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateOpsItemRelatedItemRequest {
     @JsonProperty("AssociationType")
     public String associationType;
+
     public AssociateOpsItemRelatedItemRequest withAssociationType(String associationType) {
         this.associationType = associationType;
         return this;
@@ -16,6 +17,7 @@ public class AssociateOpsItemRelatedItemRequest {
     
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public AssociateOpsItemRelatedItemRequest withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
@@ -23,6 +25,7 @@ public class AssociateOpsItemRelatedItemRequest {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public AssociateOpsItemRelatedItemRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -30,9 +33,16 @@ public class AssociateOpsItemRelatedItemRequest {
     
     @JsonProperty("ResourceUri")
     public String resourceUri;
+
     public AssociateOpsItemRelatedItemRequest withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
     }
     
+    public AssociateOpsItemRelatedItemRequest(@JsonProperty("AssociationType") String associationType, @JsonProperty("OpsItemId") String opsItemId, @JsonProperty("ResourceType") String resourceType, @JsonProperty("ResourceUri") String resourceUri) {
+        this.associationType = associationType;
+        this.opsItemId = opsItemId;
+        this.resourceType = resourceType;
+        this.resourceUri = resourceUri;
+  }
 }

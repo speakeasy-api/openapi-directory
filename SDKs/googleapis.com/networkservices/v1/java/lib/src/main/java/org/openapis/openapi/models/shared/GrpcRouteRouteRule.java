@@ -18,6 +18,7 @@ public class GrpcRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public GrpcRouteRouteAction action;
+
     public GrpcRouteRouteRule withAction(GrpcRouteRouteAction action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class GrpcRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public GrpcRouteRouteMatch[] matches;
+
     public GrpcRouteRouteRule withMatches(GrpcRouteRouteMatch[] matches) {
         this.matches = matches;
         return this;
     }
     
+    public GrpcRouteRouteRule(){}
 }

@@ -48,10 +48,8 @@ public class Parcels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

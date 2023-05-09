@@ -18,6 +18,7 @@ public class Outline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashStyle")
     public OutlineDashStyleEnum dashStyle;
+
     public Outline withDashStyle(OutlineDashStyleEnum dashStyle) {
         this.dashStyle = dashStyle;
         return this;
@@ -29,6 +30,7 @@ public class Outline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outlineFill")
     public OutlineFill outlineFill;
+
     public Outline withOutlineFill(OutlineFill outlineFill) {
         this.outlineFill = outlineFill;
         return this;
@@ -40,6 +42,7 @@ public class Outline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyState")
     public OutlinePropertyStateEnum propertyState;
+
     public Outline withPropertyState(OutlinePropertyStateEnum propertyState) {
         this.propertyState = propertyState;
         return this;
@@ -51,9 +54,11 @@ public class Outline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Dimension weight;
+
     public Outline withWeight(Dimension weight) {
         this.weight = weight;
         return this;
     }
     
+    public Outline(){}
 }

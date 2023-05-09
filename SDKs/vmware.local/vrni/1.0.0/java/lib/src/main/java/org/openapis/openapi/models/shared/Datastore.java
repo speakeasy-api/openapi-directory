@@ -15,6 +15,7 @@ public class Datastore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public Datastore withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,6 +24,7 @@ public class Datastore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public Datastore withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -31,6 +33,7 @@ public class Datastore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Datastore withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class Datastore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenter_manager")
     public Reference vcenterManager;
+
     public Datastore withVcenterManager(Reference vcenterManager) {
         this.vcenterManager = vcenterManager;
         return this;
@@ -47,9 +51,11 @@ public class Datastore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_id")
     public String vendorId;
+
     public Datastore withVendorId(String vendorId) {
         this.vendorId = vendorId;
         return this;
     }
     
+    public Datastore(){}
 }

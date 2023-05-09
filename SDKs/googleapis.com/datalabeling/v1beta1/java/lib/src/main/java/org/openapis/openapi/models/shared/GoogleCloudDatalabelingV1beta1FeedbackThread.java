@@ -15,6 +15,7 @@ public class GoogleCloudDatalabelingV1beta1FeedbackThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackThreadMetadata")
     public GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata feedbackThreadMetadata;
+
     public GoogleCloudDatalabelingV1beta1FeedbackThread withFeedbackThreadMetadata(GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata feedbackThreadMetadata) {
         this.feedbackThreadMetadata = feedbackThreadMetadata;
         return this;
@@ -26,9 +27,11 @@ public class GoogleCloudDatalabelingV1beta1FeedbackThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatalabelingV1beta1FeedbackThread withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1FeedbackThread(){}
 }

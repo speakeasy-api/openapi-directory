@@ -10,14 +10,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TargetHttpsProxiesSetCertificateMapRequest {
     /**
-     * URL of the Certificate Map to associate with this TargetHttpsProxy.
+     * URL of the Certificate Map to associate with this TargetHttpsProxy. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateMap")
     public String certificateMap;
+
     public TargetHttpsProxiesSetCertificateMapRequest withCertificateMap(String certificateMap) {
         this.certificateMap = certificateMap;
         return this;
     }
     
+    public TargetHttpsProxiesSetCertificateMapRequest(){}
 }

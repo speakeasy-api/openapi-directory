@@ -18,6 +18,7 @@ public class TruncateLogContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TruncateLogContext withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class TruncateLogContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logType")
     public String logType;
+
     public TruncateLogContext withLogType(String logType) {
         this.logType = logType;
         return this;
     }
     
+    public TruncateLogContext(){}
 }

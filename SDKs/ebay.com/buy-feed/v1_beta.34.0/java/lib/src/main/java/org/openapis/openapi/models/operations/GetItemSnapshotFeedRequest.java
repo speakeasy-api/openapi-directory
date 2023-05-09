@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemSnapshotFeedRequest {
@@ -12,6 +13,7 @@ public class GetItemSnapshotFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetItemSnapshotFeedRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetItemSnapshotFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public GetItemSnapshotFeedRequest withRange(String range) {
         this.range = range;
         return this;
@@ -32,6 +35,7 @@ public class GetItemSnapshotFeedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetItemSnapshotFeedRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -42,6 +46,7 @@ public class GetItemSnapshotFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
     public String categoryId;
+
     public GetItemSnapshotFeedRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -52,9 +57,17 @@ public class GetItemSnapshotFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=snapshot_date")
     public String snapshotDate;
+
     public GetItemSnapshotFeedRequest withSnapshotDate(String snapshotDate) {
         this.snapshotDate = snapshotDate;
         return this;
     }
     
+    public GetItemSnapshotFeedRequest(@JsonProperty("Accept") String accept, @JsonProperty("Range") String range, @JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId, @JsonProperty("category_id") String categoryId, @JsonProperty("snapshot_date") String snapshotDate) {
+        this.accept = accept;
+        this.range = range;
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        this.categoryId = categoryId;
+        this.snapshotDate = snapshotDate;
+  }
 }

@@ -15,6 +15,7 @@ public class VolumeSaleInfoOffersRentalDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public VolumeSaleInfoOffersRentalDuration withCount(Double count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class VolumeSaleInfoOffersRentalDuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public VolumeSaleInfoOffersRentalDuration withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public VolumeSaleInfoOffersRentalDuration(){}
 }

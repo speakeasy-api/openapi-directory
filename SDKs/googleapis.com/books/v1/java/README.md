@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.BooksBookshelvesGetSecurity;
 import org.openapis.openapi.models.operations.BooksBookshelvesGetRequest;
 import org.openapis.openapi.models.operations.BooksBookshelvesGetResponse;
+import org.openapis.openapi.models.operations.BooksBookshelvesGetSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,34 +28,34 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            BooksBookshelvesGetRequest req = new BooksBookshelvesGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                oauthToken = "corrupti";
+            BooksBookshelvesGetRequest req = new BooksBookshelvesGetRequest("corrupti", "provident") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "quibusdam";
+                alt = AltEnum.MEDIA;
+                callback = "nulla";
+                fields = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
                 prettyPrint = false;
-                quotaUser = "illum";
-                shelf = "vel";
-                source = "error";
-                uploadType = "deserunt";
-                uploadProtocol = "suscipit";
-                userId = "iure";
-            }}            
+                quotaUser = "error";
+                source = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }};            
 
-            BooksBookshelvesGetResponse res = sdk.bookshelves.booksBookshelvesGet(req, new BooksBookshelvesGetSecurity() {{
+            BooksBookshelvesGetResponse res = sdk.bookshelves.booksBookshelvesGet(req, new BooksBookshelvesGetSecurity("magnam", "debitis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.bookshelf.isPresent()) {
+            if (res.bookshelf != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -64,95 +63,95 @@ public class Application {
 ## Available Resources and Operations
 
 
-### bookshelves
+### [bookshelves](docs/bookshelves/README.md)
 
-* `booksBookshelvesGet` - Retrieves metadata for a specific bookshelf for the specified user.
-* `booksBookshelvesList` - Retrieves a list of public bookshelves for the specified user.
-* `booksBookshelvesVolumesList` - Retrieves volumes in a specific bookshelf for the specified user.
+* [booksBookshelvesGet](docs/bookshelves/README.md#booksbookshelvesget) - Retrieves metadata for a specific bookshelf for the specified user.
+* [booksBookshelvesList](docs/bookshelves/README.md#booksbookshelveslist) - Retrieves a list of public bookshelves for the specified user.
+* [booksBookshelvesVolumesList](docs/bookshelves/README.md#booksbookshelvesvolumeslist) - Retrieves volumes in a specific bookshelf for the specified user.
 
-### cloudloading
+### [cloudloading](docs/cloudloading/README.md)
 
-* `booksCloudloadingAddBook` - Add a user-upload volume and triggers processing.
-* `booksCloudloadingDeleteBook` - Remove the book and its contents
-* `booksCloudloadingUpdateBook` - Updates a user-upload volume.
+* [booksCloudloadingAddBook](docs/cloudloading/README.md#bookscloudloadingaddbook) - Add a user-upload volume and triggers processing.
+* [booksCloudloadingDeleteBook](docs/cloudloading/README.md#bookscloudloadingdeletebook) - Remove the book and its contents
+* [booksCloudloadingUpdateBook](docs/cloudloading/README.md#bookscloudloadingupdatebook) - Updates a user-upload volume.
 
-### dictionary
+### [dictionary](docs/dictionary/README.md)
 
-* `booksDictionaryListOfflineMetadata` - Returns a list of offline dictionary metadata available
+* [booksDictionaryListOfflineMetadata](docs/dictionary/README.md#booksdictionarylistofflinemetadata) - Returns a list of offline dictionary metadata available
 
-### familysharing
+### [familysharing](docs/familysharing/README.md)
 
-* `booksFamilysharingGetFamilyInfo` - Gets information regarding the family that the user is part of.
-* `booksFamilysharingShare` - Initiates sharing of the content with the user's family. Empty response indicates success.
-* `booksFamilysharingUnshare` - Initiates revoking content that has already been shared with the user's family. Empty response indicates success.
+* [booksFamilysharingGetFamilyInfo](docs/familysharing/README.md#booksfamilysharinggetfamilyinfo) - Gets information regarding the family that the user is part of.
+* [booksFamilysharingShare](docs/familysharing/README.md#booksfamilysharingshare) - Initiates sharing of the content with the user's family. Empty response indicates success.
+* [booksFamilysharingUnshare](docs/familysharing/README.md#booksfamilysharingunshare) - Initiates revoking content that has already been shared with the user's family. Empty response indicates success.
 
-### layers
+### [layers](docs/layers/README.md)
 
-* `booksLayersAnnotationDataGet` - Gets the annotation data.
-* `booksLayersAnnotationDataList` - Gets the annotation data for a volume and layer.
-* `booksLayersGet` - Gets the layer summary for a volume.
-* `booksLayersList` - List the layer summaries for a volume.
-* `booksLayersVolumeAnnotationsGet` - Gets the volume annotation.
-* `booksLayersVolumeAnnotationsList` - Gets the volume annotations for a volume and layer.
+* [booksLayersAnnotationDataGet](docs/layers/README.md#bookslayersannotationdataget) - Gets the annotation data.
+* [booksLayersAnnotationDataList](docs/layers/README.md#bookslayersannotationdatalist) - Gets the annotation data for a volume and layer.
+* [booksLayersGet](docs/layers/README.md#bookslayersget) - Gets the layer summary for a volume.
+* [booksLayersList](docs/layers/README.md#bookslayerslist) - List the layer summaries for a volume.
+* [booksLayersVolumeAnnotationsGet](docs/layers/README.md#bookslayersvolumeannotationsget) - Gets the volume annotation.
+* [booksLayersVolumeAnnotationsList](docs/layers/README.md#bookslayersvolumeannotationslist) - Gets the volume annotations for a volume and layer.
 
-### myconfig
+### [myconfig](docs/myconfig/README.md)
 
-* `booksMyconfigGetUserSettings` - Gets the current settings for the user.
-* `booksMyconfigReleaseDownloadAccess` - Release downloaded content access restriction.
-* `booksMyconfigRequestAccess` - Request concurrent and download access restrictions.
-* `booksMyconfigSyncVolumeLicenses` - Request downloaded content access for specified volumes on the My eBooks shelf.
-* `booksMyconfigUpdateUserSettings` - Sets the settings for the user. If a sub-object is specified, it will overwrite the existing sub-object stored in the server. Unspecified sub-objects will retain the existing value.
+* [booksMyconfigGetUserSettings](docs/myconfig/README.md#booksmyconfiggetusersettings) - Gets the current settings for the user.
+* [booksMyconfigReleaseDownloadAccess](docs/myconfig/README.md#booksmyconfigreleasedownloadaccess) - Release downloaded content access restriction.
+* [booksMyconfigRequestAccess](docs/myconfig/README.md#booksmyconfigrequestaccess) - Request concurrent and download access restrictions.
+* [booksMyconfigSyncVolumeLicenses](docs/myconfig/README.md#booksmyconfigsyncvolumelicenses) - Request downloaded content access for specified volumes on the My eBooks shelf.
+* [booksMyconfigUpdateUserSettings](docs/myconfig/README.md#booksmyconfigupdateusersettings) - Sets the settings for the user. If a sub-object is specified, it will overwrite the existing sub-object stored in the server. Unspecified sub-objects will retain the existing value.
 
-### mylibrary
+### [mylibrary](docs/mylibrary/README.md)
 
-* `booksMylibraryAnnotationsDelete` - Deletes an annotation.
-* `booksMylibraryAnnotationsInsert` - Inserts a new annotation.
-* `booksMylibraryAnnotationsList` - Retrieves a list of annotations, possibly filtered.
-* `booksMylibraryAnnotationsSummary` - Gets the summary of specified layers.
-* `booksMylibraryAnnotationsUpdate` - Updates an existing annotation.
-* `booksMylibraryBookshelvesAddVolume` - Adds a volume to a bookshelf.
-* `booksMylibraryBookshelvesClearVolumes` - Clears all volumes from a bookshelf.
-* `booksMylibraryBookshelvesGet` - Retrieves metadata for a specific bookshelf belonging to the authenticated user.
-* `booksMylibraryBookshelvesList` - Retrieves a list of bookshelves belonging to the authenticated user.
-* `booksMylibraryBookshelvesMoveVolume` - Moves a volume within a bookshelf.
-* `booksMylibraryBookshelvesRemoveVolume` - Removes a volume from a bookshelf.
-* `booksMylibraryBookshelvesVolumesList` - Gets volume information for volumes on a bookshelf.
-* `booksMylibraryReadingpositionsGet` - Retrieves my reading position information for a volume.
-* `booksMylibraryReadingpositionsSetPosition` - Sets my reading position information for a volume.
+* [booksMylibraryAnnotationsDelete](docs/mylibrary/README.md#booksmylibraryannotationsdelete) - Deletes an annotation.
+* [booksMylibraryAnnotationsInsert](docs/mylibrary/README.md#booksmylibraryannotationsinsert) - Inserts a new annotation.
+* [booksMylibraryAnnotationsList](docs/mylibrary/README.md#booksmylibraryannotationslist) - Retrieves a list of annotations, possibly filtered.
+* [booksMylibraryAnnotationsSummary](docs/mylibrary/README.md#booksmylibraryannotationssummary) - Gets the summary of specified layers.
+* [booksMylibraryAnnotationsUpdate](docs/mylibrary/README.md#booksmylibraryannotationsupdate) - Updates an existing annotation.
+* [booksMylibraryBookshelvesAddVolume](docs/mylibrary/README.md#booksmylibrarybookshelvesaddvolume) - Adds a volume to a bookshelf.
+* [booksMylibraryBookshelvesClearVolumes](docs/mylibrary/README.md#booksmylibrarybookshelvesclearvolumes) - Clears all volumes from a bookshelf.
+* [booksMylibraryBookshelvesGet](docs/mylibrary/README.md#booksmylibrarybookshelvesget) - Retrieves metadata for a specific bookshelf belonging to the authenticated user.
+* [booksMylibraryBookshelvesList](docs/mylibrary/README.md#booksmylibrarybookshelveslist) - Retrieves a list of bookshelves belonging to the authenticated user.
+* [booksMylibraryBookshelvesMoveVolume](docs/mylibrary/README.md#booksmylibrarybookshelvesmovevolume) - Moves a volume within a bookshelf.
+* [booksMylibraryBookshelvesRemoveVolume](docs/mylibrary/README.md#booksmylibrarybookshelvesremovevolume) - Removes a volume from a bookshelf.
+* [booksMylibraryBookshelvesVolumesList](docs/mylibrary/README.md#booksmylibrarybookshelvesvolumeslist) - Gets volume information for volumes on a bookshelf.
+* [booksMylibraryReadingpositionsGet](docs/mylibrary/README.md#booksmylibraryreadingpositionsget) - Retrieves my reading position information for a volume.
+* [booksMylibraryReadingpositionsSetPosition](docs/mylibrary/README.md#booksmylibraryreadingpositionssetposition) - Sets my reading position information for a volume.
 
-### notification
+### [notification](docs/notification/README.md)
 
-* `booksNotificationGet` - Returns notification details for a given notification id.
+* [booksNotificationGet](docs/notification/README.md#booksnotificationget) - Returns notification details for a given notification id.
 
-### onboarding
+### [onboarding](docs/onboarding/README.md)
 
-* `booksOnboardingListCategories` - List categories for onboarding experience.
-* `booksOnboardingListCategoryVolumes` - List available volumes under categories for onboarding experience.
+* [booksOnboardingListCategories](docs/onboarding/README.md#booksonboardinglistcategories) - List categories for onboarding experience.
+* [booksOnboardingListCategoryVolumes](docs/onboarding/README.md#booksonboardinglistcategoryvolumes) - List available volumes under categories for onboarding experience.
 
-### personalizedstream
+### [personalizedstream](docs/personalizedstream/README.md)
 
-* `booksPersonalizedstreamGet` - Returns a stream of personalized book clusters
+* [booksPersonalizedstreamGet](docs/personalizedstream/README.md#bookspersonalizedstreamget) - Returns a stream of personalized book clusters
 
-### promooffer
+### [promooffer](docs/promooffer/README.md)
 
-* `booksPromoofferAccept` - Accepts the promo offer.
-* `booksPromoofferDismiss` - Marks the promo offer as dismissed.
-* `booksPromoofferGet` - Returns a list of promo offers available to the user
+* [booksPromoofferAccept](docs/promooffer/README.md#bookspromoofferaccept) - Accepts the promo offer.
+* [booksPromoofferDismiss](docs/promooffer/README.md#bookspromoofferdismiss) - Marks the promo offer as dismissed.
+* [booksPromoofferGet](docs/promooffer/README.md#bookspromoofferget) - Returns a list of promo offers available to the user
 
-### series
+### [series](docs/series/README.md)
 
-* `booksSeriesGet` - Returns Series metadata for the given series ids.
-* `booksSeriesMembershipGet` - Returns Series membership data given the series id.
+* [booksSeriesGet](docs/series/README.md#booksseriesget) - Returns Series metadata for the given series ids.
+* [booksSeriesMembershipGet](docs/series/README.md#booksseriesmembershipget) - Returns Series membership data given the series id.
 
-### volumes
+### [volumes](docs/volumes/README.md)
 
-* `booksVolumesAssociatedList` - Return a list of associated books.
-* `booksVolumesGet` - Gets volume information for a single volume.
-* `booksVolumesList` - Performs a book search.
-* `booksVolumesMybooksList` - Return a list of books in My Library.
-* `booksVolumesRecommendedList` - Return a list of recommended books for the current user.
-* `booksVolumesRecommendedRate` - Rate a recommended book for the current user.
-* `booksVolumesUseruploadedList` - Return a list of books uploaded by the current user.
+* [booksVolumesAssociatedList](docs/volumes/README.md#booksvolumesassociatedlist) - Return a list of associated books.
+* [booksVolumesGet](docs/volumes/README.md#booksvolumesget) - Gets volume information for a single volume.
+* [booksVolumesList](docs/volumes/README.md#booksvolumeslist) - Performs a book search.
+* [booksVolumesMybooksList](docs/volumes/README.md#booksvolumesmybookslist) - Return a list of books in My Library.
+* [booksVolumesRecommendedList](docs/volumes/README.md#booksvolumesrecommendedlist) - Return a list of recommended books for the current user.
+* [booksVolumesRecommendedRate](docs/volumes/README.md#booksvolumesrecommendedrate) - Rate a recommended book for the current user.
+* [booksVolumesUseruploadedList](docs/volumes/README.md#booksvolumesuseruploadedlist) - Return a list of books uploaded by the current user.
 <!-- End SDK Available Operations -->
 
 ### Maturity

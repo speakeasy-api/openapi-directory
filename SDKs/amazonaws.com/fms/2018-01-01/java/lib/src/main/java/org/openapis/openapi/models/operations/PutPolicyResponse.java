@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPolicyResponse {
     
     public String contentType;
+
     public PutPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutPolicyResponse {
      */
     
     public Object internalErrorException;
+
     public PutPolicyResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class PutPolicyResponse {
      */
     
     public Object invalidInputException;
+
     public PutPolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class PutPolicyResponse {
      */
     
     public Object invalidOperationException;
+
     public PutPolicyResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class PutPolicyResponse {
      */
     
     public Object invalidTypeException;
+
     public PutPolicyResponse withInvalidTypeException(Object invalidTypeException) {
         this.invalidTypeException = invalidTypeException;
         return this;
@@ -59,6 +65,7 @@ public class PutPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public PutPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class PutPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutPolicyResponse putPolicyResponse;
+
     public PutPolicyResponse withPutPolicyResponse(org.openapis.openapi.models.shared.PutPolicyResponse putPolicyResponse) {
         this.putPolicyResponse = putPolicyResponse;
         return this;
@@ -79,6 +87,7 @@ public class PutPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class PutPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class PutPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

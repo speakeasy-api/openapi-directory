@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetFiltersCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base")
     public String base;
+
     public GetFiltersCreateRequest withBase(String base) {
         this.base = base;
         return this;
@@ -19,6 +20,7 @@ public class GetFiltersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude")
     public String exclude;
+
     public GetFiltersCreateRequest withExclude(String exclude) {
         this.exclude = exclude;
         return this;
@@ -29,6 +31,7 @@ public class GetFiltersCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public String include;
+
     public GetFiltersCreateRequest withInclude(String include) {
         this.include = include;
         return this;
@@ -36,9 +39,11 @@ public class GetFiltersCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unsafe")
     public Boolean unsafe;
+
     public GetFiltersCreateRequest withUnsafe(Boolean unsafe) {
         this.unsafe = unsafe;
         return this;
     }
     
+    public GetFiltersCreateRequest(){}
 }

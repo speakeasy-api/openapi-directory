@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListS3BucketsResponse {
@@ -12,6 +13,7 @@ public class ListS3BucketsResponse {
      */
     
     public Object badRequestException;
+
     public ListS3BucketsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListS3BucketsResponse {
     
     
     public String contentType;
+
     public ListS3BucketsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListS3BucketsResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public ListS3BucketsResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class ListS3BucketsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListS3BucketsResponse listS3BucketsResponse;
+
     public ListS3BucketsResponse withListS3BucketsResponse(org.openapis.openapi.models.shared.ListS3BucketsResponse listS3BucketsResponse) {
         this.listS3BucketsResponse = listS3BucketsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListS3BucketsResponse {
      */
     
     public Object notFoundException;
+
     public ListS3BucketsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListS3BucketsResponse {
     
     
     public Integer statusCode;
+
     public ListS3BucketsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListS3BucketsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListS3BucketsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListS3BucketsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListS3BucketsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListS3BucketsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AggregatedGetConversionsSummaryResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoAggregatedAggregatedSummaryResult apiCoreDtoAggregatedAggregatedSummaryResult;
+
     public AggregatedGetConversionsSummaryResponse withApiCoreDtoAggregatedAggregatedSummaryResult(org.openapis.openapi.models.shared.ApiCoreDtoAggregatedAggregatedSummaryResult apiCoreDtoAggregatedAggregatedSummaryResult) {
         this.apiCoreDtoAggregatedAggregatedSummaryResult = apiCoreDtoAggregatedAggregatedSummaryResult;
         return this;
@@ -16,6 +18,7 @@ public class AggregatedGetConversionsSummaryResponse {
     
     
     public String contentType;
+
     public AggregatedGetConversionsSummaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class AggregatedGetConversionsSummaryResponse {
     
     
     public Integer statusCode;
+
     public AggregatedGetConversionsSummaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class AggregatedGetConversionsSummaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AggregatedGetConversionsSummaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AggregatedGetConversionsSummaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAuthenticationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dedicatedDevicesAllowed")
     public GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum dedicatedDevicesAllowed;
+
     public GoogleAuthenticationSettings withDedicatedDevicesAllowed(GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum dedicatedDevicesAllowed) {
         this.dedicatedDevicesAllowed = dedicatedDevicesAllowed;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAuthenticationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAuthenticationRequired")
     public GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum googleAuthenticationRequired;
+
     public GoogleAuthenticationSettings withGoogleAuthenticationRequired(GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum googleAuthenticationRequired) {
         this.googleAuthenticationRequired = googleAuthenticationRequired;
         return this;
     }
     
+    public GoogleAuthenticationSettings(){}
 }

@@ -15,9 +15,11 @@ public class LocationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedLocations")
     public String[] allowedLocations;
+
     public LocationPolicy withAllowedLocations(String[] allowedLocations) {
         this.allowedLocations = allowedLocations;
         return this;
     }
     
+    public LocationPolicy(){}
 }

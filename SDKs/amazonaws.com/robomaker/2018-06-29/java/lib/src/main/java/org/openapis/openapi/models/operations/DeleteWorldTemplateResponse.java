@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorldTemplateResponse {
     
     public String contentType;
+
     public DeleteWorldTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorldTemplateResponse {
      */
     
     public java.util.Map<String, Object> deleteWorldTemplateResponse;
+
     public DeleteWorldTemplateResponse withDeleteWorldTemplateResponse(java.util.Map<String, Object> deleteWorldTemplateResponse) {
         this.deleteWorldTemplateResponse = deleteWorldTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorldTemplateResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWorldTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorldTemplateResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteWorldTemplateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteWorldTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorldTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteWorldTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorldTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWorldTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorldTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteWorldTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteWorldTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteWorldTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationsBetweenRequest {
@@ -12,6 +13,7 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetAssociationsBetweenRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -22,6 +24,7 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetAssociationsBetweenRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -32,6 +35,7 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public GetAssociationsBetweenRequest withObject(String object) {
         this.object = object;
         return this;
@@ -42,6 +46,7 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetAssociationsBetweenRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -52,6 +57,7 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetAssociationsBetweenRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -62,6 +68,7 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject")
     public String subject;
+
     public GetAssociationsBetweenRequest withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -72,6 +79,7 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetAssociationsBetweenRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -82,9 +90,14 @@ public class GetAssociationsBetweenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetAssociationsBetweenRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetAssociationsBetweenRequest(@JsonProperty("object") String object, @JsonProperty("subject") String subject) {
+        this.object = object;
+        this.subject = subject;
+  }
 }

@@ -15,9 +15,11 @@ public class TimeoutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxLifetimeTimeoutMinutes")
     public Long maxLifetimeTimeoutMinutes;
+
     public TimeoutConfig withMaxLifetimeTimeoutMinutes(Long maxLifetimeTimeoutMinutes) {
         this.maxLifetimeTimeoutMinutes = maxLifetimeTimeoutMinutes;
         return this;
     }
     
+    public TimeoutConfig(){}
 }

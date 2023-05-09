@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurityOption1 option1;
+
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity withOption1(BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecu
     
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurityOption2 option2;
+
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity withOption2(BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecu
     
     @SpeakeasyMetadata("security:option=true")
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurityOption3 option3;
+
     public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity withOption3(BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity(){}
 }

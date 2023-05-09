@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDetectorModelAnalysisResultsResponse {
     
     public String contentType;
+
     public GetDetectorModelAnalysisResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDetectorModelAnalysisResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDetectorModelAnalysisResultsResponse getDetectorModelAnalysisResultsResponse;
+
     public GetDetectorModelAnalysisResultsResponse withGetDetectorModelAnalysisResultsResponse(org.openapis.openapi.models.shared.GetDetectorModelAnalysisResultsResponse getDetectorModelAnalysisResultsResponse) {
         this.getDetectorModelAnalysisResultsResponse = getDetectorModelAnalysisResultsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDetectorModelAnalysisResultsResponse {
      */
     
     public Object internalFailureException;
+
     public GetDetectorModelAnalysisResultsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetDetectorModelAnalysisResultsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetDetectorModelAnalysisResultsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetDetectorModelAnalysisResultsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetDetectorModelAnalysisResultsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class GetDetectorModelAnalysisResultsResponse {
     
     
     public Integer statusCode;
+
     public GetDetectorModelAnalysisResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDetectorModelAnalysisResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDetectorModelAnalysisResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetDetectorModelAnalysisResultsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDetectorModelAnalysisResultsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetDetectorModelAnalysisResultsResponse {
      */
     
     public Object throttlingException;
+
     public GetDetectorModelAnalysisResultsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetDetectorModelAnalysisResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

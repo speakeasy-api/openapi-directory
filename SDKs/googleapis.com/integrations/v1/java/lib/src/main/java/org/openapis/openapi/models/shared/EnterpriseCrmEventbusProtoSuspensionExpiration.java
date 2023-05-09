@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoSuspensionExpiration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireAfterMs")
     public Integer expireAfterMs;
+
     public EnterpriseCrmEventbusProtoSuspensionExpiration withExpireAfterMs(Integer expireAfterMs) {
         this.expireAfterMs = expireAfterMs;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoSuspensionExpiration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liftWhenExpired")
     public Boolean liftWhenExpired;
+
     public EnterpriseCrmEventbusProtoSuspensionExpiration withLiftWhenExpired(Boolean liftWhenExpired) {
         this.liftWhenExpired = liftWhenExpired;
         return this;
@@ -37,9 +39,11 @@ public class EnterpriseCrmEventbusProtoSuspensionExpiration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remindAfterMs")
     public Integer remindAfterMs;
+
     public EnterpriseCrmEventbusProtoSuspensionExpiration withRemindAfterMs(Integer remindAfterMs) {
         this.remindAfterMs = remindAfterMs;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoSuspensionExpiration(){}
 }

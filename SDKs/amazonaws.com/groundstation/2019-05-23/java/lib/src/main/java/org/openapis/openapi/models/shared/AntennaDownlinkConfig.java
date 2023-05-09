@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AntennaDownlinkConfig {
     @JsonProperty("spectrumConfig")
     public SpectrumConfig spectrumConfig;
+
     public AntennaDownlinkConfig withSpectrumConfig(SpectrumConfig spectrumConfig) {
         this.spectrumConfig = spectrumConfig;
         return this;
     }
     
+    public AntennaDownlinkConfig(@JsonProperty("spectrumConfig") SpectrumConfig spectrumConfig) {
+        this.spectrumConfig = spectrumConfig;
+  }
 }

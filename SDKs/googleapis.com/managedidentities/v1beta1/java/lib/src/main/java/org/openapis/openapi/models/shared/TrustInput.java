@@ -18,6 +18,7 @@ public class TrustInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectiveAuthentication")
     public Boolean selectiveAuthentication;
+
     public TrustInput withSelectiveAuthentication(Boolean selectiveAuthentication) {
         this.selectiveAuthentication = selectiveAuthentication;
         return this;
@@ -29,6 +30,7 @@ public class TrustInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDnsIpAddresses")
     public String[] targetDnsIpAddresses;
+
     public TrustInput withTargetDnsIpAddresses(String[] targetDnsIpAddresses) {
         this.targetDnsIpAddresses = targetDnsIpAddresses;
         return this;
@@ -40,6 +42,7 @@ public class TrustInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDomainName")
     public String targetDomainName;
+
     public TrustInput withTargetDomainName(String targetDomainName) {
         this.targetDomainName = targetDomainName;
         return this;
@@ -51,6 +54,7 @@ public class TrustInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustDirection")
     public TrustTrustDirectionEnum trustDirection;
+
     public TrustInput withTrustDirection(TrustTrustDirectionEnum trustDirection) {
         this.trustDirection = trustDirection;
         return this;
@@ -62,6 +66,7 @@ public class TrustInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustHandshakeSecret")
     public String trustHandshakeSecret;
+
     public TrustInput withTrustHandshakeSecret(String trustHandshakeSecret) {
         this.trustHandshakeSecret = trustHandshakeSecret;
         return this;
@@ -73,9 +78,11 @@ public class TrustInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustType")
     public TrustTrustTypeEnum trustType;
+
     public TrustInput withTrustType(TrustTrustTypeEnum trustType) {
         this.trustType = trustType;
         return this;
     }
     
+    public TrustInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksMyconfigRequestAccessRequest {
@@ -12,6 +13,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksMyconfigRequestAccessRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksMyconfigRequestAccessRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksMyconfigRequestAccessRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksMyconfigRequestAccessRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cpksver")
     public String cpksver;
+
     public BooksMyconfigRequestAccessRequest withCpksver(String cpksver) {
         this.cpksver = cpksver;
         return this;
@@ -62,6 +68,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksMyconfigRequestAccessRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksMyconfigRequestAccessRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=licenseTypes")
     public BooksMyconfigRequestAccessLicenseTypesEnum licenseTypes;
+
     public BooksMyconfigRequestAccessRequest withLicenseTypes(BooksMyconfigRequestAccessLicenseTypesEnum licenseTypes) {
         this.licenseTypes = licenseTypes;
         return this;
@@ -92,6 +101,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public BooksMyconfigRequestAccessRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -102,6 +112,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonce")
     public String nonce;
+
     public BooksMyconfigRequestAccessRequest withNonce(String nonce) {
         this.nonce = nonce;
         return this;
@@ -112,6 +123,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksMyconfigRequestAccessRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksMyconfigRequestAccessRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksMyconfigRequestAccessRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public BooksMyconfigRequestAccessRequest withSource(String source) {
         this.source = source;
         return this;
@@ -152,6 +167,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksMyconfigRequestAccessRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksMyconfigRequestAccessRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -172,9 +189,16 @@ public class BooksMyconfigRequestAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=volumeId")
     public String volumeId;
+
     public BooksMyconfigRequestAccessRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public BooksMyconfigRequestAccessRequest(@JsonProperty("cpksver") String cpksver, @JsonProperty("nonce") String nonce, @JsonProperty("source") String source, @JsonProperty("volumeId") String volumeId) {
+        this.cpksver = cpksver;
+        this.nonce = nonce;
+        this.source = source;
+        this.volumeId = volumeId;
+  }
 }

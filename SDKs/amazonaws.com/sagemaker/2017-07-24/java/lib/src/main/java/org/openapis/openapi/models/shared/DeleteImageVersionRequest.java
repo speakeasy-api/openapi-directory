@@ -12,6 +12,7 @@ public class DeleteImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public DeleteImageVersionRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,6 +20,7 @@ public class DeleteImageVersionRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public DeleteImageVersionRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -27,9 +29,13 @@ public class DeleteImageVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public DeleteImageVersionRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DeleteImageVersionRequest(@JsonProperty("ImageName") String imageName) {
+        this.imageName = imageName;
+  }
 }

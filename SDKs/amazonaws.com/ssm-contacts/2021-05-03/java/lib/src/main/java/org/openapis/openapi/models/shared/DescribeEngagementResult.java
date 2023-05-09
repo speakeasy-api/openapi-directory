@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeEngagementResult {
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public DescribeEngagementResult withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribeEngagementResult {
     
     @JsonProperty("Content")
     public String content;
+
     public DescribeEngagementResult withContent(String content) {
         this.content = content;
         return this;
@@ -33,6 +35,7 @@ public class DescribeEngagementResult {
     
     @JsonProperty("EngagementArn")
     public String engagementArn;
+
     public DescribeEngagementResult withEngagementArn(String engagementArn) {
         this.engagementArn = engagementArn;
         return this;
@@ -41,6 +44,7 @@ public class DescribeEngagementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncidentId")
     public String incidentId;
+
     public DescribeEngagementResult withIncidentId(String incidentId) {
         this.incidentId = incidentId;
         return this;
@@ -49,6 +53,7 @@ public class DescribeEngagementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicContent")
     public String publicContent;
+
     public DescribeEngagementResult withPublicContent(String publicContent) {
         this.publicContent = publicContent;
         return this;
@@ -57,6 +62,7 @@ public class DescribeEngagementResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicSubject")
     public String publicSubject;
+
     public DescribeEngagementResult withPublicSubject(String publicSubject) {
         this.publicSubject = publicSubject;
         return this;
@@ -64,6 +70,7 @@ public class DescribeEngagementResult {
     
     @JsonProperty("Sender")
     public String sender;
+
     public DescribeEngagementResult withSender(String sender) {
         this.sender = sender;
         return this;
@@ -74,6 +81,7 @@ public class DescribeEngagementResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeEngagementResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -84,6 +92,7 @@ public class DescribeEngagementResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StopTime")
     public OffsetDateTime stopTime;
+
     public DescribeEngagementResult withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
@@ -91,9 +100,17 @@ public class DescribeEngagementResult {
     
     @JsonProperty("Subject")
     public String subject;
+
     public DescribeEngagementResult withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public DescribeEngagementResult(@JsonProperty("ContactArn") String contactArn, @JsonProperty("Content") String content, @JsonProperty("EngagementArn") String engagementArn, @JsonProperty("Sender") String sender, @JsonProperty("Subject") String subject) {
+        this.contactArn = contactArn;
+        this.content = content;
+        this.engagementArn = engagementArn;
+        this.sender = sender;
+        this.subject = subject;
+  }
 }

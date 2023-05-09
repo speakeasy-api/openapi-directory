@@ -18,6 +18,7 @@ public class NoPriceCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingConfigIssueCount")
     public String livePricingConfigIssueCount;
+
     public NoPriceCountDetails withLivePricingConfigIssueCount(String livePricingConfigIssueCount) {
         this.livePricingConfigIssueCount = livePricingConfigIssueCount;
         return this;
@@ -29,6 +30,7 @@ public class NoPriceCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingNotAvailableCount")
     public String livePricingNotAvailableCount;
+
     public NoPriceCountDetails withLivePricingNotAvailableCount(String livePricingNotAvailableCount) {
         this.livePricingNotAvailableCount = livePricingNotAvailableCount;
         return this;
@@ -40,6 +42,7 @@ public class NoPriceCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingNotTriggeredCount")
     public String livePricingNotTriggeredCount;
+
     public NoPriceCountDetails withLivePricingNotTriggeredCount(String livePricingNotTriggeredCount) {
         this.livePricingNotTriggeredCount = livePricingNotTriggeredCount;
         return this;
@@ -51,6 +54,7 @@ public class NoPriceCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingOtherReasonCount")
     public String livePricingOtherReasonCount;
+
     public NoPriceCountDetails withLivePricingOtherReasonCount(String livePricingOtherReasonCount) {
         this.livePricingOtherReasonCount = livePricingOtherReasonCount;
         return this;
@@ -62,9 +66,11 @@ public class NoPriceCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("livePricingTechnicalIssueCount")
     public String livePricingTechnicalIssueCount;
+
     public NoPriceCountDetails withLivePricingTechnicalIssueCount(String livePricingTechnicalIssueCount) {
         this.livePricingTechnicalIssueCount = livePricingTechnicalIssueCount;
         return this;
     }
     
+    public NoPriceCountDetails(){}
 }

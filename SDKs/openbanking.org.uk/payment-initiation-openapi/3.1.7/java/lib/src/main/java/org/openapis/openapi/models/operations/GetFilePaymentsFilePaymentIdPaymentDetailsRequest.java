@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
@@ -12,6 +13,7 @@ public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FilePaymentId")
     public String filePaymentId;
+
     public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withFilePaymentId(String filePaymentId) {
         this.filePaymentId = filePaymentId;
         return this;
@@ -32,6 +35,7 @@ public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,14 @@ public class GetFilePaymentsFilePaymentIdPaymentDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public GetFilePaymentsFilePaymentIdPaymentDetailsRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public GetFilePaymentsFilePaymentIdPaymentDetailsRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("FilePaymentId") String filePaymentId) {
+        this.authorization = authorization;
+        this.filePaymentId = filePaymentId;
+  }
 }

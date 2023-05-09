@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMedicalVocabularyRequest {
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public GetMedicalVocabularyRequest withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
     }
     
+    public GetMedicalVocabularyRequest(@JsonProperty("VocabularyName") String vocabularyName) {
+        this.vocabularyName = vocabularyName;
+  }
 }

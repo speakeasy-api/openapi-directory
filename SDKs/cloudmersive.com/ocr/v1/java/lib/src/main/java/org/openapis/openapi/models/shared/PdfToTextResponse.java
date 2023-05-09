@@ -13,11 +13,36 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class PdfToTextResponse {
     /**
+     * When the job exceeds 25 pages, an Async Job ID is returned.  Use the CheckPdfOcrJobStatus API to check on the status of this job using the AsyncJobID and get the result when it finishes
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AsyncJobID")
+    public String asyncJobID;
+
+    public PdfToTextResponse withAsyncJobID(String asyncJobID) {
+        this.asyncJobID = asyncJobID;
+        return this;
+    }
+    
+    /**
+     * Returns the job status of the Async Job, if applicable.  Possible states are STARTED and COMPLETED
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("AsyncJobStatus")
+    public String asyncJobStatus;
+
+    public PdfToTextResponse withAsyncJobStatus(String asyncJobStatus) {
+        this.asyncJobStatus = asyncJobStatus;
+        return this;
+    }
+    
+    /**
      * Page OCR results
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OcrPages")
     public OcrPageResult[] ocrPages;
+
     public PdfToTextResponse withOcrPages(OcrPageResult[] ocrPages) {
         this.ocrPages = ocrPages;
         return this;
@@ -29,9 +54,11 @@ public class PdfToTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Successful")
     public Boolean successful;
+
     public PdfToTextResponse withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     
+    public PdfToTextResponse(){}
 }

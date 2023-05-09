@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest {
@@ -12,6 +13,7 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_select_option_id")
     public Integer customFieldSelectOptionId;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withCustomFieldSelectOptionId(Integer customFieldSelectOptionId) {
         this.customFieldSelectOptionId = customFieldSelectOptionId;
         return this;
@@ -32,6 +35,7 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonReque
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public DeleteCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("custom_field_select_option_id") Integer customFieldSelectOptionId, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.customFieldSelectOptionId = customFieldSelectOptionId;
+        this.id = id;
+        this.login = login;
+  }
 }

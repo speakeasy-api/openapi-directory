@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEventSubscriptionResponse {
     
     public String contentType;
+
     public CreateEventSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEventSubscriptionResponse createEventSubscriptionResponse;
+
     public CreateEventSubscriptionResponse withCreateEventSubscriptionResponse(org.openapis.openapi.models.shared.CreateEventSubscriptionResponse createEventSubscriptionResponse) {
         this.createEventSubscriptionResponse = createEventSubscriptionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object kmsAccessDeniedFault;
+
     public CreateEventSubscriptionResponse withKMSAccessDeniedFault(Object kmsAccessDeniedFault) {
         this.kmsAccessDeniedFault = kmsAccessDeniedFault;
         return this;
@@ -39,6 +43,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object kmsDisabledFault;
+
     public CreateEventSubscriptionResponse withKMSDisabledFault(Object kmsDisabledFault) {
         this.kmsDisabledFault = kmsDisabledFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object kmsInvalidStateFault;
+
     public CreateEventSubscriptionResponse withKMSInvalidStateFault(Object kmsInvalidStateFault) {
         this.kmsInvalidStateFault = kmsInvalidStateFault;
         return this;
@@ -59,6 +65,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object kmsNotFoundFault;
+
     public CreateEventSubscriptionResponse withKMSNotFoundFault(Object kmsNotFoundFault) {
         this.kmsNotFoundFault = kmsNotFoundFault;
         return this;
@@ -69,6 +76,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object kmsThrottlingFault;
+
     public CreateEventSubscriptionResponse withKMSThrottlingFault(Object kmsThrottlingFault) {
         this.kmsThrottlingFault = kmsThrottlingFault;
         return this;
@@ -79,6 +87,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public CreateEventSubscriptionResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -89,6 +98,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public CreateEventSubscriptionResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -99,6 +109,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public CreateEventSubscriptionResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
@@ -109,6 +120,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object snsInvalidTopicFault;
+
     public CreateEventSubscriptionResponse withSNSInvalidTopicFault(Object snsInvalidTopicFault) {
         this.snsInvalidTopicFault = snsInvalidTopicFault;
         return this;
@@ -119,6 +131,7 @@ public class CreateEventSubscriptionResponse {
      */
     
     public Object snsNoAuthorizationFault;
+
     public CreateEventSubscriptionResponse withSNSNoAuthorizationFault(Object snsNoAuthorizationFault) {
         this.snsNoAuthorizationFault = snsNoAuthorizationFault;
         return this;
@@ -126,6 +139,7 @@ public class CreateEventSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public CreateEventSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class CreateEventSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEventSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateEventSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

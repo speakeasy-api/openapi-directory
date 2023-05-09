@@ -18,6 +18,7 @@ public class ValueCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ValueCount withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class ValueCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public ValueCount withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public ValueCount(){}
 }

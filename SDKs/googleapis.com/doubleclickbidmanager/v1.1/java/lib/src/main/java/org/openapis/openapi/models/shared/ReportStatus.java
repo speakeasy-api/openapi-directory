@@ -18,6 +18,7 @@ public class ReportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failure")
     public ReportFailure failure;
+
     public ReportStatus withFailure(ReportFailure failure) {
         this.failure = failure;
         return this;
@@ -29,6 +30,7 @@ public class ReportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishTimeMs")
     public String finishTimeMs;
+
     public ReportStatus withFinishTimeMs(String finishTimeMs) {
         this.finishTimeMs = finishTimeMs;
         return this;
@@ -40,6 +42,7 @@ public class ReportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public ReportStatusFormatEnum format;
+
     public ReportStatus withFormat(ReportStatusFormatEnum format) {
         this.format = format;
         return this;
@@ -51,9 +54,11 @@ public class ReportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ReportStatusStateEnum state;
+
     public ReportStatus withState(ReportStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ReportStatus(){}
 }

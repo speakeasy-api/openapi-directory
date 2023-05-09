@@ -18,9 +18,11 @@ public class BatchPersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public PersonalNameCastegroupOut[] personalNames;
+
     public BatchPersonalNameCastegroupOut withPersonalNames(PersonalNameCastegroupOut[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchPersonalNameCastegroupOut(){}
 }

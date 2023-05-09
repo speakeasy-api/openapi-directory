@@ -18,6 +18,7 @@ public class Tenant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public Tenant withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -29,9 +30,11 @@ public class Tenant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Tenant withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Tenant(){}
 }

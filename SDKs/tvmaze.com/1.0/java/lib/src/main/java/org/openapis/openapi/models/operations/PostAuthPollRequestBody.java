@@ -12,9 +12,11 @@ public class PostAuthPollRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public PostAuthPollRequestBody withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PostAuthPollRequestBody(){}
 }

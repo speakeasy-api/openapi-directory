@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteClientBrandingResponse {
@@ -12,6 +13,7 @@ public class DeleteClientBrandingResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteClientBrandingResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteClientBrandingResponse {
     
     
     public String contentType;
+
     public DeleteClientBrandingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteClientBrandingResponse {
      */
     
     public java.util.Map<String, Object> deleteClientBrandingResult;
+
     public DeleteClientBrandingResponse withDeleteClientBrandingResult(java.util.Map<String, Object> deleteClientBrandingResult) {
         this.deleteClientBrandingResult = deleteClientBrandingResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteClientBrandingResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DeleteClientBrandingResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteClientBrandingResponse {
     
     
     public Integer statusCode;
+
     public DeleteClientBrandingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteClientBrandingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteClientBrandingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteClientBrandingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteClientBrandingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteClientBrandingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

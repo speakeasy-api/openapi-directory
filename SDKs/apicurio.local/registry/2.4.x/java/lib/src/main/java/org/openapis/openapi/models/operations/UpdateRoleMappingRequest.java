@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoleMappingRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateRole updateRole;
+
     public UpdateRoleMappingRequest withUpdateRole(org.openapis.openapi.models.shared.UpdateRole updateRole) {
         this.updateRole = updateRole;
         return this;
@@ -19,9 +21,14 @@ public class UpdateRoleMappingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=principalId")
     public String principalId;
+
     public UpdateRoleMappingRequest withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
     }
     
+    public UpdateRoleMappingRequest(@JsonProperty("UpdateRole") org.openapis.openapi.models.shared.UpdateRole updateRole, @JsonProperty("principalId") String principalId) {
+        this.updateRole = updateRole;
+        this.principalId = principalId;
+  }
 }

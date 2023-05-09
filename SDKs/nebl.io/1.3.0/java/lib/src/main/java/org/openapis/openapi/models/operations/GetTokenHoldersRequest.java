@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenHoldersRequest {
@@ -12,9 +13,13 @@ public class GetTokenHoldersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenid")
     public String tokenid;
+
     public GetTokenHoldersRequest withTokenid(String tokenid) {
         this.tokenid = tokenid;
         return this;
     }
     
+    public GetTokenHoldersRequest(@JsonProperty("tokenid") String tokenid) {
+        this.tokenid = tokenid;
+  }
 }

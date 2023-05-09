@@ -15,6 +15,7 @@ public class KYCSignatoryCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public KYCCheckStatusData[] checks;
+
     public KYCSignatoryCheckResult withChecks(KYCCheckStatusData[] checks) {
         this.checks = checks;
         return this;
@@ -26,9 +27,11 @@ public class KYCSignatoryCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatoryCode")
     public String signatoryCode;
+
     public KYCSignatoryCheckResult withSignatoryCode(String signatoryCode) {
         this.signatoryCode = signatoryCode;
         return this;
     }
     
+    public KYCSignatoryCheckResult(){}
 }

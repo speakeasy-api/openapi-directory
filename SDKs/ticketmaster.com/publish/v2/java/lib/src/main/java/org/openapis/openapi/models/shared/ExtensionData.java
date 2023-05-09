@@ -17,6 +17,7 @@ public class ExtensionData {
      */
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public ExtensionData withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class ExtensionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedEntityId")
     public String relatedEntityId;
+
     public ExtensionData withRelatedEntityId(String relatedEntityId) {
         this.relatedEntityId = relatedEntityId;
         return this;
@@ -39,6 +41,7 @@ public class ExtensionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedEntitySource")
     public Source relatedEntitySource;
+
     public ExtensionData withRelatedEntitySource(Source relatedEntitySource) {
         this.relatedEntitySource = relatedEntitySource;
         return this;
@@ -49,6 +52,7 @@ public class ExtensionData {
      */
     @JsonProperty("relatedEntityType")
     public ExtensionDataRelatedEntityTypeEnum relatedEntityType;
+
     public ExtensionData withRelatedEntityType(ExtensionDataRelatedEntityTypeEnum relatedEntityType) {
         this.relatedEntityType = relatedEntityType;
         return this;
@@ -59,6 +63,7 @@ public class ExtensionData {
      */
     @JsonProperty("source")
     public String source;
+
     public ExtensionData withSource(String source) {
         this.source = source;
         return this;
@@ -69,6 +74,7 @@ public class ExtensionData {
      */
     @JsonProperty("type")
     public String type;
+
     public ExtensionData withType(String type) {
         this.type = type;
         return this;
@@ -80,9 +86,16 @@ public class ExtensionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public Long versionNumber;
+
     public ExtensionData withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public ExtensionData(@JsonProperty("data") java.util.Map<String, Object> data, @JsonProperty("relatedEntityType") ExtensionDataRelatedEntityTypeEnum relatedEntityType, @JsonProperty("source") String source, @JsonProperty("type") String type) {
+        this.data = data;
+        this.relatedEntityType = relatedEntityType;
+        this.source = source;
+        this.type = type;
+  }
 }

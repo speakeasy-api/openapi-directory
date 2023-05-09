@@ -15,6 +15,7 @@ public class FirewallPolicyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public FirewallPolicyMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class FirewallPolicyMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FirewallPolicyMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FirewallPolicyMetadata(){}
 }

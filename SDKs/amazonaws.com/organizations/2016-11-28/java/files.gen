@@ -321,4 +321,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateOrganizationalUnitReq
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdatePolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

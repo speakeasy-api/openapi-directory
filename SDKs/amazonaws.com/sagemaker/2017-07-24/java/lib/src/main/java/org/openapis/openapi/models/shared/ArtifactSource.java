@@ -15,6 +15,7 @@ public class ArtifactSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTypes")
     public ArtifactSourceType[] sourceTypes;
+
     public ArtifactSource withSourceTypes(ArtifactSourceType[] sourceTypes) {
         this.sourceTypes = sourceTypes;
         return this;
@@ -22,9 +23,13 @@ public class ArtifactSource {
     
     @JsonProperty("SourceUri")
     public String sourceUri;
+
     public ArtifactSource withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ArtifactSource(@JsonProperty("SourceUri") String sourceUri) {
+        this.sourceUri = sourceUri;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePolicyModuleRequest {
@@ -12,6 +13,7 @@ public class DeletePolicyModuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeletePolicyModuleRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class DeletePolicyModuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public DeletePolicyModuleRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
     }
     
+    public DeletePolicyModuleRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

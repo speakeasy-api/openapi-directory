@@ -18,6 +18,7 @@ public class ImportConsumerOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public ImportConsumerOverridesRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -29,6 +30,7 @@ public class ImportConsumerOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceOnly")
     public ImportConsumerOverridesRequestForceOnlyEnum[] forceOnly;
+
     public ImportConsumerOverridesRequest withForceOnly(ImportConsumerOverridesRequestForceOnlyEnum[] forceOnly) {
         this.forceOnly = forceOnly;
         return this;
@@ -40,9 +42,11 @@ public class ImportConsumerOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineSource")
     public OverrideInlineSource inlineSource;
+
     public ImportConsumerOverridesRequest withInlineSource(OverrideInlineSource inlineSource) {
         this.inlineSource = inlineSource;
         return this;
     }
     
+    public ImportConsumerOverridesRequest(){}
 }

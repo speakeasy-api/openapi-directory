@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentsOnFetchJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05ConsentsOnFetchJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05ConsentsOnFetchJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05ConsentsOnFetchJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ConsentArtefactResponse consentArtefactResponse;
+
     public PostV05ConsentsOnFetchJsonRequest withConsentArtefactResponse(org.openapis.openapi.models.shared.ConsentArtefactResponse consentArtefactResponse) {
         this.consentArtefactResponse = consentArtefactResponse;
         return this;
@@ -29,9 +32,15 @@ public class PostV05ConsentsOnFetchJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05ConsentsOnFetchJsonRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05ConsentsOnFetchJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("ConsentArtefactResponse") org.openapis.openapi.models.shared.ConsentArtefactResponse consentArtefactResponse, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.consentArtefactResponse = consentArtefactResponse;
+        this.xHiuId = xHiuId;
+  }
 }

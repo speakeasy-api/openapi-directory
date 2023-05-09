@@ -15,6 +15,7 @@ public class TemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public DataTypeEnum dataType;
+
     public TemplateInput withDataType(DataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -23,6 +24,7 @@ public class TemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputName")
     public String inputName;
+
     public TemplateInput withInputName(String inputName) {
         this.inputName = inputName;
         return this;
@@ -31,9 +33,11 @@ public class TemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public TemplateInput withRequired(Boolean required) {
         this.required = required;
         return this;
     }
     
+    public TemplateInput(){}
 }

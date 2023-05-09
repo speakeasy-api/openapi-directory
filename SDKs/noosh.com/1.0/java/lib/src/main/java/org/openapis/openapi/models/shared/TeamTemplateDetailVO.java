@@ -15,6 +15,7 @@ public class TeamTemplateDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_teample_item")
     public TeamTemplateItemVO[] teamTeampleItem;
+
     public TeamTemplateDetailVO withTeamTeampleItem(TeamTemplateItemVO[] teamTeampleItem) {
         this.teamTeampleItem = teamTeampleItem;
         return this;
@@ -23,6 +24,7 @@ public class TeamTemplateDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_template_id")
     public Long teamTemplateId;
+
     public TeamTemplateDetailVO withTeamTemplateId(Long teamTemplateId) {
         this.teamTemplateId = teamTemplateId;
         return this;
@@ -31,9 +33,11 @@ public class TeamTemplateDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_template_name")
     public String teamTemplateName;
+
     public TeamTemplateDetailVO withTeamTemplateName(String teamTemplateName) {
         this.teamTemplateName = teamTemplateName;
         return this;
     }
     
+    public TeamTemplateDetailVO(){}
 }

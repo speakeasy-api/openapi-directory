@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkersResponse {
@@ -12,6 +13,7 @@ public class ListWorkersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListWorkersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkersResponse {
     
     
     public String contentType;
+
     public ListWorkersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkersResponse {
      */
     
     public Object internalServerException;
+
     public ListWorkersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkersResponse listWorkersResponse;
+
     public ListWorkersResponse withListWorkersResponse(org.openapis.openapi.models.shared.ListWorkersResponse listWorkersResponse) {
         this.listWorkersResponse = listWorkersResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListWorkersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListWorkersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListWorkersResponse {
     
     
     public Integer statusCode;
+
     public ListWorkersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListWorkersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListWorkersResponse {
      */
     
     public Object throttlingException;
+
     public ListWorkersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListWorkersResponse {
      */
     
     public Object validationException;
+
     public ListWorkersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListWorkersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endYear")
     public Long endYear;
+
     public TeamMatchup withEndYear(Long endYear) {
         this.endYear = endYear;
         return this;
@@ -23,6 +24,7 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games")
     public TeamMatchupGames[] games;
+
     public TeamMatchup withGames(TeamMatchupGames[] games) {
         this.games = games;
         return this;
@@ -31,6 +33,7 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startYear")
     public Long startYear;
+
     public TeamMatchup withStartYear(Long startYear) {
         this.startYear = startYear;
         return this;
@@ -39,6 +42,7 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team1")
     public String team1;
+
     public TeamMatchup withTeam1(String team1) {
         this.team1 = team1;
         return this;
@@ -47,6 +51,7 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team1Wins")
     public Long team1Wins;
+
     public TeamMatchup withTeam1Wins(Long team1Wins) {
         this.team1Wins = team1Wins;
         return this;
@@ -55,6 +60,7 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team2")
     public String team2;
+
     public TeamMatchup withTeam2(String team2) {
         this.team2 = team2;
         return this;
@@ -63,6 +69,7 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team2Wins")
     public Long team2Wins;
+
     public TeamMatchup withTeam2Wins(Long team2Wins) {
         this.team2Wins = team2Wins;
         return this;
@@ -71,9 +78,11 @@ public class TeamMatchup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ties")
     public Long ties;
+
     public TeamMatchup withTies(Long ties) {
         this.ties = ties;
         return this;
     }
     
+    public TeamMatchup(){}
 }

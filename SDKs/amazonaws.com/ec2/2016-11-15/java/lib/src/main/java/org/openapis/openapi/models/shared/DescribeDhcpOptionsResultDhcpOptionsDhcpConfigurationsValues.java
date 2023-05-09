@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeDhcpOptionsResultDhcpOptionsDhcpConfigurationsValues {
     
     public String value;
+
     public DescribeDhcpOptionsResultDhcpOptionsDhcpConfigurationsValues withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeDhcpOptionsResultDhcpOptionsDhcpConfigurationsValues(){}
 }

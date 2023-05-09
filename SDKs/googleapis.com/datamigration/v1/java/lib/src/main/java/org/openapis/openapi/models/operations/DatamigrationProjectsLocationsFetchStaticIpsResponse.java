@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatamigrationProjectsLocationsFetchStaticIpsResponse {
     
     public String contentType;
+
     public DatamigrationProjectsLocationsFetchStaticIpsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchStaticIpsResponse fetchStaticIpsResponse;
+
     public DatamigrationProjectsLocationsFetchStaticIpsResponse withFetchStaticIpsResponse(org.openapis.openapi.models.shared.FetchStaticIpsResponse fetchStaticIpsResponse) {
         this.fetchStaticIpsResponse = fetchStaticIpsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsResponse {
     
     
     public Integer statusCode;
+
     public DatamigrationProjectsLocationsFetchStaticIpsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatamigrationProjectsLocationsFetchStaticIpsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatamigrationProjectsLocationsFetchStaticIpsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatamigrationProjectsLocationsFetchStaticIpsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

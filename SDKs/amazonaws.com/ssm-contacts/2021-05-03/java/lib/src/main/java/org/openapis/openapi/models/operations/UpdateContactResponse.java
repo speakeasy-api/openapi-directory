@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateContactResponse {
@@ -12,6 +13,7 @@ public class UpdateContactResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateContactResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateContactResponse {
     
     
     public String contentType;
+
     public UpdateContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateContactResponse {
      */
     
     public Object dataEncryptionException;
+
     public UpdateContactResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateContactResponse {
      */
     
     public Object internalServerException;
+
     public UpdateContactResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateContactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateContactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateContactResponse {
     
     
     public Integer statusCode;
+
     public UpdateContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateContactResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateContactResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateContactResponse {
      */
     
     public Object throttlingException;
+
     public UpdateContactResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateContactResponse {
      */
     
     public java.util.Map<String, Object> updateContactResult;
+
     public UpdateContactResponse withUpdateContactResult(java.util.Map<String, Object> updateContactResult) {
         this.updateContactResult = updateContactResult;
         return this;
@@ -103,9 +114,14 @@ public class UpdateContactResponse {
      */
     
     public Object validationException;
+
     public UpdateContactResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

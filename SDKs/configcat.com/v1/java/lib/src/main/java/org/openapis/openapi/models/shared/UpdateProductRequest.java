@@ -12,6 +12,7 @@ public class UpdateProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateProductRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class UpdateProductRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateProductRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateProductRequest(){}
 }

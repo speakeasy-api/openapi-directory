@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DistrictsInARegionRequest;
 import org.openapis.openapi.models.operations.DistrictsInARegionResponse;
 
@@ -26,10 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DistrictsInARegionRequest req = new DistrictsInARegionRequest() {{
-                country = "Malta";
-                region = "provident";
-            }}            
+            DistrictsInARegionRequest req = new DistrictsInARegionRequest("corrupti", "provident");            
 
             DistrictsInARegionResponse res = sdk.districtsInRegion.districtsInARegion(req);
 
@@ -39,6 +35,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,25 +44,25 @@ public class Application {
 ## Available Resources and Operations
 
 
-### districtsInRegion
+### [districtsInRegion](docs/districtsinregion/README.md)
 
-* `districtsInARegion` - Returns all districts in region
+* [districtsInARegion](docs/districtsinregion/README.md#districtsinaregion) - Returns all districts in region
 
-### streetsInAWard
+### [streetsInAWard](docs/streetsinaward/README.md)
 
-* `streetsInAWard` - Returns all streets in a ward
+* [streetsInAWard](docs/streetsinaward/README.md#streetsinaward) - Returns all streets in a ward
 
-### tanzaniaRegions
+### [tanzaniaRegions](docs/tanzaniaregions/README.md)
 
-* `tanzaniaRegions` - Returns all regions present in Tanzania
+* [tanzaniaRegions](docs/tanzaniaregions/README.md#tanzaniaregions) - Returns all regions present in Tanzania
 
-### wardsInADistrict
+### [wardsInADistrict](docs/wardsinadistrict/README.md)
 
-* `wardsInADistrict` - Returns all wards in a district
+* [wardsInADistrict](docs/wardsinadistrict/README.md#wardsinadistrict) - Returns all wards in a district
 
-### neighborhoodInAStreet
+### [neighborhoodInAStreet](docs/neighborhoodinastreet/README.md)
 
-* `neighborhoodInAStreet` - Returns all neighborhood in a street
+* [neighborhoodInAStreet](docs/neighborhoodinastreet/README.md#neighborhoodinastreet) - Returns all neighborhood in a street
 <!-- End SDK Available Operations -->
 
 ### Maturity

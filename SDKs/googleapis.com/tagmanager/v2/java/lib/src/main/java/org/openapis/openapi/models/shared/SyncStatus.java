@@ -18,6 +18,7 @@ public class SyncStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeConflict")
     public Boolean mergeConflict;
+
     public SyncStatus withMergeConflict(Boolean mergeConflict) {
         this.mergeConflict = mergeConflict;
         return this;
@@ -29,9 +30,11 @@ public class SyncStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncError")
     public Boolean syncError;
+
     public SyncStatus withSyncError(Boolean syncError) {
         this.syncError = syncError;
         return this;
     }
     
+    public SyncStatus(){}
 }

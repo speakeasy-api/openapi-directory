@@ -20,6 +20,7 @@ public class RobotDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RobotDeployment withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class RobotDeployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deploymentFinishTime")
     public OffsetDateTime deploymentFinishTime;
+
     public RobotDeployment withDeploymentFinishTime(OffsetDateTime deploymentFinishTime) {
         this.deploymentFinishTime = deploymentFinishTime;
         return this;
@@ -40,6 +42,7 @@ public class RobotDeployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deploymentStartTime")
     public OffsetDateTime deploymentStartTime;
+
     public RobotDeployment withDeploymentStartTime(OffsetDateTime deploymentStartTime) {
         this.deploymentStartTime = deploymentStartTime;
         return this;
@@ -48,6 +51,7 @@ public class RobotDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public DeploymentJobErrorCodeEnum failureCode;
+
     public RobotDeployment withFailureCode(DeploymentJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -56,6 +60,7 @@ public class RobotDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public RobotDeployment withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -64,6 +69,7 @@ public class RobotDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressDetail")
     public ProgressDetail progressDetail;
+
     public RobotDeployment withProgressDetail(ProgressDetail progressDetail) {
         this.progressDetail = progressDetail;
         return this;
@@ -72,9 +78,11 @@ public class RobotDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public RobotStatusEnum status;
+
     public RobotDeployment withStatus(RobotStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public RobotDeployment(){}
 }

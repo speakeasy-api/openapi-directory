@@ -15,6 +15,7 @@ public class KubernetesNetworkConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipFamily")
     public IpFamilyEnum ipFamily;
+
     public KubernetesNetworkConfigResponse withIpFamily(IpFamilyEnum ipFamily) {
         this.ipFamily = ipFamily;
         return this;
@@ -23,6 +24,7 @@ public class KubernetesNetworkConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIpv4Cidr")
     public String serviceIpv4Cidr;
+
     public KubernetesNetworkConfigResponse withServiceIpv4Cidr(String serviceIpv4Cidr) {
         this.serviceIpv4Cidr = serviceIpv4Cidr;
         return this;
@@ -31,9 +33,11 @@ public class KubernetesNetworkConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceIpv6Cidr")
     public String serviceIpv6Cidr;
+
     public KubernetesNetworkConfigResponse withServiceIpv6Cidr(String serviceIpv6Cidr) {
         this.serviceIpv6Cidr = serviceIpv6Cidr;
         return this;
     }
     
+    public KubernetesNetworkConfigResponse(){}
 }

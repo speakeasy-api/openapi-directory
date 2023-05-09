@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AppD - Content of the AppD is returned.
@@ -15,6 +15,7 @@ public class AppD {
      */
     
     public String appDId;
+
     public AppD withAppDId(String appDId) {
         this.appDId = appDId;
         return this;
@@ -25,6 +26,7 @@ public class AppD {
      */
     
     public DNSRuleDescriptor[] appDNSRule;
+
     public AppD withAppDNSRule(DNSRuleDescriptor[] appDNSRule) {
         this.appDNSRule = appDNSRule;
         return this;
@@ -35,6 +37,7 @@ public class AppD {
      */
     
     public String appDVersion;
+
     public AppD withAppDVersion(String appDVersion) {
         this.appDVersion = appDVersion;
         return this;
@@ -45,6 +48,7 @@ public class AppD {
      */
     
     public String appDescription;
+
     public AppD withAppDescription(String appDescription) {
         this.appDescription = appDescription;
         return this;
@@ -55,6 +59,7 @@ public class AppD {
      */
     
     public AppExternalCpd[] appExtCpd;
+
     public AppD withAppExtCpd(AppExternalCpd[] appExtCpd) {
         this.appExtCpd = appExtCpd;
         return this;
@@ -65,6 +70,7 @@ public class AppD {
      */
     
     public FeatureDependency[] appFeatureOptional;
+
     public AppD withAppFeatureOptional(FeatureDependency[] appFeatureOptional) {
         this.appFeatureOptional = appFeatureOptional;
         return this;
@@ -75,6 +81,7 @@ public class AppD {
      */
     
     public FeatureDependency[] appFeatureRequired;
+
     public AppD withAppFeatureRequired(FeatureDependency[] appFeatureRequired) {
         this.appFeatureRequired = appFeatureRequired;
         return this;
@@ -85,6 +92,7 @@ public class AppD {
      */
     
     public String appInfoName;
+
     public AppD withAppInfoName(String appInfoName) {
         this.appInfoName = appInfoName;
         return this;
@@ -92,6 +100,7 @@ public class AppD {
     
     
     public LatencyDescriptor appLatency;
+
     public AppD withAppLatency(LatencyDescriptor appLatency) {
         this.appLatency = appLatency;
         return this;
@@ -102,6 +111,7 @@ public class AppD {
      */
     
     public String appName;
+
     public AppD withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -112,6 +122,7 @@ public class AppD {
      */
     
     public String appProvider;
+
     public AppD withAppProvider(String appProvider) {
         this.appProvider = appProvider;
         return this;
@@ -122,6 +133,7 @@ public class AppD {
      */
     
     public ServiceDependency[] appServiceOptional;
+
     public AppD withAppServiceOptional(ServiceDependency[] appServiceOptional) {
         this.appServiceOptional = appServiceOptional;
         return this;
@@ -132,6 +144,7 @@ public class AppD {
      */
     
     public ServiceDescriptor[] appServiceProduced;
+
     public AppD withAppServiceProduced(ServiceDescriptor[] appServiceProduced) {
         this.appServiceProduced = appServiceProduced;
         return this;
@@ -142,6 +155,7 @@ public class AppD {
      */
     
     public ServiceDependency[] appServiceRequired;
+
     public AppD withAppServiceRequired(ServiceDependency[] appServiceRequired) {
         this.appServiceRequired = appServiceRequired;
         return this;
@@ -152,6 +166,7 @@ public class AppD {
      */
     
     public String appSoftVersion;
+
     public AppD withAppSoftVersion(String appSoftVersion) {
         this.appSoftVersion = appSoftVersion;
         return this;
@@ -162,6 +177,7 @@ public class AppD {
      */
     
     public TrafficRuleDescriptor[] appTrafficRule;
+
     public AppD withAppTrafficRule(TrafficRuleDescriptor[] appTrafficRule) {
         this.appTrafficRule = appTrafficRule;
         return this;
@@ -172,6 +188,7 @@ public class AppD {
      */
     
     public String changeAppInstanceStateOpConfig;
+
     public AppD withChangeAppInstanceStateOpConfig(String changeAppInstanceStateOpConfig) {
         this.changeAppInstanceStateOpConfig = changeAppInstanceStateOpConfig;
         return this;
@@ -182,6 +199,7 @@ public class AppD {
      */
     
     public String[] mecVersion;
+
     public AppD withMecVersion(String[] mecVersion) {
         this.mecVersion = mecVersion;
         return this;
@@ -192,6 +210,7 @@ public class AppD {
      */
     
     public String swImageDescriptor;
+
     public AppD withSwImageDescriptor(String swImageDescriptor) {
         this.swImageDescriptor = swImageDescriptor;
         return this;
@@ -202,6 +221,7 @@ public class AppD {
      */
     
     public String terminateAppInstanceOpConfig;
+
     public AppD withTerminateAppInstanceOpConfig(String terminateAppInstanceOpConfig) {
         this.terminateAppInstanceOpConfig = terminateAppInstanceOpConfig;
         return this;
@@ -212,6 +232,7 @@ public class AppD {
      */
     
     public TransportDependency[] transportDependencies;
+
     public AppD withTransportDependencies(TransportDependency[] transportDependencies) {
         this.transportDependencies = transportDependencies;
         return this;
@@ -222,6 +243,7 @@ public class AppD {
      */
     
     public String virtualComputeDescriptor;
+
     public AppD withVirtualComputeDescriptor(String virtualComputeDescriptor) {
         this.virtualComputeDescriptor = virtualComputeDescriptor;
         return this;
@@ -232,9 +254,21 @@ public class AppD {
      */
     
     public String[] virtualStorageDescriptor;
+
     public AppD withVirtualStorageDescriptor(String[] virtualStorageDescriptor) {
         this.virtualStorageDescriptor = virtualStorageDescriptor;
         return this;
     }
     
+    public AppD(@JsonProperty("appDId") String appDId, @JsonProperty("appDVersion") String appDVersion, @JsonProperty("appDescription") String appDescription, @JsonProperty("appName") String appName, @JsonProperty("appProvider") String appProvider, @JsonProperty("appSoftVersion") String appSoftVersion, @JsonProperty("mecVersion") String[] mecVersion, @JsonProperty("swImageDescriptor") String swImageDescriptor, @JsonProperty("virtualComputeDescriptor") String virtualComputeDescriptor) {
+        this.appDId = appDId;
+        this.appDVersion = appDVersion;
+        this.appDescription = appDescription;
+        this.appName = appName;
+        this.appProvider = appProvider;
+        this.appSoftVersion = appSoftVersion;
+        this.mecVersion = mecVersion;
+        this.swImageDescriptor = swImageDescriptor;
+        this.virtualComputeDescriptor = virtualComputeDescriptor;
+  }
 }

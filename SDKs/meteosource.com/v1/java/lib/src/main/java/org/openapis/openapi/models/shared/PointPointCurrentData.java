@@ -16,6 +16,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloud_cover")
     public Double cloudCover;
+
     public PointPointCurrentData withCloudCover(Double cloudCover) {
         this.cloudCover = cloudCover;
         return this;
@@ -28,6 +29,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dew_point")
     public Double dewPoint;
+
     public PointPointCurrentData withDewPoint(Double dewPoint) {
         this.dewPoint = dewPoint;
         return this;
@@ -40,6 +42,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feels_like")
     public Double feelsLike;
+
     public PointPointCurrentData withFeelsLike(Double feelsLike) {
         this.feelsLike = feelsLike;
         return this;
@@ -52,6 +55,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humidity")
     public Long humidity;
+
     public PointPointCurrentData withHumidity(Long humidity) {
         this.humidity = humidity;
         return this;
@@ -63,6 +67,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public PointPointCurrentData withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -113,6 +118,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_num")
     public Long iconNum;
+
     public PointPointCurrentData withIconNum(Long iconNum) {
         this.iconNum = iconNum;
         return this;
@@ -125,6 +131,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irradiance")
     public Double irradiance;
+
     public PointPointCurrentData withIrradiance(Double irradiance) {
         this.irradiance = irradiance;
         return this;
@@ -137,6 +144,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ozone")
     public Double ozone;
+
     public PointPointCurrentData withOzone(Double ozone) {
         this.ozone = ozone;
         return this;
@@ -144,6 +152,7 @@ public class PointPointCurrentData {
     
     @JsonProperty("precipitation")
     public PointPointCurrentPrecipitationData precipitation;
+
     public PointPointCurrentData withPrecipitation(PointPointCurrentPrecipitationData precipitation) {
         this.precipitation = precipitation;
         return this;
@@ -156,6 +165,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pressure")
     public Double pressure;
+
     public PointPointCurrentData withPressure(Double pressure) {
         this.pressure = pressure;
         return this;
@@ -167,6 +177,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public PointPointCurrentData withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -179,6 +190,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public PointPointCurrentData withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -191,6 +203,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uv_index")
     public Double uvIndex;
+
     public PointPointCurrentData withUvIndex(Double uvIndex) {
         this.uvIndex = uvIndex;
         return this;
@@ -203,6 +216,7 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public Double visibility;
+
     public PointPointCurrentData withVisibility(Double visibility) {
         this.visibility = visibility;
         return this;
@@ -210,6 +224,7 @@ public class PointPointCurrentData {
     
     @JsonProperty("wind")
     public PointPointCurrentWindData wind;
+
     public PointPointCurrentData withWind(PointPointCurrentWindData wind) {
         this.wind = wind;
         return this;
@@ -222,9 +237,14 @@ public class PointPointCurrentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wind_chill")
     public Double windChill;
+
     public PointPointCurrentData withWindChill(Double windChill) {
         this.windChill = windChill;
         return this;
     }
     
+    public PointPointCurrentData(@JsonProperty("precipitation") PointPointCurrentPrecipitationData precipitation, @JsonProperty("wind") PointPointCurrentWindData wind) {
+        this.precipitation = precipitation;
+        this.wind = wind;
+  }
 }

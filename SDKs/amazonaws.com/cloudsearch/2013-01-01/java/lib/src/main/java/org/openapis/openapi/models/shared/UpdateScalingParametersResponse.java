@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateScalingParametersResponse - The result of a &lt;code&gt;UpdateScalingParameters&lt;/code&gt; request. Contains the status of the newly-configured scaling parameters.
@@ -15,9 +15,13 @@ public class UpdateScalingParametersResponse {
      */
     
     public ScalingParametersStatus scalingParameters;
+
     public UpdateScalingParametersResponse withScalingParameters(ScalingParametersStatus scalingParameters) {
         this.scalingParameters = scalingParameters;
         return this;
     }
     
+    public UpdateScalingParametersResponse(@JsonProperty("ScalingParameters") ScalingParametersStatus scalingParameters) {
+        this.scalingParameters = scalingParameters;
+  }
 }

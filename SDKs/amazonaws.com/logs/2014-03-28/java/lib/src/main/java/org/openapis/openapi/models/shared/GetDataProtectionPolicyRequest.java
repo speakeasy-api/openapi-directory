@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDataProtectionPolicyRequest {
     @JsonProperty("logGroupIdentifier")
     public String logGroupIdentifier;
+
     public GetDataProtectionPolicyRequest withLogGroupIdentifier(String logGroupIdentifier) {
         this.logGroupIdentifier = logGroupIdentifier;
         return this;
     }
     
+    public GetDataProtectionPolicyRequest(@JsonProperty("logGroupIdentifier") String logGroupIdentifier) {
+        this.logGroupIdentifier = logGroupIdentifier;
+  }
 }

@@ -18,6 +18,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public CreateAccountHolderResponse withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -29,6 +30,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public CreateAccountHolderResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -37,6 +39,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderDetails")
     public AccountHolderDetails accountHolderDetails;
+
     public CreateAccountHolderResponse withAccountHolderDetails(AccountHolderDetails accountHolderDetails) {
         this.accountHolderDetails = accountHolderDetails;
         return this;
@@ -45,6 +48,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public CreateAccountHolderResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -55,8 +59,9 @@ public class CreateAccountHolderResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
-    public ErrorFieldType[] invalidFields;
-    public CreateAccountHolderResponse withInvalidFields(ErrorFieldType[] invalidFields) {
+    public ErrorFieldTypeWrapper[] invalidFields;
+
+    public CreateAccountHolderResponse withInvalidFields(ErrorFieldTypeWrapper[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
     }
@@ -67,6 +72,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CreateAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -78,6 +84,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CreateAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -91,6 +98,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public CreateAccountHolderResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
@@ -99,9 +107,11 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public KYCVerificationResult verification;
+
     public CreateAccountHolderResponse withVerification(KYCVerificationResult verification) {
         this.verification = verification;
         return this;
     }
     
+    public CreateAccountHolderResponse(){}
 }

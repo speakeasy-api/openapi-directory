@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttributeType {
     @JsonProperty("Name")
     public String name;
+
     public AttributeType withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class AttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AttributeType withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AttributeType(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

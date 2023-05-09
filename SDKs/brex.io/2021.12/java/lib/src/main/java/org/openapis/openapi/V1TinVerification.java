@@ -62,12 +62,10 @@ public class V1TinVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TinVerificationBasicCheckResponse res = new org.openapis.openapi.models.operations.TinVerificationBasicCheckResponse() {{
+        org.openapis.openapi.models.operations.TinVerificationBasicCheckResponse res = new org.openapis.openapi.models.operations.TinVerificationBasicCheckResponse(contentType, httpRes.statusCode()) {{
             tinVerificationBasicCheck200ApplicationJSONObject = null;
             tinVerificationBasicCheckDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class V1TinVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckResponse res = new org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckResponse() {{
+        org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckResponse res = new org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckResponse(contentType, httpRes.statusCode()) {{
             tinVerificationComprehensiveCheck200ApplicationJSONObject = null;
             tinVerificationComprehensiveCheckDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,12 +168,10 @@ public class V1TinVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TinVerificationNameLookupResponse res = new org.openapis.openapi.models.operations.TinVerificationNameLookupResponse() {{
+        org.openapis.openapi.models.operations.TinVerificationNameLookupResponse res = new org.openapis.openapi.models.operations.TinVerificationNameLookupResponse(contentType, httpRes.statusCode()) {{
             tinVerificationNameLookup200ApplicationJSONObject = null;
             tinVerificationNameLookupDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

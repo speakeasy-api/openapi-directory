@@ -15,9 +15,11 @@ public class AwsS3BucketObjectLockConfigurationRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRetention")
     public AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails defaultRetention;
+
     public AwsS3BucketObjectLockConfigurationRuleDetails withDefaultRetention(AwsS3BucketObjectLockConfigurationRuleDefaultRetentionDetails defaultRetention) {
         this.defaultRetention = defaultRetention;
         return this;
     }
     
+    public AwsS3BucketObjectLockConfigurationRuleDetails(){}
 }

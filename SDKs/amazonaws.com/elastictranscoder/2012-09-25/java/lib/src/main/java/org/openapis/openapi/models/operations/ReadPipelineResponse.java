@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReadPipelineResponse {
@@ -12,6 +13,7 @@ public class ReadPipelineResponse {
      */
     
     public Object accessDeniedException;
+
     public ReadPipelineResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ReadPipelineResponse {
     
     
     public String contentType;
+
     public ReadPipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ReadPipelineResponse {
      */
     
     public Object incompatibleVersionException;
+
     public ReadPipelineResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class ReadPipelineResponse {
      */
     
     public Object internalServiceException;
+
     public ReadPipelineResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ReadPipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.ReadPipelineResponse readPipelineResponse;
+
     public ReadPipelineResponse withReadPipelineResponse(org.openapis.openapi.models.shared.ReadPipelineResponse readPipelineResponse) {
         this.readPipelineResponse = readPipelineResponse;
         return this;
@@ -59,6 +65,7 @@ public class ReadPipelineResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ReadPipelineResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ReadPipelineResponse {
     
     
     public Integer statusCode;
+
     public ReadPipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ReadPipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReadPipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ReadPipelineResponse {
      */
     
     public Object validationException;
+
     public ReadPipelineResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ReadPipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

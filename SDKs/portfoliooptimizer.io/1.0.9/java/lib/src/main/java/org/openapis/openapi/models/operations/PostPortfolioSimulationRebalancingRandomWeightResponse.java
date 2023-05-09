@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioSimulationRebalancingRandomWeightResponse {
     
     public String contentType;
+
     public PostPortfolioSimulationRebalancingRandomWeightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioSimulationRebalancingRandomWeightResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioSimulationRebalancingRandomWeightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioSimulationRebalancingRandomWeightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioSimulationRebalancingRandomWeightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioSimulationRebalancingRandomWeightResponse {
      */
     
     public PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject;
+
     public PostPortfolioSimulationRebalancingRandomWeightResponse withPostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject(PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject) {
         this.postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject = postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioSimulationRebalancingRandomWeightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

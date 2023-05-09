@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdvancedTeamSeasonStatsResponse {
@@ -12,6 +13,7 @@ public class GetAdvancedTeamSeasonStatsResponse {
      */
     
     public org.openapis.openapi.models.shared.AdvancedSeasonStat[] advancedSeasonStats;
+
     public GetAdvancedTeamSeasonStatsResponse withAdvancedSeasonStats(org.openapis.openapi.models.shared.AdvancedSeasonStat[] advancedSeasonStats) {
         this.advancedSeasonStats = advancedSeasonStats;
         return this;
@@ -19,6 +21,7 @@ public class GetAdvancedTeamSeasonStatsResponse {
     
     
     public String contentType;
+
     public GetAdvancedTeamSeasonStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAdvancedTeamSeasonStatsResponse {
     
     
     public Integer statusCode;
+
     public GetAdvancedTeamSeasonStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAdvancedTeamSeasonStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdvancedTeamSeasonStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAdvancedTeamSeasonStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

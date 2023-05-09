@@ -18,6 +18,7 @@ public class GoogleCloudVideointelligenceV1VideoSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTimeOffset")
     public String endTimeOffset;
+
     public GoogleCloudVideointelligenceV1VideoSegment withEndTimeOffset(String endTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVideointelligenceV1VideoSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOffset")
     public String startTimeOffset;
+
     public GoogleCloudVideointelligenceV1VideoSegment withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1VideoSegment(){}
 }

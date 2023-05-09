@@ -22,6 +22,7 @@ public class LifecyclePolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateCreated")
     public OffsetDateTime dateCreated;
+
     public LifecyclePolicy withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -32,6 +33,7 @@ public class LifecyclePolicy {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateModified")
     public OffsetDateTime dateModified;
+
     public LifecyclePolicy withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -40,6 +42,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public LifecyclePolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public LifecyclePolicy withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -56,6 +60,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyArn")
     public String policyArn;
+
     public LifecyclePolicy withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -64,6 +69,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyDetails")
     public PolicyDetails policyDetails;
+
     public LifecyclePolicy withPolicyDetails(PolicyDetails policyDetails) {
         this.policyDetails = policyDetails;
         return this;
@@ -72,6 +78,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public LifecyclePolicy withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -80,6 +87,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public GettablePolicyStateValuesEnum state;
+
     public LifecyclePolicy withState(GettablePolicyStateValuesEnum state) {
         this.state = state;
         return this;
@@ -88,6 +96,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public LifecyclePolicy withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -96,9 +105,11 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public LifecyclePolicy withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public LifecyclePolicy(){}
 }

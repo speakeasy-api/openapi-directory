@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestConnectionResponse {
@@ -12,6 +13,7 @@ public class TestConnectionResponse {
      */
     
     public Object accessDeniedFault;
+
     public TestConnectionResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class TestConnectionResponse {
     
     
     public String contentType;
+
     public TestConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TestConnectionResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public TestConnectionResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class TestConnectionResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public TestConnectionResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -49,6 +54,7 @@ public class TestConnectionResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public TestConnectionResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
@@ -56,6 +62,7 @@ public class TestConnectionResponse {
     
     
     public Integer statusCode;
+
     public TestConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class TestConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class TestConnectionResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public TestConnectionResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -83,9 +92,14 @@ public class TestConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.TestConnectionResponse testConnectionResponse;
+
     public TestConnectionResponse withTestConnectionResponse(org.openapis.openapi.models.shared.TestConnectionResponse testConnectionResponse) {
         this.testConnectionResponse = testConnectionResponse;
         return this;
     }
     
+    public TestConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

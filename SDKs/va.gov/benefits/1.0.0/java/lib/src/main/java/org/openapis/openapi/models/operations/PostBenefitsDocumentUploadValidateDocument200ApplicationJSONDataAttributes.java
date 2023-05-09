@@ -12,9 +12,11 @@ public class PostBenefitsDocumentUploadValidateDocument200ApplicationJSONDataAtt
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PostBenefitsDocumentUploadValidateDocument200ApplicationJSONDataAttributes withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PostBenefitsDocumentUploadValidateDocument200ApplicationJSONDataAttributes(){}
 }

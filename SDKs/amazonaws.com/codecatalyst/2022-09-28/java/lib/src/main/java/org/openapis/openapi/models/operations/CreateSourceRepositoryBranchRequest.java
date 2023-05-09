@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSourceRepositoryBranchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateSourceRepositoryBranchRequestBody requestBody;
+
     public CreateSourceRepositoryBranchRequest withRequestBody(CreateSourceRepositoryBranchRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class CreateSourceRepositoryBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CreateSourceRepositoryBranchRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +32,7 @@ public class CreateSourceRepositoryBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public CreateSourceRepositoryBranchRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -39,6 +43,7 @@ public class CreateSourceRepositoryBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceRepositoryName")
     public String sourceRepositoryName;
+
     public CreateSourceRepositoryBranchRequest withSourceRepositoryName(String sourceRepositoryName) {
         this.sourceRepositoryName = sourceRepositoryName;
         return this;
@@ -49,9 +54,17 @@ public class CreateSourceRepositoryBranchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public CreateSourceRepositoryBranchRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public CreateSourceRepositoryBranchRequest(@JsonProperty("RequestBody") CreateSourceRepositoryBranchRequestBody requestBody, @JsonProperty("name") String name, @JsonProperty("projectName") String projectName, @JsonProperty("sourceRepositoryName") String sourceRepositoryName, @JsonProperty("spaceName") String spaceName) {
+        this.requestBody = requestBody;
+        this.name = name;
+        this.projectName = projectName;
+        this.sourceRepositoryName = sourceRepositoryName;
+        this.spaceName = spaceName;
+  }
 }

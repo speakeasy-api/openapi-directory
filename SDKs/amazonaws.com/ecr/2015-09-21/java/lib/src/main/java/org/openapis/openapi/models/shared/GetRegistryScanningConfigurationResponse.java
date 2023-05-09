@@ -15,6 +15,7 @@ public class GetRegistryScanningConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetRegistryScanningConfigurationResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -23,9 +24,11 @@ public class GetRegistryScanningConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanningConfiguration")
     public RegistryScanningConfiguration scanningConfiguration;
+
     public GetRegistryScanningConfigurationResponse withScanningConfiguration(RegistryScanningConfiguration scanningConfiguration) {
         this.scanningConfiguration = scanningConfiguration;
         return this;
     }
     
+    public GetRegistryScanningConfigurationResponse(){}
 }

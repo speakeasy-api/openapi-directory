@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWaveResponse {
@@ -12,6 +13,7 @@ public class DeleteWaveResponse {
      */
     
     public Object conflictException;
+
     public DeleteWaveResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWaveResponse {
     
     
     public String contentType;
+
     public DeleteWaveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWaveResponse {
      */
     
     public java.util.Map<String, Object> deleteWaveResponse;
+
     public DeleteWaveResponse withDeleteWaveResponse(java.util.Map<String, Object> deleteWaveResponse) {
         this.deleteWaveResponse = deleteWaveResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWaveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWaveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteWaveResponse {
     
     
     public Integer statusCode;
+
     public DeleteWaveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteWaveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWaveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteWaveResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DeleteWaveResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DeleteWaveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

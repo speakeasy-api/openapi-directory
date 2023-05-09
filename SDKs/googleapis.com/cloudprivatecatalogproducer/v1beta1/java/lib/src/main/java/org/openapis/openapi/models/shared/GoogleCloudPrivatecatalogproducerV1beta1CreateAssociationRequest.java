@@ -37,9 +37,11 @@ public class GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("association")
     public GoogleCloudPrivatecatalogproducerV1beta1Association association;
+
     public GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest withAssociation(GoogleCloudPrivatecatalogproducerV1beta1Association association) {
         this.association = association;
         return this;
     }
     
+    public GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MetricStat - This structure defines the metric to be returned, along with the statistics, period, and units.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MetricStat {
     
     public Metric metric;
+
     public MetricStat withMetric(Metric metric) {
         this.metric = metric;
         return this;
@@ -19,6 +20,7 @@ public class MetricStat {
     
     
     public Long period;
+
     public MetricStat withPeriod(Long period) {
         this.period = period;
         return this;
@@ -26,6 +28,7 @@ public class MetricStat {
     
     
     public String stat;
+
     public MetricStat withStat(String stat) {
         this.stat = stat;
         return this;
@@ -33,9 +36,15 @@ public class MetricStat {
     
     
     public StandardUnitEnum unit;
+
     public MetricStat withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public MetricStat(@JsonProperty("Metric") Metric metric, @JsonProperty("Period") Long period, @JsonProperty("Stat") String stat) {
+        this.metric = metric;
+        this.period = period;
+        this.stat = stat;
+  }
 }

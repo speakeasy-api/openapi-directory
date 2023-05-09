@@ -15,6 +15,7 @@ public class LoadBalancerTlsCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public LoadBalancerTlsCertificateDomainValidationOption withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,9 +24,11 @@ public class LoadBalancerTlsCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationStatus")
     public LoadBalancerTlsCertificateDomainStatusEnum validationStatus;
+
     public LoadBalancerTlsCertificateDomainValidationOption withValidationStatus(LoadBalancerTlsCertificateDomainStatusEnum validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public LoadBalancerTlsCertificateDomainValidationOption(){}
 }

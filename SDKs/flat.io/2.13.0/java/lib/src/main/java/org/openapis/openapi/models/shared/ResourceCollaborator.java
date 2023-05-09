@@ -21,6 +21,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aclAdmin")
     public Boolean aclAdmin;
+
     public ResourceCollaborator withAclAdmin(Boolean aclAdmin) {
         this.aclAdmin = aclAdmin;
         return this;
@@ -33,6 +34,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aclRead")
     public Boolean aclRead;
+
     public ResourceCollaborator withAclRead(Boolean aclRead) {
         this.aclRead = aclRead;
         return this;
@@ -47,6 +49,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aclWrite")
     public Boolean aclWrite;
+
     public ResourceCollaborator withAclWrite(Boolean aclWrite) {
         this.aclWrite = aclWrite;
         return this;
@@ -58,6 +61,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public String collection;
+
     public ResourceCollaborator withCollection(String collection) {
         this.collection = collection;
         return this;
@@ -69,6 +73,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public ResourceCollaborator withGroup(Group group) {
         this.group = group;
         return this;
@@ -80,6 +85,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ResourceCollaborator withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +98,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invited")
     public Boolean invited;
+
     public ResourceCollaborator withInvited(Boolean invited) {
         this.invited = invited;
         return this;
@@ -104,6 +111,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCollaborator")
     public Boolean isCollaborator;
+
     public ResourceCollaborator withIsCollaborator(Boolean isCollaborator) {
         this.isCollaborator = isCollaborator;
         return this;
@@ -115,6 +123,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public String score;
+
     public ResourceCollaborator withScore(String score) {
         this.score = score;
         return this;
@@ -126,6 +135,7 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserPublic user;
+
     public ResourceCollaborator withUser(UserPublic user) {
         this.user = user;
         return this;
@@ -138,9 +148,11 @@ public class ResourceCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public ResourceCollaborator withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public ResourceCollaborator(){}
 }

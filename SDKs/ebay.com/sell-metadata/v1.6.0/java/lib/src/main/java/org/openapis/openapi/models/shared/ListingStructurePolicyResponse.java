@@ -18,6 +18,7 @@ public class ListingStructurePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingStructurePolicies")
     public ListingStructurePolicy[] listingStructurePolicies;
+
     public ListingStructurePolicyResponse withListingStructurePolicies(ListingStructurePolicy[] listingStructurePolicies) {
         this.listingStructurePolicies = listingStructurePolicies;
         return this;
@@ -29,9 +30,11 @@ public class ListingStructurePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public Error[] warnings;
+
     public ListingStructurePolicyResponse withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ListingStructurePolicyResponse(){}
 }

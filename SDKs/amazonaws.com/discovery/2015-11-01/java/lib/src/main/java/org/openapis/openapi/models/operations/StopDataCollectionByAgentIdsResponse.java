@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopDataCollectionByAgentIdsResponse {
@@ -12,6 +13,7 @@ public class StopDataCollectionByAgentIdsResponse {
      */
     
     public Object authorizationErrorException;
+
     public StopDataCollectionByAgentIdsResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class StopDataCollectionByAgentIdsResponse {
     
     
     public String contentType;
+
     public StopDataCollectionByAgentIdsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopDataCollectionByAgentIdsResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public StopDataCollectionByAgentIdsResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class StopDataCollectionByAgentIdsResponse {
      */
     
     public Object invalidParameterException;
+
     public StopDataCollectionByAgentIdsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StopDataCollectionByAgentIdsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StopDataCollectionByAgentIdsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -56,6 +62,7 @@ public class StopDataCollectionByAgentIdsResponse {
     
     
     public Integer statusCode;
+
     public StopDataCollectionByAgentIdsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopDataCollectionByAgentIdsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopDataCollectionByAgentIdsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopDataCollectionByAgentIdsResponse {
      */
     
     public Object serverInternalErrorException;
+
     public StopDataCollectionByAgentIdsResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -83,9 +92,14 @@ public class StopDataCollectionByAgentIdsResponse {
      */
     
     public org.openapis.openapi.models.shared.StopDataCollectionByAgentIdsResponse stopDataCollectionByAgentIdsResponse;
+
     public StopDataCollectionByAgentIdsResponse withStopDataCollectionByAgentIdsResponse(org.openapis.openapi.models.shared.StopDataCollectionByAgentIdsResponse stopDataCollectionByAgentIdsResponse) {
         this.stopDataCollectionByAgentIdsResponse = stopDataCollectionByAgentIdsResponse;
         return this;
     }
     
+    public StopDataCollectionByAgentIdsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyMediaUploadResponse {
     
     public String contentType;
+
     public ChromepolicyMediaUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyMediaUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1UploadPolicyFileResponse googleChromePolicyVersionsV1UploadPolicyFileResponse;
+
     public ChromepolicyMediaUploadResponse withGoogleChromePolicyVersionsV1UploadPolicyFileResponse(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1UploadPolicyFileResponse googleChromePolicyVersionsV1UploadPolicyFileResponse) {
         this.googleChromePolicyVersionsV1UploadPolicyFileResponse = googleChromePolicyVersionsV1UploadPolicyFileResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyMediaUploadResponse {
     
     
     public Integer statusCode;
+
     public ChromepolicyMediaUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyMediaUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyMediaUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyMediaUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

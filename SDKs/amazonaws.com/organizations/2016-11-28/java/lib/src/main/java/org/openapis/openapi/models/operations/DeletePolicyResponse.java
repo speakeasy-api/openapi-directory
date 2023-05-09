@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePolicyResponse {
@@ -12,6 +13,7 @@ public class DeletePolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DeletePolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeletePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DeletePolicyResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeletePolicyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePolicyResponse {
     
     
     public String contentType;
+
     public DeletePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeletePolicyResponse {
      */
     
     public Object invalidInputException;
+
     public DeletePolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePolicyResponse {
      */
     
     public Object policyInUseException;
+
     public DeletePolicyResponse withPolicyInUseException(Object policyInUseException) {
         this.policyInUseException = policyInUseException;
         return this;
@@ -69,6 +76,7 @@ public class DeletePolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public DeletePolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeletePolicyResponse {
      */
     
     public Object serviceException;
+
     public DeletePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeletePolicyResponse {
     
     
     public Integer statusCode;
+
     public DeletePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeletePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DeletePolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeletePolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class DeletePolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public DeletePolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public DeletePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

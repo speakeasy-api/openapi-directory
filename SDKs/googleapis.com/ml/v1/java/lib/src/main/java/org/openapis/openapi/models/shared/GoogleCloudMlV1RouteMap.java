@@ -18,6 +18,7 @@ public class GoogleCloudMlV1RouteMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("health")
     public String health;
+
     public GoogleCloudMlV1RouteMap withHealth(String health) {
         this.health = health;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1RouteMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predict")
     public String predict;
+
     public GoogleCloudMlV1RouteMap withPredict(String predict) {
         this.predict = predict;
         return this;
     }
     
+    public GoogleCloudMlV1RouteMap(){}
 }

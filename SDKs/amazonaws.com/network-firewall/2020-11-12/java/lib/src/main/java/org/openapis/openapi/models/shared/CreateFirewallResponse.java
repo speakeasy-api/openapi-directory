@@ -15,6 +15,7 @@ public class CreateFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Firewall")
     public Firewall firewall;
+
     public CreateFirewallResponse withFirewall(Firewall firewall) {
         this.firewall = firewall;
         return this;
@@ -23,9 +24,11 @@ public class CreateFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallStatus")
     public FirewallStatus firewallStatus;
+
     public CreateFirewallResponse withFirewallStatus(FirewallStatus firewallStatus) {
         this.firewallStatus = firewallStatus;
         return this;
     }
     
+    public CreateFirewallResponse(){}
 }

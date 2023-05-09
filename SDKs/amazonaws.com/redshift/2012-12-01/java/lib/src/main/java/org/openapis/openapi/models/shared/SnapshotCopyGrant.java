@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SnapshotCopyGrant {
     
     public String kmsKeyId;
+
     public SnapshotCopyGrant withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,6 +20,7 @@ public class SnapshotCopyGrant {
     
     
     public String snapshotCopyGrantName;
+
     public SnapshotCopyGrant withSnapshotCopyGrantName(String snapshotCopyGrantName) {
         this.snapshotCopyGrantName = snapshotCopyGrantName;
         return this;
@@ -26,9 +28,11 @@ public class SnapshotCopyGrant {
     
     
     public TagList[] tags;
+
     public SnapshotCopyGrant withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public SnapshotCopyGrant(){}
 }

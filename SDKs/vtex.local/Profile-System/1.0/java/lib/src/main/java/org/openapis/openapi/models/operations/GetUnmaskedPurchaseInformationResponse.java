@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUnmaskedPurchaseInformationResponse {
     
     public String contentType;
+
     public GetUnmaskedPurchaseInformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUnmaskedPurchaseInformationResponse {
      */
     
     public java.util.Map<String, Object>[] getUnmaskedPurchaseInformation200ApplicationJSONObjects;
+
     public GetUnmaskedPurchaseInformationResponse withGetUnmaskedPurchaseInformation200ApplicationJSONObjects(java.util.Map<String, Object>[] getUnmaskedPurchaseInformation200ApplicationJSONObjects) {
         this.getUnmaskedPurchaseInformation200ApplicationJSONObjects = getUnmaskedPurchaseInformation200ApplicationJSONObjects;
         return this;
@@ -26,6 +29,7 @@ public class GetUnmaskedPurchaseInformationResponse {
     
     
     public Integer statusCode;
+
     public GetUnmaskedPurchaseInformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetUnmaskedPurchaseInformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUnmaskedPurchaseInformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUnmaskedPurchaseInformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

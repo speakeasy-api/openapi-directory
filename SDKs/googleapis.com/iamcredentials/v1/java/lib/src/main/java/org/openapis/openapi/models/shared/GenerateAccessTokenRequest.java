@@ -15,6 +15,7 @@ public class GenerateAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delegates")
     public String[] delegates;
+
     public GenerateAccessTokenRequest withDelegates(String[] delegates) {
         this.delegates = delegates;
         return this;
@@ -26,6 +27,7 @@ public class GenerateAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifetime")
     public String lifetime;
+
     public GenerateAccessTokenRequest withLifetime(String lifetime) {
         this.lifetime = lifetime;
         return this;
@@ -37,9 +39,11 @@ public class GenerateAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String[] scope;
+
     public GenerateAccessTokenRequest withScope(String[] scope) {
         this.scope = scope;
         return this;
     }
     
+    public GenerateAccessTokenRequest(){}
 }

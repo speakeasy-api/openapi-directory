@@ -15,6 +15,7 @@ public class BillingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedDurationInMilliseconds")
     public Long billedDurationInMilliseconds;
+
     public BillingDetails withBilledDurationInMilliseconds(Long billedDurationInMilliseconds) {
         this.billedDurationInMilliseconds = billedDurationInMilliseconds;
         return this;
@@ -23,9 +24,11 @@ public class BillingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedMemoryUsedInMB")
     public Long billedMemoryUsedInMB;
+
     public BillingDetails withBilledMemoryUsedInMB(Long billedMemoryUsedInMB) {
         this.billedMemoryUsedInMB = billedMemoryUsedInMB;
         return this;
     }
     
+    public BillingDetails(){}
 }

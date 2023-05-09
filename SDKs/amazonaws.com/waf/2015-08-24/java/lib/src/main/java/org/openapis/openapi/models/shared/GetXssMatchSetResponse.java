@@ -15,9 +15,11 @@ public class GetXssMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XssMatchSet")
     public XssMatchSet xssMatchSet;
+
     public GetXssMatchSetResponse withXssMatchSet(XssMatchSet xssMatchSet) {
         this.xssMatchSet = xssMatchSet;
         return this;
     }
     
+    public GetXssMatchSetResponse(){}
 }

@@ -15,6 +15,7 @@ public class VerifyCapabilityWebhooksStatusUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public VerifyCapabilityWebhooksStatusUrl withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class VerifyCapabilityWebhooksStatusUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_method")
     public VerifyCapabilityWebhooksStatusUrlHttpMethodEnum httpMethod;
+
     public VerifyCapabilityWebhooksStatusUrl withHttpMethod(VerifyCapabilityWebhooksStatusUrlHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
     }
     
+    public VerifyCapabilityWebhooksStatusUrl(){}
 }

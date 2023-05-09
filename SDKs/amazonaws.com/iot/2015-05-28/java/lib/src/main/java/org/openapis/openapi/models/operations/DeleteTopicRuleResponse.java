@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTopicRuleResponse {
@@ -12,6 +13,7 @@ public class DeleteTopicRuleResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public DeleteTopicRuleResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteTopicRuleResponse {
     
     
     public String contentType;
+
     public DeleteTopicRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTopicRuleResponse {
      */
     
     public Object internalException;
+
     public DeleteTopicRuleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTopicRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteTopicRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteTopicRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteTopicRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteTopicRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTopicRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTopicRuleResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteTopicRuleResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteTopicRuleResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteTopicRuleResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteTopicRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

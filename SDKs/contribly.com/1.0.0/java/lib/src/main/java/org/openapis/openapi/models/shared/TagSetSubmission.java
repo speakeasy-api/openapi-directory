@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TagSetSubmission {
     @JsonProperty("name")
     public String name;
+
     public TagSetSubmission withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class TagSetSubmission {
     
     @JsonProperty("urlWords")
     public String urlWords;
+
     public TagSetSubmission withUrlWords(String urlWords) {
         this.urlWords = urlWords;
         return this;
     }
     
+    public TagSetSubmission(@JsonProperty("name") String name, @JsonProperty("urlWords") String urlWords) {
+        this.name = name;
+        this.urlWords = urlWords;
+  }
 }

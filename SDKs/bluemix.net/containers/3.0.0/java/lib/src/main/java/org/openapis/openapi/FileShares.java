@@ -63,10 +63,8 @@ public class FileShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVolumesFsNameResponse res = new org.openapis.openapi.models.operations.DeleteVolumesFsNameResponse() {{
+        org.openapis.openapi.models.operations.DeleteVolumesFsNameResponse res = new org.openapis.openapi.models.operations.DeleteVolumesFsNameResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -104,11 +102,9 @@ public class FileShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVolumesFsFlavorsJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesFsFlavorsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetVolumesFsFlavorsJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesFsFlavorsJsonResponse(contentType, httpRes.statusCode()) {{
             getVolumesFsFlavorsJSON200ApplicationJSONIntegers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class FileShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVolumesFsJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesFsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetVolumesFsJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesFsJsonResponse(contentType, httpRes.statusCode()) {{
             fileshares = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class FileShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVolumesFsNameJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesFsNameJsonResponse() {{
+        org.openapis.openapi.models.operations.GetVolumesFsNameJsonResponse res = new org.openapis.openapi.models.operations.GetVolumesFsNameJsonResponse(contentType, httpRes.statusCode()) {{
             getFileshareDetails = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,10 +254,8 @@ public class FileShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVolumesFsCreateResponse res = new org.openapis.openapi.models.operations.PostVolumesFsCreateResponse() {{
+        org.openapis.openapi.models.operations.PostVolumesFsCreateResponse res = new org.openapis.openapi.models.operations.PostVolumesFsCreateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {

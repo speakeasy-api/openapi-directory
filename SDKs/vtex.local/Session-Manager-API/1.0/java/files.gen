@@ -43,4 +43,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Country.java
 lib/src/main/java/org/openapis/openapi/models/shared/EditsessionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Public1.java
 lib/src/main/java/org/openapis/openapi/models/shared/NewValue.java
+docs/sdk/README.md
+docs/segment/README.md
+docs/sessions/README.md
 USAGE.md

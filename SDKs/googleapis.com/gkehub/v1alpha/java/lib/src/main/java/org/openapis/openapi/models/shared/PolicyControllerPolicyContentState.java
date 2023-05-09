@@ -18,6 +18,7 @@ public class PolicyControllerPolicyContentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleStates")
     public java.util.Map<String, PolicyControllerOnClusterState> bundleStates;
+
     public PolicyControllerPolicyContentState withBundleStates(java.util.Map<String, PolicyControllerOnClusterState> bundleStates) {
         this.bundleStates = bundleStates;
         return this;
@@ -29,9 +30,11 @@ public class PolicyControllerPolicyContentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateLibraryState")
     public PolicyControllerOnClusterState templateLibraryState;
+
     public PolicyControllerPolicyContentState withTemplateLibraryState(PolicyControllerOnClusterState templateLibraryState) {
         this.templateLibraryState = templateLibraryState;
         return this;
     }
     
+    public PolicyControllerPolicyContentState(){}
 }

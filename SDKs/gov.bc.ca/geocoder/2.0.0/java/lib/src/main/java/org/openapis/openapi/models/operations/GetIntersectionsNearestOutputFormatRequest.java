@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntersectionsNearestOutputFormatRequest {
@@ -12,6 +13,7 @@ public class GetIntersectionsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDegree")
     public Long maxDegree;
+
     public GetIntersectionsNearestOutputFormatRequest withMaxDegree(Long maxDegree) {
         this.maxDegree = maxDegree;
         return this;
@@ -22,6 +24,7 @@ public class GetIntersectionsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
     public Long maxDistance;
+
     public GetIntersectionsNearestOutputFormatRequest withMaxDistance(Long maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -32,6 +35,7 @@ public class GetIntersectionsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDegree")
     public Long minDegree;
+
     public GetIntersectionsNearestOutputFormatRequest withMinDegree(Long minDegree) {
         this.minDegree = minDegree;
         return this;
@@ -44,6 +48,7 @@ public class GetIntersectionsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetIntersectionsNearestOutputFormatOutputFormatEnum outputFormat;
+
     public GetIntersectionsNearestOutputFormatRequest withOutputFormat(GetIntersectionsNearestOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -54,6 +59,7 @@ public class GetIntersectionsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetIntersectionsNearestOutputFormatOutputSrsEnum outputSRS;
+
     public GetIntersectionsNearestOutputFormatRequest withOutputSRS(GetIntersectionsNearestOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -64,9 +70,14 @@ public class GetIntersectionsNearestOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
     public String point;
+
     public GetIntersectionsNearestOutputFormatRequest withPoint(String point) {
         this.point = point;
         return this;
     }
     
+    public GetIntersectionsNearestOutputFormatRequest(@JsonProperty("outputFormat") GetIntersectionsNearestOutputFormatOutputFormatEnum outputFormat, @JsonProperty("point") String point) {
+        this.outputFormat = outputFormat;
+        this.point = point;
+  }
 }

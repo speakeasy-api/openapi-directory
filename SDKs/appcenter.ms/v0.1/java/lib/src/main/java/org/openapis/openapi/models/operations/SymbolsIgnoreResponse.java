@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolsIgnoreResponse {
     
     public String contentType;
+
     public SymbolsIgnoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolsIgnoreResponse {
     
     
     public Integer statusCode;
+
     public SymbolsIgnoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolsIgnoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolsIgnoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolsIgnoreResponse {
      */
     
     public SymbolsIgnore200ApplicationJSON symbolsIgnore200ApplicationJSONObject;
+
     public SymbolsIgnoreResponse withSymbolsIgnore200ApplicationJSONObject(SymbolsIgnore200ApplicationJSON symbolsIgnore200ApplicationJSONObject) {
         this.symbolsIgnore200ApplicationJSONObject = symbolsIgnore200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SymbolsIgnoreResponse {
      */
     
     public SymbolsIgnore403ApplicationJSON symbolsIgnore403ApplicationJSONObject;
+
     public SymbolsIgnoreResponse withSymbolsIgnore403ApplicationJSONObject(SymbolsIgnore403ApplicationJSON symbolsIgnore403ApplicationJSONObject) {
         this.symbolsIgnore403ApplicationJSONObject = symbolsIgnore403ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SymbolsIgnoreResponse {
      */
     
     public SymbolsIgnore404ApplicationJSON symbolsIgnore404ApplicationJSONObject;
+
     public SymbolsIgnoreResponse withSymbolsIgnore404ApplicationJSONObject(SymbolsIgnore404ApplicationJSON symbolsIgnore404ApplicationJSONObject) {
         this.symbolsIgnore404ApplicationJSONObject = symbolsIgnore404ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SymbolsIgnoreResponse {
      */
     
     public SymbolsIgnore500ApplicationJSON symbolsIgnore500ApplicationJSONObject;
+
     public SymbolsIgnoreResponse withSymbolsIgnore500ApplicationJSONObject(SymbolsIgnore500ApplicationJSON symbolsIgnore500ApplicationJSONObject) {
         this.symbolsIgnore500ApplicationJSONObject = symbolsIgnore500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolsIgnoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

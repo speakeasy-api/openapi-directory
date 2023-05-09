@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateThingGroupsForThingResponse {
     
     public String contentType;
+
     public UpdateThingGroupsForThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateThingGroupsForThingResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateThingGroupsForThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateThingGroupsForThingResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateThingGroupsForThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateThingGroupsForThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateThingGroupsForThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateThingGroupsForThingResponse {
     
     
     public Integer statusCode;
+
     public UpdateThingGroupsForThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateThingGroupsForThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateThingGroupsForThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateThingGroupsForThingResponse {
      */
     
     public Object throttlingException;
+
     public UpdateThingGroupsForThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateThingGroupsForThingResponse {
      */
     
     public java.util.Map<String, Object> updateThingGroupsForThingResponse;
+
     public UpdateThingGroupsForThingResponse withUpdateThingGroupsForThingResponse(java.util.Map<String, Object> updateThingGroupsForThingResponse) {
         this.updateThingGroupsForThingResponse = updateThingGroupsForThingResponse;
         return this;
     }
     
+    public UpdateThingGroupsForThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

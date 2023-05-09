@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFunctionUrlConfigsResponse {
     
     public String contentType;
+
     public ListFunctionUrlConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFunctionUrlConfigsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListFunctionUrlConfigsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListFunctionUrlConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFunctionUrlConfigsResponse listFunctionUrlConfigsResponse;
+
     public ListFunctionUrlConfigsResponse withListFunctionUrlConfigsResponse(org.openapis.openapi.models.shared.ListFunctionUrlConfigsResponse listFunctionUrlConfigsResponse) {
         this.listFunctionUrlConfigsResponse = listFunctionUrlConfigsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListFunctionUrlConfigsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFunctionUrlConfigsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListFunctionUrlConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListFunctionUrlConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFunctionUrlConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFunctionUrlConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListFunctionUrlConfigsResponse {
      */
     
     public Object serviceException;
+
     public ListFunctionUrlConfigsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,9 +81,14 @@ public class ListFunctionUrlConfigsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListFunctionUrlConfigsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListFunctionUrlConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

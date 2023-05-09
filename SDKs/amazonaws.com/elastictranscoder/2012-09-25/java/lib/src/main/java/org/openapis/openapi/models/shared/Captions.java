@@ -15,6 +15,7 @@ public class Captions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptionFormats")
     public CaptionFormat[] captionFormats;
+
     public Captions withCaptionFormats(CaptionFormat[] captionFormats) {
         this.captionFormats = captionFormats;
         return this;
@@ -23,6 +24,7 @@ public class Captions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptionSources")
     public CaptionSource[] captionSources;
+
     public Captions withCaptionSources(CaptionSource[] captionSources) {
         this.captionSources = captionSources;
         return this;
@@ -31,9 +33,11 @@ public class Captions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MergePolicy")
     public String mergePolicy;
+
     public Captions withMergePolicy(String mergePolicy) {
         this.mergePolicy = mergePolicy;
         return this;
     }
     
+    public Captions(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeConversionTasksRequest {
     
     public String[] conversionTaskIds;
+
     public DescribeConversionTasksRequest withConversionTaskIds(String[] conversionTaskIds) {
         this.conversionTaskIds = conversionTaskIds;
         return this;
@@ -16,9 +17,11 @@ public class DescribeConversionTasksRequest {
     
     
     public Boolean dryRun;
+
     public DescribeConversionTasksRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DescribeConversionTasksRequest(){}
 }

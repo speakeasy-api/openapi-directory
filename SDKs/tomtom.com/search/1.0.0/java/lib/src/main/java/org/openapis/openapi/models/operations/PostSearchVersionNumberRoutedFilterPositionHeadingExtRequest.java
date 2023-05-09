@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody requestBody;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withRequestBody(PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -29,6 +32,7 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=heading")
     public Float heading;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withHeading(Float heading) {
         this.heading = heading;
         return this;
@@ -39,6 +43,7 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
     public String position;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -49,6 +54,7 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routingTimeout")
     public Long routingTimeout;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withRoutingTimeout(Long routingTimeout) {
         this.routingTimeout = routingTimeout;
         return this;
@@ -59,9 +65,16 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("heading") Float heading, @JsonProperty("position") String position, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.heading = heading;
+        this.position = position;
+        this.versionNumber = versionNumber;
+  }
 }

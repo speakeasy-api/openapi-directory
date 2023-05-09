@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteVpnConnectionRouteRequest - Contains the parameters for DeleteVpnConnectionRoute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpnConnectionRouteRequest {
     
     public String destinationCidrBlock;
+
     public DeleteVpnConnectionRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -19,9 +20,14 @@ public class DeleteVpnConnectionRouteRequest {
     
     
     public String vpnConnectionId;
+
     public DeleteVpnConnectionRouteRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
     }
     
+    public DeleteVpnConnectionRouteRequest(@JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

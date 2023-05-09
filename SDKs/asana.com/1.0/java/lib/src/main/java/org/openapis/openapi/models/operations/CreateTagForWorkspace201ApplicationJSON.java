@@ -15,9 +15,11 @@ public class CreateTagForWorkspace201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TagResponse data;
+
     public CreateTagForWorkspace201ApplicationJSON withData(org.openapis.openapi.models.shared.TagResponse data) {
         this.data = data;
         return this;
     }
     
+    public CreateTagForWorkspace201ApplicationJSON(){}
 }

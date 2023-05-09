@@ -15,6 +15,7 @@ public class MergeTemplates200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public MergeTemplates200ApplicationJSONMeta meta;
+
     public MergeTemplates200ApplicationJSON withMeta(MergeTemplates200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
@@ -26,9 +27,11 @@ public class MergeTemplates200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public MergeTemplates200ApplicationJSON withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public MergeTemplates200ApplicationJSON(){}
 }

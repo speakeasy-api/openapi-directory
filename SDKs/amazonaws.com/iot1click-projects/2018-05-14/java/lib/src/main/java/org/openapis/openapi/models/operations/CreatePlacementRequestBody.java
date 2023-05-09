@@ -15,6 +15,7 @@ public class CreatePlacementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public CreatePlacementRequestBody withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -25,9 +26,13 @@ public class CreatePlacementRequestBody {
      */
     @JsonProperty("placementName")
     public String placementName;
+
     public CreatePlacementRequestBody withPlacementName(String placementName) {
         this.placementName = placementName;
         return this;
     }
     
+    public CreatePlacementRequestBody(@JsonProperty("placementName") String placementName) {
+        this.placementName = placementName;
+  }
 }

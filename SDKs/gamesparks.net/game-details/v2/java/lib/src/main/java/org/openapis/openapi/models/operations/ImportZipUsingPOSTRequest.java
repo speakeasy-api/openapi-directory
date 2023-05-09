@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportZipUsingPOSTRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public ImportZipUsingPOSTRequestBody requestBody;
+
     public ImportZipUsingPOSTRequest withRequestBody(ImportZipUsingPOSTRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class ImportZipUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public ImportZipUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public ImportZipUsingPOSTRequest(@JsonProperty("RequestBody") ImportZipUsingPOSTRequestBody requestBody, @JsonProperty("apiKey") String apiKey) {
+        this.requestBody = requestBody;
+        this.apiKey = apiKey;
+  }
 }

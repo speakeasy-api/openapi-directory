@@ -20,6 +20,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Framework withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public Framework withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -36,6 +38,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSets")
     public ControlSet[] controlSets;
+
     public Framework withControlSets(ControlSet[] controlSets) {
         this.controlSets = controlSets;
         return this;
@@ -44,6 +47,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSources")
     public String controlSources;
+
     public Framework withControlSources(String controlSources) {
         this.controlSources = controlSources;
         return this;
@@ -54,6 +58,7 @@ public class Framework {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Framework withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -62,6 +67,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public Framework withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -70,6 +76,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Framework withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +85,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Framework withId(String id) {
         this.id = id;
         return this;
@@ -88,6 +96,7 @@ public class Framework {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public Framework withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -96,6 +105,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedBy")
     public String lastUpdatedBy;
+
     public Framework withLastUpdatedBy(String lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
         return this;
@@ -104,6 +114,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public Framework withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -112,6 +123,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Framework withName(String name) {
         this.name = name;
         return this;
@@ -120,6 +132,7 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Framework withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -128,9 +141,11 @@ public class Framework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FrameworkTypeEnum type;
+
     public Framework withType(FrameworkTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Framework(){}
 }

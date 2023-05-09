@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ResourcesIdRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1ResourcesIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResourceUpdateModel resourceUpdateModel;
+
     public PutSetupV1ResourcesIdRequest withResourceUpdateModel(org.openapis.openapi.models.shared.ResourceUpdateModel resourceUpdateModel) {
         this.resourceUpdateModel = resourceUpdateModel;
         return this;
@@ -22,6 +24,7 @@ public class PutSetupV1ResourcesIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
     public String googleAuthReturnUrl;
+
     public PutSetupV1ResourcesIdRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
         this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
@@ -32,6 +35,7 @@ public class PutSetupV1ResourcesIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1ResourcesIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,9 +46,13 @@ public class PutSetupV1ResourcesIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
     public String outlookAuthReturnUrl;
+
     public PutSetupV1ResourcesIdRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
         this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
     }
     
+    public PutSetupV1ResourcesIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -18,9 +18,11 @@ public class LiasettingsSetInventoryVerificationContactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LiasettingsSetInventoryVerificationContactResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public LiasettingsSetInventoryVerificationContactResponse(){}
 }

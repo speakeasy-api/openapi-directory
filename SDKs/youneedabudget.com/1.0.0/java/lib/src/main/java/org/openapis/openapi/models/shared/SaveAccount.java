@@ -12,6 +12,7 @@ public class SaveAccount {
      */
     @JsonProperty("balance")
     public Long balance;
+
     public SaveAccount withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -22,6 +23,7 @@ public class SaveAccount {
      */
     @JsonProperty("name")
     public String name;
+
     public SaveAccount withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class SaveAccount {
      */
     @JsonProperty("type")
     public AccountTypeEnum type;
+
     public SaveAccount withType(AccountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SaveAccount(@JsonProperty("balance") Long balance, @JsonProperty("name") String name, @JsonProperty("type") AccountTypeEnum type) {
+        this.balance = balance;
+        this.name = name;
+        this.type = type;
+  }
 }

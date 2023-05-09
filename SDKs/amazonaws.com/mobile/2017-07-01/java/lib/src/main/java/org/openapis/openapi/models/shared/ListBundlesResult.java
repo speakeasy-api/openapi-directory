@@ -15,6 +15,7 @@ public class ListBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleList")
     public BundleDetails[] bundleList;
+
     public ListBundlesResult withBundleList(BundleDetails[] bundleList) {
         this.bundleList = bundleList;
         return this;
@@ -23,9 +24,11 @@ public class ListBundlesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBundlesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBundlesResult(){}
 }

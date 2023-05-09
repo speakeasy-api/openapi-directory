@@ -59,11 +59,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             instantSnapshotAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetResponse(contentType, httpRes.statusCode()) {{
             instantSnapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsListResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsListResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsListResponse(contentType, httpRes.statusCode()) {{
             instantSnapshotList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +419,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -483,11 +465,9 @@ public class InstantSnapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

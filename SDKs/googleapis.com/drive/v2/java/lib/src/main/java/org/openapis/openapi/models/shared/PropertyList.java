@@ -18,6 +18,7 @@ public class PropertyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public PropertyList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class PropertyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Property[] items;
+
     public PropertyList withItems(Property[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class PropertyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PropertyList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class PropertyList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public PropertyList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public PropertyList(){}
 }

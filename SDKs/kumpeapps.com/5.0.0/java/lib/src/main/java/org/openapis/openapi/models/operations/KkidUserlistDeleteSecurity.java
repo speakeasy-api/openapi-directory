@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidUserlistDeleteSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Auth")
     public String authKey;
+
     public KkidUserlistDeleteSecurity withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
     }
     
+    public KkidUserlistDeleteSecurity(@JsonProperty("auth_key") String authKey) {
+        this.authKey = authKey;
+  }
 }

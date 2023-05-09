@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaActivity {
     @JsonProperty("batchSize")
     public Long batchSize;
+
     public LambdaActivity withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -21,6 +22,7 @@ public class LambdaActivity {
     
     @JsonProperty("lambdaName")
     public String lambdaName;
+
     public LambdaActivity withLambdaName(String lambdaName) {
         this.lambdaName = lambdaName;
         return this;
@@ -28,6 +30,7 @@ public class LambdaActivity {
     
     @JsonProperty("name")
     public String name;
+
     public LambdaActivity withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class LambdaActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public LambdaActivity withNext(String next) {
         this.next = next;
         return this;
     }
     
+    public LambdaActivity(@JsonProperty("batchSize") Long batchSize, @JsonProperty("lambdaName") String lambdaName, @JsonProperty("name") String name) {
+        this.batchSize = batchSize;
+        this.lambdaName = lambdaName;
+        this.name = name;
+  }
 }

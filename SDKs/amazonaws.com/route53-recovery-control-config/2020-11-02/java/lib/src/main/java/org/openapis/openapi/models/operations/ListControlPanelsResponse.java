@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListControlPanelsResponse {
@@ -12,6 +13,7 @@ public class ListControlPanelsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListControlPanelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListControlPanelsResponse {
     
     
     public String contentType;
+
     public ListControlPanelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListControlPanelsResponse {
      */
     
     public Object internalServerException;
+
     public ListControlPanelsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListControlPanelsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListControlPanelsResponse listControlPanelsResponse;
+
     public ListControlPanelsResponse withListControlPanelsResponse(org.openapis.openapi.models.shared.ListControlPanelsResponse listControlPanelsResponse) {
         this.listControlPanelsResponse = listControlPanelsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListControlPanelsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListControlPanelsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListControlPanelsResponse {
     
     
     public Integer statusCode;
+
     public ListControlPanelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListControlPanelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListControlPanelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListControlPanelsResponse {
      */
     
     public Object throttlingException;
+
     public ListControlPanelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListControlPanelsResponse {
      */
     
     public Object validationException;
+
     public ListControlPanelsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListControlPanelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

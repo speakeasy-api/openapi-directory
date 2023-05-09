@@ -15,6 +15,7 @@ public class DescribeUserStackAssociationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeUserStackAssociationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeUserStackAssociationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserStackAssociations")
     public UserStackAssociation[] userStackAssociations;
+
     public DescribeUserStackAssociationsResult withUserStackAssociations(UserStackAssociation[] userStackAssociations) {
         this.userStackAssociations = userStackAssociations;
         return this;
     }
     
+    public DescribeUserStackAssociationsResult(){}
 }

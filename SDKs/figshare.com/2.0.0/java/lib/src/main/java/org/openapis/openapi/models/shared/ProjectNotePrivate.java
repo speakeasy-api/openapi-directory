@@ -15,6 +15,7 @@ public class ProjectNotePrivate {
      */
     @JsonProperty("abstract")
     public String abstract_;
+
     public ProjectNotePrivate withAbstract(String abstract_) {
         this.abstract_ = abstract_;
         return this;
@@ -25,6 +26,7 @@ public class ProjectNotePrivate {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public ProjectNotePrivate withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -35,6 +37,7 @@ public class ProjectNotePrivate {
      */
     @JsonProperty("id")
     public Long id;
+
     public ProjectNotePrivate withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class ProjectNotePrivate {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public ProjectNotePrivate withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -55,6 +59,7 @@ public class ProjectNotePrivate {
      */
     @JsonProperty("text")
     public String text;
+
     public ProjectNotePrivate withText(String text) {
         this.text = text;
         return this;
@@ -65,6 +70,7 @@ public class ProjectNotePrivate {
      */
     @JsonProperty("user_id")
     public Long userId;
+
     public ProjectNotePrivate withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -75,9 +81,19 @@ public class ProjectNotePrivate {
      */
     @JsonProperty("user_name")
     public String userName;
+
     public ProjectNotePrivate withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ProjectNotePrivate(@JsonProperty("abstract") String abstract_, @JsonProperty("created_date") String createdDate, @JsonProperty("id") Long id, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("text") String text, @JsonProperty("user_id") Long userId, @JsonProperty("user_name") String userName) {
+        this.abstract_ = abstract_;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.modifiedDate = modifiedDate;
+        this.text = text;
+        this.userId = userId;
+        this.userName = userName;
+  }
 }

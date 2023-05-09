@@ -12,6 +12,7 @@ public class UpdateTypoToleranceRequestBodyMinWordSizeForTypos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTypo")
     public Double oneTypo;
+
     public UpdateTypoToleranceRequestBodyMinWordSizeForTypos withOneTypo(Double oneTypo) {
         this.oneTypo = oneTypo;
         return this;
@@ -20,9 +21,11 @@ public class UpdateTypoToleranceRequestBodyMinWordSizeForTypos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twoTypos")
     public Double twoTypos;
+
     public UpdateTypoToleranceRequestBodyMinWordSizeForTypos withTwoTypos(Double twoTypos) {
         this.twoTypos = twoTypos;
         return this;
     }
     
+    public UpdateTypoToleranceRequestBodyMinWordSizeForTypos(){}
 }

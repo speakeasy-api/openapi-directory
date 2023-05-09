@@ -15,6 +15,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double absoluteShippingDiscountValue;
+
     public GetCalculatorConfigurationById200Promotion withAbsoluteShippingDiscountValue(Double absoluteShippingDiscountValue) {
         this.absoluteShippingDiscountValue = absoluteShippingDiscountValue;
         return this;
@@ -25,6 +26,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean accumulateWithManualPrice;
+
     public GetCalculatorConfigurationById200Promotion withAccumulateWithManualPrice(Boolean accumulateWithManualPrice) {
         this.accumulateWithManualPrice = accumulateWithManualPrice;
         return this;
@@ -35,6 +37,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean activateGiftsMultiplier;
+
     public GetCalculatorConfigurationById200Promotion withActivateGiftsMultiplier(Boolean activateGiftsMultiplier) {
         this.activateGiftsMultiplier = activateGiftsMultiplier;
         return this;
@@ -45,6 +48,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] activeDaysOfWeek;
+
     public GetCalculatorConfigurationById200Promotion withActiveDaysOfWeek(String[] activeDaysOfWeek) {
         this.activeDaysOfWeek = activeDaysOfWeek;
         return this;
@@ -55,6 +59,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionAffiliates[] affiliates;
+
     public GetCalculatorConfigurationById200Promotion withAffiliates(GetCalculatorConfigurationById200PromotionAffiliates[] affiliates) {
         this.affiliates = affiliates;
         return this;
@@ -65,6 +70,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean applyToAllShippings;
+
     public GetCalculatorConfigurationById200Promotion withApplyToAllShippings(Boolean applyToAllShippings) {
         this.applyToAllShippings = applyToAllShippings;
         return this;
@@ -75,6 +81,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean areSalesChannelIdsExclusive;
+
     public GetCalculatorConfigurationById200Promotion withAreSalesChannelIdsExclusive(Boolean areSalesChannelIdsExclusive) {
         this.areSalesChannelIdsExclusive = areSalesChannelIdsExclusive;
         return this;
@@ -85,6 +92,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String beginDateUtc;
+
     public GetCalculatorConfigurationById200Promotion withBeginDateUtc(String beginDateUtc) {
         this.beginDateUtc = beginDateUtc;
         return this;
@@ -95,6 +103,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionBrands[] brands;
+
     public GetCalculatorConfigurationById200Promotion withBrands(GetCalculatorConfigurationById200PromotionBrands[] brands) {
         this.brands = brands;
         return this;
@@ -105,6 +114,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean brandsAreInclusive;
+
     public GetCalculatorConfigurationById200Promotion withBrandsAreInclusive(Boolean brandsAreInclusive) {
         this.brandsAreInclusive = brandsAreInclusive;
         return this;
@@ -115,6 +125,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Object[] campaigns;
+
     public GetCalculatorConfigurationById200Promotion withCampaigns(Object[] campaigns) {
         this.campaigns = campaigns;
         return this;
@@ -122,6 +133,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] cardIssuers;
+
     public GetCalculatorConfigurationById200Promotion withCardIssuers(Object[] cardIssuers) {
         this.cardIssuers = cardIssuers;
         return this;
@@ -132,6 +144,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionCategories[] categories;
+
     public GetCalculatorConfigurationById200Promotion withCategories(GetCalculatorConfigurationById200PromotionCategories[] categories) {
         this.categories = categories;
         return this;
@@ -142,6 +155,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean categoriesAreInclusive;
+
     public GetCalculatorConfigurationById200Promotion withCategoriesAreInclusive(Boolean categoriesAreInclusive) {
         this.categoriesAreInclusive = categoriesAreInclusive;
         return this;
@@ -152,6 +166,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] clusterExpressions;
+
     public GetCalculatorConfigurationById200Promotion withClusterExpressions(String[] clusterExpressions) {
         this.clusterExpressions = clusterExpressions;
         return this;
@@ -162,6 +177,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionCollections[] collections;
+
     public GetCalculatorConfigurationById200Promotion withCollections(GetCalculatorConfigurationById200PromotionCollections[] collections) {
         this.collections = collections;
         return this;
@@ -172,6 +188,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] collections1BuyTogether;
+
     public GetCalculatorConfigurationById200Promotion withCollections1BuyTogether(String[] collections1BuyTogether) {
         this.collections1BuyTogether = collections1BuyTogether;
         return this;
@@ -179,6 +196,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] collections2BuyTogether;
+
     public GetCalculatorConfigurationById200Promotion withCollections2BuyTogether(Object[] collections2BuyTogether) {
         this.collections2BuyTogether = collections2BuyTogether;
         return this;
@@ -189,6 +207,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean collectionsIsInclusive;
+
     public GetCalculatorConfigurationById200Promotion withCollectionsIsInclusive(Boolean collectionsIsInclusive) {
         this.collectionsIsInclusive = collectionsIsInclusive;
         return this;
@@ -199,6 +218,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean compareListPriceAndPrice;
+
     public GetCalculatorConfigurationById200Promotion withCompareListPriceAndPrice(Boolean compareListPriceAndPrice) {
         this.compareListPriceAndPrice = compareListPriceAndPrice;
         return this;
@@ -209,6 +229,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] conditionsIds;
+
     public GetCalculatorConfigurationById200Promotion withConditionsIds(String[] conditionsIds) {
         this.conditionsIds = conditionsIds;
         return this;
@@ -216,6 +237,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] coupon;
+
     public GetCalculatorConfigurationById200Promotion withCoupon(Object[] coupon) {
         this.coupon = coupon;
         return this;
@@ -226,6 +248,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean cumulative;
+
     public GetCalculatorConfigurationById200Promotion withCumulative(Boolean cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -236,6 +259,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long daysAgoOfPurchases;
+
     public GetCalculatorConfigurationById200Promotion withDaysAgoOfPurchases(Long daysAgoOfPurchases) {
         this.daysAgoOfPurchases = daysAgoOfPurchases;
         return this;
@@ -246,6 +270,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String description;
+
     public GetCalculatorConfigurationById200Promotion withDescription(String description) {
         this.description = description;
         return this;
@@ -253,6 +278,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Boolean disableDeal;
+
     public GetCalculatorConfigurationById200Promotion withDisableDeal(Boolean disableDeal) {
         this.disableDeal = disableDeal;
         return this;
@@ -263,6 +289,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String discountType;
+
     public GetCalculatorConfigurationById200Promotion withDiscountType(String discountType) {
         this.discountType = discountType;
         return this;
@@ -273,6 +300,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean enableBuyTogetherPerSku;
+
     public GetCalculatorConfigurationById200Promotion withEnableBuyTogetherPerSku(Boolean enableBuyTogetherPerSku) {
         this.enableBuyTogetherPerSku = enableBuyTogetherPerSku;
         return this;
@@ -283,6 +311,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String endDateUtc;
+
     public GetCalculatorConfigurationById200Promotion withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -293,6 +322,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean firstBuyIsProfileOptimistic;
+
     public GetCalculatorConfigurationById200Promotion withFirstBuyIsProfileOptimistic(Boolean firstBuyIsProfileOptimistic) {
         this.firstBuyIsProfileOptimistic = firstBuyIsProfileOptimistic;
         return this;
@@ -303,6 +333,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] giftListTypes;
+
     public GetCalculatorConfigurationById200Promotion withGiftListTypes(String[] giftListTypes) {
         this.giftListTypes = giftListTypes;
         return this;
@@ -313,6 +344,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String idCalculatorConfiguration;
+
     public GetCalculatorConfigurationById200Promotion withIdCalculatorConfiguration(String idCalculatorConfiguration) {
         this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
@@ -323,6 +355,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String idSeller;
+
     public GetCalculatorConfigurationById200Promotion withIdSeller(String idSeller) {
         this.idSeller = idSeller;
         return this;
@@ -333,6 +366,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean idSellerIsInclusive;
+
     public GetCalculatorConfigurationById200Promotion withIdSellerIsInclusive(Boolean idSellerIsInclusive) {
         this.idSellerIsInclusive = idSellerIsInclusive;
         return this;
@@ -343,6 +377,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] idsSalesChannel;
+
     public GetCalculatorConfigurationById200Promotion withIdsSalesChannel(String[] idsSalesChannel) {
         this.idsSalesChannel = idsSalesChannel;
         return this;
@@ -350,6 +385,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Long installment;
+
     public GetCalculatorConfigurationById200Promotion withInstallment(Long installment) {
         this.installment = installment;
         return this;
@@ -360,6 +396,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean isActive;
+
     public GetCalculatorConfigurationById200Promotion withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -370,6 +407,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean isArchived;
+
     public GetCalculatorConfigurationById200Promotion withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -380,6 +418,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean isDifferentListPriceAndPrice;
+
     public GetCalculatorConfigurationById200Promotion withIsDifferentListPriceAndPrice(Boolean isDifferentListPriceAndPrice) {
         this.isDifferentListPriceAndPrice = isDifferentListPriceAndPrice;
         return this;
@@ -390,6 +429,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean isFeatured;
+
     public GetCalculatorConfigurationById200Promotion withIsFeatured(Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
@@ -400,6 +440,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean isFirstBuy;
+
     public GetCalculatorConfigurationById200Promotion withIsFirstBuy(Boolean isFirstBuy) {
         this.isFirstBuy = isFirstBuy;
         return this;
@@ -410,6 +451,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean isMinMaxInstallments;
+
     public GetCalculatorConfigurationById200Promotion withIsMinMaxInstallments(Boolean isMinMaxInstallments) {
         this.isMinMaxInstallments = isMinMaxInstallments;
         return this;
@@ -420,6 +462,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean isSlaSelected;
+
     public GetCalculatorConfigurationById200Promotion withIsSlaSelected(Boolean isSlaSelected) {
         this.isSlaSelected = isSlaSelected;
         return this;
@@ -430,6 +473,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double itemMaxPrice;
+
     public GetCalculatorConfigurationById200Promotion withItemMaxPrice(Double itemMaxPrice) {
         this.itemMaxPrice = itemMaxPrice;
         return this;
@@ -440,6 +484,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double itemMinPrice;
+
     public GetCalculatorConfigurationById200Promotion withItemMinPrice(Double itemMinPrice) {
         this.itemMinPrice = itemMinPrice;
         return this;
@@ -450,6 +495,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String lastModified;
+
     public GetCalculatorConfigurationById200Promotion withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -460,6 +506,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Object[] listSku1BuyTogether;
+
     public GetCalculatorConfigurationById200Promotion withListSku1BuyTogether(Object[] listSku1BuyTogether) {
         this.listSku1BuyTogether = listSku1BuyTogether;
         return this;
@@ -470,6 +517,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Object[] listSku2BuyTogether;
+
     public GetCalculatorConfigurationById200Promotion withListSku2BuyTogether(Object[] listSku2BuyTogether) {
         this.listSku2BuyTogether = listSku2BuyTogether;
         return this;
@@ -480,6 +528,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] marketingTags;
+
     public GetCalculatorConfigurationById200Promotion withMarketingTags(String[] marketingTags) {
         this.marketingTags = marketingTags;
         return this;
@@ -490,6 +539,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean marketingTagsAreNotInclusive;
+
     public GetCalculatorConfigurationById200Promotion withMarketingTagsAreNotInclusive(Boolean marketingTagsAreNotInclusive) {
         this.marketingTagsAreNotInclusive = marketingTagsAreNotInclusive;
         return this;
@@ -500,6 +550,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long maxInstallment;
+
     public GetCalculatorConfigurationById200Promotion withMaxInstallment(Long maxInstallment) {
         this.maxInstallment = maxInstallment;
         return this;
@@ -510,6 +561,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long maxNumberOfAffectedItems;
+
     public GetCalculatorConfigurationById200Promotion withMaxNumberOfAffectedItems(Long maxNumberOfAffectedItems) {
         this.maxNumberOfAffectedItems = maxNumberOfAffectedItems;
         return this;
@@ -520,6 +572,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String maxNumberOfAffectedItemsGroupKey;
+
     public GetCalculatorConfigurationById200Promotion withMaxNumberOfAffectedItemsGroupKey(String maxNumberOfAffectedItemsGroupKey) {
         this.maxNumberOfAffectedItemsGroupKey = maxNumberOfAffectedItemsGroupKey;
         return this;
@@ -527,6 +580,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] maxPricesPerItems;
+
     public GetCalculatorConfigurationById200Promotion withMaxPricesPerItems(Object[] maxPricesPerItems) {
         this.maxPricesPerItems = maxPricesPerItems;
         return this;
@@ -537,6 +591,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long maxUsage;
+
     public GetCalculatorConfigurationById200Promotion withMaxUsage(Long maxUsage) {
         this.maxUsage = maxUsage;
         return this;
@@ -547,6 +602,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long maxUsagePerClient;
+
     public GetCalculatorConfigurationById200Promotion withMaxUsagePerClient(Long maxUsagePerClient) {
         this.maxUsagePerClient = maxUsagePerClient;
         return this;
@@ -557,6 +613,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double maximumUnitPriceDiscount;
+
     public GetCalculatorConfigurationById200Promotion withMaximumUnitPriceDiscount(Double maximumUnitPriceDiscount) {
         this.maximumUnitPriceDiscount = maximumUnitPriceDiscount;
         return this;
@@ -564,6 +621,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] merchants;
+
     public GetCalculatorConfigurationById200Promotion withMerchants(Object[] merchants) {
         this.merchants = merchants;
         return this;
@@ -574,6 +632,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long minInstallment;
+
     public GetCalculatorConfigurationById200Promotion withMinInstallment(Long minInstallment) {
         this.minInstallment = minInstallment;
         return this;
@@ -584,6 +643,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long minimumQuantityBuyTogether;
+
     public GetCalculatorConfigurationById200Promotion withMinimumQuantityBuyTogether(Long minimumQuantityBuyTogether) {
         this.minimumQuantityBuyTogether = minimumQuantityBuyTogether;
         return this;
@@ -594,6 +654,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public java.util.Map<String, String> multipleSkusCause;
+
     public GetCalculatorConfigurationById200Promotion withMultipleSkusCause(java.util.Map<String, String> multipleSkusCause) {
         this.multipleSkusCause = multipleSkusCause;
         return this;
@@ -604,6 +665,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean multipleUsePerClient;
+
     public GetCalculatorConfigurationById200Promotion withMultipleUsePerClient(Boolean multipleUsePerClient) {
         this.multipleUsePerClient = multipleUsePerClient;
         return this;
@@ -614,6 +676,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String name;
+
     public GetCalculatorConfigurationById200Promotion withName(String name) {
         this.name = name;
         return this;
@@ -624,6 +687,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double newOffset;
+
     public GetCalculatorConfigurationById200Promotion withNewOffset(Double newOffset) {
         this.newOffset = newOffset;
         return this;
@@ -634,6 +698,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double nominalDiscountValue;
+
     public GetCalculatorConfigurationById200Promotion withNominalDiscountValue(Double nominalDiscountValue) {
         this.nominalDiscountValue = nominalDiscountValue;
         return this;
@@ -644,6 +709,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double nominalRewardValue;
+
     public GetCalculatorConfigurationById200Promotion withNominalRewardValue(Double nominalRewardValue) {
         this.nominalRewardValue = nominalRewardValue;
         return this;
@@ -654,6 +720,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double nominalShippingDiscountValue;
+
     public GetCalculatorConfigurationById200Promotion withNominalShippingDiscountValue(Double nominalShippingDiscountValue) {
         this.nominalShippingDiscountValue = nominalShippingDiscountValue;
         return this;
@@ -664,6 +731,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double nominalTax;
+
     public GetCalculatorConfigurationById200Promotion withNominalTax(Double nominalTax) {
         this.nominalTax = nominalTax;
         return this;
@@ -674,6 +742,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long offset;
+
     public GetCalculatorConfigurationById200Promotion withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -684,6 +753,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String orderStatusRewardValue;
+
     public GetCalculatorConfigurationById200Promotion withOrderStatusRewardValue(String orderStatusRewardValue) {
         this.orderStatusRewardValue = orderStatusRewardValue;
         return this;
@@ -694,6 +764,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String origin;
+
     public GetCalculatorConfigurationById200Promotion withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -704,6 +775,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionPaymentsMethods[] paymentsMethods;
+
     public GetCalculatorConfigurationById200Promotion withPaymentsMethods(GetCalculatorConfigurationById200PromotionPaymentsMethods[] paymentsMethods) {
         this.paymentsMethods = paymentsMethods;
         return this;
@@ -711,6 +783,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] paymentsRules;
+
     public GetCalculatorConfigurationById200Promotion withPaymentsRules(Object[] paymentsRules) {
         this.paymentsRules = paymentsRules;
         return this;
@@ -721,6 +794,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double percentualDiscountValue;
+
     public GetCalculatorConfigurationById200Promotion withPercentualDiscountValue(Double percentualDiscountValue) {
         this.percentualDiscountValue = percentualDiscountValue;
         return this;
@@ -731,6 +805,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double[] percentualDiscountValueList;
+
     public GetCalculatorConfigurationById200Promotion withPercentualDiscountValueList(Double[] percentualDiscountValueList) {
         this.percentualDiscountValueList = percentualDiscountValueList;
         return this;
@@ -741,6 +816,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double percentualDiscountValueList1;
+
     public GetCalculatorConfigurationById200Promotion withPercentualDiscountValueList1(Double percentualDiscountValueList1) {
         this.percentualDiscountValueList1 = percentualDiscountValueList1;
         return this;
@@ -751,6 +827,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double percentualDiscountValueList2;
+
     public GetCalculatorConfigurationById200Promotion withPercentualDiscountValueList2(Double percentualDiscountValueList2) {
         this.percentualDiscountValueList2 = percentualDiscountValueList2;
         return this;
@@ -761,6 +838,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double percentualRewardValue;
+
     public GetCalculatorConfigurationById200Promotion withPercentualRewardValue(Double percentualRewardValue) {
         this.percentualRewardValue = percentualRewardValue;
         return this;
@@ -771,6 +849,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double percentualShippingDiscountValue;
+
     public GetCalculatorConfigurationById200Promotion withPercentualShippingDiscountValue(Double percentualShippingDiscountValue) {
         this.percentualShippingDiscountValue = percentualShippingDiscountValue;
         return this;
@@ -781,6 +860,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double percentualTax;
+
     public GetCalculatorConfigurationById200Promotion withPercentualTax(Double percentualTax) {
         this.percentualTax = percentualTax;
         return this;
@@ -791,6 +871,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionProducts[] products;
+
     public GetCalculatorConfigurationById200Promotion withProducts(GetCalculatorConfigurationById200PromotionProducts[] products) {
         this.products = products;
         return this;
@@ -801,6 +882,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean productsAreInclusive;
+
     public GetCalculatorConfigurationById200Promotion withProductsAreInclusive(Boolean productsAreInclusive) {
         this.productsAreInclusive = productsAreInclusive;
         return this;
@@ -808,6 +890,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] productsSpecifications;
+
     public GetCalculatorConfigurationById200Promotion withProductsSpecifications(Object[] productsSpecifications) {
         this.productsSpecifications = productsSpecifications;
         return this;
@@ -818,6 +901,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Long quantityToAffectBuyTogether;
+
     public GetCalculatorConfigurationById200Promotion withQuantityToAffectBuyTogether(Long quantityToAffectBuyTogether) {
         this.quantityToAffectBuyTogether = quantityToAffectBuyTogether;
         return this;
@@ -828,6 +912,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double rebatePercentualDiscountValue;
+
     public GetCalculatorConfigurationById200Promotion withRebatePercentualDiscountValue(Double rebatePercentualDiscountValue) {
         this.rebatePercentualDiscountValue = rebatePercentualDiscountValue;
         return this;
@@ -838,6 +923,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] restrictionsBins;
+
     public GetCalculatorConfigurationById200Promotion withRestrictionsBins(String[] restrictionsBins) {
         this.restrictionsBins = restrictionsBins;
         return this;
@@ -848,6 +934,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double shippingPercentualTax;
+
     public GetCalculatorConfigurationById200Promotion withShippingPercentualTax(Double shippingPercentualTax) {
         this.shippingPercentualTax = shippingPercentualTax;
         return this;
@@ -858,6 +945,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean shouldDistributeDiscountAmongMatchedItems;
+
     public GetCalculatorConfigurationById200Promotion withShouldDistributeDiscountAmongMatchedItems(Boolean shouldDistributeDiscountAmongMatchedItems) {
         this.shouldDistributeDiscountAmongMatchedItems = shouldDistributeDiscountAmongMatchedItems;
         return this;
@@ -868,6 +956,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionSkus[] skus;
+
     public GetCalculatorConfigurationById200Promotion withSkus(GetCalculatorConfigurationById200PromotionSkus[] skus) {
         this.skus = skus;
         return this;
@@ -878,6 +967,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean skusAreInclusive;
+
     public GetCalculatorConfigurationById200Promotion withSkusAreInclusive(Boolean skusAreInclusive) {
         this.skusAreInclusive = skusAreInclusive;
         return this;
@@ -888,6 +978,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionSkusGift skusGift;
+
     public GetCalculatorConfigurationById200Promotion withSkusGift(GetCalculatorConfigurationById200PromotionSkusGift skusGift) {
         this.skusGift = skusGift;
         return this;
@@ -898,6 +989,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String[] slasIds;
+
     public GetCalculatorConfigurationById200Promotion withSlasIds(String[] slasIds) {
         this.slasIds = slasIds;
         return this;
@@ -905,6 +997,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Object[] stores;
+
     public GetCalculatorConfigurationById200Promotion withStores(Object[] stores) {
         this.stores = stores;
         return this;
@@ -912,6 +1005,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Boolean storesAreInclusive;
+
     public GetCalculatorConfigurationById200Promotion withStoresAreInclusive(Boolean storesAreInclusive) {
         this.storesAreInclusive = storesAreInclusive;
         return this;
@@ -922,6 +1016,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double totalValueCeling;
+
     public GetCalculatorConfigurationById200Promotion withTotalValueCeling(Double totalValueCeling) {
         this.totalValueCeling = totalValueCeling;
         return this;
@@ -932,6 +1027,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double totalValueFloor;
+
     public GetCalculatorConfigurationById200Promotion withTotalValueFloor(Double totalValueFloor) {
         this.totalValueFloor = totalValueFloor;
         return this;
@@ -939,6 +1035,7 @@ public class GetCalculatorConfigurationById200Promotion {
     
     
     public Boolean totalValueIncludeAllItems;
+
     public GetCalculatorConfigurationById200Promotion withTotalValueIncludeAllItems(Boolean totalValueIncludeAllItems) {
         this.totalValueIncludeAllItems = totalValueIncludeAllItems;
         return this;
@@ -949,6 +1046,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String totalValueMode;
+
     public GetCalculatorConfigurationById200Promotion withTotalValueMode(String totalValueMode) {
         this.totalValueMode = totalValueMode;
         return this;
@@ -959,6 +1057,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Double totalValuePurchase;
+
     public GetCalculatorConfigurationById200Promotion withTotalValuePurchase(Double totalValuePurchase) {
         this.totalValuePurchase = totalValuePurchase;
         return this;
@@ -969,6 +1068,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String type;
+
     public GetCalculatorConfigurationById200Promotion withType(String type) {
         this.type = type;
         return this;
@@ -979,6 +1079,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public Boolean useNewProgressiveAlgorithm;
+
     public GetCalculatorConfigurationById200Promotion withUseNewProgressiveAlgorithm(Boolean useNewProgressiveAlgorithm) {
         this.useNewProgressiveAlgorithm = useNewProgressiveAlgorithm;
         return this;
@@ -989,6 +1090,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String utmCampaign;
+
     public GetCalculatorConfigurationById200Promotion withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -999,6 +1101,7 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public String utmSource;
+
     public GetCalculatorConfigurationById200Promotion withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -1009,9 +1112,11 @@ public class GetCalculatorConfigurationById200Promotion {
      */
     
     public GetCalculatorConfigurationById200PromotionZipCodeRanges[] zipCodeRanges;
+
     public GetCalculatorConfigurationById200Promotion withZipCodeRanges(GetCalculatorConfigurationById200PromotionZipCodeRanges[] zipCodeRanges) {
         this.zipCodeRanges = zipCodeRanges;
         return this;
     }
     
+    public GetCalculatorConfigurationById200Promotion(){}
 }

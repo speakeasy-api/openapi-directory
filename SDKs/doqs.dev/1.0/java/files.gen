@@ -48,10 +48,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteDesignerTemplates
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteDesignerTemplatesIdDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GeneratePdfDesignerTemplatesIdGeneratePostRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GeneratePdfDesignerTemplatesIdGeneratePostResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListTemplatesDesignerTemplatesGetRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListTemplatesDesignerTemplatesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTemplatesDesignerTemplatesIdGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTemplatesDesignerTemplatesIdGetResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListTemplatesDesignerTemplatesGetRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListTemplatesDesignerTemplatesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PreviewDesignerTemplatesPreviewPostResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplateDesignerTemplatesIdPutRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplateDesignerTemplatesIdPutResponse.java
@@ -84,7 +84,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResponseOkDesignerTemplate.java
 lib/src/main/java/org/openapis/openapi/models/shared/DesignerTemplate.java
 lib/src/main/java/org/openapis/openapi/models/shared/OrientationEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/Margin.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormatEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateOrUpdateTemplateRequestMargin.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateOrUpdateTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GeneratePDFPayload.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate.java
@@ -92,4 +94,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ResponseOkPreviewResponse.j
 lib/src/main/java/org/openapis/openapi/models/shared/PreviewResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PreviewModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/templates/README.md
 USAGE.md

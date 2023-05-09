@@ -18,6 +18,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("accepted_date")
     public LocalDate acceptedDate;
+
     public OrderDetailWithIndicatorVO withAcceptedDate(LocalDate acceptedDate) {
         this.acceptedDate = acceptedDate;
         return this;
@@ -27,6 +28,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("annulled_date")
     public LocalDate annulledDate;
+
     public OrderDetailWithIndicatorVO withAnnulledDate(LocalDate annulledDate) {
         this.annulledDate = annulledDate;
         return this;
@@ -36,6 +38,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("approved_date")
     public LocalDate approvedDate;
+
     public OrderDetailWithIndicatorVO withApprovedDate(LocalDate approvedDate) {
         this.approvedDate = approvedDate;
         return this;
@@ -45,6 +48,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("awarded_date")
     public LocalDate awardedDate;
+
     public OrderDetailWithIndicatorVO withAwardedDate(LocalDate awardedDate) {
         this.awardedDate = awardedDate;
         return this;
@@ -53,6 +57,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_type")
     public String budgetType;
+
     public OrderDetailWithIndicatorVO withBudgetType(String budgetType) {
         this.budgetType = budgetType;
         return this;
@@ -64,6 +69,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer")
     public UserVO buyer;
+
     public OrderDetailWithIndicatorVO withBuyer(UserVO buyer) {
         this.buyer = buyer;
         return this;
@@ -75,6 +81,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_workgroup")
     public WorkgroupBaseVO buyerWorkgroup;
+
     public OrderDetailWithIndicatorVO withBuyerWorkgroup(WorkgroupBaseVO buyerWorkgroup) {
         this.buyerWorkgroup = buyerWorkgroup;
         return this;
@@ -83,6 +90,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change_orders")
     public OrderDetailBaseVO[] changeOrders;
+
     public OrderDetailWithIndicatorVO withChangeOrders(OrderDetailBaseVO[] changeOrders) {
         this.changeOrders = changeOrders;
         return this;
@@ -91,6 +99,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public String classification;
+
     public OrderDetailWithIndicatorVO withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -100,6 +109,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("closed_date")
     public LocalDate closedDate;
+
     public OrderDetailWithIndicatorVO withClosedDate(LocalDate closedDate) {
         this.closedDate = closedDate;
         return this;
@@ -108,6 +118,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_change_orders")
     public OrderDetailBaseVO[] closingChangeOrders;
+
     public OrderDetailWithIndicatorVO withClosingChangeOrders(OrderDetailBaseVO[] closingChangeOrders) {
         this.closingChangeOrders = closingChangeOrders;
         return this;
@@ -116,6 +127,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public OrderDetailWithIndicatorVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -125,6 +137,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public OrderDetailWithIndicatorVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -133,6 +146,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     public Long creatorUserId;
+
     public OrderDetailWithIndicatorVO withCreatorUserId(Long creatorUserId) {
         this.creatorUserId = creatorUserId;
         return this;
@@ -141,6 +155,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public OrderDetailWithIndicatorVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -149,6 +164,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public OrderDetailWithIndicatorVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -160,6 +176,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public OrderDetailWithIndicatorVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -171,6 +188,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total_with_changes")
     public Object grandTotalWithChanges;
+
     public OrderDetailWithIndicatorVO withGrandTotalWithChanges(Object grandTotalWithChanges) {
         this.grandTotalWithChanges = grandTotalWithChanges;
         return this;
@@ -179,6 +197,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_sell_order")
     public Boolean isSellOrder;
+
     public OrderDetailWithIndicatorVO withIsSellOrder(Boolean isSellOrder) {
         this.isSellOrder = isSellOrder;
         return this;
@@ -187,6 +206,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_count")
     public Integer itemCount;
+
     public OrderDetailWithIndicatorVO withItemCount(Integer itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -196,6 +216,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_activity_date")
     public LocalDate lastActivityDate;
+
     public OrderDetailWithIndicatorVO withLastActivityDate(LocalDate lastActivityDate) {
         this.lastActivityDate = lastActivityDate;
         return this;
@@ -205,6 +226,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_changed")
     public LocalDate lastChanged;
+
     public OrderDetailWithIndicatorVO withLastChanged(LocalDate lastChanged) {
         this.lastChanged = lastChanged;
         return this;
@@ -214,6 +236,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_status_change")
     public LocalDate lastStatusChange;
+
     public OrderDetailWithIndicatorVO withLastStatusChange(LocalDate lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -222,6 +245,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("misc_cost")
     public Double miscCost;
+
     public OrderDetailWithIndicatorVO withMiscCost(Double miscCost) {
         this.miscCost = miscCost;
         return this;
@@ -230,6 +254,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public Long orderId;
+
     public OrderDetailWithIndicatorVO withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -238,6 +263,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_items")
     public OrderItemSimpleVO[] orderItems;
+
     public OrderDetailWithIndicatorVO withOrderItems(OrderItemSimpleVO[] orderItems) {
         this.orderItems = orderItems;
         return this;
@@ -246,6 +272,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_number")
     public String orderNumber;
+
     public OrderDetailWithIndicatorVO withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -254,6 +281,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_title")
     public String orderTitle;
+
     public OrderDetailWithIndicatorVO withOrderTitle(String orderTitle) {
         this.orderTitle = orderTitle;
         return this;
@@ -265,6 +293,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_total")
     public Object orderTotal;
+
     public OrderDetailWithIndicatorVO withOrderTotal(Object orderTotal) {
         this.orderTotal = orderTotal;
         return this;
@@ -273,6 +302,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overs_percent")
     public Double oversPercent;
+
     public OrderDetailWithIndicatorVO withOversPercent(Double oversPercent) {
         this.oversPercent = oversPercent;
         return this;
@@ -281,6 +311,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_order_id")
     public Long parentOrderId;
+
     public OrderDetailWithIndicatorVO withParentOrderId(Long parentOrderId) {
         this.parentOrderId = parentOrderId;
         return this;
@@ -289,6 +320,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_reference")
     public String paymentReference;
+
     public OrderDetailWithIndicatorVO withPaymentReference(String paymentReference) {
         this.paymentReference = paymentReference;
         return this;
@@ -297,6 +329,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("print_order_ids")
     public Long[] printOrderIds;
+
     public OrderDetailWithIndicatorVO withPrintOrderIds(Long[] printOrderIds) {
         this.printOrderIds = printOrderIds;
         return this;
@@ -305,6 +338,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Long quoteId;
+
     public OrderDetailWithIndicatorVO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -316,6 +350,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public OrderDetailWithIndicatorVO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -324,6 +359,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public OrderDetailWithIndicatorVO withStatus(String status) {
         this.status = status;
         return this;
@@ -332,6 +368,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_comments")
     public String statusComments;
+
     public OrderDetailWithIndicatorVO withStatusComments(String statusComments) {
         this.statusComments = statusComments;
         return this;
@@ -343,6 +380,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier")
     public UserVO supplier;
+
     public OrderDetailWithIndicatorVO withSupplier(UserVO supplier) {
         this.supplier = supplier;
         return this;
@@ -351,6 +389,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_reference")
     public String supplierReference;
+
     public OrderDetailWithIndicatorVO withSupplierReference(String supplierReference) {
         this.supplierReference = supplierReference;
         return this;
@@ -359,6 +398,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_selection_reason")
     public String supplierSelectionReason;
+
     public OrderDetailWithIndicatorVO withSupplierSelectionReason(String supplierSelectionReason) {
         this.supplierSelectionReason = supplierSelectionReason;
         return this;
@@ -370,6 +410,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_workgroup")
     public WorkgroupBaseVO supplierWorkgroup;
+
     public OrderDetailWithIndicatorVO withSupplierWorkgroup(WorkgroupBaseVO supplierWorkgroup) {
         this.supplierWorkgroup = supplierWorkgroup;
         return this;
@@ -381,6 +422,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Object tax;
+
     public OrderDetailWithIndicatorVO withTax(Object tax) {
         this.tax = tax;
         return this;
@@ -389,6 +431,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public OrderDetailWithIndicatorVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -400,6 +443,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public OrderDetailWithIndicatorVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
@@ -411,6 +455,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total_with_changes")
     public Object transactionalGrandTotalWithChanges;
+
     public OrderDetailWithIndicatorVO withTransactionalGrandTotalWithChanges(Object transactionalGrandTotalWithChanges) {
         this.transactionalGrandTotalWithChanges = transactionalGrandTotalWithChanges;
         return this;
@@ -422,6 +467,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_order_total")
     public Object transactionalOrderTotal;
+
     public OrderDetailWithIndicatorVO withTransactionalOrderTotal(Object transactionalOrderTotal) {
         this.transactionalOrderTotal = transactionalOrderTotal;
         return this;
@@ -433,6 +479,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_shipping")
     public Object transactionalShipping;
+
     public OrderDetailWithIndicatorVO withTransactionalShipping(Object transactionalShipping) {
         this.transactionalShipping = transactionalShipping;
         return this;
@@ -444,6 +491,7 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_tax")
     public Object transactionalTax;
+
     public OrderDetailWithIndicatorVO withTransactionalTax(Object transactionalTax) {
         this.transactionalTax = transactionalTax;
         return this;
@@ -452,9 +500,11 @@ public class OrderDetailWithIndicatorVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unders_percent")
     public Double undersPercent;
+
     public OrderDetailWithIndicatorVO withUndersPercent(Double undersPercent) {
         this.undersPercent = undersPercent;
         return this;
     }
     
+    public OrderDetailWithIndicatorVO(){}
 }

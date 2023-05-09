@@ -20,6 +20,7 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public VolumeRecommendation withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentConfiguration")
     public VolumeConfiguration currentConfiguration;
+
     public VolumeRecommendation withCurrentConfiguration(VolumeConfiguration currentConfiguration) {
         this.currentConfiguration = currentConfiguration;
         return this;
@@ -36,6 +38,7 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPerformanceRisk")
     public CurrentPerformanceRiskEnum currentPerformanceRisk;
+
     public VolumeRecommendation withCurrentPerformanceRisk(CurrentPerformanceRiskEnum currentPerformanceRisk) {
         this.currentPerformanceRisk = currentPerformanceRisk;
         return this;
@@ -44,6 +47,7 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finding")
     public EBSFindingEnum finding;
+
     public VolumeRecommendation withFinding(EBSFindingEnum finding) {
         this.finding = finding;
         return this;
@@ -54,6 +58,7 @@ public class VolumeRecommendation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastRefreshTimestamp")
     public OffsetDateTime lastRefreshTimestamp;
+
     public VolumeRecommendation withLastRefreshTimestamp(OffsetDateTime lastRefreshTimestamp) {
         this.lastRefreshTimestamp = lastRefreshTimestamp;
         return this;
@@ -62,6 +67,7 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookBackPeriodInDays")
     public Double lookBackPeriodInDays;
+
     public VolumeRecommendation withLookBackPeriodInDays(Double lookBackPeriodInDays) {
         this.lookBackPeriodInDays = lookBackPeriodInDays;
         return this;
@@ -70,6 +76,7 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationMetrics")
     public EBSUtilizationMetric[] utilizationMetrics;
+
     public VolumeRecommendation withUtilizationMetrics(EBSUtilizationMetric[] utilizationMetrics) {
         this.utilizationMetrics = utilizationMetrics;
         return this;
@@ -78,6 +85,7 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeArn")
     public String volumeArn;
+
     public VolumeRecommendation withVolumeArn(String volumeArn) {
         this.volumeArn = volumeArn;
         return this;
@@ -86,9 +94,11 @@ public class VolumeRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeRecommendationOptions")
     public VolumeRecommendationOption[] volumeRecommendationOptions;
+
     public VolumeRecommendation withVolumeRecommendationOptions(VolumeRecommendationOption[] volumeRecommendationOptions) {
         this.volumeRecommendationOptions = volumeRecommendationOptions;
         return this;
     }
     
+    public VolumeRecommendation(){}
 }

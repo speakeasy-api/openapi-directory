@@ -194,4 +194,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/WebAppConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListWebAppsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RemoveWebAppRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UndeleteWebAppRequest.java
+docs/sdk/README.md
+docs/availableprojects/README.md
+docs/projects/README.md
 USAGE.md

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListMFADeviceTagsResponse - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListMFADeviceTagsResponse {
     
     public Boolean isTruncated;
+
     public ListMFADeviceTagsResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListMFADeviceTagsResponse {
     
     
     public String marker;
+
     public ListMFADeviceTagsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class ListMFADeviceTagsResponse {
     
     
     public Tag[] tags;
+
     public ListMFADeviceTagsResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListMFADeviceTagsResponse(@JsonProperty("Tags") Tag[] tags) {
+        this.tags = tags;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeAddressesMoveSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeAddressesMoveSecurityOption1 option1;
+
     public ComputeAddressesMoveSecurity withOption1(ComputeAddressesMoveSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeAddressesMoveSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeAddressesMoveSecurityOption2 option2;
+
     public ComputeAddressesMoveSecurity withOption2(ComputeAddressesMoveSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeAddressesMoveSecurity(){}
 }

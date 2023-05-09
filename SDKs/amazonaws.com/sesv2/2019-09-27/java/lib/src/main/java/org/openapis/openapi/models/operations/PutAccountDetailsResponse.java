@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountDetailsResponse {
@@ -12,6 +13,7 @@ public class PutAccountDetailsResponse {
      */
     
     public Object badRequestException;
+
     public PutAccountDetailsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class PutAccountDetailsResponse {
      */
     
     public Object conflictException;
+
     public PutAccountDetailsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountDetailsResponse {
     
     
     public String contentType;
+
     public PutAccountDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutAccountDetailsResponse {
      */
     
     public java.util.Map<String, Object> putAccountDetailsResponse;
+
     public PutAccountDetailsResponse withPutAccountDetailsResponse(java.util.Map<String, Object> putAccountDetailsResponse) {
         this.putAccountDetailsResponse = putAccountDetailsResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutAccountDetailsResponse {
     
     
     public Integer statusCode;
+
     public PutAccountDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutAccountDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutAccountDetailsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutAccountDetailsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutAccountDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

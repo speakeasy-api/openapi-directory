@@ -15,6 +15,7 @@ public class TargetHttpProxyAggregatedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TargetHttpProxyAggregatedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class TargetHttpProxyAggregatedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public TargetHttpProxyAggregatedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TargetHttpProxyAggregatedListWarningData(){}
 }

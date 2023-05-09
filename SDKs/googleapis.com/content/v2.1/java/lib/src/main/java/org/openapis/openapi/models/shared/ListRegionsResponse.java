@@ -18,6 +18,7 @@ public class ListRegionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRegionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRegionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public Region[] regions;
+
     public ListRegionsResponse withRegions(Region[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public ListRegionsResponse(){}
 }

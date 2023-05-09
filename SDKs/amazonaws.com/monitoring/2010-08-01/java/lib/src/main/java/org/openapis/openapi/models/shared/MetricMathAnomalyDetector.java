@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MetricMathAnomalyDetector {
     
     public MetricDataQuery[] metricDataQueries;
+
     public MetricMathAnomalyDetector withMetricDataQueries(MetricDataQuery[] metricDataQueries) {
         this.metricDataQueries = metricDataQueries;
         return this;
     }
     
+    public MetricMathAnomalyDetector(){}
 }

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConfiguredTableAnalysisRule {
     @JsonProperty("configuredTableArn")
     public String configuredTableArn;
+
     public ConfiguredTableAnalysisRule withConfiguredTableArn(String configuredTableArn) {
         this.configuredTableArn = configuredTableArn;
         return this;
@@ -24,6 +25,7 @@ public class ConfiguredTableAnalysisRule {
     
     @JsonProperty("configuredTableId")
     public String configuredTableId;
+
     public ConfiguredTableAnalysisRule withConfiguredTableId(String configuredTableId) {
         this.configuredTableId = configuredTableId;
         return this;
@@ -33,6 +35,7 @@ public class ConfiguredTableAnalysisRule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ConfiguredTableAnalysisRule withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +43,7 @@ public class ConfiguredTableAnalysisRule {
     
     @JsonProperty("policy")
     public ConfiguredTableAnalysisRulePolicy policy;
+
     public ConfiguredTableAnalysisRule withPolicy(ConfiguredTableAnalysisRulePolicy policy) {
         this.policy = policy;
         return this;
@@ -47,6 +51,7 @@ public class ConfiguredTableAnalysisRule {
     
     @JsonProperty("type")
     public ConfiguredTableAnalysisRuleTypeEnum type;
+
     public ConfiguredTableAnalysisRule withType(ConfiguredTableAnalysisRuleTypeEnum type) {
         this.type = type;
         return this;
@@ -56,9 +61,18 @@ public class ConfiguredTableAnalysisRule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public ConfiguredTableAnalysisRule withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ConfiguredTableAnalysisRule(@JsonProperty("configuredTableArn") String configuredTableArn, @JsonProperty("configuredTableId") String configuredTableId, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("policy") ConfiguredTableAnalysisRulePolicy policy, @JsonProperty("type") ConfiguredTableAnalysisRuleTypeEnum type, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.configuredTableArn = configuredTableArn;
+        this.configuredTableId = configuredTableId;
+        this.createTime = createTime;
+        this.policy = policy;
+        this.type = type;
+        this.updateTime = updateTime;
+  }
 }

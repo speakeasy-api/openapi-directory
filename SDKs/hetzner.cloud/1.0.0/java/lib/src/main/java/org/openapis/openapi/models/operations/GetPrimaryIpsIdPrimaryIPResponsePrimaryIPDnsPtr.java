@@ -12,6 +12,7 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr {
      */
     @JsonProperty("dns_ptr")
     public String dnsPtr;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr withDnsPtr(String dnsPtr) {
         this.dnsPtr = dnsPtr;
         return this;
@@ -22,9 +23,14 @@ public class GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr {
      */
     @JsonProperty("ip")
     public String ip;
+
     public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDnsPtr(@JsonProperty("dns_ptr") String dnsPtr, @JsonProperty("ip") String ip) {
+        this.dnsPtr = dnsPtr;
+        this.ip = ip;
+  }
 }

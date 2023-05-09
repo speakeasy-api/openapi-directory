@@ -59,11 +59,9 @@ public class Association {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeResponse res = new org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeResponse res = new org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Association {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchResponse res = new org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchResponse res = new org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Association {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchResponse res = new org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchResponse res = new org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class Association {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationObjectResponse res = new org.openapis.openapi.models.operations.GetAssociationObjectResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationObjectResponse res = new org.openapis.openapi.models.operations.GetAssociationObjectResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +226,9 @@ public class Association {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationsBetweenResponse res = new org.openapis.openapi.models.operations.GetAssociationsBetweenResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationsBetweenResponse res = new org.openapis.openapi.models.operations.GetAssociationsBetweenResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,11 +268,9 @@ public class Association {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationsFromResponse res = new org.openapis.openapi.models.operations.GetAssociationsFromResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationsFromResponse res = new org.openapis.openapi.models.operations.GetAssociationsFromResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,11 +310,9 @@ public class Association {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAssociationsToResponse res = new org.openapis.openapi.models.operations.GetAssociationsToResponse() {{
+        org.openapis.openapi.models.operations.GetAssociationsToResponse res = new org.openapis.openapi.models.operations.GetAssociationsToResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

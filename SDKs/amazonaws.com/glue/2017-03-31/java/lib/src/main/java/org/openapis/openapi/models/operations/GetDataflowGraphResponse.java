@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataflowGraphResponse {
     
     public String contentType;
+
     public GetDataflowGraphResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDataflowGraphResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataflowGraphResponse getDataflowGraphResponse;
+
     public GetDataflowGraphResponse withGetDataflowGraphResponse(org.openapis.openapi.models.shared.GetDataflowGraphResponse getDataflowGraphResponse) {
         this.getDataflowGraphResponse = getDataflowGraphResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDataflowGraphResponse {
      */
     
     public Object internalServiceException;
+
     public GetDataflowGraphResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class GetDataflowGraphResponse {
      */
     
     public Object invalidInputException;
+
     public GetDataflowGraphResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataflowGraphResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetDataflowGraphResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class GetDataflowGraphResponse {
     
     
     public Integer statusCode;
+
     public GetDataflowGraphResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetDataflowGraphResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataflowGraphResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDataflowGraphResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

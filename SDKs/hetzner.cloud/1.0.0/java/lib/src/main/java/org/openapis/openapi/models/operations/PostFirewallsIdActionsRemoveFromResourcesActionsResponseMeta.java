@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostFirewallsIdActionsRemoveFromResourcesActionsResponseMeta {
     @JsonProperty("pagination")
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseMetaPagination pagination;
+
     public PostFirewallsIdActionsRemoveFromResourcesActionsResponseMeta withPagination(PostFirewallsIdActionsRemoveFromResourcesActionsResponseMetaPagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public PostFirewallsIdActionsRemoveFromResourcesActionsResponseMeta(@JsonProperty("pagination") PostFirewallsIdActionsRemoveFromResourcesActionsResponseMetaPagination pagination) {
+        this.pagination = pagination;
+  }
 }

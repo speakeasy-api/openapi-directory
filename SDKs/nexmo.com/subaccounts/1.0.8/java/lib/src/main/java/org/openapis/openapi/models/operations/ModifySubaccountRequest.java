@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModifySubaccountRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ModifySubaccountRequest modifySubaccountRequest;
+
     public ModifySubaccountRequest withModifySubaccountRequest(org.openapis.openapi.models.shared.ModifySubaccountRequest modifySubaccountRequest) {
         this.modifySubaccountRequest = modifySubaccountRequest;
         return this;
@@ -19,6 +21,7 @@ public class ModifySubaccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
     public String apiKey;
+
     public ModifySubaccountRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -29,9 +32,15 @@ public class ModifySubaccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subaccount_key")
     public String subaccountKey;
+
     public ModifySubaccountRequest withSubaccountKey(String subaccountKey) {
         this.subaccountKey = subaccountKey;
         return this;
     }
     
+    public ModifySubaccountRequest(@JsonProperty("ModifySubaccountRequest") org.openapis.openapi.models.shared.ModifySubaccountRequest modifySubaccountRequest, @JsonProperty("api_key") String apiKey, @JsonProperty("subaccount_key") String subaccountKey) {
+        this.modifySubaccountRequest = modifySubaccountRequest;
+        this.apiKey = apiKey;
+        this.subaccountKey = subaccountKey;
+  }
 }

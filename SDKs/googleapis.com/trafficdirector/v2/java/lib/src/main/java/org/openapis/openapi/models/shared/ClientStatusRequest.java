@@ -18,9 +18,11 @@ public class ClientStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeMatchers")
     public NodeMatcher[] nodeMatchers;
+
     public ClientStatusRequest withNodeMatchers(NodeMatcher[] nodeMatchers) {
         this.nodeMatchers = nodeMatchers;
         return this;
     }
     
+    public ClientStatusRequest(){}
 }

@@ -15,6 +15,7 @@ public class PollItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public PollItemsRequest withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -26,6 +27,7 @@ public class PollItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugOptions")
     public DebugOptions debugOptions;
+
     public PollItemsRequest withDebugOptions(DebugOptions debugOptions) {
         this.debugOptions = debugOptions;
         return this;
@@ -37,6 +39,7 @@ public class PollItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public PollItemsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -48,6 +51,7 @@ public class PollItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queue")
     public String queue;
+
     public PollItemsRequest withQueue(String queue) {
         this.queue = queue;
         return this;
@@ -59,9 +63,11 @@ public class PollItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCodes")
     public PollItemsRequestStatusCodesEnum[] statusCodes;
+
     public PollItemsRequest withStatusCodes(PollItemsRequestStatusCodesEnum[] statusCodes) {
         this.statusCodes = statusCodes;
         return this;
     }
     
+    public PollItemsRequest(){}
 }

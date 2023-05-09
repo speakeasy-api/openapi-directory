@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class S3Storage {
     
     public String awsAccessKeyId;
+
     public S3Storage withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -19,6 +20,7 @@ public class S3Storage {
     
     
     public String bucket;
+
     public S3Storage withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -26,6 +28,7 @@ public class S3Storage {
     
     
     public String prefix;
+
     public S3Storage withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -33,6 +36,7 @@ public class S3Storage {
     
     
     public String uploadPolicy;
+
     public S3Storage withUploadPolicy(String uploadPolicy) {
         this.uploadPolicy = uploadPolicy;
         return this;
@@ -40,9 +44,11 @@ public class S3Storage {
     
     
     public String uploadPolicySignature;
+
     public S3Storage withUploadPolicySignature(String uploadPolicySignature) {
         this.uploadPolicySignature = uploadPolicySignature;
         return this;
     }
     
+    public S3Storage(){}
 }

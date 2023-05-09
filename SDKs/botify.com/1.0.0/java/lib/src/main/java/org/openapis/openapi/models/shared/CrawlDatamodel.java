@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrawlDatamodel {
     @JsonProperty("fields")
     public CrawlDatamodelField[] fields;
+
     public CrawlDatamodel withFields(CrawlDatamodelField[] fields) {
         this.fields = fields;
         return this;
@@ -19,9 +20,14 @@ public class CrawlDatamodel {
     
     @JsonProperty("groups")
     public CrawlDatamodelGroup[] groups;
+
     public CrawlDatamodel withGroups(CrawlDatamodelGroup[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public CrawlDatamodel(@JsonProperty("fields") CrawlDatamodelField[] fields, @JsonProperty("groups") CrawlDatamodelGroup[] groups) {
+        this.fields = fields;
+        this.groups = groups;
+  }
 }

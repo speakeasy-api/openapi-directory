@@ -18,6 +18,7 @@ public class TrackEventRequestBodyIdentificationUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public TrackEventRequestBodyIdentificationUser withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class TrackEventRequestBodyIdentificationUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public TrackEventRequestBodyIdentificationUser withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public TrackEventRequestBodyIdentificationUser(){}
 }

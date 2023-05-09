@@ -15,6 +15,7 @@ public class RoleValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public String[] admin;
+
     public RoleValues withAdmin(String[] admin) {
         this.admin = admin;
         return this;
@@ -23,9 +24,11 @@ public class RoleValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editor")
     public String[] editor;
+
     public RoleValues withEditor(String[] editor) {
         this.editor = editor;
         return this;
     }
     
+    public RoleValues(){}
 }

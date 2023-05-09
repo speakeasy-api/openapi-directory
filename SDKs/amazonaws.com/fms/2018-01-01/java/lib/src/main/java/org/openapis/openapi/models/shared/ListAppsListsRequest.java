@@ -12,6 +12,7 @@ public class ListAppsListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultLists")
     public Boolean defaultLists;
+
     public ListAppsListsRequest withDefaultLists(Boolean defaultLists) {
         this.defaultLists = defaultLists;
         return this;
@@ -19,6 +20,7 @@ public class ListAppsListsRequest {
     
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAppsListsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListAppsListsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAppsListsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppsListsRequest(@JsonProperty("MaxResults") Long maxResults) {
+        this.maxResults = maxResults;
+  }
 }

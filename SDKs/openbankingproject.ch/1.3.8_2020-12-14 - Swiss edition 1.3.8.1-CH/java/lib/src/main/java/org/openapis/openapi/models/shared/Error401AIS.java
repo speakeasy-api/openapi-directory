@@ -21,6 +21,7 @@ public class Error401AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error401AIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -35,6 +36,7 @@ public class Error401AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalErrors")
     public Error401AISAdditionalErrors[] additionalErrors;
+
     public Error401AIS withAdditionalErrors(Error401AISAdditionalErrors[] additionalErrors) {
         this.additionalErrors = additionalErrors;
         return this;
@@ -45,6 +47,7 @@ public class Error401AIS {
      */
     @JsonProperty("code")
     public MessageCode401AISEnum code;
+
     public Error401AIS withCode(MessageCode401AISEnum code) {
         this.code = code;
         return this;
@@ -59,6 +62,7 @@ public class Error401AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error401AIS withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -73,6 +77,7 @@ public class Error401AIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error401AIS withTitle(String title) {
         this.title = title;
         return this;
@@ -85,9 +90,14 @@ public class Error401AIS {
      */
     @JsonProperty("type")
     public String type;
+
     public Error401AIS withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error401AIS(@JsonProperty("code") MessageCode401AISEnum code, @JsonProperty("type") String type) {
+        this.code = code;
+        this.type = type;
+  }
 }

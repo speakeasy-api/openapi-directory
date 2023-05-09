@@ -15,6 +15,7 @@ public class TeamsCreateTeam201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamsCreateTeam201ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class TeamsCreateTeam201ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public TeamsCreateTeam201ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +37,7 @@ public class TeamsCreateTeam201ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public TeamsCreateTeam201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -45,9 +48,15 @@ public class TeamsCreateTeam201ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public TeamsCreateTeam201ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TeamsCreateTeam201ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+  }
 }

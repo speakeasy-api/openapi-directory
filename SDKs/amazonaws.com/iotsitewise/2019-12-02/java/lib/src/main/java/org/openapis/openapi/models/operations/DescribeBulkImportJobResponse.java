@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBulkImportJobResponse {
     
     public String contentType;
+
     public DescribeBulkImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBulkImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBulkImportJobResponse describeBulkImportJobResponse;
+
     public DescribeBulkImportJobResponse withDescribeBulkImportJobResponse(org.openapis.openapi.models.shared.DescribeBulkImportJobResponse describeBulkImportJobResponse) {
         this.describeBulkImportJobResponse = describeBulkImportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBulkImportJobResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeBulkImportJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBulkImportJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeBulkImportJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeBulkImportJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeBulkImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeBulkImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBulkImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeBulkImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBulkImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeBulkImportJobResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBulkImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeBulkImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

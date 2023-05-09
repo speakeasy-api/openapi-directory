@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHistoryExportResultsRequest {
@@ -12,6 +13,7 @@ public class GetHistoryExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetHistoryExportResultsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetHistoryExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=history_export_id")
     public Integer historyExportId;
+
     public GetHistoryExportResultsRequest withHistoryExportId(Integer historyExportId) {
         this.historyExportId = historyExportId;
         return this;
@@ -32,6 +35,7 @@ public class GetHistoryExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetHistoryExportResultsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,13 @@ public class GetHistoryExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetHistoryExportResultsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetHistoryExportResultsRequest(@JsonProperty("history_export_id") Integer historyExportId) {
+        this.historyExportId = historyExportId;
+  }
 }

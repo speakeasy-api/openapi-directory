@@ -53,12 +53,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsTestResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsTestResponse() {{
+        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsTestResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsTestResponse(contentType, httpRes.statusCode()) {{
             getAlmawsV1TaskListsTest200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,12 +99,10 @@ public class Test {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsTestResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsTestResponse() {{
+        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsTestResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsTestResponse(contentType, httpRes.statusCode()) {{
             postAlmawsV1TaskListsTest200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

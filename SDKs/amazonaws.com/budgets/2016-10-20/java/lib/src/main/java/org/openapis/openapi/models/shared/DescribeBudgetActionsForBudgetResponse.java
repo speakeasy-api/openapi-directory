@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeBudgetActionsForBudgetResponse {
     @JsonProperty("Actions")
     public Action[] actions;
+
     public DescribeBudgetActionsForBudgetResponse withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -25,9 +26,13 @@ public class DescribeBudgetActionsForBudgetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBudgetActionsForBudgetResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBudgetActionsForBudgetResponse(@JsonProperty("Actions") Action[] actions) {
+        this.actions = actions;
+  }
 }

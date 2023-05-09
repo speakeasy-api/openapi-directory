@@ -12,6 +12,7 @@ public class OperationsLogPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public OperationsLogPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class OperationsLogPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public OperationsLog[] results;
+
     public OperationsLogPage withResults(OperationsLog[] results) {
         this.results = results;
         return this;
     }
     
+    public OperationsLogPage(){}
 }

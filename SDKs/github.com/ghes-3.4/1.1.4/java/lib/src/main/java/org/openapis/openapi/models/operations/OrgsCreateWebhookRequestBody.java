@@ -15,6 +15,7 @@ public class OrgsCreateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public OrgsCreateWebhookRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -25,6 +26,7 @@ public class OrgsCreateWebhookRequestBody {
      */
     @JsonProperty("config")
     public OrgsCreateWebhookRequestBodyConfig config;
+
     public OrgsCreateWebhookRequestBody withConfig(OrgsCreateWebhookRequestBodyConfig config) {
         this.config = config;
         return this;
@@ -36,6 +38,7 @@ public class OrgsCreateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public String[] events;
+
     public OrgsCreateWebhookRequestBody withEvents(String[] events) {
         this.events = events;
         return this;
@@ -46,9 +49,14 @@ public class OrgsCreateWebhookRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public OrgsCreateWebhookRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrgsCreateWebhookRequestBody(@JsonProperty("config") OrgsCreateWebhookRequestBodyConfig config, @JsonProperty("name") String name) {
+        this.config = config;
+        this.name = name;
+  }
 }

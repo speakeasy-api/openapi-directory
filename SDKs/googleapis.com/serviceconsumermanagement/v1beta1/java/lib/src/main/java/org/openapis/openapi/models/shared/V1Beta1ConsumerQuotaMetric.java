@@ -18,6 +18,7 @@ public class V1Beta1ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerQuotaLimits")
     public V1Beta1ConsumerQuotaLimit[] consumerQuotaLimits;
+
     public V1Beta1ConsumerQuotaMetric withConsumerQuotaLimits(V1Beta1ConsumerQuotaLimit[] consumerQuotaLimits) {
         this.consumerQuotaLimits = consumerQuotaLimits;
         return this;
@@ -29,6 +30,7 @@ public class V1Beta1ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descendantConsumerQuotaLimits")
     public V1Beta1ConsumerQuotaLimit[] descendantConsumerQuotaLimits;
+
     public V1Beta1ConsumerQuotaMetric withDescendantConsumerQuotaLimits(V1Beta1ConsumerQuotaLimit[] descendantConsumerQuotaLimits) {
         this.descendantConsumerQuotaLimits = descendantConsumerQuotaLimits;
         return this;
@@ -40,6 +42,7 @@ public class V1Beta1ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public V1Beta1ConsumerQuotaMetric withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class V1Beta1ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public V1Beta1ConsumerQuotaMetric withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -62,6 +66,7 @@ public class V1Beta1ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1Beta1ConsumerQuotaMetric withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class V1Beta1ConsumerQuotaMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public V1Beta1ConsumerQuotaMetric withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public V1Beta1ConsumerQuotaMetric(){}
 }

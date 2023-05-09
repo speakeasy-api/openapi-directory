@@ -18,6 +18,7 @@ public class ListMigrationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationJobs")
     public MigrationJob[] migrationJobs;
+
     public ListMigrationJobsResponse withMigrationJobs(MigrationJob[] migrationJobs) {
         this.migrationJobs = migrationJobs;
         return this;
@@ -29,6 +30,7 @@ public class ListMigrationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMigrationJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListMigrationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListMigrationJobsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListMigrationJobsResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserEq {
     @JsonProperty("high_shelf")
     public HighShelf highShelf;
+
     public UserEq withHighShelf(HighShelf highShelf) {
         this.highShelf = highShelf;
         return this;
@@ -16,6 +17,7 @@ public class UserEq {
     
     @JsonProperty("low_shelf")
     public LowShelf lowShelf;
+
     public UserEq withLowShelf(LowShelf lowShelf) {
         this.lowShelf = lowShelf;
         return this;
@@ -23,6 +25,7 @@ public class UserEq {
     
     @JsonProperty("max_peaking_eqs")
     public Integer maxPeakingEqs;
+
     public UserEq withMaxPeakingEqs(Integer maxPeakingEqs) {
         this.maxPeakingEqs = maxPeakingEqs;
         return this;
@@ -30,9 +33,16 @@ public class UserEq {
     
     @JsonProperty("peaking_eqs")
     public String[] peakingEqs;
+
     public UserEq withPeakingEqs(String[] peakingEqs) {
         this.peakingEqs = peakingEqs;
         return this;
     }
     
+    public UserEq(@JsonProperty("high_shelf") HighShelf highShelf, @JsonProperty("low_shelf") LowShelf lowShelf, @JsonProperty("max_peaking_eqs") Integer maxPeakingEqs, @JsonProperty("peaking_eqs") String[] peakingEqs) {
+        this.highShelf = highShelf;
+        this.lowShelf = lowShelf;
+        this.maxPeakingEqs = maxPeakingEqs;
+        this.peakingEqs = peakingEqs;
+  }
 }

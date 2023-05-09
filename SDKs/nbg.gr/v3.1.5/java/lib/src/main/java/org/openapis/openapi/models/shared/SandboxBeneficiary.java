@@ -18,9 +18,11 @@ public class SandboxBeneficiary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SandboxBeneficiary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SandboxBeneficiary(){}
 }

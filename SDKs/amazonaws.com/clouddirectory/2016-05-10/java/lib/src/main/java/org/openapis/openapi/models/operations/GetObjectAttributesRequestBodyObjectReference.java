@@ -15,9 +15,11 @@ public class GetObjectAttributesRequestBodyObjectReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public GetObjectAttributesRequestBodyObjectReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public GetObjectAttributesRequestBodyObjectReference(){}
 }

@@ -15,6 +15,7 @@ public class AssociationStateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public AssociationStateDetails withState(String state) {
         this.state = state;
         return this;
@@ -23,9 +24,11 @@ public class AssociationStateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public AssociationStateDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public AssociationStateDetails(){}
 }

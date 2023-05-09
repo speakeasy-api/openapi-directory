@@ -18,9 +18,11 @@ public class ChannelSectionLocalization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ChannelSectionLocalization withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ChannelSectionLocalization(){}
 }

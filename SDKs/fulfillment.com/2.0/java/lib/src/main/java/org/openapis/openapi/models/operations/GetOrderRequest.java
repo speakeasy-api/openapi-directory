@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderRequest {
@@ -12,6 +13,7 @@ public class GetOrderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hydrate")
     public org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate;
+
     public GetOrderRequest withHydrate(org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate) {
         this.hydrate = hydrate;
         return this;
@@ -22,6 +24,7 @@ public class GetOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetOrderRequest withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +35,13 @@ public class GetOrderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merchantId")
     public Long merchantId;
+
     public GetOrderRequest withMerchantId(Long merchantId) {
         this.merchantId = merchantId;
         return this;
     }
     
+    public GetOrderRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

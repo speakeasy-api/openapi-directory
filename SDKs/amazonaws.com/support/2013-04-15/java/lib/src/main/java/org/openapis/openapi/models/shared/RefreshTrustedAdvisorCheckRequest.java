@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RefreshTrustedAdvisorCheckRequest {
     @JsonProperty("checkId")
     public String checkId;
+
     public RefreshTrustedAdvisorCheckRequest withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
     }
     
+    public RefreshTrustedAdvisorCheckRequest(@JsonProperty("checkId") String checkId) {
+        this.checkId = checkId;
+  }
 }

@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AreasCountriesFormatEnum;
 import org.openapis.openapi.models.operations.AreasCountriesRequest;
 import org.openapis.openapi.models.operations.AreasCountriesResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,44 +30,44 @@ public class Application {
                 }})
                 .build();
 
-            AreasCountriesRequest req = new AreasCountriesRequest() {{
-                format = "json";
-            }}            
+            AreasCountriesRequest req = new AreasCountriesRequest(AreasCountriesFormatEnum.JSON);            
 
             AreasCountriesResponse res = sdk.areasCountries(req);
 
-            if (res.areas.isPresent()) {
+            if (res.areas != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `areasCountries` - Areas (Countries)
-* `boxScore` - Box Score
-* `boxScoresByDate` - Box Scores by Date
-* `competitionFixturesLeagueDetails` - Competition Fixtures (League Details)
-* `competitionsLeagues` - Competitions (Leagues)
-* `gamesByDate` - Games by Date
-* `membershipsActive` - Memberships (Active)
-* `membershipsByTeamActive` - Memberships by Team (Active)
-* `membershipsByTeamHistorical` - Memberships by Team (Historical)
-* `membershipsHistorical` - Memberships (Historical)
-* `player` - Player
-* `players` - Players
-* `playersByTeam` - Players by Team
-* `schedule` - Schedule
-* `seasonTeams` - Season Teams
-* `standings` - Standings
-* `teams` - Teams
-* `venues` - Venues
+* [areasCountries](docs/sdk/README.md#areascountries) - Areas (Countries)
+* [boxScore](docs/sdk/README.md#boxscore) - Box Score
+* [boxScoresByDate](docs/sdk/README.md#boxscoresbydate) - Box Scores by Date
+* [competitionFixturesLeagueDetails](docs/sdk/README.md#competitionfixturesleaguedetails) - Competition Fixtures (League Details)
+* [competitionsLeagues](docs/sdk/README.md#competitionsleagues) - Competitions (Leagues)
+* [gamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [membershipsActive](docs/sdk/README.md#membershipsactive) - Memberships (Active)
+* [membershipsByTeamActive](docs/sdk/README.md#membershipsbyteamactive) - Memberships by Team (Active)
+* [membershipsByTeamHistorical](docs/sdk/README.md#membershipsbyteamhistorical) - Memberships by Team (Historical)
+* [membershipsHistorical](docs/sdk/README.md#membershipshistorical) - Memberships (Historical)
+* [player](docs/sdk/README.md#player) - Player
+* [players](docs/sdk/README.md#players) - Players
+* [playersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [schedule](docs/sdk/README.md#schedule) - Schedule
+* [seasonTeams](docs/sdk/README.md#seasonteams) - Season Teams
+* [standings](docs/sdk/README.md#standings) - Standings
+* [teams](docs/sdk/README.md#teams) - Teams
+* [venues](docs/sdk/README.md#venues) - Venues
 <!-- End SDK Available Operations -->
 
 ### Maturity

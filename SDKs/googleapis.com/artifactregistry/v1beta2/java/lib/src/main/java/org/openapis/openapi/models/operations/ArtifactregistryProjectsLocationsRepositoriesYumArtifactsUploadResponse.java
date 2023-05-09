@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse {
     
     public String contentType;
+
     public ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResp
     
     
     public Integer statusCode;
+
     public ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResp
      */
     
     public org.openapis.openapi.models.shared.UploadYumArtifactMediaResponse uploadYumArtifactMediaResponse;
+
     public ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse withUploadYumArtifactMediaResponse(org.openapis.openapi.models.shared.UploadYumArtifactMediaResponse uploadYumArtifactMediaResponse) {
         this.uploadYumArtifactMediaResponse = uploadYumArtifactMediaResponse;
         return this;
     }
     
+    public ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerCreativesAddDealRequest {
@@ -12,6 +13,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Long accountId;
+
     public AdexchangebuyerCreativesAddDealRequest withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdexchangebuyerCreativesAddDealRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=buyerCreativeId")
     public String buyerCreativeId;
+
     public AdexchangebuyerCreativesAddDealRequest withBuyerCreativeId(String buyerCreativeId) {
         this.buyerCreativeId = buyerCreativeId;
         return this;
@@ -42,6 +46,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dealId")
     public String dealId;
+
     public AdexchangebuyerCreativesAddDealRequest withDealId(String dealId) {
         this.dealId = dealId;
         return this;
@@ -52,6 +57,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdexchangebuyerCreativesAddDealRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdexchangebuyerCreativesAddDealRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdexchangebuyerCreativesAddDealRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdexchangebuyerCreativesAddDealRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdexchangebuyerCreativesAddDealRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,9 +112,15 @@ public class AdexchangebuyerCreativesAddDealRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdexchangebuyerCreativesAddDealRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdexchangebuyerCreativesAddDealRequest(@JsonProperty("accountId") Long accountId, @JsonProperty("buyerCreativeId") String buyerCreativeId, @JsonProperty("dealId") String dealId) {
+        this.accountId = accountId;
+        this.buyerCreativeId = buyerCreativeId;
+        this.dealId = dealId;
+  }
 }

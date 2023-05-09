@@ -15,6 +15,7 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AWSAccountId")
     public String awsAccountId;
+
     public AwsKmsKeyDetails withAWSAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -23,6 +24,7 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public Double creationDate;
+
     public AwsKmsKeyDetails withCreationDate(Double creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +33,7 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsKmsKeyDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public AwsKmsKeyDetails withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -47,6 +51,7 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyManager")
     public String keyManager;
+
     public AwsKmsKeyDetails withKeyManager(String keyManager) {
         this.keyManager = keyManager;
         return this;
@@ -55,6 +60,7 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyRotationStatus")
     public Boolean keyRotationStatus;
+
     public AwsKmsKeyDetails withKeyRotationStatus(Boolean keyRotationStatus) {
         this.keyRotationStatus = keyRotationStatus;
         return this;
@@ -63,6 +69,7 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyState")
     public String keyState;
+
     public AwsKmsKeyDetails withKeyState(String keyState) {
         this.keyState = keyState;
         return this;
@@ -71,9 +78,11 @@ public class AwsKmsKeyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Origin")
     public String origin;
+
     public AwsKmsKeyDetails withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public AwsKmsKeyDetails(){}
 }

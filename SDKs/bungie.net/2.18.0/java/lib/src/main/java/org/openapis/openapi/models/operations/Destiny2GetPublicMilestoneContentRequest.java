@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetPublicMilestoneContentRequest {
@@ -12,9 +13,13 @@ public class Destiny2GetPublicMilestoneContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=milestoneHash")
     public Long milestoneHash;
+
     public Destiny2GetPublicMilestoneContentRequest withMilestoneHash(Long milestoneHash) {
         this.milestoneHash = milestoneHash;
         return this;
     }
     
+    public Destiny2GetPublicMilestoneContentRequest(@JsonProperty("milestoneHash") Long milestoneHash) {
+        this.milestoneHash = milestoneHash;
+  }
 }

@@ -18,6 +18,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public InventoryWindowsUpdatePackageWindowsUpdateCategory[] categories;
+
     public InventoryWindowsUpdatePackage withCategories(InventoryWindowsUpdatePackageWindowsUpdateCategory[] categories) {
         this.categories = categories;
         return this;
@@ -29,6 +30,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InventoryWindowsUpdatePackage withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kbArticleIds")
     public String[] kbArticleIds;
+
     public InventoryWindowsUpdatePackage withKbArticleIds(String[] kbArticleIds) {
         this.kbArticleIds = kbArticleIds;
         return this;
@@ -51,6 +54,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDeploymentChangeTime")
     public String lastDeploymentChangeTime;
+
     public InventoryWindowsUpdatePackage withLastDeploymentChangeTime(String lastDeploymentChangeTime) {
         this.lastDeploymentChangeTime = lastDeploymentChangeTime;
         return this;
@@ -62,6 +66,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreInfoUrls")
     public String[] moreInfoUrls;
+
     public InventoryWindowsUpdatePackage withMoreInfoUrls(String[] moreInfoUrls) {
         this.moreInfoUrls = moreInfoUrls;
         return this;
@@ -73,6 +78,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionNumber")
     public Integer revisionNumber;
+
     public InventoryWindowsUpdatePackage withRevisionNumber(Integer revisionNumber) {
         this.revisionNumber = revisionNumber;
         return this;
@@ -84,6 +90,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportUrl")
     public String supportUrl;
+
     public InventoryWindowsUpdatePackage withSupportUrl(String supportUrl) {
         this.supportUrl = supportUrl;
         return this;
@@ -95,6 +102,7 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public InventoryWindowsUpdatePackage withTitle(String title) {
         this.title = title;
         return this;
@@ -106,9 +114,11 @@ public class InventoryWindowsUpdatePackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateId")
     public String updateId;
+
     public InventoryWindowsUpdatePackage withUpdateId(String updateId) {
         this.updateId = updateId;
         return this;
     }
     
+    public InventoryWindowsUpdatePackage(){}
 }

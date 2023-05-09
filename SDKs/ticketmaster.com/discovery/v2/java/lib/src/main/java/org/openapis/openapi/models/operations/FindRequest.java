@@ -12,6 +12,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationId")
     public Object[] classificationId;
+
     public FindRequest withClassificationId(Object[] classificationId) {
         this.classificationId = classificationId;
         return this;
@@ -22,6 +23,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationName")
     public Object[] classificationName;
+
     public FindRequest withClassificationName(Object[] classificationName) {
         this.classificationName = classificationName;
         return this;
@@ -32,6 +34,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public FindRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
     public FindIncludeLicensedContentEnum includeLicensedContent;
+
     public FindRequest withIncludeLicensedContent(FindIncludeLicensedContentEnum includeLicensedContent) {
         this.includeLicensedContent = includeLicensedContent;
         return this;
@@ -52,6 +56,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
     public FindIncludeSpellcheckEnum includeSpellcheck;
+
     public FindRequest withIncludeSpellcheck(FindIncludeSpellcheckEnum includeSpellcheck) {
         this.includeSpellcheck = includeSpellcheck;
         return this;
@@ -62,6 +67,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
     public FindIncludeTestEnum includeTest;
+
     public FindRequest withIncludeTest(FindIncludeTestEnum includeTest) {
         this.includeTest = includeTest;
         return this;
@@ -72,6 +78,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public FindRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -82,6 +89,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public FindRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -92,6 +100,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public FindRequest withPage(String page) {
         this.page = page;
         return this;
@@ -102,6 +111,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public FindRequest withSize(String size) {
         this.size = size;
         return this;
@@ -112,6 +122,7 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public FindRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -122,9 +133,11 @@ public class FindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public FindSourceEnum source;
+
     public FindRequest withSource(FindSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public FindRequest(){}
 }

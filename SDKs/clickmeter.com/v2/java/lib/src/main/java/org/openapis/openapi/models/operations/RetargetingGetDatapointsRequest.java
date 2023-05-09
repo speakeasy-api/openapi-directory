@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetargetingGetDatapointsRequest {
@@ -12,6 +13,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public RetargetingGetDatapointsRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +24,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public RetargetingGetDatapointsRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +35,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public RetargetingGetDatapointsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public RetargetingGetDatapointsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public RetargetingGetDatapointsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +68,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
     public Boolean onlyFavorites;
+
     public RetargetingGetDatapointsRequest withOnlyFavorites(Boolean onlyFavorites) {
         this.onlyFavorites = onlyFavorites;
         return this;
@@ -72,6 +79,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public RetargetingGetDatapointsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -82,6 +90,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
     public RetargetingGetDatapointsSortDirectionEnum sortDirection;
+
     public RetargetingGetDatapointsRequest withSortDirection(RetargetingGetDatapointsSortDirectionEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -92,6 +101,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public RetargetingGetDatapointsStatusEnum status;
+
     public RetargetingGetDatapointsRequest withStatus(RetargetingGetDatapointsStatusEnum status) {
         this.status = status;
         return this;
@@ -102,6 +112,7 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public RetargetingGetDatapointsRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -112,9 +123,13 @@ public class RetargetingGetDatapointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public RetargetingGetDatapointsRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public RetargetingGetDatapointsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

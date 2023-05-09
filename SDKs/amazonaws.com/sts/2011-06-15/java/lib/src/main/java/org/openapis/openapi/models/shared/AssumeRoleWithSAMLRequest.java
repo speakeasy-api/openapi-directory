@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssumeRoleWithSAMLRequest {
     
     public Long durationSeconds;
+
     public AssumeRoleWithSAMLRequest withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -16,6 +17,7 @@ public class AssumeRoleWithSAMLRequest {
     
     
     public String policy;
+
     public AssumeRoleWithSAMLRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,6 +25,7 @@ public class AssumeRoleWithSAMLRequest {
     
     
     public PolicyDescriptorType[] policyArns;
+
     public AssumeRoleWithSAMLRequest withPolicyArns(PolicyDescriptorType[] policyArns) {
         this.policyArns = policyArns;
         return this;
@@ -30,6 +33,7 @@ public class AssumeRoleWithSAMLRequest {
     
     
     public String principalArn;
+
     public AssumeRoleWithSAMLRequest withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -37,6 +41,7 @@ public class AssumeRoleWithSAMLRequest {
     
     
     public String roleArn;
+
     public AssumeRoleWithSAMLRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -44,9 +49,15 @@ public class AssumeRoleWithSAMLRequest {
     
     
     public String samlAssertion;
+
     public AssumeRoleWithSAMLRequest withSAMLAssertion(String samlAssertion) {
         this.samlAssertion = samlAssertion;
         return this;
     }
     
+    public AssumeRoleWithSAMLRequest(@JsonProperty("PrincipalArn") String principalArn, @JsonProperty("RoleArn") String roleArn, @JsonProperty("SAMLAssertion") String samlAssertion) {
+        this.principalArn = principalArn;
+        this.roleArn = roleArn;
+        this.samlAssertion = samlAssertion;
+  }
 }

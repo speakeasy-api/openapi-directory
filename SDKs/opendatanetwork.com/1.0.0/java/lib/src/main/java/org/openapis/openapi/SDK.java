@@ -148,6 +148,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -185,10 +190,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAMapResponse res = new org.openapis.openapi.models.operations.CreateAMapResponse() {{
+        org.openapis.openapi.models.operations.CreateAMapResponse res = new org.openapis.openapi.models.operations.CreateAMapResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,10 +234,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindAllAvailableDataForSomeEntitiesResponse res = new org.openapis.openapi.models.operations.FindAllAvailableDataForSomeEntitiesResponse() {{
+        org.openapis.openapi.models.operations.FindAllAvailableDataForSomeEntitiesResponse res = new org.openapis.openapi.models.operations.FindAllAvailableDataForSomeEntitiesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,10 +278,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindTheRelativesOfAnEntityResponse res = new org.openapis.openapi.models.operations.FindTheRelativesOfAnEntityResponse() {{
+        org.openapis.openapi.models.operations.FindTheRelativesOfAnEntityResponse res = new org.openapis.openapi.models.operations.FindTheRelativesOfAnEntityResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,10 +322,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitiesResponse res = new org.openapis.openapi.models.operations.GetEntitiesResponse() {{
+        org.openapis.openapi.models.operations.GetEntitiesResponse res = new org.openapis.openapi.models.operations.GetEntitiesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -369,10 +366,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConstraintPermutationsForEntitiesResponse res = new org.openapis.openapi.models.operations.GetConstraintPermutationsForEntitiesResponse() {{
+        org.openapis.openapi.models.operations.GetConstraintPermutationsForEntitiesResponse res = new org.openapis.openapi.models.operations.GetConstraintPermutationsForEntitiesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,10 +410,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatasetsResponse res = new org.openapis.openapi.models.operations.GetDatasetsResponse() {{
+        org.openapis.openapi.models.operations.GetDatasetsResponse res = new org.openapis.openapi.models.operations.GetDatasetsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -461,10 +454,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetQuestionsResponse res = new org.openapis.openapi.models.operations.GetQuestionsResponse() {{
+        org.openapis.openapi.models.operations.GetQuestionsResponse res = new org.openapis.openapi.models.operations.GetQuestionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -507,10 +498,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSuggestionsResponse res = new org.openapis.openapi.models.operations.GetSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.GetSuggestionsResponse res = new org.openapis.openapi.models.operations.GetSuggestionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -553,10 +542,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetValuesForVariablesResponse res = new org.openapis.openapi.models.operations.GetValuesForVariablesResponse() {{
+        org.openapis.openapi.models.operations.GetValuesForVariablesResponse res = new org.openapis.openapi.models.operations.GetValuesForVariablesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

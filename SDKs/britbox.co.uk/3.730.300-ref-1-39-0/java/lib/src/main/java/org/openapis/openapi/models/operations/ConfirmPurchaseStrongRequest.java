@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmPurchaseStrongRequest {
@@ -12,6 +13,7 @@ public class ConfirmPurchaseStrongRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvPurchaseStrongRequest itvPurchaseStrongRequest;
+
     public ConfirmPurchaseStrongRequest withItvPurchaseStrongRequest(org.openapis.openapi.models.shared.ItvPurchaseStrongRequest itvPurchaseStrongRequest) {
         this.itvPurchaseStrongRequest = itvPurchaseStrongRequest;
         return this;
@@ -32,6 +34,7 @@ public class ConfirmPurchaseStrongRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ConfirmPurchaseStrongRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class ConfirmPurchaseStrongRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public ConfirmPurchaseStrongRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public ConfirmPurchaseStrongRequest(@JsonProperty("ItvPurchaseStrongRequest") org.openapis.openapi.models.shared.ItvPurchaseStrongRequest itvPurchaseStrongRequest, @JsonProperty("platform") String platform) {
+        this.itvPurchaseStrongRequest = itvPurchaseStrongRequest;
+        this.platform = platform;
+  }
 }

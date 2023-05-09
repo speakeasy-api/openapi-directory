@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAppBlockResponse {
@@ -12,6 +13,7 @@ public class CreateAppBlockResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateAppBlockResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAppBlockResponse {
     
     
     public String contentType;
+
     public CreateAppBlockResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAppBlockResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAppBlockResult createAppBlockResult;
+
     public CreateAppBlockResponse withCreateAppBlockResult(org.openapis.openapi.models.shared.CreateAppBlockResult createAppBlockResult) {
         this.createAppBlockResult = createAppBlockResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateAppBlockResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAppBlockResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAppBlockResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateAppBlockResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAppBlockResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateAppBlockResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAppBlockResponse {
     
     
     public Integer statusCode;
+
     public CreateAppBlockResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateAppBlockResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAppBlockResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAppBlockResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

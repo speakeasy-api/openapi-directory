@@ -12,6 +12,7 @@ public class NAThermProgram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NAThermProgram withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class NAThermProgram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("program_id")
     public String programId;
+
     public NAThermProgram withProgramId(String programId) {
         this.programId = programId;
         return this;
@@ -28,6 +30,7 @@ public class NAThermProgram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected")
     public Boolean selected;
+
     public NAThermProgram withSelected(Boolean selected) {
         this.selected = selected;
         return this;
@@ -36,6 +39,7 @@ public class NAThermProgram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timetable")
     public NATimeTableItem[] timetable;
+
     public NAThermProgram withTimetable(NATimeTableItem[] timetable) {
         this.timetable = timetable;
         return this;
@@ -44,9 +48,11 @@ public class NAThermProgram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zones")
     public NAZone[] zones;
+
     public NAThermProgram withZones(NAZone[] zones) {
         this.zones = zones;
         return this;
     }
     
+    public NAThermProgram(){}
 }

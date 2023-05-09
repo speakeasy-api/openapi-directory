@@ -57,11 +57,9 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PriceOffersResponse res = new org.openapis.openapi.models.operations.PriceOffersResponse() {{
+        org.openapis.openapi.models.operations.PriceOffersResponse res = new org.openapis.openapi.models.operations.PriceOffersResponse(contentType, httpRes.statusCode()) {{
             priceOffers200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

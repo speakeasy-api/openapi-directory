@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetJobsResponse {
@@ -12,6 +13,7 @@ public class BatchGetJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetJobsResponse batchGetJobsResponse;
+
     public BatchGetJobsResponse withBatchGetJobsResponse(org.openapis.openapi.models.shared.BatchGetJobsResponse batchGetJobsResponse) {
         this.batchGetJobsResponse = batchGetJobsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetJobsResponse {
     
     
     public String contentType;
+
     public BatchGetJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetJobsResponse {
      */
     
     public Object internalServiceException;
+
     public BatchGetJobsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetJobsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetJobsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetJobsResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGetJobsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetJobsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class BatchGetJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

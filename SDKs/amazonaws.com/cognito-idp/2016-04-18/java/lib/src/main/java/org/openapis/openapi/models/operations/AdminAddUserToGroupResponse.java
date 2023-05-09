@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminAddUserToGroupResponse {
     
     public String contentType;
+
     public AdminAddUserToGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdminAddUserToGroupResponse {
      */
     
     public Object internalErrorException;
+
     public AdminAddUserToGroupResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class AdminAddUserToGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminAddUserToGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class AdminAddUserToGroupResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminAddUserToGroupResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -49,6 +54,7 @@ public class AdminAddUserToGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminAddUserToGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AdminAddUserToGroupResponse {
     
     
     public Integer statusCode;
+
     public AdminAddUserToGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AdminAddUserToGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminAddUserToGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AdminAddUserToGroupResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminAddUserToGroupResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class AdminAddUserToGroupResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminAddUserToGroupResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminAddUserToGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

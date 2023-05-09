@@ -23,6 +23,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build_type")
     public PageBuildTypeEnum buildType;
+
     public Page withBuildType(PageBuildTypeEnum buildType) {
         this.buildType = buildType;
         return this;
@@ -33,6 +34,7 @@ public class Page {
      */
     @JsonProperty("cname")
     public String cname;
+
     public Page withCname(String cname) {
         this.cname = cname;
         return this;
@@ -43,6 +45,7 @@ public class Page {
      */
     @JsonProperty("custom_404")
     public Boolean custom404;
+
     public Page withCustom404(Boolean custom404) {
         this.custom404 = custom404;
         return this;
@@ -54,6 +57,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Page withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -62,6 +66,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("https_certificate")
     public PagesHttpsCertificate httpsCertificate;
+
     public Page withHttpsCertificate(PagesHttpsCertificate httpsCertificate) {
         this.httpsCertificate = httpsCertificate;
         return this;
@@ -73,6 +78,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("https_enforced")
     public Boolean httpsEnforced;
+
     public Page withHttpsEnforced(Boolean httpsEnforced) {
         this.httpsEnforced = httpsEnforced;
         return this;
@@ -86,6 +92,7 @@ public class Page {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pending_domain_unverified_at")
     public OffsetDateTime pendingDomainUnverifiedAt;
+
     public Page withPendingDomainUnverifiedAt(OffsetDateTime pendingDomainUnverifiedAt) {
         this.pendingDomainUnverifiedAt = pendingDomainUnverifiedAt;
         return this;
@@ -97,6 +104,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected_domain_state")
     public PageProtectedDomainStateEnum protectedDomainState;
+
     public Page withProtectedDomainState(PageProtectedDomainStateEnum protectedDomainState) {
         this.protectedDomainState = protectedDomainState;
         return this;
@@ -107,6 +115,7 @@ public class Page {
      */
     @JsonProperty("public")
     public Boolean public_;
+
     public Page withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -115,6 +124,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public PagesSourceHash source;
+
     public Page withSource(PagesSourceHash source) {
         this.source = source;
         return this;
@@ -125,6 +135,7 @@ public class Page {
      */
     @JsonProperty("status")
     public PageStatusEnum status;
+
     public Page withStatus(PageStatusEnum status) {
         this.status = status;
         return this;
@@ -135,9 +146,17 @@ public class Page {
      */
     @JsonProperty("url")
     public String url;
+
     public Page withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Page(@JsonProperty("cname") String cname, @JsonProperty("custom_404") Boolean custom404, @JsonProperty("public") Boolean public_, @JsonProperty("status") PageStatusEnum status, @JsonProperty("url") String url) {
+        this.cname = cname;
+        this.custom404 = custom404;
+        this.public_ = public_;
+        this.status = status;
+        this.url = url;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LegacyBoxScoresDeltaResponse {
     
     public org.openapis.openapi.models.shared.BoxScore[] boxScores;
+
     public LegacyBoxScoresDeltaResponse withBoxScores(org.openapis.openapi.models.shared.BoxScore[] boxScores) {
         this.boxScores = boxScores;
         return this;
@@ -16,6 +18,7 @@ public class LegacyBoxScoresDeltaResponse {
     
     
     public String contentType;
+
     public LegacyBoxScoresDeltaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class LegacyBoxScoresDeltaResponse {
     
     
     public Integer statusCode;
+
     public LegacyBoxScoresDeltaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class LegacyBoxScoresDeltaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LegacyBoxScoresDeltaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LegacyBoxScoresDeltaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

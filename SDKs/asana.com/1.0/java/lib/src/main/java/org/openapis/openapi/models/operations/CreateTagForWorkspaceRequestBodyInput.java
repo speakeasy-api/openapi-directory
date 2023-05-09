@@ -15,9 +15,11 @@ public class CreateTagForWorkspaceRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TagResponseInput data;
+
     public CreateTagForWorkspaceRequestBodyInput withData(org.openapis.openapi.models.shared.TagResponseInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateTagForWorkspaceRequestBodyInput(){}
 }

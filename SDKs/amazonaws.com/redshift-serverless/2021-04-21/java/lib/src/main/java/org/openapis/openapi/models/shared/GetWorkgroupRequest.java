@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetWorkgroupRequest {
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public GetWorkgroupRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public GetWorkgroupRequest(@JsonProperty("workgroupName") String workgroupName) {
+        this.workgroupName = workgroupName;
+  }
 }

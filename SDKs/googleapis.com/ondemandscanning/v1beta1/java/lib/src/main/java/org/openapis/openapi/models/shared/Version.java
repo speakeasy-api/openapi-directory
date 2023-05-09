@@ -18,6 +18,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epoch")
     public Integer epoch;
+
     public Version withEpoch(Integer epoch) {
         this.epoch = epoch;
         return this;
@@ -29,6 +30,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public Version withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -40,6 +42,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusive")
     public Boolean inclusive;
+
     public Version withInclusive(Boolean inclusive) {
         this.inclusive = inclusive;
         return this;
@@ -51,6 +54,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public VersionKindEnum kind;
+
     public Version withKind(VersionKindEnum kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Version withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public String revision;
+
     public Version withRevision(String revision) {
         this.revision = revision;
         return this;
     }
     
+    public Version(){}
 }

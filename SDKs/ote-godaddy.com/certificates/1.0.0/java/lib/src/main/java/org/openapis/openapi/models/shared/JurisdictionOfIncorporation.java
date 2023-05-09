@@ -12,6 +12,7 @@ public class JurisdictionOfIncorporation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public JurisdictionOfIncorporation withCity(String city) {
         this.city = city;
         return this;
@@ -19,6 +20,7 @@ public class JurisdictionOfIncorporation {
     
     @JsonProperty("country")
     public String country;
+
     public JurisdictionOfIncorporation withCountry(String country) {
         this.country = country;
         return this;
@@ -27,6 +29,7 @@ public class JurisdictionOfIncorporation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("county")
     public String county;
+
     public JurisdictionOfIncorporation withCounty(String county) {
         this.county = county;
         return this;
@@ -35,9 +38,13 @@ public class JurisdictionOfIncorporation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public JurisdictionOfIncorporation withState(String state) {
         this.state = state;
         return this;
     }
     
+    public JurisdictionOfIncorporation(@JsonProperty("country") String country) {
+        this.country = country;
+  }
 }

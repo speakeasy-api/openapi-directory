@@ -15,6 +15,7 @@ public class EnableDelegatedAdminAccountRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public EnableDelegatedAdminAccountRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class EnableDelegatedAdminAccountRequestBody {
      */
     @JsonProperty("delegatedAdminAccountId")
     public String delegatedAdminAccountId;
+
     public EnableDelegatedAdminAccountRequestBody withDelegatedAdminAccountId(String delegatedAdminAccountId) {
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         return this;
     }
     
+    public EnableDelegatedAdminAccountRequestBody(@JsonProperty("delegatedAdminAccountId") String delegatedAdminAccountId) {
+        this.delegatedAdminAccountId = delegatedAdminAccountId;
+  }
 }

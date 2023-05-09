@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateWorkspaceAuthenticationResponse {
     @JsonProperty("authentication")
     public AuthenticationDescription authentication;
+
     public UpdateWorkspaceAuthenticationResponse withAuthentication(AuthenticationDescription authentication) {
         this.authentication = authentication;
         return this;
     }
     
+    public UpdateWorkspaceAuthenticationResponse(@JsonProperty("authentication") AuthenticationDescription authentication) {
+        this.authentication = authentication;
+  }
 }

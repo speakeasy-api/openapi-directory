@@ -12,6 +12,7 @@ public class HsmgrRequestBodyCertificateParameters {
      */
     @JsonProperty("CUID")
     public String cuid;
+
     public HsmgrRequestBodyCertificateParameters withCuid(String cuid) {
         this.cuid = cuid;
         return this;
@@ -22,6 +23,7 @@ public class HsmgrRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public HsmgrRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -32,6 +34,7 @@ public class HsmgrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HsmgrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,6 +45,7 @@ public class HsmgrRequestBodyCertificateParameters {
      */
     @JsonProperty("IDXN")
     public String idxn;
+
     public HsmgrRequestBodyCertificateParameters withIdxn(String idxn) {
         this.idxn = idxn;
         return this;
@@ -52,6 +56,7 @@ public class HsmgrRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public HsmgrRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -62,9 +67,18 @@ public class HsmgrRequestBodyCertificateParameters {
      */
     @JsonProperty("YOE")
     public String yoe;
+
     public HsmgrRequestBodyCertificateParameters withYoe(String yoe) {
         this.yoe = yoe;
         return this;
     }
     
+    public HsmgrRequestBodyCertificateParameters(@JsonProperty("CUID") String cuid, @JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("IDXN") String idxn, @JsonProperty("UID") String uid, @JsonProperty("YOE") String yoe) {
+        this.cuid = cuid;
+        this.dob = dob;
+        this.fullName = fullName;
+        this.idxn = idxn;
+        this.uid = uid;
+        this.yoe = yoe;
+  }
 }

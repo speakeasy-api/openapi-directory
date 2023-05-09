@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetKeepaliveRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetKeepaliveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetKeepaliveRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetKeepaliveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aliveTime")
     public Integer aliveTime;
+
     public ProtocolMqttClientSetKeepaliveRequest withAliveTime(Integer aliveTime) {
         this.aliveTime = aliveTime;
         return this;
     }
     
+    public ProtocolMqttClientSetKeepaliveRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("aliveTime") Integer aliveTime) {
+        this.agentNum = agentNum;
+        this.aliveTime = aliveTime;
+  }
 }

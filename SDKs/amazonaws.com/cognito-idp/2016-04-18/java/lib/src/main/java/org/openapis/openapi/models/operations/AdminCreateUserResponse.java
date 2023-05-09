@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminCreateUserResponse {
@@ -12,6 +13,7 @@ public class AdminCreateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminCreateUserResponse adminCreateUserResponse;
+
     public AdminCreateUserResponse withAdminCreateUserResponse(org.openapis.openapi.models.shared.AdminCreateUserResponse adminCreateUserResponse) {
         this.adminCreateUserResponse = adminCreateUserResponse;
         return this;
@@ -22,6 +24,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object codeDeliveryFailureException;
+
     public AdminCreateUserResponse withCodeDeliveryFailureException(Object codeDeliveryFailureException) {
         this.codeDeliveryFailureException = codeDeliveryFailureException;
         return this;
@@ -29,6 +32,7 @@ public class AdminCreateUserResponse {
     
     
     public String contentType;
+
     public AdminCreateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object internalErrorException;
+
     public AdminCreateUserResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public AdminCreateUserResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -59,6 +65,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminCreateUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object invalidPasswordException;
+
     public AdminCreateUserResponse withInvalidPasswordException(Object invalidPasswordException) {
         this.invalidPasswordException = invalidPasswordException;
         return this;
@@ -79,6 +87,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public AdminCreateUserResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -89,6 +98,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public AdminCreateUserResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -99,6 +109,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminCreateUserResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -109,6 +120,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object preconditionNotMetException;
+
     public AdminCreateUserResponse withPreconditionNotMetException(Object preconditionNotMetException) {
         this.preconditionNotMetException = preconditionNotMetException;
         return this;
@@ -119,6 +131,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminCreateUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class AdminCreateUserResponse {
     
     
     public Integer statusCode;
+
     public AdminCreateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class AdminCreateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminCreateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminCreateUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -153,6 +169,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public AdminCreateUserResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -163,6 +180,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object unsupportedUserStateException;
+
     public AdminCreateUserResponse withUnsupportedUserStateException(Object unsupportedUserStateException) {
         this.unsupportedUserStateException = unsupportedUserStateException;
         return this;
@@ -173,6 +191,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object userLambdaValidationException;
+
     public AdminCreateUserResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -183,6 +202,7 @@ public class AdminCreateUserResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminCreateUserResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
@@ -193,9 +213,14 @@ public class AdminCreateUserResponse {
      */
     
     public Object usernameExistsException;
+
     public AdminCreateUserResponse withUsernameExistsException(Object usernameExistsException) {
         this.usernameExistsException = usernameExistsException;
         return this;
     }
     
+    public AdminCreateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

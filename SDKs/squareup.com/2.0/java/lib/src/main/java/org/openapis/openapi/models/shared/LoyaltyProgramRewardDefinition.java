@@ -22,6 +22,7 @@ public class LoyaltyProgramRewardDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_ids")
     public String[] catalogObjectIds;
+
     public LoyaltyProgramRewardDefinition withCatalogObjectIds(String[] catalogObjectIds) {
         this.catalogObjectIds = catalogObjectIds;
         return this;
@@ -33,6 +34,7 @@ public class LoyaltyProgramRewardDefinition {
      */
     @JsonProperty("discount_type")
     public String discountType;
+
     public LoyaltyProgramRewardDefinition withDiscountType(String discountType) {
         this.discountType = discountType;
         return this;
@@ -49,6 +51,7 @@ public class LoyaltyProgramRewardDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixed_discount_money")
     public Money fixedDiscountMoney;
+
     public LoyaltyProgramRewardDefinition withFixedDiscountMoney(Money fixedDiscountMoney) {
         this.fixedDiscountMoney = fixedDiscountMoney;
         return this;
@@ -65,6 +68,7 @@ public class LoyaltyProgramRewardDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_discount_money")
     public Money maxDiscountMoney;
+
     public LoyaltyProgramRewardDefinition withMaxDiscountMoney(Money maxDiscountMoney) {
         this.maxDiscountMoney = maxDiscountMoney;
         return this;
@@ -78,6 +82,7 @@ public class LoyaltyProgramRewardDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage_discount")
     public String percentageDiscount;
+
     public LoyaltyProgramRewardDefinition withPercentageDiscount(String percentageDiscount) {
         this.percentageDiscount = percentageDiscount;
         return this;
@@ -92,9 +97,14 @@ public class LoyaltyProgramRewardDefinition {
      */
     @JsonProperty("scope")
     public String scope;
+
     public LoyaltyProgramRewardDefinition withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public LoyaltyProgramRewardDefinition(@JsonProperty("discount_type") String discountType, @JsonProperty("scope") String scope) {
+        this.discountType = discountType;
+        this.scope = scope;
+  }
 }

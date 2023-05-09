@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLocationFsxOpenZfsRequest {
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationFsxOpenZfsRequest withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public DescribeLocationFsxOpenZfsRequest(@JsonProperty("LocationArn") String locationArn) {
+        this.locationArn = locationArn;
+  }
 }

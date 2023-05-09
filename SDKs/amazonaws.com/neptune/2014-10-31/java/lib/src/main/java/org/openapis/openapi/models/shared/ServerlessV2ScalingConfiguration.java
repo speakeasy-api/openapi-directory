@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ServerlessV2ScalingConfiguration {
     
     public Double maxCapacity;
+
     public ServerlessV2ScalingConfiguration withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -19,9 +20,11 @@ public class ServerlessV2ScalingConfiguration {
     
     
     public Double minCapacity;
+
     public ServerlessV2ScalingConfiguration withMinCapacity(Double minCapacity) {
         this.minCapacity = minCapacity;
         return this;
     }
     
+    public ServerlessV2ScalingConfiguration(){}
 }

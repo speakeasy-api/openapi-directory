@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAppResponse {
     
     public String contentType;
+
     public UpdateAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAppResponse {
      */
     
     public Object internalError;
+
     public UpdateAppResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAppResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateAppResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAppResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public UpdateAppResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAppResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateAppResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAppResponse {
     
     
     public Integer statusCode;
+
     public UpdateAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAppResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public UpdateAppResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAppResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAppResponse updateAppResponse;
+
     public UpdateAppResponse withUpdateAppResponse(org.openapis.openapi.models.shared.UpdateAppResponse updateAppResponse) {
         this.updateAppResponse = updateAppResponse;
         return this;
     }
     
+    public UpdateAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment {
     
     public OffsetDateTime creationTime;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions options;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withOptions(RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentOptions options) {
         this.options = options;
         return this;
@@ -26,6 +28,7 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentStateEnum state;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withState(RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public String[] subnetIds;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -40,6 +44,7 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentTags[] tags;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withTags(RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachmentTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,6 +52,7 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public String transitGatewayAttachmentId;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -54,6 +60,7 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public String transitGatewayId;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -61,6 +68,7 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public String vpcId;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -68,9 +76,11 @@ public class RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment 
     
     
     public String vpcOwnerId;
+
     public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment withVpcOwnerId(String vpcOwnerId) {
         this.vpcOwnerId = vpcOwnerId;
         return this;
     }
     
+    public RejectTransitGatewayVpcAttachmentResultTransitGatewayVpcAttachment(){}
 }

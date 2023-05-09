@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecommendationData {
     @JsonProperty("document")
     public Document document;
+
     public RecommendationData withDocument(Document document) {
         this.document = document;
         return this;
@@ -21,6 +22,7 @@ public class RecommendationData {
     
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public RecommendationData withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
@@ -29,6 +31,7 @@ public class RecommendationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevanceLevel")
     public RelevanceLevelEnum relevanceLevel;
+
     public RecommendationData withRelevanceLevel(RelevanceLevelEnum relevanceLevel) {
         this.relevanceLevel = relevanceLevel;
         return this;
@@ -37,6 +40,7 @@ public class RecommendationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevanceScore")
     public Double relevanceScore;
+
     public RecommendationData withRelevanceScore(Double relevanceScore) {
         this.relevanceScore = relevanceScore;
         return this;
@@ -45,9 +49,14 @@ public class RecommendationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RecommendationTypeEnum type;
+
     public RecommendationData withType(RecommendationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RecommendationData(@JsonProperty("document") Document document, @JsonProperty("recommendationId") String recommendationId) {
+        this.document = document;
+        this.recommendationId = recommendationId;
+  }
 }

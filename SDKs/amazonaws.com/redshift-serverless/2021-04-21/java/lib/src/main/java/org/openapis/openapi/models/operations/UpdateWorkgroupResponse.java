@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkgroupResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkgroupResponse {
      */
     
     public Object conflictException;
+
     public UpdateWorkgroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorkgroupResponse {
     
     
     public String contentType;
+
     public UpdateWorkgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkgroupResponse {
      */
     
     public Object insufficientCapacityException;
+
     public UpdateWorkgroupResponse withInsufficientCapacityException(Object insufficientCapacityException) {
         this.insufficientCapacityException = insufficientCapacityException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWorkgroupResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkgroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateWorkgroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkgroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateWorkgroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkgroupResponse updateWorkgroupResponse;
+
     public UpdateWorkgroupResponse withUpdateWorkgroupResponse(org.openapis.openapi.models.shared.UpdateWorkgroupResponse updateWorkgroupResponse) {
         this.updateWorkgroupResponse = updateWorkgroupResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateWorkgroupResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkgroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

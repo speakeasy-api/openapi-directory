@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAssessmentTargetResponse {
@@ -12,6 +13,7 @@ public class DeleteAssessmentTargetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAssessmentTargetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAssessmentTargetResponse {
      */
     
     public Object assessmentRunInProgressException;
+
     public DeleteAssessmentTargetResponse withAssessmentRunInProgressException(Object assessmentRunInProgressException) {
         this.assessmentRunInProgressException = assessmentRunInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAssessmentTargetResponse {
     
     
     public String contentType;
+
     public DeleteAssessmentTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAssessmentTargetResponse {
      */
     
     public Object internalException;
+
     public DeleteAssessmentTargetResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAssessmentTargetResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteAssessmentTargetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAssessmentTargetResponse {
      */
     
     public Object noSuchEntityException;
+
     public DeleteAssessmentTargetResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteAssessmentTargetResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public DeleteAssessmentTargetResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteAssessmentTargetResponse {
     
     
     public Integer statusCode;
+
     public DeleteAssessmentTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteAssessmentTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAssessmentTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAssessmentTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class ServiceMeshFeatureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisMessages")
     public ServiceMeshAnalysisMessage[] analysisMessages;
+
     public ServiceMeshFeatureState withAnalysisMessages(ServiceMeshAnalysisMessage[] analysisMessages) {
         this.analysisMessages = analysisMessages;
         return this;
     }
     
+    public ServiceMeshFeatureState(){}
 }

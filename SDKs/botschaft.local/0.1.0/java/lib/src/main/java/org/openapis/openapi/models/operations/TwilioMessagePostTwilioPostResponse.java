@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TwilioMessagePostTwilioPostResponse {
     
     public String contentType;
+
     public TwilioMessagePostTwilioPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TwilioMessagePostTwilioPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public TwilioMessagePostTwilioPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class TwilioMessagePostTwilioPostResponse {
     
     
     public Integer statusCode;
+
     public TwilioMessagePostTwilioPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TwilioMessagePostTwilioPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TwilioMessagePostTwilioPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TwilioMessagePostTwilioPostResponse {
      */
     
     public Object twilioMessagePostTwilioPost200ApplicationJSONAny;
+
     public TwilioMessagePostTwilioPostResponse withTwilioMessagePostTwilioPost200ApplicationJSONAny(Object twilioMessagePostTwilioPost200ApplicationJSONAny) {
         this.twilioMessagePostTwilioPost200ApplicationJSONAny = twilioMessagePostTwilioPost200ApplicationJSONAny;
         return this;
     }
     
+    public TwilioMessagePostTwilioPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public ReportKey key;
+
     public Report withKey(ReportKey key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ReportMetadata metadata;
+
     public Report withMetadata(ReportMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public Parameters params;
+
     public Report withParams(Parameters params) {
         this.params = params;
         return this;
     }
     
+    public Report(){}
 }

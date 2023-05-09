@@ -15,6 +15,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommentFieldMappings")
     public DataSourceToIndexFieldMapping[] commentFieldMappings;
+
     public BoxConfiguration withCommentFieldMappings(DataSourceToIndexFieldMapping[] commentFieldMappings) {
         this.commentFieldMappings = commentFieldMappings;
         return this;
@@ -23,6 +24,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlComments")
     public Boolean crawlComments;
+
     public BoxConfiguration withCrawlComments(Boolean crawlComments) {
         this.crawlComments = crawlComments;
         return this;
@@ -31,6 +33,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlTasks")
     public Boolean crawlTasks;
+
     public BoxConfiguration withCrawlTasks(Boolean crawlTasks) {
         this.crawlTasks = crawlTasks;
         return this;
@@ -39,6 +42,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlWebLinks")
     public Boolean crawlWebLinks;
+
     public BoxConfiguration withCrawlWebLinks(Boolean crawlWebLinks) {
         this.crawlWebLinks = crawlWebLinks;
         return this;
@@ -46,6 +50,7 @@ public class BoxConfiguration {
     
     @JsonProperty("EnterpriseId")
     public String enterpriseId;
+
     public BoxConfiguration withEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
@@ -54,6 +59,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public BoxConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -62,6 +68,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFieldMappings")
     public DataSourceToIndexFieldMapping[] fileFieldMappings;
+
     public BoxConfiguration withFileFieldMappings(DataSourceToIndexFieldMapping[] fileFieldMappings) {
         this.fileFieldMappings = fileFieldMappings;
         return this;
@@ -70,6 +77,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public BoxConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -77,6 +85,7 @@ public class BoxConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public BoxConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -85,6 +94,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskFieldMappings")
     public DataSourceToIndexFieldMapping[] taskFieldMappings;
+
     public BoxConfiguration withTaskFieldMappings(DataSourceToIndexFieldMapping[] taskFieldMappings) {
         this.taskFieldMappings = taskFieldMappings;
         return this;
@@ -93,6 +103,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseChangeLog")
     public Boolean useChangeLog;
+
     public BoxConfiguration withUseChangeLog(Boolean useChangeLog) {
         this.useChangeLog = useChangeLog;
         return this;
@@ -101,6 +112,7 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public BoxConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
@@ -109,9 +121,14 @@ public class BoxConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebLinkFieldMappings")
     public DataSourceToIndexFieldMapping[] webLinkFieldMappings;
+
     public BoxConfiguration withWebLinkFieldMappings(DataSourceToIndexFieldMapping[] webLinkFieldMappings) {
         this.webLinkFieldMappings = webLinkFieldMappings;
         return this;
     }
     
+    public BoxConfiguration(@JsonProperty("EnterpriseId") String enterpriseId, @JsonProperty("SecretArn") String secretArn) {
+        this.enterpriseId = enterpriseId;
+        this.secretArn = secretArn;
+  }
 }

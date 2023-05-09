@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetStandardsControlAssociationsResponse {
@@ -12,6 +13,7 @@ public class BatchGetStandardsControlAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetStandardsControlAssociationsResponse batchGetStandardsControlAssociationsResponse;
+
     public BatchGetStandardsControlAssociationsResponse withBatchGetStandardsControlAssociationsResponse(org.openapis.openapi.models.shared.BatchGetStandardsControlAssociationsResponse batchGetStandardsControlAssociationsResponse) {
         this.batchGetStandardsControlAssociationsResponse = batchGetStandardsControlAssociationsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetStandardsControlAssociationsResponse {
     
     
     public String contentType;
+
     public BatchGetStandardsControlAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetStandardsControlAssociationsResponse {
      */
     
     public Object internalException;
+
     public BatchGetStandardsControlAssociationsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetStandardsControlAssociationsResponse {
      */
     
     public Object invalidAccessException;
+
     public BatchGetStandardsControlAssociationsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetStandardsControlAssociationsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetStandardsControlAssociationsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetStandardsControlAssociationsResponse {
      */
     
     public Object limitExceededException;
+
     public BatchGetStandardsControlAssociationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class BatchGetStandardsControlAssociationsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetStandardsControlAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetStandardsControlAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetStandardsControlAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetStandardsControlAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

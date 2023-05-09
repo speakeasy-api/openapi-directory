@@ -12,6 +12,7 @@ public class ListEngagementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncidentId")
     public String incidentId;
+
     public ListEngagementsRequest withIncidentId(String incidentId) {
         this.incidentId = incidentId;
         return this;
@@ -20,6 +21,7 @@ public class ListEngagementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEngagementsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListEngagementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEngagementsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListEngagementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRangeValue")
     public TimeRange timeRangeValue;
+
     public ListEngagementsRequest withTimeRangeValue(TimeRange timeRangeValue) {
         this.timeRangeValue = timeRangeValue;
         return this;
     }
     
+    public ListEngagementsRequest(){}
 }

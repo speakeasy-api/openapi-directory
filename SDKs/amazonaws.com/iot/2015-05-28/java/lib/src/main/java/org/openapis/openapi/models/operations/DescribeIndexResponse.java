@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeIndexResponse {
     
     public String contentType;
+
     public DescribeIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeIndexResponse describeIndexResponse;
+
     public DescribeIndexResponse withDescribeIndexResponse(org.openapis.openapi.models.shared.DescribeIndexResponse describeIndexResponse) {
         this.describeIndexResponse = describeIndexResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeIndexResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeIndexResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeIndexResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeIndexResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeIndexResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeIndexResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeIndexResponse {
     
     
     public Integer statusCode;
+
     public DescribeIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeIndexResponse {
      */
     
     public Object throttlingException;
+
     public DescribeIndexResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeIndexResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeIndexResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

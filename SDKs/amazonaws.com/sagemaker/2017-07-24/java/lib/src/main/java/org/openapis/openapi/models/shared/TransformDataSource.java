@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransformDataSource {
     @JsonProperty("S3DataSource")
     public TransformS3DataSource s3DataSource;
+
     public TransformDataSource withS3DataSource(TransformS3DataSource s3DataSource) {
         this.s3DataSource = s3DataSource;
         return this;
     }
     
+    public TransformDataSource(@JsonProperty("S3DataSource") TransformS3DataSource s3DataSource) {
+        this.s3DataSource = s3DataSource;
+  }
 }

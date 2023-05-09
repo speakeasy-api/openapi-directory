@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDefaultRetentionPolicyResponse {
     
     public String contentType;
+
     public GetDefaultRetentionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDefaultRetentionPolicyResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetDefaultRetentionPolicyResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetDefaultRetentionPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDefaultRetentionPolicyResponse getDefaultRetentionPolicyResponse;
+
     public GetDefaultRetentionPolicyResponse withGetDefaultRetentionPolicyResponse(org.openapis.openapi.models.shared.GetDefaultRetentionPolicyResponse getDefaultRetentionPolicyResponse) {
         this.getDefaultRetentionPolicyResponse = getDefaultRetentionPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDefaultRetentionPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public GetDefaultRetentionPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetDefaultRetentionPolicyResponse {
      */
     
     public Object organizationNotFoundException;
+
     public GetDefaultRetentionPolicyResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDefaultRetentionPolicyResponse {
      */
     
     public Object organizationStateException;
+
     public GetDefaultRetentionPolicyResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class GetDefaultRetentionPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetDefaultRetentionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDefaultRetentionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDefaultRetentionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDefaultRetentionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

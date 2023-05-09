@@ -15,6 +15,7 @@ public class StartRemediationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedItems")
     public ResourceKey[] failedItems;
+
     public StartRemediationExecutionResponse withFailedItems(ResourceKey[] failedItems) {
         this.failedItems = failedItems;
         return this;
@@ -23,9 +24,11 @@ public class StartRemediationExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public StartRemediationExecutionResponse withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
     }
     
+    public StartRemediationExecutionResponse(){}
 }

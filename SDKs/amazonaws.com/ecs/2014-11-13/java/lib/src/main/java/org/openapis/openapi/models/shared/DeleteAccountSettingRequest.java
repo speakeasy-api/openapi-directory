@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAccountSettingRequest {
     @JsonProperty("name")
     public SettingNameEnum name;
+
     public DeleteAccountSettingRequest withName(SettingNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,13 @@ public class DeleteAccountSettingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalArn")
     public String principalArn;
+
     public DeleteAccountSettingRequest withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
     }
     
+    public DeleteAccountSettingRequest(@JsonProperty("name") SettingNameEnum name) {
+        this.name = name;
+  }
 }

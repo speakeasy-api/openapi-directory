@@ -18,9 +18,11 @@ public class StructType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, DataType> fields;
+
     public StructType withFields(java.util.Map<String, DataType> fields) {
         this.fields = fields;
         return this;
     }
     
+    public StructType(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDevicePositionRequest {
@@ -12,6 +13,7 @@ public class GetDevicePositionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceId")
     public String deviceId;
+
     public GetDevicePositionRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,6 +24,7 @@ public class GetDevicePositionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrackerName")
     public String trackerName;
+
     public GetDevicePositionRequest withTrackerName(String trackerName) {
         this.trackerName = trackerName;
         return this;
@@ -29,6 +32,7 @@ public class GetDevicePositionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetDevicePositionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -36,6 +40,7 @@ public class GetDevicePositionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetDevicePositionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -43,6 +48,7 @@ public class GetDevicePositionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetDevicePositionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -50,6 +56,7 @@ public class GetDevicePositionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetDevicePositionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -57,6 +64,7 @@ public class GetDevicePositionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetDevicePositionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -64,6 +72,7 @@ public class GetDevicePositionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetDevicePositionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -71,9 +80,14 @@ public class GetDevicePositionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetDevicePositionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetDevicePositionRequest(@JsonProperty("DeviceId") String deviceId, @JsonProperty("TrackerName") String trackerName) {
+        this.deviceId = deviceId;
+        this.trackerName = trackerName;
+  }
 }

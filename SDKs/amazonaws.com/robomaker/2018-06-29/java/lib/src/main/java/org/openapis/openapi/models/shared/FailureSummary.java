@@ -15,6 +15,7 @@ public class FailureSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public WorldFailure[] failures;
+
     public FailureSummary withFailures(WorldFailure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class FailureSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalFailureCount")
     public Long totalFailureCount;
+
     public FailureSummary withTotalFailureCount(Long totalFailureCount) {
         this.totalFailureCount = totalFailureCount;
         return this;
     }
     
+    public FailureSummary(){}
 }

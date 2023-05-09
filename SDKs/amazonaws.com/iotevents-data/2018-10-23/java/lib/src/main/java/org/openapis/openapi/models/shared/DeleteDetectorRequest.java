@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDetectorRequest {
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public DeleteDetectorRequest withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
@@ -22,6 +23,7 @@ public class DeleteDetectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public DeleteDetectorRequest withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -29,9 +31,14 @@ public class DeleteDetectorRequest {
     
     @JsonProperty("messageId")
     public String messageId;
+
     public DeleteDetectorRequest withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public DeleteDetectorRequest(@JsonProperty("detectorModelName") String detectorModelName, @JsonProperty("messageId") String messageId) {
+        this.detectorModelName = detectorModelName;
+        this.messageId = messageId;
+  }
 }

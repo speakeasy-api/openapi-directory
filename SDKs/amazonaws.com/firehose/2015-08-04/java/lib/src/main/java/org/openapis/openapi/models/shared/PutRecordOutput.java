@@ -15,6 +15,7 @@ public class PutRecordOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public PutRecordOutput withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -22,9 +23,13 @@ public class PutRecordOutput {
     
     @JsonProperty("RecordId")
     public String recordId;
+
     public PutRecordOutput withRecordId(String recordId) {
         this.recordId = recordId;
         return this;
     }
     
+    public PutRecordOutput(@JsonProperty("RecordId") String recordId) {
+        this.recordId = recordId;
+  }
 }

@@ -18,6 +18,7 @@ public class ReportStateAndNotificationDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public java.util.Map<String, Object> notifications;
+
     public ReportStateAndNotificationDevice withNotifications(java.util.Map<String, Object> notifications) {
         this.notifications = notifications;
         return this;
@@ -29,9 +30,11 @@ public class ReportStateAndNotificationDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("states")
     public java.util.Map<String, Object> states;
+
     public ReportStateAndNotificationDevice withStates(java.util.Map<String, Object> states) {
         this.states = states;
         return this;
     }
     
+    public ReportStateAndNotificationDevice(){}
 }

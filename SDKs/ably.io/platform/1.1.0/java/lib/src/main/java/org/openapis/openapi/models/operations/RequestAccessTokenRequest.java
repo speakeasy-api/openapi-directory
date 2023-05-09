@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestAccessTokenRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public RequestAccessTokenRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class RequestAccessTokenRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public RequestAccessTokenRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -29,6 +32,7 @@ public class RequestAccessTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public RequestAccessTokenRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
@@ -39,9 +43,13 @@ public class RequestAccessTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyName")
     public String keyName;
+
     public RequestAccessTokenRequest withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
     
+    public RequestAccessTokenRequest(@JsonProperty("keyName") String keyName) {
+        this.keyName = keyName;
+  }
 }

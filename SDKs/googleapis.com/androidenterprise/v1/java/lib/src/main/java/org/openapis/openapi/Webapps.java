@@ -59,10 +59,8 @@ public class Webapps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseWebappsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseWebappsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Webapps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseWebappsGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseWebappsGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsGetResponse(contentType, httpRes.statusCode()) {{
             webApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Webapps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseWebappsInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsInsertResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseWebappsInsertResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsInsertResponse(contentType, httpRes.statusCode()) {{
             webApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Webapps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseWebappsListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseWebappsListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsListResponse(contentType, httpRes.statusCode()) {{
             webAppsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Webapps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseWebappsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseWebappsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseWebappsUpdateResponse(contentType, httpRes.statusCode()) {{
             webApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

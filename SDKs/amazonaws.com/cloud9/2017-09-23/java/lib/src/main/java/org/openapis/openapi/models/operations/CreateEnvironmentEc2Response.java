@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEnvironmentEc2Response {
@@ -12,6 +13,7 @@ public class CreateEnvironmentEc2Response {
      */
     
     public Object badRequestException;
+
     public CreateEnvironmentEc2Response withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEnvironmentEc2Response {
      */
     
     public Object conflictException;
+
     public CreateEnvironmentEc2Response withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEnvironmentEc2Response {
     
     
     public String contentType;
+
     public CreateEnvironmentEc2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEnvironmentEc2Response {
      */
     
     public org.openapis.openapi.models.shared.CreateEnvironmentEc2Result createEnvironmentEc2Result;
+
     public CreateEnvironmentEc2Response withCreateEnvironmentEc2Result(org.openapis.openapi.models.shared.CreateEnvironmentEc2Result createEnvironmentEc2Result) {
         this.createEnvironmentEc2Result = createEnvironmentEc2Result;
         return this;
@@ -49,6 +54,7 @@ public class CreateEnvironmentEc2Response {
      */
     
     public Object forbiddenException;
+
     public CreateEnvironmentEc2Response withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEnvironmentEc2Response {
      */
     
     public Object internalServerErrorException;
+
     public CreateEnvironmentEc2Response withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateEnvironmentEc2Response {
      */
     
     public Object limitExceededException;
+
     public CreateEnvironmentEc2Response withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateEnvironmentEc2Response {
      */
     
     public Object notFoundException;
+
     public CreateEnvironmentEc2Response withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateEnvironmentEc2Response {
     
     
     public Integer statusCode;
+
     public CreateEnvironmentEc2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateEnvironmentEc2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEnvironmentEc2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateEnvironmentEc2Response {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEnvironmentEc2Response withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateEnvironmentEc2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

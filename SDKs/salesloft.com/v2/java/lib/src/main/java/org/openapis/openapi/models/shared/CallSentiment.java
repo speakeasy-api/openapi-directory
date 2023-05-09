@@ -12,6 +12,7 @@ public class CallSentiment {
      */
     
     public OffsetDateTime createdAt;
+
     public CallSentiment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -22,6 +23,7 @@ public class CallSentiment {
      */
     
     public Long id;
+
     public CallSentiment withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class CallSentiment {
      */
     
     public String name;
+
     public CallSentiment withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class CallSentiment {
      */
     
     public OffsetDateTime updatedAt;
+
     public CallSentiment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CallSentiment(){}
 }

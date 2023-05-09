@@ -15,9 +15,11 @@ public class AppValidationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmOutput")
     public SSMOutput ssmOutput;
+
     public AppValidationOutput withSsmOutput(SSMOutput ssmOutput) {
         this.ssmOutput = ssmOutput;
         return this;
     }
     
+    public AppValidationOutput(){}
 }

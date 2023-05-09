@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesListConnectedSiteTagsResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesListConnectedSiteTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesListConnectedSiteTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse googleAnalyticsAdminV1alphaListConnectedSiteTagsResponse;
+
     public AnalyticsadminPropertiesListConnectedSiteTagsResponse withGoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse googleAnalyticsAdminV1alphaListConnectedSiteTagsResponse) {
         this.googleAnalyticsAdminV1alphaListConnectedSiteTagsResponse = googleAnalyticsAdminV1alphaListConnectedSiteTagsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesListConnectedSiteTagsResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesListConnectedSiteTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesListConnectedSiteTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesListConnectedSiteTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesListConnectedSiteTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ScanRunErrorTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ScanRunErrorTraceCodeEnum code;
+
     public ScanRunErrorTrace withCode(ScanRunErrorTraceCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ScanRunErrorTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostCommonHttpErrorCode")
     public Integer mostCommonHttpErrorCode;
+
     public ScanRunErrorTrace withMostCommonHttpErrorCode(Integer mostCommonHttpErrorCode) {
         this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
         return this;
@@ -40,9 +42,11 @@ public class ScanRunErrorTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanConfigError")
     public ScanConfigError scanConfigError;
+
     public ScanRunErrorTrace withScanConfigError(ScanConfigError scanConfigError) {
         this.scanConfigError = scanConfigError;
         return this;
     }
     
+    public ScanRunErrorTrace(){}
 }

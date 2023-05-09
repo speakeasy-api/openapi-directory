@@ -18,6 +18,7 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attemptId")
     public String attemptId;
+
     public WorkItemDetails withAttemptId(String attemptId) {
         this.attemptId = attemptId;
         return this;
@@ -29,6 +30,7 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public WorkItemDetails withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public MetricUpdate[] metrics;
+
     public WorkItemDetails withMetrics(MetricUpdate[] metrics) {
         this.metrics = metrics;
         return this;
@@ -51,6 +54,7 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public ProgressTimeseries progress;
+
     public WorkItemDetails withProgress(ProgressTimeseries progress) {
         this.progress = progress;
         return this;
@@ -62,6 +66,7 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public WorkItemDetails withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -73,6 +78,7 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public WorkItemDetailsStateEnum state;
+
     public WorkItemDetails withState(WorkItemDetailsStateEnum state) {
         this.state = state;
         return this;
@@ -84,6 +90,7 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stragglerInfo")
     public StragglerInfo stragglerInfo;
+
     public WorkItemDetails withStragglerInfo(StragglerInfo stragglerInfo) {
         this.stragglerInfo = stragglerInfo;
         return this;
@@ -95,9 +102,11 @@ public class WorkItemDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public WorkItemDetails withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public WorkItemDetails(){}
 }

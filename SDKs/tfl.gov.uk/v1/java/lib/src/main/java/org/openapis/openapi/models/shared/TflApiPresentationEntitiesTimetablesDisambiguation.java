@@ -12,9 +12,11 @@ public class TflApiPresentationEntitiesTimetablesDisambiguation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disambiguationOptions")
     public TflApiPresentationEntitiesTimetablesDisambiguationOption[] disambiguationOptions;
+
     public TflApiPresentationEntitiesTimetablesDisambiguation withDisambiguationOptions(TflApiPresentationEntitiesTimetablesDisambiguationOption[] disambiguationOptions) {
         this.disambiguationOptions = disambiguationOptions;
         return this;
     }
     
+    public TflApiPresentationEntitiesTimetablesDisambiguation(){}
 }

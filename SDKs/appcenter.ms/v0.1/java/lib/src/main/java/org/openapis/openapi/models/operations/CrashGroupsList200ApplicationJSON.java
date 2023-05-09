@@ -18,6 +18,7 @@ public class CrashGroupsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuation_token")
     public String continuationToken;
+
     public CrashGroupsList200ApplicationJSON withContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
         return this;
@@ -25,6 +26,7 @@ public class CrashGroupsList200ApplicationJSON {
     
     @JsonProperty("crash_groups")
     public CrashGroupsList200ApplicationJSONCrashGroups[] crashGroups;
+
     public CrashGroupsList200ApplicationJSON withCrashGroups(CrashGroupsList200ApplicationJSONCrashGroups[] crashGroups) {
         this.crashGroups = crashGroups;
         return this;
@@ -32,9 +34,14 @@ public class CrashGroupsList200ApplicationJSON {
     
     @JsonProperty("limited_result_set")
     public Boolean limitedResultSet;
+
     public CrashGroupsList200ApplicationJSON withLimitedResultSet(Boolean limitedResultSet) {
         this.limitedResultSet = limitedResultSet;
         return this;
     }
     
+    public CrashGroupsList200ApplicationJSON(@JsonProperty("crash_groups") CrashGroupsList200ApplicationJSONCrashGroups[] crashGroups, @JsonProperty("limited_result_set") Boolean limitedResultSet) {
+        this.crashGroups = crashGroups;
+        this.limitedResultSet = limitedResultSet;
+  }
 }

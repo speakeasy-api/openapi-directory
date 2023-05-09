@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudVisionV1p2beta1InputConfig withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudVisionV1p2beta1GcsSource gcsSource;
+
     public GoogleCloudVisionV1p2beta1InputConfig withGcsSource(GoogleCloudVisionV1p2beta1GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p2beta1InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudVisionV1p2beta1InputConfig withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1InputConfig(){}
 }

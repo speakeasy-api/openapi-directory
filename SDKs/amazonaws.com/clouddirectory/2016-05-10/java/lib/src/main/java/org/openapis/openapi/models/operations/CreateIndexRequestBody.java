@@ -14,6 +14,7 @@ public class CreateIndexRequestBody {
      */
     @JsonProperty("IsUnique")
     public Boolean isUnique;
+
     public CreateIndexRequestBody withIsUnique(Boolean isUnique) {
         this.isUnique = isUnique;
         return this;
@@ -25,6 +26,7 @@ public class CreateIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkName")
     public String linkName;
+
     public CreateIndexRequestBody withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -35,6 +37,7 @@ public class CreateIndexRequestBody {
      */
     @JsonProperty("OrderedIndexedAttributeList")
     public org.openapis.openapi.models.shared.AttributeKey[] orderedIndexedAttributeList;
+
     public CreateIndexRequestBody withOrderedIndexedAttributeList(org.openapis.openapi.models.shared.AttributeKey[] orderedIndexedAttributeList) {
         this.orderedIndexedAttributeList = orderedIndexedAttributeList;
         return this;
@@ -46,9 +49,14 @@ public class CreateIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentReference")
     public CreateIndexRequestBodyParentReference parentReference;
+
     public CreateIndexRequestBody withParentReference(CreateIndexRequestBodyParentReference parentReference) {
         this.parentReference = parentReference;
         return this;
     }
     
+    public CreateIndexRequestBody(@JsonProperty("IsUnique") Boolean isUnique, @JsonProperty("OrderedIndexedAttributeList") org.openapis.openapi.models.shared.AttributeKey[] orderedIndexedAttributeList) {
+        this.isUnique = isUnique;
+        this.orderedIndexedAttributeList = orderedIndexedAttributeList;
+  }
 }

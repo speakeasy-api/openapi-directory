@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEdgePackagingJobRequest {
     @JsonProperty("EdgePackagingJobName")
     public String edgePackagingJobName;
+
     public DescribeEdgePackagingJobRequest withEdgePackagingJobName(String edgePackagingJobName) {
         this.edgePackagingJobName = edgePackagingJobName;
         return this;
     }
     
+    public DescribeEdgePackagingJobRequest(@JsonProperty("EdgePackagingJobName") String edgePackagingJobName) {
+        this.edgePackagingJobName = edgePackagingJobName;
+  }
 }

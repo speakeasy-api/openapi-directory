@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChangeTokenResponse {
     
     public String contentType;
+
     public GetChangeTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetChangeTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.GetChangeTokenResponse getChangeTokenResponse;
+
     public GetChangeTokenResponse withGetChangeTokenResponse(org.openapis.openapi.models.shared.GetChangeTokenResponse getChangeTokenResponse) {
         this.getChangeTokenResponse = getChangeTokenResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetChangeTokenResponse {
     
     
     public Integer statusCode;
+
     public GetChangeTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetChangeTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChangeTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetChangeTokenResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetChangeTokenResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
     }
     
+    public GetChangeTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

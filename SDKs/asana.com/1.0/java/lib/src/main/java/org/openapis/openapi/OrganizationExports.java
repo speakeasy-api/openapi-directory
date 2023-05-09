@@ -80,12 +80,10 @@ public class OrganizationExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationExportResponse res = new org.openapis.openapi.models.operations.CreateOrganizationExportResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationExportResponse res = new org.openapis.openapi.models.operations.CreateOrganizationExportResponse(contentType, httpRes.statusCode()) {{
             createOrganizationExport201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -134,12 +132,10 @@ public class OrganizationExports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationExportResponse res = new org.openapis.openapi.models.operations.GetOrganizationExportResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationExportResponse res = new org.openapis.openapi.models.operations.GetOrganizationExportResponse(contentType, httpRes.statusCode()) {{
             getOrganizationExport200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

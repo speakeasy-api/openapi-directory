@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema(){}
 }

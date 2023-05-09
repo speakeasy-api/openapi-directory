@@ -12,9 +12,11 @@ public class MemberInitiatorInvited {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_system")
     public Boolean isSystem;
+
     public MemberInitiatorInvited withIsSystem(Boolean isSystem) {
         this.isSystem = isSystem;
         return this;
     }
     
+    public MemberInitiatorInvited(){}
 }

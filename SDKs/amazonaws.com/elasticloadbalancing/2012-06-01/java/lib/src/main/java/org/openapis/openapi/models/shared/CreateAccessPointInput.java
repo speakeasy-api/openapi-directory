@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateAccessPointInput - Contains the parameters for CreateLoadBalancer.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateAccessPointInput {
     
     public String[] availabilityZones;
+
     public CreateAccessPointInput withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -19,6 +20,7 @@ public class CreateAccessPointInput {
     
     
     public Listener[] listeners;
+
     public CreateAccessPointInput withListeners(Listener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -26,6 +28,7 @@ public class CreateAccessPointInput {
     
     
     public String loadBalancerName;
+
     public CreateAccessPointInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -33,6 +36,7 @@ public class CreateAccessPointInput {
     
     
     public String scheme;
+
     public CreateAccessPointInput withScheme(String scheme) {
         this.scheme = scheme;
         return this;
@@ -40,6 +44,7 @@ public class CreateAccessPointInput {
     
     
     public String[] securityGroups;
+
     public CreateAccessPointInput withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -47,6 +52,7 @@ public class CreateAccessPointInput {
     
     
     public String[] subnets;
+
     public CreateAccessPointInput withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -54,9 +60,14 @@ public class CreateAccessPointInput {
     
     
     public Tag[] tags;
+
     public CreateAccessPointInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAccessPointInput(@JsonProperty("Listeners") Listener[] listeners, @JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.listeners = listeners;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

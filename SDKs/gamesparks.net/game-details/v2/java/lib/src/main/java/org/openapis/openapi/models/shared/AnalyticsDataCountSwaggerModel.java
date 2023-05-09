@@ -15,9 +15,11 @@ public class AnalyticsDataCountSwaggerModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public AnalyticsDataCountSwaggerModel withResult(String result) {
         this.result = result;
         return this;
     }
     
+    public AnalyticsDataCountSwaggerModel(){}
 }

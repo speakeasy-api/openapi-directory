@@ -18,6 +18,7 @@ public class RuleExecutionReportings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executions")
     public RuleExecutionReporting[] executions;
+
     public RuleExecutionReportings withExecutions(RuleExecutionReporting[] executions) {
         this.executions = executions;
         return this;
@@ -26,9 +27,11 @@ public class RuleExecutionReportings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public RuleExecutionReportings withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
     }
     
+    public RuleExecutionReportings(){}
 }

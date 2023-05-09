@@ -15,6 +15,7 @@ public class DeletePolicyModule200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DeletePolicyModule200ApplicationJSONResultAstRulesBodyTerms withType(String type) {
         this.type = type;
         return this;
@@ -26,9 +27,11 @@ public class DeletePolicyModule200ApplicationJSONResultAstRulesBodyTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public DeletePolicyModule200ApplicationJSONResultAstRulesBodyTermsValue[] value;
+
     public DeletePolicyModule200ApplicationJSONResultAstRulesBodyTerms withValue(DeletePolicyModule200ApplicationJSONResultAstRulesBodyTermsValue[] value) {
         this.value = value;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONResultAstRulesBodyTerms(){}
 }

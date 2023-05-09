@@ -17,9 +17,11 @@ public class CreatePatientRequestMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignore_duplicates")
     public Boolean ignoreDuplicates;
+
     public CreatePatientRequestMeta withIgnoreDuplicates(Boolean ignoreDuplicates) {
         this.ignoreDuplicates = ignoreDuplicates;
         return this;
     }
     
+    public CreatePatientRequestMeta(){}
 }

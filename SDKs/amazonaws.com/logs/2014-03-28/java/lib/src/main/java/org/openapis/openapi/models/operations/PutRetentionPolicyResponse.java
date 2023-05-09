@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRetentionPolicyResponse {
     
     public String contentType;
+
     public PutRetentionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutRetentionPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object operationAbortedException;
+
     public PutRetentionPolicyResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -39,6 +43,7 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRetentionPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class PutRetentionPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutRetentionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutRetentionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRetentionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutRetentionPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutRetentionPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public PutRetentionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

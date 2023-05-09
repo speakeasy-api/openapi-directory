@@ -15,6 +15,7 @@ public class DatasourcePackageIngestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasourcePackageIngestState")
     public DatasourcePackageIngestStateEnum datasourcePackageIngestState;
+
     public DatasourcePackageIngestDetail withDatasourcePackageIngestState(DatasourcePackageIngestStateEnum datasourcePackageIngestState) {
         this.datasourcePackageIngestState = datasourcePackageIngestState;
         return this;
@@ -23,9 +24,11 @@ public class DatasourcePackageIngestDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastIngestStateChange")
     public java.util.Map<String, TimestampForCollection> lastIngestStateChange;
+
     public DatasourcePackageIngestDetail withLastIngestStateChange(java.util.Map<String, TimestampForCollection> lastIngestStateChange) {
         this.lastIngestStateChange = lastIngestStateChange;
         return this;
     }
     
+    public DatasourcePackageIngestDetail(){}
 }

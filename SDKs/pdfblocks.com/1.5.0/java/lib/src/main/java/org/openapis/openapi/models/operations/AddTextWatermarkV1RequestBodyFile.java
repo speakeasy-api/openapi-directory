@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTextWatermarkV1RequestBodyFile {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public AddTextWatermarkV1RequestBodyFile withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class AddTextWatermarkV1RequestBodyFile {
     
     @SpeakeasyMetadata("multipartForm:name=file")
     public String file;
+
     public AddTextWatermarkV1RequestBodyFile withFile(String file) {
         this.file = file;
         return this;
     }
     
+    public AddTextWatermarkV1RequestBodyFile(@JsonProperty("content") byte[] content, @JsonProperty("file") String file) {
+        this.content = content;
+        this.file = file;
+  }
 }

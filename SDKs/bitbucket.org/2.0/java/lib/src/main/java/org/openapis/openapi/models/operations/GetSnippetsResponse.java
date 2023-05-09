@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnippetsResponse {
     
     public String contentType;
+
     public GetSnippetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSnippetsResponse {
     
     
     public Integer statusCode;
+
     public GetSnippetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSnippetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnippetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSnippetsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetSnippetsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetSnippetsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedSnippets paginatedSnippets;
+
     public GetSnippetsResponse withPaginatedSnippets(org.openapis.openapi.models.shared.PaginatedSnippets paginatedSnippets) {
         this.paginatedSnippets = paginatedSnippets;
         return this;
     }
     
+    public GetSnippetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

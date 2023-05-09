@@ -18,6 +18,7 @@ public class StructuredServiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StructuredServiceItem withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class StructuredServiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceTypeId")
     public String serviceTypeId;
+
     public StructuredServiceItem withServiceTypeId(String serviceTypeId) {
         this.serviceTypeId = serviceTypeId;
         return this;
     }
     
+    public StructuredServiceItem(){}
 }

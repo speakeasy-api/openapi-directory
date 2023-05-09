@@ -22,6 +22,7 @@ public class TimestampRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginDate")
     public OffsetDateTime beginDate;
+
     public TimestampRange withBeginDate(OffsetDateTime beginDate) {
         this.beginDate = beginDate;
         return this;
@@ -32,9 +33,11 @@ public class TimestampRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public TimestampRange withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
     }
     
+    public TimestampRange(){}
 }

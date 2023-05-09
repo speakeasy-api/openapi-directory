@@ -15,6 +15,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Atime")
     public AtimeEnum atime;
+
     public Options withAtime(AtimeEnum atime) {
         this.atime = atime;
         return this;
@@ -23,6 +24,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesPerSecond")
     public Long bytesPerSecond;
+
     public Options withBytesPerSecond(Long bytesPerSecond) {
         this.bytesPerSecond = bytesPerSecond;
         return this;
@@ -31,6 +33,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gid")
     public GidEnum gid;
+
     public Options withGid(GidEnum gid) {
         this.gid = gid;
         return this;
@@ -39,6 +42,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogLevel")
     public LogLevelEnum logLevel;
+
     public Options withLogLevel(LogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -47,6 +51,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mtime")
     public MtimeEnum mtime;
+
     public Options withMtime(MtimeEnum mtime) {
         this.mtime = mtime;
         return this;
@@ -55,6 +60,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectTags")
     public ObjectTagsEnum objectTags;
+
     public Options withObjectTags(ObjectTagsEnum objectTags) {
         this.objectTags = objectTags;
         return this;
@@ -63,6 +69,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverwriteMode")
     public OverwriteModeEnum overwriteMode;
+
     public Options withOverwriteMode(OverwriteModeEnum overwriteMode) {
         this.overwriteMode = overwriteMode;
         return this;
@@ -71,6 +78,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PosixPermissions")
     public PosixPermissionsEnum posixPermissions;
+
     public Options withPosixPermissions(PosixPermissionsEnum posixPermissions) {
         this.posixPermissions = posixPermissions;
         return this;
@@ -79,6 +87,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreserveDeletedFiles")
     public PreserveDeletedFilesEnum preserveDeletedFiles;
+
     public Options withPreserveDeletedFiles(PreserveDeletedFilesEnum preserveDeletedFiles) {
         this.preserveDeletedFiles = preserveDeletedFiles;
         return this;
@@ -87,6 +96,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreserveDevices")
     public PreserveDevicesEnum preserveDevices;
+
     public Options withPreserveDevices(PreserveDevicesEnum preserveDevices) {
         this.preserveDevices = preserveDevices;
         return this;
@@ -95,6 +105,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityDescriptorCopyFlags")
     public SmbSecurityDescriptorCopyFlagsEnum securityDescriptorCopyFlags;
+
     public Options withSecurityDescriptorCopyFlags(SmbSecurityDescriptorCopyFlagsEnum securityDescriptorCopyFlags) {
         this.securityDescriptorCopyFlags = securityDescriptorCopyFlags;
         return this;
@@ -103,6 +114,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskQueueing")
     public TaskQueueingEnum taskQueueing;
+
     public Options withTaskQueueing(TaskQueueingEnum taskQueueing) {
         this.taskQueueing = taskQueueing;
         return this;
@@ -111,6 +123,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransferMode")
     public TransferModeEnum transferMode;
+
     public Options withTransferMode(TransferModeEnum transferMode) {
         this.transferMode = transferMode;
         return this;
@@ -119,6 +132,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uid")
     public UidEnum uid;
+
     public Options withUid(UidEnum uid) {
         this.uid = uid;
         return this;
@@ -127,9 +141,11 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerifyMode")
     public VerifyModeEnum verifyMode;
+
     public Options withVerifyMode(VerifyModeEnum verifyMode) {
         this.verifyMode = verifyMode;
         return this;
     }
     
+    public Options(){}
 }

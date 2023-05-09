@@ -15,6 +15,7 @@ public class SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaOfInterest")
     public org.openapis.openapi.models.shared.AreaOfInterest areaOfInterest;
+
     public SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery withAreaOfInterest(org.openapis.openapi.models.shared.AreaOfInterest areaOfInterest) {
         this.areaOfInterest = areaOfInterest;
         return this;
@@ -23,6 +24,7 @@ public class SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BandFilter")
     public String[] bandFilter;
+
     public SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery withBandFilter(String[] bandFilter) {
         this.bandFilter = bandFilter;
         return this;
@@ -31,6 +33,7 @@ public class SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertyFilters")
     public org.openapis.openapi.models.shared.PropertyFilters propertyFilters;
+
     public SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery withPropertyFilters(org.openapis.openapi.models.shared.PropertyFilters propertyFilters) {
         this.propertyFilters = propertyFilters;
         return this;
@@ -39,9 +42,11 @@ public class SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRangeFilter")
     public org.openapis.openapi.models.shared.TimeRangeFilterInput timeRangeFilter;
+
     public SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery withTimeRangeFilter(org.openapis.openapi.models.shared.TimeRangeFilterInput timeRangeFilter) {
         this.timeRangeFilter = timeRangeFilter;
         return this;
     }
     
+    public SearchRasterDataCollectionRequestBodyRasterDataCollectionQuery(){}
 }

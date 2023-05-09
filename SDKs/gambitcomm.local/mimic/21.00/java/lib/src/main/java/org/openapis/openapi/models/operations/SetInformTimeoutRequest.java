@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetInformTimeoutRequest {
@@ -12,6 +13,7 @@ public class SetInformTimeoutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetInformTimeoutRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetInformTimeoutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inform_timeout")
     public Integer informTimeout;
+
     public SetInformTimeoutRequest withInformTimeout(Integer informTimeout) {
         this.informTimeout = informTimeout;
         return this;
     }
     
+    public SetInformTimeoutRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("inform_timeout") Integer informTimeout) {
+        this.agentNum = agentNum;
+        this.informTimeout = informTimeout;
+  }
 }

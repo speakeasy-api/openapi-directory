@@ -15,6 +15,7 @@ public class RecommendationJobResourceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxNumberOfTests")
     public Long maxNumberOfTests;
+
     public RecommendationJobResourceLimit withMaxNumberOfTests(Long maxNumberOfTests) {
         this.maxNumberOfTests = maxNumberOfTests;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationJobResourceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxParallelOfTests")
     public Long maxParallelOfTests;
+
     public RecommendationJobResourceLimit withMaxParallelOfTests(Long maxParallelOfTests) {
         this.maxParallelOfTests = maxParallelOfTests;
         return this;
     }
     
+    public RecommendationJobResourceLimit(){}
 }

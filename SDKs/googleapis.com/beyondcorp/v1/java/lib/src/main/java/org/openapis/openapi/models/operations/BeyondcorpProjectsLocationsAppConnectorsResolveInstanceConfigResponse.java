@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse {
     
     public String contentType;
+
     public BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigRespon
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse googleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse;
+
     public BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse withGoogleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse(org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse googleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse) {
         this.googleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse = googleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse;
         return this;
@@ -26,6 +29,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigRespon
     
     
     public Integer statusCode;
+
     public BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BeyondcorpProjectsLocationsAppConnectorsResolveInstanceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Oauth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public Oauth2ClientCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,9 +30,11 @@ public class Oauth2ClientCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public Secret clientSecret;
+
     public Oauth2ClientCredentials withClientSecret(Secret clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public Oauth2ClientCredentials(){}
 }

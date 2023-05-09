@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFleetMetadataResponse {
     
     public String contentType;
+
     public UpdateFleetMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFleetMetadataResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateFleetMetadataResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFleetMetadataResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFleetMetadataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFleetMetadataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFleetMetadataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateFleetMetadataResponse {
     
     
     public Integer statusCode;
+
     public UpdateFleetMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFleetMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFleetMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFleetMetadataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateFleetMetadataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFleetMetadataResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateFleetMetadataResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateFleetMetadataResponse {
      */
     
     public java.util.Map<String, Object> updateFleetMetadataResponse;
+
     public UpdateFleetMetadataResponse withUpdateFleetMetadataResponse(java.util.Map<String, Object> updateFleetMetadataResponse) {
         this.updateFleetMetadataResponse = updateFleetMetadataResponse;
         return this;
     }
     
+    public UpdateFleetMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

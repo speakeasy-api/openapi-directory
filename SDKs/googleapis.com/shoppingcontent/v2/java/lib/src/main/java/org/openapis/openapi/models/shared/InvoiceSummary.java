@@ -15,6 +15,7 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalChargeSummaries")
     public InvoiceSummaryAdditionalChargeSummary[] additionalChargeSummaries;
+
     public InvoiceSummary withAdditionalChargeSummaries(InvoiceSummaryAdditionalChargeSummary[] additionalChargeSummaries) {
         this.additionalChargeSummaries = additionalChargeSummaries;
         return this;
@@ -23,6 +24,7 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerBalance")
     public Amount customerBalance;
+
     public InvoiceSummary withCustomerBalance(Amount customerBalance) {
         this.customerBalance = customerBalance;
         return this;
@@ -31,6 +33,7 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleBalance")
     public Amount googleBalance;
+
     public InvoiceSummary withGoogleBalance(Amount googleBalance) {
         this.googleBalance = googleBalance;
         return this;
@@ -39,6 +42,7 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantBalance")
     public Amount merchantBalance;
+
     public InvoiceSummary withMerchantBalance(Amount merchantBalance) {
         this.merchantBalance = merchantBalance;
         return this;
@@ -47,6 +51,7 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTotal")
     public Amount productTotal;
+
     public InvoiceSummary withProductTotal(Amount productTotal) {
         this.productTotal = productTotal;
         return this;
@@ -58,9 +63,11 @@ public class InvoiceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionSummaries")
     public Promotion[] promotionSummaries;
+
     public InvoiceSummary withPromotionSummaries(Promotion[] promotionSummaries) {
         this.promotionSummaries = promotionSummaries;
         return this;
     }
     
+    public InvoiceSummary(){}
 }

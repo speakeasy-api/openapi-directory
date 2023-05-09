@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSchemaOutput {
     @JsonProperty("schema")
     public Schema schema;
+
     public GetSchemaOutput withSchema(Schema schema) {
         this.schema = schema;
         return this;
     }
     
+    public GetSchemaOutput(@JsonProperty("schema") Schema schema) {
+        this.schema = schema;
+  }
 }

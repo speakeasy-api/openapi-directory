@@ -18,9 +18,11 @@ public class ImportationTechnicalProgression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepsProgression")
     public java.util.Map<String, String[]> stepsProgression;
+
     public ImportationTechnicalProgression withStepsProgression(java.util.Map<String, String[]> stepsProgression) {
         this.stepsProgression = stepsProgression;
         return this;
     }
     
+    public ImportationTechnicalProgression(){}
 }

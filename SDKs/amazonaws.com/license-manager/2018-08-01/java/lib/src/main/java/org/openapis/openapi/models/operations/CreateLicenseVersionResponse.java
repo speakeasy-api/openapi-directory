@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLicenseVersionResponse {
@@ -12,6 +13,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLicenseVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object authorizationException;
+
     public CreateLicenseVersionResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -32,6 +35,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object conflictException;
+
     public CreateLicenseVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLicenseVersionResponse {
     
     
     public String contentType;
+
     public CreateLicenseVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLicenseVersionResponse createLicenseVersionResponse;
+
     public CreateLicenseVersionResponse withCreateLicenseVersionResponse(org.openapis.openapi.models.shared.CreateLicenseVersionResponse createLicenseVersionResponse) {
         this.createLicenseVersionResponse = createLicenseVersionResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CreateLicenseVersionResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object redirectException;
+
     public CreateLicenseVersionResponse withRedirectException(Object redirectException) {
         this.redirectException = redirectException;
         return this;
@@ -79,6 +87,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateLicenseVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateLicenseVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateLicenseVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateLicenseVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLicenseVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object serverInternalException;
+
     public CreateLicenseVersionResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -113,9 +125,14 @@ public class CreateLicenseVersionResponse {
      */
     
     public Object validationException;
+
     public CreateLicenseVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLicenseVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class SendTextsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TextRecipient[] requestBody;
+
     public SendTextsRequest withRequestBody(org.openapis.openapi.models.shared.TextRecipient[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +23,7 @@ public class SendTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
     public Long campaignId;
+
     public SendTextsRequest withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -32,6 +34,7 @@ public class SendTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultMessage")
     public String defaultMessage;
+
     public SendTextsRequest withDefaultMessage(String defaultMessage) {
         this.defaultMessage = defaultMessage;
         return this;
@@ -42,6 +45,7 @@ public class SendTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SendTextsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,9 +56,11 @@ public class SendTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
     public Boolean strictValidation;
+
     public SendTextsRequest withStrictValidation(Boolean strictValidation) {
         this.strictValidation = strictValidation;
         return this;
     }
     
+    public SendTextsRequest(){}
 }

@@ -22,6 +22,7 @@ public class Record {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ApproximateArrivalTimestamp")
     public OffsetDateTime approximateArrivalTimestamp;
+
     public Record withApproximateArrivalTimestamp(OffsetDateTime approximateArrivalTimestamp) {
         this.approximateArrivalTimestamp = approximateArrivalTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class Record {
     
     @JsonProperty("Data")
     public String data;
+
     public Record withData(String data) {
         this.data = data;
         return this;
@@ -37,6 +39,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public Record withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -44,6 +47,7 @@ public class Record {
     
     @JsonProperty("PartitionKey")
     public String partitionKey;
+
     public Record withPartitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
         return this;
@@ -51,9 +55,15 @@ public class Record {
     
     @JsonProperty("SequenceNumber")
     public String sequenceNumber;
+
     public Record withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
     
+    public Record(@JsonProperty("Data") String data, @JsonProperty("PartitionKey") String partitionKey, @JsonProperty("SequenceNumber") String sequenceNumber) {
+        this.data = data;
+        this.partitionKey = partitionKey;
+        this.sequenceNumber = sequenceNumber;
+  }
 }

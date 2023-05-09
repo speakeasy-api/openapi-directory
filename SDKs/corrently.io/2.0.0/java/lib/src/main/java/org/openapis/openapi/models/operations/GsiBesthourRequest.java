@@ -12,6 +12,7 @@ public class GsiBesthourRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hours")
     public Long hours;
+
     public GsiBesthourRequest withHours(Long hours) {
         this.hours = hours;
         return this;
@@ -22,6 +23,7 @@ public class GsiBesthourRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GsiBesthourRequest withKey(String key) {
         this.key = key;
         return this;
@@ -32,6 +34,7 @@ public class GsiBesthourRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeframe")
     public Long timeframe;
+
     public GsiBesthourRequest withTimeframe(Long timeframe) {
         this.timeframe = timeframe;
         return this;
@@ -42,9 +45,11 @@ public class GsiBesthourRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String zip;
+
     public GsiBesthourRequest withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public GsiBesthourRequest(){}
 }

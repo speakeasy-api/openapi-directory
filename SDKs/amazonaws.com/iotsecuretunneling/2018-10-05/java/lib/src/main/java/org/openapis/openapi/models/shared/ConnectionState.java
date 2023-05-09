@@ -22,6 +22,7 @@ public class ConnectionState {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ConnectionState withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -30,9 +31,11 @@ public class ConnectionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public ConnectionState withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ConnectionState(){}
 }

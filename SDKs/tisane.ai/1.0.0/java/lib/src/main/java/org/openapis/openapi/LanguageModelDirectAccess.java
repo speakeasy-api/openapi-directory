@@ -68,11 +68,9 @@ public class LanguageModelDirectAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFamilyDetailsResponse res = new org.openapis.openapi.models.operations.GetFamilyDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetFamilyDetailsResponse res = new org.openapis.openapi.models.operations.GetFamilyDetailsResponse(contentType, httpRes.statusCode()) {{
             getFamilyDetails200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,11 +121,9 @@ public class LanguageModelDirectAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFeatureValuesResponse res = new org.openapis.openapi.models.operations.ListFeatureValuesResponse() {{
+        org.openapis.openapi.models.operations.ListFeatureValuesResponse res = new org.openapis.openapi.models.operations.ListFeatureValuesResponse(contentType, httpRes.statusCode()) {{
             listFeatureValues200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class LanguageModelDirectAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHypernymsResponse res = new org.openapis.openapi.models.operations.ListHypernymsResponse() {{
+        org.openapis.openapi.models.operations.ListHypernymsResponse res = new org.openapis.openapi.models.operations.ListHypernymsResponse(contentType, httpRes.statusCode()) {{
             listHypernyms200ApplicationJSONArrays = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,10 +223,8 @@ public class LanguageModelDirectAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHyponymsResponse res = new org.openapis.openapi.models.operations.ListHyponymsResponse() {{
+        org.openapis.openapi.models.operations.ListHyponymsResponse res = new org.openapis.openapi.models.operations.ListHyponymsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,11 +268,9 @@ public class LanguageModelDirectAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListInflectedFormsResponse res = new org.openapis.openapi.models.operations.ListInflectedFormsResponse() {{
+        org.openapis.openapi.models.operations.ListInflectedFormsResponse res = new org.openapis.openapi.models.operations.ListInflectedFormsResponse(contentType, httpRes.statusCode()) {{
             listInflectedForms200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -329,11 +319,9 @@ public class LanguageModelDirectAccess {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWordSensesResponse res = new org.openapis.openapi.models.operations.ListWordSensesResponse() {{
+        org.openapis.openapi.models.operations.ListWordSensesResponse res = new org.openapis.openapi.models.operations.ListWordSensesResponse(contentType, httpRes.statusCode()) {{
             listWordSenses200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

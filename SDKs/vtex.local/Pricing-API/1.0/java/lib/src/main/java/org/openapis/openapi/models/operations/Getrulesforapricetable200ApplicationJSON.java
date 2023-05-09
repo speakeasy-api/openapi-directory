@@ -18,6 +18,7 @@ public class Getrulesforapricetable200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentualModifier")
     public Long percentualModifier;
+
     public Getrulesforapricetable200ApplicationJSON withPercentualModifier(Long percentualModifier) {
         this.percentualModifier = percentualModifier;
         return this;
@@ -29,6 +30,7 @@ public class Getrulesforapricetable200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public Getrulesforapricetable200ApplicationJSONRules[] rules;
+
     public Getrulesforapricetable200ApplicationJSON withRules(Getrulesforapricetable200ApplicationJSONRules[] rules) {
         this.rules = rules;
         return this;
@@ -40,9 +42,11 @@ public class Getrulesforapricetable200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradePolicyId")
     public String tradePolicyId;
+
     public Getrulesforapricetable200ApplicationJSON withTradePolicyId(String tradePolicyId) {
         this.tradePolicyId = tradePolicyId;
         return this;
     }
     
+    public Getrulesforapricetable200ApplicationJSON(){}
 }

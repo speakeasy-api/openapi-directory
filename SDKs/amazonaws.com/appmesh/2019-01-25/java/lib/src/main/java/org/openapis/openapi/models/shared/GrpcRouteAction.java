@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GrpcRouteAction {
     @JsonProperty("weightedTargets")
     public WeightedTarget[] weightedTargets;
+
     public GrpcRouteAction withWeightedTargets(WeightedTarget[] weightedTargets) {
         this.weightedTargets = weightedTargets;
         return this;
     }
     
+    public GrpcRouteAction(@JsonProperty("weightedTargets") WeightedTarget[] weightedTargets) {
+        this.weightedTargets = weightedTargets;
+  }
 }

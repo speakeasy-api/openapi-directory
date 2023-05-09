@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest;
 import org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -16,38 +15,39 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AndroiddeviceprovisioningCustomersConfigurationsCreateRequest req = new AndroiddeviceprovisioningCustomersConfigurationsCreateRequest() {{
-                dollarXgafv = "2";
+            AndroiddeviceprovisioningCustomersConfigurationsCreateRequest req = new AndroiddeviceprovisioningCustomersConfigurationsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 configurationInput = new ConfigurationInput() {{
-                    companyName = "provident";
-                    configurationName = "distinctio";
-                    contactEmail = "quibusdam";
-                    contactPhone = "unde";
-                    customMessage = "nulla";
-                    dpcExtras = "corrupti";
-                    dpcResourcePath = "illum";
+                    companyName = "distinctio";
+                    configurationName = "quibusdam";
+                    contactEmail = "unde";
+                    contactPhone = "nulla";
+                    customMessage = "corrupti";
+                    dpcExtras = "illum";
+                    dpcResourcePath = "vel";
                     isDefault = false;
-                }};
-                accessToken = "vel";
-                alt = "media";
-                callback = "deserunt";
-                fields = "suscipit";
-                key = "iure";
-                oauthToken = "magnam";
-                parent = "debitis";
+                }};;
+                accessToken = "error";
+                alt = AltEnum.MEDIA;
+                callback = "suscipit";
+                fields = "iure";
+                key = "magnam";
+                oauthToken = "debitis";
                 prettyPrint = false;
                 quotaUser = "ipsa";
                 uploadType = "delectus";
                 uploadProtocol = "tempora";
-            }}            
+            }};            
 
             AndroiddeviceprovisioningCustomersConfigurationsCreateResponse res = sdk.customers.androiddeviceprovisioningCustomersConfigurationsCreate(req);
 
-            if (res.configuration.isPresent()) {
+            if (res.configuration != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

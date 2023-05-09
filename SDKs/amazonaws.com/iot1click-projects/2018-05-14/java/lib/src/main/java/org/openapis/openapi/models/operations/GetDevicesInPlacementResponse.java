@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDevicesInPlacementResponse {
     
     public String contentType;
+
     public GetDevicesInPlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDevicesInPlacementResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDevicesInPlacementResponse getDevicesInPlacementResponse;
+
     public GetDevicesInPlacementResponse withGetDevicesInPlacementResponse(org.openapis.openapi.models.shared.GetDevicesInPlacementResponse getDevicesInPlacementResponse) {
         this.getDevicesInPlacementResponse = getDevicesInPlacementResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDevicesInPlacementResponse {
      */
     
     public Object internalFailureException;
+
     public GetDevicesInPlacementResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetDevicesInPlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public GetDevicesInPlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetDevicesInPlacementResponse {
     
     
     public Integer statusCode;
+
     public GetDevicesInPlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDevicesInPlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDevicesInPlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDevicesInPlacementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDevicesInPlacementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetDevicesInPlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

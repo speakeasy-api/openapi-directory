@@ -15,6 +15,7 @@ public class AddEventSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public AddEventSourceRequestBody withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -25,6 +26,7 @@ public class AddEventSourceRequestBody {
      */
     @JsonProperty("EventSource")
     public String eventSource;
+
     public AddEventSourceRequestBody withEventSource(String eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -35,6 +37,7 @@ public class AddEventSourceRequestBody {
      */
     @JsonProperty("FunctionName")
     public String functionName;
+
     public AddEventSourceRequestBody withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -46,6 +49,7 @@ public class AddEventSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public AddEventSourceRequestBody withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -56,9 +60,15 @@ public class AddEventSourceRequestBody {
      */
     @JsonProperty("Role")
     public String role;
+
     public AddEventSourceRequestBody withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public AddEventSourceRequestBody(@JsonProperty("EventSource") String eventSource, @JsonProperty("FunctionName") String functionName, @JsonProperty("Role") String role) {
+        this.eventSource = eventSource;
+        this.functionName = functionName;
+        this.role = role;
+  }
 }

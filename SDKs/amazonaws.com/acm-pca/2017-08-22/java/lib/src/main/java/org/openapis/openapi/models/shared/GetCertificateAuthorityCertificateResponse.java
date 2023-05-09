@@ -15,6 +15,7 @@ public class GetCertificateAuthorityCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public GetCertificateAuthorityCertificateResponse withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -23,9 +24,11 @@ public class GetCertificateAuthorityCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateChain")
     public String certificateChain;
+
     public GetCertificateAuthorityCertificateResponse withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
     }
     
+    public GetCertificateAuthorityCertificateResponse(){}
 }

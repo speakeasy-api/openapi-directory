@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Item {
     @JsonProperty("frequency")
     public Frequency frequency;
+
     public Item withFrequency(Frequency frequency) {
         this.frequency = frequency;
         return this;
@@ -16,6 +17,7 @@ public class Item {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -23,6 +25,7 @@ public class Item {
     
     @JsonProperty("seller")
     public String seller;
+
     public Item withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -30,6 +33,7 @@ public class Item {
     
     @JsonProperty("shippingAddressId")
     public String shippingAddressId;
+
     public Item withShippingAddressId(String shippingAddressId) {
         this.shippingAddressId = shippingAddressId;
         return this;
@@ -37,9 +41,17 @@ public class Item {
     
     @JsonProperty("sku")
     public String sku;
+
     public Item withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public Item(@JsonProperty("frequency") Frequency frequency, @JsonProperty("quantity") Integer quantity, @JsonProperty("seller") String seller, @JsonProperty("shippingAddressId") String shippingAddressId, @JsonProperty("sku") String sku) {
+        this.frequency = frequency;
+        this.quantity = quantity;
+        this.seller = seller;
+        this.shippingAddressId = shippingAddressId;
+        this.sku = sku;
+  }
 }

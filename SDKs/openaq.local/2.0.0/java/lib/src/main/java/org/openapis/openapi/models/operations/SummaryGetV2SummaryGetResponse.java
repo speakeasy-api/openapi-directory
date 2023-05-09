@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SummaryGetV2SummaryGetResponse {
     
     public String contentType;
+
     public SummaryGetV2SummaryGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SummaryGetV2SummaryGetResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenAQResult openAQResult;
+
     public SummaryGetV2SummaryGetResponse withOpenAQResult(org.openapis.openapi.models.shared.OpenAQResult openAQResult) {
         this.openAQResult = openAQResult;
         return this;
@@ -26,6 +29,7 @@ public class SummaryGetV2SummaryGetResponse {
     
     
     public Integer statusCode;
+
     public SummaryGetV2SummaryGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SummaryGetV2SummaryGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SummaryGetV2SummaryGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SummaryGetV2SummaryGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

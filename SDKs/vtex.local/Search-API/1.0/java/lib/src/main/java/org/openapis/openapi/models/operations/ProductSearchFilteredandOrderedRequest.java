@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductSearchFilteredandOrderedRequest {
@@ -12,6 +13,7 @@ public class ProductSearchFilteredandOrderedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ProductSearchFilteredandOrderedRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ProductSearchFilteredandOrderedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ProductSearchFilteredandOrderedRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ProductSearchFilteredandOrderedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=O")
     public String o;
+
     public ProductSearchFilteredandOrderedRequest withO(String o) {
         this.o = o;
         return this;
@@ -42,6 +46,7 @@ public class ProductSearchFilteredandOrderedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
     public String from;
+
     public ProductSearchFilteredandOrderedRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -52,6 +57,7 @@ public class ProductSearchFilteredandOrderedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
     public String to;
+
     public ProductSearchFilteredandOrderedRequest withTo(String to) {
         this.to = to;
         return this;
@@ -62,6 +68,7 @@ public class ProductSearchFilteredandOrderedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
     public String fq;
+
     public ProductSearchFilteredandOrderedRequest withFq(String fq) {
         this.fq = fq;
         return this;
@@ -72,9 +79,14 @@ public class ProductSearchFilteredandOrderedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ft")
     public String ft;
+
     public ProductSearchFilteredandOrderedRequest withFt(String ft) {
         this.ft = ft;
         return this;
     }
     
+    public ProductSearchFilteredandOrderedRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

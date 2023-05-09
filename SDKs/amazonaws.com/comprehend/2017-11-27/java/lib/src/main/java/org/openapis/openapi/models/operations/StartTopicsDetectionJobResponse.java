@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTopicsDetectionJobResponse {
     
     public String contentType;
+
     public StartTopicsDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartTopicsDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartTopicsDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartTopicsDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartTopicsDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartTopicsDetectionJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartTopicsDetectionJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartTopicsDetectionJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartTopicsDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTopicsDetectionJobResponse startTopicsDetectionJobResponse;
+
     public StartTopicsDetectionJobResponse withStartTopicsDetectionJobResponse(org.openapis.openapi.models.shared.StartTopicsDetectionJobResponse startTopicsDetectionJobResponse) {
         this.startTopicsDetectionJobResponse = startTopicsDetectionJobResponse;
         return this;
@@ -56,6 +73,7 @@ public class StartTopicsDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StartTopicsDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +81,7 @@ public class StartTopicsDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTopicsDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +92,7 @@ public class StartTopicsDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartTopicsDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +103,14 @@ public class StartTopicsDetectionJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartTopicsDetectionJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartTopicsDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

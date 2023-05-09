@@ -18,6 +18,7 @@ public class DescribeDatabaseEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseEntities")
     public DatabaseEntity[] databaseEntities;
+
     public DescribeDatabaseEntitiesResponse withDatabaseEntities(DatabaseEntity[] databaseEntities) {
         this.databaseEntities = databaseEntities;
         return this;
@@ -29,9 +30,11 @@ public class DescribeDatabaseEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DescribeDatabaseEntitiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public DescribeDatabaseEntitiesResponse(){}
 }

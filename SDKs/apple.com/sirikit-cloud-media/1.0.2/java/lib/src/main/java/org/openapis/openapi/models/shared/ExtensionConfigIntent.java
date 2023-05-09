@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ExtensionConfigIntent {
     
     public ExtensionConfigIntentAddMedia addMedia;
+
     public ExtensionConfigIntent withAddMedia(ExtensionConfigIntentAddMedia addMedia) {
         this.addMedia = addMedia;
         return this;
@@ -16,6 +17,7 @@ public class ExtensionConfigIntent {
     
     
     public java.util.Map<String, Object> hdr;
+
     public ExtensionConfigIntent withHdr(java.util.Map<String, Object> hdr) {
         this.hdr = hdr;
         return this;
@@ -23,6 +25,7 @@ public class ExtensionConfigIntent {
     
     
     public ExtensionConfigIntentPlayMedia playMedia;
+
     public ExtensionConfigIntent withPlayMedia(ExtensionConfigIntentPlayMedia playMedia) {
         this.playMedia = playMedia;
         return this;
@@ -30,9 +33,13 @@ public class ExtensionConfigIntent {
     
     
     public ExtensionConfigIntentUpdateMediaAffinity updateMediaAffinity;
+
     public ExtensionConfigIntent withUpdateMediaAffinity(ExtensionConfigIntentUpdateMediaAffinity updateMediaAffinity) {
         this.updateMediaAffinity = updateMediaAffinity;
         return this;
     }
     
+    public ExtensionConfigIntent(@JsonProperty("playMedia") ExtensionConfigIntentPlayMedia playMedia) {
+        this.playMedia = playMedia;
+  }
 }

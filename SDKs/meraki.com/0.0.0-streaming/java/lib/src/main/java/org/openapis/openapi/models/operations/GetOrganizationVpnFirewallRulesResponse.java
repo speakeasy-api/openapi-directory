@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationVpnFirewallRulesResponse {
     
     public String contentType;
+
     public GetOrganizationVpnFirewallRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganizationVpnFirewallRulesResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationVpnFirewallRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganizationVpnFirewallRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationVpnFirewallRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetOrganizationVpnFirewallRulesResponse {
      */
     
     public java.util.Map<String, Object>[] getOrganizationVpnFirewallRules200ApplicationJSONObjects;
+
     public GetOrganizationVpnFirewallRulesResponse withGetOrganizationVpnFirewallRules200ApplicationJSONObjects(java.util.Map<String, Object>[] getOrganizationVpnFirewallRules200ApplicationJSONObjects) {
         this.getOrganizationVpnFirewallRules200ApplicationJSONObjects = getOrganizationVpnFirewallRules200ApplicationJSONObjects;
         return this;
     }
     
+    public GetOrganizationVpnFirewallRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

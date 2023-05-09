@@ -18,6 +18,7 @@ public class DocumentationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecationDescription")
     public String deprecationDescription;
+
     public DocumentationRule withDeprecationDescription(String deprecationDescription) {
         this.deprecationDescription = deprecationDescription;
         return this;
@@ -29,8 +30,21 @@ public class DocumentationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DocumentationRule withDescription(String description) {
         this.description = description;
+        return this;
+    }
+    
+    /**
+     * String of comma or space separated case-sensitive words for which method/field name replacement will be disabled by go/api-docgen.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("disableReplacementWords")
+    public String disableReplacementWords;
+
+    public DocumentationRule withDisableReplacementWords(String disableReplacementWords) {
+        this.disableReplacementWords = disableReplacementWords;
         return this;
     }
     
@@ -40,9 +54,11 @@ public class DocumentationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public DocumentationRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public DocumentationRule(){}
 }

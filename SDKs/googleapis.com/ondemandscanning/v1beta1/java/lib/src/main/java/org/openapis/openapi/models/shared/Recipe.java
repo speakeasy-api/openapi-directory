@@ -18,6 +18,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public java.util.Map<String, Object>[] arguments;
+
     public Recipe withArguments(java.util.Map<String, Object>[] arguments) {
         this.arguments = arguments;
         return this;
@@ -29,6 +30,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definedInMaterial")
     public String definedInMaterial;
+
     public Recipe withDefinedInMaterial(String definedInMaterial) {
         this.definedInMaterial = definedInMaterial;
         return this;
@@ -40,6 +42,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public Recipe withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -51,6 +54,7 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public java.util.Map<String, Object>[] environment;
+
     public Recipe withEnvironment(java.util.Map<String, Object>[] environment) {
         this.environment = environment;
         return this;
@@ -62,9 +66,11 @@ public class Recipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Recipe withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Recipe(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInsightsAccessScopeRequestExcludePathsThroughResources {
     
     public ResourceStatementRequest resourceStatement;
+
     public CreateNetworkInsightsAccessScopeRequestExcludePathsThroughResources withResourceStatement(ResourceStatementRequest resourceStatement) {
         this.resourceStatement = resourceStatement;
         return this;
     }
     
+    public CreateNetworkInsightsAccessScopeRequestExcludePathsThroughResources(){}
 }

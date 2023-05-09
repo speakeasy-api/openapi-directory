@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFlywheelRequest {
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public DeleteFlywheelRequest withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
     }
     
+    public DeleteFlywheelRequest(@JsonProperty("FlywheelArn") String flywheelArn) {
+        this.flywheelArn = flywheelArn;
+  }
 }

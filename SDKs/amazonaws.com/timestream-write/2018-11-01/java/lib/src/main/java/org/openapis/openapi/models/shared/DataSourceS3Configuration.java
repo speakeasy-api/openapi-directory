@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSourceS3Configuration {
     @JsonProperty("BucketName")
     public String bucketName;
+
     public DataSourceS3Configuration withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,9 +23,13 @@ public class DataSourceS3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectKeyPrefix")
     public String objectKeyPrefix;
+
     public DataSourceS3Configuration withObjectKeyPrefix(String objectKeyPrefix) {
         this.objectKeyPrefix = objectKeyPrefix;
         return this;
     }
     
+    public DataSourceS3Configuration(@JsonProperty("BucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

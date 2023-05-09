@@ -18,6 +18,7 @@ public class FilterRefInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public FilterRefInput withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class FilterRefInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FilterRefInput withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class FilterRefInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FilterRefInput withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public FilterRefInput(){}
 }

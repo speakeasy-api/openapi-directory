@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectorsProjectsLocationsConnectionsListRequest {
@@ -12,6 +13,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -72,6 +79,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -102,6 +112,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -132,6 +145,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,6 +178,7 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -172,9 +189,13 @@ public class ConnectorsProjectsLocationsConnectionsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public ConnectorsProjectsLocationsConnectionsListViewEnum view;
+
     public ConnectorsProjectsLocationsConnectionsListRequest withView(ConnectorsProjectsLocationsConnectionsListViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public ConnectorsProjectsLocationsConnectionsListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

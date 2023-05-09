@@ -12,6 +12,7 @@ public class CreateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateImageRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateImageRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,6 +29,7 @@ public class CreateImageRequest {
     
     @JsonProperty("ImageName")
     public String imageName;
+
     public CreateImageRequest withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -34,6 +37,7 @@ public class CreateImageRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateImageRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -42,9 +46,14 @@ public class CreateImageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateImageRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateImageRequest(@JsonProperty("ImageName") String imageName, @JsonProperty("RoleArn") String roleArn) {
+        this.imageName = imageName;
+        this.roleArn = roleArn;
+  }
 }

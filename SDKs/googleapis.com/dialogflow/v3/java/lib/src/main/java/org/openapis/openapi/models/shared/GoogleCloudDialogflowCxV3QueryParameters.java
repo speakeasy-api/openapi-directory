@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyzeQueryTextSentiment")
     public Boolean analyzeQueryTextSentiment;
+
     public GoogleCloudDialogflowCxV3QueryParameters withAnalyzeQueryTextSentiment(Boolean analyzeQueryTextSentiment) {
         this.analyzeQueryTextSentiment = analyzeQueryTextSentiment;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public GoogleCloudDialogflowCxV3QueryParameters withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPage")
     public String currentPage;
+
     public GoogleCloudDialogflowCxV3QueryParameters withCurrentPage(String currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableWebhook")
     public Boolean disableWebhook;
+
     public GoogleCloudDialogflowCxV3QueryParameters withDisableWebhook(Boolean disableWebhook) {
         this.disableWebhook = disableWebhook;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowVersions")
     public String[] flowVersions;
+
     public GoogleCloudDialogflowCxV3QueryParameters withFlowVersions(String[] flowVersions) {
         this.flowVersions = flowVersions;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoLocation")
     public GoogleTypeLatLng geoLocation;
+
     public GoogleCloudDialogflowCxV3QueryParameters withGeoLocation(GoogleTypeLatLng geoLocation) {
         this.geoLocation = geoLocation;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GoogleCloudDialogflowCxV3QueryParameters withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public GoogleCloudDialogflowCxV3QueryParameters withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionEntityTypes")
     public GoogleCloudDialogflowCxV3SessionEntityType[] sessionEntityTypes;
+
     public GoogleCloudDialogflowCxV3QueryParameters withSessionEntityTypes(GoogleCloudDialogflowCxV3SessionEntityType[] sessionEntityTypes) {
         this.sessionEntityTypes = sessionEntityTypes;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public GoogleCloudDialogflowCxV3QueryParameters withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudDialogflowCxV3QueryParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookHeaders")
     public java.util.Map<String, String> webhookHeaders;
+
     public GoogleCloudDialogflowCxV3QueryParameters withWebhookHeaders(java.util.Map<String, String> webhookHeaders) {
         this.webhookHeaders = webhookHeaders;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3QueryParameters(){}
 }

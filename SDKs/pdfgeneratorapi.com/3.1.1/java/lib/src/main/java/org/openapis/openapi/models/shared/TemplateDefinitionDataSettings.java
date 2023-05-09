@@ -15,6 +15,7 @@ public class TemplateDefinitionDataSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterBy")
     public java.util.Map<String, Object>[] filterBy;
+
     public TemplateDefinitionDataSettings withFilterBy(java.util.Map<String, Object>[] filterBy) {
         this.filterBy = filterBy;
         return this;
@@ -23,9 +24,11 @@ public class TemplateDefinitionDataSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public java.util.Map<String, Object>[] sortBy;
+
     public TemplateDefinitionDataSettings withSortBy(java.util.Map<String, Object>[] sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public TemplateDefinitionDataSettings(){}
 }

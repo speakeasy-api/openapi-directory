@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAssessmentFrameworkShareResponse {
@@ -12,6 +13,7 @@ public class DeleteAssessmentFrameworkShareResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteAssessmentFrameworkShareResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAssessmentFrameworkShareResponse {
     
     
     public String contentType;
+
     public DeleteAssessmentFrameworkShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAssessmentFrameworkShareResponse {
      */
     
     public java.util.Map<String, Object> deleteAssessmentFrameworkShareResponse;
+
     public DeleteAssessmentFrameworkShareResponse withDeleteAssessmentFrameworkShareResponse(java.util.Map<String, Object> deleteAssessmentFrameworkShareResponse) {
         this.deleteAssessmentFrameworkShareResponse = deleteAssessmentFrameworkShareResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAssessmentFrameworkShareResponse {
      */
     
     public Object internalServerException;
+
     public DeleteAssessmentFrameworkShareResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAssessmentFrameworkShareResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAssessmentFrameworkShareResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAssessmentFrameworkShareResponse {
     
     
     public Integer statusCode;
+
     public DeleteAssessmentFrameworkShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAssessmentFrameworkShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAssessmentFrameworkShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteAssessmentFrameworkShareResponse {
      */
     
     public Object validationException;
+
     public DeleteAssessmentFrameworkShareResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteAssessmentFrameworkShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

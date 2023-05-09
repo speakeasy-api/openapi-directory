@@ -59,10 +59,8 @@ public class LiveChatBans {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatBansDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatBansDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatBansDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatBansDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class LiveChatBans {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatBansInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatBansInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatBansInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatBansInsertResponse(contentType, httpRes.statusCode()) {{
             liveChatBan = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

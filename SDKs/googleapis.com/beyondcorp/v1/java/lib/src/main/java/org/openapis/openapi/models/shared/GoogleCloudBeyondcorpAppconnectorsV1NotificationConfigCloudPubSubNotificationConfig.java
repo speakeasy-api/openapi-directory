@@ -18,9 +18,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubSubscription")
     public String pubsubSubscription;
+
     public GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNotificationConfig withPubsubSubscription(String pubsubSubscription) {
         this.pubsubSubscription = pubsubSubscription;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNotificationConfig(){}
 }

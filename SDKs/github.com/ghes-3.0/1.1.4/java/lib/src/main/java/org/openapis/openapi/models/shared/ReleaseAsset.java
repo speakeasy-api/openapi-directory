@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ReleaseAsset {
     @JsonProperty("browser_download_url")
     public String browserDownloadUrl;
+
     public ReleaseAsset withBrowserDownloadUrl(String browserDownloadUrl) {
         this.browserDownloadUrl = browserDownloadUrl;
         return this;
@@ -24,6 +25,7 @@ public class ReleaseAsset {
     
     @JsonProperty("content_type")
     public String contentType;
+
     public ReleaseAsset withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +35,7 @@ public class ReleaseAsset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ReleaseAsset withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +43,7 @@ public class ReleaseAsset {
     
     @JsonProperty("download_count")
     public Long downloadCount;
+
     public ReleaseAsset withDownloadCount(Long downloadCount) {
         this.downloadCount = downloadCount;
         return this;
@@ -47,6 +51,7 @@ public class ReleaseAsset {
     
     @JsonProperty("id")
     public Long id;
+
     public ReleaseAsset withId(Long id) {
         this.id = id;
         return this;
@@ -54,6 +59,7 @@ public class ReleaseAsset {
     
     @JsonProperty("label")
     public String label;
+
     public ReleaseAsset withLabel(String label) {
         this.label = label;
         return this;
@@ -64,6 +70,7 @@ public class ReleaseAsset {
      */
     @JsonProperty("name")
     public String name;
+
     public ReleaseAsset withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class ReleaseAsset {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public ReleaseAsset withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -78,6 +86,7 @@ public class ReleaseAsset {
     
     @JsonProperty("size")
     public Long size;
+
     public ReleaseAsset withSize(Long size) {
         this.size = size;
         return this;
@@ -88,6 +97,7 @@ public class ReleaseAsset {
      */
     @JsonProperty("state")
     public ReleaseAssetStateEnum state;
+
     public ReleaseAsset withState(ReleaseAssetStateEnum state) {
         this.state = state;
         return this;
@@ -97,6 +107,7 @@ public class ReleaseAsset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public ReleaseAsset withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -107,6 +118,7 @@ public class ReleaseAsset {
      */
     @JsonProperty("uploader")
     public NullableSimpleUser uploader;
+
     public ReleaseAsset withUploader(NullableSimpleUser uploader) {
         this.uploader = uploader;
         return this;
@@ -114,9 +126,25 @@ public class ReleaseAsset {
     
     @JsonProperty("url")
     public String url;
+
     public ReleaseAsset withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ReleaseAsset(@JsonProperty("browser_download_url") String browserDownloadUrl, @JsonProperty("content_type") String contentType, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("download_count") Long downloadCount, @JsonProperty("id") Long id, @JsonProperty("label") String label, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("size") Long size, @JsonProperty("state") ReleaseAssetStateEnum state, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("uploader") NullableSimpleUser uploader, @JsonProperty("url") String url) {
+        this.browserDownloadUrl = browserDownloadUrl;
+        this.contentType = contentType;
+        this.createdAt = createdAt;
+        this.downloadCount = downloadCount;
+        this.id = id;
+        this.label = label;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.size = size;
+        this.state = state;
+        this.updatedAt = updatedAt;
+        this.uploader = uploader;
+        this.url = url;
+  }
 }

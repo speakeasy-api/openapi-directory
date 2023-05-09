@@ -12,6 +12,7 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public HlipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -22,6 +23,7 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("Val")
     public String val;
+
     public HlipcRequestBodyCertificateParameters withVal(String val) {
         this.val = val;
         return this;
@@ -32,9 +34,15 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("Verification")
     public String verification;
+
     public HlipcRequestBodyCertificateParameters withVerification(String verification) {
         this.verification = verification;
         return this;
     }
     
+    public HlipcRequestBodyCertificateParameters(@JsonProperty("PolicyNo") String policyNo, @JsonProperty("Val") String val, @JsonProperty("Verification") String verification) {
+        this.policyNo = policyNo;
+        this.val = val;
+        this.verification = verification;
+  }
 }

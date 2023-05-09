@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTemplateSyncConfigResponse {
@@ -12,6 +13,7 @@ public class DeleteTemplateSyncConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTemplateSyncConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteTemplateSyncConfigResponse {
      */
     
     public Object conflictException;
+
     public DeleteTemplateSyncConfigResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTemplateSyncConfigResponse {
     
     
     public String contentType;
+
     public DeleteTemplateSyncConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTemplateSyncConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteTemplateSyncConfigOutput deleteTemplateSyncConfigOutput;
+
     public DeleteTemplateSyncConfigResponse withDeleteTemplateSyncConfigOutput(org.openapis.openapi.models.shared.DeleteTemplateSyncConfigOutput deleteTemplateSyncConfigOutput) {
         this.deleteTemplateSyncConfigOutput = deleteTemplateSyncConfigOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTemplateSyncConfigResponse {
      */
     
     public Object internalServerException;
+
     public DeleteTemplateSyncConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTemplateSyncConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTemplateSyncConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTemplateSyncConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteTemplateSyncConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTemplateSyncConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTemplateSyncConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteTemplateSyncConfigResponse {
      */
     
     public Object throttlingException;
+
     public DeleteTemplateSyncConfigResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteTemplateSyncConfigResponse {
      */
     
     public Object validationException;
+
     public DeleteTemplateSyncConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteTemplateSyncConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

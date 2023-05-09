@@ -15,6 +15,7 @@ public class ResponsivityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public LinksMeta links;
+
     public ResponsivityList withLinks(LinksMeta links) {
         this.links = links;
         return this;
@@ -23,9 +24,11 @@ public class ResponsivityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsivity")
     public Responsivity[] responsivity;
+
     public ResponsivityList withResponsivity(Responsivity[] responsivity) {
         this.responsivity = responsivity;
         return this;
     }
     
+    public ResponsivityList(){}
 }

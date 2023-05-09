@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesListCommentsForRepoResponse {
     
     public String contentType;
+
     public IssuesListCommentsForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesListCommentsForRepoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesListCommentsForRepoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesListCommentsForRepoResponse {
     
     
     public Integer statusCode;
+
     public IssuesListCommentsForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesListCommentsForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesListCommentsForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class IssuesListCommentsForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesListCommentsForRepoResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class IssuesListCommentsForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.IssueComment[] issueComments;
+
     public IssuesListCommentsForRepoResponse withIssueComments(org.openapis.openapi.models.shared.IssueComment[] issueComments) {
         this.issueComments = issueComments;
         return this;
@@ -60,9 +67,14 @@ public class IssuesListCommentsForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public IssuesListCommentsForRepoResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public IssuesListCommentsForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

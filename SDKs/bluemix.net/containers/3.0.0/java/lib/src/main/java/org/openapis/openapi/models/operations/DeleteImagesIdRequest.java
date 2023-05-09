@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImagesIdRequest {
@@ -12,6 +13,7 @@ public class DeleteImagesIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public DeleteImagesIdRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteImagesIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public DeleteImagesIdRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -32,9 +35,15 @@ public class DeleteImagesIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteImagesIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteImagesIdRequest(@JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("id") String id) {
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.id = id;
+  }
 }

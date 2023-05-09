@@ -15,6 +15,7 @@ public class DescribeBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupArn")
     public String billingGroupArn;
+
     public DescribeBillingGroupResponse withBillingGroupArn(String billingGroupArn) {
         this.billingGroupArn = billingGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class DescribeBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupId")
     public String billingGroupId;
+
     public DescribeBillingGroupResponse withBillingGroupId(String billingGroupId) {
         this.billingGroupId = billingGroupId;
         return this;
@@ -31,6 +33,7 @@ public class DescribeBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupMetadata")
     public BillingGroupMetadata billingGroupMetadata;
+
     public DescribeBillingGroupResponse withBillingGroupMetadata(BillingGroupMetadata billingGroupMetadata) {
         this.billingGroupMetadata = billingGroupMetadata;
         return this;
@@ -39,6 +42,7 @@ public class DescribeBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupName")
     public String billingGroupName;
+
     public DescribeBillingGroupResponse withBillingGroupName(String billingGroupName) {
         this.billingGroupName = billingGroupName;
         return this;
@@ -47,6 +51,7 @@ public class DescribeBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupProperties")
     public BillingGroupProperties billingGroupProperties;
+
     public DescribeBillingGroupResponse withBillingGroupProperties(BillingGroupProperties billingGroupProperties) {
         this.billingGroupProperties = billingGroupProperties;
         return this;
@@ -55,9 +60,11 @@ public class DescribeBillingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public DescribeBillingGroupResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DescribeBillingGroupResponse(){}
 }

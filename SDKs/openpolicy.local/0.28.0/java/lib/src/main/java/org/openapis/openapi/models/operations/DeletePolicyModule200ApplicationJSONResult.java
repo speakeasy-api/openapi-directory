@@ -16,6 +16,7 @@ public class DeletePolicyModule200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ast")
     public DeletePolicyModule200ApplicationJSONResultAst ast;
+
     public DeletePolicyModule200ApplicationJSONResult withAst(DeletePolicyModule200ApplicationJSONResultAst ast) {
         this.ast = ast;
         return this;
@@ -27,6 +28,7 @@ public class DeletePolicyModule200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeletePolicyModule200ApplicationJSONResult withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,11 @@ public class DeletePolicyModule200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public String raw;
+
     public DeletePolicyModule200ApplicationJSONResult withRaw(String raw) {
         this.raw = raw;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONResult(){}
 }

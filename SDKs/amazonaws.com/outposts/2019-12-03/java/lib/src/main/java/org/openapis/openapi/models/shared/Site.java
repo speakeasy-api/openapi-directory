@@ -18,6 +18,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public Site withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Site withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Site withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public Site withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -56,6 +60,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingAddressCity")
     public String operatingAddressCity;
+
     public Site withOperatingAddressCity(String operatingAddressCity) {
         this.operatingAddressCity = operatingAddressCity;
         return this;
@@ -64,6 +69,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingAddressCountryCode")
     public String operatingAddressCountryCode;
+
     public Site withOperatingAddressCountryCode(String operatingAddressCountryCode) {
         this.operatingAddressCountryCode = operatingAddressCountryCode;
         return this;
@@ -72,6 +78,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingAddressStateOrRegion")
     public String operatingAddressStateOrRegion;
+
     public Site withOperatingAddressStateOrRegion(String operatingAddressStateOrRegion) {
         this.operatingAddressStateOrRegion = operatingAddressStateOrRegion;
         return this;
@@ -80,6 +87,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RackPhysicalProperties")
     public RackPhysicalProperties rackPhysicalProperties;
+
     public Site withRackPhysicalProperties(RackPhysicalProperties rackPhysicalProperties) {
         this.rackPhysicalProperties = rackPhysicalProperties;
         return this;
@@ -91,6 +99,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SiteArn")
     public String siteArn;
+
     public Site withSiteArn(String siteArn) {
         this.siteArn = siteArn;
         return this;
@@ -102,6 +111,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SiteId")
     public String siteId;
+
     public Site withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
@@ -110,9 +120,11 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public Site withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Site(){}
 }

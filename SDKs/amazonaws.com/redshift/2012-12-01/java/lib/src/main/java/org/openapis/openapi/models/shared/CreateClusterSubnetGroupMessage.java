@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateClusterSubnetGroupMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClusterSubnetGroupMessage {
     
     public String clusterSubnetGroupName;
+
     public CreateClusterSubnetGroupMessage withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -19,6 +20,7 @@ public class CreateClusterSubnetGroupMessage {
     
     
     public String description;
+
     public CreateClusterSubnetGroupMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateClusterSubnetGroupMessage {
     
     
     public String[] subnetIds;
+
     public CreateClusterSubnetGroupMessage withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -33,9 +36,15 @@ public class CreateClusterSubnetGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateClusterSubnetGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterSubnetGroupMessage(@JsonProperty("ClusterSubnetGroupName") String clusterSubnetGroupName, @JsonProperty("Description") String description, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.clusterSubnetGroupName = clusterSubnetGroupName;
+        this.description = description;
+        this.subnetIds = subnetIds;
+  }
 }

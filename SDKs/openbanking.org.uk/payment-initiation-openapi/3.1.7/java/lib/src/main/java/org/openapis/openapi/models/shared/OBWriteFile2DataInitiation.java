@@ -23,6 +23,7 @@ public class OBWriteFile2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlSum")
     public Double controlSum;
+
     public OBWriteFile2DataInitiation withControlSum(Double controlSum) {
         this.controlSum = controlSum;
         return this;
@@ -34,6 +35,7 @@ public class OBWriteFile2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteFile2DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteFile2DataInitiation withDebtorAccount(OBWriteFile2DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteFile2DataInitiation {
      */
     @JsonProperty("FileHash")
     public String fileHash;
+
     public OBWriteFile2DataInitiation withFileHash(String fileHash) {
         this.fileHash = fileHash;
         return this;
@@ -55,6 +58,7 @@ public class OBWriteFile2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileReference")
     public String fileReference;
+
     public OBWriteFile2DataInitiation withFileReference(String fileReference) {
         this.fileReference = fileReference;
         return this;
@@ -65,6 +69,7 @@ public class OBWriteFile2DataInitiation {
      */
     @JsonProperty("FileType")
     public String fileType;
+
     public OBWriteFile2DataInitiation withFileType(String fileType) {
         this.fileType = fileType;
         return this;
@@ -77,6 +82,7 @@ public class OBWriteFile2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteFile2DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -88,6 +94,7 @@ public class OBWriteFile2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfTransactions")
     public String numberOfTransactions;
+
     public OBWriteFile2DataInitiation withNumberOfTransactions(String numberOfTransactions) {
         this.numberOfTransactions = numberOfTransactions;
         return this;
@@ -99,6 +106,7 @@ public class OBWriteFile2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteFile2DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteFile2DataInitiation withRemittanceInformation(OBWriteFile2DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -115,6 +123,7 @@ public class OBWriteFile2DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedExecutionDateTime")
     public OffsetDateTime requestedExecutionDateTime;
+
     public OBWriteFile2DataInitiation withRequestedExecutionDateTime(OffsetDateTime requestedExecutionDateTime) {
         this.requestedExecutionDateTime = requestedExecutionDateTime;
         return this;
@@ -126,9 +135,14 @@ public class OBWriteFile2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteFile2DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteFile2DataInitiation(@JsonProperty("FileHash") String fileHash, @JsonProperty("FileType") String fileType) {
+        this.fileHash = fileHash;
+        this.fileType = fileType;
+  }
 }

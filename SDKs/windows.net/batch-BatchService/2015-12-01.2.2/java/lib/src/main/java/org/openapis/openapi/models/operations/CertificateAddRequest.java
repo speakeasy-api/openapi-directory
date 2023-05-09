@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateAddRequest {
@@ -12,6 +13,7 @@ public class CertificateAddRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CertificateAddParameter certificateAddParameter;
+
     public CertificateAddRequest withCertificateAddParameter(org.openapis.openapi.models.shared.CertificateAddParameter certificateAddParameter) {
         this.certificateAddParameter = certificateAddParameter;
         return this;
@@ -22,6 +24,7 @@ public class CertificateAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public CertificateAddRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class CertificateAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public CertificateAddRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class CertificateAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public CertificateAddRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class CertificateAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public CertificateAddRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -62,9 +68,14 @@ public class CertificateAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public CertificateAddRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public CertificateAddRequest(@JsonProperty("CertificateAddParameter") org.openapis.openapi.models.shared.CertificateAddParameter certificateAddParameter, @JsonProperty("api-version") String apiVersion) {
+        this.certificateAddParameter = certificateAddParameter;
+        this.apiVersion = apiVersion;
+  }
 }

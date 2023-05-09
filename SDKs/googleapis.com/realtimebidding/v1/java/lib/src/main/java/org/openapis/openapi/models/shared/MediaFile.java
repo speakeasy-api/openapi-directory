@@ -18,6 +18,7 @@ public class MediaFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bitrate")
     public String bitrate;
+
     public MediaFile withBitrate(String bitrate) {
         this.bitrate = bitrate;
         return this;
@@ -29,9 +30,11 @@ public class MediaFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public MediaFileMimeTypeEnum mimeType;
+
     public MediaFile withMimeType(MediaFileMimeTypeEnum mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public MediaFile(){}
 }

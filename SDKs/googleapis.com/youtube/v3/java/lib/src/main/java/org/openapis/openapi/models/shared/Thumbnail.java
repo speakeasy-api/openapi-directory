@@ -18,6 +18,7 @@ public class Thumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public Thumbnail withHeight(Long height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class Thumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Thumbnail withUrl(String url) {
         this.url = url;
         return this;
@@ -40,9 +42,11 @@ public class Thumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public Thumbnail withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public Thumbnail(){}
 }

@@ -17,6 +17,7 @@ public class TaxReportingClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessType")
     public TaxReportingClassificationBusinessTypeEnum businessType;
+
     public TaxReportingClassification withBusinessType(TaxReportingClassificationBusinessTypeEnum businessType) {
         this.businessType = businessType;
         return this;
@@ -28,6 +29,7 @@ public class TaxReportingClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("financialInstitutionNumber")
     public String financialInstitutionNumber;
+
     public TaxReportingClassification withFinancialInstitutionNumber(String financialInstitutionNumber) {
         this.financialInstitutionNumber = financialInstitutionNumber;
         return this;
@@ -41,6 +43,7 @@ public class TaxReportingClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainSourceOfIncome")
     public TaxReportingClassificationMainSourceOfIncomeEnum mainSourceOfIncome;
+
     public TaxReportingClassification withMainSourceOfIncome(TaxReportingClassificationMainSourceOfIncomeEnum mainSourceOfIncome) {
         this.mainSourceOfIncome = mainSourceOfIncome;
         return this;
@@ -54,9 +57,11 @@ public class TaxReportingClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TaxReportingClassificationTypeEnum type;
+
     public TaxReportingClassification withType(TaxReportingClassificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TaxReportingClassification(){}
 }

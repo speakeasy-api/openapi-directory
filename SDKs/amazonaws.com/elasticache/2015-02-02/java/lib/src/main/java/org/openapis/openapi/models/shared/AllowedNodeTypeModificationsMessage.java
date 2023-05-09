@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AllowedNodeTypeModificationsMessage {
     
     public String[] scaleDownModifications;
+
     public AllowedNodeTypeModificationsMessage withScaleDownModifications(String[] scaleDownModifications) {
         this.scaleDownModifications = scaleDownModifications;
         return this;
@@ -19,9 +20,11 @@ public class AllowedNodeTypeModificationsMessage {
     
     
     public String[] scaleUpModifications;
+
     public AllowedNodeTypeModificationsMessage withScaleUpModifications(String[] scaleUpModifications) {
         this.scaleUpModifications = scaleUpModifications;
         return this;
     }
     
+    public AllowedNodeTypeModificationsMessage(){}
 }

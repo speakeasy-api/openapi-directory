@@ -15,6 +15,7 @@ public class BatchUpsertTableRowsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public BatchUpsertTableRowsRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class BatchUpsertTableRowsRequestBody {
      */
     @JsonProperty("rowsToUpsert")
     public org.openapis.openapi.models.shared.UpsertRowData[] rowsToUpsert;
+
     public BatchUpsertTableRowsRequestBody withRowsToUpsert(org.openapis.openapi.models.shared.UpsertRowData[] rowsToUpsert) {
         this.rowsToUpsert = rowsToUpsert;
         return this;
     }
     
+    public BatchUpsertTableRowsRequestBody(@JsonProperty("rowsToUpsert") org.openapis.openapi.models.shared.UpsertRowData[] rowsToUpsert) {
+        this.rowsToUpsert = rowsToUpsert;
+  }
 }

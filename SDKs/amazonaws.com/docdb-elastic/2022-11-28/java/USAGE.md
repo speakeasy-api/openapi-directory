@@ -3,62 +3,59 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateClusterRequestBodyAuthTypeEnum;
-import org.openapis.openapi.models.operations.CreateClusterRequestBody;
 import org.openapis.openapi.models.operations.CreateClusterRequest;
+import org.openapis.openapi.models.operations.CreateClusterRequestBody;
+import org.openapis.openapi.models.operations.CreateClusterRequestBodyAuthTypeEnum;
 import org.openapis.openapi.models.operations.CreateClusterResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateClusterRequest req = new CreateClusterRequest() {{
-                requestBody = new CreateClusterRequestBody() {{
-                    adminUserName = "corrupti";
-                    adminUserPassword = "provident";
-                    authType = "SECRET_ARN";
-                    clientToken = "quibusdam";
-                    clusterName = "unde";
-                    kmsKeyId = "nulla";
-                    preferredMaintenanceWindow = "corrupti";
-                    shardCapacity = 847252;
-                    shardCount = 423655;
-                    subnetIds = new String[]{{
-                        add("deserunt"),
-                        add("suscipit"),
-                        add("iure"),
-                    }};
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("debitis", "ipsa");
-                        put("delectus", "tempora");
-                    }};
-                    vpcSecurityGroupIds = new String[]{{
-                        add("molestiae"),
-                        add("minus"),
-                    }};
-                }};
-                xAmzAlgorithm = "placeat";
-                xAmzContentSha256 = "voluptatum";
-                xAmzCredential = "iusto";
-                xAmzDate = "excepturi";
-                xAmzSecurityToken = "nisi";
-                xAmzSignature = "recusandae";
-                xAmzSignedHeaders = "temporibus";
-            }}            
+            CreateClusterRequest req = new CreateClusterRequest(                new CreateClusterRequestBody("provident", "distinctio", CreateClusterRequestBodyAuthTypeEnum.SECRET_ARN, "unde", 857946L, 544883L) {{
+                                clientToken = "illum";
+                                kmsKeyId = "vel";
+                                preferredMaintenanceWindow = "error";
+                                subnetIds = new String[]{{
+                                    add("suscipit"),
+                                    add("iure"),
+                                    add("magnam"),
+                                }};
+                                tags = new java.util.HashMap<String, String>() {{
+                                    put("ipsa", "delectus");
+                                    put("tempora", "suscipit");
+                                    put("molestiae", "minus");
+                                    put("placeat", "voluptatum");
+                                }};
+                                vpcSecurityGroupIds = new String[]{{
+                                    add("excepturi"),
+                                    add("nisi"),
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "recusandae";
+                xAmzContentSha256 = "temporibus";
+                xAmzCredential = "ab";
+                xAmzDate = "quis";
+                xAmzSecurityToken = "veritatis";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "perferendis";
+            }};            
 
             CreateClusterResponse res = sdk.createCluster(req);
 
-            if (res.createClusterOutput.isPresent()) {
+            if (res.createClusterOutput != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

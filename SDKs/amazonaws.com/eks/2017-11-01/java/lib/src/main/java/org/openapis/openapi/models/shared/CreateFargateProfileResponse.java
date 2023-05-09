@@ -15,9 +15,11 @@ public class CreateFargateProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fargateProfile")
     public FargateProfile fargateProfile;
+
     public CreateFargateProfileResponse withFargateProfile(FargateProfile fargateProfile) {
         this.fargateProfile = fargateProfile;
         return this;
     }
     
+    public CreateFargateProfileResponse(){}
 }

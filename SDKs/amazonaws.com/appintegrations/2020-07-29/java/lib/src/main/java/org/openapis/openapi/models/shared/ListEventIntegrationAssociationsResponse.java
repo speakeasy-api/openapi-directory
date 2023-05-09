@@ -15,6 +15,7 @@ public class ListEventIntegrationAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventIntegrationAssociations")
     public EventIntegrationAssociation[] eventIntegrationAssociations;
+
     public ListEventIntegrationAssociationsResponse withEventIntegrationAssociations(EventIntegrationAssociation[] eventIntegrationAssociations) {
         this.eventIntegrationAssociations = eventIntegrationAssociations;
         return this;
@@ -23,9 +24,11 @@ public class ListEventIntegrationAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventIntegrationAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventIntegrationAssociationsResponse(){}
 }

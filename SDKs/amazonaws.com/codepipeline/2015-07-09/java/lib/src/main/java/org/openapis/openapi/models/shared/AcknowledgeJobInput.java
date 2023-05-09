@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AcknowledgeJobInput {
     @JsonProperty("jobId")
     public String jobId;
+
     public AcknowledgeJobInput withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,9 +20,14 @@ public class AcknowledgeJobInput {
     
     @JsonProperty("nonce")
     public String nonce;
+
     public AcknowledgeJobInput withNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     
+    public AcknowledgeJobInput(@JsonProperty("jobId") String jobId, @JsonProperty("nonce") String nonce) {
+        this.jobId = jobId;
+        this.nonce = nonce;
+  }
 }

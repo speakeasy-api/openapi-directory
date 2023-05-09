@@ -12,9 +12,13 @@ public class MutanRequestBodyCertificateParameters {
      */
     @JsonProperty("DocumentNumber")
     public String documentNumber;
+
     public MutanRequestBodyCertificateParameters withDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
         return this;
     }
     
+    public MutanRequestBodyCertificateParameters(@JsonProperty("DocumentNumber") String documentNumber) {
+        this.documentNumber = documentNumber;
+  }
 }

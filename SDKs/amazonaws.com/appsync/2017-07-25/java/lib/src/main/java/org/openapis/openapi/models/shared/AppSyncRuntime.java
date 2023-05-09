@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppSyncRuntime {
     @JsonProperty("name")
     public RuntimeNameEnum name;
+
     public AppSyncRuntime withName(RuntimeNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class AppSyncRuntime {
     
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public AppSyncRuntime withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
     }
     
+    public AppSyncRuntime(@JsonProperty("name") RuntimeNameEnum name, @JsonProperty("runtimeVersion") String runtimeVersion) {
+        this.name = name;
+        this.runtimeVersion = runtimeVersion;
+  }
 }

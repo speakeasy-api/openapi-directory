@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerSpecGcsPath")
     public String containerSpecGcsPath;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter withContainerSpecGcsPath(String containerSpecGcsPath) {
         this.containerSpecGcsPath = containerSpecGcsPath;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment environment;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter withEnvironment(GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment environment) {
         this.environment = environment;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchOptions")
     public java.util.Map<String, String> launchOptions;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter withLaunchOptions(java.util.Map<String, String> launchOptions) {
         this.launchOptions = launchOptions;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformNameMappings")
     public java.util.Map<String, String> transformNameMappings;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter withTransformNameMappings(java.util.Map<String, String> transformNameMappings) {
         this.transformNameMappings = transformNameMappings;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Boolean update;
+
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter withUpdate(Boolean update) {
         this.update = update;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter(){}
 }

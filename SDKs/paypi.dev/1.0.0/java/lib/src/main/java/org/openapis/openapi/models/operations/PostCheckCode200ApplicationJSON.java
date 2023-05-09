@@ -17,6 +17,7 @@ public class PostCheckCode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PostCheckCode200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -25,9 +26,11 @@ public class PostCheckCode200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public PostCheckCode200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public PostCheckCode200ApplicationJSON(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CopyDBClusterSnapshotMessage {
     
     public Boolean copyTags;
+
     public CopyDBClusterSnapshotMessage withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -16,6 +17,7 @@ public class CopyDBClusterSnapshotMessage {
     
     
     public String kmsKeyId;
+
     public CopyDBClusterSnapshotMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,6 +25,7 @@ public class CopyDBClusterSnapshotMessage {
     
     
     public String preSignedUrl;
+
     public CopyDBClusterSnapshotMessage withPreSignedUrl(String preSignedUrl) {
         this.preSignedUrl = preSignedUrl;
         return this;
@@ -30,6 +33,7 @@ public class CopyDBClusterSnapshotMessage {
     
     
     public String sourceDBClusterSnapshotIdentifier;
+
     public CopyDBClusterSnapshotMessage withSourceDBClusterSnapshotIdentifier(String sourceDBClusterSnapshotIdentifier) {
         this.sourceDBClusterSnapshotIdentifier = sourceDBClusterSnapshotIdentifier;
         return this;
@@ -37,6 +41,7 @@ public class CopyDBClusterSnapshotMessage {
     
     
     public TagList[] tags;
+
     public CopyDBClusterSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -44,9 +49,14 @@ public class CopyDBClusterSnapshotMessage {
     
     
     public String targetDBClusterSnapshotIdentifier;
+
     public CopyDBClusterSnapshotMessage withTargetDBClusterSnapshotIdentifier(String targetDBClusterSnapshotIdentifier) {
         this.targetDBClusterSnapshotIdentifier = targetDBClusterSnapshotIdentifier;
         return this;
     }
     
+    public CopyDBClusterSnapshotMessage(@JsonProperty("SourceDBClusterSnapshotIdentifier") String sourceDBClusterSnapshotIdentifier, @JsonProperty("TargetDBClusterSnapshotIdentifier") String targetDBClusterSnapshotIdentifier) {
+        this.sourceDBClusterSnapshotIdentifier = sourceDBClusterSnapshotIdentifier;
+        this.targetDBClusterSnapshotIdentifier = targetDBClusterSnapshotIdentifier;
+  }
 }

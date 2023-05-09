@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetApiV2ListFederationsRequest;
 import org.openapis.openapi.models.operations.GetApiV2ListFederationsResponse;
 
@@ -28,29 +27,31 @@ public class Application {
 
             GetApiV2ListFederationsRequest req = new GetApiV2ListFederationsRequest() {{
                 xRapidApiKey = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            }};            
 
             GetApiV2ListFederationsResponse res = sdk.getApiV2ListFederations(req);
 
-            if (res.getApiV2ListFederations200ApplicationJSONObject.isPresent()) {
+            if (res.getApiV2ListFederations200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getApiV2ListFederations` - Returns an array of all the available federations.
-* `getApiV2ListMarkets` - Returns an array of all the supported prediction markets
-* `getApiV2PerformanceStats` - Returns predictions accuracy in the last 1, 7, 14, 30 days.
-* `getApiV2Predictions` - This endpoint returns by default the next non-expired football predictions. URL parameters can be specified to show specific date in the past or future or to filter by federation and prediction market name.
-* `getApiV2PredictionsId` - Returns all predictions available for a match id.
+* [getApiV2ListFederations](docs/sdk/README.md#getapiv2listfederations) - Returns an array of all the available federations.
+* [getApiV2ListMarkets](docs/sdk/README.md#getapiv2listmarkets) - Returns an array of all the supported prediction markets
+* [getApiV2PerformanceStats](docs/sdk/README.md#getapiv2performancestats) - Returns predictions accuracy in the last 1, 7, 14, 30 days.
+* [getApiV2Predictions](docs/sdk/README.md#getapiv2predictions) - This endpoint returns by default the next non-expired football predictions. URL parameters can be specified to show specific date in the past or future or to filter by federation and prediction market name.
+* [getApiV2PredictionsId](docs/sdk/README.md#getapiv2predictionsid) - Returns all predictions available for a match id.
 <!-- End SDK Available Operations -->
 
 ### Maturity

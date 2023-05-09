@@ -15,6 +15,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionProperties")
     public ConnectionProperty[] connectionProperties;
+
     public QueryRequest withConnectionProperties(ConnectionProperty[] connectionProperties) {
         this.connectionProperties = connectionProperties;
         return this;
@@ -26,6 +27,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuous")
     public Boolean continuous;
+
     public QueryRequest withContinuous(Boolean continuous) {
         this.continuous = continuous;
         return this;
@@ -37,6 +39,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSession")
     public Boolean createSession;
+
     public QueryRequest withCreateSession(Boolean createSession) {
         this.createSession = createSession;
         return this;
@@ -45,6 +48,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultDataset")
     public DatasetReference defaultDataset;
+
     public QueryRequest withDefaultDataset(DatasetReference defaultDataset) {
         this.defaultDataset = defaultDataset;
         return this;
@@ -56,6 +60,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dryRun")
     public Boolean dryRun;
+
     public QueryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -67,6 +72,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public QueryRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +84,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public QueryRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -89,6 +96,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public QueryRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -100,6 +108,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public QueryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -111,6 +120,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumBytesBilled")
     public String maximumBytesBilled;
+
     public QueryRequest withMaximumBytesBilled(String maximumBytesBilled) {
         this.maximumBytesBilled = maximumBytesBilled;
         return this;
@@ -122,6 +132,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterMode")
     public String parameterMode;
+
     public QueryRequest withParameterMode(String parameterMode) {
         this.parameterMode = parameterMode;
         return this;
@@ -133,6 +144,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveNulls")
     public Boolean preserveNulls;
+
     public QueryRequest withPreserveNulls(Boolean preserveNulls) {
         this.preserveNulls = preserveNulls;
         return this;
@@ -144,6 +156,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public QueryRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -155,6 +168,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameters")
     public QueryParameter[] queryParameters;
+
     public QueryRequest withQueryParameters(QueryParameter[] queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -166,6 +180,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public QueryRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -177,6 +192,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutMs")
     public Long timeoutMs;
+
     public QueryRequest withTimeoutMs(Long timeoutMs) {
         this.timeoutMs = timeoutMs;
         return this;
@@ -188,6 +204,7 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useLegacySql")
     public Boolean useLegacySql;
+
     public QueryRequest withUseLegacySql(Boolean useLegacySql) {
         this.useLegacySql = useLegacySql;
         return this;
@@ -199,9 +216,11 @@ public class QueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useQueryCache")
     public Boolean useQueryCache;
+
     public QueryRequest withUseQueryCache(Boolean useQueryCache) {
         this.useQueryCache = useQueryCache;
         return this;
     }
     
+    public QueryRequest(){}
 }

@@ -18,6 +18,7 @@ public class ListCustomClassesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customClasses")
     public CustomClass[] customClasses;
+
     public ListCustomClassesResponse withCustomClasses(CustomClass[] customClasses) {
         this.customClasses = customClasses;
         return this;
@@ -29,9 +30,11 @@ public class ListCustomClassesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCustomClassesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCustomClassesResponse(){}
 }

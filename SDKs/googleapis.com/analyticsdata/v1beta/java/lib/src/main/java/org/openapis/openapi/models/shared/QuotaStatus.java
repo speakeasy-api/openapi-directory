@@ -18,6 +18,7 @@ public class QuotaStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumed")
     public Integer consumed;
+
     public QuotaStatus withConsumed(Integer consumed) {
         this.consumed = consumed;
         return this;
@@ -29,9 +30,11 @@ public class QuotaStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remaining")
     public Integer remaining;
+
     public QuotaStatus withRemaining(Integer remaining) {
         this.remaining = remaining;
         return this;
     }
     
+    public QuotaStatus(){}
 }

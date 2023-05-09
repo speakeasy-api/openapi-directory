@@ -17,6 +17,7 @@ public class TrackJourneyEventRequestBody {
      */
     @JsonProperty("identification")
     public TrackJourneyEventRequestBodyIdentification identification;
+
     public TrackJourneyEventRequestBody withIdentification(TrackJourneyEventRequestBodyIdentification identification) {
         this.identification = identification;
         return this;
@@ -28,6 +29,7 @@ public class TrackJourneyEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, Object> metadata;
+
     public TrackJourneyEventRequestBody withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -35,6 +37,7 @@ public class TrackJourneyEventRequestBody {
     
     @JsonProperty("name")
     public String name;
+
     public TrackJourneyEventRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,14 @@ public class TrackJourneyEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggeredAt")
     public String triggeredAt;
+
     public TrackJourneyEventRequestBody withTriggeredAt(String triggeredAt) {
         this.triggeredAt = triggeredAt;
         return this;
     }
     
+    public TrackJourneyEventRequestBody(@JsonProperty("identification") TrackJourneyEventRequestBodyIdentification identification, @JsonProperty("name") String name) {
+        this.identification = identification;
+        this.name = name;
+  }
 }

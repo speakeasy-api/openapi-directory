@@ -18,6 +18,7 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -29,9 +30,11 @@ public class GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPool")
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool workerPool;
+
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest withWorkerPool(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPool workerPool) {
         this.workerPool = workerPool;
         return this;
     }
     
+    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest(){}
 }

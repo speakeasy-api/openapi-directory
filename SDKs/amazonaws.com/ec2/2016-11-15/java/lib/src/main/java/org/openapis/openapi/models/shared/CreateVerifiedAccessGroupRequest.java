@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVerifiedAccessGroupRequest {
     
     public String clientToken;
+
     public CreateVerifiedAccessGroupRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateVerifiedAccessGroupRequest {
     
     
     public String description;
+
     public CreateVerifiedAccessGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateVerifiedAccessGroupRequest {
     
     
     public Boolean dryRun;
+
     public CreateVerifiedAccessGroupRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateVerifiedAccessGroupRequest {
     
     
     public String policyDocument;
+
     public CreateVerifiedAccessGroupRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -37,6 +41,7 @@ public class CreateVerifiedAccessGroupRequest {
     
     
     public CreateVerifiedAccessGroupRequestTagSpecifications[] tagSpecifications;
+
     public CreateVerifiedAccessGroupRequest withTagSpecifications(CreateVerifiedAccessGroupRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -44,9 +49,13 @@ public class CreateVerifiedAccessGroupRequest {
     
     
     public String verifiedAccessInstanceId;
+
     public CreateVerifiedAccessGroupRequest withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public CreateVerifiedAccessGroupRequest(@JsonProperty("VerifiedAccessInstanceId") String verifiedAccessInstanceId) {
+        this.verifiedAccessInstanceId = verifiedAccessInstanceId;
+  }
 }

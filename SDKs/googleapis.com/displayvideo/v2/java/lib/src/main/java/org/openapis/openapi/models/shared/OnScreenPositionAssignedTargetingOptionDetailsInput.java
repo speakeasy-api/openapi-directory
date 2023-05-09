@@ -18,9 +18,11 @@ public class OnScreenPositionAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public OnScreenPositionAssignedTargetingOptionDetailsInput withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public OnScreenPositionAssignedTargetingOptionDetailsInput(){}
 }

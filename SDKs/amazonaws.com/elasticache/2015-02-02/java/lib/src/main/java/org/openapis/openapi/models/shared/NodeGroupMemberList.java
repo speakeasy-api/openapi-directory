@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NodeGroupMemberList {
     
     public String cacheClusterId;
+
     public NodeGroupMemberList withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,6 +20,7 @@ public class NodeGroupMemberList {
     
     
     public String cacheNodeId;
+
     public NodeGroupMemberList withCacheNodeId(String cacheNodeId) {
         this.cacheNodeId = cacheNodeId;
         return this;
@@ -26,6 +28,7 @@ public class NodeGroupMemberList {
     
     
     public String currentRole;
+
     public NodeGroupMemberList withCurrentRole(String currentRole) {
         this.currentRole = currentRole;
         return this;
@@ -33,6 +36,7 @@ public class NodeGroupMemberList {
     
     
     public String preferredAvailabilityZone;
+
     public NodeGroupMemberList withPreferredAvailabilityZone(String preferredAvailabilityZone) {
         this.preferredAvailabilityZone = preferredAvailabilityZone;
         return this;
@@ -40,6 +44,7 @@ public class NodeGroupMemberList {
     
     
     public String preferredOutpostArn;
+
     public NodeGroupMemberList withPreferredOutpostArn(String preferredOutpostArn) {
         this.preferredOutpostArn = preferredOutpostArn;
         return this;
@@ -47,9 +52,11 @@ public class NodeGroupMemberList {
     
     
     public Endpoint readEndpoint;
+
     public NodeGroupMemberList withReadEndpoint(Endpoint readEndpoint) {
         this.readEndpoint = readEndpoint;
         return this;
     }
     
+    public NodeGroupMemberList(){}
 }

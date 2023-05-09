@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateAppCookieStickinessPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateAppCookieStickinessPolicyActionEnum action;
+
     public GETCreateAppCookieStickinessPolicyRequest withAction(GETCreateAppCookieStickinessPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CookieName")
     public String cookieName;
+
     public GETCreateAppCookieStickinessPolicyRequest withCookieName(String cookieName) {
         this.cookieName = cookieName;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
     public String loadBalancerName;
+
     public GETCreateAppCookieStickinessPolicyRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
     public String policyName;
+
     public GETCreateAppCookieStickinessPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -46,6 +51,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateAppCookieStickinessPolicyVersionEnum version;
+
     public GETCreateAppCookieStickinessPolicyRequest withVersion(GETCreateAppCookieStickinessPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateAppCookieStickinessPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateAppCookieStickinessPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateAppCookieStickinessPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateAppCookieStickinessPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateAppCookieStickinessPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateAppCookieStickinessPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETCreateAppCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateAppCookieStickinessPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateAppCookieStickinessPolicyRequest(@JsonProperty("Action") GETCreateAppCookieStickinessPolicyActionEnum action, @JsonProperty("CookieName") String cookieName, @JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("PolicyName") String policyName, @JsonProperty("Version") GETCreateAppCookieStickinessPolicyVersionEnum version) {
+        this.action = action;
+        this.cookieName = cookieName;
+        this.loadBalancerName = loadBalancerName;
+        this.policyName = policyName;
+        this.version = version;
+  }
 }

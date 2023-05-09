@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelCapacityReservationFleetsResultFailedFleetCancellationsCancelCapacityReservationFleetError {
     
     public String code;
+
     public CancelCapacityReservationFleetsResultFailedFleetCancellationsCancelCapacityReservationFleetError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CancelCapacityReservationFleetsResultFailedFleetCancellationsCancel
     
     
     public String message;
+
     public CancelCapacityReservationFleetsResultFailedFleetCancellationsCancelCapacityReservationFleetError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CancelCapacityReservationFleetsResultFailedFleetCancellationsCancelCapacityReservationFleetError(){}
 }

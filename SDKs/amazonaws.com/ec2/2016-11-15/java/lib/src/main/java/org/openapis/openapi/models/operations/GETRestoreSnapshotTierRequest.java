@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreSnapshotTierRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRestoreSnapshotTierActionEnum action;
+
     public GETRestoreSnapshotTierRequest withAction(GETRestoreSnapshotTierActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRestoreSnapshotTierRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETRestoreSnapshotTierRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETRestoreSnapshotTierRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PermanentRestore")
     public Boolean permanentRestore;
+
     public GETRestoreSnapshotTierRequest withPermanentRestore(Boolean permanentRestore) {
         this.permanentRestore = permanentRestore;
         return this;
@@ -39,6 +43,7 @@ public class GETRestoreSnapshotTierRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotId")
     public String snapshotId;
+
     public GETRestoreSnapshotTierRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -49,6 +54,7 @@ public class GETRestoreSnapshotTierRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemporaryRestoreDays")
     public Long temporaryRestoreDays;
+
     public GETRestoreSnapshotTierRequest withTemporaryRestoreDays(Long temporaryRestoreDays) {
         this.temporaryRestoreDays = temporaryRestoreDays;
         return this;
@@ -56,6 +62,7 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRestoreSnapshotTierVersionEnum version;
+
     public GETRestoreSnapshotTierRequest withVersion(GETRestoreSnapshotTierVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRestoreSnapshotTierRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRestoreSnapshotTierRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRestoreSnapshotTierRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRestoreSnapshotTierRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRestoreSnapshotTierRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRestoreSnapshotTierRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETRestoreSnapshotTierRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRestoreSnapshotTierRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRestoreSnapshotTierRequest(@JsonProperty("Action") GETRestoreSnapshotTierActionEnum action, @JsonProperty("SnapshotId") String snapshotId, @JsonProperty("Version") GETRestoreSnapshotTierVersionEnum version) {
+        this.action = action;
+        this.snapshotId = snapshotId;
+        this.version = version;
+  }
 }

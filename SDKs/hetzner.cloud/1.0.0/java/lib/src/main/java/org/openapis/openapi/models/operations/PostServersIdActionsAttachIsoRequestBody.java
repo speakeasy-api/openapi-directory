@@ -12,9 +12,13 @@ public class PostServersIdActionsAttachIsoRequestBody {
      */
     @JsonProperty("iso")
     public String iso;
+
     public PostServersIdActionsAttachIsoRequestBody withIso(String iso) {
         this.iso = iso;
         return this;
     }
     
+    public PostServersIdActionsAttachIsoRequestBody(@JsonProperty("iso") String iso) {
+        this.iso = iso;
+  }
 }

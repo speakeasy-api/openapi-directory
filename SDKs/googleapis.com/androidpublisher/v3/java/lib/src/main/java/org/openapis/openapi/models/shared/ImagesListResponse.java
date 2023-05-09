@@ -18,9 +18,11 @@ public class ImagesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public Image[] images;
+
     public ImagesListResponse withImages(Image[] images) {
         this.images = images;
         return this;
     }
     
+    public ImagesListResponse(){}
 }

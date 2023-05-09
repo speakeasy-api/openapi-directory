@@ -15,6 +15,7 @@ public class PendingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public PendingMaintenance withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -23,9 +24,11 @@ public class PendingMaintenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public MaintenanceSchedule schedule;
+
     public PendingMaintenance withSchedule(MaintenanceSchedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public PendingMaintenance(){}
 }

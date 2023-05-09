@@ -14,6 +14,7 @@ public class CreateAssessmentRequestBody {
      */
     @JsonProperty("assessmentReportsDestination")
     public CreateAssessmentRequestBodyAssessmentReportsDestination assessmentReportsDestination;
+
     public CreateAssessmentRequestBody withAssessmentReportsDestination(CreateAssessmentRequestBodyAssessmentReportsDestination assessmentReportsDestination) {
         this.assessmentReportsDestination = assessmentReportsDestination;
         return this;
@@ -25,6 +26,7 @@ public class CreateAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAssessmentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class CreateAssessmentRequestBody {
      */
     @JsonProperty("frameworkId")
     public String frameworkId;
+
     public CreateAssessmentRequestBody withFrameworkId(String frameworkId) {
         this.frameworkId = frameworkId;
         return this;
@@ -45,6 +48,7 @@ public class CreateAssessmentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAssessmentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class CreateAssessmentRequestBody {
      */
     @JsonProperty("roles")
     public org.openapis.openapi.models.shared.Role[] roles;
+
     public CreateAssessmentRequestBody withRoles(org.openapis.openapi.models.shared.Role[] roles) {
         this.roles = roles;
         return this;
@@ -65,6 +70,7 @@ public class CreateAssessmentRequestBody {
      */
     @JsonProperty("scope")
     public CreateAssessmentRequestBodyScope scope;
+
     public CreateAssessmentRequestBody withScope(CreateAssessmentRequestBodyScope scope) {
         this.scope = scope;
         return this;
@@ -76,9 +82,17 @@ public class CreateAssessmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateAssessmentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAssessmentRequestBody(@JsonProperty("assessmentReportsDestination") CreateAssessmentRequestBodyAssessmentReportsDestination assessmentReportsDestination, @JsonProperty("frameworkId") String frameworkId, @JsonProperty("name") String name, @JsonProperty("roles") org.openapis.openapi.models.shared.Role[] roles, @JsonProperty("scope") CreateAssessmentRequestBodyScope scope) {
+        this.assessmentReportsDestination = assessmentReportsDestination;
+        this.frameworkId = frameworkId;
+        this.name = name;
+        this.roles = roles;
+        this.scope = scope;
+  }
 }

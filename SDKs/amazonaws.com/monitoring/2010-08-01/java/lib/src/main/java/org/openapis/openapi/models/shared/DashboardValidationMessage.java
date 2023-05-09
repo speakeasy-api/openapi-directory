@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DashboardValidationMessage {
     
     public String dataPath;
+
     public DashboardValidationMessage withDataPath(String dataPath) {
         this.dataPath = dataPath;
         return this;
@@ -19,9 +20,11 @@ public class DashboardValidationMessage {
     
     
     public String message;
+
     public DashboardValidationMessage withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DashboardValidationMessage(){}
 }

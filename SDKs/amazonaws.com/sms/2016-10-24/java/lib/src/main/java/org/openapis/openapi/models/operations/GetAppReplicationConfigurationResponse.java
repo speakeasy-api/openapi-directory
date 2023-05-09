@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAppReplicationConfigurationResponse {
     
     public String contentType;
+
     public GetAppReplicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAppReplicationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAppReplicationConfigurationResponse getAppReplicationConfigurationResponse;
+
     public GetAppReplicationConfigurationResponse withGetAppReplicationConfigurationResponse(org.openapis.openapi.models.shared.GetAppReplicationConfigurationResponse getAppReplicationConfigurationResponse) {
         this.getAppReplicationConfigurationResponse = getAppReplicationConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAppReplicationConfigurationResponse {
      */
     
     public Object internalError;
+
     public GetAppReplicationConfigurationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class GetAppReplicationConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAppReplicationConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetAppReplicationConfigurationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetAppReplicationConfigurationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetAppReplicationConfigurationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetAppReplicationConfigurationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GetAppReplicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetAppReplicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAppReplicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAppReplicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetAppReplicationConfigurationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public GetAppReplicationConfigurationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public GetAppReplicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

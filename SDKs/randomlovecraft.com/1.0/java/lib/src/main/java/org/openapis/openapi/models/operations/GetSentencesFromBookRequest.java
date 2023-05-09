@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSentencesFromBookRequest {
@@ -12,6 +13,7 @@ public class GetSentencesFromBookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSentencesFromBookRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +21,13 @@ public class GetSentencesFromBookRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSentencesFromBookRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetSentencesFromBookRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

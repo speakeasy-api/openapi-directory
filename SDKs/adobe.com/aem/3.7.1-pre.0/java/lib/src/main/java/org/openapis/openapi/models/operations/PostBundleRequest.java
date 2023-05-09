@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBundleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
     public String action;
+
     public PostBundleRequest withAction(String action) {
         this.action = action;
         return this;
@@ -16,9 +18,14 @@ public class PostBundleRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public PostBundleRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostBundleRequest(@JsonProperty("action") String action, @JsonProperty("name") String name) {
+        this.action = action;
+        this.name = name;
+  }
 }

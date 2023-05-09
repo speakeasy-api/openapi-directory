@@ -18,6 +18,7 @@ public class AppleMappingCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apple_id")
     public String appleId;
+
     public AppleMappingCreateRequestBody withAppleId(String appleId) {
         this.appleId = appleId;
         return this;
@@ -29,6 +30,7 @@ public class AppleMappingCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundle_identifier")
     public String bundleIdentifier;
+
     public AppleMappingCreateRequestBody withBundleIdentifier(String bundleIdentifier) {
         this.bundleIdentifier = bundleIdentifier;
         return this;
@@ -39,6 +41,7 @@ public class AppleMappingCreateRequestBody {
      */
     @JsonProperty("service_connection_id")
     public String serviceConnectionId;
+
     public AppleMappingCreateRequestBody withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
@@ -49,9 +52,14 @@ public class AppleMappingCreateRequestBody {
      */
     @JsonProperty("team_identifier")
     public String teamIdentifier;
+
     public AppleMappingCreateRequestBody withTeamIdentifier(String teamIdentifier) {
         this.teamIdentifier = teamIdentifier;
         return this;
     }
     
+    public AppleMappingCreateRequestBody(@JsonProperty("service_connection_id") String serviceConnectionId, @JsonProperty("team_identifier") String teamIdentifier) {
+        this.serviceConnectionId = serviceConnectionId;
+        this.teamIdentifier = teamIdentifier;
+  }
 }

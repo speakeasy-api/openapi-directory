@@ -18,6 +18,7 @@ public class CompactCustomPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPolicyId")
     public String customPolicyId;
+
     public CompactCustomPolicyResponse withCustomPolicyId(String customPolicyId) {
         this.customPolicyId = customPolicyId;
         return this;
@@ -29,6 +30,7 @@ public class CompactCustomPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CompactCustomPolicyResponse withLabel(String label) {
         this.label = label;
         return this;
@@ -40,6 +42,7 @@ public class CompactCustomPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CompactCustomPolicyResponse withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class CompactCustomPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyType")
     public String policyType;
+
     public CompactCustomPolicyResponse withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public CompactCustomPolicyResponse(){}
 }

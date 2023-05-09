@@ -15,6 +15,7 @@ public class LicenseEditorialContentRequest {
      */
     @JsonProperty("country")
     public Object country;
+
     public LicenseEditorialContentRequest withCountry(Object country) {
         this.country = country;
         return this;
@@ -25,9 +26,14 @@ public class LicenseEditorialContentRequest {
      */
     @JsonProperty("editorial")
     public LicenseEditorialContent[] editorial;
+
     public LicenseEditorialContentRequest withEditorial(LicenseEditorialContent[] editorial) {
         this.editorial = editorial;
         return this;
     }
     
+    public LicenseEditorialContentRequest(@JsonProperty("country") Object country, @JsonProperty("editorial") LicenseEditorialContent[] editorial) {
+        this.country = country;
+        this.editorial = editorial;
+  }
 }

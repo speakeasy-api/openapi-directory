@@ -18,6 +18,7 @@ public class AccountsAuthInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIdentifiers")
     public AccountIdentifier[] accountIdentifiers;
+
     public AccountsAuthInfoResponse withAccountIdentifiers(AccountIdentifier[] accountIdentifiers) {
         this.accountIdentifiers = accountIdentifiers;
         return this;
@@ -29,9 +30,11 @@ public class AccountsAuthInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountsAuthInfoResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountsAuthInfoResponse(){}
 }

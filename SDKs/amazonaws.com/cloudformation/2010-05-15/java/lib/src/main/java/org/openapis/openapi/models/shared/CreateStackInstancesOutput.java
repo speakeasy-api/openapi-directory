@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateStackInstancesOutput {
     
     public String operationId;
+
     public CreateStackInstancesOutput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public CreateStackInstancesOutput(){}
 }

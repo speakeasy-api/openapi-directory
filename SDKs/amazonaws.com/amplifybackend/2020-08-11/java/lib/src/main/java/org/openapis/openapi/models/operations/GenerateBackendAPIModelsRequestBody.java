@@ -12,9 +12,13 @@ public class GenerateBackendAPIModelsRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GenerateBackendAPIModelsRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GenerateBackendAPIModelsRequestBody(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

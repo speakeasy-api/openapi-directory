@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OAuth2Error {
     @JsonProperty("error")
     public String error;
+
     public OAuth2Error withError(String error) {
         this.error = error;
         return this;
@@ -23,9 +24,13 @@ public class OAuth2Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_description")
     public String errorDescription;
+
     public OAuth2Error withErrorDescription(String errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public OAuth2Error(@JsonProperty("error") String error) {
+        this.error = error;
+  }
 }

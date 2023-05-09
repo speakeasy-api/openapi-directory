@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VenuesRequest {
@@ -12,9 +13,13 @@ public class VenuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public VenuesFormatEnum format;
+
     public VenuesRequest withFormat(VenuesFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public VenuesRequest(@JsonProperty("format") VenuesFormatEnum format) {
+        this.format = format;
+  }
 }

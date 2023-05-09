@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListDeploymentsRequest {
@@ -12,6 +13,7 @@ public class ReposListDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public ReposListDeploymentsRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -19,6 +21,7 @@ public class ReposListDeploymentsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposListDeploymentsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class ReposListDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposListDeploymentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -39,6 +43,7 @@ public class ReposListDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposListDeploymentsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -49,6 +54,7 @@ public class ReposListDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
     public String ref;
+
     public ReposListDeploymentsRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -56,6 +62,7 @@ public class ReposListDeploymentsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposListDeploymentsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -66,6 +73,7 @@ public class ReposListDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha")
     public String sha;
+
     public ReposListDeploymentsRequest withSha(String sha) {
         this.sha = sha;
         return this;
@@ -76,9 +84,14 @@ public class ReposListDeploymentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=task")
     public String task;
+
     public ReposListDeploymentsRequest withTask(String task) {
         this.task = task;
         return this;
     }
     
+    public ReposListDeploymentsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

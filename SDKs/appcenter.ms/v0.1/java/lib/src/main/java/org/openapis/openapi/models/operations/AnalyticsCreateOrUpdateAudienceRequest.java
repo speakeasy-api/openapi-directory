@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCreateOrUpdateAudienceRequest {
@@ -12,6 +13,7 @@ public class AnalyticsCreateOrUpdateAudienceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AnalyticsCreateOrUpdateAudienceRequestBody requestBody;
+
     public AnalyticsCreateOrUpdateAudienceRequest withRequestBody(AnalyticsCreateOrUpdateAudienceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsCreateOrUpdateAudienceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsCreateOrUpdateAudienceRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class AnalyticsCreateOrUpdateAudienceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=audience_name")
     public String audienceName;
+
     public AnalyticsCreateOrUpdateAudienceRequest withAudienceName(String audienceName) {
         this.audienceName = audienceName;
         return this;
@@ -42,9 +46,16 @@ public class AnalyticsCreateOrUpdateAudienceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsCreateOrUpdateAudienceRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public AnalyticsCreateOrUpdateAudienceRequest(@JsonProperty("RequestBody") AnalyticsCreateOrUpdateAudienceRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("audience_name") String audienceName, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.audienceName = audienceName;
+        this.ownerName = ownerName;
+  }
 }

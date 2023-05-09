@@ -15,6 +15,7 @@ public class LaunchPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public LaunchPath withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class LaunchPath {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public LaunchPath withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LaunchPath(){}
 }

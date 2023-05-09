@@ -18,9 +18,11 @@ public class WorkspaceAddUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public WorkspaceAddUserRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public WorkspaceAddUserRequest(){}
 }

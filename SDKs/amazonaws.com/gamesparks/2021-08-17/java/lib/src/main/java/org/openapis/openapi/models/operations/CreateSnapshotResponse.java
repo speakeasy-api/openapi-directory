@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSnapshotResponse {
@@ -12,6 +13,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object conflictException;
+
     public CreateSnapshotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateSnapshotResponse {
     
     
     public String contentType;
+
     public CreateSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSnapshotResult createSnapshotResult;
+
     public CreateSnapshotResponse withCreateSnapshotResult(org.openapis.openapi.models.shared.CreateSnapshotResult createSnapshotResult) {
         this.createSnapshotResult = createSnapshotResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public CreateSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object throttlingException;
+
     public CreateSnapshotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSnapshotResponse {
      */
     
     public Object validationException;
+
     public CreateSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

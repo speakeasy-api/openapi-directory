@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEventLogsResponse {
     @JsonProperty("items")
     public EventLogEntry[] items;
+
     public ListEventLogsResponse withItems(EventLogEntry[] items) {
         this.items = items;
         return this;
@@ -22,9 +23,13 @@ public class ListEventLogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEventLogsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventLogsResponse(@JsonProperty("items") EventLogEntry[] items) {
+        this.items = items;
+  }
 }

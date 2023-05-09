@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkflowResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkflowResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorkflowResponse {
     
     
     public String contentType;
+
     public DeleteWorkflowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object internalServiceError;
+
     public DeleteWorkflowResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteWorkflowResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkflowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteWorkflowResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteWorkflowResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteWorkflowResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkflowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteWorkflowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkflowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteWorkflowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class TaskExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public TaskDetailVO result;
+
     public TaskExpandVO withResult(TaskDetailVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class TaskExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public TaskExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class TaskExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public TaskExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public TaskExpandVO(){}
 }

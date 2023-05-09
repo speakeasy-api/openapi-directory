@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvokeEndpointAsyncRequest {
@@ -12,6 +13,7 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EndpointName")
     public String endpointName;
+
     public InvokeEndpointAsyncRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -19,6 +21,7 @@ public class InvokeEndpointAsyncRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public InvokeEndpointAsyncRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -26,6 +29,7 @@ public class InvokeEndpointAsyncRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public InvokeEndpointAsyncRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -33,6 +37,7 @@ public class InvokeEndpointAsyncRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public InvokeEndpointAsyncRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -40,6 +45,7 @@ public class InvokeEndpointAsyncRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public InvokeEndpointAsyncRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -47,6 +53,7 @@ public class InvokeEndpointAsyncRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public InvokeEndpointAsyncRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -54,6 +61,7 @@ public class InvokeEndpointAsyncRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public InvokeEndpointAsyncRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -61,6 +69,7 @@ public class InvokeEndpointAsyncRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public InvokeEndpointAsyncRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -71,6 +80,7 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Accept")
     public String xAmznSageMakerAccept;
+
     public InvokeEndpointAsyncRequest withXAmznSageMakerAccept(String xAmznSageMakerAccept) {
         this.xAmznSageMakerAccept = xAmznSageMakerAccept;
         return this;
@@ -81,6 +91,7 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Content-Type")
     public String xAmznSageMakerContentType;
+
     public InvokeEndpointAsyncRequest withXAmznSageMakerContentType(String xAmznSageMakerContentType) {
         this.xAmznSageMakerContentType = xAmznSageMakerContentType;
         return this;
@@ -91,6 +102,7 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Custom-Attributes")
     public String xAmznSageMakerCustomAttributes;
+
     public InvokeEndpointAsyncRequest withXAmznSageMakerCustomAttributes(String xAmznSageMakerCustomAttributes) {
         this.xAmznSageMakerCustomAttributes = xAmznSageMakerCustomAttributes;
         return this;
@@ -101,6 +113,7 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Inference-Id")
     public String xAmznSageMakerInferenceId;
+
     public InvokeEndpointAsyncRequest withXAmznSageMakerInferenceId(String xAmznSageMakerInferenceId) {
         this.xAmznSageMakerInferenceId = xAmznSageMakerInferenceId;
         return this;
@@ -111,6 +124,7 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-InputLocation")
     public String xAmznSageMakerInputLocation;
+
     public InvokeEndpointAsyncRequest withXAmznSageMakerInputLocation(String xAmznSageMakerInputLocation) {
         this.xAmznSageMakerInputLocation = xAmznSageMakerInputLocation;
         return this;
@@ -121,6 +135,7 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-InvocationTimeoutSeconds")
     public Long xAmznSageMakerInvocationTimeoutSeconds;
+
     public InvokeEndpointAsyncRequest withXAmznSageMakerInvocationTimeoutSeconds(Long xAmznSageMakerInvocationTimeoutSeconds) {
         this.xAmznSageMakerInvocationTimeoutSeconds = xAmznSageMakerInvocationTimeoutSeconds;
         return this;
@@ -131,9 +146,14 @@ public class InvokeEndpointAsyncRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-RequestTTLSeconds")
     public Long xAmznSageMakerRequestTTLSeconds;
+
     public InvokeEndpointAsyncRequest withXAmznSageMakerRequestTTLSeconds(Long xAmznSageMakerRequestTTLSeconds) {
         this.xAmznSageMakerRequestTTLSeconds = xAmznSageMakerRequestTTLSeconds;
         return this;
     }
     
+    public InvokeEndpointAsyncRequest(@JsonProperty("EndpointName") String endpointName, @JsonProperty("X-Amzn-SageMaker-InputLocation") String xAmznSageMakerInputLocation) {
+        this.endpointName = endpointName;
+        this.xAmznSageMakerInputLocation = xAmznSageMakerInputLocation;
+  }
 }

@@ -18,9 +18,11 @@ public class Program {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programType")
     public String programType;
+
     public Program withProgramType(String programType) {
         this.programType = programType;
         return this;
     }
     
+    public Program(){}
 }

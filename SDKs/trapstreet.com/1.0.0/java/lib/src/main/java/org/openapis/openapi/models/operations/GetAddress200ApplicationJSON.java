@@ -15,6 +15,7 @@ public class GetAddress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetAddress200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class GetAddress200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trap")
     public Boolean trap;
+
     public GetAddress200ApplicationJSON withTrap(Boolean trap) {
         this.trap = trap;
         return this;
     }
     
+    public GetAddress200ApplicationJSON(){}
 }

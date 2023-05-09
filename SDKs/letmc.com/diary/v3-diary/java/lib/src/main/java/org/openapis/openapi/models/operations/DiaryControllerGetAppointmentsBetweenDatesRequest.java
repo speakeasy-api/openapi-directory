@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentTypesToSearch")
     public String[] appointmentTypesToSearch;
+
     public DiaryControllerGetAppointmentsBetweenDatesRequest withAppointmentTypesToSearch(String[] appointmentTypesToSearch) {
         this.appointmentTypesToSearch = appointmentTypesToSearch;
         return this;
@@ -23,6 +25,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
     public String branchID;
+
     public DiaryControllerGetAppointmentsBetweenDatesRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -33,6 +36,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public DiaryControllerGetAppointmentsBetweenDatesRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -43,6 +47,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public DiaryControllerGetAppointmentsBetweenDatesRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -53,6 +58,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public DiaryControllerGetAppointmentsBetweenDatesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -63,6 +69,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerGetAppointmentsBetweenDatesRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -73,9 +80,19 @@ public class DiaryControllerGetAppointmentsBetweenDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public DiaryControllerGetAppointmentsBetweenDatesRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public DiaryControllerGetAppointmentsBetweenDatesRequest(@JsonProperty("appointmentTypesToSearch") String[] appointmentTypesToSearch, @JsonProperty("branchID") String branchID, @JsonProperty("count") Integer count, @JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("offset") Integer offset, @JsonProperty("shortName") String shortName, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.appointmentTypesToSearch = appointmentTypesToSearch;
+        this.branchID = branchID;
+        this.count = count;
+        this.endDate = endDate;
+        this.offset = offset;
+        this.shortName = shortName;
+        this.startDate = startDate;
+  }
 }

@@ -12,9 +12,13 @@ public class AppsDeleteTokenRequestBody {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public AppsDeleteTokenRequestBody withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public AppsDeleteTokenRequestBody(@JsonProperty("access_token") String accessToken) {
+        this.accessToken = accessToken;
+  }
 }

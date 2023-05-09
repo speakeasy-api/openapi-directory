@@ -18,9 +18,11 @@ public class SendOfferToInterestedBuyersCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offers")
     public Offer[] offers;
+
     public SendOfferToInterestedBuyersCollectionResponse withOffers(Offer[] offers) {
         this.offers = offers;
         return this;
     }
     
+    public SendOfferToInterestedBuyersCollectionResponse(){}
 }

@@ -12,6 +12,7 @@ public class AssociateApplicationsRequestBody {
      */
     @JsonProperty("applicationIDs")
     public String[] applicationIDs;
+
     public AssociateApplicationsRequestBody withApplicationIDs(String[] applicationIDs) {
         this.applicationIDs = applicationIDs;
         return this;
@@ -22,9 +23,14 @@ public class AssociateApplicationsRequestBody {
      */
     @JsonProperty("waveID")
     public String waveID;
+
     public AssociateApplicationsRequestBody withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public AssociateApplicationsRequestBody(@JsonProperty("applicationIDs") String[] applicationIDs, @JsonProperty("waveID") String waveID) {
+        this.applicationIDs = applicationIDs;
+        this.waveID = waveID;
+  }
 }

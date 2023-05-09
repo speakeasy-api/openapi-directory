@@ -15,6 +15,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatencyInMs")
     public java.util.Map<String, Long> latencyInMs;
+
     public Player withLatencyInMs(java.util.Map<String, Long> latencyInMs) {
         this.latencyInMs = latencyInMs;
         return this;
@@ -23,6 +24,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerAttributes")
     public java.util.Map<String, AttributeValue> playerAttributes;
+
     public Player withPlayerAttributes(java.util.Map<String, AttributeValue> playerAttributes) {
         this.playerAttributes = playerAttributes;
         return this;
@@ -31,6 +33,7 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public String playerId;
+
     public Player withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
@@ -39,9 +42,11 @@ public class Player {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Player withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public Player(){}
 }

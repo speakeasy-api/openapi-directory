@@ -18,6 +18,7 @@ public class EnumPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public EnumOperatorOptions operatorOptions;
+
     public EnumPropertyOptions withOperatorOptions(EnumOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
@@ -29,6 +30,7 @@ public class EnumPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderedRanking")
     public EnumPropertyOptionsOrderedRankingEnum orderedRanking;
+
     public EnumPropertyOptions withOrderedRanking(EnumPropertyOptionsOrderedRankingEnum orderedRanking) {
         this.orderedRanking = orderedRanking;
         return this;
@@ -40,9 +42,11 @@ public class EnumPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("possibleValues")
     public EnumValuePair[] possibleValues;
+
     public EnumPropertyOptions withPossibleValues(EnumValuePair[] possibleValues) {
         this.possibleValues = possibleValues;
         return this;
     }
     
+    public EnumPropertyOptions(){}
 }

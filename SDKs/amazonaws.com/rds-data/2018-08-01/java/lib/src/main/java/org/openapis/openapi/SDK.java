@@ -149,6 +149,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -186,7 +191,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchExecuteStatementResponse res = new org.openapis.openapi.models.operations.BatchExecuteStatementResponse() {{
+        org.openapis.openapi.models.operations.BatchExecuteStatementResponse res = new org.openapis.openapi.models.operations.BatchExecuteStatementResponse(contentType, httpRes.statusCode()) {{
             batchExecuteStatementResponse = null;
             accessDeniedException = null;
             badRequestException = null;
@@ -195,8 +200,6 @@ public class SDK {
             forbiddenException = null;
             serviceUnavailableError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,7 +289,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BeginTransactionResponse res = new org.openapis.openapi.models.operations.BeginTransactionResponse() {{
+        org.openapis.openapi.models.operations.BeginTransactionResponse res = new org.openapis.openapi.models.operations.BeginTransactionResponse(contentType, httpRes.statusCode()) {{
             beginTransactionResponse = null;
             accessDeniedException = null;
             badRequestException = null;
@@ -295,8 +298,6 @@ public class SDK {
             forbiddenException = null;
             serviceUnavailableError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -386,7 +387,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommitTransactionResponse res = new org.openapis.openapi.models.operations.CommitTransactionResponse() {{
+        org.openapis.openapi.models.operations.CommitTransactionResponse res = new org.openapis.openapi.models.operations.CommitTransactionResponse(contentType, httpRes.statusCode()) {{
             commitTransactionResponse = null;
             accessDeniedException = null;
             badRequestException = null;
@@ -396,8 +397,6 @@ public class SDK {
             serviceUnavailableError = null;
             notFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,7 +464,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ExecuteSqlResponse executeSql(org.openapis.openapi.models.operations.ExecuteSqlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ExecuteSql");
@@ -494,7 +495,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteSqlResponse res = new org.openapis.openapi.models.operations.ExecuteSqlResponse() {{
+        org.openapis.openapi.models.operations.ExecuteSqlResponse res = new org.openapis.openapi.models.operations.ExecuteSqlResponse(contentType, httpRes.statusCode()) {{
             executeSqlResponse = null;
             accessDeniedException = null;
             badRequestException = null;
@@ -502,8 +503,6 @@ public class SDK {
             forbiddenException = null;
             serviceUnavailableError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,7 +585,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteStatementResponse res = new org.openapis.openapi.models.operations.ExecuteStatementResponse() {{
+        org.openapis.openapi.models.operations.ExecuteStatementResponse res = new org.openapis.openapi.models.operations.ExecuteStatementResponse(contentType, httpRes.statusCode()) {{
             executeStatementResponse = null;
             accessDeniedException = null;
             badRequestException = null;
@@ -595,8 +594,6 @@ public class SDK {
             forbiddenException = null;
             serviceUnavailableError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -686,7 +683,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RollbackTransactionResponse res = new org.openapis.openapi.models.operations.RollbackTransactionResponse() {{
+        org.openapis.openapi.models.operations.RollbackTransactionResponse res = new org.openapis.openapi.models.operations.RollbackTransactionResponse(contentType, httpRes.statusCode()) {{
             rollbackTransactionResponse = null;
             accessDeniedException = null;
             badRequestException = null;
@@ -696,8 +693,6 @@ public class SDK {
             serviceUnavailableError = null;
             notFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

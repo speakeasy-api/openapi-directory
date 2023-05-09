@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDistrictRankingsRequest {
@@ -12,6 +13,7 @@ public class GetDistrictRankingsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetDistrictRankingsRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -22,9 +24,13 @@ public class GetDistrictRankingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=district_key")
     public String districtKey;
+
     public GetDistrictRankingsRequest withDistrictKey(String districtKey) {
         this.districtKey = districtKey;
         return this;
     }
     
+    public GetDistrictRankingsRequest(@JsonProperty("district_key") String districtKey) {
+        this.districtKey = districtKey;
+  }
 }

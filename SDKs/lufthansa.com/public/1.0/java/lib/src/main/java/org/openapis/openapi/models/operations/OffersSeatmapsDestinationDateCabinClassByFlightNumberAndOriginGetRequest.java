@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest {
@@ -12,6 +13,7 @@ public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRe
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cabinClass")
     public String cabinClass;
+
     public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withDate(String date) {
         this.date = date;
         return this;
@@ -42,6 +46,7 @@ public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
     public String destination;
+
     public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -52,6 +57,7 @@ public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flightNumber")
     public String flightNumber;
+
     public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withFlightNumber(String flightNumber) {
         this.flightNumber = flightNumber;
         return this;
@@ -62,9 +68,18 @@ public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
     public String origin;
+
     public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
     }
     
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest(@JsonProperty("Accept") String accept, @JsonProperty("cabinClass") String cabinClass, @JsonProperty("date") String date, @JsonProperty("destination") String destination, @JsonProperty("flightNumber") String flightNumber, @JsonProperty("origin") String origin) {
+        this.accept = accept;
+        this.cabinClass = cabinClass;
+        this.date = date;
+        this.destination = destination;
+        this.flightNumber = flightNumber;
+        this.origin = origin;
+  }
 }

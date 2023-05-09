@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResumeGameServerGroupResponse {
     
     public String contentType;
+
     public ResumeGameServerGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResumeGameServerGroupResponse {
      */
     
     public Object internalServiceException;
+
     public ResumeGameServerGroupResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ResumeGameServerGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public ResumeGameServerGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ResumeGameServerGroupResponse {
      */
     
     public Object notFoundException;
+
     public ResumeGameServerGroupResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ResumeGameServerGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ResumeGameServerGroupOutput resumeGameServerGroupOutput;
+
     public ResumeGameServerGroupResponse withResumeGameServerGroupOutput(org.openapis.openapi.models.shared.ResumeGameServerGroupOutput resumeGameServerGroupOutput) {
         this.resumeGameServerGroupOutput = resumeGameServerGroupOutput;
         return this;
@@ -56,6 +62,7 @@ public class ResumeGameServerGroupResponse {
     
     
     public Integer statusCode;
+
     public ResumeGameServerGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ResumeGameServerGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResumeGameServerGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ResumeGameServerGroupResponse {
      */
     
     public Object unauthorizedException;
+
     public ResumeGameServerGroupResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ResumeGameServerGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

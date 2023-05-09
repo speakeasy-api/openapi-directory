@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserFeedback {
     @JsonProperty("type")
     public FeedbackTypeEnum type;
+
     public UserFeedback withType(FeedbackTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UserFeedback(@JsonProperty("type") FeedbackTypeEnum type) {
+        this.type = type;
+  }
 }

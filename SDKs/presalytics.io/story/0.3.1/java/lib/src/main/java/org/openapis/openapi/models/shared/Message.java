@@ -20,6 +20,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Message withBody(String body) {
         this.body = body;
         return this;
@@ -28,6 +29,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Message withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +38,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remote")
     public Boolean remote;
+
     public Message withRemote(Boolean remote) {
         this.remote = remote;
         return this;
@@ -46,6 +49,7 @@ public class Message {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Message withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -54,6 +58,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public Message withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -62,9 +67,11 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public Message withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public Message(){}
 }

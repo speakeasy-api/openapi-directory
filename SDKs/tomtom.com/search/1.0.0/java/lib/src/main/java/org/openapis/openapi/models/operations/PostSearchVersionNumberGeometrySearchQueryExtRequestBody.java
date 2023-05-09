@@ -12,9 +12,11 @@ public class PostSearchVersionNumberGeometrySearchQueryExtRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geometryList")
     public PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList[] geometryList;
+
     public PostSearchVersionNumberGeometrySearchQueryExtRequestBody withGeometryList(PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList[] geometryList) {
         this.geometryList = geometryList;
         return this;
     }
     
+    public PostSearchVersionNumberGeometrySearchQueryExtRequestBody(){}
 }

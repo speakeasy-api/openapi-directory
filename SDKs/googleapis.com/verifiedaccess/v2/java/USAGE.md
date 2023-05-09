@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateSecurity;
 import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateRequest;
 import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateResponse;
+import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -17,14 +16,14 @@ public class Application {
                 .build();
 
             VerifiedaccessChallengeGenerateRequest req = new VerifiedaccessChallengeGenerateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 requestBody = new java.util.HashMap<String, Object>() {{
                     put("distinctio", "quibusdam");
                     put("unde", "nulla");
                     put("corrupti", "illum");
                 }};
                 accessToken = "vel";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "deserunt";
                 fields = "suscipit";
                 key = "iure";
@@ -33,18 +32,20 @@ public class Application {
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
-            VerifiedaccessChallengeGenerateResponse res = sdk.challenge.verifiedaccessChallengeGenerate(req, new VerifiedaccessChallengeGenerateSecurity() {{
+            VerifiedaccessChallengeGenerateResponse res = sdk.challenge.verifiedaccessChallengeGenerate(req, new VerifiedaccessChallengeGenerateSecurity("tempora", "suscipit") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.challenge.isPresent()) {
+            if (res.challenge != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BranchDiffSourceCodeType {
     @JsonProperty("DestinationBranchName")
     public String destinationBranchName;
+
     public BranchDiffSourceCodeType withDestinationBranchName(String destinationBranchName) {
         this.destinationBranchName = destinationBranchName;
         return this;
@@ -19,9 +20,14 @@ public class BranchDiffSourceCodeType {
     
     @JsonProperty("SourceBranchName")
     public String sourceBranchName;
+
     public BranchDiffSourceCodeType withSourceBranchName(String sourceBranchName) {
         this.sourceBranchName = sourceBranchName;
         return this;
     }
     
+    public BranchDiffSourceCodeType(@JsonProperty("DestinationBranchName") String destinationBranchName, @JsonProperty("SourceBranchName") String sourceBranchName) {
+        this.destinationBranchName = destinationBranchName;
+        this.sourceBranchName = sourceBranchName;
+  }
 }

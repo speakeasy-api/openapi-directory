@@ -18,6 +18,7 @@ public class PointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeInterval")
     public TimeInterval timeInterval;
+
     public PointData withTimeInterval(TimeInterval timeInterval) {
         this.timeInterval = timeInterval;
         return this;
@@ -29,9 +30,11 @@ public class PointData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public TypedValue[] values;
+
     public PointData withValues(TypedValue[] values) {
         this.values = values;
         return this;
     }
     
+    public PointData(){}
 }

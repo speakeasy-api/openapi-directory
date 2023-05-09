@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesLineServiceTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesLineServiceTypeInfo withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesLineServiceTypeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public TflApiPresentationEntitiesLineServiceTypeInfo withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public TflApiPresentationEntitiesLineServiceTypeInfo(){}
 }

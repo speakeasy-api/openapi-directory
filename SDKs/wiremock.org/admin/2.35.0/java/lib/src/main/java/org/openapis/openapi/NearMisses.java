@@ -53,11 +53,9 @@ public class NearMisses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedNearMissesResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedNearMissesResponse() {{
+        org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedNearMissesResponse res = new org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedNearMissesResponse(contentType, httpRes.statusCode()) {{
             getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class NearMisses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminNearMissesRequestResponse res = new org.openapis.openapi.models.operations.PostAdminNearMissesRequestResponse() {{
+        org.openapis.openapi.models.operations.PostAdminNearMissesRequestResponse res = new org.openapis.openapi.models.operations.PostAdminNearMissesRequestResponse(contentType, httpRes.statusCode()) {{
             postAdminNearMissesRequest200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class NearMisses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternResponse res = new org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternResponse() {{
+        org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternResponse res = new org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternResponse(contentType, httpRes.statusCode()) {{
             postAdminNearMissesRequestPattern200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

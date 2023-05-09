@@ -16,6 +16,7 @@ public class UpdateExpirationForHITRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpireAt")
     public OffsetDateTime expireAt;
+
     public UpdateExpirationForHITRequest withExpireAt(OffsetDateTime expireAt) {
         this.expireAt = expireAt;
         return this;
@@ -23,9 +24,14 @@ public class UpdateExpirationForHITRequest {
     
     @JsonProperty("HITId")
     public String hitId;
+
     public UpdateExpirationForHITRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
     }
     
+    public UpdateExpirationForHITRequest(@JsonProperty("ExpireAt") OffsetDateTime expireAt, @JsonProperty("HITId") String hitId) {
+        this.expireAt = expireAt;
+        this.hitId = hitId;
+  }
 }

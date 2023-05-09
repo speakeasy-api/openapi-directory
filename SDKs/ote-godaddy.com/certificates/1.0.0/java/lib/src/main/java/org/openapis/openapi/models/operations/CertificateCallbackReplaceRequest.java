@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateCallbackReplaceRequest {
@@ -12,6 +13,7 @@ public class CertificateCallbackReplaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callbackUrl")
     public String callbackUrl;
+
     public CertificateCallbackReplaceRequest withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -22,9 +24,14 @@ public class CertificateCallbackReplaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
     public String certificateId;
+
     public CertificateCallbackReplaceRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public CertificateCallbackReplaceRequest(@JsonProperty("callbackUrl") String callbackUrl, @JsonProperty("certificateId") String certificateId) {
+        this.callbackUrl = callbackUrl;
+        this.certificateId = certificateId;
+  }
 }

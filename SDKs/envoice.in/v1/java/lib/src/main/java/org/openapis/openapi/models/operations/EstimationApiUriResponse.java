@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EstimationApiUriResponse {
     
     public byte[] body;
+
     public EstimationApiUriResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiUriResponse {
     
     
     public String contentType;
+
     public EstimationApiUriResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class EstimationApiUriResponse {
      */
     
     public org.openapis.openapi.models.shared.EstimationUriApiModel estimationUriApiModel;
+
     public EstimationApiUriResponse withEstimationUriApiModel(org.openapis.openapi.models.shared.EstimationUriApiModel estimationUriApiModel) {
         this.estimationUriApiModel = estimationUriApiModel;
         return this;
@@ -33,6 +37,7 @@ public class EstimationApiUriResponse {
     
     
     public Integer statusCode;
+
     public EstimationApiUriResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class EstimationApiUriResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EstimationApiUriResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EstimationApiUriResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

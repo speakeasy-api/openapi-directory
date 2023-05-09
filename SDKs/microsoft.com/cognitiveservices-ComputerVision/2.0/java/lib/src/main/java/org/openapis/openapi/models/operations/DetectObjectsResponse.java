@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectObjectsResponse {
@@ -12,6 +13,7 @@ public class DetectObjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.ComputerVisionError computerVisionError;
+
     public DetectObjectsResponse withComputerVisionError(org.openapis.openapi.models.shared.ComputerVisionError computerVisionError) {
         this.computerVisionError = computerVisionError;
         return this;
@@ -19,6 +21,7 @@ public class DetectObjectsResponse {
     
     
     public String contentType;
+
     public DetectObjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetectObjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectResult detectResult;
+
     public DetectObjectsResponse withDetectResult(org.openapis.openapi.models.shared.DetectResult detectResult) {
         this.detectResult = detectResult;
         return this;
@@ -36,6 +40,7 @@ public class DetectObjectsResponse {
     
     
     public Integer statusCode;
+
     public DetectObjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DetectObjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectObjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DetectObjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

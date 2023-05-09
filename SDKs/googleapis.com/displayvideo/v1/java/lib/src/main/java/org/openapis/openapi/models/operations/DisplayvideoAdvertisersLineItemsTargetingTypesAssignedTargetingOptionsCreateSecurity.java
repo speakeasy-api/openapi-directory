@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
@@ -16,9 +18,14 @@ public class DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOpti
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2c;
+
     public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateSecurity withOauth2c(String oauth2c) {
         this.oauth2c = oauth2c;
         return this;
     }
     
+    public DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateSecurity(@JsonProperty("Oauth2") String oauth2, @JsonProperty("Oauth2c") String oauth2c) {
+        this.oauth2 = oauth2;
+        this.oauth2c = oauth2c;
+  }
 }

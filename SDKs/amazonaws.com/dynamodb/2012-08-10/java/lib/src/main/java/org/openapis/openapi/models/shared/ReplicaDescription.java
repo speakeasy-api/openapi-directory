@@ -20,6 +20,7 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexes")
     public ReplicaGlobalSecondaryIndexDescription[] globalSecondaryIndexes;
+
     public ReplicaDescription withGlobalSecondaryIndexes(ReplicaGlobalSecondaryIndexDescription[] globalSecondaryIndexes) {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         return this;
@@ -28,6 +29,7 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSMasterKeyId")
     public String kmsMasterKeyId;
+
     public ReplicaDescription withKMSMasterKeyId(String kmsMasterKeyId) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         return this;
@@ -36,6 +38,7 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputOverride")
     public ProvisionedThroughputOverride provisionedThroughputOverride;
+
     public ReplicaDescription withProvisionedThroughputOverride(ProvisionedThroughputOverride provisionedThroughputOverride) {
         this.provisionedThroughputOverride = provisionedThroughputOverride;
         return this;
@@ -44,6 +47,7 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionName")
     public String regionName;
+
     public ReplicaDescription withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -54,6 +58,7 @@ public class ReplicaDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReplicaInaccessibleDateTime")
     public OffsetDateTime replicaInaccessibleDateTime;
+
     public ReplicaDescription withReplicaInaccessibleDateTime(OffsetDateTime replicaInaccessibleDateTime) {
         this.replicaInaccessibleDateTime = replicaInaccessibleDateTime;
         return this;
@@ -62,6 +67,7 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaStatus")
     public ReplicaStatusEnum replicaStatus;
+
     public ReplicaDescription withReplicaStatus(ReplicaStatusEnum replicaStatus) {
         this.replicaStatus = replicaStatus;
         return this;
@@ -70,6 +76,7 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaStatusDescription")
     public String replicaStatusDescription;
+
     public ReplicaDescription withReplicaStatusDescription(String replicaStatusDescription) {
         this.replicaStatusDescription = replicaStatusDescription;
         return this;
@@ -78,6 +85,7 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaStatusPercentProgress")
     public String replicaStatusPercentProgress;
+
     public ReplicaDescription withReplicaStatusPercentProgress(String replicaStatusPercentProgress) {
         this.replicaStatusPercentProgress = replicaStatusPercentProgress;
         return this;
@@ -89,9 +97,11 @@ public class ReplicaDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaTableClassSummary")
     public TableClassSummary replicaTableClassSummary;
+
     public ReplicaDescription withReplicaTableClassSummary(TableClassSummary replicaTableClassSummary) {
         this.replicaTableClassSummary = replicaTableClassSummary;
         return this;
     }
     
+    public ReplicaDescription(){}
 }

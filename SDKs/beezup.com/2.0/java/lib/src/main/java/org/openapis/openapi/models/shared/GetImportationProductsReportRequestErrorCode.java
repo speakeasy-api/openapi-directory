@@ -18,6 +18,7 @@ public class GetImportationProductsReportRequestErrorCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public GetImportationProductsReportRequestErrorCode withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -29,9 +30,11 @@ public class GetImportationProductsReportRequestErrorCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userColumnName")
     public String userColumnName;
+
     public GetImportationProductsReportRequestErrorCode withUserColumnName(String userColumnName) {
         this.userColumnName = userColumnName;
         return this;
     }
     
+    public GetImportationProductsReportRequestErrorCode(){}
 }

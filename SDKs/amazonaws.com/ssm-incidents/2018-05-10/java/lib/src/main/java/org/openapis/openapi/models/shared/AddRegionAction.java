@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddRegionAction {
     @JsonProperty("regionName")
     public String regionName;
+
     public AddRegionAction withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -22,9 +23,13 @@ public class AddRegionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseKmsKeyId")
     public String sseKmsKeyId;
+
     public AddRegionAction withSseKmsKeyId(String sseKmsKeyId) {
         this.sseKmsKeyId = sseKmsKeyId;
         return this;
     }
     
+    public AddRegionAction(@JsonProperty("regionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

@@ -151,6 +151,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -194,14 +199,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDimensionKeysResponse res = new org.openapis.openapi.models.operations.DescribeDimensionKeysResponse() {{
+        org.openapis.openapi.models.operations.DescribeDimensionKeysResponse res = new org.openapis.openapi.models.operations.DescribeDimensionKeysResponse(contentType, httpRes.statusCode()) {{
             describeDimensionKeysResponse = null;
             invalidArgumentException = null;
             internalServiceError = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,14 +273,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDimensionKeyDetailsResponse res = new org.openapis.openapi.models.operations.GetDimensionKeyDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetDimensionKeyDetailsResponse res = new org.openapis.openapi.models.operations.GetDimensionKeyDetailsResponse(contentType, httpRes.statusCode()) {{
             getDimensionKeyDetailsResponse = null;
             invalidArgumentException = null;
             internalServiceError = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,14 +347,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceMetadataResponse res = new org.openapis.openapi.models.operations.GetResourceMetadataResponse() {{
+        org.openapis.openapi.models.operations.GetResourceMetadataResponse res = new org.openapis.openapi.models.operations.GetResourceMetadataResponse(contentType, httpRes.statusCode()) {{
             getResourceMetadataResponse = null;
             invalidArgumentException = null;
             internalServiceError = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,14 +427,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceMetricsResponse res = new org.openapis.openapi.models.operations.GetResourceMetricsResponse() {{
+        org.openapis.openapi.models.operations.GetResourceMetricsResponse res = new org.openapis.openapi.models.operations.GetResourceMetricsResponse(contentType, httpRes.statusCode()) {{
             getResourceMetricsResponse = null;
             invalidArgumentException = null;
             internalServiceError = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -510,14 +507,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAvailableResourceDimensionsResponse res = new org.openapis.openapi.models.operations.ListAvailableResourceDimensionsResponse() {{
+        org.openapis.openapi.models.operations.ListAvailableResourceDimensionsResponse res = new org.openapis.openapi.models.operations.ListAvailableResourceDimensionsResponse(contentType, httpRes.statusCode()) {{
             listAvailableResourceDimensionsResponse = null;
             invalidArgumentException = null;
             internalServiceError = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -592,14 +587,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAvailableResourceMetricsResponse res = new org.openapis.openapi.models.operations.ListAvailableResourceMetricsResponse() {{
+        org.openapis.openapi.models.operations.ListAvailableResourceMetricsResponse res = new org.openapis.openapi.models.operations.ListAvailableResourceMetricsResponse(contentType, httpRes.statusCode()) {{
             listAvailableResourceMetricsResponse = null;
             invalidArgumentException = null;
             internalServiceError = null;
             notAuthorizedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

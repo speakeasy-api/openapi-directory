@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInventoryResponse {
     
     public String contentType;
+
     public DeleteInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteInventoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInventoryResult deleteInventoryResult;
+
     public DeleteInventoryResponse withDeleteInventoryResult(org.openapis.openapi.models.shared.DeleteInventoryResult deleteInventoryResult) {
         this.deleteInventoryResult = deleteInventoryResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInventoryResponse {
      */
     
     public Object internalServerError;
+
     public DeleteInventoryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInventoryResponse {
      */
     
     public Object invalidDeleteInventoryParametersException;
+
     public DeleteInventoryResponse withInvalidDeleteInventoryParametersException(Object invalidDeleteInventoryParametersException) {
         this.invalidDeleteInventoryParametersException = invalidDeleteInventoryParametersException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInventoryResponse {
      */
     
     public Object invalidInventoryRequestException;
+
     public DeleteInventoryResponse withInvalidInventoryRequestException(Object invalidInventoryRequestException) {
         this.invalidInventoryRequestException = invalidInventoryRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInventoryResponse {
      */
     
     public Object invalidOptionException;
+
     public DeleteInventoryResponse withInvalidOptionException(Object invalidOptionException) {
         this.invalidOptionException = invalidOptionException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteInventoryResponse {
      */
     
     public Object invalidTypeNameException;
+
     public DeleteInventoryResponse withInvalidTypeNameException(Object invalidTypeNameException) {
         this.invalidTypeNameException = invalidTypeNameException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteInventoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

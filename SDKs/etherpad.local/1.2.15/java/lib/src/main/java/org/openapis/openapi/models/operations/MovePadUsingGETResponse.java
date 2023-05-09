@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MovePadUsingGETResponse {
     
     public String contentType;
+
     public MovePadUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MovePadUsingGETResponse {
     
     
     public Integer statusCode;
+
     public MovePadUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MovePadUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MovePadUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MovePadUsingGETResponse {
      */
     
     public MovePadUsingGET200ApplicationJSON movePadUsingGET200ApplicationJSONObject;
+
     public MovePadUsingGETResponse withMovePadUsingGET200ApplicationJSONObject(MovePadUsingGET200ApplicationJSON movePadUsingGET200ApplicationJSONObject) {
         this.movePadUsingGET200ApplicationJSONObject = movePadUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MovePadUsingGETResponse {
      */
     
     public MovePadUsingGET400ApplicationJSON movePadUsingGET400ApplicationJSONObject;
+
     public MovePadUsingGETResponse withMovePadUsingGET400ApplicationJSONObject(MovePadUsingGET400ApplicationJSON movePadUsingGET400ApplicationJSONObject) {
         this.movePadUsingGET400ApplicationJSONObject = movePadUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MovePadUsingGETResponse {
      */
     
     public MovePadUsingGET401ApplicationJSON movePadUsingGET401ApplicationJSONObject;
+
     public MovePadUsingGETResponse withMovePadUsingGET401ApplicationJSONObject(MovePadUsingGET401ApplicationJSON movePadUsingGET401ApplicationJSONObject) {
         this.movePadUsingGET401ApplicationJSONObject = movePadUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class MovePadUsingGETResponse {
      */
     
     public MovePadUsingGET500ApplicationJSON movePadUsingGET500ApplicationJSONObject;
+
     public MovePadUsingGETResponse withMovePadUsingGET500ApplicationJSONObject(MovePadUsingGET500ApplicationJSON movePadUsingGET500ApplicationJSONObject) {
         this.movePadUsingGET500ApplicationJSONObject = movePadUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public MovePadUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

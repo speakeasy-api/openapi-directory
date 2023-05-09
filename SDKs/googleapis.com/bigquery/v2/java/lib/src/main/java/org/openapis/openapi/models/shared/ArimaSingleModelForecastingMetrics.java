@@ -18,6 +18,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arimaFittingMetrics")
     public ArimaFittingMetrics arimaFittingMetrics;
+
     public ArimaSingleModelForecastingMetrics withArimaFittingMetrics(ArimaFittingMetrics arimaFittingMetrics) {
         this.arimaFittingMetrics = arimaFittingMetrics;
         return this;
@@ -29,6 +30,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasDrift")
     public Boolean hasDrift;
+
     public ArimaSingleModelForecastingMetrics withHasDrift(Boolean hasDrift) {
         this.hasDrift = hasDrift;
         return this;
@@ -40,6 +42,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasHolidayEffect")
     public Boolean hasHolidayEffect;
+
     public ArimaSingleModelForecastingMetrics withHasHolidayEffect(Boolean hasHolidayEffect) {
         this.hasHolidayEffect = hasHolidayEffect;
         return this;
@@ -51,6 +54,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasSpikesAndDips")
     public Boolean hasSpikesAndDips;
+
     public ArimaSingleModelForecastingMetrics withHasSpikesAndDips(Boolean hasSpikesAndDips) {
         this.hasSpikesAndDips = hasSpikesAndDips;
         return this;
@@ -62,6 +66,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasStepChanges")
     public Boolean hasStepChanges;
+
     public ArimaSingleModelForecastingMetrics withHasStepChanges(Boolean hasStepChanges) {
         this.hasStepChanges = hasStepChanges;
         return this;
@@ -73,6 +78,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonSeasonalOrder")
     public ArimaOrder nonSeasonalOrder;
+
     public ArimaSingleModelForecastingMetrics withNonSeasonalOrder(ArimaOrder nonSeasonalOrder) {
         this.nonSeasonalOrder = nonSeasonalOrder;
         return this;
@@ -84,6 +90,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonalPeriods")
     public ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum[] seasonalPeriods;
+
     public ArimaSingleModelForecastingMetrics withSeasonalPeriods(ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum[] seasonalPeriods) {
         this.seasonalPeriods = seasonalPeriods;
         return this;
@@ -95,6 +102,7 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesId")
     public String timeSeriesId;
+
     public ArimaSingleModelForecastingMetrics withTimeSeriesId(String timeSeriesId) {
         this.timeSeriesId = timeSeriesId;
         return this;
@@ -106,9 +114,11 @@ public class ArimaSingleModelForecastingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesIds")
     public String[] timeSeriesIds;
+
     public ArimaSingleModelForecastingMetrics withTimeSeriesIds(String[] timeSeriesIds) {
         this.timeSeriesIds = timeSeriesIds;
         return this;
     }
     
+    public ArimaSingleModelForecastingMetrics(){}
 }

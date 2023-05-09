@@ -15,9 +15,11 @@ public class RestoreDBClusterFromSnapshotResult {
      */
     
     public DBCluster dbCluster;
+
     public RestoreDBClusterFromSnapshotResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public RestoreDBClusterFromSnapshotResult(){}
 }

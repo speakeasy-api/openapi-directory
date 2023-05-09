@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody {
     @JsonProperty("assets")
     public PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBodyAssets[] assets;
+
     public PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody withAssets(PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -19,6 +20,7 @@ public class PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody withConstraints(PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -29,9 +31,14 @@ public class PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody {
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody(@JsonProperty("assets") PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBodyAssets[] assets, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.assets = assets;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

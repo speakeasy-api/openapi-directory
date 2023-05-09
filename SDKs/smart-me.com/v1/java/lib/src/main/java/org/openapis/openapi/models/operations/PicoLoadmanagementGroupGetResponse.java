@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PicoLoadmanagementGroupGetResponse {
     
     public byte[] body;
+
     public PicoLoadmanagementGroupGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PicoLoadmanagementGroupGetResponse {
     
     
     public String contentType;
+
     public PicoLoadmanagementGroupGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PicoLoadmanagementGroupGetResponse {
      */
     
     public org.openapis.openapi.models.shared.PicoLoadmanagementGroupDto picoLoadmanagementGroupDto;
+
     public PicoLoadmanagementGroupGetResponse withPicoLoadmanagementGroupDto(org.openapis.openapi.models.shared.PicoLoadmanagementGroupDto picoLoadmanagementGroupDto) {
         this.picoLoadmanagementGroupDto = picoLoadmanagementGroupDto;
         return this;
@@ -33,6 +37,7 @@ public class PicoLoadmanagementGroupGetResponse {
     
     
     public Integer statusCode;
+
     public PicoLoadmanagementGroupGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PicoLoadmanagementGroupGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PicoLoadmanagementGroupGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PicoLoadmanagementGroupGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

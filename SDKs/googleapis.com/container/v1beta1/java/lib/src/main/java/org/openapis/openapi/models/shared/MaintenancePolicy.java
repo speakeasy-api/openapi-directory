@@ -18,6 +18,7 @@ public class MaintenancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceVersion")
     public String resourceVersion;
+
     public MaintenancePolicy withResourceVersion(String resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -29,9 +30,11 @@ public class MaintenancePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("window")
     public MaintenanceWindow window;
+
     public MaintenancePolicy withWindow(MaintenanceWindow window) {
         this.window = window;
         return this;
     }
     
+    public MaintenancePolicy(){}
 }

@@ -15,9 +15,11 @@ public class DescribeHandshakeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handshake")
     public Handshake handshake;
+
     public DescribeHandshakeResponse withHandshake(Handshake handshake) {
         this.handshake = handshake;
         return this;
     }
     
+    public DescribeHandshakeResponse(){}
 }

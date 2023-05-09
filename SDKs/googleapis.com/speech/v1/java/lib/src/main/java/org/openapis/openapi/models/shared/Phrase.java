@@ -18,6 +18,7 @@ public class Phrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boost")
     public Float boost;
+
     public Phrase withBoost(Float boost) {
         this.boost = boost;
         return this;
@@ -29,9 +30,11 @@ public class Phrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Phrase withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Phrase(){}
 }

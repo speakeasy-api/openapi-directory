@@ -15,6 +15,7 @@ public class UpdateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public UpdateFilterRequestBodyActionEnum action;
+
     public UpdateFilterRequestBody withAction(UpdateFilterRequestBodyActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateFilterRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class UpdateFilterRequestBody {
      */
     @JsonProperty("filterArn")
     public String filterArn;
+
     public UpdateFilterRequestBody withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
@@ -47,6 +50,7 @@ public class UpdateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterCriteria")
     public UpdateFilterRequestBodyFilterCriteria filterCriteria;
+
     public UpdateFilterRequestBody withFilterCriteria(UpdateFilterRequestBodyFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -58,6 +62,7 @@ public class UpdateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateFilterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,13 @@ public class UpdateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public UpdateFilterRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public UpdateFilterRequestBody(@JsonProperty("filterArn") String filterArn) {
+        this.filterArn = filterArn;
+  }
 }

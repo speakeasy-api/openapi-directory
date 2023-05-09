@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateClusterResponse {
@@ -12,6 +13,7 @@ public class CreateClusterResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public CreateClusterResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateClusterResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public CreateClusterResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class CreateClusterResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public CreateClusterResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class CreateClusterResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public CreateClusterResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class CreateClusterResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public CreateClusterResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -62,6 +68,7 @@ public class CreateClusterResponse {
      */
     
     public Object cloudHsmTagException;
+
     public CreateClusterResponse withCloudHsmTagException(Object cloudHsmTagException) {
         this.cloudHsmTagException = cloudHsmTagException;
         return this;
@@ -69,6 +76,7 @@ public class CreateClusterResponse {
     
     
     public String contentType;
+
     public CreateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class CreateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateClusterResponse createClusterResponse;
+
     public CreateClusterResponse withCreateClusterResponse(org.openapis.openapi.models.shared.CreateClusterResponse createClusterResponse) {
         this.createClusterResponse = createClusterResponse;
         return this;
@@ -86,6 +95,7 @@ public class CreateClusterResponse {
     
     
     public Integer statusCode;
+
     public CreateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

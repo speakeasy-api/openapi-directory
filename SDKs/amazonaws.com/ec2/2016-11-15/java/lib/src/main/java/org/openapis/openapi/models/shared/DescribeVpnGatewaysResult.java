@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpnGatewaysResult {
     
     public DescribeVpnGatewaysResultVpnGateways[] vpnGateways;
+
     public DescribeVpnGatewaysResult withVpnGateways(DescribeVpnGatewaysResultVpnGateways[] vpnGateways) {
         this.vpnGateways = vpnGateways;
         return this;
     }
     
+    public DescribeVpnGatewaysResult(){}
 }

@@ -15,6 +15,7 @@ public class TrustedAdvisorResourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSuppressed")
     public Boolean isSuppressed;
+
     public TrustedAdvisorResourceDetail withIsSuppressed(Boolean isSuppressed) {
         this.isSuppressed = isSuppressed;
         return this;
@@ -22,6 +23,7 @@ public class TrustedAdvisorResourceDetail {
     
     @JsonProperty("metadata")
     public String[] metadata;
+
     public TrustedAdvisorResourceDetail withMetadata(String[] metadata) {
         this.metadata = metadata;
         return this;
@@ -30,6 +32,7 @@ public class TrustedAdvisorResourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TrustedAdvisorResourceDetail withRegion(String region) {
         this.region = region;
         return this;
@@ -37,6 +40,7 @@ public class TrustedAdvisorResourceDetail {
     
     @JsonProperty("resourceId")
     public String resourceId;
+
     public TrustedAdvisorResourceDetail withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -44,9 +48,15 @@ public class TrustedAdvisorResourceDetail {
     
     @JsonProperty("status")
     public String status;
+
     public TrustedAdvisorResourceDetail withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public TrustedAdvisorResourceDetail(@JsonProperty("metadata") String[] metadata, @JsonProperty("resourceId") String resourceId, @JsonProperty("status") String status) {
+        this.metadata = metadata;
+        this.resourceId = resourceId;
+        this.status = status;
+  }
 }

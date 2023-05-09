@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutInstancePublicPortsResponse {
@@ -12,6 +13,7 @@ public class PutInstancePublicPortsResponse {
      */
     
     public Object accessDeniedException;
+
     public PutInstancePublicPortsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutInstancePublicPortsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public PutInstancePublicPortsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class PutInstancePublicPortsResponse {
     
     
     public String contentType;
+
     public PutInstancePublicPortsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutInstancePublicPortsResponse {
      */
     
     public Object invalidInputException;
+
     public PutInstancePublicPortsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class PutInstancePublicPortsResponse {
      */
     
     public Object notFoundException;
+
     public PutInstancePublicPortsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutInstancePublicPortsResponse {
      */
     
     public Object operationFailureException;
+
     public PutInstancePublicPortsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class PutInstancePublicPortsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutInstancePublicPortsResult putInstancePublicPortsResult;
+
     public PutInstancePublicPortsResponse withPutInstancePublicPortsResult(org.openapis.openapi.models.shared.PutInstancePublicPortsResult putInstancePublicPortsResult) {
         this.putInstancePublicPortsResult = putInstancePublicPortsResult;
         return this;
@@ -79,6 +87,7 @@ public class PutInstancePublicPortsResponse {
      */
     
     public Object serviceException;
+
     public PutInstancePublicPortsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class PutInstancePublicPortsResponse {
     
     
     public Integer statusCode;
+
     public PutInstancePublicPortsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutInstancePublicPortsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutInstancePublicPortsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class PutInstancePublicPortsResponse {
      */
     
     public Object unauthenticatedException;
+
     public PutInstancePublicPortsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public PutInstancePublicPortsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

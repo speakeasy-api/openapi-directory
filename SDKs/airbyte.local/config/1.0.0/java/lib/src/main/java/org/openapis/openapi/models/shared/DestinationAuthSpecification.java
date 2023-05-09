@@ -12,6 +12,7 @@ public class DestinationAuthSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_type")
     public DestinationAuthSpecificationAuthTypeEnum authType;
+
     public DestinationAuthSpecification withAuthType(DestinationAuthSpecificationAuthTypeEnum authType) {
         this.authType = authType;
         return this;
@@ -23,9 +24,11 @@ public class DestinationAuthSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2Specification")
     public OAuth2Specification oauth2Specification;
+
     public DestinationAuthSpecification withOauth2Specification(OAuth2Specification oauth2Specification) {
         this.oauth2Specification = oauth2Specification;
         return this;
     }
     
+    public DestinationAuthSpecification(){}
 }

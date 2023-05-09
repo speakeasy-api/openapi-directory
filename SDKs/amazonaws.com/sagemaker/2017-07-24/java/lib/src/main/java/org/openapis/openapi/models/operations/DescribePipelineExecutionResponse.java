@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePipelineExecutionResponse {
     
     public String contentType;
+
     public DescribePipelineExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePipelineExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePipelineExecutionResponse describePipelineExecutionResponse;
+
     public DescribePipelineExecutionResponse withDescribePipelineExecutionResponse(org.openapis.openapi.models.shared.DescribePipelineExecutionResponse describePipelineExecutionResponse) {
         this.describePipelineExecutionResponse = describePipelineExecutionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePipelineExecutionResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribePipelineExecutionResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribePipelineExecutionResponse {
     
     
     public Integer statusCode;
+
     public DescribePipelineExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribePipelineExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePipelineExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePipelineExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

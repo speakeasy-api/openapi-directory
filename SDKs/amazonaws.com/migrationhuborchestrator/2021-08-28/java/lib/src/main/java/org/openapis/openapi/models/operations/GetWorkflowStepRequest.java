@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkflowStepRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetWorkflowStepRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkflowStepRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetWorkflowStepRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkflowStepRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetWorkflowStepRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetWorkflowStepRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetWorkflowStepRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetWorkflowStepRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetWorkflowStepRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetWorkflowStepRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetWorkflowStepRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetWorkflowStepRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetWorkflowStepRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetWorkflowStepRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetWorkflowStepRequest withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +80,7 @@ public class GetWorkflowStepRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stepGroupId")
     public String stepGroupId;
+
     public GetWorkflowStepRequest withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -81,9 +91,15 @@ public class GetWorkflowStepRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workflowId")
     public String workflowId;
+
     public GetWorkflowStepRequest withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public GetWorkflowStepRequest(@JsonProperty("id") String id, @JsonProperty("stepGroupId") String stepGroupId, @JsonProperty("workflowId") String workflowId) {
+        this.id = id;
+        this.stepGroupId = stepGroupId;
+        this.workflowId = workflowId;
+  }
 }

@@ -18,9 +18,11 @@ public class IosTestLoop {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public IosTestLoop withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
     }
     
+    public IosTestLoop(){}
 }

@@ -15,9 +15,11 @@ public class ConnectionOAuthClientResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientID")
     public String clientID;
+
     public ConnectionOAuthClientResponseParameters withClientID(String clientID) {
         this.clientID = clientID;
         return this;
     }
     
+    public ConnectionOAuthClientResponseParameters(){}
 }

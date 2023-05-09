@@ -17,6 +17,7 @@ public class OBWriteInternationalScheduledResponse6DataRefundAccount {
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteInternationalScheduledResponse6DataRefundAccount withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalScheduledResponse6DataRefundAccount {
      */
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalScheduledResponse6DataRefundAccount withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalScheduledResponse6DataRefundAccount {
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteInternationalScheduledResponse6DataRefundAccount withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -51,9 +54,15 @@ public class OBWriteInternationalScheduledResponse6DataRefundAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBWriteInternationalScheduledResponse6DataRefundAccount withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBWriteInternationalScheduledResponse6DataRefundAccount(@JsonProperty("Identification") String identification, @JsonProperty("Name") String name, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.name = name;
+        this.schemeName = schemeName;
+  }
 }

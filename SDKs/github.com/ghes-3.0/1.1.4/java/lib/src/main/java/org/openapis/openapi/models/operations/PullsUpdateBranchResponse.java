@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsUpdateBranchResponse {
     
     public String contentType;
+
     public PullsUpdateBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsUpdateBranchResponse {
     
     
     public Integer statusCode;
+
     public PullsUpdateBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PullsUpdateBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsUpdateBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PullsUpdateBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public PullsUpdateBranchResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class PullsUpdateBranchResponse {
      */
     
     public PullsUpdateBranch202ApplicationJSON pullsUpdateBranch202ApplicationJSONObject;
+
     public PullsUpdateBranchResponse withPullsUpdateBranch202ApplicationJSONObject(PullsUpdateBranch202ApplicationJSON pullsUpdateBranch202ApplicationJSONObject) {
         this.pullsUpdateBranch202ApplicationJSONObject = pullsUpdateBranch202ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class PullsUpdateBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public PullsUpdateBranchResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public PullsUpdateBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

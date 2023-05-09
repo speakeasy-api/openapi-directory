@@ -57,14 +57,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppendChatMessageUsingGETResponse res = new org.openapis.openapi.models.operations.AppendChatMessageUsingGETResponse() {{
+        org.openapis.openapi.models.operations.AppendChatMessageUsingGETResponse res = new org.openapis.openapi.models.operations.AppendChatMessageUsingGETResponse(contentType, httpRes.statusCode()) {{
             appendChatMessageUsingGET200ApplicationJSONObject = null;
             appendChatMessageUsingGET400ApplicationJSONObject = null;
             appendChatMessageUsingGET401ApplicationJSONObject = null;
             appendChatMessageUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -126,14 +124,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppendChatMessageUsingPOSTResponse res = new org.openapis.openapi.models.operations.AppendChatMessageUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.AppendChatMessageUsingPOSTResponse res = new org.openapis.openapi.models.operations.AppendChatMessageUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             appendChatMessageUsingPOST200ApplicationJSONObject = null;
             appendChatMessageUsingPOST400ApplicationJSONObject = null;
             appendChatMessageUsingPOST401ApplicationJSONObject = null;
             appendChatMessageUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,14 +184,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckTokenUsingGETResponse res = new org.openapis.openapi.models.operations.CheckTokenUsingGETResponse() {{
+        org.openapis.openapi.models.operations.CheckTokenUsingGETResponse res = new org.openapis.openapi.models.operations.CheckTokenUsingGETResponse(contentType, httpRes.statusCode()) {{
             checkTokenUsingGET200ApplicationJSONObject = null;
             checkTokenUsingGET400ApplicationJSONObject = null;
             checkTokenUsingGET401ApplicationJSONObject = null;
             checkTokenUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,14 +244,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckTokenUsingPOSTResponse res = new org.openapis.openapi.models.operations.CheckTokenUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CheckTokenUsingPOSTResponse res = new org.openapis.openapi.models.operations.CheckTokenUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             checkTokenUsingPOST200ApplicationJSONObject = null;
             checkTokenUsingPOST400ApplicationJSONObject = null;
             checkTokenUsingPOST401ApplicationJSONObject = null;
             checkTokenUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,14 +305,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDiffHTMLUsingGETResponse res = new org.openapis.openapi.models.operations.CreateDiffHTMLUsingGETResponse() {{
+        org.openapis.openapi.models.operations.CreateDiffHTMLUsingGETResponse res = new org.openapis.openapi.models.operations.CreateDiffHTMLUsingGETResponse(contentType, httpRes.statusCode()) {{
             createDiffHTMLUsingGET200ApplicationJSONObject = null;
             createDiffHTMLUsingGET400ApplicationJSONObject = null;
             createDiffHTMLUsingGET401ApplicationJSONObject = null;
             createDiffHTMLUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -376,14 +366,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDiffHTMLUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateDiffHTMLUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateDiffHTMLUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateDiffHTMLUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             createDiffHTMLUsingPOST200ApplicationJSONObject = null;
             createDiffHTMLUsingPOST400ApplicationJSONObject = null;
             createDiffHTMLUsingPOST401ApplicationJSONObject = null;
             createDiffHTMLUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -445,14 +433,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePadUsingGETResponse res = new org.openapis.openapi.models.operations.CreatePadUsingGETResponse() {{
+        org.openapis.openapi.models.operations.CreatePadUsingGETResponse res = new org.openapis.openapi.models.operations.CreatePadUsingGETResponse(contentType, httpRes.statusCode()) {{
             createPadUsingGET200ApplicationJSONObject = null;
             createPadUsingGET400ApplicationJSONObject = null;
             createPadUsingGET401ApplicationJSONObject = null;
             createPadUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -514,14 +500,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePadUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreatePadUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreatePadUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreatePadUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             createPadUsingPOST200ApplicationJSONObject = null;
             createPadUsingPOST400ApplicationJSONObject = null;
             createPadUsingPOST401ApplicationJSONObject = null;
             createPadUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -583,14 +567,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePadUsingGETResponse res = new org.openapis.openapi.models.operations.DeletePadUsingGETResponse() {{
+        org.openapis.openapi.models.operations.DeletePadUsingGETResponse res = new org.openapis.openapi.models.operations.DeletePadUsingGETResponse(contentType, httpRes.statusCode()) {{
             deletePadUsingGET200ApplicationJSONObject = null;
             deletePadUsingGET400ApplicationJSONObject = null;
             deletePadUsingGET401ApplicationJSONObject = null;
             deletePadUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -652,14 +634,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePadUsingPOSTResponse res = new org.openapis.openapi.models.operations.DeletePadUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.DeletePadUsingPOSTResponse res = new org.openapis.openapi.models.operations.DeletePadUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             deletePadUsingPOST200ApplicationJSONObject = null;
             deletePadUsingPOST400ApplicationJSONObject = null;
             deletePadUsingPOST401ApplicationJSONObject = null;
             deletePadUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -721,14 +701,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETChatHeadUsingGETResponse res = new org.openapis.openapi.models.operations.GETChatHeadUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETChatHeadUsingGETResponse res = new org.openapis.openapi.models.operations.GETChatHeadUsingGETResponse(contentType, httpRes.statusCode()) {{
             getChatHeadUsingGET200ApplicationJSONObject = null;
             getChatHeadUsingGET400ApplicationJSONObject = null;
             getChatHeadUsingGET401ApplicationJSONObject = null;
             getChatHeadUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -790,14 +768,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChatHeadUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetChatHeadUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetChatHeadUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetChatHeadUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getChatHeadUsingPOST200ApplicationJSONObject = null;
             getChatHeadUsingPOST400ApplicationJSONObject = null;
             getChatHeadUsingPOST401ApplicationJSONObject = null;
             getChatHeadUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -859,14 +835,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETChatHistoryUsingGETResponse res = new org.openapis.openapi.models.operations.GETChatHistoryUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETChatHistoryUsingGETResponse res = new org.openapis.openapi.models.operations.GETChatHistoryUsingGETResponse(contentType, httpRes.statusCode()) {{
             getChatHistoryUsingGET200ApplicationJSONObject = null;
             getChatHistoryUsingGET400ApplicationJSONObject = null;
             getChatHistoryUsingGET401ApplicationJSONObject = null;
             getChatHistoryUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -928,14 +902,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChatHistoryUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetChatHistoryUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetChatHistoryUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetChatHistoryUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getChatHistoryUsingPOST200ApplicationJSONObject = null;
             getChatHistoryUsingPOST400ApplicationJSONObject = null;
             getChatHistoryUsingPOST401ApplicationJSONObject = null;
             getChatHistoryUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -997,14 +969,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETHTMLUsingGETResponse res = new org.openapis.openapi.models.operations.GETHTMLUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETHTMLUsingGETResponse res = new org.openapis.openapi.models.operations.GETHTMLUsingGETResponse(contentType, httpRes.statusCode()) {{
             getHTMLUsingGET200ApplicationJSONObject = null;
             getHTMLUsingGET400ApplicationJSONObject = null;
             getHTMLUsingGET401ApplicationJSONObject = null;
             getHTMLUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1066,14 +1036,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHTMLUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetHTMLUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetHTMLUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetHTMLUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getHTMLUsingPOST200ApplicationJSONObject = null;
             getHTMLUsingPOST400ApplicationJSONObject = null;
             getHTMLUsingPOST401ApplicationJSONObject = null;
             getHTMLUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1135,14 +1103,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETLastEditedUsingGETResponse res = new org.openapis.openapi.models.operations.GETLastEditedUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETLastEditedUsingGETResponse res = new org.openapis.openapi.models.operations.GETLastEditedUsingGETResponse(contentType, httpRes.statusCode()) {{
             getLastEditedUsingGET200ApplicationJSONObject = null;
             getLastEditedUsingGET400ApplicationJSONObject = null;
             getLastEditedUsingGET401ApplicationJSONObject = null;
             getLastEditedUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1204,14 +1170,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLastEditedUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetLastEditedUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetLastEditedUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetLastEditedUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getLastEditedUsingPOST200ApplicationJSONObject = null;
             getLastEditedUsingPOST400ApplicationJSONObject = null;
             getLastEditedUsingPOST401ApplicationJSONObject = null;
             getLastEditedUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1273,14 +1237,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPublicStatusUsingGETResponse res = new org.openapis.openapi.models.operations.GETPublicStatusUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETPublicStatusUsingGETResponse res = new org.openapis.openapi.models.operations.GETPublicStatusUsingGETResponse(contentType, httpRes.statusCode()) {{
             getPublicStatusUsingGET200ApplicationJSONObject = null;
             getPublicStatusUsingGET400ApplicationJSONObject = null;
             getPublicStatusUsingGET401ApplicationJSONObject = null;
             getPublicStatusUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1342,14 +1304,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicStatusUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetPublicStatusUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetPublicStatusUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetPublicStatusUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getPublicStatusUsingPOST200ApplicationJSONObject = null;
             getPublicStatusUsingPOST400ApplicationJSONObject = null;
             getPublicStatusUsingPOST401ApplicationJSONObject = null;
             getPublicStatusUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1411,14 +1371,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETReadOnlyIDUsingGETResponse res = new org.openapis.openapi.models.operations.GETReadOnlyIDUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETReadOnlyIDUsingGETResponse res = new org.openapis.openapi.models.operations.GETReadOnlyIDUsingGETResponse(contentType, httpRes.statusCode()) {{
             getReadOnlyIDUsingGET200ApplicationJSONObject = null;
             getReadOnlyIDUsingGET400ApplicationJSONObject = null;
             getReadOnlyIDUsingGET401ApplicationJSONObject = null;
             getReadOnlyIDUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1480,14 +1438,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReadOnlyIDUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetReadOnlyIDUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetReadOnlyIDUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetReadOnlyIDUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getReadOnlyIDUsingPOST200ApplicationJSONObject = null;
             getReadOnlyIDUsingPOST400ApplicationJSONObject = null;
             getReadOnlyIDUsingPOST401ApplicationJSONObject = null;
             getReadOnlyIDUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1549,14 +1505,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETRevisionsCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETRevisionsCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETRevisionsCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETRevisionsCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             getRevisionsCountUsingGET200ApplicationJSONObject = null;
             getRevisionsCountUsingGET400ApplicationJSONObject = null;
             getRevisionsCountUsingGET401ApplicationJSONObject = null;
             getRevisionsCountUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1618,14 +1572,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRevisionsCountUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetRevisionsCountUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetRevisionsCountUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetRevisionsCountUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getRevisionsCountUsingPOST200ApplicationJSONObject = null;
             getRevisionsCountUsingPOST400ApplicationJSONObject = null;
             getRevisionsCountUsingPOST401ApplicationJSONObject = null;
             getRevisionsCountUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1687,14 +1639,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETTextUsingGETResponse res = new org.openapis.openapi.models.operations.GETTextUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETTextUsingGETResponse res = new org.openapis.openapi.models.operations.GETTextUsingGETResponse(contentType, httpRes.statusCode()) {{
             getTextUsingGET200ApplicationJSONObject = null;
             getTextUsingGET400ApplicationJSONObject = null;
             getTextUsingGET401ApplicationJSONObject = null;
             getTextUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1756,14 +1706,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTextUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetTextUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetTextUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetTextUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             getTextUsingPOST200ApplicationJSONObject = null;
             getTextUsingPOST400ApplicationJSONObject = null;
             getTextUsingPOST401ApplicationJSONObject = null;
             getTextUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1818,14 +1766,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAllPadsUsingGETResponse res = new org.openapis.openapi.models.operations.ListAllPadsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListAllPadsUsingGETResponse res = new org.openapis.openapi.models.operations.ListAllPadsUsingGETResponse(contentType, httpRes.statusCode()) {{
             listAllPadsUsingGET200ApplicationJSONObject = null;
             listAllPadsUsingGET400ApplicationJSONObject = null;
             listAllPadsUsingGET401ApplicationJSONObject = null;
             listAllPadsUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1880,14 +1826,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAllPadsUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListAllPadsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ListAllPadsUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListAllPadsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             listAllPadsUsingPOST200ApplicationJSONObject = null;
             listAllPadsUsingPOST400ApplicationJSONObject = null;
             listAllPadsUsingPOST401ApplicationJSONObject = null;
             listAllPadsUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1949,14 +1893,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAuthorsOfPadUsingGETResponse res = new org.openapis.openapi.models.operations.ListAuthorsOfPadUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ListAuthorsOfPadUsingGETResponse res = new org.openapis.openapi.models.operations.ListAuthorsOfPadUsingGETResponse(contentType, httpRes.statusCode()) {{
             listAuthorsOfPadUsingGET200ApplicationJSONObject = null;
             listAuthorsOfPadUsingGET400ApplicationJSONObject = null;
             listAuthorsOfPadUsingGET401ApplicationJSONObject = null;
             listAuthorsOfPadUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2018,14 +1960,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAuthorsOfPadUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListAuthorsOfPadUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ListAuthorsOfPadUsingPOSTResponse res = new org.openapis.openapi.models.operations.ListAuthorsOfPadUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             listAuthorsOfPadUsingPOST200ApplicationJSONObject = null;
             listAuthorsOfPadUsingPOST400ApplicationJSONObject = null;
             listAuthorsOfPadUsingPOST401ApplicationJSONObject = null;
             listAuthorsOfPadUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2087,14 +2027,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PadUsersCountUsingGETResponse res = new org.openapis.openapi.models.operations.PadUsersCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.PadUsersCountUsingGETResponse res = new org.openapis.openapi.models.operations.PadUsersCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             padUsersCountUsingGET200ApplicationJSONObject = null;
             padUsersCountUsingGET400ApplicationJSONObject = null;
             padUsersCountUsingGET401ApplicationJSONObject = null;
             padUsersCountUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2156,14 +2094,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PadUsersCountUsingPOSTResponse res = new org.openapis.openapi.models.operations.PadUsersCountUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.PadUsersCountUsingPOSTResponse res = new org.openapis.openapi.models.operations.PadUsersCountUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             padUsersCountUsingPOST200ApplicationJSONObject = null;
             padUsersCountUsingPOST400ApplicationJSONObject = null;
             padUsersCountUsingPOST401ApplicationJSONObject = null;
             padUsersCountUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2225,14 +2161,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PadUsersUsingGETResponse res = new org.openapis.openapi.models.operations.PadUsersUsingGETResponse() {{
+        org.openapis.openapi.models.operations.PadUsersUsingGETResponse res = new org.openapis.openapi.models.operations.PadUsersUsingGETResponse(contentType, httpRes.statusCode()) {{
             padUsersUsingGET200ApplicationJSONObject = null;
             padUsersUsingGET400ApplicationJSONObject = null;
             padUsersUsingGET401ApplicationJSONObject = null;
             padUsersUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2294,14 +2228,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PadUsersUsingPOSTResponse res = new org.openapis.openapi.models.operations.PadUsersUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.PadUsersUsingPOSTResponse res = new org.openapis.openapi.models.operations.PadUsersUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             padUsersUsingPOST200ApplicationJSONObject = null;
             padUsersUsingPOST400ApplicationJSONObject = null;
             padUsersUsingPOST401ApplicationJSONObject = null;
             padUsersUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2363,14 +2295,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendClientsMessageUsingGETResponse res = new org.openapis.openapi.models.operations.SendClientsMessageUsingGETResponse() {{
+        org.openapis.openapi.models.operations.SendClientsMessageUsingGETResponse res = new org.openapis.openapi.models.operations.SendClientsMessageUsingGETResponse(contentType, httpRes.statusCode()) {{
             sendClientsMessageUsingGET200ApplicationJSONObject = null;
             sendClientsMessageUsingGET400ApplicationJSONObject = null;
             sendClientsMessageUsingGET401ApplicationJSONObject = null;
             sendClientsMessageUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2432,14 +2362,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendClientsMessageUsingPOSTResponse res = new org.openapis.openapi.models.operations.SendClientsMessageUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.SendClientsMessageUsingPOSTResponse res = new org.openapis.openapi.models.operations.SendClientsMessageUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             sendClientsMessageUsingPOST200ApplicationJSONObject = null;
             sendClientsMessageUsingPOST400ApplicationJSONObject = null;
             sendClientsMessageUsingPOST401ApplicationJSONObject = null;
             sendClientsMessageUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2501,14 +2429,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetHTMLUsingGETResponse res = new org.openapis.openapi.models.operations.SetHTMLUsingGETResponse() {{
+        org.openapis.openapi.models.operations.SetHTMLUsingGETResponse res = new org.openapis.openapi.models.operations.SetHTMLUsingGETResponse(contentType, httpRes.statusCode()) {{
             setHTMLUsingGET200ApplicationJSONObject = null;
             setHTMLUsingGET400ApplicationJSONObject = null;
             setHTMLUsingGET401ApplicationJSONObject = null;
             setHTMLUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2570,14 +2496,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetHTMLUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetHTMLUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.SetHTMLUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetHTMLUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             setHTMLUsingPOST200ApplicationJSONObject = null;
             setHTMLUsingPOST400ApplicationJSONObject = null;
             setHTMLUsingPOST401ApplicationJSONObject = null;
             setHTMLUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2639,14 +2563,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetPublicStatusUsingGETResponse res = new org.openapis.openapi.models.operations.SetPublicStatusUsingGETResponse() {{
+        org.openapis.openapi.models.operations.SetPublicStatusUsingGETResponse res = new org.openapis.openapi.models.operations.SetPublicStatusUsingGETResponse(contentType, httpRes.statusCode()) {{
             setPublicStatusUsingGET200ApplicationJSONObject = null;
             setPublicStatusUsingGET400ApplicationJSONObject = null;
             setPublicStatusUsingGET401ApplicationJSONObject = null;
             setPublicStatusUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2708,14 +2630,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetPublicStatusUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetPublicStatusUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.SetPublicStatusUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetPublicStatusUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             setPublicStatusUsingPOST200ApplicationJSONObject = null;
             setPublicStatusUsingPOST400ApplicationJSONObject = null;
             setPublicStatusUsingPOST401ApplicationJSONObject = null;
             setPublicStatusUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2777,14 +2697,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetTextUsingGETResponse res = new org.openapis.openapi.models.operations.SetTextUsingGETResponse() {{
+        org.openapis.openapi.models.operations.SetTextUsingGETResponse res = new org.openapis.openapi.models.operations.SetTextUsingGETResponse(contentType, httpRes.statusCode()) {{
             setTextUsingGET200ApplicationJSONObject = null;
             setTextUsingGET400ApplicationJSONObject = null;
             setTextUsingGET401ApplicationJSONObject = null;
             setTextUsingGET500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2846,14 +2764,12 @@ public class Pad {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetTextUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetTextUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.SetTextUsingPOSTResponse res = new org.openapis.openapi.models.operations.SetTextUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             setTextUsingPOST200ApplicationJSONObject = null;
             setTextUsingPOST400ApplicationJSONObject = null;
             setTextUsingPOST401ApplicationJSONObject = null;
             setTextUsingPOST500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

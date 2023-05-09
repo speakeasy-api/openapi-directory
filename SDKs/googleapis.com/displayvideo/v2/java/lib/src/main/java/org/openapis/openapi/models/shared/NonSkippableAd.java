@@ -18,6 +18,7 @@ public class NonSkippableAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonInStreamAttribute")
     public CommonInStreamAttribute commonInStreamAttribute;
+
     public NonSkippableAd withCommonInStreamAttribute(CommonInStreamAttribute commonInStreamAttribute) {
         this.commonInStreamAttribute = commonInStreamAttribute;
         return this;
@@ -29,9 +30,11 @@ public class NonSkippableAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customParameters")
     public java.util.Map<String, String> customParameters;
+
     public NonSkippableAd withCustomParameters(java.util.Map<String, String> customParameters) {
         this.customParameters = customParameters;
         return this;
     }
     
+    public NonSkippableAd(){}
 }

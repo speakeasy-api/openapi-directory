@@ -15,9 +15,11 @@ public class AttachToIndexRequestBodyIndexReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Selector")
     public String selector;
+
     public AttachToIndexRequestBodyIndexReference withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public AttachToIndexRequestBodyIndexReference(){}
 }

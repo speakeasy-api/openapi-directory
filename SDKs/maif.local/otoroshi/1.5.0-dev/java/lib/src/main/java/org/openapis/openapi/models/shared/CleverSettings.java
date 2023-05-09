@@ -15,6 +15,7 @@ public class CleverSettings {
      */
     @JsonProperty("consumerKey")
     public String consumerKey;
+
     public CleverSettings withConsumerKey(String consumerKey) {
         this.consumerKey = consumerKey;
         return this;
@@ -25,6 +26,7 @@ public class CleverSettings {
      */
     @JsonProperty("consumerSecret")
     public String consumerSecret;
+
     public CleverSettings withConsumerSecret(String consumerSecret) {
         this.consumerSecret = consumerSecret;
         return this;
@@ -35,6 +37,7 @@ public class CleverSettings {
      */
     @JsonProperty("orgaId")
     public String orgaId;
+
     public CleverSettings withOrgaId(String orgaId) {
         this.orgaId = orgaId;
         return this;
@@ -45,6 +48,7 @@ public class CleverSettings {
      */
     @JsonProperty("secret")
     public String secret;
+
     public CleverSettings withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -55,9 +59,17 @@ public class CleverSettings {
      */
     @JsonProperty("token")
     public String token;
+
     public CleverSettings withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public CleverSettings(@JsonProperty("consumerKey") String consumerKey, @JsonProperty("consumerSecret") String consumerSecret, @JsonProperty("orgaId") String orgaId, @JsonProperty("secret") String secret, @JsonProperty("token") String token) {
+        this.consumerKey = consumerKey;
+        this.consumerSecret = consumerSecret;
+        this.orgaId = orgaId;
+        this.secret = secret;
+        this.token = token;
+  }
 }

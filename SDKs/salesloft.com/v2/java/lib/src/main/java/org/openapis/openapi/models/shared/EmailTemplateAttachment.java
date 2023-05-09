@@ -12,6 +12,7 @@ public class EmailTemplateAttachment {
      */
     
     public String attachmentContentType;
+
     public EmailTemplateAttachment withAttachmentContentType(String attachmentContentType) {
         this.attachmentContentType = attachmentContentType;
         return this;
@@ -22,6 +23,7 @@ public class EmailTemplateAttachment {
      */
     
     public Long attachmentFileSize;
+
     public EmailTemplateAttachment withAttachmentFileSize(Long attachmentFileSize) {
         this.attachmentFileSize = attachmentFileSize;
         return this;
@@ -32,6 +34,7 @@ public class EmailTemplateAttachment {
      */
     
     public Long attachmentFingerprint;
+
     public EmailTemplateAttachment withAttachmentFingerprint(Long attachmentFingerprint) {
         this.attachmentFingerprint = attachmentFingerprint;
         return this;
@@ -42,6 +45,7 @@ public class EmailTemplateAttachment {
      */
     
     public Long attachmentId;
+
     public EmailTemplateAttachment withAttachmentId(Long attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -52,6 +56,7 @@ public class EmailTemplateAttachment {
      */
     
     public String downloadUrl;
+
     public EmailTemplateAttachment withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -59,6 +64,7 @@ public class EmailTemplateAttachment {
     
     
     public EmbeddedResource emailTemplate;
+
     public EmailTemplateAttachment withEmailTemplate(EmbeddedResource emailTemplate) {
         this.emailTemplate = emailTemplate;
         return this;
@@ -69,6 +75,7 @@ public class EmailTemplateAttachment {
      */
     
     public Long id;
+
     public EmailTemplateAttachment withId(Long id) {
         this.id = id;
         return this;
@@ -79,6 +86,7 @@ public class EmailTemplateAttachment {
      */
     
     public String name;
+
     public EmailTemplateAttachment withName(String name) {
         this.name = name;
         return this;
@@ -89,9 +97,11 @@ public class EmailTemplateAttachment {
      */
     
     public Boolean scanned;
+
     public EmailTemplateAttachment withScanned(Boolean scanned) {
         this.scanned = scanned;
         return this;
     }
     
+    public EmailTemplateAttachment(){}
 }

@@ -56,12 +56,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCreatePermitResponse res = new org.openapis.openapi.models.operations.PostCreatePermitResponse() {{
+        org.openapis.openapi.models.operations.PostCreatePermitResponse res = new org.openapis.openapi.models.operations.PostCreatePermitResponse(contentType, httpRes.statusCode()) {{
             createPermitResult = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDisableResponse res = new org.openapis.openapi.models.operations.PostDisableResponse() {{
+        org.openapis.openapi.models.operations.PostDisableResponse res = new org.openapis.openapi.models.operations.PostDisableResponse(contentType, httpRes.statusCode()) {{
             disableResult = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,12 +158,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostListRecurringDetailsResponse res = new org.openapis.openapi.models.operations.PostListRecurringDetailsResponse() {{
+        org.openapis.openapi.models.operations.PostListRecurringDetailsResponse res = new org.openapis.openapi.models.operations.PostListRecurringDetailsResponse(contentType, httpRes.statusCode()) {{
             recurringDetailsResult = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,12 +207,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNotifyShopperResponse res = new org.openapis.openapi.models.operations.PostNotifyShopperResponse() {{
+        org.openapis.openapi.models.operations.PostNotifyShopperResponse res = new org.openapis.openapi.models.operations.PostNotifyShopperResponse(contentType, httpRes.statusCode()) {{
             notifyShopperResult = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,12 +258,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostScheduleAccountUpdaterResponse res = new org.openapis.openapi.models.operations.PostScheduleAccountUpdaterResponse() {{
+        org.openapis.openapi.models.operations.PostScheduleAccountUpdaterResponse res = new org.openapis.openapi.models.operations.PostScheduleAccountUpdaterResponse(contentType, httpRes.statusCode()) {{
             scheduleAccountUpdaterResult = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

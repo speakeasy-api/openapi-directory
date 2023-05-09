@@ -18,6 +18,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("castegroup")
     public String castegroup;
+
     public PersonalNameCastegroupOut withCastegroup(String castegroup) {
         this.castegroup = castegroup;
         return this;
@@ -29,6 +30,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("castegroupAlt")
     public String castegroupAlt;
+
     public PersonalNameCastegroupOut withCastegroupAlt(String castegroupAlt) {
         this.castegroupAlt = castegroupAlt;
         return this;
@@ -40,6 +42,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("castegroupTop")
     public String[] castegroupTop;
+
     public PersonalNameCastegroupOut withCastegroupTop(String[] castegroupTop) {
         this.castegroupTop = castegroupTop;
         return this;
@@ -48,6 +51,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PersonalNameCastegroupOut withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PersonalNameCastegroupOut withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityAltCalibrated")
     public Double probabilityAltCalibrated;
+
     public PersonalNameCastegroupOut withProbabilityAltCalibrated(Double probabilityAltCalibrated) {
         this.probabilityAltCalibrated = probabilityAltCalibrated;
         return this;
@@ -81,6 +87,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probabilityCalibrated")
     public Double probabilityCalibrated;
+
     public PersonalNameCastegroupOut withProbabilityCalibrated(Double probabilityCalibrated) {
         this.probabilityCalibrated = probabilityCalibrated;
         return this;
@@ -92,6 +99,7 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Double score;
+
     public PersonalNameCastegroupOut withScore(Double score) {
         this.score = score;
         return this;
@@ -100,9 +108,11 @@ public class PersonalNameCastegroupOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public PersonalNameCastegroupOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public PersonalNameCastegroupOut(){}
 }

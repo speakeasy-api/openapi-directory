@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFeatureResponse {
@@ -12,6 +13,7 @@ public class CreateFeatureResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFeatureResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateFeatureResponse {
      */
     
     public Object conflictException;
+
     public CreateFeatureResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateFeatureResponse {
     
     
     public String contentType;
+
     public CreateFeatureResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateFeatureResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFeatureResponse createFeatureResponse;
+
     public CreateFeatureResponse withCreateFeatureResponse(org.openapis.openapi.models.shared.CreateFeatureResponse createFeatureResponse) {
         this.createFeatureResponse = createFeatureResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateFeatureResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFeatureResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFeatureResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateFeatureResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateFeatureResponse {
     
     
     public Integer statusCode;
+
     public CreateFeatureResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateFeatureResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFeatureResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateFeatureResponse {
      */
     
     public Object validationException;
+
     public CreateFeatureResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFeatureResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

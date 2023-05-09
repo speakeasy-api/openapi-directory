@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthInitRequest {
     @JsonProperty("authMethod")
     public AuthInitRequestAuthMethodEnum authMethod;
+
     public AuthInitRequest withAuthMethod(AuthInitRequestAuthMethodEnum authMethod) {
         this.authMethod = authMethod;
         return this;
@@ -22,9 +23,13 @@ public class AuthInitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthid")
     public String healthid;
+
     public AuthInitRequest withHealthid(String healthid) {
         this.healthid = healthid;
         return this;
     }
     
+    public AuthInitRequest(@JsonProperty("authMethod") AuthInitRequestAuthMethodEnum authMethod) {
+        this.authMethod = authMethod;
+  }
 }

@@ -12,6 +12,7 @@ public class APIRequestResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public APIRequestResourceItem item;
+
     public APIRequestResource withItem(APIRequestResourceItem item) {
         this.item = item;
         return this;
@@ -20,6 +21,7 @@ public class APIRequestResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemVersion")
     public Long itemVersion;
+
     public APIRequestResource withItemVersion(Long itemVersion) {
         this.itemVersion = itemVersion;
         return this;
@@ -28,6 +30,7 @@ public class APIRequestResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public APIRequestResourceTypeEnum type;
+
     public APIRequestResource withType(APIRequestResourceTypeEnum type) {
         this.type = type;
         return this;
@@ -36,9 +39,11 @@ public class APIRequestResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vault")
     public APIRequestResourceVault vault;
+
     public APIRequestResource withVault(APIRequestResourceVault vault) {
         this.vault = vault;
         return this;
     }
     
+    public APIRequestResource(){}
 }

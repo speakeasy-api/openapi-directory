@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActivityListOrgEventsForAuthenticatedUserResponse {
     
     public String contentType;
+
     public ActivityListOrgEventsForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActivityListOrgEventsForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public ActivityListOrgEventsForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActivityListOrgEventsForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActivityListOrgEventsForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActivityListOrgEventsForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Event[] events;
+
     public ActivityListOrgEventsForAuthenticatedUserResponse withEvents(org.openapis.openapi.models.shared.Event[] events) {
         this.events = events;
         return this;
     }
     
+    public ActivityListOrgEventsForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

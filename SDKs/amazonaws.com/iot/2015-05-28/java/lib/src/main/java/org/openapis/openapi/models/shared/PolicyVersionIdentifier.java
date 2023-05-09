@@ -15,6 +15,7 @@ public class PolicyVersionIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public PolicyVersionIdentifier withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -23,9 +24,11 @@ public class PolicyVersionIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyVersionId")
     public String policyVersionId;
+
     public PolicyVersionIdentifier withPolicyVersionId(String policyVersionId) {
         this.policyVersionId = policyVersionId;
         return this;
     }
     
+    public PolicyVersionIdentifier(){}
 }

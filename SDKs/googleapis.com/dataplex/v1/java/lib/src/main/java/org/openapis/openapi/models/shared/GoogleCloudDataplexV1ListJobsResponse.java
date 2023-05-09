@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public GoogleCloudDataplexV1Job[] jobs;
+
     public GoogleCloudDataplexV1ListJobsResponse withJobs(GoogleCloudDataplexV1Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListJobsResponse(){}
 }

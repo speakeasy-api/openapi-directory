@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfirmPublicVirtualInterfaceRequest {
     @JsonProperty("virtualInterfaceId")
     public String virtualInterfaceId;
+
     public ConfirmPublicVirtualInterfaceRequest withVirtualInterfaceId(String virtualInterfaceId) {
         this.virtualInterfaceId = virtualInterfaceId;
         return this;
     }
     
+    public ConfirmPublicVirtualInterfaceRequest(@JsonProperty("virtualInterfaceId") String virtualInterfaceId) {
+        this.virtualInterfaceId = virtualInterfaceId;
+  }
 }

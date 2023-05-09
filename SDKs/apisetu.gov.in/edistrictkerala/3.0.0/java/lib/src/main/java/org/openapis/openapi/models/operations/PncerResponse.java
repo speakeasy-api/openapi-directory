@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PncerResponse {
     
     public String contentType;
+
     public PncerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PncerResponse {
     
     
     public Integer statusCode;
+
     public PncerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PncerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PncerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PncerResponse {
      */
     
     public Pncer400ApplicationJSON pncer400ApplicationJSONObject;
+
     public PncerResponse withPncer400ApplicationJSONObject(Pncer400ApplicationJSON pncer400ApplicationJSONObject) {
         this.pncer400ApplicationJSONObject = pncer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PncerResponse {
      */
     
     public Pncer401ApplicationJSON pncer401ApplicationJSONObject;
+
     public PncerResponse withPncer401ApplicationJSONObject(Pncer401ApplicationJSON pncer401ApplicationJSONObject) {
         this.pncer401ApplicationJSONObject = pncer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PncerResponse {
      */
     
     public Pncer404ApplicationJSON pncer404ApplicationJSONObject;
+
     public PncerResponse withPncer404ApplicationJSONObject(Pncer404ApplicationJSON pncer404ApplicationJSONObject) {
         this.pncer404ApplicationJSONObject = pncer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PncerResponse {
      */
     
     public Pncer500ApplicationJSON pncer500ApplicationJSONObject;
+
     public PncerResponse withPncer500ApplicationJSONObject(Pncer500ApplicationJSON pncer500ApplicationJSONObject) {
         this.pncer500ApplicationJSONObject = pncer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PncerResponse {
      */
     
     public Pncer502ApplicationJSON pncer502ApplicationJSONObject;
+
     public PncerResponse withPncer502ApplicationJSONObject(Pncer502ApplicationJSON pncer502ApplicationJSONObject) {
         this.pncer502ApplicationJSONObject = pncer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PncerResponse {
      */
     
     public Pncer503ApplicationJSON pncer503ApplicationJSONObject;
+
     public PncerResponse withPncer503ApplicationJSONObject(Pncer503ApplicationJSON pncer503ApplicationJSONObject) {
         this.pncer503ApplicationJSONObject = pncer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PncerResponse {
      */
     
     public Pncer504ApplicationJSON pncer504ApplicationJSONObject;
+
     public PncerResponse withPncer504ApplicationJSONObject(Pncer504ApplicationJSON pncer504ApplicationJSONObject) {
         this.pncer504ApplicationJSONObject = pncer504ApplicationJSONObject;
         return this;
     }
     
+    public PncerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

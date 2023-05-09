@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesLaunchTemplateSpecification {
     
     public String launchTemplateId;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesLaunchTemplateSpecification withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesLaunchTem
     
     
     public String launchTemplateName;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesLaunchTemplateSpecification withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -26,9 +28,11 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesLaunchTem
     
     
     public String version;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesLaunchTemplateSpecification withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesLaunchTemplateSpecification(){}
 }

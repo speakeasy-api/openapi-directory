@@ -15,9 +15,11 @@ public class ImportRequestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileToken")
     public String fileToken;
+
     public ImportRequestDTO withFileToken(String fileToken) {
         this.fileToken = fileToken;
         return this;
     }
     
+    public ImportRequestDTO(){}
 }

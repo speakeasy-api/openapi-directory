@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dial")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial dial;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction withDial(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial dial) {
         this.dial = dial;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openUrl")
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri openUrl;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction withOpenUrl(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri openUrl) {
         this.openUrl = openUrl;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postbackData")
     public String postbackData;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction withPostbackData(String postbackData) {
         this.postbackData = postbackData;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareLocation")
     public java.util.Map<String, Object> shareLocation;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction withShareLocation(java.util.Map<String, Object> shareLocation) {
         this.shareLocation = shareLocation;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction(){}
 }

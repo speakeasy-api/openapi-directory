@@ -15,6 +15,7 @@ public class CreateEnvironmentRequestBodySuperuserParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public CreateEnvironmentRequestBodySuperuserParameters withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -23,6 +24,7 @@ public class CreateEnvironmentRequestBodySuperuserParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public CreateEnvironmentRequestBodySuperuserParameters withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,9 +33,11 @@ public class CreateEnvironmentRequestBodySuperuserParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public CreateEnvironmentRequestBodySuperuserParameters withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public CreateEnvironmentRequestBodySuperuserParameters(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTokenRequestBody {
@@ -12,6 +13,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=action")
     public CreateTokenRequestBodyActionEnum action;
+
     public CreateTokenRequestBody withAction(CreateTokenRequestBodyActionEnum action) {
         this.action = action;
         return this;
@@ -22,6 +24,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=apiKeyRole")
     public CreateTokenRequestBodyApiKeyRoleEnum apiKeyRole;
+
     public CreateTokenRequestBody withApiKeyRole(CreateTokenRequestBodyApiKeyRoleEnum apiKeyRole) {
         this.apiKeyRole = apiKeyRole;
         return this;
@@ -32,6 +35,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=cancelURL")
     public String cancelURL;
+
     public CreateTokenRequestBody withCancelURL(String cancelURL) {
         this.cancelURL = cancelURL;
         return this;
@@ -42,6 +46,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=cancelURLTitle")
     public String cancelURLTitle;
+
     public CreateTokenRequestBody withCancelURLTitle(String cancelURLTitle) {
         this.cancelURLTitle = cancelURLTitle;
         return this;
@@ -52,6 +57,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=licenseTemplateNumber")
     public String licenseTemplateNumber;
+
     public CreateTokenRequestBody withLicenseTemplateNumber(String licenseTemplateNumber) {
         this.licenseTemplateNumber = licenseTemplateNumber;
         return this;
@@ -62,6 +68,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=licenseeNumber")
     public String licenseeNumber;
+
     public CreateTokenRequestBody withLicenseeNumber(String licenseeNumber) {
         this.licenseeNumber = licenseeNumber;
         return this;
@@ -72,6 +79,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=predefinedShoppingItem")
     public String predefinedShoppingItem;
+
     public CreateTokenRequestBody withPredefinedShoppingItem(String predefinedShoppingItem) {
         this.predefinedShoppingItem = predefinedShoppingItem;
         return this;
@@ -82,6 +90,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=privateKey")
     public String privateKey;
+
     public CreateTokenRequestBody withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -92,6 +101,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=productNumber")
     public String productNumber;
+
     public CreateTokenRequestBody withProductNumber(String productNumber) {
         this.productNumber = productNumber;
         return this;
@@ -102,6 +112,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=successURL")
     public String successURL;
+
     public CreateTokenRequestBody withSuccessURL(String successURL) {
         this.successURL = successURL;
         return this;
@@ -112,6 +123,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=successURLTitle")
     public String successURLTitle;
+
     public CreateTokenRequestBody withSuccessURLTitle(String successURLTitle) {
         this.successURLTitle = successURLTitle;
         return this;
@@ -122,6 +134,7 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=tokenType")
     public CreateTokenRequestBodyTokenTypeEnum tokenType;
+
     public CreateTokenRequestBody withTokenType(CreateTokenRequestBodyTokenTypeEnum tokenType) {
         this.tokenType = tokenType;
         return this;
@@ -132,9 +145,13 @@ public class CreateTokenRequestBody {
      */
     @SpeakeasyMetadata("form:name=type")
     public CreateTokenRequestBodyTypeEnum type;
+
     public CreateTokenRequestBody withType(CreateTokenRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateTokenRequestBody(@JsonProperty("tokenType") CreateTokenRequestBodyTokenTypeEnum tokenType) {
+        this.tokenType = tokenType;
+  }
 }

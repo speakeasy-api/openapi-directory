@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlProjectsInstancesResetReplicaSizeSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlProjectsInstancesResetReplicaSizeSecurityOption1 option1;
+
     public SqlProjectsInstancesResetReplicaSizeSecurity withOption1(SqlProjectsInstancesResetReplicaSizeSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlProjectsInstancesResetReplicaSizeSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlProjectsInstancesResetReplicaSizeSecurityOption2 option2;
+
     public SqlProjectsInstancesResetReplicaSizeSecurity withOption2(SqlProjectsInstancesResetReplicaSizeSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlProjectsInstancesResetReplicaSizeSecurity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMedicalTranscriptionJobsResponse {
@@ -12,6 +13,7 @@ public class ListMedicalTranscriptionJobsResponse {
      */
     
     public Object badRequestException;
+
     public ListMedicalTranscriptionJobsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListMedicalTranscriptionJobsResponse {
     
     
     public String contentType;
+
     public ListMedicalTranscriptionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListMedicalTranscriptionJobsResponse {
      */
     
     public Object internalFailureException;
+
     public ListMedicalTranscriptionJobsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListMedicalTranscriptionJobsResponse {
      */
     
     public Object limitExceededException;
+
     public ListMedicalTranscriptionJobsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListMedicalTranscriptionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMedicalTranscriptionJobsResponse listMedicalTranscriptionJobsResponse;
+
     public ListMedicalTranscriptionJobsResponse withListMedicalTranscriptionJobsResponse(org.openapis.openapi.models.shared.ListMedicalTranscriptionJobsResponse listMedicalTranscriptionJobsResponse) {
         this.listMedicalTranscriptionJobsResponse = listMedicalTranscriptionJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListMedicalTranscriptionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListMedicalTranscriptionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListMedicalTranscriptionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMedicalTranscriptionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMedicalTranscriptionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

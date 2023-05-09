@@ -15,9 +15,13 @@ public class PutImagesId200ApplicationJSONImageProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PutImagesId200ApplicationJSONImageProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PutImagesId200ApplicationJSONImageProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

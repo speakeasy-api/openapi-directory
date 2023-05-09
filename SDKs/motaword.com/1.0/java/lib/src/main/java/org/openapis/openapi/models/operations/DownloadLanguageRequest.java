@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadLanguageRequest {
@@ -12,6 +13,7 @@ public class DownloadLanguageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DownloadLanguageRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class DownloadLanguageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
     public String language;
+
     public DownloadLanguageRequest withLanguage(String language) {
         this.language = language;
         return this;
     }
     
+    public DownloadLanguageRequest(@JsonProperty("id") Long id, @JsonProperty("language") String language) {
+        this.id = id;
+        this.language = language;
+  }
 }

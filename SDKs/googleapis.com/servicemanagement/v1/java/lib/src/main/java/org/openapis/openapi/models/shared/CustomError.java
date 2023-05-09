@@ -18,6 +18,7 @@ public class CustomError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public CustomErrorRule[] rules;
+
     public CustomError withRules(CustomErrorRule[] rules) {
         this.rules = rules;
         return this;
@@ -29,9 +30,11 @@ public class CustomError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public String[] types;
+
     public CustomError withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public CustomError(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPostGuestFormRequest {
@@ -12,6 +13,7 @@ public class AccountPostGuestFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest;
+
     public AccountPostGuestFormRequest withApiCoreDtoAccountingGuest(org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest) {
         this.apiCoreDtoAccountingGuest = apiCoreDtoAccountingGuest;
         return this;
@@ -22,9 +24,14 @@ public class AccountPostGuestFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
     public Long guestId;
+
     public AccountPostGuestFormRequest withGuestId(Long guestId) {
         this.guestId = guestId;
         return this;
     }
     
+    public AccountPostGuestFormRequest(@JsonProperty("Api.Core.Dto.Accounting.Guest") org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest, @JsonProperty("guestId") Long guestId) {
+        this.apiCoreDtoAccountingGuest = apiCoreDtoAccountingGuest;
+        this.guestId = guestId;
+  }
 }

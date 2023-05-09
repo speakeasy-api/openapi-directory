@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyDBInstanceMessage {
     
     public Long allocatedStorage;
+
     public ModifyDBInstanceMessage withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean allowMajorVersionUpgrade;
+
     public ModifyDBInstanceMessage withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         return this;
@@ -23,6 +25,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean applyImmediately;
+
     public ModifyDBInstanceMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -30,6 +33,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ModifyDBInstanceMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -37,6 +41,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long backupRetentionPeriod;
+
     public ModifyDBInstanceMessage withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -44,6 +49,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbInstanceClass;
+
     public ModifyDBInstanceMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -51,6 +57,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbInstanceIdentifier;
+
     public ModifyDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -58,6 +65,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbParameterGroupName;
+
     public ModifyDBInstanceMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -65,6 +73,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String[] dbSecurityGroups;
+
     public ModifyDBInstanceMessage withDBSecurityGroups(String[] dbSecurityGroups) {
         this.dbSecurityGroups = dbSecurityGroups;
         return this;
@@ -72,6 +81,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String engineVersion;
+
     public ModifyDBInstanceMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -79,6 +89,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long iops;
+
     public ModifyDBInstanceMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -86,6 +97,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String masterUserPassword;
+
     public ModifyDBInstanceMessage withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -93,6 +105,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean multiAZ;
+
     public ModifyDBInstanceMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -100,6 +113,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String newDBInstanceIdentifier;
+
     public ModifyDBInstanceMessage withNewDBInstanceIdentifier(String newDBInstanceIdentifier) {
         this.newDBInstanceIdentifier = newDBInstanceIdentifier;
         return this;
@@ -107,6 +121,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String optionGroupName;
+
     public ModifyDBInstanceMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -114,6 +129,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String preferredBackupWindow;
+
     public ModifyDBInstanceMessage withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -121,6 +137,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public ModifyDBInstanceMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -128,6 +145,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String storageType;
+
     public ModifyDBInstanceMessage withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -135,6 +153,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String tdeCredentialArn;
+
     public ModifyDBInstanceMessage withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -142,6 +161,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String tdeCredentialPassword;
+
     public ModifyDBInstanceMessage withTdeCredentialPassword(String tdeCredentialPassword) {
         this.tdeCredentialPassword = tdeCredentialPassword;
         return this;
@@ -149,9 +169,13 @@ public class ModifyDBInstanceMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public ModifyDBInstanceMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public ModifyDBInstanceMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

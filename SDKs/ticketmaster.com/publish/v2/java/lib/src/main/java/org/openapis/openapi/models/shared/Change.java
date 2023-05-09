@@ -18,6 +18,7 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public Change withFrom(String from) {
         this.from = from;
         return this;
@@ -28,6 +29,7 @@ public class Change {
      */
     @JsonProperty("op")
     public ChangeOpEnum op;
+
     public Change withOp(ChangeOpEnum op) {
         this.op = op;
         return this;
@@ -38,6 +40,7 @@ public class Change {
      */
     @JsonProperty("path")
     public String path;
+
     public Change withPath(String path) {
         this.path = path;
         return this;
@@ -49,9 +52,14 @@ public class Change {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public Change withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public Change(@JsonProperty("op") ChangeOpEnum op, @JsonProperty("path") String path) {
+        this.op = op;
+        this.path = path;
+  }
 }

@@ -18,6 +18,7 @@ public class RRSetRoutingPolicyPrimaryBackupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupGeoTargets")
     public RRSetRoutingPolicyGeoPolicy backupGeoTargets;
+
     public RRSetRoutingPolicyPrimaryBackupPolicy withBackupGeoTargets(RRSetRoutingPolicyGeoPolicy backupGeoTargets) {
         this.backupGeoTargets = backupGeoTargets;
         return this;
@@ -26,6 +27,7 @@ public class RRSetRoutingPolicyPrimaryBackupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RRSetRoutingPolicyPrimaryBackupPolicy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,6 +39,7 @@ public class RRSetRoutingPolicyPrimaryBackupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryTargets")
     public RRSetRoutingPolicyHealthCheckTargets primaryTargets;
+
     public RRSetRoutingPolicyPrimaryBackupPolicy withPrimaryTargets(RRSetRoutingPolicyHealthCheckTargets primaryTargets) {
         this.primaryTargets = primaryTargets;
         return this;
@@ -48,9 +51,11 @@ public class RRSetRoutingPolicyPrimaryBackupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trickleTraffic")
     public Double trickleTraffic;
+
     public RRSetRoutingPolicyPrimaryBackupPolicy withTrickleTraffic(Double trickleTraffic) {
         this.trickleTraffic = trickleTraffic;
         return this;
     }
     
+    public RRSetRoutingPolicyPrimaryBackupPolicy(){}
 }

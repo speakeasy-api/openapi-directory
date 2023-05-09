@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse {
     
     public String contentType;
+
     public BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse
      */
     
     public org.openapis.openapi.models.shared.ListCapacityCommitmentsResponse listCapacityCommitmentsResponse;
+
     public BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse withListCapacityCommitmentsResponse(org.openapis.openapi.models.shared.ListCapacityCommitmentsResponse listCapacityCommitmentsResponse) {
         this.listCapacityCommitmentsResponse = listCapacityCommitmentsResponse;
         return this;
@@ -26,6 +29,7 @@ public class BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse
     
     
     public Integer statusCode;
+
     public BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

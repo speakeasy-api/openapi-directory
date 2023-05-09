@@ -15,6 +15,7 @@ public class AutoDetectionS3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HistoricalDataPathList")
     public String[] historicalDataPathList;
+
     public AutoDetectionS3SourceConfig withHistoricalDataPathList(String[] historicalDataPathList) {
         this.historicalDataPathList = historicalDataPathList;
         return this;
@@ -23,9 +24,11 @@ public class AutoDetectionS3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplatedPathList")
     public String[] templatedPathList;
+
     public AutoDetectionS3SourceConfig withTemplatedPathList(String[] templatedPathList) {
         this.templatedPathList = templatedPathList;
         return this;
     }
     
+    public AutoDetectionS3SourceConfig(){}
 }

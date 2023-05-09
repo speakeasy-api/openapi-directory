@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelServicePipelineDeploymentOutput {
     @JsonProperty("pipeline")
     public ServicePipeline pipeline;
+
     public CancelServicePipelineDeploymentOutput withPipeline(ServicePipeline pipeline) {
         this.pipeline = pipeline;
         return this;
     }
     
+    public CancelServicePipelineDeploymentOutput(@JsonProperty("pipeline") ServicePipeline pipeline) {
+        this.pipeline = pipeline;
+  }
 }

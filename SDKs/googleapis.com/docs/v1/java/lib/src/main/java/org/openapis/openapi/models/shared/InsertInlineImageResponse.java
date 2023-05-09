@@ -18,9 +18,11 @@ public class InsertInlineImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public InsertInlineImageResponse withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public InsertInlineImageResponse(){}
 }

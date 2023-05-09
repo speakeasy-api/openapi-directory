@@ -18,6 +18,7 @@ public class ReturnShippingLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public ReturnShippingLabel withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -29,6 +30,7 @@ public class ReturnShippingLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelUri")
     public String labelUri;
+
     public ReturnShippingLabel withLabelUri(String labelUri) {
         this.labelUri = labelUri;
         return this;
@@ -40,9 +42,11 @@ public class ReturnShippingLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public ReturnShippingLabel withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public ReturnShippingLabel(){}
 }

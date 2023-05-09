@@ -15,9 +15,13 @@ public class UpdateApprovalRuleTemplateContentOutput {
      */
     @JsonProperty("approvalRuleTemplate")
     public ApprovalRuleTemplate approvalRuleTemplate;
+
     public UpdateApprovalRuleTemplateContentOutput withApprovalRuleTemplate(ApprovalRuleTemplate approvalRuleTemplate) {
         this.approvalRuleTemplate = approvalRuleTemplate;
         return this;
     }
     
+    public UpdateApprovalRuleTemplateContentOutput(@JsonProperty("approvalRuleTemplate") ApprovalRuleTemplate approvalRuleTemplate) {
+        this.approvalRuleTemplate = approvalRuleTemplate;
+  }
 }

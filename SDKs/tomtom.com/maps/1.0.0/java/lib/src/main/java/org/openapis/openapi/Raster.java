@@ -57,10 +57,8 @@ public class Raster {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberStaticimageResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberStaticimageResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberStaticimageResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberStaticimageResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {
@@ -97,10 +95,8 @@ public class Raster {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYFormatResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 302 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 410 || httpRes.statusCode() == 500) {

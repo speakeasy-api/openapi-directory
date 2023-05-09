@@ -15,6 +15,7 @@ public class PaymentConnectorResponses {
      */
     @JsonProperty("Message")
     public String message;
+
     public PaymentConnectorResponses withMessage(String message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class PaymentConnectorResponses {
      */
     @JsonProperty("ReturnCode")
     public String returnCode;
+
     public PaymentConnectorResponses withReturnCode(String returnCode) {
         this.returnCode = returnCode;
         return this;
@@ -35,6 +37,7 @@ public class PaymentConnectorResponses {
      */
     @JsonProperty("Tid")
     public String tid;
+
     public PaymentConnectorResponses withTid(String tid) {
         this.tid = tid;
         return this;
@@ -45,9 +48,16 @@ public class PaymentConnectorResponses {
      */
     @JsonProperty("authId")
     public String authId;
+
     public PaymentConnectorResponses withAuthId(String authId) {
         this.authId = authId;
         return this;
     }
     
+    public PaymentConnectorResponses(@JsonProperty("Message") String message, @JsonProperty("ReturnCode") String returnCode, @JsonProperty("Tid") String tid, @JsonProperty("authId") String authId) {
+        this.message = message;
+        this.returnCode = returnCode;
+        this.tid = tid;
+        this.authId = authId;
+  }
 }

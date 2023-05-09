@@ -15,6 +15,7 @@ public class Session {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Session withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Session {
      */
     @JsonProperty("clientCode")
     public String clientCode;
+
     public Session withClientCode(String clientCode) {
         this.clientCode = clientCode;
         return this;
@@ -35,6 +37,7 @@ public class Session {
      */
     @JsonProperty("clientEngine")
     public String clientEngine;
+
     public Session withClientEngine(String clientEngine) {
         this.clientEngine = clientEngine;
         return this;
@@ -45,6 +48,7 @@ public class Session {
      */
     @JsonProperty("clientEngineVersion")
     public String clientEngineVersion;
+
     public Session withClientEngineVersion(String clientEngineVersion) {
         this.clientEngineVersion = clientEngineVersion;
         return this;
@@ -55,6 +59,7 @@ public class Session {
      */
     @JsonProperty("clientName")
     public String clientName;
+
     public Session withClientName(String clientName) {
         this.clientName = clientName;
         return this;
@@ -65,6 +70,7 @@ public class Session {
      */
     @JsonProperty("clientType")
     public String clientType;
+
     public Session withClientType(String clientType) {
         this.clientType = clientType;
         return this;
@@ -75,6 +81,7 @@ public class Session {
      */
     @JsonProperty("clientVersion")
     public String clientVersion;
+
     public Session withClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
@@ -85,6 +92,7 @@ public class Session {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Session withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -95,6 +103,7 @@ public class Session {
      */
     @JsonProperty("countryName")
     public String countryName;
+
     public Session withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -105,6 +114,7 @@ public class Session {
      */
     @JsonProperty("current")
     public Boolean current;
+
     public Session withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -115,6 +125,7 @@ public class Session {
      */
     @JsonProperty("deviceBrand")
     public String deviceBrand;
+
     public Session withDeviceBrand(String deviceBrand) {
         this.deviceBrand = deviceBrand;
         return this;
@@ -125,6 +136,7 @@ public class Session {
      */
     @JsonProperty("deviceModel")
     public String deviceModel;
+
     public Session withDeviceModel(String deviceModel) {
         this.deviceModel = deviceModel;
         return this;
@@ -135,6 +147,7 @@ public class Session {
      */
     @JsonProperty("deviceName")
     public String deviceName;
+
     public Session withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -145,6 +158,7 @@ public class Session {
      */
     @JsonProperty("expire")
     public Integer expire;
+
     public Session withExpire(Integer expire) {
         this.expire = expire;
         return this;
@@ -155,6 +169,7 @@ public class Session {
      */
     @JsonProperty("ip")
     public String ip;
+
     public Session withIp(String ip) {
         this.ip = ip;
         return this;
@@ -165,6 +180,7 @@ public class Session {
      */
     @JsonProperty("osCode")
     public String osCode;
+
     public Session withOsCode(String osCode) {
         this.osCode = osCode;
         return this;
@@ -175,6 +191,7 @@ public class Session {
      */
     @JsonProperty("osName")
     public String osName;
+
     public Session withOsName(String osName) {
         this.osName = osName;
         return this;
@@ -185,6 +202,7 @@ public class Session {
      */
     @JsonProperty("osVersion")
     public String osVersion;
+
     public Session withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -195,6 +213,7 @@ public class Session {
      */
     @JsonProperty("provider")
     public String provider;
+
     public Session withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -205,6 +224,7 @@ public class Session {
      */
     @JsonProperty("providerToken")
     public String providerToken;
+
     public Session withProviderToken(String providerToken) {
         this.providerToken = providerToken;
         return this;
@@ -215,6 +235,7 @@ public class Session {
      */
     @JsonProperty("providerUid")
     public String providerUid;
+
     public Session withProviderUid(String providerUid) {
         this.providerUid = providerUid;
         return this;
@@ -225,9 +246,34 @@ public class Session {
      */
     @JsonProperty("userId")
     public String userId;
+
     public Session withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Session(@JsonProperty("$id") String dollarId, @JsonProperty("clientCode") String clientCode, @JsonProperty("clientEngine") String clientEngine, @JsonProperty("clientEngineVersion") String clientEngineVersion, @JsonProperty("clientName") String clientName, @JsonProperty("clientType") String clientType, @JsonProperty("clientVersion") String clientVersion, @JsonProperty("countryCode") String countryCode, @JsonProperty("countryName") String countryName, @JsonProperty("current") Boolean current, @JsonProperty("deviceBrand") String deviceBrand, @JsonProperty("deviceModel") String deviceModel, @JsonProperty("deviceName") String deviceName, @JsonProperty("expire") Integer expire, @JsonProperty("ip") String ip, @JsonProperty("osCode") String osCode, @JsonProperty("osName") String osName, @JsonProperty("osVersion") String osVersion, @JsonProperty("provider") String provider, @JsonProperty("providerToken") String providerToken, @JsonProperty("providerUid") String providerUid, @JsonProperty("userId") String userId) {
+        this.dollarId = dollarId;
+        this.clientCode = clientCode;
+        this.clientEngine = clientEngine;
+        this.clientEngineVersion = clientEngineVersion;
+        this.clientName = clientName;
+        this.clientType = clientType;
+        this.clientVersion = clientVersion;
+        this.countryCode = countryCode;
+        this.countryName = countryName;
+        this.current = current;
+        this.deviceBrand = deviceBrand;
+        this.deviceModel = deviceModel;
+        this.deviceName = deviceName;
+        this.expire = expire;
+        this.ip = ip;
+        this.osCode = osCode;
+        this.osName = osName;
+        this.osVersion = osVersion;
+        this.provider = provider;
+        this.providerToken = providerToken;
+        this.providerUid = providerUid;
+        this.userId = userId;
+  }
 }

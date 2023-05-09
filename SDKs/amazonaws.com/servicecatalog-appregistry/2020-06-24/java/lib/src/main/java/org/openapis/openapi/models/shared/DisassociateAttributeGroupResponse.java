@@ -15,6 +15,7 @@ public class DisassociateAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationArn")
     public String applicationArn;
+
     public DisassociateAttributeGroupResponse withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -23,9 +24,11 @@ public class DisassociateAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeGroupArn")
     public String attributeGroupArn;
+
     public DisassociateAttributeGroupResponse withAttributeGroupArn(String attributeGroupArn) {
         this.attributeGroupArn = attributeGroupArn;
         return this;
     }
     
+    public DisassociateAttributeGroupResponse(){}
 }

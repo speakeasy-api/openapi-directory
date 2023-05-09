@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchPutAssetPropertyValueResponse {
@@ -12,6 +13,7 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchPutAssetPropertyValueResponse batchPutAssetPropertyValueResponse;
+
     public BatchPutAssetPropertyValueResponse withBatchPutAssetPropertyValueResponse(org.openapis.openapi.models.shared.BatchPutAssetPropertyValueResponse batchPutAssetPropertyValueResponse) {
         this.batchPutAssetPropertyValueResponse = batchPutAssetPropertyValueResponse;
         return this;
@@ -22,6 +24,7 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public Object conflictingOperationException;
+
     public BatchPutAssetPropertyValueResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -29,6 +32,7 @@ public class BatchPutAssetPropertyValueResponse {
     
     
     public String contentType;
+
     public BatchPutAssetPropertyValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public Object internalFailureException;
+
     public BatchPutAssetPropertyValueResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchPutAssetPropertyValueResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public Object limitExceededException;
+
     public BatchPutAssetPropertyValueResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class BatchPutAssetPropertyValueResponse {
     
     
     public Integer statusCode;
+
     public BatchPutAssetPropertyValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class BatchPutAssetPropertyValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchPutAssetPropertyValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchPutAssetPropertyValueResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchPutAssetPropertyValueResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class BatchPutAssetPropertyValueResponse {
      */
     
     public Object throttlingException;
+
     public BatchPutAssetPropertyValueResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchPutAssetPropertyValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

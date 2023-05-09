@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BackendJobRespObj {
     @JsonProperty("AppId")
     public String appId;
+
     public BackendJobRespObj withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -21,6 +22,7 @@ public class BackendJobRespObj {
     
     @JsonProperty("BackendEnvironmentName")
     public String backendEnvironmentName;
+
     public BackendJobRespObj withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -29,6 +31,7 @@ public class BackendJobRespObj {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateTime")
     public String createTime;
+
     public BackendJobRespObj withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -37,6 +40,7 @@ public class BackendJobRespObj {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public BackendJobRespObj withError(String error) {
         this.error = error;
         return this;
@@ -45,6 +49,7 @@ public class BackendJobRespObj {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public BackendJobRespObj withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -53,6 +58,7 @@ public class BackendJobRespObj {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public String operation;
+
     public BackendJobRespObj withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -61,6 +67,7 @@ public class BackendJobRespObj {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public BackendJobRespObj withStatus(String status) {
         this.status = status;
         return this;
@@ -69,9 +76,14 @@ public class BackendJobRespObj {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateTime")
     public String updateTime;
+
     public BackendJobRespObj withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public BackendJobRespObj(@JsonProperty("AppId") String appId, @JsonProperty("BackendEnvironmentName") String backendEnvironmentName) {
+        this.appId = appId;
+        this.backendEnvironmentName = backendEnvironmentName;
+  }
 }

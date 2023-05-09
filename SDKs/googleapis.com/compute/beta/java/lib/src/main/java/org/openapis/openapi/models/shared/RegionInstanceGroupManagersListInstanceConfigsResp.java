@@ -18,6 +18,7 @@ public class RegionInstanceGroupManagersListInstanceConfigsResp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public PerInstanceConfig[] items;
+
     public RegionInstanceGroupManagersListInstanceConfigsResp withItems(PerInstanceConfig[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class RegionInstanceGroupManagersListInstanceConfigsResp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public RegionInstanceGroupManagersListInstanceConfigsResp withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class RegionInstanceGroupManagersListInstanceConfigsResp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public RegionInstanceGroupManagersListInstanceConfigsRespWarning warning;
+
     public RegionInstanceGroupManagersListInstanceConfigsResp withWarning(RegionInstanceGroupManagersListInstanceConfigsRespWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public RegionInstanceGroupManagersListInstanceConfigsResp(){}
 }

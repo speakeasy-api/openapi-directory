@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3RawDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDocumentaiV1beta3RawDocument withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta3RawDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public GoogleCloudDocumentaiV1beta3RawDocument withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3RawDocument(){}
 }

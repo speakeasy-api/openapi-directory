@@ -15,6 +15,7 @@ public class RegistrationSchemaReadRegistrationSchemaAttributes {
      */
     
     public Boolean active;
+
     public RegistrationSchemaReadRegistrationSchemaAttributes withActive(Boolean active) {
         this.active = active;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationSchemaReadRegistrationSchemaAttributes {
      */
     
     public String name;
+
     public RegistrationSchemaReadRegistrationSchemaAttributes withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationSchemaReadRegistrationSchemaAttributes {
      */
     
     public java.util.Map<String, java.util.Map<String, Object>> schema;
+
     public RegistrationSchemaReadRegistrationSchemaAttributes withSchema(java.util.Map<String, java.util.Map<String, Object>> schema) {
         this.schema = schema;
         return this;
@@ -45,9 +48,11 @@ public class RegistrationSchemaReadRegistrationSchemaAttributes {
      */
     
     public Long schemaVersion;
+
     public RegistrationSchemaReadRegistrationSchemaAttributes withSchemaVersion(Long schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public RegistrationSchemaReadRegistrationSchemaAttributes(){}
 }

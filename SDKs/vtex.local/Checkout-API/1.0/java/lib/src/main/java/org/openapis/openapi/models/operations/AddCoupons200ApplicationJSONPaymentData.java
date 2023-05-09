@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giftCards")
     public AddCoupons200ApplicationJSONPaymentDataGiftCards[] giftCards;
+
     public AddCoupons200ApplicationJSONPaymentData withGiftCards(AddCoupons200ApplicationJSONPaymentDataGiftCards[] giftCards) {
         this.giftCards = giftCards;
         return this;
@@ -29,9 +30,11 @@ public class AddCoupons200ApplicationJSONPaymentData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public AddCoupons200ApplicationJSONPaymentDataTransactions[] transactions;
+
     public AddCoupons200ApplicationJSONPaymentData withTransactions(AddCoupons200ApplicationJSONPaymentDataTransactions[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONPaymentData(){}
 }

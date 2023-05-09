@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFileSystemsResponse {
@@ -12,6 +13,7 @@ public class DescribeFileSystemsResponse {
      */
     
     public Object badRequest;
+
     public DescribeFileSystemsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFileSystemsResponse {
     
     
     public String contentType;
+
     public DescribeFileSystemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFileSystemsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFileSystemsResponse describeFileSystemsResponse;
+
     public DescribeFileSystemsResponse withDescribeFileSystemsResponse(org.openapis.openapi.models.shared.DescribeFileSystemsResponse describeFileSystemsResponse) {
         this.describeFileSystemsResponse = describeFileSystemsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFileSystemsResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeFileSystemsResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFileSystemsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeFileSystemsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFileSystemsResponse {
     
     
     public Integer statusCode;
+
     public DescribeFileSystemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeFileSystemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFileSystemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFileSystemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

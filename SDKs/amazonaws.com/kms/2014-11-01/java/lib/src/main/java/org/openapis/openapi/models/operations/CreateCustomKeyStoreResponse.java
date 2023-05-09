@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomKeyStoreResponse {
@@ -12,6 +13,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterInUseException;
+
     public CreateCustomKeyStoreResponse withCloudHsmClusterInUseException(Object cloudHsmClusterInUseException) {
         this.cloudHsmClusterInUseException = cloudHsmClusterInUseException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterInvalidConfigurationException;
+
     public CreateCustomKeyStoreResponse withCloudHsmClusterInvalidConfigurationException(Object cloudHsmClusterInvalidConfigurationException) {
         this.cloudHsmClusterInvalidConfigurationException = cloudHsmClusterInvalidConfigurationException;
         return this;
@@ -32,6 +35,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterNotActiveException;
+
     public CreateCustomKeyStoreResponse withCloudHsmClusterNotActiveException(Object cloudHsmClusterNotActiveException) {
         this.cloudHsmClusterNotActiveException = cloudHsmClusterNotActiveException;
         return this;
@@ -42,6 +46,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object cloudHsmClusterNotFoundException;
+
     public CreateCustomKeyStoreResponse withCloudHsmClusterNotFoundException(Object cloudHsmClusterNotFoundException) {
         this.cloudHsmClusterNotFoundException = cloudHsmClusterNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomKeyStoreResponse {
     
     
     public String contentType;
+
     public CreateCustomKeyStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomKeyStoreResponse createCustomKeyStoreResponse;
+
     public CreateCustomKeyStoreResponse withCreateCustomKeyStoreResponse(org.openapis.openapi.models.shared.CreateCustomKeyStoreResponse createCustomKeyStoreResponse) {
         this.createCustomKeyStoreResponse = createCustomKeyStoreResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreNameInUseException;
+
     public CreateCustomKeyStoreResponse withCustomKeyStoreNameInUseException(Object customKeyStoreNameInUseException) {
         this.customKeyStoreNameInUseException = customKeyStoreNameInUseException;
         return this;
@@ -79,6 +87,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object incorrectTrustAnchorException;
+
     public CreateCustomKeyStoreResponse withIncorrectTrustAnchorException(Object incorrectTrustAnchorException) {
         this.incorrectTrustAnchorException = incorrectTrustAnchorException;
         return this;
@@ -89,6 +98,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object kmsInternalException;
+
     public CreateCustomKeyStoreResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -99,6 +109,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCustomKeyStoreResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -106,6 +117,7 @@ public class CreateCustomKeyStoreResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomKeyStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateCustomKeyStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomKeyStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyIncorrectAuthenticationCredentialException;
+
     public CreateCustomKeyStoreResponse withXksProxyIncorrectAuthenticationCredentialException(Object xksProxyIncorrectAuthenticationCredentialException) {
         this.xksProxyIncorrectAuthenticationCredentialException = xksProxyIncorrectAuthenticationCredentialException;
         return this;
@@ -133,6 +147,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyInvalidConfigurationException;
+
     public CreateCustomKeyStoreResponse withXksProxyInvalidConfigurationException(Object xksProxyInvalidConfigurationException) {
         this.xksProxyInvalidConfigurationException = xksProxyInvalidConfigurationException;
         return this;
@@ -143,6 +158,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyInvalidResponseException;
+
     public CreateCustomKeyStoreResponse withXksProxyInvalidResponseException(Object xksProxyInvalidResponseException) {
         this.xksProxyInvalidResponseException = xksProxyInvalidResponseException;
         return this;
@@ -153,6 +169,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyUriEndpointInUseException;
+
     public CreateCustomKeyStoreResponse withXksProxyUriEndpointInUseException(Object xksProxyUriEndpointInUseException) {
         this.xksProxyUriEndpointInUseException = xksProxyUriEndpointInUseException;
         return this;
@@ -163,6 +180,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyUriInUseException;
+
     public CreateCustomKeyStoreResponse withXksProxyUriInUseException(Object xksProxyUriInUseException) {
         this.xksProxyUriInUseException = xksProxyUriInUseException;
         return this;
@@ -173,6 +191,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyUriUnreachableException;
+
     public CreateCustomKeyStoreResponse withXksProxyUriUnreachableException(Object xksProxyUriUnreachableException) {
         this.xksProxyUriUnreachableException = xksProxyUriUnreachableException;
         return this;
@@ -183,6 +202,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyVpcEndpointServiceInUseException;
+
     public CreateCustomKeyStoreResponse withXksProxyVpcEndpointServiceInUseException(Object xksProxyVpcEndpointServiceInUseException) {
         this.xksProxyVpcEndpointServiceInUseException = xksProxyVpcEndpointServiceInUseException;
         return this;
@@ -193,6 +213,7 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyVpcEndpointServiceInvalidConfigurationException;
+
     public CreateCustomKeyStoreResponse withXksProxyVpcEndpointServiceInvalidConfigurationException(Object xksProxyVpcEndpointServiceInvalidConfigurationException) {
         this.xksProxyVpcEndpointServiceInvalidConfigurationException = xksProxyVpcEndpointServiceInvalidConfigurationException;
         return this;
@@ -203,9 +224,14 @@ public class CreateCustomKeyStoreResponse {
      */
     
     public Object xksProxyVpcEndpointServiceNotFoundException;
+
     public CreateCustomKeyStoreResponse withXksProxyVpcEndpointServiceNotFoundException(Object xksProxyVpcEndpointServiceNotFoundException) {
         this.xksProxyVpcEndpointServiceNotFoundException = xksProxyVpcEndpointServiceNotFoundException;
         return this;
     }
     
+    public CreateCustomKeyStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

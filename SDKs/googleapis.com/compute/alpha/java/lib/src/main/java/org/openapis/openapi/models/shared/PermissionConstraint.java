@@ -18,6 +18,7 @@ public class PermissionConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public PermissionConstraint withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class PermissionConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public PermissionConstraint withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PermissionConstraint(){}
 }

@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * HumanLoopActivationConditionsConfig - Defines under what conditions SageMaker creates a human loop. Used within . See for the required format of activation conditions.
+ * HumanLoopActivationConditionsConfig - Defines under what conditions SageMaker creates a human loop. Used within &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateFlowDefinition.html"&gt;CreateFlowDefinition&lt;/a&gt;. See &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HumanLoopActivationConditionsConfig.html"&gt;HumanLoopActivationConditionsConfig&lt;/a&gt; for the required format of activation conditions.
  */
 public class HumanLoopActivationConditionsConfig {
     @JsonProperty("HumanLoopActivationConditions")
     public String humanLoopActivationConditions;
+
     public HumanLoopActivationConditionsConfig withHumanLoopActivationConditions(String humanLoopActivationConditions) {
         this.humanLoopActivationConditions = humanLoopActivationConditions;
         return this;
     }
     
+    public HumanLoopActivationConditionsConfig(@JsonProperty("HumanLoopActivationConditions") String humanLoopActivationConditions) {
+        this.humanLoopActivationConditions = humanLoopActivationConditions;
+  }
 }

@@ -15,9 +15,11 @@ public class UpdateViewRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterString")
     public String filterString;
+
     public UpdateViewRequestBodyFilters withFilterString(String filterString) {
         this.filterString = filterString;
         return this;
     }
     
+    public UpdateViewRequestBodyFilters(){}
 }

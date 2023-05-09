@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AllocateHostsRequestTagSpecificationsTags {
     
     public String key;
+
     public AllocateHostsRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class AllocateHostsRequestTagSpecificationsTags {
     
     
     public String value;
+
     public AllocateHostsRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AllocateHostsRequestTagSpecificationsTags(){}
 }

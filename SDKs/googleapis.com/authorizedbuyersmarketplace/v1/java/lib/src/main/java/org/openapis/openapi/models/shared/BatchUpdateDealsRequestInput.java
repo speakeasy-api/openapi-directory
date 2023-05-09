@@ -18,9 +18,11 @@ public class BatchUpdateDealsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public UpdateDealRequestInput[] requests;
+
     public BatchUpdateDealsRequestInput withRequests(UpdateDealRequestInput[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchUpdateDealsRequestInput(){}
 }

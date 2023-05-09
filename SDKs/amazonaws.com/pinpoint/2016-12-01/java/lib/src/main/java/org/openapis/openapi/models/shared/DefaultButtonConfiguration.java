@@ -15,6 +15,7 @@ public class DefaultButtonConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackgroundColor")
     public String backgroundColor;
+
     public DefaultButtonConfiguration withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -23,6 +24,7 @@ public class DefaultButtonConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BorderRadius")
     public Long borderRadius;
+
     public DefaultButtonConfiguration withBorderRadius(Long borderRadius) {
         this.borderRadius = borderRadius;
         return this;
@@ -30,6 +32,7 @@ public class DefaultButtonConfiguration {
     
     @JsonProperty("ButtonAction")
     public ButtonActionEnum buttonAction;
+
     public DefaultButtonConfiguration withButtonAction(ButtonActionEnum buttonAction) {
         this.buttonAction = buttonAction;
         return this;
@@ -38,6 +41,7 @@ public class DefaultButtonConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public DefaultButtonConfiguration withLink(String link) {
         this.link = link;
         return this;
@@ -45,6 +49,7 @@ public class DefaultButtonConfiguration {
     
     @JsonProperty("Text")
     public String text;
+
     public DefaultButtonConfiguration withText(String text) {
         this.text = text;
         return this;
@@ -53,9 +58,14 @@ public class DefaultButtonConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextColor")
     public String textColor;
+
     public DefaultButtonConfiguration withTextColor(String textColor) {
         this.textColor = textColor;
         return this;
     }
     
+    public DefaultButtonConfiguration(@JsonProperty("ButtonAction") ButtonActionEnum buttonAction, @JsonProperty("Text") String text) {
+        this.buttonAction = buttonAction;
+        this.text = text;
+  }
 }

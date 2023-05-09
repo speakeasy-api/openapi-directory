@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateWebACLRequest {
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public AssociateWebACLRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -16,9 +17,14 @@ public class AssociateWebACLRequest {
     
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public AssociateWebACLRequest withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public AssociateWebACLRequest(@JsonProperty("ResourceArn") String resourceArn, @JsonProperty("WebACLId") String webACLId) {
+        this.resourceArn = resourceArn;
+        this.webACLId = webACLId;
+  }
 }

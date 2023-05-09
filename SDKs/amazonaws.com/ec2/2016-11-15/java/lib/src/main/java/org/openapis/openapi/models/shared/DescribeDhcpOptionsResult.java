@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDhcpOptionsResult {
     
     public DescribeDhcpOptionsResultDhcpOptions[] dhcpOptions;
+
     public DescribeDhcpOptionsResult withDhcpOptions(DescribeDhcpOptionsResultDhcpOptions[] dhcpOptions) {
         this.dhcpOptions = dhcpOptions;
         return this;
@@ -19,9 +20,11 @@ public class DescribeDhcpOptionsResult {
     
     
     public String nextToken;
+
     public DescribeDhcpOptionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDhcpOptionsResult(){}
 }

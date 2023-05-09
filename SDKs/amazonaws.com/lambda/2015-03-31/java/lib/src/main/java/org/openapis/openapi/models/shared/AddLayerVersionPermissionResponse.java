@@ -15,6 +15,7 @@ public class AddLayerVersionPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RevisionId")
     public String revisionId;
+
     public AddLayerVersionPermissionResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -23,9 +24,11 @@ public class AddLayerVersionPermissionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statement")
     public String statement;
+
     public AddLayerVersionPermissionResponse withStatement(String statement) {
         this.statement = statement;
         return this;
     }
     
+    public AddLayerVersionPermissionResponse(){}
 }

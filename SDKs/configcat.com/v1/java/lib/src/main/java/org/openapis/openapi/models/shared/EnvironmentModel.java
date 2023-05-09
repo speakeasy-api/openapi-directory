@@ -15,6 +15,7 @@ public class EnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public EnvironmentModel withColor(String color) {
         this.color = color;
         return this;
@@ -23,6 +24,7 @@ public class EnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentModel withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class EnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public EnvironmentModel withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -39,6 +42,7 @@ public class EnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnvironmentModel withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class EnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public EnvironmentModel withOrder(Integer order) {
         this.order = order;
         return this;
@@ -55,6 +60,7 @@ public class EnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public ProductModel product;
+
     public EnvironmentModel withProduct(ProductModel product) {
         this.product = product;
         return this;
@@ -63,9 +69,11 @@ public class EnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public EnvironmentModel withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public EnvironmentModel(){}
 }

@@ -18,6 +18,7 @@ public class NetworkAddressReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endAddress")
     public String endAddress;
+
     public NetworkAddressReservation withEndAddress(String endAddress) {
         this.endAddress = endAddress;
         return this;
@@ -29,6 +30,7 @@ public class NetworkAddressReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public NetworkAddressReservation withNote(String note) {
         this.note = note;
         return this;
@@ -40,9 +42,11 @@ public class NetworkAddressReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAddress")
     public String startAddress;
+
     public NetworkAddressReservation withStartAddress(String startAddress) {
         this.startAddress = startAddress;
         return this;
     }
     
+    public NetworkAddressReservation(){}
 }

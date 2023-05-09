@@ -12,6 +12,7 @@ public class LanguageStringStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_string_count")
     public Long projectStringCount;
+
     public LanguageStringStat withProjectStringCount(Long projectStringCount) {
         this.projectStringCount = projectStringCount;
         return this;
@@ -20,6 +21,7 @@ public class LanguageStringStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_language")
     public String sourceLanguage;
+
     public LanguageStringStat withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -28,9 +30,11 @@ public class LanguageStringStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tm_string_count")
     public Long tmStringCount;
+
     public LanguageStringStat withTmStringCount(Long tmStringCount) {
         this.tmStringCount = tmStringCount;
         return this;
     }
     
+    public LanguageStringStat(){}
 }

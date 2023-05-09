@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2KMapEstimationQuasiIdValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedAnonymity")
     public String estimatedAnonymity;
+
     public GooglePrivacyDlpV2KMapEstimationQuasiIdValues withEstimatedAnonymity(String estimatedAnonymity) {
         this.estimatedAnonymity = estimatedAnonymity;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2KMapEstimationQuasiIdValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIdsValues")
     public GooglePrivacyDlpV2Value[] quasiIdsValues;
+
     public GooglePrivacyDlpV2KMapEstimationQuasiIdValues withQuasiIdsValues(GooglePrivacyDlpV2Value[] quasiIdsValues) {
         this.quasiIdsValues = quasiIdsValues;
         return this;
     }
     
+    public GooglePrivacyDlpV2KMapEstimationQuasiIdValues(){}
 }

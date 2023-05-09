@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTestGridUrlResponse {
@@ -12,6 +13,7 @@ public class CreateTestGridUrlResponse {
      */
     
     public Object argumentException;
+
     public CreateTestGridUrlResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateTestGridUrlResponse {
     
     
     public String contentType;
+
     public CreateTestGridUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateTestGridUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTestGridUrlResult createTestGridUrlResult;
+
     public CreateTestGridUrlResponse withCreateTestGridUrlResult(org.openapis.openapi.models.shared.CreateTestGridUrlResult createTestGridUrlResult) {
         this.createTestGridUrlResult = createTestGridUrlResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateTestGridUrlResponse {
      */
     
     public Object internalServiceException;
+
     public CreateTestGridUrlResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTestGridUrlResponse {
      */
     
     public Object notFoundException;
+
     public CreateTestGridUrlResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateTestGridUrlResponse {
     
     
     public Integer statusCode;
+
     public CreateTestGridUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateTestGridUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTestGridUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateTestGridUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

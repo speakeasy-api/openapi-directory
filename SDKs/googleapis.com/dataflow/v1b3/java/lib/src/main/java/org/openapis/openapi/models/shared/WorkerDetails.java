@@ -18,6 +18,7 @@ public class WorkerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workItems")
     public WorkItemDetails[] workItems;
+
     public WorkerDetails withWorkItems(WorkItemDetails[] workItems) {
         this.workItems = workItems;
         return this;
@@ -29,9 +30,11 @@ public class WorkerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerName")
     public String workerName;
+
     public WorkerDetails withWorkerName(String workerName) {
         this.workerName = workerName;
         return this;
     }
     
+    public WorkerDetails(){}
 }

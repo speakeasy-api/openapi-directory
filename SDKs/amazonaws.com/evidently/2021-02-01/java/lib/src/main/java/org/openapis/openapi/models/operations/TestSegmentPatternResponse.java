@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestSegmentPatternResponse {
@@ -12,6 +13,7 @@ public class TestSegmentPatternResponse {
      */
     
     public Object accessDeniedException;
+
     public TestSegmentPatternResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class TestSegmentPatternResponse {
     
     
     public String contentType;
+
     public TestSegmentPatternResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TestSegmentPatternResponse {
     
     
     public Integer statusCode;
+
     public TestSegmentPatternResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TestSegmentPatternResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestSegmentPatternResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class TestSegmentPatternResponse {
      */
     
     public org.openapis.openapi.models.shared.TestSegmentPatternResponse testSegmentPatternResponse;
+
     public TestSegmentPatternResponse withTestSegmentPatternResponse(org.openapis.openapi.models.shared.TestSegmentPatternResponse testSegmentPatternResponse) {
         this.testSegmentPatternResponse = testSegmentPatternResponse;
         return this;
@@ -53,6 +59,7 @@ public class TestSegmentPatternResponse {
      */
     
     public Object throttlingException;
+
     public TestSegmentPatternResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class TestSegmentPatternResponse {
      */
     
     public Object validationException;
+
     public TestSegmentPatternResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public TestSegmentPatternResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

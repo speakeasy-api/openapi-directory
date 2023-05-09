@@ -15,6 +15,7 @@ public class ListGameServersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServers")
     public GameServer[] gameServers;
+
     public ListGameServersOutput withGameServers(GameServer[] gameServers) {
         this.gameServers = gameServers;
         return this;
@@ -23,9 +24,11 @@ public class ListGameServersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGameServersOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListGameServersOutput(){}
 }

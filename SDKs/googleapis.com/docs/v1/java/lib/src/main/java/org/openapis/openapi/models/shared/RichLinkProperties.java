@@ -18,6 +18,7 @@ public class RichLinkProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public RichLinkProperties withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -29,6 +30,7 @@ public class RichLinkProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public RichLinkProperties withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +42,11 @@ public class RichLinkProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public RichLinkProperties withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public RichLinkProperties(){}
 }

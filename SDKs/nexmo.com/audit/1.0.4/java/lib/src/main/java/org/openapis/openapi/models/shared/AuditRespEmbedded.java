@@ -15,9 +15,11 @@ public class AuditRespEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public AuditEvent[] events;
+
     public AuditRespEmbedded withEvents(AuditEvent[] events) {
         this.events = events;
         return this;
     }
     
+    public AuditRespEmbedded(){}
 }

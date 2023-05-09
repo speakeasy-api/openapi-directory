@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdatePrimaryRegionRequest {
     @JsonProperty("KeyId")
     public String keyId;
+
     public UpdatePrimaryRegionRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -16,9 +17,14 @@ public class UpdatePrimaryRegionRequest {
     
     @JsonProperty("PrimaryRegion")
     public String primaryRegion;
+
     public UpdatePrimaryRegionRequest withPrimaryRegion(String primaryRegion) {
         this.primaryRegion = primaryRegion;
         return this;
     }
     
+    public UpdatePrimaryRegionRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("PrimaryRegion") String primaryRegion) {
+        this.keyId = keyId;
+        this.primaryRegion = primaryRegion;
+  }
 }

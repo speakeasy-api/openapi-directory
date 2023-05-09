@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGrantRequest {
     @JsonProperty("AllowedOperations")
     public AllowedOperationEnum[] allowedOperations;
+
     public CreateGrantRequest withAllowedOperations(AllowedOperationEnum[] allowedOperations) {
         this.allowedOperations = allowedOperations;
         return this;
@@ -16,6 +17,7 @@ public class CreateGrantRequest {
     
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateGrantRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +25,7 @@ public class CreateGrantRequest {
     
     @JsonProperty("GrantName")
     public String grantName;
+
     public CreateGrantRequest withGrantName(String grantName) {
         this.grantName = grantName;
         return this;
@@ -30,6 +33,7 @@ public class CreateGrantRequest {
     
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public CreateGrantRequest withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -37,6 +41,7 @@ public class CreateGrantRequest {
     
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public CreateGrantRequest withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -44,9 +49,18 @@ public class CreateGrantRequest {
     
     @JsonProperty("Principals")
     public String[] principals;
+
     public CreateGrantRequest withPrincipals(String[] principals) {
         this.principals = principals;
         return this;
     }
     
+    public CreateGrantRequest(@JsonProperty("AllowedOperations") AllowedOperationEnum[] allowedOperations, @JsonProperty("ClientToken") String clientToken, @JsonProperty("GrantName") String grantName, @JsonProperty("HomeRegion") String homeRegion, @JsonProperty("LicenseArn") String licenseArn, @JsonProperty("Principals") String[] principals) {
+        this.allowedOperations = allowedOperations;
+        this.clientToken = clientToken;
+        this.grantName = grantName;
+        this.homeRegion = homeRegion;
+        this.licenseArn = licenseArn;
+        this.principals = principals;
+  }
 }

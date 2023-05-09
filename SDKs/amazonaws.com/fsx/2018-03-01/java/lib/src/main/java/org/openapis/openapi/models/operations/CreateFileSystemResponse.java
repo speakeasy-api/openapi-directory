@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFileSystemResponse {
@@ -12,6 +13,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object activeDirectoryError;
+
     public CreateFileSystemResponse withActiveDirectoryError(Object activeDirectoryError) {
         this.activeDirectoryError = activeDirectoryError;
         return this;
@@ -22,6 +24,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object badRequest;
+
     public CreateFileSystemResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class CreateFileSystemResponse {
     
     
     public String contentType;
+
     public CreateFileSystemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateFileSystemResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFileSystemResponse createFileSystemResponse;
+
     public CreateFileSystemResponse withCreateFileSystemResponse(org.openapis.openapi.models.shared.CreateFileSystemResponse createFileSystemResponse) {
         this.createFileSystemResponse = createFileSystemResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateFileSystemResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -59,6 +65,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object internalServerError;
+
     public CreateFileSystemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object invalidExportPath;
+
     public CreateFileSystemResponse withInvalidExportPath(Object invalidExportPath) {
         this.invalidExportPath = invalidExportPath;
         return this;
@@ -79,6 +87,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object invalidImportPath;
+
     public CreateFileSystemResponse withInvalidImportPath(Object invalidImportPath) {
         this.invalidImportPath = invalidImportPath;
         return this;
@@ -89,6 +98,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object invalidNetworkSettings;
+
     public CreateFileSystemResponse withInvalidNetworkSettings(Object invalidNetworkSettings) {
         this.invalidNetworkSettings = invalidNetworkSettings;
         return this;
@@ -99,6 +109,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object invalidPerUnitStorageThroughput;
+
     public CreateFileSystemResponse withInvalidPerUnitStorageThroughput(Object invalidPerUnitStorageThroughput) {
         this.invalidPerUnitStorageThroughput = invalidPerUnitStorageThroughput;
         return this;
@@ -109,6 +120,7 @@ public class CreateFileSystemResponse {
      */
     
     public Object missingFileSystemConfiguration;
+
     public CreateFileSystemResponse withMissingFileSystemConfiguration(Object missingFileSystemConfiguration) {
         this.missingFileSystemConfiguration = missingFileSystemConfiguration;
         return this;
@@ -116,6 +128,7 @@ public class CreateFileSystemResponse {
     
     
     public Integer statusCode;
+
     public CreateFileSystemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class CreateFileSystemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFileSystemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class CreateFileSystemResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateFileSystemResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
     }
     
+    public CreateFileSystemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

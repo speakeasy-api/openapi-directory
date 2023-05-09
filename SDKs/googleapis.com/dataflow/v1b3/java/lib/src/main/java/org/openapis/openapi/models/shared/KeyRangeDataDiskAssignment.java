@@ -18,6 +18,7 @@ public class KeyRangeDataDiskAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDisk")
     public String dataDisk;
+
     public KeyRangeDataDiskAssignment withDataDisk(String dataDisk) {
         this.dataDisk = dataDisk;
         return this;
@@ -29,6 +30,7 @@ public class KeyRangeDataDiskAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public KeyRangeDataDiskAssignment withEnd(String end) {
         this.end = end;
         return this;
@@ -40,9 +42,11 @@ public class KeyRangeDataDiskAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public KeyRangeDataDiskAssignment withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public KeyRangeDataDiskAssignment(){}
 }

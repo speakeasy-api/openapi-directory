@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatastoreResponse {
     
     public String contentType;
+
     public UpdateDatastoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDatastoreResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDatastoreResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatastoreResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDatastoreResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatastoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDatastoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDatastoreResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatastoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDatastoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatastoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDatastoreResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateDatastoreResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDatastoreResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDatastoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public UpdateDatastoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

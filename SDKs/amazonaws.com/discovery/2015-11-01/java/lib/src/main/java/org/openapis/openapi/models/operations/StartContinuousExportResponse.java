@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartContinuousExportResponse {
@@ -12,6 +13,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object authorizationErrorException;
+
     public StartContinuousExportResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -22,6 +24,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object conflictErrorException;
+
     public StartContinuousExportResponse withConflictErrorException(Object conflictErrorException) {
         this.conflictErrorException = conflictErrorException;
         return this;
@@ -29,6 +32,7 @@ public class StartContinuousExportResponse {
     
     
     public String contentType;
+
     public StartContinuousExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public StartContinuousExportResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object invalidParameterException;
+
     public StartContinuousExportResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartContinuousExportResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartContinuousExportResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -79,6 +87,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object resourceInUseException;
+
     public StartContinuousExportResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -89,6 +98,7 @@ public class StartContinuousExportResponse {
      */
     
     public Object serverInternalErrorException;
+
     public StartContinuousExportResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -99,6 +109,7 @@ public class StartContinuousExportResponse {
      */
     
     public org.openapis.openapi.models.shared.StartContinuousExportResponse startContinuousExportResponse;
+
     public StartContinuousExportResponse withStartContinuousExportResponse(org.openapis.openapi.models.shared.StartContinuousExportResponse startContinuousExportResponse) {
         this.startContinuousExportResponse = startContinuousExportResponse;
         return this;
@@ -106,6 +117,7 @@ public class StartContinuousExportResponse {
     
     
     public Integer statusCode;
+
     public StartContinuousExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class StartContinuousExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartContinuousExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartContinuousExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

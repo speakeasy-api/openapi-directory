@@ -18,6 +18,7 @@ public class SetLoggingServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetLoggingServiceRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetLoggingServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingService")
     public String loggingService;
+
     public SetLoggingServiceRequest withLoggingService(String loggingService) {
         this.loggingService = loggingService;
         return this;
@@ -40,6 +42,7 @@ public class SetLoggingServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetLoggingServiceRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetLoggingServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetLoggingServiceRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class SetLoggingServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetLoggingServiceRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetLoggingServiceRequest(){}
 }

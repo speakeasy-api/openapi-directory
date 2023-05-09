@@ -15,6 +15,7 @@ public class ListStreamConsumersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Consumers")
     public Consumer[] consumers;
+
     public ListStreamConsumersOutput withConsumers(Consumer[] consumers) {
         this.consumers = consumers;
         return this;
@@ -23,9 +24,11 @@ public class ListStreamConsumersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStreamConsumersOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStreamConsumersOutput(){}
 }

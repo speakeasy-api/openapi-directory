@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExclusionsPreviewResponse {
@@ -12,6 +13,7 @@ public class CreateExclusionsPreviewResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateExclusionsPreviewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateExclusionsPreviewResponse {
     
     
     public String contentType;
+
     public CreateExclusionsPreviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateExclusionsPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExclusionsPreviewResponse createExclusionsPreviewResponse;
+
     public CreateExclusionsPreviewResponse withCreateExclusionsPreviewResponse(org.openapis.openapi.models.shared.CreateExclusionsPreviewResponse createExclusionsPreviewResponse) {
         this.createExclusionsPreviewResponse = createExclusionsPreviewResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateExclusionsPreviewResponse {
      */
     
     public Object internalException;
+
     public CreateExclusionsPreviewResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class CreateExclusionsPreviewResponse {
      */
     
     public Object invalidInputException;
+
     public CreateExclusionsPreviewResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateExclusionsPreviewResponse {
      */
     
     public Object noSuchEntityException;
+
     public CreateExclusionsPreviewResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -69,6 +76,7 @@ public class CreateExclusionsPreviewResponse {
      */
     
     public Object previewGenerationInProgressException;
+
     public CreateExclusionsPreviewResponse withPreviewGenerationInProgressException(Object previewGenerationInProgressException) {
         this.previewGenerationInProgressException = previewGenerationInProgressException;
         return this;
@@ -79,6 +87,7 @@ public class CreateExclusionsPreviewResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public CreateExclusionsPreviewResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class CreateExclusionsPreviewResponse {
     
     
     public Integer statusCode;
+
     public CreateExclusionsPreviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateExclusionsPreviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExclusionsPreviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateExclusionsPreviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

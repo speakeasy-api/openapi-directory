@@ -12,6 +12,7 @@ public class CheckSpellingRussianRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lang_code")
     public String langCode;
+
     public CheckSpellingRussianRequestBody withLangCode(String langCode) {
         this.langCode = langCode;
         return this;
@@ -20,9 +21,11 @@ public class CheckSpellingRussianRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public CheckSpellingRussianRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CheckSpellingRussianRequestBody(){}
 }

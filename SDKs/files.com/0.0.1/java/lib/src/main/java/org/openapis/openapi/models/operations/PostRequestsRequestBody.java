@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRequestsRequestBody {
@@ -12,6 +13,7 @@ public class PostRequestsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destination")
     public String destination;
+
     public PostRequestsRequestBody withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -22,6 +24,7 @@ public class PostRequestsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=group_ids")
     public String groupIds;
+
     public PostRequestsRequestBody withGroupIds(String groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -32,6 +35,7 @@ public class PostRequestsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PostRequestsRequestBody withPath(String path) {
         this.path = path;
         return this;
@@ -42,9 +46,14 @@ public class PostRequestsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_ids")
     public String userIds;
+
     public PostRequestsRequestBody withUserIds(String userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public PostRequestsRequestBody(@JsonProperty("destination") String destination, @JsonProperty("path") String path) {
+        this.destination = destination;
+        this.path = path;
+  }
 }

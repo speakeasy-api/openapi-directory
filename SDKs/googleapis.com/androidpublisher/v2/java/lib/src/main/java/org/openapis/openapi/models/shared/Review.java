@@ -15,6 +15,7 @@ public class Review {
      */
     
     public String authorName;
+
     public Review withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -25,6 +26,7 @@ public class Review {
      */
     
     public Comment[] comments;
+
     public Review withComments(Comment[] comments) {
         this.comments = comments;
         return this;
@@ -35,9 +37,11 @@ public class Review {
      */
     
     public String reviewId;
+
     public Review withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public Review(){}
 }

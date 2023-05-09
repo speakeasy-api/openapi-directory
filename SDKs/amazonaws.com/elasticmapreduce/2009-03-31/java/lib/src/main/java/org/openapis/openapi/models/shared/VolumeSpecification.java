@@ -15,6 +15,7 @@ public class VolumeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iops")
     public Long iops;
+
     public VolumeSpecification withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -22,6 +23,7 @@ public class VolumeSpecification {
     
     @JsonProperty("SizeInGB")
     public Long sizeInGB;
+
     public VolumeSpecification withSizeInGB(Long sizeInGB) {
         this.sizeInGB = sizeInGB;
         return this;
@@ -30,6 +32,7 @@ public class VolumeSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Throughput")
     public Long throughput;
+
     public VolumeSpecification withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -37,9 +40,14 @@ public class VolumeSpecification {
     
     @JsonProperty("VolumeType")
     public String volumeType;
+
     public VolumeSpecification withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public VolumeSpecification(@JsonProperty("SizeInGB") Long sizeInGB, @JsonProperty("VolumeType") String volumeType) {
+        this.sizeInGB = sizeInGB;
+        this.volumeType = volumeType;
+  }
 }

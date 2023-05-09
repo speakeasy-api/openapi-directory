@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class Status {
     
     public Boolean cryopreservedEmbryo;
+
     public Status withCryopreservedEmbryo(Boolean cryopreservedEmbryo) {
         this.cryopreservedEmbryo = cryopreservedEmbryo;
         return this;
@@ -16,6 +17,7 @@ public class Status {
     
     
     public Boolean cryopreservedSperm;
+
     public Status withCryopreservedSperm(Boolean cryopreservedSperm) {
         this.cryopreservedSperm = cryopreservedSperm;
         return this;
@@ -23,6 +25,7 @@ public class Status {
     
     
     public Boolean cryorecovery;
+
     public Status withCryorecovery(Boolean cryorecovery) {
         this.cryorecovery = cryorecovery;
         return this;
@@ -30,6 +33,7 @@ public class Status {
     
     
     public Integer key;
+
     public Status withKey(Integer key) {
         this.key = key;
         return this;
@@ -37,6 +41,7 @@ public class Status {
     
     
     public Boolean liveAnimals;
+
     public Status withLiveAnimals(Boolean liveAnimals) {
         this.liveAnimals = liveAnimals;
         return this;
@@ -44,6 +49,7 @@ public class Status {
     
     
     public OffsetDateTime statusDate;
+
     public Status withStatusDate(OffsetDateTime statusDate) {
         this.statusDate = statusDate;
         return this;
@@ -51,9 +57,11 @@ public class Status {
     
     
     public Integer strainRgdId;
+
     public Status withStrainRgdId(Integer strainRgdId) {
         this.strainRgdId = strainRgdId;
         return this;
     }
     
+    public Status(){}
 }

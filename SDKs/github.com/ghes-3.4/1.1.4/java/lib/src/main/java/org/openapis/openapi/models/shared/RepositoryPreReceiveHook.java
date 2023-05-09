@@ -15,6 +15,7 @@ public class RepositoryPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration_url")
     public String configurationUrl;
+
     public RepositoryPreReceiveHook withConfigurationUrl(String configurationUrl) {
         this.configurationUrl = configurationUrl;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcement")
     public String enforcement;
+
     public RepositoryPreReceiveHook withEnforcement(String enforcement) {
         this.enforcement = enforcement;
         return this;
@@ -31,6 +33,7 @@ public class RepositoryPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public RepositoryPreReceiveHook withId(Long id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class RepositoryPreReceiveHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RepositoryPreReceiveHook withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RepositoryPreReceiveHook(){}
 }

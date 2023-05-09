@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2KMapEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketSize")
     public String bucketSize;
+
     public GooglePrivacyDlpV2KMapEstimationHistogramBucket withBucketSize(String bucketSize) {
         this.bucketSize = bucketSize;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2KMapEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketValueCount")
     public String bucketValueCount;
+
     public GooglePrivacyDlpV2KMapEstimationHistogramBucket withBucketValueCount(String bucketValueCount) {
         this.bucketValueCount = bucketValueCount;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2KMapEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketValues")
     public GooglePrivacyDlpV2KMapEstimationQuasiIdValues[] bucketValues;
+
     public GooglePrivacyDlpV2KMapEstimationHistogramBucket withBucketValues(GooglePrivacyDlpV2KMapEstimationQuasiIdValues[] bucketValues) {
         this.bucketValues = bucketValues;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2KMapEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAnonymity")
     public String maxAnonymity;
+
     public GooglePrivacyDlpV2KMapEstimationHistogramBucket withMaxAnonymity(String maxAnonymity) {
         this.maxAnonymity = maxAnonymity;
         return this;
@@ -62,9 +66,11 @@ public class GooglePrivacyDlpV2KMapEstimationHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minAnonymity")
     public String minAnonymity;
+
     public GooglePrivacyDlpV2KMapEstimationHistogramBucket withMinAnonymity(String minAnonymity) {
         this.minAnonymity = minAnonymity;
         return this;
     }
     
+    public GooglePrivacyDlpV2KMapEstimationHistogramBucket(){}
 }

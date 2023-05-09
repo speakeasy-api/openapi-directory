@@ -53,11 +53,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnonymizeResponse res = new org.openapis.openapi.models.operations.AnonymizeResponse() {{
+        org.openapis.openapi.models.operations.AnonymizeResponse res = new org.openapis.openapi.models.operations.AnonymizeResponse(contentType, httpRes.statusCode()) {{
             apiKeyOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,11 +91,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiKeyInfoResponse res = new org.openapis.openapi.models.operations.ApiKeyInfoResponse() {{
+        org.openapis.openapi.models.operations.ApiKeyInfoResponse res = new org.openapis.openapi.models.operations.ApiKeyInfoResponse(contentType, httpRes.statusCode()) {{
             apiKeyOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiStatusResponse res = new org.openapis.openapi.models.operations.ApiStatusResponse() {{
+        org.openapis.openapi.models.operations.ApiStatusResponse res = new org.openapis.openapi.models.operations.ApiStatusResponse(contentType, httpRes.statusCode()) {{
             apiClassifiersStatusOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,10 +149,11 @@ public class Admin {
 
     /**
      * Print current API usage.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiUsageResponse apiUsage() throws Exception {
+    public org.openapis.openapi.models.operations.ApiUsageResponse apiUsage(org.openapis.openapi.models.operations.ApiUsageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/apiUsage");
         
@@ -167,17 +162,15 @@ public class Admin {
         req.setURL(url);
         
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiUsageResponse res = new org.openapis.openapi.models.operations.ApiUsageResponse() {{
+        org.openapis.openapi.models.operations.ApiUsageResponse res = new org.openapis.openapi.models.operations.ApiUsageResponse(contentType, httpRes.statusCode()) {{
             apiPeriodUsageOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,10 +188,11 @@ public class Admin {
 
     /**
      * Print historical API usage.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiUsageHistoryResponse apiUsageHistory() throws Exception {
+    public org.openapis.openapi.models.operations.ApiUsageHistoryResponse apiUsageHistory(org.openapis.openapi.models.operations.ApiUsageHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/apiUsageHistory");
         
@@ -207,17 +201,15 @@ public class Admin {
         req.setURL(url);
         
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiUsageHistoryResponse res = new org.openapis.openapi.models.operations.ApiUsageHistoryResponse() {{
+        org.openapis.openapi.models.operations.ApiUsageHistoryResponse res = new org.openapis.openapi.models.operations.ApiUsageHistoryResponse(contentType, httpRes.statusCode()) {{
             apiUsageHistoryOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,10 +227,11 @@ public class Admin {
 
     /**
      * Print historical API usage (in an aggregated view, by service, by day/hour/min).
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse apiUsageHistoryAggregate() throws Exception {
+    public org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse apiUsageHistoryAggregate(org.openapis.openapi.models.operations.ApiUsageHistoryAggregateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/apiUsageHistoryAggregate");
         
@@ -247,17 +240,15 @@ public class Admin {
         req.setURL(url);
         
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse res = new org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse() {{
+        org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse res = new org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse(contentType, httpRes.statusCode()) {{
             apiUsageAggregatedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +284,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AvailableServicesResponse res = new org.openapis.openapi.models.operations.AvailableServicesResponse() {{
+        org.openapis.openapi.models.operations.AvailableServicesResponse res = new org.openapis.openapi.models.operations.AvailableServicesResponse(contentType, httpRes.statusCode()) {{
             apiServicesOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +323,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LearnableResponse res = new org.openapis.openapi.models.operations.LearnableResponse() {{
+        org.openapis.openapi.models.operations.LearnableResponse res = new org.openapis.openapi.models.operations.LearnableResponse(contentType, httpRes.statusCode()) {{
             apiKeyOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -374,11 +361,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegionsResponse res = new org.openapis.openapi.models.operations.RegionsResponse() {{
+        org.openapis.openapi.models.operations.RegionsResponse res = new org.openapis.openapi.models.operations.RegionsResponse(contentType, httpRes.statusCode()) {{
             regionOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,11 +399,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SoftwareVersionResponse res = new org.openapis.openapi.models.operations.SoftwareVersionResponse() {{
+        org.openapis.openapi.models.operations.SoftwareVersionResponse res = new org.openapis.openapi.models.operations.SoftwareVersionResponse(contentType, httpRes.statusCode()) {{
             softwareVersionOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -455,11 +438,9 @@ public class Admin {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxonomyClassesResponse res = new org.openapis.openapi.models.operations.TaxonomyClassesResponse() {{
+        org.openapis.openapi.models.operations.TaxonomyClassesResponse res = new org.openapis.openapi.models.operations.TaxonomyClassesResponse(contentType, httpRes.statusCode()) {{
             apiClassifierTaxonomyOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

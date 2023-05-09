@@ -18,6 +18,7 @@ public class Groups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Groups withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class Groups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseCode")
     public String responseCode;
+
     public Groups withResponseCode(String responseCode) {
         this.responseCode = responseCode;
         return this;
     }
     
+    public Groups(){}
 }

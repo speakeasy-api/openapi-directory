@@ -18,6 +18,7 @@ public class WorkerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public WorkerConfig withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -29,9 +30,11 @@ public class WorkerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public WorkerConfig withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
     }
     
+    public WorkerConfig(){}
 }

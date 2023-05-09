@@ -15,9 +15,11 @@ public class UpdateNetworkProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkProfile")
     public NetworkProfile networkProfile;
+
     public UpdateNetworkProfileResult withNetworkProfile(NetworkProfile networkProfile) {
         this.networkProfile = networkProfile;
         return this;
     }
     
+    public UpdateNetworkProfileResult(){}
 }

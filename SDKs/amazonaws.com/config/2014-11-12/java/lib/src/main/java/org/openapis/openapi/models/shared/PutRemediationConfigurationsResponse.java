@@ -15,9 +15,11 @@ public class PutRemediationConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedBatches")
     public FailedRemediationBatch[] failedBatches;
+
     public PutRemediationConfigurationsResponse withFailedBatches(FailedRemediationBatch[] failedBatches) {
         this.failedBatches = failedBatches;
         return this;
     }
     
+    public PutRemediationConfigurationsResponse(){}
 }

@@ -15,6 +15,7 @@ public class ResultCalls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public ResultCalls withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -26,6 +27,7 @@ public class ResultCalls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit_reached")
     public Boolean limitReached;
+
     public ResultCalls withLimitReached(Boolean limitReached) {
         this.limitReached = limitReached;
         return this;
@@ -37,9 +39,11 @@ public class ResultCalls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("this_month")
     public Long thisMonth;
+
     public ResultCalls withThisMonth(Long thisMonth) {
         this.thisMonth = thisMonth;
         return this;
     }
     
+    public ResultCalls(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterMailDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DeregisterMailDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,9 +17,14 @@ public class DeregisterMailDomainRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeregisterMailDomainRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeregisterMailDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("OrganizationId") String organizationId) {
+        this.domainName = domainName;
+        this.organizationId = organizationId;
+  }
 }

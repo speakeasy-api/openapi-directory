@@ -15,6 +15,7 @@ public class DescribeSubnetGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSubnetGroupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSubnetGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroups")
     public SubnetGroup[] subnetGroups;
+
     public DescribeSubnetGroupsResponse withSubnetGroups(SubnetGroup[] subnetGroups) {
         this.subnetGroups = subnetGroups;
         return this;
     }
     
+    public DescribeSubnetGroupsResponse(){}
 }

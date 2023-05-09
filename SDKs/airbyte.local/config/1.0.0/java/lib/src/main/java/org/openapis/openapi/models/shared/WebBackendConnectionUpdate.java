@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendConnectionUpdate {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public WebBackendConnectionUpdate withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -22,6 +23,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geography")
     public GeographyEnum geography;
+
     public WebBackendConnectionUpdate withGeography(GeographyEnum geography) {
         this.geography = geography;
         return this;
@@ -33,6 +35,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebBackendConnectionUpdate withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +47,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceDefinition")
     public NamespaceDefinitionTypeEnum namespaceDefinition;
+
     public WebBackendConnectionUpdate withNamespaceDefinition(NamespaceDefinitionTypeEnum namespaceDefinition) {
         this.namespaceDefinition = namespaceDefinition;
         return this;
@@ -55,6 +59,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceFormat")
     public String namespaceFormat;
+
     public WebBackendConnectionUpdate withNamespaceFormat(String namespaceFormat) {
         this.namespaceFormat = namespaceFormat;
         return this;
@@ -63,6 +68,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonBreakingChangesPreference")
     public NonBreakingChangesPreferenceEnum nonBreakingChangesPreference;
+
     public WebBackendConnectionUpdate withNonBreakingChangesPreference(NonBreakingChangesPreferenceEnum nonBreakingChangesPreference) {
         this.nonBreakingChangesPreference = nonBreakingChangesPreference;
         return this;
@@ -71,6 +77,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifySchemaChanges")
     public Boolean notifySchemaChanges;
+
     public WebBackendConnectionUpdate withNotifySchemaChanges(Boolean notifySchemaChanges) {
         this.notifySchemaChanges = notifySchemaChanges;
         return this;
@@ -79,6 +86,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public WebBackendOperationCreateOrUpdate[] operations;
+
     public WebBackendConnectionUpdate withOperations(WebBackendOperationCreateOrUpdate[] operations) {
         this.operations = operations;
         return this;
@@ -90,6 +98,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public WebBackendConnectionUpdate withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -101,6 +110,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirements resourceRequirements;
+
     public WebBackendConnectionUpdate withResourceRequirements(ResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -112,6 +122,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ConnectionSchedule schedule;
+
     public WebBackendConnectionUpdate withSchedule(ConnectionSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -123,6 +134,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleData")
     public ConnectionScheduleData scheduleData;
+
     public WebBackendConnectionUpdate withScheduleData(ConnectionScheduleData scheduleData) {
         this.scheduleData = scheduleData;
         return this;
@@ -134,6 +146,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleType")
     public ConnectionScheduleTypeEnum scheduleType;
+
     public WebBackendConnectionUpdate withScheduleType(ConnectionScheduleTypeEnum scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -142,6 +155,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipReset")
     public Boolean skipReset;
+
     public WebBackendConnectionUpdate withSkipReset(Boolean skipReset) {
         this.skipReset = skipReset;
         return this;
@@ -150,6 +164,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCatalogId")
     public String sourceCatalogId;
+
     public WebBackendConnectionUpdate withSourceCatalogId(String sourceCatalogId) {
         this.sourceCatalogId = sourceCatalogId;
         return this;
@@ -161,6 +176,7 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public WebBackendConnectionUpdate withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
@@ -172,9 +188,13 @@ public class WebBackendConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncCatalog")
     public AirbyteCatalog syncCatalog;
+
     public WebBackendConnectionUpdate withSyncCatalog(AirbyteCatalog syncCatalog) {
         this.syncCatalog = syncCatalog;
         return this;
     }
     
+    public WebBackendConnectionUpdate(@JsonProperty("connectionId") String connectionId) {
+        this.connectionId = connectionId;
+  }
 }

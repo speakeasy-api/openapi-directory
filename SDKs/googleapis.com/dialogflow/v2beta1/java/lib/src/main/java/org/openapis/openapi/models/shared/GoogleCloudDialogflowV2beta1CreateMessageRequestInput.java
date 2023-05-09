@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1CreateMessageRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public GoogleCloudDialogflowV2beta1MessageInput message;
+
     public GoogleCloudDialogflowV2beta1CreateMessageRequestInput withMessage(GoogleCloudDialogflowV2beta1MessageInput message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1CreateMessageRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudDialogflowV2beta1CreateMessageRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1CreateMessageRequestInput(){}
 }

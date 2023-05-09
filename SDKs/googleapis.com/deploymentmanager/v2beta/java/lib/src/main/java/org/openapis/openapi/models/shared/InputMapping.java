@@ -18,6 +18,7 @@ public class InputMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public InputMapping withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -29,6 +30,7 @@ public class InputMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public InputMappingLocationEnum location;
+
     public InputMapping withLocation(InputMappingLocationEnum location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class InputMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodMatch")
     public String methodMatch;
+
     public InputMapping withMethodMatch(String methodMatch) {
         this.methodMatch = methodMatch;
         return this;
@@ -51,9 +54,11 @@ public class InputMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InputMapping withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InputMapping(){}
 }

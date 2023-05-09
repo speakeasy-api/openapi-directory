@@ -19,6 +19,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public FilterContextEnum[] context;
+
     public Filter withContext(FilterContextEnum[] context) {
         this.context = context;
         return this;
@@ -30,6 +31,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public Filter withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -41,6 +43,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Filter withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irreversible")
     public Boolean irreversible;
+
     public Filter withIrreversible(Boolean irreversible) {
         this.irreversible = irreversible;
         return this;
@@ -63,6 +67,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phrase")
     public String phrase;
+
     public Filter withPhrase(String phrase) {
         this.phrase = phrase;
         return this;
@@ -74,9 +79,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("whole_word")
     public Boolean wholeWord;
+
     public Filter withWholeWord(Boolean wholeWord) {
         this.wholeWord = wholeWord;
         return this;
     }
     
+    public Filter(){}
 }

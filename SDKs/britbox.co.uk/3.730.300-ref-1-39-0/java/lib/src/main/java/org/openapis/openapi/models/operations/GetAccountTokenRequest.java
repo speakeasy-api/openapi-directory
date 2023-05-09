@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountTokenRequest {
@@ -12,6 +13,7 @@ public class GetAccountTokenRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AccountTokenRequest accountTokenRequest;
+
     public GetAccountTokenRequest withAccountTokenRequest(org.openapis.openapi.models.shared.AccountTokenRequest accountTokenRequest) {
         this.accountTokenRequest = accountTokenRequest;
         return this;
@@ -42,6 +44,7 @@ public class GetAccountTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetAccountTokenRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class GetAccountTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetAccountTokenRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetAccountTokenRequest(@JsonProperty("AccountTokenRequest") org.openapis.openapi.models.shared.AccountTokenRequest accountTokenRequest) {
+        this.accountTokenRequest = accountTokenRequest;
+  }
 }

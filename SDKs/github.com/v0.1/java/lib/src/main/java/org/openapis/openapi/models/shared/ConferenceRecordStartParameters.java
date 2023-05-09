@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class ConferenceRecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=ConferenceName")
     public String conferenceName;
+
     public ConferenceRecordStartParameters withConferenceName(String conferenceName) {
         this.conferenceName = conferenceName;
         return this;
@@ -25,6 +27,7 @@ public class ConferenceRecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=FileFormat")
     public ConferenceRecordStartParametersFileFormatEnum fileFormat;
+
     public ConferenceRecordStartParameters withFileFormat(ConferenceRecordStartParametersFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -35,6 +38,7 @@ public class ConferenceRecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=FileName")
     public String fileName;
+
     public ConferenceRecordStartParameters withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -45,9 +49,13 @@ public class ConferenceRecordStartParameters {
      */
     @SpeakeasyMetadata("form:name=FilePath")
     public String filePath;
+
     public ConferenceRecordStartParameters withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }
     
+    public ConferenceRecordStartParameters(@JsonProperty("ConferenceName") String conferenceName) {
+        this.conferenceName = conferenceName;
+  }
 }

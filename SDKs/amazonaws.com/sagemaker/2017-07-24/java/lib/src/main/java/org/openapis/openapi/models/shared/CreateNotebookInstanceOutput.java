@@ -15,9 +15,11 @@ public class CreateNotebookInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookInstanceArn")
     public String notebookInstanceArn;
+
     public CreateNotebookInstanceOutput withNotebookInstanceArn(String notebookInstanceArn) {
         this.notebookInstanceArn = notebookInstanceArn;
         return this;
     }
     
+    public CreateNotebookInstanceOutput(){}
 }

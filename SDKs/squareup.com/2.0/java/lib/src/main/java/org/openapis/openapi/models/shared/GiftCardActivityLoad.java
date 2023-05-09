@@ -23,6 +23,7 @@ public class GiftCardActivityLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public GiftCardActivityLoad withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -35,6 +36,7 @@ public class GiftCardActivityLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_payment_instrument_ids")
     public String[] buyerPaymentInstrumentIds;
+
     public GiftCardActivityLoad withBuyerPaymentInstrumentIds(String[] buyerPaymentInstrumentIds) {
         this.buyerPaymentInstrumentIds = buyerPaymentInstrumentIds;
         return this;
@@ -47,6 +49,7 @@ public class GiftCardActivityLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line_item_uid")
     public String lineItemUid;
+
     public GiftCardActivityLoad withLineItemUid(String lineItemUid) {
         this.lineItemUid = lineItemUid;
         return this;
@@ -59,6 +62,7 @@ public class GiftCardActivityLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public GiftCardActivityLoad withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -72,9 +76,11 @@ public class GiftCardActivityLoad {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public GiftCardActivityLoad withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public GiftCardActivityLoad(){}
 }

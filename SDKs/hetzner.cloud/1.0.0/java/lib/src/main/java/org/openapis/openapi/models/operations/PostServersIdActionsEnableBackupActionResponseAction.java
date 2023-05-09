@@ -12,6 +12,7 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostServersIdActionsEnableBackupActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("error")
     public PostServersIdActionsEnableBackupActionResponseActionError error;
+
     public PostServersIdActionsEnableBackupActionResponseAction withError(PostServersIdActionsEnableBackupActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostServersIdActionsEnableBackupActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsEnableBackupActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostServersIdActionsEnableBackupActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("resources")
     public PostServersIdActionsEnableBackupActionResponseActionResources[] resources;
+
     public PostServersIdActionsEnableBackupActionResponseAction withResources(PostServersIdActionsEnableBackupActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostServersIdActionsEnableBackupActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostServersIdActionsEnableBackupActionResponseAction {
      */
     @JsonProperty("status")
     public PostServersIdActionsEnableBackupActionResponseActionStatusEnum status;
+
     public PostServersIdActionsEnableBackupActionResponseAction withStatus(PostServersIdActionsEnableBackupActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostServersIdActionsEnableBackupActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostServersIdActionsEnableBackupActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostServersIdActionsEnableBackupActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostServersIdActionsEnableBackupActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

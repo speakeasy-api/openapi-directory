@@ -15,6 +15,7 @@ public class PatchOrchestratorFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public PatchOrchestratorFilter withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class PatchOrchestratorFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public PatchOrchestratorFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PatchOrchestratorFilter(){}
 }

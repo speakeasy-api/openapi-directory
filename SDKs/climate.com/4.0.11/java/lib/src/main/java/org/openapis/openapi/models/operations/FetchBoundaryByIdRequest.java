@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBoundaryByIdRequest {
@@ -12,9 +13,13 @@ public class FetchBoundaryByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=boundaryId")
     public String boundaryId;
+
     public FetchBoundaryByIdRequest withBoundaryId(String boundaryId) {
         this.boundaryId = boundaryId;
         return this;
     }
     
+    public FetchBoundaryByIdRequest(@JsonProperty("boundaryId") String boundaryId) {
+        this.boundaryId = boundaryId;
+  }
 }

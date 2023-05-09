@@ -18,9 +18,11 @@ public class ContentStreamTypeTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentStreamType")
     public ContentStreamTypeTargetingOptionDetailsContentStreamTypeEnum contentStreamType;
+
     public ContentStreamTypeTargetingOptionDetails withContentStreamType(ContentStreamTypeTargetingOptionDetailsContentStreamTypeEnum contentStreamType) {
         this.contentStreamType = contentStreamType;
         return this;
     }
     
+    public ContentStreamTypeTargetingOptionDetails(){}
 }

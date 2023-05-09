@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LinkResponse {
     
     public String contentType;
+
     public LinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LinkResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public LinkResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class LinkResponse {
     
     
     public Integer statusCode;
+
     public LinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class LinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class LinkResponse {
      */
     
     public Link201ApplicationJSON link201ApplicationJSONObject;
+
     public LinkResponse withLink201ApplicationJSONObject(Link201ApplicationJSON link201ApplicationJSONObject) {
         this.link201ApplicationJSONObject = link201ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class LinkResponse {
      */
     
     public Link400ApplicationJSON link400ApplicationJSONObject;
+
     public LinkResponse withLink400ApplicationJSONObject(Link400ApplicationJSON link400ApplicationJSONObject) {
         this.link400ApplicationJSONObject = link400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class LinkResponse {
      */
     
     public Link401ApplicationJSON link401ApplicationJSONObject;
+
     public LinkResponse withLink401ApplicationJSONObject(Link401ApplicationJSON link401ApplicationJSONObject) {
         this.link401ApplicationJSONObject = link401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class LinkResponse {
      */
     
     public Link403ApplicationJSON link403ApplicationJSONObject;
+
     public LinkResponse withLink403ApplicationJSONObject(Link403ApplicationJSON link403ApplicationJSONObject) {
         this.link403ApplicationJSONObject = link403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class LinkResponse {
      */
     
     public Link429ApplicationJSON link429ApplicationJSONObject;
+
     public LinkResponse withLink429ApplicationJSONObject(Link429ApplicationJSON link429ApplicationJSONObject) {
         this.link429ApplicationJSONObject = link429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class LinkResponse {
      */
     
     public Link500ApplicationJSON link500ApplicationJSONObject;
+
     public LinkResponse withLink500ApplicationJSONObject(Link500ApplicationJSON link500ApplicationJSONObject) {
         this.link500ApplicationJSONObject = link500ApplicationJSONObject;
         return this;
     }
     
+    public LinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

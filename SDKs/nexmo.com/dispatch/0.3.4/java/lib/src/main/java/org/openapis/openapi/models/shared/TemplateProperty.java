@@ -15,6 +15,7 @@ public class TemplateProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TemplateProperty withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class TemplateProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public TemplatePropertyParameters[] parameters;
+
     public TemplateProperty withParameters(TemplatePropertyParameters[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public TemplateProperty(){}
 }

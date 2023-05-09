@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBudgetMonthResponse {
     
     public String contentType;
+
     public GetBudgetMonthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBudgetMonthResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetBudgetMonthResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetBudgetMonthResponse {
      */
     
     public org.openapis.openapi.models.shared.MonthDetailResponse monthDetailResponse;
+
     public GetBudgetMonthResponse withMonthDetailResponse(org.openapis.openapi.models.shared.MonthDetailResponse monthDetailResponse) {
         this.monthDetailResponse = monthDetailResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetBudgetMonthResponse {
     
     
     public Integer statusCode;
+
     public GetBudgetMonthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetBudgetMonthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBudgetMonthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBudgetMonthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

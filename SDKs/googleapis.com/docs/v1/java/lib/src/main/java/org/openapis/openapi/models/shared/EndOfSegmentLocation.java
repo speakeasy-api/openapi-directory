@@ -18,9 +18,11 @@ public class EndOfSegmentLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public EndOfSegmentLocation withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public EndOfSegmentLocation(){}
 }

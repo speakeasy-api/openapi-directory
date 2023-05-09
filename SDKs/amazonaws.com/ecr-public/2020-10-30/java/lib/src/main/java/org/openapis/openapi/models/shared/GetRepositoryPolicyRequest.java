@@ -12,6 +12,7 @@ public class GetRepositoryPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetRepositoryPolicyRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -19,9 +20,13 @@ public class GetRepositoryPolicyRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetRepositoryPolicyRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetRepositoryPolicyRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

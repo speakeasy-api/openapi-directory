@@ -18,6 +18,7 @@ public class ListPhraseSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPhraseSetResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPhraseSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseSets")
     public PhraseSet[] phraseSets;
+
     public ListPhraseSetResponse withPhraseSets(PhraseSet[] phraseSets) {
         this.phraseSets = phraseSets;
         return this;
     }
     
+    public ListPhraseSetResponse(){}
 }

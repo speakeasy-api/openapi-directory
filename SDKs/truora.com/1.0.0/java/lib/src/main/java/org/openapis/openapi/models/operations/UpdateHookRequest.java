@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateHookRequest {
@@ -12,6 +13,7 @@ public class UpdateHookRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.CreateHookInput createHookInput;
+
     public UpdateHookRequest withCreateHookInput(org.openapis.openapi.models.shared.CreateHookInput createHookInput) {
         this.createHookInput = createHookInput;
         return this;
@@ -22,9 +24,14 @@ public class UpdateHookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public String hookId;
+
     public UpdateHookRequest withHookId(String hookId) {
         this.hookId = hookId;
         return this;
     }
     
+    public UpdateHookRequest(@JsonProperty("CreateHookInput") org.openapis.openapi.models.shared.CreateHookInput createHookInput, @JsonProperty("hook_id") String hookId) {
+        this.createHookInput = createHookInput;
+        this.hookId = hookId;
+  }
 }

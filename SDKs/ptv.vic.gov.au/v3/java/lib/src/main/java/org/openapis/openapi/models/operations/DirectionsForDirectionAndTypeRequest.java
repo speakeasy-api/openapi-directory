@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectionsForDirectionAndTypeRequest {
@@ -12,6 +13,7 @@ public class DirectionsForDirectionAndTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DirectionsForDirectionAndTypeRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class DirectionsForDirectionAndTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=direction_id")
     public Integer directionId;
+
     public DirectionsForDirectionAndTypeRequest withDirectionId(Integer directionId) {
         this.directionId = directionId;
         return this;
@@ -32,6 +35,7 @@ public class DirectionsForDirectionAndTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
     public DirectionsForDirectionAndTypeRouteTypeEnum routeType;
+
     public DirectionsForDirectionAndTypeRequest withRouteType(DirectionsForDirectionAndTypeRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -42,6 +46,7 @@ public class DirectionsForDirectionAndTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DirectionsForDirectionAndTypeRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -52,9 +57,14 @@ public class DirectionsForDirectionAndTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DirectionsForDirectionAndTypeRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DirectionsForDirectionAndTypeRequest(@JsonProperty("direction_id") Integer directionId, @JsonProperty("route_type") DirectionsForDirectionAndTypeRouteTypeEnum routeType) {
+        this.directionId = directionId;
+        this.routeType = routeType;
+  }
 }

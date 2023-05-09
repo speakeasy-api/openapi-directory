@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetailedErrorResponse {
     @JsonProperty("error")
     public DetailedErrorResponseError error;
+
     public DetailedErrorResponse withError(DetailedErrorResponseError error) {
         this.error = error;
         return this;
@@ -19,9 +20,14 @@ public class DetailedErrorResponse {
     
     @JsonProperty("success")
     public Boolean success;
+
     public DetailedErrorResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public DetailedErrorResponse(@JsonProperty("error") DetailedErrorResponseError error, @JsonProperty("success") Boolean success) {
+        this.error = error;
+        this.success = success;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ContentModelsTagMetadataItem {
     
     public String description;
+
     public ContentModelsTagMetadataItem withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class ContentModelsTagMetadataItem {
     
     
     public String[] groups;
+
     public ContentModelsTagMetadataItem withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -23,6 +25,7 @@ public class ContentModelsTagMetadataItem {
     
     
     public Boolean isDefault;
+
     public ContentModelsTagMetadataItem withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -30,6 +33,7 @@ public class ContentModelsTagMetadataItem {
     
     
     public String name;
+
     public ContentModelsTagMetadataItem withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +41,11 @@ public class ContentModelsTagMetadataItem {
     
     
     public String tagText;
+
     public ContentModelsTagMetadataItem withTagText(String tagText) {
         this.tagText = tagText;
         return this;
     }
     
+    public ContentModelsTagMetadataItem(){}
 }

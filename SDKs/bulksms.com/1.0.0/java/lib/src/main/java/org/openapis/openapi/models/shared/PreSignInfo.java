@@ -18,6 +18,7 @@ public class PreSignInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fetchUrl")
     public String fetchUrl;
+
     public PreSignInfo withFetchUrl(String fetchUrl) {
         this.fetchUrl = fetchUrl;
         return this;
@@ -29,6 +30,7 @@ public class PreSignInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public PreSignInfoFields[] fields;
+
     public PreSignInfo withFields(PreSignInfoFields[] fields) {
         this.fields = fields;
         return this;
@@ -40,9 +42,11 @@ public class PreSignInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("putUrl")
     public String putUrl;
+
     public PreSignInfo withPutUrl(String putUrl) {
         this.putUrl = putUrl;
         return this;
     }
     
+    public PreSignInfo(){}
 }

@@ -61,11 +61,9 @@ public class ManagedShortLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateResponse() {{
+        org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateResponse res = new org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateResponse(contentType, httpRes.statusCode()) {{
             createManagedShortLinkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

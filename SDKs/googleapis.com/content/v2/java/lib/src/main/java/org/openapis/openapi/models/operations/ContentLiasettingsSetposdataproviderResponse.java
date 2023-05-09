@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentLiasettingsSetposdataproviderResponse {
     
     public String contentType;
+
     public ContentLiasettingsSetposdataproviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentLiasettingsSetposdataproviderResponse {
      */
     
     public org.openapis.openapi.models.shared.LiasettingsSetPosDataProviderResponse liasettingsSetPosDataProviderResponse;
+
     public ContentLiasettingsSetposdataproviderResponse withLiasettingsSetPosDataProviderResponse(org.openapis.openapi.models.shared.LiasettingsSetPosDataProviderResponse liasettingsSetPosDataProviderResponse) {
         this.liasettingsSetPosDataProviderResponse = liasettingsSetPosDataProviderResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentLiasettingsSetposdataproviderResponse {
     
     
     public Integer statusCode;
+
     public ContentLiasettingsSetposdataproviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentLiasettingsSetposdataproviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentLiasettingsSetposdataproviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentLiasettingsSetposdataproviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

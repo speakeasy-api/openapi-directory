@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateJobResponse {
@@ -12,6 +13,7 @@ public class CreateJobResponse {
      */
     
     public Object clusterLimitExceededException;
+
     public CreateJobResponse withClusterLimitExceededException(Object clusterLimitExceededException) {
         this.clusterLimitExceededException = clusterLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class CreateJobResponse {
     
     
     public String contentType;
+
     public CreateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateJobResult createJobResult;
+
     public CreateJobResponse withCreateJobResult(org.openapis.openapi.models.shared.CreateJobResult createJobResult) {
         this.createJobResult = createJobResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateJobResponse {
      */
     
     public Object ec2RequestFailedException;
+
     public CreateJobResponse withEc2RequestFailedException(Object ec2RequestFailedException) {
         this.ec2RequestFailedException = ec2RequestFailedException;
         return this;
@@ -49,6 +54,7 @@ public class CreateJobResponse {
      */
     
     public Object invalidInputCombinationException;
+
     public CreateJobResponse withInvalidInputCombinationException(Object invalidInputCombinationException) {
         this.invalidInputCombinationException = invalidInputCombinationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateJobResponse {
      */
     
     public Object invalidResourceException;
+
     public CreateJobResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateJobResponse {
      */
     
     public Object kmsRequestFailedException;
+
     public CreateJobResponse withKMSRequestFailedException(Object kmsRequestFailedException) {
         this.kmsRequestFailedException = kmsRequestFailedException;
         return this;
@@ -76,6 +84,7 @@ public class CreateJobResponse {
     
     
     public Integer statusCode;
+
     public CreateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

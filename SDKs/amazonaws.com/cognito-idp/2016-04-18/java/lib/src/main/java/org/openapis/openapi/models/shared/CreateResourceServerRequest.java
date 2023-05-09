@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateResourceServerRequest {
     @JsonProperty("Identifier")
     public String identifier;
+
     public CreateResourceServerRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -18,6 +19,7 @@ public class CreateResourceServerRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateResourceServerRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class CreateResourceServerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scopes")
     public ResourceServerScopeType[] scopes;
+
     public CreateResourceServerRequest withScopes(ResourceServerScopeType[] scopes) {
         this.scopes = scopes;
         return this;
@@ -33,9 +36,15 @@ public class CreateResourceServerRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public CreateResourceServerRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public CreateResourceServerRequest(@JsonProperty("Identifier") String identifier, @JsonProperty("Name") String name, @JsonProperty("UserPoolId") String userPoolId) {
+        this.identifier = identifier;
+        this.name = name;
+        this.userPoolId = userPoolId;
+  }
 }

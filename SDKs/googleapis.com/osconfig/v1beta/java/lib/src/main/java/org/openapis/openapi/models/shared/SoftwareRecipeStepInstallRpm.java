@@ -18,9 +18,11 @@ public class SoftwareRecipeStepInstallRpm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactId")
     public String artifactId;
+
     public SoftwareRecipeStepInstallRpm withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
     }
     
+    public SoftwareRecipeStepInstallRpm(){}
 }

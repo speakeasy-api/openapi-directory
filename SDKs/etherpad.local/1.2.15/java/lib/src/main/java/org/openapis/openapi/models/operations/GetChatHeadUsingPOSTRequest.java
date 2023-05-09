@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetChatHeadUsingPOSTRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
     public String padID;
+
     public GetChatHeadUsingPOSTRequest withPadID(String padID) {
         this.padID = padID;
         return this;
     }
     
+    public GetChatHeadUsingPOSTRequest(){}
 }

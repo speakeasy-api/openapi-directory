@@ -22,6 +22,7 @@ public class HookDelivery {
      */
     @JsonProperty("action")
     public String action;
+
     public HookDelivery withAction(String action) {
         this.action = action;
         return this;
@@ -34,6 +35,7 @@ public class HookDelivery {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("delivered_at")
     public OffsetDateTime deliveredAt;
+
     public HookDelivery withDeliveredAt(OffsetDateTime deliveredAt) {
         this.deliveredAt = deliveredAt;
         return this;
@@ -44,6 +46,7 @@ public class HookDelivery {
      */
     @JsonProperty("duration")
     public Double duration;
+
     public HookDelivery withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -54,6 +57,7 @@ public class HookDelivery {
      */
     @JsonProperty("event")
     public String event;
+
     public HookDelivery withEvent(String event) {
         this.event = event;
         return this;
@@ -64,6 +68,7 @@ public class HookDelivery {
      */
     @JsonProperty("guid")
     public String guid;
+
     public HookDelivery withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -74,6 +79,7 @@ public class HookDelivery {
      */
     @JsonProperty("id")
     public Long id;
+
     public HookDelivery withId(Long id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class HookDelivery {
      */
     @JsonProperty("installation_id")
     public Long installationId;
+
     public HookDelivery withInstallationId(Long installationId) {
         this.installationId = installationId;
         return this;
@@ -94,6 +101,7 @@ public class HookDelivery {
      */
     @JsonProperty("redelivery")
     public Boolean redelivery;
+
     public HookDelivery withRedelivery(Boolean redelivery) {
         this.redelivery = redelivery;
         return this;
@@ -104,6 +112,7 @@ public class HookDelivery {
      */
     @JsonProperty("repository_id")
     public Long repositoryId;
+
     public HookDelivery withRepositoryId(Long repositoryId) {
         this.repositoryId = repositoryId;
         return this;
@@ -111,6 +120,7 @@ public class HookDelivery {
     
     @JsonProperty("request")
     public HookDeliveryRequest request;
+
     public HookDelivery withRequest(HookDeliveryRequest request) {
         this.request = request;
         return this;
@@ -118,6 +128,7 @@ public class HookDelivery {
     
     @JsonProperty("response")
     public HookDeliveryResponse response;
+
     public HookDelivery withResponse(HookDeliveryResponse response) {
         this.response = response;
         return this;
@@ -128,6 +139,7 @@ public class HookDelivery {
      */
     @JsonProperty("status")
     public String status;
+
     public HookDelivery withStatus(String status) {
         this.status = status;
         return this;
@@ -138,6 +150,7 @@ public class HookDelivery {
      */
     @JsonProperty("status_code")
     public Long statusCode;
+
     public HookDelivery withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -149,9 +162,25 @@ public class HookDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public HookDelivery withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HookDelivery(@JsonProperty("action") String action, @JsonProperty("delivered_at") OffsetDateTime deliveredAt, @JsonProperty("duration") Double duration, @JsonProperty("event") String event, @JsonProperty("guid") String guid, @JsonProperty("id") Long id, @JsonProperty("installation_id") Long installationId, @JsonProperty("redelivery") Boolean redelivery, @JsonProperty("repository_id") Long repositoryId, @JsonProperty("request") HookDeliveryRequest request, @JsonProperty("response") HookDeliveryResponse response, @JsonProperty("status") String status, @JsonProperty("status_code") Long statusCode) {
+        this.action = action;
+        this.deliveredAt = deliveredAt;
+        this.duration = duration;
+        this.event = event;
+        this.guid = guid;
+        this.id = id;
+        this.installationId = installationId;
+        this.redelivery = redelivery;
+        this.repositoryId = repositoryId;
+        this.request = request;
+        this.response = response;
+        this.status = status;
+        this.statusCode = statusCode;
+  }
 }

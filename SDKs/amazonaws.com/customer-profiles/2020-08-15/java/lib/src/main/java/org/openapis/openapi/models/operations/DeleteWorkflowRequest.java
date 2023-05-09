@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkflowRequest {
@@ -12,6 +13,7 @@ public class DeleteWorkflowRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainName")
     public String domainName;
+
     public DeleteWorkflowRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,6 +24,7 @@ public class DeleteWorkflowRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkflowId")
     public String workflowId;
+
     public DeleteWorkflowRequest withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkflowRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteWorkflowRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -36,6 +40,7 @@ public class DeleteWorkflowRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteWorkflowRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -43,6 +48,7 @@ public class DeleteWorkflowRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteWorkflowRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -50,6 +56,7 @@ public class DeleteWorkflowRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteWorkflowRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -57,6 +64,7 @@ public class DeleteWorkflowRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteWorkflowRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -64,6 +72,7 @@ public class DeleteWorkflowRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteWorkflowRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -71,9 +80,14 @@ public class DeleteWorkflowRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteWorkflowRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DeleteWorkflowRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("WorkflowId") String workflowId) {
+        this.domainName = domainName;
+        this.workflowId = workflowId;
+  }
 }

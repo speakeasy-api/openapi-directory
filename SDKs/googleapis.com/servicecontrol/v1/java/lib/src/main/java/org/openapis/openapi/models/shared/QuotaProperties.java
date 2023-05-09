@@ -18,9 +18,11 @@ public class QuotaProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quotaMode")
     public QuotaPropertiesQuotaModeEnum quotaMode;
+
     public QuotaProperties withQuotaMode(QuotaPropertiesQuotaModeEnum quotaMode) {
         this.quotaMode = quotaMode;
         return this;
     }
     
+    public QuotaProperties(){}
 }

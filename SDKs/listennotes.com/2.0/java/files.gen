@@ -65,6 +65,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/JustListenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/JustListenResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPodcastAudienceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPodcastAudienceResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetPodcastsByDomainNameRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetPodcastsByDomainNameResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlaylistByIdSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlaylistByIdTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlaylistByIdRequest.java
@@ -120,6 +122,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetPodcastsInBatchForm.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetRegionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PodcastAudienceResponseByRegions.java
 lib/src/main/java/org/openapis/openapi/models/shared/PodcastAudienceResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/PodcastDomainResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlaylistResponseTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlaylistResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlaylistVisibilityFieldEnum.java
@@ -151,4 +154,10 @@ lib/src/main/java/org/openapis/openapi/models/webhooks/PodcastsSubmitAcceptedRes
 lib/src/main/java/org/openapis/openapi/models/webhooks/PodcastsSubmitRejectedResponse.java
 lib/src/main/java/org/openapis/openapi/models/webhooks/PodcastsSubmitRejectedRequestBodyPodcast.java
 lib/src/main/java/org/openapis/openapi/models/webhooks/PodcastsSubmitRejectedRequestBody.java
+docs/sdk/README.md
+docs/directoryapi/README.md
+docs/insightsapi/README.md
+docs/playlistapi/README.md
+docs/podcasterapi/README.md
+docs/searchapi/README.md
 USAGE.md

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SuggesterStatus - The value of a &lt;code&gt;Suggester&lt;/code&gt; and its current status.
@@ -15,6 +15,7 @@ public class SuggesterStatus {
      */
     
     public Suggester options;
+
     public SuggesterStatus withOptions(Suggester options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class SuggesterStatus {
      */
     
     public OptionStatus status;
+
     public SuggesterStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public SuggesterStatus(@JsonProperty("Options") Suggester options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1RunTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public GoogleCloudDataplexV1Job job;
+
     public GoogleCloudDataplexV1RunTaskResponse withJob(GoogleCloudDataplexV1Job job) {
         this.job = job;
         return this;
     }
     
+    public GoogleCloudDataplexV1RunTaskResponse(){}
 }

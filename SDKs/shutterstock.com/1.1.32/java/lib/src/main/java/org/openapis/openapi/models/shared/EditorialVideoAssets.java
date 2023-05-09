@@ -18,6 +18,7 @@ public class EditorialVideoAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original")
     public VideoSizeDetails original;
+
     public EditorialVideoAssets withOriginal(VideoSizeDetails original) {
         this.original = original;
         return this;
@@ -29,6 +30,7 @@ public class EditorialVideoAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_mp4")
     public VideoPreviewUrl previewMp4;
+
     public EditorialVideoAssets withPreviewMp4(VideoPreviewUrl previewMp4) {
         this.previewMp4 = previewMp4;
         return this;
@@ -40,6 +42,7 @@ public class EditorialVideoAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_webm")
     public VideoPreviewUrl previewWebm;
+
     public EditorialVideoAssets withPreviewWebm(VideoPreviewUrl previewWebm) {
         this.previewWebm = previewWebm;
         return this;
@@ -51,9 +54,11 @@ public class EditorialVideoAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumb_jpg")
     public VideoPreviewUrl thumbJpg;
+
     public EditorialVideoAssets withThumbJpg(VideoPreviewUrl thumbJpg) {
         this.thumbJpg = thumbJpg;
         return this;
     }
     
+    public EditorialVideoAssets(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayPrice")
     public Float displayPrice;
+
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice withDisplayPrice(Float displayPrice) {
         this.displayPrice = displayPrice;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalPrice")
     public Float originalPrice;
+
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice withOriginalPrice(Float originalPrice) {
         this.originalPrice = originalPrice;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFHIRDatastoreResponse {
     @JsonProperty("DatastoreProperties")
     public DatastoreProperties datastoreProperties;
+
     public DescribeFHIRDatastoreResponse withDatastoreProperties(DatastoreProperties datastoreProperties) {
         this.datastoreProperties = datastoreProperties;
         return this;
     }
     
+    public DescribeFHIRDatastoreResponse(@JsonProperty("DatastoreProperties") DatastoreProperties datastoreProperties) {
+        this.datastoreProperties = datastoreProperties;
+  }
 }

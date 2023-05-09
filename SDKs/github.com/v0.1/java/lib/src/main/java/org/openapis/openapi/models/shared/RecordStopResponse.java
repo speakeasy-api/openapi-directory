@@ -15,6 +15,7 @@ public class RecordStopResponse {
      */
     @JsonProperty("Message")
     public RecordStopResponseMessageEnum message;
+
     public RecordStopResponse withMessage(RecordStopResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class RecordStopResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public RecordStopResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public RecordStopResponse(@JsonProperty("Message") RecordStopResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions {
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHttpEndpointEnum httpEndpoint;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions withHttpEndpoint(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHttpEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions withHttpProtocolIpv6(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -26,6 +28,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public Long httpPutResponseHopLimit;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -33,6 +36,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHttpTokensEnum httpTokens;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions withHttpTokens(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHttpTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -40,6 +44,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions withInstanceMetadataTags(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
@@ -47,9 +52,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum state;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions withState(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptions(){}
 }

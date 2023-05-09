@@ -18,6 +18,7 @@ public class ListAvailableProjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAvailableProjectsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListAvailableProjectsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectInfo")
     public ProjectInfo[] projectInfo;
+
     public ListAvailableProjectsResponse withProjectInfo(ProjectInfo[] projectInfo) {
         this.projectInfo = projectInfo;
         return this;
     }
     
+    public ListAvailableProjectsResponse(){}
 }

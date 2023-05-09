@@ -15,6 +15,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attractionCity")
     public String attractionCity;
+
     public TaxonomyAttractions200ApplicationJSONData withAttractionCity(String attractionCity) {
         this.attractionCity = attractionCity;
         return this;
@@ -26,6 +27,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attractionLatitude")
     public Double attractionLatitude;
+
     public TaxonomyAttractions200ApplicationJSONData withAttractionLatitude(Double attractionLatitude) {
         this.attractionLatitude = attractionLatitude;
         return this;
@@ -37,6 +39,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attractionLongitude")
     public Double attractionLongitude;
+
     public TaxonomyAttractions200ApplicationJSONData withAttractionLongitude(Double attractionLongitude) {
         this.attractionLongitude = attractionLongitude;
         return this;
@@ -48,6 +51,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attractionState")
     public String attractionState;
+
     public TaxonomyAttractions200ApplicationJSONData withAttractionState(String attractionState) {
         this.attractionState = attractionState;
         return this;
@@ -59,6 +63,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attractionStreetAddress")
     public String attractionStreetAddress;
+
     public TaxonomyAttractions200ApplicationJSONData withAttractionStreetAddress(String attractionStreetAddress) {
         this.attractionStreetAddress = attractionStreetAddress;
         return this;
@@ -70,6 +75,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public Long destinationId;
+
     public TaxonomyAttractions200ApplicationJSONData withDestinationId(Long destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -81,6 +87,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageUrlName")
     public String pageUrlName;
+
     public TaxonomyAttractions200ApplicationJSONData withPageUrlName(String pageUrlName) {
         this.pageUrlName = pageUrlName;
         return this;
@@ -92,6 +99,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoCount")
     public Long photoCount;
+
     public TaxonomyAttractions200ApplicationJSONData withPhotoCount(Long photoCount) {
         this.photoCount = photoCount;
         return this;
@@ -103,6 +111,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDestinationId")
     public Long primaryDestinationId;
+
     public TaxonomyAttractions200ApplicationJSONData withPrimaryDestinationId(Long primaryDestinationId) {
         this.primaryDestinationId = primaryDestinationId;
         return this;
@@ -114,6 +123,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDestinationName")
     public String primaryDestinationName;
+
     public TaxonomyAttractions200ApplicationJSONData withPrimaryDestinationName(String primaryDestinationName) {
         this.primaryDestinationName = primaryDestinationName;
         return this;
@@ -125,6 +135,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryDestinationUrlName")
     public String primaryDestinationUrlName;
+
     public TaxonomyAttractions200ApplicationJSONData withPrimaryDestinationUrlName(String primaryDestinationUrlName) {
         this.primaryDestinationUrlName = primaryDestinationUrlName;
         return this;
@@ -136,6 +147,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCount")
     public Long productCount;
+
     public TaxonomyAttractions200ApplicationJSONData withProductCount(Long productCount) {
         this.productCount = productCount;
         return this;
@@ -147,6 +159,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishedDate")
     public String publishedDate;
+
     public TaxonomyAttractions200ApplicationJSONData withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -158,6 +171,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public TaxonomyAttractions200ApplicationJSONData withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -171,6 +185,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seoId")
     public Long seoId;
+
     public TaxonomyAttractions200ApplicationJSONData withSeoId(Long seoId) {
         this.seoId = seoId;
         return this;
@@ -182,6 +197,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public TaxonomyAttractions200ApplicationJSONData withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -193,6 +209,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailHiResURL")
     public String thumbnailHiResURL;
+
     public TaxonomyAttractions200ApplicationJSONData withThumbnailHiResURL(String thumbnailHiResURL) {
         this.thumbnailHiResURL = thumbnailHiResURL;
         return this;
@@ -204,6 +221,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnailURL")
     public String thumbnailURL;
+
     public TaxonomyAttractions200ApplicationJSONData withThumbnailURL(String thumbnailURL) {
         this.thumbnailURL = thumbnailURL;
         return this;
@@ -215,6 +233,7 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public TaxonomyAttractions200ApplicationJSONData withTitle(String title) {
         this.title = title;
         return this;
@@ -226,9 +245,11 @@ public class TaxonomyAttractions200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webURL")
     public String webURL;
+
     public TaxonomyAttractions200ApplicationJSONData withWebURL(String webURL) {
         this.webURL = webURL;
         return this;
     }
     
+    public TaxonomyAttractions200ApplicationJSONData(){}
 }

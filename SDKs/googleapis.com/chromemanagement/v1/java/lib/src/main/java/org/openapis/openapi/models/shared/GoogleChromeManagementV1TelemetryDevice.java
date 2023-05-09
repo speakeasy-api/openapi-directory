@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1TelemetryDevice - Telemetry data collected from a managed device.
+ * GoogleChromeManagementV1TelemetryDevice - Telemetry data collected from a managed device. * Granular permission needed: TELEMETRY_API_DEVICE
  */
 public class GoogleChromeManagementV1TelemetryDevice {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioStatusReport")
     public GoogleChromeManagementV1AudioStatusReport[] audioStatusReport;
+
     public GoogleChromeManagementV1TelemetryDevice withAudioStatusReport(GoogleChromeManagementV1AudioStatusReport[] audioStatusReport) {
         this.audioStatusReport = audioStatusReport;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryInfo")
     public GoogleChromeManagementV1BatteryInfo[] batteryInfo;
+
     public GoogleChromeManagementV1TelemetryDevice withBatteryInfo(GoogleChromeManagementV1BatteryInfo[] batteryInfo) {
         this.batteryInfo = batteryInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batteryStatusReport")
     public GoogleChromeManagementV1BatteryStatusReport[] batteryStatusReport;
+
     public GoogleChromeManagementV1TelemetryDevice withBatteryStatusReport(GoogleChromeManagementV1BatteryStatusReport[] batteryStatusReport) {
         this.batteryStatusReport = batteryStatusReport;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootPerformanceReport")
     public GoogleChromeManagementV1BootPerformanceReport[] bootPerformanceReport;
+
     public GoogleChromeManagementV1TelemetryDevice withBootPerformanceReport(GoogleChromeManagementV1BootPerformanceReport[] bootPerformanceReport) {
         this.bootPerformanceReport = bootPerformanceReport;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuInfo")
     public GoogleChromeManagementV1CpuInfo[] cpuInfo;
+
     public GoogleChromeManagementV1TelemetryDevice withCpuInfo(GoogleChromeManagementV1CpuInfo[] cpuInfo) {
         this.cpuInfo = cpuInfo;
         return this;
@@ -73,6 +78,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuStatusReport")
     public GoogleChromeManagementV1CpuStatusReport[] cpuStatusReport;
+
     public GoogleChromeManagementV1TelemetryDevice withCpuStatusReport(GoogleChromeManagementV1CpuStatusReport[] cpuStatusReport) {
         this.cpuStatusReport = cpuStatusReport;
         return this;
@@ -84,6 +90,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public String customer;
+
     public GoogleChromeManagementV1TelemetryDevice withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -95,17 +102,19 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public GoogleChromeManagementV1TelemetryDevice withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
     /**
-     * Information of the graphics subsystem. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceGraphicsStatus](https://chromeenterprise.google/policies/#ReportDeviceGraphicsStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+     * Information of the graphics subsystem. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceGraphicsStatus](https://chromeenterprise.google/policies/#ReportDeviceGraphicsStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_GRAPHICS_INFO
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("graphicsInfo")
     public GoogleChromeManagementV1GraphicsInfo graphicsInfo;
+
     public GoogleChromeManagementV1TelemetryDevice withGraphicsInfo(GoogleChromeManagementV1GraphicsInfo graphicsInfo) {
         this.graphicsInfo = graphicsInfo;
         return this;
@@ -117,17 +126,19 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("graphicsStatusReport")
     public GoogleChromeManagementV1GraphicsStatusReport[] graphicsStatusReport;
+
     public GoogleChromeManagementV1TelemetryDevice withGraphicsStatusReport(GoogleChromeManagementV1GraphicsStatusReport[] graphicsStatusReport) {
         this.graphicsStatusReport = graphicsStatusReport;
         return this;
     }
     
     /**
-     * Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A
+     * Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_MEMORY_INFO
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryInfo")
     public GoogleChromeManagementV1MemoryInfo memoryInfo;
+
     public GoogleChromeManagementV1TelemetryDevice withMemoryInfo(GoogleChromeManagementV1MemoryInfo memoryInfo) {
         this.memoryInfo = memoryInfo;
         return this;
@@ -139,6 +150,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryStatusReport")
     public GoogleChromeManagementV1MemoryStatusReport[] memoryStatusReport;
+
     public GoogleChromeManagementV1TelemetryDevice withMemoryStatusReport(GoogleChromeManagementV1MemoryStatusReport[] memoryStatusReport) {
         this.memoryStatusReport = memoryStatusReport;
         return this;
@@ -150,6 +162,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleChromeManagementV1TelemetryDevice withName(String name) {
         this.name = name;
         return this;
@@ -161,17 +174,19 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkDiagnosticsReport")
     public GoogleChromeManagementV1NetworkDiagnosticsReport[] networkDiagnosticsReport;
+
     public GoogleChromeManagementV1TelemetryDevice withNetworkDiagnosticsReport(GoogleChromeManagementV1NetworkDiagnosticsReport[] networkDiagnosticsReport) {
         this.networkDiagnosticsReport = networkDiagnosticsReport;
         return this;
     }
     
     /**
-     * Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
+     * Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_NETWORK_INFO
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInfo")
     public GoogleChromeManagementV1NetworkInfo networkInfo;
+
     public GoogleChromeManagementV1TelemetryDevice withNetworkInfo(GoogleChromeManagementV1NetworkInfo networkInfo) {
         this.networkInfo = networkInfo;
         return this;
@@ -183,6 +198,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkStatusReport")
     public GoogleChromeManagementV1NetworkStatusReport[] networkStatusReport;
+
     public GoogleChromeManagementV1TelemetryDevice withNetworkStatusReport(GoogleChromeManagementV1NetworkStatusReport[] networkStatusReport) {
         this.networkStatusReport = networkStatusReport;
         return this;
@@ -194,6 +210,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public GoogleChromeManagementV1TelemetryDevice withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -205,6 +222,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osUpdateStatus")
     public GoogleChromeManagementV1OsUpdateStatus[] osUpdateStatus;
+
     public GoogleChromeManagementV1TelemetryDevice withOsUpdateStatus(GoogleChromeManagementV1OsUpdateStatus[] osUpdateStatus) {
         this.osUpdateStatus = osUpdateStatus;
         return this;
@@ -216,6 +234,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peripheralsReport")
     public GoogleChromeManagementV1PeripheralsReport[] peripheralsReport;
+
     public GoogleChromeManagementV1TelemetryDevice withPeripheralsReport(GoogleChromeManagementV1PeripheralsReport[] peripheralsReport) {
         this.peripheralsReport = peripheralsReport;
         return this;
@@ -227,17 +246,19 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public GoogleChromeManagementV1TelemetryDevice withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
     /**
-     * Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+     * Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_STORAGE_INFO
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageInfo")
     public GoogleChromeManagementV1StorageInfo storageInfo;
+
     public GoogleChromeManagementV1TelemetryDevice withStorageInfo(GoogleChromeManagementV1StorageInfo storageInfo) {
         this.storageInfo = storageInfo;
         return this;
@@ -249,6 +270,7 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageStatusReport")
     public GoogleChromeManagementV1StorageStatusReport[] storageStatusReport;
+
     public GoogleChromeManagementV1TelemetryDevice withStorageStatusReport(GoogleChromeManagementV1StorageStatusReport[] storageStatusReport) {
         this.storageStatusReport = storageStatusReport;
         return this;
@@ -260,9 +282,11 @@ public class GoogleChromeManagementV1TelemetryDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thunderboltInfo")
     public GoogleChromeManagementV1ThunderboltInfo[] thunderboltInfo;
+
     public GoogleChromeManagementV1TelemetryDevice withThunderboltInfo(GoogleChromeManagementV1ThunderboltInfo[] thunderboltInfo) {
         this.thunderboltInfo = thunderboltInfo;
         return this;
     }
     
+    public GoogleChromeManagementV1TelemetryDevice(){}
 }

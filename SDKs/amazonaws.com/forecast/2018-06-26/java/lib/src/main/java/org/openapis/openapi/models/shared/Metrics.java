@@ -15,6 +15,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageWeightedQuantileLoss")
     public Double averageWeightedQuantileLoss;
+
     public Metrics withAverageWeightedQuantileLoss(Double averageWeightedQuantileLoss) {
         this.averageWeightedQuantileLoss = averageWeightedQuantileLoss;
         return this;
@@ -23,6 +24,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMetrics")
     public ErrorMetric[] errorMetrics;
+
     public Metrics withErrorMetrics(ErrorMetric[] errorMetrics) {
         this.errorMetrics = errorMetrics;
         return this;
@@ -31,6 +33,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RMSE")
     public Double rmse;
+
     public Metrics withRmse(Double rmse) {
         this.rmse = rmse;
         return this;
@@ -39,9 +42,11 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightedQuantileLosses")
     public WeightedQuantileLoss[] weightedQuantileLosses;
+
     public Metrics withWeightedQuantileLosses(WeightedQuantileLoss[] weightedQuantileLosses) {
         this.weightedQuantileLosses = weightedQuantileLosses;
         return this;
     }
     
+    public Metrics(){}
 }

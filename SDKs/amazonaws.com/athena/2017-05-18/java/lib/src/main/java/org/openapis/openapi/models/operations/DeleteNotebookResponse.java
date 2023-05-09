@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteNotebookResponse {
     
     public String contentType;
+
     public DeleteNotebookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteNotebookResponse {
      */
     
     public java.util.Map<String, Object> deleteNotebookOutput;
+
     public DeleteNotebookResponse withDeleteNotebookOutput(java.util.Map<String, Object> deleteNotebookOutput) {
         this.deleteNotebookOutput = deleteNotebookOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteNotebookResponse {
      */
     
     public Object internalServerException;
+
     public DeleteNotebookResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteNotebookResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteNotebookResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteNotebookResponse {
     
     
     public Integer statusCode;
+
     public DeleteNotebookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteNotebookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteNotebookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteNotebookResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteNotebookResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteNotebookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

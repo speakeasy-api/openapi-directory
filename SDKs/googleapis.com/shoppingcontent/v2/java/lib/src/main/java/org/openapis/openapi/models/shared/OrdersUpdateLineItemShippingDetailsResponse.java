@@ -18,6 +18,7 @@ public class OrdersUpdateLineItemShippingDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public String executionStatus;
+
     public OrdersUpdateLineItemShippingDetailsResponse withExecutionStatus(String executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -29,9 +30,11 @@ public class OrdersUpdateLineItemShippingDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrdersUpdateLineItemShippingDetailsResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public OrdersUpdateLineItemShippingDetailsResponse(){}
 }

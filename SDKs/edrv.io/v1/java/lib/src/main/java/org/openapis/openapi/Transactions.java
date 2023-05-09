@@ -57,10 +57,8 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionResponse res = new org.openapis.openapi.models.operations.GetTransactionResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionResponse res = new org.openapis.openapi.models.operations.GetTransactionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -90,10 +88,8 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionCostResponse res = new org.openapis.openapi.models.operations.GetTransactionCostResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionCostResponse res = new org.openapis.openapi.models.operations.GetTransactionCostResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -129,11 +125,9 @@ public class Transactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse(contentType, httpRes.statusCode()) {{
             getTransactions200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

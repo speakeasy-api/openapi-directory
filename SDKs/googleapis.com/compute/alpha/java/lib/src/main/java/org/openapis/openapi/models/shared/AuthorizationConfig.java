@@ -18,9 +18,11 @@ public class AuthorizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policies")
     public RbacPolicy[] policies;
+
     public AuthorizationConfig withPolicies(RbacPolicy[] policies) {
         this.policies = policies;
         return this;
     }
     
+    public AuthorizationConfig(){}
 }

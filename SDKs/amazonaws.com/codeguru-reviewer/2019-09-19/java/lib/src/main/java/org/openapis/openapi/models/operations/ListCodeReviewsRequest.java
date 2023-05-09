@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCodeReviewsRequest {
@@ -12,6 +13,7 @@ public class ListCodeReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public ListCodeReviewsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,6 +24,7 @@ public class ListCodeReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListCodeReviewsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -32,6 +35,7 @@ public class ListCodeReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProviderTypes")
     public org.openapis.openapi.models.shared.ProviderTypeEnum[] providerTypes;
+
     public ListCodeReviewsRequest withProviderTypes(org.openapis.openapi.models.shared.ProviderTypeEnum[] providerTypes) {
         this.providerTypes = providerTypes;
         return this;
@@ -42,6 +46,7 @@ public class ListCodeReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RepositoryNames")
     public String[] repositoryNames;
+
     public ListCodeReviewsRequest withRepositoryNames(String[] repositoryNames) {
         this.repositoryNames = repositoryNames;
         return this;
@@ -52,6 +57,7 @@ public class ListCodeReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=States")
     public org.openapis.openapi.models.shared.JobStateEnum[] states;
+
     public ListCodeReviewsRequest withStates(org.openapis.openapi.models.shared.JobStateEnum[] states) {
         this.states = states;
         return this;
@@ -62,6 +68,7 @@ public class ListCodeReviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public ListCodeReviewsTypeEnum type;
+
     public ListCodeReviewsRequest withType(ListCodeReviewsTypeEnum type) {
         this.type = type;
         return this;
@@ -69,6 +76,7 @@ public class ListCodeReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListCodeReviewsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -76,6 +84,7 @@ public class ListCodeReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListCodeReviewsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -83,6 +92,7 @@ public class ListCodeReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListCodeReviewsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -90,6 +100,7 @@ public class ListCodeReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListCodeReviewsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -97,6 +108,7 @@ public class ListCodeReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListCodeReviewsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -104,6 +116,7 @@ public class ListCodeReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListCodeReviewsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -111,9 +124,13 @@ public class ListCodeReviewsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListCodeReviewsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListCodeReviewsRequest(@JsonProperty("Type") ListCodeReviewsTypeEnum type) {
+        this.type = type;
+  }
 }

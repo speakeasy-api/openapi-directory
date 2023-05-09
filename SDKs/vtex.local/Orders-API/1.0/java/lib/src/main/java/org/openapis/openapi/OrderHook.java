@@ -63,10 +63,8 @@ public class OrderHook {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHookConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteHookConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DeleteHookConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteHookConfigurationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -79,7 +77,7 @@ public class OrderHook {
      * Get hook configuration
      * Retrieves a given hook's configuration details. Learn more with the [orders hook guide](https://developers.vtex.com/vtex-rest-api/docs/orders-feed#hook). 
      * 
-     * &gt; \ud83d\udcd8 Onboarding guide 
+     * &gt; 📘 Onboarding guide 
      * &gt;
      * &gt; Check the new [Orders onboarding guide](https://developers.vtex.com/vtex-rest-api/docs/orders-overview). We created this guide to improve the onboarding experience for developers at VTEX. It assembles all documentation on our Developer Portal about Orders and is organized by focusing on the developer's journey.
      * 
@@ -117,10 +115,8 @@ public class OrderHook {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHookConfigurationResponse res = new org.openapis.openapi.models.operations.GetHookConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetHookConfigurationResponse res = new org.openapis.openapi.models.operations.GetHookConfigurationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +170,9 @@ public class OrderHook {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HookConfigurationResponse res = new org.openapis.openapi.models.operations.HookConfigurationResponse() {{
+        org.openapis.openapi.models.operations.HookConfigurationResponse res = new org.openapis.openapi.models.operations.HookConfigurationResponse(contentType, httpRes.statusCode()) {{
             hookConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

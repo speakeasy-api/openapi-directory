@@ -16,9 +16,11 @@ public class DestinyDefinitionsItemsDestinyPlugRuleDefinition {
      */
     
     public String failureMessage;
+
     public DestinyDefinitionsItemsDestinyPlugRuleDefinition withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
     }
     
+    public DestinyDefinitionsItemsDestinyPlugRuleDefinition(){}
 }

@@ -20,6 +20,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationInNanoSeconds")
     public Long durationInNanoSeconds;
+
     public TestCase withDurationInNanoSeconds(Long durationInNanoSeconds) {
         this.durationInNanoSeconds = durationInNanoSeconds;
         return this;
@@ -30,6 +31,7 @@ public class TestCase {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expired")
     public OffsetDateTime expired;
+
     public TestCase withExpired(OffsetDateTime expired) {
         this.expired = expired;
         return this;
@@ -38,6 +40,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TestCase withMessage(String message) {
         this.message = message;
         return this;
@@ -46,6 +49,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestCase withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public TestCase withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -62,6 +67,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportArn")
     public String reportArn;
+
     public TestCase withReportArn(String reportArn) {
         this.reportArn = reportArn;
         return this;
@@ -70,6 +76,7 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TestCase withStatus(String status) {
         this.status = status;
         return this;
@@ -78,9 +85,11 @@ public class TestCase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testRawDataPath")
     public String testRawDataPath;
+
     public TestCase withTestRawDataPath(String testRawDataPath) {
         this.testRawDataPath = testRawDataPath;
         return this;
     }
     
+    public TestCase(){}
 }

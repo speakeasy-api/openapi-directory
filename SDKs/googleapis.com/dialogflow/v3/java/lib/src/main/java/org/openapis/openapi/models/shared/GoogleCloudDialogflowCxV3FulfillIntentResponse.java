@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3FulfillIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudio")
     public String outputAudio;
+
     public GoogleCloudDialogflowCxV3FulfillIntentResponse withOutputAudio(String outputAudio) {
         this.outputAudio = outputAudio;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3FulfillIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioConfig")
     public GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig;
+
     public GoogleCloudDialogflowCxV3FulfillIntentResponse withOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig) {
         this.outputAudioConfig = outputAudioConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3FulfillIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryResult")
     public GoogleCloudDialogflowCxV3QueryResult queryResult;
+
     public GoogleCloudDialogflowCxV3FulfillIntentResponse withQueryResult(GoogleCloudDialogflowCxV3QueryResult queryResult) {
         this.queryResult = queryResult;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3FulfillIntentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseId")
     public String responseId;
+
     public GoogleCloudDialogflowCxV3FulfillIntentResponse withResponseId(String responseId) {
         this.responseId = responseId;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FulfillIntentResponse(){}
 }

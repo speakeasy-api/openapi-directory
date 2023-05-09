@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeSynonymOptionsRequest {
     /**
@@ -12,9 +12,13 @@ public class DescribeSynonymOptionsRequest {
      */
     
     public String domainName;
+
     public DescribeSynonymOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DescribeSynonymOptionsRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

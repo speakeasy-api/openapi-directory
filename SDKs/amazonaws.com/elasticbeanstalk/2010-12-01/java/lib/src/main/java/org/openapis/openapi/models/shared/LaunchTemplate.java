@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class LaunchTemplate {
     
     public String id;
+
     public LaunchTemplate withId(String id) {
         this.id = id;
         return this;
     }
     
+    public LaunchTemplate(){}
 }

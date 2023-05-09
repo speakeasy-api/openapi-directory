@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateCustomerGatewayResult {
     
     public CreateCustomerGatewayResultCustomerGateway customerGateway;
+
     public CreateCustomerGatewayResult withCustomerGateway(CreateCustomerGatewayResultCustomerGateway customerGateway) {
         this.customerGateway = customerGateway;
         return this;
     }
     
+    public CreateCustomerGatewayResult(){}
 }

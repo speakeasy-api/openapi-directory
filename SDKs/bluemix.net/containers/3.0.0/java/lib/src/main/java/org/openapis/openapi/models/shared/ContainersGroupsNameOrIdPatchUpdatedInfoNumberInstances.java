@@ -15,6 +15,7 @@ public class ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Desired")
     public Integer desired;
+
     public ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances withDesired(Integer desired) {
         this.desired = desired;
         return this;
@@ -26,6 +27,7 @@ public class ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Integer max;
+
     public ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances withMax(Integer max) {
         this.max = max;
         return this;
@@ -37,9 +39,11 @@ public class ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Min")
     public Integer min;
+
     public ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances withMin(Integer min) {
         this.min = min;
         return this;
     }
     
+    public ContainersGroupsNameOrIdPatchUpdatedInfoNumberInstances(){}
 }

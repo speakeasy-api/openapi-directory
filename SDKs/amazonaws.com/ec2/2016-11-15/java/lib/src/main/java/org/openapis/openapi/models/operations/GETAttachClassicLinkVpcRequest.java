@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAttachClassicLinkVpcRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAttachClassicLinkVpcActionEnum action;
+
     public GETAttachClassicLinkVpcRequest withAction(GETAttachClassicLinkVpcActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAttachClassicLinkVpcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETAttachClassicLinkVpcRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETAttachClassicLinkVpcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETAttachClassicLinkVpcRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,6 +43,7 @@ public class GETAttachClassicLinkVpcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SecurityGroupId")
     public String[] securityGroupId;
+
     public GETAttachClassicLinkVpcRequest withSecurityGroupId(String[] securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -46,6 +51,7 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAttachClassicLinkVpcVersionEnum version;
+
     public GETAttachClassicLinkVpcRequest withVersion(GETAttachClassicLinkVpcVersionEnum version) {
         this.version = version;
         return this;
@@ -56,6 +62,7 @@ public class GETAttachClassicLinkVpcRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETAttachClassicLinkVpcRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -63,6 +70,7 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAttachClassicLinkVpcRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAttachClassicLinkVpcRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAttachClassicLinkVpcRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAttachClassicLinkVpcRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAttachClassicLinkVpcRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAttachClassicLinkVpcRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETAttachClassicLinkVpcRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAttachClassicLinkVpcRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAttachClassicLinkVpcRequest(@JsonProperty("Action") GETAttachClassicLinkVpcActionEnum action, @JsonProperty("InstanceId") String instanceId, @JsonProperty("SecurityGroupId") String[] securityGroupId, @JsonProperty("Version") GETAttachClassicLinkVpcVersionEnum version, @JsonProperty("VpcId") String vpcId) {
+        this.action = action;
+        this.instanceId = instanceId;
+        this.securityGroupId = securityGroupId;
+        this.version = version;
+        this.vpcId = vpcId;
+  }
 }

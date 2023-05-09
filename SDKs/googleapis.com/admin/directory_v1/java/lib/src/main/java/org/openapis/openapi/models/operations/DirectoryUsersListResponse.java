@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryUsersListResponse {
     
     public String contentType;
+
     public DirectoryUsersListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DirectoryUsersListResponse {
     
     
     public Integer statusCode;
+
     public DirectoryUsersListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DirectoryUsersListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryUsersListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryUsersListResponse {
      */
     
     public org.openapis.openapi.models.shared.Users users;
+
     public DirectoryUsersListResponse withUsers(org.openapis.openapi.models.shared.Users users) {
         this.users = users;
         return this;
     }
     
+    public DirectoryUsersListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

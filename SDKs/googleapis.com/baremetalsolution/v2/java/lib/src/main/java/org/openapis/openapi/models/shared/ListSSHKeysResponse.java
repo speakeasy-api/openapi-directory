@@ -18,6 +18,7 @@ public class ListSSHKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSSHKeysResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSSHKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshKeys")
     public SSHKey[] sshKeys;
+
     public ListSSHKeysResponse withSshKeys(SSHKey[] sshKeys) {
         this.sshKeys = sshKeys;
         return this;
     }
     
+    public ListSSHKeysResponse(){}
 }

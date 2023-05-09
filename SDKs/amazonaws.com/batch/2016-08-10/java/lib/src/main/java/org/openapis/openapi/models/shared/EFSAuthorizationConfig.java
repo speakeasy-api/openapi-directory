@@ -15,6 +15,7 @@ public class EFSAuthorizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPointId")
     public String accessPointId;
+
     public EFSAuthorizationConfig withAccessPointId(String accessPointId) {
         this.accessPointId = accessPointId;
         return this;
@@ -23,9 +24,11 @@ public class EFSAuthorizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iam")
     public EFSAuthorizationConfigIAMEnum iam;
+
     public EFSAuthorizationConfig withIam(EFSAuthorizationConfigIAMEnum iam) {
         this.iam = iam;
         return this;
     }
     
+    public EFSAuthorizationConfig(){}
 }

@@ -28,6 +28,7 @@ public class Psd2RegistrationLog {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Psd2RegistrationLog withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +40,7 @@ public class Psd2RegistrationLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_message")
     public String errorMessage;
+
     public Psd2RegistrationLog withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -46,6 +48,7 @@ public class Psd2RegistrationLog {
     
     @JsonProperty("id")
     public Long id;
+
     public Psd2RegistrationLog withId(Long id) {
         this.id = id;
         return this;
@@ -57,6 +60,7 @@ public class Psd2RegistrationLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_psd2registration")
     public Long idPsd2registration;
+
     public Psd2RegistrationLog withIdPsd2registration(Long idPsd2registration) {
         this.idPsd2registration = idPsd2registration;
         return this;
@@ -67,9 +71,15 @@ public class Psd2RegistrationLog {
      */
     @JsonProperty("type")
     public String type;
+
     public Psd2RegistrationLog withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Psd2RegistrationLog(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.type = type;
+  }
 }

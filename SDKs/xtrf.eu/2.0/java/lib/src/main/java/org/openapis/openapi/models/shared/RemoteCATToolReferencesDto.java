@@ -12,6 +12,7 @@ public class RemoteCATToolReferencesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catResourceId")
     public String catResourceId;
+
     public RemoteCATToolReferencesDto withCatResourceId(String catResourceId) {
         this.catResourceId = catResourceId;
         return this;
@@ -20,6 +21,7 @@ public class RemoteCATToolReferencesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catToolDocumentId")
     public String catToolDocumentId;
+
     public RemoteCATToolReferencesDto withCatToolDocumentId(String catToolDocumentId) {
         this.catToolDocumentId = catToolDocumentId;
         return this;
@@ -28,9 +30,11 @@ public class RemoteCATToolReferencesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editorUrl")
     public String editorUrl;
+
     public RemoteCATToolReferencesDto withEditorUrl(String editorUrl) {
         this.editorUrl = editorUrl;
         return this;
     }
     
+    public RemoteCATToolReferencesDto(){}
 }

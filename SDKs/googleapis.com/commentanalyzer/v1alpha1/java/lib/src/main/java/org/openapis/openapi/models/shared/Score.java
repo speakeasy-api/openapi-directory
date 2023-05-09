@@ -18,6 +18,7 @@ public class Score {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ScoreTypeEnum type;
+
     public Score withType(ScoreTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class Score {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Float value;
+
     public Score withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public Score(){}
 }

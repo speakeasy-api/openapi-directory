@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteResourcePolicyRequest {
     @JsonProperty("PolicyHash")
     public String policyHash;
+
     public DeleteResourcePolicyRequest withPolicyHash(String policyHash) {
         this.policyHash = policyHash;
         return this;
@@ -16,6 +17,7 @@ public class DeleteResourcePolicyRequest {
     
     @JsonProperty("PolicyId")
     public String policyId;
+
     public DeleteResourcePolicyRequest withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -23,9 +25,15 @@ public class DeleteResourcePolicyRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DeleteResourcePolicyRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DeleteResourcePolicyRequest(@JsonProperty("PolicyHash") String policyHash, @JsonProperty("PolicyId") String policyId, @JsonProperty("ResourceArn") String resourceArn) {
+        this.policyHash = policyHash;
+        this.policyId = policyId;
+        this.resourceArn = resourceArn;
+  }
 }

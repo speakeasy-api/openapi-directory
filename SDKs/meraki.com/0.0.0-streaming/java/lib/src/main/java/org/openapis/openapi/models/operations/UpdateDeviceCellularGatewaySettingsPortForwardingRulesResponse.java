@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse {
     
     public String contentType;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse {
     
     
     public Integer statusCode;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse {
      */
     
     public java.util.Map<String, Object> updateDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject;
+
     public UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse withUpdateDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject(java.util.Map<String, Object> updateDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject) {
         this.updateDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject = updateDeviceCellularGatewaySettingsPortForwardingRules200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

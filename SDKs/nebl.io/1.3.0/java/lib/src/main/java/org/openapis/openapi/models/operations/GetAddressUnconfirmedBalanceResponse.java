@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAddressUnconfirmedBalanceResponse {
     
     public String contentType;
+
     public GetAddressUnconfirmedBalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAddressUnconfirmedBalanceResponse {
     
     
     public Integer statusCode;
+
     public GetAddressUnconfirmedBalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAddressUnconfirmedBalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAddressUnconfirmedBalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetAddressUnconfirmedBalanceResponse {
      */
     
     public Double getAddressUnconfirmedBalanceResponse;
+
     public GetAddressUnconfirmedBalanceResponse withGetAddressUnconfirmedBalanceResponse(Double getAddressUnconfirmedBalanceResponse) {
         this.getAddressUnconfirmedBalanceResponse = getAddressUnconfirmedBalanceResponse;
         return this;
     }
     
+    public GetAddressUnconfirmedBalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

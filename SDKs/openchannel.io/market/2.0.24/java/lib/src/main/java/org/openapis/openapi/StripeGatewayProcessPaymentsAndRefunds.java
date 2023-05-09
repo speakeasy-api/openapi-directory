@@ -51,11 +51,9 @@ public class StripeGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse res = new org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse res = new org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {
@@ -91,11 +89,9 @@ public class StripeGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdResponse res = new org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdResponse res = new org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {
@@ -133,11 +129,9 @@ public class StripeGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsResponse res = new org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsResponse res = new org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {
@@ -175,11 +169,9 @@ public class StripeGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsResponse res = new org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsResponse() {{
+        org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsResponse res = new org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {
@@ -224,11 +216,9 @@ public class StripeGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsResponse res = new org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsResponse() {{
+        org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsResponse res = new org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {
@@ -272,11 +262,9 @@ public class StripeGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsResponse res = new org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsResponse() {{
+        org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsResponse res = new org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {
@@ -321,11 +309,9 @@ public class StripeGatewayProcessPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdResponse res = new org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdResponse() {{
+        org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdResponse res = new org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 412) {

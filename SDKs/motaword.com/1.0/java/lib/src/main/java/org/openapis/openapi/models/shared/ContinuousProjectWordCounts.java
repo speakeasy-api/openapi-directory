@@ -12,6 +12,7 @@ public class ContinuousProjectWordCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mt")
     public Long mt;
+
     public ContinuousProjectWordCounts withMt(Long mt) {
         this.mt = mt;
         return this;
@@ -20,6 +21,7 @@ public class ContinuousProjectWordCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_edit")
     public Long postEdit;
+
     public ContinuousProjectWordCounts withPostEdit(Long postEdit) {
         this.postEdit = postEdit;
         return this;
@@ -28,9 +30,11 @@ public class ContinuousProjectWordCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public ContinuousProjectWordCounts withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ContinuousProjectWordCounts(){}
 }

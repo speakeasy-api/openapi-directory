@@ -18,9 +18,11 @@ public class SourceInstanceParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskConfigs")
     public DiskInstantiationConfig[] diskConfigs;
+
     public SourceInstanceParams withDiskConfigs(DiskInstantiationConfig[] diskConfigs) {
         this.diskConfigs = diskConfigs;
         return this;
     }
     
+    public SourceInstanceParams(){}
 }

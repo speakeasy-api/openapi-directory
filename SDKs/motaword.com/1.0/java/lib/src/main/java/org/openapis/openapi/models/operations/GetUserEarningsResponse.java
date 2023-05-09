@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserEarningsResponse {
     
     public String contentType;
+
     public GetUserEarningsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUserEarningsResponse {
      */
     
     public org.openapis.openapi.models.shared.Earnings earnings;
+
     public GetUserEarningsResponse withEarnings(org.openapis.openapi.models.shared.Earnings earnings) {
         this.earnings = earnings;
         return this;
@@ -29,6 +32,7 @@ public class GetUserEarningsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetUserEarningsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetUserEarningsResponse {
     
     
     public Integer statusCode;
+
     public GetUserEarningsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetUserEarningsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserEarningsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUserEarningsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

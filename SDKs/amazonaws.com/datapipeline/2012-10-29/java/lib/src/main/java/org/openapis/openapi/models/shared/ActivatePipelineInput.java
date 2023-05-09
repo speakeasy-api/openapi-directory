@@ -20,6 +20,7 @@ public class ActivatePipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterValues")
     public ParameterValue[] parameterValues;
+
     public ActivatePipelineInput withParameterValues(ParameterValue[] parameterValues) {
         this.parameterValues = parameterValues;
         return this;
@@ -27,6 +28,7 @@ public class ActivatePipelineInput {
     
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public ActivatePipelineInput withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
@@ -37,9 +39,13 @@ public class ActivatePipelineInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTimestamp")
     public OffsetDateTime startTimestamp;
+
     public ActivatePipelineInput withStartTimestamp(OffsetDateTime startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
     }
     
+    public ActivatePipelineInput(@JsonProperty("pipelineId") String pipelineId) {
+        this.pipelineId = pipelineId;
+  }
 }

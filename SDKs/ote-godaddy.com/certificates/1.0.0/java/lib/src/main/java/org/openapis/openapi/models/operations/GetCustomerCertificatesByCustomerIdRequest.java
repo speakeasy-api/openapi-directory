@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomerCertificatesByCustomerIdRequest {
@@ -12,6 +13,7 @@ public class GetCustomerCertificatesByCustomerIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public String customerId;
+
     public GetCustomerCertificatesByCustomerIdRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -22,6 +24,7 @@ public class GetCustomerCertificatesByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetCustomerCertificatesByCustomerIdRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,13 @@ public class GetCustomerCertificatesByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetCustomerCertificatesByCustomerIdRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetCustomerCertificatesByCustomerIdRequest(@JsonProperty("customerId") String customerId) {
+        this.customerId = customerId;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteContainerInput {
     @JsonProperty("ContainerName")
     public String containerName;
+
     public DeleteContainerInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
     }
     
+    public DeleteContainerInput(@JsonProperty("ContainerName") String containerName) {
+        this.containerName = containerName;
+  }
 }

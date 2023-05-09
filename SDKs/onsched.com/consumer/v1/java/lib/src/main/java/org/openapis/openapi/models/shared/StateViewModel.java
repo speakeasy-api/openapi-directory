@@ -15,6 +15,7 @@ public class StateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public StateViewModel withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class StateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public StateViewModel withCountry(String country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class StateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryName")
     public String countryName;
+
     public StateViewModel withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -39,6 +42,7 @@ public class StateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StateViewModel withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class StateViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public StateViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public StateViewModel(){}
 }

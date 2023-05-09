@@ -18,6 +18,7 @@ public class Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public MediaProperties properties;
+
     public Video withProperties(MediaProperties properties) {
         this.properties = properties;
         return this;
@@ -29,9 +30,11 @@ public class Video {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeUri")
     public String youtubeUri;
+
     public Video withYoutubeUri(String youtubeUri) {
         this.youtubeUri = youtubeUri;
         return this;
     }
     
+    public Video(){}
 }

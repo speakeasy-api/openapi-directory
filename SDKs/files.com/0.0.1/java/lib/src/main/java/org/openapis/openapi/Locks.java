@@ -61,10 +61,8 @@ public class Locks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLocksPathResponse res = new org.openapis.openapi.models.operations.DeleteLocksPathResponse() {{
+        org.openapis.openapi.models.operations.DeleteLocksPathResponse res = new org.openapis.openapi.models.operations.DeleteLocksPathResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -100,11 +98,9 @@ public class Locks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LockListForPathResponse res = new org.openapis.openapi.models.operations.LockListForPathResponse() {{
+        org.openapis.openapi.models.operations.LockListForPathResponse res = new org.openapis.openapi.models.operations.LockListForPathResponse(contentType, httpRes.statusCode()) {{
             lockEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,11 +139,9 @@ public class Locks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLocksPathResponse res = new org.openapis.openapi.models.operations.PostLocksPathResponse() {{
+        org.openapis.openapi.models.operations.PostLocksPathResponse res = new org.openapis.openapi.models.operations.PostLocksPathResponse(contentType, httpRes.statusCode()) {{
             lockEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSDKKeysResponse {
     
     public String contentType;
+
     public GetSDKKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSDKKeysResponse {
     
     
     public org.openapis.openapi.models.shared.SDKKeysModel sdkKeysModel;
+
     public GetSDKKeysResponse withSDKKeysModel(org.openapis.openapi.models.shared.SDKKeysModel sdkKeysModel) {
         this.sdkKeysModel = sdkKeysModel;
         return this;
@@ -23,6 +26,7 @@ public class GetSDKKeysResponse {
     
     
     public Integer statusCode;
+
     public GetSDKKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetSDKKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSDKKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSDKKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

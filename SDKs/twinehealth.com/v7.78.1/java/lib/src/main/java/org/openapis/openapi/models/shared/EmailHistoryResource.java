@@ -12,6 +12,7 @@ public class EmailHistoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public EmailHistoryResourceAttributes attributes;
+
     public EmailHistoryResource withAttributes(EmailHistoryResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class EmailHistoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EmailHistoryResource withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class EmailHistoryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public EmailHistoryResourceRelationships relationships;
+
     public EmailHistoryResource withRelationships(EmailHistoryResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -35,9 +38,13 @@ public class EmailHistoryResource {
     
     @JsonProperty("type")
     public String type;
+
     public EmailHistoryResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EmailHistoryResource(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

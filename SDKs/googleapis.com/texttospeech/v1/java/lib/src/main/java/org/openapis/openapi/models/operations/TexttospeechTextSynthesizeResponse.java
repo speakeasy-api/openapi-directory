@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TexttospeechTextSynthesizeResponse {
     
     public String contentType;
+
     public TexttospeechTextSynthesizeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TexttospeechTextSynthesizeResponse {
     
     
     public Integer statusCode;
+
     public TexttospeechTextSynthesizeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TexttospeechTextSynthesizeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TexttospeechTextSynthesizeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TexttospeechTextSynthesizeResponse {
      */
     
     public org.openapis.openapi.models.shared.SynthesizeSpeechResponse synthesizeSpeechResponse;
+
     public TexttospeechTextSynthesizeResponse withSynthesizeSpeechResponse(org.openapis.openapi.models.shared.SynthesizeSpeechResponse synthesizeSpeechResponse) {
         this.synthesizeSpeechResponse = synthesizeSpeechResponse;
         return this;
     }
     
+    public TexttospeechTextSynthesizeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutThirdPartyJobFailureResultInput {
     @JsonProperty("clientToken")
     public String clientToken;
+
     public PutThirdPartyJobFailureResultInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class PutThirdPartyJobFailureResultInput {
     
     @JsonProperty("failureDetails")
     public FailureDetails failureDetails;
+
     public PutThirdPartyJobFailureResultInput withFailureDetails(FailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -26,9 +28,15 @@ public class PutThirdPartyJobFailureResultInput {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public PutThirdPartyJobFailureResultInput withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public PutThirdPartyJobFailureResultInput(@JsonProperty("clientToken") String clientToken, @JsonProperty("failureDetails") FailureDetails failureDetails, @JsonProperty("jobId") String jobId) {
+        this.clientToken = clientToken;
+        this.failureDetails = failureDetails;
+        this.jobId = jobId;
+  }
 }

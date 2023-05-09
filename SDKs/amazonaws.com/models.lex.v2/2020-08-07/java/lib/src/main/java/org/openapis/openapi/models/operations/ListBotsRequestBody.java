@@ -15,6 +15,7 @@ public class ListBotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.BotFilter[] filters;
+
     public ListBotsRequestBody withFilters(org.openapis.openapi.models.shared.BotFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListBotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListBotsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListBotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBotsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,9 +51,11 @@ public class ListBotsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ListBotsRequestBodySortBy sortBy;
+
     public ListBotsRequestBody withSortBy(ListBotsRequestBodySortBy sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListBotsRequestBody(){}
 }

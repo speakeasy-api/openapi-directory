@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMonitoringExecutionsResponse {
     @JsonProperty("MonitoringExecutionSummaries")
     public MonitoringExecutionSummary[] monitoringExecutionSummaries;
+
     public ListMonitoringExecutionsResponse withMonitoringExecutionSummaries(MonitoringExecutionSummary[] monitoringExecutionSummaries) {
         this.monitoringExecutionSummaries = monitoringExecutionSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListMonitoringExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoringExecutionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMonitoringExecutionsResponse(@JsonProperty("MonitoringExecutionSummaries") MonitoringExecutionSummary[] monitoringExecutionSummaries) {
+        this.monitoringExecutionSummaries = monitoringExecutionSummaries;
+  }
 }

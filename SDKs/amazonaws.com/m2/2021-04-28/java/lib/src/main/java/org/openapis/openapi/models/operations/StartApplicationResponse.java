@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartApplicationResponse {
@@ -12,6 +13,7 @@ public class StartApplicationResponse {
      */
     
     public Object accessDeniedException;
+
     public StartApplicationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartApplicationResponse {
      */
     
     public Object conflictException;
+
     public StartApplicationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartApplicationResponse {
     
     
     public String contentType;
+
     public StartApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartApplicationResponse {
      */
     
     public Object internalServerException;
+
     public StartApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartApplicationResponse {
      */
     
     public java.util.Map<String, Object> startApplicationResponse;
+
     public StartApplicationResponse withStartApplicationResponse(java.util.Map<String, Object> startApplicationResponse) {
         this.startApplicationResponse = startApplicationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartApplicationResponse {
     
     
     public Integer statusCode;
+
     public StartApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartApplicationResponse {
      */
     
     public Object throttlingException;
+
     public StartApplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartApplicationResponse {
      */
     
     public Object validationException;
+
     public StartApplicationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

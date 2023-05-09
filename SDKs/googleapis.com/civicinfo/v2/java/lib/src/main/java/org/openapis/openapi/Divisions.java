@@ -56,11 +56,9 @@ public class Divisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CivicinfoDivisionsSearchResponse res = new org.openapis.openapi.models.operations.CivicinfoDivisionsSearchResponse() {{
+        org.openapis.openapi.models.operations.CivicinfoDivisionsSearchResponse res = new org.openapis.openapi.models.operations.CivicinfoDivisionsSearchResponse(contentType, httpRes.statusCode()) {{
             divisionSearchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

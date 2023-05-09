@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountAliasResponse {
@@ -12,6 +13,7 @@ public class PutAccountAliasResponse {
      */
     
     public Object accessDeniedException;
+
     public PutAccountAliasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutAccountAliasResponse {
     
     
     public String contentType;
+
     public PutAccountAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountAliasResponse {
      */
     
     public Object internalServerException;
+
     public PutAccountAliasResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class PutAccountAliasResponse {
      */
     
     public java.util.Map<String, Object> putAccountAliasResult;
+
     public PutAccountAliasResponse withPutAccountAliasResult(java.util.Map<String, Object> putAccountAliasResult) {
         this.putAccountAliasResult = putAccountAliasResult;
         return this;
@@ -46,6 +51,7 @@ public class PutAccountAliasResponse {
     
     
     public Integer statusCode;
+
     public PutAccountAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutAccountAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutAccountAliasResponse {
      */
     
     public Object validationException;
+
     public PutAccountAliasResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutAccountAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

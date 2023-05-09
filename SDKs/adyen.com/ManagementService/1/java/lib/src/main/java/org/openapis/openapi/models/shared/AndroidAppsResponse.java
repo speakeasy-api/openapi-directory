@@ -18,9 +18,11 @@ public class AndroidAppsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AndroidApp[] data;
+
     public AndroidAppsResponse withData(AndroidApp[] data) {
         this.data = data;
         return this;
     }
     
+    public AndroidAppsResponse(){}
 }

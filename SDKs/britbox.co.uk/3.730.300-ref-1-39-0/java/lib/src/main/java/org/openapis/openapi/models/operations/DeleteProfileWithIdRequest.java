@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProfileWithIdRequest {
@@ -32,6 +33,7 @@ public class DeleteProfileWithIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public DeleteProfileWithIdRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -42,6 +44,7 @@ public class DeleteProfileWithIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteProfileWithIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +65,13 @@ public class DeleteProfileWithIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public DeleteProfileWithIdRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public DeleteProfileWithIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

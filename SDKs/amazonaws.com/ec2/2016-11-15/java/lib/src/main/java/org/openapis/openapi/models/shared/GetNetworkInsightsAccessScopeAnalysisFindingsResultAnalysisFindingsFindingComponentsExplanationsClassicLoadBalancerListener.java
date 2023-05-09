@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsClassicLoadBalancerListener {
     
     public Long instancePort;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsClassicLoadBalancerListener withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -19,9 +20,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings
     
     
     public Long loadBalancerPort;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsClassicLoadBalancerListener withLoadBalancerPort(Long loadBalancerPort) {
         this.loadBalancerPort = loadBalancerPort;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsClassicLoadBalancerListener(){}
 }

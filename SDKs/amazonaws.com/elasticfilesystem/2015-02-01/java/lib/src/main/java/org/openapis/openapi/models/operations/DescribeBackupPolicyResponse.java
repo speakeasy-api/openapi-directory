@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBackupPolicyResponse {
@@ -12,6 +13,7 @@ public class DescribeBackupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.BackupPolicyDescription backupPolicyDescription;
+
     public DescribeBackupPolicyResponse withBackupPolicyDescription(org.openapis.openapi.models.shared.BackupPolicyDescription backupPolicyDescription) {
         this.backupPolicyDescription = backupPolicyDescription;
         return this;
@@ -22,6 +24,7 @@ public class DescribeBackupPolicyResponse {
      */
     
     public Object badRequest;
+
     public DescribeBackupPolicyResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBackupPolicyResponse {
     
     
     public String contentType;
+
     public DescribeBackupPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBackupPolicyResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeBackupPolicyResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBackupPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DescribeBackupPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DescribeBackupPolicyResponse {
      */
     
     public Object policyNotFound;
+
     public DescribeBackupPolicyResponse withPolicyNotFound(Object policyNotFound) {
         this.policyNotFound = policyNotFound;
         return this;
@@ -66,6 +73,7 @@ public class DescribeBackupPolicyResponse {
     
     
     public Integer statusCode;
+
     public DescribeBackupPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeBackupPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBackupPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeBackupPolicyResponse {
      */
     
     public Object validationException;
+
     public DescribeBackupPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeBackupPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

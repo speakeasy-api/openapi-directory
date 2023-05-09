@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDocumentFromProformaRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CreateDocumentFromProformaRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CreateDocumentFromProformaRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

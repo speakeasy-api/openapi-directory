@@ -17,7 +17,7 @@ public enum TrackAccessEnum {
     PLAYABLE("playable"),
     PREVIEW("preview"),
     BLOCKED("blocked"),
-    NULL_("null");
+    LESS_THAN_NIL_GREATER_THAN("<nil>");
 
     @JsonValue
     public final String value;

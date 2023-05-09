@@ -18,6 +18,7 @@ public class ContactSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminContact")
     public Contact adminContact;
+
     public ContactSettings withAdminContact(Contact adminContact) {
         this.adminContact = adminContact;
         return this;
@@ -29,6 +30,7 @@ public class ContactSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public ContactSettingsPrivacyEnum privacy;
+
     public ContactSettings withPrivacy(ContactSettingsPrivacyEnum privacy) {
         this.privacy = privacy;
         return this;
@@ -40,6 +42,7 @@ public class ContactSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrantContact")
     public Contact registrantContact;
+
     public ContactSettings withRegistrantContact(Contact registrantContact) {
         this.registrantContact = registrantContact;
         return this;
@@ -51,9 +54,11 @@ public class ContactSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("technicalContact")
     public Contact technicalContact;
+
     public ContactSettings withTechnicalContact(Contact technicalContact) {
         this.technicalContact = technicalContact;
         return this;
     }
     
+    public ContactSettings(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyCapacityReservationFleetResult {
     
     public Boolean return_;
+
     public ModifyCapacityReservationFleetResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ModifyCapacityReservationFleetResult(){}
 }

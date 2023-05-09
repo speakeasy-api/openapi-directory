@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2CallDataRecordsIdJsonRequest {
@@ -12,9 +13,13 @@ public class GetV2CallDataRecordsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetV2CallDataRecordsIdJsonRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetV2CallDataRecordsIdJsonRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

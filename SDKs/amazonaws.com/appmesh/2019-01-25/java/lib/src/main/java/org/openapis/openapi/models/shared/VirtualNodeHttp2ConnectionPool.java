@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualNodeHttp2ConnectionPool {
     @JsonProperty("maxRequests")
     public Long maxRequests;
+
     public VirtualNodeHttp2ConnectionPool withMaxRequests(Long maxRequests) {
         this.maxRequests = maxRequests;
         return this;
     }
     
+    public VirtualNodeHttp2ConnectionPool(@JsonProperty("maxRequests") Long maxRequests) {
+        this.maxRequests = maxRequests;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DependabotListSelectedReposForOrgSecretResponse {
     
     public String contentType;
+
     public DependabotListSelectedReposForOrgSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DependabotListSelectedReposForOrgSecretResponse {
     
     
     public Integer statusCode;
+
     public DependabotListSelectedReposForOrgSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DependabotListSelectedReposForOrgSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DependabotListSelectedReposForOrgSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DependabotListSelectedReposForOrgSecretResponse {
      */
     
     public DependabotListSelectedReposForOrgSecret200ApplicationJSON dependabotListSelectedReposForOrgSecret200ApplicationJSONObject;
+
     public DependabotListSelectedReposForOrgSecretResponse withDependabotListSelectedReposForOrgSecret200ApplicationJSONObject(DependabotListSelectedReposForOrgSecret200ApplicationJSON dependabotListSelectedReposForOrgSecret200ApplicationJSONObject) {
         this.dependabotListSelectedReposForOrgSecret200ApplicationJSONObject = dependabotListSelectedReposForOrgSecret200ApplicationJSONObject;
         return this;
     }
     
+    public DependabotListSelectedReposForOrgSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

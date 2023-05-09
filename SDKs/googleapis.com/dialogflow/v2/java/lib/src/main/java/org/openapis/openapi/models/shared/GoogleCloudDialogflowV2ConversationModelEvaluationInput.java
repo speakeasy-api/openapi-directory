@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluationInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationConfig")
     public GoogleCloudDialogflowV2EvaluationConfig evaluationConfig;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluationInput withEvaluationConfig(GoogleCloudDialogflowV2EvaluationConfig evaluationConfig) {
         this.evaluationConfig = evaluationConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluationInput withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2ConversationModelEvaluationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smartReplyMetrics")
     public GoogleCloudDialogflowV2SmartReplyMetrics smartReplyMetrics;
+
     public GoogleCloudDialogflowV2ConversationModelEvaluationInput withSmartReplyMetrics(GoogleCloudDialogflowV2SmartReplyMetrics smartReplyMetrics) {
         this.smartReplyMetrics = smartReplyMetrics;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationModelEvaluationInput(){}
 }

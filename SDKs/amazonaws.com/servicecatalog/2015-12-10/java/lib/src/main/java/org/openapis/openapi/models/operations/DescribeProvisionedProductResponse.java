@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProvisionedProductResponse {
     
     public String contentType;
+
     public DescribeProvisionedProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProvisionedProductResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProvisionedProductOutput describeProvisionedProductOutput;
+
     public DescribeProvisionedProductResponse withDescribeProvisionedProductOutput(org.openapis.openapi.models.shared.DescribeProvisionedProductOutput describeProvisionedProductOutput) {
         this.describeProvisionedProductOutput = describeProvisionedProductOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProvisionedProductResponse {
      */
     
     public Object invalidParametersException;
+
     public DescribeProvisionedProductResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProvisionedProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProvisionedProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProvisionedProductResponse {
     
     
     public Integer statusCode;
+
     public DescribeProvisionedProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeProvisionedProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProvisionedProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeProvisionedProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

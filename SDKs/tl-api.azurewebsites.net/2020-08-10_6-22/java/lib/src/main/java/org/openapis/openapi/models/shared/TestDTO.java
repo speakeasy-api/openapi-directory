@@ -21,9 +21,11 @@ public class TestDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public TestDTO withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public TestDTO(){}
 }

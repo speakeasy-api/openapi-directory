@@ -12,6 +12,7 @@ public class JobDto1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public JobFilesDto1 files;
+
     public JobDto1 withFiles(JobFilesDto1 files) {
         this.files = files;
         return this;
@@ -20,6 +21,7 @@ public class JobDto1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public JobDto1 withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class JobDto1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idNumber")
     public String idNumber;
+
     public JobDto1 withIdNumber(String idNumber) {
         this.idNumber = idNumber;
         return this;
@@ -36,9 +39,11 @@ public class JobDto1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobDto1 withName(String name) {
         this.name = name;
         return this;
     }
     
+    public JobDto1(){}
 }

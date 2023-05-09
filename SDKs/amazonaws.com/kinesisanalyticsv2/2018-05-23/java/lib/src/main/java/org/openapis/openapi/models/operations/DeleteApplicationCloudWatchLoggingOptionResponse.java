@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationCloudWatchLoggingOptionResponse {
@@ -12,6 +13,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
     
     
     public String contentType;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteApplicationCloudWatchLoggingOptionResponse deleteApplicationCloudWatchLoggingOptionResponse;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withDeleteApplicationCloudWatchLoggingOptionResponse(org.openapis.openapi.models.shared.DeleteApplicationCloudWatchLoggingOptionResponse deleteApplicationCloudWatchLoggingOptionResponse) {
         this.deleteApplicationCloudWatchLoggingOptionResponse = deleteApplicationCloudWatchLoggingOptionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object invalidApplicationConfigurationException;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withInvalidApplicationConfigurationException(Object invalidApplicationConfigurationException) {
         this.invalidApplicationConfigurationException = invalidApplicationConfigurationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DeleteApplicationCloudWatchLoggingOptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationCloudWatchLoggingOptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteApplicationCloudWatchLoggingOptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

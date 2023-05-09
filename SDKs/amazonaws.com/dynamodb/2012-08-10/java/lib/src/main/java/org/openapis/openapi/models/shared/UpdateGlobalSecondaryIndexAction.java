@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateGlobalSecondaryIndexAction {
     @JsonProperty("IndexName")
     public String indexName;
+
     public UpdateGlobalSecondaryIndexAction withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -19,9 +20,14 @@ public class UpdateGlobalSecondaryIndexAction {
     
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public UpdateGlobalSecondaryIndexAction withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
     }
     
+    public UpdateGlobalSecondaryIndexAction(@JsonProperty("IndexName") String indexName, @JsonProperty("ProvisionedThroughput") ProvisionedThroughput provisionedThroughput) {
+        this.indexName = indexName;
+        this.provisionedThroughput = provisionedThroughput;
+  }
 }

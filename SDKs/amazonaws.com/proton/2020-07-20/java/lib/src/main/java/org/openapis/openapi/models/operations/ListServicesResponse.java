@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServicesResponse {
@@ -12,6 +13,7 @@ public class ListServicesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListServicesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListServicesResponse {
     
     
     public String contentType;
+
     public ListServicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListServicesResponse {
      */
     
     public Object internalServerException;
+
     public ListServicesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListServicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServicesOutput listServicesOutput;
+
     public ListServicesResponse withListServicesOutput(org.openapis.openapi.models.shared.ListServicesOutput listServicesOutput) {
         this.listServicesOutput = listServicesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListServicesResponse {
     
     
     public Integer statusCode;
+
     public ListServicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListServicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListServicesResponse {
      */
     
     public Object throttlingException;
+
     public ListServicesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListServicesResponse {
      */
     
     public Object validationException;
+
     public ListServicesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListServicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

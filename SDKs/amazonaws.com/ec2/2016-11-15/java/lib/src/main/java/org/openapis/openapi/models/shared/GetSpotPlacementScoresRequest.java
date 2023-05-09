@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetSpotPlacementScoresRequest {
     
     public Boolean dryRun;
+
     public GetSpotPlacementScoresRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetSpotPlacementScoresRequest {
     
     
     public InstanceRequirementsWithMetadataRequest instanceRequirementsWithMetadata;
+
     public GetSpotPlacementScoresRequest withInstanceRequirementsWithMetadata(InstanceRequirementsWithMetadataRequest instanceRequirementsWithMetadata) {
         this.instanceRequirementsWithMetadata = instanceRequirementsWithMetadata;
         return this;
@@ -23,6 +25,7 @@ public class GetSpotPlacementScoresRequest {
     
     
     public String[] instanceTypes;
+
     public GetSpotPlacementScoresRequest withInstanceTypes(String[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -30,6 +33,7 @@ public class GetSpotPlacementScoresRequest {
     
     
     public Long maxResults;
+
     public GetSpotPlacementScoresRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +41,7 @@ public class GetSpotPlacementScoresRequest {
     
     
     public String nextToken;
+
     public GetSpotPlacementScoresRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +49,7 @@ public class GetSpotPlacementScoresRequest {
     
     
     public String[] regionNames;
+
     public GetSpotPlacementScoresRequest withRegionNames(String[] regionNames) {
         this.regionNames = regionNames;
         return this;
@@ -51,6 +57,7 @@ public class GetSpotPlacementScoresRequest {
     
     
     public Boolean singleAvailabilityZone;
+
     public GetSpotPlacementScoresRequest withSingleAvailabilityZone(Boolean singleAvailabilityZone) {
         this.singleAvailabilityZone = singleAvailabilityZone;
         return this;
@@ -58,6 +65,7 @@ public class GetSpotPlacementScoresRequest {
     
     
     public Long targetCapacity;
+
     public GetSpotPlacementScoresRequest withTargetCapacity(Long targetCapacity) {
         this.targetCapacity = targetCapacity;
         return this;
@@ -65,9 +73,13 @@ public class GetSpotPlacementScoresRequest {
     
     
     public TargetCapacityUnitTypeEnum targetCapacityUnitType;
+
     public GetSpotPlacementScoresRequest withTargetCapacityUnitType(TargetCapacityUnitTypeEnum targetCapacityUnitType) {
         this.targetCapacityUnitType = targetCapacityUnitType;
         return this;
     }
     
+    public GetSpotPlacementScoresRequest(@JsonProperty("TargetCapacity") Long targetCapacity) {
+        this.targetCapacity = targetCapacity;
+  }
 }

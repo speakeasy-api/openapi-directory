@@ -22,6 +22,7 @@ public class ProvisioningArtifactSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ProvisioningArtifactSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -30,6 +31,7 @@ public class ProvisioningArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ProvisioningArtifactSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class ProvisioningArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProvisioningArtifactSummary withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ProvisioningArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProvisioningArtifactSummary withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class ProvisioningArtifactSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactMetadata")
     public java.util.Map<String, String> provisioningArtifactMetadata;
+
     public ProvisioningArtifactSummary withProvisioningArtifactMetadata(java.util.Map<String, String> provisioningArtifactMetadata) {
         this.provisioningArtifactMetadata = provisioningArtifactMetadata;
         return this;
     }
     
+    public ProvisioningArtifactSummary(){}
 }

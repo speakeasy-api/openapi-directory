@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetSearchV1FieldsRequest;
 import org.openapis.openapi.models.operations.GetSearchV1FieldsResponse;
 
@@ -15,15 +14,17 @@ public class Application {
 
             GetSearchV1FieldsRequest req = new GetSearchV1FieldsRequest() {{
                 callback = "corrupti";
-            }}            
+            }};            
 
             GetSearchV1FieldsResponse res = sdk.getSearchV1Fields(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,6 +15,7 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionNumber")
     public Long executionNumber;
+
     public JobExecutionSummary withExecutionNumber(Long executionNumber) {
         this.executionNumber = executionNumber;
         return this;
@@ -23,6 +24,7 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public JobExecutionSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -31,6 +33,7 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedAt")
     public Long lastUpdatedAt;
+
     public JobExecutionSummary withLastUpdatedAt(Long lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -39,6 +42,7 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queuedAt")
     public Long queuedAt;
+
     public JobExecutionSummary withQueuedAt(Long queuedAt) {
         this.queuedAt = queuedAt;
         return this;
@@ -47,6 +51,7 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedAt")
     public Long startedAt;
+
     public JobExecutionSummary withStartedAt(Long startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -55,9 +60,11 @@ public class JobExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public Long versionNumber;
+
     public JobExecutionSummary withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public JobExecutionSummary(){}
 }

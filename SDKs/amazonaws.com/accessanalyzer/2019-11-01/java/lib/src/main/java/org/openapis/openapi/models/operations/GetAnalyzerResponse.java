@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAnalyzerResponse {
@@ -12,6 +13,7 @@ public class GetAnalyzerResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAnalyzerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAnalyzerResponse {
     
     
     public String contentType;
+
     public GetAnalyzerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAnalyzerResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAnalyzerResponse getAnalyzerResponse;
+
     public GetAnalyzerResponse withGetAnalyzerResponse(org.openapis.openapi.models.shared.GetAnalyzerResponse getAnalyzerResponse) {
         this.getAnalyzerResponse = getAnalyzerResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAnalyzerResponse {
      */
     
     public Object internalServerException;
+
     public GetAnalyzerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAnalyzerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAnalyzerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAnalyzerResponse {
     
     
     public Integer statusCode;
+
     public GetAnalyzerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAnalyzerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAnalyzerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAnalyzerResponse {
      */
     
     public Object throttlingException;
+
     public GetAnalyzerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetAnalyzerResponse {
      */
     
     public Object validationException;
+
     public GetAnalyzerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAnalyzerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

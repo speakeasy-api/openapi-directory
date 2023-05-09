@@ -12,6 +12,7 @@ public class MeetingUrl {
      */
     
     public LocalDate createdAt;
+
     public MeetingUrl withCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -22,6 +23,7 @@ public class MeetingUrl {
      */
     
     public LocalDate updatedAt;
+
     public MeetingUrl withUpdatedAt(LocalDate updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -32,9 +34,11 @@ public class MeetingUrl {
      */
     
     public String url;
+
     public MeetingUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MeetingUrl(){}
 }

@@ -15,6 +15,7 @@ public class UpdateFunctionUrlConfigRequestBodyCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowCredentials")
     public Boolean allowCredentials;
+
     public UpdateFunctionUrlConfigRequestBodyCors withAllowCredentials(Boolean allowCredentials) {
         this.allowCredentials = allowCredentials;
         return this;
@@ -23,6 +24,7 @@ public class UpdateFunctionUrlConfigRequestBodyCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowHeaders")
     public String[] allowHeaders;
+
     public UpdateFunctionUrlConfigRequestBodyCors withAllowHeaders(String[] allowHeaders) {
         this.allowHeaders = allowHeaders;
         return this;
@@ -31,6 +33,7 @@ public class UpdateFunctionUrlConfigRequestBodyCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowMethods")
     public String[] allowMethods;
+
     public UpdateFunctionUrlConfigRequestBodyCors withAllowMethods(String[] allowMethods) {
         this.allowMethods = allowMethods;
         return this;
@@ -39,6 +42,7 @@ public class UpdateFunctionUrlConfigRequestBodyCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowOrigins")
     public String[] allowOrigins;
+
     public UpdateFunctionUrlConfigRequestBodyCors withAllowOrigins(String[] allowOrigins) {
         this.allowOrigins = allowOrigins;
         return this;
@@ -47,6 +51,7 @@ public class UpdateFunctionUrlConfigRequestBodyCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExposeHeaders")
     public String[] exposeHeaders;
+
     public UpdateFunctionUrlConfigRequestBodyCors withExposeHeaders(String[] exposeHeaders) {
         this.exposeHeaders = exposeHeaders;
         return this;
@@ -55,9 +60,11 @@ public class UpdateFunctionUrlConfigRequestBodyCors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAge")
     public Long maxAge;
+
     public UpdateFunctionUrlConfigRequestBodyCors withMaxAge(Long maxAge) {
         this.maxAge = maxAge;
         return this;
     }
     
+    public UpdateFunctionUrlConfigRequestBodyCors(){}
 }

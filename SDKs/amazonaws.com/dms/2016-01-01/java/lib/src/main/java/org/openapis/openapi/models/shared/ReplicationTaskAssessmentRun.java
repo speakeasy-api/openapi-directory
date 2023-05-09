@@ -20,6 +20,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssessmentProgress")
     public ReplicationTaskAssessmentRunProgress assessmentProgress;
+
     public ReplicationTaskAssessmentRun withAssessmentProgress(ReplicationTaskAssessmentRunProgress assessmentProgress) {
         this.assessmentProgress = assessmentProgress;
         return this;
@@ -28,6 +29,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssessmentRunName")
     public String assessmentRunName;
+
     public ReplicationTaskAssessmentRun withAssessmentRunName(String assessmentRunName) {
         this.assessmentRunName = assessmentRunName;
         return this;
@@ -36,6 +38,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastFailureMessage")
     public String lastFailureMessage;
+
     public ReplicationTaskAssessmentRun withLastFailureMessage(String lastFailureMessage) {
         this.lastFailureMessage = lastFailureMessage;
         return this;
@@ -44,6 +47,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public ReplicationTaskAssessmentRun withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
@@ -52,6 +56,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskAssessmentRunArn")
     public String replicationTaskAssessmentRunArn;
+
     public ReplicationTaskAssessmentRun withReplicationTaskAssessmentRunArn(String replicationTaskAssessmentRunArn) {
         this.replicationTaskAssessmentRunArn = replicationTaskAssessmentRunArn;
         return this;
@@ -62,6 +67,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReplicationTaskAssessmentRunCreationDate")
     public OffsetDateTime replicationTaskAssessmentRunCreationDate;
+
     public ReplicationTaskAssessmentRun withReplicationTaskAssessmentRunCreationDate(OffsetDateTime replicationTaskAssessmentRunCreationDate) {
         this.replicationTaskAssessmentRunCreationDate = replicationTaskAssessmentRunCreationDate;
         return this;
@@ -70,6 +76,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultEncryptionMode")
     public String resultEncryptionMode;
+
     public ReplicationTaskAssessmentRun withResultEncryptionMode(String resultEncryptionMode) {
         this.resultEncryptionMode = resultEncryptionMode;
         return this;
@@ -78,6 +85,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultKmsKeyArn")
     public String resultKmsKeyArn;
+
     public ReplicationTaskAssessmentRun withResultKmsKeyArn(String resultKmsKeyArn) {
         this.resultKmsKeyArn = resultKmsKeyArn;
         return this;
@@ -86,6 +94,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultLocationBucket")
     public String resultLocationBucket;
+
     public ReplicationTaskAssessmentRun withResultLocationBucket(String resultLocationBucket) {
         this.resultLocationBucket = resultLocationBucket;
         return this;
@@ -94,6 +103,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultLocationFolder")
     public String resultLocationFolder;
+
     public ReplicationTaskAssessmentRun withResultLocationFolder(String resultLocationFolder) {
         this.resultLocationFolder = resultLocationFolder;
         return this;
@@ -102,6 +112,7 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public ReplicationTaskAssessmentRun withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
@@ -110,9 +121,11 @@ public class ReplicationTaskAssessmentRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ReplicationTaskAssessmentRun withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ReplicationTaskAssessmentRun(){}
 }

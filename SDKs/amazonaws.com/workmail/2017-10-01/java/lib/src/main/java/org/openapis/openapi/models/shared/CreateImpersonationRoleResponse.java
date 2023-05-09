@@ -15,9 +15,11 @@ public class CreateImpersonationRoleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImpersonationRoleId")
     public String impersonationRoleId;
+
     public CreateImpersonationRoleResponse withImpersonationRoleId(String impersonationRoleId) {
         this.impersonationRoleId = impersonationRoleId;
         return this;
     }
     
+    public CreateImpersonationRoleResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesListEventsForTimelineResponse {
     
     public String contentType;
+
     public IssuesListEventsForTimelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesListEventsForTimelineResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesListEventsForTimelineResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesListEventsForTimelineResponse {
     
     
     public Integer statusCode;
+
     public IssuesListEventsForTimelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesListEventsForTimelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesListEventsForTimelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class IssuesListEventsForTimelineResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesListEventsForTimelineResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class IssuesListEventsForTimelineResponse {
      */
     
     public Object[] timelineIssueEvents;
+
     public IssuesListEventsForTimelineResponse withTimelineIssueEvents(Object[] timelineIssueEvents) {
         this.timelineIssueEvents = timelineIssueEvents;
         return this;
     }
     
+    public IssuesListEventsForTimelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

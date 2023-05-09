@@ -17,6 +17,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_duration")
     public Double actualDuration;
+
     public TaskPersistVO withActualDuration(Double actualDuration) {
         this.actualDuration = actualDuration;
         return this;
@@ -25,6 +26,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_duration_hour")
     public Double actualDurationHour;
+
     public TaskPersistVO withActualDurationHour(Double actualDurationHour) {
         this.actualDurationHour = actualDurationHour;
         return this;
@@ -34,6 +36,7 @@ public class TaskPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("actual_end_date")
     public LocalDate actualEndDate;
+
     public TaskPersistVO withActualEndDate(LocalDate actualEndDate) {
         this.actualEndDate = actualEndDate;
         return this;
@@ -43,6 +46,7 @@ public class TaskPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("actual_start_date")
     public LocalDate actualStartDate;
+
     public TaskPersistVO withActualStartDate(LocalDate actualStartDate) {
         this.actualStartDate = actualStartDate;
         return this;
@@ -51,6 +55,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assign_to_user_id")
     public Long assignToUserId;
+
     public TaskPersistVO withAssignToUserId(Long assignToUserId) {
         this.assignToUserId = assignToUserId;
         return this;
@@ -59,6 +64,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public TaskPersistVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -67,6 +73,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributors")
     public String contributors;
+
     public TaskPersistVO withContributors(String contributors) {
         this.contributors = contributors;
         return this;
@@ -75,6 +82,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_status_id")
     public Long customStatusId;
+
     public TaskPersistVO withCustomStatusId(Long customStatusId) {
         this.customStatusId = customStatusId;
         return this;
@@ -83,6 +91,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TaskPersistVO withDescription(String description) {
         this.description = description;
         return this;
@@ -91,6 +100,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskPersistVO withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage_complete")
     public Long percentageComplete;
+
     public TaskPersistVO withPercentageComplete(Long percentageComplete) {
         this.percentageComplete = percentageComplete;
         return this;
@@ -107,6 +118,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public TaskPersistVO withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -115,6 +127,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revised_duration")
     public Double revisedDuration;
+
     public TaskPersistVO withRevisedDuration(Double revisedDuration) {
         this.revisedDuration = revisedDuration;
         return this;
@@ -123,6 +136,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revised_duration_hour")
     public Double revisedDurationHour;
+
     public TaskPersistVO withRevisedDurationHour(Double revisedDurationHour) {
         this.revisedDurationHour = revisedDurationHour;
         return this;
@@ -132,6 +146,7 @@ public class TaskPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("revised_end_date")
     public LocalDate revisedEndDate;
+
     public TaskPersistVO withRevisedEndDate(LocalDate revisedEndDate) {
         this.revisedEndDate = revisedEndDate;
         return this;
@@ -141,6 +156,7 @@ public class TaskPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("revised_start_date")
     public LocalDate revisedStartDate;
+
     public TaskPersistVO withRevisedStartDate(LocalDate revisedStartDate) {
         this.revisedStartDate = revisedStartDate;
         return this;
@@ -149,6 +165,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_id")
     public Long statusId;
+
     public TaskPersistVO withStatusId(Long statusId) {
         this.statusId = statusId;
         return this;
@@ -157,6 +174,7 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
     public Long taskId;
+
     public TaskPersistVO withTaskId(Long taskId) {
         this.taskId = taskId;
         return this;
@@ -165,9 +183,11 @@ public class TaskPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_type_id")
     public Long taskTypeId;
+
     public TaskPersistVO withTaskTypeId(Long taskTypeId) {
         this.taskTypeId = taskTypeId;
         return this;
     }
     
+    public TaskPersistVO(){}
 }

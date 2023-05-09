@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteShiftResponse {
     
     public String contentType;
+
     public DeleteShiftResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteShiftResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteShiftResponse deleteShiftResponse;
+
     public DeleteShiftResponse withDeleteShiftResponse(org.openapis.openapi.models.shared.DeleteShiftResponse deleteShiftResponse) {
         this.deleteShiftResponse = deleteShiftResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteShiftResponse {
     
     
     public Integer statusCode;
+
     public DeleteShiftResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteShiftResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteShiftResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteShiftResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

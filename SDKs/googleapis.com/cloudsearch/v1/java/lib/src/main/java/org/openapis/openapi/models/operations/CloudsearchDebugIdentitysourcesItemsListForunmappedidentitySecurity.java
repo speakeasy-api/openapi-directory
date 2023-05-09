@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurityOption1 option1;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity withOption1(CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurityOption2 option2;
+
     public CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity withOption2(CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity(){}
 }

@@ -15,6 +15,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String affiliatedInstitutions;
+
     public InstitutionsNodeListNodeRelationships withAffiliatedInstitutions(String affiliatedInstitutions) {
         this.affiliatedInstitutions = affiliatedInstitutions;
         return this;
@@ -25,6 +26,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String children;
+
     public InstitutionsNodeListNodeRelationships withChildren(String children) {
         this.children = children;
         return this;
@@ -35,6 +37,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String citation;
+
     public InstitutionsNodeListNodeRelationships withCitation(String citation) {
         this.citation = citation;
         return this;
@@ -45,6 +48,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String comments;
+
     public InstitutionsNodeListNodeRelationships withComments(String comments) {
         this.comments = comments;
         return this;
@@ -55,6 +59,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String contributors;
+
     public InstitutionsNodeListNodeRelationships withContributors(String contributors) {
         this.contributors = contributors;
         return this;
@@ -65,6 +70,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String draftRegistrations;
+
     public InstitutionsNodeListNodeRelationships withDraftRegistrations(String draftRegistrations) {
         this.draftRegistrations = draftRegistrations;
         return this;
@@ -75,6 +81,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String files;
+
     public InstitutionsNodeListNodeRelationships withFiles(String files) {
         this.files = files;
         return this;
@@ -85,6 +92,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String forkedFrom;
+
     public InstitutionsNodeListNodeRelationships withForkedFrom(String forkedFrom) {
         this.forkedFrom = forkedFrom;
         return this;
@@ -95,6 +103,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String forks;
+
     public InstitutionsNodeListNodeRelationships withForks(String forks) {
         this.forks = forks;
         return this;
@@ -105,6 +114,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String identifiers;
+
     public InstitutionsNodeListNodeRelationships withIdentifiers(String identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -115,6 +125,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String license;
+
     public InstitutionsNodeListNodeRelationships withLicense(String license) {
         this.license = license;
         return this;
@@ -125,6 +136,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String linkedNodes;
+
     public InstitutionsNodeListNodeRelationships withLinkedNodes(String linkedNodes) {
         this.linkedNodes = linkedNodes;
         return this;
@@ -135,6 +147,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String logs;
+
     public InstitutionsNodeListNodeRelationships withLogs(String logs) {
         this.logs = logs;
         return this;
@@ -145,6 +158,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String nodeLinks;
+
     public InstitutionsNodeListNodeRelationships withNodeLinks(String nodeLinks) {
         this.nodeLinks = nodeLinks;
         return this;
@@ -155,6 +169,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String parent;
+
     public InstitutionsNodeListNodeRelationships withParent(String parent) {
         this.parent = parent;
         return this;
@@ -165,6 +180,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String preprints;
+
     public InstitutionsNodeListNodeRelationships withPreprints(String preprints) {
         this.preprints = preprints;
         return this;
@@ -175,6 +191,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String registrations;
+
     public InstitutionsNodeListNodeRelationships withRegistrations(String registrations) {
         this.registrations = registrations;
         return this;
@@ -185,6 +202,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String root;
+
     public InstitutionsNodeListNodeRelationships withRoot(String root) {
         this.root = root;
         return this;
@@ -195,6 +213,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String templateNode;
+
     public InstitutionsNodeListNodeRelationships withTemplateNode(String templateNode) {
         this.templateNode = templateNode;
         return this;
@@ -205,6 +224,7 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String viewOnlyLinks;
+
     public InstitutionsNodeListNodeRelationships withViewOnlyLinks(String viewOnlyLinks) {
         this.viewOnlyLinks = viewOnlyLinks;
         return this;
@@ -215,9 +235,11 @@ public class InstitutionsNodeListNodeRelationships {
      */
     
     public String wikis;
+
     public InstitutionsNodeListNodeRelationships withWikis(String wikis) {
         this.wikis = wikis;
         return this;
     }
     
+    public InstitutionsNodeListNodeRelationships(){}
 }

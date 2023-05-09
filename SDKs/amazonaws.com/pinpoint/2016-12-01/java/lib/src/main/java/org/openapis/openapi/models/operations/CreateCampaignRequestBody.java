@@ -12,9 +12,13 @@ public class CreateCampaignRequestBody {
      */
     @JsonProperty("WriteCampaignRequest")
     public CreateCampaignRequestBodyWriteCampaignRequest writeCampaignRequest;
+
     public CreateCampaignRequestBody withWriteCampaignRequest(CreateCampaignRequestBodyWriteCampaignRequest writeCampaignRequest) {
         this.writeCampaignRequest = writeCampaignRequest;
         return this;
     }
     
+    public CreateCampaignRequestBody(@JsonProperty("WriteCampaignRequest") CreateCampaignRequestBodyWriteCampaignRequest writeCampaignRequest) {
+        this.writeCampaignRequest = writeCampaignRequest;
+  }
 }

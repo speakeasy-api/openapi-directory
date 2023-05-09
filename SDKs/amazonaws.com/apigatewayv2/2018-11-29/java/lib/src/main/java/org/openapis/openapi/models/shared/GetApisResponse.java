@@ -15,6 +15,7 @@ public class GetApisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public Api[] items;
+
     public GetApisResponse withItems(Api[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetApisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetApisResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetApisResponse(){}
 }

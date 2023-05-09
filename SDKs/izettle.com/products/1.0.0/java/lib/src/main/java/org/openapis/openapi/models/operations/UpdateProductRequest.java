@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProductRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FullProductUpdateRequest fullProductUpdateRequest;
+
     public UpdateProductRequest withFullProductUpdateRequest(org.openapis.openapi.models.shared.FullProductUpdateRequest fullProductUpdateRequest) {
         this.fullProductUpdateRequest = fullProductUpdateRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateProductRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public UpdateProductRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -23,6 +26,7 @@ public class UpdateProductRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public UpdateProductRequest withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
@@ -30,9 +34,15 @@ public class UpdateProductRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productUuid")
     public String productUuid;
+
     public UpdateProductRequest withProductUuid(String productUuid) {
         this.productUuid = productUuid;
         return this;
     }
     
+    public UpdateProductRequest(@JsonProperty("FullProductUpdateRequest") org.openapis.openapi.models.shared.FullProductUpdateRequest fullProductUpdateRequest, @JsonProperty("organizationUuid") String organizationUuid, @JsonProperty("productUuid") String productUuid) {
+        this.fullProductUpdateRequest = fullProductUpdateRequest;
+        this.organizationUuid = organizationUuid;
+        this.productUuid = productUuid;
+  }
 }

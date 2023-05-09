@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1EntityTypeEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synonyms")
     public String[] synonyms;
+
     public GoogleCloudDialogflowCxV3beta1EntityTypeEntity withSynonyms(String[] synonyms) {
         this.synonyms = synonyms;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1EntityTypeEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudDialogflowCxV3beta1EntityTypeEntity withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1EntityTypeEntity(){}
 }

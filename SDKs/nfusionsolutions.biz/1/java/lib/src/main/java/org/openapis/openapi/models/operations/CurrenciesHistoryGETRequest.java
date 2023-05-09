@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class CurrenciesHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public CurrenciesHistoryGETRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -23,6 +25,7 @@ public class CurrenciesHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public CurrenciesHistoryGETFormatEnum format;
+
     public CurrenciesHistoryGETRequest withFormat(CurrenciesHistoryGETFormatEnum format) {
         this.format = format;
         return this;
@@ -44,6 +47,7 @@ public class CurrenciesHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
     public String interval;
+
     public CurrenciesHistoryGETRequest withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -54,6 +58,7 @@ public class CurrenciesHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pairs")
     public String pairs;
+
     public CurrenciesHistoryGETRequest withPairs(String pairs) {
         this.pairs = pairs;
         return this;
@@ -64,9 +69,14 @@ public class CurrenciesHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public CurrenciesHistoryGETRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public CurrenciesHistoryGETRequest(@JsonProperty("pairs") String pairs, @JsonProperty("start") OffsetDateTime start) {
+        this.pairs = pairs;
+        this.start = start;
+  }
 }

@@ -15,6 +15,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6Addresses")
     public String[] ipv6Addresses;
+
     public NetworkInterface withIpv6Addresses(String[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -23,6 +24,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaceId")
     public String networkInterfaceId;
+
     public NetworkInterface withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -31,6 +33,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateDnsName")
     public String privateDnsName;
+
     public NetworkInterface withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -39,6 +42,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpAddress")
     public String privateIpAddress;
+
     public NetworkInterface withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -47,6 +51,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpAddresses")
     public PrivateIp[] privateIpAddresses;
+
     public NetworkInterface withPrivateIpAddresses(PrivateIp[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -55,6 +60,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicDnsName")
     public String publicDnsName;
+
     public NetworkInterface withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -63,6 +69,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicIp")
     public String publicIp;
+
     public NetworkInterface withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -71,6 +78,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public SecurityGroup[] securityGroups;
+
     public NetworkInterface withSecurityGroups(SecurityGroup[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -79,6 +87,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetId")
     public String subnetId;
+
     public NetworkInterface withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -87,9 +96,11 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public NetworkInterface withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public NetworkInterface(){}
 }

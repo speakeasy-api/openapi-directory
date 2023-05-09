@@ -15,6 +15,7 @@ public class ProjectFileSystemLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public ProjectFileSystemLocation withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -23,6 +24,7 @@ public class ProjectFileSystemLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ProjectFileSystemLocation withLocation(String location) {
         this.location = location;
         return this;
@@ -31,6 +33,7 @@ public class ProjectFileSystemLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountOptions")
     public String mountOptions;
+
     public ProjectFileSystemLocation withMountOptions(String mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -39,6 +42,7 @@ public class ProjectFileSystemLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPoint")
     public String mountPoint;
+
     public ProjectFileSystemLocation withMountPoint(String mountPoint) {
         this.mountPoint = mountPoint;
         return this;
@@ -47,9 +51,11 @@ public class ProjectFileSystemLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FileSystemTypeEnum type;
+
     public ProjectFileSystemLocation withType(FileSystemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ProjectFileSystemLocation(){}
 }

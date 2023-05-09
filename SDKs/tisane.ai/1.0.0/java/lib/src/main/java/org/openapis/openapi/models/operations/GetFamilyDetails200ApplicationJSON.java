@@ -15,6 +15,7 @@ public class GetFamilyDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public GetFamilyDetails200ApplicationJSON withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -23,6 +24,7 @@ public class GetFamilyDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetFamilyDetails200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetFamilyDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hypernyms")
     public Double[][] hypernyms;
+
     public GetFamilyDetails200ApplicationJSON withHypernyms(Double[][] hypernyms) {
         this.hypernyms = hypernyms;
         return this;
@@ -39,6 +42,7 @@ public class GetFamilyDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permId")
     public String permId;
+
     public GetFamilyDetails200ApplicationJSON withPermId(String permId) {
         this.permId = permId;
         return this;
@@ -47,6 +51,7 @@ public class GetFamilyDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GetFamilyDetails200ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -55,6 +60,7 @@ public class GetFamilyDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wikidata")
     public String wikidata;
+
     public GetFamilyDetails200ApplicationJSON withWikidata(String wikidata) {
         this.wikidata = wikidata;
         return this;
@@ -63,9 +69,11 @@ public class GetFamilyDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordnet30")
     public String wordnet30;
+
     public GetFamilyDetails200ApplicationJSON withWordnet30(String wordnet30) {
         this.wordnet30 = wordnet30;
         return this;
     }
     
+    public GetFamilyDetails200ApplicationJSON(){}
 }

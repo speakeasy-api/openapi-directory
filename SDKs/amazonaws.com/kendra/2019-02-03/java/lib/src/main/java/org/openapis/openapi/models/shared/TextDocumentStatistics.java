@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TextDocumentStatistics {
     @JsonProperty("IndexedTextBytes")
     public Long indexedTextBytes;
+
     public TextDocumentStatistics withIndexedTextBytes(Long indexedTextBytes) {
         this.indexedTextBytes = indexedTextBytes;
         return this;
@@ -19,9 +20,14 @@ public class TextDocumentStatistics {
     
     @JsonProperty("IndexedTextDocumentsCount")
     public Long indexedTextDocumentsCount;
+
     public TextDocumentStatistics withIndexedTextDocumentsCount(Long indexedTextDocumentsCount) {
         this.indexedTextDocumentsCount = indexedTextDocumentsCount;
         return this;
     }
     
+    public TextDocumentStatistics(@JsonProperty("IndexedTextBytes") Long indexedTextBytes, @JsonProperty("IndexedTextDocumentsCount") Long indexedTextDocumentsCount) {
+        this.indexedTextBytes = indexedTextBytes;
+        this.indexedTextDocumentsCount = indexedTextDocumentsCount;
+  }
 }

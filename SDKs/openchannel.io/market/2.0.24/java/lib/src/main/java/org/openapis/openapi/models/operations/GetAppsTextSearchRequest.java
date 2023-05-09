@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsTextSearchRequest {
@@ -12,6 +13,7 @@ public class GetAppsTextSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetAppsTextSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +24,7 @@ public class GetAppsTextSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isOwned")
     public Boolean isOwned;
+
     public GetAppsTextSearchRequest withIsOwned(Boolean isOwned) {
         this.isOwned = isOwned;
         return this;
@@ -32,6 +35,7 @@ public class GetAppsTextSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAppsTextSearchRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class GetAppsTextSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetAppsTextSearchRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -52,6 +57,7 @@ public class GetAppsTextSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetAppsTextSearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -62,6 +68,7 @@ public class GetAppsTextSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public GetAppsTextSearchRequest withText(String text) {
         this.text = text;
         return this;
@@ -72,9 +79,14 @@ public class GetAppsTextSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public GetAppsTextSearchRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetAppsTextSearchRequest(@JsonProperty("fields") String fields, @JsonProperty("text") String text) {
+        this.fields = fields;
+        this.text = text;
+  }
 }

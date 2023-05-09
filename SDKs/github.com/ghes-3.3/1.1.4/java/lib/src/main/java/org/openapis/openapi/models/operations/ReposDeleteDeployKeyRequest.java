@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteDeployKeyRequest {
@@ -12,6 +13,7 @@ public class ReposDeleteDeployKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
     public Long keyId;
+
     public ReposDeleteDeployKeyRequest withKeyId(Long keyId) {
         this.keyId = keyId;
         return this;
@@ -22,6 +24,7 @@ public class ReposDeleteDeployKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposDeleteDeployKeyRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,9 +35,15 @@ public class ReposDeleteDeployKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposDeleteDeployKeyRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposDeleteDeployKeyRequest(@JsonProperty("key_id") Long keyId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.keyId = keyId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

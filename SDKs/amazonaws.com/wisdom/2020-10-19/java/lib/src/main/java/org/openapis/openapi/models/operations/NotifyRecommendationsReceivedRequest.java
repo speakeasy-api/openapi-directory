@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyRecommendationsReceivedRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public NotifyRecommendationsReceivedRequestBody requestBody;
+
     public NotifyRecommendationsReceivedRequest withRequestBody(NotifyRecommendationsReceivedRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class NotifyRecommendationsReceivedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public NotifyRecommendationsReceivedRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class NotifyRecommendationsReceivedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public NotifyRecommendationsReceivedRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class NotifyRecommendationsReceivedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public NotifyRecommendationsReceivedRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class NotifyRecommendationsReceivedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public NotifyRecommendationsReceivedRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class NotifyRecommendationsReceivedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public NotifyRecommendationsReceivedRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class NotifyRecommendationsReceivedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public NotifyRecommendationsReceivedRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class NotifyRecommendationsReceivedRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public NotifyRecommendationsReceivedRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class NotifyRecommendationsReceivedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assistantId")
     public String assistantId;
+
     public NotifyRecommendationsReceivedRequest withAssistantId(String assistantId) {
         this.assistantId = assistantId;
         return this;
@@ -78,9 +88,15 @@ public class NotifyRecommendationsReceivedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
     public String sessionId;
+
     public NotifyRecommendationsReceivedRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public NotifyRecommendationsReceivedRequest(@JsonProperty("RequestBody") NotifyRecommendationsReceivedRequestBody requestBody, @JsonProperty("assistantId") String assistantId, @JsonProperty("sessionId") String sessionId) {
+        this.requestBody = requestBody;
+        this.assistantId = assistantId;
+        this.sessionId = sessionId;
+  }
 }

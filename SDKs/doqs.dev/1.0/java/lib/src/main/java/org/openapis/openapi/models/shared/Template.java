@@ -19,6 +19,7 @@ public class Template {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Template withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +28,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public Object[] fields;
+
     public Template withFields(Object[] fields) {
         this.fields = fields;
         return this;
@@ -35,6 +37,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Template withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Template withName(String name) {
         this.name = name;
         return this;
@@ -50,6 +54,7 @@ public class Template {
     
     @JsonProperty("pages")
     public Long pages;
+
     public Template withPages(Long pages) {
         this.pages = pages;
         return this;
@@ -58,9 +63,13 @@ public class Template {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size_bytes")
     public Long sizeBytes;
+
     public Template withSizeBytes(Long sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
     }
     
+    public Template(@JsonProperty("pages") Long pages) {
+        this.pages = pages;
+  }
 }

@@ -15,6 +15,7 @@ public class ResourceTagMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceDetails")
     public ComplianceDetails complianceDetails;
+
     public ResourceTagMapping withComplianceDetails(ComplianceDetails complianceDetails) {
         this.complianceDetails = complianceDetails;
         return this;
@@ -23,6 +24,7 @@ public class ResourceTagMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public ResourceTagMapping withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -31,9 +33,11 @@ public class ResourceTagMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ResourceTagMapping withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ResourceTagMapping(){}
 }

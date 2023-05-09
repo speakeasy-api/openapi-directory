@@ -15,9 +15,11 @@ public class CreateGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public Group group;
+
     public CreateGroupResult withGroup(Group group) {
         this.group = group;
         return this;
     }
     
+    public CreateGroupResult(){}
 }

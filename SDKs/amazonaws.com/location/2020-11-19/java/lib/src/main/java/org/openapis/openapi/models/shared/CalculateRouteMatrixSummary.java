@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateRouteMatrixSummary {
     @JsonProperty("DataSource")
     public String dataSource;
+
     public CalculateRouteMatrixSummary withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -19,6 +20,7 @@ public class CalculateRouteMatrixSummary {
     
     @JsonProperty("DistanceUnit")
     public DistanceUnitEnum distanceUnit;
+
     public CalculateRouteMatrixSummary withDistanceUnit(DistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -26,6 +28,7 @@ public class CalculateRouteMatrixSummary {
     
     @JsonProperty("ErrorCount")
     public Long errorCount;
+
     public CalculateRouteMatrixSummary withErrorCount(Long errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -33,9 +36,16 @@ public class CalculateRouteMatrixSummary {
     
     @JsonProperty("RouteCount")
     public Long routeCount;
+
     public CalculateRouteMatrixSummary withRouteCount(Long routeCount) {
         this.routeCount = routeCount;
         return this;
     }
     
+    public CalculateRouteMatrixSummary(@JsonProperty("DataSource") String dataSource, @JsonProperty("DistanceUnit") DistanceUnitEnum distanceUnit, @JsonProperty("ErrorCount") Long errorCount, @JsonProperty("RouteCount") Long routeCount) {
+        this.dataSource = dataSource;
+        this.distanceUnit = distanceUnit;
+        this.errorCount = errorCount;
+        this.routeCount = routeCount;
+  }
 }

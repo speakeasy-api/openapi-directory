@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
@@ -12,6 +13,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Step step;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withStep(org.openapis.openapi.models.shared.Step step) {
         this.step = step;
         return this;
@@ -29,6 +32,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
     public String executionId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -69,6 +76,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=historyId")
     public String historyId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withHistoryId(String historyId) {
         this.historyId = historyId;
         return this;
@@ -89,6 +98,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -129,6 +142,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -149,6 +164,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stepId")
     public String stepId;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withStepId(String stepId) {
         this.stepId = stepId;
         return this;
@@ -159,6 +175,7 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -169,9 +186,16 @@ public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest(@JsonProperty("executionId") String executionId, @JsonProperty("historyId") String historyId, @JsonProperty("projectId") String projectId, @JsonProperty("stepId") String stepId) {
+        this.executionId = executionId;
+        this.historyId = historyId;
+        this.projectId = projectId;
+        this.stepId = stepId;
+  }
 }

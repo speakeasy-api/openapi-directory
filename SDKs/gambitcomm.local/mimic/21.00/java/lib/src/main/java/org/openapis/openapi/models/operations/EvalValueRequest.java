@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EvalValueRequest {
@@ -12,6 +13,7 @@ public class EvalValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public EvalValueRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,6 +24,7 @@ public class EvalValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public EvalValueRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -32,9 +35,15 @@ public class EvalValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public EvalValueRequest withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public EvalValueRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("instance") String instance, @JsonProperty("object") String object) {
+        this.agentNum = agentNum;
+        this.instance = instance;
+        this.object = object;
+  }
 }

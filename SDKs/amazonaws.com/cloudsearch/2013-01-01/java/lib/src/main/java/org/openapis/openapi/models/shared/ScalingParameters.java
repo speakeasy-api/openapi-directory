@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScalingParameters {
     
     public PartitionInstanceTypeEnum desiredInstanceType;
+
     public ScalingParameters withDesiredInstanceType(PartitionInstanceTypeEnum desiredInstanceType) {
         this.desiredInstanceType = desiredInstanceType;
         return this;
@@ -19,6 +20,7 @@ public class ScalingParameters {
     
     
     public Long desiredPartitionCount;
+
     public ScalingParameters withDesiredPartitionCount(Long desiredPartitionCount) {
         this.desiredPartitionCount = desiredPartitionCount;
         return this;
@@ -26,9 +28,11 @@ public class ScalingParameters {
     
     
     public Long desiredReplicationCount;
+
     public ScalingParameters withDesiredReplicationCount(Long desiredReplicationCount) {
         this.desiredReplicationCount = desiredReplicationCount;
         return this;
     }
     
+    public ScalingParameters(){}
 }

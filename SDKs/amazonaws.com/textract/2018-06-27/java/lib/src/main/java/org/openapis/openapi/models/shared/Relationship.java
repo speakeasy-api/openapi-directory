@@ -15,6 +15,7 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ids")
     public String[] ids;
+
     public Relationship withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -23,9 +24,11 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RelationshipTypeEnum type;
+
     public Relationship withType(RelationshipTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Relationship(){}
 }

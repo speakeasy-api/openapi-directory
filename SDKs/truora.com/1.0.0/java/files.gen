@@ -80,6 +80,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateHookResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeletHookSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeletHookRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeletHookResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListHookSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListHookResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateHookSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateHookRequest.java
@@ -174,4 +175,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchUploadInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateReportInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/behavior/README.md
+docs/checks/README.md
+docs/continuous/README.md
+docs/customtype/README.md
+docs/hooks/README.md
+docs/pdf/README.md
+docs/reports/README.md
 USAGE.md

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeModelCardExportJobRequest {
     @JsonProperty("ModelCardExportJobArn")
     public String modelCardExportJobArn;
+
     public DescribeModelCardExportJobRequest withModelCardExportJobArn(String modelCardExportJobArn) {
         this.modelCardExportJobArn = modelCardExportJobArn;
         return this;
     }
     
+    public DescribeModelCardExportJobRequest(@JsonProperty("ModelCardExportJobArn") String modelCardExportJobArn) {
+        this.modelCardExportJobArn = modelCardExportJobArn;
+  }
 }

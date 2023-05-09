@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RawMessage - Represents the raw data of the message.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class RawMessage {
     
     public String data;
+
     public RawMessage withData(String data) {
         this.data = data;
         return this;
     }
     
+    public RawMessage(@JsonProperty("Data") String data) {
+        this.data = data;
+  }
 }

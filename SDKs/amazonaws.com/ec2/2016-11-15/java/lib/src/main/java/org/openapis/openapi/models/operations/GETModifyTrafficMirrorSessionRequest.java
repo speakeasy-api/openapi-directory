@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTrafficMirrorSessionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyTrafficMirrorSessionActionEnum action;
+
     public GETModifyTrafficMirrorSessionRequest withAction(GETModifyTrafficMirrorSessionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public GETModifyTrafficMirrorSessionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyTrafficMirrorSessionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PacketLength")
     public Long packetLength;
+
     public GETModifyTrafficMirrorSessionRequest withPacketLength(Long packetLength) {
         this.packetLength = packetLength;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveField")
     public org.openapis.openapi.models.shared.TrafficMirrorSessionFieldEnum[] removeField;
+
     public GETModifyTrafficMirrorSessionRequest withRemoveField(org.openapis.openapi.models.shared.TrafficMirrorSessionFieldEnum[] removeField) {
         this.removeField = removeField;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SessionNumber")
     public Long sessionNumber;
+
     public GETModifyTrafficMirrorSessionRequest withSessionNumber(Long sessionNumber) {
         this.sessionNumber = sessionNumber;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
+
     public GETModifyTrafficMirrorSessionRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficMirrorSessionId")
     public String trafficMirrorSessionId;
+
     public GETModifyTrafficMirrorSessionRequest withTrafficMirrorSessionId(String trafficMirrorSessionId) {
         this.trafficMirrorSessionId = trafficMirrorSessionId;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficMirrorTargetId")
     public String trafficMirrorTargetId;
+
     public GETModifyTrafficMirrorSessionRequest withTrafficMirrorTargetId(String trafficMirrorTargetId) {
         this.trafficMirrorTargetId = trafficMirrorTargetId;
         return this;
@@ -96,6 +106,7 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyTrafficMirrorSessionVersionEnum version;
+
     public GETModifyTrafficMirrorSessionRequest withVersion(GETModifyTrafficMirrorSessionVersionEnum version) {
         this.version = version;
         return this;
@@ -106,6 +117,7 @@ public class GETModifyTrafficMirrorSessionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VirtualNetworkId")
     public Long virtualNetworkId;
+
     public GETModifyTrafficMirrorSessionRequest withVirtualNetworkId(Long virtualNetworkId) {
         this.virtualNetworkId = virtualNetworkId;
         return this;
@@ -113,6 +125,7 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyTrafficMirrorSessionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -120,6 +133,7 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyTrafficMirrorSessionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -127,6 +141,7 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyTrafficMirrorSessionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -134,6 +149,7 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyTrafficMirrorSessionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -141,6 +157,7 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyTrafficMirrorSessionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -148,6 +165,7 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyTrafficMirrorSessionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -155,9 +173,15 @@ public class GETModifyTrafficMirrorSessionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyTrafficMirrorSessionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyTrafficMirrorSessionRequest(@JsonProperty("Action") GETModifyTrafficMirrorSessionActionEnum action, @JsonProperty("TrafficMirrorSessionId") String trafficMirrorSessionId, @JsonProperty("Version") GETModifyTrafficMirrorSessionVersionEnum version) {
+        this.action = action;
+        this.trafficMirrorSessionId = trafficMirrorSessionId;
+        this.version = version;
+  }
 }

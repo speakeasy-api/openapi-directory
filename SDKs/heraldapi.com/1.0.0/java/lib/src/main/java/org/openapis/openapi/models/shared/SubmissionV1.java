@@ -15,6 +15,7 @@ public class SubmissionV1 {
      */
     @JsonProperty("application")
     public ApplicationWriteV1 application;
+
     public SubmissionV1 withApplication(ApplicationWriteV1 application) {
         this.application = application;
         return this;
@@ -22,6 +23,7 @@ public class SubmissionV1 {
     
     @JsonProperty("id")
     public String id;
+
     public SubmissionV1 withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class SubmissionV1 {
     
     @JsonProperty("producer_id")
     public String producerId;
+
     public SubmissionV1 withProducerId(String producerId) {
         this.producerId = producerId;
         return this;
@@ -36,9 +39,16 @@ public class SubmissionV1 {
     
     @JsonProperty("quote_previews")
     public QuotePreviewV1[] quotePreviews;
+
     public SubmissionV1 withQuotePreviews(QuotePreviewV1[] quotePreviews) {
         this.quotePreviews = quotePreviews;
         return this;
     }
     
+    public SubmissionV1(@JsonProperty("application") ApplicationWriteV1 application, @JsonProperty("id") String id, @JsonProperty("producer_id") String producerId, @JsonProperty("quote_previews") QuotePreviewV1[] quotePreviews) {
+        this.application = application;
+        this.id = id;
+        this.producerId = producerId;
+        this.quotePreviews = quotePreviews;
+  }
 }

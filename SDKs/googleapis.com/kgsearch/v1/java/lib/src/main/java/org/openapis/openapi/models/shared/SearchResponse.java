@@ -18,6 +18,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@context")
     public Object atContext;
+
     public SearchResponse withAtContext(Object atContext) {
         this.atContext = atContext;
         return this;
@@ -29,6 +30,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@type")
     public Object atType;
+
     public SearchResponse withAtType(Object atType) {
         this.atType = atType;
         return this;
@@ -40,9 +42,11 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemListElement")
     public Object[] itemListElement;
+
     public SearchResponse withItemListElement(Object[] itemListElement) {
         this.itemListElement = itemListElement;
         return this;
     }
     
+    public SearchResponse(){}
 }

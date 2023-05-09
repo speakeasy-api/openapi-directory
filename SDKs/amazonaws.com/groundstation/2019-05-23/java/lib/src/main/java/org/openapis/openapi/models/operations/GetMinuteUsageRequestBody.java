@@ -12,6 +12,7 @@ public class GetMinuteUsageRequestBody {
      */
     @JsonProperty("month")
     public Long month;
+
     public GetMinuteUsageRequestBody withMonth(Long month) {
         this.month = month;
         return this;
@@ -22,9 +23,14 @@ public class GetMinuteUsageRequestBody {
      */
     @JsonProperty("year")
     public Long year;
+
     public GetMinuteUsageRequestBody withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetMinuteUsageRequestBody(@JsonProperty("month") Long month, @JsonProperty("year") Long year) {
+        this.month = month;
+        this.year = year;
+  }
 }

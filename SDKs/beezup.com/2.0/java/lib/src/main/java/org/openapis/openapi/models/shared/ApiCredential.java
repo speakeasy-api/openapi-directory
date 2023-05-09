@@ -18,6 +18,7 @@ public class ApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryToken")
     public String primaryToken;
+
     public ApiCredential withPrimaryToken(String primaryToken) {
         this.primaryToken = primaryToken;
         return this;
@@ -29,6 +30,7 @@ public class ApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productName")
     public String productName;
+
     public ApiCredential withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -40,9 +42,11 @@ public class ApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryToken")
     public String secondaryToken;
+
     public ApiCredential withSecondaryToken(String secondaryToken) {
         this.secondaryToken = secondaryToken;
         return this;
     }
     
+    public ApiCredential(){}
 }

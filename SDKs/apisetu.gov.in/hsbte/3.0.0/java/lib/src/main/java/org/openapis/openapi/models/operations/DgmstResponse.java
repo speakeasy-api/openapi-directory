@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DgmstResponse {
     
     public String contentType;
+
     public DgmstResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DgmstResponse {
     
     
     public Integer statusCode;
+
     public DgmstResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DgmstResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DgmstResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DgmstResponse {
      */
     
     public Dgmst400ApplicationJSON dgmst400ApplicationJSONObject;
+
     public DgmstResponse withDgmst400ApplicationJSONObject(Dgmst400ApplicationJSON dgmst400ApplicationJSONObject) {
         this.dgmst400ApplicationJSONObject = dgmst400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DgmstResponse {
      */
     
     public Dgmst401ApplicationJSON dgmst401ApplicationJSONObject;
+
     public DgmstResponse withDgmst401ApplicationJSONObject(Dgmst401ApplicationJSON dgmst401ApplicationJSONObject) {
         this.dgmst401ApplicationJSONObject = dgmst401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DgmstResponse {
      */
     
     public Dgmst404ApplicationJSON dgmst404ApplicationJSONObject;
+
     public DgmstResponse withDgmst404ApplicationJSONObject(Dgmst404ApplicationJSON dgmst404ApplicationJSONObject) {
         this.dgmst404ApplicationJSONObject = dgmst404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class DgmstResponse {
      */
     
     public Dgmst500ApplicationJSON dgmst500ApplicationJSONObject;
+
     public DgmstResponse withDgmst500ApplicationJSONObject(Dgmst500ApplicationJSON dgmst500ApplicationJSONObject) {
         this.dgmst500ApplicationJSONObject = dgmst500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class DgmstResponse {
      */
     
     public Dgmst502ApplicationJSON dgmst502ApplicationJSONObject;
+
     public DgmstResponse withDgmst502ApplicationJSONObject(Dgmst502ApplicationJSON dgmst502ApplicationJSONObject) {
         this.dgmst502ApplicationJSONObject = dgmst502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class DgmstResponse {
      */
     
     public Dgmst503ApplicationJSON dgmst503ApplicationJSONObject;
+
     public DgmstResponse withDgmst503ApplicationJSONObject(Dgmst503ApplicationJSON dgmst503ApplicationJSONObject) {
         this.dgmst503ApplicationJSONObject = dgmst503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class DgmstResponse {
      */
     
     public Dgmst504ApplicationJSON dgmst504ApplicationJSONObject;
+
     public DgmstResponse withDgmst504ApplicationJSONObject(Dgmst504ApplicationJSON dgmst504ApplicationJSONObject) {
         this.dgmst504ApplicationJSONObject = dgmst504ApplicationJSONObject;
         return this;
     }
     
+    public DgmstResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

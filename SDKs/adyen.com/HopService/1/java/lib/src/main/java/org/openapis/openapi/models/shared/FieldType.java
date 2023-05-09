@@ -15,6 +15,7 @@ public class FieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public FieldType withField(String field) {
         this.field = field;
         return this;
@@ -26,6 +27,7 @@ public class FieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public FieldTypeFieldNameEnum fieldName;
+
     public FieldType withFieldName(FieldTypeFieldNameEnum fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -37,9 +39,11 @@ public class FieldType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderCode")
     public String shareholderCode;
+
     public FieldType withShareholderCode(String shareholderCode) {
         this.shareholderCode = shareholderCode;
         return this;
     }
     
+    public FieldType(){}
 }

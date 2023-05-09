@@ -15,6 +15,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayManaged")
     public Boolean apiGatewayManaged;
+
     public CreateIntegrationResult withApiGatewayManaged(Boolean apiGatewayManaged) {
         this.apiGatewayManaged = apiGatewayManaged;
         return this;
@@ -23,6 +24,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionId")
     public String connectionId;
+
     public CreateIntegrationResult withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -31,6 +33,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionType")
     public CreateIntegrationResultConnectionTypeEnum connectionType;
+
     public CreateIntegrationResult withConnectionType(CreateIntegrationResultConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -39,6 +42,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentHandlingStrategy")
     public CreateIntegrationResultContentHandlingStrategyEnum contentHandlingStrategy;
+
     public CreateIntegrationResult withContentHandlingStrategy(CreateIntegrationResultContentHandlingStrategyEnum contentHandlingStrategy) {
         this.contentHandlingStrategy = contentHandlingStrategy;
         return this;
@@ -47,6 +51,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CredentialsArn")
     public String credentialsArn;
+
     public CreateIntegrationResult withCredentialsArn(String credentialsArn) {
         this.credentialsArn = credentialsArn;
         return this;
@@ -55,6 +60,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateIntegrationResult withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +69,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationId")
     public String integrationId;
+
     public CreateIntegrationResult withIntegrationId(String integrationId) {
         this.integrationId = integrationId;
         return this;
@@ -71,6 +78,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationMethod")
     public String integrationMethod;
+
     public CreateIntegrationResult withIntegrationMethod(String integrationMethod) {
         this.integrationMethod = integrationMethod;
         return this;
@@ -79,6 +87,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationResponseSelectionExpression")
     public String integrationResponseSelectionExpression;
+
     public CreateIntegrationResult withIntegrationResponseSelectionExpression(String integrationResponseSelectionExpression) {
         this.integrationResponseSelectionExpression = integrationResponseSelectionExpression;
         return this;
@@ -87,6 +96,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationSubtype")
     public String integrationSubtype;
+
     public CreateIntegrationResult withIntegrationSubtype(String integrationSubtype) {
         this.integrationSubtype = integrationSubtype;
         return this;
@@ -95,6 +105,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationType")
     public CreateIntegrationResultIntegrationTypeEnum integrationType;
+
     public CreateIntegrationResult withIntegrationType(CreateIntegrationResultIntegrationTypeEnum integrationType) {
         this.integrationType = integrationType;
         return this;
@@ -103,6 +114,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationUri")
     public String integrationUri;
+
     public CreateIntegrationResult withIntegrationUri(String integrationUri) {
         this.integrationUri = integrationUri;
         return this;
@@ -111,6 +123,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassthroughBehavior")
     public CreateIntegrationResultPassthroughBehaviorEnum passthroughBehavior;
+
     public CreateIntegrationResult withPassthroughBehavior(CreateIntegrationResultPassthroughBehaviorEnum passthroughBehavior) {
         this.passthroughBehavior = passthroughBehavior;
         return this;
@@ -119,6 +132,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayloadFormatVersion")
     public String payloadFormatVersion;
+
     public CreateIntegrationResult withPayloadFormatVersion(String payloadFormatVersion) {
         this.payloadFormatVersion = payloadFormatVersion;
         return this;
@@ -127,6 +141,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestParameters")
     public java.util.Map<String, String> requestParameters;
+
     public CreateIntegrationResult withRequestParameters(java.util.Map<String, String> requestParameters) {
         this.requestParameters = requestParameters;
         return this;
@@ -135,6 +150,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestTemplates")
     public java.util.Map<String, String> requestTemplates;
+
     public CreateIntegrationResult withRequestTemplates(java.util.Map<String, String> requestTemplates) {
         this.requestTemplates = requestTemplates;
         return this;
@@ -143,6 +159,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseParameters")
     public java.util.Map<String, java.util.Map<String, String>> responseParameters;
+
     public CreateIntegrationResult withResponseParameters(java.util.Map<String, java.util.Map<String, String>> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -151,6 +168,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateSelectionExpression")
     public String templateSelectionExpression;
+
     public CreateIntegrationResult withTemplateSelectionExpression(String templateSelectionExpression) {
         this.templateSelectionExpression = templateSelectionExpression;
         return this;
@@ -159,6 +177,7 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutInMillis")
     public Long timeoutInMillis;
+
     public CreateIntegrationResult withTimeoutInMillis(Long timeoutInMillis) {
         this.timeoutInMillis = timeoutInMillis;
         return this;
@@ -167,9 +186,11 @@ public class CreateIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsConfig")
     public CreateIntegrationResultTlsConfig tlsConfig;
+
     public CreateIntegrationResult withTlsConfig(CreateIntegrationResultTlsConfig tlsConfig) {
         this.tlsConfig = tlsConfig;
         return this;
     }
     
+    public CreateIntegrationResult(){}
 }

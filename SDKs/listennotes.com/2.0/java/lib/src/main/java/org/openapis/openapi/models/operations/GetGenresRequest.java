@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGenresRequest {
@@ -12,6 +13,7 @@ public class GetGenresRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetGenresRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -23,9 +25,13 @@ public class GetGenresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top_level_only")
     public GetGenresTopLevelOnlyEnum topLevelOnly;
+
     public GetGenresRequest withTopLevelOnly(GetGenresTopLevelOnlyEnum topLevelOnly) {
         this.topLevelOnly = topLevelOnly;
         return this;
     }
     
+    public GetGenresRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
+  }
 }

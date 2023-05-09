@@ -15,6 +15,7 @@ public class BatchPutMetricsError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public PutMetricsErrorCodeEnum code;
+
     public BatchPutMetricsError withCode(PutMetricsErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class BatchPutMetricsError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricIndex")
     public Long metricIndex;
+
     public BatchPutMetricsError withMetricIndex(Long metricIndex) {
         this.metricIndex = metricIndex;
         return this;
     }
     
+    public BatchPutMetricsError(){}
 }

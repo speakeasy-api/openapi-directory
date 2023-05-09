@@ -18,6 +18,7 @@ public class PostServersCreateServerResponseServerPublicNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewalls")
     public PostServersCreateServerResponseServerPublicNetServerPublicNetFirewall[] firewalls;
+
     public PostServersCreateServerResponseServerPublicNet withFirewalls(PostServersCreateServerResponseServerPublicNetServerPublicNetFirewall[] firewalls) {
         this.firewalls = firewalls;
         return this;
@@ -28,6 +29,7 @@ public class PostServersCreateServerResponseServerPublicNet {
      */
     @JsonProperty("floating_ips")
     public Long[] floatingIps;
+
     public PostServersCreateServerResponseServerPublicNet withFloatingIps(Long[] floatingIps) {
         this.floatingIps = floatingIps;
         return this;
@@ -38,6 +40,7 @@ public class PostServersCreateServerResponseServerPublicNet {
      */
     @JsonProperty("ipv4")
     public PostServersCreateServerResponseServerPublicNetIpv4 ipv4;
+
     public PostServersCreateServerResponseServerPublicNet withIpv4(PostServersCreateServerResponseServerPublicNetIpv4 ipv4) {
         this.ipv4 = ipv4;
         return this;
@@ -48,9 +51,15 @@ public class PostServersCreateServerResponseServerPublicNet {
      */
     @JsonProperty("ipv6")
     public PostServersCreateServerResponseServerPublicNetIpv6 ipv6;
+
     public PostServersCreateServerResponseServerPublicNet withIpv6(PostServersCreateServerResponseServerPublicNetIpv6 ipv6) {
         this.ipv6 = ipv6;
         return this;
     }
     
+    public PostServersCreateServerResponseServerPublicNet(@JsonProperty("floating_ips") Long[] floatingIps, @JsonProperty("ipv4") PostServersCreateServerResponseServerPublicNetIpv4 ipv4, @JsonProperty("ipv6") PostServersCreateServerResponseServerPublicNetIpv6 ipv6) {
+        this.floatingIps = floatingIps;
+        this.ipv4 = ipv4;
+        this.ipv6 = ipv6;
+  }
 }

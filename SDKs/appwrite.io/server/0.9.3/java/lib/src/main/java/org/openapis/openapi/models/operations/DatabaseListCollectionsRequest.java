@@ -12,6 +12,7 @@ public class DatabaseListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public DatabaseListCollectionsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class DatabaseListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public DatabaseListCollectionsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class DatabaseListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
     public String orderType;
+
     public DatabaseListCollectionsRequest withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -42,9 +45,11 @@ public class DatabaseListCollectionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public DatabaseListCollectionsRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public DatabaseListCollectionsRequest(){}
 }

@@ -15,6 +15,7 @@ public class DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DescribeIdentityProviderConfigRequestBodyIdentityProviderConfig(){}
 }

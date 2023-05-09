@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAuthorNameUsingPOSTResponse {
     
     public String contentType;
+
     public GetAuthorNameUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAuthorNameUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetAuthorNameUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAuthorNameUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAuthorNameUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAuthorNameUsingPOSTResponse {
      */
     
     public GetAuthorNameUsingPOST200ApplicationJSON getAuthorNameUsingPOST200ApplicationJSONObject;
+
     public GetAuthorNameUsingPOSTResponse withGetAuthorNameUsingPOST200ApplicationJSONObject(GetAuthorNameUsingPOST200ApplicationJSON getAuthorNameUsingPOST200ApplicationJSONObject) {
         this.getAuthorNameUsingPOST200ApplicationJSONObject = getAuthorNameUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetAuthorNameUsingPOSTResponse {
      */
     
     public GetAuthorNameUsingPOST400ApplicationJSON getAuthorNameUsingPOST400ApplicationJSONObject;
+
     public GetAuthorNameUsingPOSTResponse withGetAuthorNameUsingPOST400ApplicationJSONObject(GetAuthorNameUsingPOST400ApplicationJSON getAuthorNameUsingPOST400ApplicationJSONObject) {
         this.getAuthorNameUsingPOST400ApplicationJSONObject = getAuthorNameUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetAuthorNameUsingPOSTResponse {
      */
     
     public GetAuthorNameUsingPOST401ApplicationJSON getAuthorNameUsingPOST401ApplicationJSONObject;
+
     public GetAuthorNameUsingPOSTResponse withGetAuthorNameUsingPOST401ApplicationJSONObject(GetAuthorNameUsingPOST401ApplicationJSON getAuthorNameUsingPOST401ApplicationJSONObject) {
         this.getAuthorNameUsingPOST401ApplicationJSONObject = getAuthorNameUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetAuthorNameUsingPOSTResponse {
      */
     
     public GetAuthorNameUsingPOST500ApplicationJSON getAuthorNameUsingPOST500ApplicationJSONObject;
+
     public GetAuthorNameUsingPOSTResponse withGetAuthorNameUsingPOST500ApplicationJSONObject(GetAuthorNameUsingPOST500ApplicationJSON getAuthorNameUsingPOST500ApplicationJSONObject) {
         this.getAuthorNameUsingPOST500ApplicationJSONObject = getAuthorNameUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetAuthorNameUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

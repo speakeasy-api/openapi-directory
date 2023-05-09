@@ -12,6 +12,7 @@ public class DescribeBudgetActionRequest {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public DescribeBudgetActionRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeBudgetActionRequest {
     
     @JsonProperty("ActionId")
     public String actionId;
+
     public DescribeBudgetActionRequest withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -29,9 +31,15 @@ public class DescribeBudgetActionRequest {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public DescribeBudgetActionRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
     }
     
+    public DescribeBudgetActionRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("ActionId") String actionId, @JsonProperty("BudgetName") String budgetName) {
+        this.accountId = accountId;
+        this.actionId = actionId;
+        this.budgetName = budgetName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeProblemObservationsResponse {
     
     public String contentType;
+
     public DescribeProblemObservationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeProblemObservationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeProblemObservationsResponse describeProblemObservationsResponse;
+
     public DescribeProblemObservationsResponse withDescribeProblemObservationsResponse(org.openapis.openapi.models.shared.DescribeProblemObservationsResponse describeProblemObservationsResponse) {
         this.describeProblemObservationsResponse = describeProblemObservationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeProblemObservationsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeProblemObservationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeProblemObservationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeProblemObservationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeProblemObservationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeProblemObservationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeProblemObservationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeProblemObservationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeProblemObservationsResponse {
      */
     
     public Object validationException;
+
     public DescribeProblemObservationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeProblemObservationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

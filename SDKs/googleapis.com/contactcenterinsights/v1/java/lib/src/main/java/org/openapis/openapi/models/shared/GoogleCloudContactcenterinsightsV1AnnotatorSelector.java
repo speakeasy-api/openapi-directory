@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueModels")
     public String[] issueModels;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withIssueModels(String[] issueModels) {
         this.issueModels = issueModels;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phraseMatchers")
     public String[] phraseMatchers;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withPhraseMatchers(String[] phraseMatchers) {
         this.phraseMatchers = phraseMatchers;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runEntityAnnotator")
     public Boolean runEntityAnnotator;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunEntityAnnotator(Boolean runEntityAnnotator) {
         this.runEntityAnnotator = runEntityAnnotator;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runIntentAnnotator")
     public Boolean runIntentAnnotator;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunIntentAnnotator(Boolean runIntentAnnotator) {
         this.runIntentAnnotator = runIntentAnnotator;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runInterruptionAnnotator")
     public Boolean runInterruptionAnnotator;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunInterruptionAnnotator(Boolean runInterruptionAnnotator) {
         this.runInterruptionAnnotator = runInterruptionAnnotator;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runIssueModelAnnotator")
     public Boolean runIssueModelAnnotator;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunIssueModelAnnotator(Boolean runIssueModelAnnotator) {
         this.runIssueModelAnnotator = runIssueModelAnnotator;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runPhraseMatcherAnnotator")
     public Boolean runPhraseMatcherAnnotator;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunPhraseMatcherAnnotator(Boolean runPhraseMatcherAnnotator) {
         this.runPhraseMatcherAnnotator = runPhraseMatcherAnnotator;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runSentimentAnnotator")
     public Boolean runSentimentAnnotator;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunSentimentAnnotator(Boolean runSentimentAnnotator) {
         this.runSentimentAnnotator = runSentimentAnnotator;
         return this;
@@ -106,9 +114,35 @@ public class GoogleCloudContactcenterinsightsV1AnnotatorSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runSilenceAnnotator")
     public Boolean runSilenceAnnotator;
+
     public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunSilenceAnnotator(Boolean runSilenceAnnotator) {
         this.runSilenceAnnotator = runSilenceAnnotator;
         return this;
     }
     
+    /**
+     * Whether to run the summarization annotator.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("runSummarizationAnnotator")
+    public Boolean runSummarizationAnnotator;
+
+    public GoogleCloudContactcenterinsightsV1AnnotatorSelector withRunSummarizationAnnotator(Boolean runSummarizationAnnotator) {
+        this.runSummarizationAnnotator = runSummarizationAnnotator;
+        return this;
+    }
+    
+    /**
+     * Configuration for summarization.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("summarizationConfig")
+    public GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig summarizationConfig;
+
+    public GoogleCloudContactcenterinsightsV1AnnotatorSelector withSummarizationConfig(GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig summarizationConfig) {
+        this.summarizationConfig = summarizationConfig;
+        return this;
+    }
+    
+    public GoogleCloudContactcenterinsightsV1AnnotatorSelector(){}
 }

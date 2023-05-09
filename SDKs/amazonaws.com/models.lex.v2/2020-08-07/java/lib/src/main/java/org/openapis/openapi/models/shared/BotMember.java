@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotMember {
     @JsonProperty("botMemberAliasId")
     public String botMemberAliasId;
+
     public BotMember withBotMemberAliasId(String botMemberAliasId) {
         this.botMemberAliasId = botMemberAliasId;
         return this;
@@ -19,6 +20,7 @@ public class BotMember {
     
     @JsonProperty("botMemberAliasName")
     public String botMemberAliasName;
+
     public BotMember withBotMemberAliasName(String botMemberAliasName) {
         this.botMemberAliasName = botMemberAliasName;
         return this;
@@ -26,6 +28,7 @@ public class BotMember {
     
     @JsonProperty("botMemberId")
     public String botMemberId;
+
     public BotMember withBotMemberId(String botMemberId) {
         this.botMemberId = botMemberId;
         return this;
@@ -33,6 +36,7 @@ public class BotMember {
     
     @JsonProperty("botMemberName")
     public String botMemberName;
+
     public BotMember withBotMemberName(String botMemberName) {
         this.botMemberName = botMemberName;
         return this;
@@ -40,9 +44,17 @@ public class BotMember {
     
     @JsonProperty("botMemberVersion")
     public String botMemberVersion;
+
     public BotMember withBotMemberVersion(String botMemberVersion) {
         this.botMemberVersion = botMemberVersion;
         return this;
     }
     
+    public BotMember(@JsonProperty("botMemberAliasId") String botMemberAliasId, @JsonProperty("botMemberAliasName") String botMemberAliasName, @JsonProperty("botMemberId") String botMemberId, @JsonProperty("botMemberName") String botMemberName, @JsonProperty("botMemberVersion") String botMemberVersion) {
+        this.botMemberAliasId = botMemberAliasId;
+        this.botMemberAliasName = botMemberAliasName;
+        this.botMemberId = botMemberId;
+        this.botMemberName = botMemberName;
+        this.botMemberVersion = botMemberVersion;
+  }
 }

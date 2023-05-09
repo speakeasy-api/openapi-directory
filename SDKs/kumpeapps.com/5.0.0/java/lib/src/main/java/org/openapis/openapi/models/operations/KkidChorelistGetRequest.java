@@ -12,6 +12,7 @@ public class KkidChorelistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=blockDash")
     public Boolean blockDash;
+
     public KkidChorelistGetRequest withBlockDash(Boolean blockDash) {
         this.blockDash = blockDash;
         return this;
@@ -22,6 +23,7 @@ public class KkidChorelistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canSteal")
     public Boolean canSteal;
+
     public KkidChorelistGetRequest withCanSteal(Boolean canSteal) {
         this.canSteal = canSteal;
         return this;
@@ -32,6 +34,7 @@ public class KkidChorelistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=day")
     public KkidChorelistGetDayEnum day;
+
     public KkidChorelistGetRequest withDay(KkidChorelistGetDayEnum day) {
         this.day = day;
         return this;
@@ -42,6 +45,7 @@ public class KkidChorelistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCalendar")
     public Boolean includeCalendar;
+
     public KkidChorelistGetRequest withIncludeCalendar(Boolean includeCalendar) {
         this.includeCalendar = includeCalendar;
         return this;
@@ -52,6 +56,7 @@ public class KkidChorelistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUsername")
     public String kidUsername;
+
     public KkidChorelistGetRequest withKidUsername(String kidUsername) {
         this.kidUsername = kidUsername;
         return this;
@@ -62,6 +67,7 @@ public class KkidChorelistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
     public Boolean optional;
+
     public KkidChorelistGetRequest withOptional(Boolean optional) {
         this.optional = optional;
         return this;
@@ -72,9 +78,11 @@ public class KkidChorelistGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public KkidChorelistGetRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public KkidChorelistGetRequest(){}
 }

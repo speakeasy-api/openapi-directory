@@ -15,6 +15,7 @@ public class CreateGroupRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectorDefinitionVersionArn")
     public String connectorDefinitionVersionArn;
+
     public CreateGroupRequestBodyInitialVersion withConnectorDefinitionVersionArn(String connectorDefinitionVersionArn) {
         this.connectorDefinitionVersionArn = connectorDefinitionVersionArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateGroupRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoreDefinitionVersionArn")
     public String coreDefinitionVersionArn;
+
     public CreateGroupRequestBodyInitialVersion withCoreDefinitionVersionArn(String coreDefinitionVersionArn) {
         this.coreDefinitionVersionArn = coreDefinitionVersionArn;
         return this;
@@ -31,6 +33,7 @@ public class CreateGroupRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceDefinitionVersionArn")
     public String deviceDefinitionVersionArn;
+
     public CreateGroupRequestBodyInitialVersion withDeviceDefinitionVersionArn(String deviceDefinitionVersionArn) {
         this.deviceDefinitionVersionArn = deviceDefinitionVersionArn;
         return this;
@@ -39,6 +42,7 @@ public class CreateGroupRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionDefinitionVersionArn")
     public String functionDefinitionVersionArn;
+
     public CreateGroupRequestBodyInitialVersion withFunctionDefinitionVersionArn(String functionDefinitionVersionArn) {
         this.functionDefinitionVersionArn = functionDefinitionVersionArn;
         return this;
@@ -47,6 +51,7 @@ public class CreateGroupRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggerDefinitionVersionArn")
     public String loggerDefinitionVersionArn;
+
     public CreateGroupRequestBodyInitialVersion withLoggerDefinitionVersionArn(String loggerDefinitionVersionArn) {
         this.loggerDefinitionVersionArn = loggerDefinitionVersionArn;
         return this;
@@ -55,6 +60,7 @@ public class CreateGroupRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDefinitionVersionArn")
     public String resourceDefinitionVersionArn;
+
     public CreateGroupRequestBodyInitialVersion withResourceDefinitionVersionArn(String resourceDefinitionVersionArn) {
         this.resourceDefinitionVersionArn = resourceDefinitionVersionArn;
         return this;
@@ -63,9 +69,11 @@ public class CreateGroupRequestBodyInitialVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionDefinitionVersionArn")
     public String subscriptionDefinitionVersionArn;
+
     public CreateGroupRequestBodyInitialVersion withSubscriptionDefinitionVersionArn(String subscriptionDefinitionVersionArn) {
         this.subscriptionDefinitionVersionArn = subscriptionDefinitionVersionArn;
         return this;
     }
     
+    public CreateGroupRequestBodyInitialVersion(){}
 }

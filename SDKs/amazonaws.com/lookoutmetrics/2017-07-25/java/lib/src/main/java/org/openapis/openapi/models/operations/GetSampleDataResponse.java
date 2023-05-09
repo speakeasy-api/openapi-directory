@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSampleDataResponse {
@@ -12,6 +13,7 @@ public class GetSampleDataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSampleDataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSampleDataResponse {
     
     
     public String contentType;
+
     public GetSampleDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSampleDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSampleDataResponse getSampleDataResponse;
+
     public GetSampleDataResponse withGetSampleDataResponse(org.openapis.openapi.models.shared.GetSampleDataResponse getSampleDataResponse) {
         this.getSampleDataResponse = getSampleDataResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSampleDataResponse {
      */
     
     public Object internalServerException;
+
     public GetSampleDataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetSampleDataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSampleDataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetSampleDataResponse {
     
     
     public Integer statusCode;
+
     public GetSampleDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetSampleDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSampleDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetSampleDataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetSampleDataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class GetSampleDataResponse {
      */
     
     public Object validationException;
+
     public GetSampleDataResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSampleDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

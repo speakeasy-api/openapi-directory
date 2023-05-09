@@ -18,9 +18,11 @@ public class EventWorkingLocationPropertiesCustomLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public EventWorkingLocationPropertiesCustomLocation withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public EventWorkingLocationPropertiesCustomLocation(){}
 }

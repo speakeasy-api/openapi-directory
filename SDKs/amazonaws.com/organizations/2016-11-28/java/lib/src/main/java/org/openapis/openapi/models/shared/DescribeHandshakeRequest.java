@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeHandshakeRequest {
     @JsonProperty("HandshakeId")
     public String handshakeId;
+
     public DescribeHandshakeRequest withHandshakeId(String handshakeId) {
         this.handshakeId = handshakeId;
         return this;
     }
     
+    public DescribeHandshakeRequest(@JsonProperty("HandshakeId") String handshakeId) {
+        this.handshakeId = handshakeId;
+  }
 }

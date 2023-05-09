@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Condition {
     @JsonProperty("expressionString")
     public String expressionString;
+
     public Condition withExpressionString(String expressionString) {
         this.expressionString = expressionString;
         return this;
     }
     
+    public Condition(@JsonProperty("expressionString") String expressionString) {
+        this.expressionString = expressionString;
+  }
 }

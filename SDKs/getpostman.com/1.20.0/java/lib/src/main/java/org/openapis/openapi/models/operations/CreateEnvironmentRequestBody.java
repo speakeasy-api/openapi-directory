@@ -12,9 +12,11 @@ public class CreateEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public CreateEnvironmentRequestBodyEnvironment environment;
+
     public CreateEnvironmentRequestBody withEnvironment(CreateEnvironmentRequestBodyEnvironment environment) {
         this.environment = environment;
         return this;
     }
     
+    public CreateEnvironmentRequestBody(){}
 }

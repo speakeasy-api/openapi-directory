@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartQueryExecutionResponse {
     
     public String contentType;
+
     public StartQueryExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartQueryExecutionResponse {
      */
     
     public Object internalServerException;
+
     public StartQueryExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartQueryExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public StartQueryExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartQueryExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartQueryExecutionOutput startQueryExecutionOutput;
+
     public StartQueryExecutionResponse withStartQueryExecutionOutput(org.openapis.openapi.models.shared.StartQueryExecutionOutput startQueryExecutionOutput) {
         this.startQueryExecutionOutput = startQueryExecutionOutput;
         return this;
@@ -46,6 +51,7 @@ public class StartQueryExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartQueryExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartQueryExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartQueryExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StartQueryExecutionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartQueryExecutionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StartQueryExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

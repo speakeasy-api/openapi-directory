@@ -15,6 +15,7 @@ public class MetricTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public Double defaultValue;
+
     public MetricTransformation withDefaultValue(Double defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,6 +24,7 @@ public class MetricTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public java.util.Map<String, String> dimensions;
+
     public MetricTransformation withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -30,6 +32,7 @@ public class MetricTransformation {
     
     @JsonProperty("metricName")
     public String metricName;
+
     public MetricTransformation withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +40,7 @@ public class MetricTransformation {
     
     @JsonProperty("metricNamespace")
     public String metricNamespace;
+
     public MetricTransformation withMetricNamespace(String metricNamespace) {
         this.metricNamespace = metricNamespace;
         return this;
@@ -44,6 +48,7 @@ public class MetricTransformation {
     
     @JsonProperty("metricValue")
     public String metricValue;
+
     public MetricTransformation withMetricValue(String metricValue) {
         this.metricValue = metricValue;
         return this;
@@ -52,9 +57,15 @@ public class MetricTransformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public StandardUnitEnum unit;
+
     public MetricTransformation withUnit(StandardUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public MetricTransformation(@JsonProperty("metricName") String metricName, @JsonProperty("metricNamespace") String metricNamespace, @JsonProperty("metricValue") String metricValue) {
+        this.metricName = metricName;
+        this.metricNamespace = metricNamespace;
+        this.metricValue = metricValue;
+  }
 }

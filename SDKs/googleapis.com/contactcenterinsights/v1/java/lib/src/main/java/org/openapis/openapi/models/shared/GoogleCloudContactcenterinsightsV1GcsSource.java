@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1GcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioUri")
     public String audioUri;
+
     public GoogleCloudContactcenterinsightsV1GcsSource withAudioUri(String audioUri) {
         this.audioUri = audioUri;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1GcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcriptUri")
     public String transcriptUri;
+
     public GoogleCloudContactcenterinsightsV1GcsSource withTranscriptUri(String transcriptUri) {
         this.transcriptUri = transcriptUri;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1GcsSource(){}
 }

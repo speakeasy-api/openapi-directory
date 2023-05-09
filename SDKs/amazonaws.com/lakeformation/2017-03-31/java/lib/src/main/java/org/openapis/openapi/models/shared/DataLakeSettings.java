@@ -15,6 +15,7 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowExternalDataFiltering")
     public Boolean allowExternalDataFiltering;
+
     public DataLakeSettings withAllowExternalDataFiltering(Boolean allowExternalDataFiltering) {
         this.allowExternalDataFiltering = allowExternalDataFiltering;
         return this;
@@ -23,6 +24,7 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedSessionTagValueList")
     public String[] authorizedSessionTagValueList;
+
     public DataLakeSettings withAuthorizedSessionTagValueList(String[] authorizedSessionTagValueList) {
         this.authorizedSessionTagValueList = authorizedSessionTagValueList;
         return this;
@@ -31,6 +33,7 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateDatabaseDefaultPermissions")
     public PrincipalPermissions[] createDatabaseDefaultPermissions;
+
     public DataLakeSettings withCreateDatabaseDefaultPermissions(PrincipalPermissions[] createDatabaseDefaultPermissions) {
         this.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;
         return this;
@@ -39,6 +42,7 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateTableDefaultPermissions")
     public PrincipalPermissions[] createTableDefaultPermissions;
+
     public DataLakeSettings withCreateTableDefaultPermissions(PrincipalPermissions[] createTableDefaultPermissions) {
         this.createTableDefaultPermissions = createTableDefaultPermissions;
         return this;
@@ -47,6 +51,7 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakeAdmins")
     public DataLakePrincipal[] dataLakeAdmins;
+
     public DataLakeSettings withDataLakeAdmins(DataLakePrincipal[] dataLakeAdmins) {
         this.dataLakeAdmins = dataLakeAdmins;
         return this;
@@ -55,6 +60,7 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalDataFilteringAllowList")
     public DataLakePrincipal[] externalDataFilteringAllowList;
+
     public DataLakeSettings withExternalDataFilteringAllowList(DataLakePrincipal[] externalDataFilteringAllowList) {
         this.externalDataFilteringAllowList = externalDataFilteringAllowList;
         return this;
@@ -63,6 +69,7 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public DataLakeSettings withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -71,9 +78,11 @@ public class DataLakeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrustedResourceOwners")
     public String[] trustedResourceOwners;
+
     public DataLakeSettings withTrustedResourceOwners(String[] trustedResourceOwners) {
         this.trustedResourceOwners = trustedResourceOwners;
         return this;
     }
     
+    public DataLakeSettings(){}
 }

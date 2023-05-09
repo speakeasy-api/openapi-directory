@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QuestionsMigratedToOtherSiteStyling {
     
     public String linkColor;
+
     public QuestionsMigratedToOtherSiteStyling withLinkColor(String linkColor) {
         this.linkColor = linkColor;
         return this;
@@ -16,6 +17,7 @@ public class QuestionsMigratedToOtherSiteStyling {
     
     
     public String tagBackgroundColor;
+
     public QuestionsMigratedToOtherSiteStyling withTagBackgroundColor(String tagBackgroundColor) {
         this.tagBackgroundColor = tagBackgroundColor;
         return this;
@@ -23,9 +25,11 @@ public class QuestionsMigratedToOtherSiteStyling {
     
     
     public String tagForegroundColor;
+
     public QuestionsMigratedToOtherSiteStyling withTagForegroundColor(String tagForegroundColor) {
         this.tagForegroundColor = tagForegroundColor;
         return this;
     }
     
+    public QuestionsMigratedToOtherSiteStyling(){}
 }

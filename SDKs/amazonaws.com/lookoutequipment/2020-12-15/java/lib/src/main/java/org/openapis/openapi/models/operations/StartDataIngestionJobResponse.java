@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDataIngestionJobResponse {
@@ -12,6 +13,7 @@ public class StartDataIngestionJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartDataIngestionJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartDataIngestionJobResponse {
      */
     
     public Object conflictException;
+
     public StartDataIngestionJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartDataIngestionJobResponse {
     
     
     public String contentType;
+
     public StartDataIngestionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartDataIngestionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartDataIngestionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartDataIngestionJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartDataIngestionJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartDataIngestionJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartDataIngestionJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartDataIngestionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDataIngestionJobResponse startDataIngestionJobResponse;
+
     public StartDataIngestionJobResponse withStartDataIngestionJobResponse(org.openapis.openapi.models.shared.StartDataIngestionJobResponse startDataIngestionJobResponse) {
         this.startDataIngestionJobResponse = startDataIngestionJobResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartDataIngestionJobResponse {
     
     
     public Integer statusCode;
+
     public StartDataIngestionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartDataIngestionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDataIngestionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartDataIngestionJobResponse {
      */
     
     public Object throttlingException;
+
     public StartDataIngestionJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartDataIngestionJobResponse {
      */
     
     public Object validationException;
+
     public StartDataIngestionJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartDataIngestionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

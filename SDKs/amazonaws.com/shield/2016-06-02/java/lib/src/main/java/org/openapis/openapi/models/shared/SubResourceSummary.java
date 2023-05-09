@@ -15,6 +15,7 @@ public class SubResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackVectors")
     public SummarizedAttackVector[] attackVectors;
+
     public SubResourceSummary withAttackVectors(SummarizedAttackVector[] attackVectors) {
         this.attackVectors = attackVectors;
         return this;
@@ -23,6 +24,7 @@ public class SubResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Counters")
     public SummarizedCounter[] counters;
+
     public SubResourceSummary withCounters(SummarizedCounter[] counters) {
         this.counters = counters;
         return this;
@@ -31,6 +33,7 @@ public class SubResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public SubResourceSummary withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class SubResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SubResourceTypeEnum type;
+
     public SubResourceSummary withType(SubResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SubResourceSummary(){}
 }

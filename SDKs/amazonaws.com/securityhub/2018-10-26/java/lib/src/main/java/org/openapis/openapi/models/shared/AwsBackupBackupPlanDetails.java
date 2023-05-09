@@ -15,6 +15,7 @@ public class AwsBackupBackupPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlan")
     public AwsBackupBackupPlanBackupPlanDetails backupPlan;
+
     public AwsBackupBackupPlanDetails withBackupPlan(AwsBackupBackupPlanBackupPlanDetails backupPlan) {
         this.backupPlan = backupPlan;
         return this;
@@ -23,6 +24,7 @@ public class AwsBackupBackupPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlanArn")
     public String backupPlanArn;
+
     public AwsBackupBackupPlanDetails withBackupPlanArn(String backupPlanArn) {
         this.backupPlanArn = backupPlanArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsBackupBackupPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlanId")
     public String backupPlanId;
+
     public AwsBackupBackupPlanDetails withBackupPlanId(String backupPlanId) {
         this.backupPlanId = backupPlanId;
         return this;
@@ -39,9 +42,11 @@ public class AwsBackupBackupPlanDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public AwsBackupBackupPlanDetails withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public AwsBackupBackupPlanDetails(){}
 }

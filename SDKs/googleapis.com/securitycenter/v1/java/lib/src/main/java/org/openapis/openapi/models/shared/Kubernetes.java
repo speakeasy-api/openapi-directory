@@ -13,69 +13,76 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Kubernetes {
     /**
-     * Provides information on any Kubernetes access reviews (i.e. privilege checks) relevant to the finding.
+     * Provides information on any Kubernetes access reviews (privilege checks) relevant to the finding.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessReviews")
     public AccessReview[] accessReviews;
+
     public Kubernetes withAccessReviews(AccessReview[] accessReviews) {
         this.accessReviews = accessReviews;
         return this;
     }
     
     /**
-     * Provides Kubernetes role binding information for findings that involve RoleBindings or ClusterRoleBindings.
+     * Provides Kubernetes role binding information for findings that involve [RoleBindings or ClusterRoleBindings](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public GoogleCloudSecuritycenterV1Binding[] bindings;
+
     public Kubernetes withBindings(GoogleCloudSecuritycenterV1Binding[] bindings) {
         this.bindings = bindings;
         return this;
     }
     
     /**
-     * GKE Node Pools associated with the finding. This field will contain NodePool information for each Node, when it is available.
+     * GKE [node pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools) associated with the finding. This field contains node pool information for each node, when it is available.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePools")
     public NodePool[] nodePools;
+
     public Kubernetes withNodePools(NodePool[] nodePools) {
         this.nodePools = nodePools;
         return this;
     }
     
     /**
-     * Provides Kubernetes Node information.
+     * Provides Kubernetes [node](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture#nodes) information.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public Node[] nodes;
+
     public Kubernetes withNodes(Node[] nodes) {
         this.nodes = nodes;
         return this;
     }
     
     /**
-     * Kubernetes Pods associated with the finding. This field will contain Pod records for each container that is owned by a Pod.
+     * Kubernetes [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) associated with the finding. This field contains Pod records for each container that is owned by a Pod.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pods")
     public Pod[] pods;
+
     public Kubernetes withPods(Pod[] pods) {
         this.pods = pods;
         return this;
     }
     
     /**
-     * Provides Kubernetes role information for findings that involve Roles or ClusterRoles.
+     * Provides Kubernetes role information for findings that involve [Roles or ClusterRoles](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public Role[] roles;
+
     public Kubernetes withRoles(Role[] roles) {
         this.roles = roles;
         return this;
     }
     
+    public Kubernetes(){}
 }

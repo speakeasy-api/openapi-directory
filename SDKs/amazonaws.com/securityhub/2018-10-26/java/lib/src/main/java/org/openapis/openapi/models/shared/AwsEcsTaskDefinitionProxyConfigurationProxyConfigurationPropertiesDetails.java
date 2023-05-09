@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionProxyConfigurationProxyConfigurationPropertiesD
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsTaskDefinitionProxyConfigurationProxyConfigurationPropertiesDetails withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionProxyConfigurationProxyConfigurationPropertiesD
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsEcsTaskDefinitionProxyConfigurationProxyConfigurationPropertiesDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsEcsTaskDefinitionProxyConfigurationProxyConfigurationPropertiesDetails(){}
 }

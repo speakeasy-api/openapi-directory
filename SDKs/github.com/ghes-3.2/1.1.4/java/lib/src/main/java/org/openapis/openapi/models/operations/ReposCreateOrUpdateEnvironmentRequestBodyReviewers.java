@@ -15,6 +15,7 @@ public class ReposCreateOrUpdateEnvironmentRequestBodyReviewers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ReposCreateOrUpdateEnvironmentRequestBodyReviewers withId(Long id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class ReposCreateOrUpdateEnvironmentRequestBodyReviewers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public org.openapis.openapi.models.shared.DeploymentReviewerTypeEnum type;
+
     public ReposCreateOrUpdateEnvironmentRequestBodyReviewers withType(org.openapis.openapi.models.shared.DeploymentReviewerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReposCreateOrUpdateEnvironmentRequestBodyReviewers(){}
 }

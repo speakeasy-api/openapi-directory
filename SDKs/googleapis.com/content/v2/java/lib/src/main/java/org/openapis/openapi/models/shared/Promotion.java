@@ -12,6 +12,7 @@ public class Promotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionAmount")
     public Amount promotionAmount;
+
     public Promotion withPromotionAmount(Amount promotionAmount) {
         this.promotionAmount = promotionAmount;
         return this;
@@ -23,9 +24,11 @@ public class Promotion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotionId")
     public String promotionId;
+
     public Promotion withPromotionId(String promotionId) {
         this.promotionId = promotionId;
         return this;
     }
     
+    public Promotion(){}
 }

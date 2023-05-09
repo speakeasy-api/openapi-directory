@@ -15,6 +15,7 @@ public class ModifyInactiveCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public ModifyInactiveCollaborator withAction(String action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class ModifyInactiveCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lead_id")
     public Integer leadId;
+
     public ModifyInactiveCollaborator withLeadId(Integer leadId) {
         this.leadId = leadId;
         return this;
@@ -31,9 +33,11 @@ public class ModifyInactiveCollaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public ModifyInactiveCollaborator withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ModifyInactiveCollaborator(){}
 }

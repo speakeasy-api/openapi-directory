@@ -15,6 +15,7 @@ public class ListPageResolutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPageResolutionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListPageResolutionsResult {
     
     @JsonProperty("PageResolutions")
     public ResolutionContact[] pageResolutions;
+
     public ListPageResolutionsResult withPageResolutions(ResolutionContact[] pageResolutions) {
         this.pageResolutions = pageResolutions;
         return this;
     }
     
+    public ListPageResolutionsResult(@JsonProperty("PageResolutions") ResolutionContact[] pageResolutions) {
+        this.pageResolutions = pageResolutions;
+  }
 }

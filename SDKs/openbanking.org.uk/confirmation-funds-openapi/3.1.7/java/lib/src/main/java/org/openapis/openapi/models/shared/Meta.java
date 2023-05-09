@@ -27,6 +27,7 @@ public class Meta {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstAvailableDateTime")
     public OffsetDateTime firstAvailableDateTime;
+
     public Meta withFirstAvailableDateTime(OffsetDateTime firstAvailableDateTime) {
         this.firstAvailableDateTime = firstAvailableDateTime;
         return this;
@@ -42,6 +43,7 @@ public class Meta {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAvailableDateTime")
     public OffsetDateTime lastAvailableDateTime;
+
     public Meta withLastAvailableDateTime(OffsetDateTime lastAvailableDateTime) {
         this.lastAvailableDateTime = lastAvailableDateTime;
         return this;
@@ -50,9 +52,11 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPages")
     public Integer totalPages;
+
     public Meta withTotalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public Meta(){}
 }

@@ -56,12 +56,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CitiesGetv1V1CitiesGetResponse res = new org.openapis.openapi.models.operations.CitiesGetv1V1CitiesGetResponse() {{
+        org.openapis.openapi.models.operations.CitiesGetv1V1CitiesGetResponse res = new org.openapis.openapi.models.operations.CitiesGetv1V1CitiesGetResponse(contentType, httpRes.statusCode()) {{
             openAQCitiesResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CountriesGetV1CountriesCountryIdGetResponse res = new org.openapis.openapi.models.operations.CountriesGetV1CountriesCountryIdGetResponse() {{
+        org.openapis.openapi.models.operations.CountriesGetV1CountriesCountryIdGetResponse res = new org.openapis.openapi.models.operations.CountriesGetV1CountriesCountryIdGetResponse(contentType, httpRes.statusCode()) {{
             openAQCountriesResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -160,12 +156,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CountriesGetv1V1CountriesGetResponse res = new org.openapis.openapi.models.operations.CountriesGetv1V1CountriesGetResponse() {{
+        org.openapis.openapi.models.operations.CountriesGetv1V1CountriesGetResponse res = new org.openapis.openapi.models.operations.CountriesGetv1V1CountriesGetResponse(contentType, httpRes.statusCode()) {{
             openAQCountriesResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,12 +206,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LatestV1GetV1LatestLocationIdGetResponse res = new org.openapis.openapi.models.operations.LatestV1GetV1LatestLocationIdGetResponse() {{
+        org.openapis.openapi.models.operations.LatestV1GetV1LatestLocationIdGetResponse res = new org.openapis.openapi.models.operations.LatestV1GetV1LatestLocationIdGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -264,12 +256,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LatestV1GetV1LatestGetResponse res = new org.openapis.openapi.models.operations.LatestV1GetV1LatestGetResponse() {{
+        org.openapis.openapi.models.operations.LatestV1GetV1LatestGetResponse res = new org.openapis.openapi.models.operations.LatestV1GetV1LatestGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -316,12 +306,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Locationsv1GetV1LocationsLocationIdGetResponse res = new org.openapis.openapi.models.operations.Locationsv1GetV1LocationsLocationIdGetResponse() {{
+        org.openapis.openapi.models.operations.Locationsv1GetV1LocationsLocationIdGetResponse res = new org.openapis.openapi.models.operations.Locationsv1GetV1LocationsLocationIdGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -368,12 +356,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Locationsv1GetV1LocationsGetResponse res = new org.openapis.openapi.models.operations.Locationsv1GetV1LocationsGetResponse() {{
+        org.openapis.openapi.models.operations.Locationsv1GetV1LocationsGetResponse res = new org.openapis.openapi.models.operations.Locationsv1GetV1LocationsGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,12 +406,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeasurementsGetV1V1MeasurementsGetResponse res = new org.openapis.openapi.models.operations.MeasurementsGetV1V1MeasurementsGetResponse() {{
+        org.openapis.openapi.models.operations.MeasurementsGetV1V1MeasurementsGetResponse res = new org.openapis.openapi.models.operations.MeasurementsGetV1V1MeasurementsGetResponse(contentType, httpRes.statusCode()) {{
             measurementsGetV1V1MeasurementsGet200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -472,12 +456,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParametersGetv1V1ParametersGetResponse res = new org.openapis.openapi.models.operations.ParametersGetv1V1ParametersGetResponse() {{
+        org.openapis.openapi.models.operations.ParametersGetv1V1ParametersGetResponse res = new org.openapis.openapi.models.operations.ParametersGetv1V1ParametersGetResponse(contentType, httpRes.statusCode()) {{
             openAQParametersResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -524,12 +506,10 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SourcesV1GetV1SourcesGetResponse res = new org.openapis.openapi.models.operations.SourcesV1GetV1SourcesGetResponse() {{
+        org.openapis.openapi.models.operations.SourcesV1GetV1SourcesGetResponse res = new org.openapis.openapi.models.operations.SourcesV1GetV1SourcesGetResponse(contentType, httpRes.statusCode()) {{
             openAQResult = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

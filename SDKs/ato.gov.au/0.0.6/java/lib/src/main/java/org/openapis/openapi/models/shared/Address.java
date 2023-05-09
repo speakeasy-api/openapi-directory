@@ -23,6 +23,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -34,6 +35,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Address withCountry(String country) {
         this.country = country;
         return this;
@@ -47,6 +49,7 @@ public class Address {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public Address withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -58,6 +61,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Address withId(String id) {
         this.id = id;
         return this;
@@ -69,6 +73,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line1")
     public String line1;
+
     public Address withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -80,6 +85,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public Address withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -91,6 +97,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line3")
     public String line3;
+
     public Address withLine3(String line3) {
         this.line3 = line3;
         return this;
@@ -102,6 +109,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Address withName(String name) {
         this.name = name;
         return this;
@@ -113,6 +121,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -124,6 +133,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suburb")
     public String suburb;
+
     public Address withSuburb(String suburb) {
         this.suburb = suburb;
         return this;
@@ -137,9 +147,11 @@ public class Address {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public Address withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public Address(){}
 }

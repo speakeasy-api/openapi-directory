@@ -61,11 +61,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherUsersCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherUsersCreateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersCreateResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherUsersDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherUsersDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherUsersListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherUsersListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersListResponse(contentType, httpRes.statusCode()) {{
             listUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherUsersPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherUsersPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherUsersPatchResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

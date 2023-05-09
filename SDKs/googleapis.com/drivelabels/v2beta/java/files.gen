@@ -160,4 +160,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleAppsDriveLabelsV2beta
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAppsDriveLabelsV2betaIntegerLimits.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAppsDriveLabelsV2betaDateLimits.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAppsDriveLabelsV2betaUserCapabilities.java
+docs/sdk/README.md
+docs/labels/README.md
+docs/limits/README.md
+docs/users/README.md
 USAGE.md

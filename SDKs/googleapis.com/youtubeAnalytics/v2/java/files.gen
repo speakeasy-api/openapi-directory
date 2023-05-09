@@ -112,4 +112,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GroupContentDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListGroupsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResultTableColumnHeader.java
+docs/sdk/README.md
+docs/groupitems/README.md
+docs/groups/README.md
+docs/reports/README.md
 USAGE.md

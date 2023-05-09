@@ -15,6 +15,7 @@ public class EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public EncryptionConfig withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -23,6 +24,7 @@ public class EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EncryptionStatusEnum status;
+
     public EncryptionConfig withStatus(EncryptionStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EncryptionTypeEnum type;
+
     public EncryptionConfig withType(EncryptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EncryptionConfig(){}
 }

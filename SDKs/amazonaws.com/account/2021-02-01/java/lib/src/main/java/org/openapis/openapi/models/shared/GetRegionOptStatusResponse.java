@@ -15,6 +15,7 @@ public class GetRegionOptStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionName")
     public String regionName;
+
     public GetRegionOptStatusResponse withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
@@ -23,9 +24,11 @@ public class GetRegionOptStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionOptStatus")
     public RegionOptStatusEnum regionOptStatus;
+
     public GetRegionOptStatusResponse withRegionOptStatus(RegionOptStatusEnum regionOptStatus) {
         this.regionOptStatus = regionOptStatus;
         return this;
     }
     
+    public GetRegionOptStatusResponse(){}
 }

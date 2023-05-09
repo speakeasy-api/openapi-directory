@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersSelectedUserSshKeysKeyIdResponse {
     
     public String contentType;
+
     public GetUsersSelectedUserSshKeysKeyIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersSelectedUserSshKeysKeyIdResponse {
     
     
     public Integer statusCode;
+
     public GetUsersSelectedUserSshKeysKeyIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersSelectedUserSshKeysKeyIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersSelectedUserSshKeysKeyIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetUsersSelectedUserSshKeysKeyIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetUsersSelectedUserSshKeysKeyIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersSelectedUserSshKeysKeyIdResponse {
      */
     
     public java.util.Map<String, Object> sshAccountKey;
+
     public GetUsersSelectedUserSshKeysKeyIdResponse withSshAccountKey(java.util.Map<String, Object> sshAccountKey) {
         this.sshAccountKey = sshAccountKey;
         return this;
     }
     
+    public GetUsersSelectedUserSshKeysKeyIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

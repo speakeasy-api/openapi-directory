@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnvironmentVariable {
     @JsonProperty("Key")
     public String key;
+
     public EnvironmentVariable withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +23,7 @@ public class EnvironmentVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Secure")
     public Boolean secure;
+
     public EnvironmentVariable withSecure(Boolean secure) {
         this.secure = secure;
         return this;
@@ -29,9 +31,14 @@ public class EnvironmentVariable {
     
     @JsonProperty("Value")
     public String value;
+
     public EnvironmentVariable withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EnvironmentVariable(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

@@ -18,6 +18,7 @@ public class PipelineReadyCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public PipelineReadyCondition withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -29,9 +30,11 @@ public class PipelineReadyCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public PipelineReadyCondition withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public PipelineReadyCondition(){}
 }

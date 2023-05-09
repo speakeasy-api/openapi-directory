@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETProvisionIpamPoolCidrCidrAuthorizationContext {
     @SpeakeasyMetadata("queryParam:name=Message")
     public String message;
+
     public GETProvisionIpamPoolCidrCidrAuthorizationContext withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,11 @@ public class GETProvisionIpamPoolCidrCidrAuthorizationContext {
     
     @SpeakeasyMetadata("queryParam:name=Signature")
     public String signature;
+
     public GETProvisionIpamPoolCidrCidrAuthorizationContext withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public GETProvisionIpamPoolCidrCidrAuthorizationContext(){}
 }

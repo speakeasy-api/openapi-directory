@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveTargetsResponse {
@@ -12,6 +13,7 @@ public class RemoveTargetsResponse {
      */
     
     public Object concurrentModificationException;
+
     public RemoveTargetsResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveTargetsResponse {
     
     
     public String contentType;
+
     public RemoveTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveTargetsResponse {
      */
     
     public Object internalException;
+
     public RemoveTargetsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveTargetsResponse {
      */
     
     public Object managedRuleException;
+
     public RemoveTargetsResponse withManagedRuleException(Object managedRuleException) {
         this.managedRuleException = managedRuleException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveTargetsResponse removeTargetsResponse;
+
     public RemoveTargetsResponse withRemoveTargetsResponse(org.openapis.openapi.models.shared.RemoveTargetsResponse removeTargetsResponse) {
         this.removeTargetsResponse = removeTargetsResponse;
         return this;
@@ -59,6 +65,7 @@ public class RemoveTargetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveTargetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class RemoveTargetsResponse {
     
     
     public Integer statusCode;
+
     public RemoveTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RemoveTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTagsForResourceRequest {
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public ListTagsForResourceRequest withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public ListTagsForResourceRequest(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

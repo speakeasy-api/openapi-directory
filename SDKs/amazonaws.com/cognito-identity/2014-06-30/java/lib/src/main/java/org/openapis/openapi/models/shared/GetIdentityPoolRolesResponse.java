@@ -15,6 +15,7 @@ public class GetIdentityPoolRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public GetIdentityPoolRolesResponse withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -23,6 +24,7 @@ public class GetIdentityPoolRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleMappings")
     public java.util.Map<String, RoleMapping> roleMappings;
+
     public GetIdentityPoolRolesResponse withRoleMappings(java.util.Map<String, RoleMapping> roleMappings) {
         this.roleMappings = roleMappings;
         return this;
@@ -31,9 +33,11 @@ public class GetIdentityPoolRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Roles")
     public java.util.Map<String, String> roles;
+
     public GetIdentityPoolRolesResponse withRoles(java.util.Map<String, String> roles) {
         this.roles = roles;
         return this;
     }
     
+    public GetIdentityPoolRolesResponse(){}
 }

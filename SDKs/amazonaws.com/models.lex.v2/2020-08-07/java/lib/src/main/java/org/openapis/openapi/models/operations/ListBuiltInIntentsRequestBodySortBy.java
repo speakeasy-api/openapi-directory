@@ -15,6 +15,7 @@ public class ListBuiltInIntentsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public org.openapis.openapi.models.shared.BuiltInIntentSortAttributeEnum attribute;
+
     public ListBuiltInIntentsRequestBodySortBy withAttribute(org.openapis.openapi.models.shared.BuiltInIntentSortAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -23,9 +24,11 @@ public class ListBuiltInIntentsRequestBodySortBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public org.openapis.openapi.models.shared.SortOrderEnum order;
+
     public ListBuiltInIntentsRequestBodySortBy withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public ListBuiltInIntentsRequestBodySortBy(){}
 }

@@ -22,6 +22,7 @@ public class MLTransform {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public MLTransform withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -30,6 +31,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public MLTransform withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMetrics")
     public EvaluationMetrics evaluationMetrics;
+
     public MLTransform withEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
         this.evaluationMetrics = evaluationMetrics;
         return this;
@@ -46,6 +49,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlueVersion")
     public String glueVersion;
+
     public MLTransform withGlueVersion(String glueVersion) {
         this.glueVersion = glueVersion;
         return this;
@@ -54,6 +58,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputRecordTables")
     public GlueTable[] inputRecordTables;
+
     public MLTransform withInputRecordTables(GlueTable[] inputRecordTables) {
         this.inputRecordTables = inputRecordTables;
         return this;
@@ -62,6 +67,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelCount")
     public Long labelCount;
+
     public MLTransform withLabelCount(Long labelCount) {
         this.labelCount = labelCount;
         return this;
@@ -72,6 +78,7 @@ public class MLTransform {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedOn")
     public OffsetDateTime lastModifiedOn;
+
     public MLTransform withLastModifiedOn(OffsetDateTime lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -80,6 +87,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCapacity")
     public Double maxCapacity;
+
     public MLTransform withMaxCapacity(Double maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -88,6 +96,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRetries")
     public Long maxRetries;
+
     public MLTransform withMaxRetries(Long maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -96,6 +105,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MLTransform withName(String name) {
         this.name = name;
         return this;
@@ -104,6 +114,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfWorkers")
     public Long numberOfWorkers;
+
     public MLTransform withNumberOfWorkers(Long numberOfWorkers) {
         this.numberOfWorkers = numberOfWorkers;
         return this;
@@ -112,6 +123,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public TransformParameters parameters;
+
     public MLTransform withParameters(TransformParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -120,6 +132,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public MLTransform withRole(String role) {
         this.role = role;
         return this;
@@ -128,6 +141,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public SchemaColumn[] schema;
+
     public MLTransform withSchema(SchemaColumn[] schema) {
         this.schema = schema;
         return this;
@@ -136,6 +150,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TransformStatusTypeEnum status;
+
     public MLTransform withStatus(TransformStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -144,6 +159,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public MLTransform withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -152,6 +168,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformEncryption")
     public TransformEncryption transformEncryption;
+
     public MLTransform withTransformEncryption(TransformEncryption transformEncryption) {
         this.transformEncryption = transformEncryption;
         return this;
@@ -160,6 +177,7 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformId")
     public String transformId;
+
     public MLTransform withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
@@ -168,9 +186,11 @@ public class MLTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerType")
     public WorkerTypeEnum workerType;
+
     public MLTransform withWorkerType(WorkerTypeEnum workerType) {
         this.workerType = workerType;
         return this;
     }
     
+    public MLTransform(){}
 }

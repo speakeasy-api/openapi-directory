@@ -18,6 +18,7 @@ public class JobEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public String[] jobs;
+
     public JobEvent withJobs(String[] jobs) {
         this.jobs = jobs;
         return this;
@@ -29,9 +30,11 @@ public class JobEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public JobEventTypeEnum type;
+
     public JobEvent withType(JobEventTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public JobEvent(){}
 }

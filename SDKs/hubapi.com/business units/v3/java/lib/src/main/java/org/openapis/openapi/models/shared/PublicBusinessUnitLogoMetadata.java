@@ -18,6 +18,7 @@ public class PublicBusinessUnitLogoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoAltText")
     public String logoAltText;
+
     public PublicBusinessUnitLogoMetadata withLogoAltText(String logoAltText) {
         this.logoAltText = logoAltText;
         return this;
@@ -29,6 +30,7 @@ public class PublicBusinessUnitLogoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoUrl")
     public String logoUrl;
+
     public PublicBusinessUnitLogoMetadata withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -40,9 +42,11 @@ public class PublicBusinessUnitLogoMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resizedUrl")
     public String resizedUrl;
+
     public PublicBusinessUnitLogoMetadata withResizedUrl(String resizedUrl) {
         this.resizedUrl = resizedUrl;
         return this;
     }
     
+    public PublicBusinessUnitLogoMetadata(){}
 }

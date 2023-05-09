@@ -12,9 +12,11 @@ public class GetPirateGenerateInsultRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPirateGenerateInsultRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetPirateGenerateInsultRequest(){}
 }

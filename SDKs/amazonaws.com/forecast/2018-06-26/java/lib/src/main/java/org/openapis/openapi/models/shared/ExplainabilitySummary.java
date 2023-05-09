@@ -22,6 +22,7 @@ public class ExplainabilitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ExplainabilitySummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class ExplainabilitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityArn")
     public String explainabilityArn;
+
     public ExplainabilitySummary withExplainabilityArn(String explainabilityArn) {
         this.explainabilityArn = explainabilityArn;
         return this;
@@ -38,6 +40,7 @@ public class ExplainabilitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityConfig")
     public ExplainabilityConfig explainabilityConfig;
+
     public ExplainabilitySummary withExplainabilityConfig(ExplainabilityConfig explainabilityConfig) {
         this.explainabilityConfig = explainabilityConfig;
         return this;
@@ -46,6 +49,7 @@ public class ExplainabilitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityName")
     public String explainabilityName;
+
     public ExplainabilitySummary withExplainabilityName(String explainabilityName) {
         this.explainabilityName = explainabilityName;
         return this;
@@ -56,6 +60,7 @@ public class ExplainabilitySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public ExplainabilitySummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -64,6 +69,7 @@ public class ExplainabilitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ExplainabilitySummary withMessage(String message) {
         this.message = message;
         return this;
@@ -72,6 +78,7 @@ public class ExplainabilitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public ExplainabilitySummary withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -80,9 +87,11 @@ public class ExplainabilitySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ExplainabilitySummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ExplainabilitySummary(){}
 }

@@ -15,6 +15,7 @@ public class SummarizedCounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Average")
     public Double average;
+
     public SummarizedCounter withAverage(Double average) {
         this.average = average;
         return this;
@@ -23,6 +24,7 @@ public class SummarizedCounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Double max;
+
     public SummarizedCounter withMax(Double max) {
         this.max = max;
         return this;
@@ -31,6 +33,7 @@ public class SummarizedCounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("N")
     public Long n;
+
     public SummarizedCounter withN(Long n) {
         this.n = n;
         return this;
@@ -39,6 +42,7 @@ public class SummarizedCounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SummarizedCounter withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class SummarizedCounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sum")
     public Double sum;
+
     public SummarizedCounter withSum(Double sum) {
         this.sum = sum;
         return this;
@@ -55,9 +60,11 @@ public class SummarizedCounter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public SummarizedCounter withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public SummarizedCounter(){}
 }

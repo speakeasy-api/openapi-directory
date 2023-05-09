@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudbillingServicesSkusListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingServicesSkusListSecurityOption1 option1;
+
     public CloudbillingServicesSkusListSecurity withOption1(CloudbillingServicesSkusListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudbillingServicesSkusListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingServicesSkusListSecurityOption2 option2;
+
     public CloudbillingServicesSkusListSecurity withOption2(CloudbillingServicesSkusListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class CloudbillingServicesSkusListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudbillingServicesSkusListSecurityOption3 option3;
+
     public CloudbillingServicesSkusListSecurity withOption3(CloudbillingServicesSkusListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public CloudbillingServicesSkusListSecurity(){}
 }

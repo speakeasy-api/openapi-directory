@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeRouteTablesResultRouteTables {
     
     public DescribeRouteTablesResultRouteTablesAssociations[] associations;
+
     public DescribeRouteTablesResultRouteTables withAssociations(DescribeRouteTablesResultRouteTablesAssociations[] associations) {
         this.associations = associations;
         return this;
@@ -19,6 +20,7 @@ public class DescribeRouteTablesResultRouteTables {
     
     
     public String ownerId;
+
     public DescribeRouteTablesResultRouteTables withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeRouteTablesResultRouteTables {
     
     
     public DescribeRouteTablesResultRouteTablesPropagatingVgws[] propagatingVgws;
+
     public DescribeRouteTablesResultRouteTables withPropagatingVgws(DescribeRouteTablesResultRouteTablesPropagatingVgws[] propagatingVgws) {
         this.propagatingVgws = propagatingVgws;
         return this;
@@ -33,6 +36,7 @@ public class DescribeRouteTablesResultRouteTables {
     
     
     public String routeTableId;
+
     public DescribeRouteTablesResultRouteTables withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeRouteTablesResultRouteTables {
     
     
     public DescribeRouteTablesResultRouteTablesRoutes[] routes;
+
     public DescribeRouteTablesResultRouteTables withRoutes(DescribeRouteTablesResultRouteTablesRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -47,6 +52,7 @@ public class DescribeRouteTablesResultRouteTables {
     
     
     public DescribeRouteTablesResultRouteTablesTags[] tags;
+
     public DescribeRouteTablesResultRouteTables withTags(DescribeRouteTablesResultRouteTablesTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class DescribeRouteTablesResultRouteTables {
     
     
     public String vpcId;
+
     public DescribeRouteTablesResultRouteTables withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeRouteTablesResultRouteTables(){}
 }

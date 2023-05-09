@@ -16,56 +16,53 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.SendSSHPublicKeyXAmzTargetEnum;
 import org.openapis.openapi.models.operations.SendSSHPublicKeyRequest;
 import org.openapis.openapi.models.operations.SendSSHPublicKeyResponse;
+import org.openapis.openapi.models.operations.SendSSHPublicKeyXAmzTargetEnum;
+import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.shared.SendSSHPublicKeyRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            SendSSHPublicKeyRequest req = new SendSSHPublicKeyRequest() {{
-                sendSSHPublicKeyRequest = new SendSSHPublicKeyRequest() {{
-                    availabilityZone = "corrupti";
-                    instanceId = "provident";
-                    instanceOSUser = "distinctio";
-                    sshPublicKey = "quibusdam";
-                }};
-                xAmzAlgorithm = "unde";
-                xAmzContentSha256 = "nulla";
-                xAmzCredential = "corrupti";
-                xAmzDate = "illum";
-                xAmzSecurityToken = "vel";
-                xAmzSignature = "error";
-                xAmzSignedHeaders = "deserunt";
-                xAmzTarget = "AWSEC2InstanceConnectService.SendSSHPublicKey";
-            }}            
+            SendSSHPublicKeyRequest req = new SendSSHPublicKeyRequest(                new SendSSHPublicKeyRequest("provident", "distinctio", "quibusdam") {{
+                                availabilityZone = "unde";
+                            }};, SendSSHPublicKeyXAmzTargetEnum.AWSEC2_INSTANCE_CONNECT_SERVICE_SEND_SSH_PUBLIC_KEY) {{
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+            }};            
 
             SendSSHPublicKeyResponse res = sdk.sendSSHPublicKey(req);
 
-            if (res.sendSSHPublicKeyResponse.isPresent()) {
+            if (res.sendSSHPublicKeyResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `sendSSHPublicKey` - Pushes an SSH public key to the specified EC2 instance for use by the specified user. The key remains for 60 seconds. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User Guide</i>.
-* `sendSerialConsoleSSHPublicKey` - Pushes an SSH public key to the specified EC2 instance. The key remains for 60 seconds, which gives you 60 seconds to establish a serial console connection to the instance using SSH. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the <i>Amazon EC2 User Guide</i>.
+* [sendSSHPublicKey](docs/sdk/README.md#sendsshpublickey) - Pushes an SSH public key to the specified EC2 instance for use by the specified user. The key remains for 60 seconds. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User Guide</i>.
+* [sendSerialConsoleSSHPublicKey](docs/sdk/README.md#sendserialconsolesshpublickey) - Pushes an SSH public key to the specified EC2 instance. The key remains for 60 seconds, which gives you 60 seconds to establish a serial console connection to the instance using SSH. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the <i>Amazon EC2 User Guide</i>.
 <!-- End SDK Available Operations -->
 
 ### Maturity

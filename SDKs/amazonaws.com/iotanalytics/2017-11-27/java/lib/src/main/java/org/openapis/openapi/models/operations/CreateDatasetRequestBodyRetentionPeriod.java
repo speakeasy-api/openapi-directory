@@ -15,6 +15,7 @@ public class CreateDatasetRequestBodyRetentionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfDays")
     public Long numberOfDays;
+
     public CreateDatasetRequestBodyRetentionPeriod withNumberOfDays(Long numberOfDays) {
         this.numberOfDays = numberOfDays;
         return this;
@@ -23,9 +24,11 @@ public class CreateDatasetRequestBodyRetentionPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited")
     public Boolean unlimited;
+
     public CreateDatasetRequestBodyRetentionPeriod withUnlimited(Boolean unlimited) {
         this.unlimited = unlimited;
         return this;
     }
     
+    public CreateDatasetRequestBodyRetentionPeriod(){}
 }

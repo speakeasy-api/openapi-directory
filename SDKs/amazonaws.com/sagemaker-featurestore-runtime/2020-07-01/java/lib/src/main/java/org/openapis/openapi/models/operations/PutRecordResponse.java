@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRecordResponse {
@@ -12,6 +13,7 @@ public class PutRecordResponse {
      */
     
     public Object accessForbidden;
+
     public PutRecordResponse withAccessForbidden(Object accessForbidden) {
         this.accessForbidden = accessForbidden;
         return this;
@@ -19,6 +21,7 @@ public class PutRecordResponse {
     
     
     public String contentType;
+
     public PutRecordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutRecordResponse {
      */
     
     public Object internalFailure;
+
     public PutRecordResponse withInternalFailure(Object internalFailure) {
         this.internalFailure = internalFailure;
         return this;
@@ -39,6 +43,7 @@ public class PutRecordResponse {
      */
     
     public Object serviceUnavailable;
+
     public PutRecordResponse withServiceUnavailable(Object serviceUnavailable) {
         this.serviceUnavailable = serviceUnavailable;
         return this;
@@ -46,6 +51,7 @@ public class PutRecordResponse {
     
     
     public Integer statusCode;
+
     public PutRecordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutRecordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRecordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutRecordResponse {
      */
     
     public Object validationError;
+
     public PutRecordResponse withValidationError(Object validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public PutRecordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

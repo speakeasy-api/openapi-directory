@@ -18,6 +18,7 @@ public class Sustainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energyEfficiency")
     public EnergyEfficiency energyEfficiency;
+
     public Sustainability withEnergyEfficiency(EnergyEfficiency energyEfficiency) {
         this.energyEfficiency = energyEfficiency;
         return this;
@@ -29,6 +30,7 @@ public class Sustainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sustainabilityCertifications")
     public SustainabilityCertifications sustainabilityCertifications;
+
     public Sustainability withSustainabilityCertifications(SustainabilityCertifications sustainabilityCertifications) {
         this.sustainabilityCertifications = sustainabilityCertifications;
         return this;
@@ -40,6 +42,7 @@ public class Sustainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sustainableSourcing")
     public SustainableSourcing sustainableSourcing;
+
     public Sustainability withSustainableSourcing(SustainableSourcing sustainableSourcing) {
         this.sustainableSourcing = sustainableSourcing;
         return this;
@@ -51,6 +54,7 @@ public class Sustainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wasteReduction")
     public WasteReduction wasteReduction;
+
     public Sustainability withWasteReduction(WasteReduction wasteReduction) {
         this.wasteReduction = wasteReduction;
         return this;
@@ -62,9 +66,11 @@ public class Sustainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waterConservation")
     public WaterConservation waterConservation;
+
     public Sustainability withWaterConservation(WaterConservation waterConservation) {
         this.waterConservation = waterConservation;
         return this;
     }
     
+    public Sustainability(){}
 }

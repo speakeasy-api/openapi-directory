@@ -15,6 +15,7 @@ public class Coprg504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Coprg504ApplicationJSONErrorEnum error;
+
     public Coprg504ApplicationJSON withError(Coprg504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Coprg504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Coprg504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Coprg504ApplicationJSON withErrorDescription(Coprg504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Coprg504ApplicationJSON(){}
 }

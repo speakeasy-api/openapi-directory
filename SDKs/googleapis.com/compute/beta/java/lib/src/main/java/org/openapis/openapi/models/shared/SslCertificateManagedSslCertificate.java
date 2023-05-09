@@ -18,6 +18,7 @@ public class SslCertificateManagedSslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainStatus")
     public java.util.Map<String, SslCertificateManagedSslCertificateDomainStatusEnum> domainStatus;
+
     public SslCertificateManagedSslCertificate withDomainStatus(java.util.Map<String, SslCertificateManagedSslCertificateDomainStatusEnum> domainStatus) {
         this.domainStatus = domainStatus;
         return this;
@@ -29,6 +30,7 @@ public class SslCertificateManagedSslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public SslCertificateManagedSslCertificate withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -40,9 +42,11 @@ public class SslCertificateManagedSslCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SslCertificateManagedSslCertificateStatusEnum status;
+
     public SslCertificateManagedSslCertificate withStatus(SslCertificateManagedSslCertificateStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SslCertificateManagedSslCertificate(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayVirtualInterfaceGroupsResult {
     
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups[] localGatewayVirtualInterfaceGroups;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResult withLocalGatewayVirtualInterfaceGroups(DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups[] localGatewayVirtualInterfaceGroups) {
         this.localGatewayVirtualInterfaceGroups = localGatewayVirtualInterfaceGroups;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsResult {
     
     
     public String nextToken;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLocalGatewayVirtualInterfaceGroupsResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateHomeRegionControlResponse {
@@ -12,6 +13,7 @@ public class CreateHomeRegionControlResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateHomeRegionControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateHomeRegionControlResponse {
     
     
     public String contentType;
+
     public CreateHomeRegionControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateHomeRegionControlResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateHomeRegionControlResult createHomeRegionControlResult;
+
     public CreateHomeRegionControlResponse withCreateHomeRegionControlResult(org.openapis.openapi.models.shared.CreateHomeRegionControlResult createHomeRegionControlResult) {
         this.createHomeRegionControlResult = createHomeRegionControlResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateHomeRegionControlResponse {
      */
     
     public Object dryRunOperation;
+
     public CreateHomeRegionControlResponse withDryRunOperation(Object dryRunOperation) {
         this.dryRunOperation = dryRunOperation;
         return this;
@@ -49,6 +54,7 @@ public class CreateHomeRegionControlResponse {
      */
     
     public Object internalServerError;
+
     public CreateHomeRegionControlResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class CreateHomeRegionControlResponse {
      */
     
     public Object invalidInputException;
+
     public CreateHomeRegionControlResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class CreateHomeRegionControlResponse {
     
     
     public Integer statusCode;
+
     public CreateHomeRegionControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateHomeRegionControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateHomeRegionControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateHomeRegionControlResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateHomeRegionControlResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class CreateHomeRegionControlResponse {
      */
     
     public Object throttlingException;
+
     public CreateHomeRegionControlResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateHomeRegionControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

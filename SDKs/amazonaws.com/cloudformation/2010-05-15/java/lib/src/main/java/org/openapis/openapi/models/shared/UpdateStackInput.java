@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateStackInput - The input for an &lt;a&gt;UpdateStack&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateStackInput {
     
     public CapabilityEnum[] capabilities;
+
     public UpdateStackInput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -19,6 +20,7 @@ public class UpdateStackInput {
     
     
     public String clientRequestToken;
+
     public UpdateStackInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +28,7 @@ public class UpdateStackInput {
     
     
     public Boolean disableRollback;
+
     public UpdateStackInput withDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
@@ -33,6 +36,7 @@ public class UpdateStackInput {
     
     
     public String[] notificationARNs;
+
     public UpdateStackInput withNotificationARNs(String[] notificationARNs) {
         this.notificationARNs = notificationARNs;
         return this;
@@ -40,6 +44,7 @@ public class UpdateStackInput {
     
     
     public Parameter[] parameters;
+
     public UpdateStackInput withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -47,6 +52,7 @@ public class UpdateStackInput {
     
     
     public String[] resourceTypes;
+
     public UpdateStackInput withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -54,6 +60,7 @@ public class UpdateStackInput {
     
     
     public String roleARN;
+
     public UpdateStackInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -61,6 +68,7 @@ public class UpdateStackInput {
     
     
     public RollbackConfiguration rollbackConfiguration;
+
     public UpdateStackInput withRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
         this.rollbackConfiguration = rollbackConfiguration;
         return this;
@@ -68,6 +76,7 @@ public class UpdateStackInput {
     
     
     public String stackName;
+
     public UpdateStackInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -75,6 +84,7 @@ public class UpdateStackInput {
     
     
     public String stackPolicyBody;
+
     public UpdateStackInput withStackPolicyBody(String stackPolicyBody) {
         this.stackPolicyBody = stackPolicyBody;
         return this;
@@ -82,6 +92,7 @@ public class UpdateStackInput {
     
     
     public String stackPolicyDuringUpdateBody;
+
     public UpdateStackInput withStackPolicyDuringUpdateBody(String stackPolicyDuringUpdateBody) {
         this.stackPolicyDuringUpdateBody = stackPolicyDuringUpdateBody;
         return this;
@@ -89,6 +100,7 @@ public class UpdateStackInput {
     
     
     public String stackPolicyDuringUpdateURL;
+
     public UpdateStackInput withStackPolicyDuringUpdateURL(String stackPolicyDuringUpdateURL) {
         this.stackPolicyDuringUpdateURL = stackPolicyDuringUpdateURL;
         return this;
@@ -96,6 +108,7 @@ public class UpdateStackInput {
     
     
     public String stackPolicyURL;
+
     public UpdateStackInput withStackPolicyURL(String stackPolicyURL) {
         this.stackPolicyURL = stackPolicyURL;
         return this;
@@ -103,6 +116,7 @@ public class UpdateStackInput {
     
     
     public Tag[] tags;
+
     public UpdateStackInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -110,6 +124,7 @@ public class UpdateStackInput {
     
     
     public String templateBody;
+
     public UpdateStackInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -117,6 +132,7 @@ public class UpdateStackInput {
     
     
     public String templateURL;
+
     public UpdateStackInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
@@ -124,9 +140,13 @@ public class UpdateStackInput {
     
     
     public Boolean usePreviousTemplate;
+
     public UpdateStackInput withUsePreviousTemplate(Boolean usePreviousTemplate) {
         this.usePreviousTemplate = usePreviousTemplate;
         return this;
     }
     
+    public UpdateStackInput(@JsonProperty("StackName") String stackName) {
+        this.stackName = stackName;
+  }
 }

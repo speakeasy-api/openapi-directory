@@ -12,9 +12,11 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPoi withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPoi(){}
 }

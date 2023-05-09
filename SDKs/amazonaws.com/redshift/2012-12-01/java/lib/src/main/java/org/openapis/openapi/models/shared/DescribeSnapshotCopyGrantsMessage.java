@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotCopyGrantsMessage {
     
     public String marker;
+
     public DescribeSnapshotCopyGrantsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSnapshotCopyGrantsMessage {
     
     
     public Long maxRecords;
+
     public DescribeSnapshotCopyGrantsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSnapshotCopyGrantsMessage {
     
     
     public String snapshotCopyGrantName;
+
     public DescribeSnapshotCopyGrantsMessage withSnapshotCopyGrantName(String snapshotCopyGrantName) {
         this.snapshotCopyGrantName = snapshotCopyGrantName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSnapshotCopyGrantsMessage {
     
     
     public String[] tagKeys;
+
     public DescribeSnapshotCopyGrantsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -40,9 +44,11 @@ public class DescribeSnapshotCopyGrantsMessage {
     
     
     public String[] tagValues;
+
     public DescribeSnapshotCopyGrantsMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeSnapshotCopyGrantsMessage(){}
 }

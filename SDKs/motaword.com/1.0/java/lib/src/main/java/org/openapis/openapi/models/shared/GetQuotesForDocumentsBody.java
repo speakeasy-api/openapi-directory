@@ -12,9 +12,11 @@ public class GetQuotesForDocumentsBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public Long[] files;
+
     public GetQuotesForDocumentsBody withFiles(Long[] files) {
         this.files = files;
         return this;
     }
     
+    public GetQuotesForDocumentsBody(){}
 }

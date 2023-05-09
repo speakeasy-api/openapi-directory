@@ -12,6 +12,7 @@ public class PostCompileRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PostCompileRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +23,7 @@ public class PostCompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
     public String explain;
+
     public PostCompileRequest withExplain(String explain) {
         this.explain = explain;
         return this;
@@ -34,6 +36,7 @@ public class PostCompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument")
     public Boolean instrument;
+
     public PostCompileRequest withInstrument(Boolean instrument) {
         this.instrument = instrument;
         return this;
@@ -44,6 +47,7 @@ public class PostCompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public Boolean metrics;
+
     public PostCompileRequest withMetrics(Boolean metrics) {
         this.metrics = metrics;
         return this;
@@ -54,9 +58,11 @@ public class PostCompileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public PostCompileRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
     }
     
+    public PostCompileRequest(){}
 }

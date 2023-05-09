@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WithdrawByoipCidrResponse {
@@ -12,6 +13,7 @@ public class WithdrawByoipCidrResponse {
      */
     
     public Object accessDeniedException;
+
     public WithdrawByoipCidrResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class WithdrawByoipCidrResponse {
      */
     
     public Object byoipCidrNotFoundException;
+
     public WithdrawByoipCidrResponse withByoipCidrNotFoundException(Object byoipCidrNotFoundException) {
         this.byoipCidrNotFoundException = byoipCidrNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class WithdrawByoipCidrResponse {
     
     
     public String contentType;
+
     public WithdrawByoipCidrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class WithdrawByoipCidrResponse {
      */
     
     public Object incorrectCidrStateException;
+
     public WithdrawByoipCidrResponse withIncorrectCidrStateException(Object incorrectCidrStateException) {
         this.incorrectCidrStateException = incorrectCidrStateException;
         return this;
@@ -49,6 +54,7 @@ public class WithdrawByoipCidrResponse {
      */
     
     public Object internalServiceErrorException;
+
     public WithdrawByoipCidrResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -59,6 +65,7 @@ public class WithdrawByoipCidrResponse {
      */
     
     public Object invalidArgumentException;
+
     public WithdrawByoipCidrResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -66,6 +73,7 @@ public class WithdrawByoipCidrResponse {
     
     
     public Integer statusCode;
+
     public WithdrawByoipCidrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class WithdrawByoipCidrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WithdrawByoipCidrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class WithdrawByoipCidrResponse {
      */
     
     public org.openapis.openapi.models.shared.WithdrawByoipCidrResponse withdrawByoipCidrResponse;
+
     public WithdrawByoipCidrResponse withWithdrawByoipCidrResponse(org.openapis.openapi.models.shared.WithdrawByoipCidrResponse withdrawByoipCidrResponse) {
         this.withdrawByoipCidrResponse = withdrawByoipCidrResponse;
         return this;
     }
     
+    public WithdrawByoipCidrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

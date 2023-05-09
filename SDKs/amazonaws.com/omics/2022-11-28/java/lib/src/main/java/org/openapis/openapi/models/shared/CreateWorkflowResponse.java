@@ -15,6 +15,7 @@ public class CreateWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateWorkflowResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateWorkflowResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class CreateWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorkflowStatusEnum status;
+
     public CreateWorkflowResponse withStatus(WorkflowStatusEnum status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class CreateWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorkflowResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateWorkflowResponse(){}
 }

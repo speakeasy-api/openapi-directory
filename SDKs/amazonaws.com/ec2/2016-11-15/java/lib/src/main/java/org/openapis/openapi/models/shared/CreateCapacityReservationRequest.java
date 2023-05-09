@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class CreateCapacityReservationRequest {
     
     public String availabilityZone;
+
     public CreateCapacityReservationRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -16,6 +18,7 @@ public class CreateCapacityReservationRequest {
     
     
     public String availabilityZoneId;
+
     public CreateCapacityReservationRequest withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -23,6 +26,7 @@ public class CreateCapacityReservationRequest {
     
     
     public String clientToken;
+
     public CreateCapacityReservationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +34,7 @@ public class CreateCapacityReservationRequest {
     
     
     public Boolean dryRun;
+
     public CreateCapacityReservationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +42,7 @@ public class CreateCapacityReservationRequest {
     
     
     public Boolean ebsOptimized;
+
     public CreateCapacityReservationRequest withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -44,6 +50,7 @@ public class CreateCapacityReservationRequest {
     
     
     public OffsetDateTime endDate;
+
     public CreateCapacityReservationRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -51,6 +58,7 @@ public class CreateCapacityReservationRequest {
     
     
     public EndDateTypeEnum endDateType;
+
     public CreateCapacityReservationRequest withEndDateType(EndDateTypeEnum endDateType) {
         this.endDateType = endDateType;
         return this;
@@ -58,6 +66,7 @@ public class CreateCapacityReservationRequest {
     
     
     public Boolean ephemeralStorage;
+
     public CreateCapacityReservationRequest withEphemeralStorage(Boolean ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -65,6 +74,7 @@ public class CreateCapacityReservationRequest {
     
     
     public Long instanceCount;
+
     public CreateCapacityReservationRequest withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -72,6 +82,7 @@ public class CreateCapacityReservationRequest {
     
     
     public InstanceMatchCriteriaEnum instanceMatchCriteria;
+
     public CreateCapacityReservationRequest withInstanceMatchCriteria(InstanceMatchCriteriaEnum instanceMatchCriteria) {
         this.instanceMatchCriteria = instanceMatchCriteria;
         return this;
@@ -79,6 +90,7 @@ public class CreateCapacityReservationRequest {
     
     
     public CapacityReservationInstancePlatformEnum instancePlatform;
+
     public CreateCapacityReservationRequest withInstancePlatform(CapacityReservationInstancePlatformEnum instancePlatform) {
         this.instancePlatform = instancePlatform;
         return this;
@@ -86,6 +98,7 @@ public class CreateCapacityReservationRequest {
     
     
     public String instanceType;
+
     public CreateCapacityReservationRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -93,6 +106,7 @@ public class CreateCapacityReservationRequest {
     
     
     public String outpostArn;
+
     public CreateCapacityReservationRequest withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -100,6 +114,7 @@ public class CreateCapacityReservationRequest {
     
     
     public String placementGroupArn;
+
     public CreateCapacityReservationRequest withPlacementGroupArn(String placementGroupArn) {
         this.placementGroupArn = placementGroupArn;
         return this;
@@ -107,6 +122,7 @@ public class CreateCapacityReservationRequest {
     
     
     public TagSpecificationList[] tagSpecifications;
+
     public CreateCapacityReservationRequest withTagSpecifications(TagSpecificationList[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -114,9 +130,15 @@ public class CreateCapacityReservationRequest {
     
     
     public CapacityReservationTenancyEnum tenancy;
+
     public CreateCapacityReservationRequest withTenancy(CapacityReservationTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public CreateCapacityReservationRequest(@JsonProperty("InstanceCount") Long instanceCount, @JsonProperty("InstancePlatform") CapacityReservationInstancePlatformEnum instancePlatform, @JsonProperty("InstanceType") String instanceType) {
+        this.instanceCount = instanceCount;
+        this.instancePlatform = instancePlatform;
+        this.instanceType = instanceType;
+  }
 }

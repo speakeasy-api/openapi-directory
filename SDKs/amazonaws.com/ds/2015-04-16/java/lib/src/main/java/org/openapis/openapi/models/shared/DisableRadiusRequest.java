@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableRadiusRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DisableRadiusRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public DisableRadiusRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

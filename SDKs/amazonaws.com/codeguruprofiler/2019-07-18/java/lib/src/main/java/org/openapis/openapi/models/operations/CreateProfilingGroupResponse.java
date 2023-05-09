@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProfilingGroupResponse {
@@ -12,6 +13,7 @@ public class CreateProfilingGroupResponse {
      */
     
     public Object conflictException;
+
     public CreateProfilingGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateProfilingGroupResponse {
     
     
     public String contentType;
+
     public CreateProfilingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateProfilingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProfilingGroupResponse createProfilingGroupResponse;
+
     public CreateProfilingGroupResponse withCreateProfilingGroupResponse(org.openapis.openapi.models.shared.CreateProfilingGroupResponse createProfilingGroupResponse) {
         this.createProfilingGroupResponse = createProfilingGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateProfilingGroupResponse {
      */
     
     public Object internalServerException;
+
     public CreateProfilingGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProfilingGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateProfilingGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateProfilingGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateProfilingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateProfilingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProfilingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateProfilingGroupResponse {
      */
     
     public Object throttlingException;
+
     public CreateProfilingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CreateProfilingGroupResponse {
      */
     
     public Object validationException;
+
     public CreateProfilingGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateProfilingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

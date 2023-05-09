@@ -12,6 +12,7 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public LpgsvRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public LpgsvRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public LpgsvRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,6 +45,7 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("LPGId")
     public String lpgId;
+
     public LpgsvRequestBodyCertificateParameters withLPGId(String lpgId) {
         this.lpgId = lpgId;
         return this;
@@ -52,6 +56,7 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("SVNo")
     public String svNo;
+
     public LpgsvRequestBodyCertificateParameters withSVNo(String svNo) {
         this.svNo = svNo;
         return this;
@@ -62,9 +67,18 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public LpgsvRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public LpgsvRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("LPGId") String lpgId, @JsonProperty("SVNo") String svNo, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.lpgId = lpgId;
+        this.svNo = svNo;
+        this.uid = uid;
+  }
 }

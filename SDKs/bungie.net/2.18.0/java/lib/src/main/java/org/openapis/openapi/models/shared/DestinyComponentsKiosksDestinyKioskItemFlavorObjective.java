@@ -15,6 +15,7 @@ public class DestinyComponentsKiosksDestinyKioskItemFlavorObjective {
      */
     
     public Long activityHash;
+
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyComponentsKiosksDestinyKioskItemFlavorObjective {
      */
     
     public Boolean complete;
+
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -37,6 +39,7 @@ public class DestinyComponentsKiosksDestinyKioskItemFlavorObjective {
      */
     
     public Integer completionValue;
+
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective withCompletionValue(Integer completionValue) {
         this.completionValue = completionValue;
         return this;
@@ -47,6 +50,7 @@ public class DestinyComponentsKiosksDestinyKioskItemFlavorObjective {
      */
     
     public Long destinationHash;
+
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective withDestinationHash(Long destinationHash) {
         this.destinationHash = destinationHash;
         return this;
@@ -57,6 +61,7 @@ public class DestinyComponentsKiosksDestinyKioskItemFlavorObjective {
      */
     
     public Long objectiveHash;
+
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective withObjectiveHash(Long objectiveHash) {
         this.objectiveHash = objectiveHash;
         return this;
@@ -67,6 +72,7 @@ public class DestinyComponentsKiosksDestinyKioskItemFlavorObjective {
      */
     
     public Integer progress;
+
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective withProgress(Integer progress) {
         this.progress = progress;
         return this;
@@ -77,9 +83,11 @@ public class DestinyComponentsKiosksDestinyKioskItemFlavorObjective {
      */
     
     public Boolean visible;
+
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public DestinyComponentsKiosksDestinyKioskItemFlavorObjective(){}
 }

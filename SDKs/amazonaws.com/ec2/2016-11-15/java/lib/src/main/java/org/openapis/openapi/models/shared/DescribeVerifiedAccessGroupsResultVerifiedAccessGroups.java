@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     public String creationTime;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public String deletionTime;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public String description;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public String lastUpdatedTime;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public String owner;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroupsTags[] tags;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withTags(DescribeVerifiedAccessGroupsResultVerifiedAccessGroupsTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public String verifiedAccessGroupArn;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withVerifiedAccessGroupArn(String verifiedAccessGroupArn) {
         this.verifiedAccessGroupArn = verifiedAccessGroupArn;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public String verifiedAccessGroupId;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -68,9 +76,11 @@ public class DescribeVerifiedAccessGroupsResultVerifiedAccessGroups {
     
     
     public String verifiedAccessInstanceId;
+
     public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public DescribeVerifiedAccessGroupsResultVerifiedAccessGroups(){}
 }

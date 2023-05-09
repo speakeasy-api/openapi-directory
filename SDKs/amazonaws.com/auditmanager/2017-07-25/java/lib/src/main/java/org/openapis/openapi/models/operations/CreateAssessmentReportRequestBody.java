@@ -15,6 +15,7 @@ public class CreateAssessmentReportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAssessmentReportRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateAssessmentReportRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateAssessmentReportRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class CreateAssessmentReportRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryStatement")
     public String queryStatement;
+
     public CreateAssessmentReportRequestBody withQueryStatement(String queryStatement) {
         this.queryStatement = queryStatement;
         return this;
     }
     
+    public CreateAssessmentReportRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

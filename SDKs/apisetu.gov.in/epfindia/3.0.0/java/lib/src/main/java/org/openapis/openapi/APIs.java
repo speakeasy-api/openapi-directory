@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EpfscResponse res = new org.openapis.openapi.models.operations.EpfscResponse() {{
+        org.openapis.openapi.models.operations.EpfscResponse res = new org.openapis.openapi.models.operations.EpfscResponse(contentType, httpRes.statusCode()) {{
             epfsc400ApplicationJSONObject = null;
             epfsc401ApplicationJSONObject = null;
             epfsc404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             epfsc503ApplicationJSONObject = null;
             epfsc504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,7 +146,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PecerResponse res = new org.openapis.openapi.models.operations.PecerResponse() {{
+        org.openapis.openapi.models.operations.PecerResponse res = new org.openapis.openapi.models.operations.PecerResponse(contentType, httpRes.statusCode()) {{
             pecer400ApplicationJSONObject = null;
             pecer401ApplicationJSONObject = null;
             pecer404ApplicationJSONObject = null;
@@ -157,8 +155,6 @@ public class APIs {
             pecer503ApplicationJSONObject = null;
             pecer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,7 +237,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UncrdResponse res = new org.openapis.openapi.models.operations.UncrdResponse() {{
+        org.openapis.openapi.models.operations.UncrdResponse res = new org.openapis.openapi.models.operations.UncrdResponse(contentType, httpRes.statusCode()) {{
             uncrd400ApplicationJSONObject = null;
             uncrd401ApplicationJSONObject = null;
             uncrd404ApplicationJSONObject = null;
@@ -250,8 +246,6 @@ public class APIs {
             uncrd503ApplicationJSONObject = null;
             uncrd504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

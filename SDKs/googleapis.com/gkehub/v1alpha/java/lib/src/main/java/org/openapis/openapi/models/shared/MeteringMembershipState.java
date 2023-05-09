@@ -18,6 +18,7 @@ public class MeteringMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastMeasurementTime")
     public String lastMeasurementTime;
+
     public MeteringMembershipState withLastMeasurementTime(String lastMeasurementTime) {
         this.lastMeasurementTime = lastMeasurementTime;
         return this;
@@ -29,9 +30,11 @@ public class MeteringMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preciseLastMeasuredClusterVcpuCapacity")
     public Float preciseLastMeasuredClusterVcpuCapacity;
+
     public MeteringMembershipState withPreciseLastMeasuredClusterVcpuCapacity(Float preciseLastMeasuredClusterVcpuCapacity) {
         this.preciseLastMeasuredClusterVcpuCapacity = preciseLastMeasuredClusterVcpuCapacity;
         return this;
     }
     
+    public MeteringMembershipState(){}
 }

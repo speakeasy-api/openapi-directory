@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimeToLiveSpecification {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public TimeToLiveSpecification withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,14 @@ public class TimeToLiveSpecification {
     
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public TimeToLiveSpecification withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public TimeToLiveSpecification(@JsonProperty("AttributeName") String attributeName, @JsonProperty("Enabled") Boolean enabled) {
+        this.attributeName = attributeName;
+        this.enabled = enabled;
+  }
 }

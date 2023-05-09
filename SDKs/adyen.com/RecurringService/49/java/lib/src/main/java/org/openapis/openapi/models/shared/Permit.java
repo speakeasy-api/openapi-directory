@@ -20,6 +20,7 @@ public class Permit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerId")
     public String partnerId;
+
     public Permit withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -31,6 +32,7 @@ public class Permit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileReference")
     public String profileReference;
+
     public Permit withProfileReference(String profileReference) {
         this.profileReference = profileReference;
         return this;
@@ -39,6 +41,7 @@ public class Permit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restriction")
     public PermitRestriction restriction;
+
     public Permit withRestriction(PermitRestriction restriction) {
         this.restriction = restriction;
         return this;
@@ -50,6 +53,7 @@ public class Permit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultKey")
     public String resultKey;
+
     public Permit withResultKey(String resultKey) {
         this.resultKey = resultKey;
         return this;
@@ -63,9 +67,11 @@ public class Permit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validTillDate")
     public OffsetDateTime validTillDate;
+
     public Permit withValidTillDate(OffsetDateTime validTillDate) {
         this.validTillDate = validTillDate;
         return this;
     }
     
+    public Permit(){}
 }

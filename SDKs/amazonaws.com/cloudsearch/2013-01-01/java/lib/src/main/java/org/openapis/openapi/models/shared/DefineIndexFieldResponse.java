@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineIndexFieldResponse - The result of a &lt;code&gt;&lt;a&gt;DefineIndexField&lt;/a&gt;&lt;/code&gt; request. Contains the status of the newly-configured index field.
@@ -15,9 +15,13 @@ public class DefineIndexFieldResponse {
      */
     
     public IndexFieldStatus indexField;
+
     public DefineIndexFieldResponse withIndexField(IndexFieldStatus indexField) {
         this.indexField = indexField;
         return this;
     }
     
+    public DefineIndexFieldResponse(@JsonProperty("IndexField") IndexFieldStatus indexField) {
+        this.indexField = indexField;
+  }
 }

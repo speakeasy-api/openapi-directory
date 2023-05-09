@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminListPublicKeysResponse {
     
     public String contentType;
+
     public EnterpriseAdminListPublicKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminListPublicKeysResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public EnterpriseAdminListPublicKeysResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminListPublicKeysResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminListPublicKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class EnterpriseAdminListPublicKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminListPublicKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class EnterpriseAdminListPublicKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.PublicKeyFull[] publicKeyFulls;
+
     public EnterpriseAdminListPublicKeysResponse withPublicKeyFulls(org.openapis.openapi.models.shared.PublicKeyFull[] publicKeyFulls) {
         this.publicKeyFulls = publicKeyFulls;
         return this;
     }
     
+    public EnterpriseAdminListPublicKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

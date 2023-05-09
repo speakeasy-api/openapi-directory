@@ -15,6 +15,7 @@ public class CustomerAdditionalFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("area")
     public String area;
+
     public CustomerAdditionalFieldFields withArea(String area) {
         this.area = area;
         return this;
@@ -26,6 +27,7 @@ public class CustomerAdditionalFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkout_custom_field_id")
     public Integer checkoutCustomFieldId;
+
     public CustomerAdditionalFieldFields withCheckoutCustomFieldId(Integer checkoutCustomFieldId) {
         this.checkoutCustomFieldId = checkoutCustomFieldId;
         return this;
@@ -37,6 +39,7 @@ public class CustomerAdditionalFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public Integer customerId;
+
     public CustomerAdditionalFieldFields withCustomerId(Integer customerId) {
         this.customerId = customerId;
         return this;
@@ -48,6 +51,7 @@ public class CustomerAdditionalFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CustomerAdditionalFieldFields withId(Integer id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class CustomerAdditionalFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CustomerAdditionalFieldFields withLabel(String label) {
         this.label = label;
         return this;
@@ -70,9 +75,11 @@ public class CustomerAdditionalFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomerAdditionalFieldFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomerAdditionalFieldFields(){}
 }

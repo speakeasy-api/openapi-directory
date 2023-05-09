@@ -15,6 +15,7 @@ public class DisputeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispute_id")
     public String disputeId;
+
     public DisputeEvidence withDisputeId(String disputeId) {
         this.disputeId = disputeId;
         return this;
@@ -26,6 +27,7 @@ public class DisputeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence_file")
     public DisputeEvidenceFile evidenceFile;
+
     public DisputeEvidence withEvidenceFile(DisputeEvidenceFile evidenceFile) {
         this.evidenceFile = evidenceFile;
         return this;
@@ -37,6 +39,7 @@ public class DisputeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence_id")
     public String evidenceId;
+
     public DisputeEvidence withEvidenceId(String evidenceId) {
         this.evidenceId = evidenceId;
         return this;
@@ -48,6 +51,7 @@ public class DisputeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence_text")
     public String evidenceText;
+
     public DisputeEvidence withEvidenceText(String evidenceText) {
         this.evidenceText = evidenceText;
         return this;
@@ -59,6 +63,7 @@ public class DisputeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidence_type")
     public String evidenceType;
+
     public DisputeEvidence withEvidenceType(String evidenceType) {
         this.evidenceType = evidenceType;
         return this;
@@ -70,6 +75,7 @@ public class DisputeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DisputeEvidence withId(String id) {
         this.id = id;
         return this;
@@ -81,9 +87,11 @@ public class DisputeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploaded_at")
     public String uploadedAt;
+
     public DisputeEvidence withUploadedAt(String uploadedAt) {
         this.uploadedAt = uploadedAt;
         return this;
     }
     
+    public DisputeEvidence(){}
 }

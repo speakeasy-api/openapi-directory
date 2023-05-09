@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceTag {
     @JsonProperty("ResourceTagKey")
     public String resourceTagKey;
+
     public ResourceTag withResourceTagKey(String resourceTagKey) {
         this.resourceTagKey = resourceTagKey;
         return this;
@@ -22,9 +23,13 @@ public class ResourceTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTagValue")
     public String resourceTagValue;
+
     public ResourceTag withResourceTagValue(String resourceTagValue) {
         this.resourceTagValue = resourceTagValue;
         return this;
     }
     
+    public ResourceTag(@JsonProperty("ResourceTagKey") String resourceTagKey) {
+        this.resourceTagKey = resourceTagKey;
+  }
 }

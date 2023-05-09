@@ -18,6 +18,7 @@ public class RateTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public RateTable withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -29,6 +30,7 @@ public class RateTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public RateTable withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -40,6 +42,7 @@ public class RateTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RateTable withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class RateTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateTableId")
     public String rateTableId;
+
     public RateTable withRateTableId(String rateTableId) {
         this.rateTableId = rateTableId;
         return this;
     }
     
+    public RateTable(){}
 }

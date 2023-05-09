@@ -12,6 +12,7 @@ public class PutOrganizationConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludedAccounts")
     public String[] excludedAccounts;
+
     public PutOrganizationConfigRuleRequest withExcludedAccounts(String[] excludedAccounts) {
         this.excludedAccounts = excludedAccounts;
         return this;
@@ -19,6 +20,7 @@ public class PutOrganizationConfigRuleRequest {
     
     @JsonProperty("OrganizationConfigRuleName")
     public String organizationConfigRuleName;
+
     public PutOrganizationConfigRuleRequest withOrganizationConfigRuleName(String organizationConfigRuleName) {
         this.organizationConfigRuleName = organizationConfigRuleName;
         return this;
@@ -27,6 +29,7 @@ public class PutOrganizationConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationCustomPolicyRuleMetadata")
     public OrganizationCustomPolicyRuleMetadata organizationCustomPolicyRuleMetadata;
+
     public PutOrganizationConfigRuleRequest withOrganizationCustomPolicyRuleMetadata(OrganizationCustomPolicyRuleMetadata organizationCustomPolicyRuleMetadata) {
         this.organizationCustomPolicyRuleMetadata = organizationCustomPolicyRuleMetadata;
         return this;
@@ -35,6 +38,7 @@ public class PutOrganizationConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationCustomRuleMetadata")
     public OrganizationCustomRuleMetadata organizationCustomRuleMetadata;
+
     public PutOrganizationConfigRuleRequest withOrganizationCustomRuleMetadata(OrganizationCustomRuleMetadata organizationCustomRuleMetadata) {
         this.organizationCustomRuleMetadata = organizationCustomRuleMetadata;
         return this;
@@ -43,9 +47,13 @@ public class PutOrganizationConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationManagedRuleMetadata")
     public OrganizationManagedRuleMetadata organizationManagedRuleMetadata;
+
     public PutOrganizationConfigRuleRequest withOrganizationManagedRuleMetadata(OrganizationManagedRuleMetadata organizationManagedRuleMetadata) {
         this.organizationManagedRuleMetadata = organizationManagedRuleMetadata;
         return this;
     }
     
+    public PutOrganizationConfigRuleRequest(@JsonProperty("OrganizationConfigRuleName") String organizationConfigRuleName) {
+        this.organizationConfigRuleName = organizationConfigRuleName;
+  }
 }

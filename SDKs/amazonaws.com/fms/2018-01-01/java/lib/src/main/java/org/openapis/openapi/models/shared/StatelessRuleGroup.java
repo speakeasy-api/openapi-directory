@@ -15,6 +15,7 @@ public class StatelessRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public StatelessRuleGroup withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -23,6 +24,7 @@ public class StatelessRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public StatelessRuleGroup withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -31,9 +33,11 @@ public class StatelessRuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupName")
     public String ruleGroupName;
+
     public StatelessRuleGroup withRuleGroupName(String ruleGroupName) {
         this.ruleGroupName = ruleGroupName;
         return this;
     }
     
+    public StatelessRuleGroup(){}
 }

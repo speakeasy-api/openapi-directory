@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveTemplateActionResponse {
     
     public String contentType;
+
     public RemoveTemplateActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveTemplateActionResponse {
      */
     
     public java.util.Map<String, Object> removeTemplateActionResponse;
+
     public RemoveTemplateActionResponse withRemoveTemplateActionResponse(java.util.Map<String, Object> removeTemplateActionResponse) {
         this.removeTemplateActionResponse = removeTemplateActionResponse;
         return this;
@@ -29,6 +32,7 @@ public class RemoveTemplateActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveTemplateActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class RemoveTemplateActionResponse {
     
     
     public Integer statusCode;
+
     public RemoveTemplateActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RemoveTemplateActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveTemplateActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class RemoveTemplateActionResponse {
      */
     
     public Object uninitializedAccountException;
+
     public RemoveTemplateActionResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class RemoveTemplateActionResponse {
      */
     
     public Object validationException;
+
     public RemoveTemplateActionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RemoveTemplateActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

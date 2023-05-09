@@ -15,6 +15,7 @@ public class MergeBranchesByThreeWayOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitId")
     public String commitId;
+
     public MergeBranchesByThreeWayOutput withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -23,9 +24,11 @@ public class MergeBranchesByThreeWayOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treeId")
     public String treeId;
+
     public MergeBranchesByThreeWayOutput withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public MergeBranchesByThreeWayOutput(){}
 }

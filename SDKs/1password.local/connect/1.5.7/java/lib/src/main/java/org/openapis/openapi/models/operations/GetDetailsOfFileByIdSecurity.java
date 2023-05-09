@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDetailsOfFileByIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String connectToken;
+
     public GetDetailsOfFileByIdSecurity withConnectToken(String connectToken) {
         this.connectToken = connectToken;
         return this;
     }
     
+    public GetDetailsOfFileByIdSecurity(@JsonProperty("ConnectToken") String connectToken) {
+        this.connectToken = connectToken;
+  }
 }

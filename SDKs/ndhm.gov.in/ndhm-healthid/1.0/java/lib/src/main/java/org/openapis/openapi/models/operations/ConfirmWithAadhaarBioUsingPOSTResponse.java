@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmWithAadhaarBioUsingPOSTResponse {
     
     public byte[] body;
+
     public ConfirmWithAadhaarBioUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ConfirmWithAadhaarBioUsingPOSTResponse {
     
     
     public String contentType;
+
     public ConfirmWithAadhaarBioUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ConfirmWithAadhaarBioUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ConfirmWithAadhaarBioUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ConfirmWithAadhaarBioUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmWithAadhaarBioUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfirmWithAadhaarBioUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

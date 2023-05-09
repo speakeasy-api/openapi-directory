@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSecurityConfigurationInput {
     @JsonProperty("Name")
     public String name;
+
     public DeleteSecurityConfigurationInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteSecurityConfigurationInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

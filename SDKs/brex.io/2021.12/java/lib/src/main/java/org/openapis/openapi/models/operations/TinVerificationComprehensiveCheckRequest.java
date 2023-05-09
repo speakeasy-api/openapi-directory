@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TinVerificationComprehensiveCheckRequest {
@@ -12,6 +13,7 @@ public class TinVerificationComprehensiveCheckRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public TinVerificationComprehensiveCheckRequest withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +24,7 @@ public class TinVerificationComprehensiveCheckRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=threshold")
     public Long threshold;
+
     public TinVerificationComprehensiveCheckRequest withThreshold(Long threshold) {
         this.threshold = threshold;
         return this;
@@ -32,9 +35,14 @@ public class TinVerificationComprehensiveCheckRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tin")
     public String tin;
+
     public TinVerificationComprehensiveCheckRequest withTin(String tin) {
         this.tin = tin;
         return this;
     }
     
+    public TinVerificationComprehensiveCheckRequest(@JsonProperty("name") String name, @JsonProperty("tin") String tin) {
+        this.name = name;
+        this.tin = tin;
+  }
 }

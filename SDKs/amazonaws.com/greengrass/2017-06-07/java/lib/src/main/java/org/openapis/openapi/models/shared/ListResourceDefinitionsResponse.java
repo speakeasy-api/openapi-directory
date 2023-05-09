@@ -15,6 +15,7 @@ public class ListResourceDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definitions")
     public DefinitionInformation[] definitions;
+
     public ListResourceDefinitionsResponse withDefinitions(DefinitionInformation[] definitions) {
         this.definitions = definitions;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourceDefinitionsResponse(){}
 }

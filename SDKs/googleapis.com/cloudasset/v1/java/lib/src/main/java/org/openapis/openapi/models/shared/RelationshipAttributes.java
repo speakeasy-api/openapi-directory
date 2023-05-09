@@ -18,6 +18,7 @@ public class RelationshipAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public RelationshipAttributes withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class RelationshipAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceResourceType")
     public String sourceResourceType;
+
     public RelationshipAttributes withSourceResourceType(String sourceResourceType) {
         this.sourceResourceType = sourceResourceType;
         return this;
@@ -40,6 +42,7 @@ public class RelationshipAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResourceType")
     public String targetResourceType;
+
     public RelationshipAttributes withTargetResourceType(String targetResourceType) {
         this.targetResourceType = targetResourceType;
         return this;
@@ -51,9 +54,11 @@ public class RelationshipAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public RelationshipAttributes withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RelationshipAttributes(){}
 }

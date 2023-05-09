@@ -15,9 +15,11 @@ public class Error400 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error400Error[] errors;
+
     public Error400 withErrors(Error400Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public Error400(){}
 }

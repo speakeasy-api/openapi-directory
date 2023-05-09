@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEnvironmentStatusResult {
     @JsonProperty("message")
     public String message;
+
     public DescribeEnvironmentStatusResult withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class DescribeEnvironmentStatusResult {
     
     @JsonProperty("status")
     public EnvironmentStatusEnum status;
+
     public DescribeEnvironmentStatusResult withStatus(EnvironmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeEnvironmentStatusResult(@JsonProperty("message") String message, @JsonProperty("status") EnvironmentStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

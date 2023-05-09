@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,6 +13,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETCreateTemplateTemplate {
     @SpeakeasyMetadata("queryParam:name=HtmlPart")
     public String htmlPart;
+
     public GETCreateTemplateTemplate withHtmlPart(String htmlPart) {
         this.htmlPart = htmlPart;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateTemplateTemplate {
     
     @SpeakeasyMetadata("queryParam:name=SubjectPart")
     public String subjectPart;
+
     public GETCreateTemplateTemplate withSubjectPart(String subjectPart) {
         this.subjectPart = subjectPart;
         return this;
@@ -26,6 +29,7 @@ public class GETCreateTemplateTemplate {
     
     @SpeakeasyMetadata("queryParam:name=TemplateName")
     public String templateName;
+
     public GETCreateTemplateTemplate withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -33,9 +37,13 @@ public class GETCreateTemplateTemplate {
     
     @SpeakeasyMetadata("queryParam:name=TextPart")
     public String textPart;
+
     public GETCreateTemplateTemplate withTextPart(String textPart) {
         this.textPart = textPart;
         return this;
     }
     
+    public GETCreateTemplateTemplate(@JsonProperty("TemplateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

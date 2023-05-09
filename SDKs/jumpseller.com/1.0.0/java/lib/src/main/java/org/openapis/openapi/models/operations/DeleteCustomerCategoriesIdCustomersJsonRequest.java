@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomerCategoriesIdCustomersJsonRequest {
@@ -12,6 +13,7 @@ public class DeleteCustomerCategoriesIdCustomersJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomersToCustomerCategory customersToCustomerCategory;
+
     public DeleteCustomerCategoriesIdCustomersJsonRequest withCustomersToCustomerCategory(org.openapis.openapi.models.shared.CustomersToCustomerCategory customersToCustomerCategory) {
         this.customersToCustomerCategory = customersToCustomerCategory;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCustomerCategoriesIdCustomersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public DeleteCustomerCategoriesIdCustomersJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class DeleteCustomerCategoriesIdCustomersJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public DeleteCustomerCategoriesIdCustomersJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class DeleteCustomerCategoriesIdCustomersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public DeleteCustomerCategoriesIdCustomersJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public DeleteCustomerCategoriesIdCustomersJsonRequest(@JsonProperty("CustomersToCustomerCategory") org.openapis.openapi.models.shared.CustomersToCustomerCategory customersToCustomerCategory, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.customersToCustomerCategory = customersToCustomerCategory;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

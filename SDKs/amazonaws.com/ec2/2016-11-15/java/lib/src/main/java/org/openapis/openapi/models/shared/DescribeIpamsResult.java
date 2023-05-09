@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamsResult {
     
     public DescribeIpamsResultIpams[] ipams;
+
     public DescribeIpamsResult withIpams(DescribeIpamsResultIpams[] ipams) {
         this.ipams = ipams;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpamsResult {
     
     
     public String nextToken;
+
     public DescribeIpamsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeIpamsResult(){}
 }

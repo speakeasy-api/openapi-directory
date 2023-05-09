@@ -12,6 +12,7 @@ public class UsersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public UsersListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -22,9 +23,11 @@ public class UsersListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public Long since;
+
     public UsersListRequest withSince(Long since) {
         this.since = since;
         return this;
     }
     
+    public UsersListRequest(){}
 }

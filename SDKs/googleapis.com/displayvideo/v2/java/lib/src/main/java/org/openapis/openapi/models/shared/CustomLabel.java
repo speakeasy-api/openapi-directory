@@ -18,6 +18,7 @@ public class CustomLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public CustomLabelKeyEnum key;
+
     public CustomLabel withKey(CustomLabelKeyEnum key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class CustomLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CustomLabel withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CustomLabel(){}
 }

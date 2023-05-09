@@ -12,6 +12,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum category;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withCategory(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("causes")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses[] causes;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withCauses(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses[] causes) {
         this.causes = causes;
         return this;
@@ -27,6 +29,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     
     @JsonProperty("code")
     public String code;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withCode(String code) {
         this.code = code;
         return this;
@@ -35,6 +38,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorIdentifiers")
     public java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withErrorIdentifiers(java.util.Map<String, java.util.Map<String, Object>> errorIdentifiers) {
         this.errorIdentifiers = errorIdentifiers;
         return this;
@@ -51,6 +56,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withField(String field) {
         this.field = field;
         return this;
@@ -59,6 +65,7 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withInfo(String info) {
         this.info = info;
         return this;
@@ -67,9 +74,13 @@ public class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesEr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum severity;
+
     public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors withSeverity(GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

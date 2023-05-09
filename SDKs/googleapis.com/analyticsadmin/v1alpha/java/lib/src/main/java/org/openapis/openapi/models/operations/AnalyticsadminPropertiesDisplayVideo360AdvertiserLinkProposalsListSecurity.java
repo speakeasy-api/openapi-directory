@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurityOption1 option1;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurity withOption1(AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListS
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurityOption2 option2;
+
     public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurity withOption2(AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurity(){}
 }

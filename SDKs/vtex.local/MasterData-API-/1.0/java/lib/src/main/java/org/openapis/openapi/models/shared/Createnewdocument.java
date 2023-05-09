@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Createnewdocument {
     @JsonProperty("Href")
     public String href;
+
     public Createnewdocument withHref(String href) {
         this.href = href;
         return this;
@@ -16,9 +17,14 @@ public class Createnewdocument {
     
     @JsonProperty("Id")
     public String id;
+
     public Createnewdocument withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Createnewdocument(@JsonProperty("Href") String href, @JsonProperty("Id") String id) {
+        this.href = href;
+        this.id = id;
+  }
 }

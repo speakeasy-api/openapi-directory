@@ -12,6 +12,7 @@ public class GenerateChangeSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public GenerateChangeSetRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -20,9 +21,11 @@ public class GenerateChangeSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changesetFormat")
     public OutputFormatEnum changesetFormat;
+
     public GenerateChangeSetRequest withChangesetFormat(OutputFormatEnum changesetFormat) {
         this.changesetFormat = changesetFormat;
         return this;
     }
     
+    public GenerateChangeSetRequest(){}
 }

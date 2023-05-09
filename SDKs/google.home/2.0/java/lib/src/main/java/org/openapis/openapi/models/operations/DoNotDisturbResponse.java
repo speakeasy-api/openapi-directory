@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DoNotDisturbResponse {
     
     public String contentType;
+
     public DoNotDisturbResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DoNotDisturbResponse {
     
     
     public org.openapis.openapi.models.shared.Getcurrentstate getcurrentstate;
+
     public DoNotDisturbResponse withGetcurrentstate(org.openapis.openapi.models.shared.Getcurrentstate getcurrentstate) {
         this.getcurrentstate = getcurrentstate;
         return this;
@@ -23,6 +26,7 @@ public class DoNotDisturbResponse {
     
     
     public Integer statusCode;
+
     public DoNotDisturbResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DoNotDisturbResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DoNotDisturbResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DoNotDisturbResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

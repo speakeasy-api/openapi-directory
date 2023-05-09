@@ -19,6 +19,7 @@ public class ListTrainingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListTrainingJobsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListTrainingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListTrainingJobsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -39,6 +41,7 @@ public class ListTrainingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListTrainingJobsRequest withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -49,6 +52,7 @@ public class ListTrainingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListTrainingJobsRequest withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -57,6 +61,7 @@ public class ListTrainingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTrainingJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +70,7 @@ public class ListTrainingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListTrainingJobsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -73,6 +79,7 @@ public class ListTrainingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrainingJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -81,6 +88,7 @@ public class ListTrainingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortByEnum sortBy;
+
     public ListTrainingJobsRequest withSortBy(SortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -89,6 +97,7 @@ public class ListTrainingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListTrainingJobsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -97,6 +106,7 @@ public class ListTrainingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public TrainingJobStatusEnum statusEquals;
+
     public ListTrainingJobsRequest withStatusEquals(TrainingJobStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
@@ -105,9 +115,11 @@ public class ListTrainingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmPoolStatusEquals")
     public WarmPoolResourceStatusEnum warmPoolStatusEquals;
+
     public ListTrainingJobsRequest withWarmPoolStatusEquals(WarmPoolResourceStatusEnum warmPoolStatusEquals) {
         this.warmPoolStatusEquals = warmPoolStatusEquals;
         return this;
     }
     
+    public ListTrainingJobsRequest(){}
 }

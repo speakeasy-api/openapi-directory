@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFindingAggregatorsResponse {
@@ -12,6 +13,7 @@ public class ListFindingAggregatorsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFindingAggregatorsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFindingAggregatorsResponse {
     
     
     public String contentType;
+
     public ListFindingAggregatorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFindingAggregatorsResponse {
      */
     
     public Object internalException;
+
     public ListFindingAggregatorsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ListFindingAggregatorsResponse {
      */
     
     public Object invalidAccessException;
+
     public ListFindingAggregatorsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class ListFindingAggregatorsResponse {
      */
     
     public Object invalidInputException;
+
     public ListFindingAggregatorsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListFindingAggregatorsResponse {
      */
     
     public Object limitExceededException;
+
     public ListFindingAggregatorsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListFindingAggregatorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFindingAggregatorsResponse listFindingAggregatorsResponse;
+
     public ListFindingAggregatorsResponse withListFindingAggregatorsResponse(org.openapis.openapi.models.shared.ListFindingAggregatorsResponse listFindingAggregatorsResponse) {
         this.listFindingAggregatorsResponse = listFindingAggregatorsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListFindingAggregatorsResponse {
     
     
     public Integer statusCode;
+
     public ListFindingAggregatorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListFindingAggregatorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFindingAggregatorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListFindingAggregatorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ScheduleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstExecutionFrom")
     public String firstExecutionFrom;
+
     public ScheduleConfiguration withFirstExecutionFrom(String firstExecutionFrom) {
         this.firstExecutionFrom = firstExecutionFrom;
         return this;
@@ -23,6 +24,7 @@ public class ScheduleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Object")
     public String object;
+
     public ScheduleConfiguration withObject(String object) {
         this.object = object;
         return this;
@@ -30,9 +32,13 @@ public class ScheduleConfiguration {
     
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public ScheduleConfiguration withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
     }
     
+    public ScheduleConfiguration(@JsonProperty("ScheduleExpression") String scheduleExpression) {
+        this.scheduleExpression = scheduleExpression;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReactionsCreateForIssueResponse {
     
     public String contentType;
+
     public ReactionsCreateForIssueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReactionsCreateForIssueResponse {
     
     
     public Integer statusCode;
+
     public ReactionsCreateForIssueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReactionsCreateForIssueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReactionsCreateForIssueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReactionsCreateForIssueResponse {
      */
     
     public org.openapis.openapi.models.shared.Reaction reaction;
+
     public ReactionsCreateForIssueResponse withReaction(org.openapis.openapi.models.shared.Reaction reaction) {
         this.reaction = reaction;
         return this;
@@ -43,9 +48,14 @@ public class ReactionsCreateForIssueResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReactionsCreateForIssueResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReactionsCreateForIssueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

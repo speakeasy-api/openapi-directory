@@ -16,53 +16,53 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DescribeJobExecutionRequest;
 import org.openapis.openapi.models.operations.DescribeJobExecutionResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            DescribeJobExecutionRequest req = new DescribeJobExecutionRequest() {{
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "provident";
-                xAmzCredential = "distinctio";
-                xAmzDate = "quibusdam";
-                xAmzSecurityToken = "unde";
-                xAmzSignature = "nulla";
-                xAmzSignedHeaders = "corrupti";
-                executionNumber = 847252;
+            DescribeJobExecutionRequest req = new DescribeJobExecutionRequest("provident", "distinctio") {{
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+                executionNumber = 645894L;
                 includeJobDocument = false;
-                jobId = "vel";
-                thingName = "error";
-            }}            
+            }};            
 
             DescribeJobExecutionResponse res = sdk.describeJobExecution(req);
 
-            if (res.describeJobExecutionResponse.isPresent()) {
+            if (res.describeJobExecutionResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `describeJobExecution` - Gets details of a job execution.
-* `getPendingJobExecutions` - Gets the list of all jobs for a thing that are not in a terminal status.
-* `startNextPendingJobExecution` - Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing.
-* `updateJobExecution` - Updates the status of a job execution.
+* [describeJobExecution](docs/sdk/README.md#describejobexecution) - Gets details of a job execution.
+* [getPendingJobExecutions](docs/sdk/README.md#getpendingjobexecutions) - Gets the list of all jobs for a thing that are not in a terminal status.
+* [startNextPendingJobExecution](docs/sdk/README.md#startnextpendingjobexecution) - Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing.
+* [updateJobExecution](docs/sdk/README.md#updatejobexecution) - Updates the status of a job execution.
 <!-- End SDK Available Operations -->
 
 ### Maturity

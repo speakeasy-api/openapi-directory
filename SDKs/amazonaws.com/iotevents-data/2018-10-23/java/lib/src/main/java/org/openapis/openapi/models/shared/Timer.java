@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Timer {
     @JsonProperty("name")
     public String name;
+
     public Timer withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,14 @@ public class Timer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Timer withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Timer(@JsonProperty("name") String name, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.name = name;
+        this.timestamp = timestamp;
+  }
 }

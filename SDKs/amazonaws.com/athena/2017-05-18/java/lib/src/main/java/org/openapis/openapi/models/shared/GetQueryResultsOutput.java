@@ -15,6 +15,7 @@ public class GetQueryResultsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetQueryResultsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class GetQueryResultsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultSet")
     public ResultSet resultSet;
+
     public GetQueryResultsOutput withResultSet(ResultSet resultSet) {
         this.resultSet = resultSet;
         return this;
@@ -31,9 +33,11 @@ public class GetQueryResultsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateCount")
     public Long updateCount;
+
     public GetQueryResultsOutput withUpdateCount(Long updateCount) {
         this.updateCount = updateCount;
         return this;
     }
     
+    public GetQueryResultsOutput(){}
 }

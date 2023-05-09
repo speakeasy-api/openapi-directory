@@ -12,9 +12,11 @@ public class FollowerCreateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_hash")
     public String reportHash;
+
     public FollowerCreateResponse withReportHash(String reportHash) {
         this.reportHash = reportHash;
         return this;
     }
     
+    public FollowerCreateResponse(){}
 }

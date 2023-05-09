@@ -12,6 +12,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Game")
     public Game game;
+
     public BoxScore withGame(Game game) {
         this.game = game;
         return this;
@@ -20,6 +21,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Periods")
     public Period[] periods;
+
     public BoxScore withPeriods(Period[] periods) {
         this.periods = periods;
         return this;
@@ -28,6 +30,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGames")
     public PlayerGame[] playerGames;
+
     public BoxScore withPlayerGames(PlayerGame[] playerGames) {
         this.playerGames = playerGames;
         return this;
@@ -36,9 +39,11 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamGames")
     public TeamGame[] teamGames;
+
     public BoxScore withTeamGames(TeamGame[] teamGames) {
         this.teamGames = teamGames;
         return this;
     }
     
+    public BoxScore(){}
 }

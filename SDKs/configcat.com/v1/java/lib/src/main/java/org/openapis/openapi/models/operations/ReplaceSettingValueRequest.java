@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceSettingValueRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel;
+
     public ReplaceSettingValueRequest withUpdateSettingValueModel(org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel) {
         this.updateSettingValueModel = updateSettingValueModel;
         return this;
@@ -19,6 +21,7 @@ public class ReplaceSettingValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
     public String environmentId;
+
     public ReplaceSettingValueRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +32,7 @@ public class ReplaceSettingValueRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public ReplaceSettingValueRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -39,9 +43,15 @@ public class ReplaceSettingValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
     public Integer settingId;
+
     public ReplaceSettingValueRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public ReplaceSettingValueRequest(@JsonProperty("UpdateSettingValueModel") org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel, @JsonProperty("environmentId") String environmentId, @JsonProperty("settingId") Integer settingId) {
+        this.updateSettingValueModel = updateSettingValueModel;
+        this.environmentId = environmentId;
+        this.settingId = settingId;
+  }
 }

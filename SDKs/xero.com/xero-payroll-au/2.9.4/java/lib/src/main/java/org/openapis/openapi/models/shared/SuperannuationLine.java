@@ -15,6 +15,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public Double amount;
+
     public SuperannuationLine withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -23,6 +24,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CalculationType")
     public SuperannuationCalculationTypeEnum calculationType;
+
     public SuperannuationLine withCalculationType(SuperannuationCalculationTypeEnum calculationType) {
         this.calculationType = calculationType;
         return this;
@@ -31,6 +33,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributionType")
     public SuperannuationContributionTypeEnum contributionType;
+
     public SuperannuationLine withContributionType(SuperannuationContributionTypeEnum contributionType) {
         this.contributionType = contributionType;
         return this;
@@ -42,6 +45,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpenseAccountCode")
     public String expenseAccountCode;
+
     public SuperannuationLine withExpenseAccountCode(String expenseAccountCode) {
         this.expenseAccountCode = expenseAccountCode;
         return this;
@@ -53,6 +57,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LiabilityAccountCode")
     public String liabilityAccountCode;
+
     public SuperannuationLine withLiabilityAccountCode(String liabilityAccountCode) {
         this.liabilityAccountCode = liabilityAccountCode;
         return this;
@@ -64,6 +69,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumMonthlyEarnings")
     public Double minimumMonthlyEarnings;
+
     public SuperannuationLine withMinimumMonthlyEarnings(Double minimumMonthlyEarnings) {
         this.minimumMonthlyEarnings = minimumMonthlyEarnings;
         return this;
@@ -75,6 +81,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentDateForThisPeriod")
     public String paymentDateForThisPeriod;
+
     public SuperannuationLine withPaymentDateForThisPeriod(String paymentDateForThisPeriod) {
         this.paymentDateForThisPeriod = paymentDateForThisPeriod;
         return this;
@@ -86,6 +93,7 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public Double percentage;
+
     public SuperannuationLine withPercentage(Double percentage) {
         this.percentage = percentage;
         return this;
@@ -97,9 +105,11 @@ public class SuperannuationLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuperMembershipID")
     public String superMembershipID;
+
     public SuperannuationLine withSuperMembershipID(String superMembershipID) {
         this.superMembershipID = superMembershipID;
         return this;
     }
     
+    public SuperannuationLine(){}
 }

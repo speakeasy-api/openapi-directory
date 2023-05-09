@@ -20,9 +20,11 @@ public class VMeterToDeactivate {
     @JsonProperty("ID")
     @SpeakeasyMetadata("form:name=ID")
     public String id;
+
     public VMeterToDeactivate withId(String id) {
         this.id = id;
         return this;
     }
     
+    public VMeterToDeactivate(){}
 }

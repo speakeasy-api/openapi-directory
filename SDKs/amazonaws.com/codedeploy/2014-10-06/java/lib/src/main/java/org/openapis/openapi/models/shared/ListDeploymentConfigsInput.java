@@ -15,9 +15,11 @@ public class ListDeploymentConfigsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentConfigsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDeploymentConfigsInput(){}
 }

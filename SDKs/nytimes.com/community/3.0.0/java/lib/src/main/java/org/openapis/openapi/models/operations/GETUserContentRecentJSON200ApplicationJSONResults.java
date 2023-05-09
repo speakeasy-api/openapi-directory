@@ -12,6 +12,7 @@ public class GETUserContentRecentJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_timestamp")
     public String apiTimestamp;
+
     public GETUserContentRecentJSON200ApplicationJSONResults withApiTimestamp(String apiTimestamp) {
         this.apiTimestamp = apiTimestamp;
         return this;
@@ -20,6 +21,7 @@ public class GETUserContentRecentJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public GETUserContentRecentJSON200ApplicationJSONResultsComments[] comments;
+
     public GETUserContentRecentJSON200ApplicationJSONResults withComments(GETUserContentRecentJSON200ApplicationJSONResultsComments[] comments) {
         this.comments = comments;
         return this;
@@ -28,9 +30,11 @@ public class GETUserContentRecentJSON200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCommentsReturned")
     public Long totalCommentsReturned;
+
     public GETUserContentRecentJSON200ApplicationJSONResults withTotalCommentsReturned(Long totalCommentsReturned) {
         this.totalCommentsReturned = totalCommentsReturned;
         return this;
     }
     
+    public GETUserContentRecentJSON200ApplicationJSONResults(){}
 }

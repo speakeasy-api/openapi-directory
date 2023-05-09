@@ -12,6 +12,7 @@ public class CreateWorkspace400ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateWorkspace400ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -20,9 +21,11 @@ public class CreateWorkspace400ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkspace400ApplicationJSONError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateWorkspace400ApplicationJSONError(){}
 }

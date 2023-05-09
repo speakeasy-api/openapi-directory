@@ -15,6 +15,7 @@ public class SessionIssuer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public SessionIssuer withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class SessionIssuer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public SessionIssuer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class SessionIssuer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalId")
     public String principalId;
+
     public SessionIssuer withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -39,6 +42,7 @@ public class SessionIssuer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SessionIssuer withType(String type) {
         this.type = type;
         return this;
@@ -47,9 +51,11 @@ public class SessionIssuer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public SessionIssuer withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public SessionIssuer(){}
 }

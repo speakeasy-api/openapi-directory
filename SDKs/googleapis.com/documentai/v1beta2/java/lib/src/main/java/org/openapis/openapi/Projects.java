@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessResponse(contentType, httpRes.statusCode()) {{
             googleCloudDocumentaiV1beta2Document = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

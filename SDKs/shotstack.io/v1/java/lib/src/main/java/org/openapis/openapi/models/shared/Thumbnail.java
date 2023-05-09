@@ -15,6 +15,7 @@ public class Thumbnail {
      */
     @JsonProperty("capture")
     public Double capture;
+
     public Thumbnail withCapture(Double capture) {
         this.capture = capture;
         return this;
@@ -25,9 +26,14 @@ public class Thumbnail {
      */
     @JsonProperty("scale")
     public Double scale;
+
     public Thumbnail withScale(Double scale) {
         this.scale = scale;
         return this;
     }
     
+    public Thumbnail(@JsonProperty("capture") Double capture, @JsonProperty("scale") Double scale) {
+        this.capture = capture;
+        this.scale = scale;
+  }
 }

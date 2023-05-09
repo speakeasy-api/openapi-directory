@@ -12,9 +12,11 @@ public class Id {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public Id withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public Id(){}
 }

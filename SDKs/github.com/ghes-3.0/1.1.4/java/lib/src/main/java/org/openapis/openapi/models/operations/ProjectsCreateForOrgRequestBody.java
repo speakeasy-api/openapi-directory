@@ -15,6 +15,7 @@ public class ProjectsCreateForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public ProjectsCreateForOrgRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -25,9 +26,13 @@ public class ProjectsCreateForOrgRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectsCreateForOrgRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProjectsCreateForOrgRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

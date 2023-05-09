@@ -18,6 +18,7 @@ public class CustomErrorResponsePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorResponseRules")
     public CustomErrorResponsePolicyCustomErrorResponseRule[] errorResponseRules;
+
     public CustomErrorResponsePolicy withErrorResponseRules(CustomErrorResponsePolicyCustomErrorResponseRule[] errorResponseRules) {
         this.errorResponseRules = errorResponseRules;
         return this;
@@ -29,9 +30,11 @@ public class CustomErrorResponsePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorService")
     public String errorService;
+
     public CustomErrorResponsePolicy withErrorService(String errorService) {
         this.errorService = errorService;
         return this;
     }
     
+    public CustomErrorResponsePolicy(){}
 }

@@ -12,9 +12,11 @@ public class PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody(){}
 }

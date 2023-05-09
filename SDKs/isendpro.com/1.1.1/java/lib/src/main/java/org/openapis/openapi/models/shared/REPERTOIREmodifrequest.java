@@ -18,6 +18,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ1")
     public String[] champ1;
+
     public REPERTOIREmodifrequest withChamp1(String[] champ1) {
         this.champ1 = champ1;
         return this;
@@ -29,6 +30,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ10")
     public String[] champ10;
+
     public REPERTOIREmodifrequest withChamp10(String[] champ10) {
         this.champ10 = champ10;
         return this;
@@ -40,6 +42,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ11")
     public String[] champ11;
+
     public REPERTOIREmodifrequest withChamp11(String[] champ11) {
         this.champ11 = champ11;
         return this;
@@ -51,6 +54,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ12")
     public String[] champ12;
+
     public REPERTOIREmodifrequest withChamp12(String[] champ12) {
         this.champ12 = champ12;
         return this;
@@ -62,6 +66,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ13")
     public String[] champ13;
+
     public REPERTOIREmodifrequest withChamp13(String[] champ13) {
         this.champ13 = champ13;
         return this;
@@ -73,6 +78,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ14")
     public String[] champ14;
+
     public REPERTOIREmodifrequest withChamp14(String[] champ14) {
         this.champ14 = champ14;
         return this;
@@ -84,6 +90,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ15")
     public String[] champ15;
+
     public REPERTOIREmodifrequest withChamp15(String[] champ15) {
         this.champ15 = champ15;
         return this;
@@ -95,6 +102,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ16")
     public String[] champ16;
+
     public REPERTOIREmodifrequest withChamp16(String[] champ16) {
         this.champ16 = champ16;
         return this;
@@ -106,6 +114,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ17")
     public String[] champ17;
+
     public REPERTOIREmodifrequest withChamp17(String[] champ17) {
         this.champ17 = champ17;
         return this;
@@ -117,6 +126,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ18")
     public String[] champ18;
+
     public REPERTOIREmodifrequest withChamp18(String[] champ18) {
         this.champ18 = champ18;
         return this;
@@ -128,6 +138,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ19")
     public String[] champ19;
+
     public REPERTOIREmodifrequest withChamp19(String[] champ19) {
         this.champ19 = champ19;
         return this;
@@ -139,6 +150,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ2")
     public String[] champ2;
+
     public REPERTOIREmodifrequest withChamp2(String[] champ2) {
         this.champ2 = champ2;
         return this;
@@ -150,6 +162,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ20")
     public String[] champ20;
+
     public REPERTOIREmodifrequest withChamp20(String[] champ20) {
         this.champ20 = champ20;
         return this;
@@ -161,6 +174,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ21")
     public String[] champ21;
+
     public REPERTOIREmodifrequest withChamp21(String[] champ21) {
         this.champ21 = champ21;
         return this;
@@ -172,6 +186,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ22")
     public String[] champ22;
+
     public REPERTOIREmodifrequest withChamp22(String[] champ22) {
         this.champ22 = champ22;
         return this;
@@ -183,6 +198,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ23")
     public String[] champ23;
+
     public REPERTOIREmodifrequest withChamp23(String[] champ23) {
         this.champ23 = champ23;
         return this;
@@ -194,6 +210,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ24")
     public String[] champ24;
+
     public REPERTOIREmodifrequest withChamp24(String[] champ24) {
         this.champ24 = champ24;
         return this;
@@ -205,6 +222,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ25")
     public String[] champ25;
+
     public REPERTOIREmodifrequest withChamp25(String[] champ25) {
         this.champ25 = champ25;
         return this;
@@ -216,6 +234,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ26")
     public String[] champ26;
+
     public REPERTOIREmodifrequest withChamp26(String[] champ26) {
         this.champ26 = champ26;
         return this;
@@ -227,6 +246,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ27")
     public String[] champ27;
+
     public REPERTOIREmodifrequest withChamp27(String[] champ27) {
         this.champ27 = champ27;
         return this;
@@ -238,6 +258,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ3")
     public String[] champ3;
+
     public REPERTOIREmodifrequest withChamp3(String[] champ3) {
         this.champ3 = champ3;
         return this;
@@ -249,6 +270,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ4")
     public String[] champ4;
+
     public REPERTOIREmodifrequest withChamp4(String[] champ4) {
         this.champ4 = champ4;
         return this;
@@ -260,6 +282,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ5")
     public String[] champ5;
+
     public REPERTOIREmodifrequest withChamp5(String[] champ5) {
         this.champ5 = champ5;
         return this;
@@ -271,6 +294,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ6")
     public String[] champ6;
+
     public REPERTOIREmodifrequest withChamp6(String[] champ6) {
         this.champ6 = champ6;
         return this;
@@ -282,6 +306,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ7")
     public String[] champ7;
+
     public REPERTOIREmodifrequest withChamp7(String[] champ7) {
         this.champ7 = champ7;
         return this;
@@ -293,6 +318,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ8")
     public String[] champ8;
+
     public REPERTOIREmodifrequest withChamp8(String[] champ8) {
         this.champ8 = champ8;
         return this;
@@ -304,6 +330,7 @@ public class REPERTOIREmodifrequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("champ9")
     public String[] champ9;
+
     public REPERTOIREmodifrequest withChamp9(String[] champ9) {
         this.champ9 = champ9;
         return this;
@@ -314,6 +341,7 @@ public class REPERTOIREmodifrequest {
      */
     @JsonProperty("keyid")
     public String keyid;
+
     public REPERTOIREmodifrequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
@@ -324,6 +352,7 @@ public class REPERTOIREmodifrequest {
      */
     @JsonProperty("num")
     public String[] num;
+
     public REPERTOIREmodifrequest withNum(String[] num) {
         this.num = num;
         return this;
@@ -334,6 +363,7 @@ public class REPERTOIREmodifrequest {
      */
     @JsonProperty("repertoireEdit")
     public REPERTOIREmodifrequestRepertoireEditEnum repertoireEdit;
+
     public REPERTOIREmodifrequest withRepertoireEdit(REPERTOIREmodifrequestRepertoireEditEnum repertoireEdit) {
         this.repertoireEdit = repertoireEdit;
         return this;
@@ -344,9 +374,16 @@ public class REPERTOIREmodifrequest {
      */
     @JsonProperty("repertoireId")
     public String repertoireId;
+
     public REPERTOIREmodifrequest withRepertoireId(String repertoireId) {
         this.repertoireId = repertoireId;
         return this;
     }
     
+    public REPERTOIREmodifrequest(@JsonProperty("keyid") String keyid, @JsonProperty("num") String[] num, @JsonProperty("repertoireEdit") REPERTOIREmodifrequestRepertoireEditEnum repertoireEdit, @JsonProperty("repertoireId") String repertoireId) {
+        this.keyid = keyid;
+        this.num = num;
+        this.repertoireEdit = repertoireEdit;
+        this.repertoireId = repertoireId;
+  }
 }

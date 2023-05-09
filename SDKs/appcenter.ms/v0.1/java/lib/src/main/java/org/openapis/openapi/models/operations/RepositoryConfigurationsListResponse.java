@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RepositoryConfigurationsListResponse {
     
     public String contentType;
+
     public RepositoryConfigurationsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RepositoryConfigurationsListResponse {
     
     
     public Integer statusCode;
+
     public RepositoryConfigurationsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RepositoryConfigurationsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RepositoryConfigurationsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RepositoryConfigurationsListResponse {
      */
     
     public RepositoryConfigurationsList200ApplicationJSON[] repositoryConfigurationsList200ApplicationJSONAnies;
+
     public RepositoryConfigurationsListResponse withRepositoryConfigurationsList200ApplicationJSONAnies(RepositoryConfigurationsList200ApplicationJSON[] repositoryConfigurationsList200ApplicationJSONAnies) {
         this.repositoryConfigurationsList200ApplicationJSONAnies = repositoryConfigurationsList200ApplicationJSONAnies;
         return this;
@@ -43,9 +48,14 @@ public class RepositoryConfigurationsListResponse {
      */
     
     public RepositoryConfigurationsListDefaultApplicationJSON repositoryConfigurationsListDefaultApplicationJSONObject;
+
     public RepositoryConfigurationsListResponse withRepositoryConfigurationsListDefaultApplicationJSONObject(RepositoryConfigurationsListDefaultApplicationJSON repositoryConfigurationsListDefaultApplicationJSONObject) {
         this.repositoryConfigurationsListDefaultApplicationJSONObject = repositoryConfigurationsListDefaultApplicationJSONObject;
         return this;
     }
     
+    public RepositoryConfigurationsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

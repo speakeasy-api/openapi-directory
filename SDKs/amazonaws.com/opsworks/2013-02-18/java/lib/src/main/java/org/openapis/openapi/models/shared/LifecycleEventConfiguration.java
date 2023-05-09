@@ -15,9 +15,11 @@ public class LifecycleEventConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shutdown")
     public ShutdownEventConfiguration shutdown;
+
     public LifecycleEventConfiguration withShutdown(ShutdownEventConfiguration shutdown) {
         this.shutdown = shutdown;
         return this;
     }
     
+    public LifecycleEventConfiguration(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryBySkuRequest {
@@ -12,6 +13,7 @@ public class InventoryBySkuRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InventoryBySkuRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InventoryBySkuRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InventoryBySkuRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class InventoryBySkuRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public InventoryBySkuRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public InventoryBySkuRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("skuId") String skuId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.skuId = skuId;
+  }
 }

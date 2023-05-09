@@ -15,6 +15,7 @@ public class UpdateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public String[] capabilities;
+
     public UpdateSceneRequestBody withCapabilities(String[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLocation")
     public String contentLocation;
+
     public UpdateSceneRequestBody withContentLocation(String contentLocation) {
         this.contentLocation = contentLocation;
         return this;
@@ -37,6 +39,7 @@ public class UpdateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateSceneRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -48,9 +51,11 @@ public class UpdateSceneRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sceneMetadata")
     public java.util.Map<String, String> sceneMetadata;
+
     public UpdateSceneRequestBody withSceneMetadata(java.util.Map<String, String> sceneMetadata) {
         this.sceneMetadata = sceneMetadata;
         return this;
     }
     
+    public UpdateSceneRequestBody(){}
 }

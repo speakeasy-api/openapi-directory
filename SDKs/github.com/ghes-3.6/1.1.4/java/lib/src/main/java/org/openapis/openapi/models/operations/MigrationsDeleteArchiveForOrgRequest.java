@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsDeleteArchiveForOrgRequest {
@@ -12,6 +13,7 @@ public class MigrationsDeleteArchiveForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
     public Long migrationId;
+
     public MigrationsDeleteArchiveForOrgRequest withMigrationId(Long migrationId) {
         this.migrationId = migrationId;
         return this;
@@ -22,9 +24,14 @@ public class MigrationsDeleteArchiveForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public MigrationsDeleteArchiveForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public MigrationsDeleteArchiveForOrgRequest(@JsonProperty("migration_id") Long migrationId, @JsonProperty("org") String org) {
+        this.migrationId = migrationId;
+        this.org = org;
+  }
 }

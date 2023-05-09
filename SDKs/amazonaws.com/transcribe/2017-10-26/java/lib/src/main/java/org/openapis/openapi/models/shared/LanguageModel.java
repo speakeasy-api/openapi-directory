@@ -20,6 +20,7 @@ public class LanguageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseModelName")
     public BaseModelNameEnum baseModelName;
+
     public LanguageModel withBaseModelName(BaseModelNameEnum baseModelName) {
         this.baseModelName = baseModelName;
         return this;
@@ -30,6 +31,7 @@ public class LanguageModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public LanguageModel withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class LanguageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public LanguageModel withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class LanguageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public LanguageModel withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -54,6 +58,7 @@ public class LanguageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public CLMLanguageCodeEnum languageCode;
+
     public LanguageModel withLanguageCode(CLMLanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -64,6 +69,7 @@ public class LanguageModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public LanguageModel withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -72,6 +78,7 @@ public class LanguageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public LanguageModel withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -80,6 +87,7 @@ public class LanguageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelStatus")
     public ModelStatusEnum modelStatus;
+
     public LanguageModel withModelStatus(ModelStatusEnum modelStatus) {
         this.modelStatus = modelStatus;
         return this;
@@ -88,9 +96,11 @@ public class LanguageModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpgradeAvailability")
     public Boolean upgradeAvailability;
+
     public LanguageModel withUpgradeAvailability(Boolean upgradeAvailability) {
         this.upgradeAvailability = upgradeAvailability;
         return this;
     }
     
+    public LanguageModel(){}
 }

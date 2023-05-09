@@ -15,6 +15,7 @@ public class PortRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRange")
     public Long maxRange;
+
     public PortRange withMaxRange(Long maxRange) {
         this.maxRange = maxRange;
         return this;
@@ -22,9 +23,13 @@ public class PortRange {
     
     @JsonProperty("MinRange")
     public Long minRange;
+
     public PortRange withMinRange(Long minRange) {
         this.minRange = minRange;
         return this;
     }
     
+    public PortRange(@JsonProperty("MinRange") Long minRange) {
+        this.minRange = minRange;
+  }
 }

@@ -12,6 +12,7 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
      */
     
     public Integer activeScore;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withActiveScore(Integer activeScore) {
         this.activeScore = activeScore;
         return this;
@@ -22,6 +23,7 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
      */
     
     public Integer legacyScore;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withLegacyScore(Integer legacyScore) {
         this.legacyScore = legacyScore;
         return this;
@@ -32,6 +34,7 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
      */
     
     public Integer lifetimeScore;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withLifetimeScore(Integer lifetimeScore) {
         this.lifetimeScore = lifetimeScore;
         return this;
@@ -42,6 +45,7 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
      */
     
     public Long recordCategoriesRootNodeHash;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withRecordCategoriesRootNodeHash(Long recordCategoriesRootNodeHash) {
         this.recordCategoriesRootNodeHash = recordCategoriesRootNodeHash;
         return this;
@@ -52,6 +56,7 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
      */
     
     public Long recordSealsRootNodeHash;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withRecordSealsRootNodeHash(Long recordSealsRootNodeHash) {
         this.recordSealsRootNodeHash = recordSealsRootNodeHash;
         return this;
@@ -59,6 +64,7 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
     
     
     public java.util.Map<String, DestinyComponentsRecordsDestinyRecordComponent> records;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withRecords(java.util.Map<String, DestinyComponentsRecordsDestinyRecordComponent> records) {
         this.records = records;
         return this;
@@ -69,6 +75,7 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
      */
     
     public Integer score;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withScore(Integer score) {
         this.score = score;
         return this;
@@ -79,9 +86,11 @@ public class DestinyComponentsRecordsDestinyProfileRecordsComponent {
      */
     
     public Long trackedRecordHash;
+
     public DestinyComponentsRecordsDestinyProfileRecordsComponent withTrackedRecordHash(Long trackedRecordHash) {
         this.trackedRecordHash = trackedRecordHash;
         return this;
     }
     
+    public DestinyComponentsRecordsDestinyProfileRecordsComponent(){}
 }

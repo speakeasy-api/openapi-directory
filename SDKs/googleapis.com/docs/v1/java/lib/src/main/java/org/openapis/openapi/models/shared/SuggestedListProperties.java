@@ -18,6 +18,7 @@ public class SuggestedListProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listProperties")
     public ListProperties listProperties;
+
     public SuggestedListProperties withListProperties(ListProperties listProperties) {
         this.listProperties = listProperties;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedListProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPropertiesSuggestionState")
     public ListPropertiesSuggestionState listPropertiesSuggestionState;
+
     public SuggestedListProperties withListPropertiesSuggestionState(ListPropertiesSuggestionState listPropertiesSuggestionState) {
         this.listPropertiesSuggestionState = listPropertiesSuggestionState;
         return this;
     }
     
+    public SuggestedListProperties(){}
 }

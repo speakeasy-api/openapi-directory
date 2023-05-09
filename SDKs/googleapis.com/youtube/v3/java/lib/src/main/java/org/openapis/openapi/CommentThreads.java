@@ -61,11 +61,9 @@ public class CommentThreads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentThreadsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeCommentThreadsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentThreadsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeCommentThreadsInsertResponse(contentType, httpRes.statusCode()) {{
             commentThread = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class CommentThreads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCommentThreadsListResponse res = new org.openapis.openapi.models.operations.YoutubeCommentThreadsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCommentThreadsListResponse res = new org.openapis.openapi.models.operations.YoutubeCommentThreadsListResponse(contentType, httpRes.statusCode()) {{
             commentThreadListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

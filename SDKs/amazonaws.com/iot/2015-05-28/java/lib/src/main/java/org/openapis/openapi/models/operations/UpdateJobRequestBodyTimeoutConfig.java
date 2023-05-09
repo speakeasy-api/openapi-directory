@@ -15,9 +15,11 @@ public class UpdateJobRequestBodyTimeoutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inProgressTimeoutInMinutes")
     public Long inProgressTimeoutInMinutes;
+
     public UpdateJobRequestBodyTimeoutConfig withInProgressTimeoutInMinutes(Long inProgressTimeoutInMinutes) {
         this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
         return this;
     }
     
+    public UpdateJobRequestBodyTimeoutConfig(){}
 }

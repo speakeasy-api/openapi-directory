@@ -15,6 +15,7 @@ public class Integration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bic")
     public String bic;
+
     public Integration withBic(String bic) {
         this.bic = bic;
         return this;
@@ -22,6 +23,7 @@ public class Integration {
     
     @JsonProperty("countries")
     public String[] countries;
+
     public Integration withCountries(String[] countries) {
         this.countries = countries;
         return this;
@@ -29,6 +31,7 @@ public class Integration {
     
     @JsonProperty("id")
     public String id;
+
     public Integration withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class Integration {
     
     @JsonProperty("logo")
     public String logo;
+
     public Integration withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -43,6 +47,7 @@ public class Integration {
     
     @JsonProperty("name")
     public String name;
+
     public Integration withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,16 @@ public class Integration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_total_days")
     public String transactionTotalDays;
+
     public Integration withTransactionTotalDays(String transactionTotalDays) {
         this.transactionTotalDays = transactionTotalDays;
         return this;
     }
     
+    public Integration(@JsonProperty("countries") String[] countries, @JsonProperty("id") String id, @JsonProperty("logo") String logo, @JsonProperty("name") String name) {
+        this.countries = countries;
+        this.id = id;
+        this.logo = logo;
+        this.name = name;
+  }
 }

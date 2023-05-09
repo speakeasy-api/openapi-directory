@@ -111,4 +111,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/StopTalkResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartStreamResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartStreamRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/StopStreamResponse.java
+docs/sdk/README.md
+docs/calls/README.md
+docs/playdtmf/README.md
+docs/playtts/README.md
+docs/streamaudio/README.md
 USAGE.md

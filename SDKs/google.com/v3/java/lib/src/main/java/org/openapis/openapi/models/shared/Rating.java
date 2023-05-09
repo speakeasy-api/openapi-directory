@@ -18,6 +18,7 @@ public class Rating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratingScale")
     public Integer ratingScale;
+
     public Rating withRatingScale(Integer ratingScale) {
         this.ratingScale = ratingScale;
         return this;
@@ -29,6 +30,7 @@ public class Rating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public Rating withScore(Float score) {
         this.score = score;
         return this;
@@ -40,9 +42,11 @@ public class Rating {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RatingTypeEnum type;
+
     public Rating withType(RatingTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Rating(){}
 }

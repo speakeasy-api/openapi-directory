@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse {
     
     public String contentType;
+
     public PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.Person person;
+
     public PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse withPerson(org.openapis.openapi.models.shared.Person person) {
         this.person = person;
         return this;
@@ -26,6 +29,7 @@ public class PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse {
     
     
     public Integer statusCode;
+
     public PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

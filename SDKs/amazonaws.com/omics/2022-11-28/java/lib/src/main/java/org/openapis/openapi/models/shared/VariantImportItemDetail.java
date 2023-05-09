@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VariantImportItemDetail {
     @JsonProperty("jobStatus")
     public JobStatusEnum jobStatus;
+
     public VariantImportItemDetail withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -21,6 +22,7 @@ public class VariantImportItemDetail {
     
     @JsonProperty("source")
     public String source;
+
     public VariantImportItemDetail withSource(String source) {
         this.source = source;
         return this;
@@ -29,9 +31,14 @@ public class VariantImportItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public VariantImportItemDetail withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public VariantImportItemDetail(@JsonProperty("jobStatus") JobStatusEnum jobStatus, @JsonProperty("source") String source) {
+        this.jobStatus = jobStatus;
+        this.source = source;
+  }
 }

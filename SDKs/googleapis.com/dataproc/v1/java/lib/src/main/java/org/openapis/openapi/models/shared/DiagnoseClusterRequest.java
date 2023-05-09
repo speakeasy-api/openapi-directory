@@ -18,6 +18,7 @@ public class DiagnoseClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnosisInterval")
     public Interval diagnosisInterval;
+
     public DiagnoseClusterRequest withDiagnosisInterval(Interval diagnosisInterval) {
         this.diagnosisInterval = diagnosisInterval;
         return this;
@@ -29,6 +30,7 @@ public class DiagnoseClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public String job;
+
     public DiagnoseClusterRequest withJob(String job) {
         this.job = job;
         return this;
@@ -40,6 +42,7 @@ public class DiagnoseClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public String[] jobs;
+
     public DiagnoseClusterRequest withJobs(String[] jobs) {
         this.jobs = jobs;
         return this;
@@ -51,6 +54,7 @@ public class DiagnoseClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yarnApplicationId")
     public String yarnApplicationId;
+
     public DiagnoseClusterRequest withYarnApplicationId(String yarnApplicationId) {
         this.yarnApplicationId = yarnApplicationId;
         return this;
@@ -62,9 +66,11 @@ public class DiagnoseClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yarnApplicationIds")
     public String[] yarnApplicationIds;
+
     public DiagnoseClusterRequest withYarnApplicationIds(String[] yarnApplicationIds) {
         this.yarnApplicationIds = yarnApplicationIds;
         return this;
     }
     
+    public DiagnoseClusterRequest(){}
 }

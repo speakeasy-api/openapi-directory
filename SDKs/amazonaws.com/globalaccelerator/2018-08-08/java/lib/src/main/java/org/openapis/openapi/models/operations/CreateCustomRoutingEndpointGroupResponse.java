@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomRoutingEndpointGroupResponse {
@@ -12,6 +13,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public CreateCustomRoutingEndpointGroupResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateCustomRoutingEndpointGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
     
     
     public String contentType;
+
     public CreateCustomRoutingEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomRoutingEndpointGroupResponse createCustomRoutingEndpointGroupResponse;
+
     public CreateCustomRoutingEndpointGroupResponse withCreateCustomRoutingEndpointGroupResponse(org.openapis.openapi.models.shared.CreateCustomRoutingEndpointGroupResponse createCustomRoutingEndpointGroupResponse) {
         this.createCustomRoutingEndpointGroupResponse = createCustomRoutingEndpointGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object endpointGroupAlreadyExistsException;
+
     public CreateCustomRoutingEndpointGroupResponse withEndpointGroupAlreadyExistsException(Object endpointGroupAlreadyExistsException) {
         this.endpointGroupAlreadyExistsException = endpointGroupAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateCustomRoutingEndpointGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateCustomRoutingEndpointGroupResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -79,6 +87,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object invalidPortRangeException;
+
     public CreateCustomRoutingEndpointGroupResponse withInvalidPortRangeException(Object invalidPortRangeException) {
         this.invalidPortRangeException = invalidPortRangeException;
         return this;
@@ -89,6 +98,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCustomRoutingEndpointGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
      */
     
     public Object listenerNotFoundException;
+
     public CreateCustomRoutingEndpointGroupResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class CreateCustomRoutingEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomRoutingEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class CreateCustomRoutingEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomRoutingEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCustomRoutingEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

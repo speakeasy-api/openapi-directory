@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2ConversationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2ConversationInfo withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationInfo(){}
 }

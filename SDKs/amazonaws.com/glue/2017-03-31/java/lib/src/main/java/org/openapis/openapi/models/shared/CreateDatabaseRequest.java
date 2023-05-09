@@ -12,6 +12,7 @@ public class CreateDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public CreateDatabaseRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class CreateDatabaseRequest {
     
     @JsonProperty("DatabaseInput")
     public DatabaseInput databaseInput;
+
     public CreateDatabaseRequest withDatabaseInput(DatabaseInput databaseInput) {
         this.databaseInput = databaseInput;
         return this;
@@ -27,9 +29,13 @@ public class CreateDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateDatabaseRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatabaseRequest(@JsonProperty("DatabaseInput") DatabaseInput databaseInput) {
+        this.databaseInput = databaseInput;
+  }
 }

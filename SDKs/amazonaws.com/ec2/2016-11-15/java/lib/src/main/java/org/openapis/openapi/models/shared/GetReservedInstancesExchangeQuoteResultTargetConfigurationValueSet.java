@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet {
     
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue reservationValue;
+
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet withReservationValue(GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetReservationValue reservationValue) {
         this.reservationValue = reservationValue;
         return this;
@@ -19,9 +20,11 @@ public class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet 
     
     
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration targetConfiguration;
+
     public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet withTargetConfiguration(GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSetTargetConfiguration targetConfiguration) {
         this.targetConfiguration = targetConfiguration;
         return this;
     }
     
+    public GetReservedInstancesExchangeQuoteResultTargetConfigurationValueSet(){}
 }

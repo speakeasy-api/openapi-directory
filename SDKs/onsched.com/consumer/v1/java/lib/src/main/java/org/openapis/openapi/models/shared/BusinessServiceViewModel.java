@@ -12,6 +12,7 @@ public class BusinessServiceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public BusinessServiceViewModel withId(Integer id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class BusinessServiceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public BusinessServiceViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -28,6 +30,7 @@ public class BusinessServiceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public Integer serviceId;
+
     public BusinessServiceViewModel withServiceId(Integer serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -36,9 +39,11 @@ public class BusinessServiceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public BusinessServiceViewModel withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public BusinessServiceViewModel(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteReplicationTaskAssessmentRunMessage {
     @JsonProperty("ReplicationTaskAssessmentRunArn")
     public String replicationTaskAssessmentRunArn;
+
     public DeleteReplicationTaskAssessmentRunMessage withReplicationTaskAssessmentRunArn(String replicationTaskAssessmentRunArn) {
         this.replicationTaskAssessmentRunArn = replicationTaskAssessmentRunArn;
         return this;
     }
     
+    public DeleteReplicationTaskAssessmentRunMessage(@JsonProperty("ReplicationTaskAssessmentRunArn") String replicationTaskAssessmentRunArn) {
+        this.replicationTaskAssessmentRunArn = replicationTaskAssessmentRunArn;
+  }
 }

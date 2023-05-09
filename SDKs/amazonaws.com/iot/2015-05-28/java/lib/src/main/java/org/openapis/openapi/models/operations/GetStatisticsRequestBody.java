@@ -15,6 +15,7 @@ public class GetStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationField")
     public String aggregationField;
+
     public GetStatisticsRequestBody withAggregationField(String aggregationField) {
         this.aggregationField = aggregationField;
         return this;
@@ -26,6 +27,7 @@ public class GetStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public GetStatisticsRequestBody withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -36,6 +38,7 @@ public class GetStatisticsRequestBody {
      */
     @JsonProperty("queryString")
     public String queryString;
+
     public GetStatisticsRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -47,9 +50,13 @@ public class GetStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public GetStatisticsRequestBody withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
     }
     
+    public GetStatisticsRequestBody(@JsonProperty("queryString") String queryString) {
+        this.queryString = queryString;
+  }
 }

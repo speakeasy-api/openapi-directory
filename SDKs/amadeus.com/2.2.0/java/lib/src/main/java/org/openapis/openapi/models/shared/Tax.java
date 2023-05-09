@@ -15,6 +15,7 @@ public class Tax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public Tax withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class Tax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Tax withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public Tax(){}
 }

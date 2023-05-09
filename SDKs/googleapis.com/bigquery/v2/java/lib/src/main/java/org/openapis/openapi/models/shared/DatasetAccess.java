@@ -12,6 +12,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public DatasetAccessEntry dataset;
+
     public DatasetAccess withDataset(DatasetAccessEntry dataset) {
         this.dataset = dataset;
         return this;
@@ -23,6 +24,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public DatasetAccess withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -34,6 +36,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupByEmail")
     public String groupByEmail;
+
     public DatasetAccess withGroupByEmail(String groupByEmail) {
         this.groupByEmail = groupByEmail;
         return this;
@@ -45,6 +48,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamMember")
     public String iamMember;
+
     public DatasetAccess withIamMember(String iamMember) {
         this.iamMember = iamMember;
         return this;
@@ -56,6 +60,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public DatasetAccess withRole(String role) {
         this.role = role;
         return this;
@@ -64,6 +69,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routine")
     public RoutineReference routine;
+
     public DatasetAccess withRoutine(RoutineReference routine) {
         this.routine = routine;
         return this;
@@ -75,6 +81,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialGroup")
     public String specialGroup;
+
     public DatasetAccess withSpecialGroup(String specialGroup) {
         this.specialGroup = specialGroup;
         return this;
@@ -86,6 +93,7 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userByEmail")
     public String userByEmail;
+
     public DatasetAccess withUserByEmail(String userByEmail) {
         this.userByEmail = userByEmail;
         return this;
@@ -94,9 +102,11 @@ public class DatasetAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public TableReference view;
+
     public DatasetAccess withView(TableReference view) {
         this.view = view;
         return this;
     }
     
+    public DatasetAccess(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPoliciesResponse {
     
     public String contentType;
+
     public ListPoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPoliciesResponse {
      */
     
     public Object internalErrorException;
+
     public ListPoliciesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListPoliciesResponse {
      */
     
     public Object invalidOperationException;
+
     public ListPoliciesResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -39,6 +43,7 @@ public class ListPoliciesResponse {
      */
     
     public Object limitExceededException;
+
     public ListPoliciesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListPoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPoliciesResponse listPoliciesResponse;
+
     public ListPoliciesResponse withListPoliciesResponse(org.openapis.openapi.models.shared.ListPoliciesResponse listPoliciesResponse) {
         this.listPoliciesResponse = listPoliciesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListPoliciesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPoliciesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListPoliciesResponse {
     
     
     public Integer statusCode;
+
     public ListPoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListPoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListPoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

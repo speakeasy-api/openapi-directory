@@ -18,9 +18,11 @@ public class SlashCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandId")
     public String commandId;
+
     public SlashCommand withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
     }
     
+    public SlashCommand(){}
 }

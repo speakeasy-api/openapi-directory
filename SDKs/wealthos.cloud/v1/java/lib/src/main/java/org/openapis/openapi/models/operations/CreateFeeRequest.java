@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFeeRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateFeeRootTypeForFee requestBody;
+
     public CreateFeeRequest withRequestBody(CreateFeeRootTypeForFee requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreateFeeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public CreateFeeRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public CreateFeeRequest(@JsonProperty("RequestBody") CreateFeeRootTypeForFee requestBody, @JsonProperty("x-api-key") String xApiKey) {
+        this.requestBody = requestBody;
+        this.xApiKey = xApiKey;
+  }
 }

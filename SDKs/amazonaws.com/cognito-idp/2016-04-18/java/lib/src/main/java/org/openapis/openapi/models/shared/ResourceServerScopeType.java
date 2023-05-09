@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceServerScopeType {
     @JsonProperty("ScopeDescription")
     public String scopeDescription;
+
     public ResourceServerScopeType withScopeDescription(String scopeDescription) {
         this.scopeDescription = scopeDescription;
         return this;
@@ -19,9 +20,14 @@ public class ResourceServerScopeType {
     
     @JsonProperty("ScopeName")
     public String scopeName;
+
     public ResourceServerScopeType withScopeName(String scopeName) {
         this.scopeName = scopeName;
         return this;
     }
     
+    public ResourceServerScopeType(@JsonProperty("ScopeDescription") String scopeDescription, @JsonProperty("ScopeName") String scopeName) {
+        this.scopeDescription = scopeDescription;
+        this.scopeName = scopeName;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RegistrationsReadRegistration - OK
@@ -15,6 +15,7 @@ public class RegistrationsReadRegistration {
      */
     
     public RegistrationsReadRegistrationAttributes attributes;
+
     public RegistrationsReadRegistration withAttributes(RegistrationsReadRegistrationAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsReadRegistration {
      */
     
     public String id;
+
     public RegistrationsReadRegistration withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsReadRegistration {
      */
     
     public RegistrationsReadRegistrationLinks links;
+
     public RegistrationsReadRegistration withLinks(RegistrationsReadRegistrationLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsReadRegistration {
      */
     
     public RegistrationsReadRegistrationRelationships relationships;
+
     public RegistrationsReadRegistration withRelationships(RegistrationsReadRegistrationRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,17 @@ public class RegistrationsReadRegistration {
      */
     
     public String type;
+
     public RegistrationsReadRegistration withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsReadRegistration(@JsonProperty("attributes") RegistrationsReadRegistrationAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") RegistrationsReadRegistrationLinks links, @JsonProperty("relationships") RegistrationsReadRegistrationRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

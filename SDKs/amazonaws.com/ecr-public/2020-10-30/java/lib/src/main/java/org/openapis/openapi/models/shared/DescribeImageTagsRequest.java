@@ -12,6 +12,7 @@ public class DescribeImageTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeImageTagsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeImageTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeImageTagsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class DescribeImageTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DescribeImageTagsRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -35,9 +38,13 @@ public class DescribeImageTagsRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DescribeImageTagsRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DescribeImageTagsRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

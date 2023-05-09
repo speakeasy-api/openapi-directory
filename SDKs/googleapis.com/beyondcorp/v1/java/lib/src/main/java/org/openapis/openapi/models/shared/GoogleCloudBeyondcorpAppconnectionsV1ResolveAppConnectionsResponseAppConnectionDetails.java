@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseA
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appConnection")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnection appConnection;
+
     public GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails withAppConnection(GoogleCloudBeyondcorpAppconnectionsV1AppConnection appConnection) {
         this.appConnection = appConnection;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseA
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentMigVms")
     public String[] recentMigVms;
+
     public GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails withRecentMigVms(String[] recentMigVms) {
         this.recentMigVms = recentMigVms;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails(){}
 }

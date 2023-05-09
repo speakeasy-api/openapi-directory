@@ -15,6 +15,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genre_ids")
     public Long[] genreIds;
+
     public EpisodeSearchResultPodcast withGenreIds(Long[] genreIds) {
         this.genreIds = genreIds;
         return this;
@@ -26,6 +27,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EpisodeSearchResultPodcast withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public EpisodeSearchResultPodcast withImage(String image) {
         this.image = image;
         return this;
@@ -53,6 +56,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listen_score")
     public Long listenScore;
+
     public EpisodeSearchResultPodcast withListenScore(Long listenScore) {
         this.listenScore = listenScore;
         return this;
@@ -67,6 +71,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listen_score_global_rank")
     public String listenScoreGlobalRank;
+
     public EpisodeSearchResultPodcast withListenScoreGlobalRank(String listenScoreGlobalRank) {
         this.listenScoreGlobalRank = listenScoreGlobalRank;
         return this;
@@ -78,6 +83,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listennotes_url")
     public String listennotesUrl;
+
     public EpisodeSearchResultPodcast withListennotesUrl(String listennotesUrl) {
         this.listennotesUrl = listennotesUrl;
         return this;
@@ -89,6 +95,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher_highlighted")
     public String publisherHighlighted;
+
     public EpisodeSearchResultPodcast withPublisherHighlighted(String publisherHighlighted) {
         this.publisherHighlighted = publisherHighlighted;
         return this;
@@ -100,6 +107,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher_original")
     public String publisherOriginal;
+
     public EpisodeSearchResultPodcast withPublisherOriginal(String publisherOriginal) {
         this.publisherOriginal = publisherOriginal;
         return this;
@@ -111,6 +119,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public EpisodeSearchResultPodcast withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -122,6 +131,7 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_highlighted")
     public String titleHighlighted;
+
     public EpisodeSearchResultPodcast withTitleHighlighted(String titleHighlighted) {
         this.titleHighlighted = titleHighlighted;
         return this;
@@ -133,9 +143,11 @@ public class EpisodeSearchResultPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_original")
     public String titleOriginal;
+
     public EpisodeSearchResultPodcast withTitleOriginal(String titleOriginal) {
         this.titleOriginal = titleOriginal;
         return this;
     }
     
+    public EpisodeSearchResultPodcast(){}
 }

@@ -18,6 +18,7 @@ public class ListMattersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matters")
     public Matter[] matters;
+
     public ListMattersResponse withMatters(Matter[] matters) {
         this.matters = matters;
         return this;
@@ -29,9 +30,11 @@ public class ListMattersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMattersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMattersResponse(){}
 }

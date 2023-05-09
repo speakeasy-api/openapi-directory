@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneCodeGeoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
     public String countryIso2;
+
     public PhoneCodeGeoRequest withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -16,6 +18,7 @@ public class PhoneCodeGeoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
     public String firstName;
+
     public PhoneCodeGeoRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -23,6 +26,7 @@ public class PhoneCodeGeoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
     public String lastName;
+
     public PhoneCodeGeoRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -30,9 +34,16 @@ public class PhoneCodeGeoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumber")
     public String phoneNumber;
+
     public PhoneCodeGeoRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public PhoneCodeGeoRequest(@JsonProperty("countryIso2") String countryIso2, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName, @JsonProperty("phoneNumber") String phoneNumber) {
+        this.countryIso2 = countryIso2;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+  }
 }

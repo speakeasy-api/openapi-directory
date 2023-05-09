@@ -15,6 +15,7 @@ public class CustomFieldDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CustomFieldDTO withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class CustomFieldDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomFieldDTO withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class CustomFieldDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CustomFieldDTOTypeEnum type;
+
     public CustomFieldDTO withType(CustomFieldDTOTypeEnum type) {
         this.type = type;
         return this;
@@ -39,9 +42,11 @@ public class CustomFieldDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public CustomFieldDTO withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public CustomFieldDTO(){}
 }

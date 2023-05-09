@@ -18,9 +18,11 @@ public class ValueValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public ValueValidation withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ValueValidation(){}
 }

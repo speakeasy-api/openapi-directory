@@ -15,6 +15,7 @@ public class ReplicaStatus {
      */
     
     public String details;
+
     public ReplicaStatus withDetails(String details) {
         this.details = details;
         return this;
@@ -25,6 +26,7 @@ public class ReplicaStatus {
      */
     
     public String state;
+
     public ReplicaStatus withState(String state) {
         this.state = state;
         return this;
@@ -35,6 +37,7 @@ public class ReplicaStatus {
      */
     
     public String templateVersion;
+
     public ReplicaStatus withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
@@ -45,6 +48,7 @@ public class ReplicaStatus {
      */
     
     public String vmLink;
+
     public ReplicaStatus withVmLink(String vmLink) {
         this.vmLink = vmLink;
         return this;
@@ -55,9 +59,11 @@ public class ReplicaStatus {
      */
     
     public String vmStartTime;
+
     public ReplicaStatus withVmStartTime(String vmStartTime) {
         this.vmStartTime = vmStartTime;
         return this;
     }
     
+    public ReplicaStatus(){}
 }

@@ -18,6 +18,7 @@ public class DeploymentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudFormationTarget")
     public CloudFormationTarget cloudFormationTarget;
+
     public DeploymentTarget withCloudFormationTarget(CloudFormationTarget cloudFormationTarget) {
         this.cloudFormationTarget = cloudFormationTarget;
         return this;
@@ -26,6 +27,7 @@ public class DeploymentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentTargetType")
     public DeploymentTargetTypeEnum deploymentTargetType;
+
     public DeploymentTarget withDeploymentTargetType(DeploymentTargetTypeEnum deploymentTargetType) {
         this.deploymentTargetType = deploymentTargetType;
         return this;
@@ -34,6 +36,7 @@ public class DeploymentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecsTarget")
     public ECSTarget ecsTarget;
+
     public DeploymentTarget withEcsTarget(ECSTarget ecsTarget) {
         this.ecsTarget = ecsTarget;
         return this;
@@ -42,6 +45,7 @@ public class DeploymentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTarget")
     public InstanceTarget instanceTarget;
+
     public DeploymentTarget withInstanceTarget(InstanceTarget instanceTarget) {
         this.instanceTarget = instanceTarget;
         return this;
@@ -50,9 +54,11 @@ public class DeploymentTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaTarget")
     public LambdaTarget lambdaTarget;
+
     public DeploymentTarget withLambdaTarget(LambdaTarget lambdaTarget) {
         this.lambdaTarget = lambdaTarget;
         return this;
     }
     
+    public DeploymentTarget(){}
 }

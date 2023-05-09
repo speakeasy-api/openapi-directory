@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetRequest;
 import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetOauthV1AccessTokensTokenGetRequest req = new GetOauthV1AccessTokensTokenGetRequest() {{
-                token = "corrupti";
-            }}            
+            GetOauthV1AccessTokensTokenGetRequest req = new GetOauthV1AccessTokensTokenGetRequest("corrupti");            
 
             GetOauthV1AccessTokensTokenGetResponse res = sdk.accessTokens.getOauthV1AccessTokensTokenGet(req);
 
-            if (res.accessTokenInfoResponse.isPresent()) {
+            if (res.accessTokenInfoResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,18 +44,18 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accessTokens
+### [accessTokens](docs/accesstokens/README.md)
 
-* `getOauthV1AccessTokensTokenGet`
+* [getOauthV1AccessTokensTokenGet](docs/accesstokens/README.md#getoauthv1accesstokenstokenget)
 
-### refreshTokens
+### [refreshTokens](docs/refreshtokens/README.md)
 
-* `deleteOauthV1RefreshTokensTokenArchive`
-* `getOauthV1RefreshTokensTokenGet`
+* [deleteOauthV1RefreshTokensTokenArchive](docs/refreshtokens/README.md#deleteoauthv1refreshtokenstokenarchive)
+* [getOauthV1RefreshTokensTokenGet](docs/refreshtokens/README.md#getoauthv1refreshtokenstokenget)
 
-### tokens
+### [tokens](docs/tokens/README.md)
 
-* `postOauthV1TokenCreate`
+* [postOauthV1TokenCreate](docs/tokens/README.md#postoauthv1tokencreate)
 <!-- End SDK Available Operations -->
 
 ### Maturity

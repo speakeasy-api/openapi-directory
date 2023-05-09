@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DataprocProjectsRegionsWorkflowTemplatesCreateResponse {
     
     public String contentType;
+
     public DataprocProjectsRegionsWorkflowTemplatesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DataprocProjectsRegionsWorkflowTemplatesCreateResponse {
     
     
     public Integer statusCode;
+
     public DataprocProjectsRegionsWorkflowTemplatesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DataprocProjectsRegionsWorkflowTemplatesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DataprocProjectsRegionsWorkflowTemplatesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DataprocProjectsRegionsWorkflowTemplatesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.WorkflowTemplate workflowTemplate;
+
     public DataprocProjectsRegionsWorkflowTemplatesCreateResponse withWorkflowTemplate(org.openapis.openapi.models.shared.WorkflowTemplate workflowTemplate) {
         this.workflowTemplate = workflowTemplate;
         return this;
     }
     
+    public DataprocProjectsRegionsWorkflowTemplatesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

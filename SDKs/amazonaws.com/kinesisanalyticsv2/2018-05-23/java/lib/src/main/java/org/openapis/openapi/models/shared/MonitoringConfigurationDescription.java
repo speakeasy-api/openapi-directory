@@ -15,6 +15,7 @@ public class MonitoringConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationType")
     public ConfigurationTypeEnum configurationType;
+
     public MonitoringConfigurationDescription withConfigurationType(ConfigurationTypeEnum configurationType) {
         this.configurationType = configurationType;
         return this;
@@ -23,6 +24,7 @@ public class MonitoringConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogLevel")
     public LogLevelEnum logLevel;
+
     public MonitoringConfigurationDescription withLogLevel(LogLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -31,9 +33,11 @@ public class MonitoringConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricsLevel")
     public MetricsLevelEnum metricsLevel;
+
     public MonitoringConfigurationDescription withMetricsLevel(MetricsLevelEnum metricsLevel) {
         this.metricsLevel = metricsLevel;
         return this;
     }
     
+    public MonitoringConfigurationDescription(){}
 }

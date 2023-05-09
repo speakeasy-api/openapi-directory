@@ -15,6 +15,7 @@ public class InitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public InitiateAuthRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class InitiateAuthRequest {
     
     @JsonProperty("AuthFlow")
     public AuthFlowTypeEnum authFlow;
+
     public InitiateAuthRequest withAuthFlow(AuthFlowTypeEnum authFlow) {
         this.authFlow = authFlow;
         return this;
@@ -30,6 +32,7 @@ public class InitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthParameters")
     public java.util.Map<String, String> authParameters;
+
     public InitiateAuthRequest withAuthParameters(java.util.Map<String, String> authParameters) {
         this.authParameters = authParameters;
         return this;
@@ -37,6 +40,7 @@ public class InitiateAuthRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public InitiateAuthRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -45,6 +49,7 @@ public class InitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public InitiateAuthRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -53,9 +58,14 @@ public class InitiateAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextData")
     public UserContextDataType userContextData;
+
     public InitiateAuthRequest withUserContextData(UserContextDataType userContextData) {
         this.userContextData = userContextData;
         return this;
     }
     
+    public InitiateAuthRequest(@JsonProperty("AuthFlow") AuthFlowTypeEnum authFlow, @JsonProperty("ClientId") String clientId) {
+        this.authFlow = authFlow;
+        this.clientId = clientId;
+  }
 }

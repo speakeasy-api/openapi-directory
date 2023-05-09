@@ -12,6 +12,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DrivelabelsLabelsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class DrivelabelsLabelsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleAppsDriveLabelsV2LabelInput googleAppsDriveLabelsV2LabelInput;
+
     public DrivelabelsLabelsCreateRequest withGoogleAppsDriveLabelsV2LabelInput(org.openapis.openapi.models.shared.GoogleAppsDriveLabelsV2LabelInput googleAppsDriveLabelsV2LabelInput) {
         this.googleAppsDriveLabelsV2LabelInput = googleAppsDriveLabelsV2LabelInput;
         return this;
@@ -29,6 +31,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DrivelabelsLabelsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DrivelabelsLabelsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DrivelabelsLabelsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DrivelabelsLabelsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +75,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DrivelabelsLabelsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +86,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public DrivelabelsLabelsCreateRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -89,6 +97,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DrivelabelsLabelsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +108,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DrivelabelsLabelsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +119,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DrivelabelsLabelsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +130,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DrivelabelsLabelsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,6 +141,7 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DrivelabelsLabelsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -139,9 +152,11 @@ public class DrivelabelsLabelsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useAdminAccess")
     public Boolean useAdminAccess;
+
     public DrivelabelsLabelsCreateRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
     }
     
+    public DrivelabelsLabelsCreateRequest(){}
 }

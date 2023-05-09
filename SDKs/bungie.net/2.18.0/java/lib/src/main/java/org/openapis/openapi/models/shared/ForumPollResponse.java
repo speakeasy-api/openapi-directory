@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ForumPollResponse {
     
     public ForumPollResult[] results;
+
     public ForumPollResponse withResults(ForumPollResult[] results) {
         this.results = results;
         return this;
@@ -16,6 +17,7 @@ public class ForumPollResponse {
     
     
     public Long topicId;
+
     public ForumPollResponse withTopicId(Long topicId) {
         this.topicId = topicId;
         return this;
@@ -23,9 +25,11 @@ public class ForumPollResponse {
     
     
     public Integer totalVotes;
+
     public ForumPollResponse withTotalVotes(Integer totalVotes) {
         this.totalVotes = totalVotes;
         return this;
     }
     
+    public ForumPollResponse(){}
 }

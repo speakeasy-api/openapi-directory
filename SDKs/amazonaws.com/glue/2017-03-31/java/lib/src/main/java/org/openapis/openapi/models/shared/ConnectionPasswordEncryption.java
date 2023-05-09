@@ -15,6 +15,7 @@ public class ConnectionPasswordEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsKmsKeyId")
     public String awsKmsKeyId;
+
     public ConnectionPasswordEncryption withAwsKmsKeyId(String awsKmsKeyId) {
         this.awsKmsKeyId = awsKmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class ConnectionPasswordEncryption {
     
     @JsonProperty("ReturnConnectionPasswordEncrypted")
     public Boolean returnConnectionPasswordEncrypted;
+
     public ConnectionPasswordEncryption withReturnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
         this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
         return this;
     }
     
+    public ConnectionPasswordEncryption(@JsonProperty("ReturnConnectionPasswordEncrypted") Boolean returnConnectionPasswordEncrypted) {
+        this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
+  }
 }

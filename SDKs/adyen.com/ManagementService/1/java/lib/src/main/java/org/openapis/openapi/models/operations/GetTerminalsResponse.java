@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTerminalsResponse {
     
     public String contentType;
+
     public GetTerminalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTerminalsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTerminalsResponse listTerminalsResponse;
+
     public GetTerminalsResponse withListTerminalsResponse(org.openapis.openapi.models.shared.ListTerminalsResponse listTerminalsResponse) {
         this.listTerminalsResponse = listTerminalsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetTerminalsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetTerminalsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetTerminalsResponse {
     
     
     public Integer statusCode;
+
     public GetTerminalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetTerminalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTerminalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTerminalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

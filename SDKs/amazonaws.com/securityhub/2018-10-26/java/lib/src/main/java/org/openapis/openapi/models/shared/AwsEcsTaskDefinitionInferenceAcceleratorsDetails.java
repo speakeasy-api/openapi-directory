@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionInferenceAcceleratorsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public AwsEcsTaskDefinitionInferenceAcceleratorsDetails withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionInferenceAcceleratorsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceType")
     public String deviceType;
+
     public AwsEcsTaskDefinitionInferenceAcceleratorsDetails withDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
     }
     
+    public AwsEcsTaskDefinitionInferenceAcceleratorsDetails(){}
 }

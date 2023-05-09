@@ -15,6 +15,7 @@ public class RecurringCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringChargeAmount")
     public Double recurringChargeAmount;
+
     public RecurringCharge withRecurringChargeAmount(Double recurringChargeAmount) {
         this.recurringChargeAmount = recurringChargeAmount;
         return this;
@@ -23,9 +24,11 @@ public class RecurringCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringChargeFrequency")
     public String recurringChargeFrequency;
+
     public RecurringCharge withRecurringChargeFrequency(String recurringChargeFrequency) {
         this.recurringChargeFrequency = recurringChargeFrequency;
         return this;
     }
     
+    public RecurringCharge(){}
 }

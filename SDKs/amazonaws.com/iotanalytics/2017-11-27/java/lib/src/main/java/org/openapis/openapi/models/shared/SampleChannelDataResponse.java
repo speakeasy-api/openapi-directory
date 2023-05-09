@@ -15,9 +15,11 @@ public class SampleChannelDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloads")
     public String[] payloads;
+
     public SampleChannelDataResponse withPayloads(String[] payloads) {
         this.payloads = payloads;
         return this;
     }
     
+    public SampleChannelDataResponse(){}
 }

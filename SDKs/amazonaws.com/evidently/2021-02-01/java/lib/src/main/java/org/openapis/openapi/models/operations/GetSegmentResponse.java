@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSegmentResponse {
@@ -12,6 +13,7 @@ public class GetSegmentResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSegmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSegmentResponse {
     
     
     public String contentType;
+
     public GetSegmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSegmentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSegmentResponse getSegmentResponse;
+
     public GetSegmentResponse withGetSegmentResponse(org.openapis.openapi.models.shared.GetSegmentResponse getSegmentResponse) {
         this.getSegmentResponse = getSegmentResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetSegmentResponse {
     
     
     public Integer statusCode;
+
     public GetSegmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetSegmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSegmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetSegmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSegmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class GetSegmentResponse {
      */
     
     public Object throttlingException;
+
     public GetSegmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetSegmentResponse {
      */
     
     public Object validationException;
+
     public GetSegmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSegmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

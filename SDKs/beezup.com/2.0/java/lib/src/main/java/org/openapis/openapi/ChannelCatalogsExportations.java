@@ -50,11 +50,9 @@ public class ChannelCatalogsExportations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClearChannelCatalogExportationCacheResponse res = new org.openapis.openapi.models.operations.ClearChannelCatalogExportationCacheResponse() {{
+        org.openapis.openapi.models.operations.ClearChannelCatalogExportationCacheResponse res = new org.openapis.openapi.models.operations.ClearChannelCatalogExportationCacheResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -90,12 +88,10 @@ public class ChannelCatalogsExportations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoResponse(contentType, httpRes.statusCode()) {{
             channelCatalogExportCacheInfoResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,12 +138,10 @@ public class ChannelCatalogsExportations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryResponse() {{
+        org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryResponse res = new org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryResponse(contentType, httpRes.statusCode()) {{
             channelCatalogExportationHistory = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

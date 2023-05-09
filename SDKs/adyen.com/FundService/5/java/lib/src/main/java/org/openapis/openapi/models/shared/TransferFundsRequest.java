@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransferFundsRequest {
     @JsonProperty("amount")
     public Amount amount;
+
     public TransferFundsRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class TransferFundsRequest {
      */
     @JsonProperty("destinationAccountCode")
     public String destinationAccountCode;
+
     public TransferFundsRequest withDestinationAccountCode(String destinationAccountCode) {
         this.destinationAccountCode = destinationAccountCode;
         return this;
@@ -33,6 +35,7 @@ public class TransferFundsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public TransferFundsRequest withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -44,6 +47,7 @@ public class TransferFundsRequest {
      */
     @JsonProperty("sourceAccountCode")
     public String sourceAccountCode;
+
     public TransferFundsRequest withSourceAccountCode(String sourceAccountCode) {
         this.sourceAccountCode = sourceAccountCode;
         return this;
@@ -55,9 +59,16 @@ public class TransferFundsRequest {
      */
     @JsonProperty("transferCode")
     public String transferCode;
+
     public TransferFundsRequest withTransferCode(String transferCode) {
         this.transferCode = transferCode;
         return this;
     }
     
+    public TransferFundsRequest(@JsonProperty("amount") Amount amount, @JsonProperty("destinationAccountCode") String destinationAccountCode, @JsonProperty("sourceAccountCode") String sourceAccountCode, @JsonProperty("transferCode") String transferCode) {
+        this.amount = amount;
+        this.destinationAccountCode = destinationAccountCode;
+        this.sourceAccountCode = sourceAccountCode;
+        this.transferCode = transferCode;
+  }
 }

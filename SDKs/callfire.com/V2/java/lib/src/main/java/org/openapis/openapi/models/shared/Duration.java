@@ -18,6 +18,7 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("millis")
     public Long millis;
+
     public Duration withMillis(Long millis) {
         this.millis = millis;
         return this;
@@ -29,6 +30,7 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDays")
     public Long standardDays;
+
     public Duration withStandardDays(Long standardDays) {
         this.standardDays = standardDays;
         return this;
@@ -40,6 +42,7 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardHours")
     public Long standardHours;
+
     public Duration withStandardHours(Long standardHours) {
         this.standardHours = standardHours;
         return this;
@@ -51,6 +54,7 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardMinutes")
     public Long standardMinutes;
+
     public Duration withStandardMinutes(Long standardMinutes) {
         this.standardMinutes = standardMinutes;
         return this;
@@ -62,9 +66,11 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardSeconds")
     public Long standardSeconds;
+
     public Duration withStandardSeconds(Long standardSeconds) {
         this.standardSeconds = standardSeconds;
         return this;
     }
     
+    public Duration(){}
 }

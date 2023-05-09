@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSftpHostKeysResponse {
     
     public String contentType;
+
     public PostSftpHostKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostSftpHostKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.SftpHostKeyEntity sftpHostKeyEntity;
+
     public PostSftpHostKeysResponse withSftpHostKeyEntity(org.openapis.openapi.models.shared.SftpHostKeyEntity sftpHostKeyEntity) {
         this.sftpHostKeyEntity = sftpHostKeyEntity;
         return this;
@@ -26,6 +29,7 @@ public class PostSftpHostKeysResponse {
     
     
     public Integer statusCode;
+
     public PostSftpHostKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostSftpHostKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSftpHostKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostSftpHostKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

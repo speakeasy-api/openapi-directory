@@ -15,6 +15,7 @@ public class FourHundredAndFour {
      */
     @JsonProperty("code")
     public String code;
+
     public FourHundredAndFour withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class FourHundredAndFour {
      */
     @JsonProperty("message")
     public String message;
+
     public FourHundredAndFour withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FourHundredAndFour(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -20,6 +20,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Post withContent(String content) {
         this.content = content;
         return this;
@@ -33,6 +34,7 @@ public class Post {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public Post withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -47,6 +49,7 @@ public class Post {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration")
     public OffsetDateTime expiration;
+
     public Post withExpiration(OffsetDateTime expiration) {
         this.expiration = expiration;
         return this;
@@ -58,6 +61,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer")
     public String footer;
+
     public Post withFooter(String footer) {
         this.footer = footer;
         return this;
@@ -70,6 +74,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     public String groupId;
+
     public Post withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -81,6 +86,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public Post withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -92,6 +98,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public Post withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -104,6 +111,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome")
     public String outcome;
+
     public Post withOutcome(String outcome) {
         this.outcome = outcome;
         return this;
@@ -115,6 +123,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photos")
     public Photo[] photos;
+
     public Post withPhotos(Photo[] photos) {
         this.photos = photos;
         return this;
@@ -123,6 +132,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_id")
     public String postId;
+
     public Post withPostId(String postId) {
         this.postId = postId;
         return this;
@@ -135,6 +145,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repost_count")
     public Long repostCount;
+
     public Post withRepostCount(Long repostCount) {
         this.repostCount = repostCount;
         return this;
@@ -147,6 +158,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reselling")
     public Boolean reselling;
+
     public Post withReselling(Boolean reselling) {
         this.reselling = reselling;
         return this;
@@ -159,6 +171,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Post withSource(String source) {
         this.source = source;
         return this;
@@ -167,6 +180,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Post withTitle(String title) {
         this.title = title;
         return this;
@@ -179,6 +193,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Post withType(String type) {
         this.type = type;
         return this;
@@ -190,6 +205,7 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Post withUrl(String url) {
         this.url = url;
         return this;
@@ -198,9 +214,11 @@ public class Post {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public Post withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Post(){}
 }

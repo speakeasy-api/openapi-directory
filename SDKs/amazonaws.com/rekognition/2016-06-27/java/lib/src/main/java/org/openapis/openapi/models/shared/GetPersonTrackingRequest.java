@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPersonTrackingRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public GetPersonTrackingRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +20,7 @@ public class GetPersonTrackingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetPersonTrackingRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class GetPersonTrackingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetPersonTrackingRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class GetPersonTrackingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public PersonTrackingSortByEnum sortBy;
+
     public GetPersonTrackingRequest withSortBy(PersonTrackingSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetPersonTrackingRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

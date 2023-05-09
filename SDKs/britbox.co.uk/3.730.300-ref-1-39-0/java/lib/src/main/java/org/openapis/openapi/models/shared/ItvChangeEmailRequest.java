@@ -15,6 +15,7 @@ public class ItvChangeEmailRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public ItvChangeEmailRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -25,9 +26,14 @@ public class ItvChangeEmailRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvChangeEmailRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvChangeEmailRequest(@JsonProperty("email") String email, @JsonProperty("profileToken") String profileToken) {
+        this.email = email;
+        this.profileToken = profileToken;
+  }
 }

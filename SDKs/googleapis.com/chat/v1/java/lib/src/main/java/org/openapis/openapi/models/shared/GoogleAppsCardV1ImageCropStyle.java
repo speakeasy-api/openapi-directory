@@ -18,6 +18,7 @@ public class GoogleAppsCardV1ImageCropStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspectRatio")
     public Double aspectRatio;
+
     public GoogleAppsCardV1ImageCropStyle withAspectRatio(Double aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsCardV1ImageCropStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAppsCardV1ImageCropStyleTypeEnum type;
+
     public GoogleAppsCardV1ImageCropStyle withType(GoogleAppsCardV1ImageCropStyleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleAppsCardV1ImageCropStyle(){}
 }

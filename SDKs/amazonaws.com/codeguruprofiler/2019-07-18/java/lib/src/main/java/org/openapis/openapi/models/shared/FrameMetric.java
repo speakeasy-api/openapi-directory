@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FrameMetric {
     @JsonProperty("frameName")
     public String frameName;
+
     public FrameMetric withFrameName(String frameName) {
         this.frameName = frameName;
         return this;
@@ -19,6 +20,7 @@ public class FrameMetric {
     
     @JsonProperty("threadStates")
     public String[] threadStates;
+
     public FrameMetric withThreadStates(String[] threadStates) {
         this.threadStates = threadStates;
         return this;
@@ -26,9 +28,15 @@ public class FrameMetric {
     
     @JsonProperty("type")
     public MetricTypeEnum type;
+
     public FrameMetric withType(MetricTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FrameMetric(@JsonProperty("frameName") String frameName, @JsonProperty("threadStates") String[] threadStates, @JsonProperty("type") MetricTypeEnum type) {
+        this.frameName = frameName;
+        this.threadStates = threadStates;
+        this.type = type;
+  }
 }

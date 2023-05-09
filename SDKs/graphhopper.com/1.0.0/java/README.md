@@ -16,20 +16,20 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AsyncClusteringProblemResponse;
-import org.openapis.openapi.models.shared.ClusterRequest;
+import org.openapis.openapi.models.shared.ClusterConfiguration;
+import org.openapis.openapi.models.shared.ClusterConfigurationClustering;
+import org.openapis.openapi.models.shared.ClusterConfigurationRouting;
 import org.openapis.openapi.models.shared.ClusterCustomer;
 import org.openapis.openapi.models.shared.ClusterCustomerAddress;
-import org.openapis.openapi.models.shared.ClusterConfiguration;
-import org.openapis.openapi.models.shared.ClusterConfigurationRouting;
-import org.openapis.openapi.models.shared.ClusterConfigurationClustering;
+import org.openapis.openapi.models.shared.ClusterRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
@@ -40,14 +40,14 @@ public class Application {
                         maxQuantity = 50;
                         minQuantity = 30;
                         numClusters = 10;
-                    }};
+                    }};;
                     responseType = "json";
                     routing = new ClusterConfigurationRouting() {{
-                        costPerMeter = 5488.14;
+                        costPerMeter = 5928.45;
                         costPerSecond = 1;
                         profile = "car";
-                    }};
-                }};
+                    }};;
+                }};;
                 customers = new org.openapis.openapi.models.shared.ClusterCustomer[]{{
                     add(new ClusterCustomer() {{
                         address = new ClusterCustomerAddress() {{
@@ -77,16 +77,18 @@ public class Application {
                         quantity = 10;
                     }}),
                 }};
-            }}            
+            }};            
 
             AsyncClusteringProblemResponse res = sdk.clusterAPI.asyncClusteringProblem(req);
 
-            if (res.jobId.isPresent()) {
+            if (res.jobId != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -94,42 +96,42 @@ public class Application {
 ## Available Resources and Operations
 
 
-### clusterAPI
+### [clusterAPI](docs/clusterapi/README.md)
 
-* `asyncClusteringProblem` - Batch Cluster Endpoint
-* `getClusterSolution` - GET Batch Solution Endpoint
-* `solveClusteringProblem` - POST Cluster Endpoint
+* [asyncClusteringProblem](docs/clusterapi/README.md#asyncclusteringproblem) - Batch Cluster Endpoint
+* [getClusterSolution](docs/clusterapi/README.md#getclustersolution) - GET Batch Solution Endpoint
+* [solveClusteringProblem](docs/clusterapi/README.md#solveclusteringproblem) - POST Cluster Endpoint
 
-### geocodingAPI
+### [geocodingAPI](docs/geocodingapi/README.md)
 
-* `getGeocode` - Geocoding Endpoint
+* [getGeocode](docs/geocodingapi/README.md#getgeocode) - Geocoding Endpoint
 
-### isochroneAPI
+### [isochroneAPI](docs/isochroneapi/README.md)
 
-* `getIsochrone` - Isochrone Endpoint
+* [getIsochrone](docs/isochroneapi/README.md#getisochrone) - Isochrone Endpoint
 
-### mapMatchingAPI
+### [mapMatchingAPI](docs/mapmatchingapi/README.md)
 
-* `postGPX` - Map-match a GPX file
+* [postGPX](docs/mapmatchingapi/README.md#postgpx) - Map-match a GPX file
 
-### matrixAPI
+### [matrixAPI](docs/matrixapi/README.md)
 
-* `calculateMatrix` - Batch Matrix Endpoint
-* `getMatrix` - GET Matrix Endpoint
-* `getMatrixSolution` - GET Batch Matrix Endpoint
-* `postMatrix` - POST Matrix Endpoint
+* [calculateMatrix](docs/matrixapi/README.md#calculatematrix) - Batch Matrix Endpoint
+* [getMatrix](docs/matrixapi/README.md#getmatrix) - GET Matrix Endpoint
+* [getMatrixSolution](docs/matrixapi/README.md#getmatrixsolution) - GET Batch Matrix Endpoint
+* [postMatrix](docs/matrixapi/README.md#postmatrix) - POST Matrix Endpoint
 
-### routeOptimizationAPI
+### [routeOptimizationAPI](docs/routeoptimizationapi/README.md)
 
-* `asyncVRP` - POST route optimization problem (batch mode)
-* `getSolution` - GET the solution (batch mode)
-* `solveVRP` - POST route optimization problem
+* [asyncVRP](docs/routeoptimizationapi/README.md#asyncvrp) - POST route optimization problem (batch mode)
+* [getSolution](docs/routeoptimizationapi/README.md#getsolution) - GET the solution (batch mode)
+* [solveVRP](docs/routeoptimizationapi/README.md#solvevrp) - POST route optimization problem
 
-### routingAPI
+### [routingAPI](docs/routingapi/README.md)
 
-* `getRoute` - GET Route Endpoint
-* `getRouteInfo` - Coverage information
-* `postRoute` - POST Route Endpoint
+* [getRoute](docs/routingapi/README.md#getroute) - GET Route Endpoint
+* [getRouteInfo](docs/routingapi/README.md#getrouteinfo) - Coverage information
+* [postRoute](docs/routingapi/README.md#postroute) - POST Route Endpoint
 <!-- End SDK Available Operations -->
 
 ### Maturity

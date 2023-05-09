@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateReturnPolicyRequest {
@@ -12,6 +13,7 @@ public class UpdateReturnPolicyRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ReturnPolicyRequest returnPolicyRequest;
+
     public UpdateReturnPolicyRequest withReturnPolicyRequest(org.openapis.openapi.models.shared.ReturnPolicyRequest returnPolicyRequest) {
         this.returnPolicyRequest = returnPolicyRequest;
         return this;
@@ -22,9 +24,14 @@ public class UpdateReturnPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=return_policy_id")
     public String returnPolicyId;
+
     public UpdateReturnPolicyRequest withReturnPolicyId(String returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
         return this;
     }
     
+    public UpdateReturnPolicyRequest(@JsonProperty("ReturnPolicyRequest") org.openapis.openapi.models.shared.ReturnPolicyRequest returnPolicyRequest, @JsonProperty("return_policy_id") String returnPolicyId) {
+        this.returnPolicyRequest = returnPolicyRequest;
+        this.returnPolicyId = returnPolicyId;
+  }
 }

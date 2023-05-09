@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataSourceSyncJobsResponse {
@@ -12,6 +13,7 @@ public class ListDataSourceSyncJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDataSourceSyncJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListDataSourceSyncJobsResponse {
      */
     
     public Object conflictException;
+
     public ListDataSourceSyncJobsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListDataSourceSyncJobsResponse {
     
     
     public String contentType;
+
     public ListDataSourceSyncJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListDataSourceSyncJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListDataSourceSyncJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListDataSourceSyncJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataSourceSyncJobsResponse listDataSourceSyncJobsResponse;
+
     public ListDataSourceSyncJobsResponse withListDataSourceSyncJobsResponse(org.openapis.openapi.models.shared.ListDataSourceSyncJobsResponse listDataSourceSyncJobsResponse) {
         this.listDataSourceSyncJobsResponse = listDataSourceSyncJobsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListDataSourceSyncJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDataSourceSyncJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListDataSourceSyncJobsResponse {
     
     
     public Integer statusCode;
+
     public ListDataSourceSyncJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListDataSourceSyncJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataSourceSyncJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListDataSourceSyncJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListDataSourceSyncJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListDataSourceSyncJobsResponse {
      */
     
     public Object validationException;
+
     public ListDataSourceSyncJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDataSourceSyncJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class NodeLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public NodeLabels withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public NodeLabels(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult {
     
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation localGatewayRouteTableVirtualInterfaceGroupAssociation;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult withLocalGatewayRouteTableVirtualInterfaceGroupAssociation(DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResultLocalGatewayRouteTableVirtualInterfaceGroupAssociation localGatewayRouteTableVirtualInterfaceGroupAssociation) {
         this.localGatewayRouteTableVirtualInterfaceGroupAssociation = localGatewayRouteTableVirtualInterfaceGroupAssociation;
         return this;
     }
     
+    public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult(){}
 }

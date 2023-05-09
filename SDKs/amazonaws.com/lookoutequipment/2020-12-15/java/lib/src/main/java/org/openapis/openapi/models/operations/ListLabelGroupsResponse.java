@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLabelGroupsResponse {
@@ -12,6 +13,7 @@ public class ListLabelGroupsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListLabelGroupsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListLabelGroupsResponse {
     
     
     public String contentType;
+
     public ListLabelGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListLabelGroupsResponse {
      */
     
     public Object internalServerException;
+
     public ListLabelGroupsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListLabelGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLabelGroupsResponse listLabelGroupsResponse;
+
     public ListLabelGroupsResponse withListLabelGroupsResponse(org.openapis.openapi.models.shared.ListLabelGroupsResponse listLabelGroupsResponse) {
         this.listLabelGroupsResponse = listLabelGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListLabelGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListLabelGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListLabelGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLabelGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListLabelGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListLabelGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListLabelGroupsResponse {
      */
     
     public Object validationException;
+
     public ListLabelGroupsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListLabelGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

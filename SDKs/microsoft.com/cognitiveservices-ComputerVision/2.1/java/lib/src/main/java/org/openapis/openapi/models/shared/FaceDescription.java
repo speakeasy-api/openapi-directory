@@ -18,6 +18,7 @@ public class FaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age")
     public Integer age;
+
     public FaceDescription withAge(Integer age) {
         this.age = age;
         return this;
@@ -29,6 +30,7 @@ public class FaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faceRectangle")
     public FaceRectangle faceRectangle;
+
     public FaceDescription withFaceRectangle(FaceRectangle faceRectangle) {
         this.faceRectangle = faceRectangle;
         return this;
@@ -40,9 +42,11 @@ public class FaceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public FaceDescriptionGenderEnum gender;
+
     public FaceDescription withGender(FaceDescriptionGenderEnum gender) {
         this.gender = gender;
         return this;
     }
     
+    public FaceDescription(){}
 }

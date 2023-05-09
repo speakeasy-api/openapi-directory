@@ -15,6 +15,7 @@ public class DatabaseIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DatabaseIdentifier withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -23,9 +24,11 @@ public class DatabaseIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DatabaseIdentifier withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
     }
     
+    public DatabaseIdentifier(){}
 }

@@ -15,6 +15,7 @@ public class InstanceAggregatedAssociationOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedStatus")
     public String detailedStatus;
+
     public InstanceAggregatedAssociationOverview withDetailedStatus(String detailedStatus) {
         this.detailedStatus = detailedStatus;
         return this;
@@ -23,9 +24,11 @@ public class InstanceAggregatedAssociationOverview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceAssociationStatusAggregatedCount")
     public java.util.Map<String, Long> instanceAssociationStatusAggregatedCount;
+
     public InstanceAggregatedAssociationOverview withInstanceAssociationStatusAggregatedCount(java.util.Map<String, Long> instanceAssociationStatusAggregatedCount) {
         this.instanceAssociationStatusAggregatedCount = instanceAssociationStatusAggregatedCount;
         return this;
     }
     
+    public InstanceAggregatedAssociationOverview(){}
 }

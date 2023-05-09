@@ -15,9 +15,11 @@ public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId
      */
     
     public String self;
+
     public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRegistrationSchemaBlockLinks(){}
 }

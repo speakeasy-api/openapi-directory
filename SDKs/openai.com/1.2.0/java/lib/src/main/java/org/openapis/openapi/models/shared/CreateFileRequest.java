@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFileRequest {
@@ -15,6 +16,7 @@ public class CreateFileRequest {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public CreateFileRequestFile file;
+
     public CreateFileRequest withFile(CreateFileRequestFile file) {
         this.file = file;
         return this;
@@ -28,9 +30,14 @@ public class CreateFileRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=purpose")
     public String purpose;
+
     public CreateFileRequest withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
     }
     
+    public CreateFileRequest(@JsonProperty("file") CreateFileRequestFile file, @JsonProperty("purpose") String purpose) {
+        this.file = file;
+        this.purpose = purpose;
+  }
 }

@@ -15,6 +15,7 @@ public class OrderreturnsLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrderreturnsLineItem withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -26,6 +27,7 @@ public class OrderreturnsLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrderreturnsLineItem withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -37,9 +39,11 @@ public class OrderreturnsLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public OrderreturnsLineItem withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public OrderreturnsLineItem(){}
 }

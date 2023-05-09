@@ -18,6 +18,7 @@ public class GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum[] features;
+
     public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest withFeatures(GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum[] features) {
         this.features = features;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputContent")
     public String inputContent;
+
     public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest withInputContent(String inputContent) {
         this.inputContent = inputContent;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputUri")
     public String inputUri;
+
     public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest withInputUri(String inputUri) {
         this.inputUri = inputUri;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputUri")
     public String outputUri;
+
     public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoContext")
     public GoogleCloudVideointelligenceV1p3beta1VideoContext videoContext;
+
     public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest withVideoContext(GoogleCloudVideointelligenceV1p3beta1VideoContext videoContext) {
         this.videoContext = videoContext;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest(){}
 }

@@ -15,9 +15,11 @@ public class RegionInstanceGroupManagersResumeInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public String[] instances;
+
     public RegionInstanceGroupManagersResumeInstancesRequest withInstances(String[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public RegionInstanceGroupManagersResumeInstancesRequest(){}
 }

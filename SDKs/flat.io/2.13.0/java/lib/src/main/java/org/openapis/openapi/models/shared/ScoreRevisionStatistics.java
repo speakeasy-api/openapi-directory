@@ -19,6 +19,7 @@ public class ScoreRevisionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additions")
     public Double additions;
+
     public ScoreRevisionStatistics withAdditions(Double additions) {
         this.additions = additions;
         return this;
@@ -30,9 +31,11 @@ public class ScoreRevisionStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletions")
     public Double deletions;
+
     public ScoreRevisionStatistics withDeletions(Double deletions) {
         this.deletions = deletions;
         return this;
     }
     
+    public ScoreRevisionStatistics(){}
 }

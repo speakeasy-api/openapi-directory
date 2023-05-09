@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurityOption1 option1;
+
     public CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurity withOption1(CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecuri
     
     @SpeakeasyMetadata("security:option=true")
     public CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurityOption2 option2;
+
     public CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurity withOption2(CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurity(){}
 }

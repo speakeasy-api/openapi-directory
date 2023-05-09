@@ -18,6 +18,7 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public LanguageDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public LanguageDTO withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -40,6 +42,7 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LanguageDTO withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iso6391")
     public String iso6391;
+
     public LanguageDTO withIso6391(String iso6391) {
         this.iso6391 = iso6391;
         return this;
@@ -62,6 +66,7 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iso6392")
     public String iso6392;
+
     public LanguageDTO withIso6392(String iso6392) {
         this.iso6392 = iso6392;
         return this;
@@ -73,6 +78,7 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LanguageDTO withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public LanguageDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -95,9 +102,11 @@ public class LanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public LanguageDTO withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public LanguageDTO(){}
 }

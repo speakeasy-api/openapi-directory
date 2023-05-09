@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetWebhooksAuthRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetWebhooksAuthRequest withExpand(String expand) {
         this.expand = expand;
         return this;
     }
     
+    public GetWebhooksAuthRequest(){}
 }

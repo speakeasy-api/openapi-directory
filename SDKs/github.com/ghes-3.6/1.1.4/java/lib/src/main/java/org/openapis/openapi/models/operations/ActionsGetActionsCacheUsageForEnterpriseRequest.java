@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetActionsCacheUsageForEnterpriseRequest {
@@ -12,9 +13,13 @@ public class ActionsGetActionsCacheUsageForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public ActionsGetActionsCacheUsageForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
     }
     
+    public ActionsGetActionsCacheUsageForEnterpriseRequest(@JsonProperty("enterprise") String enterprise) {
+        this.enterprise = enterprise;
+  }
 }

@@ -15,6 +15,7 @@ public class StoreStatsOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Float average;
+
     public StoreStatsOrders withAverage(Float average) {
         this.average = average;
         return this;
@@ -26,6 +27,7 @@ public class StoreStatsOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public StoreStatsOrders withCount(Long count) {
         this.count = count;
         return this;
@@ -37,6 +39,7 @@ public class StoreStatsOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public OrdersData[] data;
+
     public StoreStatsOrders withData(OrdersData[] data) {
         this.data = data;
         return this;
@@ -48,9 +51,11 @@ public class StoreStatsOrders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public StoreStatsOrders withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public StoreStatsOrders(){}
 }

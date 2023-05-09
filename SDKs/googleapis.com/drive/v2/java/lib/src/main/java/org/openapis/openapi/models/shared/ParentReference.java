@@ -18,6 +18,7 @@ public class ParentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ParentReference withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class ParentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRoot")
     public Boolean isRoot;
+
     public ParentReference withIsRoot(Boolean isRoot) {
         this.isRoot = isRoot;
         return this;
@@ -40,6 +42,7 @@ public class ParentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ParentReference withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class ParentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentLink")
     public String parentLink;
+
     public ParentReference withParentLink(String parentLink) {
         this.parentLink = parentLink;
         return this;
@@ -62,9 +66,11 @@ public class ParentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ParentReference withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public ParentReference(){}
 }

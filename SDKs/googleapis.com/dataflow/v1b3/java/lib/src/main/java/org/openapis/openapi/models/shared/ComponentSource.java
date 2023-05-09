@@ -18,6 +18,7 @@ public class ComponentSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ComponentSource withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class ComponentSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalTransformOrCollection")
     public String originalTransformOrCollection;
+
     public ComponentSource withOriginalTransformOrCollection(String originalTransformOrCollection) {
         this.originalTransformOrCollection = originalTransformOrCollection;
         return this;
@@ -40,9 +42,11 @@ public class ComponentSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public ComponentSource withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ComponentSource(){}
 }

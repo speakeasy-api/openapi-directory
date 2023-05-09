@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReplaceNetworkAclAssociationRequest {
     
     public String associationId;
+
     public ReplaceNetworkAclAssociationRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -16,6 +17,7 @@ public class ReplaceNetworkAclAssociationRequest {
     
     
     public Boolean dryRun;
+
     public ReplaceNetworkAclAssociationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class ReplaceNetworkAclAssociationRequest {
     
     
     public String networkAclId;
+
     public ReplaceNetworkAclAssociationRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
     }
     
+    public ReplaceNetworkAclAssociationRequest(@JsonProperty("AssociationId") String associationId, @JsonProperty("NetworkAclId") String networkAclId) {
+        this.associationId = associationId;
+        this.networkAclId = networkAclId;
+  }
 }

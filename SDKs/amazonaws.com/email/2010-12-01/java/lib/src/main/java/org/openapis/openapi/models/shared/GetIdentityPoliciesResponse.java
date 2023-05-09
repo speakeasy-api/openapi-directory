@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetIdentityPoliciesResponse - Represents the requested sending authorization policies.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class GetIdentityPoliciesResponse {
     
     public java.util.Map<String, String> policies;
+
     public GetIdentityPoliciesResponse withPolicies(java.util.Map<String, String> policies) {
         this.policies = policies;
         return this;
     }
     
+    public GetIdentityPoliciesResponse(@JsonProperty("Policies") java.util.Map<String, String> policies) {
+        this.policies = policies;
+  }
 }

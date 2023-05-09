@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OutletsGetOutletsByGeolocationRequest {
@@ -12,6 +13,7 @@ public class OutletsGetOutletsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public OutletsGetOutletsByGeolocationRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class OutletsGetOutletsByGeolocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
     public Float latitude;
+
     public OutletsGetOutletsByGeolocationRequest withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -32,6 +35,7 @@ public class OutletsGetOutletsByGeolocationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
     public Float longitude;
+
     public OutletsGetOutletsByGeolocationRequest withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
@@ -42,6 +46,7 @@ public class OutletsGetOutletsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_distance")
     public Double maxDistance;
+
     public OutletsGetOutletsByGeolocationRequest withMaxDistance(Double maxDistance) {
         this.maxDistance = maxDistance;
         return this;
@@ -52,6 +57,7 @@ public class OutletsGetOutletsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
     public Integer maxResults;
+
     public OutletsGetOutletsByGeolocationRequest withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -62,6 +68,7 @@ public class OutletsGetOutletsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public OutletsGetOutletsByGeolocationRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -72,9 +79,14 @@ public class OutletsGetOutletsByGeolocationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public OutletsGetOutletsByGeolocationRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public OutletsGetOutletsByGeolocationRequest(@JsonProperty("latitude") Float latitude, @JsonProperty("longitude") Float longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetNamesSearchExactSpellingEnum - If the 'name' parameter is specified, 'exactSpelling' specifies whether to include only names that exactly match the search text (exactSpelling=1), or whether to also include names with similar spellings (exactSpelling=0)
  */
 public enum GetNamesSearchExactSpellingEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetNamesSearchExactSpellingEnum(String value) {
+    private GetNamesSearchExactSpellingEnum(Long value) {
         this.value = value;
     }
 }

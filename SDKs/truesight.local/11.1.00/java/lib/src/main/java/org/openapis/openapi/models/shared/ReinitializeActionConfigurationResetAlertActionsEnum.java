@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetAlertActionsEnum - When set to &lt;em&gt;1&lt;/em&gt;, removes all manually set Alert Actions and reverts to basic default actions i.e. trigger a PATROL event and annotate a parameter graph.
  */
 public enum ReinitializeActionConfigurationResetAlertActionsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetAlertActionsEnum(String value) {
+    private ReinitializeActionConfigurationResetAlertActionsEnum(Integer value) {
         this.value = value;
     }
 }

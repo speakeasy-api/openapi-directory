@@ -18,6 +18,7 @@ public class SearchDirectGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberships")
     public MembershipRelation[] memberships;
+
     public SearchDirectGroupsResponse withMemberships(MembershipRelation[] memberships) {
         this.memberships = memberships;
         return this;
@@ -29,9 +30,11 @@ public class SearchDirectGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchDirectGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SearchDirectGroupsResponse(){}
 }

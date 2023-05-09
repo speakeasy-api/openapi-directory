@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeVpcConnectorResponse {
     @JsonProperty("VpcConnector")
     public VpcConnector vpcConnector;
+
     public DescribeVpcConnectorResponse withVpcConnector(VpcConnector vpcConnector) {
         this.vpcConnector = vpcConnector;
         return this;
     }
     
+    public DescribeVpcConnectorResponse(@JsonProperty("VpcConnector") VpcConnector vpcConnector) {
+        this.vpcConnector = vpcConnector;
+  }
 }

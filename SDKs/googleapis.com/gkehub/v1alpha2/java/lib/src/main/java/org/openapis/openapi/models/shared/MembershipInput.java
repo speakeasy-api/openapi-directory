@@ -18,6 +18,7 @@ public class MembershipInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authority")
     public AuthorityInput authority;
+
     public MembershipInput withAuthority(AuthorityInput authority) {
         this.authority = authority;
         return this;
@@ -29,6 +30,7 @@ public class MembershipInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public MembershipEndpointInput endpoint;
+
     public MembershipInput withEndpoint(MembershipEndpointInput endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -40,6 +42,7 @@ public class MembershipInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public MembershipInput withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -51,20 +54,35 @@ public class MembershipInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureType")
     public MembershipInfrastructureTypeEnum infrastructureType;
+
     public MembershipInput withInfrastructureType(MembershipInfrastructureTypeEnum infrastructureType) {
         this.infrastructureType = infrastructureType;
         return this;
     }
     
     /**
-     * Optional. GCP labels for this membership.
+     * Optional. Labels for this membership.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public MembershipInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    /**
+     * This field informs Fleet-based applications/services/UIs with the necessary information for where each underlying Cluster reports its metrics.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("monitoringConfig")
+    public MonitoringConfig monitoringConfig;
+
+    public MembershipInput withMonitoringConfig(MonitoringConfig monitoringConfig) {
+        this.monitoringConfig = monitoringConfig;
+        return this;
+    }
+    
+    public MembershipInput(){}
 }

@@ -15,6 +15,7 @@ public class ListDeviceResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeviceResourcesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListDeviceResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public ResourceSummary[] resources;
+
     public ListDeviceResourcesOutput withResources(ResourceSummary[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ListDeviceResourcesOutput(){}
 }

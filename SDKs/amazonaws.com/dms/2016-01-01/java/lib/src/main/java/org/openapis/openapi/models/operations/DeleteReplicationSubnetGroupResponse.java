@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReplicationSubnetGroupResponse {
     
     public String contentType;
+
     public DeleteReplicationSubnetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteReplicationSubnetGroupResponse {
      */
     
     public java.util.Map<String, Object> deleteReplicationSubnetGroupResponse;
+
     public DeleteReplicationSubnetGroupResponse withDeleteReplicationSubnetGroupResponse(java.util.Map<String, Object> deleteReplicationSubnetGroupResponse) {
         this.deleteReplicationSubnetGroupResponse = deleteReplicationSubnetGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReplicationSubnetGroupResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DeleteReplicationSubnetGroupResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -36,6 +40,7 @@ public class DeleteReplicationSubnetGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteReplicationSubnetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteReplicationSubnetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReplicationSubnetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteReplicationSubnetGroupResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DeleteReplicationSubnetGroupResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public DeleteReplicationSubnetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -57,10 +57,8 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisconnectVendorResponse res = new org.openapis.openapi.models.operations.DisconnectVendorResponse() {{
+        org.openapis.openapi.models.operations.DisconnectVendorResponse res = new org.openapis.openapi.models.operations.DisconnectVendorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -72,10 +70,11 @@ public class Me {
     /**
      * Get My User
      * Returns metadata about the authenticated User, including a list of vendors for which the user has provided credentials.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeResponse getMe() throws Exception {
+    public org.openapis.openapi.models.operations.GetMeResponse getMe(org.openapis.openapi.models.operations.GetMeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -84,16 +83,15 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse() {{
+        org.openapis.openapi.models.operations.GetMeResponse res = new org.openapis.openapi.models.operations.GetMeResponse(contentType, httpRes.statusCode()) {{
             getMe200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

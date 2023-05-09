@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CreateSubAccountSecurity;
 import org.openapis.openapi.models.operations.CreateSubAccountRequest;
 import org.openapis.openapi.models.operations.CreateSubAccountResponse;
+import org.openapis.openapi.models.operations.CreateSubAccountSecurity;
 import org.openapis.openapi.models.shared.NewSubaccountRequest;
 
 public class Application {
@@ -28,26 +27,24 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateSubAccountRequest req = new CreateSubAccountRequest() {{
-                newSubaccountRequest = new NewSubaccountRequest() {{
-                    name = "Subaccount department A";
-                    secret = "Password123";
-                    usePrimaryAccountBalance = false;
-                }};
-                apiKey = "corrupti";
-            }}            
+            CreateSubAccountRequest req = new CreateSubAccountRequest(                new NewSubaccountRequest("Subaccount department A") {{
+                                secret = "Password123";
+                                usePrimaryAccountBalance = false;
+                            }};, "corrupti");            
 
-            CreateSubAccountResponse res = sdk.subaccountManagement.createSubAccount(req, new CreateSubAccountSecurity() {{
+            CreateSubAccountResponse res = sdk.subaccountManagement.createSubAccount(req, new CreateSubAccountSecurity("provident", "distinctio") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
 
-            if (res.subaccountCreateResponse.isPresent()) {
+            if (res.subaccountCreateResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -55,20 +52,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### subaccountManagement
+### [subaccountManagement](docs/subaccountmanagement/README.md)
 
-* `createSubAccount` - Create subaccount
-* `modifySubaccount` - Modify a subaccount
-* `retrieveSubaccount` - Retrieve a subaccount
-* `retrieveSubaccountsList` - Retrieve list of subaccounts
+* [createSubAccount](docs/subaccountmanagement/README.md#createsubaccount) - Create subaccount
+* [modifySubaccount](docs/subaccountmanagement/README.md#modifysubaccount) - Modify a subaccount
+* [retrieveSubaccount](docs/subaccountmanagement/README.md#retrievesubaccount) - Retrieve a subaccount
+* [retrieveSubaccountsList](docs/subaccountmanagement/README.md#retrievesubaccountslist) - Retrieve list of subaccounts
 
-### transfers
+### [transfers](docs/transfers/README.md)
 
-* `retrieveBalanceTransfers` - Retrieve list of balance transfers
-* `retrieveCreditTransfers` - Retrieve list of credit transfers
-* `transferBalance` - Transfer balance
-* `transferCredit` - Transfer credit
-* `transferNumber` - Transfer number
+* [retrieveBalanceTransfers](docs/transfers/README.md#retrievebalancetransfers) - Retrieve list of balance transfers
+* [retrieveCreditTransfers](docs/transfers/README.md#retrievecredittransfers) - Retrieve list of credit transfers
+* [transferBalance](docs/transfers/README.md#transferbalance) - Transfer balance
+* [transferCredit](docs/transfers/README.md#transfercredit) - Transfer credit
+* [transferNumber](docs/transfers/README.md#transfernumber) - Transfer number
 <!-- End SDK Available Operations -->
 
 ### Maturity

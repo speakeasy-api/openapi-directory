@@ -19,6 +19,7 @@ public class SamsungPreviewSectionTile {
      */
     @JsonProperty("action_data")
     public String actionData;
+
     public SamsungPreviewSectionTile withActionData(String actionData) {
         this.actionData = actionData;
         return this;
@@ -32,6 +33,7 @@ public class SamsungPreviewSectionTile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("display_from")
     public OffsetDateTime displayFrom;
+
     public SamsungPreviewSectionTile withDisplayFrom(OffsetDateTime displayFrom) {
         this.displayFrom = displayFrom;
         return this;
@@ -45,6 +47,7 @@ public class SamsungPreviewSectionTile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("display_until")
     public OffsetDateTime displayUntil;
+
     public SamsungPreviewSectionTile withDisplayUntil(OffsetDateTime displayUntil) {
         this.displayUntil = displayUntil;
         return this;
@@ -61,6 +64,7 @@ public class SamsungPreviewSectionTile {
      */
     @JsonProperty("image_ratio")
     public String imageRatio;
+
     public SamsungPreviewSectionTile withImageRatio(String imageRatio) {
         this.imageRatio = imageRatio;
         return this;
@@ -71,6 +75,7 @@ public class SamsungPreviewSectionTile {
      */
     @JsonProperty("image_url")
     public String imageUrl;
+
     public SamsungPreviewSectionTile withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -81,6 +86,7 @@ public class SamsungPreviewSectionTile {
      */
     @JsonProperty("is_playable")
     public Boolean isPlayable;
+
     public SamsungPreviewSectionTile withIsPlayable(Boolean isPlayable) {
         this.isPlayable = isPlayable;
         return this;
@@ -92,6 +98,7 @@ public class SamsungPreviewSectionTile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Integer position;
+
     public SamsungPreviewSectionTile withPosition(Integer position) {
         this.position = position;
         return this;
@@ -103,6 +110,7 @@ public class SamsungPreviewSectionTile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtitle")
     public String subtitle;
+
     public SamsungPreviewSectionTile withSubtitle(String subtitle) {
         this.subtitle = subtitle;
         return this;
@@ -114,9 +122,16 @@ public class SamsungPreviewSectionTile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SamsungPreviewSectionTile withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SamsungPreviewSectionTile(@JsonProperty("action_data") String actionData, @JsonProperty("image_ratio") String imageRatio, @JsonProperty("image_url") String imageUrl, @JsonProperty("is_playable") Boolean isPlayable) {
+        this.actionData = actionData;
+        this.imageRatio = imageRatio;
+        this.imageUrl = imageUrl;
+        this.isPlayable = isPlayable;
+  }
 }

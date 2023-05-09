@@ -15,9 +15,11 @@ public class GetDiskSnapshotResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSnapshot")
     public DiskSnapshot diskSnapshot;
+
     public GetDiskSnapshotResult withDiskSnapshot(DiskSnapshot diskSnapshot) {
         this.diskSnapshot = diskSnapshot;
         return this;
     }
     
+    public GetDiskSnapshotResult(){}
 }

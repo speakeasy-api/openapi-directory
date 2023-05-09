@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnonymizeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=anonymized")
     public Boolean anonymized;
+
     public AnonymizeRequest withAnonymized(Boolean anonymized) {
         this.anonymized = anonymized;
         return this;
@@ -16,6 +18,7 @@ public class AnonymizeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
     public String source;
+
     public AnonymizeRequest withSource(String source) {
         this.source = source;
         return this;
@@ -23,9 +26,15 @@ public class AnonymizeRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public AnonymizeRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public AnonymizeRequest(@JsonProperty("anonymized") Boolean anonymized, @JsonProperty("source") String source, @JsonProperty("token") String token) {
+        this.anonymized = anonymized;
+        this.source = source;
+        this.token = token;
+  }
 }

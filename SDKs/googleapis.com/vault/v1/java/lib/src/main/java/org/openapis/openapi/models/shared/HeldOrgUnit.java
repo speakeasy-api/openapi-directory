@@ -18,6 +18,7 @@ public class HeldOrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holdTime")
     public String holdTime;
+
     public HeldOrgUnit withHoldTime(String holdTime) {
         this.holdTime = holdTime;
         return this;
@@ -29,9 +30,11 @@ public class HeldOrgUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public HeldOrgUnit withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
     }
     
+    public HeldOrgUnit(){}
 }

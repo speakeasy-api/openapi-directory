@@ -15,6 +15,7 @@ public class AwsCloudFrontDistributionViewerCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcmCertificateArn")
     public String acmCertificateArn;
+
     public AwsCloudFrontDistributionViewerCertificate withAcmCertificateArn(String acmCertificateArn) {
         this.acmCertificateArn = acmCertificateArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudFrontDistributionViewerCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public AwsCloudFrontDistributionViewerCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -31,6 +33,7 @@ public class AwsCloudFrontDistributionViewerCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateSource")
     public String certificateSource;
+
     public AwsCloudFrontDistributionViewerCertificate withCertificateSource(String certificateSource) {
         this.certificateSource = certificateSource;
         return this;
@@ -39,6 +42,7 @@ public class AwsCloudFrontDistributionViewerCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFrontDefaultCertificate")
     public Boolean cloudFrontDefaultCertificate;
+
     public AwsCloudFrontDistributionViewerCertificate withCloudFrontDefaultCertificate(Boolean cloudFrontDefaultCertificate) {
         this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
         return this;
@@ -47,6 +51,7 @@ public class AwsCloudFrontDistributionViewerCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamCertificateId")
     public String iamCertificateId;
+
     public AwsCloudFrontDistributionViewerCertificate withIamCertificateId(String iamCertificateId) {
         this.iamCertificateId = iamCertificateId;
         return this;
@@ -55,6 +60,7 @@ public class AwsCloudFrontDistributionViewerCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumProtocolVersion")
     public String minimumProtocolVersion;
+
     public AwsCloudFrontDistributionViewerCertificate withMinimumProtocolVersion(String minimumProtocolVersion) {
         this.minimumProtocolVersion = minimumProtocolVersion;
         return this;
@@ -63,9 +69,11 @@ public class AwsCloudFrontDistributionViewerCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslSupportMethod")
     public String sslSupportMethod;
+
     public AwsCloudFrontDistributionViewerCertificate withSslSupportMethod(String sslSupportMethod) {
         this.sslSupportMethod = sslSupportMethod;
         return this;
     }
     
+    public AwsCloudFrontDistributionViewerCertificate(){}
 }

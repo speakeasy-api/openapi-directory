@@ -12,6 +12,7 @@ public class ContactViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessPhone")
     public String businessPhone;
+
     public ContactViewModel withBusinessPhone(String businessPhone) {
         this.businessPhone = businessPhone;
         return this;
@@ -20,6 +21,7 @@ public class ContactViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessPhoneExt")
     public String businessPhoneExt;
+
     public ContactViewModel withBusinessPhoneExt(String businessPhoneExt) {
         this.businessPhoneExt = businessPhoneExt;
         return this;
@@ -28,6 +30,7 @@ public class ContactViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conferenceInfo")
     public String conferenceInfo;
+
     public ContactViewModel withConferenceInfo(String conferenceInfo) {
         this.conferenceInfo = conferenceInfo;
         return this;
@@ -36,6 +39,7 @@ public class ContactViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homePhone")
     public String homePhone;
+
     public ContactViewModel withHomePhone(String homePhone) {
         this.homePhone = homePhone;
         return this;
@@ -44,6 +48,7 @@ public class ContactViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilePhone")
     public String mobilePhone;
+
     public ContactViewModel withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
         return this;
@@ -52,6 +57,7 @@ public class ContactViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneType")
     public String phoneType;
+
     public ContactViewModel withPhoneType(String phoneType) {
         this.phoneType = phoneType;
         return this;
@@ -60,9 +66,11 @@ public class ContactViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skypeUsername")
     public String skypeUsername;
+
     public ContactViewModel withSkypeUsername(String skypeUsername) {
         this.skypeUsername = skypeUsername;
         return this;
     }
     
+    public ContactViewModel(){}
 }

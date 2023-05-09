@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class PepRetrieve200ApplicationJSON {
     @JsonProperty("listsChecked")
     public String listsChecked;
+
     public PepRetrieve200ApplicationJSON withListsChecked(String listsChecked) {
         this.listsChecked = listsChecked;
         return this;
@@ -24,6 +25,7 @@ public class PepRetrieve200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public PepRetrieve200ApplicationJSONResults results;
+
     public PepRetrieve200ApplicationJSON withResults(PepRetrieve200ApplicationJSONResults results) {
         this.results = results;
         return this;
@@ -31,6 +33,7 @@ public class PepRetrieve200ApplicationJSON {
     
     @JsonProperty("search")
     public String search;
+
     public PepRetrieve200ApplicationJSON withSearch(String search) {
         this.search = search;
         return this;
@@ -38,6 +41,7 @@ public class PepRetrieve200ApplicationJSON {
     
     @JsonProperty("status")
     public String status;
+
     public PepRetrieve200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -46,6 +50,7 @@ public class PepRetrieve200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("timestamp")
     public LocalDate timestamp;
+
     public PepRetrieve200ApplicationJSON withTimestamp(LocalDate timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -53,9 +58,17 @@ public class PepRetrieve200ApplicationJSON {
     
     @JsonProperty("type")
     public String type;
+
     public PepRetrieve200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PepRetrieve200ApplicationJSON(@JsonProperty("listsChecked") String listsChecked, @JsonProperty("search") String search, @JsonProperty("status") String status, @JsonProperty("timestamp") LocalDate timestamp, @JsonProperty("type") String type) {
+        this.listsChecked = listsChecked;
+        this.search = search;
+        this.status = status;
+        this.timestamp = timestamp;
+        this.type = type;
+  }
 }

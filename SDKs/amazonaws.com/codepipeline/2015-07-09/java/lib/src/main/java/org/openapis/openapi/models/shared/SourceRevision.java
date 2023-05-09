@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceRevision {
     @JsonProperty("actionName")
     public String actionName;
+
     public SourceRevision withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -22,6 +23,7 @@ public class SourceRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public SourceRevision withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -30,6 +32,7 @@ public class SourceRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionSummary")
     public String revisionSummary;
+
     public SourceRevision withRevisionSummary(String revisionSummary) {
         this.revisionSummary = revisionSummary;
         return this;
@@ -38,9 +41,13 @@ public class SourceRevision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionUrl")
     public String revisionUrl;
+
     public SourceRevision withRevisionUrl(String revisionUrl) {
         this.revisionUrl = revisionUrl;
         return this;
     }
     
+    public SourceRevision(@JsonProperty("actionName") String actionName) {
+        this.actionName = actionName;
+  }
 }

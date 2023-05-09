@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UnmonitorInstancesRequest {
     
     public Boolean dryRun;
+
     public UnmonitorInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class UnmonitorInstancesRequest {
     
     
     public String[] instanceIds;
+
     public UnmonitorInstancesRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     
+    public UnmonitorInstancesRequest(@JsonProperty("InstanceIds") String[] instanceIds) {
+        this.instanceIds = instanceIds;
+  }
 }

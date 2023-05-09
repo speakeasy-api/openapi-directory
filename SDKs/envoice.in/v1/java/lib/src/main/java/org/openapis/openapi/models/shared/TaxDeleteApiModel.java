@@ -17,9 +17,11 @@ public class TaxDeleteApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public TaxDeleteApiModel withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public TaxDeleteApiModel(){}
 }

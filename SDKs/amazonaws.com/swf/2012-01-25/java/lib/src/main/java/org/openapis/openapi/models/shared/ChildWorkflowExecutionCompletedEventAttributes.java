@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChildWorkflowExecutionCompletedEventAttributes {
     @JsonProperty("initiatedEventId")
     public Long initiatedEventId;
+
     public ChildWorkflowExecutionCompletedEventAttributes withInitiatedEventId(Long initiatedEventId) {
         this.initiatedEventId = initiatedEventId;
         return this;
@@ -22,6 +23,7 @@ public class ChildWorkflowExecutionCompletedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public ChildWorkflowExecutionCompletedEventAttributes withResult(String result) {
         this.result = result;
         return this;
@@ -29,6 +31,7 @@ public class ChildWorkflowExecutionCompletedEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ChildWorkflowExecutionCompletedEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -36,6 +39,7 @@ public class ChildWorkflowExecutionCompletedEventAttributes {
     
     @JsonProperty("workflowExecution")
     public WorkflowExecution workflowExecution;
+
     public ChildWorkflowExecutionCompletedEventAttributes withWorkflowExecution(WorkflowExecution workflowExecution) {
         this.workflowExecution = workflowExecution;
         return this;
@@ -43,9 +47,16 @@ public class ChildWorkflowExecutionCompletedEventAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public ChildWorkflowExecutionCompletedEventAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public ChildWorkflowExecutionCompletedEventAttributes(@JsonProperty("initiatedEventId") Long initiatedEventId, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("workflowExecution") WorkflowExecution workflowExecution, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.initiatedEventId = initiatedEventId;
+        this.startedEventId = startedEventId;
+        this.workflowExecution = workflowExecution;
+        this.workflowType = workflowType;
+  }
 }

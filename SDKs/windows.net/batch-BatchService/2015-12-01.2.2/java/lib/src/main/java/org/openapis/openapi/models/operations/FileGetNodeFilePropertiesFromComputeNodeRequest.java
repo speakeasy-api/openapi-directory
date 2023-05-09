@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileGetNodeFilePropertiesFromComputeNodeRequest {
@@ -12,6 +13,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -22,6 +24,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -42,6 +46,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -52,6 +57,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
     public String fileName;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -62,6 +68,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -72,6 +79,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -82,6 +90,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -92,6 +101,7 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -102,9 +112,16 @@ public class FileGetNodeFilePropertiesFromComputeNodeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public FileGetNodeFilePropertiesFromComputeNodeRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public FileGetNodeFilePropertiesFromComputeNodeRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("fileName") String fileName, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.fileName = fileName;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+  }
 }

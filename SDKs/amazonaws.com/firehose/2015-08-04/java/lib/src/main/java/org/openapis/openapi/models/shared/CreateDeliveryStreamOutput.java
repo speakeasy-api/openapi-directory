@@ -15,9 +15,11 @@ public class CreateDeliveryStreamOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryStreamARN")
     public String deliveryStreamARN;
+
     public CreateDeliveryStreamOutput withDeliveryStreamARN(String deliveryStreamARN) {
         this.deliveryStreamARN = deliveryStreamARN;
         return this;
     }
     
+    public CreateDeliveryStreamOutput(){}
 }

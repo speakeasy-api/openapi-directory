@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodesLogsListLog {
     /**
@@ -12,6 +12,7 @@ public class NodesLogsListLog {
      */
     
     public NodesLogsListLogAttributes attributes;
+
     public NodesLogsListLog withAttributes(NodesLogsListLogAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesLogsListLog {
      */
     
     public String id;
+
     public NodesLogsListLog withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesLogsListLog {
      */
     
     public NodesLogsListLogLinks links;
+
     public NodesLogsListLog withLinks(NodesLogsListLogLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesLogsListLog {
      */
     
     public NodesLogsListLogRelationships relationships;
+
     public NodesLogsListLog withRelationships(NodesLogsListLogRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,17 @@ public class NodesLogsListLog {
      */
     
     public String type;
+
     public NodesLogsListLog withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesLogsListLog(@JsonProperty("attributes") NodesLogsListLogAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") NodesLogsListLogLinks links, @JsonProperty("relationships") NodesLogsListLogRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

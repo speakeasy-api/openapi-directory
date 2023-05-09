@@ -12,6 +12,7 @@ public class GetFormResponsesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contribution")
     public String contribution;
+
     public GetFormResponsesRequest withContribution(String contribution) {
         this.contribution = contribution;
         return this;
@@ -22,6 +23,7 @@ public class GetFormResponsesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form")
     public String form;
+
     public GetFormResponsesRequest withForm(String form) {
         this.form = form;
         return this;
@@ -32,9 +34,11 @@ public class GetFormResponsesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public String user;
+
     public GetFormResponsesRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public GetFormResponsesRequest(){}
 }

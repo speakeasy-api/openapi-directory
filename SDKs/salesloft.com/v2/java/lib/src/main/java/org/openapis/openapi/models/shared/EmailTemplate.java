@@ -15,6 +15,7 @@ public class EmailTemplate {
      */
     
     public java.util.Map<String, Object> links;
+
     public EmailTemplate withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class EmailTemplate {
      */
     
     public OffsetDateTime archivedAt;
+
     public EmailTemplate withArchivedAt(OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -35,6 +37,7 @@ public class EmailTemplate {
      */
     
     public String body;
+
     public EmailTemplate withBody(String body) {
         this.body = body;
         return this;
@@ -45,6 +48,7 @@ public class EmailTemplate {
      */
     
     public String bodyPreview;
+
     public EmailTemplate withBodyPreview(String bodyPreview) {
         this.bodyPreview = bodyPreview;
         return this;
@@ -55,6 +59,7 @@ public class EmailTemplate {
      */
     
     public Boolean cadenceTemplate;
+
     public EmailTemplate withCadenceTemplate(Boolean cadenceTemplate) {
         this.cadenceTemplate = cadenceTemplate;
         return this;
@@ -65,6 +70,7 @@ public class EmailTemplate {
      */
     
     public Boolean clickTrackingEnabled;
+
     public EmailTemplate withClickTrackingEnabled(Boolean clickTrackingEnabled) {
         this.clickTrackingEnabled = clickTrackingEnabled;
         return this;
@@ -72,6 +78,7 @@ public class EmailTemplate {
     
     
     public EmailTemplateCounts counts;
+
     public EmailTemplate withCounts(EmailTemplateCounts counts) {
         this.counts = counts;
         return this;
@@ -82,6 +89,7 @@ public class EmailTemplate {
      */
     
     public OffsetDateTime createdAt;
+
     public EmailTemplate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -92,6 +100,7 @@ public class EmailTemplate {
      */
     
     public EmbeddedResource[] groups;
+
     public EmailTemplate withGroups(EmbeddedResource[] groups) {
         this.groups = groups;
         return this;
@@ -102,6 +111,7 @@ public class EmailTemplate {
      */
     
     public Long id;
+
     public EmailTemplate withId(Long id) {
         this.id = id;
         return this;
@@ -112,6 +122,7 @@ public class EmailTemplate {
      */
     
     public OffsetDateTime lastUsedAt;
+
     public EmailTemplate withLastUsedAt(OffsetDateTime lastUsedAt) {
         this.lastUsedAt = lastUsedAt;
         return this;
@@ -122,6 +133,7 @@ public class EmailTemplate {
      */
     
     public Boolean openTrackingEnabled;
+
     public EmailTemplate withOpenTrackingEnabled(Boolean openTrackingEnabled) {
         this.openTrackingEnabled = openTrackingEnabled;
         return this;
@@ -132,6 +144,7 @@ public class EmailTemplate {
      */
     
     public Boolean shared;
+
     public EmailTemplate withShared(Boolean shared) {
         this.shared = shared;
         return this;
@@ -142,6 +155,7 @@ public class EmailTemplate {
      */
     
     public String subject;
+
     public EmailTemplate withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -152,6 +166,7 @@ public class EmailTemplate {
      */
     
     public String[] tags;
+
     public EmailTemplate withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -159,6 +174,7 @@ public class EmailTemplate {
     
     
     public EmbeddedResource teamTemplate;
+
     public EmailTemplate withTeamTemplate(EmbeddedResource teamTemplate) {
         this.teamTemplate = teamTemplate;
         return this;
@@ -166,6 +182,7 @@ public class EmailTemplate {
     
     
     public EmbeddedResource templateOwner;
+
     public EmailTemplate withTemplateOwner(EmbeddedResource templateOwner) {
         this.templateOwner = templateOwner;
         return this;
@@ -176,6 +193,7 @@ public class EmailTemplate {
      */
     
     public String title;
+
     public EmailTemplate withTitle(String title) {
         this.title = title;
         return this;
@@ -186,9 +204,11 @@ public class EmailTemplate {
      */
     
     public OffsetDateTime updatedAt;
+
     public EmailTemplate withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public EmailTemplate(){}
 }

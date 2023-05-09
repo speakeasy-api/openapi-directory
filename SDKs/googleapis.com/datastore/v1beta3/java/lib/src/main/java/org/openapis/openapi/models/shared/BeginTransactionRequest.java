@@ -18,9 +18,11 @@ public class BeginTransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionOptions")
     public TransactionOptions transactionOptions;
+
     public BeginTransactionRequest withTransactionOptions(TransactionOptions transactionOptions) {
         this.transactionOptions = transactionOptions;
         return this;
     }
     
+    public BeginTransactionRequest(){}
 }

@@ -66,7 +66,7 @@ public class SuggestTagsAndRegionsApi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SuggestTagsAndRegionsResponse res = new org.openapis.openapi.models.operations.SuggestTagsAndRegionsResponse() {{
+        org.openapis.openapi.models.operations.SuggestTagsAndRegionsResponse res = new org.openapis.openapi.models.operations.SuggestTagsAndRegionsResponse(contentType, httpRes.statusCode()) {{
             suggestedTagAndRegions = null;
             body = null;
             body = null;
@@ -74,8 +74,6 @@ public class SuggestTagsAndRegionsApi {
             body = null;
             customVisionError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

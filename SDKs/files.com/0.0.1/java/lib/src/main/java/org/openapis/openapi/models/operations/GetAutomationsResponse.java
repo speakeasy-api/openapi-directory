@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomationsResponse {
@@ -12,6 +13,7 @@ public class GetAutomationsResponse {
      */
     
     public org.openapis.openapi.models.shared.AutomationEntity[] automationEntities;
+
     public GetAutomationsResponse withAutomationEntities(org.openapis.openapi.models.shared.AutomationEntity[] automationEntities) {
         this.automationEntities = automationEntities;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomationsResponse {
     
     
     public String contentType;
+
     public GetAutomationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAutomationsResponse {
     
     
     public Integer statusCode;
+
     public GetAutomationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAutomationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAutomationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

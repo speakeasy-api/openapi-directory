@@ -15,6 +15,7 @@ public class InputConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceConfig")
     public EojDataSourceConfigInput dataSourceConfig;
+
     public InputConfigOutput withDataSourceConfig(EojDataSourceConfigInput dataSourceConfig) {
         this.dataSourceConfig = dataSourceConfig;
         return this;
@@ -23,6 +24,7 @@ public class InputConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreviousEarthObservationJobArn")
     public String previousEarthObservationJobArn;
+
     public InputConfigOutput withPreviousEarthObservationJobArn(String previousEarthObservationJobArn) {
         this.previousEarthObservationJobArn = previousEarthObservationJobArn;
         return this;
@@ -31,9 +33,11 @@ public class InputConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RasterDataCollectionQuery")
     public RasterDataCollectionQueryOutput rasterDataCollectionQuery;
+
     public InputConfigOutput withRasterDataCollectionQuery(RasterDataCollectionQueryOutput rasterDataCollectionQuery) {
         this.rasterDataCollectionQuery = rasterDataCollectionQuery;
         return this;
     }
     
+    public InputConfigOutput(){}
 }

@@ -15,6 +15,7 @@ public class ImportAlreadyInProgressResponse {
      */
     @JsonProperty("errors")
     public BeezUPCommonUserErrorMessage[] errors;
+
     public ImportAlreadyInProgressResponse withErrors(BeezUPCommonUserErrorMessage[] errors) {
         this.errors = errors;
         return this;
@@ -25,9 +26,14 @@ public class ImportAlreadyInProgressResponse {
      */
     @JsonProperty("links")
     public ImportAlreadyInProgressResponseLinks links;
+
     public ImportAlreadyInProgressResponse withLinks(ImportAlreadyInProgressResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public ImportAlreadyInProgressResponse(@JsonProperty("errors") BeezUPCommonUserErrorMessage[] errors, @JsonProperty("links") ImportAlreadyInProgressResponseLinks links) {
+        this.errors = errors;
+        this.links = links;
+  }
 }

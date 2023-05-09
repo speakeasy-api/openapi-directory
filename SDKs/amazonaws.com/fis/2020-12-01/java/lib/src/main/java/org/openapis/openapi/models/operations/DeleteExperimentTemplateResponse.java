@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteExperimentTemplateResponse {
     
     public String contentType;
+
     public DeleteExperimentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteExperimentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteExperimentTemplateResponse deleteExperimentTemplateResponse;
+
     public DeleteExperimentTemplateResponse withDeleteExperimentTemplateResponse(org.openapis.openapi.models.shared.DeleteExperimentTemplateResponse deleteExperimentTemplateResponse) {
         this.deleteExperimentTemplateResponse = deleteExperimentTemplateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteExperimentTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteExperimentTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteExperimentTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteExperimentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteExperimentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteExperimentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteExperimentTemplateResponse {
      */
     
     public Object validationException;
+
     public DeleteExperimentTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteExperimentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

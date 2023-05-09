@@ -22,6 +22,7 @@ public class KinesisStreamSourceDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeliveryStartTimestamp")
     public OffsetDateTime deliveryStartTimestamp;
+
     public KinesisStreamSourceDescription withDeliveryStartTimestamp(OffsetDateTime deliveryStartTimestamp) {
         this.deliveryStartTimestamp = deliveryStartTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class KinesisStreamSourceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamARN")
     public String kinesisStreamARN;
+
     public KinesisStreamSourceDescription withKinesisStreamARN(String kinesisStreamARN) {
         this.kinesisStreamARN = kinesisStreamARN;
         return this;
@@ -38,9 +40,11 @@ public class KinesisStreamSourceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public KinesisStreamSourceDescription withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
     }
     
+    public KinesisStreamSourceDescription(){}
 }

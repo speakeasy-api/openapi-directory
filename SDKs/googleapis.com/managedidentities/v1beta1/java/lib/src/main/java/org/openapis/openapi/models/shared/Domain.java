@@ -18,6 +18,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public String admin;
+
     public Domain withAdmin(String admin) {
         this.admin = admin;
         return this;
@@ -29,6 +30,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditLogsEnabled")
     public Boolean auditLogsEnabled;
+
     public Domain withAuditLogsEnabled(Boolean auditLogsEnabled) {
         this.auditLogsEnabled = auditLogsEnabled;
         return this;
@@ -40,6 +42,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedNetworks")
     public String[] authorizedNetworks;
+
     public Domain withAuthorizedNetworks(String[] authorizedNetworks) {
         this.authorizedNetworks = authorizedNetworks;
         return this;
@@ -51,6 +54,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Domain withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -62,6 +66,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public Domain withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -73,6 +78,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Domain withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public Domain withLocations(String[] locations) {
         this.locations = locations;
         return this;
@@ -95,6 +102,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Domain withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedIpRange")
     public String reservedIpRange;
+
     public Domain withReservedIpRange(String reservedIpRange) {
         this.reservedIpRange = reservedIpRange;
         return this;
@@ -117,6 +126,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DomainStateEnum state;
+
     public Domain withState(DomainStateEnum state) {
         this.state = state;
         return this;
@@ -128,6 +138,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public Domain withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -139,6 +150,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trusts")
     public Trust[] trusts;
+
     public Domain withTrusts(Trust[] trusts) {
         this.trusts = trusts;
         return this;
@@ -150,9 +162,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Domain withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Domain(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ConfigGroupTheme {
     
     public String description;
+
     public ConfigGroupTheme withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class ConfigGroupTheme {
     
     
     public String folder;
+
     public ConfigGroupTheme withFolder(String folder) {
         this.folder = folder;
         return this;
@@ -23,9 +25,11 @@ public class ConfigGroupTheme {
     
     
     public String name;
+
     public ConfigGroupTheme withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ConfigGroupTheme(){}
 }

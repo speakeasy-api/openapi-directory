@@ -13,6 +13,7 @@ public class ActivityListNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public ActivityListNotificationsForAuthenticatedUserRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -23,6 +24,7 @@ public class ActivityListNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public OffsetDateTime before;
+
     public ActivityListNotificationsForAuthenticatedUserRequest withBefore(OffsetDateTime before) {
         this.before = before;
         return this;
@@ -33,6 +35,7 @@ public class ActivityListNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActivityListNotificationsForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -43,6 +46,7 @@ public class ActivityListNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=participating")
     public Boolean participating;
+
     public ActivityListNotificationsForAuthenticatedUserRequest withParticipating(Boolean participating) {
         this.participating = participating;
         return this;
@@ -53,6 +57,7 @@ public class ActivityListNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActivityListNotificationsForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -63,9 +68,11 @@ public class ActivityListNotificationsForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public ActivityListNotificationsForAuthenticatedUserRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
     }
     
+    public ActivityListNotificationsForAuthenticatedUserRequest(){}
 }

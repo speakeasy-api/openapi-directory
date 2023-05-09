@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeMigrationTaskRequest {
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public DescribeMigrationTaskRequest withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -16,9 +17,14 @@ public class DescribeMigrationTaskRequest {
     
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public DescribeMigrationTaskRequest withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
     }
     
+    public DescribeMigrationTaskRequest(@JsonProperty("MigrationTaskName") String migrationTaskName, @JsonProperty("ProgressUpdateStream") String progressUpdateStream) {
+        this.migrationTaskName = migrationTaskName;
+        this.progressUpdateStream = progressUpdateStream;
+  }
 }

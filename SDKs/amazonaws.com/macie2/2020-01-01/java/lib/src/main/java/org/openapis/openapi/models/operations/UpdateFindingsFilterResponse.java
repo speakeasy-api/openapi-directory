@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFindingsFilterResponse {
@@ -12,6 +13,7 @@ public class UpdateFindingsFilterResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFindingsFilterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFindingsFilterResponse {
      */
     
     public Object conflictException;
+
     public UpdateFindingsFilterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFindingsFilterResponse {
     
     
     public String contentType;
+
     public UpdateFindingsFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFindingsFilterResponse {
      */
     
     public Object internalServerException;
+
     public UpdateFindingsFilterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateFindingsFilterResponse {
     
     
     public Integer statusCode;
+
     public UpdateFindingsFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFindingsFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFindingsFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFindingsFilterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFindingsFilterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFindingsFilterResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateFindingsFilterResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFindingsFilterResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFindingsFilterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFindingsFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFindingsFilterResponse updateFindingsFilterResponse;
+
     public UpdateFindingsFilterResponse withUpdateFindingsFilterResponse(org.openapis.openapi.models.shared.UpdateFindingsFilterResponse updateFindingsFilterResponse) {
         this.updateFindingsFilterResponse = updateFindingsFilterResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateFindingsFilterResponse {
      */
     
     public Object validationException;
+
     public UpdateFindingsFilterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFindingsFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

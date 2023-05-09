@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Properties {
     @JsonProperty("additionalProp1")
     public String additionalProp1;
+
     public Properties withAdditionalProp1(String additionalProp1) {
         this.additionalProp1 = additionalProp1;
         return this;
@@ -16,6 +17,7 @@ public class Properties {
     
     @JsonProperty("additionalProp2")
     public String additionalProp2;
+
     public Properties withAdditionalProp2(String additionalProp2) {
         this.additionalProp2 = additionalProp2;
         return this;
@@ -23,9 +25,15 @@ public class Properties {
     
     @JsonProperty("additionalProp3")
     public String additionalProp3;
+
     public Properties withAdditionalProp3(String additionalProp3) {
         this.additionalProp3 = additionalProp3;
         return this;
     }
     
+    public Properties(@JsonProperty("additionalProp1") String additionalProp1, @JsonProperty("additionalProp2") String additionalProp2, @JsonProperty("additionalProp3") String additionalProp3) {
+        this.additionalProp1 = additionalProp1;
+        this.additionalProp2 = additionalProp2;
+        this.additionalProp3 = additionalProp3;
+  }
 }

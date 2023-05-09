@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllEarningsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String paylocityAuth;
+
     public GetAllEarningsSecurity withPaylocityAuth(String paylocityAuth) {
         this.paylocityAuth = paylocityAuth;
         return this;
     }
     
+    public GetAllEarningsSecurity(@JsonProperty("paylocity_auth") String paylocityAuth) {
+        this.paylocityAuth = paylocityAuth;
+  }
 }

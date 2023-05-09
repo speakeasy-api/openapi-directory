@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteFlowLogsResultUnsuccessful {
     
     public DeleteFlowLogsResultUnsuccessfulError error;
+
     public DeleteFlowLogsResultUnsuccessful withError(DeleteFlowLogsResultUnsuccessfulError error) {
         this.error = error;
         return this;
@@ -19,9 +20,11 @@ public class DeleteFlowLogsResultUnsuccessful {
     
     
     public String resourceId;
+
     public DeleteFlowLogsResultUnsuccessful withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public DeleteFlowLogsResultUnsuccessful(){}
 }

@@ -18,6 +18,7 @@ public class Getcampaignaudiences200ApplicationJSONTargetConfigurationsBrands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Getcampaignaudiences200ApplicationJSONTargetConfigurationsBrands withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Getcampaignaudiences200ApplicationJSONTargetConfigurationsBrands {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Getcampaignaudiences200ApplicationJSONTargetConfigurationsBrands withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Getcampaignaudiences200ApplicationJSONTargetConfigurationsBrands(){}
 }

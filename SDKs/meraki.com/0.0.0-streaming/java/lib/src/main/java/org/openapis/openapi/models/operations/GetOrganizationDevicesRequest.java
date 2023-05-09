@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationDevicesRequest {
@@ -12,6 +13,7 @@ public class GetOrganizationDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configurationUpdatedAfter")
     public String configurationUpdatedAfter;
+
     public GetOrganizationDevicesRequest withConfigurationUpdatedAfter(String configurationUpdatedAfter) {
         this.configurationUpdatedAfter = configurationUpdatedAfter;
         return this;
@@ -22,6 +24,7 @@ public class GetOrganizationDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
     public String endingBefore;
+
     public GetOrganizationDevicesRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -29,6 +32,7 @@ public class GetOrganizationDevicesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public GetOrganizationDevicesRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -39,6 +43,7 @@ public class GetOrganizationDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
     public Long perPage;
+
     public GetOrganizationDevicesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -49,9 +54,13 @@ public class GetOrganizationDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
     public String startingAfter;
+
     public GetOrganizationDevicesRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
     }
     
+    public GetOrganizationDevicesRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

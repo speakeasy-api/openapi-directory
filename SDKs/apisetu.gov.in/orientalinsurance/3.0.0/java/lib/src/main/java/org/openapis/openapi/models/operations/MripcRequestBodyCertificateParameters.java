@@ -12,6 +12,7 @@ public class MripcRequestBodyCertificateParameters {
      */
     @JsonProperty("INSCODE")
     public String inscode;
+
     public MripcRequestBodyCertificateParameters withInscode(String inscode) {
         this.inscode = inscode;
         return this;
@@ -22,6 +23,7 @@ public class MripcRequestBodyCertificateParameters {
      */
     @JsonProperty("POLNO")
     public String polno;
+
     public MripcRequestBodyCertificateParameters withPolno(String polno) {
         this.polno = polno;
         return this;
@@ -32,9 +34,15 @@ public class MripcRequestBodyCertificateParameters {
      */
     @JsonProperty("STARTDT")
     public String startdt;
+
     public MripcRequestBodyCertificateParameters withStartdt(String startdt) {
         this.startdt = startdt;
         return this;
     }
     
+    public MripcRequestBodyCertificateParameters(@JsonProperty("INSCODE") String inscode, @JsonProperty("POLNO") String polno, @JsonProperty("STARTDT") String startdt) {
+        this.inscode = inscode;
+        this.polno = polno;
+        this.startdt = startdt;
+  }
 }

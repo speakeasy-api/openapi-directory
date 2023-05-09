@@ -18,6 +18,7 @@ public class InsightList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insights")
     public Insight[] insights;
+
     public InsightList withInsights(Insight[] insights) {
         this.insights = insights;
         return this;
@@ -29,9 +30,11 @@ public class InsightList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public InsightList withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public InsightList(){}
 }

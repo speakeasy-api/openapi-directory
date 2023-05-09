@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourcesForTagOptionResponse {
     
     public String contentType;
+
     public ListResourcesForTagOptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourcesForTagOptionResponse {
      */
     
     public Object invalidParametersException;
+
     public ListResourcesForTagOptionResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourcesForTagOptionResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourcesForTagOptionOutput listResourcesForTagOptionOutput;
+
     public ListResourcesForTagOptionResponse withListResourcesForTagOptionOutput(org.openapis.openapi.models.shared.ListResourcesForTagOptionOutput listResourcesForTagOptionOutput) {
         this.listResourcesForTagOptionOutput = listResourcesForTagOptionOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListResourcesForTagOptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResourcesForTagOptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListResourcesForTagOptionResponse {
     
     
     public Integer statusCode;
+
     public ListResourcesForTagOptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListResourcesForTagOptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourcesForTagOptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListResourcesForTagOptionResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public ListResourcesForTagOptionResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public ListResourcesForTagOptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

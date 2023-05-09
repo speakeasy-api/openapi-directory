@@ -16,6 +16,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public Integer[] applicableMembershipTypes;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -26,6 +27,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public String bungieGlobalDisplayName;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -46,6 +49,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public Integer crossSaveOverride;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -56,6 +60,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public String displayName;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -66,6 +71,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public String iconPath;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -76,6 +82,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public Boolean isPublic;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -86,6 +93,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public Long membershipId;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -96,6 +104,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public Integer membershipType;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -106,9 +115,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungie
      */
     
     public String supplementalDisplayName;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryPlayerBungieNetUserInfo(){}
 }

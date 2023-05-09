@@ -12,6 +12,7 @@ public class DescribeWebsiteCertificateAuthorityRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeWebsiteCertificateAuthorityRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -22,9 +23,14 @@ public class DescribeWebsiteCertificateAuthorityRequestBody {
      */
     @JsonProperty("WebsiteCaId")
     public String websiteCaId;
+
     public DescribeWebsiteCertificateAuthorityRequestBody withWebsiteCaId(String websiteCaId) {
         this.websiteCaId = websiteCaId;
         return this;
     }
     
+    public DescribeWebsiteCertificateAuthorityRequestBody(@JsonProperty("FleetArn") String fleetArn, @JsonProperty("WebsiteCaId") String websiteCaId) {
+        this.fleetArn = fleetArn;
+        this.websiteCaId = websiteCaId;
+  }
 }

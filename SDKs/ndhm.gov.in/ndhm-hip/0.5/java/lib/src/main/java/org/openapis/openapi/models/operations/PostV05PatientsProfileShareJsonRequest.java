@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsProfileShareJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05PatientsProfileShareJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05PatientsProfileShareJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05PatientsProfileShareJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ShareProfileRequest shareProfileRequest;
+
     public PostV05PatientsProfileShareJsonRequest withShareProfileRequest(org.openapis.openapi.models.shared.ShareProfileRequest shareProfileRequest) {
         this.shareProfileRequest = shareProfileRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05PatientsProfileShareJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05PatientsProfileShareJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05PatientsProfileShareJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("ShareProfileRequest") org.openapis.openapi.models.shared.ShareProfileRequest shareProfileRequest, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.shareProfileRequest = shareProfileRequest;
+        this.xHipId = xHipId;
+  }
 }

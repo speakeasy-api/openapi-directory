@@ -18,6 +18,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withAuthor(String author) {
         this.author = author;
         return this;
@@ -29,6 +30,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isbn")
     public String isbn;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withIsbn(String isbn) {
         this.isbn = isbn;
         return this;
@@ -40,6 +42,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issn")
     public String issn;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withIssn(String issn) {
         this.issn = issn;
         return this;
@@ -51,6 +54,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mms_id")
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadataMmsId mmsId;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withMmsId(Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadataMmsId mmsId) {
         this.mmsId = mmsId;
         return this;
@@ -62,6 +66,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publication_place")
     public String publicationPlace;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withPublicationPlace(String publicationPlace) {
         this.publicationPlace = publicationPlace;
         return this;
@@ -73,6 +78,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publication_year")
     public String publicationYear;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withPublicationYear(String publicationYear) {
         this.publicationYear = publicationYear;
         return this;
@@ -84,6 +90,7 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -95,9 +102,11 @@ public class Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentAppl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Onealmaws1v11taskLists1requestedResourcesGetResponses200ContentApplication1jsonSchemaRequestedResourceResourceMetadata(){}
 }

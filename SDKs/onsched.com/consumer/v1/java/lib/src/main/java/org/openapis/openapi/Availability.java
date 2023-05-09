@@ -74,11 +74,9 @@ public class Availability {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateResponse(contentType, httpRes.statusCode()) {{
             availabilityViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -125,11 +123,9 @@ public class Availability {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse(contentType, httpRes.statusCode()) {{
             availabilityDayViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,11 +169,9 @@ public class Availability {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse() {{
+        org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse res = new org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse(contentType, httpRes.statusCode()) {{
             unavailableTimeListViewModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntitlementData {
     @JsonProperty("Name")
     public String name;
+
     public EntitlementData withName(String name) {
         this.name = name;
         return this;
@@ -21,6 +22,7 @@ public class EntitlementData {
     
     @JsonProperty("Unit")
     public EntitlementDataUnitEnum unit;
+
     public EntitlementData withUnit(EntitlementDataUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -29,9 +31,14 @@ public class EntitlementData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public EntitlementData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EntitlementData(@JsonProperty("Name") String name, @JsonProperty("Unit") EntitlementDataUnitEnum unit) {
+        this.name = name;
+        this.unit = unit;
+  }
 }

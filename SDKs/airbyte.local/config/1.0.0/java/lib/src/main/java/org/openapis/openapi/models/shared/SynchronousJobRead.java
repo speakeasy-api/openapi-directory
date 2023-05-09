@@ -15,6 +15,7 @@ public class SynchronousJobRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configId")
     public String configId;
+
     public SynchronousJobRead withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -22,6 +23,7 @@ public class SynchronousJobRead {
     
     @JsonProperty("configType")
     public JobConfigTypeEnum configType;
+
     public SynchronousJobRead withConfigType(JobConfigTypeEnum configType) {
         this.configType = configType;
         return this;
@@ -30,6 +32,7 @@ public class SynchronousJobRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorConfigurationUpdated")
     public Boolean connectorConfigurationUpdated;
+
     public SynchronousJobRead withConnectorConfigurationUpdated(Boolean connectorConfigurationUpdated) {
         this.connectorConfigurationUpdated = connectorConfigurationUpdated;
         return this;
@@ -37,6 +40,7 @@ public class SynchronousJobRead {
     
     @JsonProperty("createdAt")
     public Long createdAt;
+
     public SynchronousJobRead withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +48,7 @@ public class SynchronousJobRead {
     
     @JsonProperty("endedAt")
     public Long endedAt;
+
     public SynchronousJobRead withEndedAt(Long endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -51,6 +56,7 @@ public class SynchronousJobRead {
     
     @JsonProperty("id")
     public String id;
+
     public SynchronousJobRead withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +65,7 @@ public class SynchronousJobRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logs")
     public LogRead logs;
+
     public SynchronousJobRead withLogs(LogRead logs) {
         this.logs = logs;
         return this;
@@ -66,9 +73,17 @@ public class SynchronousJobRead {
     
     @JsonProperty("succeeded")
     public Boolean succeeded;
+
     public SynchronousJobRead withSucceeded(Boolean succeeded) {
         this.succeeded = succeeded;
         return this;
     }
     
+    public SynchronousJobRead(@JsonProperty("configType") JobConfigTypeEnum configType, @JsonProperty("createdAt") Long createdAt, @JsonProperty("endedAt") Long endedAt, @JsonProperty("id") String id, @JsonProperty("succeeded") Boolean succeeded) {
+        this.configType = configType;
+        this.createdAt = createdAt;
+        this.endedAt = endedAt;
+        this.id = id;
+        this.succeeded = succeeded;
+  }
 }

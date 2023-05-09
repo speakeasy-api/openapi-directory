@@ -12,6 +12,7 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
     public Boolean excludeGarbageTime;
+
     public GetPlayerGamePPARequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
         this.excludeGarbageTime = excludeGarbageTime;
         return this;
@@ -22,6 +23,7 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=playerId")
     public Long playerId;
+
     public GetPlayerGamePPARequest withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -32,6 +34,7 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
     public String position;
+
     public GetPlayerGamePPARequest withPosition(String position) {
         this.position = position;
         return this;
@@ -42,6 +45,7 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetPlayerGamePPARequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -52,6 +56,7 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetPlayerGamePPARequest withTeam(String team) {
         this.team = team;
         return this;
@@ -62,6 +67,7 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=threshold")
     public String threshold;
+
     public GetPlayerGamePPARequest withThreshold(String threshold) {
         this.threshold = threshold;
         return this;
@@ -72,6 +78,7 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetPlayerGamePPARequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -82,9 +89,11 @@ public class GetPlayerGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetPlayerGamePPARequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetPlayerGamePPARequest(){}
 }

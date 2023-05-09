@@ -15,6 +15,7 @@ public class DisassociateResourceShareResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DisassociateResourceShareResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,9 +24,11 @@ public class DisassociateResourceShareResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareAssociations")
     public ResourceShareAssociation[] resourceShareAssociations;
+
     public DisassociateResourceShareResponse withResourceShareAssociations(ResourceShareAssociation[] resourceShareAssociations) {
         this.resourceShareAssociations = resourceShareAssociations;
         return this;
     }
     
+    public DisassociateResourceShareResponse(){}
 }

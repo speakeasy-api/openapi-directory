@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRevisionChangesetUsingPOSTResponse {
     
     public String contentType;
+
     public GetRevisionChangesetUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRevisionChangesetUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetRevisionChangesetUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRevisionChangesetUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRevisionChangesetUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRevisionChangesetUsingPOSTResponse {
      */
     
     public GetRevisionChangesetUsingPOST200ApplicationJSON getRevisionChangesetUsingPOST200ApplicationJSONObject;
+
     public GetRevisionChangesetUsingPOSTResponse withGetRevisionChangesetUsingPOST200ApplicationJSONObject(GetRevisionChangesetUsingPOST200ApplicationJSON getRevisionChangesetUsingPOST200ApplicationJSONObject) {
         this.getRevisionChangesetUsingPOST200ApplicationJSONObject = getRevisionChangesetUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetRevisionChangesetUsingPOSTResponse {
      */
     
     public GetRevisionChangesetUsingPOST400ApplicationJSON getRevisionChangesetUsingPOST400ApplicationJSONObject;
+
     public GetRevisionChangesetUsingPOSTResponse withGetRevisionChangesetUsingPOST400ApplicationJSONObject(GetRevisionChangesetUsingPOST400ApplicationJSON getRevisionChangesetUsingPOST400ApplicationJSONObject) {
         this.getRevisionChangesetUsingPOST400ApplicationJSONObject = getRevisionChangesetUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetRevisionChangesetUsingPOSTResponse {
      */
     
     public GetRevisionChangesetUsingPOST401ApplicationJSON getRevisionChangesetUsingPOST401ApplicationJSONObject;
+
     public GetRevisionChangesetUsingPOSTResponse withGetRevisionChangesetUsingPOST401ApplicationJSONObject(GetRevisionChangesetUsingPOST401ApplicationJSON getRevisionChangesetUsingPOST401ApplicationJSONObject) {
         this.getRevisionChangesetUsingPOST401ApplicationJSONObject = getRevisionChangesetUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetRevisionChangesetUsingPOSTResponse {
      */
     
     public GetRevisionChangesetUsingPOST500ApplicationJSON getRevisionChangesetUsingPOST500ApplicationJSONObject;
+
     public GetRevisionChangesetUsingPOSTResponse withGetRevisionChangesetUsingPOST500ApplicationJSONObject(GetRevisionChangesetUsingPOST500ApplicationJSON getRevisionChangesetUsingPOST500ApplicationJSONObject) {
         this.getRevisionChangesetUsingPOST500ApplicationJSONObject = getRevisionChangesetUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetRevisionChangesetUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

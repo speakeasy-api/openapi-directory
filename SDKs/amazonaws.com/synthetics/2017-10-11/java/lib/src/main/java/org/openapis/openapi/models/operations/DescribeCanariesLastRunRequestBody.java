@@ -15,6 +15,7 @@ public class DescribeCanariesLastRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeCanariesLastRunRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class DescribeCanariesLastRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public DescribeCanariesLastRunRequestBody withNames(String[] names) {
         this.names = names;
         return this;
@@ -37,9 +39,11 @@ public class DescribeCanariesLastRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeCanariesLastRunRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCanariesLastRunRequestBody(){}
 }

@@ -18,9 +18,11 @@ public class BatchCreateContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdPeople")
     public PersonResponse[] createdPeople;
+
     public BatchCreateContactsResponse withCreatedPeople(PersonResponse[] createdPeople) {
         this.createdPeople = createdPeople;
         return this;
     }
     
+    public BatchCreateContactsResponse(){}
 }

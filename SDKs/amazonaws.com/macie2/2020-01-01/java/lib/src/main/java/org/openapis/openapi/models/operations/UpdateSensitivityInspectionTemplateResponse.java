@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSensitivityInspectionTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateSensitivityInspectionTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
     
     
     public String contentType;
+
     public UpdateSensitivityInspectionTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
      */
     
     public Object internalServerException;
+
     public UpdateSensitivityInspectionTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateSensitivityInspectionTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSensitivityInspectionTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateSensitivityInspectionTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
      */
     
     public Object throttlingException;
+
     public UpdateSensitivityInspectionTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSensitivityInspectionTemplateResponse {
      */
     
     public java.util.Map<String, Object> updateSensitivityInspectionTemplateResponse;
+
     public UpdateSensitivityInspectionTemplateResponse withUpdateSensitivityInspectionTemplateResponse(java.util.Map<String, Object> updateSensitivityInspectionTemplateResponse) {
         this.updateSensitivityInspectionTemplateResponse = updateSensitivityInspectionTemplateResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateSensitivityInspectionTemplateResponse {
      */
     
     public Object validationException;
+
     public UpdateSensitivityInspectionTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateSensitivityInspectionTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

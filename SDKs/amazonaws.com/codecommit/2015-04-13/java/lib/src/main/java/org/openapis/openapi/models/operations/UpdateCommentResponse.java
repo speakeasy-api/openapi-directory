@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCommentResponse {
@@ -12,6 +13,7 @@ public class UpdateCommentResponse {
      */
     
     public Object commentContentRequiredException;
+
     public UpdateCommentResponse withCommentContentRequiredException(Object commentContentRequiredException) {
         this.commentContentRequiredException = commentContentRequiredException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCommentResponse {
      */
     
     public Object commentContentSizeLimitExceededException;
+
     public UpdateCommentResponse withCommentContentSizeLimitExceededException(Object commentContentSizeLimitExceededException) {
         this.commentContentSizeLimitExceededException = commentContentSizeLimitExceededException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateCommentResponse {
      */
     
     public Object commentDeletedException;
+
     public UpdateCommentResponse withCommentDeletedException(Object commentDeletedException) {
         this.commentDeletedException = commentDeletedException;
         return this;
@@ -42,6 +46,7 @@ public class UpdateCommentResponse {
      */
     
     public Object commentDoesNotExistException;
+
     public UpdateCommentResponse withCommentDoesNotExistException(Object commentDoesNotExistException) {
         this.commentDoesNotExistException = commentDoesNotExistException;
         return this;
@@ -52,6 +57,7 @@ public class UpdateCommentResponse {
      */
     
     public Object commentIdRequiredException;
+
     public UpdateCommentResponse withCommentIdRequiredException(Object commentIdRequiredException) {
         this.commentIdRequiredException = commentIdRequiredException;
         return this;
@@ -62,6 +68,7 @@ public class UpdateCommentResponse {
      */
     
     public Object commentNotCreatedByCallerException;
+
     public UpdateCommentResponse withCommentNotCreatedByCallerException(Object commentNotCreatedByCallerException) {
         this.commentNotCreatedByCallerException = commentNotCreatedByCallerException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateCommentResponse {
     
     
     public String contentType;
+
     public UpdateCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -79,6 +87,7 @@ public class UpdateCommentResponse {
      */
     
     public Object invalidCommentIdException;
+
     public UpdateCommentResponse withInvalidCommentIdException(Object invalidCommentIdException) {
         this.invalidCommentIdException = invalidCommentIdException;
         return this;
@@ -86,6 +95,7 @@ public class UpdateCommentResponse {
     
     
     public Integer statusCode;
+
     public UpdateCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UpdateCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCommentOutput updateCommentOutput;
+
     public UpdateCommentResponse withUpdateCommentOutput(org.openapis.openapi.models.shared.UpdateCommentOutput updateCommentOutput) {
         this.updateCommentOutput = updateCommentOutput;
         return this;
     }
     
+    public UpdateCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

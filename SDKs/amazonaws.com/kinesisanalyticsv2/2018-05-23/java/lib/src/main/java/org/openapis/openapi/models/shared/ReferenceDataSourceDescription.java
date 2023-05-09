@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReferenceDataSourceDescription {
     @JsonProperty("ReferenceId")
     public String referenceId;
+
     public ReferenceDataSourceDescription withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -22,6 +23,7 @@ public class ReferenceDataSourceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceSchema")
     public SourceSchema referenceSchema;
+
     public ReferenceDataSourceDescription withReferenceSchema(SourceSchema referenceSchema) {
         this.referenceSchema = referenceSchema;
         return this;
@@ -29,6 +31,7 @@ public class ReferenceDataSourceDescription {
     
     @JsonProperty("S3ReferenceDataSourceDescription")
     public S3ReferenceDataSourceDescription s3ReferenceDataSourceDescription;
+
     public ReferenceDataSourceDescription withS3ReferenceDataSourceDescription(S3ReferenceDataSourceDescription s3ReferenceDataSourceDescription) {
         this.s3ReferenceDataSourceDescription = s3ReferenceDataSourceDescription;
         return this;
@@ -36,9 +39,15 @@ public class ReferenceDataSourceDescription {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public ReferenceDataSourceDescription withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public ReferenceDataSourceDescription(@JsonProperty("ReferenceId") String referenceId, @JsonProperty("S3ReferenceDataSourceDescription") S3ReferenceDataSourceDescription s3ReferenceDataSourceDescription, @JsonProperty("TableName") String tableName) {
+        this.referenceId = referenceId;
+        this.s3ReferenceDataSourceDescription = s3ReferenceDataSourceDescription;
+        this.tableName = tableName;
+  }
 }

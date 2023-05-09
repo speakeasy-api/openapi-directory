@@ -18,9 +18,11 @@ public class CreateCompanyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public Company company;
+
     public CreateCompanyRequest withCompany(Company company) {
         this.company = company;
         return this;
     }
     
+    public CreateCompanyRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SearchImage[] requestBody;
+
     public BulkSearchImagesRequest withRequestBody(org.openapis.openapi.models.shared.SearchImage[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +25,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date")
     public LocalDate addedDate;
+
     public BulkSearchImagesRequest withAddedDate(LocalDate addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -33,6 +36,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_end")
     public LocalDate addedDateEnd;
+
     public BulkSearchImagesRequest withAddedDateEnd(LocalDate addedDateEnd) {
         this.addedDateEnd = addedDateEnd;
         return this;
@@ -43,6 +47,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_start")
     public LocalDate addedDateStart;
+
     public BulkSearchImagesRequest withAddedDateStart(LocalDate addedDateStart) {
         this.addedDateStart = addedDateStart;
         return this;
@@ -53,6 +58,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_ratio")
     public Double aspectRatio;
+
     public BulkSearchImagesRequest withAspectRatio(Double aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -63,6 +69,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_ratio_max")
     public Double aspectRatioMax;
+
     public BulkSearchImagesRequest withAspectRatioMax(Double aspectRatioMax) {
         this.aspectRatioMax = aspectRatioMax;
         return this;
@@ -73,6 +80,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_ratio_min")
     public Double aspectRatioMin;
+
     public BulkSearchImagesRequest withAspectRatioMin(Double aspectRatioMin) {
         this.aspectRatioMin = aspectRatioMin;
         return this;
@@ -83,6 +91,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public BulkSearchImagesRequest withCategory(String category) {
         this.category = category;
         return this;
@@ -93,6 +102,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
     public String color;
+
     public BulkSearchImagesRequest withColor(String color) {
         this.color = color;
         return this;
@@ -103,6 +113,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
     public String[] contributor;
+
     public BulkSearchImagesRequest withContributor(String[] contributor) {
         this.contributor = contributor;
         return this;
@@ -113,6 +124,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_country")
     public Object contributorCountry;
+
     public BulkSearchImagesRequest withContributorCountry(Object contributorCountry) {
         this.contributorCountry = contributorCountry;
         return this;
@@ -123,6 +135,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BulkSearchImagesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -130,9 +143,13 @@ public class BulkSearchImagesRequest {
     
     /**
      * (Deprecated; use height_from and height_to instead) Show images with the specified height
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    @Deprecated
     public Long height;
+
+    @Deprecated
     public BulkSearchImagesRequest withHeight(Long height) {
         this.height = height;
         return this;
@@ -143,6 +160,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height_from")
     public Long heightFrom;
+
     public BulkSearchImagesRequest withHeightFrom(Long heightFrom) {
         this.heightFrom = heightFrom;
         return this;
@@ -153,6 +171,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height_to")
     public Long heightTo;
+
     public BulkSearchImagesRequest withHeightTo(Long heightTo) {
         this.heightTo = heightTo;
         return this;
@@ -163,6 +182,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_type")
     public BulkSearchImagesImageTypeEnum[] imageType;
+
     public BulkSearchImagesRequest withImageType(BulkSearchImagesImageTypeEnum[] imageType) {
         this.imageType = imageType;
         return this;
@@ -173,6 +193,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword_safe_search")
     public Boolean keywordSafeSearch;
+
     public BulkSearchImagesRequest withKeywordSafeSearch(Boolean keywordSafeSearch) {
         this.keywordSafeSearch = keywordSafeSearch;
         return this;
@@ -183,6 +204,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public BulkSearchImagesRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -193,6 +215,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public BulkSearchImagesLicenseEnum[] license;
+
     public BulkSearchImagesRequest withLicense(BulkSearchImagesLicenseEnum[] license) {
         this.license = license;
         return this;
@@ -203,6 +226,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String[] model;
+
     public BulkSearchImagesRequest withModel(String[] model) {
         this.model = model;
         return this;
@@ -213,6 +237,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orientation")
     public BulkSearchImagesOrientationEnum orientation;
+
     public BulkSearchImagesRequest withOrientation(BulkSearchImagesOrientationEnum orientation) {
         this.orientation = orientation;
         return this;
@@ -223,6 +248,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public BulkSearchImagesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -233,6 +259,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_age")
     public BulkSearchImagesPeopleAgeEnum peopleAge;
+
     public BulkSearchImagesRequest withPeopleAge(BulkSearchImagesPeopleAgeEnum peopleAge) {
         this.peopleAge = peopleAge;
         return this;
@@ -243,6 +270,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_ethnicity")
     public BulkSearchImagesPeopleEthnicityEnum[] peopleEthnicity;
+
     public BulkSearchImagesRequest withPeopleEthnicity(BulkSearchImagesPeopleEthnicityEnum[] peopleEthnicity) {
         this.peopleEthnicity = peopleEthnicity;
         return this;
@@ -253,6 +281,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_gender")
     public BulkSearchImagesPeopleGenderEnum peopleGender;
+
     public BulkSearchImagesRequest withPeopleGender(BulkSearchImagesPeopleGenderEnum peopleGender) {
         this.peopleGender = peopleGender;
         return this;
@@ -263,6 +292,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_model_released")
     public Boolean peopleModelReleased;
+
     public BulkSearchImagesRequest withPeopleModelReleased(Boolean peopleModelReleased) {
         this.peopleModelReleased = peopleModelReleased;
         return this;
@@ -273,6 +303,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_number")
     public Long peopleNumber;
+
     public BulkSearchImagesRequest withPeopleNumber(Long peopleNumber) {
         this.peopleNumber = peopleNumber;
         return this;
@@ -283,6 +314,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public BulkSearchImagesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -293,6 +325,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
     public Object region;
+
     public BulkSearchImagesRequest withRegion(Object region) {
         this.region = region;
         return this;
@@ -303,6 +336,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
     public Boolean safe;
+
     public BulkSearchImagesRequest withSafe(Boolean safe) {
         this.safe = safe;
         return this;
@@ -313,6 +347,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public BulkSearchImagesSortEnum sort;
+
     public BulkSearchImagesRequest withSort(BulkSearchImagesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -323,6 +358,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spellcheck_query")
     public Boolean spellcheckQuery;
+
     public BulkSearchImagesRequest withSpellcheckQuery(Boolean spellcheckQuery) {
         this.spellcheckQuery = spellcheckQuery;
         return this;
@@ -333,6 +369,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public BulkSearchImagesViewEnum view;
+
     public BulkSearchImagesRequest withView(BulkSearchImagesViewEnum view) {
         this.view = view;
         return this;
@@ -340,9 +377,13 @@ public class BulkSearchImagesRequest {
     
     /**
      * (Deprecated; use width_from and width_to instead) Show images with the specified width
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    @Deprecated
     public Long width;
+
+    @Deprecated
     public BulkSearchImagesRequest withWidth(Long width) {
         this.width = width;
         return this;
@@ -353,6 +394,7 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width_from")
     public Long widthFrom;
+
     public BulkSearchImagesRequest withWidthFrom(Long widthFrom) {
         this.widthFrom = widthFrom;
         return this;
@@ -363,9 +405,13 @@ public class BulkSearchImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width_to")
     public Long widthTo;
+
     public BulkSearchImagesRequest withWidthTo(Long widthTo) {
         this.widthTo = widthTo;
         return this;
     }
     
+    public BulkSearchImagesRequest(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.SearchImage[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveAttributesActivity {
     @JsonProperty("attributes")
     public String[] attributes;
+
     public RemoveAttributesActivity withAttributes(String[] attributes) {
         this.attributes = attributes;
         return this;
@@ -21,6 +22,7 @@ public class RemoveAttributesActivity {
     
     @JsonProperty("name")
     public String name;
+
     public RemoveAttributesActivity withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class RemoveAttributesActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public RemoveAttributesActivity withNext(String next) {
         this.next = next;
         return this;
     }
     
+    public RemoveAttributesActivity(@JsonProperty("attributes") String[] attributes, @JsonProperty("name") String name) {
+        this.attributes = attributes;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETListVerifiedEmailAddressesResponse {
     
     public byte[] body;
+
     public GETListVerifiedEmailAddressesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETListVerifiedEmailAddressesResponse {
     
     
     public String contentType;
+
     public GETListVerifiedEmailAddressesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETListVerifiedEmailAddressesResponse {
     
     
     public Integer statusCode;
+
     public GETListVerifiedEmailAddressesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETListVerifiedEmailAddressesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETListVerifiedEmailAddressesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETListVerifiedEmailAddressesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

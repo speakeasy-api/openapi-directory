@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConfigurationSetsResponse {
@@ -12,6 +13,7 @@ public class DescribeConfigurationSetsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeConfigurationSetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigurationSetsResponse {
     
     
     public String contentType;
+
     public DescribeConfigurationSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConfigurationSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConfigurationSetsResult describeConfigurationSetsResult;
+
     public DescribeConfigurationSetsResponse withDescribeConfigurationSetsResult(org.openapis.openapi.models.shared.DescribeConfigurationSetsResult describeConfigurationSetsResult) {
         this.describeConfigurationSetsResult = describeConfigurationSetsResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConfigurationSetsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeConfigurationSetsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConfigurationSetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeConfigurationSetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeConfigurationSetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeConfigurationSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeConfigurationSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConfigurationSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeConfigurationSetsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeConfigurationSetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeConfigurationSetsResponse {
      */
     
     public Object validationException;
+
     public DescribeConfigurationSetsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeConfigurationSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

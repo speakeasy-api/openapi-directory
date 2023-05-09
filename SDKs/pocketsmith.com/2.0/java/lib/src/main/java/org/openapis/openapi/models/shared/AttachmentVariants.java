@@ -15,6 +15,7 @@ public class AttachmentVariants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("large_url")
     public String largeUrl;
+
     public AttachmentVariants withLargeUrl(String largeUrl) {
         this.largeUrl = largeUrl;
         return this;
@@ -26,9 +27,11 @@ public class AttachmentVariants {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumb_url")
     public String thumbUrl;
+
     public AttachmentVariants withThumbUrl(String thumbUrl) {
         this.thumbUrl = thumbUrl;
         return this;
     }
     
+    public AttachmentVariants(){}
 }

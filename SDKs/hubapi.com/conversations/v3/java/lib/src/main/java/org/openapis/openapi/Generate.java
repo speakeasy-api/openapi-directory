@@ -61,12 +61,10 @@ public class Generate {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse res = new org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse() {{
+        org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse res = new org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse(contentType, httpRes.statusCode()) {{
             identificationTokenResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

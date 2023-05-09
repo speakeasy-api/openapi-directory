@@ -22,6 +22,7 @@ public class VpcLink {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public VpcLink withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -29,6 +30,7 @@ public class VpcLink {
     
     @JsonProperty("Name")
     public String name;
+
     public VpcLink withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class VpcLink {
     
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public VpcLink withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -43,6 +46,7 @@ public class VpcLink {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public VpcLink withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -51,6 +55,7 @@ public class VpcLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public VpcLink withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,6 +63,7 @@ public class VpcLink {
     
     @JsonProperty("VpcLinkId")
     public String vpcLinkId;
+
     public VpcLink withVpcLinkId(String vpcLinkId) {
         this.vpcLinkId = vpcLinkId;
         return this;
@@ -66,6 +72,7 @@ public class VpcLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcLinkStatus")
     public VpcLinkVpcLinkStatusEnum vpcLinkStatus;
+
     public VpcLink withVpcLinkStatus(VpcLinkVpcLinkStatusEnum vpcLinkStatus) {
         this.vpcLinkStatus = vpcLinkStatus;
         return this;
@@ -74,6 +81,7 @@ public class VpcLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcLinkStatusMessage")
     public String vpcLinkStatusMessage;
+
     public VpcLink withVpcLinkStatusMessage(String vpcLinkStatusMessage) {
         this.vpcLinkStatusMessage = vpcLinkStatusMessage;
         return this;
@@ -82,9 +90,16 @@ public class VpcLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcLinkVersion")
     public VpcLinkVpcLinkVersionEnum vpcLinkVersion;
+
     public VpcLink withVpcLinkVersion(VpcLinkVpcLinkVersionEnum vpcLinkVersion) {
         this.vpcLinkVersion = vpcLinkVersion;
         return this;
     }
     
+    public VpcLink(@JsonProperty("Name") String name, @JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcLinkId") String vpcLinkId) {
+        this.name = name;
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcLinkId = vpcLinkId;
+  }
 }

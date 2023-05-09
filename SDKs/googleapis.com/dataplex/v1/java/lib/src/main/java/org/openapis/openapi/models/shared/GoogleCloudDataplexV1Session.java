@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDataplexV1Session withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1Session withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1SessionStateEnum state;
+
     public GoogleCloudDataplexV1Session withState(GoogleCloudDataplexV1SessionStateEnum state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1Session {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GoogleCloudDataplexV1Session withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GoogleCloudDataplexV1Session(){}
 }

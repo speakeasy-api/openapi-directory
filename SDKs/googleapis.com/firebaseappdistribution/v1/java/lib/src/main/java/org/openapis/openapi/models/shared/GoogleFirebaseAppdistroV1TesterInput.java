@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1TesterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleFirebaseAppdistroV1TesterInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppdistroV1TesterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public String[] groups;
+
     public GoogleFirebaseAppdistroV1TesterInput withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirebaseAppdistroV1TesterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppdistroV1TesterInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1TesterInput(){}
 }

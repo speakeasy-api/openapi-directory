@@ -18,9 +18,11 @@ public class EmailInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public EmailInput withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public EmailInput(){}
 }

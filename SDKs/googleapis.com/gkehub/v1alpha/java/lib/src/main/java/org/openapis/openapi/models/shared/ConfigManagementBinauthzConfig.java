@@ -18,9 +18,11 @@ public class ConfigManagementBinauthzConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ConfigManagementBinauthzConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ConfigManagementBinauthzConfig(){}
 }

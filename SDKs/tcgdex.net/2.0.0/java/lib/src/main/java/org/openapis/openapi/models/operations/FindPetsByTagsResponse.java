@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindPetsByTagsResponse {
@@ -12,6 +13,7 @@ public class FindPetsByTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.Card card;
+
     public FindPetsByTagsResponse withCard(org.openapis.openapi.models.shared.Card card) {
         this.card = card;
         return this;
@@ -19,6 +21,7 @@ public class FindPetsByTagsResponse {
     
     
     public String contentType;
+
     public FindPetsByTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FindPetsByTagsResponse {
     
     
     public Integer statusCode;
+
     public FindPetsByTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FindPetsByTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindPetsByTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindPetsByTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleMapsPlayablelocationsV3LogImpressionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientInfo")
     public GoogleMapsUnityClientInfo clientInfo;
+
     public GoogleMapsPlayablelocationsV3LogImpressionsRequest withClientInfo(GoogleMapsUnityClientInfo clientInfo) {
         this.clientInfo = clientInfo;
         return this;
@@ -29,6 +30,7 @@ public class GoogleMapsPlayablelocationsV3LogImpressionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressions")
     public GoogleMapsPlayablelocationsV3Impression[] impressions;
+
     public GoogleMapsPlayablelocationsV3LogImpressionsRequest withImpressions(GoogleMapsPlayablelocationsV3Impression[] impressions) {
         this.impressions = impressions;
         return this;
@@ -40,9 +42,11 @@ public class GoogleMapsPlayablelocationsV3LogImpressionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleMapsPlayablelocationsV3LogImpressionsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3LogImpressionsRequest(){}
 }

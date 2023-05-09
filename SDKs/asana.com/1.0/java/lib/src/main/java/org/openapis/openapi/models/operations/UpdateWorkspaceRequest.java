@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkspaceRequest {
@@ -12,6 +13,7 @@ public class UpdateWorkspaceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateWorkspaceRequestBodyInput requestBody;
+
     public UpdateWorkspaceRequest withRequestBody(UpdateWorkspaceRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class UpdateWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public UpdateWorkspaceRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class UpdateWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public UpdateWorkspaceRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class UpdateWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
     public String workspaceGid;
+
     public UpdateWorkspaceRequest withWorkspaceGid(String workspaceGid) {
         this.workspaceGid = workspaceGid;
         return this;
     }
     
+    public UpdateWorkspaceRequest(@JsonProperty("RequestBody") UpdateWorkspaceRequestBodyInput requestBody, @JsonProperty("workspace_gid") String workspaceGid) {
+        this.requestBody = requestBody;
+        this.workspaceGid = workspaceGid;
+  }
 }

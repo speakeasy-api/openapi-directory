@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccessEndpoint {
     @JsonProperty("EndpointType")
     public AccessEndpointTypeEnum endpointType;
+
     public AccessEndpoint withEndpointType(AccessEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -22,9 +23,13 @@ public class AccessEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpceId")
     public String vpceId;
+
     public AccessEndpoint withVpceId(String vpceId) {
         this.vpceId = vpceId;
         return this;
     }
     
+    public AccessEndpoint(@JsonProperty("EndpointType") AccessEndpointTypeEnum endpointType) {
+        this.endpointType = endpointType;
+  }
 }

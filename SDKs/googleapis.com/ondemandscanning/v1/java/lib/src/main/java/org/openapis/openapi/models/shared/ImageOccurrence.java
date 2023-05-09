@@ -18,6 +18,7 @@ public class ImageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseResourceUrl")
     public String baseResourceUrl;
+
     public ImageOccurrence withBaseResourceUrl(String baseResourceUrl) {
         this.baseResourceUrl = baseResourceUrl;
         return this;
@@ -29,6 +30,7 @@ public class ImageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Integer distance;
+
     public ImageOccurrence withDistance(Integer distance) {
         this.distance = distance;
         return this;
@@ -40,6 +42,7 @@ public class ImageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public Fingerprint fingerprint;
+
     public ImageOccurrence withFingerprint(Fingerprint fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,9 +54,11 @@ public class ImageOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerInfo")
     public Layer[] layerInfo;
+
     public ImageOccurrence withLayerInfo(Layer[] layerInfo) {
         this.layerInfo = layerInfo;
         return this;
     }
     
+    public ImageOccurrence(){}
 }

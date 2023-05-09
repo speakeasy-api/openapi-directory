@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityCustomersUserinvitationsIsInvitableUserResponse {
     
     public String contentType;
+
     public CloudidentityCustomersUserinvitationsIsInvitableUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityCustomersUserinvitationsIsInvitableUserResponse {
      */
     
     public org.openapis.openapi.models.shared.IsInvitableUserResponse isInvitableUserResponse;
+
     public CloudidentityCustomersUserinvitationsIsInvitableUserResponse withIsInvitableUserResponse(org.openapis.openapi.models.shared.IsInvitableUserResponse isInvitableUserResponse) {
         this.isInvitableUserResponse = isInvitableUserResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityCustomersUserinvitationsIsInvitableUserResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityCustomersUserinvitationsIsInvitableUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityCustomersUserinvitationsIsInvitableUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityCustomersUserinvitationsIsInvitableUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityCustomersUserinvitationsIsInvitableUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

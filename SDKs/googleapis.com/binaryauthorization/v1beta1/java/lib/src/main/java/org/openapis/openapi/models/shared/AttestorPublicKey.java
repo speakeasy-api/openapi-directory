@@ -18,6 +18,7 @@ public class AttestorPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asciiArmoredPgpPublicKey")
     public String asciiArmoredPgpPublicKey;
+
     public AttestorPublicKey withAsciiArmoredPgpPublicKey(String asciiArmoredPgpPublicKey) {
         this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
         return this;
@@ -29,6 +30,7 @@ public class AttestorPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public AttestorPublicKey withComment(String comment) {
         this.comment = comment;
         return this;
@@ -40,6 +42,7 @@ public class AttestorPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AttestorPublicKey withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class AttestorPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pkixPublicKey")
     public PkixPublicKey pkixPublicKey;
+
     public AttestorPublicKey withPkixPublicKey(PkixPublicKey pkixPublicKey) {
         this.pkixPublicKey = pkixPublicKey;
         return this;
     }
     
+    public AttestorPublicKey(){}
 }

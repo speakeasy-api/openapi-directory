@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DistributionGroupsResendSharedInviteResponse {
     
     public String contentType;
+
     public DistributionGroupsResendSharedInviteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DistributionGroupsResendSharedInviteResponse {
     
     
     public Integer statusCode;
+
     public DistributionGroupsResendSharedInviteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DistributionGroupsResendSharedInviteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DistributionGroupsResendSharedInviteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DistributionGroupsResendSharedInviteResponse {
      */
     
     public DistributionGroupsResendSharedInviteDefaultApplicationJSON distributionGroupsResendSharedInviteDefaultApplicationJSONObject;
+
     public DistributionGroupsResendSharedInviteResponse withDistributionGroupsResendSharedInviteDefaultApplicationJSONObject(DistributionGroupsResendSharedInviteDefaultApplicationJSON distributionGroupsResendSharedInviteDefaultApplicationJSONObject) {
         this.distributionGroupsResendSharedInviteDefaultApplicationJSONObject = distributionGroupsResendSharedInviteDefaultApplicationJSONObject;
         return this;
     }
     
+    public DistributionGroupsResendSharedInviteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

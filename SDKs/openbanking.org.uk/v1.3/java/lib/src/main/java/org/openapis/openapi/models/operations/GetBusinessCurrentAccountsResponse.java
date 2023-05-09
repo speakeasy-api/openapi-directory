@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBusinessCurrentAccountsResponse {
@@ -12,6 +13,7 @@ public class GetBusinessCurrentAccountsResponse {
      */
     
     public GetBusinessCurrentAccounts400ErrorObject fourHundredErrorObject;
+
     public GetBusinessCurrentAccountsResponse withFourHundredErrorObject(GetBusinessCurrentAccounts400ErrorObject fourHundredErrorObject) {
         this.fourHundredErrorObject = fourHundredErrorObject;
         return this;
@@ -22,6 +24,7 @@ public class GetBusinessCurrentAccountsResponse {
      */
     
     public GetBusinessCurrentAccounts408ErrorObject fourHundredAndEightErrorObject;
+
     public GetBusinessCurrentAccountsResponse withFourHundredAndEightErrorObject(GetBusinessCurrentAccounts408ErrorObject fourHundredAndEightErrorObject) {
         this.fourHundredAndEightErrorObject = fourHundredAndEightErrorObject;
         return this;
@@ -32,6 +35,7 @@ public class GetBusinessCurrentAccountsResponse {
      */
     
     public GetBusinessCurrentAccounts429ErrorObject fourHundredAndTwentyNineErrorObject;
+
     public GetBusinessCurrentAccountsResponse withFourHundredAndTwentyNineErrorObject(GetBusinessCurrentAccounts429ErrorObject fourHundredAndTwentyNineErrorObject) {
         this.fourHundredAndTwentyNineErrorObject = fourHundredAndTwentyNineErrorObject;
         return this;
@@ -42,6 +46,7 @@ public class GetBusinessCurrentAccountsResponse {
      */
     
     public GetBusinessCurrentAccounts500ErrorObject fiveHundredErrorObject;
+
     public GetBusinessCurrentAccountsResponse withFiveHundredErrorObject(GetBusinessCurrentAccounts500ErrorObject fiveHundredErrorObject) {
         this.fiveHundredErrorObject = fiveHundredErrorObject;
         return this;
@@ -52,6 +57,7 @@ public class GetBusinessCurrentAccountsResponse {
      */
     
     public GetBusinessCurrentAccounts503ErrorObject fiveHundredAndThreeErrorObject;
+
     public GetBusinessCurrentAccountsResponse withFiveHundredAndThreeErrorObject(GetBusinessCurrentAccounts503ErrorObject fiveHundredAndThreeErrorObject) {
         this.fiveHundredAndThreeErrorObject = fiveHundredAndThreeErrorObject;
         return this;
@@ -59,6 +65,7 @@ public class GetBusinessCurrentAccountsResponse {
     
     
     public String contentType;
+
     public GetBusinessCurrentAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class GetBusinessCurrentAccountsResponse {
      */
     
     public GetBusinessCurrentAccountsErrorObject errorObject;
+
     public GetBusinessCurrentAccountsResponse withErrorObject(GetBusinessCurrentAccountsErrorObject errorObject) {
         this.errorObject = errorObject;
         return this;
@@ -76,6 +84,7 @@ public class GetBusinessCurrentAccountsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetBusinessCurrentAccountsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -83,6 +92,7 @@ public class GetBusinessCurrentAccountsResponse {
     
     
     public Integer statusCode;
+
     public GetBusinessCurrentAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -90,6 +100,7 @@ public class GetBusinessCurrentAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBusinessCurrentAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -100,9 +111,14 @@ public class GetBusinessCurrentAccountsResponse {
      */
     
     public GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson getBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
+
     public GetBusinessCurrentAccountsResponse withGetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject(GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson getBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject) {
         this.getBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = getBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject;
         return this;
     }
     
+    public GetBusinessCurrentAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

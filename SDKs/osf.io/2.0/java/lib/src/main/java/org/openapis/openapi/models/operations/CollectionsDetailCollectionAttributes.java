@@ -15,6 +15,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public Boolean bookmarks;
+
     public CollectionsDetailCollectionAttributes withBookmarks(Boolean bookmarks) {
         this.bookmarks = bookmarks;
         return this;
@@ -25,6 +26,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public String[] collectedTypeChoices;
+
     public CollectionsDetailCollectionAttributes withCollectedTypeChoices(String[] collectedTypeChoices) {
         this.collectedTypeChoices = collectedTypeChoices;
         return this;
@@ -35,6 +37,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public CollectionsDetailCollectionAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public CollectionsDetailCollectionAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -55,6 +59,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public Boolean isPromoted;
+
     public CollectionsDetailCollectionAttributes withIsPromoted(Boolean isPromoted) {
         this.isPromoted = isPromoted;
         return this;
@@ -65,6 +70,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public Boolean isPublic;
+
     public CollectionsDetailCollectionAttributes withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -75,6 +81,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public String[] issueChoices;
+
     public CollectionsDetailCollectionAttributes withIssueChoices(String[] issueChoices) {
         this.issueChoices = issueChoices;
         return this;
@@ -85,6 +92,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public String[] programAreaChoices;
+
     public CollectionsDetailCollectionAttributes withProgramAreaChoices(String[] programAreaChoices) {
         this.programAreaChoices = programAreaChoices;
         return this;
@@ -95,6 +103,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public String[] statusChoices;
+
     public CollectionsDetailCollectionAttributes withStatusChoices(String[] statusChoices) {
         this.statusChoices = statusChoices;
         return this;
@@ -105,6 +114,7 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public String title;
+
     public CollectionsDetailCollectionAttributes withTitle(String title) {
         this.title = title;
         return this;
@@ -115,9 +125,11 @@ public class CollectionsDetailCollectionAttributes {
      */
     
     public String[] volumeChoices;
+
     public CollectionsDetailCollectionAttributes withVolumeChoices(String[] volumeChoices) {
         this.volumeChoices = volumeChoices;
         return this;
     }
     
+    public CollectionsDetailCollectionAttributes(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateRepoPermissionsInOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsAddOrUpdateRepoPermissionsInOrgRequestBody requestBody;
+
     public TeamsAddOrUpdateRepoPermissionsInOrgRequest withRequestBody(TeamsAddOrUpdateRepoPermissionsInOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class TeamsAddOrUpdateRepoPermissionsInOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsAddOrUpdateRepoPermissionsInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -23,6 +26,7 @@ public class TeamsAddOrUpdateRepoPermissionsInOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public TeamsAddOrUpdateRepoPermissionsInOrgRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -30,6 +34,7 @@ public class TeamsAddOrUpdateRepoPermissionsInOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public TeamsAddOrUpdateRepoPermissionsInOrgRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -40,9 +45,16 @@ public class TeamsAddOrUpdateRepoPermissionsInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsAddOrUpdateRepoPermissionsInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequest(@JsonProperty("org") String org, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("team_slug") String teamSlug) {
+        this.org = org;
+        this.owner = owner;
+        this.repo = repo;
+        this.teamSlug = teamSlug;
+  }
 }

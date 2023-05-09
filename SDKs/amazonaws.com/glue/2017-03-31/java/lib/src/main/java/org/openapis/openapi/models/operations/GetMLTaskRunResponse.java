@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMLTaskRunResponse {
     
     public String contentType;
+
     public GetMLTaskRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMLTaskRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetMLTaskRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetMLTaskRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMLTaskRunResponse getMLTaskRunResponse;
+
     public GetMLTaskRunResponse withGetMLTaskRunResponse(org.openapis.openapi.models.shared.GetMLTaskRunResponse getMLTaskRunResponse) {
         this.getMLTaskRunResponse = getMLTaskRunResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMLTaskRunResponse {
      */
     
     public Object internalServiceException;
+
     public GetMLTaskRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetMLTaskRunResponse {
      */
     
     public Object invalidInputException;
+
     public GetMLTaskRunResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetMLTaskRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetMLTaskRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetMLTaskRunResponse {
     
     
     public Integer statusCode;
+
     public GetMLTaskRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMLTaskRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMLTaskRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMLTaskRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

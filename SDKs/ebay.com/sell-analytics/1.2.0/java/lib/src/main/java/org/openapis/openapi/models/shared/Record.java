@@ -18,6 +18,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValues")
     public Value[] dimensionValues;
+
     public Record withDimensionValues(Value[] dimensionValues) {
         this.dimensionValues = dimensionValues;
         return this;
@@ -29,9 +30,11 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricValues")
     public Value[] metricValues;
+
     public Record withMetricValues(Value[] metricValues) {
         this.metricValues = metricValues;
         return this;
     }
     
+    public Record(){}
 }

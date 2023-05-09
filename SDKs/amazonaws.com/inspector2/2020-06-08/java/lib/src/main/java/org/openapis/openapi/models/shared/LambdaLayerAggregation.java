@@ -15,6 +15,7 @@ public class LambdaLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionNames")
     public StringFilter[] functionNames;
+
     public LambdaLayerAggregation withFunctionNames(StringFilter[] functionNames) {
         this.functionNames = functionNames;
         return this;
@@ -23,6 +24,7 @@ public class LambdaLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerArns")
     public StringFilter[] layerArns;
+
     public LambdaLayerAggregation withLayerArns(StringFilter[] layerArns) {
         this.layerArns = layerArns;
         return this;
@@ -31,6 +33,7 @@ public class LambdaLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public StringFilter[] resourceIds;
+
     public LambdaLayerAggregation withResourceIds(StringFilter[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
@@ -39,6 +42,7 @@ public class LambdaLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public LambdaLayerSortByEnum sortBy;
+
     public LambdaLayerAggregation withSortBy(LambdaLayerSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -47,9 +51,11 @@ public class LambdaLayerAggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderEnum sortOrder;
+
     public LambdaLayerAggregation withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public LambdaLayerAggregation(){}
 }

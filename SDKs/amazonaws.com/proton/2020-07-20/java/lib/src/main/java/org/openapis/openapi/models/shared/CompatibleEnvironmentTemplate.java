@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompatibleEnvironmentTemplate {
     @JsonProperty("majorVersion")
     public String majorVersion;
+
     public CompatibleEnvironmentTemplate withMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -19,9 +20,14 @@ public class CompatibleEnvironmentTemplate {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public CompatibleEnvironmentTemplate withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public CompatibleEnvironmentTemplate(@JsonProperty("majorVersion") String majorVersion, @JsonProperty("templateName") String templateName) {
+        this.majorVersion = majorVersion;
+        this.templateName = templateName;
+  }
 }

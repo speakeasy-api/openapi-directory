@@ -12,6 +12,7 @@ public class PutKeyPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BypassPolicyLockoutSafetyCheck")
     public Boolean bypassPolicyLockoutSafetyCheck;
+
     public PutKeyPolicyRequest withBypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
         this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
         return this;
@@ -19,6 +20,7 @@ public class PutKeyPolicyRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public PutKeyPolicyRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -26,6 +28,7 @@ public class PutKeyPolicyRequest {
     
     @JsonProperty("Policy")
     public String policy;
+
     public PutKeyPolicyRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -33,9 +36,15 @@ public class PutKeyPolicyRequest {
     
     @JsonProperty("PolicyName")
     public String policyName;
+
     public PutKeyPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public PutKeyPolicyRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("Policy") String policy, @JsonProperty("PolicyName") String policyName) {
+        this.keyId = keyId;
+        this.policy = policy;
+        this.policyName = policyName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WikiReadRequest {
@@ -12,9 +13,13 @@ public class WikiReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wiki_id")
     public String wikiId;
+
     public WikiReadRequest withWikiId(String wikiId) {
         this.wikiId = wikiId;
         return this;
     }
     
+    public WikiReadRequest(@JsonProperty("wiki_id") String wikiId) {
+        this.wikiId = wikiId;
+  }
 }

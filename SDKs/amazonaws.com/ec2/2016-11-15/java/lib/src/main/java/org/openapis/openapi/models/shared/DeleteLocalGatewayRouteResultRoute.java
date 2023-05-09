@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLocalGatewayRouteResultRoute {
     
     public String coipPoolId;
+
     public DeleteLocalGatewayRouteResultRoute withCoipPoolId(String coipPoolId) {
         this.coipPoolId = coipPoolId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String destinationCidrBlock;
+
     public DeleteLocalGatewayRouteResultRoute withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -26,6 +28,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String destinationPrefixListId;
+
     public DeleteLocalGatewayRouteResultRoute withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String localGatewayRouteTableArn;
+
     public DeleteLocalGatewayRouteResultRoute withLocalGatewayRouteTableArn(String localGatewayRouteTableArn) {
         this.localGatewayRouteTableArn = localGatewayRouteTableArn;
         return this;
@@ -40,6 +44,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String localGatewayRouteTableId;
+
     public DeleteLocalGatewayRouteResultRoute withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -47,6 +52,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String localGatewayVirtualInterfaceGroupId;
+
     public DeleteLocalGatewayRouteResultRoute withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -54,6 +60,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String networkInterfaceId;
+
     public DeleteLocalGatewayRouteResultRoute withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -61,6 +68,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String ownerId;
+
     public DeleteLocalGatewayRouteResultRoute withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public DeleteLocalGatewayRouteResultRouteStateEnum state;
+
     public DeleteLocalGatewayRouteResultRoute withState(DeleteLocalGatewayRouteResultRouteStateEnum state) {
         this.state = state;
         return this;
@@ -75,6 +84,7 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public String subnetId;
+
     public DeleteLocalGatewayRouteResultRoute withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -82,9 +92,11 @@ public class DeleteLocalGatewayRouteResultRoute {
     
     
     public DeleteLocalGatewayRouteResultRouteTypeEnum type;
+
     public DeleteLocalGatewayRouteResultRoute withType(DeleteLocalGatewayRouteResultRouteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeleteLocalGatewayRouteResultRoute(){}
 }

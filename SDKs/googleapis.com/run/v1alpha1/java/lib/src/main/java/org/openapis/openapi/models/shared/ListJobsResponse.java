@@ -18,6 +18,7 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public ListJobsResponse withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,6 +30,7 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Job[] items;
+
     public ListJobsResponse withItems(Job[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ListJobsResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ListMeta metadata;
+
     public ListJobsResponse withMetadata(ListMeta metadata) {
         this.metadata = metadata;
         return this;
@@ -62,6 +66,7 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -73,9 +78,11 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListJobsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListJobsResponse(){}
 }

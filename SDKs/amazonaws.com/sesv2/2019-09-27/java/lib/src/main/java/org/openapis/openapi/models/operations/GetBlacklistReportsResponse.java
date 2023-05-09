@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBlacklistReportsResponse {
@@ -12,6 +13,7 @@ public class GetBlacklistReportsResponse {
      */
     
     public Object badRequestException;
+
     public GetBlacklistReportsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetBlacklistReportsResponse {
     
     
     public String contentType;
+
     public GetBlacklistReportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBlacklistReportsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBlacklistReportsResponse getBlacklistReportsResponse;
+
     public GetBlacklistReportsResponse withGetBlacklistReportsResponse(org.openapis.openapi.models.shared.GetBlacklistReportsResponse getBlacklistReportsResponse) {
         this.getBlacklistReportsResponse = getBlacklistReportsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetBlacklistReportsResponse {
      */
     
     public Object notFoundException;
+
     public GetBlacklistReportsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetBlacklistReportsResponse {
     
     
     public Integer statusCode;
+
     public GetBlacklistReportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetBlacklistReportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBlacklistReportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetBlacklistReportsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetBlacklistReportsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetBlacklistReportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

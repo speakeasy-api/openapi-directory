@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ResourceCreationLimitPolicy - &lt;p&gt;A policy that puts limits on the number of game sessions that a player can create within a specified span of time. With this policy, you can control players' ability to consume available resources.&lt;/p&gt; &lt;p&gt;The policy is evaluated when a player tries to create a new game session. On receiving a &lt;code&gt;CreateGameSession&lt;/code&gt; request, GameLift checks that the player (identified by &lt;code&gt;CreatorId&lt;/code&gt;) has created fewer than game session limit in the specified time period.&lt;/p&gt;
+ * ResourceCreationLimitPolicy - &lt;p&gt;A policy that puts limits on the number of game sessions that a player can create within a specified span of time. With this policy, you can control players' ability to consume available resources.&lt;/p&gt; &lt;p&gt;The policy is evaluated when a player tries to create a new game session. On receiving a &lt;code&gt;CreateGameSession&lt;/code&gt; request, Amazon GameLift checks that the player (identified by &lt;code&gt;CreatorId&lt;/code&gt;) has created fewer than game session limit in the specified time period.&lt;/p&gt;
  */
 public class ResourceCreationLimitPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewGameSessionsPerCreator")
     public Long newGameSessionsPerCreator;
+
     public ResourceCreationLimitPolicy withNewGameSessionsPerCreator(Long newGameSessionsPerCreator) {
         this.newGameSessionsPerCreator = newGameSessionsPerCreator;
         return this;
@@ -23,9 +24,11 @@ public class ResourceCreationLimitPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyPeriodInMinutes")
     public Long policyPeriodInMinutes;
+
     public ResourceCreationLimitPolicy withPolicyPeriodInMinutes(Long policyPeriodInMinutes) {
         this.policyPeriodInMinutes = policyPeriodInMinutes;
         return this;
     }
     
+    public ResourceCreationLimitPolicy(){}
 }

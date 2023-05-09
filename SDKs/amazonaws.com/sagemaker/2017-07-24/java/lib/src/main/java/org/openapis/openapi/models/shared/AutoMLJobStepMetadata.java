@@ -15,9 +15,11 @@ public class AutoMLJobStepMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AutoMLJobStepMetadata withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public AutoMLJobStepMetadata(){}
 }

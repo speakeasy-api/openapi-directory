@@ -18,6 +18,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDiskMib")
     public String bootDiskMib;
+
     public ComputeResource withBootDiskMib(String bootDiskMib) {
         this.bootDiskMib = bootDiskMib;
         return this;
@@ -29,6 +30,7 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuMilli")
     public String cpuMilli;
+
     public ComputeResource withCpuMilli(String cpuMilli) {
         this.cpuMilli = cpuMilli;
         return this;
@@ -40,9 +42,11 @@ public class ComputeResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMib")
     public String memoryMib;
+
     public ComputeResource withMemoryMib(String memoryMib) {
         this.memoryMib = memoryMib;
         return this;
     }
     
+    public ComputeResource(){}
 }

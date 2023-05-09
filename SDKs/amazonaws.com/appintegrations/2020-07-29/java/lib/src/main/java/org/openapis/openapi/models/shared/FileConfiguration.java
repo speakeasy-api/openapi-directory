@@ -15,6 +15,7 @@ public class FileConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public java.util.Map<String, String[]> filters;
+
     public FileConfiguration withFilters(java.util.Map<String, String[]> filters) {
         this.filters = filters;
         return this;
@@ -22,9 +23,13 @@ public class FileConfiguration {
     
     @JsonProperty("Folders")
     public String[] folders;
+
     public FileConfiguration withFolders(String[] folders) {
         this.folders = folders;
         return this;
     }
     
+    public FileConfiguration(@JsonProperty("Folders") String[] folders) {
+        this.folders = folders;
+  }
 }

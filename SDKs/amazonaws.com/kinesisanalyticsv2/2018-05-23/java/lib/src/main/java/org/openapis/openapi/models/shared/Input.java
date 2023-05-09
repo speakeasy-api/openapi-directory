@@ -15,6 +15,7 @@ public class Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputParallelism")
     public InputParallelism inputParallelism;
+
     public Input withInputParallelism(InputParallelism inputParallelism) {
         this.inputParallelism = inputParallelism;
         return this;
@@ -23,6 +24,7 @@ public class Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputProcessingConfiguration")
     public InputProcessingConfiguration inputProcessingConfiguration;
+
     public Input withInputProcessingConfiguration(InputProcessingConfiguration inputProcessingConfiguration) {
         this.inputProcessingConfiguration = inputProcessingConfiguration;
         return this;
@@ -30,6 +32,7 @@ public class Input {
     
     @JsonProperty("InputSchema")
     public SourceSchema inputSchema;
+
     public Input withInputSchema(SourceSchema inputSchema) {
         this.inputSchema = inputSchema;
         return this;
@@ -38,6 +41,7 @@ public class Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseInput")
     public KinesisFirehoseInput kinesisFirehoseInput;
+
     public Input withKinesisFirehoseInput(KinesisFirehoseInput kinesisFirehoseInput) {
         this.kinesisFirehoseInput = kinesisFirehoseInput;
         return this;
@@ -46,6 +50,7 @@ public class Input {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamsInput")
     public KinesisStreamsInput kinesisStreamsInput;
+
     public Input withKinesisStreamsInput(KinesisStreamsInput kinesisStreamsInput) {
         this.kinesisStreamsInput = kinesisStreamsInput;
         return this;
@@ -53,9 +58,14 @@ public class Input {
     
     @JsonProperty("NamePrefix")
     public String namePrefix;
+
     public Input withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
     }
     
+    public Input(@JsonProperty("InputSchema") SourceSchema inputSchema, @JsonProperty("NamePrefix") String namePrefix) {
+        this.inputSchema = inputSchema;
+        this.namePrefix = namePrefix;
+  }
 }

@@ -12,6 +12,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("AvailableSalesChannels")
     public String availableSalesChannels;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers withAvailableSalesChannels(String availableSalesChannels) {
         this.availableSalesChannels = availableSalesChannels;
         return this;
@@ -22,6 +23,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("OffersPerSalesChannel")
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel[] offersPerSalesChannel;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers withOffersPerSalesChannel(GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel[] offersPerSalesChannel) {
         this.offersPerSalesChannel = offersPerSalesChannel;
         return this;
@@ -32,6 +34,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("SellerId")
     public String sellerId;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -42,9 +45,16 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("SellerSkuId")
     public String sellerSkuId;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers withSellerSkuId(String sellerSkuId) {
         this.sellerSkuId = sellerSkuId;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffers(@JsonProperty("AvailableSalesChannels") String availableSalesChannels, @JsonProperty("OffersPerSalesChannel") GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel[] offersPerSalesChannel, @JsonProperty("SellerId") String sellerId, @JsonProperty("SellerSkuId") String sellerSkuId) {
+        this.availableSalesChannels = availableSalesChannels;
+        this.offersPerSalesChannel = offersPerSalesChannel;
+        this.sellerId = sellerId;
+        this.sellerSkuId = sellerSkuId;
+  }
 }

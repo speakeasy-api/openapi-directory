@@ -18,6 +18,7 @@ public class AccountQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerProject")
     public PerProjectQuota[] perProject;
+
     public AccountQuota withPerProject(PerProjectQuota[] perProject) {
         this.perProject = perProject;
         return this;
@@ -29,6 +30,7 @@ public class AccountQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predictions")
     public Quota predictions;
+
     public AccountQuota withPredictions(Quota predictions) {
         this.predictions = predictions;
         return this;
@@ -40,6 +42,7 @@ public class AccountQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Projects")
     public Quota projects;
+
     public AccountQuota withProjects(Quota projects) {
         this.projects = projects;
         return this;
@@ -51,9 +54,11 @@ public class AccountQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tier")
     public String tier;
+
     public AccountQuota withTier(String tier) {
         this.tier = tier;
         return this;
     }
     
+    public AccountQuota(){}
 }

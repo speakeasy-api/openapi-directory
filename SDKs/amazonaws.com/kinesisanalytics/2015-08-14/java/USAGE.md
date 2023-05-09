@@ -3,48 +3,41 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionXAmzTargetEnum;
 import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionRequest;
 import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionResponse;
+import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionXAmzTargetEnum;
 import org.openapis.openapi.models.shared.AddApplicationCloudWatchLoggingOptionRequest;
 import org.openapis.openapi.models.shared.CloudWatchLoggingOption;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AddApplicationCloudWatchLoggingOptionRequest req = new AddApplicationCloudWatchLoggingOptionRequest() {{
-                addApplicationCloudWatchLoggingOptionRequest = new AddApplicationCloudWatchLoggingOptionRequest() {{
-                    applicationName = "corrupti";
-                    cloudWatchLoggingOption = new CloudWatchLoggingOption() {{
-                        logStreamARN = "provident";
-                        roleARN = "distinctio";
-                    }};
-                    currentApplicationVersionId = 844266;
-                }};
-                xAmzAlgorithm = "unde";
-                xAmzContentSha256 = "nulla";
-                xAmzCredential = "corrupti";
-                xAmzDate = "illum";
-                xAmzSecurityToken = "vel";
-                xAmzSignature = "error";
-                xAmzSignedHeaders = "deserunt";
-                xAmzTarget = "KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption";
-            }}            
+            AddApplicationCloudWatchLoggingOptionRequest req = new AddApplicationCloudWatchLoggingOptionRequest(                new AddApplicationCloudWatchLoggingOptionRequest("provident",                 new CloudWatchLoggingOption("distinctio", "quibusdam");, 602763L);, AddApplicationCloudWatchLoggingOptionXAmzTargetEnum.KINESIS_ANALYTICS20150814_ADD_APPLICATION_CLOUD_WATCH_LOGGING_OPTION) {{
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+            }};            
 
             AddApplicationCloudWatchLoggingOptionResponse res = sdk.addApplicationCloudWatchLoggingOption(req);
 
-            if (res.addApplicationCloudWatchLoggingOptionResponse.isPresent()) {
+            if (res.addApplicationCloudWatchLoggingOptionResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

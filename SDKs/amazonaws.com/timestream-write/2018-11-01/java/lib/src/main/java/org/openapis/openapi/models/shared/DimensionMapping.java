@@ -15,6 +15,7 @@ public class DimensionMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationColumn")
     public String destinationColumn;
+
     public DimensionMapping withDestinationColumn(String destinationColumn) {
         this.destinationColumn = destinationColumn;
         return this;
@@ -23,9 +24,11 @@ public class DimensionMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceColumn")
     public String sourceColumn;
+
     public DimensionMapping withSourceColumn(String sourceColumn) {
         this.sourceColumn = sourceColumn;
         return this;
     }
     
+    public DimensionMapping(){}
 }

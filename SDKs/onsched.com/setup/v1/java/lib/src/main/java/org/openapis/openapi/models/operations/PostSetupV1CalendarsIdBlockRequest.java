@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1CalendarsIdBlockRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CalendarBlockInputModel calendarBlockInputModel;
+
     public PostSetupV1CalendarsIdBlockRequest withCalendarBlockInputModel(org.openapis.openapi.models.shared.CalendarBlockInputModel calendarBlockInputModel) {
         this.calendarBlockInputModel = calendarBlockInputModel;
         return this;
@@ -19,9 +21,13 @@ public class PostSetupV1CalendarsIdBlockRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostSetupV1CalendarsIdBlockRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostSetupV1CalendarsIdBlockRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

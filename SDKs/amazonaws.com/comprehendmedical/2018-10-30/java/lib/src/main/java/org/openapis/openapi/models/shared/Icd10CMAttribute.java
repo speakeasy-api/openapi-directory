@@ -15,6 +15,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public Icd10CMAttribute withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public Icd10CMEntityTypeEnum category;
+
     public Icd10CMAttribute withCategory(Icd10CMEntityTypeEnum category) {
         this.category = category;
         return this;
@@ -31,6 +33,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public Icd10CMAttribute withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -39,6 +42,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public Icd10CMAttribute withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipScore")
     public Float relationshipScore;
+
     public Icd10CMAttribute withRelationshipScore(Float relationshipScore) {
         this.relationshipScore = relationshipScore;
         return this;
@@ -55,6 +60,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipType")
     public Icd10CMRelationshipTypeEnum relationshipType;
+
     public Icd10CMAttribute withRelationshipType(Icd10CMRelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
@@ -63,6 +69,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public Icd10CMAttribute withScore(Float score) {
         this.score = score;
         return this;
@@ -71,6 +78,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public Icd10CMAttribute withText(String text) {
         this.text = text;
         return this;
@@ -79,6 +87,7 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traits")
     public Icd10CMTrait[] traits;
+
     public Icd10CMAttribute withTraits(Icd10CMTrait[] traits) {
         this.traits = traits;
         return this;
@@ -87,9 +96,11 @@ public class Icd10CMAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public Icd10CMAttributeTypeEnum type;
+
     public Icd10CMAttribute withType(Icd10CMAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Icd10CMAttribute(){}
 }

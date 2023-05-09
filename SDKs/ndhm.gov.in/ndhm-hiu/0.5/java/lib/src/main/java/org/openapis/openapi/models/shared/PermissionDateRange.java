@@ -16,6 +16,7 @@ public class PermissionDateRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("from")
     public OffsetDateTime from;
+
     public PermissionDateRange withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -25,9 +26,14 @@ public class PermissionDateRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("to")
     public OffsetDateTime to;
+
     public PermissionDateRange withTo(OffsetDateTime to) {
         this.to = to;
         return this;
     }
     
+    public PermissionDateRange(@JsonProperty("from") OffsetDateTime from, @JsonProperty("to") OffsetDateTime to) {
+        this.from = from;
+        this.to = to;
+  }
 }

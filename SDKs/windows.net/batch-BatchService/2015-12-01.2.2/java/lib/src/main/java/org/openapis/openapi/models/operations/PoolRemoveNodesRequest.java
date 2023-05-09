@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolRemoveNodesRequest {
@@ -12,6 +13,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public PoolRemoveNodesRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -22,6 +24,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public PoolRemoveNodesRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -32,6 +35,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public PoolRemoveNodesRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -42,6 +46,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
     public String ifUnmodifiedSince;
+
     public PoolRemoveNodesRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
         this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
@@ -52,6 +57,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NodeRemoveParameter nodeRemoveParameter;
+
     public PoolRemoveNodesRequest withNodeRemoveParameter(org.openapis.openapi.models.shared.NodeRemoveParameter nodeRemoveParameter) {
         this.nodeRemoveParameter = nodeRemoveParameter;
         return this;
@@ -62,6 +68,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolRemoveNodesRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -72,6 +79,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolRemoveNodesRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -82,6 +90,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolRemoveNodesRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -92,6 +101,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public PoolRemoveNodesRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -102,6 +112,7 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolRemoveNodesRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -112,9 +123,15 @@ public class PoolRemoveNodesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolRemoveNodesRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolRemoveNodesRequest(@JsonProperty("NodeRemoveParameter") org.openapis.openapi.models.shared.NodeRemoveParameter nodeRemoveParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("poolId") String poolId) {
+        this.nodeRemoveParameter = nodeRemoveParameter;
+        this.apiVersion = apiVersion;
+        this.poolId = poolId;
+  }
 }

@@ -12,6 +12,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityForm")
     public Integer availabilityForm;
+
     public OnlineSettingsViewModel withAvailabilityForm(Integer availabilityForm) {
         this.availabilityForm = availabilityForm;
         return this;
@@ -20,6 +21,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookAheadUnit")
     public Integer bookAheadUnit;
+
     public OnlineSettingsViewModel withBookAheadUnit(Integer bookAheadUnit) {
         this.bookAheadUnit = bookAheadUnit;
         return this;
@@ -28,6 +30,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookAheadValue")
     public Integer bookAheadValue;
+
     public OnlineSettingsViewModel withBookAheadValue(Integer bookAheadValue) {
         this.bookAheadValue = bookAheadValue;
         return this;
@@ -36,6 +39,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookInAdvance")
     public Integer bookInAdvance;
+
     public OnlineSettingsViewModel withBookInAdvance(Integer bookInAdvance) {
         this.bookInAdvance = bookInAdvance;
         return this;
@@ -44,6 +48,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookWithAccount")
     public Boolean bookWithAccount;
+
     public OnlineSettingsViewModel withBookWithAccount(Boolean bookWithAccount) {
         this.bookWithAccount = bookWithAccount;
         return this;
@@ -52,6 +57,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingConfirmationMessage")
     public String bookingConfirmationMessage;
+
     public OnlineSettingsViewModel withBookingConfirmationMessage(String bookingConfirmationMessage) {
         this.bookingConfirmationMessage = bookingConfirmationMessage;
         return this;
@@ -60,6 +66,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingMessage")
     public String bookingMessage;
+
     public OnlineSettingsViewModel withBookingMessage(String bookingMessage) {
         this.bookingMessage = bookingMessage;
         return this;
@@ -68,6 +75,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingPolicy")
     public String bookingPolicy;
+
     public OnlineSettingsViewModel withBookingPolicy(String bookingPolicy) {
         this.bookingPolicy = bookingPolicy;
         return this;
@@ -76,6 +84,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingTimerMins")
     public Integer bookingTimerMins;
+
     public OnlineSettingsViewModel withBookingTimerMins(Integer bookingTimerMins) {
         this.bookingTimerMins = bookingTimerMins;
         return this;
@@ -84,6 +93,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessId")
     public String businessId;
+
     public OnlineSettingsViewModel withBusinessId(String businessId) {
         this.businessId = businessId;
         return this;
@@ -92,6 +102,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyId")
     public String companyId;
+
     public OnlineSettingsViewModel withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -100,6 +111,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerBookingsPerDay")
     public Integer customerBookingsPerDay;
+
     public OnlineSettingsViewModel withCustomerBookingsPerDay(Integer customerBookingsPerDay) {
         this.customerBookingsPerDay = customerBookingsPerDay;
         return this;
@@ -108,6 +120,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerVerification")
     public Boolean customerVerification;
+
     public OnlineSettingsViewModel withCustomerVerification(Boolean customerVerification) {
         this.customerVerification = customerVerification;
         return this;
@@ -116,6 +129,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultService")
     public Boolean defaultService;
+
     public OnlineSettingsViewModel withDefaultService(Boolean defaultService) {
         this.defaultService = defaultService;
         return this;
@@ -124,6 +138,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultToCustomerTimezone")
     public Boolean defaultToCustomerTimezone;
+
     public OnlineSettingsViewModel withDefaultToCustomerTimezone(Boolean defaultToCustomerTimezone) {
         this.defaultToCustomerTimezone = defaultToCustomerTimezone;
         return this;
@@ -132,6 +147,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableAuthorization")
     public Boolean disableAuthorization;
+
     public OnlineSettingsViewModel withDisableAuthorization(Boolean disableAuthorization) {
         this.disableAuthorization = disableAuthorization;
         return this;
@@ -140,6 +156,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableWorldTimezones")
     public Boolean enableWorldTimezones;
+
     public OnlineSettingsViewModel withEnableWorldTimezones(Boolean enableWorldTimezones) {
         this.enableWorldTimezones = enableWorldTimezones;
         return this;
@@ -148,6 +165,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public OnlineSettingsViewModel withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -156,6 +174,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyMembersEnabled")
     public Boolean familyMembersEnabled;
+
     public OnlineSettingsViewModel withFamilyMembersEnabled(Boolean familyMembersEnabled) {
         this.familyMembersEnabled = familyMembersEnabled;
         return this;
@@ -164,6 +183,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstAvailable")
     public Boolean firstAvailable;
+
     public OnlineSettingsViewModel withFirstAvailable(Boolean firstAvailable) {
         this.firstAvailable = firstAvailable;
         return this;
@@ -172,6 +192,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFlow")
     public Integer formFlow;
+
     public OnlineSettingsViewModel withFormFlow(Integer formFlow) {
         this.formFlow = formFlow;
         return this;
@@ -180,6 +201,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideBreadCrumbNav")
     public Boolean hideBreadCrumbNav;
+
     public OnlineSettingsViewModel withHideBreadCrumbNav(Boolean hideBreadCrumbNav) {
         this.hideBreadCrumbNav = hideBreadCrumbNav;
         return this;
@@ -188,6 +210,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideContinueBooking")
     public Boolean hideContinueBooking;
+
     public OnlineSettingsViewModel withHideContinueBooking(Boolean hideContinueBooking) {
         this.hideContinueBooking = hideContinueBooking;
         return this;
@@ -196,6 +219,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideLocationNav")
     public Boolean hideLocationNav;
+
     public OnlineSettingsViewModel withHideLocationNav(Boolean hideLocationNav) {
         this.hideLocationNav = hideLocationNav;
         return this;
@@ -204,6 +228,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideNavBar")
     public Boolean hideNavBar;
+
     public OnlineSettingsViewModel withHideNavBar(Boolean hideNavBar) {
         this.hideNavBar = hideNavBar;
         return this;
@@ -212,6 +237,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideServiceGroupsNav")
     public Boolean hideServiceGroupsNav;
+
     public OnlineSettingsViewModel withHideServiceGroupsNav(Boolean hideServiceGroupsNav) {
         this.hideServiceGroupsNav = hideServiceGroupsNav;
         return this;
@@ -220,6 +246,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideServicesNav")
     public Boolean hideServicesNav;
+
     public OnlineSettingsViewModel withHideServicesNav(Boolean hideServicesNav) {
         this.hideServicesNav = hideServicesNav;
         return this;
@@ -228,6 +255,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OnlineSettingsViewModel withId(Integer id) {
         this.id = id;
         return this;
@@ -236,6 +264,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lateCancelAction")
     public Integer lateCancelAction;
+
     public OnlineSettingsViewModel withLateCancelAction(Integer lateCancelAction) {
         this.lateCancelAction = lateCancelAction;
         return this;
@@ -244,6 +273,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lateCancelHours")
     public Integer lateCancelHours;
+
     public OnlineSettingsViewModel withLateCancelHours(Integer lateCancelHours) {
         this.lateCancelHours = lateCancelHours;
         return this;
@@ -252,6 +282,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lateRescheduleAction")
     public Integer lateRescheduleAction;
+
     public OnlineSettingsViewModel withLateRescheduleAction(Integer lateRescheduleAction) {
         this.lateRescheduleAction = lateRescheduleAction;
         return this;
@@ -260,6 +291,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lateRescheduleHours")
     public Integer lateRescheduleHours;
+
     public OnlineSettingsViewModel withLateRescheduleHours(Integer lateRescheduleHours) {
         this.lateRescheduleHours = lateRescheduleHours;
         return this;
@@ -268,6 +300,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveMode")
     public Boolean liveMode;
+
     public OnlineSettingsViewModel withLiveMode(Boolean liveMode) {
         this.liveMode = liveMode;
         return this;
@@ -276,6 +309,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public OnlineSettingsViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -284,6 +318,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public OnlineSettingsViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -292,6 +327,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceAnyLabel")
     public String resourceAnyLabel;
+
     public OnlineSettingsViewModel withResourceAnyLabel(String resourceAnyLabel) {
         this.resourceAnyLabel = resourceAnyLabel;
         return this;
@@ -300,6 +336,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLabel")
     public String resourceLabel;
+
     public OnlineSettingsViewModel withResourceLabel(String resourceLabel) {
         this.resourceLabel = resourceLabel;
         return this;
@@ -308,6 +345,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSelection")
     public Boolean resourceSelection;
+
     public OnlineSettingsViewModel withResourceSelection(Boolean resourceSelection) {
         this.resourceSelection = resourceSelection;
         return this;
@@ -316,6 +354,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnToAvailability")
     public Boolean returnToAvailability;
+
     public OnlineSettingsViewModel withReturnToAvailability(Boolean returnToAvailability) {
         this.returnToAvailability = returnToAvailability;
         return this;
@@ -324,6 +363,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnToService")
     public Boolean returnToService;
+
     public OnlineSettingsViewModel withReturnToService(Boolean returnToService) {
         this.returnToService = returnToService;
         return this;
@@ -332,6 +372,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceLabel")
     public String serviceLabel;
+
     public OnlineSettingsViewModel withServiceLabel(String serviceLabel) {
         this.serviceLabel = serviceLabel;
         return this;
@@ -340,6 +381,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showBusinessLogo")
     public Boolean showBusinessLogo;
+
     public OnlineSettingsViewModel withShowBusinessLogo(Boolean showBusinessLogo) {
         this.showBusinessLogo = showBusinessLogo;
         return this;
@@ -348,6 +390,7 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showOnSchedLogo")
     public Boolean showOnSchedLogo;
+
     public OnlineSettingsViewModel withShowOnSchedLogo(Boolean showOnSchedLogo) {
         this.showOnSchedLogo = showOnSchedLogo;
         return this;
@@ -356,9 +399,11 @@ public class OnlineSettingsViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showServiceGroups")
     public Boolean showServiceGroups;
+
     public OnlineSettingsViewModel withShowServiceGroups(Boolean showServiceGroups) {
         this.showServiceGroups = showServiceGroups;
         return this;
     }
     
+    public OnlineSettingsViewModel(){}
 }

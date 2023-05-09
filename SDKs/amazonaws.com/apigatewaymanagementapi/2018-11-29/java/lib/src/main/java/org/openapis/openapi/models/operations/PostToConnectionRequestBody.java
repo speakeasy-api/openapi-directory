@@ -12,9 +12,13 @@ public class PostToConnectionRequestBody {
      */
     @JsonProperty("Data")
     public String data;
+
     public PostToConnectionRequestBody withData(String data) {
         this.data = data;
         return this;
     }
     
+    public PostToConnectionRequestBody(@JsonProperty("Data") String data) {
+        this.data = data;
+  }
 }

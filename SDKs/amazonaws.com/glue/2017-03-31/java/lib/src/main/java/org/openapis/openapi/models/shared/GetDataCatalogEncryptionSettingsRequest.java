@@ -12,9 +12,11 @@ public class GetDataCatalogEncryptionSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetDataCatalogEncryptionSettingsRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
     }
     
+    public GetDataCatalogEncryptionSettingsRequest(){}
 }

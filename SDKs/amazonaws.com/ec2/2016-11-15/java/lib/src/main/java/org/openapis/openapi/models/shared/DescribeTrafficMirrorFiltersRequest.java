@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrafficMirrorFiltersRequest {
     
     public Boolean dryRun;
+
     public DescribeTrafficMirrorFiltersRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTrafficMirrorFiltersRequest {
     
     
     public DescribeTrafficMirrorFiltersRequestFilters[] filters;
+
     public DescribeTrafficMirrorFiltersRequest withFilters(DescribeTrafficMirrorFiltersRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTrafficMirrorFiltersRequest {
     
     
     public Long maxResults;
+
     public DescribeTrafficMirrorFiltersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeTrafficMirrorFiltersRequest {
     
     
     public String nextToken;
+
     public DescribeTrafficMirrorFiltersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeTrafficMirrorFiltersRequest {
     
     
     public String[] trafficMirrorFilterIds;
+
     public DescribeTrafficMirrorFiltersRequest withTrafficMirrorFilterIds(String[] trafficMirrorFilterIds) {
         this.trafficMirrorFilterIds = trafficMirrorFilterIds;
         return this;
     }
     
+    public DescribeTrafficMirrorFiltersRequest(){}
 }

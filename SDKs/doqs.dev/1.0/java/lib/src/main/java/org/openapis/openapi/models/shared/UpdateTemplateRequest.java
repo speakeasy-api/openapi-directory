@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTemplateRequest {
     @JsonProperty("fields")
     public Object[] fields;
+
     public UpdateTemplateRequest withFields(Object[] fields) {
         this.fields = fields;
         return this;
@@ -19,9 +20,13 @@ public class UpdateTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateTemplateRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateTemplateRequest(@JsonProperty("fields") Object[] fields) {
+        this.fields = fields;
+  }
 }

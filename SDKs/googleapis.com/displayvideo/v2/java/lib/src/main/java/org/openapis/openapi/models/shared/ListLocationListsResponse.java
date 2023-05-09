@@ -18,6 +18,7 @@ public class ListLocationListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationLists")
     public LocationList[] locationLists;
+
     public ListLocationListsResponse withLocationLists(LocationList[] locationLists) {
         this.locationLists = locationLists;
         return this;
@@ -29,9 +30,11 @@ public class ListLocationListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListLocationListsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListLocationListsResponse(){}
 }

@@ -15,6 +15,7 @@ public class DeleteTaskDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public Failure[] failures;
+
     public DeleteTaskDefinitionsResponse withFailures(Failure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class DeleteTaskDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinitions")
     public TaskDefinition[] taskDefinitions;
+
     public DeleteTaskDefinitionsResponse withTaskDefinitions(TaskDefinition[] taskDefinitions) {
         this.taskDefinitions = taskDefinitions;
         return this;
     }
     
+    public DeleteTaskDefinitionsResponse(){}
 }

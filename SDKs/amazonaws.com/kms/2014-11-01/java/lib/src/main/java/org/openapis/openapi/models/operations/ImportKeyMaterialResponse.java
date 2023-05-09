@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportKeyMaterialResponse {
     
     public String contentType;
+
     public ImportKeyMaterialResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ImportKeyMaterialResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object expiredImportTokenException;
+
     public ImportKeyMaterialResponse withExpiredImportTokenException(Object expiredImportTokenException) {
         this.expiredImportTokenException = expiredImportTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public java.util.Map<String, Object> importKeyMaterialResponse;
+
     public ImportKeyMaterialResponse withImportKeyMaterialResponse(java.util.Map<String, Object> importKeyMaterialResponse) {
         this.importKeyMaterialResponse = importKeyMaterialResponse;
         return this;
@@ -49,6 +54,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object incorrectKeyMaterialException;
+
     public ImportKeyMaterialResponse withIncorrectKeyMaterialException(Object incorrectKeyMaterialException) {
         this.incorrectKeyMaterialException = incorrectKeyMaterialException;
         return this;
@@ -59,6 +65,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object invalidArnException;
+
     public ImportKeyMaterialResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object invalidCiphertextException;
+
     public ImportKeyMaterialResponse withInvalidCiphertextException(Object invalidCiphertextException) {
         this.invalidCiphertextException = invalidCiphertextException;
         return this;
@@ -79,6 +87,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object invalidImportTokenException;
+
     public ImportKeyMaterialResponse withInvalidImportTokenException(Object invalidImportTokenException) {
         this.invalidImportTokenException = invalidImportTokenException;
         return this;
@@ -89,6 +98,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object kmsInternalException;
+
     public ImportKeyMaterialResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -99,6 +109,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public ImportKeyMaterialResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -109,6 +120,7 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object notFoundException;
+
     public ImportKeyMaterialResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -116,6 +128,7 @@ public class ImportKeyMaterialResponse {
     
     
     public Integer statusCode;
+
     public ImportKeyMaterialResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class ImportKeyMaterialResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportKeyMaterialResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class ImportKeyMaterialResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ImportKeyMaterialResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ImportKeyMaterialResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

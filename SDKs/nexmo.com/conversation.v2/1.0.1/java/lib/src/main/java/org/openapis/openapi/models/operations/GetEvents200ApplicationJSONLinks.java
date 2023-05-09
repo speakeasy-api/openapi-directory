@@ -12,6 +12,7 @@ public class GetEvents200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public GetEvents200ApplicationJSONLinksFirst first;
+
     public GetEvents200ApplicationJSONLinks withFirst(GetEvents200ApplicationJSONLinksFirst first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class GetEvents200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public GetEvents200ApplicationJSONLinksNext next;
+
     public GetEvents200ApplicationJSONLinks withNext(GetEvents200ApplicationJSONLinksNext next) {
         this.next = next;
         return this;
@@ -28,6 +30,7 @@ public class GetEvents200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public GetEvents200ApplicationJSONLinksPrev prev;
+
     public GetEvents200ApplicationJSONLinks withPrev(GetEvents200ApplicationJSONLinksPrev prev) {
         this.prev = prev;
         return this;
@@ -36,9 +39,11 @@ public class GetEvents200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public GetEvents200ApplicationJSONLinksSelf self;
+
     public GetEvents200ApplicationJSONLinks withSelf(GetEvents200ApplicationJSONLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public GetEvents200ApplicationJSONLinks(){}
 }

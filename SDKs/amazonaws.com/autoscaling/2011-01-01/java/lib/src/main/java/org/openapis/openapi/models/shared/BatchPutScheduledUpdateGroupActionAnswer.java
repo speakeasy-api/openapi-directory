@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class BatchPutScheduledUpdateGroupActionAnswer {
     
     public FailedScheduledUpdateGroupActionRequest[] failedScheduledUpdateGroupActions;
+
     public BatchPutScheduledUpdateGroupActionAnswer withFailedScheduledUpdateGroupActions(FailedScheduledUpdateGroupActionRequest[] failedScheduledUpdateGroupActions) {
         this.failedScheduledUpdateGroupActions = failedScheduledUpdateGroupActions;
         return this;
     }
     
+    public BatchPutScheduledUpdateGroupActionAnswer(){}
 }

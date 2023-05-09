@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccessBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1alphaAccessBinding withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAccessBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public GoogleAnalyticsAdminV1alphaAccessBinding withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaAccessBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public GoogleAnalyticsAdminV1alphaAccessBinding withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessBinding(){}
 }

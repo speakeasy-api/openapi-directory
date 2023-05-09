@@ -15,6 +15,7 @@ public class BookingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAcceptRequests")
     public Boolean autoAcceptRequests;
+
     public BookingOptions withAutoAcceptRequests(Boolean autoAcceptRequests) {
         this.autoAcceptRequests = autoAcceptRequests;
         return this;
@@ -23,6 +24,7 @@ public class BookingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeclineConflictingRequests")
     public Boolean autoDeclineConflictingRequests;
+
     public BookingOptions withAutoDeclineConflictingRequests(Boolean autoDeclineConflictingRequests) {
         this.autoDeclineConflictingRequests = autoDeclineConflictingRequests;
         return this;
@@ -31,9 +33,11 @@ public class BookingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeclineRecurringRequests")
     public Boolean autoDeclineRecurringRequests;
+
     public BookingOptions withAutoDeclineRecurringRequests(Boolean autoDeclineRecurringRequests) {
         this.autoDeclineRecurringRequests = autoDeclineRecurringRequests;
         return this;
     }
     
+    public BookingOptions(){}
 }

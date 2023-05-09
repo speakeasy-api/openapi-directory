@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListDomainsRequest {
     
     public Long maxNumberOfDomains;
+
     public ListDomainsRequest withMaxNumberOfDomains(Long maxNumberOfDomains) {
         this.maxNumberOfDomains = maxNumberOfDomains;
         return this;
@@ -16,9 +17,11 @@ public class ListDomainsRequest {
     
     
     public String nextToken;
+
     public ListDomainsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDomainsRequest(){}
 }

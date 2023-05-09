@@ -18,9 +18,11 @@ public class PathFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexes")
     public String[] regexes;
+
     public PathFilter withRegexes(String[] regexes) {
         this.regexes = regexes;
         return this;
     }
     
+    public PathFilter(){}
 }

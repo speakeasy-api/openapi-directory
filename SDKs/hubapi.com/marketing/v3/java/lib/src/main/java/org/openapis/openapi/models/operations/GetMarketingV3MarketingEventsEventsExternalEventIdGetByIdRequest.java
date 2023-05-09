@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
     public String externalAccountId;
+
     public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
@@ -16,9 +18,14 @@ public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
     public String externalEventId;
+
     public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest withExternalEventId(String externalEventId) {
         this.externalEventId = externalEventId;
         return this;
     }
     
+    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest(@JsonProperty("externalAccountId") String externalAccountId, @JsonProperty("externalEventId") String externalEventId) {
+        this.externalAccountId = externalAccountId;
+        this.externalEventId = externalEventId;
+  }
 }

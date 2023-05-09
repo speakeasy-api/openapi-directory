@@ -12,6 +12,7 @@ public class CustomArticleFieldAdd {
      */
     @JsonProperty("name")
     public String name;
+
     public CustomArticleFieldAdd withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class CustomArticleFieldAdd {
      */
     @JsonProperty("value")
     public Object value;
+
     public CustomArticleFieldAdd withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public CustomArticleFieldAdd(@JsonProperty("name") String name, @JsonProperty("value") Object value) {
+        this.name = name;
+        this.value = value;
+  }
 }

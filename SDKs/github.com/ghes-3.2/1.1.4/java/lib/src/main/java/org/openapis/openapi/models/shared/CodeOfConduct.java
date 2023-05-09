@@ -15,6 +15,7 @@ public class CodeOfConduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public CodeOfConduct withBody(String body) {
         this.body = body;
         return this;
@@ -22,6 +23,7 @@ public class CodeOfConduct {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CodeOfConduct withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -29,6 +31,7 @@ public class CodeOfConduct {
     
     @JsonProperty("key")
     public String key;
+
     public CodeOfConduct withKey(String key) {
         this.key = key;
         return this;
@@ -36,6 +39,7 @@ public class CodeOfConduct {
     
     @JsonProperty("name")
     public String name;
+
     public CodeOfConduct withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +47,16 @@ public class CodeOfConduct {
     
     @JsonProperty("url")
     public String url;
+
     public CodeOfConduct withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CodeOfConduct(@JsonProperty("html_url") String htmlUrl, @JsonProperty("key") String key, @JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.htmlUrl = htmlUrl;
+        this.key = key;
+        this.name = name;
+        this.url = url;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedDeviceManagementLevels")
     public GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum[] allowedDeviceManagementLevels;
+
     public GoogleIdentityAccesscontextmanagerV1DevicePolicy withAllowedDeviceManagementLevels(GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum[] allowedDeviceManagementLevels) {
         this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityAccesscontextmanagerV1DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedEncryptionStatuses")
     public GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum[] allowedEncryptionStatuses;
+
     public GoogleIdentityAccesscontextmanagerV1DevicePolicy withAllowedEncryptionStatuses(GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum[] allowedEncryptionStatuses) {
         this.allowedEncryptionStatuses = allowedEncryptionStatuses;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityAccesscontextmanagerV1DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osConstraints")
     public GoogleIdentityAccesscontextmanagerV1OsConstraint[] osConstraints;
+
     public GoogleIdentityAccesscontextmanagerV1DevicePolicy withOsConstraints(GoogleIdentityAccesscontextmanagerV1OsConstraint[] osConstraints) {
         this.osConstraints = osConstraints;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityAccesscontextmanagerV1DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireAdminApproval")
     public Boolean requireAdminApproval;
+
     public GoogleIdentityAccesscontextmanagerV1DevicePolicy withRequireAdminApproval(Boolean requireAdminApproval) {
         this.requireAdminApproval = requireAdminApproval;
         return this;
@@ -62,6 +66,7 @@ public class GoogleIdentityAccesscontextmanagerV1DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireCorpOwned")
     public Boolean requireCorpOwned;
+
     public GoogleIdentityAccesscontextmanagerV1DevicePolicy withRequireCorpOwned(Boolean requireCorpOwned) {
         this.requireCorpOwned = requireCorpOwned;
         return this;
@@ -73,9 +78,11 @@ public class GoogleIdentityAccesscontextmanagerV1DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireScreenlock")
     public Boolean requireScreenlock;
+
     public GoogleIdentityAccesscontextmanagerV1DevicePolicy withRequireScreenlock(Boolean requireScreenlock) {
         this.requireScreenlock = requireScreenlock;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1DevicePolicy(){}
 }

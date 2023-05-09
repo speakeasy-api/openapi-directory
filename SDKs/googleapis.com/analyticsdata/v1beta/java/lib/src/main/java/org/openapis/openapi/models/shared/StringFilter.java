@@ -18,6 +18,7 @@ public class StringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public StringFilter withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -29,6 +30,7 @@ public class StringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public StringFilterMatchTypeEnum matchType;
+
     public StringFilter withMatchType(StringFilterMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -40,9 +42,11 @@ public class StringFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public StringFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public StringFilter(){}
 }

@@ -12,6 +12,7 @@ public class DrvlcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public DrvlcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class DrvlcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DrvlcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,9 +34,15 @@ public class DrvlcRequestBodyCertificateParameters {
      */
     @JsonProperty("dlno")
     public String dlno;
+
     public DrvlcRequestBodyCertificateParameters withDlno(String dlno) {
         this.dlno = dlno;
         return this;
     }
     
+    public DrvlcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("dlno") String dlno) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.dlno = dlno;
+  }
 }

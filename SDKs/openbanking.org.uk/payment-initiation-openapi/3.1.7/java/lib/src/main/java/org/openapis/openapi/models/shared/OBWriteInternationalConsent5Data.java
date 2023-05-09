@@ -15,6 +15,7 @@ public class OBWriteInternationalConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteInternationalConsent5DataAuthorisation authorisation;
+
     public OBWriteInternationalConsent5Data withAuthorisation(OBWriteInternationalConsent5DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteInternationalConsent5Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalConsent5DataInitiation initiation;
+
     public OBWriteInternationalConsent5Data withInitiation(OBWriteInternationalConsent5DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -36,6 +38,7 @@ public class OBWriteInternationalConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteInternationalConsent5DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteInternationalConsent5Data withReadRefundAccount(OBWriteInternationalConsent5DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -47,9 +50,13 @@ public class OBWriteInternationalConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteInternationalConsent5Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
     }
     
+    public OBWriteInternationalConsent5Data(@JsonProperty("Initiation") OBWriteInternationalConsent5DataInitiation initiation) {
+        this.initiation = initiation;
+  }
 }

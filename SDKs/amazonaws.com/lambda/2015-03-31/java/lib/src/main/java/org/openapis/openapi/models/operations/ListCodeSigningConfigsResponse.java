@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCodeSigningConfigsResponse {
     
     public String contentType;
+
     public ListCodeSigningConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCodeSigningConfigsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListCodeSigningConfigsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListCodeSigningConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCodeSigningConfigsResponse listCodeSigningConfigsResponse;
+
     public ListCodeSigningConfigsResponse withListCodeSigningConfigsResponse(org.openapis.openapi.models.shared.ListCodeSigningConfigsResponse listCodeSigningConfigsResponse) {
         this.listCodeSigningConfigsResponse = listCodeSigningConfigsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListCodeSigningConfigsResponse {
      */
     
     public Object serviceException;
+
     public ListCodeSigningConfigsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class ListCodeSigningConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListCodeSigningConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListCodeSigningConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCodeSigningConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCodeSigningConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

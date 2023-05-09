@@ -58,11 +58,9 @@ public class OperatingSystems {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetResponse res = new org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetResponse res = new org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetResponse(contentType, httpRes.statusCode()) {{
             operatingSystem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class OperatingSystems {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingOperatingSystemsListResponse res = new org.openapis.openapi.models.operations.DfareportingOperatingSystemsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingOperatingSystemsListResponse res = new org.openapis.openapi.models.operations.DfareportingOperatingSystemsListResponse(contentType, httpRes.statusCode()) {{
             operatingSystemsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

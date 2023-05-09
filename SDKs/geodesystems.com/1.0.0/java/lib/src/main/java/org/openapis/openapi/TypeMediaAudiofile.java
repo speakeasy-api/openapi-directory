@@ -57,10 +57,8 @@ public class TypeMediaAudiofile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchMediaAudiofileResponse res = new org.openapis.openapi.models.operations.SearchMediaAudiofileResponse() {{
+        org.openapis.openapi.models.operations.SearchMediaAudiofileResponse res = new org.openapis.openapi.models.operations.SearchMediaAudiofileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

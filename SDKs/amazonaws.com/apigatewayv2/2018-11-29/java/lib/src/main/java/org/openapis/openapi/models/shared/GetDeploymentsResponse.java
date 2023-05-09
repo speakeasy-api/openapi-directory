@@ -15,6 +15,7 @@ public class GetDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public Deployment[] items;
+
     public GetDeploymentsResponse withItems(Deployment[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class GetDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDeploymentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDeploymentsResponse(){}
 }

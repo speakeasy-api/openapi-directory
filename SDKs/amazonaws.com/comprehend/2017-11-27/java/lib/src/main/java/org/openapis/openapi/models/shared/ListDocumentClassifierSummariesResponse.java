@@ -15,6 +15,7 @@ public class ListDocumentClassifierSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierSummariesList")
     public DocumentClassifierSummary[] documentClassifierSummariesList;
+
     public ListDocumentClassifierSummariesResponse withDocumentClassifierSummariesList(DocumentClassifierSummary[] documentClassifierSummariesList) {
         this.documentClassifierSummariesList = documentClassifierSummariesList;
         return this;
@@ -23,9 +24,11 @@ public class ListDocumentClassifierSummariesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentClassifierSummariesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentClassifierSummariesResponse(){}
 }

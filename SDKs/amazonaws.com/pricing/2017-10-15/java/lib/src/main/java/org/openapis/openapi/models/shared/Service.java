@@ -15,6 +15,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public Service withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -22,9 +23,13 @@ public class Service {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public Service withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public Service(@JsonProperty("ServiceCode") String serviceCode) {
+        this.serviceCode = serviceCode;
+  }
 }

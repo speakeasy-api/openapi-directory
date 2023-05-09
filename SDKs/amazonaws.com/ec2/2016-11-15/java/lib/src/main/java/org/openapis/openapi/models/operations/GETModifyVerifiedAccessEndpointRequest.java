@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVerifiedAccessEndpointRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVerifiedAccessEndpointActionEnum action;
+
     public GETModifyVerifiedAccessEndpointRequest withAction(GETModifyVerifiedAccessEndpointActionEnum action) {
         this.action = action;
         return this;
@@ -19,16 +21,18 @@ public class GETModifyVerifiedAccessEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETModifyVerifiedAccessEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
     /**
-     * A description for the Amazon Web Services Verified Access endpoint.
+     * A description for the Verified Access endpoint.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public GETModifyVerifiedAccessEndpointRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -39,16 +43,18 @@ public class GETModifyVerifiedAccessEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVerifiedAccessEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
     /**
-     * The load balancer details if creating the Amazon Web Services Verified Access endpoint as &lt;code&gt;load-balancer&lt;/code&gt;type.
+     * The load balancer details if creating the Verified Access endpoint as &lt;code&gt;load-balancer&lt;/code&gt;type.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerOptions")
     public GETModifyVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions;
+
     public GETModifyVerifiedAccessEndpointRequest withLoadBalancerOptions(GETModifyVerifiedAccessEndpointLoadBalancerOptions loadBalancerOptions) {
         this.loadBalancerOptions = loadBalancerOptions;
         return this;
@@ -59,26 +65,29 @@ public class GETModifyVerifiedAccessEndpointRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceOptions")
     public GETModifyVerifiedAccessEndpointNetworkInterfaceOptions networkInterfaceOptions;
+
     public GETModifyVerifiedAccessEndpointRequest withNetworkInterfaceOptions(GETModifyVerifiedAccessEndpointNetworkInterfaceOptions networkInterfaceOptions) {
         this.networkInterfaceOptions = networkInterfaceOptions;
         return this;
     }
     
     /**
-     * The ID of the Amazon Web Services Verified Access endpoint.
+     * The ID of the Verified Access endpoint.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessEndpointId")
     public String verifiedAccessEndpointId;
+
     public GETModifyVerifiedAccessEndpointRequest withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
     }
     
     /**
-     * The ID of the Amazon Web Services Verified Access group.
+     * The ID of the Verified Access group.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessGroupId")
     public String verifiedAccessGroupId;
+
     public GETModifyVerifiedAccessEndpointRequest withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -86,6 +95,7 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVerifiedAccessEndpointVersionEnum version;
+
     public GETModifyVerifiedAccessEndpointRequest withVersion(GETModifyVerifiedAccessEndpointVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVerifiedAccessEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVerifiedAccessEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVerifiedAccessEndpointRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVerifiedAccessEndpointRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVerifiedAccessEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVerifiedAccessEndpointRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,15 @@ public class GETModifyVerifiedAccessEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVerifiedAccessEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVerifiedAccessEndpointRequest(@JsonProperty("Action") GETModifyVerifiedAccessEndpointActionEnum action, @JsonProperty("VerifiedAccessEndpointId") String verifiedAccessEndpointId, @JsonProperty("Version") GETModifyVerifiedAccessEndpointVersionEnum version) {
+        this.action = action;
+        this.verifiedAccessEndpointId = verifiedAccessEndpointId;
+        this.version = version;
+  }
 }

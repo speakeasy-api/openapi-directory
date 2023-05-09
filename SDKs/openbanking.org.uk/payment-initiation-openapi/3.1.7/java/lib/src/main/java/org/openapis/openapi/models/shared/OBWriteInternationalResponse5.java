@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteInternationalResponse5 {
     @JsonProperty("Data")
     public OBWriteInternationalResponse5Data data;
+
     public OBWriteInternationalResponse5 withData(OBWriteInternationalResponse5Data data) {
         this.data = data;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteInternationalResponse5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public Links links;
+
     public OBWriteInternationalResponse5 withLinks(Links links) {
         this.links = links;
         return this;
@@ -36,9 +38,13 @@ public class OBWriteInternationalResponse5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Meta")
     public Meta meta;
+
     public OBWriteInternationalResponse5 withMeta(Meta meta) {
         this.meta = meta;
         return this;
     }
     
+    public OBWriteInternationalResponse5(@JsonProperty("Data") OBWriteInternationalResponse5Data data) {
+        this.data = data;
+  }
 }

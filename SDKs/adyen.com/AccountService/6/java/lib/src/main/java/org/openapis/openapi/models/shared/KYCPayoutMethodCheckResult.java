@@ -15,6 +15,7 @@ public class KYCPayoutMethodCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public KYCCheckStatusData[] checks;
+
     public KYCPayoutMethodCheckResult withChecks(KYCCheckStatusData[] checks) {
         this.checks = checks;
         return this;
@@ -26,9 +27,11 @@ public class KYCPayoutMethodCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodCode")
     public String payoutMethodCode;
+
     public KYCPayoutMethodCheckResult withPayoutMethodCode(String payoutMethodCode) {
         this.payoutMethodCode = payoutMethodCode;
         return this;
     }
     
+    public KYCPayoutMethodCheckResult(){}
 }

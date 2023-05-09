@@ -18,6 +18,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Variable withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Variable withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -40,6 +42,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disablingTriggerId")
     public String[] disablingTriggerId;
+
     public Variable withDisablingTriggerId(String[] disablingTriggerId) {
         this.disablingTriggerId = disablingTriggerId;
         return this;
@@ -51,6 +54,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablingTriggerId")
     public String[] enablingTriggerId;
+
     public Variable withEnablingTriggerId(String[] enablingTriggerId) {
         this.enablingTriggerId = enablingTriggerId;
         return this;
@@ -62,6 +66,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Variable withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -70,6 +75,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatValue")
     public VariableFormatValue formatValue;
+
     public Variable withFormatValue(VariableFormatValue formatValue) {
         this.formatValue = formatValue;
         return this;
@@ -81,6 +87,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Variable withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +99,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Variable withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -103,6 +111,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public Parameter[] parameter;
+
     public Variable withParameter(Parameter[] parameter) {
         this.parameter = parameter;
         return this;
@@ -114,6 +123,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFolderId")
     public String parentFolderId;
+
     public Variable withParentFolderId(String parentFolderId) {
         this.parentFolderId = parentFolderId;
         return this;
@@ -125,6 +135,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Variable withPath(String path) {
         this.path = path;
         return this;
@@ -136,6 +147,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleEndMs")
     public String scheduleEndMs;
+
     public Variable withScheduleEndMs(String scheduleEndMs) {
         this.scheduleEndMs = scheduleEndMs;
         return this;
@@ -147,6 +159,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleStartMs")
     public String scheduleStartMs;
+
     public Variable withScheduleStartMs(String scheduleStartMs) {
         this.scheduleStartMs = scheduleStartMs;
         return this;
@@ -158,6 +171,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public Variable withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -169,6 +183,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Variable withType(String type) {
         this.type = type;
         return this;
@@ -180,6 +195,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variableId")
     public String variableId;
+
     public Variable withVariableId(String variableId) {
         this.variableId = variableId;
         return this;
@@ -191,9 +207,11 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public Variable withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public Variable(){}
 }

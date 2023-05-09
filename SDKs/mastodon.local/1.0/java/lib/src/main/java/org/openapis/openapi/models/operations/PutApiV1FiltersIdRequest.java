@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiV1FiltersIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/form-data")
     public byte[] requestBody;
+
     public PutApiV1FiltersIdRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PutApiV1FiltersIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutApiV1FiltersIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutApiV1FiltersIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartLoggingResponse {
@@ -12,6 +13,7 @@ public class StartLoggingResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public StartLoggingResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -22,6 +24,7 @@ public class StartLoggingResponse {
      */
     
     public Object conflictException;
+
     public StartLoggingResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartLoggingResponse {
     
     
     public String contentType;
+
     public StartLoggingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartLoggingResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public StartLoggingResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -49,6 +54,7 @@ public class StartLoggingResponse {
      */
     
     public Object invalidHomeRegionException;
+
     public StartLoggingResponse withInvalidHomeRegionException(Object invalidHomeRegionException) {
         this.invalidHomeRegionException = invalidHomeRegionException;
         return this;
@@ -59,6 +65,7 @@ public class StartLoggingResponse {
      */
     
     public Object invalidTrailNameException;
+
     public StartLoggingResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -69,6 +76,7 @@ public class StartLoggingResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public StartLoggingResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -79,6 +87,7 @@ public class StartLoggingResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public StartLoggingResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -89,6 +98,7 @@ public class StartLoggingResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartLoggingResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -99,6 +109,7 @@ public class StartLoggingResponse {
      */
     
     public java.util.Map<String, Object> startLoggingResponse;
+
     public StartLoggingResponse withStartLoggingResponse(java.util.Map<String, Object> startLoggingResponse) {
         this.startLoggingResponse = startLoggingResponse;
         return this;
@@ -106,6 +117,7 @@ public class StartLoggingResponse {
     
     
     public Integer statusCode;
+
     public StartLoggingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class StartLoggingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartLoggingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class StartLoggingResponse {
      */
     
     public Object trailNotFoundException;
+
     public StartLoggingResponse withTrailNotFoundException(Object trailNotFoundException) {
         this.trailNotFoundException = trailNotFoundException;
         return this;
@@ -133,9 +147,14 @@ public class StartLoggingResponse {
      */
     
     public Object unsupportedOperationException;
+
     public StartLoggingResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public StartLoggingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

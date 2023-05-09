@@ -15,6 +15,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public Snapshot withStatus(Long status) {
         this.status = status;
         return this;
@@ -26,6 +27,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public Snapshot withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -37,9 +39,11 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Snapshot withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Snapshot(){}
 }

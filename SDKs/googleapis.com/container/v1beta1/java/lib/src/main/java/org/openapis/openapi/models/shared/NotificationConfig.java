@@ -18,9 +18,11 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsub")
     public PubSub pubsub;
+
     public NotificationConfig withPubsub(PubSub pubsub) {
         this.pubsub = pubsub;
         return this;
     }
     
+    public NotificationConfig(){}
 }

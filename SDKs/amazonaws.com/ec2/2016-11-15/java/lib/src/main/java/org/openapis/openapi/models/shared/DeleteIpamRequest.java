@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteIpamRequest {
     
     public Boolean cascade;
+
     public DeleteIpamRequest withCascade(Boolean cascade) {
         this.cascade = cascade;
         return this;
@@ -16,6 +17,7 @@ public class DeleteIpamRequest {
     
     
     public Boolean dryRun;
+
     public DeleteIpamRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class DeleteIpamRequest {
     
     
     public String ipamId;
+
     public DeleteIpamRequest withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
     }
     
+    public DeleteIpamRequest(@JsonProperty("IpamId") String ipamId) {
+        this.ipamId = ipamId;
+  }
 }

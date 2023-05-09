@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MeshData {
     @JsonProperty("meshName")
     public String meshName;
+
     public MeshData withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -21,6 +22,7 @@ public class MeshData {
     
     @JsonProperty("metadata")
     public ResourceMetadata metadata;
+
     public MeshData withMetadata(ResourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +31,14 @@ public class MeshData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MeshStatus status;
+
     public MeshData withStatus(MeshStatus status) {
         this.status = status;
         return this;
     }
     
+    public MeshData(@JsonProperty("meshName") String meshName, @JsonProperty("metadata") ResourceMetadata metadata) {
+        this.meshName = meshName;
+        this.metadata = metadata;
+  }
 }

@@ -15,6 +15,7 @@ public class PlatformCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linux")
     public String linux;
+
     public PlatformCommand withLinux(String linux) {
         this.linux = linux;
         return this;
@@ -23,9 +24,11 @@ public class PlatformCommand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windows")
     public String windows;
+
     public PlatformCommand withWindows(String windows) {
         this.windows = windows;
         return this;
     }
     
+    public PlatformCommand(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsManagementProfileFilterLinksGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementProfileFilterLinksGetSecurityOption1 option1;
+
     public AnalyticsManagementProfileFilterLinksGetSecurity withOption1(AnalyticsManagementProfileFilterLinksGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsManagementProfileFilterLinksGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementProfileFilterLinksGetSecurityOption2 option2;
+
     public AnalyticsManagementProfileFilterLinksGetSecurity withOption2(AnalyticsManagementProfileFilterLinksGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsManagementProfileFilterLinksGetSecurity(){}
 }

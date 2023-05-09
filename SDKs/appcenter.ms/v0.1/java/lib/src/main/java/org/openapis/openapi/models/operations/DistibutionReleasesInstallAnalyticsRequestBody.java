@@ -15,9 +15,11 @@ public class DistibutionReleasesInstallAnalyticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releases")
     public DistibutionReleasesInstallAnalyticsRequestBodyReleases[] releases;
+
     public DistibutionReleasesInstallAnalyticsRequestBody withReleases(DistibutionReleasesInstallAnalyticsRequestBodyReleases[] releases) {
         this.releases = releases;
         return this;
     }
     
+    public DistibutionReleasesInstallAnalyticsRequestBody(){}
 }

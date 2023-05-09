@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsActiveRequest {
@@ -12,9 +13,13 @@ public class TeamsActiveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public String format;
+
     public TeamsActiveRequest withFormat(String format) {
         this.format = format;
         return this;
     }
     
+    public TeamsActiveRequest(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

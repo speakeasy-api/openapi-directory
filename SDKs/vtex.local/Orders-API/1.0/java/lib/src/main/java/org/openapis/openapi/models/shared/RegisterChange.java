@@ -18,6 +18,7 @@ public class RegisterChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public RegisterChange withDate(String date) {
         this.date = date;
         return this;
@@ -29,6 +30,7 @@ public class RegisterChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public RegisterChange withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -40,9 +42,11 @@ public class RegisterChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receipt")
     public String receipt;
+
     public RegisterChange withReceipt(String receipt) {
         this.receipt = receipt;
         return this;
     }
     
+    public RegisterChange(){}
 }

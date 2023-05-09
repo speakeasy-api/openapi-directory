@@ -15,6 +15,7 @@ public class DestinationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DestinationInfo withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class DestinationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public DestinationInfo withService(String service) {
         this.service = service;
         return this;
     }
     
+    public DestinationInfo(){}
 }

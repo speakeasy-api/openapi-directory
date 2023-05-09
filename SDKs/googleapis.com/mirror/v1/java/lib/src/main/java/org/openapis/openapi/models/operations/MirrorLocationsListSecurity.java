@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class MirrorLocationsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public MirrorLocationsListSecurityOption1 option1;
+
     public MirrorLocationsListSecurity withOption1(MirrorLocationsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class MirrorLocationsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public MirrorLocationsListSecurityOption2 option2;
+
     public MirrorLocationsListSecurity withOption2(MirrorLocationsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public MirrorLocationsListSecurity(){}
 }

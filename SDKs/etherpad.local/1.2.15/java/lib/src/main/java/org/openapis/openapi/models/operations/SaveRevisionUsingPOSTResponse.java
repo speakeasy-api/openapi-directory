@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SaveRevisionUsingPOSTResponse {
     
     public String contentType;
+
     public SaveRevisionUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SaveRevisionUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public SaveRevisionUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SaveRevisionUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SaveRevisionUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SaveRevisionUsingPOSTResponse {
      */
     
     public SaveRevisionUsingPOST200ApplicationJSON saveRevisionUsingPOST200ApplicationJSONObject;
+
     public SaveRevisionUsingPOSTResponse withSaveRevisionUsingPOST200ApplicationJSONObject(SaveRevisionUsingPOST200ApplicationJSON saveRevisionUsingPOST200ApplicationJSONObject) {
         this.saveRevisionUsingPOST200ApplicationJSONObject = saveRevisionUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SaveRevisionUsingPOSTResponse {
      */
     
     public SaveRevisionUsingPOST400ApplicationJSON saveRevisionUsingPOST400ApplicationJSONObject;
+
     public SaveRevisionUsingPOSTResponse withSaveRevisionUsingPOST400ApplicationJSONObject(SaveRevisionUsingPOST400ApplicationJSON saveRevisionUsingPOST400ApplicationJSONObject) {
         this.saveRevisionUsingPOST400ApplicationJSONObject = saveRevisionUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SaveRevisionUsingPOSTResponse {
      */
     
     public SaveRevisionUsingPOST401ApplicationJSON saveRevisionUsingPOST401ApplicationJSONObject;
+
     public SaveRevisionUsingPOSTResponse withSaveRevisionUsingPOST401ApplicationJSONObject(SaveRevisionUsingPOST401ApplicationJSON saveRevisionUsingPOST401ApplicationJSONObject) {
         this.saveRevisionUsingPOST401ApplicationJSONObject = saveRevisionUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SaveRevisionUsingPOSTResponse {
      */
     
     public SaveRevisionUsingPOST500ApplicationJSON saveRevisionUsingPOST500ApplicationJSONObject;
+
     public SaveRevisionUsingPOSTResponse withSaveRevisionUsingPOST500ApplicationJSONObject(SaveRevisionUsingPOST500ApplicationJSON saveRevisionUsingPOST500ApplicationJSONObject) {
         this.saveRevisionUsingPOST500ApplicationJSONObject = saveRevisionUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public SaveRevisionUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

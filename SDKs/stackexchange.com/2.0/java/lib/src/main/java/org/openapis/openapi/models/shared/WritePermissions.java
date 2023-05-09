@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class WritePermissions {
     
     public Boolean canAdd;
+
     public WritePermissions withCanAdd(Boolean canAdd) {
         this.canAdd = canAdd;
         return this;
@@ -16,6 +17,7 @@ public class WritePermissions {
     
     
     public Boolean canDelete;
+
     public WritePermissions withCanDelete(Boolean canDelete) {
         this.canDelete = canDelete;
         return this;
@@ -23,6 +25,7 @@ public class WritePermissions {
     
     
     public Boolean canEdit;
+
     public WritePermissions withCanEdit(Boolean canEdit) {
         this.canEdit = canEdit;
         return this;
@@ -30,6 +33,7 @@ public class WritePermissions {
     
     
     public Long maxDailyActions;
+
     public WritePermissions withMaxDailyActions(Long maxDailyActions) {
         this.maxDailyActions = maxDailyActions;
         return this;
@@ -37,6 +41,7 @@ public class WritePermissions {
     
     
     public Long minSecondsBetweenActions;
+
     public WritePermissions withMinSecondsBetweenActions(Long minSecondsBetweenActions) {
         this.minSecondsBetweenActions = minSecondsBetweenActions;
         return this;
@@ -44,6 +49,7 @@ public class WritePermissions {
     
     
     public String objectType;
+
     public WritePermissions withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -51,9 +57,11 @@ public class WritePermissions {
     
     
     public Long userId;
+
     public WritePermissions withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public WritePermissions(){}
 }

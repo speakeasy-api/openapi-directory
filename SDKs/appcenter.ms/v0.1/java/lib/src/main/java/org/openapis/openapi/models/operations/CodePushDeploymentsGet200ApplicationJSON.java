@@ -15,6 +15,7 @@ public class CodePushDeploymentsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CodePushDeploymentsGet200ApplicationJSON withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class CodePushDeploymentsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_release")
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease latestRelease;
+
     public CodePushDeploymentsGet200ApplicationJSON withLatestRelease(CodePushDeploymentsGet200ApplicationJSONLatestRelease latestRelease) {
         this.latestRelease = latestRelease;
         return this;
@@ -30,9 +32,13 @@ public class CodePushDeploymentsGet200ApplicationJSON {
     
     @JsonProperty("name")
     public String name;
+
     public CodePushDeploymentsGet200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CodePushDeploymentsGet200ApplicationJSON(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

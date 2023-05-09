@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEulasResponse {
@@ -12,6 +13,7 @@ public class ListEulasResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEulasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListEulasResponse {
      */
     
     public Object conflictException;
+
     public ListEulasResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListEulasResponse {
     
     
     public String contentType;
+
     public ListEulasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListEulasResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListEulasResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListEulasResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEulasResponse listEulasResponse;
+
     public ListEulasResponse withListEulasResponse(org.openapis.openapi.models.shared.ListEulasResponse listEulasResponse) {
         this.listEulasResponse = listEulasResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListEulasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEulasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListEulasResponse {
     
     
     public Integer statusCode;
+
     public ListEulasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListEulasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEulasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListEulasResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListEulasResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class ListEulasResponse {
      */
     
     public Object throttlingException;
+
     public ListEulasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListEulasResponse {
      */
     
     public Object validationException;
+
     public ListEulasResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEulasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

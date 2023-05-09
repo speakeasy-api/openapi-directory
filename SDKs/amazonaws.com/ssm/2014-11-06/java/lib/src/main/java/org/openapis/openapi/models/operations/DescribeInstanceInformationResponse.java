@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInstanceInformationResponse {
     
     public String contentType;
+
     public DescribeInstanceInformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInstanceInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeInstanceInformationResult describeInstanceInformationResult;
+
     public DescribeInstanceInformationResponse withDescribeInstanceInformationResult(org.openapis.openapi.models.shared.DescribeInstanceInformationResult describeInstanceInformationResult) {
         this.describeInstanceInformationResult = describeInstanceInformationResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInstanceInformationResponse {
      */
     
     public Object internalServerError;
+
     public DescribeInstanceInformationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInstanceInformationResponse {
      */
     
     public Object invalidFilterKey;
+
     public DescribeInstanceInformationResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -49,6 +54,7 @@ public class DescribeInstanceInformationResponse {
      */
     
     public Object invalidInstanceId;
+
     public DescribeInstanceInformationResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -59,6 +65,7 @@ public class DescribeInstanceInformationResponse {
      */
     
     public Object invalidInstanceInformationFilterValue;
+
     public DescribeInstanceInformationResponse withInvalidInstanceInformationFilterValue(Object invalidInstanceInformationFilterValue) {
         this.invalidInstanceInformationFilterValue = invalidInstanceInformationFilterValue;
         return this;
@@ -69,6 +76,7 @@ public class DescribeInstanceInformationResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeInstanceInformationResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -76,6 +84,7 @@ public class DescribeInstanceInformationResponse {
     
     
     public Integer statusCode;
+
     public DescribeInstanceInformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeInstanceInformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInstanceInformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeInstanceInformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

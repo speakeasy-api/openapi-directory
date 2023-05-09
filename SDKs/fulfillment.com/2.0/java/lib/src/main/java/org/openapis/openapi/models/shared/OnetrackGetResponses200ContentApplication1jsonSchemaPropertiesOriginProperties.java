@@ -12,9 +12,11 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginProperties withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginProperties(){}
 }

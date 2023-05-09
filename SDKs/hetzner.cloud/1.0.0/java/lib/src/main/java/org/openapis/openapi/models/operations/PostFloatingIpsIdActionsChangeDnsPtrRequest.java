@@ -4,17 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFloatingIpsIdActionsChangeDnsPtrRequest {
     /**
-     * Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP.
+     * Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP. You can add up to 100 IPv6 reverse DNS entries.
      * 
      * The target hostname is set by passing `dns_ptr`.
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostFloatingIpsIdActionsChangeDnsPtrChangeDNSPTRRequest requestBody;
+
     public PostFloatingIpsIdActionsChangeDnsPtrRequest withRequestBody(PostFloatingIpsIdActionsChangeDnsPtrChangeDNSPTRRequest requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -25,9 +27,13 @@ public class PostFloatingIpsIdActionsChangeDnsPtrRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostFloatingIpsIdActionsChangeDnsPtrRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostFloatingIpsIdActionsChangeDnsPtrRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

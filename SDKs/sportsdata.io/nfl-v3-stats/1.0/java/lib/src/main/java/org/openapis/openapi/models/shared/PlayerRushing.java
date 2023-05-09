@@ -12,6 +12,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerRushing withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -20,6 +21,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerRushing withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -28,6 +30,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesLost")
     public Long fumblesLost;
+
     public PlayerRushing withFumblesLost(Long fumblesLost) {
         this.fumblesLost = fumblesLost;
         return this;
@@ -36,6 +39,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerRushing withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerRushing withNumber(Long number) {
         this.number = number;
         return this;
@@ -52,6 +57,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public PlayerRushing withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -60,6 +66,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerRushing withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -68,6 +75,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerRushing withPosition(String position) {
         this.position = position;
         return this;
@@ -76,6 +84,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerRushing withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -84,6 +93,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingAttempts")
     public Long rushingAttempts;
+
     public PlayerRushing withRushingAttempts(Long rushingAttempts) {
         this.rushingAttempts = rushingAttempts;
         return this;
@@ -92,6 +102,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingLong")
     public Long rushingLong;
+
     public PlayerRushing withRushingLong(Long rushingLong) {
         this.rushingLong = rushingLong;
         return this;
@@ -100,6 +111,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingTouchdowns")
     public Long rushingTouchdowns;
+
     public PlayerRushing withRushingTouchdowns(Long rushingTouchdowns) {
         this.rushingTouchdowns = rushingTouchdowns;
         return this;
@@ -108,6 +120,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingYards")
     public Long rushingYards;
+
     public PlayerRushing withRushingYards(Long rushingYards) {
         this.rushingYards = rushingYards;
         return this;
@@ -116,6 +129,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RushingYardsPerAttempt")
     public Double rushingYardsPerAttempt;
+
     public PlayerRushing withRushingYardsPerAttempt(Double rushingYardsPerAttempt) {
         this.rushingYardsPerAttempt = rushingYardsPerAttempt;
         return this;
@@ -124,6 +138,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerRushing withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -132,6 +147,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerRushing withTeam(String team) {
         this.team = team;
         return this;
@@ -140,6 +156,7 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionRuns")
     public Long twoPointConversionRuns;
+
     public PlayerRushing withTwoPointConversionRuns(Long twoPointConversionRuns) {
         this.twoPointConversionRuns = twoPointConversionRuns;
         return this;
@@ -148,9 +165,11 @@ public class PlayerRushing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerRushing withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerRushing(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGraphqlApisResponse {
@@ -12,6 +13,7 @@ public class ListGraphqlApisResponse {
      */
     
     public Object badRequestException;
+
     public ListGraphqlApisResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListGraphqlApisResponse {
     
     
     public String contentType;
+
     public ListGraphqlApisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListGraphqlApisResponse {
      */
     
     public Object internalFailureException;
+
     public ListGraphqlApisResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class ListGraphqlApisResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGraphqlApisResponse listGraphqlApisResponse;
+
     public ListGraphqlApisResponse withListGraphqlApisResponse(org.openapis.openapi.models.shared.ListGraphqlApisResponse listGraphqlApisResponse) {
         this.listGraphqlApisResponse = listGraphqlApisResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListGraphqlApisResponse {
     
     
     public Integer statusCode;
+
     public ListGraphqlApisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGraphqlApisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGraphqlApisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListGraphqlApisResponse {
      */
     
     public Object unauthorizedException;
+
     public ListGraphqlApisResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListGraphqlApisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

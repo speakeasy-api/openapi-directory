@@ -14,6 +14,7 @@ public class PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjuste
      */
     @JsonProperty("date")
     public String date;
+
     public PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices withDate(String date) {
         this.date = date;
         return this;
@@ -25,6 +26,7 @@ public class PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjuste
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dividendAdjustedClose")
     public Double dividendAdjustedClose;
+
     public PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices withDividendAdjustedClose(Double dividendAdjustedClose) {
         this.dividendAdjustedClose = dividendAdjustedClose;
         return this;
@@ -35,6 +37,7 @@ public class PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjuste
      */
     @JsonProperty("fullyAdjustedClose")
     public Double fullyAdjustedClose;
+
     public PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices withFullyAdjustedClose(Double fullyAdjustedClose) {
         this.fullyAdjustedClose = fullyAdjustedClose;
         return this;
@@ -46,9 +49,14 @@ public class PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjuste
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitAdjustedClose")
     public Double splitAdjustedClose;
+
     public PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices withSplitAdjustedClose(Double splitAdjustedClose) {
         this.splitAdjustedClose = splitAdjustedClose;
         return this;
     }
     
+    public PostAssetsPricesAdjustedForward200ApplicationJSONAssetsAssetAdjustedPrices(@JsonProperty("date") String date, @JsonProperty("fullyAdjustedClose") Double fullyAdjustedClose) {
+        this.date = date;
+        this.fullyAdjustedClose = fullyAdjustedClose;
+  }
 }

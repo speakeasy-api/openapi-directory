@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateLoginProfileRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateLoginProfileActionEnum action;
+
     public GETUpdateLoginProfileRequest withAction(GETUpdateLoginProfileActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateLoginProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Password")
     public String password;
+
     public GETUpdateLoginProfileRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateLoginProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PasswordResetRequired")
     public Boolean passwordResetRequired;
+
     public GETUpdateLoginProfileRequest withPasswordResetRequired(Boolean passwordResetRequired) {
         this.passwordResetRequired = passwordResetRequired;
         return this;
@@ -39,6 +43,7 @@ public class GETUpdateLoginProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETUpdateLoginProfileRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -46,6 +51,7 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateLoginProfileVersionEnum version;
+
     public GETUpdateLoginProfileRequest withVersion(GETUpdateLoginProfileVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateLoginProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateLoginProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateLoginProfileRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateLoginProfileRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateLoginProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateLoginProfileRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETUpdateLoginProfileRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateLoginProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateLoginProfileRequest(@JsonProperty("Action") GETUpdateLoginProfileActionEnum action, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETUpdateLoginProfileVersionEnum version) {
+        this.action = action;
+        this.userName = userName;
+        this.version = version;
+  }
 }

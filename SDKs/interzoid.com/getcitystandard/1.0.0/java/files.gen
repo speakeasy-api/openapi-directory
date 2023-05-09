@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetcitystandardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getcitystandard200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcitystandardResponse.java
+docs/sdk/README.md
+docs/citydatastandardization/README.md
 USAGE.md

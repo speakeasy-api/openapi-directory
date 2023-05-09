@@ -17,6 +17,7 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public ExternalConnection withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -25,6 +26,7 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessTokenSecret")
     public String accessTokenSecret;
+
     public ExternalConnection withAccessTokenSecret(String accessTokenSecret) {
         this.accessTokenSecret = accessTokenSecret;
         return this;
@@ -33,6 +35,7 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public String data;
+
     public ExternalConnection withData(String data) {
         this.data = data;
         return this;
@@ -43,6 +46,7 @@ public class ExternalConnection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpiresOn")
     public OffsetDateTime expiresOn;
+
     public ExternalConnection withExpiresOn(OffsetDateTime expiresOn) {
         this.expiresOn = expiresOn;
         return this;
@@ -51,6 +55,7 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalUserId")
     public String externalUserId;
+
     public ExternalConnection withExternalUserId(String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
@@ -59,6 +64,7 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalUsername")
     public String externalUsername;
+
     public ExternalConnection withExternalUsername(String externalUsername) {
         this.externalUsername = externalUsername;
         return this;
@@ -67,6 +73,7 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public ExternalConnection withId(Integer id) {
         this.id = id;
         return this;
@@ -75,6 +82,7 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Provider")
     public String provider;
+
     public ExternalConnection withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -83,9 +91,11 @@ public class ExternalConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public Integer userId;
+
     public ExternalConnection withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public ExternalConnection(){}
 }

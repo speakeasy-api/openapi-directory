@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1RoutineSpecArgument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum mode;
+
     public GoogleCloudDatacatalogV1RoutineSpecArgument withMode(GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum mode) {
         this.mode = mode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1RoutineSpecArgument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogV1RoutineSpecArgument withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1RoutineSpecArgument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDatacatalogV1RoutineSpecArgument withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1RoutineSpecArgument(){}
 }

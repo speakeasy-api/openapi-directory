@@ -21,6 +21,7 @@ public class DeploymentStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public DeploymentStatus withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class DeploymentStatus {
      */
     @JsonProperty("creator")
     public NullableSimpleUser creator;
+
     public DeploymentStatus withCreator(NullableSimpleUser creator) {
         this.creator = creator;
         return this;
@@ -38,6 +40,7 @@ public class DeploymentStatus {
     
     @JsonProperty("deployment_url")
     public String deploymentUrl;
+
     public DeploymentStatus withDeploymentUrl(String deploymentUrl) {
         this.deploymentUrl = deploymentUrl;
         return this;
@@ -48,6 +51,7 @@ public class DeploymentStatus {
      */
     @JsonProperty("description")
     public String description;
+
     public DeploymentStatus withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class DeploymentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public DeploymentStatus withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -70,6 +75,7 @@ public class DeploymentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment_url")
     public String environmentUrl;
+
     public DeploymentStatus withEnvironmentUrl(String environmentUrl) {
         this.environmentUrl = environmentUrl;
         return this;
@@ -77,6 +83,7 @@ public class DeploymentStatus {
     
     @JsonProperty("id")
     public Long id;
+
     public DeploymentStatus withId(Long id) {
         this.id = id;
         return this;
@@ -88,6 +95,7 @@ public class DeploymentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("log_url")
     public String logUrl;
+
     public DeploymentStatus withLogUrl(String logUrl) {
         this.logUrl = logUrl;
         return this;
@@ -95,6 +103,7 @@ public class DeploymentStatus {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public DeploymentStatus withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -106,6 +115,7 @@ public class DeploymentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public DeploymentStatus withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -113,6 +123,7 @@ public class DeploymentStatus {
     
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public DeploymentStatus withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -123,6 +134,7 @@ public class DeploymentStatus {
      */
     @JsonProperty("state")
     public DeploymentStatusStateEnum state;
+
     public DeploymentStatus withState(DeploymentStatusStateEnum state) {
         this.state = state;
         return this;
@@ -133,6 +145,7 @@ public class DeploymentStatus {
      */
     @JsonProperty("target_url")
     public String targetUrl;
+
     public DeploymentStatus withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
@@ -142,6 +155,7 @@ public class DeploymentStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public DeploymentStatus withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -149,9 +163,23 @@ public class DeploymentStatus {
     
     @JsonProperty("url")
     public String url;
+
     public DeploymentStatus withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DeploymentStatus(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("creator") NullableSimpleUser creator, @JsonProperty("deployment_url") String deploymentUrl, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("repository_url") String repositoryUrl, @JsonProperty("state") DeploymentStatusStateEnum state, @JsonProperty("target_url") String targetUrl, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.creator = creator;
+        this.deploymentUrl = deploymentUrl;
+        this.description = description;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.repositoryUrl = repositoryUrl;
+        this.state = state;
+        this.targetUrl = targetUrl;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

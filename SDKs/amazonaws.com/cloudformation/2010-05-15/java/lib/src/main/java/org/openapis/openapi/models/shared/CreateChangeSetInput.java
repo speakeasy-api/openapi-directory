@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateChangeSetInput - The input for the &lt;a&gt;CreateChangeSet&lt;/a&gt; action.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateChangeSetInput {
     
     public CapabilityEnum[] capabilities;
+
     public CreateChangeSetInput withCapabilities(CapabilityEnum[] capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -19,6 +20,7 @@ public class CreateChangeSetInput {
     
     
     public String changeSetName;
+
     public CreateChangeSetInput withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -26,6 +28,7 @@ public class CreateChangeSetInput {
     
     
     public ChangeSetTypeEnum changeSetType;
+
     public CreateChangeSetInput withChangeSetType(ChangeSetTypeEnum changeSetType) {
         this.changeSetType = changeSetType;
         return this;
@@ -33,6 +36,7 @@ public class CreateChangeSetInput {
     
     
     public String clientToken;
+
     public CreateChangeSetInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -40,6 +44,7 @@ public class CreateChangeSetInput {
     
     
     public String description;
+
     public CreateChangeSetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class CreateChangeSetInput {
     
     
     public Boolean includeNestedStacks;
+
     public CreateChangeSetInput withIncludeNestedStacks(Boolean includeNestedStacks) {
         this.includeNestedStacks = includeNestedStacks;
         return this;
@@ -54,6 +60,7 @@ public class CreateChangeSetInput {
     
     
     public String[] notificationARNs;
+
     public CreateChangeSetInput withNotificationARNs(String[] notificationARNs) {
         this.notificationARNs = notificationARNs;
         return this;
@@ -61,6 +68,7 @@ public class CreateChangeSetInput {
     
     
     public Parameter[] parameters;
+
     public CreateChangeSetInput withParameters(Parameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -68,6 +76,7 @@ public class CreateChangeSetInput {
     
     
     public String[] resourceTypes;
+
     public CreateChangeSetInput withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -75,6 +84,7 @@ public class CreateChangeSetInput {
     
     
     public ResourceToImport[] resourcesToImport;
+
     public CreateChangeSetInput withResourcesToImport(ResourceToImport[] resourcesToImport) {
         this.resourcesToImport = resourcesToImport;
         return this;
@@ -82,6 +92,7 @@ public class CreateChangeSetInput {
     
     
     public String roleARN;
+
     public CreateChangeSetInput withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -89,6 +100,7 @@ public class CreateChangeSetInput {
     
     
     public RollbackConfiguration rollbackConfiguration;
+
     public CreateChangeSetInput withRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
         this.rollbackConfiguration = rollbackConfiguration;
         return this;
@@ -96,6 +108,7 @@ public class CreateChangeSetInput {
     
     
     public String stackName;
+
     public CreateChangeSetInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -103,6 +116,7 @@ public class CreateChangeSetInput {
     
     
     public Tag[] tags;
+
     public CreateChangeSetInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -110,6 +124,7 @@ public class CreateChangeSetInput {
     
     
     public String templateBody;
+
     public CreateChangeSetInput withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -117,6 +132,7 @@ public class CreateChangeSetInput {
     
     
     public String templateURL;
+
     public CreateChangeSetInput withTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
@@ -124,9 +140,14 @@ public class CreateChangeSetInput {
     
     
     public Boolean usePreviousTemplate;
+
     public CreateChangeSetInput withUsePreviousTemplate(Boolean usePreviousTemplate) {
         this.usePreviousTemplate = usePreviousTemplate;
         return this;
     }
     
+    public CreateChangeSetInput(@JsonProperty("ChangeSetName") String changeSetName, @JsonProperty("StackName") String stackName) {
+        this.changeSetName = changeSetName;
+        this.stackName = stackName;
+  }
 }

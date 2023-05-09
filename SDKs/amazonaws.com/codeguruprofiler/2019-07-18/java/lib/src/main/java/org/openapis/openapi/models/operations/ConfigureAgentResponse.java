@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfigureAgentResponse {
@@ -12,6 +13,7 @@ public class ConfigureAgentResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigureAgentResponse configureAgentResponse;
+
     public ConfigureAgentResponse withConfigureAgentResponse(org.openapis.openapi.models.shared.ConfigureAgentResponse configureAgentResponse) {
         this.configureAgentResponse = configureAgentResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfigureAgentResponse {
     
     
     public String contentType;
+
     public ConfigureAgentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ConfigureAgentResponse {
      */
     
     public Object internalServerException;
+
     public ConfigureAgentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ConfigureAgentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ConfigureAgentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ConfigureAgentResponse {
     
     
     public Integer statusCode;
+
     public ConfigureAgentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ConfigureAgentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfigureAgentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ConfigureAgentResponse {
      */
     
     public Object throttlingException;
+
     public ConfigureAgentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ConfigureAgentResponse {
      */
     
     public Object validationException;
+
     public ConfigureAgentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ConfigureAgentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

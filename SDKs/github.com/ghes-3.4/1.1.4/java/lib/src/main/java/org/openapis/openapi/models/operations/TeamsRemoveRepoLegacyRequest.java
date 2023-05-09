@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsRemoveRepoLegacyRequest {
@@ -12,6 +13,7 @@ public class TeamsRemoveRepoLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public TeamsRemoveRepoLegacyRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class TeamsRemoveRepoLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public TeamsRemoveRepoLegacyRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -32,9 +35,15 @@ public class TeamsRemoveRepoLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsRemoveRepoLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsRemoveRepoLegacyRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("team_id") Long teamId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.teamId = teamId;
+  }
 }

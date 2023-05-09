@@ -15,6 +15,7 @@ public class ResourcePendingMaintenanceActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingMaintenanceActionDetails")
     public PendingMaintenanceAction[] pendingMaintenanceActionDetails;
+
     public ResourcePendingMaintenanceActions withPendingMaintenanceActionDetails(PendingMaintenanceAction[] pendingMaintenanceActionDetails) {
         this.pendingMaintenanceActionDetails = pendingMaintenanceActionDetails;
         return this;
@@ -23,9 +24,11 @@ public class ResourcePendingMaintenanceActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdentifier")
     public String resourceIdentifier;
+
     public ResourcePendingMaintenanceActions withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public ResourcePendingMaintenanceActions(){}
 }

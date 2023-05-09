@@ -18,6 +18,7 @@ public class CPUTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Double rate;
+
     public CPUTime withRate(Double rate) {
         this.rate = rate;
         return this;
@@ -29,6 +30,7 @@ public class CPUTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public CPUTime withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -40,9 +42,11 @@ public class CPUTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalMs")
     public String totalMs;
+
     public CPUTime withTotalMs(String totalMs) {
         this.totalMs = totalMs;
         return this;
     }
     
+    public CPUTime(){}
 }

@@ -15,6 +15,7 @@ public class DiskTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskTypes")
     public DiskType[] diskTypes;
+
     public DiskTypesScopedList withDiskTypes(DiskType[] diskTypes) {
         this.diskTypes = diskTypes;
         return this;
@@ -26,9 +27,11 @@ public class DiskTypesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public DiskTypesScopedListWarning warning;
+
     public DiskTypesScopedList withWarning(DiskTypesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public DiskTypesScopedList(){}
 }

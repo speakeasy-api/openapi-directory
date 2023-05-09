@@ -18,6 +18,7 @@ public class TextEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public TextEntry withText(String text) {
         this.text = text;
         return this;
@@ -29,9 +30,11 @@ public class TextEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TextEntryTypeEnum type;
+
     public TextEntry withType(TextEntryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TextEntry(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTestHarnessScenarioUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class CreateTestHarnessScenarioUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel;
+
     public CreateTestHarnessScenarioUsingPOSTRequest withTestHarnessScenarioModel(org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel) {
         this.testHarnessScenarioModel = testHarnessScenarioModel;
         return this;
@@ -22,9 +24,14 @@ public class CreateTestHarnessScenarioUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CreateTestHarnessScenarioUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public CreateTestHarnessScenarioUsingPOSTRequest(@JsonProperty("TestHarnessScenarioModel") org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel, @JsonProperty("apiKey") String apiKey) {
+        this.testHarnessScenarioModel = testHarnessScenarioModel;
+        this.apiKey = apiKey;
+  }
 }

@@ -15,6 +15,7 @@ public class TrainingSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricDefinitions")
     public MetricDefinition[] metricDefinitions;
+
     public TrainingSpecification withMetricDefinitions(MetricDefinition[] metricDefinitions) {
         this.metricDefinitions = metricDefinitions;
         return this;
@@ -23,6 +24,7 @@ public class TrainingSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedHyperParameters")
     public HyperParameterSpecification[] supportedHyperParameters;
+
     public TrainingSpecification withSupportedHyperParameters(HyperParameterSpecification[] supportedHyperParameters) {
         this.supportedHyperParameters = supportedHyperParameters;
         return this;
@@ -30,6 +32,7 @@ public class TrainingSpecification {
     
     @JsonProperty("SupportedTrainingInstanceTypes")
     public TrainingInstanceTypeEnum[] supportedTrainingInstanceTypes;
+
     public TrainingSpecification withSupportedTrainingInstanceTypes(TrainingInstanceTypeEnum[] supportedTrainingInstanceTypes) {
         this.supportedTrainingInstanceTypes = supportedTrainingInstanceTypes;
         return this;
@@ -38,6 +41,7 @@ public class TrainingSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedTuningJobObjectiveMetrics")
     public HyperParameterTuningJobObjective[] supportedTuningJobObjectiveMetrics;
+
     public TrainingSpecification withSupportedTuningJobObjectiveMetrics(HyperParameterTuningJobObjective[] supportedTuningJobObjectiveMetrics) {
         this.supportedTuningJobObjectiveMetrics = supportedTuningJobObjectiveMetrics;
         return this;
@@ -46,6 +50,7 @@ public class TrainingSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportsDistributedTraining")
     public Boolean supportsDistributedTraining;
+
     public TrainingSpecification withSupportsDistributedTraining(Boolean supportsDistributedTraining) {
         this.supportsDistributedTraining = supportsDistributedTraining;
         return this;
@@ -53,6 +58,7 @@ public class TrainingSpecification {
     
     @JsonProperty("TrainingChannels")
     public ChannelSpecification[] trainingChannels;
+
     public TrainingSpecification withTrainingChannels(ChannelSpecification[] trainingChannels) {
         this.trainingChannels = trainingChannels;
         return this;
@@ -60,6 +66,7 @@ public class TrainingSpecification {
     
     @JsonProperty("TrainingImage")
     public String trainingImage;
+
     public TrainingSpecification withTrainingImage(String trainingImage) {
         this.trainingImage = trainingImage;
         return this;
@@ -68,9 +75,15 @@ public class TrainingSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingImageDigest")
     public String trainingImageDigest;
+
     public TrainingSpecification withTrainingImageDigest(String trainingImageDigest) {
         this.trainingImageDigest = trainingImageDigest;
         return this;
     }
     
+    public TrainingSpecification(@JsonProperty("SupportedTrainingInstanceTypes") TrainingInstanceTypeEnum[] supportedTrainingInstanceTypes, @JsonProperty("TrainingChannels") ChannelSpecification[] trainingChannels, @JsonProperty("TrainingImage") String trainingImage) {
+        this.supportedTrainingInstanceTypes = supportedTrainingInstanceTypes;
+        this.trainingChannels = trainingChannels;
+        this.trainingImage = trainingImage;
+  }
 }

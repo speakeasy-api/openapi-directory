@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSnapshotResponse {
@@ -12,6 +13,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object clientException;
+
     public CreateSnapshotResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSnapshotResponse {
     
     
     public String contentType;
+
     public CreateSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSnapshotResult createSnapshotResult;
+
     public CreateSnapshotResponse withCreateSnapshotResult(org.openapis.openapi.models.shared.CreateSnapshotResult createSnapshotResult) {
         this.createSnapshotResult = createSnapshotResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public CreateSnapshotResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateSnapshotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -56,6 +62,7 @@ public class CreateSnapshotResponse {
     
     
     public Integer statusCode;
+
     public CreateSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateSnapshotResponse {
      */
     
     public Object serviceException;
+
     public CreateSnapshotResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -83,9 +92,14 @@ public class CreateSnapshotResponse {
      */
     
     public Object snapshotLimitExceededException;
+
     public CreateSnapshotResponse withSnapshotLimitExceededException(Object snapshotLimitExceededException) {
         this.snapshotLimitExceededException = snapshotLimitExceededException;
         return this;
     }
     
+    public CreateSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

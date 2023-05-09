@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePermissionResponse {
     
     public String contentType;
+
     public DeletePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePermissionResponse {
      */
     
     public Object invalidArnException;
+
     public DeletePermissionResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePermissionResponse {
      */
     
     public Object invalidStateException;
+
     public DeletePermissionResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePermissionResponse {
      */
     
     public Object requestFailedException;
+
     public DeletePermissionResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePermissionResponse {
     
     
     public Integer statusCode;
+
     public DeletePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeletePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeletePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

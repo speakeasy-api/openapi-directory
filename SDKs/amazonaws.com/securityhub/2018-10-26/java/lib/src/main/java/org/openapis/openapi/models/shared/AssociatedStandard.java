@@ -15,9 +15,11 @@ public class AssociatedStandard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsId")
     public String standardsId;
+
     public AssociatedStandard withStandardsId(String standardsId) {
         this.standardsId = standardsId;
         return this;
     }
     
+    public AssociatedStandard(){}
 }

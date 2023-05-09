@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ServiceInstanceSummary {
     @JsonProperty("arn")
     public String arn;
+
     public ServiceInstanceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ServiceInstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ServiceInstanceSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class ServiceInstanceSummary {
     
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public ServiceInstanceSummary withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -43,6 +46,7 @@ public class ServiceInstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public ServiceInstanceSummary withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -50,6 +54,7 @@ public class ServiceInstanceSummary {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public ServiceInstanceSummary withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -59,6 +64,7 @@ public class ServiceInstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentAttemptedAt")
     public OffsetDateTime lastDeploymentAttemptedAt;
+
     public ServiceInstanceSummary withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
         this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
         return this;
@@ -68,6 +74,7 @@ public class ServiceInstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentSucceededAt")
     public OffsetDateTime lastDeploymentSucceededAt;
+
     public ServiceInstanceSummary withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
         this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
         return this;
@@ -75,6 +82,7 @@ public class ServiceInstanceSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ServiceInstanceSummary withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +90,7 @@ public class ServiceInstanceSummary {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ServiceInstanceSummary withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -89,6 +98,7 @@ public class ServiceInstanceSummary {
     
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public ServiceInstanceSummary withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -96,6 +106,7 @@ public class ServiceInstanceSummary {
     
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public ServiceInstanceSummary withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
@@ -103,9 +114,23 @@ public class ServiceInstanceSummary {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public ServiceInstanceSummary withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ServiceInstanceSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deploymentStatus") DeploymentStatusEnum deploymentStatus, @JsonProperty("environmentName") String environmentName, @JsonProperty("lastDeploymentAttemptedAt") OffsetDateTime lastDeploymentAttemptedAt, @JsonProperty("lastDeploymentSucceededAt") OffsetDateTime lastDeploymentSucceededAt, @JsonProperty("name") String name, @JsonProperty("serviceName") String serviceName, @JsonProperty("templateMajorVersion") String templateMajorVersion, @JsonProperty("templateMinorVersion") String templateMinorVersion, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.deploymentStatus = deploymentStatus;
+        this.environmentName = environmentName;
+        this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
+        this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
+        this.name = name;
+        this.serviceName = serviceName;
+        this.templateMajorVersion = templateMajorVersion;
+        this.templateMinorVersion = templateMinorVersion;
+        this.templateName = templateName;
+  }
 }

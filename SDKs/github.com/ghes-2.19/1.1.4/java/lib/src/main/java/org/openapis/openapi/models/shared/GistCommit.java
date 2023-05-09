@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GistCommit {
     @JsonProperty("change_status")
     public GistCommitChangeStatus changeStatus;
+
     public GistCommit withChangeStatus(GistCommitChangeStatus changeStatus) {
         this.changeStatus = changeStatus;
         return this;
@@ -26,6 +27,7 @@ public class GistCommit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("committed_at")
     public OffsetDateTime committedAt;
+
     public GistCommit withCommittedAt(OffsetDateTime committedAt) {
         this.committedAt = committedAt;
         return this;
@@ -33,6 +35,7 @@ public class GistCommit {
     
     @JsonProperty("url")
     public String url;
+
     public GistCommit withUrl(String url) {
         this.url = url;
         return this;
@@ -43,6 +46,7 @@ public class GistCommit {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public GistCommit withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
@@ -50,9 +54,17 @@ public class GistCommit {
     
     @JsonProperty("version")
     public String version;
+
     public GistCommit withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GistCommit(@JsonProperty("change_status") GistCommitChangeStatus changeStatus, @JsonProperty("committed_at") OffsetDateTime committedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user, @JsonProperty("version") String version) {
+        this.changeStatus = changeStatus;
+        this.committedAt = committedAt;
+        this.url = url;
+        this.user = user;
+        this.version = version;
+  }
 }

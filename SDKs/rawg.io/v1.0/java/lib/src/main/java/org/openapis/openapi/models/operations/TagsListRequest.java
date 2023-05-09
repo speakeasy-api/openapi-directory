@@ -12,6 +12,7 @@ public class TagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public TagsListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class TagsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public TagsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public TagsListRequest(){}
 }

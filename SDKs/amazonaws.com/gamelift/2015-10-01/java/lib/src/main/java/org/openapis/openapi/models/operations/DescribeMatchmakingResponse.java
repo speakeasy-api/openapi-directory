@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMatchmakingResponse {
     
     public String contentType;
+
     public DescribeMatchmakingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMatchmakingResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMatchmakingOutput describeMatchmakingOutput;
+
     public DescribeMatchmakingResponse withDescribeMatchmakingOutput(org.openapis.openapi.models.shared.DescribeMatchmakingOutput describeMatchmakingOutput) {
         this.describeMatchmakingOutput = describeMatchmakingOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMatchmakingResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeMatchmakingResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMatchmakingResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeMatchmakingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMatchmakingResponse {
     
     
     public Integer statusCode;
+
     public DescribeMatchmakingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeMatchmakingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMatchmakingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeMatchmakingResponse {
      */
     
     public Object unsupportedRegionException;
+
     public DescribeMatchmakingResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
     }
     
+    public DescribeMatchmakingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

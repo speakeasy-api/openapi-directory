@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegistryRollbackApiSpecResponse {
@@ -12,6 +13,7 @@ public class RegistryRollbackApiSpecResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiSpecOutput apiSpec;
+
     public RegistryRollbackApiSpecResponse withApiSpec(org.openapis.openapi.models.shared.ApiSpecOutput apiSpec) {
         this.apiSpec = apiSpec;
         return this;
@@ -19,6 +21,7 @@ public class RegistryRollbackApiSpecResponse {
     
     
     public String contentType;
+
     public RegistryRollbackApiSpecResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegistryRollbackApiSpecResponse {
      */
     
     public org.openapis.openapi.models.shared.Status status;
+
     public RegistryRollbackApiSpecResponse withStatus(org.openapis.openapi.models.shared.Status status) {
         this.status = status;
         return this;
@@ -36,6 +40,7 @@ public class RegistryRollbackApiSpecResponse {
     
     
     public Integer statusCode;
+
     public RegistryRollbackApiSpecResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RegistryRollbackApiSpecResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegistryRollbackApiSpecResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegistryRollbackApiSpecResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

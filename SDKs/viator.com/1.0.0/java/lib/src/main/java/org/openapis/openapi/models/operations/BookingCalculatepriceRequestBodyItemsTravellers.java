@@ -17,9 +17,11 @@ public class BookingCalculatepriceRequestBodyItemsTravellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandId")
     public Long bandId;
+
     public BookingCalculatepriceRequestBodyItemsTravellers withBandId(Long bandId) {
         this.bandId = bandId;
         return this;
     }
     
+    public BookingCalculatepriceRequestBodyItemsTravellers(){}
 }

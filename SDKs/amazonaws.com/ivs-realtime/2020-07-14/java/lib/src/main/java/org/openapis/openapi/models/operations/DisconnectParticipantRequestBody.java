@@ -14,6 +14,7 @@ public class DisconnectParticipantRequestBody {
      */
     @JsonProperty("participantId")
     public String participantId;
+
     public DisconnectParticipantRequestBody withParticipantId(String participantId) {
         this.participantId = participantId;
         return this;
@@ -25,6 +26,7 @@ public class DisconnectParticipantRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public DisconnectParticipantRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
@@ -35,9 +37,14 @@ public class DisconnectParticipantRequestBody {
      */
     @JsonProperty("stageArn")
     public String stageArn;
+
     public DisconnectParticipantRequestBody withStageArn(String stageArn) {
         this.stageArn = stageArn;
         return this;
     }
     
+    public DisconnectParticipantRequestBody(@JsonProperty("participantId") String participantId, @JsonProperty("stageArn") String stageArn) {
+        this.participantId = participantId;
+        this.stageArn = stageArn;
+  }
 }

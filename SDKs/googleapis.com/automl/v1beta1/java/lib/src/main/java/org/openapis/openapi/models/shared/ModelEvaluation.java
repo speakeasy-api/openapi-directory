@@ -18,6 +18,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecId")
     public String annotationSpecId;
+
     public ModelEvaluation withAnnotationSpecId(String annotationSpecId) {
         this.annotationSpecId = annotationSpecId;
         return this;
@@ -29,6 +30,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classificationEvaluationMetrics")
     public ClassificationEvaluationMetrics classificationEvaluationMetrics;
+
     public ModelEvaluation withClassificationEvaluationMetrics(ClassificationEvaluationMetrics classificationEvaluationMetrics) {
         this.classificationEvaluationMetrics = classificationEvaluationMetrics;
         return this;
@@ -40,6 +42,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ModelEvaluation withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ModelEvaluation withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedExampleCount")
     public Integer evaluatedExampleCount;
+
     public ModelEvaluation withEvaluatedExampleCount(Integer evaluatedExampleCount) {
         this.evaluatedExampleCount = evaluatedExampleCount;
         return this;
@@ -73,6 +78,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageObjectDetectionEvaluationMetrics")
     public ImageObjectDetectionEvaluationMetrics imageObjectDetectionEvaluationMetrics;
+
     public ModelEvaluation withImageObjectDetectionEvaluationMetrics(ImageObjectDetectionEvaluationMetrics imageObjectDetectionEvaluationMetrics) {
         this.imageObjectDetectionEvaluationMetrics = imageObjectDetectionEvaluationMetrics;
         return this;
@@ -84,6 +90,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ModelEvaluation withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regressionEvaluationMetrics")
     public RegressionEvaluationMetrics regressionEvaluationMetrics;
+
     public ModelEvaluation withRegressionEvaluationMetrics(RegressionEvaluationMetrics regressionEvaluationMetrics) {
         this.regressionEvaluationMetrics = regressionEvaluationMetrics;
         return this;
@@ -106,6 +114,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textExtractionEvaluationMetrics")
     public TextExtractionEvaluationMetrics textExtractionEvaluationMetrics;
+
     public ModelEvaluation withTextExtractionEvaluationMetrics(TextExtractionEvaluationMetrics textExtractionEvaluationMetrics) {
         this.textExtractionEvaluationMetrics = textExtractionEvaluationMetrics;
         return this;
@@ -117,6 +126,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSentimentEvaluationMetrics")
     public TextSentimentEvaluationMetrics textSentimentEvaluationMetrics;
+
     public ModelEvaluation withTextSentimentEvaluationMetrics(TextSentimentEvaluationMetrics textSentimentEvaluationMetrics) {
         this.textSentimentEvaluationMetrics = textSentimentEvaluationMetrics;
         return this;
@@ -128,6 +138,7 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translationEvaluationMetrics")
     public TranslationEvaluationMetrics translationEvaluationMetrics;
+
     public ModelEvaluation withTranslationEvaluationMetrics(TranslationEvaluationMetrics translationEvaluationMetrics) {
         this.translationEvaluationMetrics = translationEvaluationMetrics;
         return this;
@@ -139,9 +150,11 @@ public class ModelEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoObjectTrackingEvaluationMetrics")
     public VideoObjectTrackingEvaluationMetrics videoObjectTrackingEvaluationMetrics;
+
     public ModelEvaluation withVideoObjectTrackingEvaluationMetrics(VideoObjectTrackingEvaluationMetrics videoObjectTrackingEvaluationMetrics) {
         this.videoObjectTrackingEvaluationMetrics = videoObjectTrackingEvaluationMetrics;
         return this;
     }
     
+    public ModelEvaluation(){}
 }

@@ -15,6 +15,7 @@ public class GetPotPayments200ApplicationJSON {
      */
     @JsonProperty("next_page_available")
     public Boolean nextPageAvailable;
+
     public GetPotPayments200ApplicationJSON withNextPageAvailable(Boolean nextPageAvailable) {
         this.nextPageAvailable = nextPageAvailable;
         return this;
@@ -22,6 +23,7 @@ public class GetPotPayments200ApplicationJSON {
     
     @JsonProperty("payments")
     public GetPotPayments200ApplicationJSONRootTypeForPayments[] payments;
+
     public GetPotPayments200ApplicationJSON withPayments(GetPotPayments200ApplicationJSONRootTypeForPayments[] payments) {
         this.payments = payments;
         return this;
@@ -29,9 +31,15 @@ public class GetPotPayments200ApplicationJSON {
     
     @JsonProperty("pot_id")
     public String potId;
+
     public GetPotPayments200ApplicationJSON withPotId(String potId) {
         this.potId = potId;
         return this;
     }
     
+    public GetPotPayments200ApplicationJSON(@JsonProperty("next_page_available") Boolean nextPageAvailable, @JsonProperty("payments") GetPotPayments200ApplicationJSONRootTypeForPayments[] payments, @JsonProperty("pot_id") String potId) {
+        this.nextPageAvailable = nextPageAvailable;
+        this.payments = payments;
+        this.potId = potId;
+  }
 }

@@ -15,9 +15,11 @@ public class DeletePolicyModule200ApplicationJSONResultAstPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public DeletePolicyModule200ApplicationJSONResultAstPackagePath[] path;
+
     public DeletePolicyModule200ApplicationJSONResultAstPackage withPath(DeletePolicyModule200ApplicationJSONResultAstPackagePath[] path) {
         this.path = path;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONResultAstPackage(){}
 }

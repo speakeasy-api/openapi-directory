@@ -63,7 +63,7 @@ public class Pca {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPersonalCurrentAccountsResponse res = new org.openapis.openapi.models.operations.GetPersonalCurrentAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetPersonalCurrentAccountsResponse res = new org.openapis.openapi.models.operations.GetPersonalCurrentAccountsResponse(contentType, httpRes.statusCode()) {{
             getPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = null;
             fourHundredErrorObject = null;
             fourHundredAndEightErrorObject = null;
@@ -72,8 +72,6 @@ public class Pca {
             fiveHundredAndThreeErrorObject = null;
             errorObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +169,9 @@ public class Pca {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadPersonalCurrentAccountsResponse res = new org.openapis.openapi.models.operations.HeadPersonalCurrentAccountsResponse() {{
+        org.openapis.openapi.models.operations.HeadPersonalCurrentAccountsResponse res = new org.openapis.openapi.models.operations.HeadPersonalCurrentAccountsResponse(contentType, httpRes.statusCode()) {{
             noResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

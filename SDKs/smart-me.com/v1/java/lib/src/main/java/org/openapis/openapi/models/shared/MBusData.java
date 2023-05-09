@@ -27,6 +27,7 @@ public class MBusData {
     @JsonProperty("Date")
     @SpeakeasyMetadata("form:name=Date")
     public OffsetDateTime date;
+
     public MBusData withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -40,9 +41,11 @@ public class MBusData {
     @JsonProperty("Telegram")
     @SpeakeasyMetadata("form:name=Telegram")
     public String telegram;
+
     public MBusData withTelegram(String telegram) {
         this.telegram = telegram;
         return this;
     }
     
+    public MBusData(){}
 }

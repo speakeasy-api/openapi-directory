@@ -15,6 +15,7 @@ public class EventSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataResources")
     public DataResource[] dataResources;
+
     public EventSelector withDataResources(DataResource[] dataResources) {
         this.dataResources = dataResources;
         return this;
@@ -23,6 +24,7 @@ public class EventSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeManagementEventSources")
     public String[] excludeManagementEventSources;
+
     public EventSelector withExcludeManagementEventSources(String[] excludeManagementEventSources) {
         this.excludeManagementEventSources = excludeManagementEventSources;
         return this;
@@ -31,6 +33,7 @@ public class EventSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeManagementEvents")
     public Boolean includeManagementEvents;
+
     public EventSelector withIncludeManagementEvents(Boolean includeManagementEvents) {
         this.includeManagementEvents = includeManagementEvents;
         return this;
@@ -39,9 +42,11 @@ public class EventSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadWriteType")
     public ReadWriteTypeEnum readWriteType;
+
     public EventSelector withReadWriteType(ReadWriteTypeEnum readWriteType) {
         this.readWriteType = readWriteType;
         return this;
     }
     
+    public EventSelector(){}
 }

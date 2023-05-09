@@ -18,9 +18,11 @@ public class LayoutSections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public Section[] sections;
+
     public LayoutSections withSections(Section[] sections) {
         this.sections = sections;
         return this;
     }
     
+    public LayoutSections(){}
 }

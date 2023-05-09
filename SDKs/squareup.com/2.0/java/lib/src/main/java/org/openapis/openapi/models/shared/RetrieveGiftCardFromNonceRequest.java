@@ -15,9 +15,13 @@ public class RetrieveGiftCardFromNonceRequest {
      */
     @JsonProperty("nonce")
     public String nonce;
+
     public RetrieveGiftCardFromNonceRequest withNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     
+    public RetrieveGiftCardFromNonceRequest(@JsonProperty("nonce") String nonce) {
+        this.nonce = nonce;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCategoriesRequest {
@@ -12,6 +13,7 @@ public class GetChannelCategoriesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
     public String[] acceptEncoding;
+
     public GetChannelCategoriesRequest withAcceptEncoding(String[] acceptEncoding) {
         this.acceptEncoding = acceptEncoding;
         return this;
@@ -22,9 +24,14 @@ public class GetChannelCategoriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
     public String channelId;
+
     public GetChannelCategoriesRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
     
+    public GetChannelCategoriesRequest(@JsonProperty("Accept-Encoding") String[] acceptEncoding, @JsonProperty("channelId") String channelId) {
+        this.acceptEncoding = acceptEncoding;
+        this.channelId = channelId;
+  }
 }

@@ -15,9 +15,11 @@ public class ModelMetadataSearchExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ModelMetadataFilter[] filters;
+
     public ModelMetadataSearchExpression withFilters(ModelMetadataFilter[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public ModelMetadataSearchExpression(){}
 }

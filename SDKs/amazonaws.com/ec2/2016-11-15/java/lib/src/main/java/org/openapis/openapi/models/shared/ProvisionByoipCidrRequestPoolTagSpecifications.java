@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProvisionByoipCidrRequestPoolTagSpecifications {
     
     public ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum resourceType;
+
     public ProvisionByoipCidrRequestPoolTagSpecifications withResourceType(ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class ProvisionByoipCidrRequestPoolTagSpecifications {
     
     
     public ProvisionByoipCidrRequestPoolTagSpecificationsTags[] tags;
+
     public ProvisionByoipCidrRequestPoolTagSpecifications withTags(ProvisionByoipCidrRequestPoolTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ProvisionByoipCidrRequestPoolTagSpecifications(){}
 }

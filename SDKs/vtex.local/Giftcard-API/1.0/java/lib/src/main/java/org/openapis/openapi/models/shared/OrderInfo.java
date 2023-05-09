@@ -12,6 +12,7 @@ public class OrderInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cart")
     public Cart1 cart;
+
     public OrderInfo withCart(Cart1 cart) {
         this.cart = cart;
         return this;
@@ -20,6 +21,7 @@ public class OrderInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientProfile")
     public ClientProfile clientProfile;
+
     public OrderInfo withClientProfile(ClientProfile clientProfile) {
         this.clientProfile = clientProfile;
         return this;
@@ -28,6 +30,7 @@ public class OrderInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderId")
     public String orderId;
+
     public OrderInfo withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -36,6 +39,7 @@ public class OrderInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public Integer sequence;
+
     public OrderInfo withSequence(Integer sequence) {
         this.sequence = sequence;
         return this;
@@ -44,9 +48,11 @@ public class OrderInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Shipping shipping;
+
     public OrderInfo withShipping(Shipping shipping) {
         this.shipping = shipping;
         return this;
     }
     
+    public OrderInfo(){}
 }

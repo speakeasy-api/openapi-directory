@@ -12,17 +12,19 @@ public class UpdateStorageVirtualMachineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveDirectoryConfiguration")
     public UpdateSvmActiveDirectoryConfiguration activeDirectoryConfiguration;
+
     public UpdateStorageVirtualMachineRequest withActiveDirectoryConfiguration(UpdateSvmActiveDirectoryConfiguration activeDirectoryConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         return this;
     }
     
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateStorageVirtualMachineRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -30,6 +32,7 @@ public class UpdateStorageVirtualMachineRequest {
     
     @JsonProperty("StorageVirtualMachineId")
     public String storageVirtualMachineId;
+
     public UpdateStorageVirtualMachineRequest withStorageVirtualMachineId(String storageVirtualMachineId) {
         this.storageVirtualMachineId = storageVirtualMachineId;
         return this;
@@ -38,9 +41,13 @@ public class UpdateStorageVirtualMachineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SvmAdminPassword")
     public String svmAdminPassword;
+
     public UpdateStorageVirtualMachineRequest withSvmAdminPassword(String svmAdminPassword) {
         this.svmAdminPassword = svmAdminPassword;
         return this;
     }
     
+    public UpdateStorageVirtualMachineRequest(@JsonProperty("StorageVirtualMachineId") String storageVirtualMachineId) {
+        this.storageVirtualMachineId = storageVirtualMachineId;
+  }
 }

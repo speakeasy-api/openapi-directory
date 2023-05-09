@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedDBInstancesOfferingsMessage {
     
     public String dbInstanceClass;
+
     public DescribeReservedDBInstancesOfferingsMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -16,6 +17,7 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public String duration;
+
     public DescribeReservedDBInstancesOfferingsMessage withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -23,6 +25,7 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeReservedDBInstancesOfferingsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public String marker;
+
     public DescribeReservedDBInstancesOfferingsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +41,7 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public Long maxRecords;
+
     public DescribeReservedDBInstancesOfferingsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -44,6 +49,7 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public Boolean multiAZ;
+
     public DescribeReservedDBInstancesOfferingsMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -51,6 +57,7 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public String offeringType;
+
     public DescribeReservedDBInstancesOfferingsMessage withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -58,6 +65,7 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public String productDescription;
+
     public DescribeReservedDBInstancesOfferingsMessage withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -65,9 +73,11 @@ public class DescribeReservedDBInstancesOfferingsMessage {
     
     
     public String reservedDBInstancesOfferingId;
+
     public DescribeReservedDBInstancesOfferingsMessage withReservedDBInstancesOfferingId(String reservedDBInstancesOfferingId) {
         this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
         return this;
     }
     
+    public DescribeReservedDBInstancesOfferingsMessage(){}
 }

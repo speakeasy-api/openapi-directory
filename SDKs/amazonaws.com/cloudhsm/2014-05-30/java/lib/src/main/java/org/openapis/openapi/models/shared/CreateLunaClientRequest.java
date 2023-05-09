@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLunaClientRequest {
     @JsonProperty("Certificate")
     public String certificate;
+
     public CreateLunaClientRequest withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -22,9 +23,13 @@ public class CreateLunaClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public CreateLunaClientRequest withLabel(String label) {
         this.label = label;
         return this;
     }
     
+    public CreateLunaClientRequest(@JsonProperty("Certificate") String certificate) {
+        this.certificate = certificate;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTypedLinkFacetNamesResponse {
@@ -12,6 +13,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTypedLinkFacetNamesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTypedLinkFacetNamesResponse {
     
     
     public String contentType;
+
     public ListTypedLinkFacetNamesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object internalServiceException;
+
     public ListTypedLinkFacetNamesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object invalidArnException;
+
     public ListTypedLinkFacetNamesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListTypedLinkFacetNamesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object limitExceededException;
+
     public ListTypedLinkFacetNamesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTypedLinkFacetNamesResponse listTypedLinkFacetNamesResponse;
+
     public ListTypedLinkFacetNamesResponse withListTypedLinkFacetNamesResponse(org.openapis.openapi.models.shared.ListTypedLinkFacetNamesResponse listTypedLinkFacetNamesResponse) {
         this.listTypedLinkFacetNamesResponse = listTypedLinkFacetNamesResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListTypedLinkFacetNamesResponse {
     
     
     public Integer statusCode;
+
     public ListTypedLinkFacetNamesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListTypedLinkFacetNamesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTypedLinkFacetNamesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTypedLinkFacetNamesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object retryableConflictException;
+
     public ListTypedLinkFacetNamesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ListTypedLinkFacetNamesResponse {
      */
     
     public Object validationException;
+
     public ListTypedLinkFacetNamesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTypedLinkFacetNamesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GenerateTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public S3Location s3Location;
+
     public GenerateTemplateResponse withS3Location(S3Location s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public GenerateTemplateResponse(){}
 }

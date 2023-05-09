@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCoipPoolsResult {
     
     public DescribeCoipPoolsResultCoipPools[] coipPools;
+
     public DescribeCoipPoolsResult withCoipPools(DescribeCoipPoolsResultCoipPools[] coipPools) {
         this.coipPools = coipPools;
         return this;
@@ -19,9 +20,11 @@ public class DescribeCoipPoolsResult {
     
     
     public String nextToken;
+
     public DescribeCoipPoolsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCoipPoolsResult(){}
 }

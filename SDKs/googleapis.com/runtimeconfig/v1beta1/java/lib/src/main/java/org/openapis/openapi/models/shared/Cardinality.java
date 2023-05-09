@@ -18,6 +18,7 @@ public class Cardinality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public Cardinality withNumber(Integer number) {
         this.number = number;
         return this;
@@ -29,9 +30,11 @@ public class Cardinality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Cardinality withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public Cardinality(){}
 }

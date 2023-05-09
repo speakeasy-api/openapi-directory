@@ -12,9 +12,11 @@ package org.openapis.openapi.models.operations;
 public class GeneratePartialYaraRule200Wildcard {
     
     public org.openapis.openapi.models.shared.Yara rule;
+
     public GeneratePartialYaraRule200Wildcard withRule(org.openapis.openapi.models.shared.Yara rule) {
         this.rule = rule;
         return this;
     }
     
+    public GeneratePartialYaraRule200Wildcard(){}
 }

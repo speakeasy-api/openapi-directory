@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeSigningConfig {
     @JsonProperty("AllowedPublishers")
     public AllowedPublishers allowedPublishers;
+
     public CodeSigningConfig withAllowedPublishers(AllowedPublishers allowedPublishers) {
         this.allowedPublishers = allowedPublishers;
         return this;
@@ -21,6 +22,7 @@ public class CodeSigningConfig {
     
     @JsonProperty("CodeSigningConfigArn")
     public String codeSigningConfigArn;
+
     public CodeSigningConfig withCodeSigningConfigArn(String codeSigningConfigArn) {
         this.codeSigningConfigArn = codeSigningConfigArn;
         return this;
@@ -28,6 +30,7 @@ public class CodeSigningConfig {
     
     @JsonProperty("CodeSigningConfigId")
     public String codeSigningConfigId;
+
     public CodeSigningConfig withCodeSigningConfigId(String codeSigningConfigId) {
         this.codeSigningConfigId = codeSigningConfigId;
         return this;
@@ -35,6 +38,7 @@ public class CodeSigningConfig {
     
     @JsonProperty("CodeSigningPolicies")
     public CodeSigningPolicies codeSigningPolicies;
+
     public CodeSigningConfig withCodeSigningPolicies(CodeSigningPolicies codeSigningPolicies) {
         this.codeSigningPolicies = codeSigningPolicies;
         return this;
@@ -43,6 +47,7 @@ public class CodeSigningConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CodeSigningConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -50,9 +55,17 @@ public class CodeSigningConfig {
     
     @JsonProperty("LastModified")
     public String lastModified;
+
     public CodeSigningConfig withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
     }
     
+    public CodeSigningConfig(@JsonProperty("AllowedPublishers") AllowedPublishers allowedPublishers, @JsonProperty("CodeSigningConfigArn") String codeSigningConfigArn, @JsonProperty("CodeSigningConfigId") String codeSigningConfigId, @JsonProperty("CodeSigningPolicies") CodeSigningPolicies codeSigningPolicies, @JsonProperty("LastModified") String lastModified) {
+        this.allowedPublishers = allowedPublishers;
+        this.codeSigningConfigArn = codeSigningConfigArn;
+        this.codeSigningConfigId = codeSigningConfigId;
+        this.codeSigningPolicies = codeSigningPolicies;
+        this.lastModified = lastModified;
+  }
 }

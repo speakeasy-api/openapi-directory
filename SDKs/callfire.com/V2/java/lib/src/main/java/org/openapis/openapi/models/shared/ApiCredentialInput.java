@@ -18,6 +18,7 @@ public class ApiCredentialInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ApiCredentialInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +30,7 @@ public class ApiCredentialInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ApiCredentialInput withId(Long id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class ApiCredentialInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiCredentialInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApiCredentialInput(){}
 }

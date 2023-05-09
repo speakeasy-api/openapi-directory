@@ -15,6 +15,7 @@ public class ComplianceItemEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public java.util.Map<String, String> details;
+
     public ComplianceItemEntry withDetails(java.util.Map<String, String> details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class ComplianceItemEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ComplianceItemEntry withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class ComplianceItemEntry {
     
     @JsonProperty("Severity")
     public ComplianceSeverityEnum severity;
+
     public ComplianceItemEntry withSeverity(ComplianceSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -37,6 +40,7 @@ public class ComplianceItemEntry {
     
     @JsonProperty("Status")
     public ComplianceStatusEnum status;
+
     public ComplianceItemEntry withStatus(ComplianceStatusEnum status) {
         this.status = status;
         return this;
@@ -45,9 +49,14 @@ public class ComplianceItemEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public ComplianceItemEntry withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ComplianceItemEntry(@JsonProperty("Severity") ComplianceSeverityEnum severity, @JsonProperty("Status") ComplianceStatusEnum status) {
+        this.severity = severity;
+        this.status = status;
+  }
 }

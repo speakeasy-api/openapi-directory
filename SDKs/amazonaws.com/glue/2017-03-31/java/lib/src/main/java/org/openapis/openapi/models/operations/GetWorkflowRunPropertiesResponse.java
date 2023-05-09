@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkflowRunPropertiesResponse {
     
     public String contentType;
+
     public GetWorkflowRunPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkflowRunPropertiesResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetWorkflowRunPropertiesResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkflowRunPropertiesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkflowRunPropertiesResponse getWorkflowRunPropertiesResponse;
+
     public GetWorkflowRunPropertiesResponse withGetWorkflowRunPropertiesResponse(org.openapis.openapi.models.shared.GetWorkflowRunPropertiesResponse getWorkflowRunPropertiesResponse) {
         this.getWorkflowRunPropertiesResponse = getWorkflowRunPropertiesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkflowRunPropertiesResponse {
      */
     
     public Object internalServiceException;
+
     public GetWorkflowRunPropertiesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetWorkflowRunPropertiesResponse {
      */
     
     public Object invalidInputException;
+
     public GetWorkflowRunPropertiesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetWorkflowRunPropertiesResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetWorkflowRunPropertiesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetWorkflowRunPropertiesResponse {
     
     
     public Integer statusCode;
+
     public GetWorkflowRunPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetWorkflowRunPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkflowRunPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetWorkflowRunPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class RemixInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAsset")
     public String[] sourceAsset;
+
     public RemixInfo withSourceAsset(String[] sourceAsset) {
         this.sourceAsset = sourceAsset;
         return this;
     }
     
+    public RemixInfo(){}
 }

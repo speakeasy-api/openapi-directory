@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutLexiconResponse {
     
     public String contentType;
+
     public PutLexiconResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutLexiconResponse {
      */
     
     public Object invalidLexiconException;
+
     public PutLexiconResponse withInvalidLexiconException(Object invalidLexiconException) {
         this.invalidLexiconException = invalidLexiconException;
         return this;
@@ -29,6 +32,7 @@ public class PutLexiconResponse {
      */
     
     public Object lexiconSizeExceededException;
+
     public PutLexiconResponse withLexiconSizeExceededException(Object lexiconSizeExceededException) {
         this.lexiconSizeExceededException = lexiconSizeExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutLexiconResponse {
      */
     
     public Object maxLexemeLengthExceededException;
+
     public PutLexiconResponse withMaxLexemeLengthExceededException(Object maxLexemeLengthExceededException) {
         this.maxLexemeLengthExceededException = maxLexemeLengthExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutLexiconResponse {
      */
     
     public Object maxLexiconsNumberExceededException;
+
     public PutLexiconResponse withMaxLexiconsNumberExceededException(Object maxLexiconsNumberExceededException) {
         this.maxLexiconsNumberExceededException = maxLexiconsNumberExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutLexiconResponse {
      */
     
     public java.util.Map<String, Object> putLexiconOutput;
+
     public PutLexiconResponse withPutLexiconOutput(java.util.Map<String, Object> putLexiconOutput) {
         this.putLexiconOutput = putLexiconOutput;
         return this;
@@ -66,6 +73,7 @@ public class PutLexiconResponse {
     
     
     public Integer statusCode;
+
     public PutLexiconResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutLexiconResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutLexiconResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutLexiconResponse {
      */
     
     public Object serviceFailureException;
+
     public PutLexiconResponse withServiceFailureException(Object serviceFailureException) {
         this.serviceFailureException = serviceFailureException;
         return this;
@@ -93,6 +103,7 @@ public class PutLexiconResponse {
      */
     
     public Object unsupportedPlsAlphabetException;
+
     public PutLexiconResponse withUnsupportedPlsAlphabetException(Object unsupportedPlsAlphabetException) {
         this.unsupportedPlsAlphabetException = unsupportedPlsAlphabetException;
         return this;
@@ -103,9 +114,14 @@ public class PutLexiconResponse {
      */
     
     public Object unsupportedPlsLanguageException;
+
     public PutLexiconResponse withUnsupportedPlsLanguageException(Object unsupportedPlsLanguageException) {
         this.unsupportedPlsLanguageException = unsupportedPlsLanguageException;
         return this;
     }
     
+    public PutLexiconResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class Paging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public NextPage next;
+
     public Paging withNext(NextPage next) {
         this.next = next;
         return this;
     }
     
+    public Paging(){}
 }

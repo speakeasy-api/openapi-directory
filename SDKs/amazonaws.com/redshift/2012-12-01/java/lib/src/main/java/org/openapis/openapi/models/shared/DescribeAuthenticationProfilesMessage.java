@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeAuthenticationProfilesMessage {
     
     public String authenticationProfileName;
+
     public DescribeAuthenticationProfilesMessage withAuthenticationProfileName(String authenticationProfileName) {
         this.authenticationProfileName = authenticationProfileName;
         return this;
     }
     
+    public DescribeAuthenticationProfilesMessage(){}
 }

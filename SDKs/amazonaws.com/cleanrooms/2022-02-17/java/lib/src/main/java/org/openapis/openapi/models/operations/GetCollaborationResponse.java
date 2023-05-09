@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCollaborationResponse {
@@ -12,6 +13,7 @@ public class GetCollaborationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCollaborationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCollaborationResponse {
     
     
     public String contentType;
+
     public GetCollaborationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCollaborationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCollaborationOutput getCollaborationOutput;
+
     public GetCollaborationResponse withGetCollaborationOutput(org.openapis.openapi.models.shared.GetCollaborationOutput getCollaborationOutput) {
         this.getCollaborationOutput = getCollaborationOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetCollaborationResponse {
      */
     
     public Object internalServerException;
+
     public GetCollaborationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetCollaborationResponse {
     
     
     public Integer statusCode;
+
     public GetCollaborationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCollaborationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCollaborationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetCollaborationResponse {
      */
     
     public Object throttlingException;
+
     public GetCollaborationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetCollaborationResponse {
      */
     
     public Object validationException;
+
     public GetCollaborationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCollaborationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

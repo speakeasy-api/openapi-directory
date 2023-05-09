@@ -15,6 +15,7 @@ public class TaxonomyCategories200ApplicationJSONDataSubcategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public Long categoryId;
+
     public TaxonomyCategories200ApplicationJSONDataSubcategories withCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -26,6 +27,7 @@ public class TaxonomyCategories200ApplicationJSONDataSubcategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortorder")
     public Long sortorder;
+
     public TaxonomyCategories200ApplicationJSONDataSubcategories withSortorder(Long sortorder) {
         this.sortorder = sortorder;
         return this;
@@ -37,6 +39,7 @@ public class TaxonomyCategories200ApplicationJSONDataSubcategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subCategoryUrlName")
     public String subCategoryUrlName;
+
     public TaxonomyCategories200ApplicationJSONDataSubcategories withSubCategoryUrlName(String subCategoryUrlName) {
         this.subCategoryUrlName = subCategoryUrlName;
         return this;
@@ -48,6 +51,7 @@ public class TaxonomyCategories200ApplicationJSONDataSubcategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subcategoryId")
     public Long subcategoryId;
+
     public TaxonomyCategories200ApplicationJSONDataSubcategories withSubcategoryId(Long subcategoryId) {
         this.subcategoryId = subcategoryId;
         return this;
@@ -59,9 +63,11 @@ public class TaxonomyCategories200ApplicationJSONDataSubcategories {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subcategoryName")
     public String subcategoryName;
+
     public TaxonomyCategories200ApplicationJSONDataSubcategories withSubcategoryName(String subcategoryName) {
         this.subcategoryName = subcategoryName;
         return this;
     }
     
+    public TaxonomyCategories200ApplicationJSONDataSubcategories(){}
 }

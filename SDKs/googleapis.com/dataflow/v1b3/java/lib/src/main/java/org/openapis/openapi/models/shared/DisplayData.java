@@ -18,6 +18,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public DisplayData withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -29,6 +30,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationValue")
     public String durationValue;
+
     public DisplayData withDurationValue(String durationValue) {
         this.durationValue = durationValue;
         return this;
@@ -40,6 +42,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floatValue")
     public Float floatValue;
+
     public DisplayData withFloatValue(Float floatValue) {
         this.floatValue = floatValue;
         return this;
@@ -51,6 +54,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int64Value")
     public String int64Value;
+
     public DisplayData withInt64Value(String int64Value) {
         this.int64Value = int64Value;
         return this;
@@ -62,6 +66,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javaClassValue")
     public String javaClassValue;
+
     public DisplayData withJavaClassValue(String javaClassValue) {
         this.javaClassValue = javaClassValue;
         return this;
@@ -73,6 +78,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DisplayData withKey(String key) {
         this.key = key;
         return this;
@@ -84,6 +90,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public DisplayData withLabel(String label) {
         this.label = label;
         return this;
@@ -95,6 +102,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public DisplayData withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -106,6 +114,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortStrValue")
     public String shortStrValue;
+
     public DisplayData withShortStrValue(String shortStrValue) {
         this.shortStrValue = shortStrValue;
         return this;
@@ -117,6 +126,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strValue")
     public String strValue;
+
     public DisplayData withStrValue(String strValue) {
         this.strValue = strValue;
         return this;
@@ -128,6 +138,7 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampValue")
     public String timestampValue;
+
     public DisplayData withTimestampValue(String timestampValue) {
         this.timestampValue = timestampValue;
         return this;
@@ -139,9 +150,11 @@ public class DisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public DisplayData withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DisplayData(){}
 }

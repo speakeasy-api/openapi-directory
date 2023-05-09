@@ -12,6 +12,7 @@ public class EmbeddedResource {
      */
     
     public String href;
+
     public EmbeddedResource withHref(String href) {
         this.href = href;
         return this;
@@ -22,9 +23,11 @@ public class EmbeddedResource {
      */
     
     public Long id;
+
     public EmbeddedResource withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public EmbeddedResource(){}
 }

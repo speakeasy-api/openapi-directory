@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationFsxLustreResponse {
     
     public String contentType;
+
     public CreateLocationFsxLustreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationFsxLustreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationFsxLustreResponse createLocationFsxLustreResponse;
+
     public CreateLocationFsxLustreResponse withCreateLocationFsxLustreResponse(org.openapis.openapi.models.shared.CreateLocationFsxLustreResponse createLocationFsxLustreResponse) {
         this.createLocationFsxLustreResponse = createLocationFsxLustreResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLocationFsxLustreResponse {
      */
     
     public Object internalException;
+
     public CreateLocationFsxLustreResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLocationFsxLustreResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLocationFsxLustreResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateLocationFsxLustreResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationFsxLustreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateLocationFsxLustreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationFsxLustreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLocationFsxLustreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

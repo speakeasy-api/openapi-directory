@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCaseResponse {
@@ -12,6 +13,7 @@ public class GetCaseResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCaseResponse {
     
     
     public String contentType;
+
     public GetCaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCaseResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCaseResponse getCaseResponse;
+
     public GetCaseResponse withGetCaseResponse(org.openapis.openapi.models.shared.GetCaseResponse getCaseResponse) {
         this.getCaseResponse = getCaseResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCaseResponse {
      */
     
     public Object internalServerException;
+
     public GetCaseResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetCaseResponse {
     
     
     public Integer statusCode;
+
     public GetCaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetCaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetCaseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCaseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetCaseResponse {
      */
     
     public Object throttlingException;
+
     public GetCaseResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetCaseResponse {
      */
     
     public Object validationException;
+
     public GetCaseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

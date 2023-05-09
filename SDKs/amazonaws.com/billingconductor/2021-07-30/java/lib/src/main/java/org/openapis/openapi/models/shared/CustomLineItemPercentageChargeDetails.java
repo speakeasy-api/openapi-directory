@@ -15,6 +15,7 @@ public class CustomLineItemPercentageChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedValues")
     public String[] associatedValues;
+
     public CustomLineItemPercentageChargeDetails withAssociatedValues(String[] associatedValues) {
         this.associatedValues = associatedValues;
         return this;
@@ -22,9 +23,13 @@ public class CustomLineItemPercentageChargeDetails {
     
     @JsonProperty("PercentageValue")
     public Double percentageValue;
+
     public CustomLineItemPercentageChargeDetails withPercentageValue(Double percentageValue) {
         this.percentageValue = percentageValue;
         return this;
     }
     
+    public CustomLineItemPercentageChargeDetails(@JsonProperty("PercentageValue") Double percentageValue) {
+        this.percentageValue = percentageValue;
+  }
 }

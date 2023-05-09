@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListModelBiasJobDefinitionsResponse {
     
     public String contentType;
+
     public ListModelBiasJobDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListModelBiasJobDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListModelBiasJobDefinitionsResponse listModelBiasJobDefinitionsResponse;
+
     public ListModelBiasJobDefinitionsResponse withListModelBiasJobDefinitionsResponse(org.openapis.openapi.models.shared.ListModelBiasJobDefinitionsResponse listModelBiasJobDefinitionsResponse) {
         this.listModelBiasJobDefinitionsResponse = listModelBiasJobDefinitionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListModelBiasJobDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public ListModelBiasJobDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListModelBiasJobDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListModelBiasJobDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListModelBiasJobDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

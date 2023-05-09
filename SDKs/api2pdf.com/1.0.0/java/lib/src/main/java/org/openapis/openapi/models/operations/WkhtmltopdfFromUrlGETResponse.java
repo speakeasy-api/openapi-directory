@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WkhtmltopdfFromUrlGETResponse {
@@ -12,6 +13,7 @@ public class WkhtmltopdfFromUrlGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure;
+
     public WkhtmltopdfFromUrlGETResponse withApiResponseFailure(org.openapis.openapi.models.shared.ApiResponseFailure apiResponseFailure) {
         this.apiResponseFailure = apiResponseFailure;
         return this;
@@ -22,6 +24,7 @@ public class WkhtmltopdfFromUrlGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess;
+
     public WkhtmltopdfFromUrlGETResponse withApiResponseSuccess(org.openapis.openapi.models.shared.ApiResponseSuccess apiResponseSuccess) {
         this.apiResponseSuccess = apiResponseSuccess;
         return this;
@@ -29,6 +32,7 @@ public class WkhtmltopdfFromUrlGETResponse {
     
     
     public String contentType;
+
     public WkhtmltopdfFromUrlGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class WkhtmltopdfFromUrlGETResponse {
     
     
     public Integer statusCode;
+
     public WkhtmltopdfFromUrlGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class WkhtmltopdfFromUrlGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WkhtmltopdfFromUrlGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class WkhtmltopdfFromUrlGETResponse {
      */
     
     public byte[] wkhtmltopdfFromUrlGET200ApplicationPdfBinaryString;
+
     public WkhtmltopdfFromUrlGETResponse withWkhtmltopdfFromUrlGET200ApplicationPdfBinaryString(byte[] wkhtmltopdfFromUrlGET200ApplicationPdfBinaryString) {
         this.wkhtmltopdfFromUrlGET200ApplicationPdfBinaryString = wkhtmltopdfFromUrlGET200ApplicationPdfBinaryString;
         return this;
     }
     
+    public WkhtmltopdfFromUrlGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

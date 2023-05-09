@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfig {
     
     public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers[] classicLoadBalancers;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfig withClassicLoadBalancers(RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfigClassicLoadBalancers[] classicLoadBalancers) {
         this.classicLoadBalancers = classicLoadBalancers;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLoadBalancersConfigClassicLoadBalancersConfig(){}
 }

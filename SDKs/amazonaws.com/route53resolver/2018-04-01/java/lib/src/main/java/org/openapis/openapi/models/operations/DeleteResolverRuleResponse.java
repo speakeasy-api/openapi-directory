@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResolverRuleResponse {
     
     public String contentType;
+
     public DeleteResolverRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResolverRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteResolverRuleResponse deleteResolverRuleResponse;
+
     public DeleteResolverRuleResponse withDeleteResolverRuleResponse(org.openapis.openapi.models.shared.DeleteResolverRuleResponse deleteResolverRuleResponse) {
         this.deleteResolverRuleResponse = deleteResolverRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResolverRuleResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteResolverRuleResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResolverRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteResolverRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResolverRuleResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteResolverRuleResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteResolverRuleResponse {
     
     
     public Integer statusCode;
+
     public DeleteResolverRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteResolverRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResolverRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteResolverRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResolverRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteResolverRuleResponse {
      */
     
     public Object throttlingException;
+
     public DeleteResolverRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteResolverRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

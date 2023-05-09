@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScanTemplateOptions {
     @JsonProperty("acl")
     public java.util.Map<String, Object> acl;
+
     public ScanTemplateOptions withAcl(java.util.Map<String, Object> acl) {
         this.acl = acl;
         return this;
@@ -19,6 +20,7 @@ public class ScanTemplateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScanTemplateOptions withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ScanTemplateOptions {
     
     @JsonProperty("global")
     public Boolean global;
+
     public ScanTemplateOptions withGlobal(Boolean global) {
         this.global = global;
         return this;
@@ -33,6 +36,7 @@ public class ScanTemplateOptions {
     
     @JsonProperty("name")
     public String name;
+
     public ScanTemplateOptions withName(String name) {
         this.name = name;
         return this;
@@ -41,9 +45,15 @@ public class ScanTemplateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public ScanTemplateOptions withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
     }
     
+    public ScanTemplateOptions(@JsonProperty("acl") java.util.Map<String, Object> acl, @JsonProperty("global") Boolean global, @JsonProperty("name") String name) {
+        this.acl = acl;
+        this.global = global;
+        this.name = name;
+  }
 }

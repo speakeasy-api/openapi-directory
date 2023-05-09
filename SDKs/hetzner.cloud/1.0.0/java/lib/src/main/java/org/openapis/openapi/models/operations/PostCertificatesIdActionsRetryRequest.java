@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCertificatesIdActionsRetryRequest {
@@ -12,9 +13,13 @@ public class PostCertificatesIdActionsRetryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostCertificatesIdActionsRetryRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostCertificatesIdActionsRetryRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

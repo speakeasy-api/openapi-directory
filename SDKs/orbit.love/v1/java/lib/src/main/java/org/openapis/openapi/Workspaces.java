@@ -29,10 +29,11 @@ public class Workspaces {
 
     /**
      * Get all workspaces for the current user
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesResponse getWorkspaces() throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesResponse getWorkspaces(org.openapis.openapi.models.operations.GetWorkspacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/workspaces");
         
@@ -41,15 +42,14 @@ public class Workspaces {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesResponse res = new org.openapis.openapi.models.operations.GetWorkspacesResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesResponse res = new org.openapis.openapi.models.operations.GetWorkspacesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,10 +86,8 @@ public class Workspaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceSlugResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceSlugResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspacesWorkspaceSlugResponse res = new org.openapis.openapi.models.operations.GetWorkspacesWorkspaceSlugResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

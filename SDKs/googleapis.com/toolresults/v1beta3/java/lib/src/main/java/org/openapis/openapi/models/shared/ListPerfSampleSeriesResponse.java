@@ -18,9 +18,11 @@ public class ListPerfSampleSeriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perfSampleSeries")
     public PerfSampleSeries[] perfSampleSeries;
+
     public ListPerfSampleSeriesResponse withPerfSampleSeries(PerfSampleSeries[] perfSampleSeries) {
         this.perfSampleSeries = perfSampleSeries;
         return this;
     }
     
+    public ListPerfSampleSeriesResponse(){}
 }

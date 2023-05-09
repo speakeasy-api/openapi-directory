@@ -59,11 +59,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClearTranslationCacheResponse res = new org.openapis.openapi.models.operations.ClearTranslationCacheResponse() {{
+        org.openapis.openapi.models.operations.ClearTranslationCacheResponse res = new org.openapis.openapi.models.operations.ClearTranslationCacheResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContinuousProjectFileStringsResponse res = new org.openapis.openapi.models.operations.GetContinuousProjectFileStringsResponse() {{
+        org.openapis.openapi.models.operations.GetContinuousProjectFileStringsResponse res = new org.openapis.openapi.models.operations.GetContinuousProjectFileStringsResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContinuousProjectStringsResponse res = new org.openapis.openapi.models.operations.GetContinuousProjectStringsResponse() {{
+        org.openapis.openapi.models.operations.GetContinuousProjectStringsResponse res = new org.openapis.openapi.models.operations.GetContinuousProjectStringsResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,11 +173,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentTranslationsResponse res = new org.openapis.openapi.models.operations.GetDocumentTranslationsResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentTranslationsResponse res = new org.openapis.openapi.models.operations.GetDocumentTranslationsResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguageResponse res = new org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguageResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguageResponse res = new org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguageResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,11 +249,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectStringsResponse res = new org.openapis.openapi.models.operations.GetProjectStringsResponse() {{
+        org.openapis.openapi.models.operations.GetProjectStringsResponse res = new org.openapis.openapi.models.operations.GetProjectStringsResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,11 +287,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectStringsForLanguageResponse res = new org.openapis.openapi.models.operations.GetProjectStringsForLanguageResponse() {{
+        org.openapis.openapi.models.operations.GetProjectStringsForLanguageResponse res = new org.openapis.openapi.models.operations.GetProjectStringsForLanguageResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,7 +308,9 @@ public class Strings {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetProjectTranslationsResponse getProjectTranslations(org.openapis.openapi.models.operations.GetProjectTranslationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectTranslationsRequest.class, baseUrl, "/projects/{projectId}/translations", request, null);
@@ -338,11 +326,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectTranslationsResponse res = new org.openapis.openapi.models.operations.GetProjectTranslationsResponse() {{
+        org.openapis.openapi.models.operations.GetProjectTranslationsResponse res = new org.openapis.openapi.models.operations.GetProjectTranslationsResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,7 +347,9 @@ public class Strings {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageResponse getProjectTranslationsForLanguage(org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageRequest.class, baseUrl, "/projects/{projectId}/translations/{language}", request, null);
@@ -377,11 +365,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageResponse res = new org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageResponse() {{
+        org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageResponse res = new org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,11 +409,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStringsResponse res = new org.openapis.openapi.models.operations.GetStringsResponse() {{
+        org.openapis.openapi.models.operations.GetStringsResponse res = new org.openapis.openapi.models.operations.GetStringsResponse(contentType, httpRes.statusCode()) {{
             clientStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,11 +453,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTranslationCacheResponse res = new org.openapis.openapi.models.operations.GetTranslationCacheResponse() {{
+        org.openapis.openapi.models.operations.GetTranslationCacheResponse res = new org.openapis.openapi.models.operations.GetTranslationCacheResponse(contentType, httpRes.statusCode()) {{
             continuousProjectCache = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -515,12 +497,10 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryResponse() {{
+        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryResponse(contentType, httpRes.statusCode()) {{
             asyncOperationStatus = null;
             packageProjectTranslationMemory200ApplicationXMLBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,12 +546,10 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageResponse() {{
+        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageResponse(contentType, httpRes.statusCode()) {{
             asyncOperationStatus = null;
             packageProjectTranslationMemoryForLanguage200ApplicationXMLBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -617,11 +595,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusResponse() {{
+        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusResponse(contentType, httpRes.statusCode()) {{
             asyncOperationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -663,11 +639,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusResponse() {{
+        org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusResponse res = new org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusResponse(contentType, httpRes.statusCode()) {{
             asyncOperationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -709,12 +683,10 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageUserTranslationMemoryResponse res = new org.openapis.openapi.models.operations.PackageUserTranslationMemoryResponse() {{
+        org.openapis.openapi.models.operations.PackageUserTranslationMemoryResponse res = new org.openapis.openapi.models.operations.PackageUserTranslationMemoryResponse(contentType, httpRes.statusCode()) {{
             asyncOperationStatus = null;
             packageUserTranslationMemory200ApplicationXMLBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -760,11 +732,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusResponse res = new org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusResponse() {{
+        org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusResponse res = new org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusResponse(contentType, httpRes.statusCode()) {{
             asyncOperationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -801,11 +771,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostContinuousProjectFileStringsResponse res = new org.openapis.openapi.models.operations.PostContinuousProjectFileStringsResponse() {{
+        org.openapis.openapi.models.operations.PostContinuousProjectFileStringsResponse res = new org.openapis.openapi.models.operations.PostContinuousProjectFileStringsResponse(contentType, httpRes.statusCode()) {{
             stringList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -825,7 +793,9 @@ public class Strings {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.PostStringsResponse postStrings(org.openapis.openapi.models.shared.DeprecatedStringTranslationContent request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/strings");
@@ -843,11 +813,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostStringsResponse res = new org.openapis.openapi.models.operations.PostStringsResponse() {{
+        org.openapis.openapi.models.operations.PostStringsResponse res = new org.openapis.openapi.models.operations.PostStringsResponse(contentType, httpRes.statusCode()) {{
             machineTranslatedStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -889,11 +857,9 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecacheTranslationsResponse res = new org.openapis.openapi.models.operations.RecacheTranslationsResponse() {{
+        org.openapis.openapi.models.operations.RecacheTranslationsResponse res = new org.openapis.openapi.models.operations.RecacheTranslationsResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -931,12 +897,10 @@ public class Strings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTranslationMemoryUnitResponse res = new org.openapis.openapi.models.operations.UpdateTranslationMemoryUnitResponse() {{
+        org.openapis.openapi.models.operations.UpdateTranslationMemoryUnitResponse res = new org.openapis.openapi.models.operations.UpdateTranslationMemoryUnitResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

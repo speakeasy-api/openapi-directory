@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListBranchesForHeadCommitRequest {
@@ -12,6 +13,7 @@ public class ReposListBranchesForHeadCommitRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
     public String commitSha;
+
     public ReposListBranchesForHeadCommitRequest withCommitSha(String commitSha) {
         this.commitSha = commitSha;
         return this;
@@ -19,6 +21,7 @@ public class ReposListBranchesForHeadCommitRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposListBranchesForHeadCommitRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class ReposListBranchesForHeadCommitRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposListBranchesForHeadCommitRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposListBranchesForHeadCommitRequest(@JsonProperty("commit_sha") String commitSha, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.commitSha = commitSha;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

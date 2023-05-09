@@ -15,9 +15,11 @@ public class AudioProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AudioProperty withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AudioProperty(){}
 }

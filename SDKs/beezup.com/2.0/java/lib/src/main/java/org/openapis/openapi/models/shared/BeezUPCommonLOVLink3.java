@@ -17,6 +17,7 @@ public class BeezUPCommonLOVLink3 {
      */
     @JsonProperty("href")
     public String href;
+
     public BeezUPCommonLOVLink3 withHref(String href) {
         this.href = href;
         return this;
@@ -28,9 +29,13 @@ public class BeezUPCommonLOVLink3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public BeezUPCommonHttpMethodEnum method;
+
     public BeezUPCommonLOVLink3 withMethod(BeezUPCommonHttpMethodEnum method) {
         this.method = method;
         return this;
     }
     
+    public BeezUPCommonLOVLink3(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

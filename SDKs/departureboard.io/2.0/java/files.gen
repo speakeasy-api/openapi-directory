@@ -44,4 +44,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNextDeparturesByCRSR
 lib/src/main/java/org/openapis/openapi/models/operations/GetNextDeparturesByCRSResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServiceDetailsByIDRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServiceDetailsByIDResponse.java
+docs/sdk/README.md
+docs/departuresandarrivals/README.md
+docs/fastestandnextdepartures/README.md
+docs/serviceinformation/README.md
 USAGE.md

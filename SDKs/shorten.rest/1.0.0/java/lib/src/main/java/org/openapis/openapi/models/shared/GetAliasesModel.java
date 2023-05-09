@@ -15,6 +15,7 @@ public class GetAliasesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public String[] aliases;
+
     public GetAliasesModel withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -23,9 +24,11 @@ public class GetAliasesModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastId")
     public String lastId;
+
     public GetAliasesModel withLastId(String lastId) {
         this.lastId = lastId;
         return this;
     }
     
+    public GetAliasesModel(){}
 }

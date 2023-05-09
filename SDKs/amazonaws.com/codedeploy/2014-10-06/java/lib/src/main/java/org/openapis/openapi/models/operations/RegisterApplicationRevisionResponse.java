@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterApplicationRevisionResponse {
@@ -12,6 +13,7 @@ public class RegisterApplicationRevisionResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public RegisterApplicationRevisionResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterApplicationRevisionResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public RegisterApplicationRevisionResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterApplicationRevisionResponse {
     
     
     public String contentType;
+
     public RegisterApplicationRevisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RegisterApplicationRevisionResponse {
      */
     
     public Object descriptionTooLongException;
+
     public RegisterApplicationRevisionResponse withDescriptionTooLongException(Object descriptionTooLongException) {
         this.descriptionTooLongException = descriptionTooLongException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterApplicationRevisionResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public RegisterApplicationRevisionResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterApplicationRevisionResponse {
      */
     
     public Object invalidRevisionException;
+
     public RegisterApplicationRevisionResponse withInvalidRevisionException(Object invalidRevisionException) {
         this.invalidRevisionException = invalidRevisionException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterApplicationRevisionResponse {
      */
     
     public Object revisionRequiredException;
+
     public RegisterApplicationRevisionResponse withRevisionRequiredException(Object revisionRequiredException) {
         this.revisionRequiredException = revisionRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class RegisterApplicationRevisionResponse {
     
     
     public Integer statusCode;
+
     public RegisterApplicationRevisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RegisterApplicationRevisionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterApplicationRevisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterApplicationRevisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

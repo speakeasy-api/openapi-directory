@@ -18,6 +18,7 @@ public class HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public HTTPGetAction withHost(String host) {
         this.host = host;
         return this;
@@ -29,6 +30,7 @@ public class HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpHeaders")
     public HTTPHeader[] httpHeaders;
+
     public HTTPGetAction withHttpHeaders(HTTPHeader[] httpHeaders) {
         this.httpHeaders = httpHeaders;
         return this;
@@ -40,6 +42,7 @@ public class HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public HTTPGetAction withPath(String path) {
         this.path = path;
         return this;
@@ -51,6 +54,7 @@ public class HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public HTTPGetAction withPort(Integer port) {
         this.port = port;
         return this;
@@ -62,9 +66,11 @@ public class HTTPGetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheme")
     public String scheme;
+
     public HTTPGetAction withScheme(String scheme) {
         this.scheme = scheme;
         return this;
     }
     
+    public HTTPGetAction(){}
 }

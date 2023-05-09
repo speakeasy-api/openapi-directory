@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyIpamResourceCidrRequest {
     
     public String currentIpamScopeId;
+
     public ModifyIpamResourceCidrRequest withCurrentIpamScopeId(String currentIpamScopeId) {
         this.currentIpamScopeId = currentIpamScopeId;
         return this;
@@ -16,6 +17,7 @@ public class ModifyIpamResourceCidrRequest {
     
     
     public String destinationIpamScopeId;
+
     public ModifyIpamResourceCidrRequest withDestinationIpamScopeId(String destinationIpamScopeId) {
         this.destinationIpamScopeId = destinationIpamScopeId;
         return this;
@@ -23,6 +25,7 @@ public class ModifyIpamResourceCidrRequest {
     
     
     public Boolean dryRun;
+
     public ModifyIpamResourceCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifyIpamResourceCidrRequest {
     
     
     public Boolean monitored;
+
     public ModifyIpamResourceCidrRequest withMonitored(Boolean monitored) {
         this.monitored = monitored;
         return this;
@@ -37,6 +41,7 @@ public class ModifyIpamResourceCidrRequest {
     
     
     public String resourceCidr;
+
     public ModifyIpamResourceCidrRequest withResourceCidr(String resourceCidr) {
         this.resourceCidr = resourceCidr;
         return this;
@@ -44,6 +49,7 @@ public class ModifyIpamResourceCidrRequest {
     
     
     public String resourceId;
+
     public ModifyIpamResourceCidrRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -51,9 +57,17 @@ public class ModifyIpamResourceCidrRequest {
     
     
     public String resourceRegion;
+
     public ModifyIpamResourceCidrRequest withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
     }
     
+    public ModifyIpamResourceCidrRequest(@JsonProperty("CurrentIpamScopeId") String currentIpamScopeId, @JsonProperty("Monitored") Boolean monitored, @JsonProperty("ResourceCidr") String resourceCidr, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceRegion") String resourceRegion) {
+        this.currentIpamScopeId = currentIpamScopeId;
+        this.monitored = monitored;
+        this.resourceCidr = resourceCidr;
+        this.resourceId = resourceId;
+        this.resourceRegion = resourceRegion;
+  }
 }

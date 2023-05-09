@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JapaneseNameMatchFeedbackLoopRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseGivenNameLatin")
     public String japaneseGivenNameLatin;
+
     public JapaneseNameMatchFeedbackLoopRequest withJapaneseGivenNameLatin(String japaneseGivenNameLatin) {
         this.japaneseGivenNameLatin = japaneseGivenNameLatin;
         return this;
@@ -16,6 +18,7 @@ public class JapaneseNameMatchFeedbackLoopRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseName")
     public String japaneseName;
+
     public JapaneseNameMatchFeedbackLoopRequest withJapaneseName(String japaneseName) {
         this.japaneseName = japaneseName;
         return this;
@@ -23,9 +26,15 @@ public class JapaneseNameMatchFeedbackLoopRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseSurnameLatin")
     public String japaneseSurnameLatin;
+
     public JapaneseNameMatchFeedbackLoopRequest withJapaneseSurnameLatin(String japaneseSurnameLatin) {
         this.japaneseSurnameLatin = japaneseSurnameLatin;
         return this;
     }
     
+    public JapaneseNameMatchFeedbackLoopRequest(@JsonProperty("japaneseGivenNameLatin") String japaneseGivenNameLatin, @JsonProperty("japaneseName") String japaneseName, @JsonProperty("japaneseSurnameLatin") String japaneseSurnameLatin) {
+        this.japaneseGivenNameLatin = japaneseGivenNameLatin;
+        this.japaneseName = japaneseName;
+        this.japaneseSurnameLatin = japaneseSurnameLatin;
+  }
 }

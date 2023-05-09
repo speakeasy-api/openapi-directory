@@ -15,6 +15,7 @@ public class Shipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Shipment withStatus(String status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class Shipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackingNumber")
     public String trackingNumber;
+
     public Shipment withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
     
+    public Shipment(){}
 }

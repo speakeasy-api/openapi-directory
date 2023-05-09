@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Fleet {
     @JsonProperty("Arn")
     public String arn;
+
     public Fleet withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class Fleet {
     
     @JsonProperty("ComputeCapacityStatus")
     public ComputeCapacityStatus computeCapacityStatus;
+
     public Fleet withComputeCapacityStatus(ComputeCapacityStatus computeCapacityStatus) {
         this.computeCapacityStatus = computeCapacityStatus;
         return this;
@@ -36,6 +38,7 @@ public class Fleet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public Fleet withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -44,6 +47,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Fleet withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +56,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisconnectTimeoutInSeconds")
     public Long disconnectTimeoutInSeconds;
+
     public Fleet withDisconnectTimeoutInSeconds(Long disconnectTimeoutInSeconds) {
         this.disconnectTimeoutInSeconds = disconnectTimeoutInSeconds;
         return this;
@@ -60,6 +65,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Fleet withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -68,6 +74,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainJoinInfo")
     public DomainJoinInfo domainJoinInfo;
+
     public Fleet withDomainJoinInfo(DomainJoinInfo domainJoinInfo) {
         this.domainJoinInfo = domainJoinInfo;
         return this;
@@ -76,6 +83,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDefaultInternetAccess")
     public Boolean enableDefaultInternetAccess;
+
     public Fleet withEnableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
         this.enableDefaultInternetAccess = enableDefaultInternetAccess;
         return this;
@@ -84,6 +92,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetErrors")
     public FleetError[] fleetErrors;
+
     public Fleet withFleetErrors(FleetError[] fleetErrors) {
         this.fleetErrors = fleetErrors;
         return this;
@@ -92,6 +101,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetType")
     public FleetTypeEnum fleetType;
+
     public Fleet withFleetType(FleetTypeEnum fleetType) {
         this.fleetType = fleetType;
         return this;
@@ -100,6 +110,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamRoleArn")
     public String iamRoleArn;
+
     public Fleet withIamRoleArn(String iamRoleArn) {
         this.iamRoleArn = iamRoleArn;
         return this;
@@ -108,6 +119,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleDisconnectTimeoutInSeconds")
     public Long idleDisconnectTimeoutInSeconds;
+
     public Fleet withIdleDisconnectTimeoutInSeconds(Long idleDisconnectTimeoutInSeconds) {
         this.idleDisconnectTimeoutInSeconds = idleDisconnectTimeoutInSeconds;
         return this;
@@ -116,6 +128,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public Fleet withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -124,6 +137,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageName")
     public String imageName;
+
     public Fleet withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -131,6 +145,7 @@ public class Fleet {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Fleet withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -139,6 +154,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentSessions")
     public Long maxConcurrentSessions;
+
     public Fleet withMaxConcurrentSessions(Long maxConcurrentSessions) {
         this.maxConcurrentSessions = maxConcurrentSessions;
         return this;
@@ -147,6 +163,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxUserDurationInSeconds")
     public Long maxUserDurationInSeconds;
+
     public Fleet withMaxUserDurationInSeconds(Long maxUserDurationInSeconds) {
         this.maxUserDurationInSeconds = maxUserDurationInSeconds;
         return this;
@@ -154,6 +171,7 @@ public class Fleet {
     
     @JsonProperty("Name")
     public String name;
+
     public Fleet withName(String name) {
         this.name = name;
         return this;
@@ -162,6 +180,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public PlatformTypeEnum platform;
+
     public Fleet withPlatform(PlatformTypeEnum platform) {
         this.platform = platform;
         return this;
@@ -170,6 +189,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionScriptS3Location")
     public S3Location sessionScriptS3Location;
+
     public Fleet withSessionScriptS3Location(S3Location sessionScriptS3Location) {
         this.sessionScriptS3Location = sessionScriptS3Location;
         return this;
@@ -177,6 +197,7 @@ public class Fleet {
     
     @JsonProperty("State")
     public FleetStateEnum state;
+
     public Fleet withState(FleetStateEnum state) {
         this.state = state;
         return this;
@@ -185,6 +206,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamView")
     public StreamViewEnum streamView;
+
     public Fleet withStreamView(StreamViewEnum streamView) {
         this.streamView = streamView;
         return this;
@@ -193,6 +215,7 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsbDeviceFilterStrings")
     public String[] usbDeviceFilterStrings;
+
     public Fleet withUsbDeviceFilterStrings(String[] usbDeviceFilterStrings) {
         this.usbDeviceFilterStrings = usbDeviceFilterStrings;
         return this;
@@ -201,9 +224,17 @@ public class Fleet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public Fleet withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public Fleet(@JsonProperty("Arn") String arn, @JsonProperty("ComputeCapacityStatus") ComputeCapacityStatus computeCapacityStatus, @JsonProperty("InstanceType") String instanceType, @JsonProperty("Name") String name, @JsonProperty("State") FleetStateEnum state) {
+        this.arn = arn;
+        this.computeCapacityStatus = computeCapacityStatus;
+        this.instanceType = instanceType;
+        this.name = name;
+        this.state = state;
+  }
 }

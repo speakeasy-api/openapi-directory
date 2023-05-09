@@ -17,6 +17,7 @@ public class OnboardingLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public OnboardingLinkInfo withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -28,6 +29,7 @@ public class OnboardingLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUrl")
     public String redirectUrl;
+
     public OnboardingLinkInfo withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -47,6 +49,7 @@ public class OnboardingLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public java.util.Map<String, Boolean> settings;
+
     public OnboardingLinkInfo withSettings(java.util.Map<String, Boolean> settings) {
         this.settings = settings;
         return this;
@@ -58,9 +61,11 @@ public class OnboardingLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themeId")
     public String themeId;
+
     public OnboardingLinkInfo withThemeId(String themeId) {
         this.themeId = themeId;
         return this;
     }
     
+    public OnboardingLinkInfo(){}
 }

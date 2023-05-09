@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChromosomeByAssemblyUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETChromosomeByAssemblyUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chromosome")
     public String chromosome;
+
     public GETChromosomeByAssemblyUsingGETRequest withChromosome(String chromosome) {
         this.chromosome = chromosome;
         return this;
@@ -22,9 +24,14 @@ public class GETChromosomeByAssemblyUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
     public Integer mapKey;
+
     public GETChromosomeByAssemblyUsingGETRequest withMapKey(Integer mapKey) {
         this.mapKey = mapKey;
         return this;
     }
     
+    public GETChromosomeByAssemblyUsingGETRequest(@JsonProperty("chromosome") String chromosome, @JsonProperty("mapKey") Integer mapKey) {
+        this.chromosome = chromosome;
+        this.mapKey = mapKey;
+  }
 }

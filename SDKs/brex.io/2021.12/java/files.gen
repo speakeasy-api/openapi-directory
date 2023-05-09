@@ -88,6 +88,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CompanyIdSuperRequest.j
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyIdSuperDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyIdSuper200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyIdSuperResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorChangeTypesListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorChangeTypesListDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorChangeTypesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorIdSecurity.java
@@ -95,6 +96,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorIdRequest
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorIdDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorListDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorList200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyMonitorListResponse.java
@@ -113,6 +115,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationIdRe
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationIdDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationListDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationList200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompanyNotificationListResponse.java
@@ -173,6 +176,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/NifComprehensiveRequest
 lib/src/main/java/org/openapis/openapi/models/operations/NifComprehensiveDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/NifComprehensive200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/NifComprehensiveResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PepMonitorListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PepMonitorListDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PepMonitorList200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PepMonitorListResponse.java
@@ -263,12 +267,15 @@ lib/src/main/java/org/openapis/openapi/models/operations/ProductUpdateActionRequ
 lib/src/main/java/org/openapis/openapi/models/operations/ProductUpdateActionDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProductUpdateAction200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProductUpdateActionResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/HealthCheckSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/HealthCheckDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/HealthCheck200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/HealthCheckResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/SystemCountriesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SystemCountriesDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/SystemCountries200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/SystemCountriesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/SystemPricelistSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SystemPricelistDefaultApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/SystemPricelist200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/SystemPricelistResponse.java
@@ -316,4 +323,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/Oneapi1v11company1deepsearc
 lib/src/main/java/org/openapis/openapi/models/shared/Oneapi1v11einVerification1lookupGetResponses200ContentApplication1jsonSchemaPropertiesMatchedEinCompanies.java
 lib/src/main/java/org/openapis/openapi/models/shared/Oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema.java
 lib/src/main/java/org/openapis/openapi/models/shared/Oneapi1v11company1search1name1Percent7BcountryPercent7D1Percent7BnamePercent7DGetResponses200ContentApplication1jsonSchema.java
+docs/sdk/README.md
+docs/v1company/README.md
+docs/v1einverification/README.md
+docs/v1ibanverification/README.md
+docs/v1nifverification/README.md
+docs/v1pepsanction/README.md
+docs/v1product/README.md
+docs/v1system/README.md
+docs/v1tinverification/README.md
+docs/v1vatverification/README.md
 USAGE.md

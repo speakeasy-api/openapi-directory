@@ -18,9 +18,11 @@ public class SalesTaxJurisdiction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesTaxJurisdictionId")
     public String salesTaxJurisdictionId;
+
     public SalesTaxJurisdiction withSalesTaxJurisdictionId(String salesTaxJurisdictionId) {
         this.salesTaxJurisdictionId = salesTaxJurisdictionId;
         return this;
     }
     
+    public SalesTaxJurisdiction(){}
 }

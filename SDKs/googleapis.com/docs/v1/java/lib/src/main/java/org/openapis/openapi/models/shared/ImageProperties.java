@@ -18,6 +18,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angle")
     public Float angle;
+
     public ImageProperties withAngle(Float angle) {
         this.angle = angle;
         return this;
@@ -29,6 +30,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brightness")
     public Float brightness;
+
     public ImageProperties withBrightness(Float brightness) {
         this.brightness = brightness;
         return this;
@@ -40,6 +42,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUri")
     public String contentUri;
+
     public ImageProperties withContentUri(String contentUri) {
         this.contentUri = contentUri;
         return this;
@@ -51,6 +54,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contrast")
     public Float contrast;
+
     public ImageProperties withContrast(Float contrast) {
         this.contrast = contrast;
         return this;
@@ -62,6 +66,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cropProperties")
     public CropProperties cropProperties;
+
     public ImageProperties withCropProperties(CropProperties cropProperties) {
         this.cropProperties = cropProperties;
         return this;
@@ -73,6 +78,7 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUri")
     public String sourceUri;
+
     public ImageProperties withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
@@ -84,9 +90,11 @@ public class ImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transparency")
     public Float transparency;
+
     public ImageProperties withTransparency(Float transparency) {
         this.transparency = transparency;
         return this;
     }
     
+    public ImageProperties(){}
 }

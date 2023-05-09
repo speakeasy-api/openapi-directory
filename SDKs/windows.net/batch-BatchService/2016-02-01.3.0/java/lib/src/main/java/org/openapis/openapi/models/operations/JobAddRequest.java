@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobAddRequest {
@@ -12,6 +13,7 @@ public class JobAddRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.JobAddParameter jobAddParameter;
+
     public JobAddRequest withJobAddParameter(org.openapis.openapi.models.shared.JobAddParameter jobAddParameter) {
         this.jobAddParameter = jobAddParameter;
         return this;
@@ -22,6 +24,7 @@ public class JobAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobAddRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class JobAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobAddRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class JobAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobAddRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class JobAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobAddRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -62,9 +68,14 @@ public class JobAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobAddRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobAddRequest(@JsonProperty("JobAddParameter") org.openapis.openapi.models.shared.JobAddParameter jobAddParameter, @JsonProperty("api-version") String apiVersion) {
+        this.jobAddParameter = jobAddParameter;
+        this.apiVersion = apiVersion;
+  }
 }

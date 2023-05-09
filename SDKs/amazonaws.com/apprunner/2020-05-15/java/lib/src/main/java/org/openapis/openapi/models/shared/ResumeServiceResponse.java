@@ -15,6 +15,7 @@ public class ResumeServiceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public ResumeServiceResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -22,9 +23,13 @@ public class ResumeServiceResponse {
     
     @JsonProperty("Service")
     public Service service;
+
     public ResumeServiceResponse withService(Service service) {
         this.service = service;
         return this;
     }
     
+    public ResumeServiceResponse(@JsonProperty("Service") Service service) {
+        this.service = service;
+  }
 }

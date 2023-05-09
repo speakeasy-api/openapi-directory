@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetApiKeyFromGroupQuotasResponse {
     
     public String contentType;
+
     public ResetApiKeyFromGroupQuotasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResetApiKeyFromGroupQuotasResponse {
      */
     
     public org.openapis.openapi.models.shared.Quotas quotas;
+
     public ResetApiKeyFromGroupQuotasResponse withQuotas(org.openapis.openapi.models.shared.Quotas quotas) {
         this.quotas = quotas;
         return this;
@@ -26,6 +29,7 @@ public class ResetApiKeyFromGroupQuotasResponse {
     
     
     public Integer statusCode;
+
     public ResetApiKeyFromGroupQuotasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ResetApiKeyFromGroupQuotasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetApiKeyFromGroupQuotasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResetApiKeyFromGroupQuotasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

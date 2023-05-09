@@ -15,6 +15,7 @@ public class IncerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public IncerRequestBodyCertificateParameters certificateParameters;
+
     public IncerRequestBody withCertificateParameters(IncerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class IncerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public IncerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class IncerRequestBody {
      */
     @JsonProperty("format")
     public IncerRequestBodyFormatEnum format;
+
     public IncerRequestBody withFormat(IncerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class IncerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public IncerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public IncerRequestBody(@JsonProperty("format") IncerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

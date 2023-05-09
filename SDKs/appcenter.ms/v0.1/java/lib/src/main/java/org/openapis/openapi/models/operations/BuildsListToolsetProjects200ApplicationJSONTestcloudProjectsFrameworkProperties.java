@@ -12,9 +12,11 @@ public class BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFramewo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public String[] configurations;
+
     public BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkProperties withConfigurations(String[] configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkProperties(){}
 }

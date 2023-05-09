@@ -23,6 +23,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public AccountResponse withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -34,6 +35,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public AccountResponse withAddress(String address) {
         this.address = address;
         return this;
@@ -45,6 +47,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appKey")
     public AccountResponseAppKey appKey;
+
     public AccountResponse withAppKey(AccountResponseAppKey appKey) {
         this.appKey = appKey;
         return this;
@@ -56,6 +59,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appKeys")
     public AppKeyItems[] appKeys;
+
     public AccountResponse withAppKeys(AppKeyItems[] appKeys) {
         this.appKeys = appKeys;
         return this;
@@ -67,6 +71,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public AccountResponse withCity(String city) {
         this.city = city;
         return this;
@@ -78,6 +83,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cnpj")
     public String cnpj;
+
     public AccountResponse withCnpj(String cnpj) {
         this.cnpj = cnpj;
         return this;
@@ -89,6 +95,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public AccountResponse withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -100,6 +107,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public AccountResponse withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -108,6 +116,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public AccountResponseContact contact;
+
     public AccountResponse withContact(AccountResponseContact contact) {
         this.contact = contact;
         return this;
@@ -119,6 +128,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public AccountResponse withCountry(String country) {
         this.country = country;
         return this;
@@ -132,6 +142,7 @@ public class AccountResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public AccountResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -140,6 +151,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultUrl")
     public String defaultUrl;
+
     public AccountResponse withDefaultUrl(String defaultUrl) {
         this.defaultUrl = defaultUrl;
         return this;
@@ -151,6 +163,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district")
     public String district;
+
     public AccountResponse withDistrict(String district) {
         this.district = district;
         return this;
@@ -162,6 +175,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasLogo")
     public Boolean hasLogo;
+
     public AccountResponse withHasLogo(Boolean hasLogo) {
         this.hasLogo = hasLogo;
         return this;
@@ -173,6 +187,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("haveParentAccount")
     public Boolean haveParentAccount;
+
     public AccountResponse withHaveParentAccount(Boolean haveParentAccount) {
         this.haveParentAccount = haveParentAccount;
         return this;
@@ -184,6 +199,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public String[] hosts;
+
     public AccountResponse withHosts(String[] hosts) {
         this.hosts = hosts;
         return this;
@@ -195,6 +211,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AccountResponse withId(String id) {
         this.id = id;
         return this;
@@ -208,6 +225,7 @@ public class AccountResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("inactivationDate")
     public OffsetDateTime inactivationDate;
+
     public AccountResponse withInactivationDate(OffsetDateTime inactivationDate) {
         this.inactivationDate = inactivationDate;
         return this;
@@ -219,6 +237,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public AccountResponse withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -230,6 +249,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOperating")
     public Boolean isOperating;
+
     public AccountResponse withIsOperating(Boolean isOperating) {
         this.isOperating = isOperating;
         return this;
@@ -241,6 +261,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public LicenseItems[] licenses;
+
     public AccountResponse withLicenses(LicenseItems[] licenses) {
         this.licenses = licenses;
         return this;
@@ -252,6 +273,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public AccountResponse withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -260,6 +282,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lv")
     public String lv;
+
     public AccountResponse withLv(String lv) {
         this.lv = lv;
         return this;
@@ -271,6 +294,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountResponse withName(String name) {
         this.name = name;
         return this;
@@ -282,6 +306,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public AccountResponse withNumber(String number) {
         this.number = number;
         return this;
@@ -295,6 +320,7 @@ public class AccountResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("operationDate")
     public OffsetDateTime operationDate;
+
     public AccountResponse withOperationDate(OffsetDateTime operationDate) {
         this.operationDate = operationDate;
         return this;
@@ -306,6 +332,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAccountId")
     public String parentAccountId;
+
     public AccountResponse withParentAccountId(String parentAccountId) {
         this.parentAccountId = parentAccountId;
         return this;
@@ -317,6 +344,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAccountName")
     public String parentAccountName;
+
     public AccountResponse withParentAccountName(String parentAccountName) {
         this.parentAccountName = parentAccountName;
         return this;
@@ -328,6 +356,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public AccountResponse withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -339,6 +368,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public SiteItems[] sites;
+
     public AccountResponse withSites(SiteItems[] sites) {
         this.sites = sites;
         return this;
@@ -350,6 +380,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sponsor")
     public AccountResponseSponsor sponsor;
+
     public AccountResponse withSponsor(AccountResponseSponsor sponsor) {
         this.sponsor = sponsor;
         return this;
@@ -361,6 +392,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public AccountResponse withState(String state) {
         this.state = state;
         return this;
@@ -372,6 +404,7 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
     public String telephone;
+
     public AccountResponse withTelephone(String telephone) {
         this.telephone = telephone;
         return this;
@@ -383,9 +416,11 @@ public class AccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradingName")
     public String tradingName;
+
     public AccountResponse withTradingName(String tradingName) {
         this.tradingName = tradingName;
         return this;
     }
     
+    public AccountResponse(){}
 }

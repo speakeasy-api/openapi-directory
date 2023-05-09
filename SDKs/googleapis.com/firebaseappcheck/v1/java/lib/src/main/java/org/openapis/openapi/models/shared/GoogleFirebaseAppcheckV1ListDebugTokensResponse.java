@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1ListDebugTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugTokens")
     public GoogleFirebaseAppcheckV1DebugToken[] debugTokens;
+
     public GoogleFirebaseAppcheckV1ListDebugTokensResponse withDebugTokens(GoogleFirebaseAppcheckV1DebugToken[] debugTokens) {
         this.debugTokens = debugTokens;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1ListDebugTokensResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirebaseAppcheckV1ListDebugTokensResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1ListDebugTokensResponse(){}
 }

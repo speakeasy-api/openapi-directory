@@ -15,6 +15,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateSimulationJobRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compute")
     public CreateSimulationJobRequestBodyCompute compute;
+
     public CreateSimulationJobRequestBody withCompute(CreateSimulationJobRequestBodyCompute compute) {
         this.compute = compute;
         return this;
@@ -37,6 +39,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSources")
     public org.openapis.openapi.models.shared.DataSourceConfig[] dataSources;
+
     public CreateSimulationJobRequestBody withDataSources(org.openapis.openapi.models.shared.DataSourceConfig[] dataSources) {
         this.dataSources = dataSources;
         return this;
@@ -48,6 +51,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureBehavior")
     public CreateSimulationJobRequestBodyFailureBehaviorEnum failureBehavior;
+
     public CreateSimulationJobRequestBody withFailureBehavior(CreateSimulationJobRequestBodyFailureBehaviorEnum failureBehavior) {
         this.failureBehavior = failureBehavior;
         return this;
@@ -58,6 +62,7 @@ public class CreateSimulationJobRequestBody {
      */
     @JsonProperty("iamRole")
     public String iamRole;
+
     public CreateSimulationJobRequestBody withIamRole(String iamRole) {
         this.iamRole = iamRole;
         return this;
@@ -69,6 +74,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public CreateSimulationJobRequestBodyLoggingConfig loggingConfig;
+
     public CreateSimulationJobRequestBody withLoggingConfig(CreateSimulationJobRequestBodyLoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -79,6 +85,7 @@ public class CreateSimulationJobRequestBody {
      */
     @JsonProperty("maxJobDurationInSeconds")
     public Long maxJobDurationInSeconds;
+
     public CreateSimulationJobRequestBody withMaxJobDurationInSeconds(Long maxJobDurationInSeconds) {
         this.maxJobDurationInSeconds = maxJobDurationInSeconds;
         return this;
@@ -90,6 +97,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputLocation")
     public CreateSimulationJobRequestBodyOutputLocation outputLocation;
+
     public CreateSimulationJobRequestBody withOutputLocation(CreateSimulationJobRequestBodyOutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -101,6 +109,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotApplications")
     public org.openapis.openapi.models.shared.RobotApplicationConfig[] robotApplications;
+
     public CreateSimulationJobRequestBody withRobotApplications(org.openapis.openapi.models.shared.RobotApplicationConfig[] robotApplications) {
         this.robotApplications = robotApplications;
         return this;
@@ -112,6 +121,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationApplications")
     public org.openapis.openapi.models.shared.SimulationApplicationConfig[] simulationApplications;
+
     public CreateSimulationJobRequestBody withSimulationApplications(org.openapis.openapi.models.shared.SimulationApplicationConfig[] simulationApplications) {
         this.simulationApplications = simulationApplications;
         return this;
@@ -123,6 +133,7 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSimulationJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -134,9 +145,14 @@ public class CreateSimulationJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public CreateSimulationJobRequestBodyVpcConfig vpcConfig;
+
     public CreateSimulationJobRequestBody withVpcConfig(CreateSimulationJobRequestBodyVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateSimulationJobRequestBody(@JsonProperty("iamRole") String iamRole, @JsonProperty("maxJobDurationInSeconds") Long maxJobDurationInSeconds) {
+        this.iamRole = iamRole;
+        this.maxJobDurationInSeconds = maxJobDurationInSeconds;
+  }
 }

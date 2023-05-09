@@ -12,6 +12,7 @@ public class CreateCustomLogSourceRequestBody {
      */
     @JsonProperty("customSourceName")
     public String customSourceName;
+
     public CreateCustomLogSourceRequestBody withCustomSourceName(String customSourceName) {
         this.customSourceName = customSourceName;
         return this;
@@ -22,6 +23,7 @@ public class CreateCustomLogSourceRequestBody {
      */
     @JsonProperty("eventClass")
     public CreateCustomLogSourceRequestBodyEventClassEnum eventClass;
+
     public CreateCustomLogSourceRequestBody withEventClass(CreateCustomLogSourceRequestBodyEventClassEnum eventClass) {
         this.eventClass = eventClass;
         return this;
@@ -32,6 +34,7 @@ public class CreateCustomLogSourceRequestBody {
      */
     @JsonProperty("glueInvocationRoleArn")
     public String glueInvocationRoleArn;
+
     public CreateCustomLogSourceRequestBody withGlueInvocationRoleArn(String glueInvocationRoleArn) {
         this.glueInvocationRoleArn = glueInvocationRoleArn;
         return this;
@@ -42,9 +45,16 @@ public class CreateCustomLogSourceRequestBody {
      */
     @JsonProperty("logProviderAccountId")
     public String logProviderAccountId;
+
     public CreateCustomLogSourceRequestBody withLogProviderAccountId(String logProviderAccountId) {
         this.logProviderAccountId = logProviderAccountId;
         return this;
     }
     
+    public CreateCustomLogSourceRequestBody(@JsonProperty("customSourceName") String customSourceName, @JsonProperty("eventClass") CreateCustomLogSourceRequestBodyEventClassEnum eventClass, @JsonProperty("glueInvocationRoleArn") String glueInvocationRoleArn, @JsonProperty("logProviderAccountId") String logProviderAccountId) {
+        this.customSourceName = customSourceName;
+        this.eventClass = eventClass;
+        this.glueInvocationRoleArn = glueInvocationRoleArn;
+        this.logProviderAccountId = logProviderAccountId;
+  }
 }

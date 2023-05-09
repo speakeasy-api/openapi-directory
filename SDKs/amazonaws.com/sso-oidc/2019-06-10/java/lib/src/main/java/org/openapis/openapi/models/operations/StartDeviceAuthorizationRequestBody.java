@@ -12,6 +12,7 @@ public class StartDeviceAuthorizationRequestBody {
      */
     @JsonProperty("clientId")
     public String clientId;
+
     public StartDeviceAuthorizationRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +23,7 @@ public class StartDeviceAuthorizationRequestBody {
      */
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public StartDeviceAuthorizationRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -32,9 +34,15 @@ public class StartDeviceAuthorizationRequestBody {
      */
     @JsonProperty("startUrl")
     public String startUrl;
+
     public StartDeviceAuthorizationRequestBody withStartUrl(String startUrl) {
         this.startUrl = startUrl;
         return this;
     }
     
+    public StartDeviceAuthorizationRequestBody(@JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret, @JsonProperty("startUrl") String startUrl) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.startUrl = startUrl;
+  }
 }

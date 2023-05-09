@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateRouteTableResultRouteTable {
     
     public CreateRouteTableResultRouteTableAssociations[] associations;
+
     public CreateRouteTableResultRouteTable withAssociations(CreateRouteTableResultRouteTableAssociations[] associations) {
         this.associations = associations;
         return this;
@@ -19,6 +20,7 @@ public class CreateRouteTableResultRouteTable {
     
     
     public String ownerId;
+
     public CreateRouteTableResultRouteTable withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -26,6 +28,7 @@ public class CreateRouteTableResultRouteTable {
     
     
     public CreateRouteTableResultRouteTablePropagatingVgws[] propagatingVgws;
+
     public CreateRouteTableResultRouteTable withPropagatingVgws(CreateRouteTableResultRouteTablePropagatingVgws[] propagatingVgws) {
         this.propagatingVgws = propagatingVgws;
         return this;
@@ -33,6 +36,7 @@ public class CreateRouteTableResultRouteTable {
     
     
     public String routeTableId;
+
     public CreateRouteTableResultRouteTable withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -40,6 +44,7 @@ public class CreateRouteTableResultRouteTable {
     
     
     public CreateRouteTableResultRouteTableRoutes[] routes;
+
     public CreateRouteTableResultRouteTable withRoutes(CreateRouteTableResultRouteTableRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -47,6 +52,7 @@ public class CreateRouteTableResultRouteTable {
     
     
     public CreateRouteTableResultRouteTableTags[] tags;
+
     public CreateRouteTableResultRouteTable withTags(CreateRouteTableResultRouteTableTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class CreateRouteTableResultRouteTable {
     
     
     public String vpcId;
+
     public CreateRouteTableResultRouteTable withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateRouteTableResultRouteTable(){}
 }

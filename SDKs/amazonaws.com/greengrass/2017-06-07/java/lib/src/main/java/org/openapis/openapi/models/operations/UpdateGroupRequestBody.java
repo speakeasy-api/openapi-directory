@@ -15,9 +15,11 @@ public class UpdateGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateGroupRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateGroupRequestBody(){}
 }

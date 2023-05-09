@@ -21,6 +21,7 @@ public class SearchImage {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("added_date")
     public LocalDate addedDate;
+
     public SearchImage withAddedDate(LocalDate addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -33,6 +34,7 @@ public class SearchImage {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("added_date_end")
     public LocalDate addedDateEnd;
+
     public SearchImage withAddedDateEnd(LocalDate addedDateEnd) {
         this.addedDateEnd = addedDateEnd;
         return this;
@@ -45,6 +47,7 @@ public class SearchImage {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("added_date_start")
     public LocalDate addedDateStart;
+
     public SearchImage withAddedDateStart(LocalDate addedDateStart) {
         this.addedDateStart = addedDateStart;
         return this;
@@ -56,6 +59,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect_ratio")
     public Double aspectRatio;
+
     public SearchImage withAspectRatio(Double aspectRatio) {
         this.aspectRatio = aspectRatio;
         return this;
@@ -67,6 +71,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect_ratio_max")
     public Double aspectRatioMax;
+
     public SearchImage withAspectRatioMax(Double aspectRatioMax) {
         this.aspectRatioMax = aspectRatioMax;
         return this;
@@ -78,6 +83,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect_ratio_min")
     public Double aspectRatioMin;
+
     public SearchImage withAspectRatioMin(Double aspectRatioMin) {
         this.aspectRatioMin = aspectRatioMin;
         return this;
@@ -89,6 +95,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentic")
     public Boolean authentic;
+
     public SearchImage withAuthentic(Boolean authentic) {
         this.authentic = authentic;
         return this;
@@ -100,6 +107,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public SearchImage withCategory(String category) {
         this.category = category;
         return this;
@@ -111,6 +119,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public SearchImage withColor(String color) {
         this.color = color;
         return this;
@@ -122,6 +131,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor")
     public String[] contributor;
+
     public SearchImage withContributor(String[] contributor) {
         this.contributor = contributor;
         return this;
@@ -133,6 +143,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor_country")
     public Object contributorCountry;
+
     public SearchImage withContributorCountry(Object contributorCountry) {
         this.contributorCountry = contributorCountry;
         return this;
@@ -144,6 +155,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public SearchImage withFields(String fields) {
         this.fields = fields;
         return this;
@@ -155,6 +167,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public SearchImage withHeight(Long height) {
         this.height = height;
         return this;
@@ -166,6 +179,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height_from")
     public Long heightFrom;
+
     public SearchImage withHeightFrom(Long heightFrom) {
         this.heightFrom = heightFrom;
         return this;
@@ -177,6 +191,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height_to")
     public Long heightTo;
+
     public SearchImage withHeightTo(Long heightTo) {
         this.heightTo = heightTo;
         return this;
@@ -188,6 +203,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_type")
     public SearchImageImageTypeEnum[] imageType;
+
     public SearchImage withImageType(SearchImageImageTypeEnum[] imageType) {
         this.imageType = imageType;
         return this;
@@ -199,6 +215,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyword_safe_search")
     public Boolean keywordSafeSearch;
+
     public SearchImage withKeywordSafeSearch(Boolean keywordSafeSearch) {
         this.keywordSafeSearch = keywordSafeSearch;
         return this;
@@ -210,6 +227,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public LanguageEnum language;
+
     public SearchImage withLanguage(LanguageEnum language) {
         this.language = language;
         return this;
@@ -221,6 +239,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public SearchImageLicenseEnum[] license;
+
     public SearchImage withLicense(SearchImageLicenseEnum[] license) {
         this.license = license;
         return this;
@@ -232,6 +251,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String[] model;
+
     public SearchImage withModel(String[] model) {
         this.model = model;
         return this;
@@ -243,6 +263,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orientation")
     public SearchImageOrientationEnum orientation;
+
     public SearchImage withOrientation(SearchImageOrientationEnum orientation) {
         this.orientation = orientation;
         return this;
@@ -254,6 +275,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public SearchImage withPage(Long page) {
         this.page = page;
         return this;
@@ -265,6 +287,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people_age")
     public SearchImagePeopleAgeEnum peopleAge;
+
     public SearchImage withPeopleAge(SearchImagePeopleAgeEnum peopleAge) {
         this.peopleAge = peopleAge;
         return this;
@@ -276,6 +299,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people_ethnicity")
     public SearchImagePeopleEthnicityEnum[] peopleEthnicity;
+
     public SearchImage withPeopleEthnicity(SearchImagePeopleEthnicityEnum[] peopleEthnicity) {
         this.peopleEthnicity = peopleEthnicity;
         return this;
@@ -287,6 +311,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people_gender")
     public SearchImagePeopleGenderEnum peopleGender;
+
     public SearchImage withPeopleGender(SearchImagePeopleGenderEnum peopleGender) {
         this.peopleGender = peopleGender;
         return this;
@@ -298,6 +323,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people_model_released")
     public Boolean peopleModelReleased;
+
     public SearchImage withPeopleModelReleased(Boolean peopleModelReleased) {
         this.peopleModelReleased = peopleModelReleased;
         return this;
@@ -309,6 +335,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people_number")
     public Long peopleNumber;
+
     public SearchImage withPeopleNumber(Long peopleNumber) {
         this.peopleNumber = peopleNumber;
         return this;
@@ -320,6 +347,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public SearchImage withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -331,6 +359,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public SearchImage withQuery(String query) {
         this.query = query;
         return this;
@@ -342,6 +371,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public Object region;
+
     public SearchImage withRegion(Object region) {
         this.region = region;
         return this;
@@ -353,6 +383,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safe")
     public Boolean safe;
+
     public SearchImage withSafe(Boolean safe) {
         this.safe = safe;
         return this;
@@ -364,6 +395,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public SearchImageSortEnum sort;
+
     public SearchImage withSort(SearchImageSortEnum sort) {
         this.sort = sort;
         return this;
@@ -375,6 +407,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spellcheck_query")
     public Boolean spellcheckQuery;
+
     public SearchImage withSpellcheckQuery(Boolean spellcheckQuery) {
         this.spellcheckQuery = spellcheckQuery;
         return this;
@@ -386,6 +419,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public SearchImageViewEnum view;
+
     public SearchImage withView(SearchImageViewEnum view) {
         this.view = view;
         return this;
@@ -397,6 +431,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public SearchImage withWidth(Long width) {
         this.width = width;
         return this;
@@ -408,6 +443,7 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width_from")
     public Long widthFrom;
+
     public SearchImage withWidthFrom(Long widthFrom) {
         this.widthFrom = widthFrom;
         return this;
@@ -419,9 +455,11 @@ public class SearchImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width_to")
     public Long widthTo;
+
     public SearchImage withWidthTo(Long widthTo) {
         this.widthTo = widthTo;
         return this;
     }
     
+    public SearchImage(){}
 }

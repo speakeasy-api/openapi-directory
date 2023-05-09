@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateUserGroupMessage {
     
     public String engine;
+
     public CreateUserGroupMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -16,6 +17,7 @@ public class CreateUserGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateUserGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -23,6 +25,7 @@ public class CreateUserGroupMessage {
     
     
     public String userGroupId;
+
     public CreateUserGroupMessage withUserGroupId(String userGroupId) {
         this.userGroupId = userGroupId;
         return this;
@@ -30,9 +33,14 @@ public class CreateUserGroupMessage {
     
     
     public String[] userIds;
+
     public CreateUserGroupMessage withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public CreateUserGroupMessage(@JsonProperty("Engine") String engine, @JsonProperty("UserGroupId") String userGroupId) {
+        this.engine = engine;
+        this.userGroupId = userGroupId;
+  }
 }

@@ -15,6 +15,7 @@ public class DataIntegrationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DataIntegrationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DataIntegrationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DataIntegrationSummary withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class DataIntegrationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceURI")
     public String sourceURI;
+
     public DataIntegrationSummary withSourceURI(String sourceURI) {
         this.sourceURI = sourceURI;
         return this;
     }
     
+    public DataIntegrationSummary(){}
 }

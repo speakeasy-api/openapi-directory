@@ -18,9 +18,11 @@ public class DisableVpcServiceControlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public DisableVpcServiceControlsRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
     }
     
+    public DisableVpcServiceControlsRequest(){}
 }

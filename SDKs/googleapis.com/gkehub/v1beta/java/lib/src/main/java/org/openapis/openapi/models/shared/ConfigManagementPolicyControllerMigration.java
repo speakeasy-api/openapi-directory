@@ -18,9 +18,11 @@ public class ConfigManagementPolicyControllerMigration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage")
     public ConfigManagementPolicyControllerMigrationStageEnum stage;
+
     public ConfigManagementPolicyControllerMigration withStage(ConfigManagementPolicyControllerMigrationStageEnum stage) {
         this.stage = stage;
         return this;
     }
     
+    public ConfigManagementPolicyControllerMigration(){}
 }

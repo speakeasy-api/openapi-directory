@@ -37,4 +37,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse200Flag.java
 lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse200Security.java
 lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse200Timezone.java
 lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse200.java
+docs/sdk/README.md
 USAGE.md

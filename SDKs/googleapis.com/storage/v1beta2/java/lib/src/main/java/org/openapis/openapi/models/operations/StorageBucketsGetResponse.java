@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StorageBucketsGetResponse {
@@ -12,6 +13,7 @@ public class StorageBucketsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Bucket bucket;
+
     public StorageBucketsGetResponse withBucket(org.openapis.openapi.models.shared.Bucket bucket) {
         this.bucket = bucket;
         return this;
@@ -19,6 +21,7 @@ public class StorageBucketsGetResponse {
     
     
     public String contentType;
+
     public StorageBucketsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class StorageBucketsGetResponse {
     
     
     public Integer statusCode;
+
     public StorageBucketsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StorageBucketsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StorageBucketsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StorageBucketsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

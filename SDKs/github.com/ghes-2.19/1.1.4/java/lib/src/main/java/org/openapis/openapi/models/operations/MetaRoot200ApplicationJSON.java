@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetaRoot200ApplicationJSON {
     @JsonProperty("authorizations_url")
     public String authorizationsUrl;
+
     public MetaRoot200ApplicationJSON withAuthorizationsUrl(String authorizationsUrl) {
         this.authorizationsUrl = authorizationsUrl;
         return this;
@@ -21,6 +22,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("code_search_url")
     public String codeSearchUrl;
+
     public MetaRoot200ApplicationJSON withCodeSearchUrl(String codeSearchUrl) {
         this.codeSearchUrl = codeSearchUrl;
         return this;
@@ -28,6 +30,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("commit_search_url")
     public String commitSearchUrl;
+
     public MetaRoot200ApplicationJSON withCommitSearchUrl(String commitSearchUrl) {
         this.commitSearchUrl = commitSearchUrl;
         return this;
@@ -35,6 +38,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("current_user_authorizations_html_url")
     public String currentUserAuthorizationsHtmlUrl;
+
     public MetaRoot200ApplicationJSON withCurrentUserAuthorizationsHtmlUrl(String currentUserAuthorizationsHtmlUrl) {
         this.currentUserAuthorizationsHtmlUrl = currentUserAuthorizationsHtmlUrl;
         return this;
@@ -42,6 +46,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("current_user_repositories_url")
     public String currentUserRepositoriesUrl;
+
     public MetaRoot200ApplicationJSON withCurrentUserRepositoriesUrl(String currentUserRepositoriesUrl) {
         this.currentUserRepositoriesUrl = currentUserRepositoriesUrl;
         return this;
@@ -49,6 +54,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("current_user_url")
     public String currentUserUrl;
+
     public MetaRoot200ApplicationJSON withCurrentUserUrl(String currentUserUrl) {
         this.currentUserUrl = currentUserUrl;
         return this;
@@ -56,6 +62,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("emails_url")
     public String emailsUrl;
+
     public MetaRoot200ApplicationJSON withEmailsUrl(String emailsUrl) {
         this.emailsUrl = emailsUrl;
         return this;
@@ -63,6 +70,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("emojis_url")
     public String emojisUrl;
+
     public MetaRoot200ApplicationJSON withEmojisUrl(String emojisUrl) {
         this.emojisUrl = emojisUrl;
         return this;
@@ -70,6 +78,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public MetaRoot200ApplicationJSON withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -77,6 +86,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("feeds_url")
     public String feedsUrl;
+
     public MetaRoot200ApplicationJSON withFeedsUrl(String feedsUrl) {
         this.feedsUrl = feedsUrl;
         return this;
@@ -84,6 +94,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public MetaRoot200ApplicationJSON withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -91,6 +102,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("following_url")
     public String followingUrl;
+
     public MetaRoot200ApplicationJSON withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -98,6 +110,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public MetaRoot200ApplicationJSON withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -105,6 +118,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("hub_url")
     public String hubUrl;
+
     public MetaRoot200ApplicationJSON withHubUrl(String hubUrl) {
         this.hubUrl = hubUrl;
         return this;
@@ -112,6 +126,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("issue_search_url")
     public String issueSearchUrl;
+
     public MetaRoot200ApplicationJSON withIssueSearchUrl(String issueSearchUrl) {
         this.issueSearchUrl = issueSearchUrl;
         return this;
@@ -119,6 +134,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public MetaRoot200ApplicationJSON withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -126,6 +142,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("keys_url")
     public String keysUrl;
+
     public MetaRoot200ApplicationJSON withKeysUrl(String keysUrl) {
         this.keysUrl = keysUrl;
         return this;
@@ -133,6 +150,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("label_search_url")
     public String labelSearchUrl;
+
     public MetaRoot200ApplicationJSON withLabelSearchUrl(String labelSearchUrl) {
         this.labelSearchUrl = labelSearchUrl;
         return this;
@@ -140,6 +158,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("notifications_url")
     public String notificationsUrl;
+
     public MetaRoot200ApplicationJSON withNotificationsUrl(String notificationsUrl) {
         this.notificationsUrl = notificationsUrl;
         return this;
@@ -147,6 +166,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("organization_repositories_url")
     public String organizationRepositoriesUrl;
+
     public MetaRoot200ApplicationJSON withOrganizationRepositoriesUrl(String organizationRepositoriesUrl) {
         this.organizationRepositoriesUrl = organizationRepositoriesUrl;
         return this;
@@ -154,6 +174,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("organization_teams_url")
     public String organizationTeamsUrl;
+
     public MetaRoot200ApplicationJSON withOrganizationTeamsUrl(String organizationTeamsUrl) {
         this.organizationTeamsUrl = organizationTeamsUrl;
         return this;
@@ -161,6 +182,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("organization_url")
     public String organizationUrl;
+
     public MetaRoot200ApplicationJSON withOrganizationUrl(String organizationUrl) {
         this.organizationUrl = organizationUrl;
         return this;
@@ -168,6 +190,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("public_gists_url")
     public String publicGistsUrl;
+
     public MetaRoot200ApplicationJSON withPublicGistsUrl(String publicGistsUrl) {
         this.publicGistsUrl = publicGistsUrl;
         return this;
@@ -175,6 +198,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("rate_limit_url")
     public String rateLimitUrl;
+
     public MetaRoot200ApplicationJSON withRateLimitUrl(String rateLimitUrl) {
         this.rateLimitUrl = rateLimitUrl;
         return this;
@@ -182,6 +206,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("repository_search_url")
     public String repositorySearchUrl;
+
     public MetaRoot200ApplicationJSON withRepositorySearchUrl(String repositorySearchUrl) {
         this.repositorySearchUrl = repositorySearchUrl;
         return this;
@@ -189,6 +214,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public MetaRoot200ApplicationJSON withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -196,6 +222,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("starred_gists_url")
     public String starredGistsUrl;
+
     public MetaRoot200ApplicationJSON withStarredGistsUrl(String starredGistsUrl) {
         this.starredGistsUrl = starredGistsUrl;
         return this;
@@ -203,6 +230,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public MetaRoot200ApplicationJSON withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -211,6 +239,7 @@ public class MetaRoot200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic_search_url")
     public String topicSearchUrl;
+
     public MetaRoot200ApplicationJSON withTopicSearchUrl(String topicSearchUrl) {
         this.topicSearchUrl = topicSearchUrl;
         return this;
@@ -218,6 +247,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("user_organizations_url")
     public String userOrganizationsUrl;
+
     public MetaRoot200ApplicationJSON withUserOrganizationsUrl(String userOrganizationsUrl) {
         this.userOrganizationsUrl = userOrganizationsUrl;
         return this;
@@ -225,6 +255,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("user_repositories_url")
     public String userRepositoriesUrl;
+
     public MetaRoot200ApplicationJSON withUserRepositoriesUrl(String userRepositoriesUrl) {
         this.userRepositoriesUrl = userRepositoriesUrl;
         return this;
@@ -232,6 +263,7 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("user_search_url")
     public String userSearchUrl;
+
     public MetaRoot200ApplicationJSON withUserSearchUrl(String userSearchUrl) {
         this.userSearchUrl = userSearchUrl;
         return this;
@@ -239,9 +271,44 @@ public class MetaRoot200ApplicationJSON {
     
     @JsonProperty("user_url")
     public String userUrl;
+
     public MetaRoot200ApplicationJSON withUserUrl(String userUrl) {
         this.userUrl = userUrl;
         return this;
     }
     
+    public MetaRoot200ApplicationJSON(@JsonProperty("authorizations_url") String authorizationsUrl, @JsonProperty("code_search_url") String codeSearchUrl, @JsonProperty("commit_search_url") String commitSearchUrl, @JsonProperty("current_user_authorizations_html_url") String currentUserAuthorizationsHtmlUrl, @JsonProperty("current_user_repositories_url") String currentUserRepositoriesUrl, @JsonProperty("current_user_url") String currentUserUrl, @JsonProperty("emails_url") String emailsUrl, @JsonProperty("emojis_url") String emojisUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("feeds_url") String feedsUrl, @JsonProperty("followers_url") String followersUrl, @JsonProperty("following_url") String followingUrl, @JsonProperty("gists_url") String gistsUrl, @JsonProperty("hub_url") String hubUrl, @JsonProperty("issue_search_url") String issueSearchUrl, @JsonProperty("issues_url") String issuesUrl, @JsonProperty("keys_url") String keysUrl, @JsonProperty("label_search_url") String labelSearchUrl, @JsonProperty("notifications_url") String notificationsUrl, @JsonProperty("organization_repositories_url") String organizationRepositoriesUrl, @JsonProperty("organization_teams_url") String organizationTeamsUrl, @JsonProperty("organization_url") String organizationUrl, @JsonProperty("public_gists_url") String publicGistsUrl, @JsonProperty("rate_limit_url") String rateLimitUrl, @JsonProperty("repository_search_url") String repositorySearchUrl, @JsonProperty("repository_url") String repositoryUrl, @JsonProperty("starred_gists_url") String starredGistsUrl, @JsonProperty("starred_url") String starredUrl, @JsonProperty("user_organizations_url") String userOrganizationsUrl, @JsonProperty("user_repositories_url") String userRepositoriesUrl, @JsonProperty("user_search_url") String userSearchUrl, @JsonProperty("user_url") String userUrl) {
+        this.authorizationsUrl = authorizationsUrl;
+        this.codeSearchUrl = codeSearchUrl;
+        this.commitSearchUrl = commitSearchUrl;
+        this.currentUserAuthorizationsHtmlUrl = currentUserAuthorizationsHtmlUrl;
+        this.currentUserRepositoriesUrl = currentUserRepositoriesUrl;
+        this.currentUserUrl = currentUserUrl;
+        this.emailsUrl = emailsUrl;
+        this.emojisUrl = emojisUrl;
+        this.eventsUrl = eventsUrl;
+        this.feedsUrl = feedsUrl;
+        this.followersUrl = followersUrl;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.hubUrl = hubUrl;
+        this.issueSearchUrl = issueSearchUrl;
+        this.issuesUrl = issuesUrl;
+        this.keysUrl = keysUrl;
+        this.labelSearchUrl = labelSearchUrl;
+        this.notificationsUrl = notificationsUrl;
+        this.organizationRepositoriesUrl = organizationRepositoriesUrl;
+        this.organizationTeamsUrl = organizationTeamsUrl;
+        this.organizationUrl = organizationUrl;
+        this.publicGistsUrl = publicGistsUrl;
+        this.rateLimitUrl = rateLimitUrl;
+        this.repositorySearchUrl = repositorySearchUrl;
+        this.repositoryUrl = repositoryUrl;
+        this.starredGistsUrl = starredGistsUrl;
+        this.starredUrl = starredUrl;
+        this.userOrganizationsUrl = userOrganizationsUrl;
+        this.userRepositoriesUrl = userRepositoriesUrl;
+        this.userSearchUrl = userSearchUrl;
+        this.userUrl = userUrl;
+  }
 }

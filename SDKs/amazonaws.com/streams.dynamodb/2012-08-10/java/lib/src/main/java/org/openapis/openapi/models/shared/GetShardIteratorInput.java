@@ -15,6 +15,7 @@ public class GetShardIteratorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SequenceNumber")
     public String sequenceNumber;
+
     public GetShardIteratorInput withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -22,6 +23,7 @@ public class GetShardIteratorInput {
     
     @JsonProperty("ShardId")
     public String shardId;
+
     public GetShardIteratorInput withShardId(String shardId) {
         this.shardId = shardId;
         return this;
@@ -29,6 +31,7 @@ public class GetShardIteratorInput {
     
     @JsonProperty("ShardIteratorType")
     public ShardIteratorTypeEnum shardIteratorType;
+
     public GetShardIteratorInput withShardIteratorType(ShardIteratorTypeEnum shardIteratorType) {
         this.shardIteratorType = shardIteratorType;
         return this;
@@ -36,9 +39,15 @@ public class GetShardIteratorInput {
     
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public GetShardIteratorInput withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
     }
     
+    public GetShardIteratorInput(@JsonProperty("ShardId") String shardId, @JsonProperty("ShardIteratorType") ShardIteratorTypeEnum shardIteratorType, @JsonProperty("StreamArn") String streamArn) {
+        this.shardId = shardId;
+        this.shardIteratorType = shardIteratorType;
+        this.streamArn = streamArn;
+  }
 }

@@ -15,6 +15,7 @@ public class TestCreateDeviceSetOfUserDeviceSetUpdateInformation {
      */
     @JsonProperty("devices")
     public String[] devices;
+
     public TestCreateDeviceSetOfUserDeviceSetUpdateInformation withDevices(String[] devices) {
         this.devices = devices;
         return this;
@@ -25,9 +26,14 @@ public class TestCreateDeviceSetOfUserDeviceSetUpdateInformation {
      */
     @JsonProperty("name")
     public String name;
+
     public TestCreateDeviceSetOfUserDeviceSetUpdateInformation withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TestCreateDeviceSetOfUserDeviceSetUpdateInformation(@JsonProperty("devices") String[] devices, @JsonProperty("name") String name) {
+        this.devices = devices;
+        this.name = name;
+  }
 }

@@ -20,6 +20,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessLogSettings")
     public UpdateStageResponseAccessLogSettings accessLogSettings;
+
     public UpdateStageResponse withAccessLogSettings(UpdateStageResponseAccessLogSettings accessLogSettings) {
         this.accessLogSettings = accessLogSettings;
         return this;
@@ -28,6 +29,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayManaged")
     public Boolean apiGatewayManaged;
+
     public UpdateStageResponse withApiGatewayManaged(Boolean apiGatewayManaged) {
         this.apiGatewayManaged = apiGatewayManaged;
         return this;
@@ -36,6 +38,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeploy")
     public Boolean autoDeploy;
+
     public UpdateStageResponse withAutoDeploy(Boolean autoDeploy) {
         this.autoDeploy = autoDeploy;
         return this;
@@ -44,6 +47,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCertificateId")
     public String clientCertificateId;
+
     public UpdateStageResponse withClientCertificateId(String clientCertificateId) {
         this.clientCertificateId = clientCertificateId;
         return this;
@@ -54,6 +58,7 @@ public class UpdateStageResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public UpdateStageResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -62,6 +67,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRouteSettings")
     public UpdateStageResponseDefaultRouteSettings defaultRouteSettings;
+
     public UpdateStageResponse withDefaultRouteSettings(UpdateStageResponseDefaultRouteSettings defaultRouteSettings) {
         this.defaultRouteSettings = defaultRouteSettings;
         return this;
@@ -70,6 +76,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public UpdateStageResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -78,6 +85,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateStageResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -86,6 +94,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastDeploymentStatusMessage")
     public String lastDeploymentStatusMessage;
+
     public UpdateStageResponse withLastDeploymentStatusMessage(String lastDeploymentStatusMessage) {
         this.lastDeploymentStatusMessage = lastDeploymentStatusMessage;
         return this;
@@ -96,6 +105,7 @@ public class UpdateStageResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDate")
     public OffsetDateTime lastUpdatedDate;
+
     public UpdateStageResponse withLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
         return this;
@@ -104,6 +114,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteSettings")
     public java.util.Map<String, RouteSettings> routeSettings;
+
     public UpdateStageResponse withRouteSettings(java.util.Map<String, RouteSettings> routeSettings) {
         this.routeSettings = routeSettings;
         return this;
@@ -112,6 +123,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StageName")
     public String stageName;
+
     public UpdateStageResponse withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -120,6 +132,7 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StageVariables")
     public java.util.Map<String, String> stageVariables;
+
     public UpdateStageResponse withStageVariables(java.util.Map<String, String> stageVariables) {
         this.stageVariables = stageVariables;
         return this;
@@ -128,9 +141,11 @@ public class UpdateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public UpdateStageResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateStageResponse(){}
 }

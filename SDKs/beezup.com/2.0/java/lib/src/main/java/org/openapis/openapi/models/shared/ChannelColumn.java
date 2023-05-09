@@ -18,6 +18,7 @@ public class ChannelColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelColumnDescription")
     public String channelColumnDescription;
+
     public ChannelColumn withChannelColumnDescription(String channelColumnDescription) {
         this.channelColumnDescription = channelColumnDescription;
         return this;
@@ -28,6 +29,7 @@ public class ChannelColumn {
      */
     @JsonProperty("channelColumnId")
     public String channelColumnId;
+
     public ChannelColumn withChannelColumnId(String channelColumnId) {
         this.channelColumnId = channelColumnId;
         return this;
@@ -38,6 +40,7 @@ public class ChannelColumn {
      */
     @JsonProperty("channelColumnName")
     public String channelColumnName;
+
     public ChannelColumn withChannelColumnName(String channelColumnName) {
         this.channelColumnName = channelColumnName;
         return this;
@@ -48,6 +51,7 @@ public class ChannelColumn {
      */
     @JsonProperty("configuration")
     public ChannelColumnConfiguration configuration;
+
     public ChannelColumn withConfiguration(ChannelColumnConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -58,6 +62,7 @@ public class ChannelColumn {
      */
     @JsonProperty("position")
     public Long position;
+
     public ChannelColumn withPosition(Long position) {
         this.position = position;
         return this;
@@ -70,6 +75,7 @@ public class ChannelColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedValues")
     public java.util.Map<String, String> restrictedValues;
+
     public ChannelColumn withRestrictedValues(java.util.Map<String, String> restrictedValues) {
         this.restrictedValues = restrictedValues;
         return this;
@@ -80,9 +86,17 @@ public class ChannelColumn {
      */
     @JsonProperty("showInMapping")
     public Boolean showInMapping;
+
     public ChannelColumn withShowInMapping(Boolean showInMapping) {
         this.showInMapping = showInMapping;
         return this;
     }
     
+    public ChannelColumn(@JsonProperty("channelColumnId") String channelColumnId, @JsonProperty("channelColumnName") String channelColumnName, @JsonProperty("configuration") ChannelColumnConfiguration configuration, @JsonProperty("position") Long position, @JsonProperty("showInMapping") Boolean showInMapping) {
+        this.channelColumnId = channelColumnId;
+        this.channelColumnName = channelColumnName;
+        this.configuration = configuration;
+        this.position = position;
+        this.showInMapping = showInMapping;
+  }
 }

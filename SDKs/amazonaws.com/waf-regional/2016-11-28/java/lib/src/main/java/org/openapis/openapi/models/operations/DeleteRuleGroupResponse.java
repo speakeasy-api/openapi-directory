@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRuleGroupResponse {
     
     public String contentType;
+
     public DeleteRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRuleGroupResponse deleteRuleGroupResponse;
+
     public DeleteRuleGroupResponse withDeleteRuleGroupResponse(org.openapis.openapi.models.shared.DeleteRuleGroupResponse deleteRuleGroupResponse) {
         this.deleteRuleGroupResponse = deleteRuleGroupResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteRuleGroupResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafInvalidOperationException;
+
     public DeleteRuleGroupResponse withWAFInvalidOperationException(Object wafInvalidOperationException) {
         this.wafInvalidOperationException = wafInvalidOperationException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteRuleGroupResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteRuleGroupResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteRuleGroupResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteRuleGroupResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafTagOperationException;
+
     public DeleteRuleGroupResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteRuleGroupResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public DeleteRuleGroupResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public DeleteRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

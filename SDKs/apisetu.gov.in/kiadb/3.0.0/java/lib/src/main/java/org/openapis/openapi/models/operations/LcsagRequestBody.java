@@ -15,6 +15,7 @@ public class LcsagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public LcsagRequestBodyCertificateParameters certificateParameters;
+
     public LcsagRequestBody withCertificateParameters(LcsagRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class LcsagRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public LcsagRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class LcsagRequestBody {
      */
     @JsonProperty("format")
     public LcsagRequestBodyFormatEnum format;
+
     public LcsagRequestBody withFormat(LcsagRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class LcsagRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public LcsagRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public LcsagRequestBody(@JsonProperty("format") LcsagRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -21,6 +21,7 @@ public class CreateBreakTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("break_type")
     public BreakType breakType;
+
     public CreateBreakTypeResponse withBreakType(BreakType breakType) {
         this.breakType = breakType;
         return this;
@@ -32,9 +33,11 @@ public class CreateBreakTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateBreakTypeResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CreateBreakTypeResponse(){}
 }

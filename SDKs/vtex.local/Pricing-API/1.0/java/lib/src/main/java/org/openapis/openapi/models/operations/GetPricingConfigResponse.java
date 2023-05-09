@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPricingConfigResponse {
     
     public String contentType;
+
     public GetPricingConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPricingConfigResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPricingConfigResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetPricingConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.PricingConfiguration pricingConfiguration;
+
     public GetPricingConfigResponse withPricingConfiguration(org.openapis.openapi.models.shared.PricingConfiguration pricingConfiguration) {
         this.pricingConfiguration = pricingConfiguration;
         return this;
@@ -33,6 +37,7 @@ public class GetPricingConfigResponse {
     
     
     public Integer statusCode;
+
     public GetPricingConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetPricingConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPricingConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPricingConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

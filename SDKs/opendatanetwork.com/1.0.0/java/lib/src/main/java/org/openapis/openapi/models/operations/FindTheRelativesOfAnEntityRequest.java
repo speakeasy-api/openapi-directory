@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindTheRelativesOfAnEntityRequest {
@@ -12,6 +13,7 @@ public class FindTheRelativesOfAnEntityRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
     public String xAppToken;
+
     public FindTheRelativesOfAnEntityRequest withXAppToken(String xAppToken) {
         this.xAppToken = xAppToken;
         return this;
@@ -23,6 +25,7 @@ public class FindTheRelativesOfAnEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
     public String appToken;
+
     public FindTheRelativesOfAnEntityRequest withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
@@ -33,6 +36,7 @@ public class FindTheRelativesOfAnEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
     public String entityId;
+
     public FindTheRelativesOfAnEntityRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -44,6 +48,7 @@ public class FindTheRelativesOfAnEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Double limit;
+
     public FindTheRelativesOfAnEntityRequest withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -54,6 +59,7 @@ public class FindTheRelativesOfAnEntityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=relation")
     public FindTheRelativesOfAnEntityRelationEnum relation;
+
     public FindTheRelativesOfAnEntityRequest withRelation(FindTheRelativesOfAnEntityRelationEnum relation) {
         this.relation = relation;
         return this;
@@ -66,9 +72,14 @@ public class FindTheRelativesOfAnEntityRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable_id")
     public String variableId;
+
     public FindTheRelativesOfAnEntityRequest withVariableId(String variableId) {
         this.variableId = variableId;
         return this;
     }
     
+    public FindTheRelativesOfAnEntityRequest(@JsonProperty("entity_id") String entityId, @JsonProperty("relation") FindTheRelativesOfAnEntityRelationEnum relation) {
+        this.entityId = entityId;
+        this.relation = relation;
+  }
 }

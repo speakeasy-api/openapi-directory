@@ -15,6 +15,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer currentProgress;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withCurrentProgress(Integer currentProgress) {
         this.currentProgress = currentProgress;
         return this;
@@ -25,6 +26,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer currentResetCount;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withCurrentResetCount(Integer currentResetCount) {
         this.currentResetCount = currentResetCount;
         return this;
@@ -35,6 +37,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer dailyLimit;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withDailyLimit(Integer dailyLimit) {
         this.dailyLimit = dailyLimit;
         return this;
@@ -45,6 +48,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer dailyProgress;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withDailyProgress(Integer dailyProgress) {
         this.dailyProgress = dailyProgress;
         return this;
@@ -55,6 +59,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer level;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withLevel(Integer level) {
         this.level = level;
         return this;
@@ -65,6 +70,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer levelCap;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withLevelCap(Integer levelCap) {
         this.levelCap = levelCap;
         return this;
@@ -75,6 +81,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer nextLevelAt;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withNextLevelAt(Integer nextLevelAt) {
         this.nextLevelAt = nextLevelAt;
         return this;
@@ -85,6 +92,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer progressToNextLevel;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withProgressToNextLevel(Integer progressToNextLevel) {
         this.progressToNextLevel = progressToNextLevel;
         return this;
@@ -95,6 +103,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Long progressionHash;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withProgressionHash(Long progressionHash) {
         this.progressionHash = progressionHash;
         return this;
@@ -105,6 +114,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer[] rewardItemStates;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withRewardItemStates(Integer[] rewardItemStates) {
         this.rewardItemStates = rewardItemStates;
         return this;
@@ -115,6 +125,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public DestinyDestinyProgressionResetEntry[] seasonResets;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withSeasonResets(DestinyDestinyProgressionResetEntry[] seasonResets) {
         this.seasonResets = seasonResets;
         return this;
@@ -125,6 +136,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer stepIndex;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withStepIndex(Integer stepIndex) {
         this.stepIndex = stepIndex;
         return this;
@@ -135,6 +147,7 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer weeklyLimit;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withWeeklyLimit(Integer weeklyLimit) {
         this.weeklyLimit = weeklyLimit;
         return this;
@@ -145,9 +158,11 @@ public class DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression 
      */
     
     public Integer weeklyProgress;
+
     public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression withWeeklyProgress(Integer weeklyProgress) {
         this.weeklyProgress = weeklyProgress;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterComponentLevelProgression(){}
 }

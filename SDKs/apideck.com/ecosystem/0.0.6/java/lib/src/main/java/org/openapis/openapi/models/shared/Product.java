@@ -12,6 +12,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Product withCount(Long count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Product withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Product withId(String id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public File logo;
+
     public Product withLogo(File logo) {
         this.logo = logo;
         return this;
@@ -43,6 +47,7 @@ public class Product {
     
     @JsonProperty("name")
     public String name;
+
     public Product withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequence")
     public Long sequence;
+
     public Product withSequence(Long sequence) {
         this.sequence = sequence;
         return this;
@@ -58,6 +64,7 @@ public class Product {
     
     @JsonProperty("slug")
     public String slug;
+
     public Product withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -66,6 +73,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translations")
     public Translation[] translations;
+
     public Product withTranslations(Translation[] translations) {
         this.translations = translations;
         return this;
@@ -73,9 +81,15 @@ public class Product {
     
     @JsonProperty("visible")
     public Boolean visible;
+
     public Product withVisible(Boolean visible) {
         this.visible = visible;
         return this;
     }
     
+    public Product(@JsonProperty("name") String name, @JsonProperty("slug") String slug, @JsonProperty("visible") Boolean visible) {
+        this.name = name;
+        this.slug = slug;
+        this.visible = visible;
+  }
 }

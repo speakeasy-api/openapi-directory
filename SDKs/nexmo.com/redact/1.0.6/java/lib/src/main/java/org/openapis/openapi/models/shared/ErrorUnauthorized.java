@@ -15,6 +15,7 @@ public class ErrorUnauthorized {
      */
     @JsonProperty("error_title")
     public String errorTitle;
+
     public ErrorUnauthorized withErrorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
         return this;
@@ -25,9 +26,14 @@ public class ErrorUnauthorized {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorUnauthorized withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorUnauthorized(@JsonProperty("error_title") String errorTitle, @JsonProperty("type") String type) {
+        this.errorTitle = errorTitle;
+        this.type = type;
+  }
 }

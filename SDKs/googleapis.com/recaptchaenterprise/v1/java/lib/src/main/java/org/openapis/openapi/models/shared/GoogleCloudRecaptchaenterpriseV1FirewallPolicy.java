@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public GoogleCloudRecaptchaenterpriseV1FirewallAction[] actions;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicy withActions(GoogleCloudRecaptchaenterpriseV1FirewallAction[] actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicy withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicy withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallPolicy withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1FirewallPolicy(){}
 }

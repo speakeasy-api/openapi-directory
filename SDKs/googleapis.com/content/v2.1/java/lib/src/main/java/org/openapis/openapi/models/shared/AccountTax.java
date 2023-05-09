@@ -18,6 +18,7 @@ public class AccountTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AccountTax withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class AccountTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountTax withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class AccountTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public AccountTaxTaxRule[] rules;
+
     public AccountTax withRules(AccountTaxTaxRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public AccountTax(){}
 }

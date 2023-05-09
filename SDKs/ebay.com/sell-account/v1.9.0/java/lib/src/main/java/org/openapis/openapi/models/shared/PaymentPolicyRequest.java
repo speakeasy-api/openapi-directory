@@ -18,6 +18,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTypes")
     public CategoryType[] categoryTypes;
+
     public PaymentPolicyRequest withCategoryTypes(CategoryType[] categoryTypes) {
         this.categoryTypes = categoryTypes;
         return this;
@@ -29,6 +30,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deposit")
     public Deposit deposit;
+
     public PaymentPolicyRequest withDeposit(Deposit deposit) {
         this.deposit = deposit;
         return this;
@@ -40,6 +42,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PaymentPolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPaymentDueIn")
     public TimeDuration fullPaymentDueIn;
+
     public PaymentPolicyRequest withFullPaymentDueIn(TimeDuration fullPaymentDueIn) {
         this.fullPaymentDueIn = fullPaymentDueIn;
         return this;
@@ -62,6 +66,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("immediatePay")
     public Boolean immediatePay;
+
     public PaymentPolicyRequest withImmediatePay(Boolean immediatePay) {
         this.immediatePay = immediatePay;
         return this;
@@ -73,6 +78,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceId")
     public String marketplaceId;
+
     public PaymentPolicyRequest withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -84,6 +90,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PaymentPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstructions")
     public String paymentInstructions;
+
     public PaymentPolicyRequest withPaymentInstructions(String paymentInstructions) {
         this.paymentInstructions = paymentInstructions;
         return this;
@@ -106,9 +114,11 @@ public class PaymentPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethods")
     public PaymentMethod[] paymentMethods;
+
     public PaymentPolicyRequest withPaymentMethods(PaymentMethod[] paymentMethods) {
         this.paymentMethods = paymentMethods;
         return this;
     }
     
+    public PaymentPolicyRequest(){}
 }

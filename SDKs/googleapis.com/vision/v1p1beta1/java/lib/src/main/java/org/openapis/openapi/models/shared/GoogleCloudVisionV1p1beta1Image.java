@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudVisionV1p1beta1Image withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GoogleCloudVisionV1p1beta1ImageSource source;
+
     public GoogleCloudVisionV1p1beta1Image withSource(GoogleCloudVisionV1p1beta1ImageSource source) {
         this.source = source;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1Image(){}
 }

@@ -54,6 +54,7 @@ public class StartScaprocessResponse {
      */
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public StartScaprocessResponse withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -64,6 +65,7 @@ public class StartScaprocessResponse {
      */
     @JsonProperty("authorisationId")
     public String authorisationId;
+
     public StartScaprocessResponse withAuthorisationId(String authorisationId) {
         this.authorisationId = authorisationId;
         return this;
@@ -77,6 +79,7 @@ public class StartScaprocessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challengeData")
     public ChallengeData challengeData;
+
     public StartScaprocessResponse withChallengeData(ChallengeData challengeData) {
         this.challengeData = challengeData;
         return this;
@@ -89,6 +92,7 @@ public class StartScaprocessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chosenScaMethod")
     public ChosenScaMethod chosenScaMethod;
+
     public StartScaprocessResponse withChosenScaMethod(ChosenScaMethod chosenScaMethod) {
         this.chosenScaMethod = chosenScaMethod;
         return this;
@@ -100,6 +104,7 @@ public class StartScaprocessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public StartScaprocessResponse withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -121,6 +126,7 @@ public class StartScaprocessResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaMethods")
     public AuthenticationObject[] scaMethods;
+
     public StartScaprocessResponse withScaMethods(AuthenticationObject[] scaMethods) {
         this.scaMethods = scaMethods;
         return this;
@@ -158,9 +164,15 @@ public class StartScaprocessResponse {
      */
     @JsonProperty("scaStatus")
     public ScaStatusEnum scaStatus;
+
     public StartScaprocessResponse withScaStatus(ScaStatusEnum scaStatus) {
         this.scaStatus = scaStatus;
         return this;
     }
     
+    public StartScaprocessResponse(@JsonProperty("_links") java.util.Map<String, HrefType> links, @JsonProperty("authorisationId") String authorisationId, @JsonProperty("scaStatus") ScaStatusEnum scaStatus) {
+        this.links = links;
+        this.authorisationId = authorisationId;
+        this.scaStatus = scaStatus;
+  }
 }

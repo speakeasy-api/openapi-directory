@@ -15,6 +15,7 @@ public class DescribeInventoryDeletionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InventoryDeletions")
     public InventoryDeletionStatusItem[] inventoryDeletions;
+
     public DescribeInventoryDeletionsResult withInventoryDeletions(InventoryDeletionStatusItem[] inventoryDeletions) {
         this.inventoryDeletions = inventoryDeletions;
         return this;
@@ -23,9 +24,11 @@ public class DescribeInventoryDeletionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInventoryDeletionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInventoryDeletionsResult(){}
 }

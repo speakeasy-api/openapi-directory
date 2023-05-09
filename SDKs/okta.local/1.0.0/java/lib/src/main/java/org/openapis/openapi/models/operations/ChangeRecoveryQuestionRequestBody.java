@@ -12,6 +12,7 @@ public class ChangeRecoveryQuestionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public ChangeRecoveryQuestionRequestBodyPassword password;
+
     public ChangeRecoveryQuestionRequestBody withPassword(ChangeRecoveryQuestionRequestBodyPassword password) {
         this.password = password;
         return this;
@@ -20,9 +21,11 @@ public class ChangeRecoveryQuestionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recovery_question")
     public ChangeRecoveryQuestionRequestBodyRecoveryQuestion recoveryQuestion;
+
     public ChangeRecoveryQuestionRequestBody withRecoveryQuestion(ChangeRecoveryQuestionRequestBodyRecoveryQuestion recoveryQuestion) {
         this.recoveryQuestion = recoveryQuestion;
         return this;
     }
     
+    public ChangeRecoveryQuestionRequestBody(){}
 }

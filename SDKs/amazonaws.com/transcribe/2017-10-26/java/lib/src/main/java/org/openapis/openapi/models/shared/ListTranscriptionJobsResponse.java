@@ -15,6 +15,7 @@ public class ListTranscriptionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTranscriptionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListTranscriptionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TranscriptionJobStatusEnum status;
+
     public ListTranscriptionJobsResponse withStatus(TranscriptionJobStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class ListTranscriptionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptionJobSummaries")
     public TranscriptionJobSummary[] transcriptionJobSummaries;
+
     public ListTranscriptionJobsResponse withTranscriptionJobSummaries(TranscriptionJobSummary[] transcriptionJobSummaries) {
         this.transcriptionJobSummaries = transcriptionJobSummaries;
         return this;
     }
     
+    public ListTranscriptionJobsResponse(){}
 }

@@ -15,9 +15,11 @@ public class ImportWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public ImportWorkspaceImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public ImportWorkspaceImageResult(){}
 }

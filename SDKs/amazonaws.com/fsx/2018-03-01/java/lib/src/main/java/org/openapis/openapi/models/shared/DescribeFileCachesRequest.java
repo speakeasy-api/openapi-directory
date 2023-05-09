@@ -12,6 +12,7 @@ public class DescribeFileCachesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCacheIds")
     public String[] fileCacheIds;
+
     public DescribeFileCachesRequest withFileCacheIds(String[] fileCacheIds) {
         this.fileCacheIds = fileCacheIds;
         return this;
@@ -23,6 +24,7 @@ public class DescribeFileCachesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeFileCachesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,9 +36,11 @@ public class DescribeFileCachesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFileCachesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFileCachesRequest(){}
 }

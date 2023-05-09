@@ -15,6 +15,7 @@ public class SelectResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SelectResourceConfigResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class SelectResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryInfo")
     public QueryInfo queryInfo;
+
     public SelectResourceConfigResponse withQueryInfo(QueryInfo queryInfo) {
         this.queryInfo = queryInfo;
         return this;
@@ -31,9 +33,11 @@ public class SelectResourceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public String[] results;
+
     public SelectResourceConfigResponse withResults(String[] results) {
         this.results = results;
         return this;
     }
     
+    public SelectResourceConfigResponse(){}
 }

@@ -15,6 +15,7 @@ public class ListDeviceIdentifiersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public java.util.Map<String, String[]> filters;
+
     public ListDeviceIdentifiersRequestBody withFilters(java.util.Map<String, String[]> filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListDeviceIdentifiersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListDeviceIdentifiersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class ListDeviceIdentifiersRequestBody {
      */
     @JsonProperty("networkArn")
     public String networkArn;
+
     public ListDeviceIdentifiersRequestBody withNetworkArn(String networkArn) {
         this.networkArn = networkArn;
         return this;
@@ -47,9 +50,13 @@ public class ListDeviceIdentifiersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startToken")
     public String startToken;
+
     public ListDeviceIdentifiersRequestBody withStartToken(String startToken) {
         this.startToken = startToken;
         return this;
     }
     
+    public ListDeviceIdentifiersRequestBody(@JsonProperty("networkArn") String networkArn) {
+        this.networkArn = networkArn;
+  }
 }

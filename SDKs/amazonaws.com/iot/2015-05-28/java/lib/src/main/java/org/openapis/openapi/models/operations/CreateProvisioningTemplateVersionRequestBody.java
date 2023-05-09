@@ -12,9 +12,13 @@ public class CreateProvisioningTemplateVersionRequestBody {
      */
     @JsonProperty("templateBody")
     public String templateBody;
+
     public CreateProvisioningTemplateVersionRequestBody withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
     
+    public CreateProvisioningTemplateVersionRequestBody(@JsonProperty("templateBody") String templateBody) {
+        this.templateBody = templateBody;
+  }
 }

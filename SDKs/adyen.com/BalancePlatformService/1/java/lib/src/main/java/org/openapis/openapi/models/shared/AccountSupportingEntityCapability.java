@@ -15,6 +15,7 @@ public class AccountSupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Boolean allowed;
+
     public AccountSupportingEntityCapability withAllowed(Boolean allowed) {
         this.allowed = allowed;
         return this;
@@ -28,6 +29,7 @@ public class AccountSupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedLevel")
     public AccountSupportingEntityCapabilityAllowedLevelEnum allowedLevel;
+
     public AccountSupportingEntityCapability withAllowedLevel(AccountSupportingEntityCapabilityAllowedLevelEnum allowedLevel) {
         this.allowedLevel = allowedLevel;
         return this;
@@ -39,6 +41,7 @@ public class AccountSupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AccountSupportingEntityCapability withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -50,6 +53,7 @@ public class AccountSupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AccountSupportingEntityCapability withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +65,7 @@ public class AccountSupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public Boolean requested;
+
     public AccountSupportingEntityCapability withRequested(Boolean requested) {
         this.requested = requested;
         return this;
@@ -74,6 +79,7 @@ public class AccountSupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLevel")
     public AccountSupportingEntityCapabilityRequestedLevelEnum requestedLevel;
+
     public AccountSupportingEntityCapability withRequestedLevel(AccountSupportingEntityCapabilityRequestedLevelEnum requestedLevel) {
         this.requestedLevel = requestedLevel;
         return this;
@@ -96,9 +102,11 @@ public class AccountSupportingEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStatus")
     public AccountSupportingEntityCapabilityVerificationStatusEnum verificationStatus;
+
     public AccountSupportingEntityCapability withVerificationStatus(AccountSupportingEntityCapabilityVerificationStatusEnum verificationStatus) {
         this.verificationStatus = verificationStatus;
         return this;
     }
     
+    public AccountSupportingEntityCapability(){}
 }

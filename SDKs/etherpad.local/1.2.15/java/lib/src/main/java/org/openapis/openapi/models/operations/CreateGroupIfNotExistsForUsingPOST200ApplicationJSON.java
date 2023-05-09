@@ -15,6 +15,7 @@ public class CreateGroupIfNotExistsForUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public CreateGroupIfNotExistsForUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CreateGroupIfNotExistsForUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CreateGroupIfNotExistsForUsingPOST200ApplicationJSONData data;
+
     public CreateGroupIfNotExistsForUsingPOST200ApplicationJSON withData(CreateGroupIfNotExistsForUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class CreateGroupIfNotExistsForUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateGroupIfNotExistsForUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateGroupIfNotExistsForUsingPOST200ApplicationJSON(){}
 }

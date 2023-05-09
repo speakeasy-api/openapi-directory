@@ -10,8 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetWorkflowTypeEnum - The workflow's type.
  */
 public enum GetWorkflowTypeEnum {
-    PRIVATE_("PRIVATE"),
-    SERVICE("SERVICE");
+    PRIVATE_("PRIVATE");
 
     @JsonValue
     public final String value;

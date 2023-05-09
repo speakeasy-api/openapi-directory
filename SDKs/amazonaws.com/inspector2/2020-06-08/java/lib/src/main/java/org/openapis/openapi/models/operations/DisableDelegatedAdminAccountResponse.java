@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableDelegatedAdminAccountResponse {
@@ -12,6 +13,7 @@ public class DisableDelegatedAdminAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableDelegatedAdminAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisableDelegatedAdminAccountResponse {
      */
     
     public Object conflictException;
+
     public DisableDelegatedAdminAccountResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisableDelegatedAdminAccountResponse {
     
     
     public String contentType;
+
     public DisableDelegatedAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisableDelegatedAdminAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.DisableDelegatedAdminAccountResponse disableDelegatedAdminAccountResponse;
+
     public DisableDelegatedAdminAccountResponse withDisableDelegatedAdminAccountResponse(org.openapis.openapi.models.shared.DisableDelegatedAdminAccountResponse disableDelegatedAdminAccountResponse) {
         this.disableDelegatedAdminAccountResponse = disableDelegatedAdminAccountResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisableDelegatedAdminAccountResponse {
      */
     
     public Object internalServerException;
+
     public DisableDelegatedAdminAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DisableDelegatedAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public DisableDelegatedAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisableDelegatedAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableDelegatedAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisableDelegatedAdminAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisableDelegatedAdminAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DisableDelegatedAdminAccountResponse {
      */
     
     public Object throttlingException;
+
     public DisableDelegatedAdminAccountResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DisableDelegatedAdminAccountResponse {
      */
     
     public Object validationException;
+
     public DisableDelegatedAdminAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisableDelegatedAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

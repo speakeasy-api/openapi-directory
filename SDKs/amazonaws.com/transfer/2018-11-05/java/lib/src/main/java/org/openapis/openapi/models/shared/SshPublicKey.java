@@ -19,6 +19,7 @@ public class SshPublicKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateImported")
     public OffsetDateTime dateImported;
+
     public SshPublicKey withDateImported(OffsetDateTime dateImported) {
         this.dateImported = dateImported;
         return this;
@@ -26,6 +27,7 @@ public class SshPublicKey {
     
     @JsonProperty("SshPublicKeyBody")
     public String sshPublicKeyBody;
+
     public SshPublicKey withSshPublicKeyBody(String sshPublicKeyBody) {
         this.sshPublicKeyBody = sshPublicKeyBody;
         return this;
@@ -33,9 +35,15 @@ public class SshPublicKey {
     
     @JsonProperty("SshPublicKeyId")
     public String sshPublicKeyId;
+
     public SshPublicKey withSshPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
     }
     
+    public SshPublicKey(@JsonProperty("DateImported") OffsetDateTime dateImported, @JsonProperty("SshPublicKeyBody") String sshPublicKeyBody, @JsonProperty("SshPublicKeyId") String sshPublicKeyId) {
+        this.dateImported = dateImported;
+        this.sshPublicKeyBody = sshPublicKeyBody;
+        this.sshPublicKeyId = sshPublicKeyId;
+  }
 }

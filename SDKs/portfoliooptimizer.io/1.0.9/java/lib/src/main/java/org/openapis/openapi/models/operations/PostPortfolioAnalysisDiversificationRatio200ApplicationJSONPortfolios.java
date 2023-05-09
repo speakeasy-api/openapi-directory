@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisDiversificationRatio200ApplicationJSONPortfoli
      */
     @JsonProperty("portfolioDiversificationRatio")
     public Double portfolioDiversificationRatio;
+
     public PostPortfolioAnalysisDiversificationRatio200ApplicationJSONPortfolios withPortfolioDiversificationRatio(Double portfolioDiversificationRatio) {
         this.portfolioDiversificationRatio = portfolioDiversificationRatio;
         return this;
     }
     
+    public PostPortfolioAnalysisDiversificationRatio200ApplicationJSONPortfolios(@JsonProperty("portfolioDiversificationRatio") Double portfolioDiversificationRatio) {
+        this.portfolioDiversificationRatio = portfolioDiversificationRatio;
+  }
 }

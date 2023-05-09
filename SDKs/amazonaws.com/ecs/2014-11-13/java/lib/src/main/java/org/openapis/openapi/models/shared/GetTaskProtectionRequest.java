@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTaskProtectionRequest {
     @JsonProperty("cluster")
     public String cluster;
+
     public GetTaskProtectionRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,9 +20,13 @@ public class GetTaskProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public String[] tasks;
+
     public GetTaskProtectionRequest withTasks(String[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public GetTaskProtectionRequest(@JsonProperty("cluster") String cluster) {
+        this.cluster = cluster;
+  }
 }

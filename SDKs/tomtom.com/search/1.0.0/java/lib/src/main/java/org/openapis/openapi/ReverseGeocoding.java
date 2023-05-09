@@ -54,10 +54,8 @@ public class ReverseGeocoding {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -93,10 +91,8 @@ public class ReverseGeocoding {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RequestSpotFleetRequest - Contains the parameters for RequestSpotFleet.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequest {
     
     public Boolean dryRun;
+
     public RequestSpotFleetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class RequestSpotFleetRequest {
     
     
     public RequestSpotFleetRequestSpotFleetRequestConfig spotFleetRequestConfig;
+
     public RequestSpotFleetRequest withSpotFleetRequestConfig(RequestSpotFleetRequestSpotFleetRequestConfig spotFleetRequestConfig) {
         this.spotFleetRequestConfig = spotFleetRequestConfig;
         return this;
     }
     
+    public RequestSpotFleetRequest(@JsonProperty("SpotFleetRequestConfig") RequestSpotFleetRequestSpotFleetRequestConfig spotFleetRequestConfig) {
+        this.spotFleetRequestConfig = spotFleetRequestConfig;
+  }
 }

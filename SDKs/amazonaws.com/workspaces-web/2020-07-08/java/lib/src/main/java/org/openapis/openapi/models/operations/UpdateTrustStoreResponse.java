@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTrustStoreResponse {
@@ -12,6 +13,7 @@ public class UpdateTrustStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateTrustStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTrustStoreResponse {
     
     
     public String contentType;
+
     public UpdateTrustStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTrustStoreResponse {
      */
     
     public Object internalServerException;
+
     public UpdateTrustStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTrustStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTrustStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTrustStoreResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateTrustStoreResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateTrustStoreResponse {
     
     
     public Integer statusCode;
+
     public UpdateTrustStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTrustStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTrustStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateTrustStoreResponse {
      */
     
     public Object throttlingException;
+
     public UpdateTrustStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTrustStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTrustStoreResponse updateTrustStoreResponse;
+
     public UpdateTrustStoreResponse withUpdateTrustStoreResponse(org.openapis.openapi.models.shared.UpdateTrustStoreResponse updateTrustStoreResponse) {
         this.updateTrustStoreResponse = updateTrustStoreResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateTrustStoreResponse {
      */
     
     public Object validationException;
+
     public UpdateTrustStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateTrustStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

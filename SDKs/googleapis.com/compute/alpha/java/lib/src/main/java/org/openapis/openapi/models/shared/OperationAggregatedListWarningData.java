@@ -15,6 +15,7 @@ public class OperationAggregatedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public OperationAggregatedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class OperationAggregatedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public OperationAggregatedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public OperationAggregatedListWarningData(){}
 }

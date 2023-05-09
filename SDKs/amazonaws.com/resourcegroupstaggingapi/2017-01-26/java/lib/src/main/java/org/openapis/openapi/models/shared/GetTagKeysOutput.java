@@ -15,6 +15,7 @@ public class GetTagKeysOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public GetTagKeysOutput withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -23,9 +24,11 @@ public class GetTagKeysOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeys")
     public String[] tagKeys;
+
     public GetTagKeysOutput withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public GetTagKeysOutput(){}
 }

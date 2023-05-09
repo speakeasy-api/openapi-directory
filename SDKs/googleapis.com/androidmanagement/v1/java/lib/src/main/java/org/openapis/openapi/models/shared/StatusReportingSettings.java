@@ -18,6 +18,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationReportingSettings")
     public ApplicationReportingSettings applicationReportingSettings;
+
     public StatusReportingSettings withApplicationReportingSettings(ApplicationReportingSettings applicationReportingSettings) {
         this.applicationReportingSettings = applicationReportingSettings;
         return this;
@@ -29,6 +30,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationReportsEnabled")
     public Boolean applicationReportsEnabled;
+
     public StatusReportingSettings withApplicationReportsEnabled(Boolean applicationReportsEnabled) {
         this.applicationReportsEnabled = applicationReportsEnabled;
         return this;
@@ -40,6 +42,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonCriteriaModeEnabled")
     public Boolean commonCriteriaModeEnabled;
+
     public StatusReportingSettings withCommonCriteriaModeEnabled(Boolean commonCriteriaModeEnabled) {
         this.commonCriteriaModeEnabled = commonCriteriaModeEnabled;
         return this;
@@ -51,6 +54,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceSettingsEnabled")
     public Boolean deviceSettingsEnabled;
+
     public StatusReportingSettings withDeviceSettingsEnabled(Boolean deviceSettingsEnabled) {
         this.deviceSettingsEnabled = deviceSettingsEnabled;
         return this;
@@ -62,6 +66,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayInfoEnabled")
     public Boolean displayInfoEnabled;
+
     public StatusReportingSettings withDisplayInfoEnabled(Boolean displayInfoEnabled) {
         this.displayInfoEnabled = displayInfoEnabled;
         return this;
@@ -73,6 +78,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardwareStatusEnabled")
     public Boolean hardwareStatusEnabled;
+
     public StatusReportingSettings withHardwareStatusEnabled(Boolean hardwareStatusEnabled) {
         this.hardwareStatusEnabled = hardwareStatusEnabled;
         return this;
@@ -84,6 +90,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryInfoEnabled")
     public Boolean memoryInfoEnabled;
+
     public StatusReportingSettings withMemoryInfoEnabled(Boolean memoryInfoEnabled) {
         this.memoryInfoEnabled = memoryInfoEnabled;
         return this;
@@ -95,6 +102,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInfoEnabled")
     public Boolean networkInfoEnabled;
+
     public StatusReportingSettings withNetworkInfoEnabled(Boolean networkInfoEnabled) {
         this.networkInfoEnabled = networkInfoEnabled;
         return this;
@@ -106,6 +114,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerManagementEventsEnabled")
     public Boolean powerManagementEventsEnabled;
+
     public StatusReportingSettings withPowerManagementEventsEnabled(Boolean powerManagementEventsEnabled) {
         this.powerManagementEventsEnabled = powerManagementEventsEnabled;
         return this;
@@ -117,6 +126,7 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareInfoEnabled")
     public Boolean softwareInfoEnabled;
+
     public StatusReportingSettings withSoftwareInfoEnabled(Boolean softwareInfoEnabled) {
         this.softwareInfoEnabled = softwareInfoEnabled;
         return this;
@@ -128,9 +138,11 @@ public class StatusReportingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemPropertiesEnabled")
     public Boolean systemPropertiesEnabled;
+
     public StatusReportingSettings withSystemPropertiesEnabled(Boolean systemPropertiesEnabled) {
         this.systemPropertiesEnabled = systemPropertiesEnabled;
         return this;
     }
     
+    public StatusReportingSettings(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyGlobalReplicationGroupMessage {
     
     public Boolean applyImmediately;
+
     public ModifyGlobalReplicationGroupMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -16,6 +17,7 @@ public class ModifyGlobalReplicationGroupMessage {
     
     
     public Boolean automaticFailoverEnabled;
+
     public ModifyGlobalReplicationGroupMessage withAutomaticFailoverEnabled(Boolean automaticFailoverEnabled) {
         this.automaticFailoverEnabled = automaticFailoverEnabled;
         return this;
@@ -23,6 +25,7 @@ public class ModifyGlobalReplicationGroupMessage {
     
     
     public String cacheNodeType;
+
     public ModifyGlobalReplicationGroupMessage withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -30,6 +33,7 @@ public class ModifyGlobalReplicationGroupMessage {
     
     
     public String cacheParameterGroupName;
+
     public ModifyGlobalReplicationGroupMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -37,6 +41,7 @@ public class ModifyGlobalReplicationGroupMessage {
     
     
     public String engineVersion;
+
     public ModifyGlobalReplicationGroupMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -44,6 +49,7 @@ public class ModifyGlobalReplicationGroupMessage {
     
     
     public String globalReplicationGroupDescription;
+
     public ModifyGlobalReplicationGroupMessage withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
         this.globalReplicationGroupDescription = globalReplicationGroupDescription;
         return this;
@@ -51,9 +57,14 @@ public class ModifyGlobalReplicationGroupMessage {
     
     
     public String globalReplicationGroupId;
+
     public ModifyGlobalReplicationGroupMessage withGlobalReplicationGroupId(String globalReplicationGroupId) {
         this.globalReplicationGroupId = globalReplicationGroupId;
         return this;
     }
     
+    public ModifyGlobalReplicationGroupMessage(@JsonProperty("ApplyImmediately") Boolean applyImmediately, @JsonProperty("GlobalReplicationGroupId") String globalReplicationGroupId) {
+        this.applyImmediately = applyImmediately;
+        this.globalReplicationGroupId = globalReplicationGroupId;
+  }
 }

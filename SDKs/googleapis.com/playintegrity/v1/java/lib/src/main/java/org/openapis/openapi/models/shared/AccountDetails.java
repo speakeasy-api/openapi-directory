@@ -18,6 +18,7 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountActivity")
     public AccountActivity accountActivity;
+
     public AccountDetails withAccountActivity(AccountActivity accountActivity) {
         this.accountActivity = accountActivity;
         return this;
@@ -29,9 +30,11 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appLicensingVerdict")
     public AccountDetailsAppLicensingVerdictEnum appLicensingVerdict;
+
     public AccountDetails withAppLicensingVerdict(AccountDetailsAppLicensingVerdictEnum appLicensingVerdict) {
         this.appLicensingVerdict = appLicensingVerdict;
         return this;
     }
     
+    public AccountDetails(){}
 }

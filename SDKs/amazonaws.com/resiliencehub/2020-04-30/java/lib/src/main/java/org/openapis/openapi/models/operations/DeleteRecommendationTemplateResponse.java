@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRecommendationTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteRecommendationTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRecommendationTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRecommendationTemplateResponse {
     
     
     public String contentType;
+
     public DeleteRecommendationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRecommendationTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRecommendationTemplateResponse deleteRecommendationTemplateResponse;
+
     public DeleteRecommendationTemplateResponse withDeleteRecommendationTemplateResponse(org.openapis.openapi.models.shared.DeleteRecommendationTemplateResponse deleteRecommendationTemplateResponse) {
         this.deleteRecommendationTemplateResponse = deleteRecommendationTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRecommendationTemplateResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRecommendationTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRecommendationTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteRecommendationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRecommendationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRecommendationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRecommendationTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRecommendationTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRecommendationTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRecommendationTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteRecommendationTemplateResponse {
      */
     
     public Object validationException;
+
     public DeleteRecommendationTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRecommendationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

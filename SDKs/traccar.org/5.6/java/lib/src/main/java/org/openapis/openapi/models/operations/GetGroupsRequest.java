@@ -12,6 +12,7 @@ public class GetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public Boolean all;
+
     public GetGroupsRequest withAll(Boolean all) {
         this.all = all;
         return this;
@@ -22,9 +23,11 @@ public class GetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public Long userId;
+
     public GetGroupsRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetGroupsRequest(){}
 }

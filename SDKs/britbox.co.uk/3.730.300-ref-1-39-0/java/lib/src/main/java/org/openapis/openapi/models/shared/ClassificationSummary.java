@@ -12,6 +12,7 @@ public class ClassificationSummary {
      */
     @JsonProperty("code")
     public String code;
+
     public ClassificationSummary withCode(String code) {
         this.code = code;
         return this;
@@ -22,9 +23,14 @@ public class ClassificationSummary {
      */
     @JsonProperty("name")
     public String name;
+
     public ClassificationSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ClassificationSummary(@JsonProperty("code") String code, @JsonProperty("name") String name) {
+        this.code = code;
+        this.name = name;
+  }
 }

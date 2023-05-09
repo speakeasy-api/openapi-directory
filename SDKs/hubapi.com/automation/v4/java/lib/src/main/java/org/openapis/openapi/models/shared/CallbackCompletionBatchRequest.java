@@ -15,6 +15,7 @@ public class CallbackCompletionBatchRequest {
      */
     @JsonProperty("callbackId")
     public String callbackId;
+
     public CallbackCompletionBatchRequest withCallbackId(String callbackId) {
         this.callbackId = callbackId;
         return this;
@@ -25,9 +26,14 @@ public class CallbackCompletionBatchRequest {
      */
     @JsonProperty("outputFields")
     public java.util.Map<String, String> outputFields;
+
     public CallbackCompletionBatchRequest withOutputFields(java.util.Map<String, String> outputFields) {
         this.outputFields = outputFields;
         return this;
     }
     
+    public CallbackCompletionBatchRequest(@JsonProperty("callbackId") String callbackId, @JsonProperty("outputFields") java.util.Map<String, String> outputFields) {
+        this.callbackId = callbackId;
+        this.outputFields = outputFields;
+  }
 }

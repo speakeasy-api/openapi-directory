@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AttachInstancesToLoadBalancerRequest {
     @JsonProperty("instanceNames")
     public String[] instanceNames;
+
     public AttachInstancesToLoadBalancerRequest withInstanceNames(String[] instanceNames) {
         this.instanceNames = instanceNames;
         return this;
@@ -16,9 +17,14 @@ public class AttachInstancesToLoadBalancerRequest {
     
     @JsonProperty("loadBalancerName")
     public String loadBalancerName;
+
     public AttachInstancesToLoadBalancerRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public AttachInstancesToLoadBalancerRequest(@JsonProperty("instanceNames") String[] instanceNames, @JsonProperty("loadBalancerName") String loadBalancerName) {
+        this.instanceNames = instanceNames;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

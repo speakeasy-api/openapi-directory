@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1AssetResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDataplexV1AssetResourceSpec withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1AssetResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAccessMode")
     public GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum readAccessMode;
+
     public GoogleCloudDataplexV1AssetResourceSpec withReadAccessMode(GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum readAccessMode) {
         this.readAccessMode = readAccessMode;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1AssetResourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDataplexV1AssetResourceSpecTypeEnum type;
+
     public GoogleCloudDataplexV1AssetResourceSpec withType(GoogleCloudDataplexV1AssetResourceSpecTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDataplexV1AssetResourceSpec(){}
 }

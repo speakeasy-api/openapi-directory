@@ -56,13 +56,11 @@ public class RecommendedLocations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecommendedLocationResponse res = new org.openapis.openapi.models.operations.GetRecommendedLocationResponse() {{
+        org.openapis.openapi.models.operations.GetRecommendedLocationResponse res = new org.openapis.openapi.models.operations.GetRecommendedLocationResponse(contentType, httpRes.statusCode()) {{
             getRecommendedLocation200ApplicationVndAmadeusPlusJsonObject = null;
             error400 = null;
             error500 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateSSHPublicKeyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateSSHPublicKeyActionEnum action;
+
     public GETUpdateSSHPublicKeyRequest withAction(GETUpdateSSHPublicKeyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateSSHPublicKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SSHPublicKeyId")
     public String sshPublicKeyId;
+
     public GETUpdateSSHPublicKeyRequest withSSHPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateSSHPublicKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
     public GETUpdateSSHPublicKeyStatusEnum status;
+
     public GETUpdateSSHPublicKeyRequest withStatus(GETUpdateSSHPublicKeyStatusEnum status) {
         this.status = status;
         return this;
@@ -39,6 +43,7 @@ public class GETUpdateSSHPublicKeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
     public String userName;
+
     public GETUpdateSSHPublicKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -46,6 +51,7 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateSSHPublicKeyVersionEnum version;
+
     public GETUpdateSSHPublicKeyRequest withVersion(GETUpdateSSHPublicKeyVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateSSHPublicKeyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateSSHPublicKeyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateSSHPublicKeyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateSSHPublicKeyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateSSHPublicKeyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateSSHPublicKeyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETUpdateSSHPublicKeyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateSSHPublicKeyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateSSHPublicKeyRequest(@JsonProperty("Action") GETUpdateSSHPublicKeyActionEnum action, @JsonProperty("SSHPublicKeyId") String sshPublicKeyId, @JsonProperty("Status") GETUpdateSSHPublicKeyStatusEnum status, @JsonProperty("UserName") String userName, @JsonProperty("Version") GETUpdateSSHPublicKeyVersionEnum version) {
+        this.action = action;
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.status = status;
+        this.userName = userName;
+        this.version = version;
+  }
 }

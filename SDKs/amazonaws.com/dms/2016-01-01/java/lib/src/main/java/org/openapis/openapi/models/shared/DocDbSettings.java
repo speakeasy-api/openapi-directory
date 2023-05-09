@@ -15,6 +15,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DocDbSettings withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -23,6 +24,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocsToInvestigate")
     public Long docsToInvestigate;
+
     public DocDbSettings withDocsToInvestigate(Long docsToInvestigate) {
         this.docsToInvestigate = docsToInvestigate;
         return this;
@@ -31,6 +33,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtractDocId")
     public Boolean extractDocId;
+
     public DocDbSettings withExtractDocId(Boolean extractDocId) {
         this.extractDocId = extractDocId;
         return this;
@@ -39,6 +42,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DocDbSettings withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +51,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NestingLevel")
     public NestingLevelValueEnum nestingLevel;
+
     public DocDbSettings withNestingLevel(NestingLevelValueEnum nestingLevel) {
         this.nestingLevel = nestingLevel;
         return this;
@@ -55,6 +60,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public DocDbSettings withPassword(String password) {
         this.password = password;
         return this;
@@ -63,6 +69,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public DocDbSettings withPort(Long port) {
         this.port = port;
         return this;
@@ -71,6 +78,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerAccessRoleArn")
     public String secretsManagerAccessRoleArn;
+
     public DocDbSettings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
         this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
         return this;
@@ -79,6 +87,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerSecretId")
     public String secretsManagerSecretId;
+
     public DocDbSettings withSecretsManagerSecretId(String secretsManagerSecretId) {
         this.secretsManagerSecretId = secretsManagerSecretId;
         return this;
@@ -87,6 +96,7 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public DocDbSettings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -95,9 +105,11 @@ public class DocDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public DocDbSettings withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public DocDbSettings(){}
 }

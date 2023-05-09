@@ -178,6 +178,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -215,7 +220,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGameResponse res = new org.openapis.openapi.models.operations.CreateGameResponse() {{
+        org.openapis.openapi.models.operations.CreateGameResponse res = new org.openapis.openapi.models.operations.CreateGameResponse(contentType, httpRes.statusCode()) {{
             createGameResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -224,8 +229,6 @@ public class SDK {
             internalServerException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,7 +318,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSnapshotResponse res = new org.openapis.openapi.models.operations.CreateSnapshotResponse() {{
+        org.openapis.openapi.models.operations.CreateSnapshotResponse res = new org.openapis.openapi.models.operations.CreateSnapshotResponse(contentType, httpRes.statusCode()) {{
             createSnapshotResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -324,8 +327,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -415,7 +416,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateStageResponse res = new org.openapis.openapi.models.operations.CreateStageResponse() {{
+        org.openapis.openapi.models.operations.CreateStageResponse res = new org.openapis.openapi.models.operations.CreateStageResponse(contentType, httpRes.statusCode()) {{
             createStageResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -424,8 +425,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -510,7 +509,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGameResponse res = new org.openapis.openapi.models.operations.DeleteGameResponse() {{
+        org.openapis.openapi.models.operations.DeleteGameResponse res = new org.openapis.openapi.models.operations.DeleteGameResponse(contentType, httpRes.statusCode()) {{
             deleteGameResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -518,8 +517,6 @@ public class SDK {
             conflictException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -597,7 +594,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteStageResponse res = new org.openapis.openapi.models.operations.DeleteStageResponse() {{
+        org.openapis.openapi.models.operations.DeleteStageResponse res = new org.openapis.openapi.models.operations.DeleteStageResponse(contentType, httpRes.statusCode()) {{
             deleteStageResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -606,8 +603,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -692,7 +687,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisconnectPlayerResponse res = new org.openapis.openapi.models.operations.DisconnectPlayerResponse() {{
+        org.openapis.openapi.models.operations.DisconnectPlayerResponse res = new org.openapis.openapi.models.operations.DisconnectPlayerResponse(contentType, httpRes.statusCode()) {{
             disconnectPlayerResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -700,8 +695,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -779,7 +772,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportSnapshotResponse res = new org.openapis.openapi.models.operations.ExportSnapshotResponse() {{
+        org.openapis.openapi.models.operations.ExportSnapshotResponse res = new org.openapis.openapi.models.operations.ExportSnapshotResponse(contentType, httpRes.statusCode()) {{
             exportSnapshotResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -787,8 +780,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -866,7 +857,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExtensionResponse res = new org.openapis.openapi.models.operations.GetExtensionResponse() {{
+        org.openapis.openapi.models.operations.GetExtensionResponse res = new org.openapis.openapi.models.operations.GetExtensionResponse(contentType, httpRes.statusCode()) {{
             getExtensionResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -874,8 +865,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -953,7 +942,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExtensionVersionResponse res = new org.openapis.openapi.models.operations.GetExtensionVersionResponse() {{
+        org.openapis.openapi.models.operations.GetExtensionVersionResponse res = new org.openapis.openapi.models.operations.GetExtensionVersionResponse(contentType, httpRes.statusCode()) {{
             getExtensionVersionResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -961,8 +950,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1040,7 +1027,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGameResponse res = new org.openapis.openapi.models.operations.GetGameResponse() {{
+        org.openapis.openapi.models.operations.GetGameResponse res = new org.openapis.openapi.models.operations.GetGameResponse(contentType, httpRes.statusCode()) {{
             getGameResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1048,8 +1035,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1133,7 +1118,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGameConfigurationResponse res = new org.openapis.openapi.models.operations.GetGameConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetGameConfigurationResponse res = new org.openapis.openapi.models.operations.GetGameConfigurationResponse(contentType, httpRes.statusCode()) {{
             getGameConfigurationResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1141,8 +1126,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1220,7 +1203,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneratedCodeJobResponse res = new org.openapis.openapi.models.operations.GetGeneratedCodeJobResponse() {{
+        org.openapis.openapi.models.operations.GetGeneratedCodeJobResponse res = new org.openapis.openapi.models.operations.GetGeneratedCodeJobResponse(contentType, httpRes.statusCode()) {{
             getGeneratedCodeJobResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1228,8 +1211,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1307,7 +1288,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlayerConnectionStatusResponse res = new org.openapis.openapi.models.operations.GetPlayerConnectionStatusResponse() {{
+        org.openapis.openapi.models.operations.GetPlayerConnectionStatusResponse res = new org.openapis.openapi.models.operations.GetPlayerConnectionStatusResponse(contentType, httpRes.statusCode()) {{
             getPlayerConnectionStatusResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1315,8 +1296,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1400,7 +1379,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnapshotResponse res = new org.openapis.openapi.models.operations.GetSnapshotResponse() {{
+        org.openapis.openapi.models.operations.GetSnapshotResponse res = new org.openapis.openapi.models.operations.GetSnapshotResponse(contentType, httpRes.statusCode()) {{
             getSnapshotResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1408,8 +1387,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1487,7 +1464,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStageResponse res = new org.openapis.openapi.models.operations.GetStageResponse() {{
+        org.openapis.openapi.models.operations.GetStageResponse res = new org.openapis.openapi.models.operations.GetStageResponse(contentType, httpRes.statusCode()) {{
             getStageResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1495,8 +1472,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1580,7 +1555,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStageDeploymentResponse res = new org.openapis.openapi.models.operations.GetStageDeploymentResponse() {{
+        org.openapis.openapi.models.operations.GetStageDeploymentResponse res = new org.openapis.openapi.models.operations.GetStageDeploymentResponse(contentType, httpRes.statusCode()) {{
             getStageDeploymentResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1588,8 +1563,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1672,7 +1645,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportGameConfigurationResponse res = new org.openapis.openapi.models.operations.ImportGameConfigurationResponse() {{
+        org.openapis.openapi.models.operations.ImportGameConfigurationResponse res = new org.openapis.openapi.models.operations.ImportGameConfigurationResponse(contentType, httpRes.statusCode()) {{
             importGameConfigurationResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1681,8 +1654,6 @@ public class SDK {
             internalServerException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1773,7 +1744,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListExtensionVersionsResponse res = new org.openapis.openapi.models.operations.ListExtensionVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListExtensionVersionsResponse res = new org.openapis.openapi.models.operations.ListExtensionVersionsResponse(contentType, httpRes.statusCode()) {{
             listExtensionVersionsResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -1781,8 +1752,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1866,15 +1835,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListExtensionsResponse res = new org.openapis.openapi.models.operations.ListExtensionsResponse() {{
+        org.openapis.openapi.models.operations.ListExtensionsResponse res = new org.openapis.openapi.models.operations.ListExtensionsResponse(contentType, httpRes.statusCode()) {{
             listExtensionsResult = null;
             validationException = null;
             accessDeniedException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1951,15 +1918,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGamesResponse res = new org.openapis.openapi.models.operations.ListGamesResponse() {{
+        org.openapis.openapi.models.operations.ListGamesResponse res = new org.openapis.openapi.models.operations.ListGamesResponse(contentType, httpRes.statusCode()) {{
             listGamesResult = null;
             validationException = null;
             accessDeniedException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2036,7 +2001,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGeneratedCodeJobsResponse res = new org.openapis.openapi.models.operations.ListGeneratedCodeJobsResponse() {{
+        org.openapis.openapi.models.operations.ListGeneratedCodeJobsResponse res = new org.openapis.openapi.models.operations.ListGeneratedCodeJobsResponse(contentType, httpRes.statusCode()) {{
             listGeneratedCodeJobsResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2044,8 +2009,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2129,7 +2092,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSnapshotsResponse res = new org.openapis.openapi.models.operations.ListSnapshotsResponse() {{
+        org.openapis.openapi.models.operations.ListSnapshotsResponse res = new org.openapis.openapi.models.operations.ListSnapshotsResponse(contentType, httpRes.statusCode()) {{
             listSnapshotsResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2137,8 +2100,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2222,7 +2183,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStageDeploymentsResponse res = new org.openapis.openapi.models.operations.ListStageDeploymentsResponse() {{
+        org.openapis.openapi.models.operations.ListStageDeploymentsResponse res = new org.openapis.openapi.models.operations.ListStageDeploymentsResponse(contentType, httpRes.statusCode()) {{
             listStageDeploymentsResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2230,8 +2191,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2315,7 +2274,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListStagesResponse res = new org.openapis.openapi.models.operations.ListStagesResponse() {{
+        org.openapis.openapi.models.operations.ListStagesResponse res = new org.openapis.openapi.models.operations.ListStagesResponse(contentType, httpRes.statusCode()) {{
             listStagesResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2323,8 +2282,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2402,14 +2359,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResult = null;
             validationException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2478,7 +2433,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartGeneratedCodeJobResponse res = new org.openapis.openapi.models.operations.StartGeneratedCodeJobResponse() {{
+        org.openapis.openapi.models.operations.StartGeneratedCodeJobResponse res = new org.openapis.openapi.models.operations.StartGeneratedCodeJobResponse(contentType, httpRes.statusCode()) {{
             startGeneratedCodeJobResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2486,8 +2441,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2570,7 +2523,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartStageDeploymentResponse res = new org.openapis.openapi.models.operations.StartStageDeploymentResponse() {{
+        org.openapis.openapi.models.operations.StartStageDeploymentResponse res = new org.openapis.openapi.models.operations.StartStageDeploymentResponse(contentType, httpRes.statusCode()) {{
             startStageDeploymentResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2579,8 +2532,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2670,14 +2621,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResult = null;
             validationException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2747,14 +2696,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResult = null;
             validationException = null;
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2823,7 +2770,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGameResponse res = new org.openapis.openapi.models.operations.UpdateGameResponse() {{
+        org.openapis.openapi.models.operations.UpdateGameResponse res = new org.openapis.openapi.models.operations.UpdateGameResponse(contentType, httpRes.statusCode()) {{
             updateGameResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2831,8 +2778,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2915,7 +2860,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGameConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateGameConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateGameConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateGameConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateGameConfigurationResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -2924,8 +2869,6 @@ public class SDK {
             internalServerException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3015,7 +2958,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSnapshotResponse res = new org.openapis.openapi.models.operations.UpdateSnapshotResponse() {{
+        org.openapis.openapi.models.operations.UpdateSnapshotResponse res = new org.openapis.openapi.models.operations.UpdateSnapshotResponse(contentType, httpRes.statusCode()) {{
             updateSnapshotResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -3023,8 +2966,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3107,7 +3048,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateStageResponse res = new org.openapis.openapi.models.operations.UpdateStageResponse() {{
+        org.openapis.openapi.models.operations.UpdateStageResponse res = new org.openapis.openapi.models.operations.UpdateStageResponse(contentType, httpRes.statusCode()) {{
             updateStageResult = null;
             validationException = null;
             accessDeniedException = null;
@@ -3115,8 +3056,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

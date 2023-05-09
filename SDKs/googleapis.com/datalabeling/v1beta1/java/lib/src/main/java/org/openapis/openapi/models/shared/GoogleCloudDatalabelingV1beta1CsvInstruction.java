@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1CsvInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsFileUri")
     public String gcsFileUri;
+
     public GoogleCloudDatalabelingV1beta1CsvInstruction withGcsFileUri(String gcsFileUri) {
         this.gcsFileUri = gcsFileUri;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1CsvInstruction(){}
 }

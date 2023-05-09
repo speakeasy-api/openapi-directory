@@ -7,11 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAs2PartnersIdRequestBody {
+    @SpeakeasyMetadata("multipartForm:name=enable_dedicated_ips")
+    public Boolean enableDedicatedIps;
+
+    public PatchAs2PartnersIdRequestBody withEnableDedicatedIps(Boolean enableDedicatedIps) {
+        this.enableDedicatedIps = enableDedicatedIps;
+        return this;
+    }
+    
     /**
      * AS2 Name
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PatchAs2PartnersIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +28,7 @@ public class PatchAs2PartnersIdRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=public_certificate")
     public String publicCertificate;
+
     public PatchAs2PartnersIdRequestBody withPublicCertificate(String publicCertificate) {
         this.publicCertificate = publicCertificate;
         return this;
@@ -29,6 +39,7 @@ public class PatchAs2PartnersIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=server_certificate")
     public String serverCertificate;
+
     public PatchAs2PartnersIdRequestBody withServerCertificate(String serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
@@ -39,9 +50,11 @@ public class PatchAs2PartnersIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=uri")
     public String uri;
+
     public PatchAs2PartnersIdRequestBody withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public PatchAs2PartnersIdRequestBody(){}
 }

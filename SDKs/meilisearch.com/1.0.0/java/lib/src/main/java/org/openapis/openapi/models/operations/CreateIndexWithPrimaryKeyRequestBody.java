@@ -12,6 +12,7 @@ public class CreateIndexWithPrimaryKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryKey")
     public String primaryKey;
+
     public CreateIndexWithPrimaryKeyRequestBody withPrimaryKey(String primaryKey) {
         this.primaryKey = primaryKey;
         return this;
@@ -20,9 +21,11 @@ public class CreateIndexWithPrimaryKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public CreateIndexWithPrimaryKeyRequestBody withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CreateIndexWithPrimaryKeyRequestBody(){}
 }

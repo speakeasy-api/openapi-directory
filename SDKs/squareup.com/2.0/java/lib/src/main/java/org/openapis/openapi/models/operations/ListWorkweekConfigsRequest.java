@@ -12,6 +12,7 @@ public class ListWorkweekConfigsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListWorkweekConfigsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,9 +23,11 @@ public class ListWorkweekConfigsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListWorkweekConfigsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListWorkweekConfigsRequest(){}
 }

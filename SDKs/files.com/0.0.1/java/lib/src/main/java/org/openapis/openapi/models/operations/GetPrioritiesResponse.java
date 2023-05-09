@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPrioritiesResponse {
     
     public String contentType;
+
     public GetPrioritiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPrioritiesResponse {
      */
     
     public org.openapis.openapi.models.shared.PriorityEntity[] priorityEntities;
+
     public GetPrioritiesResponse withPriorityEntities(org.openapis.openapi.models.shared.PriorityEntity[] priorityEntities) {
         this.priorityEntities = priorityEntities;
         return this;
@@ -26,6 +29,7 @@ public class GetPrioritiesResponse {
     
     
     public Integer statusCode;
+
     public GetPrioritiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPrioritiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPrioritiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPrioritiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

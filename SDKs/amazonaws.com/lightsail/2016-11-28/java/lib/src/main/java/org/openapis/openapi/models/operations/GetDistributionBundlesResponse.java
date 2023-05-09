@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistributionBundlesResponse {
@@ -12,6 +13,7 @@ public class GetDistributionBundlesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDistributionBundlesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDistributionBundlesResponse {
     
     
     public String contentType;
+
     public GetDistributionBundlesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDistributionBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDistributionBundlesResult getDistributionBundlesResult;
+
     public GetDistributionBundlesResponse withGetDistributionBundlesResult(org.openapis.openapi.models.shared.GetDistributionBundlesResult getDistributionBundlesResult) {
         this.getDistributionBundlesResult = getDistributionBundlesResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDistributionBundlesResponse {
      */
     
     public Object invalidInputException;
+
     public GetDistributionBundlesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetDistributionBundlesResponse {
      */
     
     public Object notFoundException;
+
     public GetDistributionBundlesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDistributionBundlesResponse {
      */
     
     public Object operationFailureException;
+
     public GetDistributionBundlesResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class GetDistributionBundlesResponse {
      */
     
     public Object serviceException;
+
     public GetDistributionBundlesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetDistributionBundlesResponse {
     
     
     public Integer statusCode;
+
     public GetDistributionBundlesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetDistributionBundlesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistributionBundlesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetDistributionBundlesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetDistributionBundlesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetDistributionBundlesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody requestBody;
+
     public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withRequestBody(ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -29,9 +32,15 @@ public class ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest(@JsonProperty("RequestBody") ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody requestBody, @JsonProperty("org") String org, @JsonProperty("runner_id") Long runnerId) {
+        this.requestBody = requestBody;
+        this.org = org;
+        this.runnerId = runnerId;
+  }
 }

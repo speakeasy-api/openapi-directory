@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReplaceSettingValueBySdkkeyResponse {
     
     public String contentType;
+
     public ReplaceSettingValueBySdkkeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReplaceSettingValueBySdkkeyResponse {
     
     
     public org.openapis.openapi.models.shared.SettingValueModel settingValueModel;
+
     public ReplaceSettingValueBySdkkeyResponse withSettingValueModel(org.openapis.openapi.models.shared.SettingValueModel settingValueModel) {
         this.settingValueModel = settingValueModel;
         return this;
@@ -23,6 +26,7 @@ public class ReplaceSettingValueBySdkkeyResponse {
     
     
     public org.openapis.openapi.models.shared.SettingValueModelHaljson settingValueModelHaljson;
+
     public ReplaceSettingValueBySdkkeyResponse withSettingValueModelHaljson(org.openapis.openapi.models.shared.SettingValueModelHaljson settingValueModelHaljson) {
         this.settingValueModelHaljson = settingValueModelHaljson;
         return this;
@@ -30,6 +34,7 @@ public class ReplaceSettingValueBySdkkeyResponse {
     
     
     public Integer statusCode;
+
     public ReplaceSettingValueBySdkkeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class ReplaceSettingValueBySdkkeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReplaceSettingValueBySdkkeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReplaceSettingValueBySdkkeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetReadmeResponse {
     
     public String contentType;
+
     public ReposGetReadmeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetReadmeResponse {
     
     
     public Integer statusCode;
+
     public ReposGetReadmeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetReadmeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetReadmeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetReadmeResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposGetReadmeResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposGetReadmeResponse {
      */
     
     public org.openapis.openapi.models.shared.ContentFile contentFile;
+
     public ReposGetReadmeResponse withContentFile(org.openapis.openapi.models.shared.ContentFile contentFile) {
         this.contentFile = contentFile;
         return this;
@@ -53,9 +59,14 @@ public class ReposGetReadmeResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposGetReadmeResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposGetReadmeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

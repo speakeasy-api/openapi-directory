@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListConfiguredTableAssociationsOutput {
     @JsonProperty("configuredTableAssociationSummaries")
     public ConfiguredTableAssociationSummary[] configuredTableAssociationSummaries;
+
     public ListConfiguredTableAssociationsOutput withConfiguredTableAssociationSummaries(ConfiguredTableAssociationSummary[] configuredTableAssociationSummaries) {
         this.configuredTableAssociationSummaries = configuredTableAssociationSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListConfiguredTableAssociationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListConfiguredTableAssociationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConfiguredTableAssociationsOutput(@JsonProperty("configuredTableAssociationSummaries") ConfiguredTableAssociationSummary[] configuredTableAssociationSummaries) {
+        this.configuredTableAssociationSummaries = configuredTableAssociationSummaries;
+  }
 }

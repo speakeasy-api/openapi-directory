@@ -12,6 +12,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("AvailableQuantity")
     public Long availableQuantity;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel withAvailableQuantity(Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
@@ -22,6 +23,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("IsAvailable")
     public Boolean isAvailable;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
@@ -32,6 +34,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("ListPrice")
     public Double listPrice;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -42,6 +45,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("Price")
     public Double price;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel withPrice(Double price) {
         this.price = price;
         return this;
@@ -52,6 +56,7 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("PriceWithoutDiscount")
     public Double priceWithoutDiscount;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel withPriceWithoutDiscount(Double priceWithoutDiscount) {
         this.priceWithoutDiscount = priceWithoutDiscount;
         return this;
@@ -62,9 +67,18 @@ public class GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffe
      */
     @JsonProperty("SaleChannel")
     public Long saleChannel;
+
     public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel withSaleChannel(Long saleChannel) {
         this.saleChannel = saleChannel;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductId200ApplicationJSONOffersOffersPerSalesChannel(@JsonProperty("AvailableQuantity") Long availableQuantity, @JsonProperty("IsAvailable") Boolean isAvailable, @JsonProperty("ListPrice") Double listPrice, @JsonProperty("Price") Double price, @JsonProperty("PriceWithoutDiscount") Double priceWithoutDiscount, @JsonProperty("SaleChannel") Long saleChannel) {
+        this.availableQuantity = availableQuantity;
+        this.isAvailable = isAvailable;
+        this.listPrice = listPrice;
+        this.price = price;
+        this.priceWithoutDiscount = priceWithoutDiscount;
+        this.saleChannel = saleChannel;
+  }
 }

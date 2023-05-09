@@ -18,6 +18,7 @@ public class Pictogram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pictogramDescription")
     public String pictogramDescription;
+
     public Pictogram withPictogramDescription(String pictogramDescription) {
         this.pictogramDescription = pictogramDescription;
         return this;
@@ -29,6 +30,7 @@ public class Pictogram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pictogramId")
     public String pictogramId;
+
     public Pictogram withPictogramId(String pictogramId) {
         this.pictogramId = pictogramId;
         return this;
@@ -40,9 +42,11 @@ public class Pictogram {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pictogramUrl")
     public String pictogramUrl;
+
     public Pictogram withPictogramUrl(String pictogramUrl) {
         this.pictogramUrl = pictogramUrl;
         return this;
     }
     
+    public Pictogram(){}
 }

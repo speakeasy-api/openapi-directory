@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEnvironmentTemplateVersionsResponse {
@@ -12,6 +13,7 @@ public class ListEnvironmentTemplateVersionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListEnvironmentTemplateVersionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListEnvironmentTemplateVersionsResponse {
     
     
     public String contentType;
+
     public ListEnvironmentTemplateVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListEnvironmentTemplateVersionsResponse {
      */
     
     public Object internalServerException;
+
     public ListEnvironmentTemplateVersionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListEnvironmentTemplateVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEnvironmentTemplateVersionsOutput listEnvironmentTemplateVersionsOutput;
+
     public ListEnvironmentTemplateVersionsResponse withListEnvironmentTemplateVersionsOutput(org.openapis.openapi.models.shared.ListEnvironmentTemplateVersionsOutput listEnvironmentTemplateVersionsOutput) {
         this.listEnvironmentTemplateVersionsOutput = listEnvironmentTemplateVersionsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListEnvironmentTemplateVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListEnvironmentTemplateVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListEnvironmentTemplateVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListEnvironmentTemplateVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListEnvironmentTemplateVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEnvironmentTemplateVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListEnvironmentTemplateVersionsResponse {
      */
     
     public Object throttlingException;
+
     public ListEnvironmentTemplateVersionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListEnvironmentTemplateVersionsResponse {
      */
     
     public Object validationException;
+
     public ListEnvironmentTemplateVersionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListEnvironmentTemplateVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

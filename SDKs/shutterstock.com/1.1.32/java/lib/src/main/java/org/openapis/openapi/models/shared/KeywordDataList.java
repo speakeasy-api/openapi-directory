@@ -18,6 +18,7 @@ public class KeywordDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String[] data;
+
     public KeywordDataList withData(String[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class KeywordDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public KeywordDataList withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -40,9 +42,11 @@ public class KeywordDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public KeywordDataList withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public KeywordDataList(){}
 }

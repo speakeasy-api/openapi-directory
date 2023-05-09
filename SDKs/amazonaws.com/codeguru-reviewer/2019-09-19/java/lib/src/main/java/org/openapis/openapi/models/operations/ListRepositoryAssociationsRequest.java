@@ -12,6 +12,7 @@ public class ListRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public ListRepositoryAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,6 +23,7 @@ public class ListRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
     public String[] name;
+
     public ListRepositoryAssociationsRequest withName(String[] name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class ListRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListRepositoryAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,6 +45,7 @@ public class ListRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Owner")
     public String[] owner;
+
     public ListRepositoryAssociationsRequest withOwner(String[] owner) {
         this.owner = owner;
         return this;
@@ -52,6 +56,7 @@ public class ListRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProviderType")
     public org.openapis.openapi.models.shared.ProviderTypeEnum[] providerType;
+
     public ListRepositoryAssociationsRequest withProviderType(org.openapis.openapi.models.shared.ProviderTypeEnum[] providerType) {
         this.providerType = providerType;
         return this;
@@ -62,6 +67,7 @@ public class ListRepositoryAssociationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=State")
     public org.openapis.openapi.models.shared.RepositoryAssociationStateEnum[] state;
+
     public ListRepositoryAssociationsRequest withState(org.openapis.openapi.models.shared.RepositoryAssociationStateEnum[] state) {
         this.state = state;
         return this;
@@ -69,6 +75,7 @@ public class ListRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListRepositoryAssociationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -76,6 +83,7 @@ public class ListRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListRepositoryAssociationsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -83,6 +91,7 @@ public class ListRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListRepositoryAssociationsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -90,6 +99,7 @@ public class ListRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListRepositoryAssociationsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -97,6 +107,7 @@ public class ListRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListRepositoryAssociationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -104,6 +115,7 @@ public class ListRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListRepositoryAssociationsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -111,9 +123,11 @@ public class ListRepositoryAssociationsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListRepositoryAssociationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListRepositoryAssociationsRequest(){}
 }

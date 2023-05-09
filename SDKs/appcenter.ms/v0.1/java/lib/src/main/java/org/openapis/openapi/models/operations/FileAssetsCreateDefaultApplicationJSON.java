@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FileAssetsCreateDefaultApplicationJSON {
     @JsonProperty("code")
     public String code;
+
     public FileAssetsCreateDefaultApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class FileAssetsCreateDefaultApplicationJSON {
     
     @JsonProperty("id")
     public String id;
+
     public FileAssetsCreateDefaultApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,15 @@ public class FileAssetsCreateDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public FileAssetsCreateDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FileAssetsCreateDefaultApplicationJSON(@JsonProperty("code") String code, @JsonProperty("id") String id, @JsonProperty("message") String message) {
+        this.code = code;
+        this.id = id;
+        this.message = message;
+  }
 }

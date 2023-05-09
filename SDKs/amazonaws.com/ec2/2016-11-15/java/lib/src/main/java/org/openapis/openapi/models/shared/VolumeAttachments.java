@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class VolumeAttachments {
     
     public OffsetDateTime attachTime;
+
     public VolumeAttachments withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class VolumeAttachments {
     
     
     public Boolean deleteOnTermination;
+
     public VolumeAttachments withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -26,6 +28,7 @@ public class VolumeAttachments {
     
     
     public String device;
+
     public VolumeAttachments withDevice(String device) {
         this.device = device;
         return this;
@@ -33,6 +36,7 @@ public class VolumeAttachments {
     
     
     public String instanceId;
+
     public VolumeAttachments withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +44,7 @@ public class VolumeAttachments {
     
     
     public VolumeAttachmentsStateEnum state;
+
     public VolumeAttachments withState(VolumeAttachmentsStateEnum state) {
         this.state = state;
         return this;
@@ -47,9 +52,11 @@ public class VolumeAttachments {
     
     
     public String volumeId;
+
     public VolumeAttachments withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public VolumeAttachments(){}
 }

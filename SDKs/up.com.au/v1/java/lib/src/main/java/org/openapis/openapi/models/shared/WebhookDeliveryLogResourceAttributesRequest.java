@@ -17,9 +17,13 @@ public class WebhookDeliveryLogResourceAttributesRequest {
      */
     @JsonProperty("body")
     public String body;
+
     public WebhookDeliveryLogResourceAttributesRequest withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public WebhookDeliveryLogResourceAttributesRequest(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

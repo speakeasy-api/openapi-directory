@@ -18,6 +18,7 @@ public class BatchRequestActionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public BatchRequestActionOptions withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class BatchRequestActionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public BatchRequestActionOptions withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -40,9 +42,11 @@ public class BatchRequestActionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Long offset;
+
     public BatchRequestActionOptions withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public BatchRequestActionOptions(){}
 }

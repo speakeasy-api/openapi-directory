@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatepartialinvoiceSendTrackingNumberResponse {
     
     public String contentType;
+
     public UpdatepartialinvoiceSendTrackingNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdatepartialinvoiceSendTrackingNumberResponse {
     
     
     public Integer statusCode;
+
     public UpdatepartialinvoiceSendTrackingNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdatepartialinvoiceSendTrackingNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatepartialinvoiceSendTrackingNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdatepartialinvoiceSendTrackingNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumber updatepartialinvoiceSendTrackingNumber;
+
     public UpdatepartialinvoiceSendTrackingNumberResponse withUpdatepartialinvoiceSendTrackingNumber(org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumber updatepartialinvoiceSendTrackingNumber) {
         this.updatepartialinvoiceSendTrackingNumber = updatepartialinvoiceSendTrackingNumber;
         return this;
     }
     
+    public UpdatepartialinvoiceSendTrackingNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

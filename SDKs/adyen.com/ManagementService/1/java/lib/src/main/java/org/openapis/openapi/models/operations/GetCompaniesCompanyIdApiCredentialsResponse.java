@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompaniesCompanyIdApiCredentialsResponse {
     
     public String contentType;
+
     public GetCompaniesCompanyIdApiCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCompaniesCompanyIdApiCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCompanyApiCredentialsResponse listCompanyApiCredentialsResponse;
+
     public GetCompaniesCompanyIdApiCredentialsResponse withListCompanyApiCredentialsResponse(org.openapis.openapi.models.shared.ListCompanyApiCredentialsResponse listCompanyApiCredentialsResponse) {
         this.listCompanyApiCredentialsResponse = listCompanyApiCredentialsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCompaniesCompanyIdApiCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetCompaniesCompanyIdApiCredentialsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetCompaniesCompanyIdApiCredentialsResponse {
     
     
     public Integer statusCode;
+
     public GetCompaniesCompanyIdApiCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCompaniesCompanyIdApiCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompaniesCompanyIdApiCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCompaniesCompanyIdApiCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

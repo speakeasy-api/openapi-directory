@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public GoogleCloudVisionV1p1beta1ImageAnnotationContext context;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withContext(GoogleCloudVisionV1p1beta1ImageAnnotationContext context) {
         this.context = context;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cropHintsAnnotation")
     public GoogleCloudVisionV1p1beta1CropHintsAnnotation cropHintsAnnotation;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withCropHintsAnnotation(GoogleCloudVisionV1p1beta1CropHintsAnnotation cropHintsAnnotation) {
         this.cropHintsAnnotation = cropHintsAnnotation;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withError(Status error) {
         this.error = error;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("faceAnnotations")
     public GoogleCloudVisionV1p1beta1FaceAnnotation[] faceAnnotations;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withFaceAnnotations(GoogleCloudVisionV1p1beta1FaceAnnotation[] faceAnnotations) {
         this.faceAnnotations = faceAnnotations;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullTextAnnotation")
     public GoogleCloudVisionV1p1beta1TextAnnotation fullTextAnnotation;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withFullTextAnnotation(GoogleCloudVisionV1p1beta1TextAnnotation fullTextAnnotation) {
         this.fullTextAnnotation = fullTextAnnotation;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePropertiesAnnotation")
     public GoogleCloudVisionV1p1beta1ImageProperties imagePropertiesAnnotation;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withImagePropertiesAnnotation(GoogleCloudVisionV1p1beta1ImageProperties imagePropertiesAnnotation) {
         this.imagePropertiesAnnotation = imagePropertiesAnnotation;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelAnnotations")
     public GoogleCloudVisionV1p1beta1EntityAnnotation[] labelAnnotations;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withLabelAnnotations(GoogleCloudVisionV1p1beta1EntityAnnotation[] labelAnnotations) {
         this.labelAnnotations = labelAnnotations;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("landmarkAnnotations")
     public GoogleCloudVisionV1p1beta1EntityAnnotation[] landmarkAnnotations;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withLandmarkAnnotations(GoogleCloudVisionV1p1beta1EntityAnnotation[] landmarkAnnotations) {
         this.landmarkAnnotations = landmarkAnnotations;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedObjectAnnotations")
     public GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation[] localizedObjectAnnotations;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withLocalizedObjectAnnotations(GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation[] localizedObjectAnnotations) {
         this.localizedObjectAnnotations = localizedObjectAnnotations;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoAnnotations")
     public GoogleCloudVisionV1p1beta1EntityAnnotation[] logoAnnotations;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withLogoAnnotations(GoogleCloudVisionV1p1beta1EntityAnnotation[] logoAnnotations) {
         this.logoAnnotations = logoAnnotations;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productSearchResults")
     public GoogleCloudVisionV1p1beta1ProductSearchResults productSearchResults;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withProductSearchResults(GoogleCloudVisionV1p1beta1ProductSearchResults productSearchResults) {
         this.productSearchResults = productSearchResults;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safeSearchAnnotation")
     public GoogleCloudVisionV1p1beta1SafeSearchAnnotation safeSearchAnnotation;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withSafeSearchAnnotation(GoogleCloudVisionV1p1beta1SafeSearchAnnotation safeSearchAnnotation) {
         this.safeSearchAnnotation = safeSearchAnnotation;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textAnnotations")
     public GoogleCloudVisionV1p1beta1EntityAnnotation[] textAnnotations;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withTextAnnotations(GoogleCloudVisionV1p1beta1EntityAnnotation[] textAnnotations) {
         this.textAnnotations = textAnnotations;
         return this;
@@ -161,9 +174,11 @@ public class GoogleCloudVisionV1p1beta1AnnotateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webDetection")
     public GoogleCloudVisionV1p1beta1WebDetection webDetection;
+
     public GoogleCloudVisionV1p1beta1AnnotateImageResponse withWebDetection(GoogleCloudVisionV1p1beta1WebDetection webDetection) {
         this.webDetection = webDetection;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1AnnotateImageResponse(){}
 }

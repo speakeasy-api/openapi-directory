@@ -17,6 +17,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ask")
     public Double ask;
+
     public Summary withAsk(Double ask) {
         this.ask = ask;
         return this;
@@ -25,6 +26,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCurrency")
     public String baseCurrency;
+
     public Summary withBaseCurrency(String baseCurrency) {
         this.baseCurrency = baseCurrency;
         return this;
@@ -33,6 +35,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bid")
     public Double bid;
+
     public Summary withBid(Double bid) {
         this.bid = bid;
         return this;
@@ -41,6 +44,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fiftyTwoWeekHigh")
     public Double fiftyTwoWeekHigh;
+
     public Summary withFiftyTwoWeekHigh(Double fiftyTwoWeekHigh) {
         this.fiftyTwoWeekHigh = fiftyTwoWeekHigh;
         return this;
@@ -49,6 +53,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fiftyTwoWeekLow")
     public Double fiftyTwoWeekLow;
+
     public Summary withFiftyTwoWeekLow(Double fiftyTwoWeekLow) {
         this.fiftyTwoWeekLow = fiftyTwoWeekLow;
         return this;
@@ -57,6 +62,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fiftyTwoWeekPercentChange")
     public Double fiftyTwoWeekPercentChange;
+
     public Summary withFiftyTwoWeekPercentChange(Double fiftyTwoWeekPercentChange) {
         this.fiftyTwoWeekPercentChange = fiftyTwoWeekPercentChange;
         return this;
@@ -65,6 +71,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fourWeekPercentChange")
     public Double fourWeekPercentChange;
+
     public Summary withFourWeekPercentChange(Double fourWeekPercentChange) {
         this.fourWeekPercentChange = fourWeekPercentChange;
         return this;
@@ -73,6 +80,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Double high;
+
     public Summary withHigh(Double high) {
         this.high = high;
         return this;
@@ -81,6 +89,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public Double last;
+
     public Summary withLast(Double last) {
         this.last = last;
         return this;
@@ -89,6 +98,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low")
     public Double low;
+
     public Summary withLow(Double low) {
         this.low = low;
         return this;
@@ -97,6 +107,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneDayChange")
     public Double oneDayChange;
+
     public Summary withOneDayChange(Double oneDayChange) {
         this.oneDayChange = oneDayChange;
         return this;
@@ -105,6 +116,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneDayPercentChange")
     public Double oneDayPercentChange;
+
     public Summary withOneDayPercentChange(Double oneDayPercentChange) {
         this.oneDayPercentChange = oneDayPercentChange;
         return this;
@@ -113,6 +125,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneDayValue")
     public Double oneDayValue;
+
     public Summary withOneDayValue(Double oneDayValue) {
         this.oneDayValue = oneDayValue;
         return this;
@@ -121,6 +134,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open")
     public Double open;
+
     public Summary withOpen(Double open) {
         this.open = open;
         return this;
@@ -129,6 +143,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public Summary withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
@@ -139,6 +154,7 @@ public class Summary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeStamp")
     public OffsetDateTime timeStamp;
+
     public Summary withTimeStamp(OffsetDateTime timeStamp) {
         this.timeStamp = timeStamp;
         return this;
@@ -147,6 +163,7 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twelveWeekPercentChange")
     public Double twelveWeekPercentChange;
+
     public Summary withTwelveWeekPercentChange(Double twelveWeekPercentChange) {
         this.twelveWeekPercentChange = twelveWeekPercentChange;
         return this;
@@ -155,9 +172,11 @@ public class Summary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yearToDatePercentChange")
     public Double yearToDatePercentChange;
+
     public Summary withYearToDatePercentChange(Double yearToDatePercentChange) {
         this.yearToDatePercentChange = yearToDatePercentChange;
         return this;
     }
     
+    public Summary(){}
 }

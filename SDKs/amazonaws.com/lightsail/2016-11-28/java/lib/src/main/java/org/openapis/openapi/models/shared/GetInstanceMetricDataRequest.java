@@ -16,6 +16,7 @@ public class GetInstanceMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetInstanceMetricDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class GetInstanceMetricDataRequest {
     
     @JsonProperty("instanceName")
     public String instanceName;
+
     public GetInstanceMetricDataRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -30,6 +32,7 @@ public class GetInstanceMetricDataRequest {
     
     @JsonProperty("metricName")
     public InstanceMetricNameEnum metricName;
+
     public GetInstanceMetricDataRequest withMetricName(InstanceMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +40,7 @@ public class GetInstanceMetricDataRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetInstanceMetricDataRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -46,6 +50,7 @@ public class GetInstanceMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetInstanceMetricDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -53,6 +58,7 @@ public class GetInstanceMetricDataRequest {
     
     @JsonProperty("statistics")
     public MetricStatisticEnum[] statistics;
+
     public GetInstanceMetricDataRequest withStatistics(MetricStatisticEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -60,9 +66,19 @@ public class GetInstanceMetricDataRequest {
     
     @JsonProperty("unit")
     public MetricUnitEnum unit;
+
     public GetInstanceMetricDataRequest withUnit(MetricUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetInstanceMetricDataRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("instanceName") String instanceName, @JsonProperty("metricName") InstanceMetricNameEnum metricName, @JsonProperty("period") Long period, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("statistics") MetricStatisticEnum[] statistics, @JsonProperty("unit") MetricUnitEnum unit) {
+        this.endTime = endTime;
+        this.instanceName = instanceName;
+        this.metricName = metricName;
+        this.period = period;
+        this.startTime = startTime;
+        this.statistics = statistics;
+        this.unit = unit;
+  }
 }

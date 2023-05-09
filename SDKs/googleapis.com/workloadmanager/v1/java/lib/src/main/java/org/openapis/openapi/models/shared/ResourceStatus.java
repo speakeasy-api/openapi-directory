@@ -18,6 +18,7 @@ public class ResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesNewerVersions")
     public String[] rulesNewerVersions;
+
     public ResourceStatus withRulesNewerVersions(String[] rulesNewerVersions) {
         this.rulesNewerVersions = rulesNewerVersions;
         return this;
@@ -29,9 +30,11 @@ public class ResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ResourceStatusStateEnum state;
+
     public ResourceStatus withState(ResourceStatusStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ResourceStatus(){}
 }

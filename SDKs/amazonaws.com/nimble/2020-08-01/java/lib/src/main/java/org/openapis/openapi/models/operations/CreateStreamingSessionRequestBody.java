@@ -15,6 +15,7 @@ public class CreateStreamingSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceType")
     public CreateStreamingSessionRequestBodyEc2InstanceTypeEnum ec2InstanceType;
+
     public CreateStreamingSessionRequestBody withEc2InstanceType(CreateStreamingSessionRequestBodyEc2InstanceTypeEnum ec2InstanceType) {
         this.ec2InstanceType = ec2InstanceType;
         return this;
@@ -25,6 +26,7 @@ public class CreateStreamingSessionRequestBody {
      */
     @JsonProperty("launchProfileId")
     public String launchProfileId;
+
     public CreateStreamingSessionRequestBody withLaunchProfileId(String launchProfileId) {
         this.launchProfileId = launchProfileId;
         return this;
@@ -36,6 +38,7 @@ public class CreateStreamingSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownedBy")
     public String ownedBy;
+
     public CreateStreamingSessionRequestBody withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -47,6 +50,7 @@ public class CreateStreamingSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingImageId")
     public String streamingImageId;
+
     public CreateStreamingSessionRequestBody withStreamingImageId(String streamingImageId) {
         this.streamingImageId = streamingImageId;
         return this;
@@ -58,9 +62,13 @@ public class CreateStreamingSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateStreamingSessionRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStreamingSessionRequestBody(@JsonProperty("launchProfileId") String launchProfileId) {
+        this.launchProfileId = launchProfileId;
+  }
 }

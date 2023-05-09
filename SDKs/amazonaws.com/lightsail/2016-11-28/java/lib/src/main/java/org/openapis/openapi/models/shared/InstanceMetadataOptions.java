@@ -15,6 +15,7 @@ public class InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpEndpoint")
     public HttpEndpointEnum httpEndpoint;
+
     public InstanceMetadataOptions withHttpEndpoint(HttpEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpProtocolIpv6")
     public HttpProtocolIpv6Enum httpProtocolIpv6;
+
     public InstanceMetadataOptions withHttpProtocolIpv6(HttpProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -31,6 +33,7 @@ public class InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpPutResponseHopLimit")
     public Long httpPutResponseHopLimit;
+
     public InstanceMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -39,6 +42,7 @@ public class InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpTokens")
     public HttpTokensEnum httpTokens;
+
     public InstanceMetadataOptions withHttpTokens(HttpTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -47,9 +51,11 @@ public class InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceMetadataStateEnum state;
+
     public InstanceMetadataOptions withState(InstanceMetadataStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public InstanceMetadataOptions(){}
 }

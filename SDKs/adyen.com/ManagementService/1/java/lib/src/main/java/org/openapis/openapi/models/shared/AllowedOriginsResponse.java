@@ -18,9 +18,11 @@ public class AllowedOriginsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AllowedOrigin[] data;
+
     public AllowedOriginsResponse withData(AllowedOrigin[] data) {
         this.data = data;
         return this;
     }
     
+    public AllowedOriginsResponse(){}
 }

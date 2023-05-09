@@ -15,6 +15,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalTreatments")
     public TreatmentResource[] additionalTreatments;
+
     public CampaignResponse withAdditionalTreatments(TreatmentResource[] additionalTreatments) {
         this.additionalTreatments = additionalTreatments;
         return this;
@@ -22,6 +23,7 @@ public class CampaignResponse {
     
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public CampaignResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -29,6 +31,7 @@ public class CampaignResponse {
     
     @JsonProperty("Arn")
     public String arn;
+
     public CampaignResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +39,7 @@ public class CampaignResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public CampaignResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -44,6 +48,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDeliveryConfiguration")
     public CustomDeliveryConfiguration customDeliveryConfiguration;
+
     public CampaignResponse withCustomDeliveryConfiguration(CustomDeliveryConfiguration customDeliveryConfiguration) {
         this.customDeliveryConfiguration = customDeliveryConfiguration;
         return this;
@@ -52,6 +57,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultState")
     public CampaignState defaultState;
+
     public CampaignResponse withDefaultState(CampaignState defaultState) {
         this.defaultState = defaultState;
         return this;
@@ -60,6 +66,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CampaignResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -68,6 +75,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HoldoutPercent")
     public Long holdoutPercent;
+
     public CampaignResponse withHoldoutPercent(Long holdoutPercent) {
         this.holdoutPercent = holdoutPercent;
         return this;
@@ -76,6 +84,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hook")
     public CampaignHook hook;
+
     public CampaignResponse withHook(CampaignHook hook) {
         this.hook = hook;
         return this;
@@ -83,6 +92,7 @@ public class CampaignResponse {
     
     @JsonProperty("Id")
     public String id;
+
     public CampaignResponse withId(String id) {
         this.id = id;
         return this;
@@ -91,6 +101,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsPaused")
     public Boolean isPaused;
+
     public CampaignResponse withIsPaused(Boolean isPaused) {
         this.isPaused = isPaused;
         return this;
@@ -98,6 +109,7 @@ public class CampaignResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public CampaignResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -106,6 +118,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limits")
     public CampaignLimits limits;
+
     public CampaignResponse withLimits(CampaignLimits limits) {
         this.limits = limits;
         return this;
@@ -114,6 +127,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfiguration")
     public MessageConfiguration messageConfiguration;
+
     public CampaignResponse withMessageConfiguration(MessageConfiguration messageConfiguration) {
         this.messageConfiguration = messageConfiguration;
         return this;
@@ -122,6 +136,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CampaignResponse withName(String name) {
         this.name = name;
         return this;
@@ -130,6 +145,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public CampaignResponse withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -138,6 +154,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public Schedule schedule;
+
     public CampaignResponse withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
@@ -145,6 +162,7 @@ public class CampaignResponse {
     
     @JsonProperty("SegmentId")
     public String segmentId;
+
     public CampaignResponse withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -152,6 +170,7 @@ public class CampaignResponse {
     
     @JsonProperty("SegmentVersion")
     public Long segmentVersion;
+
     public CampaignResponse withSegmentVersion(Long segmentVersion) {
         this.segmentVersion = segmentVersion;
         return this;
@@ -160,6 +179,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CampaignState state;
+
     public CampaignResponse withState(CampaignState state) {
         this.state = state;
         return this;
@@ -168,6 +188,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateConfiguration")
     public TemplateConfiguration templateConfiguration;
+
     public CampaignResponse withTemplateConfiguration(TemplateConfiguration templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
@@ -176,6 +197,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentDescription")
     public String treatmentDescription;
+
     public CampaignResponse withTreatmentDescription(String treatmentDescription) {
         this.treatmentDescription = treatmentDescription;
         return this;
@@ -184,6 +206,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentName")
     public String treatmentName;
+
     public CampaignResponse withTreatmentName(String treatmentName) {
         this.treatmentName = treatmentName;
         return this;
@@ -192,6 +215,7 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public CampaignResponse withVersion(Long version) {
         this.version = version;
         return this;
@@ -200,9 +224,19 @@ public class CampaignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CampaignResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CampaignResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("Arn") String arn, @JsonProperty("CreationDate") String creationDate, @JsonProperty("Id") String id, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("SegmentId") String segmentId, @JsonProperty("SegmentVersion") Long segmentVersion) {
+        this.applicationId = applicationId;
+        this.arn = arn;
+        this.creationDate = creationDate;
+        this.id = id;
+        this.lastModifiedDate = lastModifiedDate;
+        this.segmentId = segmentId;
+        this.segmentVersion = segmentVersion;
+  }
 }

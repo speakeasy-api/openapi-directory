@@ -18,9 +18,11 @@ public class AutoscaleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSlots")
     public String maxSlots;
+
     public AutoscaleInput withMaxSlots(String maxSlots) {
         this.maxSlots = maxSlots;
         return this;
     }
     
+    public AutoscaleInput(){}
 }

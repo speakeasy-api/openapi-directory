@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GrantPermissionsResponse {
@@ -12,6 +13,7 @@ public class GrantPermissionsResponse {
      */
     
     public Object concurrentModificationException;
+
     public GrantPermissionsResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class GrantPermissionsResponse {
     
     
     public String contentType;
+
     public GrantPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GrantPermissionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GrantPermissionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GrantPermissionsResponse {
      */
     
     public java.util.Map<String, Object> grantPermissionsResponse;
+
     public GrantPermissionsResponse withGrantPermissionsResponse(java.util.Map<String, Object> grantPermissionsResponse) {
         this.grantPermissionsResponse = grantPermissionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GrantPermissionsResponse {
      */
     
     public Object invalidInputException;
+
     public GrantPermissionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class GrantPermissionsResponse {
     
     
     public Integer statusCode;
+
     public GrantPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GrantPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GrantPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GrantPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

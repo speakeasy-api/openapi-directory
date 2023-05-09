@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListScheduleRequest {
@@ -12,6 +13,7 @@ public class ListScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
     public Boolean aliases;
+
     public ListScheduleRequest withAliases(Boolean aliases) {
         this.aliases = aliases;
         return this;
@@ -22,6 +24,7 @@ public class ListScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelId")
     public String channelId;
+
     public ListScheduleRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -32,6 +35,7 @@ public class ListScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public ListScheduleRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -42,9 +46,14 @@ public class ListScheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public ListScheduleRequest withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public ListScheduleRequest(@JsonProperty("channelId") String channelId, @JsonProperty("start") String start) {
+        this.channelId = channelId;
+        this.start = start;
+  }
 }

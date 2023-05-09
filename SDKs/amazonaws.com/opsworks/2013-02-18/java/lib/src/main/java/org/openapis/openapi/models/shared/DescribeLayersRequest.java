@@ -12,6 +12,7 @@ public class DescribeLayersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerIds")
     public String[] layerIds;
+
     public DescribeLayersRequest withLayerIds(String[] layerIds) {
         this.layerIds = layerIds;
         return this;
@@ -20,9 +21,11 @@ public class DescribeLayersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeLayersRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeLayersRequest(){}
 }

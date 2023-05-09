@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRotationOverrideResponse {
@@ -12,6 +13,7 @@ public class DeleteRotationOverrideResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRotationOverrideResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRotationOverrideResponse {
     
     
     public String contentType;
+
     public DeleteRotationOverrideResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRotationOverrideResponse {
      */
     
     public java.util.Map<String, Object> deleteRotationOverrideResult;
+
     public DeleteRotationOverrideResponse withDeleteRotationOverrideResult(java.util.Map<String, Object> deleteRotationOverrideResult) {
         this.deleteRotationOverrideResult = deleteRotationOverrideResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRotationOverrideResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRotationOverrideResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRotationOverrideResponse {
     
     
     public Integer statusCode;
+
     public DeleteRotationOverrideResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRotationOverrideResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRotationOverrideResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRotationOverrideResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRotationOverrideResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRotationOverrideResponse {
      */
     
     public Object throttlingException;
+
     public DeleteRotationOverrideResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteRotationOverrideResponse {
      */
     
     public Object validationException;
+
     public DeleteRotationOverrideResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRotationOverrideResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

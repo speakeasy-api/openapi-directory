@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExtendedS3DestinationConfiguration {
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public ExtendedS3DestinationConfiguration withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -22,6 +23,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BufferingHints")
     public BufferingHints bufferingHints;
+
     public ExtendedS3DestinationConfiguration withBufferingHints(BufferingHints bufferingHints) {
         this.bufferingHints = bufferingHints;
         return this;
@@ -30,6 +32,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public ExtendedS3DestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -38,6 +41,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionFormat")
     public CompressionFormatEnum compressionFormat;
+
     public ExtendedS3DestinationConfiguration withCompressionFormat(CompressionFormatEnum compressionFormat) {
         this.compressionFormat = compressionFormat;
         return this;
@@ -46,6 +50,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFormatConversionConfiguration")
     public DataFormatConversionConfiguration dataFormatConversionConfiguration;
+
     public ExtendedS3DestinationConfiguration withDataFormatConversionConfiguration(DataFormatConversionConfiguration dataFormatConversionConfiguration) {
         this.dataFormatConversionConfiguration = dataFormatConversionConfiguration;
         return this;
@@ -54,6 +59,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamicPartitioningConfiguration")
     public DynamicPartitioningConfiguration dynamicPartitioningConfiguration;
+
     public ExtendedS3DestinationConfiguration withDynamicPartitioningConfiguration(DynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
         this.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
         return this;
@@ -62,6 +68,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public ExtendedS3DestinationConfiguration withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -70,6 +77,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorOutputPrefix")
     public String errorOutputPrefix;
+
     public ExtendedS3DestinationConfiguration withErrorOutputPrefix(String errorOutputPrefix) {
         this.errorOutputPrefix = errorOutputPrefix;
         return this;
@@ -78,6 +86,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public ExtendedS3DestinationConfiguration withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -86,6 +95,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public ExtendedS3DestinationConfiguration withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -93,6 +103,7 @@ public class ExtendedS3DestinationConfiguration {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public ExtendedS3DestinationConfiguration withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -101,6 +112,7 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupConfiguration")
     public S3DestinationConfiguration s3BackupConfiguration;
+
     public ExtendedS3DestinationConfiguration withS3BackupConfiguration(S3DestinationConfiguration s3BackupConfiguration) {
         this.s3BackupConfiguration = s3BackupConfiguration;
         return this;
@@ -109,9 +121,14 @@ public class ExtendedS3DestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public S3BackupModeEnum s3BackupMode;
+
     public ExtendedS3DestinationConfiguration withS3BackupMode(S3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
     }
     
+    public ExtendedS3DestinationConfiguration(@JsonProperty("BucketARN") String bucketARN, @JsonProperty("RoleARN") String roleARN) {
+        this.bucketARN = bucketARN;
+        this.roleARN = roleARN;
+  }
 }

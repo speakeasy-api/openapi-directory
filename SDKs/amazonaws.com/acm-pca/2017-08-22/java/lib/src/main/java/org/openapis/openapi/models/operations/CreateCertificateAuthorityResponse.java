@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCertificateAuthorityResponse {
     
     public String contentType;
+
     public CreateCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCertificateAuthorityResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCertificateAuthorityResponse createCertificateAuthorityResponse;
+
     public CreateCertificateAuthorityResponse withCreateCertificateAuthorityResponse(org.openapis.openapi.models.shared.CreateCertificateAuthorityResponse createCertificateAuthorityResponse) {
         this.createCertificateAuthorityResponse = createCertificateAuthorityResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCertificateAuthorityResponse {
      */
     
     public Object invalidArgsException;
+
     public CreateCertificateAuthorityResponse withInvalidArgsException(Object invalidArgsException) {
         this.invalidArgsException = invalidArgsException;
         return this;
@@ -39,6 +43,7 @@ public class CreateCertificateAuthorityResponse {
      */
     
     public Object invalidPolicyException;
+
     public CreateCertificateAuthorityResponse withInvalidPolicyException(Object invalidPolicyException) {
         this.invalidPolicyException = invalidPolicyException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCertificateAuthorityResponse {
      */
     
     public Object invalidTagException;
+
     public CreateCertificateAuthorityResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCertificateAuthorityResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCertificateAuthorityResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public CreateCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

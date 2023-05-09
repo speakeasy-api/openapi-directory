@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetStatusRequest {
@@ -12,6 +13,7 @@ public class SetStatusRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StatusRequestDTO statusRequestDTO;
+
     public SetStatusRequest withStatusRequestDTO(org.openapis.openapi.models.shared.StatusRequestDTO statusRequestDTO) {
         this.statusRequestDTO = statusRequestDTO;
         return this;
@@ -22,9 +24,14 @@ public class SetStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
     public Long invoiceId;
+
     public SetStatusRequest withInvoiceId(Long invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
     
+    public SetStatusRequest(@JsonProperty("StatusRequestDTO") org.openapis.openapi.models.shared.StatusRequestDTO statusRequestDTO, @JsonProperty("invoiceId") Long invoiceId) {
+        this.statusRequestDTO = statusRequestDTO;
+        this.invoiceId = invoiceId;
+  }
 }

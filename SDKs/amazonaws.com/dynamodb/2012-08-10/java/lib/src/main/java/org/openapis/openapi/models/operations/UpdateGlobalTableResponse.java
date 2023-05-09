@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGlobalTableResponse {
     
     public String contentType;
+
     public UpdateGlobalTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGlobalTableResponse {
      */
     
     public Object globalTableNotFoundException;
+
     public UpdateGlobalTableResponse withGlobalTableNotFoundException(Object globalTableNotFoundException) {
         this.globalTableNotFoundException = globalTableNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGlobalTableResponse {
      */
     
     public Object internalServerError;
+
     public UpdateGlobalTableResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGlobalTableResponse {
      */
     
     public Object replicaAlreadyExistsException;
+
     public UpdateGlobalTableResponse withReplicaAlreadyExistsException(Object replicaAlreadyExistsException) {
         this.replicaAlreadyExistsException = replicaAlreadyExistsException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateGlobalTableResponse {
     
     
     public Integer statusCode;
+
     public UpdateGlobalTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateGlobalTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGlobalTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateGlobalTableResponse {
      */
     
     public Object replicaNotFoundException;
+
     public UpdateGlobalTableResponse withReplicaNotFoundException(Object replicaNotFoundException) {
         this.replicaNotFoundException = replicaNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGlobalTableResponse {
      */
     
     public Object tableNotFoundException;
+
     public UpdateGlobalTableResponse withTableNotFoundException(Object tableNotFoundException) {
         this.tableNotFoundException = tableNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateGlobalTableResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGlobalTableOutput updateGlobalTableOutput;
+
     public UpdateGlobalTableResponse withUpdateGlobalTableOutput(org.openapis.openapi.models.shared.UpdateGlobalTableOutput updateGlobalTableOutput) {
         this.updateGlobalTableOutput = updateGlobalTableOutput;
         return this;
     }
     
+    public UpdateGlobalTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

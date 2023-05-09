@@ -15,6 +15,7 @@ public class SlotTypeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleValue")
     public SampleValue sampleValue;
+
     public SlotTypeValue withSampleValue(SampleValue sampleValue) {
         this.sampleValue = sampleValue;
         return this;
@@ -23,9 +24,11 @@ public class SlotTypeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synonyms")
     public SampleValue[] synonyms;
+
     public SlotTypeValue withSynonyms(SampleValue[] synonyms) {
         this.synonyms = synonyms;
         return this;
     }
     
+    public SlotTypeValue(){}
 }

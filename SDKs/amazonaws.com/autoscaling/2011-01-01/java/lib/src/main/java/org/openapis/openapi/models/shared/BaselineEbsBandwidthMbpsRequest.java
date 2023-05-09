@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BaselineEbsBandwidthMbpsRequest {
     
     public Long max;
+
     public BaselineEbsBandwidthMbpsRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class BaselineEbsBandwidthMbpsRequest {
     
     
     public Long min;
+
     public BaselineEbsBandwidthMbpsRequest withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public BaselineEbsBandwidthMbpsRequest(){}
 }

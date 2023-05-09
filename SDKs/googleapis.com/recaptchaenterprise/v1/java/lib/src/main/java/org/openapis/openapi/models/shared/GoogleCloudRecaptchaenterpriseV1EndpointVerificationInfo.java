@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastVerificationTime")
     public String lastVerificationTime;
+
     public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo withLastVerificationTime(String lastVerificationTime) {
         this.lastVerificationTime = lastVerificationTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestToken")
     public String requestToken;
+
     public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo withRequestToken(String requestToken) {
         this.requestToken = requestToken;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo(){}
 }

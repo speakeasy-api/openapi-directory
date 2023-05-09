@@ -52,11 +52,9 @@ public class OwlOntology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDlQueryResponse res = new org.openapis.openapi.models.operations.GetDlQueryResponse() {{
+        org.openapis.openapi.models.operations.GetDlQueryResponse res = new org.openapis.openapi.models.operations.GetDlQueryResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -90,11 +88,9 @@ public class OwlOntology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSparqlQueryResponse res = new org.openapis.openapi.models.operations.GetSparqlQueryResponse() {{
+        org.openapis.openapi.models.operations.GetSparqlQueryResponse res = new org.openapis.openapi.models.operations.GetSparqlQueryResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

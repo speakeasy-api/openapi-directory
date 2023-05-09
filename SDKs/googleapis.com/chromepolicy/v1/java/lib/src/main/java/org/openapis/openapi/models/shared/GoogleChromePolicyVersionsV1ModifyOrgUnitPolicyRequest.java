@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTargetKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey;
+
     public GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest withPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey) {
         this.policyTargetKey = policyTargetKey;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyValue")
     public GoogleChromePolicyVersionsV1PolicyValue policyValue;
+
     public GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest withPolicyValue(GoogleChromePolicyVersionsV1PolicyValue policyValue) {
         this.policyValue = policyValue;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest(){}
 }

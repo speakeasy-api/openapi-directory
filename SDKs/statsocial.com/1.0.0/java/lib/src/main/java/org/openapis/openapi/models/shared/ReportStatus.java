@@ -15,6 +15,7 @@ public class ReportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public ReportStatus withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -23,9 +24,11 @@ public class ReportStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public ReportStatus withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public ReportStatus(){}
 }

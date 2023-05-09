@@ -15,6 +15,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Boolean completed;
+
     public DestinyQuestsDestinyQuestStatus withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -25,6 +26,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Long itemInstanceId;
+
     public DestinyQuestsDestinyQuestStatus withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
@@ -35,6 +37,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Long questHash;
+
     public DestinyQuestsDestinyQuestStatus withQuestHash(Long questHash) {
         this.questHash = questHash;
         return this;
@@ -45,6 +48,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Boolean redeemed;
+
     public DestinyQuestsDestinyQuestStatus withRedeemed(Boolean redeemed) {
         this.redeemed = redeemed;
         return this;
@@ -55,6 +59,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Boolean started;
+
     public DestinyQuestsDestinyQuestStatus withStarted(Boolean started) {
         this.started = started;
         return this;
@@ -65,6 +70,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Long stepHash;
+
     public DestinyQuestsDestinyQuestStatus withStepHash(Long stepHash) {
         this.stepHash = stepHash;
         return this;
@@ -75,6 +81,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public DestinyQuestsDestinyObjectiveProgress[] stepObjectives;
+
     public DestinyQuestsDestinyQuestStatus withStepObjectives(DestinyQuestsDestinyObjectiveProgress[] stepObjectives) {
         this.stepObjectives = stepObjectives;
         return this;
@@ -85,6 +92,7 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Boolean tracked;
+
     public DestinyQuestsDestinyQuestStatus withTracked(Boolean tracked) {
         this.tracked = tracked;
         return this;
@@ -95,9 +103,11 @@ public class DestinyQuestsDestinyQuestStatus {
      */
     
     public Long vendorHash;
+
     public DestinyQuestsDestinyQuestStatus withVendorHash(Long vendorHash) {
         this.vendorHash = vendorHash;
         return this;
     }
     
+    public DestinyQuestsDestinyQuestStatus(){}
 }

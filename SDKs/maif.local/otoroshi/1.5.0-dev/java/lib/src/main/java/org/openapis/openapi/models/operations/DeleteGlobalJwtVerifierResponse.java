@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGlobalJwtVerifierResponse {
     
     public String contentType;
+
     public DeleteGlobalJwtVerifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGlobalJwtVerifierResponse {
      */
     
     public org.openapis.openapi.models.shared.Deleted deleted;
+
     public DeleteGlobalJwtVerifierResponse withDeleted(org.openapis.openapi.models.shared.Deleted deleted) {
         this.deleted = deleted;
         return this;
@@ -26,6 +29,7 @@ public class DeleteGlobalJwtVerifierResponse {
     
     
     public Integer statusCode;
+
     public DeleteGlobalJwtVerifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteGlobalJwtVerifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGlobalJwtVerifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteGlobalJwtVerifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

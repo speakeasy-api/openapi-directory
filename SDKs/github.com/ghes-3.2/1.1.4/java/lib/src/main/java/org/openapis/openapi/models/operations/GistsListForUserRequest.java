@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GistsListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GistsListForUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -23,6 +25,7 @@ public class GistsListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GistsListForUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -33,6 +36,7 @@ public class GistsListForUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public GistsListForUserRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
@@ -43,9 +47,13 @@ public class GistsListForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GistsListForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GistsListForUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

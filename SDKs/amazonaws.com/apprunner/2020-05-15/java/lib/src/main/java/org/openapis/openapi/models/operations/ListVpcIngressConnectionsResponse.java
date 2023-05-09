@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVpcIngressConnectionsResponse {
     
     public String contentType;
+
     public ListVpcIngressConnectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListVpcIngressConnectionsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListVpcIngressConnectionsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListVpcIngressConnectionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListVpcIngressConnectionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListVpcIngressConnectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVpcIngressConnectionsResponse listVpcIngressConnectionsResponse;
+
     public ListVpcIngressConnectionsResponse withListVpcIngressConnectionsResponse(org.openapis.openapi.models.shared.ListVpcIngressConnectionsResponse listVpcIngressConnectionsResponse) {
         this.listVpcIngressConnectionsResponse = listVpcIngressConnectionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListVpcIngressConnectionsResponse {
     
     
     public Integer statusCode;
+
     public ListVpcIngressConnectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListVpcIngressConnectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVpcIngressConnectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListVpcIngressConnectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

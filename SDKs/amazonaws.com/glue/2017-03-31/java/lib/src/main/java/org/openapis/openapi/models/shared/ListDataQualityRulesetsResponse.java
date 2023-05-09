@@ -15,6 +15,7 @@ public class ListDataQualityRulesetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataQualityRulesetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListDataQualityRulesetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rulesets")
     public DataQualityRulesetListDetails[] rulesets;
+
     public ListDataQualityRulesetsResponse withRulesets(DataQualityRulesetListDetails[] rulesets) {
         this.rulesets = rulesets;
         return this;
     }
     
+    public ListDataQualityRulesetsResponse(){}
 }

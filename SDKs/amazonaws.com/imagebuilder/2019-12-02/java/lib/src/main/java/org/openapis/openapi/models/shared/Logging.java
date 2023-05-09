@@ -15,9 +15,11 @@ public class Logging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Logs")
     public S3Logs s3Logs;
+
     public Logging withS3Logs(S3Logs s3Logs) {
         this.s3Logs = s3Logs;
         return this;
     }
     
+    public Logging(){}
 }

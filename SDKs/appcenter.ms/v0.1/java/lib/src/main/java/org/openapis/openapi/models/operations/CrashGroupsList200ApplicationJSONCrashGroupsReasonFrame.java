@@ -18,6 +18,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_code")
     public Boolean appCode;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withAppCode(Boolean appCode) {
         this.appCode = appCode;
         return this;
@@ -29,6 +30,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class_method")
     public Boolean classMethod;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withClassMethod(Boolean classMethod) {
         this.classMethod = classMethod;
         return this;
@@ -40,6 +42,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class_name")
     public String className;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withClassName(String className) {
         this.className = className;
         return this;
@@ -51,6 +54,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code_formatted")
     public String codeFormatted;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withCodeFormatted(String codeFormatted) {
         this.codeFormatted = codeFormatted;
         return this;
@@ -62,6 +66,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code_raw")
     public String codeRaw;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withCodeRaw(String codeRaw) {
         this.codeRaw = codeRaw;
         return this;
@@ -73,6 +78,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception_type")
     public String exceptionType;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withExceptionType(String exceptionType) {
         this.exceptionType = exceptionType;
         return this;
@@ -84,6 +90,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withFile(String file) {
         this.file = file;
         return this;
@@ -95,6 +102,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framework_name")
     public String frameworkName;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withFrameworkName(String frameworkName) {
         this.frameworkName = frameworkName;
         return this;
@@ -106,6 +114,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum language;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withLanguage(CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum language) {
         this.language = language;
         return this;
@@ -117,6 +126,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Long line;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withLine(Long line) {
         this.line = line;
         return this;
@@ -128,6 +138,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withMethod(String method) {
         this.method = method;
         return this;
@@ -139,6 +150,7 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method_params")
     public String methodParams;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withMethodParams(String methodParams) {
         this.methodParams = methodParams;
         return this;
@@ -150,9 +162,11 @@ public class CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_exception_type")
     public String osExceptionType;
+
     public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame withOsExceptionType(String osExceptionType) {
         this.osExceptionType = osExceptionType;
         return this;
     }
     
+    public CrashGroupsList200ApplicationJSONCrashGroupsReasonFrame(){}
 }

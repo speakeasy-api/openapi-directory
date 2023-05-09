@@ -18,6 +18,7 @@ public class CreateFee400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public CreateFee400ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class CreateFee400ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public CreateFee400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateFee400ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

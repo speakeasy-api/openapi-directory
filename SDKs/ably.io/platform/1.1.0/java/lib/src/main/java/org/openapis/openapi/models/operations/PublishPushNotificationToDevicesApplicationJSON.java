@@ -12,6 +12,7 @@ public class PublishPushNotificationToDevicesApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("push")
     public org.openapis.openapi.models.shared.Push push;
+
     public PublishPushNotificationToDevicesApplicationJSON withPush(org.openapis.openapi.models.shared.Push push) {
         this.push = push;
         return this;
@@ -22,9 +23,13 @@ public class PublishPushNotificationToDevicesApplicationJSON {
      */
     @JsonProperty("recipient")
     public org.openapis.openapi.models.shared.Recipient recipient;
+
     public PublishPushNotificationToDevicesApplicationJSON withRecipient(org.openapis.openapi.models.shared.Recipient recipient) {
         this.recipient = recipient;
         return this;
     }
     
+    public PublishPushNotificationToDevicesApplicationJSON(@JsonProperty("recipient") org.openapis.openapi.models.shared.Recipient recipient) {
+        this.recipient = recipient;
+  }
 }

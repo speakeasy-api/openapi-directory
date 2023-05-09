@@ -4,18 +4,28 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpnTunnelOptionsRequest {
     
     public Boolean dryRun;
+
     public ModifyVpnTunnelOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
     
+    public Boolean skipTunnelReplacement;
+
+    public ModifyVpnTunnelOptionsRequest withSkipTunnelReplacement(Boolean skipTunnelReplacement) {
+        this.skipTunnelReplacement = skipTunnelReplacement;
+        return this;
+    }
+    
+    
     public ModifyVpnTunnelOptionsSpecification tunnelOptions;
+
     public ModifyVpnTunnelOptionsRequest withTunnelOptions(ModifyVpnTunnelOptionsSpecification tunnelOptions) {
         this.tunnelOptions = tunnelOptions;
         return this;
@@ -23,6 +33,7 @@ public class ModifyVpnTunnelOptionsRequest {
     
     
     public String vpnConnectionId;
+
     public ModifyVpnTunnelOptionsRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -30,9 +41,15 @@ public class ModifyVpnTunnelOptionsRequest {
     
     
     public String vpnTunnelOutsideIpAddress;
+
     public ModifyVpnTunnelOptionsRequest withVpnTunnelOutsideIpAddress(String vpnTunnelOutsideIpAddress) {
         this.vpnTunnelOutsideIpAddress = vpnTunnelOutsideIpAddress;
         return this;
     }
     
+    public ModifyVpnTunnelOptionsRequest(@JsonProperty("TunnelOptions") ModifyVpnTunnelOptionsSpecification tunnelOptions, @JsonProperty("VpnConnectionId") String vpnConnectionId, @JsonProperty("VpnTunnelOutsideIpAddress") String vpnTunnelOutsideIpAddress) {
+        this.tunnelOptions = tunnelOptions;
+        this.vpnConnectionId = vpnConnectionId;
+        this.vpnTunnelOutsideIpAddress = vpnTunnelOutsideIpAddress;
+  }
 }

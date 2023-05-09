@@ -56,7 +56,7 @@ public class Outlets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OutletsGetAllOutletsResponse res = new org.openapis.openapi.models.operations.OutletsGetAllOutletsResponse() {{
+        org.openapis.openapi.models.operations.OutletsGetAllOutletsResponse res = new org.openapis.openapi.models.operations.OutletsGetAllOutletsResponse(contentType, httpRes.statusCode()) {{
             v3OutletResponse = null;
             v3OutletResponse = null;
             body = null;
@@ -64,8 +64,6 @@ public class Outlets {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,7 +128,7 @@ public class Outlets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationResponse res = new org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationResponse() {{
+        org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationResponse res = new org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationResponse(contentType, httpRes.statusCode()) {{
             v3OutletGeolocationResponse = null;
             v3OutletGeolocationResponse = null;
             body = null;
@@ -138,8 +136,6 @@ public class Outlets {
             v3ErrorResponse = null;
             v3ErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

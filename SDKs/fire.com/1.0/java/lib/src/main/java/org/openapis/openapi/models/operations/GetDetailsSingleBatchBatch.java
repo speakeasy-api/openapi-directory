@@ -23,6 +23,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchName")
     public String batchName;
+
     public GetDetailsSingleBatchBatch withBatchName(String batchName) {
         this.batchName = batchName;
         return this;
@@ -34,6 +35,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchUuid")
     public String batchUuid;
+
     public GetDetailsSingleBatchBatch withBatchUuid(String batchUuid) {
         this.batchUuid = batchUuid;
         return this;
@@ -45,17 +47,19 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public GetDetailsSingleBatchBatch withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
     
     /**
-     * All payments in the batch must be the same currency - either EUR or GBP
+     * All payments in the batch must be the same currency.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public GetDetailsSingleBatchBatch withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -69,6 +73,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCreated")
     public OffsetDateTime dateCreated;
+
     public GetDetailsSingleBatchBatch withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -80,6 +85,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobNumber")
     public String jobNumber;
+
     public GetDetailsSingleBatchBatch withJobNumber(String jobNumber) {
         this.jobNumber = jobNumber;
         return this;
@@ -93,6 +99,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetDetailsSingleBatchBatch withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -104,6 +111,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfItemsFailed")
     public Long numberOfItemsFailed;
+
     public GetDetailsSingleBatchBatch withNumberOfItemsFailed(Long numberOfItemsFailed) {
         this.numberOfItemsFailed = numberOfItemsFailed;
         return this;
@@ -115,6 +123,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfItemsSubmitted")
     public Long numberOfItemsSubmitted;
+
     public GetDetailsSingleBatchBatch withNumberOfItemsSubmitted(Long numberOfItemsSubmitted) {
         this.numberOfItemsSubmitted = numberOfItemsSubmitted;
         return this;
@@ -126,6 +135,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfItemsSucceeded")
     public Long numberOfItemsSucceeded;
+
     public GetDetailsSingleBatchBatch withNumberOfItemsSucceeded(Long numberOfItemsSucceeded) {
         this.numberOfItemsSucceeded = numberOfItemsSucceeded;
         return this;
@@ -137,6 +147,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceName")
     public String sourceName;
+
     public GetDetailsSingleBatchBatch withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -148,17 +159,19 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetDetailsSingleBatchBatchStatusEnum status;
+
     public GetDetailsSingleBatchBatch withStatus(GetDetailsSingleBatchBatchStatusEnum status) {
         this.status = status;
         return this;
     }
     
     /**
-     * The type of the batch - can be one of the listed 3
+     * The type of the batch - can be one of the listed enums
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetDetailsSingleBatchBatchTypeEnum type;
+
     public GetDetailsSingleBatchBatch withType(GetDetailsSingleBatchBatchTypeEnum type) {
         this.type = type;
         return this;
@@ -170,6 +183,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueOfItemsFailed")
     public Long valueOfItemsFailed;
+
     public GetDetailsSingleBatchBatch withValueOfItemsFailed(Long valueOfItemsFailed) {
         this.valueOfItemsFailed = valueOfItemsFailed;
         return this;
@@ -181,6 +195,7 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueOfItemsSubmitted")
     public Long valueOfItemsSubmitted;
+
     public GetDetailsSingleBatchBatch withValueOfItemsSubmitted(Long valueOfItemsSubmitted) {
         this.valueOfItemsSubmitted = valueOfItemsSubmitted;
         return this;
@@ -192,9 +207,11 @@ public class GetDetailsSingleBatchBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueOfItemsSucceeded")
     public Long valueOfItemsSucceeded;
+
     public GetDetailsSingleBatchBatch withValueOfItemsSucceeded(Long valueOfItemsSucceeded) {
         this.valueOfItemsSucceeded = valueOfItemsSucceeded;
         return this;
     }
     
+    public GetDetailsSingleBatchBatch(){}
 }

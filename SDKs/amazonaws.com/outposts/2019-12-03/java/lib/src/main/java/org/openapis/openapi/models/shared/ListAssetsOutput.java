@@ -15,6 +15,7 @@ public class ListAssetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assets")
     public AssetInfo[] assets;
+
     public ListAssetsOutput withAssets(AssetInfo[] assets) {
         this.assets = assets;
         return this;
@@ -26,9 +27,11 @@ public class ListAssetsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssetsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssetsOutput(){}
 }

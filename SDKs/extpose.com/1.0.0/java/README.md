@@ -16,8 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetUserExtensionsResponse;
+import org.openapis.openapi.models.operations.GetUserExtensionsSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -25,14 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetUserExtensionsResponse res = sdk.user.getUserExtensions();
+            GetUserExtensionsResponse res = sdk.user.getUserExtensions(new GetUserExtensionsSecurity("corrupti") {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
-            if (res.extensions.isPresent()) {
+            if (res.extensions != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### user
+### [user](docs/user/README.md)
 
-* `getUserExtensions` - Get User Extensions
+* [getUserExtensions](docs/user/README.md#getuserextensions) - Get User Extensions
 <!-- End SDK Available Operations -->
 
 ### Maturity

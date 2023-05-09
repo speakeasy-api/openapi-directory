@@ -12,6 +12,7 @@ public class HealthInformationNotificationNotificationNotifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public HealthInformationNotificationNotificationNotifier withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class HealthInformationNotificationNotificationNotifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public HealthInformationNotificationNotificationNotifierTypeEnum type;
+
     public HealthInformationNotificationNotificationNotifier withType(HealthInformationNotificationNotificationNotifierTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public HealthInformationNotificationNotificationNotifier(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudKmsV1CryptoKey withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeyBackend")
     public String cryptoKeyBackend;
+
     public GoogleCloudKmsV1CryptoKey withCryptoKeyBackend(String cryptoKeyBackend) {
         this.cryptoKeyBackend = cryptoKeyBackend;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destroyScheduledDuration")
     public String destroyScheduledDuration;
+
     public GoogleCloudKmsV1CryptoKey withDestroyScheduledDuration(String destroyScheduledDuration) {
         this.destroyScheduledDuration = destroyScheduledDuration;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importOnly")
     public Boolean importOnly;
+
     public GoogleCloudKmsV1CryptoKey withImportOnly(Boolean importOnly) {
         this.importOnly = importOnly;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudKmsV1CryptoKey withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudKmsV1CryptoKey withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRotationTime")
     public String nextRotationTime;
+
     public GoogleCloudKmsV1CryptoKey withNextRotationTime(String nextRotationTime) {
         this.nextRotationTime = nextRotationTime;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public GoogleCloudKmsV1CryptoKeyVersion primary;
+
     public GoogleCloudKmsV1CryptoKey withPrimary(GoogleCloudKmsV1CryptoKeyVersion primary) {
         this.primary = primary;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public GoogleCloudKmsV1CryptoKeyPurposeEnum purpose;
+
     public GoogleCloudKmsV1CryptoKey withPurpose(GoogleCloudKmsV1CryptoKeyPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotationPeriod")
     public String rotationPeriod;
+
     public GoogleCloudKmsV1CryptoKey withRotationPeriod(String rotationPeriod) {
         this.rotationPeriod = rotationPeriod;
         return this;
@@ -128,9 +138,11 @@ public class GoogleCloudKmsV1CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionTemplate")
     public GoogleCloudKmsV1CryptoKeyVersionTemplate versionTemplate;
+
     public GoogleCloudKmsV1CryptoKey withVersionTemplate(GoogleCloudKmsV1CryptoKeyVersionTemplate versionTemplate) {
         this.versionTemplate = versionTemplate;
         return this;
     }
     
+    public GoogleCloudKmsV1CryptoKey(){}
 }

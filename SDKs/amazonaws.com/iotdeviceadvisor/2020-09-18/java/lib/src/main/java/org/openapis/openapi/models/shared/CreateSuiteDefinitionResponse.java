@@ -22,6 +22,7 @@ public class CreateSuiteDefinitionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateSuiteDefinitionResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class CreateSuiteDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionArn")
     public String suiteDefinitionArn;
+
     public CreateSuiteDefinitionResponse withSuiteDefinitionArn(String suiteDefinitionArn) {
         this.suiteDefinitionArn = suiteDefinitionArn;
         return this;
@@ -38,6 +40,7 @@ public class CreateSuiteDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionId")
     public String suiteDefinitionId;
+
     public CreateSuiteDefinitionResponse withSuiteDefinitionId(String suiteDefinitionId) {
         this.suiteDefinitionId = suiteDefinitionId;
         return this;
@@ -46,9 +49,11 @@ public class CreateSuiteDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionName")
     public String suiteDefinitionName;
+
     public CreateSuiteDefinitionResponse withSuiteDefinitionName(String suiteDefinitionName) {
         this.suiteDefinitionName = suiteDefinitionName;
         return this;
     }
     
+    public CreateSuiteDefinitionResponse(){}
 }

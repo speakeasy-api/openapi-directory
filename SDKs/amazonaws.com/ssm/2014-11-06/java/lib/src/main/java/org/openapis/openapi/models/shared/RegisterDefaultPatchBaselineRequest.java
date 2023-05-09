@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterDefaultPatchBaselineRequest {
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public RegisterDefaultPatchBaselineRequest withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
     }
     
+    public RegisterDefaultPatchBaselineRequest(@JsonProperty("BaselineId") String baselineId) {
+        this.baselineId = baselineId;
+  }
 }

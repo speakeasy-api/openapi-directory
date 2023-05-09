@@ -12,6 +12,7 @@ public class PutV2MeetingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=event_id")
     public String eventId;
+
     public PutV2MeetingsIdJsonRequestBody withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -22,6 +23,7 @@ public class PutV2MeetingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=i_cal_uid")
     public String iCalUid;
+
     public PutV2MeetingsIdJsonRequestBody withICalUid(String iCalUid) {
         this.iCalUid = iCalUid;
         return this;
@@ -32,8 +34,20 @@ public class PutV2MeetingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=no_show")
     public Boolean noShow;
+
     public PutV2MeetingsIdJsonRequestBody withNoShow(Boolean noShow) {
         this.noShow = noShow;
+        return this;
+    }
+    
+    /**
+     * Status of the meeting rescheduling progress. Possible values are: pending, booked, failed, retry
+     */
+    @SpeakeasyMetadata("form:name=reschedule_status")
+    public String rescheduleStatus;
+
+    public PutV2MeetingsIdJsonRequestBody withRescheduleStatus(String rescheduleStatus) {
+        this.rescheduleStatus = rescheduleStatus;
         return this;
     }
     
@@ -42,9 +56,11 @@ public class PutV2MeetingsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=status")
     public String status;
+
     public PutV2MeetingsIdJsonRequestBody withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PutV2MeetingsIdJsonRequestBody(){}
 }

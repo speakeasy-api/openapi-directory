@@ -15,9 +15,11 @@ public class KinesisDataStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public KinesisDataStream withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public KinesisDataStream(){}
 }

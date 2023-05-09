@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryDeleteApiRequest {
@@ -12,6 +13,7 @@ public class RegistryDeleteApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryDeleteApiRequest withApi(String api) {
         this.api = api;
         return this;
@@ -22,6 +24,7 @@ public class RegistryDeleteApiRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
     public Boolean force;
+
     public RegistryDeleteApiRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -32,6 +35,7 @@ public class RegistryDeleteApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryDeleteApiRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -42,9 +46,15 @@ public class RegistryDeleteApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryDeleteApiRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryDeleteApiRequest(@JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.api = api;
+        this.location = location;
+        this.project = project;
+  }
 }

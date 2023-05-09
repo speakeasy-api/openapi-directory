@@ -362,4 +362,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListServiceLevelObjectivesR
 lib/src/main/java/org/openapis/openapi/models/shared/ListUptimeCheckIpsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UptimeCheckIpRegionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UptimeCheckIp.java
+docs/sdk/README.md
+docs/projects/README.md
+docs/services/README.md
+docs/uptimecheckips/README.md
 USAGE.md

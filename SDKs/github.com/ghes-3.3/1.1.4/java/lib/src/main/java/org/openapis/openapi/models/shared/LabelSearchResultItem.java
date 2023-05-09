@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LabelSearchResultItem {
     @JsonProperty("color")
     public String color;
+
     public LabelSearchResultItem withColor(String color) {
         this.color = color;
         return this;
@@ -21,6 +22,7 @@ public class LabelSearchResultItem {
     
     @JsonProperty("default")
     public Boolean default_;
+
     public LabelSearchResultItem withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -28,6 +30,7 @@ public class LabelSearchResultItem {
     
     @JsonProperty("description")
     public String description;
+
     public LabelSearchResultItem withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class LabelSearchResultItem {
     
     @JsonProperty("id")
     public Long id;
+
     public LabelSearchResultItem withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class LabelSearchResultItem {
     
     @JsonProperty("name")
     public String name;
+
     public LabelSearchResultItem withName(String name) {
         this.name = name;
         return this;
@@ -49,6 +54,7 @@ public class LabelSearchResultItem {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public LabelSearchResultItem withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -56,6 +62,7 @@ public class LabelSearchResultItem {
     
     @JsonProperty("score")
     public Double score;
+
     public LabelSearchResultItem withScore(Double score) {
         this.score = score;
         return this;
@@ -64,6 +71,7 @@ public class LabelSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_matches")
     public SearchResultTextMatches[] textMatches;
+
     public LabelSearchResultItem withTextMatches(SearchResultTextMatches[] textMatches) {
         this.textMatches = textMatches;
         return this;
@@ -71,9 +79,20 @@ public class LabelSearchResultItem {
     
     @JsonProperty("url")
     public String url;
+
     public LabelSearchResultItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LabelSearchResultItem(@JsonProperty("color") String color, @JsonProperty("default") Boolean default_, @JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("score") Double score, @JsonProperty("url") String url) {
+        this.color = color;
+        this.default_ = default_;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.score = score;
+        this.url = url;
+  }
 }

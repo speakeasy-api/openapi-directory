@@ -15,6 +15,7 @@ public class TerminalProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TerminalProduct withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class TerminalProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TerminalProduct withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class TerminalProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsIncluded")
     public String[] itemsIncluded;
+
     public TerminalProduct withItemsIncluded(String[] itemsIncluded) {
         this.itemsIncluded = itemsIncluded;
         return this;
@@ -48,6 +51,7 @@ public class TerminalProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TerminalProduct withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,11 @@ public class TerminalProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public TerminalProductPrice price;
+
     public TerminalProduct withPrice(TerminalProductPrice price) {
         this.price = price;
         return this;
     }
     
+    public TerminalProduct(){}
 }

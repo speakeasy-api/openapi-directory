@@ -12,6 +12,7 @@ public class LocerRequestBodyCertificateParameters {
      */
     @JsonProperty("aplno")
     public String aplno;
+
     public LocerRequestBodyCertificateParameters withAplno(String aplno) {
         this.aplno = aplno;
         return this;
@@ -22,6 +23,7 @@ public class LocerRequestBodyCertificateParameters {
      */
     @JsonProperty("certno")
     public String certno;
+
     public LocerRequestBodyCertificateParameters withCertno(String certno) {
         this.certno = certno;
         return this;
@@ -32,9 +34,15 @@ public class LocerRequestBodyCertificateParameters {
      */
     @JsonProperty("sccd")
     public String sccd;
+
     public LocerRequestBodyCertificateParameters withSccd(String sccd) {
         this.sccd = sccd;
         return this;
     }
     
+    public LocerRequestBodyCertificateParameters(@JsonProperty("aplno") String aplno, @JsonProperty("certno") String certno, @JsonProperty("sccd") String sccd) {
+        this.aplno = aplno;
+        this.certno = certno;
+        this.sccd = sccd;
+  }
 }

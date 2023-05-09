@@ -15,9 +15,11 @@ public class AutomationExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmExecutionArn")
     public String ssmExecutionArn;
+
     public AutomationExecution withSsmExecutionArn(String ssmExecutionArn) {
         this.ssmExecutionArn = ssmExecutionArn;
         return this;
     }
     
+    public AutomationExecution(){}
 }

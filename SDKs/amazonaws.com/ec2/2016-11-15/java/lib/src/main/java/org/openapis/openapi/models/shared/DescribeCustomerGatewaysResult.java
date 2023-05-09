@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeCustomerGatewaysResult {
     
     public DescribeCustomerGatewaysResultCustomerGateways[] customerGateways;
+
     public DescribeCustomerGatewaysResult withCustomerGateways(DescribeCustomerGatewaysResultCustomerGateways[] customerGateways) {
         this.customerGateways = customerGateways;
         return this;
     }
     
+    public DescribeCustomerGatewaysResult(){}
 }

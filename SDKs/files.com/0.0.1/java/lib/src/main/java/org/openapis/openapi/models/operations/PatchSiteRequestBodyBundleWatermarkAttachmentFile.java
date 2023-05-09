@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSiteRequestBodyBundleWatermarkAttachmentFile {
     @SpeakeasyMetadata("multipartForm:name=bundle_watermark_attachment_file")
     public String bundleWatermarkAttachmentFile;
+
     public PatchSiteRequestBodyBundleWatermarkAttachmentFile withBundleWatermarkAttachmentFile(String bundleWatermarkAttachmentFile) {
         this.bundleWatermarkAttachmentFile = bundleWatermarkAttachmentFile;
         return this;
@@ -16,9 +18,14 @@ public class PatchSiteRequestBodyBundleWatermarkAttachmentFile {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public PatchSiteRequestBodyBundleWatermarkAttachmentFile withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public PatchSiteRequestBodyBundleWatermarkAttachmentFile(@JsonProperty("bundle_watermark_attachment_file") String bundleWatermarkAttachmentFile, @JsonProperty("content") byte[] content) {
+        this.bundleWatermarkAttachmentFile = bundleWatermarkAttachmentFile;
+        this.content = content;
+  }
 }

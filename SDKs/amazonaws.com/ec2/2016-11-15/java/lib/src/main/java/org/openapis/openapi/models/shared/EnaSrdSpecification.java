@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnaSrdSpecification {
     
     public Boolean enaSrdEnabled;
+
     public EnaSrdSpecification withEnaSrdEnabled(Boolean enaSrdEnabled) {
         this.enaSrdEnabled = enaSrdEnabled;
         return this;
@@ -19,9 +20,11 @@ public class EnaSrdSpecification {
     
     
     public EnaSrdUdpSpecification enaSrdUdpSpecification;
+
     public EnaSrdSpecification withEnaSrdUdpSpecification(EnaSrdUdpSpecification enaSrdUdpSpecification) {
         this.enaSrdUdpSpecification = enaSrdUdpSpecification;
         return this;
     }
     
+    public EnaSrdSpecification(){}
 }

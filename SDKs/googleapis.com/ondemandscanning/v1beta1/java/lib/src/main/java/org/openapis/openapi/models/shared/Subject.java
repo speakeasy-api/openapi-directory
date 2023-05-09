@@ -15,6 +15,7 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public java.util.Map<String, String> digest;
+
     public Subject withDigest(java.util.Map<String, String> digest) {
         this.digest = digest;
         return this;
@@ -23,9 +24,11 @@ public class Subject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Subject withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Subject(){}
 }

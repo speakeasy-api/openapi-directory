@@ -15,9 +15,11 @@ public class CreateSnapshotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateSnapshotRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public CreateSnapshotRequestBody(){}
 }

@@ -12,6 +12,7 @@ public class GetCalculatorConfigurationById200PromotionZipCodeRanges {
      */
     
     public Boolean inclusive;
+
     public GetCalculatorConfigurationById200PromotionZipCodeRanges withInclusive(Boolean inclusive) {
         this.inclusive = inclusive;
         return this;
@@ -22,6 +23,7 @@ public class GetCalculatorConfigurationById200PromotionZipCodeRanges {
      */
     
     public String zipCodeFrom;
+
     public GetCalculatorConfigurationById200PromotionZipCodeRanges withZipCodeFrom(String zipCodeFrom) {
         this.zipCodeFrom = zipCodeFrom;
         return this;
@@ -32,9 +34,11 @@ public class GetCalculatorConfigurationById200PromotionZipCodeRanges {
      */
     
     public String zipCodeTo;
+
     public GetCalculatorConfigurationById200PromotionZipCodeRanges withZipCodeTo(String zipCodeTo) {
         this.zipCodeTo = zipCodeTo;
         return this;
     }
     
+    public GetCalculatorConfigurationById200PromotionZipCodeRanges(){}
 }

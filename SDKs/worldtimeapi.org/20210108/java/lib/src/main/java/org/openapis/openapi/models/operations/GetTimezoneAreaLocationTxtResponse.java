@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTimezoneAreaLocationTxtResponse {
     
     public String contentType;
+
     public GetTimezoneAreaLocationTxtResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTimezoneAreaLocationTxtResponse {
      */
     
     public String dateTimeTextResponse;
+
     public GetTimezoneAreaLocationTxtResponse withDateTimeTextResponse(String dateTimeTextResponse) {
         this.dateTimeTextResponse = dateTimeTextResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetTimezoneAreaLocationTxtResponse {
      */
     
     public String errorTextResponse;
+
     public GetTimezoneAreaLocationTxtResponse withErrorTextResponse(String errorTextResponse) {
         this.errorTextResponse = errorTextResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetTimezoneAreaLocationTxtResponse {
     
     
     public Integer statusCode;
+
     public GetTimezoneAreaLocationTxtResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetTimezoneAreaLocationTxtResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTimezoneAreaLocationTxtResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTimezoneAreaLocationTxtResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

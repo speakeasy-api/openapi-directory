@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetCheckForUpdateRequest;
 import org.openapis.openapi.models.operations.GetCheckForUpdateResponse;
 
@@ -14,8 +13,8 @@ public class Application {
                 .build();
 
             GetCheckForUpdateRequest req = new GetCheckForUpdateRequest() {{
-                isTestflight = 548814;
-            }}            
+                isTestflight = 548814L;
+            }};            
 
             GetCheckForUpdateResponse res = sdk.getCheckForUpdate(req);
 
@@ -25,5 +24,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

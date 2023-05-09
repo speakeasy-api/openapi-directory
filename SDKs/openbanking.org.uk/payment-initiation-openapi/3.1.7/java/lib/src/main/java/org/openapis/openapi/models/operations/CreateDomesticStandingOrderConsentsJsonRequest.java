@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDomesticStandingOrderConsentsJsonRequest {
@@ -12,6 +13,7 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -22,6 +24,7 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OBWriteDomesticStandingOrderConsent5 obWriteDomesticStandingOrderConsent5;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withOBWriteDomesticStandingOrderConsent5(org.openapis.openapi.models.shared.OBWriteDomesticStandingOrderConsent5 obWriteDomesticStandingOrderConsent5) {
         this.obWriteDomesticStandingOrderConsent5 = obWriteDomesticStandingOrderConsent5;
         return this;
@@ -32,6 +35,7 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,6 +70,7 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
@@ -76,6 +83,7 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
     public String xIdempotencyKey;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withXIdempotencyKey(String xIdempotencyKey) {
         this.xIdempotencyKey = xIdempotencyKey;
         return this;
@@ -86,9 +94,16 @@ public class CreateDomesticStandingOrderConsentsJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
     public String xJwsSignature;
+
     public CreateDomesticStandingOrderConsentsJsonRequest withXJwsSignature(String xJwsSignature) {
         this.xJwsSignature = xJwsSignature;
         return this;
     }
     
+    public CreateDomesticStandingOrderConsentsJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("OBWriteDomesticStandingOrderConsent5") org.openapis.openapi.models.shared.OBWriteDomesticStandingOrderConsent5 obWriteDomesticStandingOrderConsent5, @JsonProperty("x-idempotency-key") String xIdempotencyKey, @JsonProperty("x-jws-signature") String xJwsSignature) {
+        this.authorization = authorization;
+        this.obWriteDomesticStandingOrderConsent5 = obWriteDomesticStandingOrderConsent5;
+        this.xIdempotencyKey = xIdempotencyKey;
+        this.xJwsSignature = xJwsSignature;
+  }
 }

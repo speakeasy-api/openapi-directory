@@ -18,6 +18,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardinality")
     public FieldCardinalityEnum cardinality;
+
     public Field withCardinality(FieldCardinalityEnum cardinality) {
         this.cardinality = cardinality;
         return this;
@@ -29,6 +30,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public Field withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -40,6 +42,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonName")
     public String jsonName;
+
     public Field withJsonName(String jsonName) {
         this.jsonName = jsonName;
         return this;
@@ -51,6 +54,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public FieldKindEnum kind;
+
     public Field withKind(FieldKindEnum kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Field withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Integer number;
+
     public Field withNumber(Integer number) {
         this.number = number;
         return this;
@@ -84,6 +90,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneofIndex")
     public Integer oneofIndex;
+
     public Field withOneofIndex(Integer oneofIndex) {
         this.oneofIndex = oneofIndex;
         return this;
@@ -95,6 +102,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Option[] options;
+
     public Field withOptions(Option[] options) {
         this.options = options;
         return this;
@@ -106,6 +114,7 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packed")
     public Boolean packed;
+
     public Field withPacked(Boolean packed) {
         this.packed = packed;
         return this;
@@ -117,9 +126,11 @@ public class Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeUrl")
     public String typeUrl;
+
     public Field withTypeUrl(String typeUrl) {
         this.typeUrl = typeUrl;
         return this;
     }
     
+    public Field(){}
 }

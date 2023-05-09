@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopExecutionResponse {
     
     public String contentType;
+
     public StopExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopExecutionResponse {
      */
     
     public Object executionDoesNotExist;
+
     public StopExecutionResponse withExecutionDoesNotExist(Object executionDoesNotExist) {
         this.executionDoesNotExist = executionDoesNotExist;
         return this;
@@ -29,6 +32,7 @@ public class StopExecutionResponse {
      */
     
     public Object invalidArn;
+
     public StopExecutionResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -36,6 +40,7 @@ public class StopExecutionResponse {
     
     
     public Integer statusCode;
+
     public StopExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StopExecutionOutput stopExecutionOutput;
+
     public StopExecutionResponse withStopExecutionOutput(org.openapis.openapi.models.shared.StopExecutionOutput stopExecutionOutput) {
         this.stopExecutionOutput = stopExecutionOutput;
         return this;
@@ -63,9 +70,14 @@ public class StopExecutionResponse {
      */
     
     public Object validationException;
+
     public StopExecutionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

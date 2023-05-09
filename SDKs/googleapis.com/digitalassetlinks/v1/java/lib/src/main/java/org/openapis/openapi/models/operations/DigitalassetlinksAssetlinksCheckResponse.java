@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DigitalassetlinksAssetlinksCheckResponse {
@@ -12,6 +13,7 @@ public class DigitalassetlinksAssetlinksCheckResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckResponse checkResponse;
+
     public DigitalassetlinksAssetlinksCheckResponse withCheckResponse(org.openapis.openapi.models.shared.CheckResponse checkResponse) {
         this.checkResponse = checkResponse;
         return this;
@@ -19,6 +21,7 @@ public class DigitalassetlinksAssetlinksCheckResponse {
     
     
     public String contentType;
+
     public DigitalassetlinksAssetlinksCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DigitalassetlinksAssetlinksCheckResponse {
     
     
     public Integer statusCode;
+
     public DigitalassetlinksAssetlinksCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DigitalassetlinksAssetlinksCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DigitalassetlinksAssetlinksCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DigitalassetlinksAssetlinksCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

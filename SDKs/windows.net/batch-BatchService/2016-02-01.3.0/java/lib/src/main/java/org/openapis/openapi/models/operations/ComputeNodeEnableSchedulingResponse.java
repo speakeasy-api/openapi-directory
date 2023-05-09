@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeNodeEnableSchedulingResponse {
@@ -12,6 +13,7 @@ public class ComputeNodeEnableSchedulingResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public ComputeNodeEnableSchedulingResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNodeEnableSchedulingResponse {
     
     
     public String contentType;
+
     public ComputeNodeEnableSchedulingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeNodeEnableSchedulingResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ComputeNodeEnableSchedulingResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class ComputeNodeEnableSchedulingResponse {
     
     
     public Integer statusCode;
+
     public ComputeNodeEnableSchedulingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ComputeNodeEnableSchedulingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeNodeEnableSchedulingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeNodeEnableSchedulingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

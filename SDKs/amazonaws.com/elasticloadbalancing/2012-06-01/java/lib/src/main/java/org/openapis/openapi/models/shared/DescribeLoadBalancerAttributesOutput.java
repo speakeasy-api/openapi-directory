@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeLoadBalancerAttributesOutput {
     
     public LoadBalancerAttributes loadBalancerAttributes;
+
     public DescribeLoadBalancerAttributesOutput withLoadBalancerAttributes(LoadBalancerAttributes loadBalancerAttributes) {
         this.loadBalancerAttributes = loadBalancerAttributes;
         return this;
     }
     
+    public DescribeLoadBalancerAttributesOutput(){}
 }

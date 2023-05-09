@@ -15,9 +15,13 @@ public class PostFirewallsCreateFirewallRequestApplyToLabelSelector {
      */
     @JsonProperty("selector")
     public String selector;
+
     public PostFirewallsCreateFirewallRequestApplyToLabelSelector withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public PostFirewallsCreateFirewallRequestApplyToLabelSelector(@JsonProperty("selector") String selector) {
+        this.selector = selector;
+  }
 }

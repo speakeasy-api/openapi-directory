@@ -12,6 +12,7 @@ public class ListResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourcesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourcesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceModel")
     public String resourceModel;
+
     public ListResourcesInput withResourceModel(String resourceModel) {
         this.resourceModel = resourceModel;
         return this;
@@ -36,6 +39,7 @@ public class ListResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public ListResourcesInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -43,6 +47,7 @@ public class ListResourcesInput {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public ListResourcesInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -51,9 +56,13 @@ public class ListResourcesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeVersionId")
     public String typeVersionId;
+
     public ListResourcesInput withTypeVersionId(String typeVersionId) {
         this.typeVersionId = typeVersionId;
         return this;
     }
     
+    public ListResourcesInput(@JsonProperty("TypeName") String typeName) {
+        this.typeName = typeName;
+  }
 }

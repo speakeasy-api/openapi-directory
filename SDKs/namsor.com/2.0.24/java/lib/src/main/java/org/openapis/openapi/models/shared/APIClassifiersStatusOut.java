@@ -18,6 +18,7 @@ public class APIClassifiersStatusOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifiers")
     public APIClassifierOut[] classifiers;
+
     public APIClassifiersStatusOut withClassifiers(APIClassifierOut[] classifiers) {
         this.classifiers = classifiers;
         return this;
@@ -29,9 +30,11 @@ public class APIClassifiersStatusOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareVersion")
     public SoftwareVersionOut softwareVersion;
+
     public APIClassifiersStatusOut withSoftwareVersion(SoftwareVersionOut softwareVersion) {
         this.softwareVersion = softwareVersion;
         return this;
     }
     
+    public APIClassifiersStatusOut(){}
 }

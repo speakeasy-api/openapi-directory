@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CategoryResults - Successful request
@@ -15,6 +15,7 @@ public class CategoryResults {
      */
     
     public Object inputs;
+
     public CategoryResults withInputs(Object inputs) {
         this.inputs = inputs;
         return this;
@@ -25,6 +26,7 @@ public class CategoryResults {
      */
     
     public Metadata metadata;
+
     public CategoryResults withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -35,9 +37,15 @@ public class CategoryResults {
      */
     
     public FullCategory[] result;
+
     public CategoryResults withResult(FullCategory[] result) {
         this.result = result;
         return this;
     }
     
+    public CategoryResults(@JsonProperty("inputs") Object inputs, @JsonProperty("metadata") Metadata metadata, @JsonProperty("result") FullCategory[] result) {
+        this.inputs = inputs;
+        this.metadata = metadata;
+        this.result = result;
+  }
 }

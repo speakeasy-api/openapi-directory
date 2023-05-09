@@ -12,6 +12,7 @@ public class ListVpcIngressConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public ListVpcIngressConnectionsFilter filter;
+
     public ListVpcIngressConnectionsRequest withFilter(ListVpcIngressConnectionsFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListVpcIngressConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListVpcIngressConnectionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListVpcIngressConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVpcIngressConnectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListVpcIngressConnectionsRequest(){}
 }

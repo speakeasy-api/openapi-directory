@@ -18,6 +18,7 @@ public class CloudCdnEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheEgressDestination")
     public CloudCdnEgressWorkloadCacheEgressDestinationEnum cacheEgressDestination;
+
     public CloudCdnEgressWorkload withCacheEgressDestination(CloudCdnEgressWorkloadCacheEgressDestinationEnum cacheEgressDestination) {
         this.cacheEgressDestination = cacheEgressDestination;
         return this;
@@ -29,9 +30,11 @@ public class CloudCdnEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheEgressRate")
     public Usage cacheEgressRate;
+
     public CloudCdnEgressWorkload withCacheEgressRate(Usage cacheEgressRate) {
         this.cacheEgressRate = cacheEgressRate;
         return this;
     }
     
+    public CloudCdnEgressWorkload(){}
 }

@@ -12,6 +12,7 @@ public class StoreAlertProperty {
      */
     @JsonProperty("propertyId")
     public Integer propertyId;
+
     public StoreAlertProperty withPropertyId(Integer propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -22,9 +23,14 @@ public class StoreAlertProperty {
      */
     @JsonProperty("propertyValue")
     public String propertyValue;
+
     public StoreAlertProperty withPropertyValue(String propertyValue) {
         this.propertyValue = propertyValue;
         return this;
     }
     
+    public StoreAlertProperty(@JsonProperty("propertyId") Integer propertyId, @JsonProperty("propertyValue") String propertyValue) {
+        this.propertyId = propertyId;
+        this.propertyValue = propertyValue;
+  }
 }

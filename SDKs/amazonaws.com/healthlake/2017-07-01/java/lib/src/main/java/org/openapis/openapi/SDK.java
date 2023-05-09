@@ -158,6 +158,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -195,15 +200,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFHIRDatastoreResponse res = new org.openapis.openapi.models.operations.CreateFHIRDatastoreResponse() {{
+        org.openapis.openapi.models.operations.CreateFHIRDatastoreResponse res = new org.openapis.openapi.models.operations.CreateFHIRDatastoreResponse(contentType, httpRes.statusCode()) {{
             createFHIRDatastoreResponse = null;
             validationException = null;
             throttlingException = null;
             accessDeniedException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -279,7 +282,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFHIRDatastoreResponse res = new org.openapis.openapi.models.operations.DeleteFHIRDatastoreResponse() {{
+        org.openapis.openapi.models.operations.DeleteFHIRDatastoreResponse res = new org.openapis.openapi.models.operations.DeleteFHIRDatastoreResponse(contentType, httpRes.statusCode()) {{
             deleteFHIRDatastoreResponse = null;
             accessDeniedException = null;
             conflictException = null;
@@ -288,8 +291,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -379,15 +380,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFHIRDatastoreResponse res = new org.openapis.openapi.models.operations.DescribeFHIRDatastoreResponse() {{
+        org.openapis.openapi.models.operations.DescribeFHIRDatastoreResponse res = new org.openapis.openapi.models.operations.DescribeFHIRDatastoreResponse(contentType, httpRes.statusCode()) {{
             describeFHIRDatastoreResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -463,15 +462,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFHIRExportJobResponse res = new org.openapis.openapi.models.operations.DescribeFHIRExportJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeFHIRExportJobResponse res = new org.openapis.openapi.models.operations.DescribeFHIRExportJobResponse(contentType, httpRes.statusCode()) {{
             describeFHIRExportJobResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -547,15 +544,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFHIRImportJobResponse res = new org.openapis.openapi.models.operations.DescribeFHIRImportJobResponse() {{
+        org.openapis.openapi.models.operations.DescribeFHIRImportJobResponse res = new org.openapis.openapi.models.operations.DescribeFHIRImportJobResponse(contentType, httpRes.statusCode()) {{
             describeFHIRImportJobResponse = null;
             validationException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -637,14 +632,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFHIRDatastoresResponse res = new org.openapis.openapi.models.operations.ListFHIRDatastoresResponse() {{
+        org.openapis.openapi.models.operations.ListFHIRDatastoresResponse res = new org.openapis.openapi.models.operations.ListFHIRDatastoresResponse(contentType, httpRes.statusCode()) {{
             listFHIRDatastoresResponse = null;
             validationException = null;
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -719,7 +712,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFHIRExportJobsResponse res = new org.openapis.openapi.models.operations.ListFHIRExportJobsResponse() {{
+        org.openapis.openapi.models.operations.ListFHIRExportJobsResponse res = new org.openapis.openapi.models.operations.ListFHIRExportJobsResponse(contentType, httpRes.statusCode()) {{
             listFHIRExportJobsResponse = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -727,8 +720,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -817,7 +808,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFHIRImportJobsResponse res = new org.openapis.openapi.models.operations.ListFHIRImportJobsResponse() {{
+        org.openapis.openapi.models.operations.ListFHIRImportJobsResponse res = new org.openapis.openapi.models.operations.ListFHIRImportJobsResponse(contentType, httpRes.statusCode()) {{
             listFHIRImportJobsResponse = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -825,8 +816,6 @@ public class SDK {
             throttlingException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -909,13 +898,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             validationException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -977,7 +964,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartFHIRExportJobResponse res = new org.openapis.openapi.models.operations.StartFHIRExportJobResponse() {{
+        org.openapis.openapi.models.operations.StartFHIRExportJobResponse res = new org.openapis.openapi.models.operations.StartFHIRExportJobResponse(contentType, httpRes.statusCode()) {{
             startFHIRExportJobResponse = null;
             validationException = null;
             throttlingException = null;
@@ -985,8 +972,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1069,7 +1054,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartFHIRImportJobResponse res = new org.openapis.openapi.models.operations.StartFHIRImportJobResponse() {{
+        org.openapis.openapi.models.operations.StartFHIRImportJobResponse res = new org.openapis.openapi.models.operations.StartFHIRImportJobResponse(contentType, httpRes.statusCode()) {{
             startFHIRImportJobResponse = null;
             validationException = null;
             throttlingException = null;
@@ -1077,8 +1062,6 @@ public class SDK {
             resourceNotFoundException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1161,13 +1144,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             validationException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1229,13 +1210,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             validationException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

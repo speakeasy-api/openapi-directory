@@ -18,6 +18,7 @@ public class PoolInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoPoolSpecification")
     public AutoPoolSpecification autoPoolSpecification;
+
     public PoolInformation withAutoPoolSpecification(AutoPoolSpecification autoPoolSpecification) {
         this.autoPoolSpecification = autoPoolSpecification;
         return this;
@@ -29,9 +30,11 @@ public class PoolInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poolId")
     public String poolId;
+
     public PoolInformation withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
     }
     
+    public PoolInformation(){}
 }

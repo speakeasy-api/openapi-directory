@@ -15,6 +15,7 @@ public class ListAuditSuppressionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ascendingOrder")
     public Boolean ascendingOrder;
+
     public ListAuditSuppressionsRequestBody withAscendingOrder(Boolean ascendingOrder) {
         this.ascendingOrder = ascendingOrder;
         return this;
@@ -26,6 +27,7 @@ public class ListAuditSuppressionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkName")
     public String checkName;
+
     public ListAuditSuppressionsRequestBody withCheckName(String checkName) {
         this.checkName = checkName;
         return this;
@@ -37,6 +39,7 @@ public class ListAuditSuppressionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAuditSuppressionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,6 +51,7 @@ public class ListAuditSuppressionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAuditSuppressionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,9 +63,11 @@ public class ListAuditSuppressionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIdentifier")
     public ListAuditSuppressionsRequestBodyResourceIdentifier resourceIdentifier;
+
     public ListAuditSuppressionsRequestBody withResourceIdentifier(ListAuditSuppressionsRequestBodyResourceIdentifier resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public ListAuditSuppressionsRequestBody(){}
 }

@@ -12,6 +12,7 @@ public class CopySnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreDate")
     public String restoreDate;
+
     public CopySnapshotRequest withRestoreDate(String restoreDate) {
         this.restoreDate = restoreDate;
         return this;
@@ -19,6 +20,7 @@ public class CopySnapshotRequest {
     
     @JsonProperty("sourceRegion")
     public RegionNameEnum sourceRegion;
+
     public CopySnapshotRequest withSourceRegion(RegionNameEnum sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -27,6 +29,7 @@ public class CopySnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceResourceName")
     public String sourceResourceName;
+
     public CopySnapshotRequest withSourceResourceName(String sourceResourceName) {
         this.sourceResourceName = sourceResourceName;
         return this;
@@ -35,6 +38,7 @@ public class CopySnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotName")
     public String sourceSnapshotName;
+
     public CopySnapshotRequest withSourceSnapshotName(String sourceSnapshotName) {
         this.sourceSnapshotName = sourceSnapshotName;
         return this;
@@ -42,6 +46,7 @@ public class CopySnapshotRequest {
     
     @JsonProperty("targetSnapshotName")
     public String targetSnapshotName;
+
     public CopySnapshotRequest withTargetSnapshotName(String targetSnapshotName) {
         this.targetSnapshotName = targetSnapshotName;
         return this;
@@ -50,9 +55,14 @@ public class CopySnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useLatestRestorableAutoSnapshot")
     public Boolean useLatestRestorableAutoSnapshot;
+
     public CopySnapshotRequest withUseLatestRestorableAutoSnapshot(Boolean useLatestRestorableAutoSnapshot) {
         this.useLatestRestorableAutoSnapshot = useLatestRestorableAutoSnapshot;
         return this;
     }
     
+    public CopySnapshotRequest(@JsonProperty("sourceRegion") RegionNameEnum sourceRegion, @JsonProperty("targetSnapshotName") String targetSnapshotName) {
+        this.sourceRegion = sourceRegion;
+        this.targetSnapshotName = targetSnapshotName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartyUploadAccountResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartyUploadAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartyUploadAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IdentitytoolkitRelyingpartyUploadAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartyUploadAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartyUploadAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.UploadAccountResponse uploadAccountResponse;
+
     public IdentitytoolkitRelyingpartyUploadAccountResponse withUploadAccountResponse(org.openapis.openapi.models.shared.UploadAccountResponse uploadAccountResponse) {
         this.uploadAccountResponse = uploadAccountResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyUploadAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

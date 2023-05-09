@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceResponse;
+
     public UntagResourceResponse withUntagResourceResponse(java.util.Map<String, Object> untagResourceResponse) {
         this.untagResourceResponse = untagResourceResponse;
         return this;
@@ -43,6 +48,7 @@ public class UntagResourceResponse {
      */
     
     public Object wafBadRequestException;
+
     public UntagResourceResponse withWAFBadRequestException(Object wafBadRequestException) {
         this.wafBadRequestException = wafBadRequestException;
         return this;
@@ -53,6 +59,7 @@ public class UntagResourceResponse {
      */
     
     public Object wafInternalErrorException;
+
     public UntagResourceResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class UntagResourceResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public UntagResourceResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,6 +81,7 @@ public class UntagResourceResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public UntagResourceResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class UntagResourceResponse {
      */
     
     public Object wafTagOperationException;
+
     public UntagResourceResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -93,9 +103,14 @@ public class UntagResourceResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public UntagResourceResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

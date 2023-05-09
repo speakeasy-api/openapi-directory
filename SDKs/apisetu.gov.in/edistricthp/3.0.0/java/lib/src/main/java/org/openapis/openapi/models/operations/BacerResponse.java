@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BacerResponse {
     
     public String contentType;
+
     public BacerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BacerResponse {
     
     
     public Integer statusCode;
+
     public BacerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BacerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BacerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BacerResponse {
      */
     
     public Bacer400ApplicationJSON bacer400ApplicationJSONObject;
+
     public BacerResponse withBacer400ApplicationJSONObject(Bacer400ApplicationJSON bacer400ApplicationJSONObject) {
         this.bacer400ApplicationJSONObject = bacer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class BacerResponse {
      */
     
     public Bacer401ApplicationJSON bacer401ApplicationJSONObject;
+
     public BacerResponse withBacer401ApplicationJSONObject(Bacer401ApplicationJSON bacer401ApplicationJSONObject) {
         this.bacer401ApplicationJSONObject = bacer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class BacerResponse {
      */
     
     public Bacer404ApplicationJSON bacer404ApplicationJSONObject;
+
     public BacerResponse withBacer404ApplicationJSONObject(Bacer404ApplicationJSON bacer404ApplicationJSONObject) {
         this.bacer404ApplicationJSONObject = bacer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class BacerResponse {
      */
     
     public Bacer500ApplicationJSON bacer500ApplicationJSONObject;
+
     public BacerResponse withBacer500ApplicationJSONObject(Bacer500ApplicationJSON bacer500ApplicationJSONObject) {
         this.bacer500ApplicationJSONObject = bacer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class BacerResponse {
      */
     
     public Bacer502ApplicationJSON bacer502ApplicationJSONObject;
+
     public BacerResponse withBacer502ApplicationJSONObject(Bacer502ApplicationJSON bacer502ApplicationJSONObject) {
         this.bacer502ApplicationJSONObject = bacer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class BacerResponse {
      */
     
     public Bacer503ApplicationJSON bacer503ApplicationJSONObject;
+
     public BacerResponse withBacer503ApplicationJSONObject(Bacer503ApplicationJSON bacer503ApplicationJSONObject) {
         this.bacer503ApplicationJSONObject = bacer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class BacerResponse {
      */
     
     public Bacer504ApplicationJSON bacer504ApplicationJSONObject;
+
     public BacerResponse withBacer504ApplicationJSONObject(Bacer504ApplicationJSON bacer504ApplicationJSONObject) {
         this.bacer504ApplicationJSONObject = bacer504ApplicationJSONObject;
         return this;
     }
     
+    public BacerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

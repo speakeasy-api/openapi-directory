@@ -14,6 +14,7 @@ public class CreateAnomalyDetectorRequestBody {
      */
     @JsonProperty("AnomalyDetectorConfig")
     public CreateAnomalyDetectorRequestBodyAnomalyDetectorConfig anomalyDetectorConfig;
+
     public CreateAnomalyDetectorRequestBody withAnomalyDetectorConfig(CreateAnomalyDetectorRequestBodyAnomalyDetectorConfig anomalyDetectorConfig) {
         this.anomalyDetectorConfig = anomalyDetectorConfig;
         return this;
@@ -25,6 +26,7 @@ public class CreateAnomalyDetectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorDescription")
     public String anomalyDetectorDescription;
+
     public CreateAnomalyDetectorRequestBody withAnomalyDetectorDescription(String anomalyDetectorDescription) {
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         return this;
@@ -35,6 +37,7 @@ public class CreateAnomalyDetectorRequestBody {
      */
     @JsonProperty("AnomalyDetectorName")
     public String anomalyDetectorName;
+
     public CreateAnomalyDetectorRequestBody withAnomalyDetectorName(String anomalyDetectorName) {
         this.anomalyDetectorName = anomalyDetectorName;
         return this;
@@ -46,6 +49,7 @@ public class CreateAnomalyDetectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public CreateAnomalyDetectorRequestBody withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -57,9 +61,14 @@ public class CreateAnomalyDetectorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateAnomalyDetectorRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAnomalyDetectorRequestBody(@JsonProperty("AnomalyDetectorConfig") CreateAnomalyDetectorRequestBodyAnomalyDetectorConfig anomalyDetectorConfig, @JsonProperty("AnomalyDetectorName") String anomalyDetectorName) {
+        this.anomalyDetectorConfig = anomalyDetectorConfig;
+        this.anomalyDetectorName = anomalyDetectorName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotGetOrgPublicKeyRequest {
@@ -12,9 +13,13 @@ public class DependabotGetOrgPublicKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public DependabotGetOrgPublicKeyRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public DependabotGetOrgPublicKeyRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

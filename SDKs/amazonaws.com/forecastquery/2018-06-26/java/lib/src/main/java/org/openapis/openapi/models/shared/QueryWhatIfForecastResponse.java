@@ -18,9 +18,11 @@ public class QueryWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Forecast")
     public Forecast forecast;
+
     public QueryWhatIfForecastResponse withForecast(Forecast forecast) {
         this.forecast = forecast;
         return this;
     }
     
+    public QueryWhatIfForecastResponse(){}
 }

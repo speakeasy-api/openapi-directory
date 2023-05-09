@@ -15,6 +15,7 @@ public class CreateCustomLineItemRequestBodyChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Flat")
     public org.openapis.openapi.models.shared.CustomLineItemFlatChargeDetails flat;
+
     public CreateCustomLineItemRequestBodyChargeDetails withFlat(org.openapis.openapi.models.shared.CustomLineItemFlatChargeDetails flat) {
         this.flat = flat;
         return this;
@@ -23,6 +24,7 @@ public class CreateCustomLineItemRequestBodyChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Percentage")
     public org.openapis.openapi.models.shared.CustomLineItemPercentageChargeDetails percentage;
+
     public CreateCustomLineItemRequestBodyChargeDetails withPercentage(org.openapis.openapi.models.shared.CustomLineItemPercentageChargeDetails percentage) {
         this.percentage = percentage;
         return this;
@@ -31,9 +33,11 @@ public class CreateCustomLineItemRequestBodyChargeDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public org.openapis.openapi.models.shared.CustomLineItemTypeEnum type;
+
     public CreateCustomLineItemRequestBodyChargeDetails withType(org.openapis.openapi.models.shared.CustomLineItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateCustomLineItemRequestBodyChargeDetails(){}
 }

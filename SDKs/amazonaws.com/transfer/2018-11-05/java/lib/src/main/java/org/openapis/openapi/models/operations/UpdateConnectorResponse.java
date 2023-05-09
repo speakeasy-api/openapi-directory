@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConnectorResponse {
     
     public String contentType;
+
     public UpdateConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateConnectorResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateConnectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object resourceExistsException;
+
     public UpdateConnectorResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateConnectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateConnectorResponse {
     
     
     public Integer statusCode;
+
     public UpdateConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateConnectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateConnectorResponse {
      */
     
     public Object throttlingException;
+
     public UpdateConnectorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateConnectorResponse updateConnectorResponse;
+
     public UpdateConnectorResponse withUpdateConnectorResponse(org.openapis.openapi.models.shared.UpdateConnectorResponse updateConnectorResponse) {
         this.updateConnectorResponse = updateConnectorResponse;
         return this;
     }
     
+    public UpdateConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class TokenResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public TokenResourceRelationshipsGroups groups;
+
     public TokenResourceRelationships withGroups(TokenResourceRelationshipsGroups groups) {
         this.groups = groups;
         return this;
@@ -20,9 +21,11 @@ public class TokenResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public TokenResourceRelationshipsOrganization organization;
+
     public TokenResourceRelationships withOrganization(TokenResourceRelationshipsOrganization organization) {
         this.organization = organization;
         return this;
     }
     
+    public TokenResourceRelationships(){}
 }

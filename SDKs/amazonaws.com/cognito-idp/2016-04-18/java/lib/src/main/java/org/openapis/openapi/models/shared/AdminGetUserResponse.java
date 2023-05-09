@@ -20,6 +20,7 @@ public class AdminGetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AdminGetUserResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,6 +29,7 @@ public class AdminGetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MFAOptions")
     public MFAOptionType[] mfaOptions;
+
     public AdminGetUserResponse withMFAOptions(MFAOptionType[] mfaOptions) {
         this.mfaOptions = mfaOptions;
         return this;
@@ -36,6 +38,7 @@ public class AdminGetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMfaSetting")
     public String preferredMfaSetting;
+
     public AdminGetUserResponse withPreferredMfaSetting(String preferredMfaSetting) {
         this.preferredMfaSetting = preferredMfaSetting;
         return this;
@@ -44,6 +47,7 @@ public class AdminGetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAttributes")
     public AttributeType[] userAttributes;
+
     public AdminGetUserResponse withUserAttributes(AttributeType[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
@@ -54,6 +58,7 @@ public class AdminGetUserResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UserCreateDate")
     public OffsetDateTime userCreateDate;
+
     public AdminGetUserResponse withUserCreateDate(OffsetDateTime userCreateDate) {
         this.userCreateDate = userCreateDate;
         return this;
@@ -64,6 +69,7 @@ public class AdminGetUserResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UserLastModifiedDate")
     public OffsetDateTime userLastModifiedDate;
+
     public AdminGetUserResponse withUserLastModifiedDate(OffsetDateTime userLastModifiedDate) {
         this.userLastModifiedDate = userLastModifiedDate;
         return this;
@@ -72,6 +78,7 @@ public class AdminGetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserMFASettingList")
     public String[] userMFASettingList;
+
     public AdminGetUserResponse withUserMFASettingList(String[] userMFASettingList) {
         this.userMFASettingList = userMFASettingList;
         return this;
@@ -80,6 +87,7 @@ public class AdminGetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserStatus")
     public UserStatusTypeEnum userStatus;
+
     public AdminGetUserResponse withUserStatus(UserStatusTypeEnum userStatus) {
         this.userStatus = userStatus;
         return this;
@@ -87,9 +95,13 @@ public class AdminGetUserResponse {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminGetUserResponse withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminGetUserResponse(@JsonProperty("Username") String username) {
+        this.username = username;
+  }
 }

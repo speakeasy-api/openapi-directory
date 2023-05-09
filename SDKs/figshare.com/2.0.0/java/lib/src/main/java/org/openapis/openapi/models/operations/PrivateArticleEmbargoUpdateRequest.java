@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleEmbargoUpdateRequest {
@@ -12,6 +13,7 @@ public class PrivateArticleEmbargoUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ArticleEmbargoUpdater articleEmbargoUpdater;
+
     public PrivateArticleEmbargoUpdateRequest withArticleEmbargoUpdater(org.openapis.openapi.models.shared.ArticleEmbargoUpdater articleEmbargoUpdater) {
         this.articleEmbargoUpdater = articleEmbargoUpdater;
         return this;
@@ -22,9 +24,14 @@ public class PrivateArticleEmbargoUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleEmbargoUpdateRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticleEmbargoUpdateRequest(@JsonProperty("ArticleEmbargoUpdater") org.openapis.openapi.models.shared.ArticleEmbargoUpdater articleEmbargoUpdater, @JsonProperty("article_id") Long articleId) {
+        this.articleEmbargoUpdater = articleEmbargoUpdater;
+        this.articleId = articleId;
+  }
 }

@@ -13,6 +13,7 @@ public class HistoryListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public HistoryListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +24,7 @@ public class HistoryListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display")
     public String display;
+
     public HistoryListRequest withDisplay(String display) {
         this.display = display;
         return this;
@@ -33,6 +35,7 @@ public class HistoryListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
     public OffsetDateTime endAt;
+
     public HistoryListRequest withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -43,58 +46,20 @@ public class HistoryListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public HistoryListRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `user_id`, `folder` or `path`.
+     * If set, return records where the specified field is prefixed by the supplied value. Valid fields are `path`.
      */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
-    public java.util.Map<String, Object> filterGt;
-    public HistoryListRequest withFilterGt(java.util.Map<String, Object> filterGt) {
-        this.filterGt = filterGt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
-    public java.util.Map<String, Object> filterGteq;
-    public HistoryListRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
-        this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public HistoryListRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `user_id`, `folder` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
-    public java.util.Map<String, Object> filterLt;
-    public HistoryListRequest withFilterLt(java.util.Map<String, Object> filterLt) {
-        this.filterLt = filterLt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
-    public java.util.Map<String, Object> filterLteq;
-    public HistoryListRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
-        this.filterLteq = filterLteq;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_prefix")
+    public java.util.Map<String, Object> filterPrefix;
+
+    public HistoryListRequest withFilterPrefix(java.util.Map<String, Object> filterPrefix) {
+        this.filterPrefix = filterPrefix;
         return this;
     }
     
@@ -103,6 +68,7 @@ public class HistoryListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public HistoryListRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -113,6 +79,7 @@ public class HistoryListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public HistoryListRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -123,9 +90,11 @@ public class HistoryListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
     public OffsetDateTime startAt;
+
     public HistoryListRequest withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
     
+    public HistoryListRequest(){}
 }

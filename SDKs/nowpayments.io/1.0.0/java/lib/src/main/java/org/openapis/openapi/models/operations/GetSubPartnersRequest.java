@@ -12,6 +12,7 @@ public class GetSubPartnersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetSubPartnersRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetSubPartnersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetSubPartnersRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetSubPartnersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetSubPartnersRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -42,9 +45,11 @@ public class GetSubPartnersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public GetSubPartnersRequest withOrder(String order) {
         this.order = order;
         return this;
     }
     
+    public GetSubPartnersRequest(){}
 }

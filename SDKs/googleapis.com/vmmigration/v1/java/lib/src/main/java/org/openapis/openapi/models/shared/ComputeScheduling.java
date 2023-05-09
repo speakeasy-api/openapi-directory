@@ -18,6 +18,7 @@ public class ComputeScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodeCpus")
     public Integer minNodeCpus;
+
     public ComputeScheduling withMinNodeCpus(Integer minNodeCpus) {
         this.minNodeCpus = minNodeCpus;
         return this;
@@ -29,6 +30,7 @@ public class ComputeScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeAffinities")
     public SchedulingNodeAffinity[] nodeAffinities;
+
     public ComputeScheduling withNodeAffinities(SchedulingNodeAffinity[] nodeAffinities) {
         this.nodeAffinities = nodeAffinities;
         return this;
@@ -40,6 +42,7 @@ public class ComputeScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onHostMaintenance")
     public ComputeSchedulingOnHostMaintenanceEnum onHostMaintenance;
+
     public ComputeScheduling withOnHostMaintenance(ComputeSchedulingOnHostMaintenanceEnum onHostMaintenance) {
         this.onHostMaintenance = onHostMaintenance;
         return this;
@@ -51,9 +54,11 @@ public class ComputeScheduling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restartType")
     public ComputeSchedulingRestartTypeEnum restartType;
+
     public ComputeScheduling withRestartType(ComputeSchedulingRestartTypeEnum restartType) {
         this.restartType = restartType;
         return this;
     }
     
+    public ComputeScheduling(){}
 }

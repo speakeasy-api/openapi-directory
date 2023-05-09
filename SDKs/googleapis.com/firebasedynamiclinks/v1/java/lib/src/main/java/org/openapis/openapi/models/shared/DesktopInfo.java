@@ -18,9 +18,11 @@ public class DesktopInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desktopFallbackLink")
     public String desktopFallbackLink;
+
     public DesktopInfo withDesktopFallbackLink(String desktopFallbackLink) {
         this.desktopFallbackLink = desktopFallbackLink;
         return this;
     }
     
+    public DesktopInfo(){}
 }

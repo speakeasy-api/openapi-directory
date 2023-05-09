@@ -18,6 +18,7 @@ public class NotesBooking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromGuest")
     public String fromGuest;
+
     public NotesBooking withFromGuest(String fromGuest) {
         this.fromGuest = fromGuest;
         return this;
@@ -29,9 +30,11 @@ public class NotesBooking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromSeller")
     public String fromSeller;
+
     public NotesBooking withFromSeller(String fromSeller) {
         this.fromSeller = fromSeller;
         return this;
     }
     
+    public NotesBooking(){}
 }

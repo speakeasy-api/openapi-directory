@@ -15,6 +15,7 @@ public class PublishLayerVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleArchitectures")
     public org.openapis.openapi.models.shared.ArchitectureEnum[] compatibleArchitectures;
+
     public PublishLayerVersionRequestBody withCompatibleArchitectures(org.openapis.openapi.models.shared.ArchitectureEnum[] compatibleArchitectures) {
         this.compatibleArchitectures = compatibleArchitectures;
         return this;
@@ -26,6 +27,7 @@ public class PublishLayerVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompatibleRuntimes")
     public org.openapis.openapi.models.shared.RuntimeEnum[] compatibleRuntimes;
+
     public PublishLayerVersionRequestBody withCompatibleRuntimes(org.openapis.openapi.models.shared.RuntimeEnum[] compatibleRuntimes) {
         this.compatibleRuntimes = compatibleRuntimes;
         return this;
@@ -36,6 +38,7 @@ public class PublishLayerVersionRequestBody {
      */
     @JsonProperty("Content")
     public PublishLayerVersionRequestBodyContent content;
+
     public PublishLayerVersionRequestBody withContent(PublishLayerVersionRequestBodyContent content) {
         this.content = content;
         return this;
@@ -47,6 +50,7 @@ public class PublishLayerVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PublishLayerVersionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -58,9 +62,13 @@ public class PublishLayerVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseInfo")
     public String licenseInfo;
+
     public PublishLayerVersionRequestBody withLicenseInfo(String licenseInfo) {
         this.licenseInfo = licenseInfo;
         return this;
     }
     
+    public PublishLayerVersionRequestBody(@JsonProperty("Content") PublishLayerVersionRequestBodyContent content) {
+        this.content = content;
+  }
 }

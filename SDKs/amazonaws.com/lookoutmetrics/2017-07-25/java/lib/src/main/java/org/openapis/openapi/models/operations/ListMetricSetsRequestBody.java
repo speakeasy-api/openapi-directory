@@ -15,6 +15,7 @@ public class ListMetricSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public ListMetricSetsRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -26,6 +27,7 @@ public class ListMetricSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMetricSetsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListMetricSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMetricSetsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMetricSetsRequestBody(){}
 }

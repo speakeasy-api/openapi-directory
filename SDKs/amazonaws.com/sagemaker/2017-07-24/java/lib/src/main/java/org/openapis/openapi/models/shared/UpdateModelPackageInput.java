@@ -12,6 +12,7 @@ public class UpdateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalInferenceSpecificationsToAdd")
     public AdditionalInferenceSpecificationDefinition[] additionalInferenceSpecificationsToAdd;
+
     public UpdateModelPackageInput withAdditionalInferenceSpecificationsToAdd(AdditionalInferenceSpecificationDefinition[] additionalInferenceSpecificationsToAdd) {
         this.additionalInferenceSpecificationsToAdd = additionalInferenceSpecificationsToAdd;
         return this;
@@ -20,6 +21,7 @@ public class UpdateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApprovalDescription")
     public String approvalDescription;
+
     public UpdateModelPackageInput withApprovalDescription(String approvalDescription) {
         this.approvalDescription = approvalDescription;
         return this;
@@ -28,6 +30,7 @@ public class UpdateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerMetadataProperties")
     public java.util.Map<String, String> customerMetadataProperties;
+
     public UpdateModelPackageInput withCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
         this.customerMetadataProperties = customerMetadataProperties;
         return this;
@@ -36,6 +39,7 @@ public class UpdateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerMetadataPropertiesToRemove")
     public String[] customerMetadataPropertiesToRemove;
+
     public UpdateModelPackageInput withCustomerMetadataPropertiesToRemove(String[] customerMetadataPropertiesToRemove) {
         this.customerMetadataPropertiesToRemove = customerMetadataPropertiesToRemove;
         return this;
@@ -44,6 +48,7 @@ public class UpdateModelPackageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelApprovalStatus")
     public ModelApprovalStatusEnum modelApprovalStatus;
+
     public UpdateModelPackageInput withModelApprovalStatus(ModelApprovalStatusEnum modelApprovalStatus) {
         this.modelApprovalStatus = modelApprovalStatus;
         return this;
@@ -51,9 +56,13 @@ public class UpdateModelPackageInput {
     
     @JsonProperty("ModelPackageArn")
     public String modelPackageArn;
+
     public UpdateModelPackageInput withModelPackageArn(String modelPackageArn) {
         this.modelPackageArn = modelPackageArn;
         return this;
     }
     
+    public UpdateModelPackageInput(@JsonProperty("ModelPackageArn") String modelPackageArn) {
+        this.modelPackageArn = modelPackageArn;
+  }
 }

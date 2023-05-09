@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateAssumeRolePolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateAssumeRolePolicyActionEnum action;
+
     public GETUpdateAssumeRolePolicyRequest withAction(GETUpdateAssumeRolePolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateAssumeRolePolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyDocument")
     public String policyDocument;
+
     public GETUpdateAssumeRolePolicyRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateAssumeRolePolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleName")
     public String roleName;
+
     public GETUpdateAssumeRolePolicyRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
@@ -36,6 +40,7 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateAssumeRolePolicyVersionEnum version;
+
     public GETUpdateAssumeRolePolicyRequest withVersion(GETUpdateAssumeRolePolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateAssumeRolePolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateAssumeRolePolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateAssumeRolePolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateAssumeRolePolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateAssumeRolePolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateAssumeRolePolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUpdateAssumeRolePolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateAssumeRolePolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateAssumeRolePolicyRequest(@JsonProperty("Action") GETUpdateAssumeRolePolicyActionEnum action, @JsonProperty("PolicyDocument") String policyDocument, @JsonProperty("RoleName") String roleName, @JsonProperty("Version") GETUpdateAssumeRolePolicyVersionEnum version) {
+        this.action = action;
+        this.policyDocument = policyDocument;
+        this.roleName = roleName;
+        this.version = version;
+  }
 }

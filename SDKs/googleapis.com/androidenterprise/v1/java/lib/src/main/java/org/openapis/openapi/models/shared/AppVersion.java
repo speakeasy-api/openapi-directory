@@ -18,6 +18,7 @@ public class AppVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isProduction")
     public Boolean isProduction;
+
     public AppVersion withIsProduction(Boolean isProduction) {
         this.isProduction = isProduction;
         return this;
@@ -29,6 +30,7 @@ public class AppVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track")
     public AppVersionTrackEnum track;
+
     public AppVersion withTrack(AppVersionTrackEnum track) {
         this.track = track;
         return this;
@@ -40,6 +42,7 @@ public class AppVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackId")
     public String[] trackId;
+
     public AppVersion withTrackId(String[] trackId) {
         this.trackId = trackId;
         return this;
@@ -51,6 +54,7 @@ public class AppVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public Integer versionCode;
+
     public AppVersion withVersionCode(Integer versionCode) {
         this.versionCode = versionCode;
         return this;
@@ -62,9 +66,11 @@ public class AppVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionString")
     public String versionString;
+
     public AppVersion withVersionString(String versionString) {
         this.versionString = versionString;
         return this;
     }
     
+    public AppVersion(){}
 }

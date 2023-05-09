@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * Model - The properties of a model as returned by the &lt;a&gt;Search&lt;/a&gt; API.
+ * Model - The properties of a model as returned by the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API.
  */
 public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Containers")
     public ContainerDefinition[] containers;
+
     public Model withContainers(ContainerDefinition[] containers) {
         this.containers = containers;
         return this;
@@ -30,6 +31,7 @@ public class Model {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Model withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNetworkIsolation")
     public Boolean enableNetworkIsolation;
+
     public Model withEnableNetworkIsolation(Boolean enableNetworkIsolation) {
         this.enableNetworkIsolation = enableNetworkIsolation;
         return this;
@@ -46,6 +49,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public Model withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -57,6 +61,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceExecutionConfig")
     public InferenceExecutionConfig inferenceExecutionConfig;
+
     public Model withInferenceExecutionConfig(InferenceExecutionConfig inferenceExecutionConfig) {
         this.inferenceExecutionConfig = inferenceExecutionConfig;
         return this;
@@ -65,6 +70,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public Model withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -73,6 +79,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public Model withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -84,6 +91,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryContainer")
     public ContainerDefinition primaryContainer;
+
     public Model withPrimaryContainer(ContainerDefinition primaryContainer) {
         this.primaryContainer = primaryContainer;
         return this;
@@ -92,6 +100,7 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Model withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -103,9 +112,11 @@ public class Model {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public Model withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public Model(){}
 }

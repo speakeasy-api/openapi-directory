@@ -15,6 +15,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgp")
     public RouterBgp bgp;
+
     public Router withBgp(RouterBgp bgp) {
         this.bgp = bgp;
         return this;
@@ -26,6 +27,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bgpPeers")
     public RouterBgpPeer[] bgpPeers;
+
     public Router withBgpPeers(RouterBgpPeer[] bgpPeers) {
         this.bgpPeers = bgpPeers;
         return this;
@@ -37,6 +39,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Router withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Router withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +63,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptedInterconnectRouter")
     public Boolean encryptedInterconnectRouter;
+
     public Router withEncryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
         this.encryptedInterconnectRouter = encryptedInterconnectRouter;
         return this;
@@ -70,6 +75,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Router withId(String id) {
         this.id = id;
         return this;
@@ -81,6 +87,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interfaces")
     public RouterInterface[] interfaces;
+
     public Router withInterfaces(RouterInterface[] interfaces) {
         this.interfaces = interfaces;
         return this;
@@ -92,6 +99,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Router withKind(String kind) {
         this.kind = kind;
         return this;
@@ -103,6 +111,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("md5AuthenticationKeys")
     public RouterMd5AuthenticationKey[] md5AuthenticationKeys;
+
     public Router withMd5AuthenticationKeys(RouterMd5AuthenticationKey[] md5AuthenticationKeys) {
         this.md5AuthenticationKeys = md5AuthenticationKeys;
         return this;
@@ -114,6 +123,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Router withName(String name) {
         this.name = name;
         return this;
@@ -125,6 +135,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nats")
     public RouterNat[] nats;
+
     public Router withNats(RouterNat[] nats) {
         this.nats = nats;
         return this;
@@ -136,6 +147,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Router withNetwork(String network) {
         this.network = network;
         return this;
@@ -147,6 +159,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Router withRegion(String region) {
         this.region = region;
         return this;
@@ -158,6 +171,7 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Router withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -169,9 +183,11 @@ public class Router {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public Router withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
     }
     
+    public Router(){}
 }

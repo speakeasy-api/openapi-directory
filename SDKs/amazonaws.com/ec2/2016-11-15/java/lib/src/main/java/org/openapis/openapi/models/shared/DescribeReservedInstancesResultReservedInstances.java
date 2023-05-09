@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeReservedInstancesResultReservedInstances {
     
     public String availabilityZone;
+
     public DescribeReservedInstancesResultReservedInstances withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum currencyCode;
+
     public DescribeReservedInstancesResultReservedInstances withCurrencyCode(DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public Long duration;
+
     public DescribeReservedInstancesResultReservedInstances withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public OffsetDateTime end;
+
     public DescribeReservedInstancesResultReservedInstances withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public Float fixedPrice;
+
     public DescribeReservedInstancesResultReservedInstances withFixedPrice(Float fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public Long instanceCount;
+
     public DescribeReservedInstancesResultReservedInstances withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -54,6 +60,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum instanceTenancy;
+
     public DescribeReservedInstancesResultReservedInstances withInstanceTenancy(DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -61,6 +68,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum instanceType;
+
     public DescribeReservedInstancesResultReservedInstances withInstanceType(DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -68,6 +76,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesOfferingClassEnum offeringClass;
+
     public DescribeReservedInstancesResultReservedInstances withOfferingClass(DescribeReservedInstancesResultReservedInstancesOfferingClassEnum offeringClass) {
         this.offeringClass = offeringClass;
         return this;
@@ -75,6 +84,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum offeringType;
+
     public DescribeReservedInstancesResultReservedInstances withOfferingType(DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -82,6 +92,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum productDescription;
+
     public DescribeReservedInstancesResultReservedInstances withProductDescription(DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -89,6 +100,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesRecurringCharges[] recurringCharges;
+
     public DescribeReservedInstancesResultReservedInstances withRecurringCharges(DescribeReservedInstancesResultReservedInstancesRecurringCharges[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -96,6 +108,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public String reservedInstancesId;
+
     public DescribeReservedInstancesResultReservedInstances withReservedInstancesId(String reservedInstancesId) {
         this.reservedInstancesId = reservedInstancesId;
         return this;
@@ -103,6 +116,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesScopeEnum scope;
+
     public DescribeReservedInstancesResultReservedInstances withScope(DescribeReservedInstancesResultReservedInstancesScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -110,6 +124,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public OffsetDateTime start;
+
     public DescribeReservedInstancesResultReservedInstances withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -117,6 +132,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesStateEnum state;
+
     public DescribeReservedInstancesResultReservedInstances withState(DescribeReservedInstancesResultReservedInstancesStateEnum state) {
         this.state = state;
         return this;
@@ -124,6 +140,7 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public DescribeReservedInstancesResultReservedInstancesTags[] tags;
+
     public DescribeReservedInstancesResultReservedInstances withTags(DescribeReservedInstancesResultReservedInstancesTags[] tags) {
         this.tags = tags;
         return this;
@@ -131,9 +148,11 @@ public class DescribeReservedInstancesResultReservedInstances {
     
     
     public Float usagePrice;
+
     public DescribeReservedInstancesResultReservedInstances withUsagePrice(Float usagePrice) {
         this.usagePrice = usagePrice;
         return this;
     }
     
+    public DescribeReservedInstancesResultReservedInstances(){}
 }

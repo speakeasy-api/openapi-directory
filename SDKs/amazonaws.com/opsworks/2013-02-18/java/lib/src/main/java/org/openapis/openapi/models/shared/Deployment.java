@@ -15,6 +15,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public Deployment withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public DeploymentCommand command;
+
     public Deployment withCommand(DeploymentCommand command) {
         this.command = command;
         return this;
@@ -31,6 +33,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public Deployment withComment(String comment) {
         this.comment = comment;
         return this;
@@ -39,6 +42,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletedAt")
     public String completedAt;
+
     public Deployment withCompletedAt(String completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -47,6 +51,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public Deployment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -55,6 +60,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public Deployment withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -63,6 +69,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public Deployment withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -71,6 +78,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public Deployment withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -79,6 +87,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamUserArn")
     public String iamUserArn;
+
     public Deployment withIamUserArn(String iamUserArn) {
         this.iamUserArn = iamUserArn;
         return this;
@@ -87,6 +96,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public Deployment withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -95,6 +105,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public Deployment withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -103,9 +114,11 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Deployment withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Deployment(){}
 }

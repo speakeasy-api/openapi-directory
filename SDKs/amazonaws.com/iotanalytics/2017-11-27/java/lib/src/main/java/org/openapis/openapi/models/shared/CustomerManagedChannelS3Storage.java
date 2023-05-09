@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerManagedChannelS3Storage {
     @JsonProperty("bucket")
     public String bucket;
+
     public CustomerManagedChannelS3Storage withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -22,6 +23,7 @@ public class CustomerManagedChannelS3Storage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public CustomerManagedChannelS3Storage withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -29,9 +31,14 @@ public class CustomerManagedChannelS3Storage {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CustomerManagedChannelS3Storage withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CustomerManagedChannelS3Storage(@JsonProperty("bucket") String bucket, @JsonProperty("roleArn") String roleArn) {
+        this.bucket = bucket;
+        this.roleArn = roleArn;
+  }
 }

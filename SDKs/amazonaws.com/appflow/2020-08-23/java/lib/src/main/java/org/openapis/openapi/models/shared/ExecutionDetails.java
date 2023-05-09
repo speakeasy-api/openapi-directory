@@ -20,6 +20,7 @@ public class ExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostRecentExecutionMessage")
     public String mostRecentExecutionMessage;
+
     public ExecutionDetails withMostRecentExecutionMessage(String mostRecentExecutionMessage) {
         this.mostRecentExecutionMessage = mostRecentExecutionMessage;
         return this;
@@ -28,6 +29,7 @@ public class ExecutionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostRecentExecutionStatus")
     public ExecutionStatusEnum mostRecentExecutionStatus;
+
     public ExecutionDetails withMostRecentExecutionStatus(ExecutionStatusEnum mostRecentExecutionStatus) {
         this.mostRecentExecutionStatus = mostRecentExecutionStatus;
         return this;
@@ -38,9 +40,11 @@ public class ExecutionDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("mostRecentExecutionTime")
     public OffsetDateTime mostRecentExecutionTime;
+
     public ExecutionDetails withMostRecentExecutionTime(OffsetDateTime mostRecentExecutionTime) {
         this.mostRecentExecutionTime = mostRecentExecutionTime;
         return this;
     }
     
+    public ExecutionDetails(){}
 }

@@ -15,6 +15,7 @@ public class MultiConditionalSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Branches")
     public MultiConditionalBranch[] branches;
+
     public MultiConditionalSplitActivity withBranches(MultiConditionalBranch[] branches) {
         this.branches = branches;
         return this;
@@ -23,6 +24,7 @@ public class MultiConditionalSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultActivity")
     public String defaultActivity;
+
     public MultiConditionalSplitActivity withDefaultActivity(String defaultActivity) {
         this.defaultActivity = defaultActivity;
         return this;
@@ -31,9 +33,11 @@ public class MultiConditionalSplitActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationWaitTime")
     public WaitTime evaluationWaitTime;
+
     public MultiConditionalSplitActivity withEvaluationWaitTime(WaitTime evaluationWaitTime) {
         this.evaluationWaitTime = evaluationWaitTime;
         return this;
     }
     
+    public MultiConditionalSplitActivity(){}
 }

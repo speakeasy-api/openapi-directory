@@ -15,6 +15,7 @@ public class UpdateSafetyRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssertionRuleUpdate")
     public UpdateSafetyRuleRequestBodyAssertionRuleUpdate assertionRuleUpdate;
+
     public UpdateSafetyRuleRequestBody withAssertionRuleUpdate(UpdateSafetyRuleRequestBodyAssertionRuleUpdate assertionRuleUpdate) {
         this.assertionRuleUpdate = assertionRuleUpdate;
         return this;
@@ -26,9 +27,11 @@ public class UpdateSafetyRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatingRuleUpdate")
     public UpdateSafetyRuleRequestBodyGatingRuleUpdate gatingRuleUpdate;
+
     public UpdateSafetyRuleRequestBody withGatingRuleUpdate(UpdateSafetyRuleRequestBodyGatingRuleUpdate gatingRuleUpdate) {
         this.gatingRuleUpdate = gatingRuleUpdate;
         return this;
     }
     
+    public UpdateSafetyRuleRequestBody(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVersionsByFunctionResponse {
     
     public String contentType;
+
     public ListVersionsByFunctionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListVersionsByFunctionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListVersionsByFunctionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListVersionsByFunctionResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVersionsByFunctionResponse listVersionsByFunctionResponse;
+
     public ListVersionsByFunctionResponse withListVersionsByFunctionResponse(org.openapis.openapi.models.shared.ListVersionsByFunctionResponse listVersionsByFunctionResponse) {
         this.listVersionsByFunctionResponse = listVersionsByFunctionResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListVersionsByFunctionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListVersionsByFunctionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListVersionsByFunctionResponse {
      */
     
     public Object serviceException;
+
     public ListVersionsByFunctionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class ListVersionsByFunctionResponse {
     
     
     public Integer statusCode;
+
     public ListVersionsByFunctionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListVersionsByFunctionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVersionsByFunctionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListVersionsByFunctionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListVersionsByFunctionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListVersionsByFunctionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

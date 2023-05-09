@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetargetingGetDatapointsCountRequest {
@@ -12,6 +13,7 @@ public class RetargetingGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public RetargetingGetDatapointsCountRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +24,7 @@ public class RetargetingGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public RetargetingGetDatapointsCountRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +35,7 @@ public class RetargetingGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public RetargetingGetDatapointsCountRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class RetargetingGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
     public Boolean onlyFavorites;
+
     public RetargetingGetDatapointsCountRequest withOnlyFavorites(Boolean onlyFavorites) {
         this.onlyFavorites = onlyFavorites;
         return this;
@@ -52,6 +57,7 @@ public class RetargetingGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public RetargetingGetDatapointsCountStatusEnum status;
+
     public RetargetingGetDatapointsCountRequest withStatus(RetargetingGetDatapointsCountStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +68,7 @@ public class RetargetingGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public RetargetingGetDatapointsCountRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -72,9 +79,13 @@ public class RetargetingGetDatapointsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public RetargetingGetDatapointsCountRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public RetargetingGetDatapointsCountRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

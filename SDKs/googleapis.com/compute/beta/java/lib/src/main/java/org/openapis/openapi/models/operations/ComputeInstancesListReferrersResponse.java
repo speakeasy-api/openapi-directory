@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeInstancesListReferrersResponse {
     
     public String contentType;
+
     public ComputeInstancesListReferrersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstancesListReferrersResponse {
      */
     
     public org.openapis.openapi.models.shared.InstanceListReferrers instanceListReferrers;
+
     public ComputeInstancesListReferrersResponse withInstanceListReferrers(org.openapis.openapi.models.shared.InstanceListReferrers instanceListReferrers) {
         this.instanceListReferrers = instanceListReferrers;
         return this;
@@ -26,6 +29,7 @@ public class ComputeInstancesListReferrersResponse {
     
     
     public Integer statusCode;
+
     public ComputeInstancesListReferrersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeInstancesListReferrersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeInstancesListReferrersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeInstancesListReferrersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DeleteServersId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public DeleteServersId200ApplicationJSONAction action;
+
     public DeleteServersId200ApplicationJSON withAction(DeleteServersId200ApplicationJSONAction action) {
         this.action = action;
         return this;
     }
     
+    public DeleteServersId200ApplicationJSON(){}
 }

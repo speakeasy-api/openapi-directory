@@ -14,6 +14,7 @@ public class UpdateApplicationRequestBody {
      */
     @JsonProperty("currentApplicationVersion")
     public Long currentApplicationVersion;
+
     public UpdateApplicationRequestBody withCurrentApplicationVersion(Long currentApplicationVersion) {
         this.currentApplicationVersion = currentApplicationVersion;
         return this;
@@ -25,6 +26,7 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public UpdateApplicationRequestBodyDefinition definition;
+
     public UpdateApplicationRequestBody withDefinition(UpdateApplicationRequestBodyDefinition definition) {
         this.definition = definition;
         return this;
@@ -36,9 +38,13 @@ public class UpdateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateApplicationRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateApplicationRequestBody(@JsonProperty("currentApplicationVersion") Long currentApplicationVersion) {
+        this.currentApplicationVersion = currentApplicationVersion;
+  }
 }

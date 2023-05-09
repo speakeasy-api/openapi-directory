@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateKeyPairResponse {
@@ -12,6 +13,7 @@ public class CreateKeyPairResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateKeyPairResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateKeyPairResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public CreateKeyPairResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class CreateKeyPairResponse {
     
     
     public String contentType;
+
     public CreateKeyPairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateKeyPairResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateKeyPairResult createKeyPairResult;
+
     public CreateKeyPairResponse withCreateKeyPairResult(org.openapis.openapi.models.shared.CreateKeyPairResult createKeyPairResult) {
         this.createKeyPairResult = createKeyPairResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateKeyPairResponse {
      */
     
     public Object invalidInputException;
+
     public CreateKeyPairResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateKeyPairResponse {
      */
     
     public Object notFoundException;
+
     public CreateKeyPairResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateKeyPairResponse {
      */
     
     public Object operationFailureException;
+
     public CreateKeyPairResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class CreateKeyPairResponse {
      */
     
     public Object serviceException;
+
     public CreateKeyPairResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class CreateKeyPairResponse {
     
     
     public Integer statusCode;
+
     public CreateKeyPairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateKeyPairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateKeyPairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateKeyPairResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateKeyPairResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateKeyPairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

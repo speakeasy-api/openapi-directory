@@ -12,6 +12,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationSchemes")
     public ScimServiceProviderConfigAuthenticationSchemes authenticationSchemes;
+
     public ScimServiceProviderConfig withAuthenticationSchemes(ScimServiceProviderConfigAuthenticationSchemes authenticationSchemes) {
         this.authenticationSchemes = authenticationSchemes;
         return this;
@@ -20,6 +21,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulk")
     public ScimServiceProviderConfigBulk bulk;
+
     public ScimServiceProviderConfig withBulk(ScimServiceProviderConfigBulk bulk) {
         this.bulk = bulk;
         return this;
@@ -28,6 +30,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changePassword")
     public ScimServiceProviderConfigChangePassword changePassword;
+
     public ScimServiceProviderConfig withChangePassword(ScimServiceProviderConfigChangePassword changePassword) {
         this.changePassword = changePassword;
         return this;
@@ -36,6 +39,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentationUri")
     public String documentationUri;
+
     public ScimServiceProviderConfig withDocumentationUri(String documentationUri) {
         this.documentationUri = documentationUri;
         return this;
@@ -44,6 +48,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public ScimServiceProviderConfigEtag etag;
+
     public ScimServiceProviderConfig withEtag(ScimServiceProviderConfigEtag etag) {
         this.etag = etag;
         return this;
@@ -52,6 +57,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ScimServiceProviderConfigFilter filter;
+
     public ScimServiceProviderConfig withFilter(ScimServiceProviderConfigFilter filter) {
         this.filter = filter;
         return this;
@@ -60,6 +66,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patch")
     public ScimServiceProviderConfigPatch patch;
+
     public ScimServiceProviderConfig withPatch(ScimServiceProviderConfigPatch patch) {
         this.patch = patch;
         return this;
@@ -68,6 +75,7 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public ScimServiceProviderConfig withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -76,9 +84,11 @@ public class ScimServiceProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public ScimServiceProviderConfigSort sort;
+
     public ScimServiceProviderConfig withSort(ScimServiceProviderConfigSort sort) {
         this.sort = sort;
         return this;
     }
     
+    public ScimServiceProviderConfig(){}
 }

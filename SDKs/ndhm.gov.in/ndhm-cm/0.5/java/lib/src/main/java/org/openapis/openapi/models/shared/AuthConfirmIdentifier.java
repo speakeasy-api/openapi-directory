@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthConfirmIdentifier {
     @JsonProperty("type")
     public AuthConfirmIdentifierTypeEnum type;
+
     public AuthConfirmIdentifier withType(AuthConfirmIdentifierTypeEnum type) {
         this.type = type;
         return this;
@@ -16,9 +17,14 @@ public class AuthConfirmIdentifier {
     
     @JsonProperty("value")
     public String value;
+
     public AuthConfirmIdentifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AuthConfirmIdentifier(@JsonProperty("type") AuthConfirmIdentifierTypeEnum type, @JsonProperty("value") String value) {
+        this.type = type;
+        this.value = value;
+  }
 }

@@ -15,6 +15,7 @@ public class SecurityPoliciesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicies")
     public SecurityPolicy[] securityPolicies;
+
     public SecurityPoliciesScopedList withSecurityPolicies(SecurityPolicy[] securityPolicies) {
         this.securityPolicies = securityPolicies;
         return this;
@@ -26,9 +27,11 @@ public class SecurityPoliciesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SecurityPoliciesScopedListWarning warning;
+
     public SecurityPoliciesScopedList withWarning(SecurityPoliciesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SecurityPoliciesScopedList(){}
 }

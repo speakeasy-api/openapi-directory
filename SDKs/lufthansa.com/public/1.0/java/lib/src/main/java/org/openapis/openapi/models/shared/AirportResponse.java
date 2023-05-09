@@ -15,9 +15,11 @@ public class AirportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AirportResource")
     public AirportResource airportResource;
+
     public AirportResponse withAirportResource(AirportResource airportResource) {
         this.airportResource = airportResource;
         return this;
     }
     
+    public AirportResponse(){}
 }

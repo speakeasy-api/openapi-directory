@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicecontrolServicesAllocateQuotaSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicecontrolServicesAllocateQuotaSecurityOption1 option1;
+
     public ServicecontrolServicesAllocateQuotaSecurity withOption1(ServicecontrolServicesAllocateQuotaSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicecontrolServicesAllocateQuotaSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicecontrolServicesAllocateQuotaSecurityOption2 option2;
+
     public ServicecontrolServicesAllocateQuotaSecurity withOption2(ServicecontrolServicesAllocateQuotaSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicecontrolServicesAllocateQuotaSecurity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTextBroadcastStatsRequest {
@@ -12,6 +13,7 @@ public class GetTextBroadcastStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin")
     public Long begin;
+
     public GetTextBroadcastStatsRequest withBegin(Long begin) {
         this.begin = begin;
         return this;
@@ -22,6 +24,7 @@ public class GetTextBroadcastStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public Long end;
+
     public GetTextBroadcastStatsRequest withEnd(Long end) {
         this.end = end;
         return this;
@@ -32,6 +35,7 @@ public class GetTextBroadcastStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetTextBroadcastStatsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,9 +46,13 @@ public class GetTextBroadcastStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetTextBroadcastStatsRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetTextBroadcastStatsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

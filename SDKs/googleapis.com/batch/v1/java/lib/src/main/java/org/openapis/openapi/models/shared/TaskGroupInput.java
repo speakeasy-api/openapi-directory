@@ -18,6 +18,7 @@ public class TaskGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelism")
     public String parallelism;
+
     public TaskGroupInput withParallelism(String parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -29,6 +30,7 @@ public class TaskGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissiveSsh")
     public Boolean permissiveSsh;
+
     public TaskGroupInput withPermissiveSsh(Boolean permissiveSsh) {
         this.permissiveSsh = permissiveSsh;
         return this;
@@ -40,6 +42,7 @@ public class TaskGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireHostsFile")
     public Boolean requireHostsFile;
+
     public TaskGroupInput withRequireHostsFile(Boolean requireHostsFile) {
         this.requireHostsFile = requireHostsFile;
         return this;
@@ -51,6 +54,7 @@ public class TaskGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCount")
     public String taskCount;
+
     public TaskGroupInput withTaskCount(String taskCount) {
         this.taskCount = taskCount;
         return this;
@@ -62,6 +66,7 @@ public class TaskGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCountPerNode")
     public String taskCountPerNode;
+
     public TaskGroupInput withTaskCountPerNode(String taskCountPerNode) {
         this.taskCountPerNode = taskCountPerNode;
         return this;
@@ -73,6 +78,7 @@ public class TaskGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskEnvironments")
     public Environment[] taskEnvironments;
+
     public TaskGroupInput withTaskEnvironments(Environment[] taskEnvironments) {
         this.taskEnvironments = taskEnvironments;
         return this;
@@ -84,9 +90,11 @@ public class TaskGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSpec")
     public TaskSpec taskSpec;
+
     public TaskGroupInput withTaskSpec(TaskSpec taskSpec) {
         this.taskSpec = taskSpec;
         return this;
     }
     
+    public TaskGroupInput(){}
 }

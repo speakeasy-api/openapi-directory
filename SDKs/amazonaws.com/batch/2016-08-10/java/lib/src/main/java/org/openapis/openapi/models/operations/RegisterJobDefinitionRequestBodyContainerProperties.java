@@ -15,6 +15,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public String[] command;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public org.openapis.openapi.models.shared.KeyValuePair[] environment;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withEnvironment(org.openapis.openapi.models.shared.KeyValuePair[] environment) {
         this.environment = environment;
         return this;
@@ -31,6 +33,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeralStorage")
     public org.openapis.openapi.models.shared.EphemeralStorage ephemeralStorage;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withEphemeralStorage(org.openapis.openapi.models.shared.EphemeralStorage ephemeralStorage) {
         this.ephemeralStorage = ephemeralStorage;
         return this;
@@ -39,6 +42,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -47,6 +51,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fargatePlatformConfiguration")
     public org.openapis.openapi.models.shared.FargatePlatformConfiguration fargatePlatformConfiguration;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withFargatePlatformConfiguration(org.openapis.openapi.models.shared.FargatePlatformConfiguration fargatePlatformConfiguration) {
         this.fargatePlatformConfiguration = fargatePlatformConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withImage(String image) {
         this.image = image;
         return this;
@@ -63,6 +69,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -71,6 +78,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobRoleArn")
     public String jobRoleArn;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withJobRoleArn(String jobRoleArn) {
         this.jobRoleArn = jobRoleArn;
         return this;
@@ -79,6 +87,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxParameters")
     public org.openapis.openapi.models.shared.LinuxParameters linuxParameters;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withLinuxParameters(org.openapis.openapi.models.shared.LinuxParameters linuxParameters) {
         this.linuxParameters = linuxParameters;
         return this;
@@ -87,6 +96,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfiguration")
     public org.openapis.openapi.models.shared.LogConfiguration logConfiguration;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withLogConfiguration(org.openapis.openapi.models.shared.LogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -95,6 +105,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -103,6 +114,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPoints")
     public org.openapis.openapi.models.shared.MountPoint[] mountPoints;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withMountPoints(org.openapis.openapi.models.shared.MountPoint[] mountPoints) {
         this.mountPoints = mountPoints;
         return this;
@@ -111,6 +123,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public org.openapis.openapi.models.shared.NetworkConfiguration networkConfiguration;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withNetworkConfiguration(org.openapis.openapi.models.shared.NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -119,6 +132,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privileged")
     public Boolean privileged;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withPrivileged(Boolean privileged) {
         this.privileged = privileged;
         return this;
@@ -127,6 +141,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonlyRootFilesystem")
     public Boolean readonlyRootFilesystem;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withReadonlyRootFilesystem(Boolean readonlyRootFilesystem) {
         this.readonlyRootFilesystem = readonlyRootFilesystem;
         return this;
@@ -135,6 +150,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public org.openapis.openapi.models.shared.ResourceRequirement[] resourceRequirements;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withResourceRequirements(org.openapis.openapi.models.shared.ResourceRequirement[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -143,6 +159,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secrets")
     public org.openapis.openapi.models.shared.Secret[] secrets;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withSecrets(org.openapis.openapi.models.shared.Secret[] secrets) {
         this.secrets = secrets;
         return this;
@@ -151,6 +168,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ulimits")
     public org.openapis.openapi.models.shared.Ulimit[] ulimits;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withUlimits(org.openapis.openapi.models.shared.Ulimit[] ulimits) {
         this.ulimits = ulimits;
         return this;
@@ -159,6 +177,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withUser(String user) {
         this.user = user;
         return this;
@@ -167,6 +186,7 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcpus")
     public Long vcpus;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withVcpus(Long vcpus) {
         this.vcpus = vcpus;
         return this;
@@ -175,9 +195,11 @@ public class RegisterJobDefinitionRequestBodyContainerProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumes")
     public org.openapis.openapi.models.shared.Volume[] volumes;
+
     public RegisterJobDefinitionRequestBodyContainerProperties withVolumes(org.openapis.openapi.models.shared.Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public RegisterJobDefinitionRequestBodyContainerProperties(){}
 }

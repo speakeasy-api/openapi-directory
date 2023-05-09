@@ -20,6 +20,7 @@ public class PutOptedOutNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndUserOptedOut")
     public Boolean endUserOptedOut;
+
     public PutOptedOutNumberResult withEndUserOptedOut(Boolean endUserOptedOut) {
         this.endUserOptedOut = endUserOptedOut;
         return this;
@@ -28,6 +29,7 @@ public class PutOptedOutNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListArn")
     public String optOutListArn;
+
     public PutOptedOutNumberResult withOptOutListArn(String optOutListArn) {
         this.optOutListArn = optOutListArn;
         return this;
@@ -36,6 +38,7 @@ public class PutOptedOutNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public PutOptedOutNumberResult withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -44,6 +47,7 @@ public class PutOptedOutNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptedOutNumber")
     public String optedOutNumber;
+
     public PutOptedOutNumberResult withOptedOutNumber(String optedOutNumber) {
         this.optedOutNumber = optedOutNumber;
         return this;
@@ -54,9 +58,11 @@ public class PutOptedOutNumberResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OptedOutTimestamp")
     public OffsetDateTime optedOutTimestamp;
+
     public PutOptedOutNumberResult withOptedOutTimestamp(OffsetDateTime optedOutTimestamp) {
         this.optedOutTimestamp = optedOutTimestamp;
         return this;
     }
     
+    public PutOptedOutNumberResult(){}
 }

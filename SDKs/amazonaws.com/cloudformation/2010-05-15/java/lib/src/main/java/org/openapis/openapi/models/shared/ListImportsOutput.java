@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListImportsOutput {
     
     public String[] imports;
+
     public ListImportsOutput withImports(String[] imports) {
         this.imports = imports;
         return this;
@@ -19,9 +20,11 @@ public class ListImportsOutput {
     
     
     public String nextToken;
+
     public ListImportsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportsOutput(){}
 }

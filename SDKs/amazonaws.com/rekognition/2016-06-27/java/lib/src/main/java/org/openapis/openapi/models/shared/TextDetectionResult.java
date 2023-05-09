@@ -15,6 +15,7 @@ public class TextDetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextDetection")
     public TextDetection textDetection;
+
     public TextDetectionResult withTextDetection(TextDetection textDetection) {
         this.textDetection = textDetection;
         return this;
@@ -23,9 +24,11 @@ public class TextDetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public Long timestamp;
+
     public TextDetectionResult withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public TextDetectionResult(){}
 }

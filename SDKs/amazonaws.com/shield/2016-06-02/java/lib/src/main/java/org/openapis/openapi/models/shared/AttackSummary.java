@@ -20,6 +20,7 @@ public class AttackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackId")
     public String attackId;
+
     public AttackSummary withAttackId(String attackId) {
         this.attackId = attackId;
         return this;
@@ -28,6 +29,7 @@ public class AttackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackVectors")
     public AttackVectorDescription[] attackVectors;
+
     public AttackSummary withAttackVectors(AttackVectorDescription[] attackVectors) {
         this.attackVectors = attackVectors;
         return this;
@@ -38,6 +40,7 @@ public class AttackSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public AttackSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class AttackSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public AttackSummary withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -56,9 +60,11 @@ public class AttackSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public AttackSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public AttackSummary(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResendValidationEmailRequest {
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public ResendValidationEmailRequest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -16,6 +17,7 @@ public class ResendValidationEmailRequest {
     
     @JsonProperty("Domain")
     public String domain;
+
     public ResendValidationEmailRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -23,9 +25,15 @@ public class ResendValidationEmailRequest {
     
     @JsonProperty("ValidationDomain")
     public String validationDomain;
+
     public ResendValidationEmailRequest withValidationDomain(String validationDomain) {
         this.validationDomain = validationDomain;
         return this;
     }
     
+    public ResendValidationEmailRequest(@JsonProperty("CertificateArn") String certificateArn, @JsonProperty("Domain") String domain, @JsonProperty("ValidationDomain") String validationDomain) {
+        this.certificateArn = certificateArn;
+        this.domain = domain;
+        this.validationDomain = validationDomain;
+  }
 }

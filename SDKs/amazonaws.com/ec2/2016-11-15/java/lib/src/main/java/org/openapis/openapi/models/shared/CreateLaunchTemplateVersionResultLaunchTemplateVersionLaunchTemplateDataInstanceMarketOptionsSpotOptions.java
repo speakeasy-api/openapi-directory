@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptions {
     
     public Long blockDurationMinutes;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptions withBlockDurationMinutes(Long blockDurationMinutes) {
         this.blockDurationMinutes = blockDurationMinutes;
         return this;
@@ -19,6 +20,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptions withInstanceInterruptionBehavior(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -26,6 +28,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public String maxPrice;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptions withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -33,6 +36,7 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum spotInstanceType;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptions withSpotInstanceType(CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum spotInstanceType) {
         this.spotInstanceType = spotInstanceType;
         return this;
@@ -40,9 +44,11 @@ public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplat
     
     
     public OffsetDateTime validUntil;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptions withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptions(){}
 }

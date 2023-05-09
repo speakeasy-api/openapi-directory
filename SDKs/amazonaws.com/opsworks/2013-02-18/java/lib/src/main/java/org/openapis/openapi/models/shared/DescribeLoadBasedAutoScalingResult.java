@@ -15,9 +15,11 @@ public class DescribeLoadBasedAutoScalingResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadBasedAutoScalingConfigurations")
     public LoadBasedAutoScalingConfiguration[] loadBasedAutoScalingConfigurations;
+
     public DescribeLoadBasedAutoScalingResult withLoadBasedAutoScalingConfigurations(LoadBasedAutoScalingConfiguration[] loadBasedAutoScalingConfigurations) {
         this.loadBasedAutoScalingConfigurations = loadBasedAutoScalingConfigurations;
         return this;
     }
     
+    public DescribeLoadBasedAutoScalingResult(){}
 }

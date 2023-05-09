@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUsageLimitResponse {
@@ -12,6 +13,7 @@ public class UpdateUsageLimitResponse {
      */
     
     public Object conflictException;
+
     public UpdateUsageLimitResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUsageLimitResponse {
     
     
     public String contentType;
+
     public UpdateUsageLimitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUsageLimitResponse {
      */
     
     public Object internalServerException;
+
     public UpdateUsageLimitResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUsageLimitResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUsageLimitResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateUsageLimitResponse {
     
     
     public Integer statusCode;
+
     public UpdateUsageLimitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateUsageLimitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUsageLimitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateUsageLimitResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUsageLimitResponse updateUsageLimitResponse;
+
     public UpdateUsageLimitResponse withUpdateUsageLimitResponse(org.openapis.openapi.models.shared.UpdateUsageLimitResponse updateUsageLimitResponse) {
         this.updateUsageLimitResponse = updateUsageLimitResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateUsageLimitResponse {
      */
     
     public Object validationException;
+
     public UpdateUsageLimitResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateUsageLimitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

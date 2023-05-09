@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContainerResponse {
@@ -12,6 +13,7 @@ public class CreateContainerResponse {
      */
     
     public Object containerInUseException;
+
     public CreateContainerResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -19,6 +21,7 @@ public class CreateContainerResponse {
     
     
     public String contentType;
+
     public CreateContainerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateContainerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContainerOutput createContainerOutput;
+
     public CreateContainerResponse withCreateContainerOutput(org.openapis.openapi.models.shared.CreateContainerOutput createContainerOutput) {
         this.createContainerOutput = createContainerOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateContainerResponse {
      */
     
     public Object internalServerError;
+
     public CreateContainerResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateContainerResponse {
      */
     
     public Object limitExceededException;
+
     public CreateContainerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateContainerResponse {
     
     
     public Integer statusCode;
+
     public CreateContainerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateContainerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContainerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateContainerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

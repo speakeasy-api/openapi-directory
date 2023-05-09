@@ -12,6 +12,7 @@ public class AdvancedGameStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defense")
     public AdvancedGameStatDefense defense;
+
     public AdvancedGameStat withDefense(AdvancedGameStatDefense defense) {
         this.defense = defense;
         return this;
@@ -20,6 +21,7 @@ public class AdvancedGameStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gameId")
     public Long gameId;
+
     public AdvancedGameStat withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -28,6 +30,7 @@ public class AdvancedGameStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offense")
     public AdvancedGameStatOffense offense;
+
     public AdvancedGameStat withOffense(AdvancedGameStatOffense offense) {
         this.offense = offense;
         return this;
@@ -36,6 +39,7 @@ public class AdvancedGameStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opponent")
     public String opponent;
+
     public AdvancedGameStat withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -44,6 +48,7 @@ public class AdvancedGameStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public AdvancedGameStat withSeason(Long season) {
         this.season = season;
         return this;
@@ -52,6 +57,7 @@ public class AdvancedGameStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public AdvancedGameStat withTeam(String team) {
         this.team = team;
         return this;
@@ -60,9 +66,11 @@ public class AdvancedGameStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public Long week;
+
     public AdvancedGameStat withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public AdvancedGameStat(){}
 }

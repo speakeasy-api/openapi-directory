@@ -61,11 +61,9 @@ public class Query {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchQuerySearchResponse res = new org.openapis.openapi.models.operations.CloudsearchQuerySearchResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchQuerySearchResponse res = new org.openapis.openapi.models.operations.CloudsearchQuerySearchResponse(contentType, httpRes.statusCode()) {{
             searchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Query {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchQuerySourcesListResponse res = new org.openapis.openapi.models.operations.CloudsearchQuerySourcesListResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchQuerySourcesListResponse res = new org.openapis.openapi.models.operations.CloudsearchQuerySourcesListResponse(contentType, httpRes.statusCode()) {{
             listQuerySourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Query {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudsearchQuerySuggestResponse res = new org.openapis.openapi.models.operations.CloudsearchQuerySuggestResponse() {{
+        org.openapis.openapi.models.operations.CloudsearchQuerySuggestResponse res = new org.openapis.openapi.models.operations.CloudsearchQuerySuggestResponse(contentType, httpRes.statusCode()) {{
             suggestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

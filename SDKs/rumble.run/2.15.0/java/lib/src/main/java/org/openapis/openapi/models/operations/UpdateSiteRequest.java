@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSiteRequest {
@@ -12,6 +13,7 @@ public class UpdateSiteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SiteOptions siteOptions;
+
     public UpdateSiteRequest withSiteOptions(org.openapis.openapi.models.shared.SiteOptions siteOptions) {
         this.siteOptions = siteOptions;
         return this;
@@ -22,9 +24,14 @@ public class UpdateSiteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
     public String siteId;
+
     public UpdateSiteRequest withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
     }
     
+    public UpdateSiteRequest(@JsonProperty("SiteOptions") org.openapis.openapi.models.shared.SiteOptions siteOptions, @JsonProperty("site_id") String siteId) {
+        this.siteOptions = siteOptions;
+        this.siteId = siteId;
+  }
 }

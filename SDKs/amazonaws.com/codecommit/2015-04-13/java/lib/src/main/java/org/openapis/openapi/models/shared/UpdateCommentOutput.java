@@ -15,9 +15,11 @@ public class UpdateCommentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public Comment comment;
+
     public UpdateCommentOutput withComment(Comment comment) {
         this.comment = comment;
         return this;
     }
     
+    public UpdateCommentOutput(){}
 }

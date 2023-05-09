@@ -18,6 +18,7 @@ public class SlashCommandMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bot")
     public User bot;
+
     public SlashCommandMetadata withBot(User bot) {
         this.bot = bot;
         return this;
@@ -29,6 +30,7 @@ public class SlashCommandMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandId")
     public String commandId;
+
     public SlashCommandMetadata withCommandId(String commandId) {
         this.commandId = commandId;
         return this;
@@ -40,6 +42,7 @@ public class SlashCommandMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandName")
     public String commandName;
+
     public SlashCommandMetadata withCommandName(String commandName) {
         this.commandName = commandName;
         return this;
@@ -51,6 +54,7 @@ public class SlashCommandMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggersDialog")
     public Boolean triggersDialog;
+
     public SlashCommandMetadata withTriggersDialog(Boolean triggersDialog) {
         this.triggersDialog = triggersDialog;
         return this;
@@ -62,9 +66,11 @@ public class SlashCommandMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SlashCommandMetadataTypeEnum type;
+
     public SlashCommandMetadata withType(SlashCommandMetadataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SlashCommandMetadata(){}
 }

@@ -18,6 +18,7 @@ public class NetworkEdgeSecurityServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NetworkEdgeSecurityServiceAggregatedListWarningCodeEnum code;
+
     public NetworkEdgeSecurityServiceAggregatedListWarning withCode(NetworkEdgeSecurityServiceAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEdgeSecurityServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NetworkEdgeSecurityServiceAggregatedListWarningData[] data;
+
     public NetworkEdgeSecurityServiceAggregatedListWarning withData(NetworkEdgeSecurityServiceAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NetworkEdgeSecurityServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NetworkEdgeSecurityServiceAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NetworkEdgeSecurityServiceAggregatedListWarning(){}
 }

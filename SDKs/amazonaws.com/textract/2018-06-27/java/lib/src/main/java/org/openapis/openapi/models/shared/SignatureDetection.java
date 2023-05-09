@@ -15,6 +15,7 @@ public class SignatureDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public SignatureDetection withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -26,9 +27,11 @@ public class SignatureDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Geometry")
     public Geometry geometry;
+
     public SignatureDetection withGeometry(Geometry geometry) {
         this.geometry = geometry;
         return this;
     }
     
+    public SignatureDetection(){}
 }

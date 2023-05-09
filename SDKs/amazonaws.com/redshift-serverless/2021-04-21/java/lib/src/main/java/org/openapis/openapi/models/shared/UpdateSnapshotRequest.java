@@ -12,6 +12,7 @@ public class UpdateSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public Long retentionPeriod;
+
     public UpdateSnapshotRequest withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -19,9 +20,13 @@ public class UpdateSnapshotRequest {
     
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public UpdateSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     
+    public UpdateSnapshotRequest(@JsonProperty("snapshotName") String snapshotName) {
+        this.snapshotName = snapshotName;
+  }
 }

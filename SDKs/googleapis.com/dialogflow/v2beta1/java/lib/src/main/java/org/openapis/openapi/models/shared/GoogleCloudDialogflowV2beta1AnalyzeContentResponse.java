@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatedAgentReply")
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply automatedAgentReply;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentResponse withAutomatedAgentReply(GoogleCloudDialogflowV2beta1AutomatedAgentReply automatedAgentReply) {
         this.automatedAgentReply = automatedAgentReply;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmfParameters")
     public GoogleCloudDialogflowV2beta1DtmfParameters dtmfParameters;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentResponse withDtmfParameters(GoogleCloudDialogflowV2beta1DtmfParameters dtmfParameters) {
         this.dtmfParameters = dtmfParameters;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endUserSuggestionResults")
     public GoogleCloudDialogflowV2beta1SuggestionResult[] endUserSuggestionResults;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentResponse withEndUserSuggestionResults(GoogleCloudDialogflowV2beta1SuggestionResult[] endUserSuggestionResults) {
         this.endUserSuggestionResults = endUserSuggestionResults;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("humanAgentSuggestionResults")
     public GoogleCloudDialogflowV2beta1SuggestionResult[] humanAgentSuggestionResults;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentResponse withHumanAgentSuggestionResults(GoogleCloudDialogflowV2beta1SuggestionResult[] humanAgentSuggestionResults) {
         this.humanAgentSuggestionResults = humanAgentSuggestionResults;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public GoogleCloudDialogflowV2beta1Message message;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentResponse withMessage(GoogleCloudDialogflowV2beta1Message message) {
         this.message = message;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyAudio")
     public GoogleCloudDialogflowV2beta1OutputAudio replyAudio;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentResponse withReplyAudio(GoogleCloudDialogflowV2beta1OutputAudio replyAudio) {
         this.replyAudio = replyAudio;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowV2beta1AnalyzeContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyText")
     public String replyText;
+
     public GoogleCloudDialogflowV2beta1AnalyzeContentResponse withReplyText(String replyText) {
         this.replyText = replyText;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1AnalyzeContentResponse(){}
 }

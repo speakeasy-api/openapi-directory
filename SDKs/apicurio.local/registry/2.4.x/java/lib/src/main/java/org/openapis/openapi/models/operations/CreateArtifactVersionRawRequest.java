@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactVersionRawRequest {
@@ -24,6 +25,7 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
     public byte[] requestBody;
+
     public CreateArtifactVersionRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -34,6 +36,7 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description")
     public String xRegistryDescription;
+
     public CreateArtifactVersionRawRequest withXRegistryDescription(String xRegistryDescription) {
         this.xRegistryDescription = xRegistryDescription;
         return this;
@@ -44,6 +47,7 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description-Encoded")
     public String xRegistryDescriptionEncoded;
+
     public CreateArtifactVersionRawRequest withXRegistryDescriptionEncoded(String xRegistryDescriptionEncoded) {
         this.xRegistryDescriptionEncoded = xRegistryDescriptionEncoded;
         return this;
@@ -55,6 +59,7 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name")
     public String xRegistryName;
+
     public CreateArtifactVersionRawRequest withXRegistryName(String xRegistryName) {
         this.xRegistryName = xRegistryName;
         return this;
@@ -65,6 +70,7 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name-Encoded")
     public String xRegistryNameEncoded;
+
     public CreateArtifactVersionRawRequest withXRegistryNameEncoded(String xRegistryNameEncoded) {
         this.xRegistryNameEncoded = xRegistryNameEncoded;
         return this;
@@ -77,6 +83,7 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Version")
     public String xRegistryVersion;
+
     public CreateArtifactVersionRawRequest withXRegistryVersion(String xRegistryVersion) {
         this.xRegistryVersion = xRegistryVersion;
         return this;
@@ -87,6 +94,7 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public CreateArtifactVersionRawRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -97,9 +105,15 @@ public class CreateArtifactVersionRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public CreateArtifactVersionRawRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public CreateArtifactVersionRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId) {
+        this.requestBody = requestBody;
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+  }
 }

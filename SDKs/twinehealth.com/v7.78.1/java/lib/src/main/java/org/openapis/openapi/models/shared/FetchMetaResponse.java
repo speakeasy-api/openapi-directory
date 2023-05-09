@@ -12,6 +12,7 @@ public class FetchMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public FetchMetaResponse withCount(Long count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class FetchMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("req_id")
     public String reqId;
+
     public FetchMetaResponse withReqId(String reqId) {
         this.reqId = reqId;
         return this;
     }
     
+    public FetchMetaResponse(){}
 }

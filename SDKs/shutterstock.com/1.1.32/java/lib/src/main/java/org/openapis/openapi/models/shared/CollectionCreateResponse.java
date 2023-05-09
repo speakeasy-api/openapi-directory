@@ -15,9 +15,13 @@ public class CollectionCreateResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CollectionCreateResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CollectionCreateResponse(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

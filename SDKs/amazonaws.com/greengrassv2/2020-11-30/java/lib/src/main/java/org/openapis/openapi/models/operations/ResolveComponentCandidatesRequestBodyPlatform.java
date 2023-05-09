@@ -15,6 +15,7 @@ public class ResolveComponentCandidatesRequestBodyPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public ResolveComponentCandidatesRequestBodyPlatform withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class ResolveComponentCandidatesRequestBodyPlatform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResolveComponentCandidatesRequestBodyPlatform withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ResolveComponentCandidatesRequestBodyPlatform(){}
 }

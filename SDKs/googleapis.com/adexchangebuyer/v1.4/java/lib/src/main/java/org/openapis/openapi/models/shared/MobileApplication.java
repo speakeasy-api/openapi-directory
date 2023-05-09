@@ -12,6 +12,7 @@ public class MobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appStore")
     public String appStore;
+
     public MobileApplication withAppStore(String appStore) {
         this.appStore = appStore;
         return this;
@@ -20,9 +21,11 @@ public class MobileApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalAppId")
     public String externalAppId;
+
     public MobileApplication withExternalAppId(String externalAppId) {
         this.externalAppId = externalAppId;
         return this;
     }
     
+    public MobileApplication(){}
 }

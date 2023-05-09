@@ -15,6 +15,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public PreReceiveEnvironment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_environment")
     public Boolean defaultEnvironment;
+
     public PreReceiveEnvironment withDefaultEnvironment(Boolean defaultEnvironment) {
         this.defaultEnvironment = defaultEnvironment;
         return this;
@@ -31,6 +33,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public PreReceiveEnvironmentDownload download;
+
     public PreReceiveEnvironment withDownload(PreReceiveEnvironmentDownload download) {
         this.download = download;
         return this;
@@ -39,6 +42,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooks_count")
     public Long hooksCount;
+
     public PreReceiveEnvironment withHooksCount(Long hooksCount) {
         this.hooksCount = hooksCount;
         return this;
@@ -47,6 +51,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PreReceiveEnvironment withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -55,6 +60,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PreReceiveEnvironment withId(Long id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public PreReceiveEnvironment withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -71,6 +78,7 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PreReceiveEnvironment withName(String name) {
         this.name = name;
         return this;
@@ -79,9 +87,11 @@ public class PreReceiveEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PreReceiveEnvironment withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PreReceiveEnvironment(){}
 }

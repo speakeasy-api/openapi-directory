@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LambdaFunctionStartedEventAttributes {
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public LambdaFunctionStartedEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
     }
     
+    public LambdaFunctionStartedEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId) {
+        this.scheduledEventId = scheduledEventId;
+  }
 }

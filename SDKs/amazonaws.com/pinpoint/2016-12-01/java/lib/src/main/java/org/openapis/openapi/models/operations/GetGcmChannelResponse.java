@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGcmChannelResponse {
@@ -12,6 +13,7 @@ public class GetGcmChannelResponse {
      */
     
     public Object badRequestException;
+
     public GetGcmChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetGcmChannelResponse {
     
     
     public String contentType;
+
     public GetGcmChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGcmChannelResponse {
      */
     
     public Object forbiddenException;
+
     public GetGcmChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetGcmChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGcmChannelResponse getGcmChannelResponse;
+
     public GetGcmChannelResponse withGetGcmChannelResponse(org.openapis.openapi.models.shared.GetGcmChannelResponse getGcmChannelResponse) {
         this.getGcmChannelResponse = getGcmChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetGcmChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetGcmChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetGcmChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetGcmChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetGcmChannelResponse {
      */
     
     public Object notFoundException;
+
     public GetGcmChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetGcmChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetGcmChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetGcmChannelResponse {
     
     
     public Integer statusCode;
+
     public GetGcmChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetGcmChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGcmChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetGcmChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetGcmChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetGcmChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

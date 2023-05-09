@@ -15,6 +15,7 @@ public class ProductDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public ProductDimension withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -26,9 +27,11 @@ public class ProductDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ProductDimension withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ProductDimension(){}
 }

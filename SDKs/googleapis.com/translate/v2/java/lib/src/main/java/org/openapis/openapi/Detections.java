@@ -61,11 +61,9 @@ public class Detections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDetectionsDetectResponse res = new org.openapis.openapi.models.operations.LanguageDetectionsDetectResponse() {{
+        org.openapis.openapi.models.operations.LanguageDetectionsDetectResponse res = new org.openapis.openapi.models.operations.LanguageDetectionsDetectResponse(contentType, httpRes.statusCode()) {{
             detectionsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Detections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDetectionsListResponse res = new org.openapis.openapi.models.operations.LanguageDetectionsListResponse() {{
+        org.openapis.openapi.models.operations.LanguageDetectionsListResponse res = new org.openapis.openapi.models.operations.LanguageDetectionsListResponse(contentType, httpRes.statusCode()) {{
             detectionsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

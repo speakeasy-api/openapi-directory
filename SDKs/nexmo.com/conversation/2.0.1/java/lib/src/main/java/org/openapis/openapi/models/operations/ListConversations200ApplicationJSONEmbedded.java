@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListConversations200ApplicationJSONEmbedded {
     @JsonProperty("conversations")
     public ListConversations200ApplicationJSONEmbeddedConversations[] conversations;
+
     public ListConversations200ApplicationJSONEmbedded withConversations(ListConversations200ApplicationJSONEmbeddedConversations[] conversations) {
         this.conversations = conversations;
         return this;
     }
     
+    public ListConversations200ApplicationJSONEmbedded(@JsonProperty("conversations") ListConversations200ApplicationJSONEmbeddedConversations[] conversations) {
+        this.conversations = conversations;
+  }
 }

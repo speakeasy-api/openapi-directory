@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMakePdfResponse {
     
     public String contentType;
+
     public PostMakePdfResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostMakePdfResponse {
     
     
     public Integer statusCode;
+
     public PostMakePdfResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostMakePdfResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMakePdfResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostMakePdfResponse {
      */
     
     public byte[] postMakePdf200ApplicationPdfBinaryString;
+
     public PostMakePdfResponse withPostMakePdf200ApplicationPdfBinaryString(byte[] postMakePdf200ApplicationPdfBinaryString) {
         this.postMakePdf200ApplicationPdfBinaryString = postMakePdf200ApplicationPdfBinaryString;
         return this;
     }
     
+    public PostMakePdfResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

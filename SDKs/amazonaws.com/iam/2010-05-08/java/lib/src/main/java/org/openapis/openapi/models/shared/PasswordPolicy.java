@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PasswordPolicy {
     
     public Boolean allowUsersToChangePassword;
+
     public PasswordPolicy withAllowUsersToChangePassword(Boolean allowUsersToChangePassword) {
         this.allowUsersToChangePassword = allowUsersToChangePassword;
         return this;
@@ -19,6 +20,7 @@ public class PasswordPolicy {
     
     
     public Boolean expirePasswords;
+
     public PasswordPolicy withExpirePasswords(Boolean expirePasswords) {
         this.expirePasswords = expirePasswords;
         return this;
@@ -26,6 +28,7 @@ public class PasswordPolicy {
     
     
     public Boolean hardExpiry;
+
     public PasswordPolicy withHardExpiry(Boolean hardExpiry) {
         this.hardExpiry = hardExpiry;
         return this;
@@ -33,6 +36,7 @@ public class PasswordPolicy {
     
     
     public Long maxPasswordAge;
+
     public PasswordPolicy withMaxPasswordAge(Long maxPasswordAge) {
         this.maxPasswordAge = maxPasswordAge;
         return this;
@@ -40,6 +44,7 @@ public class PasswordPolicy {
     
     
     public Long minimumPasswordLength;
+
     public PasswordPolicy withMinimumPasswordLength(Long minimumPasswordLength) {
         this.minimumPasswordLength = minimumPasswordLength;
         return this;
@@ -47,6 +52,7 @@ public class PasswordPolicy {
     
     
     public Long passwordReusePrevention;
+
     public PasswordPolicy withPasswordReusePrevention(Long passwordReusePrevention) {
         this.passwordReusePrevention = passwordReusePrevention;
         return this;
@@ -54,6 +60,7 @@ public class PasswordPolicy {
     
     
     public Boolean requireLowercaseCharacters;
+
     public PasswordPolicy withRequireLowercaseCharacters(Boolean requireLowercaseCharacters) {
         this.requireLowercaseCharacters = requireLowercaseCharacters;
         return this;
@@ -61,6 +68,7 @@ public class PasswordPolicy {
     
     
     public Boolean requireNumbers;
+
     public PasswordPolicy withRequireNumbers(Boolean requireNumbers) {
         this.requireNumbers = requireNumbers;
         return this;
@@ -68,6 +76,7 @@ public class PasswordPolicy {
     
     
     public Boolean requireSymbols;
+
     public PasswordPolicy withRequireSymbols(Boolean requireSymbols) {
         this.requireSymbols = requireSymbols;
         return this;
@@ -75,9 +84,11 @@ public class PasswordPolicy {
     
     
     public Boolean requireUppercaseCharacters;
+
     public PasswordPolicy withRequireUppercaseCharacters(Boolean requireUppercaseCharacters) {
         this.requireUppercaseCharacters = requireUppercaseCharacters;
         return this;
     }
     
+    public PasswordPolicy(){}
 }

@@ -18,6 +18,7 @@ public class RuntimeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRun")
     public CloudRunConfig cloudRun;
+
     public RuntimeConfig withCloudRun(CloudRunConfig cloudRun) {
         this.cloudRun = cloudRun;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubernetes")
     public KubernetesConfig kubernetes;
+
     public RuntimeConfig withKubernetes(KubernetesConfig kubernetes) {
         this.kubernetes = kubernetes;
         return this;
     }
     
+    public RuntimeConfig(){}
 }

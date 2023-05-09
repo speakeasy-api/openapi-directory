@@ -15,6 +15,7 @@ public class VpcDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public String[] securityGroups;
+
     public VpcDescription withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -23,9 +24,11 @@ public class VpcDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public String[] subnets;
+
     public VpcDescription withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public VpcDescription(){}
 }

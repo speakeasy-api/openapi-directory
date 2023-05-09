@@ -12,6 +12,7 @@ public class ListTokensRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public ListTokensRequest withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListTokensRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTokensRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListTokensRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTokensRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListTokensRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenIds")
     public String[] tokenIds;
+
     public ListTokensRequest withTokenIds(String[] tokenIds) {
         this.tokenIds = tokenIds;
         return this;
     }
     
+    public ListTokensRequest(){}
 }

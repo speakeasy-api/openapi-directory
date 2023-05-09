@@ -15,6 +15,7 @@ public class Items200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public Items200ApplicationJSONPaymentDataGiftCards withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -26,6 +27,7 @@ public class Items200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Items200ApplicationJSONPaymentDataGiftCards withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class Items200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUse")
     public Boolean inUse;
+
     public Items200ApplicationJSONPaymentDataGiftCards withInUse(Boolean inUse) {
         this.inUse = inUse;
         return this;
@@ -48,6 +51,7 @@ public class Items200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSpecialCard")
     public Boolean isSpecialCard;
+
     public Items200ApplicationJSONPaymentDataGiftCards withIsSpecialCard(Boolean isSpecialCard) {
         this.isSpecialCard = isSpecialCard;
         return this;
@@ -59,6 +63,7 @@ public class Items200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Items200ApplicationJSONPaymentDataGiftCards withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class Items200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public Items200ApplicationJSONPaymentDataGiftCards withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -81,9 +87,11 @@ public class Items200ApplicationJSONPaymentDataGiftCards {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public Items200ApplicationJSONPaymentDataGiftCards withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Items200ApplicationJSONPaymentDataGiftCards(){}
 }

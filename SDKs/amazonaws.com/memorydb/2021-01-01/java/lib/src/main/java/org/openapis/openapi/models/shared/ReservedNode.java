@@ -20,6 +20,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public ReservedNode withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public ReservedNode withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -36,6 +38,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FixedPrice")
     public Double fixedPrice;
+
     public ReservedNode withFixedPrice(Double fixedPrice) {
         this.fixedPrice = fixedPrice;
         return this;
@@ -44,6 +47,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeCount")
     public Long nodeCount;
+
     public ReservedNode withNodeCount(Long nodeCount) {
         this.nodeCount = nodeCount;
         return this;
@@ -52,6 +56,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public ReservedNode withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -60,6 +65,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfferingType")
     public String offeringType;
+
     public ReservedNode withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -68,6 +74,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurringCharges")
     public RecurringCharge[] recurringCharges;
+
     public ReservedNode withRecurringCharges(RecurringCharge[] recurringCharges) {
         this.recurringCharges = recurringCharges;
         return this;
@@ -76,6 +83,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservationId")
     public String reservationId;
+
     public ReservedNode withReservationId(String reservationId) {
         this.reservationId = reservationId;
         return this;
@@ -84,6 +92,7 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedNodesOfferingId")
     public String reservedNodesOfferingId;
+
     public ReservedNode withReservedNodesOfferingId(String reservedNodesOfferingId) {
         this.reservedNodesOfferingId = reservedNodesOfferingId;
         return this;
@@ -94,6 +103,7 @@ public class ReservedNode {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ReservedNode withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -102,9 +112,11 @@ public class ReservedNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public ReservedNode withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ReservedNode(){}
 }

@@ -17,6 +17,7 @@ public class PatientSMSNotifcationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public PatientSMSNotifcationResponse withError(Error error) {
         this.error = error;
         return this;
@@ -27,6 +28,7 @@ public class PatientSMSNotifcationResponse {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientSMSNotifcationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -34,6 +36,7 @@ public class PatientSMSNotifcationResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public PatientSMSNotifcationResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -42,6 +45,7 @@ public class PatientSMSNotifcationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PatientSMSNotifcationResponseStatusEnum status;
+
     public PatientSMSNotifcationResponse withStatus(PatientSMSNotifcationResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -54,9 +58,15 @@ public class PatientSMSNotifcationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientSMSNotifcationResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientSMSNotifcationResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

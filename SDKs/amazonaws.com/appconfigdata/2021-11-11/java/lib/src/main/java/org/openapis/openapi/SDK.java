@@ -146,6 +146,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -184,15 +189,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLatestConfigurationResponse res = new org.openapis.openapi.models.operations.GetLatestConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetLatestConfigurationResponse res = new org.openapis.openapi.models.operations.GetLatestConfigurationResponse(contentType, httpRes.statusCode()) {{
             getLatestConfigurationResponse = null;
             throttlingException = null;
             resourceNotFoundException = null;
             badRequestException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -268,15 +271,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartConfigurationSessionResponse res = new org.openapis.openapi.models.operations.StartConfigurationSessionResponse() {{
+        org.openapis.openapi.models.operations.StartConfigurationSessionResponse res = new org.openapis.openapi.models.operations.StartConfigurationSessionResponse(contentType, httpRes.statusCode()) {{
             startConfigurationSessionResponse = null;
             throttlingException = null;
             resourceNotFoundException = null;
             badRequestException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

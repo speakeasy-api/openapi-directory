@@ -18,9 +18,11 @@ public class Metadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public String[] services;
+
     public Metadata withServices(String[] services) {
         this.services = services;
         return this;
     }
     
+    public Metadata(){}
 }

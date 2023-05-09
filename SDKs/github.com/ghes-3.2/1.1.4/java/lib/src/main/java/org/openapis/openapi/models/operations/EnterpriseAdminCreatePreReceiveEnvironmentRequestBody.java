@@ -12,6 +12,7 @@ public class EnterpriseAdminCreatePreReceiveEnvironmentRequestBody {
      */
     @JsonProperty("image_url")
     public String imageUrl;
+
     public EnterpriseAdminCreatePreReceiveEnvironmentRequestBody withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -22,9 +23,14 @@ public class EnterpriseAdminCreatePreReceiveEnvironmentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public EnterpriseAdminCreatePreReceiveEnvironmentRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EnterpriseAdminCreatePreReceiveEnvironmentRequestBody(@JsonProperty("image_url") String imageUrl, @JsonProperty("name") String name) {
+        this.imageUrl = imageUrl;
+        this.name = name;
+  }
 }

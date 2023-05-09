@@ -15,9 +15,11 @@ public class CreateApiCacheResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCache")
     public ApiCache apiCache;
+
     public CreateApiCacheResponse withApiCache(ApiCache apiCache) {
         this.apiCache = apiCache;
         return this;
     }
     
+    public CreateApiCacheResponse(){}
 }

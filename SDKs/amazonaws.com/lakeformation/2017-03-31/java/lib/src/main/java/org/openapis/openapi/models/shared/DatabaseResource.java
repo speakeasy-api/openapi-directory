@@ -15,6 +15,7 @@ public class DatabaseResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DatabaseResource withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -22,9 +23,13 @@ public class DatabaseResource {
     
     @JsonProperty("Name")
     public String name;
+
     public DatabaseResource withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DatabaseResource(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

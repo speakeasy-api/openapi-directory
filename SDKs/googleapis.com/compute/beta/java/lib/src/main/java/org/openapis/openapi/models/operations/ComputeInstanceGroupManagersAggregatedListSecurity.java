@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstanceGroupManagersAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersAggregatedListSecurityOption1 option1;
+
     public ComputeInstanceGroupManagersAggregatedListSecurity withOption1(ComputeInstanceGroupManagersAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeInstanceGroupManagersAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersAggregatedListSecurityOption2 option2;
+
     public ComputeInstanceGroupManagersAggregatedListSecurity withOption2(ComputeInstanceGroupManagersAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeInstanceGroupManagersAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagersAggregatedListSecurityOption3 option3;
+
     public ComputeInstanceGroupManagersAggregatedListSecurity withOption3(ComputeInstanceGroupManagersAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeInstanceGroupManagersAggregatedListSecurity(){}
 }

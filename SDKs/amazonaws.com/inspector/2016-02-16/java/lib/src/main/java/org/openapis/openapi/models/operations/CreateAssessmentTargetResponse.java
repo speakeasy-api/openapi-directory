@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssessmentTargetResponse {
@@ -12,6 +13,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAssessmentTargetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAssessmentTargetResponse {
     
     
     public String contentType;
+
     public CreateAssessmentTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssessmentTargetResponse createAssessmentTargetResponse;
+
     public CreateAssessmentTargetResponse withCreateAssessmentTargetResponse(org.openapis.openapi.models.shared.CreateAssessmentTargetResponse createAssessmentTargetResponse) {
         this.createAssessmentTargetResponse = createAssessmentTargetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public Object internalException;
+
     public CreateAssessmentTargetResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public Object invalidCrossAccountRoleException;
+
     public CreateAssessmentTargetResponse withInvalidCrossAccountRoleException(Object invalidCrossAccountRoleException) {
         this.invalidCrossAccountRoleException = invalidCrossAccountRoleException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public Object invalidInputException;
+
     public CreateAssessmentTargetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAssessmentTargetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public Object noSuchEntityException;
+
     public CreateAssessmentTargetResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -89,6 +98,7 @@ public class CreateAssessmentTargetResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public CreateAssessmentTargetResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class CreateAssessmentTargetResponse {
     
     
     public Integer statusCode;
+
     public CreateAssessmentTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateAssessmentTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssessmentTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAssessmentTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

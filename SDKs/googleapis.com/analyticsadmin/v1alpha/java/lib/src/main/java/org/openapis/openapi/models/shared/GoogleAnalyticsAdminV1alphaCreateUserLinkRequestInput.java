@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyNewUser")
     public Boolean notifyNewUser;
+
     public GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput withNotifyNewUser(Boolean notifyNewUser) {
         this.notifyNewUser = notifyNewUser;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput withParent(String parent) {
         this.parent = parent;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLink")
     public GoogleAnalyticsAdminV1alphaUserLinkInput userLink;
+
     public GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput withUserLink(GoogleAnalyticsAdminV1alphaUserLinkInput userLink) {
         this.userLink = userLink;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaCreateUserLinkRequestInput(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PdfUploadAttributes {
     @JsonProperty("content")
     public PdfUploadAttributesContent content;
+
     public PdfUploadAttributes withContent(PdfUploadAttributesContent content) {
         this.content = content;
         return this;
@@ -19,6 +20,7 @@ public class PdfUploadAttributes {
      */
     @JsonProperty("total_documents")
     public Long totalDocuments;
+
     public PdfUploadAttributes withTotalDocuments(Long totalDocuments) {
         this.totalDocuments = totalDocuments;
         return this;
@@ -29,9 +31,15 @@ public class PdfUploadAttributes {
      */
     @JsonProperty("total_pages")
     public Long totalPages;
+
     public PdfUploadAttributes withTotalPages(Long totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public PdfUploadAttributes(@JsonProperty("content") PdfUploadAttributesContent content, @JsonProperty("total_documents") Long totalDocuments, @JsonProperty("total_pages") Long totalPages) {
+        this.content = content;
+        this.totalDocuments = totalDocuments;
+        this.totalPages = totalPages;
+  }
 }

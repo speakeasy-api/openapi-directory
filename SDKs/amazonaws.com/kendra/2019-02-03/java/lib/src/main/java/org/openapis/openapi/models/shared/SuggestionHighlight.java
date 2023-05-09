@@ -15,6 +15,7 @@ public class SuggestionHighlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public SuggestionHighlight withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,9 +24,11 @@ public class SuggestionHighlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public SuggestionHighlight withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
     }
     
+    public SuggestionHighlight(){}
 }

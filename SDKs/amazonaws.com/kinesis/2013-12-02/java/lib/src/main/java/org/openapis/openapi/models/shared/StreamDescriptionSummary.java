@@ -20,6 +20,7 @@ public class StreamDescriptionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumerCount")
     public Long consumerCount;
+
     public StreamDescriptionSummary withConsumerCount(Long consumerCount) {
         this.consumerCount = consumerCount;
         return this;
@@ -28,6 +29,7 @@ public class StreamDescriptionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public StreamDescriptionSummary withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -35,6 +37,7 @@ public class StreamDescriptionSummary {
     
     @JsonProperty("EnhancedMonitoring")
     public EnhancedMetrics[] enhancedMonitoring;
+
     public StreamDescriptionSummary withEnhancedMonitoring(EnhancedMetrics[] enhancedMonitoring) {
         this.enhancedMonitoring = enhancedMonitoring;
         return this;
@@ -43,6 +46,7 @@ public class StreamDescriptionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public StreamDescriptionSummary withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -50,6 +54,7 @@ public class StreamDescriptionSummary {
     
     @JsonProperty("OpenShardCount")
     public Long openShardCount;
+
     public StreamDescriptionSummary withOpenShardCount(Long openShardCount) {
         this.openShardCount = openShardCount;
         return this;
@@ -57,6 +62,7 @@ public class StreamDescriptionSummary {
     
     @JsonProperty("RetentionPeriodHours")
     public Long retentionPeriodHours;
+
     public StreamDescriptionSummary withRetentionPeriodHours(Long retentionPeriodHours) {
         this.retentionPeriodHours = retentionPeriodHours;
         return this;
@@ -64,6 +70,7 @@ public class StreamDescriptionSummary {
     
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public StreamDescriptionSummary withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -73,6 +80,7 @@ public class StreamDescriptionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StreamCreationTimestamp")
     public OffsetDateTime streamCreationTimestamp;
+
     public StreamDescriptionSummary withStreamCreationTimestamp(OffsetDateTime streamCreationTimestamp) {
         this.streamCreationTimestamp = streamCreationTimestamp;
         return this;
@@ -81,6 +89,7 @@ public class StreamDescriptionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamModeDetails")
     public StreamModeDetails streamModeDetails;
+
     public StreamDescriptionSummary withStreamModeDetails(StreamModeDetails streamModeDetails) {
         this.streamModeDetails = streamModeDetails;
         return this;
@@ -88,6 +97,7 @@ public class StreamDescriptionSummary {
     
     @JsonProperty("StreamName")
     public String streamName;
+
     public StreamDescriptionSummary withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -95,9 +105,19 @@ public class StreamDescriptionSummary {
     
     @JsonProperty("StreamStatus")
     public StreamStatusEnum streamStatus;
+
     public StreamDescriptionSummary withStreamStatus(StreamStatusEnum streamStatus) {
         this.streamStatus = streamStatus;
         return this;
     }
     
+    public StreamDescriptionSummary(@JsonProperty("EnhancedMonitoring") EnhancedMetrics[] enhancedMonitoring, @JsonProperty("OpenShardCount") Long openShardCount, @JsonProperty("RetentionPeriodHours") Long retentionPeriodHours, @JsonProperty("StreamARN") String streamARN, @JsonProperty("StreamCreationTimestamp") OffsetDateTime streamCreationTimestamp, @JsonProperty("StreamName") String streamName, @JsonProperty("StreamStatus") StreamStatusEnum streamStatus) {
+        this.enhancedMonitoring = enhancedMonitoring;
+        this.openShardCount = openShardCount;
+        this.retentionPeriodHours = retentionPeriodHours;
+        this.streamARN = streamARN;
+        this.streamCreationTimestamp = streamCreationTimestamp;
+        this.streamName = streamName;
+        this.streamStatus = streamStatus;
+  }
 }

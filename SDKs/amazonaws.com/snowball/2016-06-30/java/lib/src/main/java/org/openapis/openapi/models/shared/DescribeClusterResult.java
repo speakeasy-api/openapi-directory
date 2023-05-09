@@ -15,9 +15,11 @@ public class DescribeClusterResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterMetadata")
     public ClusterMetadata clusterMetadata;
+
     public DescribeClusterResult withClusterMetadata(ClusterMetadata clusterMetadata) {
         this.clusterMetadata = clusterMetadata;
         return this;
     }
     
+    public DescribeClusterResult(){}
 }

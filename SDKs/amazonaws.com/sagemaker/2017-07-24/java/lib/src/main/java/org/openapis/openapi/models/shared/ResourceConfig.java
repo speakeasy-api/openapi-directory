@@ -15,6 +15,7 @@ public class ResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public ResourceConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -23,6 +24,7 @@ public class ResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroups")
     public InstanceGroup[] instanceGroups;
+
     public ResourceConfig withInstanceGroups(InstanceGroup[] instanceGroups) {
         this.instanceGroups = instanceGroups;
         return this;
@@ -31,6 +33,7 @@ public class ResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public TrainingInstanceTypeEnum instanceType;
+
     public ResourceConfig withInstanceType(TrainingInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -39,6 +42,7 @@ public class ResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeepAlivePeriodInSeconds")
     public Long keepAlivePeriodInSeconds;
+
     public ResourceConfig withKeepAlivePeriodInSeconds(Long keepAlivePeriodInSeconds) {
         this.keepAlivePeriodInSeconds = keepAlivePeriodInSeconds;
         return this;
@@ -47,6 +51,7 @@ public class ResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public ResourceConfig withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -54,9 +59,13 @@ public class ResourceConfig {
     
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public ResourceConfig withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public ResourceConfig(@JsonProperty("VolumeSizeInGB") Long volumeSizeInGB) {
+        this.volumeSizeInGB = volumeSizeInGB;
+  }
 }

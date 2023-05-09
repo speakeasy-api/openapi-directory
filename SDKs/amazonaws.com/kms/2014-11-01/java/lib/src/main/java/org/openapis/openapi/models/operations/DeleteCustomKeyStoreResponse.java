@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomKeyStoreResponse {
     
     public String contentType;
+
     public DeleteCustomKeyStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreHasCMKsException;
+
     public DeleteCustomKeyStoreResponse withCustomKeyStoreHasCMKsException(Object customKeyStoreHasCMKsException) {
         this.customKeyStoreHasCMKsException = customKeyStoreHasCMKsException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreInvalidStateException;
+
     public DeleteCustomKeyStoreResponse withCustomKeyStoreInvalidStateException(Object customKeyStoreInvalidStateException) {
         this.customKeyStoreInvalidStateException = customKeyStoreInvalidStateException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomKeyStoreResponse {
      */
     
     public Object customKeyStoreNotFoundException;
+
     public DeleteCustomKeyStoreResponse withCustomKeyStoreNotFoundException(Object customKeyStoreNotFoundException) {
         this.customKeyStoreNotFoundException = customKeyStoreNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomKeyStoreResponse {
      */
     
     public java.util.Map<String, Object> deleteCustomKeyStoreResponse;
+
     public DeleteCustomKeyStoreResponse withDeleteCustomKeyStoreResponse(java.util.Map<String, Object> deleteCustomKeyStoreResponse) {
         this.deleteCustomKeyStoreResponse = deleteCustomKeyStoreResponse;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCustomKeyStoreResponse {
      */
     
     public Object kmsInternalException;
+
     public DeleteCustomKeyStoreResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteCustomKeyStoreResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomKeyStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteCustomKeyStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomKeyStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCustomKeyStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

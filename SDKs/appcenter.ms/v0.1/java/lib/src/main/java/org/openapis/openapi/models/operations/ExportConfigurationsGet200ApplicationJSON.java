@@ -17,6 +17,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
      */
     @JsonProperty("creation_time")
     public String creationTime;
+
     public ExportConfigurationsGet200ApplicationJSON withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_configuration")
     public ExportConfigurationsGet200ApplicationJSONExportConfiguration exportConfiguration;
+
     public ExportConfigurationsGet200ApplicationJSON withExportConfiguration(ExportConfigurationsGet200ApplicationJSONExportConfiguration exportConfiguration) {
         this.exportConfiguration = exportConfiguration;
         return this;
@@ -36,6 +38,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_entities")
     public ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum[] exportEntities;
+
     public ExportConfigurationsGet200ApplicationJSON withExportEntities(ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum[] exportEntities) {
         this.exportEntities = exportEntities;
         return this;
@@ -46,6 +49,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
      */
     @JsonProperty("export_type")
     public ExportConfigurationsGet200ApplicationJSONExportTypeEnum exportType;
+
     public ExportConfigurationsGet200ApplicationJSON withExportType(ExportConfigurationsGet200ApplicationJSONExportTypeEnum exportType) {
         this.exportType = exportType;
         return this;
@@ -56,6 +60,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ExportConfigurationsGet200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_run_time")
     public String lastRunTime;
+
     public ExportConfigurationsGet200ApplicationJSON withLastRunTime(String lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -78,6 +84,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_group")
     public String resourceGroup;
+
     public ExportConfigurationsGet200ApplicationJSON withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -89,6 +96,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_name")
     public String resourceName;
+
     public ExportConfigurationsGet200ApplicationJSON withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -99,6 +107,7 @@ public class ExportConfigurationsGet200ApplicationJSON {
      */
     @JsonProperty("state")
     public ExportConfigurationsGet200ApplicationJSONStateEnum state;
+
     public ExportConfigurationsGet200ApplicationJSON withState(ExportConfigurationsGet200ApplicationJSONStateEnum state) {
         this.state = state;
         return this;
@@ -110,9 +119,16 @@ public class ExportConfigurationsGet200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_info")
     public String stateInfo;
+
     public ExportConfigurationsGet200ApplicationJSON withStateInfo(String stateInfo) {
         this.stateInfo = stateInfo;
         return this;
     }
     
+    public ExportConfigurationsGet200ApplicationJSON(@JsonProperty("creation_time") String creationTime, @JsonProperty("export_type") ExportConfigurationsGet200ApplicationJSONExportTypeEnum exportType, @JsonProperty("id") String id, @JsonProperty("state") ExportConfigurationsGet200ApplicationJSONStateEnum state) {
+        this.creationTime = creationTime;
+        this.exportType = exportType;
+        this.id = id;
+        this.state = state;
+  }
 }

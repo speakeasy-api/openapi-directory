@@ -15,9 +15,11 @@ public class VirtualGatewayBackendDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPolicy")
     public VirtualGatewayClientPolicy clientPolicy;
+
     public VirtualGatewayBackendDefaults withClientPolicy(VirtualGatewayClientPolicy clientPolicy) {
         this.clientPolicy = clientPolicy;
         return this;
     }
     
+    public VirtualGatewayBackendDefaults(){}
 }

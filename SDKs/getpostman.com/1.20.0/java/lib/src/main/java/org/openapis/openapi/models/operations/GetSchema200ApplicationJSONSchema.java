@@ -12,6 +12,7 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public GetSchema200ApplicationJSONSchema withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -20,6 +21,7 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAt")
     public String createdAt;
+
     public GetSchema200ApplicationJSONSchema withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +30,7 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public GetSchema200ApplicationJSONSchema withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -36,6 +39,7 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetSchema200ApplicationJSONSchema withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public GetSchema200ApplicationJSONSchema withLanguage(String language) {
         this.language = language;
         return this;
@@ -52,6 +57,7 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetSchema200ApplicationJSONSchema withType(String type) {
         this.type = type;
         return this;
@@ -60,6 +66,7 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateBy")
     public String updateBy;
+
     public GetSchema200ApplicationJSONSchema withUpdateBy(String updateBy) {
         this.updateBy = updateBy;
         return this;
@@ -68,9 +75,11 @@ public class GetSchema200ApplicationJSONSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public GetSchema200ApplicationJSONSchema withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetSchema200ApplicationJSONSchema(){}
 }

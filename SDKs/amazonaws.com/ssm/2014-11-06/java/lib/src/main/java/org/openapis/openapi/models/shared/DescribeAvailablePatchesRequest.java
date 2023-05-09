@@ -12,6 +12,7 @@ public class DescribeAvailablePatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public PatchOrchestratorFilter[] filters;
+
     public DescribeAvailablePatchesRequest withFilters(PatchOrchestratorFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeAvailablePatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeAvailablePatchesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeAvailablePatchesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAvailablePatchesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAvailablePatchesRequest(){}
 }

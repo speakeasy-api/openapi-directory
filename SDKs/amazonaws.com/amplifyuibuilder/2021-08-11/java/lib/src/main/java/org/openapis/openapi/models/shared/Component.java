@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Component {
     @JsonProperty("appId")
     public String appId;
+
     public Component withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -26,6 +27,7 @@ public class Component {
     
     @JsonProperty("bindingProperties")
     public java.util.Map<String, ComponentBindingPropertiesValue> bindingProperties;
+
     public Component withBindingProperties(java.util.Map<String, ComponentBindingPropertiesValue> bindingProperties) {
         this.bindingProperties = bindingProperties;
         return this;
@@ -34,6 +36,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("children")
     public ComponentChild[] children;
+
     public Component withChildren(ComponentChild[] children) {
         this.children = children;
         return this;
@@ -42,6 +45,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionProperties")
     public java.util.Map<String, ComponentDataConfiguration> collectionProperties;
+
     public Component withCollectionProperties(java.util.Map<String, ComponentDataConfiguration> collectionProperties) {
         this.collectionProperties = collectionProperties;
         return this;
@@ -49,6 +53,7 @@ public class Component {
     
     @JsonProperty("componentType")
     public String componentType;
+
     public Component withComponentType(String componentType) {
         this.componentType = componentType;
         return this;
@@ -58,6 +63,7 @@ public class Component {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Component withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -65,6 +71,7 @@ public class Component {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public Component withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -73,6 +80,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public java.util.Map<String, ComponentEvent> events;
+
     public Component withEvents(java.util.Map<String, ComponentEvent> events) {
         this.events = events;
         return this;
@@ -80,6 +88,7 @@ public class Component {
     
     @JsonProperty("id")
     public String id;
+
     public Component withId(String id) {
         this.id = id;
         return this;
@@ -90,6 +99,7 @@ public class Component {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public Component withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -97,6 +107,7 @@ public class Component {
     
     @JsonProperty("name")
     public String name;
+
     public Component withName(String name) {
         this.name = name;
         return this;
@@ -104,6 +115,7 @@ public class Component {
     
     @JsonProperty("overrides")
     public java.util.Map<String, java.util.Map<String, String>> overrides;
+
     public Component withOverrides(java.util.Map<String, java.util.Map<String, String>> overrides) {
         this.overrides = overrides;
         return this;
@@ -114,6 +126,7 @@ public class Component {
      */
     @JsonProperty("properties")
     public Object properties;
+
     public Component withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -122,6 +135,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public Component withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -130,6 +144,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public Component withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -138,6 +153,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Component withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -145,9 +161,22 @@ public class Component {
     
     @JsonProperty("variants")
     public ComponentVariant[] variants;
+
     public Component withVariants(ComponentVariant[] variants) {
         this.variants = variants;
         return this;
     }
     
+    public Component(@JsonProperty("appId") String appId, @JsonProperty("bindingProperties") java.util.Map<String, ComponentBindingPropertiesValue> bindingProperties, @JsonProperty("componentType") String componentType, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("environmentName") String environmentName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("overrides") java.util.Map<String, java.util.Map<String, String>> overrides, @JsonProperty("properties") Object properties, @JsonProperty("variants") ComponentVariant[] variants) {
+        this.appId = appId;
+        this.bindingProperties = bindingProperties;
+        this.componentType = componentType;
+        this.createdAt = createdAt;
+        this.environmentName = environmentName;
+        this.id = id;
+        this.name = name;
+        this.overrides = overrides;
+        this.properties = properties;
+        this.variants = variants;
+  }
 }

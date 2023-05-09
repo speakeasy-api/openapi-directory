@@ -24,6 +24,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emojis")
     public Emoji[] emojis;
+
     public Poll withEmojis(Emoji[] emojis) {
         this.emojis = emojis;
         return this;
@@ -35,6 +36,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expired")
     public Boolean expired;
+
     public Poll withExpired(Boolean expired) {
         this.expired = expired;
         return this;
@@ -48,6 +50,7 @@ public class Poll {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_at")
     public OffsetDateTime expiresAt;
+
     public Poll withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -59,6 +62,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Poll withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +74,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiple")
     public Boolean multiple;
+
     public Poll withMultiple(Boolean multiple) {
         this.multiple = multiple;
         return this;
@@ -81,6 +86,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Object[] options;
+
     public Poll withOptions(Object[] options) {
         this.options = options;
         return this;
@@ -92,6 +98,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("own_votes")
     public Long[] ownVotes;
+
     public Poll withOwnVotes(Long[] ownVotes) {
         this.ownVotes = ownVotes;
         return this;
@@ -103,6 +110,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voted")
     public Boolean voted;
+
     public Poll withVoted(Boolean voted) {
         this.voted = voted;
         return this;
@@ -114,6 +122,7 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voters_count")
     public Long votersCount;
+
     public Poll withVotersCount(Long votersCount) {
         this.votersCount = votersCount;
         return this;
@@ -125,9 +134,11 @@ public class Poll {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("votes_count")
     public Long votesCount;
+
     public Poll withVotesCount(Long votesCount) {
         this.votesCount = votesCount;
         return this;
     }
     
+    public Poll(){}
 }

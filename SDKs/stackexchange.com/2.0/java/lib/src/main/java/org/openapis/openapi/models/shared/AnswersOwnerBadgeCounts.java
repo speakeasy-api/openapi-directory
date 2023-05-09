@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class AnswersOwnerBadgeCounts {
     
     public Long bronze;
+
     public AnswersOwnerBadgeCounts withBronze(Long bronze) {
         this.bronze = bronze;
         return this;
@@ -16,6 +17,7 @@ public class AnswersOwnerBadgeCounts {
     
     
     public Long gold;
+
     public AnswersOwnerBadgeCounts withGold(Long gold) {
         this.gold = gold;
         return this;
@@ -23,9 +25,11 @@ public class AnswersOwnerBadgeCounts {
     
     
     public Long silver;
+
     public AnswersOwnerBadgeCounts withSilver(Long silver) {
         this.silver = silver;
         return this;
     }
     
+    public AnswersOwnerBadgeCounts(){}
 }

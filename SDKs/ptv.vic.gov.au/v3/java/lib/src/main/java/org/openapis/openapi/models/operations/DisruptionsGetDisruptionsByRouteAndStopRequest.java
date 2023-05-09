@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisruptionsGetDisruptionsByRouteAndStopRequest {
@@ -12,6 +13,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DisruptionsGetDisruptionsByRouteAndStopRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +24,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disruption_status")
     public DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum disruptionStatus;
+
     public DisruptionsGetDisruptionsByRouteAndStopRequest withDisruptionStatus(DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum disruptionStatus) {
         this.disruptionStatus = disruptionStatus;
         return this;
@@ -32,6 +35,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
     public Integer routeId;
+
     public DisruptionsGetDisruptionsByRouteAndStopRequest withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -42,6 +46,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DisruptionsGetDisruptionsByRouteAndStopRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -52,6 +57,7 @@ public class DisruptionsGetDisruptionsByRouteAndStopRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop_id")
     public Integer stopId;
+
     public DisruptionsGetDisruptionsByRouteAndStopRequest withStopId(Integer stopId) {
         this.stopId = stopId;
         return this;
@@ -62,9 +68,14 @@ public class DisruptionsGetDisruptionsByRouteAndStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DisruptionsGetDisruptionsByRouteAndStopRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DisruptionsGetDisruptionsByRouteAndStopRequest(@JsonProperty("route_id") Integer routeId, @JsonProperty("stop_id") Integer stopId) {
+        this.routeId = routeId;
+        this.stopId = stopId;
+  }
 }

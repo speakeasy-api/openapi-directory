@@ -12,6 +12,7 @@ public class PhcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public PhcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class PhcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RegistrationNo")
     public String registrationNo;
+
     public PhcerRequestBodyCertificateParameters withRegistrationNo(String registrationNo) {
         this.registrationNo = registrationNo;
         return this;
     }
     
+    public PhcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RegistrationNo") String registrationNo) {
+        this.fullName = fullName;
+        this.registrationNo = registrationNo;
+  }
 }

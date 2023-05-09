@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PendingCloudwatchLogsExports {
     
     public String[] logTypesToDisable;
+
     public PendingCloudwatchLogsExports withLogTypesToDisable(String[] logTypesToDisable) {
         this.logTypesToDisable = logTypesToDisable;
         return this;
@@ -19,9 +20,11 @@ public class PendingCloudwatchLogsExports {
     
     
     public String[] logTypesToEnable;
+
     public PendingCloudwatchLogsExports withLogTypesToEnable(String[] logTypesToEnable) {
         this.logTypesToEnable = logTypesToEnable;
         return this;
     }
     
+    public PendingCloudwatchLogsExports(){}
 }

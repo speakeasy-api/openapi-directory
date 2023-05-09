@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeStatusResult {
     
     public String nextToken;
+
     public DescribeVolumeStatusResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVolumeStatusResult {
     
     
     public DescribeVolumeStatusResultVolumeStatuses[] volumeStatuses;
+
     public DescribeVolumeStatusResult withVolumeStatuses(DescribeVolumeStatusResultVolumeStatuses[] volumeStatuses) {
         this.volumeStatuses = volumeStatuses;
         return this;
     }
     
+    public DescribeVolumeStatusResult(){}
 }

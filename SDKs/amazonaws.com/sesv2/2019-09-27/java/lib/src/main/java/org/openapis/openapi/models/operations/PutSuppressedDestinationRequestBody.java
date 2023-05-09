@@ -12,6 +12,7 @@ public class PutSuppressedDestinationRequestBody {
      */
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public PutSuppressedDestinationRequestBody withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -22,9 +23,14 @@ public class PutSuppressedDestinationRequestBody {
      */
     @JsonProperty("Reason")
     public PutSuppressedDestinationRequestBodyReasonEnum reason;
+
     public PutSuppressedDestinationRequestBody withReason(PutSuppressedDestinationRequestBodyReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public PutSuppressedDestinationRequestBody(@JsonProperty("EmailAddress") String emailAddress, @JsonProperty("Reason") PutSuppressedDestinationRequestBodyReasonEnum reason) {
+        this.emailAddress = emailAddress;
+        this.reason = reason;
+  }
 }

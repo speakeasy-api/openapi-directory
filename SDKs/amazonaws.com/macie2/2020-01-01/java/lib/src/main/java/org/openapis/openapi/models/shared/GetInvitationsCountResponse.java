@@ -15,9 +15,11 @@ public class GetInvitationsCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitationsCount")
     public Long invitationsCount;
+
     public GetInvitationsCountResponse withInvitationsCount(Long invitationsCount) {
         this.invitationsCount = invitationsCount;
         return this;
     }
     
+    public GetInvitationsCountResponse(){}
 }

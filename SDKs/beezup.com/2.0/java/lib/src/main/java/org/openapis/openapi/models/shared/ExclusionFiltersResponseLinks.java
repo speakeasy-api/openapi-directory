@@ -12,6 +12,7 @@ public class ExclusionFiltersResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configure")
     public LinksConfigureChannelCatalogExclusionFiltersLink configure;
+
     public ExclusionFiltersResponseLinks withConfigure(LinksConfigureChannelCatalogExclusionFiltersLink configure) {
         this.configure = configure;
         return this;
@@ -19,9 +20,13 @@ public class ExclusionFiltersResponseLinks {
     
     @JsonProperty("self")
     public LinksGetChannelCatalogExclusionFiltersLink self;
+
     public ExclusionFiltersResponseLinks withSelf(LinksGetChannelCatalogExclusionFiltersLink self) {
         this.self = self;
         return this;
     }
     
+    public ExclusionFiltersResponseLinks(@JsonProperty("self") LinksGetChannelCatalogExclusionFiltersLink self) {
+        this.self = self;
+  }
 }

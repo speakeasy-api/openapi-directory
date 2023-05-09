@@ -18,6 +18,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acl")
     public ItemAcl acl;
+
     public Item withAcl(ItemAcl acl) {
         this.acl = acl;
         return this;
@@ -29,6 +30,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public ItemContent content;
+
     public Item withContent(ItemContent content) {
         this.content = content;
         return this;
@@ -40,6 +42,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemType")
     public ItemItemTypeEnum itemType;
+
     public Item withItemType(ItemItemTypeEnum itemType) {
         this.itemType = itemType;
         return this;
@@ -51,6 +54,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ItemMetadata metadata;
+
     public Item withMetadata(ItemMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -62,6 +66,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Item withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public Item withPayload(String payload) {
         this.payload = payload;
         return this;
@@ -84,6 +90,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queue")
     public String queue;
+
     public Item withQueue(String queue) {
         this.queue = queue;
         return this;
@@ -95,6 +102,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ItemStatus status;
+
     public Item withStatus(ItemStatus status) {
         this.status = status;
         return this;
@@ -106,6 +114,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredData")
     public ItemStructuredData structuredData;
+
     public Item withStructuredData(ItemStructuredData structuredData) {
         this.structuredData = structuredData;
         return this;
@@ -117,9 +126,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Item withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Item(){}
 }

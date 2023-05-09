@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeauthorizeDataShareRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeauthorizeDataShareActionEnum action;
+
     public GETDeauthorizeDataShareRequest withAction(GETDeauthorizeDataShareActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeauthorizeDataShareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsumerIdentifier")
     public String consumerIdentifier;
+
     public GETDeauthorizeDataShareRequest withConsumerIdentifier(String consumerIdentifier) {
         this.consumerIdentifier = consumerIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETDeauthorizeDataShareRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DataShareArn")
     public String dataShareArn;
+
     public GETDeauthorizeDataShareRequest withDataShareArn(String dataShareArn) {
         this.dataShareArn = dataShareArn;
         return this;
@@ -36,6 +40,7 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeauthorizeDataShareVersionEnum version;
+
     public GETDeauthorizeDataShareRequest withVersion(GETDeauthorizeDataShareVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeauthorizeDataShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeauthorizeDataShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeauthorizeDataShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeauthorizeDataShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeauthorizeDataShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeauthorizeDataShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDeauthorizeDataShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeauthorizeDataShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeauthorizeDataShareRequest(@JsonProperty("Action") GETDeauthorizeDataShareActionEnum action, @JsonProperty("ConsumerIdentifier") String consumerIdentifier, @JsonProperty("DataShareArn") String dataShareArn, @JsonProperty("Version") GETDeauthorizeDataShareVersionEnum version) {
+        this.action = action;
+        this.consumerIdentifier = consumerIdentifier;
+        this.dataShareArn = dataShareArn;
+        this.version = version;
+  }
 }

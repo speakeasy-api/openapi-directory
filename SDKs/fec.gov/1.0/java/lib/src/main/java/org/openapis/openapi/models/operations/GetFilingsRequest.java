@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -22,6 +23,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amendment_indicator")
     public GetFilingsAmendmentIndicatorEnum[] amendmentIndicator;
+
     public GetFilingsRequest withAmendmentIndicator(GetFilingsAmendmentIndicatorEnum[] amendmentIndicator) {
         this.amendmentIndicator = amendmentIndicator;
         return this;
@@ -33,6 +35,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetFilingsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -45,6 +48,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginning_image_number")
     public String[] beginningImageNumber;
+
     public GetFilingsRequest withBeginningImageNumber(String[] beginningImageNumber) {
         this.beginningImageNumber = beginningImageNumber;
         return this;
@@ -53,10 +57,17 @@ public class GetFilingsRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String[] candidateId;
+
     public GetFilingsRequest withCandidateId(String[] candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -68,6 +79,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetFilingsRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -95,6 +107,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
     public String committeeType;
+
     public GetFilingsRequest withCommitteeType(String committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -108,6 +121,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetFilingsRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -118,6 +132,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
     public String[] district;
+
     public GetFilingsRequest withDistrict(String[] district) {
         this.district = district;
         return this;
@@ -153,6 +168,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=document_type")
     public String[] documentType;
+
     public GetFilingsRequest withDocumentType(String[] documentType) {
         this.documentType = documentType;
         return this;
@@ -163,6 +179,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_number")
     public Integer[] fileNumber;
+
     public GetFilingsRequest withFileNumber(Integer[] fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -173,6 +190,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filer_type")
     public GetFilingsFilerTypeEnum filerType;
+
     public GetFilingsRequest withFilerType(GetFilingsFilerTypeEnum filerType) {
         this.filerType = filerType;
         return this;
@@ -188,6 +206,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_category")
     public String[] formCategory;
+
     public GetFilingsRequest withFormCategory(String[] formCategory) {
         this.formCategory = formCategory;
         return this;
@@ -215,6 +234,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_type")
     public String[] formType;
+
     public GetFilingsRequest withFormType(String[] formType) {
         this.formType = formType;
         return this;
@@ -226,6 +246,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_amended")
     public Boolean isAmended;
+
     public GetFilingsRequest withIsAmended(Boolean isAmended) {
         this.isAmended = isAmended;
         return this;
@@ -237,6 +258,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipt_date")
     public LocalDate maxReceiptDate;
+
     public GetFilingsRequest withMaxReceiptDate(LocalDate maxReceiptDate) {
         this.maxReceiptDate = maxReceiptDate;
         return this;
@@ -248,6 +270,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipt_date")
     public LocalDate minReceiptDate;
+
     public GetFilingsRequest withMinReceiptDate(LocalDate minReceiptDate) {
         this.minReceiptDate = minReceiptDate;
         return this;
@@ -259,6 +282,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=most_recent")
     public Boolean mostRecent;
+
     public GetFilingsRequest withMostRecent(Boolean mostRecent) {
         this.mostRecent = mostRecent;
         return this;
@@ -269,6 +293,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetFilingsOfficeEnum[] office;
+
     public GetFilingsRequest withOffice(GetFilingsOfficeEnum[] office) {
         this.office = office;
         return this;
@@ -279,6 +304,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetFilingsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -289,6 +315,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
     public String[] party;
+
     public GetFilingsRequest withParty(String[] party) {
         this.party = party;
         return this;
@@ -299,6 +326,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetFilingsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -310,6 +338,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primary_general_indicator")
     public String[] primaryGeneralIndicator;
+
     public GetFilingsRequest withPrimaryGeneralIndicator(String[] primaryGeneralIndicator) {
         this.primaryGeneralIndicator = primaryGeneralIndicator;
         return this;
@@ -321,6 +350,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q_filer")
     public String[] qFiler;
+
     public GetFilingsRequest withQFiler(String[] qFiler) {
         this.qFiler = qFiler;
         return this;
@@ -381,6 +411,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_type")
     public String[] reportType;
+
     public GetFilingsRequest withReportType(String[] reportType) {
         this.reportType = reportType;
         return this;
@@ -395,6 +426,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_year")
     public Integer[] reportYear;
+
     public GetFilingsRequest withReportYear(Integer[] reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -415,6 +447,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_type")
     public String[] requestType;
+
     public GetFilingsRequest withRequestType(String[] requestType) {
         this.requestType = requestType;
         return this;
@@ -426,6 +459,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetFilingsRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -436,6 +470,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetFilingsRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -446,6 +481,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetFilingsRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -456,6 +492,7 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetFilingsRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -466,9 +503,13 @@ public class GetFilingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String[] state;
+
     public GetFilingsRequest withState(String[] state) {
         this.state = state;
         return this;
     }
     
+    public GetFilingsRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

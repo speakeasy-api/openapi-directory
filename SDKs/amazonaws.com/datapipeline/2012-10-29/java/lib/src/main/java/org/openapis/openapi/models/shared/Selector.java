@@ -15,6 +15,7 @@ public class Selector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public Selector withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -26,9 +27,11 @@ public class Selector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public Operator operator;
+
     public Selector withOperator(Operator operator) {
         this.operator = operator;
         return this;
     }
     
+    public Selector(){}
 }

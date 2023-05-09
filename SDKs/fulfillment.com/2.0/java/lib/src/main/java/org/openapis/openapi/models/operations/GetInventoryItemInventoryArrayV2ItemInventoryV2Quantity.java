@@ -12,9 +12,11 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal total;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity withTotal(GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal total) {
         this.total = total;
         return this;
     }
     
+    public GetInventoryItemInventoryArrayV2ItemInventoryV2Quantity(){}
 }

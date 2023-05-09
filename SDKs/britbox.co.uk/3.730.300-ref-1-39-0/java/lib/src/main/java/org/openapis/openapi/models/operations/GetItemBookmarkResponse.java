@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItemBookmarkResponse {
@@ -12,6 +13,7 @@ public class GetItemBookmarkResponse {
      */
     
     public org.openapis.openapi.models.shared.Bookmark bookmark;
+
     public GetItemBookmarkResponse withBookmark(org.openapis.openapi.models.shared.Bookmark bookmark) {
         this.bookmark = bookmark;
         return this;
@@ -19,6 +21,7 @@ public class GetItemBookmarkResponse {
     
     
     public String contentType;
+
     public GetItemBookmarkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetItemBookmarkResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetItemBookmarkResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetItemBookmarkResponse {
     
     
     public Integer statusCode;
+
     public GetItemBookmarkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetItemBookmarkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItemBookmarkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetItemBookmarkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatacatalogProjectsLocationsTaxonomiesReplaceResponse {
     
     public String contentType;
+
     public DatacatalogProjectsLocationsTaxonomiesReplaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogProjectsLocationsTaxonomiesReplaceResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1Taxonomy googleCloudDatacatalogV1Taxonomy;
+
     public DatacatalogProjectsLocationsTaxonomiesReplaceResponse withGoogleCloudDatacatalogV1Taxonomy(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1Taxonomy googleCloudDatacatalogV1Taxonomy) {
         this.googleCloudDatacatalogV1Taxonomy = googleCloudDatacatalogV1Taxonomy;
         return this;
@@ -26,6 +29,7 @@ public class DatacatalogProjectsLocationsTaxonomiesReplaceResponse {
     
     
     public Integer statusCode;
+
     public DatacatalogProjectsLocationsTaxonomiesReplaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatacatalogProjectsLocationsTaxonomiesReplaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatacatalogProjectsLocationsTaxonomiesReplaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatacatalogProjectsLocationsTaxonomiesReplaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

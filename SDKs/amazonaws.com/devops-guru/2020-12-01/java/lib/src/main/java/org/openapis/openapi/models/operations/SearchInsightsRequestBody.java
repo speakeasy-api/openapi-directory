@@ -15,6 +15,7 @@ public class SearchInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public SearchInsightsRequestBodyFilters filters;
+
     public SearchInsightsRequestBody withFilters(SearchInsightsRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class SearchInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchInsightsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class SearchInsightsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchInsightsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,6 +50,7 @@ public class SearchInsightsRequestBody {
      */
     @JsonProperty("StartTimeRange")
     public SearchInsightsRequestBodyStartTimeRange startTimeRange;
+
     public SearchInsightsRequestBody withStartTimeRange(SearchInsightsRequestBodyStartTimeRange startTimeRange) {
         this.startTimeRange = startTimeRange;
         return this;
@@ -57,9 +61,14 @@ public class SearchInsightsRequestBody {
      */
     @JsonProperty("Type")
     public SearchInsightsRequestBodyTypeEnum type;
+
     public SearchInsightsRequestBody withType(SearchInsightsRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SearchInsightsRequestBody(@JsonProperty("StartTimeRange") SearchInsightsRequestBodyStartTimeRange startTimeRange, @JsonProperty("Type") SearchInsightsRequestBodyTypeEnum type) {
+        this.startTimeRange = startTimeRange;
+        this.type = type;
+  }
 }

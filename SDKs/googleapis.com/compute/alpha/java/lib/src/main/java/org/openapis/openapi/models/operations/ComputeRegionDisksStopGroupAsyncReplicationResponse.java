@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionDisksStopGroupAsyncReplicationResponse {
     
     public String contentType;
+
     public ComputeRegionDisksStopGroupAsyncReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionDisksStopGroupAsyncReplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ComputeRegionDisksStopGroupAsyncReplicationResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionDisksStopGroupAsyncReplicationResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionDisksStopGroupAsyncReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionDisksStopGroupAsyncReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionDisksStopGroupAsyncReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionDisksStopGroupAsyncReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

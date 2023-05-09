@@ -12,6 +12,7 @@ public class StartIcd10CMInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartIcd10CMInferenceJobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartIcd10CMInferenceJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartIcd10CMInferenceJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartIcd10CMInferenceJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartIcd10CMInferenceJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -34,6 +37,7 @@ public class StartIcd10CMInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartIcd10CMInferenceJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -42,6 +46,7 @@ public class StartIcd10CMInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKey")
     public String kmsKey;
+
     public StartIcd10CMInferenceJobRequest withKMSKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -49,6 +54,7 @@ public class StartIcd10CMInferenceJobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartIcd10CMInferenceJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -56,9 +62,16 @@ public class StartIcd10CMInferenceJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartIcd10CMInferenceJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
     }
     
+    public StartIcd10CMInferenceJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

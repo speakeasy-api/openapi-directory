@@ -15,9 +15,11 @@ public class SyncRelationsWithSchema400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public SyncRelationsWithSchema400ApplicationJSONError error;
+
     public SyncRelationsWithSchema400ApplicationJSON withError(SyncRelationsWithSchema400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public SyncRelationsWithSchema400ApplicationJSON(){}
 }

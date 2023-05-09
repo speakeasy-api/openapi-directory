@@ -18,6 +18,7 @@ public class InstanceAndroidDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePiracyCheck")
     public Boolean enablePiracyCheck;
+
     public InstanceAndroidDetails withEnablePiracyCheck(Boolean enablePiracyCheck) {
         this.enablePiracyCheck = enablePiracyCheck;
         return this;
@@ -29,6 +30,7 @@ public class InstanceAndroidDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceAndroidDetails withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class InstanceAndroidDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public InstanceAndroidDetails withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -51,9 +54,11 @@ public class InstanceAndroidDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public InstanceAndroidDetails withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
     }
     
+    public InstanceAndroidDetails(){}
 }

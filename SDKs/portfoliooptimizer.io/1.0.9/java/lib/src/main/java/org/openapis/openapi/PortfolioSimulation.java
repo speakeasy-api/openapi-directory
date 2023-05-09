@@ -61,11 +61,9 @@ public class PortfolioSimulation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightResponse res = new org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightResponse res = new org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightResponse(contentType, httpRes.statusCode()) {{
             postPortfolioSimulationRebalancingDriftWeight200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class PortfolioSimulation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightResponse res = new org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightResponse res = new org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightResponse(contentType, httpRes.statusCode()) {{
             postPortfolioSimulationRebalancingFixedWeight200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,11 +155,9 @@ public class PortfolioSimulation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightResponse res = new org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightResponse() {{
+        org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightResponse res = new org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightResponse(contentType, httpRes.statusCode()) {{
             postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

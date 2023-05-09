@@ -18,6 +18,7 @@ public class GamesPlayerExperienceInfoResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentExperiencePoints")
     public String currentExperiencePoints;
+
     public GamesPlayerExperienceInfoResource withCurrentExperiencePoints(String currentExperiencePoints) {
         this.currentExperiencePoints = currentExperiencePoints;
         return this;
@@ -29,6 +30,7 @@ public class GamesPlayerExperienceInfoResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentLevel")
     public GamesPlayerLevelResource currentLevel;
+
     public GamesPlayerExperienceInfoResource withCurrentLevel(GamesPlayerLevelResource currentLevel) {
         this.currentLevel = currentLevel;
         return this;
@@ -40,6 +42,7 @@ public class GamesPlayerExperienceInfoResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastLevelUpTimestampMillis")
     public String lastLevelUpTimestampMillis;
+
     public GamesPlayerExperienceInfoResource withLastLevelUpTimestampMillis(String lastLevelUpTimestampMillis) {
         this.lastLevelUpTimestampMillis = lastLevelUpTimestampMillis;
         return this;
@@ -51,9 +54,11 @@ public class GamesPlayerExperienceInfoResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLevel")
     public GamesPlayerLevelResource nextLevel;
+
     public GamesPlayerExperienceInfoResource withNextLevel(GamesPlayerLevelResource nextLevel) {
         this.nextLevel = nextLevel;
         return this;
     }
     
+    public GamesPlayerExperienceInfoResource(){}
 }

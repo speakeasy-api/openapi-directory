@@ -82,4 +82,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Settings.java
 lib/src/main/java/org/openapis/openapi/models/shared/Notification.java
 lib/src/main/java/org/openapis/openapi/models/shared/CloudPubsubTopicPayloadFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CloudPubsubTopic.java
+docs/sdk/README.md
+docs/alerts/README.md
+docs/v1beta1/README.md
 USAGE.md

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderByElement {
     @JsonProperty("fieldName")
     public String fieldName;
+
     public OrderByElement withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -22,9 +23,13 @@ public class OrderByElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public OrderStringEnum sortOrder;
+
     public OrderByElement withSortOrder(OrderStringEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public OrderByElement(@JsonProperty("fieldName") String fieldName) {
+        this.fieldName = fieldName;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EntitlementAttribute {
     @JsonProperty("Name")
     public String name;
+
     public EntitlementAttribute withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class EntitlementAttribute {
     
     @JsonProperty("Value")
     public String value;
+
     public EntitlementAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public EntitlementAttribute(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

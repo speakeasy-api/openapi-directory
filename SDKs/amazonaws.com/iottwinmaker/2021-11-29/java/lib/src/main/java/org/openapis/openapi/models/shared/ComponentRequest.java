@@ -15,6 +15,7 @@ public class ComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public ComponentRequest withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -23,6 +24,7 @@ public class ComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ComponentRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -34,6 +36,7 @@ public class ComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public ComponentRequest withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -42,9 +45,11 @@ public class ComponentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyGroups")
     public java.util.Map<String, ComponentPropertyGroupRequest> propertyGroups;
+
     public ComponentRequest withPropertyGroups(java.util.Map<String, ComponentPropertyGroupRequest> propertyGroups) {
         this.propertyGroups = propertyGroups;
         return this;
     }
     
+    public ComponentRequest(){}
 }

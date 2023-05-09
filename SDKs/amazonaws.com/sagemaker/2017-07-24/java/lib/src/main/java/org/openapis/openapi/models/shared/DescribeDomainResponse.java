@@ -20,6 +20,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppNetworkAccessType")
     public AppNetworkAccessTypeEnum appNetworkAccessType;
+
     public DescribeDomainResponse withAppNetworkAccessType(AppNetworkAccessTypeEnum appNetworkAccessType) {
         this.appNetworkAccessType = appNetworkAccessType;
         return this;
@@ -28,6 +29,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppSecurityGroupManagement")
     public AppSecurityGroupManagementEnum appSecurityGroupManagement;
+
     public DescribeDomainResponse withAppSecurityGroupManagement(AppSecurityGroupManagementEnum appSecurityGroupManagement) {
         this.appSecurityGroupManagement = appSecurityGroupManagement;
         return this;
@@ -36,6 +38,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthMode")
     public AuthModeEnum authMode;
+
     public DescribeDomainResponse withAuthMode(AuthModeEnum authMode) {
         this.authMode = authMode;
         return this;
@@ -46,6 +49,7 @@ public class DescribeDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeDomainResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -54,6 +58,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSpaceSettings")
     public DefaultSpaceSettings defaultSpaceSettings;
+
     public DescribeDomainResponse withDefaultSpaceSettings(DefaultSpaceSettings defaultSpaceSettings) {
         this.defaultSpaceSettings = defaultSpaceSettings;
         return this;
@@ -62,6 +67,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultUserSettings")
     public UserSettings defaultUserSettings;
+
     public DescribeDomainResponse withDefaultUserSettings(UserSettings defaultUserSettings) {
         this.defaultUserSettings = defaultUserSettings;
         return this;
@@ -70,6 +76,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainArn")
     public String domainArn;
+
     public DescribeDomainResponse withDomainArn(String domainArn) {
         this.domainArn = domainArn;
         return this;
@@ -78,6 +85,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public DescribeDomainResponse withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -86,6 +94,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public DescribeDomainResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -94,6 +103,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainSettings")
     public DomainSettings domainSettings;
+
     public DescribeDomainResponse withDomainSettings(DomainSettings domainSettings) {
         this.domainSettings = domainSettings;
         return this;
@@ -102,6 +112,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeDomainResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -110,6 +121,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeEfsFileSystemId")
     public String homeEfsFileSystemId;
+
     public DescribeDomainResponse withHomeEfsFileSystemId(String homeEfsFileSystemId) {
         this.homeEfsFileSystemId = homeEfsFileSystemId;
         return this;
@@ -118,6 +130,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeEfsFileSystemKmsKeyId")
     public String homeEfsFileSystemKmsKeyId;
+
     public DescribeDomainResponse withHomeEfsFileSystemKmsKeyId(String homeEfsFileSystemKmsKeyId) {
         this.homeEfsFileSystemKmsKeyId = homeEfsFileSystemKmsKeyId;
         return this;
@@ -126,6 +139,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DescribeDomainResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -136,6 +150,7 @@ public class DescribeDomainResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeDomainResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -144,6 +159,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIdForDomainBoundary")
     public String securityGroupIdForDomainBoundary;
+
     public DescribeDomainResponse withSecurityGroupIdForDomainBoundary(String securityGroupIdForDomainBoundary) {
         this.securityGroupIdForDomainBoundary = securityGroupIdForDomainBoundary;
         return this;
@@ -152,6 +168,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleSignOnManagedApplicationInstanceId")
     public String singleSignOnManagedApplicationInstanceId;
+
     public DescribeDomainResponse withSingleSignOnManagedApplicationInstanceId(String singleSignOnManagedApplicationInstanceId) {
         this.singleSignOnManagedApplicationInstanceId = singleSignOnManagedApplicationInstanceId;
         return this;
@@ -160,6 +177,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DomainStatusEnum status;
+
     public DescribeDomainResponse withStatus(DomainStatusEnum status) {
         this.status = status;
         return this;
@@ -168,6 +186,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public DescribeDomainResponse withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -176,6 +195,7 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public DescribeDomainResponse withUrl(String url) {
         this.url = url;
         return this;
@@ -184,9 +204,11 @@ public class DescribeDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public DescribeDomainResponse withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeDomainResponse(){}
 }

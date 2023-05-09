@@ -61,11 +61,9 @@ public class Meetings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2MeetingsJsonResponse res = new org.openapis.openapi.models.operations.GetV2MeetingsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2MeetingsJsonResponse res = new org.openapis.openapi.models.operations.GetV2MeetingsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Meetings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2MeetingsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2MeetingsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutV2MeetingsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2MeetingsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

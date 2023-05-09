@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaUserEventInputConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigQuerySource")
     public GoogleCloudRetailV2betaBigQuerySource bigQuerySource;
+
     public GoogleCloudRetailV2betaUserEventInputConfigInput withBigQuerySource(GoogleCloudRetailV2betaBigQuerySource bigQuerySource) {
         this.bigQuerySource = bigQuerySource;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaUserEventInputConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudRetailV2betaGcsSource gcsSource;
+
     public GoogleCloudRetailV2betaUserEventInputConfigInput withGcsSource(GoogleCloudRetailV2betaGcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2betaUserEventInputConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEventInlineSource")
     public GoogleCloudRetailV2betaUserEventInlineSourceInput userEventInlineSource;
+
     public GoogleCloudRetailV2betaUserEventInputConfigInput withUserEventInlineSource(GoogleCloudRetailV2betaUserEventInlineSourceInput userEventInlineSource) {
         this.userEventInlineSource = userEventInlineSource;
         return this;
     }
     
+    public GoogleCloudRetailV2betaUserEventInputConfigInput(){}
 }

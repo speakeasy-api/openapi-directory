@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartInstancesResultStartingInstances {
     
     public StartInstancesResultStartingInstancesCurrentState currentState;
+
     public StartInstancesResultStartingInstances withCurrentState(StartInstancesResultStartingInstancesCurrentState currentState) {
         this.currentState = currentState;
         return this;
@@ -19,6 +20,7 @@ public class StartInstancesResultStartingInstances {
     
     
     public String instanceId;
+
     public StartInstancesResultStartingInstances withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,9 +28,11 @@ public class StartInstancesResultStartingInstances {
     
     
     public StartInstancesResultStartingInstancesPreviousState previousState;
+
     public StartInstancesResultStartingInstances withPreviousState(StartInstancesResultStartingInstancesPreviousState previousState) {
         this.previousState = previousState;
         return this;
     }
     
+    public StartInstancesResultStartingInstances(){}
 }

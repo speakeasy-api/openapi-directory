@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAttachmentRequest {
     @JsonProperty("attachmentId")
     public String attachmentId;
+
     public DescribeAttachmentRequest withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
     }
     
+    public DescribeAttachmentRequest(@JsonProperty("attachmentId") String attachmentId) {
+        this.attachmentId = attachmentId;
+  }
 }

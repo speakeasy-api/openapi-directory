@@ -57,10 +57,8 @@ public class TypeTypePointInline {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypePointInlineResponse res = new org.openapis.openapi.models.operations.SearchTypePointInlineResponse() {{
+        org.openapis.openapi.models.operations.SearchTypePointInlineResponse res = new org.openapis.openapi.models.operations.SearchTypePointInlineResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class TechnicalCueSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public TechnicalCueSegment withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class TechnicalCueSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TechnicalCueTypeEnum type;
+
     public TechnicalCueSegment withType(TechnicalCueTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TechnicalCueSegment(){}
 }

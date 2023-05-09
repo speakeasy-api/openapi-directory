@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnowMonkeyConfigResponse {
     
     public String contentType;
+
     public GetSnowMonkeyConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSnowMonkeyConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.SnowMonkeyConfig snowMonkeyConfig;
+
     public GetSnowMonkeyConfigResponse withSnowMonkeyConfig(org.openapis.openapi.models.shared.SnowMonkeyConfig snowMonkeyConfig) {
         this.snowMonkeyConfig = snowMonkeyConfig;
         return this;
@@ -26,6 +29,7 @@ public class GetSnowMonkeyConfigResponse {
     
     
     public Integer statusCode;
+
     public GetSnowMonkeyConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSnowMonkeyConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnowMonkeyConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSnowMonkeyConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

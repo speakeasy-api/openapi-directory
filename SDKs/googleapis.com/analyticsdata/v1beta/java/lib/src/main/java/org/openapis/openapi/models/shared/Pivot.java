@@ -18,17 +18,19 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldNames")
     public String[] fieldNames;
+
     public Pivot withFieldNames(String[] fieldNames) {
         this.fieldNames = fieldNames;
         return this;
     }
     
     /**
-     * The number of unique combinations of dimension values to return in this pivot. The `limit` parameter is required. A `limit` of 10,000 is common for single pivot requests. The product of the `limit` for each `pivot` in a `RunPivotReportRequest` must not exceed 100,000. For example, a two pivot request with `limit: 1000` in each pivot will fail because the product is `1,000,000`.
+     * The number of unique combinations of dimension values to return in this pivot. The `limit` parameter is required. A `limit` of 10,000 is common for single pivot requests. The product of the `limit` for each `pivot` in a `RunPivotReportRequest` must not exceed 250,000. For example, a two pivot request with `limit: 1000` in each pivot will fail because the product is `1,000,000`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public String limit;
+
     public Pivot withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAggregations")
     public PivotMetricAggregationsEnum[] metricAggregations;
+
     public Pivot withMetricAggregations(PivotMetricAggregationsEnum[] metricAggregations) {
         this.metricAggregations = metricAggregations;
         return this;
@@ -51,6 +54,7 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public String offset;
+
     public Pivot withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -62,9 +66,11 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBys")
     public OrderBy[] orderBys;
+
     public Pivot withOrderBys(OrderBy[] orderBys) {
         this.orderBys = orderBys;
         return this;
     }
     
+    public Pivot(){}
 }

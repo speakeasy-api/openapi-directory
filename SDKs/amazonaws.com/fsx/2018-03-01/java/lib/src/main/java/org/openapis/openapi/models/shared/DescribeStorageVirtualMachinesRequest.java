@@ -12,6 +12,7 @@ public class DescribeStorageVirtualMachinesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public StorageVirtualMachineFilter[] filters;
+
     public DescribeStorageVirtualMachinesRequest withFilters(StorageVirtualMachineFilter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DescribeStorageVirtualMachinesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeStorageVirtualMachinesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,6 +36,7 @@ public class DescribeStorageVirtualMachinesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeStorageVirtualMachinesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +45,11 @@ public class DescribeStorageVirtualMachinesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachineIds")
     public String[] storageVirtualMachineIds;
+
     public DescribeStorageVirtualMachinesRequest withStorageVirtualMachineIds(String[] storageVirtualMachineIds) {
         this.storageVirtualMachineIds = storageVirtualMachineIds;
         return this;
     }
     
+    public DescribeStorageVirtualMachinesRequest(){}
 }

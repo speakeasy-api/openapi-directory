@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteModelQualityJobDefinitionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteModelQualityJobDefinitionRequest deleteModelQualityJobDefinitionRequest;
+
     public DeleteModelQualityJobDefinitionRequest withDeleteModelQualityJobDefinitionRequest(org.openapis.openapi.models.shared.DeleteModelQualityJobDefinitionRequest deleteModelQualityJobDefinitionRequest) {
         this.deleteModelQualityJobDefinitionRequest = deleteModelQualityJobDefinitionRequest;
         return this;
@@ -16,6 +18,7 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteModelQualityJobDefinitionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteModelQualityJobDefinitionXAmzTargetEnum xAmzTarget;
+
     public DeleteModelQualityJobDefinitionRequest withXAmzTarget(DeleteModelQualityJobDefinitionXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteModelQualityJobDefinitionRequest(@JsonProperty("DeleteModelQualityJobDefinitionRequest") org.openapis.openapi.models.shared.DeleteModelQualityJobDefinitionRequest deleteModelQualityJobDefinitionRequest, @JsonProperty("X-Amz-Target") DeleteModelQualityJobDefinitionXAmzTargetEnum xAmzTarget) {
+        this.deleteModelQualityJobDefinitionRequest = deleteModelQualityJobDefinitionRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

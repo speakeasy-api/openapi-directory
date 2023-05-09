@@ -15,6 +15,7 @@ public class InitiatorJoined {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSystem")
     public Boolean isSystem;
+
     public InitiatorJoined withIsSystem(Boolean isSystem) {
         this.isSystem = isSystem;
         return this;
@@ -26,6 +27,7 @@ public class InitiatorJoined {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_id")
     public String memberId;
+
     public InitiatorJoined withMemberId(String memberId) {
         this.memberId = memberId;
         return this;
@@ -37,9 +39,11 @@ public class InitiatorJoined {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public InitiatorJoined withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public InitiatorJoined(){}
 }

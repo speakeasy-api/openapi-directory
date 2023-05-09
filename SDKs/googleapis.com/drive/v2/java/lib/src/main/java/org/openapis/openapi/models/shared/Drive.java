@@ -23,6 +23,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundImageFile")
     public DriveBackgroundImageFile backgroundImageFile;
+
     public Drive withBackgroundImageFile(DriveBackgroundImageFile backgroundImageFile) {
         this.backgroundImageFile = backgroundImageFile;
         return this;
@@ -34,6 +35,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundImageLink")
     public String backgroundImageLink;
+
     public Drive withBackgroundImageLink(String backgroundImageLink) {
         this.backgroundImageLink = backgroundImageLink;
         return this;
@@ -45,6 +47,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public DriveCapabilities capabilities;
+
     public Drive withCapabilities(DriveCapabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -56,6 +59,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorRgb")
     public String colorRgb;
+
     public Drive withColorRgb(String colorRgb) {
         this.colorRgb = colorRgb;
         return this;
@@ -69,6 +73,7 @@ public class Drive {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public Drive withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -80,6 +85,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public Drive withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -91,6 +97,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Drive withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +109,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Drive withKind(String kind) {
         this.kind = kind;
         return this;
@@ -113,6 +121,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Drive withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +133,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public Drive withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -135,6 +145,7 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public DriveRestrictions restrictions;
+
     public Drive withRestrictions(DriveRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -146,9 +157,11 @@ public class Drive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themeId")
     public String themeId;
+
     public Drive withThemeId(String themeId) {
         this.themeId = themeId;
         return this;
     }
     
+    public Drive(){}
 }

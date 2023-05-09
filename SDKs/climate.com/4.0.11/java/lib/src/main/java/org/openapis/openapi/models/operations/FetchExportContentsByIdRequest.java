@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchExportContentsByIdRequest {
@@ -12,6 +13,7 @@ public class FetchExportContentsByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public FetchExportContentsByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class FetchExportContentsByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
     public String range;
+
     public FetchExportContentsByIdRequest withRange(String range) {
         this.range = range;
         return this;
@@ -32,9 +35,15 @@ public class FetchExportContentsByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=exportId")
     public String exportId;
+
     public FetchExportContentsByIdRequest withExportId(String exportId) {
         this.exportId = exportId;
         return this;
     }
     
+    public FetchExportContentsByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Range") String range, @JsonProperty("exportId") String exportId) {
+        this.accept = accept;
+        this.range = range;
+        this.exportId = exportId;
+  }
 }

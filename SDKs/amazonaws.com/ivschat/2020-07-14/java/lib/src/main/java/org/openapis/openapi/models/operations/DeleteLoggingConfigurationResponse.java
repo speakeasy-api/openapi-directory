@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLoggingConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteLoggingConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object conflictException;
+
     public DeleteLoggingConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLoggingConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteLoggingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object pendingVerification;
+
     public DeleteLoggingConfigurationResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -46,6 +51,7 @@ public class DeleteLoggingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteLoggingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteLoggingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLoggingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLoggingConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteLoggingConfigurationResponse {
      */
     
     public Object validationException;
+
     public DeleteLoggingConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteLoggingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

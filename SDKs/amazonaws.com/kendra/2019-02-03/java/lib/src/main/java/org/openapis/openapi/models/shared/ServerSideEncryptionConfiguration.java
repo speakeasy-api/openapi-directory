@@ -15,9 +15,11 @@ public class ServerSideEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ServerSideEncryptionConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public ServerSideEncryptionConfiguration(){}
 }

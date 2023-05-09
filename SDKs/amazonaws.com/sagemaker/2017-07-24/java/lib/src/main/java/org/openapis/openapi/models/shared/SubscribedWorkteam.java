@@ -15,6 +15,7 @@ public class SubscribedWorkteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListingId")
     public String listingId;
+
     public SubscribedWorkteam withListingId(String listingId) {
         this.listingId = listingId;
         return this;
@@ -23,6 +24,7 @@ public class SubscribedWorkteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MarketplaceDescription")
     public String marketplaceDescription;
+
     public SubscribedWorkteam withMarketplaceDescription(String marketplaceDescription) {
         this.marketplaceDescription = marketplaceDescription;
         return this;
@@ -31,6 +33,7 @@ public class SubscribedWorkteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MarketplaceTitle")
     public String marketplaceTitle;
+
     public SubscribedWorkteam withMarketplaceTitle(String marketplaceTitle) {
         this.marketplaceTitle = marketplaceTitle;
         return this;
@@ -39,6 +42,7 @@ public class SubscribedWorkteam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerName")
     public String sellerName;
+
     public SubscribedWorkteam withSellerName(String sellerName) {
         this.sellerName = sellerName;
         return this;
@@ -46,9 +50,13 @@ public class SubscribedWorkteam {
     
     @JsonProperty("WorkteamArn")
     public String workteamArn;
+
     public SubscribedWorkteam withWorkteamArn(String workteamArn) {
         this.workteamArn = workteamArn;
         return this;
     }
     
+    public SubscribedWorkteam(@JsonProperty("WorkteamArn") String workteamArn) {
+        this.workteamArn = workteamArn;
+  }
 }

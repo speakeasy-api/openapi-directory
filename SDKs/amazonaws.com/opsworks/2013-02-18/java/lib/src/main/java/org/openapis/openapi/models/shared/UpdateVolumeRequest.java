@@ -12,6 +12,7 @@ public class UpdateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountPoint")
     public String mountPoint;
+
     public UpdateVolumeRequest withMountPoint(String mountPoint) {
         this.mountPoint = mountPoint;
         return this;
@@ -20,6 +21,7 @@ public class UpdateVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateVolumeRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,9 +29,13 @@ public class UpdateVolumeRequest {
     
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public UpdateVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public UpdateVolumeRequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

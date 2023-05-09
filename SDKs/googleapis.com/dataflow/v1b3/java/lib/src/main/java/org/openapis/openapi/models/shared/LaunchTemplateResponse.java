@@ -18,9 +18,11 @@ public class LaunchTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public LaunchTemplateResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public LaunchTemplateResponse(){}
 }

@@ -18,9 +18,11 @@ public class ResponseHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public ResponseHeader withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public ResponseHeader(){}
 }

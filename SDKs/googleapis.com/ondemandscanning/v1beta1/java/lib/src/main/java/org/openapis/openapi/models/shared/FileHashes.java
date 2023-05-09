@@ -18,9 +18,11 @@ public class FileHashes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileHash")
     public Hash[] fileHash;
+
     public FileHashes withFileHash(Hash[] fileHash) {
         this.fileHash = fileHash;
         return this;
     }
     
+    public FileHashes(){}
 }

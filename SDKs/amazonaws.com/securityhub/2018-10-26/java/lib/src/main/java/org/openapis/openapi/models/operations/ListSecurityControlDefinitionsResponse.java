@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSecurityControlDefinitionsResponse {
     
     public String contentType;
+
     public ListSecurityControlDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSecurityControlDefinitionsResponse {
      */
     
     public Object internalException;
+
     public ListSecurityControlDefinitionsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListSecurityControlDefinitionsResponse {
      */
     
     public Object invalidAccessException;
+
     public ListSecurityControlDefinitionsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class ListSecurityControlDefinitionsResponse {
      */
     
     public Object invalidInputException;
+
     public ListSecurityControlDefinitionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListSecurityControlDefinitionsResponse {
      */
     
     public Object limitExceededException;
+
     public ListSecurityControlDefinitionsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class ListSecurityControlDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSecurityControlDefinitionsResponse listSecurityControlDefinitionsResponse;
+
     public ListSecurityControlDefinitionsResponse withListSecurityControlDefinitionsResponse(org.openapis.openapi.models.shared.ListSecurityControlDefinitionsResponse listSecurityControlDefinitionsResponse) {
         this.listSecurityControlDefinitionsResponse = listSecurityControlDefinitionsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListSecurityControlDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public ListSecurityControlDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListSecurityControlDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSecurityControlDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListSecurityControlDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

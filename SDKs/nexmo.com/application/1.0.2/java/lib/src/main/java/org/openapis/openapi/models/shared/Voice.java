@@ -15,9 +15,11 @@ public class Voice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public VoiceWebhooks[] webhooks;
+
     public Voice withWebhooks(VoiceWebhooks[] webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public Voice(){}
 }

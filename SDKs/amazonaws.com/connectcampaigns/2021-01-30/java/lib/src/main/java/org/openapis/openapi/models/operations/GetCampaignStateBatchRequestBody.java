@@ -12,9 +12,13 @@ public class GetCampaignStateBatchRequestBody {
      */
     @JsonProperty("campaignIds")
     public String[] campaignIds;
+
     public GetCampaignStateBatchRequestBody withCampaignIds(String[] campaignIds) {
         this.campaignIds = campaignIds;
         return this;
     }
     
+    public GetCampaignStateBatchRequestBody(@JsonProperty("campaignIds") String[] campaignIds) {
+        this.campaignIds = campaignIds;
+  }
 }

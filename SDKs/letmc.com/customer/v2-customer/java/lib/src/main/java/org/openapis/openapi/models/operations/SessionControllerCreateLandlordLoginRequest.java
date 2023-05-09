@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionControllerCreateLandlordLoginRequest {
@@ -12,6 +13,7 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
     public String branchID;
+
     public SessionControllerCreateLandlordLoginRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -22,6 +24,7 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactDetails")
     public String contactDetails;
+
     public SessionControllerCreateLandlordLoginRequest withContactDetails(String contactDetails) {
         this.contactDetails = contactDetails;
         return this;
@@ -32,6 +35,7 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public SessionControllerCreateLandlordLoginRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -42,6 +46,7 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forename")
     public String forename;
+
     public SessionControllerCreateLandlordLoginRequest withForename(String forename) {
         this.forename = forename;
         return this;
@@ -52,6 +57,7 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyAddress")
     public String propertyAddress;
+
     public SessionControllerCreateLandlordLoginRequest withPropertyAddress(String propertyAddress) {
         this.propertyAddress = propertyAddress;
         return this;
@@ -62,6 +68,7 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public SessionControllerCreateLandlordLoginRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -72,6 +79,7 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=surname")
     public String surname;
+
     public SessionControllerCreateLandlordLoginRequest withSurname(String surname) {
         this.surname = surname;
         return this;
@@ -82,9 +90,19 @@ public class SessionControllerCreateLandlordLoginRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public SessionControllerCreateLandlordLoginRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SessionControllerCreateLandlordLoginRequest(@JsonProperty("contactDetails") String contactDetails, @JsonProperty("email") String email, @JsonProperty("forename") String forename, @JsonProperty("propertyAddress") String propertyAddress, @JsonProperty("shortName") String shortName, @JsonProperty("surname") String surname, @JsonProperty("title") String title) {
+        this.contactDetails = contactDetails;
+        this.email = email;
+        this.forename = forename;
+        this.propertyAddress = propertyAddress;
+        this.shortName = shortName;
+        this.surname = surname;
+        this.title = title;
+  }
 }

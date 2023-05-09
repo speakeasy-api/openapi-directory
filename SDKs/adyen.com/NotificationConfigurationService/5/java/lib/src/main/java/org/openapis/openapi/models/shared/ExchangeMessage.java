@@ -12,6 +12,7 @@ public class ExchangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageCode")
     public String messageCode;
+
     public ExchangeMessage withMessageCode(String messageCode) {
         this.messageCode = messageCode;
         return this;
@@ -20,9 +21,11 @@ public class ExchangeMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageDescription")
     public String messageDescription;
+
     public ExchangeMessage withMessageDescription(String messageDescription) {
         this.messageDescription = messageDescription;
         return this;
     }
     
+    public ExchangeMessage(){}
 }

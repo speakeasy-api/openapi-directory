@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestCreateDeviceSelectionDeviceList {
     @JsonProperty("devices")
     public String[] devices;
+
     public TestCreateDeviceSelectionDeviceList withDevices(String[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public TestCreateDeviceSelectionDeviceList(@JsonProperty("devices") String[] devices) {
+        this.devices = devices;
+  }
 }

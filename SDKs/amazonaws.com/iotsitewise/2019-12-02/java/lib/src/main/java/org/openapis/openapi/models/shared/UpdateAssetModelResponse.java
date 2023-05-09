@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAssetModelResponse {
     @JsonProperty("assetModelStatus")
     public AssetModelStatus assetModelStatus;
+
     public UpdateAssetModelResponse withAssetModelStatus(AssetModelStatus assetModelStatus) {
         this.assetModelStatus = assetModelStatus;
         return this;
     }
     
+    public UpdateAssetModelResponse(@JsonProperty("assetModelStatus") AssetModelStatus assetModelStatus) {
+        this.assetModelStatus = assetModelStatus;
+  }
 }

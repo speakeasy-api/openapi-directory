@@ -15,9 +15,11 @@ public class ValidationErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public ValidationError[] detail;
+
     public ValidationErrors withDetail(ValidationError[] detail) {
         this.detail = detail;
         return this;
     }
     
+    public ValidationErrors(){}
 }

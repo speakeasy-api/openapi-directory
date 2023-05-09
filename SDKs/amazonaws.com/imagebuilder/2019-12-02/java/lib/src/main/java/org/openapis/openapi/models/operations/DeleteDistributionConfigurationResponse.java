@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDistributionConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public DeleteDistributionConfigurationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public Object clientException;
+
     public DeleteDistributionConfigurationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDistributionConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteDistributionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDistributionConfigurationResponse deleteDistributionConfigurationResponse;
+
     public DeleteDistributionConfigurationResponse withDeleteDistributionConfigurationResponse(org.openapis.openapi.models.shared.DeleteDistributionConfigurationResponse deleteDistributionConfigurationResponse) {
         this.deleteDistributionConfigurationResponse = deleteDistributionConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteDistributionConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteDistributionConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public Object resourceDependencyException;
+
     public DeleteDistributionConfigurationResponse withResourceDependencyException(Object resourceDependencyException) {
         this.resourceDependencyException = resourceDependencyException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public Object serviceException;
+
     public DeleteDistributionConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteDistributionConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteDistributionConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class DeleteDistributionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteDistributionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class DeleteDistributionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDistributionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDistributionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

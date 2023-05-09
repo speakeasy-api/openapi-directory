@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class PutScheduledUpdateGroupActionType {
     
     public String autoScalingGroupName;
+
     public PutScheduledUpdateGroupActionType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +18,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public Long desiredCapacity;
+
     public PutScheduledUpdateGroupActionType withDesiredCapacity(Long desiredCapacity) {
         this.desiredCapacity = desiredCapacity;
         return this;
@@ -23,6 +26,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public OffsetDateTime endTime;
+
     public PutScheduledUpdateGroupActionType withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +34,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public Long maxSize;
+
     public PutScheduledUpdateGroupActionType withMaxSize(Long maxSize) {
         this.maxSize = maxSize;
         return this;
@@ -37,6 +42,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public Long minSize;
+
     public PutScheduledUpdateGroupActionType withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -44,6 +50,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public String recurrence;
+
     public PutScheduledUpdateGroupActionType withRecurrence(String recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -51,6 +58,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public String scheduledActionName;
+
     public PutScheduledUpdateGroupActionType withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
@@ -58,6 +66,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public OffsetDateTime startTime;
+
     public PutScheduledUpdateGroupActionType withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -65,6 +74,7 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public OffsetDateTime time;
+
     public PutScheduledUpdateGroupActionType withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -72,9 +82,14 @@ public class PutScheduledUpdateGroupActionType {
     
     
     public String timeZone;
+
     public PutScheduledUpdateGroupActionType withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public PutScheduledUpdateGroupActionType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("ScheduledActionName") String scheduledActionName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.scheduledActionName = scheduledActionName;
+  }
 }

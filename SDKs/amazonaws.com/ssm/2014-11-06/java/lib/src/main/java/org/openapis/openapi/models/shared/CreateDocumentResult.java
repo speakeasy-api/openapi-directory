@@ -15,9 +15,11 @@ public class CreateDocumentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentDescription")
     public DocumentDescription documentDescription;
+
     public CreateDocumentResult withDocumentDescription(DocumentDescription documentDescription) {
         this.documentDescription = documentDescription;
         return this;
     }
     
+    public CreateDocumentResult(){}
 }

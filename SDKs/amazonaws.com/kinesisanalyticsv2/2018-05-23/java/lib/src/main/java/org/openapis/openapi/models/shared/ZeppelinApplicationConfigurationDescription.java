@@ -15,6 +15,7 @@ public class ZeppelinApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogConfigurationDescription")
     public CatalogConfigurationDescription catalogConfigurationDescription;
+
     public ZeppelinApplicationConfigurationDescription withCatalogConfigurationDescription(CatalogConfigurationDescription catalogConfigurationDescription) {
         this.catalogConfigurationDescription = catalogConfigurationDescription;
         return this;
@@ -23,6 +24,7 @@ public class ZeppelinApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomArtifactsConfigurationDescription")
     public CustomArtifactConfigurationDescription[] customArtifactsConfigurationDescription;
+
     public ZeppelinApplicationConfigurationDescription withCustomArtifactsConfigurationDescription(CustomArtifactConfigurationDescription[] customArtifactsConfigurationDescription) {
         this.customArtifactsConfigurationDescription = customArtifactsConfigurationDescription;
         return this;
@@ -31,6 +33,7 @@ public class ZeppelinApplicationConfigurationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeployAsApplicationConfigurationDescription")
     public DeployAsApplicationConfigurationDescription deployAsApplicationConfigurationDescription;
+
     public ZeppelinApplicationConfigurationDescription withDeployAsApplicationConfigurationDescription(DeployAsApplicationConfigurationDescription deployAsApplicationConfigurationDescription) {
         this.deployAsApplicationConfigurationDescription = deployAsApplicationConfigurationDescription;
         return this;
@@ -38,9 +41,13 @@ public class ZeppelinApplicationConfigurationDescription {
     
     @JsonProperty("MonitoringConfigurationDescription")
     public ZeppelinMonitoringConfigurationDescription monitoringConfigurationDescription;
+
     public ZeppelinApplicationConfigurationDescription withMonitoringConfigurationDescription(ZeppelinMonitoringConfigurationDescription monitoringConfigurationDescription) {
         this.monitoringConfigurationDescription = monitoringConfigurationDescription;
         return this;
     }
     
+    public ZeppelinApplicationConfigurationDescription(@JsonProperty("MonitoringConfigurationDescription") ZeppelinMonitoringConfigurationDescription monitoringConfigurationDescription) {
+        this.monitoringConfigurationDescription = monitoringConfigurationDescription;
+  }
 }

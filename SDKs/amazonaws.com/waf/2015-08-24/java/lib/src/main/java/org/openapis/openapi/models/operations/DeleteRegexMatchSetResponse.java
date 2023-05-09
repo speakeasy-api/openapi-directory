@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRegexMatchSetResponse {
     
     public String contentType;
+
     public DeleteRegexMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRegexMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRegexMatchSetResponse deleteRegexMatchSetResponse;
+
     public DeleteRegexMatchSetResponse withDeleteRegexMatchSetResponse(org.openapis.openapi.models.shared.DeleteRegexMatchSetResponse deleteRegexMatchSetResponse) {
         this.deleteRegexMatchSetResponse = deleteRegexMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class DeleteRegexMatchSetResponse {
     
     
     public Integer statusCode;
+
     public DeleteRegexMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteRegexMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRegexMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class DeleteRegexMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public DeleteRegexMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRegexMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public DeleteRegexMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteRegexMatchSetResponse {
      */
     
     public Object wafNonEmptyEntityException;
+
     public DeleteRegexMatchSetResponse withWAFNonEmptyEntityException(Object wafNonEmptyEntityException) {
         this.wafNonEmptyEntityException = wafNonEmptyEntityException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteRegexMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public DeleteRegexMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteRegexMatchSetResponse {
      */
     
     public Object wafReferencedItemException;
+
     public DeleteRegexMatchSetResponse withWAFReferencedItemException(Object wafReferencedItemException) {
         this.wafReferencedItemException = wafReferencedItemException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteRegexMatchSetResponse {
      */
     
     public Object wafStaleDataException;
+
     public DeleteRegexMatchSetResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
     }
     
+    public DeleteRegexMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class NodesDraftRegistrationsSubjectsSubject {
      */
     
     public NodesDraftRegistrationsSubjectsSubjectAttributes attributes;
+
     public NodesDraftRegistrationsSubjectsSubject withAttributes(NodesDraftRegistrationsSubjectsSubjectAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class NodesDraftRegistrationsSubjectsSubject {
      */
     
     public NodesDraftRegistrationsSubjectsSubjectEmbeds embeds;
+
     public NodesDraftRegistrationsSubjectsSubject withEmbeds(NodesDraftRegistrationsSubjectsSubjectEmbeds embeds) {
         this.embeds = embeds;
         return this;
@@ -35,6 +37,7 @@ public class NodesDraftRegistrationsSubjectsSubject {
      */
     
     public String id;
+
     public NodesDraftRegistrationsSubjectsSubject withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class NodesDraftRegistrationsSubjectsSubject {
      */
     
     public NodesDraftRegistrationsSubjectsSubjectLinks links;
+
     public NodesDraftRegistrationsSubjectsSubject withLinks(NodesDraftRegistrationsSubjectsSubjectLinks links) {
         this.links = links;
         return this;
@@ -55,6 +59,7 @@ public class NodesDraftRegistrationsSubjectsSubject {
      */
     
     public NodesDraftRegistrationsSubjectsSubjectRelationships relationships;
+
     public NodesDraftRegistrationsSubjectsSubject withRelationships(NodesDraftRegistrationsSubjectsSubjectRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -65,9 +70,11 @@ public class NodesDraftRegistrationsSubjectsSubject {
      */
     
     public String type;
+
     public NodesDraftRegistrationsSubjectsSubject withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubject(){}
 }

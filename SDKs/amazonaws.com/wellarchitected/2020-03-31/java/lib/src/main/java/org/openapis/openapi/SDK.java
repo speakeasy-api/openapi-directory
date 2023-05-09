@@ -83,6 +83,7 @@ public class SDK {
 	
 	
 	
+	
   		
 
 	private HTTPClient _defaultClient;
@@ -187,6 +188,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -224,7 +230,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateLensesResponse res = new org.openapis.openapi.models.operations.AssociateLensesResponse() {{
+        org.openapis.openapi.models.operations.AssociateLensesResponse res = new org.openapis.openapi.models.operations.AssociateLensesResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             resourceNotFoundException = null;
             conflictException = null;
@@ -232,8 +238,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,7 +289,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Create a lens share.&lt;/p&gt; &lt;p&gt;The owner of a lens can share it with other Amazon Web Services accounts, IAM users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Shared access to a lens is not removed until the lens invitation is deleted.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Create a lens share.&lt;/p&gt; &lt;p&gt;The owner of a lens can share it with other Amazon Web Services accounts, users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Lenses provided by Amazon Web Services (Amazon Web Services Official Content) cannot be shared.&lt;/p&gt; &lt;p&gt; Shared access to a lens is not removed until the lens invitation is deleted.&lt;/p&gt; &lt;p&gt;If you share a lens with an organization or OU, all accounts in the organization or OU are granted access to the lens.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-sharing.html"&gt;Sharing a custom lens&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -318,7 +322,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLensShareResponse res = new org.openapis.openapi.models.operations.CreateLensShareResponse() {{
+        org.openapis.openapi.models.operations.CreateLensShareResponse res = new org.openapis.openapi.models.operations.CreateLensShareResponse(contentType, httpRes.statusCode()) {{
             createLensShareOutput = null;
             validationException = null;
             conflictException = null;
@@ -328,8 +332,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,7 +395,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Create a new lens version.&lt;/p&gt; &lt;p&gt;A lens can have up to 100 versions.&lt;/p&gt; &lt;p&gt;After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a lens can delete it. &lt;/p&gt;
+     * &lt;p&gt;Create a new lens version.&lt;/p&gt; &lt;p&gt;A lens can have up to 100 versions.&lt;/p&gt; &lt;p&gt;Use this operation to publish a new lens version after you have imported a lens. The &lt;code&gt;LensAlias&lt;/code&gt; is used to identify the lens to be published. The owner of a lens can share the lens with other Amazon Web Services accounts and users in the same Amazon Web Services Region. Only the owner of a lens can delete it. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -426,7 +428,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLensVersionResponse res = new org.openapis.openapi.models.operations.CreateLensVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateLensVersionResponse res = new org.openapis.openapi.models.operations.CreateLensVersionResponse(contentType, httpRes.statusCode()) {{
             createLensVersionOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -436,8 +438,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,7 +534,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMilestoneResponse res = new org.openapis.openapi.models.operations.CreateMilestoneResponse() {{
+        org.openapis.openapi.models.operations.CreateMilestoneResponse res = new org.openapis.openapi.models.operations.CreateMilestoneResponse(contentType, httpRes.statusCode()) {{
             createMilestoneOutput = null;
             validationException = null;
             conflictException = null;
@@ -544,8 +544,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -609,7 +607,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Create a new workload.&lt;/p&gt; &lt;p&gt;The owner of a workload can share the workload with other Amazon Web Services accounts, IAM users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload can delete it.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html"&gt;Defining a Workload&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;p&gt;Create a new workload.&lt;/p&gt; &lt;p&gt;The owner of a workload can share the workload with other Amazon Web Services accounts, users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload can delete it.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html"&gt;Defining a Workload&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt; &lt;important&gt; &lt;p&gt;Either &lt;code&gt;AwsRegions&lt;/code&gt;, &lt;code&gt;NonAwsRegions&lt;/code&gt;, or both must be specified when creating a workload.&lt;/p&gt; &lt;p&gt;You also must specify &lt;code&gt;ReviewOwner&lt;/code&gt;, even though the parameter is listed as not being required in the following section. &lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -642,17 +640,16 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorkloadResponse res = new org.openapis.openapi.models.operations.CreateWorkloadResponse() {{
+        org.openapis.openapi.models.operations.CreateWorkloadResponse res = new org.openapis.openapi.models.operations.CreateWorkloadResponse(contentType, httpRes.statusCode()) {{
             createWorkloadOutput = null;
             validationException = null;
             conflictException = null;
             serviceQuotaExceededException = null;
             internalServerException = null;
             accessDeniedException = null;
+            resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -701,6 +698,13 @@ public class SDK {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 486) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
                 res.throttlingException = out;
             }
         }
@@ -709,7 +713,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Create a workload share.&lt;/p&gt; &lt;p&gt;The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Shared access to a workload is not removed until the workload invitation is deleted.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html"&gt;Sharing a Workload&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;p&gt;Create a workload share.&lt;/p&gt; &lt;p&gt;The owner of a workload can share it with other Amazon Web Services accounts and users in the same Amazon Web Services Region. Shared access to a workload is not removed until the workload invitation is deleted.&lt;/p&gt; &lt;p&gt;If you share a workload with an organization or OU, all accounts in the organization or OU are granted access to the workload.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html"&gt;Sharing a workload&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -742,7 +746,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateWorkloadShareResponse res = new org.openapis.openapi.models.operations.CreateWorkloadShareResponse() {{
+        org.openapis.openapi.models.operations.CreateWorkloadShareResponse res = new org.openapis.openapi.models.operations.CreateWorkloadShareResponse(contentType, httpRes.statusCode()) {{
             createWorkloadShareOutput = null;
             validationException = null;
             conflictException = null;
@@ -752,8 +756,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -817,7 +819,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Delete an existing lens.&lt;/p&gt; &lt;p&gt;Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads. &lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Delete an existing lens.&lt;/p&gt; &lt;p&gt;Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and users that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads. &lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -851,7 +853,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLensResponse res = new org.openapis.openapi.models.operations.DeleteLensResponse() {{
+        org.openapis.openapi.models.operations.DeleteLensResponse res = new org.openapis.openapi.models.operations.DeleteLensResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             resourceNotFoundException = null;
             conflictException = null;
@@ -859,8 +861,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,7 +912,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Delete a lens share.&lt;/p&gt; &lt;p&gt;After the lens share is deleted, Amazon Web Services accounts, IAM users, organizations, and organizational units (OUs) that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Delete a lens share.&lt;/p&gt; &lt;p&gt;After the lens share is deleted, Amazon Web Services accounts, users, organizations, and organizational units (OUs) that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -946,7 +946,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLensShareResponse res = new org.openapis.openapi.models.operations.DeleteLensShareResponse() {{
+        org.openapis.openapi.models.operations.DeleteLensShareResponse res = new org.openapis.openapi.models.operations.DeleteLensShareResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             internalServerException = null;
             resourceNotFoundException = null;
@@ -954,8 +954,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1041,7 +1039,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkloadResponse res = new org.openapis.openapi.models.operations.DeleteWorkloadResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkloadResponse res = new org.openapis.openapi.models.operations.DeleteWorkloadResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             resourceNotFoundException = null;
             conflictException = null;
@@ -1049,8 +1047,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1136,7 +1132,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkloadShareResponse res = new org.openapis.openapi.models.operations.DeleteWorkloadShareResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkloadShareResponse res = new org.openapis.openapi.models.operations.DeleteWorkloadShareResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             internalServerException = null;
             resourceNotFoundException = null;
@@ -1144,8 +1140,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1230,7 +1224,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateLensesResponse res = new org.openapis.openapi.models.operations.DisassociateLensesResponse() {{
+        org.openapis.openapi.models.operations.DisassociateLensesResponse res = new org.openapis.openapi.models.operations.DisassociateLensesResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             resourceNotFoundException = null;
             conflictException = null;
@@ -1238,8 +1232,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1291,7 +1283,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Export an existing lens.&lt;/p&gt; &lt;p&gt;Lenses are defined in JSON. For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html"&gt;JSON format specification&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;. Only the owner of a lens can export it. &lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Export an existing lens.&lt;/p&gt; &lt;p&gt;Only the owner of a lens can export it. Lenses provided by Amazon Web Services (Amazon Web Services Official Content) cannot be exported.&lt;/p&gt; &lt;p&gt;Lenses are defined in JSON. For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html"&gt;JSON format specification&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1325,7 +1317,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportLensResponse res = new org.openapis.openapi.models.operations.ExportLensResponse() {{
+        org.openapis.openapi.models.operations.ExportLensResponse res = new org.openapis.openapi.models.operations.ExportLensResponse(contentType, httpRes.statusCode()) {{
             exportLensOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1333,8 +1325,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1418,7 +1408,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnswerResponse res = new org.openapis.openapi.models.operations.GetAnswerResponse() {{
+        org.openapis.openapi.models.operations.GetAnswerResponse res = new org.openapis.openapi.models.operations.GetAnswerResponse(contentType, httpRes.statusCode()) {{
             getAnswerOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1426,8 +1416,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1477,6 +1465,97 @@ public class SDK {
     }
 
     /**
+     * &lt;p&gt;Get a consolidated report of your workloads.&lt;/p&gt; &lt;p&gt;You can optionally choose to include workloads that have been shared with you.&lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetConsolidatedReportResponse getConsolidatedReport(org.openapis.openapi.models.operations.GetConsolidatedReportRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/consolidatedReport#Format");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsolidatedReportRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GetConsolidatedReportResponse res = new org.openapis.openapi.models.operations.GetConsolidatedReportResponse(contentType, httpRes.statusCode()) {{
+            getConsolidatedReportOutput = null;
+            validationException = null;
+            internalServerException = null;
+            accessDeniedException = null;
+            throttlingException = null;
+            conflictException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GetConsolidatedReportOutput out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GetConsolidatedReportOutput.class);
+                res.getConsolidatedReportOutput = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.validationException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.accessDeniedException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.conflictException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Get an existing lens.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -1511,7 +1590,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLensResponse res = new org.openapis.openapi.models.operations.GetLensResponse() {{
+        org.openapis.openapi.models.operations.GetLensResponse res = new org.openapis.openapi.models.operations.GetLensResponse(contentType, httpRes.statusCode()) {{
             getLensOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1519,8 +1598,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1604,7 +1681,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLensReviewResponse res = new org.openapis.openapi.models.operations.GetLensReviewResponse() {{
+        org.openapis.openapi.models.operations.GetLensReviewResponse res = new org.openapis.openapi.models.operations.GetLensReviewResponse(contentType, httpRes.statusCode()) {{
             getLensReviewOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1612,8 +1689,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1697,7 +1772,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLensReviewReportResponse res = new org.openapis.openapi.models.operations.GetLensReviewReportResponse() {{
+        org.openapis.openapi.models.operations.GetLensReviewReportResponse res = new org.openapis.openapi.models.operations.GetLensReviewReportResponse(contentType, httpRes.statusCode()) {{
             getLensReviewReportOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1705,8 +1780,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1790,7 +1863,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLensVersionDifferenceResponse res = new org.openapis.openapi.models.operations.GetLensVersionDifferenceResponse() {{
+        org.openapis.openapi.models.operations.GetLensVersionDifferenceResponse res = new org.openapis.openapi.models.operations.GetLensVersionDifferenceResponse(contentType, httpRes.statusCode()) {{
             getLensVersionDifferenceOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1798,8 +1871,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1877,7 +1948,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMilestoneResponse res = new org.openapis.openapi.models.operations.GetMilestoneResponse() {{
+        org.openapis.openapi.models.operations.GetMilestoneResponse res = new org.openapis.openapi.models.operations.GetMilestoneResponse(contentType, httpRes.statusCode()) {{
             getMilestoneOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1885,8 +1956,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1964,7 +2033,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkloadResponse res = new org.openapis.openapi.models.operations.GetWorkloadResponse() {{
+        org.openapis.openapi.models.operations.GetWorkloadResponse res = new org.openapis.openapi.models.operations.GetWorkloadResponse(contentType, httpRes.statusCode()) {{
             getWorkloadOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -1972,8 +2041,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2023,7 +2090,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Import a new lens.&lt;/p&gt; &lt;p&gt;The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published with &lt;a&gt;CreateLensVersion&lt;/a&gt; &lt;/p&gt; &lt;p&gt;Lenses are defined in JSON. For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html"&gt;JSON format specification&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;A custom lens cannot exceed 500 KB in size.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.&lt;/p&gt; &lt;/note&gt;
+     * &lt;p&gt;Import a new custom lens or update an existing custom lens.&lt;/p&gt; &lt;p&gt;To update an existing custom lens, specify its ARN as the &lt;code&gt;LensAlias&lt;/code&gt;. If no ARN is specified, a new custom lens is created.&lt;/p&gt; &lt;p&gt;The new or updated lens will have a status of &lt;code&gt;DRAFT&lt;/code&gt;. The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published with &lt;a&gt;CreateLensVersion&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Lenses are defined in JSON. For more information, see &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html"&gt;JSON format specification&lt;/a&gt; in the &lt;i&gt;Well-Architected Tool User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;A custom lens cannot exceed 500 KB in size.&lt;/p&gt; &lt;note&gt; &lt;p&gt; &lt;b&gt;Disclaimer&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2056,7 +2123,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportLensResponse res = new org.openapis.openapi.models.operations.ImportLensResponse() {{
+        org.openapis.openapi.models.operations.ImportLensResponse res = new org.openapis.openapi.models.operations.ImportLensResponse(contentType, httpRes.statusCode()) {{
             importLensOutput = null;
             validationException = null;
             conflictException = null;
@@ -2066,8 +2133,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2131,7 +2196,7 @@ public class SDK {
     }
 
     /**
-     * List of answers.
+     * List of answers for a particular workload and lens.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2165,7 +2230,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAnswersResponse res = new org.openapis.openapi.models.operations.ListAnswersResponse() {{
+        org.openapis.openapi.models.operations.ListAnswersResponse res = new org.openapis.openapi.models.operations.ListAnswersResponse(contentType, httpRes.statusCode()) {{
             listAnswersOutput = null;
             validationException = null;
             internalServerException = null;
@@ -2173,8 +2238,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2263,7 +2326,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCheckDetailsResponse res = new org.openapis.openapi.models.operations.ListCheckDetailsResponse() {{
+        org.openapis.openapi.models.operations.ListCheckDetailsResponse res = new org.openapis.openapi.models.operations.ListCheckDetailsResponse(contentType, httpRes.statusCode()) {{
             listCheckDetailsOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -2271,8 +2334,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2361,7 +2422,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCheckSummariesResponse res = new org.openapis.openapi.models.operations.ListCheckSummariesResponse() {{
+        org.openapis.openapi.models.operations.ListCheckSummariesResponse res = new org.openapis.openapi.models.operations.ListCheckSummariesResponse(contentType, httpRes.statusCode()) {{
             listCheckSummariesOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -2369,8 +2430,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2454,7 +2513,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLensReviewImprovementsResponse res = new org.openapis.openapi.models.operations.ListLensReviewImprovementsResponse() {{
+        org.openapis.openapi.models.operations.ListLensReviewImprovementsResponse res = new org.openapis.openapi.models.operations.ListLensReviewImprovementsResponse(contentType, httpRes.statusCode()) {{
             listLensReviewImprovementsOutput = null;
             validationException = null;
             internalServerException = null;
@@ -2462,8 +2521,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2513,7 +2570,7 @@ public class SDK {
     }
 
     /**
-     * List lens reviews.
+     * List lens reviews for a particular workload.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2547,7 +2604,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLensReviewsResponse res = new org.openapis.openapi.models.operations.ListLensReviewsResponse() {{
+        org.openapis.openapi.models.operations.ListLensReviewsResponse res = new org.openapis.openapi.models.operations.ListLensReviewsResponse(contentType, httpRes.statusCode()) {{
             listLensReviewsOutput = null;
             validationException = null;
             internalServerException = null;
@@ -2555,8 +2612,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2640,7 +2695,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLensSharesResponse res = new org.openapis.openapi.models.operations.ListLensSharesResponse() {{
+        org.openapis.openapi.models.operations.ListLensSharesResponse res = new org.openapis.openapi.models.operations.ListLensSharesResponse(contentType, httpRes.statusCode()) {{
             listLensSharesOutput = null;
             validationException = null;
             internalServerException = null;
@@ -2648,8 +2703,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2733,15 +2786,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLensesResponse res = new org.openapis.openapi.models.operations.ListLensesResponse() {{
+        org.openapis.openapi.models.operations.ListLensesResponse res = new org.openapis.openapi.models.operations.ListLensesResponse(contentType, httpRes.statusCode()) {{
             listLensesOutput = null;
             validationException = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2823,7 +2874,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMilestonesResponse res = new org.openapis.openapi.models.operations.ListMilestonesResponse() {{
+        org.openapis.openapi.models.operations.ListMilestonesResponse res = new org.openapis.openapi.models.operations.ListMilestonesResponse(contentType, httpRes.statusCode()) {{
             listMilestonesOutput = null;
             validationException = null;
             internalServerException = null;
@@ -2831,8 +2882,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2921,15 +2970,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListNotificationsResponse res = new org.openapis.openapi.models.operations.ListNotificationsResponse() {{
+        org.openapis.openapi.models.operations.ListNotificationsResponse res = new org.openapis.openapi.models.operations.ListNotificationsResponse(contentType, httpRes.statusCode()) {{
             listNotificationsOutput = null;
             validationException = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3006,15 +3053,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListShareInvitationsResponse res = new org.openapis.openapi.models.operations.ListShareInvitationsResponse() {{
+        org.openapis.openapi.models.operations.ListShareInvitationsResponse res = new org.openapis.openapi.models.operations.ListShareInvitationsResponse(contentType, httpRes.statusCode()) {{
             listShareInvitationsOutput = null;
             validationException = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3085,13 +3130,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceOutput = null;
             internalServerException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3154,7 +3197,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorkloadSharesResponse res = new org.openapis.openapi.models.operations.ListWorkloadSharesResponse() {{
+        org.openapis.openapi.models.operations.ListWorkloadSharesResponse res = new org.openapis.openapi.models.operations.ListWorkloadSharesResponse(contentType, httpRes.statusCode()) {{
             listWorkloadSharesOutput = null;
             validationException = null;
             internalServerException = null;
@@ -3162,8 +3205,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3213,7 +3254,7 @@ public class SDK {
     }
 
     /**
-     * List workloads. Paginated.
+     * Paginated list of workloads.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3252,15 +3293,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWorkloadsResponse res = new org.openapis.openapi.models.operations.ListWorkloadsResponse() {{
+        org.openapis.openapi.models.operations.ListWorkloadsResponse res = new org.openapis.openapi.models.operations.ListWorkloadsResponse(contentType, httpRes.statusCode()) {{
             listWorkloadsOutput = null;
             validationException = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3336,13 +3375,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceOutput = null;
             internalServerException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3405,13 +3442,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceOutput = null;
             internalServerException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3473,7 +3508,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAnswerResponse res = new org.openapis.openapi.models.operations.UpdateAnswerResponse() {{
+        org.openapis.openapi.models.operations.UpdateAnswerResponse res = new org.openapis.openapi.models.operations.UpdateAnswerResponse(contentType, httpRes.statusCode()) {{
             updateAnswerOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -3482,8 +3517,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3573,15 +3606,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalSettingsResponse res = new org.openapis.openapi.models.operations.UpdateGlobalSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalSettingsResponse res = new org.openapis.openapi.models.operations.UpdateGlobalSettingsResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             conflictException = null;
             internalServerException = null;
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3626,7 +3657,7 @@ public class SDK {
     }
 
     /**
-     * Update lens review.
+     * Update lens review for a particular workload.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3659,7 +3690,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLensReviewResponse res = new org.openapis.openapi.models.operations.UpdateLensReviewResponse() {{
+        org.openapis.openapi.models.operations.UpdateLensReviewResponse res = new org.openapis.openapi.models.operations.UpdateLensReviewResponse(contentType, httpRes.statusCode()) {{
             updateLensReviewOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -3668,8 +3699,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3759,7 +3788,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateShareInvitationResponse res = new org.openapis.openapi.models.operations.UpdateShareInvitationResponse() {{
+        org.openapis.openapi.models.operations.UpdateShareInvitationResponse res = new org.openapis.openapi.models.operations.UpdateShareInvitationResponse(contentType, httpRes.statusCode()) {{
             updateShareInvitationOutput = null;
             validationException = null;
             internalServerException = null;
@@ -3768,8 +3797,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3859,7 +3886,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWorkloadResponse res = new org.openapis.openapi.models.operations.UpdateWorkloadResponse() {{
+        org.openapis.openapi.models.operations.UpdateWorkloadResponse res = new org.openapis.openapi.models.operations.UpdateWorkloadResponse(contentType, httpRes.statusCode()) {{
             updateWorkloadOutput = null;
             validationException = null;
             resourceNotFoundException = null;
@@ -3868,8 +3895,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3959,7 +3984,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateWorkloadShareResponse res = new org.openapis.openapi.models.operations.UpdateWorkloadShareResponse() {{
+        org.openapis.openapi.models.operations.UpdateWorkloadShareResponse res = new org.openapis.openapi.models.operations.UpdateWorkloadShareResponse(contentType, httpRes.statusCode()) {{
             updateWorkloadShareOutput = null;
             validationException = null;
             internalServerException = null;
@@ -3968,8 +3993,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4026,7 +4049,7 @@ public class SDK {
     }
 
     /**
-     * Upgrade lens review.
+     * Upgrade lens review for a particular workload.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4059,7 +4082,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpgradeLensReviewResponse res = new org.openapis.openapi.models.operations.UpgradeLensReviewResponse() {{
+        org.openapis.openapi.models.operations.UpgradeLensReviewResponse res = new org.openapis.openapi.models.operations.UpgradeLensReviewResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             resourceNotFoundException = null;
             conflictException = null;
@@ -4067,8 +4090,6 @@ public class SDK {
             accessDeniedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

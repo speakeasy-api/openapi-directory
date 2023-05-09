@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMeshesResponse {
@@ -12,6 +13,7 @@ public class ListMeshesResponse {
      */
     
     public Object badRequestException;
+
     public ListMeshesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListMeshesResponse {
     
     
     public String contentType;
+
     public ListMeshesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListMeshesResponse {
      */
     
     public Object forbiddenException;
+
     public ListMeshesResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListMeshesResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListMeshesResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListMeshesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMeshesOutput listMeshesOutput;
+
     public ListMeshesResponse withListMeshesOutput(org.openapis.openapi.models.shared.ListMeshesOutput listMeshesOutput) {
         this.listMeshesOutput = listMeshesOutput;
         return this;
@@ -59,6 +65,7 @@ public class ListMeshesResponse {
      */
     
     public Object notFoundException;
+
     public ListMeshesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListMeshesResponse {
     
     
     public Integer statusCode;
+
     public ListMeshesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListMeshesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMeshesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListMeshesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListMeshesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class ListMeshesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListMeshesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListMeshesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

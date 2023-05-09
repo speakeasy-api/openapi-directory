@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterContainerImageRequest {
     @JsonProperty("digest")
     public String digest;
+
     public RegisterContainerImageRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -16,6 +17,7 @@ public class RegisterContainerImageRequest {
     
     @JsonProperty("label")
     public String label;
+
     public RegisterContainerImageRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -23,9 +25,15 @@ public class RegisterContainerImageRequest {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public RegisterContainerImageRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public RegisterContainerImageRequest(@JsonProperty("digest") String digest, @JsonProperty("label") String label, @JsonProperty("serviceName") String serviceName) {
+        this.digest = digest;
+        this.label = label;
+        this.serviceName = serviceName;
+  }
 }

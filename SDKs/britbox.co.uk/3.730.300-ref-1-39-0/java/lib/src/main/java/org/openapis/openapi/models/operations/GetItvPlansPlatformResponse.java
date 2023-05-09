@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItvPlansPlatformResponse {
     
     public String contentType;
+
     public GetItvPlansPlatformResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetItvPlansPlatformResponse {
      */
     
     public org.openapis.openapi.models.shared.ItvPlans itvPlans;
+
     public GetItvPlansPlatformResponse withItvPlans(org.openapis.openapi.models.shared.ItvPlans itvPlans) {
         this.itvPlans = itvPlans;
         return this;
@@ -29,6 +32,7 @@ public class GetItvPlansPlatformResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetItvPlansPlatformResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetItvPlansPlatformResponse {
     
     
     public Integer statusCode;
+
     public GetItvPlansPlatformResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetItvPlansPlatformResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItvPlansPlatformResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetItvPlansPlatformResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

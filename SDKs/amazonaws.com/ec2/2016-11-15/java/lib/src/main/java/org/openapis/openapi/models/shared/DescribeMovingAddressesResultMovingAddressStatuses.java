@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeMovingAddressesResultMovingAddressStatuses {
     
     public DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum moveStatus;
+
     public DescribeMovingAddressesResultMovingAddressStatuses withMoveStatus(DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum moveStatus) {
         this.moveStatus = moveStatus;
         return this;
@@ -19,9 +20,11 @@ public class DescribeMovingAddressesResultMovingAddressStatuses {
     
     
     public String publicIp;
+
     public DescribeMovingAddressesResultMovingAddressStatuses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public DescribeMovingAddressesResultMovingAddressStatuses(){}
 }

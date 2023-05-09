@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRuleResponse {
@@ -12,6 +13,7 @@ public class PutRuleResponse {
      */
     
     public Object concurrentModificationException;
+
     public PutRuleResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class PutRuleResponse {
     
     
     public String contentType;
+
     public PutRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutRuleResponse {
      */
     
     public Object internalException;
+
     public PutRuleResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class PutRuleResponse {
      */
     
     public Object invalidEventPatternException;
+
     public PutRuleResponse withInvalidEventPatternException(Object invalidEventPatternException) {
         this.invalidEventPatternException = invalidEventPatternException;
         return this;
@@ -49,6 +54,7 @@ public class PutRuleResponse {
      */
     
     public Object limitExceededException;
+
     public PutRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutRuleResponse {
      */
     
     public Object managedRuleException;
+
     public PutRuleResponse withManagedRuleException(Object managedRuleException) {
         this.managedRuleException = managedRuleException;
         return this;
@@ -69,6 +76,7 @@ public class PutRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRuleResponse putRuleResponse;
+
     public PutRuleResponse withPutRuleResponse(org.openapis.openapi.models.shared.PutRuleResponse putRuleResponse) {
         this.putRuleResponse = putRuleResponse;
         return this;
@@ -79,6 +87,7 @@ public class PutRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class PutRuleResponse {
     
     
     public Integer statusCode;
+
     public PutRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class PutRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMapVersionNumberCopyrightsZoomXYFormatResponse {
     
     public String contentType;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatResponse {
     
     
     public Integer statusCode;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetMapVersionNumberCopyrightsZoomXYFormatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMapVersionNumberCopyrightsZoomXYFormatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMapVersionNumberCopyrightsZoomXYFormatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

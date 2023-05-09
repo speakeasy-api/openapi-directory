@@ -15,6 +15,7 @@ public class BatchLookupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public BatchLookupPolicy withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +24,7 @@ public class BatchLookupPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchLookupPolicy withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class BatchLookupPolicy {
     
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchLookupPolicy withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public BatchLookupPolicy(@JsonProperty("ObjectReference") ObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

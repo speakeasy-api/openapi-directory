@@ -12,6 +12,7 @@ public class DescribeDocumentPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeDocumentPermissionRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class DescribeDocumentPermissionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DescribeDocumentPermissionRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class DescribeDocumentPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDocumentPermissionRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class DescribeDocumentPermissionRequest {
     
     @JsonProperty("PermissionType")
     public DocumentPermissionTypeEnum permissionType;
+
     public DescribeDocumentPermissionRequest withPermissionType(DocumentPermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
     }
     
+    public DescribeDocumentPermissionRequest(@JsonProperty("Name") String name, @JsonProperty("PermissionType") DocumentPermissionTypeEnum permissionType) {
+        this.name = name;
+        this.permissionType = permissionType;
+  }
 }

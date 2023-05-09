@@ -15,6 +15,7 @@ public class EmailTemplateInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateContent")
     public String templateContent;
+
     public EmailTemplateInputModel withTemplateContent(String templateContent) {
         this.templateContent = templateContent;
         return this;
@@ -23,9 +24,11 @@ public class EmailTemplateInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateName")
     public String templateName;
+
     public EmailTemplateInputModel withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public EmailTemplateInputModel(){}
 }

@@ -18,6 +18,7 @@ public class GoogleClassroomCoursework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateLink")
     public String alternateLink;
+
     public GoogleClassroomCoursework withAlternateLink(String alternateLink) {
         this.alternateLink = alternateLink;
         return this;
@@ -29,6 +30,7 @@ public class GoogleClassroomCoursework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleClassroomCoursework withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GoogleClassroomCoursework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public GoogleClassroomCoursework withState(String state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class GoogleClassroomCoursework {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicId")
     public String topicId;
+
     public GoogleClassroomCoursework withTopicId(String topicId) {
         this.topicId = topicId;
         return this;
     }
     
+    public GoogleClassroomCoursework(){}
 }

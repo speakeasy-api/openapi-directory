@@ -18,6 +18,7 @@ public class MosaicLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Integer columns;
+
     public MosaicLayout withColumns(Integer columns) {
         this.columns = columns;
         return this;
@@ -29,9 +30,11 @@ public class MosaicLayout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tiles")
     public Tile[] tiles;
+
     public MosaicLayout withTiles(Tile[] tiles) {
         this.tiles = tiles;
         return this;
     }
     
+    public MosaicLayout(){}
 }

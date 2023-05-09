@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersListResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersListResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersListResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersListResponse(contentType, httpRes.statusCode()) {{
             listContactCentersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersPatchResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersPatchResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersPatchResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -434,11 +418,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse() {{
+        org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse res = new org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse(contentType, httpRes.statusCode()) {{
             contactCenterQuota = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

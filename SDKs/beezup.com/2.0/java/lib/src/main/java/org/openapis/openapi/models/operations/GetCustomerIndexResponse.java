@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomerIndexResponse {
@@ -12,6 +13,7 @@ public class GetCustomerIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetCustomerIndexResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomerIndexResponse {
     
     
     public String contentType;
+
     public GetCustomerIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCustomerIndexResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetCustomerIndexResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetCustomerIndexResponse {
     
     
     public Integer statusCode;
+
     public GetCustomerIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetCustomerIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomerIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetCustomerIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomerIndex customerIndex;
+
     public GetCustomerIndexResponse withCustomerIndex(org.openapis.openapi.models.shared.CustomerIndex customerIndex) {
         this.customerIndex = customerIndex;
         return this;
     }
     
+    public GetCustomerIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

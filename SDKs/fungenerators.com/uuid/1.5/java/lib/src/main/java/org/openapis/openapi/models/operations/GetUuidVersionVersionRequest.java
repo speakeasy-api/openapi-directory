@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUuidVersionVersionRequest {
@@ -12,6 +13,7 @@ public class GetUuidVersionVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Long count;
+
     public GetUuidVersionVersionRequest withCount(Long count) {
         this.count = count;
         return this;
@@ -22,6 +24,7 @@ public class GetUuidVersionVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public GetUuidVersionVersionRequest withText(String text) {
         this.text = text;
         return this;
@@ -32,6 +35,7 @@ public class GetUuidVersionVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetUuidVersionVersionRequest withType(String type) {
         this.type = type;
         return this;
@@ -42,9 +46,13 @@ public class GetUuidVersionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public Long version;
+
     public GetUuidVersionVersionRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public GetUuidVersionVersionRequest(@JsonProperty("version") Long version) {
+        this.version = version;
+  }
 }

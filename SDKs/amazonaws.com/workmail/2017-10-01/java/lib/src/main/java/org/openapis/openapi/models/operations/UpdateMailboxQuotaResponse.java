@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMailboxQuotaResponse {
     
     public String contentType;
+
     public UpdateMailboxQuotaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMailboxQuotaResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateMailboxQuotaResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMailboxQuotaResponse {
      */
     
     public Object entityStateException;
+
     public UpdateMailboxQuotaResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMailboxQuotaResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateMailboxQuotaResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateMailboxQuotaResponse {
      */
     
     public Object organizationNotFoundException;
+
     public UpdateMailboxQuotaResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateMailboxQuotaResponse {
      */
     
     public Object organizationStateException;
+
     public UpdateMailboxQuotaResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateMailboxQuotaResponse {
     
     
     public Integer statusCode;
+
     public UpdateMailboxQuotaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMailboxQuotaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMailboxQuotaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateMailboxQuotaResponse {
      */
     
     public java.util.Map<String, Object> updateMailboxQuotaResponse;
+
     public UpdateMailboxQuotaResponse withUpdateMailboxQuotaResponse(java.util.Map<String, Object> updateMailboxQuotaResponse) {
         this.updateMailboxQuotaResponse = updateMailboxQuotaResponse;
         return this;
     }
     
+    public UpdateMailboxQuotaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

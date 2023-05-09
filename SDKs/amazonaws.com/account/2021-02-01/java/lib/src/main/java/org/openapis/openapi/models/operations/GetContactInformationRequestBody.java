@@ -15,9 +15,11 @@ public class GetContactInformationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public GetContactInformationRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public GetContactInformationRequestBody(){}
 }

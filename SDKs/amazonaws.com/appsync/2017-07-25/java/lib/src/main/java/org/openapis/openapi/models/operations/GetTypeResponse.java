@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTypeResponse {
@@ -12,6 +13,7 @@ public class GetTypeResponse {
      */
     
     public Object badRequestException;
+
     public GetTypeResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class GetTypeResponse {
      */
     
     public Object concurrentModificationException;
+
     public GetTypeResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class GetTypeResponse {
     
     
     public String contentType;
+
     public GetTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTypeResponse getTypeResponse;
+
     public GetTypeResponse withGetTypeResponse(org.openapis.openapi.models.shared.GetTypeResponse getTypeResponse) {
         this.getTypeResponse = getTypeResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetTypeResponse {
      */
     
     public Object internalFailureException;
+
     public GetTypeResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class GetTypeResponse {
      */
     
     public Object notFoundException;
+
     public GetTypeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetTypeResponse {
     
     
     public Integer statusCode;
+
     public GetTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetTypeResponse {
      */
     
     public Object unauthorizedException;
+
     public GetTypeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

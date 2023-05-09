@@ -18,6 +18,7 @@ public class ApigatewayListOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ApigatewayListOperationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ApigatewayListOperationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public ApigatewayOperation[] operations;
+
     public ApigatewayListOperationsResponse withOperations(ApigatewayOperation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public ApigatewayListOperationsResponse(){}
 }

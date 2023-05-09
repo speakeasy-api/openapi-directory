@@ -18,6 +18,7 @@ public class VoiceOfMerchantState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complyWithGuidelines")
     public ComplyWithGuidelines complyWithGuidelines;
+
     public VoiceOfMerchantState withComplyWithGuidelines(ComplyWithGuidelines complyWithGuidelines) {
         this.complyWithGuidelines = complyWithGuidelines;
         return this;
@@ -29,6 +30,7 @@ public class VoiceOfMerchantState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasBusinessAuthority")
     public Boolean hasBusinessAuthority;
+
     public VoiceOfMerchantState withHasBusinessAuthority(Boolean hasBusinessAuthority) {
         this.hasBusinessAuthority = hasBusinessAuthority;
         return this;
@@ -40,6 +42,7 @@ public class VoiceOfMerchantState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasVoiceOfMerchant")
     public Boolean hasVoiceOfMerchant;
+
     public VoiceOfMerchantState withHasVoiceOfMerchant(Boolean hasVoiceOfMerchant) {
         this.hasVoiceOfMerchant = hasVoiceOfMerchant;
         return this;
@@ -51,6 +54,7 @@ public class VoiceOfMerchantState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolveOwnershipConflict")
     public java.util.Map<String, Object> resolveOwnershipConflict;
+
     public VoiceOfMerchantState withResolveOwnershipConflict(java.util.Map<String, Object> resolveOwnershipConflict) {
         this.resolveOwnershipConflict = resolveOwnershipConflict;
         return this;
@@ -62,6 +66,7 @@ public class VoiceOfMerchantState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verify")
     public Verify verify;
+
     public VoiceOfMerchantState withVerify(Verify verify) {
         this.verify = verify;
         return this;
@@ -73,9 +78,11 @@ public class VoiceOfMerchantState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitForVoiceOfMerchant")
     public java.util.Map<String, Object> waitForVoiceOfMerchant;
+
     public VoiceOfMerchantState withWaitForVoiceOfMerchant(java.util.Map<String, Object> waitForVoiceOfMerchant) {
         this.waitForVoiceOfMerchant = waitForVoiceOfMerchant;
         return this;
     }
     
+    public VoiceOfMerchantState(){}
 }

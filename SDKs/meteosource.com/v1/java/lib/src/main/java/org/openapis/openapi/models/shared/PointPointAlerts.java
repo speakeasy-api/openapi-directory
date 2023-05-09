@@ -12,9 +12,11 @@ public class PointPointAlerts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public PointPointAlerts withData(String data) {
         this.data = data;
         return this;
     }
     
+    public PointPointAlerts(){}
 }

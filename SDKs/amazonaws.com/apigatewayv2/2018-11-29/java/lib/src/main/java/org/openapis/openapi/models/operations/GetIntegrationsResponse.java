@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIntegrationsResponse {
@@ -12,6 +13,7 @@ public class GetIntegrationsResponse {
      */
     
     public Object badRequestException;
+
     public GetIntegrationsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetIntegrationsResponse {
     
     
     public String contentType;
+
     public GetIntegrationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetIntegrationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIntegrationsResponse getIntegrationsResponse;
+
     public GetIntegrationsResponse withGetIntegrationsResponse(org.openapis.openapi.models.shared.GetIntegrationsResponse getIntegrationsResponse) {
         this.getIntegrationsResponse = getIntegrationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetIntegrationsResponse {
      */
     
     public Object notFoundException;
+
     public GetIntegrationsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetIntegrationsResponse {
     
     
     public Integer statusCode;
+
     public GetIntegrationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetIntegrationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIntegrationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetIntegrationsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetIntegrationsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetIntegrationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

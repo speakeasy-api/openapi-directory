@@ -19,6 +19,7 @@ public class StartExportTaskRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public StartExportTaskRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -27,6 +28,7 @@ public class StartExportTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportDataFormat")
     public ExportDataFormatEnum[] exportDataFormat;
+
     public StartExportTaskRequest withExportDataFormat(ExportDataFormatEnum[] exportDataFormat) {
         this.exportDataFormat = exportDataFormat;
         return this;
@@ -35,6 +37,7 @@ public class StartExportTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ExportFilter[] filters;
+
     public StartExportTaskRequest withFilters(ExportFilter[] filters) {
         this.filters = filters;
         return this;
@@ -45,9 +48,11 @@ public class StartExportTaskRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StartExportTaskRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public StartExportTaskRequest(){}
 }

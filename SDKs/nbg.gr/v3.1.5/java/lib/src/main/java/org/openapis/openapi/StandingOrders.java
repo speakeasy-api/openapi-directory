@@ -60,14 +60,12 @@ public class StandingOrders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersResponse res = new org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersResponse(contentType, httpRes.statusCode()) {{
             obReadStandingOrder6 = null;
             obReadStandingOrder6 = null;
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class DimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collapsed")
     public Boolean collapsed;
+
     public DimensionGroup withCollapsed(Boolean collapsed) {
         this.collapsed = collapsed;
         return this;
@@ -29,6 +30,7 @@ public class DimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("depth")
     public Integer depth;
+
     public DimensionGroup withDepth(Integer depth) {
         this.depth = depth;
         return this;
@@ -40,9 +42,11 @@ public class DimensionGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public DimensionRange range;
+
     public DimensionGroup withRange(DimensionRange range) {
         this.range = range;
         return this;
     }
     
+    public DimensionGroup(){}
 }

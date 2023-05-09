@@ -15,6 +15,7 @@ public class ListWorkspacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListWorkspacesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListWorkspacesResponse {
     
     @JsonProperty("workspaces")
     public WorkspaceSummary[] workspaces;
+
     public ListWorkspacesResponse withWorkspaces(WorkspaceSummary[] workspaces) {
         this.workspaces = workspaces;
         return this;
     }
     
+    public ListWorkspacesResponse(@JsonProperty("workspaces") WorkspaceSummary[] workspaces) {
+        this.workspaces = workspaces;
+  }
 }

@@ -7,14 +7,64 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
- * GETModifyVerifiedAccessTrustProviderOidcOptions - OpenID Connect options for an &lt;code&gt;oidc&lt;/code&gt;-type, user-identity based trust provider.
+ * GETModifyVerifiedAccessTrustProviderOidcOptions - Options for an OpenID Connect-compatible user-identity trust provider.
  */
 public class GETModifyVerifiedAccessTrustProviderOidcOptions {
+    @SpeakeasyMetadata("queryParam:name=AuthorizationEndpoint")
+    public String authorizationEndpoint;
+
+    public GETModifyVerifiedAccessTrustProviderOidcOptions withAuthorizationEndpoint(String authorizationEndpoint) {
+        this.authorizationEndpoint = authorizationEndpoint;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:name=ClientId")
+    public String clientId;
+
+    public GETModifyVerifiedAccessTrustProviderOidcOptions withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:name=ClientSecret")
+    public String clientSecret;
+
+    public GETModifyVerifiedAccessTrustProviderOidcOptions withClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:name=Issuer")
+    public String issuer;
+
+    public GETModifyVerifiedAccessTrustProviderOidcOptions withIssuer(String issuer) {
+        this.issuer = issuer;
+        return this;
+    }
+    
     @SpeakeasyMetadata("queryParam:name=Scope")
     public String scope;
+
     public GETModifyVerifiedAccessTrustProviderOidcOptions withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:name=TokenEndpoint")
+    public String tokenEndpoint;
+
+    public GETModifyVerifiedAccessTrustProviderOidcOptions withTokenEndpoint(String tokenEndpoint) {
+        this.tokenEndpoint = tokenEndpoint;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:name=UserInfoEndpoint")
+    public String userInfoEndpoint;
+
+    public GETModifyVerifiedAccessTrustProviderOidcOptions withUserInfoEndpoint(String userInfoEndpoint) {
+        this.userInfoEndpoint = userInfoEndpoint;
+        return this;
+    }
+    
+    public GETModifyVerifiedAccessTrustProviderOidcOptions(){}
 }

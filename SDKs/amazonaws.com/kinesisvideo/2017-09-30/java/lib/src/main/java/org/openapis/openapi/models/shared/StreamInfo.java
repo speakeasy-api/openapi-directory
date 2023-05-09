@@ -22,6 +22,7 @@ public class StreamInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public StreamInfo withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataRetentionInHours")
     public Long dataRetentionInHours;
+
     public StreamInfo withDataRetentionInHours(Long dataRetentionInHours) {
         this.dataRetentionInHours = dataRetentionInHours;
         return this;
@@ -38,6 +40,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceName")
     public String deviceName;
+
     public StreamInfo withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -46,6 +49,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public StreamInfo withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -54,6 +58,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaType")
     public String mediaType;
+
     public StreamInfo withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -62,6 +67,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public StreamInfo withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +76,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public StreamInfo withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -78,6 +85,7 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public StreamInfo withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -86,9 +94,11 @@ public class StreamInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public StreamInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public StreamInfo(){}
 }

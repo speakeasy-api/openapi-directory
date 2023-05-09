@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDestinationResponse {
@@ -12,6 +13,7 @@ public class UpdateDestinationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDestinationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDestinationResponse {
     
     
     public String contentType;
+
     public UpdateDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDestinationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDestinationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateDestinationResponse {
     
     
     public Integer statusCode;
+
     public UpdateDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDestinationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDestinationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDestinationResponse updateDestinationResponse;
+
     public UpdateDestinationResponse withUpdateDestinationResponse(org.openapis.openapi.models.shared.UpdateDestinationResponse updateDestinationResponse) {
         this.updateDestinationResponse = updateDestinationResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDestinationResponse {
      */
     
     public Object validationException;
+
     public UpdateDestinationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

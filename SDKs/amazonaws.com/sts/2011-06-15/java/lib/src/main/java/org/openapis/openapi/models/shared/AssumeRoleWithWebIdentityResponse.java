@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssumeRoleWithWebIdentityResponse {
     
     public AssumedRoleUser assumedRoleUser;
+
     public AssumeRoleWithWebIdentityResponse withAssumedRoleUser(AssumedRoleUser assumedRoleUser) {
         this.assumedRoleUser = assumedRoleUser;
         return this;
@@ -19,6 +20,7 @@ public class AssumeRoleWithWebIdentityResponse {
     
     
     public String audience;
+
     public AssumeRoleWithWebIdentityResponse withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -26,6 +28,7 @@ public class AssumeRoleWithWebIdentityResponse {
     
     
     public Credentials credentials;
+
     public AssumeRoleWithWebIdentityResponse withCredentials(Credentials credentials) {
         this.credentials = credentials;
         return this;
@@ -33,6 +36,7 @@ public class AssumeRoleWithWebIdentityResponse {
     
     
     public Long packedPolicySize;
+
     public AssumeRoleWithWebIdentityResponse withPackedPolicySize(Long packedPolicySize) {
         this.packedPolicySize = packedPolicySize;
         return this;
@@ -40,6 +44,7 @@ public class AssumeRoleWithWebIdentityResponse {
     
     
     public String provider;
+
     public AssumeRoleWithWebIdentityResponse withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -47,6 +52,7 @@ public class AssumeRoleWithWebIdentityResponse {
     
     
     public String sourceIdentity;
+
     public AssumeRoleWithWebIdentityResponse withSourceIdentity(String sourceIdentity) {
         this.sourceIdentity = sourceIdentity;
         return this;
@@ -54,9 +60,11 @@ public class AssumeRoleWithWebIdentityResponse {
     
     
     public String subjectFromWebIdentityToken;
+
     public AssumeRoleWithWebIdentityResponse withSubjectFromWebIdentityToken(String subjectFromWebIdentityToken) {
         this.subjectFromWebIdentityToken = subjectFromWebIdentityToken;
         return this;
     }
     
+    public AssumeRoleWithWebIdentityResponse(){}
 }

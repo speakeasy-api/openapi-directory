@@ -18,9 +18,11 @@ public class BucketEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultKmsKeyName")
     public String defaultKmsKeyName;
+
     public BucketEncryption withDefaultKmsKeyName(String defaultKmsKeyName) {
         this.defaultKmsKeyName = defaultKmsKeyName;
         return this;
     }
     
+    public BucketEncryption(){}
 }

@@ -22,6 +22,7 @@ public class SamplingRuleRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public SamplingRuleRecord withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class SamplingRuleRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedAt")
     public OffsetDateTime modifiedAt;
+
     public SamplingRuleRecord withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -40,9 +42,11 @@ public class SamplingRuleRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SamplingRule")
     public SamplingRule samplingRule;
+
     public SamplingRuleRecord withSamplingRule(SamplingRule samplingRule) {
         this.samplingRule = samplingRule;
         return this;
     }
     
+    public SamplingRuleRecord(){}
 }

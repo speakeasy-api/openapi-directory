@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateUserInGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateUserInGroupRequestBody requestBody;
+
     public CreateUserInGroupRequest withRequestBody(CreateUserInGroupRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class CreateUserInGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activate")
     public String activate;
+
     public CreateUserInGroupRequest withActivate(String activate) {
         this.activate = activate;
         return this;
     }
     
+    public CreateUserInGroupRequest(){}
 }

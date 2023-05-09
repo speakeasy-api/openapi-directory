@@ -15,6 +15,7 @@ public class Webhook {
      */
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public Webhook withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -25,9 +26,14 @@ public class Webhook {
      */
     @JsonProperty("url")
     public String url;
+
     public Webhook withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Webhook(@JsonProperty("headers") java.util.Map<String, String> headers, @JsonProperty("url") String url) {
+        this.headers = headers;
+        this.url = url;
+  }
 }

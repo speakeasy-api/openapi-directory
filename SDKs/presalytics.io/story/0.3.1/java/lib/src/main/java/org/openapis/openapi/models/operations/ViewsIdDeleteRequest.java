@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ViewsIdDeleteRequest {
@@ -12,9 +13,13 @@ public class ViewsIdDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=view_id")
     public String viewId;
+
     public ViewsIdDeleteRequest withViewId(String viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public ViewsIdDeleteRequest(@JsonProperty("view_id") String viewId) {
+        this.viewId = viewId;
+  }
 }

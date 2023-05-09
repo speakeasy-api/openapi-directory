@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDashboardResponse {
     
     public String contentType;
+
     public CreateDashboardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDashboardResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDashboardResponse createDashboardResponse;
+
     public CreateDashboardResponse withCreateDashboardResponse(org.openapis.openapi.models.shared.CreateDashboardResponse createDashboardResponse) {
         this.createDashboardResponse = createDashboardResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDashboardResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDashboardResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDashboardResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDashboardResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDashboardResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDashboardResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDashboardResponse {
     
     
     public Integer statusCode;
+
     public CreateDashboardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDashboardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDashboardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateDashboardResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDashboardResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class CreateDashboardResponse {
      */
     
     public Object throttlingException;
+
     public CreateDashboardResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDashboardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

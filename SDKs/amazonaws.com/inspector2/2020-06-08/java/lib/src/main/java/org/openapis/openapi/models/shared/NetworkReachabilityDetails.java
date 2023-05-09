@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NetworkReachabilityDetails {
     @JsonProperty("networkPath")
     public NetworkPath networkPath;
+
     public NetworkReachabilityDetails withNetworkPath(NetworkPath networkPath) {
         this.networkPath = networkPath;
         return this;
@@ -19,6 +20,7 @@ public class NetworkReachabilityDetails {
     
     @JsonProperty("openPortRange")
     public PortRange openPortRange;
+
     public NetworkReachabilityDetails withOpenPortRange(PortRange openPortRange) {
         this.openPortRange = openPortRange;
         return this;
@@ -26,9 +28,15 @@ public class NetworkReachabilityDetails {
     
     @JsonProperty("protocol")
     public NetworkProtocolEnum protocol;
+
     public NetworkReachabilityDetails withProtocol(NetworkProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public NetworkReachabilityDetails(@JsonProperty("networkPath") NetworkPath networkPath, @JsonProperty("openPortRange") PortRange openPortRange, @JsonProperty("protocol") NetworkProtocolEnum protocol) {
+        this.networkPath = networkPath;
+        this.openPortRange = openPortRange;
+        this.protocol = protocol;
+  }
 }

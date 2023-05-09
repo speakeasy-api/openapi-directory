@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ServerProcess {
     @JsonProperty("ConcurrentExecutions")
     public Long concurrentExecutions;
+
     public ServerProcess withConcurrentExecutions(Long concurrentExecutions) {
         this.concurrentExecutions = concurrentExecutions;
         return this;
@@ -21,6 +22,7 @@ public class ServerProcess {
     
     @JsonProperty("LaunchPath")
     public String launchPath;
+
     public ServerProcess withLaunchPath(String launchPath) {
         this.launchPath = launchPath;
         return this;
@@ -29,9 +31,14 @@ public class ServerProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public String parameters;
+
     public ServerProcess withParameters(String parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ServerProcess(@JsonProperty("ConcurrentExecutions") Long concurrentExecutions, @JsonProperty("LaunchPath") String launchPath) {
+        this.concurrentExecutions = concurrentExecutions;
+        this.launchPath = launchPath;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudDialogflowV2Message withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowV2Message withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2Message withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageAnnotation")
     public GoogleCloudDialogflowV2MessageAnnotation messageAnnotation;
+
     public GoogleCloudDialogflowV2Message withMessageAnnotation(GoogleCloudDialogflowV2MessageAnnotation messageAnnotation) {
         this.messageAnnotation = messageAnnotation;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2Message withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participant")
     public String participant;
+
     public GoogleCloudDialogflowV2Message withParticipant(String participant) {
         this.participant = participant;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participantRole")
     public GoogleCloudDialogflowV2MessageParticipantRoleEnum participantRole;
+
     public GoogleCloudDialogflowV2Message withParticipantRole(GoogleCloudDialogflowV2MessageParticipantRoleEnum participantRole) {
         this.participantRole = participantRole;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendTime")
     public String sendTime;
+
     public GoogleCloudDialogflowV2Message withSendTime(String sendTime) {
         this.sendTime = sendTime;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudDialogflowV2Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentAnalysis")
     public GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysis;
+
     public GoogleCloudDialogflowV2Message withSentimentAnalysis(GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysis) {
         this.sentimentAnalysis = sentimentAnalysis;
         return this;
     }
     
+    public GoogleCloudDialogflowV2Message(){}
 }

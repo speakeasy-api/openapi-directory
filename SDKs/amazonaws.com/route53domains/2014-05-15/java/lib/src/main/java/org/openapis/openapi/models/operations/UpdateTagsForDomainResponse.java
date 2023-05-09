@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTagsForDomainResponse {
     
     public String contentType;
+
     public UpdateTagsForDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTagsForDomainResponse {
      */
     
     public Object invalidInput;
+
     public UpdateTagsForDomainResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTagsForDomainResponse {
      */
     
     public Object operationLimitExceeded;
+
     public UpdateTagsForDomainResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -36,6 +40,7 @@ public class UpdateTagsForDomainResponse {
     
     
     public Integer statusCode;
+
     public UpdateTagsForDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateTagsForDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTagsForDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateTagsForDomainResponse {
      */
     
     public Object unsupportedTLD;
+
     public UpdateTagsForDomainResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
@@ -63,9 +70,14 @@ public class UpdateTagsForDomainResponse {
      */
     
     public java.util.Map<String, Object> updateTagsForDomainResponse;
+
     public UpdateTagsForDomainResponse withUpdateTagsForDomainResponse(java.util.Map<String, Object> updateTagsForDomainResponse) {
         this.updateTagsForDomainResponse = updateTagsForDomainResponse;
         return this;
     }
     
+    public UpdateTagsForDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

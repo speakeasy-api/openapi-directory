@@ -15,6 +15,7 @@ public class GetPrimaryIpsPrimaryIPsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetPrimaryIpsPrimaryIPsResponseMeta meta;
+
     public GetPrimaryIpsPrimaryIPsResponse withMeta(GetPrimaryIpsPrimaryIPsResponseMeta meta) {
         this.meta = meta;
         return this;
@@ -22,9 +23,13 @@ public class GetPrimaryIpsPrimaryIPsResponse {
     
     @JsonProperty("primary_ips")
     public GetPrimaryIpsPrimaryIPsResponsePrimaryIP[] primaryIps;
+
     public GetPrimaryIpsPrimaryIPsResponse withPrimaryIps(GetPrimaryIpsPrimaryIPsResponsePrimaryIP[] primaryIps) {
         this.primaryIps = primaryIps;
         return this;
     }
     
+    public GetPrimaryIpsPrimaryIPsResponse(@JsonProperty("primary_ips") GetPrimaryIpsPrimaryIPsResponsePrimaryIP[] primaryIps) {
+        this.primaryIps = primaryIps;
+  }
 }

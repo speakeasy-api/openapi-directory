@@ -12,6 +12,7 @@ public class DeleteCollection404ApplicationJSONErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteCollection404ApplicationJSONErrorDetails withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class DeleteCollection404ApplicationJSONErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public String item;
+
     public DeleteCollection404ApplicationJSONErrorDetails withItem(String item) {
         this.item = item;
         return this;
     }
     
+    public DeleteCollection404ApplicationJSONErrorDetails(){}
 }

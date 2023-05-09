@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUsageLimitRequest {
     @JsonProperty("amount")
     public Long amount;
+
     public CreateUsageLimitRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -19,6 +20,7 @@ public class CreateUsageLimitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breachAction")
     public UsageLimitBreachActionEnum breachAction;
+
     public CreateUsageLimitRequest withBreachAction(UsageLimitBreachActionEnum breachAction) {
         this.breachAction = breachAction;
         return this;
@@ -27,6 +29,7 @@ public class CreateUsageLimitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public UsageLimitPeriodEnum period;
+
     public CreateUsageLimitRequest withPeriod(UsageLimitPeriodEnum period) {
         this.period = period;
         return this;
@@ -34,6 +37,7 @@ public class CreateUsageLimitRequest {
     
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public CreateUsageLimitRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -41,9 +45,15 @@ public class CreateUsageLimitRequest {
     
     @JsonProperty("usageType")
     public UsageLimitUsageTypeEnum usageType;
+
     public CreateUsageLimitRequest withUsageType(UsageLimitUsageTypeEnum usageType) {
         this.usageType = usageType;
         return this;
     }
     
+    public CreateUsageLimitRequest(@JsonProperty("amount") Long amount, @JsonProperty("resourceArn") String resourceArn, @JsonProperty("usageType") UsageLimitUsageTypeEnum usageType) {
+        this.amount = amount;
+        this.resourceArn = resourceArn;
+        this.usageType = usageType;
+  }
 }

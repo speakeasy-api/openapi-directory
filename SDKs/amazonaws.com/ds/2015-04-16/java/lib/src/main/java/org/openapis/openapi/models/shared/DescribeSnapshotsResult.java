@@ -15,6 +15,7 @@ public class DescribeSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeSnapshotsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Snapshots")
     public Snapshot[] snapshots;
+
     public DescribeSnapshotsResult withSnapshots(Snapshot[] snapshots) {
         this.snapshots = snapshots;
         return this;
     }
     
+    public DescribeSnapshotsResult(){}
 }

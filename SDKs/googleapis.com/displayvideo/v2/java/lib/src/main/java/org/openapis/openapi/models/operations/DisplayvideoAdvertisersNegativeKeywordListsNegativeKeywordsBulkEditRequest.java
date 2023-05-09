@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BulkEditNegativeKeywordsRequestInput bulkEditNegativeKeywordsRequestInput;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withBulkEditNegativeKeywordsRequestInput(org.openapis.openapi.models.shared.BulkEditNegativeKeywordsRequestInput bulkEditNegativeKeywordsRequestInput) {
         this.bulkEditNegativeKeywordsRequestInput = bulkEditNegativeKeywordsRequestInput;
         return this;
@@ -29,6 +32,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -49,6 +54,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=negativeKeywordListId")
     public String negativeKeywordListId;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withNegativeKeywordListId(String negativeKeywordListId) {
         this.negativeKeywordListId = negativeKeywordListId;
         return this;
@@ -99,6 +109,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest(@JsonProperty("advertiserId") String advertiserId, @JsonProperty("negativeKeywordListId") String negativeKeywordListId) {
+        this.advertiserId = advertiserId;
+        this.negativeKeywordListId = negativeKeywordListId;
+  }
 }

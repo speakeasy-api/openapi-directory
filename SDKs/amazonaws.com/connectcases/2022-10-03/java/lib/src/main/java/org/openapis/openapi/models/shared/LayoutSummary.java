@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LayoutSummary {
     @JsonProperty("layoutArn")
     public String layoutArn;
+
     public LayoutSummary withLayoutArn(String layoutArn) {
         this.layoutArn = layoutArn;
         return this;
@@ -19,6 +20,7 @@ public class LayoutSummary {
     
     @JsonProperty("layoutId")
     public String layoutId;
+
     public LayoutSummary withLayoutId(String layoutId) {
         this.layoutId = layoutId;
         return this;
@@ -26,9 +28,15 @@ public class LayoutSummary {
     
     @JsonProperty("name")
     public String name;
+
     public LayoutSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LayoutSummary(@JsonProperty("layoutArn") String layoutArn, @JsonProperty("layoutId") String layoutId, @JsonProperty("name") String name) {
+        this.layoutArn = layoutArn;
+        this.layoutId = layoutId;
+        this.name = name;
+  }
 }

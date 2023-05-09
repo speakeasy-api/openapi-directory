@@ -15,6 +15,7 @@ public class OrdersCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public OrdersCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -26,6 +27,7 @@ public class OrdersCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public OrdersCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class OrdersCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionStatus")
     public String executionStatus;
+
     public OrdersCustomBatchResponseEntry withExecutionStatus(String executionStatus) {
         this.executionStatus = executionStatus;
         return this;
@@ -48,6 +51,7 @@ public class OrdersCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrdersCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -59,9 +63,11 @@ public class OrdersCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public OrdersCustomBatchResponseEntry withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public OrdersCustomBatchResponseEntry(){}
 }

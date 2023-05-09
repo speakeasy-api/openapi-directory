@@ -15,6 +15,7 @@ public class PartitionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetail")
     public ErrorDetail errorDetail;
+
     public PartitionError withErrorDetail(ErrorDetail errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -23,9 +24,11 @@ public class PartitionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public PartitionError withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
     }
     
+    public PartitionError(){}
 }

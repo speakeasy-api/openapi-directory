@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoubleclickbidmanagerQueriesRunRequest {
@@ -12,6 +13,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DoubleclickbidmanagerQueriesRunRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RunQueryRequest runQueryRequest;
+
     public DoubleclickbidmanagerQueriesRunRequest withRunQueryRequest(org.openapis.openapi.models.shared.RunQueryRequest runQueryRequest) {
         this.runQueryRequest = runQueryRequest;
         return this;
@@ -29,6 +32,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DoubleclickbidmanagerQueriesRunRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DoubleclickbidmanagerQueriesRunRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DoubleclickbidmanagerQueriesRunRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DoubleclickbidmanagerQueriesRunRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DoubleclickbidmanagerQueriesRunRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DoubleclickbidmanagerQueriesRunRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DoubleclickbidmanagerQueriesRunRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queryId")
     public String queryId;
+
     public DoubleclickbidmanagerQueriesRunRequest withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -109,6 +120,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DoubleclickbidmanagerQueriesRunRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=synchronous")
     public Boolean synchronous;
+
     public DoubleclickbidmanagerQueriesRunRequest withSynchronous(Boolean synchronous) {
         this.synchronous = synchronous;
         return this;
@@ -129,6 +142,7 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DoubleclickbidmanagerQueriesRunRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class DoubleclickbidmanagerQueriesRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DoubleclickbidmanagerQueriesRunRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DoubleclickbidmanagerQueriesRunRequest(@JsonProperty("queryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

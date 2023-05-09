@@ -18,9 +18,11 @@ public class CommentActorClientSpecificActorInfoYoutubeActorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public CommentActorClientSpecificActorInfoYoutubeActorInfo withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
     
+    public CommentActorClientSpecificActorInfoYoutubeActorInfo(){}
 }

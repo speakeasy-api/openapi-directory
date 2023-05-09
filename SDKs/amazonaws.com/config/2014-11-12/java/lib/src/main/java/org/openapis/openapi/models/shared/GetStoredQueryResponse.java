@@ -15,9 +15,11 @@ public class GetStoredQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoredQuery")
     public StoredQuery storedQuery;
+
     public GetStoredQueryResponse withStoredQuery(StoredQuery storedQuery) {
         this.storedQuery = storedQuery;
         return this;
     }
     
+    public GetStoredQueryResponse(){}
 }

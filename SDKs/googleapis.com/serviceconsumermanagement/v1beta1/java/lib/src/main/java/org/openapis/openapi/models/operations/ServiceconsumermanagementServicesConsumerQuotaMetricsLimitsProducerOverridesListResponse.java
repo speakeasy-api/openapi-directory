@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse {
     
     public String contentType;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
     
     
     public Integer statusCode;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducer
      */
     
     public org.openapis.openapi.models.shared.V1Beta1ListProducerOverridesResponse v1Beta1ListProducerOverridesResponse;
+
     public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse withV1Beta1ListProducerOverridesResponse(org.openapis.openapi.models.shared.V1Beta1ListProducerOverridesResponse v1Beta1ListProducerOverridesResponse) {
         this.v1Beta1ListProducerOverridesResponse = v1Beta1ListProducerOverridesResponse;
         return this;
     }
     
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GoogleAnalyticsConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public GoogleAnalyticsConnectorProfileCredentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,6 +23,7 @@ public class GoogleAnalyticsConnectorProfileCredentials {
     
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleAnalyticsConnectorProfileCredentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +31,7 @@ public class GoogleAnalyticsConnectorProfileCredentials {
     
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public GoogleAnalyticsConnectorProfileCredentials withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -37,6 +40,7 @@ public class GoogleAnalyticsConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthRequest")
     public ConnectorOAuthRequest oAuthRequest;
+
     public GoogleAnalyticsConnectorProfileCredentials withOAuthRequest(ConnectorOAuthRequest oAuthRequest) {
         this.oAuthRequest = oAuthRequest;
         return this;
@@ -45,9 +49,14 @@ public class GoogleAnalyticsConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public GoogleAnalyticsConnectorProfileCredentials withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public GoogleAnalyticsConnectorProfileCredentials(@JsonProperty("clientId") String clientId, @JsonProperty("clientSecret") String clientSecret) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+  }
 }

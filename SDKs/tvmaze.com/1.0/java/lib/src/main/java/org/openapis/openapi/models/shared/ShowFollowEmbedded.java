@@ -12,9 +12,11 @@ public class ShowFollowEmbedded {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show")
     public java.util.Map<String, Object> show;
+
     public ShowFollowEmbedded withShow(java.util.Map<String, Object> show) {
         this.show = show;
         return this;
     }
     
+    public ShowFollowEmbedded(){}
 }

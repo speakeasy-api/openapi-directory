@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodePushDeploymentsGet200ApplicationJSONLatestReleaseDiffPackageMap {
     @JsonProperty("size")
     public Double size;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestReleaseDiffPackageMap withSize(Double size) {
         this.size = size;
         return this;
@@ -16,9 +17,14 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestReleaseDiffPackageMap
     
     @JsonProperty("url")
     public String url;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestReleaseDiffPackageMap withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CodePushDeploymentsGet200ApplicationJSONLatestReleaseDiffPackageMap(@JsonProperty("size") Double size, @JsonProperty("url") String url) {
+        this.size = size;
+        this.url = url;
+  }
 }

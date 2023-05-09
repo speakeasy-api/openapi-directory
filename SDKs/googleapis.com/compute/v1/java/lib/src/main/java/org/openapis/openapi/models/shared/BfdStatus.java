@@ -18,6 +18,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bfdSessionInitializationMode")
     public BfdStatusBfdSessionInitializationModeEnum bfdSessionInitializationMode;
+
     public BfdStatus withBfdSessionInitializationMode(BfdStatusBfdSessionInitializationModeEnum bfdSessionInitializationMode) {
         this.bfdSessionInitializationMode = bfdSessionInitializationMode;
         return this;
@@ -29,6 +30,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configUpdateTimestampMicros")
     public String configUpdateTimestampMicros;
+
     public BfdStatus withConfigUpdateTimestampMicros(String configUpdateTimestampMicros) {
         this.configUpdateTimestampMicros = configUpdateTimestampMicros;
         return this;
@@ -37,6 +39,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPacketCounts")
     public BfdStatusPacketCounts controlPacketCounts;
+
     public BfdStatus withControlPacketCounts(BfdStatusPacketCounts controlPacketCounts) {
         this.controlPacketCounts = controlPacketCounts;
         return this;
@@ -48,6 +51,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPacketIntervals")
     public PacketIntervals[] controlPacketIntervals;
+
     public BfdStatus withControlPacketIntervals(PacketIntervals[] controlPacketIntervals) {
         this.controlPacketIntervals = controlPacketIntervals;
         return this;
@@ -59,6 +63,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localDiagnostic")
     public BfdStatusLocalDiagnosticEnum localDiagnostic;
+
     public BfdStatus withLocalDiagnostic(BfdStatusLocalDiagnosticEnum localDiagnostic) {
         this.localDiagnostic = localDiagnostic;
         return this;
@@ -70,6 +75,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localState")
     public BfdStatusLocalStateEnum localState;
+
     public BfdStatus withLocalState(BfdStatusLocalStateEnum localState) {
         this.localState = localState;
         return this;
@@ -81,6 +87,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negotiatedLocalControlTxIntervalMs")
     public Long negotiatedLocalControlTxIntervalMs;
+
     public BfdStatus withNegotiatedLocalControlTxIntervalMs(Long negotiatedLocalControlTxIntervalMs) {
         this.negotiatedLocalControlTxIntervalMs = negotiatedLocalControlTxIntervalMs;
         return this;
@@ -89,6 +96,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rxPacket")
     public BfdPacket rxPacket;
+
     public BfdStatus withRxPacket(BfdPacket rxPacket) {
         this.rxPacket = rxPacket;
         return this;
@@ -97,6 +105,7 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txPacket")
     public BfdPacket txPacket;
+
     public BfdStatus withTxPacket(BfdPacket txPacket) {
         this.txPacket = txPacket;
         return this;
@@ -108,9 +117,11 @@ public class BfdStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uptimeMs")
     public String uptimeMs;
+
     public BfdStatus withUptimeMs(String uptimeMs) {
         this.uptimeMs = uptimeMs;
         return this;
     }
     
+    public BfdStatus(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RedshiftDataParameters {
     @JsonProperty("Database")
     public String database;
+
     public RedshiftDataParameters withDatabase(String database) {
         this.database = database;
         return this;
@@ -22,6 +23,7 @@ public class RedshiftDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbUser")
     public String dbUser;
+
     public RedshiftDataParameters withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -30,21 +32,37 @@ public class RedshiftDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretManagerArn")
     public String secretManagerArn;
+
     public RedshiftDataParameters withSecretManagerArn(String secretManagerArn) {
         this.secretManagerArn = secretManagerArn;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sql")
     public String sql;
+
     public RedshiftDataParameters withSql(String sql) {
         this.sql = sql;
+        return this;
+    }
+    
+    /**
+     * A list of SQLs.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Sqls")
+    public String[] sqls;
+
+    public RedshiftDataParameters withSqls(String[] sqls) {
+        this.sqls = sqls;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public RedshiftDataParameters withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -53,9 +71,13 @@ public class RedshiftDataParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithEvent")
     public Boolean withEvent;
+
     public RedshiftDataParameters withWithEvent(Boolean withEvent) {
         this.withEvent = withEvent;
         return this;
     }
     
+    public RedshiftDataParameters(@JsonProperty("Database") String database) {
+        this.database = database;
+  }
 }

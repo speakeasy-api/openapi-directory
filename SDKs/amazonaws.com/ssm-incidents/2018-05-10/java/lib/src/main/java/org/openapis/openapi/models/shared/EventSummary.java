@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EventSummary {
     @JsonProperty("eventId")
     public String eventId;
+
     public EventSummary withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -27,6 +28,7 @@ public class EventSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventReferences")
     public EventReference[] eventReferences;
+
     public EventSummary withEventReferences(EventReference[] eventReferences) {
         this.eventReferences = eventReferences;
         return this;
@@ -36,6 +38,7 @@ public class EventSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTime")
     public OffsetDateTime eventTime;
+
     public EventSummary withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -43,6 +46,7 @@ public class EventSummary {
     
     @JsonProperty("eventType")
     public String eventType;
+
     public EventSummary withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -52,6 +56,7 @@ public class EventSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventUpdatedTime")
     public OffsetDateTime eventUpdatedTime;
+
     public EventSummary withEventUpdatedTime(OffsetDateTime eventUpdatedTime) {
         this.eventUpdatedTime = eventUpdatedTime;
         return this;
@@ -59,9 +64,17 @@ public class EventSummary {
     
     @JsonProperty("incidentRecordArn")
     public String incidentRecordArn;
+
     public EventSummary withIncidentRecordArn(String incidentRecordArn) {
         this.incidentRecordArn = incidentRecordArn;
         return this;
     }
     
+    public EventSummary(@JsonProperty("eventId") String eventId, @JsonProperty("eventTime") OffsetDateTime eventTime, @JsonProperty("eventType") String eventType, @JsonProperty("eventUpdatedTime") OffsetDateTime eventUpdatedTime, @JsonProperty("incidentRecordArn") String incidentRecordArn) {
+        this.eventId = eventId;
+        this.eventTime = eventTime;
+        this.eventType = eventType;
+        this.eventUpdatedTime = eventUpdatedTime;
+        this.incidentRecordArn = incidentRecordArn;
+  }
 }

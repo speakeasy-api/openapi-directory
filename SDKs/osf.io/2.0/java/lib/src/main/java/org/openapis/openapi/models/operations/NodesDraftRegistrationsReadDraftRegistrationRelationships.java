@@ -15,6 +15,7 @@ public class NodesDraftRegistrationsReadDraftRegistrationRelationships {
      */
     
     public String branchedFrom;
+
     public NodesDraftRegistrationsReadDraftRegistrationRelationships withBranchedFrom(String branchedFrom) {
         this.branchedFrom = branchedFrom;
         return this;
@@ -25,6 +26,7 @@ public class NodesDraftRegistrationsReadDraftRegistrationRelationships {
      */
     
     public String initiator;
+
     public NodesDraftRegistrationsReadDraftRegistrationRelationships withInitiator(String initiator) {
         this.initiator = initiator;
         return this;
@@ -35,9 +37,11 @@ public class NodesDraftRegistrationsReadDraftRegistrationRelationships {
      */
     
     public String registrationSchema;
+
     public NodesDraftRegistrationsReadDraftRegistrationRelationships withRegistrationSchema(String registrationSchema) {
         this.registrationSchema = registrationSchema;
         return this;
     }
     
+    public NodesDraftRegistrationsReadDraftRegistrationRelationships(){}
 }

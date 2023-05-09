@@ -12,9 +12,11 @@ public class PaginationLinksFirst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public PaginationLinksFirst withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public PaginationLinksFirst(){}
 }

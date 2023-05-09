@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FitnessUsersDatasetAggregateResponse {
@@ -12,6 +13,7 @@ public class FitnessUsersDatasetAggregateResponse {
      */
     
     public org.openapis.openapi.models.shared.AggregateResponse aggregateResponse;
+
     public FitnessUsersDatasetAggregateResponse withAggregateResponse(org.openapis.openapi.models.shared.AggregateResponse aggregateResponse) {
         this.aggregateResponse = aggregateResponse;
         return this;
@@ -19,6 +21,7 @@ public class FitnessUsersDatasetAggregateResponse {
     
     
     public String contentType;
+
     public FitnessUsersDatasetAggregateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FitnessUsersDatasetAggregateResponse {
     
     
     public Integer statusCode;
+
     public FitnessUsersDatasetAggregateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FitnessUsersDatasetAggregateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FitnessUsersDatasetAggregateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FitnessUsersDatasetAggregateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

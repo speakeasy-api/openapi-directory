@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSensitivityInspectionTemplatesResponse {
@@ -12,6 +13,7 @@ public class ListSensitivityInspectionTemplatesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSensitivityInspectionTemplatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSensitivityInspectionTemplatesResponse {
     
     
     public String contentType;
+
     public ListSensitivityInspectionTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSensitivityInspectionTemplatesResponse {
      */
     
     public Object internalServerException;
+
     public ListSensitivityInspectionTemplatesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSensitivityInspectionTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSensitivityInspectionTemplatesResponse listSensitivityInspectionTemplatesResponse;
+
     public ListSensitivityInspectionTemplatesResponse withListSensitivityInspectionTemplatesResponse(org.openapis.openapi.models.shared.ListSensitivityInspectionTemplatesResponse listSensitivityInspectionTemplatesResponse) {
         this.listSensitivityInspectionTemplatesResponse = listSensitivityInspectionTemplatesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListSensitivityInspectionTemplatesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListSensitivityInspectionTemplatesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class ListSensitivityInspectionTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListSensitivityInspectionTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListSensitivityInspectionTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSensitivityInspectionTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListSensitivityInspectionTemplatesResponse {
      */
     
     public Object throttlingException;
+
     public ListSensitivityInspectionTemplatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListSensitivityInspectionTemplatesResponse {
      */
     
     public Object validationException;
+
     public ListSensitivityInspectionTemplatesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSensitivityInspectionTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

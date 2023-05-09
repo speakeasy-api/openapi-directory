@@ -14,6 +14,7 @@ public class ListAccountsResponseLinks {
      */
     @JsonProperty("next")
     public String next;
+
     public ListAccountsResponseLinks withNext(String next) {
         this.next = next;
         return this;
@@ -26,9 +27,14 @@ public class ListAccountsResponseLinks {
      */
     @JsonProperty("prev")
     public String prev;
+
     public ListAccountsResponseLinks withPrev(String prev) {
         this.prev = prev;
         return this;
     }
     
+    public ListAccountsResponseLinks(@JsonProperty("next") String next, @JsonProperty("prev") String prev) {
+        this.next = next;
+        this.prev = prev;
+  }
 }

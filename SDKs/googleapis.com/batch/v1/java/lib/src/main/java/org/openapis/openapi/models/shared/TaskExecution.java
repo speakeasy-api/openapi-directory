@@ -18,9 +18,11 @@ public class TaskExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public TaskExecution withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
     }
     
+    public TaskExecution(){}
 }

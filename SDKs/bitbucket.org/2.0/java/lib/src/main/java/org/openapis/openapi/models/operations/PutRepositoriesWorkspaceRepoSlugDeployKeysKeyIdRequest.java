@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest {
@@ -12,6 +13,7 @@ public class PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
     public String keyId;
+
     public PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -24,6 +26,7 @@ public class PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -36,9 +39,15 @@ public class PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest(@JsonProperty("key_id") String keyId, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.keyId = keyId;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

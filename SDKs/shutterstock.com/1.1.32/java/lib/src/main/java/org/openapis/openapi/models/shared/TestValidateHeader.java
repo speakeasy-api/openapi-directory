@@ -18,9 +18,11 @@ public class TestValidateHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user-agent")
     public String userAgent;
+
     public TestValidateHeader withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public TestValidateHeader(){}
 }

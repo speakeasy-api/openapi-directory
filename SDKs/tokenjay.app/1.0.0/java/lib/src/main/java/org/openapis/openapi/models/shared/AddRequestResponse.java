@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AddRequestResponse - OK
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AddRequestResponse {
     
     public String ergoPayUrl;
+
     public AddRequestResponse withErgoPayUrl(String ergoPayUrl) {
         this.ergoPayUrl = ergoPayUrl;
         return this;
@@ -19,9 +20,14 @@ public class AddRequestResponse {
     
     
     public String requestId;
+
     public AddRequestResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public AddRequestResponse(@JsonProperty("ergoPayUrl") String ergoPayUrl, @JsonProperty("requestId") String requestId) {
+        this.ergoPayUrl = ergoPayUrl;
+        this.requestId = requestId;
+  }
 }

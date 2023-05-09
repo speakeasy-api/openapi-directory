@@ -15,6 +15,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentScalingFactor")
     public Long currentScalingFactor;
+
     public Ommeters withCurrentScalingFactor(Long currentScalingFactor) {
         this.currentScalingFactor = currentScalingFactor;
         return this;
@@ -26,6 +27,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadProfileType")
     public String loadProfileType;
+
     public Ommeters withLoadProfileType(String loadProfileType) {
         this.loadProfileType = loadProfileType;
         return this;
@@ -37,6 +39,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Ommeters withLocation(String location) {
         this.location = location;
         return this;
@@ -48,6 +51,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturerId")
     public String manufacturerId;
+
     public Ommeters withManufacturerId(String manufacturerId) {
         this.manufacturerId = manufacturerId;
         return this;
@@ -59,6 +63,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementType")
     public String measurementType;
+
     public Ommeters withMeasurementType(String measurementType) {
         this.measurementType = measurementType;
         return this;
@@ -70,6 +75,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public String meta;
+
     public Ommeters withMeta(String meta) {
         this.meta = meta;
         return this;
@@ -81,6 +87,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meterId")
     public String meterId;
+
     public Ommeters withMeterId(String meterId) {
         this.meterId = meterId;
         return this;
@@ -92,6 +99,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scalingFactor")
     public Long scalingFactor;
+
     public Ommeters withScalingFactor(Long scalingFactor) {
         this.scalingFactor = scalingFactor;
         return this;
@@ -103,6 +111,7 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Ommeters withType(String type) {
         this.type = type;
         return this;
@@ -114,9 +123,11 @@ public class Ommeters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voltageScalingFactor")
     public Long voltageScalingFactor;
+
     public Ommeters withVoltageScalingFactor(Long voltageScalingFactor) {
         this.voltageScalingFactor = voltageScalingFactor;
         return this;
     }
     
+    public Ommeters(){}
 }

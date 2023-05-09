@@ -58,14 +58,12 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentGetListResponse res = new org.openapis.openapi.models.operations.ShipmentGetListResponse() {{
+        org.openapis.openapi.models.operations.ShipmentGetListResponse res = new org.openapis.openapi.models.operations.ShipmentGetListResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment = null;
             rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelShipment = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentGetPingResponse res = new org.openapis.openapi.models.operations.ShipmentGetPingResponse() {{
+        org.openapis.openapi.models.operations.ShipmentGetPingResponse res = new org.openapis.openapi.models.operations.ShipmentGetPingResponse(contentType, httpRes.statusCode()) {{
             shipmentGetPing200ApplicationJSONObject = null;
             shipmentGetPing200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,12 +145,10 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentGetShippingCarrierResponse res = new org.openapis.openapi.models.operations.ShipmentGetShippingCarrierResponse() {{
+        org.openapis.openapi.models.operations.ShipmentGetShippingCarrierResponse res = new org.openapis.openapi.models.operations.ShipmentGetShippingCarrierResponse(contentType, httpRes.statusCode()) {{
             shipmentGetShippingCarrier200ApplicationJSONObject = null;
             shipmentGetShippingCarrier200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,12 +186,10 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentGetShippingprovidersResponse res = new org.openapis.openapi.models.operations.ShipmentGetShippingprovidersResponse() {{
+        org.openapis.openapi.models.operations.ShipmentGetShippingprovidersResponse res = new org.openapis.openapi.models.operations.ShipmentGetShippingprovidersResponse(contentType, httpRes.statusCode()) {{
             shipmentGetShippingproviders200ApplicationJSONObject = null;
             shipmentGetShippingproviders200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,12 +233,10 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentPostShipmentFormResponse res = new org.openapis.openapi.models.operations.ShipmentPostShipmentFormResponse() {{
+        org.openapis.openapi.models.operations.ShipmentPostShipmentFormResponse res = new org.openapis.openapi.models.operations.ShipmentPostShipmentFormResponse(contentType, httpRes.statusCode()) {{
             shipmentPostShipmentForm200ApplicationJSONObject = null;
             shipmentPostShipmentForm200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,12 +280,10 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentPostShipmentJsonResponse res = new org.openapis.openapi.models.operations.ShipmentPostShipmentJsonResponse() {{
+        org.openapis.openapi.models.operations.ShipmentPostShipmentJsonResponse res = new org.openapis.openapi.models.operations.ShipmentPostShipmentJsonResponse(contentType, httpRes.statusCode()) {{
             shipmentPostShipmentJSON200ApplicationJSONObject = null;
             shipmentPostShipmentJSON200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,12 +327,10 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentPostShipmentRawResponse res = new org.openapis.openapi.models.operations.ShipmentPostShipmentRawResponse() {{
+        org.openapis.openapi.models.operations.ShipmentPostShipmentRawResponse res = new org.openapis.openapi.models.operations.ShipmentPostShipmentRawResponse(contentType, httpRes.statusCode()) {{
             shipmentPostShipmentRaw200ApplicationJSONObject = null;
             shipmentPostShipmentRaw200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,14 +374,12 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentShipWithLabelFormResponse res = new org.openapis.openapi.models.operations.ShipmentShipWithLabelFormResponse() {{
+        org.openapis.openapi.models.operations.ShipmentShipWithLabelFormResponse res = new org.openapis.openapi.models.operations.ShipmentShipWithLabelFormResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult = null;
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -447,14 +431,12 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentShipWithLabelJsonResponse res = new org.openapis.openapi.models.operations.ShipmentShipWithLabelJsonResponse() {{
+        org.openapis.openapi.models.operations.ShipmentShipWithLabelJsonResponse res = new org.openapis.openapi.models.operations.ShipmentShipWithLabelJsonResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult = null;
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,14 +488,12 @@ public class Shipments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ShipmentShipWithLabelRawResponse res = new org.openapis.openapi.models.operations.ShipmentShipWithLabelRawResponse() {{
+        org.openapis.openapi.models.operations.ShipmentShipWithLabelRawResponse res = new org.openapis.openapi.models.operations.ShipmentShipWithLabelRawResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult = null;
             rechnungsdruckWebAppControllersApiApiResultRechnungsdruckWebAppControllersApiShipmentWithLabelResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

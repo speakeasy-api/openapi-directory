@@ -15,6 +15,7 @@ public class CountryViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CountryViewModel withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CountryViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CountryViewModel withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class CountryViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public CountryViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public CountryViewModel(){}
 }

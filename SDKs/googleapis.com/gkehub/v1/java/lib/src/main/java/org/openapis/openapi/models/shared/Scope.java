@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Scope {
     /**
+     * If true, all Memberships in the Fleet bind to this Scope.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allMemberships")
+    public Boolean allMemberships;
+
+    public Scope withAllMemberships(Boolean allMemberships) {
+        this.allMemberships = allMemberships;
+        return this;
+    }
+    
+    /**
      * Output only. When the scope was created.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Scope withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +42,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public Scope withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -40,6 +54,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Scope withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +66,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ScopeLifecycleState state;
+
     public Scope withState(ScopeLifecycleState state) {
         this.state = state;
         return this;
@@ -62,6 +78,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public Scope withUid(String uid) {
         this.uid = uid;
         return this;
@@ -73,9 +90,11 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Scope withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Scope(){}
 }

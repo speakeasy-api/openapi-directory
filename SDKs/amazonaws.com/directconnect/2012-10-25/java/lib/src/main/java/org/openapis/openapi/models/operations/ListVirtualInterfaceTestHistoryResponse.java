@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVirtualInterfaceTestHistoryResponse {
     
     public String contentType;
+
     public ListVirtualInterfaceTestHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListVirtualInterfaceTestHistoryResponse {
      */
     
     public Object directConnectClientException;
+
     public ListVirtualInterfaceTestHistoryResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class ListVirtualInterfaceTestHistoryResponse {
      */
     
     public Object directConnectServerException;
+
     public ListVirtualInterfaceTestHistoryResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListVirtualInterfaceTestHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVirtualInterfaceTestHistoryResponse listVirtualInterfaceTestHistoryResponse;
+
     public ListVirtualInterfaceTestHistoryResponse withListVirtualInterfaceTestHistoryResponse(org.openapis.openapi.models.shared.ListVirtualInterfaceTestHistoryResponse listVirtualInterfaceTestHistoryResponse) {
         this.listVirtualInterfaceTestHistoryResponse = listVirtualInterfaceTestHistoryResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListVirtualInterfaceTestHistoryResponse {
     
     
     public Integer statusCode;
+
     public ListVirtualInterfaceTestHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListVirtualInterfaceTestHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVirtualInterfaceTestHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListVirtualInterfaceTestHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

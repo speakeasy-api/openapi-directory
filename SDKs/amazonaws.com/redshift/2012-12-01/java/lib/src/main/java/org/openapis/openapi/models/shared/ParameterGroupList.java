@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ParameterGroupList {
     
     public String description;
+
     public ParameterGroupList withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ParameterGroupList {
     
     
     public String parameterGroupFamily;
+
     public ParameterGroupList withParameterGroupFamily(String parameterGroupFamily) {
         this.parameterGroupFamily = parameterGroupFamily;
         return this;
@@ -26,6 +28,7 @@ public class ParameterGroupList {
     
     
     public String parameterGroupName;
+
     public ParameterGroupList withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -33,9 +36,11 @@ public class ParameterGroupList {
     
     
     public TagList[] tags;
+
     public ParameterGroupList withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ParameterGroupList(){}
 }

@@ -15,6 +15,7 @@ public class ListOrders {
      */
     @JsonProperty("facets")
     public String[] facets;
+
     public ListOrders withFacets(String[] facets) {
         this.facets = facets;
         return this;
@@ -25,6 +26,7 @@ public class ListOrders {
      */
     @JsonProperty("list")
     public List[] list;
+
     public ListOrders withList(List[] list) {
         this.list = list;
         return this;
@@ -32,6 +34,7 @@ public class ListOrders {
     
     @JsonProperty("paging")
     public Paging paging;
+
     public ListOrders withPaging(Paging paging) {
         this.paging = paging;
         return this;
@@ -39,9 +42,16 @@ public class ListOrders {
     
     @JsonProperty("stats")
     public Stats stats;
+
     public ListOrders withStats(Stats stats) {
         this.stats = stats;
         return this;
     }
     
+    public ListOrders(@JsonProperty("facets") String[] facets, @JsonProperty("list") List[] list, @JsonProperty("paging") Paging paging, @JsonProperty("stats") Stats stats) {
+        this.facets = facets;
+        this.list = list;
+        this.paging = paging;
+        this.stats = stats;
+  }
 }

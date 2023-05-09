@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSignalingChannelResponse {
@@ -12,6 +13,7 @@ public class DescribeSignalingChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeSignalingChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeSignalingChannelResponse {
      */
     
     public Object clientLimitExceededException;
+
     public DescribeSignalingChannelResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSignalingChannelResponse {
     
     
     public String contentType;
+
     public DescribeSignalingChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSignalingChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSignalingChannelOutput describeSignalingChannelOutput;
+
     public DescribeSignalingChannelResponse withDescribeSignalingChannelOutput(org.openapis.openapi.models.shared.DescribeSignalingChannelOutput describeSignalingChannelOutput) {
         this.describeSignalingChannelOutput = describeSignalingChannelOutput;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSignalingChannelResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeSignalingChannelResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeSignalingChannelResponse {
     
     
     public Integer statusCode;
+
     public DescribeSignalingChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeSignalingChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSignalingChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeSignalingChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSignalingChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeSignalingChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

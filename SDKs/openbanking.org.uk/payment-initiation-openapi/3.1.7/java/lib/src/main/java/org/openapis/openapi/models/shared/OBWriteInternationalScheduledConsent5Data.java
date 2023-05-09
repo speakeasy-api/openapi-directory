@@ -15,6 +15,7 @@ public class OBWriteInternationalScheduledConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteInternationalScheduledConsent5DataAuthorisation authorisation;
+
     public OBWriteInternationalScheduledConsent5Data withAuthorisation(OBWriteInternationalScheduledConsent5DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -25,6 +26,7 @@ public class OBWriteInternationalScheduledConsent5Data {
      */
     @JsonProperty("Initiation")
     public OBWriteInternationalScheduledConsent5DataInitiation initiation;
+
     public OBWriteInternationalScheduledConsent5Data withInitiation(OBWriteInternationalScheduledConsent5DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -35,6 +37,7 @@ public class OBWriteInternationalScheduledConsent5Data {
      */
     @JsonProperty("Permission")
     public OBWriteInternationalScheduledConsent5DataPermissionEnum permission;
+
     public OBWriteInternationalScheduledConsent5Data withPermission(OBWriteInternationalScheduledConsent5DataPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -46,6 +49,7 @@ public class OBWriteInternationalScheduledConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteInternationalScheduledConsent5DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteInternationalScheduledConsent5Data withReadRefundAccount(OBWriteInternationalScheduledConsent5DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -57,9 +61,14 @@ public class OBWriteInternationalScheduledConsent5Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteInternationalScheduledConsent5Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
     }
     
+    public OBWriteInternationalScheduledConsent5Data(@JsonProperty("Initiation") OBWriteInternationalScheduledConsent5DataInitiation initiation, @JsonProperty("Permission") OBWriteInternationalScheduledConsent5DataPermissionEnum permission) {
+        this.initiation = initiation;
+        this.permission = permission;
+  }
 }

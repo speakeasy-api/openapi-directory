@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenewCertificateRequest {
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public RenewCertificateRequest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
     }
     
+    public RenewCertificateRequest(@JsonProperty("CertificateArn") String certificateArn) {
+        this.certificateArn = certificateArn;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeUsersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Users")
     public User[] users;
+
     public DescribeUsersResponse withUsers(User[] users) {
         this.users = users;
         return this;
     }
     
+    public DescribeUsersResponse(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAuthEventFeedbackRequest {
     @JsonProperty("EventId")
     public String eventId;
+
     public UpdateAuthEventFeedbackRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateAuthEventFeedbackRequest {
     
     @JsonProperty("FeedbackToken")
     public String feedbackToken;
+
     public UpdateAuthEventFeedbackRequest withFeedbackToken(String feedbackToken) {
         this.feedbackToken = feedbackToken;
         return this;
@@ -23,6 +25,7 @@ public class UpdateAuthEventFeedbackRequest {
     
     @JsonProperty("FeedbackValue")
     public FeedbackValueTypeEnum feedbackValue;
+
     public UpdateAuthEventFeedbackRequest withFeedbackValue(FeedbackValueTypeEnum feedbackValue) {
         this.feedbackValue = feedbackValue;
         return this;
@@ -30,6 +33,7 @@ public class UpdateAuthEventFeedbackRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public UpdateAuthEventFeedbackRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -37,9 +41,17 @@ public class UpdateAuthEventFeedbackRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public UpdateAuthEventFeedbackRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UpdateAuthEventFeedbackRequest(@JsonProperty("EventId") String eventId, @JsonProperty("FeedbackToken") String feedbackToken, @JsonProperty("FeedbackValue") FeedbackValueTypeEnum feedbackValue, @JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.eventId = eventId;
+        this.feedbackToken = feedbackToken;
+        this.feedbackValue = feedbackValue;
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

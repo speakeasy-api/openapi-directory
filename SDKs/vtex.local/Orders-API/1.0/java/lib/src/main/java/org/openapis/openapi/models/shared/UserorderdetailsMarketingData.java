@@ -15,6 +15,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("coupon")
     public String coupon;
+
     public UserorderdetailsMarketingData withCoupon(String coupon) {
         this.coupon = coupon;
         return this;
@@ -25,6 +26,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("id")
     public String id;
+
     public UserorderdetailsMarketingData withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("marketingTags")
     public String[] marketingTags;
+
     public UserorderdetailsMarketingData withMarketingTags(String[] marketingTags) {
         this.marketingTags = marketingTags;
         return this;
@@ -45,6 +48,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public UserorderdetailsMarketingData withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -55,6 +59,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("utmMedium")
     public String utmMedium;
+
     public UserorderdetailsMarketingData withUtmMedium(String utmMedium) {
         this.utmMedium = utmMedium;
         return this;
@@ -65,6 +70,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("utmPartner")
     public String utmPartner;
+
     public UserorderdetailsMarketingData withUtmPartner(String utmPartner) {
         this.utmPartner = utmPartner;
         return this;
@@ -75,6 +81,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("utmSource")
     public String utmSource;
+
     public UserorderdetailsMarketingData withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -85,6 +92,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("utmiCampaign")
     public String utmiCampaign;
+
     public UserorderdetailsMarketingData withUtmiCampaign(String utmiCampaign) {
         this.utmiCampaign = utmiCampaign;
         return this;
@@ -95,6 +103,7 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("utmiPart")
     public String utmiPart;
+
     public UserorderdetailsMarketingData withUtmiPart(String utmiPart) {
         this.utmiPart = utmiPart;
         return this;
@@ -105,9 +114,22 @@ public class UserorderdetailsMarketingData {
      */
     @JsonProperty("utmipage")
     public String utmipage;
+
     public UserorderdetailsMarketingData withUtmipage(String utmipage) {
         this.utmipage = utmipage;
         return this;
     }
     
+    public UserorderdetailsMarketingData(@JsonProperty("coupon") String coupon, @JsonProperty("id") String id, @JsonProperty("marketingTags") String[] marketingTags, @JsonProperty("utmCampaign") String utmCampaign, @JsonProperty("utmMedium") String utmMedium, @JsonProperty("utmPartner") String utmPartner, @JsonProperty("utmSource") String utmSource, @JsonProperty("utmiCampaign") String utmiCampaign, @JsonProperty("utmiPart") String utmiPart, @JsonProperty("utmipage") String utmipage) {
+        this.coupon = coupon;
+        this.id = id;
+        this.marketingTags = marketingTags;
+        this.utmCampaign = utmCampaign;
+        this.utmMedium = utmMedium;
+        this.utmPartner = utmPartner;
+        this.utmSource = utmSource;
+        this.utmiCampaign = utmiCampaign;
+        this.utmiPart = utmiPart;
+        this.utmipage = utmipage;
+  }
 }

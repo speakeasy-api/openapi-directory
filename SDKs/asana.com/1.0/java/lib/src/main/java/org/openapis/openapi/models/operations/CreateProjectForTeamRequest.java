@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectForTeamRequest {
@@ -12,6 +13,7 @@ public class CreateProjectForTeamRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateProjectForTeamRequestBodyInput requestBody;
+
     public CreateProjectForTeamRequest withRequestBody(CreateProjectForTeamRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class CreateProjectForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateProjectForTeamRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class CreateProjectForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateProjectForTeamRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class CreateProjectForTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_gid")
     public String teamGid;
+
     public CreateProjectForTeamRequest withTeamGid(String teamGid) {
         this.teamGid = teamGid;
         return this;
     }
     
+    public CreateProjectForTeamRequest(@JsonProperty("RequestBody") CreateProjectForTeamRequestBodyInput requestBody, @JsonProperty("team_gid") String teamGid) {
+        this.requestBody = requestBody;
+        this.teamGid = teamGid;
+  }
 }

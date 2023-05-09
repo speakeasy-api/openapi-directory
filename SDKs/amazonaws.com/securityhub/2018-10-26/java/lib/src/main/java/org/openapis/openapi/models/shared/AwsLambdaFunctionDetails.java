@@ -15,6 +15,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Architectures")
     public String[] architectures;
+
     public AwsLambdaFunctionDetails withArchitectures(String[] architectures) {
         this.architectures = architectures;
         return this;
@@ -23,6 +24,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public AwsLambdaFunctionCode code;
+
     public AwsLambdaFunctionDetails withCode(AwsLambdaFunctionCode code) {
         this.code = code;
         return this;
@@ -31,6 +33,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSha256")
     public String codeSha256;
+
     public AwsLambdaFunctionDetails withCodeSha256(String codeSha256) {
         this.codeSha256 = codeSha256;
         return this;
@@ -39,6 +42,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterConfig")
     public AwsLambdaFunctionDeadLetterConfig deadLetterConfig;
+
     public AwsLambdaFunctionDetails withDeadLetterConfig(AwsLambdaFunctionDeadLetterConfig deadLetterConfig) {
         this.deadLetterConfig = deadLetterConfig;
         return this;
@@ -47,6 +51,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public AwsLambdaFunctionEnvironment environment;
+
     public AwsLambdaFunctionDetails withEnvironment(AwsLambdaFunctionEnvironment environment) {
         this.environment = environment;
         return this;
@@ -55,6 +60,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionName")
     public String functionName;
+
     public AwsLambdaFunctionDetails withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -63,6 +69,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handler")
     public String handler;
+
     public AwsLambdaFunctionDetails withHandler(String handler) {
         this.handler = handler;
         return this;
@@ -71,6 +78,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public AwsLambdaFunctionDetails withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -79,6 +87,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModified")
     public String lastModified;
+
     public AwsLambdaFunctionDetails withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -87,6 +96,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Layers")
     public AwsLambdaFunctionLayer[] layers;
+
     public AwsLambdaFunctionDetails withLayers(AwsLambdaFunctionLayer[] layers) {
         this.layers = layers;
         return this;
@@ -95,6 +105,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterArn")
     public String masterArn;
+
     public AwsLambdaFunctionDetails withMasterArn(String masterArn) {
         this.masterArn = masterArn;
         return this;
@@ -103,6 +114,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemorySize")
     public Long memorySize;
+
     public AwsLambdaFunctionDetails withMemorySize(Long memorySize) {
         this.memorySize = memorySize;
         return this;
@@ -111,6 +123,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PackageType")
     public String packageType;
+
     public AwsLambdaFunctionDetails withPackageType(String packageType) {
         this.packageType = packageType;
         return this;
@@ -119,6 +132,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RevisionId")
     public String revisionId;
+
     public AwsLambdaFunctionDetails withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -127,6 +141,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public AwsLambdaFunctionDetails withRole(String role) {
         this.role = role;
         return this;
@@ -135,6 +150,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runtime")
     public String runtime;
+
     public AwsLambdaFunctionDetails withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
@@ -143,6 +159,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public AwsLambdaFunctionDetails withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -151,6 +168,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TracingConfig")
     public AwsLambdaFunctionTracingConfig tracingConfig;
+
     public AwsLambdaFunctionDetails withTracingConfig(AwsLambdaFunctionTracingConfig tracingConfig) {
         this.tracingConfig = tracingConfig;
         return this;
@@ -159,6 +177,7 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public AwsLambdaFunctionDetails withVersion(String version) {
         this.version = version;
         return this;
@@ -167,9 +186,11 @@ public class AwsLambdaFunctionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public AwsLambdaFunctionVpcConfig vpcConfig;
+
     public AwsLambdaFunctionDetails withVpcConfig(AwsLambdaFunctionVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public AwsLambdaFunctionDetails(){}
 }

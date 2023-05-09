@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAcceleratorResponse {
@@ -12,6 +13,7 @@ public class DescribeAcceleratorResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public DescribeAcceleratorResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAcceleratorResponse {
     
     
     public String contentType;
+
     public DescribeAcceleratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAcceleratorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAcceleratorResponse describeAcceleratorResponse;
+
     public DescribeAcceleratorResponse withDescribeAcceleratorResponse(org.openapis.openapi.models.shared.DescribeAcceleratorResponse describeAcceleratorResponse) {
         this.describeAcceleratorResponse = describeAcceleratorResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAcceleratorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeAcceleratorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAcceleratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeAcceleratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAcceleratorResponse {
     
     
     public Integer statusCode;
+
     public DescribeAcceleratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeAcceleratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAcceleratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAcceleratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DomainIspPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboxPercentage")
     public Double inboxPercentage;
+
     public DomainIspPlacement withInboxPercentage(Double inboxPercentage) {
         this.inboxPercentage = inboxPercentage;
         return this;
@@ -23,6 +24,7 @@ public class DomainIspPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboxRawCount")
     public Long inboxRawCount;
+
     public DomainIspPlacement withInboxRawCount(Long inboxRawCount) {
         this.inboxRawCount = inboxRawCount;
         return this;
@@ -31,6 +33,7 @@ public class DomainIspPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IspName")
     public String ispName;
+
     public DomainIspPlacement withIspName(String ispName) {
         this.ispName = ispName;
         return this;
@@ -39,6 +42,7 @@ public class DomainIspPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpamPercentage")
     public Double spamPercentage;
+
     public DomainIspPlacement withSpamPercentage(Double spamPercentage) {
         this.spamPercentage = spamPercentage;
         return this;
@@ -47,9 +51,11 @@ public class DomainIspPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpamRawCount")
     public Long spamRawCount;
+
     public DomainIspPlacement withSpamRawCount(Long spamRawCount) {
         this.spamRawCount = spamRawCount;
         return this;
     }
     
+    public DomainIspPlacement(){}
 }

@@ -15,6 +15,7 @@ public class UpdateCollaborationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateCollaborationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateCollaborationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateCollaborationRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCollaborationRequestBody(){}
 }

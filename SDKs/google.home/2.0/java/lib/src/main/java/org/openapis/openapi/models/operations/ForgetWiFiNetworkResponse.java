@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ForgetWiFiNetworkResponse {
     
     public String contentType;
+
     public ForgetWiFiNetworkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ForgetWiFiNetworkResponse {
     
     
     public String forgetWiFiNetwork200TextPlainObject;
+
     public ForgetWiFiNetworkResponse withForgetWiFiNetwork200TextPlainObject(String forgetWiFiNetwork200TextPlainObject) {
         this.forgetWiFiNetwork200TextPlainObject = forgetWiFiNetwork200TextPlainObject;
         return this;
@@ -23,6 +26,7 @@ public class ForgetWiFiNetworkResponse {
     
     
     public Integer statusCode;
+
     public ForgetWiFiNetworkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ForgetWiFiNetworkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ForgetWiFiNetworkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ForgetWiFiNetworkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesTablesCheckConsistencySecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption1 option1;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurity withOption1(BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption2 option2;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurity withOption2(BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption3 option3;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurity withOption3(BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption4 option4;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurity withOption4(BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class BigtableadminProjectsInstancesTablesCheckConsistencySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption5 option5;
+
     public BigtableadminProjectsInstancesTablesCheckConsistencySecurity withOption5(BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesCheckConsistencySecurity(){}
 }

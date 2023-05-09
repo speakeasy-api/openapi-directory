@@ -12,6 +12,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientVisibility")
     public String clientVisibility;
+
     public GetDiscoveryV2SuggestRequest withClientVisibility(String clientVisibility) {
         this.clientVisibility = clientVisibility;
         return this;
@@ -22,6 +23,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
     public String countryCode;
+
     public GetDiscoveryV2SuggestRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -32,6 +34,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoPoint")
     public String geoPoint;
+
     public GetDiscoveryV2SuggestRequest withGeoPoint(String geoPoint) {
         this.geoPoint = geoPoint;
         return this;
@@ -42,6 +45,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeFuzzy")
     public GetDiscoveryV2SuggestIncludeFuzzyEnum includeFuzzy;
+
     public GetDiscoveryV2SuggestRequest withIncludeFuzzy(GetDiscoveryV2SuggestIncludeFuzzyEnum includeFuzzy) {
         this.includeFuzzy = includeFuzzy;
         return this;
@@ -52,6 +56,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
     public GetDiscoveryV2SuggestIncludeLicensedContentEnum includeLicensedContent;
+
     public GetDiscoveryV2SuggestRequest withIncludeLicensedContent(GetDiscoveryV2SuggestIncludeLicensedContentEnum includeLicensedContent) {
         this.includeLicensedContent = includeLicensedContent;
         return this;
@@ -62,6 +67,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
     public GetDiscoveryV2SuggestIncludeSpellcheckEnum includeSpellcheck;
+
     public GetDiscoveryV2SuggestRequest withIncludeSpellcheck(GetDiscoveryV2SuggestIncludeSpellcheckEnum includeSpellcheck) {
         this.includeSpellcheck = includeSpellcheck;
         return this;
@@ -72,6 +78,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTBA")
     public GetDiscoveryV2SuggestIncludeTbaEnum includeTBA;
+
     public GetDiscoveryV2SuggestRequest withIncludeTBA(GetDiscoveryV2SuggestIncludeTbaEnum includeTBA) {
         this.includeTBA = includeTBA;
         return this;
@@ -82,6 +89,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTBD")
     public GetDiscoveryV2SuggestIncludeTbdEnum includeTBD;
+
     public GetDiscoveryV2SuggestRequest withIncludeTBD(GetDiscoveryV2SuggestIncludeTbdEnum includeTBD) {
         this.includeTBD = includeTBD;
         return this;
@@ -92,6 +100,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public GetDiscoveryV2SuggestRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -102,6 +111,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latlong")
     public String latlong;
+
     public GetDiscoveryV2SuggestRequest withLatlong(String latlong) {
         this.latlong = latlong;
         return this;
@@ -112,6 +122,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetDiscoveryV2SuggestRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -122,6 +133,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public String radius;
+
     public GetDiscoveryV2SuggestRequest withRadius(String radius) {
         this.radius = radius;
         return this;
@@ -132,6 +144,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segmentId")
     public String segmentId;
+
     public GetDiscoveryV2SuggestRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -142,6 +155,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetDiscoveryV2SuggestRequest withSize(String size) {
         this.size = size;
         return this;
@@ -152,6 +166,7 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public GetDiscoveryV2SuggestSourceEnum source;
+
     public GetDiscoveryV2SuggestRequest withSource(GetDiscoveryV2SuggestSourceEnum source) {
         this.source = source;
         return this;
@@ -162,9 +177,11 @@ public class GetDiscoveryV2SuggestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public GetDiscoveryV2SuggestUnitEnum unit;
+
     public GetDiscoveryV2SuggestRequest withUnit(GetDiscoveryV2SuggestUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetDiscoveryV2SuggestRequest(){}
 }

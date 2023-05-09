@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsVendorsDestinyVendorGroup {
     
     public Long vendorGroupHash;
+
     public DestinyComponentsVendorsDestinyVendorGroup withVendorGroupHash(Long vendorGroupHash) {
         this.vendorGroupHash = vendorGroupHash;
         return this;
@@ -23,9 +24,11 @@ public class DestinyComponentsVendorsDestinyVendorGroup {
      */
     
     public Long[] vendorHashes;
+
     public DestinyComponentsVendorsDestinyVendorGroup withVendorHashes(Long[] vendorHashes) {
         this.vendorHashes = vendorHashes;
         return this;
     }
     
+    public DestinyComponentsVendorsDestinyVendorGroup(){}
 }

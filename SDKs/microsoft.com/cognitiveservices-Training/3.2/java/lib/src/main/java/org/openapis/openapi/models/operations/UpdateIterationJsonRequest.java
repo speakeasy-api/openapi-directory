@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIterationJsonRequest {
@@ -12,6 +13,7 @@ public class UpdateIterationJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.IterationInput iterationInput;
+
     public UpdateIterationJsonRequest withIterationInput(org.openapis.openapi.models.shared.IterationInput iterationInput) {
         this.iterationInput = iterationInput;
         return this;
@@ -22,6 +24,7 @@ public class UpdateIterationJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
     public String iterationId;
+
     public UpdateIterationJsonRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -32,9 +35,15 @@ public class UpdateIterationJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public UpdateIterationJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public UpdateIterationJsonRequest(@JsonProperty("IterationInput") org.openapis.openapi.models.shared.IterationInput iterationInput, @JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId) {
+        this.iterationInput = iterationInput;
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+  }
 }

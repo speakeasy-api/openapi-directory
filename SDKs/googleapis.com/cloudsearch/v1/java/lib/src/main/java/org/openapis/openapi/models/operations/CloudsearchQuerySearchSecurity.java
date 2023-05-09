@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchQuerySearchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchQuerySearchSecurityOption1 option1;
+
     public CloudsearchQuerySearchSecurity withOption1(CloudsearchQuerySearchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudsearchQuerySearchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchQuerySearchSecurityOption2 option2;
+
     public CloudsearchQuerySearchSecurity withOption2(CloudsearchQuerySearchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudsearchQuerySearchSecurity(){}
 }

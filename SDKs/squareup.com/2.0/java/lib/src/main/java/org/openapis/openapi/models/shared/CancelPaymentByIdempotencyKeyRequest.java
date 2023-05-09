@@ -16,9 +16,13 @@ public class CancelPaymentByIdempotencyKeyRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CancelPaymentByIdempotencyKeyRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CancelPaymentByIdempotencyKeyRequest(@JsonProperty("idempotency_key") String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcampaignconfigurationRequest {
@@ -12,6 +13,7 @@ public class GetcampaignconfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetcampaignconfigurationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetcampaignconfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetcampaignconfigurationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetcampaignconfigurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaignId")
     public String campaignId;
+
     public GetcampaignconfigurationRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
     }
     
+    public GetcampaignconfigurationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("campaignId") String campaignId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.campaignId = campaignId;
+  }
 }

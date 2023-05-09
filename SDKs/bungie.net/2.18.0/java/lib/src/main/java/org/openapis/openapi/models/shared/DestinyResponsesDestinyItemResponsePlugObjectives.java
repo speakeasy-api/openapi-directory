@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyItemResponsePlugObjectives {
     
     public DestinyComponentsItemsDestinyItemPlugObjectivesComponent data;
+
     public DestinyResponsesDestinyItemResponsePlugObjectives withData(DestinyComponentsItemsDestinyItemPlugObjectivesComponent data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class DestinyResponsesDestinyItemResponsePlugObjectives {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyItemResponsePlugObjectives withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -30,9 +32,11 @@ public class DestinyResponsesDestinyItemResponsePlugObjectives {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyItemResponsePlugObjectives withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyItemResponsePlugObjectives(){}
 }

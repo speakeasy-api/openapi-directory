@@ -15,6 +15,7 @@ public class ComparedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public ComparedFace withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,6 +24,7 @@ public class ComparedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ComparedFace withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -31,6 +33,7 @@ public class ComparedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Emotions")
     public Emotion[] emotions;
+
     public ComparedFace withEmotions(Emotion[] emotions) {
         this.emotions = emotions;
         return this;
@@ -39,6 +42,7 @@ public class ComparedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Landmarks")
     public Landmark[] landmarks;
+
     public ComparedFace withLandmarks(Landmark[] landmarks) {
         this.landmarks = landmarks;
         return this;
@@ -47,6 +51,7 @@ public class ComparedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pose")
     public Pose pose;
+
     public ComparedFace withPose(Pose pose) {
         this.pose = pose;
         return this;
@@ -55,6 +60,7 @@ public class ComparedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quality")
     public ImageQuality quality;
+
     public ComparedFace withQuality(ImageQuality quality) {
         this.quality = quality;
         return this;
@@ -63,9 +69,11 @@ public class ComparedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Smile")
     public Smile smile;
+
     public ComparedFace withSmile(Smile smile) {
         this.smile = smile;
         return this;
     }
     
+    public ComparedFace(){}
 }

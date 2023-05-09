@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMapRunResponse {
     
     public String contentType;
+
     public DescribeMapRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMapRunResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMapRunOutput describeMapRunOutput;
+
     public DescribeMapRunResponse withDescribeMapRunOutput(org.openapis.openapi.models.shared.DescribeMapRunOutput describeMapRunOutput) {
         this.describeMapRunOutput = describeMapRunOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMapRunResponse {
      */
     
     public Object invalidArn;
+
     public DescribeMapRunResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMapRunResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeMapRunResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMapRunResponse {
     
     
     public Integer statusCode;
+
     public DescribeMapRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeMapRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMapRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMapRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

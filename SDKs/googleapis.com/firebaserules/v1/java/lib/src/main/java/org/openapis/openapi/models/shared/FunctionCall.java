@@ -18,6 +18,7 @@ public class FunctionCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("args")
     public Object[] args;
+
     public FunctionCall withArgs(Object[] args) {
         this.args = args;
         return this;
@@ -29,9 +30,11 @@ public class FunctionCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public FunctionCall withFunction(String function) {
         this.function = function;
         return this;
     }
     
+    public FunctionCall(){}
 }

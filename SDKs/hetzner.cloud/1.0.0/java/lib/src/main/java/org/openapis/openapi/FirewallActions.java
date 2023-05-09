@@ -58,11 +58,9 @@ public class FirewallActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFirewallsIdActionsResponse res = new org.openapis.openapi.models.operations.GetFirewallsIdActionsResponse() {{
+        org.openapis.openapi.models.operations.GetFirewallsIdActionsResponse res = new org.openapis.openapi.models.operations.GetFirewallsIdActionsResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class FirewallActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFirewallsIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetFirewallsIdActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetFirewallsIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetFirewallsIdActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,11 +145,9 @@ public class FirewallActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFirewallsIdActionsApplyToResourcesResponse res = new org.openapis.openapi.models.operations.PostFirewallsIdActionsApplyToResourcesResponse() {{
+        org.openapis.openapi.models.operations.PostFirewallsIdActionsApplyToResourcesResponse res = new org.openapis.openapi.models.operations.PostFirewallsIdActionsApplyToResourcesResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -201,11 +195,9 @@ public class FirewallActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFirewallsIdActionsRemoveFromResourcesResponse res = new org.openapis.openapi.models.operations.PostFirewallsIdActionsRemoveFromResourcesResponse() {{
+        org.openapis.openapi.models.operations.PostFirewallsIdActionsRemoveFromResourcesResponse res = new org.openapis.openapi.models.operations.PostFirewallsIdActionsRemoveFromResourcesResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -252,11 +244,9 @@ public class FirewallActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostFirewallsIdActionsSetRulesResponse res = new org.openapis.openapi.models.operations.PostFirewallsIdActionsSetRulesResponse() {{
+        org.openapis.openapi.models.operations.PostFirewallsIdActionsSetRulesResponse res = new org.openapis.openapi.models.operations.PostFirewallsIdActionsSetRulesResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

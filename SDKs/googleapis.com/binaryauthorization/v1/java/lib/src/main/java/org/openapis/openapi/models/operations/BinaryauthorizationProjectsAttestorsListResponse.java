@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BinaryauthorizationProjectsAttestorsListResponse {
     
     public String contentType;
+
     public BinaryauthorizationProjectsAttestorsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BinaryauthorizationProjectsAttestorsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAttestorsResponse listAttestorsResponse;
+
     public BinaryauthorizationProjectsAttestorsListResponse withListAttestorsResponse(org.openapis.openapi.models.shared.ListAttestorsResponse listAttestorsResponse) {
         this.listAttestorsResponse = listAttestorsResponse;
         return this;
@@ -26,6 +29,7 @@ public class BinaryauthorizationProjectsAttestorsListResponse {
     
     
     public Integer statusCode;
+
     public BinaryauthorizationProjectsAttestorsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BinaryauthorizationProjectsAttestorsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BinaryauthorizationProjectsAttestorsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BinaryauthorizationProjectsAttestorsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

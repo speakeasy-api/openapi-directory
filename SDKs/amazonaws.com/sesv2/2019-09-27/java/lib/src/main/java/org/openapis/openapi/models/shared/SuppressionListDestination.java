@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SuppressionListDestination {
     @JsonProperty("SuppressionListImportAction")
     public SuppressionListImportActionEnum suppressionListImportAction;
+
     public SuppressionListDestination withSuppressionListImportAction(SuppressionListImportActionEnum suppressionListImportAction) {
         this.suppressionListImportAction = suppressionListImportAction;
         return this;
     }
     
+    public SuppressionListDestination(@JsonProperty("SuppressionListImportAction") SuppressionListImportActionEnum suppressionListImportAction) {
+        this.suppressionListImportAction = suppressionListImportAction;
+  }
 }

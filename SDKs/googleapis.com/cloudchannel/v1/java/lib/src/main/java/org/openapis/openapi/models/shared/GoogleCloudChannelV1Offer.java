@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public GoogleCloudChannelV1Constraints constraints;
+
     public GoogleCloudChannelV1Offer withConstraints(GoogleCloudChannelV1Constraints constraints) {
         this.constraints = constraints;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealCode")
     public String dealCode;
+
     public GoogleCloudChannelV1Offer withDealCode(String dealCode) {
         this.dealCode = dealCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudChannelV1Offer withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingInfo")
     public GoogleCloudChannelV1MarketingInfo marketingInfo;
+
     public GoogleCloudChannelV1Offer withMarketingInfo(GoogleCloudChannelV1MarketingInfo marketingInfo) {
         this.marketingInfo = marketingInfo;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudChannelV1Offer withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterDefinitions")
     public GoogleCloudChannelV1ParameterDefinition[] parameterDefinitions;
+
     public GoogleCloudChannelV1Offer withParameterDefinitions(GoogleCloudChannelV1ParameterDefinition[] parameterDefinitions) {
         this.parameterDefinitions = parameterDefinitions;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public GoogleCloudChannelV1Plan plan;
+
     public GoogleCloudChannelV1Offer withPlan(GoogleCloudChannelV1Plan plan) {
         this.plan = plan;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceByResources")
     public GoogleCloudChannelV1PriceByResource[] priceByResources;
+
     public GoogleCloudChannelV1Offer withPriceByResources(GoogleCloudChannelV1PriceByResource[] priceByResources) {
         this.priceByResources = priceByResources;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public GoogleCloudChannelV1Sku sku;
+
     public GoogleCloudChannelV1Offer withSku(GoogleCloudChannelV1Sku sku) {
         this.sku = sku;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudChannelV1Offer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudChannelV1Offer withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudChannelV1Offer(){}
 }

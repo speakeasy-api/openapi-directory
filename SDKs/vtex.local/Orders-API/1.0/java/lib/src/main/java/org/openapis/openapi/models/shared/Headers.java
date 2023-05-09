@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Headers {
     @JsonProperty("key")
     public String key;
+
     public Headers withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public Headers(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

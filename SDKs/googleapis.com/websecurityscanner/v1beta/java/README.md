@@ -16,31 +16,30 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.Authentication;
+import org.openapis.openapi.models.shared.CustomAccount;
+import org.openapis.openapi.models.shared.GoogleAccount;
+import org.openapis.openapi.models.shared.IapCredential;
+import org.openapis.openapi.models.shared.IapTestServiceAccountInfo;
+import org.openapis.openapi.models.shared.ScanConfig;
+import org.openapis.openapi.models.shared.ScanConfigError;
+import org.openapis.openapi.models.shared.ScanConfigErrorCodeEnum;
 import org.openapis.openapi.models.shared.ScanConfigExportToSecurityCommandCenterEnum;
 import org.openapis.openapi.models.shared.ScanConfigRiskLevelEnum;
 import org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum;
 import org.openapis.openapi.models.shared.ScanConfigUserAgentEnum;
-import org.openapis.openapi.models.shared.ScanConfig;
-import org.openapis.openapi.models.shared.Schedule;
+import org.openapis.openapi.models.shared.ScanRun;
+import org.openapis.openapi.models.shared.ScanRunErrorTrace;
+import org.openapis.openapi.models.shared.ScanRunErrorTraceCodeEnum;
 import org.openapis.openapi.models.shared.ScanRunExecutionStateEnum;
 import org.openapis.openapi.models.shared.ScanRunResultStateEnum;
-import org.openapis.openapi.models.shared.ScanRun;
-import org.openapis.openapi.models.shared.ScanRunWarningTraceCodeEnum;
 import org.openapis.openapi.models.shared.ScanRunWarningTrace;
-import org.openapis.openapi.models.shared.ScanRunErrorTraceCodeEnum;
-import org.openapis.openapi.models.shared.ScanRunErrorTrace;
-import org.openapis.openapi.models.shared.ScanConfigErrorCodeEnum;
-import org.openapis.openapi.models.shared.ScanConfigError;
-import org.openapis.openapi.models.shared.Authentication;
-import org.openapis.openapi.models.shared.IapCredential;
-import org.openapis.openapi.models.shared.IapTestServiceAccountInfo;
-import org.openapis.openapi.models.shared.GoogleAccount;
-import org.openapis.openapi.models.shared.CustomAccount;
+import org.openapis.openapi.models.shared.ScanRunWarningTraceCodeEnum;
+import org.openapis.openapi.models.shared.Schedule;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -49,25 +48,25 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest() {{
-                dollarXgafv = "2";
+            WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 scanConfig = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "provident";
-                            password = "distinctio";
-                            username = "Rosalinda_Mitchell84";
-                        }};
+                            loginUrl = "distinctio";
+                            password = "quibusdam";
+                            username = "Leda_Stiedemann";
+                        }};;
                         googleAccount = new GoogleAccount() {{
                             password = "vel";
                             username = "Linda.Oberbrunner";
-                        }};
+                        }};;
                         iapCredential = new IapCredential() {{
                             iapTestServiceAccountInfo = new IapTestServiceAccountInfo() {{
                                 targetAudienceClientId = "magnam";
-                            }};
-                        }};
-                    }};
+                            }};;
+                        }};;
+                    }};;
                     blacklistPatterns = new String[]{{
                         add("ipsa"),
                         add("delectus"),
@@ -75,78 +74,87 @@ public class Application {
                         add("suscipit"),
                     }};
                     displayName = "molestiae";
-                    exportToSecurityCommandCenter = "DISABLED";
+                    exportToSecurityCommandCenter = ScanConfigExportToSecurityCommandCenterEnum.DISABLED;
                     ignoreHttpStatusErrors = false;
                     latestRun = new ScanRun() {{
                         endTime = "placeat";
                         errorTrace = new ScanRunErrorTrace() {{
-                            code = "TIMED_OUT_WHILE_SCANNING";
+                            code = ScanRunErrorTraceCodeEnum.TIMED_OUT_WHILE_SCANNING;
                             mostCommonHttpErrorCode = 479977;
                             scanConfigError = new ScanConfigError() {{
-                                code = "MALFORMED_RESOURCE_NAME";
+                                code = ScanConfigErrorCodeEnum.MALFORMED_RESOURCE_NAME;
                                 fieldName = "nisi";
-                            }};
-                        }};
-                        executionState = "FINISHED";
+                            }};;
+                        }};;
+                        executionState = ScanRunExecutionStateEnum.FINISHED;
                         hasVulnerabilities = false;
-                        name = "temporibus";
-                        progressPercent = 71036;
-                        resultState = "SUCCESS";
-                        startTime = "veritatis";
-                        urlsCrawledCount = "deserunt";
-                        urlsTestedCount = "perferendis";
+                        name = "Miss Raymond Hauck III";
+                        progressPercent = 832620;
+                        resultState = ScanRunResultStateEnum.KILLED;
+                        startTime = "quo";
+                        urlsCrawledCount = "odit";
+                        urlsTestedCount = "at";
                         warningTraces = new org.openapis.openapi.models.shared.ScanRunWarningTrace[]{{
                             add(new ScanRunWarningTrace() {{
-                                code = "BLOCKED_BY_IAP";
+                                code = ScanRunWarningTraceCodeEnum.NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN;
                             }}),
                             add(new ScanRunWarningTrace() {{
-                                code = "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN";
+                                code = ScanRunWarningTraceCodeEnum.TOO_MANY_CRAWL_RESULTS;
+                            }}),
+                            add(new ScanRunWarningTrace() {{
+                                code = ScanRunWarningTraceCodeEnum.BLOCKED_BY_IAP;
+                            }}),
+                            add(new ScanRunWarningTrace() {{
+                                code = ScanRunWarningTraceCodeEnum.BLOCKED_BY_IAP;
                             }}),
                         }};
-                    }};
+                    }};;
                     managedScan = false;
-                    maxQps = 778157;
-                    name = "odit";
-                    riskLevel = "LOW";
+                    maxQps = 461479;
+                    name = "Miss Lowell Parisian";
+                    riskLevel = ScanConfigRiskLevelEnum.NORMAL;
                     schedule = new Schedule() {{
-                        intervalDurationDays = 870088;
-                        scheduleTime = "maiores";
-                    }};
+                        intervalDurationDays = 143353;
+                        scheduleTime = "deleniti";
+                    }};;
                     startingUrls = new String[]{{
-                        add("quod"),
-                        add("quod"),
+                        add("optio"),
+                        add("totam"),
+                        add("beatae"),
+                        add("commodi"),
                     }};
                     staticIpScan = false;
                     targetPlatforms = new org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum[]{{
-                        add("COMPUTE"),
-                        add("CLOUD_RUN"),
+                        add(ScanConfigTargetPlatformsEnum.APP_ENGINE),
+                        add(ScanConfigTargetPlatformsEnum.TARGET_PLATFORM_UNSPECIFIED),
                     }};
-                    userAgent = "CHROME_ANDROID";
-                }};
-                accessToken = "dicta";
-                alt = "proto";
-                callback = "officia";
-                fields = "occaecati";
-                key = "fugit";
-                oauthToken = "deleniti";
-                parent = "hic";
+                    userAgent = ScanConfigUserAgentEnum.SAFARI_IPHONE;
+                }};;
+                accessToken = "cum";
+                alt = AltEnum.MEDIA;
+                callback = "ipsum";
+                fields = "excepturi";
+                key = "aspernatur";
+                oauthToken = "perferendis";
                 prettyPrint = false;
-                quotaUser = "optio";
-                uploadType = "totam";
-                uploadProtocol = "beatae";
-            }}            
+                quotaUser = "ad";
+                uploadType = "natus";
+                uploadProtocol = "sed";
+            }};            
 
-            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req, new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
+            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req, new WebsecurityscannerProjectsScanConfigsCreateSecurity("iste", "dolor") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.scanConfig.isPresent()) {
+            if (res.scanConfig != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -154,19 +162,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `websecurityscannerProjectsScanConfigsCreate` - Creates a new ScanConfig.
-* `websecurityscannerProjectsScanConfigsDelete` - Deletes an existing ScanConfig and its child resources.
-* `websecurityscannerProjectsScanConfigsList` - Lists ScanConfigs under a given project.
-* `websecurityscannerProjectsScanConfigsPatch` - Updates a ScanConfig. This method support partial update of a ScanConfig.
-* `websecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList` - List CrawledUrls under a given ScanRun.
-* `websecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList` - List all FindingTypeStats under a given ScanRun.
-* `websecurityscannerProjectsScanConfigsScanRunsFindingsGet` - Gets a Finding.
-* `websecurityscannerProjectsScanConfigsScanRunsFindingsList` - List Findings under a given ScanRun.
-* `websecurityscannerProjectsScanConfigsScanRunsList` - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
-* `websecurityscannerProjectsScanConfigsScanRunsStop` - Stops a ScanRun. The stopped ScanRun is returned.
-* `websecurityscannerProjectsScanConfigsStart` - Start a ScanRun according to the given ScanConfig.
+* [websecurityscannerProjectsScanConfigsCreate](docs/projects/README.md#websecurityscannerprojectsscanconfigscreate) - Creates a new ScanConfig.
+* [websecurityscannerProjectsScanConfigsDelete](docs/projects/README.md#websecurityscannerprojectsscanconfigsdelete) - Deletes an existing ScanConfig and its child resources.
+* [websecurityscannerProjectsScanConfigsList](docs/projects/README.md#websecurityscannerprojectsscanconfigslist) - Lists ScanConfigs under a given project.
+* [websecurityscannerProjectsScanConfigsPatch](docs/projects/README.md#websecurityscannerprojectsscanconfigspatch) - Updates a ScanConfig. This method support partial update of a ScanConfig.
+* [websecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunscrawledurlslist) - List CrawledUrls under a given ScanRun.
+* [websecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingtypestatslist) - List all FindingTypeStats under a given ScanRun.
+* [websecurityscannerProjectsScanConfigsScanRunsFindingsGet](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingsget) - Gets a Finding.
+* [websecurityscannerProjectsScanConfigsScanRunsFindingsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingslist) - List Findings under a given ScanRun.
+* [websecurityscannerProjectsScanConfigsScanRunsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunslist) - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
+* [websecurityscannerProjectsScanConfigsScanRunsStop](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsstop) - Stops a ScanRun. The stopped ScanRun is returned.
+* [websecurityscannerProjectsScanConfigsStart](docs/projects/README.md#websecurityscannerprojectsscanconfigsstart) - Start a ScanRun according to the given ScanConfig.
 <!-- End SDK Available Operations -->
 
 ### Maturity

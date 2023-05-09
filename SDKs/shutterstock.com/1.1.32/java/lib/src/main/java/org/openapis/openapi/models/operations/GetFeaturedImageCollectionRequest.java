@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturedImageCollectionRequest {
@@ -12,6 +13,7 @@ public class GetFeaturedImageCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_hint")
     public GetFeaturedImageCollectionAssetHintEnum assetHint;
+
     public GetFeaturedImageCollectionRequest withAssetHint(GetFeaturedImageCollectionAssetHintEnum assetHint) {
         this.assetHint = assetHint;
         return this;
@@ -22,6 +24,7 @@ public class GetFeaturedImageCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetFeaturedImageCollectionEmbedEnum embed;
+
     public GetFeaturedImageCollectionRequest withEmbed(GetFeaturedImageCollectionEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -32,9 +35,13 @@ public class GetFeaturedImageCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetFeaturedImageCollectionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetFeaturedImageCollectionRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

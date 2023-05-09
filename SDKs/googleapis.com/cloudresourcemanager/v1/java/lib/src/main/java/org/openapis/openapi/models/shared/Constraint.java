@@ -18,6 +18,7 @@ public class Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanConstraint")
     public java.util.Map<String, Object> booleanConstraint;
+
     public Constraint withBooleanConstraint(java.util.Map<String, Object> booleanConstraint) {
         this.booleanConstraint = booleanConstraint;
         return this;
@@ -29,6 +30,7 @@ public class Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraintDefault")
     public ConstraintConstraintDefaultEnum constraintDefault;
+
     public Constraint withConstraintDefault(ConstraintConstraintDefaultEnum constraintDefault) {
         this.constraintDefault = constraintDefault;
         return this;
@@ -40,6 +42,7 @@ public class Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Constraint withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Constraint withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listConstraint")
     public ListConstraint listConstraint;
+
     public Constraint withListConstraint(ListConstraint listConstraint) {
         this.listConstraint = listConstraint;
         return this;
@@ -73,6 +78,7 @@ public class Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Constraint withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class Constraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public Constraint withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public Constraint(){}
 }

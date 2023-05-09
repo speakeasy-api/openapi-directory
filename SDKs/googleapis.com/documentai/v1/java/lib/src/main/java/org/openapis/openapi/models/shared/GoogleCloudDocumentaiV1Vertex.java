@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1Vertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Integer x;
+
     public GoogleCloudDocumentaiV1Vertex withX(Integer x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1Vertex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Integer y;
+
     public GoogleCloudDocumentaiV1Vertex withY(Integer y) {
         this.y = y;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1Vertex(){}
 }

@@ -22,6 +22,7 @@ public class ReadAccountBalanceResponse200 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public AccountReference16CH account;
+
     public ReadAccountBalanceResponse200 withAccount(AccountReference16CH account) {
         this.account = account;
         return this;
@@ -34,9 +35,13 @@ public class ReadAccountBalanceResponse200 {
      */
     @JsonProperty("balances")
     public Balance[] balances;
+
     public ReadAccountBalanceResponse200 withBalances(Balance[] balances) {
         this.balances = balances;
         return this;
     }
     
+    public ReadAccountBalanceResponse200(@JsonProperty("balances") Balance[] balances) {
+        this.balances = balances;
+  }
 }

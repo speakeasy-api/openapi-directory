@@ -18,6 +18,7 @@ public class CreatePermitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permitResultList")
     public PermitResult[] permitResultList;
+
     public CreatePermitResult withPermitResultList(PermitResult[] permitResultList) {
         this.permitResultList = permitResultList;
         return this;
@@ -29,9 +30,11 @@ public class CreatePermitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CreatePermitResult withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
     }
     
+    public CreatePermitResult(){}
 }

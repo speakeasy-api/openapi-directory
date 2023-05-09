@@ -15,9 +15,11 @@ public class CreateFeatureResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature")
     public Feature feature;
+
     public CreateFeatureResponse withFeature(Feature feature) {
         this.feature = feature;
         return this;
     }
     
+    public CreateFeatureResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse {
     
     public String contentType;
+
     public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse 
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1PhraseMatcher googleCloudContactcenterinsightsV1PhraseMatcher;
+
     public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse withGoogleCloudContactcenterinsightsV1PhraseMatcher(org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1PhraseMatcher googleCloudContactcenterinsightsV1PhraseMatcher) {
         this.googleCloudContactcenterinsightsV1PhraseMatcher = googleCloudContactcenterinsightsV1PhraseMatcher;
         return this;
@@ -26,6 +29,7 @@ public class ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse 
     
     
     public Integer statusCode;
+
     public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

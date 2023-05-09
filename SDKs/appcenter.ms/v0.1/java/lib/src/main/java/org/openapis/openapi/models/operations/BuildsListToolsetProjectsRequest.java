@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsListToolsetProjectsRequest {
@@ -12,6 +13,7 @@ public class BuildsListToolsetProjectsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public BuildsListToolsetProjectsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class BuildsListToolsetProjectsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
     public String branch;
+
     public BuildsListToolsetProjectsRequest withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -32,6 +35,7 @@ public class BuildsListToolsetProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxSearchDepth")
     public Long maxSearchDepth;
+
     public BuildsListToolsetProjectsRequest withMaxSearchDepth(Long maxSearchDepth) {
         this.maxSearchDepth = maxSearchDepth;
         return this;
@@ -42,6 +46,7 @@ public class BuildsListToolsetProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=os")
     public BuildsListToolsetProjectsOsEnum os;
+
     public BuildsListToolsetProjectsRequest withOs(BuildsListToolsetProjectsOsEnum os) {
         this.os = os;
         return this;
@@ -52,6 +57,7 @@ public class BuildsListToolsetProjectsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public BuildsListToolsetProjectsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -62,9 +68,17 @@ public class BuildsListToolsetProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
     public BuildsListToolsetProjectsPlatformEnum platform;
+
     public BuildsListToolsetProjectsRequest withPlatform(BuildsListToolsetProjectsPlatformEnum platform) {
         this.platform = platform;
         return this;
     }
     
+    public BuildsListToolsetProjectsRequest(@JsonProperty("app_name") String appName, @JsonProperty("branch") String branch, @JsonProperty("os") BuildsListToolsetProjectsOsEnum os, @JsonProperty("owner_name") String ownerName, @JsonProperty("platform") BuildsListToolsetProjectsPlatformEnum platform) {
+        this.appName = appName;
+        this.branch = branch;
+        this.os = os;
+        this.ownerName = ownerName;
+        this.platform = platform;
+  }
 }

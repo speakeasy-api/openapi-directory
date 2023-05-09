@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1TextPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textContent")
     public String textContent;
+
     public GoogleCloudDatalabelingV1beta1TextPayload withTextContent(String textContent) {
         this.textContent = textContent;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1TextPayload(){}
 }

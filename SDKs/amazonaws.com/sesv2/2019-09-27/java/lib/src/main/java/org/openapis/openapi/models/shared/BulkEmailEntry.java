@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BulkEmailEntry {
     @JsonProperty("Destination")
     public Destination destination;
+
     public BulkEmailEntry withDestination(Destination destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class BulkEmailEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacementEmailContent")
     public ReplacementEmailContent replacementEmailContent;
+
     public BulkEmailEntry withReplacementEmailContent(ReplacementEmailContent replacementEmailContent) {
         this.replacementEmailContent = replacementEmailContent;
         return this;
@@ -27,9 +29,13 @@ public class BulkEmailEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacementTags")
     public MessageTag[] replacementTags;
+
     public BulkEmailEntry withReplacementTags(MessageTag[] replacementTags) {
         this.replacementTags = replacementTags;
         return this;
     }
     
+    public BulkEmailEntry(@JsonProperty("Destination") Destination destination) {
+        this.destination = destination;
+  }
 }

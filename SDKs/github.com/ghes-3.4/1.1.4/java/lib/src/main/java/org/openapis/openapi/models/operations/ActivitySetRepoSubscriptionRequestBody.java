@@ -15,6 +15,7 @@ public class ActivitySetRepoSubscriptionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignored")
     public Boolean ignored;
+
     public ActivitySetRepoSubscriptionRequestBody withIgnored(Boolean ignored) {
         this.ignored = ignored;
         return this;
@@ -26,9 +27,11 @@ public class ActivitySetRepoSubscriptionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscribed")
     public Boolean subscribed;
+
     public ActivitySetRepoSubscriptionRequestBody withSubscribed(Boolean subscribed) {
         this.subscribed = subscribed;
         return this;
     }
     
+    public ActivitySetRepoSubscriptionRequestBody(){}
 }

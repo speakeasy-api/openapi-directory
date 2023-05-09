@@ -15,9 +15,11 @@ public class ProfileDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public ProfileDetail profile;
+
     public ProfileDetailResponse withProfile(ProfileDetail profile) {
         this.profile = profile;
         return this;
     }
     
+    public ProfileDetailResponse(){}
 }

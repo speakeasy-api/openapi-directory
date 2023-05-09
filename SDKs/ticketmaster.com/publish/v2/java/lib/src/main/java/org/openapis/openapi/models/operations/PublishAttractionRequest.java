@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishAttractionRequest {
@@ -12,6 +13,7 @@ public class PublishAttractionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Attraction attraction;
+
     public PublishAttractionRequest withAttraction(org.openapis.openapi.models.shared.Attraction attraction) {
         this.attraction = attraction;
         return this;
@@ -22,9 +24,14 @@ public class PublishAttractionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
     public String tmpsCorrelationId;
+
     public PublishAttractionRequest withTMPSCorrelationId(String tmpsCorrelationId) {
         this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     
+    public PublishAttractionRequest(@JsonProperty("Attraction") org.openapis.openapi.models.shared.Attraction attraction, @JsonProperty("TMPS-Correlation-Id") String tmpsCorrelationId) {
+        this.attraction = attraction;
+        this.tmpsCorrelationId = tmpsCorrelationId;
+  }
 }

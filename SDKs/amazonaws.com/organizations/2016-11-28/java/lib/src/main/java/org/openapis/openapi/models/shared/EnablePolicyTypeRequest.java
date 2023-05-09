@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnablePolicyTypeRequest {
     @JsonProperty("PolicyType")
     public PolicyTypeEnum policyType;
+
     public EnablePolicyTypeRequest withPolicyType(PolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -16,9 +17,14 @@ public class EnablePolicyTypeRequest {
     
     @JsonProperty("RootId")
     public String rootId;
+
     public EnablePolicyTypeRequest withRootId(String rootId) {
         this.rootId = rootId;
         return this;
     }
     
+    public EnablePolicyTypeRequest(@JsonProperty("PolicyType") PolicyTypeEnum policyType, @JsonProperty("RootId") String rootId) {
+        this.policyType = policyType;
+        this.rootId = rootId;
+  }
 }

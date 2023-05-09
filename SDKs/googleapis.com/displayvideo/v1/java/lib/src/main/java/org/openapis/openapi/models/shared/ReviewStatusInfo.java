@@ -18,6 +18,7 @@ public class ReviewStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalStatus")
     public ReviewStatusInfoApprovalStatusEnum approvalStatus;
+
     public ReviewStatusInfo withApprovalStatus(ReviewStatusInfoApprovalStatusEnum approvalStatus) {
         this.approvalStatus = approvalStatus;
         return this;
@@ -29,6 +30,7 @@ public class ReviewStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentAndPolicyReviewStatus")
     public ReviewStatusInfoContentAndPolicyReviewStatusEnum contentAndPolicyReviewStatus;
+
     public ReviewStatusInfo withContentAndPolicyReviewStatus(ReviewStatusInfoContentAndPolicyReviewStatusEnum contentAndPolicyReviewStatus) {
         this.contentAndPolicyReviewStatus = contentAndPolicyReviewStatus;
         return this;
@@ -40,6 +42,7 @@ public class ReviewStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeAndLandingPageReviewStatus")
     public ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum creativeAndLandingPageReviewStatus;
+
     public ReviewStatusInfo withCreativeAndLandingPageReviewStatus(ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum creativeAndLandingPageReviewStatus) {
         this.creativeAndLandingPageReviewStatus = creativeAndLandingPageReviewStatus;
         return this;
@@ -51,6 +54,7 @@ public class ReviewStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeReviewStatuses")
     public ExchangeReviewStatus[] exchangeReviewStatuses;
+
     public ReviewStatusInfo withExchangeReviewStatuses(ExchangeReviewStatus[] exchangeReviewStatuses) {
         this.exchangeReviewStatuses = exchangeReviewStatuses;
         return this;
@@ -62,9 +66,11 @@ public class ReviewStatusInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherReviewStatuses")
     public PublisherReviewStatus[] publisherReviewStatuses;
+
     public ReviewStatusInfo withPublisherReviewStatuses(PublisherReviewStatus[] publisherReviewStatuses) {
         this.publisherReviewStatuses = publisherReviewStatuses;
         return this;
     }
     
+    public ReviewStatusInfo(){}
 }

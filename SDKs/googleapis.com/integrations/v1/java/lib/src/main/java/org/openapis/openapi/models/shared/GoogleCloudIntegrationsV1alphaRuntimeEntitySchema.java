@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaRuntimeEntitySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayFieldSchema")
     public String arrayFieldSchema;
+
     public GoogleCloudIntegrationsV1alphaRuntimeEntitySchema withArrayFieldSchema(String arrayFieldSchema) {
         this.arrayFieldSchema = arrayFieldSchema;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaRuntimeEntitySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public String entity;
+
     public GoogleCloudIntegrationsV1alphaRuntimeEntitySchema withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaRuntimeEntitySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldSchema")
     public String fieldSchema;
+
     public GoogleCloudIntegrationsV1alphaRuntimeEntitySchema withFieldSchema(String fieldSchema) {
         this.fieldSchema = fieldSchema;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaRuntimeEntitySchema(){}
 }

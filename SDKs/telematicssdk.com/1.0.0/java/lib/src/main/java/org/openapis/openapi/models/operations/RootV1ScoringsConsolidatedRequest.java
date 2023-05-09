@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class RootV1ScoringsConsolidatedRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AppId")
     public String appId;
+
     public RootV1ScoringsConsolidatedRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -16,6 +17,7 @@ public class RootV1ScoringsConsolidatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CompanyId")
     public String companyId;
+
     public RootV1ScoringsConsolidatedRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -23,6 +25,7 @@ public class RootV1ScoringsConsolidatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeviceToken")
     public String deviceToken;
+
     public RootV1ScoringsConsolidatedRequest withDeviceToken(String deviceToken) {
         this.deviceToken = deviceToken;
         return this;
@@ -30,6 +33,7 @@ public class RootV1ScoringsConsolidatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
     public String endDate;
+
     public RootV1ScoringsConsolidatedRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -37,6 +41,7 @@ public class RootV1ScoringsConsolidatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public RootV1ScoringsConsolidatedRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -44,6 +49,7 @@ public class RootV1ScoringsConsolidatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
     public String startDate;
+
     public RootV1ScoringsConsolidatedRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -51,9 +57,11 @@ public class RootV1ScoringsConsolidatedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tag")
     public String tag;
+
     public RootV1ScoringsConsolidatedRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public RootV1ScoringsConsolidatedRequest(){}
 }

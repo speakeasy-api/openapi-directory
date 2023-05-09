@@ -18,9 +18,11 @@ public class EntityUserLinkPermissionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("local")
     public String[] local;
+
     public EntityUserLinkPermissionsInput withLocal(String[] local) {
         this.local = local;
         return this;
     }
     
+    public EntityUserLinkPermissionsInput(){}
 }

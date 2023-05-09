@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAllInvestors200ApplicationJSON {
     @JsonProperty("investors")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestor[] investors;
+
     public GetAllInvestors200ApplicationJSON withInvestors(GetAllInvestors200ApplicationJSONRootTypeForInvestor[] investors) {
         this.investors = investors;
         return this;
@@ -22,9 +23,14 @@ public class GetAllInvestors200ApplicationJSON {
      */
     @JsonProperty("next_page_available")
     public Boolean nextPageAvailable;
+
     public GetAllInvestors200ApplicationJSON withNextPageAvailable(Boolean nextPageAvailable) {
         this.nextPageAvailable = nextPageAvailable;
         return this;
     }
     
+    public GetAllInvestors200ApplicationJSON(@JsonProperty("investors") GetAllInvestors200ApplicationJSONRootTypeForInvestor[] investors, @JsonProperty("next_page_available") Boolean nextPageAvailable) {
+        this.investors = investors;
+        this.nextPageAvailable = nextPageAvailable;
+  }
 }

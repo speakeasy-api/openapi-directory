@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeStatusResultVolumeStatuses {
     
     public DescribeVolumeStatusResultVolumeStatusesActions[] actions;
+
     public DescribeVolumeStatusResultVolumeStatuses withActions(DescribeVolumeStatusResultVolumeStatusesActions[] actions) {
         this.actions = actions;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVolumeStatusResultVolumeStatuses {
     
     
     public DescribeVolumeStatusResultVolumeStatusesAttachmentStatuses[] attachmentStatuses;
+
     public DescribeVolumeStatusResultVolumeStatuses withAttachmentStatuses(DescribeVolumeStatusResultVolumeStatusesAttachmentStatuses[] attachmentStatuses) {
         this.attachmentStatuses = attachmentStatuses;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVolumeStatusResultVolumeStatuses {
     
     
     public String availabilityZone;
+
     public DescribeVolumeStatusResultVolumeStatuses withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVolumeStatusResultVolumeStatuses {
     
     
     public DescribeVolumeStatusResultVolumeStatusesEvents[] events;
+
     public DescribeVolumeStatusResultVolumeStatuses withEvents(DescribeVolumeStatusResultVolumeStatusesEvents[] events) {
         this.events = events;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVolumeStatusResultVolumeStatuses {
     
     
     public String outpostArn;
+
     public DescribeVolumeStatusResultVolumeStatuses withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVolumeStatusResultVolumeStatuses {
     
     
     public String volumeId;
+
     public DescribeVolumeStatusResultVolumeStatuses withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -54,9 +60,11 @@ public class DescribeVolumeStatusResultVolumeStatuses {
     
     
     public DescribeVolumeStatusResultVolumeStatusesVolumeStatus volumeStatus;
+
     public DescribeVolumeStatusResultVolumeStatuses withVolumeStatus(DescribeVolumeStatusResultVolumeStatusesVolumeStatus volumeStatus) {
         this.volumeStatus = volumeStatus;
         return this;
     }
     
+    public DescribeVolumeStatusResultVolumeStatuses(){}
 }

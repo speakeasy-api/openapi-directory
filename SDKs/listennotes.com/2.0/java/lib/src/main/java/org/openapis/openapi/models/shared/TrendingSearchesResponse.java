@@ -15,9 +15,13 @@ public class TrendingSearchesResponse {
      */
     @JsonProperty("terms")
     public String[] terms;
+
     public TrendingSearchesResponse withTerms(String[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public TrendingSearchesResponse(@JsonProperty("terms") String[] terms) {
+        this.terms = terms;
+  }
 }

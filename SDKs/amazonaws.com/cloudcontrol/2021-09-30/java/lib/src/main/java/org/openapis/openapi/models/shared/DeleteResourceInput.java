@@ -12,6 +12,7 @@ public class DeleteResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public DeleteResourceInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class DeleteResourceInput {
     
     @JsonProperty("Identifier")
     public String identifier;
+
     public DeleteResourceInput withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -27,6 +29,7 @@ public class DeleteResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DeleteResourceInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -34,6 +37,7 @@ public class DeleteResourceInput {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public DeleteResourceInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -42,9 +46,14 @@ public class DeleteResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeVersionId")
     public String typeVersionId;
+
     public DeleteResourceInput withTypeVersionId(String typeVersionId) {
         this.typeVersionId = typeVersionId;
         return this;
     }
     
+    public DeleteResourceInput(@JsonProperty("Identifier") String identifier, @JsonProperty("TypeName") String typeName) {
+        this.identifier = identifier;
+        this.typeName = typeName;
+  }
 }

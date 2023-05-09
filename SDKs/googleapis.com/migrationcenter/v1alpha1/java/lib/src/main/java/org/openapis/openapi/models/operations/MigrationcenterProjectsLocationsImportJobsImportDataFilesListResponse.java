@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse {
     
     public String contentType;
+
     public MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MigrationcenterProjectsLocationsImportJobsImportDataFilesListRespon
      */
     
     public org.openapis.openapi.models.shared.ListImportDataFilesResponse listImportDataFilesResponse;
+
     public MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse withListImportDataFilesResponse(org.openapis.openapi.models.shared.ListImportDataFilesResponse listImportDataFilesResponse) {
         this.listImportDataFilesResponse = listImportDataFilesResponse;
         return this;
@@ -26,6 +29,7 @@ public class MigrationcenterProjectsLocationsImportJobsImportDataFilesListRespon
     
     
     public Integer statusCode;
+
     public MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MigrationcenterProjectsLocationsImportJobsImportDataFilesListRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

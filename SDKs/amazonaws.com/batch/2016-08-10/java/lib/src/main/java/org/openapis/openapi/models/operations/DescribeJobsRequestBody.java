@@ -12,9 +12,13 @@ public class DescribeJobsRequestBody {
      */
     @JsonProperty("jobs")
     public String[] jobs;
+
     public DescribeJobsRequestBody withJobs(String[] jobs) {
         this.jobs = jobs;
         return this;
     }
     
+    public DescribeJobsRequestBody(@JsonProperty("jobs") String[] jobs) {
+        this.jobs = jobs;
+  }
 }

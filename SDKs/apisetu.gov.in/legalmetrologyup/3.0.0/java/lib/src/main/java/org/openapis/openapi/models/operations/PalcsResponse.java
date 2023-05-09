@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PalcsResponse {
     
     public String contentType;
+
     public PalcsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PalcsResponse {
     
     
     public Integer statusCode;
+
     public PalcsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PalcsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PalcsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PalcsResponse {
      */
     
     public Palcs400ApplicationJSON palcs400ApplicationJSONObject;
+
     public PalcsResponse withPalcs400ApplicationJSONObject(Palcs400ApplicationJSON palcs400ApplicationJSONObject) {
         this.palcs400ApplicationJSONObject = palcs400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PalcsResponse {
      */
     
     public Palcs401ApplicationJSON palcs401ApplicationJSONObject;
+
     public PalcsResponse withPalcs401ApplicationJSONObject(Palcs401ApplicationJSON palcs401ApplicationJSONObject) {
         this.palcs401ApplicationJSONObject = palcs401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PalcsResponse {
      */
     
     public Palcs404ApplicationJSON palcs404ApplicationJSONObject;
+
     public PalcsResponse withPalcs404ApplicationJSONObject(Palcs404ApplicationJSON palcs404ApplicationJSONObject) {
         this.palcs404ApplicationJSONObject = palcs404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PalcsResponse {
      */
     
     public Palcs500ApplicationJSON palcs500ApplicationJSONObject;
+
     public PalcsResponse withPalcs500ApplicationJSONObject(Palcs500ApplicationJSON palcs500ApplicationJSONObject) {
         this.palcs500ApplicationJSONObject = palcs500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PalcsResponse {
      */
     
     public Palcs502ApplicationJSON palcs502ApplicationJSONObject;
+
     public PalcsResponse withPalcs502ApplicationJSONObject(Palcs502ApplicationJSON palcs502ApplicationJSONObject) {
         this.palcs502ApplicationJSONObject = palcs502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PalcsResponse {
      */
     
     public Palcs503ApplicationJSON palcs503ApplicationJSONObject;
+
     public PalcsResponse withPalcs503ApplicationJSONObject(Palcs503ApplicationJSON palcs503ApplicationJSONObject) {
         this.palcs503ApplicationJSONObject = palcs503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PalcsResponse {
      */
     
     public Palcs504ApplicationJSON palcs504ApplicationJSONObject;
+
     public PalcsResponse withPalcs504ApplicationJSONObject(Palcs504ApplicationJSON palcs504ApplicationJSONObject) {
         this.palcs504ApplicationJSONObject = palcs504ApplicationJSONObject;
         return this;
     }
     
+    public PalcsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

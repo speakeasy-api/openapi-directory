@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsCreateCardResponse {
     
     public String contentType;
+
     public ProjectsCreateCardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsCreateCardResponse {
     
     
     public Integer statusCode;
+
     public ProjectsCreateCardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsCreateCardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsCreateCardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsCreateCardResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsCreateCardResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ProjectsCreateCardResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectCard projectCard;
+
     public ProjectsCreateCardResponse withProjectCard(org.openapis.openapi.models.shared.ProjectCard projectCard) {
         this.projectCard = projectCard;
         return this;
@@ -53,6 +59,7 @@ public class ProjectsCreateCardResponse {
      */
     
     public Object projectsCreateCard422ApplicationJSONOneOf;
+
     public ProjectsCreateCardResponse withProjectsCreateCard422ApplicationJSONOneOf(Object projectsCreateCard422ApplicationJSONOneOf) {
         this.projectsCreateCard422ApplicationJSONOneOf = projectsCreateCard422ApplicationJSONOneOf;
         return this;
@@ -63,9 +70,14 @@ public class ProjectsCreateCardResponse {
      */
     
     public ProjectsCreateCard503ApplicationJSON projectsCreateCard503ApplicationJSONObject;
+
     public ProjectsCreateCardResponse withProjectsCreateCard503ApplicationJSONObject(ProjectsCreateCard503ApplicationJSON projectsCreateCard503ApplicationJSONObject) {
         this.projectsCreateCard503ApplicationJSONObject = projectsCreateCard503ApplicationJSONObject;
         return this;
     }
     
+    public ProjectsCreateCardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

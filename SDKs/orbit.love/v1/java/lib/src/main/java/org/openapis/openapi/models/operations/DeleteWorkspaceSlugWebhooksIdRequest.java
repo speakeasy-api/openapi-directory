@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceSlugWebhooksIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteWorkspaceSlugWebhooksIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,14 @@ public class DeleteWorkspaceSlugWebhooksIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public DeleteWorkspaceSlugWebhooksIdRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public DeleteWorkspaceSlugWebhooksIdRequest(@JsonProperty("id") String id, @JsonProperty("workspace_slug") String workspaceSlug) {
+        this.id = id;
+        this.workspaceSlug = workspaceSlug;
+  }
 }

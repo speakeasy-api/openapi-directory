@@ -22,6 +22,7 @@ public class Operation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public Operation withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Operation withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Operation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public Operation withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -48,6 +51,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public Operation withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -56,6 +60,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public Operation withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -64,6 +69,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public Operation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -72,6 +78,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public Operation withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -82,6 +89,7 @@ public class Operation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public Operation withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -90,6 +98,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public OperationStatusEnum status;
+
     public Operation withStatus(OperationStatusEnum status) {
         this.status = status;
         return this;
@@ -98,6 +107,7 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public Operation withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -106,9 +116,11 @@ public class Operation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Operation withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Operation(){}
 }

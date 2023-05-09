@@ -12,6 +12,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("Videos")
     public Object[] videos;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withVideos(Object[] videos) {
         this.videos = videos;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("complementName")
     public String complementName;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withComplementName(String complementName) {
         this.complementName = complementName;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("ean")
     public String ean;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("estimatedDateArrival")
     public String estimatedDateArrival;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withEstimatedDateArrival(String estimatedDateArrival) {
         this.estimatedDateArrival = estimatedDateArrival;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("images")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsImages[] images;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withImages(ProductSearchFilteredandOrdered200ApplicationJSONItemsImages[] images) {
         this.images = images;
         return this;
@@ -62,6 +67,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("isKit")
     public Boolean isKit;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withIsKit(Boolean isKit) {
         this.isKit = isKit;
         return this;
@@ -72,6 +78,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("itemId")
     public String itemId;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -82,6 +89,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("kitItems")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsKitItems[] kitItems;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withKitItems(ProductSearchFilteredandOrdered200ApplicationJSONItemsKitItems[] kitItems) {
         this.kitItems = kitItems;
         return this;
@@ -92,6 +100,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -102,6 +111,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("modalType")
     public String modalType;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withModalType(String modalType) {
         this.modalType = modalType;
         return this;
@@ -112,6 +122,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("name")
     public String name;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +133,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("nameComplete")
     public String nameComplete;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withNameComplete(String nameComplete) {
         this.nameComplete = nameComplete;
         return this;
@@ -132,6 +144,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("referenceId")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsReferenceId[] referenceId;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withReferenceId(ProductSearchFilteredandOrdered200ApplicationJSONItemsReferenceId[] referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -142,6 +155,7 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("sellers")
     public ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers[] sellers;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withSellers(ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers[] sellers) {
         this.sellers = sellers;
         return this;
@@ -152,9 +166,27 @@ public class ProductSearchFilteredandOrdered200ApplicationJSONItems {
      */
     @JsonProperty("unitMultiplier")
     public Double unitMultiplier;
+
     public ProductSearchFilteredandOrdered200ApplicationJSONItems withUnitMultiplier(Double unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public ProductSearchFilteredandOrdered200ApplicationJSONItems(@JsonProperty("Videos") Object[] videos, @JsonProperty("complementName") String complementName, @JsonProperty("ean") String ean, @JsonProperty("estimatedDateArrival") String estimatedDateArrival, @JsonProperty("images") ProductSearchFilteredandOrdered200ApplicationJSONItemsImages[] images, @JsonProperty("isKit") Boolean isKit, @JsonProperty("itemId") String itemId, @JsonProperty("kitItems") ProductSearchFilteredandOrdered200ApplicationJSONItemsKitItems[] kitItems, @JsonProperty("measurementUnit") String measurementUnit, @JsonProperty("modalType") String modalType, @JsonProperty("name") String name, @JsonProperty("nameComplete") String nameComplete, @JsonProperty("referenceId") ProductSearchFilteredandOrdered200ApplicationJSONItemsReferenceId[] referenceId, @JsonProperty("sellers") ProductSearchFilteredandOrdered200ApplicationJSONItemsSellers[] sellers, @JsonProperty("unitMultiplier") Double unitMultiplier) {
+        this.videos = videos;
+        this.complementName = complementName;
+        this.ean = ean;
+        this.estimatedDateArrival = estimatedDateArrival;
+        this.images = images;
+        this.isKit = isKit;
+        this.itemId = itemId;
+        this.kitItems = kitItems;
+        this.measurementUnit = measurementUnit;
+        this.modalType = modalType;
+        this.name = name;
+        this.nameComplete = nameComplete;
+        this.referenceId = referenceId;
+        this.sellers = sellers;
+        this.unitMultiplier = unitMultiplier;
+  }
 }

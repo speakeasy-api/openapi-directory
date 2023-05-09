@@ -59,11 +59,9 @@ public class Two1UserStatisticsOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserStatisticeDailyValueV1StatisticsIndividualDailyResponse res = new org.openapis.openapi.models.operations.UserStatisticeDailyValueV1StatisticsIndividualDailyResponse() {{
+        org.openapis.openapi.models.operations.UserStatisticeDailyValueV1StatisticsIndividualDailyResponse res = new org.openapis.openapi.models.operations.UserStatisticeDailyValueV1StatisticsIndividualDailyResponse(contentType, httpRes.statusCode()) {{
             userStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Two1UserStatisticsOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserStatisticsAccumulatedValueV1StatisticsIndividualResponse res = new org.openapis.openapi.models.operations.UserStatisticsAccumulatedValueV1StatisticsIndividualResponse() {{
+        org.openapis.openapi.models.operations.UserStatisticsAccumulatedValueV1StatisticsIndividualResponse res = new org.openapis.openapi.models.operations.UserStatisticsAccumulatedValueV1StatisticsIndividualResponse(contentType, httpRes.statusCode()) {{
             userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

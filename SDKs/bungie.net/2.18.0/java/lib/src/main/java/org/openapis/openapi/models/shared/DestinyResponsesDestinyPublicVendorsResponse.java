@@ -18,6 +18,7 @@ public class DestinyResponsesDestinyPublicVendorsResponse {
      */
     
     public DestinyResponsesDestinyPublicVendorsResponseCategories categories;
+
     public DestinyResponsesDestinyPublicVendorsResponse withCategories(DestinyResponsesDestinyPublicVendorsResponseCategories categories) {
         this.categories = categories;
         return this;
@@ -30,6 +31,7 @@ public class DestinyResponsesDestinyPublicVendorsResponse {
      */
     
     public DestinyResponsesDestinyPublicVendorsResponseSales sales;
+
     public DestinyResponsesDestinyPublicVendorsResponse withSales(DestinyResponsesDestinyPublicVendorsResponseSales sales) {
         this.sales = sales;
         return this;
@@ -41,6 +43,7 @@ public class DestinyResponsesDestinyPublicVendorsResponse {
      */
     
     public DestinyResponsesDestinyPublicVendorsResponseStringVariables stringVariables;
+
     public DestinyResponsesDestinyPublicVendorsResponse withStringVariables(DestinyResponsesDestinyPublicVendorsResponseStringVariables stringVariables) {
         this.stringVariables = stringVariables;
         return this;
@@ -52,6 +55,7 @@ public class DestinyResponsesDestinyPublicVendorsResponse {
      */
     
     public DestinyResponsesDestinyPublicVendorsResponseVendorGroups vendorGroups;
+
     public DestinyResponsesDestinyPublicVendorsResponse withVendorGroups(DestinyResponsesDestinyPublicVendorsResponseVendorGroups vendorGroups) {
         this.vendorGroups = vendorGroups;
         return this;
@@ -63,9 +67,11 @@ public class DestinyResponsesDestinyPublicVendorsResponse {
      */
     
     public DestinyResponsesDestinyPublicVendorsResponseVendors vendors;
+
     public DestinyResponsesDestinyPublicVendorsResponse withVendors(DestinyResponsesDestinyPublicVendorsResponseVendors vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public DestinyResponsesDestinyPublicVendorsResponse(){}
 }

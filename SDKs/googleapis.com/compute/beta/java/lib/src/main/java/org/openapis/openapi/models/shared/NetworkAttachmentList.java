@@ -18,6 +18,7 @@ public class NetworkAttachmentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkAttachmentList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class NetworkAttachmentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public NetworkAttachment[] items;
+
     public NetworkAttachmentList withItems(NetworkAttachment[] items) {
         this.items = items;
         return this;
@@ -37,6 +39,7 @@ public class NetworkAttachmentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NetworkAttachmentList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -48,6 +51,7 @@ public class NetworkAttachmentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public NetworkAttachmentList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -59,6 +63,7 @@ public class NetworkAttachmentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NetworkAttachmentList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -70,9 +75,11 @@ public class NetworkAttachmentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NetworkAttachmentListWarning warning;
+
     public NetworkAttachmentList withWarning(NetworkAttachmentListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NetworkAttachmentList(){}
 }

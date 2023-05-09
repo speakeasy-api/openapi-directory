@@ -14,6 +14,7 @@ public class CreateVirtualClusterRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateVirtualClusterRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -24,6 +25,7 @@ public class CreateVirtualClusterRequestBody {
      */
     @JsonProperty("containerProvider")
     public CreateVirtualClusterRequestBodyContainerProvider containerProvider;
+
     public CreateVirtualClusterRequestBody withContainerProvider(CreateVirtualClusterRequestBodyContainerProvider containerProvider) {
         this.containerProvider = containerProvider;
         return this;
@@ -34,6 +36,7 @@ public class CreateVirtualClusterRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateVirtualClusterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,15 @@ public class CreateVirtualClusterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateVirtualClusterRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVirtualClusterRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("containerProvider") CreateVirtualClusterRequestBodyContainerProvider containerProvider, @JsonProperty("name") String name) {
+        this.clientToken = clientToken;
+        this.containerProvider = containerProvider;
+        this.name = name;
+  }
 }

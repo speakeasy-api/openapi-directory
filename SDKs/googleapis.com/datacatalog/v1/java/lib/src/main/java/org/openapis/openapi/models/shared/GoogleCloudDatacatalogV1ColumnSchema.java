@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public GoogleCloudDatacatalogV1ColumnSchema withColumn(String column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public GoogleCloudDatacatalogV1ColumnSchema withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1ColumnSchema withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcRule")
     public String gcRule;
+
     public GoogleCloudDatacatalogV1ColumnSchema withGcRule(String gcRule) {
         this.gcRule = gcRule;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highestIndexingType")
     public GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum highestIndexingType;
+
     public GoogleCloudDatacatalogV1ColumnSchema withHighestIndexingType(GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum highestIndexingType) {
         this.highestIndexingType = highestIndexingType;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookerColumnSpec")
     public GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec lookerColumnSpec;
+
     public GoogleCloudDatacatalogV1ColumnSchema withLookerColumnSpec(GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec lookerColumnSpec) {
         this.lookerColumnSpec = lookerColumnSpec;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public GoogleCloudDatacatalogV1ColumnSchema withMode(String mode) {
         this.mode = mode;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinalPosition")
     public Integer ordinalPosition;
+
     public GoogleCloudDatacatalogV1ColumnSchema withOrdinalPosition(Integer ordinalPosition) {
         this.ordinalPosition = ordinalPosition;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subcolumns")
     public GoogleCloudDatacatalogV1ColumnSchema[] subcolumns;
+
     public GoogleCloudDatacatalogV1ColumnSchema withSubcolumns(GoogleCloudDatacatalogV1ColumnSchema[] subcolumns) {
         this.subcolumns = subcolumns;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDatacatalogV1ColumnSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDatacatalogV1ColumnSchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ColumnSchema(){}
 }

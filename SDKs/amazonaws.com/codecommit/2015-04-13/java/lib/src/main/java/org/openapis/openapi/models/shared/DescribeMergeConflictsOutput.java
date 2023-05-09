@@ -15,6 +15,7 @@ public class DescribeMergeConflictsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCommitId")
     public String baseCommitId;
+
     public DescribeMergeConflictsOutput withBaseCommitId(String baseCommitId) {
         this.baseCommitId = baseCommitId;
         return this;
@@ -22,6 +23,7 @@ public class DescribeMergeConflictsOutput {
     
     @JsonProperty("conflictMetadata")
     public ConflictMetadata conflictMetadata;
+
     public DescribeMergeConflictsOutput withConflictMetadata(ConflictMetadata conflictMetadata) {
         this.conflictMetadata = conflictMetadata;
         return this;
@@ -29,6 +31,7 @@ public class DescribeMergeConflictsOutput {
     
     @JsonProperty("destinationCommitId")
     public String destinationCommitId;
+
     public DescribeMergeConflictsOutput withDestinationCommitId(String destinationCommitId) {
         this.destinationCommitId = destinationCommitId;
         return this;
@@ -36,6 +39,7 @@ public class DescribeMergeConflictsOutput {
     
     @JsonProperty("mergeHunks")
     public MergeHunk[] mergeHunks;
+
     public DescribeMergeConflictsOutput withMergeHunks(MergeHunk[] mergeHunks) {
         this.mergeHunks = mergeHunks;
         return this;
@@ -44,6 +48,7 @@ public class DescribeMergeConflictsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeMergeConflictsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,9 +56,16 @@ public class DescribeMergeConflictsOutput {
     
     @JsonProperty("sourceCommitId")
     public String sourceCommitId;
+
     public DescribeMergeConflictsOutput withSourceCommitId(String sourceCommitId) {
         this.sourceCommitId = sourceCommitId;
         return this;
     }
     
+    public DescribeMergeConflictsOutput(@JsonProperty("conflictMetadata") ConflictMetadata conflictMetadata, @JsonProperty("destinationCommitId") String destinationCommitId, @JsonProperty("mergeHunks") MergeHunk[] mergeHunks, @JsonProperty("sourceCommitId") String sourceCommitId) {
+        this.conflictMetadata = conflictMetadata;
+        this.destinationCommitId = destinationCommitId;
+        this.mergeHunks = mergeHunks;
+        this.sourceCommitId = sourceCommitId;
+  }
 }

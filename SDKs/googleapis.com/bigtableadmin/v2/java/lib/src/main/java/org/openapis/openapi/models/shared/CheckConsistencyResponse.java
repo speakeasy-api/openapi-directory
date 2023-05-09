@@ -18,9 +18,11 @@ public class CheckConsistencyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consistent")
     public Boolean consistent;
+
     public CheckConsistencyResponse withConsistent(Boolean consistent) {
         this.consistent = consistent;
         return this;
     }
     
+    public CheckConsistencyResponse(){}
 }

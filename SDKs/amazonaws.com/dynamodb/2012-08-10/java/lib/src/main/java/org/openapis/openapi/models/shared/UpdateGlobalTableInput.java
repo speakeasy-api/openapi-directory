@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateGlobalTableInput {
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public UpdateGlobalTableInput withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateGlobalTableInput {
     
     @JsonProperty("ReplicaUpdates")
     public ReplicaUpdate[] replicaUpdates;
+
     public UpdateGlobalTableInput withReplicaUpdates(ReplicaUpdate[] replicaUpdates) {
         this.replicaUpdates = replicaUpdates;
         return this;
     }
     
+    public UpdateGlobalTableInput(@JsonProperty("GlobalTableName") String globalTableName, @JsonProperty("ReplicaUpdates") ReplicaUpdate[] replicaUpdates) {
+        this.globalTableName = globalTableName;
+        this.replicaUpdates = replicaUpdates;
+  }
 }

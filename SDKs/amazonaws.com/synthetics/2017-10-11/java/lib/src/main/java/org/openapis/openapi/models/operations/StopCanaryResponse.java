@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopCanaryResponse {
@@ -12,6 +13,7 @@ public class StopCanaryResponse {
      */
     
     public Object conflictException;
+
     public StopCanaryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StopCanaryResponse {
     
     
     public String contentType;
+
     public StopCanaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopCanaryResponse {
      */
     
     public Object internalServerException;
+
     public StopCanaryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class StopCanaryResponse {
     
     
     public Integer statusCode;
+
     public StopCanaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopCanaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopCanaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopCanaryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopCanaryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopCanaryResponse {
      */
     
     public java.util.Map<String, Object> stopCanaryResponse;
+
     public StopCanaryResponse withStopCanaryResponse(java.util.Map<String, Object> stopCanaryResponse) {
         this.stopCanaryResponse = stopCanaryResponse;
         return this;
@@ -73,9 +81,14 @@ public class StopCanaryResponse {
      */
     
     public Object validationException;
+
     public StopCanaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopCanaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

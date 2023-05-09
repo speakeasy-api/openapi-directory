@@ -15,6 +15,7 @@ public class DeactivateDeviceIdentifierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeactivateDeviceIdentifierRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class DeactivateDeviceIdentifierRequestBody {
      */
     @JsonProperty("deviceIdentifierArn")
     public String deviceIdentifierArn;
+
     public DeactivateDeviceIdentifierRequestBody withDeviceIdentifierArn(String deviceIdentifierArn) {
         this.deviceIdentifierArn = deviceIdentifierArn;
         return this;
     }
     
+    public DeactivateDeviceIdentifierRequestBody(@JsonProperty("deviceIdentifierArn") String deviceIdentifierArn) {
+        this.deviceIdentifierArn = deviceIdentifierArn;
+  }
 }

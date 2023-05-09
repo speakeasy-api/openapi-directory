@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionTypeId {
     @JsonProperty("category")
     public ActionCategoryEnum category;
+
     public ActionTypeId withCategory(ActionCategoryEnum category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class ActionTypeId {
     
     @JsonProperty("owner")
     public ActionOwnerEnum owner;
+
     public ActionTypeId withOwner(ActionOwnerEnum owner) {
         this.owner = owner;
         return this;
@@ -26,6 +28,7 @@ public class ActionTypeId {
     
     @JsonProperty("provider")
     public String provider;
+
     public ActionTypeId withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -33,9 +36,16 @@ public class ActionTypeId {
     
     @JsonProperty("version")
     public String version;
+
     public ActionTypeId withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ActionTypeId(@JsonProperty("category") ActionCategoryEnum category, @JsonProperty("owner") ActionOwnerEnum owner, @JsonProperty("provider") String provider, @JsonProperty("version") String version) {
+        this.category = category;
+        this.owner = owner;
+        this.provider = provider;
+        this.version = version;
+  }
 }

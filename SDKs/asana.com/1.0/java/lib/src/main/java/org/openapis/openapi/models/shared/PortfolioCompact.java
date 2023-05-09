@@ -19,6 +19,7 @@ public class PortfolioCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public PortfolioCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -30,6 +31,7 @@ public class PortfolioCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PortfolioCompact withName(String name) {
         this.name = name;
         return this;
@@ -41,9 +43,11 @@ public class PortfolioCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public PortfolioCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public PortfolioCompact(){}
 }

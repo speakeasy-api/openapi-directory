@@ -15,6 +15,7 @@ public class EBSUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public EBSMetricNameEnum name;
+
     public EBSUtilizationMetric withName(EBSMetricNameEnum name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class EBSUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public MetricStatisticEnum statistic;
+
     public EBSUtilizationMetric withStatistic(MetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -31,9 +33,11 @@ public class EBSUtilizationMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public EBSUtilizationMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public EBSUtilizationMetric(){}
 }

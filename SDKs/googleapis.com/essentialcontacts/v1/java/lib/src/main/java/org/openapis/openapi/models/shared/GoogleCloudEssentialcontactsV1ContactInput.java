@@ -18,6 +18,7 @@ public class GoogleCloudEssentialcontactsV1ContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GoogleCloudEssentialcontactsV1ContactInput withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudEssentialcontactsV1ContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageTag")
     public String languageTag;
+
     public GoogleCloudEssentialcontactsV1ContactInput withLanguageTag(String languageTag) {
         this.languageTag = languageTag;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudEssentialcontactsV1ContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationCategorySubscriptions")
     public GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum[] notificationCategorySubscriptions;
+
     public GoogleCloudEssentialcontactsV1ContactInput withNotificationCategorySubscriptions(GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum[] notificationCategorySubscriptions) {
         this.notificationCategorySubscriptions = notificationCategorySubscriptions;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudEssentialcontactsV1ContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateTime")
     public String validateTime;
+
     public GoogleCloudEssentialcontactsV1ContactInput withValidateTime(String validateTime) {
         this.validateTime = validateTime;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudEssentialcontactsV1ContactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationState")
     public GoogleCloudEssentialcontactsV1ContactValidationStateEnum validationState;
+
     public GoogleCloudEssentialcontactsV1ContactInput withValidationState(GoogleCloudEssentialcontactsV1ContactValidationStateEnum validationState) {
         this.validationState = validationState;
         return this;
     }
     
+    public GoogleCloudEssentialcontactsV1ContactInput(){}
 }

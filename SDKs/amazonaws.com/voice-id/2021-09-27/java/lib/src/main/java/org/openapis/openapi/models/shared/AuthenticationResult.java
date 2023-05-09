@@ -22,6 +22,7 @@ public class AuthenticationResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AudioAggregationEndedAt")
     public OffsetDateTime audioAggregationEndedAt;
+
     public AuthenticationResult withAudioAggregationEndedAt(OffsetDateTime audioAggregationEndedAt) {
         this.audioAggregationEndedAt = audioAggregationEndedAt;
         return this;
@@ -32,6 +33,7 @@ public class AuthenticationResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AudioAggregationStartedAt")
     public OffsetDateTime audioAggregationStartedAt;
+
     public AuthenticationResult withAudioAggregationStartedAt(OffsetDateTime audioAggregationStartedAt) {
         this.audioAggregationStartedAt = audioAggregationStartedAt;
         return this;
@@ -40,6 +42,7 @@ public class AuthenticationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationResultId")
     public String authenticationResultId;
+
     public AuthenticationResult withAuthenticationResultId(String authenticationResultId) {
         this.authenticationResultId = authenticationResultId;
         return this;
@@ -48,6 +51,7 @@ public class AuthenticationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public AuthenticationConfiguration configuration;
+
     public AuthenticationResult withConfiguration(AuthenticationConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -56,6 +60,7 @@ public class AuthenticationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerSpeakerId")
     public String customerSpeakerId;
+
     public AuthenticationResult withCustomerSpeakerId(String customerSpeakerId) {
         this.customerSpeakerId = customerSpeakerId;
         return this;
@@ -64,6 +69,7 @@ public class AuthenticationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Decision")
     public AuthenticationDecisionEnum decision;
+
     public AuthenticationResult withDecision(AuthenticationDecisionEnum decision) {
         this.decision = decision;
         return this;
@@ -72,6 +78,7 @@ public class AuthenticationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedSpeakerId")
     public String generatedSpeakerId;
+
     public AuthenticationResult withGeneratedSpeakerId(String generatedSpeakerId) {
         this.generatedSpeakerId = generatedSpeakerId;
         return this;
@@ -80,9 +87,11 @@ public class AuthenticationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Long score;
+
     public AuthenticationResult withScore(Long score) {
         this.score = score;
         return this;
     }
     
+    public AuthenticationResult(){}
 }

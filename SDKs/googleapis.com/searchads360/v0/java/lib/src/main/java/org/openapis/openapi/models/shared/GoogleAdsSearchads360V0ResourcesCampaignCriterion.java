@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     /**
+     * An age range criterion.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ageRange")
+    public GoogleAdsSearchads360V0CommonAgeRangeInfo ageRange;
+
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion withAgeRange(GoogleAdsSearchads360V0CommonAgeRangeInfo ageRange) {
+        this.ageRange = ageRange;
+        return this;
+    }
+    
+    /**
      * The modifier for the bids when the criterion matches. The modifier must be in the range: 0.1 - 10.0. Most targetable criteria types support modifiers. Use 0 to opt out of a Device type.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidModifier")
     public Float bidModifier;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withBidModifier(Float bidModifier) {
         this.bidModifier = bidModifier;
         return this;
@@ -29,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criterionId")
     public String criterionId;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withCriterionId(String criterionId) {
         this.criterionId = criterionId;
         return this;
@@ -40,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public GoogleAdsSearchads360V0CommonDeviceInfo device;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withDevice(GoogleAdsSearchads360V0CommonDeviceInfo device) {
         this.device = device;
         return this;
@@ -51,8 +66,33 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withDisplayName(String displayName) {
         this.displayName = displayName;
+        return this;
+    }
+    
+    /**
+     * A gender criterion.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gender")
+    public GoogleAdsSearchads360V0CommonGenderInfo gender;
+
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion withGender(GoogleAdsSearchads360V0CommonGenderInfo gender) {
+        this.gender = gender;
+        return this;
+    }
+    
+    /**
+     * A keyword criterion.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("keyword")
+    public GoogleAdsSearchads360V0CommonKeywordInfo keyword;
+
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion withKeyword(GoogleAdsSearchads360V0CommonKeywordInfo keyword) {
+        this.keyword = keyword;
         return this;
     }
     
@@ -62,8 +102,21 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public GoogleAdsSearchads360V0CommonLanguageInfo language;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withLanguage(GoogleAdsSearchads360V0CommonLanguageInfo language) {
         this.language = language;
+        return this;
+    }
+    
+    /**
+     * Output only. The datetime when this campaign criterion was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lastModifiedTime")
+    public String lastModifiedTime;
+
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion withLastModifiedTime(String lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
@@ -73,6 +126,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public GoogleAdsSearchads360V0CommonLocationInfo location;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withLocation(GoogleAdsSearchads360V0CommonLocationInfo location) {
         this.location = location;
         return this;
@@ -84,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationGroup")
     public GoogleAdsSearchads360V0CommonLocationGroupInfo locationGroup;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withLocationGroup(GoogleAdsSearchads360V0CommonLocationGroupInfo locationGroup) {
         this.locationGroup = locationGroup;
         return this;
@@ -95,6 +150,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -106,8 +162,21 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withResourceName(String resourceName) {
         this.resourceName = resourceName;
+        return this;
+    }
+    
+    /**
+     * The status of the criterion.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum status;
+
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion withStatus(GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum status) {
+        this.status = status;
         return this;
     }
     
@@ -117,9 +186,35 @@ public class GoogleAdsSearchads360V0ResourcesCampaignCriterion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum type;
+
     public GoogleAdsSearchads360V0ResourcesCampaignCriterion withType(GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    /**
+     * A User List criterion. Represents a user list that is defined by the advertiser to be targeted.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userList")
+    public GoogleAdsSearchads360V0CommonUserListInfo userList;
+
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion withUserList(GoogleAdsSearchads360V0CommonUserListInfo userList) {
+        this.userList = userList;
+        return this;
+    }
+    
+    /**
+     * Represents a criterion for targeting webpages of an advertiser's website.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("webpage")
+    public GoogleAdsSearchads360V0CommonWebpageInfo webpage;
+
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion withWebpage(GoogleAdsSearchads360V0CommonWebpageInfo webpage) {
+        this.webpage = webpage;
+        return this;
+    }
+    
+    public GoogleAdsSearchads360V0ResourcesCampaignCriterion(){}
 }

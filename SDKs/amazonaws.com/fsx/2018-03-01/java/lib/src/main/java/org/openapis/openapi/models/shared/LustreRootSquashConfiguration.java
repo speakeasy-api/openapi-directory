@@ -15,6 +15,7 @@ public class LustreRootSquashConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoSquashNids")
     public String[] noSquashNids;
+
     public LustreRootSquashConfiguration withNoSquashNids(String[] noSquashNids) {
         this.noSquashNids = noSquashNids;
         return this;
@@ -23,9 +24,11 @@ public class LustreRootSquashConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootSquash")
     public String rootSquash;
+
     public LustreRootSquashConfiguration withRootSquash(String rootSquash) {
         this.rootSquash = rootSquash;
         return this;
     }
     
+    public LustreRootSquashConfiguration(){}
 }

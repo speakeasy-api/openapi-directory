@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdFollowingsFollowingIdRequest {
@@ -12,6 +13,7 @@ public class GetUsersUserIdFollowingsFollowingIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=following_id")
     public Long followingId;
+
     public GetUsersUserIdFollowingsFollowingIdRequest withFollowingId(Long followingId) {
         this.followingId = followingId;
         return this;
@@ -22,9 +24,14 @@ public class GetUsersUserIdFollowingsFollowingIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Long userId;
+
     public GetUsersUserIdFollowingsFollowingIdRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdFollowingsFollowingIdRequest(@JsonProperty("following_id") Long followingId, @JsonProperty("user_id") Long userId) {
+        this.followingId = followingId;
+        this.userId = userId;
+  }
 }

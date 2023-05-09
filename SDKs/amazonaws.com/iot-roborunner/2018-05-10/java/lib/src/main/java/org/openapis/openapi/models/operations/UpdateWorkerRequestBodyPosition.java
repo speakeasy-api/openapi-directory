@@ -15,9 +15,11 @@ public class UpdateWorkerRequestBodyPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cartesianCoordinates")
     public org.openapis.openapi.models.shared.CartesianCoordinates cartesianCoordinates;
+
     public UpdateWorkerRequestBodyPosition withCartesianCoordinates(org.openapis.openapi.models.shared.CartesianCoordinates cartesianCoordinates) {
         this.cartesianCoordinates = cartesianCoordinates;
         return this;
     }
     
+    public UpdateWorkerRequestBodyPosition(){}
 }

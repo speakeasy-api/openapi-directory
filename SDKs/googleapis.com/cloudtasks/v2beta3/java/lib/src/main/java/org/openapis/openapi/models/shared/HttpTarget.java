@@ -18,6 +18,7 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerOverrides")
     public HeaderOverride[] headerOverrides;
+
     public HttpTarget withHeaderOverrides(HeaderOverride[] headerOverrides) {
         this.headerOverrides = headerOverrides;
         return this;
@@ -29,8 +30,33 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpMethod")
     public HttpTargetHttpMethodEnum httpMethod;
+
     public HttpTarget withHttpMethod(HttpTargetHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
+        return this;
+    }
+    
+    /**
+     * Contains information needed for generating an [OAuth token](https://developers.google.com/identity/protocols/OAuth2). This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("oauthToken")
+    public OAuthToken oauthToken;
+
+    public HttpTarget withOauthToken(OAuthToken oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Contains information needed for generating an [OpenID Connect token](https://developers.google.com/identity/protocols/OpenIDConnect). This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("oidcToken")
+    public OidcToken oidcToken;
+
+    public HttpTarget withOidcToken(OidcToken oidcToken) {
+        this.oidcToken = oidcToken;
         return this;
     }
     
@@ -40,9 +66,11 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriOverride")
     public UriOverride uriOverride;
+
     public HttpTarget withUriOverride(UriOverride uriOverride) {
         this.uriOverride = uriOverride;
         return this;
     }
     
+    public HttpTarget(){}
 }

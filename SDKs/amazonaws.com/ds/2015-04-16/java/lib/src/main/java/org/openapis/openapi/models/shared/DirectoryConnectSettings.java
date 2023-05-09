@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DirectoryConnectSettings {
     @JsonProperty("CustomerDnsIps")
     public String[] customerDnsIps;
+
     public DirectoryConnectSettings withCustomerDnsIps(String[] customerDnsIps) {
         this.customerDnsIps = customerDnsIps;
         return this;
@@ -19,6 +20,7 @@ public class DirectoryConnectSettings {
     
     @JsonProperty("CustomerUserName")
     public String customerUserName;
+
     public DirectoryConnectSettings withCustomerUserName(String customerUserName) {
         this.customerUserName = customerUserName;
         return this;
@@ -26,6 +28,7 @@ public class DirectoryConnectSettings {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public DirectoryConnectSettings withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -33,9 +36,16 @@ public class DirectoryConnectSettings {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public DirectoryConnectSettings withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DirectoryConnectSettings(@JsonProperty("CustomerDnsIps") String[] customerDnsIps, @JsonProperty("CustomerUserName") String customerUserName, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcId") String vpcId) {
+        this.customerDnsIps = customerDnsIps;
+        this.customerUserName = customerUserName;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

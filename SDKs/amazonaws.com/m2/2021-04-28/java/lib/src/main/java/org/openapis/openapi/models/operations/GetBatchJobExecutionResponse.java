@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBatchJobExecutionResponse {
@@ -12,6 +13,7 @@ public class GetBatchJobExecutionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetBatchJobExecutionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetBatchJobExecutionResponse {
     
     
     public String contentType;
+
     public GetBatchJobExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBatchJobExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBatchJobExecutionResponse getBatchJobExecutionResponse;
+
     public GetBatchJobExecutionResponse withGetBatchJobExecutionResponse(org.openapis.openapi.models.shared.GetBatchJobExecutionResponse getBatchJobExecutionResponse) {
         this.getBatchJobExecutionResponse = getBatchJobExecutionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetBatchJobExecutionResponse {
      */
     
     public Object internalServerException;
+
     public GetBatchJobExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetBatchJobExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetBatchJobExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetBatchJobExecutionResponse {
     
     
     public Integer statusCode;
+
     public GetBatchJobExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetBatchJobExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBatchJobExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetBatchJobExecutionResponse {
      */
     
     public Object throttlingException;
+
     public GetBatchJobExecutionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetBatchJobExecutionResponse {
      */
     
     public Object validationException;
+
     public GetBatchJobExecutionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetBatchJobExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

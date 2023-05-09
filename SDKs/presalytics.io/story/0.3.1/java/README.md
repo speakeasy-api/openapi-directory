@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetEnvironmentResponse;
 
 public class Application {
@@ -27,92 +26,94 @@ public class Application {
 
             GetEnvironmentResponse res = sdk.getEnvironment();
 
-            if (res.getEnvironment200ApplicationJSONObject.isPresent()) {
+            if (res.getEnvironment200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getEnvironment` - Environment: Get
-* `specNoTags` - Specification: No tags
+* [getEnvironment](docs/sdk/README.md#getenvironment) - Environment: Get
+* [specNoTags](docs/sdk/README.md#specnotags) - Specification: No tags
 
-### cache
+### [cache](docs/cache/README.md)
 
-* `cacheNonceGet` - Cache: Get Subdocument
-* `cachePost` - Cache: Store Subdocument
+* [cacheNonceGet](docs/cache/README.md#cachenonceget) - Cache: Get Subdocument
+* [cachePost](docs/cache/README.md#cachepost) - Cache: Store Subdocument
 
-### conversation
+### [conversation](docs/conversation/README.md)
 
-* `storyIdMessagesGet` - Conversation: List Conversation Messages
-* `storyIdMessagesPost` - Conversation: Send a Message
+* [storyIdMessagesGet](docs/conversation/README.md#storyidmessagesget) - Conversation: List Conversation Messages
+* [storyIdMessagesPost](docs/conversation/README.md#storyidmessagespost) - Conversation: Send a Message
 
-### events
+### [events](docs/events/README.md)
 
-* `storyIdEventsGet` - Events: List Events
-* `storyIdEventsPost` - Events: Manage Events
+* [storyIdEventsGet](docs/events/README.md#storyideventsget) - Events: List Events
+* [storyIdEventsPost](docs/events/README.md#storyideventspost) - Events: Manage Events
 
-### permissions
+### [permissions](docs/permissions/README.md)
 
-* `storyIdCollaboratorsUseridPermissiontypeGet` - Permissions: Story Authorization for a User
-* `storyPermissionTypesGet` - Permissions: List Permission Types
+* [storyIdCollaboratorsUseridPermissiontypeGet](docs/permissions/README.md#storyidcollaboratorsuseridpermissiontypeget) - Permissions: Story Authorization for a User
+* [storyPermissionTypesGet](docs/permissions/README.md#storypermissiontypesget) - Permissions: List Permission Types
 
-### restricted
+### [restricted](docs/restricted/README.md)
 
-* `collaboratorsPost` - Collborators: Bulk Update (Admin Only)
+* [collaboratorsPost](docs/restricted/README.md#collaboratorspost) - Collborators: Bulk Update (Admin Only)
 
-### schemas
+### [schemas](docs/schemas/README.md)
 
-* `storyOutlineSchema` - Story Outline Schema
+* [storyOutlineSchema](docs/schemas/README.md#storyoutlineschema) - Story Outline Schema
 
-### sessions
+### [sessions](docs/sessions/README.md)
 
-* `sessionIdDelete` - Sessions: Delete by Id
-* `sessionIdGet` - Sessions: Get
-* `storyIdSessionPost` - Sessions: Create a Session
-* `storyIdSessionsGet` - Sessions: List Story Sessions
+* [sessionIdDelete](docs/sessions/README.md#sessioniddelete) - Sessions: Delete by Id
+* [sessionIdGet](docs/sessions/README.md#sessionidget) - Sessions: Get
+* [storyIdSessionPost](docs/sessions/README.md#storyidsessionpost) - Sessions: Create a Session
+* [storyIdSessionsGet](docs/sessions/README.md#storyidsessionsget) - Sessions: List Story Sessions
 
-### story
+### [story](docs/story/README.md)
 
-* `storyGet` - Story: Get List of User Stories
-* `storyIdAnalytics` - Story: View Analytics
-* `storyIdDelete` - Story: Delete by Id
-* `storyIdFileOoxmlautomationidDelete` - Story: Delete Subdocument
-* `storyIdFileOoxmlautomationidGet` - Story: Download Updated File
-* `storyIdFilePost` - Story: Upload a File To Existing Story
-* `storyIdGet` - Story: Get by Id
-* `storyIdOutlineGet` - Story: Get Story Outline
-* `storyIdOutlinePost` - Story: Post Story Outline
-* `storyIdPublic` - Story: Public Link to Story Reveal.js Document
-* `storyIdPut` - Story: Modify
-* `storyIdReveal` - Story: Get Story at Reveal.js Document
-* `storyIdStatusGet` - Story: Get Story Status
-* `storyPost` - Story: Upload
-* `storyPostFile` - Story: Upload a File
-* `storyPostFileJson` - Story: Upload a File (base64)
+* [storyGet](docs/story/README.md#storyget) - Story: Get List of User Stories
+* [storyIdAnalytics](docs/story/README.md#storyidanalytics) - Story: View Analytics
+* [storyIdDelete](docs/story/README.md#storyiddelete) - Story: Delete by Id
+* [storyIdFileOoxmlautomationidDelete](docs/story/README.md#storyidfileooxmlautomationiddelete) - Story: Delete Subdocument
+* [storyIdFileOoxmlautomationidGet](docs/story/README.md#storyidfileooxmlautomationidget) - Story: Download Updated File
+* [storyIdFilePost](docs/story/README.md#storyidfilepost) - Story: Upload a File To Existing Story
+* [storyIdGet](docs/story/README.md#storyidget) - Story: Get by Id
+* [storyIdOutlineGet](docs/story/README.md#storyidoutlineget) - Story: Get Story Outline
+* [storyIdOutlinePost](docs/story/README.md#storyidoutlinepost) - Story: Post Story Outline
+* [storyIdPublic](docs/story/README.md#storyidpublic) - Story: Public Link to Story Reveal.js Document
+* [storyIdPut](docs/story/README.md#storyidput) - Story: Modify
+* [storyIdReveal](docs/story/README.md#storyidreveal) - Story: Get Story at Reveal.js Document
+* [storyIdStatusGet](docs/story/README.md#storyidstatusget) - Story: Get Story Status
+* [storyPost](docs/story/README.md#storypost) - Story: Upload
+* [storyPostFile](docs/story/README.md#storypostfile) - Story: Upload a File
+* [storyPostFileJson](docs/story/README.md#storypostfilejson) - Story: Upload a File (base64)
 
-### storyCollaborators
+### [storyCollaborators](docs/storycollaborators/README.md)
 
-* `storyIdCollaboratorsGet` - Story Collaborators: List
-* `storyIdCollaboratorsInactivePost` - Story Collaborators: Edit Inactive User Permission
-* `storyIdCollaboratorsPost` - Story Collaborators: Add New User
-* `storyIdCollaboratorsUseridDelete` - Story Collaborators: Remove User
-* `storyIdCollaboratorsUseridGet` - Story Collaborators: Access Permissions
-* `storyIdCollaboratorsUseridPut` - Story Collaborators: Edit Access Rights
+* [storyIdCollaboratorsGet](docs/storycollaborators/README.md#storyidcollaboratorsget) - Story Collaborators: List
+* [storyIdCollaboratorsInactivePost](docs/storycollaborators/README.md#storyidcollaboratorsinactivepost) - Story Collaborators: Edit Inactive User Permission
+* [storyIdCollaboratorsPost](docs/storycollaborators/README.md#storyidcollaboratorspost) - Story Collaborators: Add New User
+* [storyIdCollaboratorsUseridDelete](docs/storycollaborators/README.md#storyidcollaboratorsuseriddelete) - Story Collaborators: Remove User
+* [storyIdCollaboratorsUseridGet](docs/storycollaborators/README.md#storyidcollaboratorsuseridget) - Story Collaborators: Access Permissions
+* [storyIdCollaboratorsUseridPut](docs/storycollaborators/README.md#storyidcollaboratorsuseridput) - Story Collaborators: Edit Access Rights
 
-### views
+### [views](docs/views/README.md)
 
-* `sessionsIdViewsGet` - Views: List Session Views
-* `sessionsIdViewsPost` - Views: Create A Session View
-* `viewsIdDelete` - Views: Delete by Id
-* `viewsIdGet` - Views: Get View
+* [sessionsIdViewsGet](docs/views/README.md#sessionsidviewsget) - Views: List Session Views
+* [sessionsIdViewsPost](docs/views/README.md#sessionsidviewspost) - Views: Create A Session View
+* [viewsIdDelete](docs/views/README.md#viewsiddelete) - Views: Delete by Id
+* [viewsIdGet](docs/views/README.md#viewsidget) - Views: Get View
 <!-- End SDK Available Operations -->
 
 ### Maturity

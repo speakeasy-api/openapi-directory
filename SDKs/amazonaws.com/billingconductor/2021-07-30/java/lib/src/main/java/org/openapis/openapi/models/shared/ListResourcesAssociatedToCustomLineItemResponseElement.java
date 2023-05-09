@@ -15,6 +15,7 @@ public class ListResourcesAssociatedToCustomLineItemResponseElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListResourcesAssociatedToCustomLineItemResponseElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListResourcesAssociatedToCustomLineItemResponseElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndBillingPeriod")
     public String endBillingPeriod;
+
     public ListResourcesAssociatedToCustomLineItemResponseElement withEndBillingPeriod(String endBillingPeriod) {
         this.endBillingPeriod = endBillingPeriod;
         return this;
@@ -31,9 +33,11 @@ public class ListResourcesAssociatedToCustomLineItemResponseElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Relationship")
     public CustomLineItemRelationshipEnum relationship;
+
     public ListResourcesAssociatedToCustomLineItemResponseElement withRelationship(CustomLineItemRelationshipEnum relationship) {
         this.relationship = relationship;
         return this;
     }
     
+    public ListResourcesAssociatedToCustomLineItemResponseElement(){}
 }

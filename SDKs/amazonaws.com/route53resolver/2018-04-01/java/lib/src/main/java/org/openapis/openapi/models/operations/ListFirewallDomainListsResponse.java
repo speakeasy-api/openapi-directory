@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFirewallDomainListsResponse {
@@ -12,6 +13,7 @@ public class ListFirewallDomainListsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFirewallDomainListsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFirewallDomainListsResponse {
     
     
     public String contentType;
+
     public ListFirewallDomainListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFirewallDomainListsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListFirewallDomainListsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListFirewallDomainListsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFirewallDomainListsResponse listFirewallDomainListsResponse;
+
     public ListFirewallDomainListsResponse withListFirewallDomainListsResponse(org.openapis.openapi.models.shared.ListFirewallDomainListsResponse listFirewallDomainListsResponse) {
         this.listFirewallDomainListsResponse = listFirewallDomainListsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListFirewallDomainListsResponse {
     
     
     public Integer statusCode;
+
     public ListFirewallDomainListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListFirewallDomainListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFirewallDomainListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListFirewallDomainListsResponse {
      */
     
     public Object throttlingException;
+
     public ListFirewallDomainListsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListFirewallDomainListsResponse {
      */
     
     public Object validationException;
+
     public ListFirewallDomainListsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFirewallDomainListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

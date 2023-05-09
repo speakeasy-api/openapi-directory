@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSize")
     public Integer batchSize;
+
     public GoogleCloudVisionV1p1beta1OutputConfig withBatchSize(Integer batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p1beta1OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GoogleCloudVisionV1p1beta1GcsDestination gcsDestination;
+
     public GoogleCloudVisionV1p1beta1OutputConfig withGcsDestination(GoogleCloudVisionV1p1beta1GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1OutputConfig(){}
 }

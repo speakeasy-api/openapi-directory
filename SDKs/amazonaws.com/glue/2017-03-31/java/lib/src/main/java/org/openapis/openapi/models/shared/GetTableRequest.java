@@ -17,6 +17,7 @@ public class GetTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetTableRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -24,6 +25,7 @@ public class GetTableRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,6 +33,7 @@ public class GetTableRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetTableRequest withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +44,7 @@ public class GetTableRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QueryAsOfTime")
     public OffsetDateTime queryAsOfTime;
+
     public GetTableRequest withQueryAsOfTime(OffsetDateTime queryAsOfTime) {
         this.queryAsOfTime = queryAsOfTime;
         return this;
@@ -49,9 +53,14 @@ public class GetTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public GetTableRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetTableRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Name") String name) {
+        this.databaseName = databaseName;
+        this.name = name;
+  }
 }

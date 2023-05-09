@@ -15,6 +15,7 @@ public class StartTableDataImportJobRequestBodyImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delimitedTextOptions")
     public org.openapis.openapi.models.shared.DelimitedTextImportOptions delimitedTextOptions;
+
     public StartTableDataImportJobRequestBodyImportOptions withDelimitedTextOptions(org.openapis.openapi.models.shared.DelimitedTextImportOptions delimitedTextOptions) {
         this.delimitedTextOptions = delimitedTextOptions;
         return this;
@@ -23,9 +24,11 @@ public class StartTableDataImportJobRequestBodyImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationOptions")
     public org.openapis.openapi.models.shared.DestinationOptions destinationOptions;
+
     public StartTableDataImportJobRequestBodyImportOptions withDestinationOptions(org.openapis.openapi.models.shared.DestinationOptions destinationOptions) {
         this.destinationOptions = destinationOptions;
         return this;
     }
     
+    public StartTableDataImportJobRequestBodyImportOptions(){}
 }

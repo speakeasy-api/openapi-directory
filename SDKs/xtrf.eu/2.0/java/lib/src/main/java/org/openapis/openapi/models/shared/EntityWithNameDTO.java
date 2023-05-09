@@ -12,6 +12,7 @@ public class EntityWithNameDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public EntityWithNameDTO withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class EntityWithNameDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EntityWithNameDTO withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EntityWithNameDTO(){}
 }

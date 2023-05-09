@@ -19,6 +19,7 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declination")
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination declination;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSON withDeclination(AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination declination) {
         this.declination = declination;
         return this;
@@ -31,6 +32,7 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grid_variation")
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation gridVariation;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSON withGridVariation(AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation gridVariation) {
         this.gridVariation = gridVariation;
         return this;
@@ -43,6 +45,7 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclination")
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclination inclination;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSON withInclination(AppApiWMMEndpointsWMMMagneticField200ApplicationJSONInclination inclination) {
         this.inclination = inclination;
         return this;
@@ -55,9 +58,11 @@ public class AppApiWMMEndpointsWMMMagneticField200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_intensity")
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSONTotalIntensity totalIntensity;
+
     public AppApiWMMEndpointsWMMMagneticField200ApplicationJSON withTotalIntensity(AppApiWMMEndpointsWMMMagneticField200ApplicationJSONTotalIntensity totalIntensity) {
         this.totalIntensity = totalIntensity;
         return this;
     }
     
+    public AppApiWMMEndpointsWMMMagneticField200ApplicationJSON(){}
 }

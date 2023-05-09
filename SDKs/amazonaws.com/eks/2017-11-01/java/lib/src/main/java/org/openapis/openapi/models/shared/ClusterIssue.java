@@ -15,6 +15,7 @@ public class ClusterIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ClusterIssueCodeEnum code;
+
     public ClusterIssue withCode(ClusterIssueCodeEnum code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ClusterIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ClusterIssue withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class ClusterIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceIds")
     public String[] resourceIds;
+
     public ClusterIssue withResourceIds(String[] resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
     
+    public ClusterIssue(){}
 }

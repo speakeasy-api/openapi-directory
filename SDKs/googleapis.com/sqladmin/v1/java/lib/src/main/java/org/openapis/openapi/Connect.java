@@ -61,11 +61,9 @@ public class Connect {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlConnectGenerateEphemeralResponse res = new org.openapis.openapi.models.operations.SqlConnectGenerateEphemeralResponse() {{
+        org.openapis.openapi.models.operations.SqlConnectGenerateEphemeralResponse res = new org.openapis.openapi.models.operations.SqlConnectGenerateEphemeralResponse(contentType, httpRes.statusCode()) {{
             generateEphemeralCertResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Connect {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlConnectGetResponse res = new org.openapis.openapi.models.operations.SqlConnectGetResponse() {{
+        org.openapis.openapi.models.operations.SqlConnectGetResponse res = new org.openapis.openapi.models.operations.SqlConnectGetResponse(contentType, httpRes.statusCode()) {{
             connectSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

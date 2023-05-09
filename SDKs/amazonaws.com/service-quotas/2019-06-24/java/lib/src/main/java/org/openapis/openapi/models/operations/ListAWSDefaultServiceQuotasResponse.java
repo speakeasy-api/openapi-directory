@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAWSDefaultServiceQuotasResponse {
@@ -12,6 +13,7 @@ public class ListAWSDefaultServiceQuotasResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAWSDefaultServiceQuotasResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAWSDefaultServiceQuotasResponse {
     
     
     public String contentType;
+
     public ListAWSDefaultServiceQuotasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAWSDefaultServiceQuotasResponse {
      */
     
     public Object illegalArgumentException;
+
     public ListAWSDefaultServiceQuotasResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListAWSDefaultServiceQuotasResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListAWSDefaultServiceQuotasResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListAWSDefaultServiceQuotasResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAWSDefaultServiceQuotasResponse listAWSDefaultServiceQuotasResponse;
+
     public ListAWSDefaultServiceQuotasResponse withListAWSDefaultServiceQuotasResponse(org.openapis.openapi.models.shared.ListAWSDefaultServiceQuotasResponse listAWSDefaultServiceQuotasResponse) {
         this.listAWSDefaultServiceQuotasResponse = listAWSDefaultServiceQuotasResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAWSDefaultServiceQuotasResponse {
      */
     
     public Object noSuchResourceException;
+
     public ListAWSDefaultServiceQuotasResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -69,6 +76,7 @@ public class ListAWSDefaultServiceQuotasResponse {
      */
     
     public Object serviceException;
+
     public ListAWSDefaultServiceQuotasResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListAWSDefaultServiceQuotasResponse {
     
     
     public Integer statusCode;
+
     public ListAWSDefaultServiceQuotasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListAWSDefaultServiceQuotasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAWSDefaultServiceQuotasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListAWSDefaultServiceQuotasResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListAWSDefaultServiceQuotasResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListAWSDefaultServiceQuotasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

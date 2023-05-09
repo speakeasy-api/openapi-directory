@@ -12,6 +12,7 @@ public class DictlayerdataDictWordsSensesDefinitionsExamples {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public DictlayerdataDictWordsSensesDefinitionsExamplesSource source;
+
     public DictlayerdataDictWordsSensesDefinitionsExamples withSource(DictlayerdataDictWordsSensesDefinitionsExamplesSource source) {
         this.source = source;
         return this;
@@ -20,9 +21,11 @@ public class DictlayerdataDictWordsSensesDefinitionsExamples {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public DictlayerdataDictWordsSensesDefinitionsExamples withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DictlayerdataDictWordsSensesDefinitionsExamples(){}
 }

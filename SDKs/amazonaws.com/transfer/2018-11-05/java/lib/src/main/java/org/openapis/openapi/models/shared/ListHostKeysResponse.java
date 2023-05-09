@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListHostKeysResponse {
     @JsonProperty("HostKeys")
     public ListedHostKey[] hostKeys;
+
     public ListHostKeysResponse withHostKeys(ListedHostKey[] hostKeys) {
         this.hostKeys = hostKeys;
         return this;
@@ -22,6 +23,7 @@ public class ListHostKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHostKeysResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +31,14 @@ public class ListHostKeysResponse {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public ListHostKeysResponse withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public ListHostKeysResponse(@JsonProperty("HostKeys") ListedHostKey[] hostKeys, @JsonProperty("ServerId") String serverId) {
+        this.hostKeys = hostKeys;
+        this.serverId = serverId;
+  }
 }

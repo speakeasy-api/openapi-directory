@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAttachmentResponse {
@@ -12,6 +13,7 @@ public class DescribeAttachmentResponse {
      */
     
     public Object attachmentIdNotFound;
+
     public DescribeAttachmentResponse withAttachmentIdNotFound(Object attachmentIdNotFound) {
         this.attachmentIdNotFound = attachmentIdNotFound;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAttachmentResponse {
     
     
     public String contentType;
+
     public DescribeAttachmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAttachmentResponse {
      */
     
     public Object describeAttachmentLimitExceeded;
+
     public DescribeAttachmentResponse withDescribeAttachmentLimitExceeded(Object describeAttachmentLimitExceeded) {
         this.describeAttachmentLimitExceeded = describeAttachmentLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAttachmentResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAttachmentResponse describeAttachmentResponse;
+
     public DescribeAttachmentResponse withDescribeAttachmentResponse(org.openapis.openapi.models.shared.DescribeAttachmentResponse describeAttachmentResponse) {
         this.describeAttachmentResponse = describeAttachmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAttachmentResponse {
      */
     
     public Object internalServerError;
+
     public DescribeAttachmentResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAttachmentResponse {
     
     
     public Integer statusCode;
+
     public DescribeAttachmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeAttachmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAttachmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAttachmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

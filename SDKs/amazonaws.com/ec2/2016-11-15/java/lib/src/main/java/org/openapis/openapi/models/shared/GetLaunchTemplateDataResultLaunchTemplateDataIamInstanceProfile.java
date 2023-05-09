@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataIamInstanceProfile {
     
     public String arn;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataIamInstanceProfile {
     
     
     public String name;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataIamInstanceProfile withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataIamInstanceProfile(){}
 }

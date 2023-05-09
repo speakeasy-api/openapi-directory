@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalcSigmaRsvExchangeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=amount")
     public Long amount;
+
     public CalcSigmaRsvExchangeRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
     }
     
+    public CalcSigmaRsvExchangeRequest(@JsonProperty("amount") Long amount) {
+        this.amount = amount;
+  }
 }

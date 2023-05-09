@@ -18,6 +18,7 @@ public class Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Integer length;
+
     public Annotation withLength(Integer length) {
         this.length = length;
         return this;
@@ -29,6 +30,7 @@ public class Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slashCommand")
     public SlashCommandMetadata slashCommand;
+
     public Annotation withSlashCommand(SlashCommandMetadata slashCommand) {
         this.slashCommand = slashCommand;
         return this;
@@ -40,6 +42,7 @@ public class Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public Annotation withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -51,6 +54,7 @@ public class Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AnnotationTypeEnum type;
+
     public Annotation withType(AnnotationTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class Annotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userMention")
     public UserMentionMetadata userMention;
+
     public Annotation withUserMention(UserMentionMetadata userMention) {
         this.userMention = userMention;
         return this;
     }
     
+    public Annotation(){}
 }

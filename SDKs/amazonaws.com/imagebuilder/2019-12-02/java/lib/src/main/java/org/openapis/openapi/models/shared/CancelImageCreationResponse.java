@@ -15,6 +15,7 @@ public class CancelImageCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CancelImageCreationResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class CancelImageCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageBuildVersionArn")
     public String imageBuildVersionArn;
+
     public CancelImageCreationResponse withImageBuildVersionArn(String imageBuildVersionArn) {
         this.imageBuildVersionArn = imageBuildVersionArn;
         return this;
@@ -31,9 +33,11 @@ public class CancelImageCreationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public CancelImageCreationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public CancelImageCreationResponse(){}
 }

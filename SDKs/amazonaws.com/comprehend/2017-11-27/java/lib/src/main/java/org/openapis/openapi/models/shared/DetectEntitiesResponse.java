@@ -15,6 +15,7 @@ public class DetectEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blocks")
     public Block[] blocks;
+
     public DetectEntitiesResponse withBlocks(Block[] blocks) {
         this.blocks = blocks;
         return this;
@@ -23,6 +24,7 @@ public class DetectEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public DetectEntitiesResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -31,6 +33,7 @@ public class DetectEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public DocumentTypeListItem[] documentType;
+
     public DetectEntitiesResponse withDocumentType(DocumentTypeListItem[] documentType) {
         this.documentType = documentType;
         return this;
@@ -39,6 +42,7 @@ public class DetectEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entities")
     public Entity[] entities;
+
     public DetectEntitiesResponse withEntities(Entity[] entities) {
         this.entities = entities;
         return this;
@@ -47,9 +51,11 @@ public class DetectEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public ErrorsListItem[] errors;
+
     public DetectEntitiesResponse withErrors(ErrorsListItem[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DetectEntitiesResponse(){}
 }

@@ -15,6 +15,7 @@ public class StopInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerArn")
     public String inferenceSchedulerArn;
+
     public StopInferenceSchedulerResponse withInferenceSchedulerArn(String inferenceSchedulerArn) {
         this.inferenceSchedulerArn = inferenceSchedulerArn;
         return this;
@@ -23,6 +24,7 @@ public class StopInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public StopInferenceSchedulerResponse withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -31,6 +33,7 @@ public class StopInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public StopInferenceSchedulerResponse withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -39,6 +42,7 @@ public class StopInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public StopInferenceSchedulerResponse withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -47,9 +51,11 @@ public class StopInferenceSchedulerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InferenceSchedulerStatusEnum status;
+
     public StopInferenceSchedulerResponse withStatus(InferenceSchedulerStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StopInferenceSchedulerResponse(){}
 }

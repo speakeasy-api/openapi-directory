@@ -15,9 +15,11 @@ public class KafkaClusterDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apacheKafkaCluster")
     public ApacheKafkaClusterDescription apacheKafkaCluster;
+
     public KafkaClusterDescription withApacheKafkaCluster(ApacheKafkaClusterDescription apacheKafkaCluster) {
         this.apacheKafkaCluster = apacheKafkaCluster;
         return this;
     }
     
+    public KafkaClusterDescription(){}
 }

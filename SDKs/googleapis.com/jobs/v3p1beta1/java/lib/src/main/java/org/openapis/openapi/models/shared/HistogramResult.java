@@ -18,6 +18,7 @@ public class HistogramResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchType")
     public HistogramResultSearchTypeEnum searchType;
+
     public HistogramResult withSearchType(HistogramResultSearchTypeEnum searchType) {
         this.searchType = searchType;
         return this;
@@ -29,9 +30,11 @@ public class HistogramResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public java.util.Map<String, Integer> values;
+
     public HistogramResult withValues(java.util.Map<String, Integer> values) {
         this.values = values;
         return this;
     }
     
+    public HistogramResult(){}
 }

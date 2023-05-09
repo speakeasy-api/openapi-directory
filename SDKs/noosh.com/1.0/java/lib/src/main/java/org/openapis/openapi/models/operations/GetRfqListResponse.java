@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRfqListResponse {
     
     public byte[] body;
+
     public GetRfqListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetRfqListResponse {
     
     
     public String contentType;
+
     public GetRfqListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetRfqListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetRfqListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -36,6 +40,7 @@ public class GetRfqListResponse {
      */
     
     public org.openapis.openapi.models.shared.RfqListVO rfqListVO;
+
     public GetRfqListResponse withRfqListVO(org.openapis.openapi.models.shared.RfqListVO rfqListVO) {
         this.rfqListVO = rfqListVO;
         return this;
@@ -43,6 +48,7 @@ public class GetRfqListResponse {
     
     
     public Integer statusCode;
+
     public GetRfqListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetRfqListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRfqListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRfqListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

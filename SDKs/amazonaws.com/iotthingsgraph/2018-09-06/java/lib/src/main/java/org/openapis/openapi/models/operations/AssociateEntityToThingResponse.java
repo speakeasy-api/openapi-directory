@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateEntityToThingResponse {
@@ -12,6 +13,7 @@ public class AssociateEntityToThingResponse {
      */
     
     public java.util.Map<String, Object> associateEntityToThingResponse;
+
     public AssociateEntityToThingResponse withAssociateEntityToThingResponse(java.util.Map<String, Object> associateEntityToThingResponse) {
         this.associateEntityToThingResponse = associateEntityToThingResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateEntityToThingResponse {
     
     
     public String contentType;
+
     public AssociateEntityToThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateEntityToThingResponse {
      */
     
     public Object internalFailureException;
+
     public AssociateEntityToThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateEntityToThingResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateEntityToThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class AssociateEntityToThingResponse {
     
     
     public Integer statusCode;
+
     public AssociateEntityToThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class AssociateEntityToThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateEntityToThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class AssociateEntityToThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateEntityToThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class AssociateEntityToThingResponse {
      */
     
     public Object throttlingException;
+
     public AssociateEntityToThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateEntityToThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

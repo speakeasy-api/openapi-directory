@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RunnerApplication {
     @JsonProperty("architecture")
     public String architecture;
+
     public RunnerApplication withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -21,6 +22,7 @@ public class RunnerApplication {
     
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public RunnerApplication withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -28,6 +30,7 @@ public class RunnerApplication {
     
     @JsonProperty("filename")
     public String filename;
+
     public RunnerApplication withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -35,6 +38,7 @@ public class RunnerApplication {
     
     @JsonProperty("os")
     public String os;
+
     public RunnerApplication withOs(String os) {
         this.os = os;
         return this;
@@ -43,6 +47,7 @@ public class RunnerApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256_checksum")
     public String sha256Checksum;
+
     public RunnerApplication withSha256Checksum(String sha256Checksum) {
         this.sha256Checksum = sha256Checksum;
         return this;
@@ -54,9 +59,16 @@ public class RunnerApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temp_download_token")
     public String tempDownloadToken;
+
     public RunnerApplication withTempDownloadToken(String tempDownloadToken) {
         this.tempDownloadToken = tempDownloadToken;
         return this;
     }
     
+    public RunnerApplication(@JsonProperty("architecture") String architecture, @JsonProperty("download_url") String downloadUrl, @JsonProperty("filename") String filename, @JsonProperty("os") String os) {
+        this.architecture = architecture;
+        this.downloadUrl = downloadUrl;
+        this.filename = filename;
+        this.os = os;
+  }
 }

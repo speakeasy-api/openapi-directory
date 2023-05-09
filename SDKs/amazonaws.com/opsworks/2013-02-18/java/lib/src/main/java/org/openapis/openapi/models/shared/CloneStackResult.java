@@ -15,9 +15,11 @@ public class CloneStackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public CloneStackResult withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public CloneStackResult(){}
 }

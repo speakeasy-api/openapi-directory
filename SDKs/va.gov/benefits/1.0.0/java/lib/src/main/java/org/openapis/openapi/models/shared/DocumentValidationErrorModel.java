@@ -24,6 +24,7 @@ public class DocumentValidationErrorModel {
      */
     @JsonProperty("detail")
     public String detail;
+
     public DocumentValidationErrorModel withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -34,6 +35,7 @@ public class DocumentValidationErrorModel {
      */
     @JsonProperty("status")
     public String status;
+
     public DocumentValidationErrorModel withStatus(String status) {
         this.status = status;
         return this;
@@ -44,9 +46,15 @@ public class DocumentValidationErrorModel {
      */
     @JsonProperty("title")
     public String title;
+
     public DocumentValidationErrorModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DocumentValidationErrorModel(@JsonProperty("detail") String detail, @JsonProperty("status") String status, @JsonProperty("title") String title) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+  }
 }

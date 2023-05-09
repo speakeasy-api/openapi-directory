@@ -15,6 +15,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiEndpoint")
     public String apiEndpoint;
+
     public AwsApiGatewayV2ApiDetails withApiEndpoint(String apiEndpoint) {
         this.apiEndpoint = apiEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiId")
     public String apiId;
+
     public AwsApiGatewayV2ApiDetails withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -31,6 +33,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeySelectionExpression")
     public String apiKeySelectionExpression;
+
     public AwsApiGatewayV2ApiDetails withApiKeySelectionExpression(String apiKeySelectionExpression) {
         this.apiKeySelectionExpression = apiKeySelectionExpression;
         return this;
@@ -39,6 +42,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CorsConfiguration")
     public AwsCorsConfiguration corsConfiguration;
+
     public AwsApiGatewayV2ApiDetails withCorsConfiguration(AwsCorsConfiguration corsConfiguration) {
         this.corsConfiguration = corsConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedDate")
     public String createdDate;
+
     public AwsApiGatewayV2ApiDetails withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -55,6 +60,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsApiGatewayV2ApiDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +69,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsApiGatewayV2ApiDetails withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtocolType")
     public String protocolType;
+
     public AwsApiGatewayV2ApiDetails withProtocolType(String protocolType) {
         this.protocolType = protocolType;
         return this;
@@ -79,6 +87,7 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteSelectionExpression")
     public String routeSelectionExpression;
+
     public AwsApiGatewayV2ApiDetails withRouteSelectionExpression(String routeSelectionExpression) {
         this.routeSelectionExpression = routeSelectionExpression;
         return this;
@@ -87,9 +96,11 @@ public class AwsApiGatewayV2ApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public AwsApiGatewayV2ApiDetails withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AwsApiGatewayV2ApiDetails(){}
 }

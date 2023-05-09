@@ -18,9 +18,11 @@ public class GoogleCloudRunV2EnvVarSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretKeyRef")
     public GoogleCloudRunV2SecretKeySelector secretKeyRef;
+
     public GoogleCloudRunV2EnvVarSource withSecretKeyRef(GoogleCloudRunV2SecretKeySelector secretKeyRef) {
         this.secretKeyRef = secretKeyRef;
         return this;
     }
     
+    public GoogleCloudRunV2EnvVarSource(){}
 }

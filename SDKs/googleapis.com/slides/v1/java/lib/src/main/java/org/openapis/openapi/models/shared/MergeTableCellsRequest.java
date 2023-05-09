@@ -18,6 +18,7 @@ public class MergeTableCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public MergeTableCellsRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -29,9 +30,11 @@ public class MergeTableCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRange")
     public TableRange tableRange;
+
     public MergeTableCellsRequest withTableRange(TableRange tableRange) {
         this.tableRange = tableRange;
         return this;
     }
     
+    public MergeTableCellsRequest(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * StopwordOptionsStatus - The stopword options configured for this search domain and the current status of those options.
@@ -15,6 +15,7 @@ public class StopwordOptionsStatus {
      */
     
     public String options;
+
     public StopwordOptionsStatus withOptions(String options) {
         this.options = options;
         return this;
@@ -25,9 +26,14 @@ public class StopwordOptionsStatus {
      */
     
     public OptionStatus status;
+
     public StopwordOptionsStatus withStatus(OptionStatus status) {
         this.status = status;
         return this;
     }
     
+    public StopwordOptionsStatus(@JsonProperty("Options") String options, @JsonProperty("Status") OptionStatus status) {
+        this.options = options;
+        this.status = status;
+  }
 }

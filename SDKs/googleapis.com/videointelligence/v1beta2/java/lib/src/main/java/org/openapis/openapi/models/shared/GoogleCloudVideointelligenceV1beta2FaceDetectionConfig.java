@@ -18,6 +18,7 @@ public class GoogleCloudVideointelligenceV1beta2FaceDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAttributes")
     public Boolean includeAttributes;
+
     public GoogleCloudVideointelligenceV1beta2FaceDetectionConfig withIncludeAttributes(Boolean includeAttributes) {
         this.includeAttributes = includeAttributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVideointelligenceV1beta2FaceDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeBoundingBoxes")
     public Boolean includeBoundingBoxes;
+
     public GoogleCloudVideointelligenceV1beta2FaceDetectionConfig withIncludeBoundingBoxes(Boolean includeBoundingBoxes) {
         this.includeBoundingBoxes = includeBoundingBoxes;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVideointelligenceV1beta2FaceDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudVideointelligenceV1beta2FaceDetectionConfig withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1beta2FaceDetectionConfig(){}
 }

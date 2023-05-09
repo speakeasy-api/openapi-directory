@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeMeshOutput {
     @JsonProperty("mesh")
     public MeshData mesh;
+
     public DescribeMeshOutput withMesh(MeshData mesh) {
         this.mesh = mesh;
         return this;
     }
     
+    public DescribeMeshOutput(@JsonProperty("mesh") MeshData mesh) {
+        this.mesh = mesh;
+  }
 }

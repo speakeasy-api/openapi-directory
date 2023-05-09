@@ -22,6 +22,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetWorkflowStepGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetWorkflowStepGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetWorkflowStepGroupResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -48,6 +51,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetWorkflowStepGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +62,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public GetWorkflowStepGroupResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -66,6 +71,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetWorkflowStepGroupResponse withName(String name) {
         this.name = name;
         return this;
@@ -74,6 +80,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public GetWorkflowStepGroupResponse withNext(String[] next) {
         this.next = next;
         return this;
@@ -82,6 +89,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public OwnerEnum owner;
+
     public GetWorkflowStepGroupResponse withOwner(OwnerEnum owner) {
         this.owner = owner;
         return this;
@@ -90,6 +98,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public GetWorkflowStepGroupResponse withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -98,6 +107,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StepGroupStatusEnum status;
+
     public GetWorkflowStepGroupResponse withStatus(StepGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -106,6 +116,7 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tools")
     public Tool[] tools;
+
     public GetWorkflowStepGroupResponse withTools(Tool[] tools) {
         this.tools = tools;
         return this;
@@ -114,9 +125,11 @@ public class GetWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public GetWorkflowStepGroupResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public GetWorkflowStepGroupResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchDevicesResponse {
@@ -12,6 +13,7 @@ public class SearchDevicesResponse {
      */
     
     public Object accessDeniedException;
+
     public SearchDevicesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SearchDevicesResponse {
     
     
     public String contentType;
+
     public SearchDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SearchDevicesResponse {
      */
     
     public Object internalServiceException;
+
     public SearchDevicesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class SearchDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchDevicesResponse searchDevicesResponse;
+
     public SearchDevicesResponse withSearchDevicesResponse(org.openapis.openapi.models.shared.SearchDevicesResponse searchDevicesResponse) {
         this.searchDevicesResponse = searchDevicesResponse;
         return this;
@@ -46,6 +51,7 @@ public class SearchDevicesResponse {
     
     
     public Integer statusCode;
+
     public SearchDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SearchDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class SearchDevicesResponse {
      */
     
     public Object throttlingException;
+
     public SearchDevicesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class SearchDevicesResponse {
      */
     
     public Object validationException;
+
     public SearchDevicesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

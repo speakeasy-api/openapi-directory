@@ -12,6 +12,7 @@ public class MncerRequestBodyCertificateParameters {
      */
     @JsonProperty("aplno")
     public String aplno;
+
     public MncerRequestBodyCertificateParameters withAplno(String aplno) {
         this.aplno = aplno;
         return this;
@@ -22,6 +23,7 @@ public class MncerRequestBodyCertificateParameters {
      */
     @JsonProperty("certno")
     public String certno;
+
     public MncerRequestBodyCertificateParameters withCertno(String certno) {
         this.certno = certno;
         return this;
@@ -32,9 +34,15 @@ public class MncerRequestBodyCertificateParameters {
      */
     @JsonProperty("sccd")
     public String sccd;
+
     public MncerRequestBodyCertificateParameters withSccd(String sccd) {
         this.sccd = sccd;
         return this;
     }
     
+    public MncerRequestBodyCertificateParameters(@JsonProperty("aplno") String aplno, @JsonProperty("certno") String certno, @JsonProperty("sccd") String sccd) {
+        this.aplno = aplno;
+        this.certno = certno;
+        this.sccd = sccd;
+  }
 }

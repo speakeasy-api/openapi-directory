@@ -15,9 +15,11 @@ public class HyperParameterTuningJobConsumedResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeInSeconds")
     public Long runtimeInSeconds;
+
     public HyperParameterTuningJobConsumedResources withRuntimeInSeconds(Long runtimeInSeconds) {
         this.runtimeInSeconds = runtimeInSeconds;
         return this;
     }
     
+    public HyperParameterTuningJobConsumedResources(){}
 }

@@ -15,6 +15,7 @@ public class ListPublishedSchemaArnsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPublishedSchemaArnsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListPublishedSchemaArnsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPublishedSchemaArnsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListPublishedSchemaArnsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public ListPublishedSchemaArnsRequestBody withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public ListPublishedSchemaArnsRequestBody(){}
 }

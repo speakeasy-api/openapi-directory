@@ -15,9 +15,11 @@ public class DescribeInboundDmarcSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enforced")
     public Boolean enforced;
+
     public DescribeInboundDmarcSettingsResponse withEnforced(Boolean enforced) {
         this.enforced = enforced;
         return this;
     }
     
+    public DescribeInboundDmarcSettingsResponse(){}
 }

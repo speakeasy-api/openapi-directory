@@ -59,11 +59,9 @@ public class ActionBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateOrganizationActionBatchResponse res = new org.openapis.openapi.models.operations.CreateOrganizationActionBatchResponse() {{
+        org.openapis.openapi.models.operations.CreateOrganizationActionBatchResponse res = new org.openapis.openapi.models.operations.CreateOrganizationActionBatchResponse(contentType, httpRes.statusCode()) {{
             createOrganizationActionBatch201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -99,10 +97,8 @@ public class ActionBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteOrganizationActionBatchResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationActionBatchResponse() {{
+        org.openapis.openapi.models.operations.DeleteOrganizationActionBatchResponse res = new org.openapis.openapi.models.operations.DeleteOrganizationActionBatchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -139,11 +135,9 @@ public class ActionBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationActionBatchesResponse res = new org.openapis.openapi.models.operations.GetOrganizationActionBatchesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationActionBatchesResponse res = new org.openapis.openapi.models.operations.GetOrganizationActionBatchesResponse(contentType, httpRes.statusCode()) {{
             getOrganizationActionBatches200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class ActionBatches {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOrganizationActionBatchResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationActionBatchResponse() {{
+        org.openapis.openapi.models.operations.UpdateOrganizationActionBatchResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationActionBatchResponse(contentType, httpRes.statusCode()) {{
             updateOrganizationActionBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

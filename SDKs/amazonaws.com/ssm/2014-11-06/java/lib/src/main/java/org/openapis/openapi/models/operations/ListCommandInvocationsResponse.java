@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCommandInvocationsResponse {
     
     public String contentType;
+
     public ListCommandInvocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCommandInvocationsResponse {
      */
     
     public Object internalServerError;
+
     public ListCommandInvocationsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListCommandInvocationsResponse {
      */
     
     public Object invalidCommandId;
+
     public ListCommandInvocationsResponse withInvalidCommandId(Object invalidCommandId) {
         this.invalidCommandId = invalidCommandId;
         return this;
@@ -39,6 +43,7 @@ public class ListCommandInvocationsResponse {
      */
     
     public Object invalidFilterKey;
+
     public ListCommandInvocationsResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -49,6 +54,7 @@ public class ListCommandInvocationsResponse {
      */
     
     public Object invalidInstanceId;
+
     public ListCommandInvocationsResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -59,6 +65,7 @@ public class ListCommandInvocationsResponse {
      */
     
     public Object invalidNextToken;
+
     public ListCommandInvocationsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -69,6 +76,7 @@ public class ListCommandInvocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCommandInvocationsResult listCommandInvocationsResult;
+
     public ListCommandInvocationsResponse withListCommandInvocationsResult(org.openapis.openapi.models.shared.ListCommandInvocationsResult listCommandInvocationsResult) {
         this.listCommandInvocationsResult = listCommandInvocationsResult;
         return this;
@@ -76,6 +84,7 @@ public class ListCommandInvocationsResponse {
     
     
     public Integer statusCode;
+
     public ListCommandInvocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ListCommandInvocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCommandInvocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCommandInvocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFeedbackResponse {
@@ -12,6 +13,7 @@ public class DescribeFeedbackResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeFeedbackResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFeedbackResponse {
     
     
     public String contentType;
+
     public DescribeFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFeedbackResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFeedbackResponse describeFeedbackResponse;
+
     public DescribeFeedbackResponse withDescribeFeedbackResponse(org.openapis.openapi.models.shared.DescribeFeedbackResponse describeFeedbackResponse) {
         this.describeFeedbackResponse = describeFeedbackResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFeedbackResponse {
      */
     
     public Object internalServerException;
+
     public DescribeFeedbackResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFeedbackResponse {
     
     
     public Integer statusCode;
+
     public DescribeFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeFeedbackResponse {
      */
     
     public Object throttlingException;
+
     public DescribeFeedbackResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeFeedbackResponse {
      */
     
     public Object validationException;
+
     public DescribeFeedbackResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

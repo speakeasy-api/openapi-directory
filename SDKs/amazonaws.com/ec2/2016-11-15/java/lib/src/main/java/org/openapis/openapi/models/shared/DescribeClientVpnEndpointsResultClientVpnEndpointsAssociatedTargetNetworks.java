@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworks {
     
     public String networkId;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworks withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetN
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum networkType;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworks withNetworkType(DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworks(){}
 }

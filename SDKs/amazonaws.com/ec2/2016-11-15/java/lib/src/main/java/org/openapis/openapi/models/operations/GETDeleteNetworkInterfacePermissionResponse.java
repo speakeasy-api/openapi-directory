@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteNetworkInterfacePermissionResponse {
     
     public byte[] body;
+
     public GETDeleteNetworkInterfacePermissionResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteNetworkInterfacePermissionResponse {
     
     
     public String contentType;
+
     public GETDeleteNetworkInterfacePermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteNetworkInterfacePermissionResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteNetworkInterfacePermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteNetworkInterfacePermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteNetworkInterfacePermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteNetworkInterfacePermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

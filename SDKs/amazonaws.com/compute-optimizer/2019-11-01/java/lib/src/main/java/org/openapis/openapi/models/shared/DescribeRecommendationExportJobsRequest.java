@@ -12,6 +12,7 @@ public class DescribeRecommendationExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public JobFilter[] filters;
+
     public DescribeRecommendationExportJobsRequest withFilters(JobFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeRecommendationExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobIds")
     public String[] jobIds;
+
     public DescribeRecommendationExportJobsRequest withJobIds(String[] jobIds) {
         this.jobIds = jobIds;
         return this;
@@ -28,6 +30,7 @@ public class DescribeRecommendationExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeRecommendationExportJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class DescribeRecommendationExportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRecommendationExportJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeRecommendationExportJobsRequest(){}
 }

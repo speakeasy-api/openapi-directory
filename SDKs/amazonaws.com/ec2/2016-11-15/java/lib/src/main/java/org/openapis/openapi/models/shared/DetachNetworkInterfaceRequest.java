@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DetachNetworkInterfaceRequest - Contains the parameters for DetachNetworkInterface.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DetachNetworkInterfaceRequest {
     
     public String attachmentId;
+
     public DetachNetworkInterfaceRequest withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -19,6 +20,7 @@ public class DetachNetworkInterfaceRequest {
     
     
     public Boolean dryRun;
+
     public DetachNetworkInterfaceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +28,13 @@ public class DetachNetworkInterfaceRequest {
     
     
     public Boolean force;
+
     public DetachNetworkInterfaceRequest withForce(Boolean force) {
         this.force = force;
         return this;
     }
     
+    public DetachNetworkInterfaceRequest(@JsonProperty("AttachmentId") String attachmentId) {
+        this.attachmentId = attachmentId;
+  }
 }

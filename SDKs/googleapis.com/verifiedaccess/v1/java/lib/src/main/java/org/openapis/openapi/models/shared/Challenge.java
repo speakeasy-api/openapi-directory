@@ -18,6 +18,7 @@ public class Challenge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternativeChallenge")
     public SignedData alternativeChallenge;
+
     public Challenge withAlternativeChallenge(SignedData alternativeChallenge) {
         this.alternativeChallenge = alternativeChallenge;
         return this;
@@ -29,9 +30,11 @@ public class Challenge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challenge")
     public SignedData challenge;
+
     public Challenge withChallenge(SignedData challenge) {
         this.challenge = challenge;
         return this;
     }
     
+    public Challenge(){}
 }

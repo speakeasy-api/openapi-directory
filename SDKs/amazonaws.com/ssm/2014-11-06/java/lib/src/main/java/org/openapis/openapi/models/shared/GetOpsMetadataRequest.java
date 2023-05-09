@@ -12,6 +12,7 @@ public class GetOpsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetOpsMetadataRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetOpsMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetOpsMetadataRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class GetOpsMetadataRequest {
     
     @JsonProperty("OpsMetadataArn")
     public String opsMetadataArn;
+
     public GetOpsMetadataRequest withOpsMetadataArn(String opsMetadataArn) {
         this.opsMetadataArn = opsMetadataArn;
         return this;
     }
     
+    public GetOpsMetadataRequest(@JsonProperty("OpsMetadataArn") String opsMetadataArn) {
+        this.opsMetadataArn = opsMetadataArn;
+  }
 }

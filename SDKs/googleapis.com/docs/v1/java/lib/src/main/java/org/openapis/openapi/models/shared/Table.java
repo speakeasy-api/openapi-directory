@@ -18,6 +18,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Integer columns;
+
     public Table withColumns(Integer columns) {
         this.columns = columns;
         return this;
@@ -29,6 +30,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Integer rows;
+
     public Table withRows(Integer rows) {
         this.rows = rows;
         return this;
@@ -40,6 +42,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public Table withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -51,6 +54,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public Table withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -62,6 +66,7 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRows")
     public TableRow[] tableRows;
+
     public Table withTableRows(TableRow[] tableRows) {
         this.tableRows = tableRows;
         return this;
@@ -73,9 +78,11 @@ public class Table {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableStyle")
     public TableStyle tableStyle;
+
     public Table withTableStyle(TableStyle tableStyle) {
         this.tableStyle = tableStyle;
         return this;
     }
     
+    public Table(){}
 }

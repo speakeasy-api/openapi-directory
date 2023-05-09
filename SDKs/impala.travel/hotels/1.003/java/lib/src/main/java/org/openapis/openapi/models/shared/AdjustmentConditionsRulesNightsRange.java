@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdjustmentConditionsRulesNightsRange {
     @JsonProperty("max")
     public Double max;
+
     public AdjustmentConditionsRulesNightsRange withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,14 @@ public class AdjustmentConditionsRulesNightsRange {
     
     @JsonProperty("min")
     public Double min;
+
     public AdjustmentConditionsRulesNightsRange withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public AdjustmentConditionsRulesNightsRange(@JsonProperty("max") Double max, @JsonProperty("min") Double min) {
+        this.max = max;
+        this.min = min;
+  }
 }

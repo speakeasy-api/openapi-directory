@@ -15,6 +15,7 @@ public class ListFindingAggregatorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingAggregators")
     public FindingAggregator[] findingAggregators;
+
     public ListFindingAggregatorsResponse withFindingAggregators(FindingAggregator[] findingAggregators) {
         this.findingAggregators = findingAggregators;
         return this;
@@ -23,9 +24,11 @@ public class ListFindingAggregatorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFindingAggregatorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFindingAggregatorsResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CommandFilter {
     @JsonProperty("key")
     public CommandFilterKeyEnum key;
+
     public CommandFilter withKey(CommandFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class CommandFilter {
     
     @JsonProperty("value")
     public String value;
+
     public CommandFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CommandFilter(@JsonProperty("key") CommandFilterKeyEnum key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

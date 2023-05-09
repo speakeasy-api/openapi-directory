@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpnConnectionsResultVpnConnections {
     
     public String category;
+
     public DescribeVpnConnectionsResultVpnConnections withCategory(String category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public String coreNetworkArn;
+
     public DescribeVpnConnectionsResultVpnConnections withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public String coreNetworkAttachmentArn;
+
     public DescribeVpnConnectionsResultVpnConnections withCoreNetworkAttachmentArn(String coreNetworkAttachmentArn) {
         this.coreNetworkAttachmentArn = coreNetworkAttachmentArn;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public String customerGatewayConfiguration;
+
     public DescribeVpnConnectionsResultVpnConnections withCustomerGatewayConfiguration(String customerGatewayConfiguration) {
         this.customerGatewayConfiguration = customerGatewayConfiguration;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public String customerGatewayId;
+
     public DescribeVpnConnectionsResultVpnConnections withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsGatewayAssociationStateEnum gatewayAssociationState;
+
     public DescribeVpnConnectionsResultVpnConnections withGatewayAssociationState(DescribeVpnConnectionsResultVpnConnectionsGatewayAssociationStateEnum gatewayAssociationState) {
         this.gatewayAssociationState = gatewayAssociationState;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsOptions options;
+
     public DescribeVpnConnectionsResultVpnConnections withOptions(DescribeVpnConnectionsResultVpnConnectionsOptions options) {
         this.options = options;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsRoutes[] routes;
+
     public DescribeVpnConnectionsResultVpnConnections withRoutes(DescribeVpnConnectionsResultVpnConnectionsRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsStateEnum state;
+
     public DescribeVpnConnectionsResultVpnConnections withState(DescribeVpnConnectionsResultVpnConnectionsStateEnum state) {
         this.state = state;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsTags[] tags;
+
     public DescribeVpnConnectionsResultVpnConnections withTags(DescribeVpnConnectionsResultVpnConnectionsTags[] tags) {
         this.tags = tags;
         return this;
@@ -82,6 +92,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public String transitGatewayId;
+
     public DescribeVpnConnectionsResultVpnConnections withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -89,6 +100,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsTypeEnum type;
+
     public DescribeVpnConnectionsResultVpnConnections withType(DescribeVpnConnectionsResultVpnConnectionsTypeEnum type) {
         this.type = type;
         return this;
@@ -96,6 +108,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry[] vgwTelemetry;
+
     public DescribeVpnConnectionsResultVpnConnections withVgwTelemetry(DescribeVpnConnectionsResultVpnConnectionsVgwTelemetry[] vgwTelemetry) {
         this.vgwTelemetry = vgwTelemetry;
         return this;
@@ -103,6 +116,7 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public String vpnConnectionId;
+
     public DescribeVpnConnectionsResultVpnConnections withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -110,9 +124,11 @@ public class DescribeVpnConnectionsResultVpnConnections {
     
     
     public String vpnGatewayId;
+
     public DescribeVpnConnectionsResultVpnConnections withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public DescribeVpnConnectionsResultVpnConnections(){}
 }

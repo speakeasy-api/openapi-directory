@@ -12,9 +12,11 @@ public class CustomCreateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_hash")
     public String reportHash;
+
     public CustomCreateResponse withReportHash(String reportHash) {
         this.reportHash = reportHash;
         return this;
     }
     
+    public CustomCreateResponse(){}
 }

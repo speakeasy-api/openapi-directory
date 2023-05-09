@@ -14,6 +14,7 @@ public class TransferInstrumentReference {
      */
     @JsonProperty("accountIdentifier")
     public String accountIdentifier;
+
     public TransferInstrumentReference withAccountIdentifier(String accountIdentifier) {
         this.accountIdentifier = accountIdentifier;
         return this;
@@ -24,6 +25,7 @@ public class TransferInstrumentReference {
      */
     @JsonProperty("id")
     public String id;
+
     public TransferInstrumentReference withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +37,26 @@ public class TransferInstrumentReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("realLastFour")
     public String realLastFour;
+
     public TransferInstrumentReference withRealLastFour(String realLastFour) {
         this.realLastFour = realLastFour;
         return this;
     }
     
+    /**
+     * Identifies if the TI was created from a trusted source.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("trustedSource")
+    public Boolean trustedSource;
+
+    public TransferInstrumentReference withTrustedSource(Boolean trustedSource) {
+        this.trustedSource = trustedSource;
+        return this;
+    }
+    
+    public TransferInstrumentReference(@JsonProperty("accountIdentifier") String accountIdentifier, @JsonProperty("id") String id) {
+        this.accountIdentifier = accountIdentifier;
+        this.id = id;
+  }
 }

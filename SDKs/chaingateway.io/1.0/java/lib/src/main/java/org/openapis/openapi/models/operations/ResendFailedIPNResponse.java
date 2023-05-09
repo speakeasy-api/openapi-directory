@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResendFailedIPNResponse {
     
     public String contentType;
+
     public ResendFailedIPNResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ResendFailedIPNResponse {
     
     
     public Integer statusCode;
+
     public ResendFailedIPNResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ResendFailedIPNResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResendFailedIPNResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class ResendFailedIPNResponse {
     
     
     public org.openapis.openapi.models.shared.ResendFailedIPN resendFailedIPN;
+
     public ResendFailedIPNResponse withResendFailedIPN(org.openapis.openapi.models.shared.ResendFailedIPN resendFailedIPN) {
         this.resendFailedIPN = resendFailedIPN;
         return this;
     }
     
+    public ResendFailedIPNResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

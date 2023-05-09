@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Endpoint {
     /**
-     * Wrapper for app engine service version attributes.
+     * Wrapper for the App Engine service version attributes.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineVersion")
     public AppEngineVersionEndpoint appEngineVersion;
+
     public Endpoint withAppEngineVersion(AppEngineVersionEndpoint appEngineVersion) {
         this.appEngineVersion = appEngineVersion;
         return this;
@@ -29,6 +30,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudFunction")
     public CloudFunctionEndpoint cloudFunction;
+
     public Endpoint withCloudFunction(CloudFunctionEndpoint cloudFunction) {
         this.cloudFunction = cloudFunction;
         return this;
@@ -40,6 +42,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRunRevision")
     public CloudRunRevisionEndpoint cloudRunRevision;
+
     public Endpoint withCloudRunRevision(CloudRunRevisionEndpoint cloudRunRevision) {
         this.cloudRunRevision = cloudRunRevision;
         return this;
@@ -51,6 +54,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSqlInstance")
     public String cloudSqlInstance;
+
     public Endpoint withCloudSqlInstance(String cloudSqlInstance) {
         this.cloudSqlInstance = cloudSqlInstance;
         return this;
@@ -62,6 +66,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeMasterCluster")
     public String gkeMasterCluster;
+
     public Endpoint withGkeMasterCluster(String gkeMasterCluster) {
         this.gkeMasterCluster = gkeMasterCluster;
         return this;
@@ -73,6 +78,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public Endpoint withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -84,6 +90,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public Endpoint withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -95,6 +102,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Endpoint withNetwork(String network) {
         this.network = network;
         return this;
@@ -106,6 +114,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkType")
     public EndpointNetworkTypeEnum networkType;
+
     public Endpoint withNetworkType(EndpointNetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -117,20 +126,23 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public Endpoint withPort(Integer port) {
         this.port = port;
         return this;
     }
     
     /**
-     * Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+     * Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a Google Cloud project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Endpoint withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public Endpoint(){}
 }

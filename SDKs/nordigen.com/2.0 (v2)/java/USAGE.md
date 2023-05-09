@@ -3,30 +3,30 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.operations.RetrieveAccountBalancesV2Request;
+import org.openapis.openapi.models.operations.RetrieveAccountBalancesV2Response;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AccountsBalancesRetrieveRequest;
-import org.openapis.openapi.models.operations.AccountsBalancesRetrieveResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     jwtAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            AccountsBalancesRetrieveRequest req = new AccountsBalancesRetrieveRequest() {{
-                id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-            }}            
+            RetrieveAccountBalancesV2Request req = new RetrieveAccountBalancesV2Request("9bd9d8d6-9a67-44e0-b467-cc8796ed151a");            
 
-            AccountsBalancesRetrieveResponse res = sdk.accounts.accountsBalancesRetrieve(req);
+            RetrieveAccountBalancesV2Response res = sdk.accounts.retrieveAccountBalancesV2(req);
 
-            if (res.statusCode == 200) {
+            if (res.retrieveAccountBalancesV2200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

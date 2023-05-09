@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminSetUserMFAPreferenceResponse {
@@ -12,6 +13,7 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public java.util.Map<String, Object> adminSetUserMFAPreferenceResponse;
+
     public AdminSetUserMFAPreferenceResponse withAdminSetUserMFAPreferenceResponse(java.util.Map<String, Object> adminSetUserMFAPreferenceResponse) {
         this.adminSetUserMFAPreferenceResponse = adminSetUserMFAPreferenceResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminSetUserMFAPreferenceResponse {
     
     
     public String contentType;
+
     public AdminSetUserMFAPreferenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public Object internalErrorException;
+
     public AdminSetUserMFAPreferenceResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminSetUserMFAPreferenceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminSetUserMFAPreferenceResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public AdminSetUserMFAPreferenceResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -69,6 +76,7 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminSetUserMFAPreferenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AdminSetUserMFAPreferenceResponse {
     
     
     public Integer statusCode;
+
     public AdminSetUserMFAPreferenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AdminSetUserMFAPreferenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminSetUserMFAPreferenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public Object userNotConfirmedException;
+
     public AdminSetUserMFAPreferenceResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -103,9 +114,14 @@ public class AdminSetUserMFAPreferenceResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminSetUserMFAPreferenceResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminSetUserMFAPreferenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

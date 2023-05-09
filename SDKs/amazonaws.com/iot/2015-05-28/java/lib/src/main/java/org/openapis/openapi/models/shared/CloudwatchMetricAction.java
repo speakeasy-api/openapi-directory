@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CloudwatchMetricAction {
     @JsonProperty("metricName")
     public String metricName;
+
     public CloudwatchMetricAction withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -21,6 +22,7 @@ public class CloudwatchMetricAction {
     
     @JsonProperty("metricNamespace")
     public String metricNamespace;
+
     public CloudwatchMetricAction withMetricNamespace(String metricNamespace) {
         this.metricNamespace = metricNamespace;
         return this;
@@ -29,6 +31,7 @@ public class CloudwatchMetricAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricTimestamp")
     public String metricTimestamp;
+
     public CloudwatchMetricAction withMetricTimestamp(String metricTimestamp) {
         this.metricTimestamp = metricTimestamp;
         return this;
@@ -36,6 +39,7 @@ public class CloudwatchMetricAction {
     
     @JsonProperty("metricUnit")
     public String metricUnit;
+
     public CloudwatchMetricAction withMetricUnit(String metricUnit) {
         this.metricUnit = metricUnit;
         return this;
@@ -43,6 +47,7 @@ public class CloudwatchMetricAction {
     
     @JsonProperty("metricValue")
     public String metricValue;
+
     public CloudwatchMetricAction withMetricValue(String metricValue) {
         this.metricValue = metricValue;
         return this;
@@ -50,9 +55,17 @@ public class CloudwatchMetricAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CloudwatchMetricAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CloudwatchMetricAction(@JsonProperty("metricName") String metricName, @JsonProperty("metricNamespace") String metricNamespace, @JsonProperty("metricUnit") String metricUnit, @JsonProperty("metricValue") String metricValue, @JsonProperty("roleArn") String roleArn) {
+        this.metricName = metricName;
+        this.metricNamespace = metricNamespace;
+        this.metricUnit = metricUnit;
+        this.metricValue = metricValue;
+        this.roleArn = roleArn;
+  }
 }

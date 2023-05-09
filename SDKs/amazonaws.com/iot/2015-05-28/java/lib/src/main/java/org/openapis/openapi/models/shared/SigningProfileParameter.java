@@ -15,6 +15,7 @@ public class SigningProfileParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public SigningProfileParameter withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -23,6 +24,7 @@ public class SigningProfileParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePathOnDevice")
     public String certificatePathOnDevice;
+
     public SigningProfileParameter withCertificatePathOnDevice(String certificatePathOnDevice) {
         this.certificatePathOnDevice = certificatePathOnDevice;
         return this;
@@ -31,9 +33,11 @@ public class SigningProfileParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public SigningProfileParameter withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public SigningProfileParameter(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBackendStorageResponse {
@@ -12,6 +13,7 @@ public class UpdateBackendStorageResponse {
      */
     
     public Object badRequestException;
+
     public UpdateBackendStorageResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBackendStorageResponse {
     
     
     public String contentType;
+
     public UpdateBackendStorageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBackendStorageResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public UpdateBackendStorageResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBackendStorageResponse {
      */
     
     public Object notFoundException;
+
     public UpdateBackendStorageResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBackendStorageResponse {
     
     
     public Integer statusCode;
+
     public UpdateBackendStorageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBackendStorageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBackendStorageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBackendStorageResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateBackendStorageResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateBackendStorageResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBackendStorageResponse updateBackendStorageResponse;
+
     public UpdateBackendStorageResponse withUpdateBackendStorageResponse(org.openapis.openapi.models.shared.UpdateBackendStorageResponse updateBackendStorageResponse) {
         this.updateBackendStorageResponse = updateBackendStorageResponse;
         return this;
     }
     
+    public UpdateBackendStorageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -56,11 +56,9 @@ public class Statements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DigitalassetlinksStatementsListResponse res = new org.openapis.openapi.models.operations.DigitalassetlinksStatementsListResponse() {{
+        org.openapis.openapi.models.operations.DigitalassetlinksStatementsListResponse res = new org.openapis.openapi.models.operations.DigitalassetlinksStatementsListResponse(contentType, httpRes.statusCode()) {{
             listResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

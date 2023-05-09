@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateIdentityProviderResponse {
@@ -12,6 +13,7 @@ public class UpdateIdentityProviderResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateIdentityProviderResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateIdentityProviderResponse {
     
     
     public String contentType;
+
     public UpdateIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateIdentityProviderResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateIdentityProviderResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateIdentityProviderResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateIdentityProviderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateIdentityProviderResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateIdentityProviderResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public UpdateIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateIdentityProviderResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateIdentityProviderResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateIdentityProviderResponse {
      */
     
     public Object unsupportedIdentityProviderException;
+
     public UpdateIdentityProviderResponse withUnsupportedIdentityProviderException(Object unsupportedIdentityProviderException) {
         this.unsupportedIdentityProviderException = unsupportedIdentityProviderException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateIdentityProviderResponse updateIdentityProviderResponse;
+
     public UpdateIdentityProviderResponse withUpdateIdentityProviderResponse(org.openapis.openapi.models.shared.UpdateIdentityProviderResponse updateIdentityProviderResponse) {
         this.updateIdentityProviderResponse = updateIdentityProviderResponse;
         return this;
     }
     
+    public UpdateIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DlpProjectsLocationsContentDeidentifyResponse {
     
     public String contentType;
+
     public DlpProjectsLocationsContentDeidentifyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DlpProjectsLocationsContentDeidentifyResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglePrivacyDlpV2DeidentifyContentResponse googlePrivacyDlpV2DeidentifyContentResponse;
+
     public DlpProjectsLocationsContentDeidentifyResponse withGooglePrivacyDlpV2DeidentifyContentResponse(org.openapis.openapi.models.shared.GooglePrivacyDlpV2DeidentifyContentResponse googlePrivacyDlpV2DeidentifyContentResponse) {
         this.googlePrivacyDlpV2DeidentifyContentResponse = googlePrivacyDlpV2DeidentifyContentResponse;
         return this;
@@ -26,6 +29,7 @@ public class DlpProjectsLocationsContentDeidentifyResponse {
     
     
     public Integer statusCode;
+
     public DlpProjectsLocationsContentDeidentifyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DlpProjectsLocationsContentDeidentifyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DlpProjectsLocationsContentDeidentifyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DlpProjectsLocationsContentDeidentifyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

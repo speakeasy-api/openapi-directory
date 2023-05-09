@@ -128,10 +128,8 @@ public class PricesLegacyV1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletebyskuIdResponse res = new org.openapis.openapi.models.operations.DeletebyskuIdResponse() {{
+        org.openapis.openapi.models.operations.DeletebyskuIdResponse res = new org.openapis.openapi.models.operations.DeletebyskuIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,10 +196,8 @@ public class PricesLegacyV1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetallpagedResponse res = new org.openapis.openapi.models.operations.GetallpagedResponse() {{
+        org.openapis.openapi.models.operations.GetallpagedResponse res = new org.openapis.openapi.models.operations.GetallpagedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,10 +269,8 @@ public class PricesLegacyV1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PricebycontextResponse res = new org.openapis.openapi.models.operations.PricebycontextResponse() {{
+        org.openapis.openapi.models.operations.PricebycontextResponse res = new org.openapis.openapi.models.operations.PricebycontextResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,10 +333,8 @@ public class PricesLegacyV1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PricebyskuIdResponse res = new org.openapis.openapi.models.operations.PricebyskuIdResponse() {{
+        org.openapis.openapi.models.operations.PricebyskuIdResponse res = new org.openapis.openapi.models.operations.PricebyskuIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,10 +401,8 @@ public class PricesLegacyV1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PricebyskuIdandtradePolicyResponse res = new org.openapis.openapi.models.operations.PricebyskuIdandtradePolicyResponse() {{
+        org.openapis.openapi.models.operations.PricebyskuIdandtradePolicyResponse res = new org.openapis.openapi.models.operations.PricebyskuIdandtradePolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,10 +474,8 @@ public class PricesLegacyV1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SavepriceResponse res = new org.openapis.openapi.models.operations.SavepriceResponse() {{
+        org.openapis.openapi.models.operations.SavepriceResponse res = new org.openapis.openapi.models.operations.SavepriceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

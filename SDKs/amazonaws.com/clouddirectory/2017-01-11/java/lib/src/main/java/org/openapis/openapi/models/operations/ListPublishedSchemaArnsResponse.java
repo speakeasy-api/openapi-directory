@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPublishedSchemaArnsResponse {
@@ -12,6 +13,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListPublishedSchemaArnsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListPublishedSchemaArnsResponse {
     
     
     public String contentType;
+
     public ListPublishedSchemaArnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object internalServiceException;
+
     public ListPublishedSchemaArnsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object invalidArnException;
+
     public ListPublishedSchemaArnsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListPublishedSchemaArnsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object limitExceededException;
+
     public ListPublishedSchemaArnsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPublishedSchemaArnsResponse listPublishedSchemaArnsResponse;
+
     public ListPublishedSchemaArnsResponse withListPublishedSchemaArnsResponse(org.openapis.openapi.models.shared.ListPublishedSchemaArnsResponse listPublishedSchemaArnsResponse) {
         this.listPublishedSchemaArnsResponse = listPublishedSchemaArnsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListPublishedSchemaArnsResponse {
     
     
     public Integer statusCode;
+
     public ListPublishedSchemaArnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListPublishedSchemaArnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPublishedSchemaArnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPublishedSchemaArnsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object retryableConflictException;
+
     public ListPublishedSchemaArnsResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class ListPublishedSchemaArnsResponse {
      */
     
     public Object validationException;
+
     public ListPublishedSchemaArnsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListPublishedSchemaArnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

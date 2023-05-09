@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetDestinyEntityDefinitionRequest {
@@ -12,6 +13,7 @@ public class Destiny2GetDestinyEntityDefinitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entityType")
     public String entityType;
+
     public Destiny2GetDestinyEntityDefinitionRequest withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -22,9 +24,14 @@ public class Destiny2GetDestinyEntityDefinitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hashIdentifier")
     public Long hashIdentifier;
+
     public Destiny2GetDestinyEntityDefinitionRequest withHashIdentifier(Long hashIdentifier) {
         this.hashIdentifier = hashIdentifier;
         return this;
     }
     
+    public Destiny2GetDestinyEntityDefinitionRequest(@JsonProperty("entityType") String entityType, @JsonProperty("hashIdentifier") Long hashIdentifier) {
+        this.entityType = entityType;
+        this.hashIdentifier = hashIdentifier;
+  }
 }

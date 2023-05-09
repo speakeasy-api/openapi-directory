@@ -12,6 +12,7 @@ public class OrderPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public OrderAddress address;
+
     public OrderPickupDetails withAddress(OrderAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class OrderPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectors")
     public OrderPickupDetailsCollector[] collectors;
+
     public OrderPickupDetails withCollectors(OrderPickupDetailsCollector[] collectors) {
         this.collectors = collectors;
         return this;
@@ -34,9 +36,11 @@ public class OrderPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public OrderPickupDetails withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public OrderPickupDetails(){}
 }

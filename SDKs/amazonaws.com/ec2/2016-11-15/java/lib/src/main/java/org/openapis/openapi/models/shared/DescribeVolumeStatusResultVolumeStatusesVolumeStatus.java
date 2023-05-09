@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeStatusResultVolumeStatusesVolumeStatus {
     
     public DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetails[] details;
+
     public DescribeVolumeStatusResultVolumeStatusesVolumeStatus withDetails(DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetails[] details) {
         this.details = details;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVolumeStatusResultVolumeStatusesVolumeStatus {
     
     
     public DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum status;
+
     public DescribeVolumeStatusResultVolumeStatusesVolumeStatus withStatus(DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeVolumeStatusResultVolumeStatusesVolumeStatus(){}
 }

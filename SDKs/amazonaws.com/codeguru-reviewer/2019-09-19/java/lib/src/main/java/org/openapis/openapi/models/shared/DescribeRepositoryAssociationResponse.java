@@ -15,6 +15,7 @@ public class DescribeRepositoryAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryAssociation")
     public RepositoryAssociation repositoryAssociation;
+
     public DescribeRepositoryAssociationResponse withRepositoryAssociation(RepositoryAssociation repositoryAssociation) {
         this.repositoryAssociation = repositoryAssociation;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRepositoryAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeRepositoryAssociationResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeRepositoryAssociationResponse(){}
 }

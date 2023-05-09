@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountRequest {
@@ -12,6 +13,7 @@ public class GetAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountIdPathParameter;
+
     public GetAccountRequest withAccountIdPathParameter(String accountIdPathParameter) {
         this.accountIdPathParameter = accountIdPathParameter;
         return this;
@@ -22,9 +24,14 @@ public class GetAccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
     public Integer accountIdQueryParameter;
+
     public GetAccountRequest withAccountIdQueryParameter(Integer accountIdQueryParameter) {
         this.accountIdQueryParameter = accountIdQueryParameter;
         return this;
     }
     
+    public GetAccountRequest(@JsonProperty("accountIdPathParameter") String accountIdPathParameter, @JsonProperty("account_idQueryParameter") Integer accountIdQueryParameter) {
+        this.accountIdPathParameter = accountIdPathParameter;
+        this.accountIdQueryParameter = accountIdQueryParameter;
+  }
 }

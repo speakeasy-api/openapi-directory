@@ -15,6 +15,7 @@ public class DeleteResiliencyPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteResiliencyPolicyRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class DeleteResiliencyPolicyRequestBody {
      */
     @JsonProperty("policyArn")
     public String policyArn;
+
     public DeleteResiliencyPolicyRequestBody withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
     }
     
+    public DeleteResiliencyPolicyRequestBody(@JsonProperty("policyArn") String policyArn) {
+        this.policyArn = policyArn;
+  }
 }

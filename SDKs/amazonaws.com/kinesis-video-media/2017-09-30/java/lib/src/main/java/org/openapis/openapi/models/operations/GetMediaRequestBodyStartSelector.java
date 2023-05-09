@@ -20,6 +20,7 @@ public class GetMediaRequestBodyStartSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AfterFragmentNumber")
     public String afterFragmentNumber;
+
     public GetMediaRequestBodyStartSelector withAfterFragmentNumber(String afterFragmentNumber) {
         this.afterFragmentNumber = afterFragmentNumber;
         return this;
@@ -28,6 +29,7 @@ public class GetMediaRequestBodyStartSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContinuationToken")
     public String continuationToken;
+
     public GetMediaRequestBodyStartSelector withContinuationToken(String continuationToken) {
         this.continuationToken = continuationToken;
         return this;
@@ -36,6 +38,7 @@ public class GetMediaRequestBodyStartSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartSelectorType")
     public org.openapis.openapi.models.shared.StartSelectorTypeEnum startSelectorType;
+
     public GetMediaRequestBodyStartSelector withStartSelectorType(org.openapis.openapi.models.shared.StartSelectorTypeEnum startSelectorType) {
         this.startSelectorType = startSelectorType;
         return this;
@@ -46,9 +49,11 @@ public class GetMediaRequestBodyStartSelector {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTimestamp")
     public OffsetDateTime startTimestamp;
+
     public GetMediaRequestBodyStartSelector withStartTimestamp(OffsetDateTime startTimestamp) {
         this.startTimestamp = startTimestamp;
         return this;
     }
     
+    public GetMediaRequestBodyStartSelector(){}
 }

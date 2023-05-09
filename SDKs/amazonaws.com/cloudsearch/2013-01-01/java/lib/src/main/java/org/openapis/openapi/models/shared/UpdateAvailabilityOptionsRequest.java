@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateAvailabilityOptionsRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;UpdateAvailabilityOptions&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the Multi-AZ availability option.
@@ -15,6 +15,7 @@ public class UpdateAvailabilityOptionsRequest {
      */
     
     public String domainName;
+
     public UpdateAvailabilityOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class UpdateAvailabilityOptionsRequest {
     
     
     public Boolean multiAZ;
+
     public UpdateAvailabilityOptionsRequest withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
     }
     
+    public UpdateAvailabilityOptionsRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("MultiAZ") Boolean multiAZ) {
+        this.domainName = domainName;
+        this.multiAZ = multiAZ;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamProcessorDataSharingPreference {
     @JsonProperty("OptIn")
     public Boolean optIn;
+
     public StreamProcessorDataSharingPreference withOptIn(Boolean optIn) {
         this.optIn = optIn;
         return this;
     }
     
+    public StreamProcessorDataSharingPreference(@JsonProperty("OptIn") Boolean optIn) {
+        this.optIn = optIn;
+  }
 }

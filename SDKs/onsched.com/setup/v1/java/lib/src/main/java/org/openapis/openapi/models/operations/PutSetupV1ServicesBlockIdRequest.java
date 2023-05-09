@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ServicesBlockIdRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1ServicesBlockIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ServiceBlockUpdateModel serviceBlockUpdateModel;
+
     public PutSetupV1ServicesBlockIdRequest withServiceBlockUpdateModel(org.openapis.openapi.models.shared.ServiceBlockUpdateModel serviceBlockUpdateModel) {
         this.serviceBlockUpdateModel = serviceBlockUpdateModel;
         return this;
@@ -22,9 +24,13 @@ public class PutSetupV1ServicesBlockIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1ServicesBlockIdRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutSetupV1ServicesBlockIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

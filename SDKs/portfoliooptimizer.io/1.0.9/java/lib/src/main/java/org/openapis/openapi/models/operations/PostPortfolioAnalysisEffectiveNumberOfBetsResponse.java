@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioAnalysisEffectiveNumberOfBetsResponse {
     
     public String contentType;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioAnalysisEffectiveNumberOfBetsResponse {
      */
     
     public PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSON postPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONObject;
+
     public PostPortfolioAnalysisEffectiveNumberOfBetsResponse withPostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONObject(PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSON postPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONObject) {
         this.postPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONObject = postPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioAnalysisEffectiveNumberOfBetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

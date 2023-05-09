@@ -13,22 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class AccessConfig {
     /**
-     * The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
+     * Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIpv6")
     public String externalIpv6;
+
     public AccessConfig withExternalIpv6(String externalIpv6) {
         this.externalIpv6 = externalIpv6;
         return this;
     }
     
     /**
-     * The prefix length of the external IPv6 range.
+     * Applies to ipv6AccessConfigs only. The prefix length of the external IPv6 range.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIpv6PrefixLength")
     public Integer externalIpv6PrefixLength;
+
     public AccessConfig withExternalIpv6PrefixLength(Integer externalIpv6PrefixLength) {
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         return this;
@@ -40,28 +42,31 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccessConfig withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
     /**
-     * The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.
+     * The name of this access configuration. In accessConfigs (IPv4), the default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access. In ipv6AccessConfigs, the recommend name is External IPv6.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessConfig withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.
+     * Applies to accessConfigs (IPv4) only. An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natIP")
     public String natIP;
+
     public AccessConfig withNatIP(String natIP) {
         this.natIP = natIP;
         return this;
@@ -73,6 +78,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTier")
     public AccessConfigNetworkTierEnum networkTier;
+
     public AccessConfig withNetworkTier(AccessConfigNetworkTierEnum networkTier) {
         this.networkTier = networkTier;
         return this;
@@ -84,6 +90,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicDnsName")
     public String publicDnsName;
+
     public AccessConfig withPublicDnsName(String publicDnsName) {
         this.publicDnsName = publicDnsName;
         return this;
@@ -95,6 +102,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicPtrDomainName")
     public String publicPtrDomainName;
+
     public AccessConfig withPublicPtrDomainName(String publicPtrDomainName) {
         this.publicPtrDomainName = publicPtrDomainName;
         return this;
@@ -106,6 +114,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicy")
     public String securityPolicy;
+
     public AccessConfig withSecurityPolicy(String securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -117,6 +126,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setPublicDns")
     public Boolean setPublicDns;
+
     public AccessConfig withSetPublicDns(Boolean setPublicDns) {
         this.setPublicDns = setPublicDns;
         return this;
@@ -128,20 +138,23 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setPublicPtr")
     public Boolean setPublicPtr;
+
     public AccessConfig withSetPublicPtr(Boolean setPublicPtr) {
         this.setPublicPtr = setPublicPtr;
         return this;
     }
     
     /**
-     * The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+     * The type of configuration. In accessConfigs (IPv4), the default and only option is ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccessConfigTypeEnum type;
+
     public AccessConfig withType(AccessConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccessConfig(){}
 }

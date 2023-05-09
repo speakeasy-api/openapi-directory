@@ -18,9 +18,11 @@ public class OracleRdbms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oracleSchemas")
     public OracleSchema[] oracleSchemas;
+
     public OracleRdbms withOracleSchemas(OracleSchema[] oracleSchemas) {
         this.oracleSchemas = oracleSchemas;
         return this;
     }
     
+    public OracleRdbms(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostMeAllowedOriginsResponse {
@@ -12,6 +13,7 @@ public class PostMeAllowedOriginsResponse {
      */
     
     public org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin;
+
     public PostMeAllowedOriginsResponse withAllowedOrigin(org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin) {
         this.allowedOrigin = allowedOrigin;
         return this;
@@ -19,6 +21,7 @@ public class PostMeAllowedOriginsResponse {
     
     
     public String contentType;
+
     public PostMeAllowedOriginsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostMeAllowedOriginsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostMeAllowedOriginsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PostMeAllowedOriginsResponse {
     
     
     public Integer statusCode;
+
     public PostMeAllowedOriginsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostMeAllowedOriginsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostMeAllowedOriginsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostMeAllowedOriginsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeImageAttributeRequest - Contains the parameters for DescribeImageAttribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImageAttributeRequest {
     
     public ImageAttributeNameEnum attribute;
+
     public DescribeImageAttributeRequest withAttribute(ImageAttributeNameEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImageAttributeRequest {
     
     
     public Boolean dryRun;
+
     public DescribeImageAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +28,14 @@ public class DescribeImageAttributeRequest {
     
     
     public String imageId;
+
     public DescribeImageAttributeRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public DescribeImageAttributeRequest(@JsonProperty("Attribute") ImageAttributeNameEnum attribute, @JsonProperty("ImageId") String imageId) {
+        this.attribute = attribute;
+        this.imageId = imageId;
+  }
 }

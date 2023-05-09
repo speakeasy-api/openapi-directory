@@ -15,9 +15,11 @@ public class LegGeometry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineString")
     public Double[][] lineString;
+
     public LegGeometry withLineString(Double[][] lineString) {
         this.lineString = lineString;
         return this;
     }
     
+    public LegGeometry(){}
 }

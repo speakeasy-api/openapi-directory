@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerPostAppointmentFormResponse {
     
     public String contentType;
+
     public DiaryControllerPostAppointmentFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiaryControllerPostAppointmentFormResponse {
      */
     
     public String diaryControllerPostAppointmentForm200ApplicationJSONString;
+
     public DiaryControllerPostAppointmentFormResponse withDiaryControllerPostAppointmentForm200ApplicationJSONString(String diaryControllerPostAppointmentForm200ApplicationJSONString) {
         this.diaryControllerPostAppointmentForm200ApplicationJSONString = diaryControllerPostAppointmentForm200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class DiaryControllerPostAppointmentFormResponse {
      */
     
     public String diaryControllerPostAppointmentForm200ApplicationXMLString;
+
     public DiaryControllerPostAppointmentFormResponse withDiaryControllerPostAppointmentForm200ApplicationXMLString(String diaryControllerPostAppointmentForm200ApplicationXMLString) {
         this.diaryControllerPostAppointmentForm200ApplicationXMLString = diaryControllerPostAppointmentForm200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class DiaryControllerPostAppointmentFormResponse {
      */
     
     public String diaryControllerPostAppointmentForm200TextJSONString;
+
     public DiaryControllerPostAppointmentFormResponse withDiaryControllerPostAppointmentForm200TextJSONString(String diaryControllerPostAppointmentForm200TextJSONString) {
         this.diaryControllerPostAppointmentForm200TextJSONString = diaryControllerPostAppointmentForm200TextJSONString;
         return this;
@@ -49,6 +54,7 @@ public class DiaryControllerPostAppointmentFormResponse {
      */
     
     public String diaryControllerPostAppointmentForm200TextXMLString;
+
     public DiaryControllerPostAppointmentFormResponse withDiaryControllerPostAppointmentForm200TextXMLString(String diaryControllerPostAppointmentForm200TextXMLString) {
         this.diaryControllerPostAppointmentForm200TextXMLString = diaryControllerPostAppointmentForm200TextXMLString;
         return this;
@@ -56,6 +62,7 @@ public class DiaryControllerPostAppointmentFormResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerPostAppointmentFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DiaryControllerPostAppointmentFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerPostAppointmentFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerPostAppointmentFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

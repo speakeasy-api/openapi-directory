@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountingRequest {
@@ -12,6 +13,7 @@ public class GetAccountingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
     public String fromDate;
+
     public GetAccountingRequest withFromDate(String fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -22,6 +24,7 @@ public class GetAccountingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hydrate")
     public GetAccountingHydrateEnum[] hydrate;
+
     public GetAccountingRequest withHydrate(GetAccountingHydrateEnum[] hydrate) {
         this.hydrate = hydrate;
         return this;
@@ -32,6 +35,7 @@ public class GetAccountingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAccountingRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class GetAccountingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderIds")
     public Long[] orderIds;
+
     public GetAccountingRequest withOrderIds(Long[] orderIds) {
         this.orderIds = orderIds;
         return this;
@@ -52,6 +57,7 @@ public class GetAccountingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetAccountingRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +68,7 @@ public class GetAccountingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
     public String toDate;
+
     public GetAccountingRequest withToDate(String toDate) {
         this.toDate = toDate;
         return this;
@@ -72,9 +79,15 @@ public class GetAccountingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=warehouseIds")
     public Long[] warehouseIds;
+
     public GetAccountingRequest withWarehouseIds(Long[] warehouseIds) {
         this.warehouseIds = warehouseIds;
         return this;
     }
     
+    public GetAccountingRequest(@JsonProperty("fromDate") String fromDate, @JsonProperty("hydrate") GetAccountingHydrateEnum[] hydrate, @JsonProperty("toDate") String toDate) {
+        this.fromDate = fromDate;
+        this.hydrate = hydrate;
+        this.toDate = toDate;
+  }
 }

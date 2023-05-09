@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsLoadoutsDestinyLoadoutsComponent {
     
     public DestinyComponentsLoadoutsDestinyLoadoutComponent[] loadouts;
+
     public DestinyComponentsLoadoutsDestinyLoadoutsComponent withLoadouts(DestinyComponentsLoadoutsDestinyLoadoutComponent[] loadouts) {
         this.loadouts = loadouts;
         return this;
     }
     
+    public DestinyComponentsLoadoutsDestinyLoadoutsComponent(){}
 }

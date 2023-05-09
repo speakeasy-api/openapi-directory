@@ -18,6 +18,7 @@ public class CostCategoryValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public CostCategoryValues withKey(String key) {
         this.key = key;
         return this;
@@ -26,6 +27,7 @@ public class CostCategoryValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchOptions")
     public MatchOptionEnum[] matchOptions;
+
     public CostCategoryValues withMatchOptions(MatchOptionEnum[] matchOptions) {
         this.matchOptions = matchOptions;
         return this;
@@ -34,9 +36,11 @@ public class CostCategoryValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public CostCategoryValues withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CostCategoryValues(){}
 }

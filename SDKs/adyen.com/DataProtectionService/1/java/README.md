@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostRequestSubjectErasureSecurity;
 import org.openapis.openapi.models.operations.PostRequestSubjectErasureResponse;
-import org.openapis.openapi.models.shared.SubjectErasureByPspReferenceRequest;
+import org.openapis.openapi.models.operations.PostRequestSubjectErasureSecurity;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
+import org.openapis.openapi.models.shared.SubjectErasureByPspReferenceRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,18 +31,20 @@ public class Application {
                 forceErasure = false;
                 merchantAccount = "corrupti";
                 pspReference = "provident";
-            }}            
+            }};            
 
             PostRequestSubjectErasureResponse res = sdk.general.postRequestSubjectErasure(req, new PostRequestSubjectErasureSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.subjectErasureResponse.isPresent()) {
+            if (res.subjectErasureResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,9 +52,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### general
+### [general](docs/general/README.md)
 
-* `postRequestSubjectErasure` - Submit a Subject Erasure Request.
+* [postRequestSubjectErasure](docs/general/README.md#postrequestsubjecterasure) - Submit a Subject Erasure Request.
 <!-- End SDK Available Operations -->
 
 ### Maturity

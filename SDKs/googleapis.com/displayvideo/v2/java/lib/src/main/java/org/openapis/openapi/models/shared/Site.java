@@ -18,6 +18,7 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Site withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Site {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlOrAppId")
     public String urlOrAppId;
+
     public Site withUrlOrAppId(String urlOrAppId) {
         this.urlOrAppId = urlOrAppId;
         return this;
     }
     
+    public Site(){}
 }

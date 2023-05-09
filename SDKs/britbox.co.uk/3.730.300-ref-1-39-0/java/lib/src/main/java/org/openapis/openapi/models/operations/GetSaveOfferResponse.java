@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSaveOfferResponse {
     
     public String contentType;
+
     public GetSaveOfferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSaveOfferResponse {
      */
     
     public org.openapis.openapi.models.shared.ItvGetDiscountResponse itvGetDiscountResponse;
+
     public GetSaveOfferResponse withItvGetDiscountResponse(org.openapis.openapi.models.shared.ItvGetDiscountResponse itvGetDiscountResponse) {
         this.itvGetDiscountResponse = itvGetDiscountResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSaveOfferResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetSaveOfferResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetSaveOfferResponse {
     
     
     public Integer statusCode;
+
     public GetSaveOfferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetSaveOfferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSaveOfferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSaveOfferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

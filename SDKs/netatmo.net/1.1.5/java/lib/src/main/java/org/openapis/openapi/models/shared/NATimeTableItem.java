@@ -12,6 +12,7 @@ public class NATimeTableItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public NATimeTableItem withId(Integer id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class NATimeTableItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("m_offset")
     public Integer mOffset;
+
     public NATimeTableItem withMOffset(Integer mOffset) {
         this.mOffset = mOffset;
         return this;
     }
     
+    public NATimeTableItem(){}
 }

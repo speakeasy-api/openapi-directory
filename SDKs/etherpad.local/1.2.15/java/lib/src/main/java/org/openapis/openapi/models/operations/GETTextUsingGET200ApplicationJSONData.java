@@ -12,9 +12,11 @@ public class GETTextUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GETTextUsingGET200ApplicationJSONData withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GETTextUsingGET200ApplicationJSONData(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTableCardCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardCell withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageTableCardCell(){}
 }

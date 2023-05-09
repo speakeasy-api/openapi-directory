@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest {
@@ -12,6 +13,7 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
      */
     @SpeakeasyMetadata("request:mediaType=text/plain")
     public String requestBody;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -29,6 +32,7 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
     public String definitionId;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -39,9 +43,16 @@ public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateO
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeFunctionTypeEnum functionType;
+
     public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withFunctionType(PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeFunctionTypeEnum functionType) {
         this.functionType = functionType;
         return this;
     }
     
+    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest(@JsonProperty("RequestBody") String requestBody, @JsonProperty("appId") Integer appId, @JsonProperty("definitionId") String definitionId, @JsonProperty("functionType") PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeFunctionTypeEnum functionType) {
+        this.requestBody = requestBody;
+        this.appId = appId;
+        this.definitionId = definitionId;
+        this.functionType = functionType;
+  }
 }

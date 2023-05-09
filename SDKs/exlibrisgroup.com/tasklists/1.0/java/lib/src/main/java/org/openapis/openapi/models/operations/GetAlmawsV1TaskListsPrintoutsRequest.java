@@ -12,6 +12,7 @@ public class GetAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=letter")
     public String letter;
+
     public GetAlmawsV1TaskListsPrintoutsRequest withLetter(String letter) {
         this.letter = letter;
         return this;
@@ -22,6 +23,7 @@ public class GetAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAlmawsV1TaskListsPrintoutsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class GetAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetAlmawsV1TaskListsPrintoutsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,6 +45,7 @@ public class GetAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printer_id")
     public String printerId;
+
     public GetAlmawsV1TaskListsPrintoutsRequest withPrinterId(String printerId) {
         this.printerId = printerId;
         return this;
@@ -52,6 +56,7 @@ public class GetAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printout_id")
     public String printoutId;
+
     public GetAlmawsV1TaskListsPrintoutsRequest withPrintoutId(String printoutId) {
         this.printoutId = printoutId;
         return this;
@@ -62,9 +67,11 @@ public class GetAlmawsV1TaskListsPrintoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetAlmawsV1TaskListsPrintoutsRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetAlmawsV1TaskListsPrintoutsRequest(){}
 }

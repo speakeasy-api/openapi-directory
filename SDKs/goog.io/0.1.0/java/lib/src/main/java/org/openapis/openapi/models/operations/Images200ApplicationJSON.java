@@ -15,6 +15,7 @@ public class Images200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
     public String[] answers;
+
     public Images200ApplicationJSON withAnswers(String[] answers) {
         this.answers = answers;
         return this;
@@ -23,6 +24,7 @@ public class Images200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_results")
     public Images200ApplicationJSONImageResults[] imageResults;
+
     public Images200ApplicationJSON withImageResults(Images200ApplicationJSONImageResults[] imageResults) {
         this.imageResults = imageResults;
         return this;
@@ -31,6 +33,7 @@ public class Images200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, Object>[] results;
+
     public Images200ApplicationJSON withResults(java.util.Map<String, Object>[] results) {
         this.results = results;
         return this;
@@ -39,9 +42,11 @@ public class Images200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public Images200ApplicationJSON withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public Images200ApplicationJSON(){}
 }

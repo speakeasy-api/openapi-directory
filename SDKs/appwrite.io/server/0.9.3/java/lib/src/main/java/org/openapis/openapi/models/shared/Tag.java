@@ -15,6 +15,7 @@ public class Tag {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Tag withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Tag {
      */
     @JsonProperty("command")
     public String command;
+
     public Tag withCommand(String command) {
         this.command = command;
         return this;
@@ -35,6 +37,7 @@ public class Tag {
      */
     @JsonProperty("dateCreated")
     public Integer dateCreated;
+
     public Tag withDateCreated(Integer dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class Tag {
      */
     @JsonProperty("functionId")
     public String functionId;
+
     public Tag withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
@@ -55,9 +59,17 @@ public class Tag {
      */
     @JsonProperty("size")
     public String size;
+
     public Tag withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public Tag(@JsonProperty("$id") String dollarId, @JsonProperty("command") String command, @JsonProperty("dateCreated") Integer dateCreated, @JsonProperty("functionId") String functionId, @JsonProperty("size") String size) {
+        this.dollarId = dollarId;
+        this.command = command;
+        this.dateCreated = dateCreated;
+        this.functionId = functionId;
+        this.size = size;
+  }
 }

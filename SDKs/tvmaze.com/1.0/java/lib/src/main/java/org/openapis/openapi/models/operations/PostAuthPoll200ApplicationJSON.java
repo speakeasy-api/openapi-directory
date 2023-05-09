@@ -18,6 +18,7 @@ public class PostAuthPoll200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apikey")
     public String apikey;
+
     public PostAuthPoll200ApplicationJSON withApikey(String apikey) {
         this.apikey = apikey;
         return this;
@@ -29,9 +30,11 @@ public class PostAuthPoll200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public PostAuthPoll200ApplicationJSON withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostAuthPoll200ApplicationJSON(){}
 }

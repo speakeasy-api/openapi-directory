@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInstanceGroupManagersRecreateInstancesRequest {
@@ -12,6 +13,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InstanceGroupManagersRecreateInstancesRequest instanceGroupManagersRecreateInstancesRequest;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withInstanceGroupManagersRecreateInstancesRequest(org.openapis.openapi.models.shared.InstanceGroupManagersRecreateInstancesRequest instanceGroupManagersRecreateInstancesRequest) {
         this.instanceGroupManagersRecreateInstancesRequest = instanceGroupManagersRecreateInstancesRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceGroupManager")
     public String instanceGroupManager;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withInstanceGroupManager(String instanceGroupManager) {
         this.instanceGroupManager = instanceGroupManager;
         return this;
@@ -79,6 +87,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -159,6 +175,7 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -169,9 +186,15 @@ public class ComputeInstanceGroupManagersRecreateInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ComputeInstanceGroupManagersRecreateInstancesRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ComputeInstanceGroupManagersRecreateInstancesRequest(@JsonProperty("instanceGroupManager") String instanceGroupManager, @JsonProperty("project") String project, @JsonProperty("zone") String zone) {
+        this.instanceGroupManager = instanceGroupManager;
+        this.project = project;
+        this.zone = zone;
+  }
 }

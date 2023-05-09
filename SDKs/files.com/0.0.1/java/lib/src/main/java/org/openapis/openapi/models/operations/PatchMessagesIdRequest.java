@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMessagesIdRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PatchMessagesIdRequestBody requestBody;
+
     public PatchMessagesIdRequest withRequestBody(PatchMessagesIdRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class PatchMessagesIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PatchMessagesIdRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public PatchMessagesIdRequest(@JsonProperty("RequestBody") PatchMessagesIdRequestBody requestBody, @JsonProperty("id") Integer id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

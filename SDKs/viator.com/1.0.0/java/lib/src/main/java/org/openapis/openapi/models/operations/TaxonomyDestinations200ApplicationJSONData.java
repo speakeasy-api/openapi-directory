@@ -15,6 +15,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCurrencyCode")
     public String defaultCurrencyCode;
+
     public TaxonomyDestinations200ApplicationJSONData withDefaultCurrencyCode(String defaultCurrencyCode) {
         this.defaultCurrencyCode = defaultCurrencyCode;
         return this;
@@ -28,6 +29,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public Long destinationId;
+
     public TaxonomyDestinations200ApplicationJSONData withDestinationId(Long destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -39,6 +41,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public TaxonomyDestinations200ApplicationJSONData withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -54,6 +57,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationType")
     public org.openapis.openapi.models.shared.DestinationTypeEnum destinationType;
+
     public TaxonomyDestinations200ApplicationJSONData withDestinationType(org.openapis.openapi.models.shared.DestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -65,6 +69,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationUrlName")
     public String destinationUrlName;
+
     public TaxonomyDestinations200ApplicationJSONData withDestinationUrlName(String destinationUrlName) {
         this.destinationUrlName = destinationUrlName;
         return this;
@@ -80,6 +85,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iataCode")
     public String iataCode;
+
     public TaxonomyDestinations200ApplicationJSONData withIataCode(String iataCode) {
         this.iataCode = iataCode;
         return this;
@@ -91,6 +97,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public TaxonomyDestinations200ApplicationJSONData withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -102,6 +109,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public TaxonomyDestinations200ApplicationJSONData withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -116,6 +124,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lookupId")
     public String lookupId;
+
     public TaxonomyDestinations200ApplicationJSONData withLookupId(String lookupId) {
         this.lookupId = lookupId;
         return this;
@@ -127,6 +136,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentId")
     public Long parentId;
+
     public TaxonomyDestinations200ApplicationJSONData withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -138,6 +148,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectable")
     public Boolean selectable;
+
     public TaxonomyDestinations200ApplicationJSONData withSelectable(Boolean selectable) {
         this.selectable = selectable;
         return this;
@@ -149,6 +160,7 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public TaxonomyDestinations200ApplicationJSONData withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -160,9 +172,11 @@ public class TaxonomyDestinations200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public TaxonomyDestinations200ApplicationJSONData withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public TaxonomyDestinations200ApplicationJSONData(){}
 }

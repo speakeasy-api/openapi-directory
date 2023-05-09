@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAnomalyDetectorResponse {
@@ -12,6 +13,7 @@ public class DescribeAnomalyDetectorResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAnomalyDetectorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAnomalyDetectorResponse {
     
     
     public String contentType;
+
     public DescribeAnomalyDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAnomalyDetectorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAnomalyDetectorResponse describeAnomalyDetectorResponse;
+
     public DescribeAnomalyDetectorResponse withDescribeAnomalyDetectorResponse(org.openapis.openapi.models.shared.DescribeAnomalyDetectorResponse describeAnomalyDetectorResponse) {
         this.describeAnomalyDetectorResponse = describeAnomalyDetectorResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAnomalyDetectorResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAnomalyDetectorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAnomalyDetectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAnomalyDetectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAnomalyDetectorResponse {
     
     
     public Integer statusCode;
+
     public DescribeAnomalyDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAnomalyDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAnomalyDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAnomalyDetectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeAnomalyDetectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAnomalyDetectorResponse {
      */
     
     public Object validationException;
+
     public DescribeAnomalyDetectorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAnomalyDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

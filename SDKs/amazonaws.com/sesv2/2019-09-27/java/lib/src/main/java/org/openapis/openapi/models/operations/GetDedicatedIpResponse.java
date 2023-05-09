@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDedicatedIpResponse {
@@ -12,6 +13,7 @@ public class GetDedicatedIpResponse {
      */
     
     public Object badRequestException;
+
     public GetDedicatedIpResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetDedicatedIpResponse {
     
     
     public String contentType;
+
     public GetDedicatedIpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDedicatedIpResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDedicatedIpResponse getDedicatedIpResponse;
+
     public GetDedicatedIpResponse withGetDedicatedIpResponse(org.openapis.openapi.models.shared.GetDedicatedIpResponse getDedicatedIpResponse) {
         this.getDedicatedIpResponse = getDedicatedIpResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDedicatedIpResponse {
      */
     
     public Object notFoundException;
+
     public GetDedicatedIpResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetDedicatedIpResponse {
     
     
     public Integer statusCode;
+
     public GetDedicatedIpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDedicatedIpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDedicatedIpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDedicatedIpResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetDedicatedIpResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetDedicatedIpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

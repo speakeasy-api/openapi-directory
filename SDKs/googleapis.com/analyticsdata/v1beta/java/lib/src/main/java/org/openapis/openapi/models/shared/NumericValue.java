@@ -18,6 +18,7 @@ public class NumericValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleValue")
     public Double doubleValue;
+
     public NumericValue withDoubleValue(Double doubleValue) {
         this.doubleValue = doubleValue;
         return this;
@@ -29,9 +30,11 @@ public class NumericValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int64Value")
     public String int64Value;
+
     public NumericValue withInt64Value(String int64Value) {
         this.int64Value = int64Value;
         return this;
     }
     
+    public NumericValue(){}
 }

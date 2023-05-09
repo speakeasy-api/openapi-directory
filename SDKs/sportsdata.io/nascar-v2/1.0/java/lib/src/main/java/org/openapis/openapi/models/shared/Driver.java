@@ -12,6 +12,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BirthDate")
     public String birthDate;
+
     public Driver withBirthDate(String birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -20,6 +21,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BirthPlace")
     public String birthPlace;
+
     public Driver withBirthPlace(String birthPlace) {
         this.birthPlace = birthPlace;
         return this;
@@ -28,6 +30,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Chassis")
     public String chassis;
+
     public Driver withChassis(String chassis) {
         this.chassis = chassis;
         return this;
@@ -36,6 +39,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public Driver withCreated(String created) {
         this.created = created;
         return this;
@@ -44,6 +48,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrewChief")
     public String crewChief;
+
     public Driver withCrewChief(String crewChief) {
         this.crewChief = crewChief;
         return this;
@@ -52,6 +57,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DriverID")
     public Long driverID;
+
     public Driver withDriverID(Long driverID) {
         this.driverID = driverID;
         return this;
@@ -60,6 +66,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public String engine;
+
     public Driver withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -68,6 +75,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public Driver withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -76,6 +84,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public String gender;
+
     public Driver withGender(String gender) {
         this.gender = gender;
         return this;
@@ -84,6 +93,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Long height;
+
     public Driver withHeight(Long height) {
         this.height = height;
         return this;
@@ -92,6 +102,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public Driver withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -100,6 +111,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Manufacturer")
     public String manufacturer;
+
     public Driver withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -108,6 +120,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public Driver withNumber(Long number) {
         this.number = number;
         return this;
@@ -116,6 +129,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberDisplay")
     public String numberDisplay;
+
     public Driver withNumberDisplay(String numberDisplay) {
         this.numberDisplay = numberDisplay;
         return this;
@@ -124,6 +138,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhotoUrl")
     public String photoUrl;
+
     public Driver withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
@@ -132,6 +147,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sponsors")
     public String sponsors;
+
     public Driver withSponsors(String sponsors) {
         this.sponsors = sponsors;
         return this;
@@ -140,6 +156,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public Driver withTeam(String team) {
         this.team = team;
         return this;
@@ -148,6 +165,7 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Driver withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -156,9 +174,11 @@ public class Driver {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public Long weight;
+
     public Driver withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public Driver(){}
 }

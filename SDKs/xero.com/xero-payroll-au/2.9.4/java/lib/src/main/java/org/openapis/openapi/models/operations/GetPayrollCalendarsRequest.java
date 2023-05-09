@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayrollCalendarsRequest {
@@ -12,6 +13,7 @@ public class GetPayrollCalendarsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
     public String ifModifiedSince;
+
     public GetPayrollCalendarsRequest withIfModifiedSince(String ifModifiedSince) {
         this.ifModifiedSince = ifModifiedSince;
         return this;
@@ -22,6 +24,7 @@ public class GetPayrollCalendarsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public GetPayrollCalendarsRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
@@ -32,16 +35,18 @@ public class GetPayrollCalendarsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public GetPayrollCalendarsRequest withOrder(String order) {
         this.order = order;
         return this;
     }
     
     /**
-     * e.g. page=1 \u2013 Up to 100 objects will be returned in a single API call
+     * e.g. page=1 – Up to 100 objects will be returned in a single API call
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetPayrollCalendarsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,9 +57,13 @@ public class GetPayrollCalendarsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
     public String where;
+
     public GetPayrollCalendarsRequest withWhere(String where) {
         this.where = where;
         return this;
     }
     
+    public GetPayrollCalendarsRequest(@JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

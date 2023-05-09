@@ -15,9 +15,11 @@ public class RecommendationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RdsEngine")
     public RdsRecommendation rdsEngine;
+
     public RecommendationData withRdsEngine(RdsRecommendation rdsEngine) {
         this.rdsEngine = rdsEngine;
         return this;
     }
     
+    public RecommendationData(){}
 }

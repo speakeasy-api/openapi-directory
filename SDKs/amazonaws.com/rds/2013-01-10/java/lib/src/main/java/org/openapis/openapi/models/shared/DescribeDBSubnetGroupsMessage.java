@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBSubnetGroupsMessage {
     
     public String dbSubnetGroupName;
+
     public DescribeDBSubnetGroupsMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBSubnetGroupsMessage {
     
     
     public String marker;
+
     public DescribeDBSubnetGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class DescribeDBSubnetGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBSubnetGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBSubnetGroupsMessage(){}
 }

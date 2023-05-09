@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendSellerLeadRequestRequest {
@@ -12,6 +13,7 @@ public class ResendSellerLeadRequestRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ResendSellerLeadRequestRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ResendSellerLeadRequestRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ResendSellerLeadRequestRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ResendSellerLeadRequestRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ResendSellerLeadRequestRequest resendSellerLeadRequestRequest;
+
     public ResendSellerLeadRequestRequest withResendSellerLeadRequestRequest(org.openapis.openapi.models.shared.ResendSellerLeadRequestRequest resendSellerLeadRequestRequest) {
         this.resendSellerLeadRequestRequest = resendSellerLeadRequestRequest;
         return this;
@@ -39,6 +43,7 @@ public class ResendSellerLeadRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public ResendSellerLeadRequestRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,6 +54,7 @@ public class ResendSellerLeadRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public ResendSellerLeadRequestRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -59,9 +65,18 @@ public class ResendSellerLeadRequestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerLeadId")
     public String sellerLeadId;
+
     public ResendSellerLeadRequestRequest withSellerLeadId(String sellerLeadId) {
         this.sellerLeadId = sellerLeadId;
         return this;
     }
     
+    public ResendSellerLeadRequestRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("ResendSellerLeadRequestRequest") org.openapis.openapi.models.shared.ResendSellerLeadRequestRequest resendSellerLeadRequestRequest, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment, @JsonProperty("sellerLeadId") String sellerLeadId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.resendSellerLeadRequestRequest = resendSellerLeadRequestRequest;
+        this.accountName = accountName;
+        this.environment = environment;
+        this.sellerLeadId = sellerLeadId;
+  }
 }

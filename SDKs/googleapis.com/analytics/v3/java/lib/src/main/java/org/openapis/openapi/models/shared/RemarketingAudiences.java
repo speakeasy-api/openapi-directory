@@ -18,6 +18,7 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RemarketingAudience[] items;
+
     public RemarketingAudiences withItems(RemarketingAudience[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemsPerPage")
     public Integer itemsPerPage;
+
     public RemarketingAudiences withItemsPerPage(Integer itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -40,6 +42,7 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RemarketingAudiences withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLink")
     public String nextLink;
+
     public RemarketingAudiences withNextLink(String nextLink) {
         this.nextLink = nextLink;
         return this;
@@ -62,6 +66,7 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousLink")
     public String previousLink;
+
     public RemarketingAudiences withPreviousLink(String previousLink) {
         this.previousLink = previousLink;
         return this;
@@ -73,6 +78,7 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public RemarketingAudiences withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -84,6 +90,7 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResults")
     public Integer totalResults;
+
     public RemarketingAudiences withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -95,9 +102,11 @@ public class RemarketingAudiences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public RemarketingAudiences withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public RemarketingAudiences(){}
 }

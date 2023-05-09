@@ -15,6 +15,7 @@ public class RevocationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrlConfiguration")
     public CrlConfiguration crlConfiguration;
+
     public RevocationConfiguration withCrlConfiguration(CrlConfiguration crlConfiguration) {
         this.crlConfiguration = crlConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class RevocationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OcspConfiguration")
     public OcspConfiguration ocspConfiguration;
+
     public RevocationConfiguration withOcspConfiguration(OcspConfiguration ocspConfiguration) {
         this.ocspConfiguration = ocspConfiguration;
         return this;
     }
     
+    public RevocationConfiguration(){}
 }

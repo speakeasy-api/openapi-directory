@@ -15,6 +15,7 @@ public class InstanceListReferrersWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public InstanceListReferrersWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class InstanceListReferrersWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InstanceListReferrersWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceListReferrersWarningData(){}
 }

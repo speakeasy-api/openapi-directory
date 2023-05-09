@@ -57,10 +57,8 @@ public class TypeOwlOntology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchOwlOntologyResponse res = new org.openapis.openapi.models.operations.SearchOwlOntologyResponse() {{
+        org.openapis.openapi.models.operations.SearchOwlOntologyResponse res = new org.openapis.openapi.models.operations.SearchOwlOntologyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

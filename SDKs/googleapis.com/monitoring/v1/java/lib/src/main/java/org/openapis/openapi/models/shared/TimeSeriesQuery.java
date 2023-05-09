@@ -18,6 +18,7 @@ public class TimeSeriesQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prometheusQuery")
     public String prometheusQuery;
+
     public TimeSeriesQuery withPrometheusQuery(String prometheusQuery) {
         this.prometheusQuery = prometheusQuery;
         return this;
@@ -29,6 +30,7 @@ public class TimeSeriesQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesFilter")
     public TimeSeriesFilter timeSeriesFilter;
+
     public TimeSeriesQuery withTimeSeriesFilter(TimeSeriesFilter timeSeriesFilter) {
         this.timeSeriesFilter = timeSeriesFilter;
         return this;
@@ -40,6 +42,7 @@ public class TimeSeriesQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesFilterRatio")
     public TimeSeriesFilterRatio timeSeriesFilterRatio;
+
     public TimeSeriesQuery withTimeSeriesFilterRatio(TimeSeriesFilterRatio timeSeriesFilterRatio) {
         this.timeSeriesFilterRatio = timeSeriesFilterRatio;
         return this;
@@ -51,6 +54,7 @@ public class TimeSeriesQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesQueryLanguage")
     public String timeSeriesQueryLanguage;
+
     public TimeSeriesQuery withTimeSeriesQueryLanguage(String timeSeriesQueryLanguage) {
         this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
         return this;
@@ -62,9 +66,11 @@ public class TimeSeriesQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitOverride")
     public String unitOverride;
+
     public TimeSeriesQuery withUnitOverride(String unitOverride) {
         this.unitOverride = unitOverride;
         return this;
     }
     
+    public TimeSeriesQuery(){}
 }

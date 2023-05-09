@@ -18,6 +18,7 @@ public class ClassificationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecId")
     public String[] annotationSpecId;
+
     public ClassificationEvaluationMetrics withAnnotationSpecId(String[] annotationSpecId) {
         this.annotationSpecId = annotationSpecId;
         return this;
@@ -29,6 +30,7 @@ public class ClassificationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auPrc")
     public Float auPrc;
+
     public ClassificationEvaluationMetrics withAuPrc(Float auPrc) {
         this.auPrc = auPrc;
         return this;
@@ -40,6 +42,7 @@ public class ClassificationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auRoc")
     public Float auRoc;
+
     public ClassificationEvaluationMetrics withAuRoc(Float auRoc) {
         this.auRoc = auRoc;
         return this;
@@ -51,6 +54,7 @@ public class ClassificationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseAuPrc")
     public Float baseAuPrc;
+
     public ClassificationEvaluationMetrics withBaseAuPrc(Float baseAuPrc) {
         this.baseAuPrc = baseAuPrc;
         return this;
@@ -62,6 +66,7 @@ public class ClassificationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceMetricsEntry")
     public ClassificationEvaluationMetricsConfidenceMetricsEntry[] confidenceMetricsEntry;
+
     public ClassificationEvaluationMetrics withConfidenceMetricsEntry(ClassificationEvaluationMetricsConfidenceMetricsEntry[] confidenceMetricsEntry) {
         this.confidenceMetricsEntry = confidenceMetricsEntry;
         return this;
@@ -73,6 +78,7 @@ public class ClassificationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confusionMatrix")
     public ConfusionMatrix confusionMatrix;
+
     public ClassificationEvaluationMetrics withConfusionMatrix(ConfusionMatrix confusionMatrix) {
         this.confusionMatrix = confusionMatrix;
         return this;
@@ -84,9 +90,11 @@ public class ClassificationEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logLoss")
     public Float logLoss;
+
     public ClassificationEvaluationMetrics withLogLoss(Float logLoss) {
         this.logLoss = logLoss;
         return this;
     }
     
+    public ClassificationEvaluationMetrics(){}
 }

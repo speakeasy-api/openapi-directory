@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LegalArrangementDetail {
     @JsonProperty("address")
     public ViasAddress address;
+
     public LegalArrangementDetail withAddress(ViasAddress address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class LegalArrangementDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementCode")
     public String legalArrangementCode;
+
     public LegalArrangementDetail withLegalArrangementCode(String legalArrangementCode) {
         this.legalArrangementCode = legalArrangementCode;
         return this;
@@ -34,6 +36,7 @@ public class LegalArrangementDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementEntities")
     public LegalArrangementEntityDetail[] legalArrangementEntities;
+
     public LegalArrangementDetail withLegalArrangementEntities(LegalArrangementEntityDetail[] legalArrangementEntities) {
         this.legalArrangementEntities = legalArrangementEntities;
         return this;
@@ -45,6 +48,7 @@ public class LegalArrangementDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementReference")
     public String legalArrangementReference;
+
     public LegalArrangementDetail withLegalArrangementReference(String legalArrangementReference) {
         this.legalArrangementReference = legalArrangementReference;
         return this;
@@ -62,6 +66,7 @@ public class LegalArrangementDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalForm")
     public LegalArrangementDetailLegalFormEnum legalForm;
+
     public LegalArrangementDetail withLegalForm(LegalArrangementDetailLegalFormEnum legalForm) {
         this.legalForm = legalForm;
         return this;
@@ -72,6 +77,7 @@ public class LegalArrangementDetail {
      */
     @JsonProperty("name")
     public String name;
+
     public LegalArrangementDetail withName(String name) {
         this.name = name;
         return this;
@@ -83,6 +89,7 @@ public class LegalArrangementDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public LegalArrangementDetail withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -94,6 +101,7 @@ public class LegalArrangementDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxNumber")
     public String taxNumber;
+
     public LegalArrangementDetail withTaxNumber(String taxNumber) {
         this.taxNumber = taxNumber;
         return this;
@@ -116,9 +124,15 @@ public class LegalArrangementDetail {
      */
     @JsonProperty("type")
     public LegalArrangementDetailTypeEnum type;
+
     public LegalArrangementDetail withType(LegalArrangementDetailTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public LegalArrangementDetail(@JsonProperty("address") ViasAddress address, @JsonProperty("name") String name, @JsonProperty("type") LegalArrangementDetailTypeEnum type) {
+        this.address = address;
+        this.name = name;
+        this.type = type;
+  }
 }

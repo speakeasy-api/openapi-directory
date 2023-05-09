@@ -18,9 +18,11 @@ public class ClassifyTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public ClassificationCategory[] categories;
+
     public ClassifyTextResponse withCategories(ClassificationCategory[] categories) {
         this.categories = categories;
         return this;
     }
     
+    public ClassifyTextResponse(){}
 }

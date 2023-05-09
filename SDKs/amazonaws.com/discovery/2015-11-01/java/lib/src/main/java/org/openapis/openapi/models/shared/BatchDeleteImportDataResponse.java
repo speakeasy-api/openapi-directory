@@ -15,9 +15,11 @@ public class BatchDeleteImportDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchDeleteImportDataError[] errors;
+
     public BatchDeleteImportDataResponse withErrors(BatchDeleteImportDataError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchDeleteImportDataResponse(){}
 }

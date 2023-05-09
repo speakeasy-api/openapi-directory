@@ -18,17 +18,19 @@ public class UpdateAnswerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Answer")
     public Answer answer;
+
     public UpdateAnswerOutput withAnswer(Answer answer) {
         this.answer = answer;
         return this;
     }
     
     /**
-     * &lt;p&gt;The alias of the lens.&lt;/p&gt; &lt;p&gt;For Amazon Web Services official lenses, this is either the lens alias, such as &lt;code&gt;serverless&lt;/code&gt;, or the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-west-2::lens/serverless&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For custom lenses, this is the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens&lt;/code&gt;. &lt;/p&gt; &lt;p&gt;Each lens is identified by its &lt;a&gt;LensSummary$LensAlias&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;The alias of the lens.&lt;/p&gt; &lt;p&gt;For Amazon Web Services official lenses, this is either the lens alias, such as &lt;code&gt;serverless&lt;/code&gt;, or the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-east-1::lens/serverless&lt;/code&gt;. Note that some operations (such as ExportLens and CreateLensShare) are not permitted on Amazon Web Services official lenses.&lt;/p&gt; &lt;p&gt;For custom lenses, this is the lens ARN, such as &lt;code&gt;arn:aws:wellarchitected:us-west-2:123456789012:lens/0123456789abcdef01234567890abcdef&lt;/code&gt;. &lt;/p&gt; &lt;p&gt;Each lens is identified by its &lt;a&gt;LensSummary$LensAlias&lt;/a&gt;.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensAlias")
     public String lensAlias;
+
     public UpdateAnswerOutput withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -37,6 +39,7 @@ public class UpdateAnswerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public UpdateAnswerOutput withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -48,9 +51,11 @@ public class UpdateAnswerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public UpdateAnswerOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public UpdateAnswerOutput(){}
 }

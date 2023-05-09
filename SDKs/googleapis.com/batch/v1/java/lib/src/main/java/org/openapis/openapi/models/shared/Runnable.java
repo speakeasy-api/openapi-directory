@@ -18,6 +18,7 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alwaysRun")
     public Boolean alwaysRun;
+
     public Runnable withAlwaysRun(Boolean alwaysRun) {
         this.alwaysRun = alwaysRun;
         return this;
@@ -29,6 +30,7 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background")
     public Boolean background;
+
     public Runnable withBackground(Boolean background) {
         this.background = background;
         return this;
@@ -40,6 +42,7 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barrier")
     public Barrier barrier;
+
     public Runnable withBarrier(Barrier barrier) {
         this.barrier = barrier;
         return this;
@@ -51,6 +54,7 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public Container container;
+
     public Runnable withContainer(Container container) {
         this.container = container;
         return this;
@@ -62,6 +66,7 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public Runnable withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
@@ -73,8 +78,21 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreExitStatus")
     public Boolean ignoreExitStatus;
+
     public Runnable withIgnoreExitStatus(Boolean ignoreExitStatus) {
         this.ignoreExitStatus = ignoreExitStatus;
+        return this;
+    }
+    
+    /**
+     * Labels for this Runnable.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labels")
+    public java.util.Map<String, String> labels;
+
+    public Runnable withLabels(java.util.Map<String, String> labels) {
+        this.labels = labels;
         return this;
     }
     
@@ -84,6 +102,7 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public Script script;
+
     public Runnable withScript(Script script) {
         this.script = script;
         return this;
@@ -95,9 +114,11 @@ public class Runnable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public Runnable withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public Runnable(){}
 }

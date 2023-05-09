@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesRouteSectionNaptanEntrySequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Integer ordinal;
+
     public TflApiPresentationEntitiesRouteSectionNaptanEntrySequence withOrdinal(Integer ordinal) {
         this.ordinal = ordinal;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesRouteSectionNaptanEntrySequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopPoint")
     public TflApiPresentationEntitiesStopPoint stopPoint;
+
     public TflApiPresentationEntitiesRouteSectionNaptanEntrySequence withStopPoint(TflApiPresentationEntitiesStopPoint stopPoint) {
         this.stopPoint = stopPoint;
         return this;
     }
     
+    public TflApiPresentationEntitiesRouteSectionNaptanEntrySequence(){}
 }

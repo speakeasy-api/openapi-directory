@@ -12,6 +12,7 @@ public class BatchDeleteTableVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public BatchDeleteTableVersionRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class BatchDeleteTableVersionRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public BatchDeleteTableVersionRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class BatchDeleteTableVersionRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public BatchDeleteTableVersionRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -33,9 +36,15 @@ public class BatchDeleteTableVersionRequest {
     
     @JsonProperty("VersionIds")
     public String[] versionIds;
+
     public BatchDeleteTableVersionRequest withVersionIds(String[] versionIds) {
         this.versionIds = versionIds;
         return this;
     }
     
+    public BatchDeleteTableVersionRequest(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName, @JsonProperty("VersionIds") String[] versionIds) {
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+        this.versionIds = versionIds;
+  }
 }

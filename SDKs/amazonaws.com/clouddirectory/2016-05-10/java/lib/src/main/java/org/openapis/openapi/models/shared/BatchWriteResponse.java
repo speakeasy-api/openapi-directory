@@ -15,9 +15,11 @@ public class BatchWriteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Responses")
     public BatchWriteOperationResponse[] responses;
+
     public BatchWriteResponse withResponses(BatchWriteOperationResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public BatchWriteResponse(){}
 }

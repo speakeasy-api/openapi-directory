@@ -15,6 +15,7 @@ public class SuperStickerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public SuperStickerMetadata withAltText(String altText) {
         this.altText = altText;
         return this;
@@ -26,6 +27,7 @@ public class SuperStickerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altTextLanguage")
     public String altTextLanguage;
+
     public SuperStickerMetadata withAltTextLanguage(String altTextLanguage) {
         this.altTextLanguage = altTextLanguage;
         return this;
@@ -37,9 +39,11 @@ public class SuperStickerMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stickerId")
     public String stickerId;
+
     public SuperStickerMetadata withStickerId(String stickerId) {
         this.stickerId = stickerId;
         return this;
     }
     
+    public SuperStickerMetadata(){}
 }

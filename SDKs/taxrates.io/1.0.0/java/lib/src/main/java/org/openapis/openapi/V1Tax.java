@@ -118,12 +118,10 @@ public class V1Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxRatesByCountryCodeResponse res = new org.openapis.openapi.models.operations.TaxRatesByCountryCodeResponse() {{
+        org.openapis.openapi.models.operations.TaxRatesByCountryCodeResponse res = new org.openapis.openapi.models.operations.TaxRatesByCountryCodeResponse(contentType, httpRes.statusCode()) {{
             taxRatesByCountryCode200ApplicationJSONObject = null;
             taxRatesByCountryCode500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,12 +232,10 @@ public class V1Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TaxRatesByIpAddressResponse res = new org.openapis.openapi.models.operations.TaxRatesByIpAddressResponse() {{
+        org.openapis.openapi.models.operations.TaxRatesByIpAddressResponse res = new org.openapis.openapi.models.operations.TaxRatesByIpAddressResponse(contentType, httpRes.statusCode()) {{
             taxRatesByIpAddress200ApplicationJSONObjects = null;
             taxRatesByIpAddress500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

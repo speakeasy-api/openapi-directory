@@ -12,6 +12,7 @@ public class ListInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListInstancesRequest {
     
     @JsonProperty("ServiceId")
     public String serviceId;
+
     public ListInstancesRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public ListInstancesRequest(@JsonProperty("ServiceId") String serviceId) {
+        this.serviceId = serviceId;
+  }
 }

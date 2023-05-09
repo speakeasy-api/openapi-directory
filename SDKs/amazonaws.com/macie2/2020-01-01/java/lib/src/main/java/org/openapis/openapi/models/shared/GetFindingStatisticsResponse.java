@@ -15,9 +15,11 @@ public class GetFindingStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countsByGroup")
     public GroupCount[] countsByGroup;
+
     public GetFindingStatisticsResponse withCountsByGroup(GroupCount[] countsByGroup) {
         this.countsByGroup = countsByGroup;
         return this;
     }
     
+    public GetFindingStatisticsResponse(){}
 }

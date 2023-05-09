@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1LakeMetastoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public GoogleCloudDataplexV1LakeMetastoreStatus withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1LakeMetastoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GoogleCloudDataplexV1LakeMetastoreStatus withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1LakeMetastoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDataplexV1LakeMetastoreStatusStateEnum state;
+
     public GoogleCloudDataplexV1LakeMetastoreStatus withState(GoogleCloudDataplexV1LakeMetastoreStatusStateEnum state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDataplexV1LakeMetastoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDataplexV1LakeMetastoreStatus withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDataplexV1LakeMetastoreStatus(){}
 }

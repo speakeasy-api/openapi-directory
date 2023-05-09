@@ -52,11 +52,9 @@ public class MXL7ApplicationCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesResponse res = new org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesResponse res = new org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesResponse(contentType, httpRes.statusCode()) {{
             getNetworkL7FirewallRulesApplicationCategories200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

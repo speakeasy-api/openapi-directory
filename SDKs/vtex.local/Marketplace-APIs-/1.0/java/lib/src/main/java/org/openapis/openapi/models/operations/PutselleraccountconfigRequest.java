@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutselleraccountconfigRequest {
@@ -12,6 +13,7 @@ public class PutselleraccountconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PutselleraccountconfigRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PutselleraccountconfigRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PutselleraccountconfigRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutselleraccountconfigRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PutselleraccountconfigRequest putselleraccountconfigRequest;
+
     public PutselleraccountconfigRequest withPutselleraccountconfigRequest(org.openapis.openapi.models.shared.PutselleraccountconfigRequest putselleraccountconfigRequest) {
         this.putselleraccountconfigRequest = putselleraccountconfigRequest;
         return this;
@@ -39,6 +43,7 @@ public class PutselleraccountconfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public PutselleraccountconfigRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,9 +54,17 @@ public class PutselleraccountconfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public PutselleraccountconfigRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public PutselleraccountconfigRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("PutselleraccountconfigRequest") org.openapis.openapi.models.shared.PutselleraccountconfigRequest putselleraccountconfigRequest, @JsonProperty("accountName") String accountName, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.putselleraccountconfigRequest = putselleraccountconfigRequest;
+        this.accountName = accountName;
+        this.sellerId = sellerId;
+  }
 }

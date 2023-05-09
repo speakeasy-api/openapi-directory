@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResendAuthMobileOTPUsingPOSTResponse {
     
     public byte[] body;
+
     public ResendAuthMobileOTPUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ResendAuthMobileOTPUsingPOSTResponse {
     
     
     public String contentType;
+
     public ResendAuthMobileOTPUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ResendAuthMobileOTPUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ResendAuthMobileOTPUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ResendAuthMobileOTPUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResendAuthMobileOTPUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResendAuthMobileOTPUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

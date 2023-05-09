@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Alert {
     @JsonProperty("id")
     public Long id;
+
     public Alert withId(Long id) {
         this.id = id;
         return this;
@@ -27,6 +28,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_account")
     public Long idAccount;
+
     public Alert withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -38,6 +40,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_investment")
     public Long idInvestment;
+
     public Alert withIdInvestment(Long idInvestment) {
         this.idInvestment = idInvestment;
         return this;
@@ -49,6 +52,7 @@ public class Alert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_transaction")
     public Long idTransaction;
+
     public Alert withIdTransaction(Long idTransaction) {
         this.idTransaction = idTransaction;
         return this;
@@ -59,6 +63,7 @@ public class Alert {
      */
     @JsonProperty("id_user")
     public Long idUser;
+
     public Alert withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -71,6 +76,7 @@ public class Alert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public Alert withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -81,6 +87,7 @@ public class Alert {
      */
     @JsonProperty("type")
     public String type;
+
     public Alert withType(String type) {
         this.type = type;
         return this;
@@ -91,9 +98,17 @@ public class Alert {
      */
     @JsonProperty("value")
     public Float value;
+
     public Alert withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public Alert(@JsonProperty("id") Long id, @JsonProperty("id_user") Long idUser, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("type") String type, @JsonProperty("value") Float value) {
+        this.id = id;
+        this.idUser = idUser;
+        this.timestamp = timestamp;
+        this.type = type;
+        this.value = value;
+  }
 }

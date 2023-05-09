@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPatientHealthMetricRequest {
@@ -12,9 +13,13 @@ public class FetchPatientHealthMetricRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public FetchPatientHealthMetricRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public FetchPatientHealthMetricRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

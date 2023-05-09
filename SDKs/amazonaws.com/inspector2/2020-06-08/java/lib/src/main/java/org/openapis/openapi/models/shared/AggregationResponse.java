@@ -15,6 +15,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountAggregation")
     public AccountAggregationResponse accountAggregation;
+
     public AggregationResponse withAccountAggregation(AccountAggregationResponse accountAggregation) {
         this.accountAggregation = accountAggregation;
         return this;
@@ -23,6 +24,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amiAggregation")
     public AmiAggregationResponse amiAggregation;
+
     public AggregationResponse withAmiAggregation(AmiAggregationResponse amiAggregation) {
         this.amiAggregation = amiAggregation;
         return this;
@@ -31,6 +33,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsEcrContainerAggregation")
     public AwsEcrContainerAggregationResponse awsEcrContainerAggregation;
+
     public AggregationResponse withAwsEcrContainerAggregation(AwsEcrContainerAggregationResponse awsEcrContainerAggregation) {
         this.awsEcrContainerAggregation = awsEcrContainerAggregation;
         return this;
@@ -39,6 +42,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceAggregation")
     public Ec2InstanceAggregationResponse ec2InstanceAggregation;
+
     public AggregationResponse withEc2InstanceAggregation(Ec2InstanceAggregationResponse ec2InstanceAggregation) {
         this.ec2InstanceAggregation = ec2InstanceAggregation;
         return this;
@@ -47,6 +51,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingTypeAggregation")
     public FindingTypeAggregationResponse findingTypeAggregation;
+
     public AggregationResponse withFindingTypeAggregation(FindingTypeAggregationResponse findingTypeAggregation) {
         this.findingTypeAggregation = findingTypeAggregation;
         return this;
@@ -55,6 +60,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageLayerAggregation")
     public ImageLayerAggregationResponse imageLayerAggregation;
+
     public AggregationResponse withImageLayerAggregation(ImageLayerAggregationResponse imageLayerAggregation) {
         this.imageLayerAggregation = imageLayerAggregation;
         return this;
@@ -63,6 +69,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaFunctionAggregation")
     public LambdaFunctionAggregationResponse lambdaFunctionAggregation;
+
     public AggregationResponse withLambdaFunctionAggregation(LambdaFunctionAggregationResponse lambdaFunctionAggregation) {
         this.lambdaFunctionAggregation = lambdaFunctionAggregation;
         return this;
@@ -71,6 +78,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaLayerAggregation")
     public LambdaLayerAggregationResponse lambdaLayerAggregation;
+
     public AggregationResponse withLambdaLayerAggregation(LambdaLayerAggregationResponse lambdaLayerAggregation) {
         this.lambdaLayerAggregation = lambdaLayerAggregation;
         return this;
@@ -79,6 +87,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageAggregation")
     public PackageAggregationResponse packageAggregation;
+
     public AggregationResponse withPackageAggregation(PackageAggregationResponse packageAggregation) {
         this.packageAggregation = packageAggregation;
         return this;
@@ -87,6 +96,7 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryAggregation")
     public RepositoryAggregationResponse repositoryAggregation;
+
     public AggregationResponse withRepositoryAggregation(RepositoryAggregationResponse repositoryAggregation) {
         this.repositoryAggregation = repositoryAggregation;
         return this;
@@ -95,9 +105,11 @@ public class AggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("titleAggregation")
     public TitleAggregationResponse titleAggregation;
+
     public AggregationResponse withTitleAggregation(TitleAggregationResponse titleAggregation) {
         this.titleAggregation = titleAggregation;
         return this;
     }
     
+    public AggregationResponse(){}
 }

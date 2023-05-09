@@ -18,6 +18,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cohortSpec")
     public CohortSpec cohortSpec;
+
     public RunPivotReportRequest withCohortSpec(CohortSpec cohortSpec) {
         this.cohortSpec = cohortSpec;
         return this;
@@ -29,6 +30,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public RunPivotReportRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRanges")
     public DateRange[] dateRanges;
+
     public RunPivotReportRequest withDateRanges(DateRange[] dateRanges) {
         this.dateRanges = dateRanges;
         return this;
@@ -51,6 +54,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public FilterExpression dimensionFilter;
+
     public RunPivotReportRequest withDimensionFilter(FilterExpression dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
@@ -62,6 +66,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public RunPivotReportRequest withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -73,6 +78,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyRows")
     public Boolean keepEmptyRows;
+
     public RunPivotReportRequest withKeepEmptyRows(Boolean keepEmptyRows) {
         this.keepEmptyRows = keepEmptyRows;
         return this;
@@ -84,6 +90,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricFilter")
     public FilterExpression metricFilter;
+
     public RunPivotReportRequest withMetricFilter(FilterExpression metricFilter) {
         this.metricFilter = metricFilter;
         return this;
@@ -95,6 +102,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public RunPivotReportRequest withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -106,6 +114,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivots")
     public Pivot[] pivots;
+
     public RunPivotReportRequest withPivots(Pivot[] pivots) {
         this.pivots = pivots;
         return this;
@@ -117,6 +126,7 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public RunPivotReportRequest withProperty(String property) {
         this.property = property;
         return this;
@@ -128,9 +138,11 @@ public class RunPivotReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPropertyQuota")
     public Boolean returnPropertyQuota;
+
     public RunPivotReportRequest withReturnPropertyQuota(Boolean returnPropertyQuota) {
         this.returnPropertyQuota = returnPropertyQuota;
         return this;
     }
     
+    public RunPivotReportRequest(){}
 }

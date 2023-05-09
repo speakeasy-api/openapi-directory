@@ -15,6 +15,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address1")
     public String address1;
+
     public UpdateProfileRequestBodyMailingAddress withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -23,6 +24,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address2")
     public String address2;
+
     public UpdateProfileRequestBodyMailingAddress withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -31,6 +33,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address3")
     public String address3;
+
     public UpdateProfileRequestBodyMailingAddress withAddress3(String address3) {
         this.address3 = address3;
         return this;
@@ -39,6 +42,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address4")
     public String address4;
+
     public UpdateProfileRequestBodyMailingAddress withAddress4(String address4) {
         this.address4 = address4;
         return this;
@@ -47,6 +51,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public UpdateProfileRequestBodyMailingAddress withCity(String city) {
         this.city = city;
         return this;
@@ -55,6 +60,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public UpdateProfileRequestBodyMailingAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -63,6 +69,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("County")
     public String county;
+
     public UpdateProfileRequestBodyMailingAddress withCounty(String county) {
         this.county = county;
         return this;
@@ -71,6 +78,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalCode")
     public String postalCode;
+
     public UpdateProfileRequestBodyMailingAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -79,6 +87,7 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Province")
     public String province;
+
     public UpdateProfileRequestBodyMailingAddress withProvince(String province) {
         this.province = province;
         return this;
@@ -87,9 +96,11 @@ public class UpdateProfileRequestBodyMailingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public UpdateProfileRequestBodyMailingAddress withState(String state) {
         this.state = state;
         return this;
     }
     
+    public UpdateProfileRequestBodyMailingAddress(){}
 }

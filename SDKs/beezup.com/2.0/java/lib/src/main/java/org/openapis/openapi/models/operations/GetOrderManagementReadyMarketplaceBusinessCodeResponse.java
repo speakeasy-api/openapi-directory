@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
@@ -12,6 +13,7 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
     
     
     public String contentType;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
     
     
     public Integer statusCode;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,6 +56,7 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeResponse withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
@@ -60,9 +67,14 @@ public class GetOrderManagementReadyMarketplaceBusinessCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOfValueItem[] oMReadyMarketplaceBusinessCodeResponse;
+
     public GetOrderManagementReadyMarketplaceBusinessCodeResponse withOMReadyMarketplaceBusinessCodeResponse(org.openapis.openapi.models.shared.ListOfValueItem[] oMReadyMarketplaceBusinessCodeResponse) {
         this.oMReadyMarketplaceBusinessCodeResponse = oMReadyMarketplaceBusinessCodeResponse;
         return this;
     }
     
+    public GetOrderManagementReadyMarketplaceBusinessCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

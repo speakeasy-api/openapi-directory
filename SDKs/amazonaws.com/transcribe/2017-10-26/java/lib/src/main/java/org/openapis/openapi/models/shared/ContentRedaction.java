@@ -15,6 +15,7 @@ public class ContentRedaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PiiEntityTypes")
     public PiiEntityTypeEnum[] piiEntityTypes;
+
     public ContentRedaction withPiiEntityTypes(PiiEntityTypeEnum[] piiEntityTypes) {
         this.piiEntityTypes = piiEntityTypes;
         return this;
@@ -22,6 +23,7 @@ public class ContentRedaction {
     
     @JsonProperty("RedactionOutput")
     public RedactionOutputEnum redactionOutput;
+
     public ContentRedaction withRedactionOutput(RedactionOutputEnum redactionOutput) {
         this.redactionOutput = redactionOutput;
         return this;
@@ -29,9 +31,14 @@ public class ContentRedaction {
     
     @JsonProperty("RedactionType")
     public RedactionTypeEnum redactionType;
+
     public ContentRedaction withRedactionType(RedactionTypeEnum redactionType) {
         this.redactionType = redactionType;
         return this;
     }
     
+    public ContentRedaction(@JsonProperty("RedactionOutput") RedactionOutputEnum redactionOutput, @JsonProperty("RedactionType") RedactionTypeEnum redactionType) {
+        this.redactionOutput = redactionOutput;
+        this.redactionType = redactionType;
+  }
 }

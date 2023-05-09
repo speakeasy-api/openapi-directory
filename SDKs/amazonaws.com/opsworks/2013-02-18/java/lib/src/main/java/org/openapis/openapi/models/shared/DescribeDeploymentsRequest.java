@@ -12,6 +12,7 @@ public class DescribeDeploymentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public DescribeDeploymentsRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeDeploymentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentIds")
     public String[] deploymentIds;
+
     public DescribeDeploymentsRequest withDeploymentIds(String[] deploymentIds) {
         this.deploymentIds = deploymentIds;
         return this;
@@ -28,9 +30,11 @@ public class DescribeDeploymentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeDeploymentsRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeDeploymentsRequest(){}
 }

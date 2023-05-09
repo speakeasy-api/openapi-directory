@@ -15,9 +15,11 @@ public class PutResourcePermissionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public PutResourcePermissionOutput withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public PutResourcePermissionOutput(){}
 }

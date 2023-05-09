@@ -12,6 +12,7 @@ public class GetReturnsReturnsArrayV2ReturnV2Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetReturnsReturnsArrayV2ReturnV2Order withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class GetReturnsReturnsArrayV2ReturnV2Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public Long merchantId;
+
     public GetReturnsReturnsArrayV2ReturnV2Order withMerchantId(Long merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -28,9 +30,11 @@ public class GetReturnsReturnsArrayV2ReturnV2Order {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public GetReturnsReturnsArrayV2ReturnV2Order withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
     }
     
+    public GetReturnsReturnsArrayV2ReturnV2Order(){}
 }

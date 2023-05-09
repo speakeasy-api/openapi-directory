@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterEndpoint {
     
     public String customEndpointType;
+
     public DBClusterEndpoint withCustomEndpointType(String customEndpointType) {
         this.customEndpointType = customEndpointType;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterEndpoint {
     
     
     public String dbClusterEndpointArn;
+
     public DBClusterEndpoint withDBClusterEndpointArn(String dbClusterEndpointArn) {
         this.dbClusterEndpointArn = dbClusterEndpointArn;
         return this;
@@ -26,6 +28,7 @@ public class DBClusterEndpoint {
     
     
     public String dbClusterEndpointIdentifier;
+
     public DBClusterEndpoint withDBClusterEndpointIdentifier(String dbClusterEndpointIdentifier) {
         this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
         return this;
@@ -33,6 +36,7 @@ public class DBClusterEndpoint {
     
     
     public String dbClusterEndpointResourceIdentifier;
+
     public DBClusterEndpoint withDBClusterEndpointResourceIdentifier(String dbClusterEndpointResourceIdentifier) {
         this.dbClusterEndpointResourceIdentifier = dbClusterEndpointResourceIdentifier;
         return this;
@@ -40,6 +44,7 @@ public class DBClusterEndpoint {
     
     
     public String dbClusterIdentifier;
+
     public DBClusterEndpoint withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -47,6 +52,7 @@ public class DBClusterEndpoint {
     
     
     public String endpoint;
+
     public DBClusterEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -54,6 +60,7 @@ public class DBClusterEndpoint {
     
     
     public String endpointType;
+
     public DBClusterEndpoint withEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -61,6 +68,7 @@ public class DBClusterEndpoint {
     
     
     public String[] excludedMembers;
+
     public DBClusterEndpoint withExcludedMembers(String[] excludedMembers) {
         this.excludedMembers = excludedMembers;
         return this;
@@ -68,6 +76,7 @@ public class DBClusterEndpoint {
     
     
     public String[] staticMembers;
+
     public DBClusterEndpoint withStaticMembers(String[] staticMembers) {
         this.staticMembers = staticMembers;
         return this;
@@ -75,9 +84,11 @@ public class DBClusterEndpoint {
     
     
     public String status;
+
     public DBClusterEndpoint withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DBClusterEndpoint(){}
 }

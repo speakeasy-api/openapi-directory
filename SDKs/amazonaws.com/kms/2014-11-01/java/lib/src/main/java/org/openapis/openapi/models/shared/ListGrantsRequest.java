@@ -12,6 +12,7 @@ public class ListGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantId")
     public String grantId;
+
     public ListGrantsRequest withGrantId(String grantId) {
         this.grantId = grantId;
         return this;
@@ -20,6 +21,7 @@ public class ListGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GranteePrincipal")
     public String granteePrincipal;
+
     public ListGrantsRequest withGranteePrincipal(String granteePrincipal) {
         this.granteePrincipal = granteePrincipal;
         return this;
@@ -27,6 +29,7 @@ public class ListGrantsRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public ListGrantsRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -35,6 +38,7 @@ public class ListGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListGrantsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -43,9 +47,13 @@ public class ListGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListGrantsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListGrantsRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

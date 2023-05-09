@@ -16,6 +16,7 @@ public class Category {
      */
     @JsonProperty("activity")
     public Long activity;
+
     public Category withActivity(Long activity) {
         this.activity = activity;
         return this;
@@ -26,6 +27,7 @@ public class Category {
      */
     @JsonProperty("balance")
     public Long balance;
+
     public Category withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -36,6 +38,7 @@ public class Category {
      */
     @JsonProperty("budgeted")
     public Long budgeted;
+
     public Category withBudgeted(Long budgeted) {
         this.budgeted = budgeted;
         return this;
@@ -43,6 +46,7 @@ public class Category {
     
     @JsonProperty("category_group_id")
     public String categoryGroupId;
+
     public Category withCategoryGroupId(String categoryGroupId) {
         this.categoryGroupId = categoryGroupId;
         return this;
@@ -53,6 +57,7 @@ public class Category {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Category withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -64,6 +69,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_cadence")
     public Integer goalCadence;
+
     public Category withGoalCadence(Integer goalCadence) {
         this.goalCadence = goalCadence;
         return this;
@@ -75,6 +81,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_cadence_frequency")
     public Integer goalCadenceFrequency;
+
     public Category withGoalCadenceFrequency(Integer goalCadenceFrequency) {
         this.goalCadenceFrequency = goalCadenceFrequency;
         return this;
@@ -87,6 +94,7 @@ public class Category {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("goal_creation_month")
     public LocalDate goalCreationMonth;
+
     public Category withGoalCreationMonth(LocalDate goalCreationMonth) {
         this.goalCreationMonth = goalCreationMonth;
         return this;
@@ -98,6 +106,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_day")
     public Integer goalDay;
+
     public Category withGoalDay(Integer goalDay) {
         this.goalDay = goalDay;
         return this;
@@ -109,6 +118,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_months_to_budget")
     public Integer goalMonthsToBudget;
+
     public Category withGoalMonthsToBudget(Integer goalMonthsToBudget) {
         this.goalMonthsToBudget = goalMonthsToBudget;
         return this;
@@ -120,6 +130,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_overall_funded")
     public Long goalOverallFunded;
+
     public Category withGoalOverallFunded(Long goalOverallFunded) {
         this.goalOverallFunded = goalOverallFunded;
         return this;
@@ -131,6 +142,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_overall_left")
     public Long goalOverallLeft;
+
     public Category withGoalOverallLeft(Long goalOverallLeft) {
         this.goalOverallLeft = goalOverallLeft;
         return this;
@@ -142,6 +154,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_percentage_complete")
     public Integer goalPercentageComplete;
+
     public Category withGoalPercentageComplete(Integer goalPercentageComplete) {
         this.goalPercentageComplete = goalPercentageComplete;
         return this;
@@ -153,6 +166,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_target")
     public Long goalTarget;
+
     public Category withGoalTarget(Long goalTarget) {
         this.goalTarget = goalTarget;
         return this;
@@ -165,6 +179,7 @@ public class Category {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("goal_target_month")
     public LocalDate goalTargetMonth;
+
     public Category withGoalTargetMonth(LocalDate goalTargetMonth) {
         this.goalTargetMonth = goalTargetMonth;
         return this;
@@ -176,6 +191,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_type")
     public CategoryGoalTypeEnum goalType;
+
     public Category withGoalType(CategoryGoalTypeEnum goalType) {
         this.goalType = goalType;
         return this;
@@ -187,6 +203,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal_under_funded")
     public Long goalUnderFunded;
+
     public Category withGoalUnderFunded(Long goalUnderFunded) {
         this.goalUnderFunded = goalUnderFunded;
         return this;
@@ -197,6 +214,7 @@ public class Category {
      */
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public Category withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -204,6 +222,7 @@ public class Category {
     
     @JsonProperty("id")
     public String id;
+
     public Category withId(String id) {
         this.id = id;
         return this;
@@ -211,6 +230,7 @@ public class Category {
     
     @JsonProperty("name")
     public String name;
+
     public Category withName(String name) {
         this.name = name;
         return this;
@@ -219,20 +239,32 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Category withNote(String note) {
         this.note = note;
         return this;
     }
     
     /**
-     * If category is hidden this is the id of the category group it originally belonged to before it was hidden.
+     * DEPRECATED: No longer used.  Value will always be null.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_category_group_id")
     public String originalCategoryGroupId;
+
     public Category withOriginalCategoryGroupId(String originalCategoryGroupId) {
         this.originalCategoryGroupId = originalCategoryGroupId;
         return this;
     }
     
+    public Category(@JsonProperty("activity") Long activity, @JsonProperty("balance") Long balance, @JsonProperty("budgeted") Long budgeted, @JsonProperty("category_group_id") String categoryGroupId, @JsonProperty("deleted") Boolean deleted, @JsonProperty("hidden") Boolean hidden, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.activity = activity;
+        this.balance = balance;
+        this.budgeted = budgeted;
+        this.categoryGroupId = categoryGroupId;
+        this.deleted = deleted;
+        this.hidden = hidden;
+        this.id = id;
+        this.name = name;
+  }
 }

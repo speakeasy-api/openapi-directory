@@ -48,10 +48,8 @@ public class UserAccountsFindAndModifyUserAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.DeleteUserAccountsUserAccountIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.DeleteUserAccountsUserAccountIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -89,11 +87,9 @@ public class UserAccountsFindAndModifyUserAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserAccountsResponse res = new org.openapis.openapi.models.operations.GetUserAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetUserAccountsResponse res = new org.openapis.openapi.models.operations.GetUserAccountsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -129,11 +125,9 @@ public class UserAccountsFindAndModifyUserAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.GetUserAccountsUserAccountIdResponse() {{
+        org.openapis.openapi.models.operations.GetUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.GetUserAccountsUserAccountIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -175,11 +169,9 @@ public class UserAccountsFindAndModifyUserAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.PatchUserAccountsUserAccountIdResponse() {{
+        org.openapis.openapi.models.operations.PatchUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.PatchUserAccountsUserAccountIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -221,11 +213,9 @@ public class UserAccountsFindAndModifyUserAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.PostUserAccountsUserAccountIdResponse() {{
+        org.openapis.openapi.models.operations.PostUserAccountsUserAccountIdResponse res = new org.openapis.openapi.models.operations.PostUserAccountsUserAccountIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {

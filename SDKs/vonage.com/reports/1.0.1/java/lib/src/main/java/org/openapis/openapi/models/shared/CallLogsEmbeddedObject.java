@@ -12,9 +12,11 @@ public class CallLogsEmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call_logs")
     public CallLog[] callLogs;
+
     public CallLogsEmbeddedObject withCallLogs(CallLog[] callLogs) {
         this.callLogs = callLogs;
         return this;
     }
     
+    public CallLogsEmbeddedObject(){}
 }

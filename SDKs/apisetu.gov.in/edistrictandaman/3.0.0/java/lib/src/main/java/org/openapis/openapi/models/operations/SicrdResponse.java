@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SicrdResponse {
     
     public String contentType;
+
     public SicrdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SicrdResponse {
     
     
     public Integer statusCode;
+
     public SicrdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SicrdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SicrdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SicrdResponse {
      */
     
     public Sicrd400ApplicationJSON sicrd400ApplicationJSONObject;
+
     public SicrdResponse withSicrd400ApplicationJSONObject(Sicrd400ApplicationJSON sicrd400ApplicationJSONObject) {
         this.sicrd400ApplicationJSONObject = sicrd400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SicrdResponse {
      */
     
     public Sicrd401ApplicationJSON sicrd401ApplicationJSONObject;
+
     public SicrdResponse withSicrd401ApplicationJSONObject(Sicrd401ApplicationJSON sicrd401ApplicationJSONObject) {
         this.sicrd401ApplicationJSONObject = sicrd401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SicrdResponse {
      */
     
     public Sicrd404ApplicationJSON sicrd404ApplicationJSONObject;
+
     public SicrdResponse withSicrd404ApplicationJSONObject(Sicrd404ApplicationJSON sicrd404ApplicationJSONObject) {
         this.sicrd404ApplicationJSONObject = sicrd404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class SicrdResponse {
      */
     
     public Sicrd500ApplicationJSON sicrd500ApplicationJSONObject;
+
     public SicrdResponse withSicrd500ApplicationJSONObject(Sicrd500ApplicationJSON sicrd500ApplicationJSONObject) {
         this.sicrd500ApplicationJSONObject = sicrd500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class SicrdResponse {
      */
     
     public Sicrd502ApplicationJSON sicrd502ApplicationJSONObject;
+
     public SicrdResponse withSicrd502ApplicationJSONObject(Sicrd502ApplicationJSON sicrd502ApplicationJSONObject) {
         this.sicrd502ApplicationJSONObject = sicrd502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class SicrdResponse {
      */
     
     public Sicrd503ApplicationJSON sicrd503ApplicationJSONObject;
+
     public SicrdResponse withSicrd503ApplicationJSONObject(Sicrd503ApplicationJSON sicrd503ApplicationJSONObject) {
         this.sicrd503ApplicationJSONObject = sicrd503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class SicrdResponse {
      */
     
     public Sicrd504ApplicationJSON sicrd504ApplicationJSONObject;
+
     public SicrdResponse withSicrd504ApplicationJSONObject(Sicrd504ApplicationJSON sicrd504ApplicationJSONObject) {
         this.sicrd504ApplicationJSONObject = sicrd504ApplicationJSONObject;
         return this;
     }
     
+    public SicrdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

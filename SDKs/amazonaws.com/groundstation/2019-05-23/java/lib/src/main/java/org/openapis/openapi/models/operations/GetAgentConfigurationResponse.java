@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAgentConfigurationResponse {
     
     public String contentType;
+
     public GetAgentConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAgentConfigurationResponse {
      */
     
     public Object dependencyException;
+
     public GetAgentConfigurationResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class GetAgentConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAgentConfigurationResponse getAgentConfigurationResponse;
+
     public GetAgentConfigurationResponse withGetAgentConfigurationResponse(org.openapis.openapi.models.shared.GetAgentConfigurationResponse getAgentConfigurationResponse) {
         this.getAgentConfigurationResponse = getAgentConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAgentConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAgentConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetAgentConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetAgentConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAgentConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAgentConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAgentConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAgentConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetAgentConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

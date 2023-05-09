@@ -15,6 +15,7 @@ public class LogsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogs")
     public CloudWatchLogsConfig cloudWatchLogs;
+
     public LogsConfig withCloudWatchLogs(CloudWatchLogsConfig cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -23,9 +24,11 @@ public class LogsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Logs")
     public S3LogsConfig s3Logs;
+
     public LogsConfig withS3Logs(S3LogsConfig s3Logs) {
         this.s3Logs = s3Logs;
         return this;
     }
     
+    public LogsConfig(){}
 }

@@ -18,6 +18,7 @@ public class IosVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public IosVersion withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class IosVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorVersion")
     public Integer majorVersion;
+
     public IosVersion withMajorVersion(Integer majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -40,6 +42,7 @@ public class IosVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minorVersion")
     public Integer minorVersion;
+
     public IosVersion withMinorVersion(Integer minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -51,6 +54,7 @@ public class IosVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedXcodeVersionIds")
     public String[] supportedXcodeVersionIds;
+
     public IosVersion withSupportedXcodeVersionIds(String[] supportedXcodeVersionIds) {
         this.supportedXcodeVersionIds = supportedXcodeVersionIds;
         return this;
@@ -62,9 +66,11 @@ public class IosVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public IosVersion withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public IosVersion(){}
 }

@@ -12,9 +12,11 @@ public class ExportAssetsNmapXMLRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ExportAssetsNmapXMLRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public ExportAssetsNmapXMLRequest(){}
 }

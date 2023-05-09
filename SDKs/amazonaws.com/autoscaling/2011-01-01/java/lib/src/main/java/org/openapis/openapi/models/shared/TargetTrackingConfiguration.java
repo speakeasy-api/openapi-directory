@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TargetTrackingConfiguration - Represents a target tracking scaling policy configuration to use with Amazon EC2 Auto Scaling.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetTrackingConfiguration {
     
     public CustomizedMetricSpecification customizedMetricSpecification;
+
     public TargetTrackingConfiguration withCustomizedMetricSpecification(CustomizedMetricSpecification customizedMetricSpecification) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         return this;
@@ -19,6 +20,7 @@ public class TargetTrackingConfiguration {
     
     
     public Boolean disableScaleIn;
+
     public TargetTrackingConfiguration withDisableScaleIn(Boolean disableScaleIn) {
         this.disableScaleIn = disableScaleIn;
         return this;
@@ -26,6 +28,7 @@ public class TargetTrackingConfiguration {
     
     
     public PredefinedMetricSpecification predefinedMetricSpecification;
+
     public TargetTrackingConfiguration withPredefinedMetricSpecification(PredefinedMetricSpecification predefinedMetricSpecification) {
         this.predefinedMetricSpecification = predefinedMetricSpecification;
         return this;
@@ -33,9 +36,13 @@ public class TargetTrackingConfiguration {
     
     
     public Double targetValue;
+
     public TargetTrackingConfiguration withTargetValue(Double targetValue) {
         this.targetValue = targetValue;
         return this;
     }
     
+    public TargetTrackingConfiguration(@JsonProperty("TargetValue") Double targetValue) {
+        this.targetValue = targetValue;
+  }
 }

@@ -14,6 +14,7 @@ public class AppSessionsByTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
     public String appId;
+
     public AppSessionsByTimeRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -26,6 +27,7 @@ public class AppSessionsByTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public AppSessionsByTimeRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,6 +40,7 @@ public class AppSessionsByTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public AppSessionsByTimeRequest withLength(String length) {
         this.length = length;
         return this;
@@ -50,6 +53,7 @@ public class AppSessionsByTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
     public String segmentId;
+
     public AppSessionsByTimeRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -62,9 +66,11 @@ public class AppSessionsByTimeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public String unit;
+
     public AppSessionsByTimeRequest withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public AppSessionsByTimeRequest(){}
 }

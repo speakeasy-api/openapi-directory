@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrganisationsPartyIdRequest {
@@ -12,6 +13,7 @@ public class PutOrganisationsPartyIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PutOrganisationsPartyIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class PutOrganisationsPartyIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrganisationInput organisationInput;
+
     public PutOrganisationsPartyIdRequest withOrganisationInput(org.openapis.openapi.models.shared.OrganisationInput organisationInput) {
         this.organisationInput = organisationInput;
         return this;
@@ -32,9 +35,15 @@ public class PutOrganisationsPartyIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public PutOrganisationsPartyIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
     }
     
+    public PutOrganisationsPartyIdRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("organisationInput") org.openapis.openapi.models.shared.OrganisationInput organisationInput, @JsonProperty("partyId") String partyId) {
+        this.apiKey = apiKey;
+        this.organisationInput = organisationInput;
+        this.partyId = partyId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlDetailRequest {
@@ -12,6 +13,7 @@ public class GetUrlDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetUrlDetailRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetUrlDetailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
     public String[] fields;
+
     public GetUrlDetailRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class GetUrlDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetUrlDetailRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -42,6 +46,7 @@ public class GetUrlDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=url")
     public String url;
+
     public GetUrlDetailRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -52,9 +57,16 @@ public class GetUrlDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetUrlDetailRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUrlDetailRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("project_slug") String projectSlug, @JsonProperty("url") String url, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.projectSlug = projectSlug;
+        this.url = url;
+        this.username = username;
+  }
 }

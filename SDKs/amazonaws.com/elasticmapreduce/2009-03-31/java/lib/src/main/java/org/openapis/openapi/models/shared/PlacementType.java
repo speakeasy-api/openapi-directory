@@ -15,6 +15,7 @@ public class PlacementType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public PlacementType withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,9 +24,11 @@ public class PlacementType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public PlacementType withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
     }
     
+    public PlacementType(){}
 }

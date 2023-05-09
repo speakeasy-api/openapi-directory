@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationPeriod")
     public String aggregationPeriod;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withAggregationPeriod(String aggregationPeriod) {
         this.aggregationPeriod = aggregationPeriod;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertDisabled")
     public Boolean alertDisabled;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withAlertDisabled(Boolean alertDisabled) {
         this.alertDisabled = alertDisabled;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertName")
     public String alertName;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withAlertName(String alertName) {
         this.alertName = alertName;
         return this;
@@ -51,6 +54,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -62,6 +66,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationThresholdMs")
     public String durationThresholdMs;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withDurationThresholdMs(String durationThresholdMs) {
         this.durationThresholdMs = durationThresholdMs;
         return this;
@@ -73,6 +78,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorEnumList")
     public EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList errorEnumList;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withErrorEnumList(EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList errorEnumList) {
         this.errorEnumList = errorEnumList;
         return this;
@@ -81,6 +87,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricType")
     public EnterpriseCrmEventbusProtoWorkflowAlertConfigMetricTypeEnum metricType;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withMetricType(EnterpriseCrmEventbusProtoWorkflowAlertConfigMetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
@@ -92,6 +99,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numAggregationPeriods")
     public Integer numAggregationPeriods;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withNumAggregationPeriods(Integer numAggregationPeriods) {
         this.numAggregationPeriods = numAggregationPeriods;
         return this;
@@ -103,6 +111,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyFinalAttempt")
     public Boolean onlyFinalAttempt;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withOnlyFinalAttempt(Boolean onlyFinalAttempt) {
         this.onlyFinalAttempt = onlyFinalAttempt;
         return this;
@@ -114,6 +123,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playbookUrl")
     public String playbookUrl;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withPlaybookUrl(String playbookUrl) {
         this.playbookUrl = playbookUrl;
         return this;
@@ -125,6 +135,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholdType")
     public EnterpriseCrmEventbusProtoWorkflowAlertConfigThresholdTypeEnum thresholdType;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withThresholdType(EnterpriseCrmEventbusProtoWorkflowAlertConfigThresholdTypeEnum thresholdType) {
         this.thresholdType = thresholdType;
         return this;
@@ -136,6 +147,7 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholdValue")
     public EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue thresholdValue;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withThresholdValue(EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue thresholdValue) {
         this.thresholdValue = thresholdValue;
         return this;
@@ -147,9 +159,11 @@ public class EnterpriseCrmEventbusProtoWorkflowAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warningEnumList")
     public EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList warningEnumList;
+
     public EnterpriseCrmEventbusProtoWorkflowAlertConfig withWarningEnumList(EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList warningEnumList) {
         this.warningEnumList = warningEnumList;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoWorkflowAlertConfig(){}
 }

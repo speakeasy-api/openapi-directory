@@ -16,6 +16,7 @@ public class GroupSearchResults {
      */
     @JsonProperty("count")
     public Long count;
+
     public GroupSearchResults withCount(Long count) {
         this.count = count;
         return this;
@@ -26,9 +27,14 @@ public class GroupSearchResults {
      */
     @JsonProperty("groups")
     public SearchedGroup[] groups;
+
     public GroupSearchResults withGroups(SearchedGroup[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public GroupSearchResults(@JsonProperty("count") Long count, @JsonProperty("groups") SearchedGroup[] groups) {
+        this.count = count;
+        this.groups = groups;
+  }
 }

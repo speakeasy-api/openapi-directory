@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BodyCreateFile {
     @SpeakeasyMetadata("multipartForm:name=File")
     public String file;
+
     public BodyCreateFile withFile(String file) {
         this.file = file;
         return this;
@@ -16,9 +18,14 @@ public class BodyCreateFile {
     
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public BodyCreateFile withContent(byte[] content) {
         this.content = content;
         return this;
     }
     
+    public BodyCreateFile(@JsonProperty("File") String file, @JsonProperty("content") byte[] content) {
+        this.file = file;
+        this.content = content;
+  }
 }

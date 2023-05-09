@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkflowStepGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkflowStepGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateWorkflowStepGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorkflowStepGroupResponse {
     
     
     public String contentType;
+
     public UpdateWorkflowStepGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWorkflowStepGroupResponse {
      */
     
     public Object internalServerException;
+
     public UpdateWorkflowStepGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateWorkflowStepGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkflowStepGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateWorkflowStepGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkflowStepGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWorkflowStepGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWorkflowStepGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateWorkflowStepGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateWorkflowStepGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateWorkflowStepGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkflowStepGroupResponse updateWorkflowStepGroupResponse;
+
     public UpdateWorkflowStepGroupResponse withUpdateWorkflowStepGroupResponse(org.openapis.openapi.models.shared.UpdateWorkflowStepGroupResponse updateWorkflowStepGroupResponse) {
         this.updateWorkflowStepGroupResponse = updateWorkflowStepGroupResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateWorkflowStepGroupResponse {
      */
     
     public Object validationException;
+
     public UpdateWorkflowStepGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateWorkflowStepGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

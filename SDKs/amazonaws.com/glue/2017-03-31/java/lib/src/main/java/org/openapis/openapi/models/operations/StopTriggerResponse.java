@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopTriggerResponse {
@@ -12,6 +13,7 @@ public class StopTriggerResponse {
      */
     
     public Object concurrentModificationException;
+
     public StopTriggerResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class StopTriggerResponse {
     
     
     public String contentType;
+
     public StopTriggerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopTriggerResponse {
      */
     
     public Object entityNotFoundException;
+
     public StopTriggerResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StopTriggerResponse {
      */
     
     public Object internalServiceException;
+
     public StopTriggerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class StopTriggerResponse {
      */
     
     public Object invalidInputException;
+
     public StopTriggerResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class StopTriggerResponse {
      */
     
     public Object operationTimeoutException;
+
     public StopTriggerResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class StopTriggerResponse {
     
     
     public Integer statusCode;
+
     public StopTriggerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StopTriggerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopTriggerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StopTriggerResponse {
      */
     
     public org.openapis.openapi.models.shared.StopTriggerResponse stopTriggerResponse;
+
     public StopTriggerResponse withStopTriggerResponse(org.openapis.openapi.models.shared.StopTriggerResponse stopTriggerResponse) {
         this.stopTriggerResponse = stopTriggerResponse;
         return this;
     }
     
+    public StopTriggerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

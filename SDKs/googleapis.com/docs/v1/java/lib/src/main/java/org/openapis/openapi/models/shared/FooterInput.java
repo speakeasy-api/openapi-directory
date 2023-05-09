@@ -18,6 +18,7 @@ public class FooterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElementInput[] content;
+
     public FooterInput withContent(StructuralElementInput[] content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class FooterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footerId")
     public String footerId;
+
     public FooterInput withFooterId(String footerId) {
         this.footerId = footerId;
         return this;
     }
     
+    public FooterInput(){}
 }

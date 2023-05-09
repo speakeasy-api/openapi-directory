@@ -15,6 +15,7 @@ public class ExportServerEngineAttributeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineAttribute")
     public EngineAttribute engineAttribute;
+
     public ExportServerEngineAttributeResponse withEngineAttribute(EngineAttribute engineAttribute) {
         this.engineAttribute = engineAttribute;
         return this;
@@ -23,9 +24,11 @@ public class ExportServerEngineAttributeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public ExportServerEngineAttributeResponse withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public ExportServerEngineAttributeResponse(){}
 }

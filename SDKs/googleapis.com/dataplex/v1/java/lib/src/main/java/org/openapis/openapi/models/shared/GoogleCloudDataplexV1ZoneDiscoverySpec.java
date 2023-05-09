@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ZoneDiscoverySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csvOptions")
     public GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions csvOptions;
+
     public GoogleCloudDataplexV1ZoneDiscoverySpec withCsvOptions(GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions csvOptions) {
         this.csvOptions = csvOptions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ZoneDiscoverySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudDataplexV1ZoneDiscoverySpec withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1ZoneDiscoverySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludePatterns")
     public String[] excludePatterns;
+
     public GoogleCloudDataplexV1ZoneDiscoverySpec withExcludePatterns(String[] excludePatterns) {
         this.excludePatterns = excludePatterns;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1ZoneDiscoverySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includePatterns")
     public String[] includePatterns;
+
     public GoogleCloudDataplexV1ZoneDiscoverySpec withIncludePatterns(String[] includePatterns) {
         this.includePatterns = includePatterns;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1ZoneDiscoverySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonOptions")
     public GoogleCloudDataplexV1ZoneDiscoverySpecJsonOptions jsonOptions;
+
     public GoogleCloudDataplexV1ZoneDiscoverySpec withJsonOptions(GoogleCloudDataplexV1ZoneDiscoverySpecJsonOptions jsonOptions) {
         this.jsonOptions = jsonOptions;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDataplexV1ZoneDiscoverySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public GoogleCloudDataplexV1ZoneDiscoverySpec withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public GoogleCloudDataplexV1ZoneDiscoverySpec(){}
 }

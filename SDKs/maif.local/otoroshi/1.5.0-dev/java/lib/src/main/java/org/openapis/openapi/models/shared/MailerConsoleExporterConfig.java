@@ -18,9 +18,11 @@ public class MailerConsoleExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MailerConsoleExporterConfigTypeEnum type;
+
     public MailerConsoleExporterConfig withType(MailerConsoleExporterConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public MailerConsoleExporterConfig(){}
 }

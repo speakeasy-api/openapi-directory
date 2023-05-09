@@ -18,6 +18,7 @@ public class GoogleIdentityStsV1ExchangeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audience")
     public String audience;
+
     public GoogleIdentityStsV1ExchangeTokenRequest withAudience(String audience) {
         this.audience = audience;
         return this;
@@ -29,6 +30,7 @@ public class GoogleIdentityStsV1ExchangeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grantType")
     public String grantType;
+
     public GoogleIdentityStsV1ExchangeTokenRequest withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleIdentityStsV1ExchangeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public String options;
+
     public GoogleIdentityStsV1ExchangeTokenRequest withOptions(String options) {
         this.options = options;
         return this;
@@ -51,6 +54,7 @@ public class GoogleIdentityStsV1ExchangeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedTokenType")
     public String requestedTokenType;
+
     public GoogleIdentityStsV1ExchangeTokenRequest withRequestedTokenType(String requestedTokenType) {
         this.requestedTokenType = requestedTokenType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleIdentityStsV1ExchangeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public GoogleIdentityStsV1ExchangeTokenRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -73,6 +78,7 @@ public class GoogleIdentityStsV1ExchangeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectToken")
     public String subjectToken;
+
     public GoogleIdentityStsV1ExchangeTokenRequest withSubjectToken(String subjectToken) {
         this.subjectToken = subjectToken;
         return this;
@@ -84,9 +90,11 @@ public class GoogleIdentityStsV1ExchangeTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectTokenType")
     public String subjectTokenType;
+
     public GoogleIdentityStsV1ExchangeTokenRequest withSubjectTokenType(String subjectTokenType) {
         this.subjectTokenType = subjectTokenType;
         return this;
     }
     
+    public GoogleIdentityStsV1ExchangeTokenRequest(){}
 }

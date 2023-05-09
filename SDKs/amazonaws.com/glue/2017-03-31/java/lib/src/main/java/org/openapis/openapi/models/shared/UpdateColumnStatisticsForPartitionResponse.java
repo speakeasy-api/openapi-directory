@@ -15,9 +15,11 @@ public class UpdateColumnStatisticsForPartitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public ColumnStatisticsError[] errors;
+
     public UpdateColumnStatisticsForPartitionResponse withErrors(ColumnStatisticsError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public UpdateColumnStatisticsForPartitionResponse(){}
 }

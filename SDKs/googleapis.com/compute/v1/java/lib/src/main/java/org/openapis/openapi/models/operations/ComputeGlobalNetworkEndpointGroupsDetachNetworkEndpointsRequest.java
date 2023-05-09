@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
@@ -12,6 +13,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequest;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withGlobalNetworkEndpointGroupsDetachEndpointsRequest(org.openapis.openapi.models.shared.GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequest) {
         this.globalNetworkEndpointGroupsDetachEndpointsRequest = globalNetworkEndpointGroupsDetachEndpointsRequest;
         return this;
@@ -29,6 +32,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkEndpointGroup")
     public String networkEndpointGroup;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withNetworkEndpointGroup(String networkEndpointGroup) {
         this.networkEndpointGroup = networkEndpointGroup;
         return this;
@@ -89,6 +98,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -139,6 +153,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,6 +164,7 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -159,9 +175,14 @@ public class ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest(@JsonProperty("networkEndpointGroup") String networkEndpointGroup, @JsonProperty("project") String project) {
+        this.networkEndpointGroup = networkEndpointGroup;
+        this.project = project;
+  }
 }

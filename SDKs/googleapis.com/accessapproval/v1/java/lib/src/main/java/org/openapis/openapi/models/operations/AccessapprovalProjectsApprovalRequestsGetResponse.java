@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccessapprovalProjectsApprovalRequestsGetResponse {
@@ -12,6 +13,7 @@ public class AccessapprovalProjectsApprovalRequestsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ApprovalRequest approvalRequest;
+
     public AccessapprovalProjectsApprovalRequestsGetResponse withApprovalRequest(org.openapis.openapi.models.shared.ApprovalRequest approvalRequest) {
         this.approvalRequest = approvalRequest;
         return this;
@@ -19,6 +21,7 @@ public class AccessapprovalProjectsApprovalRequestsGetResponse {
     
     
     public String contentType;
+
     public AccessapprovalProjectsApprovalRequestsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AccessapprovalProjectsApprovalRequestsGetResponse {
     
     
     public Integer statusCode;
+
     public AccessapprovalProjectsApprovalRequestsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AccessapprovalProjectsApprovalRequestsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccessapprovalProjectsApprovalRequestsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccessapprovalProjectsApprovalRequestsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

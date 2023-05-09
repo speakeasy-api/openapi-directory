@@ -15,9 +15,11 @@ public class DescribeRoutingControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingControl")
     public RoutingControl routingControl;
+
     public DescribeRoutingControlResponse withRoutingControl(RoutingControl routingControl) {
         this.routingControl = routingControl;
         return this;
     }
     
+    public DescribeRoutingControlResponse(){}
 }

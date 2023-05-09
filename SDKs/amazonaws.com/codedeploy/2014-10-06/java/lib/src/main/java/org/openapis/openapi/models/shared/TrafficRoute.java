@@ -15,9 +15,11 @@ public class TrafficRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listenerArns")
     public String[] listenerArns;
+
     public TrafficRoute withListenerArns(String[] listenerArns) {
         this.listenerArns = listenerArns;
         return this;
     }
     
+    public TrafficRoute(){}
 }

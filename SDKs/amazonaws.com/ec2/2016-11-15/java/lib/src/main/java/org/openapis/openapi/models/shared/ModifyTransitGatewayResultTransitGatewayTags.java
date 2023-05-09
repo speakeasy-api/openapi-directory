@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyTransitGatewayResultTransitGatewayTags {
     
     public String key;
+
     public ModifyTransitGatewayResultTransitGatewayTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ModifyTransitGatewayResultTransitGatewayTags {
     
     
     public String value;
+
     public ModifyTransitGatewayResultTransitGatewayTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyTransitGatewayResultTransitGatewayTags(){}
 }

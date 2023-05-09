@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAnomalyDetectorsInput {
     
     public AnomalyDetectorTypeEnum[] anomalyDetectorTypes;
+
     public DescribeAnomalyDetectorsInput withAnomalyDetectorTypes(AnomalyDetectorTypeEnum[] anomalyDetectorTypes) {
         this.anomalyDetectorTypes = anomalyDetectorTypes;
         return this;
@@ -16,6 +17,7 @@ public class DescribeAnomalyDetectorsInput {
     
     
     public Dimension[] dimensions;
+
     public DescribeAnomalyDetectorsInput withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +25,7 @@ public class DescribeAnomalyDetectorsInput {
     
     
     public Long maxResults;
+
     public DescribeAnomalyDetectorsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeAnomalyDetectorsInput {
     
     
     public String metricName;
+
     public DescribeAnomalyDetectorsInput withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +41,7 @@ public class DescribeAnomalyDetectorsInput {
     
     
     public String namespace;
+
     public DescribeAnomalyDetectorsInput withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -44,9 +49,11 @@ public class DescribeAnomalyDetectorsInput {
     
     
     public String nextToken;
+
     public DescribeAnomalyDetectorsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAnomalyDetectorsInput(){}
 }

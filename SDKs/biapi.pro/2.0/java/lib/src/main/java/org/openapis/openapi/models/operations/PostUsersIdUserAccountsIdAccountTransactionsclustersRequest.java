@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserAccountsIdAccountTransactionsclustersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostUsersIdUserAccountsIdAccountTransactionsclustersRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class PostUsersIdUserAccountsIdAccountTransactionsclustersRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
     public Long idAccount;
+
     public PostUsersIdUserAccountsIdAccountTransactionsclustersRequest withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -26,9 +29,14 @@ public class PostUsersIdUserAccountsIdAccountTransactionsclustersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PostUsersIdUserAccountsIdAccountTransactionsclustersRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PostUsersIdUserAccountsIdAccountTransactionsclustersRequest(@JsonProperty("id_account") Long idAccount, @JsonProperty("id_user") String idUser) {
+        this.idAccount = idAccount;
+        this.idUser = idUser;
+  }
 }

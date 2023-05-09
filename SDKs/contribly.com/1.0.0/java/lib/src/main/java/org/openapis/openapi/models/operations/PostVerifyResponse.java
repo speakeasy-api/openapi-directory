@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostVerifyResponse {
@@ -12,6 +13,7 @@ public class PostVerifyResponse {
      */
     
     public org.openapis.openapi.models.shared.Authority authority;
+
     public PostVerifyResponse withAuthority(org.openapis.openapi.models.shared.Authority authority) {
         this.authority = authority;
         return this;
@@ -19,6 +21,7 @@ public class PostVerifyResponse {
     
     
     public String contentType;
+
     public PostVerifyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostVerifyResponse {
     
     
     public Integer statusCode;
+
     public PostVerifyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostVerifyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostVerifyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostVerifyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

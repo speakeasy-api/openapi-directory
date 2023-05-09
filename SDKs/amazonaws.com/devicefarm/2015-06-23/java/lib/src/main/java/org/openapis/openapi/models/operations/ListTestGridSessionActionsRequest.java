@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTestGridSessionActionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListTestGridSessionActionsRequest listTestGridSessionActionsRequest;
+
     public ListTestGridSessionActionsRequest withListTestGridSessionActionsRequest(org.openapis.openapi.models.shared.ListTestGridSessionActionsRequest listTestGridSessionActionsRequest) {
         this.listTestGridSessionActionsRequest = listTestGridSessionActionsRequest;
         return this;
@@ -16,6 +18,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListTestGridSessionActionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListTestGridSessionActionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListTestGridSessionActionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListTestGridSessionActionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListTestGridSessionActionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListTestGridSessionActionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListTestGridSessionActionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class ListTestGridSessionActionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListTestGridSessionActionsXAmzTargetEnum xAmzTarget;
+
     public ListTestGridSessionActionsRequest withXAmzTarget(ListTestGridSessionActionsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class ListTestGridSessionActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResult")
     public String maxResult;
+
     public ListTestGridSessionActionsRequest withMaxResult(String maxResult) {
         this.maxResult = maxResult;
         return this;
@@ -85,9 +96,14 @@ public class ListTestGridSessionActionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListTestGridSessionActionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTestGridSessionActionsRequest(@JsonProperty("ListTestGridSessionActionsRequest") org.openapis.openapi.models.shared.ListTestGridSessionActionsRequest listTestGridSessionActionsRequest, @JsonProperty("X-Amz-Target") ListTestGridSessionActionsXAmzTargetEnum xAmzTarget) {
+        this.listTestGridSessionActionsRequest = listTestGridSessionActionsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

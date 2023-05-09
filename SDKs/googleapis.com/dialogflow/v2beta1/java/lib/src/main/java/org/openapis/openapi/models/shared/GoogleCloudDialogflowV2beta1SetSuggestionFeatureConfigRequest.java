@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participantRole")
     public GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequestParticipantRoleEnum participantRole;
+
     public GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest withParticipantRole(GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequestParticipantRoleEnum participantRole) {
         this.participantRole = participantRole;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestionFeatureConfig")
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig suggestionFeatureConfig;
+
     public GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest withSuggestionFeatureConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig suggestionFeatureConfig) {
         this.suggestionFeatureConfig = suggestionFeatureConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1SetSuggestionFeatureConfigRequest(){}
 }

@@ -18,6 +18,7 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketShare")
     public Double marketShare;
+
     public Distribution withMarketShare(Double marketShare) {
         this.marketShare = marketShare;
         return this;
@@ -29,9 +30,11 @@ public class Distribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementTime")
     public String measurementTime;
+
     public Distribution withMeasurementTime(String measurementTime) {
         this.measurementTime = measurementTime;
         return this;
     }
     
+    public Distribution(){}
 }

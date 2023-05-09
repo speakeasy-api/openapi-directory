@@ -15,6 +15,7 @@ public class RestoreSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public RestoreSecretResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class RestoreSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RestoreSecretResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RestoreSecretResponse(){}
 }

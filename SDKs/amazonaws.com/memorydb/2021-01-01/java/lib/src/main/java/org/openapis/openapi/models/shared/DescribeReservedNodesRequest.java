@@ -12,6 +12,7 @@ public class DescribeReservedNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public String duration;
+
     public DescribeReservedNodesRequest withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -20,6 +21,7 @@ public class DescribeReservedNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeReservedNodesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeReservedNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeReservedNodesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribeReservedNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public DescribeReservedNodesRequest withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -44,6 +48,7 @@ public class DescribeReservedNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfferingType")
     public String offeringType;
+
     public DescribeReservedNodesRequest withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -52,6 +57,7 @@ public class DescribeReservedNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservationId")
     public String reservationId;
+
     public DescribeReservedNodesRequest withReservationId(String reservationId) {
         this.reservationId = reservationId;
         return this;
@@ -60,9 +66,11 @@ public class DescribeReservedNodesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedNodesOfferingId")
     public String reservedNodesOfferingId;
+
     public DescribeReservedNodesRequest withReservedNodesOfferingId(String reservedNodesOfferingId) {
         this.reservedNodesOfferingId = reservedNodesOfferingId;
         return this;
     }
     
+    public DescribeReservedNodesRequest(){}
 }

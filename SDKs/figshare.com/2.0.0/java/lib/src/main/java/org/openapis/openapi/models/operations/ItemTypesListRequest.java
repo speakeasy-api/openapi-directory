@@ -12,9 +12,11 @@ public class ItemTypesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     public Long groupId;
+
     public ItemTypesListRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public ItemTypesListRequest(){}
 }

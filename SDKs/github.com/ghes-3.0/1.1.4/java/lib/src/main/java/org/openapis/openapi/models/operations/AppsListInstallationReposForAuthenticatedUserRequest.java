@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsListInstallationReposForAuthenticatedUserRequest {
@@ -12,6 +13,7 @@ public class AppsListInstallationReposForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
     public Long installationId;
+
     public AppsListInstallationReposForAuthenticatedUserRequest withInstallationId(Long installationId) {
         this.installationId = installationId;
         return this;
@@ -22,6 +24,7 @@ public class AppsListInstallationReposForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public AppsListInstallationReposForAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class AppsListInstallationReposForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public AppsListInstallationReposForAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public AppsListInstallationReposForAuthenticatedUserRequest(@JsonProperty("installation_id") Long installationId) {
+        this.installationId = installationId;
+  }
 }

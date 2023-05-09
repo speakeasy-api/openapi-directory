@@ -17,6 +17,7 @@ public class Error400SBSAdditionalErrors {
      */
     @JsonProperty("code")
     public MessageCode400SBSEnum code;
+
     public Error400SBSAdditionalErrors withCode(MessageCode400SBSEnum code) {
         this.code = code;
         return this;
@@ -31,6 +32,7 @@ public class Error400SBSAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error400SBSAdditionalErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -45,9 +47,13 @@ public class Error400SBSAdditionalErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error400SBSAdditionalErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Error400SBSAdditionalErrors(@JsonProperty("code") MessageCode400SBSEnum code) {
+        this.code = code;
+  }
 }

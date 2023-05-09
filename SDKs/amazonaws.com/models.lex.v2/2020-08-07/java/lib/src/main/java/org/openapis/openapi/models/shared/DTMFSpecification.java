@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DTMFSpecification {
     @JsonProperty("deletionCharacter")
     public String deletionCharacter;
+
     public DTMFSpecification withDeletionCharacter(String deletionCharacter) {
         this.deletionCharacter = deletionCharacter;
         return this;
@@ -19,6 +20,7 @@ public class DTMFSpecification {
     
     @JsonProperty("endCharacter")
     public String endCharacter;
+
     public DTMFSpecification withEndCharacter(String endCharacter) {
         this.endCharacter = endCharacter;
         return this;
@@ -26,6 +28,7 @@ public class DTMFSpecification {
     
     @JsonProperty("endTimeoutMs")
     public Long endTimeoutMs;
+
     public DTMFSpecification withEndTimeoutMs(Long endTimeoutMs) {
         this.endTimeoutMs = endTimeoutMs;
         return this;
@@ -33,9 +36,16 @@ public class DTMFSpecification {
     
     @JsonProperty("maxLength")
     public Long maxLength;
+
     public DTMFSpecification withMaxLength(Long maxLength) {
         this.maxLength = maxLength;
         return this;
     }
     
+    public DTMFSpecification(@JsonProperty("deletionCharacter") String deletionCharacter, @JsonProperty("endCharacter") String endCharacter, @JsonProperty("endTimeoutMs") Long endTimeoutMs, @JsonProperty("maxLength") Long maxLength) {
+        this.deletionCharacter = deletionCharacter;
+        this.endCharacter = endCharacter;
+        this.endTimeoutMs = endTimeoutMs;
+        this.maxLength = maxLength;
+  }
 }

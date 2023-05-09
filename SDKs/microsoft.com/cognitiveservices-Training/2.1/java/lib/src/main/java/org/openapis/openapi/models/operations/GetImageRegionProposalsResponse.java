@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImageRegionProposalsResponse {
     
     public String contentType;
+
     public GetImageRegionProposalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetImageRegionProposalsResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageRegionProposal imageRegionProposal;
+
     public GetImageRegionProposalsResponse withImageRegionProposal(org.openapis.openapi.models.shared.ImageRegionProposal imageRegionProposal) {
         this.imageRegionProposal = imageRegionProposal;
         return this;
@@ -26,6 +29,7 @@ public class GetImageRegionProposalsResponse {
     
     
     public Integer statusCode;
+
     public GetImageRegionProposalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetImageRegionProposalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImageRegionProposalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetImageRegionProposalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

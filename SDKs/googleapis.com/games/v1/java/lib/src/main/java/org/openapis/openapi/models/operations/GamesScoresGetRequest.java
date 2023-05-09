@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesScoresGetRequest {
@@ -12,6 +13,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public GamesScoresGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public GamesScoresGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public GamesScoresGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GamesScoresGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GamesScoresGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeRankType")
     public GamesScoresGetIncludeRankTypeEnum includeRankType;
+
     public GamesScoresGetRequest withIncludeRankType(GamesScoresGetIncludeRankTypeEnum includeRankType) {
         this.includeRankType = includeRankType;
         return this;
@@ -72,6 +79,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GamesScoresGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GamesScoresGetRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -92,6 +101,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=leaderboardId")
     public String leaderboardId;
+
     public GamesScoresGetRequest withLeaderboardId(String leaderboardId) {
         this.leaderboardId = leaderboardId;
         return this;
@@ -102,6 +112,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GamesScoresGetRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -112,6 +123,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public GamesScoresGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public GamesScoresGetRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerId")
     public String playerId;
+
     public GamesScoresGetRequest withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
@@ -142,6 +156,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public GamesScoresGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public GamesScoresGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timeSpan")
     public GamesScoresGetTimeSpanEnum timeSpan;
+
     public GamesScoresGetRequest withTimeSpan(GamesScoresGetTimeSpanEnum timeSpan) {
         this.timeSpan = timeSpan;
         return this;
@@ -172,6 +189,7 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public GamesScoresGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +200,15 @@ public class GamesScoresGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public GamesScoresGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public GamesScoresGetRequest(@JsonProperty("leaderboardId") String leaderboardId, @JsonProperty("playerId") String playerId, @JsonProperty("timeSpan") GamesScoresGetTimeSpanEnum timeSpan) {
+        this.leaderboardId = leaderboardId;
+        this.playerId = playerId;
+        this.timeSpan = timeSpan;
+  }
 }

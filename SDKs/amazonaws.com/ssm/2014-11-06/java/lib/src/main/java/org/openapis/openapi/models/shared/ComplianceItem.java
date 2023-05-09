@@ -15,6 +15,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public String complianceType;
+
     public ComplianceItem withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public java.util.Map<String, String> details;
+
     public ComplianceItem withDetails(java.util.Map<String, String> details) {
         this.details = details;
         return this;
@@ -31,6 +33,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionSummary")
     public ComplianceExecutionSummary executionSummary;
+
     public ComplianceItem withExecutionSummary(ComplianceExecutionSummary executionSummary) {
         this.executionSummary = executionSummary;
         return this;
@@ -39,6 +42,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ComplianceItem withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ComplianceItem withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -55,6 +60,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ComplianceItem withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -63,6 +69,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public ComplianceSeverityEnum severity;
+
     public ComplianceItem withSeverity(ComplianceSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -71,6 +78,7 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ComplianceStatusEnum status;
+
     public ComplianceItem withStatus(ComplianceStatusEnum status) {
         this.status = status;
         return this;
@@ -79,9 +87,11 @@ public class ComplianceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public ComplianceItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ComplianceItem(){}
 }

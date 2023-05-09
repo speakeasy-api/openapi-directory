@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteConfigurationSetRequest {
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public DeleteConfigurationSetRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
     }
     
+    public DeleteConfigurationSetRequest(@JsonProperty("ConfigurationSetName") String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+  }
 }

@@ -15,6 +15,7 @@ public class ProjectBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public Long projectId;
+
     public ProjectBaseVO withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -23,6 +24,7 @@ public class ProjectBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_name")
     public String projectName;
+
     public ProjectBaseVO withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -31,9 +33,11 @@ public class ProjectBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_number")
     public String projectNumber;
+
     public ProjectBaseVO withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
     }
     
+    public ProjectBaseVO(){}
 }

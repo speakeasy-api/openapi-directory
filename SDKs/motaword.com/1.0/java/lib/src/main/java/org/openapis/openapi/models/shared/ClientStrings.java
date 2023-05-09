@@ -15,6 +15,7 @@ public class ClientStrings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public ClientStrings withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class ClientStrings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strings")
     public ClientStringWithTranslations[] strings;
+
     public ClientStrings withStrings(ClientStringWithTranslations[] strings) {
         this.strings = strings;
         return this;
     }
     
+    public ClientStrings(){}
 }

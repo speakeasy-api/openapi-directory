@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGiftCardusingJSONRequest {
     @JsonProperty("cart")
     public Cart cart;
+
     public GetGiftCardusingJSONRequest withCart(Cart cart) {
         this.cart = cart;
         return this;
@@ -16,9 +17,14 @@ public class GetGiftCardusingJSONRequest {
     
     @JsonProperty("client")
     public Client client;
+
     public GetGiftCardusingJSONRequest withClient(Client client) {
         this.client = client;
         return this;
     }
     
+    public GetGiftCardusingJSONRequest(@JsonProperty("cart") Cart cart, @JsonProperty("client") Client client) {
+        this.cart = cart;
+        this.client = client;
+  }
 }

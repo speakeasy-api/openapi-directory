@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsWrapped")
     public GooglePrivacyDlpV2KmsWrappedCryptoKey kmsWrapped;
+
     public GooglePrivacyDlpV2CryptoKey withKmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKey kmsWrapped) {
         this.kmsWrapped = kmsWrapped;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transient")
     public GooglePrivacyDlpV2TransientCryptoKey transient_;
+
     public GooglePrivacyDlpV2CryptoKey withTransient(GooglePrivacyDlpV2TransientCryptoKey transient_) {
         this.transient_ = transient_;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2CryptoKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unwrapped")
     public GooglePrivacyDlpV2UnwrappedCryptoKey unwrapped;
+
     public GooglePrivacyDlpV2CryptoKey withUnwrapped(GooglePrivacyDlpV2UnwrappedCryptoKey unwrapped) {
         this.unwrapped = unwrapped;
         return this;
     }
     
+    public GooglePrivacyDlpV2CryptoKey(){}
 }

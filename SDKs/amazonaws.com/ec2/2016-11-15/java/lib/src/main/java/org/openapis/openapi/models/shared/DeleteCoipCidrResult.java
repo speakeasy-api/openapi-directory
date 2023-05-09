@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteCoipCidrResult {
     
     public DeleteCoipCidrResultCoipCidr coipCidr;
+
     public DeleteCoipCidrResult withCoipCidr(DeleteCoipCidrResultCoipCidr coipCidr) {
         this.coipCidr = coipCidr;
         return this;
     }
     
+    public DeleteCoipCidrResult(){}
 }

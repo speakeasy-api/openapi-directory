@@ -15,6 +15,7 @@ public class GetSavingsPlansUtilizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SavingsPlansUtilizationsByTime")
     public SavingsPlansUtilizationByTime[] savingsPlansUtilizationsByTime;
+
     public GetSavingsPlansUtilizationResponse withSavingsPlansUtilizationsByTime(SavingsPlansUtilizationByTime[] savingsPlansUtilizationsByTime) {
         this.savingsPlansUtilizationsByTime = savingsPlansUtilizationsByTime;
         return this;
@@ -22,9 +23,13 @@ public class GetSavingsPlansUtilizationResponse {
     
     @JsonProperty("Total")
     public SavingsPlansUtilizationAggregates total;
+
     public GetSavingsPlansUtilizationResponse withTotal(SavingsPlansUtilizationAggregates total) {
         this.total = total;
         return this;
     }
     
+    public GetSavingsPlansUtilizationResponse(@JsonProperty("Total") SavingsPlansUtilizationAggregates total) {
+        this.total = total;
+  }
 }

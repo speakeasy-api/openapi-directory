@@ -12,6 +12,7 @@ public class CreateDatasetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public CreateDatasetGroupRequest withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -20,6 +21,7 @@ public class CreateDatasetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public CreateDatasetGroupRequest withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -27,6 +29,7 @@ public class CreateDatasetGroupRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateDatasetGroupRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +38,7 @@ public class CreateDatasetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateDatasetGroupRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -43,9 +47,13 @@ public class CreateDatasetGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateDatasetGroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetGroupRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

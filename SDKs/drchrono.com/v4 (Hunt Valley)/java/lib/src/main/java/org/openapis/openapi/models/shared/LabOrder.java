@@ -18,6 +18,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accession_number")
     public String accessionNumber;
+
     public LabOrder withAccessionNumber(String accessionNumber) {
         this.accessionNumber = accessionNumber;
         return this;
@@ -25,6 +26,7 @@ public class LabOrder {
     
     @JsonProperty("doctor")
     public Long doctor;
+
     public LabOrder withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -36,6 +38,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public LabOrder withDocuments(String[] documents) {
         this.documents = documents;
         return this;
@@ -47,6 +50,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icd10_codes")
     public LabOrderIcd10Code[] icd10Codes;
+
     public LabOrder withIcd10Codes(LabOrderIcd10Code[] icd10Codes) {
         this.icd10Codes = icd10Codes;
         return this;
@@ -55,6 +59,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LabOrder withId(Long id) {
         this.id = id;
         return this;
@@ -63,6 +68,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public LabOrder withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -70,6 +76,7 @@ public class LabOrder {
     
     @JsonProperty("patient")
     public Long patient;
+
     public LabOrder withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -81,6 +88,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public LabOrderPriorityEnum priority;
+
     public LabOrder withPriority(LabOrderPriorityEnum priority) {
         this.priority = priority;
         return this;
@@ -92,6 +100,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requisition_id")
     public String requisitionId;
+
     public LabOrder withRequisitionId(String requisitionId) {
         this.requisitionId = requisitionId;
         return this;
@@ -112,6 +121,7 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LabOrder withStatus(String status) {
         this.status = status;
         return this;
@@ -119,6 +129,7 @@ public class LabOrder {
     
     @JsonProperty("sublab")
     public Long sublab;
+
     public LabOrder withSublab(Long sublab) {
         this.sublab = sublab;
         return this;
@@ -130,9 +141,15 @@ public class LabOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public LabOrder withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public LabOrder(@JsonProperty("doctor") Long doctor, @JsonProperty("patient") Long patient, @JsonProperty("sublab") Long sublab) {
+        this.doctor = doctor;
+        this.patient = patient;
+        this.sublab = sublab;
+  }
 }

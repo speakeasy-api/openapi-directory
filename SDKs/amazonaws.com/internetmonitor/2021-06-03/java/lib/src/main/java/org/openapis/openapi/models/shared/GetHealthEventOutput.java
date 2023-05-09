@@ -22,6 +22,7 @@ public class GetHealthEventOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public GetHealthEventOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class GetHealthEventOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndedAt")
     public OffsetDateTime endedAt;
+
     public GetHealthEventOutput withEndedAt(OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -39,6 +41,7 @@ public class GetHealthEventOutput {
     
     @JsonProperty("EventArn")
     public String eventArn;
+
     public GetHealthEventOutput withEventArn(String eventArn) {
         this.eventArn = eventArn;
         return this;
@@ -46,6 +49,7 @@ public class GetHealthEventOutput {
     
     @JsonProperty("EventId")
     public String eventId;
+
     public GetHealthEventOutput withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -53,6 +57,7 @@ public class GetHealthEventOutput {
     
     @JsonProperty("ImpactType")
     public HealthEventImpactTypeEnum impactType;
+
     public GetHealthEventOutput withImpactType(HealthEventImpactTypeEnum impactType) {
         this.impactType = impactType;
         return this;
@@ -60,6 +65,7 @@ public class GetHealthEventOutput {
     
     @JsonProperty("ImpactedLocations")
     public ImpactedLocation[] impactedLocations;
+
     public GetHealthEventOutput withImpactedLocations(ImpactedLocation[] impactedLocations) {
         this.impactedLocations = impactedLocations;
         return this;
@@ -69,6 +75,7 @@ public class GetHealthEventOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetHealthEventOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -77,6 +84,7 @@ public class GetHealthEventOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PercentOfTotalTrafficImpacted")
     public Double percentOfTotalTrafficImpacted;
+
     public GetHealthEventOutput withPercentOfTotalTrafficImpacted(Double percentOfTotalTrafficImpacted) {
         this.percentOfTotalTrafficImpacted = percentOfTotalTrafficImpacted;
         return this;
@@ -86,6 +94,7 @@ public class GetHealthEventOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartedAt")
     public OffsetDateTime startedAt;
+
     public GetHealthEventOutput withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -93,9 +102,19 @@ public class GetHealthEventOutput {
     
     @JsonProperty("Status")
     public HealthEventStatusEnum status;
+
     public GetHealthEventOutput withStatus(HealthEventStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetHealthEventOutput(@JsonProperty("EventArn") String eventArn, @JsonProperty("EventId") String eventId, @JsonProperty("ImpactType") HealthEventImpactTypeEnum impactType, @JsonProperty("ImpactedLocations") ImpactedLocation[] impactedLocations, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("StartedAt") OffsetDateTime startedAt, @JsonProperty("Status") HealthEventStatusEnum status) {
+        this.eventArn = eventArn;
+        this.eventId = eventId;
+        this.impactType = impactType;
+        this.impactedLocations = impactedLocations;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.startedAt = startedAt;
+        this.status = status;
+  }
 }

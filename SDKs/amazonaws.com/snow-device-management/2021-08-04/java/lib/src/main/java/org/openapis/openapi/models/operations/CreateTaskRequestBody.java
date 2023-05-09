@@ -15,6 +15,7 @@ public class CreateTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateTaskRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateTaskRequestBody {
      */
     @JsonProperty("command")
     public CreateTaskRequestBodyCommand command;
+
     public CreateTaskRequestBody withCommand(CreateTaskRequestBodyCommand command) {
         this.command = command;
         return this;
@@ -36,6 +38,7 @@ public class CreateTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateTaskRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class CreateTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateTaskRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -57,9 +61,14 @@ public class CreateTaskRequestBody {
      */
     @JsonProperty("targets")
     public String[] targets;
+
     public CreateTaskRequestBody withTargets(String[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public CreateTaskRequestBody(@JsonProperty("command") CreateTaskRequestBodyCommand command, @JsonProperty("targets") String[] targets) {
+        this.command = command;
+        this.targets = targets;
+  }
 }

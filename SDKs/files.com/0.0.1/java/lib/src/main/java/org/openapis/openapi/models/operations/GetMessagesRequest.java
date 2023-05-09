@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesRequest {
@@ -12,6 +13,7 @@ public class GetMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetMessagesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class GetMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetMessagesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -32,6 +35,7 @@ public class GetMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project_id")
     public Integer projectId;
+
     public GetMessagesRequest withProjectId(Integer projectId) {
         this.projectId = projectId;
         return this;
@@ -42,9 +46,13 @@ public class GetMessagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetMessagesRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetMessagesRequest(@JsonProperty("project_id") Integer projectId) {
+        this.projectId = projectId;
+  }
 }

@@ -15,6 +15,7 @@ public class DeleteFileSystemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public DeleteFileSystemResponse withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -23,6 +24,7 @@ public class DeleteFileSystemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public FileSystemLifecycleEnum lifecycle;
+
     public DeleteFileSystemResponse withLifecycle(FileSystemLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -34,6 +36,7 @@ public class DeleteFileSystemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LustreResponse")
     public DeleteFileSystemLustreResponse lustreResponse;
+
     public DeleteFileSystemResponse withLustreResponse(DeleteFileSystemLustreResponse lustreResponse) {
         this.lustreResponse = lustreResponse;
         return this;
@@ -42,6 +45,7 @@ public class DeleteFileSystemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenZFSResponse")
     public DeleteFileSystemOpenZFSResponse openZFSResponse;
+
     public DeleteFileSystemResponse withOpenZFSResponse(DeleteFileSystemOpenZFSResponse openZFSResponse) {
         this.openZFSResponse = openZFSResponse;
         return this;
@@ -53,9 +57,11 @@ public class DeleteFileSystemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowsResponse")
     public DeleteFileSystemWindowsResponse windowsResponse;
+
     public DeleteFileSystemResponse withWindowsResponse(DeleteFileSystemWindowsResponse windowsResponse) {
         this.windowsResponse = windowsResponse;
         return this;
     }
     
+    public DeleteFileSystemResponse(){}
 }

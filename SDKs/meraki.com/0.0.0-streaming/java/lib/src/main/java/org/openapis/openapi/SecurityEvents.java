@@ -61,11 +61,9 @@ public class SecurityEvents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSecurityEventsResponse res = new org.openapis.openapi.models.operations.GetNetworkSecurityEventsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSecurityEventsResponse res = new org.openapis.openapi.models.operations.GetNetworkSecurityEventsResponse(contentType, httpRes.statusCode()) {{
             getNetworkSecurityEvents200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class SecurityEvents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationSecurityEventsResponse res = new org.openapis.openapi.models.operations.GetOrganizationSecurityEventsResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationSecurityEventsResponse res = new org.openapis.openapi.models.operations.GetOrganizationSecurityEventsResponse(contentType, httpRes.statusCode()) {{
             getOrganizationSecurityEvents200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

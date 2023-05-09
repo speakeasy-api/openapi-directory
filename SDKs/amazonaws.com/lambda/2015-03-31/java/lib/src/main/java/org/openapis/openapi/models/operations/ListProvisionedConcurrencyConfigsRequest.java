@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListProvisionedConcurrencyConfigsRequest {
@@ -12,6 +13,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
     public String functionName;
+
     public ListProvisionedConcurrencyConfigsRequest withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -19,6 +21,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=List")
     public ListProvisionedConcurrencyConfigsListEnum list;
+
     public ListProvisionedConcurrencyConfigsRequest withList(ListProvisionedConcurrencyConfigsListEnum list) {
         this.list = list;
         return this;
@@ -29,6 +32,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public ListProvisionedConcurrencyConfigsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public ListProvisionedConcurrencyConfigsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -46,6 +51,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListProvisionedConcurrencyConfigsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -53,6 +59,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListProvisionedConcurrencyConfigsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -60,6 +67,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListProvisionedConcurrencyConfigsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -67,6 +75,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListProvisionedConcurrencyConfigsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -74,6 +83,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListProvisionedConcurrencyConfigsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -81,6 +91,7 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListProvisionedConcurrencyConfigsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -88,9 +99,14 @@ public class ListProvisionedConcurrencyConfigsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListProvisionedConcurrencyConfigsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListProvisionedConcurrencyConfigsRequest(@JsonProperty("FunctionName") String functionName, @JsonProperty("List") ListProvisionedConcurrencyConfigsListEnum list) {
+        this.functionName = functionName;
+        this.list = list;
+  }
 }

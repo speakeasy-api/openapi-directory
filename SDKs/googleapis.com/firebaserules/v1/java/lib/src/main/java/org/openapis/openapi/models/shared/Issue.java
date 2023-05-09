@@ -18,6 +18,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Issue withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public IssueSeverityEnum severity;
+
     public Issue withSeverity(IssueSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -40,9 +42,11 @@ public class Issue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePosition")
     public SourcePosition sourcePosition;
+
     public Issue withSourcePosition(SourcePosition sourcePosition) {
         this.sourcePosition = sourcePosition;
         return this;
     }
     
+    public Issue(){}
 }

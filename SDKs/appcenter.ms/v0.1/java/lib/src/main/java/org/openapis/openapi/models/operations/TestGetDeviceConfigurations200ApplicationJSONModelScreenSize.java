@@ -15,6 +15,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelScreenSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cm")
     public String cm;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelScreenSize withCm(String cm) {
         this.cm = cm;
         return this;
@@ -23,9 +24,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModelScreenSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in")
     public String in;
+
     public TestGetDeviceConfigurations200ApplicationJSONModelScreenSize withIn(String in) {
         this.in = in;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModelScreenSize(){}
 }

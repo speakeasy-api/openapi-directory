@@ -45,6 +45,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ApnsFcmOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidConfigPriorityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidNotificationNotificationPriorityEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/AndroidNotificationProxyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidNotificationVisibilityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidNotification.java
 lib/src/main/java/org/openapis/openapi/models/shared/LightSettings.java
@@ -53,4 +54,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AndroidFcmOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

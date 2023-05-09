@@ -18,6 +18,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cogsBasedRule")
     public RepricingRuleCostOfGoodsSaleRule cogsBasedRule;
+
     public RepricingRuleInput withCogsBasedRule(RepricingRuleCostOfGoodsSaleRule cogsBasedRule) {
         this.cogsBasedRule = cogsBasedRule;
         return this;
@@ -29,6 +30,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public RepricingRuleInput withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -37,6 +39,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveTimePeriod")
     public RepricingRuleEffectiveTime effectiveTimePeriod;
+
     public RepricingRuleInput withEffectiveTimePeriod(RepricingRuleEffectiveTime effectiveTimePeriod) {
         this.effectiveTimePeriod = effectiveTimePeriod;
         return this;
@@ -48,6 +51,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eligibleOfferMatcher")
     public RepricingRuleEligibleOfferMatcher eligibleOfferMatcher;
+
     public RepricingRuleInput withEligibleOfferMatcher(RepricingRuleEligibleOfferMatcher eligibleOfferMatcher) {
         this.eligibleOfferMatcher = eligibleOfferMatcher;
         return this;
@@ -59,6 +63,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public RepricingRuleInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -70,6 +75,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paused")
     public Boolean paused;
+
     public RepricingRuleInput withPaused(Boolean paused) {
         this.paused = paused;
         return this;
@@ -81,6 +87,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restriction")
     public RepricingRuleRestriction restriction;
+
     public RepricingRuleInput withRestriction(RepricingRuleRestriction restriction) {
         this.restriction = restriction;
         return this;
@@ -92,6 +99,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statsBasedRule")
     public RepricingRuleStatsBasedRule statsBasedRule;
+
     public RepricingRuleInput withStatsBasedRule(RepricingRuleStatsBasedRule statsBasedRule) {
         this.statsBasedRule = statsBasedRule;
         return this;
@@ -103,6 +111,7 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public RepricingRuleInput withTitle(String title) {
         this.title = title;
         return this;
@@ -114,9 +123,11 @@ public class RepricingRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RepricingRuleTypeEnum type;
+
     public RepricingRuleInput withType(RepricingRuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RepricingRuleInput(){}
 }

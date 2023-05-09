@@ -15,6 +15,7 @@ public class CustomerCategoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CustomerCategoryFields withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class CustomerCategoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CustomerCategoryFields withId(Integer id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class CustomerCategoryFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomerCategoryFields withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomerCategoryFields(){}
 }

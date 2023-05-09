@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Abschlussbelegdaten {
     @JsonProperty("Abschluss-Beginn-Datum-Uhrzeit")
     public String abschlussBeginnDatumUhrzeit;
+
     public Abschlussbelegdaten withAbschlussBeginnDatumUhrzeit(String abschlussBeginnDatumUhrzeit) {
         this.abschlussBeginnDatumUhrzeit = abschlussBeginnDatumUhrzeit;
         return this;
@@ -19,9 +20,14 @@ public class Abschlussbelegdaten {
     
     @JsonProperty("Abschluss-Ende-Datum-Uhrzeit")
     public String abschlussEndeDatumUhrzeit;
+
     public Abschlussbelegdaten withAbschlussEndeDatumUhrzeit(String abschlussEndeDatumUhrzeit) {
         this.abschlussEndeDatumUhrzeit = abschlussEndeDatumUhrzeit;
         return this;
     }
     
+    public Abschlussbelegdaten(@JsonProperty("Abschluss-Beginn-Datum-Uhrzeit") String abschlussBeginnDatumUhrzeit, @JsonProperty("Abschluss-Ende-Datum-Uhrzeit") String abschlussEndeDatumUhrzeit) {
+        this.abschlussBeginnDatumUhrzeit = abschlussBeginnDatumUhrzeit;
+        this.abschlussEndeDatumUhrzeit = abschlussEndeDatumUhrzeit;
+  }
 }

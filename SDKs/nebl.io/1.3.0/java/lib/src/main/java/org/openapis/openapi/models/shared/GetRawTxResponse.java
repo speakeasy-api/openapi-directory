@@ -18,9 +18,11 @@ public class GetRawTxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawtx")
     public String rawtx;
+
     public GetRawTxResponse withRawtx(String rawtx) {
         this.rawtx = rawtx;
         return this;
     }
     
+    public GetRawTxResponse(){}
 }

@@ -18,9 +18,11 @@ public class DeviceIntegrity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceRecognitionVerdict")
     public DeviceIntegrityDeviceRecognitionVerdictEnum[] deviceRecognitionVerdict;
+
     public DeviceIntegrity withDeviceRecognitionVerdict(DeviceIntegrityDeviceRecognitionVerdictEnum[] deviceRecognitionVerdict) {
         this.deviceRecognitionVerdict = deviceRecognitionVerdict;
         return this;
     }
     
+    public DeviceIntegrity(){}
 }

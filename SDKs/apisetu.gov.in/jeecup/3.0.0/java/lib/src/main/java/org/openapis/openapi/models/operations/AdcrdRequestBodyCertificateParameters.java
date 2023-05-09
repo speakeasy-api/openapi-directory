@@ -12,6 +12,7 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("ApplicationNo")
     public String applicationNo;
+
     public AdcrdRequestBodyCertificateParameters withApplicationNo(String applicationNo) {
         this.applicationNo = applicationNo;
         return this;
@@ -22,6 +23,7 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public AdcrdRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -32,6 +34,7 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("ExamYear")
     public String examYear;
+
     public AdcrdRequestBodyCertificateParameters withExamYear(String examYear) {
         this.examYear = examYear;
         return this;
@@ -42,9 +45,16 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public AdcrdRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
     }
     
+    public AdcrdRequestBodyCertificateParameters(@JsonProperty("ApplicationNo") String applicationNo, @JsonProperty("DOB") String dob, @JsonProperty("ExamYear") String examYear, @JsonProperty("FullName") String fullName) {
+        this.applicationNo = applicationNo;
+        this.dob = dob;
+        this.examYear = examYear;
+        this.fullName = fullName;
+  }
 }

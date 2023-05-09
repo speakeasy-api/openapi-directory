@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTaskDefinitionsRequest {
     @JsonProperty("taskDefinitions")
     public String[] taskDefinitions;
+
     public DeleteTaskDefinitionsRequest withTaskDefinitions(String[] taskDefinitions) {
         this.taskDefinitions = taskDefinitions;
         return this;
     }
     
+    public DeleteTaskDefinitionsRequest(@JsonProperty("taskDefinitions") String[] taskDefinitions) {
+        this.taskDefinitions = taskDefinitions;
+  }
 }

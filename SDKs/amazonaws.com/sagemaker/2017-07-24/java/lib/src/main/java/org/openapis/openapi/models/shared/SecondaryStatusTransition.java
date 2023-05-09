@@ -14,7 +14,7 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * SecondaryStatusTransition - &lt;p&gt;An array element of &lt;a&gt;DescribeTrainingJobResponse$SecondaryStatusTransitions&lt;/a&gt;. It provides additional details about a status that the training job has transitioned through. A training job can be in one of several states, for example, starting, downloading, training, or uploading. Within each state, there are a number of intermediate states. For example, within the starting state, SageMaker could be starting the training job or launching the ML instances. These transitional states are referred to as the job's secondary status. &lt;/p&gt; &lt;p/&gt;
+ * SecondaryStatusTransition - &lt;p&gt;An array element of &lt;code&gt;SecondaryStatusTransitions&lt;/code&gt; for &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrainingJob.html"&gt;DescribeTrainingJob&lt;/a&gt;. It provides additional details about a status that the training job has transitioned through. A training job can be in one of several states, for example, starting, downloading, training, or uploading. Within each state, there are a number of intermediate states. For example, within the starting state, SageMaker could be starting the training job or launching the ML instances. These transitional states are referred to as the job's secondary status. &lt;/p&gt; &lt;p/&gt;
  */
 public class SecondaryStatusTransition {
     @JsonInclude(Include.NON_ABSENT)
@@ -22,6 +22,7 @@ public class SecondaryStatusTransition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public SecondaryStatusTransition withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,6 +32,7 @@ public class SecondaryStatusTransition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public SecondaryStatusTransition withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -38,6 +40,7 @@ public class SecondaryStatusTransition {
     
     @JsonProperty("Status")
     public SecondaryStatusEnum status;
+
     public SecondaryStatusTransition withStatus(SecondaryStatusEnum status) {
         this.status = status;
         return this;
@@ -46,9 +49,14 @@ public class SecondaryStatusTransition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public SecondaryStatusTransition withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public SecondaryStatusTransition(@JsonProperty("StartTime") OffsetDateTime startTime, @JsonProperty("Status") SecondaryStatusEnum status) {
+        this.startTime = startTime;
+        this.status = status;
+  }
 }

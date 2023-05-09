@@ -15,6 +15,7 @@ public class PatientHealthResultResourceAttributesSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Object metadata;
+
     public PatientHealthResultResourceAttributesSource withMetadata(Object metadata) {
         this.metadata = metadata;
         return this;
@@ -23,6 +24,7 @@ public class PatientHealthResultResourceAttributesSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PatientHealthResultResourceAttributesSource withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class PatientHealthResultResourceAttributesSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     public String sourceId;
+
     public PatientHealthResultResourceAttributesSource withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
     
+    public PatientHealthResultResourceAttributesSource(){}
 }

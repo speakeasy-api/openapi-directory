@@ -12,6 +12,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoConfigEnabled")
     public Boolean autoConfigEnabled;
+
     public CreateApplicationRequest withAutoConfigEnabled(Boolean autoConfigEnabled) {
         this.autoConfigEnabled = autoConfigEnabled;
         return this;
@@ -20,6 +21,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoCreate")
     public Boolean autoCreate;
+
     public CreateApplicationRequest withAutoCreate(Boolean autoCreate) {
         this.autoCreate = autoCreate;
         return this;
@@ -28,6 +30,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CWEMonitorEnabled")
     public Boolean cweMonitorEnabled;
+
     public CreateApplicationRequest withCWEMonitorEnabled(Boolean cweMonitorEnabled) {
         this.cweMonitorEnabled = cweMonitorEnabled;
         return this;
@@ -36,6 +39,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupingType")
     public GroupingTypeEnum groupingType;
+
     public CreateApplicationRequest withGroupingType(GroupingTypeEnum groupingType) {
         this.groupingType = groupingType;
         return this;
@@ -44,6 +48,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsCenterEnabled")
     public Boolean opsCenterEnabled;
+
     public CreateApplicationRequest withOpsCenterEnabled(Boolean opsCenterEnabled) {
         this.opsCenterEnabled = opsCenterEnabled;
         return this;
@@ -52,6 +57,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemSNSTopicArn")
     public String opsItemSNSTopicArn;
+
     public CreateApplicationRequest withOpsItemSNSTopicArn(String opsItemSNSTopicArn) {
         this.opsItemSNSTopicArn = opsItemSNSTopicArn;
         return this;
@@ -60,6 +66,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public CreateApplicationRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -68,9 +75,11 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateApplicationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateApplicationRequest(){}
 }

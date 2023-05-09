@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationLicensesResponse {
     
     public String contentType;
+
     public GetOrganizationLicensesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganizationLicensesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrganizationLicensesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganizationLicensesResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationLicensesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetOrganizationLicensesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationLicensesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetOrganizationLicensesResponse {
      */
     
     public java.util.Map<String, Object>[] getOrganizationLicenses200ApplicationJSONObjects;
+
     public GetOrganizationLicensesResponse withGetOrganizationLicenses200ApplicationJSONObjects(java.util.Map<String, Object>[] getOrganizationLicenses200ApplicationJSONObjects) {
         this.getOrganizationLicenses200ApplicationJSONObjects = getOrganizationLicenses200ApplicationJSONObjects;
         return this;
     }
     
+    public GetOrganizationLicensesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

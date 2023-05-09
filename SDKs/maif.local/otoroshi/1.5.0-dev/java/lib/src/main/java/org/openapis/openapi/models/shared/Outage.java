@@ -15,6 +15,7 @@ public class Outage {
      */
     @JsonProperty("descriptorId")
     public String descriptorId;
+
     public Outage withDescriptorId(String descriptorId) {
         this.descriptorId = descriptorId;
         return this;
@@ -25,6 +26,7 @@ public class Outage {
      */
     @JsonProperty("descriptorName")
     public String descriptorName;
+
     public Outage withDescriptorName(String descriptorName) {
         this.descriptorName = descriptorName;
         return this;
@@ -35,6 +37,7 @@ public class Outage {
      */
     @JsonProperty("duration")
     public Integer duration;
+
     public Outage withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -45,9 +48,16 @@ public class Outage {
      */
     @JsonProperty("until")
     public String until;
+
     public Outage withUntil(String until) {
         this.until = until;
         return this;
     }
     
+    public Outage(@JsonProperty("descriptorId") String descriptorId, @JsonProperty("descriptorName") String descriptorName, @JsonProperty("duration") Integer duration, @JsonProperty("until") String until) {
+        this.descriptorId = descriptorId;
+        this.descriptorName = descriptorName;
+        this.duration = duration;
+        this.until = until;
+  }
 }

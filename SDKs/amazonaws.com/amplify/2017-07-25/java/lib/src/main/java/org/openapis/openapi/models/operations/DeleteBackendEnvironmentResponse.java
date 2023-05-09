@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBackendEnvironmentResponse {
@@ -12,6 +13,7 @@ public class DeleteBackendEnvironmentResponse {
      */
     
     public Object badRequestException;
+
     public DeleteBackendEnvironmentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBackendEnvironmentResponse {
     
     
     public String contentType;
+
     public DeleteBackendEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBackendEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBackendEnvironmentResult deleteBackendEnvironmentResult;
+
     public DeleteBackendEnvironmentResponse withDeleteBackendEnvironmentResult(org.openapis.openapi.models.shared.DeleteBackendEnvironmentResult deleteBackendEnvironmentResult) {
         this.deleteBackendEnvironmentResult = deleteBackendEnvironmentResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBackendEnvironmentResponse {
      */
     
     public Object dependentServiceFailureException;
+
     public DeleteBackendEnvironmentResponse withDependentServiceFailureException(Object dependentServiceFailureException) {
         this.dependentServiceFailureException = dependentServiceFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBackendEnvironmentResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteBackendEnvironmentResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBackendEnvironmentResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBackendEnvironmentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteBackendEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public DeleteBackendEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteBackendEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBackendEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteBackendEnvironmentResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteBackendEnvironmentResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteBackendEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GETMostsharedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETMostsharedSectionTimePeriodJSON400ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -20,6 +21,7 @@ public class GETMostsharedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public String[] errors;
+
     public GETMostsharedSectionTimePeriodJSON400ApplicationJSON withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -28,6 +30,7 @@ public class GETMostsharedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public Object[] results;
+
     public GETMostsharedSectionTimePeriodJSON400ApplicationJSON withResults(Object[] results) {
         this.results = results;
         return this;
@@ -36,9 +39,11 @@ public class GETMostsharedSectionTimePeriodJSON400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETMostsharedSectionTimePeriodJSON400ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETMostsharedSectionTimePeriodJSON400ApplicationJSON(){}
 }

@@ -14,6 +14,7 @@ public class UpdateNetworkSiteToSiteVpnRequestBodyHubs {
      */
     @JsonProperty("hubId")
     public String hubId;
+
     public UpdateNetworkSiteToSiteVpnRequestBodyHubs withHubId(String hubId) {
         this.hubId = hubId;
         return this;
@@ -25,9 +26,13 @@ public class UpdateNetworkSiteToSiteVpnRequestBodyHubs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDefaultRoute")
     public Boolean useDefaultRoute;
+
     public UpdateNetworkSiteToSiteVpnRequestBodyHubs withUseDefaultRoute(Boolean useDefaultRoute) {
         this.useDefaultRoute = useDefaultRoute;
         return this;
     }
     
+    public UpdateNetworkSiteToSiteVpnRequestBodyHubs(@JsonProperty("hubId") String hubId) {
+        this.hubId = hubId;
+  }
 }

@@ -18,6 +18,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomaticBackupRetentionDays")
     public Long automaticBackupRetentionDays;
+
     public CreateFileSystemOpenZFSConfiguration withAutomaticBackupRetentionDays(Long automaticBackupRetentionDays) {
         this.automaticBackupRetentionDays = automaticBackupRetentionDays;
         return this;
@@ -26,6 +27,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public CreateFileSystemOpenZFSConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -34,6 +36,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToVolumes")
     public Boolean copyTagsToVolumes;
+
     public CreateFileSystemOpenZFSConfiguration withCopyTagsToVolumes(Boolean copyTagsToVolumes) {
         this.copyTagsToVolumes = copyTagsToVolumes;
         return this;
@@ -45,6 +48,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DailyAutomaticBackupStartTime")
     public String dailyAutomaticBackupStartTime;
+
     public CreateFileSystemOpenZFSConfiguration withDailyAutomaticBackupStartTime(String dailyAutomaticBackupStartTime) {
         this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
         return this;
@@ -52,6 +56,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     
     @JsonProperty("DeploymentType")
     public OpenZFSDeploymentTypeEnum deploymentType;
+
     public CreateFileSystemOpenZFSConfiguration withDeploymentType(OpenZFSDeploymentTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -63,6 +68,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DiskIopsConfiguration")
     public DiskIopsConfiguration diskIopsConfiguration;
+
     public CreateFileSystemOpenZFSConfiguration withDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
         this.diskIopsConfiguration = diskIopsConfiguration;
         return this;
@@ -71,6 +77,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootVolumeConfiguration")
     public OpenZFSCreateRootVolumeConfiguration rootVolumeConfiguration;
+
     public CreateFileSystemOpenZFSConfiguration withRootVolumeConfiguration(OpenZFSCreateRootVolumeConfiguration rootVolumeConfiguration) {
         this.rootVolumeConfiguration = rootVolumeConfiguration;
         return this;
@@ -78,6 +85,7 @@ public class CreateFileSystemOpenZFSConfiguration {
     
     @JsonProperty("ThroughputCapacity")
     public Long throughputCapacity;
+
     public CreateFileSystemOpenZFSConfiguration withThroughputCapacity(Long throughputCapacity) {
         this.throughputCapacity = throughputCapacity;
         return this;
@@ -89,9 +97,14 @@ public class CreateFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceStartTime")
     public String weeklyMaintenanceStartTime;
+
     public CreateFileSystemOpenZFSConfiguration withWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
         this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
         return this;
     }
     
+    public CreateFileSystemOpenZFSConfiguration(@JsonProperty("DeploymentType") OpenZFSDeploymentTypeEnum deploymentType, @JsonProperty("ThroughputCapacity") Long throughputCapacity) {
+        this.deploymentType = deploymentType;
+        this.throughputCapacity = throughputCapacity;
+  }
 }

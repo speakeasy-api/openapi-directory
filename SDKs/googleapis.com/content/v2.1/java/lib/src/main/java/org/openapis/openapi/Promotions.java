@@ -61,11 +61,9 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPromotionsCreateResponse res = new org.openapis.openapi.models.operations.ContentPromotionsCreateResponse() {{
+        org.openapis.openapi.models.operations.ContentPromotionsCreateResponse res = new org.openapis.openapi.models.operations.ContentPromotionsCreateResponse(contentType, httpRes.statusCode()) {{
             promotion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Promotions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPromotionsGetResponse res = new org.openapis.openapi.models.operations.ContentPromotionsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentPromotionsGetResponse res = new org.openapis.openapi.models.operations.ContentPromotionsGetResponse(contentType, httpRes.statusCode()) {{
             promotion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

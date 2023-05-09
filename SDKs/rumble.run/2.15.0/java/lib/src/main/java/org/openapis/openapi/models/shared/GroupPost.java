@@ -12,6 +12,7 @@ public class GroupPost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GroupPost withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class GroupPost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public Long expiresAt;
+
     public GroupPost withExpiresAt(Long expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -28,6 +30,7 @@ public class GroupPost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GroupPost withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class GroupPost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_default_role")
     public String orgDefaultRole;
+
     public GroupPost withOrgDefaultRole(String orgDefaultRole) {
         this.orgDefaultRole = orgDefaultRole;
         return this;
@@ -44,9 +48,11 @@ public class GroupPost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_roles")
     public java.util.Map<String, Object> orgRoles;
+
     public GroupPost withOrgRoles(java.util.Map<String, Object> orgRoles) {
         this.orgRoles = orgRoles;
         return this;
     }
     
+    public GroupPost(){}
 }

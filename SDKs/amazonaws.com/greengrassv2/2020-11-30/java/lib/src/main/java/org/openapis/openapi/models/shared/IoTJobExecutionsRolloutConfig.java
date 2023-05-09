@@ -15,6 +15,7 @@ public class IoTJobExecutionsRolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exponentialRate")
     public IoTJobExponentialRolloutRate exponentialRate;
+
     public IoTJobExecutionsRolloutConfig withExponentialRate(IoTJobExponentialRolloutRate exponentialRate) {
         this.exponentialRate = exponentialRate;
         return this;
@@ -23,9 +24,11 @@ public class IoTJobExecutionsRolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPerMinute")
     public Long maximumPerMinute;
+
     public IoTJobExecutionsRolloutConfig withMaximumPerMinute(Long maximumPerMinute) {
         this.maximumPerMinute = maximumPerMinute;
         return this;
     }
     
+    public IoTJobExecutionsRolloutConfig(){}
 }

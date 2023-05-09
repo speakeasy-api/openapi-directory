@@ -18,9 +18,11 @@ public class InstanceTemplateSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public InstanceSpec spec;
+
     public InstanceTemplateSpec withSpec(InstanceSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public InstanceTemplateSpec(){}
 }

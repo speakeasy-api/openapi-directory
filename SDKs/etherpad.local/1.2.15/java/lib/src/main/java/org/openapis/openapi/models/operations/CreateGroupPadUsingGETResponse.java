@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupPadUsingGETResponse {
     
     public String contentType;
+
     public CreateGroupPadUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateGroupPadUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupPadUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateGroupPadUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupPadUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateGroupPadUsingGETResponse {
      */
     
     public CreateGroupPadUsingGET200ApplicationJSON createGroupPadUsingGET200ApplicationJSONObject;
+
     public CreateGroupPadUsingGETResponse withCreateGroupPadUsingGET200ApplicationJSONObject(CreateGroupPadUsingGET200ApplicationJSON createGroupPadUsingGET200ApplicationJSONObject) {
         this.createGroupPadUsingGET200ApplicationJSONObject = createGroupPadUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateGroupPadUsingGETResponse {
      */
     
     public CreateGroupPadUsingGET400ApplicationJSON createGroupPadUsingGET400ApplicationJSONObject;
+
     public CreateGroupPadUsingGETResponse withCreateGroupPadUsingGET400ApplicationJSONObject(CreateGroupPadUsingGET400ApplicationJSON createGroupPadUsingGET400ApplicationJSONObject) {
         this.createGroupPadUsingGET400ApplicationJSONObject = createGroupPadUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateGroupPadUsingGETResponse {
      */
     
     public CreateGroupPadUsingGET401ApplicationJSON createGroupPadUsingGET401ApplicationJSONObject;
+
     public CreateGroupPadUsingGETResponse withCreateGroupPadUsingGET401ApplicationJSONObject(CreateGroupPadUsingGET401ApplicationJSON createGroupPadUsingGET401ApplicationJSONObject) {
         this.createGroupPadUsingGET401ApplicationJSONObject = createGroupPadUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateGroupPadUsingGETResponse {
      */
     
     public CreateGroupPadUsingGET500ApplicationJSON createGroupPadUsingGET500ApplicationJSONObject;
+
     public CreateGroupPadUsingGETResponse withCreateGroupPadUsingGET500ApplicationJSONObject(CreateGroupPadUsingGET500ApplicationJSON createGroupPadUsingGET500ApplicationJSONObject) {
         this.createGroupPadUsingGET500ApplicationJSONObject = createGroupPadUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreateGroupPadUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

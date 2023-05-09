@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETCreateDBSubnetGroupResponse {
     
     public byte[] body;
+
     public GETCreateDBSubnetGroupResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETCreateDBSubnetGroupResponse {
     
     
     public String contentType;
+
     public GETCreateDBSubnetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETCreateDBSubnetGroupResponse {
     
     
     public Integer statusCode;
+
     public GETCreateDBSubnetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETCreateDBSubnetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETCreateDBSubnetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETCreateDBSubnetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

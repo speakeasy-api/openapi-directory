@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RecordLifecycleActionHeartbeatType {
     
     public String autoScalingGroupName;
+
     public RecordLifecycleActionHeartbeatType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class RecordLifecycleActionHeartbeatType {
     
     
     public String instanceId;
+
     public RecordLifecycleActionHeartbeatType withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,6 +25,7 @@ public class RecordLifecycleActionHeartbeatType {
     
     
     public String lifecycleActionToken;
+
     public RecordLifecycleActionHeartbeatType withLifecycleActionToken(String lifecycleActionToken) {
         this.lifecycleActionToken = lifecycleActionToken;
         return this;
@@ -30,9 +33,14 @@ public class RecordLifecycleActionHeartbeatType {
     
     
     public String lifecycleHookName;
+
     public RecordLifecycleActionHeartbeatType withLifecycleHookName(String lifecycleHookName) {
         this.lifecycleHookName = lifecycleHookName;
         return this;
     }
     
+    public RecordLifecycleActionHeartbeatType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("LifecycleHookName") String lifecycleHookName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.lifecycleHookName = lifecycleHookName;
+  }
 }

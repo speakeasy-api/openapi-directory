@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetGroupRequest {
     
     public String groupName;
+
     public GetGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,6 +17,7 @@ public class GetGroupRequest {
     
     
     public String marker;
+
     public GetGroupRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,13 @@ public class GetGroupRequest {
     
     
     public Long maxItems;
+
     public GetGroupRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
     }
     
+    public GetGroupRequest(@JsonProperty("GroupName") String groupName) {
+        this.groupName = groupName;
+  }
 }

@@ -18,9 +18,11 @@ public class EntityAdWordsLinkEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyRef")
     public WebPropertyRef webPropertyRef;
+
     public EntityAdWordsLinkEntity withWebPropertyRef(WebPropertyRef webPropertyRef) {
         this.webPropertyRef = webPropertyRef;
         return this;
     }
     
+    public EntityAdWordsLinkEntity(){}
 }

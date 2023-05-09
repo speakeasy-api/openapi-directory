@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyRevokeNosecretRequest {
@@ -12,6 +13,7 @@ public class KeyRevokeNosecretRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String code;
+
     public KeyRevokeNosecretRequest withCode(String code) {
         this.code = code;
         return this;
@@ -22,6 +24,7 @@ public class KeyRevokeNosecretRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public KeyRevokeNosecretRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -32,9 +35,14 @@ public class KeyRevokeNosecretRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone")
     public String phone;
+
     public KeyRevokeNosecretRequest withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public KeyRevokeNosecretRequest(@JsonProperty("email") String email, @JsonProperty("phone") String phone) {
+        this.email = email;
+        this.phone = phone;
+  }
 }

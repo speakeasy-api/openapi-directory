@@ -15,6 +15,7 @@ public class DriftCheckExplainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigFile")
     public FileSource configFile;
+
     public DriftCheckExplainability withConfigFile(FileSource configFile) {
         this.configFile = configFile;
         return this;
@@ -23,9 +24,11 @@ public class DriftCheckExplainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Constraints")
     public MetricsSource constraints;
+
     public DriftCheckExplainability withConstraints(MetricsSource constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public DriftCheckExplainability(){}
 }

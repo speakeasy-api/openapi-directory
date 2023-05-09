@@ -15,9 +15,11 @@ public class ActionExecutionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public ActionExecutionFilter withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
     }
     
+    public ActionExecutionFilter(){}
 }

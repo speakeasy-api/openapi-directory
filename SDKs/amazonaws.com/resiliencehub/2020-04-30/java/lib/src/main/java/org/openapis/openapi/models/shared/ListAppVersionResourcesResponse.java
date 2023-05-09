@@ -15,6 +15,7 @@ public class ListAppVersionResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppVersionResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class ListAppVersionResourcesResponse {
     
     @JsonProperty("physicalResources")
     public PhysicalResource[] physicalResources;
+
     public ListAppVersionResourcesResponse withPhysicalResources(PhysicalResource[] physicalResources) {
         this.physicalResources = physicalResources;
         return this;
@@ -29,9 +31,14 @@ public class ListAppVersionResourcesResponse {
     
     @JsonProperty("resolutionId")
     public String resolutionId;
+
     public ListAppVersionResourcesResponse withResolutionId(String resolutionId) {
         this.resolutionId = resolutionId;
         return this;
     }
     
+    public ListAppVersionResourcesResponse(@JsonProperty("physicalResources") PhysicalResource[] physicalResources, @JsonProperty("resolutionId") String resolutionId) {
+        this.physicalResources = physicalResources;
+        this.resolutionId = resolutionId;
+  }
 }

@@ -15,6 +15,7 @@ public class FileContentBuffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public FileContentBuffer withContent(String content) {
         this.content = content;
         return this;
@@ -26,9 +27,11 @@ public class FileContentBuffer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public FileContentBufferFileTypeEnum fileType;
+
     public FileContentBuffer withFileType(FileContentBufferFileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
     }
     
+    public FileContentBuffer(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAllGroupsUsingPOSTResponse {
     
     public String contentType;
+
     public ListAllGroupsUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListAllGroupsUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public ListAllGroupsUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListAllGroupsUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAllGroupsUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListAllGroupsUsingPOSTResponse {
      */
     
     public ListAllGroupsUsingPOST200ApplicationJSON listAllGroupsUsingPOST200ApplicationJSONObject;
+
     public ListAllGroupsUsingPOSTResponse withListAllGroupsUsingPOST200ApplicationJSONObject(ListAllGroupsUsingPOST200ApplicationJSON listAllGroupsUsingPOST200ApplicationJSONObject) {
         this.listAllGroupsUsingPOST200ApplicationJSONObject = listAllGroupsUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListAllGroupsUsingPOSTResponse {
      */
     
     public ListAllGroupsUsingPOST400ApplicationJSON listAllGroupsUsingPOST400ApplicationJSONObject;
+
     public ListAllGroupsUsingPOSTResponse withListAllGroupsUsingPOST400ApplicationJSONObject(ListAllGroupsUsingPOST400ApplicationJSON listAllGroupsUsingPOST400ApplicationJSONObject) {
         this.listAllGroupsUsingPOST400ApplicationJSONObject = listAllGroupsUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListAllGroupsUsingPOSTResponse {
      */
     
     public ListAllGroupsUsingPOST401ApplicationJSON listAllGroupsUsingPOST401ApplicationJSONObject;
+
     public ListAllGroupsUsingPOSTResponse withListAllGroupsUsingPOST401ApplicationJSONObject(ListAllGroupsUsingPOST401ApplicationJSON listAllGroupsUsingPOST401ApplicationJSONObject) {
         this.listAllGroupsUsingPOST401ApplicationJSONObject = listAllGroupsUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListAllGroupsUsingPOSTResponse {
      */
     
     public ListAllGroupsUsingPOST500ApplicationJSON listAllGroupsUsingPOST500ApplicationJSONObject;
+
     public ListAllGroupsUsingPOSTResponse withListAllGroupsUsingPOST500ApplicationJSONObject(ListAllGroupsUsingPOST500ApplicationJSON listAllGroupsUsingPOST500ApplicationJSONObject) {
         this.listAllGroupsUsingPOST500ApplicationJSONObject = listAllGroupsUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public ListAllGroupsUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

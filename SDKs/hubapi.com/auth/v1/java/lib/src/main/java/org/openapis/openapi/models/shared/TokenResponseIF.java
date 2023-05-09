@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TokenResponseIF {
     @JsonProperty("access_token")
     public String accessToken;
+
     public TokenResponseIF withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -21,6 +22,7 @@ public class TokenResponseIF {
     
     @JsonProperty("expires_in")
     public Integer expiresIn;
+
     public TokenResponseIF withExpiresIn(Integer expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -29,6 +31,7 @@ public class TokenResponseIF {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_token")
     public String idToken;
+
     public TokenResponseIF withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -36,6 +39,7 @@ public class TokenResponseIF {
     
     @JsonProperty("refresh_token")
     public String refreshToken;
+
     public TokenResponseIF withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -43,9 +47,16 @@ public class TokenResponseIF {
     
     @JsonProperty("token_type")
     public String tokenType;
+
     public TokenResponseIF withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public TokenResponseIF(@JsonProperty("access_token") String accessToken, @JsonProperty("expires_in") Integer expiresIn, @JsonProperty("refresh_token") String refreshToken, @JsonProperty("token_type") String tokenType) {
+        this.accessToken = accessToken;
+        this.expiresIn = expiresIn;
+        this.refreshToken = refreshToken;
+        this.tokenType = tokenType;
+  }
 }

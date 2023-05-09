@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFaqResponse {
@@ -12,6 +13,7 @@ public class DeleteFaqResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteFaqResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteFaqResponse {
      */
     
     public Object conflictException;
+
     public DeleteFaqResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFaqResponse {
     
     
     public String contentType;
+
     public DeleteFaqResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFaqResponse {
      */
     
     public Object internalServerException;
+
     public DeleteFaqResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFaqResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFaqResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFaqResponse {
     
     
     public Integer statusCode;
+
     public DeleteFaqResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFaqResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFaqResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFaqResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFaqResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFaqResponse {
      */
     
     public Object validationException;
+
     public DeleteFaqResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteFaqResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accuracy")
     public Double accuracy;
+
     public Position withAccuracy(Double accuracy) {
         this.accuracy = accuracy;
         return this;
@@ -25,6 +26,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Position withAddress(String address) {
         this.address = address;
         return this;
@@ -33,6 +35,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altitude")
     public Double altitude;
+
     public Position withAltitude(Double altitude) {
         this.altitude = altitude;
         return this;
@@ -41,6 +44,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public Position withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -49,6 +53,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("course")
     public Double course;
+
     public Position withCourse(Double course) {
         this.course = course;
         return this;
@@ -57,6 +62,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public Long deviceId;
+
     public Position withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -70,6 +76,7 @@ public class Position {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deviceTime")
     public OffsetDateTime deviceTime;
+
     public Position withDeviceTime(OffsetDateTime deviceTime) {
         this.deviceTime = deviceTime;
         return this;
@@ -83,6 +90,7 @@ public class Position {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fixTime")
     public OffsetDateTime fixTime;
+
     public Position withFixTime(OffsetDateTime fixTime) {
         this.fixTime = fixTime;
         return this;
@@ -91,6 +99,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Position withId(Long id) {
         this.id = id;
         return this;
@@ -99,6 +108,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public Position withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -107,6 +117,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public Position withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -115,6 +126,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public java.util.Map<String, Object> network;
+
     public Position withNetwork(java.util.Map<String, Object> network) {
         this.network = network;
         return this;
@@ -123,6 +135,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outdated")
     public Boolean outdated;
+
     public Position withOutdated(Boolean outdated) {
         this.outdated = outdated;
         return this;
@@ -131,6 +144,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public Position withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -144,6 +158,7 @@ public class Position {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("serverTime")
     public OffsetDateTime serverTime;
+
     public Position withServerTime(OffsetDateTime serverTime) {
         this.serverTime = serverTime;
         return this;
@@ -155,6 +170,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speed")
     public Double speed;
+
     public Position withSpeed(Double speed) {
         this.speed = speed;
         return this;
@@ -163,9 +179,11 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid")
     public Boolean valid;
+
     public Position withValid(Boolean valid) {
         this.valid = valid;
         return this;
     }
     
+    public Position(){}
 }

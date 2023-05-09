@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositoryCollaboratorPermission {
     @JsonProperty("permission")
     public String permission;
+
     public RepositoryCollaboratorPermission withPermission(String permission) {
         this.permission = permission;
         return this;
@@ -22,9 +23,14 @@ public class RepositoryCollaboratorPermission {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public RepositoryCollaboratorPermission withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public RepositoryCollaboratorPermission(@JsonProperty("permission") String permission, @JsonProperty("user") NullableSimpleUser user) {
+        this.permission = permission;
+        this.user = user;
+  }
 }

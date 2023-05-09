@@ -68,11 +68,9 @@ public class Prospects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateProspectResponse res = new org.openapis.openapi.models.operations.CreateProspectResponse() {{
+        org.openapis.openapi.models.operations.CreateProspectResponse res = new org.openapis.openapi.models.operations.CreateProspectResponse(contentType, httpRes.statusCode()) {{
             createProspect201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -118,10 +116,8 @@ public class Prospects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteProspectResponse res = new org.openapis.openapi.models.operations.DeleteProspectResponse() {{
+        org.openapis.openapi.models.operations.DeleteProspectResponse res = new org.openapis.openapi.models.operations.DeleteProspectResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -164,11 +160,9 @@ public class Prospects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProspectResponse res = new org.openapis.openapi.models.operations.GetProspectResponse() {{
+        org.openapis.openapi.models.operations.GetProspectResponse res = new org.openapis.openapi.models.operations.GetProspectResponse(contentType, httpRes.statusCode()) {{
             getProspect200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,11 +214,9 @@ public class Prospects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUnmaskedProspectResponse res = new org.openapis.openapi.models.operations.GetUnmaskedProspectResponse() {{
+        org.openapis.openapi.models.operations.GetUnmaskedProspectResponse res = new org.openapis.openapi.models.operations.GetUnmaskedProspectResponse(contentType, httpRes.statusCode()) {{
             getUnmaskedProspect200ApplicationJSONAnies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,11 +264,9 @@ public class Prospects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateProspectResponse res = new org.openapis.openapi.models.operations.UpdateProspectResponse() {{
+        org.openapis.openapi.models.operations.UpdateProspectResponse res = new org.openapis.openapi.models.operations.UpdateProspectResponse(contentType, httpRes.statusCode()) {{
             updateProspect200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

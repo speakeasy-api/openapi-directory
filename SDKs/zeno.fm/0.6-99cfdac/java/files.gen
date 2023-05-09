@@ -83,4 +83,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/StationSearchResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/StationSearchParams.java
 lib/src/main/java/org/openapis/openapi/models/shared/StationFilters.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/apiv2/README.md
 USAGE.md

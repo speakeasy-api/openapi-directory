@@ -12,6 +12,7 @@ public class DeleteInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public DeleteInventoryRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class DeleteInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public DeleteInventoryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -28,6 +30,7 @@ public class DeleteInventoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaDeleteOption")
     public InventorySchemaDeleteOptionEnum schemaDeleteOption;
+
     public DeleteInventoryRequest withSchemaDeleteOption(InventorySchemaDeleteOptionEnum schemaDeleteOption) {
         this.schemaDeleteOption = schemaDeleteOption;
         return this;
@@ -35,9 +38,13 @@ public class DeleteInventoryRequest {
     
     @JsonProperty("TypeName")
     public String typeName;
+
     public DeleteInventoryRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public DeleteInventoryRequest(@JsonProperty("TypeName") String typeName) {
+        this.typeName = typeName;
+  }
 }

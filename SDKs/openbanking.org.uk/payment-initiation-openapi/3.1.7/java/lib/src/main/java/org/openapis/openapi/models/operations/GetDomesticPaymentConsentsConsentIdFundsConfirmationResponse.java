@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse {
     
     public byte[] body;
+
     public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse {
     
     
     public String contentType;
+
     public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteFundsConfirmationResponse1 obWriteFundsConfirmationResponse1;
+
     public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse withOBWriteFundsConfirmationResponse1(org.openapis.openapi.models.shared.OBWriteFundsConfirmationResponse1 obWriteFundsConfirmationResponse1) {
         this.obWriteFundsConfirmationResponse1 = obWriteFundsConfirmationResponse1;
         return this;
@@ -50,6 +56,7 @@ public class GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse {
     
     
     public Integer statusCode;
+
     public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

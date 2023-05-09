@@ -15,6 +15,7 @@ public class DescribeCopyProductStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyProductStatus")
     public CopyProductStatusEnum copyProductStatus;
+
     public DescribeCopyProductStatusOutput withCopyProductStatus(CopyProductStatusEnum copyProductStatus) {
         this.copyProductStatus = copyProductStatus;
         return this;
@@ -23,6 +24,7 @@ public class DescribeCopyProductStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetail")
     public String statusDetail;
+
     public DescribeCopyProductStatusOutput withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
@@ -31,9 +33,11 @@ public class DescribeCopyProductStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetProductId")
     public String targetProductId;
+
     public DescribeCopyProductStatusOutput withTargetProductId(String targetProductId) {
         this.targetProductId = targetProductId;
         return this;
     }
     
+    public DescribeCopyProductStatusOutput(){}
 }

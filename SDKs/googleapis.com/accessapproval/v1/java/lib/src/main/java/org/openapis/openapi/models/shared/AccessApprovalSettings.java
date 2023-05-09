@@ -18,6 +18,7 @@ public class AccessApprovalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeKeyVersion")
     public String activeKeyVersion;
+
     public AccessApprovalSettings withActiveKeyVersion(String activeKeyVersion) {
         this.activeKeyVersion = activeKeyVersion;
         return this;
@@ -29,6 +30,7 @@ public class AccessApprovalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestorHasActiveKeyVersion")
     public Boolean ancestorHasActiveKeyVersion;
+
     public AccessApprovalSettings withAncestorHasActiveKeyVersion(Boolean ancestorHasActiveKeyVersion) {
         this.ancestorHasActiveKeyVersion = ancestorHasActiveKeyVersion;
         return this;
@@ -40,6 +42,7 @@ public class AccessApprovalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrolledAncestor")
     public Boolean enrolledAncestor;
+
     public AccessApprovalSettings withEnrolledAncestor(Boolean enrolledAncestor) {
         this.enrolledAncestor = enrolledAncestor;
         return this;
@@ -51,6 +54,7 @@ public class AccessApprovalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrolledServices")
     public EnrolledService[] enrolledServices;
+
     public AccessApprovalSettings withEnrolledServices(EnrolledService[] enrolledServices) {
         this.enrolledServices = enrolledServices;
         return this;
@@ -62,6 +66,7 @@ public class AccessApprovalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidKeyVersion")
     public Boolean invalidKeyVersion;
+
     public AccessApprovalSettings withInvalidKeyVersion(Boolean invalidKeyVersion) {
         this.invalidKeyVersion = invalidKeyVersion;
         return this;
@@ -73,6 +78,7 @@ public class AccessApprovalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessApprovalSettings withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,35 @@ public class AccessApprovalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationEmails")
     public String[] notificationEmails;
+
     public AccessApprovalSettings withNotificationEmails(String[] notificationEmails) {
         this.notificationEmails = notificationEmails;
         return this;
     }
     
+    /**
+     * This preference is communicated to Google personnel when sending an approval request but can be overridden if necessary.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preferNoBroadApprovalRequests")
+    public Boolean preferNoBroadApprovalRequests;
+
+    public AccessApprovalSettings withPreferNoBroadApprovalRequests(Boolean preferNoBroadApprovalRequests) {
+        this.preferNoBroadApprovalRequests = preferNoBroadApprovalRequests;
+        return this;
+    }
+    
+    /**
+     * This preference is shared with Google personnel, but can be overridden if said personnel deems necessary. The approver ultimately can set the expiration at approval time.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("preferredRequestExpirationDays")
+    public Integer preferredRequestExpirationDays;
+
+    public AccessApprovalSettings withPreferredRequestExpirationDays(Integer preferredRequestExpirationDays) {
+        this.preferredRequestExpirationDays = preferredRequestExpirationDays;
+        return this;
+    }
+    
+    public AccessApprovalSettings(){}
 }

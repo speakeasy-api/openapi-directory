@@ -15,6 +15,7 @@ public class DescribeAcceleratorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorIds")
     public String[] acceleratorIds;
+
     public DescribeAcceleratorsRequestBody withAcceleratorIds(String[] acceleratorIds) {
         this.acceleratorIds = acceleratorIds;
         return this;
@@ -26,6 +27,7 @@ public class DescribeAcceleratorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public DescribeAcceleratorsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class DescribeAcceleratorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeAcceleratorsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -48,9 +51,11 @@ public class DescribeAcceleratorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeAcceleratorsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAcceleratorsRequestBody(){}
 }

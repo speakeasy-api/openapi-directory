@@ -15,6 +15,7 @@ public class FileSystemPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public FileSystemPolicyDescription withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -23,9 +24,11 @@ public class FileSystemPolicyDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public FileSystemPolicyDescription withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public FileSystemPolicyDescription(){}
 }

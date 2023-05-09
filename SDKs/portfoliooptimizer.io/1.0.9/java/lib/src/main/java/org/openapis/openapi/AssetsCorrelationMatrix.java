@@ -63,11 +63,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrix200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,11 +110,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixBounds200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,11 +158,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixDenoised200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,11 +209,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixDistance200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -264,11 +256,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixEffectiveRank200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,11 +308,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixInformativeness200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,11 +355,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixNearest200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -416,11 +402,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixRandom200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,11 +453,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixShrinkageResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixShrinkageResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixShrinkageResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixShrinkageResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixShrinkage200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -520,11 +502,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixTheoryImplied200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -569,11 +549,9 @@ public class AssetsCorrelationMatrix {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationResponse res = new org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationResponse(contentType, httpRes.statusCode()) {{
             postAssetsCorrelationMatrixValidation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

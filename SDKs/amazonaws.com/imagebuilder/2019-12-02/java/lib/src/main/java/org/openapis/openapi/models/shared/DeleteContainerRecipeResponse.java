@@ -15,6 +15,7 @@ public class DeleteContainerRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipeArn")
     public String containerRecipeArn;
+
     public DeleteContainerRecipeResponse withContainerRecipeArn(String containerRecipeArn) {
         this.containerRecipeArn = containerRecipeArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteContainerRecipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DeleteContainerRecipeResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public DeleteContainerRecipeResponse(){}
 }

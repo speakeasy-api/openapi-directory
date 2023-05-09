@@ -12,6 +12,7 @@ public class GetFirewallsFirewallsResponseFirewallAppliedTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_to_resources")
     public GetFirewallsFirewallsResponseFirewallAppliedToAppliedToResources[] appliedToResources;
+
     public GetFirewallsFirewallsResponseFirewallAppliedTo withAppliedToResources(GetFirewallsFirewallsResponseFirewallAppliedToAppliedToResources[] appliedToResources) {
         this.appliedToResources = appliedToResources;
         return this;
@@ -20,6 +21,7 @@ public class GetFirewallsFirewallsResponseFirewallAppliedTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_selector")
     public GetFirewallsFirewallsResponseFirewallAppliedToLabelSelector labelSelector;
+
     public GetFirewallsFirewallsResponseFirewallAppliedTo withLabelSelector(GetFirewallsFirewallsResponseFirewallAppliedToLabelSelector labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -28,6 +30,7 @@ public class GetFirewallsFirewallsResponseFirewallAppliedTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public GetFirewallsFirewallsResponseFirewallAppliedToServer server;
+
     public GetFirewallsFirewallsResponseFirewallAppliedTo withServer(GetFirewallsFirewallsResponseFirewallAppliedToServer server) {
         this.server = server;
         return this;
@@ -38,9 +41,13 @@ public class GetFirewallsFirewallsResponseFirewallAppliedTo {
      */
     @JsonProperty("type")
     public GetFirewallsFirewallsResponseFirewallAppliedToTypeEnum type;
+
     public GetFirewallsFirewallsResponseFirewallAppliedTo withType(GetFirewallsFirewallsResponseFirewallAppliedToTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetFirewallsFirewallsResponseFirewallAppliedTo(@JsonProperty("type") GetFirewallsFirewallsResponseFirewallAppliedToTypeEnum type) {
+        this.type = type;
+  }
 }

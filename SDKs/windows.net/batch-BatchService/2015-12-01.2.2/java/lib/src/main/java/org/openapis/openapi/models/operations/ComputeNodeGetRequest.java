@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeGetRequest {
@@ -12,6 +13,7 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
     public String dollarSelect;
+
     public ComputeNodeGetRequest withDollarSelect(String dollarSelect) {
         this.dollarSelect = dollarSelect;
         return this;
@@ -22,6 +24,7 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public ComputeNodeGetRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public ComputeNodeGetRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
     public String nodeId;
+
     public ComputeNodeGetRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -52,6 +57,7 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public ComputeNodeGetRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -62,6 +68,7 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public ComputeNodeGetRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -72,6 +79,7 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public ComputeNodeGetRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -82,9 +90,15 @@ public class ComputeNodeGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public ComputeNodeGetRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ComputeNodeGetRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("nodeId") String nodeId, @JsonProperty("poolId") String poolId) {
+        this.apiVersion = apiVersion;
+        this.nodeId = nodeId;
+        this.poolId = poolId;
+  }
 }

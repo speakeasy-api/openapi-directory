@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class GroupsV2GroupV2 {
     
     public String about;
+
     public GroupsV2GroupV2 withAbout(String about) {
         this.about = about;
         return this;
@@ -16,6 +17,7 @@ public class GroupsV2GroupV2 {
     
     
     public Boolean allowChat;
+
     public GroupsV2GroupV2 withAllowChat(Boolean allowChat) {
         this.allowChat = allowChat;
         return this;
@@ -23,6 +25,7 @@ public class GroupsV2GroupV2 {
     
     
     public Integer avatarImageIndex;
+
     public GroupsV2GroupV2 withAvatarImageIndex(Integer avatarImageIndex) {
         this.avatarImageIndex = avatarImageIndex;
         return this;
@@ -30,6 +33,7 @@ public class GroupsV2GroupV2 {
     
     
     public String avatarPath;
+
     public GroupsV2GroupV2 withAvatarPath(String avatarPath) {
         this.avatarPath = avatarPath;
         return this;
@@ -37,6 +41,7 @@ public class GroupsV2GroupV2 {
     
     
     public OffsetDateTime banExpireDate;
+
     public GroupsV2GroupV2 withBanExpireDate(OffsetDateTime banExpireDate) {
         this.banExpireDate = banExpireDate;
         return this;
@@ -44,6 +49,7 @@ public class GroupsV2GroupV2 {
     
     
     public String bannerPath;
+
     public GroupsV2GroupV2 withBannerPath(String bannerPath) {
         this.bannerPath = bannerPath;
         return this;
@@ -51,6 +57,7 @@ public class GroupsV2GroupV2 {
     
     
     public Integer chatSecurity;
+
     public GroupsV2GroupV2 withChatSecurity(Integer chatSecurity) {
         this.chatSecurity = chatSecurity;
         return this;
@@ -61,6 +68,7 @@ public class GroupsV2GroupV2 {
      */
     
     public GroupsV2GroupV2ClanInfoAndInvestment clanInfo;
+
     public GroupsV2GroupV2 withClanInfo(GroupsV2GroupV2ClanInfoAndInvestment clanInfo) {
         this.clanInfo = clanInfo;
         return this;
@@ -68,6 +76,7 @@ public class GroupsV2GroupV2 {
     
     
     public Long conversationId;
+
     public GroupsV2GroupV2 withConversationId(Long conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -75,6 +84,7 @@ public class GroupsV2GroupV2 {
     
     
     public OffsetDateTime creationDate;
+
     public GroupsV2GroupV2 withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -82,6 +92,7 @@ public class GroupsV2GroupV2 {
     
     
     public Integer defaultPublicity;
+
     public GroupsV2GroupV2 withDefaultPublicity(Integer defaultPublicity) {
         this.defaultPublicity = defaultPublicity;
         return this;
@@ -89,6 +100,7 @@ public class GroupsV2GroupV2 {
     
     
     public Boolean enableInvitationMessagingForAdmins;
+
     public GroupsV2GroupV2 withEnableInvitationMessagingForAdmins(Boolean enableInvitationMessagingForAdmins) {
         this.enableInvitationMessagingForAdmins = enableInvitationMessagingForAdmins;
         return this;
@@ -96,6 +108,7 @@ public class GroupsV2GroupV2 {
     
     
     public GroupsV2GroupFeatures features;
+
     public GroupsV2GroupV2 withFeatures(GroupsV2GroupFeatures features) {
         this.features = features;
         return this;
@@ -103,6 +116,7 @@ public class GroupsV2GroupV2 {
     
     
     public Long groupId;
+
     public GroupsV2GroupV2 withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -110,6 +124,7 @@ public class GroupsV2GroupV2 {
     
     
     public Integer groupType;
+
     public GroupsV2GroupV2 withGroupType(Integer groupType) {
         this.groupType = groupType;
         return this;
@@ -117,6 +132,7 @@ public class GroupsV2GroupV2 {
     
     
     public Integer homepage;
+
     public GroupsV2GroupV2 withHomepage(Integer homepage) {
         this.homepage = homepage;
         return this;
@@ -124,6 +140,7 @@ public class GroupsV2GroupV2 {
     
     
     public Boolean isDefaultPostPublic;
+
     public GroupsV2GroupV2 withIsDefaultPostPublic(Boolean isDefaultPostPublic) {
         this.isDefaultPostPublic = isDefaultPostPublic;
         return this;
@@ -131,6 +148,7 @@ public class GroupsV2GroupV2 {
     
     
     public Boolean isPublic;
+
     public GroupsV2GroupV2 withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -138,6 +156,7 @@ public class GroupsV2GroupV2 {
     
     
     public Boolean isPublicTopicAdminOnly;
+
     public GroupsV2GroupV2 withIsPublicTopicAdminOnly(Boolean isPublicTopicAdminOnly) {
         this.isPublicTopicAdminOnly = isPublicTopicAdminOnly;
         return this;
@@ -145,6 +164,7 @@ public class GroupsV2GroupV2 {
     
     
     public String locale;
+
     public GroupsV2GroupV2 withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -152,6 +172,7 @@ public class GroupsV2GroupV2 {
     
     
     public Integer memberCount;
+
     public GroupsV2GroupV2 withMemberCount(Integer memberCount) {
         this.memberCount = memberCount;
         return this;
@@ -159,6 +180,7 @@ public class GroupsV2GroupV2 {
     
     
     public Long membershipIdCreated;
+
     public GroupsV2GroupV2 withMembershipIdCreated(Long membershipIdCreated) {
         this.membershipIdCreated = membershipIdCreated;
         return this;
@@ -166,6 +188,7 @@ public class GroupsV2GroupV2 {
     
     
     public Integer membershipOption;
+
     public GroupsV2GroupV2 withMembershipOption(Integer membershipOption) {
         this.membershipOption = membershipOption;
         return this;
@@ -173,6 +196,7 @@ public class GroupsV2GroupV2 {
     
     
     public OffsetDateTime modificationDate;
+
     public GroupsV2GroupV2 withModificationDate(OffsetDateTime modificationDate) {
         this.modificationDate = modificationDate;
         return this;
@@ -180,6 +204,7 @@ public class GroupsV2GroupV2 {
     
     
     public String motto;
+
     public GroupsV2GroupV2 withMotto(String motto) {
         this.motto = motto;
         return this;
@@ -187,6 +212,7 @@ public class GroupsV2GroupV2 {
     
     
     public String name;
+
     public GroupsV2GroupV2 withName(String name) {
         this.name = name;
         return this;
@@ -194,6 +220,7 @@ public class GroupsV2GroupV2 {
     
     
     public String[] tags;
+
     public GroupsV2GroupV2 withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -201,9 +228,11 @@ public class GroupsV2GroupV2 {
     
     
     public String theme;
+
     public GroupsV2GroupV2 withTheme(String theme) {
         this.theme = theme;
         return this;
     }
     
+    public GroupsV2GroupV2(){}
 }

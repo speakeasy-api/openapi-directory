@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileImageRequest {
@@ -12,9 +13,13 @@ public class GetProfileImageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetProfileImageRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetProfileImageRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

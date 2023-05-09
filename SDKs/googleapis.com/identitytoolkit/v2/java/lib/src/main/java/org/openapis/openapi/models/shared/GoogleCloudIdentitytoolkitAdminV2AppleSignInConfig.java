@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleIds")
     public String[] bundleIds;
+
     public GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig withBundleIds(String[] bundleIds) {
         this.bundleIds = bundleIds;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeFlowConfig")
     public GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig codeFlowConfig;
+
     public GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig withCodeFlowConfig(GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig codeFlowConfig) {
         this.codeFlowConfig = codeFlowConfig;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig(){}
 }

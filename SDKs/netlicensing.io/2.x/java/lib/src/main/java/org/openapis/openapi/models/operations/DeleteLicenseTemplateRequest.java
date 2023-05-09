@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLicenseTemplateRequest {
@@ -12,6 +13,7 @@ public class DeleteLicenseTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceCascade")
     public Boolean forceCascade;
+
     public DeleteLicenseTemplateRequest withForceCascade(Boolean forceCascade) {
         this.forceCascade = forceCascade;
         return this;
@@ -22,9 +24,13 @@ public class DeleteLicenseTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseTemplateNumber")
     public String licenseTemplateNumber;
+
     public DeleteLicenseTemplateRequest withLicenseTemplateNumber(String licenseTemplateNumber) {
         this.licenseTemplateNumber = licenseTemplateNumber;
         return this;
     }
     
+    public DeleteLicenseTemplateRequest(@JsonProperty("licenseTemplateNumber") String licenseTemplateNumber) {
+        this.licenseTemplateNumber = licenseTemplateNumber;
+  }
 }

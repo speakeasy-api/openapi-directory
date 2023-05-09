@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAppReplicationConfigurationResponse {
     
     public String contentType;
+
     public PutAppReplicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutAppReplicationConfigurationResponse {
      */
     
     public Object internalError;
+
     public PutAppReplicationConfigurationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class PutAppReplicationConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutAppReplicationConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class PutAppReplicationConfigurationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public PutAppReplicationConfigurationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutAppReplicationConfigurationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public PutAppReplicationConfigurationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class PutAppReplicationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> putAppReplicationConfigurationResponse;
+
     public PutAppReplicationConfigurationResponse withPutAppReplicationConfigurationResponse(java.util.Map<String, Object> putAppReplicationConfigurationResponse) {
         this.putAppReplicationConfigurationResponse = putAppReplicationConfigurationResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutAppReplicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutAppReplicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutAppReplicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAppReplicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutAppReplicationConfigurationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public PutAppReplicationConfigurationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public PutAppReplicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

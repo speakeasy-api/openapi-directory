@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class YoutubeAnalyticsGroupItemsInsertResponse {
     
     public String contentType;
+
     public YoutubeAnalyticsGroupItemsInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeAnalyticsGroupItemsInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.GroupItem groupItem;
+
     public YoutubeAnalyticsGroupItemsInsertResponse withGroupItem(org.openapis.openapi.models.shared.GroupItem groupItem) {
         this.groupItem = groupItem;
         return this;
@@ -26,6 +29,7 @@ public class YoutubeAnalyticsGroupItemsInsertResponse {
     
     
     public Integer statusCode;
+
     public YoutubeAnalyticsGroupItemsInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class YoutubeAnalyticsGroupItemsInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public YoutubeAnalyticsGroupItemsInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public YoutubeAnalyticsGroupItemsInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class DeleteLegalArrangementRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public DeleteLegalArrangementRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -21,10 +22,15 @@ public class DeleteLegalArrangementRequest {
      * List of legal arrangements.
      */
     @JsonProperty("legalArrangements")
-    public LegalArrangementRequest[] legalArrangements;
-    public DeleteLegalArrangementRequest withLegalArrangements(LegalArrangementRequest[] legalArrangements) {
+    public LegalArrangementRequestWrapper[] legalArrangements;
+
+    public DeleteLegalArrangementRequest withLegalArrangements(LegalArrangementRequestWrapper[] legalArrangements) {
         this.legalArrangements = legalArrangements;
         return this;
     }
     
+    public DeleteLegalArrangementRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("legalArrangements") LegalArrangementRequestWrapper[] legalArrangements) {
+        this.accountHolderCode = accountHolderCode;
+        this.legalArrangements = legalArrangements;
+  }
 }

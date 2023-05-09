@@ -18,9 +18,11 @@ public class MqttConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mqttEnabledState")
     public MqttConfigMqttEnabledStateEnum mqttEnabledState;
+
     public MqttConfig withMqttEnabledState(MqttConfigMqttEnabledStateEnum mqttEnabledState) {
         this.mqttEnabledState = mqttEnabledState;
         return this;
     }
     
+    public MqttConfig(){}
 }

@@ -15,6 +15,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount")
     public Float discount;
+
     public OrderProduct withDiscount(Float discount) {
         this.discount = discount;
         return this;
@@ -26,6 +27,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public OrderProduct withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public OrderProduct withImage(String image) {
         this.image = image;
         return this;
@@ -48,6 +51,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderProduct withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public OrderProduct withPrice(Float price) {
         this.price = price;
         return this;
@@ -70,6 +75,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty")
     public Integer qty;
+
     public OrderProduct withQty(Integer qty) {
         this.qty = qty;
         return this;
@@ -81,6 +87,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public OrderProduct withSku(String sku) {
         this.sku = sku;
         return this;
@@ -89,6 +96,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public OrderProductTax[] taxes;
+
     public OrderProduct withTaxes(OrderProductTax[] taxes) {
         this.taxes = taxes;
         return this;
@@ -100,6 +108,7 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant_id")
     public Integer variantId;
+
     public OrderProduct withVariantId(Integer variantId) {
         this.variantId = variantId;
         return this;
@@ -111,9 +120,11 @@ public class OrderProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Float weight;
+
     public OrderProduct withWeight(Float weight) {
         this.weight = weight;
         return this;
     }
     
+    public OrderProduct(){}
 }

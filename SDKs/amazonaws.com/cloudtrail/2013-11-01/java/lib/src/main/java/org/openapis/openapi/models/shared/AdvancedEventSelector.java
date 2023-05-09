@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdvancedEventSelector {
     @JsonProperty("FieldSelectors")
     public AdvancedFieldSelector[] fieldSelectors;
+
     public AdvancedEventSelector withFieldSelectors(AdvancedFieldSelector[] fieldSelectors) {
         this.fieldSelectors = fieldSelectors;
         return this;
@@ -22,9 +23,13 @@ public class AdvancedEventSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AdvancedEventSelector withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AdvancedEventSelector(@JsonProperty("FieldSelectors") AdvancedFieldSelector[] fieldSelectors) {
+        this.fieldSelectors = fieldSelectors;
+  }
 }

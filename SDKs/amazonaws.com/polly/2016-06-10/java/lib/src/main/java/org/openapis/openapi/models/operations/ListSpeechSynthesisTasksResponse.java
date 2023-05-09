@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSpeechSynthesisTasksResponse {
     
     public String contentType;
+
     public ListSpeechSynthesisTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSpeechSynthesisTasksResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSpeechSynthesisTasksResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListSpeechSynthesisTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSpeechSynthesisTasksOutput listSpeechSynthesisTasksOutput;
+
     public ListSpeechSynthesisTasksResponse withListSpeechSynthesisTasksOutput(org.openapis.openapi.models.shared.ListSpeechSynthesisTasksOutput listSpeechSynthesisTasksOutput) {
         this.listSpeechSynthesisTasksOutput = listSpeechSynthesisTasksOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListSpeechSynthesisTasksResponse {
     
     
     public Integer statusCode;
+
     public ListSpeechSynthesisTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListSpeechSynthesisTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSpeechSynthesisTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListSpeechSynthesisTasksResponse {
      */
     
     public Object serviceFailureException;
+
     public ListSpeechSynthesisTasksResponse withServiceFailureException(Object serviceFailureException) {
         this.serviceFailureException = serviceFailureException;
         return this;
     }
     
+    public ListSpeechSynthesisTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

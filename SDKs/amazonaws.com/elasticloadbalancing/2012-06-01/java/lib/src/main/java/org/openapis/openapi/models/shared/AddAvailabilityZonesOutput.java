@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AddAvailabilityZonesOutput {
     
     public String[] availabilityZones;
+
     public AddAvailabilityZonesOutput withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
     }
     
+    public AddAvailabilityZonesOutput(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget")
     public GoogleCloudBillingBudgetsV1beta1BudgetInput budget;
+
     public GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput withBudget(GoogleCloudBillingBudgetsV1beta1BudgetInput budget) {
         this.budget = budget;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput(){}
 }

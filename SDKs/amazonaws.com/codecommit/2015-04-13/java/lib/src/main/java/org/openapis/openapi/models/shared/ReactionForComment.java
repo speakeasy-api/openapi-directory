@@ -15,6 +15,7 @@ public class ReactionForComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reaction")
     public ReactionValueFormats reaction;
+
     public ReactionForComment withReaction(ReactionValueFormats reaction) {
         this.reaction = reaction;
         return this;
@@ -23,6 +24,7 @@ public class ReactionForComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactionUsers")
     public String[] reactionUsers;
+
     public ReactionForComment withReactionUsers(String[] reactionUsers) {
         this.reactionUsers = reactionUsers;
         return this;
@@ -31,9 +33,11 @@ public class ReactionForComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactionsFromDeletedUsersCount")
     public Long reactionsFromDeletedUsersCount;
+
     public ReactionForComment withReactionsFromDeletedUsersCount(Long reactionsFromDeletedUsersCount) {
         this.reactionsFromDeletedUsersCount = reactionsFromDeletedUsersCount;
         return this;
     }
     
+    public ReactionForComment(){}
 }

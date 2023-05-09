@@ -58,11 +58,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse res = new org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse() {{
+        org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse res = new org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse(contentType, httpRes.statusCode()) {{
             googleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

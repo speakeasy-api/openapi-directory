@@ -15,6 +15,7 @@ public class GetPipelineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public PipelineMetadata metadata;
+
     public GetPipelineOutput withMetadata(PipelineMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -23,9 +24,11 @@ public class GetPipelineOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipeline")
     public PipelineDeclaration pipeline;
+
     public GetPipelineOutput withPipeline(PipelineDeclaration pipeline) {
         this.pipeline = pipeline;
         return this;
     }
     
+    public GetPipelineOutput(){}
 }

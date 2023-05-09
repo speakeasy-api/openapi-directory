@@ -18,9 +18,11 @@ public class UpdateWorkloadOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Workload")
     public Workload workload;
+
     public UpdateWorkloadOutput withWorkload(Workload workload) {
         this.workload = workload;
         return this;
     }
     
+    public UpdateWorkloadOutput(){}
 }

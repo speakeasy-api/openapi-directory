@@ -15,6 +15,7 @@ public class TestGdprExportFeatureFlag200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestGdprExportFeatureFlag200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class TestGdprExportFeatureFlag200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_id")
     public String targetId;
+
     public TestGdprExportFeatureFlag200ApplicationJSON withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
     
+    public TestGdprExportFeatureFlag200ApplicationJSON(){}
 }

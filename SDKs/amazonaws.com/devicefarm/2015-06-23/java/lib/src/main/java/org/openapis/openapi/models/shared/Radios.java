@@ -15,6 +15,7 @@ public class Radios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetooth")
     public Boolean bluetooth;
+
     public Radios withBluetooth(Boolean bluetooth) {
         this.bluetooth = bluetooth;
         return this;
@@ -23,6 +24,7 @@ public class Radios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gps")
     public Boolean gps;
+
     public Radios withGps(Boolean gps) {
         this.gps = gps;
         return this;
@@ -31,6 +33,7 @@ public class Radios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfc")
     public Boolean nfc;
+
     public Radios withNfc(Boolean nfc) {
         this.nfc = nfc;
         return this;
@@ -39,9 +42,11 @@ public class Radios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifi")
     public Boolean wifi;
+
     public Radios withWifi(Boolean wifi) {
         this.wifi = wifi;
         return this;
     }
     
+    public Radios(){}
 }

@@ -12,6 +12,7 @@ public class CalendarHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri")
     public CalendarHourViewModel fri;
+
     public CalendarHoursViewModel withFri(CalendarHourViewModel fri) {
         this.fri = fri;
         return this;
@@ -20,6 +21,7 @@ public class CalendarHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon")
     public CalendarHourViewModel mon;
+
     public CalendarHoursViewModel withMon(CalendarHourViewModel mon) {
         this.mon = mon;
         return this;
@@ -28,6 +30,7 @@ public class CalendarHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat")
     public CalendarHourViewModel sat;
+
     public CalendarHoursViewModel withSat(CalendarHourViewModel sat) {
         this.sat = sat;
         return this;
@@ -36,6 +39,7 @@ public class CalendarHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun")
     public CalendarHourViewModel sun;
+
     public CalendarHoursViewModel withSun(CalendarHourViewModel sun) {
         this.sun = sun;
         return this;
@@ -44,6 +48,7 @@ public class CalendarHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu")
     public CalendarHourViewModel thu;
+
     public CalendarHoursViewModel withThu(CalendarHourViewModel thu) {
         this.thu = thu;
         return this;
@@ -52,6 +57,7 @@ public class CalendarHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue")
     public CalendarHourViewModel tue;
+
     public CalendarHoursViewModel withTue(CalendarHourViewModel tue) {
         this.tue = tue;
         return this;
@@ -60,9 +66,11 @@ public class CalendarHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed")
     public CalendarHourViewModel wed;
+
     public CalendarHoursViewModel withWed(CalendarHourViewModel wed) {
         this.wed = wed;
         return this;
     }
     
+    public CalendarHoursViewModel(){}
 }

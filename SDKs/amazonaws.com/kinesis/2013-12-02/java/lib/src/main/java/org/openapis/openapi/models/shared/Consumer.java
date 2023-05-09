@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Consumer {
     @JsonProperty("ConsumerARN")
     public String consumerARN;
+
     public Consumer withConsumerARN(String consumerARN) {
         this.consumerARN = consumerARN;
         return this;
@@ -26,6 +27,7 @@ public class Consumer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ConsumerCreationTimestamp")
     public OffsetDateTime consumerCreationTimestamp;
+
     public Consumer withConsumerCreationTimestamp(OffsetDateTime consumerCreationTimestamp) {
         this.consumerCreationTimestamp = consumerCreationTimestamp;
         return this;
@@ -33,6 +35,7 @@ public class Consumer {
     
     @JsonProperty("ConsumerName")
     public String consumerName;
+
     public Consumer withConsumerName(String consumerName) {
         this.consumerName = consumerName;
         return this;
@@ -40,9 +43,16 @@ public class Consumer {
     
     @JsonProperty("ConsumerStatus")
     public ConsumerStatusEnum consumerStatus;
+
     public Consumer withConsumerStatus(ConsumerStatusEnum consumerStatus) {
         this.consumerStatus = consumerStatus;
         return this;
     }
     
+    public Consumer(@JsonProperty("ConsumerARN") String consumerARN, @JsonProperty("ConsumerCreationTimestamp") OffsetDateTime consumerCreationTimestamp, @JsonProperty("ConsumerName") String consumerName, @JsonProperty("ConsumerStatus") ConsumerStatusEnum consumerStatus) {
+        this.consumerARN = consumerARN;
+        this.consumerCreationTimestamp = consumerCreationTimestamp;
+        this.consumerName = consumerName;
+        this.consumerStatus = consumerStatus;
+  }
 }

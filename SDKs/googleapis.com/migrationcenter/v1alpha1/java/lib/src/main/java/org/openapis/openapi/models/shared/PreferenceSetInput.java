@@ -18,6 +18,7 @@ public class PreferenceSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PreferenceSetInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class PreferenceSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PreferenceSetInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class PreferenceSetInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachinePreferences")
     public VirtualMachinePreferences virtualMachinePreferences;
+
     public PreferenceSetInput withVirtualMachinePreferences(VirtualMachinePreferences virtualMachinePreferences) {
         this.virtualMachinePreferences = virtualMachinePreferences;
         return this;
     }
     
+    public PreferenceSetInput(){}
 }

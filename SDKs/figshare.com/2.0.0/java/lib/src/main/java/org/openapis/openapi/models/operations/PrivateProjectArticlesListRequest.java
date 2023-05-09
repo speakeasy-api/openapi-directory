@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectArticlesListRequest {
@@ -12,6 +13,7 @@ public class PrivateProjectArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PrivateProjectArticlesListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class PrivateProjectArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PrivateProjectArticlesListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -32,6 +35,7 @@ public class PrivateProjectArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PrivateProjectArticlesListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class PrivateProjectArticlesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PrivateProjectArticlesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,9 +57,13 @@ public class PrivateProjectArticlesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public PrivateProjectArticlesListRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PrivateProjectArticlesListRequest(@JsonProperty("project_id") Long projectId) {
+        this.projectId = projectId;
+  }
 }

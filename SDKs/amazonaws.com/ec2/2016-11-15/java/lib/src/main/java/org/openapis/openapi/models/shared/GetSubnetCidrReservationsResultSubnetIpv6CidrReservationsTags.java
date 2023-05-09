@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsTags {
     
     public String key;
+
     public GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsTags {
     
     
     public String value;
+
     public GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsTags(){}
 }

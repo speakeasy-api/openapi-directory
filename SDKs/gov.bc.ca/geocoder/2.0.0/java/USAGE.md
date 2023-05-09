@@ -3,59 +3,58 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatInterpolationEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatLocationDescriptorEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputFormatEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputSrsEnum;
-import org.openapis.openapi.models.operations.GetAddressesOutputFormatStreetDirectionEnum;
-import org.openapis.openapi.models.operations.GetAddressesOutputFormatUnitDesignatorEnum;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest;
 import org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatStreetDirectionEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatUnitDesignatorEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetAddressesOutputFormatRequest req = new GetAddressesOutputFormatRequest() {{
-                addressString = "corrupti";
+            GetAddressesOutputFormatRequest req = new GetAddressesOutputFormatRequest(GetAddressesOutputFormatOutputFormatEnum.GML) {{
+                addressString = "distinctio";
                 autoComplete = false;
-                bbox = "provident";
+                bbox = "quibusdam";
                 brief = false;
-                centre = "distinctio";
-                civicNumber = "quibusdam";
-                civicNumberSuffix = "unde";
+                centre = "unde";
+                civicNumber = "nulla";
+                civicNumberSuffix = "corrupti";
                 echo = false;
                 extrapolate = false;
-                interpolation = "none";
-                localities = "corrupti";
-                localityName = "illum";
-                locationDescriptor = "frontDoorPoint";
-                matchPrecision = "error";
-                matchPrecisionNot = "deserunt";
-                maxDistance = 3843.82;
-                maxResults = 437587;
-                minScore = 297534;
-                notLocalities = "debitis";
-                outputFormat = "json";
-                outputSRS = "26911";
-                parcelPoint = "tempora";
-                provinceCode = "suscipit";
-                setBack = 477665;
-                siteName = "minus";
-                streetDirection = "SE";
-                streetName = "voluptatum";
-                streetQualifier = "iusto";
-                streetType = "excepturi";
-                unitDesignator = "PAD";
-                unitNumber = "recusandae";
-                unitNumberSuffix = "temporibus";
-            }}            
+                interpolation = GetAddressesOutputFormatInterpolationEnum.NONE;
+                localities = "vel";
+                localityName = "error";
+                locationDescriptor = GetAddressesOutputFormatLocationDescriptorEnum.PARCEL_POINT;
+                matchPrecision = "suscipit";
+                matchPrecisionNot = "iure";
+                maxDistance = 2975.34;
+                maxResults = 891773L;
+                minScore = 56713L;
+                notLocalities = "delectus";
+                outputSRS = GetAddressesOutputFormatOutputSrsEnum.THREE_THOUSAND_AND_FIVE;
+                parcelPoint = "suscipit";
+                provinceCode = "molestiae";
+                setBack = 791725L;
+                siteName = "placeat";
+                streetDirection = GetAddressesOutputFormatStreetDirectionEnum.NE;
+                streetName = "iusto";
+                streetQualifier = "excepturi";
+                streetType = "nisi";
+                unitDesignator = GetAddressesOutputFormatUnitDesignatorEnum.UNIT;
+                unitNumber = "temporibus";
+                unitNumberSuffix = "ab";
+            }};            
 
             GetAddressesOutputFormatResponse res = sdk.intersections.getAddressesOutputFormat(req);
 
@@ -65,5 +64,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

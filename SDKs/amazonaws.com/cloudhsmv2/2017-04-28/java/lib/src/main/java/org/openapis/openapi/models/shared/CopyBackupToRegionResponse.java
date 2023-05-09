@@ -15,9 +15,11 @@ public class CopyBackupToRegionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationBackup")
     public DestinationBackup destinationBackup;
+
     public CopyBackupToRegionResponse withDestinationBackup(DestinationBackup destinationBackup) {
         this.destinationBackup = destinationBackup;
         return this;
     }
     
+    public CopyBackupToRegionResponse(){}
 }

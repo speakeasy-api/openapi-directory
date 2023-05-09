@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEnvironmentAccountConnectionResponse {
@@ -12,6 +13,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateEnvironmentAccountConnectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
      */
     
     public Object conflictException;
+
     public UpdateEnvironmentAccountConnectionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
     
     
     public String contentType;
+
     public UpdateEnvironmentAccountConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEnvironmentAccountConnectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateEnvironmentAccountConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEnvironmentAccountConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEnvironmentAccountConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
      */
     
     public Object throttlingException;
+
     public UpdateEnvironmentAccountConnectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEnvironmentAccountConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEnvironmentAccountConnectionOutput updateEnvironmentAccountConnectionOutput;
+
     public UpdateEnvironmentAccountConnectionResponse withUpdateEnvironmentAccountConnectionOutput(org.openapis.openapi.models.shared.UpdateEnvironmentAccountConnectionOutput updateEnvironmentAccountConnectionOutput) {
         this.updateEnvironmentAccountConnectionOutput = updateEnvironmentAccountConnectionOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateEnvironmentAccountConnectionResponse {
      */
     
     public Object validationException;
+
     public UpdateEnvironmentAccountConnectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateEnvironmentAccountConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

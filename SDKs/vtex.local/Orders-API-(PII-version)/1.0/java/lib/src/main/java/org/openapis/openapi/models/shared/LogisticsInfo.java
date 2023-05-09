@@ -12,6 +12,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("addressId")
     public String addressId;
+
     public LogisticsInfo withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -22,6 +23,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("deliveryChannel")
     public String deliveryChannel;
+
     public LogisticsInfo withDeliveryChannel(String deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
@@ -32,6 +34,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("deliveryCompany")
     public String deliveryCompany;
+
     public LogisticsInfo withDeliveryCompany(String deliveryCompany) {
         this.deliveryCompany = deliveryCompany;
         return this;
@@ -42,6 +45,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("deliveryIds")
     public DeliveryId[] deliveryIds;
+
     public LogisticsInfo withDeliveryIds(DeliveryId[] deliveryIds) {
         this.deliveryIds = deliveryIds;
         return this;
@@ -52,6 +56,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("deliveryWindow")
     public String deliveryWindow;
+
     public LogisticsInfo withDeliveryWindow(String deliveryWindow) {
         this.deliveryWindow = deliveryWindow;
         return this;
@@ -62,6 +67,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("itemIndex")
     public Integer itemIndex;
+
     public LogisticsInfo withItemIndex(Integer itemIndex) {
         this.itemIndex = itemIndex;
         return this;
@@ -72,6 +78,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("listPrice")
     public Integer listPrice;
+
     public LogisticsInfo withListPrice(Integer listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -82,6 +89,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("lockTTL")
     public String lockTTL;
+
     public LogisticsInfo withLockTTL(String lockTTL) {
         this.lockTTL = lockTTL;
         return this;
@@ -89,6 +97,7 @@ public class LogisticsInfo {
     
     @JsonProperty("pickupStoreInfo")
     public PickupStoreInfo pickupStoreInfo;
+
     public LogisticsInfo withPickupStoreInfo(PickupStoreInfo pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -99,6 +108,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("polygonName")
     public String polygonName;
+
     public LogisticsInfo withPolygonName(String polygonName) {
         this.polygonName = polygonName;
         return this;
@@ -109,6 +119,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("price")
     public Integer price;
+
     public LogisticsInfo withPrice(Integer price) {
         this.price = price;
         return this;
@@ -119,6 +130,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("selectedSla")
     public String selectedSla;
+
     public LogisticsInfo withSelectedSla(String selectedSla) {
         this.selectedSla = selectedSla;
         return this;
@@ -129,6 +141,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("sellingPrice")
     public Integer sellingPrice;
+
     public LogisticsInfo withSellingPrice(Integer sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -139,6 +152,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("shippingEstimate")
     public String shippingEstimate;
+
     public LogisticsInfo withShippingEstimate(String shippingEstimate) {
         this.shippingEstimate = shippingEstimate;
         return this;
@@ -149,6 +163,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("shippingEstimateDate")
     public String shippingEstimateDate;
+
     public LogisticsInfo withShippingEstimateDate(String shippingEstimateDate) {
         this.shippingEstimateDate = shippingEstimateDate;
         return this;
@@ -159,6 +174,7 @@ public class LogisticsInfo {
      */
     @JsonProperty("shipsTo")
     public String[] shipsTo;
+
     public LogisticsInfo withShipsTo(String[] shipsTo) {
         this.shipsTo = shipsTo;
         return this;
@@ -169,9 +185,29 @@ public class LogisticsInfo {
      */
     @JsonProperty("slas")
     public Sla[] slas;
+
     public LogisticsInfo withSlas(Sla[] slas) {
         this.slas = slas;
         return this;
     }
     
+    public LogisticsInfo(@JsonProperty("addressId") String addressId, @JsonProperty("deliveryChannel") String deliveryChannel, @JsonProperty("deliveryCompany") String deliveryCompany, @JsonProperty("deliveryIds") DeliveryId[] deliveryIds, @JsonProperty("deliveryWindow") String deliveryWindow, @JsonProperty("itemIndex") Integer itemIndex, @JsonProperty("listPrice") Integer listPrice, @JsonProperty("lockTTL") String lockTTL, @JsonProperty("pickupStoreInfo") PickupStoreInfo pickupStoreInfo, @JsonProperty("polygonName") String polygonName, @JsonProperty("price") Integer price, @JsonProperty("selectedSla") String selectedSla, @JsonProperty("sellingPrice") Integer sellingPrice, @JsonProperty("shippingEstimate") String shippingEstimate, @JsonProperty("shippingEstimateDate") String shippingEstimateDate, @JsonProperty("shipsTo") String[] shipsTo, @JsonProperty("slas") Sla[] slas) {
+        this.addressId = addressId;
+        this.deliveryChannel = deliveryChannel;
+        this.deliveryCompany = deliveryCompany;
+        this.deliveryIds = deliveryIds;
+        this.deliveryWindow = deliveryWindow;
+        this.itemIndex = itemIndex;
+        this.listPrice = listPrice;
+        this.lockTTL = lockTTL;
+        this.pickupStoreInfo = pickupStoreInfo;
+        this.polygonName = polygonName;
+        this.price = price;
+        this.selectedSla = selectedSla;
+        this.sellingPrice = sellingPrice;
+        this.shippingEstimate = shippingEstimate;
+        this.shippingEstimateDate = shippingEstimateDate;
+        this.shipsTo = shipsTo;
+        this.slas = slas;
+  }
 }

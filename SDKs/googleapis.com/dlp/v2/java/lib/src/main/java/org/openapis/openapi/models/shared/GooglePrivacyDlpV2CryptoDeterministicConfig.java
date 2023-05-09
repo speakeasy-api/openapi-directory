@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CryptoDeterministicConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public GooglePrivacyDlpV2FieldId context;
+
     public GooglePrivacyDlpV2CryptoDeterministicConfig withContext(GooglePrivacyDlpV2FieldId context) {
         this.context = context;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CryptoDeterministicConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKey")
     public GooglePrivacyDlpV2CryptoKey cryptoKey;
+
     public GooglePrivacyDlpV2CryptoDeterministicConfig withCryptoKey(GooglePrivacyDlpV2CryptoKey cryptoKey) {
         this.cryptoKey = cryptoKey;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2CryptoDeterministicConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surrogateInfoType")
     public GooglePrivacyDlpV2InfoType surrogateInfoType;
+
     public GooglePrivacyDlpV2CryptoDeterministicConfig withSurrogateInfoType(GooglePrivacyDlpV2InfoType surrogateInfoType) {
         this.surrogateInfoType = surrogateInfoType;
         return this;
     }
     
+    public GooglePrivacyDlpV2CryptoDeterministicConfig(){}
 }

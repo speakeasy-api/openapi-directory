@@ -18,6 +18,7 @@ public class BaseHypermediaLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Href")
     public String href;
+
     public BaseHypermediaLink withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class BaseHypermediaLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Method")
     public String method;
+
     public BaseHypermediaLink withMethod(String method) {
         this.method = method;
         return this;
@@ -40,9 +42,11 @@ public class BaseHypermediaLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Relationship")
     public String relationship;
+
     public BaseHypermediaLink withRelationship(String relationship) {
         this.relationship = relationship;
         return this;
     }
     
+    public BaseHypermediaLink(){}
 }

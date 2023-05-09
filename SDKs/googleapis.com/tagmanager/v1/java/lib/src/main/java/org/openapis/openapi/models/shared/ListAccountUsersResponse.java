@@ -18,9 +18,11 @@ public class ListAccountUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAccess")
     public UserAccess[] userAccess;
+
     public ListAccountUsersResponse withUserAccess(UserAccess[] userAccess) {
         this.userAccess = userAccess;
         return this;
     }
     
+    public ListAccountUsersResponse(){}
 }

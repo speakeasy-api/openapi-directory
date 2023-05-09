@@ -12,6 +12,7 @@ public class UpdatedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public UpdatedBy withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -20,6 +21,7 @@ public class UpdatedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UpdatedBy withId(String id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class UpdatedBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public UpdatedBy withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public UpdatedBy(){}
 }

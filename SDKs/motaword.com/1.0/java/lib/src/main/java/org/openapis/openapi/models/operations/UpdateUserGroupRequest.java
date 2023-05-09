@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActiveWidget activeWidget;
+
     public UpdateUserGroupRequest withActiveWidget(org.openapis.openapi.models.shared.ActiveWidget activeWidget) {
         this.activeWidget = activeWidget;
         return this;
@@ -19,9 +21,13 @@ public class UpdateUserGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public UpdateUserGroupRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public UpdateUserGroupRequest(@JsonProperty("userId") Long userId) {
+        this.userId = userId;
+  }
 }

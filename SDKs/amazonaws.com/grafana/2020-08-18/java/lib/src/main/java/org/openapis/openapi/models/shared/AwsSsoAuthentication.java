@@ -15,9 +15,11 @@ public class AwsSsoAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssoClientId")
     public String ssoClientId;
+
     public AwsSsoAuthentication withSsoClientId(String ssoClientId) {
         this.ssoClientId = ssoClientId;
         return this;
     }
     
+    public AwsSsoAuthentication(){}
 }

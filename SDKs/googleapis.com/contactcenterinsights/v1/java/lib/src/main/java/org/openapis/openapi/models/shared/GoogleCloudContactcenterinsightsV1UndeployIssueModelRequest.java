@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1UndeployIssueModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudContactcenterinsightsV1UndeployIssueModelRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1UndeployIssueModelRequest(){}
 }

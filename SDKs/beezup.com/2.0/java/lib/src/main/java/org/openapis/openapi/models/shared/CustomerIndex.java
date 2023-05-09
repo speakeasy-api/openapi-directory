@@ -15,6 +15,7 @@ public class CustomerIndex {
      */
     @JsonProperty("links")
     public CustomerIndexLinks links;
+
     public CustomerIndex withLinks(CustomerIndexLinks links) {
         this.links = links;
         return this;
@@ -22,9 +23,14 @@ public class CustomerIndex {
     
     @JsonProperty("lovLinks")
     public CustomerIndexLovLinks lovLinks;
+
     public CustomerIndex withLovLinks(CustomerIndexLovLinks lovLinks) {
         this.lovLinks = lovLinks;
         return this;
     }
     
+    public CustomerIndex(@JsonProperty("links") CustomerIndexLinks links, @JsonProperty("lovLinks") CustomerIndexLovLinks lovLinks) {
+        this.links = links;
+        this.lovLinks = lovLinks;
+  }
 }

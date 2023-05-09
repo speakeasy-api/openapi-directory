@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacesRequestFilters {
     
     public String name;
+
     public DescribeNetworkInterfacesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInterfacesRequestFilters {
     
     
     public String[] values;
+
     public DescribeNetworkInterfacesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeNetworkInterfacesRequestFilters(){}
 }

@@ -15,9 +15,11 @@ public class PutStoredQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryArn")
     public String queryArn;
+
     public PutStoredQueryResponse withQueryArn(String queryArn) {
         this.queryArn = queryArn;
         return this;
     }
     
+    public PutStoredQueryResponse(){}
 }

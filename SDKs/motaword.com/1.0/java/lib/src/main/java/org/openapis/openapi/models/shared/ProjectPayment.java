@@ -15,6 +15,7 @@ public class ProjectPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public ProjectPayment withBin(String bin) {
         this.bin = bin;
         return this;
@@ -26,6 +27,7 @@ public class ProjectPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_code")
     public String budgetCode;
+
     public ProjectPayment withBudgetCode(String budgetCode) {
         this.budgetCode = budgetCode;
         return this;
@@ -37,6 +39,7 @@ public class ProjectPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_id")
     public Long cardId;
+
     public ProjectPayment withCardId(Long cardId) {
         this.cardId = cardId;
         return this;
@@ -48,6 +51,7 @@ public class ProjectPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_code")
     public String paymentCode;
+
     public ProjectPayment withPaymentCode(String paymentCode) {
         this.paymentCode = paymentCode;
         return this;
@@ -59,6 +63,7 @@ public class ProjectPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     public ProjectPaymentPaymentMethodEnum paymentMethod;
+
     public ProjectPayment withPaymentMethod(ProjectPaymentPaymentMethodEnum paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -70,9 +75,11 @@ public class ProjectPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stripe_token")
     public String stripeToken;
+
     public ProjectPayment withStripeToken(String stripeToken) {
         this.stripeToken = stripeToken;
         return this;
     }
     
+    public ProjectPayment(){}
 }

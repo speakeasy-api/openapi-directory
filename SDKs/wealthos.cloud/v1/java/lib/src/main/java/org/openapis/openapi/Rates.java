@@ -65,7 +65,7 @@ public class Rates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRatesResponse res = new org.openapis.openapi.models.operations.GetRatesResponse() {{
+        org.openapis.openapi.models.operations.GetRatesResponse res = new org.openapis.openapi.models.operations.GetRatesResponse(contentType, httpRes.statusCode()) {{
             getRates200ApplicationJSONObject = null;
             getRates401ApplicationJSONObject = null;
             getRates403ApplicationJSONObject = null;
@@ -73,8 +73,6 @@ public class Rates {
             getRates429ApplicationJSONObject = null;
             getRates500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

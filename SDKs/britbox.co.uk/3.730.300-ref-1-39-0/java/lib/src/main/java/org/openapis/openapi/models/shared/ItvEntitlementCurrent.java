@@ -15,9 +15,13 @@ public class ItvEntitlementCurrent {
      */
     @JsonProperty("source")
     public String source;
+
     public ItvEntitlementCurrent withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public ItvEntitlementCurrent(@JsonProperty("source") String source) {
+        this.source = source;
+  }
 }

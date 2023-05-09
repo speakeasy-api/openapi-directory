@@ -30,6 +30,7 @@ public class GetBenefitsDocumentUploadDownload404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GetBenefitsDocumentUploadDownload404ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -41,6 +42,7 @@ public class GetBenefitsDocumentUploadDownload404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public GetBenefitsDocumentUploadDownload404ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -64,6 +66,7 @@ public class GetBenefitsDocumentUploadDownload404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetBenefitsDocumentUploadDownload404ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -75,9 +78,11 @@ public class GetBenefitsDocumentUploadDownload404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetBenefitsDocumentUploadDownload404ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetBenefitsDocumentUploadDownload404ApplicationJSON(){}
 }

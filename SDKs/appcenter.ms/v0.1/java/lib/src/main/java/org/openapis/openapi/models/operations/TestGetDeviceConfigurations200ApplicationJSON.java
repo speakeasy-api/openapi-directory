@@ -15,6 +15,7 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGetDeviceConfigurations200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public TestGetDeviceConfigurations200ApplicationJSONImage image;
+
     public TestGetDeviceConfigurations200ApplicationJSON withImage(TestGetDeviceConfigurations200ApplicationJSONImage image) {
         this.image = image;
         return this;
@@ -31,6 +33,7 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketShare")
     public Double marketShare;
+
     public TestGetDeviceConfigurations200ApplicationJSON withMarketShare(Double marketShare) {
         this.marketShare = marketShare;
         return this;
@@ -39,6 +42,7 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public TestGetDeviceConfigurations200ApplicationJSONModel model;
+
     public TestGetDeviceConfigurations200ApplicationJSON withModel(TestGetDeviceConfigurations200ApplicationJSONModel model) {
         this.model = model;
         return this;
@@ -50,6 +54,7 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestGetDeviceConfigurations200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +63,7 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public TestGetDeviceConfigurations200ApplicationJSON withOs(String os) {
         this.os = os;
         return this;
@@ -66,6 +72,7 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osName")
     public String osName;
+
     public TestGetDeviceConfigurations200ApplicationJSON withOsName(String osName) {
         this.osName = osName;
         return this;
@@ -77,9 +84,11 @@ public class TestGetDeviceConfigurations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public Double tier;
+
     public TestGetDeviceConfigurations200ApplicationJSON withTier(Double tier) {
         this.tier = tier;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSON(){}
 }

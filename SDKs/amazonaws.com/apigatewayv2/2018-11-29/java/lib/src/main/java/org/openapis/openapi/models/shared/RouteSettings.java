@@ -15,6 +15,7 @@ public class RouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataTraceEnabled")
     public Boolean dataTraceEnabled;
+
     public RouteSettings withDataTraceEnabled(Boolean dataTraceEnabled) {
         this.dataTraceEnabled = dataTraceEnabled;
         return this;
@@ -23,6 +24,7 @@ public class RouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailedMetricsEnabled")
     public Boolean detailedMetricsEnabled;
+
     public RouteSettings withDetailedMetricsEnabled(Boolean detailedMetricsEnabled) {
         this.detailedMetricsEnabled = detailedMetricsEnabled;
         return this;
@@ -31,6 +33,7 @@ public class RouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingLevel")
     public RouteSettingsLoggingLevelEnum loggingLevel;
+
     public RouteSettings withLoggingLevel(RouteSettingsLoggingLevelEnum loggingLevel) {
         this.loggingLevel = loggingLevel;
         return this;
@@ -39,6 +42,7 @@ public class RouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThrottlingBurstLimit")
     public Long throttlingBurstLimit;
+
     public RouteSettings withThrottlingBurstLimit(Long throttlingBurstLimit) {
         this.throttlingBurstLimit = throttlingBurstLimit;
         return this;
@@ -47,9 +51,11 @@ public class RouteSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThrottlingRateLimit")
     public Double throttlingRateLimit;
+
     public RouteSettings withThrottlingRateLimit(Double throttlingRateLimit) {
         this.throttlingRateLimit = throttlingRateLimit;
         return this;
     }
     
+    public RouteSettings(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameDeviceSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String accountAuth;
+
     public RenameDeviceSecurity withAccountAuth(String accountAuth) {
         this.accountAuth = accountAuth;
         return this;
     }
     
+    public RenameDeviceSecurity(@JsonProperty("accountAuth") String accountAuth) {
+        this.accountAuth = accountAuth;
+  }
 }

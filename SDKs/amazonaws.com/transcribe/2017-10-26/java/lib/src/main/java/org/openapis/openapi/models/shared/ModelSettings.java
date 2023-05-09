@@ -15,9 +15,11 @@ public class ModelSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageModelName")
     public String languageModelName;
+
     public ModelSettings withLanguageModelName(String languageModelName) {
         this.languageModelName = languageModelName;
         return this;
     }
     
+    public ModelSettings(){}
 }

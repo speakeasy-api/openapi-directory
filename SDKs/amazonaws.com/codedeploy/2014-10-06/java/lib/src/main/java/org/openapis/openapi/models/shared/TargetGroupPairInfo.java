@@ -15,6 +15,7 @@ public class TargetGroupPairInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prodTrafficRoute")
     public TrafficRoute prodTrafficRoute;
+
     public TargetGroupPairInfo withProdTrafficRoute(TrafficRoute prodTrafficRoute) {
         this.prodTrafficRoute = prodTrafficRoute;
         return this;
@@ -23,6 +24,7 @@ public class TargetGroupPairInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGroups")
     public TargetGroupInfo[] targetGroups;
+
     public TargetGroupPairInfo withTargetGroups(TargetGroupInfo[] targetGroups) {
         this.targetGroups = targetGroups;
         return this;
@@ -31,9 +33,11 @@ public class TargetGroupPairInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testTrafficRoute")
     public TrafficRoute testTrafficRoute;
+
     public TargetGroupPairInfo withTestTrafficRoute(TrafficRoute testTrafficRoute) {
         this.testTrafficRoute = testTrafficRoute;
         return this;
     }
     
+    public TargetGroupPairInfo(){}
 }

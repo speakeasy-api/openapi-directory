@@ -15,6 +15,7 @@ public class AccessPolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdDate")
     public Long createdDate;
+
     public AccessPolicySummary withCreatedDate(Long createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -23,6 +24,7 @@ public class AccessPolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AccessPolicySummary withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class AccessPolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public Long lastModifiedDate;
+
     public AccessPolicySummary withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -39,6 +42,7 @@ public class AccessPolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessPolicySummary withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class AccessPolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyVersion")
     public String policyVersion;
+
     public AccessPolicySummary withPolicyVersion(String policyVersion) {
         this.policyVersion = policyVersion;
         return this;
@@ -55,9 +60,11 @@ public class AccessPolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccessPolicyTypeEnum type;
+
     public AccessPolicySummary withType(AccessPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccessPolicySummary(){}
 }

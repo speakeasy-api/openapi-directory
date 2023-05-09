@@ -15,6 +15,7 @@ public class ListTrailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTrailsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTrailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trails")
     public TrailInfo[] trails;
+
     public ListTrailsResponse withTrails(TrailInfo[] trails) {
         this.trails = trails;
         return this;
     }
     
+    public ListTrailsResponse(){}
 }

@@ -12,6 +12,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiSeason")
     public String apiSeason;
+
     public Season withApiSeason(String apiSeason) {
         this.apiSeason = apiSeason;
         return this;
@@ -20,6 +21,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostSeasonStartDate")
     public String postSeasonStartDate;
+
     public Season withPostSeasonStartDate(String postSeasonStartDate) {
         this.postSeasonStartDate = postSeasonStartDate;
         return this;
@@ -28,6 +30,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegularSeasonStartDate")
     public String regularSeasonStartDate;
+
     public Season withRegularSeasonStartDate(String regularSeasonStartDate) {
         this.regularSeasonStartDate = regularSeasonStartDate;
         return this;
@@ -36,6 +39,7 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Season withSeason(Long season) {
         this.season = season;
         return this;
@@ -44,9 +48,11 @@ public class Season {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public String seasonType;
+
     public Season withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
     }
     
+    public Season(){}
 }

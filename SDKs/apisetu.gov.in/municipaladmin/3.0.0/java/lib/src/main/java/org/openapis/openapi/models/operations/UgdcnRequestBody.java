@@ -15,6 +15,7 @@ public class UgdcnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public UgdcnRequestBodyCertificateParameters certificateParameters;
+
     public UgdcnRequestBody withCertificateParameters(UgdcnRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class UgdcnRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public UgdcnRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class UgdcnRequestBody {
      */
     @JsonProperty("format")
     public UgdcnRequestBodyFormatEnum format;
+
     public UgdcnRequestBody withFormat(UgdcnRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class UgdcnRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public UgdcnRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public UgdcnRequestBody(@JsonProperty("format") UgdcnRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

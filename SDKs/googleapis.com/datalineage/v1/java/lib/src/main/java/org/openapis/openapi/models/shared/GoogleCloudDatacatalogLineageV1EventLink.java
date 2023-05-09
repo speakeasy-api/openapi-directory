@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogLineageV1EventLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GoogleCloudDatacatalogLineageV1EntityReference source;
+
     public GoogleCloudDatacatalogLineageV1EventLink withSource(GoogleCloudDatacatalogLineageV1EntityReference source) {
         this.source = source;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogLineageV1EventLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public GoogleCloudDatacatalogLineageV1EntityReference target;
+
     public GoogleCloudDatacatalogLineageV1EventLink withTarget(GoogleCloudDatacatalogLineageV1EntityReference target) {
         this.target = target;
         return this;
     }
     
+    public GoogleCloudDatacatalogLineageV1EventLink(){}
 }

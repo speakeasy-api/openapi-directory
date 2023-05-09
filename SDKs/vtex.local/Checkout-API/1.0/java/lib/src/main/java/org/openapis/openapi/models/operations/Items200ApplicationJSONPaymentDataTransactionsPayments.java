@@ -15,6 +15,7 @@ public class Items200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Items200ApplicationJSONPaymentDataTransactionsPayments withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class Items200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public Items200ApplicationJSONPaymentDataTransactionsPayments withBin(String bin) {
         this.bin = bin;
         return this;
@@ -37,6 +39,7 @@ public class Items200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installments")
     public Long installments;
+
     public Items200ApplicationJSONPaymentDataTransactionsPayments withInstallments(Long installments) {
         this.installments = installments;
         return this;
@@ -48,6 +51,7 @@ public class Items200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public Items200ApplicationJSONPaymentDataTransactionsPayments withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -59,6 +63,7 @@ public class Items200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceValue")
     public Long referenceValue;
+
     public Items200ApplicationJSONPaymentDataTransactionsPayments withReferenceValue(Long referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -70,9 +75,11 @@ public class Items200ApplicationJSONPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public Items200ApplicationJSONPaymentDataTransactionsPayments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Items200ApplicationJSONPaymentDataTransactionsPayments(){}
 }

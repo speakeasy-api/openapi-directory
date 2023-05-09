@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchExportStatusByIdRequest {
@@ -12,9 +13,13 @@ public class FetchExportStatusByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=exportId")
     public String exportId;
+
     public FetchExportStatusByIdRequest withExportId(String exportId) {
         this.exportId = exportId;
         return this;
     }
     
+    public FetchExportStatusByIdRequest(@JsonProperty("exportId") String exportId) {
+        this.exportId = exportId;
+  }
 }

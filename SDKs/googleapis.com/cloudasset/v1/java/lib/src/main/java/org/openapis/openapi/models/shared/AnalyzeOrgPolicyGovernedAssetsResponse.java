@@ -18,6 +18,7 @@ public class AnalyzeOrgPolicyGovernedAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraint")
     public AnalyzerOrgPolicyConstraint constraint;
+
     public AnalyzeOrgPolicyGovernedAssetsResponse withConstraint(AnalyzerOrgPolicyConstraint constraint) {
         this.constraint = constraint;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzeOrgPolicyGovernedAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("governedAssets")
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset[] governedAssets;
+
     public AnalyzeOrgPolicyGovernedAssetsResponse withGovernedAssets(GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset[] governedAssets) {
         this.governedAssets = governedAssets;
         return this;
@@ -40,9 +42,11 @@ public class AnalyzeOrgPolicyGovernedAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AnalyzeOrgPolicyGovernedAssetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public AnalyzeOrgPolicyGovernedAssetsResponse(){}
 }

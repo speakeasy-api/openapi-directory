@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsTransactionIdRequest {
@@ -12,9 +13,13 @@ public class GetTransactionsTransactionIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
     public String transactionId;
+
     public GetTransactionsTransactionIdRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetTransactionsTransactionIdRequest(@JsonProperty("transactionId") String transactionId) {
+        this.transactionId = transactionId;
+  }
 }

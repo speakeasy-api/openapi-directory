@@ -15,9 +15,11 @@ public class TestMetricFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public MetricFilterMatchRecord[] matches;
+
     public TestMetricFilterResponse withMatches(MetricFilterMatchRecord[] matches) {
         this.matches = matches;
         return this;
     }
     
+    public TestMetricFilterResponse(){}
 }

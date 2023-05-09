@@ -12,9 +12,13 @@ public class BatchAcknowledgeAlarmRequestBody {
      */
     @JsonProperty("acknowledgeActionRequests")
     public org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest[] acknowledgeActionRequests;
+
     public BatchAcknowledgeAlarmRequestBody withAcknowledgeActionRequests(org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest[] acknowledgeActionRequests) {
         this.acknowledgeActionRequests = acknowledgeActionRequests;
         return this;
     }
     
+    public BatchAcknowledgeAlarmRequestBody(@JsonProperty("acknowledgeActionRequests") org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest[] acknowledgeActionRequests) {
+        this.acknowledgeActionRequests = acknowledgeActionRequests;
+  }
 }

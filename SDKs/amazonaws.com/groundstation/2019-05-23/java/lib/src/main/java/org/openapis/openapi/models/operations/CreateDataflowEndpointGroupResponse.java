@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataflowEndpointGroupResponse {
     
     public String contentType;
+
     public CreateDataflowEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataflowEndpointGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DataflowEndpointGroupIdResponse dataflowEndpointGroupIdResponse;
+
     public CreateDataflowEndpointGroupResponse withDataflowEndpointGroupIdResponse(org.openapis.openapi.models.shared.DataflowEndpointGroupIdResponse dataflowEndpointGroupIdResponse) {
         this.dataflowEndpointGroupIdResponse = dataflowEndpointGroupIdResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataflowEndpointGroupResponse {
      */
     
     public Object dependencyException;
+
     public CreateDataflowEndpointGroupResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataflowEndpointGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateDataflowEndpointGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class CreateDataflowEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateDataflowEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateDataflowEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataflowEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateDataflowEndpointGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDataflowEndpointGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateDataflowEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

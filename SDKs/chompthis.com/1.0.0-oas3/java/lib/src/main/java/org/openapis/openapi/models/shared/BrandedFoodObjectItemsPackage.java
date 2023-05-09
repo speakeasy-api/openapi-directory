@@ -18,6 +18,7 @@ public class BrandedFoodObjectItemsPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public BrandedFoodObjectItemsPackage withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -29,9 +30,11 @@ public class BrandedFoodObjectItemsPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public BrandedFoodObjectItemsPackage withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public BrandedFoodObjectItemsPackage(){}
 }

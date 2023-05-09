@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateBucketAccessKeyResponse {
@@ -12,6 +13,7 @@ public class CreateBucketAccessKeyResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateBucketAccessKeyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateBucketAccessKeyResponse {
     
     
     public String contentType;
+
     public CreateBucketAccessKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateBucketAccessKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateBucketAccessKeyResult createBucketAccessKeyResult;
+
     public CreateBucketAccessKeyResponse withCreateBucketAccessKeyResult(org.openapis.openapi.models.shared.CreateBucketAccessKeyResult createBucketAccessKeyResult) {
         this.createBucketAccessKeyResult = createBucketAccessKeyResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateBucketAccessKeyResponse {
      */
     
     public Object invalidInputException;
+
     public CreateBucketAccessKeyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateBucketAccessKeyResponse {
      */
     
     public Object notFoundException;
+
     public CreateBucketAccessKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateBucketAccessKeyResponse {
      */
     
     public Object serviceException;
+
     public CreateBucketAccessKeyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class CreateBucketAccessKeyResponse {
     
     
     public Integer statusCode;
+
     public CreateBucketAccessKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateBucketAccessKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateBucketAccessKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateBucketAccessKeyResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateBucketAccessKeyResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateBucketAccessKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

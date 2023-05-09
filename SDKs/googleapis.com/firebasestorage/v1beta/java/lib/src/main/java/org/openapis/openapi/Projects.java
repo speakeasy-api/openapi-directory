@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse() {{
+        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse(contentType, httpRes.statusCode()) {{
             bucket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetResponse() {{
+        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetResponse(contentType, httpRes.statusCode()) {{
             bucket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListResponse() {{
+        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListResponse(contentType, httpRes.statusCode()) {{
             listBucketsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse() {{
+        org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse res = new org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

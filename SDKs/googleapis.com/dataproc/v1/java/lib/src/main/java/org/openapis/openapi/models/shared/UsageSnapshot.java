@@ -18,6 +18,7 @@ public class UsageSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("milliDcu")
     public String milliDcu;
+
     public UsageSnapshot withMilliDcu(String milliDcu) {
         this.milliDcu = milliDcu;
         return this;
@@ -29,6 +30,7 @@ public class UsageSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuffleStorageGb")
     public String shuffleStorageGb;
+
     public UsageSnapshot withShuffleStorageGb(String shuffleStorageGb) {
         this.shuffleStorageGb = shuffleStorageGb;
         return this;
@@ -40,9 +42,11 @@ public class UsageSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotTime")
     public String snapshotTime;
+
     public UsageSnapshot withSnapshotTime(String snapshotTime) {
         this.snapshotTime = snapshotTime;
         return this;
     }
     
+    public UsageSnapshot(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInstanceMetadataOptionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateInstanceMetadataOptionsRequest updateInstanceMetadataOptionsRequest;
+
     public UpdateInstanceMetadataOptionsRequest withUpdateInstanceMetadataOptionsRequest(org.openapis.openapi.models.shared.UpdateInstanceMetadataOptionsRequest updateInstanceMetadataOptionsRequest) {
         this.updateInstanceMetadataOptionsRequest = updateInstanceMetadataOptionsRequest;
         return this;
@@ -16,6 +18,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class UpdateInstanceMetadataOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public UpdateInstanceMetadataOptionsXAmzTargetEnum xAmzTarget;
+
     public UpdateInstanceMetadataOptionsRequest withXAmzTarget(UpdateInstanceMetadataOptionsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public UpdateInstanceMetadataOptionsRequest(@JsonProperty("UpdateInstanceMetadataOptionsRequest") org.openapis.openapi.models.shared.UpdateInstanceMetadataOptionsRequest updateInstanceMetadataOptionsRequest, @JsonProperty("X-Amz-Target") UpdateInstanceMetadataOptionsXAmzTargetEnum xAmzTarget) {
+        this.updateInstanceMetadataOptionsRequest = updateInstanceMetadataOptionsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

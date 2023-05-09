@@ -15,6 +15,7 @@ public class PostCertificatesCreateCertificateResponseNullableActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostCertificatesCreateCertificateResponseNullableActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostCertificatesCreateCertificateResponseNullableActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostCertificatesCreateCertificateResponseNullableActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostCertificatesCreateCertificateResponseNullableActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

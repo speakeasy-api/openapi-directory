@@ -15,6 +15,7 @@ public class SendMessageRequestBody4AudioMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody4AudioMessengerCategoryEnum category;
+
     public SendMessageRequestBody4AudioMessenger withCategory(SendMessageRequestBody4AudioMessengerCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,9 +27,11 @@ public class SendMessageRequestBody4AudioMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public SendMessageRequestBody4AudioMessenger withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public SendMessageRequestBody4AudioMessenger(){}
 }

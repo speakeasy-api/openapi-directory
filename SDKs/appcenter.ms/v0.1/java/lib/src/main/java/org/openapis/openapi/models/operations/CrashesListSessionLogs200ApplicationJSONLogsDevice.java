@@ -18,6 +18,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("app_build")
     public String appBuild;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withAppBuild(String appBuild) {
         this.appBuild = appBuild;
         return this;
@@ -30,6 +31,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_namespace")
     public String appNamespace;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withAppNamespace(String appNamespace) {
         this.appNamespace = appNamespace;
         return this;
@@ -41,6 +43,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("app_version")
     public String appVersion;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -53,6 +56,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_code")
     public String carrierCode;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withCarrierCode(String carrierCode) {
         this.carrierCode = carrierCode;
         return this;
@@ -65,6 +69,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_country")
     public String carrierCountry;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withCarrierCountry(String carrierCountry) {
         this.carrierCountry = carrierCountry;
         return this;
@@ -77,6 +82,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_name")
     public String carrierName;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withCarrierName(String carrierName) {
         this.carrierName = carrierName;
         return this;
@@ -89,6 +95,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("live_update_deployment_key")
     public String liveUpdateDeploymentKey;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withLiveUpdateDeploymentKey(String liveUpdateDeploymentKey) {
         this.liveUpdateDeploymentKey = liveUpdateDeploymentKey;
         return this;
@@ -101,6 +108,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("live_update_package_hash")
     public String liveUpdatePackageHash;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withLiveUpdatePackageHash(String liveUpdatePackageHash) {
         this.liveUpdatePackageHash = liveUpdatePackageHash;
         return this;
@@ -113,6 +121,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("live_update_release_label")
     public String liveUpdateReleaseLabel;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withLiveUpdateReleaseLabel(String liveUpdateReleaseLabel) {
         this.liveUpdateReleaseLabel = liveUpdateReleaseLabel;
         return this;
@@ -124,6 +133,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("locale")
     public String locale;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -136,6 +146,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withModel(String model) {
         this.model = model;
         return this;
@@ -148,6 +159,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oem_name")
     public String oemName;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withOemName(String oemName) {
         this.oemName = oemName;
         return this;
@@ -160,6 +172,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_api_level")
     public Long osApiLevel;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withOsApiLevel(Long osApiLevel) {
         this.osApiLevel = osApiLevel;
         return this;
@@ -172,6 +185,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_build")
     public String osBuild;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withOsBuild(String osBuild) {
         this.osBuild = osBuild;
         return this;
@@ -183,6 +197,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("os_name")
     public String osName;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withOsName(String osName) {
         this.osName = osName;
         return this;
@@ -194,6 +209,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("os_version")
     public String osVersion;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -206,6 +222,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screen_size")
     public String screenSize;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withScreenSize(String screenSize) {
         this.screenSize = screenSize;
         return this;
@@ -217,6 +234,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("sdk_name")
     public String sdkName;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withSDKName(String sdkName) {
         this.sdkName = sdkName;
         return this;
@@ -228,6 +246,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("sdk_version")
     public String sdkVersion;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withSDKVersion(String sdkVersion) {
         this.sdkVersion = sdkVersion;
         return this;
@@ -239,6 +258,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
      */
     @JsonProperty("time_zone_offset")
     public Long timeZoneOffset;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withTimeZoneOffset(Long timeZoneOffset) {
         this.timeZoneOffset = timeZoneOffset;
         return this;
@@ -251,6 +271,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrapper_runtime_version")
     public String wrapperRuntimeVersion;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withWrapperRuntimeVersion(String wrapperRuntimeVersion) {
         this.wrapperRuntimeVersion = wrapperRuntimeVersion;
         return this;
@@ -263,6 +284,7 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrapper_sdk_name")
     public String wrapperSDKName;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withWrapperSDKName(String wrapperSDKName) {
         this.wrapperSDKName = wrapperSDKName;
         return this;
@@ -275,9 +297,20 @@ public class CrashesListSessionLogs200ApplicationJSONLogsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wrapper_sdk_version")
     public String wrapperSDKVersion;
+
     public CrashesListSessionLogs200ApplicationJSONLogsDevice withWrapperSDKVersion(String wrapperSDKVersion) {
         this.wrapperSDKVersion = wrapperSDKVersion;
         return this;
     }
     
+    public CrashesListSessionLogs200ApplicationJSONLogsDevice(@JsonProperty("app_build") String appBuild, @JsonProperty("app_version") String appVersion, @JsonProperty("locale") String locale, @JsonProperty("os_name") String osName, @JsonProperty("os_version") String osVersion, @JsonProperty("sdk_name") String sdkName, @JsonProperty("sdk_version") String sdkVersion, @JsonProperty("time_zone_offset") Long timeZoneOffset) {
+        this.appBuild = appBuild;
+        this.appVersion = appVersion;
+        this.locale = locale;
+        this.osName = osName;
+        this.osVersion = osVersion;
+        this.sdkName = sdkName;
+        this.sdkVersion = sdkVersion;
+        this.timeZoneOffset = timeZoneOffset;
+  }
 }

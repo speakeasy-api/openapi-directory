@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BatchPutScheduledUpdateGroupActionType {
     
     public String autoScalingGroupName;
+
     public BatchPutScheduledUpdateGroupActionType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,14 @@ public class BatchPutScheduledUpdateGroupActionType {
     
     
     public ScheduledUpdateGroupActionRequest[] scheduledUpdateGroupActions;
+
     public BatchPutScheduledUpdateGroupActionType withScheduledUpdateGroupActions(ScheduledUpdateGroupActionRequest[] scheduledUpdateGroupActions) {
         this.scheduledUpdateGroupActions = scheduledUpdateGroupActions;
         return this;
     }
     
+    public BatchPutScheduledUpdateGroupActionType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("ScheduledUpdateGroupActions") ScheduledUpdateGroupActionRequest[] scheduledUpdateGroupActions) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.scheduledUpdateGroupActions = scheduledUpdateGroupActions;
+  }
 }

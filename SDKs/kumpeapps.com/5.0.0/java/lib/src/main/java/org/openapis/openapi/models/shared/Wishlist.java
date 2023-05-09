@@ -15,6 +15,7 @@ public class Wishlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public Wishlist withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -23,9 +24,11 @@ public class Wishlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wish")
     public Wish[] wish;
+
     public Wishlist withWish(Wish[] wish) {
         this.wish = wish;
         return this;
     }
     
+    public Wishlist(){}
 }

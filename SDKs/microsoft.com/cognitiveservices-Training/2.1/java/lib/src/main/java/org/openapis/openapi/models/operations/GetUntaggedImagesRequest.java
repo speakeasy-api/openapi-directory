@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUntaggedImagesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public GetUntaggedImagesRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -19,6 +21,7 @@ public class GetUntaggedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public GetUntaggedImagesRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -29,6 +32,7 @@ public class GetUntaggedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public GetUntaggedImagesOrderByEnum orderBy;
+
     public GetUntaggedImagesRequest withOrderBy(GetUntaggedImagesOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -39,6 +43,7 @@ public class GetUntaggedImagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetUntaggedImagesRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -49,6 +54,7 @@ public class GetUntaggedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Integer skip;
+
     public GetUntaggedImagesRequest withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -59,9 +65,14 @@ public class GetUntaggedImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
     public Integer take;
+
     public GetUntaggedImagesRequest withTake(Integer take) {
         this.take = take;
         return this;
     }
     
+    public GetUntaggedImagesRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("projectId") String projectId) {
+        this.trainingKey = trainingKey;
+        this.projectId = projectId;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsTotalLocalStorageGB {
     
     public Double max;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsTotalLocalStorageGB withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsO
     
     
     public Double min;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsTotalLocalStorageGB withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsTotalLocalStorageGB(){}
 }

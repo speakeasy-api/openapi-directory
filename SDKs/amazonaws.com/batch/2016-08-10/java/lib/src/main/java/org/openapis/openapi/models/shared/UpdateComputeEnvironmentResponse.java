@@ -15,6 +15,7 @@ public class UpdateComputeEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEnvironmentArn")
     public String computeEnvironmentArn;
+
     public UpdateComputeEnvironmentResponse withComputeEnvironmentArn(String computeEnvironmentArn) {
         this.computeEnvironmentArn = computeEnvironmentArn;
         return this;
@@ -23,9 +24,11 @@ public class UpdateComputeEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEnvironmentName")
     public String computeEnvironmentName;
+
     public UpdateComputeEnvironmentResponse withComputeEnvironmentName(String computeEnvironmentName) {
         this.computeEnvironmentName = computeEnvironmentName;
         return this;
     }
     
+    public UpdateComputeEnvironmentResponse(){}
 }

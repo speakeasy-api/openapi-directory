@@ -15,6 +15,7 @@ public class FsxProtocolSmb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public FsxProtocolSmb withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -26,6 +27,7 @@ public class FsxProtocolSmb {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public SmbMountOptions mountOptions;
+
     public FsxProtocolSmb withMountOptions(SmbMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -33,6 +35,7 @@ public class FsxProtocolSmb {
     
     @JsonProperty("Password")
     public String password;
+
     public FsxProtocolSmb withPassword(String password) {
         this.password = password;
         return this;
@@ -40,9 +43,14 @@ public class FsxProtocolSmb {
     
     @JsonProperty("User")
     public String user;
+
     public FsxProtocolSmb withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public FsxProtocolSmb(@JsonProperty("User") String user, @JsonProperty("Password") String password) {
+        this.user = user;
+        this.password = password;
+  }
 }

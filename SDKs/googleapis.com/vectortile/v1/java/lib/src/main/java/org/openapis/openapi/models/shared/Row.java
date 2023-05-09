@@ -18,9 +18,11 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altitudeDiffs")
     public Integer[] altitudeDiffs;
+
     public Row withAltitudeDiffs(Integer[] altitudeDiffs) {
         this.altitudeDiffs = altitudeDiffs;
         return this;
     }
     
+    public Row(){}
 }

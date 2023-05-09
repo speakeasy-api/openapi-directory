@@ -18,6 +18,7 @@ public class StartTalkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StartTalkResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class StartTalkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public StartTalkResponse withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public StartTalkResponse(){}
 }

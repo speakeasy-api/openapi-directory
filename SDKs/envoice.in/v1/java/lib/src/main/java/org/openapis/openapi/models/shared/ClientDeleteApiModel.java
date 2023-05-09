@@ -17,9 +17,11 @@ public class ClientDeleteApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public ClientDeleteApiModel withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public ClientDeleteApiModel(){}
 }

@@ -15,6 +15,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -26,6 +27,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullName")
     public String fullName;
+
     public User withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -36,6 +38,7 @@ public class User {
      */
     @JsonProperty("Id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +50,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public User withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -58,9 +62,13 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
     }
     
+    public User(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

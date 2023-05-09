@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteDBInstanceMessage - Represents the input to &lt;a&gt;DeleteDBInstance&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBInstanceMessage {
     
     public String dbInstanceIdentifier;
+
     public DeleteDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
     }
     
+    public DeleteDBInstanceMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

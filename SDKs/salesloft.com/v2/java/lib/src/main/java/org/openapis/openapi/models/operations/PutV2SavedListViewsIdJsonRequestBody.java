@@ -12,6 +12,7 @@ public class PutV2SavedListViewsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=is_default")
     public Boolean isDefault;
+
     public PutV2SavedListViewsIdJsonRequestBody withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -22,6 +23,7 @@ public class PutV2SavedListViewsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public PutV2SavedListViewsIdJsonRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,11 @@ public class PutV2SavedListViewsIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=view_params")
     public String viewParams;
+
     public PutV2SavedListViewsIdJsonRequestBody withViewParams(String viewParams) {
         this.viewParams = viewParams;
         return this;
     }
     
+    public PutV2SavedListViewsIdJsonRequestBody(){}
 }

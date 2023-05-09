@@ -17,6 +17,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public TflApiPresentationEntitiesStopPointRouteSection withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -25,6 +26,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesStopPointRouteSection withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -33,6 +35,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public TflApiPresentationEntitiesStopPointRouteSection withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -41,6 +44,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineId")
     public String lineId;
+
     public TflApiPresentationEntitiesStopPointRouteSection withLineId(String lineId) {
         this.lineId = lineId;
         return this;
@@ -49,6 +53,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineString")
     public String lineString;
+
     public TflApiPresentationEntitiesStopPointRouteSection withLineString(String lineString) {
         this.lineString = lineString;
         return this;
@@ -57,6 +62,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TflApiPresentationEntitiesStopPointRouteSection withMode(String mode) {
         this.mode = mode;
         return this;
@@ -65,6 +71,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naptanId")
     public String naptanId;
+
     public TflApiPresentationEntitiesStopPointRouteSection withNaptanId(String naptanId) {
         this.naptanId = naptanId;
         return this;
@@ -73,6 +80,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeSectionName")
     public String routeSectionName;
+
     public TflApiPresentationEntitiesStopPointRouteSection withRouteSectionName(String routeSectionName) {
         this.routeSectionName = routeSectionName;
         return this;
@@ -81,6 +89,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public String serviceType;
+
     public TflApiPresentationEntitiesStopPointRouteSection withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -91,6 +100,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validFrom")
     public OffsetDateTime validFrom;
+
     public TflApiPresentationEntitiesStopPointRouteSection withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -101,6 +111,7 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validTo")
     public OffsetDateTime validTo;
+
     public TflApiPresentationEntitiesStopPointRouteSection withValidTo(OffsetDateTime validTo) {
         this.validTo = validTo;
         return this;
@@ -109,9 +120,11 @@ public class TflApiPresentationEntitiesStopPointRouteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vehicleDestinationText")
     public String vehicleDestinationText;
+
     public TflApiPresentationEntitiesStopPointRouteSection withVehicleDestinationText(String vehicleDestinationText) {
         this.vehicleDestinationText = vehicleDestinationText;
         return this;
     }
     
+    public TflApiPresentationEntitiesStopPointRouteSection(){}
 }

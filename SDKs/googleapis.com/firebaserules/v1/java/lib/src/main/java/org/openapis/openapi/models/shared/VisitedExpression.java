@@ -18,6 +18,7 @@ public class VisitedExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePosition")
     public SourcePosition sourcePosition;
+
     public VisitedExpression withSourcePosition(SourcePosition sourcePosition) {
         this.sourcePosition = sourcePosition;
         return this;
@@ -29,9 +30,11 @@ public class VisitedExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public VisitedExpression withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public VisitedExpression(){}
 }

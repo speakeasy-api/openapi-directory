@@ -18,6 +18,7 @@ public class ProjectCollaboratorInvite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public ProjectCollaboratorInvite withComment(String comment) {
         this.comment = comment;
         return this;
@@ -29,6 +30,7 @@ public class ProjectCollaboratorInvite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ProjectCollaboratorInvite withEmail(String email) {
         this.email = email;
         return this;
@@ -39,6 +41,7 @@ public class ProjectCollaboratorInvite {
      */
     @JsonProperty("role_name")
     public ProjectCollaboratorInviteRoleNameEnum roleName;
+
     public ProjectCollaboratorInvite withRoleName(ProjectCollaboratorInviteRoleNameEnum roleName) {
         this.roleName = roleName;
         return this;
@@ -50,9 +53,13 @@ public class ProjectCollaboratorInvite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public ProjectCollaboratorInvite withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public ProjectCollaboratorInvite(@JsonProperty("role_name") ProjectCollaboratorInviteRoleNameEnum roleName) {
+        this.roleName = roleName;
+  }
 }

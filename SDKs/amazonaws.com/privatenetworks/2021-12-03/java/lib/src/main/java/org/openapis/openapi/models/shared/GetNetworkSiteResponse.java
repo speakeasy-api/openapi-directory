@@ -15,6 +15,7 @@ public class GetNetworkSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSite")
     public NetworkSite networkSite;
+
     public GetNetworkSiteResponse withNetworkSite(NetworkSite networkSite) {
         this.networkSite = networkSite;
         return this;
@@ -23,9 +24,11 @@ public class GetNetworkSiteResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetNetworkSiteResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetNetworkSiteResponse(){}
 }

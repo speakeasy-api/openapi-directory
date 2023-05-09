@@ -18,6 +18,7 @@ public class AuxiliaryNodeGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroup")
     public NodeGroupInput nodeGroup;
+
     public AuxiliaryNodeGroupInput withNodeGroup(NodeGroupInput nodeGroup) {
         this.nodeGroup = nodeGroup;
         return this;
@@ -29,9 +30,11 @@ public class AuxiliaryNodeGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroupId")
     public String nodeGroupId;
+
     public AuxiliaryNodeGroupInput withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
     }
     
+    public AuxiliaryNodeGroupInput(){}
 }

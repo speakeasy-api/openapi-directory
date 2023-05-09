@@ -51,10 +51,8 @@ public class KeyManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAKeyResponse res = new org.openapis.openapi.models.operations.CreateAKeyResponse() {{
+        org.openapis.openapi.models.operations.CreateAKeyResponse res = new org.openapis.openapi.models.operations.CreateAKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -83,10 +81,8 @@ public class KeyManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAKeyResponse res = new org.openapis.openapi.models.operations.DeleteAKeyResponse() {{
+        org.openapis.openapi.models.operations.DeleteAKeyResponse res = new org.openapis.openapi.models.operations.DeleteAKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,10 +118,8 @@ public class KeyManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetKeysResponse res = new org.openapis.openapi.models.operations.GetKeysResponse() {{
+        org.openapis.openapi.models.operations.GetKeysResponse res = new org.openapis.openapi.models.operations.GetKeysResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,10 +148,8 @@ public class KeyManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOneKeyResponse res = new org.openapis.openapi.models.operations.GetOneKeyResponse() {{
+        org.openapis.openapi.models.operations.GetOneKeyResponse res = new org.openapis.openapi.models.operations.GetOneKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,10 +181,8 @@ public class KeyManagement {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAKeyResponse res = new org.openapis.openapi.models.operations.UpdateAKeyResponse() {{
+        org.openapis.openapi.models.operations.UpdateAKeyResponse res = new org.openapis.openapi.models.operations.UpdateAKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

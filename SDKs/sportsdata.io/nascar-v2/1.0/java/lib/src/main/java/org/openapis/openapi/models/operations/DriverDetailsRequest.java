@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriverDetailsRequest {
@@ -13,6 +14,7 @@ public class DriverDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=driverid")
     public String driverid;
+
     public DriverDetailsRequest withDriverid(String driverid) {
         this.driverid = driverid;
         return this;
@@ -23,9 +25,14 @@ public class DriverDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public DriverDetailsFormatEnum format;
+
     public DriverDetailsRequest withFormat(DriverDetailsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public DriverDetailsRequest(@JsonProperty("driverid") String driverid, @JsonProperty("format") DriverDetailsFormatEnum format) {
+        this.driverid = driverid;
+        this.format = format;
+  }
 }

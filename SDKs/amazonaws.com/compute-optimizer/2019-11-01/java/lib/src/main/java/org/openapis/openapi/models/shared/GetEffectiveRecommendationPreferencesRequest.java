@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEffectiveRecommendationPreferencesRequest {
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public GetEffectiveRecommendationPreferencesRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public GetEffectiveRecommendationPreferencesRequest(@JsonProperty("resourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

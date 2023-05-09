@@ -15,6 +15,7 @@ public class SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceThreshold")
     public Float confidenceThreshold;
+
     public SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig withConfidenceThreshold(Float confidenceThreshold) {
         this.confidenceThreshold = confidenceThreshold;
         return this;
@@ -23,6 +24,7 @@ public class SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationSec")
     public Integer expirationSec;
+
     public SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig withExpirationSec(Integer expirationSec) {
         this.expirationSec = expirationSec;
         return this;
@@ -31,6 +33,7 @@ public class SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impactedBaselineThreshold")
     public Float impactedBaselineThreshold;
+
     public SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig withImpactedBaselineThreshold(Float impactedBaselineThreshold) {
         this.impactedBaselineThreshold = impactedBaselineThreshold;
         return this;
@@ -39,9 +42,11 @@ public class SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadThreshold")
     public Float loadThreshold;
+
     public SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig withLoadThreshold(Float loadThreshold) {
         this.loadThreshold = loadThreshold;
         return this;
     }
     
+    public SecurityPolicyAdaptiveProtectionConfigAutoDeployConfig(){}
 }

@@ -12,6 +12,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DirectoryUsersWatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class DirectoryUsersWatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public DirectoryUsersWatchRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -29,6 +31,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DirectoryUsersWatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DirectoryUsersWatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DirectoryUsersWatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customFieldMask")
     public String customFieldMask;
+
     public DirectoryUsersWatchRequest withCustomFieldMask(String customFieldMask) {
         this.customFieldMask = customFieldMask;
         return this;
@@ -69,6 +75,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer")
     public String customer;
+
     public DirectoryUsersWatchRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -79,6 +86,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public DirectoryUsersWatchRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -89,6 +97,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
     public DirectoryUsersWatchEventEnum event;
+
     public DirectoryUsersWatchRequest withEvent(DirectoryUsersWatchEventEnum event) {
         this.event = event;
         return this;
@@ -99,6 +108,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DirectoryUsersWatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -109,6 +119,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DirectoryUsersWatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -119,6 +130,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DirectoryUsersWatchRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -129,6 +141,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DirectoryUsersWatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -139,6 +152,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public DirectoryUsersWatchOrderByEnum orderBy;
+
     public DirectoryUsersWatchRequest withOrderBy(DirectoryUsersWatchOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -149,6 +163,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DirectoryUsersWatchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -159,6 +174,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DirectoryUsersWatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -169,6 +185,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public DirectoryUsersWatchProjectionEnum projection;
+
     public DirectoryUsersWatchRequest withProjection(DirectoryUsersWatchProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -179,6 +196,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public DirectoryUsersWatchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -189,6 +207,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DirectoryUsersWatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -199,6 +218,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
     public String showDeleted;
+
     public DirectoryUsersWatchRequest withShowDeleted(String showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -209,6 +229,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DirectoryUsersWatchSortOrderEnum sortOrder;
+
     public DirectoryUsersWatchRequest withSortOrder(DirectoryUsersWatchSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -219,6 +240,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DirectoryUsersWatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -229,6 +251,7 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DirectoryUsersWatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -239,9 +262,11 @@ public class DirectoryUsersWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=viewType")
     public DirectoryUsersWatchViewTypeEnum viewType;
+
     public DirectoryUsersWatchRequest withViewType(DirectoryUsersWatchViewTypeEnum viewType) {
         this.viewType = viewType;
         return this;
     }
     
+    public DirectoryUsersWatchRequest(){}
 }

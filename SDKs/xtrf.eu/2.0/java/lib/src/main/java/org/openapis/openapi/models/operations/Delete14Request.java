@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Delete14Request {
@@ -12,6 +13,7 @@ public class Delete14Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceJobsRemoval")
     public Boolean forceJobsRemoval;
+
     public Delete14Request withForceJobsRemoval(Boolean forceJobsRemoval) {
         this.forceJobsRemoval = forceJobsRemoval;
         return this;
@@ -22,6 +24,7 @@ public class Delete14Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeExternalProjects")
     public Boolean removeExternalProjects;
+
     public Delete14Request withRemoveExternalProjects(Boolean removeExternalProjects) {
         this.removeExternalProjects = removeExternalProjects;
         return this;
@@ -32,6 +35,7 @@ public class Delete14Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeFilesFromDisc")
     public Boolean removeFilesFromDisc;
+
     public Delete14Request withRemoveFilesFromDisc(Boolean removeFilesFromDisc) {
         this.removeFilesFromDisc = removeFilesFromDisc;
         return this;
@@ -42,9 +46,13 @@ public class Delete14Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public Delete14Request withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public Delete14Request(@JsonProperty("taskId") String taskId) {
+        this.taskId = taskId;
+  }
 }

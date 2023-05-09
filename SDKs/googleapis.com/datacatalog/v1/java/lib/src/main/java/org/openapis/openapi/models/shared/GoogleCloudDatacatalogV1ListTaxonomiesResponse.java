@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ListTaxonomiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDatacatalogV1ListTaxonomiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1ListTaxonomiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomies")
     public GoogleCloudDatacatalogV1Taxonomy[] taxonomies;
+
     public GoogleCloudDatacatalogV1ListTaxonomiesResponse withTaxonomies(GoogleCloudDatacatalogV1Taxonomy[] taxonomies) {
         this.taxonomies = taxonomies;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ListTaxonomiesResponse(){}
 }

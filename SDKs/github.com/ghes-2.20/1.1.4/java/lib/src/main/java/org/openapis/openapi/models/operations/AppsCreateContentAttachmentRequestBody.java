@@ -12,6 +12,7 @@ public class AppsCreateContentAttachmentRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public AppsCreateContentAttachmentRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -22,9 +23,14 @@ public class AppsCreateContentAttachmentRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public AppsCreateContentAttachmentRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AppsCreateContentAttachmentRequestBody(@JsonProperty("body") String body, @JsonProperty("title") String title) {
+        this.body = body;
+        this.title = title;
+  }
 }

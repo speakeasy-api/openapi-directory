@@ -15,9 +15,11 @@ public class IncreaseReplicationFactorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cluster")
     public Cluster cluster;
+
     public IncreaseReplicationFactorResponse withCluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
     
+    public IncreaseReplicationFactorResponse(){}
 }

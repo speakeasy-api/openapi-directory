@@ -15,6 +15,7 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Boolean environment;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness withEnvironment(Boolean environment) {
         this.environment = environment;
         return this;
@@ -23,6 +24,7 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("materials")
     public Boolean materials;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness withMaterials(Boolean materials) {
         this.materials = materials;
         return this;
@@ -31,9 +33,11 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public Boolean parameters;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness withParameters(Boolean parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness(){}
 }

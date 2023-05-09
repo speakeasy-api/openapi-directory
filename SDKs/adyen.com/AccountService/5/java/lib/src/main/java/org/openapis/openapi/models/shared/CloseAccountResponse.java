@@ -18,6 +18,7 @@ public class CloseAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public CloseAccountResponse withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -29,6 +30,7 @@ public class CloseAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public CloseAccountResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -40,6 +42,7 @@ public class CloseAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CloseAccountResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -51,6 +54,7 @@ public class CloseAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CloseAccountResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -63,9 +67,11 @@ public class CloseAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CloseAccountResponseStatusEnum status;
+
     public CloseAccountResponse withStatus(CloseAccountResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CloseAccountResponse(){}
 }

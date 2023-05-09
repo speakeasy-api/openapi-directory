@@ -14,6 +14,7 @@ public class Schema {
      */
     @JsonProperty("description")
     public String description;
+
     public Schema withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentTTL")
     public Long documentTTL;
+
     public Schema withDocumentTTL(Long documentTTL) {
         this.documentTTL = documentTTL;
         return this;
@@ -35,6 +37,7 @@ public class Schema {
      */
     @JsonProperty("properties")
     public SchemaProperties properties;
+
     public Schema withProperties(SchemaProperties properties) {
         this.properties = properties;
         return this;
@@ -45,6 +48,7 @@ public class Schema {
      */
     @JsonProperty("required")
     public String[] required;
+
     public Schema withRequired(String[] required) {
         this.required = required;
         return this;
@@ -55,6 +59,7 @@ public class Schema {
      */
     @JsonProperty("title")
     public String title;
+
     public Schema withTitle(String title) {
         this.title = title;
         return this;
@@ -65,6 +70,7 @@ public class Schema {
      */
     @JsonProperty("type")
     public String type;
+
     public Schema withType(String type) {
         this.type = type;
         return this;
@@ -73,6 +79,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v-indexed")
     public Object[] vIndexed;
+
     public Schema withVIndexed(Object[] vIndexed) {
         this.vIndexed = vIndexed;
         return this;
@@ -81,6 +88,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v-unique")
     public Object[] vUnique;
+
     public Schema withVUnique(Object[] vUnique) {
         this.vUnique = vUnique;
         return this;
@@ -92,9 +100,17 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Schema withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Schema(@JsonProperty("description") String description, @JsonProperty("properties") SchemaProperties properties, @JsonProperty("required") String[] required, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.description = description;
+        this.properties = properties;
+        this.required = required;
+        this.title = title;
+        this.type = type;
+  }
 }

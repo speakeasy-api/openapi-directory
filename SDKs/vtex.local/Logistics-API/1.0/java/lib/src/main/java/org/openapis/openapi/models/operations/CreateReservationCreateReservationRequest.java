@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservationCreateReservationRequest {
     @JsonProperty("autorizationExpirationTTL")
     public String autorizationExpirationTTL;
+
     public CreateReservationCreateReservationRequest withAutorizationExpirationTTL(String autorizationExpirationTTL) {
         this.autorizationExpirationTTL = autorizationExpirationTTL;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservationCreateReservationRequest {
     
     @JsonProperty("deliveryItemOptions")
     public CreateReservationCreateReservationRequestDeliveryItemOption[] deliveryItemOptions;
+
     public CreateReservationCreateReservationRequest withDeliveryItemOptions(CreateReservationCreateReservationRequestDeliveryItemOption[] deliveryItemOptions) {
         this.deliveryItemOptions = deliveryItemOptions;
         return this;
@@ -23,6 +25,7 @@ public class CreateReservationCreateReservationRequest {
     
     @JsonProperty("lockId")
     public String lockId;
+
     public CreateReservationCreateReservationRequest withLockId(String lockId) {
         this.lockId = lockId;
         return this;
@@ -30,9 +33,16 @@ public class CreateReservationCreateReservationRequest {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public CreateReservationCreateReservationRequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
     }
     
+    public CreateReservationCreateReservationRequest(@JsonProperty("autorizationExpirationTTL") String autorizationExpirationTTL, @JsonProperty("deliveryItemOptions") CreateReservationCreateReservationRequestDeliveryItemOption[] deliveryItemOptions, @JsonProperty("lockId") String lockId, @JsonProperty("salesChannel") String salesChannel) {
+        this.autorizationExpirationTTL = autorizationExpirationTTL;
+        this.deliveryItemOptions = deliveryItemOptions;
+        this.lockId = lockId;
+        this.salesChannel = salesChannel;
+  }
 }

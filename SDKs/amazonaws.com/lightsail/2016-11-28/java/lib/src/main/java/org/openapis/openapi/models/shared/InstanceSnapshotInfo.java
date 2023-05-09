@@ -15,6 +15,7 @@ public class InstanceSnapshotInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromBlueprintId")
     public String fromBlueprintId;
+
     public InstanceSnapshotInfo withFromBlueprintId(String fromBlueprintId) {
         this.fromBlueprintId = fromBlueprintId;
         return this;
@@ -23,6 +24,7 @@ public class InstanceSnapshotInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromBundleId")
     public String fromBundleId;
+
     public InstanceSnapshotInfo withFromBundleId(String fromBundleId) {
         this.fromBundleId = fromBundleId;
         return this;
@@ -31,9 +33,11 @@ public class InstanceSnapshotInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromDiskInfo")
     public DiskInfo[] fromDiskInfo;
+
     public InstanceSnapshotInfo withFromDiskInfo(DiskInfo[] fromDiskInfo) {
         this.fromDiskInfo = fromDiskInfo;
         return this;
     }
     
+    public InstanceSnapshotInfo(){}
 }

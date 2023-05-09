@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2RiskAnalysisJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public GooglePrivacyDlpV2Action[] actions;
+
     public GooglePrivacyDlpV2RiskAnalysisJobConfig withActions(GooglePrivacyDlpV2Action[] actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2RiskAnalysisJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacyMetric")
     public GooglePrivacyDlpV2PrivacyMetric privacyMetric;
+
     public GooglePrivacyDlpV2RiskAnalysisJobConfig withPrivacyMetric(GooglePrivacyDlpV2PrivacyMetric privacyMetric) {
         this.privacyMetric = privacyMetric;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2RiskAnalysisJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTable")
     public GooglePrivacyDlpV2BigQueryTable sourceTable;
+
     public GooglePrivacyDlpV2RiskAnalysisJobConfig withSourceTable(GooglePrivacyDlpV2BigQueryTable sourceTable) {
         this.sourceTable = sourceTable;
         return this;
     }
     
+    public GooglePrivacyDlpV2RiskAnalysisJobConfig(){}
 }

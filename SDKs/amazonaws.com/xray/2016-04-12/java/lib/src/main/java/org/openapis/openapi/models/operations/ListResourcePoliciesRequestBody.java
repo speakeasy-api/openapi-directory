@@ -15,9 +15,11 @@ public class ListResourcePoliciesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourcePoliciesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourcePoliciesRequestBody(){}
 }

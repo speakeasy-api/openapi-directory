@@ -12,6 +12,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameKey")
     public String gameKey;
+
     public ScoringDetail withGameKey(String gameKey) {
         this.gameKey = gameKey;
         return this;
@@ -20,6 +21,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Length")
     public Long length;
+
     public ScoringDetail withLength(Long length) {
         this.length = length;
         return this;
@@ -28,6 +30,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public ScoringDetail withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -36,6 +39,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public ScoringDetail withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -44,6 +48,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoreID")
     public Long scoreID;
+
     public ScoringDetail withScoreID(Long scoreID) {
         this.scoreID = scoreID;
         return this;
@@ -52,6 +57,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringDetailID")
     public Long scoringDetailID;
+
     public ScoringDetail withScoringDetailID(Long scoringDetailID) {
         this.scoringDetailID = scoringDetailID;
         return this;
@@ -60,6 +66,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringPlayID")
     public Long scoringPlayID;
+
     public ScoringDetail withScoringPlayID(Long scoringPlayID) {
         this.scoringPlayID = scoringPlayID;
         return this;
@@ -68,6 +75,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringType")
     public String scoringType;
+
     public ScoringDetail withScoringType(String scoringType) {
         this.scoringType = scoringType;
         return this;
@@ -76,6 +84,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public ScoringDetail withSeason(Long season) {
         this.season = season;
         return this;
@@ -84,6 +93,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public ScoringDetail withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -92,6 +102,7 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public ScoringDetail withTeam(String team) {
         this.team = team;
         return this;
@@ -100,9 +111,11 @@ public class ScoringDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Week")
     public Long week;
+
     public ScoringDetail withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public ScoringDetail(){}
 }

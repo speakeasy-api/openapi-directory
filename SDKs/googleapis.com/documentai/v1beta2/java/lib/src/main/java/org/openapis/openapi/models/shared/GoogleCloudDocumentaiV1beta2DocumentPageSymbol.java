@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageSymbol {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageSymbol withDetectedLanguages(GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageSymbol {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1beta2DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageSymbol withLayout(GoogleCloudDocumentaiV1beta2DocumentPageLayout layout) {
         this.layout = layout;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentPageSymbol(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVoucherByIdRequest {
@@ -22,6 +23,7 @@ public class GetVoucherByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetVoucherByIdRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -32,6 +34,7 @@ public class GetVoucherByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=planId")
     public String planId;
+
     public GetVoucherByIdRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -42,9 +45,14 @@ public class GetVoucherByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=voucherId")
     public String voucherId;
+
     public GetVoucherByIdRequest withVoucherId(String voucherId) {
         this.voucherId = voucherId;
         return this;
     }
     
+    public GetVoucherByIdRequest(@JsonProperty("planId") String planId, @JsonProperty("voucherId") String voucherId) {
+        this.planId = planId;
+        this.voucherId = voucherId;
+  }
 }

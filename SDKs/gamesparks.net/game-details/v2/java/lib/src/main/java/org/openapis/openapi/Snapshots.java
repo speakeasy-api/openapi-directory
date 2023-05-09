@@ -58,12 +58,10 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Response res = new org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Response() {{
+        org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Response res = new org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Response(contentType, httpRes.statusCode()) {{
             snapshotCreationSuccessModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,12 +110,10 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTResponse res = new org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTResponse res = new org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             snapshotCreationSuccessModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,12 +161,10 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             snapshotModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -213,11 +207,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1Response res = new org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1Response() {{
+        org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1Response res = new org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1Response(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -253,11 +245,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -293,12 +283,10 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSnapshotUsingGETResponse res = new org.openapis.openapi.models.operations.GETSnapshotUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETSnapshotUsingGETResponse res = new org.openapis.openapi.models.operations.GETSnapshotUsingGETResponse(contentType, httpRes.statusCode()) {{
             snapshotModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,12 +335,10 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSnapshotsUsingGETResponse res = new org.openapis.openapi.models.operations.GETSnapshotsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETSnapshotsUsingGETResponse res = new org.openapis.openapi.models.operations.GETSnapshotsUsingGETResponse(contentType, httpRes.statusCode()) {{
             snapshotModels = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -401,12 +387,10 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Response res = new org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Response() {{
+        org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Response res = new org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Response(contentType, httpRes.statusCode()) {{
             snapshotModels = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -449,11 +433,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1Response res = new org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1Response() {{
+        org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1Response res = new org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1Response(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -489,11 +471,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -529,11 +509,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTResponse res = new org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {

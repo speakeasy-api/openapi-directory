@@ -15,9 +15,11 @@ public class GetProjectMembershipsForProject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectMembershipCompact[] data;
+
     public GetProjectMembershipsForProject200ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectMembershipCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetProjectMembershipsForProject200ApplicationJSON(){}
 }

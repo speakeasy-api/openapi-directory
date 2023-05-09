@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddonLinkersLinkerKeyValuesRequest {
@@ -13,9 +14,13 @@ public class GetAddonLinkersLinkerKeyValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linker_key")
     public String linkerKey;
+
     public GetAddonLinkersLinkerKeyValuesRequest withLinkerKey(String linkerKey) {
         this.linkerKey = linkerKey;
         return this;
     }
     
+    public GetAddonLinkersLinkerKeyValuesRequest(@JsonProperty("linker_key") String linkerKey) {
+        this.linkerKey = linkerKey;
+  }
 }

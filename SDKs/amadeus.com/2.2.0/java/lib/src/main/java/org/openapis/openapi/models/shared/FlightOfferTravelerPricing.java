@@ -15,6 +15,7 @@ public class FlightOfferTravelerPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedAdultId")
     public String associatedAdultId;
+
     public FlightOfferTravelerPricing withAssociatedAdultId(String associatedAdultId) {
         this.associatedAdultId = associatedAdultId;
         return this;
@@ -22,6 +23,7 @@ public class FlightOfferTravelerPricing {
     
     @JsonProperty("fareDetailsBySegment")
     public FlightOfferTravelerPricingFareDetailsBySegment[] fareDetailsBySegment;
+
     public FlightOfferTravelerPricing withFareDetailsBySegment(FlightOfferTravelerPricingFareDetailsBySegment[] fareDetailsBySegment) {
         this.fareDetailsBySegment = fareDetailsBySegment;
         return this;
@@ -34,6 +36,7 @@ public class FlightOfferTravelerPricing {
      */
     @JsonProperty("fareOption")
     public TravelerPricingFareOptionEnum fareOption;
+
     public FlightOfferTravelerPricing withFareOption(TravelerPricingFareOptionEnum fareOption) {
         this.fareOption = fareOption;
         return this;
@@ -42,6 +45,7 @@ public class FlightOfferTravelerPricing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Price price;
+
     public FlightOfferTravelerPricing withPrice(Price price) {
         this.price = price;
         return this;
@@ -52,6 +56,7 @@ public class FlightOfferTravelerPricing {
      */
     @JsonProperty("travelerId")
     public String travelerId;
+
     public FlightOfferTravelerPricing withTravelerId(String travelerId) {
         this.travelerId = travelerId;
         return this;
@@ -64,9 +69,16 @@ public class FlightOfferTravelerPricing {
      */
     @JsonProperty("travelerType")
     public TravelerTypeEnum travelerType;
+
     public FlightOfferTravelerPricing withTravelerType(TravelerTypeEnum travelerType) {
         this.travelerType = travelerType;
         return this;
     }
     
+    public FlightOfferTravelerPricing(@JsonProperty("fareDetailsBySegment") FlightOfferTravelerPricingFareDetailsBySegment[] fareDetailsBySegment, @JsonProperty("fareOption") TravelerPricingFareOptionEnum fareOption, @JsonProperty("travelerId") String travelerId, @JsonProperty("travelerType") TravelerTypeEnum travelerType) {
+        this.fareDetailsBySegment = fareDetailsBySegment;
+        this.fareOption = fareOption;
+        this.travelerId = travelerId;
+        this.travelerType = travelerType;
+  }
 }

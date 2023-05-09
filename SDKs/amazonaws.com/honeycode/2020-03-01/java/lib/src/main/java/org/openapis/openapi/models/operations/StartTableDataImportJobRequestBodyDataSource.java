@@ -15,9 +15,11 @@ public class StartTableDataImportJobRequestBodyDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceConfig")
     public org.openapis.openapi.models.shared.ImportDataSourceConfig dataSourceConfig;
+
     public StartTableDataImportJobRequestBodyDataSource withDataSourceConfig(org.openapis.openapi.models.shared.ImportDataSourceConfig dataSourceConfig) {
         this.dataSourceConfig = dataSourceConfig;
         return this;
     }
     
+    public StartTableDataImportJobRequestBodyDataSource(){}
 }

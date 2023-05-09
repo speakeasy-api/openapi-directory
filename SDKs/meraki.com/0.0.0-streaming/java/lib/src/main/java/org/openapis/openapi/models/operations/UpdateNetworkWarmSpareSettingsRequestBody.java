@@ -14,6 +14,7 @@ public class UpdateNetworkWarmSpareSettingsRequestBody {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateNetworkWarmSpareSettingsRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkWarmSpareSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spareSerial")
     public String spareSerial;
+
     public UpdateNetworkWarmSpareSettingsRequestBody withSpareSerial(String spareSerial) {
         this.spareSerial = spareSerial;
         return this;
@@ -36,6 +38,7 @@ public class UpdateNetworkWarmSpareSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uplinkMode")
     public String uplinkMode;
+
     public UpdateNetworkWarmSpareSettingsRequestBody withUplinkMode(String uplinkMode) {
         this.uplinkMode = uplinkMode;
         return this;
@@ -47,6 +50,7 @@ public class UpdateNetworkWarmSpareSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualIp1")
     public String virtualIp1;
+
     public UpdateNetworkWarmSpareSettingsRequestBody withVirtualIp1(String virtualIp1) {
         this.virtualIp1 = virtualIp1;
         return this;
@@ -58,9 +62,13 @@ public class UpdateNetworkWarmSpareSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualIp2")
     public String virtualIp2;
+
     public UpdateNetworkWarmSpareSettingsRequestBody withVirtualIp2(String virtualIp2) {
         this.virtualIp2 = virtualIp2;
         return this;
     }
     
+    public UpdateNetworkWarmSpareSettingsRequestBody(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

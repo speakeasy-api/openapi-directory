@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EncryptionAtRest {
     @JsonProperty("CatalogEncryptionMode")
     public CatalogEncryptionModeEnum catalogEncryptionMode;
+
     public EncryptionAtRest withCatalogEncryptionMode(CatalogEncryptionModeEnum catalogEncryptionMode) {
         this.catalogEncryptionMode = catalogEncryptionMode;
         return this;
@@ -22,9 +23,13 @@ public class EncryptionAtRest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SseAwsKmsKeyId")
     public String sseAwsKmsKeyId;
+
     public EncryptionAtRest withSseAwsKmsKeyId(String sseAwsKmsKeyId) {
         this.sseAwsKmsKeyId = sseAwsKmsKeyId;
         return this;
     }
     
+    public EncryptionAtRest(@JsonProperty("CatalogEncryptionMode") CatalogEncryptionModeEnum catalogEncryptionMode) {
+        this.catalogEncryptionMode = catalogEncryptionMode;
+  }
 }

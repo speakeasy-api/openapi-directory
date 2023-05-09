@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAddresses {
     @JsonProperty("addresses")
     public Address[] addresses;
+
     public ListAddresses withAddresses(Address[] addresses) {
         this.addresses = addresses;
         return this;
@@ -16,9 +17,14 @@ public class ListAddresses {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public ListAddresses withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public ListAddresses(@JsonProperty("addresses") Address[] addresses, @JsonProperty("ok") Boolean ok) {
+        this.addresses = addresses;
+        this.ok = ok;
+  }
 }

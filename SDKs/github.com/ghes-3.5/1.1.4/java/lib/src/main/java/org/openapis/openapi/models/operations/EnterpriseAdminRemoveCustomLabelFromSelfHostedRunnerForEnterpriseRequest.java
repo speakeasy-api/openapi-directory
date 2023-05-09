@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +35,15 @@ public class EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
     public Long runnerId;
+
     public EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRequest withRunnerId(Long runnerId) {
         this.runnerId = runnerId;
         return this;
     }
     
+    public EnterpriseAdminRemoveCustomLabelFromSelfHostedRunnerForEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("name") String name, @JsonProperty("runner_id") Long runnerId) {
+        this.enterprise = enterprise;
+        this.name = name;
+        this.runnerId = runnerId;
+  }
 }

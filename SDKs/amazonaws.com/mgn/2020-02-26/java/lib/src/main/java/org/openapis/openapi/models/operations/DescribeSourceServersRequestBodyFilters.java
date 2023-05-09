@@ -15,6 +15,7 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationIDs")
     public String[] applicationIDs;
+
     public DescribeSourceServersRequestBodyFilters withApplicationIDs(String[] applicationIDs) {
         this.applicationIDs = applicationIDs;
         return this;
@@ -23,6 +24,7 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public DescribeSourceServersRequestBodyFilters withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -31,6 +33,7 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifeCycleStates")
     public org.openapis.openapi.models.shared.LifeCycleStateEnum[] lifeCycleStates;
+
     public DescribeSourceServersRequestBodyFilters withLifeCycleStates(org.openapis.openapi.models.shared.LifeCycleStateEnum[] lifeCycleStates) {
         this.lifeCycleStates = lifeCycleStates;
         return this;
@@ -39,6 +42,7 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationTypes")
     public org.openapis.openapi.models.shared.ReplicationTypeEnum[] replicationTypes;
+
     public DescribeSourceServersRequestBodyFilters withReplicationTypes(org.openapis.openapi.models.shared.ReplicationTypeEnum[] replicationTypes) {
         this.replicationTypes = replicationTypes;
         return this;
@@ -47,9 +51,11 @@ public class DescribeSourceServersRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerIDs")
     public String[] sourceServerIDs;
+
     public DescribeSourceServersRequestBodyFilters withSourceServerIDs(String[] sourceServerIDs) {
         this.sourceServerIDs = sourceServerIDs;
         return this;
     }
     
+    public DescribeSourceServersRequestBodyFilters(){}
 }

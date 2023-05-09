@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisconnectPlayerResponse {
@@ -12,6 +13,7 @@ public class DisconnectPlayerResponse {
      */
     
     public Object accessDeniedException;
+
     public DisconnectPlayerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisconnectPlayerResponse {
     
     
     public String contentType;
+
     public DisconnectPlayerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisconnectPlayerResponse {
      */
     
     public org.openapis.openapi.models.shared.DisconnectPlayerResult disconnectPlayerResult;
+
     public DisconnectPlayerResponse withDisconnectPlayerResult(org.openapis.openapi.models.shared.DisconnectPlayerResult disconnectPlayerResult) {
         this.disconnectPlayerResult = disconnectPlayerResult;
         return this;
@@ -39,6 +43,7 @@ public class DisconnectPlayerResponse {
      */
     
     public Object internalServerException;
+
     public DisconnectPlayerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DisconnectPlayerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisconnectPlayerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DisconnectPlayerResponse {
     
     
     public Integer statusCode;
+
     public DisconnectPlayerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DisconnectPlayerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisconnectPlayerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DisconnectPlayerResponse {
      */
     
     public Object throttlingException;
+
     public DisconnectPlayerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisconnectPlayerResponse {
      */
     
     public Object validationException;
+
     public DisconnectPlayerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisconnectPlayerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

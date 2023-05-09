@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusive")
     public Boolean exclusive;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex withExclusive(Boolean exclusive) {
         this.exclusive = exclusive;
         return this;
@@ -29,9 +30,11 @@ public class EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex withRegex(String regex) {
         this.regex = regex;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex(){}
 }

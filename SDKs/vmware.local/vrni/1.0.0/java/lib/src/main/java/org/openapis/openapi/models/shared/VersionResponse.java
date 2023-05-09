@@ -15,9 +15,11 @@ public class VersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_version")
     public String apiVersion;
+
     public VersionResponse withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
     }
     
+    public VersionResponse(){}
 }

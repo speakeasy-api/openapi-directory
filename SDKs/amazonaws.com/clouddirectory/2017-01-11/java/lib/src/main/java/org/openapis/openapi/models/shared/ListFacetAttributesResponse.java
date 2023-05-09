@@ -15,6 +15,7 @@ public class ListFacetAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public FacetAttribute[] attributes;
+
     public ListFacetAttributesResponse withAttributes(FacetAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class ListFacetAttributesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFacetAttributesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFacetAttributesResponse(){}
 }

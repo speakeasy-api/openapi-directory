@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateLoadBalancerAttributeRequest {
     @JsonProperty("attributeName")
     public LoadBalancerAttributeNameEnum attributeName;
+
     public UpdateLoadBalancerAttributeRequest withAttributeName(LoadBalancerAttributeNameEnum attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -16,6 +17,7 @@ public class UpdateLoadBalancerAttributeRequest {
     
     @JsonProperty("attributeValue")
     public String attributeValue;
+
     public UpdateLoadBalancerAttributeRequest withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
@@ -23,9 +25,15 @@ public class UpdateLoadBalancerAttributeRequest {
     
     @JsonProperty("loadBalancerName")
     public String loadBalancerName;
+
     public UpdateLoadBalancerAttributeRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public UpdateLoadBalancerAttributeRequest(@JsonProperty("attributeName") LoadBalancerAttributeNameEnum attributeName, @JsonProperty("attributeValue") String attributeValue, @JsonProperty("loadBalancerName") String loadBalancerName) {
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

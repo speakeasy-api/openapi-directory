@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyIpamResourceCidrRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyIpamResourceCidrActionEnum action;
+
     public GETModifyIpamResourceCidrRequest withAction(GETModifyIpamResourceCidrActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyIpamResourceCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CurrentIpamScopeId")
     public String currentIpamScopeId;
+
     public GETModifyIpamResourceCidrRequest withCurrentIpamScopeId(String currentIpamScopeId) {
         this.currentIpamScopeId = currentIpamScopeId;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyIpamResourceCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationIpamScopeId")
     public String destinationIpamScopeId;
+
     public GETModifyIpamResourceCidrRequest withDestinationIpamScopeId(String destinationIpamScopeId) {
         this.destinationIpamScopeId = destinationIpamScopeId;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyIpamResourceCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyIpamResourceCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyIpamResourceCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Monitored")
     public Boolean monitored;
+
     public GETModifyIpamResourceCidrRequest withMonitored(Boolean monitored) {
         this.monitored = monitored;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyIpamResourceCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceCidr")
     public String resourceCidr;
+
     public GETModifyIpamResourceCidrRequest withResourceCidr(String resourceCidr) {
         this.resourceCidr = resourceCidr;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyIpamResourceCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceId")
     public String resourceId;
+
     public GETModifyIpamResourceCidrRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyIpamResourceCidrRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceRegion")
     public String resourceRegion;
+
     public GETModifyIpamResourceCidrRequest withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -86,6 +95,7 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyIpamResourceCidrVersionEnum version;
+
     public GETModifyIpamResourceCidrRequest withVersion(GETModifyIpamResourceCidrVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyIpamResourceCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyIpamResourceCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyIpamResourceCidrRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyIpamResourceCidrRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyIpamResourceCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyIpamResourceCidrRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,19 @@ public class GETModifyIpamResourceCidrRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyIpamResourceCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyIpamResourceCidrRequest(@JsonProperty("Action") GETModifyIpamResourceCidrActionEnum action, @JsonProperty("CurrentIpamScopeId") String currentIpamScopeId, @JsonProperty("Monitored") Boolean monitored, @JsonProperty("ResourceCidr") String resourceCidr, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceRegion") String resourceRegion, @JsonProperty("Version") GETModifyIpamResourceCidrVersionEnum version) {
+        this.action = action;
+        this.currentIpamScopeId = currentIpamScopeId;
+        this.monitored = monitored;
+        this.resourceCidr = resourceCidr;
+        this.resourceId = resourceId;
+        this.resourceRegion = resourceRegion;
+        this.version = version;
+  }
 }

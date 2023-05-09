@@ -15,6 +15,7 @@ public class GetRuntimeManagementConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public GetRuntimeManagementConfigResponse withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -23,6 +24,7 @@ public class GetRuntimeManagementConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersionArn")
     public String runtimeVersionArn;
+
     public GetRuntimeManagementConfigResponse withRuntimeVersionArn(String runtimeVersionArn) {
         this.runtimeVersionArn = runtimeVersionArn;
         return this;
@@ -31,9 +33,11 @@ public class GetRuntimeManagementConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateRuntimeOn")
     public UpdateRuntimeOnEnum updateRuntimeOn;
+
     public GetRuntimeManagementConfigResponse withUpdateRuntimeOn(UpdateRuntimeOnEnum updateRuntimeOn) {
         this.updateRuntimeOn = updateRuntimeOn;
         return this;
     }
     
+    public GetRuntimeManagementConfigResponse(){}
 }

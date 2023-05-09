@@ -15,6 +15,7 @@ public class ListSegmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSegmentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSegmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public Segment[] segments;
+
     public ListSegmentsResponse withSegments(Segment[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public ListSegmentsResponse(){}
 }

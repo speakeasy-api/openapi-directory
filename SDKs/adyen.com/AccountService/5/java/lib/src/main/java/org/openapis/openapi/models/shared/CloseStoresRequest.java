@@ -12,6 +12,7 @@ public class CloseStoresRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public CloseStoresRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,9 +23,14 @@ public class CloseStoresRequest {
      */
     @JsonProperty("stores")
     public String[] stores;
+
     public CloseStoresRequest withStores(String[] stores) {
         this.stores = stores;
         return this;
     }
     
+    public CloseStoresRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("stores") String[] stores) {
+        this.accountHolderCode = accountHolderCode;
+        this.stores = stores;
+  }
 }

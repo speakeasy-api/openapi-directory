@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PhoneNumber {
     @JsonProperty("primary")
     public Boolean primary;
+
     public PhoneNumber withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -16,6 +17,7 @@ public class PhoneNumber {
     
     @JsonProperty("type")
     public PhoneNumberTypeEnum type;
+
     public PhoneNumber withType(PhoneNumberTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +25,15 @@ public class PhoneNumber {
     
     @JsonProperty("value")
     public String value;
+
     public PhoneNumber withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PhoneNumber(@JsonProperty("primary") Boolean primary, @JsonProperty("type") PhoneNumberTypeEnum type, @JsonProperty("value") String value) {
+        this.primary = primary;
+        this.type = type;
+        this.value = value;
+  }
 }

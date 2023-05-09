@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateWorkspaceResponse {
     @JsonProperty("workspace")
     public WorkspaceDescription workspace;
+
     public UpdateWorkspaceResponse withWorkspace(WorkspaceDescription workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdateWorkspaceResponse(@JsonProperty("workspace") WorkspaceDescription workspace) {
+        this.workspace = workspace;
+  }
 }

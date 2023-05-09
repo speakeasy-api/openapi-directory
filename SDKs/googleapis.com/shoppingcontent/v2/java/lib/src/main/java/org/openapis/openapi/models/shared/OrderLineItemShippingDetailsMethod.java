@@ -15,6 +15,7 @@ public class OrderLineItemShippingDetailsMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier")
     public String carrier;
+
     public OrderLineItemShippingDetailsMethod withCarrier(String carrier) {
         this.carrier = carrier;
         return this;
@@ -26,6 +27,7 @@ public class OrderLineItemShippingDetailsMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDaysInTransit")
     public Long maxDaysInTransit;
+
     public OrderLineItemShippingDetailsMethod withMaxDaysInTransit(Long maxDaysInTransit) {
         this.maxDaysInTransit = maxDaysInTransit;
         return this;
@@ -37,6 +39,7 @@ public class OrderLineItemShippingDetailsMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodName")
     public String methodName;
+
     public OrderLineItemShippingDetailsMethod withMethodName(String methodName) {
         this.methodName = methodName;
         return this;
@@ -48,9 +51,11 @@ public class OrderLineItemShippingDetailsMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minDaysInTransit")
     public Long minDaysInTransit;
+
     public OrderLineItemShippingDetailsMethod withMinDaysInTransit(Long minDaysInTransit) {
         this.minDaysInTransit = minDaysInTransit;
         return this;
     }
     
+    public OrderLineItemShippingDetailsMethod(){}
 }

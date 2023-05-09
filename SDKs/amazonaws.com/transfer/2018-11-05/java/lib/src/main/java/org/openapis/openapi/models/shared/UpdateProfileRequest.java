@@ -12,6 +12,7 @@ public class UpdateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateIds")
     public String[] certificateIds;
+
     public UpdateProfileRequest withCertificateIds(String[] certificateIds) {
         this.certificateIds = certificateIds;
         return this;
@@ -19,9 +20,13 @@ public class UpdateProfileRequest {
     
     @JsonProperty("ProfileId")
     public String profileId;
+
     public UpdateProfileRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public UpdateProfileRequest(@JsonProperty("ProfileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

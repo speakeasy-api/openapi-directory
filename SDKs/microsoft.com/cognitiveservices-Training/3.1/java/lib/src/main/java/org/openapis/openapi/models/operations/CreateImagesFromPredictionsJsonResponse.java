@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImagesFromPredictionsJsonResponse {
     
     public byte[] body;
+
     public CreateImagesFromPredictionsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateImagesFromPredictionsJsonResponse {
     
     
     public String contentType;
+
     public CreateImagesFromPredictionsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateImagesFromPredictionsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public CreateImagesFromPredictionsJsonResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class CreateImagesFromPredictionsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageCreateSummary imageCreateSummary;
+
     public CreateImagesFromPredictionsJsonResponse withImageCreateSummary(org.openapis.openapi.models.shared.ImageCreateSummary imageCreateSummary) {
         this.imageCreateSummary = imageCreateSummary;
         return this;
@@ -43,6 +48,7 @@ public class CreateImagesFromPredictionsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateImagesFromPredictionsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class CreateImagesFromPredictionsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImagesFromPredictionsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateImagesFromPredictionsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

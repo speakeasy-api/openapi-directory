@@ -12,9 +12,13 @@ public class DeleteWaveRequestBody {
      */
     @JsonProperty("waveID")
     public String waveID;
+
     public DeleteWaveRequestBody withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public DeleteWaveRequestBody(@JsonProperty("waveID") String waveID) {
+        this.waveID = waveID;
+  }
 }

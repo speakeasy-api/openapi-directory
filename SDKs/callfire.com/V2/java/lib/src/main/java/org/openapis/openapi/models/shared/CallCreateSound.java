@@ -18,6 +18,7 @@ public class CallCreateSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CallCreateSound withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class CallCreateSound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toNumber")
     public String toNumber;
+
     public CallCreateSound withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public CallCreateSound(){}
 }

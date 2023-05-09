@@ -18,6 +18,7 @@ public class DiskEncryptionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DiskEncryptionStatus withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class DiskEncryptionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyVersionName")
     public String kmsKeyVersionName;
+
     public DiskEncryptionStatus withKmsKeyVersionName(String kmsKeyVersionName) {
         this.kmsKeyVersionName = kmsKeyVersionName;
         return this;
     }
     
+    public DiskEncryptionStatus(){}
 }

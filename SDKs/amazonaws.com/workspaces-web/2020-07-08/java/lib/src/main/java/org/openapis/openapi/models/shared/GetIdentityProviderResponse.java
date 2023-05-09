@@ -15,9 +15,11 @@ public class GetIdentityProviderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProvider")
     public IdentityProvider identityProvider;
+
     public GetIdentityProviderResponse withIdentityProvider(IdentityProvider identityProvider) {
         this.identityProvider = identityProvider;
         return this;
     }
     
+    public GetIdentityProviderResponse(){}
 }

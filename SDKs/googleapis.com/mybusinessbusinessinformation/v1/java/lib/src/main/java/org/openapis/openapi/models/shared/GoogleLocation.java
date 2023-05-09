@@ -18,6 +18,7 @@ public class GoogleLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public GoogleLocation withLocation(Location location) {
         this.location = location;
         return this;
@@ -29,6 +30,7 @@ public class GoogleLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleLocation withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestAdminRightsUri")
     public String requestAdminRightsUri;
+
     public GoogleLocation withRequestAdminRightsUri(String requestAdminRightsUri) {
         this.requestAdminRightsUri = requestAdminRightsUri;
         return this;
     }
     
+    public GoogleLocation(){}
 }

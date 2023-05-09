@@ -15,6 +15,7 @@ public class ValueError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, Object> fields;
+
     public ValueError withFields(java.util.Map<String, Object> fields) {
         this.fields = fields;
         return this;
@@ -23,9 +24,11 @@ public class ValueError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ValueError withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ValueError(){}
 }

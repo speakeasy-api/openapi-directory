@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOpenIdTokenResponse {
     
     public String contentType;
+
     public GetOpenIdTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOpenIdTokenResponse {
      */
     
     public Object externalServiceException;
+
     public GetOpenIdTokenResponse withExternalServiceException(Object externalServiceException) {
         this.externalServiceException = externalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class GetOpenIdTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOpenIdTokenResponse getOpenIdTokenResponse;
+
     public GetOpenIdTokenResponse withGetOpenIdTokenResponse(org.openapis.openapi.models.shared.GetOpenIdTokenResponse getOpenIdTokenResponse) {
         this.getOpenIdTokenResponse = getOpenIdTokenResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetOpenIdTokenResponse {
      */
     
     public Object internalErrorException;
+
     public GetOpenIdTokenResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetOpenIdTokenResponse {
      */
     
     public Object invalidParameterException;
+
     public GetOpenIdTokenResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetOpenIdTokenResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetOpenIdTokenResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -66,6 +73,7 @@ public class GetOpenIdTokenResponse {
     
     
     public Integer statusCode;
+
     public GetOpenIdTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetOpenIdTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOpenIdTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetOpenIdTokenResponse {
      */
     
     public Object resourceConflictException;
+
     public GetOpenIdTokenResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -93,6 +103,7 @@ public class GetOpenIdTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetOpenIdTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class GetOpenIdTokenResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetOpenIdTokenResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetOpenIdTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

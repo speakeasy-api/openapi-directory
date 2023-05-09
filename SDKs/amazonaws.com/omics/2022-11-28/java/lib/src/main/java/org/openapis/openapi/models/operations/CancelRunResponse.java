@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelRunResponse {
@@ -12,6 +13,7 @@ public class CancelRunResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelRunResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelRunResponse {
      */
     
     public Object conflictException;
+
     public CancelRunResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CancelRunResponse {
     
     
     public String contentType;
+
     public CancelRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelRunResponse {
      */
     
     public Object internalServerException;
+
     public CancelRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CancelRunResponse {
      */
     
     public Object requestTimeoutException;
+
     public CancelRunResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -59,6 +65,7 @@ public class CancelRunResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelRunResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CancelRunResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CancelRunResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CancelRunResponse {
     
     
     public Integer statusCode;
+
     public CancelRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CancelRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CancelRunResponse {
      */
     
     public Object throttlingException;
+
     public CancelRunResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CancelRunResponse {
      */
     
     public Object validationException;
+
     public CancelRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

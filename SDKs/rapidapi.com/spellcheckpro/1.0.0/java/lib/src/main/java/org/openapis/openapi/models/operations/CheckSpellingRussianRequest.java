@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CheckSpellingRussianRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CheckSpellingRussianRequestBody requestBody;
+
     public CheckSpellingRussianRequest withRequestBody(CheckSpellingRussianRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class CheckSpellingRussianRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-RapidAPI-Key")
     public String xRapidAPIKey;
+
     public CheckSpellingRussianRequest withXRapidAPIKey(String xRapidAPIKey) {
         this.xRapidAPIKey = xRapidAPIKey;
         return this;
     }
     
+    public CheckSpellingRussianRequest(){}
 }

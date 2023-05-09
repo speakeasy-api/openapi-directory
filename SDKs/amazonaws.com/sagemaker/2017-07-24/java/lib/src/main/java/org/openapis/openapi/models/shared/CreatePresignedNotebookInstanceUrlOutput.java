@@ -15,9 +15,11 @@ public class CreatePresignedNotebookInstanceUrlOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedUrl")
     public String authorizedUrl;
+
     public CreatePresignedNotebookInstanceUrlOutput withAuthorizedUrl(String authorizedUrl) {
         this.authorizedUrl = authorizedUrl;
         return this;
     }
     
+    public CreatePresignedNotebookInstanceUrlOutput(){}
 }

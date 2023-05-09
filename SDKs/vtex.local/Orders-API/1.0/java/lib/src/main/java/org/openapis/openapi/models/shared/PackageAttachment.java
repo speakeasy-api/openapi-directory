@@ -15,9 +15,13 @@ public class PackageAttachment {
      */
     @JsonProperty("packages")
     public String[] packages;
+
     public PackageAttachment withPackages(String[] packages) {
         this.packages = packages;
         return this;
     }
     
+    public PackageAttachment(@JsonProperty("packages") String[] packages) {
+        this.packages = packages;
+  }
 }

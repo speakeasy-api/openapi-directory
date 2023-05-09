@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateServiceTemplateVersionOutput {
     @JsonProperty("serviceTemplateVersion")
     public ServiceTemplateVersion serviceTemplateVersion;
+
     public UpdateServiceTemplateVersionOutput withServiceTemplateVersion(ServiceTemplateVersion serviceTemplateVersion) {
         this.serviceTemplateVersion = serviceTemplateVersion;
         return this;
     }
     
+    public UpdateServiceTemplateVersionOutput(@JsonProperty("serviceTemplateVersion") ServiceTemplateVersion serviceTemplateVersion) {
+        this.serviceTemplateVersion = serviceTemplateVersion;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerPort")
     public Long containerPort;
+
     public AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails withContainerPort(Long containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostPort")
     public Long hostPort;
+
     public AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails withHostPort(Long hostPort) {
         this.hostPort = hostPort;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails(){}
 }

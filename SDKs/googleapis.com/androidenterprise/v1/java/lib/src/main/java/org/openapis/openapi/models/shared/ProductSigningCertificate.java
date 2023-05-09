@@ -15,6 +15,7 @@ public class ProductSigningCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateHashSha1")
     public String certificateHashSha1;
+
     public ProductSigningCertificate withCertificateHashSha1(String certificateHashSha1) {
         this.certificateHashSha1 = certificateHashSha1;
         return this;
@@ -26,9 +27,11 @@ public class ProductSigningCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateHashSha256")
     public String certificateHashSha256;
+
     public ProductSigningCertificate withCertificateHashSha256(String certificateHashSha256) {
         this.certificateHashSha256 = certificateHashSha256;
         return this;
     }
     
+    public ProductSigningCertificate(){}
 }

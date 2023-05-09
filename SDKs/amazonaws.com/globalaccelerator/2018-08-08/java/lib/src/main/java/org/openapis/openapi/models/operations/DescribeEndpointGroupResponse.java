@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEndpointGroupResponse {
     
     public String contentType;
+
     public DescribeEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEndpointGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEndpointGroupResponse describeEndpointGroupResponse;
+
     public DescribeEndpointGroupResponse withDescribeEndpointGroupResponse(org.openapis.openapi.models.shared.DescribeEndpointGroupResponse describeEndpointGroupResponse) {
         this.describeEndpointGroupResponse = describeEndpointGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEndpointGroupResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public DescribeEndpointGroupResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEndpointGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeEndpointGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEndpointGroupResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeEndpointGroupResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

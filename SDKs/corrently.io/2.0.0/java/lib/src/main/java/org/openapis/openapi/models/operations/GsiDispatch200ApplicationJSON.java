@@ -18,6 +18,7 @@ public class GsiDispatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_distance_km")
     public Double avgDistanceKm;
+
     public GsiDispatch200ApplicationJSON withAvgDistanceKm(Double avgDistanceKm) {
         this.avgDistanceKm = avgDistanceKm;
         return this;
@@ -29,6 +30,7 @@ public class GsiDispatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispatch_from")
     public org.openapis.openapi.models.shared.DispatchLocation[] dispatchFrom;
+
     public GsiDispatch200ApplicationJSON withDispatchFrom(org.openapis.openapi.models.shared.DispatchLocation[] dispatchFrom) {
         this.dispatchFrom = dispatchFrom;
         return this;
@@ -40,6 +42,7 @@ public class GsiDispatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispatch_target")
     public org.openapis.openapi.models.shared.DispatchLocation[] dispatchTarget;
+
     public GsiDispatch200ApplicationJSON withDispatchTarget(org.openapis.openapi.models.shared.DispatchLocation[] dispatchTarget) {
         this.dispatchTarget = dispatchTarget;
         return this;
@@ -51,6 +54,7 @@ public class GsiDispatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postmix")
     public java.util.Map<String, Object> postmix;
+
     public GsiDispatch200ApplicationJSON withPostmix(java.util.Map<String, Object> postmix) {
         this.postmix = postmix;
         return this;
@@ -62,6 +66,7 @@ public class GsiDispatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("premix")
     public java.util.Map<String, Object> premix;
+
     public GsiDispatch200ApplicationJSON withPremix(java.util.Map<String, Object> premix) {
         this.premix = premix;
         return this;
@@ -73,9 +78,11 @@ public class GsiDispatch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeframe")
     public GsiDispatch200ApplicationJSONTimeframe timeframe;
+
     public GsiDispatch200ApplicationJSON withTimeframe(GsiDispatch200ApplicationJSONTimeframe timeframe) {
         this.timeframe = timeframe;
         return this;
     }
     
+    public GsiDispatch200ApplicationJSON(){}
 }

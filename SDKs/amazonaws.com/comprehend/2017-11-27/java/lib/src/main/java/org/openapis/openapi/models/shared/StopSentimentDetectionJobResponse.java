@@ -15,6 +15,7 @@ public class StopSentimentDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StopSentimentDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -23,9 +24,11 @@ public class StopSentimentDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StopSentimentDetectionJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StopSentimentDetectionJobResponse(){}
 }

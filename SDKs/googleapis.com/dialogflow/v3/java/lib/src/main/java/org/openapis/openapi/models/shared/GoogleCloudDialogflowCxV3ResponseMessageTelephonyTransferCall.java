@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall(){}
 }

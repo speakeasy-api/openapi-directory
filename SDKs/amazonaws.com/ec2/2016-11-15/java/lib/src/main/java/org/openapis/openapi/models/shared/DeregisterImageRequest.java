@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeregisterImageRequest - Contains the parameters for DeregisterImage.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeregisterImageRequest {
     
     public Boolean dryRun;
+
     public DeregisterImageRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class DeregisterImageRequest {
     
     
     public String imageId;
+
     public DeregisterImageRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public DeregisterImageRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

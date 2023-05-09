@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateReplicationConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateReplicationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public Object conflictException;
+
     public UpdateReplicationConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateReplicationConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateReplicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateReplicationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplicationConfiguration replicationConfiguration;
+
     public UpdateReplicationConfigurationResponse withReplicationConfiguration(org.openapis.openapi.models.shared.ReplicationConfiguration replicationConfiguration) {
         this.replicationConfiguration = replicationConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateReplicationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateReplicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateReplicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateReplicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateReplicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateReplicationConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public UpdateReplicationConfigurationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateReplicationConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateReplicationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateReplicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

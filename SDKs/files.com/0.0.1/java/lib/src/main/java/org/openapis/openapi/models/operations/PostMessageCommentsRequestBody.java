@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMessageCommentsRequestBody {
@@ -12,6 +13,7 @@ public class PostMessageCommentsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=body")
     public String body;
+
     public PostMessageCommentsRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -22,9 +24,13 @@ public class PostMessageCommentsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Integer userId;
+
     public PostMessageCommentsRequestBody withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostMessageCommentsRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

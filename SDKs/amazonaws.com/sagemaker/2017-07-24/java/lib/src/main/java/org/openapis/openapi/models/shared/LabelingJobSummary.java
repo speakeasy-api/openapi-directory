@@ -20,6 +20,7 @@ public class LabelingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnnotationConsolidationLambdaArn")
     public String annotationConsolidationLambdaArn;
+
     public LabelingJobSummary withAnnotationConsolidationLambdaArn(String annotationConsolidationLambdaArn) {
         this.annotationConsolidationLambdaArn = annotationConsolidationLambdaArn;
         return this;
@@ -29,6 +30,7 @@ public class LabelingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public LabelingJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class LabelingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public LabelingJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -45,6 +48,7 @@ public class LabelingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputConfig")
     public LabelingJobInputConfig inputConfig;
+
     public LabelingJobSummary withInputConfig(LabelingJobInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -52,6 +56,7 @@ public class LabelingJobSummary {
     
     @JsonProperty("LabelCounters")
     public LabelCounters labelCounters;
+
     public LabelingJobSummary withLabelCounters(LabelCounters labelCounters) {
         this.labelCounters = labelCounters;
         return this;
@@ -59,6 +64,7 @@ public class LabelingJobSummary {
     
     @JsonProperty("LabelingJobArn")
     public String labelingJobArn;
+
     public LabelingJobSummary withLabelingJobArn(String labelingJobArn) {
         this.labelingJobArn = labelingJobArn;
         return this;
@@ -66,6 +72,7 @@ public class LabelingJobSummary {
     
     @JsonProperty("LabelingJobName")
     public String labelingJobName;
+
     public LabelingJobSummary withLabelingJobName(String labelingJobName) {
         this.labelingJobName = labelingJobName;
         return this;
@@ -74,6 +81,7 @@ public class LabelingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingJobOutput")
     public LabelingJobOutput labelingJobOutput;
+
     public LabelingJobSummary withLabelingJobOutput(LabelingJobOutput labelingJobOutput) {
         this.labelingJobOutput = labelingJobOutput;
         return this;
@@ -81,6 +89,7 @@ public class LabelingJobSummary {
     
     @JsonProperty("LabelingJobStatus")
     public LabelingJobStatusEnum labelingJobStatus;
+
     public LabelingJobSummary withLabelingJobStatus(LabelingJobStatusEnum labelingJobStatus) {
         this.labelingJobStatus = labelingJobStatus;
         return this;
@@ -90,6 +99,7 @@ public class LabelingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public LabelingJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -97,6 +107,7 @@ public class LabelingJobSummary {
     
     @JsonProperty("PreHumanTaskLambdaArn")
     public String preHumanTaskLambdaArn;
+
     public LabelingJobSummary withPreHumanTaskLambdaArn(String preHumanTaskLambdaArn) {
         this.preHumanTaskLambdaArn = preHumanTaskLambdaArn;
         return this;
@@ -104,9 +115,20 @@ public class LabelingJobSummary {
     
     @JsonProperty("WorkteamArn")
     public String workteamArn;
+
     public LabelingJobSummary withWorkteamArn(String workteamArn) {
         this.workteamArn = workteamArn;
         return this;
     }
     
+    public LabelingJobSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LabelCounters") LabelCounters labelCounters, @JsonProperty("LabelingJobArn") String labelingJobArn, @JsonProperty("LabelingJobName") String labelingJobName, @JsonProperty("LabelingJobStatus") LabelingJobStatusEnum labelingJobStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("PreHumanTaskLambdaArn") String preHumanTaskLambdaArn, @JsonProperty("WorkteamArn") String workteamArn) {
+        this.creationTime = creationTime;
+        this.labelCounters = labelCounters;
+        this.labelingJobArn = labelingJobArn;
+        this.labelingJobName = labelingJobName;
+        this.labelingJobStatus = labelingJobStatus;
+        this.lastModifiedTime = lastModifiedTime;
+        this.preHumanTaskLambdaArn = preHumanTaskLambdaArn;
+        this.workteamArn = workteamArn;
+  }
 }

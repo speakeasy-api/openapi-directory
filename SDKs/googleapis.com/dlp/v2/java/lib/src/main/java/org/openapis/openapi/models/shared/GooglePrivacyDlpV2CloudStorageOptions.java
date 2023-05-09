@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2CloudStorageOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesLimitPerFile")
     public String bytesLimitPerFile;
+
     public GooglePrivacyDlpV2CloudStorageOptions withBytesLimitPerFile(String bytesLimitPerFile) {
         this.bytesLimitPerFile = bytesLimitPerFile;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2CloudStorageOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytesLimitPerFilePercent")
     public Integer bytesLimitPerFilePercent;
+
     public GooglePrivacyDlpV2CloudStorageOptions withBytesLimitPerFilePercent(Integer bytesLimitPerFilePercent) {
         this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2CloudStorageOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSet")
     public GooglePrivacyDlpV2FileSet fileSet;
+
     public GooglePrivacyDlpV2CloudStorageOptions withFileSet(GooglePrivacyDlpV2FileSet fileSet) {
         this.fileSet = fileSet;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2CloudStorageOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileTypes")
     public GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum[] fileTypes;
+
     public GooglePrivacyDlpV2CloudStorageOptions withFileTypes(GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum[] fileTypes) {
         this.fileTypes = fileTypes;
         return this;
@@ -62,6 +66,7 @@ public class GooglePrivacyDlpV2CloudStorageOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filesLimitPercent")
     public Integer filesLimitPercent;
+
     public GooglePrivacyDlpV2CloudStorageOptions withFilesLimitPercent(Integer filesLimitPercent) {
         this.filesLimitPercent = filesLimitPercent;
         return this;
@@ -70,9 +75,11 @@ public class GooglePrivacyDlpV2CloudStorageOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleMethod")
     public GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum sampleMethod;
+
     public GooglePrivacyDlpV2CloudStorageOptions withSampleMethod(GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum sampleMethod) {
         this.sampleMethod = sampleMethod;
         return this;
     }
     
+    public GooglePrivacyDlpV2CloudStorageOptions(){}
 }

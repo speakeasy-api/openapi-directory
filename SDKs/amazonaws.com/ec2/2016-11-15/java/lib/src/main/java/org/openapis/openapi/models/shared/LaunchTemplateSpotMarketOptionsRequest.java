@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class LaunchTemplateSpotMarketOptionsRequest {
     
     public Long blockDurationMinutes;
+
     public LaunchTemplateSpotMarketOptionsRequest withBlockDurationMinutes(Long blockDurationMinutes) {
         this.blockDurationMinutes = blockDurationMinutes;
         return this;
@@ -19,6 +20,7 @@ public class LaunchTemplateSpotMarketOptionsRequest {
     
     
     public InstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public LaunchTemplateSpotMarketOptionsRequest withInstanceInterruptionBehavior(InstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -26,6 +28,7 @@ public class LaunchTemplateSpotMarketOptionsRequest {
     
     
     public String maxPrice;
+
     public LaunchTemplateSpotMarketOptionsRequest withMaxPrice(String maxPrice) {
         this.maxPrice = maxPrice;
         return this;
@@ -33,6 +36,7 @@ public class LaunchTemplateSpotMarketOptionsRequest {
     
     
     public SpotInstanceTypeEnum spotInstanceType;
+
     public LaunchTemplateSpotMarketOptionsRequest withSpotInstanceType(SpotInstanceTypeEnum spotInstanceType) {
         this.spotInstanceType = spotInstanceType;
         return this;
@@ -40,9 +44,11 @@ public class LaunchTemplateSpotMarketOptionsRequest {
     
     
     public OffsetDateTime validUntil;
+
     public LaunchTemplateSpotMarketOptionsRequest withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public LaunchTemplateSpotMarketOptionsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspaceSlugWebhooksIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutWorkspaceSlugWebhooksIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +18,7 @@ public class PutWorkspaceSlugWebhooksIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WebhookSubscription webhookSubscription;
+
     public PutWorkspaceSlugWebhooksIdRequest withWebhookSubscription(org.openapis.openapi.models.shared.WebhookSubscription webhookSubscription) {
         this.webhookSubscription = webhookSubscription;
         return this;
@@ -23,9 +26,14 @@ public class PutWorkspaceSlugWebhooksIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public PutWorkspaceSlugWebhooksIdRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public PutWorkspaceSlugWebhooksIdRequest(@JsonProperty("id") String id, @JsonProperty("workspace_slug") String workspaceSlug) {
+        this.id = id;
+        this.workspaceSlug = workspaceSlug;
+  }
 }

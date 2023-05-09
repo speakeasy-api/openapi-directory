@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricMonitor {
     @JsonProperty("metricDefinition")
     public MetricDefinition metricDefinition;
+
     public MetricMonitor withMetricDefinition(MetricDefinition metricDefinition) {
         this.metricDefinition = metricDefinition;
         return this;
     }
     
+    public MetricMonitor(@JsonProperty("metricDefinition") MetricDefinition metricDefinition) {
+        this.metricDefinition = metricDefinition;
+  }
 }

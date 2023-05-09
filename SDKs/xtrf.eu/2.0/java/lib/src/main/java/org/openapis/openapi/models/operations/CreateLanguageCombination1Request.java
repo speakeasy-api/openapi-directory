@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLanguageCombination1Request {
@@ -12,6 +13,7 @@ public class CreateLanguageCombination1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CommonLanguageCombinationDTO commonLanguageCombinationDTO;
+
     public CreateLanguageCombination1Request withCommonLanguageCombinationDTO(org.openapis.openapi.models.shared.CommonLanguageCombinationDTO commonLanguageCombinationDTO) {
         this.commonLanguageCombinationDTO = commonLanguageCombinationDTO;
         return this;
@@ -22,9 +24,14 @@ public class CreateLanguageCombination1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public CreateLanguageCombination1Request withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public CreateLanguageCombination1Request(@JsonProperty("CommonLanguageCombinationDTO") org.openapis.openapi.models.shared.CommonLanguageCombinationDTO commonLanguageCombinationDTO, @JsonProperty("quoteId") String quoteId) {
+        this.commonLanguageCombinationDTO = commonLanguageCombinationDTO;
+        this.quoteId = quoteId;
+  }
 }

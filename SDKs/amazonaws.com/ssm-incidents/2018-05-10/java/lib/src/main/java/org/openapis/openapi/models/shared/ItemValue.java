@@ -15,6 +15,7 @@ public class ItemValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ItemValue withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ItemValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricDefinition")
     public String metricDefinition;
+
     public ItemValue withMetricDefinition(String metricDefinition) {
         this.metricDefinition = metricDefinition;
         return this;
@@ -31,6 +33,7 @@ public class ItemValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagerDutyIncidentDetail")
     public PagerDutyIncidentDetail pagerDutyIncidentDetail;
+
     public ItemValue withPagerDutyIncidentDetail(PagerDutyIncidentDetail pagerDutyIncidentDetail) {
         this.pagerDutyIncidentDetail = pagerDutyIncidentDetail;
         return this;
@@ -39,9 +42,11 @@ public class ItemValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ItemValue withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ItemValue(){}
 }

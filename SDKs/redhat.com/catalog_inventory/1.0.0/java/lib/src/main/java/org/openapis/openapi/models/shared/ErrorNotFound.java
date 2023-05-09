@@ -15,9 +15,11 @@ public class ErrorNotFound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorNotFoundErrors[] errors;
+
     public ErrorNotFound withErrors(ErrorNotFoundErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ErrorNotFound(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdateDockRequest {
@@ -12,6 +13,7 @@ public class CreateUpdateDockRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateUpdateDockRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateUpdateDockRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateUpdateDockRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class CreateUpdateDockRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateUpdateDockCreateUpdateDockRequest requestBody;
+
     public CreateUpdateDockRequest withRequestBody(CreateUpdateDockCreateUpdateDockRequest requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public CreateUpdateDockRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") CreateUpdateDockCreateUpdateDockRequest requestBody) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+  }
 }

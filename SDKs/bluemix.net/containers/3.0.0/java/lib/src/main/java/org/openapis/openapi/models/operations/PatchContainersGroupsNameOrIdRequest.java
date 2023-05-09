@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchContainersGroupsNameOrIdRequest {
@@ -12,6 +13,7 @@ public class PatchContainersGroupsNameOrIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ContainersGroupsNameOrIdPatchUpdatedInfo containersGroupsNameOrIdPatchUpdatedInfo;
+
     public PatchContainersGroupsNameOrIdRequest withContainersGroupsNameOrIdPatchUpdatedInfo(org.openapis.openapi.models.shared.ContainersGroupsNameOrIdPatchUpdatedInfo containersGroupsNameOrIdPatchUpdatedInfo) {
         this.containersGroupsNameOrIdPatchUpdatedInfo = containersGroupsNameOrIdPatchUpdatedInfo;
         return this;
@@ -22,6 +24,7 @@ public class PatchContainersGroupsNameOrIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public PatchContainersGroupsNameOrIdRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -32,6 +35,7 @@ public class PatchContainersGroupsNameOrIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public PatchContainersGroupsNameOrIdRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -42,9 +46,16 @@ public class PatchContainersGroupsNameOrIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
     public String nameOrId;
+
     public PatchContainersGroupsNameOrIdRequest withNameOrId(String nameOrId) {
         this.nameOrId = nameOrId;
         return this;
     }
     
+    public PatchContainersGroupsNameOrIdRequest(@JsonProperty("ContainersGroupsNameOrIdPatchUpdatedInfo") org.openapis.openapi.models.shared.ContainersGroupsNameOrIdPatchUpdatedInfo containersGroupsNameOrIdPatchUpdatedInfo, @JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken, @JsonProperty("name_or_id") String nameOrId) {
+        this.containersGroupsNameOrIdPatchUpdatedInfo = containersGroupsNameOrIdPatchUpdatedInfo;
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+        this.nameOrId = nameOrId;
+  }
 }

@@ -18,9 +18,11 @@ public class TrackingNumberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingNumber")
     public String trackingNumber;
+
     public TrackingNumberResponse withTrackingNumber(String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
     
+    public TrackingNumberResponse(){}
 }

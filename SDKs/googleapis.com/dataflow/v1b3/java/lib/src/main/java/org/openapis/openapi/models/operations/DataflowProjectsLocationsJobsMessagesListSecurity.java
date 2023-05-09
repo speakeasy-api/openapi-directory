@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsLocationsJobsMessagesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsMessagesListSecurityOption1 option1;
+
     public DataflowProjectsLocationsJobsMessagesListSecurity withOption1(DataflowProjectsLocationsJobsMessagesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsLocationsJobsMessagesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsMessagesListSecurityOption2 option2;
+
     public DataflowProjectsLocationsJobsMessagesListSecurity withOption2(DataflowProjectsLocationsJobsMessagesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsLocationsJobsMessagesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsMessagesListSecurityOption3 option3;
+
     public DataflowProjectsLocationsJobsMessagesListSecurity withOption3(DataflowProjectsLocationsJobsMessagesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsLocationsJobsMessagesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsMessagesListSecurityOption4 option4;
+
     public DataflowProjectsLocationsJobsMessagesListSecurity withOption4(DataflowProjectsLocationsJobsMessagesListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsLocationsJobsMessagesListSecurity(){}
 }

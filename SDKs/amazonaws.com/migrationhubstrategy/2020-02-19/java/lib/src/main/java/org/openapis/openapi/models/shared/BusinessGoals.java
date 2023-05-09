@@ -15,6 +15,7 @@ public class BusinessGoals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseCostReduction")
     public Long licenseCostReduction;
+
     public BusinessGoals withLicenseCostReduction(Long licenseCostReduction) {
         this.licenseCostReduction = licenseCostReduction;
         return this;
@@ -23,6 +24,7 @@ public class BusinessGoals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modernizeInfrastructureWithCloudNativeTechnologies")
     public Long modernizeInfrastructureWithCloudNativeTechnologies;
+
     public BusinessGoals withModernizeInfrastructureWithCloudNativeTechnologies(Long modernizeInfrastructureWithCloudNativeTechnologies) {
         this.modernizeInfrastructureWithCloudNativeTechnologies = modernizeInfrastructureWithCloudNativeTechnologies;
         return this;
@@ -31,6 +33,7 @@ public class BusinessGoals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reduceOperationalOverheadWithManagedServices")
     public Long reduceOperationalOverheadWithManagedServices;
+
     public BusinessGoals withReduceOperationalOverheadWithManagedServices(Long reduceOperationalOverheadWithManagedServices) {
         this.reduceOperationalOverheadWithManagedServices = reduceOperationalOverheadWithManagedServices;
         return this;
@@ -39,9 +42,11 @@ public class BusinessGoals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speedOfMigration")
     public Long speedOfMigration;
+
     public BusinessGoals withSpeedOfMigration(Long speedOfMigration) {
         this.speedOfMigration = speedOfMigration;
         return this;
     }
     
+    public BusinessGoals(){}
 }

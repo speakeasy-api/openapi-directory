@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveRolefromUserRequest {
@@ -12,6 +13,7 @@ public class RemoveRolefromUserRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RemoveRolefromUserRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class RemoveRolefromUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
     public String roleId;
+
     public RemoveRolefromUserRequest withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
@@ -32,9 +35,15 @@ public class RemoveRolefromUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public RemoveRolefromUserRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public RemoveRolefromUserRequest(@JsonProperty("Content-Type") String contentType, @JsonProperty("roleId") String roleId, @JsonProperty("userId") String userId) {
+        this.contentType = contentType;
+        this.roleId = roleId;
+        this.userId = userId;
+  }
 }

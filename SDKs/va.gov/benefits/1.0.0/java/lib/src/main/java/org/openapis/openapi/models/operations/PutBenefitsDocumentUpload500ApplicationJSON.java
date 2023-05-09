@@ -30,6 +30,7 @@ public class PutBenefitsDocumentUpload500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public PutBenefitsDocumentUpload500ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -41,6 +42,7 @@ public class PutBenefitsDocumentUpload500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public PutBenefitsDocumentUpload500ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -64,6 +66,7 @@ public class PutBenefitsDocumentUpload500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PutBenefitsDocumentUpload500ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -75,9 +78,11 @@ public class PutBenefitsDocumentUpload500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PutBenefitsDocumentUpload500ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PutBenefitsDocumentUpload500ApplicationJSON(){}
 }

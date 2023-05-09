@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResolutionContact {
     @JsonProperty("ContactArn")
     public String contactArn;
+
     public ResolutionContact withContactArn(String contactArn) {
         this.contactArn = contactArn;
         return this;
@@ -22,6 +23,7 @@ public class ResolutionContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StageIndex")
     public Long stageIndex;
+
     public ResolutionContact withStageIndex(Long stageIndex) {
         this.stageIndex = stageIndex;
         return this;
@@ -29,9 +31,14 @@ public class ResolutionContact {
     
     @JsonProperty("Type")
     public ContactTypeEnum type;
+
     public ResolutionContact withType(ContactTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ResolutionContact(@JsonProperty("ContactArn") String contactArn, @JsonProperty("Type") ContactTypeEnum type) {
+        this.contactArn = contactArn;
+        this.type = type;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionARN")
     public String collectionARN;
+
     public DescribeCollectionResponse withCollectionARN(String collectionARN) {
         this.collectionARN = collectionARN;
         return this;
@@ -30,6 +31,7 @@ public class DescribeCollectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public DescribeCollectionResponse withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class DescribeCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceCount")
     public Long faceCount;
+
     public DescribeCollectionResponse withFaceCount(Long faceCount) {
         this.faceCount = faceCount;
         return this;
@@ -46,9 +49,11 @@ public class DescribeCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceModelVersion")
     public String faceModelVersion;
+
     public DescribeCollectionResponse withFaceModelVersion(String faceModelVersion) {
         this.faceModelVersion = faceModelVersion;
         return this;
     }
     
+    public DescribeCollectionResponse(){}
 }

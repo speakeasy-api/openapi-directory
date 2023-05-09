@@ -15,9 +15,11 @@ public class DefaultPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public DefaultPayloadError error;
+
     public DefaultPayload withError(DefaultPayloadError error) {
         this.error = error;
         return this;
     }
     
+    public DefaultPayload(){}
 }

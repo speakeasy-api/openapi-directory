@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse {
     
     public String contentType;
+
     public GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse {
     
     
     public Integer statusCode;
+
     public GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse {
      */
     
     public byte[] getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString;
+
     public GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse withGetCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString(byte[] getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString) {
         this.getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString = getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString;
         return this;
     }
     
+    public GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

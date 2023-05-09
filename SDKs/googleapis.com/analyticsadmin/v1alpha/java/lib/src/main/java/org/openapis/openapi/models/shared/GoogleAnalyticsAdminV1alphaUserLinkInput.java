@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directRoles")
     public String[] directRoles;
+
     public GoogleAnalyticsAdminV1alphaUserLinkInput withDirectRoles(String[] directRoles) {
         this.directRoles = directRoles;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaUserLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public GoogleAnalyticsAdminV1alphaUserLinkInput withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaUserLinkInput(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentRequestBody;
 import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentResponse;
 
@@ -28,16 +27,18 @@ public class Application {
 
             SrcSearchlyApiV1ControllersSimilarityByContentRequestBody req = new SrcSearchlyApiV1ControllersSimilarityByContentRequestBody() {{
                 content = "corrupti";
-            }}            
+            }};            
 
             SrcSearchlyApiV1ControllersSimilarityByContentResponse res = sdk.similarity.srcSearchlyApiV1ControllersSimilarityByContent(req);
 
-            if (res.apiResponseSimilarity.isPresent()) {
+            if (res.apiResponseSimilarity != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,14 +46,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### similarity
+### [similarity](docs/similarity/README.md)
 
-* `srcSearchlyApiV1ControllersSimilarityByContent` - API endpoint to search similarity using content
-* `srcSearchlyApiV1ControllersSimilarityBySong` - API endpoint to search similarity using a song identifier
+* [srcSearchlyApiV1ControllersSimilarityByContent](docs/similarity/README.md#srcsearchlyapiv1controllerssimilaritybycontent) - API endpoint to search similarity using content
+* [srcSearchlyApiV1ControllersSimilarityBySong](docs/similarity/README.md#srcsearchlyapiv1controllerssimilaritybysong) - API endpoint to search similarity using a song identifier
 
-### song
+### [song](docs/song/README.md)
 
-* `srcSearchlyApiV1ControllersSongSearch` - API endpoint to search songs from the database given a query
+* [srcSearchlyApiV1ControllersSongSearch](docs/song/README.md#srcsearchlyapiv1controllerssongsearch) - API endpoint to search songs from the database given a query
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAnnotationScoreResponse {
     
     public String contentType;
+
     public PostAnnotationScoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostAnnotationScoreResponse {
     
     
     public Integer statusCode;
+
     public PostAnnotationScoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostAnnotationScoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAnnotationScoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostAnnotationScoreResponse {
      */
     
     public org.openapis.openapi.models.shared.SufficiencyOutput sufficiencyOutput;
+
     public PostAnnotationScoreResponse withSufficiencyOutput(org.openapis.openapi.models.shared.SufficiencyOutput sufficiencyOutput) {
         this.sufficiencyOutput = sufficiencyOutput;
         return this;
     }
     
+    public PostAnnotationScoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

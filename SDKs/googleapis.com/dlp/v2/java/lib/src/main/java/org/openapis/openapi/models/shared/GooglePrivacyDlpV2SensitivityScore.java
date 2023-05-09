@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2SensitivityScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public GooglePrivacyDlpV2SensitivityScoreScoreEnum score;
+
     public GooglePrivacyDlpV2SensitivityScore withScore(GooglePrivacyDlpV2SensitivityScoreScoreEnum score) {
         this.score = score;
         return this;
     }
     
+    public GooglePrivacyDlpV2SensitivityScore(){}
 }

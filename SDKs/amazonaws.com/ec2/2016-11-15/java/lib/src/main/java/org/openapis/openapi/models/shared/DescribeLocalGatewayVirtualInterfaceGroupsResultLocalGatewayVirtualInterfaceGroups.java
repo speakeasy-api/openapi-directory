@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups {
     
     public String localGatewayId;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtual
     
     
     public String localGatewayVirtualInterfaceGroupId;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtual
     
     
     public String[] localGatewayVirtualInterfaceIds;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups withLocalGatewayVirtualInterfaceIds(String[] localGatewayVirtualInterfaceIds) {
         this.localGatewayVirtualInterfaceIds = localGatewayVirtualInterfaceIds;
         return this;
@@ -33,6 +36,7 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtual
     
     
     public String ownerId;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,9 +44,11 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtual
     
     
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroupsTags[] tags;
+
     public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups withTags(DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroupsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeLocalGatewayVirtualInterfaceGroupsResultLocalGatewayVirtualInterfaceGroups(){}
 }

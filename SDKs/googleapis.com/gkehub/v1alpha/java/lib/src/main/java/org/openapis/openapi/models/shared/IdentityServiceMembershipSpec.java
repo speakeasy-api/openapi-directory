@@ -18,9 +18,11 @@ public class IdentityServiceMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authMethods")
     public IdentityServiceAuthMethod[] authMethods;
+
     public IdentityServiceMembershipSpec withAuthMethods(IdentityServiceAuthMethod[] authMethods) {
         this.authMethods = authMethods;
         return this;
     }
     
+    public IdentityServiceMembershipSpec(){}
 }

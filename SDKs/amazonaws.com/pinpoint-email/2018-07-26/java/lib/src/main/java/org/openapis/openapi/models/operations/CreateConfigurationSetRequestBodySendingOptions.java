@@ -15,9 +15,11 @@ public class CreateConfigurationSetRequestBodySendingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingEnabled")
     public Boolean sendingEnabled;
+
     public CreateConfigurationSetRequestBodySendingOptions withSendingEnabled(Boolean sendingEnabled) {
         this.sendingEnabled = sendingEnabled;
         return this;
     }
     
+    public CreateConfigurationSetRequestBodySendingOptions(){}
 }

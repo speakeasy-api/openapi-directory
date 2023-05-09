@@ -15,6 +15,7 @@ public class DescribeEvaluationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEvaluationsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEvaluationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public Evaluation[] results;
+
     public DescribeEvaluationsOutput withResults(Evaluation[] results) {
         this.results = results;
         return this;
     }
     
+    public DescribeEvaluationsOutput(){}
 }

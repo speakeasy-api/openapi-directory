@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBulkLookupRequest {
@@ -12,6 +13,7 @@ public class GetBulkLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetBulkLookupRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetBulkLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ips")
     public String ips;
+
     public GetBulkLookupRequest withIps(String ips) {
         this.ips = ips;
         return this;
@@ -32,6 +35,7 @@ public class GetBulkLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetBulkLookupRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class GetBulkLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetBulkLookupRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -52,9 +57,14 @@ public class GetBulkLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
     public String params;
+
     public GetBulkLookupRequest withParams(String params) {
         this.params = params;
         return this;
     }
     
+    public GetBulkLookupRequest(@JsonProperty("ips") String ips, @JsonProperty("key") String key) {
+        this.ips = ips;
+        this.key = key;
+  }
 }

@@ -12,6 +12,7 @@ public class SetRiskConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountTakeoverRiskConfiguration")
     public AccountTakeoverRiskConfigurationType accountTakeoverRiskConfiguration;
+
     public SetRiskConfigurationRequest withAccountTakeoverRiskConfiguration(AccountTakeoverRiskConfigurationType accountTakeoverRiskConfiguration) {
         this.accountTakeoverRiskConfiguration = accountTakeoverRiskConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class SetRiskConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public SetRiskConfigurationRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -28,6 +30,7 @@ public class SetRiskConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompromisedCredentialsRiskConfiguration")
     public CompromisedCredentialsRiskConfigurationType compromisedCredentialsRiskConfiguration;
+
     public SetRiskConfigurationRequest withCompromisedCredentialsRiskConfiguration(CompromisedCredentialsRiskConfigurationType compromisedCredentialsRiskConfiguration) {
         this.compromisedCredentialsRiskConfiguration = compromisedCredentialsRiskConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class SetRiskConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskExceptionConfiguration")
     public RiskExceptionConfigurationType riskExceptionConfiguration;
+
     public SetRiskConfigurationRequest withRiskExceptionConfiguration(RiskExceptionConfigurationType riskExceptionConfiguration) {
         this.riskExceptionConfiguration = riskExceptionConfiguration;
         return this;
@@ -43,9 +47,13 @@ public class SetRiskConfigurationRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public SetRiskConfigurationRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public SetRiskConfigurationRequest(@JsonProperty("UserPoolId") String userPoolId) {
+        this.userPoolId = userPoolId;
+  }
 }

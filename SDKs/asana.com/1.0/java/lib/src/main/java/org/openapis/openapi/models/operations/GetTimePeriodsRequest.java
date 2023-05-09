@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetTimePeriodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_on")
     public LocalDate endOn;
+
     public GetTimePeriodsRequest withEndOn(LocalDate endOn) {
         this.endOn = endOn;
         return this;
@@ -24,6 +26,7 @@ public class GetTimePeriodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTimePeriodsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,6 +39,7 @@ public class GetTimePeriodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTimePeriodsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -48,6 +52,7 @@ public class GetTimePeriodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetTimePeriodsRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -59,6 +64,7 @@ public class GetTimePeriodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetTimePeriodsRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -69,6 +75,7 @@ public class GetTimePeriodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_on")
     public LocalDate startOn;
+
     public GetTimePeriodsRequest withStartOn(LocalDate startOn) {
         this.startOn = startOn;
         return this;
@@ -79,9 +86,13 @@ public class GetTimePeriodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public GetTimePeriodsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetTimePeriodsRequest(@JsonProperty("workspace") String workspace) {
+        this.workspace = workspace;
+  }
 }

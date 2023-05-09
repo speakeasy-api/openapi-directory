@@ -15,6 +15,7 @@ public class NbcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public NbcerRequestBodyCertificateParameters certificateParameters;
+
     public NbcerRequestBody withCertificateParameters(NbcerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class NbcerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public NbcerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class NbcerRequestBody {
      */
     @JsonProperty("format")
     public NbcerRequestBodyFormatEnum format;
+
     public NbcerRequestBody withFormat(NbcerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class NbcerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public NbcerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public NbcerRequestBody(@JsonProperty("format") NbcerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

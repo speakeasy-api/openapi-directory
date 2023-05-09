@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllCompanyCodesAndDescriptionsByResourceResponse {
     
     public String contentType;
+
     public GetAllCompanyCodesAndDescriptionsByResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllCompanyCodesAndDescriptionsByResourceResponse {
     
     
     public Integer statusCode;
+
     public GetAllCompanyCodesAndDescriptionsByResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllCompanyCodesAndDescriptionsByResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllCompanyCodesAndDescriptionsByResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllCompanyCodesAndDescriptionsByResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CompanyCodes[] companyCodes;
+
     public GetAllCompanyCodesAndDescriptionsByResourceResponse withCompanyCodes(org.openapis.openapi.models.shared.CompanyCodes[] companyCodes) {
         this.companyCodes = companyCodes;
         return this;
@@ -43,9 +48,14 @@ public class GetAllCompanyCodesAndDescriptionsByResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetAllCompanyCodesAndDescriptionsByResourceResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetAllCompanyCodesAndDescriptionsByResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

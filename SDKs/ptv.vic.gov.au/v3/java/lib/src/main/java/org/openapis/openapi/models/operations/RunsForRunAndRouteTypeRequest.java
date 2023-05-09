@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
     public OffsetDateTime dateUtc;
+
     public RunsForRunAndRouteTypeRequest withDateUtc(OffsetDateTime dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -23,6 +25,7 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public RunsForRunAndRouteTypeRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -33,6 +36,7 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public RunsForRunAndRouteTypeExpandEnum[] expand;
+
     public RunsForRunAndRouteTypeRequest withExpand(RunsForRunAndRouteTypeExpandEnum[] expand) {
         this.expand = expand;
         return this;
@@ -43,6 +47,7 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
     public Boolean includeGeopath;
+
     public RunsForRunAndRouteTypeRequest withIncludeGeopath(Boolean includeGeopath) {
         this.includeGeopath = includeGeopath;
         return this;
@@ -53,6 +58,7 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
     public RunsForRunAndRouteTypeRouteTypeEnum routeType;
+
     public RunsForRunAndRouteTypeRequest withRouteType(RunsForRunAndRouteTypeRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -63,6 +69,7 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_ref")
     public String runRef;
+
     public RunsForRunAndRouteTypeRequest withRunRef(String runRef) {
         this.runRef = runRef;
         return this;
@@ -73,6 +80,7 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public RunsForRunAndRouteTypeRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -83,9 +91,15 @@ public class RunsForRunAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public RunsForRunAndRouteTypeRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RunsForRunAndRouteTypeRequest(@JsonProperty("expand") RunsForRunAndRouteTypeExpandEnum[] expand, @JsonProperty("route_type") RunsForRunAndRouteTypeRouteTypeEnum routeType, @JsonProperty("run_ref") String runRef) {
+        this.expand = expand;
+        this.routeType = routeType;
+        this.runRef = runRef;
+  }
 }

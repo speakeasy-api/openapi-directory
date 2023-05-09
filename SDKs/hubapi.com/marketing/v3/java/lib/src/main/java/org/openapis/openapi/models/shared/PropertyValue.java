@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PropertyValue {
     @JsonProperty("name")
     public String name;
+
     public PropertyValue withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class PropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistenceTimestamp")
     public Long persistenceTimestamp;
+
     public PropertyValue withPersistenceTimestamp(Long persistenceTimestamp) {
         this.persistenceTimestamp = persistenceTimestamp;
         return this;
@@ -26,6 +28,7 @@ public class PropertyValue {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public PropertyValue withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -33,6 +36,7 @@ public class PropertyValue {
     
     @JsonProperty("selectedByUser")
     public Boolean selectedByUser;
+
     public PropertyValue withSelectedByUser(Boolean selectedByUser) {
         this.selectedByUser = selectedByUser;
         return this;
@@ -40,6 +44,7 @@ public class PropertyValue {
     
     @JsonProperty("selectedByUserTimestamp")
     public Long selectedByUserTimestamp;
+
     public PropertyValue withSelectedByUserTimestamp(Long selectedByUserTimestamp) {
         this.selectedByUserTimestamp = selectedByUserTimestamp;
         return this;
@@ -47,6 +52,7 @@ public class PropertyValue {
     
     @JsonProperty("source")
     public PropertyValueSourceEnum source;
+
     public PropertyValue withSource(PropertyValueSourceEnum source) {
         this.source = source;
         return this;
@@ -54,6 +60,7 @@ public class PropertyValue {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public PropertyValue withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -61,6 +68,7 @@ public class PropertyValue {
     
     @JsonProperty("sourceLabel")
     public String sourceLabel;
+
     public PropertyValue withSourceLabel(String sourceLabel) {
         this.sourceLabel = sourceLabel;
         return this;
@@ -71,6 +79,7 @@ public class PropertyValue {
      */
     @JsonProperty("sourceMetadata")
     public String sourceMetadata;
+
     public PropertyValue withSourceMetadata(String sourceMetadata) {
         this.sourceMetadata = sourceMetadata;
         return this;
@@ -78,6 +87,7 @@ public class PropertyValue {
     
     @JsonProperty("sourceVid")
     public Long[] sourceVid;
+
     public PropertyValue withSourceVid(Long[] sourceVid) {
         this.sourceVid = sourceVid;
         return this;
@@ -85,6 +95,7 @@ public class PropertyValue {
     
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public PropertyValue withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -93,6 +104,7 @@ public class PropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedByUserId")
     public Integer updatedByUserId;
+
     public PropertyValue withUpdatedByUserId(Integer updatedByUserId) {
         this.updatedByUserId = updatedByUserId;
         return this;
@@ -101,6 +113,7 @@ public class PropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useTimestampAsPersistenceTimestamp")
     public Boolean useTimestampAsPersistenceTimestamp;
+
     public PropertyValue withUseTimestampAsPersistenceTimestamp(Boolean useTimestampAsPersistenceTimestamp) {
         this.useTimestampAsPersistenceTimestamp = useTimestampAsPersistenceTimestamp;
         return this;
@@ -108,9 +121,23 @@ public class PropertyValue {
     
     @JsonProperty("value")
     public String value;
+
     public PropertyValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PropertyValue(@JsonProperty("name") String name, @JsonProperty("requestId") String requestId, @JsonProperty("selectedByUser") Boolean selectedByUser, @JsonProperty("selectedByUserTimestamp") Long selectedByUserTimestamp, @JsonProperty("source") PropertyValueSourceEnum source, @JsonProperty("sourceId") String sourceId, @JsonProperty("sourceLabel") String sourceLabel, @JsonProperty("sourceMetadata") String sourceMetadata, @JsonProperty("sourceVid") Long[] sourceVid, @JsonProperty("timestamp") Long timestamp, @JsonProperty("value") String value) {
+        this.name = name;
+        this.requestId = requestId;
+        this.selectedByUser = selectedByUser;
+        this.selectedByUserTimestamp = selectedByUserTimestamp;
+        this.source = source;
+        this.sourceId = sourceId;
+        this.sourceLabel = sourceLabel;
+        this.sourceMetadata = sourceMetadata;
+        this.sourceVid = sourceVid;
+        this.timestamp = timestamp;
+        this.value = value;
+  }
 }

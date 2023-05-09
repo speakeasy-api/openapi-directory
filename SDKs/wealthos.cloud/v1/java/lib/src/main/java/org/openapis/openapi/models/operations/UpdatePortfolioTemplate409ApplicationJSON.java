@@ -17,6 +17,7 @@ public class UpdatePortfolioTemplate409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public UpdatePortfolioTemplate409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class UpdatePortfolioTemplate409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public UpdatePortfolioTemplate409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class UpdatePortfolioTemplate409ApplicationJSON {
      */
     @JsonProperty("status")
     public UpdatePortfolioTemplate409ApplicationJSONStatusEnum status;
+
     public UpdatePortfolioTemplate409ApplicationJSON withStatus(UpdatePortfolioTemplate409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdatePortfolioTemplate409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") UpdatePortfolioTemplate409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

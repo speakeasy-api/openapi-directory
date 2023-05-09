@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctedKeyText")
     public String correctedKeyText;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withCorrectedKeyText(String correctedKeyText) {
         this.correctedKeyText = correctedKeyText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctedValueText")
     public String correctedValueText;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withCorrectedValueText(String correctedValueText) {
         this.correctedValueText = correctedValueText;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public GoogleCloudDocumentaiV1beta2DocumentPageLayout fieldName;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withFieldName(GoogleCloudDocumentaiV1beta2DocumentPageLayout fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldValue")
     public GoogleCloudDocumentaiV1beta2DocumentPageLayout fieldValue;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withFieldValue(GoogleCloudDocumentaiV1beta2DocumentPageLayout fieldValue) {
         this.fieldValue = fieldValue;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameDetectedLanguages")
     public GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] nameDetectedLanguages;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withNameDetectedLanguages(GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] nameDetectedLanguages) {
         this.nameDetectedLanguages = nameDetectedLanguages;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1beta2DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withProvenance(GoogleCloudDocumentaiV1beta2DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueDetectedLanguages")
     public GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] valueDetectedLanguages;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withValueDetectedLanguages(GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[] valueDetectedLanguages) {
         this.valueDetectedLanguages = valueDetectedLanguages;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageFormField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public String valueType;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageFormField withValueType(String valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentPageFormField(){}
 }

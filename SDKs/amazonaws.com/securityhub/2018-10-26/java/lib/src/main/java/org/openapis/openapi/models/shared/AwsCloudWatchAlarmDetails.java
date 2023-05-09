@@ -15,6 +15,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionsEnabled")
     public Boolean actionsEnabled;
+
     public AwsCloudWatchAlarmDetails withActionsEnabled(Boolean actionsEnabled) {
         this.actionsEnabled = actionsEnabled;
         return this;
@@ -23,6 +24,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmActions")
     public String[] alarmActions;
+
     public AwsCloudWatchAlarmDetails withAlarmActions(String[] alarmActions) {
         this.alarmActions = alarmActions;
         return this;
@@ -31,6 +33,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmArn")
     public String alarmArn;
+
     public AwsCloudWatchAlarmDetails withAlarmArn(String alarmArn) {
         this.alarmArn = alarmArn;
         return this;
@@ -39,6 +42,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfigurationUpdatedTimestamp")
     public String alarmConfigurationUpdatedTimestamp;
+
     public AwsCloudWatchAlarmDetails withAlarmConfigurationUpdatedTimestamp(String alarmConfigurationUpdatedTimestamp) {
         this.alarmConfigurationUpdatedTimestamp = alarmConfigurationUpdatedTimestamp;
         return this;
@@ -47,6 +51,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmDescription")
     public String alarmDescription;
+
     public AwsCloudWatchAlarmDetails withAlarmDescription(String alarmDescription) {
         this.alarmDescription = alarmDescription;
         return this;
@@ -55,6 +60,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmName")
     public String alarmName;
+
     public AwsCloudWatchAlarmDetails withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -63,6 +69,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComparisonOperator")
     public String comparisonOperator;
+
     public AwsCloudWatchAlarmDetails withComparisonOperator(String comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -71,6 +78,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatapointsToAlarm")
     public Long datapointsToAlarm;
+
     public AwsCloudWatchAlarmDetails withDatapointsToAlarm(Long datapointsToAlarm) {
         this.datapointsToAlarm = datapointsToAlarm;
         return this;
@@ -79,6 +87,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public AwsCloudWatchAlarmDimensionsDetails[] dimensions;
+
     public AwsCloudWatchAlarmDetails withDimensions(AwsCloudWatchAlarmDimensionsDetails[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -87,6 +96,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluateLowSampleCountPercentile")
     public String evaluateLowSampleCountPercentile;
+
     public AwsCloudWatchAlarmDetails withEvaluateLowSampleCountPercentile(String evaluateLowSampleCountPercentile) {
         this.evaluateLowSampleCountPercentile = evaluateLowSampleCountPercentile;
         return this;
@@ -95,6 +105,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationPeriods")
     public Long evaluationPeriods;
+
     public AwsCloudWatchAlarmDetails withEvaluationPeriods(Long evaluationPeriods) {
         this.evaluationPeriods = evaluationPeriods;
         return this;
@@ -103,6 +114,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedStatistic")
     public String extendedStatistic;
+
     public AwsCloudWatchAlarmDetails withExtendedStatistic(String extendedStatistic) {
         this.extendedStatistic = extendedStatistic;
         return this;
@@ -111,6 +123,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsufficientDataActions")
     public String[] insufficientDataActions;
+
     public AwsCloudWatchAlarmDetails withInsufficientDataActions(String[] insufficientDataActions) {
         this.insufficientDataActions = insufficientDataActions;
         return this;
@@ -119,6 +132,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public AwsCloudWatchAlarmDetails withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -127,6 +141,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public AwsCloudWatchAlarmDetails withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -135,6 +150,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OkActions")
     public String[] okActions;
+
     public AwsCloudWatchAlarmDetails withOkActions(String[] okActions) {
         this.okActions = okActions;
         return this;
@@ -143,6 +159,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Period")
     public Long period;
+
     public AwsCloudWatchAlarmDetails withPeriod(Long period) {
         this.period = period;
         return this;
@@ -151,6 +168,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistic")
     public String statistic;
+
     public AwsCloudWatchAlarmDetails withStatistic(String statistic) {
         this.statistic = statistic;
         return this;
@@ -159,6 +177,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Threshold")
     public Double threshold;
+
     public AwsCloudWatchAlarmDetails withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -167,6 +186,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThresholdMetricId")
     public String thresholdMetricId;
+
     public AwsCloudWatchAlarmDetails withThresholdMetricId(String thresholdMetricId) {
         this.thresholdMetricId = thresholdMetricId;
         return this;
@@ -175,6 +195,7 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatMissingData")
     public String treatMissingData;
+
     public AwsCloudWatchAlarmDetails withTreatMissingData(String treatMissingData) {
         this.treatMissingData = treatMissingData;
         return this;
@@ -183,9 +204,11 @@ public class AwsCloudWatchAlarmDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public AwsCloudWatchAlarmDetails withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public AwsCloudWatchAlarmDetails(){}
 }

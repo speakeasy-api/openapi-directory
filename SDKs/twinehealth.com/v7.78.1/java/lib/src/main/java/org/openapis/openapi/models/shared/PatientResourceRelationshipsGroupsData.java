@@ -12,6 +12,7 @@ public class PatientResourceRelationshipsGroupsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PatientResourceRelationshipsGroupsData withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,13 @@ public class PatientResourceRelationshipsGroupsData {
     
     @JsonProperty("type")
     public PatientResourceRelationshipsGroupsDataTypeEnum type;
+
     public PatientResourceRelationshipsGroupsData withType(PatientResourceRelationshipsGroupsDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientResourceRelationshipsGroupsData(@JsonProperty("type") PatientResourceRelationshipsGroupsDataTypeEnum type) {
+        this.type = type;
+  }
 }

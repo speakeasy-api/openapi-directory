@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcClassicLinkDnsSupportResultVpcs {
     
     public Boolean classicLinkDnsSupported;
+
     public DescribeVpcClassicLinkDnsSupportResultVpcs withClassicLinkDnsSupported(Boolean classicLinkDnsSupported) {
         this.classicLinkDnsSupported = classicLinkDnsSupported;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcClassicLinkDnsSupportResultVpcs {
     
     
     public String vpcId;
+
     public DescribeVpcClassicLinkDnsSupportResultVpcs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeVpcClassicLinkDnsSupportResultVpcs(){}
 }

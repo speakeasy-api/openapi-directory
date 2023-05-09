@@ -58,11 +58,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountCredentialResponse res = new org.openapis.openapi.models.operations.CreateAccountCredentialResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountCredentialResponse res = new org.openapis.openapi.models.operations.CreateAccountCredentialResponse(contentType, httpRes.statusCode()) {{
             credential = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountGroupResponse res = new org.openapis.openapi.models.operations.CreateAccountGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountGroupResponse res = new org.openapis.openapi.models.operations.CreateAccountGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.CreateAccountGroupMappingResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.CreateAccountGroupMappingResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountKeyResponse res = new org.openapis.openapi.models.operations.CreateAccountKeyResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountKeyResponse res = new org.openapis.openapi.models.operations.CreateAccountKeyResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +236,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountOrganizationResponse res = new org.openapis.openapi.models.operations.CreateAccountOrganizationResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountOrganizationResponse res = new org.openapis.openapi.models.operations.CreateAccountOrganizationResponse(contentType, httpRes.statusCode()) {{
             organization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.CreateAccountScanTemplateResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.CreateAccountScanTemplateResponse(contentType, httpRes.statusCode()) {{
             scanTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -338,11 +326,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountUserResponse res = new org.openapis.openapi.models.operations.CreateAccountUserResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountUserResponse res = new org.openapis.openapi.models.operations.CreateAccountUserResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +371,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAccountUserInviteResponse res = new org.openapis.openapi.models.operations.CreateAccountUserInviteResponse() {{
+        org.openapis.openapi.models.operations.CreateAccountUserInviteResponse res = new org.openapis.openapi.models.operations.CreateAccountUserInviteResponse(contentType, httpRes.statusCode()) {{
             user = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,10 +411,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccountOrganizationExportTokenResponse res = new org.openapis.openapi.models.operations.DeleteAccountOrganizationExportTokenResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccountOrganizationExportTokenResponse res = new org.openapis.openapi.models.operations.DeleteAccountOrganizationExportTokenResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401) {
@@ -467,11 +449,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportEventsJSONResponse res = new org.openapis.openapi.models.operations.ExportEventsJSONResponse() {{
+        org.openapis.openapi.models.operations.ExportEventsJSONResponse res = new org.openapis.openapi.models.operations.ExportEventsJSONResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -515,11 +495,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportEventsJSONLResponse res = new org.openapis.openapi.models.operations.ExportEventsJSONLResponse() {{
+        org.openapis.openapi.models.operations.ExportEventsJSONLResponse res = new org.openapis.openapi.models.operations.ExportEventsJSONLResponse(contentType, httpRes.statusCode()) {{
             events = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -563,11 +541,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountAgentsResponse res = new org.openapis.openapi.models.operations.GetAccountAgentsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountAgentsResponse res = new org.openapis.openapi.models.operations.GetAccountAgentsResponse(contentType, httpRes.statusCode()) {{
             agents = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -605,11 +581,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountCredentialResponse res = new org.openapis.openapi.models.operations.GetAccountCredentialResponse() {{
+        org.openapis.openapi.models.operations.GetAccountCredentialResponse res = new org.openapis.openapi.models.operations.GetAccountCredentialResponse(contentType, httpRes.statusCode()) {{
             credential = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -653,11 +627,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountCredentialsResponse res = new org.openapis.openapi.models.operations.GetAccountCredentialsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountCredentialsResponse res = new org.openapis.openapi.models.operations.GetAccountCredentialsResponse(contentType, httpRes.statusCode()) {{
             credentials = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -695,11 +667,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountGroupResponse res = new org.openapis.openapi.models.operations.GetAccountGroupResponse() {{
+        org.openapis.openapi.models.operations.GetAccountGroupResponse res = new org.openapis.openapi.models.operations.GetAccountGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -736,11 +706,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.GetAccountGroupMappingResponse() {{
+        org.openapis.openapi.models.operations.GetAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.GetAccountGroupMappingResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -757,10 +725,11 @@ public class Account {
 
     /**
      * Get all SSO group mappings
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountGroupMappingsResponse getAccountGroupMappings() throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountGroupMappingsResponse getAccountGroupMappings(org.openapis.openapi.models.operations.GetAccountGroupMappingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/sso/groups");
         
@@ -769,16 +738,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountGroupMappingsResponse res = new org.openapis.openapi.models.operations.GetAccountGroupMappingsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountGroupMappingsResponse res = new org.openapis.openapi.models.operations.GetAccountGroupMappingsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -795,10 +763,11 @@ public class Account {
 
     /**
      * Get all groups
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountGroupsResponse getAccountGroups() throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountGroupsResponse getAccountGroups(org.openapis.openapi.models.operations.GetAccountGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/groups");
         
@@ -807,16 +776,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountGroupsResponse res = new org.openapis.openapi.models.operations.GetAccountGroupsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountGroupsResponse res = new org.openapis.openapi.models.operations.GetAccountGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -853,11 +821,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountKeyResponse res = new org.openapis.openapi.models.operations.GetAccountKeyResponse() {{
+        org.openapis.openapi.models.operations.GetAccountKeyResponse res = new org.openapis.openapi.models.operations.GetAccountKeyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -874,10 +840,11 @@ public class Account {
 
     /**
      * Get all active API keys
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountKeysResponse getAccountKeys() throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountKeysResponse getAccountKeys(org.openapis.openapi.models.operations.GetAccountKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/keys");
         
@@ -886,16 +853,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountKeysResponse res = new org.openapis.openapi.models.operations.GetAccountKeysResponse() {{
+        org.openapis.openapi.models.operations.GetAccountKeysResponse res = new org.openapis.openapi.models.operations.GetAccountKeysResponse(contentType, httpRes.statusCode()) {{
             apiKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -913,10 +879,11 @@ public class Account {
 
     /**
      * Get license details
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountLicenseResponse getAccountLicense() throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountLicenseResponse getAccountLicense(org.openapis.openapi.models.operations.GetAccountLicenseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/license");
         
@@ -925,16 +892,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountLicenseResponse res = new org.openapis.openapi.models.operations.GetAccountLicenseResponse() {{
+        org.openapis.openapi.models.operations.GetAccountLicenseResponse res = new org.openapis.openapi.models.operations.GetAccountLicenseResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -971,11 +937,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountOrganizationResponse res = new org.openapis.openapi.models.operations.GetAccountOrganizationResponse() {{
+        org.openapis.openapi.models.operations.GetAccountOrganizationResponse res = new org.openapis.openapi.models.operations.GetAccountOrganizationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1018,11 +982,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountOrganizationsResponse res = new org.openapis.openapi.models.operations.GetAccountOrganizationsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountOrganizationsResponse res = new org.openapis.openapi.models.operations.GetAccountOrganizationsResponse(contentType, httpRes.statusCode()) {{
             organizations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1060,11 +1022,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.GetAccountScanTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.GetAccountScanTemplateResponse(contentType, httpRes.statusCode()) {{
             scanTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1108,11 +1068,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountScanTemplatesResponse res = new org.openapis.openapi.models.operations.GetAccountScanTemplatesResponse() {{
+        org.openapis.openapi.models.operations.GetAccountScanTemplatesResponse res = new org.openapis.openapi.models.operations.GetAccountScanTemplatesResponse(contentType, httpRes.statusCode()) {{
             scanTemplates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1156,11 +1114,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountSitesResponse res = new org.openapis.openapi.models.operations.GetAccountSitesResponse() {{
+        org.openapis.openapi.models.operations.GetAccountSitesResponse res = new org.openapis.openapi.models.operations.GetAccountSitesResponse(contentType, httpRes.statusCode()) {{
             sites = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1204,11 +1160,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountTasksResponse res = new org.openapis.openapi.models.operations.GetAccountTasksResponse() {{
+        org.openapis.openapi.models.operations.GetAccountTasksResponse res = new org.openapis.openapi.models.operations.GetAccountTasksResponse(contentType, httpRes.statusCode()) {{
             tasks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1246,11 +1200,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountUserResponse res = new org.openapis.openapi.models.operations.GetAccountUserResponse() {{
+        org.openapis.openapi.models.operations.GetAccountUserResponse res = new org.openapis.openapi.models.operations.GetAccountUserResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1267,10 +1219,11 @@ public class Account {
 
     /**
      * Get all users
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountUsersResponse getAccountUsers() throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountUsersResponse getAccountUsers(org.openapis.openapi.models.operations.GetAccountUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/users");
         
@@ -1279,16 +1232,15 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountUsersResponse res = new org.openapis.openapi.models.operations.GetAccountUsersResponse() {{
+        org.openapis.openapi.models.operations.GetAccountUsersResponse res = new org.openapis.openapi.models.operations.GetAccountUsersResponse(contentType, httpRes.statusCode()) {{
             users = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1326,10 +1278,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountCredentialResponse res = new org.openapis.openapi.models.operations.RemoveAccountCredentialResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountCredentialResponse res = new org.openapis.openapi.models.operations.RemoveAccountCredentialResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
@@ -1360,10 +1310,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountGroupResponse res = new org.openapis.openapi.models.operations.RemoveAccountGroupResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountGroupResponse res = new org.openapis.openapi.models.operations.RemoveAccountGroupResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401) {
@@ -1394,10 +1342,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.RemoveAccountGroupMappingResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.RemoveAccountGroupMappingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401) {
@@ -1428,10 +1374,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountKeyResponse res = new org.openapis.openapi.models.operations.RemoveAccountKeyResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountKeyResponse res = new org.openapis.openapi.models.operations.RemoveAccountKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401) {
@@ -1462,10 +1406,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountOrganizationResponse res = new org.openapis.openapi.models.operations.RemoveAccountOrganizationResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountOrganizationResponse res = new org.openapis.openapi.models.operations.RemoveAccountOrganizationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401) {
@@ -1496,11 +1438,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.RemoveAccountScanTemplateResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.RemoveAccountScanTemplateResponse(contentType, httpRes.statusCode()) {{
             scanTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1538,10 +1478,8 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveAccountUserResponse res = new org.openapis.openapi.models.operations.RemoveAccountUserResponse() {{
+        org.openapis.openapi.models.operations.RemoveAccountUserResponse res = new org.openapis.openapi.models.operations.RemoveAccountUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401) {
@@ -1572,11 +1510,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetAccountUserLockoutResponse res = new org.openapis.openapi.models.operations.ResetAccountUserLockoutResponse() {{
+        org.openapis.openapi.models.operations.ResetAccountUserLockoutResponse res = new org.openapis.openapi.models.operations.ResetAccountUserLockoutResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1613,11 +1549,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetAccountUserMFAResponse res = new org.openapis.openapi.models.operations.ResetAccountUserMFAResponse() {{
+        org.openapis.openapi.models.operations.ResetAccountUserMFAResponse res = new org.openapis.openapi.models.operations.ResetAccountUserMFAResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1654,11 +1588,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetAccountUserPasswordResponse res = new org.openapis.openapi.models.operations.ResetAccountUserPasswordResponse() {{
+        org.openapis.openapi.models.operations.ResetAccountUserPasswordResponse res = new org.openapis.openapi.models.operations.ResetAccountUserPasswordResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1695,11 +1627,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RotateAccountKeyResponse res = new org.openapis.openapi.models.operations.RotateAccountKeyResponse() {{
+        org.openapis.openapi.models.operations.RotateAccountKeyResponse res = new org.openapis.openapi.models.operations.RotateAccountKeyResponse(contentType, httpRes.statusCode()) {{
             apiKey = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1737,11 +1667,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RotateAccountOrganizationExportTokenResponse res = new org.openapis.openapi.models.operations.RotateAccountOrganizationExportTokenResponse() {{
+        org.openapis.openapi.models.operations.RotateAccountOrganizationExportTokenResponse res = new org.openapis.openapi.models.operations.RotateAccountOrganizationExportTokenResponse(contentType, httpRes.statusCode()) {{
             organization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1784,11 +1712,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAccountGroupResponse res = new org.openapis.openapi.models.operations.UpdateAccountGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateAccountGroupResponse res = new org.openapis.openapi.models.operations.UpdateAccountGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1830,11 +1756,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.UpdateAccountGroupMappingResponse() {{
+        org.openapis.openapi.models.operations.UpdateAccountGroupMappingResponse res = new org.openapis.openapi.models.operations.UpdateAccountGroupMappingResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1876,11 +1800,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAccountOrganizationResponse res = new org.openapis.openapi.models.operations.UpdateAccountOrganizationResponse() {{
+        org.openapis.openapi.models.operations.UpdateAccountOrganizationResponse res = new org.openapis.openapi.models.operations.UpdateAccountOrganizationResponse(contentType, httpRes.statusCode()) {{
             organization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1923,11 +1845,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.UpdateAccountScanTemplateResponse() {{
+        org.openapis.openapi.models.operations.UpdateAccountScanTemplateResponse res = new org.openapis.openapi.models.operations.UpdateAccountScanTemplateResponse(contentType, httpRes.statusCode()) {{
             scanTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1970,11 +1890,9 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAccountUserResponse res = new org.openapis.openapi.models.operations.UpdateAccountUserResponse() {{
+        org.openapis.openapi.models.operations.UpdateAccountUserResponse res = new org.openapis.openapi.models.operations.UpdateAccountUserResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

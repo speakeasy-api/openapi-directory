@@ -22,6 +22,7 @@ public class EnabledServicePrincipal {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateEnabled")
     public OffsetDateTime dateEnabled;
+
     public EnabledServicePrincipal withDateEnabled(OffsetDateTime dateEnabled) {
         this.dateEnabled = dateEnabled;
         return this;
@@ -30,9 +31,11 @@ public class EnabledServicePrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServicePrincipal")
     public String servicePrincipal;
+
     public EnabledServicePrincipal withServicePrincipal(String servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
         return this;
     }
     
+    public EnabledServicePrincipal(){}
 }

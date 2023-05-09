@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListComputeResponse {
     
     public String contentType;
+
     public ListComputeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListComputeResponse {
      */
     
     public Object internalServiceException;
+
     public ListComputeResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListComputeResponse {
      */
     
     public Object invalidRequestException;
+
     public ListComputeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListComputeResponse {
      */
     
     public org.openapis.openapi.models.shared.ListComputeOutput listComputeOutput;
+
     public ListComputeResponse withListComputeOutput(org.openapis.openapi.models.shared.ListComputeOutput listComputeOutput) {
         this.listComputeOutput = listComputeOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListComputeResponse {
     
     
     public Integer statusCode;
+
     public ListComputeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListComputeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListComputeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListComputeResponse {
      */
     
     public Object unauthorizedException;
+
     public ListComputeResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListComputeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

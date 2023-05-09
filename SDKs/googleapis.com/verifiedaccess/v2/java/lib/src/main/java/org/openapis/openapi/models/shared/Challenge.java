@@ -13,25 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Challenge {
     /**
-     * Challenge generated with the old signing key, the bytes representation of SignedData (this will only be present during key rotation).
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("alternativeChallenge")
-    public String alternativeChallenge;
-    public Challenge withAlternativeChallenge(String alternativeChallenge) {
-        this.alternativeChallenge = alternativeChallenge;
-        return this;
-    }
-    
-    /**
      * Generated challenge, the bytes representation of SignedData.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challenge")
     public String challenge;
+
     public Challenge withChallenge(String challenge) {
         this.challenge = challenge;
         return this;
     }
     
+    public Challenge(){}
 }

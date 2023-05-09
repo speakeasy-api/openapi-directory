@@ -25,6 +25,7 @@ public class StartDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTBA")
     public Boolean dateTBA;
+
     public StartDates withDateTBA(Boolean dateTBA) {
         this.dateTBA = dateTBA;
         return this;
@@ -36,6 +37,7 @@ public class StartDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTBD")
     public Boolean dateTBD;
+
     public StartDates withDateTBD(Boolean dateTBD) {
         this.dateTBD = dateTBD;
         return this;
@@ -49,6 +51,7 @@ public class StartDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateTime")
     public OffsetDateTime dateTime;
+
     public StartDates withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -61,6 +64,7 @@ public class StartDates {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("localDate")
     public LocalDate localDate;
+
     public StartDates withLocalDate(LocalDate localDate) {
         this.localDate = localDate;
         return this;
@@ -69,6 +73,7 @@ public class StartDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTime")
     public LocalTime localTime;
+
     public StartDates withLocalTime(LocalTime localTime) {
         this.localTime = localTime;
         return this;
@@ -80,6 +85,7 @@ public class StartDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noSpecificTime")
     public Boolean noSpecificTime;
+
     public StartDates withNoSpecificTime(Boolean noSpecificTime) {
         this.noSpecificTime = noSpecificTime;
         return this;
@@ -91,9 +97,11 @@ public class StartDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeTBA")
     public Boolean timeTBA;
+
     public StartDates withTimeTBA(Boolean timeTBA) {
         this.timeTBA = timeTBA;
         return this;
     }
     
+    public StartDates(){}
 }

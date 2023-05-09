@@ -15,6 +15,7 @@ public class FullComparisonTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public FullComparisonTestBase base;
+
     public FullComparisonTest withBase(FullComparisonTestBase base) {
         this.base = base;
         return this;
@@ -23,9 +24,11 @@ public class FullComparisonTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public Target[] targets;
+
     public FullComparisonTest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public FullComparisonTest(){}
 }

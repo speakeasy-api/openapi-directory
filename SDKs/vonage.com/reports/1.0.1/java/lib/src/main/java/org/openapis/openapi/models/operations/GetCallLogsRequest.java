@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallLogsRequest {
@@ -12,6 +13,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public String accountId;
+
     public GetCallLogsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination_user")
     public String destinationUser;
+
     public GetCallLogsRequest withDestinationUser(String destinationUser) {
         this.destinationUser = destinationUser;
         return this;
@@ -32,6 +35,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetCallLogsDirectionEnum direction;
+
     public GetCallLogsRequest withDirection(GetCallLogsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -42,6 +46,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end:gte")
     public String endGte;
+
     public GetCallLogsRequest withEndGte(String endGte) {
         this.endGte = endGte;
         return this;
@@ -52,6 +57,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end:lte")
     public String endLte;
+
     public GetCallLogsRequest withEndLte(String endLte) {
         this.endLte = endLte;
         return this;
@@ -62,6 +68,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public String from;
+
     public GetCallLogsRequest withFrom(String from) {
         this.from = from;
         return this;
@@ -72,6 +79,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public GetCallLogsRequest withPage(Double page) {
         this.page = page;
         return this;
@@ -82,6 +90,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Double pageSize;
+
     public GetCallLogsRequest withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -92,6 +101,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_user")
     public String sourceUser;
+
     public GetCallLogsRequest withSourceUser(String sourceUser) {
         this.sourceUser = sourceUser;
         return this;
@@ -102,6 +112,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start:gte")
     public String startGte;
+
     public GetCallLogsRequest withStartGte(String startGte) {
         this.startGte = startGte;
         return this;
@@ -112,6 +123,7 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start:lte")
     public String startLte;
+
     public GetCallLogsRequest withStartLte(String startLte) {
         this.startLte = startLte;
         return this;
@@ -122,9 +134,17 @@ public class GetCallLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public String to;
+
     public GetCallLogsRequest withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public GetCallLogsRequest(@JsonProperty("account_id") String accountId, @JsonProperty("page") Double page, @JsonProperty("page_size") Double pageSize, @JsonProperty("start:gte") String startGte, @JsonProperty("start:lte") String startLte) {
+        this.accountId = accountId;
+        this.page = page;
+        this.pageSize = pageSize;
+        this.startGte = startGte;
+        this.startLte = startLte;
+  }
 }

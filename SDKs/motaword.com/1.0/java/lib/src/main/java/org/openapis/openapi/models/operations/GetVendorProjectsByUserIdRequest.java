@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVendorProjectsByUserIdRequest {
@@ -12,6 +13,7 @@ public class GetVendorProjectsByUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed")
     public Boolean completed;
+
     public GetVendorProjectsByUserIdRequest withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -22,6 +24,7 @@ public class GetVendorProjectsByUserIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=joined")
     public Boolean joined;
+
     public GetVendorProjectsByUserIdRequest withJoined(Boolean joined) {
         this.joined = joined;
         return this;
@@ -29,6 +32,7 @@ public class GetVendorProjectsByUserIdRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetVendorProjectsByUserIdRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -36,6 +40,7 @@ public class GetVendorProjectsByUserIdRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetVendorProjectsByUserIdRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -46,9 +51,13 @@ public class GetVendorProjectsByUserIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public GetVendorProjectsByUserIdRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetVendorProjectsByUserIdRequest(@JsonProperty("userId") Long userId) {
+        this.userId = userId;
+  }
 }

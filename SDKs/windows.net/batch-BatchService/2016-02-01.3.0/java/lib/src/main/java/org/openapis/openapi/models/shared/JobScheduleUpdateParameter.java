@@ -17,6 +17,7 @@ public class JobScheduleUpdateParameter {
      */
     @JsonProperty("jobSpecification")
     public JobSpecification jobSpecification;
+
     public JobScheduleUpdateParameter withJobSpecification(JobSpecification jobSpecification) {
         this.jobSpecification = jobSpecification;
         return this;
@@ -28,6 +29,7 @@ public class JobScheduleUpdateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public MetadataItem[] metadata;
+
     public JobScheduleUpdateParameter withMetadata(MetadataItem[] metadata) {
         this.metadata = metadata;
         return this;
@@ -38,9 +40,14 @@ public class JobScheduleUpdateParameter {
      */
     @JsonProperty("schedule")
     public Schedule schedule;
+
     public JobScheduleUpdateParameter withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public JobScheduleUpdateParameter(@JsonProperty("jobSpecification") JobSpecification jobSpecification, @JsonProperty("schedule") Schedule schedule) {
+        this.jobSpecification = jobSpecification;
+        this.schedule = schedule;
+  }
 }

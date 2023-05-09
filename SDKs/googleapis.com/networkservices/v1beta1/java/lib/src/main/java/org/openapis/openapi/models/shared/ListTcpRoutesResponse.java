@@ -18,6 +18,7 @@ public class ListTcpRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTcpRoutesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTcpRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tcpRoutes")
     public TcpRoute[] tcpRoutes;
+
     public ListTcpRoutesResponse withTcpRoutes(TcpRoute[] tcpRoutes) {
         this.tcpRoutes = tcpRoutes;
         return this;
     }
     
+    public ListTcpRoutesResponse(){}
 }

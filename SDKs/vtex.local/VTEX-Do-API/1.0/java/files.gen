@@ -56,4 +56,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Target.java
 lib/src/main/java/org/openapis/openapi/models/shared/Follower.java
 lib/src/main/java/org/openapis/openapi/models/shared/Assignee.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/note/README.md
+docs/task/README.md
 USAGE.md

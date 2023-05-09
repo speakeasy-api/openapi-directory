@@ -12,6 +12,7 @@ public class ListAccountAssignmentDeletionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public OperationStatusFilter filter;
+
     public ListAccountAssignmentDeletionStatusRequest withFilter(OperationStatusFilter filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class ListAccountAssignmentDeletionStatusRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ListAccountAssignmentDeletionStatusRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -27,6 +29,7 @@ public class ListAccountAssignmentDeletionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAccountAssignmentDeletionStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListAccountAssignmentDeletionStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountAssignmentDeletionStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccountAssignmentDeletionStatusRequest(@JsonProperty("InstanceArn") String instanceArn) {
+        this.instanceArn = instanceArn;
+  }
 }

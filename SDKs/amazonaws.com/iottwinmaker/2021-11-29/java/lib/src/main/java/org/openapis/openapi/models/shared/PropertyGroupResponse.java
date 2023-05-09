@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PropertyGroupResponse {
     @JsonProperty("groupType")
     public GroupTypeEnum groupType;
+
     public PropertyGroupResponse withGroupType(GroupTypeEnum groupType) {
         this.groupType = groupType;
         return this;
@@ -19,6 +20,7 @@ public class PropertyGroupResponse {
     
     @JsonProperty("isInherited")
     public Boolean isInherited;
+
     public PropertyGroupResponse withIsInherited(Boolean isInherited) {
         this.isInherited = isInherited;
         return this;
@@ -26,9 +28,15 @@ public class PropertyGroupResponse {
     
     @JsonProperty("propertyNames")
     public String[] propertyNames;
+
     public PropertyGroupResponse withPropertyNames(String[] propertyNames) {
         this.propertyNames = propertyNames;
         return this;
     }
     
+    public PropertyGroupResponse(@JsonProperty("groupType") GroupTypeEnum groupType, @JsonProperty("isInherited") Boolean isInherited, @JsonProperty("propertyNames") String[] propertyNames) {
+        this.groupType = groupType;
+        this.isInherited = isInherited;
+        this.propertyNames = propertyNames;
+  }
 }

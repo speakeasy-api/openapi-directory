@@ -12,6 +12,7 @@ public class InTotoProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builderConfig")
     public BuilderConfig builderConfig;
+
     public InTotoProvenance withBuilderConfig(BuilderConfig builderConfig) {
         this.builderConfig = builderConfig;
         return this;
@@ -23,6 +24,7 @@ public class InTotoProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("materials")
     public String[] materials;
+
     public InTotoProvenance withMaterials(String[] materials) {
         this.materials = materials;
         return this;
@@ -34,6 +36,7 @@ public class InTotoProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata metadata;
+
     public InTotoProvenance withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -45,9 +48,11 @@ public class InTotoProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipe")
     public Recipe recipe;
+
     public InTotoProvenance withRecipe(Recipe recipe) {
         this.recipe = recipe;
         return this;
     }
     
+    public InTotoProvenance(){}
 }

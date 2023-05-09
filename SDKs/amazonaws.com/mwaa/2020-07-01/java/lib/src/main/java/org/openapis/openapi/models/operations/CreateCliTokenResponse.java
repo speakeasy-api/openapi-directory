@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCliTokenResponse {
     
     public String contentType;
+
     public CreateCliTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCliTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCliTokenResponse createCliTokenResponse;
+
     public CreateCliTokenResponse withCreateCliTokenResponse(org.openapis.openapi.models.shared.CreateCliTokenResponse createCliTokenResponse) {
         this.createCliTokenResponse = createCliTokenResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCliTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateCliTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class CreateCliTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateCliTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateCliTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCliTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCliTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

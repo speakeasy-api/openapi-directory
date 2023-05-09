@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteGroupPolicyRequest {
     
     public String groupName;
+
     public DeleteGroupPolicyRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteGroupPolicyRequest {
     
     
     public String policyName;
+
     public DeleteGroupPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public DeleteGroupPolicyRequest(@JsonProperty("GroupName") String groupName, @JsonProperty("PolicyName") String policyName) {
+        this.groupName = groupName;
+        this.policyName = policyName;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportFilterHeader {
     @JsonProperty("links")
     public ReportFilterHeaderLinks links;
+
     public ReportFilterHeader withLinks(ReportFilterHeaderLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class ReportFilterHeader {
      */
     @JsonProperty("reportFilterId")
     public String reportFilterId;
+
     public ReportFilterHeader withReportFilterId(String reportFilterId) {
         this.reportFilterId = reportFilterId;
         return this;
@@ -29,6 +31,7 @@ public class ReportFilterHeader {
      */
     @JsonProperty("reportFilterName")
     public String reportFilterName;
+
     public ReportFilterHeader withReportFilterName(String reportFilterName) {
         this.reportFilterName = reportFilterName;
         return this;
@@ -39,9 +42,16 @@ public class ReportFilterHeader {
      */
     @JsonProperty("reportType")
     public ReportTypeEnum reportType;
+
     public ReportFilterHeader withReportType(ReportTypeEnum reportType) {
         this.reportType = reportType;
         return this;
     }
     
+    public ReportFilterHeader(@JsonProperty("links") ReportFilterHeaderLinks links, @JsonProperty("reportFilterId") String reportFilterId, @JsonProperty("reportFilterName") String reportFilterName, @JsonProperty("reportType") ReportTypeEnum reportType) {
+        this.links = links;
+        this.reportFilterId = reportFilterId;
+        this.reportFilterName = reportFilterName;
+        this.reportType = reportType;
+  }
 }

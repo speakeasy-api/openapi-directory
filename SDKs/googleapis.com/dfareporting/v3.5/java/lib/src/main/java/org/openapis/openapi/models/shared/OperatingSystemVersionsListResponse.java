@@ -18,6 +18,7 @@ public class OperatingSystemVersionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OperatingSystemVersionsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class OperatingSystemVersionsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystemVersions")
     public OperatingSystemVersion[] operatingSystemVersions;
+
     public OperatingSystemVersionsListResponse withOperatingSystemVersions(OperatingSystemVersion[] operatingSystemVersions) {
         this.operatingSystemVersions = operatingSystemVersions;
         return this;
     }
     
+    public OperatingSystemVersionsListResponse(){}
 }

@@ -12,6 +12,7 @@ public class PutFeedbackRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public PutFeedbackRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -22,9 +23,14 @@ public class PutFeedbackRequestBody {
      */
     @JsonProperty("AnomalyGroupTimeSeriesFeedback")
     public PutFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback anomalyGroupTimeSeriesFeedback;
+
     public PutFeedbackRequestBody withAnomalyGroupTimeSeriesFeedback(PutFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback anomalyGroupTimeSeriesFeedback) {
         this.anomalyGroupTimeSeriesFeedback = anomalyGroupTimeSeriesFeedback;
         return this;
     }
     
+    public PutFeedbackRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn, @JsonProperty("AnomalyGroupTimeSeriesFeedback") PutFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback anomalyGroupTimeSeriesFeedback) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+        this.anomalyGroupTimeSeriesFeedback = anomalyGroupTimeSeriesFeedback;
+  }
 }

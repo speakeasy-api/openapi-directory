@@ -18,9 +18,11 @@ public class FilterExpressionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expressions")
     public FilterExpression[] expressions;
+
     public FilterExpressionList withExpressions(FilterExpression[] expressions) {
         this.expressions = expressions;
         return this;
     }
     
+    public FilterExpressionList(){}
 }

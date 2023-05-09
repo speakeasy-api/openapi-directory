@@ -20,6 +20,7 @@ public class DescribeResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BookingOptions")
     public BookingOptions bookingOptions;
+
     public DescribeResourceResponse withBookingOptions(BookingOptions bookingOptions) {
         this.bookingOptions = bookingOptions;
         return this;
@@ -30,6 +31,7 @@ public class DescribeResourceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DisabledDate")
     public OffsetDateTime disabledDate;
+
     public DescribeResourceResponse withDisabledDate(OffsetDateTime disabledDate) {
         this.disabledDate = disabledDate;
         return this;
@@ -38,6 +40,7 @@ public class DescribeResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public DescribeResourceResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -48,6 +51,7 @@ public class DescribeResourceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EnabledDate")
     public OffsetDateTime enabledDate;
+
     public DescribeResourceResponse withEnabledDate(OffsetDateTime enabledDate) {
         this.enabledDate = enabledDate;
         return this;
@@ -56,6 +60,7 @@ public class DescribeResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeResourceResponse withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class DescribeResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DescribeResourceResponse withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -72,6 +78,7 @@ public class DescribeResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public EntityStateEnum state;
+
     public DescribeResourceResponse withState(EntityStateEnum state) {
         this.state = state;
         return this;
@@ -80,9 +87,11 @@ public class DescribeResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ResourceTypeEnum type;
+
     public DescribeResourceResponse withType(ResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeResourceResponse(){}
 }

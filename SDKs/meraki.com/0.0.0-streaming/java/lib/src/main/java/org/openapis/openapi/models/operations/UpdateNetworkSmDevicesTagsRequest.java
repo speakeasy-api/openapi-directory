@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSmDevicesTagsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateNetworkSmDevicesTagsRequestBody requestBody;
+
     public UpdateNetworkSmDevicesTagsRequest withRequestBody(UpdateNetworkSmDevicesTagsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,14 @@ public class UpdateNetworkSmDevicesTagsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
     public String networkId;
+
     public UpdateNetworkSmDevicesTagsRequest withNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     
+    public UpdateNetworkSmDevicesTagsRequest(@JsonProperty("RequestBody") UpdateNetworkSmDevicesTagsRequestBody requestBody, @JsonProperty("networkId") String networkId) {
+        this.requestBody = requestBody;
+        this.networkId = networkId;
+  }
 }

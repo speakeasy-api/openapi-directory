@@ -12,6 +12,7 @@ public class GetSshKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fingerprint")
     public String fingerprint;
+
     public GetSshKeysRequest withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -22,6 +23,7 @@ public class GetSshKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetSshKeysRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -32,6 +34,7 @@ public class GetSshKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetSshKeysRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class GetSshKeysRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetSshKeysSortEnum sort;
+
     public GetSshKeysRequest withSort(GetSshKeysSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetSshKeysRequest(){}
 }

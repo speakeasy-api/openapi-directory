@@ -12,6 +12,7 @@ public class OrderLineItemProductFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Price amount;
+
     public OrderLineItemProductFee withAmount(Price amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class OrderLineItemProductFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderLineItemProductFee withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrderLineItemProductFee(){}
 }

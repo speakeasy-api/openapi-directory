@@ -15,6 +15,7 @@ public class EventWorkingLocationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customLocation")
     public EventWorkingLocationPropertiesCustomLocation customLocation;
+
     public EventWorkingLocationProperties withCustomLocation(EventWorkingLocationPropertiesCustomLocation customLocation) {
         this.customLocation = customLocation;
         return this;
@@ -26,6 +27,7 @@ public class EventWorkingLocationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeOffice")
     public Object homeOffice;
+
     public EventWorkingLocationProperties withHomeOffice(Object homeOffice) {
         this.homeOffice = homeOffice;
         return this;
@@ -37,9 +39,11 @@ public class EventWorkingLocationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("officeLocation")
     public EventWorkingLocationPropertiesOfficeLocation officeLocation;
+
     public EventWorkingLocationProperties withOfficeLocation(EventWorkingLocationPropertiesOfficeLocation officeLocation) {
         this.officeLocation = officeLocation;
         return this;
     }
     
+    public EventWorkingLocationProperties(){}
 }

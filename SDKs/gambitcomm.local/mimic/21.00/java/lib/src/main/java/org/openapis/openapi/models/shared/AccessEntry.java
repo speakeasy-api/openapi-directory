@@ -12,6 +12,7 @@ public class AccessEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_mask")
     public String accessMask;
+
     public AccessEntry withAccessMask(String accessMask) {
         this.accessMask = accessMask;
         return this;
@@ -20,6 +21,7 @@ public class AccessEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent_range")
     public String agentRange;
+
     public AccessEntry withAgentRange(String agentRange) {
         this.agentRange = agentRange;
         return this;
@@ -28,9 +30,11 @@ public class AccessEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public AccessEntry withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public AccessEntry(){}
 }

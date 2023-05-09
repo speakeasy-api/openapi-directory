@@ -56,4 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleMapsPlayablelocations
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleMapsPlayablelocationsV3SampleSpacingOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleMapsPlayablelocationsV3SampleAreaFilter.java
+docs/sdk/README.md
+docs/v3/README.md
 USAGE.md

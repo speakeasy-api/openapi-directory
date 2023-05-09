@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeEventsMessage {
     
     public Long duration;
+
     public DescribeEventsMessage withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEventsMessage {
     
     
     public OffsetDateTime endTime;
+
     public DescribeEventsMessage withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeEventsMessage {
     
     
     public String[] eventCategories;
+
     public DescribeEventsMessage withEventCategories(String[] eventCategories) {
         this.eventCategories = eventCategories;
         return this;
@@ -33,6 +36,7 @@ public class DescribeEventsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeEventsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -40,6 +44,7 @@ public class DescribeEventsMessage {
     
     
     public String marker;
+
     public DescribeEventsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -47,6 +52,7 @@ public class DescribeEventsMessage {
     
     
     public Long maxRecords;
+
     public DescribeEventsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -54,6 +60,7 @@ public class DescribeEventsMessage {
     
     
     public String sourceIdentifier;
+
     public DescribeEventsMessage withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
@@ -61,6 +68,7 @@ public class DescribeEventsMessage {
     
     
     public SourceTypeEnum sourceType;
+
     public DescribeEventsMessage withSourceType(SourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -68,9 +76,11 @@ public class DescribeEventsMessage {
     
     
     public OffsetDateTime startTime;
+
     public DescribeEventsMessage withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeEventsMessage(){}
 }

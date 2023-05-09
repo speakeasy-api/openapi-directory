@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DissociateEntityFromThingResponse {
     
     public String contentType;
+
     public DissociateEntityFromThingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DissociateEntityFromThingResponse {
      */
     
     public java.util.Map<String, Object> dissociateEntityFromThingResponse;
+
     public DissociateEntityFromThingResponse withDissociateEntityFromThingResponse(java.util.Map<String, Object> dissociateEntityFromThingResponse) {
         this.dissociateEntityFromThingResponse = dissociateEntityFromThingResponse;
         return this;
@@ -29,6 +32,7 @@ public class DissociateEntityFromThingResponse {
      */
     
     public Object internalFailureException;
+
     public DissociateEntityFromThingResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DissociateEntityFromThingResponse {
      */
     
     public Object invalidRequestException;
+
     public DissociateEntityFromThingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DissociateEntityFromThingResponse {
     
     
     public Integer statusCode;
+
     public DissociateEntityFromThingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DissociateEntityFromThingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DissociateEntityFromThingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DissociateEntityFromThingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DissociateEntityFromThingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DissociateEntityFromThingResponse {
      */
     
     public Object throttlingException;
+
     public DissociateEntityFromThingResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DissociateEntityFromThingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

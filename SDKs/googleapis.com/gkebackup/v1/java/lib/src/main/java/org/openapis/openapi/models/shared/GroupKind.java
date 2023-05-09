@@ -18,6 +18,7 @@ public class GroupKind {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroup")
     public String resourceGroup;
+
     public GroupKind withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -29,9 +30,11 @@ public class GroupKind {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceKind")
     public String resourceKind;
+
     public GroupKind withResourceKind(String resourceKind) {
         this.resourceKind = resourceKind;
         return this;
     }
     
+    public GroupKind(){}
 }

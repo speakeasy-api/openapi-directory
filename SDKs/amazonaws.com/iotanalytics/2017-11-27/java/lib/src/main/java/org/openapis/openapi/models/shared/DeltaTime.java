@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeltaTime {
     @JsonProperty("offsetSeconds")
     public Long offsetSeconds;
+
     public DeltaTime withOffsetSeconds(Long offsetSeconds) {
         this.offsetSeconds = offsetSeconds;
         return this;
@@ -19,9 +20,14 @@ public class DeltaTime {
     
     @JsonProperty("timeExpression")
     public String timeExpression;
+
     public DeltaTime withTimeExpression(String timeExpression) {
         this.timeExpression = timeExpression;
         return this;
     }
     
+    public DeltaTime(@JsonProperty("offsetSeconds") Long offsetSeconds, @JsonProperty("timeExpression") String timeExpression) {
+        this.offsetSeconds = offsetSeconds;
+        this.timeExpression = timeExpression;
+  }
 }

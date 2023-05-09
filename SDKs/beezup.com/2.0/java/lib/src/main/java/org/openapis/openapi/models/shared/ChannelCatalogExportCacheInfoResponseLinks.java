@@ -12,6 +12,7 @@ public class ChannelCatalogExportCacheInfoResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clear")
     public LinksClearChannelCatalogExportationCacheLink clear;
+
     public ChannelCatalogExportCacheInfoResponseLinks withClear(LinksClearChannelCatalogExportationCacheLink clear) {
         this.clear = clear;
         return this;
@@ -19,9 +20,13 @@ public class ChannelCatalogExportCacheInfoResponseLinks {
     
     @JsonProperty("self")
     public LinksGetChannelCatalogExportationCacheInfoLink self;
+
     public ChannelCatalogExportCacheInfoResponseLinks withSelf(LinksGetChannelCatalogExportationCacheInfoLink self) {
         this.self = self;
         return this;
     }
     
+    public ChannelCatalogExportCacheInfoResponseLinks(@JsonProperty("self") LinksGetChannelCatalogExportationCacheInfoLink self) {
+        this.self = self;
+  }
 }

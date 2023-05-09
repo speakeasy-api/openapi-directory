@@ -18,6 +18,7 @@ public class DescribeReportDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeReportDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +27,11 @@ public class DescribeReportDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportDefinitions")
     public ReportDefinition[] reportDefinitions;
+
     public DescribeReportDefinitionsResponse withReportDefinitions(ReportDefinition[] reportDefinitions) {
         this.reportDefinitions = reportDefinitions;
         return this;
     }
     
+    public DescribeReportDefinitionsResponse(){}
 }

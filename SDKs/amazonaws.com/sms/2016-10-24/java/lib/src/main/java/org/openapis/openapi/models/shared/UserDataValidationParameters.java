@@ -15,6 +15,7 @@ public class UserDataValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptType")
     public ScriptTypeEnum scriptType;
+
     public UserDataValidationParameters withScriptType(ScriptTypeEnum scriptType) {
         this.scriptType = scriptType;
         return this;
@@ -23,9 +24,11 @@ public class UserDataValidationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public UserDataValidationParameters withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public UserDataValidationParameters(){}
 }

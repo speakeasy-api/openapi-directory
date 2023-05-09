@@ -15,9 +15,11 @@ public class DescribeDatasetGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroup")
     public DatasetGroup datasetGroup;
+
     public DescribeDatasetGroupResponse withDatasetGroup(DatasetGroup datasetGroup) {
         this.datasetGroup = datasetGroup;
         return this;
     }
     
+    public DescribeDatasetGroupResponse(){}
 }

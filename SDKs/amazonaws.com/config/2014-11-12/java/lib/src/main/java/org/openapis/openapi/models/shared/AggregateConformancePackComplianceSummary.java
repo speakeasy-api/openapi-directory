@@ -15,6 +15,7 @@ public class AggregateConformancePackComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceSummary")
     public AggregateConformancePackComplianceCount complianceSummary;
+
     public AggregateConformancePackComplianceSummary withComplianceSummary(AggregateConformancePackComplianceCount complianceSummary) {
         this.complianceSummary = complianceSummary;
         return this;
@@ -23,9 +24,11 @@ public class AggregateConformancePackComplianceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AggregateConformancePackComplianceSummary withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public AggregateConformancePackComplianceSummary(){}
 }

@@ -15,6 +15,7 @@ public class DescribeConfigurationSetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSets")
     public ConfigurationSetInformation[] configurationSets;
+
     public DescribeConfigurationSetsResult withConfigurationSets(ConfigurationSetInformation[] configurationSets) {
         this.configurationSets = configurationSets;
         return this;
@@ -23,9 +24,11 @@ public class DescribeConfigurationSetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigurationSetsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeConfigurationSetsResult(){}
 }

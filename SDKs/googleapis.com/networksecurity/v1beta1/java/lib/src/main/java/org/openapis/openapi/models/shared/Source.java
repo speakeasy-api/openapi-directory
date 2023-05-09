@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipBlocks")
     public String[] ipBlocks;
+
     public Source withIpBlocks(String[] ipBlocks) {
         this.ipBlocks = ipBlocks;
         return this;
@@ -29,9 +30,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principals")
     public String[] principals;
+
     public Source withPrincipals(String[] principals) {
         this.principals = principals;
         return this;
     }
     
+    public Source(){}
 }

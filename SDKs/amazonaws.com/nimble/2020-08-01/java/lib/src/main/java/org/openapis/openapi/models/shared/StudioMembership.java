@@ -15,6 +15,7 @@ public class StudioMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityStoreId")
     public String identityStoreId;
+
     public StudioMembership withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -23,6 +24,7 @@ public class StudioMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persona")
     public StudioPersonaEnum persona;
+
     public StudioMembership withPersona(StudioPersonaEnum persona) {
         this.persona = persona;
         return this;
@@ -31,6 +33,7 @@ public class StudioMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalId")
     public String principalId;
+
     public StudioMembership withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -39,9 +42,11 @@ public class StudioMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sid")
     public String sid;
+
     public StudioMembership withSid(String sid) {
         this.sid = sid;
         return this;
     }
     
+    public StudioMembership(){}
 }

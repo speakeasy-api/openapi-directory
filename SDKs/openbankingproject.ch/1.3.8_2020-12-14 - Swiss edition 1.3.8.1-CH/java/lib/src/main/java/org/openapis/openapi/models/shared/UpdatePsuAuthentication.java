@@ -18,9 +18,13 @@ public class UpdatePsuAuthentication {
      */
     @JsonProperty("psuData")
     public PsuData psuData;
+
     public UpdatePsuAuthentication withPsuData(PsuData psuData) {
         this.psuData = psuData;
         return this;
     }
     
+    public UpdatePsuAuthentication(@JsonProperty("psuData") PsuData psuData) {
+        this.psuData = psuData;
+  }
 }

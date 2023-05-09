@@ -18,6 +18,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Error withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public Error withData(String data) {
         this.data = data;
         return this;
@@ -40,6 +42,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, Object>[] items;
+
     public Error withItems(java.util.Map<String, Object>[] items) {
         this.items = items;
         return this;
@@ -50,6 +53,7 @@ public class Error {
      */
     @JsonProperty("message")
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
@@ -61,9 +65,13 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Error withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public Error(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

@@ -15,6 +15,7 @@ public class ListZonalShiftsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ZonalShiftSummary[] items;
+
     public ListZonalShiftsResponse withItems(ZonalShiftSummary[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListZonalShiftsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListZonalShiftsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListZonalShiftsResponse(){}
 }

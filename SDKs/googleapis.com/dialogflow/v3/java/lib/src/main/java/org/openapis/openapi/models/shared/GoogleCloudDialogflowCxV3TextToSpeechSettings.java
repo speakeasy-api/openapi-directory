@@ -9,18 +9,20 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDialogflowCxV3TextToSpeechSettings - Settings related to speech generating.
+ * GoogleCloudDialogflowCxV3TextToSpeechSettings - Settings related to speech synthesizing.
  */
 public class GoogleCloudDialogflowCxV3TextToSpeechSettings {
     /**
-     * Configuration of how speech should be synthesized, mapping from language (https://dialogflow.com/docs/reference/language) to SynthesizeSpeechConfig.
+     * Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/cx/docs/reference/language) to SynthesizeSpeechConfig. These settings affect: - The synthesize configuration used in [phone gateway](https://cloud.google.com/dialogflow/cx/docs/concept/integration/phone-gateway). - You no longer need to specify OutputAudioConfig.synthesize_speech_config when invoking API calls. Your agent will use the pre-configured options for speech synthesizing.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synthesizeSpeechConfigs")
     public java.util.Map<String, GoogleCloudDialogflowCxV3SynthesizeSpeechConfig> synthesizeSpeechConfigs;
+
     public GoogleCloudDialogflowCxV3TextToSpeechSettings withSynthesizeSpeechConfigs(java.util.Map<String, GoogleCloudDialogflowCxV3SynthesizeSpeechConfig> synthesizeSpeechConfigs) {
         this.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3TextToSpeechSettings(){}
 }

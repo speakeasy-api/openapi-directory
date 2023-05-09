@@ -23,6 +23,7 @@ public class TrialComponentSimpleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public TrialComponentSimpleSummary withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -33,6 +34,7 @@ public class TrialComponentSimpleSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TrialComponentSimpleSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -41,6 +43,7 @@ public class TrialComponentSimpleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentArn")
     public String trialComponentArn;
+
     public TrialComponentSimpleSummary withTrialComponentArn(String trialComponentArn) {
         this.trialComponentArn = trialComponentArn;
         return this;
@@ -49,6 +52,7 @@ public class TrialComponentSimpleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public TrialComponentSimpleSummary withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
@@ -60,9 +64,11 @@ public class TrialComponentSimpleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentSource")
     public TrialComponentSource trialComponentSource;
+
     public TrialComponentSimpleSummary withTrialComponentSource(TrialComponentSource trialComponentSource) {
         this.trialComponentSource = trialComponentSource;
         return this;
     }
     
+    public TrialComponentSimpleSummary(){}
 }

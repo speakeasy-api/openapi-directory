@@ -59,12 +59,10 @@ public class SecretScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretScanningGetAlertResponse res = new org.openapis.openapi.models.operations.SecretScanningGetAlertResponse() {{
+        org.openapis.openapi.models.operations.SecretScanningGetAlertResponse res = new org.openapis.openapi.models.operations.SecretScanningGetAlertResponse(contentType, httpRes.statusCode()) {{
             secretScanningAlert = null;
             secretScanningGetAlert503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,12 +115,10 @@ public class SecretScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoResponse res = new org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoResponse() {{
+        org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoResponse res = new org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoResponse(contentType, httpRes.statusCode()) {{
             secretScanningAlerts = null;
             secretScanningListAlertsForRepo503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,12 +170,10 @@ public class SecretScanning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecretScanningUpdateAlertResponse res = new org.openapis.openapi.models.operations.SecretScanningUpdateAlertResponse() {{
+        org.openapis.openapi.models.operations.SecretScanningUpdateAlertResponse res = new org.openapis.openapi.models.operations.SecretScanningUpdateAlertResponse(contentType, httpRes.statusCode()) {{
             secretScanningAlert = null;
             secretScanningUpdateAlert503ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

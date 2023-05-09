@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NameTypeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=properNoun")
     public String properNoun;
+
     public NameTypeRequest withProperNoun(String properNoun) {
         this.properNoun = properNoun;
         return this;
     }
     
+    public NameTypeRequest(@JsonProperty("properNoun") String properNoun) {
+        this.properNoun = properNoun;
+  }
 }

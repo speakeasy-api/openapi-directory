@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvokeEndpointRequest {
@@ -12,6 +13,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InvokeEndpointRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InvokeEndpointRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EndpointName")
     public String endpointName;
+
     public InvokeEndpointRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -39,6 +43,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public InvokeEndpointRequestBody requestBody;
+
     public InvokeEndpointRequest withRequestBody(InvokeEndpointRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -46,6 +51,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public InvokeEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -53,6 +59,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public InvokeEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -60,6 +67,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public InvokeEndpointRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -67,6 +75,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public InvokeEndpointRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -74,6 +83,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public InvokeEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -81,6 +91,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public InvokeEndpointRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -88,6 +99,7 @@ public class InvokeEndpointRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public InvokeEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -98,6 +110,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Custom-Attributes")
     public String xAmznSageMakerCustomAttributes;
+
     public InvokeEndpointRequest withXAmznSageMakerCustomAttributes(String xAmznSageMakerCustomAttributes) {
         this.xAmznSageMakerCustomAttributes = xAmznSageMakerCustomAttributes;
         return this;
@@ -108,6 +121,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Enable-Explanations")
     public String xAmznSageMakerEnableExplanations;
+
     public InvokeEndpointRequest withXAmznSageMakerEnableExplanations(String xAmznSageMakerEnableExplanations) {
         this.xAmznSageMakerEnableExplanations = xAmznSageMakerEnableExplanations;
         return this;
@@ -118,6 +132,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Inference-Id")
     public String xAmznSageMakerInferenceId;
+
     public InvokeEndpointRequest withXAmznSageMakerInferenceId(String xAmznSageMakerInferenceId) {
         this.xAmznSageMakerInferenceId = xAmznSageMakerInferenceId;
         return this;
@@ -128,6 +143,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Target-Container-Hostname")
     public String xAmznSageMakerTargetContainerHostname;
+
     public InvokeEndpointRequest withXAmznSageMakerTargetContainerHostname(String xAmznSageMakerTargetContainerHostname) {
         this.xAmznSageMakerTargetContainerHostname = xAmznSageMakerTargetContainerHostname;
         return this;
@@ -138,6 +154,7 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Target-Model")
     public String xAmznSageMakerTargetModel;
+
     public InvokeEndpointRequest withXAmznSageMakerTargetModel(String xAmznSageMakerTargetModel) {
         this.xAmznSageMakerTargetModel = xAmznSageMakerTargetModel;
         return this;
@@ -148,9 +165,14 @@ public class InvokeEndpointRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Target-Variant")
     public String xAmznSageMakerTargetVariant;
+
     public InvokeEndpointRequest withXAmznSageMakerTargetVariant(String xAmznSageMakerTargetVariant) {
         this.xAmznSageMakerTargetVariant = xAmznSageMakerTargetVariant;
         return this;
     }
     
+    public InvokeEndpointRequest(@JsonProperty("EndpointName") String endpointName, @JsonProperty("RequestBody") InvokeEndpointRequestBody requestBody) {
+        this.endpointName = endpointName;
+        this.requestBody = requestBody;
+  }
 }

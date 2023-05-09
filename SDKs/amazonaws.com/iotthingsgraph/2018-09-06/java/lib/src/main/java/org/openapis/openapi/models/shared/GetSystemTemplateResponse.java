@@ -15,9 +15,11 @@ public class GetSystemTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public SystemTemplateDescription description;
+
     public GetSystemTemplateResponse withDescription(SystemTemplateDescription description) {
         this.description = description;
         return this;
     }
     
+    public GetSystemTemplateResponse(){}
 }

@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyTransitGatewayVpcAttachmentOptions {
     @SpeakeasyMetadata("queryParam:name=ApplianceModeSupport")
     public org.openapis.openapi.models.shared.ApplianceModeSupportValueEnum applianceModeSupport;
+
     public GETModifyTransitGatewayVpcAttachmentOptions withApplianceModeSupport(org.openapis.openapi.models.shared.ApplianceModeSupportValueEnum applianceModeSupport) {
         this.applianceModeSupport = applianceModeSupport;
         return this;
@@ -19,6 +20,7 @@ public class GETModifyTransitGatewayVpcAttachmentOptions {
     
     @SpeakeasyMetadata("queryParam:name=DnsSupport")
     public org.openapis.openapi.models.shared.DnsSupportValueEnum dnsSupport;
+
     public GETModifyTransitGatewayVpcAttachmentOptions withDnsSupport(org.openapis.openapi.models.shared.DnsSupportValueEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -26,9 +28,11 @@ public class GETModifyTransitGatewayVpcAttachmentOptions {
     
     @SpeakeasyMetadata("queryParam:name=Ipv6Support")
     public org.openapis.openapi.models.shared.Ipv6SupportValueEnum ipv6Support;
+
     public GETModifyTransitGatewayVpcAttachmentOptions withIpv6Support(org.openapis.openapi.models.shared.Ipv6SupportValueEnum ipv6Support) {
         this.ipv6Support = ipv6Support;
         return this;
     }
     
+    public GETModifyTransitGatewayVpcAttachmentOptions(){}
 }

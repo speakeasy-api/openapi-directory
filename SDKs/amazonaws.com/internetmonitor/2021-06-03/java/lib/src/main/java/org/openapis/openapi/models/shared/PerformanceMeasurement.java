@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PerformanceMeasurement - &lt;p&gt;Measurements about the performance for your application on the internet calculated by Amazon CloudWatch Internet Monitor. Amazon Web Services has substantial historical data about internet performance and availability between Amazon Web Services services and different network providers and geographies. By applying statistical analysis to the data, Internet Monitor can detect when the performance and availability for your application has dropped, compared to an estimated baseline that's already calculated. To make it easier to see those drops, we report that information to you in the form of health scores: a performance score and an availability score.&lt;/p&gt; &lt;p&gt;Performance in Internet Monitor represents the estimated percentage of traffic that is not seeing a performance drop. For example, a performance score of 99% for an end user and service location pair is equivalent to 1% of the traffic experiencing a performance drop for that pair.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"&gt; How Internet Monitor calculates performance and availability scores&lt;/a&gt; in the Amazon CloudWatch Internet Monitor section of the Amazon CloudWatch User Guide.&lt;/p&gt;
+ * PerformanceMeasurement - &lt;p&gt;Measurements about the performance for your application on the internet calculated by Amazon CloudWatch Internet Monitor. Amazon Web Services has substantial historical data about internet performance and availability between Amazon Web Services services and different network providers and geographies. By applying statistical analysis to the data, Internet Monitor can detect when the performance and availability for your application has dropped, compared to an estimated baseline that's already calculated. To make it easier to see those drops, we report that information to you in the form of health scores: a performance score and an availability score.&lt;/p&gt; &lt;p&gt;Performance in Internet Monitor represents the estimated percentage of traffic that is not seeing a performance drop. For example, a performance score of 99% for an end user and service location pair is equivalent to 1% of the traffic experiencing a performance drop for that pair.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-IM-inside-internet-monitor.html#IMExperienceScores"&gt;How Internet Monitor calculates performance and availability scores&lt;/a&gt; in the Amazon CloudWatch Internet Monitor section of the &lt;i&gt;CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt;
  */
 public class PerformanceMeasurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperienceScore")
     public Double experienceScore;
+
     public PerformanceMeasurement withExperienceScore(Double experienceScore) {
         this.experienceScore = experienceScore;
         return this;
@@ -23,6 +24,7 @@ public class PerformanceMeasurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PercentOfClientLocationImpacted")
     public Double percentOfClientLocationImpacted;
+
     public PerformanceMeasurement withPercentOfClientLocationImpacted(Double percentOfClientLocationImpacted) {
         this.percentOfClientLocationImpacted = percentOfClientLocationImpacted;
         return this;
@@ -31,6 +33,7 @@ public class PerformanceMeasurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PercentOfTotalTrafficImpacted")
     public Double percentOfTotalTrafficImpacted;
+
     public PerformanceMeasurement withPercentOfTotalTrafficImpacted(Double percentOfTotalTrafficImpacted) {
         this.percentOfTotalTrafficImpacted = percentOfTotalTrafficImpacted;
         return this;
@@ -39,9 +42,11 @@ public class PerformanceMeasurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoundTripTime")
     public RoundTripTime roundTripTime;
+
     public PerformanceMeasurement withRoundTripTime(RoundTripTime roundTripTime) {
         this.roundTripTime = roundTripTime;
         return this;
     }
     
+    public PerformanceMeasurement(){}
 }

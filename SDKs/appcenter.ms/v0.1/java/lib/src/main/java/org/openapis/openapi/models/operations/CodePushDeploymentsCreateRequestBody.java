@@ -15,6 +15,7 @@ public class CodePushDeploymentsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CodePushDeploymentsCreateRequestBody withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class CodePushDeploymentsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_release")
     public CodePushDeploymentsCreateRequestBodyLatestRelease latestRelease;
+
     public CodePushDeploymentsCreateRequestBody withLatestRelease(CodePushDeploymentsCreateRequestBodyLatestRelease latestRelease) {
         this.latestRelease = latestRelease;
         return this;
@@ -30,9 +32,13 @@ public class CodePushDeploymentsCreateRequestBody {
     
     @JsonProperty("name")
     public String name;
+
     public CodePushDeploymentsCreateRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CodePushDeploymentsCreateRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

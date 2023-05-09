@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBulkInventoryRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public UpdateBulkInventoryRequestBody requestBody;
+
     public UpdateBulkInventoryRequest withRequestBody(UpdateBulkInventoryRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBulkInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
     public String wmConsumerChannelType;
+
     public UpdateBulkInventoryRequest withWmConsumerChannelType(String wmConsumerChannelType) {
         this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBulkInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
     public String wmQosCorrelationId;
+
     public UpdateBulkInventoryRequest withWmQosCorrelationId(String wmQosCorrelationId) {
         this.wmQosCorrelationId = wmQosCorrelationId;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBulkInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
     public String wmSecAccessToken;
+
     public UpdateBulkInventoryRequest withWmSecAccessToken(String wmSecAccessToken) {
         this.wmSecAccessToken = wmSecAccessToken;
         return this;
@@ -49,6 +54,7 @@ public class UpdateBulkInventoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
     public String wmSvcName;
+
     public UpdateBulkInventoryRequest withWmSvcName(String wmSvcName) {
         this.wmSvcName = wmSvcName;
         return this;
@@ -59,6 +65,7 @@ public class UpdateBulkInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feedType")
     public UpdateBulkInventoryFeedTypeEnum feedType;
+
     public UpdateBulkInventoryRequest withFeedType(UpdateBulkInventoryFeedTypeEnum feedType) {
         this.feedType = feedType;
         return this;
@@ -69,9 +76,16 @@ public class UpdateBulkInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shipNode")
     public String shipNode;
+
     public UpdateBulkInventoryRequest withShipNode(String shipNode) {
         this.shipNode = shipNode;
         return this;
     }
     
+    public UpdateBulkInventoryRequest(@JsonProperty("WM_QOS.CORRELATION_ID") String wmQosCorrelationId, @JsonProperty("WM_SEC.ACCESS_TOKEN") String wmSecAccessToken, @JsonProperty("WM_SVC.NAME") String wmSvcName, @JsonProperty("feedType") UpdateBulkInventoryFeedTypeEnum feedType) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        this.wmSecAccessToken = wmSecAccessToken;
+        this.wmSvcName = wmSvcName;
+        this.feedType = feedType;
+  }
 }

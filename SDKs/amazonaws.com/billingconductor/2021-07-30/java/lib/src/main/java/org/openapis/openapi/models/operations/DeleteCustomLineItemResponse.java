@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomLineItemResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomLineItemResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteCustomLineItemResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCustomLineItemResponse {
      */
     
     public Object conflictException;
+
     public DeleteCustomLineItemResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomLineItemResponse {
     
     
     public String contentType;
+
     public DeleteCustomLineItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomLineItemResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCustomLineItemOutput deleteCustomLineItemOutput;
+
     public DeleteCustomLineItemResponse withDeleteCustomLineItemOutput(org.openapis.openapi.models.shared.DeleteCustomLineItemOutput deleteCustomLineItemOutput) {
         this.deleteCustomLineItemOutput = deleteCustomLineItemOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomLineItemResponse {
      */
     
     public Object internalServerException;
+
     public DeleteCustomLineItemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteCustomLineItemResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomLineItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteCustomLineItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomLineItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteCustomLineItemResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCustomLineItemResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteCustomLineItemResponse {
      */
     
     public Object validationException;
+
     public DeleteCustomLineItemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteCustomLineItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

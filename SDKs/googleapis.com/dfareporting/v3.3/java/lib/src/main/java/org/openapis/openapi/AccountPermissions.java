@@ -58,11 +58,9 @@ public class AccountPermissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetResponse(contentType, httpRes.statusCode()) {{
             accountPermission = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class AccountPermissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAccountPermissionsListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAccountPermissionsListResponse res = new org.openapis.openapi.models.operations.DfareportingAccountPermissionsListResponse(contentType, httpRes.statusCode()) {{
             accountPermissionsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

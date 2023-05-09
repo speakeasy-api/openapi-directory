@@ -18,6 +18,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor")
     public String contributor;
+
     public PieceInput withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -29,6 +30,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PieceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class PieceInput {
      */
     @JsonProperty("episodeId")
     public Long episodeId;
+
     public PieceInput withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
@@ -50,6 +53,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullDescription")
     public String fullDescription;
+
     public PieceInput withFullDescription(String fullDescription) {
         this.fullDescription = fullDescription;
         return this;
@@ -61,6 +65,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageCdDriveUri")
     public String imageCdDriveUri;
+
     public PieceInput withImageCdDriveUri(String imageCdDriveUri) {
         this.imageCdDriveUri = imageCdDriveUri;
         return this;
@@ -72,6 +77,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileName")
     public String imageFileName;
+
     public PieceInput withImageFileName(String imageFileName) {
         this.imageFileName = imageFileName;
         return this;
@@ -83,6 +89,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileSize")
     public Long imageFileSize;
+
     public PieceInput withImageFileSize(Long imageFileSize) {
         this.imageFileSize = imageFileSize;
         return this;
@@ -94,6 +101,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageOriginalFileName")
     public String imageOriginalFileName;
+
     public PieceInput withImageOriginalFileName(String imageOriginalFileName) {
         this.imageOriginalFileName = imageOriginalFileName;
         return this;
@@ -104,6 +112,7 @@ public class PieceInput {
      */
     @JsonProperty("relativeEndTime")
     public Integer relativeEndTime;
+
     public PieceInput withRelativeEndTime(Integer relativeEndTime) {
         this.relativeEndTime = relativeEndTime;
         return this;
@@ -114,6 +123,7 @@ public class PieceInput {
      */
     @JsonProperty("relativeStartTime")
     public Integer relativeStartTime;
+
     public PieceInput withRelativeStartTime(Integer relativeStartTime) {
         this.relativeStartTime = relativeStartTime;
         return this;
@@ -125,6 +135,7 @@ public class PieceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentNumber")
     public Integer segmentNumber;
+
     public PieceInput withSegmentNumber(Integer segmentNumber) {
         this.segmentNumber = segmentNumber;
         return this;
@@ -135,9 +146,16 @@ public class PieceInput {
      */
     @JsonProperty("title")
     public String title;
+
     public PieceInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PieceInput(@JsonProperty("episodeId") Long episodeId, @JsonProperty("relativeEndTime") Integer relativeEndTime, @JsonProperty("relativeStartTime") Integer relativeStartTime, @JsonProperty("title") String title) {
+        this.episodeId = episodeId;
+        this.relativeEndTime = relativeEndTime;
+        this.relativeStartTime = relativeStartTime;
+        this.title = title;
+  }
 }

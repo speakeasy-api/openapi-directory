@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugOrganizationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetWorkspaceSlugOrganizationsDirectionEnum direction;
+
     public GetWorkspaceSlugOrganizationsRequest withDirection(GetWorkspaceSlugOrganizationsDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspaceSlugOrganizationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
     public GetWorkspaceSlugOrganizationsItemsEnum items;
+
     public GetWorkspaceSlugOrganizationsRequest withItems(GetWorkspaceSlugOrganizationsItemsEnum items) {
         this.items = items;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspaceSlugOrganizationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetWorkspaceSlugOrganizationsRequest withPage(String page) {
         this.page = page;
         return this;
@@ -30,6 +34,7 @@ public class GetWorkspaceSlugOrganizationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetWorkspaceSlugOrganizationsRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -37,6 +42,7 @@ public class GetWorkspaceSlugOrganizationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetWorkspaceSlugOrganizationsSortEnum sort;
+
     public GetWorkspaceSlugOrganizationsRequest withSort(GetWorkspaceSlugOrganizationsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -44,9 +50,13 @@ public class GetWorkspaceSlugOrganizationsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
     public String workspaceSlug;
+
     public GetWorkspaceSlugOrganizationsRequest withWorkspaceSlug(String workspaceSlug) {
         this.workspaceSlug = workspaceSlug;
         return this;
     }
     
+    public GetWorkspaceSlugOrganizationsRequest(@JsonProperty("workspace_slug") String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
+  }
 }

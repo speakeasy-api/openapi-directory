@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCatalogExportationHistoryRequest {
@@ -12,6 +13,7 @@ public class GetChannelCatalogExportationHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public GetChannelCatalogExportationHistoryRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -22,6 +24,7 @@ public class GetChannelCatalogExportationHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetChannelCatalogExportationHistoryRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,9 +35,15 @@ public class GetChannelCatalogExportationHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetChannelCatalogExportationHistoryRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetChannelCatalogExportationHistoryRequest(@JsonProperty("channelCatalogId") String channelCatalogId, @JsonProperty("pageNumber") Integer pageNumber, @JsonProperty("pageSize") Integer pageSize) {
+        this.channelCatalogId = channelCatalogId;
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+  }
 }

@@ -12,6 +12,7 @@ public class APIErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public APIErrorErrors withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class APIErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public APIErrorErrors withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -28,6 +30,7 @@ public class APIErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public APIErrorErrors withStatus(String status) {
         this.status = status;
         return this;
@@ -36,9 +39,11 @@ public class APIErrorErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public APIErrorErrors withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public APIErrorErrors(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse {
     
     public byte[] body;
+
     public PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse {
     
     
     public String contentType;
+
     public PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -30,6 +34,7 @@ public class PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse {
     
     
     public Integer statusCode;
+
     public PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,6 +42,7 @@ public class PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems;
+
     public PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse withOnealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems(org.openapis.openapi.models.shared.Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems) {
         this.onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems = onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems;
         return this;
     }
     
+    public PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

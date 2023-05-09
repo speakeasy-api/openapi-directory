@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationResponse {
@@ -12,6 +13,7 @@ public class CreateLocationResponse {
      */
     
     public Object conflictException;
+
     public CreateLocationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationResponse {
     
     
     public String contentType;
+
     public CreateLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateLocationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationOutput createLocationOutput;
+
     public CreateLocationResponse withCreateLocationOutput(org.openapis.openapi.models.shared.CreateLocationOutput createLocationOutput) {
         this.createLocationOutput = createLocationOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateLocationResponse {
      */
     
     public Object internalServiceException;
+
     public CreateLocationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateLocationResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLocationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLocationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateLocationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateLocationResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateLocationResponse {
      */
     
     public Object taggingFailedException;
+
     public CreateLocationResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -93,9 +103,14 @@ public class CreateLocationResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateLocationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

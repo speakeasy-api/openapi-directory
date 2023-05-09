@@ -17,6 +17,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public Code withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeCategories")
     public CodeCategory[] codeCategories;
+
     public Code withCodeCategories(CodeCategory[] codeCategories) {
         this.codeCategories = codeCategories;
         return this;
@@ -33,6 +35,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeType")
     public Lookup codeType;
+
     public Code withCodeType(Lookup codeType) {
         this.codeType = codeType;
         return this;
@@ -43,6 +46,7 @@ public class Code {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Code withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -51,6 +55,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Code withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +64,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayOrder")
     public Integer displayOrder;
+
     public Code withDisplayOrder(Integer displayOrder) {
         this.displayOrder = displayOrder;
         return this;
@@ -67,6 +73,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalStandards")
     public CodeExternalStandard[] externalStandards;
+
     public Code withExternalStandards(CodeExternalStandard[] externalStandards) {
         this.externalStandards = externalStandards;
         return this;
@@ -75,6 +82,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullDescription")
     public String fullDescription;
+
     public Code withFullDescription(String fullDescription) {
         this.fullDescription = fullDescription;
         return this;
@@ -83,6 +91,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideFromPatients")
     public Boolean hideFromPatients;
+
     public Code withHideFromPatients(Boolean hideFromPatients) {
         this.hideFromPatients = hideFromPatients;
         return this;
@@ -91,6 +100,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Code withId(Long id) {
         this.id = id;
         return this;
@@ -101,6 +111,7 @@ public class Code {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public Code withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -109,6 +120,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public Link[] links;
+
     public Code withLinks(Link[] links) {
         this.links = links;
         return this;
@@ -117,6 +129,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patientFriendlyName")
     public String patientFriendlyName;
+
     public Code withPatientFriendlyName(String patientFriendlyName) {
         this.patientFriendlyName = patientFriendlyName;
         return this;
@@ -125,6 +138,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removedExternally")
     public Boolean removedExternally;
+
     public Code withRemovedExternally(Boolean removedExternally) {
         this.removedExternally = removedExternally;
         return this;
@@ -133,6 +147,7 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public CodeSourceTypeEnum sourceType;
+
     public Code withSourceType(CodeSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -141,9 +156,11 @@ public class Code {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardType")
     public Lookup standardType;
+
     public Code withStandardType(Lookup standardType) {
         this.standardType = standardType;
         return this;
     }
     
+    public Code(){}
 }

@@ -18,6 +18,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billedAmount")
     public Float billedAmount;
+
     public TextRecord withBilledAmount(Float billedAmount) {
         this.billedAmount = billedAmount;
         return this;
@@ -29,6 +30,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callerName")
     public String callerName;
+
     public TextRecord withCallerName(String callerName) {
         this.callerName = callerName;
         return this;
@@ -40,6 +42,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishTime")
     public Long finishTime;
+
     public TextRecord withFinishTime(Long finishTime) {
         this.finishTime = finishTime;
         return this;
@@ -51,6 +54,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TextRecord withId(Long id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public TextRecord withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TextRecord withMessage(String message) {
         this.message = message;
         return this;
@@ -84,6 +90,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchId")
     public String switchId;
+
     public TextRecord withSwitchId(String switchId) {
         this.switchId = switchId;
         return this;
@@ -95,6 +102,7 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textResult")
     public TextRecordTextResultEnum textResult;
+
     public TextRecord withTextResult(TextRecordTextResultEnum textResult) {
         this.textResult = textResult;
         return this;
@@ -106,9 +114,11 @@ public class TextRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toNumber")
     public String toNumber;
+
     public TextRecord withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public TextRecord(){}
 }

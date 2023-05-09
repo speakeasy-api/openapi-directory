@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAliasRequest {
     @JsonProperty("Alias")
     public String alias;
+
     public CreateAliasRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,9 +20,14 @@ public class CreateAliasRequest {
     
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CreateAliasRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public CreateAliasRequest(@JsonProperty("Alias") String alias, @JsonProperty("DirectoryId") String directoryId) {
+        this.alias = alias;
+        this.directoryId = directoryId;
+  }
 }

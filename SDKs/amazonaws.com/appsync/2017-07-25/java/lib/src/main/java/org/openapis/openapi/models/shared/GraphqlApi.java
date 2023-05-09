@@ -15,6 +15,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalAuthenticationProviders")
     public AdditionalAuthenticationProvider[] additionalAuthenticationProviders;
+
     public GraphqlApi withAdditionalAuthenticationProviders(AdditionalAuthenticationProvider[] additionalAuthenticationProviders) {
         this.additionalAuthenticationProviders = additionalAuthenticationProviders;
         return this;
@@ -23,6 +24,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiId")
     public String apiId;
+
     public GraphqlApi withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -31,6 +33,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GraphqlApi withArn(String arn) {
         this.arn = arn;
         return this;
@@ -39,6 +42,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public GraphqlApi withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -47,6 +51,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaAuthorizerConfig")
     public LambdaAuthorizerConfig lambdaAuthorizerConfig;
+
     public GraphqlApi withLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
         this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
         return this;
@@ -55,6 +60,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public LogConfig logConfig;
+
     public GraphqlApi withLogConfig(LogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -63,6 +69,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GraphqlApi withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openIDConnectConfig")
     public OpenIDConnectConfig openIDConnectConfig;
+
     public GraphqlApi withOpenIDConnectConfig(OpenIDConnectConfig openIDConnectConfig) {
         this.openIDConnectConfig = openIDConnectConfig;
         return this;
@@ -79,6 +87,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GraphqlApi withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -87,6 +96,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public java.util.Map<String, String> uris;
+
     public GraphqlApi withUris(java.util.Map<String, String> uris) {
         this.uris = uris;
         return this;
@@ -95,6 +105,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userPoolConfig")
     public UserPoolConfig userPoolConfig;
+
     public GraphqlApi withUserPoolConfig(UserPoolConfig userPoolConfig) {
         this.userPoolConfig = userPoolConfig;
         return this;
@@ -103,6 +114,7 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wafWebAclArn")
     public String wafWebAclArn;
+
     public GraphqlApi withWafWebAclArn(String wafWebAclArn) {
         this.wafWebAclArn = wafWebAclArn;
         return this;
@@ -111,9 +123,11 @@ public class GraphqlApi {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xrayEnabled")
     public Boolean xrayEnabled;
+
     public GraphqlApi withXrayEnabled(Boolean xrayEnabled) {
         this.xrayEnabled = xrayEnabled;
         return this;
     }
     
+    public GraphqlApi(){}
 }

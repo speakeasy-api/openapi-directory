@@ -18,6 +18,7 @@ public class DataDiskAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDisks")
     public String[] dataDisks;
+
     public DataDiskAssignment withDataDisks(String[] dataDisks) {
         this.dataDisks = dataDisks;
         return this;
@@ -29,9 +30,11 @@ public class DataDiskAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmInstance")
     public String vmInstance;
+
     public DataDiskAssignment withVmInstance(String vmInstance) {
         this.vmInstance = vmInstance;
         return this;
     }
     
+    public DataDiskAssignment(){}
 }

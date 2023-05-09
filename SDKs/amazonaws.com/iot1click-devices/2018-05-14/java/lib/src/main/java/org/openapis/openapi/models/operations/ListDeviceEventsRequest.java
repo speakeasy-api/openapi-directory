@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDeviceEventsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListDeviceEventsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -17,6 +19,7 @@ public class ListDeviceEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListDeviceEventsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -24,6 +27,7 @@ public class ListDeviceEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListDeviceEventsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -31,6 +35,7 @@ public class ListDeviceEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListDeviceEventsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -38,6 +43,7 @@ public class ListDeviceEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListDeviceEventsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -45,6 +51,7 @@ public class ListDeviceEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListDeviceEventsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -52,6 +59,7 @@ public class ListDeviceEventsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListDeviceEventsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -62,6 +70,7 @@ public class ListDeviceEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public String deviceId;
+
     public ListDeviceEventsRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -74,6 +83,7 @@ public class ListDeviceEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromTimeStamp")
     public OffsetDateTime fromTimeStamp;
+
     public ListDeviceEventsRequest withFromTimeStamp(OffsetDateTime fromTimeStamp) {
         this.fromTimeStamp = fromTimeStamp;
         return this;
@@ -85,6 +95,7 @@ public class ListDeviceEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListDeviceEventsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -95,6 +106,7 @@ public class ListDeviceEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListDeviceEventsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -107,9 +119,15 @@ public class ListDeviceEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toTimeStamp")
     public OffsetDateTime toTimeStamp;
+
     public ListDeviceEventsRequest withToTimeStamp(OffsetDateTime toTimeStamp) {
         this.toTimeStamp = toTimeStamp;
         return this;
     }
     
+    public ListDeviceEventsRequest(@JsonProperty("deviceId") String deviceId, @JsonProperty("fromTimeStamp") OffsetDateTime fromTimeStamp, @JsonProperty("toTimeStamp") OffsetDateTime toTimeStamp) {
+        this.deviceId = deviceId;
+        this.fromTimeStamp = fromTimeStamp;
+        this.toTimeStamp = toTimeStamp;
+  }
 }

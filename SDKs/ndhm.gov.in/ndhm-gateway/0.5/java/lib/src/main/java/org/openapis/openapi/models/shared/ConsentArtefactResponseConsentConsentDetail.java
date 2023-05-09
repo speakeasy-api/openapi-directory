@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConsentArtefactResponseConsentConsentDetail {
     @JsonProperty("careContexts")
     public ConsentArtefactResponseConsentConsentDetailCareContexts[] careContexts;
+
     public ConsentArtefactResponseConsentConsentDetail withCareContexts(ConsentArtefactResponseConsentConsentDetailCareContexts[] careContexts) {
         this.careContexts = careContexts;
         return this;
@@ -23,6 +24,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("consentId")
     public String consentId;
+
     public ConsentArtefactResponseConsentConsentDetail withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -30,6 +32,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("consentManager")
     public ConsentArtefactResponseConsentConsentDetailConsentManager consentManager;
+
     public ConsentArtefactResponseConsentConsentDetail withConsentManager(ConsentArtefactResponseConsentConsentDetailConsentManager consentManager) {
         this.consentManager = consentManager;
         return this;
@@ -39,6 +42,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ConsentArtefactResponseConsentConsentDetail withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +50,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("hiTypes")
     public HITypeEnumEnum[] hiTypes;
+
     public ConsentArtefactResponseConsentConsentDetail withHiTypes(HITypeEnumEnum[] hiTypes) {
         this.hiTypes = hiTypes;
         return this;
@@ -53,6 +58,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("hip")
     public ConsentArtefactResponseConsentConsentDetailHip hip;
+
     public ConsentArtefactResponseConsentConsentDetail withHip(ConsentArtefactResponseConsentConsentDetailHip hip) {
         this.hip = hip;
         return this;
@@ -60,6 +66,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("hiu")
     public ConsentArtefactResponseConsentConsentDetailHiu hiu;
+
     public ConsentArtefactResponseConsentConsentDetail withHiu(ConsentArtefactResponseConsentConsentDetailHiu hiu) {
         this.hiu = hiu;
         return this;
@@ -67,6 +74,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("patient")
     public ConsentManagerPatientID patient;
+
     public ConsentArtefactResponseConsentConsentDetail withPatient(ConsentManagerPatientID patient) {
         this.patient = patient;
         return this;
@@ -74,6 +82,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("permission")
     public Permission permission;
+
     public ConsentArtefactResponseConsentConsentDetail withPermission(Permission permission) {
         this.permission = permission;
         return this;
@@ -81,6 +90,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     
     @JsonProperty("purpose")
     public UsePurpose purpose;
+
     public ConsentArtefactResponseConsentConsentDetail withPurpose(UsePurpose purpose) {
         this.purpose = purpose;
         return this;
@@ -89,6 +99,7 @@ public class ConsentArtefactResponseConsentConsentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requester")
     public Requester requester;
+
     public ConsentArtefactResponseConsentConsentDetail withRequester(Requester requester) {
         this.requester = requester;
         return this;
@@ -97,9 +108,22 @@ public class ConsentArtefactResponseConsentConsentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public ConsentArtefactResponseConsentConsentDetail withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public ConsentArtefactResponseConsentConsentDetail(@JsonProperty("careContexts") ConsentArtefactResponseConsentConsentDetailCareContexts[] careContexts, @JsonProperty("consentId") String consentId, @JsonProperty("consentManager") ConsentArtefactResponseConsentConsentDetailConsentManager consentManager, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("hiTypes") HITypeEnumEnum[] hiTypes, @JsonProperty("hip") ConsentArtefactResponseConsentConsentDetailHip hip, @JsonProperty("hiu") ConsentArtefactResponseConsentConsentDetailHiu hiu, @JsonProperty("patient") ConsentManagerPatientID patient, @JsonProperty("permission") Permission permission, @JsonProperty("purpose") UsePurpose purpose) {
+        this.careContexts = careContexts;
+        this.consentId = consentId;
+        this.consentManager = consentManager;
+        this.createdAt = createdAt;
+        this.hiTypes = hiTypes;
+        this.hip = hip;
+        this.hiu = hiu;
+        this.patient = patient;
+        this.permission = permission;
+        this.purpose = purpose;
+  }
 }

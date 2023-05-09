@@ -59,10 +59,8 @@ public class PrivateFacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFactResponse res = new org.openapis.openapi.models.operations.DeleteFactResponse() {{
+        org.openapis.openapi.models.operations.DeleteFactResponse res = new org.openapis.openapi.models.operations.DeleteFactResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -99,10 +97,8 @@ public class PrivateFacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactResponse res = new org.openapis.openapi.models.operations.GetFactResponse() {{
+        org.openapis.openapi.models.operations.GetFactResponse res = new org.openapis.openapi.models.operations.GetFactResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -139,10 +135,8 @@ public class PrivateFacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutFactResponse res = new org.openapis.openapi.models.operations.PutFactResponse() {{
+        org.openapis.openapi.models.operations.PutFactResponse res = new org.openapis.openapi.models.operations.PutFactResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

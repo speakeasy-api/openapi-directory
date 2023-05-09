@@ -15,6 +15,7 @@ public class StartReadSetImportJobSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StartReadSetImportJobSourceItem withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class StartReadSetImportJobSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedFrom")
     public String generatedFrom;
+
     public StartReadSetImportJobSourceItem withGeneratedFrom(String generatedFrom) {
         this.generatedFrom = generatedFrom;
         return this;
@@ -31,6 +33,7 @@ public class StartReadSetImportJobSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StartReadSetImportJobSourceItem withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class StartReadSetImportJobSourceItem {
     
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public StartReadSetImportJobSourceItem withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
@@ -45,6 +49,7 @@ public class StartReadSetImportJobSourceItem {
     
     @JsonProperty("sampleId")
     public String sampleId;
+
     public StartReadSetImportJobSourceItem withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
@@ -52,6 +57,7 @@ public class StartReadSetImportJobSourceItem {
     
     @JsonProperty("sourceFileType")
     public FileTypeEnum sourceFileType;
+
     public StartReadSetImportJobSourceItem withSourceFileType(FileTypeEnum sourceFileType) {
         this.sourceFileType = sourceFileType;
         return this;
@@ -59,6 +65,7 @@ public class StartReadSetImportJobSourceItem {
     
     @JsonProperty("sourceFiles")
     public SourceFiles sourceFiles;
+
     public StartReadSetImportJobSourceItem withSourceFiles(SourceFiles sourceFiles) {
         this.sourceFiles = sourceFiles;
         return this;
@@ -66,6 +73,7 @@ public class StartReadSetImportJobSourceItem {
     
     @JsonProperty("subjectId")
     public String subjectId;
+
     public StartReadSetImportJobSourceItem withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
@@ -74,9 +82,17 @@ public class StartReadSetImportJobSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartReadSetImportJobSourceItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartReadSetImportJobSourceItem(@JsonProperty("referenceArn") String referenceArn, @JsonProperty("sampleId") String sampleId, @JsonProperty("sourceFileType") FileTypeEnum sourceFileType, @JsonProperty("sourceFiles") SourceFiles sourceFiles, @JsonProperty("subjectId") String subjectId) {
+        this.referenceArn = referenceArn;
+        this.sampleId = sampleId;
+        this.sourceFileType = sourceFileType;
+        this.sourceFiles = sourceFiles;
+        this.subjectId = subjectId;
+  }
 }

@@ -15,6 +15,7 @@ public class DeleteProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectArn")
     public String projectArn;
+
     public DeleteProjectResult withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackId")
     public String stackId;
+
     public DeleteProjectResult withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DeleteProjectResult(){}
 }

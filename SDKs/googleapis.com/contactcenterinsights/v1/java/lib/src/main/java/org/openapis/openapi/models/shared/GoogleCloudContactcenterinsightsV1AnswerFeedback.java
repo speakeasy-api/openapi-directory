@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clicked")
     public Boolean clicked;
+
     public GoogleCloudContactcenterinsightsV1AnswerFeedback withClicked(Boolean clicked) {
         this.clicked = clicked;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correctnessLevel")
     public GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum correctnessLevel;
+
     public GoogleCloudContactcenterinsightsV1AnswerFeedback withCorrectnessLevel(GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum correctnessLevel) {
         this.correctnessLevel = correctnessLevel;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudContactcenterinsightsV1AnswerFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayed")
     public Boolean displayed;
+
     public GoogleCloudContactcenterinsightsV1AnswerFeedback withDisplayed(Boolean displayed) {
         this.displayed = displayed;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1AnswerFeedback(){}
 }

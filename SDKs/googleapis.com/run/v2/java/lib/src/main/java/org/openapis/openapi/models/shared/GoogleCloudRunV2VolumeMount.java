@@ -18,6 +18,7 @@ public class GoogleCloudRunV2VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPath")
     public String mountPath;
+
     public GoogleCloudRunV2VolumeMount withMountPath(String mountPath) {
         this.mountPath = mountPath;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2VolumeMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2VolumeMount withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudRunV2VolumeMount(){}
 }

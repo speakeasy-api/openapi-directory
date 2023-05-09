@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenewDomainRequest {
     @JsonProperty("CurrentExpiryYear")
     public Long currentExpiryYear;
+
     public RenewDomainRequest withCurrentExpiryYear(Long currentExpiryYear) {
         this.currentExpiryYear = currentExpiryYear;
         return this;
@@ -21,6 +22,7 @@ public class RenewDomainRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public RenewDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,9 +31,14 @@ public class RenewDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInYears")
     public Long durationInYears;
+
     public RenewDomainRequest withDurationInYears(Long durationInYears) {
         this.durationInYears = durationInYears;
         return this;
     }
     
+    public RenewDomainRequest(@JsonProperty("CurrentExpiryYear") Long currentExpiryYear, @JsonProperty("DomainName") String domainName) {
+        this.currentExpiryYear = currentExpiryYear;
+        this.domainName = domainName;
+  }
 }

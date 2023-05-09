@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartStreamProcessorResponse {
@@ -12,6 +13,7 @@ public class StartStreamProcessorResponse {
      */
     
     public Object accessDeniedException;
+
     public StartStreamProcessorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartStreamProcessorResponse {
     
     
     public String contentType;
+
     public StartStreamProcessorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartStreamProcessorResponse {
      */
     
     public Object internalServerError;
+
     public StartStreamProcessorResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class StartStreamProcessorResponse {
      */
     
     public Object invalidParameterException;
+
     public StartStreamProcessorResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartStreamProcessorResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartStreamProcessorResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartStreamProcessorResponse {
      */
     
     public Object resourceInUseException;
+
     public StartStreamProcessorResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class StartStreamProcessorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartStreamProcessorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class StartStreamProcessorResponse {
      */
     
     public org.openapis.openapi.models.shared.StartStreamProcessorResponse startStreamProcessorResponse;
+
     public StartStreamProcessorResponse withStartStreamProcessorResponse(org.openapis.openapi.models.shared.StartStreamProcessorResponse startStreamProcessorResponse) {
         this.startStreamProcessorResponse = startStreamProcessorResponse;
         return this;
@@ -86,6 +95,7 @@ public class StartStreamProcessorResponse {
     
     
     public Integer statusCode;
+
     public StartStreamProcessorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class StartStreamProcessorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartStreamProcessorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class StartStreamProcessorResponse {
      */
     
     public Object throttlingException;
+
     public StartStreamProcessorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartStreamProcessorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

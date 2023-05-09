@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EngineVersionsSummary {
     @JsonProperty("engineType")
     public String engineType;
+
     public EngineVersionsSummary withEngineType(String engineType) {
         this.engineType = engineType;
         return this;
@@ -19,9 +20,14 @@ public class EngineVersionsSummary {
     
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public EngineVersionsSummary withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
     }
     
+    public EngineVersionsSummary(@JsonProperty("engineType") String engineType, @JsonProperty("engineVersion") String engineVersion) {
+        this.engineType = engineType;
+        this.engineVersion = engineVersion;
+  }
 }

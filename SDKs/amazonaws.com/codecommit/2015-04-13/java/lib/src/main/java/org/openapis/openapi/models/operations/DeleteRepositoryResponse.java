@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRepositoryResponse {
     
     public String contentType;
+
     public DeleteRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRepositoryOutput deleteRepositoryOutput;
+
     public DeleteRepositoryResponse withDeleteRepositoryOutput(org.openapis.openapi.models.shared.DeleteRepositoryOutput deleteRepositoryOutput) {
         this.deleteRepositoryOutput = deleteRepositoryOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public DeleteRepositoryResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public DeleteRepositoryResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public DeleteRepositoryResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public DeleteRepositoryResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public DeleteRepositoryResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public DeleteRepositoryResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteRepositoryResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public DeleteRepositoryResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -96,6 +106,7 @@ public class DeleteRepositoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class DeleteRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

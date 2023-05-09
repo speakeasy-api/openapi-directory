@@ -61,4 +61,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/Link.java
 lib/src/main/java/org/openapis/openapi/models/shared/HttpBody.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/autnum/README.md
+docs/domain/README.md
+docs/entity/README.md
+docs/ip/README.md
+docs/nameserver/README.md
+docs/v1/README.md
 USAGE.md

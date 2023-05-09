@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicesResultServiceDetailsPrivateDnsNames {
     
     public String privateDnsName;
+
     public DescribeVpcEndpointServicesResultServiceDetailsPrivateDnsNames withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
     }
     
+    public DescribeVpcEndpointServicesResultServiceDetailsPrivateDnsNames(){}
 }

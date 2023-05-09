@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteClientVpnRouteResultStatus {
     
     public DeleteClientVpnRouteResultStatusCodeEnum code;
+
     public DeleteClientVpnRouteResultStatus withCode(DeleteClientVpnRouteResultStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteClientVpnRouteResultStatus {
     
     
     public String message;
+
     public DeleteClientVpnRouteResultStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteClientVpnRouteResultStatus(){}
 }

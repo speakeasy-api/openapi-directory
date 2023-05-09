@@ -18,6 +18,7 @@ public class LoadSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipAirflowOverridesSetting")
     public Boolean skipAirflowOverridesSetting;
+
     public LoadSnapshotRequest withSkipAirflowOverridesSetting(Boolean skipAirflowOverridesSetting) {
         this.skipAirflowOverridesSetting = skipAirflowOverridesSetting;
         return this;
@@ -29,6 +30,7 @@ public class LoadSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipEnvironmentVariablesSetting")
     public Boolean skipEnvironmentVariablesSetting;
+
     public LoadSnapshotRequest withSkipEnvironmentVariablesSetting(Boolean skipEnvironmentVariablesSetting) {
         this.skipEnvironmentVariablesSetting = skipEnvironmentVariablesSetting;
         return this;
@@ -40,6 +42,7 @@ public class LoadSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipGcsDataCopying")
     public Boolean skipGcsDataCopying;
+
     public LoadSnapshotRequest withSkipGcsDataCopying(Boolean skipGcsDataCopying) {
         this.skipGcsDataCopying = skipGcsDataCopying;
         return this;
@@ -51,6 +54,7 @@ public class LoadSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipPypiPackagesInstallation")
     public Boolean skipPypiPackagesInstallation;
+
     public LoadSnapshotRequest withSkipPypiPackagesInstallation(Boolean skipPypiPackagesInstallation) {
         this.skipPypiPackagesInstallation = skipPypiPackagesInstallation;
         return this;
@@ -62,9 +66,11 @@ public class LoadSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotPath")
     public String snapshotPath;
+
     public LoadSnapshotRequest withSnapshotPath(String snapshotPath) {
         this.snapshotPath = snapshotPath;
         return this;
     }
     
+    public LoadSnapshotRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsReRunWorkflowFailedJobsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ActionsReRunWorkflowFailedJobsRequestBody requestBody;
+
     public ActionsReRunWorkflowFailedJobsRequest withRequestBody(ActionsReRunWorkflowFailedJobsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ActionsReRunWorkflowFailedJobsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsReRunWorkflowFailedJobsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,6 +32,7 @@ public class ActionsReRunWorkflowFailedJobsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsReRunWorkflowFailedJobsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -39,9 +43,15 @@ public class ActionsReRunWorkflowFailedJobsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsReRunWorkflowFailedJobsRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsReRunWorkflowFailedJobsRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

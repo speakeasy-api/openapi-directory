@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
@@ -12,6 +13,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changeOfferPurchase.entitlement")
     public String changeOfferPurchaseEntitlement;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withChangeOfferPurchaseEntitlement(String changeOfferPurchaseEntitlement) {
         this.changeOfferPurchaseEntitlement = changeOfferPurchaseEntitlement;
         return this;
@@ -62,6 +68,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changeOfferPurchase.newSku")
     public String changeOfferPurchaseNewSku;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withChangeOfferPurchaseNewSku(String changeOfferPurchaseNewSku) {
         this.changeOfferPurchaseNewSku = changeOfferPurchaseNewSku;
         return this;
@@ -72,6 +79,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createEntitlementPurchase.sku")
     public String createEntitlementPurchaseSku;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withCreateEntitlementPurchaseSku(String createEntitlementPurchaseSku) {
         this.createEntitlementPurchaseSku = createEntitlementPurchaseSku;
         return this;
@@ -82,6 +90,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
     public String customer;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -92,6 +101,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -102,6 +112,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withKey(String key) {
         this.key = key;
         return this;
@@ -112,6 +123,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -122,6 +134,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +145,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -142,6 +156,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -152,6 +167,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -162,6 +178,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +200,13 @@ public class CloudchannelAccountsCustomersListPurchasableOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudchannelAccountsCustomersListPurchasableOffersRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudchannelAccountsCustomersListPurchasableOffersRequest(@JsonProperty("customer") String customer) {
+        this.customer = customer;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compromisedState")
     public GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum compromisedState;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withCompromisedState(GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum compromisedState) {
         this.compromisedState = compromisedState;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstSyncTime")
     public String firstSyncTime;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withFirstSyncTime(String firstSyncTime) {
         this.firstSyncTime = firstSyncTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastSyncTime")
     public String lastSyncTime;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withLastSyncTime(String lastSyncTime) {
         this.lastSyncTime = lastSyncTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementState")
     public GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum managementState;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withManagementState(GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum managementState) {
         this.managementState = managementState;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordState")
     public GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum passwordState;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withPasswordState(GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum passwordState) {
         this.passwordState = passwordState;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -117,9 +126,11 @@ public class GoogleAppsCloudidentityDevicesV1DeviceUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public GoogleAppsCloudidentityDevicesV1DeviceUser withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public GoogleAppsCloudidentityDevicesV1DeviceUser(){}
 }

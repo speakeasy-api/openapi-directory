@@ -18,6 +18,7 @@ public class RedownloadVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_cookie")
     public Cookie authCookie;
+
     public RedownloadVideo withAuthCookie(Cookie authCookie) {
         this.authCookie = authCookie;
         return this;
@@ -29,6 +30,7 @@ public class RedownloadVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_modal")
     public Boolean showModal;
+
     public RedownloadVideo withShowModal(Boolean showModal) {
         this.showModal = showModal;
         return this;
@@ -40,6 +42,7 @@ public class RedownloadVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public RedownloadVideoSizeEnum size;
+
     public RedownloadVideo withSize(RedownloadVideoSizeEnum size) {
         this.size = size;
         return this;
@@ -51,9 +54,11 @@ public class RedownloadVideo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_code")
     public String verificationCode;
+
     public RedownloadVideo withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
     }
     
+    public RedownloadVideo(){}
 }

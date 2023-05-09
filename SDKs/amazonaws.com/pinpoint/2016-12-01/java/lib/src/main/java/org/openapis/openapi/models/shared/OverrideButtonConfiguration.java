@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OverrideButtonConfiguration {
     @JsonProperty("ButtonAction")
     public ButtonActionEnum buttonAction;
+
     public OverrideButtonConfiguration withButtonAction(ButtonActionEnum buttonAction) {
         this.buttonAction = buttonAction;
         return this;
@@ -22,9 +23,13 @@ public class OverrideButtonConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public OverrideButtonConfiguration withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public OverrideButtonConfiguration(@JsonProperty("ButtonAction") ButtonActionEnum buttonAction) {
+        this.buttonAction = buttonAction;
+  }
 }

@@ -15,6 +15,7 @@ public class SpecTypePersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prdType_labels")
     public String[] prdTypeLabels;
+
     public SpecTypePersistVO withPrdTypeLabels(String[] prdTypeLabels) {
         this.prdTypeLabels = prdTypeLabels;
         return this;
@@ -23,9 +24,11 @@ public class SpecTypePersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_type_id")
     public Long specTypeId;
+
     public SpecTypePersistVO withSpecTypeId(Long specTypeId) {
         this.specTypeId = specTypeId;
         return this;
     }
     
+    public SpecTypePersistVO(){}
 }

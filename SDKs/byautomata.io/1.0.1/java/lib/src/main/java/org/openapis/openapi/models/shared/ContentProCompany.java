@@ -12,6 +12,7 @@ public class ContentProCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public ContentProCompany withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -20,6 +21,7 @@ public class ContentProCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ContentProCompany withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class ContentProCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee")
     public String employee;
+
     public ContentProCompany withEmployee(String employee) {
         this.employee = employee;
         return this;
@@ -36,6 +39,7 @@ public class ContentProCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
     public String industry;
+
     public ContentProCompany withIndustry(String industry) {
         this.industry = industry;
         return this;
@@ -44,6 +48,7 @@ public class ContentProCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin")
     public String linkedin;
+
     public ContentProCompany withLinkedin(String linkedin) {
         this.linkedin = linkedin;
         return this;
@@ -52,6 +57,7 @@ public class ContentProCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter")
     public String twitter;
+
     public ContentProCompany withTwitter(String twitter) {
         this.twitter = twitter;
         return this;
@@ -60,9 +66,11 @@ public class ContentProCompany {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public ContentProCompany withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public ContentProCompany(){}
 }

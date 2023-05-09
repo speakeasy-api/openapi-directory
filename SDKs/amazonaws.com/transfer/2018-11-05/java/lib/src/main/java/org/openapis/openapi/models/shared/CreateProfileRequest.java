@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProfileRequest {
     @JsonProperty("As2Id")
     public String as2Id;
+
     public CreateProfileRequest withAs2Id(String as2Id) {
         this.as2Id = as2Id;
         return this;
@@ -19,6 +20,7 @@ public class CreateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateIds")
     public String[] certificateIds;
+
     public CreateProfileRequest withCertificateIds(String[] certificateIds) {
         this.certificateIds = certificateIds;
         return this;
@@ -26,6 +28,7 @@ public class CreateProfileRequest {
     
     @JsonProperty("ProfileType")
     public ProfileTypeEnum profileType;
+
     public CreateProfileRequest withProfileType(ProfileTypeEnum profileType) {
         this.profileType = profileType;
         return this;
@@ -34,9 +37,14 @@ public class CreateProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateProfileRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProfileRequest(@JsonProperty("As2Id") String as2Id, @JsonProperty("ProfileType") ProfileTypeEnum profileType) {
+        this.as2Id = as2Id;
+        this.profileType = profileType;
+  }
 }

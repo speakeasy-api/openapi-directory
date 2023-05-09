@@ -49,11 +49,9 @@ public class CustomerSecurity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LogoutResponse res = new org.openapis.openapi.models.operations.LogoutResponse() {{
+        org.openapis.openapi.models.operations.LogoutResponse res = new org.openapis.openapi.models.operations.LogoutResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -89,12 +87,10 @@ public class CustomerSecurity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ZendeskTokenResponse res = new org.openapis.openapi.models.operations.ZendeskTokenResponse() {{
+        org.openapis.openapi.models.operations.ZendeskTokenResponse res = new org.openapis.openapi.models.operations.ZendeskTokenResponse(contentType, httpRes.statusCode()) {{
             zendeskToken = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

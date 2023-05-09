@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteClusterMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteClusterMessage {
     
     public String clusterIdentifier;
+
     public DeleteClusterMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DeleteClusterMessage {
     
     
     public String finalClusterSnapshotIdentifier;
+
     public DeleteClusterMessage withFinalClusterSnapshotIdentifier(String finalClusterSnapshotIdentifier) {
         this.finalClusterSnapshotIdentifier = finalClusterSnapshotIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class DeleteClusterMessage {
     
     
     public Long finalClusterSnapshotRetentionPeriod;
+
     public DeleteClusterMessage withFinalClusterSnapshotRetentionPeriod(Long finalClusterSnapshotRetentionPeriod) {
         this.finalClusterSnapshotRetentionPeriod = finalClusterSnapshotRetentionPeriod;
         return this;
@@ -33,9 +36,13 @@ public class DeleteClusterMessage {
     
     
     public Boolean skipFinalClusterSnapshot;
+
     public DeleteClusterMessage withSkipFinalClusterSnapshot(Boolean skipFinalClusterSnapshot) {
         this.skipFinalClusterSnapshot = skipFinalClusterSnapshot;
         return this;
     }
     
+    public DeleteClusterMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

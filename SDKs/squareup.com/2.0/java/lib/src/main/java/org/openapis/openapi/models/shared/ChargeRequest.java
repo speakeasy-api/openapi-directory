@@ -30,6 +30,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_recipients")
     public AdditionalRecipient[] additionalRecipients;
+
     public ChargeRequest withAdditionalRecipients(AdditionalRecipient[] additionalRecipients) {
         this.additionalRecipients = additionalRecipients;
         return this;
@@ -45,6 +46,7 @@ public class ChargeRequest {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public ChargeRequest withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -83,6 +85,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public ChargeRequest withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -96,6 +99,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_email_address")
     public String buyerEmailAddress;
+
     public ChargeRequest withBuyerEmailAddress(String buyerEmailAddress) {
         this.buyerEmailAddress = buyerEmailAddress;
         return this;
@@ -115,6 +119,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card_nonce")
     public String cardNonce;
+
     public ChargeRequest withCardNonce(String cardNonce) {
         this.cardNonce = cardNonce;
         return this;
@@ -130,6 +135,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_card_id")
     public String customerCardId;
+
     public ChargeRequest withCustomerCardId(String customerCardId) {
         this.customerCardId = customerCardId;
         return this;
@@ -143,6 +149,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public ChargeRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -159,6 +166,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delay_capture")
     public Boolean delayCapture;
+
     public ChargeRequest withDelayCapture(Boolean delayCapture) {
         this.delayCapture = delayCapture;
         return this;
@@ -176,6 +184,7 @@ public class ChargeRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public ChargeRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -189,6 +198,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public ChargeRequest withNote(String note) {
         this.note = note;
         return this;
@@ -203,6 +213,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public ChargeRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -218,6 +229,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public ChargeRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -256,6 +268,7 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public ChargeRequest withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -268,9 +281,14 @@ public class ChargeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_token")
     public String verificationToken;
+
     public ChargeRequest withVerificationToken(String verificationToken) {
         this.verificationToken = verificationToken;
         return this;
     }
     
+    public ChargeRequest(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("idempotency_key") String idempotencyKey) {
+        this.amountMoney = amountMoney;
+        this.idempotencyKey = idempotencyKey;
+  }
 }

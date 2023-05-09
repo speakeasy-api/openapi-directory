@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public GoogleCloudVisionV1p1beta1ColorInfo withColor(Color color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pixelFraction")
     public Float pixelFraction;
+
     public GoogleCloudVisionV1p1beta1ColorInfo withPixelFraction(Float pixelFraction) {
         this.pixelFraction = pixelFraction;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p1beta1ColorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudVisionV1p1beta1ColorInfo withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1ColorInfo(){}
 }

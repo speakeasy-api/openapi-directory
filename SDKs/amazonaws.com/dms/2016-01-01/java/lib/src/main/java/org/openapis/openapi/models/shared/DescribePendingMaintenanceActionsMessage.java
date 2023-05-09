@@ -15,6 +15,7 @@ public class DescribePendingMaintenanceActionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribePendingMaintenanceActionsMessage withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DescribePendingMaintenanceActionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribePendingMaintenanceActionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,6 +33,7 @@ public class DescribePendingMaintenanceActionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribePendingMaintenanceActionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -39,9 +42,11 @@ public class DescribePendingMaintenanceActionsMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public DescribePendingMaintenanceActionsMessage withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
     }
     
+    public DescribePendingMaintenanceActionsMessage(){}
 }

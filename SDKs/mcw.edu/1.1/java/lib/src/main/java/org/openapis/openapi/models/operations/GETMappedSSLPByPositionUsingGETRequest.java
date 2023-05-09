@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMappedSSLPByPositionUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETMappedSSLPByPositionUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chr")
     public String chr;
+
     public GETMappedSSLPByPositionUsingGETRequest withChr(String chr) {
         this.chr = chr;
         return this;
@@ -22,6 +24,7 @@ public class GETMappedSSLPByPositionUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
     public Integer mapKey;
+
     public GETMappedSSLPByPositionUsingGETRequest withMapKey(Integer mapKey) {
         this.mapKey = mapKey;
         return this;
@@ -32,6 +35,7 @@ public class GETMappedSSLPByPositionUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start")
     public Long start;
+
     public GETMappedSSLPByPositionUsingGETRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -42,9 +46,16 @@ public class GETMappedSSLPByPositionUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop")
     public Long stop;
+
     public GETMappedSSLPByPositionUsingGETRequest withStop(Long stop) {
         this.stop = stop;
         return this;
     }
     
+    public GETMappedSSLPByPositionUsingGETRequest(@JsonProperty("chr") String chr, @JsonProperty("mapKey") Integer mapKey, @JsonProperty("start") Long start, @JsonProperty("stop") Long stop) {
+        this.chr = chr;
+        this.mapKey = mapKey;
+        this.start = start;
+        this.stop = stop;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAllPackageNames")
     public Boolean allowAllPackageNames;
+
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings withAllowAllPackageNames(Boolean allowAllPackageNames) {
         this.allowAllPackageNames = allowAllPackageNames;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedPackageNames")
     public String[] allowedPackageNames;
+
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings withAllowedPackageNames(String[] allowedPackageNames) {
         this.allowedPackageNames = allowedPackageNames;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportNonGoogleAppStoreDistribution")
     public Boolean supportNonGoogleAppStoreDistribution;
+
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings withSupportNonGoogleAppStoreDistribution(Boolean supportNonGoogleAppStoreDistribution) {
         this.supportNonGoogleAppStoreDistribution = supportNonGoogleAppStoreDistribution;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings(){}
 }

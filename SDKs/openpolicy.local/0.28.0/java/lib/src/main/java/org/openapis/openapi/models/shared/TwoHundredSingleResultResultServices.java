@@ -15,9 +15,11 @@ public class TwoHundredSingleResultResultServices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acmecorp")
     public TwoHundredSingleResultResultServicesAcmecorp acmecorp;
+
     public TwoHundredSingleResultResultServices withAcmecorp(TwoHundredSingleResultResultServicesAcmecorp acmecorp) {
         this.acmecorp = acmecorp;
         return this;
     }
     
+    public TwoHundredSingleResultResultServices(){}
 }

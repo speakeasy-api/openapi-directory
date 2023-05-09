@@ -12,6 +12,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerPunting withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -20,6 +21,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerPunting withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -28,6 +30,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerPunting withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerPunting withNumber(Long number) {
         this.number = number;
         return this;
@@ -44,6 +48,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public PlayerPunting withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -52,6 +57,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerPunting withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -60,6 +66,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerPunting withPosition(String position) {
         this.position = position;
         return this;
@@ -68,6 +75,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerPunting withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -76,6 +84,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntAverage")
     public Double puntAverage;
+
     public PlayerPunting withPuntAverage(Double puntAverage) {
         this.puntAverage = puntAverage;
         return this;
@@ -84,6 +93,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntInside20")
     public Long puntInside20;
+
     public PlayerPunting withPuntInside20(Long puntInside20) {
         this.puntInside20 = puntInside20;
         return this;
@@ -92,6 +102,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntTouchbacks")
     public Long puntTouchbacks;
+
     public PlayerPunting withPuntTouchbacks(Long puntTouchbacks) {
         this.puntTouchbacks = puntTouchbacks;
         return this;
@@ -100,6 +111,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PuntYards")
     public Long puntYards;
+
     public PlayerPunting withPuntYards(Long puntYards) {
         this.puntYards = puntYards;
         return this;
@@ -108,6 +120,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Punts")
     public Long punts;
+
     public PlayerPunting withPunts(Long punts) {
         this.punts = punts;
         return this;
@@ -116,6 +129,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerPunting withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -124,6 +138,7 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerPunting withTeam(String team) {
         this.team = team;
         return this;
@@ -132,9 +147,11 @@ public class PlayerPunting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerPunting withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerPunting(){}
 }

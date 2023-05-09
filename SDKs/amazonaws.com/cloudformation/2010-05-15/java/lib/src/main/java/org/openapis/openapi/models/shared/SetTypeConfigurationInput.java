@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SetTypeConfigurationInput {
     
     public String configuration;
+
     public SetTypeConfigurationInput withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -16,6 +17,7 @@ public class SetTypeConfigurationInput {
     
     
     public String configurationAlias;
+
     public SetTypeConfigurationInput withConfigurationAlias(String configurationAlias) {
         this.configurationAlias = configurationAlias;
         return this;
@@ -23,6 +25,7 @@ public class SetTypeConfigurationInput {
     
     
     public ThirdPartyTypeEnum type;
+
     public SetTypeConfigurationInput withType(ThirdPartyTypeEnum type) {
         this.type = type;
         return this;
@@ -30,6 +33,7 @@ public class SetTypeConfigurationInput {
     
     
     public String typeArn;
+
     public SetTypeConfigurationInput withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -37,9 +41,13 @@ public class SetTypeConfigurationInput {
     
     
     public String typeName;
+
     public SetTypeConfigurationInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public SetTypeConfigurationInput(@JsonProperty("Configuration") String configuration) {
+        this.configuration = configuration;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1BatchUpdateServicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public GoogleFirebaseAppcheckV1Service[] services;
+
     public GoogleFirebaseAppcheckV1BatchUpdateServicesResponse withServices(GoogleFirebaseAppcheckV1Service[] services) {
         this.services = services;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1BatchUpdateServicesResponse(){}
 }

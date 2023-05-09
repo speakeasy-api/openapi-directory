@@ -15,6 +15,7 @@ public class ProtectiveEquipmentBodyPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ProtectiveEquipmentBodyPart withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,6 +24,7 @@ public class ProtectiveEquipmentBodyPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EquipmentDetections")
     public EquipmentDetection[] equipmentDetections;
+
     public ProtectiveEquipmentBodyPart withEquipmentDetections(EquipmentDetection[] equipmentDetections) {
         this.equipmentDetections = equipmentDetections;
         return this;
@@ -31,9 +33,11 @@ public class ProtectiveEquipmentBodyPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public BodyPartEnum name;
+
     public ProtectiveEquipmentBodyPart withName(BodyPartEnum name) {
         this.name = name;
         return this;
     }
     
+    public ProtectiveEquipmentBodyPart(){}
 }

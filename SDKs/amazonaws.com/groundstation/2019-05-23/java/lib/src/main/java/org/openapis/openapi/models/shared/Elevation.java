@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Elevation {
     @JsonProperty("unit")
     public AngleUnitsEnum unit;
+
     public Elevation withUnit(AngleUnitsEnum unit) {
         this.unit = unit;
         return this;
@@ -19,9 +20,14 @@ public class Elevation {
     
     @JsonProperty("value")
     public Double value;
+
     public Elevation withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Elevation(@JsonProperty("unit") AngleUnitsEnum unit, @JsonProperty("value") Double value) {
+        this.unit = unit;
+        this.value = value;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApnsSandboxChannelResponse {
@@ -12,6 +13,7 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public Object badRequestException;
+
     public GetApnsSandboxChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetApnsSandboxChannelResponse {
     
     
     public String contentType;
+
     public GetApnsSandboxChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public Object forbiddenException;
+
     public GetApnsSandboxChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApnsSandboxChannelResponse getApnsSandboxChannelResponse;
+
     public GetApnsSandboxChannelResponse withGetApnsSandboxChannelResponse(org.openapis.openapi.models.shared.GetApnsSandboxChannelResponse getApnsSandboxChannelResponse) {
         this.getApnsSandboxChannelResponse = getApnsSandboxChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetApnsSandboxChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetApnsSandboxChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public Object notFoundException;
+
     public GetApnsSandboxChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetApnsSandboxChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetApnsSandboxChannelResponse {
     
     
     public Integer statusCode;
+
     public GetApnsSandboxChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetApnsSandboxChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApnsSandboxChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetApnsSandboxChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetApnsSandboxChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetApnsSandboxChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

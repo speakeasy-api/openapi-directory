@@ -18,6 +18,7 @@ public class GetCertificatesIdCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public GetCertificatesIdCertificateResponseCertificateStatusError error;
+
     public GetCertificatesIdCertificateResponseCertificateStatus withError(GetCertificatesIdCertificateResponseCertificateStatusError error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class GetCertificatesIdCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuance")
     public GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum issuance;
+
     public GetCertificatesIdCertificateResponseCertificateStatus withIssuance(GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum issuance) {
         this.issuance = issuance;
         return this;
@@ -40,9 +42,11 @@ public class GetCertificatesIdCertificateResponseCertificateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewal")
     public GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum renewal;
+
     public GetCertificatesIdCertificateResponseCertificateStatus withRenewal(GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum renewal) {
         this.renewal = renewal;
         return this;
     }
     
+    public GetCertificatesIdCertificateResponseCertificateStatus(){}
 }

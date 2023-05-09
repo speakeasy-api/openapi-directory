@@ -22,6 +22,7 @@ public class SSEDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InaccessibleEncryptionDateTime")
     public OffsetDateTime inaccessibleEncryptionDateTime;
+
     public SSEDescription withInaccessibleEncryptionDateTime(OffsetDateTime inaccessibleEncryptionDateTime) {
         this.inaccessibleEncryptionDateTime = inaccessibleEncryptionDateTime;
         return this;
@@ -30,6 +31,7 @@ public class SSEDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSMasterKeyArn")
     public String kmsMasterKeyArn;
+
     public SSEDescription withKMSMasterKeyArn(String kmsMasterKeyArn) {
         this.kmsMasterKeyArn = kmsMasterKeyArn;
         return this;
@@ -38,6 +40,7 @@ public class SSEDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSEType")
     public SSETypeEnum sseType;
+
     public SSEDescription withSSEType(SSETypeEnum sseType) {
         this.sseType = sseType;
         return this;
@@ -46,9 +49,11 @@ public class SSEDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SSEStatusEnum status;
+
     public SSEDescription withStatus(SSEStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SSEDescription(){}
 }

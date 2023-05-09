@@ -12,9 +12,13 @@ public class DescribeOrganizationConfigurationRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public DescribeOrganizationConfigurationRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public DescribeOrganizationConfigurationRequestBody(@JsonProperty("GraphArn") String graphArn) {
+        this.graphArn = graphArn;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatchMonthCategoryWrapper {
     @JsonProperty("category")
     public SaveMonthCategory category;
+
     public PatchMonthCategoryWrapper withCategory(SaveMonthCategory category) {
         this.category = category;
         return this;
     }
     
+    public PatchMonthCategoryWrapper(@JsonProperty("category") SaveMonthCategory category) {
+        this.category = category;
+  }
 }

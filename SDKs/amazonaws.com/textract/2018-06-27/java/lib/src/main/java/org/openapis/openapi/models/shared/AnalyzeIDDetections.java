@@ -15,6 +15,7 @@ public class AnalyzeIDDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public AnalyzeIDDetections withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,6 +24,7 @@ public class AnalyzeIDDetections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NormalizedValue")
     public NormalizedValue normalizedValue;
+
     public AnalyzeIDDetections withNormalizedValue(NormalizedValue normalizedValue) {
         this.normalizedValue = normalizedValue;
         return this;
@@ -30,9 +32,13 @@ public class AnalyzeIDDetections {
     
     @JsonProperty("Text")
     public String text;
+
     public AnalyzeIDDetections withText(String text) {
         this.text = text;
         return this;
     }
     
+    public AnalyzeIDDetections(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

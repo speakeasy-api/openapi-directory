@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCrawlStatisticsUrlsResponse {
     
     public String contentType;
+
     public GetCrawlStatisticsUrlsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCrawlStatisticsUrlsResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetCrawlStatisticsUrlsResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -26,6 +29,7 @@ public class GetCrawlStatisticsUrlsResponse {
     
     
     public Integer statusCode;
+
     public GetCrawlStatisticsUrlsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetCrawlStatisticsUrlsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCrawlStatisticsUrlsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetCrawlStatisticsUrlsResponse {
     
     
     public Object[] getCrawlStatisticsUrls200ApplicationJSONAnies;
+
     public GetCrawlStatisticsUrlsResponse withGetCrawlStatisticsUrls200ApplicationJSONAnies(Object[] getCrawlStatisticsUrls200ApplicationJSONAnies) {
         this.getCrawlStatisticsUrls200ApplicationJSONAnies = getCrawlStatisticsUrls200ApplicationJSONAnies;
         return this;
     }
     
+    public GetCrawlStatisticsUrlsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

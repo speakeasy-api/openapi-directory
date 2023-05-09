@@ -15,6 +15,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public StartSpeechSynthesisTaskRequestBodyEngineEnum engine;
+
     public StartSpeechSynthesisTaskRequestBody withEngine(StartSpeechSynthesisTaskRequestBodyEngineEnum engine) {
         this.engine = engine;
         return this;
@@ -26,6 +27,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum languageCode;
+
     public StartSpeechSynthesisTaskRequestBody withLanguageCode(StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -37,6 +39,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LexiconNames")
     public String[] lexiconNames;
+
     public StartSpeechSynthesisTaskRequestBody withLexiconNames(String[] lexiconNames) {
         this.lexiconNames = lexiconNames;
         return this;
@@ -47,6 +50,7 @@ public class StartSpeechSynthesisTaskRequestBody {
      */
     @JsonProperty("OutputFormat")
     public StartSpeechSynthesisTaskRequestBodyOutputFormatEnum outputFormat;
+
     public StartSpeechSynthesisTaskRequestBody withOutputFormat(StartSpeechSynthesisTaskRequestBodyOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -57,6 +61,7 @@ public class StartSpeechSynthesisTaskRequestBody {
      */
     @JsonProperty("OutputS3BucketName")
     public String outputS3BucketName;
+
     public StartSpeechSynthesisTaskRequestBody withOutputS3BucketName(String outputS3BucketName) {
         this.outputS3BucketName = outputS3BucketName;
         return this;
@@ -68,6 +73,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputS3KeyPrefix")
     public String outputS3KeyPrefix;
+
     public StartSpeechSynthesisTaskRequestBody withOutputS3KeyPrefix(String outputS3KeyPrefix) {
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         return this;
@@ -79,6 +85,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampleRate")
     public String sampleRate;
+
     public StartSpeechSynthesisTaskRequestBody withSampleRate(String sampleRate) {
         this.sampleRate = sampleRate;
         return this;
@@ -90,6 +97,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public StartSpeechSynthesisTaskRequestBody withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -101,6 +109,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpeechMarkTypes")
     public org.openapis.openapi.models.shared.SpeechMarkTypeEnum[] speechMarkTypes;
+
     public StartSpeechSynthesisTaskRequestBody withSpeechMarkTypes(org.openapis.openapi.models.shared.SpeechMarkTypeEnum[] speechMarkTypes) {
         this.speechMarkTypes = speechMarkTypes;
         return this;
@@ -111,6 +120,7 @@ public class StartSpeechSynthesisTaskRequestBody {
      */
     @JsonProperty("Text")
     public String text;
+
     public StartSpeechSynthesisTaskRequestBody withText(String text) {
         this.text = text;
         return this;
@@ -122,6 +132,7 @@ public class StartSpeechSynthesisTaskRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextType")
     public StartSpeechSynthesisTaskRequestBodyTextTypeEnum textType;
+
     public StartSpeechSynthesisTaskRequestBody withTextType(StartSpeechSynthesisTaskRequestBodyTextTypeEnum textType) {
         this.textType = textType;
         return this;
@@ -132,9 +143,16 @@ public class StartSpeechSynthesisTaskRequestBody {
      */
     @JsonProperty("VoiceId")
     public StartSpeechSynthesisTaskRequestBodyVoiceIdEnum voiceId;
+
     public StartSpeechSynthesisTaskRequestBody withVoiceId(StartSpeechSynthesisTaskRequestBodyVoiceIdEnum voiceId) {
         this.voiceId = voiceId;
         return this;
     }
     
+    public StartSpeechSynthesisTaskRequestBody(@JsonProperty("OutputFormat") StartSpeechSynthesisTaskRequestBodyOutputFormatEnum outputFormat, @JsonProperty("OutputS3BucketName") String outputS3BucketName, @JsonProperty("Text") String text, @JsonProperty("VoiceId") StartSpeechSynthesisTaskRequestBodyVoiceIdEnum voiceId) {
+        this.outputFormat = outputFormat;
+        this.outputS3BucketName = outputS3BucketName;
+        this.text = text;
+        this.voiceId = voiceId;
+  }
 }

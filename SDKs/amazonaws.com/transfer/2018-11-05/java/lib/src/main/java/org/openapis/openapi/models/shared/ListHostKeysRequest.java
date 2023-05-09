@@ -12,6 +12,7 @@ public class ListHostKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListHostKeysRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListHostKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHostKeysRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListHostKeysRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public ListHostKeysRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public ListHostKeysRequest(@JsonProperty("ServerId") String serverId) {
+        this.serverId = serverId;
+  }
 }

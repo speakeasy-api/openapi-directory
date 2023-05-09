@@ -18,6 +18,7 @@ public class StateHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actorUserId")
     public String actorUserId;
+
     public StateHistory withActorUserId(String actorUserId) {
         this.actorUserId = actorUserId;
         return this;
@@ -29,6 +30,7 @@ public class StateHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StateHistoryStateEnum state;
+
     public StateHistory withState(StateHistoryStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +42,11 @@ public class StateHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateTimestamp")
     public String stateTimestamp;
+
     public StateHistory withStateTimestamp(String stateTimestamp) {
         this.stateTimestamp = stateTimestamp;
         return this;
     }
     
+    public StateHistory(){}
 }

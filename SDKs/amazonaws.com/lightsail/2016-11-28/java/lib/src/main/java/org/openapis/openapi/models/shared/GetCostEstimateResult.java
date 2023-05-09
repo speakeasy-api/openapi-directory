@@ -15,9 +15,11 @@ public class GetCostEstimateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcesBudgetEstimate")
     public ResourceBudgetEstimate[] resourcesBudgetEstimate;
+
     public GetCostEstimateResult withResourcesBudgetEstimate(ResourceBudgetEstimate[] resourcesBudgetEstimate) {
         this.resourcesBudgetEstimate = resourcesBudgetEstimate;
         return this;
     }
     
+    public GetCostEstimateResult(){}
 }

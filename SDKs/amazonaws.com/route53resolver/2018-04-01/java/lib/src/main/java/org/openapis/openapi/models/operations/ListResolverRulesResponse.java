@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolverRulesResponse {
     
     public String contentType;
+
     public ListResolverRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResolverRulesResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListResolverRulesResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListResolverRulesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResolverRulesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolverRulesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResolverRulesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListResolverRulesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListResolverRulesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class ListResolverRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolverRulesResponse listResolverRulesResponse;
+
     public ListResolverRulesResponse withListResolverRulesResponse(org.openapis.openapi.models.shared.ListResolverRulesResponse listResolverRulesResponse) {
         this.listResolverRulesResponse = listResolverRulesResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListResolverRulesResponse {
     
     
     public Integer statusCode;
+
     public ListResolverRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListResolverRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolverRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListResolverRulesResponse {
      */
     
     public Object throttlingException;
+
     public ListResolverRulesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListResolverRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

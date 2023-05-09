@@ -20,6 +20,7 @@ public class DescribeLocationSmbResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public DescribeLocationSmbResponse withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -30,6 +31,7 @@ public class DescribeLocationSmbResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationSmbResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLocationSmbResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public DescribeLocationSmbResponse withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLocationSmbResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationSmbResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -54,6 +58,7 @@ public class DescribeLocationSmbResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationSmbResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -62,6 +67,7 @@ public class DescribeLocationSmbResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public SmbMountOptions mountOptions;
+
     public DescribeLocationSmbResponse withMountOptions(SmbMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -70,9 +76,11 @@ public class DescribeLocationSmbResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public String user;
+
     public DescribeLocationSmbResponse withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public DescribeLocationSmbResponse(){}
 }

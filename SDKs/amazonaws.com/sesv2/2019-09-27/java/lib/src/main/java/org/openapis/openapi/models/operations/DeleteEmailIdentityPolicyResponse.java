@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEmailIdentityPolicyResponse {
@@ -12,6 +13,7 @@ public class DeleteEmailIdentityPolicyResponse {
      */
     
     public Object badRequestException;
+
     public DeleteEmailIdentityPolicyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEmailIdentityPolicyResponse {
     
     
     public String contentType;
+
     public DeleteEmailIdentityPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEmailIdentityPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteEmailIdentityPolicyResponse;
+
     public DeleteEmailIdentityPolicyResponse withDeleteEmailIdentityPolicyResponse(java.util.Map<String, Object> deleteEmailIdentityPolicyResponse) {
         this.deleteEmailIdentityPolicyResponse = deleteEmailIdentityPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEmailIdentityPolicyResponse {
      */
     
     public Object notFoundException;
+
     public DeleteEmailIdentityPolicyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteEmailIdentityPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteEmailIdentityPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteEmailIdentityPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEmailIdentityPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteEmailIdentityPolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteEmailIdentityPolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteEmailIdentityPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

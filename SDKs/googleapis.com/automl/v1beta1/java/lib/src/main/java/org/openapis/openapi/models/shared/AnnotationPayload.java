@@ -18,6 +18,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecId")
     public String annotationSpecId;
+
     public AnnotationPayload withAnnotationSpecId(String annotationSpecId) {
         this.annotationSpecId = annotationSpecId;
         return this;
@@ -29,6 +30,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public ClassificationAnnotation classification;
+
     public AnnotationPayload withClassification(ClassificationAnnotation classification) {
         this.classification = classification;
         return this;
@@ -40,6 +42,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AnnotationPayload withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageObjectDetection")
     public ImageObjectDetectionAnnotation imageObjectDetection;
+
     public AnnotationPayload withImageObjectDetection(ImageObjectDetectionAnnotation imageObjectDetection) {
         this.imageObjectDetection = imageObjectDetection;
         return this;
@@ -62,6 +66,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tables")
     public TablesAnnotation tables;
+
     public AnnotationPayload withTables(TablesAnnotation tables) {
         this.tables = tables;
         return this;
@@ -73,6 +78,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textExtraction")
     public TextExtractionAnnotation textExtraction;
+
     public AnnotationPayload withTextExtraction(TextExtractionAnnotation textExtraction) {
         this.textExtraction = textExtraction;
         return this;
@@ -84,6 +90,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSentiment")
     public TextSentimentAnnotation textSentiment;
+
     public AnnotationPayload withTextSentiment(TextSentimentAnnotation textSentiment) {
         this.textSentiment = textSentiment;
         return this;
@@ -95,6 +102,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translation")
     public TranslationAnnotation translation;
+
     public AnnotationPayload withTranslation(TranslationAnnotation translation) {
         this.translation = translation;
         return this;
@@ -106,6 +114,7 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoClassification")
     public VideoClassificationAnnotation videoClassification;
+
     public AnnotationPayload withVideoClassification(VideoClassificationAnnotation videoClassification) {
         this.videoClassification = videoClassification;
         return this;
@@ -117,9 +126,11 @@ public class AnnotationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoObjectTracking")
     public VideoObjectTrackingAnnotation videoObjectTracking;
+
     public AnnotationPayload withVideoObjectTracking(VideoObjectTrackingAnnotation videoObjectTracking) {
         this.videoObjectTracking = videoObjectTracking;
         return this;
     }
     
+    public AnnotationPayload(){}
 }

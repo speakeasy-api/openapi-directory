@@ -18,9 +18,11 @@ public class AnimationEnd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOffset")
     public String startTimeOffset;
+
     public AnimationEnd withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
     }
     
+    public AnimationEnd(){}
 }

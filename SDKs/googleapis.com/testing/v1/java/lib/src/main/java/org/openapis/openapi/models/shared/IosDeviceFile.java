@@ -18,6 +18,7 @@ public class IosDeviceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public IosDeviceFile withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -29,6 +30,7 @@ public class IosDeviceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public FileReference content;
+
     public IosDeviceFile withContent(FileReference content) {
         this.content = content;
         return this;
@@ -40,9 +42,11 @@ public class IosDeviceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devicePath")
     public String devicePath;
+
     public IosDeviceFile withDevicePath(String devicePath) {
         this.devicePath = devicePath;
         return this;
     }
     
+    public IosDeviceFile(){}
 }

@@ -15,6 +15,7 @@ public class Field {
      */
     @JsonProperty("boundaryId")
     public String boundaryId;
+
     public Field withBoundaryId(String boundaryId) {
         this.boundaryId = boundaryId;
         return this;
@@ -25,6 +26,7 @@ public class Field {
      */
     @JsonProperty("id")
     public String id;
+
     public Field withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class Field {
      */
     @JsonProperty("name")
     public String name;
+
     public Field withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class Field {
      */
     @JsonProperty("parent")
     public Parent parent;
+
     public Field withParent(Parent parent) {
         this.parent = parent;
         return this;
@@ -55,9 +59,17 @@ public class Field {
      */
     @JsonProperty("resourceOwnerId")
     public String resourceOwnerId;
+
     public Field withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     
+    public Field(@JsonProperty("boundaryId") String boundaryId, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("parent") Parent parent, @JsonProperty("resourceOwnerId") String resourceOwnerId) {
+        this.boundaryId = boundaryId;
+        this.id = id;
+        this.name = name;
+        this.parent = parent;
+        this.resourceOwnerId = resourceOwnerId;
+  }
 }

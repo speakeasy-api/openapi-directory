@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3ReferenceDataSourceDescription {
     @JsonProperty("BucketARN")
     public String bucketARN;
+
     public S3ReferenceDataSourceDescription withBucketARN(String bucketARN) {
         this.bucketARN = bucketARN;
         return this;
@@ -19,6 +20,7 @@ public class S3ReferenceDataSourceDescription {
     
     @JsonProperty("FileKey")
     public String fileKey;
+
     public S3ReferenceDataSourceDescription withFileKey(String fileKey) {
         this.fileKey = fileKey;
         return this;
@@ -26,9 +28,15 @@ public class S3ReferenceDataSourceDescription {
     
     @JsonProperty("ReferenceRoleARN")
     public String referenceRoleARN;
+
     public S3ReferenceDataSourceDescription withReferenceRoleARN(String referenceRoleARN) {
         this.referenceRoleARN = referenceRoleARN;
         return this;
     }
     
+    public S3ReferenceDataSourceDescription(@JsonProperty("BucketARN") String bucketARN, @JsonProperty("FileKey") String fileKey, @JsonProperty("ReferenceRoleARN") String referenceRoleARN) {
+        this.bucketARN = bucketARN;
+        this.fileKey = fileKey;
+        this.referenceRoleARN = referenceRoleARN;
+  }
 }

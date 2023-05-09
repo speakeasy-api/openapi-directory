@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRoutersPreviewResponse {
     
     public String contentType;
+
     public ComputeRoutersPreviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRoutersPreviewResponse {
      */
     
     public org.openapis.openapi.models.shared.RoutersPreviewResponse routersPreviewResponse;
+
     public ComputeRoutersPreviewResponse withRoutersPreviewResponse(org.openapis.openapi.models.shared.RoutersPreviewResponse routersPreviewResponse) {
         this.routersPreviewResponse = routersPreviewResponse;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRoutersPreviewResponse {
     
     
     public Integer statusCode;
+
     public ComputeRoutersPreviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRoutersPreviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRoutersPreviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRoutersPreviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

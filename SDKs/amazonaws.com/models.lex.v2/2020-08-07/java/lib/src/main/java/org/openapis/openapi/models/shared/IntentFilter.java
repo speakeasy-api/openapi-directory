@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IntentFilter {
     @JsonProperty("name")
     public IntentFilterNameEnum name;
+
     public IntentFilter withName(IntentFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class IntentFilter {
     
     @JsonProperty("operator")
     public IntentFilterOperatorEnum operator;
+
     public IntentFilter withOperator(IntentFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,15 @@ public class IntentFilter {
     
     @JsonProperty("values")
     public String[] values;
+
     public IntentFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public IntentFilter(@JsonProperty("name") IntentFilterNameEnum name, @JsonProperty("operator") IntentFilterOperatorEnum operator, @JsonProperty("values") String[] values) {
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
+  }
 }

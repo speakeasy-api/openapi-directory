@@ -15,6 +15,7 @@ public class ListExtensibleSourceServersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListExtensibleSourceServersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListExtensibleSourceServersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExtensibleSourceServersRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class ListExtensibleSourceServersRequestBody {
      */
     @JsonProperty("stagingAccountID")
     public String stagingAccountID;
+
     public ListExtensibleSourceServersRequestBody withStagingAccountID(String stagingAccountID) {
         this.stagingAccountID = stagingAccountID;
         return this;
     }
     
+    public ListExtensibleSourceServersRequestBody(@JsonProperty("stagingAccountID") String stagingAccountID) {
+        this.stagingAccountID = stagingAccountID;
+  }
 }

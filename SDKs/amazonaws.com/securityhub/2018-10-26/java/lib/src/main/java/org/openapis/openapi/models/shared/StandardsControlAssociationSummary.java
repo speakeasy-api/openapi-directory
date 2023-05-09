@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class StandardsControlAssociationSummary {
     @JsonProperty("AssociationStatus")
     public AssociationStatusEnum associationStatus;
+
     public StandardsControlAssociationSummary withAssociationStatus(AssociationStatusEnum associationStatus) {
         this.associationStatus = associationStatus;
         return this;
@@ -27,6 +28,7 @@ public class StandardsControlAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedRequirements")
     public String[] relatedRequirements;
+
     public StandardsControlAssociationSummary withRelatedRequirements(String[] relatedRequirements) {
         this.relatedRequirements = relatedRequirements;
         return this;
@@ -34,6 +36,7 @@ public class StandardsControlAssociationSummary {
     
     @JsonProperty("SecurityControlArn")
     public String securityControlArn;
+
     public StandardsControlAssociationSummary withSecurityControlArn(String securityControlArn) {
         this.securityControlArn = securityControlArn;
         return this;
@@ -41,6 +44,7 @@ public class StandardsControlAssociationSummary {
     
     @JsonProperty("SecurityControlId")
     public String securityControlId;
+
     public StandardsControlAssociationSummary withSecurityControlId(String securityControlId) {
         this.securityControlId = securityControlId;
         return this;
@@ -48,6 +52,7 @@ public class StandardsControlAssociationSummary {
     
     @JsonProperty("StandardsArn")
     public String standardsArn;
+
     public StandardsControlAssociationSummary withStandardsArn(String standardsArn) {
         this.standardsArn = standardsArn;
         return this;
@@ -56,6 +61,7 @@ public class StandardsControlAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsControlDescription")
     public String standardsControlDescription;
+
     public StandardsControlAssociationSummary withStandardsControlDescription(String standardsControlDescription) {
         this.standardsControlDescription = standardsControlDescription;
         return this;
@@ -64,6 +70,7 @@ public class StandardsControlAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsControlTitle")
     public String standardsControlTitle;
+
     public StandardsControlAssociationSummary withStandardsControlTitle(String standardsControlTitle) {
         this.standardsControlTitle = standardsControlTitle;
         return this;
@@ -74,6 +81,7 @@ public class StandardsControlAssociationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public StandardsControlAssociationSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -82,9 +90,16 @@ public class StandardsControlAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedReason")
     public String updatedReason;
+
     public StandardsControlAssociationSummary withUpdatedReason(String updatedReason) {
         this.updatedReason = updatedReason;
         return this;
     }
     
+    public StandardsControlAssociationSummary(@JsonProperty("AssociationStatus") AssociationStatusEnum associationStatus, @JsonProperty("SecurityControlArn") String securityControlArn, @JsonProperty("SecurityControlId") String securityControlId, @JsonProperty("StandardsArn") String standardsArn) {
+        this.associationStatus = associationStatus;
+        this.securityControlArn = securityControlArn;
+        this.securityControlId = securityControlId;
+        this.standardsArn = standardsArn;
+  }
 }

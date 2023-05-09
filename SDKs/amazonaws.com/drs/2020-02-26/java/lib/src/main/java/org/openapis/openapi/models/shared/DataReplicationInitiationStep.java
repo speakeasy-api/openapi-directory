@@ -15,6 +15,7 @@ public class DataReplicationInitiationStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public DataReplicationInitiationStepNameEnum name;
+
     public DataReplicationInitiationStep withName(DataReplicationInitiationStepNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class DataReplicationInitiationStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DataReplicationInitiationStepStatusEnum status;
+
     public DataReplicationInitiationStep withStatus(DataReplicationInitiationStepStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DataReplicationInitiationStep(){}
 }

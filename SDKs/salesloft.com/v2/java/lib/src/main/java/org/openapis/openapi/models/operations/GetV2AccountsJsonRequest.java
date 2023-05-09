@@ -12,6 +12,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=account_stage_id")
     public Long[] accountStageId;
+
     public GetV2AccountsJsonRequest withAccountStageId(Long[] accountStageId) {
         this.accountStageId = accountStageId;
         return this;
@@ -22,6 +23,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=account_tier_id")
     public Long[] accountTierId;
+
     public GetV2AccountsJsonRequest withAccountTierId(Long[] accountTierId) {
         this.accountTierId = accountTierId;
         return this;
@@ -32,6 +34,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
     public Boolean archived;
+
     public GetV2AccountsJsonRequest withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -42,6 +45,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=city")
     public String[] city;
+
     public GetV2AccountsJsonRequest withCity(String[] city) {
         this.city = city;
         return this;
@@ -52,6 +56,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=country")
     public String[] country;
+
     public GetV2AccountsJsonRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -66,6 +71,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=created_at")
     public String[] createdAt;
+
     public GetV2AccountsJsonRequest withCreatedAt(String[] createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -76,6 +82,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=crm_id")
     public String[] crmId;
+
     public GetV2AccountsJsonRequest withCrmId(String[] crmId) {
         this.crmId = crmId;
         return this;
@@ -86,6 +93,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=custom_fields")
     public java.util.Map<String, Object> customFields;
+
     public GetV2AccountsJsonRequest withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -96,6 +104,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public GetV2AccountsJsonRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -106,6 +115,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2AccountsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -116,6 +126,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2AccountsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -126,6 +137,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=industry")
     public String[] industry;
+
     public GetV2AccountsJsonRequest withIndustry(String[] industry) {
         this.industry = industry;
         return this;
@@ -140,6 +152,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_contacted")
     public java.util.Map<String, Object> lastContacted;
+
     public GetV2AccountsJsonRequest withLastContacted(java.util.Map<String, Object> lastContacted) {
         this.lastContacted = lastContacted;
         return this;
@@ -150,6 +163,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2AccountsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -160,6 +174,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=locales")
     public String[] locales;
+
     public GetV2AccountsJsonRequest withLocales(String[] locales) {
         this.locales = locales;
         return this;
@@ -170,6 +185,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
     public String[] name;
+
     public GetV2AccountsJsonRequest withName(String[] name) {
         this.name = name;
         return this;
@@ -180,6 +196,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=owner_crm_id")
     public String[] ownerCrmId;
+
     public GetV2AccountsJsonRequest withOwnerCrmId(String[] ownerCrmId) {
         this.ownerCrmId = ownerCrmId;
         return this;
@@ -190,6 +207,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=owner_id")
     public String[] ownerId;
+
     public GetV2AccountsJsonRequest withOwnerId(String[] ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -200,6 +218,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner_is_active")
     public Boolean ownerIsActive;
+
     public GetV2AccountsJsonRequest withOwnerIsActive(Boolean ownerIsActive) {
         this.ownerIsActive = ownerIsActive;
         return this;
@@ -210,6 +229,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2AccountsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -220,6 +240,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2AccountsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -230,6 +251,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2AccountsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -240,6 +262,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2AccountsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -250,6 +273,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=state")
     public String[] state;
+
     public GetV2AccountsJsonRequest withState(String[] state) {
         this.state = state;
         return this;
@@ -260,6 +284,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tag")
     public String[] tag;
+
     public GetV2AccountsJsonRequest withTag(String[] tag) {
         this.tag = tag;
         return this;
@@ -270,6 +295,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tag_id")
     public Long[] tagId;
+
     public GetV2AccountsJsonRequest withTagId(Long[] tagId) {
         this.tagId = tagId;
         return this;
@@ -284,6 +310,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public GetV2AccountsJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -294,6 +321,7 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_relationships")
     public java.util.Map<String, Object> userRelationships;
+
     public GetV2AccountsJsonRequest withUserRelationships(java.util.Map<String, Object> userRelationships) {
         this.userRelationships = userRelationships;
         return this;
@@ -304,9 +332,11 @@ public class GetV2AccountsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=website")
     public String[] website;
+
     public GetV2AccountsJsonRequest withWebsite(String[] website) {
         this.website = website;
         return this;
     }
     
+    public GetV2AccountsJsonRequest(){}
 }

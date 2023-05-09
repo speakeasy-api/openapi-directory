@@ -15,9 +15,11 @@ public class StartQueryExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryExecutionId")
     public String queryExecutionId;
+
     public StartQueryExecutionOutput withQueryExecutionId(String queryExecutionId) {
         this.queryExecutionId = queryExecutionId;
         return this;
     }
     
+    public StartQueryExecutionOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskNotesPartialUpdateRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public TaskNotesPartialUpdateRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +18,7 @@ public class TaskNotesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public TaskNotesPartialUpdateRequest withSince(String since) {
         this.since = since;
         return this;
@@ -23,9 +26,13 @@ public class TaskNotesPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=task")
     public Long task;
+
     public TaskNotesPartialUpdateRequest withTask(Long task) {
         this.task = task;
         return this;
     }
     
+    public TaskNotesPartialUpdateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

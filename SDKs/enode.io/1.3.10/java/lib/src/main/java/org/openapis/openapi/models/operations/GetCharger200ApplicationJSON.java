@@ -17,6 +17,7 @@ public class GetCharger200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargeState")
     public GetCharger200ApplicationJSONChargeState chargeState;
+
     public GetCharger200ApplicationJSON withChargeState(GetCharger200ApplicationJSONChargeState chargeState) {
         this.chargeState = chargeState;
         return this;
@@ -28,6 +29,7 @@ public class GetCharger200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetCharger200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +41,7 @@ public class GetCharger200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("information")
     public GetCharger200ApplicationJSONInformation information;
+
     public GetCharger200ApplicationJSON withInformation(GetCharger200ApplicationJSONInformation information) {
         this.information = information;
         return this;
@@ -50,6 +53,7 @@ public class GetCharger200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReachable")
     public Boolean isReachable;
+
     public GetCharger200ApplicationJSON withIsReachable(Boolean isReachable) {
         this.isReachable = isReachable;
         return this;
@@ -62,9 +66,11 @@ public class GetCharger200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastSeen")
     public LocalDate lastSeen;
+
     public GetCharger200ApplicationJSON withLastSeen(LocalDate lastSeen) {
         this.lastSeen = lastSeen;
         return this;
     }
     
+    public GetCharger200ApplicationJSON(){}
 }

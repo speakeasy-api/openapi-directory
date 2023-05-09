@@ -15,6 +15,7 @@ public class ListRecommendedIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListRecommendedIntentsResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class ListRecommendedIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationId")
     public String botRecommendationId;
+
     public ListRecommendedIntentsResponse withBotRecommendationId(String botRecommendationId) {
         this.botRecommendationId = botRecommendationId;
         return this;
@@ -31,6 +33,7 @@ public class ListRecommendedIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListRecommendedIntentsResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -39,6 +42,7 @@ public class ListRecommendedIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListRecommendedIntentsResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -47,6 +51,7 @@ public class ListRecommendedIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRecommendedIntentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -55,9 +60,11 @@ public class ListRecommendedIntentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaryList")
     public RecommendedIntentSummary[] summaryList;
+
     public ListRecommendedIntentsResponse withSummaryList(RecommendedIntentSummary[] summaryList) {
         this.summaryList = summaryList;
         return this;
     }
     
+    public ListRecommendedIntentsResponse(){}
 }

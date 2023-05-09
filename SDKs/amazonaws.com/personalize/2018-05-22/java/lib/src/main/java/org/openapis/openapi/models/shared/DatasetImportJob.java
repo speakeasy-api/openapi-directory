@@ -22,6 +22,7 @@ public class DatasetImportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DatasetImportJob withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public DataSource dataSource;
+
     public DatasetImportJob withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -38,6 +40,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetArn")
     public String datasetArn;
+
     public DatasetImportJob withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -46,6 +49,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetImportJobArn")
     public String datasetImportJobArn;
+
     public DatasetImportJob withDatasetImportJobArn(String datasetImportJobArn) {
         this.datasetImportJobArn = datasetImportJobArn;
         return this;
@@ -54,6 +58,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DatasetImportJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -62,6 +67,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importMode")
     public ImportModeEnum importMode;
+
     public DatasetImportJob withImportMode(ImportModeEnum importMode) {
         this.importMode = importMode;
         return this;
@@ -70,6 +76,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public DatasetImportJob withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -80,6 +87,7 @@ public class DatasetImportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DatasetImportJob withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -88,6 +96,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishAttributionMetricsToS3")
     public Boolean publishAttributionMetricsToS3;
+
     public DatasetImportJob withPublishAttributionMetricsToS3(Boolean publishAttributionMetricsToS3) {
         this.publishAttributionMetricsToS3 = publishAttributionMetricsToS3;
         return this;
@@ -96,6 +105,7 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public DatasetImportJob withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -104,9 +114,11 @@ public class DatasetImportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DatasetImportJob withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DatasetImportJob(){}
 }

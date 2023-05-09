@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteUserPermissionsBoundaryResponse {
     
     public byte[] body;
+
     public GETDeleteUserPermissionsBoundaryResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteUserPermissionsBoundaryResponse {
     
     
     public String contentType;
+
     public GETDeleteUserPermissionsBoundaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteUserPermissionsBoundaryResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteUserPermissionsBoundaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteUserPermissionsBoundaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteUserPermissionsBoundaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteUserPermissionsBoundaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

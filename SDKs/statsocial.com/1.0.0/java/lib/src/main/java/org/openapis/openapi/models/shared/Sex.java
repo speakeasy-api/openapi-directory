@@ -12,6 +12,7 @@ public class Sex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Female")
     public Female female;
+
     public Sex withFemale(Female female) {
         this.female = female;
         return this;
@@ -20,9 +21,11 @@ public class Sex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Male")
     public Male male;
+
     public Sex withMale(Male male) {
         this.male = male;
         return this;
     }
     
+    public Sex(){}
 }

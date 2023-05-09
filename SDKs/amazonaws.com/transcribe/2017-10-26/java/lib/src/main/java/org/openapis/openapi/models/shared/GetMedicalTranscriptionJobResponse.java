@@ -15,9 +15,11 @@ public class GetMedicalTranscriptionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MedicalTranscriptionJob")
     public MedicalTranscriptionJob medicalTranscriptionJob;
+
     public GetMedicalTranscriptionJobResponse withMedicalTranscriptionJob(MedicalTranscriptionJob medicalTranscriptionJob) {
         this.medicalTranscriptionJob = medicalTranscriptionJob;
         return this;
     }
     
+    public GetMedicalTranscriptionJobResponse(){}
 }

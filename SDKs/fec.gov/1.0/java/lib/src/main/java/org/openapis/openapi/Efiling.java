@@ -60,11 +60,9 @@ public class Efiling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEfileFilingsResponse res = new org.openapis.openapi.models.operations.GetEfileFilingsResponse() {{
+        org.openapis.openapi.models.operations.GetEfileFilingsResponse res = new org.openapis.openapi.models.operations.GetEfileFilingsResponse(contentType, httpRes.statusCode()) {{
             eFilingsPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -105,11 +103,9 @@ public class Efiling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEfileReportsHouseSenateResponse res = new org.openapis.openapi.models.operations.GetEfileReportsHouseSenateResponse() {{
+        org.openapis.openapi.models.operations.GetEfileReportsHouseSenateResponse res = new org.openapis.openapi.models.operations.GetEfileReportsHouseSenateResponse(contentType, httpRes.statusCode()) {{
             baseF3FilingPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -150,11 +146,9 @@ public class Efiling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEfileReportsPacPartyResponse res = new org.openapis.openapi.models.operations.GetEfileReportsPacPartyResponse() {{
+        org.openapis.openapi.models.operations.GetEfileReportsPacPartyResponse res = new org.openapis.openapi.models.operations.GetEfileReportsPacPartyResponse(contentType, httpRes.statusCode()) {{
             baseF3XFilingPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -195,11 +189,9 @@ public class Efiling {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEfileReportsPresidentialResponse res = new org.openapis.openapi.models.operations.GetEfileReportsPresidentialResponse() {{
+        org.openapis.openapi.models.operations.GetEfileReportsPresidentialResponse res = new org.openapis.openapi.models.operations.GetEfileReportsPresidentialResponse(contentType, httpRes.statusCode()) {{
             baseF3PFilingPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

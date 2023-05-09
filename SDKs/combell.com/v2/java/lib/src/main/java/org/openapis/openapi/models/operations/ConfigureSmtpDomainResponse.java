@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfigureSmtpDomainResponse {
@@ -12,6 +13,7 @@ public class ConfigureSmtpDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequestResponse badRequestResponse;
+
     public ConfigureSmtpDomainResponse withBadRequestResponse(org.openapis.openapi.models.shared.BadRequestResponse badRequestResponse) {
         this.badRequestResponse = badRequestResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfigureSmtpDomainResponse {
     
     
     public String contentType;
+
     public ConfigureSmtpDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ConfigureSmtpDomainResponse {
     
     
     public Integer statusCode;
+
     public ConfigureSmtpDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ConfigureSmtpDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfigureSmtpDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfigureSmtpDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

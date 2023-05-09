@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NightModesettingsResponse {
     
     public String contentType;
+
     public NightModesettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class NightModesettingsResponse {
     
     
     public org.openapis.openapi.models.shared.Example17 example17;
+
     public NightModesettingsResponse withExample17(org.openapis.openapi.models.shared.Example17 example17) {
         this.example17 = example17;
         return this;
@@ -23,6 +26,7 @@ public class NightModesettingsResponse {
     
     
     public Integer statusCode;
+
     public NightModesettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class NightModesettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NightModesettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NightModesettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

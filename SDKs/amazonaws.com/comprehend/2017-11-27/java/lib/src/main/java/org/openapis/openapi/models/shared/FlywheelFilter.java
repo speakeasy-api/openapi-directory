@@ -22,6 +22,7 @@ public class FlywheelFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public FlywheelFilter withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -32,6 +33,7 @@ public class FlywheelFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public FlywheelFilter withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -40,9 +42,11 @@ public class FlywheelFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FlywheelStatusEnum status;
+
     public FlywheelFilter withStatus(FlywheelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public FlywheelFilter(){}
 }

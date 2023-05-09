@@ -178,6 +178,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateOrganizationInvit
 lib/src/main/java/org/openapis/openapi/models/operations/CreateOrganizationInvitationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateOrganizationUserSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateOrganizationUserResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListLtiCredentialsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLtiCredentialsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListOrganizationInvitationsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListOrganizationInvitationsRoleEnum.java
@@ -391,4 +392,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/ScoreCommentContext.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoreCommentCreation.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoreCommentUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoreTrackUpdate.java
+docs/sdk/README.md
+docs/account/README.md
+docs/class/README.md
+docs/collection/README.md
+docs/group/README.md
+docs/organization/README.md
+docs/score/README.md
+docs/user/README.md
 USAGE.md

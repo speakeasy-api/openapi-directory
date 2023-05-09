@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPotPayments200ApplicationJSONRootTypeForPayments {
     @JsonProperty("amount")
     public String amount;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -18,6 +19,7 @@ public class GetPotPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("currency")
     public String currency;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -29,6 +31,7 @@ public class GetPotPayments200ApplicationJSONRootTypeForPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investment_instructions")
     public GetPotPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions[] investmentInstructions;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withInvestmentInstructions(GetPotPayments200ApplicationJSONRootTypeForPaymentsInvestmentInstructions[] investmentInstructions) {
         this.investmentInstructions = investmentInstructions;
         return this;
@@ -36,6 +39,7 @@ public class GetPotPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("payment_type")
     public GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum paymentType;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withPaymentType(GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -43,6 +47,7 @@ public class GetPotPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("purpose")
     public GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum purpose;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withPurpose(GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -50,6 +55,7 @@ public class GetPotPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("service_provider")
     public GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum serviceProvider;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withServiceProvider(GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum serviceProvider) {
         this.serviceProvider = serviceProvider;
         return this;
@@ -66,6 +72,7 @@ public class GetPotPayments200ApplicationJSONRootTypeForPayments {
      */
     @JsonProperty("status")
     public GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum status;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withStatus(GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum status) {
         this.status = status;
         return this;
@@ -73,9 +80,19 @@ public class GetPotPayments200ApplicationJSONRootTypeForPayments {
     
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public GetPotPayments200ApplicationJSONRootTypeForPayments withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public GetPotPayments200ApplicationJSONRootTypeForPayments(@JsonProperty("amount") String amount, @JsonProperty("currency") String currency, @JsonProperty("payment_type") GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum paymentType, @JsonProperty("purpose") GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum purpose, @JsonProperty("service_provider") GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum serviceProvider, @JsonProperty("status") GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum status, @JsonProperty("transaction_id") String transactionId) {
+        this.amount = amount;
+        this.currency = currency;
+        this.paymentType = paymentType;
+        this.purpose = purpose;
+        this.serviceProvider = serviceProvider;
+        this.status = status;
+        this.transactionId = transactionId;
+  }
 }

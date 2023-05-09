@@ -15,9 +15,11 @@ public class ModelDeployResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public ModelDeployResult withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
     }
     
+    public ModelDeployResult(){}
 }

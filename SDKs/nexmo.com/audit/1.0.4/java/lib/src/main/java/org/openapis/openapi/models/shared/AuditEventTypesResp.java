@@ -18,9 +18,11 @@ public class AuditEventTypesResp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTypes")
     public AuditEventType[] eventTypes;
+
     public AuditEventTypesResp withEventTypes(AuditEventType[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
     }
     
+    public AuditEventTypesResp(){}
 }

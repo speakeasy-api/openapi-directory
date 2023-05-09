@@ -15,6 +15,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension {
      */
     @JsonProperty("largestMeasure")
     public Double largestMeasure;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension withLargestMeasure(Double largestMeasure) {
         this.largestMeasure = largestMeasure;
         return this;
@@ -25,9 +26,14 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension {
      */
     @JsonProperty("maxMeasureSum")
     public Double maxMeasureSum;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension withMaxMeasureSum(Double maxMeasureSum) {
         this.maxMeasureSum = maxMeasureSum;
         return this;
     }
     
+    public PutApiLogisticsPvtShippingPoliciesIdRequestBodyMaxDimension(@JsonProperty("largestMeasure") Double largestMeasure, @JsonProperty("maxMeasureSum") Double maxMeasureSum) {
+        this.largestMeasure = largestMeasure;
+        this.maxMeasureSum = maxMeasureSum;
+  }
 }

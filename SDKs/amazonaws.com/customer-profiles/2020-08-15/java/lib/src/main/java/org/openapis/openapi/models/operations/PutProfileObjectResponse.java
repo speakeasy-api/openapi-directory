@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutProfileObjectResponse {
@@ -12,6 +13,7 @@ public class PutProfileObjectResponse {
      */
     
     public Object accessDeniedException;
+
     public PutProfileObjectResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutProfileObjectResponse {
      */
     
     public Object badRequestException;
+
     public PutProfileObjectResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class PutProfileObjectResponse {
     
     
     public String contentType;
+
     public PutProfileObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutProfileObjectResponse {
      */
     
     public Object internalServerException;
+
     public PutProfileObjectResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutProfileObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.PutProfileObjectResponse putProfileObjectResponse;
+
     public PutProfileObjectResponse withPutProfileObjectResponse(org.openapis.openapi.models.shared.PutProfileObjectResponse putProfileObjectResponse) {
         this.putProfileObjectResponse = putProfileObjectResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutProfileObjectResponse {
     
     
     public Integer statusCode;
+
     public PutProfileObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutProfileObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutProfileObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutProfileObjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutProfileObjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class PutProfileObjectResponse {
      */
     
     public Object throttlingException;
+
     public PutProfileObjectResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutProfileObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

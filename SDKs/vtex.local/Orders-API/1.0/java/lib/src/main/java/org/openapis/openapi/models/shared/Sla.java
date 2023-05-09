@@ -12,6 +12,7 @@ public class Sla {
      */
     @JsonProperty("deliveryChannel")
     public String deliveryChannel;
+
     public Sla withDeliveryChannel(String deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
@@ -22,6 +23,7 @@ public class Sla {
      */
     @JsonProperty("deliveryWindow")
     public String deliveryWindow;
+
     public Sla withDeliveryWindow(String deliveryWindow) {
         this.deliveryWindow = deliveryWindow;
         return this;
@@ -32,6 +34,7 @@ public class Sla {
      */
     @JsonProperty("id")
     public String id;
+
     public Sla withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class Sla {
      */
     @JsonProperty("lockTTL")
     public String lockTTL;
+
     public Sla withLockTTL(String lockTTL) {
         this.lockTTL = lockTTL;
         return this;
@@ -52,6 +56,7 @@ public class Sla {
      */
     @JsonProperty("name")
     public String name;
+
     public Sla withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class Sla {
      */
     @JsonProperty("pickupDistance")
     public Double pickupDistance;
+
     public Sla withPickupDistance(Double pickupDistance) {
         this.pickupDistance = pickupDistance;
         return this;
@@ -72,6 +78,7 @@ public class Sla {
      */
     @JsonProperty("pickupPointId")
     public String pickupPointId;
+
     public Sla withPickupPointId(String pickupPointId) {
         this.pickupPointId = pickupPointId;
         return this;
@@ -82,6 +89,7 @@ public class Sla {
      */
     @JsonProperty("pickupStoreInfo")
     public PickupStoreInfo pickupStoreInfo;
+
     public Sla withPickupStoreInfo(PickupStoreInfo pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -92,6 +100,7 @@ public class Sla {
      */
     @JsonProperty("polygonName")
     public String polygonName;
+
     public Sla withPolygonName(String polygonName) {
         this.polygonName = polygonName;
         return this;
@@ -102,6 +111,7 @@ public class Sla {
      */
     @JsonProperty("price")
     public Integer price;
+
     public Sla withPrice(Integer price) {
         this.price = price;
         return this;
@@ -112,6 +122,7 @@ public class Sla {
      */
     @JsonProperty("shippingEstimate")
     public String shippingEstimate;
+
     public Sla withShippingEstimate(String shippingEstimate) {
         this.shippingEstimate = shippingEstimate;
         return this;
@@ -122,9 +133,24 @@ public class Sla {
      */
     @JsonProperty("transitTime")
     public String transitTime;
+
     public Sla withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
     }
     
+    public Sla(@JsonProperty("deliveryChannel") String deliveryChannel, @JsonProperty("deliveryWindow") String deliveryWindow, @JsonProperty("id") String id, @JsonProperty("lockTTL") String lockTTL, @JsonProperty("name") String name, @JsonProperty("pickupDistance") Double pickupDistance, @JsonProperty("pickupPointId") String pickupPointId, @JsonProperty("pickupStoreInfo") PickupStoreInfo pickupStoreInfo, @JsonProperty("polygonName") String polygonName, @JsonProperty("price") Integer price, @JsonProperty("shippingEstimate") String shippingEstimate, @JsonProperty("transitTime") String transitTime) {
+        this.deliveryChannel = deliveryChannel;
+        this.deliveryWindow = deliveryWindow;
+        this.id = id;
+        this.lockTTL = lockTTL;
+        this.name = name;
+        this.pickupDistance = pickupDistance;
+        this.pickupPointId = pickupPointId;
+        this.pickupStoreInfo = pickupStoreInfo;
+        this.polygonName = polygonName;
+        this.price = price;
+        this.shippingEstimate = shippingEstimate;
+        this.transitTime = transitTime;
+  }
 }

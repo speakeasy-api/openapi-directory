@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCashDrawerShiftsRequest {
@@ -12,6 +13,7 @@ public class ListCashDrawerShiftsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public ListCashDrawerShiftsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -22,6 +24,7 @@ public class ListCashDrawerShiftsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListCashDrawerShiftsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +35,7 @@ public class ListCashDrawerShiftsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public ListCashDrawerShiftsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -43,6 +47,7 @@ public class ListCashDrawerShiftsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListCashDrawerShiftsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -53,6 +58,7 @@ public class ListCashDrawerShiftsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListCashDrawerShiftsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -64,9 +70,13 @@ public class ListCashDrawerShiftsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public ListCashDrawerShiftsRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListCashDrawerShiftsRequest(@JsonProperty("location_id") String locationId) {
+        this.locationId = locationId;
+  }
 }

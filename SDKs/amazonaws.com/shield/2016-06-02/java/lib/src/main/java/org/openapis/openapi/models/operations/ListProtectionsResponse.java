@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProtectionsResponse {
     
     public String contentType;
+
     public ListProtectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProtectionsResponse {
      */
     
     public Object internalErrorException;
+
     public ListProtectionsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListProtectionsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListProtectionsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListProtectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProtectionsResponse listProtectionsResponse;
+
     public ListProtectionsResponse withListProtectionsResponse(org.openapis.openapi.models.shared.ListProtectionsResponse listProtectionsResponse) {
         this.listProtectionsResponse = listProtectionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListProtectionsResponse {
     
     
     public Integer statusCode;
+
     public ListProtectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListProtectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProtectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListProtectionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProtectionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListProtectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

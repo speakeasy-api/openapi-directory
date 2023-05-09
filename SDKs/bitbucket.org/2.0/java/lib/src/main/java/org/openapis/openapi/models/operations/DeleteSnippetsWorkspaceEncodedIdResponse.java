@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSnippetsWorkspaceEncodedIdResponse {
     
     public String contentType;
+
     public DeleteSnippetsWorkspaceEncodedIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteSnippetsWorkspaceEncodedIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteSnippetsWorkspaceEncodedIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteSnippetsWorkspaceEncodedIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSnippetsWorkspaceEncodedIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DeleteSnippetsWorkspaceEncodedIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public DeleteSnippetsWorkspaceEncodedIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public DeleteSnippetsWorkspaceEncodedIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

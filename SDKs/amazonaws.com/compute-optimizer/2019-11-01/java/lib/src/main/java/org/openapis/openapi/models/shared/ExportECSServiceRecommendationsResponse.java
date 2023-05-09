@@ -15,6 +15,7 @@ public class ExportECSServiceRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public ExportECSServiceRecommendationsResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -26,9 +27,11 @@ public class ExportECSServiceRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Destination")
     public S3Destination s3Destination;
+
     public ExportECSServiceRecommendationsResponse withS3Destination(S3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public ExportECSServiceRecommendationsResponse(){}
 }

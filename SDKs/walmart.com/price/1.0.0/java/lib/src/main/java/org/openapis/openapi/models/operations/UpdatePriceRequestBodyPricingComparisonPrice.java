@@ -15,6 +15,7 @@ public class UpdatePriceRequestBodyPricingComparisonPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public UpdatePriceRequestBodyPricingComparisonPrice withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class UpdatePriceRequestBodyPricingComparisonPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum currency;
+
     public UpdatePriceRequestBodyPricingComparisonPrice withCurrency(UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum currency) {
         this.currency = currency;
         return this;
     }
     
+    public UpdatePriceRequestBodyPricingComparisonPrice(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VoidTransactionResponse {
     
     public String contentType;
+
     public VoidTransactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class VoidTransactionResponse {
     
     
     public Integer statusCode;
+
     public VoidTransactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class VoidTransactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VoidTransactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class VoidTransactionResponse {
      */
     
     public org.openapis.openapi.models.shared.VoidTransactionResponse voidTransactionResponse;
+
     public VoidTransactionResponse withVoidTransactionResponse(org.openapis.openapi.models.shared.VoidTransactionResponse voidTransactionResponse) {
         this.voidTransactionResponse = voidTransactionResponse;
         return this;
     }
     
+    public VoidTransactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class PoolsDeleteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abandonInstances")
     public String[] abandonInstances;
+
     public PoolsDeleteRequest withAbandonInstances(String[] abandonInstances) {
         this.abandonInstances = abandonInstances;
         return this;
     }
     
+    public PoolsDeleteRequest(){}
 }

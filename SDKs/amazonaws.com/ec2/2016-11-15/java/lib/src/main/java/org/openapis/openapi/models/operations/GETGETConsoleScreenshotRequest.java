@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETConsoleScreenshotRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETConsoleScreenshotActionEnum action;
+
     public GETGETConsoleScreenshotRequest withAction(GETGETConsoleScreenshotActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETConsoleScreenshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETGETConsoleScreenshotRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETGETConsoleScreenshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETGETConsoleScreenshotRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -36,6 +40,7 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETConsoleScreenshotVersionEnum version;
+
     public GETGETConsoleScreenshotRequest withVersion(GETGETConsoleScreenshotVersionEnum version) {
         this.version = version;
         return this;
@@ -46,6 +51,7 @@ public class GETGETConsoleScreenshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WakeUp")
     public Boolean wakeUp;
+
     public GETGETConsoleScreenshotRequest withWakeUp(Boolean wakeUp) {
         this.wakeUp = wakeUp;
         return this;
@@ -53,6 +59,7 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETConsoleScreenshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETConsoleScreenshotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETConsoleScreenshotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETConsoleScreenshotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETConsoleScreenshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETConsoleScreenshotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETGETConsoleScreenshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETConsoleScreenshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETConsoleScreenshotRequest(@JsonProperty("Action") GETGETConsoleScreenshotActionEnum action, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Version") GETGETConsoleScreenshotVersionEnum version) {
+        this.action = action;
+        this.instanceId = instanceId;
+        this.version = version;
+  }
 }

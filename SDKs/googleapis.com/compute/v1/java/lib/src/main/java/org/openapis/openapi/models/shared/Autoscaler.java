@@ -18,6 +18,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingPolicy")
     public AutoscalingPolicy autoscalingPolicy;
+
     public Autoscaler withAutoscalingPolicy(AutoscalingPolicy autoscalingPolicy) {
         this.autoscalingPolicy = autoscalingPolicy;
         return this;
@@ -29,6 +30,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Autoscaler withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Autoscaler withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Autoscaler withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Autoscaler withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Autoscaler withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedSize")
     public Integer recommendedSize;
+
     public Autoscaler withRecommendedSize(Integer recommendedSize) {
         this.recommendedSize = recommendedSize;
         return this;
@@ -95,6 +102,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Autoscaler withRegion(String region) {
         this.region = region;
         return this;
@@ -106,6 +114,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scalingScheduleStatus")
     public java.util.Map<String, ScalingScheduleStatus> scalingScheduleStatus;
+
     public Autoscaler withScalingScheduleStatus(java.util.Map<String, ScalingScheduleStatus> scalingScheduleStatus) {
         this.scalingScheduleStatus = scalingScheduleStatus;
         return this;
@@ -117,6 +126,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Autoscaler withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -128,6 +138,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AutoscalerStatusEnum status;
+
     public Autoscaler withStatus(AutoscalerStatusEnum status) {
         this.status = status;
         return this;
@@ -139,6 +150,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetails")
     public AutoscalerStatusDetails[] statusDetails;
+
     public Autoscaler withStatusDetails(AutoscalerStatusDetails[] statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -150,6 +162,7 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public Autoscaler withTarget(String target) {
         this.target = target;
         return this;
@@ -161,9 +174,11 @@ public class Autoscaler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public Autoscaler withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public Autoscaler(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutBackupPolicyResponse {
@@ -12,6 +13,7 @@ public class PutBackupPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.BackupPolicyDescription backupPolicyDescription;
+
     public PutBackupPolicyResponse withBackupPolicyDescription(org.openapis.openapi.models.shared.BackupPolicyDescription backupPolicyDescription) {
         this.backupPolicyDescription = backupPolicyDescription;
         return this;
@@ -22,6 +24,7 @@ public class PutBackupPolicyResponse {
      */
     
     public Object badRequest;
+
     public PutBackupPolicyResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class PutBackupPolicyResponse {
     
     
     public String contentType;
+
     public PutBackupPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutBackupPolicyResponse {
      */
     
     public Object fileSystemNotFound;
+
     public PutBackupPolicyResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class PutBackupPolicyResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public PutBackupPolicyResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -59,6 +65,7 @@ public class PutBackupPolicyResponse {
      */
     
     public Object internalServerError;
+
     public PutBackupPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -66,6 +73,7 @@ public class PutBackupPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutBackupPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutBackupPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutBackupPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutBackupPolicyResponse {
      */
     
     public Object validationException;
+
     public PutBackupPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutBackupPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

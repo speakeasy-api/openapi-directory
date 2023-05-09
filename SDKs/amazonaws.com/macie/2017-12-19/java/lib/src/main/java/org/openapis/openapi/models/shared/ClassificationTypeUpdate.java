@@ -15,6 +15,7 @@ public class ClassificationTypeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuous")
     public S3ContinuousClassificationTypeEnum continuous;
+
     public ClassificationTypeUpdate withContinuous(S3ContinuousClassificationTypeEnum continuous) {
         this.continuous = continuous;
         return this;
@@ -23,9 +24,11 @@ public class ClassificationTypeUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oneTime")
     public S3OneTimeClassificationTypeEnum oneTime;
+
     public ClassificationTypeUpdate withOneTime(S3OneTimeClassificationTypeEnum oneTime) {
         this.oneTime = oneTime;
         return this;
     }
     
+    public ClassificationTypeUpdate(){}
 }

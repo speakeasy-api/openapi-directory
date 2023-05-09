@@ -15,9 +15,11 @@ public class GetThirdPartyJobDetailsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDetails")
     public ThirdPartyJobDetails jobDetails;
+
     public GetThirdPartyJobDetailsOutput withJobDetails(ThirdPartyJobDetails jobDetails) {
         this.jobDetails = jobDetails;
         return this;
     }
     
+    public GetThirdPartyJobDetailsOutput(){}
 }

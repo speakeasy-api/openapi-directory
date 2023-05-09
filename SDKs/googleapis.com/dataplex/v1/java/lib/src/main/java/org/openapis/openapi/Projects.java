@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListDataAttributeBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListDataScansResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListDataAttributesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListDataTaxonomiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1Content = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListContentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1Content = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListContentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListEnvironmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListSessionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,11 +780,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListLakesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +826,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,11 +870,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -952,11 +914,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListTasksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1000,11 +960,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1RunTaskResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1046,11 +1004,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListActionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1094,11 +1050,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1140,11 +1094,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1186,11 +1138,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1234,11 +1184,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1282,11 +1230,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             googleIamV1Policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1330,11 +1276,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             googleIamV1TestIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1378,11 +1322,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1426,11 +1368,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1Entity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1472,11 +1412,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListEntitiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1520,11 +1458,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1Partition = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1566,11 +1502,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListPartitionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1614,11 +1548,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1Entity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1660,11 +1592,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListResponse(contentType, httpRes.statusCode()) {{
             googleCloudDataplexV1ListZonesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1706,11 +1636,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudLocationListLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1754,11 +1682,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1800,11 +1726,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1846,11 +1770,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1892,11 +1814,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErgoPayCreateBabelBox1Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=boxId")
     public String boxId;
+
     public ErgoPayCreateBabelBox1Request withBoxId(String boxId) {
         this.boxId = boxId;
         return this;
     }
     
+    public ErgoPayCreateBabelBox1Request(@JsonProperty("boxId") String boxId) {
+        this.boxId = boxId;
+  }
 }

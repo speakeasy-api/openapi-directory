@@ -18,9 +18,11 @@ public class FreeListingsProgramStatusReviewIneligibilityReasonDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cooldownTime")
     public String cooldownTime;
+
     public FreeListingsProgramStatusReviewIneligibilityReasonDetails withCooldownTime(String cooldownTime) {
         this.cooldownTime = cooldownTime;
         return this;
     }
     
+    public FreeListingsProgramStatusReviewIneligibilityReasonDetails(){}
 }

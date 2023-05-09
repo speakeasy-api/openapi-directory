@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListConstraintsForPortfolioResponse {
     
     public String contentType;
+
     public ListConstraintsForPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListConstraintsForPortfolioResponse {
      */
     
     public Object invalidParametersException;
+
     public ListConstraintsForPortfolioResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListConstraintsForPortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConstraintsForPortfolioOutput listConstraintsForPortfolioOutput;
+
     public ListConstraintsForPortfolioResponse withListConstraintsForPortfolioOutput(org.openapis.openapi.models.shared.ListConstraintsForPortfolioOutput listConstraintsForPortfolioOutput) {
         this.listConstraintsForPortfolioOutput = listConstraintsForPortfolioOutput;
         return this;
@@ -39,6 +43,7 @@ public class ListConstraintsForPortfolioResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListConstraintsForPortfolioResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListConstraintsForPortfolioResponse {
     
     
     public Integer statusCode;
+
     public ListConstraintsForPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListConstraintsForPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListConstraintsForPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListConstraintsForPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

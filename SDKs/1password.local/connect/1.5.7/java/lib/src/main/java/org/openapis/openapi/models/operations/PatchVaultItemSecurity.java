@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchVaultItemSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String connectToken;
+
     public PatchVaultItemSecurity withConnectToken(String connectToken) {
         this.connectToken = connectToken;
         return this;
     }
     
+    public PatchVaultItemSecurity(@JsonProperty("ConnectToken") String connectToken) {
+        this.connectToken = connectToken;
+  }
 }

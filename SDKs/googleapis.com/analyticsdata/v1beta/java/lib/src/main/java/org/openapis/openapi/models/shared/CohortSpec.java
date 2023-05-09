@@ -18,6 +18,7 @@ public class CohortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cohortReportSettings")
     public CohortReportSettings cohortReportSettings;
+
     public CohortSpec withCohortReportSettings(CohortReportSettings cohortReportSettings) {
         this.cohortReportSettings = cohortReportSettings;
         return this;
@@ -29,6 +30,7 @@ public class CohortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cohorts")
     public Cohort[] cohorts;
+
     public CohortSpec withCohorts(Cohort[] cohorts) {
         this.cohorts = cohorts;
         return this;
@@ -40,9 +42,11 @@ public class CohortSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cohortsRange")
     public CohortsRange cohortsRange;
+
     public CohortSpec withCohortsRange(CohortsRange cohortsRange) {
         this.cohortsRange = cohortsRange;
         return this;
     }
     
+    public CohortSpec(){}
 }

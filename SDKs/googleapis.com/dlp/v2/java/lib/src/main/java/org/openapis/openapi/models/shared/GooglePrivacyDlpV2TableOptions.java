@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2TableOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifyingFields")
     public GooglePrivacyDlpV2FieldId[] identifyingFields;
+
     public GooglePrivacyDlpV2TableOptions withIdentifyingFields(GooglePrivacyDlpV2FieldId[] identifyingFields) {
         this.identifyingFields = identifyingFields;
         return this;
     }
     
+    public GooglePrivacyDlpV2TableOptions(){}
 }

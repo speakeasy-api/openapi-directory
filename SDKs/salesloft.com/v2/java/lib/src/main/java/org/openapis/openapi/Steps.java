@@ -59,11 +59,9 @@ public class Steps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2StepsJsonResponse res = new org.openapis.openapi.models.operations.GetV2StepsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2StepsJsonResponse res = new org.openapis.openapi.models.operations.GetV2StepsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Steps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2StepsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2StepsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2StepsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2StepsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

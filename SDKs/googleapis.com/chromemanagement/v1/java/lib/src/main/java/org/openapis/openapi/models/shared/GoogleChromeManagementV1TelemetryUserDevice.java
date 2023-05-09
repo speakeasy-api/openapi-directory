@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1TelemetryUserDevice - Telemetry data collected for a managed user and device.
+ * GoogleChromeManagementV1TelemetryUserDevice - Telemetry data collected for a managed user and device. * Granular permission needed: TELEMETRY_API_DEVICE
  */
 public class GoogleChromeManagementV1TelemetryUserDevice {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TelemetryUserDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioStatusReport")
     public GoogleChromeManagementV1AudioStatusReport[] audioStatusReport;
+
     public GoogleChromeManagementV1TelemetryUserDevice withAudioStatusReport(GoogleChromeManagementV1AudioStatusReport[] audioStatusReport) {
         this.audioStatusReport = audioStatusReport;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1TelemetryUserDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public GoogleChromeManagementV1TelemetryUserDevice withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1TelemetryUserDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peripheralsReport")
     public GoogleChromeManagementV1PeripheralsReport[] peripheralsReport;
+
     public GoogleChromeManagementV1TelemetryUserDevice withPeripheralsReport(GoogleChromeManagementV1PeripheralsReport[] peripheralsReport) {
         this.peripheralsReport = peripheralsReport;
         return this;
     }
     
+    public GoogleChromeManagementV1TelemetryUserDevice(){}
 }

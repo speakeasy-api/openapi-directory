@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContactHistoryRequest {
@@ -12,6 +13,7 @@ public class GetContactHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetContactHistoryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +24,7 @@ public class GetContactHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetContactHistoryRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetContactHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetContactHistoryRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,9 +46,13 @@ public class GetContactHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetContactHistoryRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetContactHistoryRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

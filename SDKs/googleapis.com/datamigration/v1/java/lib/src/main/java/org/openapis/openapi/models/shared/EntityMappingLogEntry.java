@@ -18,6 +18,7 @@ public class EntityMappingLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mappingComment")
     public String mappingComment;
+
     public EntityMappingLogEntry withMappingComment(String mappingComment) {
         this.mappingComment = mappingComment;
         return this;
@@ -29,6 +30,7 @@ public class EntityMappingLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleId")
     public String ruleId;
+
     public EntityMappingLogEntry withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -40,9 +42,11 @@ public class EntityMappingLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleRevisionId")
     public String ruleRevisionId;
+
     public EntityMappingLogEntry withRuleRevisionId(String ruleRevisionId) {
         this.ruleRevisionId = ruleRevisionId;
         return this;
     }
     
+    public EntityMappingLogEntry(){}
 }

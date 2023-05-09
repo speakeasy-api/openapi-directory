@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FeaturizationMethod {
     @JsonProperty("FeaturizationMethodName")
     public FeaturizationMethodNameEnum featurizationMethodName;
+
     public FeaturizationMethod withFeaturizationMethodName(FeaturizationMethodNameEnum featurizationMethodName) {
         this.featurizationMethodName = featurizationMethodName;
         return this;
@@ -22,9 +23,13 @@ public class FeaturizationMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeaturizationMethodParameters")
     public java.util.Map<String, String> featurizationMethodParameters;
+
     public FeaturizationMethod withFeaturizationMethodParameters(java.util.Map<String, String> featurizationMethodParameters) {
         this.featurizationMethodParameters = featurizationMethodParameters;
         return this;
     }
     
+    public FeaturizationMethod(@JsonProperty("FeaturizationMethodName") FeaturizationMethodNameEnum featurizationMethodName) {
+        this.featurizationMethodName = featurizationMethodName;
+  }
 }

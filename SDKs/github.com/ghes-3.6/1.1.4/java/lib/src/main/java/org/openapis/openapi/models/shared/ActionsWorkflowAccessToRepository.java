@@ -18,9 +18,13 @@ public class ActionsWorkflowAccessToRepository {
      */
     @JsonProperty("access_level")
     public ActionsWorkflowAccessToRepositoryAccessLevelEnum accessLevel;
+
     public ActionsWorkflowAccessToRepository withAccessLevel(ActionsWorkflowAccessToRepositoryAccessLevelEnum accessLevel) {
         this.accessLevel = accessLevel;
         return this;
     }
     
+    public ActionsWorkflowAccessToRepository(@JsonProperty("access_level") ActionsWorkflowAccessToRepositoryAccessLevelEnum accessLevel) {
+        this.accessLevel = accessLevel;
+  }
 }

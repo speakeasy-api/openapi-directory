@@ -12,6 +12,7 @@ public class CreateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessControlList")
     public Principal[] accessControlList;
+
     public CreateAccessControlConfigurationRequest withAccessControlList(Principal[] accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -20,6 +21,7 @@ public class CreateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateAccessControlConfigurationRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -28,6 +30,7 @@ public class CreateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateAccessControlConfigurationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class CreateAccessControlConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HierarchicalAccessControlList")
     public HierarchicalPrincipal[] hierarchicalAccessControlList;
+
     public CreateAccessControlConfigurationRequest withHierarchicalAccessControlList(HierarchicalPrincipal[] hierarchicalAccessControlList) {
         this.hierarchicalAccessControlList = hierarchicalAccessControlList;
         return this;
@@ -43,6 +47,7 @@ public class CreateAccessControlConfigurationRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public CreateAccessControlConfigurationRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -50,9 +55,14 @@ public class CreateAccessControlConfigurationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateAccessControlConfigurationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateAccessControlConfigurationRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("Name") String name) {
+        this.indexId = indexId;
+        this.name = name;
+  }
 }

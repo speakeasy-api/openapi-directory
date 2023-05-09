@@ -15,6 +15,7 @@ public class AutomaticTransitionInfoList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticTransitionInfos")
     public AutomaticTransitionInfo[] automaticTransitionInfos;
+
     public AutomaticTransitionInfoList withAutomaticTransitionInfos(AutomaticTransitionInfo[] automaticTransitionInfos) {
         this.automaticTransitionInfos = automaticTransitionInfos;
         return this;
@@ -22,9 +23,13 @@ public class AutomaticTransitionInfoList {
     
     @JsonProperty("links")
     public AutomaticTransitionInfoListLinks links;
+
     public AutomaticTransitionInfoList withLinks(AutomaticTransitionInfoListLinks links) {
         this.links = links;
         return this;
     }
     
+    public AutomaticTransitionInfoList(@JsonProperty("links") AutomaticTransitionInfoListLinks links) {
+        this.links = links;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateLoggerDefinitionVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Loggers")
     public org.openapis.openapi.models.shared.Logger[] loggers;
+
     public CreateLoggerDefinitionVersionRequestBody withLoggers(org.openapis.openapi.models.shared.Logger[] loggers) {
         this.loggers = loggers;
         return this;
     }
     
+    public CreateLoggerDefinitionVersionRequestBody(){}
 }

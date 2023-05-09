@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTransformJobResponse {
     
     public String contentType;
+
     public CreateTransformJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateTransformJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTransformJobResponse createTransformJobResponse;
+
     public CreateTransformJobResponse withCreateTransformJobResponse(org.openapis.openapi.models.shared.CreateTransformJobResponse createTransformJobResponse) {
         this.createTransformJobResponse = createTransformJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateTransformJobResponse {
      */
     
     public Object resourceInUse;
+
     public CreateTransformJobResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateTransformJobResponse {
      */
     
     public Object resourceNotFound;
+
     public CreateTransformJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class CreateTransformJobResponse {
     
     
     public Integer statusCode;
+
     public CreateTransformJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateTransformJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTransformJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateTransformJobResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateTransformJobResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateTransformJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

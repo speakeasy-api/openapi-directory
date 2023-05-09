@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteExportResponse {
     
     public String contentType;
+
     public DeleteExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteExportResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteExportResponse deleteExportResponse;
+
     public DeleteExportResponse withDeleteExportResponse(org.openapis.openapi.models.shared.DeleteExportResponse deleteExportResponse) {
         this.deleteExportResponse = deleteExportResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteExportResponse {
      */
     
     public Object internalServerException;
+
     public DeleteExportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteExportResponse {
      */
     
     public Object preconditionFailedException;
+
     public DeleteExportResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteExportResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteExportResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteExportResponse {
     
     
     public Integer statusCode;
+
     public DeleteExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteExportResponse {
      */
     
     public Object throttlingException;
+
     public DeleteExportResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteExportResponse {
      */
     
     public Object validationException;
+
     public DeleteExportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

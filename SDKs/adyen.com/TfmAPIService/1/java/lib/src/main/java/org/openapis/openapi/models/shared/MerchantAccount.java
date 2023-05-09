@@ -15,6 +15,7 @@ public class MerchantAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inStoreTerminals")
     public String[] inStoreTerminals;
+
     public MerchantAccount withInStoreTerminals(String[] inStoreTerminals) {
         this.inStoreTerminals = inStoreTerminals;
         return this;
@@ -26,6 +27,7 @@ public class MerchantAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryTerminals")
     public String[] inventoryTerminals;
+
     public MerchantAccount withInventoryTerminals(String[] inventoryTerminals) {
         this.inventoryTerminals = inventoryTerminals;
         return this;
@@ -36,6 +38,7 @@ public class MerchantAccount {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public MerchantAccount withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -47,9 +50,13 @@ public class MerchantAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stores")
     public Store[] stores;
+
     public MerchantAccount withStores(Store[] stores) {
         this.stores = stores;
         return this;
     }
     
+    public MerchantAccount(@JsonProperty("merchantAccount") String merchantAccount) {
+        this.merchantAccount = merchantAccount;
+  }
 }

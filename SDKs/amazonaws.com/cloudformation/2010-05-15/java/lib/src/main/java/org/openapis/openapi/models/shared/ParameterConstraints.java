@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ParameterConstraints {
     
     public String[] allowedValues;
+
     public ParameterConstraints withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
     
+    public ParameterConstraints(){}
 }

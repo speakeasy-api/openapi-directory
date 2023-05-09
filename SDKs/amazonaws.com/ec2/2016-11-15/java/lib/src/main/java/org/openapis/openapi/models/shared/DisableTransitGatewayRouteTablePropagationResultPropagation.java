@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisableTransitGatewayRouteTablePropagationResultPropagation {
     
     public String resourceId;
+
     public DisableTransitGatewayRouteTablePropagationResultPropagation withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -19,6 +20,7 @@ public class DisableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public DisableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum resourceType;
+
     public DisableTransitGatewayRouteTablePropagationResultPropagation withResourceType(DisableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -26,6 +28,7 @@ public class DisableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public DisableTransitGatewayRouteTablePropagationResultPropagationStateEnum state;
+
     public DisableTransitGatewayRouteTablePropagationResultPropagation withState(DisableTransitGatewayRouteTablePropagationResultPropagationStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class DisableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public String transitGatewayAttachmentId;
+
     public DisableTransitGatewayRouteTablePropagationResultPropagation withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -40,6 +44,7 @@ public class DisableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public String transitGatewayRouteTableAnnouncementId;
+
     public DisableTransitGatewayRouteTablePropagationResultPropagation withTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
         this.transitGatewayRouteTableAnnouncementId = transitGatewayRouteTableAnnouncementId;
         return this;
@@ -47,9 +52,11 @@ public class DisableTransitGatewayRouteTablePropagationResultPropagation {
     
     
     public String transitGatewayRouteTableId;
+
     public DisableTransitGatewayRouteTablePropagationResultPropagation withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public DisableTransitGatewayRouteTablePropagationResultPropagation(){}
 }

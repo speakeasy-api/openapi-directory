@@ -15,6 +15,7 @@ public class RuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public RuleSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class RuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public RuleSummary withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -31,6 +33,7 @@ public class RuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockState")
     public LockStateEnum lockState;
+
     public RuleSummary withLockState(LockStateEnum lockState) {
         this.lockState = lockState;
         return this;
@@ -39,9 +42,11 @@ public class RuleSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public RuleSummary withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
     }
     
+    public RuleSummary(){}
 }

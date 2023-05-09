@@ -12,6 +12,7 @@ public class AccountCreateRecoveryRequestBody {
      */
     @JsonProperty("email")
     public String email;
+
     public AccountCreateRecoveryRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -22,9 +23,14 @@ public class AccountCreateRecoveryRequestBody {
      */
     @JsonProperty("url")
     public String url;
+
     public AccountCreateRecoveryRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AccountCreateRecoveryRequestBody(@JsonProperty("email") String email, @JsonProperty("url") String url) {
+        this.email = email;
+        this.url = url;
+  }
 }

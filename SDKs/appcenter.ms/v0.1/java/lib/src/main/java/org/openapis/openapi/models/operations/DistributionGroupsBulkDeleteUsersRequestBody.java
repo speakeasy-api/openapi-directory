@@ -18,9 +18,11 @@ public class DistributionGroupsBulkDeleteUsersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_emails")
     public String[] userEmails;
+
     public DistributionGroupsBulkDeleteUsersRequestBody withUserEmails(String[] userEmails) {
         this.userEmails = userEmails;
         return this;
     }
     
+    public DistributionGroupsBulkDeleteUsersRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaCompletionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionAttributionToken")
     public String completionAttributionToken;
+
     public GoogleCloudRetailV2betaCompletionDetail withCompletionAttributionToken(String completionAttributionToken) {
         this.completionAttributionToken = completionAttributionToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaCompletionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedPosition")
     public Integer selectedPosition;
+
     public GoogleCloudRetailV2betaCompletionDetail withSelectedPosition(Integer selectedPosition) {
         this.selectedPosition = selectedPosition;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2betaCompletionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedSuggestion")
     public String selectedSuggestion;
+
     public GoogleCloudRetailV2betaCompletionDetail withSelectedSuggestion(String selectedSuggestion) {
         this.selectedSuggestion = selectedSuggestion;
         return this;
     }
     
+    public GoogleCloudRetailV2betaCompletionDetail(){}
 }

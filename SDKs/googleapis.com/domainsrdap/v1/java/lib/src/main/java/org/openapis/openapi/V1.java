@@ -56,11 +56,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapGetDomainsResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetDomainsResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapGetDomainsResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetDomainsResponse(contentType, httpRes.statusCode()) {{
             rdapResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapGetEntitiesResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetEntitiesResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapGetEntitiesResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetEntitiesResponse(contentType, httpRes.statusCode()) {{
             rdapResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapGetHelpResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetHelpResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapGetHelpResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetHelpResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,11 +182,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapGetIpResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetIpResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapGetIpResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetIpResponse(contentType, httpRes.statusCode()) {{
             httpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +224,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapGetNameserversResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetNameserversResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapGetNameserversResponse res = new org.openapis.openapi.models.operations.DomainsrdapGetNameserversResponse(contentType, httpRes.statusCode()) {{
             rdapResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAccessResponse {
     @JsonProperty("Access")
     public DescribedAccess access;
+
     public DescribeAccessResponse withAccess(DescribedAccess access) {
         this.access = access;
         return this;
@@ -19,9 +20,14 @@ public class DescribeAccessResponse {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public DescribeAccessResponse withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public DescribeAccessResponse(@JsonProperty("Access") DescribedAccess access, @JsonProperty("ServerId") String serverId) {
+        this.access = access;
+        this.serverId = serverId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RejectInvitationResponse {
@@ -12,6 +13,7 @@ public class RejectInvitationResponse {
      */
     
     public Object accessDeniedException;
+
     public RejectInvitationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RejectInvitationResponse {
      */
     
     public Object conflictException;
+
     public RejectInvitationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class RejectInvitationResponse {
     
     
     public String contentType;
+
     public RejectInvitationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RejectInvitationResponse {
      */
     
     public Object internalServerException;
+
     public RejectInvitationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class RejectInvitationResponse {
     
     
     public Integer statusCode;
+
     public RejectInvitationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RejectInvitationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RejectInvitationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RejectInvitationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RejectInvitationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class RejectInvitationResponse {
      */
     
     public Object validationException;
+
     public RejectInvitationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RejectInvitationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

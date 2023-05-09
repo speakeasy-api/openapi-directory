@@ -61,11 +61,9 @@ public class Pos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPosCustombatchResponse res = new org.openapis.openapi.models.operations.ContentPosCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentPosCustombatchResponse res = new org.openapis.openapi.models.operations.ContentPosCustombatchResponse(contentType, httpRes.statusCode()) {{
             posCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Pos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPosDeleteResponse res = new org.openapis.openapi.models.operations.ContentPosDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentPosDeleteResponse res = new org.openapis.openapi.models.operations.ContentPosDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Pos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPosGetResponse res = new org.openapis.openapi.models.operations.ContentPosGetResponse() {{
+        org.openapis.openapi.models.operations.ContentPosGetResponse res = new org.openapis.openapi.models.operations.ContentPosGetResponse(contentType, httpRes.statusCode()) {{
             posStore = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Pos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPosInsertResponse res = new org.openapis.openapi.models.operations.ContentPosInsertResponse() {{
+        org.openapis.openapi.models.operations.ContentPosInsertResponse res = new org.openapis.openapi.models.operations.ContentPosInsertResponse(contentType, httpRes.statusCode()) {{
             posStore = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Pos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPosInventoryResponse res = new org.openapis.openapi.models.operations.ContentPosInventoryResponse() {{
+        org.openapis.openapi.models.operations.ContentPosInventoryResponse res = new org.openapis.openapi.models.operations.ContentPosInventoryResponse(contentType, httpRes.statusCode()) {{
             posInventoryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Pos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPosListResponse res = new org.openapis.openapi.models.operations.ContentPosListResponse() {{
+        org.openapis.openapi.models.operations.ContentPosListResponse res = new org.openapis.openapi.models.operations.ContentPosListResponse(contentType, httpRes.statusCode()) {{
             posListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,11 +325,9 @@ public class Pos {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentPosSaleResponse res = new org.openapis.openapi.models.operations.ContentPosSaleResponse() {{
+        org.openapis.openapi.models.operations.ContentPosSaleResponse res = new org.openapis.openapi.models.operations.ContentPosSaleResponse(contentType, httpRes.statusCode()) {{
             posSaleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class GetSolutionMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public java.util.Map<String, Double> metrics;
+
     public GetSolutionMetricsResponse withMetrics(java.util.Map<String, Double> metrics) {
         this.metrics = metrics;
         return this;
@@ -23,9 +24,11 @@ public class GetSolutionMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public GetSolutionMetricsResponse withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
     }
     
+    public GetSolutionMetricsResponse(){}
 }

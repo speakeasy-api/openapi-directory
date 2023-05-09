@@ -15,6 +15,7 @@ public class SourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSource")
     public EventSourceEnum eventSource;
+
     public SourceDetail withEventSource(EventSourceEnum eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -23,6 +24,7 @@ public class SourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumExecutionFrequency")
     public MaximumExecutionFrequencyEnum maximumExecutionFrequency;
+
     public SourceDetail withMaximumExecutionFrequency(MaximumExecutionFrequencyEnum maximumExecutionFrequency) {
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         return this;
@@ -31,9 +33,11 @@ public class SourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public SourceDetail withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
     }
     
+    public SourceDetail(){}
 }

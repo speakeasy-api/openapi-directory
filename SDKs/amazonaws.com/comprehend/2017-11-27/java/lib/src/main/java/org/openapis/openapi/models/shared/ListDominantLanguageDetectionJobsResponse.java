@@ -15,6 +15,7 @@ public class ListDominantLanguageDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DominantLanguageDetectionJobPropertiesList")
     public DominantLanguageDetectionJobProperties[] dominantLanguageDetectionJobPropertiesList;
+
     public ListDominantLanguageDetectionJobsResponse withDominantLanguageDetectionJobPropertiesList(DominantLanguageDetectionJobProperties[] dominantLanguageDetectionJobPropertiesList) {
         this.dominantLanguageDetectionJobPropertiesList = dominantLanguageDetectionJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListDominantLanguageDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDominantLanguageDetectionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDominantLanguageDetectionJobsResponse(){}
 }

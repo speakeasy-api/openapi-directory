@@ -12,6 +12,7 @@ public class ConfigModelHaljsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public ConfigModelHaljsonLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -20,9 +21,11 @@ public class ConfigModelHaljsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public String settings;
+
     public ConfigModelHaljsonLinks withSettings(String settings) {
         this.settings = settings;
         return this;
     }
     
+    public ConfigModelHaljsonLinks(){}
 }

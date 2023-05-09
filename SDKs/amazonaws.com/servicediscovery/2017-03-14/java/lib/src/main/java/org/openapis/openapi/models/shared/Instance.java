@@ -15,6 +15,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public Instance withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public Instance withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -30,9 +32,13 @@ public class Instance {
     
     @JsonProperty("Id")
     public String id;
+
     public Instance withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Instance(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

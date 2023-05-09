@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVCustomPricesSessionSchemaResponse {
     
     public String contentType;
+
     public GetVCustomPricesSessionSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetVCustomPricesSessionSchemaResponse {
      */
     
     public GetVCustomPricesSessionSchemaRequestBody requestBody;
+
     public GetVCustomPricesSessionSchemaResponse withRequestBody(GetVCustomPricesSessionSchemaRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class GetVCustomPricesSessionSchemaResponse {
     
     
     public Integer statusCode;
+
     public GetVCustomPricesSessionSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetVCustomPricesSessionSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVCustomPricesSessionSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetVCustomPricesSessionSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

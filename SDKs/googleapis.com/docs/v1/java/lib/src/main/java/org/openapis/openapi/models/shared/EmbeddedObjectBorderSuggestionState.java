@@ -18,6 +18,7 @@ public class EmbeddedObjectBorderSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorSuggested")
     public Boolean colorSuggested;
+
     public EmbeddedObjectBorderSuggestionState withColorSuggested(Boolean colorSuggested) {
         this.colorSuggested = colorSuggested;
         return this;
@@ -29,6 +30,7 @@ public class EmbeddedObjectBorderSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashStyleSuggested")
     public Boolean dashStyleSuggested;
+
     public EmbeddedObjectBorderSuggestionState withDashStyleSuggested(Boolean dashStyleSuggested) {
         this.dashStyleSuggested = dashStyleSuggested;
         return this;
@@ -40,6 +42,7 @@ public class EmbeddedObjectBorderSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyStateSuggested")
     public Boolean propertyStateSuggested;
+
     public EmbeddedObjectBorderSuggestionState withPropertyStateSuggested(Boolean propertyStateSuggested) {
         this.propertyStateSuggested = propertyStateSuggested;
         return this;
@@ -51,9 +54,11 @@ public class EmbeddedObjectBorderSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widthSuggested")
     public Boolean widthSuggested;
+
     public EmbeddedObjectBorderSuggestionState withWidthSuggested(Boolean widthSuggested) {
         this.widthSuggested = widthSuggested;
         return this;
     }
     
+    public EmbeddedObjectBorderSuggestionState(){}
 }

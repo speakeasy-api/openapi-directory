@@ -17,9 +17,11 @@ public class ApiCoreRequestsDeleteBatch {
     @JsonProperty("Entities")
     @SpeakeasyMetadata("form:name=Entities,json")
     public ApiCoreDtoEntityUriLong[] entities;
+
     public ApiCoreRequestsDeleteBatch withEntities(ApiCoreDtoEntityUriLong[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public ApiCoreRequestsDeleteBatch(){}
 }

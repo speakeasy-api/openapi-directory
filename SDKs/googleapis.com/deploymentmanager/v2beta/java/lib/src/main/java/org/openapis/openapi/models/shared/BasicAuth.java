@@ -15,6 +15,7 @@ public class BasicAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public BasicAuth withPassword(String password) {
         this.password = password;
         return this;
@@ -23,9 +24,11 @@ public class BasicAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public BasicAuth withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public BasicAuth(){}
 }

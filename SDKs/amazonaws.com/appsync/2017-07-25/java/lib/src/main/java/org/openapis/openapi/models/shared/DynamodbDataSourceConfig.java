@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynamodbDataSourceConfig {
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public DynamodbDataSourceConfig withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -22,6 +23,7 @@ public class DynamodbDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deltaSyncConfig")
     public DeltaSyncConfig deltaSyncConfig;
+
     public DynamodbDataSourceConfig withDeltaSyncConfig(DeltaSyncConfig deltaSyncConfig) {
         this.deltaSyncConfig = deltaSyncConfig;
         return this;
@@ -29,6 +31,7 @@ public class DynamodbDataSourceConfig {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public DynamodbDataSourceConfig withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -37,6 +40,7 @@ public class DynamodbDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useCallerCredentials")
     public Boolean useCallerCredentials;
+
     public DynamodbDataSourceConfig withUseCallerCredentials(Boolean useCallerCredentials) {
         this.useCallerCredentials = useCallerCredentials;
         return this;
@@ -45,9 +49,14 @@ public class DynamodbDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versioned")
     public Boolean versioned;
+
     public DynamodbDataSourceConfig withVersioned(Boolean versioned) {
         this.versioned = versioned;
         return this;
     }
     
+    public DynamodbDataSourceConfig(@JsonProperty("awsRegion") String awsRegion, @JsonProperty("tableName") String tableName) {
+        this.awsRegion = awsRegion;
+        this.tableName = tableName;
+  }
 }

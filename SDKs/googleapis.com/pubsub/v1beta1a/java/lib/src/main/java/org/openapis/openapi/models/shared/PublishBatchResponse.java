@@ -18,9 +18,11 @@ public class PublishBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageIds")
     public String[] messageIds;
+
     public PublishBatchResponse withMessageIds(String[] messageIds) {
         this.messageIds = messageIds;
         return this;
     }
     
+    public PublishBatchResponse(){}
 }

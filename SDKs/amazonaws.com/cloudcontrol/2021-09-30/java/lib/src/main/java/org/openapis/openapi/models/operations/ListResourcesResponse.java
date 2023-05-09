@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourcesResponse {
@@ -12,6 +13,7 @@ public class ListResourcesResponse {
      */
     
     public Object alreadyExistsException;
+
     public ListResourcesResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class ListResourcesResponse {
     
     
     public String contentType;
+
     public ListResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListResourcesResponse {
      */
     
     public Object generalServiceException;
+
     public ListResourcesResponse withGeneralServiceException(Object generalServiceException) {
         this.generalServiceException = generalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourcesResponse {
      */
     
     public Object handlerFailureException;
+
     public ListResourcesResponse withHandlerFailureException(Object handlerFailureException) {
         this.handlerFailureException = handlerFailureException;
         return this;
@@ -49,6 +54,7 @@ public class ListResourcesResponse {
      */
     
     public Object handlerInternalFailureException;
+
     public ListResourcesResponse withHandlerInternalFailureException(Object handlerInternalFailureException) {
         this.handlerInternalFailureException = handlerInternalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class ListResourcesResponse {
      */
     
     public Object invalidCredentialsException;
+
     public ListResourcesResponse withInvalidCredentialsException(Object invalidCredentialsException) {
         this.invalidCredentialsException = invalidCredentialsException;
         return this;
@@ -69,6 +76,7 @@ public class ListResourcesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListResourcesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class ListResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourcesOutput listResourcesOutput;
+
     public ListResourcesResponse withListResourcesOutput(org.openapis.openapi.models.shared.ListResourcesOutput listResourcesOutput) {
         this.listResourcesOutput = listResourcesOutput;
         return this;
@@ -89,6 +98,7 @@ public class ListResourcesResponse {
      */
     
     public Object networkFailureException;
+
     public ListResourcesResponse withNetworkFailureException(Object networkFailureException) {
         this.networkFailureException = networkFailureException;
         return this;
@@ -99,6 +109,7 @@ public class ListResourcesResponse {
      */
     
     public Object notStabilizedException;
+
     public ListResourcesResponse withNotStabilizedException(Object notStabilizedException) {
         this.notStabilizedException = notStabilizedException;
         return this;
@@ -109,6 +120,7 @@ public class ListResourcesResponse {
      */
     
     public Object notUpdatableException;
+
     public ListResourcesResponse withNotUpdatableException(Object notUpdatableException) {
         this.notUpdatableException = notUpdatableException;
         return this;
@@ -119,6 +131,7 @@ public class ListResourcesResponse {
      */
     
     public Object privateTypeException;
+
     public ListResourcesResponse withPrivateTypeException(Object privateTypeException) {
         this.privateTypeException = privateTypeException;
         return this;
@@ -129,6 +142,7 @@ public class ListResourcesResponse {
      */
     
     public Object resourceConflictException;
+
     public ListResourcesResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -139,6 +153,7 @@ public class ListResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -149,6 +164,7 @@ public class ListResourcesResponse {
      */
     
     public Object serviceInternalErrorException;
+
     public ListResourcesResponse withServiceInternalErrorException(Object serviceInternalErrorException) {
         this.serviceInternalErrorException = serviceInternalErrorException;
         return this;
@@ -159,6 +175,7 @@ public class ListResourcesResponse {
      */
     
     public Object serviceLimitExceededException;
+
     public ListResourcesResponse withServiceLimitExceededException(Object serviceLimitExceededException) {
         this.serviceLimitExceededException = serviceLimitExceededException;
         return this;
@@ -166,6 +183,7 @@ public class ListResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -173,6 +191,7 @@ public class ListResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -183,6 +202,7 @@ public class ListResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -193,6 +213,7 @@ public class ListResourcesResponse {
      */
     
     public Object typeNotFoundException;
+
     public ListResourcesResponse withTypeNotFoundException(Object typeNotFoundException) {
         this.typeNotFoundException = typeNotFoundException;
         return this;
@@ -203,9 +224,14 @@ public class ListResourcesResponse {
      */
     
     public Object unsupportedActionException;
+
     public ListResourcesResponse withUnsupportedActionException(Object unsupportedActionException) {
         this.unsupportedActionException = unsupportedActionException;
         return this;
     }
     
+    public ListResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

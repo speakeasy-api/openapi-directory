@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetHostReservationPurchasePreviewResultPurchase {
     
     public GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum currencyCode;
+
     public GetHostReservationPurchasePreviewResultPurchase withCurrencyCode(GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -19,6 +20,7 @@ public class GetHostReservationPurchasePreviewResultPurchase {
     
     
     public Long duration;
+
     public GetHostReservationPurchasePreviewResultPurchase withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -26,6 +28,7 @@ public class GetHostReservationPurchasePreviewResultPurchase {
     
     
     public String[] hostIdSet;
+
     public GetHostReservationPurchasePreviewResultPurchase withHostIdSet(String[] hostIdSet) {
         this.hostIdSet = hostIdSet;
         return this;
@@ -33,6 +36,7 @@ public class GetHostReservationPurchasePreviewResultPurchase {
     
     
     public String hostReservationId;
+
     public GetHostReservationPurchasePreviewResultPurchase withHostReservationId(String hostReservationId) {
         this.hostReservationId = hostReservationId;
         return this;
@@ -40,6 +44,7 @@ public class GetHostReservationPurchasePreviewResultPurchase {
     
     
     public String hourlyPrice;
+
     public GetHostReservationPurchasePreviewResultPurchase withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -47,6 +52,7 @@ public class GetHostReservationPurchasePreviewResultPurchase {
     
     
     public String instanceFamily;
+
     public GetHostReservationPurchasePreviewResultPurchase withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -54,6 +60,7 @@ public class GetHostReservationPurchasePreviewResultPurchase {
     
     
     public GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum paymentOption;
+
     public GetHostReservationPurchasePreviewResultPurchase withPaymentOption(GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -61,9 +68,11 @@ public class GetHostReservationPurchasePreviewResultPurchase {
     
     
     public String upfrontPrice;
+
     public GetHostReservationPurchasePreviewResultPurchase withUpfrontPrice(String upfrontPrice) {
         this.upfrontPrice = upfrontPrice;
         return this;
     }
     
+    public GetHostReservationPurchasePreviewResultPurchase(){}
 }

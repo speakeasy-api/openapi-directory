@@ -35,10 +35,11 @@ public class Definition {
     /**
      * Get subscription definitions
      * Get a list of all subscription definitions for the portal
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse getCommunicationPreferencesV3DefinitionsGetPage() throws Exception {
+    public org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse getCommunicationPreferencesV3DefinitionsGetPage(org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/communication-preferences/v3/definitions");
         
@@ -47,17 +48,16 @@ public class Definition {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse res = new org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse() {{
+        org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse res = new org.openapis.openapi.models.operations.GetCommunicationPreferencesV3DefinitionsGetPageResponse(contentType, httpRes.statusCode()) {{
             subscriptionDefinitionsResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

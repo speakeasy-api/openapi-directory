@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailedItemDetails {
     @JsonProperty("failureCode")
     public FailedItemErrorCodeEnum failureCode;
+
     public FailedItemDetails withFailureCode(FailedItemErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -19,9 +20,14 @@ public class FailedItemDetails {
     
     @JsonProperty("retryable")
     public Boolean retryable;
+
     public FailedItemDetails withRetryable(Boolean retryable) {
         this.retryable = retryable;
         return this;
     }
     
+    public FailedItemDetails(@JsonProperty("failureCode") FailedItemErrorCodeEnum failureCode, @JsonProperty("retryable") Boolean retryable) {
+        this.failureCode = failureCode;
+        this.retryable = retryable;
+  }
 }

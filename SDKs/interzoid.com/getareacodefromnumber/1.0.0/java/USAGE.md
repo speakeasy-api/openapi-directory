@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetareacodefromnumberRequest;
 import org.openapis.openapi.models.operations.GetareacodefromnumberResponse;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetareacodefromnumberRequest req = new GetareacodefromnumberRequest() {{
-                license = "corrupti";
-                number = "provident";
-            }}            
+            GetareacodefromnumberRequest req = new GetareacodefromnumberRequest("corrupti", "provident");            
 
             GetareacodefromnumberResponse res = sdk.areaCodeInformation.getareacodefromnumber(req);
 
-            if (res.getareacodefromnumber200ApplicationJSONObject.isPresent()) {
+            if (res.getareacodefromnumber200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

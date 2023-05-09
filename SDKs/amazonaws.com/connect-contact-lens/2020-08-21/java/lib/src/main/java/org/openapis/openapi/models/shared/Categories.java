@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Categories {
     @JsonProperty("MatchedCategories")
     public String[] matchedCategories;
+
     public Categories withMatchedCategories(String[] matchedCategories) {
         this.matchedCategories = matchedCategories;
         return this;
@@ -19,9 +20,14 @@ public class Categories {
     
     @JsonProperty("MatchedDetails")
     public java.util.Map<String, CategoryDetails> matchedDetails;
+
     public Categories withMatchedDetails(java.util.Map<String, CategoryDetails> matchedDetails) {
         this.matchedDetails = matchedDetails;
         return this;
     }
     
+    public Categories(@JsonProperty("MatchedCategories") String[] matchedCategories, @JsonProperty("MatchedDetails") java.util.Map<String, CategoryDetails> matchedDetails) {
+        this.matchedCategories = matchedCategories;
+        this.matchedDetails = matchedDetails;
+  }
 }

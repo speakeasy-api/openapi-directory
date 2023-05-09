@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartMatchBackfillInput {
     @JsonProperty("ConfigurationName")
     public String configurationName;
+
     public StartMatchBackfillInput withConfigurationName(String configurationName) {
         this.configurationName = configurationName;
         return this;
@@ -19,6 +20,7 @@ public class StartMatchBackfillInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionArn")
     public String gameSessionArn;
+
     public StartMatchBackfillInput withGameSessionArn(String gameSessionArn) {
         this.gameSessionArn = gameSessionArn;
         return this;
@@ -26,6 +28,7 @@ public class StartMatchBackfillInput {
     
     @JsonProperty("Players")
     public Player[] players;
+
     public StartMatchBackfillInput withPlayers(Player[] players) {
         this.players = players;
         return this;
@@ -34,9 +37,14 @@ public class StartMatchBackfillInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TicketId")
     public String ticketId;
+
     public StartMatchBackfillInput withTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
     }
     
+    public StartMatchBackfillInput(@JsonProperty("ConfigurationName") String configurationName, @JsonProperty("Players") Player[] players) {
+        this.configurationName = configurationName;
+        this.players = players;
+  }
 }

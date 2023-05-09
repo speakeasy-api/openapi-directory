@@ -15,9 +15,11 @@ public class SectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public SectionResponse[] data;
+
     public SectionsResponse withData(SectionResponse[] data) {
         this.data = data;
         return this;
     }
     
+    public SectionsResponse(){}
 }

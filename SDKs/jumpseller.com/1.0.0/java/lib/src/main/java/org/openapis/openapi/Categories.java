@@ -57,12 +57,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCategoriesIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteCategoriesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteCategoriesIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteCategoriesIdJsonResponse(contentType, httpRes.statusCode()) {{
             deleteCategoriesIdJSON200ApplicationJSONString = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesJsonResponse res = new org.openapis.openapi.models.operations.GetCategoriesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesJsonResponse res = new org.openapis.openapi.models.operations.GetCategoriesJsonResponse(contentType, httpRes.statusCode()) {{
             category = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesCountJsonResponse res = new org.openapis.openapi.models.operations.GetCategoriesCountJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesCountJsonResponse res = new org.openapis.openapi.models.operations.GetCategoriesCountJsonResponse(contentType, httpRes.statusCode()) {{
             count = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,12 +190,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesIdJsonResponse res = new org.openapis.openapi.models.operations.GetCategoriesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesIdJsonResponse res = new org.openapis.openapi.models.operations.GetCategoriesIdJsonResponse(contentType, httpRes.statusCode()) {{
             category = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,11 +246,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCategoriesJsonResponse res = new org.openapis.openapi.models.operations.PostCategoriesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostCategoriesJsonResponse res = new org.openapis.openapi.models.operations.PostCategoriesJsonResponse(contentType, httpRes.statusCode()) {{
             category = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,12 +293,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCategoriesIdJsonResponse res = new org.openapis.openapi.models.operations.PutCategoriesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutCategoriesIdJsonResponse res = new org.openapis.openapi.models.operations.PutCategoriesIdJsonResponse(contentType, httpRes.statusCode()) {{
             category = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

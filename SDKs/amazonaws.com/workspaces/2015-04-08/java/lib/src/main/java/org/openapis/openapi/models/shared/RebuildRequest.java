@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RebuildRequest {
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public RebuildRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public RebuildRequest(@JsonProperty("WorkspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

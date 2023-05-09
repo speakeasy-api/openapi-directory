@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserSettingsResponse {
@@ -12,6 +13,7 @@ public class GetUserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetUserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetUserSettingsResponse {
     
     
     public String contentType;
+
     public GetUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetUserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUserSettingsResponse getUserSettingsResponse;
+
     public GetUserSettingsResponse withGetUserSettingsResponse(org.openapis.openapi.models.shared.GetUserSettingsResponse getUserSettingsResponse) {
         this.getUserSettingsResponse = getUserSettingsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetUserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public GetUserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetUserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetUserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public GetUserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetUserSettingsResponse {
      */
     
     public Object validationException;
+
     public GetUserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

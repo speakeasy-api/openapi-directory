@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterScalableTargetResponse {
@@ -12,6 +13,7 @@ public class RegisterScalableTargetResponse {
      */
     
     public Object concurrentUpdateException;
+
     public RegisterScalableTargetResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterScalableTargetResponse {
     
     
     public String contentType;
+
     public RegisterScalableTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterScalableTargetResponse {
      */
     
     public Object internalServiceException;
+
     public RegisterScalableTargetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterScalableTargetResponse {
      */
     
     public Object limitExceededException;
+
     public RegisterScalableTargetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterScalableTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterScalableTargetResponse registerScalableTargetResponse;
+
     public RegisterScalableTargetResponse withRegisterScalableTargetResponse(org.openapis.openapi.models.shared.RegisterScalableTargetResponse registerScalableTargetResponse) {
         this.registerScalableTargetResponse = registerScalableTargetResponse;
         return this;
@@ -56,6 +62,7 @@ public class RegisterScalableTargetResponse {
     
     
     public Integer statusCode;
+
     public RegisterScalableTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RegisterScalableTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterScalableTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RegisterScalableTargetResponse {
      */
     
     public Object validationException;
+
     public RegisterScalableTargetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RegisterScalableTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

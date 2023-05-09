@@ -18,6 +18,7 @@ public class InsertionOrderBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automationType")
     public InsertionOrderBudgetAutomationTypeEnum automationType;
+
     public InsertionOrderBudget withAutomationType(InsertionOrderBudgetAutomationTypeEnum automationType) {
         this.automationType = automationType;
         return this;
@@ -29,6 +30,7 @@ public class InsertionOrderBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgetSegments")
     public InsertionOrderBudgetSegment[] budgetSegments;
+
     public InsertionOrderBudget withBudgetSegments(InsertionOrderBudgetSegment[] budgetSegments) {
         this.budgetSegments = budgetSegments;
         return this;
@@ -40,9 +42,11 @@ public class InsertionOrderBudget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budgetUnit")
     public InsertionOrderBudgetBudgetUnitEnum budgetUnit;
+
     public InsertionOrderBudget withBudgetUnit(InsertionOrderBudgetBudgetUnitEnum budgetUnit) {
         this.budgetUnit = budgetUnit;
         return this;
     }
     
+    public InsertionOrderBudget(){}
 }

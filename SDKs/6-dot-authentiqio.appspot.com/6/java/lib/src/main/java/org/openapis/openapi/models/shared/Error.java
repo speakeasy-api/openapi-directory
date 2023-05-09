@@ -15,6 +15,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public Error withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -22,6 +23,7 @@ public class Error {
     
     @JsonProperty("error")
     public Long error;
+
     public Error withError(Long error) {
         this.error = error;
         return this;
@@ -30,6 +32,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Error withTitle(String title) {
         this.title = title;
         return this;
@@ -41,9 +44,13 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Error withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Error(@JsonProperty("error") Long error) {
+        this.error = error;
+  }
 }

@@ -12,9 +12,13 @@ public class ProjectsUpdateColumnRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ProjectsUpdateColumnRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProjectsUpdateColumnRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

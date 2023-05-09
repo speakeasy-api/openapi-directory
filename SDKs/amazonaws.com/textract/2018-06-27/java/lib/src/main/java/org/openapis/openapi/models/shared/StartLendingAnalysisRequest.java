@@ -12,6 +12,7 @@ public class StartLendingAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartLendingAnalysisRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,6 +23,7 @@ public class StartLendingAnalysisRequest {
      */
     @JsonProperty("DocumentLocation")
     public DocumentLocation documentLocation;
+
     public StartLendingAnalysisRequest withDocumentLocation(DocumentLocation documentLocation) {
         this.documentLocation = documentLocation;
         return this;
@@ -30,6 +32,7 @@ public class StartLendingAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartLendingAnalysisRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -38,6 +41,7 @@ public class StartLendingAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyId")
     public String kmsKeyId;
+
     public StartLendingAnalysisRequest withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -49,6 +53,7 @@ public class StartLendingAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartLendingAnalysisRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -60,9 +65,13 @@ public class StartLendingAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public StartLendingAnalysisRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public StartLendingAnalysisRequest(@JsonProperty("DocumentLocation") DocumentLocation documentLocation) {
+        this.documentLocation = documentLocation;
+  }
 }

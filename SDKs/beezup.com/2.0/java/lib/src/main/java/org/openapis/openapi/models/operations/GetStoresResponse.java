@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoresResponse {
@@ -12,6 +13,7 @@ public class GetStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetStoresResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetStoresResponse {
     
     
     public String contentType;
+
     public GetStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetStoresResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetStoresResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetStoresResponse {
     
     
     public Integer statusCode;
+
     public GetStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.StoreList storeList;
+
     public GetStoresResponse withStoreList(org.openapis.openapi.models.shared.StoreList storeList) {
         this.storeList = storeList;
         return this;
     }
     
+    public GetStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

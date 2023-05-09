@@ -18,9 +18,11 @@ public class AddInternalTransferBatchPaymentNewBatchItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchItemUuid")
     public String batchItemUuid;
+
     public AddInternalTransferBatchPaymentNewBatchItemResponse withBatchItemUuid(String batchItemUuid) {
         this.batchItemUuid = batchItemUuid;
         return this;
     }
     
+    public AddInternalTransferBatchPaymentNewBatchItemResponse(){}
 }

@@ -15,9 +15,11 @@ public class ResultReuseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultReuseByAgeConfiguration")
     public ResultReuseByAgeConfiguration resultReuseByAgeConfiguration;
+
     public ResultReuseConfiguration withResultReuseByAgeConfiguration(ResultReuseByAgeConfiguration resultReuseByAgeConfiguration) {
         this.resultReuseByAgeConfiguration = resultReuseByAgeConfiguration;
         return this;
     }
     
+    public ResultReuseConfiguration(){}
 }

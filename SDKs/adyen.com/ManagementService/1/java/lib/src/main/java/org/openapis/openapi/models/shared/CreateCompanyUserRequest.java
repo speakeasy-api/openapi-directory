@@ -15,6 +15,7 @@ public class CreateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroups")
     public String[] accountGroups;
+
     public CreateCompanyUserRequest withAccountGroups(String[] accountGroups) {
         this.accountGroups = accountGroups;
         return this;
@@ -26,6 +27,7 @@ public class CreateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMerchantAccounts")
     public String[] associatedMerchantAccounts;
+
     public CreateCompanyUserRequest withAssociatedMerchantAccounts(String[] associatedMerchantAccounts) {
         this.associatedMerchantAccounts = associatedMerchantAccounts;
         return this;
@@ -37,6 +39,7 @@ public class CreateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authnApps")
     public String[] authnApps;
+
     public CreateCompanyUserRequest withAuthnApps(String[] authnApps) {
         this.authnApps = authnApps;
         return this;
@@ -47,6 +50,7 @@ public class CreateCompanyUserRequest {
      */
     @JsonProperty("email")
     public String email;
+
     public CreateCompanyUserRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -54,6 +58,7 @@ public class CreateCompanyUserRequest {
     
     @JsonProperty("name")
     public Name name;
+
     public CreateCompanyUserRequest withName(Name name) {
         this.name = name;
         return this;
@@ -65,6 +70,7 @@ public class CreateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public String[] roles;
+
     public CreateCompanyUserRequest withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -76,6 +82,7 @@ public class CreateCompanyUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZoneCode")
     public String timeZoneCode;
+
     public CreateCompanyUserRequest withTimeZoneCode(String timeZoneCode) {
         this.timeZoneCode = timeZoneCode;
         return this;
@@ -86,9 +93,15 @@ public class CreateCompanyUserRequest {
      */
     @JsonProperty("username")
     public String username;
+
     public CreateCompanyUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CreateCompanyUserRequest(@JsonProperty("email") String email, @JsonProperty("name") Name name, @JsonProperty("username") String username) {
+        this.email = email;
+        this.name = name;
+        this.username = username;
+  }
 }

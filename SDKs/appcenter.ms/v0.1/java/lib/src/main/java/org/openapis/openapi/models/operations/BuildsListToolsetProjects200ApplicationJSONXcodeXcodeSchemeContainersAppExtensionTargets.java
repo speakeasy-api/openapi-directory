@@ -15,6 +15,7 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("name")
     public String name;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersAppExtensionTargets withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContaine
      */
     @JsonProperty("targetBundleIdentifier")
     public String targetBundleIdentifier;
+
     public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersAppExtensionTargets withTargetBundleIdentifier(String targetBundleIdentifier) {
         this.targetBundleIdentifier = targetBundleIdentifier;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONXcodeXcodeSchemeContainersAppExtensionTargets(@JsonProperty("name") String name, @JsonProperty("targetBundleIdentifier") String targetBundleIdentifier) {
+        this.name = name;
+        this.targetBundleIdentifier = targetBundleIdentifier;
+  }
 }

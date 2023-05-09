@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartPipelineExecutionRequest {
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartPipelineExecutionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartPipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfiguration")
     public ParallelismConfiguration parallelismConfiguration;
+
     public StartPipelineExecutionRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
         this.parallelismConfiguration = parallelismConfiguration;
         return this;
@@ -27,6 +29,7 @@ public class StartPipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDescription")
     public String pipelineExecutionDescription;
+
     public StartPipelineExecutionRequest withPipelineExecutionDescription(String pipelineExecutionDescription) {
         this.pipelineExecutionDescription = pipelineExecutionDescription;
         return this;
@@ -35,6 +38,7 @@ public class StartPipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDisplayName")
     public String pipelineExecutionDisplayName;
+
     public StartPipelineExecutionRequest withPipelineExecutionDisplayName(String pipelineExecutionDisplayName) {
         this.pipelineExecutionDisplayName = pipelineExecutionDisplayName;
         return this;
@@ -42,6 +46,7 @@ public class StartPipelineExecutionRequest {
     
     @JsonProperty("PipelineName")
     public String pipelineName;
+
     public StartPipelineExecutionRequest withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -50,9 +55,14 @@ public class StartPipelineExecutionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineParameters")
     public Parameter[] pipelineParameters;
+
     public StartPipelineExecutionRequest withPipelineParameters(Parameter[] pipelineParameters) {
         this.pipelineParameters = pipelineParameters;
         return this;
     }
     
+    public StartPipelineExecutionRequest(@JsonProperty("ClientRequestToken") String clientRequestToken, @JsonProperty("PipelineName") String pipelineName) {
+        this.clientRequestToken = clientRequestToken;
+        this.pipelineName = pipelineName;
+  }
 }

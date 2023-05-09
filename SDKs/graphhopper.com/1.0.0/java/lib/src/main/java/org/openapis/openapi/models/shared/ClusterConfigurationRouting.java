@@ -15,6 +15,7 @@ public class ClusterConfigurationRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_per_meter")
     public Double costPerMeter;
+
     public ClusterConfigurationRouting withCostPerMeter(Double costPerMeter) {
         this.costPerMeter = costPerMeter;
         return this;
@@ -26,6 +27,7 @@ public class ClusterConfigurationRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_per_second")
     public Double costPerSecond;
+
     public ClusterConfigurationRouting withCostPerSecond(Double costPerSecond) {
         this.costPerSecond = costPerSecond;
         return this;
@@ -37,9 +39,11 @@ public class ClusterConfigurationRouting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public String profile;
+
     public ClusterConfigurationRouting withProfile(String profile) {
         this.profile = profile;
         return this;
     }
     
+    public ClusterConfigurationRouting(){}
 }

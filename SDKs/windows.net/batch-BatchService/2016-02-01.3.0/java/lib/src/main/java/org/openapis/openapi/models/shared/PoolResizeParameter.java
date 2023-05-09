@@ -18,6 +18,7 @@ public class PoolResizeParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeDeallocationOption")
     public PoolResizeParameterNodeDeallocationOptionEnum nodeDeallocationOption;
+
     public PoolResizeParameter withNodeDeallocationOption(PoolResizeParameterNodeDeallocationOptionEnum nodeDeallocationOption) {
         this.nodeDeallocationOption = nodeDeallocationOption;
         return this;
@@ -29,6 +30,7 @@ public class PoolResizeParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resizeTimeout")
     public String resizeTimeout;
+
     public PoolResizeParameter withResizeTimeout(String resizeTimeout) {
         this.resizeTimeout = resizeTimeout;
         return this;
@@ -39,9 +41,13 @@ public class PoolResizeParameter {
      */
     @JsonProperty("targetDedicated")
     public Integer targetDedicated;
+
     public PoolResizeParameter withTargetDedicated(Integer targetDedicated) {
         this.targetDedicated = targetDedicated;
         return this;
     }
     
+    public PoolResizeParameter(@JsonProperty("targetDedicated") Integer targetDedicated) {
+        this.targetDedicated = targetDedicated;
+  }
 }

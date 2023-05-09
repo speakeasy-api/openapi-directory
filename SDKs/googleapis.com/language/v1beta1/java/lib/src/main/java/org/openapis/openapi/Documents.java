@@ -61,11 +61,9 @@ public class Documents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse() {{
+        org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse(contentType, httpRes.statusCode()) {{
             analyzeEntitiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Documents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSentimentResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSentimentResponse() {{
+        org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSentimentResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSentimentResponse(contentType, httpRes.statusCode()) {{
             analyzeSentimentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Documents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSyntaxResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSyntaxResponse() {{
+        org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSyntaxResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeSyntaxResponse(contentType, httpRes.statusCode()) {{
             analyzeSyntaxResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Documents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageDocumentsAnnotateTextResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnnotateTextResponse() {{
+        org.openapis.openapi.models.operations.LanguageDocumentsAnnotateTextResponse res = new org.openapis.openapi.models.operations.LanguageDocumentsAnnotateTextResponse(contentType, httpRes.statusCode()) {{
             annotateTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

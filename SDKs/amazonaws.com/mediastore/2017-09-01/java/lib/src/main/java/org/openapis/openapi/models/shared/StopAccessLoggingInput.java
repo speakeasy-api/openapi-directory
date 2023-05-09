@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopAccessLoggingInput {
     @JsonProperty("ContainerName")
     public String containerName;
+
     public StopAccessLoggingInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
     }
     
+    public StopAccessLoggingInput(@JsonProperty("ContainerName") String containerName) {
+        this.containerName = containerName;
+  }
 }

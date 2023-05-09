@@ -15,6 +15,7 @@ public class UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iops")
     public Long iops;
+
     public UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -23,6 +24,7 @@ public class UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throughput")
     public Long throughput;
+
     public UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -31,9 +33,11 @@ public class UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeType")
     public org.openapis.openapi.models.shared.VolumeTypeEnum volumeType;
+
     public UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf withVolumeType(org.openapis.openapi.models.shared.VolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf(){}
 }

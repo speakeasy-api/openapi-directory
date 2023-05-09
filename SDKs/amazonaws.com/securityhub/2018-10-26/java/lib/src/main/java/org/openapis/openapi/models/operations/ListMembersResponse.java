@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMembersResponse {
     
     public String contentType;
+
     public ListMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMembersResponse {
      */
     
     public Object internalException;
+
     public ListMembersResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListMembersResponse {
      */
     
     public Object invalidAccessException;
+
     public ListMembersResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class ListMembersResponse {
      */
     
     public Object invalidInputException;
+
     public ListMembersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListMembersResponse {
      */
     
     public Object limitExceededException;
+
     public ListMembersResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class ListMembersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMembersResponse listMembersResponse;
+
     public ListMembersResponse withListMembersResponse(org.openapis.openapi.models.shared.ListMembersResponse listMembersResponse) {
         this.listMembersResponse = listMembersResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListMembersResponse {
     
     
     public Integer statusCode;
+
     public ListMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListMembersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

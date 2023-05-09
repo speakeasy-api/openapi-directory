@@ -15,6 +15,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsExpiredCertificate")
     public Boolean acceptsExpiredCertificate;
+
     public UpdateCompanyWebhookRequest withAcceptsExpiredCertificate(Boolean acceptsExpiredCertificate) {
         this.acceptsExpiredCertificate = acceptsExpiredCertificate;
         return this;
@@ -26,6 +27,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsSelfSignedCertificate")
     public Boolean acceptsSelfSignedCertificate;
+
     public UpdateCompanyWebhookRequest withAcceptsSelfSignedCertificate(Boolean acceptsSelfSignedCertificate) {
         this.acceptsSelfSignedCertificate = acceptsSelfSignedCertificate;
         return this;
@@ -37,6 +39,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsUntrustedRootCertificate")
     public Boolean acceptsUntrustedRootCertificate;
+
     public UpdateCompanyWebhookRequest withAcceptsUntrustedRootCertificate(Boolean acceptsUntrustedRootCertificate) {
         this.acceptsUntrustedRootCertificate = acceptsUntrustedRootCertificate;
         return this;
@@ -48,6 +51,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public UpdateCompanyWebhookRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -56,6 +60,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalSettings")
     public AdditionalSettings additionalSettings;
+
     public UpdateCompanyWebhookRequest withAdditionalSettings(AdditionalSettings additionalSettings) {
         this.additionalSettings = additionalSettings;
         return this;
@@ -70,6 +75,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communicationFormat")
     public UpdateCompanyWebhookRequestCommunicationFormatEnum communicationFormat;
+
     public UpdateCompanyWebhookRequest withCommunicationFormat(UpdateCompanyWebhookRequestCommunicationFormatEnum communicationFormat) {
         this.communicationFormat = communicationFormat;
         return this;
@@ -81,6 +87,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateCompanyWebhookRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -95,6 +102,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterMerchantAccountType")
     public UpdateCompanyWebhookRequestFilterMerchantAccountTypeEnum filterMerchantAccountType;
+
     public UpdateCompanyWebhookRequest withFilterMerchantAccountType(UpdateCompanyWebhookRequestFilterMerchantAccountTypeEnum filterMerchantAccountType) {
         this.filterMerchantAccountType = filterMerchantAccountType;
         return this;
@@ -112,6 +120,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterMerchantAccounts")
     public String[] filterMerchantAccounts;
+
     public UpdateCompanyWebhookRequest withFilterMerchantAccounts(String[] filterMerchantAccounts) {
         this.filterMerchantAccounts = filterMerchantAccounts;
         return this;
@@ -127,6 +136,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkType")
     public UpdateCompanyWebhookRequestNetworkTypeEnum networkType;
+
     public UpdateCompanyWebhookRequest withNetworkType(UpdateCompanyWebhookRequestNetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -138,6 +148,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public UpdateCompanyWebhookRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -151,6 +162,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("populateSoapActionHeader")
     public Boolean populateSoapActionHeader;
+
     public UpdateCompanyWebhookRequest withPopulateSoapActionHeader(Boolean populateSoapActionHeader) {
         this.populateSoapActionHeader = populateSoapActionHeader;
         return this;
@@ -167,6 +179,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslVersion")
     public UpdateCompanyWebhookRequestSslVersionEnum sslVersion;
+
     public UpdateCompanyWebhookRequest withSslVersion(UpdateCompanyWebhookRequestSslVersionEnum sslVersion) {
         this.sslVersion = sslVersion;
         return this;
@@ -178,6 +191,7 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UpdateCompanyWebhookRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -189,9 +203,11 @@ public class UpdateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public UpdateCompanyWebhookRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UpdateCompanyWebhookRequest(){}
 }

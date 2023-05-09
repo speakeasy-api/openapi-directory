@@ -12,6 +12,7 @@ public class DestinyComponentsKiosksDestinyKioskItem {
      */
     
     public Boolean canAcquire;
+
     public DestinyComponentsKiosksDestinyKioskItem withCanAcquire(Boolean canAcquire) {
         this.canAcquire = canAcquire;
         return this;
@@ -22,6 +23,7 @@ public class DestinyComponentsKiosksDestinyKioskItem {
      */
     
     public Integer[] failureIndexes;
+
     public DestinyComponentsKiosksDestinyKioskItem withFailureIndexes(Integer[] failureIndexes) {
         this.failureIndexes = failureIndexes;
         return this;
@@ -32,6 +34,7 @@ public class DestinyComponentsKiosksDestinyKioskItem {
      */
     
     public DestinyComponentsKiosksDestinyKioskItemFlavorObjective flavorObjective;
+
     public DestinyComponentsKiosksDestinyKioskItem withFlavorObjective(DestinyComponentsKiosksDestinyKioskItemFlavorObjective flavorObjective) {
         this.flavorObjective = flavorObjective;
         return this;
@@ -42,9 +45,11 @@ public class DestinyComponentsKiosksDestinyKioskItem {
      */
     
     public Integer index;
+
     public DestinyComponentsKiosksDestinyKioskItem withIndex(Integer index) {
         this.index = index;
         return this;
     }
     
+    public DestinyComponentsKiosksDestinyKioskItem(){}
 }

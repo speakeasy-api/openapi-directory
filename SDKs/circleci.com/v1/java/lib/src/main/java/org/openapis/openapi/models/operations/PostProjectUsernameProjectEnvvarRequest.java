@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectEnvvarRequest {
@@ -13,6 +14,7 @@ public class PostProjectUsernameProjectEnvvarRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public PostProjectUsernameProjectEnvvarRequest withProject(String project) {
         this.project = project;
         return this;
@@ -24,9 +26,14 @@ public class PostProjectUsernameProjectEnvvarRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public PostProjectUsernameProjectEnvvarRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostProjectUsernameProjectEnvvarRequest(@JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.project = project;
+        this.username = username;
+  }
 }

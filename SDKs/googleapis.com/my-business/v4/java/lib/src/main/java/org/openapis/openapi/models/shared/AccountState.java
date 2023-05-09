@@ -18,9 +18,11 @@ public class AccountState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountStateStatusEnum status;
+
     public AccountState withStatus(AccountStateStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccountState(){}
 }

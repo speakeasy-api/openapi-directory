@@ -15,6 +15,7 @@ public class UpdateNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationConfiguration")
     public UpdateNotificationConfigurationRequestBodyNotificationConfiguration notificationConfiguration;
+
     public UpdateNotificationConfigurationRequestBody withNotificationConfiguration(UpdateNotificationConfigurationRequestBodyNotificationConfiguration notificationConfiguration) {
         this.notificationConfiguration = notificationConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public UpdateNotificationConfigurationRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -37,9 +39,11 @@ public class UpdateNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public UpdateNotificationConfigurationRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public UpdateNotificationConfigurationRequestBody(){}
 }

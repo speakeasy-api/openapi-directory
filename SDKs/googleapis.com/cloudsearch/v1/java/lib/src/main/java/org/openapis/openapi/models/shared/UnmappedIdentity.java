@@ -15,6 +15,7 @@ public class UnmappedIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIdentity")
     public Principal externalIdentity;
+
     public UnmappedIdentity withExternalIdentity(Principal externalIdentity) {
         this.externalIdentity = externalIdentity;
         return this;
@@ -26,9 +27,11 @@ public class UnmappedIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolutionStatusCode")
     public UnmappedIdentityResolutionStatusCodeEnum resolutionStatusCode;
+
     public UnmappedIdentity withResolutionStatusCode(UnmappedIdentityResolutionStatusCodeEnum resolutionStatusCode) {
         this.resolutionStatusCode = resolutionStatusCode;
         return this;
     }
     
+    public UnmappedIdentity(){}
 }

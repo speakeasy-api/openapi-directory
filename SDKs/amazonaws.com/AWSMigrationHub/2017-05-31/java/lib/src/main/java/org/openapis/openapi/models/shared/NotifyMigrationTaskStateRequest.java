@@ -17,6 +17,7 @@ public class NotifyMigrationTaskStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public NotifyMigrationTaskStateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -24,6 +25,7 @@ public class NotifyMigrationTaskStateRequest {
     
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public NotifyMigrationTaskStateRequest withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -31,6 +33,7 @@ public class NotifyMigrationTaskStateRequest {
     
     @JsonProperty("NextUpdateSeconds")
     public Long nextUpdateSeconds;
+
     public NotifyMigrationTaskStateRequest withNextUpdateSeconds(Long nextUpdateSeconds) {
         this.nextUpdateSeconds = nextUpdateSeconds;
         return this;
@@ -38,6 +41,7 @@ public class NotifyMigrationTaskStateRequest {
     
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public NotifyMigrationTaskStateRequest withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
@@ -45,6 +49,7 @@ public class NotifyMigrationTaskStateRequest {
     
     @JsonProperty("Task")
     public Task task;
+
     public NotifyMigrationTaskStateRequest withTask(Task task) {
         this.task = task;
         return this;
@@ -54,9 +59,17 @@ public class NotifyMigrationTaskStateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateDateTime")
     public OffsetDateTime updateDateTime;
+
     public NotifyMigrationTaskStateRequest withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public NotifyMigrationTaskStateRequest(@JsonProperty("MigrationTaskName") String migrationTaskName, @JsonProperty("NextUpdateSeconds") Long nextUpdateSeconds, @JsonProperty("ProgressUpdateStream") String progressUpdateStream, @JsonProperty("Task") Task task, @JsonProperty("UpdateDateTime") OffsetDateTime updateDateTime) {
+        this.migrationTaskName = migrationTaskName;
+        this.nextUpdateSeconds = nextUpdateSeconds;
+        this.progressUpdateStream = progressUpdateStream;
+        this.task = task;
+        this.updateDateTime = updateDateTime;
+  }
 }

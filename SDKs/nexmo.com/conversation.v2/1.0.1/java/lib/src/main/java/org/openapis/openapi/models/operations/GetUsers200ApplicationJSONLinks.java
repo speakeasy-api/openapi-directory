@@ -12,6 +12,7 @@ public class GetUsers200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public GetUsers200ApplicationJSONLinksFirst first;
+
     public GetUsers200ApplicationJSONLinks withFirst(GetUsers200ApplicationJSONLinksFirst first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class GetUsers200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public GetUsers200ApplicationJSONLinksNext next;
+
     public GetUsers200ApplicationJSONLinks withNext(GetUsers200ApplicationJSONLinksNext next) {
         this.next = next;
         return this;
@@ -28,6 +30,7 @@ public class GetUsers200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public GetUsers200ApplicationJSONLinksPrev prev;
+
     public GetUsers200ApplicationJSONLinks withPrev(GetUsers200ApplicationJSONLinksPrev prev) {
         this.prev = prev;
         return this;
@@ -36,9 +39,11 @@ public class GetUsers200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public GetUsers200ApplicationJSONLinksSelf self;
+
     public GetUsers200ApplicationJSONLinks withSelf(GetUsers200ApplicationJSONLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public GetUsers200ApplicationJSONLinks(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostEstimateRawResponse {
     
     public byte[] body;
+
     public PostEstimateRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostEstimateRawResponse {
     
     
     public String contentType;
+
     public PostEstimateRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostEstimateRawResponse {
      */
     
     public org.openapis.openapi.models.shared.EstimatePO estimatePO;
+
     public PostEstimateRawResponse withEstimatePO(org.openapis.openapi.models.shared.EstimatePO estimatePO) {
         this.estimatePO = estimatePO;
         return this;
@@ -36,6 +40,7 @@ public class PostEstimateRawResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public PostEstimateRawResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -43,6 +48,7 @@ public class PostEstimateRawResponse {
     
     
     public Integer statusCode;
+
     public PostEstimateRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PostEstimateRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostEstimateRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostEstimateRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

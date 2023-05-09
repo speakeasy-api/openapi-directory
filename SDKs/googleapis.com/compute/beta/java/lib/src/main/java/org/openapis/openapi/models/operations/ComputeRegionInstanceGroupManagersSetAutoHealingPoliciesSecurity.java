@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurityOption1 option1;
+
     public ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurity withOption1(ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurityOption2 option2;
+
     public ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurity withOption2(ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionInstanceGroupManagersSetAutoHealingPoliciesSecurity(){}
 }

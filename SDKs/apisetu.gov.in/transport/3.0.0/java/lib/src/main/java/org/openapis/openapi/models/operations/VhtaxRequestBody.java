@@ -15,6 +15,7 @@ public class VhtaxRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public VhtaxRequestBodyCertificateParameters certificateParameters;
+
     public VhtaxRequestBody withCertificateParameters(VhtaxRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class VhtaxRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public VhtaxRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class VhtaxRequestBody {
      */
     @JsonProperty("format")
     public VhtaxRequestBodyFormatEnum format;
+
     public VhtaxRequestBody withFormat(VhtaxRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class VhtaxRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public VhtaxRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public VhtaxRequestBody(@JsonProperty("format") VhtaxRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

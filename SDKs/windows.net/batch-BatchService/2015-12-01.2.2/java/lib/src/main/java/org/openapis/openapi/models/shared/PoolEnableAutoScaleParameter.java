@@ -18,6 +18,7 @@ public class PoolEnableAutoScaleParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaleEvaluationInterval")
     public String autoScaleEvaluationInterval;
+
     public PoolEnableAutoScaleParameter withAutoScaleEvaluationInterval(String autoScaleEvaluationInterval) {
         this.autoScaleEvaluationInterval = autoScaleEvaluationInterval;
         return this;
@@ -29,9 +30,11 @@ public class PoolEnableAutoScaleParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScaleFormula")
     public String autoScaleFormula;
+
     public PoolEnableAutoScaleParameter withAutoScaleFormula(String autoScaleFormula) {
         this.autoScaleFormula = autoScaleFormula;
         return this;
     }
     
+    public PoolEnableAutoScaleParameter(){}
 }

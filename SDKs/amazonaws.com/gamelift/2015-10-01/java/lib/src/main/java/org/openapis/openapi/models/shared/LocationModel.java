@@ -15,6 +15,7 @@ public class LocationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public LocationModel withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -23,9 +24,11 @@ public class LocationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationName")
     public String locationName;
+
     public LocationModel withLocationName(String locationName) {
         this.locationName = locationName;
         return this;
     }
     
+    public LocationModel(){}
 }

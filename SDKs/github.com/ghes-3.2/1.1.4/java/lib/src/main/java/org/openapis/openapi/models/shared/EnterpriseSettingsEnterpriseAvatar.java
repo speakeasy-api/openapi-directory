@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseAvatar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterpriseAvatar withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -20,9 +21,11 @@ public class EnterpriseSettingsEnterpriseAvatar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public EnterpriseSettingsEnterpriseAvatar withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseAvatar(){}
 }

@@ -17,6 +17,7 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public ShipmentRequestBaseVO[] locations;
+
     public ShipmentDetailVO withLocations(ShipmentRequestBaseVO[] locations) {
         this.locations = locations;
         return this;
@@ -25,6 +26,7 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations_count")
     public Long locationsCount;
+
     public ShipmentDetailVO withLocationsCount(Long locationsCount) {
         this.locationsCount = locationsCount;
         return this;
@@ -33,6 +35,7 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_received")
     public Long qtyReceived;
+
     public ShipmentDetailVO withQtyReceived(Long qtyReceived) {
         this.qtyReceived = qtyReceived;
         return this;
@@ -41,6 +44,7 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_requested")
     public Long qtyRequested;
+
     public ShipmentDetailVO withQtyRequested(Long qtyRequested) {
         this.qtyRequested = qtyRequested;
         return this;
@@ -49,6 +53,7 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_shipped")
     public Long qtyShipped;
+
     public ShipmentDetailVO withQtyShipped(Long qtyShipped) {
         this.qtyShipped = qtyShipped;
         return this;
@@ -58,6 +63,7 @@ public class ShipmentDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("received_date")
     public LocalDate receivedDate;
+
     public ShipmentDetailVO withReceivedDate(LocalDate receivedDate) {
         this.receivedDate = receivedDate;
         return this;
@@ -66,6 +72,7 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
     public Long shipmentId;
+
     public ShipmentDetailVO withShipmentId(Long shipmentId) {
         this.shipmentId = shipmentId;
         return this;
@@ -74,6 +81,7 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_status")
     public String shipmentStatus;
+
     public ShipmentDetailVO withShipmentStatus(String shipmentStatus) {
         this.shipmentStatus = shipmentStatus;
         return this;
@@ -83,6 +91,7 @@ public class ShipmentDetailVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("shipped_date")
     public LocalDate shippedDate;
+
     public ShipmentDetailVO withShippedDate(LocalDate shippedDate) {
         this.shippedDate = shippedDate;
         return this;
@@ -94,9 +103,11 @@ public class ShipmentDetailVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public SpecBaseVO spec;
+
     public ShipmentDetailVO withSpec(SpecBaseVO spec) {
         this.spec = spec;
         return this;
     }
     
+    public ShipmentDetailVO(){}
 }

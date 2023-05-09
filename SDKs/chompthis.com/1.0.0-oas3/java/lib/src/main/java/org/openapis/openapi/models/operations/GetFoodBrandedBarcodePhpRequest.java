@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoodBrandedBarcodePhpRequest {
@@ -16,9 +17,13 @@ public class GetFoodBrandedBarcodePhpRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String code;
+
     public GetFoodBrandedBarcodePhpRequest withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public GetFoodBrandedBarcodePhpRequest(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

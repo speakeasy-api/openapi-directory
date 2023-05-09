@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionReserveHandleRequest {
@@ -12,9 +13,13 @@ public class PrivateCollectionReserveHandleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public Long collectionId;
+
     public PrivateCollectionReserveHandleRequest withCollectionId(Long collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public PrivateCollectionReserveHandleRequest(@JsonProperty("collection_id") Long collectionId) {
+        this.collectionId = collectionId;
+  }
 }

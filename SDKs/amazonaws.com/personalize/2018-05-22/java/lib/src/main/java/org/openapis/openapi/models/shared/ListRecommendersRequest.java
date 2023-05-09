@@ -12,6 +12,7 @@ public class ListRecommendersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public ListRecommendersRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -20,6 +21,7 @@ public class ListRecommendersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListRecommendersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListRecommendersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRecommendersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRecommendersRequest(){}
 }

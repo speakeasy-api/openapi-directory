@@ -18,9 +18,11 @@ public class StatementGetResponseCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public StatementGetResponseConditionConditions[] conditions;
+
     public StatementGetResponseCondition withConditions(StatementGetResponseConditionConditions[] conditions) {
         this.conditions = conditions;
         return this;
     }
     
+    public StatementGetResponseCondition(){}
 }

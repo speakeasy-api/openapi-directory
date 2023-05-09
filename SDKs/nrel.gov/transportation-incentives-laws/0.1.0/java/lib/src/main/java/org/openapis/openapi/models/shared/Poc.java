@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Poc {
     /**
@@ -12,6 +12,7 @@ public class Poc {
      */
     
     public String agency;
+
     public Poc withAgency(String agency) {
         this.agency = agency;
         return this;
@@ -22,6 +23,7 @@ public class Poc {
      */
     
     public String email;
+
     public Poc withEmail(String email) {
         this.email = email;
         return this;
@@ -32,6 +34,7 @@ public class Poc {
      */
     
     public String fax;
+
     public Poc withFax(String fax) {
         this.fax = fax;
         return this;
@@ -42,6 +45,7 @@ public class Poc {
      */
     
     public String name;
+
     public Poc withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class Poc {
      */
     
     public String state;
+
     public Poc withState(String state) {
         this.state = state;
         return this;
@@ -62,6 +67,7 @@ public class Poc {
      */
     
     public String telephone;
+
     public Poc withTelephone(String telephone) {
         this.telephone = telephone;
         return this;
@@ -72,6 +78,7 @@ public class Poc {
      */
     
     public String title;
+
     public Poc withTitle(String title) {
         this.title = title;
         return this;
@@ -82,9 +89,14 @@ public class Poc {
      */
     
     public String webPage;
+
     public Poc withWebPage(String webPage) {
         this.webPage = webPage;
         return this;
     }
     
+    public Poc(@JsonProperty("name") String name, @JsonProperty("state") String state) {
+        this.name = name;
+        this.state = state;
+  }
 }

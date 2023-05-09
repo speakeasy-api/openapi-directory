@@ -12,9 +12,13 @@ public class CommititemfeedorderstatusRequest {
      */
     @JsonProperty("handles")
     public String[] handles;
+
     public CommititemfeedorderstatusRequest withHandles(String[] handles) {
         this.handles = handles;
         return this;
     }
     
+    public CommititemfeedorderstatusRequest(@JsonProperty("handles") String[] handles) {
+        this.handles = handles;
+  }
 }

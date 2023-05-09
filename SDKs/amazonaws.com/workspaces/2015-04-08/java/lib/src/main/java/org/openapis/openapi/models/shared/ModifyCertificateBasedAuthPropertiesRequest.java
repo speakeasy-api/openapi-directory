@@ -12,6 +12,7 @@ public class ModifyCertificateBasedAuthPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateBasedAuthProperties")
     public CertificateBasedAuthProperties certificateBasedAuthProperties;
+
     public ModifyCertificateBasedAuthPropertiesRequest withCertificateBasedAuthProperties(CertificateBasedAuthProperties certificateBasedAuthProperties) {
         this.certificateBasedAuthProperties = certificateBasedAuthProperties;
         return this;
@@ -20,6 +21,7 @@ public class ModifyCertificateBasedAuthPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertiesToDelete")
     public DeletableCertificateBasedAuthPropertyEnum[] propertiesToDelete;
+
     public ModifyCertificateBasedAuthPropertiesRequest withPropertiesToDelete(DeletableCertificateBasedAuthPropertyEnum[] propertiesToDelete) {
         this.propertiesToDelete = propertiesToDelete;
         return this;
@@ -27,9 +29,13 @@ public class ModifyCertificateBasedAuthPropertiesRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ModifyCertificateBasedAuthPropertiesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ModifyCertificateBasedAuthPropertiesRequest(@JsonProperty("ResourceId") String resourceId) {
+        this.resourceId = resourceId;
+  }
 }

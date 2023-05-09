@@ -12,6 +12,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
+
     public NAHealthyHomeCoach withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cipher_id")
     public String cipherId;
+
     public NAHealthyHomeCoach withCipherId(String cipherId) {
         this.cipherId = cipherId;
         return this;
@@ -28,6 +30,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co2_calibrating")
     public Boolean co2Calibrating;
+
     public NAHealthyHomeCoach withCo2Calibrating(Boolean co2Calibrating) {
         this.co2Calibrating = co2Calibrating;
         return this;
@@ -36,6 +39,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboard_data")
     public NADashboardData dashboardData;
+
     public NAHealthyHomeCoach withDashboardData(NADashboardData dashboardData) {
         this.dashboardData = dashboardData;
         return this;
@@ -44,6 +48,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_type")
     public String[] dataType;
+
     public NAHealthyHomeCoach withDataType(String[] dataType) {
         this.dataType = dataType;
         return this;
@@ -52,6 +57,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_setup")
     public Integer dateSetup;
+
     public NAHealthyHomeCoach withDateSetup(Integer dateSetup) {
         this.dateSetup = dateSetup;
         return this;
@@ -60,6 +66,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmware")
     public Integer firmware;
+
     public NAHealthyHomeCoach withFirmware(Integer firmware) {
         this.firmware = firmware;
         return this;
@@ -68,6 +75,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_setup")
     public Integer lastSetup;
+
     public NAHealthyHomeCoach withLastSetup(Integer lastSetup) {
         this.lastSetup = lastSetup;
         return this;
@@ -76,6 +84,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_status_store")
     public Integer lastStatusStore;
+
     public NAHealthyHomeCoach withLastStatusStore(Integer lastStatusStore) {
         this.lastStatusStore = lastStatusStore;
         return this;
@@ -84,6 +93,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_upgrade")
     public Integer lastUpgrade;
+
     public NAHealthyHomeCoach withLastUpgrade(Integer lastUpgrade) {
         this.lastUpgrade = lastUpgrade;
         return this;
@@ -92,6 +102,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NAHealthyHomeCoach withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +111,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("place")
     public NAPlace place;
+
     public NAHealthyHomeCoach withPlace(NAPlace place) {
         this.place = place;
         return this;
@@ -113,6 +125,7 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAHealthyHomeCoach withType(String type) {
         this.type = type;
         return this;
@@ -128,9 +141,11 @@ public class NAHealthyHomeCoach {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifi_status")
     public Integer wifiStatus;
+
     public NAHealthyHomeCoach withWifiStatus(Integer wifiStatus) {
         this.wifiStatus = wifiStatus;
         return this;
     }
     
+    public NAHealthyHomeCoach(){}
 }

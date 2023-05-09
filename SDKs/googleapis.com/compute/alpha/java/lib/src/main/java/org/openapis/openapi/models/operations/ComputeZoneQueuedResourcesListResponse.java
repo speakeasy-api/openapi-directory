@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeZoneQueuedResourcesListResponse {
     
     public String contentType;
+
     public ComputeZoneQueuedResourcesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeZoneQueuedResourcesListResponse {
      */
     
     public org.openapis.openapi.models.shared.QueuedResourceList queuedResourceList;
+
     public ComputeZoneQueuedResourcesListResponse withQueuedResourceList(org.openapis.openapi.models.shared.QueuedResourceList queuedResourceList) {
         this.queuedResourceList = queuedResourceList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeZoneQueuedResourcesListResponse {
     
     
     public Integer statusCode;
+
     public ComputeZoneQueuedResourcesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeZoneQueuedResourcesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeZoneQueuedResourcesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeZoneQueuedResourcesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

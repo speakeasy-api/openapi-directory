@@ -15,6 +15,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgeRange")
     public AgeRange ageRange;
+
     public FaceDetail withAgeRange(AgeRange ageRange) {
         this.ageRange = ageRange;
         return this;
@@ -23,6 +24,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beard")
     public Beard beard;
+
     public FaceDetail withBeard(Beard beard) {
         this.beard = beard;
         return this;
@@ -31,6 +33,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public FaceDetail withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -39,6 +42,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public FaceDetail withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -47,6 +51,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Emotions")
     public Emotion[] emotions;
+
     public FaceDetail withEmotions(Emotion[] emotions) {
         this.emotions = emotions;
         return this;
@@ -55,6 +60,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Eyeglasses")
     public Eyeglasses eyeglasses;
+
     public FaceDetail withEyeglasses(Eyeglasses eyeglasses) {
         this.eyeglasses = eyeglasses;
         return this;
@@ -63,6 +69,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EyesOpen")
     public EyeOpen eyesOpen;
+
     public FaceDetail withEyesOpen(EyeOpen eyesOpen) {
         this.eyesOpen = eyesOpen;
         return this;
@@ -71,6 +78,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public Gender gender;
+
     public FaceDetail withGender(Gender gender) {
         this.gender = gender;
         return this;
@@ -79,6 +87,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Landmarks")
     public Landmark[] landmarks;
+
     public FaceDetail withLandmarks(Landmark[] landmarks) {
         this.landmarks = landmarks;
         return this;
@@ -87,6 +96,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MouthOpen")
     public MouthOpen mouthOpen;
+
     public FaceDetail withMouthOpen(MouthOpen mouthOpen) {
         this.mouthOpen = mouthOpen;
         return this;
@@ -95,6 +105,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mustache")
     public Mustache mustache;
+
     public FaceDetail withMustache(Mustache mustache) {
         this.mustache = mustache;
         return this;
@@ -103,6 +114,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pose")
     public Pose pose;
+
     public FaceDetail withPose(Pose pose) {
         this.pose = pose;
         return this;
@@ -111,6 +123,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quality")
     public ImageQuality quality;
+
     public FaceDetail withQuality(ImageQuality quality) {
         this.quality = quality;
         return this;
@@ -119,6 +132,7 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Smile")
     public Smile smile;
+
     public FaceDetail withSmile(Smile smile) {
         this.smile = smile;
         return this;
@@ -127,9 +141,11 @@ public class FaceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sunglasses")
     public Sunglasses sunglasses;
+
     public FaceDetail withSunglasses(Sunglasses sunglasses) {
         this.sunglasses = sunglasses;
         return this;
     }
     
+    public FaceDetail(){}
 }

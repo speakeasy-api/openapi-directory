@@ -15,6 +15,7 @@ public class StartTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public Failure[] failures;
+
     public StartTaskResponse withFailures(Failure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class StartTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public Task[] tasks;
+
     public StartTaskResponse withTasks(Task[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public StartTaskResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataProtectionPolicyResponse {
     
     public String contentType;
+
     public GetDataProtectionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDataProtectionPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataProtectionPolicyResponse getDataProtectionPolicyResponse;
+
     public GetDataProtectionPolicyResponse withGetDataProtectionPolicyResponse(org.openapis.openapi.models.shared.GetDataProtectionPolicyResponse getDataProtectionPolicyResponse) {
         this.getDataProtectionPolicyResponse = getDataProtectionPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetDataProtectionPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public GetDataProtectionPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetDataProtectionPolicyResponse {
      */
     
     public Object operationAbortedException;
+
     public GetDataProtectionPolicyResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -46,6 +51,7 @@ public class GetDataProtectionPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetDataProtectionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDataProtectionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataProtectionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetDataProtectionPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDataProtectionPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetDataProtectionPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetDataProtectionPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetDataProtectionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

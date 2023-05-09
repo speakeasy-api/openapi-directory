@@ -56,11 +56,9 @@ public class PlaceActionTypeMetadata {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessplaceactionsPlaceActionTypeMetadataListResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsPlaceActionTypeMetadataListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessplaceactionsPlaceActionTypeMetadataListResponse res = new org.openapis.openapi.models.operations.MybusinessplaceactionsPlaceActionTypeMetadataListResponse(contentType, httpRes.statusCode()) {{
             listPlaceActionTypeMetadataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

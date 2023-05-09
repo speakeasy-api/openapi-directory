@@ -12,6 +12,7 @@ public class StartSyncExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public StartSyncExecutionInput withInput(String input) {
         this.input = input;
         return this;
@@ -20,6 +21,7 @@ public class StartSyncExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StartSyncExecutionInput withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class StartSyncExecutionInput {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public StartSyncExecutionInput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -35,9 +38,13 @@ public class StartSyncExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traceHeader")
     public String traceHeader;
+
     public StartSyncExecutionInput withTraceHeader(String traceHeader) {
         this.traceHeader = traceHeader;
         return this;
     }
     
+    public StartSyncExecutionInput(@JsonProperty("stateMachineArn") String stateMachineArn) {
+        this.stateMachineArn = stateMachineArn;
+  }
 }

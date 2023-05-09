@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeComponentConfigurationResponse {
     
     public String contentType;
+
     public DescribeComponentConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeComponentConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeComponentConfigurationResponse describeComponentConfigurationResponse;
+
     public DescribeComponentConfigurationResponse withDescribeComponentConfigurationResponse(org.openapis.openapi.models.shared.DescribeComponentConfigurationResponse describeComponentConfigurationResponse) {
         this.describeComponentConfigurationResponse = describeComponentConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeComponentConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeComponentConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeComponentConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeComponentConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeComponentConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeComponentConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeComponentConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeComponentConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeComponentConfigurationResponse {
      */
     
     public Object validationException;
+
     public DescribeComponentConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeComponentConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

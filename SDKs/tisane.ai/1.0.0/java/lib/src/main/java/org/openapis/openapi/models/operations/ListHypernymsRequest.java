@@ -12,6 +12,7 @@ public class ListHypernymsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
     public String ocpApimSubscriptionKey;
+
     public ListHypernymsRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
         this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
@@ -22,6 +23,7 @@ public class ListHypernymsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
     public String family;
+
     public ListHypernymsRequest withFamily(String family) {
         this.family = family;
         return this;
@@ -32,9 +34,11 @@ public class ListHypernymsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxLevel")
     public String maxLevel;
+
     public ListHypernymsRequest withMaxLevel(String maxLevel) {
         this.maxLevel = maxLevel;
         return this;
     }
     
+    public ListHypernymsRequest(){}
 }

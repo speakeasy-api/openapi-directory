@@ -15,6 +15,7 @@ public class PersonUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public PersonUrls withLabel(String label) {
         this.label = label;
         return this;
@@ -30,6 +31,7 @@ public class PersonUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PersonUrls withType(String type) {
         this.type = type;
         return this;
@@ -41,9 +43,11 @@ public class PersonUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PersonUrls withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PersonUrls(){}
 }

@@ -12,6 +12,7 @@ public class DeviceAccumulators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public Long deviceId;
+
     public DeviceAccumulators withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -20,6 +21,7 @@ public class DeviceAccumulators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hours")
     public Double hours;
+
     public DeviceAccumulators withHours(Double hours) {
         this.hours = hours;
         return this;
@@ -31,9 +33,11 @@ public class DeviceAccumulators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDistance")
     public Double totalDistance;
+
     public DeviceAccumulators withTotalDistance(Double totalDistance) {
         this.totalDistance = totalDistance;
         return this;
     }
     
+    public DeviceAccumulators(){}
 }

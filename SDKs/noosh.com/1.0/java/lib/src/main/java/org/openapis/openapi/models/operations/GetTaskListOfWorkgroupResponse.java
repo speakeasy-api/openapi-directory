@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTaskListOfWorkgroupResponse {
     
     public byte[] body;
+
     public GetTaskListOfWorkgroupResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetTaskListOfWorkgroupResponse {
     
     
     public String contentType;
+
     public GetTaskListOfWorkgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetTaskListOfWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetTaskListOfWorkgroupResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetTaskListOfWorkgroupResponse {
     
     
     public Integer statusCode;
+
     public GetTaskListOfWorkgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetTaskListOfWorkgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTaskListOfWorkgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetTaskListOfWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.TaskWorkgroupLevelListVO taskWorkgroupLevelListVO;
+
     public GetTaskListOfWorkgroupResponse withTaskWorkgroupLevelListVO(org.openapis.openapi.models.shared.TaskWorkgroupLevelListVO taskWorkgroupLevelListVO) {
         this.taskWorkgroupLevelListVO = taskWorkgroupLevelListVO;
         return this;
     }
     
+    public GetTaskListOfWorkgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

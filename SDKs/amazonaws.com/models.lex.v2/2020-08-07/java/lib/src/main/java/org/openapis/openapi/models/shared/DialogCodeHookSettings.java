@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DialogCodeHookSettings {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public DialogCodeHookSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public DialogCodeHookSettings(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

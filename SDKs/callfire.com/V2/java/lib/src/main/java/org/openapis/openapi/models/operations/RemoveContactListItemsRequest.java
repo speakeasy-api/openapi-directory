@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveContactListItemsRequest {
@@ -12,6 +13,7 @@ public class RemoveContactListItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactId")
     public Long[] contactId;
+
     public RemoveContactListItemsRequest withContactId(Long[] contactId) {
         this.contactId = contactId;
         return this;
@@ -22,9 +24,13 @@ public class RemoveContactListItemsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public RemoveContactListItemsRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public RemoveContactListItemsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

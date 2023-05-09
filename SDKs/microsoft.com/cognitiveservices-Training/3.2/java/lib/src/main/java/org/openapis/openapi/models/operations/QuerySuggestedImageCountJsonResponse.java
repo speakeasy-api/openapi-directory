@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QuerySuggestedImageCountJsonResponse {
     
     public byte[] body;
+
     public QuerySuggestedImageCountJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class QuerySuggestedImageCountJsonResponse {
     
     
     public String contentType;
+
     public QuerySuggestedImageCountJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class QuerySuggestedImageCountJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public QuerySuggestedImageCountJsonResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class QuerySuggestedImageCountJsonResponse {
      */
     
     public java.util.Map<String, Integer> querySuggestedImageCountJSON200ApplicationJSONObject;
+
     public QuerySuggestedImageCountJsonResponse withQuerySuggestedImageCountJSON200ApplicationJSONObject(java.util.Map<String, Integer> querySuggestedImageCountJSON200ApplicationJSONObject) {
         this.querySuggestedImageCountJSON200ApplicationJSONObject = querySuggestedImageCountJSON200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class QuerySuggestedImageCountJsonResponse {
     
     
     public Integer statusCode;
+
     public QuerySuggestedImageCountJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class QuerySuggestedImageCountJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QuerySuggestedImageCountJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QuerySuggestedImageCountJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

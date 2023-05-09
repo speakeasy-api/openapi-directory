@@ -15,6 +15,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cachingConfig")
     public CreateResolverRequestBodyCachingConfig cachingConfig;
+
     public CreateResolverRequestBody withCachingConfig(CreateResolverRequestBodyCachingConfig cachingConfig) {
         this.cachingConfig = cachingConfig;
         return this;
@@ -26,6 +27,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public CreateResolverRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +39,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceName")
     public String dataSourceName;
+
     public CreateResolverRequestBody withDataSourceName(String dataSourceName) {
         this.dataSourceName = dataSourceName;
         return this;
@@ -47,6 +50,7 @@ public class CreateResolverRequestBody {
      */
     @JsonProperty("fieldName")
     public String fieldName;
+
     public CreateResolverRequestBody withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -58,6 +62,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public CreateResolverRequestBodyKindEnum kind;
+
     public CreateResolverRequestBody withKind(CreateResolverRequestBodyKindEnum kind) {
         this.kind = kind;
         return this;
@@ -69,6 +74,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBatchSize")
     public Long maxBatchSize;
+
     public CreateResolverRequestBody withMaxBatchSize(Long maxBatchSize) {
         this.maxBatchSize = maxBatchSize;
         return this;
@@ -80,6 +86,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineConfig")
     public CreateResolverRequestBodyPipelineConfig pipelineConfig;
+
     public CreateResolverRequestBody withPipelineConfig(CreateResolverRequestBodyPipelineConfig pipelineConfig) {
         this.pipelineConfig = pipelineConfig;
         return this;
@@ -91,6 +98,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMappingTemplate")
     public String requestMappingTemplate;
+
     public CreateResolverRequestBody withRequestMappingTemplate(String requestMappingTemplate) {
         this.requestMappingTemplate = requestMappingTemplate;
         return this;
@@ -102,6 +110,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseMappingTemplate")
     public String responseMappingTemplate;
+
     public CreateResolverRequestBody withResponseMappingTemplate(String responseMappingTemplate) {
         this.responseMappingTemplate = responseMappingTemplate;
         return this;
@@ -113,6 +122,7 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public CreateResolverRequestBodyRuntime runtime;
+
     public CreateResolverRequestBody withRuntime(CreateResolverRequestBodyRuntime runtime) {
         this.runtime = runtime;
         return this;
@@ -124,9 +134,13 @@ public class CreateResolverRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncConfig")
     public CreateResolverRequestBodySyncConfig syncConfig;
+
     public CreateResolverRequestBody withSyncConfig(CreateResolverRequestBodySyncConfig syncConfig) {
         this.syncConfig = syncConfig;
         return this;
     }
     
+    public CreateResolverRequestBody(@JsonProperty("fieldName") String fieldName) {
+        this.fieldName = fieldName;
+  }
 }

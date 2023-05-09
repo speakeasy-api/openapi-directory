@@ -15,6 +15,7 @@ public class MitigationActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addThingsToThingGroupParams")
     public AddThingsToThingGroupParams addThingsToThingGroupParams;
+
     public MitigationActionParams withAddThingsToThingGroupParams(AddThingsToThingGroupParams addThingsToThingGroupParams) {
         this.addThingsToThingGroupParams = addThingsToThingGroupParams;
         return this;
@@ -23,6 +24,7 @@ public class MitigationActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableIoTLoggingParams")
     public EnableIoTLoggingParams enableIoTLoggingParams;
+
     public MitigationActionParams withEnableIoTLoggingParams(EnableIoTLoggingParams enableIoTLoggingParams) {
         this.enableIoTLoggingParams = enableIoTLoggingParams;
         return this;
@@ -31,6 +33,7 @@ public class MitigationActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishFindingToSnsParams")
     public PublishFindingToSnsParams publishFindingToSnsParams;
+
     public MitigationActionParams withPublishFindingToSnsParams(PublishFindingToSnsParams publishFindingToSnsParams) {
         this.publishFindingToSnsParams = publishFindingToSnsParams;
         return this;
@@ -39,6 +42,7 @@ public class MitigationActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replaceDefaultPolicyVersionParams")
     public ReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams;
+
     public MitigationActionParams withReplaceDefaultPolicyVersionParams(ReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams) {
         this.replaceDefaultPolicyVersionParams = replaceDefaultPolicyVersionParams;
         return this;
@@ -47,6 +51,7 @@ public class MitigationActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateCACertificateParams")
     public UpdateCACertificateParams updateCACertificateParams;
+
     public MitigationActionParams withUpdateCACertificateParams(UpdateCACertificateParams updateCACertificateParams) {
         this.updateCACertificateParams = updateCACertificateParams;
         return this;
@@ -55,9 +60,11 @@ public class MitigationActionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateDeviceCertificateParams")
     public UpdateDeviceCertificateParams updateDeviceCertificateParams;
+
     public MitigationActionParams withUpdateDeviceCertificateParams(UpdateDeviceCertificateParams updateDeviceCertificateParams) {
         this.updateDeviceCertificateParams = updateDeviceCertificateParams;
         return this;
     }
     
+    public MitigationActionParams(){}
 }

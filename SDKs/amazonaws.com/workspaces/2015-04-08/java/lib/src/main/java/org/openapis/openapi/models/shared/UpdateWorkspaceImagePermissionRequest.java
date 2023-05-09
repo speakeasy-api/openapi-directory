@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateWorkspaceImagePermissionRequest {
     @JsonProperty("AllowCopyImage")
     public Boolean allowCopyImage;
+
     public UpdateWorkspaceImagePermissionRequest withAllowCopyImage(Boolean allowCopyImage) {
         this.allowCopyImage = allowCopyImage;
         return this;
@@ -16,6 +17,7 @@ public class UpdateWorkspaceImagePermissionRequest {
     
     @JsonProperty("ImageId")
     public String imageId;
+
     public UpdateWorkspaceImagePermissionRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -23,9 +25,15 @@ public class UpdateWorkspaceImagePermissionRequest {
     
     @JsonProperty("SharedAccountId")
     public String sharedAccountId;
+
     public UpdateWorkspaceImagePermissionRequest withSharedAccountId(String sharedAccountId) {
         this.sharedAccountId = sharedAccountId;
         return this;
     }
     
+    public UpdateWorkspaceImagePermissionRequest(@JsonProperty("AllowCopyImage") Boolean allowCopyImage, @JsonProperty("ImageId") String imageId, @JsonProperty("SharedAccountId") String sharedAccountId) {
+        this.allowCopyImage = allowCopyImage;
+        this.imageId = imageId;
+        this.sharedAccountId = sharedAccountId;
+  }
 }

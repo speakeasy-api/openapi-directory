@@ -15,6 +15,7 @@ public class NetworkAttachmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAttachments")
     public NetworkAttachment[] networkAttachments;
+
     public NetworkAttachmentsScopedList withNetworkAttachments(NetworkAttachment[] networkAttachments) {
         this.networkAttachments = networkAttachments;
         return this;
@@ -26,9 +27,11 @@ public class NetworkAttachmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NetworkAttachmentsScopedListWarning warning;
+
     public NetworkAttachmentsScopedList withWarning(NetworkAttachmentsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NetworkAttachmentsScopedList(){}
 }

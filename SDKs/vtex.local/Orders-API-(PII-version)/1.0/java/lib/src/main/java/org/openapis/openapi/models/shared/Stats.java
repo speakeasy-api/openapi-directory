@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Stats {
     @JsonProperty("stats")
     public Stats1 stats;
+
     public Stats withStats(Stats1 stats) {
         this.stats = stats;
         return this;
     }
     
+    public Stats(@JsonProperty("stats") Stats1 stats) {
+        this.stats = stats;
+  }
 }

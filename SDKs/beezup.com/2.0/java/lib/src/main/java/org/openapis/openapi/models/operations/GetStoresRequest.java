@@ -16,9 +16,11 @@ public class GetStoresRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetStoresRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    public GetStoresRequest(){}
 }

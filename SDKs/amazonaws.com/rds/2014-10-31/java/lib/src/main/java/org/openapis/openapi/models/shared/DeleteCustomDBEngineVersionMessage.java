@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteCustomDBEngineVersionMessage {
     
     public String engine;
+
     public DeleteCustomDBEngineVersionMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -16,9 +17,14 @@ public class DeleteCustomDBEngineVersionMessage {
     
     
     public String engineVersion;
+
     public DeleteCustomDBEngineVersionMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
     }
     
+    public DeleteCustomDBEngineVersionMessage(@JsonProperty("Engine") String engine, @JsonProperty("EngineVersion") String engineVersion) {
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+  }
 }

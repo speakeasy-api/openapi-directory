@@ -17,6 +17,7 @@ public class DestinyResponsesDestinyVendorResponseCategories {
      */
     
     public DestinyEntitiesVendorsDestinyVendorCategoriesComponent data;
+
     public DestinyResponsesDestinyVendorResponseCategories withData(DestinyEntitiesVendorsDestinyVendorCategoriesComponent data) {
         this.data = data;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyVendorResponseCategories {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyVendorResponseCategories withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -34,9 +36,11 @@ public class DestinyResponsesDestinyVendorResponseCategories {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyVendorResponseCategories withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyVendorResponseCategories(){}
 }

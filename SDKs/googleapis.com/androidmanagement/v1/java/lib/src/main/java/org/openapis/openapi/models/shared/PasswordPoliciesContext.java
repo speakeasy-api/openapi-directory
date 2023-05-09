@@ -18,9 +18,11 @@ public class PasswordPoliciesContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordPolicyScope")
     public PasswordPoliciesContextPasswordPolicyScopeEnum passwordPolicyScope;
+
     public PasswordPoliciesContext withPasswordPolicyScope(PasswordPoliciesContextPasswordPolicyScopeEnum passwordPolicyScope) {
         this.passwordPolicyScope = passwordPolicyScope;
         return this;
     }
     
+    public PasswordPoliciesContext(){}
 }

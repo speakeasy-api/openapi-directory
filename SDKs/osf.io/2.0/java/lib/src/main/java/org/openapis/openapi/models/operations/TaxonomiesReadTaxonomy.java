@@ -15,6 +15,7 @@ public class TaxonomiesReadTaxonomy {
      */
     
     public TaxonomiesReadTaxonomyAttributes attributes;
+
     public TaxonomiesReadTaxonomy withAttributes(TaxonomiesReadTaxonomyAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class TaxonomiesReadTaxonomy {
      */
     
     public String id;
+
     public TaxonomiesReadTaxonomy withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class TaxonomiesReadTaxonomy {
      */
     
     public TaxonomiesReadTaxonomyLinks links;
+
     public TaxonomiesReadTaxonomy withLinks(TaxonomiesReadTaxonomyLinks links) {
         this.links = links;
         return this;
@@ -45,9 +48,11 @@ public class TaxonomiesReadTaxonomy {
      */
     
     public String type;
+
     public TaxonomiesReadTaxonomy withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TaxonomiesReadTaxonomy(){}
 }

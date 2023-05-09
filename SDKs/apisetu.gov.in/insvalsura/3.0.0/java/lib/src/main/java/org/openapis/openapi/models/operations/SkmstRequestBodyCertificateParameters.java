@@ -12,6 +12,7 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("coursename")
     public String coursename;
+
     public SkmstRequestBodyCertificateParameters withCoursename(String coursename) {
         this.coursename = coursename;
         return this;
@@ -22,6 +23,7 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("personalno")
     public String personalno;
+
     public SkmstRequestBodyCertificateParameters withPersonalno(String personalno) {
         this.personalno = personalno;
         return this;
@@ -32,9 +34,15 @@ public class SkmstRequestBodyCertificateParameters {
      */
     @JsonProperty("unit")
     public String unit;
+
     public SkmstRequestBodyCertificateParameters withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public SkmstRequestBodyCertificateParameters(@JsonProperty("coursename") String coursename, @JsonProperty("personalno") String personalno, @JsonProperty("unit") String unit) {
+        this.coursename = coursename;
+        this.personalno = personalno;
+        this.unit = unit;
+  }
 }

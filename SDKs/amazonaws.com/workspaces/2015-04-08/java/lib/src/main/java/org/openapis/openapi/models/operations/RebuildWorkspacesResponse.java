@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RebuildWorkspacesResponse {
     
     public String contentType;
+
     public RebuildWorkspacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RebuildWorkspacesResponse {
      */
     
     public Object operationNotSupportedException;
+
     public RebuildWorkspacesResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -29,6 +32,7 @@ public class RebuildWorkspacesResponse {
      */
     
     public org.openapis.openapi.models.shared.RebuildWorkspacesResult rebuildWorkspacesResult;
+
     public RebuildWorkspacesResponse withRebuildWorkspacesResult(org.openapis.openapi.models.shared.RebuildWorkspacesResult rebuildWorkspacesResult) {
         this.rebuildWorkspacesResult = rebuildWorkspacesResult;
         return this;
@@ -36,6 +40,7 @@ public class RebuildWorkspacesResponse {
     
     
     public Integer statusCode;
+
     public RebuildWorkspacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RebuildWorkspacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RebuildWorkspacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RebuildWorkspacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class LFTagPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public LFTagPair withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -22,6 +23,7 @@ public class LFTagPair {
     
     @JsonProperty("TagKey")
     public String tagKey;
+
     public LFTagPair withTagKey(String tagKey) {
         this.tagKey = tagKey;
         return this;
@@ -29,9 +31,14 @@ public class LFTagPair {
     
     @JsonProperty("TagValues")
     public String[] tagValues;
+
     public LFTagPair withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public LFTagPair(@JsonProperty("TagKey") String tagKey, @JsonProperty("TagValues") String[] tagValues) {
+        this.tagKey = tagKey;
+        this.tagValues = tagValues;
+  }
 }

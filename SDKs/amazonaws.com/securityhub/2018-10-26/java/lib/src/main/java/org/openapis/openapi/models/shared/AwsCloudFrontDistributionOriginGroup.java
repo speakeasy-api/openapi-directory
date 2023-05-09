@@ -15,9 +15,11 @@ public class AwsCloudFrontDistributionOriginGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailoverCriteria")
     public AwsCloudFrontDistributionOriginGroupFailover failoverCriteria;
+
     public AwsCloudFrontDistributionOriginGroup withFailoverCriteria(AwsCloudFrontDistributionOriginGroupFailover failoverCriteria) {
         this.failoverCriteria = failoverCriteria;
         return this;
     }
     
+    public AwsCloudFrontDistributionOriginGroup(){}
 }

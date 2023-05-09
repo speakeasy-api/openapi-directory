@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchPatientHealthMetricResponse {
     
     public String contentType;
+
     public FetchPatientHealthMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchPatientHealthMetricResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public FetchPatientHealthMetricResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FetchPatientHealthMetricResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchPatientHealthMetricResponse fetchPatientHealthMetricResponse;
+
     public FetchPatientHealthMetricResponse withFetchPatientHealthMetricResponse(org.openapis.openapi.models.shared.FetchPatientHealthMetricResponse fetchPatientHealthMetricResponse) {
         this.fetchPatientHealthMetricResponse = fetchPatientHealthMetricResponse;
         return this;
@@ -36,6 +40,7 @@ public class FetchPatientHealthMetricResponse {
     
     
     public Integer statusCode;
+
     public FetchPatientHealthMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FetchPatientHealthMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchPatientHealthMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchPatientHealthMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

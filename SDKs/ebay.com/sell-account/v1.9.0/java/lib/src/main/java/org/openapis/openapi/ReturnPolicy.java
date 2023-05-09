@@ -60,11 +60,9 @@ public class ReturnPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateReturnPolicyResponse res = new org.openapis.openapi.models.operations.CreateReturnPolicyResponse() {{
+        org.openapis.openapi.models.operations.CreateReturnPolicyResponse res = new org.openapis.openapi.models.operations.CreateReturnPolicyResponse(contentType, httpRes.statusCode()) {{
             setReturnPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -104,10 +102,8 @@ public class ReturnPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteReturnPolicyResponse res = new org.openapis.openapi.models.operations.DeleteReturnPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteReturnPolicyResponse res = new org.openapis.openapi.models.operations.DeleteReturnPolicyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {
@@ -144,11 +140,9 @@ public class ReturnPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReturnPoliciesResponse res = new org.openapis.openapi.models.operations.GetReturnPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetReturnPoliciesResponse res = new org.openapis.openapi.models.operations.GetReturnPoliciesResponse(contentType, httpRes.statusCode()) {{
             returnPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class ReturnPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReturnPolicyResponse res = new org.openapis.openapi.models.operations.GetReturnPolicyResponse() {{
+        org.openapis.openapi.models.operations.GetReturnPolicyResponse res = new org.openapis.openapi.models.operations.GetReturnPolicyResponse(contentType, httpRes.statusCode()) {{
             returnPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +226,9 @@ public class ReturnPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReturnPolicyByNameResponse res = new org.openapis.openapi.models.operations.GetReturnPolicyByNameResponse() {{
+        org.openapis.openapi.models.operations.GetReturnPolicyByNameResponse res = new org.openapis.openapi.models.operations.GetReturnPolicyByNameResponse(contentType, httpRes.statusCode()) {{
             returnPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class ReturnPolicy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateReturnPolicyResponse res = new org.openapis.openapi.models.operations.UpdateReturnPolicyResponse() {{
+        org.openapis.openapi.models.operations.UpdateReturnPolicyResponse res = new org.openapis.openapi.models.operations.UpdateReturnPolicyResponse(contentType, httpRes.statusCode()) {{
             setReturnPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

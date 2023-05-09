@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSON {
     @JsonProperty("psd2registrationlogs")
     public org.openapis.openapi.models.shared.Psd2RegistrationLog[] psd2registrationlogs;
+
     public GetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSON withPsd2registrationlogs(org.openapis.openapi.models.shared.Psd2RegistrationLog[] psd2registrationlogs) {
         this.psd2registrationlogs = psd2registrationlogs;
         return this;
@@ -25,9 +26,13 @@ public class GetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSON(@JsonProperty("psd2registrationlogs") org.openapis.openapi.models.shared.Psd2RegistrationLog[] psd2registrationlogs) {
+        this.psd2registrationlogs = psd2registrationlogs;
+  }
 }

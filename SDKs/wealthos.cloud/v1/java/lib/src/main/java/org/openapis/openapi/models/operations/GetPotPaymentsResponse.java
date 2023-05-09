@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPotPaymentsResponse {
     
     public String contentType;
+
     public GetPotPaymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPotPaymentsResponse {
     
     
     public Integer statusCode;
+
     public GetPotPaymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPotPaymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPotPaymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPotPaymentsResponse {
      */
     
     public GetPotPayments200ApplicationJSON getPotPayments200ApplicationJSONObject;
+
     public GetPotPaymentsResponse withGetPotPayments200ApplicationJSONObject(GetPotPayments200ApplicationJSON getPotPayments200ApplicationJSONObject) {
         this.getPotPayments200ApplicationJSONObject = getPotPayments200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetPotPaymentsResponse {
      */
     
     public GetPotPayments401ApplicationJSON getPotPayments401ApplicationJSONObject;
+
     public GetPotPaymentsResponse withGetPotPayments401ApplicationJSONObject(GetPotPayments401ApplicationJSON getPotPayments401ApplicationJSONObject) {
         this.getPotPayments401ApplicationJSONObject = getPotPayments401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetPotPaymentsResponse {
      */
     
     public GetPotPayments403ApplicationJSON getPotPayments403ApplicationJSONObject;
+
     public GetPotPaymentsResponse withGetPotPayments403ApplicationJSONObject(GetPotPayments403ApplicationJSON getPotPayments403ApplicationJSONObject) {
         this.getPotPayments403ApplicationJSONObject = getPotPayments403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetPotPaymentsResponse {
      */
     
     public GetPotPayments404ApplicationJSON getPotPayments404ApplicationJSONObject;
+
     public GetPotPaymentsResponse withGetPotPayments404ApplicationJSONObject(GetPotPayments404ApplicationJSON getPotPayments404ApplicationJSONObject) {
         this.getPotPayments404ApplicationJSONObject = getPotPayments404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetPotPaymentsResponse {
      */
     
     public GetPotPayments429ApplicationJSON getPotPayments429ApplicationJSONObject;
+
     public GetPotPaymentsResponse withGetPotPayments429ApplicationJSONObject(GetPotPayments429ApplicationJSON getPotPayments429ApplicationJSONObject) {
         this.getPotPayments429ApplicationJSONObject = getPotPayments429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetPotPaymentsResponse {
      */
     
     public GetPotPayments500ApplicationJSON getPotPayments500ApplicationJSONObject;
+
     public GetPotPaymentsResponse withGetPotPayments500ApplicationJSONObject(GetPotPayments500ApplicationJSON getPotPayments500ApplicationJSONObject) {
         this.getPotPayments500ApplicationJSONObject = getPotPayments500ApplicationJSONObject;
         return this;
     }
     
+    public GetPotPaymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

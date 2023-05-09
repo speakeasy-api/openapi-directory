@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchResponse {
@@ -12,6 +13,7 @@ public class BatchResponse {
      */
     
     public BatchBatchResponseBodySchema batchResponseBodySchema;
+
     public BatchResponse withBatchResponseBodySchema(BatchBatchResponseBodySchema batchResponseBodySchema) {
         this.batchResponseBodySchema = batchResponseBodySchema;
         return this;
@@ -19,6 +21,7 @@ public class BatchResponse {
     
     
     public String contentType;
+
     public BatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchResponse {
      */
     
     public BatchErrorSchema errorSchema;
+
     public BatchResponse withErrorSchema(BatchErrorSchema errorSchema) {
         this.errorSchema = errorSchema;
         return this;
@@ -36,6 +40,7 @@ public class BatchResponse {
     
     
     public Integer statusCode;
+
     public BatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class BatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

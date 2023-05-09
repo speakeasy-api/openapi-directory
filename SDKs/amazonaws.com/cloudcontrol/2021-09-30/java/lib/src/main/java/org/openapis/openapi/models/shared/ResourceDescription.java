@@ -15,6 +15,7 @@ public class ResourceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public ResourceDescription withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -23,9 +24,11 @@ public class ResourceDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public String properties;
+
     public ResourceDescription withProperties(String properties) {
         this.properties = properties;
         return this;
     }
     
+    public ResourceDescription(){}
 }

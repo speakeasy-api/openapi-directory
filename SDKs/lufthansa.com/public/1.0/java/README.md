@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity;
 import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum;
 import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest;
 import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse;
+import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,24 +27,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest req = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest() {{
-                accept = "corrupti";
-                destination = "provident";
-                fromDate = "distinctio";
-                origin = "quibusdam";
-                productCode = "YNB";
-            }}            
+            CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest req = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest("corrupti", "provident", "distinctio", "quibusdam", CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum.YNB);            
 
-            CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse res = sdk.cargo.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req, new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity() {{
+            CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse res = sdk.cargo.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req, new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity("nulla") {{
                 auth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject.isPresent()) {
+            if (res.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -53,32 +48,32 @@ public class Application {
 ## Available Resources and Operations
 
 
-### cargo
+### [cargo](docs/cargo/README.md)
 
-* `cargoGetRouteFromDateProductCodeByOriginAndDestinationGet` - Retrieve all flights
-* `cargoShipmentTrackingByAWBPrefixAndAWBNumberGet` - Shipment Tracking
+* [cargoGetRouteFromDateProductCodeByOriginAndDestinationGet](docs/cargo/README.md#cargogetroutefromdateproductcodebyoriginanddestinationget) - Retrieve all flights
+* [cargoShipmentTrackingByAWBPrefixAndAWBNumberGet](docs/cargo/README.md#cargoshipmenttrackingbyawbprefixandawbnumberget) - Shipment Tracking
 
-### offers
+### [offers](docs/offers/README.md)
 
-* `offersLoungesByLocationGet` - Lounges
-* `offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet` - Seat Maps
+* [offersLoungesByLocationGet](docs/offers/README.md#offersloungesbylocationget) - Lounges
+* [offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet](docs/offers/README.md#offersseatmapsdestinationdatecabinclassbyflightnumberandoriginget) - Seat Maps
 
-### operations
+### [operations](docs/operations/README.md)
 
-* `operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet` - Flight Status at Arrival Airport
-* `operationsFlightstatusByFlightNumberAndDateGet` - Flight Status
-* `operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet` - Flight Status at Departure Airport
-* `operationsFlightstatusRouteDateByOriginAndDestinationGet` - Flight Status by Route
-* `operationsSchedulesFromDateTimeByOriginAndDestinationGet` - Flight Schedules
+* [operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet](docs/operations/README.md#operationsflightstatusarrivalsbyairportcodeandfromdatetimeget) - Flight Status at Arrival Airport
+* [operationsFlightstatusByFlightNumberAndDateGet](docs/operations/README.md#operationsflightstatusbyflightnumberanddateget) - Flight Status
+* [operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet](docs/operations/README.md#operationsflightstatusdeparturesbyairportcodeandfromdatetimeget) - Flight Status at Departure Airport
+* [operationsFlightstatusRouteDateByOriginAndDestinationGet](docs/operations/README.md#operationsflightstatusroutedatebyoriginanddestinationget) - Flight Status by Route
+* [operationsSchedulesFromDateTimeByOriginAndDestinationGet](docs/operations/README.md#operationsschedulesfromdatetimebyoriginanddestinationget) - Flight Schedules
 
-### referenceData
+### [referenceData](docs/referencedata/README.md)
 
-* `referencesAircraftByAircraftCodeGet` - Aircraft
-* `referencesAirlinesByAirlineCodeGet` - Airlines
-* `referencesAirportsByAirportCodeGet` - Airports
-* `referencesAirportsNearestByLatitudeAndLongitudeGet` - Nearest Airports
-* `referencesCitiesByCityCodeGet` - Cities
-* `referencesCountriesByCountryCodeGet` - Countries
+* [referencesAircraftByAircraftCodeGet](docs/referencedata/README.md#referencesaircraftbyaircraftcodeget) - Aircraft
+* [referencesAirlinesByAirlineCodeGet](docs/referencedata/README.md#referencesairlinesbyairlinecodeget) - Airlines
+* [referencesAirportsByAirportCodeGet](docs/referencedata/README.md#referencesairportsbyairportcodeget) - Airports
+* [referencesAirportsNearestByLatitudeAndLongitudeGet](docs/referencedata/README.md#referencesairportsnearestbylatitudeandlongitudeget) - Nearest Airports
+* [referencesCitiesByCityCodeGet](docs/referencedata/README.md#referencescitiesbycitycodeget) - Cities
+* [referencesCountriesByCountryCodeGet](docs/referencedata/README.md#referencescountriesbycountrycodeget) - Countries
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,9 +18,11 @@ public class UriAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public UriAttributeValue withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public UriAttributeValue(){}
 }

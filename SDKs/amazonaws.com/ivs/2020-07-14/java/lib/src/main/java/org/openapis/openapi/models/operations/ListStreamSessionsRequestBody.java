@@ -14,6 +14,7 @@ public class ListStreamSessionsRequestBody {
      */
     @JsonProperty("channelArn")
     public String channelArn;
+
     public ListStreamSessionsRequestBody withChannelArn(String channelArn) {
         this.channelArn = channelArn;
         return this;
@@ -25,6 +26,7 @@ public class ListStreamSessionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListStreamSessionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListStreamSessionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStreamSessionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStreamSessionsRequestBody(@JsonProperty("channelArn") String channelArn) {
+        this.channelArn = channelArn;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelDomainTransferToAnotherAwsAccountResponse {
@@ -12,6 +13,7 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelDomainTransferToAnotherAwsAccountResponse cancelDomainTransferToAnotherAwsAccountResponse;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withCancelDomainTransferToAnotherAwsAccountResponse(org.openapis.openapi.models.shared.CancelDomainTransferToAnotherAwsAccountResponse cancelDomainTransferToAnotherAwsAccountResponse) {
         this.cancelDomainTransferToAnotherAwsAccountResponse = cancelDomainTransferToAnotherAwsAccountResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
     
     
     public String contentType;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
      */
     
     public Object invalidInput;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
      */
     
     public Object operationLimitExceeded;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
     
     
     public Integer statusCode;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
      */
     
     public Object unsupportedTLD;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public CancelDomainTransferToAnotherAwsAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

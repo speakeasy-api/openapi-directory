@@ -15,6 +15,7 @@ public class PhysicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public PhysicalResourceId withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -23,6 +24,7 @@ public class PhysicalResourceId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public PhysicalResourceId withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -30,6 +32,7 @@ public class PhysicalResourceId {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public PhysicalResourceId withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -37,9 +40,14 @@ public class PhysicalResourceId {
     
     @JsonProperty("type")
     public PhysicalIdentifierTypeEnum type;
+
     public PhysicalResourceId withType(PhysicalIdentifierTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PhysicalResourceId(@JsonProperty("identifier") String identifier, @JsonProperty("type") PhysicalIdentifierTypeEnum type) {
+        this.identifier = identifier;
+        this.type = type;
+  }
 }

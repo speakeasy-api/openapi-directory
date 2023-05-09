@@ -15,6 +15,7 @@ public class FilteredLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public FilteredLogEvent withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -23,6 +24,7 @@ public class FilteredLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingestionTime")
     public Long ingestionTime;
+
     public FilteredLogEvent withIngestionTime(Long ingestionTime) {
         this.ingestionTime = ingestionTime;
         return this;
@@ -31,6 +33,7 @@ public class FilteredLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreamName")
     public String logStreamName;
+
     public FilteredLogEvent withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
@@ -39,6 +42,7 @@ public class FilteredLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FilteredLogEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -47,9 +51,11 @@ public class FilteredLogEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public FilteredLogEvent withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public FilteredLogEvent(){}
 }

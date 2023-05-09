@@ -20,6 +20,7 @@ public class CreateSavingsPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateSavingsPlanRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -30,6 +31,7 @@ public class CreateSavingsPlanRequestBody {
      */
     @JsonProperty("commitment")
     public String commitment;
+
     public CreateSavingsPlanRequestBody withCommitment(String commitment) {
         this.commitment = commitment;
         return this;
@@ -43,6 +45,7 @@ public class CreateSavingsPlanRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("purchaseTime")
     public OffsetDateTime purchaseTime;
+
     public CreateSavingsPlanRequestBody withPurchaseTime(OffsetDateTime purchaseTime) {
         this.purchaseTime = purchaseTime;
         return this;
@@ -53,6 +56,7 @@ public class CreateSavingsPlanRequestBody {
      */
     @JsonProperty("savingsPlanOfferingId")
     public String savingsPlanOfferingId;
+
     public CreateSavingsPlanRequestBody withSavingsPlanOfferingId(String savingsPlanOfferingId) {
         this.savingsPlanOfferingId = savingsPlanOfferingId;
         return this;
@@ -64,6 +68,7 @@ public class CreateSavingsPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSavingsPlanRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -75,9 +80,14 @@ public class CreateSavingsPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upfrontPaymentAmount")
     public String upfrontPaymentAmount;
+
     public CreateSavingsPlanRequestBody withUpfrontPaymentAmount(String upfrontPaymentAmount) {
         this.upfrontPaymentAmount = upfrontPaymentAmount;
         return this;
     }
     
+    public CreateSavingsPlanRequestBody(@JsonProperty("commitment") String commitment, @JsonProperty("savingsPlanOfferingId") String savingsPlanOfferingId) {
+        this.commitment = commitment;
+        this.savingsPlanOfferingId = savingsPlanOfferingId;
+  }
 }

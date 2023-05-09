@@ -15,6 +15,7 @@ public class SubnetMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPAddressType")
     public IPAddressTypeEnum ipAddressType;
+
     public SubnetMapping withIPAddressType(IPAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -22,9 +23,13 @@ public class SubnetMapping {
     
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public SubnetMapping withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public SubnetMapping(@JsonProperty("SubnetId") String subnetId) {
+        this.subnetId = subnetId;
+  }
 }

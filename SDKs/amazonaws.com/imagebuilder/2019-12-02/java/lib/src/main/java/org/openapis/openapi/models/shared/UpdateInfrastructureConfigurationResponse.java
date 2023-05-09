@@ -15,6 +15,7 @@ public class UpdateInfrastructureConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateInfrastructureConfigurationResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,6 +24,7 @@ public class UpdateInfrastructureConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureConfigurationArn")
     public String infrastructureConfigurationArn;
+
     public UpdateInfrastructureConfigurationResponse withInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
         this.infrastructureConfigurationArn = infrastructureConfigurationArn;
         return this;
@@ -31,9 +33,11 @@ public class UpdateInfrastructureConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public UpdateInfrastructureConfigurationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public UpdateInfrastructureConfigurationResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ParametersList {
     
     public String allowedValues;
+
     public ParametersList withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -19,6 +20,7 @@ public class ParametersList {
     
     
     public ChangeTypeEnum changeType;
+
     public ParametersList withChangeType(ChangeTypeEnum changeType) {
         this.changeType = changeType;
         return this;
@@ -26,6 +28,7 @@ public class ParametersList {
     
     
     public String dataType;
+
     public ParametersList withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -33,6 +36,7 @@ public class ParametersList {
     
     
     public String description;
+
     public ParametersList withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class ParametersList {
     
     
     public Boolean isModifiable;
+
     public ParametersList withIsModifiable(Boolean isModifiable) {
         this.isModifiable = isModifiable;
         return this;
@@ -47,6 +52,7 @@ public class ParametersList {
     
     
     public String minimumEngineVersion;
+
     public ParametersList withMinimumEngineVersion(String minimumEngineVersion) {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
@@ -54,6 +60,7 @@ public class ParametersList {
     
     
     public String parameterName;
+
     public ParametersList withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -61,6 +68,7 @@ public class ParametersList {
     
     
     public String parameterValue;
+
     public ParametersList withParameterValue(String parameterValue) {
         this.parameterValue = parameterValue;
         return this;
@@ -68,9 +76,11 @@ public class ParametersList {
     
     
     public String source;
+
     public ParametersList withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public ParametersList(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowExecutionCount {
     @JsonProperty("count")
     public Long count;
+
     public WorkflowExecutionCount withCount(Long count) {
         this.count = count;
         return this;
@@ -22,9 +23,13 @@ public class WorkflowExecutionCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncated")
     public Boolean truncated;
+
     public WorkflowExecutionCount withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public WorkflowExecutionCount(@JsonProperty("count") Long count) {
+        this.count = count;
+  }
 }

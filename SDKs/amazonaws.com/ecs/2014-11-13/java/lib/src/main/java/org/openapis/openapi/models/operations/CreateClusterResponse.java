@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateClusterResponse {
@@ -12,6 +13,7 @@ public class CreateClusterResponse {
      */
     
     public Object clientException;
+
     public CreateClusterResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateClusterResponse {
     
     
     public String contentType;
+
     public CreateClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateClusterResponse createClusterResponse;
+
     public CreateClusterResponse withCreateClusterResponse(org.openapis.openapi.models.shared.CreateClusterResponse createClusterResponse) {
         this.createClusterResponse = createClusterResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateClusterResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateClusterResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateClusterResponse {
      */
     
     public Object serverException;
+
     public CreateClusterResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class CreateClusterResponse {
     
     
     public Integer statusCode;
+
     public CreateClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,13 @@ public class UpdateIdentityProviderSettingsResponse {
      */
     @JsonProperty("IdentityProviderSummary")
     public IdentityProviderSummary identityProviderSummary;
+
     public UpdateIdentityProviderSettingsResponse withIdentityProviderSummary(IdentityProviderSummary identityProviderSummary) {
         this.identityProviderSummary = identityProviderSummary;
         return this;
     }
     
+    public UpdateIdentityProviderSettingsResponse(@JsonProperty("IdentityProviderSummary") IdentityProviderSummary identityProviderSummary) {
+        this.identityProviderSummary = identityProviderSummary;
+  }
 }

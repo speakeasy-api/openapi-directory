@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListResponse(contentType, httpRes.statusCode()) {{
             listFeaturesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,6 +116,96 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListFeaturesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListFeaturesResponse.class);
                 res.listFeaturesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a fleet.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsCreateResponse gkehubProjectsLocationsFleetsCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsCreateRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsCreateRequest.class, baseUrl, "/v1beta/{parent}/fleets", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fleetInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsCreateResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns all fleets within an organization or a project that the caller has access to.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsListResponse gkehubProjectsLocationsFleetsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsListRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsListRequest.class, baseUrl, "/v1beta/{parent}/fleets", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsFleetsListResponse(contentType, httpRes.statusCode()) {{
+            listFleetsResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListFleetsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListFleetsResponse.class);
+                res.listFleetsResponse = out;
             }
         }
 
@@ -154,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListResponse(contentType, httpRes.statusCode()) {{
             listMembershipBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesCreateResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesListResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesListResponse(contentType, httpRes.statusCode()) {{
             listNamespacesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsNamespacesRbacrolebindingsListResponse(contentType, httpRes.statusCode()) {{
             listRBACRoleBindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +782,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,11 +826,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -812,11 +870,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetResponse(contentType, httpRes.statusCode()) {{
             scope = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -858,11 +914,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListResponse(contentType, httpRes.statusCode()) {{
             listScopesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,11 +960,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesPatchResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesPatchResponse() {{
+        org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesPatchResponse res = new org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

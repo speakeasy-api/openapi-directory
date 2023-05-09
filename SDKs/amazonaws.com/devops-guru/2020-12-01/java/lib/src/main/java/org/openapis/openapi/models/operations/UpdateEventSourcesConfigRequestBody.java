@@ -15,9 +15,11 @@ public class UpdateEventSourcesConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSources")
     public UpdateEventSourcesConfigRequestBodyEventSources eventSources;
+
     public UpdateEventSourcesConfigRequestBody withEventSources(UpdateEventSourcesConfigRequestBodyEventSources eventSources) {
         this.eventSources = eventSources;
         return this;
     }
     
+    public UpdateEventSourcesConfigRequestBody(){}
 }

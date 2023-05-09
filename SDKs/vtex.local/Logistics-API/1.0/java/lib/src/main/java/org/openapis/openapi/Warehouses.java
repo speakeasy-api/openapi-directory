@@ -62,10 +62,8 @@ public class Warehouses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateWarehouseResponse res = new org.openapis.openapi.models.operations.ActivateWarehouseResponse() {{
+        org.openapis.openapi.models.operations.ActivateWarehouseResponse res = new org.openapis.openapi.models.operations.ActivateWarehouseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Warehouses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllWarehousesResponse res = new org.openapis.openapi.models.operations.AllWarehousesResponse() {{
+        org.openapis.openapi.models.operations.AllWarehousesResponse res = new org.openapis.openapi.models.operations.AllWarehousesResponse(contentType, httpRes.statusCode()) {{
             allWarehouses200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,10 +155,8 @@ public class Warehouses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUpdateWarehouseResponse res = new org.openapis.openapi.models.operations.CreateUpdateWarehouseResponse() {{
+        org.openapis.openapi.models.operations.CreateUpdateWarehouseResponse res = new org.openapis.openapi.models.operations.CreateUpdateWarehouseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,10 +195,8 @@ public class Warehouses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeactivateWarehouseResponse res = new org.openapis.openapi.models.operations.DeactivateWarehouseResponse() {{
+        org.openapis.openapi.models.operations.DeactivateWarehouseResponse res = new org.openapis.openapi.models.operations.DeactivateWarehouseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,10 +235,8 @@ public class Warehouses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveWarehouseResponse res = new org.openapis.openapi.models.operations.RemoveWarehouseResponse() {{
+        org.openapis.openapi.models.operations.RemoveWarehouseResponse res = new org.openapis.openapi.models.operations.RemoveWarehouseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +275,9 @@ public class Warehouses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WarehouseByIdResponse res = new org.openapis.openapi.models.operations.WarehouseByIdResponse() {{
+        org.openapis.openapi.models.operations.WarehouseByIdResponse res = new org.openapis.openapi.models.operations.WarehouseByIdResponse(contentType, httpRes.statusCode()) {{
             warehouseById200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

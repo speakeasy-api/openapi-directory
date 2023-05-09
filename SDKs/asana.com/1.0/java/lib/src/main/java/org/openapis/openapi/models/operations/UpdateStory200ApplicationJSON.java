@@ -15,9 +15,11 @@ public class UpdateStory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.StoryResponse data;
+
     public UpdateStory200ApplicationJSON withData(org.openapis.openapi.models.shared.StoryResponse data) {
         this.data = data;
         return this;
     }
     
+    public UpdateStory200ApplicationJSON(){}
 }

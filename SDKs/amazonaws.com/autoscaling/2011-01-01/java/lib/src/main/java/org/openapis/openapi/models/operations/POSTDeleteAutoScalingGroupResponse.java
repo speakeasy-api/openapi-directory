@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeleteAutoScalingGroupResponse {
     
     public byte[] body;
+
     public POSTDeleteAutoScalingGroupResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteAutoScalingGroupResponse {
     
     
     public String contentType;
+
     public POSTDeleteAutoScalingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteAutoScalingGroupResponse {
     
     
     public Integer statusCode;
+
     public POSTDeleteAutoScalingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDeleteAutoScalingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeleteAutoScalingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeleteAutoScalingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

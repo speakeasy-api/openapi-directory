@@ -23,6 +23,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateEmail")
     public String alternateEmail;
+
     public Customer withAlternateEmail(String alternateEmail) {
         this.alternateEmail = alternateEmail;
         return this;
@@ -36,6 +37,7 @@ public class Customer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("customerCreationTime")
     public OffsetDateTime customerCreationTime;
+
     public Customer withCustomerCreationTime(OffsetDateTime customerCreationTime) {
         this.customerCreationTime = customerCreationTime;
         return this;
@@ -47,6 +49,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerDomain")
     public String customerDomain;
+
     public Customer withCustomerDomain(String customerDomain) {
         this.customerDomain = customerDomain;
         return this;
@@ -58,6 +61,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Customer withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -69,6 +73,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Customer withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Customer withKind(String kind) {
         this.kind = kind;
         return this;
@@ -91,6 +97,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Customer withLanguage(String language) {
         this.language = language;
         return this;
@@ -102,6 +109,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public Customer withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -110,9 +118,11 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalAddress")
     public CustomerPostalAddress postalAddress;
+
     public Customer withPostalAddress(CustomerPostalAddress postalAddress) {
         this.postalAddress = postalAddress;
         return this;
     }
     
+    public Customer(){}
 }

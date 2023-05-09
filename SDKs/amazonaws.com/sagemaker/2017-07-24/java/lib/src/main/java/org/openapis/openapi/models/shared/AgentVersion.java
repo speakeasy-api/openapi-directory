@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AgentVersion {
     @JsonProperty("AgentCount")
     public Long agentCount;
+
     public AgentVersion withAgentCount(Long agentCount) {
         this.agentCount = agentCount;
         return this;
@@ -19,9 +20,14 @@ public class AgentVersion {
     
     @JsonProperty("Version")
     public String version;
+
     public AgentVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AgentVersion(@JsonProperty("AgentCount") Long agentCount, @JsonProperty("Version") String version) {
+        this.agentCount = agentCount;
+        this.version = version;
+  }
 }

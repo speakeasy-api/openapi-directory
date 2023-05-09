@@ -15,6 +15,7 @@ public class UrlMapValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadErrors")
     public String[] loadErrors;
+
     public UrlMapValidationResult withLoadErrors(String[] loadErrors) {
         this.loadErrors = loadErrors;
         return this;
@@ -26,6 +27,7 @@ public class UrlMapValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadSucceeded")
     public Boolean loadSucceeded;
+
     public UrlMapValidationResult withLoadSucceeded(Boolean loadSucceeded) {
         this.loadSucceeded = loadSucceeded;
         return this;
@@ -34,6 +36,7 @@ public class UrlMapValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testFailures")
     public TestFailure[] testFailures;
+
     public UrlMapValidationResult withTestFailures(TestFailure[] testFailures) {
         this.testFailures = testFailures;
         return this;
@@ -45,9 +48,11 @@ public class UrlMapValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testPassed")
     public Boolean testPassed;
+
     public UrlMapValidationResult withTestPassed(Boolean testPassed) {
         this.testPassed = testPassed;
         return this;
     }
     
+    public UrlMapValidationResult(){}
 }

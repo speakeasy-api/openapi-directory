@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RangedSocketAddress {
     @JsonProperty("name")
     public String name;
+
     public RangedSocketAddress withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class RangedSocketAddress {
     
     @JsonProperty("portRange")
     public IntegerRange portRange;
+
     public RangedSocketAddress withPortRange(IntegerRange portRange) {
         this.portRange = portRange;
         return this;
     }
     
+    public RangedSocketAddress(@JsonProperty("name") String name, @JsonProperty("portRange") IntegerRange portRange) {
+        this.name = name;
+        this.portRange = portRange;
+  }
 }

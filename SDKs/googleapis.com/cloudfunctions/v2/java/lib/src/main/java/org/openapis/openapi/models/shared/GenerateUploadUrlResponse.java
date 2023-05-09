@@ -18,6 +18,7 @@ public class GenerateUploadUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageSource")
     public StorageSource storageSource;
+
     public GenerateUploadUrlResponse withStorageSource(StorageSource storageSource) {
         this.storageSource = storageSource;
         return this;
@@ -29,9 +30,11 @@ public class GenerateUploadUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadUrl")
     public String uploadUrl;
+
     public GenerateUploadUrlResponse withUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
         return this;
     }
     
+    public GenerateUploadUrlResponse(){}
 }

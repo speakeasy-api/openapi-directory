@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DiskImage {
     
     public String description;
+
     public DiskImage withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DiskImage {
     
     
     public DiskImageDetail image;
+
     public DiskImage withImage(DiskImageDetail image) {
         this.image = image;
         return this;
@@ -26,9 +28,11 @@ public class DiskImage {
     
     
     public VolumeDetail volume;
+
     public DiskImage withVolume(VolumeDetail volume) {
         this.volume = volume;
         return this;
     }
     
+    public DiskImage(){}
 }

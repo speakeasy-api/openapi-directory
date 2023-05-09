@@ -15,9 +15,11 @@ public class UpdateTimeToLiveOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLiveSpecification")
     public TimeToLiveSpecification timeToLiveSpecification;
+
     public UpdateTimeToLiveOutput withTimeToLiveSpecification(TimeToLiveSpecification timeToLiveSpecification) {
         this.timeToLiveSpecification = timeToLiveSpecification;
         return this;
     }
     
+    public UpdateTimeToLiveOutput(){}
 }

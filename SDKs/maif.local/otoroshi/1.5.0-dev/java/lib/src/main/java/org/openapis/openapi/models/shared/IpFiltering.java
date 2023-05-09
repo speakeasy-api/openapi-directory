@@ -15,6 +15,7 @@ public class IpFiltering {
      */
     @JsonProperty("blacklist")
     public String[] blacklist;
+
     public IpFiltering withBlacklist(String[] blacklist) {
         this.blacklist = blacklist;
         return this;
@@ -25,9 +26,14 @@ public class IpFiltering {
      */
     @JsonProperty("whitelist")
     public String[] whitelist;
+
     public IpFiltering withWhitelist(String[] whitelist) {
         this.whitelist = whitelist;
         return this;
     }
     
+    public IpFiltering(@JsonProperty("blacklist") String[] blacklist, @JsonProperty("whitelist") String[] whitelist) {
+        this.blacklist = blacklist;
+        this.whitelist = whitelist;
+  }
 }

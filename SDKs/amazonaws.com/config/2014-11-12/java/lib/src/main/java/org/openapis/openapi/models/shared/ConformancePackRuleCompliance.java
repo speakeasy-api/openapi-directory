@@ -15,6 +15,7 @@ public class ConformancePackRuleCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ConformancePackComplianceTypeEnum complianceType;
+
     public ConformancePackRuleCompliance withComplianceType(ConformancePackComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class ConformancePackRuleCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public ConformancePackRuleCompliance withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -31,9 +33,11 @@ public class ConformancePackRuleCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Controls")
     public String[] controls;
+
     public ConformancePackRuleCompliance withControls(String[] controls) {
         this.controls = controls;
         return this;
     }
     
+    public ConformancePackRuleCompliance(){}
 }

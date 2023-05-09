@@ -15,6 +15,7 @@ public class KinesisStreamsOutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARNUpdate")
     public String resourceARNUpdate;
+
     public KinesisStreamsOutputUpdate withResourceARNUpdate(String resourceARNUpdate) {
         this.resourceARNUpdate = resourceARNUpdate;
         return this;
@@ -23,9 +24,11 @@ public class KinesisStreamsOutputUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARNUpdate")
     public String roleARNUpdate;
+
     public KinesisStreamsOutputUpdate withRoleARNUpdate(String roleARNUpdate) {
         this.roleARNUpdate = roleARNUpdate;
         return this;
     }
     
+    public KinesisStreamsOutputUpdate(){}
 }

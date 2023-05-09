@@ -15,9 +15,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsRepositoryCredentialsDetail
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CredentialsParameter")
     public String credentialsParameter;
+
     public AwsEcsTaskDefinitionContainerDefinitionsRepositoryCredentialsDetails withCredentialsParameter(String credentialsParameter) {
         this.credentialsParameter = credentialsParameter;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsRepositoryCredentialsDetails(){}
 }

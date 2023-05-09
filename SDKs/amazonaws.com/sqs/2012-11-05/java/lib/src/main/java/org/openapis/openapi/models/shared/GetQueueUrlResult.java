@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetQueueUrlResult {
     
     public String queueUrl;
+
     public GetQueueUrlResult withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public GetQueueUrlResult(){}
 }

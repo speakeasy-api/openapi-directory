@@ -56,11 +56,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessCategoriesBatchGetResponse res = new org.openapis.openapi.models.operations.MybusinessCategoriesBatchGetResponse() {{
+        org.openapis.openapi.models.operations.MybusinessCategoriesBatchGetResponse res = new org.openapis.openapi.models.operations.MybusinessCategoriesBatchGetResponse(contentType, httpRes.statusCode()) {{
             batchGetBusinessCategoriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessCategoriesListResponse res = new org.openapis.openapi.models.operations.MybusinessCategoriesListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessCategoriesListResponse res = new org.openapis.openapi.models.operations.MybusinessCategoriesListResponse(contentType, httpRes.statusCode()) {{
             listBusinessCategoriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

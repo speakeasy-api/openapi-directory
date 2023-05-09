@@ -15,6 +15,7 @@ public class EvaluateFeatureResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public EvaluateFeatureResponse withDetails(String details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class EvaluateFeatureResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public EvaluateFeatureResponse withReason(String reason) {
         this.reason = reason;
         return this;
@@ -31,6 +33,7 @@ public class EvaluateFeatureResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public VariableValue value;
+
     public EvaluateFeatureResponse withValue(VariableValue value) {
         this.value = value;
         return this;
@@ -39,9 +42,11 @@ public class EvaluateFeatureResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variation")
     public String variation;
+
     public EvaluateFeatureResponse withVariation(String variation) {
         this.variation = variation;
         return this;
     }
     
+    public EvaluateFeatureResponse(){}
 }

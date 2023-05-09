@@ -15,6 +15,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentId")
     public String attachmentId;
+
     public NetworkInterface withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -23,6 +24,7 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6Address")
     public String ipv6Address;
+
     public NetworkInterface withIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
@@ -31,9 +33,11 @@ public class NetworkInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpv4Address")
     public String privateIpv4Address;
+
     public NetworkInterface withPrivateIpv4Address(String privateIpv4Address) {
         this.privateIpv4Address = privateIpv4Address;
         return this;
     }
     
+    public NetworkInterface(){}
 }

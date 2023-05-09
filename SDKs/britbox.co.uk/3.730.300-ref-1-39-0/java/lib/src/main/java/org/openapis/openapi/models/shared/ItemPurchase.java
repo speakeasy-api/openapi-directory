@@ -12,6 +12,7 @@ public class ItemPurchase {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemPurchase withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class ItemPurchase {
      */
     @JsonProperty("ownership")
     public ItemPurchaseOwnershipEnum ownership;
+
     public ItemPurchase withOwnership(ItemPurchaseOwnershipEnum ownership) {
         this.ownership = ownership;
         return this;
@@ -32,6 +34,7 @@ public class ItemPurchase {
      */
     @JsonProperty("resolution")
     public ItemPurchaseResolutionEnum resolution;
+
     public ItemPurchase withResolution(ItemPurchaseResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -42,6 +45,7 @@ public class ItemPurchase {
      */
     @JsonProperty("title")
     public String title;
+
     public ItemPurchase withTitle(String title) {
         this.title = title;
         return this;
@@ -52,9 +56,17 @@ public class ItemPurchase {
      */
     @JsonProperty("type")
     public ItemPurchaseTypeEnum type;
+
     public ItemPurchase withType(ItemPurchaseTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ItemPurchase(@JsonProperty("id") String id, @JsonProperty("ownership") ItemPurchaseOwnershipEnum ownership, @JsonProperty("resolution") ItemPurchaseResolutionEnum resolution, @JsonProperty("title") String title, @JsonProperty("type") ItemPurchaseTypeEnum type) {
+        this.id = id;
+        this.ownership = ownership;
+        this.resolution = resolution;
+        this.title = title;
+        this.type = type;
+  }
 }

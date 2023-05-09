@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsertAccount403ApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public UpsertAccount403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class UpsertAccount403ApplicationJSON {
     
     @JsonProperty("meta")
     public UpsertAccount403ApplicationJSONMeta meta;
+
     public UpsertAccount403ApplicationJSON withMeta(UpsertAccount403ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public UpsertAccount403ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("meta") UpsertAccount403ApplicationJSONMeta meta) {
+        this.message = message;
+        this.meta = meta;
+  }
 }

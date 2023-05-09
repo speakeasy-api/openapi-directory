@@ -18,9 +18,11 @@ public class DuplicateSheetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public SheetProperties properties;
+
     public DuplicateSheetResponse withProperties(SheetProperties properties) {
         this.properties = properties;
         return this;
     }
     
+    public DuplicateSheetResponse(){}
 }

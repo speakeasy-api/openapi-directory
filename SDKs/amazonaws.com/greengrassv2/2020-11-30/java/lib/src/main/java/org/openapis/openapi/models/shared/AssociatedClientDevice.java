@@ -22,6 +22,7 @@ public class AssociatedClientDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("associationTimestamp")
     public OffsetDateTime associationTimestamp;
+
     public AssociatedClientDevice withAssociationTimestamp(OffsetDateTime associationTimestamp) {
         this.associationTimestamp = associationTimestamp;
         return this;
@@ -30,9 +31,11 @@ public class AssociatedClientDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public AssociatedClientDevice withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public AssociatedClientDevice(){}
 }

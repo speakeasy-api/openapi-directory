@@ -15,6 +15,7 @@ public class TimeSeriesReplacementsDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public TimeSeriesReplacementsDataSource withFormat(String format) {
         this.format = format;
         return this;
@@ -25,6 +26,7 @@ public class TimeSeriesReplacementsDataSource {
      */
     @JsonProperty("S3Config")
     public S3Config s3Config;
+
     public TimeSeriesReplacementsDataSource withS3Config(S3Config s3Config) {
         this.s3Config = s3Config;
         return this;
@@ -35,6 +37,7 @@ public class TimeSeriesReplacementsDataSource {
      */
     @JsonProperty("Schema")
     public Schema schema;
+
     public TimeSeriesReplacementsDataSource withSchema(Schema schema) {
         this.schema = schema;
         return this;
@@ -43,9 +46,14 @@ public class TimeSeriesReplacementsDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimestampFormat")
     public String timestampFormat;
+
     public TimeSeriesReplacementsDataSource withTimestampFormat(String timestampFormat) {
         this.timestampFormat = timestampFormat;
         return this;
     }
     
+    public TimeSeriesReplacementsDataSource(@JsonProperty("S3Config") S3Config s3Config, @JsonProperty("Schema") Schema schema) {
+        this.s3Config = s3Config;
+        this.schema = schema;
+  }
 }

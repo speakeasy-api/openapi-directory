@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopQueryResponse {
     
     public String contentType;
+
     public StopQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopQueryResponse {
      */
     
     public Object invalidParameterException;
+
     public StopQueryResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class StopQueryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopQueryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StopQueryResponse {
      */
     
     public Object serviceUnavailableException;
+
     public StopQueryResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class StopQueryResponse {
     
     
     public Integer statusCode;
+
     public StopQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.StopQueryResponse stopQueryResponse;
+
     public StopQueryResponse withStopQueryResponse(org.openapis.openapi.models.shared.StopQueryResponse stopQueryResponse) {
         this.stopQueryResponse = stopQueryResponse;
         return this;
     }
     
+    public StopQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

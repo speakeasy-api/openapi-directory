@@ -17,6 +17,7 @@ public class NotificationsGetAppEmailSettingsDefaultApplicationJSON {
      */
     @JsonProperty("code")
     public NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum code;
+
     public NotificationsGetAppEmailSettingsDefaultApplicationJSON withCode(NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class NotificationsGetAppEmailSettingsDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NotificationsGetAppEmailSettingsDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -38,9 +40,14 @@ public class NotificationsGetAppEmailSettingsDefaultApplicationJSON {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public NotificationsGetAppEmailSettingsDefaultApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public NotificationsGetAppEmailSettingsDefaultApplicationJSON(@JsonProperty("code") NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum code, @JsonProperty("request_id") String requestId) {
+        this.code = code;
+        this.requestId = requestId;
+  }
 }

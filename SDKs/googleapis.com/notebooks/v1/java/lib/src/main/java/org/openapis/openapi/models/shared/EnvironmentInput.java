@@ -18,6 +18,7 @@ public class EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public ContainerImage containerImage;
+
     public EnvironmentInput withContainerImage(ContainerImage containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -29,6 +30,7 @@ public class EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public EnvironmentInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postStartupScript")
     public String postStartupScript;
+
     public EnvironmentInput withPostStartupScript(String postStartupScript) {
         this.postStartupScript = postStartupScript;
         return this;
@@ -62,9 +66,11 @@ public class EnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmImage")
     public VmImage vmImage;
+
     public EnvironmentInput withVmImage(VmImage vmImage) {
         this.vmImage = vmImage;
         return this;
     }
     
+    public EnvironmentInput(){}
 }

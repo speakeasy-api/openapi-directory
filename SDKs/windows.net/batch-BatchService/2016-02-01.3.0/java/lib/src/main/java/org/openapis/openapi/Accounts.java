@@ -66,12 +66,10 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccountListNodeAgentSkusResponse res = new org.openapis.openapi.models.operations.AccountListNodeAgentSkusResponse() {{
+        org.openapis.openapi.models.operations.AccountListNodeAgentSkusResponse res = new org.openapis.openapi.models.operations.AccountListNodeAgentSkusResponse(contentType, httpRes.statusCode()) {{
             accountListNodeAgentSkusResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

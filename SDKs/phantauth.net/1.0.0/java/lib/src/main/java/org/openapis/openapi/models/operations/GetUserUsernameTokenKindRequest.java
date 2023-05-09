@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserUsernameTokenKindRequest {
@@ -12,6 +13,7 @@ public class GetUserUsernameTokenKindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=kind")
     public GetUserUsernameTokenKindKindEnum kind;
+
     public GetUserUsernameTokenKindRequest withKind(GetUserUsernameTokenKindKindEnum kind) {
         this.kind = kind;
         return this;
@@ -22,6 +24,7 @@ public class GetUserUsernameTokenKindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public GetUserUsernameTokenKindRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -32,9 +35,14 @@ public class GetUserUsernameTokenKindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetUserUsernameTokenKindRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUserUsernameTokenKindRequest(@JsonProperty("kind") GetUserUsernameTokenKindKindEnum kind, @JsonProperty("username") String username) {
+        this.kind = kind;
+        this.username = username;
+  }
 }

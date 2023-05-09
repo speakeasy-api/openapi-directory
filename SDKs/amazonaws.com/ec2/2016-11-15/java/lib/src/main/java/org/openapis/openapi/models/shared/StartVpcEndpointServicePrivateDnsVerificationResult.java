@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class StartVpcEndpointServicePrivateDnsVerificationResult {
     
     public Boolean returnValue;
+
     public StartVpcEndpointServicePrivateDnsVerificationResult withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public StartVpcEndpointServicePrivateDnsVerificationResult(){}
 }

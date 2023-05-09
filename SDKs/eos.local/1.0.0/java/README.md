@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ConnectRequestBody;
 import org.openapis.openapi.models.operations.ConnectResponse;
 
@@ -26,30 +25,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ConnectRequestBody req = new ConnectRequestBody() {{
-                endpoint = "corrupti";
-            }}            
+            ConnectRequestBody req = new ConnectRequestBody("corrupti");            
 
             ConnectResponse res = sdk.connect(req);
 
-            if (res.connect200ApplicationJSONString.isPresent()) {
+            if (res.connect200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `connect` - connect
-* `connections` - connections
-* `disconnect` - disconnect
-* `status` - status
+* [connect](docs/sdk/README.md#connect) - connect
+* [connections](docs/sdk/README.md#connections) - connections
+* [disconnect](docs/sdk/README.md#disconnect) - disconnect
+* [status](docs/sdk/README.md#status) - status
 <!-- End SDK Available Operations -->
 
 ### Maturity

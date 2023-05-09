@@ -15,6 +15,7 @@ public class ListExportsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportSummaries")
     public ExportSummary[] exportSummaries;
+
     public ListExportsOutput withExportSummaries(ExportSummary[] exportSummaries) {
         this.exportSummaries = exportSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListExportsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListExportsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExportsOutput(){}
 }

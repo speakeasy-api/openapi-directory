@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAssociatedStacksRequest {
     @JsonProperty("FleetName")
     public String fleetName;
+
     public ListAssociatedStacksRequest withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -19,9 +20,13 @@ public class ListAssociatedStacksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociatedStacksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociatedStacksRequest(@JsonProperty("FleetName") String fleetName) {
+        this.fleetName = fleetName;
+  }
 }

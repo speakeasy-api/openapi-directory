@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteIndexFieldRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DeleteIndexField&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and the name of the index field you want to delete.
@@ -15,6 +15,7 @@ public class DeleteIndexFieldRequest {
      */
     
     public String domainName;
+
     public DeleteIndexFieldRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class DeleteIndexFieldRequest {
     
     
     public String indexFieldName;
+
     public DeleteIndexFieldRequest withIndexFieldName(String indexFieldName) {
         this.indexFieldName = indexFieldName;
         return this;
     }
     
+    public DeleteIndexFieldRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("IndexFieldName") String indexFieldName) {
+        this.domainName = domainName;
+        this.indexFieldName = indexFieldName;
+  }
 }

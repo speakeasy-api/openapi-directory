@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSubscribersForNotificationResponse {
@@ -12,6 +13,7 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeSubscribersForNotificationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSubscribersForNotificationResponse {
     
     
     public String contentType;
+
     public DescribeSubscribersForNotificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSubscribersForNotificationResponse describeSubscribersForNotificationResponse;
+
     public DescribeSubscribersForNotificationResponse withDescribeSubscribersForNotificationResponse(org.openapis.openapi.models.shared.DescribeSubscribersForNotificationResponse describeSubscribersForNotificationResponse) {
         this.describeSubscribersForNotificationResponse = describeSubscribersForNotificationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public Object expiredNextTokenException;
+
     public DescribeSubscribersForNotificationResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeSubscribersForNotificationResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeSubscribersForNotificationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeSubscribersForNotificationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public Object notFoundException;
+
     public DescribeSubscribersForNotificationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeSubscribersForNotificationResponse {
     
     
     public Integer statusCode;
+
     public DescribeSubscribersForNotificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeSubscribersForNotificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSubscribersForNotificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeSubscribersForNotificationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeSubscribersForNotificationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeSubscribersForNotificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

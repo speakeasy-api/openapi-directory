@@ -15,6 +15,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public Cluster withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -23,6 +24,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterEndpoints")
     public ClusterEndpoint[] clusterEndpoints;
+
     public Cluster withClusterEndpoints(ClusterEndpoint[] clusterEndpoints) {
         this.clusterEndpoints = clusterEndpoints;
         return this;
@@ -31,6 +33,7 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Cluster withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class Cluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public Cluster withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Cluster(){}
 }

@@ -15,9 +15,11 @@ public class ListReadSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListReadSetsRequestBodyFilter filter;
+
     public ListReadSetsRequestBody withFilter(ListReadSetsRequestBodyFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public ListReadSetsRequestBody(){}
 }

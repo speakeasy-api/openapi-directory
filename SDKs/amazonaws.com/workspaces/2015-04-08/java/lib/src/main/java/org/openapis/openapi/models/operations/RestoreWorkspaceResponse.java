@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreWorkspaceResponse {
@@ -12,6 +13,7 @@ public class RestoreWorkspaceResponse {
      */
     
     public Object accessDeniedException;
+
     public RestoreWorkspaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RestoreWorkspaceResponse {
     
     
     public String contentType;
+
     public RestoreWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RestoreWorkspaceResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public RestoreWorkspaceResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class RestoreWorkspaceResponse {
      */
     
     public Object operationNotSupportedException;
+
     public RestoreWorkspaceResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreWorkspaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestoreWorkspaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RestoreWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> restoreWorkspaceResult;
+
     public RestoreWorkspaceResponse withRestoreWorkspaceResult(java.util.Map<String, Object> restoreWorkspaceResult) {
         this.restoreWorkspaceResult = restoreWorkspaceResult;
         return this;
@@ -66,6 +73,7 @@ public class RestoreWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public RestoreWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RestoreWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RestoreWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

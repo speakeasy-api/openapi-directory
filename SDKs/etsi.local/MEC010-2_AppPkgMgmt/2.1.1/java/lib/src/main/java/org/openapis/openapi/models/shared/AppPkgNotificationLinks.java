@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppPkgNotificationLinks {
     @JsonProperty("subscription")
     public LinkType subscription;
+
     public AppPkgNotificationLinks withSubscription(LinkType subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public AppPkgNotificationLinks(@JsonProperty("subscription") LinkType subscription) {
+        this.subscription = subscription;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWatchlistResponse {
@@ -12,6 +13,7 @@ public class CreateWatchlistResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateWatchlistResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateWatchlistResponse {
      */
     
     public Object conflictException;
+
     public CreateWatchlistResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateWatchlistResponse {
     
     
     public String contentType;
+
     public CreateWatchlistResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateWatchlistResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWatchlistResponse createWatchlistResponse;
+
     public CreateWatchlistResponse withCreateWatchlistResponse(org.openapis.openapi.models.shared.CreateWatchlistResponse createWatchlistResponse) {
         this.createWatchlistResponse = createWatchlistResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateWatchlistResponse {
      */
     
     public Object internalServerException;
+
     public CreateWatchlistResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWatchlistResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWatchlistResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateWatchlistResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateWatchlistResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateWatchlistResponse {
     
     
     public Integer statusCode;
+
     public CreateWatchlistResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateWatchlistResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWatchlistResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateWatchlistResponse {
      */
     
     public Object throttlingException;
+
     public CreateWatchlistResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateWatchlistResponse {
      */
     
     public Object validationException;
+
     public CreateWatchlistResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateWatchlistResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

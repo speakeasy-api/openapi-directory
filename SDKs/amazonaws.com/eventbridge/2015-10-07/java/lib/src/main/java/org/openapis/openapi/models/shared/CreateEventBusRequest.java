@@ -12,6 +12,7 @@ public class CreateEventBusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceName")
     public String eventSourceName;
+
     public CreateEventBusRequest withEventSourceName(String eventSourceName) {
         this.eventSourceName = eventSourceName;
         return this;
@@ -19,6 +20,7 @@ public class CreateEventBusRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateEventBusRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,9 +29,13 @@ public class CreateEventBusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEventBusRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEventBusRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

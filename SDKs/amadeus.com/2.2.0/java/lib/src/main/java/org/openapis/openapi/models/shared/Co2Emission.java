@@ -15,6 +15,7 @@ public class Co2Emission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cabin")
     public TravelClassEnum cabin;
+
     public Co2Emission withCabin(TravelClassEnum cabin) {
         this.cabin = cabin;
         return this;
@@ -26,6 +27,7 @@ public class Co2Emission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Long weight;
+
     public Co2Emission withWeight(Long weight) {
         this.weight = weight;
         return this;
@@ -37,9 +39,11 @@ public class Co2Emission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightUnit")
     public String weightUnit;
+
     public Co2Emission withWeightUnit(String weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
     
+    public Co2Emission(){}
 }

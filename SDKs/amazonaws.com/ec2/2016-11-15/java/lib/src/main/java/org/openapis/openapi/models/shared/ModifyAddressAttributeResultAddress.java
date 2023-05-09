@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyAddressAttributeResultAddress {
     
     public String allocationId;
+
     public ModifyAddressAttributeResultAddress withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class ModifyAddressAttributeResultAddress {
     
     
     public String ptrRecord;
+
     public ModifyAddressAttributeResultAddress withPtrRecord(String ptrRecord) {
         this.ptrRecord = ptrRecord;
         return this;
@@ -26,6 +28,7 @@ public class ModifyAddressAttributeResultAddress {
     
     
     public ModifyAddressAttributeResultAddressPtrRecordUpdate ptrRecordUpdate;
+
     public ModifyAddressAttributeResultAddress withPtrRecordUpdate(ModifyAddressAttributeResultAddressPtrRecordUpdate ptrRecordUpdate) {
         this.ptrRecordUpdate = ptrRecordUpdate;
         return this;
@@ -33,9 +36,11 @@ public class ModifyAddressAttributeResultAddress {
     
     
     public String publicIp;
+
     public ModifyAddressAttributeResultAddress withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public ModifyAddressAttributeResultAddress(){}
 }

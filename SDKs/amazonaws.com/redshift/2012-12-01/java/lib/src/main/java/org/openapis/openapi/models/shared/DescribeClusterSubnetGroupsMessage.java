@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClusterSubnetGroupsMessage {
     
     public String clusterSubnetGroupName;
+
     public DescribeClusterSubnetGroupsMessage withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClusterSubnetGroupsMessage {
     
     
     public String marker;
+
     public DescribeClusterSubnetGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClusterSubnetGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeClusterSubnetGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClusterSubnetGroupsMessage {
     
     
     public String[] tagKeys;
+
     public DescribeClusterSubnetGroupsMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -40,9 +44,11 @@ public class DescribeClusterSubnetGroupsMessage {
     
     
     public String[] tagValues;
+
     public DescribeClusterSubnetGroupsMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeClusterSubnetGroupsMessage(){}
 }

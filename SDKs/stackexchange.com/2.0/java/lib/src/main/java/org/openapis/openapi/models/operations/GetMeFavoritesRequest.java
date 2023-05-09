@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeFavoritesRequest {
@@ -13,6 +14,7 @@ public class GetMeFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetMeFavoritesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetMeFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetMeFavoritesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetMeFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetMeFavoritesRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -77,6 +81,7 @@ public class GetMeFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetMeFavoritesRequest withMax(String max) {
         this.max = max;
         return this;
@@ -91,6 +96,7 @@ public class GetMeFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetMeFavoritesRequest withMin(String min) {
         this.min = min;
         return this;
@@ -98,6 +104,7 @@ public class GetMeFavoritesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetMeFavoritesOrderEnum order;
+
     public GetMeFavoritesRequest withOrder(GetMeFavoritesOrderEnum order) {
         this.order = order;
         return this;
@@ -105,6 +112,7 @@ public class GetMeFavoritesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetMeFavoritesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -112,6 +120,7 @@ public class GetMeFavoritesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetMeFavoritesRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -123,6 +132,7 @@ public class GetMeFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetMeFavoritesRequest withSite(String site) {
         this.site = site;
         return this;
@@ -130,6 +140,7 @@ public class GetMeFavoritesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetMeFavoritesSortEnum sort;
+
     public GetMeFavoritesRequest withSort(GetMeFavoritesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -140,9 +151,13 @@ public class GetMeFavoritesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetMeFavoritesRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetMeFavoritesRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

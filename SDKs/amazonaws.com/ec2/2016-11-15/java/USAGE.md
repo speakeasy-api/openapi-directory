@@ -3,48 +3,48 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum;
-import org.openapis.openapi.models.operations.GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum;
 import org.openapis.openapi.models.operations.GETAcceptTransitGatewayMulticastDomainAssociationsRequest;
 import org.openapis.openapi.models.operations.GETAcceptTransitGatewayMulticastDomainAssociationsResponse;
+import org.openapis.openapi.models.operations.GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GETAcceptTransitGatewayMulticastDomainAssociationsRequest req = new GETAcceptTransitGatewayMulticastDomainAssociationsRequest() {{
-                action = "AcceptTransitGatewayMulticastDomainAssociations";
+            GETAcceptTransitGatewayMulticastDomainAssociationsRequest req = new GETAcceptTransitGatewayMulticastDomainAssociationsRequest(GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum.ACCEPT_TRANSIT_GATEWAY_MULTICAST_DOMAIN_ASSOCIATIONS, GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum.TWO_THOUSAND_AND_SIXTEEN1115) {{
                 dryRun = false;
                 subnetIds = new String[]{{
-                    add("provident"),
                     add("distinctio"),
                     add("quibusdam"),
+                    add("unde"),
                 }};
-                transitGatewayAttachmentId = "unde";
-                transitGatewayMulticastDomainId = "nulla";
-                version = "2016-11-15";
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "illum";
-                xAmzCredential = "vel";
-                xAmzDate = "error";
-                xAmzSecurityToken = "deserunt";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "iure";
-            }}            
+                transitGatewayAttachmentId = "nulla";
+                transitGatewayMulticastDomainId = "corrupti";
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+            }};            
 
             GETAcceptTransitGatewayMulticastDomainAssociationsResponse res = sdk.getAcceptTransitGatewayMulticastDomainAssociations(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

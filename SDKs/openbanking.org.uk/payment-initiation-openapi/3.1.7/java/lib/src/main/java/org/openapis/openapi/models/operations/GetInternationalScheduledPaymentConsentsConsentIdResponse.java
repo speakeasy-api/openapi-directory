@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInternationalScheduledPaymentConsentsConsentIdResponse {
     
     public byte[] body;
+
     public GetInternationalScheduledPaymentConsentsConsentIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetInternationalScheduledPaymentConsentsConsentIdResponse {
     
     
     public String contentType;
+
     public GetInternationalScheduledPaymentConsentsConsentIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetInternationalScheduledPaymentConsentsConsentIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetInternationalScheduledPaymentConsentsConsentIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetInternationalScheduledPaymentConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public GetInternationalScheduledPaymentConsentsConsentIdResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class GetInternationalScheduledPaymentConsentsConsentIdResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteInternationalScheduledConsentResponse6 obWriteInternationalScheduledConsentResponse6;
+
     public GetInternationalScheduledPaymentConsentsConsentIdResponse withOBWriteInternationalScheduledConsentResponse6(org.openapis.openapi.models.shared.OBWriteInternationalScheduledConsentResponse6 obWriteInternationalScheduledConsentResponse6) {
         this.obWriteInternationalScheduledConsentResponse6 = obWriteInternationalScheduledConsentResponse6;
         return this;
@@ -50,6 +56,7 @@ public class GetInternationalScheduledPaymentConsentsConsentIdResponse {
     
     
     public Integer statusCode;
+
     public GetInternationalScheduledPaymentConsentsConsentIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class GetInternationalScheduledPaymentConsentsConsentIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInternationalScheduledPaymentConsentsConsentIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetInternationalScheduledPaymentConsentsConsentIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

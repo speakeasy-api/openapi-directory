@@ -12,9 +12,11 @@ public class DestinyHistoricalStatsDestinyActivityHistoryResults {
      */
     
     public DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup[] activities;
+
     public DestinyHistoricalStatsDestinyActivityHistoryResults withActivities(DestinyHistoricalStatsDestinyHistoricalStatsPeriodGroup[] activities) {
         this.activities = activities;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyActivityHistoryResults(){}
 }

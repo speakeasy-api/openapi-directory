@@ -20,6 +20,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public LoadBalancer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOptions")
     public java.util.Map<String, String> configurationOptions;
+
     public LoadBalancer withConfigurationOptions(java.util.Map<String, String> configurationOptions) {
         this.configurationOptions = configurationOptions;
         return this;
@@ -38,6 +40,7 @@ public class LoadBalancer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public LoadBalancer withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsName")
     public String dnsName;
+
     public LoadBalancer withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -54,6 +58,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckPath")
     public String healthCheckPath;
+
     public LoadBalancer withHealthCheckPath(String healthCheckPath) {
         this.healthCheckPath = healthCheckPath;
         return this;
@@ -62,6 +67,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpsRedirectionEnabled")
     public Boolean httpsRedirectionEnabled;
+
     public LoadBalancer withHttpsRedirectionEnabled(Boolean httpsRedirectionEnabled) {
         this.httpsRedirectionEnabled = httpsRedirectionEnabled;
         return this;
@@ -70,6 +76,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceHealthSummary")
     public InstanceHealthSummary[] instanceHealthSummary;
+
     public LoadBalancer withInstanceHealthSummary(InstanceHealthSummary[] instanceHealthSummary) {
         this.instanceHealthSummary = instanceHealthSummary;
         return this;
@@ -78,6 +85,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instancePort")
     public Long instancePort;
+
     public LoadBalancer withInstancePort(Long instancePort) {
         this.instancePort = instancePort;
         return this;
@@ -86,6 +94,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public LoadBalancer withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -94,6 +103,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public LoadBalancer withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -102,6 +112,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LoadBalancer withName(String name) {
         this.name = name;
         return this;
@@ -110,6 +121,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public LoadBalancerProtocolEnum protocol;
+
     public LoadBalancer withProtocol(LoadBalancerProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -118,6 +130,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicPorts")
     public Long[] publicPorts;
+
     public LoadBalancer withPublicPorts(Long[] publicPorts) {
         this.publicPorts = publicPorts;
         return this;
@@ -126,6 +139,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public LoadBalancer withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -134,6 +148,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public LoadBalancerStateEnum state;
+
     public LoadBalancer withState(LoadBalancerStateEnum state) {
         this.state = state;
         return this;
@@ -142,6 +157,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public LoadBalancer withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
@@ -150,6 +166,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public LoadBalancer withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -158,6 +175,7 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsCertificateSummaries")
     public LoadBalancerTlsCertificateSummary[] tlsCertificateSummaries;
+
     public LoadBalancer withTlsCertificateSummaries(LoadBalancerTlsCertificateSummary[] tlsCertificateSummaries) {
         this.tlsCertificateSummaries = tlsCertificateSummaries;
         return this;
@@ -166,9 +184,11 @@ public class LoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsPolicyName")
     public String tlsPolicyName;
+
     public LoadBalancer withTlsPolicyName(String tlsPolicyName) {
         this.tlsPolicyName = tlsPolicyName;
         return this;
     }
     
+    public LoadBalancer(){}
 }

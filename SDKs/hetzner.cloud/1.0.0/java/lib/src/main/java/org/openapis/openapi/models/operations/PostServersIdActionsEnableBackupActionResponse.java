@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostServersIdActionsEnableBackupActionResponse {
     @JsonProperty("action")
     public PostServersIdActionsEnableBackupActionResponseAction action;
+
     public PostServersIdActionsEnableBackupActionResponse withAction(PostServersIdActionsEnableBackupActionResponseAction action) {
         this.action = action;
         return this;
     }
     
+    public PostServersIdActionsEnableBackupActionResponse(@JsonProperty("action") PostServersIdActionsEnableBackupActionResponseAction action) {
+        this.action = action;
+  }
 }

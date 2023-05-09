@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDatabaseResponse {
     
     public String contentType;
+
     public GetDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,8 +21,20 @@ public class GetDatabaseResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetDatabaseResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceException
+     */
+    
+    public Object federationSourceException;
+
+    public GetDatabaseResponse withFederationSourceException(Object federationSourceException) {
+        this.federationSourceException = federationSourceException;
         return this;
     }
     
@@ -29,6 +43,7 @@ public class GetDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDatabaseResponse getDatabaseResponse;
+
     public GetDatabaseResponse withGetDatabaseResponse(org.openapis.openapi.models.shared.GetDatabaseResponse getDatabaseResponse) {
         this.getDatabaseResponse = getDatabaseResponse;
         return this;
@@ -39,6 +54,7 @@ public class GetDatabaseResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetDatabaseResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +65,7 @@ public class GetDatabaseResponse {
      */
     
     public Object internalServiceException;
+
     public GetDatabaseResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +76,7 @@ public class GetDatabaseResponse {
      */
     
     public Object invalidInputException;
+
     public GetDatabaseResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +87,7 @@ public class GetDatabaseResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetDatabaseResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +95,7 @@ public class GetDatabaseResponse {
     
     
     public Integer statusCode;
+
     public GetDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +103,14 @@ public class GetDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

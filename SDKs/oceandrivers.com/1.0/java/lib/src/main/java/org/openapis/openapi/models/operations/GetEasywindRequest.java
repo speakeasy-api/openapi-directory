@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEasywindRequest {
@@ -12,6 +13,7 @@ public class GetEasywindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=easywindId")
     public String easywindId;
+
     public GetEasywindRequest withEasywindId(String easywindId) {
         this.easywindId = easywindId;
         return this;
@@ -22,9 +24,14 @@ public class GetEasywindRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public String period;
+
     public GetEasywindRequest withPeriod(String period) {
         this.period = period;
         return this;
     }
     
+    public GetEasywindRequest(@JsonProperty("easywindId") String easywindId, @JsonProperty("period") String period) {
+        this.easywindId = easywindId;
+        this.period = period;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEnvironmentMembershipResponse {
@@ -12,6 +13,7 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public Object badRequestException;
+
     public CreateEnvironmentMembershipResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public Object conflictException;
+
     public CreateEnvironmentMembershipResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEnvironmentMembershipResponse {
     
     
     public String contentType;
+
     public CreateEnvironmentMembershipResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEnvironmentMembershipResult createEnvironmentMembershipResult;
+
     public CreateEnvironmentMembershipResponse withCreateEnvironmentMembershipResult(org.openapis.openapi.models.shared.CreateEnvironmentMembershipResult createEnvironmentMembershipResult) {
         this.createEnvironmentMembershipResult = createEnvironmentMembershipResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public Object forbiddenException;
+
     public CreateEnvironmentMembershipResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateEnvironmentMembershipResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public Object limitExceededException;
+
     public CreateEnvironmentMembershipResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public Object notFoundException;
+
     public CreateEnvironmentMembershipResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateEnvironmentMembershipResponse {
     
     
     public Integer statusCode;
+
     public CreateEnvironmentMembershipResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateEnvironmentMembershipResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEnvironmentMembershipResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateEnvironmentMembershipResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateEnvironmentMembershipResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateEnvironmentMembershipResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

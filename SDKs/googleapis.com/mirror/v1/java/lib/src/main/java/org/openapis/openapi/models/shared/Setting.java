@@ -17,6 +17,7 @@ public class Setting {
      */
     
     public String id;
+
     public Setting withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +28,7 @@ public class Setting {
      */
     
     public String kind;
+
     public Setting withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,9 +39,11 @@ public class Setting {
      */
     
     public String value;
+
     public Setting withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Setting(){}
 }

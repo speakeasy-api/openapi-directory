@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteContinuousDocumentRequest {
@@ -12,6 +13,7 @@ public class CompleteContinuousDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public CompleteContinuousDocumentRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
@@ -22,9 +24,14 @@ public class CompleteContinuousDocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public CompleteContinuousDocumentRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public CompleteContinuousDocumentRequest(@JsonProperty("documentId") Long documentId, @JsonProperty("id") Long id) {
+        this.documentId = documentId;
+        this.id = id;
+  }
 }

@@ -127,4 +127,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AutoscaleInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListReservationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchAllAssignmentsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchAssignmentsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

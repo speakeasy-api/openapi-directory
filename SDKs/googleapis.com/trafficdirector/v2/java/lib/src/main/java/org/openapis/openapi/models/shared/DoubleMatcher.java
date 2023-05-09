@@ -18,6 +18,7 @@ public class DoubleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exact")
     public Double exact;
+
     public DoubleMatcher withExact(Double exact) {
         this.exact = exact;
         return this;
@@ -29,9 +30,11 @@ public class DoubleMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public DoubleRange range;
+
     public DoubleMatcher withRange(DoubleRange range) {
         this.range = range;
         return this;
     }
     
+    public DoubleMatcher(){}
 }

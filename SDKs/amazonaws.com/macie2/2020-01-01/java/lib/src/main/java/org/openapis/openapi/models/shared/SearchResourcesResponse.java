@@ -15,6 +15,7 @@ public class SearchResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingResources")
     public MatchingResource[] matchingResources;
+
     public SearchResourcesResponse withMatchingResources(MatchingResource[] matchingResources) {
         this.matchingResources = matchingResources;
         return this;
@@ -23,9 +24,11 @@ public class SearchResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchResourcesResponse(){}
 }

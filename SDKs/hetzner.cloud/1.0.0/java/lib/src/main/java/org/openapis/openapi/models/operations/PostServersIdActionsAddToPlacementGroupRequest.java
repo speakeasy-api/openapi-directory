@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsAddToPlacementGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostServersIdActionsAddToPlacementGroupAddToPlacementGroupRequest requestBody;
+
     public PostServersIdActionsAddToPlacementGroupRequest withRequestBody(PostServersIdActionsAddToPlacementGroupAddToPlacementGroupRequest requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PostServersIdActionsAddToPlacementGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostServersIdActionsAddToPlacementGroupRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostServersIdActionsAddToPlacementGroupRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

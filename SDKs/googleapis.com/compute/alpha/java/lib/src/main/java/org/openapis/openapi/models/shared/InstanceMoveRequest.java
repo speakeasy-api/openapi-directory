@@ -15,6 +15,7 @@ public class InstanceMoveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationZone")
     public String destinationZone;
+
     public InstanceMoveRequest withDestinationZone(String destinationZone) {
         this.destinationZone = destinationZone;
         return this;
@@ -26,9 +27,11 @@ public class InstanceMoveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstance")
     public String targetInstance;
+
     public InstanceMoveRequest withTargetInstance(String targetInstance) {
         this.targetInstance = targetInstance;
         return this;
     }
     
+    public InstanceMoveRequest(){}
 }

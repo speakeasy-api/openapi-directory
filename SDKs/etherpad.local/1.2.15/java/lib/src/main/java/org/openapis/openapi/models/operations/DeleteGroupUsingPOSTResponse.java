@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGroupUsingPOSTResponse {
     
     public String contentType;
+
     public DeleteGroupUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteGroupUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public DeleteGroupUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteGroupUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGroupUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteGroupUsingPOSTResponse {
      */
     
     public DeleteGroupUsingPOST200ApplicationJSON deleteGroupUsingPOST200ApplicationJSONObject;
+
     public DeleteGroupUsingPOSTResponse withDeleteGroupUsingPOST200ApplicationJSONObject(DeleteGroupUsingPOST200ApplicationJSON deleteGroupUsingPOST200ApplicationJSONObject) {
         this.deleteGroupUsingPOST200ApplicationJSONObject = deleteGroupUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteGroupUsingPOSTResponse {
      */
     
     public DeleteGroupUsingPOST400ApplicationJSON deleteGroupUsingPOST400ApplicationJSONObject;
+
     public DeleteGroupUsingPOSTResponse withDeleteGroupUsingPOST400ApplicationJSONObject(DeleteGroupUsingPOST400ApplicationJSON deleteGroupUsingPOST400ApplicationJSONObject) {
         this.deleteGroupUsingPOST400ApplicationJSONObject = deleteGroupUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteGroupUsingPOSTResponse {
      */
     
     public DeleteGroupUsingPOST401ApplicationJSON deleteGroupUsingPOST401ApplicationJSONObject;
+
     public DeleteGroupUsingPOSTResponse withDeleteGroupUsingPOST401ApplicationJSONObject(DeleteGroupUsingPOST401ApplicationJSON deleteGroupUsingPOST401ApplicationJSONObject) {
         this.deleteGroupUsingPOST401ApplicationJSONObject = deleteGroupUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class DeleteGroupUsingPOSTResponse {
      */
     
     public DeleteGroupUsingPOST500ApplicationJSON deleteGroupUsingPOST500ApplicationJSONObject;
+
     public DeleteGroupUsingPOSTResponse withDeleteGroupUsingPOST500ApplicationJSONObject(DeleteGroupUsingPOST500ApplicationJSON deleteGroupUsingPOST500ApplicationJSONObject) {
         this.deleteGroupUsingPOST500ApplicationJSONObject = deleteGroupUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public DeleteGroupUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

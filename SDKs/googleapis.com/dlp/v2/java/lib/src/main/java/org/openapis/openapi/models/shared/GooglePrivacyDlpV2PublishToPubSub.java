@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2PublishToPubSub {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public GooglePrivacyDlpV2PublishToPubSub withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public GooglePrivacyDlpV2PublishToPubSub(){}
 }

@@ -20,6 +20,7 @@ public class ReplicationStatusType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ReplicationStatusType withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -30,6 +31,7 @@ public class ReplicationStatusType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessedDate")
     public OffsetDateTime lastAccessedDate;
+
     public ReplicationStatusType withLastAccessedDate(OffsetDateTime lastAccessedDate) {
         this.lastAccessedDate = lastAccessedDate;
         return this;
@@ -38,6 +40,7 @@ public class ReplicationStatusType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ReplicationStatusType withRegion(String region) {
         this.region = region;
         return this;
@@ -46,6 +49,7 @@ public class ReplicationStatusType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusTypeEnum status;
+
     public ReplicationStatusType withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -54,9 +58,11 @@ public class ReplicationStatusType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ReplicationStatusType withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ReplicationStatusType(){}
 }

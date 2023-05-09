@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity;
 import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest;
 import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse;
+import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingInput;
 import org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingPath;
@@ -18,68 +17,82 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DataplexProjectsLocationsDataAttributeBindingsCreateRequest req = new DataplexProjectsLocationsDataAttributeBindingsCreateRequest() {{
-                dollarXgafv = "2";
+            DataplexProjectsLocationsDataAttributeBindingsCreateRequest req = new DataplexProjectsLocationsDataAttributeBindingsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDataplexV1DataAttributeBindingInput = new GoogleCloudDataplexV1DataAttributeBindingInput() {{
                     attributes = new String[]{{
-                        add("distinctio"),
                         add("quibusdam"),
                         add("unde"),
+                        add("nulla"),
                     }};
-                    description = "nulla";
-                    displayName = "corrupti";
-                    etag = "illum";
+                    description = "corrupti";
+                    displayName = "illum";
+                    etag = "vel";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("error", "deserunt");
-                        put("suscipit", "iure");
+                        put("deserunt", "suscipit");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
                     paths = new org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingPath[]{{
                         add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
                             attributes = new String[]{{
-                                add("ipsa"),
-                                add("delectus"),
-                                add("tempora"),
                                 add("suscipit"),
+                                add("molestiae"),
                             }};
-                            name = "molestiae";
+                            name = "Irving Lehner";
                         }}),
                         add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
                             attributes = new String[]{{
-                                add("placeat"),
-                                add("voluptatum"),
-                                add("iusto"),
-                                add("excepturi"),
+                                add("recusandae"),
+                                add("temporibus"),
                             }};
-                            name = "nisi";
+                            name = "Erica Bogisich III";
+                        }}),
+                        add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
+                            attributes = new String[]{{
+                                add("sapiente"),
+                                add("quo"),
+                                add("odit"),
+                                add("at"),
+                            }};
+                            name = "Emilio Krajcik";
+                        }}),
+                        add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
+                            attributes = new String[]{{
+                                add("totam"),
+                                add("porro"),
+                            }};
+                            name = "Samuel Reichel";
                         }}),
                     }};
-                    resource = "recusandae";
-                }};
-                accessToken = "temporibus";
-                alt = "json";
-                callback = "quis";
-                dataAttributeBindingId = "veritatis";
-                fields = "deserunt";
-                key = "perferendis";
-                oauthToken = "ipsam";
-                parent = "repellendus";
+                    resource = "fugit";
+                }};;
+                accessToken = "deleniti";
+                alt = AltEnum.PROTO;
+                callback = "optio";
+                dataAttributeBindingId = "totam";
+                fields = "beatae";
+                key = "commodi";
+                oauthToken = "molestiae";
                 prettyPrint = false;
-                quotaUser = "sapiente";
-                uploadType = "quo";
-                uploadProtocol = "odit";
+                quotaUser = "modi";
+                uploadType = "qui";
+                uploadProtocol = "impedit";
                 validateOnly = false;
-            }}            
+            }};            
 
-            DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = sdk.projects.dataplexProjectsLocationsDataAttributeBindingsCreate(req, new DataplexProjectsLocationsDataAttributeBindingsCreateSecurity() {{
+            DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = sdk.projects.dataplexProjectsLocationsDataAttributeBindingsCreate(req, new DataplexProjectsLocationsDataAttributeBindingsCreateSecurity("cum", "esse") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,9 +18,11 @@ public class BigQueryQuerySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawQuery")
     public String rawQuery;
+
     public BigQueryQuerySpec withRawQuery(String rawQuery) {
         this.rawQuery = rawQuery;
         return this;
     }
     
+    public BigQueryQuerySpec(){}
 }

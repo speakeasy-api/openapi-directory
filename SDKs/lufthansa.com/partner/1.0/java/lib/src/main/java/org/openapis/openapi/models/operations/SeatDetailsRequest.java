@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SeatDetailsRequest {
@@ -12,6 +13,7 @@ public class SeatDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SeatDetailsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SeatDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aircraftCode")
     public String aircraftCode;
+
     public SeatDetailsRequest withAircraftCode(String aircraftCode) {
         this.aircraftCode = aircraftCode;
         return this;
@@ -32,6 +35,7 @@ public class SeatDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cabinCode")
     public String cabinCode;
+
     public SeatDetailsRequest withCabinCode(String cabinCode) {
         this.cabinCode = cabinCode;
         return this;
@@ -42,9 +46,15 @@ public class SeatDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public SeatDetailsRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public SeatDetailsRequest(@JsonProperty("Accept") String accept, @JsonProperty("aircraftCode") String aircraftCode, @JsonProperty("cabinCode") String cabinCode) {
+        this.accept = accept;
+        this.aircraftCode = aircraftCode;
+        this.cabinCode = cabinCode;
+  }
 }

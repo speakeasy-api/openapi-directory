@@ -12,6 +12,7 @@ public class BatchBatchPayloadSchemaDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public java.util.Map<String, Object> body;
+
     public BatchBatchPayloadSchemaDefaults withBody(java.util.Map<String, Object> body) {
         this.body = body;
         return this;
@@ -20,6 +21,7 @@ public class BatchBatchPayloadSchemaDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public BatchBatchPayloadSchemaDefaults withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -28,6 +30,7 @@ public class BatchBatchPayloadSchemaDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public BatchBatchPayloadSchemaDefaultsMethodEnum method;
+
     public BatchBatchPayloadSchemaDefaults withMethod(BatchBatchPayloadSchemaDefaultsMethodEnum method) {
         this.method = method;
         return this;
@@ -36,9 +39,11 @@ public class BatchBatchPayloadSchemaDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public BatchBatchPayloadSchemaDefaults withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public BatchBatchPayloadSchemaDefaults(){}
 }

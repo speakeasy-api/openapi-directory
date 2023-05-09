@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmPurchaseResponse {
     
     public String contentType;
+
     public ConfirmPurchaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ConfirmPurchaseResponse {
      */
     
     public org.openapis.openapi.models.shared.ItvPurchase itvPurchase;
+
     public ConfirmPurchaseResponse withItvPurchase(org.openapis.openapi.models.shared.ItvPurchase itvPurchase) {
         this.itvPurchase = itvPurchase;
         return this;
@@ -29,6 +32,7 @@ public class ConfirmPurchaseResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public ConfirmPurchaseResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class ConfirmPurchaseResponse {
     
     
     public Integer statusCode;
+
     public ConfirmPurchaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ConfirmPurchaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmPurchaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfirmPurchaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

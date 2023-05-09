@@ -15,9 +15,11 @@ public class DeleteTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentArn")
     public String trialComponentArn;
+
     public DeleteTrialComponentResponse withTrialComponentArn(String trialComponentArn) {
         this.trialComponentArn = trialComponentArn;
         return this;
     }
     
+    public DeleteTrialComponentResponse(){}
 }

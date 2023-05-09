@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VerifyDomainDkimRequest - Represents a request to generate the CNAME records needed to set up Easy DKIM with Amazon SES. For more information about setting up Easy DKIM, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class VerifyDomainDkimRequest {
     
     public String domain;
+
     public VerifyDomainDkimRequest withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public VerifyDomainDkimRequest(@JsonProperty("Domain") String domain) {
+        this.domain = domain;
+  }
 }

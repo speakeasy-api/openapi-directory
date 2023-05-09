@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeListenerCertificatesInput {
     
     public String listenerArn;
+
     public DescribeListenerCertificatesInput withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -16,6 +17,7 @@ public class DescribeListenerCertificatesInput {
     
     
     public String marker;
+
     public DescribeListenerCertificatesInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,13 @@ public class DescribeListenerCertificatesInput {
     
     
     public Long pageSize;
+
     public DescribeListenerCertificatesInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public DescribeListenerCertificatesInput(@JsonProperty("ListenerArn") String listenerArn) {
+        this.listenerArn = listenerArn;
+  }
 }

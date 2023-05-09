@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBillingGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteBillingGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteBillingGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBillingGroupResponse {
     
     
     public String contentType;
+
     public DeleteBillingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBillingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBillingGroupOutput deleteBillingGroupOutput;
+
     public DeleteBillingGroupResponse withDeleteBillingGroupOutput(org.openapis.openapi.models.shared.DeleteBillingGroupOutput deleteBillingGroupOutput) {
         this.deleteBillingGroupOutput = deleteBillingGroupOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBillingGroupResponse {
      */
     
     public Object internalServerException;
+
     public DeleteBillingGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteBillingGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteBillingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteBillingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBillingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteBillingGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteBillingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteBillingGroupResponse {
      */
     
     public Object validationException;
+
     public DeleteBillingGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteBillingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

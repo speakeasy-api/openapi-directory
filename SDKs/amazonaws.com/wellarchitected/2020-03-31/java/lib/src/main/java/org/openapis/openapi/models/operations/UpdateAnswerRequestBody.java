@@ -15,6 +15,7 @@ public class UpdateAnswerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChoiceUpdates")
     public java.util.Map<String, org.openapis.openapi.models.shared.ChoiceUpdate> choiceUpdates;
+
     public UpdateAnswerRequestBody withChoiceUpdates(java.util.Map<String, org.openapis.openapi.models.shared.ChoiceUpdate> choiceUpdates) {
         this.choiceUpdates = choiceUpdates;
         return this;
@@ -26,6 +27,7 @@ public class UpdateAnswerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsApplicable")
     public Boolean isApplicable;
+
     public UpdateAnswerRequestBody withIsApplicable(Boolean isApplicable) {
         this.isApplicable = isApplicable;
         return this;
@@ -37,6 +39,7 @@ public class UpdateAnswerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public UpdateAnswerRequestBody withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -48,6 +51,7 @@ public class UpdateAnswerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public UpdateAnswerRequestBodyReasonEnum reason;
+
     public UpdateAnswerRequestBody withReason(UpdateAnswerRequestBodyReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -59,9 +63,11 @@ public class UpdateAnswerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectedChoices")
     public String[] selectedChoices;
+
     public UpdateAnswerRequestBody withSelectedChoices(String[] selectedChoices) {
         this.selectedChoices = selectedChoices;
         return this;
     }
     
+    public UpdateAnswerRequestBody(){}
 }

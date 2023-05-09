@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class AutoScalingGroupNamesType {
     
     public String[] autoScalingGroupNames;
+
     public AutoScalingGroupNamesType withAutoScalingGroupNames(String[] autoScalingGroupNames) {
         this.autoScalingGroupNames = autoScalingGroupNames;
         return this;
@@ -16,6 +17,7 @@ public class AutoScalingGroupNamesType {
     
     
     public Filter[] filters;
+
     public AutoScalingGroupNamesType withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class AutoScalingGroupNamesType {
     
     
     public Long maxRecords;
+
     public AutoScalingGroupNamesType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,9 +33,11 @@ public class AutoScalingGroupNamesType {
     
     
     public String nextToken;
+
     public AutoScalingGroupNamesType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public AutoScalingGroupNamesType(){}
 }

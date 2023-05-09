@@ -18,6 +18,7 @@ public class UsersPartialUpdateUserAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public UsersPartialUpdateUserAttributesInput withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -28,6 +29,7 @@ public class UsersPartialUpdateUserAttributesInput {
      */
     @JsonProperty("full_name")
     public String fullName;
+
     public UsersPartialUpdateUserAttributesInput withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -39,6 +41,7 @@ public class UsersPartialUpdateUserAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public UsersPartialUpdateUserAttributesInput withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -50,6 +53,7 @@ public class UsersPartialUpdateUserAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public UsersPartialUpdateUserAttributesInput withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -61,6 +65,7 @@ public class UsersPartialUpdateUserAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_names")
     public String middleNames;
+
     public UsersPartialUpdateUserAttributesInput withMiddleNames(String middleNames) {
         this.middleNames = middleNames;
         return this;
@@ -72,6 +77,7 @@ public class UsersPartialUpdateUserAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffix")
     public String suffix;
+
     public UsersPartialUpdateUserAttributesInput withSuffix(String suffix) {
         this.suffix = suffix;
         return this;
@@ -83,9 +89,13 @@ public class UsersPartialUpdateUserAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public UsersPartialUpdateUserAttributesInput withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public UsersPartialUpdateUserAttributesInput(@JsonProperty("full_name") String fullName) {
+        this.fullName = fullName;
+  }
 }

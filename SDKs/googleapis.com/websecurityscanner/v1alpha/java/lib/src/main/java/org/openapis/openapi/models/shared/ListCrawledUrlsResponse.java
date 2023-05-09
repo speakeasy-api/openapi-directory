@@ -18,6 +18,7 @@ public class ListCrawledUrlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crawledUrls")
     public CrawledUrl[] crawledUrls;
+
     public ListCrawledUrlsResponse withCrawledUrls(CrawledUrl[] crawledUrls) {
         this.crawledUrls = crawledUrls;
         return this;
@@ -29,9 +30,11 @@ public class ListCrawledUrlsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCrawledUrlsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCrawledUrlsResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public GoogleCloudVisionV1p2beta1BoundingPoly boundingPoly;
+
     public GoogleCloudVisionV1p2beta1ProductSearchParams withBoundingPoly(GoogleCloudVisionV1p2beta1BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudVisionV1p2beta1ProductSearchParams withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCategories")
     public String[] productCategories;
+
     public GoogleCloudVisionV1p2beta1ProductSearchParams withProductCategories(String[] productCategories) {
         this.productCategories = productCategories;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudVisionV1p2beta1ProductSearchParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productSet")
     public String productSet;
+
     public GoogleCloudVisionV1p2beta1ProductSearchParams withProductSet(String productSet) {
         this.productSet = productSet;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1ProductSearchParams(){}
 }

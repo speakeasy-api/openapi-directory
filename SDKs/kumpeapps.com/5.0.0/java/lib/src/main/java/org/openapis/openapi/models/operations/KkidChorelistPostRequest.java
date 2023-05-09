@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistPostRequest {
@@ -12,6 +13,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aiIcon")
     public String aiIcon;
+
     public KkidChorelistPostRequest withAiIcon(String aiIcon) {
         this.aiIcon = aiIcon;
         return this;
@@ -22,6 +24,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=blockDash")
     public Boolean blockDash;
+
     public KkidChorelistPostRequest withBlockDash(Boolean blockDash) {
         this.blockDash = blockDash;
         return this;
@@ -32,6 +35,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canSteal")
     public Boolean canSteal;
+
     public KkidChorelistPostRequest withCanSteal(Boolean canSteal) {
         this.canSteal = canSteal;
         return this;
@@ -42,6 +46,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=choreDescription")
     public String choreDescription;
+
     public KkidChorelistPostRequest withChoreDescription(String choreDescription) {
         this.choreDescription = choreDescription;
         return this;
@@ -52,6 +57,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=choreName")
     public String choreName;
+
     public KkidChorelistPostRequest withChoreName(String choreName) {
         this.choreName = choreName;
         return this;
@@ -62,6 +68,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=choreNumber")
     public Long choreNumber;
+
     public KkidChorelistPostRequest withChoreNumber(Long choreNumber) {
         this.choreNumber = choreNumber;
         return this;
@@ -72,6 +79,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=day")
     public KkidChorelistPostDayEnum day;
+
     public KkidChorelistPostRequest withDay(KkidChorelistPostDayEnum day) {
         this.day = day;
         return this;
@@ -82,6 +90,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extraAllowance")
     public Long extraAllowance;
+
     public KkidChorelistPostRequest withExtraAllowance(Long extraAllowance) {
         this.extraAllowance = extraAllowance;
         return this;
@@ -92,6 +101,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isCalendar")
     public Boolean isCalendar;
+
     public KkidChorelistPostRequest withIsCalendar(Boolean isCalendar) {
         this.isCalendar = isCalendar;
         return this;
@@ -102,6 +112,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUsername")
     public String kidUsername;
+
     public KkidChorelistPostRequest withKidUsername(String kidUsername) {
         this.kidUsername = kidUsername;
         return this;
@@ -112,6 +123,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nfcTag")
     public String nfcTag;
+
     public KkidChorelistPostRequest withNfcTag(String nfcTag) {
         this.nfcTag = nfcTag;
         return this;
@@ -122,6 +134,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notes")
     public String notes;
+
     public KkidChorelistPostRequest withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -132,6 +145,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectDetectionTag")
     public String objectDetectionTag;
+
     public KkidChorelistPostRequest withObjectDetectionTag(String objectDetectionTag) {
         this.objectDetectionTag = objectDetectionTag;
         return this;
@@ -142,6 +156,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oneTime")
     public Boolean oneTime;
+
     public KkidChorelistPostRequest withOneTime(Boolean oneTime) {
         this.oneTime = oneTime;
         return this;
@@ -152,6 +167,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
     public Boolean optional;
+
     public KkidChorelistPostRequest withOptional(Boolean optional) {
         this.optional = optional;
         return this;
@@ -162,6 +178,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reassignable")
     public Boolean reassignable;
+
     public KkidChorelistPostRequest withReassignable(Boolean reassignable) {
         this.reassignable = reassignable;
         return this;
@@ -172,6 +189,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requireObjectDetection")
     public Boolean requireObjectDetection;
+
     public KkidChorelistPostRequest withRequireObjectDetection(Boolean requireObjectDetection) {
         this.requireObjectDetection = requireObjectDetection;
         return this;
@@ -182,6 +200,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public String startDate;
+
     public KkidChorelistPostRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -192,6 +211,7 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public KkidChorelistPostRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -202,9 +222,14 @@ public class KkidChorelistPostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedByAutomation")
     public Boolean updatedByAutomation;
+
     public KkidChorelistPostRequest withUpdatedByAutomation(Boolean updatedByAutomation) {
         this.updatedByAutomation = updatedByAutomation;
         return this;
     }
     
+    public KkidChorelistPostRequest(@JsonProperty("choreName") String choreName, @JsonProperty("kidUsername") String kidUsername) {
+        this.choreName = choreName;
+        this.kidUsername = kidUsername;
+  }
 }

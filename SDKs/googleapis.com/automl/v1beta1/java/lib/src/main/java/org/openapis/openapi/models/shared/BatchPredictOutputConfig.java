@@ -18,6 +18,7 @@ public class BatchPredictOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDestination")
     public BigQueryDestination bigqueryDestination;
+
     public BatchPredictOutputConfig withBigqueryDestination(BigQueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
         return this;
@@ -29,9 +30,11 @@ public class BatchPredictOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsDestination gcsDestination;
+
     public BatchPredictOutputConfig withGcsDestination(GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public BatchPredictOutputConfig(){}
 }

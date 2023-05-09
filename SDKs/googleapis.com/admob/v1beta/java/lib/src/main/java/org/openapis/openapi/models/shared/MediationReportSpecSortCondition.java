@@ -18,6 +18,7 @@ public class MediationReportSpecSortCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public MediationReportSpecSortConditionDimensionEnum dimension;
+
     public MediationReportSpecSortCondition withDimension(MediationReportSpecSortConditionDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -29,6 +30,7 @@ public class MediationReportSpecSortCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public MediationReportSpecSortConditionMetricEnum metric;
+
     public MediationReportSpecSortCondition withMetric(MediationReportSpecSortConditionMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -40,9 +42,11 @@ public class MediationReportSpecSortCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public MediationReportSpecSortConditionOrderEnum order;
+
     public MediationReportSpecSortCondition withOrder(MediationReportSpecSortConditionOrderEnum order) {
         this.order = order;
         return this;
     }
     
+    public MediationReportSpecSortCondition(){}
 }

@@ -18,6 +18,7 @@ public class WriteInsightRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insight")
     public InsightInput insight;
+
     public WriteInsightRequestInput withInsight(InsightInput insight) {
         this.insight = insight;
         return this;
@@ -29,9 +30,11 @@ public class WriteInsightRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public WriteInsightRequestInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public WriteInsightRequestInput(){}
 }

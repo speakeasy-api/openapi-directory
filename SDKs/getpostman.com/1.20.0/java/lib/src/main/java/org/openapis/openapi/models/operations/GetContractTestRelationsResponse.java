@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContractTestRelationsResponse {
     
     public String contentType;
+
     public GetContractTestRelationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetContractTestRelationsResponse {
     
     
     public Integer statusCode;
+
     public GetContractTestRelationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetContractTestRelationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContractTestRelationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetContractTestRelationsResponse {
      */
     
     public GetContractTestRelations200ApplicationJSON getContractTestRelations200ApplicationJSONObject;
+
     public GetContractTestRelationsResponse withGetContractTestRelations200ApplicationJSONObject(GetContractTestRelations200ApplicationJSON getContractTestRelations200ApplicationJSONObject) {
         this.getContractTestRelations200ApplicationJSONObject = getContractTestRelations200ApplicationJSONObject;
         return this;
     }
     
+    public GetContractTestRelationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

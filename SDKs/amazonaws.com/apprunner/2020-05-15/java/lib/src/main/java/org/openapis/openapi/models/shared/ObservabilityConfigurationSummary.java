@@ -15,6 +15,7 @@ public class ObservabilityConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationArn")
     public String observabilityConfigurationArn;
+
     public ObservabilityConfigurationSummary withObservabilityConfigurationArn(String observabilityConfigurationArn) {
         this.observabilityConfigurationArn = observabilityConfigurationArn;
         return this;
@@ -23,6 +24,7 @@ public class ObservabilityConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationName")
     public String observabilityConfigurationName;
+
     public ObservabilityConfigurationSummary withObservabilityConfigurationName(String observabilityConfigurationName) {
         this.observabilityConfigurationName = observabilityConfigurationName;
         return this;
@@ -31,9 +33,11 @@ public class ObservabilityConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfigurationRevision")
     public Long observabilityConfigurationRevision;
+
     public ObservabilityConfigurationSummary withObservabilityConfigurationRevision(Long observabilityConfigurationRevision) {
         this.observabilityConfigurationRevision = observabilityConfigurationRevision;
         return this;
     }
     
+    public ObservabilityConfigurationSummary(){}
 }

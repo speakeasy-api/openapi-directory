@@ -19,9 +19,11 @@ public class AircraftEquipment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public AircraftEquipment withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public AircraftEquipment(){}
 }

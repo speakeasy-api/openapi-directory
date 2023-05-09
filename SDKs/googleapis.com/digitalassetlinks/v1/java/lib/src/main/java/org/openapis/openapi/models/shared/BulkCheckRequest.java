@@ -18,6 +18,7 @@ public class BulkCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowGoogleInternalDataSources")
     public Boolean allowGoogleInternalDataSources;
+
     public BulkCheckRequest withAllowGoogleInternalDataSources(Boolean allowGoogleInternalDataSources) {
         this.allowGoogleInternalDataSources = allowGoogleInternalDataSources;
         return this;
@@ -29,6 +30,7 @@ public class BulkCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultRelation")
     public String defaultRelation;
+
     public BulkCheckRequest withDefaultRelation(String defaultRelation) {
         this.defaultRelation = defaultRelation;
         return this;
@@ -40,6 +42,7 @@ public class BulkCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultSource")
     public Asset defaultSource;
+
     public BulkCheckRequest withDefaultSource(Asset defaultSource) {
         this.defaultSource = defaultSource;
         return this;
@@ -51,6 +54,7 @@ public class BulkCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTarget")
     public Asset defaultTarget;
+
     public BulkCheckRequest withDefaultTarget(Asset defaultTarget) {
         this.defaultTarget = defaultTarget;
         return this;
@@ -62,6 +66,7 @@ public class BulkCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipCacheLookup")
     public Boolean skipCacheLookup;
+
     public BulkCheckRequest withSkipCacheLookup(Boolean skipCacheLookup) {
         this.skipCacheLookup = skipCacheLookup;
         return this;
@@ -73,9 +78,11 @@ public class BulkCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statements")
     public StatementTemplate[] statements;
+
     public BulkCheckRequest withStatements(StatementTemplate[] statements) {
         this.statements = statements;
         return this;
     }
     
+    public BulkCheckRequest(){}
 }

@@ -13,6 +13,7 @@ public class FetchHealthProfileQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
     public String filterGroups;
+
     public FetchHealthProfileQuestionsRequest withFilterGroups(String filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -24,6 +25,7 @@ public class FetchHealthProfileQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
     public String filterOrganization;
+
     public FetchHealthProfileQuestionsRequest withFilterOrganization(String filterOrganization) {
         this.filterOrganization = filterOrganization;
         return this;
@@ -35,6 +37,7 @@ public class FetchHealthProfileQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
     public String filterPatient;
+
     public FetchHealthProfileQuestionsRequest withFilterPatient(String filterPatient) {
         this.filterPatient = filterPatient;
         return this;
@@ -45,9 +48,11 @@ public class FetchHealthProfileQuestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
     public FetchHealthProfileQuestionsIncludeEnum include;
+
     public FetchHealthProfileQuestionsRequest withInclude(FetchHealthProfileQuestionsIncludeEnum include) {
         this.include = include;
         return this;
     }
     
+    public FetchHealthProfileQuestionsRequest(){}
 }

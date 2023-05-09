@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetAccountSendingEnabledResponse {
     
     public Boolean enabled;
+
     public GetAccountSendingEnabledResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GetAccountSendingEnabledResponse(){}
 }

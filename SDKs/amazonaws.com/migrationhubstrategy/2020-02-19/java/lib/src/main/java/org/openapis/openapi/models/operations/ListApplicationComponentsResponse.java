@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationComponentsResponse {
@@ -12,6 +13,7 @@ public class ListApplicationComponentsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListApplicationComponentsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListApplicationComponentsResponse {
     
     
     public String contentType;
+
     public ListApplicationComponentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListApplicationComponentsResponse {
      */
     
     public Object internalServerException;
+
     public ListApplicationComponentsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListApplicationComponentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApplicationComponentsResponse listApplicationComponentsResponse;
+
     public ListApplicationComponentsResponse withListApplicationComponentsResponse(org.openapis.openapi.models.shared.ListApplicationComponentsResponse listApplicationComponentsResponse) {
         this.listApplicationComponentsResponse = listApplicationComponentsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListApplicationComponentsResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationComponentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListApplicationComponentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationComponentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListApplicationComponentsResponse {
      */
     
     public Object serviceLinkedRoleLockClientException;
+
     public ListApplicationComponentsResponse withServiceLinkedRoleLockClientException(Object serviceLinkedRoleLockClientException) {
         this.serviceLinkedRoleLockClientException = serviceLinkedRoleLockClientException;
         return this;
@@ -73,9 +81,14 @@ public class ListApplicationComponentsResponse {
      */
     
     public Object validationException;
+
     public ListApplicationComponentsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListApplicationComponentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

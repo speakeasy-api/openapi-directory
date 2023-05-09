@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceRefreshesAnswer {
     
     public InstanceRefresh[] instanceRefreshes;
+
     public DescribeInstanceRefreshesAnswer withInstanceRefreshes(InstanceRefresh[] instanceRefreshes) {
         this.instanceRefreshes = instanceRefreshes;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceRefreshesAnswer {
     
     
     public String nextToken;
+
     public DescribeInstanceRefreshesAnswer withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceRefreshesAnswer(){}
 }

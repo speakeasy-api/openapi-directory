@@ -15,6 +15,7 @@ public class GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupId")
     public String anomalyGroupId;
+
     public GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback withAnomalyGroupId(String anomalyGroupId) {
         this.anomalyGroupId = anomalyGroupId;
         return this;
@@ -23,9 +24,11 @@ public class GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesId")
     public String timeSeriesId;
+
     public GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback withTimeSeriesId(String timeSeriesId) {
         this.timeSeriesId = timeSeriesId;
         return this;
     }
     
+    public GetFeedbackRequestBodyAnomalyGroupTimeSeriesFeedback(){}
 }

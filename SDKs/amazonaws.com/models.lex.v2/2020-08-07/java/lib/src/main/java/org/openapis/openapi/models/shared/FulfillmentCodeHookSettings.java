@@ -15,6 +15,7 @@ public class FulfillmentCodeHookSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public FulfillmentCodeHookSettings withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +23,7 @@ public class FulfillmentCodeHookSettings {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public FulfillmentCodeHookSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -30,6 +32,7 @@ public class FulfillmentCodeHookSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentUpdatesSpecification")
     public FulfillmentUpdatesSpecification fulfillmentUpdatesSpecification;
+
     public FulfillmentCodeHookSettings withFulfillmentUpdatesSpecification(FulfillmentUpdatesSpecification fulfillmentUpdatesSpecification) {
         this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
         return this;
@@ -38,9 +41,13 @@ public class FulfillmentCodeHookSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postFulfillmentStatusSpecification")
     public PostFulfillmentStatusSpecification postFulfillmentStatusSpecification;
+
     public FulfillmentCodeHookSettings withPostFulfillmentStatusSpecification(PostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
         this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
         return this;
     }
     
+    public FulfillmentCodeHookSettings(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

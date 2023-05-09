@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirebaseappcheckProjectsServicesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirebaseappcheckProjectsServicesGetSecurityOption1 option1;
+
     public FirebaseappcheckProjectsServicesGetSecurity withOption1(FirebaseappcheckProjectsServicesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirebaseappcheckProjectsServicesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirebaseappcheckProjectsServicesGetSecurityOption2 option2;
+
     public FirebaseappcheckProjectsServicesGetSecurity withOption2(FirebaseappcheckProjectsServicesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirebaseappcheckProjectsServicesGetSecurity(){}
 }

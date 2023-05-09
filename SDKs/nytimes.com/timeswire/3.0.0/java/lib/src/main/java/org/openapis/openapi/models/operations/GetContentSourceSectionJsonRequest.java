@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentSourceSectionJsonRequest {
@@ -12,6 +13,7 @@ public class GetContentSourceSectionJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetContentSourceSectionJsonRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,6 +24,7 @@ public class GetContentSourceSectionJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetContentSourceSectionJsonRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetContentSourceSectionJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section")
     public String section;
+
     public GetContentSourceSectionJsonRequest withSection(String section) {
         this.section = section;
         return this;
@@ -52,9 +56,14 @@ public class GetContentSourceSectionJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
     public GetContentSourceSectionJsonSourceEnum source;
+
     public GetContentSourceSectionJsonRequest withSource(GetContentSourceSectionJsonSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public GetContentSourceSectionJsonRequest(@JsonProperty("section") String section, @JsonProperty("source") GetContentSourceSectionJsonSourceEnum source) {
+        this.section = section;
+        this.source = source;
+  }
 }

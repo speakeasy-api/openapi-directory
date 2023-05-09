@@ -18,9 +18,11 @@ public class GenerateNetworkReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportSpec")
     public NetworkReportSpec reportSpec;
+
     public GenerateNetworkReportRequest withReportSpec(NetworkReportSpec reportSpec) {
         this.reportSpec = reportSpec;
         return this;
     }
     
+    public GenerateNetworkReportRequest(){}
 }

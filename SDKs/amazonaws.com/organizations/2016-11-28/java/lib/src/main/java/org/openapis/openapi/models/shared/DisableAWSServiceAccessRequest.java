@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableAWSServiceAccessRequest {
     @JsonProperty("ServicePrincipal")
     public String servicePrincipal;
+
     public DisableAWSServiceAccessRequest withServicePrincipal(String servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
         return this;
     }
     
+    public DisableAWSServiceAccessRequest(@JsonProperty("ServicePrincipal") String servicePrincipal) {
+        this.servicePrincipal = servicePrincipal;
+  }
 }

@@ -15,6 +15,7 @@ public class Adjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metric")
     public String metric;
+
     public Adjustment withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -23,9 +24,11 @@ public class Adjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public Adjustment withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public Adjustment(){}
 }

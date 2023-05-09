@@ -15,9 +15,11 @@ public class UpdateGameServerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServer")
     public GameServer gameServer;
+
     public UpdateGameServerOutput withGameServer(GameServer gameServer) {
         this.gameServer = gameServer;
         return this;
     }
     
+    public UpdateGameServerOutput(){}
 }

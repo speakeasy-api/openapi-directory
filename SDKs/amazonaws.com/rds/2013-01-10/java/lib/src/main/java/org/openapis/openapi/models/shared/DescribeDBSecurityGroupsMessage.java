@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBSecurityGroupsMessage {
     
     public String dbSecurityGroupName;
+
     public DescribeDBSecurityGroupsMessage withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBSecurityGroupsMessage {
     
     
     public String marker;
+
     public DescribeDBSecurityGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class DescribeDBSecurityGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeDBSecurityGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBSecurityGroupsMessage(){}
 }

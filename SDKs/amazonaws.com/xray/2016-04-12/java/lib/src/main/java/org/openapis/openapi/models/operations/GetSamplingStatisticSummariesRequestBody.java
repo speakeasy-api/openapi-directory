@@ -15,9 +15,11 @@ public class GetSamplingStatisticSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSamplingStatisticSummariesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetSamplingStatisticSummariesRequestBody(){}
 }

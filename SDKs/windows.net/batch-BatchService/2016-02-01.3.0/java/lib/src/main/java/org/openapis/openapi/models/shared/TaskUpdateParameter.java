@@ -18,9 +18,11 @@ public class TaskUpdateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public TaskConstraints constraints;
+
     public TaskUpdateParameter withConstraints(TaskConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public TaskUpdateParameter(){}
 }

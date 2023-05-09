@@ -15,6 +15,7 @@ public class AwsCloudFrontDistributionOriginSslProtocols {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public String[] items;
+
     public AwsCloudFrontDistributionOriginSslProtocols withItems(String[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class AwsCloudFrontDistributionOriginSslProtocols {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Long quantity;
+
     public AwsCloudFrontDistributionOriginSslProtocols withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public AwsCloudFrontDistributionOriginSslProtocols(){}
 }

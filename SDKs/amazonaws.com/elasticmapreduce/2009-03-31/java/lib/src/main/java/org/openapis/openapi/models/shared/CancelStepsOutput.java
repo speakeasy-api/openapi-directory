@@ -15,9 +15,11 @@ public class CancelStepsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CancelStepsInfoList")
     public CancelStepsInfo[] cancelStepsInfoList;
+
     public CancelStepsOutput withCancelStepsInfoList(CancelStepsInfo[] cancelStepsInfoList) {
         this.cancelStepsInfoList = cancelStepsInfoList;
         return this;
     }
     
+    public CancelStepsOutput(){}
 }

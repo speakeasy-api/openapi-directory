@@ -18,6 +18,7 @@ public class SetMaintenancePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public SetMaintenancePolicyRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class SetMaintenancePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenancePolicy")
     public MaintenancePolicy maintenancePolicy;
+
     public SetMaintenancePolicyRequest withMaintenancePolicy(MaintenancePolicy maintenancePolicy) {
         this.maintenancePolicy = maintenancePolicy;
         return this;
@@ -40,6 +42,7 @@ public class SetMaintenancePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SetMaintenancePolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class SetMaintenancePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SetMaintenancePolicyRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class SetMaintenancePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public SetMaintenancePolicyRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public SetMaintenancePolicyRequest(){}
 }

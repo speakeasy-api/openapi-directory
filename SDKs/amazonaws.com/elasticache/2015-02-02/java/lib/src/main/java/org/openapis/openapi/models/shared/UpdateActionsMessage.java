@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateActionsMessage {
     
     public String marker;
+
     public UpdateActionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class UpdateActionsMessage {
     
     
     public UpdateActionList[] updateActions;
+
     public UpdateActionsMessage withUpdateActions(UpdateActionList[] updateActions) {
         this.updateActions = updateActions;
         return this;
     }
     
+    public UpdateActionsMessage(){}
 }

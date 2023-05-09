@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartContentUploadResponse {
@@ -12,6 +13,7 @@ public class StartContentUploadResponse {
      */
     
     public Object accessDeniedException;
+
     public StartContentUploadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartContentUploadResponse {
     
     
     public String contentType;
+
     public StartContentUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartContentUploadResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartContentUploadResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartContentUploadResponse {
      */
     
     public org.openapis.openapi.models.shared.StartContentUploadResponse startContentUploadResponse;
+
     public StartContentUploadResponse withStartContentUploadResponse(org.openapis.openapi.models.shared.StartContentUploadResponse startContentUploadResponse) {
         this.startContentUploadResponse = startContentUploadResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartContentUploadResponse {
     
     
     public Integer statusCode;
+
     public StartContentUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartContentUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartContentUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StartContentUploadResponse {
      */
     
     public Object validationException;
+
     public StartContentUploadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartContentUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

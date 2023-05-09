@@ -15,6 +15,7 @@ public class ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListSessionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSessionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sessions")
     public SessionSummary[] sessions;
+
     public ListSessionsResponse withSessions(SessionSummary[] sessions) {
         this.sessions = sessions;
         return this;
     }
     
+    public ListSessionsResponse(){}
 }

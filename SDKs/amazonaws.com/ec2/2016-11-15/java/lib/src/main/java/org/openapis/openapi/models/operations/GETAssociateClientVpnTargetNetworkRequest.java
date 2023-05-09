@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateClientVpnTargetNetworkRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssociateClientVpnTargetNetworkActionEnum action;
+
     public GETAssociateClientVpnTargetNetworkRequest withAction(GETAssociateClientVpnTargetNetworkActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETAssociateClientVpnTargetNetworkRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,6 +32,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
     public String clientVpnEndpointId;
+
     public GETAssociateClientVpnTargetNetworkRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -39,6 +43,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETAssociateClientVpnTargetNetworkRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -49,6 +54,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetId")
     public String subnetId;
+
     public GETAssociateClientVpnTargetNetworkRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -56,6 +62,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssociateClientVpnTargetNetworkVersionEnum version;
+
     public GETAssociateClientVpnTargetNetworkRequest withVersion(GETAssociateClientVpnTargetNetworkVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssociateClientVpnTargetNetworkRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssociateClientVpnTargetNetworkRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssociateClientVpnTargetNetworkRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssociateClientVpnTargetNetworkRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssociateClientVpnTargetNetworkRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssociateClientVpnTargetNetworkRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETAssociateClientVpnTargetNetworkRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssociateClientVpnTargetNetworkRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssociateClientVpnTargetNetworkRequest(@JsonProperty("Action") GETAssociateClientVpnTargetNetworkActionEnum action, @JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("SubnetId") String subnetId, @JsonProperty("Version") GETAssociateClientVpnTargetNetworkVersionEnum version) {
+        this.action = action;
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.subnetId = subnetId;
+        this.version = version;
+  }
 }

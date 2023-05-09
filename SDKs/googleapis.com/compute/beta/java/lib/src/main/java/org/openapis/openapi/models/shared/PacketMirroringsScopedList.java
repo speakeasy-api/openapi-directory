@@ -15,6 +15,7 @@ public class PacketMirroringsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packetMirrorings")
     public PacketMirroring[] packetMirrorings;
+
     public PacketMirroringsScopedList withPacketMirrorings(PacketMirroring[] packetMirrorings) {
         this.packetMirrorings = packetMirrorings;
         return this;
@@ -26,9 +27,11 @@ public class PacketMirroringsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public PacketMirroringsScopedListWarning warning;
+
     public PacketMirroringsScopedList withWarning(PacketMirroringsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public PacketMirroringsScopedList(){}
 }

@@ -20,6 +20,7 @@ public class MetricSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public MetricSetSummary withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -30,6 +31,7 @@ public class MetricSetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MetricSetSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class MetricSetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public MetricSetSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -48,6 +51,7 @@ public class MetricSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetArn")
     public String metricSetArn;
+
     public MetricSetSummary withMetricSetArn(String metricSetArn) {
         this.metricSetArn = metricSetArn;
         return this;
@@ -56,6 +60,7 @@ public class MetricSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetDescription")
     public String metricSetDescription;
+
     public MetricSetSummary withMetricSetDescription(String metricSetDescription) {
         this.metricSetDescription = metricSetDescription;
         return this;
@@ -64,6 +69,7 @@ public class MetricSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetName")
     public String metricSetName;
+
     public MetricSetSummary withMetricSetName(String metricSetName) {
         this.metricSetName = metricSetName;
         return this;
@@ -72,9 +78,11 @@ public class MetricSetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public MetricSetSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public MetricSetSummary(){}
 }

@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * DocumentReaderConfig - &lt;p&gt;Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. &lt;/p&gt; &lt;p&gt; By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Word files&lt;/b&gt; - Amazon Comprehend parser extracts the text. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Digital PDF files&lt;/b&gt; - Amazon Comprehend parser extracts the text. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Image files and scanned PDF files&lt;/b&gt; - Amazon Comprehend uses the Amazon Textract &lt;code&gt;DetectDocumentText&lt;/code&gt; API to extract the text. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;code&gt;DocumentReaderConfig&lt;/code&gt; does not apply to plain text files or Word files.&lt;/p&gt; &lt;p&gt; For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see &lt;a href="https://docs.aws.amazon.com/comprehend/latest/dg/detecting-cer.html#detecting-cer-pdf"&gt; Setting text extraction options&lt;/a&gt;. &lt;/p&gt;
+ * DocumentReaderConfig - &lt;p&gt;Provides configuration parameters to override the default actions for extracting text from PDF documents and image files. &lt;/p&gt; &lt;p&gt; By default, Amazon Comprehend performs the following actions to extract text from files, based on the input file type: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Word files&lt;/b&gt; - Amazon Comprehend parser extracts the text. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Digital PDF files&lt;/b&gt; - Amazon Comprehend parser extracts the text. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Image files and scanned PDF files&lt;/b&gt; - Amazon Comprehend uses the Amazon Textract &lt;code&gt;DetectDocumentText&lt;/code&gt; API to extract the text. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;code&gt;DocumentReaderConfig&lt;/code&gt; does not apply to plain text files or Word files.&lt;/p&gt; &lt;p&gt; For image files and PDF documents, you can override these default actions using the fields listed below. For more information, see &lt;a href="https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html"&gt; Setting text extraction options&lt;/a&gt; in the Comprehend Developer Guide. &lt;/p&gt;
  */
 public class DocumentReaderConfig {
     @JsonProperty("DocumentReadAction")
     public DocumentReadActionEnum documentReadAction;
+
     public DocumentReaderConfig withDocumentReadAction(DocumentReadActionEnum documentReadAction) {
         this.documentReadAction = documentReadAction;
         return this;
@@ -22,6 +23,7 @@ public class DocumentReaderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentReadMode")
     public DocumentReadModeEnum documentReadMode;
+
     public DocumentReaderConfig withDocumentReadMode(DocumentReadModeEnum documentReadMode) {
         this.documentReadMode = documentReadMode;
         return this;
@@ -30,9 +32,13 @@ public class DocumentReaderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureTypes")
     public DocumentReadFeatureTypesEnum[] featureTypes;
+
     public DocumentReaderConfig withFeatureTypes(DocumentReadFeatureTypesEnum[] featureTypes) {
         this.featureTypes = featureTypes;
         return this;
     }
     
+    public DocumentReaderConfig(@JsonProperty("DocumentReadAction") DocumentReadActionEnum documentReadAction) {
+        this.documentReadAction = documentReadAction;
+  }
 }

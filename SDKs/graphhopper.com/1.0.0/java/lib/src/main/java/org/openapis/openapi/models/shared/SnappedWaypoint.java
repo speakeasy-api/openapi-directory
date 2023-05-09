@@ -18,6 +18,7 @@ public class SnappedWaypoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public SnappedWaypoint withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -29,9 +30,11 @@ public class SnappedWaypoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public SnappedWaypoint withLon(Double lon) {
         this.lon = lon;
         return this;
     }
     
+    public SnappedWaypoint(){}
 }

@@ -23,6 +23,7 @@ public class UpdateWorkerFleetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public UpdateWorkerFleetResponse withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -33,6 +34,7 @@ public class UpdateWorkerFleetResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateWorkerFleetResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -43,6 +45,7 @@ public class UpdateWorkerFleetResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateWorkerFleetResponse withId(String id) {
         this.id = id;
         return this;
@@ -53,6 +56,7 @@ public class UpdateWorkerFleetResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateWorkerFleetResponse withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +69,16 @@ public class UpdateWorkerFleetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public UpdateWorkerFleetResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public UpdateWorkerFleetResponse(@JsonProperty("arn") String arn, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.updatedAt = updatedAt;
+  }
 }

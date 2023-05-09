@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArchiveApplicationResponse {
@@ -12,6 +13,7 @@ public class ArchiveApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.Application application;
+
     public ArchiveApplicationResponse withApplication(org.openapis.openapi.models.shared.Application application) {
         this.application = application;
         return this;
@@ -22,6 +24,7 @@ public class ArchiveApplicationResponse {
      */
     
     public Object conflictException;
+
     public ArchiveApplicationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ArchiveApplicationResponse {
     
     
     public String contentType;
+
     public ArchiveApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ArchiveApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ArchiveApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ArchiveApplicationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ArchiveApplicationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class ArchiveApplicationResponse {
     
     
     public Integer statusCode;
+
     public ArchiveApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ArchiveApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArchiveApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ArchiveApplicationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ArchiveApplicationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public ArchiveApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

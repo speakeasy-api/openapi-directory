@@ -61,11 +61,9 @@ public class GiftCardActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGiftCardActivityResponse res = new org.openapis.openapi.models.operations.CreateGiftCardActivityResponse() {{
+        org.openapis.openapi.models.operations.CreateGiftCardActivityResponse res = new org.openapis.openapi.models.operations.CreateGiftCardActivityResponse(contentType, httpRes.statusCode()) {{
             createGiftCardActivityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class GiftCardActivities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGiftCardActivitiesResponse res = new org.openapis.openapi.models.operations.ListGiftCardActivitiesResponse() {{
+        org.openapis.openapi.models.operations.ListGiftCardActivitiesResponse res = new org.openapis.openapi.models.operations.ListGiftCardActivitiesResponse(contentType, httpRes.statusCode()) {{
             listGiftCardActivitiesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,11 @@ public class FieldAdd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public java.util.Map<String, Object> schema;
+
     public FieldAdd withSchema(java.util.Map<String, Object> schema) {
         this.schema = schema;
         return this;
     }
     
+    public FieldAdd(){}
 }

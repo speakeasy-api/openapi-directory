@@ -15,6 +15,7 @@ public class NodesDraftRegistrationsSubjectsSubjectAttributes {
      */
     
     public String taxonomyName;
+
     public NodesDraftRegistrationsSubjectsSubjectAttributes withTaxonomyName(String taxonomyName) {
         this.taxonomyName = taxonomyName;
         return this;
@@ -25,9 +26,11 @@ public class NodesDraftRegistrationsSubjectsSubjectAttributes {
      */
     
     public String text;
+
     public NodesDraftRegistrationsSubjectsSubjectAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubjectAttributes(){}
 }

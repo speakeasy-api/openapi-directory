@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public SearchRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public SearchRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public SearchRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public SearchRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public SearchRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public SearchRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public SearchRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public SearchRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -71,6 +80,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expr")
     public String expr;
+
     public SearchRequest withExpr(String expr) {
         this.expr = expr;
         return this;
@@ -81,6 +91,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
     public String facet;
+
     public SearchRequest withFacet(String facet) {
         this.facet = facet;
         return this;
@@ -88,6 +99,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public SearchFormatEnum format;
+
     public SearchRequest withFormat(SearchFormatEnum format) {
         this.format = format;
         return this;
@@ -98,6 +110,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
     public String fq;
+
     public SearchRequest withFq(String fq) {
         this.fq = fq;
         return this;
@@ -108,6 +121,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlight")
     public String highlight;
+
     public SearchRequest withHighlight(String highlight) {
         this.highlight = highlight;
         return this;
@@ -118,6 +132,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partial")
     public Boolean partial;
+
     public SearchRequest withPartial(Boolean partial) {
         this.partial = partial;
         return this;
@@ -125,6 +140,7 @@ public class SearchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public SearchPrettyEnum pretty;
+
     public SearchRequest withPretty(SearchPrettyEnum pretty) {
         this.pretty = pretty;
         return this;
@@ -135,6 +151,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -145,6 +162,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q.options")
     public String qOptions;
+
     public SearchRequest withQOptions(String qOptions) {
         this.qOptions = qOptions;
         return this;
@@ -155,6 +173,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q.parser")
     public SearchQParserEnum qParser;
+
     public SearchRequest withQParser(SearchQParserEnum qParser) {
         this.qParser = qParser;
         return this;
@@ -165,6 +184,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return")
     public String return_;
+
     public SearchRequest withReturn(String return_) {
         this.return_ = return_;
         return this;
@@ -175,6 +195,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public SearchRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -185,6 +206,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public SearchRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -195,6 +217,7 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public SearchRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -205,9 +228,15 @@ public class SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stats")
     public String stats;
+
     public SearchRequest withStats(String stats) {
         this.stats = stats;
         return this;
     }
     
+    public SearchRequest(@JsonProperty("format") SearchFormatEnum format, @JsonProperty("pretty") SearchPrettyEnum pretty, @JsonProperty("q") String q) {
+        this.format = format;
+        this.pretty = pretty;
+        this.q = q;
+  }
 }

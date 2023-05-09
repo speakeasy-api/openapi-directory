@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CancelAuthorizationRequest;
 import org.openapis.openapi.models.operations.CancelAuthorizationResponse;
 
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CancelAuthorizationRequest req = new CancelAuthorizationRequest() {{
-                authorizationToken = "corrupti";
-            }}            
+            CancelAuthorizationRequest req = new CancelAuthorizationRequest("corrupti");            
 
             CancelAuthorizationResponse res = sdk.orders.cancelAuthorization(req);
 
@@ -25,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

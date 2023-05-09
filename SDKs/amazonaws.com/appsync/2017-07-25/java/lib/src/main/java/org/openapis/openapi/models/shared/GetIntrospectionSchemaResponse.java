@@ -15,9 +15,11 @@ public class GetIntrospectionSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public GetIntrospectionSchemaResponse withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public GetIntrospectionSchemaResponse(){}
 }

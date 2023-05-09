@@ -19,6 +19,7 @@ public class ListConfigurationHistoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ListConfigurationHistoryRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -27,6 +28,7 @@ public class ListConfigurationHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventStatus")
     public ConfigurationEventStatusEnum eventStatus;
+
     public ListConfigurationHistoryRequest withEventStatus(ConfigurationEventStatusEnum eventStatus) {
         this.eventStatus = eventStatus;
         return this;
@@ -35,6 +37,7 @@ public class ListConfigurationHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListConfigurationHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -43,6 +46,7 @@ public class ListConfigurationHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConfigurationHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,6 +55,7 @@ public class ListConfigurationHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public ListConfigurationHistoryRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -61,9 +66,11 @@ public class ListConfigurationHistoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ListConfigurationHistoryRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListConfigurationHistoryRequest(){}
 }

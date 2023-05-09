@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFleetFleetnameResponse {
     
     public String contentType;
+
     public GetFleetFleetnameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetFleetFleetnameResponse {
     
     
     public Integer statusCode;
+
     public GetFleetFleetnameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetFleetFleetnameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFleetFleetnameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetFleetFleetnameResponse {
      */
     
     public GetFleetFleetname200ApplicationJSON getFleetFleetname200ApplicationJSONObject;
+
     public GetFleetFleetnameResponse withGetFleetFleetname200ApplicationJSONObject(GetFleetFleetname200ApplicationJSON getFleetFleetname200ApplicationJSONObject) {
         this.getFleetFleetname200ApplicationJSONObject = getFleetFleetname200ApplicationJSONObject;
         return this;
     }
     
+    public GetFleetFleetnameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

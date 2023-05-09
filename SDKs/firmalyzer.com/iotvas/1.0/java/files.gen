@@ -69,4 +69,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/FirmwareRiskRiskSummary.jav
 lib/src/main/java/org/openapis/openapi/models/shared/FirmwareRisk.java
 lib/src/main/java/org/openapis/openapi/models/shared/VulnerableComponent.java
 lib/src/main/java/org/openapis/openapi/models/shared/WeakCert.java
+docs/sdk/README.md
+docs/device/README.md
+docs/firmware/README.md
 USAGE.md

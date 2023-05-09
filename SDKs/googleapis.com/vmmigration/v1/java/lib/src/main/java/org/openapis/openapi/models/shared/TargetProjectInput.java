@@ -18,6 +18,7 @@ public class TargetProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetProjectInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class TargetProjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public TargetProjectInput withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public TargetProjectInput(){}
 }

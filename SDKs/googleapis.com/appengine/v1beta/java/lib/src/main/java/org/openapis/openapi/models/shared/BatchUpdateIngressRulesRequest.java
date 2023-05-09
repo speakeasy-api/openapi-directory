@@ -18,9 +18,11 @@ public class BatchUpdateIngressRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressRules")
     public FirewallRule[] ingressRules;
+
     public BatchUpdateIngressRulesRequest withIngressRules(FirewallRule[] ingressRules) {
         this.ingressRules = ingressRules;
         return this;
     }
     
+    public BatchUpdateIngressRulesRequest(){}
 }

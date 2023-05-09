@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsPatchTagNameJsonRequest {
@@ -12,6 +13,7 @@ public class TagsPatchTagNameJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch;
+
     public TagsPatchTagNameJsonRequest withApiCoreRequestsGenericTextPatch(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch) {
         this.apiCoreRequestsGenericTextPatch = apiCoreRequestsGenericTextPatch;
         return this;
@@ -22,9 +24,14 @@ public class TagsPatchTagNameJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
     public Long tagId;
+
     public TagsPatchTagNameJsonRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public TagsPatchTagNameJsonRequest(@JsonProperty("Api.Core.Requests.GenericTextPatch") org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch, @JsonProperty("tagId") Long tagId) {
+        this.apiCoreRequestsGenericTextPatch = apiCoreRequestsGenericTextPatch;
+        this.tagId = tagId;
+  }
 }

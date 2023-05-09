@@ -12,6 +12,7 @@ public class PulseSpatialOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public String option;
+
     public PulseSpatialOption withOption(String option) {
         this.option = option;
         return this;
@@ -20,9 +21,11 @@ public class PulseSpatialOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Float value;
+
     public PulseSpatialOption withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public PulseSpatialOption(){}
 }

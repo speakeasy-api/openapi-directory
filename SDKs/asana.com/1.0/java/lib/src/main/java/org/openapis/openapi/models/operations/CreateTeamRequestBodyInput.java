@@ -15,9 +15,11 @@ public class CreateTeamRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TeamRequestInput data;
+
     public CreateTeamRequestBodyInput withData(org.openapis.openapi.models.shared.TeamRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateTeamRequestBodyInput(){}
 }

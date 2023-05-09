@@ -18,6 +18,7 @@ public class GuestDiaryParametersModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactMobile")
     public String contactMobile;
+
     public GuestDiaryParametersModel withContactMobile(String contactMobile) {
         this.contactMobile = contactMobile;
         return this;
@@ -29,6 +30,7 @@ public class GuestDiaryParametersModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public GuestDiaryParametersModel withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -40,6 +42,7 @@ public class GuestDiaryParametersModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Forename")
     public String forename;
+
     public GuestDiaryParametersModel withForename(String forename) {
         this.forename = forename;
         return this;
@@ -51,6 +54,7 @@ public class GuestDiaryParametersModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public GuestDiaryParametersModel withOid(String oid) {
         this.oid = oid;
         return this;
@@ -62,9 +66,11 @@ public class GuestDiaryParametersModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Surname")
     public String surname;
+
     public GuestDiaryParametersModel withSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    public GuestDiaryParametersModel(){}
 }

@@ -15,6 +15,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String checkout;
+
     public NodesProvidersReadFileAttributes withCheckout(String checkout) {
         this.checkout = checkout;
         return this;
@@ -25,6 +26,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public NodesProvidersReadFileAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -35,6 +37,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public Long currentVersion;
+
     public NodesProvidersReadFileAttributes withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -45,6 +48,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesProvidersReadFileAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -55,6 +59,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesProvidersReadFileAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -65,6 +70,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public Boolean deleteAllowed;
+
     public NodesProvidersReadFileAttributes withDeleteAllowed(Boolean deleteAllowed) {
         this.deleteAllowed = deleteAllowed;
         return this;
@@ -75,6 +81,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public java.util.Map<String, Object> extra;
+
     public NodesProvidersReadFileAttributes withExtra(java.util.Map<String, Object> extra) {
         this.extra = extra;
         return this;
@@ -85,6 +92,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String guid;
+
     public NodesProvidersReadFileAttributes withGuid(String guid) {
         this.guid = guid;
         return this;
@@ -95,6 +103,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String kind;
+
     public NodesProvidersReadFileAttributes withKind(String kind) {
         this.kind = kind;
         return this;
@@ -105,6 +114,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public OffsetDateTime lastTouched;
+
     public NodesProvidersReadFileAttributes withLastTouched(OffsetDateTime lastTouched) {
         this.lastTouched = lastTouched;
         return this;
@@ -115,6 +125,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String materializedPath;
+
     public NodesProvidersReadFileAttributes withMaterializedPath(String materializedPath) {
         this.materializedPath = materializedPath;
         return this;
@@ -125,6 +136,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String name;
+
     public NodesProvidersReadFileAttributes withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +147,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String path;
+
     public NodesProvidersReadFileAttributes withPath(String path) {
         this.path = path;
         return this;
@@ -145,6 +158,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String provider;
+
     public NodesProvidersReadFileAttributes withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -155,6 +169,7 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public Long size;
+
     public NodesProvidersReadFileAttributes withSize(Long size) {
         this.size = size;
         return this;
@@ -165,9 +180,11 @@ public class NodesProvidersReadFileAttributes {
      */
     
     public String[] tags;
+
     public NodesProvidersReadFileAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public NodesProvidersReadFileAttributes(){}
 }

@@ -15,9 +15,11 @@ public class GetWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Workflow")
     public Workflow workflow;
+
     public GetWorkflowResponse withWorkflow(Workflow workflow) {
         this.workflow = workflow;
         return this;
     }
     
+    public GetWorkflowResponse(){}
 }

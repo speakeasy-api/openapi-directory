@@ -18,6 +18,7 @@ public class WeeklySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysOfWeek")
     public String[] daysOfWeek;
+
     public WeeklySchedule withDaysOfWeek(String[] daysOfWeek) {
         this.daysOfWeek = daysOfWeek;
         return this;
@@ -29,6 +30,7 @@ public class WeeklySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOfDay")
     public LocalTime startTimeOfDay;
+
     public WeeklySchedule withStartTimeOfDay(LocalTime startTimeOfDay) {
         this.startTimeOfDay = startTimeOfDay;
         return this;
@@ -40,6 +42,7 @@ public class WeeklySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopTimeOfDay")
     public LocalTime stopTimeOfDay;
+
     public WeeklySchedule withStopTimeOfDay(LocalTime stopTimeOfDay) {
         this.stopTimeOfDay = stopTimeOfDay;
         return this;
@@ -51,9 +54,11 @@ public class WeeklySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public WeeklySchedule withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public WeeklySchedule(){}
 }

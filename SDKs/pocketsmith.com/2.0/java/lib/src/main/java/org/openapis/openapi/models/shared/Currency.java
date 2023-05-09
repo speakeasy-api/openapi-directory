@@ -18,6 +18,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Currency withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minor_unit")
     public Long minorUnit;
+
     public Currency withMinorUnit(Long minorUnit) {
         this.minorUnit = minorUnit;
         return this;
@@ -40,6 +42,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Currency withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("separators")
     public CurrencySeparators separators;
+
     public Currency withSeparators(CurrencySeparators separators) {
         this.separators = separators;
         return this;
@@ -59,9 +63,11 @@ public class Currency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symbol")
     public String symbol;
+
     public Currency withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
     
+    public Currency(){}
 }

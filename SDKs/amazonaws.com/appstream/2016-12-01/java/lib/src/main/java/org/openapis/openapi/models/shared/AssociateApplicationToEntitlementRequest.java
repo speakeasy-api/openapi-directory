@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateApplicationToEntitlementRequest {
     @JsonProperty("ApplicationIdentifier")
     public String applicationIdentifier;
+
     public AssociateApplicationToEntitlementRequest withApplicationIdentifier(String applicationIdentifier) {
         this.applicationIdentifier = applicationIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class AssociateApplicationToEntitlementRequest {
     
     @JsonProperty("EntitlementName")
     public String entitlementName;
+
     public AssociateApplicationToEntitlementRequest withEntitlementName(String entitlementName) {
         this.entitlementName = entitlementName;
         return this;
@@ -23,9 +25,15 @@ public class AssociateApplicationToEntitlementRequest {
     
     @JsonProperty("StackName")
     public String stackName;
+
     public AssociateApplicationToEntitlementRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public AssociateApplicationToEntitlementRequest(@JsonProperty("ApplicationIdentifier") String applicationIdentifier, @JsonProperty("EntitlementName") String entitlementName, @JsonProperty("StackName") String stackName) {
+        this.applicationIdentifier = applicationIdentifier;
+        this.entitlementName = entitlementName;
+        this.stackName = stackName;
+  }
 }

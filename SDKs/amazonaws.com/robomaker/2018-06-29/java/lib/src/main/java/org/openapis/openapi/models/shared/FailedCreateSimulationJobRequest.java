@@ -22,6 +22,7 @@ public class FailedCreateSimulationJobRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("failedAt")
     public OffsetDateTime failedAt;
+
     public FailedCreateSimulationJobRequest withFailedAt(OffsetDateTime failedAt) {
         this.failedAt = failedAt;
         return this;
@@ -30,6 +31,7 @@ public class FailedCreateSimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public SimulationJobErrorCodeEnum failureCode;
+
     public FailedCreateSimulationJobRequest withFailureCode(SimulationJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -38,6 +40,7 @@ public class FailedCreateSimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public FailedCreateSimulationJobRequest withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,9 +49,11 @@ public class FailedCreateSimulationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public SimulationJobRequest request;
+
     public FailedCreateSimulationJobRequest withRequest(SimulationJobRequest request) {
         this.request = request;
         return this;
     }
     
+    public FailedCreateSimulationJobRequest(){}
 }

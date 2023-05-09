@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DraftRegistrationContributorsListRequest {
@@ -12,9 +13,13 @@ public class DraftRegistrationContributorsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=draft_id")
     public String draftId;
+
     public DraftRegistrationContributorsListRequest withDraftId(String draftId) {
         this.draftId = draftId;
         return this;
     }
     
+    public DraftRegistrationContributorsListRequest(@JsonProperty("draft_id") String draftId) {
+        this.draftId = draftId;
+  }
 }

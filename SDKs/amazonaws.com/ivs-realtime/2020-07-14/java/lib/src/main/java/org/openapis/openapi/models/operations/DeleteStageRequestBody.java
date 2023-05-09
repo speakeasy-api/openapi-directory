@@ -12,9 +12,13 @@ public class DeleteStageRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeleteStageRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteStageRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

@@ -18,6 +18,7 @@ public class AssignedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedLocationId")
     public String assignedLocationId;
+
     public AssignedLocation withAssignedLocationId(String assignedLocationId) {
         this.assignedLocationId = assignedLocationId;
         return this;
@@ -29,6 +30,7 @@ public class AssignedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssignedLocation withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class AssignedLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public AssignedLocation withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public AssignedLocation(){}
 }

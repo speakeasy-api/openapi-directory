@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterGameServerResponse {
@@ -12,6 +13,7 @@ public class RegisterGameServerResponse {
      */
     
     public Object conflictException;
+
     public RegisterGameServerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterGameServerResponse {
     
     
     public String contentType;
+
     public RegisterGameServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterGameServerResponse {
      */
     
     public Object internalServiceException;
+
     public RegisterGameServerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterGameServerResponse {
      */
     
     public Object invalidRequestException;
+
     public RegisterGameServerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterGameServerResponse {
      */
     
     public Object limitExceededException;
+
     public RegisterGameServerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterGameServerResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterGameServerOutput registerGameServerOutput;
+
     public RegisterGameServerResponse withRegisterGameServerOutput(org.openapis.openapi.models.shared.RegisterGameServerOutput registerGameServerOutput) {
         this.registerGameServerOutput = registerGameServerOutput;
         return this;
@@ -66,6 +73,7 @@ public class RegisterGameServerResponse {
     
     
     public Integer statusCode;
+
     public RegisterGameServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RegisterGameServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterGameServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class RegisterGameServerResponse {
      */
     
     public Object unauthorizedException;
+
     public RegisterGameServerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public RegisterGameServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

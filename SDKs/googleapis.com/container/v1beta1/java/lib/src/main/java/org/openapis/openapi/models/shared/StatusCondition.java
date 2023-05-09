@@ -18,6 +18,7 @@ public class StatusCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canonicalCode")
     public StatusConditionCanonicalCodeEnum canonicalCode;
+
     public StatusCondition withCanonicalCode(StatusConditionCanonicalCodeEnum canonicalCode) {
         this.canonicalCode = canonicalCode;
         return this;
@@ -29,6 +30,7 @@ public class StatusCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public StatusConditionCodeEnum code;
+
     public StatusCondition withCode(StatusConditionCodeEnum code) {
         this.code = code;
         return this;
@@ -40,9 +42,11 @@ public class StatusCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StatusCondition withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public StatusCondition(){}
 }

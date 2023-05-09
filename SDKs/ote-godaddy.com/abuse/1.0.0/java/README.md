@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateTicketResponse;
-import org.openapis.openapi.models.shared.AbuseTicketCreateTypeEnum;
 import org.openapis.openapi.models.shared.AbuseTicketCreate;
+import org.openapis.openapi.models.shared.AbuseTicketCreateTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,17 +33,19 @@ public class Application {
                 proxy = "distinctio";
                 source = "quibusdam";
                 target = "unde";
-                type = "PHISHING";
-            }}            
+                type = AbuseTicketCreateTypeEnum.PHISHING;
+            }};            
 
             CreateTicketResponse res = sdk.v1.createTicket(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -52,11 +53,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### v1
+### [v1](docs/v1/README.md)
 
-* `createTicket` - Create a new abuse ticket
-* `getTicketInfo` - Return the abuse ticket data for a given ticket id
-* `getTickets` - List all abuse tickets ids that match user provided filters
+* [createTicket](docs/v1/README.md#createticket) - Create a new abuse ticket
+* [getTicketInfo](docs/v1/README.md#getticketinfo) - Return the abuse ticket data for a given ticket id
+* [getTickets](docs/v1/README.md#gettickets) - List all abuse tickets ids that match user provided filters
 <!-- End SDK Available Operations -->
 
 ### Maturity

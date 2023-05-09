@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMessengerAccountResponse {
@@ -12,6 +13,7 @@ public class CreateMessengerAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse;
+
     public CreateMessengerAccountResponse withFourHundredAndOneResponse(org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse) {
         this.fourHundredAndOneResponse = fourHundredAndOneResponse;
         return this;
@@ -22,6 +24,7 @@ public class CreateMessengerAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeResponse fourHundredAndThreeResponse;
+
     public CreateMessengerAccountResponse withFourHundredAndThreeResponse(org.openapis.openapi.models.shared.FourHundredAndThreeResponse fourHundredAndThreeResponse) {
         this.fourHundredAndThreeResponse = fourHundredAndThreeResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateMessengerAccountResponse {
     
     
     public String contentType;
+
     public CreateMessengerAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMessengerAccountResponse {
      */
     
     public CreateMessengerAccount400ApplicationJSON createMessengerAccount400ApplicationJSONObject;
+
     public CreateMessengerAccountResponse withCreateMessengerAccount400ApplicationJSONObject(CreateMessengerAccount400ApplicationJSON createMessengerAccount400ApplicationJSONObject) {
         this.createMessengerAccount400ApplicationJSONObject = createMessengerAccount400ApplicationJSONObject;
         return this;
@@ -49,6 +54,7 @@ public class CreateMessengerAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.MessengerAccountResponse messengerAccountResponse;
+
     public CreateMessengerAccountResponse withMessengerAccountResponse(org.openapis.openapi.models.shared.MessengerAccountResponse messengerAccountResponse) {
         this.messengerAccountResponse = messengerAccountResponse;
         return this;
@@ -56,6 +62,7 @@ public class CreateMessengerAccountResponse {
     
     
     public Integer statusCode;
+
     public CreateMessengerAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateMessengerAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMessengerAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateMessengerAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

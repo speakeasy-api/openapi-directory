@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookFilterRule {
     @JsonProperty("jsonPath")
     public String jsonPath;
+
     public WebhookFilterRule withJsonPath(String jsonPath) {
         this.jsonPath = jsonPath;
         return this;
@@ -22,9 +23,13 @@ public class WebhookFilterRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchEquals")
     public String matchEquals;
+
     public WebhookFilterRule withMatchEquals(String matchEquals) {
         this.matchEquals = matchEquals;
         return this;
     }
     
+    public WebhookFilterRule(@JsonProperty("jsonPath") String jsonPath) {
+        this.jsonPath = jsonPath;
+  }
 }

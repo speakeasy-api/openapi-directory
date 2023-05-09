@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSmtpDomainRequest {
@@ -12,6 +13,7 @@ public class DeleteSmtpDomainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public DeleteSmtpDomainRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -22,6 +24,7 @@ public class DeleteSmtpDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public DeleteSmtpDomainRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -32,9 +35,15 @@ public class DeleteSmtpDomainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hostname")
     public String hostname;
+
     public DeleteSmtpDomainRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public DeleteSmtpDomainRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("hostname") String hostname) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.hostname = hostname;
+  }
 }

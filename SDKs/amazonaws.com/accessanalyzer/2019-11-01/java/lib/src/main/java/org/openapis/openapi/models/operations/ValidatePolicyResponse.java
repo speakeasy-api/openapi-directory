@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ValidatePolicyResponse {
@@ -12,6 +13,7 @@ public class ValidatePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public ValidatePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ValidatePolicyResponse {
     
     
     public String contentType;
+
     public ValidatePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ValidatePolicyResponse {
      */
     
     public Object internalServerException;
+
     public ValidatePolicyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class ValidatePolicyResponse {
     
     
     public Integer statusCode;
+
     public ValidatePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ValidatePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ValidatePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ValidatePolicyResponse {
      */
     
     public Object throttlingException;
+
     public ValidatePolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class ValidatePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidatePolicyResponse validatePolicyResponse;
+
     public ValidatePolicyResponse withValidatePolicyResponse(org.openapis.openapi.models.shared.ValidatePolicyResponse validatePolicyResponse) {
         this.validatePolicyResponse = validatePolicyResponse;
         return this;
@@ -73,9 +81,14 @@ public class ValidatePolicyResponse {
      */
     
     public Object validationException;
+
     public ValidatePolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ValidatePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

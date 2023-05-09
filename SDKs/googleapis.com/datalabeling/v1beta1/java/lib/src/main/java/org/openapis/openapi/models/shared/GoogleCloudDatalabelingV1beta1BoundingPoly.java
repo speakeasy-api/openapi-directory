@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1BoundingPoly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertices")
     public GoogleCloudDatalabelingV1beta1Vertex[] vertices;
+
     public GoogleCloudDatalabelingV1beta1BoundingPoly withVertices(GoogleCloudDatalabelingV1beta1Vertex[] vertices) {
         this.vertices = vertices;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1BoundingPoly(){}
 }

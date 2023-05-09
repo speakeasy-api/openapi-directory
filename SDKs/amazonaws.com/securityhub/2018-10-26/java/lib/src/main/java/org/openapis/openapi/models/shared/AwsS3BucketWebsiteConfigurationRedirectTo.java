@@ -15,6 +15,7 @@ public class AwsS3BucketWebsiteConfigurationRedirectTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public AwsS3BucketWebsiteConfigurationRedirectTo withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketWebsiteConfigurationRedirectTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public String protocol;
+
     public AwsS3BucketWebsiteConfigurationRedirectTo withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public AwsS3BucketWebsiteConfigurationRedirectTo(){}
 }

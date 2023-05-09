@@ -15,6 +15,7 @@ public class APNSPushNotificationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public APNSPushNotificationTemplate withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class APNSPushNotificationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public APNSPushNotificationTemplate withBody(String body) {
         this.body = body;
         return this;
@@ -31,6 +33,7 @@ public class APNSPushNotificationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaUrl")
     public String mediaUrl;
+
     public APNSPushNotificationTemplate withMediaUrl(String mediaUrl) {
         this.mediaUrl = mediaUrl;
         return this;
@@ -39,6 +42,7 @@ public class APNSPushNotificationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawContent")
     public String rawContent;
+
     public APNSPushNotificationTemplate withRawContent(String rawContent) {
         this.rawContent = rawContent;
         return this;
@@ -47,6 +51,7 @@ public class APNSPushNotificationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sound")
     public String sound;
+
     public APNSPushNotificationTemplate withSound(String sound) {
         this.sound = sound;
         return this;
@@ -55,6 +60,7 @@ public class APNSPushNotificationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public APNSPushNotificationTemplate withTitle(String title) {
         this.title = title;
         return this;
@@ -63,9 +69,11 @@ public class APNSPushNotificationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public APNSPushNotificationTemplate withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public APNSPushNotificationTemplate(){}
 }

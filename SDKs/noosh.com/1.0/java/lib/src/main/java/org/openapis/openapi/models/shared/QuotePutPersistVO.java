@@ -15,6 +15,7 @@ public class QuotePutPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public QuotePutPersistVO withAction(String action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class QuotePutPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("po_number")
     public String poNumber;
+
     public QuotePutPersistVO withPoNumber(String poNumber) {
         this.poNumber = poNumber;
         return this;
@@ -31,6 +33,7 @@ public class QuotePutPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Long quoteId;
+
     public QuotePutPersistVO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -39,9 +42,11 @@ public class QuotePutPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_change_comments")
     public String stateChangeComments;
+
     public QuotePutPersistVO withStateChangeComments(String stateChangeComments) {
         this.stateChangeComments = stateChangeComments;
         return this;
     }
     
+    public QuotePutPersistVO(){}
 }

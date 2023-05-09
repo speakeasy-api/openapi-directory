@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ApplicationVersionDescription {
     
     public String applicationName;
+
     public ApplicationVersionDescription withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class ApplicationVersionDescription {
     
     
     public String applicationVersionArn;
+
     public ApplicationVersionDescription withApplicationVersionArn(String applicationVersionArn) {
         this.applicationVersionArn = applicationVersionArn;
         return this;
@@ -26,6 +28,7 @@ public class ApplicationVersionDescription {
     
     
     public String buildArn;
+
     public ApplicationVersionDescription withBuildArn(String buildArn) {
         this.buildArn = buildArn;
         return this;
@@ -33,6 +36,7 @@ public class ApplicationVersionDescription {
     
     
     public OffsetDateTime dateCreated;
+
     public ApplicationVersionDescription withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -40,6 +44,7 @@ public class ApplicationVersionDescription {
     
     
     public OffsetDateTime dateUpdated;
+
     public ApplicationVersionDescription withDateUpdated(OffsetDateTime dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -47,6 +52,7 @@ public class ApplicationVersionDescription {
     
     
     public String description;
+
     public ApplicationVersionDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +60,7 @@ public class ApplicationVersionDescription {
     
     
     public SourceBuildInformation sourceBuildInformation;
+
     public ApplicationVersionDescription withSourceBuildInformation(SourceBuildInformation sourceBuildInformation) {
         this.sourceBuildInformation = sourceBuildInformation;
         return this;
@@ -61,6 +68,7 @@ public class ApplicationVersionDescription {
     
     
     public S3Location sourceBundle;
+
     public ApplicationVersionDescription withSourceBundle(S3Location sourceBundle) {
         this.sourceBundle = sourceBundle;
         return this;
@@ -68,6 +76,7 @@ public class ApplicationVersionDescription {
     
     
     public ApplicationVersionStatusEnum status;
+
     public ApplicationVersionDescription withStatus(ApplicationVersionStatusEnum status) {
         this.status = status;
         return this;
@@ -75,9 +84,11 @@ public class ApplicationVersionDescription {
     
     
     public String versionLabel;
+
     public ApplicationVersionDescription withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public ApplicationVersionDescription(){}
 }

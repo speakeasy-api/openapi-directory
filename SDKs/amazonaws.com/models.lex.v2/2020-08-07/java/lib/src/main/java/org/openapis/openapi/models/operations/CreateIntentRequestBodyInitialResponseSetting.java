@@ -18,6 +18,7 @@ public class CreateIntentRequestBodyInitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeHook")
     public org.openapis.openapi.models.shared.DialogCodeHookInvocationSetting codeHook;
+
     public CreateIntentRequestBodyInitialResponseSetting withCodeHook(org.openapis.openapi.models.shared.DialogCodeHookInvocationSetting codeHook) {
         this.codeHook = codeHook;
         return this;
@@ -29,6 +30,7 @@ public class CreateIntentRequestBodyInitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditional")
     public org.openapis.openapi.models.shared.ConditionalSpecification conditional;
+
     public CreateIntentRequestBodyInitialResponseSetting withConditional(org.openapis.openapi.models.shared.ConditionalSpecification conditional) {
         this.conditional = conditional;
         return this;
@@ -40,6 +42,7 @@ public class CreateIntentRequestBodyInitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialResponse")
     public org.openapis.openapi.models.shared.ResponseSpecification initialResponse;
+
     public CreateIntentRequestBodyInitialResponseSetting withInitialResponse(org.openapis.openapi.models.shared.ResponseSpecification initialResponse) {
         this.initialResponse = initialResponse;
         return this;
@@ -48,9 +51,11 @@ public class CreateIntentRequestBodyInitialResponseSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextStep")
     public org.openapis.openapi.models.shared.DialogState nextStep;
+
     public CreateIntentRequestBodyInitialResponseSetting withNextStep(org.openapis.openapi.models.shared.DialogState nextStep) {
         this.nextStep = nextStep;
         return this;
     }
     
+    public CreateIntentRequestBodyInitialResponseSetting(){}
 }

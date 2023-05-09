@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoreInfoJsonRequest {
@@ -12,6 +13,7 @@ public class GetStoreInfoJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetStoreInfoJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,9 +24,14 @@ public class GetStoreInfoJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetStoreInfoJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetStoreInfoJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

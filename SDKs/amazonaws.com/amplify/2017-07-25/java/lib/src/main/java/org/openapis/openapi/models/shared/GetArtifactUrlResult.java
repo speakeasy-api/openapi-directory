@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetArtifactUrlResult {
     @JsonProperty("artifactId")
     public String artifactId;
+
     public GetArtifactUrlResult withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -19,9 +20,14 @@ public class GetArtifactUrlResult {
     
     @JsonProperty("artifactUrl")
     public String artifactUrl;
+
     public GetArtifactUrlResult withArtifactUrl(String artifactUrl) {
         this.artifactUrl = artifactUrl;
         return this;
     }
     
+    public GetArtifactUrlResult(@JsonProperty("artifactId") String artifactId, @JsonProperty("artifactUrl") String artifactUrl) {
+        this.artifactId = artifactId;
+        this.artifactUrl = artifactUrl;
+  }
 }

@@ -60,11 +60,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsCreateResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsCreateResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsCreateResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsCreateResponse(contentType, httpRes.statusCode()) {{
             admin = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsDeleteResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsDeleteResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsDeleteResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsListResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsListResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsListResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsListResponse(contentType, httpRes.statusCode()) {{
             listLocationAdminsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsPatchResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsPatchResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsPatchResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsAdminsPatchResponse(contentType, httpRes.statusCode()) {{
             admin = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsTransferResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsTransferResponse() {{
+        org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsTransferResponse res = new org.openapis.openapi.models.operations.MybusinessaccountmanagementLocationsTransferResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

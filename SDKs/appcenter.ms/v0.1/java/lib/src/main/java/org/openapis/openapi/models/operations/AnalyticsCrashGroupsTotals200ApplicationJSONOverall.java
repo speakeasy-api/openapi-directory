@@ -12,6 +12,7 @@ public class AnalyticsCrashGroupsTotals200ApplicationJSONOverall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_count")
     public Long crashCount;
+
     public AnalyticsCrashGroupsTotals200ApplicationJSONOverall withCrashCount(Long crashCount) {
         this.crashCount = crashCount;
         return this;
@@ -20,9 +21,11 @@ public class AnalyticsCrashGroupsTotals200ApplicationJSONOverall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_count")
     public Long deviceCount;
+
     public AnalyticsCrashGroupsTotals200ApplicationJSONOverall withDeviceCount(Long deviceCount) {
         this.deviceCount = deviceCount;
         return this;
     }
     
+    public AnalyticsCrashGroupsTotals200ApplicationJSONOverall(){}
 }

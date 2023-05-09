@@ -15,6 +15,7 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withComment(String comment) {
         this.comment = comment;
         return this;
@@ -25,6 +26,7 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
      */
     @JsonProperty("destCidr")
     public String destCidr;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withDestCidr(String destCidr) {
         this.destCidr = destCidr;
         return this;
@@ -36,6 +38,7 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destPort")
     public String destPort;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withDestPort(String destPort) {
         this.destPort = destPort;
         return this;
@@ -46,6 +49,7 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
      */
     @JsonProperty("policy")
     public UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum policy;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withPolicy(UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum policy) {
         this.policy = policy;
         return this;
@@ -56,6 +60,7 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
      */
     @JsonProperty("protocol")
     public UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum protocol;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withProtocol(UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -66,6 +71,7 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
      */
     @JsonProperty("srcCidr")
     public String srcCidr;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withSrcCidr(String srcCidr) {
         this.srcCidr = srcCidr;
         return this;
@@ -77,6 +83,7 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcPort")
     public String srcPort;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withSrcPort(String srcPort) {
         this.srcPort = srcPort;
         return this;
@@ -88,9 +95,16 @@ public class UpdateNetworkCellularFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syslogEnabled")
     public Boolean syslogEnabled;
+
     public UpdateNetworkCellularFirewallRulesRequestBodyRules withSyslogEnabled(Boolean syslogEnabled) {
         this.syslogEnabled = syslogEnabled;
         return this;
     }
     
+    public UpdateNetworkCellularFirewallRulesRequestBodyRules(@JsonProperty("destCidr") String destCidr, @JsonProperty("policy") UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum policy, @JsonProperty("protocol") UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum protocol, @JsonProperty("srcCidr") String srcCidr) {
+        this.destCidr = destCidr;
+        this.policy = policy;
+        this.protocol = protocol;
+        this.srcCidr = srcCidr;
+  }
 }

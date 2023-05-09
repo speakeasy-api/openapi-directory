@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ContextEntry {
     
     public String contextKeyName;
+
     public ContextEntry withContextKeyName(String contextKeyName) {
         this.contextKeyName = contextKeyName;
         return this;
@@ -19,6 +20,7 @@ public class ContextEntry {
     
     
     public ContextKeyTypeEnumEnum contextKeyType;
+
     public ContextEntry withContextKeyType(ContextKeyTypeEnumEnum contextKeyType) {
         this.contextKeyType = contextKeyType;
         return this;
@@ -26,9 +28,11 @@ public class ContextEntry {
     
     
     public String[] contextKeyValues;
+
     public ContextEntry withContextKeyValues(String[] contextKeyValues) {
         this.contextKeyValues = contextKeyValues;
         return this;
     }
     
+    public ContextEntry(){}
 }

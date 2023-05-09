@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetGetNotificationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetGetNotificationsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -16,9 +17,11 @@ public class GetGetNotificationsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetGetNotificationsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetGetNotificationsRequest(){}
 }

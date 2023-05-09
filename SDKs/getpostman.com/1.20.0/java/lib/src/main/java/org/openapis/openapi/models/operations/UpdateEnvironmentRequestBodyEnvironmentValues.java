@@ -12,6 +12,7 @@ public class UpdateEnvironmentRequestBodyEnvironmentValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public UpdateEnvironmentRequestBodyEnvironmentValues withKey(String key) {
         this.key = key;
         return this;
@@ -20,9 +21,11 @@ public class UpdateEnvironmentRequestBodyEnvironmentValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UpdateEnvironmentRequestBodyEnvironmentValues withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateEnvironmentRequestBodyEnvironmentValues(){}
 }

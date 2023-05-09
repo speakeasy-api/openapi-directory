@@ -18,6 +18,7 @@ public class AliasIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public AliasIpRange withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -29,9 +30,11 @@ public class AliasIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworkRangeName")
     public String subnetworkRangeName;
+
     public AliasIpRange withSubnetworkRangeName(String subnetworkRangeName) {
         this.subnetworkRangeName = subnetworkRangeName;
         return this;
     }
     
+    public AliasIpRange(){}
 }

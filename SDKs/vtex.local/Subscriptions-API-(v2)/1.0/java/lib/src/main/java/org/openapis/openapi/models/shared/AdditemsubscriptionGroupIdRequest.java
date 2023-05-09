@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdditemsubscriptionGroupIdRequest {
     @JsonProperty("endpoint")
     public String endpoint;
+
     public AdditemsubscriptionGroupIdRequest withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -16,6 +17,7 @@ public class AdditemsubscriptionGroupIdRequest {
     
     @JsonProperty("priceAtSubscriptionDate")
     public Integer priceAtSubscriptionDate;
+
     public AdditemsubscriptionGroupIdRequest withPriceAtSubscriptionDate(Integer priceAtSubscriptionDate) {
         this.priceAtSubscriptionDate = priceAtSubscriptionDate;
         return this;
@@ -23,6 +25,7 @@ public class AdditemsubscriptionGroupIdRequest {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public AdditemsubscriptionGroupIdRequest withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -30,6 +33,7 @@ public class AdditemsubscriptionGroupIdRequest {
     
     @JsonProperty("sellingPrice")
     public Integer sellingPrice;
+
     public AdditemsubscriptionGroupIdRequest withSellingPrice(Integer sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -37,9 +41,17 @@ public class AdditemsubscriptionGroupIdRequest {
     
     @JsonProperty("sku")
     public Sku sku;
+
     public AdditemsubscriptionGroupIdRequest withSku(Sku sku) {
         this.sku = sku;
         return this;
     }
     
+    public AdditemsubscriptionGroupIdRequest(@JsonProperty("endpoint") String endpoint, @JsonProperty("priceAtSubscriptionDate") Integer priceAtSubscriptionDate, @JsonProperty("quantity") Integer quantity, @JsonProperty("sellingPrice") Integer sellingPrice, @JsonProperty("sku") Sku sku) {
+        this.endpoint = endpoint;
+        this.priceAtSubscriptionDate = priceAtSubscriptionDate;
+        this.quantity = quantity;
+        this.sellingPrice = sellingPrice;
+        this.sku = sku;
+  }
 }

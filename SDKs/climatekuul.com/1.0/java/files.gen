@@ -90,4 +90,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/ConfirmsPlanting3Reques
 lib/src/main/java/org/openapis/openapi/models/operations/ConfirmsPlanting3Response.java
 lib/src/main/java/org/openapis/openapi/models/shared/AirtravelMultilegRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Leg1.java
+docs/sdk/README.md
+docs/airtravelcoordinates/README.md
+docs/ecommercedelivery/README.md
+docs/requestapikey/README.md
+docs/roaddistance/README.md
+docs/urbandelivery/README.md
+docs/airtravelmultileg/README.md
 USAGE.md

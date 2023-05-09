@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartImagePipelineExecutionResponse {
@@ -12,6 +13,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public StartImagePipelineExecutionResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object clientException;
+
     public StartImagePipelineExecutionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class StartImagePipelineExecutionResponse {
     
     
     public String contentType;
+
     public StartImagePipelineExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object forbiddenException;
+
     public StartImagePipelineExecutionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartImagePipelineExecutionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public StartImagePipelineExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object resourceInUseException;
+
     public StartImagePipelineExecutionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -79,6 +87,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartImagePipelineExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object serviceException;
+
     public StartImagePipelineExecutionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -99,6 +109,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public StartImagePipelineExecutionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -109,6 +120,7 @@ public class StartImagePipelineExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartImagePipelineExecutionResponse startImagePipelineExecutionResponse;
+
     public StartImagePipelineExecutionResponse withStartImagePipelineExecutionResponse(org.openapis.openapi.models.shared.StartImagePipelineExecutionResponse startImagePipelineExecutionResponse) {
         this.startImagePipelineExecutionResponse = startImagePipelineExecutionResponse;
         return this;
@@ -116,6 +128,7 @@ public class StartImagePipelineExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartImagePipelineExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,9 +136,14 @@ public class StartImagePipelineExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartImagePipelineExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartImagePipelineExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

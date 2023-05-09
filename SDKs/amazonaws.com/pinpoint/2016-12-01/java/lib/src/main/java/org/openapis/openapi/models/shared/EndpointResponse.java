@@ -15,6 +15,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public EndpointResponse withAddress(String address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public EndpointResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -31,6 +33,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String[]> attributes;
+
     public EndpointResponse withAttributes(java.util.Map<String, String[]> attributes) {
         this.attributes = attributes;
         return this;
@@ -39,6 +42,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelType")
     public ChannelTypeEnum channelType;
+
     public EndpointResponse withChannelType(ChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -47,6 +51,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CohortId")
     public String cohortId;
+
     public EndpointResponse withCohortId(String cohortId) {
         this.cohortId = cohortId;
         return this;
@@ -55,6 +60,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public EndpointResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -63,6 +69,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Demographic")
     public EndpointDemographic demographic;
+
     public EndpointResponse withDemographic(EndpointDemographic demographic) {
         this.demographic = demographic;
         return this;
@@ -71,6 +78,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveDate")
     public String effectiveDate;
+
     public EndpointResponse withEffectiveDate(String effectiveDate) {
         this.effectiveDate = effectiveDate;
         return this;
@@ -79,6 +87,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointStatus")
     public String endpointStatus;
+
     public EndpointResponse withEndpointStatus(String endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -87,6 +96,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public EndpointResponse withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +105,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public EndpointLocation location;
+
     public EndpointResponse withLocation(EndpointLocation location) {
         this.location = location;
         return this;
@@ -103,6 +114,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, Double> metrics;
+
     public EndpointResponse withMetrics(java.util.Map<String, Double> metrics) {
         this.metrics = metrics;
         return this;
@@ -111,6 +123,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOut")
     public String optOut;
+
     public EndpointResponse withOptOut(String optOut) {
         this.optOut = optOut;
         return this;
@@ -119,6 +132,7 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public EndpointResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -127,9 +141,11 @@ public class EndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public EndpointUser user;
+
     public EndpointResponse withUser(EndpointUser user) {
         this.user = user;
         return this;
     }
     
+    public EndpointResponse(){}
 }

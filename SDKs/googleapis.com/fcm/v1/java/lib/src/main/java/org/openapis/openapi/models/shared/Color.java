@@ -18,6 +18,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alpha")
     public Float alpha;
+
     public Color withAlpha(Float alpha) {
         this.alpha = alpha;
         return this;
@@ -29,6 +30,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blue")
     public Float blue;
+
     public Color withBlue(Float blue) {
         this.blue = blue;
         return this;
@@ -40,6 +42,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("green")
     public Float green;
+
     public Color withGreen(Float green) {
         this.green = green;
         return this;
@@ -51,9 +54,11 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("red")
     public Float red;
+
     public Color withRed(Float red) {
         this.red = red;
         return this;
     }
     
+    public Color(){}
 }

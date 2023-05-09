@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePatchBaselineResponse {
     
     public String contentType;
+
     public CreatePatchBaselineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreatePatchBaselineResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePatchBaselineResult createPatchBaselineResult;
+
     public CreatePatchBaselineResponse withCreatePatchBaselineResult(org.openapis.openapi.models.shared.CreatePatchBaselineResult createPatchBaselineResult) {
         this.createPatchBaselineResult = createPatchBaselineResult;
         return this;
@@ -29,6 +32,7 @@ public class CreatePatchBaselineResponse {
      */
     
     public Object idempotentParameterMismatch;
+
     public CreatePatchBaselineResponse withIdempotentParameterMismatch(Object idempotentParameterMismatch) {
         this.idempotentParameterMismatch = idempotentParameterMismatch;
         return this;
@@ -39,6 +43,7 @@ public class CreatePatchBaselineResponse {
      */
     
     public Object internalServerError;
+
     public CreatePatchBaselineResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class CreatePatchBaselineResponse {
     
     
     public Integer statusCode;
+
     public CreatePatchBaselineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreatePatchBaselineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePatchBaselineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreatePatchBaselineResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreatePatchBaselineResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
     }
     
+    public CreatePatchBaselineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

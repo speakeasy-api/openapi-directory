@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitV2StartMfaSignInResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneResponseInfo")
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo phoneResponseInfo;
+
     public GoogleCloudIdentitytoolkitV2StartMfaSignInResponse withPhoneResponseInfo(GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo phoneResponseInfo) {
         this.phoneResponseInfo = phoneResponseInfo;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2StartMfaSignInResponse(){}
 }

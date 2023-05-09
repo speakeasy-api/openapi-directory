@@ -12,6 +12,7 @@ public class GetDomainsUpdatesDeletedDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetDomainsUpdatesDeletedDownloadRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +23,11 @@ public class GetDomainsUpdatesDeletedDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetDomainsUpdatesDeletedDownloadRequest withDate(String date) {
         this.date = date;
         return this;
     }
     
+    public GetDomainsUpdatesDeletedDownloadRequest(){}
 }

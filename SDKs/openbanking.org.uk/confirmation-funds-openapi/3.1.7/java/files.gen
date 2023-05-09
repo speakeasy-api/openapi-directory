@@ -59,4 +59,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/OBFundsConfirmationResponse
 lib/src/main/java/org/openapis/openapi/models/shared/OBFundsConfirmation1DataInstructedAmount.java
 lib/src/main/java/org/openapis/openapi/models/shared/OBFundsConfirmation1Data.java
 lib/src/main/java/org/openapis/openapi/models/shared/OBFundsConfirmation1.java
+docs/sdk/README.md
+docs/fundsconfirmations/README.md
 USAGE.md

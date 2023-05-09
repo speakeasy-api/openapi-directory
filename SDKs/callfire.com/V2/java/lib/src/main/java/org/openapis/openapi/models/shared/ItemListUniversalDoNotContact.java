@@ -18,9 +18,11 @@ public class ItemListUniversalDoNotContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public UniversalDoNotContact[] items;
+
     public ItemListUniversalDoNotContact withItems(UniversalDoNotContact[] items) {
         this.items = items;
         return this;
     }
     
+    public ItemListUniversalDoNotContact(){}
 }

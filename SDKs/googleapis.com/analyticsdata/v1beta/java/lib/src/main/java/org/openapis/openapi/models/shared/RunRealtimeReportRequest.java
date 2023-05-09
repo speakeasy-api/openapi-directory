@@ -18,6 +18,7 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public FilterExpression dimensionFilter;
+
     public RunRealtimeReportRequest withDimensionFilter(FilterExpression dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
@@ -29,17 +30,19 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public RunRealtimeReportRequest withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
     }
     
     /**
-     * The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value.
+     * The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 250,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public String limit;
+
     public RunRealtimeReportRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -51,6 +54,7 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAggregations")
     public RunRealtimeReportRequestMetricAggregationsEnum[] metricAggregations;
+
     public RunRealtimeReportRequest withMetricAggregations(RunRealtimeReportRequestMetricAggregationsEnum[] metricAggregations) {
         this.metricAggregations = metricAggregations;
         return this;
@@ -62,6 +66,7 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricFilter")
     public FilterExpression metricFilter;
+
     public RunRealtimeReportRequest withMetricFilter(FilterExpression metricFilter) {
         this.metricFilter = metricFilter;
         return this;
@@ -73,6 +78,7 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public RunRealtimeReportRequest withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -84,6 +90,7 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minuteRanges")
     public MinuteRange[] minuteRanges;
+
     public RunRealtimeReportRequest withMinuteRanges(MinuteRange[] minuteRanges) {
         this.minuteRanges = minuteRanges;
         return this;
@@ -95,6 +102,7 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBys")
     public OrderBy[] orderBys;
+
     public RunRealtimeReportRequest withOrderBys(OrderBy[] orderBys) {
         this.orderBys = orderBys;
         return this;
@@ -106,9 +114,11 @@ public class RunRealtimeReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPropertyQuota")
     public Boolean returnPropertyQuota;
+
     public RunRealtimeReportRequest withReturnPropertyQuota(Boolean returnPropertyQuota) {
         this.returnPropertyQuota = returnPropertyQuota;
         return this;
     }
     
+    public RunRealtimeReportRequest(){}
 }

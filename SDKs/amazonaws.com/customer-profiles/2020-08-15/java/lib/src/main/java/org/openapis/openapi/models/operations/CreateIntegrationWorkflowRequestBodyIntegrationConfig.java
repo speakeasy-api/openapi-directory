@@ -15,9 +15,11 @@ public class CreateIntegrationWorkflowRequestBodyIntegrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppflowIntegration")
     public org.openapis.openapi.models.shared.AppflowIntegration appflowIntegration;
+
     public CreateIntegrationWorkflowRequestBodyIntegrationConfig withAppflowIntegration(org.openapis.openapi.models.shared.AppflowIntegration appflowIntegration) {
         this.appflowIntegration = appflowIntegration;
         return this;
     }
     
+    public CreateIntegrationWorkflowRequestBodyIntegrationConfig(){}
 }

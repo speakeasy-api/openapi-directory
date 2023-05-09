@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelSubscriptionsbySubscriptionIdRequest {
@@ -12,6 +13,7 @@ public class CancelSubscriptionsbySubscriptionIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CancelSubscriptionsbySubscriptionIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CancelSubscriptionsbySubscriptionIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CancelSubscriptionsbySubscriptionIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class CancelSubscriptionsbySubscriptionIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
     public String subscriptionId;
+
     public CancelSubscriptionsbySubscriptionIdRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public CancelSubscriptionsbySubscriptionIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("subscriptionId") String subscriptionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.subscriptionId = subscriptionId;
+  }
 }

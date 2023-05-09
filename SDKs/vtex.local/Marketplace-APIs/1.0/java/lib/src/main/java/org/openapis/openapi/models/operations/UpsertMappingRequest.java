@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertMappingRequest {
@@ -12,6 +13,7 @@ public class UpsertMappingRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpsertMappingRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpsertMappingRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpsertMappingRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpsertMappingRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpsertMappingRequest[] requestBody;
+
     public UpsertMappingRequest withRequestBody(org.openapis.openapi.models.shared.UpsertMappingRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class UpsertMappingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public UpsertMappingRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,6 +54,7 @@ public class UpsertMappingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
     public String an;
+
     public UpsertMappingRequest withAn(String an) {
         this.an = an;
         return this;
@@ -59,6 +65,7 @@ public class UpsertMappingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public UpsertMappingRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -69,9 +76,19 @@ public class UpsertMappingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public UpsertMappingRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public UpsertMappingRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.UpsertMappingRequest[] requestBody, @JsonProperty("accountName") String accountName, @JsonProperty("an") String an, @JsonProperty("environment") String environment, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.accountName = accountName;
+        this.an = an;
+        this.environment = environment;
+        this.sellerId = sellerId;
+  }
 }

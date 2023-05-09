@@ -15,6 +15,7 @@ public class PutPrimaryIpsIdUpdatePrimaryIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_delete")
     public Boolean autoDelete;
+
     public PutPrimaryIpsIdUpdatePrimaryIPRequest withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -26,6 +27,7 @@ public class PutPrimaryIpsIdUpdatePrimaryIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PutPrimaryIpsIdUpdatePrimaryIPRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -37,9 +39,11 @@ public class PutPrimaryIpsIdUpdatePrimaryIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PutPrimaryIpsIdUpdatePrimaryIPRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutPrimaryIpsIdUpdatePrimaryIPRequest(){}
 }

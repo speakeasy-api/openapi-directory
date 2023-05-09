@@ -18,6 +18,7 @@ public class IosAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeyId")
     public String apiKeyId;
+
     public IosAppInput withApiKeyId(String apiKeyId) {
         this.apiKeyId = apiKeyId;
         return this;
@@ -29,6 +30,7 @@ public class IosAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appStoreId")
     public String appStoreId;
+
     public IosAppInput withAppStoreId(String appStoreId) {
         this.appStoreId = appStoreId;
         return this;
@@ -40,6 +42,7 @@ public class IosAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public IosAppInput withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -51,6 +54,7 @@ public class IosAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public IosAppInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class IosAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public IosAppInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -73,6 +78,7 @@ public class IosAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IosAppInput withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class IosAppInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public String teamId;
+
     public IosAppInput withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public IosAppInput(){}
 }

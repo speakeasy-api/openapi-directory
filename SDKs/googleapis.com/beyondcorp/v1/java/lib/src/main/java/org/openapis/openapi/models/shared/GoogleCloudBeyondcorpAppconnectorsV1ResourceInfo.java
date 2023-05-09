@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public java.util.Map<String, Object> resource;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo withResource(java.util.Map<String, Object> resource) {
         this.resource = resource;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum status;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo withStatus(GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum status) {
         this.status = status;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub")
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo[] sub;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo withSub(GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo[] sub) {
         this.sub = sub;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo(){}
 }

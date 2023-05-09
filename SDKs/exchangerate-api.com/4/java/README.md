@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetLatestBaseCurrencyRequest;
 import org.openapis.openapi.models.operations.GetLatestBaseCurrencyResponse;
 
@@ -26,27 +25,27 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetLatestBaseCurrencyRequest req = new GetLatestBaseCurrencyRequest() {{
-                baseCurrency = "corrupti";
-            }}            
+            GetLatestBaseCurrencyRequest req = new GetLatestBaseCurrencyRequest("corrupti");            
 
             GetLatestBaseCurrencyResponse res = sdk.getLatestBaseCurrency(req);
 
-            if (res.getLatestBaseCurrency200ApplicationJSONObject.isPresent()) {
+            if (res.getLatestBaseCurrency200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getLatestBaseCurrency` - Returns latest exchange rates in parameter-supplied base currency.
+* [getLatestBaseCurrency](docs/sdk/README.md#getlatestbasecurrency) - Returns latest exchange rates in parameter-supplied base currency.
 <!-- End SDK Available Operations -->
 
 ### Maturity

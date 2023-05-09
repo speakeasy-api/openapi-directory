@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrdersIdShipRequest {
@@ -12,6 +13,7 @@ public class PutOrdersIdShipRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutOrdersIdShipOrderShipV2 requestBody;
+
     public PutOrdersIdShipRequest withRequestBody(PutOrdersIdShipOrderShipV2 requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class PutOrdersIdShipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutOrdersIdShipRequest withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public PutOrdersIdShipRequest(@JsonProperty("RequestBody") PutOrdersIdShipOrderShipV2 requestBody, @JsonProperty("id") Integer id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

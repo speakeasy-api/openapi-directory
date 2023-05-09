@@ -12,6 +12,7 @@ public class DestinyMilestonesDestinyPublicMilestoneQuest {
      */
     
     public DestinyMilestonesDestinyPublicMilestoneQuestActivity activity;
+
     public DestinyMilestonesDestinyPublicMilestoneQuest withActivity(DestinyMilestonesDestinyPublicMilestoneQuestActivity activity) {
         this.activity = activity;
         return this;
@@ -22,6 +23,7 @@ public class DestinyMilestonesDestinyPublicMilestoneQuest {
      */
     
     public DestinyMilestonesDestinyPublicMilestoneChallenge[] challenges;
+
     public DestinyMilestonesDestinyPublicMilestoneQuest withChallenges(DestinyMilestonesDestinyPublicMilestoneChallenge[] challenges) {
         this.challenges = challenges;
         return this;
@@ -32,9 +34,11 @@ public class DestinyMilestonesDestinyPublicMilestoneQuest {
      */
     
     public Long questItemHash;
+
     public DestinyMilestonesDestinyPublicMilestoneQuest withQuestItemHash(Long questItemHash) {
         this.questItemHash = questItemHash;
         return this;
     }
     
+    public DestinyMilestonesDestinyPublicMilestoneQuest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OtherName {
     @JsonProperty("TypeId")
     public String typeId;
+
     public OtherName withTypeId(String typeId) {
         this.typeId = typeId;
         return this;
@@ -19,9 +20,14 @@ public class OtherName {
     
     @JsonProperty("Value")
     public String value;
+
     public OtherName withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public OtherName(@JsonProperty("TypeId") String typeId, @JsonProperty("Value") String value) {
+        this.typeId = typeId;
+        this.value = value;
+  }
 }

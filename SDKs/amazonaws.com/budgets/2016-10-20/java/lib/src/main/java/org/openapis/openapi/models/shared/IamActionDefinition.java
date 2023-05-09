@@ -15,6 +15,7 @@ public class IamActionDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public String[] groups;
+
     public IamActionDefinition withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -22,6 +23,7 @@ public class IamActionDefinition {
     
     @JsonProperty("PolicyArn")
     public String policyArn;
+
     public IamActionDefinition withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -30,6 +32,7 @@ public class IamActionDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Roles")
     public String[] roles;
+
     public IamActionDefinition withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -38,9 +41,13 @@ public class IamActionDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Users")
     public String[] users;
+
     public IamActionDefinition withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public IamActionDefinition(@JsonProperty("PolicyArn") String policyArn) {
+        this.policyArn = policyArn;
+  }
 }

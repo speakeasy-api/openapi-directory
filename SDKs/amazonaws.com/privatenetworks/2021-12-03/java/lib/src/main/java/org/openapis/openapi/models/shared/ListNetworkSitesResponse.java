@@ -15,6 +15,7 @@ public class ListNetworkSitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkSites")
     public NetworkSite[] networkSites;
+
     public ListNetworkSitesResponse withNetworkSites(NetworkSite[] networkSites) {
         this.networkSites = networkSites;
         return this;
@@ -23,9 +24,11 @@ public class ListNetworkSitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNetworkSitesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNetworkSitesResponse(){}
 }

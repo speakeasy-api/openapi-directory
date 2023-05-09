@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynatraceConnectorProfileCredentials {
     @JsonProperty("apiToken")
     public String apiToken;
+
     public DynatraceConnectorProfileCredentials withApiToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }
     
+    public DynatraceConnectorProfileCredentials(@JsonProperty("apiToken") String apiToken) {
+        this.apiToken = apiToken;
+  }
 }

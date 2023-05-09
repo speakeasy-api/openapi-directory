@@ -18,6 +18,7 @@ public class GlossaryTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GlossaryTerm withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,9 +30,11 @@ public class GlossaryTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GlossaryTerm withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GlossaryTerm(){}
 }

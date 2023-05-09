@@ -18,6 +18,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PostalAddress address;
+
     public Location withAddress(PostalAddress address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Location withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCategoryId")
     public String primaryCategoryId;
+
     public Location withPrimaryCategoryId(String primaryCategoryId) {
         this.primaryCategoryId = primaryCategoryId;
         return this;
@@ -51,6 +54,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryPhone")
     public String primaryPhone;
+
     public Location withPrimaryPhone(String primaryPhone) {
         this.primaryPhone = primaryPhone;
         return this;
@@ -62,9 +66,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websiteUri")
     public String websiteUri;
+
     public Location withWebsiteUri(String websiteUri) {
         this.websiteUri = websiteUri;
         return this;
     }
     
+    public Location(){}
 }

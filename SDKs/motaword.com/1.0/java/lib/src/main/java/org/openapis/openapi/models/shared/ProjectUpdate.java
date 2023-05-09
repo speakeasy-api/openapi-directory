@@ -17,6 +17,7 @@ public class ProjectUpdate {
     @JsonProperty("callback_url")
     @SpeakeasyMetadata("multipartForm:name=callback_url")
     public String callbackUrl;
+
     public ProjectUpdate withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -29,6 +30,7 @@ public class ProjectUpdate {
     @JsonProperty("coupon_code")
     @SpeakeasyMetadata("multipartForm:name=coupon_code")
     public String couponCode;
+
     public ProjectUpdate withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -41,6 +43,7 @@ public class ProjectUpdate {
     @JsonProperty("custom")
     @SpeakeasyMetadata("multipartForm:name=custom")
     public String[] custom;
+
     public ProjectUpdate withCustom(String[] custom) {
         this.custom = custom;
         return this;
@@ -50,6 +53,7 @@ public class ProjectUpdate {
     @JsonProperty("source_language")
     @SpeakeasyMetadata("multipartForm:name=source_language")
     public String sourceLanguage;
+
     public ProjectUpdate withSourceLanguage(String sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -59,9 +63,11 @@ public class ProjectUpdate {
     @JsonProperty("target_languages[]")
     @SpeakeasyMetadata("multipartForm:name=target_languages[]")
     public String[] targetLanguages;
+
     public ProjectUpdate withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
     }
     
+    public ProjectUpdate(){}
 }

@@ -15,9 +15,13 @@ public class PostLoadBalancersCreateLoadBalancerRequestLoadBalancerAlgorithm {
      */
     @JsonProperty("type")
     public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerAlgorithmTypeEnum type;
+
     public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerAlgorithm withType(PostLoadBalancersCreateLoadBalancerRequestLoadBalancerAlgorithmTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostLoadBalancersCreateLoadBalancerRequestLoadBalancerAlgorithm(@JsonProperty("type") PostLoadBalancersCreateLoadBalancerRequestLoadBalancerAlgorithmTypeEnum type) {
+        this.type = type;
+  }
 }

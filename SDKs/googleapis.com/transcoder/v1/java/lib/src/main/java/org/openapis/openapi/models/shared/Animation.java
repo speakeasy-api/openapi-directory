@@ -18,6 +18,7 @@ public class Animation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("animationEnd")
     public AnimationEnd animationEnd;
+
     public Animation withAnimationEnd(AnimationEnd animationEnd) {
         this.animationEnd = animationEnd;
         return this;
@@ -29,6 +30,7 @@ public class Animation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("animationFade")
     public AnimationFade animationFade;
+
     public Animation withAnimationFade(AnimationFade animationFade) {
         this.animationFade = animationFade;
         return this;
@@ -40,9 +42,11 @@ public class Animation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("animationStatic")
     public AnimationStatic animationStatic;
+
     public Animation withAnimationStatic(AnimationStatic animationStatic) {
         this.animationStatic = animationStatic;
         return this;
     }
     
+    public Animation(){}
 }

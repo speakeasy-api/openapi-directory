@@ -18,9 +18,11 @@ public class ConditionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessTime")
     public String accessTime;
+
     public ConditionContext withAccessTime(String accessTime) {
         this.accessTime = accessTime;
         return this;
     }
     
+    public ConditionContext(){}
 }

@@ -18,9 +18,11 @@ public class RemoveUserForTeamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TeamRemoveUserRequest data;
+
     public RemoveUserForTeamRequestBody withData(org.openapis.openapi.models.shared.TeamRemoveUserRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveUserForTeamRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class ResponseCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public ContentTypeEnum contentType;
+
     public ResponseCard withContentType(ContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +24,7 @@ public class ResponseCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericAttachments")
     public GenericAttachment[] genericAttachments;
+
     public ResponseCard withGenericAttachments(GenericAttachment[] genericAttachments) {
         this.genericAttachments = genericAttachments;
         return this;
@@ -31,9 +33,11 @@ public class ResponseCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ResponseCard withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ResponseCard(){}
 }

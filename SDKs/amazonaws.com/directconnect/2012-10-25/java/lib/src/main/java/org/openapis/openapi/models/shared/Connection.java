@@ -20,6 +20,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsDevice")
     public String awsDevice;
+
     public Connection withAwsDevice(String awsDevice) {
         this.awsDevice = awsDevice;
         return this;
@@ -28,6 +29,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsDeviceV2")
     public String awsDeviceV2;
+
     public Connection withAwsDeviceV2(String awsDeviceV2) {
         this.awsDeviceV2 = awsDeviceV2;
         return this;
@@ -36,6 +38,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsLogicalDeviceId")
     public String awsLogicalDeviceId;
+
     public Connection withAwsLogicalDeviceId(String awsLogicalDeviceId) {
         this.awsLogicalDeviceId = awsLogicalDeviceId;
         return this;
@@ -44,6 +47,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidth")
     public String bandwidth;
+
     public Connection withBandwidth(String bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -52,6 +56,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public Connection withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -60,6 +65,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionName")
     public String connectionName;
+
     public Connection withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -68,6 +74,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionState")
     public ConnectionStateEnum connectionState;
+
     public Connection withConnectionState(ConnectionStateEnum connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -76,6 +83,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionMode")
     public String encryptionMode;
+
     public Connection withEncryptionMode(String encryptionMode) {
         this.encryptionMode = encryptionMode;
         return this;
@@ -84,6 +92,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasLogicalRedundancy")
     public HasLogicalRedundancyEnum hasLogicalRedundancy;
+
     public Connection withHasLogicalRedundancy(HasLogicalRedundancyEnum hasLogicalRedundancy) {
         this.hasLogicalRedundancy = hasLogicalRedundancy;
         return this;
@@ -92,6 +101,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jumboFrameCapable")
     public Boolean jumboFrameCapable;
+
     public Connection withJumboFrameCapable(Boolean jumboFrameCapable) {
         this.jumboFrameCapable = jumboFrameCapable;
         return this;
@@ -100,6 +110,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagId")
     public String lagId;
+
     public Connection withLagId(String lagId) {
         this.lagId = lagId;
         return this;
@@ -110,6 +121,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("loaIssueTime")
     public OffsetDateTime loaIssueTime;
+
     public Connection withLoaIssueTime(OffsetDateTime loaIssueTime) {
         this.loaIssueTime = loaIssueTime;
         return this;
@@ -118,6 +130,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Connection withLocation(String location) {
         this.location = location;
         return this;
@@ -126,6 +139,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macSecCapable")
     public Boolean macSecCapable;
+
     public Connection withMacSecCapable(Boolean macSecCapable) {
         this.macSecCapable = macSecCapable;
         return this;
@@ -134,6 +148,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macSecKeys")
     public MacSecKey[] macSecKeys;
+
     public Connection withMacSecKeys(MacSecKey[] macSecKeys) {
         this.macSecKeys = macSecKeys;
         return this;
@@ -142,6 +157,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public Connection withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -150,6 +166,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerName")
     public String partnerName;
+
     public Connection withPartnerName(String partnerName) {
         this.partnerName = partnerName;
         return this;
@@ -158,6 +175,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portEncryptionStatus")
     public String portEncryptionStatus;
+
     public Connection withPortEncryptionStatus(String portEncryptionStatus) {
         this.portEncryptionStatus = portEncryptionStatus;
         return this;
@@ -166,6 +184,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerName")
     public String providerName;
+
     public Connection withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -174,6 +193,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Connection withRegion(String region) {
         this.region = region;
         return this;
@@ -182,6 +202,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Connection withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -190,9 +211,11 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlan")
     public Long vlan;
+
     public Connection withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public Connection(){}
 }

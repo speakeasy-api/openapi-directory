@@ -18,6 +18,7 @@ public class BatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactListId")
     public Long contactListId;
+
     public BatchRequest withContactListId(Long contactListId) {
         this.contactListId = contactListId;
         return this;
@@ -29,6 +30,7 @@ public class BatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class BatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipients")
     public Recipient[] recipients;
+
     public BatchRequest withRecipients(Recipient[] recipients) {
         this.recipients = recipients;
         return this;
@@ -51,9 +54,11 @@ public class BatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scrubDuplicates")
     public Boolean scrubDuplicates;
+
     public BatchRequest withScrubDuplicates(Boolean scrubDuplicates) {
         this.scrubDuplicates = scrubDuplicates;
         return this;
     }
     
+    public BatchRequest(){}
 }

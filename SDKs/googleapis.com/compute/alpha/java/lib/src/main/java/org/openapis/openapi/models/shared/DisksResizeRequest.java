@@ -15,9 +15,11 @@ public class DisksResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public String sizeGb;
+
     public DisksResizeRequest withSizeGb(String sizeGb) {
         this.sizeGb = sizeGb;
         return this;
     }
     
+    public DisksResizeRequest(){}
 }

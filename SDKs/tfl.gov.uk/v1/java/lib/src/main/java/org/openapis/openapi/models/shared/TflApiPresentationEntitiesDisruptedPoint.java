@@ -17,6 +17,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInformation")
     public String additionalInformation;
+
     public TflApiPresentationEntitiesDisruptedPoint withAdditionalInformation(String additionalInformation) {
         this.additionalInformation = additionalInformation;
         return this;
@@ -25,6 +26,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appearance")
     public String appearance;
+
     public TflApiPresentationEntitiesDisruptedPoint withAppearance(String appearance) {
         this.appearance = appearance;
         return this;
@@ -33,6 +35,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("atcoCode")
     public String atcoCode;
+
     public TflApiPresentationEntitiesDisruptedPoint withAtcoCode(String atcoCode) {
         this.atcoCode = atcoCode;
         return this;
@@ -41,6 +44,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public TflApiPresentationEntitiesDisruptedPoint withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -49,6 +53,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TflApiPresentationEntitiesDisruptedPoint withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +64,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromDate")
     public OffsetDateTime fromDate;
+
     public TflApiPresentationEntitiesDisruptedPoint withFromDate(OffsetDateTime fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -67,6 +73,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public TflApiPresentationEntitiesDisruptedPoint withMode(String mode) {
         this.mode = mode;
         return this;
@@ -75,6 +82,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationAtcoCode")
     public String stationAtcoCode;
+
     public TflApiPresentationEntitiesDisruptedPoint withStationAtcoCode(String stationAtcoCode) {
         this.stationAtcoCode = stationAtcoCode;
         return this;
@@ -85,6 +93,7 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toDate")
     public OffsetDateTime toDate;
+
     public TflApiPresentationEntitiesDisruptedPoint withToDate(OffsetDateTime toDate) {
         this.toDate = toDate;
         return this;
@@ -93,9 +102,11 @@ public class TflApiPresentationEntitiesDisruptedPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TflApiPresentationEntitiesDisruptedPoint withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TflApiPresentationEntitiesDisruptedPoint(){}
 }

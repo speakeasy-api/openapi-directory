@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReportFilterResponse {
@@ -12,6 +13,7 @@ public class GetReportFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetReportFilterResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetReportFilterResponse {
     
     
     public String contentType;
+
     public GetReportFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetReportFilterResponse {
     
     
     public Integer statusCode;
+
     public GetReportFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetReportFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReportFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetReportFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportFilter reportFilter;
+
     public GetReportFilterResponse withReportFilter(org.openapis.openapi.models.shared.ReportFilter reportFilter) {
         this.reportFilter = reportFilter;
         return this;
     }
     
+    public GetReportFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

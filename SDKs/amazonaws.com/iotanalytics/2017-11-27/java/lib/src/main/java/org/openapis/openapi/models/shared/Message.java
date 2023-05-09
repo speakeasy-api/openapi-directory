@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Message {
     @JsonProperty("messageId")
     public String messageId;
+
     public Message withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -19,9 +20,14 @@ public class Message {
     
     @JsonProperty("payload")
     public String payload;
+
     public Message withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public Message(@JsonProperty("messageId") String messageId, @JsonProperty("payload") String payload) {
+        this.messageId = messageId;
+        this.payload = payload;
+  }
 }

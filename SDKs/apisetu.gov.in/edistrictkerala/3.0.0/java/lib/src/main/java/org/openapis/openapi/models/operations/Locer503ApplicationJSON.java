@@ -15,6 +15,7 @@ public class Locer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Locer503ApplicationJSONErrorEnum error;
+
     public Locer503ApplicationJSON withError(Locer503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Locer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Locer503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Locer503ApplicationJSON withErrorDescription(Locer503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Locer503ApplicationJSON(){}
 }

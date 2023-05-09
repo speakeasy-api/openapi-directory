@@ -18,9 +18,11 @@ public class PubsubInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public PubsubInput withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public PubsubInput(){}
 }

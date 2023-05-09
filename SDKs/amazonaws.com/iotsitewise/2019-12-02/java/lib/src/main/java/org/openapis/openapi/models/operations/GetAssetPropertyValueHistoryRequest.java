@@ -10,6 +10,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetAssetPropertyValueHistoryRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetAssetPropertyValueHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -17,6 +18,7 @@ public class GetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetAssetPropertyValueHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -24,6 +26,7 @@ public class GetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetAssetPropertyValueHistoryRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -31,6 +34,7 @@ public class GetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetAssetPropertyValueHistoryRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -38,6 +42,7 @@ public class GetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetAssetPropertyValueHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -45,6 +50,7 @@ public class GetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetAssetPropertyValueHistoryRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -52,6 +58,7 @@ public class GetAssetPropertyValueHistoryRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetAssetPropertyValueHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -62,6 +69,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
     public String assetId;
+
     public GetAssetPropertyValueHistoryRequest withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -72,6 +80,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public GetAssetPropertyValueHistoryRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -82,6 +91,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public GetAssetPropertyValueHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +102,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public GetAssetPropertyValueHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -102,6 +113,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyAlias")
     public String propertyAlias;
+
     public GetAssetPropertyValueHistoryRequest withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -112,6 +124,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyId")
     public String propertyId;
+
     public GetAssetPropertyValueHistoryRequest withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -122,6 +135,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qualities")
     public org.openapis.openapi.models.shared.QualityEnum[] qualities;
+
     public GetAssetPropertyValueHistoryRequest withQualities(org.openapis.openapi.models.shared.QualityEnum[] qualities) {
         this.qualities = qualities;
         return this;
@@ -132,6 +146,7 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public GetAssetPropertyValueHistoryRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -142,9 +157,11 @@ public class GetAssetPropertyValueHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOrdering")
     public GetAssetPropertyValueHistoryTimeOrderingEnum timeOrdering;
+
     public GetAssetPropertyValueHistoryRequest withTimeOrdering(GetAssetPropertyValueHistoryTimeOrderingEnum timeOrdering) {
         this.timeOrdering = timeOrdering;
         return this;
     }
     
+    public GetAssetPropertyValueHistoryRequest(){}
 }

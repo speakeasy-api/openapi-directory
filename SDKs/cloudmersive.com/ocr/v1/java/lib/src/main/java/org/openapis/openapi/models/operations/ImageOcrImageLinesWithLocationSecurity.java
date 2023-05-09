@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrImageLinesWithLocationSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Apikey")
     public String apikey;
+
     public ImageOcrImageLinesWithLocationSecurity withApikey(String apikey) {
         this.apikey = apikey;
         return this;
     }
     
+    public ImageOcrImageLinesWithLocationSecurity(@JsonProperty("Apikey") String apikey) {
+        this.apikey = apikey;
+  }
 }

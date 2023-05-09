@@ -15,6 +15,7 @@ public class LaunchGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LaunchGroupConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class LaunchGroupConfig {
     
     @JsonProperty("feature")
     public String feature;
+
     public LaunchGroupConfig withFeature(String feature) {
         this.feature = feature;
         return this;
@@ -29,6 +31,7 @@ public class LaunchGroupConfig {
     
     @JsonProperty("name")
     public String name;
+
     public LaunchGroupConfig withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class LaunchGroupConfig {
     
     @JsonProperty("variation")
     public String variation;
+
     public LaunchGroupConfig withVariation(String variation) {
         this.variation = variation;
         return this;
     }
     
+    public LaunchGroupConfig(@JsonProperty("feature") String feature, @JsonProperty("name") String name, @JsonProperty("variation") String variation) {
+        this.feature = feature;
+        this.name = name;
+        this.variation = variation;
+  }
 }

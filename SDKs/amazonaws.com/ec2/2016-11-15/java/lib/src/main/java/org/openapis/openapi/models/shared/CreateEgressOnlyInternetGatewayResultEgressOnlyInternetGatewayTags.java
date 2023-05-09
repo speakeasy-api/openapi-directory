@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayTags {
     
     public String key;
+
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayTags 
     
     
     public String value;
+
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayTags(){}
 }

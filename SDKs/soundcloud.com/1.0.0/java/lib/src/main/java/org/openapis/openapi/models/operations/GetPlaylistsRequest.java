@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsRequest {
@@ -13,6 +14,7 @@ public class GetPlaylistsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
     public org.openapis.openapi.models.shared.AccessEnum[] access;
+
     public GetPlaylistsRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
         this.access = access;
         return this;
@@ -23,6 +25,7 @@ public class GetPlaylistsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPlaylistsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -33,6 +36,7 @@ public class GetPlaylistsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetPlaylistsRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
@@ -40,9 +44,13 @@ public class GetPlaylistsRequest {
     
     /**
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    @Deprecated
     public Long offset;
+
+    @Deprecated
     public GetPlaylistsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -53,9 +61,13 @@ public class GetPlaylistsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetPlaylistsRequest withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public GetPlaylistsRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

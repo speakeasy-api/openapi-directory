@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1GcsFileSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public GoogleCloudDatacatalogV1GcsFileSpec withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1GcsFileSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsTimestamps")
     public GoogleCloudDatacatalogV1SystemTimestamps gcsTimestamps;
+
     public GoogleCloudDatacatalogV1GcsFileSpec withGcsTimestamps(GoogleCloudDatacatalogV1SystemTimestamps gcsTimestamps) {
         this.gcsTimestamps = gcsTimestamps;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1GcsFileSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public String sizeBytes;
+
     public GoogleCloudDatacatalogV1GcsFileSpec withSizeBytes(String sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1GcsFileSpec(){}
 }

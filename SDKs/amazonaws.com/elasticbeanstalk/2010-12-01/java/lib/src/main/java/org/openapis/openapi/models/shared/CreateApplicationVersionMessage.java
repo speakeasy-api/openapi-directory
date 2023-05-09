@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateApplicationVersionMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateApplicationVersionMessage {
     
     public String applicationName;
+
     public CreateApplicationVersionMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class CreateApplicationVersionMessage {
     
     
     public Boolean autoCreateApplication;
+
     public CreateApplicationVersionMessage withAutoCreateApplication(Boolean autoCreateApplication) {
         this.autoCreateApplication = autoCreateApplication;
         return this;
@@ -26,6 +28,7 @@ public class CreateApplicationVersionMessage {
     
     
     public BuildConfiguration buildConfiguration;
+
     public CreateApplicationVersionMessage withBuildConfiguration(BuildConfiguration buildConfiguration) {
         this.buildConfiguration = buildConfiguration;
         return this;
@@ -33,6 +36,7 @@ public class CreateApplicationVersionMessage {
     
     
     public String description;
+
     public CreateApplicationVersionMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class CreateApplicationVersionMessage {
     
     
     public Boolean process;
+
     public CreateApplicationVersionMessage withProcess(Boolean process) {
         this.process = process;
         return this;
@@ -47,6 +52,7 @@ public class CreateApplicationVersionMessage {
     
     
     public SourceBuildInformation sourceBuildInformation;
+
     public CreateApplicationVersionMessage withSourceBuildInformation(SourceBuildInformation sourceBuildInformation) {
         this.sourceBuildInformation = sourceBuildInformation;
         return this;
@@ -54,6 +60,7 @@ public class CreateApplicationVersionMessage {
     
     
     public S3Location sourceBundle;
+
     public CreateApplicationVersionMessage withSourceBundle(S3Location sourceBundle) {
         this.sourceBundle = sourceBundle;
         return this;
@@ -61,6 +68,7 @@ public class CreateApplicationVersionMessage {
     
     
     public Tag[] tags;
+
     public CreateApplicationVersionMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -68,9 +76,14 @@ public class CreateApplicationVersionMessage {
     
     
     public String versionLabel;
+
     public CreateApplicationVersionMessage withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public CreateApplicationVersionMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("VersionLabel") String versionLabel) {
+        this.applicationName = applicationName;
+        this.versionLabel = versionLabel;
+  }
 }

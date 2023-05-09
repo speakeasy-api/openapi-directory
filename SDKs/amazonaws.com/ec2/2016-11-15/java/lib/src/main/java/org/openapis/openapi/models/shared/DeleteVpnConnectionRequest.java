@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteVpnConnectionRequest - Contains the parameters for DeleteVpnConnection.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpnConnectionRequest {
     
     public Boolean dryRun;
+
     public DeleteVpnConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class DeleteVpnConnectionRequest {
     
     
     public String vpnConnectionId;
+
     public DeleteVpnConnectionRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
     }
     
+    public DeleteVpnConnectionRequest(@JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

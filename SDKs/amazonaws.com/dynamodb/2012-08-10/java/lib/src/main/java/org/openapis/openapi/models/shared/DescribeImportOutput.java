@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeImportOutput {
     @JsonProperty("ImportTableDescription")
     public ImportTableDescription importTableDescription;
+
     public DescribeImportOutput withImportTableDescription(ImportTableDescription importTableDescription) {
         this.importTableDescription = importTableDescription;
         return this;
     }
     
+    public DescribeImportOutput(@JsonProperty("ImportTableDescription") ImportTableDescription importTableDescription) {
+        this.importTableDescription = importTableDescription;
+  }
 }

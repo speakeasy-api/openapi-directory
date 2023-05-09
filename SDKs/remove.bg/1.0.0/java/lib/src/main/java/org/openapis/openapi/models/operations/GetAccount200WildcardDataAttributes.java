@@ -9,6 +9,7 @@ package org.openapis.openapi.models.operations;
 public class GetAccount200WildcardDataAttributes {
     
     public GetAccount200WildcardDataAttributesApi api;
+
     public GetAccount200WildcardDataAttributes withApi(GetAccount200WildcardDataAttributesApi api) {
         this.api = api;
         return this;
@@ -16,9 +17,11 @@ public class GetAccount200WildcardDataAttributes {
     
     
     public GetAccount200WildcardDataAttributesCredits credits;
+
     public GetAccount200WildcardDataAttributes withCredits(GetAccount200WildcardDataAttributesCredits credits) {
         this.credits = credits;
         return this;
     }
     
+    public GetAccount200WildcardDataAttributes(){}
 }

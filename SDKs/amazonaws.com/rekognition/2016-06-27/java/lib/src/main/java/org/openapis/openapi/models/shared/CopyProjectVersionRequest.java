@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CopyProjectVersionRequest {
     @JsonProperty("DestinationProjectArn")
     public String destinationProjectArn;
+
     public CopyProjectVersionRequest withDestinationProjectArn(String destinationProjectArn) {
         this.destinationProjectArn = destinationProjectArn;
         return this;
@@ -19,6 +20,7 @@ public class CopyProjectVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CopyProjectVersionRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -26,6 +28,7 @@ public class CopyProjectVersionRequest {
     
     @JsonProperty("OutputConfig")
     public OutputConfig outputConfig;
+
     public CopyProjectVersionRequest withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -33,6 +36,7 @@ public class CopyProjectVersionRequest {
     
     @JsonProperty("SourceProjectArn")
     public String sourceProjectArn;
+
     public CopyProjectVersionRequest withSourceProjectArn(String sourceProjectArn) {
         this.sourceProjectArn = sourceProjectArn;
         return this;
@@ -40,6 +44,7 @@ public class CopyProjectVersionRequest {
     
     @JsonProperty("SourceProjectVersionArn")
     public String sourceProjectVersionArn;
+
     public CopyProjectVersionRequest withSourceProjectVersionArn(String sourceProjectVersionArn) {
         this.sourceProjectVersionArn = sourceProjectVersionArn;
         return this;
@@ -48,6 +53,7 @@ public class CopyProjectVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CopyProjectVersionRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -55,9 +61,17 @@ public class CopyProjectVersionRequest {
     
     @JsonProperty("VersionName")
     public String versionName;
+
     public CopyProjectVersionRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public CopyProjectVersionRequest(@JsonProperty("DestinationProjectArn") String destinationProjectArn, @JsonProperty("OutputConfig") OutputConfig outputConfig, @JsonProperty("SourceProjectArn") String sourceProjectArn, @JsonProperty("SourceProjectVersionArn") String sourceProjectVersionArn, @JsonProperty("VersionName") String versionName) {
+        this.destinationProjectArn = destinationProjectArn;
+        this.outputConfig = outputConfig;
+        this.sourceProjectArn = sourceProjectArn;
+        this.sourceProjectVersionArn = sourceProjectVersionArn;
+        this.versionName = versionName;
+  }
 }

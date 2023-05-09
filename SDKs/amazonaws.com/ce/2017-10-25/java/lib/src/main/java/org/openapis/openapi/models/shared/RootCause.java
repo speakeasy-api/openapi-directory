@@ -15,6 +15,7 @@ public class RootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkedAccount")
     public String linkedAccount;
+
     public RootCause withLinkedAccount(String linkedAccount) {
         this.linkedAccount = linkedAccount;
         return this;
@@ -23,6 +24,7 @@ public class RootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkedAccountName")
     public String linkedAccountName;
+
     public RootCause withLinkedAccountName(String linkedAccountName) {
         this.linkedAccountName = linkedAccountName;
         return this;
@@ -31,6 +33,7 @@ public class RootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public RootCause withRegion(String region) {
         this.region = region;
         return this;
@@ -39,6 +42,7 @@ public class RootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public RootCause withService(String service) {
         this.service = service;
         return this;
@@ -47,9 +51,11 @@ public class RootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageType")
     public String usageType;
+
     public RootCause withUsageType(String usageType) {
         this.usageType = usageType;
         return this;
     }
     
+    public RootCause(){}
 }

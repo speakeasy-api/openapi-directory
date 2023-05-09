@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateCustomVerificationEmailTemplateRequest - Represents a request to update an existing custom verification email template.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateCustomVerificationEmailTemplateRequest {
     
     public String failureRedirectionURL;
+
     public UpdateCustomVerificationEmailTemplateRequest withFailureRedirectionURL(String failureRedirectionURL) {
         this.failureRedirectionURL = failureRedirectionURL;
         return this;
@@ -19,6 +20,7 @@ public class UpdateCustomVerificationEmailTemplateRequest {
     
     
     public String fromEmailAddress;
+
     public UpdateCustomVerificationEmailTemplateRequest withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -26,6 +28,7 @@ public class UpdateCustomVerificationEmailTemplateRequest {
     
     
     public String successRedirectionURL;
+
     public UpdateCustomVerificationEmailTemplateRequest withSuccessRedirectionURL(String successRedirectionURL) {
         this.successRedirectionURL = successRedirectionURL;
         return this;
@@ -33,6 +36,7 @@ public class UpdateCustomVerificationEmailTemplateRequest {
     
     
     public String templateContent;
+
     public UpdateCustomVerificationEmailTemplateRequest withTemplateContent(String templateContent) {
         this.templateContent = templateContent;
         return this;
@@ -40,6 +44,7 @@ public class UpdateCustomVerificationEmailTemplateRequest {
     
     
     public String templateName;
+
     public UpdateCustomVerificationEmailTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -47,9 +52,13 @@ public class UpdateCustomVerificationEmailTemplateRequest {
     
     
     public String templateSubject;
+
     public UpdateCustomVerificationEmailTemplateRequest withTemplateSubject(String templateSubject) {
         this.templateSubject = templateSubject;
         return this;
     }
     
+    public UpdateCustomVerificationEmailTemplateRequest(@JsonProperty("TemplateName") String templateName) {
+        this.templateName = templateName;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BasicCatalogTarget {
     @JsonProperty("Database")
     public String database;
+
     public BasicCatalogTarget withDatabase(String database) {
         this.database = database;
         return this;
@@ -19,6 +20,7 @@ public class BasicCatalogTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public BasicCatalogTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -26,6 +28,7 @@ public class BasicCatalogTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public BasicCatalogTarget withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,16 @@ public class BasicCatalogTarget {
     
     @JsonProperty("Table")
     public String table;
+
     public BasicCatalogTarget withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public BasicCatalogTarget(@JsonProperty("Database") String database, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.inputs = inputs;
+        this.name = name;
+        this.table = table;
+  }
 }

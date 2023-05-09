@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateSnapshotsRequest {
     
     public CopyTagsFromSourceEnum copyTagsFromSource;
+
     public CreateSnapshotsRequest withCopyTagsFromSource(CopyTagsFromSourceEnum copyTagsFromSource) {
         this.copyTagsFromSource = copyTagsFromSource;
         return this;
@@ -16,6 +17,7 @@ public class CreateSnapshotsRequest {
     
     
     public String description;
+
     public CreateSnapshotsRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateSnapshotsRequest {
     
     
     public Boolean dryRun;
+
     public CreateSnapshotsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateSnapshotsRequest {
     
     
     public InstanceSpecification instanceSpecification;
+
     public CreateSnapshotsRequest withInstanceSpecification(InstanceSpecification instanceSpecification) {
         this.instanceSpecification = instanceSpecification;
         return this;
@@ -37,6 +41,7 @@ public class CreateSnapshotsRequest {
     
     
     public String outpostArn;
+
     public CreateSnapshotsRequest withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -44,9 +49,13 @@ public class CreateSnapshotsRequest {
     
     
     public CreateSnapshotsRequestTagSpecifications[] tagSpecifications;
+
     public CreateSnapshotsRequest withTagSpecifications(CreateSnapshotsRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateSnapshotsRequest(@JsonProperty("InstanceSpecification") InstanceSpecification instanceSpecification) {
+        this.instanceSpecification = instanceSpecification;
+  }
 }

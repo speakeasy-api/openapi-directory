@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePrincipalIdFormatResultPrincipals {
     
     public String arn;
+
     public DescribePrincipalIdFormatResultPrincipals withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class DescribePrincipalIdFormatResultPrincipals {
     
     
     public DescribePrincipalIdFormatResultPrincipalsStatuses[] statuses;
+
     public DescribePrincipalIdFormatResultPrincipals withStatuses(DescribePrincipalIdFormatResultPrincipalsStatuses[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public DescribePrincipalIdFormatResultPrincipals(){}
 }

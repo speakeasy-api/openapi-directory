@@ -12,6 +12,7 @@ public class DescribeInventoryDeletionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionId")
     public String deletionId;
+
     public DescribeInventoryDeletionsRequest withDeletionId(String deletionId) {
         this.deletionId = deletionId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeInventoryDeletionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeInventoryDeletionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeInventoryDeletionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInventoryDeletionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInventoryDeletionsRequest(){}
 }

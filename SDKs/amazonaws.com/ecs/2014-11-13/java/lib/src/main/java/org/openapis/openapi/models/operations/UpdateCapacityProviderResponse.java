@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCapacityProviderResponse {
@@ -12,6 +13,7 @@ public class UpdateCapacityProviderResponse {
      */
     
     public Object clientException;
+
     public UpdateCapacityProviderResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCapacityProviderResponse {
     
     
     public String contentType;
+
     public UpdateCapacityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCapacityProviderResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateCapacityProviderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateCapacityProviderResponse {
     
     
     public Integer statusCode;
+
     public UpdateCapacityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCapacityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCapacityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCapacityProviderResponse {
      */
     
     public Object serverException;
+
     public UpdateCapacityProviderResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCapacityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCapacityProviderResponse updateCapacityProviderResponse;
+
     public UpdateCapacityProviderResponse withUpdateCapacityProviderResponse(org.openapis.openapi.models.shared.UpdateCapacityProviderResponse updateCapacityProviderResponse) {
         this.updateCapacityProviderResponse = updateCapacityProviderResponse;
         return this;
     }
     
+    public UpdateCapacityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

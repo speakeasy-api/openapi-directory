@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CommonModelsCoreSystem {
     
     public Boolean enabled;
+
     public CommonModelsCoreSystem withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -16,9 +17,11 @@ public class CommonModelsCoreSystem {
     
     
     public java.util.Map<String, String> parameters;
+
     public CommonModelsCoreSystem withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public CommonModelsCoreSystem(){}
 }

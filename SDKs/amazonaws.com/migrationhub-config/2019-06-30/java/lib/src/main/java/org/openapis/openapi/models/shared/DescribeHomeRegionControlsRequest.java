@@ -12,6 +12,7 @@ public class DescribeHomeRegionControlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlId")
     public String controlId;
+
     public DescribeHomeRegionControlsRequest withControlId(String controlId) {
         this.controlId = controlId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeHomeRegionControlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public DescribeHomeRegionControlsRequest withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -28,6 +30,7 @@ public class DescribeHomeRegionControlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeHomeRegionControlsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class DescribeHomeRegionControlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeHomeRegionControlsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class DescribeHomeRegionControlsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public Target target;
+
     public DescribeHomeRegionControlsRequest withTarget(Target target) {
         this.target = target;
         return this;
     }
     
+    public DescribeHomeRegionControlsRequest(){}
 }

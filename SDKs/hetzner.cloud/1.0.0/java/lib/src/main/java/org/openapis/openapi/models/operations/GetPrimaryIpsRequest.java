@@ -12,6 +12,7 @@ public class GetPrimaryIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public GetPrimaryIpsRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -22,6 +23,7 @@ public class GetPrimaryIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetPrimaryIpsRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -32,6 +34,7 @@ public class GetPrimaryIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetPrimaryIpsRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class GetPrimaryIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetPrimaryIpsSortEnum sort;
+
     public GetPrimaryIpsRequest withSort(GetPrimaryIpsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetPrimaryIpsRequest(){}
 }

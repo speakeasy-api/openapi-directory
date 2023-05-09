@@ -67,13 +67,11 @@ public class Exports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchExportContentsByIdResponse res = new org.openapis.openapi.models.operations.FetchExportContentsByIdResponse() {{
+        org.openapis.openapi.models.operations.FetchExportContentsByIdResponse res = new org.openapis.openapi.models.operations.FetchExportContentsByIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             empty = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -133,12 +131,10 @@ public class Exports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchExportStatusByIdResponse res = new org.openapis.openapi.models.operations.FetchExportStatusByIdResponse() {{
+        org.openapis.openapi.models.operations.FetchExportStatusByIdResponse res = new org.openapis.openapi.models.operations.FetchExportStatusByIdResponse(contentType, httpRes.statusCode()) {{
             exportStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,12 +206,10 @@ public class Exports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostExportResponse res = new org.openapis.openapi.models.operations.PostExportResponse() {{
+        org.openapis.openapi.models.operations.PostExportResponse res = new org.openapis.openapi.models.operations.PostExportResponse(contentType, httpRes.statusCode()) {{
             createdExport = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

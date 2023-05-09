@@ -15,6 +15,7 @@ public class GetDisksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public Disk[] disks;
+
     public GetDisksResult withDisks(Disk[] disks) {
         this.disks = disks;
         return this;
@@ -23,9 +24,11 @@ public class GetDisksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetDisksResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetDisksResult(){}
 }

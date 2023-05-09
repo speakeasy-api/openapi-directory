@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse(contentType, httpRes.statusCode()) {{
             listConnectionProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse(contentType, httpRes.statusCode()) {{
             sshScript = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse(contentType, httpRes.statusCode()) {{
             listMigrationJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +560,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +606,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +652,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +698,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,11 +744,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -822,11 +790,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -868,11 +834,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -914,11 +878,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMonitorResponse {
@@ -12,6 +13,7 @@ public class DeleteMonitorResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteMonitorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMonitorResponse {
     
     
     public String contentType;
+
     public DeleteMonitorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMonitorResponse {
      */
     
     public java.util.Map<String, Object> deleteMonitorOutput;
+
     public DeleteMonitorResponse withDeleteMonitorOutput(java.util.Map<String, Object> deleteMonitorOutput) {
         this.deleteMonitorOutput = deleteMonitorOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMonitorResponse {
      */
     
     public Object internalServerException;
+
     public DeleteMonitorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteMonitorResponse {
     
     
     public Integer statusCode;
+
     public DeleteMonitorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteMonitorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMonitorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteMonitorResponse {
      */
     
     public Object throttlingException;
+
     public DeleteMonitorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteMonitorResponse {
      */
     
     public Object validationException;
+
     public DeleteMonitorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

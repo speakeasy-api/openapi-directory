@@ -15,6 +15,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("camera_id")
     public String cameraId;
+
     public NAWelcomeEvent withCameraId(String cameraId) {
         this.cameraId = cameraId;
         return this;
@@ -26,6 +27,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public NAWelcomeEventCategoryEnum category;
+
     public NAWelcomeEvent withCategory(NAWelcomeEventCategoryEnum category) {
         this.category = category;
         return this;
@@ -34,6 +36,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_list")
     public NAWelcomeSubEvent[] eventList;
+
     public NAWelcomeEvent withEventList(NAWelcomeSubEvent[] eventList) {
         this.eventList = eventList;
         return this;
@@ -45,6 +48,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NAWelcomeEvent withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_arrival")
     public Boolean isArrival;
+
     public NAWelcomeEvent withIsArrival(Boolean isArrival) {
         this.isArrival = isArrival;
         return this;
@@ -67,6 +72,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NAWelcomeEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -78,6 +84,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person_id")
     public String personId;
+
     public NAWelcomeEvent withPersonId(String personId) {
         this.personId = personId;
         return this;
@@ -86,6 +93,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshot")
     public NAWelcomeSnapshot snapshot;
+
     public NAWelcomeEvent withSnapshot(NAWelcomeSnapshot snapshot) {
         this.snapshot = snapshot;
         return this;
@@ -97,6 +105,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_type")
     public Integer subType;
+
     public NAWelcomeEvent withSubType(Integer subType) {
         this.subType = subType;
         return this;
@@ -108,6 +117,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Integer time;
+
     public NAWelcomeEvent withTime(Integer time) {
         this.time = time;
         return this;
@@ -119,6 +129,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public NAWelcomeEvent withType(String type) {
         this.type = type;
         return this;
@@ -130,6 +141,7 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video_id")
     public String videoId;
+
     public NAWelcomeEvent withVideoId(String videoId) {
         this.videoId = videoId;
         return this;
@@ -141,9 +153,11 @@ public class NAWelcomeEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video_status")
     public String videoStatus;
+
     public NAWelcomeEvent withVideoStatus(String videoStatus) {
         this.videoStatus = videoStatus;
         return this;
     }
     
+    public NAWelcomeEvent(){}
 }

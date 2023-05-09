@@ -15,6 +15,7 @@ public class QueryObjectsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreResults")
     public Boolean hasMoreResults;
+
     public QueryObjectsOutput withHasMoreResults(Boolean hasMoreResults) {
         this.hasMoreResults = hasMoreResults;
         return this;
@@ -23,6 +24,7 @@ public class QueryObjectsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public QueryObjectsOutput withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -31,9 +33,11 @@ public class QueryObjectsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marker")
     public String marker;
+
     public QueryObjectsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public QueryObjectsOutput(){}
 }

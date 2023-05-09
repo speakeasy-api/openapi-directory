@@ -12,6 +12,7 @@ public class DeleteMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DeleteMock200ApplicationJSONMock withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class DeleteMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public DeleteMock200ApplicationJSONMock withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DeleteMock200ApplicationJSONMock(){}
 }

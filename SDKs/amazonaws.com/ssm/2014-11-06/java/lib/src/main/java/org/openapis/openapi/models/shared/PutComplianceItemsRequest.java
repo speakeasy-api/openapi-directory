@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutComplianceItemsRequest {
     @JsonProperty("ComplianceType")
     public String complianceType;
+
     public PutComplianceItemsRequest withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -18,6 +19,7 @@ public class PutComplianceItemsRequest {
     
     @JsonProperty("ExecutionSummary")
     public ComplianceExecutionSummary executionSummary;
+
     public PutComplianceItemsRequest withExecutionSummary(ComplianceExecutionSummary executionSummary) {
         this.executionSummary = executionSummary;
         return this;
@@ -26,6 +28,7 @@ public class PutComplianceItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemContentHash")
     public String itemContentHash;
+
     public PutComplianceItemsRequest withItemContentHash(String itemContentHash) {
         this.itemContentHash = itemContentHash;
         return this;
@@ -33,6 +36,7 @@ public class PutComplianceItemsRequest {
     
     @JsonProperty("Items")
     public ComplianceItemEntry[] items;
+
     public PutComplianceItemsRequest withItems(ComplianceItemEntry[] items) {
         this.items = items;
         return this;
@@ -40,6 +44,7 @@ public class PutComplianceItemsRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public PutComplianceItemsRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -47,6 +52,7 @@ public class PutComplianceItemsRequest {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public PutComplianceItemsRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -55,9 +61,17 @@ public class PutComplianceItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploadType")
     public ComplianceUploadTypeEnum uploadType;
+
     public PutComplianceItemsRequest withUploadType(ComplianceUploadTypeEnum uploadType) {
         this.uploadType = uploadType;
         return this;
     }
     
+    public PutComplianceItemsRequest(@JsonProperty("ComplianceType") String complianceType, @JsonProperty("ExecutionSummary") ComplianceExecutionSummary executionSummary, @JsonProperty("Items") ComplianceItemEntry[] items, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") String resourceType) {
+        this.complianceType = complianceType;
+        this.executionSummary = executionSummary;
+        this.items = items;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+  }
 }

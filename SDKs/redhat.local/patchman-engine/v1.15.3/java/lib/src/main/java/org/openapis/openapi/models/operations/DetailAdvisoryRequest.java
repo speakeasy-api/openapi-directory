@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetailAdvisoryRequest {
@@ -12,9 +13,13 @@ public class DetailAdvisoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advisory_id")
     public String advisoryId;
+
     public DetailAdvisoryRequest withAdvisoryId(String advisoryId) {
         this.advisoryId = advisoryId;
         return this;
     }
     
+    public DetailAdvisoryRequest(@JsonProperty("advisory_id") String advisoryId) {
+        this.advisoryId = advisoryId;
+  }
 }

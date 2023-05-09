@@ -12,9 +12,11 @@ public class GetShows200ApplicationJSONLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public org.openapis.openapi.models.shared.Link self;
+
     public GetShows200ApplicationJSONLinks withSelf(org.openapis.openapi.models.shared.Link self) {
         this.self = self;
         return this;
     }
     
+    public GetShows200ApplicationJSONLinks(){}
 }

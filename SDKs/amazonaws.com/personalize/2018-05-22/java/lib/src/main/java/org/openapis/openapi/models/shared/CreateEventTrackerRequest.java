@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEventTrackerRequest {
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public CreateEventTrackerRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -18,6 +19,7 @@ public class CreateEventTrackerRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateEventTrackerRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class CreateEventTrackerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateEventTrackerRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEventTrackerRequest(@JsonProperty("datasetGroupArn") String datasetGroupArn, @JsonProperty("name") String name) {
+        this.datasetGroupArn = datasetGroupArn;
+        this.name = name;
+  }
 }

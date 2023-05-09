@@ -15,9 +15,11 @@ public class UpgradePublishedSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpgradedSchemaArn")
     public String upgradedSchemaArn;
+
     public UpgradePublishedSchemaResponse withUpgradedSchemaArn(String upgradedSchemaArn) {
         this.upgradedSchemaArn = upgradedSchemaArn;
         return this;
     }
     
+    public UpgradePublishedSchemaResponse(){}
 }

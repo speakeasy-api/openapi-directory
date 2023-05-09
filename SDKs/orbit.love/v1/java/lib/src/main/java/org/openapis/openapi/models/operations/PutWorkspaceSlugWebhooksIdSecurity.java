@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspaceSlugWebhooksIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearer;
+
     public PutWorkspaceSlugWebhooksIdSecurity withBearer(String bearer) {
         this.bearer = bearer;
         return this;
     }
     
+    public PutWorkspaceSlugWebhooksIdSecurity(@JsonProperty("bearer") String bearer) {
+        this.bearer = bearer;
+  }
 }

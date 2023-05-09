@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Affinity")
     public String affinity;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostId")
     public String hostId;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostResourceGroupArn")
     public String hostResourceGroupArn;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionNumber")
     public Long partitionNumber;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpreadDomain")
     public String spreadDomain;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withSpreadDomain(String spreadDomain) {
         this.spreadDomain = spreadDomain;
         return this;
@@ -71,9 +78,11 @@ public class AwsEc2LaunchTemplateDataPlacementDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenancy")
     public String tenancy;
+
     public AwsEc2LaunchTemplateDataPlacementDetails withTenancy(String tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataPlacementDetails(){}
 }

@@ -16,6 +16,7 @@ public class QueryHardBouncedEmailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public QueryHardBouncedEmailsRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -30,6 +31,7 @@ public class QueryHardBouncedEmailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public QueryHardBouncedEmailsRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -42,6 +44,7 @@ public class QueryHardBouncedEmailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public QueryHardBouncedEmailsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -54,6 +57,7 @@ public class QueryHardBouncedEmailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public QueryHardBouncedEmailsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -69,9 +73,11 @@ public class QueryHardBouncedEmailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public QueryHardBouncedEmailsRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public QueryHardBouncedEmailsRequest(){}
 }

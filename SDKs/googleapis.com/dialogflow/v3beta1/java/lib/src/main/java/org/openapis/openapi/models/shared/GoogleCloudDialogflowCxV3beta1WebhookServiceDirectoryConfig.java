@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericWebService")
     public GoogleCloudDialogflowCxV3beta1WebhookGenericWebService genericWebService;
+
     public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig withGenericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebService genericWebService) {
         this.genericWebService = genericWebService;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig withService(String service) {
         this.service = service;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GiftCardActivityUnblock {
     @JsonProperty("reason")
     public Object reason;
+
     public GiftCardActivityUnblock withReason(Object reason) {
         this.reason = reason;
         return this;
     }
     
+    public GiftCardActivityUnblock(@JsonProperty("reason") Object reason) {
+        this.reason = reason;
+  }
 }

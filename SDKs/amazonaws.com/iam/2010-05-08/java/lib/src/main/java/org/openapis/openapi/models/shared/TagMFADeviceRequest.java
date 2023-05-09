@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagMFADeviceRequest {
     
     public String serialNumber;
+
     public TagMFADeviceRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -16,9 +17,14 @@ public class TagMFADeviceRequest {
     
     
     public Tag[] tags;
+
     public TagMFADeviceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagMFADeviceRequest(@JsonProperty("SerialNumber") String serialNumber, @JsonProperty("Tags") Tag[] tags) {
+        this.serialNumber = serialNumber;
+        this.tags = tags;
+  }
 }

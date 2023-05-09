@@ -15,6 +15,7 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public AliasLifecycleEnum lifecycle;
+
     public Alias withLifecycle(AliasLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -23,9 +24,11 @@ public class Alias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Alias withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Alias(){}
 }

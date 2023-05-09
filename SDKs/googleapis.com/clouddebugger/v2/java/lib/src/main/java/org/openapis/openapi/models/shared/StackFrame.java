@@ -18,6 +18,7 @@ public class StackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public Variable[] arguments;
+
     public StackFrame withArguments(Variable[] arguments) {
         this.arguments = arguments;
         return this;
@@ -29,6 +30,7 @@ public class StackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("function")
     public String function;
+
     public StackFrame withFunction(String function) {
         this.function = function;
         return this;
@@ -40,6 +42,7 @@ public class StackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locals")
     public Variable[] locals;
+
     public StackFrame withLocals(Variable[] locals) {
         this.locals = locals;
         return this;
@@ -51,9 +54,11 @@ public class StackFrame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public SourceLocation location;
+
     public StackFrame withLocation(SourceLocation location) {
         this.location = location;
         return this;
     }
     
+    public StackFrame(){}
 }

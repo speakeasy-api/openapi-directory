@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartInferenceSchedulerRequest {
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public StartInferenceSchedulerRequest withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
     }
     
+    public StartInferenceSchedulerRequest(@JsonProperty("InferenceSchedulerName") String inferenceSchedulerName) {
+        this.inferenceSchedulerName = inferenceSchedulerName;
+  }
 }

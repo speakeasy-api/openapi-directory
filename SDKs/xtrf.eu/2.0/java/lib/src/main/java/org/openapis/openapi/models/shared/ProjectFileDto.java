@@ -15,6 +15,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedBy")
     public ProjectFileAddedByDto addedBy;
+
     public ProjectFileDto withAddedBy(ProjectFileAddedByDto addedBy) {
         this.addedBy = addedBy;
         return this;
@@ -23,6 +24,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedInJob")
     public String addedInJob;
+
     public ProjectFileDto withAddedInJob(String addedInJob) {
         this.addedInJob = addedInJob;
         return this;
@@ -31,6 +33,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedInLastStep")
     public Boolean addedInLastStep;
+
     public ProjectFileDto withAddedInLastStep(Boolean addedInLastStep) {
         this.addedInLastStep = addedInLastStep;
         return this;
@@ -39,6 +42,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedInStep")
     public Long addedInStep;
+
     public ProjectFileDto withAddedInStep(Long addedInStep) {
         this.addedInStep = addedInStep;
         return this;
@@ -47,6 +51,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryKey")
     public String categoryKey;
+
     public ProjectFileDto withCategoryKey(String categoryKey) {
         this.categoryKey = categoryKey;
         return this;
@@ -55,6 +60,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProjectFileDto withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAccepted")
     public Boolean isAccepted;
+
     public ProjectFileDto withIsAccepted(Boolean isAccepted) {
         this.isAccepted = isAccepted;
         return this;
@@ -71,6 +78,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLink")
     public Boolean isLink;
+
     public ProjectFileDto withIsLink(Boolean isLink) {
         this.isLink = isLink;
         return this;
@@ -79,6 +87,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRemote")
     public Boolean isRemote;
+
     public ProjectFileDto withIsRemote(Boolean isRemote) {
         this.isRemote = isRemote;
         return this;
@@ -87,6 +96,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageRelation")
     public LanguageRelationDto languageRelation;
+
     public ProjectFileDto withLanguageRelation(LanguageRelationDto languageRelation) {
         this.languageRelation = languageRelation;
         return this;
@@ -95,6 +105,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedOn")
     public Long lastModifiedOn;
+
     public ProjectFileDto withLastModifiedOn(Long lastModifiedOn) {
         this.lastModifiedOn = lastModifiedOn;
         return this;
@@ -103,6 +114,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectFileDto withName(String name) {
         this.name = name;
         return this;
@@ -111,6 +123,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteCATToolReferences")
     public RemoteCATToolReferencesDto remoteCATToolReferences;
+
     public ProjectFileDto withRemoteCATToolReferences(RemoteCATToolReferencesDto remoteCATToolReferences) {
         this.remoteCATToolReferences = remoteCATToolReferences;
         return this;
@@ -119,6 +132,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedWithJobs")
     public String[] sharedWithJobs;
+
     public ProjectFileDto withSharedWithJobs(String[] sharedWithJobs) {
         this.sharedWithJobs = sharedWithJobs;
         return this;
@@ -127,6 +141,7 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public ProjectFileDto withSize(Long size) {
         this.size = size;
         return this;
@@ -135,9 +150,11 @@ public class ProjectFileDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ProjectFileDto withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProjectFileDto(){}
 }

@@ -12,6 +12,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartPiiEntitiesDetectionJobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartPiiEntitiesDetectionJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartPiiEntitiesDetectionJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -34,6 +37,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartPiiEntitiesDetectionJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -41,6 +45,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartPiiEntitiesDetectionJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -48,6 +53,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @JsonProperty("Mode")
     public PiiEntitiesDetectionModeEnum mode;
+
     public StartPiiEntitiesDetectionJobRequest withMode(PiiEntitiesDetectionModeEnum mode) {
         this.mode = mode;
         return this;
@@ -55,6 +61,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartPiiEntitiesDetectionJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -63,6 +70,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedactionConfig")
     public RedactionConfig redactionConfig;
+
     public StartPiiEntitiesDetectionJobRequest withRedactionConfig(RedactionConfig redactionConfig) {
         this.redactionConfig = redactionConfig;
         return this;
@@ -71,9 +79,17 @@ public class StartPiiEntitiesDetectionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartPiiEntitiesDetectionJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartPiiEntitiesDetectionJobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("Mode") PiiEntitiesDetectionModeEnum mode, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.mode = mode;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

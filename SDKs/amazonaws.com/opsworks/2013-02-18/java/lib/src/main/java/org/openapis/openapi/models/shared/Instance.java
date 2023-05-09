@@ -15,6 +15,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public Instance withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -23,6 +24,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiId")
     public String amiId;
+
     public Instance withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -31,6 +33,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Architecture")
     public ArchitectureEnum architecture;
+
     public Instance withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -39,6 +42,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Instance withArn(String arn) {
         this.arn = arn;
         return this;
@@ -47,6 +51,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingType")
     public AutoScalingTypeEnum autoScalingType;
+
     public Instance withAutoScalingType(AutoScalingTypeEnum autoScalingType) {
         this.autoScalingType = autoScalingType;
         return this;
@@ -55,6 +60,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public Instance withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -63,6 +69,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockDeviceMappings")
     public BlockDeviceMapping[] blockDeviceMappings;
+
     public Instance withBlockDeviceMappings(BlockDeviceMapping[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -71,6 +78,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public Instance withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -79,6 +87,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsOptimized")
     public Boolean ebsOptimized;
+
     public Instance withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -87,6 +96,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2InstanceId")
     public String ec2InstanceId;
+
     public Instance withEc2InstanceId(String ec2InstanceId) {
         this.ec2InstanceId = ec2InstanceId;
         return this;
@@ -95,6 +105,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsClusterArn")
     public String ecsClusterArn;
+
     public Instance withEcsClusterArn(String ecsClusterArn) {
         this.ecsClusterArn = ecsClusterArn;
         return this;
@@ -103,6 +114,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsContainerInstanceArn")
     public String ecsContainerInstanceArn;
+
     public Instance withEcsContainerInstanceArn(String ecsContainerInstanceArn) {
         this.ecsContainerInstanceArn = ecsContainerInstanceArn;
         return this;
@@ -111,6 +123,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticIp")
     public String elasticIp;
+
     public Instance withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -119,6 +132,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public Instance withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -127,6 +141,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InfrastructureClass")
     public String infrastructureClass;
+
     public Instance withInfrastructureClass(String infrastructureClass) {
         this.infrastructureClass = infrastructureClass;
         return this;
@@ -135,6 +150,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstallUpdatesOnBoot")
     public Boolean installUpdatesOnBoot;
+
     public Instance withInstallUpdatesOnBoot(Boolean installUpdatesOnBoot) {
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
@@ -143,6 +159,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public Instance withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -151,6 +168,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceProfileArn")
     public String instanceProfileArn;
+
     public Instance withInstanceProfileArn(String instanceProfileArn) {
         this.instanceProfileArn = instanceProfileArn;
         return this;
@@ -159,6 +177,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Instance withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -167,6 +186,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastServiceErrorId")
     public String lastServiceErrorId;
+
     public Instance withLastServiceErrorId(String lastServiceErrorId) {
         this.lastServiceErrorId = lastServiceErrorId;
         return this;
@@ -175,6 +195,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerIds")
     public String[] layerIds;
+
     public Instance withLayerIds(String[] layerIds) {
         this.layerIds = layerIds;
         return this;
@@ -183,6 +204,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Os")
     public String os;
+
     public Instance withOs(String os) {
         this.os = os;
         return this;
@@ -191,6 +213,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public String platform;
+
     public Instance withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -199,6 +222,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateDns")
     public String privateDns;
+
     public Instance withPrivateDns(String privateDns) {
         this.privateDns = privateDns;
         return this;
@@ -207,6 +231,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIp")
     public String privateIp;
+
     public Instance withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -215,6 +240,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicDns")
     public String publicDns;
+
     public Instance withPublicDns(String publicDns) {
         this.publicDns = publicDns;
         return this;
@@ -223,6 +249,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicIp")
     public String publicIp;
+
     public Instance withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -231,6 +258,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegisteredBy")
     public String registeredBy;
+
     public Instance withRegisteredBy(String registeredBy) {
         this.registeredBy = registeredBy;
         return this;
@@ -239,6 +267,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportedAgentVersion")
     public String reportedAgentVersion;
+
     public Instance withReportedAgentVersion(String reportedAgentVersion) {
         this.reportedAgentVersion = reportedAgentVersion;
         return this;
@@ -247,6 +276,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportedOs")
     public ReportedOs reportedOs;
+
     public Instance withReportedOs(ReportedOs reportedOs) {
         this.reportedOs = reportedOs;
         return this;
@@ -255,6 +285,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootDeviceType")
     public RootDeviceTypeEnum rootDeviceType;
+
     public Instance withRootDeviceType(RootDeviceTypeEnum rootDeviceType) {
         this.rootDeviceType = rootDeviceType;
         return this;
@@ -263,6 +294,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootDeviceVolumeId")
     public String rootDeviceVolumeId;
+
     public Instance withRootDeviceVolumeId(String rootDeviceVolumeId) {
         this.rootDeviceVolumeId = rootDeviceVolumeId;
         return this;
@@ -271,6 +303,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public Instance withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -279,6 +312,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshHostDsaKeyFingerprint")
     public String sshHostDsaKeyFingerprint;
+
     public Instance withSshHostDsaKeyFingerprint(String sshHostDsaKeyFingerprint) {
         this.sshHostDsaKeyFingerprint = sshHostDsaKeyFingerprint;
         return this;
@@ -287,6 +321,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshHostRsaKeyFingerprint")
     public String sshHostRsaKeyFingerprint;
+
     public Instance withSshHostRsaKeyFingerprint(String sshHostRsaKeyFingerprint) {
         this.sshHostRsaKeyFingerprint = sshHostRsaKeyFingerprint;
         return this;
@@ -295,6 +330,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshKeyName")
     public String sshKeyName;
+
     public Instance withSshKeyName(String sshKeyName) {
         this.sshKeyName = sshKeyName;
         return this;
@@ -303,6 +339,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public Instance withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -311,6 +348,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Instance withStatus(String status) {
         this.status = status;
         return this;
@@ -319,6 +357,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public Instance withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -327,6 +366,7 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenancy")
     public String tenancy;
+
     public Instance withTenancy(String tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -335,9 +375,11 @@ public class Instance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualizationType")
     public VirtualizationTypeEnum virtualizationType;
+
     public Instance withVirtualizationType(VirtualizationTypeEnum virtualizationType) {
         this.virtualizationType = virtualizationType;
         return this;
     }
     
+    public Instance(){}
 }

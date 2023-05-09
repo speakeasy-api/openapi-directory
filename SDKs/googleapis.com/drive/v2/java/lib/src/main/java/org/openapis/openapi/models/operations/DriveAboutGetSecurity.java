@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DriveAboutGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DriveAboutGetSecurityOption1 option1;
+
     public DriveAboutGetSecurity withOption1(DriveAboutGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DriveAboutGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveAboutGetSecurityOption2 option2;
+
     public DriveAboutGetSecurity withOption2(DriveAboutGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DriveAboutGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveAboutGetSecurityOption3 option3;
+
     public DriveAboutGetSecurity withOption3(DriveAboutGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class DriveAboutGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveAboutGetSecurityOption4 option4;
+
     public DriveAboutGetSecurity withOption4(DriveAboutGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class DriveAboutGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveAboutGetSecurityOption5 option5;
+
     public DriveAboutGetSecurity withOption5(DriveAboutGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,6 +49,7 @@ public class DriveAboutGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveAboutGetSecurityOption6 option6;
+
     public DriveAboutGetSecurity withOption6(DriveAboutGetSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -51,9 +57,11 @@ public class DriveAboutGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveAboutGetSecurityOption7 option7;
+
     public DriveAboutGetSecurity withOption7(DriveAboutGetSecurityOption7 option7) {
         this.option7 = option7;
         return this;
     }
     
+    public DriveAboutGetSecurity(){}
 }

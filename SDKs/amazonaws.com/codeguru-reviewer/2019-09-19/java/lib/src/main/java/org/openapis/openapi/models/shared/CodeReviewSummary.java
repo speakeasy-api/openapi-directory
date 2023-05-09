@@ -20,6 +20,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeReviewArn")
     public String codeReviewArn;
+
     public CodeReviewSummary withCodeReviewArn(String codeReviewArn) {
         this.codeReviewArn = codeReviewArn;
         return this;
@@ -30,6 +31,7 @@ public class CodeReviewSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimeStamp")
     public OffsetDateTime createdTimeStamp;
+
     public CodeReviewSummary withCreatedTimeStamp(OffsetDateTime createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
         return this;
@@ -40,6 +42,7 @@ public class CodeReviewSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimeStamp")
     public OffsetDateTime lastUpdatedTimeStamp;
+
     public CodeReviewSummary withLastUpdatedTimeStamp(OffsetDateTime lastUpdatedTimeStamp) {
         this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
         return this;
@@ -48,6 +51,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricsSummary")
     public MetricsSummary metricsSummary;
+
     public CodeReviewSummary withMetricsSummary(MetricsSummary metricsSummary) {
         this.metricsSummary = metricsSummary;
         return this;
@@ -56,6 +60,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CodeReviewSummary withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public CodeReviewSummary withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -72,6 +78,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public CodeReviewSummary withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -80,6 +87,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PullRequestId")
     public String pullRequestId;
+
     public CodeReviewSummary withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -88,6 +96,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryName")
     public String repositoryName;
+
     public CodeReviewSummary withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -99,6 +108,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceCodeType")
     public SourceCodeType sourceCodeType;
+
     public CodeReviewSummary withSourceCodeType(SourceCodeType sourceCodeType) {
         this.sourceCodeType = sourceCodeType;
         return this;
@@ -107,6 +117,7 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public JobStateEnum state;
+
     public CodeReviewSummary withState(JobStateEnum state) {
         this.state = state;
         return this;
@@ -115,9 +126,11 @@ public class CodeReviewSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public TypeEnum type;
+
     public CodeReviewSummary withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CodeReviewSummary(){}
 }

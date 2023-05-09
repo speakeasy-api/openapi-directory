@@ -61,11 +61,9 @@ public class Repricingrules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRepricingrulesCreateResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesCreateResponse() {{
+        org.openapis.openapi.models.operations.ContentRepricingrulesCreateResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesCreateResponse(contentType, httpRes.statusCode()) {{
             repricingRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Repricingrules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRepricingrulesDeleteResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentRepricingrulesDeleteResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Repricingrules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRepricingrulesGetResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesGetResponse() {{
+        org.openapis.openapi.models.operations.ContentRepricingrulesGetResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesGetResponse(contentType, httpRes.statusCode()) {{
             repricingRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Repricingrules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRepricingrulesListResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesListResponse() {{
+        org.openapis.openapi.models.operations.ContentRepricingrulesListResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesListResponse(contentType, httpRes.statusCode()) {{
             listRepricingRulesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Repricingrules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRepricingrulesPatchResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesPatchResponse() {{
+        org.openapis.openapi.models.operations.ContentRepricingrulesPatchResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesPatchResponse(contentType, httpRes.statusCode()) {{
             repricingRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Repricingrules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListResponse() {{
+        org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListResponse res = new org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListResponse(contentType, httpRes.statusCode()) {{
             listRepricingRuleReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

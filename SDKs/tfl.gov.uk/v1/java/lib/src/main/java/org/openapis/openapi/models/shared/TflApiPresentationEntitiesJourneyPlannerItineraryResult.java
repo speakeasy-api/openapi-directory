@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesJourneyPlannerItineraryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycleHireDockingStationData")
     public TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData cycleHireDockingStationData;
+
     public TflApiPresentationEntitiesJourneyPlannerItineraryResult withCycleHireDockingStationData(TflApiPresentationEntitiesJourneyPlannerJourneyPlannerCycleHireDockingStationData cycleHireDockingStationData) {
         this.cycleHireDockingStationData = cycleHireDockingStationData;
         return this;
@@ -23,6 +24,7 @@ public class TflApiPresentationEntitiesJourneyPlannerItineraryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("journeyVector")
     public TflApiPresentationEntitiesJourneyPlannerJourneyVector journeyVector;
+
     public TflApiPresentationEntitiesJourneyPlannerItineraryResult withJourneyVector(TflApiPresentationEntitiesJourneyPlannerJourneyVector journeyVector) {
         this.journeyVector = journeyVector;
         return this;
@@ -31,6 +33,7 @@ public class TflApiPresentationEntitiesJourneyPlannerItineraryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("journeys")
     public TflApiPresentationEntitiesJourneyPlannerJourney[] journeys;
+
     public TflApiPresentationEntitiesJourneyPlannerItineraryResult withJourneys(TflApiPresentationEntitiesJourneyPlannerJourney[] journeys) {
         this.journeys = journeys;
         return this;
@@ -39,6 +42,7 @@ public class TflApiPresentationEntitiesJourneyPlannerItineraryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lines")
     public TflApiPresentationEntitiesLine[] lines;
+
     public TflApiPresentationEntitiesJourneyPlannerItineraryResult withLines(TflApiPresentationEntitiesLine[] lines) {
         this.lines = lines;
         return this;
@@ -47,6 +51,7 @@ public class TflApiPresentationEntitiesJourneyPlannerItineraryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedMaxAgeMinutes")
     public Integer recommendedMaxAgeMinutes;
+
     public TflApiPresentationEntitiesJourneyPlannerItineraryResult withRecommendedMaxAgeMinutes(Integer recommendedMaxAgeMinutes) {
         this.recommendedMaxAgeMinutes = recommendedMaxAgeMinutes;
         return this;
@@ -55,6 +60,7 @@ public class TflApiPresentationEntitiesJourneyPlannerItineraryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchCriteria")
     public TflApiPresentationEntitiesJourneyPlannerSearchCriteria searchCriteria;
+
     public TflApiPresentationEntitiesJourneyPlannerItineraryResult withSearchCriteria(TflApiPresentationEntitiesJourneyPlannerSearchCriteria searchCriteria) {
         this.searchCriteria = searchCriteria;
         return this;
@@ -63,9 +69,11 @@ public class TflApiPresentationEntitiesJourneyPlannerItineraryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopMessages")
     public String[] stopMessages;
+
     public TflApiPresentationEntitiesJourneyPlannerItineraryResult withStopMessages(String[] stopMessages) {
         this.stopMessages = stopMessages;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerItineraryResult(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAlarmRequest {
     @JsonProperty("alarmName")
     public String alarmName;
+
     public DeleteAlarmRequest withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
     }
     
+    public DeleteAlarmRequest(@JsonProperty("alarmName") String alarmName) {
+        this.alarmName = alarmName;
+  }
 }

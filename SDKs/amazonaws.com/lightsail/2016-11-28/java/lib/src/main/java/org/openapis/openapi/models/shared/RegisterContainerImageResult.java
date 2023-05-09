@@ -15,9 +15,11 @@ public class RegisterContainerImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public ContainerImage containerImage;
+
     public RegisterContainerImageResult withContainerImage(ContainerImage containerImage) {
         this.containerImage = containerImage;
         return this;
     }
     
+    public RegisterContainerImageResult(){}
 }

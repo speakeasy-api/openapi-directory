@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetCombinedStatusForRefRequest {
@@ -12,6 +13,7 @@ public class ReposGetCombinedStatusForRefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposGetCombinedStatusForRefRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ReposGetCombinedStatusForRefRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReposGetCombinedStatusForRefRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ReposGetCombinedStatusForRefRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReposGetCombinedStatusForRefRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class ReposGetCombinedStatusForRefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
     public String ref;
+
     public ReposGetCombinedStatusForRefRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -52,9 +57,15 @@ public class ReposGetCombinedStatusForRefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposGetCombinedStatusForRefRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposGetCombinedStatusForRefRequest(@JsonProperty("owner") String owner, @JsonProperty("ref") String ref, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.ref = ref;
+        this.repo = repo;
+  }
 }

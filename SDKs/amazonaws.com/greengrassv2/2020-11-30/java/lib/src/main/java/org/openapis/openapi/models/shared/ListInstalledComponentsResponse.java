@@ -15,6 +15,7 @@ public class ListInstalledComponentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installedComponents")
     public InstalledComponent[] installedComponents;
+
     public ListInstalledComponentsResponse withInstalledComponents(InstalledComponent[] installedComponents) {
         this.installedComponents = installedComponents;
         return this;
@@ -23,9 +24,11 @@ public class ListInstalledComponentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListInstalledComponentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInstalledComponentsResponse(){}
 }

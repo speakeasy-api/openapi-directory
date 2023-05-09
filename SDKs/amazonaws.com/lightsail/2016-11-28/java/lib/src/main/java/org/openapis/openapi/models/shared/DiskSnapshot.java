@@ -20,6 +20,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DiskSnapshot withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DiskSnapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DiskSnapshot withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromDiskArn")
     public String fromDiskArn;
+
     public DiskSnapshot withFromDiskArn(String fromDiskArn) {
         this.fromDiskArn = fromDiskArn;
         return this;
@@ -46,6 +49,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromDiskName")
     public String fromDiskName;
+
     public DiskSnapshot withFromDiskName(String fromDiskName) {
         this.fromDiskName = fromDiskName;
         return this;
@@ -54,6 +58,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromInstanceArn")
     public String fromInstanceArn;
+
     public DiskSnapshot withFromInstanceArn(String fromInstanceArn) {
         this.fromInstanceArn = fromInstanceArn;
         return this;
@@ -62,6 +67,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromInstanceName")
     public String fromInstanceName;
+
     public DiskSnapshot withFromInstanceName(String fromInstanceName) {
         this.fromInstanceName = fromInstanceName;
         return this;
@@ -70,6 +76,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFromAutoSnapshot")
     public Boolean isFromAutoSnapshot;
+
     public DiskSnapshot withIsFromAutoSnapshot(Boolean isFromAutoSnapshot) {
         this.isFromAutoSnapshot = isFromAutoSnapshot;
         return this;
@@ -78,6 +85,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public DiskSnapshot withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -86,6 +94,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DiskSnapshot withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     public String progress;
+
     public DiskSnapshot withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -102,6 +112,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public DiskSnapshot withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -110,6 +121,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInGb")
     public Long sizeInGb;
+
     public DiskSnapshot withSizeInGb(Long sizeInGb) {
         this.sizeInGb = sizeInGb;
         return this;
@@ -118,6 +130,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DiskSnapshotStateEnum state;
+
     public DiskSnapshot withState(DiskSnapshotStateEnum state) {
         this.state = state;
         return this;
@@ -126,6 +139,7 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public DiskSnapshot withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
@@ -134,9 +148,11 @@ public class DiskSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public DiskSnapshot withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DiskSnapshot(){}
 }

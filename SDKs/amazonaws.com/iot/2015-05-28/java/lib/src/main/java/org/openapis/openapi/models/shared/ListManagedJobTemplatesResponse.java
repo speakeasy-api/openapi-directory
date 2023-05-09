@@ -15,6 +15,7 @@ public class ListManagedJobTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedJobTemplates")
     public ManagedJobTemplateSummary[] managedJobTemplates;
+
     public ListManagedJobTemplatesResponse withManagedJobTemplates(ManagedJobTemplateSummary[] managedJobTemplates) {
         this.managedJobTemplates = managedJobTemplates;
         return this;
@@ -23,9 +24,11 @@ public class ListManagedJobTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListManagedJobTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListManagedJobTemplatesResponse(){}
 }

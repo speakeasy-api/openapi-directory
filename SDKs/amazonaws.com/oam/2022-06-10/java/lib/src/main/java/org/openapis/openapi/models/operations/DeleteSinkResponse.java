@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSinkResponse {
@@ -12,6 +13,7 @@ public class DeleteSinkResponse {
      */
     
     public Object conflictException;
+
     public DeleteSinkResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSinkResponse {
     
     
     public String contentType;
+
     public DeleteSinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSinkResponse {
      */
     
     public java.util.Map<String, Object> deleteSinkOutput;
+
     public DeleteSinkResponse withDeleteSinkOutput(java.util.Map<String, Object> deleteSinkOutput) {
         this.deleteSinkOutput = deleteSinkOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSinkResponse {
      */
     
     public Object internalServiceFault;
+
     public DeleteSinkResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSinkResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteSinkResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSinkResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public DeleteSinkResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteSinkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSinkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteSinkResponse {
     
     
     public Integer statusCode;
+
     public DeleteSinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteSinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

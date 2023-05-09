@@ -15,6 +15,7 @@ public class RemoveAllBackendsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public RemoveAllBackendsResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class RemoveAllBackendsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public RemoveAllBackendsResponse withError(String error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class RemoveAllBackendsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public RemoveAllBackendsResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -39,6 +42,7 @@ public class RemoveAllBackendsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public String operation;
+
     public RemoveAllBackendsResponse withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -47,9 +51,11 @@ public class RemoveAllBackendsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public RemoveAllBackendsResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RemoveAllBackendsResponse(){}
 }

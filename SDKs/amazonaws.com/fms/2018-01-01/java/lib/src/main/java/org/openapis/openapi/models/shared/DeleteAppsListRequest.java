@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAppsListRequest {
     @JsonProperty("ListId")
     public String listId;
+
     public DeleteAppsListRequest withListId(String listId) {
         this.listId = listId;
         return this;
     }
     
+    public DeleteAppsListRequest(@JsonProperty("ListId") String listId) {
+        this.listId = listId;
+  }
 }

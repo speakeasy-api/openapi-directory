@@ -15,6 +15,7 @@ public class BatchDeleteDetectorErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public BatchDeleteDetectorErrorEntry withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchDeleteDetectorErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchDeleteDetectorErrorEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchDeleteDetectorErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public BatchDeleteDetectorErrorEntry withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public BatchDeleteDetectorErrorEntry(){}
 }

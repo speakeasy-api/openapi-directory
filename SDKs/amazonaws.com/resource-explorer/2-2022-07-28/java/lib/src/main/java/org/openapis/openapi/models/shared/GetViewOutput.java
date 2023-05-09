@@ -15,6 +15,7 @@ public class GetViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetViewOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -23,9 +24,11 @@ public class GetViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("View")
     public View view;
+
     public GetViewOutput withView(View view) {
         this.view = view;
         return this;
     }
     
+    public GetViewOutput(){}
 }

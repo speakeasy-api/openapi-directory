@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ModifySnapshotTierResult {
     
     public String snapshotId;
+
     public ModifySnapshotTierResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -19,9 +20,11 @@ public class ModifySnapshotTierResult {
     
     
     public OffsetDateTime tieringStartTime;
+
     public ModifySnapshotTierResult withTieringStartTime(OffsetDateTime tieringStartTime) {
         this.tieringStartTime = tieringStartTime;
         return this;
     }
     
+    public ModifySnapshotTierResult(){}
 }

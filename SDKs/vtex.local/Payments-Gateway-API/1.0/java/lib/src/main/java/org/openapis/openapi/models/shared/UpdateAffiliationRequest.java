@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAffiliationRequest {
     @JsonProperty("configuration")
     public Configuration[] configuration;
+
     public UpdateAffiliationRequest withConfiguration(Configuration[] configuration) {
         this.configuration = configuration;
         return this;
@@ -16,6 +17,7 @@ public class UpdateAffiliationRequest {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateAffiliationRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class UpdateAffiliationRequest {
     
     @JsonProperty("implementation")
     public String implementation;
+
     public UpdateAffiliationRequest withImplementation(String implementation) {
         this.implementation = implementation;
         return this;
@@ -30,6 +33,7 @@ public class UpdateAffiliationRequest {
     
     @JsonProperty("isConfigured")
     public Boolean isConfigured;
+
     public UpdateAffiliationRequest withIsConfigured(Boolean isConfigured) {
         this.isConfigured = isConfigured;
         return this;
@@ -37,6 +41,7 @@ public class UpdateAffiliationRequest {
     
     @JsonProperty("isdelivered")
     public Boolean isdelivered;
+
     public UpdateAffiliationRequest withIsdelivered(Boolean isdelivered) {
         this.isdelivered = isdelivered;
         return this;
@@ -44,9 +49,18 @@ public class UpdateAffiliationRequest {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateAffiliationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateAffiliationRequest(@JsonProperty("configuration") Configuration[] configuration, @JsonProperty("id") String id, @JsonProperty("implementation") String implementation, @JsonProperty("isConfigured") Boolean isConfigured, @JsonProperty("isdelivered") Boolean isdelivered, @JsonProperty("name") String name) {
+        this.configuration = configuration;
+        this.id = id;
+        this.implementation = implementation;
+        this.isConfigured = isConfigured;
+        this.isdelivered = isdelivered;
+        this.name = name;
+  }
 }

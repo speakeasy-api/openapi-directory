@@ -17,6 +17,7 @@ public class DestinyResponsesDestinyCharacterResponseInventory {
      */
     
     public DestinyEntitiesInventoryDestinyInventoryComponent data;
+
     public DestinyResponsesDestinyCharacterResponseInventory withData(DestinyEntitiesInventoryDestinyInventoryComponent data) {
         this.data = data;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyCharacterResponseInventory {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyCharacterResponseInventory withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -34,9 +36,11 @@ public class DestinyResponsesDestinyCharacterResponseInventory {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyCharacterResponseInventory withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponseInventory(){}
 }

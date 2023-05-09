@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnsubscribeAddress {
     @JsonProperty("contractaddress")
     public String contractaddress;
+
     public UnsubscribeAddress withContractaddress(String contractaddress) {
         this.contractaddress = contractaddress;
         return this;
@@ -16,6 +17,7 @@ public class UnsubscribeAddress {
     
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public UnsubscribeAddress withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -23,6 +25,7 @@ public class UnsubscribeAddress {
     
     @JsonProperty("ethereumaddress")
     public String ethereumaddress;
+
     public UnsubscribeAddress withEthereumaddress(String ethereumaddress) {
         this.ethereumaddress = ethereumaddress;
         return this;
@@ -30,6 +33,7 @@ public class UnsubscribeAddress {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public UnsubscribeAddress withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -37,9 +41,17 @@ public class UnsubscribeAddress {
     
     @JsonProperty("url")
     public String url;
+
     public UnsubscribeAddress withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UnsubscribeAddress(@JsonProperty("contractaddress") String contractaddress, @JsonProperty("deleted") Boolean deleted, @JsonProperty("ethereumaddress") String ethereumaddress, @JsonProperty("ok") Boolean ok, @JsonProperty("url") String url) {
+        this.contractaddress = contractaddress;
+        this.deleted = deleted;
+        this.ethereumaddress = ethereumaddress;
+        this.ok = ok;
+        this.url = url;
+  }
 }

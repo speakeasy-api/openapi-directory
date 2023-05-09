@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReportTaskProgressResponse {
     
     public String contentType;
+
     public ReportTaskProgressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ReportTaskProgressResponse {
      */
     
     public Object internalServiceError;
+
     public ReportTaskProgressResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ReportTaskProgressResponse {
      */
     
     public Object invalidRequestException;
+
     public ReportTaskProgressResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ReportTaskProgressResponse {
      */
     
     public Object pipelineDeletedException;
+
     public ReportTaskProgressResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -49,6 +54,7 @@ public class ReportTaskProgressResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public ReportTaskProgressResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ReportTaskProgressResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportTaskProgressOutput reportTaskProgressOutput;
+
     public ReportTaskProgressResponse withReportTaskProgressOutput(org.openapis.openapi.models.shared.ReportTaskProgressOutput reportTaskProgressOutput) {
         this.reportTaskProgressOutput = reportTaskProgressOutput;
         return this;
@@ -66,6 +73,7 @@ public class ReportTaskProgressResponse {
     
     
     public Integer statusCode;
+
     public ReportTaskProgressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ReportTaskProgressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReportTaskProgressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ReportTaskProgressResponse {
      */
     
     public Object taskNotFoundException;
+
     public ReportTaskProgressResponse withTaskNotFoundException(Object taskNotFoundException) {
         this.taskNotFoundException = taskNotFoundException;
         return this;
     }
     
+    public ReportTaskProgressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

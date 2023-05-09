@@ -12,6 +12,7 @@ public class ListTagsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListTagsForResourceRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class ListTagsForResourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListTagsForResourceRequest withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -27,9 +29,13 @@ public class ListTagsForResourceRequest {
     
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public ListTagsForResourceRequest withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public ListTagsForResourceRequest(@JsonProperty("ResourceARN") String resourceARN) {
+        this.resourceARN = resourceARN;
+  }
 }

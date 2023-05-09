@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateOrderInvoiceRequest {
@@ -12,6 +13,7 @@ public class GenerateOrderInvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public GenerateOrderInvoiceRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class GenerateOrderInvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderUUID")
     public String beezUPOrderUUID;
+
     public GenerateOrderInvoiceRequest withBeezUPOrderUUID(String beezUPOrderUUID) {
         this.beezUPOrderUUID = beezUPOrderUUID;
         return this;
@@ -29,6 +32,7 @@ public class GenerateOrderInvoiceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GenerateOrderInvoiceRequest generateOrderInvoiceRequest;
+
     public GenerateOrderInvoiceRequest withGenerateOrderInvoiceRequest(org.openapis.openapi.models.shared.GenerateOrderInvoiceRequest generateOrderInvoiceRequest) {
         this.generateOrderInvoiceRequest = generateOrderInvoiceRequest;
         return this;
@@ -39,6 +43,7 @@ public class GenerateOrderInvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public GenerateOrderInvoiceRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -49,9 +54,17 @@ public class GenerateOrderInvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
     public String userName;
+
     public GenerateOrderInvoiceRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GenerateOrderInvoiceRequest(@JsonProperty("accountId") String accountId, @JsonProperty("beezUPOrderUUID") String beezUPOrderUUID, @JsonProperty("generateOrderInvoiceRequest") org.openapis.openapi.models.shared.GenerateOrderInvoiceRequest generateOrderInvoiceRequest, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("userName") String userName) {
+        this.accountId = accountId;
+        this.beezUPOrderUUID = beezUPOrderUUID;
+        this.generateOrderInvoiceRequest = generateOrderInvoiceRequest;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.userName = userName;
+  }
 }

@@ -12,6 +12,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseExact")
     public Boolean caseExact;
+
     public ScimSchemaParentAttribute withCaseExact(Boolean caseExact) {
         this.caseExact = caseExact;
         return this;
@@ -20,6 +21,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScimSchemaParentAttribute withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiValued")
     public Boolean multiValued;
+
     public ScimSchemaParentAttribute withMultiValued(Boolean multiValued) {
         this.multiValued = multiValued;
         return this;
@@ -36,6 +39,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mutability")
     public String mutability;
+
     public ScimSchemaParentAttribute withMutability(String mutability) {
         this.mutability = mutability;
         return this;
@@ -44,6 +48,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ScimSchemaParentAttribute withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public ScimSchemaParentAttribute withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -60,6 +66,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returned")
     public String returned;
+
     public ScimSchemaParentAttribute withReturned(String returned) {
         this.returned = returned;
         return this;
@@ -68,6 +75,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAttributes")
     public ScimSchemaAttribute[] subAttributes;
+
     public ScimSchemaParentAttribute withSubAttributes(ScimSchemaAttribute[] subAttributes) {
         this.subAttributes = subAttributes;
         return this;
@@ -76,6 +84,7 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ScimSchemaParentAttributeTypeEnum type;
+
     public ScimSchemaParentAttribute withType(ScimSchemaParentAttributeTypeEnum type) {
         this.type = type;
         return this;
@@ -84,9 +93,11 @@ public class ScimSchemaParentAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueness")
     public String uniqueness;
+
     public ScimSchemaParentAttribute withUniqueness(String uniqueness) {
         this.uniqueness = uniqueness;
         return this;
     }
     
+    public ScimSchemaParentAttribute(){}
 }

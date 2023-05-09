@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInsightsAnalysesResult {
     
     public DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses[] networkInsightsAnalyses;
+
     public DescribeNetworkInsightsAnalysesResult withNetworkInsightsAnalyses(DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalyses[] networkInsightsAnalyses) {
         this.networkInsightsAnalyses = networkInsightsAnalyses;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInsightsAnalysesResult {
     
     
     public String nextToken;
+
     public DescribeNetworkInsightsAnalysesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInsightsAnalysesResult(){}
 }

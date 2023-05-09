@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ChannelInput {
     /**
-     * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
+     * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeyName")
     public String cryptoKeyName;
+
     public ChannelInput withCryptoKeyName(String cryptoKeyName) {
         this.cryptoKeyName = cryptoKeyName;
         return this;
@@ -29,6 +30,7 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChannelInput withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class ChannelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public ChannelInput withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public ChannelInput(){}
 }

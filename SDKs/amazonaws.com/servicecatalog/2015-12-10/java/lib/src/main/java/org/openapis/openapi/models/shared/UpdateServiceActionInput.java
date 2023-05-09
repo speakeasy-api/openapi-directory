@@ -12,6 +12,7 @@ public class UpdateServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public UpdateServiceActionInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class UpdateServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public java.util.Map<String, String> definition;
+
     public UpdateServiceActionInput withDefinition(java.util.Map<String, String> definition) {
         this.definition = definition;
         return this;
@@ -28,6 +30,7 @@ public class UpdateServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateServiceActionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class UpdateServiceActionInput {
     
     @JsonProperty("Id")
     public String id;
+
     public UpdateServiceActionInput withId(String id) {
         this.id = id;
         return this;
@@ -43,9 +47,13 @@ public class UpdateServiceActionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateServiceActionInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateServiceActionInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse {
     
     public byte[] body;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusR
     
     
     public String contentType;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusR
      */
     
     public org.openapis.openapi.models.shared.PublicSubscriptionStatusesResponse publicSubscriptionStatusesResponse;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse withPublicSubscriptionStatusesResponse(org.openapis.openapi.models.shared.PublicSubscriptionStatusesResponse publicSubscriptionStatusesResponse) {
         this.publicSubscriptionStatusesResponse = publicSubscriptionStatusesResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusR
     
     
     public Integer statusCode;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusR
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

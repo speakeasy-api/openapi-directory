@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Transaction - A transaction for an app initiated by a user
@@ -15,6 +15,7 @@ public class Transaction {
      */
     
     public Long amount;
+
     public Transaction withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class Transaction {
      */
     
     public String appId;
+
     public Transaction withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -35,6 +37,7 @@ public class Transaction {
      */
     
     public java.util.Map<String, Object> customData;
+
     public Transaction withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -45,6 +48,7 @@ public class Transaction {
      */
     
     public Long date;
+
     public Transaction withDate(Long date) {
         this.date = date;
         return this;
@@ -55,6 +59,7 @@ public class Transaction {
      */
     
     public Long developerAmount;
+
     public Transaction withDeveloperAmount(Long developerAmount) {
         this.developerAmount = developerAmount;
         return this;
@@ -65,6 +70,7 @@ public class Transaction {
      */
     
     public String developerId;
+
     public Transaction withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -75,6 +81,7 @@ public class Transaction {
      */
     
     public Long feeAmount;
+
     public Transaction withFeeAmount(Long feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -85,6 +92,7 @@ public class Transaction {
      */
     
     public Long marketplaceAmount;
+
     public Transaction withMarketplaceAmount(Long marketplaceAmount) {
         this.marketplaceAmount = marketplaceAmount;
         return this;
@@ -95,6 +103,7 @@ public class Transaction {
      */
     
     public String ownershipId;
+
     public Transaction withOwnershipId(String ownershipId) {
         this.ownershipId = ownershipId;
         return this;
@@ -105,6 +114,7 @@ public class Transaction {
      */
     
     public String transactionId;
+
     public Transaction withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -115,6 +125,7 @@ public class Transaction {
      */
     
     public TransactionTypeEnum type;
+
     public Transaction withType(TransactionTypeEnum type) {
         this.type = type;
         return this;
@@ -125,9 +136,20 @@ public class Transaction {
      */
     
     public String userId;
+
     public Transaction withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Transaction(@JsonProperty("amount") Long amount, @JsonProperty("appId") String appId, @JsonProperty("date") Long date, @JsonProperty("developerId") String developerId, @JsonProperty("ownershipId") String ownershipId, @JsonProperty("transactionId") String transactionId, @JsonProperty("type") TransactionTypeEnum type, @JsonProperty("userId") String userId) {
+        this.amount = amount;
+        this.appId = appId;
+        this.date = date;
+        this.developerId = developerId;
+        this.ownershipId = ownershipId;
+        this.transactionId = transactionId;
+        this.type = type;
+        this.userId = userId;
+  }
 }

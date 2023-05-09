@@ -14,6 +14,7 @@ public class StoredValueVoidRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoredValueVoidRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -24,6 +25,7 @@ public class StoredValueVoidRequest {
      */
     @JsonProperty("originalReference")
     public String originalReference;
+
     public StoredValueVoidRequest withOriginalReference(String originalReference) {
         this.originalReference = originalReference;
         return this;
@@ -36,6 +38,7 @@ public class StoredValueVoidRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public StoredValueVoidRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -47,6 +50,7 @@ public class StoredValueVoidRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public StoredValueVoidRequest withStore(String store) {
         this.store = store;
         return this;
@@ -58,6 +62,7 @@ public class StoredValueVoidRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenderReference")
     public String tenderReference;
+
     public StoredValueVoidRequest withTenderReference(String tenderReference) {
         this.tenderReference = tenderReference;
         return this;
@@ -69,9 +74,14 @@ public class StoredValueVoidRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueTerminalId")
     public String uniqueTerminalId;
+
     public StoredValueVoidRequest withUniqueTerminalId(String uniqueTerminalId) {
         this.uniqueTerminalId = uniqueTerminalId;
         return this;
     }
     
+    public StoredValueVoidRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("originalReference") String originalReference) {
+        this.merchantAccount = merchantAccount;
+        this.originalReference = originalReference;
+  }
 }

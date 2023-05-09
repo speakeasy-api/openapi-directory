@@ -14,6 +14,7 @@ public class ProfilePictureInfo {
      */
     @JsonProperty("profilePictureSelected")
     public ProfilePictureSelectedEnum profilePictureSelected;
+
     public ProfilePictureInfo withProfilePictureSelected(ProfilePictureSelectedEnum profilePictureSelected) {
         this.profilePictureSelected = profilePictureSelected;
         return this;
@@ -25,9 +26,13 @@ public class ProfilePictureInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePictureUrl")
     public String profilePictureUrl;
+
     public ProfilePictureInfo withProfilePictureUrl(String profilePictureUrl) {
         this.profilePictureUrl = profilePictureUrl;
         return this;
     }
     
+    public ProfilePictureInfo(@JsonProperty("profilePictureSelected") ProfilePictureSelectedEnum profilePictureSelected) {
+        this.profilePictureSelected = profilePictureSelected;
+  }
 }

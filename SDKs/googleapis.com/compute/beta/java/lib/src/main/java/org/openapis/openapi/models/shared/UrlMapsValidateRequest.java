@@ -15,6 +15,7 @@ public class UrlMapsValidateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancingSchemes")
     public UrlMapsValidateRequestLoadBalancingSchemesEnum[] loadBalancingSchemes;
+
     public UrlMapsValidateRequest withLoadBalancingSchemes(UrlMapsValidateRequestLoadBalancingSchemesEnum[] loadBalancingSchemes) {
         this.loadBalancingSchemes = loadBalancingSchemes;
         return this;
@@ -26,9 +27,11 @@ public class UrlMapsValidateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public UrlMap resource;
+
     public UrlMapsValidateRequest withResource(UrlMap resource) {
         this.resource = resource;
         return this;
     }
     
+    public UrlMapsValidateRequest(){}
 }

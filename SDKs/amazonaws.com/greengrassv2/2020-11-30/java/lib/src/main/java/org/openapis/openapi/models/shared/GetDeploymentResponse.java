@@ -20,6 +20,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public java.util.Map<String, ComponentDeploymentSpecification> components;
+
     public GetDeploymentResponse withComponents(java.util.Map<String, ComponentDeploymentSpecification> components) {
         this.components = components;
         return this;
@@ -30,6 +31,7 @@ public class GetDeploymentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public GetDeploymentResponse withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public GetDeploymentResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -46,6 +49,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentName")
     public String deploymentName;
+
     public GetDeploymentResponse withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -54,6 +58,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentPolicies")
     public DeploymentPolicies deploymentPolicies;
+
     public GetDeploymentResponse withDeploymentPolicies(DeploymentPolicies deploymentPolicies) {
         this.deploymentPolicies = deploymentPolicies;
         return this;
@@ -62,6 +67,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public GetDeploymentResponse withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -70,6 +76,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobArn")
     public String iotJobArn;
+
     public GetDeploymentResponse withIotJobArn(String iotJobArn) {
         this.iotJobArn = iotJobArn;
         return this;
@@ -78,6 +85,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobConfiguration")
     public DeploymentIoTJobConfiguration iotJobConfiguration;
+
     public GetDeploymentResponse withIotJobConfiguration(DeploymentIoTJobConfiguration iotJobConfiguration) {
         this.iotJobConfiguration = iotJobConfiguration;
         return this;
@@ -86,6 +94,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobId")
     public String iotJobId;
+
     public GetDeploymentResponse withIotJobId(String iotJobId) {
         this.iotJobId = iotJobId;
         return this;
@@ -94,6 +103,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isLatestForTarget")
     public Boolean isLatestForTarget;
+
     public GetDeploymentResponse withIsLatestForTarget(Boolean isLatestForTarget) {
         this.isLatestForTarget = isLatestForTarget;
         return this;
@@ -102,6 +112,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentTargetArn")
     public String parentTargetArn;
+
     public GetDeploymentResponse withParentTargetArn(String parentTargetArn) {
         this.parentTargetArn = parentTargetArn;
         return this;
@@ -110,6 +121,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisionId")
     public String revisionId;
+
     public GetDeploymentResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
@@ -118,6 +130,7 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetDeploymentResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -126,9 +139,11 @@ public class GetDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public GetDeploymentResponse withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public GetDeploymentResponse(){}
 }

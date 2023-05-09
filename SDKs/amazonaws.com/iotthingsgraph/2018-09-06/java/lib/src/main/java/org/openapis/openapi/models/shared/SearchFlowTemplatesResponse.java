@@ -15,6 +15,7 @@ public class SearchFlowTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchFlowTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class SearchFlowTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summaries")
     public FlowTemplateSummary[] summaries;
+
     public SearchFlowTemplatesResponse withSummaries(FlowTemplateSummary[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public SearchFlowTemplatesResponse(){}
 }

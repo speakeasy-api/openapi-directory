@@ -15,9 +15,11 @@ public class CommentSnippetAuthorChannelId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CommentSnippetAuthorChannelId withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CommentSnippetAuthorChannelId(){}
 }

@@ -18,9 +18,11 @@ public class EventStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public EventStatusCodeEnum code;
+
     public EventStatus withCode(EventStatusCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public EventStatus(){}
 }

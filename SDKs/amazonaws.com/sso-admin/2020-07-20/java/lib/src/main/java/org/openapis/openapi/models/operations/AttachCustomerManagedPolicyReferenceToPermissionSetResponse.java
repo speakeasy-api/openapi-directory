@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
@@ -12,6 +13,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public java.util.Map<String, Object> attachCustomerManagedPolicyReferenceToPermissionSetResponse;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withAttachCustomerManagedPolicyReferenceToPermissionSetResponse(java.util.Map<String, Object> attachCustomerManagedPolicyReferenceToPermissionSetResponse) {
         this.attachCustomerManagedPolicyReferenceToPermissionSetResponse = attachCustomerManagedPolicyReferenceToPermissionSetResponse;
         return this;
@@ -32,6 +35,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public Object conflictException;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
     
     
     public String contentType;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AttachCustomerManagedPolicyReferenceToPermissionSetResponse {
      */
     
     public Object validationException;
+
     public AttachCustomerManagedPolicyReferenceToPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachCustomerManagedPolicyReferenceToPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RequestCancelActivityTaskDecisionAttributes {
     @JsonProperty("activityId")
     public String activityId;
+
     public RequestCancelActivityTaskDecisionAttributes withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
     }
     
+    public RequestCancelActivityTaskDecisionAttributes(@JsonProperty("activityId") String activityId) {
+        this.activityId = activityId;
+  }
 }

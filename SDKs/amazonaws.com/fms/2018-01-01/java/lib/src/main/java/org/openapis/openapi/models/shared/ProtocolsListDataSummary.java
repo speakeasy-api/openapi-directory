@@ -15,6 +15,7 @@ public class ProtocolsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListArn")
     public String listArn;
+
     public ProtocolsListDataSummary withListArn(String listArn) {
         this.listArn = listArn;
         return this;
@@ -23,6 +24,7 @@ public class ProtocolsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListId")
     public String listId;
+
     public ProtocolsListDataSummary withListId(String listId) {
         this.listId = listId;
         return this;
@@ -31,6 +33,7 @@ public class ProtocolsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ListName")
     public String listName;
+
     public ProtocolsListDataSummary withListName(String listName) {
         this.listName = listName;
         return this;
@@ -39,9 +42,11 @@ public class ProtocolsListDataSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtocolsList")
     public String[] protocolsList;
+
     public ProtocolsListDataSummary withProtocolsList(String[] protocolsList) {
         this.protocolsList = protocolsList;
         return this;
     }
     
+    public ProtocolsListDataSummary(){}
 }

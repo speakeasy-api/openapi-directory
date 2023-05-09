@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,6 +18,7 @@ public class DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransaction
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
     public Long idAccount;
+
     public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -23,6 +26,7 @@ public class DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransaction
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
     public Long idTransactionscluster;
+
     public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
         this.idTransactionscluster = idTransactionscluster;
         return this;
@@ -33,9 +37,15 @@ public class DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransaction
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest(@JsonProperty("id_account") Long idAccount, @JsonProperty("id_transactionscluster") Long idTransactionscluster, @JsonProperty("id_user") String idUser) {
+        this.idAccount = idAccount;
+        this.idTransactionscluster = idTransactionscluster;
+        this.idUser = idUser;
+  }
 }

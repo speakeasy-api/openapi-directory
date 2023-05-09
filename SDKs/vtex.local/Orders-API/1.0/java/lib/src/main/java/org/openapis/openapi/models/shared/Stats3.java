@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Stats3 {
     @JsonProperty("totalItems")
     public TotalItems1 totalItems;
+
     public Stats3 withTotalItems(TotalItems1 totalItems) {
         this.totalItems = totalItems;
         return this;
@@ -16,9 +17,14 @@ public class Stats3 {
     
     @JsonProperty("totalValue")
     public TotalValue1 totalValue;
+
     public Stats3 withTotalValue(TotalValue1 totalValue) {
         this.totalValue = totalValue;
         return this;
     }
     
+    public Stats3(@JsonProperty("totalItems") TotalItems1 totalItems, @JsonProperty("totalValue") TotalValue1 totalValue) {
+        this.totalItems = totalItems;
+        this.totalValue = totalValue;
+  }
 }

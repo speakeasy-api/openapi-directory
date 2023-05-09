@@ -15,9 +15,11 @@ public class DeleteReplicationTaskAssessmentRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskAssessmentRun")
     public ReplicationTaskAssessmentRun replicationTaskAssessmentRun;
+
     public DeleteReplicationTaskAssessmentRunResponse withReplicationTaskAssessmentRun(ReplicationTaskAssessmentRun replicationTaskAssessmentRun) {
         this.replicationTaskAssessmentRun = replicationTaskAssessmentRun;
         return this;
     }
     
+    public DeleteReplicationTaskAssessmentRunResponse(){}
 }

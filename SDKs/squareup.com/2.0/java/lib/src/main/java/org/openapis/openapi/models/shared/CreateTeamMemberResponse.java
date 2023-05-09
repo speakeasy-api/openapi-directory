@@ -18,6 +18,7 @@ public class CreateTeamMemberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateTeamMemberResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class CreateTeamMemberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member")
     public TeamMember teamMember;
+
     public CreateTeamMemberResponse withTeamMember(TeamMember teamMember) {
         this.teamMember = teamMember;
         return this;
     }
     
+    public CreateTeamMemberResponse(){}
 }

@@ -15,6 +15,7 @@ public class NodeGroupsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroups")
     public NodeGroup[] nodeGroups;
+
     public NodeGroupsScopedList withNodeGroups(NodeGroup[] nodeGroups) {
         this.nodeGroups = nodeGroups;
         return this;
@@ -26,9 +27,11 @@ public class NodeGroupsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NodeGroupsScopedListWarning warning;
+
     public NodeGroupsScopedList withWarning(NodeGroupsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NodeGroupsScopedList(){}
 }

@@ -15,6 +15,7 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstancesDistribution")
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails instancesDistribution;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails withInstancesDistribution(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyInstancesDistributionDetails instancesDistribution) {
         this.instancesDistribution = instancesDistribution;
         return this;
@@ -23,9 +24,11 @@ public class AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchTemplate")
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDetails launchTemplate;
+
     public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails withLaunchTemplate(AwsAutoScalingAutoScalingGroupMixedInstancesPolicyLaunchTemplateDetails launchTemplate) {
         this.launchTemplate = launchTemplate;
         return this;
     }
     
+    public AwsAutoScalingAutoScalingGroupMixedInstancesPolicyDetails(){}
 }

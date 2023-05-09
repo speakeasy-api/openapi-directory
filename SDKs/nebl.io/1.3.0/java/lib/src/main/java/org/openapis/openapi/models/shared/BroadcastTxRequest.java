@@ -15,9 +15,13 @@ public class BroadcastTxRequest {
      */
     @JsonProperty("txHex")
     public String txHex;
+
     public BroadcastTxRequest withTxHex(String txHex) {
         this.txHex = txHex;
         return this;
     }
     
+    public BroadcastTxRequest(@JsonProperty("txHex") String txHex) {
+        this.txHex = txHex;
+  }
 }

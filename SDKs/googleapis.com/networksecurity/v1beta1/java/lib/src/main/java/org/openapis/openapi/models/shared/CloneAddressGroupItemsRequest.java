@@ -18,6 +18,7 @@ public class CloneAddressGroupItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public CloneAddressGroupItemsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -29,9 +30,11 @@ public class CloneAddressGroupItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAddressGroup")
     public String sourceAddressGroup;
+
     public CloneAddressGroupItemsRequest withSourceAddressGroup(String sourceAddressGroup) {
         this.sourceAddressGroup = sourceAddressGroup;
         return this;
     }
     
+    public CloneAddressGroupItemsRequest(){}
 }

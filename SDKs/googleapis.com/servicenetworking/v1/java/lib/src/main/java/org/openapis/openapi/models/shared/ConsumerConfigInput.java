@@ -18,6 +18,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudsqlConfigs")
     public CloudSQLConfig[] cloudsqlConfigs;
+
     public ConsumerConfigInput withCloudsqlConfigs(CloudSQLConfig[] cloudsqlConfigs) {
         this.cloudsqlConfigs = cloudsqlConfigs;
         return this;
@@ -29,6 +30,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerExportCustomRoutes")
     public Boolean consumerExportCustomRoutes;
+
     public ConsumerConfigInput withConsumerExportCustomRoutes(Boolean consumerExportCustomRoutes) {
         this.consumerExportCustomRoutes = consumerExportCustomRoutes;
         return this;
@@ -40,6 +42,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerExportSubnetRoutesWithPublicIp")
     public Boolean consumerExportSubnetRoutesWithPublicIp;
+
     public ConsumerConfigInput withConsumerExportSubnetRoutesWithPublicIp(Boolean consumerExportSubnetRoutesWithPublicIp) {
         this.consumerExportSubnetRoutesWithPublicIp = consumerExportSubnetRoutesWithPublicIp;
         return this;
@@ -51,6 +54,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerImportCustomRoutes")
     public Boolean consumerImportCustomRoutes;
+
     public ConsumerConfigInput withConsumerImportCustomRoutes(Boolean consumerImportCustomRoutes) {
         this.consumerImportCustomRoutes = consumerImportCustomRoutes;
         return this;
@@ -62,6 +66,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerImportSubnetRoutesWithPublicIp")
     public Boolean consumerImportSubnetRoutesWithPublicIp;
+
     public ConsumerConfigInput withConsumerImportSubnetRoutesWithPublicIp(Boolean consumerImportSubnetRoutesWithPublicIp) {
         this.consumerImportSubnetRoutesWithPublicIp = consumerImportSubnetRoutesWithPublicIp;
         return this;
@@ -73,6 +78,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerExportCustomRoutes")
     public Boolean producerExportCustomRoutes;
+
     public ConsumerConfigInput withProducerExportCustomRoutes(Boolean producerExportCustomRoutes) {
         this.producerExportCustomRoutes = producerExportCustomRoutes;
         return this;
@@ -84,6 +90,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerExportSubnetRoutesWithPublicIp")
     public Boolean producerExportSubnetRoutesWithPublicIp;
+
     public ConsumerConfigInput withProducerExportSubnetRoutesWithPublicIp(Boolean producerExportSubnetRoutesWithPublicIp) {
         this.producerExportSubnetRoutesWithPublicIp = producerExportSubnetRoutesWithPublicIp;
         return this;
@@ -95,6 +102,7 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerImportCustomRoutes")
     public Boolean producerImportCustomRoutes;
+
     public ConsumerConfigInput withProducerImportCustomRoutes(Boolean producerImportCustomRoutes) {
         this.producerImportCustomRoutes = producerImportCustomRoutes;
         return this;
@@ -106,9 +114,11 @@ public class ConsumerConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producerImportSubnetRoutesWithPublicIp")
     public Boolean producerImportSubnetRoutesWithPublicIp;
+
     public ConsumerConfigInput withProducerImportSubnetRoutesWithPublicIp(Boolean producerImportSubnetRoutesWithPublicIp) {
         this.producerImportSubnetRoutesWithPublicIp = producerImportSubnetRoutesWithPublicIp;
         return this;
     }
     
+    public ConsumerConfigInput(){}
 }

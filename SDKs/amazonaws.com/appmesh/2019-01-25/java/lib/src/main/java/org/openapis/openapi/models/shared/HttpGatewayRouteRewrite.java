@@ -15,6 +15,7 @@ public class HttpGatewayRouteRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public GatewayRouteHostnameRewrite hostname;
+
     public HttpGatewayRouteRewrite withHostname(GatewayRouteHostnameRewrite hostname) {
         this.hostname = hostname;
         return this;
@@ -23,6 +24,7 @@ public class HttpGatewayRouteRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public HttpGatewayRoutePathRewrite path;
+
     public HttpGatewayRouteRewrite withPath(HttpGatewayRoutePathRewrite path) {
         this.path = path;
         return this;
@@ -31,9 +33,11 @@ public class HttpGatewayRouteRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public HttpGatewayRoutePrefixRewrite prefix;
+
     public HttpGatewayRouteRewrite withPrefix(HttpGatewayRoutePrefixRewrite prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public HttpGatewayRouteRewrite(){}
 }

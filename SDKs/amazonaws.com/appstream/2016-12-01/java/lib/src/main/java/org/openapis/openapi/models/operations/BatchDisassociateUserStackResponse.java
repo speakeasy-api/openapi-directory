@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisassociateUserStackResponse {
@@ -12,6 +13,7 @@ public class BatchDisassociateUserStackResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisassociateUserStackResult batchDisassociateUserStackResult;
+
     public BatchDisassociateUserStackResponse withBatchDisassociateUserStackResult(org.openapis.openapi.models.shared.BatchDisassociateUserStackResult batchDisassociateUserStackResult) {
         this.batchDisassociateUserStackResult = batchDisassociateUserStackResult;
         return this;
@@ -19,6 +21,7 @@ public class BatchDisassociateUserStackResponse {
     
     
     public String contentType;
+
     public BatchDisassociateUserStackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDisassociateUserStackResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public BatchDisassociateUserStackResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDisassociateUserStackResponse {
      */
     
     public Object operationNotPermittedException;
+
     public BatchDisassociateUserStackResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDisassociateUserStackResponse {
     
     
     public Integer statusCode;
+
     public BatchDisassociateUserStackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchDisassociateUserStackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisassociateUserStackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDisassociateUserStackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

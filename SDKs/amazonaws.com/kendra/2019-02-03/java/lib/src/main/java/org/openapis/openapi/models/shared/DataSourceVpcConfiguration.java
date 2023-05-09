@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSourceVpcConfiguration {
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public DataSourceVpcConfiguration withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -19,9 +20,14 @@ public class DataSourceVpcConfiguration {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public DataSourceVpcConfiguration withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public DataSourceVpcConfiguration(@JsonProperty("SecurityGroupIds") String[] securityGroupIds, @JsonProperty("SubnetIds") String[] subnetIds) {
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+  }
 }

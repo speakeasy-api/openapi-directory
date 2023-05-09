@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HealthInformationNotificationNotificationStatusNotification {
     @JsonProperty("hipId")
     public String hipId;
+
     public HealthInformationNotificationNotificationStatusNotification withHipId(String hipId) {
         this.hipId = hipId;
         return this;
@@ -18,6 +19,7 @@ public class HealthInformationNotificationNotificationStatusNotification {
     
     @JsonProperty("sessionStatus")
     public HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum sessionStatus;
+
     public HealthInformationNotificationNotificationStatusNotification withSessionStatus(HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum sessionStatus) {
         this.sessionStatus = sessionStatus;
         return this;
@@ -26,9 +28,14 @@ public class HealthInformationNotificationNotificationStatusNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusResponses")
     public HealthInformationNotificationNotificationStatusNotificationStatusResponses[] statusResponses;
+
     public HealthInformationNotificationNotificationStatusNotification withStatusResponses(HealthInformationNotificationNotificationStatusNotificationStatusResponses[] statusResponses) {
         this.statusResponses = statusResponses;
         return this;
     }
     
+    public HealthInformationNotificationNotificationStatusNotification(@JsonProperty("hipId") String hipId, @JsonProperty("sessionStatus") HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum sessionStatus) {
+        this.hipId = hipId;
+        this.sessionStatus = sessionStatus;
+  }
 }

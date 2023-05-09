@@ -22,6 +22,7 @@ public class FraudsterRegistrationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public FraudsterRegistrationJobSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class FraudsterRegistrationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public FraudsterRegistrationJobSummary withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -40,6 +42,7 @@ public class FraudsterRegistrationJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndedAt")
     public OffsetDateTime endedAt;
+
     public FraudsterRegistrationJobSummary withEndedAt(OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -48,6 +51,7 @@ public class FraudsterRegistrationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public FailureDetails failureDetails;
+
     public FraudsterRegistrationJobSummary withFailureDetails(FailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -56,6 +60,7 @@ public class FraudsterRegistrationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public FraudsterRegistrationJobSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -64,6 +69,7 @@ public class FraudsterRegistrationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public FraudsterRegistrationJobSummary withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -72,6 +78,7 @@ public class FraudsterRegistrationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobProgress")
     public JobProgress jobProgress;
+
     public FraudsterRegistrationJobSummary withJobProgress(JobProgress jobProgress) {
         this.jobProgress = jobProgress;
         return this;
@@ -80,9 +87,11 @@ public class FraudsterRegistrationJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public FraudsterRegistrationJobStatusEnum jobStatus;
+
     public FraudsterRegistrationJobSummary withJobStatus(FraudsterRegistrationJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public FraudsterRegistrationJobSummary(){}
 }

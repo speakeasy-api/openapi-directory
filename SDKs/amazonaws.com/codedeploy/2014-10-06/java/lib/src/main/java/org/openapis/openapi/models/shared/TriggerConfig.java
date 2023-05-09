@@ -15,6 +15,7 @@ public class TriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerEvents")
     public TriggerEventTypeEnum[] triggerEvents;
+
     public TriggerConfig withTriggerEvents(TriggerEventTypeEnum[] triggerEvents) {
         this.triggerEvents = triggerEvents;
         return this;
@@ -23,6 +24,7 @@ public class TriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerName")
     public String triggerName;
+
     public TriggerConfig withTriggerName(String triggerName) {
         this.triggerName = triggerName;
         return this;
@@ -31,9 +33,11 @@ public class TriggerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerTargetArn")
     public String triggerTargetArn;
+
     public TriggerConfig withTriggerTargetArn(String triggerTargetArn) {
         this.triggerTargetArn = triggerTargetArn;
         return this;
     }
     
+    public TriggerConfig(){}
 }

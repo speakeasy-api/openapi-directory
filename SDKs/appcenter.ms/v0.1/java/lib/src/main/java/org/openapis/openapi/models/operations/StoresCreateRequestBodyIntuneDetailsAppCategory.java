@@ -15,9 +15,11 @@ public class StoresCreateRequestBodyIntuneDetailsAppCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoresCreateRequestBodyIntuneDetailsAppCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StoresCreateRequestBodyIntuneDetailsAppCategory(){}
 }

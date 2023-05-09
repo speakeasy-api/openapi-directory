@@ -12,9 +12,11 @@ public class ClassificationInclusionRelationshipsClassification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier data;
+
     public ClassificationInclusionRelationshipsClassification withData(ResourceIdentifier data) {
         this.data = data;
         return this;
     }
     
+    public ClassificationInclusionRelationshipsClassification(){}
 }

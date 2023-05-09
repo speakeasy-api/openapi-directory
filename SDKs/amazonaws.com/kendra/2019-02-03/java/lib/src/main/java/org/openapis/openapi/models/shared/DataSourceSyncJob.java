@@ -20,6 +20,7 @@ public class DataSourceSyncJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceErrorCode")
     public String dataSourceErrorCode;
+
     public DataSourceSyncJob withDataSourceErrorCode(String dataSourceErrorCode) {
         this.dataSourceErrorCode = dataSourceErrorCode;
         return this;
@@ -30,6 +31,7 @@ public class DataSourceSyncJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DataSourceSyncJob withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class DataSourceSyncJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public ErrorCodeEnum errorCode;
+
     public DataSourceSyncJob withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -46,6 +49,7 @@ public class DataSourceSyncJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DataSourceSyncJob withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -54,6 +58,7 @@ public class DataSourceSyncJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionId")
     public String executionId;
+
     public DataSourceSyncJob withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -62,6 +67,7 @@ public class DataSourceSyncJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public DataSourceSyncJobMetrics metrics;
+
     public DataSourceSyncJob withMetrics(DataSourceSyncJobMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -72,6 +78,7 @@ public class DataSourceSyncJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DataSourceSyncJob withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -80,9 +87,11 @@ public class DataSourceSyncJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DataSourceSyncJobStatusEnum status;
+
     public DataSourceSyncJob withStatus(DataSourceSyncJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DataSourceSyncJob(){}
 }

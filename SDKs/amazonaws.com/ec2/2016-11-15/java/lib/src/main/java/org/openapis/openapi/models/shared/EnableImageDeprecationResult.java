@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnableImageDeprecationResult {
     
     public Boolean return_;
+
     public EnableImageDeprecationResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public EnableImageDeprecationResult(){}
 }

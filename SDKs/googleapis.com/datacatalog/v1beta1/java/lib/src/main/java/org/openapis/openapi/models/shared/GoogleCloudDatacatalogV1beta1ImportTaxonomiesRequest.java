@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineSource")
     public GoogleCloudDatacatalogV1beta1InlineSource inlineSource;
+
     public GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest withInlineSource(GoogleCloudDatacatalogV1beta1InlineSource inlineSource) {
         this.inlineSource = inlineSource;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest(){}
 }

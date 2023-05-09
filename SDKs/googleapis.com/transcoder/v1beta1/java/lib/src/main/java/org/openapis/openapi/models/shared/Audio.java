@@ -18,6 +18,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highBoost")
     public Boolean highBoost;
+
     public Audio withHighBoost(Boolean highBoost) {
         this.highBoost = highBoost;
         return this;
@@ -29,6 +30,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowBoost")
     public Boolean lowBoost;
+
     public Audio withLowBoost(Boolean lowBoost) {
         this.lowBoost = lowBoost;
         return this;
@@ -40,9 +42,11 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lufs")
     public Double lufs;
+
     public Audio withLufs(Double lufs) {
         this.lufs = lufs;
         return this;
     }
     
+    public Audio(){}
 }

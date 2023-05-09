@@ -18,6 +18,7 @@ public class GetCustomerIndexStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageIndexedItemCount")
     public String averageIndexedItemCount;
+
     public GetCustomerIndexStatsResponse withAverageIndexedItemCount(String averageIndexedItemCount) {
         this.averageIndexedItemCount = averageIndexedItemCount;
         return this;
@@ -29,9 +30,11 @@ public class GetCustomerIndexStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public CustomerIndexStats[] stats;
+
     public GetCustomerIndexStatsResponse withStats(CustomerIndexStats[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public GetCustomerIndexStatsResponse(){}
 }

@@ -22,6 +22,7 @@ public class AvailabilityConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateCreated")
     public OffsetDateTime dateCreated;
+
     public AvailabilityConfiguration withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -32,6 +33,7 @@ public class AvailabilityConfiguration {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateModified")
     public OffsetDateTime dateModified;
+
     public AvailabilityConfiguration withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -40,6 +42,7 @@ public class AvailabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public AvailabilityConfiguration withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -48,6 +51,7 @@ public class AvailabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EwsProvider")
     public RedactedEwsAvailabilityProvider ewsProvider;
+
     public AvailabilityConfiguration withEwsProvider(RedactedEwsAvailabilityProvider ewsProvider) {
         this.ewsProvider = ewsProvider;
         return this;
@@ -56,6 +60,7 @@ public class AvailabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaProvider")
     public LambdaAvailabilityProvider lambdaProvider;
+
     public AvailabilityConfiguration withLambdaProvider(LambdaAvailabilityProvider lambdaProvider) {
         this.lambdaProvider = lambdaProvider;
         return this;
@@ -64,9 +69,11 @@ public class AvailabilityConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public AvailabilityProviderTypeEnum providerType;
+
     public AvailabilityConfiguration withProviderType(AvailabilityProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
     }
     
+    public AvailabilityConfiguration(){}
 }

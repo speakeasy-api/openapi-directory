@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EvaluationRequest {
     @JsonProperty("entityId")
     public String entityId;
+
     public EvaluationRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -22,6 +23,7 @@ public class EvaluationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationContext")
     public String evaluationContext;
+
     public EvaluationRequest withEvaluationContext(String evaluationContext) {
         this.evaluationContext = evaluationContext;
         return this;
@@ -29,9 +31,14 @@ public class EvaluationRequest {
     
     @JsonProperty("feature")
     public String feature;
+
     public EvaluationRequest withFeature(String feature) {
         this.feature = feature;
         return this;
     }
     
+    public EvaluationRequest(@JsonProperty("entityId") String entityId, @JsonProperty("feature") String feature) {
+        this.entityId = entityId;
+        this.feature = feature;
+  }
 }

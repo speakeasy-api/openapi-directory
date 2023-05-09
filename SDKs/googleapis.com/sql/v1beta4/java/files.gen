@@ -380,6 +380,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DatabaseFlags.java
 lib/src/main/java/org/openapis/openapi/models/shared/BackupConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/BackupRetentionSettingsRetentionUnitEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BackupRetentionSettings.java
+lib/src/main/java/org/openapis/openapi/models/shared/AdvancedMachineFeatures.java
 lib/src/main/java/org/openapis/openapi/models/shared/SqlActiveDirectoryConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/SqlScheduledMaintenance.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplicaConfiguration.java
@@ -428,4 +429,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/SqlServerUserDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserPasswordValidationPolicy.java
 lib/src/main/java/org/openapis/openapi/models/shared/PasswordStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/UsersListResponse.java
+docs/sdk/README.md
+docs/backupruns/README.md
+docs/connect/README.md
+docs/databases/README.md
+docs/flags/README.md
+docs/instances/README.md
+docs/operations/README.md
+docs/projects/README.md
+docs/sslcerts/README.md
+docs/tiers/README.md
+docs/users/README.md
 USAGE.md

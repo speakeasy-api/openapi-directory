@@ -18,6 +18,7 @@ public class CommitmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public CommitmentAggregatedListWarningCodeEnum code;
+
     public CommitmentAggregatedListWarning withCode(CommitmentAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class CommitmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CommitmentAggregatedListWarningData[] data;
+
     public CommitmentAggregatedListWarning withData(CommitmentAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class CommitmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CommitmentAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CommitmentAggregatedListWarning(){}
 }

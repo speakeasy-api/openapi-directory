@@ -18,6 +18,7 @@ public class MembershipRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryDetail")
     public ExpiryDetail expiryDetail;
+
     public MembershipRole withExpiryDetail(ExpiryDetail expiryDetail) {
         this.expiryDetail = expiryDetail;
         return this;
@@ -29,6 +30,7 @@ public class MembershipRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MembershipRole withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class MembershipRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionEvaluations")
     public RestrictionEvaluations restrictionEvaluations;
+
     public MembershipRole withRestrictionEvaluations(RestrictionEvaluations restrictionEvaluations) {
         this.restrictionEvaluations = restrictionEvaluations;
         return this;
     }
     
+    public MembershipRole(){}
 }

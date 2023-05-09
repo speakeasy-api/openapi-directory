@@ -15,9 +15,11 @@ public class RemoveCustomFieldSettingForProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.RemoveCustomFieldSettingRequest data;
+
     public RemoveCustomFieldSettingForProjectRequestBody withData(org.openapis.openapi.models.shared.RemoveCustomFieldSettingRequest data) {
         this.data = data;
         return this;
     }
     
+    public RemoveCustomFieldSettingForProjectRequestBody(){}
 }

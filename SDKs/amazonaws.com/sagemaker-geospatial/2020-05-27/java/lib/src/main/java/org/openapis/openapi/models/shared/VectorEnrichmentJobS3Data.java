@@ -15,6 +15,7 @@ public class VectorEnrichmentJobS3Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public VectorEnrichmentJobS3Data withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class VectorEnrichmentJobS3Data {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public VectorEnrichmentJobS3Data withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public VectorEnrichmentJobS3Data(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

@@ -15,6 +15,7 @@ public class Meeting {
      */
     
     public String accountId;
+
     public Meeting withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class Meeting {
      */
     
     public Boolean allDay;
+
     public Meeting withAllDay(Boolean allDay) {
         this.allDay = allDay;
         return this;
@@ -35,6 +37,7 @@ public class Meeting {
      */
     
     public EmbeddedAttendeeResource[] attendees;
+
     public Meeting withAttendees(EmbeddedAttendeeResource[] attendees) {
         this.attendees = attendees;
         return this;
@@ -42,6 +45,7 @@ public class Meeting {
     
     
     public EventMeetingSetting bookedByMeetingsSettings;
+
     public Meeting withBookedByMeetingsSettings(EventMeetingSetting bookedByMeetingsSettings) {
         this.bookedByMeetingsSettings = bookedByMeetingsSettings;
         return this;
@@ -49,6 +53,7 @@ public class Meeting {
     
     
     public EmbeddedResource bookedByUser;
+
     public Meeting withBookedByUser(EmbeddedResource bookedByUser) {
         this.bookedByUser = bookedByUser;
         return this;
@@ -56,6 +61,7 @@ public class Meeting {
     
     
     public EmbeddedResource cadence;
+
     public Meeting withCadence(EmbeddedResource cadence) {
         this.cadence = cadence;
         return this;
@@ -66,6 +72,7 @@ public class Meeting {
      */
     
     public String calendarId;
+
     public Meeting withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -76,6 +83,7 @@ public class Meeting {
      */
     
     public String calendarType;
+
     public Meeting withCalendarType(String calendarType) {
         this.calendarType = calendarType;
         return this;
@@ -86,6 +94,7 @@ public class Meeting {
      */
     
     public LocalDate canceledAt;
+
     public Meeting withCanceledAt(LocalDate canceledAt) {
         this.canceledAt = canceledAt;
         return this;
@@ -96,6 +105,7 @@ public class Meeting {
      */
     
     public LocalDate createdAt;
+
     public Meeting withCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -106,6 +116,7 @@ public class Meeting {
      */
     
     public java.util.Map<String, Object> crmCustomFields;
+
     public Meeting withCrmCustomFields(java.util.Map<String, Object> crmCustomFields) {
         this.crmCustomFields = crmCustomFields;
         return this;
@@ -116,6 +127,7 @@ public class Meeting {
      */
     
     public java.util.Map<String, Object> crmReferences;
+
     public Meeting withCrmReferences(java.util.Map<String, Object> crmReferences) {
         this.crmReferences = crmReferences;
         return this;
@@ -126,6 +138,7 @@ public class Meeting {
      */
     
     public String description;
+
     public Meeting withDescription(String description) {
         this.description = description;
         return this;
@@ -136,6 +149,7 @@ public class Meeting {
      */
     
     public LocalDate endTime;
+
     public Meeting withEndTime(LocalDate endTime) {
         this.endTime = endTime;
         return this;
@@ -146,6 +160,7 @@ public class Meeting {
      */
     
     public String eventId;
+
     public Meeting withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -156,6 +171,7 @@ public class Meeting {
      */
     
     public String eventSource;
+
     public Meeting withEventSource(String eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -166,6 +182,7 @@ public class Meeting {
      */
     
     public String[] guests;
+
     public Meeting withGuests(String[] guests) {
         this.guests = guests;
         return this;
@@ -176,6 +193,7 @@ public class Meeting {
      */
     
     public String iCalUid;
+
     public Meeting withICalUid(String iCalUid) {
         this.iCalUid = iCalUid;
         return this;
@@ -186,6 +204,7 @@ public class Meeting {
      */
     
     public Long id;
+
     public Meeting withId(Long id) {
         this.id = id;
         return this;
@@ -196,6 +215,7 @@ public class Meeting {
      */
     
     public String location;
+
     public Meeting withLocation(String location) {
         this.location = location;
         return this;
@@ -206,6 +226,7 @@ public class Meeting {
      */
     
     public String meetingType;
+
     public Meeting withMeetingType(String meetingType) {
         this.meetingType = meetingType;
         return this;
@@ -216,6 +237,7 @@ public class Meeting {
      */
     
     public Boolean noShow;
+
     public Meeting withNoShow(Boolean noShow) {
         this.noShow = noShow;
         return this;
@@ -223,6 +245,7 @@ public class Meeting {
     
     
     public EventMeetingSetting ownedByMeetingsSettings;
+
     public Meeting withOwnedByMeetingsSettings(EventMeetingSetting ownedByMeetingsSettings) {
         this.ownedByMeetingsSettings = ownedByMeetingsSettings;
         return this;
@@ -230,6 +253,7 @@ public class Meeting {
     
     
     public EmbeddedResource person;
+
     public Meeting withPerson(EmbeddedResource person) {
         this.person = person;
         return this;
@@ -240,6 +264,7 @@ public class Meeting {
      */
     
     public String recipientEmail;
+
     public Meeting withRecipientEmail(String recipientEmail) {
         this.recipientEmail = recipientEmail;
         return this;
@@ -250,8 +275,20 @@ public class Meeting {
      */
     
     public String recipientName;
+
     public Meeting withRecipientName(String recipientName) {
         this.recipientName = recipientName;
+        return this;
+    }
+    
+    /**
+     * Status of the meeting rescheduling progress. Possible values are: pending, booked, failed, retry
+     */
+    
+    public String rescheduleStatus;
+
+    public Meeting withRescheduleStatus(String rescheduleStatus) {
+        this.rescheduleStatus = rescheduleStatus;
         return this;
     }
     
@@ -260,6 +297,7 @@ public class Meeting {
      */
     
     public LocalDate startTime;
+
     public Meeting withStartTime(LocalDate startTime) {
         this.startTime = startTime;
         return this;
@@ -270,6 +308,7 @@ public class Meeting {
      */
     
     public String status;
+
     public Meeting withStatus(String status) {
         this.status = status;
         return this;
@@ -277,6 +316,7 @@ public class Meeting {
     
     
     public EmbeddedResource step;
+
     public Meeting withStep(EmbeddedResource step) {
         this.step = step;
         return this;
@@ -287,6 +327,7 @@ public class Meeting {
      */
     
     public Boolean strictAttribution;
+
     public Meeting withStrictAttribution(Boolean strictAttribution) {
         this.strictAttribution = strictAttribution;
         return this;
@@ -297,6 +338,7 @@ public class Meeting {
      */
     
     public String taskId;
+
     public Meeting withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -307,6 +349,7 @@ public class Meeting {
      */
     
     public String title;
+
     public Meeting withTitle(String title) {
         this.title = title;
         return this;
@@ -317,9 +360,11 @@ public class Meeting {
      */
     
     public LocalDate updatedAt;
+
     public Meeting withUpdatedAt(LocalDate updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Meeting(){}
 }

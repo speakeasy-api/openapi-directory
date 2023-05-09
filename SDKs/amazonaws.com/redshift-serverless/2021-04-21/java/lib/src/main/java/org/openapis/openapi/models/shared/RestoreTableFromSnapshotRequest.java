@@ -12,6 +12,7 @@ public class RestoreTableFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activateCaseSensitiveIdentifier")
     public Boolean activateCaseSensitiveIdentifier;
+
     public RestoreTableFromSnapshotRequest withActivateCaseSensitiveIdentifier(Boolean activateCaseSensitiveIdentifier) {
         this.activateCaseSensitiveIdentifier = activateCaseSensitiveIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class RestoreTableFromSnapshotRequest {
     
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public RestoreTableFromSnapshotRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -26,6 +28,7 @@ public class RestoreTableFromSnapshotRequest {
     
     @JsonProperty("newTableName")
     public String newTableName;
+
     public RestoreTableFromSnapshotRequest withNewTableName(String newTableName) {
         this.newTableName = newTableName;
         return this;
@@ -33,6 +36,7 @@ public class RestoreTableFromSnapshotRequest {
     
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public RestoreTableFromSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -40,6 +44,7 @@ public class RestoreTableFromSnapshotRequest {
     
     @JsonProperty("sourceDatabaseName")
     public String sourceDatabaseName;
+
     public RestoreTableFromSnapshotRequest withSourceDatabaseName(String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
         return this;
@@ -48,6 +53,7 @@ public class RestoreTableFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSchemaName")
     public String sourceSchemaName;
+
     public RestoreTableFromSnapshotRequest withSourceSchemaName(String sourceSchemaName) {
         this.sourceSchemaName = sourceSchemaName;
         return this;
@@ -55,6 +61,7 @@ public class RestoreTableFromSnapshotRequest {
     
     @JsonProperty("sourceTableName")
     public String sourceTableName;
+
     public RestoreTableFromSnapshotRequest withSourceTableName(String sourceTableName) {
         this.sourceTableName = sourceTableName;
         return this;
@@ -63,6 +70,7 @@ public class RestoreTableFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDatabaseName")
     public String targetDatabaseName;
+
     public RestoreTableFromSnapshotRequest withTargetDatabaseName(String targetDatabaseName) {
         this.targetDatabaseName = targetDatabaseName;
         return this;
@@ -71,6 +79,7 @@ public class RestoreTableFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSchemaName")
     public String targetSchemaName;
+
     public RestoreTableFromSnapshotRequest withTargetSchemaName(String targetSchemaName) {
         this.targetSchemaName = targetSchemaName;
         return this;
@@ -78,9 +87,18 @@ public class RestoreTableFromSnapshotRequest {
     
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public RestoreTableFromSnapshotRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public RestoreTableFromSnapshotRequest(@JsonProperty("namespaceName") String namespaceName, @JsonProperty("newTableName") String newTableName, @JsonProperty("snapshotName") String snapshotName, @JsonProperty("sourceDatabaseName") String sourceDatabaseName, @JsonProperty("sourceTableName") String sourceTableName, @JsonProperty("workgroupName") String workgroupName) {
+        this.namespaceName = namespaceName;
+        this.newTableName = newTableName;
+        this.snapshotName = snapshotName;
+        this.sourceDatabaseName = sourceDatabaseName;
+        this.sourceTableName = sourceTableName;
+        this.workgroupName = workgroupName;
+  }
 }

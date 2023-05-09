@@ -18,6 +18,7 @@ public class CollectionFeaturedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public CollectionFeaturedProduct withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -29,6 +30,7 @@ public class CollectionFeaturedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Float x;
+
     public CollectionFeaturedProduct withX(Float x) {
         this.x = x;
         return this;
@@ -40,9 +42,11 @@ public class CollectionFeaturedProduct {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Float y;
+
     public CollectionFeaturedProduct withY(Float y) {
         this.y = y;
         return this;
     }
     
+    public CollectionFeaturedProduct(){}
 }

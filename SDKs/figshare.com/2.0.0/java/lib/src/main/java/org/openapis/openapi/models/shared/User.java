@@ -15,6 +15,7 @@ public class User {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -25,6 +26,7 @@ public class User {
      */
     @JsonProperty("id")
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class User {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public User withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -45,6 +48,7 @@ public class User {
      */
     @JsonProperty("is_public")
     public Boolean isPublic;
+
     public User withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -55,6 +59,7 @@ public class User {
      */
     @JsonProperty("job_title")
     public String jobTitle;
+
     public User withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -65,6 +70,7 @@ public class User {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public User withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -75,6 +81,7 @@ public class User {
      */
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -85,6 +92,7 @@ public class User {
      */
     @JsonProperty("orcid_id")
     public String orcidId;
+
     public User withOrcidId(String orcidId) {
         this.orcidId = orcidId;
         return this;
@@ -95,9 +103,21 @@ public class User {
      */
     @JsonProperty("url_name")
     public String urlName;
+
     public User withUrlName(String urlName) {
         this.urlName = urlName;
         return this;
     }
     
+    public User(@JsonProperty("first_name") String firstName, @JsonProperty("id") Long id, @JsonProperty("is_active") Boolean isActive, @JsonProperty("is_public") Boolean isPublic, @JsonProperty("job_title") String jobTitle, @JsonProperty("last_name") String lastName, @JsonProperty("name") String name, @JsonProperty("orcid_id") String orcidId, @JsonProperty("url_name") String urlName) {
+        this.firstName = firstName;
+        this.id = id;
+        this.isActive = isActive;
+        this.isPublic = isPublic;
+        this.jobTitle = jobTitle;
+        this.lastName = lastName;
+        this.name = name;
+        this.orcidId = orcidId;
+        this.urlName = urlName;
+  }
 }

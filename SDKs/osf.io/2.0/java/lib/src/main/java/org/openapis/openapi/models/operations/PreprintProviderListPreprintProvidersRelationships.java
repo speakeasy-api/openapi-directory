@@ -15,6 +15,7 @@ public class PreprintProviderListPreprintProvidersRelationships {
      */
     
     public String licensesAcceptable;
+
     public PreprintProviderListPreprintProvidersRelationships withLicensesAcceptable(String licensesAcceptable) {
         this.licensesAcceptable = licensesAcceptable;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderListPreprintProvidersRelationships {
      */
     
     public String preprints;
+
     public PreprintProviderListPreprintProvidersRelationships withPreprints(String preprints) {
         this.preprints = preprints;
         return this;
@@ -35,9 +37,11 @@ public class PreprintProviderListPreprintProvidersRelationships {
      */
     
     public String taxonomies;
+
     public PreprintProviderListPreprintProvidersRelationships withTaxonomies(String taxonomies) {
         this.taxonomies = taxonomies;
         return this;
     }
     
+    public PreprintProviderListPreprintProvidersRelationships(){}
 }

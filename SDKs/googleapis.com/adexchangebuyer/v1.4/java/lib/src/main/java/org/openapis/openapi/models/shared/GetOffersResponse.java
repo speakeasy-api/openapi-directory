@@ -18,9 +18,11 @@ public class GetOffersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public Product[] products;
+
     public GetOffersResponse withProducts(Product[] products) {
         this.products = products;
         return this;
     }
     
+    public GetOffersResponse(){}
 }

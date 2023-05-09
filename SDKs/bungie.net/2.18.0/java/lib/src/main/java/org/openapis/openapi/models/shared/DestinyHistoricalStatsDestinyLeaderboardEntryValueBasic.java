@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValueBasic {
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValueBasic withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryValueBasic {
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryValueBasic withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboardEntryValueBasic(){}
 }

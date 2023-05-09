@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdTerminalOrdersOrderIdCancelRequest {
@@ -12,6 +13,7 @@ public class PostCompaniesCompanyIdTerminalOrdersOrderIdCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PostCompaniesCompanyIdTerminalOrdersOrderIdCancelRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,9 +24,14 @@ public class PostCompaniesCompanyIdTerminalOrdersOrderIdCancelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public PostCompaniesCompanyIdTerminalOrdersOrderIdCancelRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public PostCompaniesCompanyIdTerminalOrdersOrderIdCancelRequest(@JsonProperty("companyId") String companyId, @JsonProperty("orderId") String orderId) {
+        this.companyId = companyId;
+        this.orderId = orderId;
+  }
 }

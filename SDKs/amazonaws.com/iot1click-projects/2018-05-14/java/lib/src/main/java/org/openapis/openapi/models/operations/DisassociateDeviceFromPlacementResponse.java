@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateDeviceFromPlacementResponse {
     
     public String contentType;
+
     public DisassociateDeviceFromPlacementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateDeviceFromPlacementResponse {
      */
     
     public java.util.Map<String, Object> disassociateDeviceFromPlacementResponse;
+
     public DisassociateDeviceFromPlacementResponse withDisassociateDeviceFromPlacementResponse(java.util.Map<String, Object> disassociateDeviceFromPlacementResponse) {
         this.disassociateDeviceFromPlacementResponse = disassociateDeviceFromPlacementResponse;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateDeviceFromPlacementResponse {
      */
     
     public Object internalFailureException;
+
     public DisassociateDeviceFromPlacementResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateDeviceFromPlacementResponse {
      */
     
     public Object invalidRequestException;
+
     public DisassociateDeviceFromPlacementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateDeviceFromPlacementResponse {
     
     
     public Integer statusCode;
+
     public DisassociateDeviceFromPlacementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateDeviceFromPlacementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateDeviceFromPlacementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateDeviceFromPlacementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateDeviceFromPlacementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DisassociateDeviceFromPlacementResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DisassociateDeviceFromPlacementResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DisassociateDeviceFromPlacementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

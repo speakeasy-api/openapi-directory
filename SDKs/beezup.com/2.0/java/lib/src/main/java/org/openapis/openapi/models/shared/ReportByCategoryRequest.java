@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ReportByCategoryRequest {
     @JsonProperty("advancedFilters")
     public ReportAdvancedFilters advancedFilters;
+
     public ReportByCategoryRequest withAdvancedFilters(ReportAdvancedFilters advancedFilters) {
         this.advancedFilters = advancedFilters;
         return this;
@@ -32,6 +33,7 @@ public class ReportByCategoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginPeriodUtcDate")
     public OffsetDateTime beginPeriodUtcDate;
+
     public ReportByCategoryRequest withBeginPeriodUtcDate(OffsetDateTime beginPeriodUtcDate) {
         this.beginPeriodUtcDate = beginPeriodUtcDate;
         return this;
@@ -40,6 +42,7 @@ public class ReportByCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryFilter")
     public BeezUPCommonCatalogCategoryFilter categoryFilter;
+
     public ReportByCategoryRequest withCategoryFilter(BeezUPCommonCatalogCategoryFilter categoryFilter) {
         this.categoryFilter = categoryFilter;
         return this;
@@ -51,6 +54,7 @@ public class ReportByCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public ReportByCategoryRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -64,6 +68,7 @@ public class ReportByCategoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endPeriodUtcDate")
     public OffsetDateTime endPeriodUtcDate;
+
     public ReportByCategoryRequest withEndPeriodUtcDate(OffsetDateTime endPeriodUtcDate) {
         this.endPeriodUtcDate = endPeriodUtcDate;
         return this;
@@ -75,6 +80,7 @@ public class ReportByCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public PerformanceIndicatorTypeEnum orderBy;
+
     public ReportByCategoryRequest withOrderBy(PerformanceIndicatorTypeEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -86,6 +92,7 @@ public class ReportByCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderByDirection")
     public OrderByDirectionEnum orderByDirection;
+
     public ReportByCategoryRequest withOrderByDirection(OrderByDirectionEnum orderByDirection) {
         this.orderByDirection = orderByDirection;
         return this;
@@ -97,6 +104,7 @@ public class ReportByCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumber")
     public Integer pageNumber;
+
     public ReportByCategoryRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -108,6 +116,7 @@ public class ReportByCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public ReportByCategoryRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -116,6 +125,7 @@ public class ReportByCategoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceIndicatorFilters")
     public PerformanceIndicatorFilter[] performanceIndicatorFilters;
+
     public ReportByCategoryRequest withPerformanceIndicatorFilters(PerformanceIndicatorFilter[] performanceIndicatorFilters) {
         this.performanceIndicatorFilters = performanceIndicatorFilters;
         return this;
@@ -126,9 +136,14 @@ public class ReportByCategoryRequest {
      */
     @JsonProperty("periodType")
     public ReportFilterPeriodTypeEnum periodType;
+
     public ReportByCategoryRequest withPeriodType(ReportFilterPeriodTypeEnum periodType) {
         this.periodType = periodType;
         return this;
     }
     
+    public ReportByCategoryRequest(@JsonProperty("advancedFilters") ReportAdvancedFilters advancedFilters, @JsonProperty("periodType") ReportFilterPeriodTypeEnum periodType) {
+        this.advancedFilters = advancedFilters;
+        this.periodType = periodType;
+  }
 }

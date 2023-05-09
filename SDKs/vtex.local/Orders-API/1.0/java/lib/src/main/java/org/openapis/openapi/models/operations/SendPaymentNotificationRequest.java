@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendPaymentNotificationRequest {
@@ -12,6 +13,7 @@ public class SendPaymentNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SendPaymentNotificationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SendPaymentNotificationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SendPaymentNotificationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class SendPaymentNotificationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public SendPaymentNotificationRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -42,9 +46,16 @@ public class SendPaymentNotificationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
     public String paymentId;
+
     public SendPaymentNotificationRequest withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
     }
     
+    public SendPaymentNotificationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("orderId") String orderId, @JsonProperty("paymentId") String paymentId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.orderId = orderId;
+        this.paymentId = paymentId;
+  }
 }

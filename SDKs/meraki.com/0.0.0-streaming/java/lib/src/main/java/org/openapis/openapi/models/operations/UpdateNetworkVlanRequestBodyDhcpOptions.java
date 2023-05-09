@@ -12,6 +12,7 @@ public class UpdateNetworkVlanRequestBodyDhcpOptions {
      */
     @JsonProperty("code")
     public String code;
+
     public UpdateNetworkVlanRequestBodyDhcpOptions withCode(String code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class UpdateNetworkVlanRequestBodyDhcpOptions {
      */
     @JsonProperty("type")
     public UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum type;
+
     public UpdateNetworkVlanRequestBodyDhcpOptions withType(UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum type) {
         this.type = type;
         return this;
@@ -32,9 +34,15 @@ public class UpdateNetworkVlanRequestBodyDhcpOptions {
      */
     @JsonProperty("value")
     public String value;
+
     public UpdateNetworkVlanRequestBodyDhcpOptions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpdateNetworkVlanRequestBodyDhcpOptions(@JsonProperty("code") String code, @JsonProperty("type") UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum type, @JsonProperty("value") String value) {
+        this.code = code;
+        this.type = type;
+        this.value = value;
+  }
 }

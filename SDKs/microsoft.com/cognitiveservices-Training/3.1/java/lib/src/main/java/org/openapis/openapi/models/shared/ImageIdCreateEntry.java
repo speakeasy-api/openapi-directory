@@ -15,6 +15,7 @@ public class ImageIdCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ImageIdCreateEntry withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class ImageIdCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public Region[] regions;
+
     public ImageIdCreateEntry withRegions(Region[] regions) {
         this.regions = regions;
         return this;
@@ -31,9 +33,11 @@ public class ImageIdCreateEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagIds")
     public String[] tagIds;
+
     public ImageIdCreateEntry withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public ImageIdCreateEntry(){}
 }

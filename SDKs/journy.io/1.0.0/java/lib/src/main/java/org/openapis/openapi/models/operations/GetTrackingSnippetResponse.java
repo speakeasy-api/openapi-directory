@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTrackingSnippetResponse {
     
     public String contentType;
+
     public GetTrackingSnippetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTrackingSnippetResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTrackingSnippetResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetTrackingSnippetResponse {
     
     
     public Integer statusCode;
+
     public GetTrackingSnippetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetTrackingSnippetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTrackingSnippetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetTrackingSnippetResponse {
      */
     
     public GetTrackingSnippet200ApplicationJSON getTrackingSnippet200ApplicationJSONObject;
+
     public GetTrackingSnippetResponse withGetTrackingSnippet200ApplicationJSONObject(GetTrackingSnippet200ApplicationJSON getTrackingSnippet200ApplicationJSONObject) {
         this.getTrackingSnippet200ApplicationJSONObject = getTrackingSnippet200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GetTrackingSnippetResponse {
      */
     
     public GetTrackingSnippet400ApplicationJSON getTrackingSnippet400ApplicationJSONObject;
+
     public GetTrackingSnippetResponse withGetTrackingSnippet400ApplicationJSONObject(GetTrackingSnippet400ApplicationJSON getTrackingSnippet400ApplicationJSONObject) {
         this.getTrackingSnippet400ApplicationJSONObject = getTrackingSnippet400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GetTrackingSnippetResponse {
      */
     
     public GetTrackingSnippet401ApplicationJSON getTrackingSnippet401ApplicationJSONObject;
+
     public GetTrackingSnippetResponse withGetTrackingSnippet401ApplicationJSONObject(GetTrackingSnippet401ApplicationJSON getTrackingSnippet401ApplicationJSONObject) {
         this.getTrackingSnippet401ApplicationJSONObject = getTrackingSnippet401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GetTrackingSnippetResponse {
      */
     
     public GetTrackingSnippet403ApplicationJSON getTrackingSnippet403ApplicationJSONObject;
+
     public GetTrackingSnippetResponse withGetTrackingSnippet403ApplicationJSONObject(GetTrackingSnippet403ApplicationJSON getTrackingSnippet403ApplicationJSONObject) {
         this.getTrackingSnippet403ApplicationJSONObject = getTrackingSnippet403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class GetTrackingSnippetResponse {
      */
     
     public GetTrackingSnippet404ApplicationJSON getTrackingSnippet404ApplicationJSONObject;
+
     public GetTrackingSnippetResponse withGetTrackingSnippet404ApplicationJSONObject(GetTrackingSnippet404ApplicationJSON getTrackingSnippet404ApplicationJSONObject) {
         this.getTrackingSnippet404ApplicationJSONObject = getTrackingSnippet404ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class GetTrackingSnippetResponse {
      */
     
     public GetTrackingSnippet429ApplicationJSON getTrackingSnippet429ApplicationJSONObject;
+
     public GetTrackingSnippetResponse withGetTrackingSnippet429ApplicationJSONObject(GetTrackingSnippet429ApplicationJSON getTrackingSnippet429ApplicationJSONObject) {
         this.getTrackingSnippet429ApplicationJSONObject = getTrackingSnippet429ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class GetTrackingSnippetResponse {
      */
     
     public GetTrackingSnippet500ApplicationJSON getTrackingSnippet500ApplicationJSONObject;
+
     public GetTrackingSnippetResponse withGetTrackingSnippet500ApplicationJSONObject(GetTrackingSnippet500ApplicationJSON getTrackingSnippet500ApplicationJSONObject) {
         this.getTrackingSnippet500ApplicationJSONObject = getTrackingSnippet500ApplicationJSONObject;
         return this;
     }
     
+    public GetTrackingSnippetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

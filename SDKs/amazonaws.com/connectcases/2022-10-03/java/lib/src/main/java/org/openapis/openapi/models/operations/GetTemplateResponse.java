@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTemplateResponse {
@@ -12,6 +13,7 @@ public class GetTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetTemplateResponse {
     
     
     public String contentType;
+
     public GetTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTemplateResponse getTemplateResponse;
+
     public GetTemplateResponse withGetTemplateResponse(org.openapis.openapi.models.shared.GetTemplateResponse getTemplateResponse) {
         this.getTemplateResponse = getTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTemplateResponse {
      */
     
     public Object internalServerException;
+
     public GetTemplateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetTemplateResponse {
      */
     
     public Object throttlingException;
+
     public GetTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetTemplateResponse {
      */
     
     public Object validationException;
+
     public GetTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

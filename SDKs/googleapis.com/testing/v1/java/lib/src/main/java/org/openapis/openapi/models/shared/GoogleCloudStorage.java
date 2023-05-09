@@ -18,9 +18,11 @@ public class GoogleCloudStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPath")
     public String gcsPath;
+
     public GoogleCloudStorage withGcsPath(String gcsPath) {
         this.gcsPath = gcsPath;
         return this;
     }
     
+    public GoogleCloudStorage(){}
 }

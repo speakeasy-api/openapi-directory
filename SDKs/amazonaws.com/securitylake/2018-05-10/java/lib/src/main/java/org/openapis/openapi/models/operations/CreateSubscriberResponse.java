@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSubscriberResponse {
@@ -12,6 +13,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSubscriberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object accountNotFoundException;
+
     public CreateSubscriberResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object bucketNotFoundException;
+
     public CreateSubscriberResponse withBucketNotFoundException(Object bucketNotFoundException) {
         this.bucketNotFoundException = bucketNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object conflictSubscriptionException;
+
     public CreateSubscriberResponse withConflictSubscriptionException(Object conflictSubscriptionException) {
         this.conflictSubscriptionException = conflictSubscriptionException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSubscriberResponse {
     
     
     public String contentType;
+
     public CreateSubscriberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateSubscriberResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSubscriberResponse createSubscriberResponse;
+
     public CreateSubscriberResponse withCreateSubscriberResponse(org.openapis.openapi.models.shared.CreateSubscriberResponse createSubscriberResponse) {
         this.createSubscriberResponse = createSubscriberResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object internalServerException;
+
     public CreateSubscriberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -79,6 +87,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object invalidInputException;
+
     public CreateSubscriberResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -86,6 +95,7 @@ public class CreateSubscriberResponse {
     
     
     public Integer statusCode;
+
     public CreateSubscriberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateSubscriberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSubscriberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateSubscriberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSubscriberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class CreateSubscriberResponse {
      */
     
     public Object validationException;
+
     public CreateSubscriberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSubscriberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

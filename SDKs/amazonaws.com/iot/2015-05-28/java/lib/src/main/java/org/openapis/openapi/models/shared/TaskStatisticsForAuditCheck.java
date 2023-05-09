@@ -15,6 +15,7 @@ public class TaskStatisticsForAuditCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceledFindingsCount")
     public Long canceledFindingsCount;
+
     public TaskStatisticsForAuditCheck withCanceledFindingsCount(Long canceledFindingsCount) {
         this.canceledFindingsCount = canceledFindingsCount;
         return this;
@@ -23,6 +24,7 @@ public class TaskStatisticsForAuditCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedFindingsCount")
     public Long failedFindingsCount;
+
     public TaskStatisticsForAuditCheck withFailedFindingsCount(Long failedFindingsCount) {
         this.failedFindingsCount = failedFindingsCount;
         return this;
@@ -31,6 +33,7 @@ public class TaskStatisticsForAuditCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippedFindingsCount")
     public Long skippedFindingsCount;
+
     public TaskStatisticsForAuditCheck withSkippedFindingsCount(Long skippedFindingsCount) {
         this.skippedFindingsCount = skippedFindingsCount;
         return this;
@@ -39,6 +42,7 @@ public class TaskStatisticsForAuditCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("succeededFindingsCount")
     public Long succeededFindingsCount;
+
     public TaskStatisticsForAuditCheck withSucceededFindingsCount(Long succeededFindingsCount) {
         this.succeededFindingsCount = succeededFindingsCount;
         return this;
@@ -47,9 +51,11 @@ public class TaskStatisticsForAuditCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalFindingsCount")
     public Long totalFindingsCount;
+
     public TaskStatisticsForAuditCheck withTotalFindingsCount(Long totalFindingsCount) {
         this.totalFindingsCount = totalFindingsCount;
         return this;
     }
     
+    public TaskStatisticsForAuditCheck(){}
 }

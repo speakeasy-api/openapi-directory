@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartStreamProcessorRequest {
     @JsonProperty("Name")
     public String name;
+
     public StartStreamProcessorRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class StartStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartSelector")
     public StreamProcessingStartSelector startSelector;
+
     public StartStreamProcessorRequest withStartSelector(StreamProcessingStartSelector startSelector) {
         this.startSelector = startSelector;
         return this;
@@ -27,9 +29,13 @@ public class StartStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopSelector")
     public StreamProcessingStopSelector stopSelector;
+
     public StartStreamProcessorRequest withStopSelector(StreamProcessingStopSelector stopSelector) {
         this.stopSelector = stopSelector;
         return this;
     }
     
+    public StartStreamProcessorRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

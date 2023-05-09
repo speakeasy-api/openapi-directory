@@ -22,6 +22,7 @@ public class DataQualityRulesetFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAfter")
     public OffsetDateTime createdAfter;
+
     public DataQualityRulesetFilterCriteria withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class DataQualityRulesetFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedBefore")
     public OffsetDateTime createdBefore;
+
     public DataQualityRulesetFilterCriteria withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,6 +42,7 @@ public class DataQualityRulesetFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DataQualityRulesetFilterCriteria withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class DataQualityRulesetFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedAfter")
     public OffsetDateTime lastModifiedAfter;
+
     public DataQualityRulesetFilterCriteria withLastModifiedAfter(OffsetDateTime lastModifiedAfter) {
         this.lastModifiedAfter = lastModifiedAfter;
         return this;
@@ -60,6 +64,7 @@ public class DataQualityRulesetFilterCriteria {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedBefore")
     public OffsetDateTime lastModifiedBefore;
+
     public DataQualityRulesetFilterCriteria withLastModifiedBefore(OffsetDateTime lastModifiedBefore) {
         this.lastModifiedBefore = lastModifiedBefore;
         return this;
@@ -68,6 +73,7 @@ public class DataQualityRulesetFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DataQualityRulesetFilterCriteria withName(String name) {
         this.name = name;
         return this;
@@ -76,9 +82,11 @@ public class DataQualityRulesetFilterCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTable")
     public DataQualityTargetTable targetTable;
+
     public DataQualityRulesetFilterCriteria withTargetTable(DataQualityTargetTable targetTable) {
         this.targetTable = targetTable;
         return this;
     }
     
+    public DataQualityRulesetFilterCriteria(){}
 }

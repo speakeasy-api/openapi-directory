@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AnalysisRule {
     @JsonProperty("collaborationId")
     public String collaborationId;
+
     public AnalysisRule withCollaborationId(String collaborationId) {
         this.collaborationId = collaborationId;
         return this;
@@ -26,6 +27,7 @@ public class AnalysisRule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public AnalysisRule withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +35,7 @@ public class AnalysisRule {
     
     @JsonProperty("name")
     public String name;
+
     public AnalysisRule withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +43,7 @@ public class AnalysisRule {
     
     @JsonProperty("policy")
     public AnalysisRulePolicy policy;
+
     public AnalysisRule withPolicy(AnalysisRulePolicy policy) {
         this.policy = policy;
         return this;
@@ -47,6 +51,7 @@ public class AnalysisRule {
     
     @JsonProperty("type")
     public AnalysisRuleTypeEnum type;
+
     public AnalysisRule withType(AnalysisRuleTypeEnum type) {
         this.type = type;
         return this;
@@ -56,9 +61,18 @@ public class AnalysisRule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public AnalysisRule withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public AnalysisRule(@JsonProperty("collaborationId") String collaborationId, @JsonProperty("createTime") OffsetDateTime createTime, @JsonProperty("name") String name, @JsonProperty("policy") AnalysisRulePolicy policy, @JsonProperty("type") AnalysisRuleTypeEnum type, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.collaborationId = collaborationId;
+        this.createTime = createTime;
+        this.name = name;
+        this.policy = policy;
+        this.type = type;
+        this.updateTime = updateTime;
+  }
 }

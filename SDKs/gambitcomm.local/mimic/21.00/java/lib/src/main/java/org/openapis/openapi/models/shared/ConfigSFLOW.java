@@ -15,6 +15,7 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collector")
     public String collector;
+
     public ConfigSFLOW withCollector(String collector) {
         this.collector = collector;
         return this;
@@ -23,6 +24,7 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectorport")
     public Integer collectorport;
+
     public ConfigSFLOW withCollectorport(Integer collectorport) {
         this.collectorport = collectorport;
         return this;
@@ -31,6 +33,7 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding_type")
     public String encodingType;
+
     public ConfigSFLOW withEncodingType(String encodingType) {
         this.encodingType = encodingType;
         return this;
@@ -39,6 +42,7 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public ConfigSFLOW withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -47,6 +51,7 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flows_per_min")
     public Integer flowsPerMin;
+
     public ConfigSFLOW withFlowsPerMin(Integer flowsPerMin) {
         this.flowsPerMin = flowsPerMin;
         return this;
@@ -55,6 +60,7 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include_samples")
     public String includeSamples;
+
     public ConfigSFLOW withIncludeSamples(String includeSamples) {
         this.includeSamples = includeSamples;
         return this;
@@ -63,6 +69,7 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("records_per_sample")
     public String recordsPerSample;
+
     public ConfigSFLOW withRecordsPerSample(String recordsPerSample) {
         this.recordsPerSample = recordsPerSample;
         return this;
@@ -71,9 +78,11 @@ public class ConfigSFLOW {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samples_per_datagram")
     public String samplesPerDatagram;
+
     public ConfigSFLOW withSamplesPerDatagram(String samplesPerDatagram) {
         this.samplesPerDatagram = samplesPerDatagram;
         return this;
     }
     
+    public ConfigSFLOW(){}
 }

@@ -12,6 +12,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public GetOnePlan200ApplicationJSONResult withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancel_url")
     public Object cancelUrl;
+
     public GetOnePlan200ApplicationJSONResult withCancelUrl(Object cancelUrl) {
         this.cancelUrl = cancelUrl;
         return this;
@@ -28,6 +30,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GetOnePlan200ApplicationJSONResult withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +39,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public GetOnePlan200ApplicationJSONResult withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -44,6 +48,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetOnePlan200ApplicationJSONResult withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval_day")
     public String intervalDay;
+
     public GetOnePlan200ApplicationJSONResult withIntervalDay(String intervalDay) {
         this.intervalDay = intervalDay;
         return this;
@@ -60,6 +66,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipn_callback_url")
     public Object ipnCallbackUrl;
+
     public GetOnePlan200ApplicationJSONResult withIpnCallbackUrl(Object ipnCallbackUrl) {
         this.ipnCallbackUrl = ipnCallbackUrl;
         return this;
@@ -68,6 +75,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partially_paid_url")
     public Object partiallyPaidUrl;
+
     public GetOnePlan200ApplicationJSONResult withPartiallyPaidUrl(Object partiallyPaidUrl) {
         this.partiallyPaidUrl = partiallyPaidUrl;
         return this;
@@ -76,6 +84,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success_url")
     public Object successUrl;
+
     public GetOnePlan200ApplicationJSONResult withSuccessUrl(Object successUrl) {
         this.successUrl = successUrl;
         return this;
@@ -84,6 +93,7 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetOnePlan200ApplicationJSONResult withTitle(String title) {
         this.title = title;
         return this;
@@ -92,9 +102,11 @@ public class GetOnePlan200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public GetOnePlan200ApplicationJSONResult withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetOnePlan200ApplicationJSONResult(){}
 }

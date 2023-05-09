@@ -15,6 +15,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ImagePipeline withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipeArn")
     public String containerRecipeArn;
+
     public ImagePipeline withContainerRecipeArn(String containerRecipeArn) {
         this.containerRecipeArn = containerRecipeArn;
         return this;
@@ -31,6 +33,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateCreated")
     public String dateCreated;
+
     public ImagePipeline withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -39,6 +42,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateLastRun")
     public String dateLastRun;
+
     public ImagePipeline withDateLastRun(String dateLastRun) {
         this.dateLastRun = dateLastRun;
         return this;
@@ -47,6 +51,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateNextRun")
     public String dateNextRun;
+
     public ImagePipeline withDateNextRun(String dateNextRun) {
         this.dateNextRun = dateNextRun;
         return this;
@@ -55,6 +60,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateUpdated")
     public String dateUpdated;
+
     public ImagePipeline withDateUpdated(String dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -63,6 +69,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ImagePipeline withDescription(String description) {
         this.description = description;
         return this;
@@ -71,6 +78,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionConfigurationArn")
     public String distributionConfigurationArn;
+
     public ImagePipeline withDistributionConfigurationArn(String distributionConfigurationArn) {
         this.distributionConfigurationArn = distributionConfigurationArn;
         return this;
@@ -79,6 +87,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedImageMetadataEnabled")
     public Boolean enhancedImageMetadataEnabled;
+
     public ImagePipeline withEnhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
         this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
         return this;
@@ -87,14 +96,25 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipeArn")
     public String imageRecipeArn;
+
     public ImagePipeline withImageRecipeArn(String imageRecipeArn) {
         this.imageRecipeArn = imageRecipeArn;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageScanningConfiguration")
+    public ImageScanningConfiguration imageScanningConfiguration;
+
+    public ImagePipeline withImageScanningConfiguration(ImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTestsConfiguration")
     public ImageTestsConfiguration imageTestsConfiguration;
+
     public ImagePipeline withImageTestsConfiguration(ImageTestsConfiguration imageTestsConfiguration) {
         this.imageTestsConfiguration = imageTestsConfiguration;
         return this;
@@ -103,6 +123,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infrastructureConfigurationArn")
     public String infrastructureConfigurationArn;
+
     public ImagePipeline withInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
         this.infrastructureConfigurationArn = infrastructureConfigurationArn;
         return this;
@@ -111,6 +132,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImagePipeline withName(String name) {
         this.name = name;
         return this;
@@ -119,6 +141,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public PlatformEnum platform;
+
     public ImagePipeline withPlatform(PlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -127,6 +150,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public Schedule schedule;
+
     public ImagePipeline withSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
@@ -135,6 +159,7 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PipelineStatusEnum status;
+
     public ImagePipeline withStatus(PipelineStatusEnum status) {
         this.status = status;
         return this;
@@ -143,9 +168,11 @@ public class ImagePipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ImagePipeline withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImagePipeline(){}
 }

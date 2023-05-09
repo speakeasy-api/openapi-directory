@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public String[] command;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cpu")
     public Long cpu;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withCpu(Long cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DependsOn")
     public AwsEcsTaskDefinitionContainerDefinitionsDependsOnDetails[] dependsOn;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withDependsOn(AwsEcsTaskDefinitionContainerDefinitionsDependsOnDetails[] dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableNetworking")
     public Boolean disableNetworking;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withDisableNetworking(Boolean disableNetworking) {
         this.disableNetworking = disableNetworking;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsSearchDomains")
     public String[] dnsSearchDomains;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withDnsSearchDomains(String[] dnsSearchDomains) {
         this.dnsSearchDomains = dnsSearchDomains;
         return this;
@@ -55,6 +60,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsServers")
     public String[] dnsServers;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withDnsServers(String[] dnsServers) {
         this.dnsServers = dnsServers;
         return this;
@@ -63,6 +69,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DockerLabels")
     public java.util.Map<String, String> dockerLabels;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withDockerLabels(java.util.Map<String, String> dockerLabels) {
         this.dockerLabels = dockerLabels;
         return this;
@@ -71,6 +78,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DockerSecurityOptions")
     public String[] dockerSecurityOptions;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withDockerSecurityOptions(String[] dockerSecurityOptions) {
         this.dockerSecurityOptions = dockerSecurityOptions;
         return this;
@@ -79,6 +87,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntryPoint")
     public String[] entryPoint;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withEntryPoint(String[] entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -87,6 +96,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public AwsEcsTaskDefinitionContainerDefinitionsEnvironmentDetails[] environment;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withEnvironment(AwsEcsTaskDefinitionContainerDefinitionsEnvironmentDetails[] environment) {
         this.environment = environment;
         return this;
@@ -95,6 +105,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentFiles")
     public AwsEcsTaskDefinitionContainerDefinitionsEnvironmentFilesDetails[] environmentFiles;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withEnvironmentFiles(AwsEcsTaskDefinitionContainerDefinitionsEnvironmentFilesDetails[] environmentFiles) {
         this.environmentFiles = environmentFiles;
         return this;
@@ -103,6 +114,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Essential")
     public Boolean essential;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withEssential(Boolean essential) {
         this.essential = essential;
         return this;
@@ -111,6 +123,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraHosts")
     public AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails[] extraHosts;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withExtraHosts(AwsEcsTaskDefinitionContainerDefinitionsExtraHostsDetails[] extraHosts) {
         this.extraHosts = extraHosts;
         return this;
@@ -119,6 +132,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirelensConfiguration")
     public AwsEcsTaskDefinitionContainerDefinitionsFirelensConfigurationDetails firelensConfiguration;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withFirelensConfiguration(AwsEcsTaskDefinitionContainerDefinitionsFirelensConfigurationDetails firelensConfiguration) {
         this.firelensConfiguration = firelensConfiguration;
         return this;
@@ -127,6 +141,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheck")
     public AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails healthCheck;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withHealthCheck(AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -135,6 +150,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -143,6 +159,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withImage(String image) {
         this.image = image;
         return this;
@@ -151,6 +168,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interactive")
     public Boolean interactive;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withInteractive(Boolean interactive) {
         this.interactive = interactive;
         return this;
@@ -159,6 +177,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Links")
     public String[] links;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withLinks(String[] links) {
         this.links = links;
         return this;
@@ -167,6 +186,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinuxParameters")
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails linuxParameters;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withLinuxParameters(AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersDetails linuxParameters) {
         this.linuxParameters = linuxParameters;
         return this;
@@ -175,6 +195,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogConfiguration")
     public AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails logConfiguration;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withLogConfiguration(AwsEcsTaskDefinitionContainerDefinitionsLogConfigurationDetails logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -183,6 +204,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public Long memory;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -191,6 +213,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryReservation")
     public Long memoryReservation;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withMemoryReservation(Long memoryReservation) {
         this.memoryReservation = memoryReservation;
         return this;
@@ -199,6 +222,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountPoints")
     public AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails[] mountPoints;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withMountPoints(AwsEcsTaskDefinitionContainerDefinitionsMountPointsDetails[] mountPoints) {
         this.mountPoints = mountPoints;
         return this;
@@ -207,6 +231,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withName(String name) {
         this.name = name;
         return this;
@@ -215,6 +240,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortMappings")
     public AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails[] portMappings;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withPortMappings(AwsEcsTaskDefinitionContainerDefinitionsPortMappingsDetails[] portMappings) {
         this.portMappings = portMappings;
         return this;
@@ -223,6 +249,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Privileged")
     public Boolean privileged;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withPrivileged(Boolean privileged) {
         this.privileged = privileged;
         return this;
@@ -231,6 +258,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PseudoTerminal")
     public Boolean pseudoTerminal;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withPseudoTerminal(Boolean pseudoTerminal) {
         this.pseudoTerminal = pseudoTerminal;
         return this;
@@ -239,6 +267,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadonlyRootFilesystem")
     public Boolean readonlyRootFilesystem;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withReadonlyRootFilesystem(Boolean readonlyRootFilesystem) {
         this.readonlyRootFilesystem = readonlyRootFilesystem;
         return this;
@@ -247,6 +276,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepositoryCredentials")
     public AwsEcsTaskDefinitionContainerDefinitionsRepositoryCredentialsDetails repositoryCredentials;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withRepositoryCredentials(AwsEcsTaskDefinitionContainerDefinitionsRepositoryCredentialsDetails repositoryCredentials) {
         this.repositoryCredentials = repositoryCredentials;
         return this;
@@ -255,6 +285,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRequirements")
     public AwsEcsTaskDefinitionContainerDefinitionsResourceRequirementsDetails[] resourceRequirements;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withResourceRequirements(AwsEcsTaskDefinitionContainerDefinitionsResourceRequirementsDetails[] resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -263,6 +294,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Secrets")
     public AwsEcsTaskDefinitionContainerDefinitionsSecretsDetails[] secrets;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withSecrets(AwsEcsTaskDefinitionContainerDefinitionsSecretsDetails[] secrets) {
         this.secrets = secrets;
         return this;
@@ -271,6 +303,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTimeout")
     public Long startTimeout;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withStartTimeout(Long startTimeout) {
         this.startTimeout = startTimeout;
         return this;
@@ -279,6 +312,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StopTimeout")
     public Long stopTimeout;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withStopTimeout(Long stopTimeout) {
         this.stopTimeout = stopTimeout;
         return this;
@@ -287,6 +321,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SystemControls")
     public AwsEcsTaskDefinitionContainerDefinitionsSystemControlsDetails[] systemControls;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withSystemControls(AwsEcsTaskDefinitionContainerDefinitionsSystemControlsDetails[] systemControls) {
         this.systemControls = systemControls;
         return this;
@@ -295,6 +330,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ulimits")
     public AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails[] ulimits;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withUlimits(AwsEcsTaskDefinitionContainerDefinitionsUlimitsDetails[] ulimits) {
         this.ulimits = ulimits;
         return this;
@@ -303,6 +339,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public String user;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withUser(String user) {
         this.user = user;
         return this;
@@ -311,6 +348,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumesFrom")
     public AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails[] volumesFrom;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withVolumesFrom(AwsEcsTaskDefinitionContainerDefinitionsVolumesFromDetails[] volumesFrom) {
         this.volumesFrom = volumesFrom;
         return this;
@@ -319,9 +357,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDetails withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsDetails(){}
 }

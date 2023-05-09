@@ -18,6 +18,7 @@ public class PublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishCaCert")
     public Boolean publishCaCert;
+
     public PublishingOptions withPublishCaCert(Boolean publishCaCert) {
         this.publishCaCert = publishCaCert;
         return this;
@@ -29,9 +30,11 @@ public class PublishingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishCrl")
     public Boolean publishCrl;
+
     public PublishingOptions withPublishCrl(Boolean publishCrl) {
         this.publishCrl = publishCrl;
         return this;
     }
     
+    public PublishingOptions(){}
 }

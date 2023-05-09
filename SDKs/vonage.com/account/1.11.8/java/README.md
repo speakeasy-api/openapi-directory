@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDSecurity;
 import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDRequest;
 import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDResponse;
+import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,31 +26,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AccountCtrlGetAccountServicesByAccountIDRequest req = new AccountCtrlGetAccountServicesByAccountIDRequest() {{
-                accountId = 5488.14;
-            }}            
+            AccountCtrlGetAccountServicesByAccountIDRequest req = new AccountCtrlGetAccountServicesByAccountIDRequest(5488.14);            
 
-            AccountCtrlGetAccountServicesByAccountIDResponse res = sdk.accountCtrlGetAccountServicesByAccountID(req, new AccountCtrlGetAccountServicesByAccountIDSecurity() {{
+            AccountCtrlGetAccountServicesByAccountIDResponse res = sdk.accountCtrlGetAccountServicesByAccountID(req, new AccountCtrlGetAccountServicesByAccountIDSecurity("provident") {{
                 bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
-            if (res.accountHalResponse.isPresent()) {
+            if (res.accountHalResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `accountCtrlGetAccountServicesByAccountID` - Get account data by ID
-* `accountCtrlGetLocationByID` - Get location data by account ID and location ID
-* `accountCtrlGetLocationsByAccountID` - Get account locations data by account ID
+* [accountCtrlGetAccountServicesByAccountID](docs/sdk/README.md#accountctrlgetaccountservicesbyaccountid) - Get account data by ID
+* [accountCtrlGetLocationByID](docs/sdk/README.md#accountctrlgetlocationbyid) - Get location data by account ID and location ID
+* [accountCtrlGetLocationsByAccountID](docs/sdk/README.md#accountctrlgetlocationsbyaccountid) - Get account locations data by account ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

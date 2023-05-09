@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Searchads360SearchAds360FieldsSearchResponse {
     
     public String contentType;
+
     public Searchads360SearchAds360FieldsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Searchads360SearchAds360FieldsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse googleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse;
+
     public Searchads360SearchAds360FieldsSearchResponse withGoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse(org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse googleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse) {
         this.googleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse = googleAdsSearchads360V0ServicesSearchSearchAds360FieldsResponse;
         return this;
@@ -26,6 +29,7 @@ public class Searchads360SearchAds360FieldsSearchResponse {
     
     
     public Integer statusCode;
+
     public Searchads360SearchAds360FieldsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Searchads360SearchAds360FieldsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Searchads360SearchAds360FieldsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Searchads360SearchAds360FieldsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

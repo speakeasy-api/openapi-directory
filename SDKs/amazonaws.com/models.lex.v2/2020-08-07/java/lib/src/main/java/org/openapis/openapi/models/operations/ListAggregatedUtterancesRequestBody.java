@@ -14,6 +14,7 @@ public class ListAggregatedUtterancesRequestBody {
      */
     @JsonProperty("aggregationDuration")
     public ListAggregatedUtterancesRequestBodyAggregationDuration aggregationDuration;
+
     public ListAggregatedUtterancesRequestBody withAggregationDuration(ListAggregatedUtterancesRequestBodyAggregationDuration aggregationDuration) {
         this.aggregationDuration = aggregationDuration;
         return this;
@@ -25,6 +26,7 @@ public class ListAggregatedUtterancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasId")
     public String botAliasId;
+
     public ListAggregatedUtterancesRequestBody withBotAliasId(String botAliasId) {
         this.botAliasId = botAliasId;
         return this;
@@ -36,6 +38,7 @@ public class ListAggregatedUtterancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListAggregatedUtterancesRequestBody withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -47,6 +50,7 @@ public class ListAggregatedUtterancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.AggregatedUtterancesFilter[] filters;
+
     public ListAggregatedUtterancesRequestBody withFilters(org.openapis.openapi.models.shared.AggregatedUtterancesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -57,6 +61,7 @@ public class ListAggregatedUtterancesRequestBody {
      */
     @JsonProperty("localeId")
     public String localeId;
+
     public ListAggregatedUtterancesRequestBody withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -68,6 +73,7 @@ public class ListAggregatedUtterancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAggregatedUtterancesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -79,6 +85,7 @@ public class ListAggregatedUtterancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAggregatedUtterancesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -90,9 +97,14 @@ public class ListAggregatedUtterancesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ListAggregatedUtterancesRequestBodySortBy sortBy;
+
     public ListAggregatedUtterancesRequestBody withSortBy(ListAggregatedUtterancesRequestBodySortBy sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListAggregatedUtterancesRequestBody(@JsonProperty("aggregationDuration") ListAggregatedUtterancesRequestBodyAggregationDuration aggregationDuration, @JsonProperty("localeId") String localeId) {
+        this.aggregationDuration = aggregationDuration;
+        this.localeId = localeId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiParsePlaceholdersFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer;
+
     public OrderApiParsePlaceholdersFormRequest withRechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer) {
         this.rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer = rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer;
         return this;
@@ -19,9 +21,14 @@ public class OrderApiParsePlaceholdersFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiParsePlaceholdersFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OrderApiParsePlaceholdersFormRequest(@JsonProperty("Rechnungsdruck.WebApp.Controllers.Api.OrderApiController.ParseTextContainer") org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer, @JsonProperty("id") Long id) {
+        this.rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer = rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer;
+        this.id = id;
+  }
 }

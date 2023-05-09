@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQuer
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource withDocuments(String[] documents) {
         this.documents = documents;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource(){}
 }

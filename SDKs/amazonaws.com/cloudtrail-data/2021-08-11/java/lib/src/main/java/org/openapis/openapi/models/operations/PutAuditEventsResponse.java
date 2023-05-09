@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAuditEventsResponse {
@@ -12,6 +13,7 @@ public class PutAuditEventsResponse {
      */
     
     public Object channelInsufficientPermission;
+
     public PutAuditEventsResponse withChannelInsufficientPermission(Object channelInsufficientPermission) {
         this.channelInsufficientPermission = channelInsufficientPermission;
         return this;
@@ -22,6 +24,7 @@ public class PutAuditEventsResponse {
      */
     
     public Object channelNotFound;
+
     public PutAuditEventsResponse withChannelNotFound(Object channelNotFound) {
         this.channelNotFound = channelNotFound;
         return this;
@@ -32,6 +35,7 @@ public class PutAuditEventsResponse {
      */
     
     public Object channelUnsupportedSchema;
+
     public PutAuditEventsResponse withChannelUnsupportedSchema(Object channelUnsupportedSchema) {
         this.channelUnsupportedSchema = channelUnsupportedSchema;
         return this;
@@ -39,6 +43,7 @@ public class PutAuditEventsResponse {
     
     
     public String contentType;
+
     public PutAuditEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class PutAuditEventsResponse {
      */
     
     public Object duplicatedAuditEventId;
+
     public PutAuditEventsResponse withDuplicatedAuditEventId(Object duplicatedAuditEventId) {
         this.duplicatedAuditEventId = duplicatedAuditEventId;
         return this;
@@ -59,6 +65,7 @@ public class PutAuditEventsResponse {
      */
     
     public Object invalidChannelARN;
+
     public PutAuditEventsResponse withInvalidChannelARN(Object invalidChannelARN) {
         this.invalidChannelARN = invalidChannelARN;
         return this;
@@ -69,6 +76,7 @@ public class PutAuditEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutAuditEventsResponse putAuditEventsResponse;
+
     public PutAuditEventsResponse withPutAuditEventsResponse(org.openapis.openapi.models.shared.PutAuditEventsResponse putAuditEventsResponse) {
         this.putAuditEventsResponse = putAuditEventsResponse;
         return this;
@@ -76,6 +84,7 @@ public class PutAuditEventsResponse {
     
     
     public Integer statusCode;
+
     public PutAuditEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutAuditEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAuditEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class PutAuditEventsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public PutAuditEventsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public PutAuditEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddCustomFieldSettingForPortfolioResponse {
     
     public String contentType;
+
     public AddCustomFieldSettingForPortfolioResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AddCustomFieldSettingForPortfolioResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public AddCustomFieldSettingForPortfolioResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class AddCustomFieldSettingForPortfolioResponse {
     
     
     public Integer statusCode;
+
     public AddCustomFieldSettingForPortfolioResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AddCustomFieldSettingForPortfolioResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddCustomFieldSettingForPortfolioResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class AddCustomFieldSettingForPortfolioResponse {
      */
     
     public AddCustomFieldSettingForPortfolio200ApplicationJSON addCustomFieldSettingForPortfolio200ApplicationJSONObject;
+
     public AddCustomFieldSettingForPortfolioResponse withAddCustomFieldSettingForPortfolio200ApplicationJSONObject(AddCustomFieldSettingForPortfolio200ApplicationJSON addCustomFieldSettingForPortfolio200ApplicationJSONObject) {
         this.addCustomFieldSettingForPortfolio200ApplicationJSONObject = addCustomFieldSettingForPortfolio200ApplicationJSONObject;
         return this;
     }
     
+    public AddCustomFieldSettingForPortfolioResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

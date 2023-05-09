@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClassroomUserProfilesGuardianInvitationsPatchResponse {
     
     public String contentType;
+
     public ClassroomUserProfilesGuardianInvitationsPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClassroomUserProfilesGuardianInvitationsPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GuardianInvitation guardianInvitation;
+
     public ClassroomUserProfilesGuardianInvitationsPatchResponse withGuardianInvitation(org.openapis.openapi.models.shared.GuardianInvitation guardianInvitation) {
         this.guardianInvitation = guardianInvitation;
         return this;
@@ -26,6 +29,7 @@ public class ClassroomUserProfilesGuardianInvitationsPatchResponse {
     
     
     public Integer statusCode;
+
     public ClassroomUserProfilesGuardianInvitationsPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClassroomUserProfilesGuardianInvitationsPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClassroomUserProfilesGuardianInvitationsPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClassroomUserProfilesGuardianInvitationsPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

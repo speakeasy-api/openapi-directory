@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDocumentResponse {
     
     public String contentType;
+
     public CreateDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDocumentResult createDocumentResult;
+
     public CreateDocumentResponse withCreateDocumentResult(org.openapis.openapi.models.shared.CreateDocumentResult createDocumentResult) {
         this.createDocumentResult = createDocumentResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateDocumentResponse {
      */
     
     public Object documentAlreadyExists;
+
     public CreateDocumentResponse withDocumentAlreadyExists(Object documentAlreadyExists) {
         this.documentAlreadyExists = documentAlreadyExists;
         return this;
@@ -39,6 +43,7 @@ public class CreateDocumentResponse {
      */
     
     public Object documentLimitExceeded;
+
     public CreateDocumentResponse withDocumentLimitExceeded(Object documentLimitExceeded) {
         this.documentLimitExceeded = documentLimitExceeded;
         return this;
@@ -49,6 +54,7 @@ public class CreateDocumentResponse {
      */
     
     public Object internalServerError;
+
     public CreateDocumentResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class CreateDocumentResponse {
      */
     
     public Object invalidDocumentContent;
+
     public CreateDocumentResponse withInvalidDocumentContent(Object invalidDocumentContent) {
         this.invalidDocumentContent = invalidDocumentContent;
         return this;
@@ -69,6 +76,7 @@ public class CreateDocumentResponse {
      */
     
     public Object invalidDocumentSchemaVersion;
+
     public CreateDocumentResponse withInvalidDocumentSchemaVersion(Object invalidDocumentSchemaVersion) {
         this.invalidDocumentSchemaVersion = invalidDocumentSchemaVersion;
         return this;
@@ -79,6 +87,7 @@ public class CreateDocumentResponse {
      */
     
     public Object maxDocumentSizeExceeded;
+
     public CreateDocumentResponse withMaxDocumentSizeExceeded(Object maxDocumentSizeExceeded) {
         this.maxDocumentSizeExceeded = maxDocumentSizeExceeded;
         return this;
@@ -86,6 +95,7 @@ public class CreateDocumentResponse {
     
     
     public Integer statusCode;
+
     public CreateDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

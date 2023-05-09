@@ -22,6 +22,7 @@ public class FeatureMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FeatureMetadata withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class FeatureMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public FeatureMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class FeatureMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupArn")
     public String featureGroupArn;
+
     public FeatureMetadata withFeatureGroupArn(String featureGroupArn) {
         this.featureGroupArn = featureGroupArn;
         return this;
@@ -46,6 +49,7 @@ public class FeatureMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public FeatureMetadata withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -54,6 +58,7 @@ public class FeatureMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureName")
     public String featureName;
+
     public FeatureMetadata withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -62,6 +67,7 @@ public class FeatureMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureType")
     public FeatureTypeEnum featureType;
+
     public FeatureMetadata withFeatureType(FeatureTypeEnum featureType) {
         this.featureType = featureType;
         return this;
@@ -72,6 +78,7 @@ public class FeatureMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public FeatureMetadata withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -80,9 +87,11 @@ public class FeatureMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public FeatureParameter[] parameters;
+
     public FeatureMetadata withParameters(FeatureParameter[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public FeatureMetadata(){}
 }

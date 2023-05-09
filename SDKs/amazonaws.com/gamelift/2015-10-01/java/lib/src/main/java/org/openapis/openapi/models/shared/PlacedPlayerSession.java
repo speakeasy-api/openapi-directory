@@ -15,6 +15,7 @@ public class PlacedPlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public String playerId;
+
     public PlacedPlayerSession withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
@@ -23,9 +24,11 @@ public class PlacedPlayerSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSessionId")
     public String playerSessionId;
+
     public PlacedPlayerSession withPlayerSessionId(String playerSessionId) {
         this.playerSessionId = playerSessionId;
         return this;
     }
     
+    public PlacedPlayerSession(){}
 }

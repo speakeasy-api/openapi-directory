@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResultNetworkInterfaceIpv4Prefixes {
     
     public String ipv4Prefix;
+
     public CreateNetworkInterfaceResultNetworkInterfaceIpv4Prefixes withIpv4Prefix(String ipv4Prefix) {
         this.ipv4Prefix = ipv4Prefix;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterfaceIpv4Prefixes(){}
 }

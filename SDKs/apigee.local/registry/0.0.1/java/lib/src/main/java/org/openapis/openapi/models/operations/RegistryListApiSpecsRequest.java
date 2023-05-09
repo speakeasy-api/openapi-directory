@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApiSpecsRequest {
@@ -12,6 +13,7 @@ public class RegistryListApiSpecsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryListApiSpecsRequest withApi(String api) {
         this.api = api;
         return this;
@@ -22,6 +24,7 @@ public class RegistryListApiSpecsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public RegistryListApiSpecsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +35,7 @@ public class RegistryListApiSpecsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryListApiSpecsRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -42,6 +46,7 @@ public class RegistryListApiSpecsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public RegistryListApiSpecsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,6 +57,7 @@ public class RegistryListApiSpecsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public RegistryListApiSpecsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -62,6 +68,7 @@ public class RegistryListApiSpecsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryListApiSpecsRequest withProject(String project) {
         this.project = project;
         return this;
@@ -72,9 +79,16 @@ public class RegistryListApiSpecsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public RegistryListApiSpecsRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RegistryListApiSpecsRequest(@JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project, @JsonProperty("version") String version) {
+        this.api = api;
+        this.location = location;
+        this.project = project;
+        this.version = version;
+  }
 }

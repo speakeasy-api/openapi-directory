@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersAddEmailForAuthenticatedResponse {
     
     public String contentType;
+
     public UsersAddEmailForAuthenticatedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersAddEmailForAuthenticatedResponse {
     
     
     public Integer statusCode;
+
     public UsersAddEmailForAuthenticatedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UsersAddEmailForAuthenticatedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersAddEmailForAuthenticatedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UsersAddEmailForAuthenticatedResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersAddEmailForAuthenticatedResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class UsersAddEmailForAuthenticatedResponse {
      */
     
     public org.openapis.openapi.models.shared.Email[] emails;
+
     public UsersAddEmailForAuthenticatedResponse withEmails(org.openapis.openapi.models.shared.Email[] emails) {
         this.emails = emails;
         return this;
@@ -53,9 +59,14 @@ public class UsersAddEmailForAuthenticatedResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public UsersAddEmailForAuthenticatedResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public UsersAddEmailForAuthenticatedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

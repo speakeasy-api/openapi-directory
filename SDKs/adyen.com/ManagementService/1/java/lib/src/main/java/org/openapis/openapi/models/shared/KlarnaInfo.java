@@ -15,6 +15,7 @@ public class KlarnaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCapture")
     public Boolean autoCapture;
+
     public KlarnaInfo withAutoCapture(Boolean autoCapture) {
         this.autoCapture = autoCapture;
         return this;
@@ -25,6 +26,7 @@ public class KlarnaInfo {
      */
     @JsonProperty("disputeEmail")
     public String disputeEmail;
+
     public KlarnaInfo withDisputeEmail(String disputeEmail) {
         this.disputeEmail = disputeEmail;
         return this;
@@ -36,6 +38,7 @@ public class KlarnaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public KlarnaInfoRegionEnum region;
+
     public KlarnaInfo withRegion(KlarnaInfoRegionEnum region) {
         this.region = region;
         return this;
@@ -46,9 +49,14 @@ public class KlarnaInfo {
      */
     @JsonProperty("supportEmail")
     public String supportEmail;
+
     public KlarnaInfo withSupportEmail(String supportEmail) {
         this.supportEmail = supportEmail;
         return this;
     }
     
+    public KlarnaInfo(@JsonProperty("disputeEmail") String disputeEmail, @JsonProperty("supportEmail") String supportEmail) {
+        this.disputeEmail = disputeEmail;
+        this.supportEmail = supportEmail;
+  }
 }

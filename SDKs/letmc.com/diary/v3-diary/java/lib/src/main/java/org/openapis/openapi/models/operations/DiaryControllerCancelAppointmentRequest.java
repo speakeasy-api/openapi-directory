@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerCancelAppointmentRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerCancelAppointmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appointmentID")
     public String appointmentID;
+
     public DiaryControllerCancelAppointmentRequest withAppointmentID(String appointmentID) {
         this.appointmentID = appointmentID;
         return this;
@@ -22,9 +24,14 @@ public class DiaryControllerCancelAppointmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerCancelAppointmentRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerCancelAppointmentRequest(@JsonProperty("appointmentID") String appointmentID, @JsonProperty("shortName") String shortName) {
+        this.appointmentID = appointmentID;
+        this.shortName = shortName;
+  }
 }

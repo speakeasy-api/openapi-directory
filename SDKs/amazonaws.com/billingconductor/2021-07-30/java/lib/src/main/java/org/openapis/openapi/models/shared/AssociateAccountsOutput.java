@@ -15,9 +15,11 @@ public class AssociateAccountsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public AssociateAccountsOutput withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public AssociateAccountsOutput(){}
 }

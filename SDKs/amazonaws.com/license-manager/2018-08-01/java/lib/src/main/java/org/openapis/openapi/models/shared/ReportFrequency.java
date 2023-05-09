@@ -15,6 +15,7 @@ public class ReportFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public ReportFrequencyTypeEnum period;
+
     public ReportFrequency withPeriod(ReportFrequencyTypeEnum period) {
         this.period = period;
         return this;
@@ -23,9 +24,11 @@ public class ReportFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public ReportFrequency withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ReportFrequency(){}
 }

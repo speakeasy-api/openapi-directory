@@ -15,9 +15,11 @@ public class GetApiV2PerformanceStats200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetApiV2PerformanceStats200ApplicationJSONData data;
+
     public GetApiV2PerformanceStats200ApplicationJSON withData(GetApiV2PerformanceStats200ApplicationJSONData data) {
         this.data = data;
         return this;
     }
     
+    public GetApiV2PerformanceStats200ApplicationJSON(){}
 }

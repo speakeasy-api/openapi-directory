@@ -15,6 +15,7 @@ public class AssetPropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quality")
     public QualityEnum quality;
+
     public AssetPropertyValue withQuality(QualityEnum quality) {
         this.quality = quality;
         return this;
@@ -22,6 +23,7 @@ public class AssetPropertyValue {
     
     @JsonProperty("timestamp")
     public TimeInNanos timestamp;
+
     public AssetPropertyValue withTimestamp(TimeInNanos timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -29,9 +31,14 @@ public class AssetPropertyValue {
     
     @JsonProperty("value")
     public Variant value;
+
     public AssetPropertyValue withValue(Variant value) {
         this.value = value;
         return this;
     }
     
+    public AssetPropertyValue(@JsonProperty("timestamp") TimeInNanos timestamp, @JsonProperty("value") Variant value) {
+        this.timestamp = timestamp;
+        this.value = value;
+  }
 }

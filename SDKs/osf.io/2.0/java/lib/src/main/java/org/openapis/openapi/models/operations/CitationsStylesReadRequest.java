@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CitationsStylesReadRequest {
@@ -12,9 +13,13 @@ public class CitationsStylesReadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style_id")
     public String styleId;
+
     public CitationsStylesReadRequest withStyleId(String styleId) {
         this.styleId = styleId;
         return this;
     }
     
+    public CitationsStylesReadRequest(@JsonProperty("style_id") String styleId) {
+        this.styleId = styleId;
+  }
 }

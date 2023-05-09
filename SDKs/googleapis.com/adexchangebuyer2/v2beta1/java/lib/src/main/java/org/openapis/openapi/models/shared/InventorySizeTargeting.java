@@ -18,6 +18,7 @@ public class InventorySizeTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedInventorySizes")
     public AdSize[] excludedInventorySizes;
+
     public InventorySizeTargeting withExcludedInventorySizes(AdSize[] excludedInventorySizes) {
         this.excludedInventorySizes = excludedInventorySizes;
         return this;
@@ -29,9 +30,11 @@ public class InventorySizeTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetedInventorySizes")
     public AdSize[] targetedInventorySizes;
+
     public InventorySizeTargeting withTargetedInventorySizes(AdSize[] targetedInventorySizes) {
         this.targetedInventorySizes = targetedInventorySizes;
         return this;
     }
     
+    public InventorySizeTargeting(){}
 }

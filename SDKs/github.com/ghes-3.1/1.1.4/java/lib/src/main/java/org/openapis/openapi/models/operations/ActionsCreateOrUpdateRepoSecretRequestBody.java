@@ -15,6 +15,7 @@ public class ActionsCreateOrUpdateRepoSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted_value")
     public String encryptedValue;
+
     public ActionsCreateOrUpdateRepoSecretRequestBody withEncryptedValue(String encryptedValue) {
         this.encryptedValue = encryptedValue;
         return this;
@@ -26,9 +27,11 @@ public class ActionsCreateOrUpdateRepoSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key_id")
     public String keyId;
+
     public ActionsCreateOrUpdateRepoSecretRequestBody withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public ActionsCreateOrUpdateRepoSecretRequestBody(){}
 }

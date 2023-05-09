@@ -380,4 +380,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkGroupInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/WorkGroupConfigurationUpdates.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResultConfigurationUpdates.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

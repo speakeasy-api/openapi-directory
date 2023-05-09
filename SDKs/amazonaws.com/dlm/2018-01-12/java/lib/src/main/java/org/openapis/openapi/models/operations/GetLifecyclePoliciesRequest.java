@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetLifecyclePoliciesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetLifecyclePoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +17,7 @@ public class GetLifecyclePoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetLifecyclePoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +25,7 @@ public class GetLifecyclePoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetLifecyclePoliciesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +33,7 @@ public class GetLifecyclePoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetLifecyclePoliciesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +41,7 @@ public class GetLifecyclePoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetLifecyclePoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +49,7 @@ public class GetLifecyclePoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetLifecyclePoliciesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +57,7 @@ public class GetLifecyclePoliciesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetLifecyclePoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +68,7 @@ public class GetLifecyclePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=policyIds")
     public String[] policyIds;
+
     public GetLifecyclePoliciesRequest withPolicyIds(String[] policyIds) {
         this.policyIds = policyIds;
         return this;
@@ -71,6 +79,7 @@ public class GetLifecyclePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceTypes")
     public org.openapis.openapi.models.shared.ResourceTypeValuesEnum[] resourceTypes;
+
     public GetLifecyclePoliciesRequest withResourceTypes(org.openapis.openapi.models.shared.ResourceTypeValuesEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -81,6 +90,7 @@ public class GetLifecyclePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public GetLifecyclePoliciesStateEnum state;
+
     public GetLifecyclePoliciesRequest withState(GetLifecyclePoliciesStateEnum state) {
         this.state = state;
         return this;
@@ -91,6 +101,7 @@ public class GetLifecyclePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagsToAdd")
     public String[] tagsToAdd;
+
     public GetLifecyclePoliciesRequest withTagsToAdd(String[] tagsToAdd) {
         this.tagsToAdd = tagsToAdd;
         return this;
@@ -101,9 +112,11 @@ public class GetLifecyclePoliciesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=targetTags")
     public String[] targetTags;
+
     public GetLifecyclePoliciesRequest withTargetTags(String[] targetTags) {
         this.targetTags = targetTags;
         return this;
     }
     
+    public GetLifecyclePoliciesRequest(){}
 }

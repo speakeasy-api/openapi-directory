@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UnassignPrivateNatGatewayAddressRequest {
     
     public Boolean dryRun;
+
     public UnassignPrivateNatGatewayAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class UnassignPrivateNatGatewayAddressRequest {
     
     
     public Long maxDrainDurationSeconds;
+
     public UnassignPrivateNatGatewayAddressRequest withMaxDrainDurationSeconds(Long maxDrainDurationSeconds) {
         this.maxDrainDurationSeconds = maxDrainDurationSeconds;
         return this;
@@ -23,6 +25,7 @@ public class UnassignPrivateNatGatewayAddressRequest {
     
     
     public String natGatewayId;
+
     public UnassignPrivateNatGatewayAddressRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -30,9 +33,14 @@ public class UnassignPrivateNatGatewayAddressRequest {
     
     
     public String[] privateIpAddresses;
+
     public UnassignPrivateNatGatewayAddressRequest withPrivateIpAddresses(String[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
     }
     
+    public UnassignPrivateNatGatewayAddressRequest(@JsonProperty("NatGatewayId") String natGatewayId, @JsonProperty("PrivateIpAddresses") String[] privateIpAddresses) {
+        this.natGatewayId = natGatewayId;
+        this.privateIpAddresses = privateIpAddresses;
+  }
 }

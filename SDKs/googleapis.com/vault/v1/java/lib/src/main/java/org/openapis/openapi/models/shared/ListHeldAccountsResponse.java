@@ -18,9 +18,11 @@ public class ListHeldAccountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public HeldAccount[] accounts;
+
     public ListHeldAccountsResponse withAccounts(HeldAccount[] accounts) {
         this.accounts = accounts;
         return this;
     }
     
+    public ListHeldAccountsResponse(){}
 }

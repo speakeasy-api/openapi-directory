@@ -18,6 +18,7 @@ public class DetectedCatalogColumnList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedCatalogColumns")
     public DetectedCatalogColumn[] detectedCatalogColumns;
+
     public DetectedCatalogColumnList withDetectedCatalogColumns(DetectedCatalogColumn[] detectedCatalogColumns) {
         this.detectedCatalogColumns = detectedCatalogColumns;
         return this;
@@ -25,9 +26,13 @@ public class DetectedCatalogColumnList {
     
     @JsonProperty("links")
     public DetectedCatalogColumnListLinks links;
+
     public DetectedCatalogColumnList withLinks(DetectedCatalogColumnListLinks links) {
         this.links = links;
         return this;
     }
     
+    public DetectedCatalogColumnList(@JsonProperty("links") DetectedCatalogColumnListLinks links) {
+        this.links = links;
+  }
 }

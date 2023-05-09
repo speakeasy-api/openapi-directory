@@ -18,6 +18,7 @@ public class CloudRunRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public CloudRunRewrite withRegion(String region) {
         this.region = region;
         return this;
@@ -29,9 +30,11 @@ public class CloudRunRewrite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public String serviceId;
+
     public CloudRunRewrite withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public CloudRunRewrite(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChildWorkflowExecutionStartedEventAttributes {
     @JsonProperty("initiatedEventId")
     public Long initiatedEventId;
+
     public ChildWorkflowExecutionStartedEventAttributes withInitiatedEventId(Long initiatedEventId) {
         this.initiatedEventId = initiatedEventId;
         return this;
@@ -19,6 +20,7 @@ public class ChildWorkflowExecutionStartedEventAttributes {
     
     @JsonProperty("workflowExecution")
     public WorkflowExecution workflowExecution;
+
     public ChildWorkflowExecutionStartedEventAttributes withWorkflowExecution(WorkflowExecution workflowExecution) {
         this.workflowExecution = workflowExecution;
         return this;
@@ -26,9 +28,15 @@ public class ChildWorkflowExecutionStartedEventAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public ChildWorkflowExecutionStartedEventAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public ChildWorkflowExecutionStartedEventAttributes(@JsonProperty("initiatedEventId") Long initiatedEventId, @JsonProperty("workflowExecution") WorkflowExecution workflowExecution, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.initiatedEventId = initiatedEventId;
+        this.workflowExecution = workflowExecution;
+        this.workflowType = workflowType;
+  }
 }

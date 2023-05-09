@@ -22,6 +22,7 @@ public class ResetDistributionCacheResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public ResetDistributionCacheResult withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -30,6 +31,7 @@ public class ResetDistributionCacheResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public ResetDistributionCacheResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
@@ -38,9 +40,11 @@ public class ResetDistributionCacheResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ResetDistributionCacheResult withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ResetDistributionCacheResult(){}
 }

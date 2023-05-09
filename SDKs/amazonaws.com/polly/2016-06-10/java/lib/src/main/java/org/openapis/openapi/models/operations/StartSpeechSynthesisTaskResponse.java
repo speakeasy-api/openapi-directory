@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSpeechSynthesisTaskResponse {
     
     public String contentType;
+
     public StartSpeechSynthesisTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object engineNotSupportedException;
+
     public StartSpeechSynthesisTaskResponse withEngineNotSupportedException(Object engineNotSupportedException) {
         this.engineNotSupportedException = engineNotSupportedException;
         return this;
@@ -29,6 +32,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object invalidS3BucketException;
+
     public StartSpeechSynthesisTaskResponse withInvalidS3BucketException(Object invalidS3BucketException) {
         this.invalidS3BucketException = invalidS3BucketException;
         return this;
@@ -39,6 +43,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object invalidS3KeyException;
+
     public StartSpeechSynthesisTaskResponse withInvalidS3KeyException(Object invalidS3KeyException) {
         this.invalidS3KeyException = invalidS3KeyException;
         return this;
@@ -49,6 +54,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object invalidSampleRateException;
+
     public StartSpeechSynthesisTaskResponse withInvalidSampleRateException(Object invalidSampleRateException) {
         this.invalidSampleRateException = invalidSampleRateException;
         return this;
@@ -59,6 +65,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object invalidSnsTopicArnException;
+
     public StartSpeechSynthesisTaskResponse withInvalidSnsTopicArnException(Object invalidSnsTopicArnException) {
         this.invalidSnsTopicArnException = invalidSnsTopicArnException;
         return this;
@@ -69,6 +76,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object invalidSsmlException;
+
     public StartSpeechSynthesisTaskResponse withInvalidSsmlException(Object invalidSsmlException) {
         this.invalidSsmlException = invalidSsmlException;
         return this;
@@ -79,6 +87,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object languageNotSupportedException;
+
     public StartSpeechSynthesisTaskResponse withLanguageNotSupportedException(Object languageNotSupportedException) {
         this.languageNotSupportedException = languageNotSupportedException;
         return this;
@@ -89,6 +98,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object lexiconNotFoundException;
+
     public StartSpeechSynthesisTaskResponse withLexiconNotFoundException(Object lexiconNotFoundException) {
         this.lexiconNotFoundException = lexiconNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object marksNotSupportedForFormatException;
+
     public StartSpeechSynthesisTaskResponse withMarksNotSupportedForFormatException(Object marksNotSupportedForFormatException) {
         this.marksNotSupportedForFormatException = marksNotSupportedForFormatException;
         return this;
@@ -109,6 +120,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object serviceFailureException;
+
     public StartSpeechSynthesisTaskResponse withServiceFailureException(Object serviceFailureException) {
         this.serviceFailureException = serviceFailureException;
         return this;
@@ -119,6 +131,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object ssmlMarksNotSupportedForTextTypeException;
+
     public StartSpeechSynthesisTaskResponse withSsmlMarksNotSupportedForTextTypeException(Object ssmlMarksNotSupportedForTextTypeException) {
         this.ssmlMarksNotSupportedForTextTypeException = ssmlMarksNotSupportedForTextTypeException;
         return this;
@@ -129,6 +142,7 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSpeechSynthesisTaskOutput startSpeechSynthesisTaskOutput;
+
     public StartSpeechSynthesisTaskResponse withStartSpeechSynthesisTaskOutput(org.openapis.openapi.models.shared.StartSpeechSynthesisTaskOutput startSpeechSynthesisTaskOutput) {
         this.startSpeechSynthesisTaskOutput = startSpeechSynthesisTaskOutput;
         return this;
@@ -136,6 +150,7 @@ public class StartSpeechSynthesisTaskResponse {
     
     
     public Integer statusCode;
+
     public StartSpeechSynthesisTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class StartSpeechSynthesisTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSpeechSynthesisTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,9 +169,14 @@ public class StartSpeechSynthesisTaskResponse {
      */
     
     public Object textLengthExceededException;
+
     public StartSpeechSynthesisTaskResponse withTextLengthExceededException(Object textLengthExceededException) {
         this.textLengthExceededException = textLengthExceededException;
         return this;
     }
     
+    public StartSpeechSynthesisTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

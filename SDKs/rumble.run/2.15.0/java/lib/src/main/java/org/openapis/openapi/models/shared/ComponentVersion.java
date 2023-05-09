@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComponentVersion {
     @JsonProperty("id")
     public String id;
+
     public ComponentVersion withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class ComponentVersion {
     
     @JsonProperty("version")
     public String version;
+
     public ComponentVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ComponentVersion(@JsonProperty("id") String id, @JsonProperty("version") String version) {
+        this.id = id;
+        this.version = version;
+  }
 }

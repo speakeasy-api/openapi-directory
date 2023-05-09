@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFlowResponse {
@@ -12,6 +13,7 @@ public class CreateFlowResponse {
      */
     
     public Object conflictException;
+
     public CreateFlowResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -22,6 +24,7 @@ public class CreateFlowResponse {
      */
     
     public Object connectorAuthenticationException;
+
     public CreateFlowResponse withConnectorAuthenticationException(Object connectorAuthenticationException) {
         this.connectorAuthenticationException = connectorAuthenticationException;
         return this;
@@ -32,6 +35,7 @@ public class CreateFlowResponse {
      */
     
     public Object connectorServerException;
+
     public CreateFlowResponse withConnectorServerException(Object connectorServerException) {
         this.connectorServerException = connectorServerException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFlowResponse {
     
     
     public String contentType;
+
     public CreateFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateFlowResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFlowResponse createFlowResponse;
+
     public CreateFlowResponse withCreateFlowResponse(org.openapis.openapi.models.shared.CreateFlowResponse createFlowResponse) {
         this.createFlowResponse = createFlowResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateFlowResponse {
      */
     
     public Object internalServerException;
+
     public CreateFlowResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFlowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFlowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateFlowResponse {
     
     
     public Integer statusCode;
+
     public CreateFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateFlowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFlowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateFlowResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateFlowResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -103,9 +114,14 @@ public class CreateFlowResponse {
      */
     
     public Object validationException;
+
     public CreateFlowResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFlowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

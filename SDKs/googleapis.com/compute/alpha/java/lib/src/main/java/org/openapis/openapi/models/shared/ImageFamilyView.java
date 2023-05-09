@@ -18,9 +18,11 @@ public class ImageFamilyView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public ImageFamilyView withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public ImageFamilyView(){}
 }

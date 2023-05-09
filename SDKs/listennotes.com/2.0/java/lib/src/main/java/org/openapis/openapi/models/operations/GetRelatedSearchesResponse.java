@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelatedSearchesResponse {
     
     public String contentType;
+
     public GetRelatedSearchesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRelatedSearchesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetRelatedSearchesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetRelatedSearchesResponse {
      */
     
     public org.openapis.openapi.models.shared.RelatedSearchesResponse relatedSearchesResponse;
+
     public GetRelatedSearchesResponse withRelatedSearchesResponse(org.openapis.openapi.models.shared.RelatedSearchesResponse relatedSearchesResponse) {
         this.relatedSearchesResponse = relatedSearchesResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRelatedSearchesResponse {
     
     
     public Integer statusCode;
+
     public GetRelatedSearchesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetRelatedSearchesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelatedSearchesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRelatedSearchesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

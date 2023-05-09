@@ -18,6 +18,7 @@ public class SslCertDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certInfo")
     public SslCert certInfo;
+
     public SslCertDetail withCertInfo(SslCert certInfo) {
         this.certInfo = certInfo;
         return this;
@@ -29,9 +30,11 @@ public class SslCertDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certPrivateKey")
     public String certPrivateKey;
+
     public SslCertDetail withCertPrivateKey(String certPrivateKey) {
         this.certPrivateKey = certPrivateKey;
         return this;
     }
     
+    public SslCertDetail(){}
 }

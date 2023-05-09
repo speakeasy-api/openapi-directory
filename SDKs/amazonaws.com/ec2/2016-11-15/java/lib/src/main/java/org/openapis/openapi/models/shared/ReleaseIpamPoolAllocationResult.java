@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ReleaseIpamPoolAllocationResult {
     
     public Boolean success;
+
     public ReleaseIpamPoolAllocationResult withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ReleaseIpamPoolAllocationResult(){}
 }

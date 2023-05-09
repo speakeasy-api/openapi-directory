@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchFormFieldSetsIdResponse {
     
     public String contentType;
+
     public PatchFormFieldSetsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PatchFormFieldSetsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.FormFieldSetEntity formFieldSetEntity;
+
     public PatchFormFieldSetsIdResponse withFormFieldSetEntity(org.openapis.openapi.models.shared.FormFieldSetEntity formFieldSetEntity) {
         this.formFieldSetEntity = formFieldSetEntity;
         return this;
@@ -26,6 +29,7 @@ public class PatchFormFieldSetsIdResponse {
     
     
     public Integer statusCode;
+
     public PatchFormFieldSetsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PatchFormFieldSetsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchFormFieldSetsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchFormFieldSetsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

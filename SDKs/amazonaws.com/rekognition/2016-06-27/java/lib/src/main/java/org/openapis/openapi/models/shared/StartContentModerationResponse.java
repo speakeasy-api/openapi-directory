@@ -15,9 +15,11 @@ public class StartContentModerationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartContentModerationResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartContentModerationResponse(){}
 }

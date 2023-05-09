@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartRelationalDatabaseResponse {
@@ -12,6 +13,7 @@ public class StartRelationalDatabaseResponse {
      */
     
     public Object accessDeniedException;
+
     public StartRelationalDatabaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartRelationalDatabaseResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public StartRelationalDatabaseResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class StartRelationalDatabaseResponse {
     
     
     public String contentType;
+
     public StartRelationalDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartRelationalDatabaseResponse {
      */
     
     public Object invalidInputException;
+
     public StartRelationalDatabaseResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class StartRelationalDatabaseResponse {
      */
     
     public Object notFoundException;
+
     public StartRelationalDatabaseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartRelationalDatabaseResponse {
      */
     
     public Object operationFailureException;
+
     public StartRelationalDatabaseResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class StartRelationalDatabaseResponse {
      */
     
     public Object serviceException;
+
     public StartRelationalDatabaseResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -79,6 +87,7 @@ public class StartRelationalDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.StartRelationalDatabaseResult startRelationalDatabaseResult;
+
     public StartRelationalDatabaseResponse withStartRelationalDatabaseResult(org.openapis.openapi.models.shared.StartRelationalDatabaseResult startRelationalDatabaseResult) {
         this.startRelationalDatabaseResult = startRelationalDatabaseResult;
         return this;
@@ -86,6 +95,7 @@ public class StartRelationalDatabaseResponse {
     
     
     public Integer statusCode;
+
     public StartRelationalDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class StartRelationalDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartRelationalDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class StartRelationalDatabaseResponse {
      */
     
     public Object unauthenticatedException;
+
     public StartRelationalDatabaseResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public StartRelationalDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

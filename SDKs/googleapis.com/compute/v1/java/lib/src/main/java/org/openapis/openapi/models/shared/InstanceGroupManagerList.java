@@ -18,6 +18,7 @@ public class InstanceGroupManagerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InstanceGroupManagerList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class InstanceGroupManagerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public InstanceGroupManager[] items;
+
     public InstanceGroupManagerList withItems(InstanceGroupManager[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class InstanceGroupManagerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InstanceGroupManagerList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class InstanceGroupManagerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public InstanceGroupManagerList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class InstanceGroupManagerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public InstanceGroupManagerList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class InstanceGroupManagerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public InstanceGroupManagerListWarning warning;
+
     public InstanceGroupManagerList withWarning(InstanceGroupManagerListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public InstanceGroupManagerList(){}
 }

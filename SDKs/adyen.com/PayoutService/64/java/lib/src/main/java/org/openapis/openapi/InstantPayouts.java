@@ -55,12 +55,10 @@ public class InstantPayouts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPayoutResponse res = new org.openapis.openapi.models.operations.PostPayoutResponse() {{
+        org.openapis.openapi.models.operations.PostPayoutResponse res = new org.openapis.openapi.models.operations.PostPayoutResponse(contentType, httpRes.statusCode()) {{
             payoutResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class RequestUploadCredentialsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageLocation")
     public S3Location storageLocation;
+
     public RequestUploadCredentialsOutput withStorageLocation(S3Location storageLocation) {
         this.storageLocation = storageLocation;
         return this;
@@ -23,9 +24,11 @@ public class RequestUploadCredentialsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploadCredentials")
     public AwsCredentials uploadCredentials;
+
     public RequestUploadCredentialsOutput withUploadCredentials(AwsCredentials uploadCredentials) {
         this.uploadCredentials = uploadCredentials;
         return this;
     }
     
+    public RequestUploadCredentialsOutput(){}
 }

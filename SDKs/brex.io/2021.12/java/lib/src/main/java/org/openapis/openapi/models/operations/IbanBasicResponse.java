@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IbanBasicResponse {
     
     public String contentType;
+
     public IbanBasicResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IbanBasicResponse {
      */
     
     public IbanBasic200ApplicationJSON ibanBasic200ApplicationJSONObject;
+
     public IbanBasicResponse withIbanBasic200ApplicationJSONObject(IbanBasic200ApplicationJSON ibanBasic200ApplicationJSONObject) {
         this.ibanBasic200ApplicationJSONObject = ibanBasic200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class IbanBasicResponse {
      */
     
     public IbanBasicDefaultApplicationJSON ibanBasicDefaultApplicationJSONObject;
+
     public IbanBasicResponse withIbanBasicDefaultApplicationJSONObject(IbanBasicDefaultApplicationJSON ibanBasicDefaultApplicationJSONObject) {
         this.ibanBasicDefaultApplicationJSONObject = ibanBasicDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class IbanBasicResponse {
     
     
     public Integer statusCode;
+
     public IbanBasicResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class IbanBasicResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IbanBasicResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IbanBasicResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -16,6 +16,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=created_at")
     public String[] createdAt;
+
     public GetV2ActivitiesCallsJsonRequest withCreatedAt(String[] createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=disposition")
     public String[] disposition;
+
     public GetV2ActivitiesCallsJsonRequest withDisposition(String[] disposition) {
         this.disposition = disposition;
         return this;
@@ -36,6 +38,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2ActivitiesCallsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -46,6 +49,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2ActivitiesCallsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -56,6 +60,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2ActivitiesCallsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -66,6 +71,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2ActivitiesCallsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -76,6 +82,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2ActivitiesCallsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -86,6 +93,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_id")
     public Long[] personId;
+
     public GetV2ActivitiesCallsJsonRequest withPersonId(Long[] personId) {
         this.personId = personId;
         return this;
@@ -96,6 +104,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sentiment")
     public String[] sentiment;
+
     public GetV2ActivitiesCallsJsonRequest withSentiment(String[] sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -106,6 +115,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2ActivitiesCallsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -116,6 +126,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2ActivitiesCallsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -130,6 +141,7 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public GetV2ActivitiesCallsJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -140,9 +152,11 @@ public class GetV2ActivitiesCallsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guid")
     public String[] userGuid;
+
     public GetV2ActivitiesCallsJsonRequest withUserGuid(String[] userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public GetV2ActivitiesCallsJsonRequest(){}
 }

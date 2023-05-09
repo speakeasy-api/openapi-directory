@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetStatisticsAllListRequest {
@@ -12,6 +13,7 @@ public class GroupsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
     public Boolean favourite;
+
     public GroupsGetStatisticsAllListRequest withFavourite(Boolean favourite) {
         this.favourite = favourite;
         return this;
@@ -22,6 +24,7 @@ public class GroupsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public GroupsGetStatisticsAllListRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -32,6 +35,7 @@ public class GroupsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
     public GroupsGetStatisticsAllListGroupByEnum groupBy;
+
     public GroupsGetStatisticsAllListRequest withGroupBy(GroupsGetStatisticsAllListGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -42,6 +46,7 @@ public class GroupsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GroupsGetStatisticsAllListRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -52,6 +57,7 @@ public class GroupsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public GroupsGetStatisticsAllListRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -62,6 +68,7 @@ public class GroupsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public GroupsGetStatisticsAllListTimeFrameEnum timeFrame;
+
     public GroupsGetStatisticsAllListRequest withTimeFrame(GroupsGetStatisticsAllListTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -72,9 +79,13 @@ public class GroupsGetStatisticsAllListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public GroupsGetStatisticsAllListRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public GroupsGetStatisticsAllListRequest(@JsonProperty("timeFrame") GroupsGetStatisticsAllListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+  }
 }

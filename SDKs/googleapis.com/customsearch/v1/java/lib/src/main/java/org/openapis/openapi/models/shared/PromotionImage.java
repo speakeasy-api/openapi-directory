@@ -18,6 +18,7 @@ public class PromotionImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public PromotionImage withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class PromotionImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public PromotionImage withSource(String source) {
         this.source = source;
         return this;
@@ -40,9 +42,11 @@ public class PromotionImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public PromotionImage withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public PromotionImage(){}
 }

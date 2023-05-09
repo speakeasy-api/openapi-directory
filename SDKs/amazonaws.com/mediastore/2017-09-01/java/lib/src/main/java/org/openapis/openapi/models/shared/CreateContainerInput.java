@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateContainerInput {
     @JsonProperty("ContainerName")
     public String containerName;
+
     public CreateContainerInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -19,9 +20,13 @@ public class CreateContainerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateContainerInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateContainerInput(@JsonProperty("ContainerName") String containerName) {
+        this.containerName = containerName;
+  }
 }

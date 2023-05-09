@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SsmParameterStoreParameter {
     @JsonProperty("parameterName")
     public String parameterName;
+
     public SsmParameterStoreParameter withParameterName(String parameterName) {
         this.parameterName = parameterName;
         return this;
@@ -19,9 +20,14 @@ public class SsmParameterStoreParameter {
     
     @JsonProperty("parameterType")
     public SsmParameterStoreParameterTypeEnum parameterType;
+
     public SsmParameterStoreParameter withParameterType(SsmParameterStoreParameterTypeEnum parameterType) {
         this.parameterType = parameterType;
         return this;
     }
     
+    public SsmParameterStoreParameter(@JsonProperty("parameterName") String parameterName, @JsonProperty("parameterType") SsmParameterStoreParameterTypeEnum parameterType) {
+        this.parameterName = parameterName;
+        this.parameterType = parameterType;
+  }
 }

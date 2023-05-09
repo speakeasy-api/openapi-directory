@@ -18,6 +18,7 @@ public class BulkEditSitesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public BulkEditSitesRequestInput withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class BulkEditSitesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdSites")
     public SiteInput[] createdSites;
+
     public BulkEditSitesRequestInput withCreatedSites(SiteInput[] createdSites) {
         this.createdSites = createdSites;
         return this;
@@ -40,6 +42,7 @@ public class BulkEditSitesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedSites")
     public String[] deletedSites;
+
     public BulkEditSitesRequestInput withDeletedSites(String[] deletedSites) {
         this.deletedSites = deletedSites;
         return this;
@@ -51,9 +54,11 @@ public class BulkEditSitesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerId")
     public String partnerId;
+
     public BulkEditSitesRequestInput withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
     }
     
+    public BulkEditSitesRequestInput(){}
 }

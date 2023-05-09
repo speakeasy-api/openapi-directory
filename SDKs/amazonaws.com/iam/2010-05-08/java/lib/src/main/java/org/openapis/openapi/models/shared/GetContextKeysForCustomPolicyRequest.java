@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetContextKeysForCustomPolicyRequest {
     
     public String[] policyInputList;
+
     public GetContextKeysForCustomPolicyRequest withPolicyInputList(String[] policyInputList) {
         this.policyInputList = policyInputList;
         return this;
     }
     
+    public GetContextKeysForCustomPolicyRequest(@JsonProperty("PolicyInputList") String[] policyInputList) {
+        this.policyInputList = policyInputList;
+  }
 }

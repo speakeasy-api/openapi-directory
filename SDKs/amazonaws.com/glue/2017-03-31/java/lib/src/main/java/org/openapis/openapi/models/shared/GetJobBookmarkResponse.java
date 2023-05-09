@@ -15,9 +15,11 @@ public class GetJobBookmarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobBookmarkEntry")
     public JobBookmarkEntry jobBookmarkEntry;
+
     public GetJobBookmarkResponse withJobBookmarkEntry(JobBookmarkEntry jobBookmarkEntry) {
         this.jobBookmarkEntry = jobBookmarkEntry;
         return this;
     }
     
+    public GetJobBookmarkResponse(){}
 }

@@ -15,6 +15,7 @@ public class CreateTypedLinkFacetRequestBodyFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public org.openapis.openapi.models.shared.TypedLinkAttributeDefinition[] attributes;
+
     public CreateTypedLinkFacetRequestBodyFacet withAttributes(org.openapis.openapi.models.shared.TypedLinkAttributeDefinition[] attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class CreateTypedLinkFacetRequestBodyFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityAttributeOrder")
     public String[] identityAttributeOrder;
+
     public CreateTypedLinkFacetRequestBodyFacet withIdentityAttributeOrder(String[] identityAttributeOrder) {
         this.identityAttributeOrder = identityAttributeOrder;
         return this;
@@ -31,9 +33,11 @@ public class CreateTypedLinkFacetRequestBodyFacet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateTypedLinkFacetRequestBodyFacet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateTypedLinkFacetRequestBodyFacet(){}
 }

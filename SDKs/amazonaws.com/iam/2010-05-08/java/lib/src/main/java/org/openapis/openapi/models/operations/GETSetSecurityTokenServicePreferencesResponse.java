@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETSetSecurityTokenServicePreferencesResponse {
     
     public byte[] body;
+
     public GETSetSecurityTokenServicePreferencesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETSetSecurityTokenServicePreferencesResponse {
     
     
     public String contentType;
+
     public GETSetSecurityTokenServicePreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETSetSecurityTokenServicePreferencesResponse {
     
     
     public Integer statusCode;
+
     public GETSetSecurityTokenServicePreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETSetSecurityTokenServicePreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETSetSecurityTokenServicePreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETSetSecurityTokenServicePreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

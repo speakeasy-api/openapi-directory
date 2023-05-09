@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse {
     
     public String contentType;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GlossaryEntry glossaryEntry;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse withGlossaryEntry(org.openapis.openapi.models.shared.GlossaryEntry glossaryEntry) {
         this.glossaryEntry = glossaryEntry;
         return this;
@@ -26,6 +29,7 @@ public class TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse {
     
     
     public Integer statusCode;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

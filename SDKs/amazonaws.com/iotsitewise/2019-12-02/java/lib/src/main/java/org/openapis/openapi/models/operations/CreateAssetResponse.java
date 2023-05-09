@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssetResponse {
@@ -12,6 +13,7 @@ public class CreateAssetResponse {
      */
     
     public Object conflictingOperationException;
+
     public CreateAssetResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAssetResponse {
     
     
     public String contentType;
+
     public CreateAssetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssetResponse createAssetResponse;
+
     public CreateAssetResponse withCreateAssetResponse(org.openapis.openapi.models.shared.CreateAssetResponse createAssetResponse) {
         this.createAssetResponse = createAssetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssetResponse {
      */
     
     public Object internalFailureException;
+
     public CreateAssetResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAssetResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAssetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAssetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAssetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAssetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAssetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAssetResponse {
     
     
     public Integer statusCode;
+
     public CreateAssetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateAssetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateAssetResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateAssetResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAssetResponse {
      */
     
     public Object throttlingException;
+
     public CreateAssetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateAssetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

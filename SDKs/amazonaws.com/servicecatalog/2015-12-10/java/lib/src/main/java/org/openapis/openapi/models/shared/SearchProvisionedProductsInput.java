@@ -12,6 +12,7 @@ public class SearchProvisionedProductsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public SearchProvisionedProductsInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class SearchProvisionedProductsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessLevelFilter")
     public AccessLevelFilter accessLevelFilter;
+
     public SearchProvisionedProductsInput withAccessLevelFilter(AccessLevelFilter accessLevelFilter) {
         this.accessLevelFilter = accessLevelFilter;
         return this;
@@ -28,6 +30,7 @@ public class SearchProvisionedProductsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public java.util.Map<String, String[]> filters;
+
     public SearchProvisionedProductsInput withFilters(java.util.Map<String, String[]> filters) {
         this.filters = filters;
         return this;
@@ -36,6 +39,7 @@ public class SearchProvisionedProductsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public SearchProvisionedProductsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -44,6 +48,7 @@ public class SearchProvisionedProductsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public SearchProvisionedProductsInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -52,6 +57,7 @@ public class SearchProvisionedProductsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public String sortBy;
+
     public SearchProvisionedProductsInput withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -60,9 +66,11 @@ public class SearchProvisionedProductsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public SearchProvisionedProductsInput withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SearchProvisionedProductsInput(){}
 }

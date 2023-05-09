@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateIpamResourceDiscoveryRequest {
     
     public String clientToken;
+
     public AssociateIpamResourceDiscoveryRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class AssociateIpamResourceDiscoveryRequest {
     
     
     public Boolean dryRun;
+
     public AssociateIpamResourceDiscoveryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class AssociateIpamResourceDiscoveryRequest {
     
     
     public String ipamId;
+
     public AssociateIpamResourceDiscoveryRequest withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -30,6 +33,7 @@ public class AssociateIpamResourceDiscoveryRequest {
     
     
     public String ipamResourceDiscoveryId;
+
     public AssociateIpamResourceDiscoveryRequest withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -37,9 +41,14 @@ public class AssociateIpamResourceDiscoveryRequest {
     
     
     public AssociateIpamResourceDiscoveryRequestTagSpecifications[] tagSpecifications;
+
     public AssociateIpamResourceDiscoveryRequest withTagSpecifications(AssociateIpamResourceDiscoveryRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public AssociateIpamResourceDiscoveryRequest(@JsonProperty("IpamId") String ipamId, @JsonProperty("IpamResourceDiscoveryId") String ipamResourceDiscoveryId) {
+        this.ipamId = ipamId;
+        this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
+  }
 }

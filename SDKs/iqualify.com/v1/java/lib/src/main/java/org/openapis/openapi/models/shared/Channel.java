@@ -12,6 +12,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public ChannelGroup group;
+
     public Channel withGroup(ChannelGroup group) {
         this.group = group;
         return this;
@@ -20,6 +21,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupDiscussion")
     public Boolean groupDiscussion;
+
     public Channel withGroupDiscussion(Boolean groupDiscussion) {
         this.groupDiscussion = groupDiscussion;
         return this;
@@ -28,6 +30,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBroadcastOnly")
     public Boolean isBroadcastOnly;
+
     public Channel withIsBroadcastOnly(Boolean isBroadcastOnly) {
         this.isBroadcastOnly = isBroadcastOnly;
         return this;
@@ -36,6 +39,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateSupport")
     public Boolean privateSupport;
+
     public Channel withPrivateSupport(Boolean privateSupport) {
         this.privateSupport = privateSupport;
         return this;
@@ -44,9 +48,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Channel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Channel(){}
 }

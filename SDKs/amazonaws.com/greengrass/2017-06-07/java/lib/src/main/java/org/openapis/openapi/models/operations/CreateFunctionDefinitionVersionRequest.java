@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFunctionDefinitionVersionRequest {
@@ -12,6 +13,7 @@ public class CreateFunctionDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionDefinitionId")
     public String functionDefinitionId;
+
     public CreateFunctionDefinitionVersionRequest withFunctionDefinitionId(String functionDefinitionId) {
         this.functionDefinitionId = functionDefinitionId;
         return this;
@@ -19,6 +21,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateFunctionDefinitionVersionRequestBody requestBody;
+
     public CreateFunctionDefinitionVersionRequest withRequestBody(CreateFunctionDefinitionVersionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateFunctionDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateFunctionDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateFunctionDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateFunctionDefinitionVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateFunctionDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateFunctionDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,6 +77,7 @@ public class CreateFunctionDefinitionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateFunctionDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -78,9 +88,14 @@ public class CreateFunctionDefinitionVersionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-Client-Token")
     public String xAmznClientToken;
+
     public CreateFunctionDefinitionVersionRequest withXAmznClientToken(String xAmznClientToken) {
         this.xAmznClientToken = xAmznClientToken;
         return this;
     }
     
+    public CreateFunctionDefinitionVersionRequest(@JsonProperty("FunctionDefinitionId") String functionDefinitionId, @JsonProperty("RequestBody") CreateFunctionDefinitionVersionRequestBody requestBody) {
+        this.functionDefinitionId = functionDefinitionId;
+        this.requestBody = requestBody;
+  }
 }

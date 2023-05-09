@@ -12,9 +12,13 @@ public class PostAgentProfileRequestBody {
      */
     @JsonProperty("agentProfile")
     public String agentProfile;
+
     public PostAgentProfileRequestBody withAgentProfile(String agentProfile) {
         this.agentProfile = agentProfile;
         return this;
     }
     
+    public PostAgentProfileRequestBody(@JsonProperty("agentProfile") String agentProfile) {
+        this.agentProfile = agentProfile;
+  }
 }

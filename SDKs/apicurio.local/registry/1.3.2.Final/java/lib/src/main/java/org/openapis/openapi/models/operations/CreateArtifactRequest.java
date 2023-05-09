@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactRequest {
@@ -25,6 +26,7 @@ public class CreateArtifactRequest {
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
     public byte[] requestBody;
+
     public CreateArtifactRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -35,6 +37,7 @@ public class CreateArtifactRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactId")
     public String xRegistryArtifactId;
+
     public CreateArtifactRequest withXRegistryArtifactId(String xRegistryArtifactId) {
         this.xRegistryArtifactId = xRegistryArtifactId;
         return this;
@@ -56,6 +59,7 @@ public class CreateArtifactRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactType")
     public CreateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType;
+
     public CreateArtifactRequest withXRegistryArtifactType(CreateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType) {
         this.xRegistryArtifactType = xRegistryArtifactType;
         return this;
@@ -66,9 +70,13 @@ public class CreateArtifactRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifExists")
     public CreateArtifactIfExistsEnum ifExists;
+
     public CreateArtifactRequest withIfExists(CreateArtifactIfExistsEnum ifExists) {
         this.ifExists = ifExists;
         return this;
     }
     
+    public CreateArtifactRequest(@JsonProperty("RequestBody") byte[] requestBody) {
+        this.requestBody = requestBody;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Api-Key")
     public String apiKeyHeaderAuth;
+
     public Security withApiKeyHeaderAuth(String apiKeyHeaderAuth) {
         this.apiKeyHeaderAuth = apiKeyHeaderAuth;
         return this;
@@ -16,6 +18,7 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
     public String apiKeyQueryAuth;
+
     public Security withApiKeyQueryAuth(String apiKeyQueryAuth) {
         this.apiKeyQueryAuth = apiKeyQueryAuth;
         return this;
@@ -23,9 +26,15 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
     public String apiKey;
+
     public Security withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public Security(@JsonProperty("ApiKeyHeaderAuth") String apiKeyHeaderAuth, @JsonProperty("ApiKeyQueryAuth") String apiKeyQueryAuth, @JsonProperty("apiKey") String apiKey) {
+        this.apiKeyHeaderAuth = apiKeyHeaderAuth;
+        this.apiKeyQueryAuth = apiKeyQueryAuth;
+        this.apiKey = apiKey;
+  }
 }

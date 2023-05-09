@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2DocumentReloadStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleRpcStatus status;
+
     public GoogleCloudDialogflowV2DocumentReloadStatus withStatus(GoogleRpcStatus status) {
         this.status = status;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2DocumentReloadStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public GoogleCloudDialogflowV2DocumentReloadStatus withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public GoogleCloudDialogflowV2DocumentReloadStatus(){}
 }

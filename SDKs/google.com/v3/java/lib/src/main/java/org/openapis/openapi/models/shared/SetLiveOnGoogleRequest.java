@@ -18,6 +18,7 @@ public class SetLiveOnGoogleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveOnGoogle")
     public Boolean liveOnGoogle;
+
     public SetLiveOnGoogleRequest withLiveOnGoogle(Boolean liveOnGoogle) {
         this.liveOnGoogle = liveOnGoogle;
         return this;
@@ -29,9 +30,11 @@ public class SetLiveOnGoogleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelIds")
     public String[] partnerHotelIds;
+
     public SetLiveOnGoogleRequest withPartnerHotelIds(String[] partnerHotelIds) {
         this.partnerHotelIds = partnerHotelIds;
         return this;
     }
     
+    public SetLiveOnGoogleRequest(){}
 }

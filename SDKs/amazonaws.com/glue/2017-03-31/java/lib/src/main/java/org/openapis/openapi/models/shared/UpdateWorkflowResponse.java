@@ -15,9 +15,11 @@ public class UpdateWorkflowResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateWorkflowResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateWorkflowResponse(){}
 }

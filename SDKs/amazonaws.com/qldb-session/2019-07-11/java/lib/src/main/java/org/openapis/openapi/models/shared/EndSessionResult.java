@@ -15,9 +15,11 @@ public class EndSessionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimingInformation")
     public TimingInformation timingInformation;
+
     public EndSessionResult withTimingInformation(TimingInformation timingInformation) {
         this.timingInformation = timingInformation;
         return this;
     }
     
+    public EndSessionResult(){}
 }

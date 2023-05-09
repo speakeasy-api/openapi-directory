@@ -12,9 +12,11 @@ public class ConferenceParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOnParameters")
     public ConferenceParametersAddOnParameters addOnParameters;
+
     public ConferenceParameters withAddOnParameters(ConferenceParametersAddOnParameters addOnParameters) {
         this.addOnParameters = addOnParameters;
         return this;
     }
     
+    public ConferenceParameters(){}
 }

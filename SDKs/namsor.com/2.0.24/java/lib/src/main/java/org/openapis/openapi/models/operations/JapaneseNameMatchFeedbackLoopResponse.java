@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JapaneseNameMatchFeedbackLoopResponse {
     
     public String contentType;
+
     public JapaneseNameMatchFeedbackLoopResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class JapaneseNameMatchFeedbackLoopResponse {
      */
     
     public org.openapis.openapi.models.shared.FeedbackLoopOut feedbackLoopOut;
+
     public JapaneseNameMatchFeedbackLoopResponse withFeedbackLoopOut(org.openapis.openapi.models.shared.FeedbackLoopOut feedbackLoopOut) {
         this.feedbackLoopOut = feedbackLoopOut;
         return this;
@@ -26,6 +29,7 @@ public class JapaneseNameMatchFeedbackLoopResponse {
     
     
     public Integer statusCode;
+
     public JapaneseNameMatchFeedbackLoopResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class JapaneseNameMatchFeedbackLoopResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JapaneseNameMatchFeedbackLoopResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JapaneseNameMatchFeedbackLoopResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

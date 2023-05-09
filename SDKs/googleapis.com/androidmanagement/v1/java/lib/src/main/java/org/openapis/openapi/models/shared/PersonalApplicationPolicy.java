@@ -18,6 +18,7 @@ public class PersonalApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installType")
     public PersonalApplicationPolicyInstallTypeEnum installType;
+
     public PersonalApplicationPolicy withInstallType(PersonalApplicationPolicyInstallTypeEnum installType) {
         this.installType = installType;
         return this;
@@ -29,9 +30,11 @@ public class PersonalApplicationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public PersonalApplicationPolicy withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public PersonalApplicationPolicy(){}
 }

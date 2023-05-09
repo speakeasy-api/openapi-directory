@@ -51,11 +51,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCredentialsResponse res = new org.openapis.openapi.models.operations.GetCredentialsResponse() {{
+        org.openapis.openapi.models.operations.GetCredentialsResponse res = new org.openapis.openapi.models.operations.GetCredentialsResponse(contentType, httpRes.statusCode()) {{
             credentials = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,11 +89,9 @@ public class Auth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScopesResponse res = new org.openapis.openapi.models.operations.GetScopesResponse() {{
+        org.openapis.openapi.models.operations.GetScopesResponse res = new org.openapis.openapi.models.operations.GetScopesResponse(contentType, httpRes.statusCode()) {{
             getScopes200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,10 +107,11 @@ public class Auth {
 
     /**
      * Verify token and return details of the owning user
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVerifyResponse postVerify() throws Exception {
+    public org.openapis.openapi.models.operations.PostVerifyResponse postVerify(org.openapis.openapi.models.operations.PostVerifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/verify");
         
@@ -123,16 +120,15 @@ public class Auth {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostVerifyResponse res = new org.openapis.openapi.models.operations.PostVerifyResponse() {{
+        org.openapis.openapi.models.operations.PostVerifyResponse res = new org.openapis.openapi.models.operations.PostVerifyResponse(contentType, httpRes.statusCode()) {{
             authority = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

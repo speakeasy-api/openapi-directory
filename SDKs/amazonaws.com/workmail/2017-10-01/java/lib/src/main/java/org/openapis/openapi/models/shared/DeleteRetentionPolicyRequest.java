@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRetentionPolicyRequest {
     @JsonProperty("Id")
     public String id;
+
     public DeleteRetentionPolicyRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DeleteRetentionPolicyRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DeleteRetentionPolicyRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteRetentionPolicyRequest(@JsonProperty("Id") String id, @JsonProperty("OrganizationId") String organizationId) {
+        this.id = id;
+        this.organizationId = organizationId;
+  }
 }

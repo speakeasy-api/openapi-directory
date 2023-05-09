@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public Object aclNotFoundFault;
+
     public UntagResourceResponse withACLNotFoundFault(Object aclNotFoundFault) {
         this.aclNotFoundFault = aclNotFoundFault;
         return this;
@@ -22,6 +24,7 @@ public class UntagResourceResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public UntagResourceResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UntagResourceResponse {
      */
     
     public Object invalidARNFault;
+
     public UntagResourceResponse withInvalidARNFault(Object invalidARNFault) {
         this.invalidARNFault = invalidARNFault;
         return this;
@@ -49,6 +54,7 @@ public class UntagResourceResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public UntagResourceResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -59,6 +65,7 @@ public class UntagResourceResponse {
      */
     
     public Object parameterGroupNotFoundFault;
+
     public UntagResourceResponse withParameterGroupNotFoundFault(Object parameterGroupNotFoundFault) {
         this.parameterGroupNotFoundFault = parameterGroupNotFoundFault;
         return this;
@@ -69,6 +76,7 @@ public class UntagResourceResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public UntagResourceResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -79,6 +87,7 @@ public class UntagResourceResponse {
      */
     
     public Object snapshotNotFoundFault;
+
     public UntagResourceResponse withSnapshotNotFoundFault(Object snapshotNotFoundFault) {
         this.snapshotNotFoundFault = snapshotNotFoundFault;
         return this;
@@ -86,6 +95,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class UntagResourceResponse {
      */
     
     public Object subnetGroupNotFoundFault;
+
     public UntagResourceResponse withSubnetGroupNotFoundFault(Object subnetGroupNotFoundFault) {
         this.subnetGroupNotFoundFault = subnetGroupNotFoundFault;
         return this;
@@ -113,6 +125,7 @@ public class UntagResourceResponse {
      */
     
     public Object tagNotFoundFault;
+
     public UntagResourceResponse withTagNotFoundFault(Object tagNotFoundFault) {
         this.tagNotFoundFault = tagNotFoundFault;
         return this;
@@ -123,6 +136,7 @@ public class UntagResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.UntagResourceResponse untagResourceResponse;
+
     public UntagResourceResponse withUntagResourceResponse(org.openapis.openapi.models.shared.UntagResourceResponse untagResourceResponse) {
         this.untagResourceResponse = untagResourceResponse;
         return this;
@@ -133,9 +147,14 @@ public class UntagResourceResponse {
      */
     
     public Object userNotFoundFault;
+
     public UntagResourceResponse withUserNotFoundFault(Object userNotFoundFault) {
         this.userNotFoundFault = userNotFoundFault;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

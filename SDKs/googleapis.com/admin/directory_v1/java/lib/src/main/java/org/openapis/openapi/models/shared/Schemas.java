@@ -18,6 +18,7 @@ public class Schemas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Schemas withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Schemas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Schemas withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class Schemas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public Schema[] schemas;
+
     public Schemas withSchemas(Schema[] schemas) {
         this.schemas = schemas;
         return this;
     }
     
+    public Schemas(){}
 }

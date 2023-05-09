@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetalsSpotAnnualHistoricalPerformanceGETRequest {
@@ -12,6 +13,7 @@ public class MetalsSpotAnnualHistoricalPerformanceGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
     public String currency;
+
     public MetalsSpotAnnualHistoricalPerformanceGETRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -22,6 +24,7 @@ public class MetalsSpotAnnualHistoricalPerformanceGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public MetalsSpotAnnualHistoricalPerformanceGETFormatEnum format;
+
     public MetalsSpotAnnualHistoricalPerformanceGETRequest withFormat(MetalsSpotAnnualHistoricalPerformanceGETFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class MetalsSpotAnnualHistoricalPerformanceGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metals")
     public String metals;
+
     public MetalsSpotAnnualHistoricalPerformanceGETRequest withMetals(String metals) {
         this.metals = metals;
         return this;
@@ -50,6 +54,7 @@ public class MetalsSpotAnnualHistoricalPerformanceGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitofmeasure")
     public MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum unitofmeasure;
+
     public MetalsSpotAnnualHistoricalPerformanceGETRequest withUnitofmeasure(MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum unitofmeasure) {
         this.unitofmeasure = unitofmeasure;
         return this;
@@ -60,9 +65,13 @@ public class MetalsSpotAnnualHistoricalPerformanceGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=years")
     public Integer years;
+
     public MetalsSpotAnnualHistoricalPerformanceGETRequest withYears(Integer years) {
         this.years = years;
         return this;
     }
     
+    public MetalsSpotAnnualHistoricalPerformanceGETRequest(@JsonProperty("metals") String metals) {
+        this.metals = metals;
+  }
 }

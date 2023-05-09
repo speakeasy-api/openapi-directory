@@ -58,11 +58,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListResponse res = new org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListResponse res = new org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListResponse(contentType, httpRes.statusCode()) {{
             adUnits = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseCustomchannelsGetResponse res = new org.openapis.openapi.models.operations.AdsenseCustomchannelsGetResponse() {{
+        org.openapis.openapi.models.operations.AdsenseCustomchannelsGetResponse res = new org.openapis.openapi.models.operations.AdsenseCustomchannelsGetResponse(contentType, httpRes.statusCode()) {{
             customChannel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Customchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseCustomchannelsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseCustomchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseCustomchannelsListResponse(contentType, httpRes.statusCode()) {{
             customChannels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class UpdateFormInfoRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public InfoInput info;
+
     public UpdateFormInfoRequestInput withInfo(InfoInput info) {
         this.info = info;
         return this;
@@ -29,9 +30,11 @@ public class UpdateFormInfoRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateFormInfoRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateFormInfoRequestInput(){}
 }

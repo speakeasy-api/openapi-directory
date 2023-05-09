@@ -15,9 +15,11 @@ public class ListSequenceStoresRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListSequenceStoresRequestBodyFilter filter;
+
     public ListSequenceStoresRequestBody withFilter(ListSequenceStoresRequestBodyFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public ListSequenceStoresRequestBody(){}
 }

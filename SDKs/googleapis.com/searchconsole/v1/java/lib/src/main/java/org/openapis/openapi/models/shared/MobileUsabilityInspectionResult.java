@@ -18,6 +18,7 @@ public class MobileUsabilityInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public MobileUsabilityIssue[] issues;
+
     public MobileUsabilityInspectionResult withIssues(MobileUsabilityIssue[] issues) {
         this.issues = issues;
         return this;
@@ -29,9 +30,11 @@ public class MobileUsabilityInspectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verdict")
     public MobileUsabilityInspectionResultVerdictEnum verdict;
+
     public MobileUsabilityInspectionResult withVerdict(MobileUsabilityInspectionResultVerdictEnum verdict) {
         this.verdict = verdict;
         return this;
     }
     
+    public MobileUsabilityInspectionResult(){}
 }

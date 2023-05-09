@@ -18,9 +18,11 @@ public class ClusterTelemetry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ClusterTelemetryTypeEnum type;
+
     public ClusterTelemetry withType(ClusterTelemetryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ClusterTelemetry(){}
 }

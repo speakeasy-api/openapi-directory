@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoRequest {
@@ -12,6 +13,7 @@ public class GetVideoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetVideoRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetVideoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public org.openapis.openapi.models.shared.LanguageEnum language;
+
     public GetVideoRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
         this.language = language;
         return this;
@@ -32,6 +35,7 @@ public class GetVideoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public GetVideoRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -42,9 +46,13 @@ public class GetVideoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public GetVideoViewEnum view;
+
     public GetVideoRequest withView(GetVideoViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetVideoRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

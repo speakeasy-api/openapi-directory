@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public GoogleChromeManagementV1Device withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machine")
     public String machine;
+
     public GoogleChromeManagementV1Device withMachine(String machine) {
         this.machine = machine;
         return this;
     }
     
+    public GoogleChromeManagementV1Device(){}
 }

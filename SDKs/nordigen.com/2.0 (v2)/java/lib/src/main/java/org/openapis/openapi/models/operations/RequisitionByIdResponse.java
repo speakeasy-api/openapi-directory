@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RequisitionByIdResponse {
     
     public String contentType;
+
     public RequisitionByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -18,14 +20,16 @@ public class RequisitionByIdResponse {
      * Get requisition by ID
      */
     
-    public org.openapis.openapi.models.shared.RequisitionV2 requisitionV2;
-    public RequisitionByIdResponse withRequisitionV2(org.openapis.openapi.models.shared.RequisitionV2 requisitionV2) {
-        this.requisitionV2 = requisitionV2;
+    public org.openapis.openapi.models.shared.Requisition requisition;
+
+    public RequisitionByIdResponse withRequisition(org.openapis.openapi.models.shared.Requisition requisition) {
+        this.requisition = requisition;
         return this;
     }
     
     
     public Integer statusCode;
+
     public RequisitionByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RequisitionByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RequisitionByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RequisitionByIdResponse {
      */
     
     public java.util.Map<String, Object> requisitionById400ApplicationJSONObject;
+
     public RequisitionByIdResponse withRequisitionById400ApplicationJSONObject(java.util.Map<String, Object> requisitionById400ApplicationJSONObject) {
         this.requisitionById400ApplicationJSONObject = requisitionById400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RequisitionByIdResponse {
      */
     
     public java.util.Map<String, Object> requisitionById401ApplicationJSONObject;
+
     public RequisitionByIdResponse withRequisitionById401ApplicationJSONObject(java.util.Map<String, Object> requisitionById401ApplicationJSONObject) {
         this.requisitionById401ApplicationJSONObject = requisitionById401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RequisitionByIdResponse {
      */
     
     public java.util.Map<String, Object> requisitionById403ApplicationJSONObject;
+
     public RequisitionByIdResponse withRequisitionById403ApplicationJSONObject(java.util.Map<String, Object> requisitionById403ApplicationJSONObject) {
         this.requisitionById403ApplicationJSONObject = requisitionById403ApplicationJSONObject;
         return this;
@@ -73,9 +81,25 @@ public class RequisitionByIdResponse {
      */
     
     public java.util.Map<String, Object> requisitionById404ApplicationJSONObject;
+
     public RequisitionByIdResponse withRequisitionById404ApplicationJSONObject(java.util.Map<String, Object> requisitionById404ApplicationJSONObject) {
         this.requisitionById404ApplicationJSONObject = requisitionById404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> requisitionById429ApplicationJSONObject;
+
+    public RequisitionByIdResponse withRequisitionById429ApplicationJSONObject(java.util.Map<String, Object> requisitionById429ApplicationJSONObject) {
+        this.requisitionById429ApplicationJSONObject = requisitionById429ApplicationJSONObject;
+        return this;
+    }
+    
+    public RequisitionByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

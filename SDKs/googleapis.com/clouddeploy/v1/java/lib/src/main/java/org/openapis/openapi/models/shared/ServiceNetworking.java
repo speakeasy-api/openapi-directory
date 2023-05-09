@@ -18,6 +18,7 @@ public class ServiceNetworking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deployment")
     public String deployment;
+
     public ServiceNetworking withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -29,9 +30,11 @@ public class ServiceNetworking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public ServiceNetworking withService(String service) {
         this.service = service;
         return this;
     }
     
+    public ServiceNetworking(){}
 }

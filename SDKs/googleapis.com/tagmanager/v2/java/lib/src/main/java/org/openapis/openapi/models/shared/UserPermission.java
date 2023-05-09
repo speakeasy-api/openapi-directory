@@ -18,6 +18,7 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountAccess")
     public AccountAccess accountAccess;
+
     public UserPermission withAccountAccess(AccountAccess accountAccess) {
         this.accountAccess = accountAccess;
         return this;
@@ -29,6 +30,7 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public UserPermission withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -40,6 +42,7 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerAccess")
     public ContainerAccess[] containerAccess;
+
     public UserPermission withContainerAccess(ContainerAccess[] containerAccess) {
         this.containerAccess = containerAccess;
         return this;
@@ -51,6 +54,7 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public UserPermission withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -62,9 +66,11 @@ public class UserPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public UserPermission withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public UserPermission(){}
 }

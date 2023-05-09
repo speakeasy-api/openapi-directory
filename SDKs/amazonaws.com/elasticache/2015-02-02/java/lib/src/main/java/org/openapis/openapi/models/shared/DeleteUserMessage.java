@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteUserMessage {
     
     public String userId;
+
     public DeleteUserMessage withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DeleteUserMessage(@JsonProperty("UserId") String userId) {
+        this.userId = userId;
+  }
 }

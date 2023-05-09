@@ -12,6 +12,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +23,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delegatedProjectNumber")
     public String delegatedProjectNumber;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withDelegatedProjectNumber(String delegatedProjectNumber) {
         this.delegatedProjectNumber = delegatedProjectNumber;
         return this;
@@ -32,6 +34,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +45,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +56,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +67,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +78,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projectNumber")
     public String projectNumber;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
@@ -82,6 +89,7 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +100,11 @@ public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public IdentitytoolkitRelyingpartyGetProjectConfigRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest(){}
 }

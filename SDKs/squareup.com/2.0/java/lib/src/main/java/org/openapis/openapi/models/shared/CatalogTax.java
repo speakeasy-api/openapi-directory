@@ -19,6 +19,7 @@ public class CatalogTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applies_to_custom_amounts")
     public Boolean appliesToCustomAmounts;
+
     public CatalogTax withAppliesToCustomAmounts(Boolean appliesToCustomAmounts) {
         this.appliesToCustomAmounts = appliesToCustomAmounts;
         return this;
@@ -30,6 +31,7 @@ public class CatalogTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculation_phase")
     public String calculationPhase;
+
     public CatalogTax withCalculationPhase(String calculationPhase) {
         this.calculationPhase = calculationPhase;
         return this;
@@ -41,6 +43,7 @@ public class CatalogTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CatalogTax withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -52,6 +55,7 @@ public class CatalogTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusion_type")
     public String inclusionType;
+
     public CatalogTax withInclusionType(String inclusionType) {
         this.inclusionType = inclusionType;
         return this;
@@ -63,6 +67,7 @@ public class CatalogTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogTax withName(String name) {
         this.name = name;
         return this;
@@ -75,9 +80,11 @@ public class CatalogTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public CatalogTax withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public CatalogTax(){}
 }

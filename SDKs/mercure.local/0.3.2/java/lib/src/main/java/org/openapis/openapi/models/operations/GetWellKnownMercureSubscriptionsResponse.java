@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWellKnownMercureSubscriptionsResponse {
     
     public String contentType;
+
     public GetWellKnownMercureSubscriptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWellKnownMercureSubscriptionsResponse {
     
     
     public Integer statusCode;
+
     public GetWellKnownMercureSubscriptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWellKnownMercureSubscriptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWellKnownMercureSubscriptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetWellKnownMercureSubscriptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Subscriptions subscriptions;
+
     public GetWellKnownMercureSubscriptionsResponse withSubscriptions(org.openapis.openapi.models.shared.Subscriptions subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public GetWellKnownMercureSubscriptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

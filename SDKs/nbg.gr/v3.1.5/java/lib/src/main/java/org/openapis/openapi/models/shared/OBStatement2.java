@@ -22,6 +22,7 @@ public class OBStatement2 {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public OBStatement2 withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -36,6 +37,7 @@ public class OBStatement2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBStatement2 withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -50,6 +52,7 @@ public class OBStatement2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndDateTime")
     public OffsetDateTime endDateTime;
+
     public OBStatement2 withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -64,6 +67,7 @@ public class OBStatement2 {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartDateTime")
     public OffsetDateTime startDateTime;
+
     public OBStatement2 withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -75,6 +79,7 @@ public class OBStatement2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementId")
     public String statementId;
+
     public OBStatement2 withStatementId(String statementId) {
         this.statementId = statementId;
         return this;
@@ -86,6 +91,7 @@ public class OBStatement2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementReference")
     public String statementReference;
+
     public OBStatement2 withStatementReference(String statementReference) {
         this.statementReference = statementReference;
         return this;
@@ -93,9 +99,17 @@ public class OBStatement2 {
     
     @JsonProperty("Type")
     public OBExternalStatementType1CodeEnum type;
+
     public OBStatement2 withType(OBExternalStatementType1CodeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OBStatement2(@JsonProperty("AccountId") String accountId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("EndDateTime") OffsetDateTime endDateTime, @JsonProperty("StartDateTime") OffsetDateTime startDateTime, @JsonProperty("Type") OBExternalStatementType1CodeEnum type) {
+        this.accountId = accountId;
+        this.creationDateTime = creationDateTime;
+        this.endDateTime = endDateTime;
+        this.startDateTime = startDateTime;
+        this.type = type;
+  }
 }

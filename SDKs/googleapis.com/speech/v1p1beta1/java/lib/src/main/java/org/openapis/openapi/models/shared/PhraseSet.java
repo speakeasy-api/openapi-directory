@@ -18,8 +18,33 @@ public class PhraseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boost")
     public Float boost;
+
     public PhraseSet withBoost(Float boost) {
         this.boost = boost;
+        return this;
+    }
+    
+    /**
+     * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with which the content of the PhraseSet is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kmsKeyName")
+    public String kmsKeyName;
+
+    public PhraseSet withKmsKeyName(String kmsKeyName) {
+        this.kmsKeyName = kmsKeyName;
+        return this;
+    }
+    
+    /**
+     * Output only. The [KMS key version name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions) with which content of the PhraseSet is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kmsKeyVersionName")
+    public String kmsKeyVersionName;
+
+    public PhraseSet withKmsKeyVersionName(String kmsKeyVersionName) {
+        this.kmsKeyVersionName = kmsKeyVersionName;
         return this;
     }
     
@@ -29,6 +54,7 @@ public class PhraseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PhraseSet withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +66,11 @@ public class PhraseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phrases")
     public Phrase[] phrases;
+
     public PhraseSet withPhrases(Phrase[] phrases) {
         this.phrases = phrases;
         return this;
     }
     
+    public PhraseSet(){}
 }

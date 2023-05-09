@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeArtifactRequest {
     @JsonProperty("ArtifactArn")
     public String artifactArn;
+
     public DescribeArtifactRequest withArtifactArn(String artifactArn) {
         this.artifactArn = artifactArn;
         return this;
     }
     
+    public DescribeArtifactRequest(@JsonProperty("ArtifactArn") String artifactArn) {
+        this.artifactArn = artifactArn;
+  }
 }

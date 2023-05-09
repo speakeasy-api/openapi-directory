@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamsForWorkspaceRequest {
@@ -13,6 +14,7 @@ public class GetTeamsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTeamsForWorkspaceRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +27,7 @@ public class GetTeamsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTeamsForWorkspaceRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +40,7 @@ public class GetTeamsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetTeamsForWorkspaceRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,6 +52,7 @@ public class GetTeamsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetTeamsForWorkspaceRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -58,9 +63,13 @@ public class GetTeamsForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
     public String workspaceGid;
+
     public GetTeamsForWorkspaceRequest withWorkspaceGid(String workspaceGid) {
         this.workspaceGid = workspaceGid;
         return this;
     }
     
+    public GetTeamsForWorkspaceRequest(@JsonProperty("workspace_gid") String workspaceGid) {
+        this.workspaceGid = workspaceGid;
+  }
 }

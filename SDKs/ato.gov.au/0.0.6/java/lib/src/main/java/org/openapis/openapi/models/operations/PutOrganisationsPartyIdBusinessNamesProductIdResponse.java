@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutOrganisationsPartyIdBusinessNamesProductIdResponse {
     
     public String contentType;
+
     public PutOrganisationsPartyIdBusinessNamesProductIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutOrganisationsPartyIdBusinessNamesProductIdResponse {
     
     
     public Integer statusCode;
+
     public PutOrganisationsPartyIdBusinessNamesProductIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutOrganisationsPartyIdBusinessNamesProductIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutOrganisationsPartyIdBusinessNamesProductIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutOrganisationsPartyIdBusinessNamesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessName businessName;
+
     public PutOrganisationsPartyIdBusinessNamesProductIdResponse withBusinessName(org.openapis.openapi.models.shared.BusinessName businessName) {
         this.businessName = businessName;
         return this;
@@ -43,6 +48,7 @@ public class PutOrganisationsPartyIdBusinessNamesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PutOrganisationsPartyIdBusinessNamesProductIdResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -53,6 +59,7 @@ public class PutOrganisationsPartyIdBusinessNamesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutOrganisationsPartyIdBusinessNamesProductIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -63,9 +70,14 @@ public class PutOrganisationsPartyIdBusinessNamesProductIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PutOrganisationsPartyIdBusinessNamesProductIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PutOrganisationsPartyIdBusinessNamesProductIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

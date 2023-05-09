@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsTotalLocalStorageGB {
     
     public Double max;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsTotalLocalStorageGB withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsTo
     
     
     public Double min;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsTotalLocalStorageGB withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsTotalLocalStorageGB(){}
 }

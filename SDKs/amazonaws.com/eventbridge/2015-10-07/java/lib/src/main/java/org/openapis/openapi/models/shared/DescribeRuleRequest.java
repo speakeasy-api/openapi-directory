@@ -12,6 +12,7 @@ public class DescribeRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public DescribeRuleRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -19,9 +20,13 @@ public class DescribeRuleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public DescribeRuleRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeRuleRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

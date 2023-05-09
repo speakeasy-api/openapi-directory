@@ -15,6 +15,7 @@ public class GetPortfolioPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationMode")
     public ApplicationModeEnum applicationMode;
+
     public GetPortfolioPreferencesResponse withApplicationMode(ApplicationModeEnum applicationMode) {
         this.applicationMode = applicationMode;
         return this;
@@ -23,6 +24,7 @@ public class GetPortfolioPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationPreferences")
     public ApplicationPreferences applicationPreferences;
+
     public GetPortfolioPreferencesResponse withApplicationPreferences(ApplicationPreferences applicationPreferences) {
         this.applicationPreferences = applicationPreferences;
         return this;
@@ -31,6 +33,7 @@ public class GetPortfolioPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databasePreferences")
     public DatabasePreferences databasePreferences;
+
     public GetPortfolioPreferencesResponse withDatabasePreferences(DatabasePreferences databasePreferences) {
         this.databasePreferences = databasePreferences;
         return this;
@@ -39,9 +42,11 @@ public class GetPortfolioPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prioritizeBusinessGoals")
     public PrioritizeBusinessGoals prioritizeBusinessGoals;
+
     public GetPortfolioPreferencesResponse withPrioritizeBusinessGoals(PrioritizeBusinessGoals prioritizeBusinessGoals) {
         this.prioritizeBusinessGoals = prioritizeBusinessGoals;
         return this;
     }
     
+    public GetPortfolioPreferencesResponse(){}
 }

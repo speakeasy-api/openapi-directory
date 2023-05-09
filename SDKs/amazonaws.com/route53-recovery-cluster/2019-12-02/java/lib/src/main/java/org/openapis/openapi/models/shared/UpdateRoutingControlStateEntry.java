@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRoutingControlStateEntry {
     @JsonProperty("RoutingControlArn")
     public String routingControlArn;
+
     public UpdateRoutingControlStateEntry withRoutingControlArn(String routingControlArn) {
         this.routingControlArn = routingControlArn;
         return this;
@@ -19,9 +20,14 @@ public class UpdateRoutingControlStateEntry {
     
     @JsonProperty("RoutingControlState")
     public RoutingControlStateEnum routingControlState;
+
     public UpdateRoutingControlStateEntry withRoutingControlState(RoutingControlStateEnum routingControlState) {
         this.routingControlState = routingControlState;
         return this;
     }
     
+    public UpdateRoutingControlStateEntry(@JsonProperty("RoutingControlArn") String routingControlArn, @JsonProperty("RoutingControlState") RoutingControlStateEnum routingControlState) {
+        this.routingControlArn = routingControlArn;
+        this.routingControlState = routingControlState;
+  }
 }

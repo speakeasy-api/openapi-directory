@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReservationPurchaseRecommendationResponse {
     
     public String contentType;
+
     public GetReservationPurchaseRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetReservationPurchaseRecommendationResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetReservationPurchaseRecommendationResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -29,6 +32,7 @@ public class GetReservationPurchaseRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReservationPurchaseRecommendationResponse getReservationPurchaseRecommendationResponse;
+
     public GetReservationPurchaseRecommendationResponse withGetReservationPurchaseRecommendationResponse(org.openapis.openapi.models.shared.GetReservationPurchaseRecommendationResponse getReservationPurchaseRecommendationResponse) {
         this.getReservationPurchaseRecommendationResponse = getReservationPurchaseRecommendationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetReservationPurchaseRecommendationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetReservationPurchaseRecommendationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetReservationPurchaseRecommendationResponse {
      */
     
     public Object limitExceededException;
+
     public GetReservationPurchaseRecommendationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class GetReservationPurchaseRecommendationResponse {
     
     
     public Integer statusCode;
+
     public GetReservationPurchaseRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetReservationPurchaseRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReservationPurchaseRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetReservationPurchaseRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

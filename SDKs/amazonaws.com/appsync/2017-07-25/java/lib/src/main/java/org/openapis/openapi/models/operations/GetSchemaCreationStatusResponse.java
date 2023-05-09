@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchemaCreationStatusResponse {
@@ -12,6 +13,7 @@ public class GetSchemaCreationStatusResponse {
      */
     
     public Object badRequestException;
+
     public GetSchemaCreationStatusResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetSchemaCreationStatusResponse {
     
     
     public String contentType;
+
     public GetSchemaCreationStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSchemaCreationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSchemaCreationStatusResponse getSchemaCreationStatusResponse;
+
     public GetSchemaCreationStatusResponse withGetSchemaCreationStatusResponse(org.openapis.openapi.models.shared.GetSchemaCreationStatusResponse getSchemaCreationStatusResponse) {
         this.getSchemaCreationStatusResponse = getSchemaCreationStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSchemaCreationStatusResponse {
      */
     
     public Object internalFailureException;
+
     public GetSchemaCreationStatusResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetSchemaCreationStatusResponse {
      */
     
     public Object notFoundException;
+
     public GetSchemaCreationStatusResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetSchemaCreationStatusResponse {
     
     
     public Integer statusCode;
+
     public GetSchemaCreationStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetSchemaCreationStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchemaCreationStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetSchemaCreationStatusResponse {
      */
     
     public Object unauthorizedException;
+
     public GetSchemaCreationStatusResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetSchemaCreationStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

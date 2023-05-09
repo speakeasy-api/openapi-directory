@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsPricesAdjustedRequestBody {
     @JsonProperty("assets")
     public PostAssetsPricesAdjustedRequestBodyAssets[] assets;
+
     public PostAssetsPricesAdjustedRequestBody withAssets(PostAssetsPricesAdjustedRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public PostAssetsPricesAdjustedRequestBody(@JsonProperty("assets") PostAssetsPricesAdjustedRequestBodyAssets[] assets) {
+        this.assets = assets;
+  }
 }

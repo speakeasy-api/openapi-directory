@@ -12,6 +12,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BooksCloudloadingAddBookRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BooksCloudloadingAddBookRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BooksCloudloadingAddBookRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BooksCloudloadingAddBookRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drive_document_id")
     public String driveDocumentId;
+
     public BooksCloudloadingAddBookRequest withDriveDocumentId(String driveDocumentId) {
         this.driveDocumentId = driveDocumentId;
         return this;
@@ -62,6 +67,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BooksCloudloadingAddBookRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +78,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BooksCloudloadingAddBookRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +89,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mime_type")
     public String mimeType;
+
     public BooksCloudloadingAddBookRequest withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -92,6 +100,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public BooksCloudloadingAddBookRequest withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +111,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BooksCloudloadingAddBookRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +122,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BooksCloudloadingAddBookRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +133,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BooksCloudloadingAddBookRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +144,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BooksCloudloadingAddBookRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +155,7 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_client_token")
     public String uploadClientToken;
+
     public BooksCloudloadingAddBookRequest withUploadClientToken(String uploadClientToken) {
         this.uploadClientToken = uploadClientToken;
         return this;
@@ -152,9 +166,11 @@ public class BooksCloudloadingAddBookRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BooksCloudloadingAddBookRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BooksCloudloadingAddBookRequest(){}
 }

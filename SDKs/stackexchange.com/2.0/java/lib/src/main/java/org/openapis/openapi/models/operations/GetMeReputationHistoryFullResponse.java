@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMeReputationHistoryFullResponse {
     
     public byte[] body;
+
     public GetMeReputationHistoryFullResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetMeReputationHistoryFullResponse {
     
     
     public String contentType;
+
     public GetMeReputationHistoryFullResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetMeReputationHistoryFullResponse {
     
     
     public Integer statusCode;
+
     public GetMeReputationHistoryFullResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetMeReputationHistoryFullResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMeReputationHistoryFullResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMeReputationHistoryFullResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

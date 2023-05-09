@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3FlowValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3FlowValidationResult withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3FlowValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDialogflowCxV3FlowValidationResult withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3FlowValidationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationMessages")
     public GoogleCloudDialogflowCxV3ValidationMessage[] validationMessages;
+
     public GoogleCloudDialogflowCxV3FlowValidationResult withValidationMessages(GoogleCloudDialogflowCxV3ValidationMessage[] validationMessages) {
         this.validationMessages = validationMessages;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FlowValidationResult(){}
 }

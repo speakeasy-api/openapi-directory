@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProcessorFeatureList {
     
     public String name;
+
     public ProcessorFeatureList withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class ProcessorFeatureList {
     
     
     public String value;
+
     public ProcessorFeatureList withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProcessorFeatureList(){}
 }

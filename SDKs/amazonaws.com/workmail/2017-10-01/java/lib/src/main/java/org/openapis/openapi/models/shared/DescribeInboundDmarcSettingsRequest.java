@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeInboundDmarcSettingsRequest {
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DescribeInboundDmarcSettingsRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DescribeInboundDmarcSettingsRequest(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

@@ -17,6 +17,7 @@ public class LabVendorLocation {
      */
     @JsonProperty("facility_code")
     public String facilityCode;
+
     public LabVendorLocation withFacilityCode(String facilityCode) {
         this.facilityCode = facilityCode;
         return this;
@@ -25,6 +26,7 @@ public class LabVendorLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public LabVendorLocation withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class LabVendorLocation {
     
     @JsonProperty("name")
     public String name;
+
     public LabVendorLocation withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +43,14 @@ public class LabVendorLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_name")
     public String vendorName;
+
     public LabVendorLocation withVendorName(String vendorName) {
         this.vendorName = vendorName;
         return this;
     }
     
+    public LabVendorLocation(@JsonProperty("facility_code") String facilityCode, @JsonProperty("name") String name) {
+        this.facilityCode = facilityCode;
+        this.name = name;
+  }
 }

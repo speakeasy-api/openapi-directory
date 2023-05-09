@@ -15,6 +15,7 @@ public class UpdateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateProjectRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectDescription")
     public String projectDescription;
+
     public UpdateProjectRequestBody withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -36,9 +38,13 @@ public class UpdateProjectRequestBody {
      */
     @JsonProperty("projectName")
     public String projectName;
+
     public UpdateProjectRequestBody withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     
+    public UpdateProjectRequestBody(@JsonProperty("projectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

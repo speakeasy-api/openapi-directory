@@ -15,6 +15,7 @@ public class SkewedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkewedColumnNames")
     public String[] skewedColumnNames;
+
     public SkewedInfo withSkewedColumnNames(String[] skewedColumnNames) {
         this.skewedColumnNames = skewedColumnNames;
         return this;
@@ -23,6 +24,7 @@ public class SkewedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkewedColumnValueLocationMaps")
     public java.util.Map<String, String> skewedColumnValueLocationMaps;
+
     public SkewedInfo withSkewedColumnValueLocationMaps(java.util.Map<String, String> skewedColumnValueLocationMaps) {
         this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
         return this;
@@ -31,9 +33,11 @@ public class SkewedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkewedColumnValues")
     public String[] skewedColumnValues;
+
     public SkewedInfo withSkewedColumnValues(String[] skewedColumnValues) {
         this.skewedColumnValues = skewedColumnValues;
         return this;
     }
     
+    public SkewedInfo(){}
 }

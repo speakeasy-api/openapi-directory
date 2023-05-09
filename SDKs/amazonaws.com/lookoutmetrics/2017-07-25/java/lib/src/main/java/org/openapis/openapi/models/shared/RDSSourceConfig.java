@@ -15,6 +15,7 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DBInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public RDSSourceConfig withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -23,6 +24,7 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseHost")
     public String databaseHost;
+
     public RDSSourceConfig withDatabaseHost(String databaseHost) {
         this.databaseHost = databaseHost;
         return this;
@@ -31,6 +33,7 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public RDSSourceConfig withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -39,6 +42,7 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabasePort")
     public Long databasePort;
+
     public RDSSourceConfig withDatabasePort(Long databasePort) {
         this.databasePort = databasePort;
         return this;
@@ -47,6 +51,7 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public RDSSourceConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -55,6 +60,7 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretManagerArn")
     public String secretManagerArn;
+
     public RDSSourceConfig withSecretManagerArn(String secretManagerArn) {
         this.secretManagerArn = secretManagerArn;
         return this;
@@ -63,6 +69,7 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public RDSSourceConfig withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -71,9 +78,11 @@ public class RDSSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public VpcConfiguration vpcConfiguration;
+
     public RDSSourceConfig withVpcConfiguration(VpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public RDSSourceConfig(){}
 }

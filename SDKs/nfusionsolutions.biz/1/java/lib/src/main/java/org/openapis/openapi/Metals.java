@@ -63,12 +63,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsBenchmarkHistoryGETResponse res = new org.openapis.openapi.models.operations.MetalsBenchmarkHistoryGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsBenchmarkHistoryGETResponse res = new org.openapis.openapi.models.operations.MetalsBenchmarkHistoryGETResponse(contentType, httpRes.statusCode()) {{
             intervalCollectionResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsBenchmarkSummaryGETResponse res = new org.openapis.openapi.models.operations.MetalsBenchmarkSummaryGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsBenchmarkSummaryGETResponse res = new org.openapis.openapi.models.operations.MetalsBenchmarkSummaryGETResponse(contentType, httpRes.statusCode()) {{
             summaryResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,12 +164,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsBenchmarkSupportedMetalsGETResponse res = new org.openapis.openapi.models.operations.MetalsBenchmarkSupportedMetalsGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsBenchmarkSupportedMetalsGETResponse res = new org.openapis.openapi.models.operations.MetalsBenchmarkSupportedMetalsGETResponse(contentType, httpRes.statusCode()) {{
             metalsBenchmarkSupportedMetalsGET200ApplicationJSONStrings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,12 +215,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSpotAnnualHistoricalPerformanceGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotAnnualHistoricalPerformanceGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSpotAnnualHistoricalPerformanceGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotAnnualHistoricalPerformanceGETResponse(contentType, httpRes.statusCode()) {{
             intervalCollectionResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,12 +266,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSpotHistoricalPerformanceGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotHistoricalPerformanceGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSpotHistoricalPerformanceGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotHistoricalPerformanceGETResponse(contentType, httpRes.statusCode()) {{
             intervalCollectionResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,12 +322,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSpotHistoryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotHistoryGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSpotHistoryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotHistoryGETResponse(contentType, httpRes.statusCode()) {{
             intervalCollectionResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,12 +376,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSpotRatioHistoryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotRatioHistoryGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSpotRatioHistoryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotRatioHistoryGETResponse(contentType, httpRes.statusCode()) {{
             intervalCollectionResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,12 +427,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSpotRatioSummaryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotRatioSummaryGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSpotRatioSummaryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotRatioSummaryGETResponse(contentType, httpRes.statusCode()) {{
             summaryResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -494,12 +478,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSpotSummaryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotSummaryGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSpotSummaryGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotSummaryGETResponse(contentType, httpRes.statusCode()) {{
             summaryResponses = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -546,12 +528,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSpotSupportedMetalsGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotSupportedMetalsGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSpotSupportedMetalsGETResponse res = new org.openapis.openapi.models.operations.MetalsSpotSupportedMetalsGETResponse(contentType, httpRes.statusCode()) {{
             metalsSpotSupportedMetalsGET200ApplicationJSONStrings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -598,12 +578,10 @@ public class Metals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MetalsSupportedCurrenciesMetalsGETResponse res = new org.openapis.openapi.models.operations.MetalsSupportedCurrenciesMetalsGETResponse() {{
+        org.openapis.openapi.models.operations.MetalsSupportedCurrenciesMetalsGETResponse res = new org.openapis.openapi.models.operations.MetalsSupportedCurrenciesMetalsGETResponse(contentType, httpRes.statusCode()) {{
             metalsSupportedCurrenciesMetalsGET200ApplicationJSONStrings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

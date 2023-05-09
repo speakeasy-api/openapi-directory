@@ -18,6 +18,7 @@ public class CreateReconciliationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public ReconciliationReportValidationIssue[] issues;
+
     public CreateReconciliationReportResponse withIssues(ReconciliationReportValidationIssue[] issues) {
         this.issues = issues;
         return this;
@@ -29,6 +30,7 @@ public class CreateReconciliationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciliationReport")
     public ReconciliationReport reconciliationReport;
+
     public CreateReconciliationReportResponse withReconciliationReport(ReconciliationReport reconciliationReport) {
         this.reconciliationReport = reconciliationReport;
         return this;
@@ -40,9 +42,11 @@ public class CreateReconciliationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successfulRecordCount")
     public Integer successfulRecordCount;
+
     public CreateReconciliationReportResponse withSuccessfulRecordCount(Integer successfulRecordCount) {
         this.successfulRecordCount = successfulRecordCount;
         return this;
     }
     
+    public CreateReconciliationReportResponse(){}
 }

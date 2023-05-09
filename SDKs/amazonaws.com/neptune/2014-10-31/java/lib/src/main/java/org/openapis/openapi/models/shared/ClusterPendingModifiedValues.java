@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterPendingModifiedValues {
     
     public Long allocatedStorage;
+
     public ClusterPendingModifiedValues withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -19,6 +20,7 @@ public class ClusterPendingModifiedValues {
     
     
     public Long backupRetentionPeriod;
+
     public ClusterPendingModifiedValues withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -26,6 +28,7 @@ public class ClusterPendingModifiedValues {
     
     
     public String dbClusterIdentifier;
+
     public ClusterPendingModifiedValues withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -33,6 +36,7 @@ public class ClusterPendingModifiedValues {
     
     
     public String engineVersion;
+
     public ClusterPendingModifiedValues withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +44,7 @@ public class ClusterPendingModifiedValues {
     
     
     public Boolean iamDatabaseAuthenticationEnabled;
+
     public ClusterPendingModifiedValues withIAMDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
         this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
         return this;
@@ -47,6 +52,7 @@ public class ClusterPendingModifiedValues {
     
     
     public Long iops;
+
     public ClusterPendingModifiedValues withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -54,9 +60,11 @@ public class ClusterPendingModifiedValues {
     
     
     public PendingCloudwatchLogsExports pendingCloudwatchLogsExports;
+
     public ClusterPendingModifiedValues withPendingCloudwatchLogsExports(PendingCloudwatchLogsExports pendingCloudwatchLogsExports) {
         this.pendingCloudwatchLogsExports = pendingCloudwatchLogsExports;
         return this;
     }
     
+    public ClusterPendingModifiedValues(){}
 }

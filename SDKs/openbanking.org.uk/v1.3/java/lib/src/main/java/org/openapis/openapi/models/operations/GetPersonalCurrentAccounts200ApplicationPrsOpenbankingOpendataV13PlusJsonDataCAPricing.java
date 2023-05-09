@@ -15,6 +15,7 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("CAPricingItem")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem caPricingItem;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricing withCAPricingItem(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem caPricingItem) {
         this.caPricingItem = caPricingItem;
         return this;
@@ -25,9 +26,14 @@ public class GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13Pl
      */
     @JsonProperty("ProductState")
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingProductStateEnum productState;
+
     public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricing withProductState(GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingProductStateEnum productState) {
         this.productState = productState;
         return this;
     }
     
+    public GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricing(@JsonProperty("CAPricingItem") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingCAPricingItem caPricingItem, @JsonProperty("ProductState") GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonDataCAPricingProductStateEnum productState) {
+        this.caPricingItem = caPricingItem;
+        this.productState = productState;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateKeyRequestBodyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowActions")
     public String[] allowActions;
+
     public CreateKeyRequestBodyRestrictions withAllowActions(String[] allowActions) {
         this.allowActions = allowActions;
         return this;
@@ -23,6 +24,7 @@ public class CreateKeyRequestBodyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowReferers")
     public String[] allowReferers;
+
     public CreateKeyRequestBodyRestrictions withAllowReferers(String[] allowReferers) {
         this.allowReferers = allowReferers;
         return this;
@@ -31,9 +33,11 @@ public class CreateKeyRequestBodyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowResources")
     public String[] allowResources;
+
     public CreateKeyRequestBodyRestrictions withAllowResources(String[] allowResources) {
         this.allowResources = allowResources;
         return this;
     }
     
+    public CreateKeyRequestBodyRestrictions(){}
 }

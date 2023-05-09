@@ -12,6 +12,7 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("error")
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionError error;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withError(PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("resources")
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionResources[] resources;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withResources(PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction {
      */
     @JsonProperty("status")
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionStatusEnum status;
+
     public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction withStatus(PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrcerResponse {
     
     public String contentType;
+
     public TrcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TrcerResponse {
     
     
     public Integer statusCode;
+
     public TrcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TrcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TrcerResponse {
      */
     
     public Trcer400ApplicationJSON trcer400ApplicationJSONObject;
+
     public TrcerResponse withTrcer400ApplicationJSONObject(Trcer400ApplicationJSON trcer400ApplicationJSONObject) {
         this.trcer400ApplicationJSONObject = trcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class TrcerResponse {
      */
     
     public Trcer401ApplicationJSON trcer401ApplicationJSONObject;
+
     public TrcerResponse withTrcer401ApplicationJSONObject(Trcer401ApplicationJSON trcer401ApplicationJSONObject) {
         this.trcer401ApplicationJSONObject = trcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class TrcerResponse {
      */
     
     public Trcer404ApplicationJSON trcer404ApplicationJSONObject;
+
     public TrcerResponse withTrcer404ApplicationJSONObject(Trcer404ApplicationJSON trcer404ApplicationJSONObject) {
         this.trcer404ApplicationJSONObject = trcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class TrcerResponse {
      */
     
     public Trcer500ApplicationJSON trcer500ApplicationJSONObject;
+
     public TrcerResponse withTrcer500ApplicationJSONObject(Trcer500ApplicationJSON trcer500ApplicationJSONObject) {
         this.trcer500ApplicationJSONObject = trcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class TrcerResponse {
      */
     
     public Trcer502ApplicationJSON trcer502ApplicationJSONObject;
+
     public TrcerResponse withTrcer502ApplicationJSONObject(Trcer502ApplicationJSON trcer502ApplicationJSONObject) {
         this.trcer502ApplicationJSONObject = trcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class TrcerResponse {
      */
     
     public Trcer503ApplicationJSON trcer503ApplicationJSONObject;
+
     public TrcerResponse withTrcer503ApplicationJSONObject(Trcer503ApplicationJSON trcer503ApplicationJSONObject) {
         this.trcer503ApplicationJSONObject = trcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class TrcerResponse {
      */
     
     public Trcer504ApplicationJSON trcer504ApplicationJSONObject;
+
     public TrcerResponse withTrcer504ApplicationJSONObject(Trcer504ApplicationJSON trcer504ApplicationJSONObject) {
         this.trcer504ApplicationJSONObject = trcer504ApplicationJSONObject;
         return this;
     }
     
+    public TrcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

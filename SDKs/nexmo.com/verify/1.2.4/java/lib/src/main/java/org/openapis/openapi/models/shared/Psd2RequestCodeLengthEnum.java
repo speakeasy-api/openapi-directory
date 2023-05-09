@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * Psd2RequestCodeLengthEnum - The length of the verification code.
  */
 public enum Psd2RequestCodeLengthEnum {
-    FOUR("4"),
-    SIX("6");
+    FOUR(4L),
+    SIX(6L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private Psd2RequestCodeLengthEnum(String value) {
+    private Psd2RequestCodeLengthEnum(Long value) {
         this.value = value;
     }
 }

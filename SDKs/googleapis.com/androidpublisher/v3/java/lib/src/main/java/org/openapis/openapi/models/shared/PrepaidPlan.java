@@ -18,9 +18,11 @@ public class PrepaidPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowExtendAfterTime")
     public String allowExtendAfterTime;
+
     public PrepaidPlan withAllowExtendAfterTime(String allowExtendAfterTime) {
         this.allowExtendAfterTime = allowExtendAfterTime;
         return this;
     }
     
+    public PrepaidPlan(){}
 }

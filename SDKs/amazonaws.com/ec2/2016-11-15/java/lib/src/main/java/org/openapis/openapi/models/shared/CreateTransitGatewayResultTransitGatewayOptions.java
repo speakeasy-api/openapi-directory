@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateTransitGatewayResultTransitGatewayOptions {
     
     public Long amazonSideAsn;
+
     public CreateTransitGatewayResultTransitGatewayOptions withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -19,6 +20,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public String associationDefaultRouteTableId;
+
     public CreateTransitGatewayResultTransitGatewayOptions withAssociationDefaultRouteTableId(String associationDefaultRouteTableId) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         return this;
@@ -26,6 +28,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public CreateTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum autoAcceptSharedAttachments;
+
     public CreateTransitGatewayResultTransitGatewayOptions withAutoAcceptSharedAttachments(CreateTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum autoAcceptSharedAttachments) {
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         return this;
@@ -33,6 +36,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public CreateTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum defaultRouteTableAssociation;
+
     public CreateTransitGatewayResultTransitGatewayOptions withDefaultRouteTableAssociation(CreateTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum defaultRouteTableAssociation) {
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;
         return this;
@@ -40,6 +44,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public CreateTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum defaultRouteTablePropagation;
+
     public CreateTransitGatewayResultTransitGatewayOptions withDefaultRouteTablePropagation(CreateTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum defaultRouteTablePropagation) {
         this.defaultRouteTablePropagation = defaultRouteTablePropagation;
         return this;
@@ -47,6 +52,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public CreateTransitGatewayResultTransitGatewayOptionsDnsSupportEnum dnsSupport;
+
     public CreateTransitGatewayResultTransitGatewayOptions withDnsSupport(CreateTransitGatewayResultTransitGatewayOptionsDnsSupportEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -54,6 +60,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public CreateTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum multicastSupport;
+
     public CreateTransitGatewayResultTransitGatewayOptions withMulticastSupport(CreateTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum multicastSupport) {
         this.multicastSupport = multicastSupport;
         return this;
@@ -61,6 +68,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public String propagationDefaultRouteTableId;
+
     public CreateTransitGatewayResultTransitGatewayOptions withPropagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
         this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
         return this;
@@ -68,6 +76,7 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public String[] transitGatewayCidrBlocks;
+
     public CreateTransitGatewayResultTransitGatewayOptions withTransitGatewayCidrBlocks(String[] transitGatewayCidrBlocks) {
         this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
         return this;
@@ -75,9 +84,11 @@ public class CreateTransitGatewayResultTransitGatewayOptions {
     
     
     public CreateTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum vpnEcmpSupport;
+
     public CreateTransitGatewayResultTransitGatewayOptions withVpnEcmpSupport(CreateTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum vpnEcmpSupport) {
         this.vpnEcmpSupport = vpnEcmpSupport;
         return this;
     }
     
+    public CreateTransitGatewayResultTransitGatewayOptions(){}
 }

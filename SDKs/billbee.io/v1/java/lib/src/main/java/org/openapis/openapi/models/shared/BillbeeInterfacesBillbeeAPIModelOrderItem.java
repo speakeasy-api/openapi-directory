@@ -15,6 +15,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public BillbeeInterfacesBillbeeAPIModelOrderItemAttribute[] attributes;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withAttributes(BillbeeInterfacesBillbeeAPIModelOrderItemAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -26,6 +27,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillbeeId")
     public Long billbeeId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withBillbeeId(Long billbeeId) {
         this.billbeeId = billbeeId;
         return this;
@@ -37,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Discount")
     public Double discount;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withDiscount(Double discount) {
         this.discount = discount;
         return this;
@@ -48,6 +51,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DontAdjustStock")
     public Boolean dontAdjustStock;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withDontAdjustStock(Boolean dontAdjustStock) {
         this.dontAdjustStock = dontAdjustStock;
         return this;
@@ -59,6 +63,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GetPriceFromArticleIfAny")
     public Boolean getPriceFromArticleIfAny;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withGetPriceFromArticleIfAny(Boolean getPriceFromArticleIfAny) {
         this.getPriceFromArticleIfAny = getPriceFromArticleIfAny;
         return this;
@@ -70,6 +75,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceSKU")
     public String invoiceSKU;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withInvoiceSKU(String invoiceSKU) {
         this.invoiceSKU = invoiceSKU;
         return this;
@@ -81,6 +87,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsCoupon")
     public Boolean isCoupon;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withIsCoupon(Boolean isCoupon) {
         this.isCoupon = isCoupon;
         return this;
@@ -89,6 +96,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Product")
     public BillbeeInterfacesBillbeeAPIModelSoldProduct product;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withProduct(BillbeeInterfacesBillbeeAPIModelSoldProduct product) {
         this.product = product;
         return this;
@@ -100,6 +108,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Double quantity;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -111,6 +120,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SerialNumber")
     public String serialNumber;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -122,6 +132,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingProfileId")
     public String shippingProfileId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withShippingProfileId(String shippingProfileId) {
         this.shippingProfileId = shippingProfileId;
         return this;
@@ -133,6 +144,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -144,6 +156,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxIndex")
     public Integer taxIndex;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withTaxIndex(Integer taxIndex) {
         this.taxIndex = taxIndex;
         return this;
@@ -155,6 +168,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPrice")
     public Double totalPrice;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
         return this;
@@ -166,6 +180,7 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -177,9 +192,11 @@ public class BillbeeInterfacesBillbeeAPIModelOrderItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnrebatedTotalPrice")
     public Double unrebatedTotalPrice;
+
     public BillbeeInterfacesBillbeeAPIModelOrderItem withUnrebatedTotalPrice(Double unrebatedTotalPrice) {
         this.unrebatedTotalPrice = unrebatedTotalPrice;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelOrderItem(){}
 }

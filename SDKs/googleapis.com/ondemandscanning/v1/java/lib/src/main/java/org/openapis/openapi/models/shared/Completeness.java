@@ -18,6 +18,7 @@ public class Completeness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public Boolean arguments;
+
     public Completeness withArguments(Boolean arguments) {
         this.arguments = arguments;
         return this;
@@ -29,6 +30,7 @@ public class Completeness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Boolean environment;
+
     public Completeness withEnvironment(Boolean environment) {
         this.environment = environment;
         return this;
@@ -40,9 +42,11 @@ public class Completeness {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("materials")
     public Boolean materials;
+
     public Completeness withMaterials(Boolean materials) {
         this.materials = materials;
         return this;
     }
     
+    public Completeness(){}
 }

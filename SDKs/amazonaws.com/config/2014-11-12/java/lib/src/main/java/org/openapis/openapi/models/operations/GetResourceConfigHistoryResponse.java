@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceConfigHistoryResponse {
     
     public String contentType;
+
     public GetResourceConfigHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceConfigHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceConfigHistoryResponse getResourceConfigHistoryResponse;
+
     public GetResourceConfigHistoryResponse withGetResourceConfigHistoryResponse(org.openapis.openapi.models.shared.GetResourceConfigHistoryResponse getResourceConfigHistoryResponse) {
         this.getResourceConfigHistoryResponse = getResourceConfigHistoryResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceConfigHistoryResponse {
      */
     
     public Object invalidLimitException;
+
     public GetResourceConfigHistoryResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceConfigHistoryResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetResourceConfigHistoryResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceConfigHistoryResponse {
      */
     
     public Object invalidTimeRangeException;
+
     public GetResourceConfigHistoryResponse withInvalidTimeRangeException(Object invalidTimeRangeException) {
         this.invalidTimeRangeException = invalidTimeRangeException;
         return this;
@@ -59,6 +65,7 @@ public class GetResourceConfigHistoryResponse {
      */
     
     public Object noAvailableConfigurationRecorderException;
+
     public GetResourceConfigHistoryResponse withNoAvailableConfigurationRecorderException(Object noAvailableConfigurationRecorderException) {
         this.noAvailableConfigurationRecorderException = noAvailableConfigurationRecorderException;
         return this;
@@ -66,6 +73,7 @@ public class GetResourceConfigHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetResourceConfigHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetResourceConfigHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceConfigHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetResourceConfigHistoryResponse {
      */
     
     public Object resourceNotDiscoveredException;
+
     public GetResourceConfigHistoryResponse withResourceNotDiscoveredException(Object resourceNotDiscoveredException) {
         this.resourceNotDiscoveredException = resourceNotDiscoveredException;
         return this;
@@ -93,9 +103,14 @@ public class GetResourceConfigHistoryResponse {
      */
     
     public Object validationException;
+
     public GetResourceConfigHistoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetResourceConfigHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

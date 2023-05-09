@@ -15,6 +15,7 @@ public class CancelDataRepositoryTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public DataRepositoryTaskLifecycleEnum lifecycle;
+
     public CancelDataRepositoryTaskResponse withLifecycle(DataRepositoryTaskLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -23,9 +24,11 @@ public class CancelDataRepositoryTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskId")
     public String taskId;
+
     public CancelDataRepositoryTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public CancelDataRepositoryTaskResponse(){}
 }

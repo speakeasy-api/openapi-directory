@@ -15,6 +15,7 @@ public class Item1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Item1 withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class Item1 {
      */
     @JsonProperty("id")
     public String id;
+
     public Item1 withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class Item1 {
      */
     @JsonProperty("price")
     public Integer price;
+
     public Item1 withPrice(Integer price) {
         this.price = price;
         return this;
@@ -45,9 +48,15 @@ public class Item1 {
      */
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item1 withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public Item1(@JsonProperty("id") String id, @JsonProperty("price") Integer price, @JsonProperty("quantity") Integer quantity) {
+        this.id = id;
+        this.price = price;
+        this.quantity = quantity;
+  }
 }

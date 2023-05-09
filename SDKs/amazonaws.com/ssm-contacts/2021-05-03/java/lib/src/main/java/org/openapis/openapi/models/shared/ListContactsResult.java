@@ -15,6 +15,7 @@ public class ListContactsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Contacts")
     public Contact[] contacts;
+
     public ListContactsResult withContacts(Contact[] contacts) {
         this.contacts = contacts;
         return this;
@@ -23,9 +24,11 @@ public class ListContactsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListContactsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListContactsResult(){}
 }

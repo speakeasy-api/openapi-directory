@@ -15,6 +15,7 @@ public class UpdateFailureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public UpdateFailureState withDetails(String details) {
         this.details = details;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFailureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedConfiguration")
     public java.util.Map<String, Object> failedConfiguration;
+
     public UpdateFailureState withFailedConfiguration(java.util.Map<String, Object> failedConfiguration) {
         this.failedConfiguration = failedConfiguration;
         return this;
@@ -37,9 +39,11 @@ public class UpdateFailureState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateAttempt")
     public String lastUpdateAttempt;
+
     public UpdateFailureState withLastUpdateAttempt(String lastUpdateAttempt) {
         this.lastUpdateAttempt = lastUpdateAttempt;
         return this;
     }
     
+    public UpdateFailureState(){}
 }

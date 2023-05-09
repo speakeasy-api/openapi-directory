@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DiskImageDetail - Describes a disk image.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DiskImageDetail {
     
     public Long bytes;
+
     public DiskImageDetail withBytes(Long bytes) {
         this.bytes = bytes;
         return this;
@@ -19,6 +20,7 @@ public class DiskImageDetail {
     
     
     public DiskImageDetailFormatEnum format;
+
     public DiskImageDetail withFormat(DiskImageDetailFormatEnum format) {
         this.format = format;
         return this;
@@ -26,9 +28,15 @@ public class DiskImageDetail {
     
     
     public String importManifestUrl;
+
     public DiskImageDetail withImportManifestUrl(String importManifestUrl) {
         this.importManifestUrl = importManifestUrl;
         return this;
     }
     
+    public DiskImageDetail(@JsonProperty("Bytes") Long bytes, @JsonProperty("Format") DiskImageDetailFormatEnum format, @JsonProperty("ImportManifestUrl") String importManifestUrl) {
+        this.bytes = bytes;
+        this.format = format;
+        this.importManifestUrl = importManifestUrl;
+  }
 }

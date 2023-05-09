@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedDefaultReviewerAndType paginatedDefaultReviewerAndType;
+
     public GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse withPaginatedDefaultReviewerAndType(org.openapis.openapi.models.shared.PaginatedDefaultReviewerAndType paginatedDefaultReviewerAndType) {
         this.paginatedDefaultReviewerAndType = paginatedDefaultReviewerAndType;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

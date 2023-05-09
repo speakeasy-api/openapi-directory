@@ -21,6 +21,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +32,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -42,6 +44,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withPrice(String price) {
         this.price = price;
         return this;
@@ -53,6 +56,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -63,6 +67,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("side")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum side;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withSide(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum side) {
         this.side = side;
         return this;
@@ -70,6 +75,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
     
     @JsonProperty("status")
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum status;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withStatus(GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +86,7 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
      */
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -91,9 +98,17 @@ public class GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalan
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactions(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("side") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum side, @JsonProperty("status") GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum status, @JsonProperty("transaction_id") String transactionId) {
+        this.createdAt = createdAt;
+        this.investmentProductId = investmentProductId;
+        this.side = side;
+        this.status = status;
+        this.transactionId = transactionId;
+  }
 }

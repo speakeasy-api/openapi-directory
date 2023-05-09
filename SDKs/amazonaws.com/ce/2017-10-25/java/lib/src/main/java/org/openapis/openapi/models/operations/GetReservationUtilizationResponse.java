@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReservationUtilizationResponse {
     
     public String contentType;
+
     public GetReservationUtilizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetReservationUtilizationResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetReservationUtilizationResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -29,6 +32,7 @@ public class GetReservationUtilizationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReservationUtilizationResponse getReservationUtilizationResponse;
+
     public GetReservationUtilizationResponse withGetReservationUtilizationResponse(org.openapis.openapi.models.shared.GetReservationUtilizationResponse getReservationUtilizationResponse) {
         this.getReservationUtilizationResponse = getReservationUtilizationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetReservationUtilizationResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetReservationUtilizationResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class GetReservationUtilizationResponse {
      */
     
     public Object limitExceededException;
+
     public GetReservationUtilizationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class GetReservationUtilizationResponse {
     
     
     public Integer statusCode;
+
     public GetReservationUtilizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetReservationUtilizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReservationUtilizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetReservationUtilizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

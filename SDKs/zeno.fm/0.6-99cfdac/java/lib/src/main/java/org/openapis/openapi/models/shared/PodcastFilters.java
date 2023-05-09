@@ -15,6 +15,7 @@ public class PodcastFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String[] category;
+
     public PodcastFilters withCategory(String[] category) {
         this.category = category;
         return this;
@@ -23,6 +24,7 @@ public class PodcastFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String[] country;
+
     public PodcastFilters withCountry(String[] country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class PodcastFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String[] language;
+
     public PodcastFilters withLanguage(String[] language) {
         this.language = language;
         return this;
@@ -39,9 +42,11 @@ public class PodcastFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podcastType")
     public PodcastFiltersPodcastTypeEnum podcastType;
+
     public PodcastFilters withPodcastType(PodcastFiltersPodcastTypeEnum podcastType) {
         this.podcastType = podcastType;
         return this;
     }
     
+    public PodcastFilters(){}
 }

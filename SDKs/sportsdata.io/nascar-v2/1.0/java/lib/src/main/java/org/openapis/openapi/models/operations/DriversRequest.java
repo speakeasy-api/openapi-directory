@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriversRequest {
@@ -12,9 +13,13 @@ public class DriversRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public DriversFormatEnum format;
+
     public DriversRequest withFormat(DriversFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public DriversRequest(@JsonProperty("format") DriversFormatEnum format) {
+        this.format = format;
+  }
 }

@@ -18,6 +18,7 @@ public class ImageObjectDetectionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelType")
     public String modelType;
+
     public ImageObjectDetectionModelMetadata withModelType(String modelType) {
         this.modelType = modelType;
         return this;
@@ -29,6 +30,7 @@ public class ImageObjectDetectionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeCount")
     public String nodeCount;
+
     public ImageObjectDetectionModelMetadata withNodeCount(String nodeCount) {
         this.nodeCount = nodeCount;
         return this;
@@ -40,6 +42,7 @@ public class ImageObjectDetectionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeQps")
     public Double nodeQps;
+
     public ImageObjectDetectionModelMetadata withNodeQps(Double nodeQps) {
         this.nodeQps = nodeQps;
         return this;
@@ -51,6 +54,7 @@ public class ImageObjectDetectionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopReason")
     public String stopReason;
+
     public ImageObjectDetectionModelMetadata withStopReason(String stopReason) {
         this.stopReason = stopReason;
         return this;
@@ -62,6 +66,7 @@ public class ImageObjectDetectionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainBudgetMilliNodeHours")
     public String trainBudgetMilliNodeHours;
+
     public ImageObjectDetectionModelMetadata withTrainBudgetMilliNodeHours(String trainBudgetMilliNodeHours) {
         this.trainBudgetMilliNodeHours = trainBudgetMilliNodeHours;
         return this;
@@ -73,9 +78,11 @@ public class ImageObjectDetectionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainCostMilliNodeHours")
     public String trainCostMilliNodeHours;
+
     public ImageObjectDetectionModelMetadata withTrainCostMilliNodeHours(String trainCostMilliNodeHours) {
         this.trainCostMilliNodeHours = trainCostMilliNodeHours;
         return this;
     }
     
+    public ImageObjectDetectionModelMetadata(){}
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetEntitiesResponse;
 
 public class Application {
@@ -14,11 +13,13 @@ public class Application {
 
             GetEntitiesResponse res = sdk.entityData.getEntities();
 
-            if (res.entities.isPresent()) {
+            if (res.entities != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

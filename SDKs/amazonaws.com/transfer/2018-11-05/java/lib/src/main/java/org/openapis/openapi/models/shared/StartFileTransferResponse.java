@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartFileTransferResponse {
     @JsonProperty("TransferId")
     public String transferId;
+
     public StartFileTransferResponse withTransferId(String transferId) {
         this.transferId = transferId;
         return this;
     }
     
+    public StartFileTransferResponse(@JsonProperty("TransferId") String transferId) {
+        this.transferId = transferId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateReplicationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateReplicationSetRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateReplicationSetRequestBody {
      */
     @JsonProperty("regions")
     public java.util.Map<String, org.openapis.openapi.models.shared.RegionMapInputValue> regions;
+
     public CreateReplicationSetRequestBody withRegions(java.util.Map<String, org.openapis.openapi.models.shared.RegionMapInputValue> regions) {
         this.regions = regions;
         return this;
@@ -36,9 +38,13 @@ public class CreateReplicationSetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateReplicationSetRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateReplicationSetRequestBody(@JsonProperty("regions") java.util.Map<String, org.openapis.openapi.models.shared.RegionMapInputValue> regions) {
+        this.regions = regions;
+  }
 }

@@ -12,6 +12,7 @@ public class InlineResponse200Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autonomous_system_number")
     public Long autonomousSystemNumber;
+
     public InlineResponse200Connection withAutonomousSystemNumber(Long autonomousSystemNumber) {
         this.autonomousSystemNumber = autonomousSystemNumber;
         return this;
@@ -20,6 +21,7 @@ public class InlineResponse200Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autonomous_system_organization")
     public String autonomousSystemOrganization;
+
     public InlineResponse200Connection withAutonomousSystemOrganization(String autonomousSystemOrganization) {
         this.autonomousSystemOrganization = autonomousSystemOrganization;
         return this;
@@ -28,6 +30,7 @@ public class InlineResponse200Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection_type")
     public String connectionType;
+
     public InlineResponse200Connection withConnectionType(String connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -36,6 +39,7 @@ public class InlineResponse200Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isp_name")
     public String ispName;
+
     public InlineResponse200Connection withIspName(String ispName) {
         this.ispName = ispName;
         return this;
@@ -44,9 +48,11 @@ public class InlineResponse200Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_name")
     public String organizationName;
+
     public InlineResponse200Connection withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
     }
     
+    public InlineResponse200Connection(){}
 }

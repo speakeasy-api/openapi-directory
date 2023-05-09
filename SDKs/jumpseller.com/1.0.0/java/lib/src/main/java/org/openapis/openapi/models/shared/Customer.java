@@ -15,9 +15,11 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public CustomerFields customer;
+
     public Customer withCustomer(CustomerFields customer) {
         this.customer = customer;
         return this;
     }
     
+    public Customer(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RepositorySyncDefinition {
     @JsonProperty("branch")
     public String branch;
+
     public RepositorySyncDefinition withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -19,6 +20,7 @@ public class RepositorySyncDefinition {
     
     @JsonProperty("directory")
     public String directory;
+
     public RepositorySyncDefinition withDirectory(String directory) {
         this.directory = directory;
         return this;
@@ -26,6 +28,7 @@ public class RepositorySyncDefinition {
     
     @JsonProperty("parent")
     public String parent;
+
     public RepositorySyncDefinition withParent(String parent) {
         this.parent = parent;
         return this;
@@ -33,9 +36,16 @@ public class RepositorySyncDefinition {
     
     @JsonProperty("target")
     public String target;
+
     public RepositorySyncDefinition withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public RepositorySyncDefinition(@JsonProperty("branch") String branch, @JsonProperty("directory") String directory, @JsonProperty("parent") String parent, @JsonProperty("target") String target) {
+        this.branch = branch;
+        this.directory = directory;
+        this.parent = parent;
+        this.target = target;
+  }
 }

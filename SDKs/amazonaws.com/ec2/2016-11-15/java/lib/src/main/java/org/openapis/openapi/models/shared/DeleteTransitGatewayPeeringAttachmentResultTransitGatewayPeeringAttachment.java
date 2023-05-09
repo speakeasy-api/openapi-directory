@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment {
     
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo accepterTgwInfo;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withAccepterTgwInfo(DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo accepterTgwInfo) {
         this.accepterTgwInfo = accepterTgwInfo;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public String accepterTransitGatewayAttachmentId;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withAccepterTransitGatewayAttachmentId(String accepterTransitGatewayAttachmentId) {
         this.accepterTransitGatewayAttachmentId = accepterTransitGatewayAttachmentId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public OffsetDateTime creationTime;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +36,7 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptions options;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withOptions(DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptions options) {
         this.options = options;
         return this;
@@ -40,6 +44,7 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo requesterTgwInfo;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withRequesterTgwInfo(DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo requesterTgwInfo) {
         this.requesterTgwInfo = requesterTgwInfo;
         return this;
@@ -47,6 +52,7 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum state;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withState(DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus status;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withStatus(DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus status) {
         this.status = status;
         return this;
@@ -61,6 +68,7 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentTags[] tags;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withTags(DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentTags[] tags) {
         this.tags = tags;
         return this;
@@ -68,9 +76,11 @@ public class DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAtt
     
     
     public String transitGatewayAttachmentId;
+
     public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public DeleteTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment(){}
 }

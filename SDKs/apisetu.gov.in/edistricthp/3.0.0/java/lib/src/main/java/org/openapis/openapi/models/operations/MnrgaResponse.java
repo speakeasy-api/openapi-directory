@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MnrgaResponse {
     
     public String contentType;
+
     public MnrgaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MnrgaResponse {
     
     
     public Integer statusCode;
+
     public MnrgaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MnrgaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MnrgaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MnrgaResponse {
      */
     
     public Mnrga400ApplicationJSON mnrga400ApplicationJSONObject;
+
     public MnrgaResponse withMnrga400ApplicationJSONObject(Mnrga400ApplicationJSON mnrga400ApplicationJSONObject) {
         this.mnrga400ApplicationJSONObject = mnrga400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MnrgaResponse {
      */
     
     public Mnrga401ApplicationJSON mnrga401ApplicationJSONObject;
+
     public MnrgaResponse withMnrga401ApplicationJSONObject(Mnrga401ApplicationJSON mnrga401ApplicationJSONObject) {
         this.mnrga401ApplicationJSONObject = mnrga401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MnrgaResponse {
      */
     
     public Mnrga404ApplicationJSON mnrga404ApplicationJSONObject;
+
     public MnrgaResponse withMnrga404ApplicationJSONObject(Mnrga404ApplicationJSON mnrga404ApplicationJSONObject) {
         this.mnrga404ApplicationJSONObject = mnrga404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MnrgaResponse {
      */
     
     public Mnrga500ApplicationJSON mnrga500ApplicationJSONObject;
+
     public MnrgaResponse withMnrga500ApplicationJSONObject(Mnrga500ApplicationJSON mnrga500ApplicationJSONObject) {
         this.mnrga500ApplicationJSONObject = mnrga500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MnrgaResponse {
      */
     
     public Mnrga502ApplicationJSON mnrga502ApplicationJSONObject;
+
     public MnrgaResponse withMnrga502ApplicationJSONObject(Mnrga502ApplicationJSON mnrga502ApplicationJSONObject) {
         this.mnrga502ApplicationJSONObject = mnrga502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MnrgaResponse {
      */
     
     public Mnrga503ApplicationJSON mnrga503ApplicationJSONObject;
+
     public MnrgaResponse withMnrga503ApplicationJSONObject(Mnrga503ApplicationJSON mnrga503ApplicationJSONObject) {
         this.mnrga503ApplicationJSONObject = mnrga503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MnrgaResponse {
      */
     
     public Mnrga504ApplicationJSON mnrga504ApplicationJSONObject;
+
     public MnrgaResponse withMnrga504ApplicationJSONObject(Mnrga504ApplicationJSON mnrga504ApplicationJSONObject) {
         this.mnrga504ApplicationJSONObject = mnrga504ApplicationJSONObject;
         return this;
     }
     
+    public MnrgaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

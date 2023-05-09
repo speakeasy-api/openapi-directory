@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UploadSigningCertificateRequest {
     
     public String certificateBody;
+
     public UploadSigningCertificateRequest withCertificateBody(String certificateBody) {
         this.certificateBody = certificateBody;
         return this;
@@ -16,9 +17,13 @@ public class UploadSigningCertificateRequest {
     
     
     public String userName;
+
     public UploadSigningCertificateRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UploadSigningCertificateRequest(@JsonProperty("CertificateBody") String certificateBody) {
+        this.certificateBody = certificateBody;
+  }
 }

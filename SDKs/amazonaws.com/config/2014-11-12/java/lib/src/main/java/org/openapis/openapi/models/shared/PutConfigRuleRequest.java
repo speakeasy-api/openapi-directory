@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutConfigRuleRequest {
     @JsonProperty("ConfigRule")
     public ConfigRule configRule;
+
     public PutConfigRuleRequest withConfigRule(ConfigRule configRule) {
         this.configRule = configRule;
         return this;
@@ -19,9 +20,13 @@ public class PutConfigRuleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public PutConfigRuleRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutConfigRuleRequest(@JsonProperty("ConfigRule") ConfigRule configRule) {
+        this.configRule = configRule;
+  }
 }

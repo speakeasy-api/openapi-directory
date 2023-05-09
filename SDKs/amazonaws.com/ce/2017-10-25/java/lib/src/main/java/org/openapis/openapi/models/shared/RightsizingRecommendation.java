@@ -15,6 +15,7 @@ public class RightsizingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public RightsizingRecommendation withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class RightsizingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentInstance")
     public CurrentInstance currentInstance;
+
     public RightsizingRecommendation withCurrentInstance(CurrentInstance currentInstance) {
         this.currentInstance = currentInstance;
         return this;
@@ -31,6 +33,7 @@ public class RightsizingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingReasonCodes")
     public FindingReasonCodeEnum[] findingReasonCodes;
+
     public RightsizingRecommendation withFindingReasonCodes(FindingReasonCodeEnum[] findingReasonCodes) {
         this.findingReasonCodes = findingReasonCodes;
         return this;
@@ -39,6 +42,7 @@ public class RightsizingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModifyRecommendationDetail")
     public ModifyRecommendationDetail modifyRecommendationDetail;
+
     public RightsizingRecommendation withModifyRecommendationDetail(ModifyRecommendationDetail modifyRecommendationDetail) {
         this.modifyRecommendationDetail = modifyRecommendationDetail;
         return this;
@@ -47,6 +51,7 @@ public class RightsizingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RightsizingType")
     public RightsizingTypeEnum rightsizingType;
+
     public RightsizingRecommendation withRightsizingType(RightsizingTypeEnum rightsizingType) {
         this.rightsizingType = rightsizingType;
         return this;
@@ -55,9 +60,11 @@ public class RightsizingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminateRecommendationDetail")
     public TerminateRecommendationDetail terminateRecommendationDetail;
+
     public RightsizingRecommendation withTerminateRecommendationDetail(TerminateRecommendationDetail terminateRecommendationDetail) {
         this.terminateRecommendationDetail = terminateRecommendationDetail;
         return this;
     }
     
+    public RightsizingRecommendation(){}
 }

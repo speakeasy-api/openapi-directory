@@ -15,6 +15,7 @@ public class PipeSourceDynamoDBStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public PipeSourceDynamoDBStreamParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -23,6 +24,7 @@ public class PipeSourceDynamoDBStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterConfig")
     public DeadLetterConfig deadLetterConfig;
+
     public PipeSourceDynamoDBStreamParameters withDeadLetterConfig(DeadLetterConfig deadLetterConfig) {
         this.deadLetterConfig = deadLetterConfig;
         return this;
@@ -31,6 +33,7 @@ public class PipeSourceDynamoDBStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public PipeSourceDynamoDBStreamParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
@@ -39,6 +42,7 @@ public class PipeSourceDynamoDBStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRecordAgeInSeconds")
     public Long maximumRecordAgeInSeconds;
+
     public PipeSourceDynamoDBStreamParameters withMaximumRecordAgeInSeconds(Long maximumRecordAgeInSeconds) {
         this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
         return this;
@@ -47,6 +51,7 @@ public class PipeSourceDynamoDBStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public PipeSourceDynamoDBStreamParameters withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
@@ -55,6 +60,7 @@ public class PipeSourceDynamoDBStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnPartialBatchItemFailure")
     public OnPartialBatchItemFailureStreamsEnum onPartialBatchItemFailure;
+
     public PipeSourceDynamoDBStreamParameters withOnPartialBatchItemFailure(OnPartialBatchItemFailureStreamsEnum onPartialBatchItemFailure) {
         this.onPartialBatchItemFailure = onPartialBatchItemFailure;
         return this;
@@ -63,6 +69,7 @@ public class PipeSourceDynamoDBStreamParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelizationFactor")
     public Long parallelizationFactor;
+
     public PipeSourceDynamoDBStreamParameters withParallelizationFactor(Long parallelizationFactor) {
         this.parallelizationFactor = parallelizationFactor;
         return this;
@@ -70,9 +77,13 @@ public class PipeSourceDynamoDBStreamParameters {
     
     @JsonProperty("StartingPosition")
     public DynamoDBStreamStartPositionEnum startingPosition;
+
     public PipeSourceDynamoDBStreamParameters withStartingPosition(DynamoDBStreamStartPositionEnum startingPosition) {
         this.startingPosition = startingPosition;
         return this;
     }
     
+    public PipeSourceDynamoDBStreamParameters(@JsonProperty("StartingPosition") DynamoDBStreamStartPositionEnum startingPosition) {
+        this.startingPosition = startingPosition;
+  }
 }

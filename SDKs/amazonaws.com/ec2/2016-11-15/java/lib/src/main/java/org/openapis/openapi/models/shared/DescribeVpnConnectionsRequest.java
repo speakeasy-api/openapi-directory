@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpnConnectionsRequest {
     
     public Boolean dryRun;
+
     public DescribeVpnConnectionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpnConnectionsRequest {
     
     
     public DescribeVpnConnectionsRequestFilters[] filters;
+
     public DescribeVpnConnectionsRequest withFilters(DescribeVpnConnectionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -26,9 +28,11 @@ public class DescribeVpnConnectionsRequest {
     
     
     public String[] vpnConnectionIds;
+
     public DescribeVpnConnectionsRequest withVpnConnectionIds(String[] vpnConnectionIds) {
         this.vpnConnectionIds = vpnConnectionIds;
         return this;
     }
     
+    public DescribeVpnConnectionsRequest(){}
 }

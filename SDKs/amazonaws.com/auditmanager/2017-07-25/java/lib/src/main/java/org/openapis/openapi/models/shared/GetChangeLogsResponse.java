@@ -15,6 +15,7 @@ public class GetChangeLogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeLogs")
     public ChangeLog[] changeLogs;
+
     public GetChangeLogsResponse withChangeLogs(ChangeLog[] changeLogs) {
         this.changeLogs = changeLogs;
         return this;
@@ -23,9 +24,11 @@ public class GetChangeLogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetChangeLogsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetChangeLogsResponse(){}
 }

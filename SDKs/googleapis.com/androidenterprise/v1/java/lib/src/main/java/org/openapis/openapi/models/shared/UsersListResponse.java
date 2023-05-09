@@ -18,9 +18,11 @@ public class UsersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User[] user;
+
     public UsersListResponse withUser(User[] user) {
         this.user = user;
         return this;
     }
     
+    public UsersListResponse(){}
 }

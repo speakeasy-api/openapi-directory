@@ -18,6 +18,7 @@ public class ReportLocalPostInsightsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicRequest")
     public BasicMetricsRequest basicRequest;
+
     public ReportLocalPostInsightsRequest withBasicRequest(BasicMetricsRequest basicRequest) {
         this.basicRequest = basicRequest;
         return this;
@@ -29,9 +30,11 @@ public class ReportLocalPostInsightsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localPostNames")
     public String[] localPostNames;
+
     public ReportLocalPostInsightsRequest withLocalPostNames(String[] localPostNames) {
         this.localPostNames = localPostNames;
         return this;
     }
     
+    public ReportLocalPostInsightsRequest(){}
 }

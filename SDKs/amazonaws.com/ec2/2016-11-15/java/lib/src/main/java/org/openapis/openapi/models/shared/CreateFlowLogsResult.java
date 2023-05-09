@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFlowLogsResult {
     
     public String clientToken;
+
     public CreateFlowLogsResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateFlowLogsResult {
     
     
     public String[] flowLogIds;
+
     public CreateFlowLogsResult withFlowLogIds(String[] flowLogIds) {
         this.flowLogIds = flowLogIds;
         return this;
@@ -26,9 +28,11 @@ public class CreateFlowLogsResult {
     
     
     public CreateFlowLogsResultUnsuccessful[] unsuccessful;
+
     public CreateFlowLogsResult withUnsuccessful(CreateFlowLogsResultUnsuccessful[] unsuccessful) {
         this.unsuccessful = unsuccessful;
         return this;
     }
     
+    public CreateFlowLogsResult(){}
 }

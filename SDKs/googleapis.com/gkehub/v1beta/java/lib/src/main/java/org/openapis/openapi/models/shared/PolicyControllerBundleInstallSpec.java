@@ -13,25 +13,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class PolicyControllerBundleInstallSpec {
     /**
-     * the set of namespaces to be exempted from the bundle TODO (b/271878194): Decrement this
+     * the set of namespaces to be exempted from the bundle
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptedNamespaces")
     public String[] exemptedNamespaces;
+
     public PolicyControllerBundleInstallSpec withExemptedNamespaces(String[] exemptedNamespaces) {
         this.exemptedNamespaces = exemptedNamespaces;
         return this;
     }
     
     /**
-     * Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this
+     * Management specifies how the bundle will be managed by the controller.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("management")
     public PolicyControllerBundleInstallSpecManagementEnum management;
+
     public PolicyControllerBundleInstallSpec withManagement(PolicyControllerBundleInstallSpecManagementEnum management) {
         this.management = management;
         return this;
     }
     
+    public PolicyControllerBundleInstallSpec(){}
 }

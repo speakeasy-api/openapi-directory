@@ -15,6 +15,7 @@ public class PostAssetsPricesAdjustedForwardRequestBodyAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetDividends")
     public PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetDividends[] assetDividends;
+
     public PostAssetsPricesAdjustedForwardRequestBodyAssets withAssetDividends(PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetDividends[] assetDividends) {
         this.assetDividends = assetDividends;
         return this;
@@ -25,6 +26,7 @@ public class PostAssetsPricesAdjustedForwardRequestBodyAssets {
      */
     @JsonProperty("assetPrices")
     public PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices[] assetPrices;
+
     public PostAssetsPricesAdjustedForwardRequestBodyAssets withAssetPrices(PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices[] assetPrices) {
         this.assetPrices = assetPrices;
         return this;
@@ -36,9 +38,13 @@ public class PostAssetsPricesAdjustedForwardRequestBodyAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetSplits")
     public PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetSplits[] assetSplits;
+
     public PostAssetsPricesAdjustedForwardRequestBodyAssets withAssetSplits(PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetSplits[] assetSplits) {
         this.assetSplits = assetSplits;
         return this;
     }
     
+    public PostAssetsPricesAdjustedForwardRequestBodyAssets(@JsonProperty("assetPrices") PostAssetsPricesAdjustedForwardRequestBodyAssetsAssetPrices[] assetPrices) {
+        this.assetPrices = assetPrices;
+  }
 }

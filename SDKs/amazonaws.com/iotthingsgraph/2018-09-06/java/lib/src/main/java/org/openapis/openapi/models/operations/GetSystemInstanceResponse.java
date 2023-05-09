@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSystemInstanceResponse {
     
     public String contentType;
+
     public GetSystemInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSystemInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSystemInstanceResponse getSystemInstanceResponse;
+
     public GetSystemInstanceResponse withGetSystemInstanceResponse(org.openapis.openapi.models.shared.GetSystemInstanceResponse getSystemInstanceResponse) {
         this.getSystemInstanceResponse = getSystemInstanceResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSystemInstanceResponse {
      */
     
     public Object internalFailureException;
+
     public GetSystemInstanceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetSystemInstanceResponse {
      */
     
     public Object invalidRequestException;
+
     public GetSystemInstanceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetSystemInstanceResponse {
     
     
     public Integer statusCode;
+
     public GetSystemInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSystemInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSystemInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetSystemInstanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSystemInstanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetSystemInstanceResponse {
      */
     
     public Object throttlingException;
+
     public GetSystemInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetSystemInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

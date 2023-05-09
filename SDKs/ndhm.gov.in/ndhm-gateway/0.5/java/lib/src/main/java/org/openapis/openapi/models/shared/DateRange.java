@@ -16,6 +16,7 @@ public class DateRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("from")
     public OffsetDateTime from;
+
     public DateRange withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -25,9 +26,14 @@ public class DateRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("to")
     public OffsetDateTime to;
+
     public DateRange withTo(OffsetDateTime to) {
         this.to = to;
         return this;
     }
     
+    public DateRange(@JsonProperty("from") OffsetDateTime from, @JsonProperty("to") OffsetDateTime to) {
+        this.from = from;
+        this.to = to;
+  }
 }

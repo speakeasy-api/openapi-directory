@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContactResponse {
@@ -12,6 +13,7 @@ public class GetContactResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContactResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContactResponse {
     
     
     public String contentType;
+
     public GetContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContactResponse {
      */
     
     public Object dataEncryptionException;
+
     public GetContactResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class GetContactResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContactResult getContactResult;
+
     public GetContactResponse withGetContactResult(org.openapis.openapi.models.shared.GetContactResult getContactResult) {
         this.getContactResult = getContactResult;
         return this;
@@ -49,6 +54,7 @@ public class GetContactResponse {
      */
     
     public Object internalServerException;
+
     public GetContactResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetContactResponse {
     
     
     public Integer statusCode;
+
     public GetContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetContactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetContactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class GetContactResponse {
      */
     
     public Object throttlingException;
+
     public GetContactResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetContactResponse {
      */
     
     public Object validationException;
+
     public GetContactResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

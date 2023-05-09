@@ -77,7 +77,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSigningBasketResponse res = new org.openapis.openapi.models.operations.DeleteSigningBasketResponse() {{
+        org.openapis.openapi.models.operations.DeleteSigningBasketResponse res = new org.openapis.openapi.models.operations.DeleteSigningBasketResponse(contentType, httpRes.statusCode()) {{
             error400NGSBS = null;
             error400SBS = null;
             error401NGSBS = null;
@@ -91,8 +91,6 @@ public class CommonServices {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 406 || httpRes.statusCode() == 408 || httpRes.statusCode() == 415 || httpRes.statusCode() == 429 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {
@@ -219,7 +217,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsentScaStatusResponse res = new org.openapis.openapi.models.operations.GetConsentScaStatusResponse() {{
+        org.openapis.openapi.models.operations.GetConsentScaStatusResponse res = new org.openapis.openapi.models.operations.GetConsentScaStatusResponse(contentType, httpRes.statusCode()) {{
             scaStatusResponse = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -238,8 +236,6 @@ public class CommonServices {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -403,7 +399,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse res = new org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse res = new org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse(contentType, httpRes.statusCode()) {{
             scaStatusResponse = null;
             error400NGPIS = null;
             error400PIS = null;
@@ -418,8 +414,6 @@ public class CommonServices {
             error409NGPIS = null;
             error409PIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -557,7 +551,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse res = new org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse res = new org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse(contentType, httpRes.statusCode()) {{
             authorisations = null;
             error400NGPIS = null;
             error400PIS = null;
@@ -572,8 +566,6 @@ public class CommonServices {
             error409NGPIS = null;
             error409PIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -709,7 +701,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse res = new org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse res = new org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse(contentType, httpRes.statusCode()) {{
             scaStatusResponse = null;
             error400NGPIS = null;
             error400PIS = null;
@@ -724,8 +716,6 @@ public class CommonServices {
             error409NGPIS = null;
             error409PIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -863,7 +853,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse(contentType, httpRes.statusCode()) {{
             authorisations = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -878,8 +868,6 @@ public class CommonServices {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1015,7 +1003,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse() {{
+        org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse(contentType, httpRes.statusCode()) {{
             scaStatusResponse = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -1030,8 +1018,6 @@ public class CommonServices {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1167,7 +1153,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigningBasketStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketStatusResponse() {{
+        org.openapis.openapi.models.operations.GetSigningBasketStatusResponse res = new org.openapis.openapi.models.operations.GetSigningBasketStatusResponse(contentType, httpRes.statusCode()) {{
             signingBasketStatusResponse200 = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -1182,8 +1168,6 @@ public class CommonServices {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1352,7 +1336,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartConsentAuthorisationResponse res = new org.openapis.openapi.models.operations.StartConsentAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.StartConsentAuthorisationResponse res = new org.openapis.openapi.models.operations.StartConsentAuthorisationResponse(contentType, httpRes.statusCode()) {{
             startScaprocessResponse = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -1371,8 +1355,6 @@ public class CommonServices {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1570,7 +1552,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse res = new org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse res = new org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse(contentType, httpRes.statusCode()) {{
             startScaprocessResponse = null;
             error400NGPIS = null;
             error400PIS = null;
@@ -1585,8 +1567,6 @@ public class CommonServices {
             error409NGPIS = null;
             error409PIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1755,7 +1735,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse res = new org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse res = new org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse(contentType, httpRes.statusCode()) {{
             startScaprocessResponse = null;
             error400NGPIS = null;
             error400PIS = null;
@@ -1770,8 +1750,6 @@ public class CommonServices {
             error409NGPIS = null;
             error409PIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1941,7 +1919,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse res = new org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse(contentType, httpRes.statusCode()) {{
             startScaprocessResponse = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -1956,8 +1934,6 @@ public class CommonServices {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -2132,7 +2108,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse() {{
+        org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse(contentType, httpRes.statusCode()) {{
             updateConsentsPsuData200ApplicationJSONOneOf = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -2151,8 +2127,6 @@ public class CommonServices {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2355,7 +2329,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse res = new org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse() {{
+        org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse res = new org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse(contentType, httpRes.statusCode()) {{
             updatePaymentCancellationPsuData200ApplicationJSONOneOf = null;
             error400NGPIS = null;
             error400PIS = null;
@@ -2370,8 +2344,6 @@ public class CommonServices {
             error409NGPIS = null;
             error409PIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2546,7 +2518,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse res = new org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse() {{
+        org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse res = new org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse(contentType, httpRes.statusCode()) {{
             updatePaymentPsuData200ApplicationJSONOneOf = null;
             error400NGPIS = null;
             error400PIS = null;
@@ -2561,8 +2533,6 @@ public class CommonServices {
             error409NGPIS = null;
             error409PIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2737,7 +2707,7 @@ public class CommonServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse() {{
+        org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse(contentType, httpRes.statusCode()) {{
             updateSigningBasketPsuData200ApplicationJSONOneOf = null;
             error400NGSBS = null;
             error400SBS = null;
@@ -2752,8 +2722,6 @@ public class CommonServices {
             error409NGSBS = null;
             error409SBS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

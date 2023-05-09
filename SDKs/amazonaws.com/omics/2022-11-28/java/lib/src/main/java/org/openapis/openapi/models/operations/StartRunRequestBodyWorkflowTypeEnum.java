@@ -10,8 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * StartRunRequestBodyWorkflowTypeEnum - The run's workflows type.
  */
 public enum StartRunRequestBodyWorkflowTypeEnum {
-    PRIVATE_("PRIVATE"),
-    SERVICE("SERVICE");
+    PRIVATE_("PRIVATE");
 
     @JsonValue
     public final String value;

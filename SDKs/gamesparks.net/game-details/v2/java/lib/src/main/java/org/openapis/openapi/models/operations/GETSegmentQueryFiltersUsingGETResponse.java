@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETSegmentQueryFiltersUsingGETResponse {
     
     public String contentType;
+
     public GETSegmentQueryFiltersUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETSegmentQueryFiltersUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETSegmentQueryFiltersUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -29,6 +32,7 @@ public class GETSegmentQueryFiltersUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.SegmentQueryFilterListModel segmentQueryFilterListModel;
+
     public GETSegmentQueryFiltersUsingGETResponse withSegmentQueryFilterListModel(org.openapis.openapi.models.shared.SegmentQueryFilterListModel segmentQueryFilterListModel) {
         this.segmentQueryFilterListModel = segmentQueryFilterListModel;
         return this;
@@ -36,6 +40,7 @@ public class GETSegmentQueryFiltersUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETSegmentQueryFiltersUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETSegmentQueryFiltersUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETSegmentQueryFiltersUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETSegmentQueryFiltersUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

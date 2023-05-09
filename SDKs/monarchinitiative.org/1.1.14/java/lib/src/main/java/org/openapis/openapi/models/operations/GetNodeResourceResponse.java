@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNodeResourceResponse {
@@ -12,6 +13,7 @@ public class GetNodeResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.BioObject[] bioObjects;
+
     public GetNodeResourceResponse withBioObjects(org.openapis.openapi.models.shared.BioObject[] bioObjects) {
         this.bioObjects = bioObjects;
         return this;
@@ -19,6 +21,7 @@ public class GetNodeResourceResponse {
     
     
     public String contentType;
+
     public GetNodeResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetNodeResourceResponse {
     
     
     public Integer statusCode;
+
     public GetNodeResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetNodeResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNodeResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetNodeResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class OfferingActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityId")
     public String activityId;
+
     public OfferingActivitiesResponse withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -23,6 +24,7 @@ public class OfferingActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Double time;
+
     public OfferingActivitiesResponse withTime(Double time) {
         this.time = time;
         return this;
@@ -31,9 +33,11 @@ public class OfferingActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OfferingActivitiesResponse withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public OfferingActivitiesResponse(){}
 }

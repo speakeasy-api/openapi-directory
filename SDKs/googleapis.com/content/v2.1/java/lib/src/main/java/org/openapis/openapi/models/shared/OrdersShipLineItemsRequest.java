@@ -15,6 +15,7 @@ public class OrdersShipLineItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItems")
     public OrderShipmentLineItemShipment[] lineItems;
+
     public OrdersShipLineItemsRequest withLineItems(OrderShipmentLineItemShipment[] lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -26,6 +27,7 @@ public class OrdersShipLineItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrdersShipLineItemsRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -37,6 +39,7 @@ public class OrdersShipLineItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentGroupId")
     public String shipmentGroupId;
+
     public OrdersShipLineItemsRequest withShipmentGroupId(String shipmentGroupId) {
         this.shipmentGroupId = shipmentGroupId;
         return this;
@@ -48,9 +51,11 @@ public class OrdersShipLineItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentInfos")
     public OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo[] shipmentInfos;
+
     public OrdersShipLineItemsRequest withShipmentInfos(OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo[] shipmentInfos) {
         this.shipmentInfos = shipmentInfos;
         return this;
     }
     
+    public OrdersShipLineItemsRequest(){}
 }

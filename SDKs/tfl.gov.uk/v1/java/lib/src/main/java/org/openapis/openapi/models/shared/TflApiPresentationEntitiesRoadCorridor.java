@@ -21,6 +21,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bounds")
     public String bounds;
+
     public TflApiPresentationEntitiesRoadCorridor withBounds(String bounds) {
         this.bounds = bounds;
         return this;
@@ -33,6 +34,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public TflApiPresentationEntitiesRoadCorridor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -45,6 +47,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("envelope")
     public String envelope;
+
     public TflApiPresentationEntitiesRoadCorridor withEnvelope(String envelope) {
         this.envelope = envelope;
         return this;
@@ -56,6 +59,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public TflApiPresentationEntitiesRoadCorridor withGroup(String group) {
         this.group = group;
         return this;
@@ -67,6 +71,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesRoadCorridor withId(String id) {
         this.id = id;
         return this;
@@ -80,6 +85,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("statusAggregationEndDate")
     public OffsetDateTime statusAggregationEndDate;
+
     public TflApiPresentationEntitiesRoadCorridor withStatusAggregationEndDate(OffsetDateTime statusAggregationEndDate) {
         this.statusAggregationEndDate = statusAggregationEndDate;
         return this;
@@ -93,6 +99,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("statusAggregationStartDate")
     public OffsetDateTime statusAggregationStartDate;
+
     public TflApiPresentationEntitiesRoadCorridor withStatusAggregationStartDate(OffsetDateTime statusAggregationStartDate) {
         this.statusAggregationStartDate = statusAggregationStartDate;
         return this;
@@ -104,6 +111,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusSeverity")
     public String statusSeverity;
+
     public TflApiPresentationEntitiesRoadCorridor withStatusSeverity(String statusSeverity) {
         this.statusSeverity = statusSeverity;
         return this;
@@ -115,6 +123,7 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusSeverityDescription")
     public String statusSeverityDescription;
+
     public TflApiPresentationEntitiesRoadCorridor withStatusSeverityDescription(String statusSeverityDescription) {
         this.statusSeverityDescription = statusSeverityDescription;
         return this;
@@ -126,9 +135,11 @@ public class TflApiPresentationEntitiesRoadCorridor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TflApiPresentationEntitiesRoadCorridor withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TflApiPresentationEntitiesRoadCorridor(){}
 }

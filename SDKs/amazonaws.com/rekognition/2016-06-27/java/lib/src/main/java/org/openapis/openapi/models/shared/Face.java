@@ -15,6 +15,7 @@ public class Face {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundingBox")
     public BoundingBox boundingBox;
+
     public Face withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -23,6 +24,7 @@ public class Face {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Face withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -31,6 +33,7 @@ public class Face {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalImageId")
     public String externalImageId;
+
     public Face withExternalImageId(String externalImageId) {
         this.externalImageId = externalImageId;
         return this;
@@ -39,6 +42,7 @@ public class Face {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceId")
     public String faceId;
+
     public Face withFaceId(String faceId) {
         this.faceId = faceId;
         return this;
@@ -47,6 +51,7 @@ public class Face {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public Face withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -55,9 +60,11 @@ public class Face {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexFacesModelVersion")
     public String indexFacesModelVersion;
+
     public Face withIndexFacesModelVersion(String indexFacesModelVersion) {
         this.indexFacesModelVersion = indexFacesModelVersion;
         return this;
     }
     
+    public Face(){}
 }

@@ -51,12 +51,10 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CacheNonceGetResponse res = new org.openapis.openapi.models.operations.CacheNonceGetResponse() {{
+        org.openapis.openapi.models.operations.CacheNonceGetResponse res = new org.openapis.openapi.models.operations.CacheNonceGetResponse(contentType, httpRes.statusCode()) {{
             loginButton = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Cache {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CachePostResponse res = new org.openapis.openapi.models.operations.CachePostResponse() {{
+        org.openapis.openapi.models.operations.CachePostResponse res = new org.openapis.openapi.models.operations.CachePostResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

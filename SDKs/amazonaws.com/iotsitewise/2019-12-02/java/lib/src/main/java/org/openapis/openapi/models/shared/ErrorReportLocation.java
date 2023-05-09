@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorReportLocation {
     @JsonProperty("bucket")
     public String bucket;
+
     public ErrorReportLocation withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -19,9 +20,14 @@ public class ErrorReportLocation {
     
     @JsonProperty("prefix")
     public String prefix;
+
     public ErrorReportLocation withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public ErrorReportLocation(@JsonProperty("bucket") String bucket, @JsonProperty("prefix") String prefix) {
+        this.bucket = bucket;
+        this.prefix = prefix;
+  }
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AddCallBroadcastBatchSecurity;
 import org.openapis.openapi.models.operations.AddCallBroadcastBatchRequest;
 import org.openapis.openapi.models.operations.AddCallBroadcastBatchResponse;
+import org.openapis.openapi.models.operations.AddCallBroadcastBatchSecurity;
 import org.openapis.openapi.models.shared.BatchRequest;
 import org.openapis.openapi.models.shared.Recipient;
 
@@ -29,59 +28,69 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddCallBroadcastBatchRequest req = new AddCallBroadcastBatchRequest() {{
+            AddCallBroadcastBatchRequest req = new AddCallBroadcastBatchRequest(548814L) {{
                 batchRequest = new BatchRequest() {{
-                    contactListId = 548814;
-                    name = "provident";
+                    contactListId = 592845L;
+                    name = "Ellis Mitchell";
                     recipients = new org.openapis.openapi.models.shared.Recipient[]{{
                         add(new Recipient() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("unde", "nulla");
-                                put("corrupti", "illum");
-                                put("vel", "error");
-                                put("deserunt", "suscipit");
+                                put("error", "deserunt");
+                                put("suscipit", "iure");
                             }};
-                            contactId = 437587;
-                            fromNumber = "magnam";
-                            phoneNumber = "debitis";
+                            contactId = 297534L;
+                            fromNumber = "debitis";
+                            phoneNumber = "ipsa";
                         }}),
                         add(new Recipient() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("delectus", "tempora");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
                             }};
-                            contactId = 383441;
-                            fromNumber = "molestiae";
-                            phoneNumber = "minus";
+                            contactId = 392785L;
+                            fromNumber = "recusandae";
+                            phoneNumber = "temporibus";
                         }}),
                         add(new Recipient() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("voluptatum", "iusto");
-                                put("excepturi", "nisi");
-                                put("recusandae", "temporibus");
-                                put("ab", "quis");
+                                put("quis", "veritatis");
                             }};
-                            contactId = 87129;
-                            fromNumber = "deserunt";
-                            phoneNumber = "perferendis";
+                            contactId = 648172L;
+                            fromNumber = "perferendis";
+                            phoneNumber = "ipsam";
+                        }}),
+                        add(new Recipient() {{
+                            attributes = new java.util.HashMap<String, String>() {{
+                                put("sapiente", "quo");
+                                put("odit", "at");
+                                put("at", "maiores");
+                                put("molestiae", "quod");
+                            }};
+                            contactId = 800911L;
+                            fromNumber = "esse";
+                            phoneNumber = "totam";
                         }}),
                     }};
                     scrubDuplicates = false;
-                }};
-                id = 368241;
+                }};;
                 strictValidation = false;
-            }}            
+            }};            
 
-            AddCallBroadcastBatchResponse res = sdk.calls.addCallBroadcastBatch(req, new AddCallBroadcastBatchSecurity() {{
+            AddCallBroadcastBatchResponse res = sdk.calls.addCallBroadcastBatch(req, new AddCallBroadcastBatchSecurity("porro", "dolorum") {{
                 password = "YOUR_PASSWORD_HERE";
                 username = "YOUR_USERNAME_HERE";
             }});
 
-            if (res.resourceId.isPresent()) {
+            if (res.resourceId != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -89,160 +98,160 @@ public class Application {
 ## Available Resources and Operations
 
 
-### calls
+### [calls](docs/calls/README.md)
 
-* `addCallBroadcastBatch` - Add batches to a call broadcast
-* `addCallBroadcastRecipients` - Add recipients to a call broadcast
-* `archiveVoiceBroadcast` - Archive voice broadcast
-* `createCallBroadcast` - Create a call broadcast
-* `findCallBroadcasts` - Find call broadcasts
-* `findCalls` - Find calls
-* `getCall` - Find a specific call
-* `getCallBroadcast` - Find a specific call broadcast
-* `getCallBroadcastBatches` - Find batches in a call broadcast
-* `getCallBroadcastCalls` - Find calls in a call broadcast
-* `getCallBroadcastStats` - Get statistics on call broadcast
-* `getCallRecording` - Get call recording by id
-* `getCallRecordingByName` - Get call recording by name
-* `getCallRecordingMp3` - Get call recording in mp3 format
-* `getCallRecordingMp3ByName` - Get call mp3 recording by name
-* `getCallRecordings` - Get call recordings for a call
-* `sendCalls` - Send calls
-* `startVoiceBroadcast` - Start voice broadcast
-* `stopVoiceBroadcast` - Stop voice broadcast
-* `toggleCallBroadcastRecipientsStatus` - Disable/enable undialed recipients in broadcast
-* `updateCallBroadcast` - Update a call broadcast
+* [addCallBroadcastBatch](docs/calls/README.md#addcallbroadcastbatch) - Add batches to a call broadcast
+* [addCallBroadcastRecipients](docs/calls/README.md#addcallbroadcastrecipients) - Add recipients to a call broadcast
+* [archiveVoiceBroadcast](docs/calls/README.md#archivevoicebroadcast) - Archive voice broadcast
+* [createCallBroadcast](docs/calls/README.md#createcallbroadcast) - Create a call broadcast
+* [findCallBroadcasts](docs/calls/README.md#findcallbroadcasts) - Find call broadcasts
+* [findCalls](docs/calls/README.md#findcalls) - Find calls
+* [getCall](docs/calls/README.md#getcall) - Find a specific call
+* [getCallBroadcast](docs/calls/README.md#getcallbroadcast) - Find a specific call broadcast
+* [getCallBroadcastBatches](docs/calls/README.md#getcallbroadcastbatches) - Find batches in a call broadcast
+* [getCallBroadcastCalls](docs/calls/README.md#getcallbroadcastcalls) - Find calls in a call broadcast
+* [getCallBroadcastStats](docs/calls/README.md#getcallbroadcaststats) - Get statistics on call broadcast
+* [getCallRecording](docs/calls/README.md#getcallrecording) - Get call recording by id
+* [getCallRecordingByName](docs/calls/README.md#getcallrecordingbyname) - Get call recording by name
+* [getCallRecordingMp3](docs/calls/README.md#getcallrecordingmp3) - Get call recording in mp3 format
+* [getCallRecordingMp3ByName](docs/calls/README.md#getcallrecordingmp3byname) - Get call mp3 recording by name
+* [getCallRecordings](docs/calls/README.md#getcallrecordings) - Get call recordings for a call
+* [sendCalls](docs/calls/README.md#sendcalls) - Send calls
+* [startVoiceBroadcast](docs/calls/README.md#startvoicebroadcast) - Start voice broadcast
+* [stopVoiceBroadcast](docs/calls/README.md#stopvoicebroadcast) - Stop voice broadcast
+* [toggleCallBroadcastRecipientsStatus](docs/calls/README.md#togglecallbroadcastrecipientsstatus) - Disable/enable undialed recipients in broadcast
+* [updateCallBroadcast](docs/calls/README.md#updatecallbroadcast) - Update a call broadcast
 
-### campaigns
+### [campaigns](docs/campaigns/README.md)
 
-* `deleteCampaignSound` - Delete a specific sound
-* `findCampaignSounds` - Find sounds
-* `getCampaignBatch` - Find a specific batch
-* `getCampaignSound` - Find a specific sound
-* `getCampaignSoundDataMp3` - Download a MP3 sound
-* `getCampaignSoundDataWav` - Download a WAV sound
-* `postCallCampaignSound` - Add sound via call
-* `postFileCampaignSound` - Add sound via file
-* `postTTSCampaignSound` - Add sound via text-to-speech
-* `updateCampaignBatch` - Update a batch
+* [deleteCampaignSound](docs/campaigns/README.md#deletecampaignsound) - Delete a specific sound
+* [findCampaignSounds](docs/campaigns/README.md#findcampaignsounds) - Find sounds
+* [getCampaignBatch](docs/campaigns/README.md#getcampaignbatch) - Find a specific batch
+* [getCampaignSound](docs/campaigns/README.md#getcampaignsound) - Find a specific sound
+* [getCampaignSoundDataMp3](docs/campaigns/README.md#getcampaignsounddatamp3) - Download a MP3 sound
+* [getCampaignSoundDataWav](docs/campaigns/README.md#getcampaignsounddatawav) - Download a WAV sound
+* [postCallCampaignSound](docs/campaigns/README.md#postcallcampaignsound) - Add sound via call
+* [postFileCampaignSound](docs/campaigns/README.md#postfilecampaignsound) - Add sound via file
+* [postTTSCampaignSound](docs/campaigns/README.md#postttscampaignsound) - Add sound via text-to-speech
+* [updateCampaignBatch](docs/campaigns/README.md#updatecampaignbatch) - Update a batch
 
-### contacts
+### [contacts](docs/contacts/README.md)
 
-* `addContactListItems` - Add contacts to a contact list
-* `addDoNotContacts` - Add do not contact (dnc) numbers
-* `createContactList` - Create contact lists
-* `createContactListFromFile` - Create contact list from file
-* `createContacts` - Create contacts
-* `deleteContact` - Delete a contact
-* `deleteContactList` - Delete a contact list
-* `deleteDoNotContact` - Delete do not contact (dnc) number. If number contains commas treat as list of numbers
-* `deleteDoNotContactsBySource` - Delete do not contact (dnc) numbers contained in source.
-* `findContactLists` - Find contact lists
-* `findContacts` - Find contacts
-* `findDoNotContacts` - Find do not contact (dnc) items
-* `getContact` - Find a specific contact
-* `getContactHistory` - Find a contact's history
-* `getContactList` - Find a specific contact list
-* `getContactListItems` - Find contacts in a contact list
-* `getDoNotContact` - Get do not contact (dnc)
-* `getUniversalDoNotContacts` - Find universal do not contacts (udnc) associated with toNumber
-* `removeContactListItem` - Delete a contact from a contact list
-* `removeContactListItems` - Delete contacts from a contact list
-* `updateContact` - Update a contact
-* `updateContactList` - Update a contact list
-* `updateDoNotContact` - Update an individual do not contact (dnc) number
+* [addContactListItems](docs/contacts/README.md#addcontactlistitems) - Add contacts to a contact list
+* [addDoNotContacts](docs/contacts/README.md#adddonotcontacts) - Add do not contact (dnc) numbers
+* [createContactList](docs/contacts/README.md#createcontactlist) - Create contact lists
+* [createContactListFromFile](docs/contacts/README.md#createcontactlistfromfile) - Create contact list from file
+* [createContacts](docs/contacts/README.md#createcontacts) - Create contacts
+* [deleteContact](docs/contacts/README.md#deletecontact) - Delete a contact
+* [deleteContactList](docs/contacts/README.md#deletecontactlist) - Delete a contact list
+* [deleteDoNotContact](docs/contacts/README.md#deletedonotcontact) - Delete do not contact (dnc) number. If number contains commas treat as list of numbers
+* [deleteDoNotContactsBySource](docs/contacts/README.md#deletedonotcontactsbysource) - Delete do not contact (dnc) numbers contained in source.
+* [findContactLists](docs/contacts/README.md#findcontactlists) - Find contact lists
+* [findContacts](docs/contacts/README.md#findcontacts) - Find contacts
+* [findDoNotContacts](docs/contacts/README.md#finddonotcontacts) - Find do not contact (dnc) items
+* [getContact](docs/contacts/README.md#getcontact) - Find a specific contact
+* [getContactHistory](docs/contacts/README.md#getcontacthistory) - Find a contact's history
+* [getContactList](docs/contacts/README.md#getcontactlist) - Find a specific contact list
+* [getContactListItems](docs/contacts/README.md#getcontactlistitems) - Find contacts in a contact list
+* [getDoNotContact](docs/contacts/README.md#getdonotcontact) - Get do not contact (dnc)
+* [getUniversalDoNotContacts](docs/contacts/README.md#getuniversaldonotcontacts) - Find universal do not contacts (udnc) associated with toNumber
+* [removeContactListItem](docs/contacts/README.md#removecontactlistitem) - Delete a contact from a contact list
+* [removeContactListItems](docs/contacts/README.md#removecontactlistitems) - Delete contacts from a contact list
+* [updateContact](docs/contacts/README.md#updatecontact) - Update a contact
+* [updateContactList](docs/contacts/README.md#updatecontactlist) - Update a contact list
+* [updateDoNotContact](docs/contacts/README.md#updatedonotcontact) - Update an individual do not contact (dnc) number
 
-### keywords
+### [keywords](docs/keywords/README.md)
 
-* `findKeywordLeaseConfigs` - Find keyword lease configs
-* `findKeywordLeases` - Find keyword leases
-* `findKeywords` - Find keywords
-* `getKeywordLease` - Find a specific lease
-* `getKeywordLeaseById` - Find a keyword by id
-* `getKeywordLeaseConfig` - Find a specific keyword lease config
-* `isKeywordAvailable` - Check for a specific keyword
-* `updateKeywordLease` - Update a lease
-* `updateKeywordLeaseConfig` - Update a keyword lease config
+* [findKeywordLeaseConfigs](docs/keywords/README.md#findkeywordleaseconfigs) - Find keyword lease configs
+* [findKeywordLeases](docs/keywords/README.md#findkeywordleases) - Find keyword leases
+* [findKeywords](docs/keywords/README.md#findkeywords) - Find keywords
+* [getKeywordLease](docs/keywords/README.md#getkeywordlease) - Find a specific lease
+* [getKeywordLeaseById](docs/keywords/README.md#getkeywordleasebyid) - Find a keyword by id
+* [getKeywordLeaseConfig](docs/keywords/README.md#getkeywordleaseconfig) - Find a specific keyword lease config
+* [isKeywordAvailable](docs/keywords/README.md#iskeywordavailable) - Check for a specific keyword
+* [updateKeywordLease](docs/keywords/README.md#updatekeywordlease) - Update a lease
+* [updateKeywordLeaseConfig](docs/keywords/README.md#updatekeywordleaseconfig) - Update a keyword lease config
 
-### me
+### [me](docs/me/README.md)
 
-* `createApiCredential` - Create api credentials
-* `deleteApiCredential` - Delete api credentials
-* `disableApiCredentials` - Disable specified API credentials
-* `enableApiCredentials` - Enable specified API credentials
-* `findApiCredentials` - Find api credentials
-* `getAccount` - Find account details
-* `getApiCredential` - Find a specific api credential
-* `getBillingPlanUsage` - Find plan usage
-* `getCallerIds` - Find caller ids
-* `getCreditUsage` - Find credit usage
-* `sendVerificationCodeToCallerId` - Create a caller id
-* `verifyCallerId` - Verify a caller id
+* [createApiCredential](docs/me/README.md#createapicredential) - Create api credentials
+* [deleteApiCredential](docs/me/README.md#deleteapicredential) - Delete api credentials
+* [disableApiCredentials](docs/me/README.md#disableapicredentials) - Disable specified API credentials
+* [enableApiCredentials](docs/me/README.md#enableapicredentials) - Enable specified API credentials
+* [findApiCredentials](docs/me/README.md#findapicredentials) - Find api credentials
+* [getAccount](docs/me/README.md#getaccount) - Find account details
+* [getApiCredential](docs/me/README.md#getapicredential) - Find a specific api credential
+* [getBillingPlanUsage](docs/me/README.md#getbillingplanusage) - Find plan usage
+* [getCallerIds](docs/me/README.md#getcallerids) - Find caller ids
+* [getCreditUsage](docs/me/README.md#getcreditusage) - Find credit usage
+* [sendVerificationCodeToCallerId](docs/me/README.md#sendverificationcodetocallerid) - Create a caller id
+* [verifyCallerId](docs/me/README.md#verifycallerid) - Verify a caller id
 
-### media
+### [media](docs/media/README.md)
 
-* `createMedia` - Create media
-* `findMedia` - Find media
-* `getMedia` - Get a specific media
-* `getMediaData` - Download media by extension
-* `getMediaDataBinary` - Download a MP3 media
-* `getMediaDataByKey` - Download media by extension
+* [createMedia](docs/media/README.md#createmedia) - Create media
+* [findMedia](docs/media/README.md#findmedia) - Find media
+* [getMedia](docs/media/README.md#getmedia) - Get a specific media
+* [getMediaData](docs/media/README.md#getmediadata) - Download media by extension
+* [getMediaDataBinary](docs/media/README.md#getmediadatabinary) - Download a MP3 media
+* [getMediaDataByKey](docs/media/README.md#getmediadatabykey) - Download media by extension
 
-### numbers
+### [numbers](docs/numbers/README.md)
 
-* `findNumberLeaseConfigs` - Find lease configs
-* `findNumberLeases` - Find leases
-* `findNumberRegions` - Find number regions
-* `findNumbersLocal` - Find local numbers
-* `findNumbersTollfree` - Find tollfree numbers
-* `getNumberLease` - Find a specific lease
-* `getNumberLeaseConfig` - Find a specific lease config
-* `updateNumberLease` - Update a lease
-* `updateNumberLeaseConfig` - Update a lease config
+* [findNumberLeaseConfigs](docs/numbers/README.md#findnumberleaseconfigs) - Find lease configs
+* [findNumberLeases](docs/numbers/README.md#findnumberleases) - Find leases
+* [findNumberRegions](docs/numbers/README.md#findnumberregions) - Find number regions
+* [findNumbersLocal](docs/numbers/README.md#findnumberslocal) - Find local numbers
+* [findNumbersTollfree](docs/numbers/README.md#findnumberstollfree) - Find tollfree numbers
+* [getNumberLease](docs/numbers/README.md#getnumberlease) - Find a specific lease
+* [getNumberLeaseConfig](docs/numbers/README.md#getnumberleaseconfig) - Find a specific lease config
+* [updateNumberLease](docs/numbers/README.md#updatenumberlease) - Update a lease
+* [updateNumberLeaseConfig](docs/numbers/README.md#updatenumberleaseconfig) - Update a lease config
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `findOrders` - Find orders
-* `getOrder` - Find a specific order
-* `orderKeywords` - Purchase keywords
-* `orderNumbers` - Purchase numbers
+* [findOrders](docs/orders/README.md#findorders) - Find orders
+* [getOrder](docs/orders/README.md#getorder) - Find a specific order
+* [orderKeywords](docs/orders/README.md#orderkeywords) - Purchase keywords
+* [orderNumbers](docs/orders/README.md#ordernumbers) - Purchase numbers
 
-### reports
+### [reports](docs/reports/README.md)
 
-* `getDeliveryReports` - Get delivery reports by ad hoc criteria
+* [getDeliveryReports](docs/reports/README.md#getdeliveryreports) - Get delivery reports by ad hoc criteria
 
-### texts
+### [texts](docs/texts/README.md)
 
-* `addTextBroadcastBatch` - Add batches to a text broadcast
-* `addTextBroadcastRecipients` - Add recipients to a text broadcast
-* `archiveTextBroadcast` - Archive text broadcast
-* `createTextAutoReply` - Create an auto reply
-* `createTextBroadcast` - Create a text broadcast
-* `deleteTextAutoReply` - Delete an auto reply
-* `findTextAutoReplys` - Find auto replies
-* `findTextBroadcasts` - Find text broadcasts
-* `findTexts` - Find texts
-* `getText` - Find a specific text
-* `getTextAutoReply` - Find a specific auto reply
-* `getTextBroadcast` - Find a specific text broadcast
-* `getTextBroadcastBatches` - Find batches in a text broadcast
-* `getTextBroadcastStats` - Get statistics on text broadcast
-* `getTextBroadcastTexts` - Find texts in a text broadcast
-* `sendTexts` - Send texts
-* `startTextBroadcast` - Start text broadcast
-* `stopTextBroadcast` - Stop text broadcast
-* `toggleTextBroadcastRecipientsStatus` - Disable/enable undialed recipients in broadcast
-* `updateTextBroadcast` - Update a text broadcast
+* [addTextBroadcastBatch](docs/texts/README.md#addtextbroadcastbatch) - Add batches to a text broadcast
+* [addTextBroadcastRecipients](docs/texts/README.md#addtextbroadcastrecipients) - Add recipients to a text broadcast
+* [archiveTextBroadcast](docs/texts/README.md#archivetextbroadcast) - Archive text broadcast
+* [createTextAutoReply](docs/texts/README.md#createtextautoreply) - Create an auto reply
+* [createTextBroadcast](docs/texts/README.md#createtextbroadcast) - Create a text broadcast
+* [deleteTextAutoReply](docs/texts/README.md#deletetextautoreply) - Delete an auto reply
+* [findTextAutoReplys](docs/texts/README.md#findtextautoreplys) - Find auto replies
+* [findTextBroadcasts](docs/texts/README.md#findtextbroadcasts) - Find text broadcasts
+* [findTexts](docs/texts/README.md#findtexts) - Find texts
+* [getText](docs/texts/README.md#gettext) - Find a specific text
+* [getTextAutoReply](docs/texts/README.md#gettextautoreply) - Find a specific auto reply
+* [getTextBroadcast](docs/texts/README.md#gettextbroadcast) - Find a specific text broadcast
+* [getTextBroadcastBatches](docs/texts/README.md#gettextbroadcastbatches) - Find batches in a text broadcast
+* [getTextBroadcastStats](docs/texts/README.md#gettextbroadcaststats) - Get statistics on text broadcast
+* [getTextBroadcastTexts](docs/texts/README.md#gettextbroadcasttexts) - Find texts in a text broadcast
+* [sendTexts](docs/texts/README.md#sendtexts) - Send texts
+* [startTextBroadcast](docs/texts/README.md#starttextbroadcast) - Start text broadcast
+* [stopTextBroadcast](docs/texts/README.md#stoptextbroadcast) - Stop text broadcast
+* [toggleTextBroadcastRecipientsStatus](docs/texts/README.md#toggletextbroadcastrecipientsstatus) - Disable/enable undialed recipients in broadcast
+* [updateTextBroadcast](docs/texts/README.md#updatetextbroadcast) - Update a text broadcast
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `createWebhook` - Create a webhook
-* `deleteWebhook` - Delete a webhook
-* `findWebhookResources` - Find webhook resources
-* `findWebhooks` - Find webhooks
-* `getWebhook` - Find a specific webhook
-* `getWebhookResource` - Find specific webhook resource
-* `updateWebhook` - Update a webhook
+* [createWebhook](docs/webhooks/README.md#createwebhook) - Create a webhook
+* [deleteWebhook](docs/webhooks/README.md#deletewebhook) - Delete a webhook
+* [findWebhookResources](docs/webhooks/README.md#findwebhookresources) - Find webhook resources
+* [findWebhooks](docs/webhooks/README.md#findwebhooks) - Find webhooks
+* [getWebhook](docs/webhooks/README.md#getwebhook) - Find a specific webhook
+* [getWebhookResource](docs/webhooks/README.md#getwebhookresource) - Find specific webhook resource
+* [updateWebhook](docs/webhooks/README.md#updatewebhook) - Update a webhook
 <!-- End SDK Available Operations -->
 
 ### Maturity

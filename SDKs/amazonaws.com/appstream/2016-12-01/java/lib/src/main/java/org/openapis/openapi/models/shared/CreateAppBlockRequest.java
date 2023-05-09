@@ -12,6 +12,7 @@ public class CreateAppBlockRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateAppBlockRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateAppBlockRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateAppBlockRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,6 +29,7 @@ public class CreateAppBlockRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateAppBlockRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreateAppBlockRequest {
     
     @JsonProperty("SetupScriptDetails")
     public ScriptDetails setupScriptDetails;
+
     public CreateAppBlockRequest withSetupScriptDetails(ScriptDetails setupScriptDetails) {
         this.setupScriptDetails = setupScriptDetails;
         return this;
@@ -41,6 +45,7 @@ public class CreateAppBlockRequest {
     
     @JsonProperty("SourceS3Location")
     public S3Location sourceS3Location;
+
     public CreateAppBlockRequest withSourceS3Location(S3Location sourceS3Location) {
         this.sourceS3Location = sourceS3Location;
         return this;
@@ -49,9 +54,15 @@ public class CreateAppBlockRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateAppBlockRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAppBlockRequest(@JsonProperty("Name") String name, @JsonProperty("SetupScriptDetails") ScriptDetails setupScriptDetails, @JsonProperty("SourceS3Location") S3Location sourceS3Location) {
+        this.name = name;
+        this.setupScriptDetails = setupScriptDetails;
+        this.sourceS3Location = sourceS3Location;
+  }
 }

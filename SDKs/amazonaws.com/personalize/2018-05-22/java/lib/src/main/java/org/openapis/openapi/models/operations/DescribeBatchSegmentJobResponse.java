@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBatchSegmentJobResponse {
     
     public String contentType;
+
     public DescribeBatchSegmentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBatchSegmentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBatchSegmentJobResponse describeBatchSegmentJobResponse;
+
     public DescribeBatchSegmentJobResponse withDescribeBatchSegmentJobResponse(org.openapis.openapi.models.shared.DescribeBatchSegmentJobResponse describeBatchSegmentJobResponse) {
         this.describeBatchSegmentJobResponse = describeBatchSegmentJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBatchSegmentJobResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeBatchSegmentJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeBatchSegmentJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeBatchSegmentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeBatchSegmentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBatchSegmentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeBatchSegmentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBatchSegmentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeBatchSegmentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

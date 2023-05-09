@@ -15,6 +15,7 @@ public class CreatePipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreatePipelineInput withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class CreatePipelineInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreatePipelineInput withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +32,7 @@ public class CreatePipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreatePipelineInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -37,9 +40,14 @@ public class CreatePipelineInput {
     
     @JsonProperty("uniqueId")
     public String uniqueId;
+
     public CreatePipelineInput withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
     }
     
+    public CreatePipelineInput(@JsonProperty("name") String name, @JsonProperty("uniqueId") String uniqueId) {
+        this.name = name;
+        this.uniqueId = uniqueId;
+  }
 }

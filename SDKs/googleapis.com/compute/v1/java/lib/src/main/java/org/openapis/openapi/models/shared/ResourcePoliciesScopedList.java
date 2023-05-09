@@ -15,6 +15,7 @@ public class ResourcePoliciesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public ResourcePolicy[] resourcePolicies;
+
     public ResourcePoliciesScopedList withResourcePolicies(ResourcePolicy[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
@@ -26,9 +27,11 @@ public class ResourcePoliciesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public ResourcePoliciesScopedListWarning warning;
+
     public ResourcePoliciesScopedList withWarning(ResourcePoliciesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public ResourcePoliciesScopedList(){}
 }

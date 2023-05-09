@@ -18,9 +18,11 @@ public class TestTiming {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testProcessDuration")
     public Duration testProcessDuration;
+
     public TestTiming withTestProcessDuration(Duration testProcessDuration) {
         this.testProcessDuration = testProcessDuration;
         return this;
     }
     
+    public TestTiming(){}
 }

@@ -15,6 +15,7 @@ public class EventIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public EventIntegration withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class EventIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBridgeBus")
     public String eventBridgeBus;
+
     public EventIntegration withEventBridgeBus(String eventBridgeBus) {
         this.eventBridgeBus = eventBridgeBus;
         return this;
@@ -31,6 +33,7 @@ public class EventIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventFilter")
     public EventFilter eventFilter;
+
     public EventIntegration withEventFilter(EventFilter eventFilter) {
         this.eventFilter = eventFilter;
         return this;
@@ -39,6 +42,7 @@ public class EventIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventIntegrationArn")
     public String eventIntegrationArn;
+
     public EventIntegration withEventIntegrationArn(String eventIntegrationArn) {
         this.eventIntegrationArn = eventIntegrationArn;
         return this;
@@ -47,6 +51,7 @@ public class EventIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public EventIntegration withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class EventIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public EventIntegration withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public EventIntegration(){}
 }

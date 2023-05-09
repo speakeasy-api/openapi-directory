@@ -18,9 +18,11 @@ public class DistributionGroupsRemoveUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_emails")
     public String[] userEmails;
+
     public DistributionGroupsRemoveUserRequestBody withUserEmails(String[] userEmails) {
         this.userEmails = userEmails;
         return this;
     }
     
+    public DistributionGroupsRemoveUserRequestBody(){}
 }

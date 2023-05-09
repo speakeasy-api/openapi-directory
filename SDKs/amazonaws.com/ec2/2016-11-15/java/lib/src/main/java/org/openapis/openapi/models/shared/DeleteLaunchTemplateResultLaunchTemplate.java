@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DeleteLaunchTemplateResultLaunchTemplate {
     
     public OffsetDateTime createTime;
+
     public DeleteLaunchTemplateResultLaunchTemplate withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -19,6 +20,7 @@ public class DeleteLaunchTemplateResultLaunchTemplate {
     
     
     public String createdBy;
+
     public DeleteLaunchTemplateResultLaunchTemplate withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -26,6 +28,7 @@ public class DeleteLaunchTemplateResultLaunchTemplate {
     
     
     public Long defaultVersionNumber;
+
     public DeleteLaunchTemplateResultLaunchTemplate withDefaultVersionNumber(Long defaultVersionNumber) {
         this.defaultVersionNumber = defaultVersionNumber;
         return this;
@@ -33,6 +36,7 @@ public class DeleteLaunchTemplateResultLaunchTemplate {
     
     
     public Long latestVersionNumber;
+
     public DeleteLaunchTemplateResultLaunchTemplate withLatestVersionNumber(Long latestVersionNumber) {
         this.latestVersionNumber = latestVersionNumber;
         return this;
@@ -40,6 +44,7 @@ public class DeleteLaunchTemplateResultLaunchTemplate {
     
     
     public String launchTemplateId;
+
     public DeleteLaunchTemplateResultLaunchTemplate withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -47,6 +52,7 @@ public class DeleteLaunchTemplateResultLaunchTemplate {
     
     
     public String launchTemplateName;
+
     public DeleteLaunchTemplateResultLaunchTemplate withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -54,9 +60,11 @@ public class DeleteLaunchTemplateResultLaunchTemplate {
     
     
     public DeleteLaunchTemplateResultLaunchTemplateTags[] tags;
+
     public DeleteLaunchTemplateResultLaunchTemplate withTags(DeleteLaunchTemplateResultLaunchTemplateTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteLaunchTemplateResultLaunchTemplate(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInternationalScheduledPaymentsJsonResponse {
     
     public byte[] body;
+
     public CreateInternationalScheduledPaymentsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateInternationalScheduledPaymentsJsonResponse {
     
     
     public String contentType;
+
     public CreateInternationalScheduledPaymentsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateInternationalScheduledPaymentsJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateInternationalScheduledPaymentsJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateInternationalScheduledPaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateInternationalScheduledPaymentsJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateInternationalScheduledPaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteInternationalScheduledResponse6 obWriteInternationalScheduledResponse6;
+
     public CreateInternationalScheduledPaymentsJsonResponse withOBWriteInternationalScheduledResponse6(org.openapis.openapi.models.shared.OBWriteInternationalScheduledResponse6 obWriteInternationalScheduledResponse6) {
         this.obWriteInternationalScheduledResponse6 = obWriteInternationalScheduledResponse6;
         return this;
@@ -50,6 +56,7 @@ public class CreateInternationalScheduledPaymentsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateInternationalScheduledPaymentsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateInternationalScheduledPaymentsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInternationalScheduledPaymentsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateInternationalScheduledPaymentsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

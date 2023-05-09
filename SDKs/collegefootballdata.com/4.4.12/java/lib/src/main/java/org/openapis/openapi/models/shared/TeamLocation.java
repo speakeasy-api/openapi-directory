@@ -12,6 +12,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacity")
     public Double capacity;
+
     public TeamLocation withCapacity(Double capacity) {
         this.capacity = capacity;
         return this;
@@ -20,6 +21,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public TeamLocation withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public TeamLocation withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -36,6 +39,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dome")
     public Boolean dome;
+
     public TeamLocation withDome(Boolean dome) {
         this.dome = dome;
         return this;
@@ -44,6 +48,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevation")
     public Double elevation;
+
     public TeamLocation withElevation(Double elevation) {
         this.elevation = elevation;
         return this;
@@ -52,6 +57,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grass")
     public Boolean grass;
+
     public TeamLocation withGrass(Boolean grass) {
         this.grass = grass;
         return this;
@@ -60,6 +66,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public TeamLocation withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -68,6 +75,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public TeamLocation withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -76,6 +84,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamLocation withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public TeamLocation withState(String state) {
         this.state = state;
         return this;
@@ -92,6 +102,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public TeamLocation withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -100,6 +111,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("venue_id")
     public Long venueId;
+
     public TeamLocation withVenueId(Long venueId) {
         this.venueId = venueId;
         return this;
@@ -108,6 +120,7 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_constructed")
     public Double yearConstructed;
+
     public TeamLocation withYearConstructed(Double yearConstructed) {
         this.yearConstructed = yearConstructed;
         return this;
@@ -116,9 +129,11 @@ public class TeamLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public TeamLocation withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public TeamLocation(){}
 }

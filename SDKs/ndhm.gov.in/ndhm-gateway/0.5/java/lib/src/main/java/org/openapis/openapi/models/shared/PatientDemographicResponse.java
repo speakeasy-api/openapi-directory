@@ -12,6 +12,7 @@ public class PatientDemographicResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PatientAddress address;
+
     public PatientDemographicResponse withAddress(PatientAddress address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class PatientDemographicResponse {
     
     @JsonProperty("gender")
     public PatientGenderEnum gender;
+
     public PatientDemographicResponse withGender(PatientGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -29,6 +31,7 @@ public class PatientDemographicResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public PatientDemographicResponse withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +40,7 @@ public class PatientDemographicResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public Identifier[] identifiers;
+
     public PatientDemographicResponse withIdentifiers(Identifier[] identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -44,6 +48,7 @@ public class PatientDemographicResponse {
     
     @JsonProperty("name")
     public String name;
+
     public PatientDemographicResponse withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,16 @@ public class PatientDemographicResponse {
     
     @JsonProperty("yearOfBirth")
     public Long yearOfBirth;
+
     public PatientDemographicResponse withYearOfBirth(Long yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public PatientDemographicResponse(@JsonProperty("gender") PatientGenderEnum gender, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("yearOfBirth") Long yearOfBirth) {
+        this.gender = gender;
+        this.id = id;
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+  }
 }

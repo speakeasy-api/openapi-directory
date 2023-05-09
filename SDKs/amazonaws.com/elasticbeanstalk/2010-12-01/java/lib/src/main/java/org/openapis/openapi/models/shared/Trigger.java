@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class Trigger {
     
     public String name;
+
     public Trigger withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Trigger(){}
 }

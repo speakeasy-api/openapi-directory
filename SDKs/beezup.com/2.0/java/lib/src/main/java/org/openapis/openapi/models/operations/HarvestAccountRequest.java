@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HarvestAccountRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public HarvestAccountRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -16,6 +18,7 @@ public class HarvestAccountRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public HarvestAccountRequest withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -23,6 +26,7 @@ public class HarvestAccountRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplaceOrderId")
     public String marketplaceOrderId;
+
     public HarvestAccountRequest withMarketplaceOrderId(String marketplaceOrderId) {
         this.marketplaceOrderId = marketplaceOrderId;
         return this;
@@ -33,9 +37,14 @@ public class HarvestAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public HarvestAccountRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public HarvestAccountRequest(@JsonProperty("accountId") Integer accountId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

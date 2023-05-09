@@ -15,9 +15,11 @@ public class StreamProcessingStopSelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxDurationInSeconds")
     public Long maxDurationInSeconds;
+
     public StreamProcessingStopSelector withMaxDurationInSeconds(Long maxDurationInSeconds) {
         this.maxDurationInSeconds = maxDurationInSeconds;
         return this;
     }
     
+    public StreamProcessingStopSelector(){}
 }

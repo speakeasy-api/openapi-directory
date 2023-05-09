@@ -15,9 +15,11 @@ public class GetShardIteratorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardIterator")
     public String shardIterator;
+
     public GetShardIteratorOutput withShardIterator(String shardIterator) {
         this.shardIterator = shardIterator;
         return this;
     }
     
+    public GetShardIteratorOutput(){}
 }

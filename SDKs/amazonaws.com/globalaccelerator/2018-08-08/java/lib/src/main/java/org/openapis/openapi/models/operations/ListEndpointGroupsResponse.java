@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEndpointGroupsResponse {
     
     public String contentType;
+
     public ListEndpointGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEndpointGroupsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListEndpointGroupsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListEndpointGroupsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListEndpointGroupsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListEndpointGroupsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListEndpointGroupsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListEndpointGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEndpointGroupsResponse listEndpointGroupsResponse;
+
     public ListEndpointGroupsResponse withListEndpointGroupsResponse(org.openapis.openapi.models.shared.ListEndpointGroupsResponse listEndpointGroupsResponse) {
         this.listEndpointGroupsResponse = listEndpointGroupsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListEndpointGroupsResponse {
      */
     
     public Object listenerNotFoundException;
+
     public ListEndpointGroupsResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListEndpointGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListEndpointGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListEndpointGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEndpointGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListEndpointGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

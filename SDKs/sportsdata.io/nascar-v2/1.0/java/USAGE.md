@@ -3,10 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DriverDetailsFormatEnum;
 import org.openapis.openapi.models.operations.DriverDetailsRequest;
 import org.openapis.openapi.models.operations.DriverDetailsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +17,17 @@ public class Application {
                 }})
                 .build();
 
-            DriverDetailsRequest req = new DriverDetailsRequest() {{
-                driverid = "corrupti";
-                format = "json";
-            }}            
+            DriverDetailsRequest req = new DriverDetailsRequest("corrupti", DriverDetailsFormatEnum.JSON);            
 
             DriverDetailsResponse res = sdk.driverDetails(req);
 
-            if (res.driver.isPresent()) {
+            if (res.driver != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImagesResultFpgaImagesState {
     
     public DescribeFpgaImagesResultFpgaImagesStateCodeEnum code;
+
     public DescribeFpgaImagesResultFpgaImagesState withCode(DescribeFpgaImagesResultFpgaImagesStateCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFpgaImagesResultFpgaImagesState {
     
     
     public String message;
+
     public DescribeFpgaImagesResultFpgaImagesState withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeFpgaImagesResultFpgaImagesState(){}
 }

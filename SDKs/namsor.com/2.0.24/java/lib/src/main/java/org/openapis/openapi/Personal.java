@@ -55,11 +55,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CorridorResponse res = new org.openapis.openapi.models.operations.CorridorResponse() {{
+        org.openapis.openapi.models.operations.CorridorResponse res = new org.openapis.openapi.models.operations.CorridorResponse(contentType, httpRes.statusCode()) {{
             corridorOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CorridorBatchResponse res = new org.openapis.openapi.models.operations.CorridorBatchResponse() {{
+        org.openapis.openapi.models.operations.CorridorBatchResponse res = new org.openapis.openapi.models.operations.CorridorBatchResponse(contentType, httpRes.statusCode()) {{
             batchCorridorOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CountryResponse res = new org.openapis.openapi.models.operations.CountryResponse() {{
+        org.openapis.openapi.models.operations.CountryResponse res = new org.openapis.openapi.models.operations.CountryResponse(contentType, httpRes.statusCode()) {{
             personalNameGeoOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -185,11 +179,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CountryBatchResponse res = new org.openapis.openapi.models.operations.CountryBatchResponse() {{
+        org.openapis.openapi.models.operations.CountryBatchResponse res = new org.openapis.openapi.models.operations.CountryBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameGeoOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,11 +219,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiasporaResponse res = new org.openapis.openapi.models.operations.DiasporaResponse() {{
+        org.openapis.openapi.models.operations.DiasporaResponse res = new org.openapis.openapi.models.operations.DiasporaResponse(contentType, httpRes.statusCode()) {{
             firstLastNameDiasporaedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,11 +261,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiasporaBatchResponse res = new org.openapis.openapi.models.operations.DiasporaBatchResponse() {{
+        org.openapis.openapi.models.operations.DiasporaBatchResponse res = new org.openapis.openapi.models.operations.DiasporaBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameDiasporaedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,7 +280,7 @@ public class Personal {
     }
 
     /**
-     * Infer the likely gender of a just a fiven name, assuming default 'US' local context. Please use preferably full names and local geographic context for better accuracy.
+     * Infer the likely gender of a name.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -300,7 +288,7 @@ public class Personal {
      */
     public org.openapis.openapi.models.operations.GenderResponse gender(org.openapis.openapi.models.operations.GenderRequest request, org.openapis.openapi.models.operations.GenderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderRequest.class, baseUrl, "/api2/json/gender/{firstName}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderRequest.class, baseUrl, "/api2/json/gender/{firstName}/{lastName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -313,11 +301,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderResponse res = new org.openapis.openapi.models.operations.GenderResponse() {{
+        org.openapis.openapi.models.operations.GenderResponse res = new org.openapis.openapi.models.operations.GenderResponse(contentType, httpRes.statusCode()) {{
             firstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -357,11 +343,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderBatchResponse res = new org.openapis.openapi.models.operations.GenderBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderBatchResponse res = new org.openapis.openapi.models.operations.GenderBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -399,11 +383,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderFullResponse res = new org.openapis.openapi.models.operations.GenderFullResponse() {{
+        org.openapis.openapi.models.operations.GenderFullResponse res = new org.openapis.openapi.models.operations.GenderFullResponse(contentType, httpRes.statusCode()) {{
             personalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +425,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderFullBatchResponse res = new org.openapis.openapi.models.operations.GenderFullBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderFullBatchResponse res = new org.openapis.openapi.models.operations.GenderFullBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +465,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderFullGeoResponse res = new org.openapis.openapi.models.operations.GenderFullGeoResponse() {{
+        org.openapis.openapi.models.operations.GenderFullGeoResponse res = new org.openapis.openapi.models.operations.GenderFullGeoResponse(contentType, httpRes.statusCode()) {{
             personalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,11 +507,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderFullGeoBatchResponse res = new org.openapis.openapi.models.operations.GenderFullGeoBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderFullGeoBatchResponse res = new org.openapis.openapi.models.operations.GenderFullGeoBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,11 +547,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderGeoResponse res = new org.openapis.openapi.models.operations.GenderGeoResponse() {{
+        org.openapis.openapi.models.operations.GenderGeoResponse res = new org.openapis.openapi.models.operations.GenderGeoResponse(contentType, httpRes.statusCode()) {{
             firstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -615,11 +589,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenderGeoBatchResponse res = new org.openapis.openapi.models.operations.GenderGeoBatchResponse() {{
+        org.openapis.openapi.models.operations.GenderGeoBatchResponse res = new org.openapis.openapi.models.operations.GenderGeoBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -636,7 +608,7 @@ public class Personal {
     }
 
     /**
-     * Infer the likely gender of a name.
+     * Infer the likely gender of a just a fiven name, assuming default 'US' local context. Please use preferably full names and local geographic context for better accuracy.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -644,7 +616,7 @@ public class Personal {
      */
     public org.openapis.openapi.models.operations.Gender1Response gender1(org.openapis.openapi.models.operations.Gender1Request request, org.openapis.openapi.models.operations.Gender1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Gender1Request.class, baseUrl, "/api2/json/gender/{firstName}/{lastName}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Gender1Request.class, baseUrl, "/api2/json/gender/{firstName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -657,11 +629,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Gender1Response res = new org.openapis.openapi.models.operations.Gender1Response() {{
+        org.openapis.openapi.models.operations.Gender1Response res = new org.openapis.openapi.models.operations.Gender1Response(contentType, httpRes.statusCode()) {{
             firstLastNameGenderedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -699,11 +669,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OriginResponse res = new org.openapis.openapi.models.operations.OriginResponse() {{
+        org.openapis.openapi.models.operations.OriginResponse res = new org.openapis.openapi.models.operations.OriginResponse(contentType, httpRes.statusCode()) {{
             firstLastNameOriginedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -743,11 +711,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OriginBatchResponse res = new org.openapis.openapi.models.operations.OriginBatchResponse() {{
+        org.openapis.openapi.models.operations.OriginBatchResponse res = new org.openapis.openapi.models.operations.OriginBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameOriginedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -785,11 +751,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseNameResponse res = new org.openapis.openapi.models.operations.ParseNameResponse() {{
+        org.openapis.openapi.models.operations.ParseNameResponse res = new org.openapis.openapi.models.operations.ParseNameResponse(contentType, httpRes.statusCode()) {{
             personalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -829,11 +793,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseNameBatchResponse res = new org.openapis.openapi.models.operations.ParseNameBatchResponse() {{
+        org.openapis.openapi.models.operations.ParseNameBatchResponse res = new org.openapis.openapi.models.operations.ParseNameBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -871,11 +833,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseNameGeoResponse res = new org.openapis.openapi.models.operations.ParseNameGeoResponse() {{
+        org.openapis.openapi.models.operations.ParseNameGeoResponse res = new org.openapis.openapi.models.operations.ParseNameGeoResponse(contentType, httpRes.statusCode()) {{
             personalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -915,11 +875,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ParseNameGeoBatchResponse res = new org.openapis.openapi.models.operations.ParseNameGeoBatchResponse() {{
+        org.openapis.openapi.models.operations.ParseNameGeoBatchResponse res = new org.openapis.openapi.models.operations.ParseNameGeoBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameParsedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -957,11 +915,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReligionFullResponse res = new org.openapis.openapi.models.operations.ReligionFullResponse() {{
+        org.openapis.openapi.models.operations.ReligionFullResponse res = new org.openapis.openapi.models.operations.ReligionFullResponse(contentType, httpRes.statusCode()) {{
             personalNameReligionedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1001,11 +957,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReligionFullBatchResponse res = new org.openapis.openapi.models.operations.ReligionFullBatchResponse() {{
+        org.openapis.openapi.models.operations.ReligionFullBatchResponse res = new org.openapis.openapi.models.operations.ReligionFullBatchResponse(contentType, httpRes.statusCode()) {{
             batchPersonalNameReligionedOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1043,11 +997,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubclassificationResponse res = new org.openapis.openapi.models.operations.SubclassificationResponse() {{
+        org.openapis.openapi.models.operations.SubclassificationResponse res = new org.openapis.openapi.models.operations.SubclassificationResponse(contentType, httpRes.statusCode()) {{
             firstLastNameGeoSubclassificationOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1087,11 +1039,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubclassificationBatchResponse res = new org.openapis.openapi.models.operations.SubclassificationBatchResponse() {{
+        org.openapis.openapi.models.operations.SubclassificationBatchResponse res = new org.openapis.openapi.models.operations.SubclassificationBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameGeoSubclassificationOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1099,6 +1049,88 @@ public class Personal {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.BatchFirstLastNameGeoSubclassificationOut out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.BatchFirstLastNameGeoSubclassificationOut.class);
                 res.batchFirstLastNameGeoSubclassificationOut = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {
+        }
+
+        return res;
+    }
+
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely origin of a name at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SubclassificationFullResponse subclassificationFull(org.openapis.openapi.models.operations.SubclassificationFullRequest request, org.openapis.openapi.models.operations.SubclassificationFullSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubclassificationFullRequest.class, baseUrl, "/api2/json/subclassificationFull/{countryIso2}/{fullName}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SubclassificationFullResponse res = new org.openapis.openapi.models.operations.SubclassificationFullResponse(contentType, httpRes.statusCode()) {{
+            firstLastNameGeoSubclassificationOut = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.FirstLastNameGeoSubclassificationOut out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.FirstLastNameGeoSubclassificationOut.class);
+                res.firstLastNameGeoSubclassificationOut = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {
+        }
+
+        return res;
+    }
+
+    /**
+     * [USES 10 UNITS PER NAME] Infer the likely origin of a list of up to 100 names at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SubclassificationFullBatchResponse subclassificationFullBatch(org.openapis.openapi.models.shared.BatchPersonalNameGeoIn request, org.openapis.openapi.models.operations.SubclassificationFullBatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/subclassificationFullBatch");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SubclassificationFullBatchResponse res = new org.openapis.openapi.models.operations.SubclassificationFullBatchResponse(contentType, httpRes.statusCode()) {{
+            batchPersonalNameGeoSubclassificationOut = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.BatchPersonalNameGeoSubclassificationOut out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.BatchPersonalNameGeoSubclassificationOut.class);
+                res.batchPersonalNameGeoSubclassificationOut = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403) {
@@ -1129,11 +1161,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsRaceEthnicityResponse res = new org.openapis.openapi.models.operations.UsRaceEthnicityResponse() {{
+        org.openapis.openapi.models.operations.UsRaceEthnicityResponse res = new org.openapis.openapi.models.operations.UsRaceEthnicityResponse(contentType, httpRes.statusCode()) {{
             firstLastNameUSRaceEthnicityOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1173,11 +1203,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsRaceEthnicityBatchResponse res = new org.openapis.openapi.models.operations.UsRaceEthnicityBatchResponse() {{
+        org.openapis.openapi.models.operations.UsRaceEthnicityBatchResponse res = new org.openapis.openapi.models.operations.UsRaceEthnicityBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameUSRaceEthnicityOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1215,11 +1243,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsRaceEthnicityZip5Response res = new org.openapis.openapi.models.operations.UsRaceEthnicityZip5Response() {{
+        org.openapis.openapi.models.operations.UsRaceEthnicityZip5Response res = new org.openapis.openapi.models.operations.UsRaceEthnicityZip5Response(contentType, httpRes.statusCode()) {{
             firstLastNameUSRaceEthnicityOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1259,11 +1285,9 @@ public class Personal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchResponse res = new org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchResponse() {{
+        org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchResponse res = new org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchResponse(contentType, httpRes.statusCode()) {{
             batchFirstLastNameUSRaceEthnicityOut = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

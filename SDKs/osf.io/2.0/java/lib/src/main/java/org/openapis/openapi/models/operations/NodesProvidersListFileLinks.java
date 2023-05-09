@@ -15,6 +15,7 @@ public class NodesProvidersListFileLinks {
      */
     
     public String delete;
+
     public NodesProvidersListFileLinks withDelete(String delete) {
         this.delete = delete;
         return this;
@@ -25,6 +26,7 @@ public class NodesProvidersListFileLinks {
      */
     
     public String download;
+
     public NodesProvidersListFileLinks withDownload(String download) {
         this.download = download;
         return this;
@@ -35,6 +37,7 @@ public class NodesProvidersListFileLinks {
      */
     
     public String info;
+
     public NodesProvidersListFileLinks withInfo(String info) {
         this.info = info;
         return this;
@@ -45,6 +48,7 @@ public class NodesProvidersListFileLinks {
      */
     
     public String move;
+
     public NodesProvidersListFileLinks withMove(String move) {
         this.move = move;
         return this;
@@ -55,6 +59,7 @@ public class NodesProvidersListFileLinks {
      */
     
     public String newFolder;
+
     public NodesProvidersListFileLinks withNewFolder(String newFolder) {
         this.newFolder = newFolder;
         return this;
@@ -65,6 +70,7 @@ public class NodesProvidersListFileLinks {
      */
     
     public String self;
+
     public NodesProvidersListFileLinks withSelf(String self) {
         this.self = self;
         return this;
@@ -75,9 +81,11 @@ public class NodesProvidersListFileLinks {
      */
     
     public String upload;
+
     public NodesProvidersListFileLinks withUpload(String upload) {
         this.upload = upload;
         return this;
     }
     
+    public NodesProvidersListFileLinks(){}
 }

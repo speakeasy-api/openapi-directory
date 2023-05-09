@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyIpamResourceDiscoveryResultIpamResourceDiscoveryTags {
     
     public String key;
+
     public ModifyIpamResourceDiscoveryResultIpamResourceDiscoveryTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ModifyIpamResourceDiscoveryResultIpamResourceDiscoveryTags {
     
     
     public String value;
+
     public ModifyIpamResourceDiscoveryResultIpamResourceDiscoveryTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyIpamResourceDiscoveryResultIpamResourceDiscoveryTags(){}
 }

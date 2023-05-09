@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateGetRequest {
@@ -12,6 +13,7 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
     public String dollarSelect;
+
     public CertificateGetRequest withDollarSelect(String dollarSelect) {
         this.dollarSelect = dollarSelect;
         return this;
@@ -22,6 +24,7 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public CertificateGetRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public CertificateGetRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public CertificateGetRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public CertificateGetRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -62,6 +68,7 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbprint")
     public String thumbprint;
+
     public CertificateGetRequest withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
@@ -72,6 +79,7 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbprintAlgorithm")
     public String thumbprintAlgorithm;
+
     public CertificateGetRequest withThumbprintAlgorithm(String thumbprintAlgorithm) {
         this.thumbprintAlgorithm = thumbprintAlgorithm;
         return this;
@@ -82,9 +90,15 @@ public class CertificateGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public CertificateGetRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public CertificateGetRequest(@JsonProperty("api-version") String apiVersion, @JsonProperty("thumbprint") String thumbprint, @JsonProperty("thumbprintAlgorithm") String thumbprintAlgorithm) {
+        this.apiVersion = apiVersion;
+        this.thumbprint = thumbprint;
+        this.thumbprintAlgorithm = thumbprintAlgorithm;
+  }
 }

@@ -15,9 +15,11 @@ public class Explainability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Report")
     public MetricsSource report;
+
     public Explainability withReport(MetricsSource report) {
         this.report = report;
         return this;
     }
     
+    public Explainability(){}
 }

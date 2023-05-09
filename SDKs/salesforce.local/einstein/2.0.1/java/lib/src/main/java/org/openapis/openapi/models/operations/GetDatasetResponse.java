@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDatasetResponse {
     
     public String contentType;
+
     public GetDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDatasetResponse {
      */
     
     public org.openapis.openapi.models.shared.Dataset dataset;
+
     public GetDatasetResponse withDataset(org.openapis.openapi.models.shared.Dataset dataset) {
         this.dataset = dataset;
         return this;
@@ -26,6 +29,7 @@ public class GetDatasetResponse {
     
     
     public Integer statusCode;
+
     public GetDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

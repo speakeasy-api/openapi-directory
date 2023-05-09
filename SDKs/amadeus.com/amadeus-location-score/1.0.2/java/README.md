@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetCategoryRatedAreasRequest;
 import org.openapis.openapi.models.operations.GetCategoryRatedAreasResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetCategoryRatedAreasRequest req = new GetCategoryRatedAreasRequest() {{
-                latitude = 5488.14;
-                longitude = 5928.45;
-            }}            
+            GetCategoryRatedAreasRequest req = new GetCategoryRatedAreasRequest(5488.14, 5928.45);            
 
             GetCategoryRatedAreasResponse res = sdk.categoryRatedAreas.getCategoryRatedAreas(req);
 
-            if (res.getCategoryRatedAreas200ApplicationVndAmadeusPlusJsonObject.isPresent()) {
+            if (res.getCategoryRatedAreas200ApplicationVndAmadeusPlusJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### categoryRatedAreas
+### [categoryRatedAreas](docs/categoryratedareas/README.md)
 
-* `getCategoryRatedAreas` - GET category rated areas
+* [getCategoryRatedAreas](docs/categoryratedareas/README.md#getcategoryratedareas) - GET category rated areas
 <!-- End SDK Available Operations -->
 
 ### Maturity

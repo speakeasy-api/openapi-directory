@@ -12,6 +12,7 @@ public class BookTranTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BookTranTypeDto withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class BookTranTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BookTranTypeDto withDescription(String description) {
         this.description = description;
         return this;
@@ -28,9 +30,11 @@ public class BookTranTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BookTranTypeDto withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public BookTranTypeDto(){}
 }

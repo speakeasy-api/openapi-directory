@@ -10,7 +10,9 @@ public enum CVSSAvailabilityImpactEnum {
     IMPACT_UNSPECIFIED("IMPACT_UNSPECIFIED"),
     IMPACT_HIGH("IMPACT_HIGH"),
     IMPACT_LOW("IMPACT_LOW"),
-    IMPACT_NONE("IMPACT_NONE");
+    IMPACT_NONE("IMPACT_NONE"),
+    IMPACT_PARTIAL("IMPACT_PARTIAL"),
+    IMPACT_COMPLETE("IMPACT_COMPLETE");
 
     @JsonValue
     public final String value;

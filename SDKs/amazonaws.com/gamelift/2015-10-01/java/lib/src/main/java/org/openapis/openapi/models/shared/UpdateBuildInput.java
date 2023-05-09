@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateBuildInput {
     @JsonProperty("BuildId")
     public String buildId;
+
     public UpdateBuildInput withBuildId(String buildId) {
         this.buildId = buildId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateBuildInput withName(String name) {
         this.name = name;
         return this;
@@ -27,9 +29,13 @@ public class UpdateBuildInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public UpdateBuildInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateBuildInput(@JsonProperty("BuildId") String buildId) {
+        this.buildId = buildId;
+  }
 }

@@ -18,6 +18,7 @@ public class PreprintsCreatePreprintAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doi")
     public String doi;
+
     public PreprintsCreatePreprintAttributesInput withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -29,6 +30,7 @@ public class PreprintsCreatePreprintAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license_record")
     public String licenseRecord;
+
     public PreprintsCreatePreprintAttributesInput withLicenseRecord(String licenseRecord) {
         this.licenseRecord = licenseRecord;
         return this;
@@ -40,9 +42,11 @@ public class PreprintsCreatePreprintAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjects")
     public String[] subjects;
+
     public PreprintsCreatePreprintAttributesInput withSubjects(String[] subjects) {
         this.subjects = subjects;
         return this;
     }
     
+    public PreprintsCreatePreprintAttributesInput(){}
 }

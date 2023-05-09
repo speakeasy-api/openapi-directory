@@ -15,9 +15,11 @@ public class AddMembersForPortfolioRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.AddMembersRequest data;
+
     public AddMembersForPortfolioRequestBody withData(org.openapis.openapi.models.shared.AddMembersRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddMembersForPortfolioRequestBody(){}
 }

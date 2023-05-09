@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementAccountUserLinksInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EntityUserLinkInput entityUserLinkInput;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withEntityUserLinkInput(org.openapis.openapi.models.shared.EntityUserLinkInput entityUserLinkInput) {
         this.entityUserLinkInput = entityUserLinkInput;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,9 +98,13 @@ public class AnalyticsManagementAccountUserLinksInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementAccountUserLinksInsertRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AnalyticsManagementAccountUserLinksInsertRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

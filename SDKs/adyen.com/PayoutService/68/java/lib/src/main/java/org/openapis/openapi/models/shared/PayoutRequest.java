@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PayoutRequest {
     @JsonProperty("amount")
     public Amount amount;
+
     public PayoutRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -19,6 +20,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public Address billingAddress;
+
     public PayoutRequest withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -27,6 +29,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public Card card;
+
     public PayoutRequest withCard(Card card) {
         this.card = card;
         return this;
@@ -38,6 +41,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraudOffset")
     public Integer fraudOffset;
+
     public PayoutRequest withFraudOffset(Integer fraudOffset) {
         this.fraudOffset = fraudOffset;
         return this;
@@ -46,6 +50,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundSource")
     public FundSource fundSource;
+
     public PayoutRequest withFundSource(FundSource fundSource) {
         this.fundSource = fundSource;
         return this;
@@ -56,6 +61,7 @@ public class PayoutRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public PayoutRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -64,6 +70,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring")
     public Recurring recurring;
+
     public PayoutRequest withRecurring(Recurring recurring) {
         this.recurring = recurring;
         return this;
@@ -76,6 +83,7 @@ public class PayoutRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public PayoutRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -87,6 +95,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedRecurringDetailReference")
     public String selectedRecurringDetailReference;
+
     public PayoutRequest withSelectedRecurringDetailReference(String selectedRecurringDetailReference) {
         this.selectedRecurringDetailReference = selectedRecurringDetailReference;
         return this;
@@ -99,6 +108,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperEmail")
     public String shopperEmail;
+
     public PayoutRequest withShopperEmail(String shopperEmail) {
         this.shopperEmail = shopperEmail;
         return this;
@@ -117,6 +127,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public PayoutRequestShopperInteractionEnum shopperInteraction;
+
     public PayoutRequest withShopperInteraction(PayoutRequestShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -125,6 +136,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperName")
     public Name shopperName;
+
     public PayoutRequest withShopperName(Name shopperName) {
         this.shopperName = shopperName;
         return this;
@@ -138,6 +150,7 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public PayoutRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -149,9 +162,15 @@ public class PayoutRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephoneNumber")
     public String telephoneNumber;
+
     public PayoutRequest withTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
         return this;
     }
     
+    public PayoutRequest(@JsonProperty("amount") Amount amount, @JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("reference") String reference) {
+        this.amount = amount;
+        this.merchantAccount = merchantAccount;
+        this.reference = reference;
+  }
 }

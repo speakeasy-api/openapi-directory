@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateAndBenefitsIdentifiers")
     public String[] rateAndBenefitsIdentifiers;
+
     public ItemsUpdate200ApplicationJSONRatesAndBenefitsData withRateAndBenefitsIdentifiers(String[] rateAndBenefitsIdentifiers) {
         this.rateAndBenefitsIdentifiers = rateAndBenefitsIdentifiers;
         return this;
@@ -29,9 +30,11 @@ public class ItemsUpdate200ApplicationJSONRatesAndBenefitsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teaser")
     public String[] teaser;
+
     public ItemsUpdate200ApplicationJSONRatesAndBenefitsData withTeaser(String[] teaser) {
         this.teaser = teaser;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONRatesAndBenefitsData(){}
 }

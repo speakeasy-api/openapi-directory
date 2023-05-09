@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useSuppliedUrlsOnly")
     public Boolean useSuppliedUrlsOnly;
+
     public GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting withUseSuppliedUrlsOnly(Boolean useSuppliedUrlsOnly) {
         this.useSuppliedUrlsOnly = useSuppliedUrlsOnly;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting(){}
 }

@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * VersionNumberEnum - Service version number. The current value is 1.
  */
 public enum VersionNumberEnum {
-    ONE("1");
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private VersionNumberEnum(String value) {
+    private VersionNumberEnum(Long value) {
         this.value = value;
     }
 }

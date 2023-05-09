@@ -12,6 +12,7 @@ public class ListSharedReportGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListSharedReportGroupsInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListSharedReportGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSharedReportGroupsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListSharedReportGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public SharedResourceSortByTypeEnum sortBy;
+
     public ListSharedReportGroupsInput withSortBy(SharedResourceSortByTypeEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -36,9 +39,11 @@ public class ListSharedReportGroupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOrderTypeEnum sortOrder;
+
     public ListSharedReportGroupsInput withSortOrder(SortOrderTypeEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListSharedReportGroupsInput(){}
 }

@@ -15,9 +15,11 @@ public class DetachStaticIpResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public DetachStaticIpResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public DetachStaticIpResult(){}
 }

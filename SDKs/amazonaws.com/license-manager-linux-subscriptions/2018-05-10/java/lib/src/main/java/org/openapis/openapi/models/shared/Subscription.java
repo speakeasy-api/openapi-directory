@@ -15,6 +15,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public Subscription withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -23,6 +24,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Subscription withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Subscription withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Subscription(){}
 }

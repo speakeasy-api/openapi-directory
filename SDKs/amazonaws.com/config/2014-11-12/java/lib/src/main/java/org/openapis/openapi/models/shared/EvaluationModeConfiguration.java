@@ -15,9 +15,11 @@ public class EvaluationModeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public EvaluationModeEnum mode;
+
     public EvaluationModeConfiguration withMode(EvaluationModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public EvaluationModeConfiguration(){}
 }

@@ -12,9 +12,13 @@ public class TaskRemoveProjectRequest {
      */
     @JsonProperty("project")
     public String project;
+
     public TaskRemoveProjectRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public TaskRemoveProjectRequest(@JsonProperty("project") String project) {
+        this.project = project;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWhatIfForecastResponse {
     
     public String contentType;
+
     public DescribeWhatIfForecastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWhatIfForecastResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWhatIfForecastResponse describeWhatIfForecastResponse;
+
     public DescribeWhatIfForecastResponse withDescribeWhatIfForecastResponse(org.openapis.openapi.models.shared.DescribeWhatIfForecastResponse describeWhatIfForecastResponse) {
         this.describeWhatIfForecastResponse = describeWhatIfForecastResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWhatIfForecastResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeWhatIfForecastResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeWhatIfForecastResponse {
     
     
     public Integer statusCode;
+
     public DescribeWhatIfForecastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeWhatIfForecastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWhatIfForecastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeWhatIfForecastResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWhatIfForecastResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeWhatIfForecastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

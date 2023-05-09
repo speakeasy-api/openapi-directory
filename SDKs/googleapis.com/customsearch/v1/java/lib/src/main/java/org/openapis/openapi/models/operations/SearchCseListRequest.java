@@ -12,6 +12,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SearchCseListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SearchCseListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SearchCseListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=c2coff")
     public String c2coff;
+
     public SearchCseListRequest withC2coff(String c2coff) {
         this.c2coff = c2coff;
         return this;
@@ -52,6 +56,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SearchCseListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +67,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cr")
     public String cr;
+
     public SearchCseListRequest withCr(String cr) {
         this.cr = cr;
         return this;
@@ -72,6 +78,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cx")
     public String cx;
+
     public SearchCseListRequest withCx(String cx) {
         this.cx = cx;
         return this;
@@ -82,6 +89,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRestrict")
     public String dateRestrict;
+
     public SearchCseListRequest withDateRestrict(String dateRestrict) {
         this.dateRestrict = dateRestrict;
         return this;
@@ -92,6 +100,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exactTerms")
     public String exactTerms;
+
     public SearchCseListRequest withExactTerms(String exactTerms) {
         this.exactTerms = exactTerms;
         return this;
@@ -102,6 +111,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeTerms")
     public String excludeTerms;
+
     public SearchCseListRequest withExcludeTerms(String excludeTerms) {
         this.excludeTerms = excludeTerms;
         return this;
@@ -112,6 +122,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SearchCseListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -122,6 +133,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileType")
     public String fileType;
+
     public SearchCseListRequest withFileType(String fileType) {
         this.fileType = fileType;
         return this;
@@ -132,6 +144,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public SearchCseListRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -142,6 +155,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gl")
     public String gl;
+
     public SearchCseListRequest withGl(String gl) {
         this.gl = gl;
         return this;
@@ -152,6 +166,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googlehost")
     public String googlehost;
+
     public SearchCseListRequest withGooglehost(String googlehost) {
         this.googlehost = googlehost;
         return this;
@@ -162,6 +177,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highRange")
     public String highRange;
+
     public SearchCseListRequest withHighRange(String highRange) {
         this.highRange = highRange;
         return this;
@@ -172,6 +188,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hl")
     public String hl;
+
     public SearchCseListRequest withHl(String hl) {
         this.hl = hl;
         return this;
@@ -182,6 +199,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hq")
     public String hq;
+
     public SearchCseListRequest withHq(String hq) {
         this.hq = hq;
         return this;
@@ -192,6 +210,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imgColorType")
     public SearchCseListImgColorTypeEnum imgColorType;
+
     public SearchCseListRequest withImgColorType(SearchCseListImgColorTypeEnum imgColorType) {
         this.imgColorType = imgColorType;
         return this;
@@ -202,6 +221,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imgDominantColor")
     public SearchCseListImgDominantColorEnum imgDominantColor;
+
     public SearchCseListRequest withImgDominantColor(SearchCseListImgDominantColorEnum imgDominantColor) {
         this.imgDominantColor = imgDominantColor;
         return this;
@@ -212,6 +232,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imgSize")
     public SearchCseListImgSizeEnum imgSize;
+
     public SearchCseListRequest withImgSize(SearchCseListImgSizeEnum imgSize) {
         this.imgSize = imgSize;
         return this;
@@ -222,6 +243,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imgType")
     public SearchCseListImgTypeEnum imgType;
+
     public SearchCseListRequest withImgType(SearchCseListImgTypeEnum imgType) {
         this.imgType = imgType;
         return this;
@@ -232,6 +254,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SearchCseListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -242,6 +265,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linkSite")
     public String linkSite;
+
     public SearchCseListRequest withLinkSite(String linkSite) {
         this.linkSite = linkSite;
         return this;
@@ -252,6 +276,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lowRange")
     public String lowRange;
+
     public SearchCseListRequest withLowRange(String lowRange) {
         this.lowRange = lowRange;
         return this;
@@ -262,6 +287,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lr")
     public String lr;
+
     public SearchCseListRequest withLr(String lr) {
         this.lr = lr;
         return this;
@@ -272,6 +298,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=num")
     public Long num;
+
     public SearchCseListRequest withNum(Long num) {
         this.num = num;
         return this;
@@ -282,6 +309,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SearchCseListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -292,6 +320,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orTerms")
     public String orTerms;
+
     public SearchCseListRequest withOrTerms(String orTerms) {
         this.orTerms = orTerms;
         return this;
@@ -302,6 +331,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SearchCseListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -312,6 +342,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchCseListRequest withQ(String q) {
         this.q = q;
         return this;
@@ -322,6 +353,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SearchCseListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -332,6 +364,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relatedSite")
     public String relatedSite;
+
     public SearchCseListRequest withRelatedSite(String relatedSite) {
         this.relatedSite = relatedSite;
         return this;
@@ -342,6 +375,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
     public String rights;
+
     public SearchCseListRequest withRights(String rights) {
         this.rights = rights;
         return this;
@@ -352,6 +386,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
     public SearchCseListSafeEnum safe;
+
     public SearchCseListRequest withSafe(SearchCseListSafeEnum safe) {
         this.safe = safe;
         return this;
@@ -362,6 +397,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchType")
     public SearchCseListSearchTypeEnum searchType;
+
     public SearchCseListRequest withSearchType(SearchCseListSearchTypeEnum searchType) {
         this.searchType = searchType;
         return this;
@@ -372,6 +408,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteSearch")
     public String siteSearch;
+
     public SearchCseListRequest withSiteSearch(String siteSearch) {
         this.siteSearch = siteSearch;
         return this;
@@ -382,6 +419,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteSearchFilter")
     public SearchCseListSiteSearchFilterEnum siteSearchFilter;
+
     public SearchCseListRequest withSiteSearchFilter(SearchCseListSiteSearchFilterEnum siteSearchFilter) {
         this.siteSearchFilter = siteSearchFilter;
         return this;
@@ -392,6 +430,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public SearchCseListRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -402,6 +441,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public SearchCseListRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -412,6 +452,7 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SearchCseListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -422,9 +463,11 @@ public class SearchCseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SearchCseListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SearchCseListRequest(){}
 }

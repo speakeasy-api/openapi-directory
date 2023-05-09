@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class VpcSecurityGroupMembershipList {
     
     public String status;
+
     public VpcSecurityGroupMembershipList withStatus(String status) {
         this.status = status;
         return this;
@@ -16,9 +17,11 @@ public class VpcSecurityGroupMembershipList {
     
     
     public String vpcSecurityGroupId;
+
     public VpcSecurityGroupMembershipList withVpcSecurityGroupId(String vpcSecurityGroupId) {
         this.vpcSecurityGroupId = vpcSecurityGroupId;
         return this;
     }
     
+    public VpcSecurityGroupMembershipList(){}
 }

@@ -15,6 +15,7 @@ public class DestinyDestinyItemQuantity {
      */
     
     public Boolean hasConditionalVisibility;
+
     public DestinyDestinyItemQuantity withHasConditionalVisibility(Boolean hasConditionalVisibility) {
         this.hasConditionalVisibility = hasConditionalVisibility;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDestinyItemQuantity {
      */
     
     public Long itemHash;
+
     public DestinyDestinyItemQuantity withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDestinyItemQuantity {
      */
     
     public Long itemInstanceId;
+
     public DestinyDestinyItemQuantity withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
@@ -45,9 +48,11 @@ public class DestinyDestinyItemQuantity {
      */
     
     public Integer quantity;
+
     public DestinyDestinyItemQuantity withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public DestinyDestinyItemQuantity(){}
 }

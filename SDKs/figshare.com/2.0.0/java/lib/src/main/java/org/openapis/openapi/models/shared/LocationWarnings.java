@@ -15,6 +15,7 @@ public class LocationWarnings {
      */
     @JsonProperty("entity_id")
     public Long entityId;
+
     public LocationWarnings withEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
@@ -25,6 +26,7 @@ public class LocationWarnings {
      */
     @JsonProperty("location")
     public String location;
+
     public LocationWarnings withLocation(String location) {
         this.location = location;
         return this;
@@ -35,9 +37,15 @@ public class LocationWarnings {
      */
     @JsonProperty("warnings")
     public String[] warnings;
+
     public LocationWarnings withWarnings(String[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public LocationWarnings(@JsonProperty("entity_id") Long entityId, @JsonProperty("location") String location, @JsonProperty("warnings") String[] warnings) {
+        this.entityId = entityId;
+        this.location = location;
+        this.warnings = warnings;
+  }
 }

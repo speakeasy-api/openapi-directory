@@ -15,6 +15,7 @@ public class TransactWriteItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionCheck")
     public ConditionCheck conditionCheck;
+
     public TransactWriteItem withConditionCheck(ConditionCheck conditionCheck) {
         this.conditionCheck = conditionCheck;
         return this;
@@ -23,6 +24,7 @@ public class TransactWriteItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Delete")
     public Delete delete;
+
     public TransactWriteItem withDelete(Delete delete) {
         this.delete = delete;
         return this;
@@ -31,6 +33,7 @@ public class TransactWriteItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Put")
     public Put put;
+
     public TransactWriteItem withPut(Put put) {
         this.put = put;
         return this;
@@ -39,9 +42,11 @@ public class TransactWriteItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Update")
     public Update update;
+
     public TransactWriteItem withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public TransactWriteItem(){}
 }

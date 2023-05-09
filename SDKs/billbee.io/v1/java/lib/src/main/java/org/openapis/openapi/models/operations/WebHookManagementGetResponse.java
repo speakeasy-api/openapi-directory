@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebHookManagementGetResponse {
     
     public String contentType;
+
     public WebHookManagementGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebHookManagementGetResponse {
      */
     
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiWebHookApiModel[] rechnungsdruckWebAppControllersApiWebHookApiModels;
+
     public WebHookManagementGetResponse withRechnungsdruckWebAppControllersApiWebHookApiModels(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiWebHookApiModel[] rechnungsdruckWebAppControllersApiWebHookApiModels) {
         this.rechnungsdruckWebAppControllersApiWebHookApiModels = rechnungsdruckWebAppControllersApiWebHookApiModels;
         return this;
@@ -26,6 +29,7 @@ public class WebHookManagementGetResponse {
     
     
     public Integer statusCode;
+
     public WebHookManagementGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class WebHookManagementGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebHookManagementGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WebHookManagementGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

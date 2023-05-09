@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVirtualGatewayResponse {
@@ -12,6 +13,7 @@ public class DescribeVirtualGatewayResponse {
      */
     
     public Object badRequestException;
+
     public DescribeVirtualGatewayResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVirtualGatewayResponse {
     
     
     public String contentType;
+
     public DescribeVirtualGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVirtualGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVirtualGatewayOutput describeVirtualGatewayOutput;
+
     public DescribeVirtualGatewayResponse withDescribeVirtualGatewayOutput(org.openapis.openapi.models.shared.DescribeVirtualGatewayOutput describeVirtualGatewayOutput) {
         this.describeVirtualGatewayOutput = describeVirtualGatewayOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVirtualGatewayResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeVirtualGatewayResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeVirtualGatewayResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeVirtualGatewayResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeVirtualGatewayResponse {
      */
     
     public Object notFoundException;
+
     public DescribeVirtualGatewayResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeVirtualGatewayResponse {
     
     
     public Integer statusCode;
+
     public DescribeVirtualGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeVirtualGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVirtualGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeVirtualGatewayResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeVirtualGatewayResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeVirtualGatewayResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeVirtualGatewayResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeVirtualGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

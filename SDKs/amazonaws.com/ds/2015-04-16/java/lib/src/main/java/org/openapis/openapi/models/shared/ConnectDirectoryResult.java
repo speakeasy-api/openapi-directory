@@ -15,9 +15,11 @@ public class ConnectDirectoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public ConnectDirectoryResult withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public ConnectDirectoryResult(){}
 }

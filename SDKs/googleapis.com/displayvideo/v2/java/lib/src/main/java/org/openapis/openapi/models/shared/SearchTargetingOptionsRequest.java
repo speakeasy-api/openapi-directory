@@ -18,6 +18,7 @@ public class SearchTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public SearchTargetingOptionsRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class SearchTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessChainSearchTerms")
     public BusinessChainSearchTerms businessChainSearchTerms;
+
     public SearchTargetingOptionsRequest withBusinessChainSearchTerms(BusinessChainSearchTerms businessChainSearchTerms) {
         this.businessChainSearchTerms = businessChainSearchTerms;
         return this;
@@ -40,6 +42,7 @@ public class SearchTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoRegionSearchTerms")
     public GeoRegionSearchTerms geoRegionSearchTerms;
+
     public SearchTargetingOptionsRequest withGeoRegionSearchTerms(GeoRegionSearchTerms geoRegionSearchTerms) {
         this.geoRegionSearchTerms = geoRegionSearchTerms;
         return this;
@@ -51,6 +54,7 @@ public class SearchTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public SearchTargetingOptionsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -62,6 +66,7 @@ public class SearchTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public SearchTargetingOptionsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -73,9 +78,11 @@ public class SearchTargetingOptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poiSearchTerms")
     public PoiSearchTerms poiSearchTerms;
+
     public SearchTargetingOptionsRequest withPoiSearchTerms(PoiSearchTerms poiSearchTerms) {
         this.poiSearchTerms = poiSearchTerms;
         return this;
     }
     
+    public SearchTargetingOptionsRequest(){}
 }

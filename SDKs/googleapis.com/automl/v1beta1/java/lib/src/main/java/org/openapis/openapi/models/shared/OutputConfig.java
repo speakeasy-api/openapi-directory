@@ -18,6 +18,7 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDestination")
     public BigQueryDestination bigqueryDestination;
+
     public OutputConfig withBigqueryDestination(BigQueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
         return this;
@@ -29,9 +30,11 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsDestination gcsDestination;
+
     public OutputConfig withGcsDestination(GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public OutputConfig(){}
 }

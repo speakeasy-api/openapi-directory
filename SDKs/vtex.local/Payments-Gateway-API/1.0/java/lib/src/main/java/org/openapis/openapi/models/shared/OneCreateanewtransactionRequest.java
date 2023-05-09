@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OneCreateanewtransactionRequest {
     @JsonProperty("channel")
     public String channel;
+
     public OneCreateanewtransactionRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -18,6 +19,7 @@ public class OneCreateanewtransactionRequest {
     
     @JsonProperty("referenceId")
     public String referenceId;
+
     public OneCreateanewtransactionRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -25,6 +27,7 @@ public class OneCreateanewtransactionRequest {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public OneCreateanewtransactionRequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -33,6 +36,7 @@ public class OneCreateanewtransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urn")
     public String urn;
+
     public OneCreateanewtransactionRequest withUrn(String urn) {
         this.urn = urn;
         return this;
@@ -40,9 +44,16 @@ public class OneCreateanewtransactionRequest {
     
     @JsonProperty("value")
     public Integer value;
+
     public OneCreateanewtransactionRequest withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public OneCreateanewtransactionRequest(@JsonProperty("channel") String channel, @JsonProperty("referenceId") String referenceId, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("value") Integer value) {
+        this.channel = channel;
+        this.referenceId = referenceId;
+        this.salesChannel = salesChannel;
+        this.value = value;
+  }
 }

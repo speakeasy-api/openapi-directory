@@ -15,9 +15,11 @@ public class DictlayerdataCommon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DictlayerdataCommon withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DictlayerdataCommon(){}
 }

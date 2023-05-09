@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UnassignPrivateIpAddressesRequest - Contains the parameters for UnassignPrivateIpAddresses.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UnassignPrivateIpAddressesRequest {
     
     public String[] ipv4Prefixes;
+
     public UnassignPrivateIpAddressesRequest withIpv4Prefixes(String[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -19,6 +20,7 @@ public class UnassignPrivateIpAddressesRequest {
     
     
     public String networkInterfaceId;
+
     public UnassignPrivateIpAddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -26,9 +28,13 @@ public class UnassignPrivateIpAddressesRequest {
     
     
     public String[] privateIpAddresses;
+
     public UnassignPrivateIpAddressesRequest withPrivateIpAddresses(String[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
     }
     
+    public UnassignPrivateIpAddressesRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

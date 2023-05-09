@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SpotResizingSpecification {
     @JsonProperty("TimeoutDurationMinutes")
     public Long timeoutDurationMinutes;
+
     public SpotResizingSpecification withTimeoutDurationMinutes(Long timeoutDurationMinutes) {
         this.timeoutDurationMinutes = timeoutDurationMinutes;
         return this;
     }
     
+    public SpotResizingSpecification(@JsonProperty("TimeoutDurationMinutes") Long timeoutDurationMinutes) {
+        this.timeoutDurationMinutes = timeoutDurationMinutes;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeProfileRequest {
     @JsonProperty("ProfileId")
     public String profileId;
+
     public DescribeProfileRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public DescribeProfileRequest(@JsonProperty("ProfileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

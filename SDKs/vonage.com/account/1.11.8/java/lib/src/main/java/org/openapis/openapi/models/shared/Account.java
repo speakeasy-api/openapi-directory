@@ -12,6 +12,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public Account withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public Account withId(Double id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Account withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Account(){}
 }

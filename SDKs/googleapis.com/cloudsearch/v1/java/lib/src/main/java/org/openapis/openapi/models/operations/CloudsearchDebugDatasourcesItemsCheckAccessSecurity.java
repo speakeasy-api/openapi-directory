@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchDebugDatasourcesItemsCheckAccessSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1 option1;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessSecurity withOption1(CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class CloudsearchDebugDatasourcesItemsCheckAccessSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption2 option2;
+
     public CloudsearchDebugDatasourcesItemsCheckAccessSecurity withOption2(CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public CloudsearchDebugDatasourcesItemsCheckAccessSecurity(){}
 }

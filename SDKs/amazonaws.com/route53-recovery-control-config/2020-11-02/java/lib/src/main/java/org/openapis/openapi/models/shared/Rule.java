@@ -15,6 +15,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ASSERTION")
     public AssertionRule assertion;
+
     public Rule withAssertion(AssertionRule assertion) {
         this.assertion = assertion;
         return this;
@@ -23,9 +24,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GATING")
     public GatingRule gating;
+
     public Rule withGating(GatingRule gating) {
         this.gating = gating;
         return this;
     }
     
+    public Rule(){}
 }

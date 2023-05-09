@@ -20,6 +20,7 @@ public class BotAliasSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasId")
     public String botAliasId;
+
     public BotAliasSummary withBotAliasId(String botAliasId) {
         this.botAliasId = botAliasId;
         return this;
@@ -28,6 +29,7 @@ public class BotAliasSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasName")
     public String botAliasName;
+
     public BotAliasSummary withBotAliasName(String botAliasName) {
         this.botAliasName = botAliasName;
         return this;
@@ -36,6 +38,7 @@ public class BotAliasSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botAliasStatus")
     public BotAliasStatusEnum botAliasStatus;
+
     public BotAliasSummary withBotAliasStatus(BotAliasStatusEnum botAliasStatus) {
         this.botAliasStatus = botAliasStatus;
         return this;
@@ -44,6 +47,7 @@ public class BotAliasSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public BotAliasSummary withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -54,6 +58,7 @@ public class BotAliasSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public BotAliasSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -62,6 +67,7 @@ public class BotAliasSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BotAliasSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -72,9 +78,11 @@ public class BotAliasSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public BotAliasSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
     }
     
+    public BotAliasSummary(){}
 }

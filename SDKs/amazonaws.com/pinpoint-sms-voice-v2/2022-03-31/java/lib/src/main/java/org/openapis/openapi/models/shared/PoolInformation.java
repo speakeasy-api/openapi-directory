@@ -21,6 +21,7 @@ public class PoolInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public PoolInformation withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -28,6 +29,7 @@ public class PoolInformation {
     
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public PoolInformation withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -35,6 +37,7 @@ public class PoolInformation {
     
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public PoolInformation withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -42,6 +45,7 @@ public class PoolInformation {
     
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public PoolInformation withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -49,6 +53,7 @@ public class PoolInformation {
     
     @JsonProperty("PoolArn")
     public String poolArn;
+
     public PoolInformation withPoolArn(String poolArn) {
         this.poolArn = poolArn;
         return this;
@@ -56,6 +61,7 @@ public class PoolInformation {
     
     @JsonProperty("PoolId")
     public String poolId;
+
     public PoolInformation withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -63,6 +69,7 @@ public class PoolInformation {
     
     @JsonProperty("SelfManagedOptOutsEnabled")
     public Boolean selfManagedOptOutsEnabled;
+
     public PoolInformation withSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
         this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
         return this;
@@ -70,6 +77,7 @@ public class PoolInformation {
     
     @JsonProperty("SharedRoutesEnabled")
     public Boolean sharedRoutesEnabled;
+
     public PoolInformation withSharedRoutesEnabled(Boolean sharedRoutesEnabled) {
         this.sharedRoutesEnabled = sharedRoutesEnabled;
         return this;
@@ -77,6 +85,7 @@ public class PoolInformation {
     
     @JsonProperty("Status")
     public PoolStatusEnum status;
+
     public PoolInformation withStatus(PoolStatusEnum status) {
         this.status = status;
         return this;
@@ -85,6 +94,7 @@ public class PoolInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayChannelArn")
     public String twoWayChannelArn;
+
     public PoolInformation withTwoWayChannelArn(String twoWayChannelArn) {
         this.twoWayChannelArn = twoWayChannelArn;
         return this;
@@ -92,9 +102,22 @@ public class PoolInformation {
     
     @JsonProperty("TwoWayEnabled")
     public Boolean twoWayEnabled;
+
     public PoolInformation withTwoWayEnabled(Boolean twoWayEnabled) {
         this.twoWayEnabled = twoWayEnabled;
         return this;
     }
     
+    public PoolInformation(@JsonProperty("CreatedTimestamp") OffsetDateTime createdTimestamp, @JsonProperty("DeletionProtectionEnabled") Boolean deletionProtectionEnabled, @JsonProperty("MessageType") MessageTypeEnum messageType, @JsonProperty("OptOutListName") String optOutListName, @JsonProperty("PoolArn") String poolArn, @JsonProperty("PoolId") String poolId, @JsonProperty("SelfManagedOptOutsEnabled") Boolean selfManagedOptOutsEnabled, @JsonProperty("SharedRoutesEnabled") Boolean sharedRoutesEnabled, @JsonProperty("Status") PoolStatusEnum status, @JsonProperty("TwoWayEnabled") Boolean twoWayEnabled) {
+        this.createdTimestamp = createdTimestamp;
+        this.deletionProtectionEnabled = deletionProtectionEnabled;
+        this.messageType = messageType;
+        this.optOutListName = optOutListName;
+        this.poolArn = poolArn;
+        this.poolId = poolId;
+        this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
+        this.sharedRoutesEnabled = sharedRoutesEnabled;
+        this.status = status;
+        this.twoWayEnabled = twoWayEnabled;
+  }
 }

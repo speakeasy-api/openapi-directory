@@ -64,11 +64,9 @@ public class Click {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClicksResponse res = new org.openapis.openapi.models.operations.GetClicksResponse() {{
+        org.openapis.openapi.models.operations.GetClicksResponse res = new org.openapis.openapi.models.operations.GetClicksResponse(contentType, httpRes.statusCode()) {{
             getClicksModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

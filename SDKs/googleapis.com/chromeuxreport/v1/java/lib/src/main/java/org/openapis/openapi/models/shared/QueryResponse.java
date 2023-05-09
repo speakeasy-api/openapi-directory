@@ -18,6 +18,7 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record")
     public Record record;
+
     public QueryResponse withRecord(Record record) {
         this.record = record;
         return this;
@@ -29,9 +30,11 @@ public class QueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlNormalizationDetails")
     public UrlNormalization urlNormalizationDetails;
+
     public QueryResponse withUrlNormalizationDetails(UrlNormalization urlNormalizationDetails) {
         this.urlNormalizationDetails = urlNormalizationDetails;
         return this;
     }
     
+    public QueryResponse(){}
 }

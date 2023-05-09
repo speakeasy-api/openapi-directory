@@ -12,9 +12,11 @@ public class EpisodeRelationshipsAListOfTagsAssociatedWithTheEpisodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public EpisodeRelationshipsAListOfTagsAssociatedWithTheEpisodes withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public EpisodeRelationshipsAListOfTagsAssociatedWithTheEpisodes(){}
 }

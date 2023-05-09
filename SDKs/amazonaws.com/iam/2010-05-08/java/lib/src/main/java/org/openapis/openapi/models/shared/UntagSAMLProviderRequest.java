@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UntagSAMLProviderRequest {
     
     public String samlProviderArn;
+
     public UntagSAMLProviderRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
@@ -16,9 +17,14 @@ public class UntagSAMLProviderRequest {
     
     
     public String[] tagKeys;
+
     public UntagSAMLProviderRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagSAMLProviderRequest(@JsonProperty("SAMLProviderArn") String samlProviderArn, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.samlProviderArn = samlProviderArn;
+        this.tagKeys = tagKeys;
+  }
 }

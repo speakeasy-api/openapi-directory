@@ -12,6 +12,7 @@ public class ListResourcesForWebACLRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public ListResourcesForWebACLRequest withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,13 @@ public class ListResourcesForWebACLRequest {
     
     @JsonProperty("WebACLId")
     public String webACLId;
+
     public ListResourcesForWebACLRequest withWebACLId(String webACLId) {
         this.webACLId = webACLId;
         return this;
     }
     
+    public ListResourcesForWebACLRequest(@JsonProperty("WebACLId") String webACLId) {
+        this.webACLId = webACLId;
+  }
 }

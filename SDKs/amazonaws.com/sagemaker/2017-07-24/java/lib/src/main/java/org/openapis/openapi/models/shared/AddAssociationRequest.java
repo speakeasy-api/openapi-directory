@@ -12,6 +12,7 @@ public class AddAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationType")
     public AssociationEdgeTypeEnum associationType;
+
     public AddAssociationRequest withAssociationType(AssociationEdgeTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -19,6 +20,7 @@ public class AddAssociationRequest {
     
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public AddAssociationRequest withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -26,9 +28,14 @@ public class AddAssociationRequest {
     
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public AddAssociationRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public AddAssociationRequest(@JsonProperty("DestinationArn") String destinationArn, @JsonProperty("SourceArn") String sourceArn) {
+        this.destinationArn = destinationArn;
+        this.sourceArn = sourceArn;
+  }
 }

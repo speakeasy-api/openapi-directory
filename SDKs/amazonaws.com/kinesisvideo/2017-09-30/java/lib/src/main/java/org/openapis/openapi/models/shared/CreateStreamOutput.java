@@ -15,9 +15,11 @@ public class CreateStreamOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public CreateStreamOutput withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public CreateStreamOutput(){}
 }

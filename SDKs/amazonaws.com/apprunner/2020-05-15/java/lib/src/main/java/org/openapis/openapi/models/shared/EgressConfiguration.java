@@ -15,6 +15,7 @@ public class EgressConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EgressType")
     public EgressTypeEnum egressType;
+
     public EgressConfiguration withEgressType(EgressTypeEnum egressType) {
         this.egressType = egressType;
         return this;
@@ -23,9 +24,11 @@ public class EgressConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConnectorArn")
     public String vpcConnectorArn;
+
     public EgressConfiguration withVpcConnectorArn(String vpcConnectorArn) {
         this.vpcConnectorArn = vpcConnectorArn;
         return this;
     }
     
+    public EgressConfiguration(){}
 }

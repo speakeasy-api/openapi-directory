@@ -15,9 +15,11 @@ public class GetPartitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Partition")
     public Partition partition;
+
     public GetPartitionResponse withPartition(Partition partition) {
         this.partition = partition;
         return this;
     }
     
+    public GetPartitionResponse(){}
 }

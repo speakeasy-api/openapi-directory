@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImagesIdActionsActionIdActionResponse {
     @JsonProperty("action")
     public GetImagesIdActionsActionIdActionResponseAction action;
+
     public GetImagesIdActionsActionIdActionResponse withAction(GetImagesIdActionsActionIdActionResponseAction action) {
         this.action = action;
         return this;
     }
     
+    public GetImagesIdActionsActionIdActionResponse(@JsonProperty("action") GetImagesIdActionsActionIdActionResponseAction action) {
+        this.action = action;
+  }
 }

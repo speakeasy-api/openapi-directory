@@ -15,9 +15,11 @@ public class UpdateThemeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public Theme entity;
+
     public UpdateThemeResponse withEntity(Theme entity) {
         this.entity = entity;
         return this;
     }
     
+    public UpdateThemeResponse(){}
 }

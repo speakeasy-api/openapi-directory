@@ -15,6 +15,7 @@ public class RealtimeContactAnalysisSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Categories")
     public Categories categories;
+
     public RealtimeContactAnalysisSegment withCategories(Categories categories) {
         this.categories = categories;
         return this;
@@ -23,9 +24,11 @@ public class RealtimeContactAnalysisSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Transcript")
     public Transcript transcript;
+
     public RealtimeContactAnalysisSegment withTranscript(Transcript transcript) {
         this.transcript = transcript;
         return this;
     }
     
+    public RealtimeContactAnalysisSegment(){}
 }

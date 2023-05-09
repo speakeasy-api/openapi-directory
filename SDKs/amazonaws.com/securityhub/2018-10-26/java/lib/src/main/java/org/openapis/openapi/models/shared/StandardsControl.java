@@ -20,6 +20,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlId")
     public String controlId;
+
     public StandardsControl withControlId(String controlId) {
         this.controlId = controlId;
         return this;
@@ -28,6 +29,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlStatus")
     public ControlStatusEnum controlStatus;
+
     public StandardsControl withControlStatus(ControlStatusEnum controlStatus) {
         this.controlStatus = controlStatus;
         return this;
@@ -38,6 +40,7 @@ public class StandardsControl {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ControlStatusUpdatedAt")
     public OffsetDateTime controlStatusUpdatedAt;
+
     public StandardsControl withControlStatusUpdatedAt(OffsetDateTime controlStatusUpdatedAt) {
         this.controlStatusUpdatedAt = controlStatusUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StandardsControl withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisabledReason")
     public String disabledReason;
+
     public StandardsControl withDisabledReason(String disabledReason) {
         this.disabledReason = disabledReason;
         return this;
@@ -62,6 +67,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedRequirements")
     public String[] relatedRequirements;
+
     public StandardsControl withRelatedRequirements(String[] relatedRequirements) {
         this.relatedRequirements = relatedRequirements;
         return this;
@@ -70,6 +76,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemediationUrl")
     public String remediationUrl;
+
     public StandardsControl withRemediationUrl(String remediationUrl) {
         this.remediationUrl = remediationUrl;
         return this;
@@ -78,6 +85,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeverityRating")
     public SeverityRatingEnum severityRating;
+
     public StandardsControl withSeverityRating(SeverityRatingEnum severityRating) {
         this.severityRating = severityRating;
         return this;
@@ -86,6 +94,7 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardsControlArn")
     public String standardsControlArn;
+
     public StandardsControl withStandardsControlArn(String standardsControlArn) {
         this.standardsControlArn = standardsControlArn;
         return this;
@@ -94,9 +103,11 @@ public class StandardsControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public StandardsControl withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public StandardsControl(){}
 }

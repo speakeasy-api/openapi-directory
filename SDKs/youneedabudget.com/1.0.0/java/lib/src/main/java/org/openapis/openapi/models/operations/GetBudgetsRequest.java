@@ -12,9 +12,11 @@ public class GetBudgetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_accounts")
     public Boolean includeAccounts;
+
     public GetBudgetsRequest withIncludeAccounts(Boolean includeAccounts) {
         this.includeAccounts = includeAccounts;
         return this;
     }
     
+    public GetBudgetsRequest(){}
 }

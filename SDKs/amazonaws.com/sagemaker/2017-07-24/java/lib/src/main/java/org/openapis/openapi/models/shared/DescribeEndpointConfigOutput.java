@@ -20,6 +20,7 @@ public class DescribeEndpointConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AsyncInferenceConfig")
     public AsyncInferenceConfig asyncInferenceConfig;
+
     public DescribeEndpointConfigOutput withAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
         this.asyncInferenceConfig = asyncInferenceConfig;
         return this;
@@ -29,6 +30,7 @@ public class DescribeEndpointConfigOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeEndpointConfigOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeEndpointConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCaptureConfig")
     public DataCaptureConfig dataCaptureConfig;
+
     public DescribeEndpointConfigOutput withDataCaptureConfig(DataCaptureConfig dataCaptureConfig) {
         this.dataCaptureConfig = dataCaptureConfig;
         return this;
@@ -47,6 +50,7 @@ public class DescribeEndpointConfigOutput {
     
     @JsonProperty("EndpointConfigArn")
     public String endpointConfigArn;
+
     public DescribeEndpointConfigOutput withEndpointConfigArn(String endpointConfigArn) {
         this.endpointConfigArn = endpointConfigArn;
         return this;
@@ -54,6 +58,7 @@ public class DescribeEndpointConfigOutput {
     
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public DescribeEndpointConfigOutput withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -62,6 +67,7 @@ public class DescribeEndpointConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainerConfig")
     public ExplainerConfig explainerConfig;
+
     public DescribeEndpointConfigOutput withExplainerConfig(ExplainerConfig explainerConfig) {
         this.explainerConfig = explainerConfig;
         return this;
@@ -70,6 +76,7 @@ public class DescribeEndpointConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DescribeEndpointConfigOutput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -77,6 +84,7 @@ public class DescribeEndpointConfigOutput {
     
     @JsonProperty("ProductionVariants")
     public ProductionVariant[] productionVariants;
+
     public DescribeEndpointConfigOutput withProductionVariants(ProductionVariant[] productionVariants) {
         this.productionVariants = productionVariants;
         return this;
@@ -85,9 +93,16 @@ public class DescribeEndpointConfigOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShadowProductionVariants")
     public ProductionVariant[] shadowProductionVariants;
+
     public DescribeEndpointConfigOutput withShadowProductionVariants(ProductionVariant[] shadowProductionVariants) {
         this.shadowProductionVariants = shadowProductionVariants;
         return this;
     }
     
+    public DescribeEndpointConfigOutput(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("EndpointConfigArn") String endpointConfigArn, @JsonProperty("EndpointConfigName") String endpointConfigName, @JsonProperty("ProductionVariants") ProductionVariant[] productionVariants) {
+        this.creationTime = creationTime;
+        this.endpointConfigArn = endpointConfigArn;
+        this.endpointConfigName = endpointConfigName;
+        this.productionVariants = productionVariants;
+  }
 }

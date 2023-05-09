@@ -14,6 +14,7 @@ public class PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody {
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -42,6 +45,7 @@ public class PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBodyConstraints constraints;
+
     public PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody withConstraints(PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -53,9 +57,15 @@ public class PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolios")
     public Long portfolios;
+
     public PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody withPortfolios(Long portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisMeanVarianceEfficientFrontierRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+  }
 }

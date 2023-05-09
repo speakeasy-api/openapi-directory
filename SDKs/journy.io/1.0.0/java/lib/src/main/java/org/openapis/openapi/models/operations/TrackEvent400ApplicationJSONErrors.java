@@ -18,6 +18,7 @@ public class TrackEvent400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, String> fields;
+
     public TrackEvent400ApplicationJSONErrors withFields(java.util.Map<String, String> fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class TrackEvent400ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public TrackEvent400ApplicationJSONErrorsParameters parameters;
+
     public TrackEvent400ApplicationJSONErrors withParameters(TrackEvent400ApplicationJSONErrorsParameters parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public TrackEvent400ApplicationJSONErrors(){}
 }

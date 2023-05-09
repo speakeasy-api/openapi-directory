@@ -18,6 +18,7 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public HttpTarget withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public HttpTarget withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +42,7 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpMethod")
     public HttpTargetHttpMethodEnum httpMethod;
+
     public HttpTarget withHttpMethod(HttpTargetHttpMethodEnum httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -51,6 +54,7 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthToken")
     public OAuthToken oauthToken;
+
     public HttpTarget withOauthToken(OAuthToken oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +66,7 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oidcToken")
     public OidcToken oidcToken;
+
     public HttpTarget withOidcToken(OidcToken oidcToken) {
         this.oidcToken = oidcToken;
         return this;
@@ -73,9 +78,11 @@ public class HttpTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public HttpTarget withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public HttpTarget(){}
 }

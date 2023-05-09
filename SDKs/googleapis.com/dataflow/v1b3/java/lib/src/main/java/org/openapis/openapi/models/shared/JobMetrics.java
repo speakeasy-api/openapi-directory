@@ -18,6 +18,7 @@ public class JobMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricTime")
     public String metricTime;
+
     public JobMetrics withMetricTime(String metricTime) {
         this.metricTime = metricTime;
         return this;
@@ -29,9 +30,11 @@ public class JobMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public MetricUpdate[] metrics;
+
     public JobMetrics withMetrics(MetricUpdate[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public JobMetrics(){}
 }

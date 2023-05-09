@@ -22,6 +22,7 @@ public class GetVpcLinkResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public GetVpcLinkResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -30,6 +31,7 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetVpcLinkResponse withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +40,7 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public GetVpcLinkResponse withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -46,6 +49,7 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public GetVpcLinkResponse withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -54,6 +58,7 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetVpcLinkResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -62,6 +67,7 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcLinkId")
     public String vpcLinkId;
+
     public GetVpcLinkResponse withVpcLinkId(String vpcLinkId) {
         this.vpcLinkId = vpcLinkId;
         return this;
@@ -70,6 +76,7 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcLinkStatus")
     public GetVpcLinkResponseVpcLinkStatusEnum vpcLinkStatus;
+
     public GetVpcLinkResponse withVpcLinkStatus(GetVpcLinkResponseVpcLinkStatusEnum vpcLinkStatus) {
         this.vpcLinkStatus = vpcLinkStatus;
         return this;
@@ -78,6 +85,7 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcLinkStatusMessage")
     public String vpcLinkStatusMessage;
+
     public GetVpcLinkResponse withVpcLinkStatusMessage(String vpcLinkStatusMessage) {
         this.vpcLinkStatusMessage = vpcLinkStatusMessage;
         return this;
@@ -86,9 +94,11 @@ public class GetVpcLinkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcLinkVersion")
     public GetVpcLinkResponseVpcLinkVersionEnum vpcLinkVersion;
+
     public GetVpcLinkResponse withVpcLinkVersion(GetVpcLinkResponseVpcLinkVersionEnum vpcLinkVersion) {
         this.vpcLinkVersion = vpcLinkVersion;
         return this;
     }
     
+    public GetVpcLinkResponse(){}
 }

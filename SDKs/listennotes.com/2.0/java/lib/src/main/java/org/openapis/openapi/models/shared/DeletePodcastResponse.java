@@ -15,9 +15,13 @@ public class DeletePodcastResponse {
      */
     @JsonProperty("status")
     public DeletePodcastResponseStatusEnum status;
+
     public DeletePodcastResponse withStatus(DeletePodcastResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeletePodcastResponse(@JsonProperty("status") DeletePodcastResponseStatusEnum status) {
+        this.status = status;
+  }
 }

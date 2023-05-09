@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainAssociationResponse {
@@ -12,6 +13,7 @@ public class GetDomainAssociationResponse {
      */
     
     public Object badRequestException;
+
     public GetDomainAssociationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetDomainAssociationResponse {
     
     
     public String contentType;
+
     public GetDomainAssociationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDomainAssociationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDomainAssociationResult getDomainAssociationResult;
+
     public GetDomainAssociationResponse withGetDomainAssociationResult(org.openapis.openapi.models.shared.GetDomainAssociationResult getDomainAssociationResult) {
         this.getDomainAssociationResult = getDomainAssociationResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDomainAssociationResponse {
      */
     
     public Object internalFailureException;
+
     public GetDomainAssociationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetDomainAssociationResponse {
      */
     
     public Object notFoundException;
+
     public GetDomainAssociationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetDomainAssociationResponse {
     
     
     public Integer statusCode;
+
     public GetDomainAssociationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDomainAssociationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainAssociationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetDomainAssociationResponse {
      */
     
     public Object unauthorizedException;
+
     public GetDomainAssociationResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetDomainAssociationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

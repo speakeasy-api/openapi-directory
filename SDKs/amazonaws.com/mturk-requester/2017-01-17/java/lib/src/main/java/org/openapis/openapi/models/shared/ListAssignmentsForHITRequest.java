@@ -12,6 +12,7 @@ public class ListAssignmentsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentStatuses")
     public AssignmentStatusEnum[] assignmentStatuses;
+
     public ListAssignmentsForHITRequest withAssignmentStatuses(AssignmentStatusEnum[] assignmentStatuses) {
         this.assignmentStatuses = assignmentStatuses;
         return this;
@@ -19,6 +20,7 @@ public class ListAssignmentsForHITRequest {
     
     @JsonProperty("HITId")
     public String hitId;
+
     public ListAssignmentsForHITRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
@@ -27,6 +29,7 @@ public class ListAssignmentsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAssignmentsForHITRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListAssignmentsForHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssignmentsForHITRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssignmentsForHITRequest(@JsonProperty("HITId") String hitId) {
+        this.hitId = hitId;
+  }
 }

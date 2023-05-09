@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LookupAttribute {
     @JsonProperty("AttributeKey")
     public LookupAttributeKeyEnum attributeKey;
+
     public LookupAttribute withAttributeKey(LookupAttributeKeyEnum attributeKey) {
         this.attributeKey = attributeKey;
         return this;
@@ -19,9 +20,14 @@ public class LookupAttribute {
     
     @JsonProperty("AttributeValue")
     public String attributeValue;
+
     public LookupAttribute withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
     }
     
+    public LookupAttribute(@JsonProperty("AttributeKey") LookupAttributeKeyEnum attributeKey, @JsonProperty("AttributeValue") String attributeValue) {
+        this.attributeKey = attributeKey;
+        this.attributeValue = attributeValue;
+  }
 }

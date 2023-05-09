@@ -15,9 +15,11 @@ public class GetBackendRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendEnvironmentName")
     public String backendEnvironmentName;
+
     public GetBackendRequestBody withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
     }
     
+    public GetBackendRequestBody(){}
 }

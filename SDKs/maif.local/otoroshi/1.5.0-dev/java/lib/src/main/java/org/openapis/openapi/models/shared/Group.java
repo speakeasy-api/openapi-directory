@@ -18,6 +18,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Group withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class Group {
      */
     @JsonProperty("id")
     public String id;
+
     public Group withId(String id) {
         this.id = id;
         return this;
@@ -38,9 +40,14 @@ public class Group {
      */
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Group(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

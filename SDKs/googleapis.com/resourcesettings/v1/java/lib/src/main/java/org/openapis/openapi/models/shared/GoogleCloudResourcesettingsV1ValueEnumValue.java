@@ -18,9 +18,11 @@ public class GoogleCloudResourcesettingsV1ValueEnumValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleCloudResourcesettingsV1ValueEnumValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleCloudResourcesettingsV1ValueEnumValue(){}
 }

@@ -15,6 +15,7 @@ public class Proto2FileDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumType")
     public Proto2EnumDescriptorProto[] enumType;
+
     public Proto2FileDescriptorProto withEnumType(Proto2EnumDescriptorProto[] enumType) {
         this.enumType = enumType;
         return this;
@@ -26,6 +27,7 @@ public class Proto2FileDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageType")
     public Proto2DescriptorProto[] messageType;
+
     public Proto2FileDescriptorProto withMessageType(Proto2DescriptorProto[] messageType) {
         this.messageType = messageType;
         return this;
@@ -37,6 +39,7 @@ public class Proto2FileDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Proto2FileDescriptorProto withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class Proto2FileDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public String package_;
+
     public Proto2FileDescriptorProto withPackage(String package_) {
         this.package_ = package_;
         return this;
@@ -59,9 +63,11 @@ public class Proto2FileDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syntax")
     public String syntax;
+
     public Proto2FileDescriptorProto withSyntax(String syntax) {
         this.syntax = syntax;
         return this;
     }
     
+    public Proto2FileDescriptorProto(){}
 }

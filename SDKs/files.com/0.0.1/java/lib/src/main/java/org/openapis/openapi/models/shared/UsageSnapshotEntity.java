@@ -23,6 +23,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytes_sent")
     public Double bytesSent;
+
     public UsageSnapshotEntity withBytesSent(Double bytesSent) {
         this.bytesSent = bytesSent;
         return this;
@@ -34,6 +35,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_storage")
     public Double currentStorage;
+
     public UsageSnapshotEntity withCurrentStorage(Double currentStorage) {
         this.currentStorage = currentStorage;
         return this;
@@ -45,6 +47,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_files_counted_in_minimum")
     public Double deletedFilesCountedInMinimum;
+
     public UsageSnapshotEntity withDeletedFilesCountedInMinimum(Double deletedFilesCountedInMinimum) {
         this.deletedFilesCountedInMinimum = deletedFilesCountedInMinimum;
         return this;
@@ -56,6 +59,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted_files_storage")
     public Double deletedFilesStorage;
+
     public UsageSnapshotEntity withDeletedFilesStorage(Double deletedFilesStorage) {
         this.deletedFilesStorage = deletedFilesStorage;
         return this;
@@ -69,6 +73,7 @@ public class UsageSnapshotEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end_at")
     public OffsetDateTime endAt;
+
     public UsageSnapshotEntity withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -80,6 +85,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high_water_storage")
     public Double highWaterStorage;
+
     public UsageSnapshotEntity withHighWaterStorage(Double highWaterStorage) {
         this.highWaterStorage = highWaterStorage;
         return this;
@@ -91,6 +97,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high_water_user_count")
     public Double highWaterUserCount;
+
     public UsageSnapshotEntity withHighWaterUserCount(Double highWaterUserCount) {
         this.highWaterUserCount = highWaterUserCount;
         return this;
@@ -102,6 +109,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public UsageSnapshotEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -113,6 +121,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root_storage")
     public Double rootStorage;
+
     public UsageSnapshotEntity withRootStorage(Double rootStorage) {
         this.rootStorage = rootStorage;
         return this;
@@ -126,6 +135,7 @@ public class UsageSnapshotEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start_at")
     public OffsetDateTime startAt;
+
     public UsageSnapshotEntity withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -137,6 +147,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_bytes_received")
     public Double syncBytesReceived;
+
     public UsageSnapshotEntity withSyncBytesReceived(Double syncBytesReceived) {
         this.syncBytesReceived = syncBytesReceived;
         return this;
@@ -148,6 +159,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync_bytes_sent")
     public Double syncBytesSent;
+
     public UsageSnapshotEntity withSyncBytesSent(Double syncBytesSent) {
         this.syncBytesSent = syncBytesSent;
         return this;
@@ -159,6 +171,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_billable_transfer_usage")
     public Double totalBillableTransferUsage;
+
     public UsageSnapshotEntity withTotalBillableTransferUsage(Double totalBillableTransferUsage) {
         this.totalBillableTransferUsage = totalBillableTransferUsage;
         return this;
@@ -170,6 +183,7 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_billable_usage")
     public Double totalBillableUsage;
+
     public UsageSnapshotEntity withTotalBillableUsage(Double totalBillableUsage) {
         this.totalBillableUsage = totalBillableUsage;
         return this;
@@ -181,9 +195,11 @@ public class UsageSnapshotEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage_by_top_level_dir")
     public java.util.Map<String, Object> usageByTopLevelDir;
+
     public UsageSnapshotEntity withUsageByTopLevelDir(java.util.Map<String, Object> usageByTopLevelDir) {
         this.usageByTopLevelDir = usageByTopLevelDir;
         return this;
     }
     
+    public UsageSnapshotEntity(){}
 }

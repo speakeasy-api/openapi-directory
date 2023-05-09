@@ -15,6 +15,7 @@ public class SearchFacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceMatches")
     public FaceMatch[] faceMatches;
+
     public SearchFacesResponse withFaceMatches(FaceMatch[] faceMatches) {
         this.faceMatches = faceMatches;
         return this;
@@ -23,6 +24,7 @@ public class SearchFacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceModelVersion")
     public String faceModelVersion;
+
     public SearchFacesResponse withFaceModelVersion(String faceModelVersion) {
         this.faceModelVersion = faceModelVersion;
         return this;
@@ -31,9 +33,11 @@ public class SearchFacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchedFaceId")
     public String searchedFaceId;
+
     public SearchFacesResponse withSearchedFaceId(String searchedFaceId) {
         this.searchedFaceId = searchedFaceId;
         return this;
     }
     
+    public SearchFacesResponse(){}
 }

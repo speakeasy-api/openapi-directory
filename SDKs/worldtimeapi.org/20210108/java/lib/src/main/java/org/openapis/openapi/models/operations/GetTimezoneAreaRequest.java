@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTimezoneAreaRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=area")
     public String area;
+
     public GetTimezoneAreaRequest withArea(String area) {
         this.area = area;
         return this;
     }
     
+    public GetTimezoneAreaRequest(@JsonProperty("area") String area) {
+        this.area = area;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeSignalingChannelOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelInfo")
     public ChannelInfo channelInfo;
+
     public DescribeSignalingChannelOutput withChannelInfo(ChannelInfo channelInfo) {
         this.channelInfo = channelInfo;
         return this;
     }
     
+    public DescribeSignalingChannelOutput(){}
 }

@@ -18,9 +18,11 @@ public class CommonFleetDefaultMemberConfigSpecInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityservice")
     public IdentityServiceMembershipSpecInput identityservice;
+
     public CommonFleetDefaultMemberConfigSpecInput withIdentityservice(IdentityServiceMembershipSpecInput identityservice) {
         this.identityservice = identityservice;
         return this;
     }
     
+    public CommonFleetDefaultMemberConfigSpecInput(){}
 }

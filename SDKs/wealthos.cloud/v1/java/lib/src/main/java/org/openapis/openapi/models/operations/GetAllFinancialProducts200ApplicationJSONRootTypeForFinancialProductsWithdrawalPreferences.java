@@ -12,6 +12,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum_one_off_withdrawal")
     public String minimumOneOffWithdrawal;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences withMinimumOneOffWithdrawal(String minimumOneOffWithdrawal) {
         this.minimumOneOffWithdrawal = minimumOneOffWithdrawal;
         return this;
@@ -20,6 +21,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum_regular_monthly_withdrawal")
     public String minimumRegularMonthlyWithdrawal;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences withMinimumRegularMonthlyWithdrawal(String minimumRegularMonthlyWithdrawal) {
         this.minimumRegularMonthlyWithdrawal = minimumRegularMonthlyWithdrawal;
         return this;
@@ -28,6 +30,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regular_withdrawal_frequencies")
     public String[] regularWithdrawalFrequencies;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences withRegularWithdrawalFrequencies(String[] regularWithdrawalFrequencies) {
         this.regularWithdrawalFrequencies = regularWithdrawalFrequencies;
         return this;
@@ -36,9 +39,11 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regular_withdrawal_payment_dates")
     public String[] regularWithdrawalPaymentDates;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences withRegularWithdrawalPaymentDates(String[] regularWithdrawalPaymentDates) {
         this.regularWithdrawalPaymentDates = regularWithdrawalPaymentDates;
         return this;
     }
     
+    public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences(){}
 }

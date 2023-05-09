@@ -15,9 +15,11 @@ public class DeleteExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentArn")
     public String experimentArn;
+
     public DeleteExperimentResponse withExperimentArn(String experimentArn) {
         this.experimentArn = experimentArn;
         return this;
     }
     
+    public DeleteExperimentResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIdResponse {
     
     public String contentType;
+
     public GetIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIdResponse {
      */
     
     public Object externalServiceException;
+
     public GetIdResponse withExternalServiceException(Object externalServiceException) {
         this.externalServiceException = externalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class GetIdResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIdResponse getIdResponse;
+
     public GetIdResponse withGetIdResponse(org.openapis.openapi.models.shared.GetIdResponse getIdResponse) {
         this.getIdResponse = getIdResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetIdResponse {
      */
     
     public Object internalErrorException;
+
     public GetIdResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetIdResponse {
      */
     
     public Object invalidParameterException;
+
     public GetIdResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetIdResponse {
      */
     
     public Object limitExceededException;
+
     public GetIdResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class GetIdResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetIdResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -76,6 +84,7 @@ public class GetIdResponse {
     
     
     public Integer statusCode;
+
     public GetIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetIdResponse {
      */
     
     public Object resourceConflictException;
+
     public GetIdResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -103,6 +114,7 @@ public class GetIdResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetIdResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class GetIdResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetIdResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

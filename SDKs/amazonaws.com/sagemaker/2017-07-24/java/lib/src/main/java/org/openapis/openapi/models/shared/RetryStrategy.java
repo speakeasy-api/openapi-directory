@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetryStrategy {
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public RetryStrategy withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
     }
     
+    public RetryStrategy(@JsonProperty("MaximumRetryAttempts") Long maximumRetryAttempts) {
+        this.maximumRetryAttempts = maximumRetryAttempts;
+  }
 }

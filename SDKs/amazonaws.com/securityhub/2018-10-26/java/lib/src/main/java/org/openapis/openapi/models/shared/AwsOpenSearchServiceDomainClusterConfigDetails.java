@@ -15,6 +15,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedMasterCount")
     public Long dedicatedMasterCount;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withDedicatedMasterCount(Long dedicatedMasterCount) {
         this.dedicatedMasterCount = dedicatedMasterCount;
         return this;
@@ -23,6 +24,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedMasterEnabled")
     public Boolean dedicatedMasterEnabled;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withDedicatedMasterEnabled(Boolean dedicatedMasterEnabled) {
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         return this;
@@ -31,6 +33,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DedicatedMasterType")
     public String dedicatedMasterType;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withDedicatedMasterType(String dedicatedMasterType) {
         this.dedicatedMasterType = dedicatedMasterType;
         return this;
@@ -39,6 +42,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -47,6 +51,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -55,6 +60,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmCount")
     public Long warmCount;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withWarmCount(Long warmCount) {
         this.warmCount = warmCount;
         return this;
@@ -63,6 +69,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmEnabled")
     public Boolean warmEnabled;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withWarmEnabled(Boolean warmEnabled) {
         this.warmEnabled = warmEnabled;
         return this;
@@ -71,6 +78,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmType")
     public String warmType;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withWarmType(String warmType) {
         this.warmType = warmType;
         return this;
@@ -79,6 +87,7 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZoneAwarenessConfig")
     public AwsOpenSearchServiceDomainClusterConfigZoneAwarenessConfigDetails zoneAwarenessConfig;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withZoneAwarenessConfig(AwsOpenSearchServiceDomainClusterConfigZoneAwarenessConfigDetails zoneAwarenessConfig) {
         this.zoneAwarenessConfig = zoneAwarenessConfig;
         return this;
@@ -87,9 +96,11 @@ public class AwsOpenSearchServiceDomainClusterConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZoneAwarenessEnabled")
     public Boolean zoneAwarenessEnabled;
+
     public AwsOpenSearchServiceDomainClusterConfigDetails withZoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
         this.zoneAwarenessEnabled = zoneAwarenessEnabled;
         return this;
     }
     
+    public AwsOpenSearchServiceDomainClusterConfigDetails(){}
 }

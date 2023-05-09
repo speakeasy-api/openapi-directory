@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1Contacts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people")
     public GoogleCloudDatacatalogV1ContactsPerson[] people;
+
     public GoogleCloudDatacatalogV1Contacts withPeople(GoogleCloudDatacatalogV1ContactsPerson[] people) {
         this.people = people;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1Contacts(){}
 }

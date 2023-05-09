@@ -18,6 +18,7 @@ public class ItemDraft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public ItemDraft withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -29,6 +30,7 @@ public class ItemDraft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("charity")
     public Charity charity;
+
     public ItemDraft withCharity(Charity charity) {
         this.charity = charity;
         return this;
@@ -40,6 +42,7 @@ public class ItemDraft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public ItemDraft withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -51,6 +54,7 @@ public class ItemDraft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public ItemDraft withFormat(String format) {
         this.format = format;
         return this;
@@ -62,6 +66,7 @@ public class ItemDraft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingSummary")
     public PricingSummary pricingSummary;
+
     public ItemDraft withPricingSummary(PricingSummary pricingSummary) {
         this.pricingSummary = pricingSummary;
         return this;
@@ -73,9 +78,11 @@ public class ItemDraft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public Product product;
+
     public ItemDraft withProduct(Product product) {
         this.product = product;
         return this;
     }
     
+    public ItemDraft(){}
 }

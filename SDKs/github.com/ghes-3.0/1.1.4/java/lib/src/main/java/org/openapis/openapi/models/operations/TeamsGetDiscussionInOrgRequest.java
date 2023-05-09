@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetDiscussionInOrgRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public TeamsGetDiscussionInOrgRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -16,6 +18,7 @@ public class TeamsGetDiscussionInOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsGetDiscussionInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -26,9 +29,15 @@ public class TeamsGetDiscussionInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsGetDiscussionInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsGetDiscussionInOrgRequest(@JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("org") String org, @JsonProperty("team_slug") String teamSlug) {
+        this.discussionNumber = discussionNumber;
+        this.org = org;
+        this.teamSlug = teamSlug;
+  }
 }

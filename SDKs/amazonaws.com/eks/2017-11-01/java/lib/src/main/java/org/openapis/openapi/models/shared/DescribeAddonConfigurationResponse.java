@@ -15,6 +15,7 @@ public class DescribeAddonConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonName")
     public String addonName;
+
     public DescribeAddonConfigurationResponse withAddonName(String addonName) {
         this.addonName = addonName;
         return this;
@@ -23,6 +24,7 @@ public class DescribeAddonConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addonVersion")
     public String addonVersion;
+
     public DescribeAddonConfigurationResponse withAddonVersion(String addonVersion) {
         this.addonVersion = addonVersion;
         return this;
@@ -31,9 +33,11 @@ public class DescribeAddonConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationSchema")
     public String configurationSchema;
+
     public DescribeAddonConfigurationResponse withConfigurationSchema(String configurationSchema) {
         this.configurationSchema = configurationSchema;
         return this;
     }
     
+    public DescribeAddonConfigurationResponse(){}
 }

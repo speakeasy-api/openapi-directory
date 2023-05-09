@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReadPresetResponse {
@@ -12,6 +13,7 @@ public class ReadPresetResponse {
      */
     
     public Object accessDeniedException;
+
     public ReadPresetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ReadPresetResponse {
     
     
     public String contentType;
+
     public ReadPresetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ReadPresetResponse {
      */
     
     public Object incompatibleVersionException;
+
     public ReadPresetResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class ReadPresetResponse {
      */
     
     public Object internalServiceException;
+
     public ReadPresetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ReadPresetResponse {
      */
     
     public org.openapis.openapi.models.shared.ReadPresetResponse readPresetResponse;
+
     public ReadPresetResponse withReadPresetResponse(org.openapis.openapi.models.shared.ReadPresetResponse readPresetResponse) {
         this.readPresetResponse = readPresetResponse;
         return this;
@@ -59,6 +65,7 @@ public class ReadPresetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ReadPresetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ReadPresetResponse {
     
     
     public Integer statusCode;
+
     public ReadPresetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ReadPresetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReadPresetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ReadPresetResponse {
      */
     
     public Object validationException;
+
     public ReadPresetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ReadPresetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

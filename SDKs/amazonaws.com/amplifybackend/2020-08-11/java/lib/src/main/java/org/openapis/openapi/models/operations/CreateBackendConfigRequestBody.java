@@ -15,9 +15,11 @@ public class CreateBackendConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendManagerAppId")
     public String backendManagerAppId;
+
     public CreateBackendConfigRequestBody withBackendManagerAppId(String backendManagerAppId) {
         this.backendManagerAppId = backendManagerAppId;
         return this;
     }
     
+    public CreateBackendConfigRequestBody(){}
 }

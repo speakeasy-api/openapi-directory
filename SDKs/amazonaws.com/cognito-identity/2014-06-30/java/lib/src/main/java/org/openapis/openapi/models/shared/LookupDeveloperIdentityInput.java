@@ -15,6 +15,7 @@ public class LookupDeveloperIdentityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeveloperUserIdentifier")
     public String developerUserIdentifier;
+
     public LookupDeveloperIdentityInput withDeveloperUserIdentifier(String developerUserIdentifier) {
         this.developerUserIdentifier = developerUserIdentifier;
         return this;
@@ -23,6 +24,7 @@ public class LookupDeveloperIdentityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public LookupDeveloperIdentityInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -30,6 +32,7 @@ public class LookupDeveloperIdentityInput {
     
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public LookupDeveloperIdentityInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -38,6 +41,7 @@ public class LookupDeveloperIdentityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public LookupDeveloperIdentityInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -46,9 +50,13 @@ public class LookupDeveloperIdentityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public LookupDeveloperIdentityInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public LookupDeveloperIdentityInput(@JsonProperty("IdentityPoolId") String identityPoolId) {
+        this.identityPoolId = identityPoolId;
+  }
 }

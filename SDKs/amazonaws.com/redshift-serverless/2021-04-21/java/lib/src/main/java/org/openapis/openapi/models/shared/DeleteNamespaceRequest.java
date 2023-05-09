@@ -12,6 +12,7 @@ public class DeleteNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalSnapshotName")
     public String finalSnapshotName;
+
     public DeleteNamespaceRequest withFinalSnapshotName(String finalSnapshotName) {
         this.finalSnapshotName = finalSnapshotName;
         return this;
@@ -20,6 +21,7 @@ public class DeleteNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalSnapshotRetentionPeriod")
     public Long finalSnapshotRetentionPeriod;
+
     public DeleteNamespaceRequest withFinalSnapshotRetentionPeriod(Long finalSnapshotRetentionPeriod) {
         this.finalSnapshotRetentionPeriod = finalSnapshotRetentionPeriod;
         return this;
@@ -27,9 +29,13 @@ public class DeleteNamespaceRequest {
     
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public DeleteNamespaceRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
     }
     
+    public DeleteNamespaceRequest(@JsonProperty("namespaceName") String namespaceName) {
+        this.namespaceName = namespaceName;
+  }
 }

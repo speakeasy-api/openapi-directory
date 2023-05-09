@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddIpaliasRequest {
@@ -12,6 +13,7 @@ public class AddIpaliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
     public String ip;
+
     public AddIpaliasRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -22,6 +24,7 @@ public class AddIpaliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public AddIpaliasRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -32,6 +35,7 @@ public class AddIpaliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interface")
     public String interface_;
+
     public AddIpaliasRequest withInterface(String interface_) {
         this.interface_ = interface_;
         return this;
@@ -42,6 +46,7 @@ public class AddIpaliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
     public String mask;
+
     public AddIpaliasRequest withMask(String mask) {
         this.mask = mask;
         return this;
@@ -52,9 +57,17 @@ public class AddIpaliasRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
     public Integer port;
+
     public AddIpaliasRequest withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public AddIpaliasRequest(@JsonProperty("IP") String ip, @JsonProperty("agentNum") Integer agentNum, @JsonProperty("interface") String interface_, @JsonProperty("mask") String mask, @JsonProperty("port") Integer port) {
+        this.ip = ip;
+        this.agentNum = agentNum;
+        this.interface_ = interface_;
+        this.mask = mask;
+        this.port = port;
+  }
 }

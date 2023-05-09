@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteAttributesRequest {
     
     public DeletableAttributeList[] attributes;
+
     public DeleteAttributesRequest withAttributes(DeletableAttributeList[] attributes) {
         this.attributes = attributes;
         return this;
@@ -16,6 +17,7 @@ public class DeleteAttributesRequest {
     
     
     public String domainName;
+
     public DeleteAttributesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +25,7 @@ public class DeleteAttributesRequest {
     
     
     public UpdateCondition expected;
+
     public DeleteAttributesRequest withExpected(UpdateCondition expected) {
         this.expected = expected;
         return this;
@@ -30,9 +33,14 @@ public class DeleteAttributesRequest {
     
     
     public String itemName;
+
     public DeleteAttributesRequest withItemName(String itemName) {
         this.itemName = itemName;
         return this;
     }
     
+    public DeleteAttributesRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("ItemName") String itemName) {
+        this.domainName = domainName;
+        this.itemName = itemName;
+  }
 }

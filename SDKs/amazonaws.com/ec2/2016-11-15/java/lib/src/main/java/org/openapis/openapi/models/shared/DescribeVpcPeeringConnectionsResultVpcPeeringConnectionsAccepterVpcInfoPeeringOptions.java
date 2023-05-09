@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpcInfoPeeringOptions {
     
     public Boolean allowDnsResolutionFromRemoteVpc;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpcInfoPeeringOptions withAllowDnsResolutionFromRemoteVpc(Boolean allowDnsResolutionFromRemoteVpc) {
         this.allowDnsResolutionFromRemoteVpc = allowDnsResolutionFromRemoteVpc;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpc
     
     
     public Boolean allowEgressFromLocalClassicLinkToRemoteVpc;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpcInfoPeeringOptions withAllowEgressFromLocalClassicLinkToRemoteVpc(Boolean allowEgressFromLocalClassicLinkToRemoteVpc) {
         this.allowEgressFromLocalClassicLinkToRemoteVpc = allowEgressFromLocalClassicLinkToRemoteVpc;
         return this;
@@ -26,9 +28,11 @@ public class DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpc
     
     
     public Boolean allowEgressFromLocalVpcToRemoteClassicLink;
+
     public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpcInfoPeeringOptions withAllowEgressFromLocalVpcToRemoteClassicLink(Boolean allowEgressFromLocalVpcToRemoteClassicLink) {
         this.allowEgressFromLocalVpcToRemoteClassicLink = allowEgressFromLocalVpcToRemoteClassicLink;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsResultVpcPeeringConnectionsAccepterVpcInfoPeeringOptions(){}
 }

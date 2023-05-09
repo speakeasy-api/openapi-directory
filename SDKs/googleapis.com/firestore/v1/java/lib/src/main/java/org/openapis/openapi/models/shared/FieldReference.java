@@ -18,9 +18,11 @@ public class FieldReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPath")
     public String fieldPath;
+
     public FieldReference withFieldPath(String fieldPath) {
         this.fieldPath = fieldPath;
         return this;
     }
     
+    public FieldReference(){}
 }

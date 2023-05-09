@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETQTLByRgdIdUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETQTLByRgdIdUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
     public Integer rgdId;
+
     public GETQTLByRgdIdUsingGETRequest withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
     }
     
+    public GETQTLByRgdIdUsingGETRequest(@JsonProperty("rgdId") Integer rgdId) {
+        this.rgdId = rgdId;
+  }
 }

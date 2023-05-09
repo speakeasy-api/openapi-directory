@@ -18,6 +18,7 @@ public class GoogleCloudWebriskV1SearchUrisResponseThreatUri {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GoogleCloudWebriskV1SearchUrisResponseThreatUri withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudWebriskV1SearchUrisResponseThreatUri {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatTypes")
     public GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum[] threatTypes;
+
     public GoogleCloudWebriskV1SearchUrisResponseThreatUri withThreatTypes(GoogleCloudWebriskV1SearchUrisResponseThreatUriThreatTypesEnum[] threatTypes) {
         this.threatTypes = threatTypes;
         return this;
     }
     
+    public GoogleCloudWebriskV1SearchUrisResponseThreatUri(){}
 }

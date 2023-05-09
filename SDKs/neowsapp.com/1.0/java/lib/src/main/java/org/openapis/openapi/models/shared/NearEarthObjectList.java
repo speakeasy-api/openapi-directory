@@ -18,6 +18,7 @@ public class NearEarthObjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("element_count")
     public Integer elementCount;
+
     public NearEarthObjectList withElementCount(Integer elementCount) {
         this.elementCount = elementCount;
         return this;
@@ -29,6 +30,7 @@ public class NearEarthObjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, Object> links;
+
     public NearEarthObjectList withLinks(java.util.Map<String, Object> links) {
         this.links = links;
         return this;
@@ -37,9 +39,11 @@ public class NearEarthObjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("near_earth_objects")
     public Object nearEarthObjects;
+
     public NearEarthObjectList withNearEarthObjects(Object nearEarthObjects) {
         this.nearEarthObjects = nearEarthObjects;
         return this;
     }
     
+    public NearEarthObjectList(){}
 }

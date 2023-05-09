@@ -18,6 +18,7 @@ public class Css {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cssDomainId")
     public String cssDomainId;
+
     public Css withCssDomainId(String cssDomainId) {
         this.cssDomainId = cssDomainId;
         return this;
@@ -29,6 +30,7 @@ public class Css {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cssGroupId")
     public String cssGroupId;
+
     public Css withCssGroupId(String cssGroupId) {
         this.cssGroupId = cssGroupId;
         return this;
@@ -40,6 +42,7 @@ public class Css {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Css withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class Css {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullName")
     public String fullName;
+
     public Css withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -62,6 +66,7 @@ public class Css {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homepageUri")
     public String homepageUri;
+
     public Css withHomepageUri(String homepageUri) {
         this.homepageUri = homepageUri;
         return this;
@@ -73,9 +78,11 @@ public class Css {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelIds")
     public String[] labelIds;
+
     public Css withLabelIds(String[] labelIds) {
         this.labelIds = labelIds;
         return this;
     }
     
+    public Css(){}
 }

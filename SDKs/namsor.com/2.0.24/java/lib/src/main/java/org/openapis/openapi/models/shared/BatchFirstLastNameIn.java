@@ -15,6 +15,7 @@ public class BatchFirstLastNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public FactIn[] facts;
+
     public BatchFirstLastNameIn withFacts(FactIn[] facts) {
         this.facts = facts;
         return this;
@@ -23,9 +24,11 @@ public class BatchFirstLastNameIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public FirstLastNameIn[] personalNames;
+
     public BatchFirstLastNameIn withPersonalNames(FirstLastNameIn[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchFirstLastNameIn(){}
 }

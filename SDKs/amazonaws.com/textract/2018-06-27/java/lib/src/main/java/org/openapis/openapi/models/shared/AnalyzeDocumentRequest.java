@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyzeDocumentRequest {
     @JsonProperty("Document")
     public Document document;
+
     public AnalyzeDocumentRequest withDocument(Document document) {
         this.document = document;
         return this;
@@ -18,6 +19,7 @@ public class AnalyzeDocumentRequest {
     
     @JsonProperty("FeatureTypes")
     public FeatureTypeEnum[] featureTypes;
+
     public AnalyzeDocumentRequest withFeatureTypes(FeatureTypeEnum[] featureTypes) {
         this.featureTypes = featureTypes;
         return this;
@@ -26,6 +28,7 @@ public class AnalyzeDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopConfig")
     public HumanLoopConfig humanLoopConfig;
+
     public AnalyzeDocumentRequest withHumanLoopConfig(HumanLoopConfig humanLoopConfig) {
         this.humanLoopConfig = humanLoopConfig;
         return this;
@@ -34,9 +37,14 @@ public class AnalyzeDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueriesConfig")
     public QueriesConfig queriesConfig;
+
     public AnalyzeDocumentRequest withQueriesConfig(QueriesConfig queriesConfig) {
         this.queriesConfig = queriesConfig;
         return this;
     }
     
+    public AnalyzeDocumentRequest(@JsonProperty("Document") Document document, @JsonProperty("FeatureTypes") FeatureTypeEnum[] featureTypes) {
+        this.document = document;
+        this.featureTypes = featureTypes;
+  }
 }

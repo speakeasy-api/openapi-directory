@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AerodromesByRouteUsV1AerodromesRouteQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AerodromesByRoute aerodromesByRoute;
+
     public AerodromesByRouteUsV1AerodromesRouteQueryPostRequest withAerodromesByRoute(org.openapis.openapi.models.shared.AerodromesByRoute aerodromesByRoute) {
         this.aerodromesByRoute = aerodromesByRoute;
         return this;
@@ -16,9 +18,13 @@ public class AerodromesByRouteUsV1AerodromesRouteQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public AerodromesByRouteUsV1AerodromesRouteQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public AerodromesByRouteUsV1AerodromesRouteQueryPostRequest(@JsonProperty("AerodromesByRoute") org.openapis.openapi.models.shared.AerodromesByRoute aerodromesByRoute) {
+        this.aerodromesByRoute = aerodromesByRoute;
+  }
 }

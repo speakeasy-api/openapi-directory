@@ -61,11 +61,9 @@ public class Queries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateResponse() {{
+        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateResponse(contentType, httpRes.statusCode()) {{
             query = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Queries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Queries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetResponse() {{
+        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetResponse(contentType, httpRes.statusCode()) {{
             query = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Queries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListResponse() {{
+        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListResponse(contentType, httpRes.statusCode()) {{
             listQueriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,11 +231,9 @@ public class Queries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetResponse() {{
+        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -285,11 +275,9 @@ public class Queries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListResponse() {{
+        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListResponse(contentType, httpRes.statusCode()) {{
             listReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,11 +321,9 @@ public class Queries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunResponse() {{
+        org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunResponse res = new org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

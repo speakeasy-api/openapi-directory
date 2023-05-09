@@ -15,6 +15,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public java.util.Map<String, ProgressSub> languages;
+
     public Progress withLanguages(java.util.Map<String, ProgressSub> languages) {
         this.languages = languages;
         return this;
@@ -23,6 +24,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ProgressLink links;
+
     public Progress withLinks(ProgressLink links) {
         this.links = links;
         return this;
@@ -31,6 +33,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_status")
     public ProjectStatusEnum projectStatus;
+
     public Progress withProjectStatus(ProjectStatusEnum projectStatus) {
         this.projectStatus = projectStatus;
         return this;
@@ -39,6 +42,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proofreading")
     public Float proofreading;
+
     public Progress withProofreading(Float proofreading) {
         this.proofreading = proofreading;
         return this;
@@ -47,6 +51,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public Progress withTotal(Float total) {
         this.total = total;
         return this;
@@ -55,6 +60,7 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translation")
     public Float translation;
+
     public Progress withTranslation(Float translation) {
         this.translation = translation;
         return this;
@@ -63,9 +69,11 @@ public class Progress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word_count")
     public Long wordCount;
+
     public Progress withWordCount(Long wordCount) {
         this.wordCount = wordCount;
         return this;
     }
     
+    public Progress(){}
 }

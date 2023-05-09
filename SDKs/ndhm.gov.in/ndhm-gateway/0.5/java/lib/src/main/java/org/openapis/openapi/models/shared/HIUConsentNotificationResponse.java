@@ -17,6 +17,7 @@ public class HIUConsentNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acknowledgement")
     public ConsentAcknowledgement[] acknowledgement;
+
     public HIUConsentNotificationResponse withAcknowledgement(ConsentAcknowledgement[] acknowledgement) {
         this.acknowledgement = acknowledgement;
         return this;
@@ -25,6 +26,7 @@ public class HIUConsentNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public HIUConsentNotificationResponse withError(Error error) {
         this.error = error;
         return this;
@@ -35,6 +37,7 @@ public class HIUConsentNotificationResponse {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public HIUConsentNotificationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class HIUConsentNotificationResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public HIUConsentNotificationResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class HIUConsentNotificationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIUConsentNotificationResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIUConsentNotificationResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

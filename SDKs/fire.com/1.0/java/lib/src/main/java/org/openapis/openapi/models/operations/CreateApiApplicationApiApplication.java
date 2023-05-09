@@ -23,6 +23,7 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationId")
     public Long applicationId;
+
     public CreateApiApplicationApiApplication withApplicationId(Long applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -34,6 +35,7 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public CreateApiApplicationApiApplication withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -45,6 +47,7 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientKey")
     public String clientKey;
+
     public CreateApiApplicationApiApplication withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -56,6 +59,7 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CreateApiApplicationApiApplication withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -69,6 +73,7 @@ public class CreateApiApplicationApiApplication {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiry")
     public OffsetDateTime expiry;
+
     public CreateApiApplicationApiApplication withExpiry(OffsetDateTime expiry) {
         this.expiry = expiry;
         return this;
@@ -80,6 +85,7 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ican")
     public Long ican;
+
     public CreateApiApplicationApiApplication withIcan(Long ican) {
         this.ican = ican;
         return this;
@@ -91,6 +97,7 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfPayeeApprovalsRequired")
     public Long numberOfPayeeApprovalsRequired;
+
     public CreateApiApplicationApiApplication withNumberOfPayeeApprovalsRequired(Long numberOfPayeeApprovalsRequired) {
         this.numberOfPayeeApprovalsRequired = numberOfPayeeApprovalsRequired;
         return this;
@@ -102,6 +109,7 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfPaymentApprovalsRequired")
     public Long numberOfPaymentApprovalsRequired;
+
     public CreateApiApplicationApiApplication withNumberOfPaymentApprovalsRequired(Long numberOfPaymentApprovalsRequired) {
         this.numberOfPaymentApprovalsRequired = numberOfPaymentApprovalsRequired;
         return this;
@@ -113,9 +121,11 @@ public class CreateApiApplicationApiApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public CreateApiApplicationApiApplication withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public CreateApiApplicationApiApplication(){}
 }

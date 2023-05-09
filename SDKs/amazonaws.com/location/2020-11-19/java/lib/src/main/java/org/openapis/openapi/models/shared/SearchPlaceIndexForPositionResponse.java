@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchPlaceIndexForPositionResponse {
     @JsonProperty("Results")
     public SearchForPositionResult[] results;
+
     public SearchPlaceIndexForPositionResponse withResults(SearchForPositionResult[] results) {
         this.results = results;
         return this;
@@ -19,9 +20,14 @@ public class SearchPlaceIndexForPositionResponse {
     
     @JsonProperty("Summary")
     public SearchPlaceIndexForPositionSummary summary;
+
     public SearchPlaceIndexForPositionResponse withSummary(SearchPlaceIndexForPositionSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public SearchPlaceIndexForPositionResponse(@JsonProperty("Results") SearchForPositionResult[] results, @JsonProperty("Summary") SearchPlaceIndexForPositionSummary summary) {
+        this.results = results;
+        this.summary = summary;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInformationContentResourceRequest {
@@ -14,6 +15,7 @@ public class GetInformationContentResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetInformationContentResourceRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -21,6 +23,7 @@ public class GetInformationContentResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
     public String objectCategory;
+
     public GetInformationContentResourceRequest withObjectCategory(String objectCategory) {
         this.objectCategory = objectCategory;
         return this;
@@ -28,6 +31,7 @@ public class GetInformationContentResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_category")
     public String subjectCategory;
+
     public GetInformationContentResourceRequest withSubjectCategory(String subjectCategory) {
         this.subjectCategory = subjectCategory;
         return this;
@@ -35,9 +39,15 @@ public class GetInformationContentResourceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_taxon")
     public String subjectTaxon;
+
     public GetInformationContentResourceRequest withSubjectTaxon(String subjectTaxon) {
         this.subjectTaxon = subjectTaxon;
         return this;
     }
     
+    public GetInformationContentResourceRequest(@JsonProperty("object_category") String objectCategory, @JsonProperty("subject_category") String subjectCategory, @JsonProperty("subject_taxon") String subjectTaxon) {
+        this.objectCategory = objectCategory;
+        this.subjectCategory = subjectCategory;
+        this.subjectTaxon = subjectTaxon;
+  }
 }

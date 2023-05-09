@@ -18,6 +18,7 @@ public class FindDevicesByDeviceIdentifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIdentifier")
     public DeviceIdentifier deviceIdentifier;
+
     public FindDevicesByDeviceIdentifierRequest withDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
         this.deviceIdentifier = deviceIdentifier;
         return this;
@@ -29,6 +30,7 @@ public class FindDevicesByDeviceIdentifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public String limit;
+
     public FindDevicesByDeviceIdentifierRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -40,9 +42,11 @@ public class FindDevicesByDeviceIdentifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public FindDevicesByDeviceIdentifierRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public FindDevicesByDeviceIdentifierRequest(){}
 }

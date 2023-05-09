@@ -15,6 +15,7 @@ public class GetNotificationChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsRoleName")
     public String snsRoleName;
+
     public GetNotificationChannelResponse withSnsRoleName(String snsRoleName) {
         this.snsRoleName = snsRoleName;
         return this;
@@ -23,9 +24,11 @@ public class GetNotificationChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public GetNotificationChannelResponse withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
     }
     
+    public GetNotificationChannelResponse(){}
 }

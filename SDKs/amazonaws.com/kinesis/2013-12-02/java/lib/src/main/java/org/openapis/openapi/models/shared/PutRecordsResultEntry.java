@@ -15,6 +15,7 @@ public class PutRecordsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public PutRecordsResultEntry withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class PutRecordsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public PutRecordsResultEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,6 +33,7 @@ public class PutRecordsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SequenceNumber")
     public String sequenceNumber;
+
     public PutRecordsResultEntry withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
@@ -39,9 +42,11 @@ public class PutRecordsResultEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardId")
     public String shardId;
+
     public PutRecordsResultEntry withShardId(String shardId) {
         this.shardId = shardId;
         return this;
     }
     
+    public PutRecordsResultEntry(){}
 }

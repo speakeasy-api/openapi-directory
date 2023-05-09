@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoubleclicksearchConversionGetByCustomerIdRequest {
@@ -12,6 +13,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adGroupId")
     public String adGroupId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withAdGroupId(String adGroupId) {
         this.adGroupId = adGroupId;
         return this;
@@ -42,6 +46,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adId")
     public String adId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withAdId(String adId) {
         this.adId = adId;
         return this;
@@ -52,6 +57,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -62,6 +68,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agencyId")
     public String agencyId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withAgencyId(String agencyId) {
         this.agencyId = agencyId;
         return this;
@@ -72,6 +79,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -82,6 +90,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -92,6 +101,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
     public String campaignId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -102,6 +112,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criterionId")
     public String criterionId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withCriterionId(String criterionId) {
         this.criterionId = criterionId;
         return this;
@@ -112,6 +123,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public String customerId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -122,6 +134,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public Long endDate;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withEndDate(Long endDate) {
         this.endDate = endDate;
         return this;
@@ -132,6 +145,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engineAccountId")
     public String engineAccountId;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withEngineAccountId(String engineAccountId) {
         this.engineAccountId = engineAccountId;
         return this;
@@ -142,6 +156,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -152,6 +167,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withKey(String key) {
         this.key = key;
         return this;
@@ -162,6 +178,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -172,6 +189,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -182,6 +200,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -192,6 +211,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rowCount")
     public Long rowCount;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withRowCount(Long rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -202,6 +222,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public Long startDate;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
@@ -212,6 +233,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startRow")
     public Long startRow;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withStartRow(Long startRow) {
         this.startRow = startRow;
         return this;
@@ -222,6 +244,7 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -232,9 +255,17 @@ public class DoubleclicksearchConversionGetByCustomerIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DoubleclicksearchConversionGetByCustomerIdRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DoubleclicksearchConversionGetByCustomerIdRequest(@JsonProperty("customerId") String customerId, @JsonProperty("endDate") Long endDate, @JsonProperty("rowCount") Long rowCount, @JsonProperty("startDate") Long startDate, @JsonProperty("startRow") Long startRow) {
+        this.customerId = customerId;
+        this.endDate = endDate;
+        this.rowCount = rowCount;
+        this.startDate = startDate;
+        this.startRow = startRow;
+  }
 }

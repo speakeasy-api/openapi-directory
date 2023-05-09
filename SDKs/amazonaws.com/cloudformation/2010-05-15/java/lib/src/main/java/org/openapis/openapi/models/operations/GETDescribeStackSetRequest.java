@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeStackSetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeStackSetActionEnum action;
+
     public GETDescribeStackSetRequest withAction(GETDescribeStackSetActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
     public GETDescribeStackSetCallAsEnum callAs;
+
     public GETDescribeStackSetRequest withCallAs(GETDescribeStackSetCallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeStackSetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
     public String stackSetName;
+
     public GETDescribeStackSetRequest withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -36,6 +40,7 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeStackSetVersionEnum version;
+
     public GETDescribeStackSetRequest withVersion(GETDescribeStackSetVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeStackSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeStackSetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeStackSetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeStackSetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeStackSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeStackSetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDescribeStackSetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeStackSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeStackSetRequest(@JsonProperty("Action") GETDescribeStackSetActionEnum action, @JsonProperty("StackSetName") String stackSetName, @JsonProperty("Version") GETDescribeStackSetVersionEnum version) {
+        this.action = action;
+        this.stackSetName = stackSetName;
+        this.version = version;
+  }
 }

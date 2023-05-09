@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RebootReplicationInstanceResponse {
     
     public String contentType;
+
     public RebootReplicationInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RebootReplicationInstanceResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public RebootReplicationInstanceResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -29,6 +32,7 @@ public class RebootReplicationInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.RebootReplicationInstanceResponse rebootReplicationInstanceResponse;
+
     public RebootReplicationInstanceResponse withRebootReplicationInstanceResponse(org.openapis.openapi.models.shared.RebootReplicationInstanceResponse rebootReplicationInstanceResponse) {
         this.rebootReplicationInstanceResponse = rebootReplicationInstanceResponse;
         return this;
@@ -39,6 +43,7 @@ public class RebootReplicationInstanceResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public RebootReplicationInstanceResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class RebootReplicationInstanceResponse {
     
     
     public Integer statusCode;
+
     public RebootReplicationInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class RebootReplicationInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RebootReplicationInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RebootReplicationInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

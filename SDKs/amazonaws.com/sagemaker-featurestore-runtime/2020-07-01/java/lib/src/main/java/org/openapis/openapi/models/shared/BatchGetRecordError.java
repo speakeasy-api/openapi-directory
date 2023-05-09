@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetRecordError {
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public BatchGetRecordError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class BatchGetRecordError {
     
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BatchGetRecordError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,6 +28,7 @@ public class BatchGetRecordError {
     
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public BatchGetRecordError withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -33,9 +36,16 @@ public class BatchGetRecordError {
     
     @JsonProperty("RecordIdentifierValueAsString")
     public String recordIdentifierValueAsString;
+
     public BatchGetRecordError withRecordIdentifierValueAsString(String recordIdentifierValueAsString) {
         this.recordIdentifierValueAsString = recordIdentifierValueAsString;
         return this;
     }
     
+    public BatchGetRecordError(@JsonProperty("ErrorCode") String errorCode, @JsonProperty("ErrorMessage") String errorMessage, @JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("RecordIdentifierValueAsString") String recordIdentifierValueAsString) {
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.featureGroupName = featureGroupName;
+        this.recordIdentifierValueAsString = recordIdentifierValueAsString;
+  }
 }

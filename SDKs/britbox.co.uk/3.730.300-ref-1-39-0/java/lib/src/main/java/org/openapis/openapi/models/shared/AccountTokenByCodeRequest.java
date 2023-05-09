@@ -15,6 +15,7 @@ public class AccountTokenByCodeRequest {
      */
     @JsonProperty("code")
     public String code;
+
     public AccountTokenByCodeRequest withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class AccountTokenByCodeRequest {
      */
     @JsonProperty("id")
     public String id;
+
     public AccountTokenByCodeRequest withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +37,15 @@ public class AccountTokenByCodeRequest {
      */
     @JsonProperty("scopes")
     public AccountTokenByCodeRequestScopesEnum[] scopes;
+
     public AccountTokenByCodeRequest withScopes(AccountTokenByCodeRequestScopesEnum[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public AccountTokenByCodeRequest(@JsonProperty("code") String code, @JsonProperty("id") String id, @JsonProperty("scopes") AccountTokenByCodeRequestScopesEnum[] scopes) {
+        this.code = code;
+        this.id = id;
+        this.scopes = scopes;
+  }
 }

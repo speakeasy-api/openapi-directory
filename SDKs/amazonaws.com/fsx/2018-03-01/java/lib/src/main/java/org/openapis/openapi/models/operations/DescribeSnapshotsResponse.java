@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSnapshotsResponse {
@@ -12,6 +13,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object badRequest;
+
     public DescribeSnapshotsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSnapshotsResponse {
     
     
     public String contentType;
+
     public DescribeSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSnapshotsResponse describeSnapshotsResponse;
+
     public DescribeSnapshotsResponse withDescribeSnapshotsResponse(org.openapis.openapi.models.shared.DescribeSnapshotsResponse describeSnapshotsResponse) {
         this.describeSnapshotsResponse = describeSnapshotsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeSnapshotsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public DescribeSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeSnapshotsResponse {
      */
     
     public Object snapshotNotFound;
+
     public DescribeSnapshotsResponse withSnapshotNotFound(Object snapshotNotFound) {
         this.snapshotNotFound = snapshotNotFound;
         return this;
     }
     
+    public DescribeSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

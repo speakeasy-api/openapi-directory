@@ -18,6 +18,7 @@ public class ClusteringMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public Cluster[] clusters;
+
     public ClusteringMetrics withClusters(Cluster[] clusters) {
         this.clusters = clusters;
         return this;
@@ -29,6 +30,7 @@ public class ClusteringMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daviesBouldinIndex")
     public Double daviesBouldinIndex;
+
     public ClusteringMetrics withDaviesBouldinIndex(Double daviesBouldinIndex) {
         this.daviesBouldinIndex = daviesBouldinIndex;
         return this;
@@ -40,9 +42,11 @@ public class ClusteringMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanSquaredDistance")
     public Double meanSquaredDistance;
+
     public ClusteringMetrics withMeanSquaredDistance(Double meanSquaredDistance) {
         this.meanSquaredDistance = meanSquaredDistance;
         return this;
     }
     
+    public ClusteringMetrics(){}
 }

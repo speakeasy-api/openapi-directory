@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyClientVpnEndpointDNSServers {
     @SpeakeasyMetadata("queryParam:name=CustomDnsServers")
     public String[] customDnsServers;
+
     public GETModifyClientVpnEndpointDNSServers withCustomDnsServers(String[] customDnsServers) {
         this.customDnsServers = customDnsServers;
         return this;
@@ -19,9 +20,11 @@ public class GETModifyClientVpnEndpointDNSServers {
     
     @SpeakeasyMetadata("queryParam:name=Enabled")
     public Boolean enabled;
+
     public GETModifyClientVpnEndpointDNSServers withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GETModifyClientVpnEndpointDNSServers(){}
 }

@@ -12,6 +12,7 @@ public class GroupEmbargoOptions {
      */
     @JsonProperty("id")
     public Long id;
+
     public GroupEmbargoOptions withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GroupEmbargoOptions {
      */
     @JsonProperty("ip_name")
     public String ipName;
+
     public GroupEmbargoOptions withIpName(String ipName) {
         this.ipName = ipName;
         return this;
@@ -32,9 +34,15 @@ public class GroupEmbargoOptions {
      */
     @JsonProperty("type")
     public GroupEmbargoOptionsTypeEnum type;
+
     public GroupEmbargoOptions withType(GroupEmbargoOptionsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GroupEmbargoOptions(@JsonProperty("id") Long id, @JsonProperty("ip_name") String ipName, @JsonProperty("type") GroupEmbargoOptionsTypeEnum type) {
+        this.id = id;
+        this.ipName = ipName;
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePath")
     public String filePath;
+
     public Location withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -23,6 +24,7 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePosition")
     public Long filePosition;
+
     public Location withFilePosition(Long filePosition) {
         this.filePosition = filePosition;
         return this;
@@ -31,9 +33,11 @@ public class Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeFileVersion")
     public RelativeFileVersionEnumEnum relativeFileVersion;
+
     public Location withRelativeFileVersion(RelativeFileVersionEnumEnum relativeFileVersion) {
         this.relativeFileVersion = relativeFileVersion;
         return this;
     }
     
+    public Location(){}
 }

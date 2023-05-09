@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AerodromesByDistance aerodromesByDistance;
+
     public AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest withAerodromesByDistance(org.openapis.openapi.models.shared.AerodromesByDistance aerodromesByDistance) {
         this.aerodromesByDistance = aerodromesByDistance;
         return this;
@@ -16,9 +18,13 @@ public class AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest(@JsonProperty("AerodromesByDistance") org.openapis.openapi.models.shared.AerodromesByDistance aerodromesByDistance) {
+        this.aerodromesByDistance = aerodromesByDistance;
+  }
 }

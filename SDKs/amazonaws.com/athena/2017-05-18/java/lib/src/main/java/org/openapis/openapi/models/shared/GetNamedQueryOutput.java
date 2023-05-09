@@ -15,9 +15,11 @@ public class GetNamedQueryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamedQuery")
     public NamedQuery namedQuery;
+
     public GetNamedQueryOutput withNamedQuery(NamedQuery namedQuery) {
         this.namedQuery = namedQuery;
         return this;
     }
     
+    public GetNamedQueryOutput(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResiliencyScore {
     @JsonProperty("disruptionScore")
     public java.util.Map<String, Double> disruptionScore;
+
     public ResiliencyScore withDisruptionScore(java.util.Map<String, Double> disruptionScore) {
         this.disruptionScore = disruptionScore;
         return this;
@@ -19,9 +20,14 @@ public class ResiliencyScore {
     
     @JsonProperty("score")
     public Double score;
+
     public ResiliencyScore withScore(Double score) {
         this.score = score;
         return this;
     }
     
+    public ResiliencyScore(@JsonProperty("disruptionScore") java.util.Map<String, Double> disruptionScore, @JsonProperty("score") Double score) {
+        this.disruptionScore = disruptionScore;
+        this.score = score;
+  }
 }

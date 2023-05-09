@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainNameserversResponse {
     
     public String contentType;
+
     public UpdateDomainNameserversResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDomainNameserversResponse {
      */
     
     public Object duplicateRequest;
+
     public UpdateDomainNameserversResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDomainNameserversResponse {
      */
     
     public Object invalidInput;
+
     public UpdateDomainNameserversResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainNameserversResponse {
      */
     
     public Object operationLimitExceeded;
+
     public UpdateDomainNameserversResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDomainNameserversResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainNameserversResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDomainNameserversResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainNameserversResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDomainNameserversResponse {
      */
     
     public Object tldRulesViolation;
+
     public UpdateDomainNameserversResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainNameserversResponse {
      */
     
     public Object unsupportedTLD;
+
     public UpdateDomainNameserversResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDomainNameserversResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDomainNameserversResponse updateDomainNameserversResponse;
+
     public UpdateDomainNameserversResponse withUpdateDomainNameserversResponse(org.openapis.openapi.models.shared.UpdateDomainNameserversResponse updateDomainNameserversResponse) {
         this.updateDomainNameserversResponse = updateDomainNameserversResponse;
         return this;
     }
     
+    public UpdateDomainNameserversResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

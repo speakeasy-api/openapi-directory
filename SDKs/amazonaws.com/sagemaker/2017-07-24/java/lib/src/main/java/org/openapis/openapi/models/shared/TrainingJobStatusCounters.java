@@ -15,6 +15,7 @@ public class TrainingJobStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Completed")
     public Long completed;
+
     public TrainingJobStatusCounters withCompleted(Long completed) {
         this.completed = completed;
         return this;
@@ -23,6 +24,7 @@ public class TrainingJobStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InProgress")
     public Long inProgress;
+
     public TrainingJobStatusCounters withInProgress(Long inProgress) {
         this.inProgress = inProgress;
         return this;
@@ -31,6 +33,7 @@ public class TrainingJobStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonRetryableError")
     public Long nonRetryableError;
+
     public TrainingJobStatusCounters withNonRetryableError(Long nonRetryableError) {
         this.nonRetryableError = nonRetryableError;
         return this;
@@ -39,6 +42,7 @@ public class TrainingJobStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryableError")
     public Long retryableError;
+
     public TrainingJobStatusCounters withRetryableError(Long retryableError) {
         this.retryableError = retryableError;
         return this;
@@ -47,9 +51,11 @@ public class TrainingJobStatusCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stopped")
     public Long stopped;
+
     public TrainingJobStatusCounters withStopped(Long stopped) {
         this.stopped = stopped;
         return this;
     }
     
+    public TrainingJobStatusCounters(){}
 }

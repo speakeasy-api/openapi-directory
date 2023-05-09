@@ -18,6 +18,7 @@ public class ListLensReviewsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensReviewSummaries")
     public LensReviewSummary[] lensReviewSummaries;
+
     public ListLensReviewsOutput withLensReviewSummaries(LensReviewSummary[] lensReviewSummaries) {
         this.lensReviewSummaries = lensReviewSummaries;
         return this;
@@ -29,6 +30,7 @@ public class ListLensReviewsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MilestoneNumber")
     public Long milestoneNumber;
+
     public ListLensReviewsOutput withMilestoneNumber(Long milestoneNumber) {
         this.milestoneNumber = milestoneNumber;
         return this;
@@ -40,6 +42,7 @@ public class ListLensReviewsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLensReviewsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -51,9 +54,11 @@ public class ListLensReviewsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public ListLensReviewsOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public ListLensReviewsOutput(){}
 }

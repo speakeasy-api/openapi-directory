@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoTriggerCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public EnterpriseCrmEventbusProtoTriggerCriteria withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoTriggerCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmEventbusProtoEventParameters parameters;
+
     public EnterpriseCrmEventbusProtoTriggerCriteria withParameters(EnterpriseCrmEventbusProtoEventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -37,9 +39,11 @@ public class EnterpriseCrmEventbusProtoTriggerCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerCriteriaTaskImplementationClassName")
     public String triggerCriteriaTaskImplementationClassName;
+
     public EnterpriseCrmEventbusProtoTriggerCriteria withTriggerCriteriaTaskImplementationClassName(String triggerCriteriaTaskImplementationClassName) {
         this.triggerCriteriaTaskImplementationClassName = triggerCriteriaTaskImplementationClassName;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoTriggerCriteria(){}
 }

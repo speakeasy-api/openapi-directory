@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeDashboardResponse {
     @JsonProperty("dashboardArn")
     public String dashboardArn;
+
     public DescribeDashboardResponse withDashboardArn(String dashboardArn) {
         this.dashboardArn = dashboardArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeDashboardResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dashboardCreationDate")
     public OffsetDateTime dashboardCreationDate;
+
     public DescribeDashboardResponse withDashboardCreationDate(OffsetDateTime dashboardCreationDate) {
         this.dashboardCreationDate = dashboardCreationDate;
         return this;
@@ -35,6 +37,7 @@ public class DescribeDashboardResponse {
     
     @JsonProperty("dashboardDefinition")
     public String dashboardDefinition;
+
     public DescribeDashboardResponse withDashboardDefinition(String dashboardDefinition) {
         this.dashboardDefinition = dashboardDefinition;
         return this;
@@ -43,6 +46,7 @@ public class DescribeDashboardResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashboardDescription")
     public String dashboardDescription;
+
     public DescribeDashboardResponse withDashboardDescription(String dashboardDescription) {
         this.dashboardDescription = dashboardDescription;
         return this;
@@ -50,6 +54,7 @@ public class DescribeDashboardResponse {
     
     @JsonProperty("dashboardId")
     public String dashboardId;
+
     public DescribeDashboardResponse withDashboardId(String dashboardId) {
         this.dashboardId = dashboardId;
         return this;
@@ -59,6 +64,7 @@ public class DescribeDashboardResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dashboardLastUpdateDate")
     public OffsetDateTime dashboardLastUpdateDate;
+
     public DescribeDashboardResponse withDashboardLastUpdateDate(OffsetDateTime dashboardLastUpdateDate) {
         this.dashboardLastUpdateDate = dashboardLastUpdateDate;
         return this;
@@ -66,6 +72,7 @@ public class DescribeDashboardResponse {
     
     @JsonProperty("dashboardName")
     public String dashboardName;
+
     public DescribeDashboardResponse withDashboardName(String dashboardName) {
         this.dashboardName = dashboardName;
         return this;
@@ -73,9 +80,19 @@ public class DescribeDashboardResponse {
     
     @JsonProperty("projectId")
     public String projectId;
+
     public DescribeDashboardResponse withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DescribeDashboardResponse(@JsonProperty("dashboardArn") String dashboardArn, @JsonProperty("dashboardCreationDate") OffsetDateTime dashboardCreationDate, @JsonProperty("dashboardDefinition") String dashboardDefinition, @JsonProperty("dashboardId") String dashboardId, @JsonProperty("dashboardLastUpdateDate") OffsetDateTime dashboardLastUpdateDate, @JsonProperty("dashboardName") String dashboardName, @JsonProperty("projectId") String projectId) {
+        this.dashboardArn = dashboardArn;
+        this.dashboardCreationDate = dashboardCreationDate;
+        this.dashboardDefinition = dashboardDefinition;
+        this.dashboardId = dashboardId;
+        this.dashboardLastUpdateDate = dashboardLastUpdateDate;
+        this.dashboardName = dashboardName;
+        this.projectId = projectId;
+  }
 }

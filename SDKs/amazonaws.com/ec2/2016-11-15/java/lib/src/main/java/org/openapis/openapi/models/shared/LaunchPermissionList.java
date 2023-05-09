@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchPermissionList {
     
     public LaunchPermissionListGroupEnum group;
+
     public LaunchPermissionList withGroup(LaunchPermissionListGroupEnum group) {
         this.group = group;
         return this;
@@ -19,6 +20,7 @@ public class LaunchPermissionList {
     
     
     public String organizationArn;
+
     public LaunchPermissionList withOrganizationArn(String organizationArn) {
         this.organizationArn = organizationArn;
         return this;
@@ -26,6 +28,7 @@ public class LaunchPermissionList {
     
     
     public String organizationalUnitArn;
+
     public LaunchPermissionList withOrganizationalUnitArn(String organizationalUnitArn) {
         this.organizationalUnitArn = organizationalUnitArn;
         return this;
@@ -33,9 +36,11 @@ public class LaunchPermissionList {
     
     
     public String userId;
+
     public LaunchPermissionList withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public LaunchPermissionList(){}
 }

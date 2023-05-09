@@ -59,11 +59,9 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageCreateFileResponse res = new org.openapis.openapi.models.operations.StorageCreateFileResponse() {{
+        org.openapis.openapi.models.operations.StorageCreateFileResponse res = new org.openapis.openapi.models.operations.StorageCreateFileResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -100,10 +98,8 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageDeleteFileResponse res = new org.openapis.openapi.models.operations.StorageDeleteFileResponse() {{
+        org.openapis.openapi.models.operations.StorageDeleteFileResponse res = new org.openapis.openapi.models.operations.StorageDeleteFileResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -135,11 +131,9 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageGetFileResponse res = new org.openapis.openapi.models.operations.StorageGetFileResponse() {{
+        org.openapis.openapi.models.operations.StorageGetFileResponse res = new org.openapis.openapi.models.operations.StorageGetFileResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,10 +170,8 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageGetFileDownloadResponse res = new org.openapis.openapi.models.operations.StorageGetFileDownloadResponse() {{
+        org.openapis.openapi.models.operations.StorageGetFileDownloadResponse res = new org.openapis.openapi.models.operations.StorageGetFileDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,10 +209,8 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageGetFilePreviewResponse res = new org.openapis.openapi.models.operations.StorageGetFilePreviewResponse() {{
+        org.openapis.openapi.models.operations.StorageGetFilePreviewResponse res = new org.openapis.openapi.models.operations.StorageGetFilePreviewResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,10 +242,8 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageGetFileViewResponse res = new org.openapis.openapi.models.operations.StorageGetFileViewResponse() {{
+        org.openapis.openapi.models.operations.StorageGetFileViewResponse res = new org.openapis.openapi.models.operations.StorageGetFileViewResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +281,9 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageListFilesResponse res = new org.openapis.openapi.models.operations.StorageListFilesResponse() {{
+        org.openapis.openapi.models.operations.StorageListFilesResponse res = new org.openapis.openapi.models.operations.StorageListFilesResponse(contentType, httpRes.statusCode()) {{
             fileList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +322,9 @@ public class Storage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorageUpdateFileResponse res = new org.openapis.openapi.models.operations.StorageUpdateFileResponse() {{
+        org.openapis.openapi.models.operations.StorageUpdateFileResponse res = new org.openapis.openapi.models.operations.StorageUpdateFileResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

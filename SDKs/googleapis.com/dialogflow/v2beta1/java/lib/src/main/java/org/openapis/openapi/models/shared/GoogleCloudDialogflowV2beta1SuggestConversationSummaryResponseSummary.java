@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSumma
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerRecord")
     public String answerRecord;
+
     public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSummary withAnswerRecord(String answerRecord) {
         this.answerRecord = answerRecord;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSumma
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSummary withText(String text) {
         this.text = text;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSumma
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSections")
     public java.util.Map<String, String> textSections;
+
     public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSummary withTextSections(java.util.Map<String, String> textSections) {
         this.textSections = textSections;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSummary(){}
 }

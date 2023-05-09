@@ -15,9 +15,11 @@ public class StartTransactionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionType")
     public StartTransactionRequestBodyTransactionTypeEnum transactionType;
+
     public StartTransactionRequestBody withTransactionType(StartTransactionRequestBodyTransactionTypeEnum transactionType) {
         this.transactionType = transactionType;
         return this;
     }
     
+    public StartTransactionRequestBody(){}
 }

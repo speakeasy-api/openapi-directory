@@ -15,6 +15,7 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ReactiveInsight withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ReactiveInsight withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightTimeRange")
     public InsightTimeRange insightTimeRange;
+
     public ReactiveInsight withInsightTimeRange(InsightTimeRange insightTimeRange) {
         this.insightTimeRange = insightTimeRange;
         return this;
@@ -42,6 +45,7 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ReactiveInsight withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +57,7 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public ReactiveInsight withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -61,6 +66,7 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public InsightSeverityEnum severity;
+
     public ReactiveInsight withSeverity(InsightSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -69,6 +75,7 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SsmOpsItemId")
     public String ssmOpsItemId;
+
     public ReactiveInsight withSsmOpsItemId(String ssmOpsItemId) {
         this.ssmOpsItemId = ssmOpsItemId;
         return this;
@@ -77,9 +84,11 @@ public class ReactiveInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InsightStatusEnum status;
+
     public ReactiveInsight withStatus(InsightStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ReactiveInsight(){}
 }

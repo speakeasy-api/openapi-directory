@@ -23,6 +23,7 @@ public class ProcessingFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public ProcessingFee withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -34,6 +35,7 @@ public class ProcessingFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective_at")
     public String effectiveAt;
+
     public ProcessingFee withEffectiveAt(String effectiveAt) {
         this.effectiveAt = effectiveAt;
         return this;
@@ -45,9 +47,11 @@ public class ProcessingFee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ProcessingFee withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ProcessingFee(){}
 }

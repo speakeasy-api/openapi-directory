@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TimeframesResponse {
     
     public String contentType;
+
     public TimeframesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TimeframesResponse {
     
     
     public Integer statusCode;
+
     public TimeframesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TimeframesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TimeframesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class TimeframesResponse {
     
     
     public org.openapis.openapi.models.shared.Timeframe[] timeframes;
+
     public TimeframesResponse withTimeframes(org.openapis.openapi.models.shared.Timeframe[] timeframes) {
         this.timeframes = timeframes;
         return this;
     }
     
+    public TimeframesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

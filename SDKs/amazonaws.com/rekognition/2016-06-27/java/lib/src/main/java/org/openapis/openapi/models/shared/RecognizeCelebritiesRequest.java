@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RecognizeCelebritiesRequest {
     @JsonProperty("Image")
     public Image image;
+
     public RecognizeCelebritiesRequest withImage(Image image) {
         this.image = image;
         return this;
     }
     
+    public RecognizeCelebritiesRequest(@JsonProperty("Image") Image image) {
+        this.image = image;
+  }
 }

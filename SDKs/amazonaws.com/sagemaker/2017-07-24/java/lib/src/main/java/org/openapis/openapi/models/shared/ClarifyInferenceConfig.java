@@ -15,6 +15,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentTemplate")
     public String contentTemplate;
+
     public ClarifyInferenceConfig withContentTemplate(String contentTemplate) {
         this.contentTemplate = contentTemplate;
         return this;
@@ -23,6 +24,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureHeaders")
     public String[] featureHeaders;
+
     public ClarifyInferenceConfig withFeatureHeaders(String[] featureHeaders) {
         this.featureHeaders = featureHeaders;
         return this;
@@ -31,6 +33,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureTypes")
     public ClarifyFeatureTypeEnum[] featureTypes;
+
     public ClarifyInferenceConfig withFeatureTypes(ClarifyFeatureTypeEnum[] featureTypes) {
         this.featureTypes = featureTypes;
         return this;
@@ -39,6 +42,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeaturesAttribute")
     public String featuresAttribute;
+
     public ClarifyInferenceConfig withFeaturesAttribute(String featuresAttribute) {
         this.featuresAttribute = featuresAttribute;
         return this;
@@ -47,6 +51,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelAttribute")
     public String labelAttribute;
+
     public ClarifyInferenceConfig withLabelAttribute(String labelAttribute) {
         this.labelAttribute = labelAttribute;
         return this;
@@ -55,6 +60,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelHeaders")
     public String[] labelHeaders;
+
     public ClarifyInferenceConfig withLabelHeaders(String[] labelHeaders) {
         this.labelHeaders = labelHeaders;
         return this;
@@ -63,6 +69,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelIndex")
     public Long labelIndex;
+
     public ClarifyInferenceConfig withLabelIndex(Long labelIndex) {
         this.labelIndex = labelIndex;
         return this;
@@ -71,6 +78,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPayloadInMB")
     public Long maxPayloadInMB;
+
     public ClarifyInferenceConfig withMaxPayloadInMB(Long maxPayloadInMB) {
         this.maxPayloadInMB = maxPayloadInMB;
         return this;
@@ -79,6 +87,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecordCount")
     public Long maxRecordCount;
+
     public ClarifyInferenceConfig withMaxRecordCount(Long maxRecordCount) {
         this.maxRecordCount = maxRecordCount;
         return this;
@@ -87,6 +96,7 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProbabilityAttribute")
     public String probabilityAttribute;
+
     public ClarifyInferenceConfig withProbabilityAttribute(String probabilityAttribute) {
         this.probabilityAttribute = probabilityAttribute;
         return this;
@@ -95,9 +105,11 @@ public class ClarifyInferenceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProbabilityIndex")
     public Long probabilityIndex;
+
     public ClarifyInferenceConfig withProbabilityIndex(Long probabilityIndex) {
         this.probabilityIndex = probabilityIndex;
         return this;
     }
     
+    public ClarifyInferenceConfig(){}
 }

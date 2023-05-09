@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartReplicationTaskAssessmentResponse {
     
     public String contentType;
+
     public StartReplicationTaskAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartReplicationTaskAssessmentResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public StartReplicationTaskAssessmentResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -29,6 +32,7 @@ public class StartReplicationTaskAssessmentResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public StartReplicationTaskAssessmentResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -39,6 +43,7 @@ public class StartReplicationTaskAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartReplicationTaskAssessmentResponse startReplicationTaskAssessmentResponse;
+
     public StartReplicationTaskAssessmentResponse withStartReplicationTaskAssessmentResponse(org.openapis.openapi.models.shared.StartReplicationTaskAssessmentResponse startReplicationTaskAssessmentResponse) {
         this.startReplicationTaskAssessmentResponse = startReplicationTaskAssessmentResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartReplicationTaskAssessmentResponse {
     
     
     public Integer statusCode;
+
     public StartReplicationTaskAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class StartReplicationTaskAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartReplicationTaskAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartReplicationTaskAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WeakRes {
     @JsonProperty("type")
     public String type;
+
     public WeakRes withType(String type) {
         this.type = type;
         return this;
@@ -19,9 +20,13 @@ public class WeakRes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public WeakRes withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public WeakRes(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

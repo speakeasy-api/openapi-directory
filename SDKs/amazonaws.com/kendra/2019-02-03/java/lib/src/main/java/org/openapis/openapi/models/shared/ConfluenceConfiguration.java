@@ -15,6 +15,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachmentConfiguration")
     public ConfluenceAttachmentConfiguration attachmentConfiguration;
+
     public ConfluenceConfiguration withAttachmentConfiguration(ConfluenceAttachmentConfiguration attachmentConfiguration) {
         this.attachmentConfiguration = attachmentConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public ConfluenceAuthenticationTypeEnum authenticationType;
+
     public ConfluenceConfiguration withAuthenticationType(ConfluenceAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -31,6 +33,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlogConfiguration")
     public ConfluenceBlogConfiguration blogConfiguration;
+
     public ConfluenceConfiguration withBlogConfiguration(ConfluenceBlogConfiguration blogConfiguration) {
         this.blogConfiguration = blogConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public ConfluenceConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -47,6 +51,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public ConfluenceConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -55,6 +60,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageConfiguration")
     public ConfluencePageConfiguration pageConfiguration;
+
     public ConfluenceConfiguration withPageConfiguration(ConfluencePageConfiguration pageConfiguration) {
         this.pageConfiguration = pageConfiguration;
         return this;
@@ -63,6 +69,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProxyConfiguration")
     public ProxyConfiguration proxyConfiguration;
+
     public ConfluenceConfiguration withProxyConfiguration(ProxyConfiguration proxyConfiguration) {
         this.proxyConfiguration = proxyConfiguration;
         return this;
@@ -70,6 +77,7 @@ public class ConfluenceConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public ConfluenceConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -77,6 +85,7 @@ public class ConfluenceConfiguration {
     
     @JsonProperty("ServerUrl")
     public String serverUrl;
+
     public ConfluenceConfiguration withServerUrl(String serverUrl) {
         this.serverUrl = serverUrl;
         return this;
@@ -85,6 +94,7 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceConfiguration")
     public ConfluenceSpaceConfiguration spaceConfiguration;
+
     public ConfluenceConfiguration withSpaceConfiguration(ConfluenceSpaceConfiguration spaceConfiguration) {
         this.spaceConfiguration = spaceConfiguration;
         return this;
@@ -92,6 +102,7 @@ public class ConfluenceConfiguration {
     
     @JsonProperty("Version")
     public ConfluenceVersionEnum version;
+
     public ConfluenceConfiguration withVersion(ConfluenceVersionEnum version) {
         this.version = version;
         return this;
@@ -100,9 +111,15 @@ public class ConfluenceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public ConfluenceConfiguration withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public ConfluenceConfiguration(@JsonProperty("SecretArn") String secretArn, @JsonProperty("ServerUrl") String serverUrl, @JsonProperty("Version") ConfluenceVersionEnum version) {
+        this.secretArn = secretArn;
+        this.serverUrl = serverUrl;
+        this.version = version;
+  }
 }

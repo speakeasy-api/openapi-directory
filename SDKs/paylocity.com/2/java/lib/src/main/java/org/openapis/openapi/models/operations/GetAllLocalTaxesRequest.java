@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllLocalTaxesRequest {
@@ -12,6 +13,7 @@ public class GetAllLocalTaxesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetAllLocalTaxesRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,9 +24,14 @@ public class GetAllLocalTaxesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public GetAllLocalTaxesRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
     }
     
+    public GetAllLocalTaxesRequest(@JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId) {
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+  }
 }

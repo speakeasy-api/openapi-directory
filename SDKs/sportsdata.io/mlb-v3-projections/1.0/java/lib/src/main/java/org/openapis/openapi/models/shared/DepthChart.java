@@ -12,6 +12,7 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DepthChartID")
     public Long depthChartID;
+
     public DepthChart withDepthChartID(Long depthChartID) {
         this.depthChartID = depthChartID;
         return this;
@@ -20,6 +21,7 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DepthOrder")
     public Long depthOrder;
+
     public DepthChart withDepthOrder(Long depthOrder) {
         this.depthOrder = depthOrder;
         return this;
@@ -28,6 +30,7 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DepthChart withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public DepthChart withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -44,6 +48,7 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public DepthChart withPosition(String position) {
         this.position = position;
         return this;
@@ -52,6 +57,7 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public DepthChart withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -60,6 +66,7 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public DepthChart withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -68,9 +75,11 @@ public class DepthChart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public DepthChart withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public DepthChart(){}
 }

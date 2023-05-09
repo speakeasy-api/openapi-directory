@@ -15,6 +15,7 @@ public class NotifyWorkersFailureStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotifyWorkersFailureCode")
     public NotifyWorkersFailureCodeEnum notifyWorkersFailureCode;
+
     public NotifyWorkersFailureStatus withNotifyWorkersFailureCode(NotifyWorkersFailureCodeEnum notifyWorkersFailureCode) {
         this.notifyWorkersFailureCode = notifyWorkersFailureCode;
         return this;
@@ -23,6 +24,7 @@ public class NotifyWorkersFailureStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotifyWorkersFailureMessage")
     public String notifyWorkersFailureMessage;
+
     public NotifyWorkersFailureStatus withNotifyWorkersFailureMessage(String notifyWorkersFailureMessage) {
         this.notifyWorkersFailureMessage = notifyWorkersFailureMessage;
         return this;
@@ -31,9 +33,11 @@ public class NotifyWorkersFailureStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerId")
     public String workerId;
+
     public NotifyWorkersFailureStatus withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public NotifyWorkersFailureStatus(){}
 }

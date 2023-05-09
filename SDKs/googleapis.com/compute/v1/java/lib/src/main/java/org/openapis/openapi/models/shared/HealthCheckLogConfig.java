@@ -18,9 +18,11 @@ public class HealthCheckLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public HealthCheckLogConfig withEnable(Boolean enable) {
         this.enable = enable;
         return this;
     }
     
+    public HealthCheckLogConfig(){}
 }

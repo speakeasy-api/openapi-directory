@@ -15,6 +15,7 @@ public class ViewOnlyLinksNodeListNodeLinks {
      */
     
     public String html;
+
     public ViewOnlyLinksNodeListNodeLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class ViewOnlyLinksNodeListNodeLinks {
      */
     
     public String self;
+
     public ViewOnlyLinksNodeListNodeLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public ViewOnlyLinksNodeListNodeLinks(){}
 }

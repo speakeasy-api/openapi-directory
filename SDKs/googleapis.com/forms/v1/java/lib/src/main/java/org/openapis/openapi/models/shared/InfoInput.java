@@ -18,6 +18,7 @@ public class InfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InfoInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class InfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public InfoInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public InfoInput(){}
 }

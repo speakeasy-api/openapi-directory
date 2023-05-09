@@ -38,6 +38,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteSettingsOrganizat
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteSettingsOrganizationsOrganizationNameSendersSenderNameSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganizationsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganizationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganizationsOrganizationNameSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganizationsOrganizationNameRequest.java
@@ -54,6 +55,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganization
 lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/HeadSettingsOrganizationsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadSettingsOrganizationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostReportsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostReportsOptionEnum.java
@@ -94,4 +96,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DetailScopeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Detail.java
 lib/src/main/java/org/openapis/openapi/models/shared/ItemRouting.java
 lib/src/main/java/org/openapis/openapi/models/shared/Destination.java
+docs/sdk/README.md
 USAGE.md

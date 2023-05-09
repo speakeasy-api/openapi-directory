@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AppengineAppsServicesVersionsInstancesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsServicesVersionsInstancesListSecurityOption1 option1;
+
     public AppengineAppsServicesVersionsInstancesListSecurity withOption1(AppengineAppsServicesVersionsInstancesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class AppengineAppsServicesVersionsInstancesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsServicesVersionsInstancesListSecurityOption2 option2;
+
     public AppengineAppsServicesVersionsInstancesListSecurity withOption2(AppengineAppsServicesVersionsInstancesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class AppengineAppsServicesVersionsInstancesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AppengineAppsServicesVersionsInstancesListSecurityOption3 option3;
+
     public AppengineAppsServicesVersionsInstancesListSecurity withOption3(AppengineAppsServicesVersionsInstancesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public AppengineAppsServicesVersionsInstancesListSecurity(){}
 }

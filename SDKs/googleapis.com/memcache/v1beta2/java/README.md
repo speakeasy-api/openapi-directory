@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.MemcacheProjectsLocationsInstancesApplyParametersSecurity;
 import org.openapis.openapi.models.operations.MemcacheProjectsLocationsInstancesApplyParametersRequest;
 import org.openapis.openapi.models.operations.MemcacheProjectsLocationsInstancesApplyParametersResponse;
+import org.openapis.openapi.models.operations.MemcacheProjectsLocationsInstancesApplyParametersSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ApplyParametersRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -30,40 +29,41 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MemcacheProjectsLocationsInstancesApplyParametersRequest req = new MemcacheProjectsLocationsInstancesApplyParametersRequest() {{
-                dollarXgafv = "2";
+            MemcacheProjectsLocationsInstancesApplyParametersRequest req = new MemcacheProjectsLocationsInstancesApplyParametersRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 applyParametersRequest = new ApplyParametersRequest() {{
                     applyAll = false;
                     nodeIds = new String[]{{
-                        add("distinctio"),
                         add("quibusdam"),
                         add("unde"),
+                        add("nulla"),
                     }};
-                }};
-                accessToken = "nulla";
-                alt = "media";
-                callback = "illum";
-                fields = "vel";
-                key = "error";
-                name = "deserunt";
+                }};;
+                accessToken = "corrupti";
+                alt = AltEnum.PROTO;
+                callback = "vel";
+                fields = "error";
+                key = "deserunt";
                 oauthToken = "suscipit";
                 prettyPrint = false;
                 quotaUser = "iure";
                 uploadType = "magnam";
                 uploadProtocol = "debitis";
-            }}            
+            }};            
 
-            MemcacheProjectsLocationsInstancesApplyParametersResponse res = sdk.projects.memcacheProjectsLocationsInstancesApplyParameters(req, new MemcacheProjectsLocationsInstancesApplyParametersSecurity() {{
+            MemcacheProjectsLocationsInstancesApplyParametersResponse res = sdk.projects.memcacheProjectsLocationsInstancesApplyParameters(req, new MemcacheProjectsLocationsInstancesApplyParametersSecurity("ipsa", "delectus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -71,20 +71,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `memcacheProjectsLocationsInstancesApplyParameters` - `ApplyParameters` restarts the set of specified nodes in order to update them to the current set of parameters for the Memcached Instance.
-* `memcacheProjectsLocationsInstancesApplySoftwareUpdate` - Updates software on the selected nodes of the Instance.
-* `memcacheProjectsLocationsInstancesCreate` - Creates a new Instance in a given location.
-* `memcacheProjectsLocationsInstancesList` - Lists Instances in a given location.
-* `memcacheProjectsLocationsInstancesPatch` - Updates an existing Instance in a given project and location.
-* `memcacheProjectsLocationsInstancesRescheduleMaintenance` - Performs the apply phase of the RescheduleMaintenance verb.
-* `memcacheProjectsLocationsInstancesUpdateParameters` - Updates the defined Memcached parameters for an existing instance. This method only stages the parameters, it must be followed by `ApplyParameters` to apply the parameters to nodes of the Memcached instance.
-* `memcacheProjectsLocationsList` - Lists information about the supported locations for this service.
-* `memcacheProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `memcacheProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `memcacheProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `memcacheProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* [memcacheProjectsLocationsInstancesApplyParameters](docs/projects/README.md#memcacheprojectslocationsinstancesapplyparameters) - `ApplyParameters` restarts the set of specified nodes in order to update them to the current set of parameters for the Memcached Instance.
+* [memcacheProjectsLocationsInstancesApplySoftwareUpdate](docs/projects/README.md#memcacheprojectslocationsinstancesapplysoftwareupdate) - Updates software on the selected nodes of the Instance.
+* [memcacheProjectsLocationsInstancesCreate](docs/projects/README.md#memcacheprojectslocationsinstancescreate) - Creates a new Instance in a given location.
+* [memcacheProjectsLocationsInstancesList](docs/projects/README.md#memcacheprojectslocationsinstanceslist) - Lists Instances in a given location.
+* [memcacheProjectsLocationsInstancesPatch](docs/projects/README.md#memcacheprojectslocationsinstancespatch) - Updates an existing Instance in a given project and location.
+* [memcacheProjectsLocationsInstancesRescheduleMaintenance](docs/projects/README.md#memcacheprojectslocationsinstancesreschedulemaintenance) - Performs the apply phase of the RescheduleMaintenance verb.
+* [memcacheProjectsLocationsInstancesUpdateParameters](docs/projects/README.md#memcacheprojectslocationsinstancesupdateparameters) - Updates the defined Memcached parameters for an existing instance. This method only stages the parameters, it must be followed by `ApplyParameters` to apply the parameters to nodes of the Memcached instance.
+* [memcacheProjectsLocationsList](docs/projects/README.md#memcacheprojectslocationslist) - Lists information about the supported locations for this service.
+* [memcacheProjectsLocationsOperationsCancel](docs/projects/README.md#memcacheprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [memcacheProjectsLocationsOperationsDelete](docs/projects/README.md#memcacheprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [memcacheProjectsLocationsOperationsGet](docs/projects/README.md#memcacheprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [memcacheProjectsLocationsOperationsList](docs/projects/README.md#memcacheprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

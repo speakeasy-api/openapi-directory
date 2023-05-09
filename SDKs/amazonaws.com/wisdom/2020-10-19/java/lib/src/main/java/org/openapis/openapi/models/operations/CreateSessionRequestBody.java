@@ -15,6 +15,7 @@ public class CreateSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateSessionRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSessionRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateSessionRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateSessionRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +50,13 @@ public class CreateSessionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateSessionRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSessionRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

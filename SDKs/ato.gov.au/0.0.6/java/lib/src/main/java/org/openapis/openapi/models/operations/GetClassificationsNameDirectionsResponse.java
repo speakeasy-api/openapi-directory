@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsNameDirectionsResponse {
     
     public String contentType;
+
     public GetClassificationsNameDirectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsNameDirectionsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsNameDirectionsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsNameDirectionsResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsNameDirectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsNameDirectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsNameDirectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsNameDirectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.NameDirection[] nameDirections;
+
     public GetClassificationsNameDirectionsResponse withNameDirections(org.openapis.openapi.models.shared.NameDirection[] nameDirections) {
         this.nameDirections = nameDirections;
         return this;
@@ -50,6 +56,7 @@ public class GetClassificationsNameDirectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetClassificationsNameDirectionsResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetClassificationsNameDirectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetClassificationsNameDirectionsResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetClassificationsNameDirectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

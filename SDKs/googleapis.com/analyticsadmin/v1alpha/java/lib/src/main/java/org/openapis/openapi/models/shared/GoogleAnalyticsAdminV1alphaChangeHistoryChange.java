@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeActionEnum action;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChange withAction(GoogleAnalyticsAdminV1alphaChangeHistoryChangeActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChange withResource(String resource) {
         this.resource = resource;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceAfterChange")
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource resourceAfterChange;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChange withResourceAfterChange(GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource resourceAfterChange) {
         this.resourceAfterChange = resourceAfterChange;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAnalyticsAdminV1alphaChangeHistoryChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceBeforeChange")
     public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource resourceBeforeChange;
+
     public GoogleAnalyticsAdminV1alphaChangeHistoryChange withResourceBeforeChange(GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource resourceBeforeChange) {
         this.resourceBeforeChange = resourceBeforeChange;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaChangeHistoryChange(){}
 }

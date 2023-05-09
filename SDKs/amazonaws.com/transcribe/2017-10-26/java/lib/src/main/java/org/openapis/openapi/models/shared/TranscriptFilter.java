@@ -15,6 +15,7 @@ public class TranscriptFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbsoluteTimeRange")
     public AbsoluteTimeRange absoluteTimeRange;
+
     public TranscriptFilter withAbsoluteTimeRange(AbsoluteTimeRange absoluteTimeRange) {
         this.absoluteTimeRange = absoluteTimeRange;
         return this;
@@ -23,6 +24,7 @@ public class TranscriptFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Negate")
     public Boolean negate;
+
     public TranscriptFilter withNegate(Boolean negate) {
         this.negate = negate;
         return this;
@@ -31,6 +33,7 @@ public class TranscriptFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParticipantRole")
     public ParticipantRoleEnum participantRole;
+
     public TranscriptFilter withParticipantRole(ParticipantRoleEnum participantRole) {
         this.participantRole = participantRole;
         return this;
@@ -39,6 +42,7 @@ public class TranscriptFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelativeTimeRange")
     public RelativeTimeRange relativeTimeRange;
+
     public TranscriptFilter withRelativeTimeRange(RelativeTimeRange relativeTimeRange) {
         this.relativeTimeRange = relativeTimeRange;
         return this;
@@ -46,6 +50,7 @@ public class TranscriptFilter {
     
     @JsonProperty("Targets")
     public String[] targets;
+
     public TranscriptFilter withTargets(String[] targets) {
         this.targets = targets;
         return this;
@@ -53,9 +58,14 @@ public class TranscriptFilter {
     
     @JsonProperty("TranscriptFilterType")
     public TranscriptFilterTypeEnum transcriptFilterType;
+
     public TranscriptFilter withTranscriptFilterType(TranscriptFilterTypeEnum transcriptFilterType) {
         this.transcriptFilterType = transcriptFilterType;
         return this;
     }
     
+    public TranscriptFilter(@JsonProperty("Targets") String[] targets, @JsonProperty("TranscriptFilterType") TranscriptFilterTypeEnum transcriptFilterType) {
+        this.targets = targets;
+        this.transcriptFilterType = transcriptFilterType;
+  }
 }

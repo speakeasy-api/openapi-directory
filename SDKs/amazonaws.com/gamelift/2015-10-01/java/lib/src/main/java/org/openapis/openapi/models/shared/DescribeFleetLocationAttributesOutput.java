@@ -15,6 +15,7 @@ public class DescribeFleetLocationAttributesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DescribeFleetLocationAttributesOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,6 +24,7 @@ public class DescribeFleetLocationAttributesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeFleetLocationAttributesOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -31,6 +33,7 @@ public class DescribeFleetLocationAttributesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationAttributes")
     public LocationAttributes[] locationAttributes;
+
     public DescribeFleetLocationAttributesOutput withLocationAttributes(LocationAttributes[] locationAttributes) {
         this.locationAttributes = locationAttributes;
         return this;
@@ -39,9 +42,11 @@ public class DescribeFleetLocationAttributesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetLocationAttributesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetLocationAttributesOutput(){}
 }

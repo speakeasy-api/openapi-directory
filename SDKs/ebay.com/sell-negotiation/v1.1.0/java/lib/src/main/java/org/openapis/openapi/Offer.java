@@ -67,11 +67,9 @@ public class Offer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindEligibleItemsResponse res = new org.openapis.openapi.models.operations.FindEligibleItemsResponse() {{
+        org.openapis.openapi.models.operations.FindEligibleItemsResponse res = new org.openapis.openapi.models.operations.FindEligibleItemsResponse(contentType, httpRes.statusCode()) {{
             pagedEligibleItemCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,11 +117,9 @@ public class Offer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendOfferToInterestedBuyersResponse res = new org.openapis.openapi.models.operations.SendOfferToInterestedBuyersResponse() {{
+        org.openapis.openapi.models.operations.SendOfferToInterestedBuyersResponse res = new org.openapis.openapi.models.operations.SendOfferToInterestedBuyersResponse(contentType, httpRes.statusCode()) {{
             sendOfferToInterestedBuyersCollectionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

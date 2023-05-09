@@ -12,6 +12,7 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostLoadBalancers201ApplicationJSONAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("error")
     public PostLoadBalancers201ApplicationJSONActionError error;
+
     public PostLoadBalancers201ApplicationJSONAction withError(PostLoadBalancers201ApplicationJSONActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostLoadBalancers201ApplicationJSONAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostLoadBalancers201ApplicationJSONAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostLoadBalancers201ApplicationJSONAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("resources")
     public PostLoadBalancers201ApplicationJSONActionResources[] resources;
+
     public PostLoadBalancers201ApplicationJSONAction withResources(PostLoadBalancers201ApplicationJSONActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostLoadBalancers201ApplicationJSONAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostLoadBalancers201ApplicationJSONAction {
      */
     @JsonProperty("status")
     public PostLoadBalancers201ApplicationJSONActionStatusEnum status;
+
     public PostLoadBalancers201ApplicationJSONAction withStatus(PostLoadBalancers201ApplicationJSONActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostLoadBalancers201ApplicationJSONAction(@JsonProperty("command") String command, @JsonProperty("error") PostLoadBalancers201ApplicationJSONActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostLoadBalancers201ApplicationJSONActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostLoadBalancers201ApplicationJSONActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

@@ -15,9 +15,11 @@ public class GetHypervisorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hypervisor")
     public HypervisorDetails hypervisor;
+
     public GetHypervisorOutput withHypervisor(HypervisorDetails hypervisor) {
         this.hypervisor = hypervisor;
         return this;
     }
     
+    public GetHypervisorOutput(){}
 }

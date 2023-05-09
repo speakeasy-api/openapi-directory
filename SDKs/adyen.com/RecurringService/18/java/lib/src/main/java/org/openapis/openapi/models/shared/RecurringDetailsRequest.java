@@ -14,6 +14,7 @@ public class RecurringDetailsRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public RecurringDetailsRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -22,6 +23,7 @@ public class RecurringDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring")
     public Recurring recurring;
+
     public RecurringDetailsRequest withRecurring(Recurring recurring) {
         this.recurring = recurring;
         return this;
@@ -32,9 +34,14 @@ public class RecurringDetailsRequest {
      */
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public RecurringDetailsRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public RecurringDetailsRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("shopperReference") String shopperReference) {
+        this.merchantAccount = merchantAccount;
+        this.shopperReference = shopperReference;
+  }
 }

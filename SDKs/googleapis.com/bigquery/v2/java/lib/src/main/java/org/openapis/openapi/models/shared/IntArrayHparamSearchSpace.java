@@ -18,9 +18,11 @@ public class IntArrayHparamSearchSpace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public IntArray[] candidates;
+
     public IntArrayHparamSearchSpace withCandidates(IntArray[] candidates) {
         this.candidates = candidates;
         return this;
     }
     
+    public IntArrayHparamSearchSpace(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterToWorkMailRequest {
     @JsonProperty("Email")
     public String email;
+
     public RegisterToWorkMailRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -16,6 +17,7 @@ public class RegisterToWorkMailRequest {
     
     @JsonProperty("EntityId")
     public String entityId;
+
     public RegisterToWorkMailRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,9 +25,15 @@ public class RegisterToWorkMailRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public RegisterToWorkMailRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public RegisterToWorkMailRequest(@JsonProperty("Email") String email, @JsonProperty("EntityId") String entityId, @JsonProperty("OrganizationId") String organizationId) {
+        this.email = email;
+        this.entityId = entityId;
+        this.organizationId = organizationId;
+  }
 }

@@ -18,6 +18,7 @@ public class ShapeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autofit")
     public Autofit autofit;
+
     public ShapeProperties withAutofit(Autofit autofit) {
         this.autofit = autofit;
         return this;
@@ -29,6 +30,7 @@ public class ShapeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentAlignment")
     public ShapePropertiesContentAlignmentEnum contentAlignment;
+
     public ShapeProperties withContentAlignment(ShapePropertiesContentAlignmentEnum contentAlignment) {
         this.contentAlignment = contentAlignment;
         return this;
@@ -40,6 +42,7 @@ public class ShapeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link link;
+
     public ShapeProperties withLink(Link link) {
         this.link = link;
         return this;
@@ -51,6 +54,7 @@ public class ShapeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outline")
     public Outline outline;
+
     public ShapeProperties withOutline(Outline outline) {
         this.outline = outline;
         return this;
@@ -62,6 +66,7 @@ public class ShapeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shadow")
     public Shadow shadow;
+
     public ShapeProperties withShadow(Shadow shadow) {
         this.shadow = shadow;
         return this;
@@ -73,9 +78,11 @@ public class ShapeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shapeBackgroundFill")
     public ShapeBackgroundFill shapeBackgroundFill;
+
     public ShapeProperties withShapeBackgroundFill(ShapeBackgroundFill shapeBackgroundFill) {
         this.shapeBackgroundFill = shapeBackgroundFill;
         return this;
     }
     
+    public ShapeProperties(){}
 }

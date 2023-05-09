@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeviceSwitchPortStatusesResponse {
     
     public String contentType;
+
     public GetDeviceSwitchPortStatusesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetDeviceSwitchPortStatusesResponse {
     
     
     public Integer statusCode;
+
     public GetDeviceSwitchPortStatusesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetDeviceSwitchPortStatusesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeviceSwitchPortStatusesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetDeviceSwitchPortStatusesResponse {
      */
     
     public java.util.Map<String, Object>[] getDeviceSwitchPortStatuses200ApplicationJSONObjects;
+
     public GetDeviceSwitchPortStatusesResponse withGetDeviceSwitchPortStatuses200ApplicationJSONObjects(java.util.Map<String, Object>[] getDeviceSwitchPortStatuses200ApplicationJSONObjects) {
         this.getDeviceSwitchPortStatuses200ApplicationJSONObjects = getDeviceSwitchPortStatuses200ApplicationJSONObjects;
         return this;
     }
     
+    public GetDeviceSwitchPortStatusesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

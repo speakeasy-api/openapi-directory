@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateImagePipelineRequestBody {
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateImagePipelineRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,52 +26,69 @@ public class CreateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipeArn")
     public String containerRecipeArn;
+
     public CreateImagePipelineRequestBody withContainerRecipeArn(String containerRecipeArn) {
         this.containerRecipeArn = containerRecipeArn;
         return this;
     }
     
     /**
-     *  The description of the image pipeline.
+     * The description of the image pipeline.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateImagePipelineRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
     /**
-     *  The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionConfigurationArn")
     public String distributionConfigurationArn;
+
     public CreateImagePipelineRequestBody withDistributionConfigurationArn(String distributionConfigurationArn) {
         this.distributionConfigurationArn = distributionConfigurationArn;
         return this;
     }
     
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedImageMetadataEnabled")
     public Boolean enhancedImageMetadataEnabled;
+
     public CreateImagePipelineRequestBody withEnhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
         this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
         return this;
     }
     
     /**
-     *  The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipeArn")
     public String imageRecipeArn;
+
     public CreateImagePipelineRequestBody withImageRecipeArn(String imageRecipeArn) {
         this.imageRecipeArn = imageRecipeArn;
+        return this;
+    }
+    
+    /**
+     * Contains settings for Image Builder image resource and container image scans.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageScanningConfiguration")
+    public CreateImagePipelineRequestBodyImageScanningConfiguration imageScanningConfiguration;
+
+    public CreateImagePipelineRequestBody withImageScanningConfiguration(CreateImagePipelineRequestBodyImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
         return this;
     }
     
@@ -80,26 +98,29 @@ public class CreateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTestsConfiguration")
     public CreateImagePipelineRequestBodyImageTestsConfiguration imageTestsConfiguration;
+
     public CreateImagePipelineRequestBody withImageTestsConfiguration(CreateImagePipelineRequestBodyImageTestsConfiguration imageTestsConfiguration) {
         this.imageTestsConfiguration = imageTestsConfiguration;
         return this;
     }
     
     /**
-     *  The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
      */
     @JsonProperty("infrastructureConfigurationArn")
     public String infrastructureConfigurationArn;
+
     public CreateImagePipelineRequestBody withInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
         this.infrastructureConfigurationArn = infrastructureConfigurationArn;
         return this;
     }
     
     /**
-     *  The name of the image pipeline.
+     * The name of the image pipeline.
      */
     @JsonProperty("name")
     public String name;
+
     public CreateImagePipelineRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -111,31 +132,39 @@ public class CreateImagePipelineRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public CreateImagePipelineRequestBodySchedule schedule;
+
     public CreateImagePipelineRequestBody withSchedule(CreateImagePipelineRequestBodySchedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
     /**
-     *  The status of the image pipeline.
+     * The status of the image pipeline.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateImagePipelineRequestBodyStatusEnum status;
+
     public CreateImagePipelineRequestBody withStatus(CreateImagePipelineRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
     /**
-     *  The tags of the image pipeline.
+     * The tags of the image pipeline.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateImagePipelineRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateImagePipelineRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("infrastructureConfigurationArn") String infrastructureConfigurationArn, @JsonProperty("name") String name) {
+        this.clientToken = clientToken;
+        this.infrastructureConfigurationArn = infrastructureConfigurationArn;
+        this.name = name;
+  }
 }

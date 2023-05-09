@@ -14,6 +14,7 @@ public class CreateJobTemplateRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateJobTemplateRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -24,6 +25,7 @@ public class CreateJobTemplateRequestBody {
      */
     @JsonProperty("jobTemplateData")
     public CreateJobTemplateRequestBodyJobTemplateData jobTemplateData;
+
     public CreateJobTemplateRequestBody withJobTemplateData(CreateJobTemplateRequestBodyJobTemplateData jobTemplateData) {
         this.jobTemplateData = jobTemplateData;
         return this;
@@ -35,6 +37,7 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public CreateJobTemplateRequestBody withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -45,6 +48,7 @@ public class CreateJobTemplateRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateJobTemplateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,15 @@ public class CreateJobTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateJobTemplateRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateJobTemplateRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("jobTemplateData") CreateJobTemplateRequestBodyJobTemplateData jobTemplateData, @JsonProperty("name") String name) {
+        this.clientToken = clientToken;
+        this.jobTemplateData = jobTemplateData;
+        this.name = name;
+  }
 }

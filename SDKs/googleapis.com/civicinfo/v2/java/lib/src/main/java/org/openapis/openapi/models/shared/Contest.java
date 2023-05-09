@@ -18,6 +18,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ballotPlacement")
     public String ballotPlacement;
+
     public Contest withBallotPlacement(String ballotPlacement) {
         this.ballotPlacement = ballotPlacement;
         return this;
@@ -29,6 +30,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ballotTitle")
     public String ballotTitle;
+
     public Contest withBallotTitle(String ballotTitle) {
         this.ballotTitle = ballotTitle;
         return this;
@@ -40,6 +42,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public Candidate[] candidates;
+
     public Contest withCandidates(Candidate[] candidates) {
         this.candidates = candidates;
         return this;
@@ -51,6 +54,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district")
     public ElectoralDistrict district;
+
     public Contest withDistrict(ElectoralDistrict district) {
         this.district = district;
         return this;
@@ -62,6 +66,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("electorateSpecifications")
     public String electorateSpecifications;
+
     public Contest withElectorateSpecifications(String electorateSpecifications) {
         this.electorateSpecifications = electorateSpecifications;
         return this;
@@ -73,6 +78,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public ContestLevelEnum[] level;
+
     public Contest withLevel(ContestLevelEnum[] level) {
         this.level = level;
         return this;
@@ -84,6 +90,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberElected")
     public String numberElected;
+
     public Contest withNumberElected(String numberElected) {
         this.numberElected = numberElected;
         return this;
@@ -95,6 +102,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberVotingFor")
     public String numberVotingFor;
+
     public Contest withNumberVotingFor(String numberVotingFor) {
         this.numberVotingFor = numberVotingFor;
         return this;
@@ -106,6 +114,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office")
     public String office;
+
     public Contest withOffice(String office) {
         this.office = office;
         return this;
@@ -117,6 +126,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryParties")
     public String[] primaryParties;
+
     public Contest withPrimaryParties(String[] primaryParties) {
         this.primaryParties = primaryParties;
         return this;
@@ -128,6 +138,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumBallotResponses")
     public String[] referendumBallotResponses;
+
     public Contest withReferendumBallotResponses(String[] referendumBallotResponses) {
         this.referendumBallotResponses = referendumBallotResponses;
         return this;
@@ -139,6 +150,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumBrief")
     public String referendumBrief;
+
     public Contest withReferendumBrief(String referendumBrief) {
         this.referendumBrief = referendumBrief;
         return this;
@@ -150,6 +162,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumConStatement")
     public String referendumConStatement;
+
     public Contest withReferendumConStatement(String referendumConStatement) {
         this.referendumConStatement = referendumConStatement;
         return this;
@@ -161,6 +174,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumEffectOfAbstain")
     public String referendumEffectOfAbstain;
+
     public Contest withReferendumEffectOfAbstain(String referendumEffectOfAbstain) {
         this.referendumEffectOfAbstain = referendumEffectOfAbstain;
         return this;
@@ -172,6 +186,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumPassageThreshold")
     public String referendumPassageThreshold;
+
     public Contest withReferendumPassageThreshold(String referendumPassageThreshold) {
         this.referendumPassageThreshold = referendumPassageThreshold;
         return this;
@@ -183,6 +198,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumProStatement")
     public String referendumProStatement;
+
     public Contest withReferendumProStatement(String referendumProStatement) {
         this.referendumProStatement = referendumProStatement;
         return this;
@@ -194,6 +210,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumSubtitle")
     public String referendumSubtitle;
+
     public Contest withReferendumSubtitle(String referendumSubtitle) {
         this.referendumSubtitle = referendumSubtitle;
         return this;
@@ -205,6 +222,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumText")
     public String referendumText;
+
     public Contest withReferendumText(String referendumText) {
         this.referendumText = referendumText;
         return this;
@@ -216,6 +234,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumTitle")
     public String referendumTitle;
+
     public Contest withReferendumTitle(String referendumTitle) {
         this.referendumTitle = referendumTitle;
         return this;
@@ -227,6 +246,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referendumUrl")
     public String referendumUrl;
+
     public Contest withReferendumUrl(String referendumUrl) {
         this.referendumUrl = referendumUrl;
         return this;
@@ -238,6 +258,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roles")
     public ContestRolesEnum[] roles;
+
     public Contest withRoles(ContestRolesEnum[] roles) {
         this.roles = roles;
         return this;
@@ -249,6 +270,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public Contest withSources(Source[] sources) {
         this.sources = sources;
         return this;
@@ -260,6 +282,7 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("special")
     public String special;
+
     public Contest withSpecial(String special) {
         this.special = special;
         return this;
@@ -271,9 +294,11 @@ public class Contest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Contest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Contest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWebhooksAuthIdAuthRequestBody {
@@ -12,6 +13,7 @@ public class PutWebhooksAuthIdAuthRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=config")
     public String config;
+
     public PutWebhooksAuthIdAuthRequestBody withConfig(String config) {
         this.config = config;
         return this;
@@ -22,6 +24,7 @@ public class PutWebhooksAuthIdAuthRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PutWebhooksAuthIdAuthRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +35,14 @@ public class PutWebhooksAuthIdAuthRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=type")
     public Long type;
+
     public PutWebhooksAuthIdAuthRequestBody withType(Long type) {
         this.type = type;
         return this;
     }
     
+    public PutWebhooksAuthIdAuthRequestBody(@JsonProperty("name") String name, @JsonProperty("type") Long type) {
+        this.name = name;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegeneratePreviewRequest {
@@ -12,9 +13,13 @@ public class RegeneratePreviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Long documentId;
+
     public RegeneratePreviewRequest withDocumentId(Long documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public RegeneratePreviewRequest(@JsonProperty("documentId") Long documentId) {
+        this.documentId = documentId;
+  }
 }

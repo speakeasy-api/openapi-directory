@@ -57,12 +57,10 @@ public class Hits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HitsGetHitsResponse res = new org.openapis.openapi.models.operations.HitsGetHitsResponse() {{
+        org.openapis.openapi.models.operations.HitsGetHitsResponse res = new org.openapis.openapi.models.operations.HitsGetHitsResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoClickStreamHitListPage = null;
             apiCoreDtoClickStreamHitListPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

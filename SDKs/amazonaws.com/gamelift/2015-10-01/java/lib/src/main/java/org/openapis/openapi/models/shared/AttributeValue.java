@@ -15,6 +15,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("N")
     public Double n;
+
     public AttributeValue withN(Double n) {
         this.n = n;
         return this;
@@ -23,6 +24,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S")
     public String s;
+
     public AttributeValue withS(String s) {
         this.s = s;
         return this;
@@ -31,6 +33,7 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SDM")
     public java.util.Map<String, Double> sdm;
+
     public AttributeValue withSdm(java.util.Map<String, Double> sdm) {
         this.sdm = sdm;
         return this;
@@ -39,9 +42,11 @@ public class AttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SL")
     public String[] sl;
+
     public AttributeValue withSl(String[] sl) {
         this.sl = sl;
         return this;
     }
     
+    public AttributeValue(){}
 }

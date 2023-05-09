@@ -15,9 +15,11 @@ public class UpdateSimulationApplicationRequestBodyEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public UpdateSimulationApplicationRequestBodyEnvironment withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public UpdateSimulationApplicationRequestBodyEnvironment(){}
 }

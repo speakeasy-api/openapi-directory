@@ -18,9 +18,11 @@ public class DockerRepositoryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("immutableTags")
     public Boolean immutableTags;
+
     public DockerRepositoryConfig withImmutableTags(Boolean immutableTags) {
         this.immutableTags = immutableTags;
         return this;
     }
     
+    public DockerRepositoryConfig(){}
 }

@@ -3,47 +3,47 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DescribeServicesXAmzTargetEnum;
 import org.openapis.openapi.models.operations.DescribeServicesRequest;
 import org.openapis.openapi.models.operations.DescribeServicesResponse;
+import org.openapis.openapi.models.operations.DescribeServicesXAmzTargetEnum;
 import org.openapis.openapi.models.shared.DescribeServicesRequest;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            DescribeServicesRequest req = new DescribeServicesRequest() {{
-                describeServicesRequest = new DescribeServicesRequest() {{
-                    formatVersion = "corrupti";
-                    maxResults = 592845;
-                    nextToken = "distinctio";
-                    serviceCode = "quibusdam";
-                }};
-                maxResults = "unde";
-                nextToken = "nulla";
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "illum";
-                xAmzCredential = "vel";
-                xAmzDate = "error";
-                xAmzSecurityToken = "deserunt";
-                xAmzSignature = "suscipit";
-                xAmzSignedHeaders = "iure";
-                xAmzTarget = "AWSPriceListService.DescribeServices";
-            }}            
+            DescribeServicesRequest req = new DescribeServicesRequest(                new DescribeServicesRequest() {{
+                                formatVersion = "provident";
+                                maxResults = 715190L;
+                                nextToken = "quibusdam";
+                                serviceCode = "unde";
+                            }};, DescribeServicesXAmzTargetEnum.AWS_PRICE_LIST_SERVICE_DESCRIBE_SERVICES) {{
+                maxResults = "nulla";
+                nextToken = "corrupti";
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+            }};            
 
             DescribeServicesResponse res = sdk.describeServices(req);
 
-            if (res.describeServicesResponse.isPresent()) {
+            if (res.describeServicesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

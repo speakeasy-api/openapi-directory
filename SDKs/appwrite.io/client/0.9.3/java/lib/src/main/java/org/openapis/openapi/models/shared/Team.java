@@ -15,6 +15,7 @@ public class Team {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Team withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Team {
      */
     @JsonProperty("dateCreated")
     public Integer dateCreated;
+
     public Team withDateCreated(Integer dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -35,6 +37,7 @@ public class Team {
      */
     @JsonProperty("name")
     public String name;
+
     public Team withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,16 @@ public class Team {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public Team withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public Team(@JsonProperty("$id") String dollarId, @JsonProperty("dateCreated") Integer dateCreated, @JsonProperty("name") String name, @JsonProperty("sum") Integer sum) {
+        this.dollarId = dollarId;
+        this.dateCreated = dateCreated;
+        this.name = name;
+        this.sum = sum;
+  }
 }

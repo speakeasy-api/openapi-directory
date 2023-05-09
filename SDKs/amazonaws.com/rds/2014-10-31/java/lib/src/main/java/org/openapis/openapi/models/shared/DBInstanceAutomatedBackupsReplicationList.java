@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DBInstanceAutomatedBackupsReplicationList {
     
     public String dbInstanceAutomatedBackupsArn;
+
     public DBInstanceAutomatedBackupsReplicationList withDBInstanceAutomatedBackupsArn(String dbInstanceAutomatedBackupsArn) {
         this.dbInstanceAutomatedBackupsArn = dbInstanceAutomatedBackupsArn;
         return this;
     }
     
+    public DBInstanceAutomatedBackupsReplicationList(){}
 }

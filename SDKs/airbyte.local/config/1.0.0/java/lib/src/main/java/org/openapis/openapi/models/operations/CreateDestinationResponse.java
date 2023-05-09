@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDestinationResponse {
     
     public String contentType;
+
     public CreateDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.DestinationRead destinationRead;
+
     public CreateDestinationResponse withDestinationRead(org.openapis.openapi.models.shared.DestinationRead destinationRead) {
         this.destinationRead = destinationRead;
         return this;
@@ -29,6 +32,7 @@ public class CreateDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public CreateDestinationResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -36,6 +40,7 @@ public class CreateDestinationResponse {
     
     
     public Integer statusCode;
+
     public CreateDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

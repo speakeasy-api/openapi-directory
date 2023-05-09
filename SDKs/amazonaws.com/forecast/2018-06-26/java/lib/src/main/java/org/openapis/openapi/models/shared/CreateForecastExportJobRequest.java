@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateForecastExportJobRequest {
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public CreateForecastExportJobRequest withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -18,6 +19,7 @@ public class CreateForecastExportJobRequest {
     
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public CreateForecastExportJobRequest withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -25,6 +27,7 @@ public class CreateForecastExportJobRequest {
     
     @JsonProperty("ForecastExportJobName")
     public String forecastExportJobName;
+
     public CreateForecastExportJobRequest withForecastExportJobName(String forecastExportJobName) {
         this.forecastExportJobName = forecastExportJobName;
         return this;
@@ -33,6 +36,7 @@ public class CreateForecastExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CreateForecastExportJobRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -41,9 +45,15 @@ public class CreateForecastExportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateForecastExportJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateForecastExportJobRequest(@JsonProperty("Destination") DataDestination destination, @JsonProperty("ForecastArn") String forecastArn, @JsonProperty("ForecastExportJobName") String forecastExportJobName) {
+        this.destination = destination;
+        this.forecastArn = forecastArn;
+        this.forecastExportJobName = forecastExportJobName;
+  }
 }

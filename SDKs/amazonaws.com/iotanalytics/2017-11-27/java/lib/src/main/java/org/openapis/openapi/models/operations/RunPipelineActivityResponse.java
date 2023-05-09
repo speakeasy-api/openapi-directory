@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RunPipelineActivityResponse {
     
     public String contentType;
+
     public RunPipelineActivityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RunPipelineActivityResponse {
      */
     
     public Object internalFailureException;
+
     public RunPipelineActivityResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class RunPipelineActivityResponse {
      */
     
     public Object invalidRequestException;
+
     public RunPipelineActivityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class RunPipelineActivityResponse {
      */
     
     public org.openapis.openapi.models.shared.RunPipelineActivityResponse runPipelineActivityResponse;
+
     public RunPipelineActivityResponse withRunPipelineActivityResponse(org.openapis.openapi.models.shared.RunPipelineActivityResponse runPipelineActivityResponse) {
         this.runPipelineActivityResponse = runPipelineActivityResponse;
         return this;
@@ -46,6 +51,7 @@ public class RunPipelineActivityResponse {
     
     
     public Integer statusCode;
+
     public RunPipelineActivityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RunPipelineActivityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RunPipelineActivityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RunPipelineActivityResponse {
      */
     
     public Object serviceUnavailableException;
+
     public RunPipelineActivityResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class RunPipelineActivityResponse {
      */
     
     public Object throttlingException;
+
     public RunPipelineActivityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public RunPipelineActivityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

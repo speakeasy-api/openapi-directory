@@ -26,6 +26,7 @@ public class ItvPinAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookieType")
     public ItvPinAuthRequestCookieTypeEnum cookieType;
+
     public ItvPinAuthRequest withCookieType(ItvPinAuthRequestCookieTypeEnum cookieType) {
         this.cookieType = cookieType;
         return this;
@@ -36,6 +37,7 @@ public class ItvPinAuthRequest {
      */
     @JsonProperty("pin")
     public String pin;
+
     public ItvPinAuthRequest withPin(String pin) {
         this.pin = pin;
         return this;
@@ -47,9 +49,13 @@ public class ItvPinAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public ItvPinAuthRequestScopesEnum[] scopes;
+
     public ItvPinAuthRequest withScopes(ItvPinAuthRequestScopesEnum[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public ItvPinAuthRequest(@JsonProperty("pin") String pin) {
+        this.pin = pin;
+  }
 }

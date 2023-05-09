@@ -18,8 +18,21 @@ public class SqlInstancesGetDiskShrinkConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SqlInstancesGetDiskShrinkConfigResponse withKind(String kind) {
         this.kind = kind;
+        return this;
+    }
+    
+    /**
+     * Additional message to customers.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("message")
+    public String message;
+
+    public SqlInstancesGetDiskShrinkConfigResponse withMessage(String message) {
+        this.message = message;
         return this;
     }
     
@@ -29,9 +42,11 @@ public class SqlInstancesGetDiskShrinkConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimalTargetSizeGb")
     public String minimalTargetSizeGb;
+
     public SqlInstancesGetDiskShrinkConfigResponse withMinimalTargetSizeGb(String minimalTargetSizeGb) {
         this.minimalTargetSizeGb = minimalTargetSizeGb;
         return this;
     }
     
+    public SqlInstancesGetDiskShrinkConfigResponse(){}
 }

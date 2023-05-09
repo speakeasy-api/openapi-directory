@@ -20,6 +20,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available")
     public Boolean available;
+
     public Dataset withAvailable(Boolean available) {
         this.available = available;
         return this;
@@ -33,6 +34,7 @@ public class Dataset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Dataset withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class Dataset {
     
     @JsonProperty("id")
     public Long id;
+
     public Dataset withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelSummary")
     public LabelSummary labelSummary;
+
     public Dataset withLabelSummary(LabelSummary labelSummary) {
         this.labelSummary = labelSummary;
         return this;
@@ -62,6 +66,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Dataset withLanguage(String language) {
         this.language = language;
         return this;
@@ -69,6 +74,7 @@ public class Dataset {
     
     @JsonProperty("name")
     public String name;
+
     public Dataset withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +86,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numOfDuplicates")
     public Integer numOfDuplicates;
+
     public Dataset withNumOfDuplicates(Integer numOfDuplicates) {
         this.numOfDuplicates = numOfDuplicates;
         return this;
@@ -91,6 +98,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public Dataset withObject(String object) {
         this.object = object;
         return this;
@@ -99,6 +107,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMsg")
     public String statusMsg;
+
     public Dataset withStatusMsg(String statusMsg) {
         this.statusMsg = statusMsg;
         return this;
@@ -110,6 +119,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalExamples")
     public Integer totalExamples;
+
     public Dataset withTotalExamples(Integer totalExamples) {
         this.totalExamples = totalExamples;
         return this;
@@ -121,6 +131,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalLabels")
     public Integer totalLabels;
+
     public Dataset withTotalLabels(Integer totalLabels) {
         this.totalLabels = totalLabels;
         return this;
@@ -129,6 +140,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Dataset withType(String type) {
         this.type = type;
         return this;
@@ -139,9 +151,14 @@ public class Dataset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Dataset withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Dataset(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

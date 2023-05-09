@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCategorizeRequestBody {
@@ -12,6 +13,7 @@ public class PostCategorizeRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=type")
     public String type;
+
     public PostCategorizeRequestBody withType(String type) {
         this.type = type;
         return this;
@@ -22,6 +24,7 @@ public class PostCategorizeRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=value")
     public Long value;
+
     public PostCategorizeRequestBody withValue(Long value) {
         this.value = value;
         return this;
@@ -32,9 +35,15 @@ public class PostCategorizeRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=wording")
     public String wording;
+
     public PostCategorizeRequestBody withWording(String wording) {
         this.wording = wording;
         return this;
     }
     
+    public PostCategorizeRequestBody(@JsonProperty("type") String type, @JsonProperty("value") Long value, @JsonProperty("wording") String wording) {
+        this.type = type;
+        this.value = value;
+        this.wording = wording;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstallmentOptions {
     @JsonProperty("interestRateMethod")
     public String interestRateMethod;
+
     public InstallmentOptions withInterestRateMethod(String interestRateMethod) {
         this.interestRateMethod = interestRateMethod;
         return this;
     }
     
+    public InstallmentOptions(@JsonProperty("interestRateMethod") String interestRateMethod) {
+        this.interestRateMethod = interestRateMethod;
+  }
 }

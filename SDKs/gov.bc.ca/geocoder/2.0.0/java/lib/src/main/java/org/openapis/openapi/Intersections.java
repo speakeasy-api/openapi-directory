@@ -55,10 +55,8 @@ public class Intersections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse res = new org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Intersections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Intersections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,8 @@ public class Intersections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +207,8 @@ public class Intersections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatResponse res = new org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRoutingControlResponse {
@@ -12,6 +13,7 @@ public class UpdateRoutingControlResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRoutingControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRoutingControlResponse {
      */
     
     public Object conflictException;
+
     public UpdateRoutingControlResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRoutingControlResponse {
     
     
     public String contentType;
+
     public UpdateRoutingControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRoutingControlResponse {
      */
     
     public Object internalServerException;
+
     public UpdateRoutingControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRoutingControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRoutingControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateRoutingControlResponse {
     
     
     public Integer statusCode;
+
     public UpdateRoutingControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRoutingControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRoutingControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRoutingControlResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRoutingControlResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRoutingControlResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRoutingControlResponse updateRoutingControlResponse;
+
     public UpdateRoutingControlResponse withUpdateRoutingControlResponse(org.openapis.openapi.models.shared.UpdateRoutingControlResponse updateRoutingControlResponse) {
         this.updateRoutingControlResponse = updateRoutingControlResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateRoutingControlResponse {
      */
     
     public Object validationException;
+
     public UpdateRoutingControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRoutingControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

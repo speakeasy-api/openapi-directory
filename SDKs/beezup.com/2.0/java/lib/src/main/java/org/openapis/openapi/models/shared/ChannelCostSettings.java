@@ -22,6 +22,7 @@ public class ChannelCostSettings {
      */
     @JsonProperty("costType")
     public CostTypeEnum costType;
+
     public ChannelCostSettings withCostType(CostTypeEnum costType) {
         this.costType = costType;
         return this;
@@ -33,9 +34,13 @@ public class ChannelCostSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalCostValue")
     public Double globalCostValue;
+
     public ChannelCostSettings withGlobalCostValue(Double globalCostValue) {
         this.globalCostValue = globalCostValue;
         return this;
     }
     
+    public ChannelCostSettings(@JsonProperty("costType") CostTypeEnum costType) {
+        this.costType = costType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBranchResponse {
@@ -12,6 +13,7 @@ public class GetBranchResponse {
      */
     
     public Object badRequestException;
+
     public GetBranchResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetBranchResponse {
     
     
     public String contentType;
+
     public GetBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBranchResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBranchResult getBranchResult;
+
     public GetBranchResponse withGetBranchResult(org.openapis.openapi.models.shared.GetBranchResult getBranchResult) {
         this.getBranchResult = getBranchResult;
         return this;
@@ -39,6 +43,7 @@ public class GetBranchResponse {
      */
     
     public Object internalFailureException;
+
     public GetBranchResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetBranchResponse {
      */
     
     public Object notFoundException;
+
     public GetBranchResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetBranchResponse {
     
     
     public Integer statusCode;
+
     public GetBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetBranchResponse {
      */
     
     public Object unauthorizedException;
+
     public GetBranchResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

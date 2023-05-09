@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteExplainabilityRequest {
     @JsonProperty("ExplainabilityArn")
     public String explainabilityArn;
+
     public DeleteExplainabilityRequest withExplainabilityArn(String explainabilityArn) {
         this.explainabilityArn = explainabilityArn;
         return this;
     }
     
+    public DeleteExplainabilityRequest(@JsonProperty("ExplainabilityArn") String explainabilityArn) {
+        this.explainabilityArn = explainabilityArn;
+  }
 }

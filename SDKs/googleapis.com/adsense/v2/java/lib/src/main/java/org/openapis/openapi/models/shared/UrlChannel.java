@@ -18,6 +18,7 @@ public class UrlChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UrlChannel withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class UrlChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingDimensionId")
     public String reportingDimensionId;
+
     public UrlChannel withReportingDimensionId(String reportingDimensionId) {
         this.reportingDimensionId = reportingDimensionId;
         return this;
@@ -40,9 +42,11 @@ public class UrlChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriPattern")
     public String uriPattern;
+
     public UrlChannel withUriPattern(String uriPattern) {
         this.uriPattern = uriPattern;
         return this;
     }
     
+    public UrlChannel(){}
 }

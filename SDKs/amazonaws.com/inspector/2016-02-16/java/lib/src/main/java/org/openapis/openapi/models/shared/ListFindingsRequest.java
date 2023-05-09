@@ -12,6 +12,7 @@ public class ListFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentRunArns")
     public String[] assessmentRunArns;
+
     public ListFindingsRequest withAssessmentRunArns(String[] assessmentRunArns) {
         this.assessmentRunArns = assessmentRunArns;
         return this;
@@ -20,6 +21,7 @@ public class ListFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public FindingFilter filter;
+
     public ListFindingsRequest withFilter(FindingFilter filter) {
         this.filter = filter;
         return this;
@@ -28,6 +30,7 @@ public class ListFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListFindingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFindingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFindingsRequest(){}
 }

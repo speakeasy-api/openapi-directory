@@ -12,6 +12,7 @@ public class SubscribePushDeviceToChannelApplicationXMsgpack1 {
      */
     
     public String channel;
+
     public SubscribePushDeviceToChannelApplicationXMsgpack1 withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -22,9 +23,11 @@ public class SubscribePushDeviceToChannelApplicationXMsgpack1 {
      */
     
     public String deviceId;
+
     public SubscribePushDeviceToChannelApplicationXMsgpack1 withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
     
+    public SubscribePushDeviceToChannelApplicationXMsgpack1(){}
 }

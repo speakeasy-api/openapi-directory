@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchPatientPlanSummariesResponse {
     
     public String contentType;
+
     public FetchPatientPlanSummariesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchPatientPlanSummariesResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public FetchPatientPlanSummariesResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FetchPatientPlanSummariesResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchPatientPlanSummariesResponse fetchPatientPlanSummariesResponse;
+
     public FetchPatientPlanSummariesResponse withFetchPatientPlanSummariesResponse(org.openapis.openapi.models.shared.FetchPatientPlanSummariesResponse fetchPatientPlanSummariesResponse) {
         this.fetchPatientPlanSummariesResponse = fetchPatientPlanSummariesResponse;
         return this;
@@ -36,6 +40,7 @@ public class FetchPatientPlanSummariesResponse {
     
     
     public Integer statusCode;
+
     public FetchPatientPlanSummariesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FetchPatientPlanSummariesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchPatientPlanSummariesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchPatientPlanSummariesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class RetrieveWageSettingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveWageSettingResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class RetrieveWageSettingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wage_setting")
     public WageSetting wageSetting;
+
     public RetrieveWageSettingResponse withWageSetting(WageSetting wageSetting) {
         this.wageSetting = wageSetting;
         return this;
     }
     
+    public RetrieveWageSettingResponse(){}
 }

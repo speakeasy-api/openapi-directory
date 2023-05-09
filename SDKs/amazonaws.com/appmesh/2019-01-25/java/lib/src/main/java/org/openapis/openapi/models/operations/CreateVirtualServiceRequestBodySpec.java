@@ -15,9 +15,11 @@ public class CreateVirtualServiceRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public org.openapis.openapi.models.shared.VirtualServiceProvider provider;
+
     public CreateVirtualServiceRequestBodySpec withProvider(org.openapis.openapi.models.shared.VirtualServiceProvider provider) {
         this.provider = provider;
         return this;
     }
     
+    public CreateVirtualServiceRequestBodySpec(){}
 }

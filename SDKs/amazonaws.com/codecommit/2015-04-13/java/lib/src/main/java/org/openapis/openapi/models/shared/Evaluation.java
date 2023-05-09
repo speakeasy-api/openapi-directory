@@ -15,6 +15,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRulesNotSatisfied")
     public String[] approvalRulesNotSatisfied;
+
     public Evaluation withApprovalRulesNotSatisfied(String[] approvalRulesNotSatisfied) {
         this.approvalRulesNotSatisfied = approvalRulesNotSatisfied;
         return this;
@@ -23,6 +24,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRulesSatisfied")
     public String[] approvalRulesSatisfied;
+
     public Evaluation withApprovalRulesSatisfied(String[] approvalRulesSatisfied) {
         this.approvalRulesSatisfied = approvalRulesSatisfied;
         return this;
@@ -31,6 +33,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved")
     public Boolean approved;
+
     public Evaluation withApproved(Boolean approved) {
         this.approved = approved;
         return this;
@@ -39,9 +42,11 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overridden")
     public Boolean overridden;
+
     public Evaluation withOverridden(Boolean overridden) {
         this.overridden = overridden;
         return this;
     }
     
+    public Evaluation(){}
 }

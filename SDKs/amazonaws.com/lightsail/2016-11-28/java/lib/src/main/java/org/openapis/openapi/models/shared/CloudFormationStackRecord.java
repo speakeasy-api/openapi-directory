@@ -20,6 +20,7 @@ public class CloudFormationStackRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CloudFormationStackRecord withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class CloudFormationStackRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CloudFormationStackRecord withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class CloudFormationStackRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationInfo")
     public DestinationInfo destinationInfo;
+
     public CloudFormationStackRecord withDestinationInfo(DestinationInfo destinationInfo) {
         this.destinationInfo = destinationInfo;
         return this;
@@ -46,6 +49,7 @@ public class CloudFormationStackRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public CloudFormationStackRecord withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -54,6 +58,7 @@ public class CloudFormationStackRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CloudFormationStackRecord withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class CloudFormationStackRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public CloudFormationStackRecord withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -70,6 +76,7 @@ public class CloudFormationStackRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInfo")
     public CloudFormationStackRecordSourceInfo[] sourceInfo;
+
     public CloudFormationStackRecord withSourceInfo(CloudFormationStackRecordSourceInfo[] sourceInfo) {
         this.sourceInfo = sourceInfo;
         return this;
@@ -78,9 +85,11 @@ public class CloudFormationStackRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public RecordStateEnum state;
+
     public CloudFormationStackRecord withState(RecordStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CloudFormationStackRecord(){}
 }

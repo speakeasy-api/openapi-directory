@@ -15,6 +15,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessControlList")
     public Grant[] accessControlList;
+
     public S3Location withAccessControlList(Grant[] accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -23,6 +24,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public S3Location withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -31,6 +33,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CannedACL")
     public CannedACLEnum cannedACL;
+
     public S3Location withCannedACL(CannedACLEnum cannedACL) {
         this.cannedACL = cannedACL;
         return this;
@@ -39,6 +42,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public S3Location withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -47,6 +51,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public S3Location withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -55,6 +60,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageClass")
     public StorageClassEnum storageClass;
+
     public S3Location withStorageClass(StorageClassEnum storageClass) {
         this.storageClass = storageClass;
         return this;
@@ -63,6 +69,7 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tagging")
     public java.util.Map<String, String> tagging;
+
     public S3Location withTagging(java.util.Map<String, String> tagging) {
         this.tagging = tagging;
         return this;
@@ -71,9 +78,11 @@ public class S3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserMetadata")
     public java.util.Map<String, String> userMetadata;
+
     public S3Location withUserMetadata(java.util.Map<String, String> userMetadata) {
         this.userMetadata = userMetadata;
         return this;
     }
     
+    public S3Location(){}
 }

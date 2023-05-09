@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTerminologyResponse {
     
     public String contentType;
+
     public GetTerminologyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTerminologyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTerminologyResponse getTerminologyResponse;
+
     public GetTerminologyResponse withGetTerminologyResponse(org.openapis.openapi.models.shared.GetTerminologyResponse getTerminologyResponse) {
         this.getTerminologyResponse = getTerminologyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetTerminologyResponse {
      */
     
     public Object internalServerException;
+
     public GetTerminologyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetTerminologyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetTerminologyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class GetTerminologyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetTerminologyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetTerminologyResponse {
     
     
     public Integer statusCode;
+
     public GetTerminologyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetTerminologyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTerminologyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetTerminologyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetTerminologyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetTerminologyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

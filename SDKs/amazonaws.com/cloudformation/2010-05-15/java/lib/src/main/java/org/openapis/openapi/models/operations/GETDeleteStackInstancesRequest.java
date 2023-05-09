@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteStackInstancesRequest {
@@ -12,6 +13,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Accounts")
     public String[] accounts;
+
     public GETDeleteStackInstancesRequest withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteStackInstancesActionEnum action;
+
     public GETDeleteStackInstancesRequest withAction(GETDeleteStackInstancesActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
     public GETDeleteStackInstancesCallAsEnum callAs;
+
     public GETDeleteStackInstancesRequest withCallAs(GETDeleteStackInstancesCallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -39,6 +43,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeploymentTargets")
     public GETDeleteStackInstancesDeploymentTargets deploymentTargets;
+
     public GETDeleteStackInstancesRequest withDeploymentTargets(GETDeleteStackInstancesDeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
@@ -49,6 +54,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationId")
     public String operationId;
+
     public GETDeleteStackInstancesRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -59,6 +65,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationPreferences")
     public GETDeleteStackInstancesOperationPreferences operationPreferences;
+
     public GETDeleteStackInstancesRequest withOperationPreferences(GETDeleteStackInstancesOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -69,6 +76,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Regions")
     public String[] regions;
+
     public GETDeleteStackInstancesRequest withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -79,6 +87,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetainStacks")
     public Boolean retainStacks;
+
     public GETDeleteStackInstancesRequest withRetainStacks(Boolean retainStacks) {
         this.retainStacks = retainStacks;
         return this;
@@ -89,6 +98,7 @@ public class GETDeleteStackInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
     public String stackSetName;
+
     public GETDeleteStackInstancesRequest withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -96,6 +106,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteStackInstancesVersionEnum version;
+
     public GETDeleteStackInstancesRequest withVersion(GETDeleteStackInstancesVersionEnum version) {
         this.version = version;
         return this;
@@ -103,6 +114,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteStackInstancesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -110,6 +122,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteStackInstancesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -117,6 +130,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteStackInstancesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -124,6 +138,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteStackInstancesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -131,6 +146,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteStackInstancesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -138,6 +154,7 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteStackInstancesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -145,9 +162,17 @@ public class GETDeleteStackInstancesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteStackInstancesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteStackInstancesRequest(@JsonProperty("Action") GETDeleteStackInstancesActionEnum action, @JsonProperty("Regions") String[] regions, @JsonProperty("RetainStacks") Boolean retainStacks, @JsonProperty("StackSetName") String stackSetName, @JsonProperty("Version") GETDeleteStackInstancesVersionEnum version) {
+        this.action = action;
+        this.regions = regions;
+        this.retainStacks = retainStacks;
+        this.stackSetName = stackSetName;
+        this.version = version;
+  }
 }

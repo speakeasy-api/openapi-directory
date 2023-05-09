@@ -15,6 +15,7 @@ public class AutoScalingPolicyUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public AutoScalingPolicyUpdate withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -22,9 +23,13 @@ public class AutoScalingPolicyUpdate {
     
     @JsonProperty("TargetTrackingScalingPolicyConfiguration")
     public AutoScalingTargetTrackingScalingPolicyConfigurationUpdate targetTrackingScalingPolicyConfiguration;
+
     public AutoScalingPolicyUpdate withTargetTrackingScalingPolicyConfiguration(AutoScalingTargetTrackingScalingPolicyConfigurationUpdate targetTrackingScalingPolicyConfiguration) {
         this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
         return this;
     }
     
+    public AutoScalingPolicyUpdate(@JsonProperty("TargetTrackingScalingPolicyConfiguration") AutoScalingTargetTrackingScalingPolicyConfigurationUpdate targetTrackingScalingPolicyConfiguration) {
+        this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
+  }
 }

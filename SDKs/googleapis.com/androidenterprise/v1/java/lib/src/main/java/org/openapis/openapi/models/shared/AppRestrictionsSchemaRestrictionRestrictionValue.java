@@ -18,6 +18,7 @@ public class AppRestrictionsSchemaRestrictionRestrictionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum type;
+
     public AppRestrictionsSchemaRestrictionRestrictionValue withType(AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum type) {
         this.type = type;
         return this;
@@ -29,6 +30,7 @@ public class AppRestrictionsSchemaRestrictionRestrictionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueBool")
     public Boolean valueBool;
+
     public AppRestrictionsSchemaRestrictionRestrictionValue withValueBool(Boolean valueBool) {
         this.valueBool = valueBool;
         return this;
@@ -40,6 +42,7 @@ public class AppRestrictionsSchemaRestrictionRestrictionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueInteger")
     public Integer valueInteger;
+
     public AppRestrictionsSchemaRestrictionRestrictionValue withValueInteger(Integer valueInteger) {
         this.valueInteger = valueInteger;
         return this;
@@ -51,6 +54,7 @@ public class AppRestrictionsSchemaRestrictionRestrictionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueMultiselect")
     public String[] valueMultiselect;
+
     public AppRestrictionsSchemaRestrictionRestrictionValue withValueMultiselect(String[] valueMultiselect) {
         this.valueMultiselect = valueMultiselect;
         return this;
@@ -62,9 +66,11 @@ public class AppRestrictionsSchemaRestrictionRestrictionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueString")
     public String valueString;
+
     public AppRestrictionsSchemaRestrictionRestrictionValue withValueString(String valueString) {
         this.valueString = valueString;
         return this;
     }
     
+    public AppRestrictionsSchemaRestrictionRestrictionValue(){}
 }

@@ -15,9 +15,11 @@ public class StartDetectMitigationActionsTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public StartDetectMitigationActionsTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public StartDetectMitigationActionsTaskResponse(){}
 }

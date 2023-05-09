@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeUserPoolClientResponse {
     
     public String contentType;
+
     public DescribeUserPoolClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeUserPoolClientResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeUserPoolClientResponse describeUserPoolClientResponse;
+
     public DescribeUserPoolClientResponse withDescribeUserPoolClientResponse(org.openapis.openapi.models.shared.DescribeUserPoolClientResponse describeUserPoolClientResponse) {
         this.describeUserPoolClientResponse = describeUserPoolClientResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeUserPoolClientResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeUserPoolClientResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeUserPoolClientResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeUserPoolClientResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeUserPoolClientResponse {
      */
     
     public Object notAuthorizedException;
+
     public DescribeUserPoolClientResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeUserPoolClientResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeUserPoolClientResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeUserPoolClientResponse {
     
     
     public Integer statusCode;
+
     public DescribeUserPoolClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeUserPoolClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeUserPoolClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DescribeUserPoolClientResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeUserPoolClientResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeUserPoolClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

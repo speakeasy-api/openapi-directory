@@ -41,6 +41,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostV01CancelScheduledP
 lib/src/main/java/org/openapis/openapi/models/operations/PostV01CancelScheduledPlayResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV01GroupCallSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV01GroupCallResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostV01HangupAllCallsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV01HangupAllCallsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV01HangupCallSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV01HangupCallResponse.java
@@ -182,4 +183,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConferenceUndeafParameters.
 lib/src/main/java/org/openapis/openapi/models/shared/ConferenceUnmuteResponseMessageEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConferenceUnmuteResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConferenceUnmuteParameters.java
+docs/sdk/README.md
+docs/call/README.md
+docs/conference/README.md
 USAGE.md

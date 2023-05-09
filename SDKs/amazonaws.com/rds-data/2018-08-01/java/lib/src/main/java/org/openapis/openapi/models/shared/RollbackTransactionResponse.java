@@ -15,9 +15,11 @@ public class RollbackTransactionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionStatus")
     public String transactionStatus;
+
     public RollbackTransactionResponse withTransactionStatus(String transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
     }
     
+    public RollbackTransactionResponse(){}
 }

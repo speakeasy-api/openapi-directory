@@ -18,6 +18,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResourcesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudProducts")
     public java.util.Map<String, String> cloudProducts;
+
     public GoogleCloudKmsInventoryV1ProtectedResourcesSummary withCloudProducts(java.util.Map<String, String> cloudProducts) {
         this.cloudProducts = cloudProducts;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResourcesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public java.util.Map<String, String> locations;
+
     public GoogleCloudKmsInventoryV1ProtectedResourcesSummary withLocations(java.util.Map<String, String> locations) {
         this.locations = locations;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResourcesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudKmsInventoryV1ProtectedResourcesSummary withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResourcesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectCount")
     public Integer projectCount;
+
     public GoogleCloudKmsInventoryV1ProtectedResourcesSummary withProjectCount(Integer projectCount) {
         this.projectCount = projectCount;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResourcesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceCount")
     public String resourceCount;
+
     public GoogleCloudKmsInventoryV1ProtectedResourcesSummary withResourceCount(String resourceCount) {
         this.resourceCount = resourceCount;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudKmsInventoryV1ProtectedResourcesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTypes")
     public java.util.Map<String, String> resourceTypes;
+
     public GoogleCloudKmsInventoryV1ProtectedResourcesSummary withResourceTypes(java.util.Map<String, String> resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public GoogleCloudKmsInventoryV1ProtectedResourcesSummary(){}
 }

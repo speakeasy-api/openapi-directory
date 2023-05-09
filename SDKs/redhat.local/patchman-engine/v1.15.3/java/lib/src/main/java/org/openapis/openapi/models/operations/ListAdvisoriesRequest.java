@@ -12,6 +12,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[advisory_type]")
     public String filterAdvisoryType;
+
     public ListAdvisoriesRequest withFilterAdvisoryType(String filterAdvisoryType) {
         this.filterAdvisoryType = filterAdvisoryType;
         return this;
@@ -22,6 +23,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[applicable_systems]")
     public String filterApplicableSystems;
+
     public ListAdvisoriesRequest withFilterApplicableSystems(String filterApplicableSystems) {
         this.filterApplicableSystems = filterApplicableSystems;
         return this;
@@ -32,6 +34,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
     public String filterDescription;
+
     public ListAdvisoriesRequest withFilterDescription(String filterDescription) {
         this.filterDescription = filterDescription;
         return this;
@@ -42,6 +45,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
     public String filterId;
+
     public ListAdvisoriesRequest withFilterId(String filterId) {
         this.filterId = filterId;
         return this;
@@ -52,6 +56,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[public_date]")
     public String filterPublicDate;
+
     public ListAdvisoriesRequest withFilterPublicDate(String filterPublicDate) {
         this.filterPublicDate = filterPublicDate;
         return this;
@@ -62,6 +67,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[severity]")
     public String filterSeverity;
+
     public ListAdvisoriesRequest withFilterSeverity(String filterSeverity) {
         this.filterSeverity = filterSeverity;
         return this;
@@ -72,6 +78,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[synopsis]")
     public String filterSynopsis;
+
     public ListAdvisoriesRequest withFilterSynopsis(String filterSynopsis) {
         this.filterSynopsis = filterSynopsis;
         return this;
@@ -82,6 +89,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
     public String[] filterSystemProfileSapSidsIn;
+
     public ListAdvisoriesRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
         this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
@@ -92,6 +100,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
     public String filterSystemProfileSapSystem;
+
     public ListAdvisoriesRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
         this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
@@ -102,6 +111,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListAdvisoriesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -112,6 +122,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListAdvisoriesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -122,6 +133,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ListAdvisoriesRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -132,6 +144,7 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ListAdvisoriesSortEnum sort;
+
     public ListAdvisoriesRequest withSort(ListAdvisoriesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -142,9 +155,11 @@ public class ListAdvisoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String[] tags;
+
     public ListAdvisoriesRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListAdvisoriesRequest(){}
 }

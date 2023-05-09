@@ -15,6 +15,7 @@ public class EditNameServers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public EditNameServers withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -26,9 +27,11 @@ public class EditNameServers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_servers")
     public String[] nameServers;
+
     public EditNameServers withNameServers(String[] nameServers) {
         this.nameServers = nameServers;
         return this;
     }
     
+    public EditNameServers(){}
 }

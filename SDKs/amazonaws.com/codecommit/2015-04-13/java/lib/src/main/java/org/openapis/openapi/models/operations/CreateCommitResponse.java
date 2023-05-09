@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCommitResponse {
@@ -12,6 +13,7 @@ public class CreateCommitResponse {
      */
     
     public Object branchDoesNotExistException;
+
     public CreateCommitResponse withBranchDoesNotExistException(Object branchDoesNotExistException) {
         this.branchDoesNotExistException = branchDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class CreateCommitResponse {
      */
     
     public Object branchNameIsTagNameException;
+
     public CreateCommitResponse withBranchNameIsTagNameException(Object branchNameIsTagNameException) {
         this.branchNameIsTagNameException = branchNameIsTagNameException;
         return this;
@@ -32,6 +35,7 @@ public class CreateCommitResponse {
      */
     
     public Object branchNameRequiredException;
+
     public CreateCommitResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -42,6 +46,7 @@ public class CreateCommitResponse {
      */
     
     public Object commitMessageLengthExceededException;
+
     public CreateCommitResponse withCommitMessageLengthExceededException(Object commitMessageLengthExceededException) {
         this.commitMessageLengthExceededException = commitMessageLengthExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCommitResponse {
     
     
     public String contentType;
+
     public CreateCommitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateCommitResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCommitOutput createCommitOutput;
+
     public CreateCommitResponse withCreateCommitOutput(org.openapis.openapi.models.shared.CreateCommitOutput createCommitOutput) {
         this.createCommitOutput = createCommitOutput;
         return this;
@@ -69,6 +76,7 @@ public class CreateCommitResponse {
      */
     
     public Object directoryNameConflictsWithFileNameException;
+
     public CreateCommitResponse withDirectoryNameConflictsWithFileNameException(Object directoryNameConflictsWithFileNameException) {
         this.directoryNameConflictsWithFileNameException = directoryNameConflictsWithFileNameException;
         return this;
@@ -79,6 +87,7 @@ public class CreateCommitResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public CreateCommitResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -89,6 +98,7 @@ public class CreateCommitResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public CreateCommitResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -99,6 +109,7 @@ public class CreateCommitResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public CreateCommitResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -109,6 +120,7 @@ public class CreateCommitResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public CreateCommitResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -119,6 +131,7 @@ public class CreateCommitResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public CreateCommitResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -129,6 +142,7 @@ public class CreateCommitResponse {
      */
     
     public Object fileContentAndSourceFileSpecifiedException;
+
     public CreateCommitResponse withFileContentAndSourceFileSpecifiedException(Object fileContentAndSourceFileSpecifiedException) {
         this.fileContentAndSourceFileSpecifiedException = fileContentAndSourceFileSpecifiedException;
         return this;
@@ -139,6 +153,7 @@ public class CreateCommitResponse {
      */
     
     public Object fileContentSizeLimitExceededException;
+
     public CreateCommitResponse withFileContentSizeLimitExceededException(Object fileContentSizeLimitExceededException) {
         this.fileContentSizeLimitExceededException = fileContentSizeLimitExceededException;
         return this;
@@ -149,6 +164,7 @@ public class CreateCommitResponse {
      */
     
     public Object fileDoesNotExistException;
+
     public CreateCommitResponse withFileDoesNotExistException(Object fileDoesNotExistException) {
         this.fileDoesNotExistException = fileDoesNotExistException;
         return this;
@@ -159,6 +175,7 @@ public class CreateCommitResponse {
      */
     
     public Object fileEntryRequiredException;
+
     public CreateCommitResponse withFileEntryRequiredException(Object fileEntryRequiredException) {
         this.fileEntryRequiredException = fileEntryRequiredException;
         return this;
@@ -169,6 +186,7 @@ public class CreateCommitResponse {
      */
     
     public Object fileModeRequiredException;
+
     public CreateCommitResponse withFileModeRequiredException(Object fileModeRequiredException) {
         this.fileModeRequiredException = fileModeRequiredException;
         return this;
@@ -179,6 +197,7 @@ public class CreateCommitResponse {
      */
     
     public Object fileNameConflictsWithDirectoryNameException;
+
     public CreateCommitResponse withFileNameConflictsWithDirectoryNameException(Object fileNameConflictsWithDirectoryNameException) {
         this.fileNameConflictsWithDirectoryNameException = fileNameConflictsWithDirectoryNameException;
         return this;
@@ -189,6 +208,7 @@ public class CreateCommitResponse {
      */
     
     public Object filePathConflictsWithSubmodulePathException;
+
     public CreateCommitResponse withFilePathConflictsWithSubmodulePathException(Object filePathConflictsWithSubmodulePathException) {
         this.filePathConflictsWithSubmodulePathException = filePathConflictsWithSubmodulePathException;
         return this;
@@ -199,6 +219,7 @@ public class CreateCommitResponse {
      */
     
     public Object folderContentSizeLimitExceededException;
+
     public CreateCommitResponse withFolderContentSizeLimitExceededException(Object folderContentSizeLimitExceededException) {
         this.folderContentSizeLimitExceededException = folderContentSizeLimitExceededException;
         return this;
@@ -209,6 +230,7 @@ public class CreateCommitResponse {
      */
     
     public Object invalidBranchNameException;
+
     public CreateCommitResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -219,6 +241,7 @@ public class CreateCommitResponse {
      */
     
     public Object invalidDeletionParameterException;
+
     public CreateCommitResponse withInvalidDeletionParameterException(Object invalidDeletionParameterException) {
         this.invalidDeletionParameterException = invalidDeletionParameterException;
         return this;
@@ -229,6 +252,7 @@ public class CreateCommitResponse {
      */
     
     public Object invalidEmailException;
+
     public CreateCommitResponse withInvalidEmailException(Object invalidEmailException) {
         this.invalidEmailException = invalidEmailException;
         return this;
@@ -239,6 +263,7 @@ public class CreateCommitResponse {
      */
     
     public Object invalidFileModeException;
+
     public CreateCommitResponse withInvalidFileModeException(Object invalidFileModeException) {
         this.invalidFileModeException = invalidFileModeException;
         return this;
@@ -249,6 +274,7 @@ public class CreateCommitResponse {
      */
     
     public Object invalidParentCommitIdException;
+
     public CreateCommitResponse withInvalidParentCommitIdException(Object invalidParentCommitIdException) {
         this.invalidParentCommitIdException = invalidParentCommitIdException;
         return this;
@@ -259,6 +285,7 @@ public class CreateCommitResponse {
      */
     
     public Object invalidPathException;
+
     public CreateCommitResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -269,6 +296,7 @@ public class CreateCommitResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public CreateCommitResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -279,6 +307,7 @@ public class CreateCommitResponse {
      */
     
     public Object maximumFileEntriesExceededException;
+
     public CreateCommitResponse withMaximumFileEntriesExceededException(Object maximumFileEntriesExceededException) {
         this.maximumFileEntriesExceededException = maximumFileEntriesExceededException;
         return this;
@@ -289,6 +318,7 @@ public class CreateCommitResponse {
      */
     
     public Object nameLengthExceededException;
+
     public CreateCommitResponse withNameLengthExceededException(Object nameLengthExceededException) {
         this.nameLengthExceededException = nameLengthExceededException;
         return this;
@@ -299,6 +329,7 @@ public class CreateCommitResponse {
      */
     
     public Object noChangeException;
+
     public CreateCommitResponse withNoChangeException(Object noChangeException) {
         this.noChangeException = noChangeException;
         return this;
@@ -309,6 +340,7 @@ public class CreateCommitResponse {
      */
     
     public Object parentCommitDoesNotExistException;
+
     public CreateCommitResponse withParentCommitDoesNotExistException(Object parentCommitDoesNotExistException) {
         this.parentCommitDoesNotExistException = parentCommitDoesNotExistException;
         return this;
@@ -319,6 +351,7 @@ public class CreateCommitResponse {
      */
     
     public Object parentCommitIdOutdatedException;
+
     public CreateCommitResponse withParentCommitIdOutdatedException(Object parentCommitIdOutdatedException) {
         this.parentCommitIdOutdatedException = parentCommitIdOutdatedException;
         return this;
@@ -329,6 +362,7 @@ public class CreateCommitResponse {
      */
     
     public Object parentCommitIdRequiredException;
+
     public CreateCommitResponse withParentCommitIdRequiredException(Object parentCommitIdRequiredException) {
         this.parentCommitIdRequiredException = parentCommitIdRequiredException;
         return this;
@@ -339,6 +373,7 @@ public class CreateCommitResponse {
      */
     
     public Object pathRequiredException;
+
     public CreateCommitResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -349,6 +384,7 @@ public class CreateCommitResponse {
      */
     
     public Object putFileEntryConflictException;
+
     public CreateCommitResponse withPutFileEntryConflictException(Object putFileEntryConflictException) {
         this.putFileEntryConflictException = putFileEntryConflictException;
         return this;
@@ -359,6 +395,7 @@ public class CreateCommitResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public CreateCommitResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -369,6 +406,7 @@ public class CreateCommitResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public CreateCommitResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -379,6 +417,7 @@ public class CreateCommitResponse {
      */
     
     public Object restrictedSourceFileException;
+
     public CreateCommitResponse withRestrictedSourceFileException(Object restrictedSourceFileException) {
         this.restrictedSourceFileException = restrictedSourceFileException;
         return this;
@@ -389,6 +428,7 @@ public class CreateCommitResponse {
      */
     
     public Object samePathRequestException;
+
     public CreateCommitResponse withSamePathRequestException(Object samePathRequestException) {
         this.samePathRequestException = samePathRequestException;
         return this;
@@ -399,6 +439,7 @@ public class CreateCommitResponse {
      */
     
     public Object sourceFileOrContentRequiredException;
+
     public CreateCommitResponse withSourceFileOrContentRequiredException(Object sourceFileOrContentRequiredException) {
         this.sourceFileOrContentRequiredException = sourceFileOrContentRequiredException;
         return this;
@@ -406,6 +447,7 @@ public class CreateCommitResponse {
     
     
     public Integer statusCode;
+
     public CreateCommitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -413,9 +455,14 @@ public class CreateCommitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCommitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCommitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

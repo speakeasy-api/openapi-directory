@@ -22,6 +22,7 @@ public class PartitionInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessTime")
     public OffsetDateTime lastAccessTime;
+
     public PartitionInput withLastAccessTime(OffsetDateTime lastAccessTime) {
         this.lastAccessTime = lastAccessTime;
         return this;
@@ -32,6 +33,7 @@ public class PartitionInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAnalyzedTime")
     public OffsetDateTime lastAnalyzedTime;
+
     public PartitionInput withLastAnalyzedTime(OffsetDateTime lastAnalyzedTime) {
         this.lastAnalyzedTime = lastAnalyzedTime;
         return this;
@@ -40,6 +42,7 @@ public class PartitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public PartitionInput withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -48,6 +51,7 @@ public class PartitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageDescriptor")
     public StorageDescriptor storageDescriptor;
+
     public PartitionInput withStorageDescriptor(StorageDescriptor storageDescriptor) {
         this.storageDescriptor = storageDescriptor;
         return this;
@@ -56,9 +60,11 @@ public class PartitionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public PartitionInput withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PartitionInput(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Developer - A Developer
@@ -15,6 +15,7 @@ public class Developer {
      */
     
     public Long created;
+
     public Developer withCreated(Long created) {
         this.created = created;
         return this;
@@ -25,6 +26,7 @@ public class Developer {
      */
     
     public java.util.Map<String, Object> customData;
+
     public Developer withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -35,6 +37,7 @@ public class Developer {
      */
     
     public String developerId;
+
     public Developer withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -45,6 +48,7 @@ public class Developer {
      */
     
     public String email;
+
     public Developer withEmail(String email) {
         this.email = email;
         return this;
@@ -55,6 +59,7 @@ public class Developer {
      */
     
     public String name;
+
     public Developer withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +70,14 @@ public class Developer {
      */
     
     public String type;
+
     public Developer withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Developer(@JsonProperty("created") Long created, @JsonProperty("developerId") String developerId) {
+        this.created = created;
+        this.developerId = developerId;
+  }
 }

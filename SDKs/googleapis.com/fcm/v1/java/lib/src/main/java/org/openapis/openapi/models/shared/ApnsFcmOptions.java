@@ -18,6 +18,7 @@ public class ApnsFcmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsLabel")
     public String analyticsLabel;
+
     public ApnsFcmOptions withAnalyticsLabel(String analyticsLabel) {
         this.analyticsLabel = analyticsLabel;
         return this;
@@ -29,9 +30,11 @@ public class ApnsFcmOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public ApnsFcmOptions withImage(String image) {
         this.image = image;
         return this;
     }
     
+    public ApnsFcmOptions(){}
 }

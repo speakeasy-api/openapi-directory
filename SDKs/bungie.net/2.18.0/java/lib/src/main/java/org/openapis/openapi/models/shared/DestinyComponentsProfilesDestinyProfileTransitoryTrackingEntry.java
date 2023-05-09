@@ -17,6 +17,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry {
      */
     
     public Long activityHash;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -27,6 +28,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry {
      */
     
     public Long itemHash;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -37,6 +39,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry {
      */
     
     public Long locationHash;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry withLocationHash(Long locationHash) {
         this.locationHash = locationHash;
         return this;
@@ -47,6 +50,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry {
      */
     
     public Long objectiveHash;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry withObjectiveHash(Long objectiveHash) {
         this.objectiveHash = objectiveHash;
         return this;
@@ -57,6 +61,7 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry {
      */
     
     public Long questlineItemHash;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry withQuestlineItemHash(Long questlineItemHash) {
         this.questlineItemHash = questlineItemHash;
         return this;
@@ -68,9 +73,11 @@ public class DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry {
      */
     
     public OffsetDateTime trackedDate;
+
     public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry withTrackedDate(OffsetDateTime trackedDate) {
         this.trackedDate = trackedDate;
         return this;
     }
     
+    public DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry(){}
 }

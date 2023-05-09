@@ -15,6 +15,7 @@ public class HttpQueryParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public QueryParameterMatch match;
+
     public HttpQueryParameter withMatch(QueryParameterMatch match) {
         this.match = match;
         return this;
@@ -22,9 +23,13 @@ public class HttpQueryParameter {
     
     @JsonProperty("name")
     public String name;
+
     public HttpQueryParameter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public HttpQueryParameter(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

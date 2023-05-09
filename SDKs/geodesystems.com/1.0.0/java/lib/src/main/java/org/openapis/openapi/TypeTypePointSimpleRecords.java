@@ -57,10 +57,8 @@ public class TypeTypePointSimpleRecords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypePointSimpleRecordsResponse res = new org.openapis.openapi.models.operations.SearchTypePointSimpleRecordsResponse() {{
+        org.openapis.openapi.models.operations.SearchTypePointSimpleRecordsResponse res = new org.openapis.openapi.models.operations.SearchTypePointSimpleRecordsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

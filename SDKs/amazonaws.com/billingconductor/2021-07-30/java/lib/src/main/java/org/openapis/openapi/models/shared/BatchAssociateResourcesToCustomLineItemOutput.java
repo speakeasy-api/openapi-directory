@@ -15,6 +15,7 @@ public class BatchAssociateResourcesToCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedAssociatedResources")
     public AssociateResourceResponseElement[] failedAssociatedResources;
+
     public BatchAssociateResourcesToCustomLineItemOutput withFailedAssociatedResources(AssociateResourceResponseElement[] failedAssociatedResources) {
         this.failedAssociatedResources = failedAssociatedResources;
         return this;
@@ -23,9 +24,11 @@ public class BatchAssociateResourcesToCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessfullyAssociatedResources")
     public AssociateResourceResponseElement[] successfullyAssociatedResources;
+
     public BatchAssociateResourcesToCustomLineItemOutput withSuccessfullyAssociatedResources(AssociateResourceResponseElement[] successfullyAssociatedResources) {
         this.successfullyAssociatedResources = successfullyAssociatedResources;
         return this;
     }
     
+    public BatchAssociateResourcesToCustomLineItemOutput(){}
 }

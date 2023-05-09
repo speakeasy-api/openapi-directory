@@ -15,6 +15,7 @@ public class ProtectiveEquipmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PersonsIndeterminate")
     public Long[] personsIndeterminate;
+
     public ProtectiveEquipmentSummary withPersonsIndeterminate(Long[] personsIndeterminate) {
         this.personsIndeterminate = personsIndeterminate;
         return this;
@@ -23,6 +24,7 @@ public class ProtectiveEquipmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PersonsWithRequiredEquipment")
     public Long[] personsWithRequiredEquipment;
+
     public ProtectiveEquipmentSummary withPersonsWithRequiredEquipment(Long[] personsWithRequiredEquipment) {
         this.personsWithRequiredEquipment = personsWithRequiredEquipment;
         return this;
@@ -31,9 +33,11 @@ public class ProtectiveEquipmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PersonsWithoutRequiredEquipment")
     public Long[] personsWithoutRequiredEquipment;
+
     public ProtectiveEquipmentSummary withPersonsWithoutRequiredEquipment(Long[] personsWithoutRequiredEquipment) {
         this.personsWithoutRequiredEquipment = personsWithoutRequiredEquipment;
         return this;
     }
     
+    public ProtectiveEquipmentSummary(){}
 }

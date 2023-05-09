@@ -15,6 +15,7 @@ public class PostScrobbleEpisodesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episode_id")
     public Long episodeId;
+
     public PostScrobbleEpisodesRequestBody withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
@@ -26,6 +27,7 @@ public class PostScrobbleEpisodesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marked_at")
     public Long markedAt;
+
     public PostScrobbleEpisodesRequestBody withMarkedAt(Long markedAt) {
         this.markedAt = markedAt;
         return this;
@@ -37,9 +39,11 @@ public class PostScrobbleEpisodesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
+
     public PostScrobbleEpisodesRequestBody withType(Object type) {
         this.type = type;
         return this;
     }
     
+    public PostScrobbleEpisodesRequestBody(){}
 }

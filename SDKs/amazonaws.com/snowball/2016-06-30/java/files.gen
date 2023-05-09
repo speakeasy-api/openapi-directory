@@ -113,10 +113,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateAddressResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateAddressRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Address.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateClusterResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/JobListEntry.java
+lib/src/main/java/org/openapis/openapi/models/shared/SnowballTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/JobTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/JobStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateClusterRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TaxDocuments.java
 lib/src/main/java/org/openapis/openapi/models/shared/INDTaxDocuments.java
-lib/src/main/java/org/openapis/openapi/models/shared/SnowballTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/SnowballCapacityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShippingOptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/S3Resource.java
@@ -131,14 +135,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/RemoteManagementEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/OnDeviceServiceConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/TGWOnDeviceServiceConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/StorageUnitEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/S3OnDeviceServiceConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/NFSOnDeviceServiceConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/EKSOnDeviceServiceConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/Notification.java
-lib/src/main/java/org/openapis/openapi/models/shared/JobStateEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/JobTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateJobResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateJobRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SnowballCapacityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeviceConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/SnowconeDeviceConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/WirelessConnection.java
@@ -173,7 +175,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetSnowballUsageResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetSoftwareUpdatesResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetSoftwareUpdatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListClusterJobsResult.java
-lib/src/main/java/org/openapis/openapi/models/shared/JobListEntry.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListClusterJobsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListClustersResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClusterListEntry.java
@@ -197,4 +198,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateJobShipmentStateReque
 lib/src/main/java/org/openapis/openapi/models/shared/ShipmentStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateLongTermPricingRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class TerminateTargetInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public TerminateTargetInstancesResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public TerminateTargetInstancesResponse(){}
 }

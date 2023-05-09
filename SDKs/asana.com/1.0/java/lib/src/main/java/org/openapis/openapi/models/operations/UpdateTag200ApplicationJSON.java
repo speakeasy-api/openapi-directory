@@ -15,9 +15,11 @@ public class UpdateTag200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TagResponse data;
+
     public UpdateTag200ApplicationJSON withData(org.openapis.openapi.models.shared.TagResponse data) {
         this.data = data;
         return this;
     }
     
+    public UpdateTag200ApplicationJSON(){}
 }

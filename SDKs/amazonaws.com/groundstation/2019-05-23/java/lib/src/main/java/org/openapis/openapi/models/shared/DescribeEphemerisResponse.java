@@ -22,6 +22,7 @@ public class DescribeEphemerisResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public DescribeEphemerisResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public DescribeEphemerisResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -38,6 +40,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemerisId")
     public String ephemerisId;
+
     public DescribeEphemerisResponse withEphemerisId(String ephemerisId) {
         this.ephemerisId = ephemerisId;
         return this;
@@ -46,6 +49,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidReason")
     public EphemerisInvalidReasonEnum invalidReason;
+
     public DescribeEphemerisResponse withInvalidReason(EphemerisInvalidReasonEnum invalidReason) {
         this.invalidReason = invalidReason;
         return this;
@@ -54,6 +58,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeEphemerisResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public DescribeEphemerisResponse withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -70,6 +76,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satelliteId")
     public String satelliteId;
+
     public DescribeEphemerisResponse withSatelliteId(String satelliteId) {
         this.satelliteId = satelliteId;
         return this;
@@ -78,6 +85,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EphemerisStatusEnum status;
+
     public DescribeEphemerisResponse withStatus(EphemerisStatusEnum status) {
         this.status = status;
         return this;
@@ -86,6 +94,7 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suppliedData")
     public EphemerisTypeDescription suppliedData;
+
     public DescribeEphemerisResponse withSuppliedData(EphemerisTypeDescription suppliedData) {
         this.suppliedData = suppliedData;
         return this;
@@ -94,9 +103,11 @@ public class DescribeEphemerisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeEphemerisResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeEphemerisResponse(){}
 }

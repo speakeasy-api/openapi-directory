@@ -18,6 +18,7 @@ public class MobileUsabilityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueType")
     public MobileUsabilityIssueIssueTypeEnum issueType;
+
     public MobileUsabilityIssue withIssueType(MobileUsabilityIssueIssueTypeEnum issueType) {
         this.issueType = issueType;
         return this;
@@ -29,6 +30,7 @@ public class MobileUsabilityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MobileUsabilityIssue withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class MobileUsabilityIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public MobileUsabilityIssueSeverityEnum severity;
+
     public MobileUsabilityIssue withSeverity(MobileUsabilityIssueSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public MobileUsabilityIssue(){}
 }

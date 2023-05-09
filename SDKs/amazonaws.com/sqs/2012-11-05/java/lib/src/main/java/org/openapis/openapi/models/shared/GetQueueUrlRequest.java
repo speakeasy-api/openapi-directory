@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetQueueUrlRequest - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetQueueUrlRequest {
     
     public String queueName;
+
     public GetQueueUrlRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -19,9 +20,13 @@ public class GetQueueUrlRequest {
     
     
     public String queueOwnerAWSAccountId;
+
     public GetQueueUrlRequest withQueueOwnerAWSAccountId(String queueOwnerAWSAccountId) {
         this.queueOwnerAWSAccountId = queueOwnerAWSAccountId;
         return this;
     }
     
+    public GetQueueUrlRequest(@JsonProperty("QueueName") String queueName) {
+        this.queueName = queueName;
+  }
 }

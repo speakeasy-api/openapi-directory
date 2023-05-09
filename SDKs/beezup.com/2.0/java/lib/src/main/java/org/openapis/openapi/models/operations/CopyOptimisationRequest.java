@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyOptimisationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CopyOptimisationRequest copyOptimisationRequest;
+
     public CopyOptimisationRequest withCopyOptimisationRequest(org.openapis.openapi.models.shared.CopyOptimisationRequest copyOptimisationRequest) {
         this.copyOptimisationRequest = copyOptimisationRequest;
         return this;
@@ -19,9 +21,14 @@ public class CopyOptimisationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CopyOptimisationRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CopyOptimisationRequest(@JsonProperty("copyOptimisationRequest") org.openapis.openapi.models.shared.CopyOptimisationRequest copyOptimisationRequest, @JsonProperty("storeId") String storeId) {
+        this.copyOptimisationRequest = copyOptimisationRequest;
+        this.storeId = storeId;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceEventWindowsRequest {
     
     public Boolean dryRun;
+
     public DescribeInstanceEventWindowsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceEventWindowsRequest {
     
     
     public DescribeInstanceEventWindowsRequestFilters[] filters;
+
     public DescribeInstanceEventWindowsRequest withFilters(DescribeInstanceEventWindowsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceEventWindowsRequest {
     
     
     public String[] instanceEventWindowIds;
+
     public DescribeInstanceEventWindowsRequest withInstanceEventWindowIds(String[] instanceEventWindowIds) {
         this.instanceEventWindowIds = instanceEventWindowIds;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceEventWindowsRequest {
     
     
     public Long maxResults;
+
     public DescribeInstanceEventWindowsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -40,9 +44,11 @@ public class DescribeInstanceEventWindowsRequest {
     
     
     public String nextToken;
+
     public DescribeInstanceEventWindowsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceEventWindowsRequest(){}
 }

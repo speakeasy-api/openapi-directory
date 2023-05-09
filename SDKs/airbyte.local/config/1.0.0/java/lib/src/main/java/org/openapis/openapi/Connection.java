@@ -58,12 +58,10 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateConnectionResponse res = new org.openapis.openapi.models.operations.CreateConnectionResponse() {{
+        org.openapis.openapi.models.operations.CreateConnectionResponse res = new org.openapis.openapi.models.operations.CreateConnectionResponse(contentType, httpRes.statusCode()) {{
             connectionRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConnectionResponse res = new org.openapis.openapi.models.operations.DeleteConnectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteConnectionResponse res = new org.openapis.openapi.models.operations.DeleteConnectionResponse(contentType, httpRes.statusCode()) {{
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -162,13 +158,11 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConnectionResponse res = new org.openapis.openapi.models.operations.GetConnectionResponse() {{
+        org.openapis.openapi.models.operations.GetConnectionResponse res = new org.openapis.openapi.models.operations.GetConnectionResponse(contentType, httpRes.statusCode()) {{
             connectionRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,13 +216,11 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAllConnectionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListAllConnectionsForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.ListAllConnectionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListAllConnectionsForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             connectionReadList = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,13 +274,11 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListConnectionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListConnectionsForWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.ListConnectionsForWorkspaceResponse res = new org.openapis.openapi.models.operations.ListConnectionsForWorkspaceResponse(contentType, httpRes.statusCode()) {{
             connectionReadList = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,13 +331,11 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResetConnectionResponse res = new org.openapis.openapi.models.operations.ResetConnectionResponse() {{
+        org.openapis.openapi.models.operations.ResetConnectionResponse res = new org.openapis.openapi.models.operations.ResetConnectionResponse(contentType, httpRes.statusCode()) {{
             jobInfoRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,12 +388,10 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchConnectionsResponse res = new org.openapis.openapi.models.operations.SearchConnectionsResponse() {{
+        org.openapis.openapi.models.operations.SearchConnectionsResponse res = new org.openapis.openapi.models.operations.SearchConnectionsResponse(contentType, httpRes.statusCode()) {{
             connectionReadList = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -451,13 +437,11 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SyncConnectionResponse res = new org.openapis.openapi.models.operations.SyncConnectionResponse() {{
+        org.openapis.openapi.models.operations.SyncConnectionResponse res = new org.openapis.openapi.models.operations.SyncConnectionResponse(contentType, httpRes.statusCode()) {{
             jobInfoRead = null;
             notFoundKnownExceptionInfo = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -515,12 +499,10 @@ public class Connection {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateConnectionResponse res = new org.openapis.openapi.models.operations.UpdateConnectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateConnectionResponse res = new org.openapis.openapi.models.operations.UpdateConnectionResponse(contentType, httpRes.statusCode()) {{
             connectionRead = null;
             invalidInputExceptionInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpcEndpointServicePermissionsResultAddedPrincipals {
     
     public String principal;
+
     public ModifyVpcEndpointServicePermissionsResultAddedPrincipals withPrincipal(String principal) {
         this.principal = principal;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpcEndpointServicePermissionsResultAddedPrincipals {
     
     
     public ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum principalType;
+
     public ModifyVpcEndpointServicePermissionsResultAddedPrincipals withPrincipalType(ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum principalType) {
         this.principalType = principalType;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVpcEndpointServicePermissionsResultAddedPrincipals {
     
     
     public String serviceId;
+
     public ModifyVpcEndpointServicePermissionsResultAddedPrincipals withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -33,9 +36,11 @@ public class ModifyVpcEndpointServicePermissionsResultAddedPrincipals {
     
     
     public String servicePermissionId;
+
     public ModifyVpcEndpointServicePermissionsResultAddedPrincipals withServicePermissionId(String servicePermissionId) {
         this.servicePermissionId = servicePermissionId;
         return this;
     }
     
+    public ModifyVpcEndpointServicePermissionsResultAddedPrincipals(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse {
     
     public String contentType;
+
     public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseE
      */
     
     public org.openapis.openapi.models.shared.DescribeDatabaseEntitiesResponse describeDatabaseEntitiesResponse;
+
     public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse withDescribeDatabaseEntitiesResponse(org.openapis.openapi.models.shared.DescribeDatabaseEntitiesResponse describeDatabaseEntitiesResponse) {
         this.describeDatabaseEntitiesResponse = describeDatabaseEntitiesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseE
     
     
     public Integer statusCode;
+
     public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseE
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

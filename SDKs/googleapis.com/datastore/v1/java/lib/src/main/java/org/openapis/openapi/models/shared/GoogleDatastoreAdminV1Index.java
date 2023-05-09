@@ -18,6 +18,7 @@ public class GoogleDatastoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestor")
     public GoogleDatastoreAdminV1IndexAncestorEnum ancestor;
+
     public GoogleDatastoreAdminV1Index withAncestor(GoogleDatastoreAdminV1IndexAncestorEnum ancestor) {
         this.ancestor = ancestor;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDatastoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexId")
     public String indexId;
+
     public GoogleDatastoreAdminV1Index withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleDatastoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GoogleDatastoreAdminV1Index withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class GoogleDatastoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleDatastoreAdminV1Index withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleDatastoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleDatastoreAdminV1IndexedProperty[] properties;
+
     public GoogleDatastoreAdminV1Index withProperties(GoogleDatastoreAdminV1IndexedProperty[] properties) {
         this.properties = properties;
         return this;
@@ -73,9 +78,11 @@ public class GoogleDatastoreAdminV1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleDatastoreAdminV1IndexStateEnum state;
+
     public GoogleDatastoreAdminV1Index withState(GoogleDatastoreAdminV1IndexStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleDatastoreAdminV1Index(){}
 }

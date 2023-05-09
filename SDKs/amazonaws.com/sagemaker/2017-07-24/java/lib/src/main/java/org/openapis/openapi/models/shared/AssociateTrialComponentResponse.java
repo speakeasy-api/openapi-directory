@@ -15,6 +15,7 @@ public class AssociateTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialArn")
     public String trialArn;
+
     public AssociateTrialComponentResponse withTrialArn(String trialArn) {
         this.trialArn = trialArn;
         return this;
@@ -23,9 +24,11 @@ public class AssociateTrialComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialComponentArn")
     public String trialComponentArn;
+
     public AssociateTrialComponentResponse withTrialComponentArn(String trialComponentArn) {
         this.trialComponentArn = trialComponentArn;
         return this;
     }
     
+    public AssociateTrialComponentResponse(){}
 }

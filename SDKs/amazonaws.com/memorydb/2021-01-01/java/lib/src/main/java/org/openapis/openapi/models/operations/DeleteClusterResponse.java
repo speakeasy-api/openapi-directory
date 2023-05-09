@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteClusterResponse {
@@ -12,6 +13,7 @@ public class DeleteClusterResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public DeleteClusterResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class DeleteClusterResponse {
     
     
     public String contentType;
+
     public DeleteClusterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteClusterResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteClusterResponse deleteClusterResponse;
+
     public DeleteClusterResponse withDeleteClusterResponse(org.openapis.openapi.models.shared.DeleteClusterResponse deleteClusterResponse) {
         this.deleteClusterResponse = deleteClusterResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteClusterResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public DeleteClusterResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -49,6 +54,7 @@ public class DeleteClusterResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DeleteClusterResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteClusterResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteClusterResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteClusterResponse {
     
     
     public Integer statusCode;
+
     public DeleteClusterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteClusterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteClusterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteClusterResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DeleteClusterResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -93,9 +103,14 @@ public class DeleteClusterResponse {
      */
     
     public Object snapshotAlreadyExistsFault;
+
     public DeleteClusterResponse withSnapshotAlreadyExistsFault(Object snapshotAlreadyExistsFault) {
         this.snapshotAlreadyExistsFault = snapshotAlreadyExistsFault;
         return this;
     }
     
+    public DeleteClusterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1TextToSpeechSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableTextToSpeech")
     public Boolean enableTextToSpeech;
+
     public GoogleCloudDialogflowV2beta1TextToSpeechSettings withEnableTextToSpeech(Boolean enableTextToSpeech) {
         this.enableTextToSpeech = enableTextToSpeech;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1TextToSpeechSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputAudioEncoding")
     public GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum outputAudioEncoding;
+
     public GoogleCloudDialogflowV2beta1TextToSpeechSettings withOutputAudioEncoding(GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum outputAudioEncoding) {
         this.outputAudioEncoding = outputAudioEncoding;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1TextToSpeechSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public GoogleCloudDialogflowV2beta1TextToSpeechSettings withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1TextToSpeechSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synthesizeSpeechConfigs")
     public java.util.Map<String, GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig> synthesizeSpeechConfigs;
+
     public GoogleCloudDialogflowV2beta1TextToSpeechSettings withSynthesizeSpeechConfigs(java.util.Map<String, GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig> synthesizeSpeechConfigs) {
         this.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1TextToSpeechSettings(){}
 }

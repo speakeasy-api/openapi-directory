@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutReplicationConfigurationResponse {
     
     public String contentType;
+
     public PutReplicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutReplicationConfigurationResponse {
      */
     
     public Object invalidParameterException;
+
     public PutReplicationConfigurationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutReplicationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutReplicationConfigurationResponse putReplicationConfigurationResponse;
+
     public PutReplicationConfigurationResponse withPutReplicationConfigurationResponse(org.openapis.openapi.models.shared.PutReplicationConfigurationResponse putReplicationConfigurationResponse) {
         this.putReplicationConfigurationResponse = putReplicationConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutReplicationConfigurationResponse {
      */
     
     public Object serverException;
+
     public PutReplicationConfigurationResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -46,6 +51,7 @@ public class PutReplicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutReplicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutReplicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutReplicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutReplicationConfigurationResponse {
      */
     
     public Object validationException;
+
     public PutReplicationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutReplicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

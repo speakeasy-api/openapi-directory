@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ExportS3DataInput - &lt;p/&gt;
+ * ExportS3DataInput - The structure containing the Amazon S3 path to export the Earth Observation job output.
  */
 public class ExportS3DataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ExportS3DataInput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class ExportS3DataInput {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public ExportS3DataInput withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public ExportS3DataInput(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

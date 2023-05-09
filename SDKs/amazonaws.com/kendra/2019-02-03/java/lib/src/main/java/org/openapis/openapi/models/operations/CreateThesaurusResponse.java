@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateThesaurusResponse {
@@ -12,6 +13,7 @@ public class CreateThesaurusResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateThesaurusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateThesaurusResponse {
      */
     
     public Object conflictException;
+
     public CreateThesaurusResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateThesaurusResponse {
     
     
     public String contentType;
+
     public CreateThesaurusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateThesaurusResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateThesaurusResponse createThesaurusResponse;
+
     public CreateThesaurusResponse withCreateThesaurusResponse(org.openapis.openapi.models.shared.CreateThesaurusResponse createThesaurusResponse) {
         this.createThesaurusResponse = createThesaurusResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateThesaurusResponse {
      */
     
     public Object internalServerException;
+
     public CreateThesaurusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateThesaurusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateThesaurusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateThesaurusResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateThesaurusResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateThesaurusResponse {
     
     
     public Integer statusCode;
+
     public CreateThesaurusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateThesaurusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateThesaurusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateThesaurusResponse {
      */
     
     public Object throttlingException;
+
     public CreateThesaurusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateThesaurusResponse {
      */
     
     public Object validationException;
+
     public CreateThesaurusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateThesaurusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

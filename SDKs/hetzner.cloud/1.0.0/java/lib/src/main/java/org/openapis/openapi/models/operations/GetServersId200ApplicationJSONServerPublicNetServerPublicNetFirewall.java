@@ -15,6 +15,7 @@ public class GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewal
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewall withId(Long id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewal
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum status;
+
     public GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewall withStatus(GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetServersId200ApplicationJSONServerPublicNetServerPublicNetFirewall(){}
 }

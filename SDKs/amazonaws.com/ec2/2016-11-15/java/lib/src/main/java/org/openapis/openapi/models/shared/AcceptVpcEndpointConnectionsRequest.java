@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcceptVpcEndpointConnectionsRequest {
     
     public Boolean dryRun;
+
     public AcceptVpcEndpointConnectionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class AcceptVpcEndpointConnectionsRequest {
     
     
     public String serviceId;
+
     public AcceptVpcEndpointConnectionsRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -23,9 +25,14 @@ public class AcceptVpcEndpointConnectionsRequest {
     
     
     public String[] vpcEndpointIds;
+
     public AcceptVpcEndpointConnectionsRequest withVpcEndpointIds(String[] vpcEndpointIds) {
         this.vpcEndpointIds = vpcEndpointIds;
         return this;
     }
     
+    public AcceptVpcEndpointConnectionsRequest(@JsonProperty("ServiceId") String serviceId, @JsonProperty("VpcEndpointIds") String[] vpcEndpointIds) {
+        this.serviceId = serviceId;
+        this.vpcEndpointIds = vpcEndpointIds;
+  }
 }

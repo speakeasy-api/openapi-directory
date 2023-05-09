@@ -18,6 +18,7 @@ public class ErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lang")
     public String lang;
+
     public ErrorMessage withLang(String lang) {
         this.lang = lang;
         return this;
@@ -29,9 +30,11 @@ public class ErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ErrorMessage withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ErrorMessage(){}
 }

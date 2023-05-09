@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeClientAuthenticationSettingsRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DescribeClientAuthenticationSettingsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientAuthenticationSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeClientAuthenticationSettingsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class DescribeClientAuthenticationSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeClientAuthenticationSettingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeClientAuthenticationSettingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ClientAuthenticationTypeEnum type;
+
     public DescribeClientAuthenticationSettingsRequest withType(ClientAuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeClientAuthenticationSettingsRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

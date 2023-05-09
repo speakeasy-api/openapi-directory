@@ -12,9 +12,11 @@ public class CreateMonitorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitor")
     public CreateMonitorRequestBodyMonitor monitor;
+
     public CreateMonitorRequestBody withMonitor(CreateMonitorRequestBodyMonitor monitor) {
         this.monitor = monitor;
         return this;
     }
     
+    public CreateMonitorRequestBody(){}
 }

@@ -3,18 +3,17 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity;
 import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest;
 import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse;
+import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.EndpointPolicyTypeEnum;
-import org.openapis.openapi.models.shared.EndpointPolicyInput;
-import org.openapis.openapi.models.shared.TrafficPortSelector;
 import org.openapis.openapi.models.shared.EndpointMatcher;
-import org.openapis.openapi.models.shared.MetadataLabelMatcherMetadataLabelMatchCriteriaEnum;
+import org.openapis.openapi.models.shared.EndpointPolicyInput;
+import org.openapis.openapi.models.shared.EndpointPolicyTypeEnum;
 import org.openapis.openapi.models.shared.MetadataLabelMatcher;
+import org.openapis.openapi.models.shared.MetadataLabelMatcherMetadataLabelMatchCriteriaEnum;
 import org.openapis.openapi.models.shared.MetadataLabels;
+import org.openapis.openapi.models.shared.TrafficPortSelector;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -23,75 +22,71 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest req = new NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest() {{
-                dollarXgafv = "2";
+            NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest req = new NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 endpointPolicyInput = new EndpointPolicyInput() {{
-                    authorizationPolicy = "provident";
-                    clientTlsPolicy = "distinctio";
-                    description = "quibusdam";
+                    authorizationPolicy = "distinctio";
+                    clientTlsPolicy = "quibusdam";
+                    description = "unde";
                     endpointMatcher = new EndpointMatcher() {{
                         metadataLabelMatcher = new MetadataLabelMatcher() {{
-                            metadataLabelMatchCriteria = "MATCH_ANY";
+                            metadataLabelMatchCriteria = MetadataLabelMatcherMetadataLabelMatchCriteriaEnum.MATCH_ALL;
                             metadataLabels = new org.openapis.openapi.models.shared.MetadataLabels[]{{
                                 add(new MetadataLabels() {{
-                                    labelName = "corrupti";
-                                    labelValue = "illum";
+                                    labelName = "illum";
+                                    labelValue = "vel";
                                 }}),
                                 add(new MetadataLabels() {{
-                                    labelName = "vel";
-                                    labelValue = "error";
+                                    labelName = "error";
+                                    labelValue = "deserunt";
                                 }}),
                                 add(new MetadataLabels() {{
-                                    labelName = "deserunt";
-                                    labelValue = "suscipit";
-                                }}),
-                                add(new MetadataLabels() {{
-                                    labelName = "iure";
-                                    labelValue = "magnam";
+                                    labelName = "suscipit";
+                                    labelValue = "iure";
                                 }}),
                             }};
-                        }};
-                    }};
+                        }};;
+                    }};;
                     labels = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("debitis", "ipsa");
+                        put("delectus", "tempora");
                     }};
-                    name = "iusto";
-                    serverTlsPolicy = "excepturi";
+                    name = "Minnie Schiller";
+                    serverTlsPolicy = "iusto";
                     trafficPortSelector = new TrafficPortSelector() {{
                         ports = new String[]{{
+                            add("nisi"),
                             add("recusandae"),
                             add("temporibus"),
                         }};
-                    }};
-                    type = "ENDPOINT_POLICY_TYPE_UNSPECIFIED";
-                }};
+                    }};;
+                    type = EndpointPolicyTypeEnum.ENDPOINT_POLICY_TYPE_UNSPECIFIED;
+                }};;
                 accessToken = "quis";
-                alt = "json";
+                alt = AltEnum.JSON;
                 callback = "deserunt";
                 endpointPolicyId = "perferendis";
                 fields = "ipsam";
                 key = "repellendus";
                 oauthToken = "sapiente";
-                parent = "quo";
                 prettyPrint = false;
-                quotaUser = "odit";
-                uploadType = "at";
+                quotaUser = "quo";
+                uploadType = "odit";
                 uploadProtocol = "at";
-            }}            
+            }};            
 
-            NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse res = sdk.projects.networkservicesProjectsLocationsEndpointPoliciesCreate(req, new NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity() {{
+            NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse res = sdk.projects.networkservicesProjectsLocationsEndpointPoliciesCreate(req, new NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity("at", "maiores") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

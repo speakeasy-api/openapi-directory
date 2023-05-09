@@ -15,6 +15,7 @@ public class DescribeBudgetPerformanceHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BudgetPerformanceHistory")
     public BudgetPerformanceHistory budgetPerformanceHistory;
+
     public DescribeBudgetPerformanceHistoryResponse withBudgetPerformanceHistory(BudgetPerformanceHistory budgetPerformanceHistory) {
         this.budgetPerformanceHistory = budgetPerformanceHistory;
         return this;
@@ -26,9 +27,11 @@ public class DescribeBudgetPerformanceHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBudgetPerformanceHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBudgetPerformanceHistoryResponse(){}
 }

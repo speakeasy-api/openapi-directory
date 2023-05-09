@@ -22,6 +22,7 @@ public class ExportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public ExportSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class ExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportId")
     public String exportId;
+
     public ExportSummary withExportId(String exportId) {
         this.exportId = exportId;
         return this;
@@ -38,6 +40,7 @@ public class ExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportStatus")
     public ExportStatusEnum exportStatus;
+
     public ExportSummary withExportStatus(ExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -46,6 +49,7 @@ public class ExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormat")
     public ImportExportFileFormatEnum fileFormat;
+
     public ExportSummary withFileFormat(ImportExportFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -56,6 +60,7 @@ public class ExportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public ExportSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,9 +69,11 @@ public class ExportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpecification")
     public ExportResourceSpecification resourceSpecification;
+
     public ExportSummary withResourceSpecification(ExportResourceSpecification resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
         return this;
     }
     
+    public ExportSummary(){}
 }

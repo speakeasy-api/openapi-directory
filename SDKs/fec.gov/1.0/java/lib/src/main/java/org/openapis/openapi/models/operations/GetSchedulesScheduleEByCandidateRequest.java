@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleEByCandidateRequest {
@@ -13,6 +14,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetSchedulesScheduleEByCandidateRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -21,10 +23,17 @@ public class GetSchedulesScheduleEByCandidateRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String[] candidateId;
+
     public GetSchedulesScheduleEByCandidateRequest withCandidateId(String[] candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -36,6 +45,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetSchedulesScheduleEByCandidateRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -49,6 +59,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetSchedulesScheduleEByCandidateRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -59,6 +70,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
     public String district;
+
     public GetSchedulesScheduleEByCandidateRequest withDistrict(String district) {
         this.district = district;
         return this;
@@ -70,6 +82,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetSchedulesScheduleEByCandidateRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -80,6 +93,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetSchedulesScheduleEByCandidateOfficeEnum office;
+
     public GetSchedulesScheduleEByCandidateRequest withOffice(GetSchedulesScheduleEByCandidateOfficeEnum office) {
         this.office = office;
         return this;
@@ -90,6 +104,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetSchedulesScheduleEByCandidateRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -100,6 +115,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSchedulesScheduleEByCandidateRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -111,6 +127,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetSchedulesScheduleEByCandidateRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -121,6 +138,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetSchedulesScheduleEByCandidateRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -131,6 +149,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetSchedulesScheduleEByCandidateRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -141,6 +160,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetSchedulesScheduleEByCandidateRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -151,6 +171,7 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetSchedulesScheduleEByCandidateRequest withState(String state) {
         this.state = state;
         return this;
@@ -161,9 +182,13 @@ public class GetSchedulesScheduleEByCandidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=support_oppose")
     public GetSchedulesScheduleEByCandidateSupportOpposeEnum supportOppose;
+
     public GetSchedulesScheduleEByCandidateRequest withSupportOppose(GetSchedulesScheduleEByCandidateSupportOpposeEnum supportOppose) {
         this.supportOppose = supportOppose;
         return this;
     }
     
+    public GetSchedulesScheduleEByCandidateRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

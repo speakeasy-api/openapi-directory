@@ -23,6 +23,7 @@ public class UpdateDestinationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFixedProperties")
     public String additionalFixedProperties;
+
     public UpdateDestinationResponse withAdditionalFixedProperties(String additionalFixedProperties) {
         this.additionalFixedProperties = additionalFixedProperties;
         return this;
@@ -33,6 +34,7 @@ public class UpdateDestinationResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateDestinationResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -43,6 +45,7 @@ public class UpdateDestinationResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateDestinationResponse withId(String id) {
         this.id = id;
         return this;
@@ -53,6 +56,7 @@ public class UpdateDestinationResponse {
      */
     @JsonProperty("name")
     public String name;
+
     public UpdateDestinationResponse withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +67,7 @@ public class UpdateDestinationResponse {
      */
     @JsonProperty("state")
     public DestinationStateEnum state;
+
     public UpdateDestinationResponse withState(DestinationStateEnum state) {
         this.state = state;
         return this;
@@ -75,9 +80,17 @@ public class UpdateDestinationResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public UpdateDestinationResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public UpdateDestinationResponse(@JsonProperty("arn") String arn, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("state") DestinationStateEnum state, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.state = state;
+        this.updatedAt = updatedAt;
+  }
 }

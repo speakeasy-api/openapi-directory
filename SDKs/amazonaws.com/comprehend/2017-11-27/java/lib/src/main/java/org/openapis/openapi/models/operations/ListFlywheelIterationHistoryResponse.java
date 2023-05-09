@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFlywheelIterationHistoryResponse {
     
     public String contentType;
+
     public ListFlywheelIterationHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFlywheelIterationHistoryResponse {
      */
     
     public Object internalServerException;
+
     public ListFlywheelIterationHistoryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListFlywheelIterationHistoryResponse {
      */
     
     public Object invalidFilterException;
+
     public ListFlywheelIterationHistoryResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListFlywheelIterationHistoryResponse {
      */
     
     public Object invalidRequestException;
+
     public ListFlywheelIterationHistoryResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListFlywheelIterationHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFlywheelIterationHistoryResponse listFlywheelIterationHistoryResponse;
+
     public ListFlywheelIterationHistoryResponse withListFlywheelIterationHistoryResponse(org.openapis.openapi.models.shared.ListFlywheelIterationHistoryResponse listFlywheelIterationHistoryResponse) {
         this.listFlywheelIterationHistoryResponse = listFlywheelIterationHistoryResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListFlywheelIterationHistoryResponse {
     
     
     public Integer statusCode;
+
     public ListFlywheelIterationHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListFlywheelIterationHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFlywheelIterationHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListFlywheelIterationHistoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFlywheelIterationHistoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListFlywheelIterationHistoryResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListFlywheelIterationHistoryResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListFlywheelIterationHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

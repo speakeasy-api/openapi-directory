@@ -18,6 +18,7 @@ public class PutVCustomPricesRulesPriceAssociationId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public Object email;
+
     public PutVCustomPricesRulesPriceAssociationId200ApplicationJSON withEmail(Object email) {
         this.email = email;
         return this;
@@ -28,6 +29,7 @@ public class PutVCustomPricesRulesPriceAssociationId200ApplicationJSON {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutVCustomPricesRulesPriceAssociationId200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +41,7 @@ public class PutVCustomPricesRulesPriceAssociationId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderType")
     public String orderType;
+
     public PutVCustomPricesRulesPriceAssociationId200ApplicationJSON withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -49,6 +52,7 @@ public class PutVCustomPricesRulesPriceAssociationId200ApplicationJSON {
      */
     @JsonProperty("pricetable")
     public String pricetable;
+
     public PutVCustomPricesRulesPriceAssociationId200ApplicationJSON withPricetable(String pricetable) {
         this.pricetable = pricetable;
         return this;
@@ -60,9 +64,14 @@ public class PutVCustomPricesRulesPriceAssociationId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public PutVCustomPricesRulesPriceAssociationId200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
     }
     
+    public PutVCustomPricesRulesPriceAssociationId200ApplicationJSON(@JsonProperty("id") Long id, @JsonProperty("pricetable") String pricetable) {
+        this.id = id;
+        this.pricetable = pricetable;
+  }
 }

@@ -18,6 +18,7 @@ public class ListEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public Endpoint[] endpoints;
+
     public ListEndpointsResponse withEndpoints(Endpoint[] endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -29,6 +30,7 @@ public class ListEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEndpointsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListEndpointsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListEndpointsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListEndpointsResponse(){}
 }

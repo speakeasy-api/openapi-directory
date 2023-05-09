@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MalcsResponse {
     
     public String contentType;
+
     public MalcsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MalcsResponse {
     
     
     public Integer statusCode;
+
     public MalcsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MalcsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MalcsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MalcsResponse {
      */
     
     public Malcs400ApplicationJSON malcs400ApplicationJSONObject;
+
     public MalcsResponse withMalcs400ApplicationJSONObject(Malcs400ApplicationJSON malcs400ApplicationJSONObject) {
         this.malcs400ApplicationJSONObject = malcs400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MalcsResponse {
      */
     
     public Malcs401ApplicationJSON malcs401ApplicationJSONObject;
+
     public MalcsResponse withMalcs401ApplicationJSONObject(Malcs401ApplicationJSON malcs401ApplicationJSONObject) {
         this.malcs401ApplicationJSONObject = malcs401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MalcsResponse {
      */
     
     public Malcs404ApplicationJSON malcs404ApplicationJSONObject;
+
     public MalcsResponse withMalcs404ApplicationJSONObject(Malcs404ApplicationJSON malcs404ApplicationJSONObject) {
         this.malcs404ApplicationJSONObject = malcs404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MalcsResponse {
      */
     
     public Malcs500ApplicationJSON malcs500ApplicationJSONObject;
+
     public MalcsResponse withMalcs500ApplicationJSONObject(Malcs500ApplicationJSON malcs500ApplicationJSONObject) {
         this.malcs500ApplicationJSONObject = malcs500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MalcsResponse {
      */
     
     public Malcs502ApplicationJSON malcs502ApplicationJSONObject;
+
     public MalcsResponse withMalcs502ApplicationJSONObject(Malcs502ApplicationJSON malcs502ApplicationJSONObject) {
         this.malcs502ApplicationJSONObject = malcs502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class MalcsResponse {
      */
     
     public Malcs503ApplicationJSON malcs503ApplicationJSONObject;
+
     public MalcsResponse withMalcs503ApplicationJSONObject(Malcs503ApplicationJSON malcs503ApplicationJSONObject) {
         this.malcs503ApplicationJSONObject = malcs503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class MalcsResponse {
      */
     
     public Malcs504ApplicationJSON malcs504ApplicationJSONObject;
+
     public MalcsResponse withMalcs504ApplicationJSONObject(Malcs504ApplicationJSON malcs504ApplicationJSONObject) {
         this.malcs504ApplicationJSONObject = malcs504ApplicationJSONObject;
         return this;
     }
     
+    public MalcsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

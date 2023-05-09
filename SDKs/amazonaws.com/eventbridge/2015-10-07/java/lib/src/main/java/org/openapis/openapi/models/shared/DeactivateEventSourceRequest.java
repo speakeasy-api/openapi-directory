@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeactivateEventSourceRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeactivateEventSourceRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeactivateEventSourceRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

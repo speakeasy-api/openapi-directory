@@ -57,12 +57,10 @@ public class PaymentMethod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentMethodResponse res = new org.openapis.openapi.models.operations.GetPaymentMethodResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentMethodResponse res = new org.openapis.openapi.models.operations.GetPaymentMethodResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -85,10 +83,11 @@ public class PaymentMethod {
     /**
      * List Payment Methods
      * Return a list of all Payment Methods for the current Vendor
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPaymentMethodsResponse listPaymentMethods() throws Exception {
+    public org.openapis.openapi.models.operations.ListPaymentMethodsResponse listPaymentMethods(org.openapis.openapi.models.operations.ListPaymentMethodsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/paymentmethod");
         
@@ -97,17 +96,16 @@ public class PaymentMethod {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPaymentMethodsResponse res = new org.openapis.openapi.models.operations.ListPaymentMethodsResponse() {{
+        org.openapis.openapi.models.operations.ListPaymentMethodsResponse res = new org.openapis.openapi.models.operations.ListPaymentMethodsResponse(contentType, httpRes.statusCode()) {{
             netlicensings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +150,10 @@ public class PaymentMethod {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePaymentMethodResponse res = new org.openapis.openapi.models.operations.UpdatePaymentMethodResponse() {{
+        org.openapis.openapi.models.operations.UpdatePaymentMethodResponse res = new org.openapis.openapi.models.operations.UpdatePaymentMethodResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

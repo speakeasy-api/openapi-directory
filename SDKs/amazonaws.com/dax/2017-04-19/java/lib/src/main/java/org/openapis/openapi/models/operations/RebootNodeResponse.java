@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RebootNodeResponse {
@@ -12,6 +13,7 @@ public class RebootNodeResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public RebootNodeResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class RebootNodeResponse {
     
     
     public String contentType;
+
     public RebootNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RebootNodeResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public RebootNodeResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -39,6 +43,7 @@ public class RebootNodeResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public RebootNodeResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class RebootNodeResponse {
      */
     
     public Object invalidParameterValueException;
+
     public RebootNodeResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class RebootNodeResponse {
      */
     
     public Object nodeNotFoundFault;
+
     public RebootNodeResponse withNodeNotFoundFault(Object nodeNotFoundFault) {
         this.nodeNotFoundFault = nodeNotFoundFault;
         return this;
@@ -69,6 +76,7 @@ public class RebootNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.RebootNodeResponse rebootNodeResponse;
+
     public RebootNodeResponse withRebootNodeResponse(org.openapis.openapi.models.shared.RebootNodeResponse rebootNodeResponse) {
         this.rebootNodeResponse = rebootNodeResponse;
         return this;
@@ -79,6 +87,7 @@ public class RebootNodeResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public RebootNodeResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -86,6 +95,7 @@ public class RebootNodeResponse {
     
     
     public Integer statusCode;
+
     public RebootNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class RebootNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RebootNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RebootNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

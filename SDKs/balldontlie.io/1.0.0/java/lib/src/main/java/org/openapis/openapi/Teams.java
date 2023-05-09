@@ -46,10 +46,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllTeamsResponse res = new org.openapis.openapi.models.operations.AllTeamsResponse() {{
+        org.openapis.openapi.models.operations.AllTeamsResponse res = new org.openapis.openapi.models.operations.AllTeamsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -78,10 +76,8 @@ public class Teams {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpecificTeamResponse res = new org.openapis.openapi.models.operations.SpecificTeamResponse() {{
+        org.openapis.openapi.models.operations.SpecificTeamResponse res = new org.openapis.openapi.models.operations.SpecificTeamResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

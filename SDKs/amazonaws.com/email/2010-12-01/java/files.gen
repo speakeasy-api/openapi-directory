@@ -721,4 +721,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/VerifyDomainIdentityRequest
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyEmailAddressRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyEmailIdentityRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

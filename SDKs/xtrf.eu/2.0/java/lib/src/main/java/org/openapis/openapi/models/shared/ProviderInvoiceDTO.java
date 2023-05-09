@@ -15,6 +15,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyId")
     public Long currencyId;
+
     public ProviderInvoiceDTO withCurrencyId(Long currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -23,6 +24,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public ProviderInvoiceDatesDTO dates;
+
     public ProviderInvoiceDTO withDates(ProviderInvoiceDatesDTO dates) {
         this.dates = dates;
         return this;
@@ -31,6 +33,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draftNumber")
     public String draftNumber;
+
     public ProviderInvoiceDTO withDraftNumber(String draftNumber) {
         this.draftNumber = draftNumber;
         return this;
@@ -39,6 +42,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalNumber")
     public String finalNumber;
+
     public ProviderInvoiceDTO withFinalNumber(String finalNumber) {
         this.finalNumber = finalNumber;
         return this;
@@ -47,6 +51,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ProviderInvoiceDTO withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalNumber")
     public String internalNumber;
+
     public ProviderInvoiceDTO withInternalNumber(String internalNumber) {
         this.internalNumber = internalNumber;
         return this;
@@ -63,6 +69,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobsNetValue")
     public Double jobsNetValue;
+
     public ProviderInvoiceDTO withJobsNetValue(Double jobsNetValue) {
         this.jobsNetValue = jobsNetValue;
         return this;
@@ -71,6 +78,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notesFromProvider")
     public String notesFromProvider;
+
     public ProviderInvoiceDTO withNotesFromProvider(String notesFromProvider) {
         this.notesFromProvider = notesFromProvider;
         return this;
@@ -79,6 +87,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentStatus")
     public ProviderInvoiceDTOPaymentStatusEnum paymentStatus;
+
     public ProviderInvoiceDTO withPaymentStatus(ProviderInvoiceDTOPaymentStatusEnum paymentStatus) {
         this.paymentStatus = paymentStatus;
         return this;
@@ -87,6 +96,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerId")
     public Long providerId;
+
     public ProviderInvoiceDTO withProviderId(Long providerId) {
         this.providerId = providerId;
         return this;
@@ -95,6 +105,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProviderInvoiceDTOStatusEnum status;
+
     public ProviderInvoiceDTO withStatus(ProviderInvoiceDTOStatusEnum status) {
         this.status = status;
         return this;
@@ -103,6 +114,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalGross")
     public Double totalGross;
+
     public ProviderInvoiceDTO withTotalGross(Double totalGross) {
         this.totalGross = totalGross;
         return this;
@@ -111,6 +123,7 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalGrossInWords")
     public String totalGrossInWords;
+
     public ProviderInvoiceDTO withTotalGrossInWords(String totalGrossInWords) {
         this.totalGrossInWords = totalGrossInWords;
         return this;
@@ -119,9 +132,11 @@ public class ProviderInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNetto")
     public Double totalNetto;
+
     public ProviderInvoiceDTO withTotalNetto(Double totalNetto) {
         this.totalNetto = totalNetto;
         return this;
     }
     
+    public ProviderInvoiceDTO(){}
 }

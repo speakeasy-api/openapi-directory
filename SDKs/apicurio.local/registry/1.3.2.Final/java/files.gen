@@ -123,4 +123,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/VersionMetaData.java
 lib/src/main/java/org/openapis/openapi/models/shared/EditableMetaData.java
 lib/src/main/java/org/openapis/openapi/models/shared/VersionSearchResults.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchedVersion.java
+docs/sdk/README.md
+docs/artifactrules/README.md
+docs/artifacts/README.md
+docs/globalrules/README.md
+docs/metadata/README.md
+docs/search/README.md
+docs/versions/README.md
 USAGE.md

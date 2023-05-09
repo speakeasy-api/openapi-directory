@@ -15,6 +15,7 @@ public class DescribeWorkspaceSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RebuildSnapshots")
     public Snapshot[] rebuildSnapshots;
+
     public DescribeWorkspaceSnapshotsResult withRebuildSnapshots(Snapshot[] rebuildSnapshots) {
         this.rebuildSnapshots = rebuildSnapshots;
         return this;
@@ -23,9 +24,11 @@ public class DescribeWorkspaceSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RestoreSnapshots")
     public Snapshot[] restoreSnapshots;
+
     public DescribeWorkspaceSnapshotsResult withRestoreSnapshots(Snapshot[] restoreSnapshots) {
         this.restoreSnapshots = restoreSnapshots;
         return this;
     }
     
+    public DescribeWorkspaceSnapshotsResult(){}
 }

@@ -12,6 +12,7 @@ public class ListEventsDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public EventsDetectionJobFilter filter;
+
     public ListEventsDetectionJobsRequest withFilter(EventsDetectionJobFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListEventsDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEventsDetectionJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListEventsDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventsDetectionJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventsDetectionJobsRequest(){}
 }

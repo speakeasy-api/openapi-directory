@@ -12,6 +12,7 @@ public class GetMonitorRelations200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetMonitorRelations200ApplicationJSONMonitor withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class GetMonitorRelations200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitorId")
     public String monitorId;
+
     public GetMonitorRelations200ApplicationJSONMonitor withMonitorId(String monitorId) {
         this.monitorId = monitorId;
         return this;
@@ -28,6 +30,7 @@ public class GetMonitorRelations200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetMonitorRelations200ApplicationJSONMonitor withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class GetMonitorRelations200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public GetMonitorRelations200ApplicationJSONMonitor withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetMonitorRelations200ApplicationJSONMonitor(){}
 }

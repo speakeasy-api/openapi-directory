@@ -18,6 +18,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAllocation")
     public String ipAllocation;
+
     public NetworkConfig withIpAllocation(String ipAllocation) {
         this.ipAllocation = ipAllocation;
         return this;
@@ -29,9 +30,11 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkConfig withNetwork(String network) {
         this.network = network;
         return this;
     }
     
+    public NetworkConfig(){}
 }

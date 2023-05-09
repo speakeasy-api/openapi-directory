@@ -15,9 +15,11 @@ public class CreateHITWithHITTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HIT")
     public Hit hit;
+
     public CreateHITWithHITTypeResponse withHit(Hit hit) {
         this.hit = hit;
         return this;
     }
     
+    public CreateHITWithHITTypeResponse(){}
 }

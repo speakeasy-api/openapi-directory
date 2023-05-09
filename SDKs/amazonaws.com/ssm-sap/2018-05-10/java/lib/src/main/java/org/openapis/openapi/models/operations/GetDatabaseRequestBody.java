@@ -15,6 +15,7 @@ public class GetDatabaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public GetDatabaseRequestBody withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,6 +27,7 @@ public class GetDatabaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComponentId")
     public String componentId;
+
     public GetDatabaseRequestBody withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -37,6 +39,7 @@ public class GetDatabaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseArn")
     public String databaseArn;
+
     public GetDatabaseRequestBody withDatabaseArn(String databaseArn) {
         this.databaseArn = databaseArn;
         return this;
@@ -48,9 +51,11 @@ public class GetDatabaseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public GetDatabaseRequestBody withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
     }
     
+    public GetDatabaseRequestBody(){}
 }

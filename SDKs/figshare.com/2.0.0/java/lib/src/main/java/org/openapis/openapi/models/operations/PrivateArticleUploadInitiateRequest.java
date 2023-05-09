@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleUploadInitiateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FileCreator fileCreator;
+
     public PrivateArticleUploadInitiateRequest withFileCreator(org.openapis.openapi.models.shared.FileCreator fileCreator) {
         this.fileCreator = fileCreator;
         return this;
@@ -19,9 +21,14 @@ public class PrivateArticleUploadInitiateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public PrivateArticleUploadInitiateRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
     }
     
+    public PrivateArticleUploadInitiateRequest(@JsonProperty("FileCreator") org.openapis.openapi.models.shared.FileCreator fileCreator, @JsonProperty("article_id") Long articleId) {
+        this.fileCreator = fileCreator;
+        this.articleId = articleId;
+  }
 }

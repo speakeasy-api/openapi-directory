@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccountsForParentResponse {
@@ -12,6 +13,7 @@ public class ListAccountsForParentResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListAccountsForParentResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListAccountsForParentResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAccountsForParentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListAccountsForParentResponse {
     
     
     public String contentType;
+
     public ListAccountsForParentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListAccountsForParentResponse {
      */
     
     public Object invalidInputException;
+
     public ListAccountsForParentResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListAccountsForParentResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccountsForParentResponse listAccountsForParentResponse;
+
     public ListAccountsForParentResponse withListAccountsForParentResponse(org.openapis.openapi.models.shared.ListAccountsForParentResponse listAccountsForParentResponse) {
         this.listAccountsForParentResponse = listAccountsForParentResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAccountsForParentResponse {
      */
     
     public Object parentNotFoundException;
+
     public ListAccountsForParentResponse withParentNotFoundException(Object parentNotFoundException) {
         this.parentNotFoundException = parentNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListAccountsForParentResponse {
      */
     
     public Object serviceException;
+
     public ListAccountsForParentResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListAccountsForParentResponse {
     
     
     public Integer statusCode;
+
     public ListAccountsForParentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListAccountsForParentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccountsForParentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListAccountsForParentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListAccountsForParentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListAccountsForParentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

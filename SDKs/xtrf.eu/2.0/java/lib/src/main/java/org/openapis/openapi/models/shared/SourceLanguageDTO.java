@@ -15,9 +15,11 @@ public class SourceLanguageDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageId")
     public Long sourceLanguageId;
+
     public SourceLanguageDTO withSourceLanguageId(Long sourceLanguageId) {
         this.sourceLanguageId = sourceLanguageId;
         return this;
     }
     
+    public SourceLanguageDTO(){}
 }

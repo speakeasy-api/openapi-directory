@@ -12,9 +12,11 @@ public class GetCatalogImportStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetCatalogImportStatusRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
     }
     
+    public GetCatalogImportStatusRequest(){}
 }

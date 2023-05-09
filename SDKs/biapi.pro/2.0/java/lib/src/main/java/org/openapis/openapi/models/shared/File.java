@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class File {
     @JsonProperty("content_type")
     public String contentType;
+
     public File withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +20,7 @@ public class File {
     
     @JsonProperty("file_size")
     public Long fileSize;
+
     public File withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
@@ -26,6 +28,7 @@ public class File {
     
     @JsonProperty("filename")
     public String filename;
+
     public File withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -33,9 +36,16 @@ public class File {
     
     @JsonProperty("id")
     public Long id;
+
     public File withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public File(@JsonProperty("content_type") String contentType, @JsonProperty("file_size") Long fileSize, @JsonProperty("filename") String filename, @JsonProperty("id") Long id) {
+        this.contentType = contentType;
+        this.fileSize = fileSize;
+        this.filename = filename;
+        this.id = id;
+  }
 }

@@ -12,9 +12,13 @@ public class CreateTopicRuleRequestBody {
      */
     @JsonProperty("topicRulePayload")
     public CreateTopicRuleRequestBodyTopicRulePayload topicRulePayload;
+
     public CreateTopicRuleRequestBody withTopicRulePayload(CreateTopicRuleRequestBodyTopicRulePayload topicRulePayload) {
         this.topicRulePayload = topicRulePayload;
         return this;
     }
     
+    public CreateTopicRuleRequestBody(@JsonProperty("topicRulePayload") CreateTopicRuleRequestBodyTopicRulePayload topicRulePayload) {
+        this.topicRulePayload = topicRulePayload;
+  }
 }

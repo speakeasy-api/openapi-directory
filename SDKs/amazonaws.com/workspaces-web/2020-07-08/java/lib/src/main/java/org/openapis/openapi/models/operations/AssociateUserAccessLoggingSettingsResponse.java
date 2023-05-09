@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateUserAccessLoggingSettingsResponse {
@@ -12,6 +13,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateUserAccessLoggingSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateUserAccessLoggingSettingsResponse associateUserAccessLoggingSettingsResponse;
+
     public AssociateUserAccessLoggingSettingsResponse withAssociateUserAccessLoggingSettingsResponse(org.openapis.openapi.models.shared.AssociateUserAccessLoggingSettingsResponse associateUserAccessLoggingSettingsResponse) {
         this.associateUserAccessLoggingSettingsResponse = associateUserAccessLoggingSettingsResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
      */
     
     public Object conflictException;
+
     public AssociateUserAccessLoggingSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
     
     
     public String contentType;
+
     public AssociateUserAccessLoggingSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
      */
     
     public Object internalServerException;
+
     public AssociateUserAccessLoggingSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
     
     
     public Integer statusCode;
+
     public AssociateUserAccessLoggingSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateUserAccessLoggingSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateUserAccessLoggingSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AssociateUserAccessLoggingSettingsResponse {
      */
     
     public Object throttlingException;
+
     public AssociateUserAccessLoggingSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateUserAccessLoggingSettingsResponse {
      */
     
     public Object validationException;
+
     public AssociateUserAccessLoggingSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateUserAccessLoggingSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GiftCardActivityDeactivate {
     @JsonProperty("reason")
     public Object reason;
+
     public GiftCardActivityDeactivate withReason(Object reason) {
         this.reason = reason;
         return this;
     }
     
+    public GiftCardActivityDeactivate(@JsonProperty("reason") Object reason) {
+        this.reason = reason;
+  }
 }

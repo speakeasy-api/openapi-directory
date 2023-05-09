@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HashKeyRange {
     @JsonProperty("EndingHashKey")
     public String endingHashKey;
+
     public HashKeyRange withEndingHashKey(String endingHashKey) {
         this.endingHashKey = endingHashKey;
         return this;
@@ -19,9 +20,14 @@ public class HashKeyRange {
     
     @JsonProperty("StartingHashKey")
     public String startingHashKey;
+
     public HashKeyRange withStartingHashKey(String startingHashKey) {
         this.startingHashKey = startingHashKey;
         return this;
     }
     
+    public HashKeyRange(@JsonProperty("EndingHashKey") String endingHashKey, @JsonProperty("StartingHashKey") String startingHashKey) {
+        this.endingHashKey = endingHashKey;
+        this.startingHashKey = startingHashKey;
+  }
 }

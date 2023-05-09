@@ -18,9 +18,11 @@ public class GoogleFirebaseFcmDataV1beta1MessageInsightPercents {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorityLowered")
     public Float priorityLowered;
+
     public GoogleFirebaseFcmDataV1beta1MessageInsightPercents withPriorityLowered(Float priorityLowered) {
         this.priorityLowered = priorityLowered;
         return this;
     }
     
+    public GoogleFirebaseFcmDataV1beta1MessageInsightPercents(){}
 }

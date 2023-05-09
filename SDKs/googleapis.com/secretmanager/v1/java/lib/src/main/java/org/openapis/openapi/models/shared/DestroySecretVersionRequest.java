@@ -18,9 +18,11 @@ public class DestroySecretVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public DestroySecretVersionRequest withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    public DestroySecretVersionRequest(){}
 }

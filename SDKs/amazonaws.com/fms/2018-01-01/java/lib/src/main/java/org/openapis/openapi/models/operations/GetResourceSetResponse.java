@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceSetResponse {
     
     public String contentType;
+
     public GetResourceSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceSetResponse getResourceSetResponse;
+
     public GetResourceSetResponse withGetResourceSetResponse(org.openapis.openapi.models.shared.GetResourceSetResponse getResourceSetResponse) {
         this.getResourceSetResponse = getResourceSetResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceSetResponse {
      */
     
     public Object internalErrorException;
+
     public GetResourceSetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceSetResponse {
      */
     
     public Object invalidInputException;
+
     public GetResourceSetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceSetResponse {
      */
     
     public Object invalidOperationException;
+
     public GetResourceSetResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -56,6 +62,7 @@ public class GetResourceSetResponse {
     
     
     public Integer statusCode;
+
     public GetResourceSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetResourceSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetResourceSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResourceSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetResourceSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSuperfundProductsResponse {
@@ -12,6 +13,7 @@ public class GetSuperfundProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.APIException apiException;
+
     public GetSuperfundProductsResponse withAPIException(org.openapis.openapi.models.shared.APIException apiException) {
         this.apiException = apiException;
         return this;
@@ -19,6 +21,7 @@ public class GetSuperfundProductsResponse {
     
     
     public String contentType;
+
     public GetSuperfundProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSuperfundProductsResponse {
     
     
     public Integer statusCode;
+
     public GetSuperfundProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSuperfundProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSuperfundProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetSuperfundProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.SuperFundProducts superFundProducts;
+
     public GetSuperfundProductsResponse withSuperFundProducts(org.openapis.openapi.models.shared.SuperFundProducts superFundProducts) {
         this.superFundProducts = superFundProducts;
         return this;
     }
     
+    public GetSuperfundProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

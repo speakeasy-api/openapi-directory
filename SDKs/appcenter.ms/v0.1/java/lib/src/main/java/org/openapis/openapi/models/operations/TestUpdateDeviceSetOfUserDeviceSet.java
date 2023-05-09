@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestUpdateDeviceSetOfUserDeviceSet {
     @JsonProperty("deviceConfigurations")
     public TestUpdateDeviceSetOfUserDeviceSetDeviceConfigurations[] deviceConfigurations;
+
     public TestUpdateDeviceSetOfUserDeviceSet withDeviceConfigurations(TestUpdateDeviceSetOfUserDeviceSetDeviceConfigurations[] deviceConfigurations) {
         this.deviceConfigurations = deviceConfigurations;
         return this;
@@ -24,6 +25,7 @@ public class TestUpdateDeviceSetOfUserDeviceSet {
      */
     @JsonProperty("id")
     public String id;
+
     public TestUpdateDeviceSetOfUserDeviceSet withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class TestUpdateDeviceSetOfUserDeviceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturerCount")
     public Double manufacturerCount;
+
     public TestUpdateDeviceSetOfUserDeviceSet withManufacturerCount(Double manufacturerCount) {
         this.manufacturerCount = manufacturerCount;
         return this;
@@ -45,6 +48,7 @@ public class TestUpdateDeviceSetOfUserDeviceSet {
      */
     @JsonProperty("name")
     public String name;
+
     public TestUpdateDeviceSetOfUserDeviceSet withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class TestUpdateDeviceSetOfUserDeviceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersionCount")
     public Double osVersionCount;
+
     public TestUpdateDeviceSetOfUserDeviceSet withOsVersionCount(Double osVersionCount) {
         this.osVersionCount = osVersionCount;
         return this;
@@ -66,6 +71,7 @@ public class TestUpdateDeviceSetOfUserDeviceSet {
      */
     @JsonProperty("owner")
     public TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner owner;
+
     public TestUpdateDeviceSetOfUserDeviceSet withOwner(TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner owner) {
         this.owner = owner;
         return this;
@@ -77,9 +83,16 @@ public class TestUpdateDeviceSetOfUserDeviceSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public TestUpdateDeviceSetOfUserDeviceSet withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public TestUpdateDeviceSetOfUserDeviceSet(@JsonProperty("deviceConfigurations") TestUpdateDeviceSetOfUserDeviceSetDeviceConfigurations[] deviceConfigurations, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("owner") TestUpdateDeviceSetOfUserDeviceSetDeviceSetOwner owner) {
+        this.deviceConfigurations = deviceConfigurations;
+        this.id = id;
+        this.name = name;
+        this.owner = owner;
+  }
 }

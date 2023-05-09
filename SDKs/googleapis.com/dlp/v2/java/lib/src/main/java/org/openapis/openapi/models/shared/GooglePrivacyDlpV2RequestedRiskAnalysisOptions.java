@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2RequestedRiskAnalysisOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobConfig")
     public GooglePrivacyDlpV2RiskAnalysisJobConfig jobConfig;
+
     public GooglePrivacyDlpV2RequestedRiskAnalysisOptions withJobConfig(GooglePrivacyDlpV2RiskAnalysisJobConfig jobConfig) {
         this.jobConfig = jobConfig;
         return this;
     }
     
+    public GooglePrivacyDlpV2RequestedRiskAnalysisOptions(){}
 }

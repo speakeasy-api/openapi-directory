@@ -18,9 +18,11 @@ public class StructuredResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public Person person;
+
     public StructuredResult withPerson(Person person) {
         this.person = person;
         return this;
     }
     
+    public StructuredResult(){}
 }

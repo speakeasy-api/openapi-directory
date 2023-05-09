@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCancelBundleTaskRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCancelBundleTaskActionEnum action;
+
     public GETCancelBundleTaskRequest withAction(GETCancelBundleTaskActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCancelBundleTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BundleId")
     public String bundleId;
+
     public GETCancelBundleTaskRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -29,6 +32,7 @@ public class GETCancelBundleTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCancelBundleTaskRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -36,6 +40,7 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCancelBundleTaskVersionEnum version;
+
     public GETCancelBundleTaskRequest withVersion(GETCancelBundleTaskVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCancelBundleTaskRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCancelBundleTaskRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCancelBundleTaskRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCancelBundleTaskRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCancelBundleTaskRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCancelBundleTaskRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETCancelBundleTaskRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCancelBundleTaskRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCancelBundleTaskRequest(@JsonProperty("Action") GETCancelBundleTaskActionEnum action, @JsonProperty("BundleId") String bundleId, @JsonProperty("Version") GETCancelBundleTaskVersionEnum version) {
+        this.action = action;
+        this.bundleId = bundleId;
+        this.version = version;
+  }
 }

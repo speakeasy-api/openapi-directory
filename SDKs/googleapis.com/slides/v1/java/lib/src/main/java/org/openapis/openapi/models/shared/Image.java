@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUrl")
     public String contentUrl;
+
     public Image withContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageProperties")
     public ImageProperties imageProperties;
+
     public Image withImageProperties(ImageProperties imageProperties) {
         this.imageProperties = imageProperties;
         return this;
@@ -40,6 +42,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public Placeholder placeholder;
+
     public Image withPlaceholder(Placeholder placeholder) {
         this.placeholder = placeholder;
         return this;
@@ -51,9 +54,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUrl")
     public String sourceUrl;
+
     public Image withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
     }
     
+    public Image(){}
 }

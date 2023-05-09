@@ -15,6 +15,7 @@ public class ListLanguagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayLanguageCode")
     public DisplayLanguageCodeEnum displayLanguageCode;
+
     public ListLanguagesResponse withDisplayLanguageCode(DisplayLanguageCodeEnum displayLanguageCode) {
         this.displayLanguageCode = displayLanguageCode;
         return this;
@@ -23,6 +24,7 @@ public class ListLanguagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Languages")
     public Language[] languages;
+
     public ListLanguagesResponse withLanguages(Language[] languages) {
         this.languages = languages;
         return this;
@@ -31,9 +33,11 @@ public class ListLanguagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLanguagesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLanguagesResponse(){}
 }

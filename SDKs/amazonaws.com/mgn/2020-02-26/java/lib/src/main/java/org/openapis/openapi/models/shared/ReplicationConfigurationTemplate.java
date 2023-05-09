@@ -15,6 +15,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ReplicationConfigurationTemplate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associateDefaultSecurityGroup")
     public Boolean associateDefaultSecurityGroup;
+
     public ReplicationConfigurationTemplate withAssociateDefaultSecurityGroup(Boolean associateDefaultSecurityGroup) {
         this.associateDefaultSecurityGroup = associateDefaultSecurityGroup;
         return this;
@@ -31,6 +33,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidthThrottling")
     public Long bandwidthThrottling;
+
     public ReplicationConfigurationTemplate withBandwidthThrottling(Long bandwidthThrottling) {
         this.bandwidthThrottling = bandwidthThrottling;
         return this;
@@ -39,6 +42,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createPublicIP")
     public Boolean createPublicIP;
+
     public ReplicationConfigurationTemplate withCreatePublicIP(Boolean createPublicIP) {
         this.createPublicIP = createPublicIP;
         return this;
@@ -47,6 +51,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPlaneRouting")
     public ReplicationConfigurationDataPlaneRoutingEnum dataPlaneRouting;
+
     public ReplicationConfigurationTemplate withDataPlaneRouting(ReplicationConfigurationDataPlaneRoutingEnum dataPlaneRouting) {
         this.dataPlaneRouting = dataPlaneRouting;
         return this;
@@ -55,6 +60,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLargeStagingDiskType")
     public ReplicationConfigurationDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType;
+
     public ReplicationConfigurationTemplate withDefaultLargeStagingDiskType(ReplicationConfigurationDefaultLargeStagingDiskTypeEnum defaultLargeStagingDiskType) {
         this.defaultLargeStagingDiskType = defaultLargeStagingDiskType;
         return this;
@@ -63,6 +69,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsEncryption")
     public ReplicationConfigurationEbsEncryptionEnum ebsEncryption;
+
     public ReplicationConfigurationTemplate withEbsEncryption(ReplicationConfigurationEbsEncryptionEnum ebsEncryption) {
         this.ebsEncryption = ebsEncryption;
         return this;
@@ -71,6 +78,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsEncryptionKeyArn")
     public String ebsEncryptionKeyArn;
+
     public ReplicationConfigurationTemplate withEbsEncryptionKeyArn(String ebsEncryptionKeyArn) {
         this.ebsEncryptionKeyArn = ebsEncryptionKeyArn;
         return this;
@@ -78,6 +86,7 @@ public class ReplicationConfigurationTemplate {
     
     @JsonProperty("replicationConfigurationTemplateID")
     public String replicationConfigurationTemplateID;
+
     public ReplicationConfigurationTemplate withReplicationConfigurationTemplateID(String replicationConfigurationTemplateID) {
         this.replicationConfigurationTemplateID = replicationConfigurationTemplateID;
         return this;
@@ -86,6 +95,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationServerInstanceType")
     public String replicationServerInstanceType;
+
     public ReplicationConfigurationTemplate withReplicationServerInstanceType(String replicationServerInstanceType) {
         this.replicationServerInstanceType = replicationServerInstanceType;
         return this;
@@ -94,6 +104,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationServersSecurityGroupsIDs")
     public String[] replicationServersSecurityGroupsIDs;
+
     public ReplicationConfigurationTemplate withReplicationServersSecurityGroupsIDs(String[] replicationServersSecurityGroupsIDs) {
         this.replicationServersSecurityGroupsIDs = replicationServersSecurityGroupsIDs;
         return this;
@@ -102,6 +113,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAreaSubnetId")
     public String stagingAreaSubnetId;
+
     public ReplicationConfigurationTemplate withStagingAreaSubnetId(String stagingAreaSubnetId) {
         this.stagingAreaSubnetId = stagingAreaSubnetId;
         return this;
@@ -110,6 +122,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAreaTags")
     public java.util.Map<String, String> stagingAreaTags;
+
     public ReplicationConfigurationTemplate withStagingAreaTags(java.util.Map<String, String> stagingAreaTags) {
         this.stagingAreaTags = stagingAreaTags;
         return this;
@@ -118,6 +131,7 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public ReplicationConfigurationTemplate withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -126,9 +140,13 @@ public class ReplicationConfigurationTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useDedicatedReplicationServer")
     public Boolean useDedicatedReplicationServer;
+
     public ReplicationConfigurationTemplate withUseDedicatedReplicationServer(Boolean useDedicatedReplicationServer) {
         this.useDedicatedReplicationServer = useDedicatedReplicationServer;
         return this;
     }
     
+    public ReplicationConfigurationTemplate(@JsonProperty("replicationConfigurationTemplateID") String replicationConfigurationTemplateID) {
+        this.replicationConfigurationTemplateID = replicationConfigurationTemplateID;
+  }
 }

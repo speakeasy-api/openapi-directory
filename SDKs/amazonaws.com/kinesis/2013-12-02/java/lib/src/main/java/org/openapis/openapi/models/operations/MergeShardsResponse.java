@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergeShardsResponse {
@@ -12,6 +13,7 @@ public class MergeShardsResponse {
      */
     
     public Object accessDeniedException;
+
     public MergeShardsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class MergeShardsResponse {
     
     
     public String contentType;
+
     public MergeShardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class MergeShardsResponse {
      */
     
     public Object invalidArgumentException;
+
     public MergeShardsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class MergeShardsResponse {
      */
     
     public Object limitExceededException;
+
     public MergeShardsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class MergeShardsResponse {
      */
     
     public Object resourceInUseException;
+
     public MergeShardsResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class MergeShardsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public MergeShardsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class MergeShardsResponse {
     
     
     public Integer statusCode;
+
     public MergeShardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class MergeShardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergeShardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class MergeShardsResponse {
      */
     
     public Object validationException;
+
     public MergeShardsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public MergeShardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

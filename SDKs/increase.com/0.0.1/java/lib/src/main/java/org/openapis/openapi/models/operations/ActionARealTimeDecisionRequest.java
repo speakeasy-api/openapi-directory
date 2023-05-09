@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionARealTimeDecisionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActionARealTimeDecisionParameters actionARealTimeDecisionParameters;
+
     public ActionARealTimeDecisionRequest withActionARealTimeDecisionParameters(org.openapis.openapi.models.shared.ActionARealTimeDecisionParameters actionARealTimeDecisionParameters) {
         this.actionARealTimeDecisionParameters = actionARealTimeDecisionParameters;
         return this;
@@ -16,9 +18,14 @@ public class ActionARealTimeDecisionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=real_time_decision_id")
     public String realTimeDecisionId;
+
     public ActionARealTimeDecisionRequest withRealTimeDecisionId(String realTimeDecisionId) {
         this.realTimeDecisionId = realTimeDecisionId;
         return this;
     }
     
+    public ActionARealTimeDecisionRequest(@JsonProperty("action_a_real_time_decision_parameters") org.openapis.openapi.models.shared.ActionARealTimeDecisionParameters actionARealTimeDecisionParameters, @JsonProperty("real_time_decision_id") String realTimeDecisionId) {
+        this.actionARealTimeDecisionParameters = actionARealTimeDecisionParameters;
+        this.realTimeDecisionId = realTimeDecisionId;
+  }
 }

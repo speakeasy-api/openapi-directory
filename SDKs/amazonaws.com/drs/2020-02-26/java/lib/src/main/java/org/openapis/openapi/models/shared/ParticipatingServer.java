@@ -15,6 +15,7 @@ public class ParticipatingServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStatus")
     public LaunchStatusEnum launchStatus;
+
     public ParticipatingServer withLaunchStatus(LaunchStatusEnum launchStatus) {
         this.launchStatus = launchStatus;
         return this;
@@ -23,6 +24,7 @@ public class ParticipatingServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public ParticipatingServer withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
@@ -31,9 +33,11 @@ public class ParticipatingServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public ParticipatingServer withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public ParticipatingServer(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerGetAppointmentsBetweenDatesResponse {
     
     public byte[] body;
+
     public DiaryControllerGetAppointmentsBetweenDatesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesResponse {
     
     
     public String contentType;
+
     public DiaryControllerGetAppointmentsBetweenDatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesResponse {
      */
     
     public org.openapis.openapi.models.shared.DiaryAppointmentModelResults diaryAppointmentModelResults;
+
     public DiaryControllerGetAppointmentsBetweenDatesResponse withDiaryAppointmentModelResults(org.openapis.openapi.models.shared.DiaryAppointmentModelResults diaryAppointmentModelResults) {
         this.diaryAppointmentModelResults = diaryAppointmentModelResults;
         return this;
@@ -33,6 +37,7 @@ public class DiaryControllerGetAppointmentsBetweenDatesResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerGetAppointmentsBetweenDatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class DiaryControllerGetAppointmentsBetweenDatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerGetAppointmentsBetweenDatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerGetAppointmentsBetweenDatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

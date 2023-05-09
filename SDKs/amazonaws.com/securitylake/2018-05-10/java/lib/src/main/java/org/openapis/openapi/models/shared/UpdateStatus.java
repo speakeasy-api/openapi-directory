@@ -15,6 +15,7 @@ public class UpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateFailure")
     public LastUpdateFailure lastUpdateFailure;
+
     public UpdateStatus withLastUpdateFailure(LastUpdateFailure lastUpdateFailure) {
         this.lastUpdateFailure = lastUpdateFailure;
         return this;
@@ -23,6 +24,7 @@ public class UpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateRequestId")
     public String lastUpdateRequestId;
+
     public UpdateStatus withLastUpdateRequestId(String lastUpdateRequestId) {
         this.lastUpdateRequestId = lastUpdateRequestId;
         return this;
@@ -31,9 +33,11 @@ public class UpdateStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateStatus")
     public SettingsStatusEnum lastUpdateStatus;
+
     public UpdateStatus withLastUpdateStatus(SettingsStatusEnum lastUpdateStatus) {
         this.lastUpdateStatus = lastUpdateStatus;
         return this;
     }
     
+    public UpdateStatus(){}
 }

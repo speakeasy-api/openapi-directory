@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMetricFilterRequest {
     @JsonProperty("filterName")
     public String filterName;
+
     public DeleteMetricFilterRequest withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteMetricFilterRequest {
     
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public DeleteMetricFilterRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
     }
     
+    public DeleteMetricFilterRequest(@JsonProperty("filterName") String filterName, @JsonProperty("logGroupName") String logGroupName) {
+        this.filterName = filterName;
+        this.logGroupName = logGroupName;
+  }
 }

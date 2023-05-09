@@ -12,6 +12,7 @@ public class UpdateProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public UpdateProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class UpdateProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public UpdateProvisioningArtifactInput withActive(Boolean active) {
         this.active = active;
         return this;
@@ -28,6 +30,7 @@ public class UpdateProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateProvisioningArtifactInput withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class UpdateProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Guidance")
     public ProvisioningArtifactGuidanceEnum guidance;
+
     public UpdateProvisioningArtifactInput withGuidance(ProvisioningArtifactGuidanceEnum guidance) {
         this.guidance = guidance;
         return this;
@@ -44,6 +48,7 @@ public class UpdateProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateProvisioningArtifactInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class UpdateProvisioningArtifactInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public UpdateProvisioningArtifactInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -58,9 +64,14 @@ public class UpdateProvisioningArtifactInput {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public UpdateProvisioningArtifactInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
     }
     
+    public UpdateProvisioningArtifactInput(@JsonProperty("ProductId") String productId, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId) {
+        this.productId = productId;
+        this.provisioningArtifactId = provisioningArtifactId;
+  }
 }

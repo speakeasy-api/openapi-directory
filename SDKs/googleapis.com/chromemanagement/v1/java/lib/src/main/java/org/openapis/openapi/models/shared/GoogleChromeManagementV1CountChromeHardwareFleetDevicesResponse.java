@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuReports")
     public GoogleChromeManagementV1DeviceHardwareCountReport[] cpuReports;
+
     public GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse withCpuReports(GoogleChromeManagementV1DeviceHardwareCountReport[] cpuReports) {
         this.cpuReports = cpuReports;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryReports")
     public GoogleChromeManagementV1DeviceHardwareCountReport[] memoryReports;
+
     public GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse withMemoryReports(GoogleChromeManagementV1DeviceHardwareCountReport[] memoryReports) {
         this.memoryReports = memoryReports;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelReports")
     public GoogleChromeManagementV1DeviceHardwareCountReport[] modelReports;
+
     public GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse withModelReports(GoogleChromeManagementV1DeviceHardwareCountReport[] modelReports) {
         this.modelReports = modelReports;
         return this;
@@ -51,9 +54,11 @@ public class GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageReports")
     public GoogleChromeManagementV1DeviceHardwareCountReport[] storageReports;
+
     public GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse withStorageReports(GoogleChromeManagementV1DeviceHardwareCountReport[] storageReports) {
         this.storageReports = storageReports;
         return this;
     }
     
+    public GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse(){}
 }

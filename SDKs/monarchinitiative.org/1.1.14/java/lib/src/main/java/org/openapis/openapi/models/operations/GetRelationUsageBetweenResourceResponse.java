@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationUsageBetweenResourceResponse {
@@ -12,6 +13,7 @@ public class GetRelationUsageBetweenResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociationResults[] associationResults;
+
     public GetRelationUsageBetweenResourceResponse withAssociationResults(org.openapis.openapi.models.shared.AssociationResults[] associationResults) {
         this.associationResults = associationResults;
         return this;
@@ -19,6 +21,7 @@ public class GetRelationUsageBetweenResourceResponse {
     
     
     public String contentType;
+
     public GetRelationUsageBetweenResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetRelationUsageBetweenResourceResponse {
     
     
     public Integer statusCode;
+
     public GetRelationUsageBetweenResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetRelationUsageBetweenResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationUsageBetweenResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRelationUsageBetweenResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleAppsCardV1Grid {
     /**
-     * Represents the complete border style applied to items in a widget.
+     * The style options for the border of a card or widget, including the border type and color.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderStyle")
     public GoogleAppsCardV1BorderStyle borderStyle;
+
     public GoogleAppsCardV1Grid withBorderStyle(GoogleAppsCardV1BorderStyle borderStyle) {
         this.borderStyle = borderStyle;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1Grid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnCount")
     public Integer columnCount;
+
     public GoogleAppsCardV1Grid withColumnCount(Integer columnCount) {
         this.columnCount = columnCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1Grid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GoogleAppsCardV1GridItem[] items;
+
     public GoogleAppsCardV1Grid withItems(GoogleAppsCardV1GridItem[] items) {
         this.items = items;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1Grid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public GoogleAppsCardV1OnClick onClick;
+
     public GoogleAppsCardV1Grid withOnClick(GoogleAppsCardV1OnClick onClick) {
         this.onClick = onClick;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAppsCardV1Grid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleAppsCardV1Grid withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleAppsCardV1Grid(){}
 }

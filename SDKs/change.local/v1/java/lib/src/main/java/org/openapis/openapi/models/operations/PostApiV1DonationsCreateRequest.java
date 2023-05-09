@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1DonationsCreateRequest {
@@ -12,6 +13,7 @@ public class PostApiV1DonationsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
     public String amount;
+
     public PostApiV1DonationsCreateRequest withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -22,6 +24,7 @@ public class PostApiV1DonationsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=funding_source")
     public PostApiV1DonationsCreateFundingSourceEnum fundingSource;
+
     public PostApiV1DonationsCreateRequest withFundingSource(PostApiV1DonationsCreateFundingSourceEnum fundingSource) {
         this.fundingSource = fundingSource;
         return this;
@@ -32,6 +35,7 @@ public class PostApiV1DonationsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonprofit_id")
     public String nonprofitId;
+
     public PostApiV1DonationsCreateRequest withNonprofitId(String nonprofitId) {
         this.nonprofitId = nonprofitId;
         return this;
@@ -42,9 +46,15 @@ public class PostApiV1DonationsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip_code")
     public String zipCode;
+
     public PostApiV1DonationsCreateRequest withZipCode(String zipCode) {
         this.zipCode = zipCode;
         return this;
     }
     
+    public PostApiV1DonationsCreateRequest(@JsonProperty("amount") String amount, @JsonProperty("funding_source") PostApiV1DonationsCreateFundingSourceEnum fundingSource, @JsonProperty("nonprofit_id") String nonprofitId) {
+        this.amount = amount;
+        this.fundingSource = fundingSource;
+        this.nonprofitId = nonprofitId;
+  }
 }

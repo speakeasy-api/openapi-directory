@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetCityFormatEnum;
 import org.openapis.openapi.models.operations.GetCityRequest;
 import org.openapis.openapi.models.operations.GetCityResponse;
@@ -27,30 +26,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetCityRequest req = new GetCityRequest() {{
-                format = "xml";
-                key = "provident";
-                lat = 7151.9;
-                lng = 8442.66;
-            }}            
+            GetCityRequest req = new GetCityRequest("corrupti", 5928.45, 7151.9) {{
+                format = GetCityFormatEnum.XML;
+            }};            
 
             GetCityResponse res = sdk.getCity(req);
 
-            if (res.getCity200ApplicationJSONString.isPresent()) {
+            if (res.getCity200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getCity` - Get City name by using latitude and longitude
+* [getCity](docs/sdk/README.md#getcity) - Get City name by using latitude and longitude
 <!-- End SDK Available Operations -->
 
 ### Maturity

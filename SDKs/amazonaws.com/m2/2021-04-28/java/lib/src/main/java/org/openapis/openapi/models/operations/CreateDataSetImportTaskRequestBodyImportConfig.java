@@ -15,6 +15,7 @@ public class CreateDataSetImportTaskRequestBodyImportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSets")
     public org.openapis.openapi.models.shared.DataSetImportItem[] dataSets;
+
     public CreateDataSetImportTaskRequestBodyImportConfig withDataSets(org.openapis.openapi.models.shared.DataSetImportItem[] dataSets) {
         this.dataSets = dataSets;
         return this;
@@ -23,9 +24,11 @@ public class CreateDataSetImportTaskRequestBodyImportConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public String s3Location;
+
     public CreateDataSetImportTaskRequestBodyImportConfig withS3Location(String s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public CreateDataSetImportTaskRequestBodyImportConfig(){}
 }

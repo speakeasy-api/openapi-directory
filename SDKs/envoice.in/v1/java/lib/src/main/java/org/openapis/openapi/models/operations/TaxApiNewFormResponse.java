@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaxApiNewFormResponse {
     
     public byte[] body;
+
     public TaxApiNewFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TaxApiNewFormResponse {
     
     
     public String contentType;
+
     public TaxApiNewFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TaxApiNewFormResponse {
     
     
     public Integer statusCode;
+
     public TaxApiNewFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TaxApiNewFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaxApiNewFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class TaxApiNewFormResponse {
      */
     
     public Integer taxApiNewForm200ApplicationJSONInt32Integer;
+
     public TaxApiNewFormResponse withTaxApiNewForm200ApplicationJSONInt32Integer(Integer taxApiNewForm200ApplicationJSONInt32Integer) {
         this.taxApiNewForm200ApplicationJSONInt32Integer = taxApiNewForm200ApplicationJSONInt32Integer;
         return this;
@@ -50,9 +56,14 @@ public class TaxApiNewFormResponse {
      */
     
     public Integer taxApiNewForm200TextJSONInt32Integer;
+
     public TaxApiNewFormResponse withTaxApiNewForm200TextJSONInt32Integer(Integer taxApiNewForm200TextJSONInt32Integer) {
         this.taxApiNewForm200TextJSONInt32Integer = taxApiNewForm200TextJSONInt32Integer;
         return this;
     }
     
+    public TaxApiNewFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

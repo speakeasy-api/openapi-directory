@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class InsightRuleMetricDatapoint {
     
     public Double average;
+
     public InsightRuleMetricDatapoint withAverage(Double average) {
         this.average = average;
         return this;
@@ -19,6 +21,7 @@ public class InsightRuleMetricDatapoint {
     
     
     public Double maxContributorValue;
+
     public InsightRuleMetricDatapoint withMaxContributorValue(Double maxContributorValue) {
         this.maxContributorValue = maxContributorValue;
         return this;
@@ -26,6 +29,7 @@ public class InsightRuleMetricDatapoint {
     
     
     public Double maximum;
+
     public InsightRuleMetricDatapoint withMaximum(Double maximum) {
         this.maximum = maximum;
         return this;
@@ -33,6 +37,7 @@ public class InsightRuleMetricDatapoint {
     
     
     public Double minimum;
+
     public InsightRuleMetricDatapoint withMinimum(Double minimum) {
         this.minimum = minimum;
         return this;
@@ -40,6 +45,7 @@ public class InsightRuleMetricDatapoint {
     
     
     public Double sampleCount;
+
     public InsightRuleMetricDatapoint withSampleCount(Double sampleCount) {
         this.sampleCount = sampleCount;
         return this;
@@ -47,6 +53,7 @@ public class InsightRuleMetricDatapoint {
     
     
     public Double sum;
+
     public InsightRuleMetricDatapoint withSum(Double sum) {
         this.sum = sum;
         return this;
@@ -54,6 +61,7 @@ public class InsightRuleMetricDatapoint {
     
     
     public OffsetDateTime timestamp;
+
     public InsightRuleMetricDatapoint withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -61,9 +69,13 @@ public class InsightRuleMetricDatapoint {
     
     
     public Double uniqueContributors;
+
     public InsightRuleMetricDatapoint withUniqueContributors(Double uniqueContributors) {
         this.uniqueContributors = uniqueContributors;
         return this;
     }
     
+    public InsightRuleMetricDatapoint(@JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.timestamp = timestamp;
+  }
 }

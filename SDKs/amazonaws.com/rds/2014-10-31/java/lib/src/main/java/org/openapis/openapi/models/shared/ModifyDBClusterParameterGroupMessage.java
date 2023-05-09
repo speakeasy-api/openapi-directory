@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyDBClusterParameterGroupMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBClusterParameterGroupMessage {
     
     public String dbClusterParameterGroupName;
+
     public ModifyDBClusterParameterGroupMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -19,9 +20,14 @@ public class ModifyDBClusterParameterGroupMessage {
     
     
     public ParametersList[] parameters;
+
     public ModifyDBClusterParameterGroupMessage withParameters(ParametersList[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ModifyDBClusterParameterGroupMessage(@JsonProperty("DBClusterParameterGroupName") String dbClusterParameterGroupName, @JsonProperty("Parameters") ParametersList[] parameters) {
+        this.dbClusterParameterGroupName = dbClusterParameterGroupName;
+        this.parameters = parameters;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrors {
     
     public String availabilityZone;
+
     public DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrors withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,9 +20,11 @@ public class DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreSta
     
     
     public DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrorsError error;
+
     public DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrors withError(DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrorsError error) {
         this.error = error;
         return this;
     }
     
+    public DisableFastSnapshotRestoresResultUnsuccessfulFastSnapshotRestoreStateErrors(){}
 }

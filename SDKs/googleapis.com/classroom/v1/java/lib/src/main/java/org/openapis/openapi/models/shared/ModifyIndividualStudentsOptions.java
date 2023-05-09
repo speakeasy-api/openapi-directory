@@ -18,6 +18,7 @@ public class ModifyIndividualStudentsOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addStudentIds")
     public String[] addStudentIds;
+
     public ModifyIndividualStudentsOptions withAddStudentIds(String[] addStudentIds) {
         this.addStudentIds = addStudentIds;
         return this;
@@ -29,9 +30,11 @@ public class ModifyIndividualStudentsOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeStudentIds")
     public String[] removeStudentIds;
+
     public ModifyIndividualStudentsOptions withRemoveStudentIds(String[] removeStudentIds) {
         this.removeStudentIds = removeStudentIds;
         return this;
     }
     
+    public ModifyIndividualStudentsOptions(){}
 }

@@ -15,6 +15,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceFolders")
     public AssessmentEvidenceFolder[] evidenceFolders;
+
     public GetEvidenceFoldersByAssessmentControlResponse withEvidenceFolders(AssessmentEvidenceFolder[] evidenceFolders) {
         this.evidenceFolders = evidenceFolders;
         return this;
@@ -23,9 +24,11 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetEvidenceFoldersByAssessmentControlResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetEvidenceFoldersByAssessmentControlResponse(){}
 }

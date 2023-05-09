@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyManagedPrefixListResultPrefixList {
     
     public String addressFamily;
+
     public ModifyManagedPrefixListResultPrefixList withAddressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -19,6 +20,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public Long maxEntries;
+
     public ModifyManagedPrefixListResultPrefixList withMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
         return this;
@@ -26,6 +28,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public String ownerId;
+
     public ModifyManagedPrefixListResultPrefixList withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public String prefixListArn;
+
     public ModifyManagedPrefixListResultPrefixList withPrefixListArn(String prefixListArn) {
         this.prefixListArn = prefixListArn;
         return this;
@@ -40,6 +44,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public String prefixListId;
+
     public ModifyManagedPrefixListResultPrefixList withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -47,6 +52,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public String prefixListName;
+
     public ModifyManagedPrefixListResultPrefixList withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
@@ -54,6 +60,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public ModifyManagedPrefixListResultPrefixListStateEnum state;
+
     public ModifyManagedPrefixListResultPrefixList withState(ModifyManagedPrefixListResultPrefixListStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public String stateMessage;
+
     public ModifyManagedPrefixListResultPrefixList withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -68,6 +76,7 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public ModifyManagedPrefixListResultPrefixListTags[] tags;
+
     public ModifyManagedPrefixListResultPrefixList withTags(ModifyManagedPrefixListResultPrefixListTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class ModifyManagedPrefixListResultPrefixList {
     
     
     public Long version;
+
     public ModifyManagedPrefixListResultPrefixList withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ModifyManagedPrefixListResultPrefixList(){}
 }

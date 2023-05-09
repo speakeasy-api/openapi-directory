@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCampaignResponse {
     
     public String contentType;
+
     public UpdateCampaignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateCampaignResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateCampaignResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCampaignResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCampaignResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateCampaignResponse {
     
     
     public Integer statusCode;
+
     public UpdateCampaignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCampaignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCampaignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCampaignResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCampaignResponse updateCampaignResponse;
+
     public UpdateCampaignResponse withUpdateCampaignResponse(org.openapis.openapi.models.shared.UpdateCampaignResponse updateCampaignResponse) {
         this.updateCampaignResponse = updateCampaignResponse;
         return this;
     }
     
+    public UpdateCampaignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

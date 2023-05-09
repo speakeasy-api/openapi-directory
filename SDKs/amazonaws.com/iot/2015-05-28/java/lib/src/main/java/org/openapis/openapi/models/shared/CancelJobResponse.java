@@ -15,6 +15,7 @@ public class CancelJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CancelJobResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class CancelJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public CancelJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -31,9 +33,11 @@ public class CancelJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public CancelJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public CancelJobResponse(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody {
     @JsonProperty("assets")
     public PostAssetsCovarianceMatrixExponentiallyWeightedRequestBodyAssets[] assets;
+
     public PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody withAssets(PostAssetsCovarianceMatrixExponentiallyWeightedRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
@@ -22,9 +23,13 @@ public class PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decayFactor")
     public Double decayFactor;
+
     public PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody withDecayFactor(Double decayFactor) {
         this.decayFactor = decayFactor;
         return this;
     }
     
+    public PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody(@JsonProperty("assets") PostAssetsCovarianceMatrixExponentiallyWeightedRequestBodyAssets[] assets) {
+        this.assets = assets;
+  }
 }

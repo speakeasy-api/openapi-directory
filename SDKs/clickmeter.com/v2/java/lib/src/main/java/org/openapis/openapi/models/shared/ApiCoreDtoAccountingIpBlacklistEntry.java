@@ -17,6 +17,7 @@ public class ApiCoreDtoAccountingIpBlacklistEntry {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public String id;
+
     public ApiCoreDtoAccountingIpBlacklistEntry withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class ApiCoreDtoAccountingIpBlacklistEntry {
     @JsonProperty("ip")
     @SpeakeasyMetadata("form:name=ip")
     public String ip;
+
     public ApiCoreDtoAccountingIpBlacklistEntry withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public ApiCoreDtoAccountingIpBlacklistEntry(){}
 }

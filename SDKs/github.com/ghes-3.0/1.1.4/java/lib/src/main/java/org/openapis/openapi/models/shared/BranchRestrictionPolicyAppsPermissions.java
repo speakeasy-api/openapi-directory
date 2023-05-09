@@ -12,6 +12,7 @@ public class BranchRestrictionPolicyAppsPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public BranchRestrictionPolicyAppsPermissions withContents(String contents) {
         this.contents = contents;
         return this;
@@ -20,6 +21,7 @@ public class BranchRestrictionPolicyAppsPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public String issues;
+
     public BranchRestrictionPolicyAppsPermissions withIssues(String issues) {
         this.issues = issues;
         return this;
@@ -28,6 +30,7 @@ public class BranchRestrictionPolicyAppsPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public String metadata;
+
     public BranchRestrictionPolicyAppsPermissions withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
@@ -36,9 +39,11 @@ public class BranchRestrictionPolicyAppsPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_file")
     public String singleFile;
+
     public BranchRestrictionPolicyAppsPermissions withSingleFile(String singleFile) {
         this.singleFile = singleFile;
         return this;
     }
     
+    public BranchRestrictionPolicyAppsPermissions(){}
 }

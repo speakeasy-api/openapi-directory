@@ -15,6 +15,7 @@ public class OrgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OrgResponse withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class OrgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrgResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrgResponse(){}
 }

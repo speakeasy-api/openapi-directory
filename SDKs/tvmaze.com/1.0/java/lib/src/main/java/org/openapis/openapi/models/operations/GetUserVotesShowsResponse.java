@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserVotesShowsResponse {
     
     public String contentType;
+
     public GetUserVotesShowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUserVotesShowsResponse {
      */
     
     public org.openapis.openapi.models.shared.ShowVote[] showVotes;
+
     public GetUserVotesShowsResponse withShowVotes(org.openapis.openapi.models.shared.ShowVote[] showVotes) {
         this.showVotes = showVotes;
         return this;
@@ -26,6 +29,7 @@ public class GetUserVotesShowsResponse {
     
     
     public Integer statusCode;
+
     public GetUserVotesShowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetUserVotesShowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserVotesShowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetUserVotesShowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class CreateSlideRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionIndex")
     public Integer insertionIndex;
+
     public CreateSlideRequest withInsertionIndex(Integer insertionIndex) {
         this.insertionIndex = insertionIndex;
         return this;
@@ -29,6 +30,7 @@ public class CreateSlideRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public CreateSlideRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,6 +42,7 @@ public class CreateSlideRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholderIdMappings")
     public LayoutPlaceholderIdMapping[] placeholderIdMappings;
+
     public CreateSlideRequest withPlaceholderIdMappings(LayoutPlaceholderIdMapping[] placeholderIdMappings) {
         this.placeholderIdMappings = placeholderIdMappings;
         return this;
@@ -51,9 +54,11 @@ public class CreateSlideRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slideLayoutReference")
     public LayoutReference slideLayoutReference;
+
     public CreateSlideRequest withSlideLayoutReference(LayoutReference slideLayoutReference) {
         this.slideLayoutReference = slideLayoutReference;
         return this;
     }
     
+    public CreateSlideRequest(){}
 }

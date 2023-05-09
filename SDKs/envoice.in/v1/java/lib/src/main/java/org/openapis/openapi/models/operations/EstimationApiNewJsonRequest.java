@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiNewJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EstimationCreateApiModel estimationCreateApiModel;
+
     public EstimationApiNewJsonRequest withEstimationCreateApiModel(org.openapis.openapi.models.shared.EstimationCreateApiModel estimationCreateApiModel) {
         this.estimationCreateApiModel = estimationCreateApiModel;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiNewJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public EstimationApiNewJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class EstimationApiNewJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public EstimationApiNewJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public EstimationApiNewJsonRequest(@JsonProperty("EstimationCreateApiModel") org.openapis.openapi.models.shared.EstimationCreateApiModel estimationCreateApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.estimationCreateApiModel = estimationCreateApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

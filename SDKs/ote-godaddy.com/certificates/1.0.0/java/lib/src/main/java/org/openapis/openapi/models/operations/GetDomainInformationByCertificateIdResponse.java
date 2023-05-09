@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainInformationByCertificateIdResponse {
     
     public byte[] body;
+
     public GetDomainInformationByCertificateIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetDomainInformationByCertificateIdResponse {
     
     
     public String contentType;
+
     public GetDomainInformationByCertificateIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetDomainInformationByCertificateIdResponse {
      */
     
     public org.openapis.openapi.models.shared.DomainVerificationSummary[] domainVerificationSummaries;
+
     public GetDomainInformationByCertificateIdResponse withDomainVerificationSummaries(org.openapis.openapi.models.shared.DomainVerificationSummary[] domainVerificationSummaries) {
         this.domainVerificationSummaries = domainVerificationSummaries;
         return this;
@@ -33,6 +37,7 @@ public class GetDomainInformationByCertificateIdResponse {
     
     
     public Integer statusCode;
+
     public GetDomainInformationByCertificateIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetDomainInformationByCertificateIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainInformationByCertificateIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDomainInformationByCertificateIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

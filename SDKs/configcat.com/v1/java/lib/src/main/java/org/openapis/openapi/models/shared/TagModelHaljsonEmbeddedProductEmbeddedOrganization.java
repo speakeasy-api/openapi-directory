@@ -12,6 +12,7 @@ public class TagModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public TagModelHaljsonEmbeddedProductEmbeddedOrganizationLinks links;
+
     public TagModelHaljsonEmbeddedProductEmbeddedOrganization withLinks(TagModelHaljsonEmbeddedProductEmbeddedOrganizationLinks links) {
         this.links = links;
         return this;
@@ -20,6 +21,7 @@ public class TagModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagModelHaljsonEmbeddedProductEmbeddedOrganization withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class TagModelHaljsonEmbeddedProductEmbeddedOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public TagModelHaljsonEmbeddedProductEmbeddedOrganization withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public TagModelHaljsonEmbeddedProductEmbeddedOrganization(){}
 }

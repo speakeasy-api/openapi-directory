@@ -15,6 +15,7 @@ public class ListGitHubAccountTokenNamesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListGitHubAccountTokenNamesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListGitHubAccountTokenNamesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenNameList")
     public String[] tokenNameList;
+
     public ListGitHubAccountTokenNamesOutput withTokenNameList(String[] tokenNameList) {
         this.tokenNameList = tokenNameList;
         return this;
     }
     
+    public ListGitHubAccountTokenNamesOutput(){}
 }

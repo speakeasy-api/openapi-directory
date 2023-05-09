@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSqlInjectionMatchSetRequest {
     @JsonProperty("SqlInjectionMatchSetId")
     public String sqlInjectionMatchSetId;
+
     public GetSqlInjectionMatchSetRequest withSqlInjectionMatchSetId(String sqlInjectionMatchSetId) {
         this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
         return this;
     }
     
+    public GetSqlInjectionMatchSetRequest(@JsonProperty("SqlInjectionMatchSetId") String sqlInjectionMatchSetId) {
+        this.sqlInjectionMatchSetId = sqlInjectionMatchSetId;
+  }
 }

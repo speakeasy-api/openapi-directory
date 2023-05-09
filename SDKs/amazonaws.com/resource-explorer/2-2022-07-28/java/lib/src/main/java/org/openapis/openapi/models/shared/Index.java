@@ -15,6 +15,7 @@ public class Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Index withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Index withRegion(String region) {
         this.region = region;
         return this;
@@ -31,9 +33,11 @@ public class Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public IndexTypeEnum type;
+
     public Index withType(IndexTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Index(){}
 }

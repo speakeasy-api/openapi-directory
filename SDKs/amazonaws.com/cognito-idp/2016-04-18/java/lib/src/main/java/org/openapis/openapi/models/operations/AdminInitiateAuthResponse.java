@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminInitiateAuthResponse {
@@ -12,6 +13,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public org.openapis.openapi.models.shared.AdminInitiateAuthResponse adminInitiateAuthResponse;
+
     public AdminInitiateAuthResponse withAdminInitiateAuthResponse(org.openapis.openapi.models.shared.AdminInitiateAuthResponse adminInitiateAuthResponse) {
         this.adminInitiateAuthResponse = adminInitiateAuthResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminInitiateAuthResponse {
     
     
     public String contentType;
+
     public AdminInitiateAuthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object internalErrorException;
+
     public AdminInitiateAuthResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object invalidLambdaResponseException;
+
     public AdminInitiateAuthResponse withInvalidLambdaResponseException(Object invalidLambdaResponseException) {
         this.invalidLambdaResponseException = invalidLambdaResponseException;
         return this;
@@ -49,6 +54,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminInitiateAuthResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public AdminInitiateAuthResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -69,6 +76,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public AdminInitiateAuthResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -79,6 +87,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public AdminInitiateAuthResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -89,6 +98,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object mfaMethodNotFoundException;
+
     public AdminInitiateAuthResponse withMFAMethodNotFoundException(Object mfaMethodNotFoundException) {
         this.mfaMethodNotFoundException = mfaMethodNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminInitiateAuthResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -109,6 +120,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public AdminInitiateAuthResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -119,6 +131,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminInitiateAuthResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class AdminInitiateAuthResponse {
     
     
     public Integer statusCode;
+
     public AdminInitiateAuthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class AdminInitiateAuthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminInitiateAuthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,6 +158,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminInitiateAuthResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -153,6 +169,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object unexpectedLambdaException;
+
     public AdminInitiateAuthResponse withUnexpectedLambdaException(Object unexpectedLambdaException) {
         this.unexpectedLambdaException = unexpectedLambdaException;
         return this;
@@ -163,6 +180,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object userLambdaValidationException;
+
     public AdminInitiateAuthResponse withUserLambdaValidationException(Object userLambdaValidationException) {
         this.userLambdaValidationException = userLambdaValidationException;
         return this;
@@ -173,6 +191,7 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object userNotConfirmedException;
+
     public AdminInitiateAuthResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -183,9 +202,14 @@ public class AdminInitiateAuthResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminInitiateAuthResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminInitiateAuthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

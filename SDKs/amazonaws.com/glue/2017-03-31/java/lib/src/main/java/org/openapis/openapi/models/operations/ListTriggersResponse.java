@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTriggersResponse {
     
     public String contentType;
+
     public ListTriggersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTriggersResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListTriggersResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListTriggersResponse {
      */
     
     public Object internalServiceException;
+
     public ListTriggersResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListTriggersResponse {
      */
     
     public Object invalidInputException;
+
     public ListTriggersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListTriggersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTriggersResponse listTriggersResponse;
+
     public ListTriggersResponse withListTriggersResponse(org.openapis.openapi.models.shared.ListTriggersResponse listTriggersResponse) {
         this.listTriggersResponse = listTriggersResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListTriggersResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListTriggersResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class ListTriggersResponse {
     
     
     public Integer statusCode;
+
     public ListTriggersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListTriggersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTriggersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTriggersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class RfqBaseVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("received_date")
     public LocalDate receivedDate;
+
     public RfqBaseVO withReceivedDate(LocalDate receivedDate) {
         this.receivedDate = receivedDate;
         return this;
@@ -26,6 +27,7 @@ public class RfqBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq_id")
     public Long rfqId;
+
     public RfqBaseVO withRfqId(Long rfqId) {
         this.rfqId = rfqId;
         return this;
@@ -34,6 +36,7 @@ public class RfqBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq_title")
     public String rfqTitle;
+
     public RfqBaseVO withRfqTitle(String rfqTitle) {
         this.rfqTitle = rfqTitle;
         return this;
@@ -42,9 +45,11 @@ public class RfqBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public RfqBaseVO withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public RfqBaseVO(){}
 }

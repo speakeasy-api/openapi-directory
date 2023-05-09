@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeTunnelRequest {
     @JsonProperty("tunnelId")
     public String tunnelId;
+
     public DescribeTunnelRequest withTunnelId(String tunnelId) {
         this.tunnelId = tunnelId;
         return this;
     }
     
+    public DescribeTunnelRequest(@JsonProperty("tunnelId") String tunnelId) {
+        this.tunnelId = tunnelId;
+  }
 }

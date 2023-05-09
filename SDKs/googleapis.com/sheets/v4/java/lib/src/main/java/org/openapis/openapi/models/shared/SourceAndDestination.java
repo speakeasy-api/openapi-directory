@@ -18,6 +18,7 @@ public class SourceAndDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public SourceAndDestinationDimensionEnum dimension;
+
     public SourceAndDestination withDimension(SourceAndDestinationDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -29,6 +30,7 @@ public class SourceAndDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fillLength")
     public Integer fillLength;
+
     public SourceAndDestination withFillLength(Integer fillLength) {
         this.fillLength = fillLength;
         return this;
@@ -40,9 +42,11 @@ public class SourceAndDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public GridRange source;
+
     public SourceAndDestination withSource(GridRange source) {
         this.source = source;
         return this;
     }
     
+    public SourceAndDestination(){}
 }

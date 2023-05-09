@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationCmOnRequestJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05HealthInformationCmOnRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05HealthInformationCmOnRequestJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05HealthInformationCmOnRequestJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse hiuHealthInformationRequestResponse;
+
     public PostV05HealthInformationCmOnRequestJsonRequest withHIUHealthInformationRequestResponse(org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse hiuHealthInformationRequestResponse) {
         this.hiuHealthInformationRequestResponse = hiuHealthInformationRequestResponse;
         return this;
@@ -29,9 +32,15 @@ public class PostV05HealthInformationCmOnRequestJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05HealthInformationCmOnRequestJsonRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05HealthInformationCmOnRequestJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIUHealthInformationRequestResponse") org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse hiuHealthInformationRequestResponse, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.hiuHealthInformationRequestResponse = hiuHealthInformationRequestResponse;
+        this.xHiuId = xHiuId;
+  }
 }

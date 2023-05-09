@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ProjectParameterDetails {
     @JsonProperty("average")
     public Double average;
+
     public ProjectParameterDetails withAverage(Double average) {
         this.average = average;
         return this;
@@ -23,6 +24,7 @@ public class ProjectParameterDetails {
     
     @JsonProperty("count")
     public Long count;
+
     public ProjectParameterDetails withCount(Long count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class ProjectParameterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ProjectParameterDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +43,7 @@ public class ProjectParameterDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstUpdated")
     public OffsetDateTime firstUpdated;
+
     public ProjectParameterDetails withFirstUpdated(OffsetDateTime firstUpdated) {
         this.firstUpdated = firstUpdated;
         return this;
@@ -49,6 +53,7 @@ public class ProjectParameterDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public ProjectParameterDetails withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -56,6 +61,7 @@ public class ProjectParameterDetails {
     
     @JsonProperty("lastValue")
     public Double lastValue;
+
     public ProjectParameterDetails withLastValue(Double lastValue) {
         this.lastValue = lastValue;
         return this;
@@ -63,6 +69,7 @@ public class ProjectParameterDetails {
     
     @JsonProperty("locations")
     public Long locations;
+
     public ProjectParameterDetails withLocations(Long locations) {
         this.locations = locations;
         return this;
@@ -70,6 +77,7 @@ public class ProjectParameterDetails {
     
     @JsonProperty("parameter")
     public String parameter;
+
     public ProjectParameterDetails withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -77,6 +85,7 @@ public class ProjectParameterDetails {
     
     @JsonProperty("parameterId")
     public Long parameterId;
+
     public ProjectParameterDetails withParameterId(Long parameterId) {
         this.parameterId = parameterId;
         return this;
@@ -84,9 +93,21 @@ public class ProjectParameterDetails {
     
     @JsonProperty("unit")
     public String unit;
+
     public ProjectParameterDetails withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public ProjectParameterDetails(@JsonProperty("average") Double average, @JsonProperty("count") Long count, @JsonProperty("firstUpdated") OffsetDateTime firstUpdated, @JsonProperty("lastUpdated") OffsetDateTime lastUpdated, @JsonProperty("lastValue") Double lastValue, @JsonProperty("locations") Long locations, @JsonProperty("parameter") String parameter, @JsonProperty("parameterId") Long parameterId, @JsonProperty("unit") String unit) {
+        this.average = average;
+        this.count = count;
+        this.firstUpdated = firstUpdated;
+        this.lastUpdated = lastUpdated;
+        this.lastValue = lastValue;
+        this.locations = locations;
+        this.parameter = parameter;
+        this.parameterId = parameterId;
+        this.unit = unit;
+  }
 }

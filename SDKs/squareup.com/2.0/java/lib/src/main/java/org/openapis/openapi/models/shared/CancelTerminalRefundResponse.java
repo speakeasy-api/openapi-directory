@@ -18,6 +18,7 @@ public class CancelTerminalRefundResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CancelTerminalRefundResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -26,9 +27,11 @@ public class CancelTerminalRefundResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund")
     public TerminalRefund refund;
+
     public CancelTerminalRefundResponse withRefund(TerminalRefund refund) {
         this.refund = refund;
         return this;
     }
     
+    public CancelTerminalRefundResponse(){}
 }

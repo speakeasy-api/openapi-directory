@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListConnectionsResponse {
     @JsonProperty("ConnectionSummaryList")
     public ConnectionSummary[] connectionSummaryList;
+
     public ListConnectionsResponse withConnectionSummaryList(ConnectionSummary[] connectionSummaryList) {
         this.connectionSummaryList = connectionSummaryList;
         return this;
@@ -22,9 +23,13 @@ public class ListConnectionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConnectionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConnectionsResponse(@JsonProperty("ConnectionSummaryList") ConnectionSummary[] connectionSummaryList) {
+        this.connectionSummaryList = connectionSummaryList;
+  }
 }

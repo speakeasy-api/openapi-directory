@@ -12,9 +12,11 @@ public class GetAuthorizationTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryIds")
     public String[] registryIds;
+
     public GetAuthorizationTokenRequest withRegistryIds(String[] registryIds) {
         this.registryIds = registryIds;
         return this;
     }
     
+    public GetAuthorizationTokenRequest(){}
 }

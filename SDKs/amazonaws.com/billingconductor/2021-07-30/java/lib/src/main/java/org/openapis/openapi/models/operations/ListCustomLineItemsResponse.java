@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomLineItemsResponse {
@@ -12,6 +13,7 @@ public class ListCustomLineItemsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCustomLineItemsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomLineItemsResponse {
     
     
     public String contentType;
+
     public ListCustomLineItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomLineItemsResponse {
      */
     
     public Object internalServerException;
+
     public ListCustomLineItemsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomLineItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomLineItemsOutput listCustomLineItemsOutput;
+
     public ListCustomLineItemsResponse withListCustomLineItemsOutput(org.openapis.openapi.models.shared.ListCustomLineItemsOutput listCustomLineItemsOutput) {
         this.listCustomLineItemsOutput = listCustomLineItemsOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomLineItemsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCustomLineItemsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListCustomLineItemsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomLineItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListCustomLineItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomLineItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListCustomLineItemsResponse {
      */
     
     public Object throttlingException;
+
     public ListCustomLineItemsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListCustomLineItemsResponse {
      */
     
     public Object validationException;
+
     public ListCustomLineItemsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCustomLineItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

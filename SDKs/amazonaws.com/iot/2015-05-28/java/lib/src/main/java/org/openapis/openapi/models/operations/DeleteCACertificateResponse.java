@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCACertificateResponse {
@@ -12,6 +13,7 @@ public class DeleteCACertificateResponse {
      */
     
     public Object certificateStateException;
+
     public DeleteCACertificateResponse withCertificateStateException(Object certificateStateException) {
         this.certificateStateException = certificateStateException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCACertificateResponse {
     
     
     public String contentType;
+
     public DeleteCACertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCACertificateResponse {
      */
     
     public java.util.Map<String, Object> deleteCACertificateResponse;
+
     public DeleteCACertificateResponse withDeleteCACertificateResponse(java.util.Map<String, Object> deleteCACertificateResponse) {
         this.deleteCACertificateResponse = deleteCACertificateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCACertificateResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteCACertificateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCACertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteCACertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCACertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCACertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteCACertificateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteCACertificateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteCACertificateResponse {
     
     
     public Integer statusCode;
+
     public DeleteCACertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteCACertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCACertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteCACertificateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCACertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteCACertificateResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteCACertificateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteCACertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

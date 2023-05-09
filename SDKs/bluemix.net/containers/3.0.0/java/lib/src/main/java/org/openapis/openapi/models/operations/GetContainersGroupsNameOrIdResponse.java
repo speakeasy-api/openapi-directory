@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainersGroupsNameOrIdResponse {
@@ -12,6 +13,7 @@ public class GetContainersGroupsNameOrIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ContainersGroupsNameOrIdGetDetails containersGroupsNameOrIdGetDetails;
+
     public GetContainersGroupsNameOrIdResponse withContainersGroupsNameOrIdGetDetails(org.openapis.openapi.models.shared.ContainersGroupsNameOrIdGetDetails containersGroupsNameOrIdGetDetails) {
         this.containersGroupsNameOrIdGetDetails = containersGroupsNameOrIdGetDetails;
         return this;
@@ -19,6 +21,7 @@ public class GetContainersGroupsNameOrIdResponse {
     
     
     public String contentType;
+
     public GetContainersGroupsNameOrIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetContainersGroupsNameOrIdResponse {
     
     
     public Integer statusCode;
+
     public GetContainersGroupsNameOrIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetContainersGroupsNameOrIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainersGroupsNameOrIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetContainersGroupsNameOrIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

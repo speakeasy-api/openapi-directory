@@ -15,6 +15,7 @@ public class Resolutions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mac_res")
     public String[] macRes;
+
     public Resolutions withMacRes(String[] macRes) {
         this.macRes = macRes;
         return this;
@@ -23,9 +24,11 @@ public class Resolutions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("win_res")
     public String[] winRes;
+
     public Resolutions withWinRes(String[] winRes) {
         this.winRes = winRes;
         return this;
     }
     
+    public Resolutions(){}
 }

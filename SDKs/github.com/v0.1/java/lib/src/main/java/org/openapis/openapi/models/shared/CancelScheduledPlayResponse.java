@@ -15,6 +15,7 @@ public class CancelScheduledPlayResponse {
      */
     @JsonProperty("Message")
     public CancelScheduledPlayResponseMessageEnum message;
+
     public CancelScheduledPlayResponse withMessage(CancelScheduledPlayResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class CancelScheduledPlayResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public CancelScheduledPlayResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public CancelScheduledPlayResponse(@JsonProperty("Message") CancelScheduledPlayResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIllustratorsIllustratorRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=illustrator")
     public String illustrator;
+
     public GetIllustratorsIllustratorRequest withIllustrator(String illustrator) {
         this.illustrator = illustrator;
         return this;
     }
     
+    public GetIllustratorsIllustratorRequest(@JsonProperty("illustrator") String illustrator) {
+        this.illustrator = illustrator;
+  }
 }

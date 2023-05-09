@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSSLPoliciesOutput {
     
     public String nextMarker;
+
     public DescribeSSLPoliciesOutput withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSSLPoliciesOutput {
     
     
     public SslPolicy[] sslPolicies;
+
     public DescribeSSLPoliciesOutput withSslPolicies(SslPolicy[] sslPolicies) {
         this.sslPolicies = sslPolicies;
         return this;
     }
     
+    public DescribeSSLPoliciesOutput(){}
 }

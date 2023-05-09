@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBucketRequest {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public CreateBucketRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -18,6 +19,7 @@ public class CreateBucketRequest {
     
     @JsonProperty("bundleId")
     public String bundleId;
+
     public CreateBucketRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -26,6 +28,7 @@ public class CreateBucketRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableObjectVersioning")
     public Boolean enableObjectVersioning;
+
     public CreateBucketRequest withEnableObjectVersioning(Boolean enableObjectVersioning) {
         this.enableObjectVersioning = enableObjectVersioning;
         return this;
@@ -34,9 +37,14 @@ public class CreateBucketRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateBucketRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBucketRequest(@JsonProperty("bucketName") String bucketName, @JsonProperty("bundleId") String bundleId) {
+        this.bucketName = bucketName;
+        this.bundleId = bundleId;
+  }
 }

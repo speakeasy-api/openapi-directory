@@ -18,6 +18,7 @@ public class AchievementUnlockResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AchievementUnlockResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class AchievementUnlockResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newlyUnlocked")
     public Boolean newlyUnlocked;
+
     public AchievementUnlockResponse withNewlyUnlocked(Boolean newlyUnlocked) {
         this.newlyUnlocked = newlyUnlocked;
         return this;
     }
     
+    public AchievementUnlockResponse(){}
 }

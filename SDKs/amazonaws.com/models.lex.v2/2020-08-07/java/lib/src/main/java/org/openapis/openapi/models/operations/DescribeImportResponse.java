@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImportResponse {
     
     public String contentType;
+
     public DescribeImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeImportResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImportResponse describeImportResponse;
+
     public DescribeImportResponse withDescribeImportResponse(org.openapis.openapi.models.shared.DescribeImportResponse describeImportResponse) {
         this.describeImportResponse = describeImportResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImportResponse {
      */
     
     public Object internalServerException;
+
     public DescribeImportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeImportResponse {
     
     
     public Integer statusCode;
+
     public DescribeImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DescribeImportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeImportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class DescribeImportResponse {
      */
     
     public Object throttlingException;
+
     public DescribeImportResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeImportResponse {
      */
     
     public Object validationException;
+
     public DescribeImportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

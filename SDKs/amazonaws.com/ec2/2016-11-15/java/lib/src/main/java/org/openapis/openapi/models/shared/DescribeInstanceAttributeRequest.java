@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeInstanceAttributeRequest {
     
     public DescribeInstanceAttributeRequestAttributeEnum attribute;
+
     public DescribeInstanceAttributeRequest withAttribute(DescribeInstanceAttributeRequestAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -16,6 +17,7 @@ public class DescribeInstanceAttributeRequest {
     
     
     public Boolean dryRun;
+
     public DescribeInstanceAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class DescribeInstanceAttributeRequest {
     
     
     public String instanceId;
+
     public DescribeInstanceAttributeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public DescribeInstanceAttributeRequest(@JsonProperty("Attribute") DescribeInstanceAttributeRequestAttributeEnum attribute, @JsonProperty("InstanceId") String instanceId) {
+        this.attribute = attribute;
+        this.instanceId = instanceId;
+  }
 }

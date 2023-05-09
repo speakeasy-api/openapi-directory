@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsResponse {
     
     public String contentType;
+
     public GetClassificationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsResponse {
      */
     
     public GetClassifications200ApplicationVndApiPlusJson getClassifications200ApplicationVndApiPlusJsonObject;
+
     public GetClassificationsResponse withGetClassifications200ApplicationVndApiPlusJsonObject(GetClassifications200ApplicationVndApiPlusJson getClassifications200ApplicationVndApiPlusJsonObject) {
         this.getClassifications200ApplicationVndApiPlusJsonObject = getClassifications200ApplicationVndApiPlusJsonObject;
         return this;
@@ -54,9 +60,14 @@ public class GetClassificationsResponse {
      */
     
     public GetClassifications400ApplicationVndApiPlusJson getClassifications400ApplicationVndApiPlusJsonObject;
+
     public GetClassificationsResponse withGetClassifications400ApplicationVndApiPlusJsonObject(GetClassifications400ApplicationVndApiPlusJson getClassifications400ApplicationVndApiPlusJsonObject) {
         this.getClassifications400ApplicationVndApiPlusJsonObject = getClassifications400ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetClassificationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

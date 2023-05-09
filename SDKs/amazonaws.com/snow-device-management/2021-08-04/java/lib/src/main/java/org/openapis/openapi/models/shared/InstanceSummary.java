@@ -20,6 +20,7 @@ public class InstanceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public Instance instance;
+
     public InstanceSummary withInstance(Instance instance) {
         this.instance = instance;
         return this;
@@ -30,9 +31,11 @@ public class InstanceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public InstanceSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
     }
     
+    public InstanceSummary(){}
 }

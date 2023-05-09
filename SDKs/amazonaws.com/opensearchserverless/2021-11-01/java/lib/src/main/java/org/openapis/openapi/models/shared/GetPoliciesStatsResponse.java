@@ -15,6 +15,7 @@ public class GetPoliciesStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPolicyStats")
     public AccessPolicyStats accessPolicyStats;
+
     public GetPoliciesStatsResponse withAccessPolicyStats(AccessPolicyStats accessPolicyStats) {
         this.accessPolicyStats = accessPolicyStats;
         return this;
@@ -23,6 +24,7 @@ public class GetPoliciesStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfigStats")
     public SecurityConfigStats securityConfigStats;
+
     public GetPoliciesStatsResponse withSecurityConfigStats(SecurityConfigStats securityConfigStats) {
         this.securityConfigStats = securityConfigStats;
         return this;
@@ -31,6 +33,7 @@ public class GetPoliciesStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityPolicyStats")
     public SecurityPolicyStats securityPolicyStats;
+
     public GetPoliciesStatsResponse withSecurityPolicyStats(SecurityPolicyStats securityPolicyStats) {
         this.securityPolicyStats = securityPolicyStats;
         return this;
@@ -39,9 +42,11 @@ public class GetPoliciesStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPolicyCount")
     public Long totalPolicyCount;
+
     public GetPoliciesStatsResponse withTotalPolicyCount(Long totalPolicyCount) {
         this.totalPolicyCount = totalPolicyCount;
         return this;
     }
     
+    public GetPoliciesStatsResponse(){}
 }

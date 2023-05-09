@@ -18,6 +18,7 @@ public class DimensionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiName")
     public String apiName;
+
     public DimensionMetadata withApiName(String apiName) {
         this.apiName = apiName;
         return this;
@@ -29,6 +30,7 @@ public class DimensionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public DimensionMetadata withCategory(String category) {
         this.category = category;
         return this;
@@ -40,6 +42,7 @@ public class DimensionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDefinition")
     public Boolean customDefinition;
+
     public DimensionMetadata withCustomDefinition(Boolean customDefinition) {
         this.customDefinition = customDefinition;
         return this;
@@ -51,6 +54,7 @@ public class DimensionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecatedApiNames")
     public String[] deprecatedApiNames;
+
     public DimensionMetadata withDeprecatedApiNames(String[] deprecatedApiNames) {
         this.deprecatedApiNames = deprecatedApiNames;
         return this;
@@ -62,6 +66,7 @@ public class DimensionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DimensionMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -73,9 +78,11 @@ public class DimensionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uiName")
     public String uiName;
+
     public DimensionMetadata withUiName(String uiName) {
         this.uiName = uiName;
         return this;
     }
     
+    public DimensionMetadata(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAadhaarAccountUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public CreateAadhaarAccountUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class CreateAadhaarAccountUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateAccountWithPreVerifiedAadhaar createAccountWithPreVerifiedAadhaar;
+
     public CreateAadhaarAccountUsingPOSTRequest withCreateAccountWithPreVerifiedAadhaar(org.openapis.openapi.models.shared.CreateAccountWithPreVerifiedAadhaar createAccountWithPreVerifiedAadhaar) {
         this.createAccountWithPreVerifiedAadhaar = createAccountWithPreVerifiedAadhaar;
         return this;
     }
     
+    public CreateAadhaarAccountUsingPOSTRequest(@JsonProperty("CreateAccountWithPreVerifiedAadhaar") org.openapis.openapi.models.shared.CreateAccountWithPreVerifiedAadhaar createAccountWithPreVerifiedAadhaar) {
+        this.createAccountWithPreVerifiedAadhaar = createAccountWithPreVerifiedAadhaar;
+  }
 }

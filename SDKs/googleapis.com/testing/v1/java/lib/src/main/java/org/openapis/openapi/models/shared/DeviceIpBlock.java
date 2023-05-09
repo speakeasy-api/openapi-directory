@@ -18,6 +18,7 @@ public class DeviceIpBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addedDate")
     public Date addedDate;
+
     public DeviceIpBlock withAddedDate(Date addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -29,6 +30,7 @@ public class DeviceIpBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block")
     public String block;
+
     public DeviceIpBlock withBlock(String block) {
         this.block = block;
         return this;
@@ -40,9 +42,11 @@ public class DeviceIpBlock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public DeviceIpBlockFormEnum form;
+
     public DeviceIpBlock withForm(DeviceIpBlockFormEnum form) {
         this.form = form;
         return this;
     }
     
+    public DeviceIpBlock(){}
 }

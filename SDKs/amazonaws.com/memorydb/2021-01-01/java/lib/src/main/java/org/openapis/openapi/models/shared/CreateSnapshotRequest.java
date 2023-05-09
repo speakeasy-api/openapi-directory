@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSnapshotRequest {
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public CreateSnapshotRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -19,6 +20,7 @@ public class CreateSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateSnapshotRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -26,6 +28,7 @@ public class CreateSnapshotRequest {
     
     @JsonProperty("SnapshotName")
     public String snapshotName;
+
     public CreateSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -34,9 +37,14 @@ public class CreateSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateSnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSnapshotRequest(@JsonProperty("ClusterName") String clusterName, @JsonProperty("SnapshotName") String snapshotName) {
+        this.clusterName = clusterName;
+        this.snapshotName = snapshotName;
+  }
 }

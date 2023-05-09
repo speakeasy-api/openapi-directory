@@ -18,6 +18,7 @@ public class Dv3Ids {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dvCampaignId")
     public String dvCampaignId;
+
     public Dv3Ids withDvCampaignId(String dvCampaignId) {
         this.dvCampaignId = dvCampaignId;
         return this;
@@ -29,6 +30,7 @@ public class Dv3Ids {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dvCreativeId")
     public String dvCreativeId;
+
     public Dv3Ids withDvCreativeId(String dvCreativeId) {
         this.dvCreativeId = dvCreativeId;
         return this;
@@ -40,6 +42,7 @@ public class Dv3Ids {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dvInsertionOrderId")
     public String dvInsertionOrderId;
+
     public Dv3Ids withDvInsertionOrderId(String dvInsertionOrderId) {
         this.dvInsertionOrderId = dvInsertionOrderId;
         return this;
@@ -51,6 +54,7 @@ public class Dv3Ids {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dvLineItemId")
     public String dvLineItemId;
+
     public Dv3Ids withDvLineItemId(String dvLineItemId) {
         this.dvLineItemId = dvLineItemId;
         return this;
@@ -62,6 +66,7 @@ public class Dv3Ids {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dvSiteId")
     public String dvSiteId;
+
     public Dv3Ids withDvSiteId(String dvSiteId) {
         this.dvSiteId = dvSiteId;
         return this;
@@ -73,9 +78,11 @@ public class Dv3Ids {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Dv3Ids withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Dv3Ids(){}
 }

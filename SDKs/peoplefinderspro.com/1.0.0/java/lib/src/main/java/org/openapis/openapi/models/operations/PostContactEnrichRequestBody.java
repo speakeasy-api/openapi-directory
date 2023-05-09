@@ -12,6 +12,7 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public PostContactEnrichRequestBodyAddress address;
+
     public PostContactEnrichRequestBody withAddress(PostContactEnrichRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Age")
     public Double age;
+
     public PostContactEnrichRequestBody withAge(Double age) {
         this.age = age;
         return this;
@@ -28,6 +30,7 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dob")
     public String dob;
+
     public PostContactEnrichRequestBody withDob(String dob) {
         this.dob = dob;
         return this;
@@ -36,6 +39,7 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public PostContactEnrichRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -44,6 +48,7 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public PostContactEnrichRequestBody withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -52,6 +57,7 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public PostContactEnrichRequestBody withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -60,6 +66,7 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiddleName")
     public String middleName;
+
     public PostContactEnrichRequestBody withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -68,9 +75,11 @@ public class PostContactEnrichRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public PostContactEnrichRequestBody withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public PostContactEnrichRequestBody(){}
 }

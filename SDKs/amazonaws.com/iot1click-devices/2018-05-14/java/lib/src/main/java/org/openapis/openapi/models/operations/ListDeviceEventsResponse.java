@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeviceEventsResponse {
     
     public String contentType;
+
     public ListDeviceEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDeviceEventsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDeviceEventsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDeviceEventsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDeviceEventsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDeviceEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeviceEventsResponse listDeviceEventsResponse;
+
     public ListDeviceEventsResponse withListDeviceEventsResponse(org.openapis.openapi.models.shared.ListDeviceEventsResponse listDeviceEventsResponse) {
         this.listDeviceEventsResponse = listDeviceEventsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDeviceEventsResponse {
      */
     
     public Object rangeNotSatisfiableException;
+
     public ListDeviceEventsResponse withRangeNotSatisfiableException(Object rangeNotSatisfiableException) {
         this.rangeNotSatisfiableException = rangeNotSatisfiableException;
         return this;
@@ -59,6 +65,7 @@ public class ListDeviceEventsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListDeviceEventsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListDeviceEventsResponse {
     
     
     public Integer statusCode;
+
     public ListDeviceEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListDeviceEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeviceEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDeviceEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

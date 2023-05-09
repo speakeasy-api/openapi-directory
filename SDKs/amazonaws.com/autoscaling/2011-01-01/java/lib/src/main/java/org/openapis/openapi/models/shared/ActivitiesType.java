@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ActivitiesType - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ActivitiesType {
     
     public Activity[] activities;
+
     public ActivitiesType withActivities(Activity[] activities) {
         this.activities = activities;
         return this;
@@ -19,9 +20,13 @@ public class ActivitiesType {
     
     
     public String nextToken;
+
     public ActivitiesType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ActivitiesType(@JsonProperty("Activities") Activity[] activities) {
+        this.activities = activities;
+  }
 }

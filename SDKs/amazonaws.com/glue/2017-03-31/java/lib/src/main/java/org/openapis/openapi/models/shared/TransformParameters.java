@@ -15,6 +15,7 @@ public class TransformParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindMatchesParameters")
     public FindMatchesParameters findMatchesParameters;
+
     public TransformParameters withFindMatchesParameters(FindMatchesParameters findMatchesParameters) {
         this.findMatchesParameters = findMatchesParameters;
         return this;
@@ -22,9 +23,13 @@ public class TransformParameters {
     
     @JsonProperty("TransformType")
     public TransformTypeEnum transformType;
+
     public TransformParameters withTransformType(TransformTypeEnum transformType) {
         this.transformType = transformType;
         return this;
     }
     
+    public TransformParameters(@JsonProperty("TransformType") TransformTypeEnum transformType) {
+        this.transformType = transformType;
+  }
 }

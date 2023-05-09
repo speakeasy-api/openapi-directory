@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NOTAMsByRoute {
     @JsonProperty("route")
     public java.util.Map<String, Object> route;
+
     public NOTAMsByRoute withRoute(java.util.Map<String, Object> route) {
         this.route = route;
         return this;
     }
     
+    public NOTAMsByRoute(@JsonProperty("route") java.util.Map<String, Object> route) {
+        this.route = route;
+  }
 }

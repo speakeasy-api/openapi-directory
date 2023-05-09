@@ -12,6 +12,7 @@ public class UpdateOrganizationAdminRequestBodyNetworks {
      */
     @JsonProperty("access")
     public String access;
+
     public UpdateOrganizationAdminRequestBodyNetworks withAccess(String access) {
         this.access = access;
         return this;
@@ -22,9 +23,14 @@ public class UpdateOrganizationAdminRequestBodyNetworks {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateOrganizationAdminRequestBodyNetworks withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateOrganizationAdminRequestBodyNetworks(@JsonProperty("access") String access, @JsonProperty("id") String id) {
+        this.access = access;
+        this.id = id;
+  }
 }

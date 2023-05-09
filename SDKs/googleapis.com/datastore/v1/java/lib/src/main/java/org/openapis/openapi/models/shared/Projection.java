@@ -18,9 +18,11 @@ public class Projection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public PropertyReference property;
+
     public Projection withProperty(PropertyReference property) {
         this.property = property;
         return this;
     }
     
+    public Projection(){}
 }

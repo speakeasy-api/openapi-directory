@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2CustomFieldsIdJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public PutV2CustomFieldsIdJsonRequestBody requestBody;
+
     public PutV2CustomFieldsIdJsonRequest withRequestBody(PutV2CustomFieldsIdJsonRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class PutV2CustomFieldsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutV2CustomFieldsIdJsonRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PutV2CustomFieldsIdJsonRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

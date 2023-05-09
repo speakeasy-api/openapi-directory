@@ -15,6 +15,7 @@ public class UpdateError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public UpdateError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,9 +24,11 @@ public class UpdateError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public UpdateError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public UpdateError(){}
 }

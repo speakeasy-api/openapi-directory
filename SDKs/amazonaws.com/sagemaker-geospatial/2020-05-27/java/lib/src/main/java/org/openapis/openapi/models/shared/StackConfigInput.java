@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * StackConfigInput - &lt;p/&gt;
+ * StackConfigInput - The input structure for Stacking Operation.
  */
 public class StackConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputResolution")
     public OutputResolutionStackInput outputResolution;
+
     public StackConfigInput withOutputResolution(OutputResolutionStackInput outputResolution) {
         this.outputResolution = outputResolution;
         return this;
@@ -23,9 +24,11 @@ public class StackConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetBands")
     public String[] targetBands;
+
     public StackConfigInput withTargetBands(String[] targetBands) {
         this.targetBands = targetBands;
         return this;
     }
     
+    public StackConfigInput(){}
 }

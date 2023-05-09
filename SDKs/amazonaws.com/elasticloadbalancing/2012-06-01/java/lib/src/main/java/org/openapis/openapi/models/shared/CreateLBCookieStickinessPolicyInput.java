@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateLBCookieStickinessPolicyInput - Contains the parameters for CreateLBCookieStickinessPolicy.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLBCookieStickinessPolicyInput {
     
     public Long cookieExpirationPeriod;
+
     public CreateLBCookieStickinessPolicyInput withCookieExpirationPeriod(Long cookieExpirationPeriod) {
         this.cookieExpirationPeriod = cookieExpirationPeriod;
         return this;
@@ -19,6 +20,7 @@ public class CreateLBCookieStickinessPolicyInput {
     
     
     public String loadBalancerName;
+
     public CreateLBCookieStickinessPolicyInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -26,9 +28,14 @@ public class CreateLBCookieStickinessPolicyInput {
     
     
     public String policyName;
+
     public CreateLBCookieStickinessPolicyInput withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public CreateLBCookieStickinessPolicyInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("PolicyName") String policyName) {
+        this.loadBalancerName = loadBalancerName;
+        this.policyName = policyName;
+  }
 }

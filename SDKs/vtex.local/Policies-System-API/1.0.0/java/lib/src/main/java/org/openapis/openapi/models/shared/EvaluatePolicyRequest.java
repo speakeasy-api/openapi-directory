@@ -12,6 +12,7 @@ public class EvaluatePolicyRequest {
      */
     @JsonProperty("context")
     public java.util.Map<String, Object> context;
+
     public EvaluatePolicyRequest withContext(java.util.Map<String, Object> context) {
         this.context = context;
         return this;
@@ -22,9 +23,14 @@ public class EvaluatePolicyRequest {
      */
     @JsonProperty("resource")
     public String resource;
+
     public EvaluatePolicyRequest withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public EvaluatePolicyRequest(@JsonProperty("context") java.util.Map<String, Object> context, @JsonProperty("resource") String resource) {
+        this.context = context;
+        this.resource = resource;
+  }
 }

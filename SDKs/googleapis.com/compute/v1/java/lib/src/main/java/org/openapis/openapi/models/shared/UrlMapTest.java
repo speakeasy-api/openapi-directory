@@ -18,6 +18,7 @@ public class UrlMapTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UrlMapTest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class UrlMapTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedOutputUrl")
     public String expectedOutputUrl;
+
     public UrlMapTest withExpectedOutputUrl(String expectedOutputUrl) {
         this.expectedOutputUrl = expectedOutputUrl;
         return this;
@@ -40,6 +42,7 @@ public class UrlMapTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedRedirectResponseCode")
     public Integer expectedRedirectResponseCode;
+
     public UrlMapTest withExpectedRedirectResponseCode(Integer expectedRedirectResponseCode) {
         this.expectedRedirectResponseCode = expectedRedirectResponseCode;
         return this;
@@ -51,6 +54,7 @@ public class UrlMapTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public UrlMapTestHeader[] headers;
+
     public UrlMapTest withHeaders(UrlMapTestHeader[] headers) {
         this.headers = headers;
         return this;
@@ -62,6 +66,7 @@ public class UrlMapTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public UrlMapTest withHost(String host) {
         this.host = host;
         return this;
@@ -73,6 +78,7 @@ public class UrlMapTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public UrlMapTest withPath(String path) {
         this.path = path;
         return this;
@@ -84,9 +90,11 @@ public class UrlMapTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public UrlMapTest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public UrlMapTest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDefaultBranchResponse {
@@ -12,6 +13,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object branchDoesNotExistException;
+
     public UpdateDefaultBranchResponse withBranchDoesNotExistException(Object branchDoesNotExistException) {
         this.branchDoesNotExistException = branchDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object branchNameRequiredException;
+
     public UpdateDefaultBranchResponse withBranchNameRequiredException(Object branchNameRequiredException) {
         this.branchNameRequiredException = branchNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDefaultBranchResponse {
     
     
     public String contentType;
+
     public UpdateDefaultBranchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public UpdateDefaultBranchResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public UpdateDefaultBranchResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public UpdateDefaultBranchResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public UpdateDefaultBranchResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public UpdateDefaultBranchResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object invalidBranchNameException;
+
     public UpdateDefaultBranchResponse withInvalidBranchNameException(Object invalidBranchNameException) {
         this.invalidBranchNameException = invalidBranchNameException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public UpdateDefaultBranchResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -109,6 +120,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public UpdateDefaultBranchResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -119,6 +131,7 @@ public class UpdateDefaultBranchResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public UpdateDefaultBranchResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -126,6 +139,7 @@ public class UpdateDefaultBranchResponse {
     
     
     public Integer statusCode;
+
     public UpdateDefaultBranchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class UpdateDefaultBranchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDefaultBranchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateDefaultBranchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SalesforceConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public SalesforceConnectorProfileCredentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class SalesforceConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCredentialsArn")
     public String clientCredentialsArn;
+
     public SalesforceConnectorProfileCredentials withClientCredentialsArn(String clientCredentialsArn) {
         this.clientCredentialsArn = clientCredentialsArn;
         return this;
@@ -31,6 +33,7 @@ public class SalesforceConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthRequest")
     public ConnectorOAuthRequest oAuthRequest;
+
     public SalesforceConnectorProfileCredentials withOAuthRequest(ConnectorOAuthRequest oAuthRequest) {
         this.oAuthRequest = oAuthRequest;
         return this;
@@ -39,9 +42,11 @@ public class SalesforceConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public SalesforceConnectorProfileCredentials withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public SalesforceConnectorProfileCredentials(){}
 }

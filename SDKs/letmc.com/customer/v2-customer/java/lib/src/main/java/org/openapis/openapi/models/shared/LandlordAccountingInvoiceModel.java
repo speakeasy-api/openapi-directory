@@ -25,6 +25,7 @@ public class LandlordAccountingInvoiceModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public LandlordAccountingInvoiceModel withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -36,6 +37,7 @@ public class LandlordAccountingInvoiceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceID")
     public String invoiceID;
+
     public LandlordAccountingInvoiceModel withInvoiceID(String invoiceID) {
         this.invoiceID = invoiceID;
         return this;
@@ -47,9 +49,11 @@ public class LandlordAccountingInvoiceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsMaintenanceInvoice")
     public Boolean isMaintenanceInvoice;
+
     public LandlordAccountingInvoiceModel withIsMaintenanceInvoice(Boolean isMaintenanceInvoice) {
         this.isMaintenanceInvoice = isMaintenanceInvoice;
         return this;
     }
     
+    public LandlordAccountingInvoiceModel(){}
 }

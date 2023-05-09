@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetectImageWithNoStoreRequestBody {
@@ -12,9 +13,13 @@ public class DetectImageWithNoStoreRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public DetectImageWithNoStoreRequestBodyImageData imageData;
+
     public DetectImageWithNoStoreRequestBody withImageData(DetectImageWithNoStoreRequestBodyImageData imageData) {
         this.imageData = imageData;
         return this;
     }
     
+    public DetectImageWithNoStoreRequestBody(@JsonProperty("imageData") DetectImageWithNoStoreRequestBodyImageData imageData) {
+        this.imageData = imageData;
+  }
 }

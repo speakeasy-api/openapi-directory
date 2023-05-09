@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveChildrenGetRequest {
@@ -12,6 +13,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveChildrenGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=childId")
     public String childId;
+
     public DriveChildrenGetRequest withChildId(String childId) {
         this.childId = childId;
         return this;
@@ -32,6 +35,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveChildrenGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
     public String folderId;
+
     public DriveChildrenGetRequest withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -52,6 +57,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveChildrenGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveChildrenGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveChildrenGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveChildrenGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +101,14 @@ public class DriveChildrenGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveChildrenGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveChildrenGetRequest(@JsonProperty("childId") String childId, @JsonProperty("folderId") String folderId) {
+        this.childId = childId;
+        this.folderId = folderId;
+  }
 }

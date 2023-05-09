@@ -14,6 +14,7 @@ public class CreateWorkspaceRequestBody {
      */
     @JsonProperty("accountAccessType")
     public CreateWorkspaceRequestBodyAccountAccessTypeEnum accountAccessType;
+
     public CreateWorkspaceRequestBody withAccountAccessType(CreateWorkspaceRequestBodyAccountAccessTypeEnum accountAccessType) {
         this.accountAccessType = accountAccessType;
         return this;
@@ -24,6 +25,7 @@ public class CreateWorkspaceRequestBody {
      */
     @JsonProperty("authenticationProviders")
     public org.openapis.openapi.models.shared.AuthenticationProviderTypesEnum[] authenticationProviders;
+
     public CreateWorkspaceRequestBody withAuthenticationProviders(org.openapis.openapi.models.shared.AuthenticationProviderTypesEnum[] authenticationProviders) {
         this.authenticationProviders = authenticationProviders;
         return this;
@@ -35,6 +37,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateWorkspaceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -46,6 +49,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public String configuration;
+
     public CreateWorkspaceRequestBody withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -57,6 +61,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkAccessControl")
     public CreateWorkspaceRequestBodyNetworkAccessControl networkAccessControl;
+
     public CreateWorkspaceRequestBody withNetworkAccessControl(CreateWorkspaceRequestBodyNetworkAccessControl networkAccessControl) {
         this.networkAccessControl = networkAccessControl;
         return this;
@@ -68,6 +73,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationRoleName")
     public String organizationRoleName;
+
     public CreateWorkspaceRequestBody withOrganizationRoleName(String organizationRoleName) {
         this.organizationRoleName = organizationRoleName;
         return this;
@@ -78,6 +84,7 @@ public class CreateWorkspaceRequestBody {
      */
     @JsonProperty("permissionType")
     public CreateWorkspaceRequestBodyPermissionTypeEnum permissionType;
+
     public CreateWorkspaceRequestBody withPermissionType(CreateWorkspaceRequestBodyPermissionTypeEnum permissionType) {
         this.permissionType = permissionType;
         return this;
@@ -89,6 +96,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackSetName")
     public String stackSetName;
+
     public CreateWorkspaceRequestBody withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -100,6 +108,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorkspaceRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -111,6 +120,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfiguration")
     public CreateWorkspaceRequestBodyVpcConfiguration vpcConfiguration;
+
     public CreateWorkspaceRequestBody withVpcConfiguration(CreateWorkspaceRequestBodyVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
@@ -122,6 +132,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceDataSources")
     public org.openapis.openapi.models.shared.DataSourceTypeEnum[] workspaceDataSources;
+
     public CreateWorkspaceRequestBody withWorkspaceDataSources(org.openapis.openapi.models.shared.DataSourceTypeEnum[] workspaceDataSources) {
         this.workspaceDataSources = workspaceDataSources;
         return this;
@@ -133,6 +144,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceDescription")
     public String workspaceDescription;
+
     public CreateWorkspaceRequestBody withWorkspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;
         return this;
@@ -144,6 +156,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceName")
     public String workspaceName;
+
     public CreateWorkspaceRequestBody withWorkspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
         return this;
@@ -155,6 +168,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceNotificationDestinations")
     public org.openapis.openapi.models.shared.NotificationDestinationTypeEnum[] workspaceNotificationDestinations;
+
     public CreateWorkspaceRequestBody withWorkspaceNotificationDestinations(org.openapis.openapi.models.shared.NotificationDestinationTypeEnum[] workspaceNotificationDestinations) {
         this.workspaceNotificationDestinations = workspaceNotificationDestinations;
         return this;
@@ -166,6 +180,7 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceOrganizationalUnits")
     public String[] workspaceOrganizationalUnits;
+
     public CreateWorkspaceRequestBody withWorkspaceOrganizationalUnits(String[] workspaceOrganizationalUnits) {
         this.workspaceOrganizationalUnits = workspaceOrganizationalUnits;
         return this;
@@ -177,9 +192,15 @@ public class CreateWorkspaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaceRoleArn")
     public String workspaceRoleArn;
+
     public CreateWorkspaceRequestBody withWorkspaceRoleArn(String workspaceRoleArn) {
         this.workspaceRoleArn = workspaceRoleArn;
         return this;
     }
     
+    public CreateWorkspaceRequestBody(@JsonProperty("accountAccessType") CreateWorkspaceRequestBodyAccountAccessTypeEnum accountAccessType, @JsonProperty("authenticationProviders") org.openapis.openapi.models.shared.AuthenticationProviderTypesEnum[] authenticationProviders, @JsonProperty("permissionType") CreateWorkspaceRequestBodyPermissionTypeEnum permissionType) {
+        this.accountAccessType = accountAccessType;
+        this.authenticationProviders = authenticationProviders;
+        this.permissionType = permissionType;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETAttachVerifiedAccessTrustProviderResponse {
     
     public byte[] body;
+
     public GETAttachVerifiedAccessTrustProviderResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETAttachVerifiedAccessTrustProviderResponse {
     
     
     public String contentType;
+
     public GETAttachVerifiedAccessTrustProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETAttachVerifiedAccessTrustProviderResponse {
     
     
     public Integer statusCode;
+
     public GETAttachVerifiedAccessTrustProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETAttachVerifiedAccessTrustProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETAttachVerifiedAccessTrustProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETAttachVerifiedAccessTrustProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

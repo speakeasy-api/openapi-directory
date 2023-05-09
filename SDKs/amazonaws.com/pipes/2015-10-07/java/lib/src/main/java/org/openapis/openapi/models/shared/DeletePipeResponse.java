@@ -20,6 +20,7 @@ public class DeletePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DeletePipeResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class DeletePipeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DeletePipeResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DeletePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentState")
     public PipeStateEnum currentState;
+
     public DeletePipeResponse withCurrentState(PipeStateEnum currentState) {
         this.currentState = currentState;
         return this;
@@ -46,6 +49,7 @@ public class DeletePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredState")
     public RequestedPipeStateDescribeResponseEnum desiredState;
+
     public DeletePipeResponse withDesiredState(RequestedPipeStateDescribeResponseEnum desiredState) {
         this.desiredState = desiredState;
         return this;
@@ -56,6 +60,7 @@ public class DeletePipeResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DeletePipeResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,9 +69,11 @@ public class DeletePipeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeletePipeResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeletePipeResponse(){}
 }

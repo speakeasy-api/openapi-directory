@@ -54,12 +54,10 @@ public class SDKKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSDKKeysResponse res = new org.openapis.openapi.models.operations.GetSDKKeysResponse() {{
+        org.openapis.openapi.models.operations.GetSDKKeysResponse res = new org.openapis.openapi.models.operations.GetSDKKeysResponse(contentType, httpRes.statusCode()) {{
             sdkKeysModel = null;
             sdkKeysModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

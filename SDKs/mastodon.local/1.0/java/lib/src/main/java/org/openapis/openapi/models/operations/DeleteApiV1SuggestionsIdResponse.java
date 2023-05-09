@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiV1SuggestionsIdResponse {
     
     public String contentType;
+
     public DeleteApiV1SuggestionsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiV1SuggestionsIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteApiV1SuggestionsIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteApiV1SuggestionsIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiV1SuggestionsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteApiV1SuggestionsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiV1SuggestionsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteApiV1SuggestionsIdResponse {
      */
     
     public java.util.Map<String, Object> deleteApiV1SuggestionsId200ApplicationJSONObject;
+
     public DeleteApiV1SuggestionsIdResponse withDeleteApiV1SuggestionsId200ApplicationJSONObject(java.util.Map<String, Object> deleteApiV1SuggestionsId200ApplicationJSONObject) {
         this.deleteApiV1SuggestionsId200ApplicationJSONObject = deleteApiV1SuggestionsId200ApplicationJSONObject;
         return this;
     }
     
+    public DeleteApiV1SuggestionsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotInstancesResult {
     
     public RequestSpotInstancesResultSpotInstanceRequests[] spotInstanceRequests;
+
     public RequestSpotInstancesResult withSpotInstanceRequests(RequestSpotInstancesResultSpotInstanceRequests[] spotInstanceRequests) {
         this.spotInstanceRequests = spotInstanceRequests;
         return this;
     }
     
+    public RequestSpotInstancesResult(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSetImportTask {
     @JsonProperty("status")
     public DataSetTaskLifecycleEnum status;
+
     public DataSetImportTask withStatus(DataSetTaskLifecycleEnum status) {
         this.status = status;
         return this;
@@ -19,6 +20,7 @@ public class DataSetImportTask {
     
     @JsonProperty("summary")
     public DataSetImportSummary summary;
+
     public DataSetImportTask withSummary(DataSetImportSummary summary) {
         this.summary = summary;
         return this;
@@ -26,9 +28,15 @@ public class DataSetImportTask {
     
     @JsonProperty("taskId")
     public String taskId;
+
     public DataSetImportTask withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public DataSetImportTask(@JsonProperty("status") DataSetTaskLifecycleEnum status, @JsonProperty("summary") DataSetImportSummary summary, @JsonProperty("taskId") String taskId) {
+        this.status = status;
+        this.summary = summary;
+        this.taskId = taskId;
+  }
 }

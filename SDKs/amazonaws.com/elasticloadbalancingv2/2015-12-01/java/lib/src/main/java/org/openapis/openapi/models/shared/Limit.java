@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Limit {
     
     public String max;
+
     public Limit withMax(String max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class Limit {
     
     
     public String name;
+
     public Limit withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Limit(){}
 }

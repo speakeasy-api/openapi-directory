@@ -18,6 +18,7 @@ public class AutoForward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copy_to_myself")
     public Boolean copyToMyself;
+
     public AutoForward withCopyToMyself(Boolean copyToMyself) {
         this.copyToMyself = copyToMyself;
         return this;
@@ -29,6 +30,7 @@ public class AutoForward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_addresses")
     public String[] emailAddresses;
+
     public AutoForward withEmailAddresses(String[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -40,9 +42,11 @@ public class AutoForward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AutoForward withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AutoForward(){}
 }

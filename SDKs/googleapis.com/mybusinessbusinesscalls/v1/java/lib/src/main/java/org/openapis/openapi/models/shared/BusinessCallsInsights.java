@@ -18,6 +18,7 @@ public class BusinessCallsInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateMetrics")
     public AggregateMetrics aggregateMetrics;
+
     public BusinessCallsInsights withAggregateMetrics(AggregateMetrics aggregateMetrics) {
         this.aggregateMetrics = aggregateMetrics;
         return this;
@@ -29,6 +30,7 @@ public class BusinessCallsInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricType")
     public BusinessCallsInsightsMetricTypeEnum metricType;
+
     public BusinessCallsInsights withMetricType(BusinessCallsInsightsMetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
@@ -40,9 +42,11 @@ public class BusinessCallsInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BusinessCallsInsights withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BusinessCallsInsights(){}
 }

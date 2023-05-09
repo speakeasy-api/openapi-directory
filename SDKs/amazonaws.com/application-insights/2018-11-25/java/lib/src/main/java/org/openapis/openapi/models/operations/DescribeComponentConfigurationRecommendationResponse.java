@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeComponentConfigurationRecommendationResponse {
     
     public String contentType;
+
     public DescribeComponentConfigurationRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeComponentConfigurationRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeComponentConfigurationRecommendationResponse describeComponentConfigurationRecommendationResponse;
+
     public DescribeComponentConfigurationRecommendationResponse withDescribeComponentConfigurationRecommendationResponse(org.openapis.openapi.models.shared.DescribeComponentConfigurationRecommendationResponse describeComponentConfigurationRecommendationResponse) {
         this.describeComponentConfigurationRecommendationResponse = describeComponentConfigurationRecommendationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeComponentConfigurationRecommendationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeComponentConfigurationRecommendationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeComponentConfigurationRecommendationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeComponentConfigurationRecommendationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeComponentConfigurationRecommendationResponse {
     
     
     public Integer statusCode;
+
     public DescribeComponentConfigurationRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeComponentConfigurationRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeComponentConfigurationRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeComponentConfigurationRecommendationResponse {
      */
     
     public Object validationException;
+
     public DescribeComponentConfigurationRecommendationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeComponentConfigurationRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DeleteBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAuthTypes")
     public org.openapis.openapi.models.shared.BackendAPIAuthType[] additionalAuthTypes;
+
     public DeleteBackendAPIRequestBodyResourceConfig withAdditionalAuthTypes(org.openapis.openapi.models.shared.BackendAPIAuthType[] additionalAuthTypes) {
         this.additionalAuthTypes = additionalAuthTypes;
         return this;
@@ -23,6 +24,7 @@ public class DeleteBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiName")
     public String apiName;
+
     public DeleteBackendAPIRequestBodyResourceConfig withApiName(String apiName) {
         this.apiName = apiName;
         return this;
@@ -31,6 +33,7 @@ public class DeleteBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConflictResolution")
     public DeleteBackendAPIRequestBodyResourceConfigConflictResolution conflictResolution;
+
     public DeleteBackendAPIRequestBodyResourceConfig withConflictResolution(DeleteBackendAPIRequestBodyResourceConfigConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -39,6 +42,7 @@ public class DeleteBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAuthType")
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthType defaultAuthType;
+
     public DeleteBackendAPIRequestBodyResourceConfig withDefaultAuthType(DeleteBackendAPIRequestBodyResourceConfigDefaultAuthType defaultAuthType) {
         this.defaultAuthType = defaultAuthType;
         return this;
@@ -47,6 +51,7 @@ public class DeleteBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public DeleteBackendAPIRequestBodyResourceConfig withService(String service) {
         this.service = service;
         return this;
@@ -55,9 +60,11 @@ public class DeleteBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformSchema")
     public String transformSchema;
+
     public DeleteBackendAPIRequestBodyResourceConfig withTransformSchema(String transformSchema) {
         this.transformSchema = transformSchema;
         return this;
     }
     
+    public DeleteBackendAPIRequestBodyResourceConfig(){}
 }

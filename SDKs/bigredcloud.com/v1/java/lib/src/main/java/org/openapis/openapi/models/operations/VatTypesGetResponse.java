@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VatTypesGetResponse {
     
     public String contentType;
+
     public VatTypesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VatTypesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.PageResultVatTypeDto pageResultVatTypeDto;
+
     public VatTypesGetResponse withPageResultVatTypeDto(org.openapis.openapi.models.shared.PageResultVatTypeDto pageResultVatTypeDto) {
         this.pageResultVatTypeDto = pageResultVatTypeDto;
         return this;
@@ -26,6 +29,7 @@ public class VatTypesGetResponse {
     
     
     public Integer statusCode;
+
     public VatTypesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VatTypesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VatTypesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VatTypesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public EnterpriseCrmEventbusProtoAddress withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseCrmEventbusProtoAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseCrmEventbusProtoAddress withName(String name) {
         this.name = name;
         return this;
@@ -34,9 +36,11 @@ public class EnterpriseCrmEventbusProtoAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens")
     public EnterpriseCrmEventbusProtoToken[] tokens;
+
     public EnterpriseCrmEventbusProtoAddress withTokens(EnterpriseCrmEventbusProtoToken[] tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoAddress(){}
 }

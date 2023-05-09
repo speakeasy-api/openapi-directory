@@ -12,6 +12,7 @@ public class ListTeamMemberBookingProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bookable_only")
     public Boolean bookableOnly;
+
     public ListTeamMemberBookingProfilesRequest withBookableOnly(Boolean bookableOnly) {
         this.bookableOnly = bookableOnly;
         return this;
@@ -22,6 +23,7 @@ public class ListTeamMemberBookingProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListTeamMemberBookingProfilesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +34,7 @@ public class ListTeamMemberBookingProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListTeamMemberBookingProfilesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,9 +45,11 @@ public class ListTeamMemberBookingProfilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListTeamMemberBookingProfilesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public ListTeamMemberBookingProfilesRequest(){}
 }

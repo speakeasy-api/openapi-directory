@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class StackInstanceComprehensiveStatus {
     
     public StackInstanceDetailedStatusEnum detailedStatus;
+
     public StackInstanceComprehensiveStatus withDetailedStatus(StackInstanceDetailedStatusEnum detailedStatus) {
         this.detailedStatus = detailedStatus;
         return this;
     }
     
+    public StackInstanceComprehensiveStatus(){}
 }

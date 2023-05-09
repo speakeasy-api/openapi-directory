@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReturnShippingLabelResponse {
@@ -12,6 +13,7 @@ public class CreateReturnShippingLabelResponse {
      */
     
     public Object conflictException;
+
     public CreateReturnShippingLabelResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateReturnShippingLabelResponse {
     
     
     public String contentType;
+
     public CreateReturnShippingLabelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateReturnShippingLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateReturnShippingLabelResult createReturnShippingLabelResult;
+
     public CreateReturnShippingLabelResponse withCreateReturnShippingLabelResult(org.openapis.openapi.models.shared.CreateReturnShippingLabelResult createReturnShippingLabelResult) {
         this.createReturnShippingLabelResult = createReturnShippingLabelResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateReturnShippingLabelResponse {
      */
     
     public Object invalidInputCombinationException;
+
     public CreateReturnShippingLabelResponse withInvalidInputCombinationException(Object invalidInputCombinationException) {
         this.invalidInputCombinationException = invalidInputCombinationException;
         return this;
@@ -49,6 +54,7 @@ public class CreateReturnShippingLabelResponse {
      */
     
     public Object invalidJobStateException;
+
     public CreateReturnShippingLabelResponse withInvalidJobStateException(Object invalidJobStateException) {
         this.invalidJobStateException = invalidJobStateException;
         return this;
@@ -59,6 +65,7 @@ public class CreateReturnShippingLabelResponse {
      */
     
     public Object invalidResourceException;
+
     public CreateReturnShippingLabelResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateReturnShippingLabelResponse {
      */
     
     public Object returnShippingLabelAlreadyExistsException;
+
     public CreateReturnShippingLabelResponse withReturnShippingLabelAlreadyExistsException(Object returnShippingLabelAlreadyExistsException) {
         this.returnShippingLabelAlreadyExistsException = returnShippingLabelAlreadyExistsException;
         return this;
@@ -76,6 +84,7 @@ public class CreateReturnShippingLabelResponse {
     
     
     public Integer statusCode;
+
     public CreateReturnShippingLabelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateReturnShippingLabelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReturnShippingLabelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateReturnShippingLabelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

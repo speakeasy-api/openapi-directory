@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFormatEnum;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
@@ -14,20 +13,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                format = "xml";
-                ip = "provident";
-                key = "distinctio";
+            GetRequest req = new GetRequest("corrupti", "provident") {{
+                format = GetFormatEnum.XML;
                 package_ = "quibusdam";
-            }}            
+            }};            
 
             GetResponse res = sdk.get(req);
 
-            if (res.get200TextHTMLString.isPresent()) {
+            if (res.get200TextHTMLString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

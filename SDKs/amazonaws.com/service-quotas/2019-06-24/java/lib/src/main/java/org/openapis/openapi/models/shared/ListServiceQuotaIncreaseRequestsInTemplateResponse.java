@@ -15,6 +15,7 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListServiceQuotaIncreaseRequestsInTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceQuotaIncreaseRequestInTemplateList")
     public ServiceQuotaIncreaseRequestInTemplate[] serviceQuotaIncreaseRequestInTemplateList;
+
     public ListServiceQuotaIncreaseRequestsInTemplateResponse withServiceQuotaIncreaseRequestInTemplateList(ServiceQuotaIncreaseRequestInTemplate[] serviceQuotaIncreaseRequestInTemplateList) {
         this.serviceQuotaIncreaseRequestInTemplateList = serviceQuotaIncreaseRequestInTemplateList;
         return this;
     }
     
+    public ListServiceQuotaIncreaseRequestsInTemplateResponse(){}
 }

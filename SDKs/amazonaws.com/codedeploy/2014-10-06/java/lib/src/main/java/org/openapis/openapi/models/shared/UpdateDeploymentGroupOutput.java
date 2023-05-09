@@ -15,9 +15,11 @@ public class UpdateDeploymentGroupOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hooksNotCleanedUp")
     public AutoScalingGroup[] hooksNotCleanedUp;
+
     public UpdateDeploymentGroupOutput withHooksNotCleanedUp(AutoScalingGroup[] hooksNotCleanedUp) {
         this.hooksNotCleanedUp = hooksNotCleanedUp;
         return this;
     }
     
+    public UpdateDeploymentGroupOutput(){}
 }

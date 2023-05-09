@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DnsConfig {
     @JsonProperty("DnsRecords")
     public DnsRecord[] dnsRecords;
+
     public DnsConfig withDnsRecords(DnsRecord[] dnsRecords) {
         this.dnsRecords = dnsRecords;
         return this;
@@ -22,6 +23,7 @@ public class DnsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamespaceId")
     public String namespaceId;
+
     public DnsConfig withNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
@@ -30,9 +32,13 @@ public class DnsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoutingPolicy")
     public RoutingPolicyEnum routingPolicy;
+
     public DnsConfig withRoutingPolicy(RoutingPolicyEnum routingPolicy) {
         this.routingPolicy = routingPolicy;
         return this;
     }
     
+    public DnsConfig(@JsonProperty("DnsRecords") DnsRecord[] dnsRecords) {
+        this.dnsRecords = dnsRecords;
+  }
 }

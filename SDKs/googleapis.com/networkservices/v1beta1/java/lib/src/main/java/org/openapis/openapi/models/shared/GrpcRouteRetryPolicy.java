@@ -18,6 +18,7 @@ public class GrpcRouteRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numRetries")
     public Long numRetries;
+
     public GrpcRouteRetryPolicy withNumRetries(Long numRetries) {
         this.numRetries = numRetries;
         return this;
@@ -29,9 +30,11 @@ public class GrpcRouteRetryPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryConditions")
     public String[] retryConditions;
+
     public GrpcRouteRetryPolicy withRetryConditions(String[] retryConditions) {
         this.retryConditions = retryConditions;
         return this;
     }
     
+    public GrpcRouteRetryPolicy(){}
 }

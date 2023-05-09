@@ -12,9 +12,11 @@ public class GetLocationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetLocationsRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetLocationsRequest(){}
 }

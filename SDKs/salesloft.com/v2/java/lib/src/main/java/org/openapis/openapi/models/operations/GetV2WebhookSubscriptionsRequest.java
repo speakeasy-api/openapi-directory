@@ -12,9 +12,11 @@ public class GetV2WebhookSubscriptionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enabled")
     public Boolean enabled;
+
     public GetV2WebhookSubscriptionsRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GetV2WebhookSubscriptionsRequest(){}
 }

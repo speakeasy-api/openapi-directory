@@ -15,9 +15,11 @@ public class DeleteEnvironmentTemplateVersionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentTemplateVersion")
     public EnvironmentTemplateVersion environmentTemplateVersion;
+
     public DeleteEnvironmentTemplateVersionOutput withEnvironmentTemplateVersion(EnvironmentTemplateVersion environmentTemplateVersion) {
         this.environmentTemplateVersion = environmentTemplateVersion;
         return this;
     }
     
+    public DeleteEnvironmentTemplateVersionOutput(){}
 }

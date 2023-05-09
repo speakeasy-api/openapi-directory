@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeTypeOutput {
     
     public String arn;
+
     public DescribeTypeOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTypeOutput {
     
     
     public Boolean autoUpdate;
+
     public DescribeTypeOutput withAutoUpdate(Boolean autoUpdate) {
         this.autoUpdate = autoUpdate;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTypeOutput {
     
     
     public String configurationSchema;
+
     public DescribeTypeOutput withConfigurationSchema(String configurationSchema) {
         this.configurationSchema = configurationSchema;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTypeOutput {
     
     
     public String defaultVersionId;
+
     public DescribeTypeOutput withDefaultVersionId(String defaultVersionId) {
         this.defaultVersionId = defaultVersionId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTypeOutput {
     
     
     public DeprecatedStatusEnum deprecatedStatus;
+
     public DescribeTypeOutput withDeprecatedStatus(DeprecatedStatusEnum deprecatedStatus) {
         this.deprecatedStatus = deprecatedStatus;
         return this;
@@ -47,6 +52,7 @@ public class DescribeTypeOutput {
     
     
     public String description;
+
     public DescribeTypeOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +60,7 @@ public class DescribeTypeOutput {
     
     
     public String documentationUrl;
+
     public DescribeTypeOutput withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -61,6 +68,7 @@ public class DescribeTypeOutput {
     
     
     public String executionRoleArn;
+
     public DescribeTypeOutput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -68,6 +76,7 @@ public class DescribeTypeOutput {
     
     
     public Boolean isActivated;
+
     public DescribeTypeOutput withIsActivated(Boolean isActivated) {
         this.isActivated = isActivated;
         return this;
@@ -75,6 +84,7 @@ public class DescribeTypeOutput {
     
     
     public Boolean isDefaultVersion;
+
     public DescribeTypeOutput withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -82,6 +92,7 @@ public class DescribeTypeOutput {
     
     
     public OffsetDateTime lastUpdated;
+
     public DescribeTypeOutput withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -89,6 +100,7 @@ public class DescribeTypeOutput {
     
     
     public String latestPublicVersion;
+
     public DescribeTypeOutput withLatestPublicVersion(String latestPublicVersion) {
         this.latestPublicVersion = latestPublicVersion;
         return this;
@@ -96,6 +108,7 @@ public class DescribeTypeOutput {
     
     
     public LoggingConfig loggingConfig;
+
     public DescribeTypeOutput withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -103,6 +116,7 @@ public class DescribeTypeOutput {
     
     
     public String originalTypeArn;
+
     public DescribeTypeOutput withOriginalTypeArn(String originalTypeArn) {
         this.originalTypeArn = originalTypeArn;
         return this;
@@ -110,6 +124,7 @@ public class DescribeTypeOutput {
     
     
     public String originalTypeName;
+
     public DescribeTypeOutput withOriginalTypeName(String originalTypeName) {
         this.originalTypeName = originalTypeName;
         return this;
@@ -117,6 +132,7 @@ public class DescribeTypeOutput {
     
     
     public ProvisioningTypeEnum provisioningType;
+
     public DescribeTypeOutput withProvisioningType(ProvisioningTypeEnum provisioningType) {
         this.provisioningType = provisioningType;
         return this;
@@ -124,6 +140,7 @@ public class DescribeTypeOutput {
     
     
     public String publicVersionNumber;
+
     public DescribeTypeOutput withPublicVersionNumber(String publicVersionNumber) {
         this.publicVersionNumber = publicVersionNumber;
         return this;
@@ -131,6 +148,7 @@ public class DescribeTypeOutput {
     
     
     public String publisherId;
+
     public DescribeTypeOutput withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -138,6 +156,7 @@ public class DescribeTypeOutput {
     
     
     public RequiredActivatedType[] requiredActivatedTypes;
+
     public DescribeTypeOutput withRequiredActivatedTypes(RequiredActivatedType[] requiredActivatedTypes) {
         this.requiredActivatedTypes = requiredActivatedTypes;
         return this;
@@ -145,6 +164,7 @@ public class DescribeTypeOutput {
     
     
     public String schema;
+
     public DescribeTypeOutput withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -152,6 +172,7 @@ public class DescribeTypeOutput {
     
     
     public String sourceUrl;
+
     public DescribeTypeOutput withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
@@ -159,6 +180,7 @@ public class DescribeTypeOutput {
     
     
     public OffsetDateTime timeCreated;
+
     public DescribeTypeOutput withTimeCreated(OffsetDateTime timeCreated) {
         this.timeCreated = timeCreated;
         return this;
@@ -166,6 +188,7 @@ public class DescribeTypeOutput {
     
     
     public RegistryTypeEnum type;
+
     public DescribeTypeOutput withType(RegistryTypeEnum type) {
         this.type = type;
         return this;
@@ -173,6 +196,7 @@ public class DescribeTypeOutput {
     
     
     public String typeName;
+
     public DescribeTypeOutput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -180,6 +204,7 @@ public class DescribeTypeOutput {
     
     
     public TypeTestsStatusEnum typeTestsStatus;
+
     public DescribeTypeOutput withTypeTestsStatus(TypeTestsStatusEnum typeTestsStatus) {
         this.typeTestsStatus = typeTestsStatus;
         return this;
@@ -187,6 +212,7 @@ public class DescribeTypeOutput {
     
     
     public String typeTestsStatusDescription;
+
     public DescribeTypeOutput withTypeTestsStatusDescription(String typeTestsStatusDescription) {
         this.typeTestsStatusDescription = typeTestsStatusDescription;
         return this;
@@ -194,9 +220,11 @@ public class DescribeTypeOutput {
     
     
     public VisibilityEnum visibility;
+
     public DescribeTypeOutput withVisibility(VisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public DescribeTypeOutput(){}
 }

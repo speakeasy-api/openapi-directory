@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTableColumnsResponse {
@@ -12,6 +13,7 @@ public class ListTableColumnsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTableColumnsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTableColumnsResponse {
     
     
     public String contentType;
+
     public ListTableColumnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTableColumnsResponse {
      */
     
     public Object internalServerException;
+
     public ListTableColumnsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTableColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTableColumnsResult listTableColumnsResult;
+
     public ListTableColumnsResponse withListTableColumnsResult(org.openapis.openapi.models.shared.ListTableColumnsResult listTableColumnsResult) {
         this.listTableColumnsResult = listTableColumnsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListTableColumnsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListTableColumnsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListTableColumnsResponse {
     
     
     public Integer statusCode;
+
     public ListTableColumnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListTableColumnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTableColumnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListTableColumnsResponse {
      */
     
     public Object requestTimeoutException;
+
     public ListTableColumnsResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -83,6 +92,7 @@ public class ListTableColumnsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTableColumnsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class ListTableColumnsResponse {
      */
     
     public Object throttlingException;
+
     public ListTableColumnsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListTableColumnsResponse {
      */
     
     public Object validationException;
+
     public ListTableColumnsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTableColumnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PublishFindingToSnsParams {
     @JsonProperty("topicArn")
     public String topicArn;
+
     public PublishFindingToSnsParams withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
     
+    public PublishFindingToSnsParams(@JsonProperty("topicArn") String topicArn) {
+        this.topicArn = topicArn;
+  }
 }

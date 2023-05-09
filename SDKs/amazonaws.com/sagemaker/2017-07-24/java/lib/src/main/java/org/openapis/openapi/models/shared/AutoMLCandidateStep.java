@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoMLCandidateStep {
     @JsonProperty("CandidateStepArn")
     public String candidateStepArn;
+
     public AutoMLCandidateStep withCandidateStepArn(String candidateStepArn) {
         this.candidateStepArn = candidateStepArn;
         return this;
@@ -19,6 +20,7 @@ public class AutoMLCandidateStep {
     
     @JsonProperty("CandidateStepName")
     public String candidateStepName;
+
     public AutoMLCandidateStep withCandidateStepName(String candidateStepName) {
         this.candidateStepName = candidateStepName;
         return this;
@@ -26,9 +28,15 @@ public class AutoMLCandidateStep {
     
     @JsonProperty("CandidateStepType")
     public CandidateStepTypeEnum candidateStepType;
+
     public AutoMLCandidateStep withCandidateStepType(CandidateStepTypeEnum candidateStepType) {
         this.candidateStepType = candidateStepType;
         return this;
     }
     
+    public AutoMLCandidateStep(@JsonProperty("CandidateStepArn") String candidateStepArn, @JsonProperty("CandidateStepName") String candidateStepName, @JsonProperty("CandidateStepType") CandidateStepTypeEnum candidateStepType) {
+        this.candidateStepArn = candidateStepArn;
+        this.candidateStepName = candidateStepName;
+        this.candidateStepType = candidateStepType;
+  }
 }

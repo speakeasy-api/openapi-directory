@@ -15,6 +15,7 @@ public class StockData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketIdentifier")
     public String marketIdentifier;
+
     public StockData withMarketIdentifier(String marketIdentifier) {
         this.marketIdentifier = marketIdentifier;
         return this;
@@ -26,6 +27,7 @@ public class StockData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockNumber")
     public String stockNumber;
+
     public StockData withStockNumber(String stockNumber) {
         this.stockNumber = stockNumber;
         return this;
@@ -37,9 +39,11 @@ public class StockData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tickerSymbol")
     public String tickerSymbol;
+
     public StockData withTickerSymbol(String tickerSymbol) {
         this.tickerSymbol = tickerSymbol;
         return this;
     }
     
+    public StockData(){}
 }

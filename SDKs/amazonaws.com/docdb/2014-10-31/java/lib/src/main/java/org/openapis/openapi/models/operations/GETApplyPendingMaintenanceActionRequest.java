@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETApplyPendingMaintenanceActionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETApplyPendingMaintenanceActionActionEnum action;
+
     public GETApplyPendingMaintenanceActionRequest withAction(GETApplyPendingMaintenanceActionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETApplyPendingMaintenanceActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyAction")
     public String applyAction;
+
     public GETApplyPendingMaintenanceActionRequest withApplyAction(String applyAction) {
         this.applyAction = applyAction;
         return this;
@@ -29,6 +32,7 @@ public class GETApplyPendingMaintenanceActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptInType")
     public String optInType;
+
     public GETApplyPendingMaintenanceActionRequest withOptInType(String optInType) {
         this.optInType = optInType;
         return this;
@@ -39,6 +43,7 @@ public class GETApplyPendingMaintenanceActionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceIdentifier")
     public String resourceIdentifier;
+
     public GETApplyPendingMaintenanceActionRequest withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -46,6 +51,7 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETApplyPendingMaintenanceActionVersionEnum version;
+
     public GETApplyPendingMaintenanceActionRequest withVersion(GETApplyPendingMaintenanceActionVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETApplyPendingMaintenanceActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETApplyPendingMaintenanceActionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETApplyPendingMaintenanceActionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETApplyPendingMaintenanceActionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETApplyPendingMaintenanceActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETApplyPendingMaintenanceActionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETApplyPendingMaintenanceActionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETApplyPendingMaintenanceActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETApplyPendingMaintenanceActionRequest(@JsonProperty("Action") GETApplyPendingMaintenanceActionActionEnum action, @JsonProperty("ApplyAction") String applyAction, @JsonProperty("OptInType") String optInType, @JsonProperty("ResourceIdentifier") String resourceIdentifier, @JsonProperty("Version") GETApplyPendingMaintenanceActionVersionEnum version) {
+        this.action = action;
+        this.applyAction = applyAction;
+        this.optInType = optInType;
+        this.resourceIdentifier = resourceIdentifier;
+        this.version = version;
+  }
 }

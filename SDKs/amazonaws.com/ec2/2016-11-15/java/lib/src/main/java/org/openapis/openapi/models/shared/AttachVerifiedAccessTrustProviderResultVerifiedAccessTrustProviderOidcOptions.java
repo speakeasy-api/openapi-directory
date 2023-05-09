@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The OpenID Connect details for an &lt;code&gt;oidc&lt;/code&gt;-type, user-identity based trust provider.
+ * AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The options for an OpenID Connect-compatible user-identity trust provider.
  */
 public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions {
     
     public String authorizationEndpoint;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String clientId;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -26,6 +28,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String clientSecret;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -33,6 +36,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String issuer;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +44,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String scope;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withScope(String scope) {
         this.scope = scope;
         return this;
@@ -47,6 +52,7 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String tokenEndpoint;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -54,9 +60,11 @@ public class AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String userInfoEndpoint;
+
     public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withUserInfoEndpoint(String userInfoEndpoint) {
         this.userInfoEndpoint = userInfoEndpoint;
         return this;
     }
     
+    public AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions(){}
 }

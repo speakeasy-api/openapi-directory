@@ -20,6 +20,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Content")
     public String content;
+
     public ModelCard withContent(String content) {
         this.content = content;
         return this;
@@ -31,6 +32,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public ModelCard withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -41,6 +43,7 @@ public class ModelCard {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ModelCard withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -52,6 +55,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public ModelCard withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -62,6 +66,7 @@ public class ModelCard {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ModelCard withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -70,6 +75,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardArn")
     public String modelCardArn;
+
     public ModelCard withModelCardArn(String modelCardArn) {
         this.modelCardArn = modelCardArn;
         return this;
@@ -78,6 +84,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public ModelCard withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -86,6 +93,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardStatus")
     public ModelCardStatusEnum modelCardStatus;
+
     public ModelCard withModelCardStatus(ModelCardStatusEnum modelCardStatus) {
         this.modelCardStatus = modelCardStatus;
         return this;
@@ -94,6 +102,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public ModelCard withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
@@ -102,6 +111,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelId")
     public String modelId;
+
     public ModelCard withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -110,6 +120,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskRating")
     public String riskRating;
+
     public ModelCard withRiskRating(String riskRating) {
         this.riskRating = riskRating;
         return this;
@@ -118,6 +129,7 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfig")
     public ModelCardSecurityConfig securityConfig;
+
     public ModelCard withSecurityConfig(ModelCardSecurityConfig securityConfig) {
         this.securityConfig = securityConfig;
         return this;
@@ -126,9 +138,11 @@ public class ModelCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ModelCard withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ModelCard(){}
 }

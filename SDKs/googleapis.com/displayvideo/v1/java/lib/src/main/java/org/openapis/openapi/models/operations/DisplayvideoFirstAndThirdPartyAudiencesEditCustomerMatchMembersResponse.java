@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse {
     
     public String contentType;
+
     public DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResp
      */
     
     public org.openapis.openapi.models.shared.EditCustomerMatchMembersResponse editCustomerMatchMembersResponse;
+
     public DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse withEditCustomerMatchMembersResponse(org.openapis.openapi.models.shared.EditCustomerMatchMembersResponse editCustomerMatchMembersResponse) {
         this.editCustomerMatchMembersResponse = editCustomerMatchMembersResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResp
     
     
     public Integer statusCode;
+
     public DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

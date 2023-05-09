@@ -25,6 +25,7 @@ public class RecurringDetailsResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public RecurringDetailsResult withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -36,6 +37,7 @@ public class RecurringDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public RecurringDetail[] details;
+
     public RecurringDetailsResult withDetails(RecurringDetail[] details) {
         this.details = details;
         return this;
@@ -47,6 +49,7 @@ public class RecurringDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastKnownShopperEmail")
     public String lastKnownShopperEmail;
+
     public RecurringDetailsResult withLastKnownShopperEmail(String lastKnownShopperEmail) {
         this.lastKnownShopperEmail = lastKnownShopperEmail;
         return this;
@@ -58,9 +61,11 @@ public class RecurringDetailsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public RecurringDetailsResult withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
     }
     
+    public RecurringDetailsResult(){}
 }

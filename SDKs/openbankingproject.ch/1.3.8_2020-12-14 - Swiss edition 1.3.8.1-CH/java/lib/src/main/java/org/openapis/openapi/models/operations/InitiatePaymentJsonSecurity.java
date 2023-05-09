@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class InitiatePaymentJsonSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerAuthOAuth;
+
     public InitiatePaymentJsonSecurity withBearerAuthOAuth(String bearerAuthOAuth) {
         this.bearerAuthOAuth = bearerAuthOAuth;
         return this;
     }
     
+    public InitiatePaymentJsonSecurity(){}
 }

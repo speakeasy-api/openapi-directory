@@ -61,6 +61,7 @@ public class EventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public EventResponse withAction(String action) {
         this.action = action;
         return this;
@@ -72,6 +73,7 @@ public class EventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change")
     public EventResponseChange change;
+
     public EventResponse withChange(EventResponseChange change) {
         this.change = change;
         return this;
@@ -85,6 +87,7 @@ public class EventResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public EventResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -93,6 +96,7 @@ public class EventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public AsanaNamedResource parent;
+
     public EventResponse withParent(AsanaNamedResource parent) {
         this.parent = parent;
         return this;
@@ -101,6 +105,7 @@ public class EventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public AsanaNamedResource resource;
+
     public EventResponse withResource(AsanaNamedResource resource) {
         this.resource = resource;
         return this;
@@ -112,6 +117,7 @@ public class EventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public EventResponse withType(String type) {
         this.type = type;
         return this;
@@ -120,9 +126,11 @@ public class EventResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserCompact user;
+
     public EventResponse withUser(UserCompact user) {
         this.user = user;
         return this;
     }
     
+    public EventResponse(){}
 }

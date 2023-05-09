@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.RotoballerArticlesFormatEnum;
 import org.openapis.openapi.models.operations.RotoballerArticlesRequest;
 import org.openapis.openapi.models.operations.RotoballerArticlesResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,29 +30,29 @@ public class Application {
                 }})
                 .build();
 
-            RotoballerArticlesRequest req = new RotoballerArticlesRequest() {{
-                format = "json";
-            }}            
+            RotoballerArticlesRequest req = new RotoballerArticlesRequest(RotoballerArticlesFormatEnum.JSON);            
 
             RotoballerArticlesResponse res = sdk.rotoballerArticles(req);
 
-            if (res.articles.isPresent()) {
+            if (res.articles != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `rotoballerArticles` - RotoBaller Articles
-* `rotoballerArticlesByDate` - RotoBaller Articles By Date
-* `rotoballerArticlesByPlayer` - RotoBaller Articles By Player
+* [rotoballerArticles](docs/sdk/README.md#rotoballerarticles) - RotoBaller Articles
+* [rotoballerArticlesByDate](docs/sdk/README.md#rotoballerarticlesbydate) - RotoBaller Articles By Date
+* [rotoballerArticlesByPlayer](docs/sdk/README.md#rotoballerarticlesbyplayer) - RotoBaller Articles By Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

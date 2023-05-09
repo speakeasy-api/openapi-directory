@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     public Boolean enableAcceleration;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withEnableAcceleration(Boolean enableAcceleration) {
         this.enableAcceleration = enableAcceleration;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public String localIpv4NetworkCidr;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withLocalIpv4NetworkCidr(String localIpv4NetworkCidr) {
         this.localIpv4NetworkCidr = localIpv4NetworkCidr;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public String localIpv6NetworkCidr;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withLocalIpv6NetworkCidr(String localIpv6NetworkCidr) {
         this.localIpv6NetworkCidr = localIpv6NetworkCidr;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public String outsideIpAddressType;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withOutsideIpAddressType(String outsideIpAddressType) {
         this.outsideIpAddressType = outsideIpAddressType;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public String remoteIpv4NetworkCidr;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withRemoteIpv4NetworkCidr(String remoteIpv4NetworkCidr) {
         this.remoteIpv4NetworkCidr = remoteIpv4NetworkCidr;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public String remoteIpv6NetworkCidr;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withRemoteIpv6NetworkCidr(String remoteIpv6NetworkCidr) {
         this.remoteIpv6NetworkCidr = remoteIpv6NetworkCidr;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public Boolean staticRoutesOnly;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withStaticRoutesOnly(Boolean staticRoutesOnly) {
         this.staticRoutesOnly = staticRoutesOnly;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public String transportTransitGatewayAttachmentId;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withTransportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
         this.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsOptionsTunnelInsideIpVersionEnum tunnelInsideIpVersion;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withTunnelInsideIpVersion(DescribeVpnConnectionsResultVpnConnectionsOptionsTunnelInsideIpVersionEnum tunnelInsideIpVersion) {
         this.tunnelInsideIpVersion = tunnelInsideIpVersion;
         return this;
@@ -75,9 +84,11 @@ public class DescribeVpnConnectionsResultVpnConnectionsOptions {
     
     
     public DescribeVpnConnectionsResultVpnConnectionsOptionsTunnelOptions[] tunnelOptions;
+
     public DescribeVpnConnectionsResultVpnConnectionsOptions withTunnelOptions(DescribeVpnConnectionsResultVpnConnectionsOptionsTunnelOptions[] tunnelOptions) {
         this.tunnelOptions = tunnelOptions;
         return this;
     }
     
+    public DescribeVpnConnectionsResultVpnConnectionsOptions(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSchemaResponse {
@@ -12,6 +13,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteSchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSchemaResponse {
     
     
     public String contentType;
+
     public DeleteSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteSchemaResponse deleteSchemaResponse;
+
     public DeleteSchemaResponse withDeleteSchemaResponse(org.openapis.openapi.models.shared.DeleteSchemaResponse deleteSchemaResponse) {
         this.deleteSchemaResponse = deleteSchemaResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteSchemaResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object invalidArnException;
+
     public DeleteSchemaResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteSchemaResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteSchemaResponse {
     
     
     public Integer statusCode;
+
     public DeleteSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSchemaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object retryableConflictException;
+
     public DeleteSchemaResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteSchemaResponse {
      */
     
     public Object stillContainsLinksException;
+
     public DeleteSchemaResponse withStillContainsLinksException(Object stillContainsLinksException) {
         this.stillContainsLinksException = stillContainsLinksException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteSchemaResponse {
      */
     
     public Object validationException;
+
     public DeleteSchemaResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

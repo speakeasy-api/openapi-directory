@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportSnapshotResult {
     
     public String description;
+
     public ImportSnapshotResult withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ImportSnapshotResult {
     
     
     public String importTaskId;
+
     public ImportSnapshotResult withImportTaskId(String importTaskId) {
         this.importTaskId = importTaskId;
         return this;
@@ -26,6 +28,7 @@ public class ImportSnapshotResult {
     
     
     public ImportSnapshotResultSnapshotTaskDetail snapshotTaskDetail;
+
     public ImportSnapshotResult withSnapshotTaskDetail(ImportSnapshotResultSnapshotTaskDetail snapshotTaskDetail) {
         this.snapshotTaskDetail = snapshotTaskDetail;
         return this;
@@ -33,9 +36,11 @@ public class ImportSnapshotResult {
     
     
     public ImportSnapshotResultTags[] tags;
+
     public ImportSnapshotResult withTags(ImportSnapshotResultTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportSnapshotResult(){}
 }

@@ -15,6 +15,7 @@ public class ServiceConnectServiceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoveryArn")
     public String discoveryArn;
+
     public ServiceConnectServiceResource withDiscoveryArn(String discoveryArn) {
         this.discoveryArn = discoveryArn;
         return this;
@@ -23,9 +24,11 @@ public class ServiceConnectServiceResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoveryName")
     public String discoveryName;
+
     public ServiceConnectServiceResource withDiscoveryName(String discoveryName) {
         this.discoveryName = discoveryName;
         return this;
     }
     
+    public ServiceConnectServiceResource(){}
 }

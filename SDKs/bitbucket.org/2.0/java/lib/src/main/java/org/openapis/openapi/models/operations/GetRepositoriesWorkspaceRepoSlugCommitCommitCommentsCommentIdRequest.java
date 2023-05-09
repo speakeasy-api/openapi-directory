@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -22,6 +24,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -34,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -46,9 +50,16 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRequest(@JsonProperty("comment_id") Long commentId, @JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.commentId = commentId;
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

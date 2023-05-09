@@ -18,9 +18,11 @@ public class ShoppingAdsProgramStatusReviewIneligibilityReasonDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cooldownTime")
     public String cooldownTime;
+
     public ShoppingAdsProgramStatusReviewIneligibilityReasonDetails withCooldownTime(String cooldownTime) {
         this.cooldownTime = cooldownTime;
         return this;
     }
     
+    public ShoppingAdsProgramStatusReviewIneligibilityReasonDetails(){}
 }

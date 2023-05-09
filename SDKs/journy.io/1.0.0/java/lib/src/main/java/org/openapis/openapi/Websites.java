@@ -62,7 +62,7 @@ public class Websites {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTrackingSnippetResponse res = new org.openapis.openapi.models.operations.GetTrackingSnippetResponse() {{
+        org.openapis.openapi.models.operations.GetTrackingSnippetResponse res = new org.openapis.openapi.models.operations.GetTrackingSnippetResponse(contentType, httpRes.statusCode()) {{
             getTrackingSnippet200ApplicationJSONObject = null;
             getTrackingSnippet400ApplicationJSONObject = null;
             getTrackingSnippet401ApplicationJSONObject = null;
@@ -71,8 +71,6 @@ public class Websites {
             getTrackingSnippet429ApplicationJSONObject = null;
             getTrackingSnippet500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

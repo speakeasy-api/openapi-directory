@@ -24,9 +24,11 @@ public class CompletionEstimation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("estimate")
     public OffsetDateTime estimate;
+
     public CompletionEstimation withEstimate(OffsetDateTime estimate) {
         this.estimate = estimate;
         return this;
     }
     
+    public CompletionEstimation(){}
 }

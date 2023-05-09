@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotifyAppValidationOutputRequest {
     @JsonProperty("appId")
     public String appId;
+
     public NotifyAppValidationOutputRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -19,9 +20,13 @@ public class NotifyAppValidationOutputRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationContext")
     public NotificationContext notificationContext;
+
     public NotifyAppValidationOutputRequest withNotificationContext(NotificationContext notificationContext) {
         this.notificationContext = notificationContext;
         return this;
     }
     
+    public NotifyAppValidationOutputRequest(@JsonProperty("appId") String appId) {
+        this.appId = appId;
+  }
 }

@@ -18,6 +18,7 @@ public class InstancesGetEffectiveFirewallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicys")
     public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy[] firewallPolicys;
+
     public InstancesGetEffectiveFirewallsResponse withFirewallPolicys(InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy[] firewallPolicys) {
         this.firewallPolicys = firewallPolicys;
         return this;
@@ -29,9 +30,11 @@ public class InstancesGetEffectiveFirewallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewalls")
     public Firewall[] firewalls;
+
     public InstancesGetEffectiveFirewallsResponse withFirewalls(Firewall[] firewalls) {
         this.firewalls = firewalls;
         return this;
     }
     
+    public InstancesGetEffectiveFirewallsResponse(){}
 }

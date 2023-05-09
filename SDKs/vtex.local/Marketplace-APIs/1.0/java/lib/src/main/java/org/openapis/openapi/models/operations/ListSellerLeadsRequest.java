@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSellerLeadsRequest {
@@ -12,6 +13,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ListSellerLeadsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListSellerLeadsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public ListSellerLeadsRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public ListSellerLeadsRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -52,6 +57,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isConnected")
     public String isConnected;
+
     public ListSellerLeadsRequest withIsConnected(String isConnected) {
         this.isConnected = isConnected;
         return this;
@@ -62,6 +68,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ListSellerLeadsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -72,6 +79,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public ListSellerLeadsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -86,6 +94,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public ListSellerLeadsRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -96,6 +105,7 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public ListSellerLeadsRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -106,9 +116,22 @@ public class ListSellerLeadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public ListSellerLeadsRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ListSellerLeadsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment, @JsonProperty("isConnected") String isConnected, @JsonProperty("limit") Integer limit, @JsonProperty("offset") Integer offset, @JsonProperty("orderBy") String orderBy, @JsonProperty("search") String search, @JsonProperty("status") String status) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.environment = environment;
+        this.isConnected = isConnected;
+        this.limit = limit;
+        this.offset = offset;
+        this.orderBy = orderBy;
+        this.search = search;
+        this.status = status;
+  }
 }

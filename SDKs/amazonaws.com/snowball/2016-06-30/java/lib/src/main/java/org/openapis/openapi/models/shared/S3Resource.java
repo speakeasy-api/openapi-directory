@@ -15,6 +15,7 @@ public class S3Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketArn")
     public String bucketArn;
+
     public S3Resource withBucketArn(String bucketArn) {
         this.bucketArn = bucketArn;
         return this;
@@ -23,6 +24,7 @@ public class S3Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyRange")
     public KeyRange keyRange;
+
     public S3Resource withKeyRange(KeyRange keyRange) {
         this.keyRange = keyRange;
         return this;
@@ -31,9 +33,11 @@ public class S3Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetOnDeviceServices")
     public TargetOnDeviceService[] targetOnDeviceServices;
+
     public S3Resource withTargetOnDeviceServices(TargetOnDeviceService[] targetOnDeviceServices) {
         this.targetOnDeviceServices = targetOnDeviceServices;
         return this;
     }
     
+    public S3Resource(){}
 }

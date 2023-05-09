@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileActionCopyRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public FileActionCopyRequestBody requestBody;
+
     public FileActionCopyRequest withRequestBody(FileActionCopyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class FileActionCopyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public FileActionCopyRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public FileActionCopyRequest(@JsonProperty("RequestBody") FileActionCopyRequestBody requestBody, @JsonProperty("path") String path) {
+        this.requestBody = requestBody;
+        this.path = path;
+  }
 }

@@ -18,9 +18,11 @@ public class RunImportJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public RunImportJobRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public RunImportJobRequest(){}
 }

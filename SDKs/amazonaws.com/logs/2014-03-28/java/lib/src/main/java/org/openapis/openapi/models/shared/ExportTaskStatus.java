@@ -15,6 +15,7 @@ public class ExportTaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ExportTaskStatusCodeEnum code;
+
     public ExportTaskStatus withCode(ExportTaskStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class ExportTaskStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ExportTaskStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ExportTaskStatus(){}
 }

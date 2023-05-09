@@ -22,6 +22,7 @@ public class CreateRuleRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endUtcDate")
     public OffsetDateTime endUtcDate;
+
     public CreateRuleRequest withEndUtcDate(OffsetDateTime endUtcDate) {
         this.endUtcDate = endUtcDate;
         return this;
@@ -32,6 +33,7 @@ public class CreateRuleRequest {
      */
     @JsonProperty("optimisationActionName")
     public OptimisationActionNameEnum optimisationActionName;
+
     public CreateRuleRequest withOptimisationActionName(OptimisationActionNameEnum optimisationActionName) {
         this.optimisationActionName = optimisationActionName;
         return this;
@@ -42,6 +44,7 @@ public class CreateRuleRequest {
      */
     @JsonProperty("reportFilterId")
     public String reportFilterId;
+
     public CreateRuleRequest withReportFilterId(String reportFilterId) {
         this.reportFilterId = reportFilterId;
         return this;
@@ -52,6 +55,7 @@ public class CreateRuleRequest {
      */
     @JsonProperty("ruleName")
     public String ruleName;
+
     public CreateRuleRequest withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -65,9 +69,15 @@ public class CreateRuleRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startUtcDate")
     public OffsetDateTime startUtcDate;
+
     public CreateRuleRequest withStartUtcDate(OffsetDateTime startUtcDate) {
         this.startUtcDate = startUtcDate;
         return this;
     }
     
+    public CreateRuleRequest(@JsonProperty("optimisationActionName") OptimisationActionNameEnum optimisationActionName, @JsonProperty("reportFilterId") String reportFilterId, @JsonProperty("ruleName") String ruleName) {
+        this.optimisationActionName = optimisationActionName;
+        this.reportFilterId = reportFilterId;
+        this.ruleName = ruleName;
+  }
 }

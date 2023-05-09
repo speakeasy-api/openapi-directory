@@ -15,9 +15,11 @@ public class SchemaResponseBlocksReadRegistrationSchemaBlockLinks {
      */
     
     public String self;
+
     public SchemaResponseBlocksReadRegistrationSchemaBlockLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public SchemaResponseBlocksReadRegistrationSchemaBlockLinks(){}
 }

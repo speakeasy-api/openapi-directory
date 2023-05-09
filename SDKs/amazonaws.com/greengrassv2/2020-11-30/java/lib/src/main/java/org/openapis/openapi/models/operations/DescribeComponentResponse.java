@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeComponentResponse {
@@ -12,6 +13,7 @@ public class DescribeComponentResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeComponentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeComponentResponse {
     
     
     public String contentType;
+
     public DescribeComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeComponentResponse describeComponentResponse;
+
     public DescribeComponentResponse withDescribeComponentResponse(org.openapis.openapi.models.shared.DescribeComponentResponse describeComponentResponse) {
         this.describeComponentResponse = describeComponentResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeComponentResponse {
      */
     
     public Object internalServerException;
+
     public DescribeComponentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeComponentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeComponentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeComponentResponse {
     
     
     public Integer statusCode;
+
     public DescribeComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeComponentResponse {
      */
     
     public Object throttlingException;
+
     public DescribeComponentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeComponentResponse {
      */
     
     public Object validationException;
+
     public DescribeComponentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

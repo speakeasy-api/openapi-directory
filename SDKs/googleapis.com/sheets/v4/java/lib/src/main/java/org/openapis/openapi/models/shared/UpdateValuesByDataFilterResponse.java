@@ -18,6 +18,7 @@ public class UpdateValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFilter")
     public DataFilter dataFilter;
+
     public UpdateValuesByDataFilterResponse withDataFilter(DataFilter dataFilter) {
         this.dataFilter = dataFilter;
         return this;
@@ -29,6 +30,7 @@ public class UpdateValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedCells")
     public Integer updatedCells;
+
     public UpdateValuesByDataFilterResponse withUpdatedCells(Integer updatedCells) {
         this.updatedCells = updatedCells;
         return this;
@@ -40,6 +42,7 @@ public class UpdateValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedColumns")
     public Integer updatedColumns;
+
     public UpdateValuesByDataFilterResponse withUpdatedColumns(Integer updatedColumns) {
         this.updatedColumns = updatedColumns;
         return this;
@@ -51,6 +54,7 @@ public class UpdateValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedData")
     public ValueRange updatedData;
+
     public UpdateValuesByDataFilterResponse withUpdatedData(ValueRange updatedData) {
         this.updatedData = updatedData;
         return this;
@@ -62,6 +66,7 @@ public class UpdateValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedRange")
     public String updatedRange;
+
     public UpdateValuesByDataFilterResponse withUpdatedRange(String updatedRange) {
         this.updatedRange = updatedRange;
         return this;
@@ -73,9 +78,11 @@ public class UpdateValuesByDataFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedRows")
     public Integer updatedRows;
+
     public UpdateValuesByDataFilterResponse withUpdatedRows(Integer updatedRows) {
         this.updatedRows = updatedRows;
         return this;
     }
     
+    public UpdateValuesByDataFilterResponse(){}
 }

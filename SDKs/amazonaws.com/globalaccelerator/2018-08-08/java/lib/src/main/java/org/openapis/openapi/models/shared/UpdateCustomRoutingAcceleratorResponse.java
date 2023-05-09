@@ -15,9 +15,11 @@ public class UpdateCustomRoutingAcceleratorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Accelerator")
     public CustomRoutingAccelerator accelerator;
+
     public UpdateCustomRoutingAcceleratorResponse withAccelerator(CustomRoutingAccelerator accelerator) {
         this.accelerator = accelerator;
         return this;
     }
     
+    public UpdateCustomRoutingAcceleratorResponse(){}
 }

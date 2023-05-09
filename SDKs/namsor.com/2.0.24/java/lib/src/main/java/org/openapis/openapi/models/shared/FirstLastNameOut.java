@@ -18,6 +18,7 @@ public class FirstLastNameOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNameOut withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -26,6 +27,7 @@ public class FirstLastNameOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNameOut withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class FirstLastNameOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNameOut withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -45,9 +48,11 @@ public class FirstLastNameOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public String script;
+
     public FirstLastNameOut withScript(String script) {
         this.script = script;
         return this;
     }
     
+    public FirstLastNameOut(){}
 }

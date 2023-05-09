@@ -18,6 +18,7 @@ public class OrdersGetByMerchantOrderIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrdersGetByMerchantOrderIdResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class OrdersGetByMerchantOrderIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public OrdersGetByMerchantOrderIdResponse withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public OrdersGetByMerchantOrderIdResponse(){}
 }

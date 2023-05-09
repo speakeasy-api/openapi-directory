@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTAssignPrivateNatGatewayAddressResponse {
     
     public byte[] body;
+
     public POSTAssignPrivateNatGatewayAddressResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTAssignPrivateNatGatewayAddressResponse {
     
     
     public String contentType;
+
     public POSTAssignPrivateNatGatewayAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTAssignPrivateNatGatewayAddressResponse {
     
     
     public Integer statusCode;
+
     public POSTAssignPrivateNatGatewayAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTAssignPrivateNatGatewayAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTAssignPrivateNatGatewayAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTAssignPrivateNatGatewayAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

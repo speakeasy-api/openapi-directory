@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CategoryGroups - The category groups supported by this marketplace
@@ -15,6 +15,7 @@ public class CategoryGroups {
      */
     
     public Category[] categories;
+
     public CategoryGroups withCategories(Category[] categories) {
         this.categories = categories;
         return this;
@@ -25,9 +26,14 @@ public class CategoryGroups {
      */
     
     public String name;
+
     public CategoryGroups withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CategoryGroups(@JsonProperty("categories") Category[] categories, @JsonProperty("name") String name) {
+        this.categories = categories;
+        this.name = name;
+  }
 }

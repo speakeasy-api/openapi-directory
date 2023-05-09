@@ -18,9 +18,11 @@ public class CommonCriteriaModeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonCriteriaModeStatus")
     public CommonCriteriaModeInfoCommonCriteriaModeStatusEnum commonCriteriaModeStatus;
+
     public CommonCriteriaModeInfo withCommonCriteriaModeStatus(CommonCriteriaModeInfoCommonCriteriaModeStatusEnum commonCriteriaModeStatus) {
         this.commonCriteriaModeStatus = commonCriteriaModeStatus;
         return this;
     }
     
+    public CommonCriteriaModeInfo(){}
 }

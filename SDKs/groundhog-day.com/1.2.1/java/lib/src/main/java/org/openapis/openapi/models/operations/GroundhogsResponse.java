@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GroundhogsResponse {
     
     public String contentType;
+
     public GroundhogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GroundhogsResponse {
     
     
     public Integer statusCode;
+
     public GroundhogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GroundhogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GroundhogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GroundhogsResponse {
      */
     
     public Groundhogs200ApplicationJSON groundhogs200ApplicationJSONObject;
+
     public GroundhogsResponse withGroundhogs200ApplicationJSONObject(Groundhogs200ApplicationJSON groundhogs200ApplicationJSONObject) {
         this.groundhogs200ApplicationJSONObject = groundhogs200ApplicationJSONObject;
         return this;
     }
     
+    public GroundhogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -23,6 +23,7 @@ public class MilestoneSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MilestoneName")
     public String milestoneName;
+
     public MilestoneSummary withMilestoneName(String milestoneName) {
         this.milestoneName = milestoneName;
         return this;
@@ -34,6 +35,7 @@ public class MilestoneSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MilestoneNumber")
     public Long milestoneNumber;
+
     public MilestoneSummary withMilestoneNumber(Long milestoneNumber) {
         this.milestoneNumber = milestoneNumber;
         return this;
@@ -47,6 +49,7 @@ public class MilestoneSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RecordedAt")
     public OffsetDateTime recordedAt;
+
     public MilestoneSummary withRecordedAt(OffsetDateTime recordedAt) {
         this.recordedAt = recordedAt;
         return this;
@@ -58,9 +61,11 @@ public class MilestoneSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadSummary")
     public WorkloadSummary workloadSummary;
+
     public MilestoneSummary withWorkloadSummary(WorkloadSummary workloadSummary) {
         this.workloadSummary = workloadSummary;
         return this;
     }
     
+    public MilestoneSummary(){}
 }

@@ -18,6 +18,7 @@ public class UpgradeOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution")
     public UpgradeDistribution distribution;
+
     public UpgradeOccurrence withDistribution(UpgradeDistribution distribution) {
         this.distribution = distribution;
         return this;
@@ -29,6 +30,7 @@ public class UpgradeOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public String package_;
+
     public UpgradeOccurrence withPackage(String package_) {
         this.package_ = package_;
         return this;
@@ -40,6 +42,7 @@ public class UpgradeOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parsedVersion")
     public Version parsedVersion;
+
     public UpgradeOccurrence withParsedVersion(Version parsedVersion) {
         this.parsedVersion = parsedVersion;
         return this;
@@ -51,9 +54,11 @@ public class UpgradeOccurrence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsUpdate")
     public WindowsUpdate windowsUpdate;
+
     public UpgradeOccurrence withWindowsUpdate(WindowsUpdate windowsUpdate) {
         this.windowsUpdate = windowsUpdate;
         return this;
     }
     
+    public UpgradeOccurrence(){}
 }

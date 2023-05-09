@@ -22,6 +22,7 @@ public class Script {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Script withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Script withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +40,7 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScriptArn")
     public String scriptArn;
+
     public Script withScriptArn(String scriptArn) {
         this.scriptArn = scriptArn;
         return this;
@@ -46,6 +49,7 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScriptId")
     public String scriptId;
+
     public Script withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -54,6 +58,7 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeOnDisk")
     public Long sizeOnDisk;
+
     public Script withSizeOnDisk(Long sizeOnDisk) {
         this.sizeOnDisk = sizeOnDisk;
         return this;
@@ -62,6 +67,7 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageLocation")
     public S3Location storageLocation;
+
     public Script withStorageLocation(S3Location storageLocation) {
         this.storageLocation = storageLocation;
         return this;
@@ -70,9 +76,11 @@ public class Script {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public Script withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Script(){}
 }

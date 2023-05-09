@@ -12,9 +12,11 @@ public class DescribeLagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagId")
     public String lagId;
+
     public DescribeLagsRequest withLagId(String lagId) {
         this.lagId = lagId;
         return this;
     }
     
+    public DescribeLagsRequest(){}
 }

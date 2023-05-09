@@ -15,6 +15,7 @@ public class AlsfcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public AlsfcRequestBodyCertificateParameters certificateParameters;
+
     public AlsfcRequestBody withCertificateParameters(AlsfcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class AlsfcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public AlsfcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class AlsfcRequestBody {
      */
     @JsonProperty("format")
     public AlsfcRequestBodyFormatEnum format;
+
     public AlsfcRequestBody withFormat(AlsfcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class AlsfcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public AlsfcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public AlsfcRequestBody(@JsonProperty("format") AlsfcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

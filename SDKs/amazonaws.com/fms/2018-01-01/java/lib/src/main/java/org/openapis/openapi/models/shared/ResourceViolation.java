@@ -15,6 +15,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2InstanceViolation")
     public AwsEc2InstanceViolation awsEc2InstanceViolation;
+
     public ResourceViolation withAwsEc2InstanceViolation(AwsEc2InstanceViolation awsEc2InstanceViolation) {
         this.awsEc2InstanceViolation = awsEc2InstanceViolation;
         return this;
@@ -23,6 +24,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsEc2NetworkInterfaceViolation")
     public AwsEc2NetworkInterfaceViolation awsEc2NetworkInterfaceViolation;
+
     public ResourceViolation withAwsEc2NetworkInterfaceViolation(AwsEc2NetworkInterfaceViolation awsEc2NetworkInterfaceViolation) {
         this.awsEc2NetworkInterfaceViolation = awsEc2NetworkInterfaceViolation;
         return this;
@@ -31,6 +33,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsVPCSecurityGroupViolation")
     public AwsVPCSecurityGroupViolation awsVPCSecurityGroupViolation;
+
     public ResourceViolation withAwsVPCSecurityGroupViolation(AwsVPCSecurityGroupViolation awsVPCSecurityGroupViolation) {
         this.awsVPCSecurityGroupViolation = awsVPCSecurityGroupViolation;
         return this;
@@ -39,6 +42,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsDuplicateRuleGroupViolation")
     public DnsDuplicateRuleGroupViolation dnsDuplicateRuleGroupViolation;
+
     public ResourceViolation withDnsDuplicateRuleGroupViolation(DnsDuplicateRuleGroupViolation dnsDuplicateRuleGroupViolation) {
         this.dnsDuplicateRuleGroupViolation = dnsDuplicateRuleGroupViolation;
         return this;
@@ -47,6 +51,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsRuleGroupLimitExceededViolation")
     public DnsRuleGroupLimitExceededViolation dnsRuleGroupLimitExceededViolation;
+
     public ResourceViolation withDnsRuleGroupLimitExceededViolation(DnsRuleGroupLimitExceededViolation dnsRuleGroupLimitExceededViolation) {
         this.dnsRuleGroupLimitExceededViolation = dnsRuleGroupLimitExceededViolation;
         return this;
@@ -55,6 +60,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsRuleGroupPriorityConflictViolation")
     public DnsRuleGroupPriorityConflictViolation dnsRuleGroupPriorityConflictViolation;
+
     public ResourceViolation withDnsRuleGroupPriorityConflictViolation(DnsRuleGroupPriorityConflictViolation dnsRuleGroupPriorityConflictViolation) {
         this.dnsRuleGroupPriorityConflictViolation = dnsRuleGroupPriorityConflictViolation;
         return this;
@@ -63,6 +69,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallSubnetIsOutOfScopeViolation")
     public FirewallSubnetIsOutOfScopeViolation firewallSubnetIsOutOfScopeViolation;
+
     public ResourceViolation withFirewallSubnetIsOutOfScopeViolation(FirewallSubnetIsOutOfScopeViolation firewallSubnetIsOutOfScopeViolation) {
         this.firewallSubnetIsOutOfScopeViolation = firewallSubnetIsOutOfScopeViolation;
         return this;
@@ -71,6 +78,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallSubnetMissingVPCEndpointViolation")
     public FirewallSubnetMissingVPCEndpointViolation firewallSubnetMissingVPCEndpointViolation;
+
     public ResourceViolation withFirewallSubnetMissingVPCEndpointViolation(FirewallSubnetMissingVPCEndpointViolation firewallSubnetMissingVPCEndpointViolation) {
         this.firewallSubnetMissingVPCEndpointViolation = firewallSubnetMissingVPCEndpointViolation;
         return this;
@@ -82,6 +90,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallBlackHoleRouteDetectedViolation")
     public NetworkFirewallBlackHoleRouteDetectedViolation networkFirewallBlackHoleRouteDetectedViolation;
+
     public ResourceViolation withNetworkFirewallBlackHoleRouteDetectedViolation(NetworkFirewallBlackHoleRouteDetectedViolation networkFirewallBlackHoleRouteDetectedViolation) {
         this.networkFirewallBlackHoleRouteDetectedViolation = networkFirewallBlackHoleRouteDetectedViolation;
         return this;
@@ -90,6 +99,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallInternetTrafficNotInspectedViolation")
     public NetworkFirewallInternetTrafficNotInspectedViolation networkFirewallInternetTrafficNotInspectedViolation;
+
     public ResourceViolation withNetworkFirewallInternetTrafficNotInspectedViolation(NetworkFirewallInternetTrafficNotInspectedViolation networkFirewallInternetTrafficNotInspectedViolation) {
         this.networkFirewallInternetTrafficNotInspectedViolation = networkFirewallInternetTrafficNotInspectedViolation;
         return this;
@@ -98,6 +108,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallInvalidRouteConfigurationViolation")
     public NetworkFirewallInvalidRouteConfigurationViolation networkFirewallInvalidRouteConfigurationViolation;
+
     public ResourceViolation withNetworkFirewallInvalidRouteConfigurationViolation(NetworkFirewallInvalidRouteConfigurationViolation networkFirewallInvalidRouteConfigurationViolation) {
         this.networkFirewallInvalidRouteConfigurationViolation = networkFirewallInvalidRouteConfigurationViolation;
         return this;
@@ -106,6 +117,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallMissingExpectedRTViolation")
     public NetworkFirewallMissingExpectedRTViolation networkFirewallMissingExpectedRTViolation;
+
     public ResourceViolation withNetworkFirewallMissingExpectedRTViolation(NetworkFirewallMissingExpectedRTViolation networkFirewallMissingExpectedRTViolation) {
         this.networkFirewallMissingExpectedRTViolation = networkFirewallMissingExpectedRTViolation;
         return this;
@@ -114,6 +126,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallMissingExpectedRoutesViolation")
     public NetworkFirewallMissingExpectedRoutesViolation networkFirewallMissingExpectedRoutesViolation;
+
     public ResourceViolation withNetworkFirewallMissingExpectedRoutesViolation(NetworkFirewallMissingExpectedRoutesViolation networkFirewallMissingExpectedRoutesViolation) {
         this.networkFirewallMissingExpectedRoutesViolation = networkFirewallMissingExpectedRoutesViolation;
         return this;
@@ -122,6 +135,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallMissingFirewallViolation")
     public NetworkFirewallMissingFirewallViolation networkFirewallMissingFirewallViolation;
+
     public ResourceViolation withNetworkFirewallMissingFirewallViolation(NetworkFirewallMissingFirewallViolation networkFirewallMissingFirewallViolation) {
         this.networkFirewallMissingFirewallViolation = networkFirewallMissingFirewallViolation;
         return this;
@@ -130,6 +144,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallMissingSubnetViolation")
     public NetworkFirewallMissingSubnetViolation networkFirewallMissingSubnetViolation;
+
     public ResourceViolation withNetworkFirewallMissingSubnetViolation(NetworkFirewallMissingSubnetViolation networkFirewallMissingSubnetViolation) {
         this.networkFirewallMissingSubnetViolation = networkFirewallMissingSubnetViolation;
         return this;
@@ -138,6 +153,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallPolicyModifiedViolation")
     public NetworkFirewallPolicyModifiedViolation networkFirewallPolicyModifiedViolation;
+
     public ResourceViolation withNetworkFirewallPolicyModifiedViolation(NetworkFirewallPolicyModifiedViolation networkFirewallPolicyModifiedViolation) {
         this.networkFirewallPolicyModifiedViolation = networkFirewallPolicyModifiedViolation;
         return this;
@@ -146,6 +162,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallUnexpectedFirewallRoutesViolation")
     public NetworkFirewallUnexpectedFirewallRoutesViolation networkFirewallUnexpectedFirewallRoutesViolation;
+
     public ResourceViolation withNetworkFirewallUnexpectedFirewallRoutesViolation(NetworkFirewallUnexpectedFirewallRoutesViolation networkFirewallUnexpectedFirewallRoutesViolation) {
         this.networkFirewallUnexpectedFirewallRoutesViolation = networkFirewallUnexpectedFirewallRoutesViolation;
         return this;
@@ -154,6 +171,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallUnexpectedGatewayRoutesViolation")
     public NetworkFirewallUnexpectedGatewayRoutesViolation networkFirewallUnexpectedGatewayRoutesViolation;
+
     public ResourceViolation withNetworkFirewallUnexpectedGatewayRoutesViolation(NetworkFirewallUnexpectedGatewayRoutesViolation networkFirewallUnexpectedGatewayRoutesViolation) {
         this.networkFirewallUnexpectedGatewayRoutesViolation = networkFirewallUnexpectedGatewayRoutesViolation;
         return this;
@@ -162,6 +180,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PossibleRemediationActions")
     public PossibleRemediationActions possibleRemediationActions;
+
     public ResourceViolation withPossibleRemediationActions(PossibleRemediationActions possibleRemediationActions) {
         this.possibleRemediationActions = possibleRemediationActions;
         return this;
@@ -170,6 +189,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RouteHasOutOfScopeEndpointViolation")
     public RouteHasOutOfScopeEndpointViolation routeHasOutOfScopeEndpointViolation;
+
     public ResourceViolation withRouteHasOutOfScopeEndpointViolation(RouteHasOutOfScopeEndpointViolation routeHasOutOfScopeEndpointViolation) {
         this.routeHasOutOfScopeEndpointViolation = routeHasOutOfScopeEndpointViolation;
         return this;
@@ -178,6 +198,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallMissingExpectedRouteTableViolation")
     public ThirdPartyFirewallMissingExpectedRouteTableViolation thirdPartyFirewallMissingExpectedRouteTableViolation;
+
     public ResourceViolation withThirdPartyFirewallMissingExpectedRouteTableViolation(ThirdPartyFirewallMissingExpectedRouteTableViolation thirdPartyFirewallMissingExpectedRouteTableViolation) {
         this.thirdPartyFirewallMissingExpectedRouteTableViolation = thirdPartyFirewallMissingExpectedRouteTableViolation;
         return this;
@@ -186,6 +207,7 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallMissingFirewallViolation")
     public ThirdPartyFirewallMissingFirewallViolation thirdPartyFirewallMissingFirewallViolation;
+
     public ResourceViolation withThirdPartyFirewallMissingFirewallViolation(ThirdPartyFirewallMissingFirewallViolation thirdPartyFirewallMissingFirewallViolation) {
         this.thirdPartyFirewallMissingFirewallViolation = thirdPartyFirewallMissingFirewallViolation;
         return this;
@@ -194,9 +216,11 @@ public class ResourceViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallMissingSubnetViolation")
     public ThirdPartyFirewallMissingSubnetViolation thirdPartyFirewallMissingSubnetViolation;
+
     public ResourceViolation withThirdPartyFirewallMissingSubnetViolation(ThirdPartyFirewallMissingSubnetViolation thirdPartyFirewallMissingSubnetViolation) {
         this.thirdPartyFirewallMissingSubnetViolation = thirdPartyFirewallMissingSubnetViolation;
         return this;
     }
     
+    public ResourceViolation(){}
 }

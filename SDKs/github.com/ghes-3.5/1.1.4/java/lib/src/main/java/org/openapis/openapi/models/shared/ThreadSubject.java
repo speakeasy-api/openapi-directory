@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ThreadSubject {
     @JsonProperty("latest_comment_url")
     public String latestCommentUrl;
+
     public ThreadSubject withLatestCommentUrl(String latestCommentUrl) {
         this.latestCommentUrl = latestCommentUrl;
         return this;
@@ -16,6 +17,7 @@ public class ThreadSubject {
     
     @JsonProperty("title")
     public String title;
+
     public ThreadSubject withTitle(String title) {
         this.title = title;
         return this;
@@ -23,6 +25,7 @@ public class ThreadSubject {
     
     @JsonProperty("type")
     public String type;
+
     public ThreadSubject withType(String type) {
         this.type = type;
         return this;
@@ -30,9 +33,16 @@ public class ThreadSubject {
     
     @JsonProperty("url")
     public String url;
+
     public ThreadSubject withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ThreadSubject(@JsonProperty("latest_comment_url") String latestCommentUrl, @JsonProperty("title") String title, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.latestCommentUrl = latestCommentUrl;
+        this.title = title;
+        this.type = type;
+        this.url = url;
+  }
 }

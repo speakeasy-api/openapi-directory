@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
     public OffsetDateTime dateUtc;
+
     public DeparturesGetForStopRequest withDateUtc(OffsetDateTime dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -23,6 +25,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DeparturesGetForStopRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -33,6 +36,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction_id")
     public Integer directionId;
+
     public DeparturesGetForStopRequest withDirectionId(Integer directionId) {
         this.directionId = directionId;
         return this;
@@ -44,6 +48,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public DeparturesGetForStopExpandEnum[] expand;
+
     public DeparturesGetForStopRequest withExpand(DeparturesGetForStopExpandEnum[] expand) {
         this.expand = expand;
         return this;
@@ -54,6 +59,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gtfs")
     public Boolean gtfs;
+
     public DeparturesGetForStopRequest withGtfs(Boolean gtfs) {
         this.gtfs = gtfs;
         return this;
@@ -64,6 +70,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_cancelled")
     public Boolean includeCancelled;
+
     public DeparturesGetForStopRequest withIncludeCancelled(Boolean includeCancelled) {
         this.includeCancelled = includeCancelled;
         return this;
@@ -74,6 +81,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
     public Boolean includeGeopath;
+
     public DeparturesGetForStopRequest withIncludeGeopath(Boolean includeGeopath) {
         this.includeGeopath = includeGeopath;
         return this;
@@ -84,6 +92,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=look_backwards")
     public Boolean lookBackwards;
+
     public DeparturesGetForStopRequest withLookBackwards(Boolean lookBackwards) {
         this.lookBackwards = lookBackwards;
         return this;
@@ -94,6 +103,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
     public Integer maxResults;
+
     public DeparturesGetForStopRequest withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -104,6 +114,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform_numbers")
     public Integer[] platformNumbers;
+
     public DeparturesGetForStopRequest withPlatformNumbers(Integer[] platformNumbers) {
         this.platformNumbers = platformNumbers;
         return this;
@@ -114,6 +125,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
     public DeparturesGetForStopRouteTypeEnum routeType;
+
     public DeparturesGetForStopRequest withRouteType(DeparturesGetForStopRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -124,6 +136,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DeparturesGetForStopRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -134,6 +147,7 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop_id")
     public Integer stopId;
+
     public DeparturesGetForStopRequest withStopId(Integer stopId) {
         this.stopId = stopId;
         return this;
@@ -144,9 +158,14 @@ public class DeparturesGetForStopRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DeparturesGetForStopRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DeparturesGetForStopRequest(@JsonProperty("route_type") DeparturesGetForStopRouteTypeEnum routeType, @JsonProperty("stop_id") Integer stopId) {
+        this.routeType = routeType;
+        this.stopId = stopId;
+  }
 }

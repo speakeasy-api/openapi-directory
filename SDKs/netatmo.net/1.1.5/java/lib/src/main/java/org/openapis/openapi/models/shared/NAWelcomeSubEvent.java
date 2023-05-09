@@ -15,6 +15,7 @@ public class NAWelcomeSubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NAWelcomeSubEvent withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class NAWelcomeSubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NAWelcomeSubEvent withMessage(String message) {
         this.message = message;
         return this;
@@ -34,6 +36,7 @@ public class NAWelcomeSubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public NAWelcomeSubEvent withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -42,6 +45,7 @@ public class NAWelcomeSubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshot")
     public NAWelcomeSnapshot snapshot;
+
     public NAWelcomeSubEvent withSnapshot(NAWelcomeSnapshot snapshot) {
         this.snapshot = snapshot;
         return this;
@@ -53,6 +57,7 @@ public class NAWelcomeSubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Integer time;
+
     public NAWelcomeSubEvent withTime(Integer time) {
         this.time = time;
         return this;
@@ -64,9 +69,11 @@ public class NAWelcomeSubEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NAWelcomeSubEventTypeEnum type;
+
     public NAWelcomeSubEvent withType(NAWelcomeSubEventTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NAWelcomeSubEvent(){}
 }

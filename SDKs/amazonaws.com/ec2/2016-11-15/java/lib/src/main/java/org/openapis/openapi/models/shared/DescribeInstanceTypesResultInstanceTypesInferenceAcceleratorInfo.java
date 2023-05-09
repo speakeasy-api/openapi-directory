@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesInferenceAcceleratorInfo {
     
     public InferenceDeviceInfo[] accelerators;
+
     public DescribeInstanceTypesResultInstanceTypesInferenceAcceleratorInfo withAccelerators(InferenceDeviceInfo[] accelerators) {
         this.accelerators = accelerators;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesInferenceAcceleratorInfo(){}
 }

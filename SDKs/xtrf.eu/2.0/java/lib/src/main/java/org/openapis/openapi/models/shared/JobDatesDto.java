@@ -15,6 +15,7 @@ public class JobDatesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualEndDate")
     public Long actualEndDate;
+
     public JobDatesDto withActualEndDate(Long actualEndDate) {
         this.actualEndDate = actualEndDate;
         return this;
@@ -23,6 +24,7 @@ public class JobDatesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualStartDate")
     public Long actualStartDate;
+
     public JobDatesDto withActualStartDate(Long actualStartDate) {
         this.actualStartDate = actualStartDate;
         return this;
@@ -31,6 +33,7 @@ public class JobDatesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline")
     public Long deadline;
+
     public JobDatesDto withDeadline(Long deadline) {
         this.deadline = deadline;
         return this;
@@ -39,9 +42,11 @@ public class JobDatesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public Long startDate;
+
     public JobDatesDto withStartDate(Long startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public JobDatesDto(){}
 }

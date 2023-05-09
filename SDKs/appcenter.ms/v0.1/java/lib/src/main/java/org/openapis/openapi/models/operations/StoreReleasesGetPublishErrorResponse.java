@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StoreReleasesGetPublishErrorResponse {
     
     public String contentType;
+
     public StoreReleasesGetPublishErrorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StoreReleasesGetPublishErrorResponse {
     
     
     public Integer statusCode;
+
     public StoreReleasesGetPublishErrorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StoreReleasesGetPublishErrorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StoreReleasesGetPublishErrorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class StoreReleasesGetPublishErrorResponse {
      */
     
     public StoreReleasesGetPublishError200ApplicationJSON storeReleasesGetPublishError200ApplicationJSONObject;
+
     public StoreReleasesGetPublishErrorResponse withStoreReleasesGetPublishError200ApplicationJSONObject(StoreReleasesGetPublishError200ApplicationJSON storeReleasesGetPublishError200ApplicationJSONObject) {
         this.storeReleasesGetPublishError200ApplicationJSONObject = storeReleasesGetPublishError200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class StoreReleasesGetPublishErrorResponse {
      */
     
     public StoreReleasesGetPublishErrorDefaultApplicationJSON storeReleasesGetPublishErrorDefaultApplicationJSONObject;
+
     public StoreReleasesGetPublishErrorResponse withStoreReleasesGetPublishErrorDefaultApplicationJSONObject(StoreReleasesGetPublishErrorDefaultApplicationJSON storeReleasesGetPublishErrorDefaultApplicationJSONObject) {
         this.storeReleasesGetPublishErrorDefaultApplicationJSONObject = storeReleasesGetPublishErrorDefaultApplicationJSONObject;
         return this;
     }
     
+    public StoreReleasesGetPublishErrorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

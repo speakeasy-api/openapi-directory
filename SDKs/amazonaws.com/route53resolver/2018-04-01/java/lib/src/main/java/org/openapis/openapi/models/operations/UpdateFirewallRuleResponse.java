@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFirewallRuleResponse {
@@ -12,6 +13,7 @@ public class UpdateFirewallRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFirewallRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFirewallRuleResponse {
      */
     
     public Object conflictException;
+
     public UpdateFirewallRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFirewallRuleResponse {
     
     
     public String contentType;
+
     public UpdateFirewallRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFirewallRuleResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateFirewallRuleResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateFirewallRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdateFirewallRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFirewallRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFirewallRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFirewallRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFirewallRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFirewallRuleResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFirewallRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFirewallRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFirewallRuleResponse updateFirewallRuleResponse;
+
     public UpdateFirewallRuleResponse withUpdateFirewallRuleResponse(org.openapis.openapi.models.shared.UpdateFirewallRuleResponse updateFirewallRuleResponse) {
         this.updateFirewallRuleResponse = updateFirewallRuleResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateFirewallRuleResponse {
      */
     
     public Object validationException;
+
     public UpdateFirewallRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFirewallRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

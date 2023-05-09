@@ -12,6 +12,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertType")
     public String alertType;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withAlertType(String alertType) {
         this.alertType = alertType;
         return this;
@@ -20,6 +21,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlertValue")
     public Double alertValue;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withAlertValue(Double alertValue) {
         this.alertValue = alertValue;
         return this;
@@ -28,6 +30,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cornering")
     public Boolean cornering;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withCornering(Boolean cornering) {
         this.cornering = cornering;
         return this;
@@ -36,6 +39,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Course")
     public Double course;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withCourse(Double course) {
         this.course = course;
         return this;
@@ -44,6 +48,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Height")
     public Double height;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withHeight(Double height) {
         this.height = height;
         return this;
@@ -52,6 +57,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Double id;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withId(Double id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lateral")
     public Double lateral;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withLateral(Double lateral) {
         this.lateral = lateral;
         return this;
@@ -68,6 +75,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latitude")
     public Double latitude;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -76,6 +84,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Longitude")
     public Double longitude;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -84,6 +93,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MidSpeed")
     public Double midSpeed;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withMidSpeed(Double midSpeed) {
         this.midSpeed = midSpeed;
         return this;
@@ -92,6 +102,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Double number;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withNumber(Double number) {
         this.number = number;
         return this;
@@ -100,6 +111,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneUsage")
     public Boolean phoneUsage;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withPhoneUsage(Boolean phoneUsage) {
         this.phoneUsage = phoneUsage;
         return this;
@@ -108,6 +120,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointDate")
     public String pointDate;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withPointDate(String pointDate) {
         this.pointDate = pointDate;
         return this;
@@ -116,6 +129,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Speed")
     public Double speed;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withSpeed(Double speed) {
         this.speed = speed;
         return this;
@@ -124,6 +138,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpeedLimit")
     public Double speedLimit;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withSpeedLimit(Double speedLimit) {
         this.speedLimit = speedLimit;
         return this;
@@ -132,6 +147,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpeedType")
     public String speedType;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withSpeedType(String speedType) {
         this.speedType = speedType;
         return this;
@@ -140,6 +156,7 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalMeters")
     public Double totalMeters;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withTotalMeters(Double totalMeters) {
         this.totalMeters = totalMeters;
         return this;
@@ -148,9 +165,11 @@ public class TripsTripDetails200ApplicationJSONResultTrackPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Yaw")
     public Double yaw;
+
     public TripsTripDetails200ApplicationJSONResultTrackPoints withYaw(Double yaw) {
         this.yaw = yaw;
         return this;
     }
     
+    public TripsTripDetails200ApplicationJSONResultTrackPoints(){}
 }

@@ -12,6 +12,7 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afternoon")
     public PointPointDailyAfternoonData afternoon;
+
     public PointPointDailyData withAfternoon(PointPointDailyAfternoonData afternoon) {
         this.afternoon = afternoon;
         return this;
@@ -19,6 +20,7 @@ public class PointPointDailyData {
     
     @JsonProperty("all_day")
     public PointPointDailyAllDayData allDay;
+
     public PointPointDailyData withAllDay(PointPointDailyAllDayData allDay) {
         this.allDay = allDay;
         return this;
@@ -26,6 +28,7 @@ public class PointPointDailyData {
     
     @JsonProperty("astro")
     public PointPointDailyAstroData astro;
+
     public PointPointDailyData withAstro(PointPointDailyAstroData astro) {
         this.astro = astro;
         return this;
@@ -37,6 +40,7 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day")
     public byte[] day;
+
     public PointPointDailyData withDay(byte[] day) {
         this.day = day;
         return this;
@@ -45,6 +49,7 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evening")
     public PointPointDailyEveningData evening;
+
     public PointPointDailyData withEvening(PointPointDailyEveningData evening) {
         this.evening = evening;
         return this;
@@ -95,6 +100,7 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public Long icon;
+
     public PointPointDailyData withIcon(Long icon) {
         this.icon = icon;
         return this;
@@ -103,6 +109,7 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("morning")
     public PointPointDailyMorningData morning;
+
     public PointPointDailyData withMorning(PointPointDailyMorningData morning) {
         this.morning = morning;
         return this;
@@ -115,6 +122,7 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictability")
     public Long predictability;
+
     public PointPointDailyData withPredictability(Long predictability) {
         this.predictability = predictability;
         return this;
@@ -122,6 +130,7 @@ public class PointPointDailyData {
     
     @JsonProperty("statistics")
     public PointPointDailyStatsData statistics;
+
     public PointPointDailyData withStatistics(PointPointDailyStatsData statistics) {
         this.statistics = statistics;
         return this;
@@ -133,6 +142,7 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public PointPointDailyData withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -144,9 +154,15 @@ public class PointPointDailyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weather")
     public String weather;
+
     public PointPointDailyData withWeather(String weather) {
         this.weather = weather;
         return this;
     }
     
+    public PointPointDailyData(@JsonProperty("all_day") PointPointDailyAllDayData allDay, @JsonProperty("astro") PointPointDailyAstroData astro, @JsonProperty("statistics") PointPointDailyStatsData statistics) {
+        this.allDay = allDay;
+        this.astro = astro;
+        this.statistics = statistics;
+  }
 }

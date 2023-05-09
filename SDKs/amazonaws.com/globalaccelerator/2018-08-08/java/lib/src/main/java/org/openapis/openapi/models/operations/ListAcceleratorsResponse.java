@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAcceleratorsResponse {
     
     public String contentType;
+
     public ListAcceleratorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAcceleratorsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListAcceleratorsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListAcceleratorsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListAcceleratorsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class ListAcceleratorsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListAcceleratorsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListAcceleratorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAcceleratorsResponse listAcceleratorsResponse;
+
     public ListAcceleratorsResponse withListAcceleratorsResponse(org.openapis.openapi.models.shared.ListAcceleratorsResponse listAcceleratorsResponse) {
         this.listAcceleratorsResponse = listAcceleratorsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListAcceleratorsResponse {
     
     
     public Integer statusCode;
+
     public ListAcceleratorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListAcceleratorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAcceleratorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAcceleratorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

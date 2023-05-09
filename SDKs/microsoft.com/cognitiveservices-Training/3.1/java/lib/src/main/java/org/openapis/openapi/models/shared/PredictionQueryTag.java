@@ -12,6 +12,7 @@ public class PredictionQueryTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PredictionQueryTag withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class PredictionQueryTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxThreshold")
     public Float maxThreshold;
+
     public PredictionQueryTag withMaxThreshold(Float maxThreshold) {
         this.maxThreshold = maxThreshold;
         return this;
@@ -28,9 +30,11 @@ public class PredictionQueryTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minThreshold")
     public Float minThreshold;
+
     public PredictionQueryTag withMinThreshold(Float minThreshold) {
         this.minThreshold = minThreshold;
         return this;
     }
     
+    public PredictionQueryTag(){}
 }

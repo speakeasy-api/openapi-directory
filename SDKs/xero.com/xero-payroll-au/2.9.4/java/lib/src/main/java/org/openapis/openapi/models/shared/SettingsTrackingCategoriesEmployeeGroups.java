@@ -18,6 +18,7 @@ public class SettingsTrackingCategoriesEmployeeGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackingCategoryID")
     public String trackingCategoryID;
+
     public SettingsTrackingCategoriesEmployeeGroups withTrackingCategoryID(String trackingCategoryID) {
         this.trackingCategoryID = trackingCategoryID;
         return this;
@@ -29,9 +30,11 @@ public class SettingsTrackingCategoriesEmployeeGroups {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrackingCategoryName")
     public String trackingCategoryName;
+
     public SettingsTrackingCategoriesEmployeeGroups withTrackingCategoryName(String trackingCategoryName) {
         this.trackingCategoryName = trackingCategoryName;
         return this;
     }
     
+    public SettingsTrackingCategoriesEmployeeGroups(){}
 }

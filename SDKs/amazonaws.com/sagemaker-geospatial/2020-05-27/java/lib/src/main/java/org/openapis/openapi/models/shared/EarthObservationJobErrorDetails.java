@@ -15,6 +15,7 @@ public class EarthObservationJobErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public EarthObservationJobErrorDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class EarthObservationJobErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EarthObservationJobErrorTypeEnum type;
+
     public EarthObservationJobErrorDetails withType(EarthObservationJobErrorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EarthObservationJobErrorDetails(){}
 }

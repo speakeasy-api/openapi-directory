@@ -18,9 +18,11 @@ public class BackendServiceLocalityLoadBalancingPolicyConfigPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public BackendServiceLocalityLoadBalancingPolicyConfigPolicyNameEnum name;
+
     public BackendServiceLocalityLoadBalancingPolicyConfigPolicy withName(BackendServiceLocalityLoadBalancingPolicyConfigPolicyNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public BackendServiceLocalityLoadBalancingPolicyConfigPolicy(){}
 }

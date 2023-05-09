@@ -15,9 +15,11 @@ public class EventLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public EventLinkSelf self;
+
     public EventLink withSelf(EventLinkSelf self) {
         this.self = self;
         return this;
     }
     
+    public EventLink(){}
 }

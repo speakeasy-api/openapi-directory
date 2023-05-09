@@ -16,45 +16,45 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CrawlRequest;
 import org.openapis.openapi.models.operations.CrawlResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CrawlRequest req = new CrawlRequest() {{
-                query = "corrupti";
-            }}            
+            CrawlRequest req = new CrawlRequest("provident");            
 
             CrawlResponse res = sdk.crawl(req);
 
-            if (res.crawl200ApplicationJSONObject.isPresent()) {
+            if (res.crawl200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `crawl` - Crawl
-* `getTheStatusOfTheAPIService` - Status
-* `images` - Images
-* `news` - News
-* `search` - Search
-* `serp` - SERP
+* [crawl](docs/sdk/README.md#crawl) - Crawl
+* [getTheStatusOfTheAPIService](docs/sdk/README.md#getthestatusoftheapiservice) - Status
+* [images](docs/sdk/README.md#images) - Images
+* [news](docs/sdk/README.md#news) - News
+* [search](docs/sdk/README.md#search) - Search
+* [serp](docs/sdk/README.md#serp) - SERP
 <!-- End SDK Available Operations -->
 
 ### Maturity

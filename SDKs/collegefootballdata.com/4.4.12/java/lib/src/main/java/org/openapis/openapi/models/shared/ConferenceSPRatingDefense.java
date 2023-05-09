@@ -12,6 +12,7 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explosiveness")
     public Double explosiveness;
+
     public ConferenceSPRatingDefense withExplosiveness(Double explosiveness) {
         this.explosiveness = explosiveness;
         return this;
@@ -20,6 +21,7 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("havoc")
     public ConferenceSPRatingDefenseHavoc havoc;
+
     public ConferenceSPRatingDefense withHavoc(ConferenceSPRatingDefenseHavoc havoc) {
         this.havoc = havoc;
         return this;
@@ -28,6 +30,7 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pasing")
     public Double pasing;
+
     public ConferenceSPRatingDefense withPasing(Double pasing) {
         this.pasing = pasing;
         return this;
@@ -36,6 +39,7 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingDowns")
     public Double passingDowns;
+
     public ConferenceSPRatingDefense withPassingDowns(Double passingDowns) {
         this.passingDowns = passingDowns;
         return this;
@@ -44,6 +48,7 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Double rating;
+
     public ConferenceSPRatingDefense withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -52,6 +57,7 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushing")
     public Double rushing;
+
     public ConferenceSPRatingDefense withRushing(Double rushing) {
         this.rushing = rushing;
         return this;
@@ -60,6 +66,7 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDowns")
     public Double standardDowns;
+
     public ConferenceSPRatingDefense withStandardDowns(Double standardDowns) {
         this.standardDowns = standardDowns;
         return this;
@@ -68,9 +75,11 @@ public class ConferenceSPRatingDefense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Double success;
+
     public ConferenceSPRatingDefense withSuccess(Double success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceSPRatingDefense(){}
 }

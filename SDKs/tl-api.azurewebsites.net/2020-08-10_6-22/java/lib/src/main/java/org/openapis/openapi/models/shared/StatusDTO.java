@@ -20,6 +20,7 @@ public class StatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public StatusDTO withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -32,6 +33,7 @@ public class StatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusText")
     public String statusText;
+
     public StatusDTO withStatusText(String statusText) {
         this.statusText = statusText;
         return this;
@@ -44,9 +46,11 @@ public class StatusDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public StatusDTO withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public StatusDTO(){}
 }

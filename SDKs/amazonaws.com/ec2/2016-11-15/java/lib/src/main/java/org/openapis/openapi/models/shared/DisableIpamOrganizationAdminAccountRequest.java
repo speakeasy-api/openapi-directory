@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisableIpamOrganizationAdminAccountRequest {
     
     public String delegatedAdminAccountId;
+
     public DisableIpamOrganizationAdminAccountRequest withDelegatedAdminAccountId(String delegatedAdminAccountId) {
         this.delegatedAdminAccountId = delegatedAdminAccountId;
         return this;
@@ -16,9 +17,13 @@ public class DisableIpamOrganizationAdminAccountRequest {
     
     
     public Boolean dryRun;
+
     public DisableIpamOrganizationAdminAccountRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DisableIpamOrganizationAdminAccountRequest(@JsonProperty("DelegatedAdminAccountId") String delegatedAdminAccountId) {
+        this.delegatedAdminAccountId = delegatedAdminAccountId;
+  }
 }

@@ -18,6 +18,7 @@ public class Blobstore2Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobGeneration")
     public String blobGeneration;
+
     public Blobstore2Info withBlobGeneration(String blobGeneration) {
         this.blobGeneration = blobGeneration;
         return this;
@@ -29,6 +30,7 @@ public class Blobstore2Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blobId")
     public String blobId;
+
     public Blobstore2Info withBlobId(String blobId) {
         this.blobId = blobId;
         return this;
@@ -40,6 +42,7 @@ public class Blobstore2Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadReadHandle")
     public String downloadReadHandle;
+
     public Blobstore2Info withDownloadReadHandle(String downloadReadHandle) {
         this.downloadReadHandle = downloadReadHandle;
         return this;
@@ -51,6 +54,7 @@ public class Blobstore2Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readToken")
     public String readToken;
+
     public Blobstore2Info withReadToken(String readToken) {
         this.readToken = readToken;
         return this;
@@ -62,9 +66,11 @@ public class Blobstore2Info {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadMetadataContainer")
     public String uploadMetadataContainer;
+
     public Blobstore2Info withUploadMetadataContainer(String uploadMetadataContainer) {
         this.uploadMetadataContainer = uploadMetadataContainer;
         return this;
     }
     
+    public Blobstore2Info(){}
 }

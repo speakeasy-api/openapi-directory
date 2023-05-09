@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PreviewAgentsResponse {
@@ -12,6 +13,7 @@ public class PreviewAgentsResponse {
      */
     
     public Object accessDeniedException;
+
     public PreviewAgentsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PreviewAgentsResponse {
     
     
     public String contentType;
+
     public PreviewAgentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PreviewAgentsResponse {
      */
     
     public Object internalException;
+
     public PreviewAgentsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class PreviewAgentsResponse {
      */
     
     public Object invalidCrossAccountRoleException;
+
     public PreviewAgentsResponse withInvalidCrossAccountRoleException(Object invalidCrossAccountRoleException) {
         this.invalidCrossAccountRoleException = invalidCrossAccountRoleException;
         return this;
@@ -49,6 +54,7 @@ public class PreviewAgentsResponse {
      */
     
     public Object invalidInputException;
+
     public PreviewAgentsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class PreviewAgentsResponse {
      */
     
     public Object noSuchEntityException;
+
     public PreviewAgentsResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -69,6 +76,7 @@ public class PreviewAgentsResponse {
      */
     
     public org.openapis.openapi.models.shared.PreviewAgentsResponse previewAgentsResponse;
+
     public PreviewAgentsResponse withPreviewAgentsResponse(org.openapis.openapi.models.shared.PreviewAgentsResponse previewAgentsResponse) {
         this.previewAgentsResponse = previewAgentsResponse;
         return this;
@@ -76,6 +84,7 @@ public class PreviewAgentsResponse {
     
     
     public Integer statusCode;
+
     public PreviewAgentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PreviewAgentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PreviewAgentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PreviewAgentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

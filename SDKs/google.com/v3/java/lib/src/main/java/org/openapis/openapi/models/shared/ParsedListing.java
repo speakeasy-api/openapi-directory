@@ -18,6 +18,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public ParsedListing withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public LocalizedText[] category;
+
     public ParsedListing withCategory(LocalizedText[] category) {
         this.category = category;
         return this;
@@ -40,6 +42,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataIssueDetail")
     public DataIssueDetail[] dataIssueDetail;
+
     public ParsedListing withDataIssueDetail(DataIssueDetail[] dataIssueDetail) {
         this.dataIssueDetail = dataIssueDetail;
         return this;
@@ -51,6 +54,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public LocalizedText[] description;
+
     public ParsedListing withDescription(LocalizedText[] description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image[] image;
+
     public ParsedListing withImage(Image[] image) {
         this.image = image;
         return this;
@@ -73,6 +78,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imprecisionRadiusMeters")
     public Integer imprecisionRadiusMeters;
+
     public ParsedListing withImprecisionRadiusMeters(Integer imprecisionRadiusMeters) {
         this.imprecisionRadiusMeters = imprecisionRadiusMeters;
         return this;
@@ -84,6 +90,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isServed")
     public Boolean isServed;
+
     public ParsedListing withIsServed(Boolean isServed) {
         this.isServed = isServed;
         return this;
@@ -95,6 +102,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingName")
     public LocalizedText[] listingName;
+
     public ParsedListing withListingName(LocalizedText[] listingName) {
         this.listingName = listingName;
         return this;
@@ -106,6 +114,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public LatLng location;
+
     public ParsedListing withLocation(LatLng location) {
         this.location = location;
         return this;
@@ -117,6 +126,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerListId")
     public String partnerListId;
+
     public ParsedListing withPartnerListId(String partnerListId) {
         this.partnerListId = partnerListId;
         return this;
@@ -128,6 +138,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public ParsedListing withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -139,6 +150,7 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("review")
     public Review[] review;
+
     public ParsedListing withReview(Review[] review) {
         this.review = review;
         return this;
@@ -150,9 +162,11 @@ public class ParsedListing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitAttributes")
     public java.util.Map<String, String> unitAttributes;
+
     public ParsedListing withUnitAttributes(java.util.Map<String, String> unitAttributes) {
         this.unitAttributes = unitAttributes;
         return this;
     }
     
+    public ParsedListing(){}
 }

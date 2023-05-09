@@ -18,6 +18,7 @@ public class TemplateDefinitionNew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDraft")
     public Boolean isDraft;
+
     public TemplateDefinitionNew withIsDraft(Boolean isDraft) {
         this.isDraft = isDraft;
         return this;
@@ -29,6 +30,7 @@ public class TemplateDefinitionNew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public TemplateDefinitionNewLayout layout;
+
     public TemplateDefinitionNew withLayout(TemplateDefinitionNewLayout layout) {
         this.layout = layout;
         return this;
@@ -39,6 +41,7 @@ public class TemplateDefinitionNew {
      */
     @JsonProperty("name")
     public String name;
+
     public TemplateDefinitionNew withName(String name) {
         this.name = name;
         return this;
@@ -50,6 +53,7 @@ public class TemplateDefinitionNew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public TemplateDefinitionNewPages[] pages;
+
     public TemplateDefinitionNew withPages(TemplateDefinitionNewPages[] pages) {
         this.pages = pages;
         return this;
@@ -61,9 +65,13 @@ public class TemplateDefinitionNew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public TemplateDefinitionNew withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TemplateDefinitionNew(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -12,6 +12,7 @@ public class GroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public GroupsCountRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +23,7 @@ public class GroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public GroupsCountRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +34,7 @@ public class GroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GroupsCountStatusEnum status;
+
     public GroupsCountRequest withStatus(GroupsCountStatusEnum status) {
         this.status = status;
         return this;
@@ -42,6 +45,7 @@ public class GroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public GroupsCountRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -52,6 +56,7 @@ public class GroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public GroupsCountRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -62,9 +67,11 @@ public class GroupsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=write")
     public Boolean write;
+
     public GroupsCountRequest withWrite(Boolean write) {
         this.write = write;
         return this;
     }
     
+    public GroupsCountRequest(){}
 }

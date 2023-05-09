@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutApiV1PushSubscriptionRequestBody {
     @JsonProperty("data")
     public String data;
+
     public PutApiV1PushSubscriptionRequestBody withData(String data) {
         this.data = data;
         return this;
     }
     
+    public PutApiV1PushSubscriptionRequestBody(@JsonProperty("data") String data) {
+        this.data = data;
+  }
 }

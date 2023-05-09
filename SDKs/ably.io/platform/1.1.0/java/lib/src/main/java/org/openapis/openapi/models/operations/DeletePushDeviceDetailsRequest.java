@@ -12,6 +12,7 @@ public class DeletePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public DeletePushDeviceDetailsRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +23,7 @@ public class DeletePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
     public String channel;
+
     public DeletePushDeviceDetailsRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -32,6 +34,7 @@ public class DeletePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
     public String clientId;
+
     public DeletePushDeviceDetailsRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -42,6 +45,7 @@ public class DeletePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public String deviceId;
+
     public DeletePushDeviceDetailsRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -52,9 +56,11 @@ public class DeletePushDeviceDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public DeletePushDeviceDetailsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public DeletePushDeviceDetailsRequest(){}
 }

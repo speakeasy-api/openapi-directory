@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMaintenanceWindowTasksResponse {
     
     public String contentType;
+
     public DescribeMaintenanceWindowTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMaintenanceWindowTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMaintenanceWindowTasksResult describeMaintenanceWindowTasksResult;
+
     public DescribeMaintenanceWindowTasksResponse withDescribeMaintenanceWindowTasksResult(org.openapis.openapi.models.shared.DescribeMaintenanceWindowTasksResult describeMaintenanceWindowTasksResult) {
         this.describeMaintenanceWindowTasksResult = describeMaintenanceWindowTasksResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMaintenanceWindowTasksResponse {
      */
     
     public Object doesNotExistException;
+
     public DescribeMaintenanceWindowTasksResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMaintenanceWindowTasksResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMaintenanceWindowTasksResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeMaintenanceWindowTasksResponse {
     
     
     public Integer statusCode;
+
     public DescribeMaintenanceWindowTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeMaintenanceWindowTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMaintenanceWindowTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMaintenanceWindowTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

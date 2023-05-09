@@ -18,9 +18,11 @@ public class CommentBlog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CommentBlog withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CommentBlog(){}
 }

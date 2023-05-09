@@ -25,6 +25,7 @@ public class SearchTeamMembersFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_ids")
     public String[] locationIds;
+
     public SearchTeamMembersFilter withLocationIds(String[] locationIds) {
         this.locationIds = locationIds;
         return this;
@@ -37,9 +38,11 @@ public class SearchTeamMembersFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SearchTeamMembersFilter withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SearchTeamMembersFilter(){}
 }

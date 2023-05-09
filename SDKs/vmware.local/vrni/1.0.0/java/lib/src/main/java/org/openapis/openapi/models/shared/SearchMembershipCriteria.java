@@ -12,6 +12,7 @@ public class SearchMembershipCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public AllEntityTypeEnum entityType;
+
     public SearchMembershipCriteria withEntityType(AllEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -23,9 +24,11 @@ public class SearchMembershipCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public SearchMembershipCriteria withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public SearchMembershipCriteria(){}
 }

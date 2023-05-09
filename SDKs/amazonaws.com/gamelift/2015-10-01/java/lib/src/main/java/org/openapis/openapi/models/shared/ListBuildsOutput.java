@@ -15,6 +15,7 @@ public class ListBuildsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Builds")
     public Build[] builds;
+
     public ListBuildsOutput withBuilds(Build[] builds) {
         this.builds = builds;
         return this;
@@ -23,9 +24,11 @@ public class ListBuildsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListBuildsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBuildsOutput(){}
 }

@@ -18,6 +18,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classLevelGlobalExplanations")
     public GlobalExplanation[] classLevelGlobalExplanations;
+
     public TrainingRun withClassLevelGlobalExplanations(GlobalExplanation[] classLevelGlobalExplanations) {
         this.classLevelGlobalExplanations = classLevelGlobalExplanations;
         return this;
@@ -29,6 +30,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSplitResult")
     public DataSplitResult dataSplitResult;
+
     public TrainingRun withDataSplitResult(DataSplitResult dataSplitResult) {
         this.dataSplitResult = dataSplitResult;
         return this;
@@ -40,6 +42,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMetrics")
     public EvaluationMetrics evaluationMetrics;
+
     public TrainingRun withEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
         this.evaluationMetrics = evaluationMetrics;
         return this;
@@ -51,6 +54,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelLevelGlobalExplanation")
     public GlobalExplanation modelLevelGlobalExplanation;
+
     public TrainingRun withModelLevelGlobalExplanation(GlobalExplanation modelLevelGlobalExplanation) {
         this.modelLevelGlobalExplanation = modelLevelGlobalExplanation;
         return this;
@@ -62,6 +66,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public IterationResult[] results;
+
     public TrainingRun withResults(IterationResult[] results) {
         this.results = results;
         return this;
@@ -73,6 +78,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TrainingRun withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -84,6 +90,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingOptions")
     public TrainingOptions trainingOptions;
+
     public TrainingRun withTrainingOptions(TrainingOptions trainingOptions) {
         this.trainingOptions = trainingOptions;
         return this;
@@ -95,6 +102,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingStartTime")
     public String trainingStartTime;
+
     public TrainingRun withTrainingStartTime(String trainingStartTime) {
         this.trainingStartTime = trainingStartTime;
         return this;
@@ -106,6 +114,7 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertexAiModelId")
     public String vertexAiModelId;
+
     public TrainingRun withVertexAiModelId(String vertexAiModelId) {
         this.vertexAiModelId = vertexAiModelId;
         return this;
@@ -117,9 +126,11 @@ public class TrainingRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertexAiModelVersion")
     public String vertexAiModelVersion;
+
     public TrainingRun withVertexAiModelVersion(String vertexAiModelVersion) {
         this.vertexAiModelVersion = vertexAiModelVersion;
         return this;
     }
     
+    public TrainingRun(){}
 }

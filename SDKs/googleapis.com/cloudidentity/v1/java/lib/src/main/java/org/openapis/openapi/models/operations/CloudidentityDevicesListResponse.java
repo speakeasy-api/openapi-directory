@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityDevicesListResponse {
     
     public String contentType;
+
     public CloudidentityDevicesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityDevicesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAppsCloudidentityDevicesV1ListDevicesResponse googleAppsCloudidentityDevicesV1ListDevicesResponse;
+
     public CloudidentityDevicesListResponse withGoogleAppsCloudidentityDevicesV1ListDevicesResponse(org.openapis.openapi.models.shared.GoogleAppsCloudidentityDevicesV1ListDevicesResponse googleAppsCloudidentityDevicesV1ListDevicesResponse) {
         this.googleAppsCloudidentityDevicesV1ListDevicesResponse = googleAppsCloudidentityDevicesV1ListDevicesResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityDevicesListResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityDevicesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityDevicesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityDevicesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityDevicesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

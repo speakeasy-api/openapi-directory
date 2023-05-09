@@ -18,6 +18,7 @@ public class HoneycodeDestinationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorHandlingConfig")
     public ErrorHandlingConfig errorHandlingConfig;
+
     public HoneycodeDestinationProperties withErrorHandlingConfig(ErrorHandlingConfig errorHandlingConfig) {
         this.errorHandlingConfig = errorHandlingConfig;
         return this;
@@ -25,9 +26,13 @@ public class HoneycodeDestinationProperties {
     
     @JsonProperty("object")
     public String object;
+
     public HoneycodeDestinationProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public HoneycodeDestinationProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

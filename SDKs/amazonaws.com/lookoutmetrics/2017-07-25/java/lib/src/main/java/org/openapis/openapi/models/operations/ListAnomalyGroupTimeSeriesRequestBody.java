@@ -14,6 +14,7 @@ public class ListAnomalyGroupTimeSeriesRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public ListAnomalyGroupTimeSeriesRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -24,6 +25,7 @@ public class ListAnomalyGroupTimeSeriesRequestBody {
      */
     @JsonProperty("AnomalyGroupId")
     public String anomalyGroupId;
+
     public ListAnomalyGroupTimeSeriesRequestBody withAnomalyGroupId(String anomalyGroupId) {
         this.anomalyGroupId = anomalyGroupId;
         return this;
@@ -35,6 +37,7 @@ public class ListAnomalyGroupTimeSeriesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAnomalyGroupTimeSeriesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,6 +48,7 @@ public class ListAnomalyGroupTimeSeriesRequestBody {
      */
     @JsonProperty("MetricName")
     public String metricName;
+
     public ListAnomalyGroupTimeSeriesRequestBody withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -56,9 +60,15 @@ public class ListAnomalyGroupTimeSeriesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyGroupTimeSeriesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnomalyGroupTimeSeriesRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn, @JsonProperty("AnomalyGroupId") String anomalyGroupId, @JsonProperty("MetricName") String metricName) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+        this.anomalyGroupId = anomalyGroupId;
+        this.metricName = metricName;
+  }
 }

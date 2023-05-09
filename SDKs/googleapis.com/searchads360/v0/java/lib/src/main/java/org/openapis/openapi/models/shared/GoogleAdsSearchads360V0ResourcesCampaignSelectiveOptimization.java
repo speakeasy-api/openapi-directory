@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionActions")
     public String[] conversionActions;
+
     public GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization withConversionActions(String[] conversionActions) {
         this.conversionActions = conversionActions;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization(){}
 }

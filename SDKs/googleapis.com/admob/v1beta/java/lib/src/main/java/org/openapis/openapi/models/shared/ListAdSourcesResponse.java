@@ -18,6 +18,7 @@ public class ListAdSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adSources")
     public AdSource[] adSources;
+
     public ListAdSourcesResponse withAdSources(AdSource[] adSources) {
         this.adSources = adSources;
         return this;
@@ -29,9 +30,11 @@ public class ListAdSourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAdSourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAdSourcesResponse(){}
 }

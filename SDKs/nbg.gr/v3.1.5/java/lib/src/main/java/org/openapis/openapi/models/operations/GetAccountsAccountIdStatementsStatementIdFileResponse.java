@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountsAccountIdStatementsStatementIdFileResponse {
     
     public byte[] body;
+
     public GetAccountsAccountIdStatementsStatementIdFileResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetAccountsAccountIdStatementsStatementIdFileResponse {
     
     
     public String contentType;
+
     public GetAccountsAccountIdStatementsStatementIdFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetAccountsAccountIdStatementsStatementIdFileResponse {
     
     
     public Integer statusCode;
+
     public GetAccountsAccountIdStatementsStatementIdFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetAccountsAccountIdStatementsStatementIdFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountsAccountIdStatementsStatementIdFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetAccountsAccountIdStatementsStatementIdFileResponse {
      */
     
     public byte[] getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString;
+
     public GetAccountsAccountIdStatementsStatementIdFileResponse withGetAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString(byte[] getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString) {
         this.getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString = getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString;
         return this;
     }
     
+    public GetAccountsAccountIdStatementsStatementIdFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

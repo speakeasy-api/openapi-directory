@@ -18,6 +18,7 @@ public class GoalEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventConditions")
     public GoalEventDetailsEventConditions[] eventConditions;
+
     public GoalEventDetails withEventConditions(GoalEventDetailsEventConditions[] eventConditions) {
         this.eventConditions = eventConditions;
         return this;
@@ -29,9 +30,11 @@ public class GoalEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useEventValue")
     public Boolean useEventValue;
+
     public GoalEventDetails withUseEventValue(Boolean useEventValue) {
         this.useEventValue = useEventValue;
         return this;
     }
     
+    public GoalEventDetails(){}
 }

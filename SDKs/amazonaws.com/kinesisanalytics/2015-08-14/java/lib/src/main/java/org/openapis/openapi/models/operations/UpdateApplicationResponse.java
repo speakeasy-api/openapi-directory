@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationResponse {
@@ -12,6 +13,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object codeValidationException;
+
     public UpdateApplicationResponse withCodeValidationException(Object codeValidationException) {
         this.codeValidationException = codeValidationException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateApplicationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApplicationResponse {
     
     
     public String contentType;
+
     public UpdateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateApplicationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateApplicationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateApplicationResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateApplicationResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateApplicationResponse {
      */
     
     public java.util.Map<String, Object> updateApplicationResponse;
+
     public UpdateApplicationResponse withUpdateApplicationResponse(java.util.Map<String, Object> updateApplicationResponse) {
         this.updateApplicationResponse = updateApplicationResponse;
         return this;
     }
     
+    public UpdateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,13 @@ public class ReposRemoveTeamAccessRestrictionsRequestBody1 {
      */
     @JsonProperty("teams")
     public String[] teams;
+
     public ReposRemoveTeamAccessRestrictionsRequestBody1 withTeams(String[] teams) {
         this.teams = teams;
         return this;
     }
     
+    public ReposRemoveTeamAccessRestrictionsRequestBody1(@JsonProperty("teams") String[] teams) {
+        this.teams = teams;
+  }
 }

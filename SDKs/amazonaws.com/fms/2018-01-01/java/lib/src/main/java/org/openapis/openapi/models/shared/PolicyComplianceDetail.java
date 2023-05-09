@@ -20,6 +20,7 @@ public class PolicyComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationLimitExceeded")
     public Boolean evaluationLimitExceeded;
+
     public PolicyComplianceDetail withEvaluationLimitExceeded(Boolean evaluationLimitExceeded) {
         this.evaluationLimitExceeded = evaluationLimitExceeded;
         return this;
@@ -30,6 +31,7 @@ public class PolicyComplianceDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpiredAt")
     public OffsetDateTime expiredAt;
+
     public PolicyComplianceDetail withExpiredAt(OffsetDateTime expiredAt) {
         this.expiredAt = expiredAt;
         return this;
@@ -38,6 +40,7 @@ public class PolicyComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IssueInfoMap")
     public java.util.Map<String, String> issueInfoMap;
+
     public PolicyComplianceDetail withIssueInfoMap(java.util.Map<String, String> issueInfoMap) {
         this.issueInfoMap = issueInfoMap;
         return this;
@@ -46,6 +49,7 @@ public class PolicyComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberAccount")
     public String memberAccount;
+
     public PolicyComplianceDetail withMemberAccount(String memberAccount) {
         this.memberAccount = memberAccount;
         return this;
@@ -54,6 +58,7 @@ public class PolicyComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public PolicyComplianceDetail withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -62,6 +67,7 @@ public class PolicyComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyOwner")
     public String policyOwner;
+
     public PolicyComplianceDetail withPolicyOwner(String policyOwner) {
         this.policyOwner = policyOwner;
         return this;
@@ -70,9 +76,11 @@ public class PolicyComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Violators")
     public ComplianceViolator[] violators;
+
     public PolicyComplianceDetail withViolators(ComplianceViolator[] violators) {
         this.violators = violators;
         return this;
     }
     
+    public PolicyComplianceDetail(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendMessageBinaryRequest {
@@ -12,6 +13,7 @@ public class SendMessageBinaryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
     public byte[] requestBody;
+
     public SendMessageBinaryRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class SendMessageBinaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
     public String contentType;
+
     public SendMessageBinaryRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendMessageBinaryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delay")
     public String delay;
+
     public SendMessageBinaryRequest withDelay(String delay) {
         this.delay = delay;
         return this;
@@ -36,6 +40,7 @@ public class SendMessageBinaryRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expiration")
     public String expiration;
+
     public SendMessageBinaryRequest withExpiration(String expiration) {
         this.expiration = expiration;
         return this;
@@ -46,6 +51,7 @@ public class SendMessageBinaryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
     public String queueName;
+
     public SendMessageBinaryRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -56,9 +62,15 @@ public class SendMessageBinaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regions")
     public String regions;
+
     public SendMessageBinaryRequest withRegions(String regions) {
         this.regions = regions;
         return this;
     }
     
+    public SendMessageBinaryRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("contentType") String contentType, @JsonProperty("queueName") String queueName) {
+        this.requestBody = requestBody;
+        this.contentType = contentType;
+        this.queueName = queueName;
+  }
 }

@@ -12,9 +12,11 @@ public class ListAllGroupsUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupIDs")
     public String[] groupIDs;
+
     public ListAllGroupsUsingGET200ApplicationJSONData withGroupIDs(String[] groupIDs) {
         this.groupIDs = groupIDs;
         return this;
     }
     
+    public ListAllGroupsUsingGET200ApplicationJSONData(){}
 }

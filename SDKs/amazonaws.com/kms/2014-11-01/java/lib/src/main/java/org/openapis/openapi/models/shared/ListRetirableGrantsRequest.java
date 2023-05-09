@@ -12,6 +12,7 @@ public class ListRetirableGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListRetirableGrantsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class ListRetirableGrantsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListRetirableGrantsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -27,9 +29,13 @@ public class ListRetirableGrantsRequest {
     
     @JsonProperty("RetiringPrincipal")
     public String retiringPrincipal;
+
     public ListRetirableGrantsRequest withRetiringPrincipal(String retiringPrincipal) {
         this.retiringPrincipal = retiringPrincipal;
         return this;
     }
     
+    public ListRetirableGrantsRequest(@JsonProperty("RetiringPrincipal") String retiringPrincipal) {
+        this.retiringPrincipal = retiringPrincipal;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationDocuments")
     public GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig evaluationDocuments;
+
     public GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest withEvaluationDocuments(GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig evaluationDocuments) {
         this.evaluationDocuments = evaluationDocuments;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest(){}
 }

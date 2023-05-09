@@ -18,9 +18,11 @@ public class ListScreenshotClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public ScreenshotCluster[] clusters;
+
     public ListScreenshotClustersResponse withClusters(ScreenshotCluster[] clusters) {
         this.clusters = clusters;
         return this;
     }
     
+    public ListScreenshotClustersResponse(){}
 }

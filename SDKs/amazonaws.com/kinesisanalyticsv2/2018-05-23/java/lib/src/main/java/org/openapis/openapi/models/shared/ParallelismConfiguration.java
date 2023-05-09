@@ -15,6 +15,7 @@ public class ParallelismConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingEnabled")
     public Boolean autoScalingEnabled;
+
     public ParallelismConfiguration withAutoScalingEnabled(Boolean autoScalingEnabled) {
         this.autoScalingEnabled = autoScalingEnabled;
         return this;
@@ -22,6 +23,7 @@ public class ParallelismConfiguration {
     
     @JsonProperty("ConfigurationType")
     public ConfigurationTypeEnum configurationType;
+
     public ParallelismConfiguration withConfigurationType(ConfigurationTypeEnum configurationType) {
         this.configurationType = configurationType;
         return this;
@@ -30,6 +32,7 @@ public class ParallelismConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parallelism")
     public Long parallelism;
+
     public ParallelismConfiguration withParallelism(Long parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -38,9 +41,13 @@ public class ParallelismConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismPerKPU")
     public Long parallelismPerKPU;
+
     public ParallelismConfiguration withParallelismPerKPU(Long parallelismPerKPU) {
         this.parallelismPerKPU = parallelismPerKPU;
         return this;
     }
     
+    public ParallelismConfiguration(@JsonProperty("ConfigurationType") ConfigurationTypeEnum configurationType) {
+        this.configurationType = configurationType;
+  }
 }

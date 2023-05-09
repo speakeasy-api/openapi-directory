@@ -15,9 +15,11 @@ public class DescribeObservationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Observation")
     public Observation observation;
+
     public DescribeObservationResponse withObservation(Observation observation) {
         this.observation = observation;
         return this;
     }
     
+    public DescribeObservationResponse(){}
 }

@@ -13,6 +13,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchFeccandidatesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchFeccandidatesRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchFeccandidatesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchFeccandidatesRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchFeccandidatesRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchFeccandidatesRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchFeccandidatesRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchFeccandidatesRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchFeccandidatesRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchFeccandidatesRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchFeccandidatesRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchFeccandidatesRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchFeccandidatesRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchFeccandidatesRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.beginning_cash")
     public Double searchDbFeccandidatesBeginningCash;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesBeginningCash(Double searchDbFeccandidatesBeginningCash) {
         this.searchDbFeccandidatesBeginningCash = searchDbFeccandidatesBeginningCash;
         return this;
@@ -163,6 +178,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.candidate_loan_repayments")
     public Double searchDbFeccandidatesCandidateLoanRepayments;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesCandidateLoanRepayments(Double searchDbFeccandidatesCandidateLoanRepayments) {
         this.searchDbFeccandidatesCandidateLoanRepayments = searchDbFeccandidatesCandidateLoanRepayments;
         return this;
@@ -173,6 +189,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.committee_refunds")
     public Double searchDbFeccandidatesCommitteeRefunds;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesCommitteeRefunds(Double searchDbFeccandidatesCommitteeRefunds) {
         this.searchDbFeccandidatesCommitteeRefunds = searchDbFeccandidatesCommitteeRefunds;
         return this;
@@ -183,6 +200,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.contributions_from_candidate")
     public Double searchDbFeccandidatesContributionsFromCandidate;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesContributionsFromCandidate(Double searchDbFeccandidatesContributionsFromCandidate) {
         this.searchDbFeccandidatesContributionsFromCandidate = searchDbFeccandidatesContributionsFromCandidate;
         return this;
@@ -193,6 +211,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.contributions_from_other_committees")
     public Double searchDbFeccandidatesContributionsFromOtherCommittees;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesContributionsFromOtherCommittees(Double searchDbFeccandidatesContributionsFromOtherCommittees) {
         this.searchDbFeccandidatesContributionsFromOtherCommittees = searchDbFeccandidatesContributionsFromOtherCommittees;
         return this;
@@ -203,6 +222,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.contributions_from_party_committees")
     public Double searchDbFeccandidatesContributionsFromPartyCommittees;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesContributionsFromPartyCommittees(Double searchDbFeccandidatesContributionsFromPartyCommittees) {
         this.searchDbFeccandidatesContributionsFromPartyCommittees = searchDbFeccandidatesContributionsFromPartyCommittees;
         return this;
@@ -213,6 +233,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.coverage_end_date")
     public String searchDbFeccandidatesCoverageEndDate;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesCoverageEndDate(String searchDbFeccandidatesCoverageEndDate) {
         this.searchDbFeccandidatesCoverageEndDate = searchDbFeccandidatesCoverageEndDate;
         return this;
@@ -223,6 +244,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.debts_owed_by")
     public Double searchDbFeccandidatesDebtsOwedBy;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesDebtsOwedBy(Double searchDbFeccandidatesDebtsOwedBy) {
         this.searchDbFeccandidatesDebtsOwedBy = searchDbFeccandidatesDebtsOwedBy;
         return this;
@@ -233,6 +255,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.district")
     public String searchDbFeccandidatesDistrict;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesDistrict(String searchDbFeccandidatesDistrict) {
         this.searchDbFeccandidatesDistrict = searchDbFeccandidatesDistrict;
         return this;
@@ -243,6 +266,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.ending_cash")
     public Double searchDbFeccandidatesEndingCash;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesEndingCash(Double searchDbFeccandidatesEndingCash) {
         this.searchDbFeccandidatesEndingCash = searchDbFeccandidatesEndingCash;
         return this;
@@ -253,6 +277,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.gender")
     public String searchDbFeccandidatesGender;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesGender(String searchDbFeccandidatesGender) {
         this.searchDbFeccandidatesGender = searchDbFeccandidatesGender;
         return this;
@@ -263,6 +288,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.individual_refunds")
     public Double searchDbFeccandidatesIndividualRefunds;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesIndividualRefunds(Double searchDbFeccandidatesIndividualRefunds) {
         this.searchDbFeccandidatesIndividualRefunds = searchDbFeccandidatesIndividualRefunds;
         return this;
@@ -273,6 +299,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.loans_from_candidates")
     public Double searchDbFeccandidatesLoansFromCandidates;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesLoansFromCandidates(Double searchDbFeccandidatesLoansFromCandidates) {
         this.searchDbFeccandidatesLoansFromCandidates = searchDbFeccandidatesLoansFromCandidates;
         return this;
@@ -283,6 +310,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.name")
     public String searchDbFeccandidatesName;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesName(String searchDbFeccandidatesName) {
         this.searchDbFeccandidatesName = searchDbFeccandidatesName;
         return this;
@@ -293,6 +321,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.other_loan_repayments")
     public Double searchDbFeccandidatesOtherLoanRepayments;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesOtherLoanRepayments(Double searchDbFeccandidatesOtherLoanRepayments) {
         this.searchDbFeccandidatesOtherLoanRepayments = searchDbFeccandidatesOtherLoanRepayments;
         return this;
@@ -303,6 +332,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.other_loans")
     public Double searchDbFeccandidatesOtherLoans;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesOtherLoans(Double searchDbFeccandidatesOtherLoans) {
         this.searchDbFeccandidatesOtherLoans = searchDbFeccandidatesOtherLoans;
         return this;
@@ -313,6 +343,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.party")
     public String searchDbFeccandidatesParty;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesParty(String searchDbFeccandidatesParty) {
         this.searchDbFeccandidatesParty = searchDbFeccandidatesParty;
         return this;
@@ -323,6 +354,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.state")
     public String searchDbFeccandidatesState;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesState(String searchDbFeccandidatesState) {
         this.searchDbFeccandidatesState = searchDbFeccandidatesState;
         return this;
@@ -333,6 +365,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.total_disbursements")
     public Double searchDbFeccandidatesTotalDisbursements;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesTotalDisbursements(Double searchDbFeccandidatesTotalDisbursements) {
         this.searchDbFeccandidatesTotalDisbursements = searchDbFeccandidatesTotalDisbursements;
         return this;
@@ -343,6 +376,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.total_indivual_contributions")
     public Double searchDbFeccandidatesTotalIndivualContributions;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesTotalIndivualContributions(Double searchDbFeccandidatesTotalIndivualContributions) {
         this.searchDbFeccandidatesTotalIndivualContributions = searchDbFeccandidatesTotalIndivualContributions;
         return this;
@@ -353,6 +387,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.total_receipts")
     public Double searchDbFeccandidatesTotalReceipts;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesTotalReceipts(Double searchDbFeccandidatesTotalReceipts) {
         this.searchDbFeccandidatesTotalReceipts = searchDbFeccandidatesTotalReceipts;
         return this;
@@ -363,6 +398,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.transfers_from_committees")
     public Double searchDbFeccandidatesTransfersFromCommittees;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesTransfersFromCommittees(Double searchDbFeccandidatesTransfersFromCommittees) {
         this.searchDbFeccandidatesTransfersFromCommittees = searchDbFeccandidatesTransfersFromCommittees;
         return this;
@@ -373,6 +409,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_feccandidates.transfers_to_committees")
     public Double searchDbFeccandidatesTransfersToCommittees;
+
     public SearchFeccandidatesRequest withSearchDbFeccandidatesTransfersToCommittees(Double searchDbFeccandidatesTransfersToCommittees) {
         this.searchDbFeccandidatesTransfersToCommittees = searchDbFeccandidatesTransfersToCommittees;
         return this;
@@ -383,6 +420,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchFeccandidatesRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -393,6 +431,7 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchFeccandidatesRequest withText(String text) {
         this.text = text;
         return this;
@@ -403,9 +442,11 @@ public class SearchFeccandidatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchFeccandidatesRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchFeccandidatesRequest(){}
 }

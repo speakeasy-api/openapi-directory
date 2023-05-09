@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateOrganizationConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateOrganizationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateOrganizationConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateOrganizationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public UpdateOrganizationConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateOrganizationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateOrganizationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateOrganizationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateOrganizationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public UpdateOrganizationConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateOrganizationConfigurationResponse updateOrganizationConfigurationResponse;
+
     public UpdateOrganizationConfigurationResponse withUpdateOrganizationConfigurationResponse(org.openapis.openapi.models.shared.UpdateOrganizationConfigurationResponse updateOrganizationConfigurationResponse) {
         this.updateOrganizationConfigurationResponse = updateOrganizationConfigurationResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateOrganizationConfigurationResponse {
      */
     
     public Object validationException;
+
     public UpdateOrganizationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateOrganizationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETRemoveUserFromGroupResponse {
     
     public byte[] body;
+
     public GETRemoveUserFromGroupResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETRemoveUserFromGroupResponse {
     
     
     public String contentType;
+
     public GETRemoveUserFromGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETRemoveUserFromGroupResponse {
     
     
     public Integer statusCode;
+
     public GETRemoveUserFromGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETRemoveUserFromGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETRemoveUserFromGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETRemoveUserFromGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class GetCallResponseLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public GetCallResponseLinksSelf self;
+
     public GetCallResponseLinks withSelf(GetCallResponseLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public GetCallResponseLinks(){}
 }

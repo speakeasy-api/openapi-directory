@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetMappingValuesKeyKeyEnum;
 import org.openapis.openapi.models.operations.GetMappingValuesKeyRequest;
 import org.openapis.openapi.models.operations.GetMappingValuesKeyResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,28 +30,28 @@ public class Application {
                 }})
                 .build();
 
-            GetMappingValuesKeyRequest req = new GetMappingValuesKeyRequest() {{
-                key = "currency";
-            }}            
+            GetMappingValuesKeyRequest req = new GetMappingValuesKeyRequest(GetMappingValuesKeyKeyEnum.CURRENCY);            
 
             GetMappingValuesKeyResponse res = sdk.getMappingValuesKey(req);
 
-            if (res.getMappingValuesKey200ApplicationJSONObject.isPresent()) {
+            if (res.getMappingValuesKey200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getMappingValuesKey` - Get values for enum-like fields.
-* `postMapping` - Allows mapping from third-party identifiers to FIGIs.
+* [getMappingValuesKey](docs/sdk/README.md#getmappingvalueskey) - Get values for enum-like fields.
+* [postMapping](docs/sdk/README.md#postmapping) - Allows mapping from third-party identifiers to FIGIs.
 <!-- End SDK Available Operations -->
 
 ### Maturity

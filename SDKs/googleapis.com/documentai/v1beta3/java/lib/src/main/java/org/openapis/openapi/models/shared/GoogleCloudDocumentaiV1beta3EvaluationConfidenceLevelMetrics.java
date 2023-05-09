@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevel")
     public Float confidenceLevel;
+
     public GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics withConfidenceLevel(Float confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GoogleCloudDocumentaiV1beta3EvaluationMetrics metrics;
+
     public GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics withMetrics(GoogleCloudDocumentaiV1beta3EvaluationMetrics metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3EvaluationConfidenceLevelMetrics(){}
 }

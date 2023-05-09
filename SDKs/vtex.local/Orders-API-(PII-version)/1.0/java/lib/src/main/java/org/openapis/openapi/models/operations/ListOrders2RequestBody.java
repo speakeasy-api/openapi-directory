@@ -14,6 +14,7 @@ public class ListOrders2RequestBody {
      */
     @JsonProperty("f_creationDate")
     public String fCreationDate;
+
     public ListOrders2RequestBody withFCreationDate(String fCreationDate) {
         this.fCreationDate = fCreationDate;
         return this;
@@ -24,6 +25,7 @@ public class ListOrders2RequestBody {
      */
     @JsonProperty("page")
     public Long page;
+
     public ListOrders2RequestBody withPage(Long page) {
         this.page = page;
         return this;
@@ -34,6 +36,7 @@ public class ListOrders2RequestBody {
      */
     @JsonProperty("per_page")
     public Long perPage;
+
     public ListOrders2RequestBody withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -45,9 +48,15 @@ public class ListOrders2RequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("q")
     public String q;
+
     public ListOrders2RequestBody withQ(String q) {
         this.q = q;
         return this;
     }
     
+    public ListOrders2RequestBody(@JsonProperty("f_creationDate") String fCreationDate, @JsonProperty("page") Long page, @JsonProperty("per_page") Long perPage) {
+        this.fCreationDate = fCreationDate;
+        this.page = page;
+        this.perPage = perPage;
+  }
 }

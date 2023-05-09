@@ -15,6 +15,7 @@ public class ReplicationConfigurationReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public ReplicationConfigurationReplicatedDisk withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -23,6 +24,7 @@ public class ReplicationConfigurationReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iops")
     public Long iops;
+
     public ReplicationConfigurationReplicatedDisk withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -31,6 +33,7 @@ public class ReplicationConfigurationReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBootDisk")
     public Boolean isBootDisk;
+
     public ReplicationConfigurationReplicatedDisk withIsBootDisk(Boolean isBootDisk) {
         this.isBootDisk = isBootDisk;
         return this;
@@ -39,6 +42,7 @@ public class ReplicationConfigurationReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingDiskType")
     public ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum stagingDiskType;
+
     public ReplicationConfigurationReplicatedDisk withStagingDiskType(ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum stagingDiskType) {
         this.stagingDiskType = stagingDiskType;
         return this;
@@ -47,9 +51,11 @@ public class ReplicationConfigurationReplicatedDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("throughput")
     public Long throughput;
+
     public ReplicationConfigurationReplicatedDisk withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
     }
     
+    public ReplicationConfigurationReplicatedDisk(){}
 }

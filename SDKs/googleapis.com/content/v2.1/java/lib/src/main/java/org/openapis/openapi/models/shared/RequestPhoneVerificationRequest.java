@@ -18,6 +18,7 @@ public class RequestPhoneVerificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public RequestPhoneVerificationRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class RequestPhoneVerificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public RequestPhoneVerificationRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -40,6 +42,7 @@ public class RequestPhoneVerificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneRegionCode")
     public String phoneRegionCode;
+
     public RequestPhoneVerificationRequest withPhoneRegionCode(String phoneRegionCode) {
         this.phoneRegionCode = phoneRegionCode;
         return this;
@@ -51,9 +54,11 @@ public class RequestPhoneVerificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneVerificationMethod")
     public RequestPhoneVerificationRequestPhoneVerificationMethodEnum phoneVerificationMethod;
+
     public RequestPhoneVerificationRequest withPhoneVerificationMethod(RequestPhoneVerificationRequestPhoneVerificationMethodEnum phoneVerificationMethod) {
         this.phoneVerificationMethod = phoneVerificationMethod;
         return this;
     }
     
+    public RequestPhoneVerificationRequest(){}
 }

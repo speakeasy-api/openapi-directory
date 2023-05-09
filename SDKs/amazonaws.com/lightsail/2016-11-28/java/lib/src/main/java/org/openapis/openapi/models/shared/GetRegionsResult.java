@@ -15,9 +15,11 @@ public class GetRegionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public Region[] regions;
+
     public GetRegionsResult withRegions(Region[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public GetRegionsResult(){}
 }

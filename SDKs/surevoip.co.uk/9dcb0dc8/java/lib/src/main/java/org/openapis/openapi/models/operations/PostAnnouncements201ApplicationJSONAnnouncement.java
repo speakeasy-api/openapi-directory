@@ -12,6 +12,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creation_date")
     public String creationDate;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -20,6 +21,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_internal")
     public String fileInternal;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withFileInternal(String fileInternal) {
         this.fileInternal = fileInternal;
         return this;
@@ -36,6 +39,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -44,6 +48,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withSize(Long size) {
         this.size = size;
         return this;
@@ -60,6 +66,7 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src_ip_address")
     public String srcIpAddress;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withSrcIpAddress(String srcIpAddress) {
         this.srcIpAddress = srcIpAddress;
         return this;
@@ -68,9 +75,11 @@ public class PostAnnouncements201ApplicationJSONAnnouncement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public PostAnnouncements201ApplicationJSONAnnouncementUrl url;
+
     public PostAnnouncements201ApplicationJSONAnnouncement withUrl(PostAnnouncements201ApplicationJSONAnnouncementUrl url) {
         this.url = url;
         return this;
     }
     
+    public PostAnnouncements201ApplicationJSONAnnouncement(){}
 }

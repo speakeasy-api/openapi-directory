@@ -12,6 +12,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public CvipcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("DocumentNumber")
     public String documentNumber;
+
     public CvipcRequestBodyCertificateParameters withDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
         return this;
@@ -32,6 +34,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CvipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -42,6 +45,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public CvipcRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -52,6 +56,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNumber")
     public String policyNumber;
+
     public CvipcRequestBodyCertificateParameters withPolicyNumber(String policyNumber) {
         this.policyNumber = policyNumber;
         return this;
@@ -62,9 +67,18 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("SearchDocument")
     public String searchDocument;
+
     public CvipcRequestBodyCertificateParameters withSearchDocument(String searchDocument) {
         this.searchDocument = searchDocument;
         return this;
     }
     
+    public CvipcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("DocumentNumber") String documentNumber, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("PolicyNumber") String policyNumber, @JsonProperty("SearchDocument") String searchDocument) {
+        this.dob = dob;
+        this.documentNumber = documentNumber;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.policyNumber = policyNumber;
+        this.searchDocument = searchDocument;
+  }
 }

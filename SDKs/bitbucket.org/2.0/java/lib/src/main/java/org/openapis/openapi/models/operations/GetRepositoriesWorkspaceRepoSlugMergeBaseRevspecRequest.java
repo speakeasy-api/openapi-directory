@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest {
@@ -14,6 +15,7 @@ public class GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -25,6 +27,7 @@ public class GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revspec")
     public String revspec;
+
     public GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest withRevspec(String revspec) {
         this.revspec = revspec;
         return this;
@@ -37,9 +40,15 @@ public class GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("revspec") String revspec, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.revspec = revspec;
+        this.workspace = workspace;
+  }
 }

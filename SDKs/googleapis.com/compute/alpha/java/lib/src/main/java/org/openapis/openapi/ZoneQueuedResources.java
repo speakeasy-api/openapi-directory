@@ -59,11 +59,9 @@ public class ZoneQueuedResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             queuedResourcesAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class ZoneQueuedResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class ZoneQueuedResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class ZoneQueuedResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetResponse(contentType, httpRes.statusCode()) {{
             queuedResource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class ZoneQueuedResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class ZoneQueuedResources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListResponse res = new org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListResponse(contentType, httpRes.statusCode()) {{
             queuedResourceList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

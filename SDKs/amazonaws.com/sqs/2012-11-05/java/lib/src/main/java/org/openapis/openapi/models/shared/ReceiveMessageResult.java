@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ReceiveMessageResult {
     
     public MessageList[] messages;
+
     public ReceiveMessageResult withMessages(MessageList[] messages) {
         this.messages = messages;
         return this;
     }
     
+    public ReceiveMessageResult(){}
 }

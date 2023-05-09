@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1VideoThumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public GoogleCloudDatalabelingV1beta1VideoThumbnail withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1VideoThumbnail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeOffset")
     public String timeOffset;
+
     public GoogleCloudDatalabelingV1beta1VideoThumbnail withTimeOffset(String timeOffset) {
         this.timeOffset = timeOffset;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1VideoThumbnail(){}
 }

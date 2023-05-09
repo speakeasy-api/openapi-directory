@@ -17,6 +17,7 @@ public class RateComponent {
      */
     @JsonProperty("formatted")
     public String formatted;
+
     public RateComponent withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
@@ -25,6 +26,7 @@ public class RateComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedInRate")
     public Boolean includedInRate;
+
     public RateComponent withIncludedInRate(Boolean includedInRate) {
         this.includedInRate = includedInRate;
         return this;
@@ -35,9 +37,14 @@ public class RateComponent {
      */
     @JsonProperty("type")
     public RateComponentTypeEnum type;
+
     public RateComponent withType(RateComponentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RateComponent(@JsonProperty("formatted") String formatted, @JsonProperty("type") RateComponentTypeEnum type) {
+        this.formatted = formatted;
+        this.type = type;
+  }
 }

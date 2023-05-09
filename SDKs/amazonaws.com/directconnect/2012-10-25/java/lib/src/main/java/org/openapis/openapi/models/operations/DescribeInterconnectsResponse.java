@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeInterconnectsResponse {
     
     public String contentType;
+
     public DescribeInterconnectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeInterconnectsResponse {
      */
     
     public Object directConnectClientException;
+
     public DescribeInterconnectsResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeInterconnectsResponse {
      */
     
     public Object directConnectServerException;
+
     public DescribeInterconnectsResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeInterconnectsResponse {
      */
     
     public org.openapis.openapi.models.shared.Interconnects interconnects;
+
     public DescribeInterconnectsResponse withInterconnects(org.openapis.openapi.models.shared.Interconnects interconnects) {
         this.interconnects = interconnects;
         return this;
@@ -46,6 +51,7 @@ public class DescribeInterconnectsResponse {
     
     
     public Integer statusCode;
+
     public DescribeInterconnectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeInterconnectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeInterconnectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeInterconnectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

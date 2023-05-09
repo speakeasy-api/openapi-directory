@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicenetworkingServicesConnectionsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesConnectionsListSecurityOption1 option1;
+
     public ServicenetworkingServicesConnectionsListSecurity withOption1(ServicenetworkingServicesConnectionsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicenetworkingServicesConnectionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesConnectionsListSecurityOption2 option2;
+
     public ServicenetworkingServicesConnectionsListSecurity withOption2(ServicenetworkingServicesConnectionsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicenetworkingServicesConnectionsListSecurity(){}
 }

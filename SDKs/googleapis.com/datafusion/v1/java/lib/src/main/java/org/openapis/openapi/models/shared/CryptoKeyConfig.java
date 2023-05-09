@@ -18,9 +18,11 @@ public class CryptoKeyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyReference")
     public String keyReference;
+
     public CryptoKeyConfig withKeyReference(String keyReference) {
         this.keyReference = keyReference;
         return this;
     }
     
+    public CryptoKeyConfig(){}
 }

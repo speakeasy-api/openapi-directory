@@ -18,6 +18,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionStats {
      */
     
     public Boolean disablePrimaryStatDisplay;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionStats withDisablePrimaryStatDisplay(Boolean disablePrimaryStatDisplay) {
         this.disablePrimaryStatDisplay = disablePrimaryStatDisplay;
         return this;
@@ -28,6 +29,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionStats {
      */
     
     public Boolean hasDisplayableStats;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionStats withHasDisplayableStats(Boolean hasDisplayableStats) {
         this.hasDisplayableStats = hasDisplayableStats;
         return this;
@@ -39,6 +41,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionStats {
      */
     
     public Long primaryBaseStatHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionStats withPrimaryBaseStatHash(Long primaryBaseStatHash) {
         this.primaryBaseStatHash = primaryBaseStatHash;
         return this;
@@ -50,6 +53,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionStats {
      */
     
     public Long statGroupHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionStats withStatGroupHash(Long statGroupHash) {
         this.statGroupHash = statGroupHash;
         return this;
@@ -61,9 +65,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionStats {
      */
     
     public java.util.Map<String, DestinyDefinitionsDestinyInventoryItemStatDefinition> stats;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionStats withStats(java.util.Map<String, DestinyDefinitionsDestinyInventoryItemStatDefinition> stats) {
         this.stats = stats;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionStats(){}
 }

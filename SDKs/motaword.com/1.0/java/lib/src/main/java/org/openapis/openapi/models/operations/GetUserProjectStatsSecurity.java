@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserProjectStatsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String mwoAuth;
+
     public GetUserProjectStatsSecurity withMwoAuth(String mwoAuth) {
         this.mwoAuth = mwoAuth;
         return this;
     }
     
+    public GetUserProjectStatsSecurity(@JsonProperty("mwoAuth") String mwoAuth) {
+        this.mwoAuth = mwoAuth;
+  }
 }

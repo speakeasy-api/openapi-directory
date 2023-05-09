@@ -12,9 +12,11 @@ public class SubnetworksSetPrivateIpGoogleAccessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpGoogleAccess")
     public Boolean privateIpGoogleAccess;
+
     public SubnetworksSetPrivateIpGoogleAccessRequest withPrivateIpGoogleAccess(Boolean privateIpGoogleAccess) {
         this.privateIpGoogleAccess = privateIpGoogleAccess;
         return this;
     }
     
+    public SubnetworksSetPrivateIpGoogleAccessRequest(){}
 }

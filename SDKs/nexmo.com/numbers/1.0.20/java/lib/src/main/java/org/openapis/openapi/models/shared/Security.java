@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
     public String apiKey;
+
     public Security withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +18,14 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_secret")
     public String apiSecret;
+
     public Security withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
     }
     
+    public Security(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+  }
 }

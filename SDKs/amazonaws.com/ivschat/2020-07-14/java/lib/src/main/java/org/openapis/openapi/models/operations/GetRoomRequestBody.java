@@ -12,9 +12,13 @@ public class GetRoomRequestBody {
      */
     @JsonProperty("identifier")
     public String identifier;
+
     public GetRoomRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public GetRoomRequestBody(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

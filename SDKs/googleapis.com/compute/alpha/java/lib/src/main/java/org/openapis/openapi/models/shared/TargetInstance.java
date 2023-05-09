@@ -18,6 +18,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetInstance withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetInstance withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetInstance withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public TargetInstance withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -62,6 +66,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetInstance withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetInstance withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natPolicy")
     public TargetInstanceNatPolicyEnum natPolicy;
+
     public TargetInstance withNatPolicy(TargetInstanceNatPolicyEnum natPolicy) {
         this.natPolicy = natPolicy;
         return this;
@@ -95,6 +102,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public TargetInstance withNetwork(String network) {
         this.network = network;
         return this;
@@ -106,6 +114,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicy")
     public String securityPolicy;
+
     public TargetInstance withSecurityPolicy(String securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -117,6 +126,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetInstance withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -128,6 +138,7 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public TargetInstance withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -139,9 +150,11 @@ public class TargetInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public TargetInstance withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public TargetInstance(){}
 }

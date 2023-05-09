@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpv6PoolsResultIpv6Pools {
     
     public String description;
+
     public DescribeIpv6PoolsResultIpv6Pools withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeIpv6PoolsResultIpv6Pools {
     
     
     public DescribeIpv6PoolsResultIpv6PoolsPoolCidrBlocks[] poolCidrBlocks;
+
     public DescribeIpv6PoolsResultIpv6Pools withPoolCidrBlocks(DescribeIpv6PoolsResultIpv6PoolsPoolCidrBlocks[] poolCidrBlocks) {
         this.poolCidrBlocks = poolCidrBlocks;
         return this;
@@ -26,6 +28,7 @@ public class DescribeIpv6PoolsResultIpv6Pools {
     
     
     public String poolId;
+
     public DescribeIpv6PoolsResultIpv6Pools withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -33,9 +36,11 @@ public class DescribeIpv6PoolsResultIpv6Pools {
     
     
     public DescribeIpv6PoolsResultIpv6PoolsTags[] tags;
+
     public DescribeIpv6PoolsResultIpv6Pools withTags(DescribeIpv6PoolsResultIpv6PoolsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeIpv6PoolsResultIpv6Pools(){}
 }

@@ -15,6 +15,7 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public DurationUnitEnum unit;
+
     public Duration withUnit(DurationUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -23,9 +24,11 @@ public class Duration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public Duration withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Duration(){}
 }

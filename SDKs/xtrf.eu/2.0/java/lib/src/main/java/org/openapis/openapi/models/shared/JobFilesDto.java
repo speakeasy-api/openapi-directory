@@ -12,6 +12,7 @@ public class JobFilesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveredInJobFiles")
     public String[] deliveredInJobFiles;
+
     public JobFilesDto withDeliveredInJobFiles(String[] deliveredInJobFiles) {
         this.deliveredInJobFiles = deliveredInJobFiles;
         return this;
@@ -20,6 +21,7 @@ public class JobFilesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedReferenceFiles")
     public String[] sharedReferenceFiles;
+
     public JobFilesDto withSharedReferenceFiles(String[] sharedReferenceFiles) {
         this.sharedReferenceFiles = sharedReferenceFiles;
         return this;
@@ -28,9 +30,11 @@ public class JobFilesDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedWorkFiles")
     public String[] sharedWorkFiles;
+
     public JobFilesDto withSharedWorkFiles(String[] sharedWorkFiles) {
         this.sharedWorkFiles = sharedWorkFiles;
         return this;
     }
     
+    public JobFilesDto(){}
 }

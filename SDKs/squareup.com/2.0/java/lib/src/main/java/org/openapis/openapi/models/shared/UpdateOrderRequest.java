@@ -21,6 +21,7 @@ public class UpdateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields_to_clear")
     public String[] fieldsToClear;
+
     public UpdateOrderRequest withFieldsToClear(String[] fieldsToClear) {
         this.fieldsToClear = fieldsToClear;
         return this;
@@ -39,6 +40,7 @@ public class UpdateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public UpdateOrderRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -55,9 +57,11 @@ public class UpdateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public UpdateOrderRequest withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public UpdateOrderRequest(){}
 }

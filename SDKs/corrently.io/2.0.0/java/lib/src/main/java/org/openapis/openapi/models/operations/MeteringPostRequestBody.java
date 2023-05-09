@@ -15,6 +15,7 @@ public class MeteringPostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("1.8.0")
     public Long one80;
+
     public MeteringPostRequestBody withOne80(Long one80) {
         this.one80 = one80;
         return this;
@@ -26,6 +27,7 @@ public class MeteringPostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public MeteringPostRequestBody withAccount(String account) {
         this.account = account;
         return this;
@@ -37,6 +39,7 @@ public class MeteringPostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energy")
     public Long energy;
+
     public MeteringPostRequestBody withEnergy(Long energy) {
         this.energy = energy;
         return this;
@@ -48,6 +51,7 @@ public class MeteringPostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public MeteringPostRequestBody withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -59,6 +63,7 @@ public class MeteringPostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public MeteringPostRequestBody withValue(Long value) {
         this.value = value;
         return this;
@@ -70,9 +75,11 @@ public class MeteringPostRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public MeteringPostRequestBody withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public MeteringPostRequestBody(){}
 }

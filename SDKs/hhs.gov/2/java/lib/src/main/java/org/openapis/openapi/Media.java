@@ -61,11 +61,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaJsonResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaFeaturedJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaFeaturedJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaFeaturedJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaFeaturedJsonResponse(contentType, httpRes.statusCode()) {{
             mediaItems = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaSearchResultsJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaSearchResultsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaSearchResultsJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaSearchResultsJsonResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,11 +235,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdJsonResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,11 +280,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdContentResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdContentResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdContentResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdContentResponse(contentType, httpRes.statusCode()) {{
             getResourcesMediaIdContent200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -336,11 +324,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonResponse(contentType, httpRes.statusCode()) {{
             getResourcesMediaIdEmbedJSON200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -376,11 +362,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgResponse(contentType, httpRes.statusCode()) {{
             getResourcesMediaIdPreviewJpg200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,11 +407,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -470,11 +452,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatResponse(contentType, httpRes.statusCode()) {{
             syndicateMarshallerWrapped = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -511,11 +491,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgResponse(contentType, httpRes.statusCode()) {{
             getResourcesMediaIdThumbnailJpg200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -552,11 +530,9 @@ public class Media {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse(contentType, httpRes.statusCode()) {{
             getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

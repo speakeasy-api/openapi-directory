@@ -49,10 +49,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdResponse res = new org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403) {
@@ -83,10 +81,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -117,10 +113,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdResponse() {{
+        org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdResponse res = new org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,10 +147,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksResponse() {{
+        org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksResponse res = new org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 403) {
@@ -189,10 +181,8 @@ public class Webhooks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdResponse() {{
+        org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdResponse res = new org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 403) {

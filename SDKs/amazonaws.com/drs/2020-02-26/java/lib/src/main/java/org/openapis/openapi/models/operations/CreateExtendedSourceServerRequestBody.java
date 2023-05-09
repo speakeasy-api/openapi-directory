@@ -14,6 +14,7 @@ public class CreateExtendedSourceServerRequestBody {
      */
     @JsonProperty("sourceServerArn")
     public String sourceServerArn;
+
     public CreateExtendedSourceServerRequestBody withSourceServerArn(String sourceServerArn) {
         this.sourceServerArn = sourceServerArn;
         return this;
@@ -25,9 +26,13 @@ public class CreateExtendedSourceServerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateExtendedSourceServerRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateExtendedSourceServerRequestBody(@JsonProperty("sourceServerArn") String sourceServerArn) {
+        this.sourceServerArn = sourceServerArn;
+  }
 }

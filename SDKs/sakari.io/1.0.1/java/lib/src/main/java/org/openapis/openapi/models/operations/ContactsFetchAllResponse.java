@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContactsFetchAllResponse {
@@ -12,6 +13,7 @@ public class ContactsFetchAllResponse {
      */
     
     public org.openapis.openapi.models.shared.ContactsResponse contactsResponse;
+
     public ContactsFetchAllResponse withContactsResponse(org.openapis.openapi.models.shared.ContactsResponse contactsResponse) {
         this.contactsResponse = contactsResponse;
         return this;
@@ -19,6 +21,7 @@ public class ContactsFetchAllResponse {
     
     
     public String contentType;
+
     public ContactsFetchAllResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ContactsFetchAllResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public ContactsFetchAllResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class ContactsFetchAllResponse {
     
     
     public Integer statusCode;
+
     public ContactsFetchAllResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ContactsFetchAllResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContactsFetchAllResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContactsFetchAllResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

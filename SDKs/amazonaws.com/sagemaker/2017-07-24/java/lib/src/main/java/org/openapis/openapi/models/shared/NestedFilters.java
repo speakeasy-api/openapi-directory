@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * NestedFilters - &lt;p&gt;A list of nested &lt;a&gt;Filter&lt;/a&gt; objects. A resource must satisfy the conditions of all filters to be included in the results returned from the &lt;a&gt;Search&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;For example, to filter on a training job's &lt;code&gt;InputDataConfig&lt;/code&gt; property with a specific channel name and &lt;code&gt;S3Uri&lt;/code&gt; prefix, define the following filters:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;'{Name:"InputDataConfig.ChannelName", "Operator":"Equals", "Value":"train"}',&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;'{Name:"InputDataConfig.DataSource.S3DataSource.S3Uri", "Operator":"Contains", "Value":"mybucket/catdata"}'&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * NestedFilters - &lt;p&gt;A list of nested &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Filter.html"&gt;Filter&lt;/a&gt; objects. A resource must satisfy the conditions of all filters to be included in the results returned from the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html"&gt;Search&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;For example, to filter on a training job's &lt;code&gt;InputDataConfig&lt;/code&gt; property with a specific channel name and &lt;code&gt;S3Uri&lt;/code&gt; prefix, define the following filters:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;'{Name:"InputDataConfig.ChannelName", "Operator":"Equals", "Value":"train"}',&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;'{Name:"InputDataConfig.DataSource.S3DataSource.S3Uri", "Operator":"Contains", "Value":"mybucket/catdata"}'&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
  */
 public class NestedFilters {
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public NestedFilters withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -19,9 +20,14 @@ public class NestedFilters {
     
     @JsonProperty("NestedPropertyName")
     public String nestedPropertyName;
+
     public NestedFilters withNestedPropertyName(String nestedPropertyName) {
         this.nestedPropertyName = nestedPropertyName;
         return this;
     }
     
+    public NestedFilters(@JsonProperty("Filters") Filter[] filters, @JsonProperty("NestedPropertyName") String nestedPropertyName) {
+        this.filters = filters;
+        this.nestedPropertyName = nestedPropertyName;
+  }
 }

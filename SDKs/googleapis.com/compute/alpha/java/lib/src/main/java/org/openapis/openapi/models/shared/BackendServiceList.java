@@ -18,6 +18,7 @@ public class BackendServiceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public BackendServiceList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public BackendService[] items;
+
     public BackendServiceList withItems(BackendService[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class BackendServiceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BackendServiceList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class BackendServiceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public BackendServiceList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class BackendServiceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public BackendServiceList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class BackendServiceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public BackendServiceListWarning warning;
+
     public BackendServiceList withWarning(BackendServiceListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public BackendServiceList(){}
 }

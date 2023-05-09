@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTagsResponse {
@@ -12,6 +13,7 @@ public class AddTagsResponse {
      */
     
     public java.util.Map<String, Object> addTagsResponse;
+
     public AddTagsResponse withAddTagsResponse(java.util.Map<String, Object> addTagsResponse) {
         this.addTagsResponse = addTagsResponse;
         return this;
@@ -22,6 +24,7 @@ public class AddTagsResponse {
      */
     
     public Object channelNotFoundException;
+
     public AddTagsResponse withChannelNotFoundException(Object channelNotFoundException) {
         this.channelNotFoundException = channelNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class AddTagsResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public AddTagsResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -42,6 +46,7 @@ public class AddTagsResponse {
      */
     
     public Object conflictException;
+
     public AddTagsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -49,6 +54,7 @@ public class AddTagsResponse {
     
     
     public String contentType;
+
     public AddTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class AddTagsResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public AddTagsResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class AddTagsResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public AddTagsResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -79,6 +87,7 @@ public class AddTagsResponse {
      */
     
     public Object invalidTagParameterException;
+
     public AddTagsResponse withInvalidTagParameterException(Object invalidTagParameterException) {
         this.invalidTagParameterException = invalidTagParameterException;
         return this;
@@ -89,6 +98,7 @@ public class AddTagsResponse {
      */
     
     public Object invalidTrailNameException;
+
     public AddTagsResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -99,6 +109,7 @@ public class AddTagsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public AddTagsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -109,6 +120,7 @@ public class AddTagsResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public AddTagsResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -119,6 +131,7 @@ public class AddTagsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public AddTagsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -129,6 +142,7 @@ public class AddTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AddTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -136,6 +150,7 @@ public class AddTagsResponse {
     
     
     public Integer statusCode;
+
     public AddTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class AddTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,6 +169,7 @@ public class AddTagsResponse {
      */
     
     public Object resourceTypeNotSupportedException;
+
     public AddTagsResponse withResourceTypeNotSupportedException(Object resourceTypeNotSupportedException) {
         this.resourceTypeNotSupportedException = resourceTypeNotSupportedException;
         return this;
@@ -163,6 +180,7 @@ public class AddTagsResponse {
      */
     
     public Object tagsLimitExceededException;
+
     public AddTagsResponse withTagsLimitExceededException(Object tagsLimitExceededException) {
         this.tagsLimitExceededException = tagsLimitExceededException;
         return this;
@@ -173,9 +191,14 @@ public class AddTagsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public AddTagsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public AddTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

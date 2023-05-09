@@ -15,9 +15,11 @@ public class HealthProfileResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public HealthProfileResourceAttributesStats[] stats;
+
     public HealthProfileResourceAttributes withStats(HealthProfileResourceAttributesStats[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public HealthProfileResourceAttributes(){}
 }

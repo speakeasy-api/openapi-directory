@@ -15,9 +15,11 @@ public class PreprintProviderLicensesListLicenseLinks {
      */
     
     public String self;
+
     public PreprintProviderLicensesListLicenseLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public PreprintProviderLicensesListLicenseLinks(){}
 }

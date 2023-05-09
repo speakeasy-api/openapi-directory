@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListForRepoRequest {
@@ -12,6 +13,7 @@ public class ProjectsListForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ProjectsListForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -22,6 +24,7 @@ public class ProjectsListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ProjectsListForRepoRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ProjectsListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ProjectsListForRepoRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class ProjectsListForRepoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ProjectsListForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -52,9 +57,14 @@ public class ProjectsListForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public ProjectsListForRepoStateEnum state;
+
     public ProjectsListForRepoRequest withState(ProjectsListForRepoStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ProjectsListForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

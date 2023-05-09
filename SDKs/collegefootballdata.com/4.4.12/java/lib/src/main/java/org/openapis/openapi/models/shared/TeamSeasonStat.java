@@ -12,6 +12,7 @@ public class TeamSeasonStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
     public String conference;
+
     public TeamSeasonStat withConference(String conference) {
         this.conference = conference;
         return this;
@@ -20,6 +21,7 @@ public class TeamSeasonStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public TeamSeasonStat withSeason(Long season) {
         this.season = season;
         return this;
@@ -28,6 +30,7 @@ public class TeamSeasonStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statName")
     public String statName;
+
     public TeamSeasonStat withStatName(String statName) {
         this.statName = statName;
         return this;
@@ -36,6 +39,7 @@ public class TeamSeasonStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statValue")
     public Long statValue;
+
     public TeamSeasonStat withStatValue(Long statValue) {
         this.statValue = statValue;
         return this;
@@ -44,9 +48,11 @@ public class TeamSeasonStat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public TeamSeasonStat withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public TeamSeasonStat(){}
 }

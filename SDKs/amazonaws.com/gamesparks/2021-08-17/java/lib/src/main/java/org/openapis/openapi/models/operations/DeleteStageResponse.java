@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStageResponse {
@@ -12,6 +13,7 @@ public class DeleteStageResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteStageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteStageResponse {
      */
     
     public Object conflictException;
+
     public DeleteStageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStageResponse {
     
     
     public String contentType;
+
     public DeleteStageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStageResponse {
      */
     
     public java.util.Map<String, Object> deleteStageResult;
+
     public DeleteStageResponse withDeleteStageResult(java.util.Map<String, Object> deleteStageResult) {
         this.deleteStageResult = deleteStageResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteStageResponse {
      */
     
     public Object internalServerException;
+
     public DeleteStageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteStageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteStageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteStageResponse {
     
     
     public Integer statusCode;
+
     public DeleteStageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteStageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteStageResponse {
      */
     
     public Object throttlingException;
+
     public DeleteStageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteStageResponse {
      */
     
     public Object validationException;
+
     public DeleteStageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteStageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

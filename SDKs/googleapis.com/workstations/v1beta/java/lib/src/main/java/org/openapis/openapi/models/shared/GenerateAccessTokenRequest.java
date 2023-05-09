@@ -18,6 +18,7 @@ public class GenerateAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GenerateAccessTokenRequest withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -29,9 +30,11 @@ public class GenerateAccessTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public String ttl;
+
     public GenerateAccessTokenRequest withTtl(String ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public GenerateAccessTokenRequest(){}
 }

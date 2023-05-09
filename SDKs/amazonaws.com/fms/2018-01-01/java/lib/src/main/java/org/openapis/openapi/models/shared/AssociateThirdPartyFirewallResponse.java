@@ -15,9 +15,11 @@ public class AssociateThirdPartyFirewallResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallStatus")
     public ThirdPartyFirewallAssociationStatusEnum thirdPartyFirewallStatus;
+
     public AssociateThirdPartyFirewallResponse withThirdPartyFirewallStatus(ThirdPartyFirewallAssociationStatusEnum thirdPartyFirewallStatus) {
         this.thirdPartyFirewallStatus = thirdPartyFirewallStatus;
         return this;
     }
     
+    public AssociateThirdPartyFirewallResponse(){}
 }

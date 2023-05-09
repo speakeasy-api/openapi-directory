@@ -18,6 +18,7 @@ public class ConnectionTypesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionTypes")
     public ConnectionType[] connectionTypes;
+
     public ConnectionTypesListResponse withConnectionTypes(ConnectionType[] connectionTypes) {
         this.connectionTypes = connectionTypes;
         return this;
@@ -29,9 +30,11 @@ public class ConnectionTypesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ConnectionTypesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ConnectionTypesListResponse(){}
 }

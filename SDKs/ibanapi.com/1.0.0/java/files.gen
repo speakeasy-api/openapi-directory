@@ -30,6 +30,7 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
+lib/src/main/java/org/openapis/openapi/models/operations/GetBalanceSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBalanceResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANRequest.java
@@ -44,4 +45,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FourHundredAndTwentyTwo.jav
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/IBANResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/IBANResultBasic.java
+docs/sdk/README.md
+docs/ibanapi/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class BeezUPCommonUserErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arguments")
     public BeezUPCommonUserErrorMessageArguments[] arguments;
+
     public BeezUPCommonUserErrorMessage withArguments(BeezUPCommonUserErrorMessageArguments[] arguments) {
         this.arguments = arguments;
         return this;
@@ -25,6 +26,7 @@ public class BeezUPCommonUserErrorMessage {
      */
     @JsonProperty("code")
     public String code;
+
     public BeezUPCommonUserErrorMessage withCode(String code) {
         this.code = code;
         return this;
@@ -36,6 +38,7 @@ public class BeezUPCommonUserErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cultureName")
     public String cultureName;
+
     public BeezUPCommonUserErrorMessage withCultureName(String cultureName) {
         this.cultureName = cultureName;
         return this;
@@ -47,6 +50,7 @@ public class BeezUPCommonUserErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docUrl")
     public String docUrl;
+
     public BeezUPCommonUserErrorMessage withDocUrl(String docUrl) {
         this.docUrl = docUrl;
         return this;
@@ -57,9 +61,14 @@ public class BeezUPCommonUserErrorMessage {
      */
     @JsonProperty("message")
     public String message;
+
     public BeezUPCommonUserErrorMessage withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BeezUPCommonUserErrorMessage(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

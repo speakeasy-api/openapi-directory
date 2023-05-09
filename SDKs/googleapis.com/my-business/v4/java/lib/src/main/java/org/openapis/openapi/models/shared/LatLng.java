@@ -18,6 +18,7 @@ public class LatLng {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public LatLng withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class LatLng {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public LatLng withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public LatLng(){}
 }

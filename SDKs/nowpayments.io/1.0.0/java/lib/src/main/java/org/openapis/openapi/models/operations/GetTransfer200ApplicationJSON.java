@@ -15,9 +15,11 @@ public class GetTransfer200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetTransfer200ApplicationJSONResult result;
+
     public GetTransfer200ApplicationJSON withResult(GetTransfer200ApplicationJSONResult result) {
         this.result = result;
         return this;
     }
     
+    public GetTransfer200ApplicationJSON(){}
 }

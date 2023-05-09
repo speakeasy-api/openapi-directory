@@ -15,6 +15,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actually_paid")
     public Double actuallyPaid;
+
     public GetPaymentStatus200ApplicationJSON withActuallyPaid(Double actuallyPaid) {
         this.actuallyPaid = actuallyPaid;
         return this;
@@ -23,6 +24,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GetPaymentStatus200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_description")
     public String orderDescription;
+
     public GetPaymentStatus200ApplicationJSON withOrderDescription(String orderDescription) {
         this.orderDescription = orderDescription;
         return this;
@@ -39,6 +42,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public GetPaymentStatus200ApplicationJSON withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -47,6 +51,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome_amount")
     public Double outcomeAmount;
+
     public GetPaymentStatus200ApplicationJSON withOutcomeAmount(Double outcomeAmount) {
         this.outcomeAmount = outcomeAmount;
         return this;
@@ -55,6 +60,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome_currency")
     public String outcomeCurrency;
+
     public GetPaymentStatus200ApplicationJSON withOutcomeCurrency(String outcomeCurrency) {
         this.outcomeCurrency = outcomeCurrency;
         return this;
@@ -63,6 +69,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pay_address")
     public String payAddress;
+
     public GetPaymentStatus200ApplicationJSON withPayAddress(String payAddress) {
         this.payAddress = payAddress;
         return this;
@@ -71,6 +78,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pay_amount")
     public Double payAmount;
+
     public GetPaymentStatus200ApplicationJSON withPayAmount(Double payAmount) {
         this.payAmount = payAmount;
         return this;
@@ -79,6 +87,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pay_currency")
     public String payCurrency;
+
     public GetPaymentStatus200ApplicationJSON withPayCurrency(String payCurrency) {
         this.payCurrency = payCurrency;
         return this;
@@ -87,6 +96,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public Double paymentId;
+
     public GetPaymentStatus200ApplicationJSON withPaymentId(Double paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -95,6 +105,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_status")
     public String paymentStatus;
+
     public GetPaymentStatus200ApplicationJSON withPaymentStatus(String paymentStatus) {
         this.paymentStatus = paymentStatus;
         return this;
@@ -103,6 +114,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_amount")
     public Double priceAmount;
+
     public GetPaymentStatus200ApplicationJSON withPriceAmount(Double priceAmount) {
         this.priceAmount = priceAmount;
         return this;
@@ -111,6 +123,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_currency")
     public String priceCurrency;
+
     public GetPaymentStatus200ApplicationJSON withPriceCurrency(String priceCurrency) {
         this.priceCurrency = priceCurrency;
         return this;
@@ -119,6 +132,7 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_id")
     public String purchaseId;
+
     public GetPaymentStatus200ApplicationJSON withPurchaseId(String purchaseId) {
         this.purchaseId = purchaseId;
         return this;
@@ -127,9 +141,11 @@ public class GetPaymentStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public GetPaymentStatus200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetPaymentStatus200ApplicationJSON(){}
 }

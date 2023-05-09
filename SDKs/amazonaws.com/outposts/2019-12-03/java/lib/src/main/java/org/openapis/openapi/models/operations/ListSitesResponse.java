@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSitesResponse {
@@ -12,6 +13,7 @@ public class ListSitesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSitesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListSitesResponse {
     
     
     public String contentType;
+
     public ListSitesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSitesResponse {
      */
     
     public Object internalServerException;
+
     public ListSitesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListSitesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSitesOutput listSitesOutput;
+
     public ListSitesResponse withListSitesOutput(org.openapis.openapi.models.shared.ListSitesOutput listSitesOutput) {
         this.listSitesOutput = listSitesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListSitesResponse {
     
     
     public Integer statusCode;
+
     public ListSitesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSitesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSitesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListSitesResponse {
      */
     
     public Object validationException;
+
     public ListSitesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSitesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

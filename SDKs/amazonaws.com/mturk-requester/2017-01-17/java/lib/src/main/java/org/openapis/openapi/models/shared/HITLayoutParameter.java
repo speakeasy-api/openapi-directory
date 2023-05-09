@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HITLayoutParameter {
     @JsonProperty("Name")
     public String name;
+
     public HITLayoutParameter withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class HITLayoutParameter {
     
     @JsonProperty("Value")
     public String value;
+
     public HITLayoutParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public HITLayoutParameter(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

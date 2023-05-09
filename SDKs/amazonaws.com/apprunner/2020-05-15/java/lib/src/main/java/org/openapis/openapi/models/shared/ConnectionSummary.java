@@ -20,6 +20,7 @@ public class ConnectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public ConnectionSummary withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -28,6 +29,7 @@ public class ConnectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public ConnectionSummary withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -38,6 +40,7 @@ public class ConnectionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ConnectionSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class ConnectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public ConnectionSummary withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -54,9 +58,11 @@ public class ConnectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ConnectionStatusEnum status;
+
     public ConnectionSummary withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ConnectionSummary(){}
 }

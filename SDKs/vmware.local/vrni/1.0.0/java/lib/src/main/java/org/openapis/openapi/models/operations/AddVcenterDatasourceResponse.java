@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddVcenterDatasourceResponse {
@@ -12,6 +13,7 @@ public class AddVcenterDatasourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public AddVcenterDatasourceResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class AddVcenterDatasourceResponse {
     
     
     public String contentType;
+
     public AddVcenterDatasourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AddVcenterDatasourceResponse {
     
     
     public Integer statusCode;
+
     public AddVcenterDatasourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AddVcenterDatasourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddVcenterDatasourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class AddVcenterDatasourceResponse {
      */
     
     public org.openapis.openapi.models.shared.VCenterDataSource vCenterDataSource;
+
     public AddVcenterDatasourceResponse withVCenterDataSource(org.openapis.openapi.models.shared.VCenterDataSource vCenterDataSource) {
         this.vCenterDataSource = vCenterDataSource;
         return this;
     }
     
+    public AddVcenterDatasourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

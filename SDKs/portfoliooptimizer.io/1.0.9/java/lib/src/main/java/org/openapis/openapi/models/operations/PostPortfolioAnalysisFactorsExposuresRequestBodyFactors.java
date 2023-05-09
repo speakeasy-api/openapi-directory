@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisFactorsExposuresRequestBodyFactors {
      */
     @JsonProperty("factorReturns")
     public Double[] factorReturns;
+
     public PostPortfolioAnalysisFactorsExposuresRequestBodyFactors withFactorReturns(Double[] factorReturns) {
         this.factorReturns = factorReturns;
         return this;
     }
     
+    public PostPortfolioAnalysisFactorsExposuresRequestBodyFactors(@JsonProperty("factorReturns") Double[] factorReturns) {
+        this.factorReturns = factorReturns;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListMFADevicesResponse - Contains the response to a successful &lt;a&gt;ListMFADevices&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListMFADevicesResponse {
     
     public Boolean isTruncated;
+
     public ListMFADevicesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListMFADevicesResponse {
     
     
     public MFADevice[] mfaDevices;
+
     public ListMFADevicesResponse withMFADevices(MFADevice[] mfaDevices) {
         this.mfaDevices = mfaDevices;
         return this;
@@ -26,9 +28,13 @@ public class ListMFADevicesResponse {
     
     
     public String marker;
+
     public ListMFADevicesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListMFADevicesResponse(@JsonProperty("MFADevices") MFADevice[] mfaDevices) {
+        this.mfaDevices = mfaDevices;
+  }
 }

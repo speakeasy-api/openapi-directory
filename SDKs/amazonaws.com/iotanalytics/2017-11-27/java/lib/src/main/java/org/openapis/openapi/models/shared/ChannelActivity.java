@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelActivity {
     @JsonProperty("channelName")
     public String channelName;
+
     public ChannelActivity withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -21,6 +22,7 @@ public class ChannelActivity {
     
     @JsonProperty("name")
     public String name;
+
     public ChannelActivity withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class ChannelActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ChannelActivity withNext(String next) {
         this.next = next;
         return this;
     }
     
+    public ChannelActivity(@JsonProperty("channelName") String channelName, @JsonProperty("name") String name) {
+        this.channelName = channelName;
+        this.name = name;
+  }
 }

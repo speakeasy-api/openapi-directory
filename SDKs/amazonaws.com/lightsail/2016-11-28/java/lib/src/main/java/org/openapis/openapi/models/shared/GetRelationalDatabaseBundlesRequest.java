@@ -12,6 +12,7 @@ public class GetRelationalDatabaseBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInactive")
     public Boolean includeInactive;
+
     public GetRelationalDatabaseBundlesRequest withIncludeInactive(Boolean includeInactive) {
         this.includeInactive = includeInactive;
         return this;
@@ -20,9 +21,11 @@ public class GetRelationalDatabaseBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetRelationalDatabaseBundlesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetRelationalDatabaseBundlesRequest(){}
 }

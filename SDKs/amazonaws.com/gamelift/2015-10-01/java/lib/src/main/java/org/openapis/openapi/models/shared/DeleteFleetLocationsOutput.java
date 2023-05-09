@@ -15,6 +15,7 @@ public class DeleteFleetLocationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public DeleteFleetLocationsOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,6 +24,7 @@ public class DeleteFleetLocationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DeleteFleetLocationsOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -31,9 +33,11 @@ public class DeleteFleetLocationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationStates")
     public LocationState[] locationStates;
+
     public DeleteFleetLocationsOutput withLocationStates(LocationState[] locationStates) {
         this.locationStates = locationStates;
         return this;
     }
     
+    public DeleteFleetLocationsOutput(){}
 }

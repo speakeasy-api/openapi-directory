@@ -12,9 +12,11 @@ public class DistrictStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public DistrictStatus data;
+
     public DistrictStatusResponse withData(DistrictStatus data) {
         this.data = data;
         return this;
     }
     
+    public DistrictStatusResponse(){}
 }

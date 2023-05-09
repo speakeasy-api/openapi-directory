@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutResourcePolicyRequest {
     @JsonProperty("Content")
     public String content;
+
     public PutResourcePolicyRequest withContent(String content) {
         this.content = content;
         return this;
@@ -19,9 +20,13 @@ public class PutResourcePolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public PutResourcePolicyRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutResourcePolicyRequest(@JsonProperty("Content") String content) {
+        this.content = content;
+  }
 }

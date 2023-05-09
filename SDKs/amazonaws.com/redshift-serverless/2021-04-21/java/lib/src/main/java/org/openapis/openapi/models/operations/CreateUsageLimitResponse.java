@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUsageLimitResponse {
@@ -12,6 +13,7 @@ public class CreateUsageLimitResponse {
      */
     
     public Object conflictException;
+
     public CreateUsageLimitResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateUsageLimitResponse {
     
     
     public String contentType;
+
     public CreateUsageLimitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUsageLimitResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUsageLimitResponse createUsageLimitResponse;
+
     public CreateUsageLimitResponse withCreateUsageLimitResponse(org.openapis.openapi.models.shared.CreateUsageLimitResponse createUsageLimitResponse) {
         this.createUsageLimitResponse = createUsageLimitResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateUsageLimitResponse {
      */
     
     public Object internalServerException;
+
     public CreateUsageLimitResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUsageLimitResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateUsageLimitResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateUsageLimitResponse {
     
     
     public Integer statusCode;
+
     public CreateUsageLimitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateUsageLimitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUsageLimitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateUsageLimitResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUsageLimitResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class CreateUsageLimitResponse {
      */
     
     public Object validationException;
+
     public CreateUsageLimitResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateUsageLimitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

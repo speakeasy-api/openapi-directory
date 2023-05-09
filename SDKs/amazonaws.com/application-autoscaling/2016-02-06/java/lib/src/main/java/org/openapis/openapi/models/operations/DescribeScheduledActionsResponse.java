@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeScheduledActionsResponse {
@@ -12,6 +13,7 @@ public class DescribeScheduledActionsResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DescribeScheduledActionsResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeScheduledActionsResponse {
     
     
     public String contentType;
+
     public DescribeScheduledActionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeScheduledActionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeScheduledActionsResponse describeScheduledActionsResponse;
+
     public DescribeScheduledActionsResponse withDescribeScheduledActionsResponse(org.openapis.openapi.models.shared.DescribeScheduledActionsResponse describeScheduledActionsResponse) {
         this.describeScheduledActionsResponse = describeScheduledActionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeScheduledActionsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeScheduledActionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeScheduledActionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeScheduledActionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeScheduledActionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeScheduledActionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeScheduledActionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeScheduledActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeScheduledActionsResponse {
      */
     
     public Object validationException;
+
     public DescribeScheduledActionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeScheduledActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

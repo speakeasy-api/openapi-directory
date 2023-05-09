@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateAccountJwtResponse {
     
     public CreateAccountJwtResponseAuthMethodsEnum[] authMethods;
+
     public CreateAccountJwtResponse withAuthMethods(CreateAccountJwtResponseAuthMethodsEnum[] authMethods) {
         this.authMethods = authMethods;
         return this;
@@ -19,6 +20,7 @@ public class CreateAccountJwtResponse {
     
     
     public String dayOfBirth;
+
     public CreateAccountJwtResponse withDayOfBirth(String dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
         return this;
@@ -26,6 +28,7 @@ public class CreateAccountJwtResponse {
     
     
     public String districtCode;
+
     public CreateAccountJwtResponse withDistrictCode(String districtCode) {
         this.districtCode = districtCode;
         return this;
@@ -33,6 +36,7 @@ public class CreateAccountJwtResponse {
     
     
     public String districtName;
+
     public CreateAccountJwtResponse withDistrictName(String districtName) {
         this.districtName = districtName;
         return this;
@@ -40,6 +44,7 @@ public class CreateAccountJwtResponse {
     
     
     public String email;
+
     public CreateAccountJwtResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -47,6 +52,7 @@ public class CreateAccountJwtResponse {
     
     
     public String firstName;
+
     public CreateAccountJwtResponse withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -54,6 +60,7 @@ public class CreateAccountJwtResponse {
     
     
     public String gender;
+
     public CreateAccountJwtResponse withGender(String gender) {
         this.gender = gender;
         return this;
@@ -61,6 +68,7 @@ public class CreateAccountJwtResponse {
     
     
     public String healthId;
+
     public CreateAccountJwtResponse withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -68,6 +76,7 @@ public class CreateAccountJwtResponse {
     
     
     public String healthIdNumber;
+
     public CreateAccountJwtResponse withHealthIdNumber(String healthIdNumber) {
         this.healthIdNumber = healthIdNumber;
         return this;
@@ -75,6 +84,7 @@ public class CreateAccountJwtResponse {
     
     
     public String kycPhoto;
+
     public CreateAccountJwtResponse withKycPhoto(String kycPhoto) {
         this.kycPhoto = kycPhoto;
         return this;
@@ -82,6 +92,7 @@ public class CreateAccountJwtResponse {
     
     
     public String lastName;
+
     public CreateAccountJwtResponse withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -89,6 +100,7 @@ public class CreateAccountJwtResponse {
     
     
     public String middleName;
+
     public CreateAccountJwtResponse withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -96,6 +108,7 @@ public class CreateAccountJwtResponse {
     
     
     public String mobile;
+
     public CreateAccountJwtResponse withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -103,6 +116,7 @@ public class CreateAccountJwtResponse {
     
     
     public String monthOfBirth;
+
     public CreateAccountJwtResponse withMonthOfBirth(String monthOfBirth) {
         this.monthOfBirth = monthOfBirth;
         return this;
@@ -110,6 +124,7 @@ public class CreateAccountJwtResponse {
     
     
     public String name;
+
     public CreateAccountJwtResponse withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +132,7 @@ public class CreateAccountJwtResponse {
     
     
     public Boolean new_;
+
     public CreateAccountJwtResponse withNew(Boolean new_) {
         this.new_ = new_;
         return this;
@@ -124,6 +140,7 @@ public class CreateAccountJwtResponse {
     
     
     public String stateCode;
+
     public CreateAccountJwtResponse withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -131,6 +148,7 @@ public class CreateAccountJwtResponse {
     
     
     public String stateName;
+
     public CreateAccountJwtResponse withStateName(String stateName) {
         this.stateName = stateName;
         return this;
@@ -138,6 +156,7 @@ public class CreateAccountJwtResponse {
     
     
     public java.util.Map<String, String> tags;
+
     public CreateAccountJwtResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -145,6 +164,7 @@ public class CreateAccountJwtResponse {
     
     
     public String token;
+
     public CreateAccountJwtResponse withToken(String token) {
         this.token = token;
         return this;
@@ -152,9 +172,11 @@ public class CreateAccountJwtResponse {
     
     
     public String yearOfBirth;
+
     public CreateAccountJwtResponse withYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
         return this;
     }
     
+    public CreateAccountJwtResponse(){}
 }

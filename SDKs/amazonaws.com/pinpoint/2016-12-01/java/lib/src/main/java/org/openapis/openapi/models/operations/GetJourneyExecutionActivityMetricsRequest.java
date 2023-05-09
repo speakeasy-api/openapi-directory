@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJourneyExecutionActivityMetricsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetJourneyExecutionActivityMetricsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetJourneyExecutionActivityMetricsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetJourneyExecutionActivityMetricsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetJourneyExecutionActivityMetricsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetJourneyExecutionActivityMetricsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetJourneyExecutionActivityMetricsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetJourneyExecutionActivityMetricsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
     public String applicationId;
+
     public GetJourneyExecutionActivityMetricsRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -71,6 +80,7 @@ public class GetJourneyExecutionActivityMetricsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=journey-activity-id")
     public String journeyActivityId;
+
     public GetJourneyExecutionActivityMetricsRequest withJourneyActivityId(String journeyActivityId) {
         this.journeyActivityId = journeyActivityId;
         return this;
@@ -81,16 +91,18 @@ public class GetJourneyExecutionActivityMetricsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=journey-id")
     public String journeyId;
+
     public GetJourneyExecutionActivityMetricsRequest withJourneyId(String journeyId) {
         this.journeyId = journeyId;
         return this;
     }
     
     /**
-     * The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     * The &lt;code/&gt; string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
     public String nextToken;
+
     public GetJourneyExecutionActivityMetricsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -101,9 +113,15 @@ public class GetJourneyExecutionActivityMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
     public String pageSize;
+
     public GetJourneyExecutionActivityMetricsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetJourneyExecutionActivityMetricsRequest(@JsonProperty("application-id") String applicationId, @JsonProperty("journey-activity-id") String journeyActivityId, @JsonProperty("journey-id") String journeyId) {
+        this.applicationId = applicationId;
+        this.journeyActivityId = journeyActivityId;
+        this.journeyId = journeyId;
+  }
 }

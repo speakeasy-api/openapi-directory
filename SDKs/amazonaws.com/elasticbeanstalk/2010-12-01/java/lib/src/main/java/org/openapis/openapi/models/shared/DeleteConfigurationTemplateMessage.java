@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteConfigurationTemplateMessage - Request to delete a configuration template.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteConfigurationTemplateMessage {
     
     public String applicationName;
+
     public DeleteConfigurationTemplateMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteConfigurationTemplateMessage {
     
     
     public String templateName;
+
     public DeleteConfigurationTemplateMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public DeleteConfigurationTemplateMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("TemplateName") String templateName) {
+        this.applicationName = applicationName;
+        this.templateName = templateName;
+  }
 }

@@ -15,6 +15,7 @@ public class InstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockDeviceMappings")
     public InstanceBlockDeviceMapping[] blockDeviceMappings;
+
     public InstanceConfiguration withBlockDeviceMappings(InstanceBlockDeviceMapping[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -23,9 +24,11 @@ public class InstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public InstanceConfiguration withImage(String image) {
         this.image = image;
         return this;
     }
     
+    public InstanceConfiguration(){}
 }

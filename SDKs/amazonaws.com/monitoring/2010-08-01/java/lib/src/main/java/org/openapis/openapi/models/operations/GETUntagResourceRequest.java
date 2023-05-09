@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUntagResourceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUntagResourceActionEnum action;
+
     public GETUntagResourceRequest withAction(GETUntagResourceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUntagResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceARN")
     public String resourceARN;
+
     public GETUntagResourceRequest withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -29,6 +32,7 @@ public class GETUntagResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
     public String[] tagKeys;
+
     public GETUntagResourceRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -36,6 +40,7 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUntagResourceVersionEnum version;
+
     public GETUntagResourceRequest withVersion(GETUntagResourceVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUntagResourceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUntagResourceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUntagResourceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUntagResourceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUntagResourceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUntagResourceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUntagResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUntagResourceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUntagResourceRequest(@JsonProperty("Action") GETUntagResourceActionEnum action, @JsonProperty("ResourceARN") String resourceARN, @JsonProperty("TagKeys") String[] tagKeys, @JsonProperty("Version") GETUntagResourceVersionEnum version) {
+        this.action = action;
+        this.resourceARN = resourceARN;
+        this.tagKeys = tagKeys;
+        this.version = version;
+  }
 }

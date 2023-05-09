@@ -15,6 +15,7 @@ public class PostLoadBalancersIdActionsAttachToNetworkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public PostLoadBalancersIdActionsAttachToNetworkRequestBody withIp(String ip) {
         this.ip = ip;
         return this;
@@ -25,9 +26,13 @@ public class PostLoadBalancersIdActionsAttachToNetworkRequestBody {
      */
     @JsonProperty("network")
     public Double network;
+
     public PostLoadBalancersIdActionsAttachToNetworkRequestBody withNetwork(Double network) {
         this.network = network;
         return this;
     }
     
+    public PostLoadBalancersIdActionsAttachToNetworkRequestBody(@JsonProperty("network") Double network) {
+        this.network = network;
+  }
 }

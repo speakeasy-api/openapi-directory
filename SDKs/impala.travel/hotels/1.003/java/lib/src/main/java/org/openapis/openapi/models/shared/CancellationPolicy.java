@@ -18,6 +18,7 @@ public class CancellationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public CancellationPolicy withEnd(String end) {
         this.end = end;
         return this;
@@ -28,6 +29,7 @@ public class CancellationPolicy {
      */
     @JsonProperty("fee")
     public CancellationFee fee;
+
     public CancellationPolicy withFee(CancellationFee fee) {
         this.fee = fee;
         return this;
@@ -38,6 +40,7 @@ public class CancellationPolicy {
      */
     @JsonProperty("formatted")
     public String formatted;
+
     public CancellationPolicy withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
@@ -48,9 +51,15 @@ public class CancellationPolicy {
      */
     @JsonProperty("start")
     public String start;
+
     public CancellationPolicy withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public CancellationPolicy(@JsonProperty("fee") CancellationFee fee, @JsonProperty("formatted") String formatted, @JsonProperty("start") String start) {
+        this.fee = fee;
+        this.formatted = formatted;
+        this.start = start;
+  }
 }

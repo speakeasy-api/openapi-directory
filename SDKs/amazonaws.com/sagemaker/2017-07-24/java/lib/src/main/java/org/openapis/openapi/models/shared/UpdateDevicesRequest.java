@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDevicesRequest {
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public UpdateDevicesRequest withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateDevicesRequest {
     
     @JsonProperty("Devices")
     public Device[] devices;
+
     public UpdateDevicesRequest withDevices(Device[] devices) {
         this.devices = devices;
         return this;
     }
     
+    public UpdateDevicesRequest(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("Devices") Device[] devices) {
+        this.deviceFleetName = deviceFleetName;
+        this.devices = devices;
+  }
 }

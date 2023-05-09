@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGameResponse {
@@ -12,6 +13,7 @@ public class CreateGameResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateGameResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateGameResponse {
      */
     
     public Object conflictException;
+
     public CreateGameResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateGameResponse {
     
     
     public String contentType;
+
     public CreateGameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateGameResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGameResult createGameResult;
+
     public CreateGameResponse withCreateGameResult(org.openapis.openapi.models.shared.CreateGameResult createGameResult) {
         this.createGameResult = createGameResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateGameResponse {
      */
     
     public Object internalServerException;
+
     public CreateGameResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateGameResponse {
     
     
     public Integer statusCode;
+
     public CreateGameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateGameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateGameResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateGameResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateGameResponse {
      */
     
     public Object throttlingException;
+
     public CreateGameResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateGameResponse {
      */
     
     public Object validationException;
+
     public CreateGameResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateGameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

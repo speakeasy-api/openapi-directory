@@ -15,6 +15,7 @@ public class RollbackApiSpecRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public RollbackApiSpecRequest withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class RollbackApiSpecRequest {
      */
     @JsonProperty("revisionId")
     public String revisionId;
+
     public RollbackApiSpecRequest withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public RollbackApiSpecRequest(@JsonProperty("name") String name, @JsonProperty("revisionId") String revisionId) {
+        this.name = name;
+        this.revisionId = revisionId;
+  }
 }

@@ -61,11 +61,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateResponse(contentType, httpRes.statusCode()) {{
             dataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDataPointChangesListResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDataPointChangesListResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDataPointChangesListResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDataPointChangesListResponse(contentType, httpRes.statusCode()) {{
             listDataPointChangesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,10 +149,8 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsDeleteResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsDeleteResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsGetResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsGetResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsGetResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsGetResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsPatchResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsPatchResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsPatchResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDatasetsPatchResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDeleteResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDeleteResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesDeleteResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesDeleteResponse(contentType, httpRes.statusCode()) {{
             dataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -333,11 +321,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesGetResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesGetResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesGetResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesGetResponse(contentType, httpRes.statusCode()) {{
             dataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -379,11 +365,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesListResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesListResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesListResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesListResponse(contentType, httpRes.statusCode()) {{
             listDataSourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,11 +411,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDataSourcesUpdateResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesUpdateResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDataSourcesUpdateResponse res = new org.openapis.openapi.models.operations.FitnessUsersDataSourcesUpdateResponse(contentType, httpRes.statusCode()) {{
             dataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -475,11 +457,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersDatasetAggregateResponse res = new org.openapis.openapi.models.operations.FitnessUsersDatasetAggregateResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersDatasetAggregateResponse res = new org.openapis.openapi.models.operations.FitnessUsersDatasetAggregateResponse(contentType, httpRes.statusCode()) {{
             aggregateResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -521,10 +501,8 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersSessionsDeleteResponse res = new org.openapis.openapi.models.operations.FitnessUsersSessionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersSessionsDeleteResponse res = new org.openapis.openapi.models.operations.FitnessUsersSessionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -561,11 +539,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersSessionsListResponse res = new org.openapis.openapi.models.operations.FitnessUsersSessionsListResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersSessionsListResponse res = new org.openapis.openapi.models.operations.FitnessUsersSessionsListResponse(contentType, httpRes.statusCode()) {{
             listSessionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -609,11 +585,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FitnessUsersSessionsUpdateResponse res = new org.openapis.openapi.models.operations.FitnessUsersSessionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.FitnessUsersSessionsUpdateResponse res = new org.openapis.openapi.models.operations.FitnessUsersSessionsUpdateResponse(contentType, httpRes.statusCode()) {{
             session = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

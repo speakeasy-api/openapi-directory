@@ -20,6 +20,7 @@ public class Receipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactChannelArn")
     public String contactChannelArn;
+
     public Receipt withContactChannelArn(String contactChannelArn) {
         this.contactChannelArn = contactChannelArn;
         return this;
@@ -28,6 +29,7 @@ public class Receipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceiptInfo")
     public String receiptInfo;
+
     public Receipt withReceiptInfo(String receiptInfo) {
         this.receiptInfo = receiptInfo;
         return this;
@@ -37,6 +39,7 @@ public class Receipt {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReceiptTime")
     public OffsetDateTime receiptTime;
+
     public Receipt withReceiptTime(OffsetDateTime receiptTime) {
         this.receiptTime = receiptTime;
         return this;
@@ -44,9 +47,14 @@ public class Receipt {
     
     @JsonProperty("ReceiptType")
     public ReceiptTypeEnum receiptType;
+
     public Receipt withReceiptType(ReceiptTypeEnum receiptType) {
         this.receiptType = receiptType;
         return this;
     }
     
+    public Receipt(@JsonProperty("ReceiptTime") OffsetDateTime receiptTime, @JsonProperty("ReceiptType") ReceiptTypeEnum receiptType) {
+        this.receiptTime = receiptTime;
+        this.receiptType = receiptType;
+  }
 }

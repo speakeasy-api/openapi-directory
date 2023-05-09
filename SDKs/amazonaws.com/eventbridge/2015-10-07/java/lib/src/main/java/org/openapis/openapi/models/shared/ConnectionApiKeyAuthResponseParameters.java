@@ -15,9 +15,11 @@ public class ConnectionApiKeyAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeyName")
     public String apiKeyName;
+
     public ConnectionApiKeyAuthResponseParameters withApiKeyName(String apiKeyName) {
         this.apiKeyName = apiKeyName;
         return this;
     }
     
+    public ConnectionApiKeyAuthResponseParameters(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutDefaultEncryptionConfigurationResponse {
     @JsonProperty("configurationStatus")
     public ConfigurationStatus configurationStatus;
+
     public PutDefaultEncryptionConfigurationResponse withConfigurationStatus(ConfigurationStatus configurationStatus) {
         this.configurationStatus = configurationStatus;
         return this;
@@ -21,6 +22,7 @@ public class PutDefaultEncryptionConfigurationResponse {
     
     @JsonProperty("encryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public PutDefaultEncryptionConfigurationResponse withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -29,9 +31,14 @@ public class PutDefaultEncryptionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyArn")
     public String kmsKeyArn;
+
     public PutDefaultEncryptionConfigurationResponse withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
     }
     
+    public PutDefaultEncryptionConfigurationResponse(@JsonProperty("configurationStatus") ConfigurationStatus configurationStatus, @JsonProperty("encryptionType") EncryptionTypeEnum encryptionType) {
+        this.configurationStatus = configurationStatus;
+        this.encryptionType = encryptionType;
+  }
 }

@@ -18,9 +18,11 @@ public class PostNetworksCreateNetworkRequestLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelkey")
     public String labelkey;
+
     public PostNetworksCreateNetworkRequestLabels withLabelkey(String labelkey) {
         this.labelkey = labelkey;
         return this;
     }
     
+    public PostNetworksCreateNetworkRequestLabels(){}
 }

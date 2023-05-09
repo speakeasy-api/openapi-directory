@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ProvisionByoipCidrResult {
     
     public ProvisionByoipCidrResultByoipCidr byoipCidr;
+
     public ProvisionByoipCidrResult withByoipCidr(ProvisionByoipCidrResultByoipCidr byoipCidr) {
         this.byoipCidr = byoipCidr;
         return this;
     }
     
+    public ProvisionByoipCidrResult(){}
 }

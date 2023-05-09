@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TokensGetBungieRewardsForPlatformUserResponse {
     
     public byte[] body;
+
     public TokensGetBungieRewardsForPlatformUserResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TokensGetBungieRewardsForPlatformUserResponse {
     
     
     public String contentType;
+
     public TokensGetBungieRewardsForPlatformUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TokensGetBungieRewardsForPlatformUserResponse {
     
     
     public Integer statusCode;
+
     public TokensGetBungieRewardsForPlatformUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TokensGetBungieRewardsForPlatformUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TokensGetBungieRewardsForPlatformUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TokensGetBungieRewardsForPlatformUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

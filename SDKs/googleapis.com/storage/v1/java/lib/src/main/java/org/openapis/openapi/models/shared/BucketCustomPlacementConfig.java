@@ -18,9 +18,11 @@ public class BucketCustomPlacementConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataLocations")
     public String[] dataLocations;
+
     public BucketCustomPlacementConfig withDataLocations(String[] dataLocations) {
         this.dataLocations = dataLocations;
         return this;
     }
     
+    public BucketCustomPlacementConfig(){}
 }

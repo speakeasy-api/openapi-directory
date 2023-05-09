@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSourceRepositoriesResponse {
@@ -12,6 +13,7 @@ public class ListSourceRepositoriesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSourceRepositoriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListSourceRepositoriesResponse {
      */
     
     public Object conflictException;
+
     public ListSourceRepositoriesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListSourceRepositoriesResponse {
     
     
     public String contentType;
+
     public ListSourceRepositoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListSourceRepositoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSourceRepositoriesResponse listSourceRepositoriesResponse;
+
     public ListSourceRepositoriesResponse withListSourceRepositoriesResponse(org.openapis.openapi.models.shared.ListSourceRepositoriesResponse listSourceRepositoriesResponse) {
         this.listSourceRepositoriesResponse = listSourceRepositoriesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListSourceRepositoriesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSourceRepositoriesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListSourceRepositoriesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListSourceRepositoriesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListSourceRepositoriesResponse {
     
     
     public Integer statusCode;
+
     public ListSourceRepositoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListSourceRepositoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSourceRepositoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListSourceRepositoriesResponse {
      */
     
     public Object throttlingException;
+
     public ListSourceRepositoriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListSourceRepositoriesResponse {
      */
     
     public Object validationException;
+
     public ListSourceRepositoriesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSourceRepositoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class SubaccountResponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public SubaccountResponseEtatEtat withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class SubaccountResponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SubaccountResponseEtatEtat withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +30,7 @@ public class SubaccountResponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountId")
     public String subAccountId;
+
     public SubaccountResponseEtatEtat withSubAccountId(String subAccountId) {
         this.subAccountId = subAccountId;
         return this;
@@ -36,9 +39,11 @@ public class SubaccountResponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subAccountKeyid")
     public String subAccountKeyid;
+
     public SubaccountResponseEtatEtat withSubAccountKeyid(String subAccountKeyid) {
         this.subAccountKeyid = subAccountKeyid;
         return this;
     }
     
+    public SubaccountResponseEtatEtat(){}
 }

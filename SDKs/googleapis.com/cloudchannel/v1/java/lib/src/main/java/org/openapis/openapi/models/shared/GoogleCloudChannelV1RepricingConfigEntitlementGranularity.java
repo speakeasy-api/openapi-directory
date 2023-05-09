@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1RepricingConfigEntitlementGranularity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlement")
     public String entitlement;
+
     public GoogleCloudChannelV1RepricingConfigEntitlementGranularity withEntitlement(String entitlement) {
         this.entitlement = entitlement;
         return this;
     }
     
+    public GoogleCloudChannelV1RepricingConfigEntitlementGranularity(){}
 }

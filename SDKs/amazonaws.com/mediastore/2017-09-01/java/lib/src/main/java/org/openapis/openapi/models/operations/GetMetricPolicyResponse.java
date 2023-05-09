@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMetricPolicyResponse {
@@ -12,6 +13,7 @@ public class GetMetricPolicyResponse {
      */
     
     public Object containerInUseException;
+
     public GetMetricPolicyResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class GetMetricPolicyResponse {
      */
     
     public Object containerNotFoundException;
+
     public GetMetricPolicyResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetMetricPolicyResponse {
     
     
     public String contentType;
+
     public GetMetricPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetMetricPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMetricPolicyOutput getMetricPolicyOutput;
+
     public GetMetricPolicyResponse withGetMetricPolicyOutput(org.openapis.openapi.models.shared.GetMetricPolicyOutput getMetricPolicyOutput) {
         this.getMetricPolicyOutput = getMetricPolicyOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetMetricPolicyResponse {
      */
     
     public Object internalServerError;
+
     public GetMetricPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class GetMetricPolicyResponse {
      */
     
     public Object policyNotFoundException;
+
     public GetMetricPolicyResponse withPolicyNotFoundException(Object policyNotFoundException) {
         this.policyNotFoundException = policyNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetMetricPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetMetricPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMetricPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMetricPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMetricPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

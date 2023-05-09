@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1BigQueryRoutineSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedLibraries")
     public String[] importedLibraries;
+
     public GoogleCloudDatacatalogV1BigQueryRoutineSpec withImportedLibraries(String[] importedLibraries) {
         this.importedLibraries = importedLibraries;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1BigQueryRoutineSpec(){}
 }

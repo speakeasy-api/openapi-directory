@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateApprovalRuleTemplateWithRepositoryInput {
     @JsonProperty("approvalRuleTemplateName")
     public String approvalRuleTemplateName;
+
     public AssociateApprovalRuleTemplateWithRepositoryInput withApprovalRuleTemplateName(String approvalRuleTemplateName) {
         this.approvalRuleTemplateName = approvalRuleTemplateName;
         return this;
@@ -16,9 +17,14 @@ public class AssociateApprovalRuleTemplateWithRepositoryInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public AssociateApprovalRuleTemplateWithRepositoryInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public AssociateApprovalRuleTemplateWithRepositoryInput(@JsonProperty("approvalRuleTemplateName") String approvalRuleTemplateName, @JsonProperty("repositoryName") String repositoryName) {
+        this.approvalRuleTemplateName = approvalRuleTemplateName;
+        this.repositoryName = repositoryName;
+  }
 }

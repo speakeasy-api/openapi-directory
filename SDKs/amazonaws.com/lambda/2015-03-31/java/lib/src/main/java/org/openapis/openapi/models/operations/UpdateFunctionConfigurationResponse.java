@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFunctionConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object codeSigningConfigNotFoundException;
+
     public UpdateFunctionConfigurationResponse withCodeSigningConfigNotFoundException(Object codeSigningConfigNotFoundException) {
         this.codeSigningConfigNotFoundException = codeSigningConfigNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object codeVerificationFailedException;
+
     public UpdateFunctionConfigurationResponse withCodeVerificationFailedException(Object codeVerificationFailedException) {
         this.codeVerificationFailedException = codeVerificationFailedException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFunctionConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateFunctionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration;
+
     public UpdateFunctionConfigurationResponse withFunctionConfiguration(org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object invalidCodeSignatureException;
+
     public UpdateFunctionConfigurationResponse withInvalidCodeSignatureException(Object invalidCodeSignatureException) {
         this.invalidCodeSignatureException = invalidCodeSignatureException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateFunctionConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateFunctionConfigurationResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object resourceConflictException;
+
     public UpdateFunctionConfigurationResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFunctionConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object serviceException;
+
     public UpdateFunctionConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -106,6 +117,7 @@ public class UpdateFunctionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateFunctionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class UpdateFunctionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFunctionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class UpdateFunctionConfigurationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateFunctionConfigurationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public UpdateFunctionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

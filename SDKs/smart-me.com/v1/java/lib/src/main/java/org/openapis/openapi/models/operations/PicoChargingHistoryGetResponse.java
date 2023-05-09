@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PicoChargingHistoryGetResponse {
     
     public byte[] body;
+
     public PicoChargingHistoryGetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PicoChargingHistoryGetResponse {
     
     
     public String contentType;
+
     public PicoChargingHistoryGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PicoChargingHistoryGetResponse {
      */
     
     public org.openapis.openapi.models.shared.PicoChargingHistoryData[] picoChargingHistoryData;
+
     public PicoChargingHistoryGetResponse withPicoChargingHistoryData(org.openapis.openapi.models.shared.PicoChargingHistoryData[] picoChargingHistoryData) {
         this.picoChargingHistoryData = picoChargingHistoryData;
         return this;
@@ -33,6 +37,7 @@ public class PicoChargingHistoryGetResponse {
     
     
     public Integer statusCode;
+
     public PicoChargingHistoryGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PicoChargingHistoryGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PicoChargingHistoryGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PicoChargingHistoryGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EcosystemsOneResponse {
     
     public String contentType;
+
     public EcosystemsOneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EcosystemsOneResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEcosystemResponse getEcosystemResponse;
+
     public EcosystemsOneResponse withGetEcosystemResponse(org.openapis.openapi.models.shared.GetEcosystemResponse getEcosystemResponse) {
         this.getEcosystemResponse = getEcosystemResponse;
         return this;
@@ -26,6 +29,7 @@ public class EcosystemsOneResponse {
     
     
     public Integer statusCode;
+
     public EcosystemsOneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class EcosystemsOneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EcosystemsOneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EcosystemsOneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

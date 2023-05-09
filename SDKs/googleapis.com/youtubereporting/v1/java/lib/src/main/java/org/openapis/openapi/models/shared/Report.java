@@ -18,6 +18,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Report withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public Report withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -40,6 +42,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public Report withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Report withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExpireTime")
     public String jobExpireTime;
+
     public Report withJobExpireTime(String jobExpireTime) {
         this.jobExpireTime = jobExpireTime;
         return this;
@@ -73,6 +78,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public Report withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -84,9 +90,11 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public Report withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public Report(){}
 }

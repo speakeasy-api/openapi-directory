@@ -15,6 +15,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalTreatments")
     public org.openapis.openapi.models.shared.WriteTreatmentResource[] additionalTreatments;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withAdditionalTreatments(org.openapis.openapi.models.shared.WriteTreatmentResource[] additionalTreatments) {
         this.additionalTreatments = additionalTreatments;
         return this;
@@ -23,6 +24,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDeliveryConfiguration")
     public org.openapis.openapi.models.shared.CustomDeliveryConfiguration customDeliveryConfiguration;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withCustomDeliveryConfiguration(org.openapis.openapi.models.shared.CustomDeliveryConfiguration customDeliveryConfiguration) {
         this.customDeliveryConfiguration = customDeliveryConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HoldoutPercent")
     public Long holdoutPercent;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withHoldoutPercent(Long holdoutPercent) {
         this.holdoutPercent = holdoutPercent;
         return this;
@@ -47,6 +51,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hook")
     public org.openapis.openapi.models.shared.CampaignHook hook;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withHook(org.openapis.openapi.models.shared.CampaignHook hook) {
         this.hook = hook;
         return this;
@@ -55,6 +60,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsPaused")
     public Boolean isPaused;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withIsPaused(Boolean isPaused) {
         this.isPaused = isPaused;
         return this;
@@ -63,6 +69,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limits")
     public org.openapis.openapi.models.shared.CampaignLimits limits;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withLimits(org.openapis.openapi.models.shared.CampaignLimits limits) {
         this.limits = limits;
         return this;
@@ -71,6 +78,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfiguration")
     public org.openapis.openapi.models.shared.MessageConfiguration messageConfiguration;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withMessageConfiguration(org.openapis.openapi.models.shared.MessageConfiguration messageConfiguration) {
         this.messageConfiguration = messageConfiguration;
         return this;
@@ -79,6 +87,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +96,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -95,6 +105,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public org.openapis.openapi.models.shared.Schedule schedule;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withSchedule(org.openapis.openapi.models.shared.Schedule schedule) {
         this.schedule = schedule;
         return this;
@@ -103,6 +114,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentId")
     public String segmentId;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -111,6 +123,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentVersion")
     public Long segmentVersion;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withSegmentVersion(Long segmentVersion) {
         this.segmentVersion = segmentVersion;
         return this;
@@ -119,6 +132,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateConfiguration")
     public org.openapis.openapi.models.shared.TemplateConfiguration templateConfiguration;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withTemplateConfiguration(org.openapis.openapi.models.shared.TemplateConfiguration templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
@@ -127,6 +141,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentDescription")
     public String treatmentDescription;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withTreatmentDescription(String treatmentDescription) {
         this.treatmentDescription = treatmentDescription;
         return this;
@@ -135,6 +150,7 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TreatmentName")
     public String treatmentName;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withTreatmentName(String treatmentName) {
         this.treatmentName = treatmentName;
         return this;
@@ -143,9 +159,11 @@ public class UpdateCampaignRequestBodyWriteCampaignRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public UpdateCampaignRequestBodyWriteCampaignRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateCampaignRequestBodyWriteCampaignRequest(){}
 }

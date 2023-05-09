@@ -12,6 +12,7 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudHsmClusterId")
     public String cloudHsmClusterId;
+
     public UpdateCustomKeyStoreRequest withCloudHsmClusterId(String cloudHsmClusterId) {
         this.cloudHsmClusterId = cloudHsmClusterId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateCustomKeyStoreRequest {
     
     @JsonProperty("CustomKeyStoreId")
     public String customKeyStoreId;
+
     public UpdateCustomKeyStoreRequest withCustomKeyStoreId(String customKeyStoreId) {
         this.customKeyStoreId = customKeyStoreId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyStorePassword")
     public String keyStorePassword;
+
     public UpdateCustomKeyStoreRequest withKeyStorePassword(String keyStorePassword) {
         this.keyStorePassword = keyStorePassword;
         return this;
@@ -35,6 +38,7 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewCustomKeyStoreName")
     public String newCustomKeyStoreName;
+
     public UpdateCustomKeyStoreRequest withNewCustomKeyStoreName(String newCustomKeyStoreName) {
         this.newCustomKeyStoreName = newCustomKeyStoreName;
         return this;
@@ -43,6 +47,7 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyAuthenticationCredential")
     public XksProxyAuthenticationCredentialType xksProxyAuthenticationCredential;
+
     public UpdateCustomKeyStoreRequest withXksProxyAuthenticationCredential(XksProxyAuthenticationCredentialType xksProxyAuthenticationCredential) {
         this.xksProxyAuthenticationCredential = xksProxyAuthenticationCredential;
         return this;
@@ -51,6 +56,7 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyConnectivity")
     public XksProxyConnectivityTypeEnum xksProxyConnectivity;
+
     public UpdateCustomKeyStoreRequest withXksProxyConnectivity(XksProxyConnectivityTypeEnum xksProxyConnectivity) {
         this.xksProxyConnectivity = xksProxyConnectivity;
         return this;
@@ -59,6 +65,7 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyUriEndpoint")
     public String xksProxyUriEndpoint;
+
     public UpdateCustomKeyStoreRequest withXksProxyUriEndpoint(String xksProxyUriEndpoint) {
         this.xksProxyUriEndpoint = xksProxyUriEndpoint;
         return this;
@@ -67,6 +74,7 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyUriPath")
     public String xksProxyUriPath;
+
     public UpdateCustomKeyStoreRequest withXksProxyUriPath(String xksProxyUriPath) {
         this.xksProxyUriPath = xksProxyUriPath;
         return this;
@@ -75,9 +83,13 @@ public class UpdateCustomKeyStoreRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("XksProxyVpcEndpointServiceName")
     public String xksProxyVpcEndpointServiceName;
+
     public UpdateCustomKeyStoreRequest withXksProxyVpcEndpointServiceName(String xksProxyVpcEndpointServiceName) {
         this.xksProxyVpcEndpointServiceName = xksProxyVpcEndpointServiceName;
         return this;
     }
     
+    public UpdateCustomKeyStoreRequest(@JsonProperty("CustomKeyStoreId") String customKeyStoreId) {
+        this.customKeyStoreId = customKeyStoreId;
+  }
 }

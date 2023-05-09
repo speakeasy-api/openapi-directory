@@ -18,6 +18,7 @@ public class LiaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public LiaSettings withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class LiaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countrySettings")
     public LiaCountrySettings[] countrySettings;
+
     public LiaSettings withCountrySettings(LiaCountrySettings[] countrySettings) {
         this.countrySettings = countrySettings;
         return this;
@@ -40,9 +42,11 @@ public class LiaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LiaSettings withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public LiaSettings(){}
 }

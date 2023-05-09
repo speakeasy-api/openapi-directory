@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteStatementResponse {
@@ -12,6 +13,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object conditionalCheckFailedException;
+
     public ExecuteStatementResponse withConditionalCheckFailedException(Object conditionalCheckFailedException) {
         this.conditionalCheckFailedException = conditionalCheckFailedException;
         return this;
@@ -19,6 +21,7 @@ public class ExecuteStatementResponse {
     
     
     public String contentType;
+
     public ExecuteStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object duplicateItemException;
+
     public ExecuteStatementResponse withDuplicateItemException(Object duplicateItemException) {
         this.duplicateItemException = duplicateItemException;
         return this;
@@ -39,6 +43,7 @@ public class ExecuteStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.ExecuteStatementOutput executeStatementOutput;
+
     public ExecuteStatementResponse withExecuteStatementOutput(org.openapis.openapi.models.shared.ExecuteStatementOutput executeStatementOutput) {
         this.executeStatementOutput = executeStatementOutput;
         return this;
@@ -49,6 +54,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object internalServerError;
+
     public ExecuteStatementResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object itemCollectionSizeLimitExceededException;
+
     public ExecuteStatementResponse withItemCollectionSizeLimitExceededException(Object itemCollectionSizeLimitExceededException) {
         this.itemCollectionSizeLimitExceededException = itemCollectionSizeLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ExecuteStatementResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ExecuteStatementResponse {
     
     
     public Integer statusCode;
+
     public ExecuteStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object requestLimitExceeded;
+
     public ExecuteStatementResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -103,6 +114,7 @@ public class ExecuteStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ExecuteStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class ExecuteStatementResponse {
      */
     
     public Object transactionConflictException;
+
     public ExecuteStatementResponse withTransactionConflictException(Object transactionConflictException) {
         this.transactionConflictException = transactionConflictException;
         return this;
     }
     
+    public ExecuteStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

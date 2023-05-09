@@ -15,6 +15,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("central_cli_enabled")
     public Boolean centralCliEnabled;
+
     public NSXVManagerDataSource withCentralCliEnabled(Boolean centralCliEnabled) {
         this.centralCliEnabled = centralCliEnabled;
         return this;
@@ -23,6 +24,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentials")
     public PasswordCredentials credentials;
+
     public NSXVManagerDataSource withCredentials(PasswordCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -31,6 +33,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NSXVManagerDataSource withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -39,6 +42,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public NSXVManagerDataSource withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -47,6 +51,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public DataSourceTypeEnum entityType;
+
     public NSXVManagerDataSource withEntityType(DataSourceTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -55,6 +60,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public NSXVManagerDataSource withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -63,6 +69,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public NSXVManagerDataSource withIp(String ip) {
         this.ip = ip;
         return this;
@@ -71,6 +78,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipfix_enabled")
     public Boolean ipfixEnabled;
+
     public NSXVManagerDataSource withIpfixEnabled(Boolean ipfixEnabled) {
         this.ipfixEnabled = ipfixEnabled;
         return this;
@@ -79,6 +87,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public NSXVManagerDataSource withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -87,6 +96,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public NSXVManagerDataSource withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -98,6 +108,7 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxy_id")
     public String proxyId;
+
     public NSXVManagerDataSource withProxyId(String proxyId) {
         this.proxyId = proxyId;
         return this;
@@ -109,9 +120,11 @@ public class NSXVManagerDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenter_id")
     public String vcenterId;
+
     public NSXVManagerDataSource withVcenterId(String vcenterId) {
         this.vcenterId = vcenterId;
         return this;
     }
     
+    public NSXVManagerDataSource(){}
 }

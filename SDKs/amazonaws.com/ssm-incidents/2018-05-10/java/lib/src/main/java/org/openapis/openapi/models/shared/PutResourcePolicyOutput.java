@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutResourcePolicyOutput {
     @JsonProperty("policyId")
     public String policyId;
+
     public PutResourcePolicyOutput withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public PutResourcePolicyOutput(@JsonProperty("policyId") String policyId) {
+        this.policyId = policyId;
+  }
 }

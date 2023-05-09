@@ -497,4 +497,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDialogflowCxV3Se
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudDialogflowCxV3ListSecuritySettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

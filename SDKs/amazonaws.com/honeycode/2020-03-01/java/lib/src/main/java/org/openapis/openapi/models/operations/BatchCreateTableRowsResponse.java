@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchCreateTableRowsResponse {
@@ -12,6 +13,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchCreateTableRowsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCreateTableRowsResult batchCreateTableRowsResult;
+
     public BatchCreateTableRowsResponse withBatchCreateTableRowsResult(org.openapis.openapi.models.shared.BatchCreateTableRowsResult batchCreateTableRowsResult) {
         this.batchCreateTableRowsResult = batchCreateTableRowsResult;
         return this;
@@ -29,6 +32,7 @@ public class BatchCreateTableRowsResponse {
     
     
     public String contentType;
+
     public BatchCreateTableRowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object internalServerException;
+
     public BatchCreateTableRowsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public BatchCreateTableRowsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class BatchCreateTableRowsResponse {
     
     
     public Integer statusCode;
+
     public BatchCreateTableRowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchCreateTableRowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchCreateTableRowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object requestTimeoutException;
+
     public BatchCreateTableRowsResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -83,6 +92,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchCreateTableRowsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchCreateTableRowsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object throttlingException;
+
     public BatchCreateTableRowsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class BatchCreateTableRowsResponse {
      */
     
     public Object validationException;
+
     public BatchCreateTableRowsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchCreateTableRowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateServiceSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRegions")
     public String[] homeRegions;
+
     public UpdateServiceSettingsResponse withHomeRegions(String[] homeRegions) {
         this.homeRegions = homeRegions;
         return this;
@@ -23,6 +24,7 @@ public class UpdateServiceSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinuxSubscriptionsDiscovery")
     public LinuxSubscriptionsDiscoveryEnum linuxSubscriptionsDiscovery;
+
     public UpdateServiceSettingsResponse withLinuxSubscriptionsDiscovery(LinuxSubscriptionsDiscoveryEnum linuxSubscriptionsDiscovery) {
         this.linuxSubscriptionsDiscovery = linuxSubscriptionsDiscovery;
         return this;
@@ -31,6 +33,7 @@ public class UpdateServiceSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinuxSubscriptionsDiscoverySettings")
     public LinuxSubscriptionsDiscoverySettings linuxSubscriptionsDiscoverySettings;
+
     public UpdateServiceSettingsResponse withLinuxSubscriptionsDiscoverySettings(LinuxSubscriptionsDiscoverySettings linuxSubscriptionsDiscoverySettings) {
         this.linuxSubscriptionsDiscoverySettings = linuxSubscriptionsDiscoverySettings;
         return this;
@@ -39,6 +42,7 @@ public class UpdateServiceSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public UpdateServiceSettingsResponse withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class UpdateServiceSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public java.util.Map<String, String> statusMessage;
+
     public UpdateServiceSettingsResponse withStatusMessage(java.util.Map<String, String> statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public UpdateServiceSettingsResponse(){}
 }

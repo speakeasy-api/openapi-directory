@@ -18,9 +18,11 @@ public class DataSourceRefreshDailySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public TimeOfDay startTime;
+
     public DataSourceRefreshDailySchedule withStartTime(TimeOfDay startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DataSourceRefreshDailySchedule(){}
 }

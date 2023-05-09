@@ -15,9 +15,11 @@ public class UpdateNetworkL7FirewallRulesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public UpdateNetworkL7FirewallRulesRequestBodyRules[] rules;
+
     public UpdateNetworkL7FirewallRulesRequestBody withRules(UpdateNetworkL7FirewallRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateNetworkL7FirewallRulesRequestBody(){}
 }

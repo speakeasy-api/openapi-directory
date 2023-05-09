@@ -18,6 +18,7 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DeploymentConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifestFileName")
     public String manifestFileName;
+
     public DeploymentConfig withManifestFileName(String manifestFileName) {
         this.manifestFileName = manifestFileName;
         return this;
@@ -40,6 +42,7 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptId")
     public String scriptId;
+
     public DeploymentConfig withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -51,9 +54,11 @@ public class DeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public Integer versionNumber;
+
     public DeploymentConfig withVersionNumber(Integer versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public DeploymentConfig(){}
 }

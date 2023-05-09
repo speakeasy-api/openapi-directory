@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2HybridOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2HybridOptions withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2HybridOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GooglePrivacyDlpV2HybridOptions withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2HybridOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredFindingLabelKeys")
     public String[] requiredFindingLabelKeys;
+
     public GooglePrivacyDlpV2HybridOptions withRequiredFindingLabelKeys(String[] requiredFindingLabelKeys) {
         this.requiredFindingLabelKeys = requiredFindingLabelKeys;
         return this;
@@ -51,9 +54,11 @@ public class GooglePrivacyDlpV2HybridOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableOptions")
     public GooglePrivacyDlpV2TableOptions tableOptions;
+
     public GooglePrivacyDlpV2HybridOptions withTableOptions(GooglePrivacyDlpV2TableOptions tableOptions) {
         this.tableOptions = tableOptions;
         return this;
     }
     
+    public GooglePrivacyDlpV2HybridOptions(){}
 }

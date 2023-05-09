@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ProcessType - &lt;p&gt;Describes a process type.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html#process-types"&gt;Scaling processes&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class ProcessType {
     
     public String processName;
+
     public ProcessType withProcessName(String processName) {
         this.processName = processName;
         return this;
     }
     
+    public ProcessType(@JsonProperty("ProcessName") String processName) {
+        this.processName = processName;
+  }
 }

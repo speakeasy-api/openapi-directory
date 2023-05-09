@@ -15,6 +15,7 @@ public class ProductSetVisibilityCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public ProductSetVisibilityCriteria withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -26,6 +27,7 @@ public class ProductSetVisibilityCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded")
     public Boolean excluded;
+
     public ProductSetVisibilityCriteria withExcluded(Boolean excluded) {
         this.excluded = excluded;
         return this;
@@ -37,6 +39,7 @@ public class ProductSetVisibilityCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exist")
     public Boolean exist;
+
     public ProductSetVisibilityCriteria withExist(Boolean exist) {
         this.exist = exist;
         return this;
@@ -53,6 +56,7 @@ public class ProductSetVisibilityCriteria {
      */
     @JsonProperty("logic")
     public ProductSetVisibilityCriteriaLogicTypeEnum logic;
+
     public ProductSetVisibilityCriteria withLogic(ProductSetVisibilityCriteriaLogicTypeEnum logic) {
         this.logic = logic;
         return this;
@@ -64,9 +68,13 @@ public class ProductSetVisibilityCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uncategorized")
     public Boolean uncategorized;
+
     public ProductSetVisibilityCriteria withUncategorized(Boolean uncategorized) {
         this.uncategorized = uncategorized;
         return this;
     }
     
+    public ProductSetVisibilityCriteria(@JsonProperty("logic") ProductSetVisibilityCriteriaLogicTypeEnum logic) {
+        this.logic = logic;
+  }
 }

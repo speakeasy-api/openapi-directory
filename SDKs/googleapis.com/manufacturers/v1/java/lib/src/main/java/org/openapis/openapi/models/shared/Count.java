@@ -18,6 +18,7 @@ public class Count {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public Count withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -29,9 +30,11 @@ public class Count {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Count withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Count(){}
 }

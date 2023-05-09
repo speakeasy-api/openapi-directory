@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegexMatchSetUpdate {
     @JsonProperty("Action")
     public ChangeActionEnum action;
+
     public RegexMatchSetUpdate withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,9 +20,14 @@ public class RegexMatchSetUpdate {
     
     @JsonProperty("RegexMatchTuple")
     public RegexMatchTuple regexMatchTuple;
+
     public RegexMatchSetUpdate withRegexMatchTuple(RegexMatchTuple regexMatchTuple) {
         this.regexMatchTuple = regexMatchTuple;
         return this;
     }
     
+    public RegexMatchSetUpdate(@JsonProperty("Action") ChangeActionEnum action, @JsonProperty("RegexMatchTuple") RegexMatchTuple regexMatchTuple) {
+        this.action = action;
+        this.regexMatchTuple = regexMatchTuple;
+  }
 }

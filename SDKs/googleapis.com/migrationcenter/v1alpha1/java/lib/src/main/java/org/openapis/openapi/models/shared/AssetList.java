@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class AssetList {
     /**
-     * A list of asset IDs
+     * Required. A list of asset IDs
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetIds")
     public String[] assetIds;
+
     public AssetList withAssetIds(String[] assetIds) {
         this.assetIds = assetIds;
         return this;
     }
     
+    public AssetList(){}
 }

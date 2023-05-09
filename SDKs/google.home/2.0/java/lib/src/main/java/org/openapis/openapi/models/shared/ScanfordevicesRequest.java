@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScanfordevicesRequest {
     @JsonProperty("clear_results")
     public Boolean clearResults;
+
     public ScanfordevicesRequest withClearResults(Boolean clearResults) {
         this.clearResults = clearResults;
         return this;
@@ -16,6 +17,7 @@ public class ScanfordevicesRequest {
     
     @JsonProperty("enable")
     public Boolean enable;
+
     public ScanfordevicesRequest withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -23,9 +25,15 @@ public class ScanfordevicesRequest {
     
     @JsonProperty("timeout")
     public Integer timeout;
+
     public ScanfordevicesRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ScanfordevicesRequest(@JsonProperty("clear_results") Boolean clearResults, @JsonProperty("enable") Boolean enable, @JsonProperty("timeout") Integer timeout) {
+        this.clearResults = clearResults;
+        this.enable = enable;
+        this.timeout = timeout;
+  }
 }

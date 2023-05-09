@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public GooglePrivacyDlpV2FieldId field;
+
     public GooglePrivacyDlpV2Condition withField(GooglePrivacyDlpV2FieldId field) {
         this.field = field;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public GooglePrivacyDlpV2ConditionOperatorEnum operator;
+
     public GooglePrivacyDlpV2Condition withOperator(GooglePrivacyDlpV2ConditionOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GooglePrivacyDlpV2Value value;
+
     public GooglePrivacyDlpV2Condition withValue(GooglePrivacyDlpV2Value value) {
         this.value = value;
         return this;
     }
     
+    public GooglePrivacyDlpV2Condition(){}
 }

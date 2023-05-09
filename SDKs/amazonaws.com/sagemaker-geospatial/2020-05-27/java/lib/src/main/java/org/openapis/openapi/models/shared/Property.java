@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Property - &lt;p/&gt;
+ * Property - Represents a single searchable property to search on.
  */
 public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EoCloudCover")
     public EoCloudCoverInput eoCloudCover;
+
     public Property withEoCloudCover(EoCloudCoverInput eoCloudCover) {
         this.eoCloudCover = eoCloudCover;
         return this;
@@ -23,6 +24,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LandsatCloudCoverLand")
     public LandsatCloudCoverLandInput landsatCloudCoverLand;
+
     public Property withLandsatCloudCoverLand(LandsatCloudCoverLandInput landsatCloudCoverLand) {
         this.landsatCloudCoverLand = landsatCloudCoverLand;
         return this;
@@ -31,6 +33,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public PlatformInput platform;
+
     public Property withPlatform(PlatformInput platform) {
         this.platform = platform;
         return this;
@@ -39,6 +42,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewOffNadir")
     public ViewOffNadirInput viewOffNadir;
+
     public Property withViewOffNadir(ViewOffNadirInput viewOffNadir) {
         this.viewOffNadir = viewOffNadir;
         return this;
@@ -47,6 +51,7 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewSunAzimuth")
     public ViewSunAzimuthInput viewSunAzimuth;
+
     public Property withViewSunAzimuth(ViewSunAzimuthInput viewSunAzimuth) {
         this.viewSunAzimuth = viewSunAzimuth;
         return this;
@@ -55,9 +60,11 @@ public class Property {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewSunElevation")
     public ViewSunElevationInput viewSunElevation;
+
     public Property withViewSunElevation(ViewSunElevationInput viewSunElevation) {
         this.viewSunElevation = viewSunElevation;
         return this;
     }
     
+    public Property(){}
 }

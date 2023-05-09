@@ -12,6 +12,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areacode")
     public String areacode;
+
     public ApiCoreDtoClickStreamHitLocationInfo withAreacode(String areacode) {
         this.areacode = areacode;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ApiCoreDtoClickStreamHitLocationInfo withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ApiCoreDtoClickStreamHitLocationInfo withCountry(String country) {
         this.country = country;
         return this;
@@ -36,6 +39,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public ApiCoreDtoClickStreamHitLocationInfo withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -44,6 +48,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public ApiCoreDtoClickStreamHitLocationInfo withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -52,6 +57,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrocode")
     public String metrocode;
+
     public ApiCoreDtoClickStreamHitLocationInfo withMetrocode(String metrocode) {
         this.metrocode = metrocode;
         return this;
@@ -60,6 +66,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public ApiCoreDtoClickStreamHitLocationInfo withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -68,6 +75,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalcode")
     public String postalcode;
+
     public ApiCoreDtoClickStreamHitLocationInfo withPostalcode(String postalcode) {
         this.postalcode = postalcode;
         return this;
@@ -76,6 +84,7 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ApiCoreDtoClickStreamHitLocationInfo withRegion(String region) {
         this.region = region;
         return this;
@@ -84,9 +93,11 @@ public class ApiCoreDtoClickStreamHitLocationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionName")
     public String regionName;
+
     public ApiCoreDtoClickStreamHitLocationInfo withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHitLocationInfo(){}
 }

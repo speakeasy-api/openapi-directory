@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyItemSetBlockEntryDefinition {
      */
     
     public Long itemHash;
+
     public DestinyDefinitionsDestinyItemSetBlockEntryDefinition withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -25,9 +26,11 @@ public class DestinyDefinitionsDestinyItemSetBlockEntryDefinition {
      */
     
     public Integer trackingValue;
+
     public DestinyDefinitionsDestinyItemSetBlockEntryDefinition withTrackingValue(Integer trackingValue) {
         this.trackingValue = trackingValue;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemSetBlockEntryDefinition(){}
 }

@@ -18,6 +18,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregationInterval")
     public SubnetworkAggregationIntervalEnum aggregationInterval;
+
     public Subnetwork withAggregationInterval(SubnetworkAggregationIntervalEnum aggregationInterval) {
         this.aggregationInterval = aggregationInterval;
         return this;
@@ -29,6 +30,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowSubnetCidrRoutesOverlap")
     public Boolean allowSubnetCidrRoutesOverlap;
+
     public Subnetwork withAllowSubnetCidrRoutesOverlap(Boolean allowSubnetCidrRoutesOverlap) {
         this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
         return this;
@@ -40,6 +42,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Subnetwork withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Subnetwork withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableFlowLogs")
     public Boolean enableFlowLogs;
+
     public Subnetwork withEnableFlowLogs(Boolean enableFlowLogs) {
         this.enableFlowLogs = enableFlowLogs;
         return this;
@@ -73,6 +78,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableL2")
     public Boolean enableL2;
+
     public Subnetwork withEnableL2(Boolean enableL2) {
         this.enableL2 = enableL2;
         return this;
@@ -84,6 +90,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePrivateV6Access")
     public Boolean enablePrivateV6Access;
+
     public Subnetwork withEnablePrivateV6Access(Boolean enablePrivateV6Access) {
         this.enablePrivateV6Access = enablePrivateV6Access;
         return this;
@@ -95,6 +102,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIpv6Prefix")
     public String externalIpv6Prefix;
+
     public Subnetwork withExternalIpv6Prefix(String externalIpv6Prefix) {
         this.externalIpv6Prefix = externalIpv6Prefix;
         return this;
@@ -106,6 +114,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Subnetwork withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -117,6 +126,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flowSampling")
     public Float flowSampling;
+
     public Subnetwork withFlowSampling(Float flowSampling) {
         this.flowSampling = flowSampling;
         return this;
@@ -128,6 +138,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayAddress")
     public String gatewayAddress;
+
     public Subnetwork withGatewayAddress(String gatewayAddress) {
         this.gatewayAddress = gatewayAddress;
         return this;
@@ -139,6 +150,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Subnetwork withId(String id) {
         this.id = id;
         return this;
@@ -150,6 +162,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIpv6Prefix")
     public String internalIpv6Prefix;
+
     public Subnetwork withInternalIpv6Prefix(String internalIpv6Prefix) {
         this.internalIpv6Prefix = internalIpv6Prefix;
         return this;
@@ -161,6 +174,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public Subnetwork withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -172,6 +186,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6AccessType")
     public SubnetworkIpv6AccessTypeEnum ipv6AccessType;
+
     public Subnetwork withIpv6AccessType(SubnetworkIpv6AccessTypeEnum ipv6AccessType) {
         this.ipv6AccessType = ipv6AccessType;
         return this;
@@ -183,6 +198,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6CidrRange")
     public String ipv6CidrRange;
+
     public Subnetwork withIpv6CidrRange(String ipv6CidrRange) {
         this.ipv6CidrRange = ipv6CidrRange;
         return this;
@@ -194,6 +210,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Subnetwork withKind(String kind) {
         this.kind = kind;
         return this;
@@ -205,6 +222,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logConfig")
     public SubnetworkLogConfig logConfig;
+
     public Subnetwork withLogConfig(SubnetworkLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
@@ -216,6 +234,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SubnetworkMetadataEnum metadata;
+
     public Subnetwork withMetadata(SubnetworkMetadataEnum metadata) {
         this.metadata = metadata;
         return this;
@@ -227,6 +246,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Subnetwork withName(String name) {
         this.name = name;
         return this;
@@ -238,6 +258,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Subnetwork withNetwork(String network) {
         this.network = network;
         return this;
@@ -249,6 +270,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpGoogleAccess")
     public Boolean privateIpGoogleAccess;
+
     public Subnetwork withPrivateIpGoogleAccess(Boolean privateIpGoogleAccess) {
         this.privateIpGoogleAccess = privateIpGoogleAccess;
         return this;
@@ -260,6 +282,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpv6GoogleAccess")
     public SubnetworkPrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess;
+
     public Subnetwork withPrivateIpv6GoogleAccess(SubnetworkPrivateIpv6GoogleAccessEnum privateIpv6GoogleAccess) {
         this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
         return this;
@@ -271,6 +294,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public SubnetworkPurposeEnum purpose;
+
     public Subnetwork withPurpose(SubnetworkPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -282,6 +306,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Subnetwork withRegion(String region) {
         this.region = region;
         return this;
@@ -293,6 +318,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedInternalRange")
     public String reservedInternalRange;
+
     public Subnetwork withReservedInternalRange(String reservedInternalRange) {
         this.reservedInternalRange = reservedInternalRange;
         return this;
@@ -304,6 +330,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public SubnetworkRoleEnum role;
+
     public Subnetwork withRole(SubnetworkRoleEnum role) {
         this.role = role;
         return this;
@@ -315,6 +342,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryIpRanges")
     public SubnetworkSecondaryRange[] secondaryIpRanges;
+
     public Subnetwork withSecondaryIpRanges(SubnetworkSecondaryRange[] secondaryIpRanges) {
         this.secondaryIpRanges = secondaryIpRanges;
         return this;
@@ -326,6 +354,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Subnetwork withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -337,6 +366,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public Subnetwork withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -348,6 +378,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackType")
     public SubnetworkStackTypeEnum stackType;
+
     public Subnetwork withStackType(SubnetworkStackTypeEnum stackType) {
         this.stackType = stackType;
         return this;
@@ -359,6 +390,7 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SubnetworkStateEnum state;
+
     public Subnetwork withState(SubnetworkStateEnum state) {
         this.state = state;
         return this;
@@ -370,9 +402,11 @@ public class Subnetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlans")
     public Integer[] vlans;
+
     public Subnetwork withVlans(Integer[] vlans) {
         this.vlans = vlans;
         return this;
     }
     
+    public Subnetwork(){}
 }

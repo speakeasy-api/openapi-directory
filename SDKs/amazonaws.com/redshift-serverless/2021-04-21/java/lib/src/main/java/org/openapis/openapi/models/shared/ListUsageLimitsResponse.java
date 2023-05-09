@@ -15,6 +15,7 @@ public class ListUsageLimitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUsageLimitsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUsageLimitsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageLimits")
     public UsageLimit[] usageLimits;
+
     public ListUsageLimitsResponse withUsageLimits(UsageLimit[] usageLimits) {
         this.usageLimits = usageLimits;
         return this;
     }
     
+    public ListUsageLimitsResponse(){}
 }

@@ -12,9 +12,13 @@ public class OrderSummaryPricing {
      */
     @JsonProperty("total")
     public String total;
+
     public OrderSummaryPricing withTotal(String total) {
         this.total = total;
         return this;
     }
     
+    public OrderSummaryPricing(@JsonProperty("total") String total) {
+        this.total = total;
+  }
 }

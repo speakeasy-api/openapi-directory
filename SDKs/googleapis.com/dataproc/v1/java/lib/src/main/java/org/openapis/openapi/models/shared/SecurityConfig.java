@@ -18,6 +18,7 @@ public class SecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityConfig")
     public IdentityConfig identityConfig;
+
     public SecurityConfig withIdentityConfig(IdentityConfig identityConfig) {
         this.identityConfig = identityConfig;
         return this;
@@ -29,9 +30,11 @@ public class SecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kerberosConfig")
     public KerberosConfig kerberosConfig;
+
     public SecurityConfig withKerberosConfig(KerberosConfig kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
         return this;
     }
     
+    public SecurityConfig(){}
 }

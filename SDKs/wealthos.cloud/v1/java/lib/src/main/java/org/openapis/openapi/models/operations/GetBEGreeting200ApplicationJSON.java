@@ -15,6 +15,7 @@ public class GetBEGreeting200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String members;
+
     public GetBEGreeting200ApplicationJSON withMembers(String members) {
         this.members = members;
         return this;
@@ -23,6 +24,7 @@ public class GetBEGreeting200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String[] message;
+
     public GetBEGreeting200ApplicationJSON withMessage(String[] message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class GetBEGreeting200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenant")
     public String tenant;
+
     public GetBEGreeting200ApplicationJSON withTenant(String tenant) {
         this.tenant = tenant;
         return this;
     }
     
+    public GetBEGreeting200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class TeamTemplateItemVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public RoleSimpleVO role;
+
     public TeamTemplateItemVO withRole(RoleSimpleVO role) {
         this.role = role;
         return this;
@@ -29,9 +30,11 @@ public class TeamTemplateItemVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserPersonVO user;
+
     public TeamTemplateItemVO withUser(UserPersonVO user) {
         this.user = user;
         return this;
     }
     
+    public TeamTemplateItemVO(){}
 }

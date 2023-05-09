@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRunResponse {
@@ -12,6 +13,7 @@ public class GetRunResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRunResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRunResponse {
      */
     
     public Object conflictException;
+
     public GetRunResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetRunResponse {
     
     
     public String contentType;
+
     public GetRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRunResponse getRunResponse;
+
     public GetRunResponse withGetRunResponse(org.openapis.openapi.models.shared.GetRunResponse getRunResponse) {
         this.getRunResponse = getRunResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetRunResponse {
      */
     
     public Object internalServerException;
+
     public GetRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetRunResponse {
      */
     
     public Object requestTimeoutException;
+
     public GetRunResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class GetRunResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRunResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetRunResponse {
     
     
     public Integer statusCode;
+
     public GetRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetRunResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetRunResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -103,6 +114,7 @@ public class GetRunResponse {
      */
     
     public Object throttlingException;
+
     public GetRunResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class GetRunResponse {
      */
     
     public Object validationException;
+
     public GetRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

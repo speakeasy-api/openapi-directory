@@ -18,9 +18,11 @@ public class ImagesDeleteAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Image[] deleted;
+
     public ImagesDeleteAllResponse withDeleted(Image[] deleted) {
         this.deleted = deleted;
         return this;
     }
     
+    public ImagesDeleteAllResponse(){}
 }

@@ -15,9 +15,11 @@ public class DatastoreStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public EstimatedResourceSize size;
+
     public DatastoreStatistics withSize(EstimatedResourceSize size) {
         this.size = size;
         return this;
     }
     
+    public DatastoreStatistics(){}
 }

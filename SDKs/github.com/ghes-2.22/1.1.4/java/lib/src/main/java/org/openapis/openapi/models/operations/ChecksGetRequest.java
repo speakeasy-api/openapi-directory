@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChecksGetRequest {
@@ -12,6 +13,7 @@ public class ChecksGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_run_id")
     public Long checkRunId;
+
     public ChecksGetRequest withCheckRunId(Long checkRunId) {
         this.checkRunId = checkRunId;
         return this;
@@ -19,6 +21,7 @@ public class ChecksGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ChecksGetRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class ChecksGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ChecksGetRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ChecksGetRequest(@JsonProperty("check_run_id") Long checkRunId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.checkRunId = checkRunId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

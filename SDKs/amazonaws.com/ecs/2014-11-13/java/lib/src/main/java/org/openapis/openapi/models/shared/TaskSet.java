@@ -20,6 +20,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacityProviderStrategy")
     public CapacityProviderStrategyItem[] capacityProviderStrategy;
+
     public TaskSet withCapacityProviderStrategy(CapacityProviderStrategyItem[] capacityProviderStrategy) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         return this;
@@ -28,6 +29,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public TaskSet withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -36,6 +38,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computedDesiredCount")
     public Long computedDesiredCount;
+
     public TaskSet withComputedDesiredCount(Long computedDesiredCount) {
         this.computedDesiredCount = computedDesiredCount;
         return this;
@@ -46,6 +49,7 @@ public class TaskSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public TaskSet withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public TaskSet withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -62,6 +67,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TaskSet withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchType")
     public LaunchTypeEnum launchType;
+
     public TaskSet withLaunchType(LaunchTypeEnum launchType) {
         this.launchType = launchType;
         return this;
@@ -78,6 +85,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancers")
     public LoadBalancer[] loadBalancers;
+
     public TaskSet withLoadBalancers(LoadBalancer[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -86,6 +94,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public TaskSet withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -94,6 +103,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingCount")
     public Long pendingCount;
+
     public TaskSet withPendingCount(Long pendingCount) {
         this.pendingCount = pendingCount;
         return this;
@@ -102,6 +112,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformFamily")
     public String platformFamily;
+
     public TaskSet withPlatformFamily(String platformFamily) {
         this.platformFamily = platformFamily;
         return this;
@@ -110,6 +121,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public TaskSet withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -118,6 +130,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningCount")
     public Long runningCount;
+
     public TaskSet withRunningCount(Long runningCount) {
         this.runningCount = runningCount;
         return this;
@@ -126,6 +139,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scale")
     public Scale scale;
+
     public TaskSet withScale(Scale scale) {
         this.scale = scale;
         return this;
@@ -134,6 +148,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceArn")
     public String serviceArn;
+
     public TaskSet withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -142,6 +157,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRegistries")
     public ServiceRegistry[] serviceRegistries;
+
     public TaskSet withServiceRegistries(ServiceRegistry[] serviceRegistries) {
         this.serviceRegistries = serviceRegistries;
         return this;
@@ -150,6 +166,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stabilityStatus")
     public StabilityStatusEnum stabilityStatus;
+
     public TaskSet withStabilityStatus(StabilityStatusEnum stabilityStatus) {
         this.stabilityStatus = stabilityStatus;
         return this;
@@ -160,6 +177,7 @@ public class TaskSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stabilityStatusAt")
     public OffsetDateTime stabilityStatusAt;
+
     public TaskSet withStabilityStatusAt(OffsetDateTime stabilityStatusAt) {
         this.stabilityStatusAt = stabilityStatusAt;
         return this;
@@ -168,6 +186,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedBy")
     public String startedBy;
+
     public TaskSet withStartedBy(String startedBy) {
         this.startedBy = startedBy;
         return this;
@@ -176,6 +195,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TaskSet withStatus(String status) {
         this.status = status;
         return this;
@@ -184,6 +204,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public TaskSet withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -192,6 +213,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinition")
     public String taskDefinition;
+
     public TaskSet withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
@@ -200,6 +222,7 @@ public class TaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSetArn")
     public String taskSetArn;
+
     public TaskSet withTaskSetArn(String taskSetArn) {
         this.taskSetArn = taskSetArn;
         return this;
@@ -210,9 +233,11 @@ public class TaskSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public TaskSet withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TaskSet(){}
 }

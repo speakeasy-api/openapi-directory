@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrderRequest {
@@ -14,6 +15,7 @@ public class UpdateOrderRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.V1UpdateOrderRequest v1UpdateOrderRequest;
+
     public UpdateOrderRequest withV1UpdateOrderRequest(org.openapis.openapi.models.shared.V1UpdateOrderRequest v1UpdateOrderRequest) {
         this.v1UpdateOrderRequest = v1UpdateOrderRequest;
         return this;
@@ -24,6 +26,7 @@ public class UpdateOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public UpdateOrderRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -34,9 +37,15 @@ public class UpdateOrderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
     public String orderId;
+
     public UpdateOrderRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public UpdateOrderRequest(@JsonProperty("V1UpdateOrderRequest") org.openapis.openapi.models.shared.V1UpdateOrderRequest v1UpdateOrderRequest, @JsonProperty("location_id") String locationId, @JsonProperty("order_id") String orderId) {
+        this.v1UpdateOrderRequest = v1UpdateOrderRequest;
+        this.locationId = locationId;
+        this.orderId = orderId;
+  }
 }

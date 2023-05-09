@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InitializeClusterRequest {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public InitializeClusterRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -16,6 +17,7 @@ public class InitializeClusterRequest {
     
     @JsonProperty("SignedCert")
     public String signedCert;
+
     public InitializeClusterRequest withSignedCert(String signedCert) {
         this.signedCert = signedCert;
         return this;
@@ -23,9 +25,15 @@ public class InitializeClusterRequest {
     
     @JsonProperty("TrustAnchor")
     public String trustAnchor;
+
     public InitializeClusterRequest withTrustAnchor(String trustAnchor) {
         this.trustAnchor = trustAnchor;
         return this;
     }
     
+    public InitializeClusterRequest(@JsonProperty("ClusterId") String clusterId, @JsonProperty("SignedCert") String signedCert, @JsonProperty("TrustAnchor") String trustAnchor) {
+        this.clusterId = clusterId;
+        this.signedCert = signedCert;
+        this.trustAnchor = trustAnchor;
+  }
 }

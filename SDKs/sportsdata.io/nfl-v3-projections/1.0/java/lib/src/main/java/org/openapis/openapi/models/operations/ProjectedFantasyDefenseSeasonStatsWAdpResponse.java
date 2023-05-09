@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectedFantasyDefenseSeasonStatsWAdpResponse {
     
     public String contentType;
+
     public ProjectedFantasyDefenseSeasonStatsWAdpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectedFantasyDefenseSeasonStatsWAdpResponse {
     
     
     public org.openapis.openapi.models.shared.FantasyDefenseSeasonProjection[] fantasyDefenseSeasonProjections;
+
     public ProjectedFantasyDefenseSeasonStatsWAdpResponse withFantasyDefenseSeasonProjections(org.openapis.openapi.models.shared.FantasyDefenseSeasonProjection[] fantasyDefenseSeasonProjections) {
         this.fantasyDefenseSeasonProjections = fantasyDefenseSeasonProjections;
         return this;
@@ -23,6 +26,7 @@ public class ProjectedFantasyDefenseSeasonStatsWAdpResponse {
     
     
     public Integer statusCode;
+
     public ProjectedFantasyDefenseSeasonStatsWAdpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class ProjectedFantasyDefenseSeasonStatsWAdpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectedFantasyDefenseSeasonStatsWAdpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProjectedFantasyDefenseSeasonStatsWAdpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

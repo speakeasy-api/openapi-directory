@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommitsListByShaListRequest {
@@ -12,6 +13,7 @@ public class CommitsListByShaListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CommitsListByShaListRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class CommitsListByShaListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hashes")
     public String[] hashes;
+
     public CommitsListByShaListRequest withHashes(String[] hashes) {
         this.hashes = hashes;
         return this;
@@ -32,9 +35,15 @@ public class CommitsListByShaListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CommitsListByShaListRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CommitsListByShaListRequest(@JsonProperty("app_name") String appName, @JsonProperty("hashes") String[] hashes, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.hashes = hashes;
+        this.ownerName = ownerName;
+  }
 }

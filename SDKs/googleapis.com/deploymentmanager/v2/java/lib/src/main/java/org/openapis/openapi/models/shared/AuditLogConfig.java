@@ -18,6 +18,7 @@ public class AuditLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptedMembers")
     public String[] exemptedMembers;
+
     public AuditLogConfig withExemptedMembers(String[] exemptedMembers) {
         this.exemptedMembers = exemptedMembers;
         return this;
@@ -29,9 +30,11 @@ public class AuditLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logType")
     public AuditLogConfigLogTypeEnum logType;
+
     public AuditLogConfig withLogType(AuditLogConfigLogTypeEnum logType) {
         this.logType = logType;
         return this;
     }
     
+    public AuditLogConfig(){}
 }

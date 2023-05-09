@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class InventoryVaccinesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public InventoryVaccinesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +17,7 @@ public class InventoryVaccinesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvx_code")
     public String cvxCode;
+
     public InventoryVaccinesListRequest withCvxCode(String cvxCode) {
         this.cvxCode = cvxCode;
         return this;
@@ -23,6 +25,7 @@ public class InventoryVaccinesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public InventoryVaccinesListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,6 +33,7 @@ public class InventoryVaccinesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public InventoryVaccinesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -37,6 +41,7 @@ public class InventoryVaccinesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public InventoryVaccinesListRequest withSince(String since) {
         this.since = since;
         return this;
@@ -44,9 +49,11 @@ public class InventoryVaccinesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public InventoryVaccinesListRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public InventoryVaccinesListRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingLanguagesListResponse {
     
     public String contentType;
+
     public DfareportingLanguagesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingLanguagesListResponse {
      */
     
     public org.openapis.openapi.models.shared.LanguagesListResponse languagesListResponse;
+
     public DfareportingLanguagesListResponse withLanguagesListResponse(org.openapis.openapi.models.shared.LanguagesListResponse languagesListResponse) {
         this.languagesListResponse = languagesListResponse;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingLanguagesListResponse {
     
     
     public Integer statusCode;
+
     public DfareportingLanguagesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingLanguagesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingLanguagesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingLanguagesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

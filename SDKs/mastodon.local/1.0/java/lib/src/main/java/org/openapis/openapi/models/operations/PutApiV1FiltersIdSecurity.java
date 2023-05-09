@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiV1FiltersIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerAuth;
+
     public PutApiV1FiltersIdSecurity withBearerAuth(String bearerAuth) {
         this.bearerAuth = bearerAuth;
         return this;
     }
     
+    public PutApiV1FiltersIdSecurity(@JsonProperty("bearerAuth") String bearerAuth) {
+        this.bearerAuth = bearerAuth;
+  }
 }

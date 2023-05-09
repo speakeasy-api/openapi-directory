@@ -20,6 +20,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RelationalDatabase withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backupRetentionEnabled")
     public Boolean backupRetentionEnabled;
+
     public RelationalDatabase withBackupRetentionEnabled(Boolean backupRetentionEnabled) {
         this.backupRetentionEnabled = backupRetentionEnabled;
         return this;
@@ -36,6 +38,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificateIdentifier")
     public String caCertificateIdentifier;
+
     public RelationalDatabase withCaCertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -46,6 +49,7 @@ public class RelationalDatabase {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public RelationalDatabase withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engine")
     public String engine;
+
     public RelationalDatabase withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -62,6 +67,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engineVersion")
     public String engineVersion;
+
     public RelationalDatabase withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -70,6 +76,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hardware")
     public RelationalDatabaseHardware hardware;
+
     public RelationalDatabase withHardware(RelationalDatabaseHardware hardware) {
         this.hardware = hardware;
         return this;
@@ -80,6 +87,7 @@ public class RelationalDatabase {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestRestorableTime")
     public OffsetDateTime latestRestorableTime;
+
     public RelationalDatabase withLatestRestorableTime(OffsetDateTime latestRestorableTime) {
         this.latestRestorableTime = latestRestorableTime;
         return this;
@@ -88,6 +96,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public RelationalDatabase withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -96,6 +105,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterDatabaseName")
     public String masterDatabaseName;
+
     public RelationalDatabase withMasterDatabaseName(String masterDatabaseName) {
         this.masterDatabaseName = masterDatabaseName;
         return this;
@@ -104,6 +114,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterEndpoint")
     public RelationalDatabaseEndpoint masterEndpoint;
+
     public RelationalDatabase withMasterEndpoint(RelationalDatabaseEndpoint masterEndpoint) {
         this.masterEndpoint = masterEndpoint;
         return this;
@@ -112,6 +123,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterUsername")
     public String masterUsername;
+
     public RelationalDatabase withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -120,6 +132,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RelationalDatabase withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +141,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterApplyStatus")
     public String parameterApplyStatus;
+
     public RelationalDatabase withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
@@ -136,6 +150,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingMaintenanceActions")
     public PendingMaintenanceAction[] pendingMaintenanceActions;
+
     public RelationalDatabase withPendingMaintenanceActions(PendingMaintenanceAction[] pendingMaintenanceActions) {
         this.pendingMaintenanceActions = pendingMaintenanceActions;
         return this;
@@ -144,6 +159,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingModifiedValues")
     public PendingModifiedRelationalDatabaseValues pendingModifiedValues;
+
     public RelationalDatabase withPendingModifiedValues(PendingModifiedRelationalDatabaseValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -152,6 +168,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredBackupWindow")
     public String preferredBackupWindow;
+
     public RelationalDatabase withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -160,6 +177,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredMaintenanceWindow")
     public String preferredMaintenanceWindow;
+
     public RelationalDatabase withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -168,6 +186,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public RelationalDatabase withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -176,6 +195,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseBlueprintId")
     public String relationalDatabaseBlueprintId;
+
     public RelationalDatabase withRelationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
         this.relationalDatabaseBlueprintId = relationalDatabaseBlueprintId;
         return this;
@@ -184,6 +204,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseBundleId")
     public String relationalDatabaseBundleId;
+
     public RelationalDatabase withRelationalDatabaseBundleId(String relationalDatabaseBundleId) {
         this.relationalDatabaseBundleId = relationalDatabaseBundleId;
         return this;
@@ -192,6 +213,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public RelationalDatabase withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -200,6 +222,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryAvailabilityZone")
     public String secondaryAvailabilityZone;
+
     public RelationalDatabase withSecondaryAvailabilityZone(String secondaryAvailabilityZone) {
         this.secondaryAvailabilityZone = secondaryAvailabilityZone;
         return this;
@@ -208,6 +231,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public RelationalDatabase withState(String state) {
         this.state = state;
         return this;
@@ -216,6 +240,7 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public RelationalDatabase withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
@@ -224,9 +249,11 @@ public class RelationalDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public RelationalDatabase withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public RelationalDatabase(){}
 }

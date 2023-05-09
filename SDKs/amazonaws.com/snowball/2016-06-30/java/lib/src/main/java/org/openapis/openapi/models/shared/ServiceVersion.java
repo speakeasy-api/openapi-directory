@@ -15,9 +15,11 @@ public class ServiceVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public ServiceVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ServiceVersion(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Adexchangebuyer2AccountsPublisherProfilesListResponse {
     
     public String contentType;
+
     public Adexchangebuyer2AccountsPublisherProfilesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2AccountsPublisherProfilesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPublisherProfilesResponse listPublisherProfilesResponse;
+
     public Adexchangebuyer2AccountsPublisherProfilesListResponse withListPublisherProfilesResponse(org.openapis.openapi.models.shared.ListPublisherProfilesResponse listPublisherProfilesResponse) {
         this.listPublisherProfilesResponse = listPublisherProfilesResponse;
         return this;
@@ -26,6 +29,7 @@ public class Adexchangebuyer2AccountsPublisherProfilesListResponse {
     
     
     public Integer statusCode;
+
     public Adexchangebuyer2AccountsPublisherProfilesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Adexchangebuyer2AccountsPublisherProfilesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Adexchangebuyer2AccountsPublisherProfilesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Adexchangebuyer2AccountsPublisherProfilesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

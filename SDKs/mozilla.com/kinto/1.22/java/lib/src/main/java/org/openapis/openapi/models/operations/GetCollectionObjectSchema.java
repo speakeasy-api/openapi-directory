@@ -15,6 +15,7 @@ public class GetCollectionObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetCollectionObjectSchemaData data;
+
     public GetCollectionObjectSchema withData(GetCollectionObjectSchemaData data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class GetCollectionObjectSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public GetCollectionObjectSchemaPermissions permissions;
+
     public GetCollectionObjectSchema withPermissions(GetCollectionObjectSchemaPermissions permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public GetCollectionObjectSchema(){}
 }

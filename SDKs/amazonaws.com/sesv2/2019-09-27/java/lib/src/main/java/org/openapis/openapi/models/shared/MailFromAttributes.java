@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MailFromAttributes {
     @JsonProperty("BehaviorOnMxFailure")
     public BehaviorOnMxFailureEnum behaviorOnMxFailure;
+
     public MailFromAttributes withBehaviorOnMxFailure(BehaviorOnMxFailureEnum behaviorOnMxFailure) {
         this.behaviorOnMxFailure = behaviorOnMxFailure;
         return this;
@@ -19,6 +20,7 @@ public class MailFromAttributes {
     
     @JsonProperty("MailFromDomain")
     public String mailFromDomain;
+
     public MailFromAttributes withMailFromDomain(String mailFromDomain) {
         this.mailFromDomain = mailFromDomain;
         return this;
@@ -26,9 +28,15 @@ public class MailFromAttributes {
     
     @JsonProperty("MailFromDomainStatus")
     public MailFromDomainStatusEnum mailFromDomainStatus;
+
     public MailFromAttributes withMailFromDomainStatus(MailFromDomainStatusEnum mailFromDomainStatus) {
         this.mailFromDomainStatus = mailFromDomainStatus;
         return this;
     }
     
+    public MailFromAttributes(@JsonProperty("BehaviorOnMxFailure") BehaviorOnMxFailureEnum behaviorOnMxFailure, @JsonProperty("MailFromDomain") String mailFromDomain, @JsonProperty("MailFromDomainStatus") MailFromDomainStatusEnum mailFromDomainStatus) {
+        this.behaviorOnMxFailure = behaviorOnMxFailure;
+        this.mailFromDomain = mailFromDomain;
+        this.mailFromDomainStatus = mailFromDomainStatus;
+  }
 }

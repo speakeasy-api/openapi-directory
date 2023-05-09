@@ -12,6 +12,7 @@ public class UpdateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateServiceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateServiceInput {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateServiceInput withName(String name) {
         this.name = name;
         return this;
@@ -27,9 +29,13 @@ public class UpdateServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public String spec;
+
     public UpdateServiceInput withSpec(String spec) {
         this.spec = spec;
         return this;
     }
     
+    public UpdateServiceInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

@@ -18,9 +18,11 @@ public class GetTrailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trail")
     public Trail trail;
+
     public GetTrailResponse withTrail(Trail trail) {
         this.trail = trail;
         return this;
     }
     
+    public GetTrailResponse(){}
 }

@@ -18,6 +18,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Permission withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -29,6 +30,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Permission withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public java.util.Map<String, Object> family;
+
     public Permission withFamily(java.util.Map<String, Object> family) {
         this.family = family;
         return this;
@@ -51,6 +54,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public Permission withGroup(Group group) {
         this.group = group;
         return this;
@@ -62,6 +66,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Permission withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public PermissionRoleEnum role;
+
     public Permission withRole(PermissionRoleEnum role) {
         this.role = role;
         return this;
@@ -84,9 +90,11 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User user;
+
     public Permission withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public Permission(){}
 }

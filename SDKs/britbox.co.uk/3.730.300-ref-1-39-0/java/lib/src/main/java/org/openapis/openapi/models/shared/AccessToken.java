@@ -27,6 +27,7 @@ public class AccessToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCreated")
     public Boolean accountCreated;
+
     public AccessToken withAccountCreated(Boolean accountCreated) {
         this.accountCreated = accountCreated;
         return this;
@@ -39,6 +40,7 @@ public class AccessToken {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public AccessToken withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -49,6 +51,7 @@ public class AccessToken {
      */
     @JsonProperty("refreshable")
     public Boolean refreshable;
+
     public AccessToken withRefreshable(Boolean refreshable) {
         this.refreshable = refreshable;
         return this;
@@ -59,6 +62,7 @@ public class AccessToken {
      */
     @JsonProperty("type")
     public AccessTokenTypeEnum type;
+
     public AccessToken withType(AccessTokenTypeEnum type) {
         this.type = type;
         return this;
@@ -69,9 +73,16 @@ public class AccessToken {
      */
     @JsonProperty("value")
     public String value;
+
     public AccessToken withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AccessToken(@JsonProperty("expirationDate") OffsetDateTime expirationDate, @JsonProperty("refreshable") Boolean refreshable, @JsonProperty("type") AccessTokenTypeEnum type, @JsonProperty("value") String value) {
+        this.expirationDate = expirationDate;
+        this.refreshable = refreshable;
+        this.type = type;
+        this.value = value;
+  }
 }

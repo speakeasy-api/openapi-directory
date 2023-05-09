@@ -15,6 +15,7 @@ public class ListVectorEnrichmentJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListVectorEnrichmentJobsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListVectorEnrichmentJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListVectorEnrichmentJobsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,6 +39,7 @@ public class ListVectorEnrichmentJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public String sortBy;
+
     public ListVectorEnrichmentJobsRequestBody withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -48,6 +51,7 @@ public class ListVectorEnrichmentJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public ListVectorEnrichmentJobsRequestBodySortOrderEnum sortOrder;
+
     public ListVectorEnrichmentJobsRequestBody withSortOrder(ListVectorEnrichmentJobsRequestBodySortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -59,9 +63,11 @@ public class ListVectorEnrichmentJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public String statusEquals;
+
     public ListVectorEnrichmentJobsRequestBody withStatusEquals(String statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListVectorEnrichmentJobsRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaAccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public GoogleAnalyticsAdminV1betaAccountSummary withAccount(String account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaAccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1betaAccountSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1betaAccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1betaAccountSummary withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAnalyticsAdminV1betaAccountSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertySummaries")
     public GoogleAnalyticsAdminV1betaPropertySummary[] propertySummaries;
+
     public GoogleAnalyticsAdminV1betaAccountSummary withPropertySummaries(GoogleAnalyticsAdminV1betaPropertySummary[] propertySummaries) {
         this.propertySummaries = propertySummaries;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaAccountSummary(){}
 }

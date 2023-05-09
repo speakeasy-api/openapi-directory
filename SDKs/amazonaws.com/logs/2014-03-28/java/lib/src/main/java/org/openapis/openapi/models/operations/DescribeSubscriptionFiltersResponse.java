@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSubscriptionFiltersResponse {
     
     public String contentType;
+
     public DescribeSubscriptionFiltersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSubscriptionFiltersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSubscriptionFiltersResponse describeSubscriptionFiltersResponse;
+
     public DescribeSubscriptionFiltersResponse withDescribeSubscriptionFiltersResponse(org.openapis.openapi.models.shared.DescribeSubscriptionFiltersResponse describeSubscriptionFiltersResponse) {
         this.describeSubscriptionFiltersResponse = describeSubscriptionFiltersResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSubscriptionFiltersResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeSubscriptionFiltersResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSubscriptionFiltersResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeSubscriptionFiltersResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeSubscriptionFiltersResponse {
     
     
     public Integer statusCode;
+
     public DescribeSubscriptionFiltersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeSubscriptionFiltersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSubscriptionFiltersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeSubscriptionFiltersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSubscriptionFiltersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeSubscriptionFiltersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

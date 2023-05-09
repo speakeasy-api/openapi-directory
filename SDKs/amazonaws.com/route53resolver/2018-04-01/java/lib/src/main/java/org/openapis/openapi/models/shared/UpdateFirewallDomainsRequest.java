@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateFirewallDomainsRequest {
     @JsonProperty("Domains")
     public String[] domains;
+
     public UpdateFirewallDomainsRequest withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -16,6 +17,7 @@ public class UpdateFirewallDomainsRequest {
     
     @JsonProperty("FirewallDomainListId")
     public String firewallDomainListId;
+
     public UpdateFirewallDomainsRequest withFirewallDomainListId(String firewallDomainListId) {
         this.firewallDomainListId = firewallDomainListId;
         return this;
@@ -23,9 +25,15 @@ public class UpdateFirewallDomainsRequest {
     
     @JsonProperty("Operation")
     public FirewallDomainUpdateOperationEnum operation;
+
     public UpdateFirewallDomainsRequest withOperation(FirewallDomainUpdateOperationEnum operation) {
         this.operation = operation;
         return this;
     }
     
+    public UpdateFirewallDomainsRequest(@JsonProperty("Domains") String[] domains, @JsonProperty("FirewallDomainListId") String firewallDomainListId, @JsonProperty("Operation") FirewallDomainUpdateOperationEnum operation) {
+        this.domains = domains;
+        this.firewallDomainListId = firewallDomainListId;
+        this.operation = operation;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAuthTypes")
     public org.openapis.openapi.models.shared.BackendAPIAuthType[] additionalAuthTypes;
+
     public UpdateBackendAPIRequestBodyResourceConfig withAdditionalAuthTypes(org.openapis.openapi.models.shared.BackendAPIAuthType[] additionalAuthTypes) {
         this.additionalAuthTypes = additionalAuthTypes;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiName")
     public String apiName;
+
     public UpdateBackendAPIRequestBodyResourceConfig withApiName(String apiName) {
         this.apiName = apiName;
         return this;
@@ -31,6 +33,7 @@ public class UpdateBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConflictResolution")
     public UpdateBackendAPIRequestBodyResourceConfigConflictResolution conflictResolution;
+
     public UpdateBackendAPIRequestBodyResourceConfig withConflictResolution(UpdateBackendAPIRequestBodyResourceConfigConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -39,6 +42,7 @@ public class UpdateBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultAuthType")
     public UpdateBackendAPIRequestBodyResourceConfigDefaultAuthType defaultAuthType;
+
     public UpdateBackendAPIRequestBodyResourceConfig withDefaultAuthType(UpdateBackendAPIRequestBodyResourceConfigDefaultAuthType defaultAuthType) {
         this.defaultAuthType = defaultAuthType;
         return this;
@@ -47,6 +51,7 @@ public class UpdateBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public UpdateBackendAPIRequestBodyResourceConfig withService(String service) {
         this.service = service;
         return this;
@@ -55,9 +60,11 @@ public class UpdateBackendAPIRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformSchema")
     public String transformSchema;
+
     public UpdateBackendAPIRequestBodyResourceConfig withTransformSchema(String transformSchema) {
         this.transformSchema = transformSchema;
         return this;
     }
     
+    public UpdateBackendAPIRequestBodyResourceConfig(){}
 }

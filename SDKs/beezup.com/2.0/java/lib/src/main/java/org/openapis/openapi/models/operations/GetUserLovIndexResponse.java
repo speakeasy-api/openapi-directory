@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserLovIndexResponse {
@@ -12,6 +13,7 @@ public class GetUserLovIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetUserLovIndexResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetUserLovIndexResponse {
     
     
     public String contentType;
+
     public GetUserLovIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetUserLovIndexResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetUserLovIndexResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetUserLovIndexResponse {
     
     
     public Integer statusCode;
+
     public GetUserLovIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetUserLovIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserLovIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetUserLovIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.UserLovIndex userLovIndex;
+
     public GetUserLovIndexResponse withUserLovIndex(org.openapis.openapi.models.shared.UserLovIndex userLovIndex) {
         this.userLovIndex = userLovIndex;
         return this;
     }
     
+    public GetUserLovIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

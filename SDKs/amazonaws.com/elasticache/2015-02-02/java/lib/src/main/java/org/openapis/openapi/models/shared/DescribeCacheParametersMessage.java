@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeCacheParametersMessage - Represents the input of a &lt;code&gt;DescribeCacheParameters&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCacheParametersMessage {
     
     public String cacheParameterGroupName;
+
     public DescribeCacheParametersMessage withCacheParameterGroupName(String cacheParameterGroupName) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCacheParametersMessage {
     
     
     public String marker;
+
     public DescribeCacheParametersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCacheParametersMessage {
     
     
     public Long maxRecords;
+
     public DescribeCacheParametersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,9 +36,13 @@ public class DescribeCacheParametersMessage {
     
     
     public String source;
+
     public DescribeCacheParametersMessage withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public DescribeCacheParametersMessage(@JsonProperty("CacheParameterGroupName") String cacheParameterGroupName) {
+        this.cacheParameterGroupName = cacheParameterGroupName;
+  }
 }

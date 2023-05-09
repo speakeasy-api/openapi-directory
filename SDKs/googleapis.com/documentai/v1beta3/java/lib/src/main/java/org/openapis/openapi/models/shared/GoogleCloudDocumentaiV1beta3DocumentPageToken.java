@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedBreak")
     public GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreak detectedBreak;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageToken withDetectedBreak(GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreak detectedBreak) {
         this.detectedBreak = detectedBreak;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedLanguages")
     public GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageToken withDetectedLanguages(GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage[] detectedLanguages) {
         this.detectedLanguages = detectedLanguages;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public GoogleCloudDocumentaiV1beta3DocumentPageLayout layout;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageToken withLayout(GoogleCloudDocumentaiV1beta3DocumentPageLayout layout) {
         this.layout = layout;
         return this;
@@ -51,9 +54,23 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GoogleCloudDocumentaiV1beta3DocumentProvenance provenance;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageToken withProvenance(GoogleCloudDocumentaiV1beta3DocumentProvenance provenance) {
         this.provenance = provenance;
         return this;
     }
     
+    /**
+     * Font and other text style attributes.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("styleInfo")
+    public GoogleCloudDocumentaiV1beta3DocumentPageTokenStyleInfo styleInfo;
+
+    public GoogleCloudDocumentaiV1beta3DocumentPageToken withStyleInfo(GoogleCloudDocumentaiV1beta3DocumentPageTokenStyleInfo styleInfo) {
+        this.styleInfo = styleInfo;
+        return this;
+    }
+    
+    public GoogleCloudDocumentaiV1beta3DocumentPageToken(){}
 }

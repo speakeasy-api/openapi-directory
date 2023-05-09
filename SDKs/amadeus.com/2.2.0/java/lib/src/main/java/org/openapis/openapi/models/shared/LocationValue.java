@@ -15,6 +15,7 @@ public class LocationValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cityCode")
     public String cityCode;
+
     public LocationValue withCityCode(String cityCode) {
         this.cityCode = cityCode;
         return this;
@@ -26,9 +27,11 @@ public class LocationValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public LocationValue withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
     
+    public LocationValue(){}
 }

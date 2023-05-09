@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoryCatalogDataResponse {
     
     public String contentType;
+
     public GetRepositoryCatalogDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRepositoryCatalogDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRepositoryCatalogDataResponse getRepositoryCatalogDataResponse;
+
     public GetRepositoryCatalogDataResponse withGetRepositoryCatalogDataResponse(org.openapis.openapi.models.shared.GetRepositoryCatalogDataResponse getRepositoryCatalogDataResponse) {
         this.getRepositoryCatalogDataResponse = getRepositoryCatalogDataResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRepositoryCatalogDataResponse {
      */
     
     public Object invalidParameterException;
+
     public GetRepositoryCatalogDataResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetRepositoryCatalogDataResponse {
      */
     
     public Object repositoryCatalogDataNotFoundException;
+
     public GetRepositoryCatalogDataResponse withRepositoryCatalogDataNotFoundException(Object repositoryCatalogDataNotFoundException) {
         this.repositoryCatalogDataNotFoundException = repositoryCatalogDataNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetRepositoryCatalogDataResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public GetRepositoryCatalogDataResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetRepositoryCatalogDataResponse {
      */
     
     public Object serverException;
+
     public GetRepositoryCatalogDataResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class GetRepositoryCatalogDataResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoryCatalogDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetRepositoryCatalogDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoryCatalogDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetRepositoryCatalogDataResponse {
      */
     
     public Object unsupportedCommandException;
+
     public GetRepositoryCatalogDataResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public GetRepositoryCatalogDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

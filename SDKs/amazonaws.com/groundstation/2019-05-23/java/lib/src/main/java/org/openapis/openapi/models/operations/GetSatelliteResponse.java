@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSatelliteResponse {
     
     public String contentType;
+
     public GetSatelliteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSatelliteResponse {
      */
     
     public Object dependencyException;
+
     public GetSatelliteResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -29,6 +32,7 @@ public class GetSatelliteResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSatelliteResponse getSatelliteResponse;
+
     public GetSatelliteResponse withGetSatelliteResponse(org.openapis.openapi.models.shared.GetSatelliteResponse getSatelliteResponse) {
         this.getSatelliteResponse = getSatelliteResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSatelliteResponse {
      */
     
     public Object invalidParameterException;
+
     public GetSatelliteResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class GetSatelliteResponse {
     
     
     public Integer statusCode;
+
     public GetSatelliteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSatelliteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSatelliteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSatelliteResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSatelliteResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetSatelliteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

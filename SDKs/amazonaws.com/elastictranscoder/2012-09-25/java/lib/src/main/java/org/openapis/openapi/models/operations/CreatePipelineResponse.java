@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePipelineResponse {
@@ -12,6 +13,7 @@ public class CreatePipelineResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePipelineResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreatePipelineResponse {
     
     
     public String contentType;
+
     public CreatePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePipelineResponse createPipelineResponse;
+
     public CreatePipelineResponse withCreatePipelineResponse(org.openapis.openapi.models.shared.CreatePipelineResponse createPipelineResponse) {
         this.createPipelineResponse = createPipelineResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreatePipelineResponse {
      */
     
     public Object incompatibleVersionException;
+
     public CreatePipelineResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePipelineResponse {
      */
     
     public Object internalServiceException;
+
     public CreatePipelineResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePipelineResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePipelineResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreatePipelineResponse {
     
     
     public Integer statusCode;
+
     public CreatePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreatePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreatePipelineResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePipelineResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreatePipelineResponse {
      */
     
     public Object validationException;
+
     public CreatePipelineResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

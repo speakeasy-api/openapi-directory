@@ -12,6 +12,7 @@ public class PutMobileDeviceAccessOverrideRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PutMobileDeviceAccessOverrideRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class PutMobileDeviceAccessOverrideRequest {
     
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public PutMobileDeviceAccessOverrideRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -26,6 +28,7 @@ public class PutMobileDeviceAccessOverrideRequest {
     
     @JsonProperty("Effect")
     public MobileDeviceAccessRuleEffectEnum effect;
+
     public PutMobileDeviceAccessOverrideRequest withEffect(MobileDeviceAccessRuleEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -33,6 +36,7 @@ public class PutMobileDeviceAccessOverrideRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public PutMobileDeviceAccessOverrideRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -40,9 +44,16 @@ public class PutMobileDeviceAccessOverrideRequest {
     
     @JsonProperty("UserId")
     public String userId;
+
     public PutMobileDeviceAccessOverrideRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PutMobileDeviceAccessOverrideRequest(@JsonProperty("DeviceId") String deviceId, @JsonProperty("Effect") MobileDeviceAccessRuleEffectEnum effect, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("UserId") String userId) {
+        this.deviceId = deviceId;
+        this.effect = effect;
+        this.organizationId = organizationId;
+        this.userId = userId;
+  }
 }

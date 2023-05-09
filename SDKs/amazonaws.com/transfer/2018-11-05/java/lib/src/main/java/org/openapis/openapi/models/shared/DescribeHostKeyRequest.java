@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeHostKeyRequest {
     @JsonProperty("HostKeyId")
     public String hostKeyId;
+
     public DescribeHostKeyRequest withHostKeyId(String hostKeyId) {
         this.hostKeyId = hostKeyId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeHostKeyRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public DescribeHostKeyRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public DescribeHostKeyRequest(@JsonProperty("HostKeyId") String hostKeyId, @JsonProperty("ServerId") String serverId) {
+        this.hostKeyId = hostKeyId;
+        this.serverId = serverId;
+  }
 }

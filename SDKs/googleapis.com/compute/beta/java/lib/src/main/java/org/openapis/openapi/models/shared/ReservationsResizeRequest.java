@@ -15,9 +15,11 @@ public class ReservationsResizeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specificSkuCount")
     public String specificSkuCount;
+
     public ReservationsResizeRequest withSpecificSkuCount(String specificSkuCount) {
         this.specificSkuCount = specificSkuCount;
         return this;
     }
     
+    public ReservationsResizeRequest(){}
 }

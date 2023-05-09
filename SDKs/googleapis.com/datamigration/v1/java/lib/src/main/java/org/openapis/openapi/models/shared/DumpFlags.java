@@ -18,9 +18,11 @@ public class DumpFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dumpFlags")
     public DumpFlag[] dumpFlags;
+
     public DumpFlags withDumpFlags(DumpFlag[] dumpFlags) {
         this.dumpFlags = dumpFlags;
         return this;
     }
     
+    public DumpFlags(){}
 }

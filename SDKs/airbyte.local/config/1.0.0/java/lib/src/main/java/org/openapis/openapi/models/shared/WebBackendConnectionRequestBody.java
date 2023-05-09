@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebBackendConnectionRequestBody {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public WebBackendConnectionRequestBody withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -19,9 +20,13 @@ public class WebBackendConnectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withRefreshedCatalog")
     public Boolean withRefreshedCatalog;
+
     public WebBackendConnectionRequestBody withWithRefreshedCatalog(Boolean withRefreshedCatalog) {
         this.withRefreshedCatalog = withRefreshedCatalog;
         return this;
     }
     
+    public WebBackendConnectionRequestBody(@JsonProperty("connectionId") String connectionId) {
+        this.connectionId = connectionId;
+  }
 }

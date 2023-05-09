@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalInfo")
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo principalInfo;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withPrincipalInfo(GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo principalInfo) {
         this.principalInfo = principalInfo;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceInfo")
     public GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo resourceInfo;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withResourceInfo(GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo resourceInfo) {
         this.resourceInfo = resourceInfo;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum state;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withState(GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum state) {
         this.state = state;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withUid(String uid) {
         this.uid = uid;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnector withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1AppConnector(){}
 }

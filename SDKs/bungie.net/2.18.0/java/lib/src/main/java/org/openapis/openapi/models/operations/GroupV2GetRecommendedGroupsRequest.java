@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetRecommendedGroupsRequest {
@@ -12,6 +13,7 @@ public class GroupV2GetRecommendedGroupsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=createDateRange")
     public Integer createDateRange;
+
     public GroupV2GetRecommendedGroupsRequest withCreateDateRange(Integer createDateRange) {
         this.createDateRange = createDateRange;
         return this;
@@ -22,9 +24,14 @@ public class GroupV2GetRecommendedGroupsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
     public Integer groupType;
+
     public GroupV2GetRecommendedGroupsRequest withGroupType(Integer groupType) {
         this.groupType = groupType;
         return this;
     }
     
+    public GroupV2GetRecommendedGroupsRequest(@JsonProperty("createDateRange") Integer createDateRange, @JsonProperty("groupType") Integer groupType) {
+        this.createDateRange = createDateRange;
+        this.groupType = groupType;
+  }
 }

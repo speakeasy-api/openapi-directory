@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IamcredentialsProjectsServiceAccountsSignJwtResponse {
     
     public String contentType;
+
     public IamcredentialsProjectsServiceAccountsSignJwtResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IamcredentialsProjectsServiceAccountsSignJwtResponse {
      */
     
     public org.openapis.openapi.models.shared.SignJwtResponse signJwtResponse;
+
     public IamcredentialsProjectsServiceAccountsSignJwtResponse withSignJwtResponse(org.openapis.openapi.models.shared.SignJwtResponse signJwtResponse) {
         this.signJwtResponse = signJwtResponse;
         return this;
@@ -26,6 +29,7 @@ public class IamcredentialsProjectsServiceAccountsSignJwtResponse {
     
     
     public Integer statusCode;
+
     public IamcredentialsProjectsServiceAccountsSignJwtResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IamcredentialsProjectsServiceAccountsSignJwtResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IamcredentialsProjectsServiceAccountsSignJwtResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IamcredentialsProjectsServiceAccountsSignJwtResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

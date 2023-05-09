@@ -15,9 +15,11 @@ public class ImportNotebookOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public ImportNotebookOutput withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
     }
     
+    public ImportNotebookOutput(){}
 }

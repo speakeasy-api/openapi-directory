@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ActionInvalidDataFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expectedFormat")
     public String expectedFormat;
+
     public GoogleCloudDataplexV1ActionInvalidDataFormat withExpectedFormat(String expectedFormat) {
         this.expectedFormat = expectedFormat;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ActionInvalidDataFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newFormat")
     public String newFormat;
+
     public GoogleCloudDataplexV1ActionInvalidDataFormat withNewFormat(String newFormat) {
         this.newFormat = newFormat;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ActionInvalidDataFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampledDataLocations")
     public String[] sampledDataLocations;
+
     public GoogleCloudDataplexV1ActionInvalidDataFormat withSampledDataLocations(String[] sampledDataLocations) {
         this.sampledDataLocations = sampledDataLocations;
         return this;
     }
     
+    public GoogleCloudDataplexV1ActionInvalidDataFormat(){}
 }

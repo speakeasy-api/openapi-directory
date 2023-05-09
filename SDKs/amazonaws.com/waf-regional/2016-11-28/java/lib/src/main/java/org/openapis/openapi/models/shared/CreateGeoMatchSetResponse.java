@@ -15,6 +15,7 @@ public class CreateGeoMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateGeoMatchSetResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateGeoMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoMatchSet")
     public GeoMatchSet geoMatchSet;
+
     public CreateGeoMatchSetResponse withGeoMatchSet(GeoMatchSet geoMatchSet) {
         this.geoMatchSet = geoMatchSet;
         return this;
     }
     
+    public CreateGeoMatchSetResponse(){}
 }

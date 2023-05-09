@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreatePlacementGroupResultPlacementGroup {
     
     public String groupArn;
+
     public CreatePlacementGroupResultPlacementGroup withGroupArn(String groupArn) {
         this.groupArn = groupArn;
         return this;
@@ -19,6 +20,7 @@ public class CreatePlacementGroupResultPlacementGroup {
     
     
     public String groupId;
+
     public CreatePlacementGroupResultPlacementGroup withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class CreatePlacementGroupResultPlacementGroup {
     
     
     public String groupName;
+
     public CreatePlacementGroupResultPlacementGroup withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class CreatePlacementGroupResultPlacementGroup {
     
     
     public Long partitionCount;
+
     public CreatePlacementGroupResultPlacementGroup withPartitionCount(Long partitionCount) {
         this.partitionCount = partitionCount;
         return this;
@@ -40,6 +44,7 @@ public class CreatePlacementGroupResultPlacementGroup {
     
     
     public CreatePlacementGroupResultPlacementGroupSpreadLevelEnum spreadLevel;
+
     public CreatePlacementGroupResultPlacementGroup withSpreadLevel(CreatePlacementGroupResultPlacementGroupSpreadLevelEnum spreadLevel) {
         this.spreadLevel = spreadLevel;
         return this;
@@ -47,6 +52,7 @@ public class CreatePlacementGroupResultPlacementGroup {
     
     
     public CreatePlacementGroupResultPlacementGroupStateEnum state;
+
     public CreatePlacementGroupResultPlacementGroup withState(CreatePlacementGroupResultPlacementGroupStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class CreatePlacementGroupResultPlacementGroup {
     
     
     public CreatePlacementGroupResultPlacementGroupStrategyEnum strategy;
+
     public CreatePlacementGroupResultPlacementGroup withStrategy(CreatePlacementGroupResultPlacementGroupStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -61,9 +68,11 @@ public class CreatePlacementGroupResultPlacementGroup {
     
     
     public CreatePlacementGroupResultPlacementGroupTags[] tags;
+
     public CreatePlacementGroupResultPlacementGroup withTags(CreatePlacementGroupResultPlacementGroupTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreatePlacementGroupResultPlacementGroup(){}
 }

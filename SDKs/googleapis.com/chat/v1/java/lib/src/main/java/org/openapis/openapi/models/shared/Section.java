@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Section {
     /**
-     * The header of the section, text formatted supported.
+     * The header of the section. Formatted text is supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public String header;
+
     public Section withHeader(String header) {
         this.header = header;
         return this;
@@ -29,9 +30,11 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("widgets")
     public WidgetMarkup[] widgets;
+
     public Section withWidgets(WidgetMarkup[] widgets) {
         this.widgets = widgets;
         return this;
     }
     
+    public Section(){}
 }

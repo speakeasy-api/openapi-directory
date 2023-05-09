@@ -18,6 +18,7 @@ public class MaintenancePolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MaintenancePolicyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class MaintenancePolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeklyMaintenanceWindow")
     public WeeklyMaintenanceWindowInput[] weeklyMaintenanceWindow;
+
     public MaintenancePolicyInput withWeeklyMaintenanceWindow(WeeklyMaintenanceWindowInput[] weeklyMaintenanceWindow) {
         this.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
         return this;
     }
     
+    public MaintenancePolicyInput(){}
 }

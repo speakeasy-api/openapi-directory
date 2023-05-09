@@ -12,6 +12,7 @@ public class CreateEndpointConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AsyncInferenceConfig")
     public AsyncInferenceConfig asyncInferenceConfig;
+
     public CreateEndpointConfigInput withAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
         this.asyncInferenceConfig = asyncInferenceConfig;
         return this;
@@ -23,6 +24,7 @@ public class CreateEndpointConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCaptureConfig")
     public DataCaptureConfig dataCaptureConfig;
+
     public CreateEndpointConfigInput withDataCaptureConfig(DataCaptureConfig dataCaptureConfig) {
         this.dataCaptureConfig = dataCaptureConfig;
         return this;
@@ -30,6 +32,7 @@ public class CreateEndpointConfigInput {
     
     @JsonProperty("EndpointConfigName")
     public String endpointConfigName;
+
     public CreateEndpointConfigInput withEndpointConfigName(String endpointConfigName) {
         this.endpointConfigName = endpointConfigName;
         return this;
@@ -38,6 +41,7 @@ public class CreateEndpointConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainerConfig")
     public ExplainerConfig explainerConfig;
+
     public CreateEndpointConfigInput withExplainerConfig(ExplainerConfig explainerConfig) {
         this.explainerConfig = explainerConfig;
         return this;
@@ -46,6 +50,7 @@ public class CreateEndpointConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateEndpointConfigInput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -53,6 +58,7 @@ public class CreateEndpointConfigInput {
     
     @JsonProperty("ProductionVariants")
     public ProductionVariant[] productionVariants;
+
     public CreateEndpointConfigInput withProductionVariants(ProductionVariant[] productionVariants) {
         this.productionVariants = productionVariants;
         return this;
@@ -61,6 +67,7 @@ public class CreateEndpointConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShadowProductionVariants")
     public ProductionVariant[] shadowProductionVariants;
+
     public CreateEndpointConfigInput withShadowProductionVariants(ProductionVariant[] shadowProductionVariants) {
         this.shadowProductionVariants = shadowProductionVariants;
         return this;
@@ -69,9 +76,14 @@ public class CreateEndpointConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateEndpointConfigInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEndpointConfigInput(@JsonProperty("EndpointConfigName") String endpointConfigName, @JsonProperty("ProductionVariants") ProductionVariant[] productionVariants) {
+        this.endpointConfigName = endpointConfigName;
+        this.productionVariants = productionVariants;
+  }
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTriggerRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteTriggerRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteTriggerRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

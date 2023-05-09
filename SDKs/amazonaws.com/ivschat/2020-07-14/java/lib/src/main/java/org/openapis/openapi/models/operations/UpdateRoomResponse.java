@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRoomResponse {
@@ -12,6 +13,7 @@ public class UpdateRoomResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRoomResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRoomResponse {
     
     
     public String contentType;
+
     public UpdateRoomResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRoomResponse {
      */
     
     public Object pendingVerification;
+
     public UpdateRoomResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRoomResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRoomResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRoomResponse {
     
     
     public Integer statusCode;
+
     public UpdateRoomResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRoomResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRoomResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRoomResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRoomResponse updateRoomResponse;
+
     public UpdateRoomResponse withUpdateRoomResponse(org.openapis.openapi.models.shared.UpdateRoomResponse updateRoomResponse) {
         this.updateRoomResponse = updateRoomResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateRoomResponse {
      */
     
     public Object validationException;
+
     public UpdateRoomResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateRoomResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

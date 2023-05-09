@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyProfileResponseCharacterRenderData {
     
     public java.util.Map<String, DestinyEntitiesCharactersDestinyCharacterRenderComponent> data;
+
     public DestinyResponsesDestinyProfileResponseCharacterRenderData withData(java.util.Map<String, DestinyEntitiesCharactersDestinyCharacterRenderComponent> data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class DestinyResponsesDestinyProfileResponseCharacterRenderData {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseCharacterRenderData withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -30,9 +32,11 @@ public class DestinyResponsesDestinyProfileResponseCharacterRenderData {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseCharacterRenderData withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseCharacterRenderData(){}
 }

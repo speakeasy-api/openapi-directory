@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkflowStepGroupResponse {
@@ -12,6 +13,7 @@ public class GetWorkflowStepGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public GetWorkflowStepGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkflowStepGroupResponse {
     
     
     public String contentType;
+
     public GetWorkflowStepGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkflowStepGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkflowStepGroupResponse getWorkflowStepGroupResponse;
+
     public GetWorkflowStepGroupResponse withGetWorkflowStepGroupResponse(org.openapis.openapi.models.shared.GetWorkflowStepGroupResponse getWorkflowStepGroupResponse) {
         this.getWorkflowStepGroupResponse = getWorkflowStepGroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkflowStepGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetWorkflowStepGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetWorkflowStepGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetWorkflowStepGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetWorkflowStepGroupResponse {
     
     
     public Integer statusCode;
+
     public GetWorkflowStepGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetWorkflowStepGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkflowStepGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetWorkflowStepGroupResponse {
      */
     
     public Object throttlingException;
+
     public GetWorkflowStepGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetWorkflowStepGroupResponse {
      */
     
     public Object validationException;
+
     public GetWorkflowStepGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetWorkflowStepGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

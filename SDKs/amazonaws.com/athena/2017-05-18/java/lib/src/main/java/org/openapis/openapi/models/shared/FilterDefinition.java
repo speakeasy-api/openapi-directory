@@ -15,9 +15,11 @@ public class FilterDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FilterDefinition withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FilterDefinition(){}
 }

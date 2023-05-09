@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVolumeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVolumeActionEnum action;
+
     public GETModifyVolumeRequest withAction(GETModifyVolumeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVolumeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iops")
     public Long iops;
+
     public GETModifyVolumeRequest withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MultiAttachEnabled")
     public Boolean multiAttachEnabled;
+
     public GETModifyVolumeRequest withMultiAttachEnabled(Boolean multiAttachEnabled) {
         this.multiAttachEnabled = multiAttachEnabled;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Size")
     public Long size;
+
     public GETModifyVolumeRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Throughput")
     public Long throughput;
+
     public GETModifyVolumeRequest withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVolumeVersionEnum version;
+
     public GETModifyVolumeRequest withVersion(GETModifyVolumeVersionEnum version) {
         this.version = version;
         return this;
@@ -76,6 +84,7 @@ public class GETModifyVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VolumeId")
     public String volumeId;
+
     public GETModifyVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -86,6 +95,7 @@ public class GETModifyVolumeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VolumeType")
     public GETModifyVolumeVolumeTypeEnum volumeType;
+
     public GETModifyVolumeRequest withVolumeType(GETModifyVolumeVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
@@ -93,6 +103,7 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVolumeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVolumeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVolumeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVolumeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVolumeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVolumeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,15 @@ public class GETModifyVolumeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVolumeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVolumeRequest(@JsonProperty("Action") GETModifyVolumeActionEnum action, @JsonProperty("Version") GETModifyVolumeVersionEnum version, @JsonProperty("VolumeId") String volumeId) {
+        this.action = action;
+        this.version = version;
+        this.volumeId = volumeId;
+  }
 }

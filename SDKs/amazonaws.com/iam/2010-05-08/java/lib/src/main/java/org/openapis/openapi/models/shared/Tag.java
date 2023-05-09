@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Tag - A structure that represents user-provided metadata that can be associated with an IAM resource. For more information about tagging, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html"&gt;Tagging IAM resources&lt;/a&gt; in the &lt;i&gt;IAM User Guide&lt;/i&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Tag {
     
     public String key;
+
     public Tag withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class Tag {
     
     
     public String value;
+
     public Tag withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Tag(@JsonProperty("Key") String key, @JsonProperty("Value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

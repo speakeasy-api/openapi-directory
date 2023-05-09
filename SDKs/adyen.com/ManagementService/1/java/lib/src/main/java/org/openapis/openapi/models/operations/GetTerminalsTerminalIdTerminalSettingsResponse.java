@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTerminalsTerminalIdTerminalSettingsResponse {
     
     public String contentType;
+
     public GetTerminalsTerminalIdTerminalSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTerminalsTerminalIdTerminalSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetTerminalsTerminalIdTerminalSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTerminalsTerminalIdTerminalSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTerminalsTerminalIdTerminalSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetTerminalsTerminalIdTerminalSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetTerminalsTerminalIdTerminalSettingsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class GetTerminalsTerminalIdTerminalSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+
     public GetTerminalsTerminalIdTerminalSettingsResponse withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
         this.terminalSettings = terminalSettings;
         return this;
     }
     
+    public GetTerminalsTerminalIdTerminalSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

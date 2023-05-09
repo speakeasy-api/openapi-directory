@@ -18,9 +18,11 @@ public class MobileDeviceIdList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobileDeviceIds")
     public String[] mobileDeviceIds;
+
     public MobileDeviceIdList withMobileDeviceIds(String[] mobileDeviceIds) {
         this.mobileDeviceIds = mobileDeviceIds;
         return this;
     }
     
+    public MobileDeviceIdList(){}
 }

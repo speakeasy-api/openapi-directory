@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudsearchOperationsLroListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsLroListSecurityOption1 option1;
+
     public CloudsearchOperationsLroListSecurity withOption1(CloudsearchOperationsLroListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudsearchOperationsLroListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsLroListSecurityOption2 option2;
+
     public CloudsearchOperationsLroListSecurity withOption2(CloudsearchOperationsLroListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class CloudsearchOperationsLroListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsLroListSecurityOption3 option3;
+
     public CloudsearchOperationsLroListSecurity withOption3(CloudsearchOperationsLroListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class CloudsearchOperationsLroListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsLroListSecurityOption4 option4;
+
     public CloudsearchOperationsLroListSecurity withOption4(CloudsearchOperationsLroListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class CloudsearchOperationsLroListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsLroListSecurityOption5 option5;
+
     public CloudsearchOperationsLroListSecurity withOption5(CloudsearchOperationsLroListSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class CloudsearchOperationsLroListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudsearchOperationsLroListSecurityOption6 option6;
+
     public CloudsearchOperationsLroListSecurity withOption6(CloudsearchOperationsLroListSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public CloudsearchOperationsLroListSecurity(){}
 }

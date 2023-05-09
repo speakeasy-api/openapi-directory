@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingProjectsGetResponse res = new org.openapis.openapi.models.operations.DfareportingProjectsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingProjectsGetResponse res = new org.openapis.openapi.models.operations.DfareportingProjectsGetResponse(contentType, httpRes.statusCode()) {{
             project = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingProjectsListResponse res = new org.openapis.openapi.models.operations.DfareportingProjectsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingProjectsListResponse res = new org.openapis.openapi.models.operations.DfareportingProjectsListResponse(contentType, httpRes.statusCode()) {{
             projectsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

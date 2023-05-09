@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStreamResponse {
@@ -12,6 +13,7 @@ public class DescribeStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStreamResponse {
     
     
     public String contentType;
+
     public DescribeStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStreamOutput describeStreamOutput;
+
     public DescribeStreamResponse withDescribeStreamOutput(org.openapis.openapi.models.shared.DescribeStreamOutput describeStreamOutput) {
         this.describeStreamOutput = describeStreamOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStreamResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeStreamResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeStreamResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeStreamResponse {
     
     
     public Integer statusCode;
+
     public DescribeStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

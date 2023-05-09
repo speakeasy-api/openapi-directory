@@ -12,6 +12,7 @@ public class StartProtectedQueryRequestBody {
      */
     @JsonProperty("resultConfiguration")
     public StartProtectedQueryRequestBodyResultConfiguration resultConfiguration;
+
     public StartProtectedQueryRequestBody withResultConfiguration(StartProtectedQueryRequestBodyResultConfiguration resultConfiguration) {
         this.resultConfiguration = resultConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class StartProtectedQueryRequestBody {
      */
     @JsonProperty("sqlParameters")
     public StartProtectedQueryRequestBodySqlParameters sqlParameters;
+
     public StartProtectedQueryRequestBody withSqlParameters(StartProtectedQueryRequestBodySqlParameters sqlParameters) {
         this.sqlParameters = sqlParameters;
         return this;
@@ -32,9 +34,15 @@ public class StartProtectedQueryRequestBody {
      */
     @JsonProperty("type")
     public StartProtectedQueryRequestBodyTypeEnum type;
+
     public StartProtectedQueryRequestBody withType(StartProtectedQueryRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public StartProtectedQueryRequestBody(@JsonProperty("resultConfiguration") StartProtectedQueryRequestBodyResultConfiguration resultConfiguration, @JsonProperty("sqlParameters") StartProtectedQueryRequestBodySqlParameters sqlParameters, @JsonProperty("type") StartProtectedQueryRequestBodyTypeEnum type) {
+        this.resultConfiguration = resultConfiguration;
+        this.sqlParameters = sqlParameters;
+        this.type = type;
+  }
 }

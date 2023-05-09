@@ -18,6 +18,7 @@ public class SubscriptionPriceChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPrice")
     public Price newPrice;
+
     public SubscriptionPriceChange withNewPrice(Price newPrice) {
         this.newPrice = newPrice;
         return this;
@@ -29,9 +30,11 @@ public class SubscriptionPriceChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public Integer state;
+
     public SubscriptionPriceChange withState(Integer state) {
         this.state = state;
         return this;
     }
     
+    public SubscriptionPriceChange(){}
 }

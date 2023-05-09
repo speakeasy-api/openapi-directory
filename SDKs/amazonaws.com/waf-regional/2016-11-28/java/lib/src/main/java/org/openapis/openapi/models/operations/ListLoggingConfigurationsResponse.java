@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLoggingConfigurationsResponse {
     
     public String contentType;
+
     public ListLoggingConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListLoggingConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLoggingConfigurationsResponse listLoggingConfigurationsResponse;
+
     public ListLoggingConfigurationsResponse withListLoggingConfigurationsResponse(org.openapis.openapi.models.shared.ListLoggingConfigurationsResponse listLoggingConfigurationsResponse) {
         this.listLoggingConfigurationsResponse = listLoggingConfigurationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListLoggingConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListLoggingConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListLoggingConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLoggingConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListLoggingConfigurationsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListLoggingConfigurationsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class ListLoggingConfigurationsResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public ListLoggingConfigurationsResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -63,9 +70,14 @@ public class ListLoggingConfigurationsResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public ListLoggingConfigurationsResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public ListLoggingConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

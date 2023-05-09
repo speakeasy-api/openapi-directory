@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRequest {
@@ -12,6 +13,7 @@ public class CreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ViewDTO viewDTO;
+
     public CreateRequest withViewDTO(org.openapis.openapi.models.shared.ViewDTO viewDTO) {
         this.viewDTO = viewDTO;
         return this;
@@ -22,9 +24,14 @@ public class CreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=className")
     public String className;
+
     public CreateRequest withClassName(String className) {
         this.className = className;
         return this;
     }
     
+    public CreateRequest(@JsonProperty("ViewDTO") org.openapis.openapi.models.shared.ViewDTO viewDTO, @JsonProperty("className") String className) {
+        this.viewDTO = viewDTO;
+        this.className = className;
+  }
 }

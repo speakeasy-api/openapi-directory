@@ -12,9 +12,13 @@ public class ImportGameConfigurationRequestBody {
      */
     @JsonProperty("ImportSource")
     public ImportGameConfigurationRequestBodyImportSource importSource;
+
     public ImportGameConfigurationRequestBody withImportSource(ImportGameConfigurationRequestBodyImportSource importSource) {
         this.importSource = importSource;
         return this;
     }
     
+    public ImportGameConfigurationRequestBody(@JsonProperty("ImportSource") ImportGameConfigurationRequestBodyImportSource importSource) {
+        this.importSource = importSource;
+  }
 }

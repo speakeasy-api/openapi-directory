@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFlowDefinitionResponse {
     
     public String contentType;
+
     public DeleteFlowDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFlowDefinitionResponse {
      */
     
     public java.util.Map<String, Object> deleteFlowDefinitionResponse;
+
     public DeleteFlowDefinitionResponse withDeleteFlowDefinitionResponse(java.util.Map<String, Object> deleteFlowDefinitionResponse) {
         this.deleteFlowDefinitionResponse = deleteFlowDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFlowDefinitionResponse {
      */
     
     public Object resourceInUse;
+
     public DeleteFlowDefinitionResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class DeleteFlowDefinitionResponse {
     
     
     public Integer statusCode;
+
     public DeleteFlowDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteFlowDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFlowDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteFlowDefinitionResponse {
      */
     
     public Object resourceNotFound;
+
     public DeleteFlowDefinitionResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
     }
     
+    public DeleteFlowDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

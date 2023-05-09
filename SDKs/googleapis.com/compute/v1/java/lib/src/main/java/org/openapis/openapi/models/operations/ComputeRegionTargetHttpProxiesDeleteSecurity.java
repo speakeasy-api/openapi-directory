@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionTargetHttpProxiesDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionTargetHttpProxiesDeleteSecurityOption1 option1;
+
     public ComputeRegionTargetHttpProxiesDeleteSecurity withOption1(ComputeRegionTargetHttpProxiesDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionTargetHttpProxiesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionTargetHttpProxiesDeleteSecurityOption2 option2;
+
     public ComputeRegionTargetHttpProxiesDeleteSecurity withOption2(ComputeRegionTargetHttpProxiesDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionTargetHttpProxiesDeleteSecurity(){}
 }

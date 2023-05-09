@@ -18,6 +18,7 @@ public class Module {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildId")
     public TruncatableString buildId;
+
     public Module withBuildId(TruncatableString buildId) {
         this.buildId = buildId;
         return this;
@@ -29,9 +30,11 @@ public class Module {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module")
     public TruncatableString module;
+
     public Module withModule(TruncatableString module) {
         this.module = module;
         return this;
     }
     
+    public Module(){}
 }

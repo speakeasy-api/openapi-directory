@@ -13,6 +13,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
     public OffsetDateTime createdAtDollarGte;
+
     public GetTransactionsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
         this.createdAtDollarGte = createdAtDollarGte;
         return this;
@@ -23,6 +24,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
     public OffsetDateTime createdAtDollarLte;
+
     public GetTransactionsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
         this.createdAtDollarLte = createdAtDollarLte;
         return this;
@@ -33,6 +35,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_chargestation")
     public Boolean includeChargestation;
+
     public GetTransactionsRequest withIncludeChargestation(Boolean includeChargestation) {
         this.includeChargestation = includeChargestation;
         return this;
@@ -43,6 +46,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_connector")
     public Boolean includeConnector;
+
     public GetTransactionsRequest withIncludeConnector(Boolean includeConnector) {
         this.includeConnector = includeConnector;
         return this;
@@ -53,6 +57,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_driver")
     public Boolean includeDriver;
+
     public GetTransactionsRequest withIncludeDriver(Boolean includeDriver) {
         this.includeDriver = includeDriver;
         return this;
@@ -63,6 +68,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evse")
     public Boolean includeEvse;
+
     public GetTransactionsRequest withIncludeEvse(Boolean includeEvse) {
         this.includeEvse = includeEvse;
         return this;
@@ -73,6 +79,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
     public Boolean includeOrganization;
+
     public GetTransactionsRequest withIncludeOrganization(Boolean includeOrganization) {
         this.includeOrganization = includeOrganization;
         return this;
@@ -83,6 +90,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_rate")
     public Boolean includeRate;
+
     public GetTransactionsRequest withIncludeRate(Boolean includeRate) {
         this.includeRate = includeRate;
         return this;
@@ -93,6 +101,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_reservation")
     public Boolean includeReservation;
+
     public GetTransactionsRequest withIncludeReservation(Boolean includeReservation) {
         this.includeReservation = includeReservation;
         return this;
@@ -103,6 +112,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_token")
     public Boolean includeToken;
+
     public GetTransactionsRequest withIncludeToken(Boolean includeToken) {
         this.includeToken = includeToken;
         return this;
@@ -113,6 +123,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
     public Boolean paginateEnabled;
+
     public GetTransactionsRequest withPaginateEnabled(Boolean paginateEnabled) {
         this.paginateEnabled = paginateEnabled;
         return this;
@@ -123,6 +134,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
     public Long paginateLimit;
+
     public GetTransactionsRequest withPaginateLimit(Long paginateLimit) {
         this.paginateLimit = paginateLimit;
         return this;
@@ -133,6 +145,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
     public String paginatePage;
+
     public GetTransactionsRequest withPaginatePage(String paginatePage) {
         this.paginatePage = paginatePage;
         return this;
@@ -143,6 +156,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetTransactionsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -153,6 +167,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+
     public GetTransactionsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -163,6 +178,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GetTransactionsStatusEnum status;
+
     public GetTransactionsRequest withStatus(GetTransactionsStatusEnum status) {
         this.status = status;
         return this;
@@ -173,6 +189,7 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
     public OffsetDateTime updatedAtDollarGte;
+
     public GetTransactionsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
         this.updatedAtDollarGte = updatedAtDollarGte;
         return this;
@@ -183,9 +200,11 @@ public class GetTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
     public OffsetDateTime updatedAtDollarLte;
+
     public GetTransactionsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
         this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     
+    public GetTransactionsRequest(){}
 }

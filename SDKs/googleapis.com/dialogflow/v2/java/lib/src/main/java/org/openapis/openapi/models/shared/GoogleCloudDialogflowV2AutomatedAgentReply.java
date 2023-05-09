@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCancellation")
     public Boolean allowCancellation;
+
     public GoogleCloudDialogflowV2AutomatedAgentReply withAllowCancellation(Boolean allowCancellation) {
         this.allowCancellation = allowCancellation;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatedAgentReplyType")
     public GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum automatedAgentReplyType;
+
     public GoogleCloudDialogflowV2AutomatedAgentReply withAutomatedAgentReplyType(GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum automatedAgentReplyType) {
         this.automatedAgentReplyType = automatedAgentReplyType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cxCurrentPage")
     public String cxCurrentPage;
+
     public GoogleCloudDialogflowV2AutomatedAgentReply withCxCurrentPage(String cxCurrentPage) {
         this.cxCurrentPage = cxCurrentPage;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectIntentResponse")
     public GoogleCloudDialogflowV2DetectIntentResponse detectIntentResponse;
+
     public GoogleCloudDialogflowV2AutomatedAgentReply withDetectIntentResponse(GoogleCloudDialogflowV2DetectIntentResponse detectIntentResponse) {
         this.detectIntentResponse = detectIntentResponse;
         return this;
     }
     
+    public GoogleCloudDialogflowV2AutomatedAgentReply(){}
 }

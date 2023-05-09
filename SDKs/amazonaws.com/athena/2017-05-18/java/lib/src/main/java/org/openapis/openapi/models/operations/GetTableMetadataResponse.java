@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTableMetadataResponse {
     
     public String contentType;
+
     public GetTableMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTableMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTableMetadataOutput getTableMetadataOutput;
+
     public GetTableMetadataResponse withGetTableMetadataOutput(org.openapis.openapi.models.shared.GetTableMetadataOutput getTableMetadataOutput) {
         this.getTableMetadataOutput = getTableMetadataOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetTableMetadataResponse {
      */
     
     public Object internalServerException;
+
     public GetTableMetadataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetTableMetadataResponse {
      */
     
     public Object invalidRequestException;
+
     public GetTableMetadataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class GetTableMetadataResponse {
      */
     
     public Object metadataException;
+
     public GetTableMetadataResponse withMetadataException(Object metadataException) {
         this.metadataException = metadataException;
         return this;
@@ -56,6 +62,7 @@ public class GetTableMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetTableMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetTableMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTableMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTableMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

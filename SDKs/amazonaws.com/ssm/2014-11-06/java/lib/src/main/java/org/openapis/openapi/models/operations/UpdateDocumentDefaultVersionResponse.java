@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDocumentDefaultVersionResponse {
     
     public String contentType;
+
     public UpdateDocumentDefaultVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDocumentDefaultVersionResponse {
      */
     
     public Object internalServerError;
+
     public UpdateDocumentDefaultVersionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDocumentDefaultVersionResponse {
      */
     
     public Object invalidDocument;
+
     public UpdateDocumentDefaultVersionResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDocumentDefaultVersionResponse {
      */
     
     public Object invalidDocumentSchemaVersion;
+
     public UpdateDocumentDefaultVersionResponse withInvalidDocumentSchemaVersion(Object invalidDocumentSchemaVersion) {
         this.invalidDocumentSchemaVersion = invalidDocumentSchemaVersion;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDocumentDefaultVersionResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public UpdateDocumentDefaultVersionResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDocumentDefaultVersionResponse {
     
     
     public Integer statusCode;
+
     public UpdateDocumentDefaultVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDocumentDefaultVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDocumentDefaultVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDocumentDefaultVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDocumentDefaultVersionResult updateDocumentDefaultVersionResult;
+
     public UpdateDocumentDefaultVersionResponse withUpdateDocumentDefaultVersionResult(org.openapis.openapi.models.shared.UpdateDocumentDefaultVersionResult updateDocumentDefaultVersionResult) {
         this.updateDocumentDefaultVersionResult = updateDocumentDefaultVersionResult;
         return this;
     }
     
+    public UpdateDocumentDefaultVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

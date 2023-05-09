@@ -15,6 +15,7 @@ public class HashClientIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public HashClientIdRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class HashClientIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HashClientIdRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -31,9 +33,11 @@ public class HashClientIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webPropertyId")
     public String webPropertyId;
+
     public HashClientIdRequest withWebPropertyId(String webPropertyId) {
         this.webPropertyId = webPropertyId;
         return this;
     }
     
+    public HashClientIdRequest(){}
 }

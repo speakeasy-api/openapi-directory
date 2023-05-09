@@ -67,7 +67,7 @@ public class InternationalScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalScheduledConsentResponse6 = null;
             obWriteInternationalScheduledConsentResponse6 = null;
@@ -75,8 +75,6 @@ public class InternationalScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -156,7 +154,7 @@ public class InternationalScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalScheduledConsentResponse6 = null;
             obWriteInternationalScheduledConsentResponse6 = null;
@@ -164,8 +162,6 @@ public class InternationalScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -245,7 +241,7 @@ public class InternationalScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalScheduledResponse6 = null;
             obWriteInternationalScheduledResponse6 = null;
@@ -253,8 +249,6 @@ public class InternationalScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -334,7 +328,7 @@ public class InternationalScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawResponse() {{
+        org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawResponse res = new org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalScheduledResponse6 = null;
             obWriteInternationalScheduledResponse6 = null;
@@ -342,8 +336,6 @@ public class InternationalScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -418,7 +410,7 @@ public class InternationalScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalScheduledConsentResponse6 = null;
             obWriteInternationalScheduledConsentResponse6 = null;
@@ -426,8 +418,6 @@ public class InternationalScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -502,7 +492,7 @@ public class InternationalScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteFundsConfirmationResponse1 = null;
             obWriteFundsConfirmationResponse1 = null;
@@ -510,8 +500,6 @@ public class InternationalScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,7 +574,7 @@ public class InternationalScheduledPayments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdResponse() {{
+        org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdResponse res = new org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
             obWriteInternationalScheduledResponse6 = null;
             obWriteInternationalScheduledResponse6 = null;
@@ -594,8 +582,6 @@ public class InternationalScheduledPayments {
             obErrorResponse1 = null;
             obErrorResponse1 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

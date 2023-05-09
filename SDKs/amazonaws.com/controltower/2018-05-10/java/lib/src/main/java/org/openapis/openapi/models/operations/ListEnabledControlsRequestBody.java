@@ -15,6 +15,7 @@ public class ListEnabledControlsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListEnabledControlsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListEnabledControlsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnabledControlsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class ListEnabledControlsRequestBody {
      */
     @JsonProperty("targetIdentifier")
     public String targetIdentifier;
+
     public ListEnabledControlsRequestBody withTargetIdentifier(String targetIdentifier) {
         this.targetIdentifier = targetIdentifier;
         return this;
     }
     
+    public ListEnabledControlsRequestBody(@JsonProperty("targetIdentifier") String targetIdentifier) {
+        this.targetIdentifier = targetIdentifier;
+  }
 }

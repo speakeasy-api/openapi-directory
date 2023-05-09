@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAll4Response {
@@ -12,6 +13,7 @@ public class GetAll4Response {
      */
     
     public org.openapis.openapi.models.shared.ActiveSubscriptionDTO[] activeSubscriptionDTOS;
+
     public GetAll4Response withActiveSubscriptionDTOS(org.openapis.openapi.models.shared.ActiveSubscriptionDTO[] activeSubscriptionDTOS) {
         this.activeSubscriptionDTOS = activeSubscriptionDTOS;
         return this;
@@ -19,6 +21,7 @@ public class GetAll4Response {
     
     
     public String contentType;
+
     public GetAll4Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAll4Response {
     
     
     public Integer statusCode;
+
     public GetAll4Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAll4Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAll4Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAll4Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

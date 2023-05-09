@@ -12,9 +12,11 @@ public class TargetReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public TargetReference withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public TargetReference(){}
 }

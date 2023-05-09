@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIdentitiesResponse {
     
     public String contentType;
+
     public DeleteIdentitiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteIdentitiesResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteIdentitiesResponse deleteIdentitiesResponse;
+
     public DeleteIdentitiesResponse withDeleteIdentitiesResponse(org.openapis.openapi.models.shared.DeleteIdentitiesResponse deleteIdentitiesResponse) {
         this.deleteIdentitiesResponse = deleteIdentitiesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteIdentitiesResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteIdentitiesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteIdentitiesResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteIdentitiesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteIdentitiesResponse {
     
     
     public Integer statusCode;
+
     public DeleteIdentitiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteIdentitiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIdentitiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteIdentitiesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteIdentitiesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteIdentitiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

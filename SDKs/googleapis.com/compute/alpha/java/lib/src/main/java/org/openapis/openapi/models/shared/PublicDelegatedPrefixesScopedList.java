@@ -15,6 +15,7 @@ public class PublicDelegatedPrefixesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicDelegatedPrefixes")
     public PublicDelegatedPrefix[] publicDelegatedPrefixes;
+
     public PublicDelegatedPrefixesScopedList withPublicDelegatedPrefixes(PublicDelegatedPrefix[] publicDelegatedPrefixes) {
         this.publicDelegatedPrefixes = publicDelegatedPrefixes;
         return this;
@@ -26,9 +27,11 @@ public class PublicDelegatedPrefixesScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public PublicDelegatedPrefixesScopedListWarning warning;
+
     public PublicDelegatedPrefixesScopedList withWarning(PublicDelegatedPrefixesScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public PublicDelegatedPrefixesScopedList(){}
 }

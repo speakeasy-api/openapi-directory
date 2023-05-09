@@ -18,9 +18,11 @@ public class NetworkConnectionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public NetworkConnection[] entries;
+
     public NetworkConnectionList withEntries(NetworkConnection[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public NetworkConnectionList(){}
 }

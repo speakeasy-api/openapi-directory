@@ -15,9 +15,11 @@ public class CodeSigningSignature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineDocument")
     public String inlineDocument;
+
     public CodeSigningSignature withInlineDocument(String inlineDocument) {
         this.inlineDocument = inlineDocument;
         return this;
     }
     
+    public CodeSigningSignature(){}
 }

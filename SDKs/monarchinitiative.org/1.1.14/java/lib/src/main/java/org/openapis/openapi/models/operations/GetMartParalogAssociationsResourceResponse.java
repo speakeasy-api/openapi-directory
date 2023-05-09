@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMartParalogAssociationsResourceResponse {
     
     public String contentType;
+
     public GetMartParalogAssociationsResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMartParalogAssociationsResourceResponse {
     
     
     public Integer statusCode;
+
     public GetMartParalogAssociationsResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class GetMartParalogAssociationsResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMartParalogAssociationsResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMartParalogAssociationsResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

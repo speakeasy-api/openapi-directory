@@ -12,6 +12,7 @@ public class EntityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public BoundingBox boundingBox;
+
     public EntityObject withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -20,6 +21,7 @@ public class EntityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public String entity;
+
     public EntityObject withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -28,9 +30,11 @@ public class EntityObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public EntityObject withText(String text) {
         this.text = text;
         return this;
     }
     
+    public EntityObject(){}
 }

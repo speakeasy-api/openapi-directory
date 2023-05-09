@@ -12,9 +12,13 @@ public class UgdcnRequestBodyCertificateParameters {
      */
     @JsonProperty("DocumentNumber")
     public String documentNumber;
+
     public UgdcnRequestBodyCertificateParameters withDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
         return this;
     }
     
+    public UgdcnRequestBodyCertificateParameters(@JsonProperty("DocumentNumber") String documentNumber) {
+        this.documentNumber = documentNumber;
+  }
 }

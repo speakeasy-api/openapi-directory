@@ -18,6 +18,7 @@ public class ListPerfSamplesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPerfSamplesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -26,9 +27,11 @@ public class ListPerfSamplesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("perfSamples")
     public PerfSample[] perfSamples;
+
     public ListPerfSamplesResponse withPerfSamples(PerfSample[] perfSamples) {
         this.perfSamples = perfSamples;
         return this;
     }
     
+    public ListPerfSamplesResponse(){}
 }

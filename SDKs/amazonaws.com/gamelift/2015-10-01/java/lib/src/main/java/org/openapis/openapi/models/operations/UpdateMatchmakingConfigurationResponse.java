@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMatchmakingConfigurationResponse {
     
     public String contentType;
+
     public UpdateMatchmakingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMatchmakingConfigurationResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateMatchmakingConfigurationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMatchmakingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateMatchmakingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMatchmakingConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public UpdateMatchmakingConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateMatchmakingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateMatchmakingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMatchmakingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMatchmakingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMatchmakingConfigurationResponse {
      */
     
     public Object unsupportedRegionException;
+
     public UpdateMatchmakingConfigurationResponse withUnsupportedRegionException(Object unsupportedRegionException) {
         this.unsupportedRegionException = unsupportedRegionException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateMatchmakingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMatchmakingConfigurationOutput updateMatchmakingConfigurationOutput;
+
     public UpdateMatchmakingConfigurationResponse withUpdateMatchmakingConfigurationOutput(org.openapis.openapi.models.shared.UpdateMatchmakingConfigurationOutput updateMatchmakingConfigurationOutput) {
         this.updateMatchmakingConfigurationOutput = updateMatchmakingConfigurationOutput;
         return this;
     }
     
+    public UpdateMatchmakingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class ManagementSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferLockState")
     public ManagementSettingsTransferLockStateEnum transferLockState;
+
     public ManagementSettingsInput withTransferLockState(ManagementSettingsTransferLockStateEnum transferLockState) {
         this.transferLockState = transferLockState;
         return this;
     }
     
+    public ManagementSettingsInput(){}
 }

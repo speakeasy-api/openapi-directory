@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMacieSessionResponse {
@@ -12,6 +13,7 @@ public class GetMacieSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetMacieSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetMacieSessionResponse {
      */
     
     public Object conflictException;
+
     public GetMacieSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetMacieSessionResponse {
     
     
     public String contentType;
+
     public GetMacieSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetMacieSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMacieSessionResponse getMacieSessionResponse;
+
     public GetMacieSessionResponse withGetMacieSessionResponse(org.openapis.openapi.models.shared.GetMacieSessionResponse getMacieSessionResponse) {
         this.getMacieSessionResponse = getMacieSessionResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetMacieSessionResponse {
      */
     
     public Object internalServerException;
+
     public GetMacieSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetMacieSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetMacieSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetMacieSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetMacieSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class GetMacieSessionResponse {
     
     
     public Integer statusCode;
+
     public GetMacieSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetMacieSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMacieSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetMacieSessionResponse {
      */
     
     public Object throttlingException;
+
     public GetMacieSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetMacieSessionResponse {
      */
     
     public Object validationException;
+
     public GetMacieSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetMacieSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

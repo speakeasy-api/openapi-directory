@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGcmChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateGcmChannelResponse {
      */
     
     public Object badRequestException;
+
     public UpdateGcmChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGcmChannelResponse {
     
     
     public String contentType;
+
     public UpdateGcmChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGcmChannelResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateGcmChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGcmChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateGcmChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateGcmChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateGcmChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateGcmChannelResponse {
      */
     
     public Object notFoundException;
+
     public UpdateGcmChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateGcmChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateGcmChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateGcmChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateGcmChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateGcmChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGcmChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateGcmChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateGcmChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateGcmChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGcmChannelResponse updateGcmChannelResponse;
+
     public UpdateGcmChannelResponse withUpdateGcmChannelResponse(org.openapis.openapi.models.shared.UpdateGcmChannelResponse updateGcmChannelResponse) {
         this.updateGcmChannelResponse = updateGcmChannelResponse;
         return this;
     }
     
+    public UpdateGcmChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

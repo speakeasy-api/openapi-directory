@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOwnershipUninstallOwnershipIdResponse {
     
     public byte[] body;
+
     public PostOwnershipUninstallOwnershipIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostOwnershipUninstallOwnershipIdResponse {
     
     
     public String contentType;
+
     public PostOwnershipUninstallOwnershipIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostOwnershipUninstallOwnershipIdResponse {
     
     
     public Integer statusCode;
+
     public PostOwnershipUninstallOwnershipIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class PostOwnershipUninstallOwnershipIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOwnershipUninstallOwnershipIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostOwnershipUninstallOwnershipIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeGameServerInstancesInput {
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public DescribeGameServerInstancesInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeGameServerInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public DescribeGameServerInstancesInput withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -27,6 +29,7 @@ public class DescribeGameServerInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeGameServerInstancesInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,9 +38,13 @@ public class DescribeGameServerInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeGameServerInstancesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeGameServerInstancesInput(@JsonProperty("GameServerGroupName") String gameServerGroupName) {
+        this.gameServerGroupName = gameServerGroupName;
+  }
 }

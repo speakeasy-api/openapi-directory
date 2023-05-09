@@ -15,9 +15,11 @@ public class PostTransactionsIdAttachmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment_id")
     public Long attachmentId;
+
     public PostTransactionsIdAttachmentsRequestBody withAttachmentId(Long attachmentId) {
         this.attachmentId = attachmentId;
         return this;
     }
     
+    public PostTransactionsIdAttachmentsRequestBody(){}
 }

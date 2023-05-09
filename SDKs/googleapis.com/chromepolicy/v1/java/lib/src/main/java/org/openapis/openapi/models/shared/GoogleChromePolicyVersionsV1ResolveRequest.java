@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1ResolveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleChromePolicyVersionsV1ResolveRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1ResolveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleChromePolicyVersionsV1ResolveRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromePolicyVersionsV1ResolveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policySchemaFilter")
     public String policySchemaFilter;
+
     public GoogleChromePolicyVersionsV1ResolveRequest withPolicySchemaFilter(String policySchemaFilter) {
         this.policySchemaFilter = policySchemaFilter;
         return this;
@@ -51,9 +54,11 @@ public class GoogleChromePolicyVersionsV1ResolveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyTargetKey")
     public GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey;
+
     public GoogleChromePolicyVersionsV1ResolveRequest withPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey) {
         this.policyTargetKey = policyTargetKey;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1ResolveRequest(){}
 }

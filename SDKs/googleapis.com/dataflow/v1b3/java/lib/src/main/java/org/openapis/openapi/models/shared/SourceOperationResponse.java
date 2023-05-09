@@ -18,6 +18,7 @@ public class SourceOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("getMetadata")
     public SourceGetMetadataResponse getMetadata;
+
     public SourceOperationResponse withGetMetadata(SourceGetMetadataResponse getMetadata) {
         this.getMetadata = getMetadata;
         return this;
@@ -29,9 +30,11 @@ public class SourceOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("split")
     public SourceSplitResponse split;
+
     public SourceOperationResponse withSplit(SourceSplitResponse split) {
         this.split = split;
         return this;
     }
     
+    public SourceOperationResponse(){}
 }

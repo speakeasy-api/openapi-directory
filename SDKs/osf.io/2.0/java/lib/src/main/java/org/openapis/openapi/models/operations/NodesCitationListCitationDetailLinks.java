@@ -15,9 +15,11 @@ public class NodesCitationListCitationDetailLinks {
      */
     
     public String self;
+
     public NodesCitationListCitationDetailLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesCitationListCitationDetailLinks(){}
 }

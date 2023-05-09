@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveCustomRoutingEndpointsRequest {
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public RemoveCustomRoutingEndpointsRequest withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
@@ -16,9 +17,14 @@ public class RemoveCustomRoutingEndpointsRequest {
     
     @JsonProperty("EndpointIds")
     public String[] endpointIds;
+
     public RemoveCustomRoutingEndpointsRequest withEndpointIds(String[] endpointIds) {
         this.endpointIds = endpointIds;
         return this;
     }
     
+    public RemoveCustomRoutingEndpointsRequest(@JsonProperty("EndpointGroupArn") String endpointGroupArn, @JsonProperty("EndpointIds") String[] endpointIds) {
+        this.endpointGroupArn = endpointGroupArn;
+        this.endpointIds = endpointIds;
+  }
 }

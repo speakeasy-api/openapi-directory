@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The OpenID Connect details for an &lt;code&gt;oidc&lt;/code&gt;-type, user-identity based trust provider.
+ * DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The options for an OpenID Connect-compatible user-identity trust provider.
  */
 public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions {
     
     public String authorizationEndpoint;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String clientId;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String clientSecret;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -33,6 +36,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String issuer;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +44,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String scope;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withScope(String scope) {
         this.scope = scope;
         return this;
@@ -47,6 +52,7 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String tokenEndpoint;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -54,9 +60,11 @@ public class DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderO
     
     
     public String userInfoEndpoint;
+
     public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions withUserInfoEndpoint(String userInfoEndpoint) {
         this.userInfoEndpoint = userInfoEndpoint;
         return this;
     }
     
+    public DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions(){}
 }

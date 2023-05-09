@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkspaceResponse {
@@ -12,6 +13,7 @@ public class DescribeWorkspaceResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeWorkspaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkspaceResponse {
     
     
     public String contentType;
+
     public DescribeWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkspaceResponse describeWorkspaceResponse;
+
     public DescribeWorkspaceResponse withDescribeWorkspaceResponse(org.openapis.openapi.models.shared.DescribeWorkspaceResponse describeWorkspaceResponse) {
         this.describeWorkspaceResponse = describeWorkspaceResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorkspaceResponse {
      */
     
     public Object internalServerException;
+
     public DescribeWorkspaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeWorkspaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWorkspaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeWorkspaceResponse {
      */
     
     public Object throttlingException;
+
     public DescribeWorkspaceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeWorkspaceResponse {
      */
     
     public Object validationException;
+
     public DescribeWorkspaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

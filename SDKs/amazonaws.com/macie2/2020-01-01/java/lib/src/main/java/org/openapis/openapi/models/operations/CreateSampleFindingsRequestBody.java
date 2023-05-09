@@ -15,9 +15,11 @@ public class CreateSampleFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingTypes")
     public org.openapis.openapi.models.shared.FindingTypeEnum[] findingTypes;
+
     public CreateSampleFindingsRequestBody withFindingTypes(org.openapis.openapi.models.shared.FindingTypeEnum[] findingTypes) {
         this.findingTypes = findingTypes;
         return this;
     }
     
+    public CreateSampleFindingsRequestBody(){}
 }

@@ -20,6 +20,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public DescribeExecutionOutput withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -30,6 +31,7 @@ public class DescribeExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public DescribeExecutionOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,6 +40,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDeviceId")
     public String managedDeviceId;
+
     public DescribeExecutionOutput withManagedDeviceId(String managedDeviceId) {
         this.managedDeviceId = managedDeviceId;
         return this;
@@ -48,6 +51,7 @@ public class DescribeExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public DescribeExecutionOutput withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -56,6 +60,7 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ExecutionStateEnum state;
+
     public DescribeExecutionOutput withState(ExecutionStateEnum state) {
         this.state = state;
         return this;
@@ -64,9 +69,11 @@ public class DescribeExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public DescribeExecutionOutput withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public DescribeExecutionOutput(){}
 }

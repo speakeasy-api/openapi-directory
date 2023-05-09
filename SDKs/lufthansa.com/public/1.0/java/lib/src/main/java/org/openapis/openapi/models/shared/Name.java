@@ -15,6 +15,7 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$")
     public String dollar;
+
     public Name withDollar(String dollar) {
         this.dollar = dollar;
         return this;
@@ -23,9 +24,11 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("@LanguageCode")
     public String atLanguageCode;
+
     public Name withAtLanguageCode(String atLanguageCode) {
         this.atLanguageCode = atLanguageCode;
         return this;
     }
     
+    public Name(){}
 }

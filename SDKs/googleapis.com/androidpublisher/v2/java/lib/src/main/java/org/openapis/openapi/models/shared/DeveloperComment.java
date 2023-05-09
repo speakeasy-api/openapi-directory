@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DeveloperComment {
     
     public Timestamp lastModified;
+
     public DeveloperComment withLastModified(Timestamp lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -19,9 +20,11 @@ public class DeveloperComment {
      */
     
     public String text;
+
     public DeveloperComment withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DeveloperComment(){}
 }

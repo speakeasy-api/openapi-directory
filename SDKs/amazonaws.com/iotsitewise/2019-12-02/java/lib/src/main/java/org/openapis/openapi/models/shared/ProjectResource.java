@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProjectResource {
     @JsonProperty("id")
     public String id;
+
     public ProjectResource withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ProjectResource(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

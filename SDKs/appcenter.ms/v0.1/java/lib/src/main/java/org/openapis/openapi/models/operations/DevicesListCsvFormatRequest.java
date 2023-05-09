@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesListCsvFormatRequest {
@@ -12,6 +13,7 @@ public class DevicesListCsvFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public DevicesListCsvFormatRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class DevicesListCsvFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public DevicesListCsvFormatRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -32,6 +35,7 @@ public class DevicesListCsvFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public DevicesListCsvFormatRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,6 +46,7 @@ public class DevicesListCsvFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=udids")
     public String[] udids;
+
     public DevicesListCsvFormatRequest withUdids(String[] udids) {
         this.udids = udids;
         return this;
@@ -52,9 +57,15 @@ public class DevicesListCsvFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unprovisioned_only")
     public Boolean unprovisionedOnly;
+
     public DevicesListCsvFormatRequest withUnprovisionedOnly(Boolean unprovisionedOnly) {
         this.unprovisionedOnly = unprovisionedOnly;
         return this;
     }
     
+    public DevicesListCsvFormatRequest(@JsonProperty("app_name") String appName, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.distributionGroupName = distributionGroupName;
+        this.ownerName = ownerName;
+  }
 }

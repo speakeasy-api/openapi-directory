@@ -15,6 +15,7 @@ public class SendMessagesRequestBodyMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Addresses")
     public java.util.Map<String, org.openapis.openapi.models.shared.AddressConfiguration> addresses;
+
     public SendMessagesRequestBodyMessageRequest withAddresses(java.util.Map<String, org.openapis.openapi.models.shared.AddressConfiguration> addresses) {
         this.addresses = addresses;
         return this;
@@ -23,6 +24,7 @@ public class SendMessagesRequestBodyMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Context")
     public java.util.Map<String, String> context;
+
     public SendMessagesRequestBodyMessageRequest withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -31,6 +33,7 @@ public class SendMessagesRequestBodyMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoints")
     public java.util.Map<String, org.openapis.openapi.models.shared.EndpointSendConfiguration> endpoints;
+
     public SendMessagesRequestBodyMessageRequest withEndpoints(java.util.Map<String, org.openapis.openapi.models.shared.EndpointSendConfiguration> endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -39,6 +42,7 @@ public class SendMessagesRequestBodyMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfiguration")
     public org.openapis.openapi.models.shared.DirectMessageConfiguration messageConfiguration;
+
     public SendMessagesRequestBodyMessageRequest withMessageConfiguration(org.openapis.openapi.models.shared.DirectMessageConfiguration messageConfiguration) {
         this.messageConfiguration = messageConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class SendMessagesRequestBodyMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateConfiguration")
     public org.openapis.openapi.models.shared.TemplateConfiguration templateConfiguration;
+
     public SendMessagesRequestBodyMessageRequest withTemplateConfiguration(org.openapis.openapi.models.shared.TemplateConfiguration templateConfiguration) {
         this.templateConfiguration = templateConfiguration;
         return this;
@@ -55,9 +60,11 @@ public class SendMessagesRequestBodyMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TraceId")
     public String traceId;
+
     public SendMessagesRequestBodyMessageRequest withTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
     
+    public SendMessagesRequestBodyMessageRequest(){}
 }

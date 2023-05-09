@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2EditFounderOptionsRequest {
@@ -12,9 +13,13 @@ public class GroupV2EditFounderOptionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2EditFounderOptionsRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public GroupV2EditFounderOptionsRequest(@JsonProperty("groupId") Long groupId) {
+        this.groupId = groupId;
+  }
 }

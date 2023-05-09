@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IapProjectsBrandsIdentityAwareProxyClientsCreateResponse {
     
     public String contentType;
+
     public IapProjectsBrandsIdentityAwareProxyClientsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IapProjectsBrandsIdentityAwareProxyClientsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.IdentityAwareProxyClient identityAwareProxyClient;
+
     public IapProjectsBrandsIdentityAwareProxyClientsCreateResponse withIdentityAwareProxyClient(org.openapis.openapi.models.shared.IdentityAwareProxyClient identityAwareProxyClient) {
         this.identityAwareProxyClient = identityAwareProxyClient;
         return this;
@@ -26,6 +29,7 @@ public class IapProjectsBrandsIdentityAwareProxyClientsCreateResponse {
     
     
     public Integer statusCode;
+
     public IapProjectsBrandsIdentityAwareProxyClientsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IapProjectsBrandsIdentityAwareProxyClientsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IapProjectsBrandsIdentityAwareProxyClientsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IapProjectsBrandsIdentityAwareProxyClientsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

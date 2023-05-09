@@ -15,6 +15,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalRuleTemplateNames")
     public String[] approvalRuleTemplateNames;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryOutput withApprovalRuleTemplateNames(String[] approvalRuleTemplateNames) {
         this.approvalRuleTemplateNames = approvalRuleTemplateNames;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociatedApprovalRuleTemplatesForRepositoryOutput(){}
 }

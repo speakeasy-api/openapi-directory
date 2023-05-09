@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPackageServiceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cmd")
     public String cmd;
+
     public PostPackageServiceRequest withCmd(String cmd) {
         this.cmd = cmd;
         return this;
     }
     
+    public PostPackageServiceRequest(@JsonProperty("cmd") String cmd) {
+        this.cmd = cmd;
+  }
 }

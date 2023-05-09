@@ -15,6 +15,7 @@ public class CustomCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CustomCreateResponse data;
+
     public CustomCreate withData(CustomCreateResponse data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class CustomCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public CustomCreate withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class CustomCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public CustomCreate withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public CustomCreate(){}
 }

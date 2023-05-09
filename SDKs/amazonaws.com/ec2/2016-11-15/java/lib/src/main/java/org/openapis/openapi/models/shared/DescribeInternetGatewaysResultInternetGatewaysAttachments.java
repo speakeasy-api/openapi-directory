@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInternetGatewaysResultInternetGatewaysAttachments {
     
     public DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum state;
+
     public DescribeInternetGatewaysResultInternetGatewaysAttachments withState(DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInternetGatewaysResultInternetGatewaysAttachments {
     
     
     public String vpcId;
+
     public DescribeInternetGatewaysResultInternetGatewaysAttachments withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeInternetGatewaysResultInternetGatewaysAttachments(){}
 }

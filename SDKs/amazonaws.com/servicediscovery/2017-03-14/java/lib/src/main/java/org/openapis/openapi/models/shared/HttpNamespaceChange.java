@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HttpNamespaceChange {
     @JsonProperty("Description")
     public String description;
+
     public HttpNamespaceChange withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public HttpNamespaceChange(@JsonProperty("Description") String description) {
+        this.description = description;
+  }
 }

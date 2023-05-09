@@ -52,11 +52,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolSflowGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetConfigResponse(contentType, httpRes.statusCode()) {{
             configSFLOW = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolSflowGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolSflowGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSflowGetTraceResponse(contentType, httpRes.statusCode()) {{
             configSFLOW = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowHaltResponse res = new org.openapis.openapi.models.operations.ProtocolSflowHaltResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowHaltResponse res = new org.openapis.openapi.models.operations.ProtocolSflowHaltResponse(contentType, httpRes.statusCode()) {{
             protocolSflowHalt200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowReloadResponse res = new org.openapis.openapi.models.operations.ProtocolSflowReloadResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowReloadResponse res = new org.openapis.openapi.models.operations.ProtocolSflowReloadResponse(contentType, httpRes.statusCode()) {{
             protocolSflowReload200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +329,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowResumeResponse res = new org.openapis.openapi.models.operations.ProtocolSflowResumeResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowResumeResponse res = new org.openapis.openapi.models.operations.ProtocolSflowResumeResponse(contentType, httpRes.statusCode()) {{
             protocolSflowResume200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +368,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSflowSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSflowSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolSflowSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -425,11 +407,9 @@ public class Sflow {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSflowSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSflowSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSflowSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSflowSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolSflowSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

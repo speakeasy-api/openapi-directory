@@ -18,6 +18,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public QueryMetadata metadata;
+
     public QueryInput withMetadata(QueryMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public Parameters params;
+
     public QueryInput withParams(Parameters params) {
         this.params = params;
         return this;
@@ -40,9 +42,11 @@ public class QueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public QuerySchedule schedule;
+
     public QueryInput withSchedule(QuerySchedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public QueryInput(){}
 }

@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetServiceLinkedRoleDeletionStatusRequest {
     
     public String deletionTaskId;
+
     public GetServiceLinkedRoleDeletionStatusRequest withDeletionTaskId(String deletionTaskId) {
         this.deletionTaskId = deletionTaskId;
         return this;
     }
     
+    public GetServiceLinkedRoleDeletionStatusRequest(@JsonProperty("DeletionTaskId") String deletionTaskId) {
+        this.deletionTaskId = deletionTaskId;
+  }
 }

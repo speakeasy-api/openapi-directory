@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public GoogleCloudDialogflowCxV3Webhook withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3Webhook withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericWebService")
     public GoogleCloudDialogflowCxV3WebhookGenericWebService genericWebService;
+
     public GoogleCloudDialogflowCxV3Webhook withGenericWebService(GoogleCloudDialogflowCxV3WebhookGenericWebService genericWebService) {
         this.genericWebService = genericWebService;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3Webhook withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDirectory")
     public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfig serviceDirectory;
+
     public GoogleCloudDialogflowCxV3Webhook withServiceDirectory(GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfig serviceDirectory) {
         this.serviceDirectory = serviceDirectory;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public GoogleCloudDialogflowCxV3Webhook withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3Webhook(){}
 }

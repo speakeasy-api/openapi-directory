@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InferenceDeviceInfo {
     
     public Long count;
+
     public InferenceDeviceInfo withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class InferenceDeviceInfo {
     
     
     public String manufacturer;
+
     public InferenceDeviceInfo withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -26,9 +28,11 @@ public class InferenceDeviceInfo {
     
     
     public String name;
+
     public InferenceDeviceInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InferenceDeviceInfo(){}
 }

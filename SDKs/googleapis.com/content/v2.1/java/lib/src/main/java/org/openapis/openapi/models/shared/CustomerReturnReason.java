@@ -15,6 +15,7 @@ public class CustomerReturnReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomerReturnReason withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class CustomerReturnReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public String reasonCode;
+
     public CustomerReturnReason withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
     }
     
+    public CustomerReturnReason(){}
 }

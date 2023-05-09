@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLocalTaxByTaxCodeResponse {
     
     public String contentType;
+
     public GetLocalTaxByTaxCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetLocalTaxByTaxCodeResponse {
     
     
     public Integer statusCode;
+
     public GetLocalTaxByTaxCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetLocalTaxByTaxCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLocalTaxByTaxCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetLocalTaxByTaxCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetLocalTaxByTaxCodeResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +48,14 @@ public class GetLocalTaxByTaxCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.LocalTax[] localTaxes;
+
     public GetLocalTaxByTaxCodeResponse withLocalTaxes(org.openapis.openapi.models.shared.LocalTax[] localTaxes) {
         this.localTaxes = localTaxes;
         return this;
     }
     
+    public GetLocalTaxByTaxCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

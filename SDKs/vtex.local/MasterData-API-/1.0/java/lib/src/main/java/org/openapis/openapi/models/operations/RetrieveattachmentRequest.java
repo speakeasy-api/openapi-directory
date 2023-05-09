@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveattachmentRequest {
@@ -12,6 +13,7 @@ public class RetrieveattachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public RetrieveattachmentRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -22,6 +24,7 @@ public class RetrieveattachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field")
     public String field;
+
     public RetrieveattachmentRequest withField(String field) {
         this.field = field;
         return this;
@@ -29,6 +32,7 @@ public class RetrieveattachmentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file-name")
     public String fileName;
+
     public RetrieveattachmentRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -39,9 +43,16 @@ public class RetrieveattachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public RetrieveattachmentRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public RetrieveattachmentRequest(@JsonProperty("acronym") String acronym, @JsonProperty("field") String field, @JsonProperty("file-name") String fileName, @JsonProperty("id") String id) {
+        this.acronym = acronym;
+        this.field = field;
+        this.fileName = fileName;
+        this.id = id;
+  }
 }

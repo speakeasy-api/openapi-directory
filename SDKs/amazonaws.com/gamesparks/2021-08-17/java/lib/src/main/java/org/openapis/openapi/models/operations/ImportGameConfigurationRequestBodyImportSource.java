@@ -15,9 +15,11 @@ public class ImportGameConfigurationRequestBodyImportSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("File")
     public String file;
+
     public ImportGameConfigurationRequestBodyImportSource withFile(String file) {
         this.file = file;
         return this;
     }
     
+    public ImportGameConfigurationRequestBodyImportSource(){}
 }

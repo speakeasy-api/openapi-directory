@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CampaignEventFilter {
     @JsonProperty("Dimensions")
     public EventDimensions dimensions;
+
     public CampaignEventFilter withDimensions(EventDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -19,9 +20,14 @@ public class CampaignEventFilter {
     
     @JsonProperty("FilterType")
     public FilterTypeEnum filterType;
+
     public CampaignEventFilter withFilterType(FilterTypeEnum filterType) {
         this.filterType = filterType;
         return this;
     }
     
+    public CampaignEventFilter(@JsonProperty("Dimensions") EventDimensions dimensions, @JsonProperty("FilterType") FilterTypeEnum filterType) {
+        this.dimensions = dimensions;
+        this.filterType = filterType;
+  }
 }

@@ -15,6 +15,7 @@ public class StudioComponentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDirectoryConfiguration")
     public ActiveDirectoryConfiguration activeDirectoryConfiguration;
+
     public StudioComponentConfiguration withActiveDirectoryConfiguration(ActiveDirectoryConfiguration activeDirectoryConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class StudioComponentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeFarmConfiguration")
     public ComputeFarmConfiguration computeFarmConfiguration;
+
     public StudioComponentConfiguration withComputeFarmConfiguration(ComputeFarmConfiguration computeFarmConfiguration) {
         this.computeFarmConfiguration = computeFarmConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class StudioComponentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseServiceConfiguration")
     public LicenseServiceConfiguration licenseServiceConfiguration;
+
     public StudioComponentConfiguration withLicenseServiceConfiguration(LicenseServiceConfiguration licenseServiceConfiguration) {
         this.licenseServiceConfiguration = licenseServiceConfiguration;
         return this;
@@ -39,9 +42,11 @@ public class StudioComponentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedFileSystemConfiguration")
     public SharedFileSystemConfiguration sharedFileSystemConfiguration;
+
     public StudioComponentConfiguration withSharedFileSystemConfiguration(SharedFileSystemConfiguration sharedFileSystemConfiguration) {
         this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
         return this;
     }
     
+    public StudioComponentConfiguration(){}
 }

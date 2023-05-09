@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllocateHostedConnectionRequest {
     @JsonProperty("bandwidth")
     public String bandwidth;
+
     public AllocateHostedConnectionRequest withBandwidth(String bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -18,6 +19,7 @@ public class AllocateHostedConnectionRequest {
     
     @JsonProperty("connectionId")
     public String connectionId;
+
     public AllocateHostedConnectionRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -25,6 +27,7 @@ public class AllocateHostedConnectionRequest {
     
     @JsonProperty("connectionName")
     public String connectionName;
+
     public AllocateHostedConnectionRequest withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -32,6 +35,7 @@ public class AllocateHostedConnectionRequest {
     
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public AllocateHostedConnectionRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -40,6 +44,7 @@ public class AllocateHostedConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public AllocateHostedConnectionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -47,9 +52,17 @@ public class AllocateHostedConnectionRequest {
     
     @JsonProperty("vlan")
     public Long vlan;
+
     public AllocateHostedConnectionRequest withVlan(Long vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public AllocateHostedConnectionRequest(@JsonProperty("bandwidth") String bandwidth, @JsonProperty("connectionId") String connectionId, @JsonProperty("connectionName") String connectionName, @JsonProperty("ownerAccount") String ownerAccount, @JsonProperty("vlan") Long vlan) {
+        this.bandwidth = bandwidth;
+        this.connectionId = connectionId;
+        this.connectionName = connectionName;
+        this.ownerAccount = ownerAccount;
+        this.vlan = vlan;
+  }
 }

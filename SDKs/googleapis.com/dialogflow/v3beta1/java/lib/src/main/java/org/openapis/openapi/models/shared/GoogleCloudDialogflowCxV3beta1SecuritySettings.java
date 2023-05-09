@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioExportSettings")
     public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings audioExportSettings;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withAudioExportSettings(GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings audioExportSettings) {
         this.audioExportSettings = audioExportSettings;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deidentifyTemplate")
     public String deidentifyTemplate;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withDeidentifyTemplate(String deidentifyTemplate) {
         this.deidentifyTemplate = deidentifyTemplate;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insightsExportSettings")
     public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettings insightsExportSettings;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withInsightsExportSettings(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettings insightsExportSettings) {
         this.insightsExportSettings = insightsExportSettings;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inspectTemplate")
     public String inspectTemplate;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withInspectTemplate(String inspectTemplate) {
         this.inspectTemplate = inspectTemplate;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purgeDataTypes")
     public GoogleCloudDialogflowCxV3beta1SecuritySettingsPurgeDataTypesEnum[] purgeDataTypes;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withPurgeDataTypes(GoogleCloudDialogflowCxV3beta1SecuritySettingsPurgeDataTypesEnum[] purgeDataTypes) {
         this.purgeDataTypes = purgeDataTypes;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redactionScope")
     public GoogleCloudDialogflowCxV3beta1SecuritySettingsRedactionScopeEnum redactionScope;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withRedactionScope(GoogleCloudDialogflowCxV3beta1SecuritySettingsRedactionScopeEnum redactionScope) {
         this.redactionScope = redactionScope;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redactionStrategy")
     public GoogleCloudDialogflowCxV3beta1SecuritySettingsRedactionStrategyEnum redactionStrategy;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withRedactionStrategy(GoogleCloudDialogflowCxV3beta1SecuritySettingsRedactionStrategyEnum redactionStrategy) {
         this.redactionStrategy = redactionStrategy;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionWindowDays")
     public Integer retentionWindowDays;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettings withRetentionWindowDays(Integer retentionWindowDays) {
         this.retentionWindowDays = retentionWindowDays;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1SecuritySettings(){}
 }

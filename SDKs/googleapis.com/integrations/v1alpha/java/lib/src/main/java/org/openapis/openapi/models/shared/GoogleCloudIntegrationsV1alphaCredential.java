@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authToken")
     public GoogleCloudIntegrationsV1alphaAuthToken authToken;
+
     public GoogleCloudIntegrationsV1alphaCredential withAuthToken(GoogleCloudIntegrationsV1alphaAuthToken authToken) {
         this.authToken = authToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialType")
     public GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum credentialType;
+
     public GoogleCloudIntegrationsV1alphaCredential withCredentialType(GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum credentialType) {
         this.credentialType = credentialType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwt")
     public GoogleCloudIntegrationsV1alphaJwt jwt;
+
     public GoogleCloudIntegrationsV1alphaCredential withJwt(GoogleCloudIntegrationsV1alphaJwt jwt) {
         this.jwt = jwt;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2AuthorizationCode")
     public GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode oauth2AuthorizationCode;
+
     public GoogleCloudIntegrationsV1alphaCredential withOauth2AuthorizationCode(GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode oauth2AuthorizationCode) {
         this.oauth2AuthorizationCode = oauth2AuthorizationCode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ClientCredentials")
     public GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials oauth2ClientCredentials;
+
     public GoogleCloudIntegrationsV1alphaCredential withOauth2ClientCredentials(GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials oauth2ClientCredentials) {
         this.oauth2ClientCredentials = oauth2ClientCredentials;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2ResourceOwnerCredentials")
     public GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials oauth2ResourceOwnerCredentials;
+
     public GoogleCloudIntegrationsV1alphaCredential withOauth2ResourceOwnerCredentials(GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials oauth2ResourceOwnerCredentials) {
         this.oauth2ResourceOwnerCredentials = oauth2ResourceOwnerCredentials;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oidcToken")
     public GoogleCloudIntegrationsV1alphaOidcToken oidcToken;
+
     public GoogleCloudIntegrationsV1alphaCredential withOidcToken(GoogleCloudIntegrationsV1alphaOidcToken oidcToken) {
         this.oidcToken = oidcToken;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountCredentials")
     public GoogleCloudIntegrationsV1alphaServiceAccountCredentials serviceAccountCredentials;
+
     public GoogleCloudIntegrationsV1alphaCredential withServiceAccountCredentials(GoogleCloudIntegrationsV1alphaServiceAccountCredentials serviceAccountCredentials) {
         this.serviceAccountCredentials = serviceAccountCredentials;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudIntegrationsV1alphaCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usernameAndPassword")
     public GoogleCloudIntegrationsV1alphaUsernameAndPassword usernameAndPassword;
+
     public GoogleCloudIntegrationsV1alphaCredential withUsernameAndPassword(GoogleCloudIntegrationsV1alphaUsernameAndPassword usernameAndPassword) {
         this.usernameAndPassword = usernameAndPassword;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCredential(){}
 }

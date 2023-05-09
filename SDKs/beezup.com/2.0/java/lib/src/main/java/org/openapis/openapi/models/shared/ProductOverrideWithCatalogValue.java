@@ -15,6 +15,7 @@ public class ProductOverrideWithCatalogValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogValue")
     public String catalogValue;
+
     public ProductOverrideWithCatalogValue withCatalogValue(String catalogValue) {
         this.catalogValue = catalogValue;
         return this;
@@ -25,9 +26,13 @@ public class ProductOverrideWithCatalogValue {
      */
     @JsonProperty("override")
     public String override;
+
     public ProductOverrideWithCatalogValue withOverride(String override) {
         this.override = override;
         return this;
     }
     
+    public ProductOverrideWithCatalogValue(@JsonProperty("override") String override) {
+        this.override = override;
+  }
 }

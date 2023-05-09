@@ -15,9 +15,11 @@ public class SourceDataColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnIndex")
     public Long columnIndex;
+
     public SourceDataColumnProperties withColumnIndex(Long columnIndex) {
         this.columnIndex = columnIndex;
         return this;
     }
     
+    public SourceDataColumnProperties(){}
 }

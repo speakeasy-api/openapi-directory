@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionProxyConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerName")
     public String containerName;
+
     public AwsEcsTaskDefinitionProxyConfigurationDetails withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionProxyConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProxyConfigurationProperties")
     public AwsEcsTaskDefinitionProxyConfigurationProxyConfigurationPropertiesDetails[] proxyConfigurationProperties;
+
     public AwsEcsTaskDefinitionProxyConfigurationDetails withProxyConfigurationProperties(AwsEcsTaskDefinitionProxyConfigurationProxyConfigurationPropertiesDetails[] proxyConfigurationProperties) {
         this.proxyConfigurationProperties = proxyConfigurationProperties;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsTaskDefinitionProxyConfigurationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEcsTaskDefinitionProxyConfigurationDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsEcsTaskDefinitionProxyConfigurationDetails(){}
 }

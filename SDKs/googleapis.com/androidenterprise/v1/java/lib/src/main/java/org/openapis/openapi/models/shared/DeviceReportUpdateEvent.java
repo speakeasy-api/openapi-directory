@@ -18,6 +18,7 @@ public class DeviceReportUpdateEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public DeviceReportUpdateEvent withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,6 +30,7 @@ public class DeviceReportUpdateEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report")
     public DeviceReport report;
+
     public DeviceReportUpdateEvent withReport(DeviceReport report) {
         this.report = report;
         return this;
@@ -40,9 +42,11 @@ public class DeviceReportUpdateEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public DeviceReportUpdateEvent withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public DeviceReportUpdateEvent(){}
 }

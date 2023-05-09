@@ -15,6 +15,7 @@ public class CreateDeploymentRequestBodyIotJobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortConfig")
     public org.openapis.openapi.models.shared.IoTJobAbortConfig abortConfig;
+
     public CreateDeploymentRequestBodyIotJobConfiguration withAbortConfig(org.openapis.openapi.models.shared.IoTJobAbortConfig abortConfig) {
         this.abortConfig = abortConfig;
         return this;
@@ -23,6 +24,7 @@ public class CreateDeploymentRequestBodyIotJobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRolloutConfig")
     public org.openapis.openapi.models.shared.IoTJobExecutionsRolloutConfig jobExecutionsRolloutConfig;
+
     public CreateDeploymentRequestBodyIotJobConfiguration withJobExecutionsRolloutConfig(org.openapis.openapi.models.shared.IoTJobExecutionsRolloutConfig jobExecutionsRolloutConfig) {
         this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
         return this;
@@ -31,9 +33,11 @@ public class CreateDeploymentRequestBodyIotJobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConfig")
     public org.openapis.openapi.models.shared.IoTJobTimeoutConfig timeoutConfig;
+
     public CreateDeploymentRequestBodyIotJobConfiguration withTimeoutConfig(org.openapis.openapi.models.shared.IoTJobTimeoutConfig timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
     
+    public CreateDeploymentRequestBodyIotJobConfiguration(){}
 }

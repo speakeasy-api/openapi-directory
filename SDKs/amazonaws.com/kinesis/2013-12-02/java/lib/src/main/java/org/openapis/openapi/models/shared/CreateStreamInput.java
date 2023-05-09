@@ -15,6 +15,7 @@ public class CreateStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardCount")
     public Long shardCount;
+
     public CreateStreamInput withShardCount(Long shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -23,6 +24,7 @@ public class CreateStreamInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamModeDetails")
     public StreamModeDetails streamModeDetails;
+
     public CreateStreamInput withStreamModeDetails(StreamModeDetails streamModeDetails) {
         this.streamModeDetails = streamModeDetails;
         return this;
@@ -30,9 +32,13 @@ public class CreateStreamInput {
     
     @JsonProperty("StreamName")
     public String streamName;
+
     public CreateStreamInput withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public CreateStreamInput(@JsonProperty("StreamName") String streamName) {
+        this.streamName = streamName;
+  }
 }

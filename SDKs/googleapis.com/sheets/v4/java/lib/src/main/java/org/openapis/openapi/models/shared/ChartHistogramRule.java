@@ -18,6 +18,7 @@ public class ChartHistogramRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalSize")
     public Double intervalSize;
+
     public ChartHistogramRule withIntervalSize(Double intervalSize) {
         this.intervalSize = intervalSize;
         return this;
@@ -29,6 +30,7 @@ public class ChartHistogramRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValue")
     public Double maxValue;
+
     public ChartHistogramRule withMaxValue(Double maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -40,9 +42,11 @@ public class ChartHistogramRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minValue")
     public Double minValue;
+
     public ChartHistogramRule withMinValue(Double minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public ChartHistogramRule(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartVirtualMachinesMetadataSyncInput {
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public StartVirtualMachinesMetadataSyncInput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
     }
     
+    public StartVirtualMachinesMetadataSyncInput(@JsonProperty("HypervisorArn") String hypervisorArn) {
+        this.hypervisorArn = hypervisorArn;
+  }
 }

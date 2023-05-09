@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeMapRunOutput {
     @JsonProperty("executionArn")
     public String executionArn;
+
     public DescribeMapRunOutput withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribeMapRunOutput {
     
     @JsonProperty("executionCounts")
     public MapRunExecutionCounts executionCounts;
+
     public DescribeMapRunOutput withExecutionCounts(MapRunExecutionCounts executionCounts) {
         this.executionCounts = executionCounts;
         return this;
@@ -33,6 +35,7 @@ public class DescribeMapRunOutput {
     
     @JsonProperty("itemCounts")
     public MapRunItemCounts itemCounts;
+
     public DescribeMapRunOutput withItemCounts(MapRunItemCounts itemCounts) {
         this.itemCounts = itemCounts;
         return this;
@@ -40,6 +43,7 @@ public class DescribeMapRunOutput {
     
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public DescribeMapRunOutput withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
@@ -47,6 +51,7 @@ public class DescribeMapRunOutput {
     
     @JsonProperty("maxConcurrency")
     public Long maxConcurrency;
+
     public DescribeMapRunOutput withMaxConcurrency(Long maxConcurrency) {
         this.maxConcurrency = maxConcurrency;
         return this;
@@ -56,6 +61,7 @@ public class DescribeMapRunOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public DescribeMapRunOutput withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -63,6 +69,7 @@ public class DescribeMapRunOutput {
     
     @JsonProperty("status")
     public MapRunStatusEnum status;
+
     public DescribeMapRunOutput withStatus(MapRunStatusEnum status) {
         this.status = status;
         return this;
@@ -73,6 +80,7 @@ public class DescribeMapRunOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopDate")
     public OffsetDateTime stopDate;
+
     public DescribeMapRunOutput withStopDate(OffsetDateTime stopDate) {
         this.stopDate = stopDate;
         return this;
@@ -80,6 +88,7 @@ public class DescribeMapRunOutput {
     
     @JsonProperty("toleratedFailureCount")
     public Long toleratedFailureCount;
+
     public DescribeMapRunOutput withToleratedFailureCount(Long toleratedFailureCount) {
         this.toleratedFailureCount = toleratedFailureCount;
         return this;
@@ -87,9 +96,21 @@ public class DescribeMapRunOutput {
     
     @JsonProperty("toleratedFailurePercentage")
     public Float toleratedFailurePercentage;
+
     public DescribeMapRunOutput withToleratedFailurePercentage(Float toleratedFailurePercentage) {
         this.toleratedFailurePercentage = toleratedFailurePercentage;
         return this;
     }
     
+    public DescribeMapRunOutput(@JsonProperty("executionArn") String executionArn, @JsonProperty("executionCounts") MapRunExecutionCounts executionCounts, @JsonProperty("itemCounts") MapRunItemCounts itemCounts, @JsonProperty("mapRunArn") String mapRunArn, @JsonProperty("maxConcurrency") Long maxConcurrency, @JsonProperty("startDate") OffsetDateTime startDate, @JsonProperty("status") MapRunStatusEnum status, @JsonProperty("toleratedFailureCount") Long toleratedFailureCount, @JsonProperty("toleratedFailurePercentage") Float toleratedFailurePercentage) {
+        this.executionArn = executionArn;
+        this.executionCounts = executionCounts;
+        this.itemCounts = itemCounts;
+        this.mapRunArn = mapRunArn;
+        this.maxConcurrency = maxConcurrency;
+        this.startDate = startDate;
+        this.status = status;
+        this.toleratedFailureCount = toleratedFailureCount;
+        this.toleratedFailurePercentage = toleratedFailurePercentage;
+  }
 }

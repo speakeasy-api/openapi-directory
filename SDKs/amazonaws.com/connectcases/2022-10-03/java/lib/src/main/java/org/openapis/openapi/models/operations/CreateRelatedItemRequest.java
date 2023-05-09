@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRelatedItemRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateRelatedItemRequestBody requestBody;
+
     public CreateRelatedItemRequest withRequestBody(CreateRelatedItemRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class CreateRelatedItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateRelatedItemRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateRelatedItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateRelatedItemRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateRelatedItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateRelatedItemRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateRelatedItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateRelatedItemRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateRelatedItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateRelatedItemRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateRelatedItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateRelatedItemRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateRelatedItemRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateRelatedItemRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class CreateRelatedItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=caseId")
     public String caseId;
+
     public CreateRelatedItemRequest withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -78,9 +88,15 @@ public class CreateRelatedItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainId")
     public String domainId;
+
     public CreateRelatedItemRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
     }
     
+    public CreateRelatedItemRequest(@JsonProperty("RequestBody") CreateRelatedItemRequestBody requestBody, @JsonProperty("caseId") String caseId, @JsonProperty("domainId") String domainId) {
+        this.requestBody = requestBody;
+        this.caseId = caseId;
+        this.domainId = domainId;
+  }
 }

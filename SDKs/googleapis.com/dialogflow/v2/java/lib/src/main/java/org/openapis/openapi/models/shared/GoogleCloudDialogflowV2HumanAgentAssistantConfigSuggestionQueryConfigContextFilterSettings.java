@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConf
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropHandoffMessages")
     public Boolean dropHandoffMessages;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings withDropHandoffMessages(Boolean dropHandoffMessages) {
         this.dropHandoffMessages = dropHandoffMessages;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConf
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropIvrMessages")
     public Boolean dropIvrMessages;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings withDropIvrMessages(Boolean dropIvrMessages) {
         this.dropIvrMessages = dropIvrMessages;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConf
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropVirtualAgentMessages")
     public Boolean dropVirtualAgentMessages;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings withDropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
         this.dropVirtualAgentMessages = dropVirtualAgentMessages;
         return this;
     }
     
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings(){}
 }

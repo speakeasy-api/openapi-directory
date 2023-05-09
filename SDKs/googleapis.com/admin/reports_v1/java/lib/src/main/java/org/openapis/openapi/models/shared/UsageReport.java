@@ -18,6 +18,7 @@ public class UsageReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public UsageReport withDate(String date) {
         this.date = date;
         return this;
@@ -29,6 +30,7 @@ public class UsageReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public UsageReportEntity entity;
+
     public UsageReport withEntity(UsageReportEntity entity) {
         this.entity = entity;
         return this;
@@ -40,6 +42,7 @@ public class UsageReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public UsageReport withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class UsageReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UsageReport withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,9 +66,11 @@ public class UsageReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public UsageReportParameters[] parameters;
+
     public UsageReport withParameters(UsageReportParameters[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public UsageReport(){}
 }

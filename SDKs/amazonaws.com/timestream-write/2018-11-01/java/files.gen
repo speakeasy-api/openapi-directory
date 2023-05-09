@@ -154,4 +154,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MeasureValue.java
 lib/src/main/java/org/openapis/openapi/models/shared/Dimension.java
 lib/src/main/java/org/openapis/openapi/models/shared/DimensionValueTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

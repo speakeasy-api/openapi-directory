@@ -15,6 +15,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ResolverRule withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public ResolverRule withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +33,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public ResolverRule withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -39,6 +42,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public ResolverRule withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -47,6 +51,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResolverRule withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationTime")
     public String modificationTime;
+
     public ResolverRule withModificationTime(String modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -63,6 +69,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResolverRule withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public ResolverRule withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -79,6 +87,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolverEndpointId")
     public String resolverEndpointId;
+
     public ResolverRule withResolverEndpointId(String resolverEndpointId) {
         this.resolverEndpointId = resolverEndpointId;
         return this;
@@ -87,6 +96,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleType")
     public RuleTypeOptionEnum ruleType;
+
     public ResolverRule withRuleType(RuleTypeOptionEnum ruleType) {
         this.ruleType = ruleType;
         return this;
@@ -95,6 +105,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareStatus")
     public ShareStatusEnum shareStatus;
+
     public ResolverRule withShareStatus(ShareStatusEnum shareStatus) {
         this.shareStatus = shareStatus;
         return this;
@@ -103,6 +114,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ResolverRuleStatusEnum status;
+
     public ResolverRule withStatus(ResolverRuleStatusEnum status) {
         this.status = status;
         return this;
@@ -111,6 +123,7 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ResolverRule withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -119,9 +132,11 @@ public class ResolverRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetIps")
     public TargetAddress[] targetIps;
+
     public ResolverRule withTargetIps(TargetAddress[] targetIps) {
         this.targetIps = targetIps;
         return this;
     }
     
+    public ResolverRule(){}
 }

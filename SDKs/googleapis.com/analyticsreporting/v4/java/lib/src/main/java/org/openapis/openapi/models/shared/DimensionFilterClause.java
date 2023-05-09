@@ -18,6 +18,7 @@ public class DimensionFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DimensionFilter[] filters;
+
     public DimensionFilterClause withFilters(DimensionFilter[] filters) {
         this.filters = filters;
         return this;
@@ -29,9 +30,11 @@ public class DimensionFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public DimensionFilterClauseOperatorEnum operator;
+
     public DimensionFilterClause withOperator(DimensionFilterClauseOperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public DimensionFilterClause(){}
 }

@@ -21,6 +21,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public LoyaltyAccount withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -32,6 +33,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public LoyaltyAccount withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +45,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public LoyaltyAccount withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -54,6 +57,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrolled_at")
     public String enrolledAt;
+
     public LoyaltyAccount withEnrolledAt(String enrolledAt) {
         this.enrolledAt = enrolledAt;
         return this;
@@ -67,6 +71,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiring_point_deadlines")
     public LoyaltyAccountExpiringPointDeadline[] expiringPointDeadlines;
+
     public LoyaltyAccount withExpiringPointDeadlines(LoyaltyAccountExpiringPointDeadline[] expiringPointDeadlines) {
         this.expiringPointDeadlines = expiringPointDeadlines;
         return this;
@@ -78,6 +83,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LoyaltyAccount withId(String id) {
         this.id = id;
         return this;
@@ -89,6 +95,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifetime_points")
     public Long lifetimePoints;
+
     public LoyaltyAccount withLifetimePoints(Long lifetimePoints) {
         this.lifetimePoints = lifetimePoints;
         return this;
@@ -103,6 +110,7 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping")
     public LoyaltyAccountMapping mapping;
+
     public LoyaltyAccount withMapping(LoyaltyAccountMapping mapping) {
         this.mapping = mapping;
         return this;
@@ -113,6 +121,7 @@ public class LoyaltyAccount {
      */
     @JsonProperty("program_id")
     public String programId;
+
     public LoyaltyAccount withProgramId(String programId) {
         this.programId = programId;
         return this;
@@ -124,9 +133,13 @@ public class LoyaltyAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public LoyaltyAccount withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public LoyaltyAccount(@JsonProperty("program_id") String programId) {
+        this.programId = programId;
+  }
 }

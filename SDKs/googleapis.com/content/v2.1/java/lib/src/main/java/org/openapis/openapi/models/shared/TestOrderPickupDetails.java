@@ -15,6 +15,7 @@ public class TestOrderPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationCode")
     public String locationCode;
+
     public TestOrderPickupDetails withLocationCode(String locationCode) {
         this.locationCode = locationCode;
         return this;
@@ -23,6 +24,7 @@ public class TestOrderPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupLocationAddress")
     public TestOrderAddress pickupLocationAddress;
+
     public TestOrderPickupDetails withPickupLocationAddress(TestOrderAddress pickupLocationAddress) {
         this.pickupLocationAddress = pickupLocationAddress;
         return this;
@@ -34,6 +36,7 @@ public class TestOrderPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupLocationType")
     public String pickupLocationType;
+
     public TestOrderPickupDetails withPickupLocationType(String pickupLocationType) {
         this.pickupLocationType = pickupLocationType;
         return this;
@@ -45,9 +48,11 @@ public class TestOrderPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupPersons")
     public TestOrderPickupDetailsPickupPerson[] pickupPersons;
+
     public TestOrderPickupDetails withPickupPersons(TestOrderPickupDetailsPickupPerson[] pickupPersons) {
         this.pickupPersons = pickupPersons;
         return this;
     }
     
+    public TestOrderPickupDetails(){}
 }

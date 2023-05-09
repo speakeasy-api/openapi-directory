@@ -15,9 +15,11 @@ public class CreateWhatIfForecastResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfForecastArn")
     public String whatIfForecastArn;
+
     public CreateWhatIfForecastResponse withWhatIfForecastArn(String whatIfForecastArn) {
         this.whatIfForecastArn = whatIfForecastArn;
         return this;
     }
     
+    public CreateWhatIfForecastResponse(){}
 }

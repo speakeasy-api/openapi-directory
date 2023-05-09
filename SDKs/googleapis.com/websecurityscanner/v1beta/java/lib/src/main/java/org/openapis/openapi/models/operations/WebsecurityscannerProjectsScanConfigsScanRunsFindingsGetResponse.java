@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse {
     
     public String contentType;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Finding finding;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse withFinding(org.openapis.openapi.models.shared.Finding finding) {
         this.finding = finding;
         return this;
@@ -26,6 +29,7 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse {
     
     
     public Integer statusCode;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

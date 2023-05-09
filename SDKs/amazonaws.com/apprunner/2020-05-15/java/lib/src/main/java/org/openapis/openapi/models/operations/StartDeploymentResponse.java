@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDeploymentResponse {
     
     public String contentType;
+
     public StartDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartDeploymentResponse {
      */
     
     public Object internalServiceErrorException;
+
     public StartDeploymentResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class StartDeploymentResponse {
      */
     
     public Object invalidRequestException;
+
     public StartDeploymentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartDeploymentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartDeploymentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDeploymentResponse startDeploymentResponse;
+
     public StartDeploymentResponse withStartDeploymentResponse(org.openapis.openapi.models.shared.StartDeploymentResponse startDeploymentResponse) {
         this.startDeploymentResponse = startDeploymentResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartDeploymentResponse {
     
     
     public Integer statusCode;
+
     public StartDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

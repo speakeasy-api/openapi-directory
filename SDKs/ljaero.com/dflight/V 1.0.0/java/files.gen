@@ -135,4 +135,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/WxPolyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WxByPolygon.java
 lib/src/main/java/org/openapis/openapi/models/shared/WxRouteResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WxByRoute.java
+docs/sdk/README.md
+docs/aerodromes/README.md
+docs/airspace/README.md
+docs/flightrestrictions/README.md
+docs/restrictedpublicvenues/README.md
+docs/specialsecurityareas/README.md
+docs/surfaceobstacles/README.md
+docs/uasoperatingareas/README.md
+docs/weather/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class BatchGetViewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewArns")
     public String[] viewArns;
+
     public BatchGetViewRequestBody withViewArns(String[] viewArns) {
         this.viewArns = viewArns;
         return this;
     }
     
+    public BatchGetViewRequestBody(){}
 }

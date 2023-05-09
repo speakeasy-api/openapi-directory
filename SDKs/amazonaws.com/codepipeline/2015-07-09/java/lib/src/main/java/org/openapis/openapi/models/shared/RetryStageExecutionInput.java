@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetryStageExecutionInput {
     @JsonProperty("pipelineExecutionId")
     public String pipelineExecutionId;
+
     public RetryStageExecutionInput withPipelineExecutionId(String pipelineExecutionId) {
         this.pipelineExecutionId = pipelineExecutionId;
         return this;
@@ -19,6 +20,7 @@ public class RetryStageExecutionInput {
     
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public RetryStageExecutionInput withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -26,6 +28,7 @@ public class RetryStageExecutionInput {
     
     @JsonProperty("retryMode")
     public StageRetryModeEnum retryMode;
+
     public RetryStageExecutionInput withRetryMode(StageRetryModeEnum retryMode) {
         this.retryMode = retryMode;
         return this;
@@ -33,9 +36,16 @@ public class RetryStageExecutionInput {
     
     @JsonProperty("stageName")
     public String stageName;
+
     public RetryStageExecutionInput withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public RetryStageExecutionInput(@JsonProperty("pipelineExecutionId") String pipelineExecutionId, @JsonProperty("pipelineName") String pipelineName, @JsonProperty("retryMode") StageRetryModeEnum retryMode, @JsonProperty("stageName") String stageName) {
+        this.pipelineExecutionId = pipelineExecutionId;
+        this.pipelineName = pipelineName;
+        this.retryMode = retryMode;
+        this.stageName = stageName;
+  }
 }

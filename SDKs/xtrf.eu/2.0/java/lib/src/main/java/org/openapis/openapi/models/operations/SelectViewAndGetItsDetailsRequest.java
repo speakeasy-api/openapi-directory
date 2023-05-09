@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SelectViewAndGetItsDetailsRequest {
@@ -12,6 +13,7 @@ public class SelectViewAndGetItsDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=className")
     public String className;
+
     public SelectViewAndGetItsDetailsRequest withClassName(String className) {
         this.className = className;
         return this;
@@ -19,6 +21,7 @@ public class SelectViewAndGetItsDetailsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=place name (denotes specific place in system with the table)")
     public String placeNameDenotesSpecificPlaceInSystemWithTheTable;
+
     public SelectViewAndGetItsDetailsRequest withPlaceNameDenotesSpecificPlaceInSystemWithTheTable(String placeNameDenotesSpecificPlaceInSystemWithTheTable) {
         this.placeNameDenotesSpecificPlaceInSystemWithTheTable = placeNameDenotesSpecificPlaceInSystemWithTheTable;
         return this;
@@ -26,9 +29,14 @@ public class SelectViewAndGetItsDetailsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public SelectViewAndGetItsDetailsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public SelectViewAndGetItsDetailsRequest(@JsonProperty("className") String className, @JsonProperty("viewId") Long viewId) {
+        this.className = className;
+        this.viewId = viewId;
+  }
 }

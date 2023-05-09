@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInboxRecipientsRequest {
@@ -12,6 +13,7 @@ public class GetInboxRecipientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetInboxRecipientsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,58 +24,9 @@ public class GetInboxRecipientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetInboxRecipientsRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `has_registrations`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
-    public java.util.Map<String, Object> filterGt;
-    public GetInboxRecipientsRequest withFilterGt(java.util.Map<String, Object> filterGt) {
-        this.filterGt = filterGt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `has_registrations`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
-    public java.util.Map<String, Object> filterGteq;
-    public GetInboxRecipientsRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
-        this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `has_registrations`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetInboxRecipientsRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `has_registrations`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
-    public java.util.Map<String, Object> filterLt;
-    public GetInboxRecipientsRequest withFilterLt(java.util.Map<String, Object> filterLt) {
-        this.filterLt = filterLt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `has_registrations`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
-    public java.util.Map<String, Object> filterLteq;
-    public GetInboxRecipientsRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
-        this.filterLteq = filterLteq;
         return this;
     }
     
@@ -82,6 +35,7 @@ public class GetInboxRecipientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inbox_id")
     public Integer inboxId;
+
     public GetInboxRecipientsRequest withInboxId(Integer inboxId) {
         this.inboxId = inboxId;
         return this;
@@ -92,6 +46,7 @@ public class GetInboxRecipientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetInboxRecipientsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -102,19 +57,13 @@ public class GetInboxRecipientsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetInboxRecipientsRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
-    /**
-     * User ID.  Provide a value of `0` to operate the current session's user.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
-    public Integer userId;
-    public GetInboxRecipientsRequest withUserId(Integer userId) {
-        this.userId = userId;
-        return this;
-    }
-    
+    public GetInboxRecipientsRequest(@JsonProperty("inbox_id") Integer inboxId) {
+        this.inboxId = inboxId;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchPutDocumentResponseFailedDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public ErrorCodeEnum errorCode;
+
     public BatchPutDocumentResponseFailedDocument withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchPutDocumentResponseFailedDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BatchPutDocumentResponseFailedDocument withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchPutDocumentResponseFailedDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public BatchPutDocumentResponseFailedDocument withId(String id) {
         this.id = id;
         return this;
     }
     
+    public BatchPutDocumentResponseFailedDocument(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse {
     
     public String contentType;
+
     public ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContactcenterinsightsProjectsLocationsConversationsAnalysesListResp
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ListAnalysesResponse googleCloudContactcenterinsightsV1ListAnalysesResponse;
+
     public ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse withGoogleCloudContactcenterinsightsV1ListAnalysesResponse(org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ListAnalysesResponse googleCloudContactcenterinsightsV1ListAnalysesResponse) {
         this.googleCloudContactcenterinsightsV1ListAnalysesResponse = googleCloudContactcenterinsightsV1ListAnalysesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContactcenterinsightsProjectsLocationsConversationsAnalysesListResp
     
     
     public Integer statusCode;
+
     public ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContactcenterinsightsProjectsLocationsConversationsAnalysesListResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

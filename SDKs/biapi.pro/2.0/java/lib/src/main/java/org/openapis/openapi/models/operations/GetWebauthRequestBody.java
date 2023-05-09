@@ -12,6 +12,7 @@ public class GetWebauthRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_id")
     public Long clientId;
+
     public GetWebauthRequestBody withClientId(Long clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +23,7 @@ public class GetWebauthRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_transfer")
     public Long idTransfer;
+
     public GetWebauthRequestBody withIdTransfer(Long idTransfer) {
         this.idTransfer = idTransfer;
         return this;
@@ -32,6 +34,7 @@ public class GetWebauthRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=redirect_uri")
     public String redirectUri;
+
     public GetWebauthRequestBody withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -42,9 +45,11 @@ public class GetWebauthRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=state")
     public String state;
+
     public GetWebauthRequestBody withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetWebauthRequestBody(){}
 }

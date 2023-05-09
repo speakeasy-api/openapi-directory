@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DemilestonedIssueEventMilestone {
     @JsonProperty("title")
     public String title;
+
     public DemilestonedIssueEventMilestone withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DemilestonedIssueEventMilestone(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

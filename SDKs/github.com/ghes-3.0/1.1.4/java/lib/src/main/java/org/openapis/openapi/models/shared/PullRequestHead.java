@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestHead {
     @JsonProperty("label")
     public String label;
+
     public PullRequestHead withLabel(String label) {
         this.label = label;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestHead {
     
     @JsonProperty("ref")
     public String ref;
+
     public PullRequestHead withRef(String ref) {
         this.ref = ref;
         return this;
@@ -23,6 +25,7 @@ public class PullRequestHead {
     
     @JsonProperty("repo")
     public PullRequestHeadRepo repo;
+
     public PullRequestHead withRepo(PullRequestHeadRepo repo) {
         this.repo = repo;
         return this;
@@ -30,6 +33,7 @@ public class PullRequestHead {
     
     @JsonProperty("sha")
     public String sha;
+
     public PullRequestHead withSha(String sha) {
         this.sha = sha;
         return this;
@@ -37,9 +41,17 @@ public class PullRequestHead {
     
     @JsonProperty("user")
     public PullRequestHeadUser user;
+
     public PullRequestHead withUser(PullRequestHeadUser user) {
         this.user = user;
         return this;
     }
     
+    public PullRequestHead(@JsonProperty("label") String label, @JsonProperty("ref") String ref, @JsonProperty("repo") PullRequestHeadRepo repo, @JsonProperty("sha") String sha, @JsonProperty("user") PullRequestHeadUser user) {
+        this.label = label;
+        this.ref = ref;
+        this.repo = repo;
+        this.sha = sha;
+        this.user = user;
+  }
 }

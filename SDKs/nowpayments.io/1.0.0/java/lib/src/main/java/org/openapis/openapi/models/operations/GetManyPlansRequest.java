@@ -12,6 +12,7 @@ public class GetManyPlansRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetManyPlansRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class GetManyPlansRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetManyPlansRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -29,9 +31,11 @@ public class GetManyPlansRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetManyPlansRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetManyPlansRequest(){}
 }

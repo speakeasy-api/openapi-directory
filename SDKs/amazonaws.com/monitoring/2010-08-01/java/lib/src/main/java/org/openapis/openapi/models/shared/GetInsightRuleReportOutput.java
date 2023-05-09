@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetInsightRuleReportOutput {
     
     public Double aggregateValue;
+
     public GetInsightRuleReportOutput withAggregateValue(Double aggregateValue) {
         this.aggregateValue = aggregateValue;
         return this;
@@ -19,6 +20,7 @@ public class GetInsightRuleReportOutput {
     
     
     public String aggregationStatistic;
+
     public GetInsightRuleReportOutput withAggregationStatistic(String aggregationStatistic) {
         this.aggregationStatistic = aggregationStatistic;
         return this;
@@ -26,6 +28,7 @@ public class GetInsightRuleReportOutput {
     
     
     public Long approximateUniqueCount;
+
     public GetInsightRuleReportOutput withApproximateUniqueCount(Long approximateUniqueCount) {
         this.approximateUniqueCount = approximateUniqueCount;
         return this;
@@ -33,6 +36,7 @@ public class GetInsightRuleReportOutput {
     
     
     public InsightRuleContributor[] contributors;
+
     public GetInsightRuleReportOutput withContributors(InsightRuleContributor[] contributors) {
         this.contributors = contributors;
         return this;
@@ -40,6 +44,7 @@ public class GetInsightRuleReportOutput {
     
     
     public String[] keyLabels;
+
     public GetInsightRuleReportOutput withKeyLabels(String[] keyLabels) {
         this.keyLabels = keyLabels;
         return this;
@@ -47,9 +52,11 @@ public class GetInsightRuleReportOutput {
     
     
     public InsightRuleMetricDatapoint[] metricDatapoints;
+
     public GetInsightRuleReportOutput withMetricDatapoints(InsightRuleMetricDatapoint[] metricDatapoints) {
         this.metricDatapoints = metricDatapoints;
         return this;
     }
     
+    public GetInsightRuleReportOutput(){}
 }

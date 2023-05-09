@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactions withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantName")
     public String merchantName;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactions withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -37,6 +39,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payments")
     public AddCoupons200ApplicationJSONPaymentDataTransactionsPayments[] payments;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactions withPayments(AddCoupons200ApplicationJSONPaymentDataTransactionsPayments[] payments) {
         this.payments = payments;
         return this;
@@ -48,6 +51,7 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedTransaction")
     public Boolean sharedTransaction;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactions withSharedTransaction(Boolean sharedTransaction) {
         this.sharedTransaction = sharedTransaction;
         return this;
@@ -59,9 +63,11 @@ public class AddCoupons200ApplicationJSONPaymentDataTransactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public AddCoupons200ApplicationJSONPaymentDataTransactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONPaymentDataTransactions(){}
 }

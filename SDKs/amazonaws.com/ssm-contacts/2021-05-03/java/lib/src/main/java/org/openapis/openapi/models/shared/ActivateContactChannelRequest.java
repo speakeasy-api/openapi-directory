@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivateContactChannelRequest {
     @JsonProperty("ActivationCode")
     public String activationCode;
+
     public ActivateContactChannelRequest withActivationCode(String activationCode) {
         this.activationCode = activationCode;
         return this;
@@ -16,9 +17,14 @@ public class ActivateContactChannelRequest {
     
     @JsonProperty("ContactChannelId")
     public String contactChannelId;
+
     public ActivateContactChannelRequest withContactChannelId(String contactChannelId) {
         this.contactChannelId = contactChannelId;
         return this;
     }
     
+    public ActivateContactChannelRequest(@JsonProperty("ActivationCode") String activationCode, @JsonProperty("ContactChannelId") String contactChannelId) {
+        this.activationCode = activationCode;
+        this.contactChannelId = contactChannelId;
+  }
 }

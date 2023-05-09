@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles {
     
     public String associatedRoleArn;
+
     public GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles withAssociatedRoleArn(String associatedRoleArn) {
         this.associatedRoleArn = associatedRoleArn;
         return this;
@@ -19,6 +20,7 @@ public class GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles {
     
     
     public String certificateS3BucketName;
+
     public GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles withCertificateS3BucketName(String certificateS3BucketName) {
         this.certificateS3BucketName = certificateS3BucketName;
         return this;
@@ -26,6 +28,7 @@ public class GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles {
     
     
     public String certificateS3ObjectKey;
+
     public GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles withCertificateS3ObjectKey(String certificateS3ObjectKey) {
         this.certificateS3ObjectKey = certificateS3ObjectKey;
         return this;
@@ -33,9 +36,11 @@ public class GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles {
     
     
     public String encryptionKmsKeyId;
+
     public GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles withEncryptionKmsKeyId(String encryptionKmsKeyId) {
         this.encryptionKmsKeyId = encryptionKmsKeyId;
         return this;
     }
     
+    public GetAssociatedEnclaveCertificateIamRolesResultAssociatedRoles(){}
 }

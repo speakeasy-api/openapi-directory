@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETEnableFastLaunchResponse {
     
     public byte[] body;
+
     public GETEnableFastLaunchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETEnableFastLaunchResponse {
     
     
     public String contentType;
+
     public GETEnableFastLaunchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETEnableFastLaunchResponse {
     
     
     public Integer statusCode;
+
     public GETEnableFastLaunchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETEnableFastLaunchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETEnableFastLaunchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETEnableFastLaunchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

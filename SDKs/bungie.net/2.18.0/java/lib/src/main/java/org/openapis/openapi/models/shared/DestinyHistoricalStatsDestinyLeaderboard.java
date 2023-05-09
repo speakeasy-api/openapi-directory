@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyHistoricalStatsDestinyLeaderboard {
     
     public DestinyHistoricalStatsDestinyLeaderboardEntry[] entries;
+
     public DestinyHistoricalStatsDestinyLeaderboard withEntries(DestinyHistoricalStatsDestinyLeaderboardEntry[] entries) {
         this.entries = entries;
         return this;
@@ -16,9 +17,11 @@ public class DestinyHistoricalStatsDestinyLeaderboard {
     
     
     public String statId;
+
     public DestinyHistoricalStatsDestinyLeaderboard withStatId(String statId) {
         this.statId = statId;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboard(){}
 }

@@ -18,6 +18,7 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheHeader")
     public HttpCacheControlResponseHeader cacheHeader;
+
     public GetOpenIDConfigResponse withCacheHeader(HttpCacheControlResponseHeader cacheHeader) {
         this.cacheHeader = cacheHeader;
         return this;
@@ -29,6 +30,7 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("claims_supported")
     public String[] claimsSupported;
+
     public GetOpenIDConfigResponse withClaimsSupported(String[] claimsSupported) {
         this.claimsSupported = claimsSupported;
         return this;
@@ -40,6 +42,7 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grant_types")
     public String[] grantTypes;
+
     public GetOpenIDConfigResponse withGrantTypes(String[] grantTypes) {
         this.grantTypes = grantTypes;
         return this;
@@ -51,6 +54,7 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_token_signing_alg_values_supported")
     public String[] idTokenSigningAlgValuesSupported;
+
     public GetOpenIDConfigResponse withIdTokenSigningAlgValuesSupported(String[] idTokenSigningAlgValuesSupported) {
         this.idTokenSigningAlgValuesSupported = idTokenSigningAlgValuesSupported;
         return this;
@@ -62,6 +66,7 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public GetOpenIDConfigResponse withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -73,6 +78,7 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwks_uri")
     public String jwksUri;
+
     public GetOpenIDConfigResponse withJwksUri(String jwksUri) {
         this.jwksUri = jwksUri;
         return this;
@@ -84,6 +90,7 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_types_supported")
     public String[] responseTypesSupported;
+
     public GetOpenIDConfigResponse withResponseTypesSupported(String[] responseTypesSupported) {
         this.responseTypesSupported = responseTypesSupported;
         return this;
@@ -95,9 +102,11 @@ public class GetOpenIDConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject_types_supported")
     public String[] subjectTypesSupported;
+
     public GetOpenIDConfigResponse withSubjectTypesSupported(String[] subjectTypesSupported) {
         this.subjectTypesSupported = subjectTypesSupported;
         return this;
     }
     
+    public GetOpenIDConfigResponse(){}
 }

@@ -18,6 +18,7 @@ public class ForwardingRuleAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ForwardingRuleAggregatedListWarningCodeEnum code;
+
     public ForwardingRuleAggregatedListWarning withCode(ForwardingRuleAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ForwardingRuleAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ForwardingRuleAggregatedListWarningData[] data;
+
     public ForwardingRuleAggregatedListWarning withData(ForwardingRuleAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ForwardingRuleAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ForwardingRuleAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ForwardingRuleAggregatedListWarning(){}
 }

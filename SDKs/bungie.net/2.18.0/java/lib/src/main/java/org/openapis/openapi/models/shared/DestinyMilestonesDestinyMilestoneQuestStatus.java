@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Boolean completed;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -25,6 +26,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Long itemInstanceId;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
@@ -35,6 +37,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Long questHash;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withQuestHash(Long questHash) {
         this.questHash = questHash;
         return this;
@@ -45,6 +48,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Boolean redeemed;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withRedeemed(Boolean redeemed) {
         this.redeemed = redeemed;
         return this;
@@ -55,6 +59,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Boolean started;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withStarted(Boolean started) {
         this.started = started;
         return this;
@@ -65,6 +70,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Long stepHash;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withStepHash(Long stepHash) {
         this.stepHash = stepHash;
         return this;
@@ -75,6 +81,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public DestinyQuestsDestinyObjectiveProgress[] stepObjectives;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withStepObjectives(DestinyQuestsDestinyObjectiveProgress[] stepObjectives) {
         this.stepObjectives = stepObjectives;
         return this;
@@ -85,6 +92,7 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Boolean tracked;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withTracked(Boolean tracked) {
         this.tracked = tracked;
         return this;
@@ -95,9 +103,11 @@ public class DestinyMilestonesDestinyMilestoneQuestStatus {
      */
     
     public Long vendorHash;
+
     public DestinyMilestonesDestinyMilestoneQuestStatus withVendorHash(Long vendorHash) {
         this.vendorHash = vendorHash;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneQuestStatus(){}
 }

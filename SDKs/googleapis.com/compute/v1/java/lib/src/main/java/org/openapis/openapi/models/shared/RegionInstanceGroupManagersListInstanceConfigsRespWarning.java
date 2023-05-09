@@ -18,6 +18,7 @@ public class RegionInstanceGroupManagersListInstanceConfigsRespWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public RegionInstanceGroupManagersListInstanceConfigsRespWarningCodeEnum code;
+
     public RegionInstanceGroupManagersListInstanceConfigsRespWarning withCode(RegionInstanceGroupManagersListInstanceConfigsRespWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class RegionInstanceGroupManagersListInstanceConfigsRespWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public RegionInstanceGroupManagersListInstanceConfigsRespWarningData[] data;
+
     public RegionInstanceGroupManagersListInstanceConfigsRespWarning withData(RegionInstanceGroupManagersListInstanceConfigsRespWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class RegionInstanceGroupManagersListInstanceConfigsRespWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public RegionInstanceGroupManagersListInstanceConfigsRespWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RegionInstanceGroupManagersListInstanceConfigsRespWarning(){}
 }

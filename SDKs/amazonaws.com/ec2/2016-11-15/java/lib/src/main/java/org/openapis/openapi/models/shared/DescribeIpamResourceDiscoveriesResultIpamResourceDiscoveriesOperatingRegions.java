@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesOperatingRegions {
     
     public String regionName;
+
     public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesOperatingRegions withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesOperatingRegions(){}
 }

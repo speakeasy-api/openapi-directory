@@ -12,9 +12,11 @@ public class ConferenceParametersAddOnParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public ConferenceParametersAddOnParameters withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public ConferenceParametersAddOnParameters(){}
 }

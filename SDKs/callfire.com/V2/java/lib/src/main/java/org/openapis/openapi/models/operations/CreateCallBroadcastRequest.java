@@ -12,6 +12,7 @@ public class CreateCallBroadcastRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CallBroadcastInput callBroadcastInput;
+
     public CreateCallBroadcastRequest withCallBroadcastInput(org.openapis.openapi.models.shared.CallBroadcastInput callBroadcastInput) {
         this.callBroadcastInput = callBroadcastInput;
         return this;
@@ -22,6 +23,7 @@ public class CreateCallBroadcastRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Boolean start;
+
     public CreateCallBroadcastRequest withStart(Boolean start) {
         this.start = start;
         return this;
@@ -32,9 +34,11 @@ public class CreateCallBroadcastRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
     public Boolean strictValidation;
+
     public CreateCallBroadcastRequest withStrictValidation(Boolean strictValidation) {
         this.strictValidation = strictValidation;
         return this;
     }
     
+    public CreateCallBroadcastRequest(){}
 }

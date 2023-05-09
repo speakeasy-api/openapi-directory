@@ -12,6 +12,7 @@ public class RateLimitOverviewResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions_runner_registration")
     public RateLimit actionsRunnerRegistration;
+
     public RateLimitOverviewResources withActionsRunnerRegistration(RateLimit actionsRunnerRegistration) {
         this.actionsRunnerRegistration = actionsRunnerRegistration;
         return this;
@@ -20,6 +21,7 @@ public class RateLimitOverviewResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code_scanning_upload")
     public RateLimit codeScanningUpload;
+
     public RateLimitOverviewResources withCodeScanningUpload(RateLimit codeScanningUpload) {
         this.codeScanningUpload = codeScanningUpload;
         return this;
@@ -27,6 +29,7 @@ public class RateLimitOverviewResources {
     
     @JsonProperty("core")
     public RateLimit core;
+
     public RateLimitOverviewResources withCore(RateLimit core) {
         this.core = core;
         return this;
@@ -35,6 +38,7 @@ public class RateLimitOverviewResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("graphql")
     public RateLimit graphql;
+
     public RateLimitOverviewResources withGraphql(RateLimit graphql) {
         this.graphql = graphql;
         return this;
@@ -43,6 +47,7 @@ public class RateLimitOverviewResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration_manifest")
     public RateLimit integrationManifest;
+
     public RateLimitOverviewResources withIntegrationManifest(RateLimit integrationManifest) {
         this.integrationManifest = integrationManifest;
         return this;
@@ -51,6 +56,7 @@ public class RateLimitOverviewResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scim")
     public RateLimit scim;
+
     public RateLimitOverviewResources withScim(RateLimit scim) {
         this.scim = scim;
         return this;
@@ -58,6 +64,7 @@ public class RateLimitOverviewResources {
     
     @JsonProperty("search")
     public RateLimit search;
+
     public RateLimitOverviewResources withSearch(RateLimit search) {
         this.search = search;
         return this;
@@ -66,9 +73,14 @@ public class RateLimitOverviewResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_import")
     public RateLimit sourceImport;
+
     public RateLimitOverviewResources withSourceImport(RateLimit sourceImport) {
         this.sourceImport = sourceImport;
         return this;
     }
     
+    public RateLimitOverviewResources(@JsonProperty("core") RateLimit core, @JsonProperty("search") RateLimit search) {
+        this.core = core;
+        this.search = search;
+  }
 }

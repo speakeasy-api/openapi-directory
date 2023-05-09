@@ -18,6 +18,7 @@ public class ServiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public ServiceDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class ServiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public ServiceDTO withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -40,6 +42,7 @@ public class ServiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ServiceDTO withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class ServiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceDTO withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class ServiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public ServiceDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
     }
     
+    public ServiceDTO(){}
 }

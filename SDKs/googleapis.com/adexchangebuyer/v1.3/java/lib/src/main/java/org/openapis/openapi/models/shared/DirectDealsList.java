@@ -18,6 +18,7 @@ public class DirectDealsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directDeals")
     public DirectDeal[] directDeals;
+
     public DirectDealsList withDirectDeals(DirectDeal[] directDeals) {
         this.directDeals = directDeals;
         return this;
@@ -29,9 +30,11 @@ public class DirectDealsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DirectDealsList withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DirectDealsList(){}
 }

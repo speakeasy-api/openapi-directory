@@ -18,6 +18,7 @@ public class GetListOfAspspsAspspsAspspCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public GetListOfAspspsAspspsAspspCurrencyCodeEnum code;
+
     public GetListOfAspspsAspspsAspspCurrency withCode(GetListOfAspspsAspspsAspspCurrencyCodeEnum code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetListOfAspspsAspspsAspspCurrency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetListOfAspspsAspspsAspspCurrency withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public GetListOfAspspsAspspsAspspCurrency(){}
 }

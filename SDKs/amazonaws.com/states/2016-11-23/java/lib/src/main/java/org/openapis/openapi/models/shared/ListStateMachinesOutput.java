@@ -15,6 +15,7 @@ public class ListStateMachinesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStateMachinesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListStateMachinesOutput {
     
     @JsonProperty("stateMachines")
     public StateMachineListItem[] stateMachines;
+
     public ListStateMachinesOutput withStateMachines(StateMachineListItem[] stateMachines) {
         this.stateMachines = stateMachines;
         return this;
     }
     
+    public ListStateMachinesOutput(@JsonProperty("stateMachines") StateMachineListItem[] stateMachines) {
+        this.stateMachines = stateMachines;
+  }
 }

@@ -15,6 +15,7 @@ public class CustomerRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
     public String dateOfBirth;
+
     public CustomerRead withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -26,6 +27,7 @@ public class CustomerRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public CustomerRead withGender(String gender) {
         this.gender = gender;
         return this;
@@ -37,6 +39,7 @@ public class CustomerRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_entity_type")
     public CustomerReadOrganizationEntityTypeEnum organizationEntityType;
+
     public CustomerRead withOrganizationEntityType(CustomerReadOrganizationEntityTypeEnum organizationEntityType) {
         this.organizationEntityType = organizationEntityType;
         return this;
@@ -48,6 +51,7 @@ public class CustomerRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_registration_id")
     public String organizationRegistrationId;
+
     public CustomerRead withOrganizationRegistrationId(String organizationRegistrationId) {
         this.organizationRegistrationId = organizationRegistrationId;
         return this;
@@ -65,6 +69,7 @@ public class CustomerRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CustomerRead withTitle(String title) {
         this.title = title;
         return this;
@@ -76,6 +81,7 @@ public class CustomerRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CustomerRead withType(String type) {
         this.type = type;
         return this;
@@ -87,9 +93,11 @@ public class CustomerRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vat_id")
     public String vatId;
+
     public CustomerRead withVatId(String vatId) {
         this.vatId = vatId;
         return this;
     }
     
+    public CustomerRead(){}
 }

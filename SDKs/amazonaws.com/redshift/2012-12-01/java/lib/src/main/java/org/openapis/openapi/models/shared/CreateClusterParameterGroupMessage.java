@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateClusterParameterGroupMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClusterParameterGroupMessage {
     
     public String description;
+
     public CreateClusterParameterGroupMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateClusterParameterGroupMessage {
     
     
     public String parameterGroupFamily;
+
     public CreateClusterParameterGroupMessage withParameterGroupFamily(String parameterGroupFamily) {
         this.parameterGroupFamily = parameterGroupFamily;
         return this;
@@ -26,6 +28,7 @@ public class CreateClusterParameterGroupMessage {
     
     
     public String parameterGroupName;
+
     public CreateClusterParameterGroupMessage withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -33,9 +36,15 @@ public class CreateClusterParameterGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateClusterParameterGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterParameterGroupMessage(@JsonProperty("Description") String description, @JsonProperty("ParameterGroupFamily") String parameterGroupFamily, @JsonProperty("ParameterGroupName") String parameterGroupName) {
+        this.description = description;
+        this.parameterGroupFamily = parameterGroupFamily;
+        this.parameterGroupName = parameterGroupName;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateFleetPortSettingsInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public UpdateFleetPortSettingsInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateFleetPortSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboundPermissionAuthorizations")
     public IpPermission[] inboundPermissionAuthorizations;
+
     public UpdateFleetPortSettingsInput withInboundPermissionAuthorizations(IpPermission[] inboundPermissionAuthorizations) {
         this.inboundPermissionAuthorizations = inboundPermissionAuthorizations;
         return this;
@@ -27,9 +29,13 @@ public class UpdateFleetPortSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboundPermissionRevocations")
     public IpPermission[] inboundPermissionRevocations;
+
     public UpdateFleetPortSettingsInput withInboundPermissionRevocations(IpPermission[] inboundPermissionRevocations) {
         this.inboundPermissionRevocations = inboundPermissionRevocations;
         return this;
     }
     
+    public UpdateFleetPortSettingsInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

@@ -22,6 +22,7 @@ public class AnnotationImportJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public AnnotationImportJobItem withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class AnnotationImportJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public AnnotationImportJobItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class AnnotationImportJobItem {
     
     @JsonProperty("destinationName")
     public String destinationName;
+
     public AnnotationImportJobItem withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -45,6 +48,7 @@ public class AnnotationImportJobItem {
     
     @JsonProperty("id")
     public String id;
+
     public AnnotationImportJobItem withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class AnnotationImportJobItem {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public AnnotationImportJobItem withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -60,6 +65,7 @@ public class AnnotationImportJobItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runLeftNormalization")
     public Boolean runLeftNormalization;
+
     public AnnotationImportJobItem withRunLeftNormalization(Boolean runLeftNormalization) {
         this.runLeftNormalization = runLeftNormalization;
         return this;
@@ -67,6 +73,7 @@ public class AnnotationImportJobItem {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public AnnotationImportJobItem withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
@@ -76,9 +83,18 @@ public class AnnotationImportJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public AnnotationImportJobItem withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public AnnotationImportJobItem(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("destinationName") String destinationName, @JsonProperty("id") String id, @JsonProperty("roleArn") String roleArn, @JsonProperty("status") JobStatusEnum status, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.creationTime = creationTime;
+        this.destinationName = destinationName;
+        this.id = id;
+        this.roleArn = roleArn;
+        this.status = status;
+        this.updateTime = updateTime;
+  }
 }

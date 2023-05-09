@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeEventsMessage {
     
     public String applicationName;
+
     public DescribeEventsMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEventsMessage {
     
     
     public OffsetDateTime endTime;
+
     public DescribeEventsMessage withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeEventsMessage {
     
     
     public String environmentId;
+
     public DescribeEventsMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeEventsMessage {
     
     
     public String environmentName;
+
     public DescribeEventsMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -40,6 +44,7 @@ public class DescribeEventsMessage {
     
     
     public Long maxRecords;
+
     public DescribeEventsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -47,6 +52,7 @@ public class DescribeEventsMessage {
     
     
     public String nextToken;
+
     public DescribeEventsMessage withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -54,6 +60,7 @@ public class DescribeEventsMessage {
     
     
     public String platformArn;
+
     public DescribeEventsMessage withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -61,6 +68,7 @@ public class DescribeEventsMessage {
     
     
     public String requestId;
+
     public DescribeEventsMessage withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeEventsMessage {
     
     
     public EventSeverityEnum severity;
+
     public DescribeEventsMessage withSeverity(EventSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -75,6 +84,7 @@ public class DescribeEventsMessage {
     
     
     public OffsetDateTime startTime;
+
     public DescribeEventsMessage withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -82,6 +92,7 @@ public class DescribeEventsMessage {
     
     
     public String templateName;
+
     public DescribeEventsMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -89,9 +100,11 @@ public class DescribeEventsMessage {
     
     
     public String versionLabel;
+
     public DescribeEventsMessage withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public DescribeEventsMessage(){}
 }

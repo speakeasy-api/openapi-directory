@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Step {
     @JsonProperty("componentId")
     public String componentId;
+
     public Step withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -19,9 +20,14 @@ public class Step {
     
     @JsonProperty("componentType")
     public String componentType;
+
     public Step withComponentType(String componentType) {
         this.componentType = componentType;
         return this;
     }
     
+    public Step(@JsonProperty("componentId") String componentId, @JsonProperty("componentType") String componentType) {
+        this.componentId = componentId;
+        this.componentType = componentType;
+  }
 }

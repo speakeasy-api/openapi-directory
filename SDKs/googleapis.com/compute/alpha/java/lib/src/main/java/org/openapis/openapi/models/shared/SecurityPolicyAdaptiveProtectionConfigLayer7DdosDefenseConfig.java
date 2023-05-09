@@ -9,29 +9,32 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig - Configuration options for L7 DDoS detection.
+ * SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig - Configuration options for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
  */
 public class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig {
     /**
-     * If set to true, enables CAAP for L7 DDoS detection.
+     * If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig withEnable(Boolean enable) {
         this.enable = enable;
         return this;
     }
     
     /**
-     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+     * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleVisibility")
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibilityEnum ruleVisibility;
+
     public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig withRuleVisibility(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibilityEnum ruleVisibility) {
         this.ruleVisibility = ruleVisibility;
         return this;
     }
     
+    public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig(){}
 }

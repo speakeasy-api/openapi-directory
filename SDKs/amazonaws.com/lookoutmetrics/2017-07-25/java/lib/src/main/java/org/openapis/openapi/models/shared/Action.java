@@ -15,6 +15,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaConfiguration")
     public LambdaConfiguration lambdaConfiguration;
+
     public Action withLambdaConfiguration(LambdaConfiguration lambdaConfiguration) {
         this.lambdaConfiguration = lambdaConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNSConfiguration")
     public SNSConfiguration snsConfiguration;
+
     public Action withSNSConfiguration(SNSConfiguration snsConfiguration) {
         this.snsConfiguration = snsConfiguration;
         return this;
     }
     
+    public Action(){}
 }

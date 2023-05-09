@@ -15,6 +15,7 @@ public class ListAnomalyDetectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorSummaryList")
     public AnomalyDetectorSummary[] anomalyDetectorSummaryList;
+
     public ListAnomalyDetectorsResponse withAnomalyDetectorSummaryList(AnomalyDetectorSummary[] anomalyDetectorSummaryList) {
         this.anomalyDetectorSummaryList = anomalyDetectorSummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListAnomalyDetectorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyDetectorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAnomalyDetectorsResponse(){}
 }

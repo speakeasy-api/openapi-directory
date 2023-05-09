@@ -15,6 +15,7 @@ public class ErrorRootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientImpacting")
     public Boolean clientImpacting;
+
     public ErrorRootCause withClientImpacting(Boolean clientImpacting) {
         this.clientImpacting = clientImpacting;
         return this;
@@ -23,9 +24,11 @@ public class ErrorRootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Services")
     public ErrorRootCauseService[] services;
+
     public ErrorRootCause withServices(ErrorRootCauseService[] services) {
         this.services = services;
         return this;
     }
     
+    public ErrorRootCause(){}
 }

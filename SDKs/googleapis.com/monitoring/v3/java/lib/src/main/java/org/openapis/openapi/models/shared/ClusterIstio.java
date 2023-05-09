@@ -18,6 +18,7 @@ public class ClusterIstio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public ClusterIstio withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -29,6 +30,7 @@ public class ClusterIstio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ClusterIstio withLocation(String location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class ClusterIstio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ClusterIstio withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -51,9 +54,11 @@ public class ClusterIstio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceNamespace")
     public String serviceNamespace;
+
     public ClusterIstio withServiceNamespace(String serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public ClusterIstio(){}
 }

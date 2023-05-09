@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateComponentOutput {
     @JsonProperty("component")
     public Component component;
+
     public CreateComponentOutput withComponent(Component component) {
         this.component = component;
         return this;
     }
     
+    public CreateComponentOutput(@JsonProperty("component") Component component) {
+        this.component = component;
+  }
 }

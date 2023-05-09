@@ -64,10 +64,8 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeDatabaseUserPasswordResponse res = new org.openapis.openapi.models.operations.ChangeDatabaseUserPasswordResponse() {{
+        org.openapis.openapi.models.operations.ChangeDatabaseUserPasswordResponse res = new org.openapis.openapi.models.operations.ChangeDatabaseUserPasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -104,10 +102,8 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeDatabaseUserStatusResponse res = new org.openapis.openapi.models.operations.ChangeDatabaseUserStatusResponse() {{
+        org.openapis.openapi.models.operations.ChangeDatabaseUserStatusResponse res = new org.openapis.openapi.models.operations.ChangeDatabaseUserStatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -138,11 +134,9 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMySqlDatabaseResponse res = new org.openapis.openapi.models.operations.CreateMySqlDatabaseResponse() {{
+        org.openapis.openapi.models.operations.CreateMySqlDatabaseResponse res = new org.openapis.openapi.models.operations.CreateMySqlDatabaseResponse(contentType, httpRes.statusCode()) {{
             badRequestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -187,11 +181,9 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMySqlUserResponse res = new org.openapis.openapi.models.operations.CreateMySqlUserResponse() {{
+        org.openapis.openapi.models.operations.CreateMySqlUserResponse res = new org.openapis.openapi.models.operations.CreateMySqlUserResponse(contentType, httpRes.statusCode()) {{
             badRequestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -233,10 +225,8 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatabaseResponse res = new org.openapis.openapi.models.operations.DeleteDatabaseResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatabaseResponse res = new org.openapis.openapi.models.operations.DeleteDatabaseResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -272,10 +262,8 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatabaseUserResponse res = new org.openapis.openapi.models.operations.DeleteDatabaseUserResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatabaseUserResponse res = new org.openapis.openapi.models.operations.DeleteDatabaseUserResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -310,11 +298,9 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatabaseUsersResponse res = new org.openapis.openapi.models.operations.GetDatabaseUsersResponse() {{
+        org.openapis.openapi.models.operations.GetDatabaseUsersResponse res = new org.openapis.openapi.models.operations.GetDatabaseUsersResponse(contentType, httpRes.statusCode()) {{
             mySqlUsers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,11 +340,9 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMySqlDatabaseResponse res = new org.openapis.openapi.models.operations.GetMySqlDatabaseResponse() {{
+        org.openapis.openapi.models.operations.GetMySqlDatabaseResponse res = new org.openapis.openapi.models.operations.GetMySqlDatabaseResponse(contentType, httpRes.statusCode()) {{
             mySqlDatabase = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,11 +382,9 @@ public class MySqlDatabases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMySqlDatabasesResponse res = new org.openapis.openapi.models.operations.GetMySqlDatabasesResponse() {{
+        org.openapis.openapi.models.operations.GetMySqlDatabasesResponse res = new org.openapis.openapi.models.operations.GetMySqlDatabasesResponse(contentType, httpRes.statusCode()) {{
             mySqlDatabases = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

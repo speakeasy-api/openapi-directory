@@ -15,6 +15,7 @@ public class ListEnvironmentProvisionedResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEnvironmentProvisionedResourcesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListEnvironmentProvisionedResourcesOutput {
     
     @JsonProperty("provisionedResources")
     public ProvisionedResource[] provisionedResources;
+
     public ListEnvironmentProvisionedResourcesOutput withProvisionedResources(ProvisionedResource[] provisionedResources) {
         this.provisionedResources = provisionedResources;
         return this;
     }
     
+    public ListEnvironmentProvisionedResourcesOutput(@JsonProperty("provisionedResources") ProvisionedResource[] provisionedResources) {
+        this.provisionedResources = provisionedResources;
+  }
 }

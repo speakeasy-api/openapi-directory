@@ -18,6 +18,7 @@ public class FutureReservationsAggregatedListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FutureReservationsAggregatedListResponseWarningCodeEnum code;
+
     public FutureReservationsAggregatedListResponseWarning withCode(FutureReservationsAggregatedListResponseWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class FutureReservationsAggregatedListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public FutureReservationsAggregatedListResponseWarningData[] data;
+
     public FutureReservationsAggregatedListResponseWarning withData(FutureReservationsAggregatedListResponseWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class FutureReservationsAggregatedListResponseWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FutureReservationsAggregatedListResponseWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FutureReservationsAggregatedListResponseWarning(){}
 }

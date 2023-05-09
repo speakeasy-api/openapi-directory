@@ -15,6 +15,7 @@ public class TagResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public TagResourceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public TagResourceRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceRequestBody(@JsonProperty("tags") org.openapis.openapi.models.shared.Tag[] tags) {
+        this.tags = tags;
+  }
 }

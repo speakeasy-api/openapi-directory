@@ -15,6 +15,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public DescribeThingGroupResponse withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -23,6 +24,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryString")
     public String queryString;
+
     public DescribeThingGroupResponse withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -31,6 +33,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public DescribeThingGroupResponse withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
@@ -39,6 +42,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DynamicGroupStatusEnum status;
+
     public DescribeThingGroupResponse withStatus(DynamicGroupStatusEnum status) {
         this.status = status;
         return this;
@@ -47,6 +51,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupArn")
     public String thingGroupArn;
+
     public DescribeThingGroupResponse withThingGroupArn(String thingGroupArn) {
         this.thingGroupArn = thingGroupArn;
         return this;
@@ -55,6 +60,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupId")
     public String thingGroupId;
+
     public DescribeThingGroupResponse withThingGroupId(String thingGroupId) {
         this.thingGroupId = thingGroupId;
         return this;
@@ -63,6 +69,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupMetadata")
     public ThingGroupMetadata thingGroupMetadata;
+
     public DescribeThingGroupResponse withThingGroupMetadata(ThingGroupMetadata thingGroupMetadata) {
         this.thingGroupMetadata = thingGroupMetadata;
         return this;
@@ -71,6 +78,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupName")
     public String thingGroupName;
+
     public DescribeThingGroupResponse withThingGroupName(String thingGroupName) {
         this.thingGroupName = thingGroupName;
         return this;
@@ -79,6 +87,7 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupProperties")
     public ThingGroupProperties thingGroupProperties;
+
     public DescribeThingGroupResponse withThingGroupProperties(ThingGroupProperties thingGroupProperties) {
         this.thingGroupProperties = thingGroupProperties;
         return this;
@@ -87,9 +96,11 @@ public class DescribeThingGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public DescribeThingGroupResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DescribeThingGroupResponse(){}
 }

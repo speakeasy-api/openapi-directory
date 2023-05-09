@@ -14,6 +14,7 @@ public class GetCreditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creditable_id")
     public String creditableId;
+
     public GetCreditsRequest withCreditableId(String creditableId) {
         this.creditableId = creditableId;
         return this;
@@ -27,6 +28,7 @@ public class GetCreditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creditable_type")
     public GetCreditsCreditableTypeEnum creditableType;
+
     public GetCreditsRequest withCreditableType(GetCreditsCreditableTypeEnum creditableType) {
         this.creditableType = creditableType;
         return this;
@@ -40,6 +42,7 @@ public class GetCreditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
     public String[] ids;
+
     public GetCreditsRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -52,6 +55,7 @@ public class GetCreditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
     public Long pageNumber;
+
     public GetCreditsRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -64,6 +68,7 @@ public class GetCreditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetCreditsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -76,9 +81,11 @@ public class GetCreditsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
     public GetCreditsSortEnum[] sort;
+
     public GetCreditsRequest withSort(GetCreditsSortEnum[] sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetCreditsRequest(){}
 }

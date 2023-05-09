@@ -15,9 +15,11 @@ public class ReshardingStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SlotMigration")
     public SlotMigration slotMigration;
+
     public ReshardingStatus withSlotMigration(SlotMigration slotMigration) {
         this.slotMigration = slotMigration;
         return this;
     }
     
+    public ReshardingStatus(){}
 }

@@ -18,6 +18,7 @@ public class OBWriteInternationalConsentResponse6DataInitiationExchangeRateInfor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContractIdentification")
     public String contractIdentification;
+
     public OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformation withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalConsentResponse6DataInitiationExchangeRateInfor
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExchangeRate")
     public Double exchangeRate;
+
     public OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformation withExchangeRate(Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalConsentResponse6DataInitiationExchangeRateInfor
      */
     @JsonProperty("RateType")
     public OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum rateType;
+
     public OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformation withRateType(OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -49,9 +52,14 @@ public class OBWriteInternationalConsentResponse6DataInitiationExchangeRateInfor
      */
     @JsonProperty("UnitCurrency")
     public String unitCurrency;
+
     public OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformation withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformation(@JsonProperty("RateType") OBWriteInternationalConsentResponse6DataInitiationExchangeRateInformationRateTypeEnum rateType, @JsonProperty("UnitCurrency") String unitCurrency) {
+        this.rateType = rateType;
+        this.unitCurrency = unitCurrency;
+  }
 }

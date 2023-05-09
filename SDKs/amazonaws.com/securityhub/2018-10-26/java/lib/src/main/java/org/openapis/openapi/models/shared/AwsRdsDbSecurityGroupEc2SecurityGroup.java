@@ -15,6 +15,7 @@ public class AwsRdsDbSecurityGroupEc2SecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SecurityGroupId")
     public String ec2SecurityGroupId;
+
     public AwsRdsDbSecurityGroupEc2SecurityGroup withEc2SecurityGroupId(String ec2SecurityGroupId) {
         this.ec2SecurityGroupId = ec2SecurityGroupId;
         return this;
@@ -23,6 +24,7 @@ public class AwsRdsDbSecurityGroupEc2SecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SecurityGroupName")
     public String ec2SecurityGroupName;
+
     public AwsRdsDbSecurityGroupEc2SecurityGroup withEc2SecurityGroupName(String ec2SecurityGroupName) {
         this.ec2SecurityGroupName = ec2SecurityGroupName;
         return this;
@@ -31,6 +33,7 @@ public class AwsRdsDbSecurityGroupEc2SecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2SecurityGroupOwnerId")
     public String ec2SecurityGroupOwnerId;
+
     public AwsRdsDbSecurityGroupEc2SecurityGroup withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
         this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
         return this;
@@ -39,9 +42,11 @@ public class AwsRdsDbSecurityGroupEc2SecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbSecurityGroupEc2SecurityGroup withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRdsDbSecurityGroupEc2SecurityGroup(){}
 }

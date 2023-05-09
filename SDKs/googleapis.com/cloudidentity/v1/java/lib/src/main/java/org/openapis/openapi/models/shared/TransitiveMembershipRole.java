@@ -18,9 +18,11 @@ public class TransitiveMembershipRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public TransitiveMembershipRole withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public TransitiveMembershipRole(){}
 }

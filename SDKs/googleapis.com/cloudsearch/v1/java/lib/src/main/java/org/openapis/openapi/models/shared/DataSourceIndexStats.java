@@ -18,6 +18,7 @@ public class DataSourceIndexStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public Date date;
+
     public DataSourceIndexStats withDate(Date date) {
         this.date = date;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceIndexStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCountByStatus")
     public ItemCountByStatus[] itemCountByStatus;
+
     public DataSourceIndexStats withItemCountByStatus(ItemCountByStatus[] itemCountByStatus) {
         this.itemCountByStatus = itemCountByStatus;
         return this;
     }
     
+    public DataSourceIndexStats(){}
 }

@@ -15,6 +15,7 @@ public class Id {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Id withId(Long id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class Id {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacy_id")
     public Long legacyId;
+
     public Id withLegacyId(Long legacyId) {
         this.legacyId = legacyId;
         return this;
     }
     
+    public Id(){}
 }

@@ -40,7 +40,6 @@ public class LocationEndpoints {
      * Unlike the `/find_place_prefix` endpoint, complete words are required here. You can search for cities,
      * mountains, lakes, countries, ZIP codes, etc. The response can contain multiple places, sorted by relevance.
      * You can then identify the one you want by coordinates, country, or the administrative area.
-     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -67,13 +66,11 @@ public class LocationEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindPlacesFindPlacesGetResponse res = new org.openapis.openapi.models.operations.FindPlacesFindPlacesGetResponse() {{
+        org.openapis.openapi.models.operations.FindPlacesFindPlacesGetResponse res = new org.openapis.openapi.models.operations.FindPlacesFindPlacesGetResponse(contentType, httpRes.statusCode()) {{
             findPlacesModels = null;
             generalRequestError = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,7 +105,6 @@ public class LocationEndpoints {
      * You can use this endpoint to obtain `place_id` of the location you want, to be used in `point` endpoint. The response also contains detailed information about the location, such as coordinates, timezone and the country the place belongs to.
      * 
      * Unlike the `/find_places` endpoint, you should only specify the prefix of the place you are looking for. This is particularly useful for autocomplete forms. You can search for cities, mountains, lakes, countries, ZIP codes, etc. The response can contain multiple places, sorted by relevance. You can then identify the one you want by coordinates, country, or the administrative area.
-     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -135,13 +131,11 @@ public class LocationEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetResponse res = new org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetResponse() {{
+        org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetResponse res = new org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetResponse(contentType, httpRes.statusCode()) {{
             findPlacesModels = null;
             generalRequestError = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,7 +170,6 @@ public class LocationEndpoints {
      * You can use this endpoint to find the nearest place from given coordinates.
      * 
      * *Note: If you specify coordinates of a secluded place (e.g. middle of the ocean), the nearest point can be very far from the coordinates.*
-     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -203,13 +196,11 @@ public class LocationEndpoints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetResponse res = new org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetResponse() {{
+        org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetResponse res = new org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetResponse(contentType, httpRes.statusCode()) {{
             findPlacesModel = null;
             generalRequestError = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -17,6 +17,7 @@ public class SFXSearchResults {
      */
     @JsonProperty("data")
     public Sfx[] data;
+
     public SFXSearchResults withData(Sfx[] data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class SFXSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SFXSearchResults withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +41,7 @@ public class SFXSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public SFXSearchResults withPage(Long page) {
         this.page = page;
         return this;
@@ -50,6 +53,7 @@ public class SFXSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public SFXSearchResults withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -60,6 +64,7 @@ public class SFXSearchResults {
      */
     @JsonProperty("search_id")
     public String searchId;
+
     public SFXSearchResults withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -70,9 +75,15 @@ public class SFXSearchResults {
      */
     @JsonProperty("total_count")
     public Long totalCount;
+
     public SFXSearchResults withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public SFXSearchResults(@JsonProperty("data") Sfx[] data, @JsonProperty("search_id") String searchId, @JsonProperty("total_count") Long totalCount) {
+        this.data = data;
+        this.searchId = searchId;
+        this.totalCount = totalCount;
+  }
 }

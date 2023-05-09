@@ -18,6 +18,7 @@ public class ListContactGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactGroups")
     public ContactGroup[] contactGroups;
+
     public ListContactGroupsResponse withContactGroups(ContactGroup[] contactGroups) {
         this.contactGroups = contactGroups;
         return this;
@@ -29,6 +30,7 @@ public class ListContactGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListContactGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,6 +42,7 @@ public class ListContactGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextSyncToken")
     public String nextSyncToken;
+
     public ListContactGroupsResponse withNextSyncToken(String nextSyncToken) {
         this.nextSyncToken = nextSyncToken;
         return this;
@@ -51,9 +54,11 @@ public class ListContactGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Integer totalItems;
+
     public ListContactGroupsResponse withTotalItems(Integer totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public ListContactGroupsResponse(){}
 }

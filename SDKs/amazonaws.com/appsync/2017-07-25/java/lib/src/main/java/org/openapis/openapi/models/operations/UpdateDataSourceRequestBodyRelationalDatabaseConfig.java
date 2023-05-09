@@ -15,6 +15,7 @@ public class UpdateDataSourceRequestBodyRelationalDatabaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdsHttpEndpointConfig")
     public org.openapis.openapi.models.shared.RdsHttpEndpointConfig rdsHttpEndpointConfig;
+
     public UpdateDataSourceRequestBodyRelationalDatabaseConfig withRdsHttpEndpointConfig(org.openapis.openapi.models.shared.RdsHttpEndpointConfig rdsHttpEndpointConfig) {
         this.rdsHttpEndpointConfig = rdsHttpEndpointConfig;
         return this;
@@ -23,9 +24,11 @@ public class UpdateDataSourceRequestBodyRelationalDatabaseConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseSourceType")
     public org.openapis.openapi.models.shared.RelationalDatabaseSourceTypeEnum relationalDatabaseSourceType;
+
     public UpdateDataSourceRequestBodyRelationalDatabaseConfig withRelationalDatabaseSourceType(org.openapis.openapi.models.shared.RelationalDatabaseSourceTypeEnum relationalDatabaseSourceType) {
         this.relationalDatabaseSourceType = relationalDatabaseSourceType;
         return this;
     }
     
+    public UpdateDataSourceRequestBodyRelationalDatabaseConfig(){}
 }

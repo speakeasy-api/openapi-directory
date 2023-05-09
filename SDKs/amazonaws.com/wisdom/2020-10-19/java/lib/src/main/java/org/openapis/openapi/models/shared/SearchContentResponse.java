@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchContentResponse {
     @JsonProperty("contentSummaries")
     public ContentSummary[] contentSummaries;
+
     public SearchContentResponse withContentSummaries(ContentSummary[] contentSummaries) {
         this.contentSummaries = contentSummaries;
         return this;
@@ -22,9 +23,13 @@ public class SearchContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchContentResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchContentResponse(@JsonProperty("contentSummaries") ContentSummary[] contentSummaries) {
+        this.contentSummaries = contentSummaries;
+  }
 }

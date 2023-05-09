@@ -59,11 +59,9 @@ public class Two2UserTripsOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TripsTripDetailsResponse res = new org.openapis.openapi.models.operations.TripsTripDetailsResponse() {{
+        org.openapis.openapi.models.operations.TripsTripDetailsResponse res = new org.openapis.openapi.models.operations.TripsTripDetailsResponse(contentType, httpRes.statusCode()) {{
             tripsTripDetails200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

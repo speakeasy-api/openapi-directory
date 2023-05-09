@@ -15,6 +15,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutomatedDiscoveryInformation")
     public AutomatedDiscoveryInformation automatedDiscoveryInformation;
+
     public LicenseConfiguration withAutomatedDiscoveryInformation(AutomatedDiscoveryInformation automatedDiscoveryInformation) {
         this.automatedDiscoveryInformation = automatedDiscoveryInformation;
         return this;
@@ -23,6 +24,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedLicenseSummaryList")
     public ConsumedLicenseSummary[] consumedLicenseSummaryList;
+
     public LicenseConfiguration withConsumedLicenseSummaryList(ConsumedLicenseSummary[] consumedLicenseSummaryList) {
         this.consumedLicenseSummaryList = consumedLicenseSummaryList;
         return this;
@@ -31,6 +33,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedLicenses")
     public Long consumedLicenses;
+
     public LicenseConfiguration withConsumedLicenses(Long consumedLicenses) {
         this.consumedLicenses = consumedLicenses;
         return this;
@@ -39,6 +42,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public LicenseConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisassociateWhenNotFound")
     public Boolean disassociateWhenNotFound;
+
     public LicenseConfiguration withDisassociateWhenNotFound(Boolean disassociateWhenNotFound) {
         this.disassociateWhenNotFound = disassociateWhenNotFound;
         return this;
@@ -55,6 +60,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConfigurationArn")
     public String licenseConfigurationArn;
+
     public LicenseConfiguration withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
@@ -63,6 +69,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConfigurationId")
     public String licenseConfigurationId;
+
     public LicenseConfiguration withLicenseConfigurationId(String licenseConfigurationId) {
         this.licenseConfigurationId = licenseConfigurationId;
         return this;
@@ -71,6 +78,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseCount")
     public Long licenseCount;
+
     public LicenseConfiguration withLicenseCount(Long licenseCount) {
         this.licenseCount = licenseCount;
         return this;
@@ -79,6 +87,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseCountHardLimit")
     public Boolean licenseCountHardLimit;
+
     public LicenseConfiguration withLicenseCountHardLimit(Boolean licenseCountHardLimit) {
         this.licenseCountHardLimit = licenseCountHardLimit;
         return this;
@@ -87,6 +96,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseCountingType")
     public LicenseCountingTypeEnum licenseCountingType;
+
     public LicenseConfiguration withLicenseCountingType(LicenseCountingTypeEnum licenseCountingType) {
         this.licenseCountingType = licenseCountingType;
         return this;
@@ -95,6 +105,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseRules")
     public String[] licenseRules;
+
     public LicenseConfiguration withLicenseRules(String[] licenseRules) {
         this.licenseRules = licenseRules;
         return this;
@@ -103,6 +114,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedResourceSummaryList")
     public ManagedResourceSummary[] managedResourceSummaryList;
+
     public LicenseConfiguration withManagedResourceSummaryList(ManagedResourceSummary[] managedResourceSummaryList) {
         this.managedResourceSummaryList = managedResourceSummaryList;
         return this;
@@ -111,6 +123,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public LicenseConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -119,6 +132,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerAccountId")
     public String ownerAccountId;
+
     public LicenseConfiguration withOwnerAccountId(String ownerAccountId) {
         this.ownerAccountId = ownerAccountId;
         return this;
@@ -127,6 +141,7 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductInformationList")
     public ProductInformation[] productInformationList;
+
     public LicenseConfiguration withProductInformationList(ProductInformation[] productInformationList) {
         this.productInformationList = productInformationList;
         return this;
@@ -135,9 +150,11 @@ public class LicenseConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public LicenseConfiguration withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public LicenseConfiguration(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePendingMaintenanceActionsResponse {
     
     public String contentType;
+
     public DescribePendingMaintenanceActionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePendingMaintenanceActionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePendingMaintenanceActionsResponse describePendingMaintenanceActionsResponse;
+
     public DescribePendingMaintenanceActionsResponse withDescribePendingMaintenanceActionsResponse(org.openapis.openapi.models.shared.DescribePendingMaintenanceActionsResponse describePendingMaintenanceActionsResponse) {
         this.describePendingMaintenanceActionsResponse = describePendingMaintenanceActionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePendingMaintenanceActionsResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DescribePendingMaintenanceActionsResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribePendingMaintenanceActionsResponse {
     
     
     public Integer statusCode;
+
     public DescribePendingMaintenanceActionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribePendingMaintenanceActionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePendingMaintenanceActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribePendingMaintenanceActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

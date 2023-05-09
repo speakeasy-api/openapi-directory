@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SynthesizeSpeechConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectsProfileId")
     public String[] effectsProfileId;
+
     public GoogleCloudDialogflowV2SynthesizeSpeechConfig withEffectsProfileId(String[] effectsProfileId) {
         this.effectsProfileId = effectsProfileId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2SynthesizeSpeechConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pitch")
     public Double pitch;
+
     public GoogleCloudDialogflowV2SynthesizeSpeechConfig withPitch(Double pitch) {
         this.pitch = pitch;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2SynthesizeSpeechConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speakingRate")
     public Double speakingRate;
+
     public GoogleCloudDialogflowV2SynthesizeSpeechConfig withSpeakingRate(Double speakingRate) {
         this.speakingRate = speakingRate;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2SynthesizeSpeechConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice")
     public GoogleCloudDialogflowV2VoiceSelectionParams voice;
+
     public GoogleCloudDialogflowV2SynthesizeSpeechConfig withVoice(GoogleCloudDialogflowV2VoiceSelectionParams voice) {
         this.voice = voice;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2SynthesizeSpeechConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeGainDb")
     public Double volumeGainDb;
+
     public GoogleCloudDialogflowV2SynthesizeSpeechConfig withVolumeGainDb(Double volumeGainDb) {
         this.volumeGainDb = volumeGainDb;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SynthesizeSpeechConfig(){}
 }

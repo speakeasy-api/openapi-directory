@@ -15,9 +15,11 @@ public class GetMediaOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Payload")
     public String payload;
+
     public GetMediaOutput withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public GetMediaOutput(){}
 }

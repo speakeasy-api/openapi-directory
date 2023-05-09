@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcceptAddressTransferRequest {
     
     public String address;
+
     public AcceptAddressTransferRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class AcceptAddressTransferRequest {
     
     
     public Boolean dryRun;
+
     public AcceptAddressTransferRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class AcceptAddressTransferRequest {
     
     
     public AcceptAddressTransferRequestTagSpecifications[] tagSpecifications;
+
     public AcceptAddressTransferRequest withTagSpecifications(AcceptAddressTransferRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public AcceptAddressTransferRequest(@JsonProperty("Address") String address) {
+        this.address = address;
+  }
 }

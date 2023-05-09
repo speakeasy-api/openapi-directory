@@ -18,9 +18,11 @@ public class CreateGovCloudAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateAccountStatus")
     public CreateAccountStatus createAccountStatus;
+
     public CreateGovCloudAccountResponse withCreateAccountStatus(CreateAccountStatus createAccountStatus) {
         this.createAccountStatus = createAccountStatus;
         return this;
     }
     
+    public CreateGovCloudAccountResponse(){}
 }

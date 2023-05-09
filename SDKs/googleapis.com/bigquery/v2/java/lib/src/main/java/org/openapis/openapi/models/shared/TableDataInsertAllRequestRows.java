@@ -15,6 +15,7 @@ public class TableDataInsertAllRequestRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertId")
     public String insertId;
+
     public TableDataInsertAllRequestRows withInsertId(String insertId) {
         this.insertId = insertId;
         return this;
@@ -26,9 +27,11 @@ public class TableDataInsertAllRequestRows {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("json")
     public java.util.Map<String, Object> json;
+
     public TableDataInsertAllRequestRows withJson(java.util.Map<String, Object> json) {
         this.json = json;
         return this;
     }
     
+    public TableDataInsertAllRequestRows(){}
 }

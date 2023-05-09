@@ -12,6 +12,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line")
     public String addressLine;
+
     public UpdateInvestorUpdateRequestBodyForInvestorAddress withAddressLine(String addressLine) {
         this.addressLine = addressLine;
         return this;
@@ -20,6 +21,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public UpdateInvestorUpdateRequestBodyForInvestorAddress withCity(String city) {
         this.city = city;
         return this;
@@ -31,6 +33,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public UpdateInvestorUpdateRequestBodyForInvestorAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -39,6 +42,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public UpdateInvestorUpdateRequestBodyForInvestorAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -47,6 +51,7 @@ public class UpdateInvestorUpdateRequestBodyForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public UpdateInvestorUpdateRequestBodyForInvestorAddress withState(String state) {
         this.state = state;
         return this;
@@ -55,9 +60,11 @@ public class UpdateInvestorUpdateRequestBodyForInvestorAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_name")
     public String streetName;
+
     public UpdateInvestorUpdateRequestBodyForInvestorAddress withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
     }
     
+    public UpdateInvestorUpdateRequestBodyForInvestorAddress(){}
 }

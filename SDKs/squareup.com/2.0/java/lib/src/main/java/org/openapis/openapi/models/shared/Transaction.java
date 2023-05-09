@@ -31,6 +31,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public Transaction withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -42,6 +43,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Transaction withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -53,6 +55,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Transaction withId(String id) {
         this.id = id;
         return this;
@@ -64,6 +67,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Transaction withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -75,6 +79,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public Transaction withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -86,6 +91,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public String product;
+
     public Transaction withProduct(String product) {
         this.product = product;
         return this;
@@ -99,6 +105,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public Transaction withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -110,6 +117,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunds")
     public Refund[] refunds;
+
     public Transaction withRefunds(Refund[] refunds) {
         this.refunds = refunds;
         return this;
@@ -148,6 +156,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public Transaction withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -159,9 +168,11 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenders")
     public Tender[] tenders;
+
     public Transaction withTenders(Tender[] tenders) {
         this.tenders = tenders;
         return this;
     }
     
+    public Transaction(){}
 }

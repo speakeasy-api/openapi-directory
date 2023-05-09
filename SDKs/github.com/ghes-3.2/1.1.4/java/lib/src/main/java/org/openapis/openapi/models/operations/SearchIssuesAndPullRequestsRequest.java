@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchIssuesAndPullRequestsRequest {
@@ -12,6 +13,7 @@ public class SearchIssuesAndPullRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.OrderEnum order;
+
     public SearchIssuesAndPullRequestsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
         this.order = order;
         return this;
@@ -22,6 +24,7 @@ public class SearchIssuesAndPullRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchIssuesAndPullRequestsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class SearchIssuesAndPullRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchIssuesAndPullRequestsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,6 +46,7 @@ public class SearchIssuesAndPullRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchIssuesAndPullRequestsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -52,9 +57,13 @@ public class SearchIssuesAndPullRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public SearchIssuesAndPullRequestsSortEnum sort;
+
     public SearchIssuesAndPullRequestsRequest withSort(SearchIssuesAndPullRequestsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public SearchIssuesAndPullRequestsRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

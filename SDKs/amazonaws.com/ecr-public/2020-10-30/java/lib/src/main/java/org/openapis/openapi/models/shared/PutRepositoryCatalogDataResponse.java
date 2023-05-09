@@ -15,9 +15,11 @@ public class PutRepositoryCatalogDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogData")
     public RepositoryCatalogData catalogData;
+
     public PutRepositoryCatalogDataResponse withCatalogData(RepositoryCatalogData catalogData) {
         this.catalogData = catalogData;
         return this;
     }
     
+    public PutRepositoryCatalogDataResponse(){}
 }

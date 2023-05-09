@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistrictEventsSimpleResponse {
     
     public String contentType;
+
     public GetDistrictEventsSimpleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDistrictEventsSimpleResponse {
      */
     
     public org.openapis.openapi.models.shared.EventSimple[] eventSimples;
+
     public GetDistrictEventsSimpleResponse withEventSimples(org.openapis.openapi.models.shared.EventSimple[] eventSimples) {
         this.eventSimples = eventSimples;
         return this;
@@ -26,6 +29,7 @@ public class GetDistrictEventsSimpleResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetDistrictEventsSimpleResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetDistrictEventsSimpleResponse {
     
     
     public Integer statusCode;
+
     public GetDistrictEventsSimpleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetDistrictEventsSimpleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistrictEventsSimpleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDistrictEventsSimpleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

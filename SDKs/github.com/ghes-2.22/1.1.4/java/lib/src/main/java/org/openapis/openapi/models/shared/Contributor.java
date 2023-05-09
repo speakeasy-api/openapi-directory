@@ -15,6 +15,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public Contributor withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -22,6 +23,7 @@ public class Contributor {
     
     @JsonProperty("contributions")
     public Long contributions;
+
     public Contributor withContributions(Long contributions) {
         this.contributions = contributions;
         return this;
@@ -30,6 +32,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Contributor withEmail(String email) {
         this.email = email;
         return this;
@@ -38,6 +41,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public Contributor withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -46,6 +50,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public Contributor withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -54,6 +59,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("following_url")
     public String followingUrl;
+
     public Contributor withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -62,6 +68,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public Contributor withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -70,6 +77,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public Contributor withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -78,6 +86,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Contributor withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -86,6 +95,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Contributor withId(Long id) {
         this.id = id;
         return this;
@@ -94,6 +104,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public Contributor withLogin(String login) {
         this.login = login;
         return this;
@@ -102,6 +113,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Contributor withName(String name) {
         this.name = name;
         return this;
@@ -110,6 +122,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public Contributor withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -118,6 +131,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public Contributor withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -126,6 +140,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public Contributor withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -134,6 +149,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public Contributor withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -142,6 +158,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public Contributor withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -150,6 +167,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public Contributor withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -158,6 +176,7 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public Contributor withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -165,6 +184,7 @@ public class Contributor {
     
     @JsonProperty("type")
     public String type;
+
     public Contributor withType(String type) {
         this.type = type;
         return this;
@@ -173,9 +193,14 @@ public class Contributor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Contributor withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Contributor(@JsonProperty("contributions") Long contributions, @JsonProperty("type") String type) {
+        this.contributions = contributions;
+        this.type = type;
+  }
 }

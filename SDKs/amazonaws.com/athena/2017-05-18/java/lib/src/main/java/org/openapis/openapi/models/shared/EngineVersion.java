@@ -15,6 +15,7 @@ public class EngineVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveEngineVersion")
     public String effectiveEngineVersion;
+
     public EngineVersion withEffectiveEngineVersion(String effectiveEngineVersion) {
         this.effectiveEngineVersion = effectiveEngineVersion;
         return this;
@@ -23,9 +24,11 @@ public class EngineVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectedEngineVersion")
     public String selectedEngineVersion;
+
     public EngineVersion withSelectedEngineVersion(String selectedEngineVersion) {
         this.selectedEngineVersion = selectedEngineVersion;
         return this;
     }
     
+    public EngineVersion(){}
 }

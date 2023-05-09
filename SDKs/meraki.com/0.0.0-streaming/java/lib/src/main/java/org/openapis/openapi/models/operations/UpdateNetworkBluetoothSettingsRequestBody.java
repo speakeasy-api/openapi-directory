@@ -15,6 +15,7 @@ public class UpdateNetworkBluetoothSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisingEnabled")
     public Boolean advertisingEnabled;
+
     public UpdateNetworkBluetoothSettingsRequestBody withAdvertisingEnabled(Boolean advertisingEnabled) {
         this.advertisingEnabled = advertisingEnabled;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkBluetoothSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("major")
     public Long major;
+
     public UpdateNetworkBluetoothSettingsRequestBody withMajor(Long major) {
         this.major = major;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkBluetoothSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorMinorAssignmentMode")
     public UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum majorMinorAssignmentMode;
+
     public UpdateNetworkBluetoothSettingsRequestBody withMajorMinorAssignmentMode(UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum majorMinorAssignmentMode) {
         this.majorMinorAssignmentMode = majorMinorAssignmentMode;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkBluetoothSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minor")
     public Long minor;
+
     public UpdateNetworkBluetoothSettingsRequestBody withMinor(Long minor) {
         this.minor = minor;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkBluetoothSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanningEnabled")
     public Boolean scanningEnabled;
+
     public UpdateNetworkBluetoothSettingsRequestBody withScanningEnabled(Boolean scanningEnabled) {
         this.scanningEnabled = scanningEnabled;
         return this;
@@ -70,9 +75,11 @@ public class UpdateNetworkBluetoothSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public UpdateNetworkBluetoothSettingsRequestBody withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public UpdateNetworkBluetoothSettingsRequestBody(){}
 }

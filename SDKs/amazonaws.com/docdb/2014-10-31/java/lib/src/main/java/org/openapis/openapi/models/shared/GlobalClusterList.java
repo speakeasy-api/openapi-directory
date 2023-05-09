@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GlobalClusterList {
     
     public String databaseName;
+
     public GlobalClusterList withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,6 +20,7 @@ public class GlobalClusterList {
     
     
     public Boolean deletionProtection;
+
     public GlobalClusterList withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -26,6 +28,7 @@ public class GlobalClusterList {
     
     
     public String engine;
+
     public GlobalClusterList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -33,6 +36,7 @@ public class GlobalClusterList {
     
     
     public String engineVersion;
+
     public GlobalClusterList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -40,6 +44,7 @@ public class GlobalClusterList {
     
     
     public String globalClusterArn;
+
     public GlobalClusterList withGlobalClusterArn(String globalClusterArn) {
         this.globalClusterArn = globalClusterArn;
         return this;
@@ -47,6 +52,7 @@ public class GlobalClusterList {
     
     
     public String globalClusterIdentifier;
+
     public GlobalClusterList withGlobalClusterIdentifier(String globalClusterIdentifier) {
         this.globalClusterIdentifier = globalClusterIdentifier;
         return this;
@@ -54,6 +60,7 @@ public class GlobalClusterList {
     
     
     public GlobalClusterMemberList[] globalClusterMembers;
+
     public GlobalClusterList withGlobalClusterMembers(GlobalClusterMemberList[] globalClusterMembers) {
         this.globalClusterMembers = globalClusterMembers;
         return this;
@@ -61,6 +68,7 @@ public class GlobalClusterList {
     
     
     public String globalClusterResourceId;
+
     public GlobalClusterList withGlobalClusterResourceId(String globalClusterResourceId) {
         this.globalClusterResourceId = globalClusterResourceId;
         return this;
@@ -68,6 +76,7 @@ public class GlobalClusterList {
     
     
     public String status;
+
     public GlobalClusterList withStatus(String status) {
         this.status = status;
         return this;
@@ -75,9 +84,11 @@ public class GlobalClusterList {
     
     
     public Boolean storageEncrypted;
+
     public GlobalClusterList withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
     }
     
+    public GlobalClusterList(){}
 }

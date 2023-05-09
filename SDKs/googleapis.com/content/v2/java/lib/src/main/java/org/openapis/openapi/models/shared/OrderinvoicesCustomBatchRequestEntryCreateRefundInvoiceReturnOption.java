@@ -15,6 +15,7 @@ public class OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption(){}
 }

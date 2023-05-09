@@ -15,6 +15,7 @@ public class MetadataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedTime")
     public String createdTime;
+
     public MetadataInfo withCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -23,6 +24,7 @@ public class MetadataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataValue")
     public String metadataValue;
+
     public MetadataInfo withMetadataValue(String metadataValue) {
         this.metadataValue = metadataValue;
         return this;
@@ -31,9 +33,11 @@ public class MetadataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OtherMetadataValueList")
     public OtherMetadataValueListItem[] otherMetadataValueList;
+
     public MetadataInfo withOtherMetadataValueList(OtherMetadataValueListItem[] otherMetadataValueList) {
         this.otherMetadataValueList = otherMetadataValueList;
         return this;
     }
     
+    public MetadataInfo(){}
 }

@@ -18,6 +18,7 @@ public class UserCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserCreation withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class UserCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstname")
     public String firstname;
+
     public UserCreation withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -40,6 +42,7 @@ public class UserCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastname")
     public String lastname;
+
     public UserCreation withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -51,6 +54,7 @@ public class UserCreation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public FlatLocalesEnum locale;
+
     public UserCreation withLocale(FlatLocalesEnum locale) {
         this.locale = locale;
         return this;
@@ -61,6 +65,7 @@ public class UserCreation {
      */
     @JsonProperty("password")
     public String password;
+
     public UserCreation withPassword(String password) {
         this.password = password;
         return this;
@@ -71,9 +76,14 @@ public class UserCreation {
      */
     @JsonProperty("username")
     public String username;
+
     public UserCreation withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UserCreation(@JsonProperty("username") String username, @JsonProperty("password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

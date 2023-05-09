@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse {
     
     public String contentType;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse {
     
     
     public Integer statusCode;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse {
      */
     
     public java.util.Map<String, Object> pullrequest;
+
     public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse withPullrequest(java.util.Map<String, Object> pullrequest) {
         this.pullrequest = pullrequest;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

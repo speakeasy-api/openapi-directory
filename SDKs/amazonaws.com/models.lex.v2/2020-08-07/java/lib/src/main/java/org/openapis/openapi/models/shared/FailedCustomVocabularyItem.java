@@ -15,6 +15,7 @@ public class FailedCustomVocabularyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public FailedCustomVocabularyItem withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class FailedCustomVocabularyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public FailedCustomVocabularyItem withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class FailedCustomVocabularyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public FailedCustomVocabularyItem withItemId(String itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public FailedCustomVocabularyItem(){}
 }

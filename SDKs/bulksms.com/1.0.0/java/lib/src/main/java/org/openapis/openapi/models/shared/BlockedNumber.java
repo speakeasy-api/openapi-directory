@@ -15,6 +15,7 @@ public class BlockedNumber {
      */
     @JsonProperty("id")
     public Double id;
+
     public BlockedNumber withId(Double id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class BlockedNumber {
     
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public BlockedNumber withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public BlockedNumber(@JsonProperty("id") Double id, @JsonProperty("phoneNumber") String phoneNumber) {
+        this.id = id;
+        this.phoneNumber = phoneNumber;
+  }
 }

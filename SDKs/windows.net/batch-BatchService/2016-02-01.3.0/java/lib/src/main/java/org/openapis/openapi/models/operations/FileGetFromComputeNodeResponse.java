@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FileGetFromComputeNodeResponse {
@@ -12,6 +13,7 @@ public class FileGetFromComputeNodeResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public FileGetFromComputeNodeResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class FileGetFromComputeNodeResponse {
     
     
     public String contentType;
+
     public FileGetFromComputeNodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FileGetFromComputeNodeResponse {
     
     
     public byte[] fileGetFromComputeNode200ApplicationJSONBinaryString;
+
     public FileGetFromComputeNodeResponse withFileGetFromComputeNode200ApplicationJSONBinaryString(byte[] fileGetFromComputeNode200ApplicationJSONBinaryString) {
         this.fileGetFromComputeNode200ApplicationJSONBinaryString = fileGetFromComputeNode200ApplicationJSONBinaryString;
         return this;
@@ -33,6 +37,7 @@ public class FileGetFromComputeNodeResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public FileGetFromComputeNodeResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class FileGetFromComputeNodeResponse {
     
     
     public Integer statusCode;
+
     public FileGetFromComputeNodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class FileGetFromComputeNodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FileGetFromComputeNodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FileGetFromComputeNodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

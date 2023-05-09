@@ -15,6 +15,7 @@ public class RegisterJobDefinitionRequestBodyNodeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mainNode")
     public Long mainNode;
+
     public RegisterJobDefinitionRequestBodyNodeProperties withMainNode(Long mainNode) {
         this.mainNode = mainNode;
         return this;
@@ -23,6 +24,7 @@ public class RegisterJobDefinitionRequestBodyNodeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeRangeProperties")
     public org.openapis.openapi.models.shared.NodeRangeProperty[] nodeRangeProperties;
+
     public RegisterJobDefinitionRequestBodyNodeProperties withNodeRangeProperties(org.openapis.openapi.models.shared.NodeRangeProperty[] nodeRangeProperties) {
         this.nodeRangeProperties = nodeRangeProperties;
         return this;
@@ -31,9 +33,11 @@ public class RegisterJobDefinitionRequestBodyNodeProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numNodes")
     public Long numNodes;
+
     public RegisterJobDefinitionRequestBodyNodeProperties withNumNodes(Long numNodes) {
         this.numNodes = numNodes;
         return this;
     }
     
+    public RegisterJobDefinitionRequestBodyNodeProperties(){}
 }

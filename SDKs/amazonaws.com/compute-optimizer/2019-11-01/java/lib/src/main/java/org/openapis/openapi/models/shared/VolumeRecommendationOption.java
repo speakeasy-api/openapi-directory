@@ -15,6 +15,7 @@ public class VolumeRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public VolumeConfiguration configuration;
+
     public VolumeRecommendationOption withConfiguration(VolumeConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -23,6 +24,7 @@ public class VolumeRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceRisk")
     public Double performanceRisk;
+
     public VolumeRecommendationOption withPerformanceRisk(Double performanceRisk) {
         this.performanceRisk = performanceRisk;
         return this;
@@ -31,6 +33,7 @@ public class VolumeRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public VolumeRecommendationOption withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -39,9 +42,11 @@ public class VolumeRecommendationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsOpportunity")
     public SavingsOpportunity savingsOpportunity;
+
     public VolumeRecommendationOption withSavingsOpportunity(SavingsOpportunity savingsOpportunity) {
         this.savingsOpportunity = savingsOpportunity;
         return this;
     }
     
+    public VolumeRecommendationOption(){}
 }

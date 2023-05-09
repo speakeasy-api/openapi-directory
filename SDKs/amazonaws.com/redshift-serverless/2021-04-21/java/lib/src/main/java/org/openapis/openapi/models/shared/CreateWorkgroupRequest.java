@@ -12,6 +12,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseCapacity")
     public Long baseCapacity;
+
     public CreateWorkgroupRequest withBaseCapacity(Long baseCapacity) {
         this.baseCapacity = baseCapacity;
         return this;
@@ -20,6 +21,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configParameters")
     public ConfigParameter[] configParameters;
+
     public CreateWorkgroupRequest withConfigParameters(ConfigParameter[] configParameters) {
         this.configParameters = configParameters;
         return this;
@@ -28,6 +30,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedVpcRouting")
     public Boolean enhancedVpcRouting;
+
     public CreateWorkgroupRequest withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -35,6 +38,7 @@ public class CreateWorkgroupRequest {
     
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public CreateWorkgroupRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -43,6 +47,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Long port;
+
     public CreateWorkgroupRequest withPort(Long port) {
         this.port = port;
         return this;
@@ -51,6 +56,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessible")
     public Boolean publiclyAccessible;
+
     public CreateWorkgroupRequest withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public CreateWorkgroupRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -67,6 +74,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateWorkgroupRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -75,6 +83,7 @@ public class CreateWorkgroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateWorkgroupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -82,9 +91,14 @@ public class CreateWorkgroupRequest {
     
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public CreateWorkgroupRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public CreateWorkgroupRequest(@JsonProperty("namespaceName") String namespaceName, @JsonProperty("workgroupName") String workgroupName) {
+        this.namespaceName = namespaceName;
+        this.workgroupName = workgroupName;
+  }
 }

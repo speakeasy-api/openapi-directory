@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentMethodStrongRequest {
@@ -12,6 +13,7 @@ public class UpdatePaymentMethodStrongRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvUpdatePaymentStrongRequest itvUpdatePaymentStrongRequest;
+
     public UpdatePaymentMethodStrongRequest withItvUpdatePaymentStrongRequest(org.openapis.openapi.models.shared.ItvUpdatePaymentStrongRequest itvUpdatePaymentStrongRequest) {
         this.itvUpdatePaymentStrongRequest = itvUpdatePaymentStrongRequest;
         return this;
@@ -32,6 +34,7 @@ public class UpdatePaymentMethodStrongRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public UpdatePaymentMethodStrongRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class UpdatePaymentMethodStrongRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public UpdatePaymentMethodStrongRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public UpdatePaymentMethodStrongRequest(@JsonProperty("ItvUpdatePaymentStrongRequest") org.openapis.openapi.models.shared.ItvUpdatePaymentStrongRequest itvUpdatePaymentStrongRequest, @JsonProperty("platform") String platform) {
+        this.itvUpdatePaymentStrongRequest = itvUpdatePaymentStrongRequest;
+        this.platform = platform;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsUpdateAvatarRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public AppsUpdateAvatarRequestBody requestBody;
+
     public AppsUpdateAvatarRequest withRequestBody(AppsUpdateAvatarRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class AppsUpdateAvatarRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AppsUpdateAvatarRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,9 +32,14 @@ public class AppsUpdateAvatarRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AppsUpdateAvatarRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public AppsUpdateAvatarRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+  }
 }

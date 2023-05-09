@@ -18,6 +18,7 @@ public class PlayerLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlayerLevel withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class PlayerLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public Integer level;
+
     public PlayerLevel withLevel(Integer level) {
         this.level = level;
         return this;
@@ -40,6 +42,7 @@ public class PlayerLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxExperiencePoints")
     public String maxExperiencePoints;
+
     public PlayerLevel withMaxExperiencePoints(String maxExperiencePoints) {
         this.maxExperiencePoints = maxExperiencePoints;
         return this;
@@ -51,9 +54,11 @@ public class PlayerLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minExperiencePoints")
     public String minExperiencePoints;
+
     public PlayerLevel withMinExperiencePoints(String minExperiencePoints) {
         this.minExperiencePoints = minExperiencePoints;
         return this;
     }
     
+    public PlayerLevel(){}
 }

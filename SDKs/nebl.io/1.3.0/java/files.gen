@@ -196,4 +196,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/SendTokenRequestTo.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetFaucetResponseData.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetFaucetResponse.java
+docs/sdk/README.md
+docs/insight/README.md
+docs/jsonrpc/README.md
+docs/ntp1/README.md
+docs/testnetfaucet/README.md
+docs/testnetinsight/README.md
+docs/testnetntp1/README.md
 USAGE.md

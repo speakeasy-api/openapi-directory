@@ -15,6 +15,7 @@ public class Hypervisor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Host")
     public String host;
+
     public Hypervisor withHost(String host) {
         this.host = host;
         return this;
@@ -23,6 +24,7 @@ public class Hypervisor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public Hypervisor withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
@@ -31,6 +33,7 @@ public class Hypervisor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public Hypervisor withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -39,6 +42,7 @@ public class Hypervisor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Hypervisor withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class Hypervisor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public HypervisorStateEnum state;
+
     public Hypervisor withState(HypervisorStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Hypervisor(){}
 }

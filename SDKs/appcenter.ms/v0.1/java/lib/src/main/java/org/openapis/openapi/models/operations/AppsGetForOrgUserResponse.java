@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsGetForOrgUserResponse {
     
     public String contentType;
+
     public AppsGetForOrgUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsGetForOrgUserResponse {
     
     
     public Integer statusCode;
+
     public AppsGetForOrgUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsGetForOrgUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsGetForOrgUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsGetForOrgUserResponse {
      */
     
     public AppsGetForOrgUser200ApplicationJSON[] appsGetForOrgUser200ApplicationJSONAnies;
+
     public AppsGetForOrgUserResponse withAppsGetForOrgUser200ApplicationJSONAnies(AppsGetForOrgUser200ApplicationJSON[] appsGetForOrgUser200ApplicationJSONAnies) {
         this.appsGetForOrgUser200ApplicationJSONAnies = appsGetForOrgUser200ApplicationJSONAnies;
         return this;
@@ -43,9 +48,14 @@ public class AppsGetForOrgUserResponse {
      */
     
     public AppsGetForOrgUserDefaultApplicationJSON appsGetForOrgUserDefaultApplicationJSONObject;
+
     public AppsGetForOrgUserResponse withAppsGetForOrgUserDefaultApplicationJSONObject(AppsGetForOrgUserDefaultApplicationJSON appsGetForOrgUserDefaultApplicationJSONObject) {
         this.appsGetForOrgUserDefaultApplicationJSONObject = appsGetForOrgUserDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppsGetForOrgUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

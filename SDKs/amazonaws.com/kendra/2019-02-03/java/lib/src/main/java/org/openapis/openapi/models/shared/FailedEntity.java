@@ -15,6 +15,7 @@ public class FailedEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public FailedEntity withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,9 +24,11 @@ public class FailedEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FailedEntity withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public FailedEntity(){}
 }

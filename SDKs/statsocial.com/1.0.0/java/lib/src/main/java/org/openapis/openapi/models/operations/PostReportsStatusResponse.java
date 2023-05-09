@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostReportsStatusResponse {
@@ -12,6 +13,7 @@ public class PostReportsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredError fourHundredError;
+
     public PostReportsStatusResponse withFourHundredError(org.openapis.openapi.models.shared.FourHundredError fourHundredError) {
         this.fourHundredError = fourHundredError;
         return this;
@@ -22,6 +24,7 @@ public class PostReportsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError;
+
     public PostReportsStatusResponse withFourHundredAndOneError(org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError) {
         this.fourHundredAndOneError = fourHundredAndOneError;
         return this;
@@ -32,6 +35,7 @@ public class PostReportsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError;
+
     public PostReportsStatusResponse withFourHundredAndThreeError(org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError) {
         this.fourHundredAndThreeError = fourHundredAndThreeError;
         return this;
@@ -42,6 +46,7 @@ public class PostReportsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredError fiveHundredError;
+
     public PostReportsStatusResponse withFiveHundredError(org.openapis.openapi.models.shared.FiveHundredError fiveHundredError) {
         this.fiveHundredError = fiveHundredError;
         return this;
@@ -49,6 +54,7 @@ public class PostReportsStatusResponse {
     
     
     public String contentType;
+
     public PostReportsStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class PostReportsStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportStatus reportStatus;
+
     public PostReportsStatusResponse withReportStatus(org.openapis.openapi.models.shared.ReportStatus reportStatus) {
         this.reportStatus = reportStatus;
         return this;
@@ -66,6 +73,7 @@ public class PostReportsStatusResponse {
     
     
     public Integer statusCode;
+
     public PostReportsStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PostReportsStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostReportsStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostReportsStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

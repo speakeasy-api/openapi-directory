@@ -20,6 +20,7 @@ public class DocumentClassifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentClassifierName")
     public String documentClassifierName;
+
     public DocumentClassifierSummary withDocumentClassifierName(String documentClassifierName) {
         this.documentClassifierName = documentClassifierName;
         return this;
@@ -30,6 +31,7 @@ public class DocumentClassifierSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LatestVersionCreatedAt")
     public OffsetDateTime latestVersionCreatedAt;
+
     public DocumentClassifierSummary withLatestVersionCreatedAt(OffsetDateTime latestVersionCreatedAt) {
         this.latestVersionCreatedAt = latestVersionCreatedAt;
         return this;
@@ -38,6 +40,7 @@ public class DocumentClassifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersionName")
     public String latestVersionName;
+
     public DocumentClassifierSummary withLatestVersionName(String latestVersionName) {
         this.latestVersionName = latestVersionName;
         return this;
@@ -46,6 +49,7 @@ public class DocumentClassifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestVersionStatus")
     public ModelStatusEnum latestVersionStatus;
+
     public DocumentClassifierSummary withLatestVersionStatus(ModelStatusEnum latestVersionStatus) {
         this.latestVersionStatus = latestVersionStatus;
         return this;
@@ -54,9 +58,11 @@ public class DocumentClassifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfVersions")
     public Long numberOfVersions;
+
     public DocumentClassifierSummary withNumberOfVersions(Long numberOfVersions) {
         this.numberOfVersions = numberOfVersions;
         return this;
     }
     
+    public DocumentClassifierSummary(){}
 }

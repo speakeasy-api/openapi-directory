@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommissionsByFilterResponse {
@@ -12,6 +13,7 @@ public class GetCommissionsByFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.CommissionList commissionList;
+
     public GetCommissionsByFilterResponse withCommissionList(org.openapis.openapi.models.shared.CommissionList commissionList) {
         this.commissionList = commissionList;
         return this;
@@ -19,6 +21,7 @@ public class GetCommissionsByFilterResponse {
     
     
     public String contentType;
+
     public GetCommissionsByFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCommissionsByFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCommissionsByFilterResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetCommissionsByFilterResponse {
     
     
     public Integer statusCode;
+
     public GetCommissionsByFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCommissionsByFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommissionsByFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommissionsByFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

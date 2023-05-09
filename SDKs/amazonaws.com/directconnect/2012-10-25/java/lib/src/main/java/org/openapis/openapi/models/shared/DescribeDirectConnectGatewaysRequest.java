@@ -12,6 +12,7 @@ public class DescribeDirectConnectGatewaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public DescribeDirectConnectGatewaysRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -20,6 +21,7 @@ public class DescribeDirectConnectGatewaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeDirectConnectGatewaysRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class DescribeDirectConnectGatewaysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeDirectConnectGatewaysRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDirectConnectGatewaysRequest(){}
 }

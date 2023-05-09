@@ -122,4 +122,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/RollbackApiDeploymentReques
 lib/src/main/java/org/openapis/openapi/models/shared/RollbackApiSpecRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagApiDeploymentRevisionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagApiSpecRevisionRequest.java
+docs/sdk/README.md
+docs/registry/README.md
 USAGE.md

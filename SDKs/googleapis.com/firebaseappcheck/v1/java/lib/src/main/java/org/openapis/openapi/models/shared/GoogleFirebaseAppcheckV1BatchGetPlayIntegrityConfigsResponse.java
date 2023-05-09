@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1BatchGetPlayIntegrityConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configs")
     public GoogleFirebaseAppcheckV1PlayIntegrityConfig[] configs;
+
     public GoogleFirebaseAppcheckV1BatchGetPlayIntegrityConfigsResponse withConfigs(GoogleFirebaseAppcheckV1PlayIntegrityConfig[] configs) {
         this.configs = configs;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1BatchGetPlayIntegrityConfigsResponse(){}
 }

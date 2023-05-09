@@ -66,10 +66,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/SubmitRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PayoutResponseResultCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PayoutResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FraudResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/FraudCheckResultWrapper.java
 lib/src/main/java/org/openapis/openapi/models/shared/FraudCheckResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/PayoutRequestShopperInteractionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/PayoutRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/FundSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/ModifyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ModifyRequest.java
+docs/sdk/README.md
+docs/initialization/README.md
+docs/instantpayouts/README.md
+docs/reviewing/README.md
 USAGE.md

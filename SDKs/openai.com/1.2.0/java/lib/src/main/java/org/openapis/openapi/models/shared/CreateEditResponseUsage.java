@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEditResponseUsage {
     @JsonProperty("completion_tokens")
     public Long completionTokens;
+
     public CreateEditResponseUsage withCompletionTokens(Long completionTokens) {
         this.completionTokens = completionTokens;
         return this;
@@ -16,6 +17,7 @@ public class CreateEditResponseUsage {
     
     @JsonProperty("prompt_tokens")
     public Long promptTokens;
+
     public CreateEditResponseUsage withPromptTokens(Long promptTokens) {
         this.promptTokens = promptTokens;
         return this;
@@ -23,9 +25,15 @@ public class CreateEditResponseUsage {
     
     @JsonProperty("total_tokens")
     public Long totalTokens;
+
     public CreateEditResponseUsage withTotalTokens(Long totalTokens) {
         this.totalTokens = totalTokens;
         return this;
     }
     
+    public CreateEditResponseUsage(@JsonProperty("completion_tokens") Long completionTokens, @JsonProperty("prompt_tokens") Long promptTokens, @JsonProperty("total_tokens") Long totalTokens) {
+        this.completionTokens = completionTokens;
+        this.promptTokens = promptTokens;
+        this.totalTokens = totalTokens;
+  }
 }

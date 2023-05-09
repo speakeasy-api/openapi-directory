@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchperpackageRequest {
@@ -12,6 +13,7 @@ public class SearchperpackageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=match_mode")
     public SearchperpackageMatchModeEnum matchMode;
+
     public SearchperpackageRequest withMatchMode(SearchperpackageMatchModeEnum matchMode) {
         this.matchMode = matchMode;
         return this;
@@ -22,9 +24,13 @@ public class SearchperpackageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchperpackageRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public SearchperpackageRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

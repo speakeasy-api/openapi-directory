@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EmulationOutput200Wildcard - emulation output after unpacking the file
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.operations;
 public class EmulationOutput200Wildcard {
     
     public String[] output;
+
     public EmulationOutput200Wildcard withOutput(String[] output) {
         this.output = output;
         return this;
     }
     
+    public EmulationOutput200Wildcard(@JsonProperty("output") String[] output) {
+        this.output = output;
+  }
 }

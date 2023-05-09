@@ -18,6 +18,7 @@ public class WorkflowTemplatePlacementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterSelector")
     public ClusterSelector clusterSelector;
+
     public WorkflowTemplatePlacementInput withClusterSelector(ClusterSelector clusterSelector) {
         this.clusterSelector = clusterSelector;
         return this;
@@ -29,9 +30,11 @@ public class WorkflowTemplatePlacementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedCluster")
     public ManagedClusterInput managedCluster;
+
     public WorkflowTemplatePlacementInput withManagedCluster(ManagedClusterInput managedCluster) {
         this.managedCluster = managedCluster;
         return this;
     }
     
+    public WorkflowTemplatePlacementInput(){}
 }

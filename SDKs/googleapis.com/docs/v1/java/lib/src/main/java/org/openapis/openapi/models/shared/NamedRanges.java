@@ -18,6 +18,7 @@ public class NamedRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NamedRanges withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class NamedRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRanges")
     public NamedRange[] namedRanges;
+
     public NamedRanges withNamedRanges(NamedRange[] namedRanges) {
         this.namedRanges = namedRanges;
         return this;
     }
     
+    public NamedRanges(){}
 }

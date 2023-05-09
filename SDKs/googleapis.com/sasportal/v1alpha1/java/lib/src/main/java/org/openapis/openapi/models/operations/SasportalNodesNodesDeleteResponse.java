@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SasportalNodesNodesDeleteResponse {
     
     public String contentType;
+
     public SasportalNodesNodesDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SasportalNodesNodesDeleteResponse {
      */
     
     public java.util.Map<String, Object> sasPortalEmpty;
+
     public SasportalNodesNodesDeleteResponse withSasPortalEmpty(java.util.Map<String, Object> sasPortalEmpty) {
         this.sasPortalEmpty = sasPortalEmpty;
         return this;
@@ -26,6 +29,7 @@ public class SasportalNodesNodesDeleteResponse {
     
     
     public Integer statusCode;
+
     public SasportalNodesNodesDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SasportalNodesNodesDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SasportalNodesNodesDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SasportalNodesNodesDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

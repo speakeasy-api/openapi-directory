@@ -15,6 +15,7 @@ public class PollForTaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public PollForTaskInput withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -23,6 +24,7 @@ public class PollForTaskInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceIdentity")
     public InstanceIdentity instanceIdentity;
+
     public PollForTaskInput withInstanceIdentity(InstanceIdentity instanceIdentity) {
         this.instanceIdentity = instanceIdentity;
         return this;
@@ -30,9 +32,13 @@ public class PollForTaskInput {
     
     @JsonProperty("workerGroup")
     public String workerGroup;
+
     public PollForTaskInput withWorkerGroup(String workerGroup) {
         this.workerGroup = workerGroup;
         return this;
     }
     
+    public PollForTaskInput(@JsonProperty("workerGroup") String workerGroup) {
+        this.workerGroup = workerGroup;
+  }
 }

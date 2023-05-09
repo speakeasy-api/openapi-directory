@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDeploymentGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteDeploymentGroupResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public DeleteDeploymentGroupResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDeploymentGroupResponse {
     
     
     public String contentType;
+
     public DeleteDeploymentGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDeploymentGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDeploymentGroupOutput deleteDeploymentGroupOutput;
+
     public DeleteDeploymentGroupResponse withDeleteDeploymentGroupOutput(org.openapis.openapi.models.shared.DeleteDeploymentGroupOutput deleteDeploymentGroupOutput) {
         this.deleteDeploymentGroupOutput = deleteDeploymentGroupOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDeploymentGroupResponse {
      */
     
     public Object deploymentGroupNameRequiredException;
+
     public DeleteDeploymentGroupResponse withDeploymentGroupNameRequiredException(Object deploymentGroupNameRequiredException) {
         this.deploymentGroupNameRequiredException = deploymentGroupNameRequiredException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDeploymentGroupResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public DeleteDeploymentGroupResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDeploymentGroupResponse {
      */
     
     public Object invalidDeploymentGroupNameException;
+
     public DeleteDeploymentGroupResponse withInvalidDeploymentGroupNameException(Object invalidDeploymentGroupNameException) {
         this.invalidDeploymentGroupNameException = invalidDeploymentGroupNameException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDeploymentGroupResponse {
      */
     
     public Object invalidRoleException;
+
     public DeleteDeploymentGroupResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteDeploymentGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteDeploymentGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteDeploymentGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDeploymentGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDeploymentGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

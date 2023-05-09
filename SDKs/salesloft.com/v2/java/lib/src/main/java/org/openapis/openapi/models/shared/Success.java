@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class Success {
     
     public SuccessCounts counts;
+
     public Success withCounts(SuccessCounts counts) {
         this.counts = counts;
         return this;
@@ -19,6 +20,7 @@ public class Success {
      */
     
     public OffsetDateTime createdAt;
+
     public Success withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +31,7 @@ public class Success {
      */
     
     public Long id;
+
     public Success withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class Success {
     
     
     public EmbeddedResource latestAction;
+
     public Success withLatestAction(EmbeddedResource latestAction) {
         this.latestAction = latestAction;
         return this;
@@ -43,6 +47,7 @@ public class Success {
     
     
     public EmbeddedResource latestCadence;
+
     public Success withLatestCadence(EmbeddedResource latestCadence) {
         this.latestCadence = latestCadence;
         return this;
@@ -50,6 +55,7 @@ public class Success {
     
     
     public EmbeddedResource latestCall;
+
     public Success withLatestCall(EmbeddedResource latestCall) {
         this.latestCall = latestCall;
         return this;
@@ -57,6 +63,7 @@ public class Success {
     
     
     public EmbeddedResource latestEmail;
+
     public Success withLatestEmail(EmbeddedResource latestEmail) {
         this.latestEmail = latestEmail;
         return this;
@@ -64,6 +71,7 @@ public class Success {
     
     
     public EmbeddedResource latestStep;
+
     public Success withLatestStep(EmbeddedResource latestStep) {
         this.latestStep = latestStep;
         return this;
@@ -71,6 +79,7 @@ public class Success {
     
     
     public EmbeddedResource person;
+
     public Success withPerson(EmbeddedResource person) {
         this.person = person;
         return this;
@@ -81,6 +90,7 @@ public class Success {
      */
     
     public OffsetDateTime succeededAt;
+
     public Success withSucceededAt(OffsetDateTime succeededAt) {
         this.succeededAt = succeededAt;
         return this;
@@ -91,6 +101,7 @@ public class Success {
      */
     
     public OffsetDateTime successWindowStartedAt;
+
     public Success withSuccessWindowStartedAt(OffsetDateTime successWindowStartedAt) {
         this.successWindowStartedAt = successWindowStartedAt;
         return this;
@@ -101,6 +112,7 @@ public class Success {
      */
     
     public OffsetDateTime updatedAt;
+
     public Success withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -108,9 +120,11 @@ public class Success {
     
     
     public EmbeddedResource user;
+
     public Success withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public Success(){}
 }

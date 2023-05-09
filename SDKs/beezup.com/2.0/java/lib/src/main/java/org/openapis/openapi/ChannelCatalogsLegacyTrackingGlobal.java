@@ -50,12 +50,10 @@ public class ChannelCatalogsLegacyTrackingGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogResponse res = new org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogResponse res = new org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             legacyTrackingChannelCatalog = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class ChannelCatalogsLegacyTrackingGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogsResponse res = new org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogsResponse() {{
+        org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogsResponse res = new org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogsResponse(contentType, httpRes.statusCode()) {{
             legacyTrackingChannelCatalogList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class ChannelCatalogsLegacyTrackingGlobal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogResponse res = new org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogResponse() {{
+        org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogResponse res = new org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

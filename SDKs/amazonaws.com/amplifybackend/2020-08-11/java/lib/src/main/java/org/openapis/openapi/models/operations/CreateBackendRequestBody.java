@@ -14,6 +14,7 @@ public class CreateBackendRequestBody {
      */
     @JsonProperty("appId")
     public String appId;
+
     public CreateBackendRequestBody withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -24,6 +25,7 @@ public class CreateBackendRequestBody {
      */
     @JsonProperty("appName")
     public String appName;
+
     public CreateBackendRequestBody withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -34,6 +36,7 @@ public class CreateBackendRequestBody {
      */
     @JsonProperty("backendEnvironmentName")
     public String backendEnvironmentName;
+
     public CreateBackendRequestBody withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -45,6 +48,7 @@ public class CreateBackendRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceConfig")
     public java.util.Map<String, Object> resourceConfig;
+
     public CreateBackendRequestBody withResourceConfig(java.util.Map<String, Object> resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -56,9 +60,15 @@ public class CreateBackendRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public CreateBackendRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public CreateBackendRequestBody(@JsonProperty("appId") String appId, @JsonProperty("appName") String appName, @JsonProperty("backendEnvironmentName") String backendEnvironmentName) {
+        this.appId = appId;
+        this.appName = appName;
+        this.backendEnvironmentName = backendEnvironmentName;
+  }
 }

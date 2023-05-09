@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteReceiptRuleSetRequest - Represents a request to delete a receipt rule set and all of the receipt rules it contains. You use receipt rule sets to receive email with Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-concepts.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteReceiptRuleSetRequest {
     
     public String ruleSetName;
+
     public DeleteReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
         this.ruleSetName = ruleSetName;
         return this;
     }
     
+    public DeleteReceiptRuleSetRequest(@JsonProperty("RuleSetName") String ruleSetName) {
+        this.ruleSetName = ruleSetName;
+  }
 }

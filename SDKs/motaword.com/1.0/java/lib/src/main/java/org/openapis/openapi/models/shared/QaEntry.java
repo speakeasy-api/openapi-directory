@@ -12,6 +12,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public QaEntry withCategory(String category) {
         this.category = category;
         return this;
@@ -20,6 +21,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public QaEntry withComment(String comment) {
         this.comment = comment;
         return this;
@@ -28,6 +30,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docId")
     public String docId;
+
     public QaEntry withDocId(String docId) {
         this.docId = docId;
         return this;
@@ -36,6 +39,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("editorLink")
     public String editorLink;
+
     public QaEntry withEditorLink(String editorLink) {
         this.editorLink = editorLink;
         return this;
@@ -44,6 +48,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Long end;
+
     public QaEntry withEnd(Long end) {
         this.end = end;
         return this;
@@ -52,6 +57,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inSource")
     public Boolean inSource;
+
     public QaEntry withInSource(Boolean inSource) {
         this.inSource = inSource;
         return this;
@@ -60,6 +66,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCurrent")
     public Boolean isCurrent;
+
     public QaEntry withIsCurrent(Boolean isCurrent) {
         this.isCurrent = isCurrent;
         return this;
@@ -68,6 +75,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module")
     public String module;
+
     public QaEntry withModule(String module) {
         this.module = module;
         return this;
@@ -76,6 +84,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public SimpleModel projectId;
+
     public QaEntry withProjectId(SimpleModel projectId) {
         this.projectId = projectId;
         return this;
@@ -84,6 +93,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public QaEntry withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -92,6 +102,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public QaEntry withSource(String source) {
         this.source = source;
         return this;
@@ -100,6 +111,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguage")
     public SimpleModel sourceLanguage;
+
     public QaEntry withSourceLanguage(SimpleModel sourceLanguage) {
         this.sourceLanguage = sourceLanguage;
         return this;
@@ -108,6 +120,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public QaEntry withStart(Long start) {
         this.start = start;
         return this;
@@ -116,6 +129,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public QaEntry withState(String state) {
         this.state = state;
         return this;
@@ -124,6 +138,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguage")
     public SimpleModel targetLanguage;
+
     public QaEntry withTargetLanguage(SimpleModel targetLanguage) {
         this.targetLanguage = targetLanguage;
         return this;
@@ -132,6 +147,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translation")
     public String translation;
+
     public QaEntry withTranslation(String translation) {
         this.translation = translation;
         return this;
@@ -140,6 +156,7 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueKey")
     public String uniqueKey;
+
     public QaEntry withUniqueKey(String uniqueKey) {
         this.uniqueKey = uniqueKey;
         return this;
@@ -148,9 +165,11 @@ public class QaEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor")
     public SimpleModel vendor;
+
     public QaEntry withVendor(SimpleModel vendor) {
         this.vendor = vendor;
         return this;
     }
     
+    public QaEntry(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1NotificationsResponse {
     
     public String contentType;
+
     public GetApiV1NotificationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1NotificationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetApiV1NotificationsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetApiV1NotificationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Notification[] notifications;
+
     public GetApiV1NotificationsResponse withNotifications(org.openapis.openapi.models.shared.Notification[] notifications) {
         this.notifications = notifications;
         return this;
@@ -36,6 +40,7 @@ public class GetApiV1NotificationsResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1NotificationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV1NotificationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1NotificationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1NotificationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

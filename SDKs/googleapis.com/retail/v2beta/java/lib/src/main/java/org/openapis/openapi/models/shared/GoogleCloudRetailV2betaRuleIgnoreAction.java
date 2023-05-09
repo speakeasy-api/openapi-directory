@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2betaRuleIgnoreAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreTerms")
     public String[] ignoreTerms;
+
     public GoogleCloudRetailV2betaRuleIgnoreAction withIgnoreTerms(String[] ignoreTerms) {
         this.ignoreTerms = ignoreTerms;
         return this;
     }
     
+    public GoogleCloudRetailV2betaRuleIgnoreAction(){}
 }

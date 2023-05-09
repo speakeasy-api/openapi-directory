@@ -19,6 +19,7 @@ public class OBSCASupportData1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppliedAuthenticationApproach")
     public OBSCASupportData1AppliedAuthenticationApproachEnum appliedAuthenticationApproach;
+
     public OBSCASupportData1 withAppliedAuthenticationApproach(OBSCASupportData1AppliedAuthenticationApproachEnum appliedAuthenticationApproach) {
         this.appliedAuthenticationApproach = appliedAuthenticationApproach;
         return this;
@@ -30,6 +31,7 @@ public class OBSCASupportData1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferencePaymentOrderId")
     public String referencePaymentOrderId;
+
     public OBSCASupportData1 withReferencePaymentOrderId(String referencePaymentOrderId) {
         this.referencePaymentOrderId = referencePaymentOrderId;
         return this;
@@ -41,9 +43,11 @@ public class OBSCASupportData1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedSCAExemptionType")
     public OBSCASupportData1RequestedSCAExemptionTypeEnum requestedSCAExemptionType;
+
     public OBSCASupportData1 withRequestedSCAExemptionType(OBSCASupportData1RequestedSCAExemptionTypeEnum requestedSCAExemptionType) {
         this.requestedSCAExemptionType = requestedSCAExemptionType;
         return this;
     }
     
+    public OBSCASupportData1(){}
 }

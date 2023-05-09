@@ -18,6 +18,7 @@ public class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponseAccessEnum access;
+
     public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse withAccess(GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponseAccessEnum access) {
         this.access = access;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explainedPolicies")
     public GoogleCloudPolicytroubleshooterV1betaExplainedPolicy[] explainedPolicies;
+
     public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse withExplainedPolicies(GoogleCloudPolicytroubleshooterV1betaExplainedPolicy[] explainedPolicies) {
         this.explainedPolicies = explainedPolicies;
         return this;
     }
     
+    public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponse(){}
 }

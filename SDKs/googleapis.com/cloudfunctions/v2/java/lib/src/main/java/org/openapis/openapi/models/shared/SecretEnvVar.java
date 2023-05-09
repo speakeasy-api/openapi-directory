@@ -18,6 +18,7 @@ public class SecretEnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SecretEnvVar withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class SecretEnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public SecretEnvVar withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -40,6 +42,7 @@ public class SecretEnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public SecretEnvVar withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -51,9 +54,11 @@ public class SecretEnvVar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public SecretEnvVar withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SecretEnvVar(){}
 }

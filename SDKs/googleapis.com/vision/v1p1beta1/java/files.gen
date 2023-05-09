@@ -155,4 +155,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVisionV1p1beta1A
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVisionV1p1beta1Image.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVisionV1p1beta1ImageSource.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest.java
+docs/sdk/README.md
+docs/files/README.md
+docs/images/README.md
+docs/projects/README.md
 USAGE.md

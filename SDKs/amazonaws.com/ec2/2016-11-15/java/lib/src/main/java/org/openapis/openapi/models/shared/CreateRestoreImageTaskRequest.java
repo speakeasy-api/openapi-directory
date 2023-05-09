@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateRestoreImageTaskRequest {
     
     public String bucket;
+
     public CreateRestoreImageTaskRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -16,6 +17,7 @@ public class CreateRestoreImageTaskRequest {
     
     
     public Boolean dryRun;
+
     public CreateRestoreImageTaskRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateRestoreImageTaskRequest {
     
     
     public String name;
+
     public CreateRestoreImageTaskRequest withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +33,7 @@ public class CreateRestoreImageTaskRequest {
     
     
     public String objectKey;
+
     public CreateRestoreImageTaskRequest withObjectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
@@ -37,9 +41,14 @@ public class CreateRestoreImageTaskRequest {
     
     
     public CreateRestoreImageTaskRequestTagSpecifications[] tagSpecifications;
+
     public CreateRestoreImageTaskRequest withTagSpecifications(CreateRestoreImageTaskRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateRestoreImageTaskRequest(@JsonProperty("Bucket") String bucket, @JsonProperty("ObjectKey") String objectKey) {
+        this.bucket = bucket;
+        this.objectKey = objectKey;
+  }
 }

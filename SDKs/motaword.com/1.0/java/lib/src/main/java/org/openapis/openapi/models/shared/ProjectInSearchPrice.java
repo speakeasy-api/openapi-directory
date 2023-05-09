@@ -12,6 +12,7 @@ public class ProjectInSearchPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Float amount;
+
     public ProjectInSearchPrice withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class ProjectInSearchPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_amount")
     public Float baseAmount;
+
     public ProjectInSearchPrice withBaseAmount(Float baseAmount) {
         this.baseAmount = baseAmount;
         return this;
@@ -28,6 +30,7 @@ public class ProjectInSearchPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_currency")
     public String baseCurrency;
+
     public ProjectInSearchPrice withBaseCurrency(String baseCurrency) {
         this.baseCurrency = baseCurrency;
         return this;
@@ -36,6 +39,7 @@ public class ProjectInSearchPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public ProjectInSearchPrice withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -47,9 +51,11 @@ public class ProjectInSearchPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usd_amount")
     public Float usdAmount;
+
     public ProjectInSearchPrice withUsdAmount(Float usdAmount) {
         this.usdAmount = usdAmount;
         return this;
     }
     
+    public ProjectInSearchPrice(){}
 }

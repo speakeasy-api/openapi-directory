@@ -18,17 +18,19 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationPolicy")
     public String authorizationPolicy;
+
     public TargetHttpsProxy withAuthorizationPolicy(String authorizationPolicy) {
         this.authorizationPolicy = authorizationPolicy;
         return this;
     }
     
     /**
-     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateMap")
     public String certificateMap;
+
     public TargetHttpsProxy withCertificateMap(String certificateMap) {
         this.certificateMap = certificateMap;
         return this;
@@ -40,6 +42,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetHttpsProxy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetHttpsProxy withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public TargetHttpsProxy withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetHttpsProxy withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetHttpsProxy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetHttpsProxy withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyBind")
     public Boolean proxyBind;
+
     public TargetHttpsProxy withProxyBind(Boolean proxyBind) {
         this.proxyBind = proxyBind;
         return this;
@@ -117,6 +126,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quicOverride")
     public TargetHttpsProxyQuicOverrideEnum quicOverride;
+
     public TargetHttpsProxy withQuicOverride(TargetHttpsProxyQuicOverrideEnum quicOverride) {
         this.quicOverride = quicOverride;
         return this;
@@ -128,6 +138,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TargetHttpsProxy withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +150,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetHttpsProxy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -150,6 +162,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverTlsPolicy")
     public String serverTlsPolicy;
+
     public TargetHttpsProxy withServerTlsPolicy(String serverTlsPolicy) {
         this.serverTlsPolicy = serverTlsPolicy;
         return this;
@@ -161,6 +174,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslCertificates")
     public String[] sslCertificates;
+
     public TargetHttpsProxy withSslCertificates(String[] sslCertificates) {
         this.sslCertificates = sslCertificates;
         return this;
@@ -172,6 +186,7 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslPolicy")
     public String sslPolicy;
+
     public TargetHttpsProxy withSslPolicy(String sslPolicy) {
         this.sslPolicy = sslPolicy;
         return this;
@@ -183,9 +198,11 @@ public class TargetHttpsProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMap")
     public String urlMap;
+
     public TargetHttpsProxy withUrlMap(String urlMap) {
         this.urlMap = urlMap;
         return this;
     }
     
+    public TargetHttpsProxy(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateSecurity;
 import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest;
 import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse;
+import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateSecurity;
 import org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber;
 import org.openapis.openapi.models.shared.MarketingEventSubscriber;
 
@@ -29,51 +28,50 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest req = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest() {{
-                batchInputMarketingEventSubscriber = new BatchInputMarketingEventSubscriber() {{
-                    inputs = new org.openapis.openapi.models.shared.MarketingEventSubscriber[]{{
-                        add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 592845;
-                            properties = new java.util.HashMap<String, String>() {{
-                                put("quibusdam", "unde");
-                                put("nulla", "corrupti");
-                                put("illum", "vel");
-                            }};
-                            vid = 623564;
-                        }}),
-                        add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 645894;
-                            properties = new java.util.HashMap<String, String>() {{
-                                put("iure", "magnam");
-                                put("debitis", "ipsa");
-                            }};
-                            vid = 963663;
-                        }}),
-                        add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 272656;
-                            properties = new java.util.HashMap<String, String>() {{
-                                put("molestiae", "minus");
-                                put("placeat", "voluptatum");
-                            }};
-                            vid = 479977;
-                        }}),
-                    }};
-                }};
-                externalAccountId = "excepturi";
-                externalEventId = "nisi";
-                subscriberState = "recusandae";
-            }}            
+            PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest req = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest(                new BatchInputMarketingEventSubscriber(                new org.openapis.openapi.models.shared.MarketingEventSubscriber[]{{
+                                                add(new MarketingEventSubscriber(645894L) {{
+                                                    interactionDateTime = 592845L;
+                                                    properties = new java.util.HashMap<String, String>() {{
+                                                        put("quibusdam", "unde");
+                                                        put("nulla", "corrupti");
+                                                        put("illum", "vel");
+                                                    }};
+                                                    vid = 623564;
+                                                }}),
+                                                add(new MarketingEventSubscriber(383441L) {{
+                                                    interactionDateTime = 384382L;
+                                                    properties = new java.util.HashMap<String, String>() {{
+                                                        put("magnam", "debitis");
+                                                        put("ipsa", "delectus");
+                                                    }};
+                                                    vid = 272656;
+                                                }}),
+                                                add(new MarketingEventSubscriber(87129L) {{
+                                                    interactionDateTime = 477665L;
+                                                    properties = new java.util.HashMap<String, String>() {{
+                                                        put("placeat", "voluptatum");
+                                                        put("iusto", "excepturi");
+                                                        put("nisi", "recusandae");
+                                                        put("temporibus", "ab");
+                                                    }};
+                                                    vid = 337396;
+                                                }}),
+                                            }});, "deserunt", "perferendis") {{
+                externalAccountId = "ipsam";
+            }};            
 
             PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse res = sdk.attendanceSubscriberStateChanges.postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreate(req, new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateSecurity() {{
                 oauth2Legacy = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.batchResponseSubscriberVidResponse.isPresent()) {
+            if (res.batchResponseSubscriberVidResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -81,33 +79,33 @@ public class Application {
 ## Available Resources and Operations
 
 
-### attendanceSubscriberStateChanges
+### [attendanceSubscriberStateChanges](docs/attendancesubscriberstatechanges/README.md)
 
-* `postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreate` - Record
-* `postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmail` - Record
+* [postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreate](docs/attendancesubscriberstatechanges/README.md#postmarketingv3marketingeventsattendanceexternaleventidsubscriberstatecreatecreate) - Record
+* [postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmail](docs/attendancesubscriberstatechanges/README.md#postmarketingv3marketingeventsattendanceexternaleventidsubscriberstateemailcreatecreatebyemail) - Record
 
-### marketingEventsExternal
+### [marketingEventsExternal](docs/marketingeventsexternal/README.md)
 
-* `deleteMarketingV3MarketingEventsEventsExternalEventIdArchive`
-* `getMarketingV3MarketingEventsEventsExternalEventIdGetById`
-* `patchMarketingV3MarketingEventsEventsExternalEventIdUpdate`
-* `postMarketingV3MarketingEventsEventsDeleteArchiveBatch`
-* `postMarketingV3MarketingEventsEventsUpsertDoUpsert`
-* `postMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancel`
-* `postMarketingV3MarketingEventsEventsExternalEventIdCompleteComplete`
-* `postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertById`
-* `postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertById`
-* `postMarketingV3MarketingEventsEventsCreate`
-* `putMarketingV3MarketingEventsEventsExternalEventIdReplace`
+* [deleteMarketingV3MarketingEventsEventsExternalEventIdArchive](docs/marketingeventsexternal/README.md#deletemarketingv3marketingeventseventsexternaleventidarchive)
+* [getMarketingV3MarketingEventsEventsExternalEventIdGetById](docs/marketingeventsexternal/README.md#getmarketingv3marketingeventseventsexternaleventidgetbyid)
+* [patchMarketingV3MarketingEventsEventsExternalEventIdUpdate](docs/marketingeventsexternal/README.md#patchmarketingv3marketingeventseventsexternaleventidupdate)
+* [postMarketingV3MarketingEventsEventsDeleteArchiveBatch](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsdeletearchivebatch)
+* [postMarketingV3MarketingEventsEventsUpsertDoUpsert](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsupsertdoupsert)
+* [postMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancel](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidcanceldocancel)
+* [postMarketingV3MarketingEventsEventsExternalEventIdCompleteComplete](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidcompletecomplete)
+* [postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertById](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidsubscriberstateemailupsertdoemailupsertbyid)
+* [postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertById](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidsubscriberstateupsertdoupsertbyid)
+* [postMarketingV3MarketingEventsEventsCreate](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventscreate)
+* [putMarketingV3MarketingEventsEventsExternalEventIdReplace](docs/marketingeventsexternal/README.md#putmarketingv3marketingeventseventsexternaleventidreplace)
 
-### search
+### [search](docs/search/README.md)
 
-* `getMarketingV3MarketingEventsEventsSearchDoSearch` - Search for marketing events
+* [getMarketingV3MarketingEventsEventsSearchDoSearch](docs/search/README.md#getmarketingv3marketingeventseventssearchdosearch) - Search for marketing events
 
-### settingsExternal
+### [settingsExternal](docs/settingsexternal/README.md)
 
-* `getMarketingV3MarketingEventsAppIdSettingsGetAll`
-* `postMarketingV3MarketingEventsAppIdSettingsCreate`
+* [getMarketingV3MarketingEventsAppIdSettingsGetAll](docs/settingsexternal/README.md#getmarketingv3marketingeventsappidsettingsgetall)
+* [postMarketingV3MarketingEventsAppIdSettingsCreate](docs/settingsexternal/README.md#postmarketingv3marketingeventsappidsettingscreate)
 <!-- End SDK Available Operations -->
 
 ### Maturity

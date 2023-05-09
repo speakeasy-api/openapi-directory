@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheClusterMessage {
     
     public CacheClusterList[] cacheClusters;
+
     public CacheClusterMessage withCacheClusters(CacheClusterList[] cacheClusters) {
         this.cacheClusters = cacheClusters;
         return this;
@@ -19,9 +20,11 @@ public class CacheClusterMessage {
     
     
     public String marker;
+
     public CacheClusterMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public CacheClusterMessage(){}
 }

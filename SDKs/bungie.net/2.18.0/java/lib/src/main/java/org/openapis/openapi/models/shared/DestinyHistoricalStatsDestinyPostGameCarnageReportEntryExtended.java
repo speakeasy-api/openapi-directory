@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryExtended {
      */
     
     public java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryExtended withValues(java.util.Map<String, DestinyHistoricalStatsDestinyHistoricalStatsValue> values) {
         this.values = values;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryExtended {
      */
     
     public DestinyHistoricalStatsDestinyHistoricalWeaponStats[] weapons;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryExtended withWeapons(DestinyHistoricalStatsDestinyHistoricalWeaponStats[] weapons) {
         this.weapons = weapons;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryExtended(){}
 }

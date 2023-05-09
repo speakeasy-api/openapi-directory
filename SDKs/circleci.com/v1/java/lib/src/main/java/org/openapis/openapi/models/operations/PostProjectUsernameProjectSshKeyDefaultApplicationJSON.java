@@ -15,9 +15,11 @@ public class PostProjectUsernameProjectSshKeyDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PostProjectUsernameProjectSshKeyDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostProjectUsernameProjectSshKeyDefaultApplicationJSON(){}
 }

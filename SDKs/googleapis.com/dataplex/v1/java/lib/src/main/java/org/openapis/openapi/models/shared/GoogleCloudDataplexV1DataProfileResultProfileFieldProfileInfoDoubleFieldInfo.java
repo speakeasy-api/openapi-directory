@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDouble
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Double average;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo withAverage(Double average) {
         this.average = average;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDouble
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
     public Double max;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo withMax(Double max) {
         this.max = max;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDouble
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
     public Double min;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo withMin(Double min) {
         this.min = min;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDouble
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quartiles")
     public Double[] quartiles;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo withQuartiles(Double[] quartiles) {
         this.quartiles = quartiles;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDouble
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDeviation")
     public Double standardDeviation;
+
     public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo withStandardDeviation(Double standardDeviation) {
         this.standardDeviation = standardDeviation;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo(){}
 }

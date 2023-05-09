@@ -103,4 +103,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Aws.java
 lib/src/main/java/org/openapis/openapi/models/shared/BuildSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/OutcomeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

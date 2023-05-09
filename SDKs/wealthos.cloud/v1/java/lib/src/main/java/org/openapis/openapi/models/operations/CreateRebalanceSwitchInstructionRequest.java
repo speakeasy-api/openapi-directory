@@ -15,6 +15,7 @@ public class CreateRebalanceSwitchInstructionRequest {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public CreateRebalanceSwitchInstructionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -25,6 +26,7 @@ public class CreateRebalanceSwitchInstructionRequest {
      */
     @JsonProperty("type")
     public CreateRebalanceSwitchInstructionRequestTypeEnum type;
+
     public CreateRebalanceSwitchInstructionRequest withType(CreateRebalanceSwitchInstructionRequestTypeEnum type) {
         this.type = type;
         return this;
@@ -35,9 +37,15 @@ public class CreateRebalanceSwitchInstructionRequest {
      */
     @JsonProperty("values")
     public String[] values;
+
     public CreateRebalanceSwitchInstructionRequest withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CreateRebalanceSwitchInstructionRequest(@JsonProperty("request_id") String requestId, @JsonProperty("type") CreateRebalanceSwitchInstructionRequestTypeEnum type, @JsonProperty("values") String[] values) {
+        this.requestId = requestId;
+        this.type = type;
+        this.values = values;
+  }
 }

@@ -12,6 +12,7 @@ public class EmailValidation200ApplicationJSONAssociatedNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public EmailValidation200ApplicationJSONAssociatedNames withNames(String[] names) {
         this.names = names;
         return this;
@@ -20,9 +21,11 @@ public class EmailValidation200ApplicationJSONAssociatedNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EmailValidation200ApplicationJSONAssociatedNames withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public EmailValidation200ApplicationJSONAssociatedNames(){}
 }

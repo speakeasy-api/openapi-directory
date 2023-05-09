@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PartitionIndex {
     @JsonProperty("IndexName")
     public String indexName;
+
     public PartitionIndex withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -19,9 +20,14 @@ public class PartitionIndex {
     
     @JsonProperty("Keys")
     public String[] keys;
+
     public PartitionIndex withKeys(String[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public PartitionIndex(@JsonProperty("IndexName") String indexName, @JsonProperty("Keys") String[] keys) {
+        this.indexName = indexName;
+        this.keys = keys;
+  }
 }

@@ -18,6 +18,7 @@ public class UpdateEmbeddedObjectPositionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateEmbeddedObjectPositionRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateEmbeddedObjectPositionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPosition")
     public EmbeddedObjectPosition newPosition;
+
     public UpdateEmbeddedObjectPositionRequest withNewPosition(EmbeddedObjectPosition newPosition) {
         this.newPosition = newPosition;
         return this;
@@ -40,9 +42,11 @@ public class UpdateEmbeddedObjectPositionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public Integer objectId;
+
     public UpdateEmbeddedObjectPositionRequest withObjectId(Integer objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public UpdateEmbeddedObjectPositionRequest(){}
 }

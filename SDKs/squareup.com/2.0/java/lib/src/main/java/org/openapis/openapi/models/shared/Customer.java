@@ -45,6 +45,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public Customer withAddress(Address address) {
         this.address = address;
         return this;
@@ -57,6 +58,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthday")
     public String birthday;
+
     public Customer withBirthday(String birthday) {
         this.birthday = birthday;
         return this;
@@ -72,6 +74,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public Card[] cards;
+
     public Customer withCards(Card[] cards) {
         this.cards = cards;
         return this;
@@ -83,6 +86,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public Customer withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -94,6 +98,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Customer withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -106,6 +111,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creation_source")
     public String creationSource;
+
     public Customer withCreationSource(String creationSource) {
         this.creationSource = creationSource;
         return this;
@@ -117,6 +123,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public Customer withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -128,6 +135,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public Customer withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -139,6 +147,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public Customer withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -150,6 +159,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     public String[] groupIds;
+
     public Customer withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -161,6 +171,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Customer withId(String id) {
         this.id = id;
         return this;
@@ -172,6 +183,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public Customer withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -183,6 +195,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Customer withNote(String note) {
         this.note = note;
         return this;
@@ -194,6 +207,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public Customer withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -205,6 +219,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferences")
     public CustomerPreferences preferences;
+
     public Customer withPreferences(CustomerPreferences preferences) {
         this.preferences = preferences;
         return this;
@@ -217,6 +232,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public Customer withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -228,6 +244,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment_ids")
     public String[] segmentIds;
+
     public Customer withSegmentIds(String[] segmentIds) {
         this.segmentIds = segmentIds;
         return this;
@@ -239,6 +256,7 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Customer withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -250,9 +268,11 @@ public class Customer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Customer withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Customer(){}
 }

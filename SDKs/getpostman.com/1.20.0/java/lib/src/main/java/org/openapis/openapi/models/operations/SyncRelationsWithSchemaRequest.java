@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SyncRelationsWithSchemaRequest {
@@ -12,6 +13,7 @@ public class SyncRelationsWithSchemaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
     public String apiId;
+
     public SyncRelationsWithSchemaRequest withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -22,6 +24,7 @@ public class SyncRelationsWithSchemaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
     public String apiVersionId;
+
     public SyncRelationsWithSchemaRequest withApiVersionId(String apiVersionId) {
         this.apiVersionId = apiVersionId;
         return this;
@@ -32,6 +35,7 @@ public class SyncRelationsWithSchemaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entityId")
     public String entityId;
+
     public SyncRelationsWithSchemaRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -42,9 +46,16 @@ public class SyncRelationsWithSchemaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entityType")
     public String entityType;
+
     public SyncRelationsWithSchemaRequest withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
     }
     
+    public SyncRelationsWithSchemaRequest(@JsonProperty("apiId") String apiId, @JsonProperty("apiVersionId") String apiVersionId, @JsonProperty("entityId") String entityId, @JsonProperty("entityType") String entityType) {
+        this.apiId = apiId;
+        this.apiVersionId = apiVersionId;
+        this.entityId = entityId;
+        this.entityType = entityType;
+  }
 }

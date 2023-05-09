@@ -18,6 +18,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accelerators")
     public AcceleratorConfig[] accelerators;
+
     public NodeConfig withAccelerators(AcceleratorConfig[] accelerators) {
         this.accelerators = accelerators;
         return this;
@@ -29,6 +30,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advancedMachineFeatures")
     public AdvancedMachineFeatures advancedMachineFeatures;
+
     public NodeConfig withAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         return this;
@@ -40,6 +42,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDiskKmsKey")
     public String bootDiskKmsKey;
+
     public NodeConfig withBootDiskKmsKey(String bootDiskKmsKey) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         return this;
@@ -51,6 +54,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidentialNodes")
     public ConfidentialNodes confidentialNodes;
+
     public NodeConfig withConfidentialNodes(ConfidentialNodes confidentialNodes) {
         this.confidentialNodes = confidentialNodes;
         return this;
@@ -62,6 +66,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public Integer diskSizeGb;
+
     public NodeConfig withDiskSizeGb(Integer diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -73,6 +78,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public NodeConfig withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -84,6 +90,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ephemeralStorageLocalSsdConfig")
     public EphemeralStorageLocalSsdConfig ephemeralStorageLocalSsdConfig;
+
     public NodeConfig withEphemeralStorageLocalSsdConfig(EphemeralStorageLocalSsdConfig ephemeralStorageLocalSsdConfig) {
         this.ephemeralStorageLocalSsdConfig = ephemeralStorageLocalSsdConfig;
         return this;
@@ -95,6 +102,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fastSocket")
     public FastSocket fastSocket;
+
     public NodeConfig withFastSocket(FastSocket fastSocket) {
         this.fastSocket = fastSocket;
         return this;
@@ -106,6 +114,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcfsConfig")
     public GcfsConfig gcfsConfig;
+
     public NodeConfig withGcfsConfig(GcfsConfig gcfsConfig) {
         this.gcfsConfig = gcfsConfig;
         return this;
@@ -117,6 +126,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gvnic")
     public VirtualNIC gvnic;
+
     public NodeConfig withGvnic(VirtualNIC gvnic) {
         this.gvnic = gvnic;
         return this;
@@ -128,6 +138,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public String imageType;
+
     public NodeConfig withImageType(String imageType) {
         this.imageType = imageType;
         return this;
@@ -139,6 +150,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubeletConfig")
     public NodeKubeletConfig kubeletConfig;
+
     public NodeConfig withKubeletConfig(NodeKubeletConfig kubeletConfig) {
         this.kubeletConfig = kubeletConfig;
         return this;
@@ -150,6 +162,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public NodeConfig withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -161,6 +174,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxNodeConfig")
     public LinuxNodeConfig linuxNodeConfig;
+
     public NodeConfig withLinuxNodeConfig(LinuxNodeConfig linuxNodeConfig) {
         this.linuxNodeConfig = linuxNodeConfig;
         return this;
@@ -172,6 +186,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localNvmeSsdBlockConfig")
     public LocalNvmeSsdBlockConfig localNvmeSsdBlockConfig;
+
     public NodeConfig withLocalNvmeSsdBlockConfig(LocalNvmeSsdBlockConfig localNvmeSsdBlockConfig) {
         this.localNvmeSsdBlockConfig = localNvmeSsdBlockConfig;
         return this;
@@ -183,6 +198,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localSsdCount")
     public Integer localSsdCount;
+
     public NodeConfig withLocalSsdCount(Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
         return this;
@@ -194,6 +210,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfig")
     public NodePoolLoggingConfig loggingConfig;
+
     public NodeConfig withLoggingConfig(NodePoolLoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -205,6 +222,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public NodeConfig withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -216,6 +234,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public NodeConfig withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -227,6 +246,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCpuPlatform")
     public String minCpuPlatform;
+
     public NodeConfig withMinCpuPlatform(String minCpuPlatform) {
         this.minCpuPlatform = minCpuPlatform;
         return this;
@@ -238,6 +258,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeGroup")
     public String nodeGroup;
+
     public NodeConfig withNodeGroup(String nodeGroup) {
         this.nodeGroup = nodeGroup;
         return this;
@@ -249,6 +270,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthScopes")
     public String[] oauthScopes;
+
     public NodeConfig withOauthScopes(String[] oauthScopes) {
         this.oauthScopes = oauthScopes;
         return this;
@@ -260,6 +282,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preemptible")
     public Boolean preemptible;
+
     public NodeConfig withPreemptible(Boolean preemptible) {
         this.preemptible = preemptible;
         return this;
@@ -271,6 +294,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationAffinity")
     public ReservationAffinity reservationAffinity;
+
     public NodeConfig withReservationAffinity(ReservationAffinity reservationAffinity) {
         this.reservationAffinity = reservationAffinity;
         return this;
@@ -282,6 +306,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceLabels")
     public java.util.Map<String, String> resourceLabels;
+
     public NodeConfig withResourceLabels(java.util.Map<String, String> resourceLabels) {
         this.resourceLabels = resourceLabels;
         return this;
@@ -293,6 +318,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sandboxConfig")
     public SandboxConfig sandboxConfig;
+
     public NodeConfig withSandboxConfig(SandboxConfig sandboxConfig) {
         this.sandboxConfig = sandboxConfig;
         return this;
@@ -304,6 +330,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public NodeConfig withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -315,6 +342,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceConfig")
     public ShieldedInstanceConfig shieldedInstanceConfig;
+
     public NodeConfig withShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
         this.shieldedInstanceConfig = shieldedInstanceConfig;
         return this;
@@ -326,6 +354,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spot")
     public Boolean spot;
+
     public NodeConfig withSpot(Boolean spot) {
         this.spot = spot;
         return this;
@@ -337,6 +366,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public NodeConfig withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -348,6 +378,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taints")
     public NodeTaint[] taints;
+
     public NodeConfig withTaints(NodeTaint[] taints) {
         this.taints = taints;
         return this;
@@ -359,6 +390,7 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsNodeConfig")
     public WindowsNodeConfig windowsNodeConfig;
+
     public NodeConfig withWindowsNodeConfig(WindowsNodeConfig windowsNodeConfig) {
         this.windowsNodeConfig = windowsNodeConfig;
         return this;
@@ -370,9 +402,11 @@ public class NodeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadMetadataConfig")
     public WorkloadMetadataConfig workloadMetadataConfig;
+
     public NodeConfig withWorkloadMetadataConfig(WorkloadMetadataConfig workloadMetadataConfig) {
         this.workloadMetadataConfig = workloadMetadataConfig;
         return this;
     }
     
+    public NodeConfig(){}
 }

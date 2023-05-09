@@ -15,9 +15,11 @@ public class DescribeDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceDescription")
     public DescribeDeviceResponseDeviceDescription deviceDescription;
+
     public DescribeDeviceResponse withDeviceDescription(DescribeDeviceResponseDeviceDescription deviceDescription) {
         this.deviceDescription = deviceDescription;
         return this;
     }
     
+    public DescribeDeviceResponse(){}
 }

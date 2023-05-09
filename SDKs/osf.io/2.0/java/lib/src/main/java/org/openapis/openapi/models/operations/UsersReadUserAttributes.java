@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class UsersReadUserAttributes {
      */
     
     public Boolean active;
+
     public UsersReadUserAttributes withActive(Boolean active) {
         this.active = active;
         return this;
@@ -25,6 +27,7 @@ public class UsersReadUserAttributes {
      */
     
     public OffsetDateTime dateRegistered;
+
     public UsersReadUserAttributes withDateRegistered(OffsetDateTime dateRegistered) {
         this.dateRegistered = dateRegistered;
         return this;
@@ -35,6 +38,7 @@ public class UsersReadUserAttributes {
      */
     
     public String familyName;
+
     public UsersReadUserAttributes withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -45,6 +49,7 @@ public class UsersReadUserAttributes {
      */
     
     public String fullName;
+
     public UsersReadUserAttributes withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -55,6 +60,7 @@ public class UsersReadUserAttributes {
      */
     
     public String givenName;
+
     public UsersReadUserAttributes withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -65,6 +71,7 @@ public class UsersReadUserAttributes {
      */
     
     public String locale;
+
     public UsersReadUserAttributes withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -75,6 +82,7 @@ public class UsersReadUserAttributes {
      */
     
     public String middleNames;
+
     public UsersReadUserAttributes withMiddleNames(String middleNames) {
         this.middleNames = middleNames;
         return this;
@@ -85,6 +93,7 @@ public class UsersReadUserAttributes {
      */
     
     public String suffix;
+
     public UsersReadUserAttributes withSuffix(String suffix) {
         this.suffix = suffix;
         return this;
@@ -95,9 +104,15 @@ public class UsersReadUserAttributes {
      */
     
     public String timezone;
+
     public UsersReadUserAttributes withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public UsersReadUserAttributes(@JsonProperty("active") Boolean active, @JsonProperty("date_registered") OffsetDateTime dateRegistered, @JsonProperty("full_name") String fullName) {
+        this.active = active;
+        this.dateRegistered = dateRegistered;
+        this.fullName = fullName;
+  }
 }

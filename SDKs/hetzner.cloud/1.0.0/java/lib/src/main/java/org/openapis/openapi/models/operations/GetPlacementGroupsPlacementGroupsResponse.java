@@ -15,6 +15,7 @@ public class GetPlacementGroupsPlacementGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetPlacementGroupsPlacementGroupsResponseMeta meta;
+
     public GetPlacementGroupsPlacementGroupsResponse withMeta(GetPlacementGroupsPlacementGroupsResponseMeta meta) {
         this.meta = meta;
         return this;
@@ -22,9 +23,13 @@ public class GetPlacementGroupsPlacementGroupsResponse {
     
     @JsonProperty("placement_groups")
     public GetPlacementGroupsPlacementGroupsResponsePlacementGroup[] placementGroups;
+
     public GetPlacementGroupsPlacementGroupsResponse withPlacementGroups(GetPlacementGroupsPlacementGroupsResponsePlacementGroup[] placementGroups) {
         this.placementGroups = placementGroups;
         return this;
     }
     
+    public GetPlacementGroupsPlacementGroupsResponse(@JsonProperty("placement_groups") GetPlacementGroupsPlacementGroupsResponsePlacementGroup[] placementGroups) {
+        this.placementGroups = placementGroups;
+  }
 }

@@ -15,6 +15,7 @@ public class UserTokenConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JsonTokenTypeConfiguration")
     public JsonTokenTypeConfiguration jsonTokenTypeConfiguration;
+
     public UserTokenConfiguration withJsonTokenTypeConfiguration(JsonTokenTypeConfiguration jsonTokenTypeConfiguration) {
         this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class UserTokenConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JwtTokenTypeConfiguration")
     public JwtTokenTypeConfiguration jwtTokenTypeConfiguration;
+
     public UserTokenConfiguration withJwtTokenTypeConfiguration(JwtTokenTypeConfiguration jwtTokenTypeConfiguration) {
         this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
         return this;
     }
     
+    public UserTokenConfiguration(){}
 }

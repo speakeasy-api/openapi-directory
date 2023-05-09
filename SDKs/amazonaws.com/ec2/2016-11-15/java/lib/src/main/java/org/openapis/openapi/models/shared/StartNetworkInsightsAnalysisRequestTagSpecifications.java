@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisRequestTagSpecifications {
     
     public StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public StartNetworkInsightsAnalysisRequestTagSpecifications withResourceType(StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class StartNetworkInsightsAnalysisRequestTagSpecifications {
     
     
     public StartNetworkInsightsAnalysisRequestTagSpecificationsTags[] tags;
+
     public StartNetworkInsightsAnalysisRequestTagSpecifications withTags(StartNetworkInsightsAnalysisRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisRequestTagSpecifications(){}
 }

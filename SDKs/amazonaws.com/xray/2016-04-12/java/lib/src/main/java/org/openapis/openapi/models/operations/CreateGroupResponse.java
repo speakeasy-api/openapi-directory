@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupResponse {
     
     public String contentType;
+
     public CreateGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGroupResult createGroupResult;
+
     public CreateGroupResponse withCreateGroupResult(org.openapis.openapi.models.shared.CreateGroupResult createGroupResult) {
         this.createGroupResult = createGroupResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class CreateGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateGroupResponse {
      */
     
     public Object throttledException;
+
     public CreateGroupResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public CreateGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

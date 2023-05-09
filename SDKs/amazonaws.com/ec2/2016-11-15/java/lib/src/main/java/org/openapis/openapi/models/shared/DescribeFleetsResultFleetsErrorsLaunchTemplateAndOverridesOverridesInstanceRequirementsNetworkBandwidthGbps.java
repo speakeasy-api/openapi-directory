@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkBandwidthGbps {
     
     public Double max;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkBandwidthGbps withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverrides
     
     
     public Double min;
+
     public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkBandwidthGbps withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsNetworkBandwidthGbps(){}
 }

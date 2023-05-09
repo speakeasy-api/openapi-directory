@@ -18,6 +18,7 @@ public class SamlIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changePasswordUri")
     public String changePasswordUri;
+
     public SamlIdpConfig withChangePasswordUri(String changePasswordUri) {
         this.changePasswordUri = changePasswordUri;
         return this;
@@ -29,6 +30,7 @@ public class SamlIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public SamlIdpConfig withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -40,6 +42,7 @@ public class SamlIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoutRedirectUri")
     public String logoutRedirectUri;
+
     public SamlIdpConfig withLogoutRedirectUri(String logoutRedirectUri) {
         this.logoutRedirectUri = logoutRedirectUri;
         return this;
@@ -51,9 +54,11 @@ public class SamlIdpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleSignOnServiceUri")
     public String singleSignOnServiceUri;
+
     public SamlIdpConfig withSingleSignOnServiceUri(String singleSignOnServiceUri) {
         this.singleSignOnServiceUri = singleSignOnServiceUri;
         return this;
     }
     
+    public SamlIdpConfig(){}
 }

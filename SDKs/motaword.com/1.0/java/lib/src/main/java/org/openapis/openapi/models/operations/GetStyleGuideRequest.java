@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStyleGuideRequest {
@@ -12,6 +13,7 @@ public class GetStyleGuideRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetStyleGuideRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -22,6 +24,7 @@ public class GetStyleGuideRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=styleGuideId")
     public Long styleGuideId;
+
     public GetStyleGuideRequest withStyleGuideId(Long styleGuideId) {
         this.styleGuideId = styleGuideId;
         return this;
@@ -32,9 +35,14 @@ public class GetStyleGuideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
     public GetStyleGuideWithEnum[] with;
+
     public GetStyleGuideRequest withWith(GetStyleGuideWithEnum[] with) {
         this.with = with;
         return this;
     }
     
+    public GetStyleGuideRequest(@JsonProperty("projectId") Long projectId, @JsonProperty("styleGuideId") Long styleGuideId) {
+        this.projectId = projectId;
+        this.styleGuideId = styleGuideId;
+  }
 }

@@ -15,6 +15,7 @@ public class ManagedResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationCount")
     public Long associationCount;
+
     public ManagedResourceSummary withAssociationCount(Long associationCount) {
         this.associationCount = associationCount;
         return this;
@@ -23,9 +24,11 @@ public class ManagedResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public ManagedResourceSummary withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ManagedResourceSummary(){}
 }

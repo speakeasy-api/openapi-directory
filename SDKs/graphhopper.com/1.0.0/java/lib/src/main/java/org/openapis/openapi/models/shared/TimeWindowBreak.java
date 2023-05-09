@@ -12,6 +12,7 @@ public class TimeWindowBreak {
      */
     @JsonProperty("duration")
     public Long duration;
+
     public TimeWindowBreak withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -22,6 +23,7 @@ public class TimeWindowBreak {
      */
     @JsonProperty("earliest")
     public Long earliest;
+
     public TimeWindowBreak withEarliest(Long earliest) {
         this.earliest = earliest;
         return this;
@@ -32,9 +34,15 @@ public class TimeWindowBreak {
      */
     @JsonProperty("latest")
     public Long latest;
+
     public TimeWindowBreak withLatest(Long latest) {
         this.latest = latest;
         return this;
     }
     
+    public TimeWindowBreak(@JsonProperty("duration") Long duration, @JsonProperty("earliest") Long earliest, @JsonProperty("latest") Long latest) {
+        this.duration = duration;
+        this.earliest = earliest;
+        this.latest = latest;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicesRequestFilters {
     
     public String name;
+
     public DescribeVpcEndpointServicesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointServicesRequestFilters {
     
     
     public String[] values;
+
     public DescribeVpcEndpointServicesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVpcEndpointServicesRequestFilters(){}
 }

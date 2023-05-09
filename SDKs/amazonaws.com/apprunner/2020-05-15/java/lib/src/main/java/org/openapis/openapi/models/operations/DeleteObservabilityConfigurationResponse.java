@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteObservabilityConfigurationResponse {
     
     public String contentType;
+
     public DeleteObservabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteObservabilityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteObservabilityConfigurationResponse deleteObservabilityConfigurationResponse;
+
     public DeleteObservabilityConfigurationResponse withDeleteObservabilityConfigurationResponse(org.openapis.openapi.models.shared.DeleteObservabilityConfigurationResponse deleteObservabilityConfigurationResponse) {
         this.deleteObservabilityConfigurationResponse = deleteObservabilityConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteObservabilityConfigurationResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteObservabilityConfigurationResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteObservabilityConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteObservabilityConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteObservabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteObservabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteObservabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteObservabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteObservabilityConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteObservabilityConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteObservabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

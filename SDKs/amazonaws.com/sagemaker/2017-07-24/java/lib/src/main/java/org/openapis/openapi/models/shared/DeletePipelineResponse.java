@@ -15,9 +15,11 @@ public class DeletePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineArn")
     public String pipelineArn;
+
     public DeletePipelineResponse withPipelineArn(String pipelineArn) {
         this.pipelineArn = pipelineArn;
         return this;
     }
     
+    public DeletePipelineResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsListChildInOrgResponse {
     
     public String contentType;
+
     public TeamsListChildInOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsListChildInOrgResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TeamsListChildInOrgResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TeamsListChildInOrgResponse {
     
     
     public Integer statusCode;
+
     public TeamsListChildInOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TeamsListChildInOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsListChildInOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class TeamsListChildInOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.Team[] teams;
+
     public TeamsListChildInOrgResponse withTeams(org.openapis.openapi.models.shared.Team[] teams) {
         this.teams = teams;
         return this;
     }
     
+    public TeamsListChildInOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

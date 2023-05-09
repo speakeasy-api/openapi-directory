@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TasksTasksMoveRequest {
@@ -12,6 +13,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public TasksTasksMoveRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public TasksTasksMoveRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public TasksTasksMoveRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public TasksTasksMoveRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public TasksTasksMoveRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public TasksTasksMoveRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public TasksTasksMoveRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
     public String parent;
+
     public TasksTasksMoveRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -92,6 +101,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public TasksTasksMoveRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
     public String previous;
+
     public TasksTasksMoveRequest withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -112,6 +123,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public TasksTasksMoveRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task")
     public String task;
+
     public TasksTasksMoveRequest withTask(String task) {
         this.task = task;
         return this;
@@ -132,6 +145,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tasklist")
     public String tasklist;
+
     public TasksTasksMoveRequest withTasklist(String tasklist) {
         this.tasklist = tasklist;
         return this;
@@ -142,6 +156,7 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public TasksTasksMoveRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,14 @@ public class TasksTasksMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public TasksTasksMoveRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public TasksTasksMoveRequest(@JsonProperty("task") String task, @JsonProperty("tasklist") String tasklist) {
+        this.task = task;
+        this.tasklist = tasklist;
+  }
 }

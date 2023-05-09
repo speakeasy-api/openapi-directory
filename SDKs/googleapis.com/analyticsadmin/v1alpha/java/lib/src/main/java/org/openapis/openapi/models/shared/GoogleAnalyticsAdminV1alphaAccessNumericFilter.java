@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccessNumericFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public GoogleAnalyticsAdminV1alphaAccessNumericFilterOperationEnum operation;
+
     public GoogleAnalyticsAdminV1alphaAccessNumericFilter withOperation(GoogleAnalyticsAdminV1alphaAccessNumericFilterOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAccessNumericFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GoogleAnalyticsAdminV1alphaNumericValue value;
+
     public GoogleAnalyticsAdminV1alphaAccessNumericFilter withValue(GoogleAnalyticsAdminV1alphaNumericValue value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessNumericFilter(){}
 }

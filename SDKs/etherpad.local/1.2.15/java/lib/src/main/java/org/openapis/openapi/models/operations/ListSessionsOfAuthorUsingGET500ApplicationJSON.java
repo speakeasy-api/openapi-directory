@@ -15,6 +15,7 @@ public class ListSessionsOfAuthorUsingGET500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ListSessionsOfAuthorUsingGET500ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ListSessionsOfAuthorUsingGET500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public ListSessionsOfAuthorUsingGET500ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class ListSessionsOfAuthorUsingGET500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ListSessionsOfAuthorUsingGET500ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ListSessionsOfAuthorUsingGET500ApplicationJSON(){}
 }

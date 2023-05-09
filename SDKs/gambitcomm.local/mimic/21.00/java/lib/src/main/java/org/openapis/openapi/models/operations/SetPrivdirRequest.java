@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPrivdirRequest {
@@ -12,6 +13,7 @@ public class SetPrivdirRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetPrivdirRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetPrivdirRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=privdir")
     public String privdir;
+
     public SetPrivdirRequest withPrivdir(String privdir) {
         this.privdir = privdir;
         return this;
     }
     
+    public SetPrivdirRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("privdir") String privdir) {
+        this.agentNum = agentNum;
+        this.privdir = privdir;
+  }
 }

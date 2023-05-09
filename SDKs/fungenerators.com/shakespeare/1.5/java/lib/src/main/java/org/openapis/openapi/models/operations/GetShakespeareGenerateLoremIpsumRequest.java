@@ -12,6 +12,7 @@ public class GetShakespeareGenerateLoremIpsumRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetShakespeareGenerateLoremIpsumRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetShakespeareGenerateLoremIpsumRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetShakespeareGenerateLoremIpsumRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetShakespeareGenerateLoremIpsumRequest(){}
 }

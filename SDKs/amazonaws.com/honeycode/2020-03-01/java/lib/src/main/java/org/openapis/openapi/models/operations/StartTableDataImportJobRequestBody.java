@@ -12,6 +12,7 @@ public class StartTableDataImportJobRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public StartTableDataImportJobRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -22,6 +23,7 @@ public class StartTableDataImportJobRequestBody {
      */
     @JsonProperty("dataFormat")
     public StartTableDataImportJobRequestBodyDataFormatEnum dataFormat;
+
     public StartTableDataImportJobRequestBody withDataFormat(StartTableDataImportJobRequestBodyDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -32,6 +34,7 @@ public class StartTableDataImportJobRequestBody {
      */
     @JsonProperty("dataSource")
     public StartTableDataImportJobRequestBodyDataSource dataSource;
+
     public StartTableDataImportJobRequestBody withDataSource(StartTableDataImportJobRequestBodyDataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -42,9 +45,16 @@ public class StartTableDataImportJobRequestBody {
      */
     @JsonProperty("importOptions")
     public StartTableDataImportJobRequestBodyImportOptions importOptions;
+
     public StartTableDataImportJobRequestBody withImportOptions(StartTableDataImportJobRequestBodyImportOptions importOptions) {
         this.importOptions = importOptions;
         return this;
     }
     
+    public StartTableDataImportJobRequestBody(@JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("dataFormat") StartTableDataImportJobRequestBodyDataFormatEnum dataFormat, @JsonProperty("dataSource") StartTableDataImportJobRequestBodyDataSource dataSource, @JsonProperty("importOptions") StartTableDataImportJobRequestBodyImportOptions importOptions) {
+        this.clientRequestToken = clientRequestToken;
+        this.dataFormat = dataFormat;
+        this.dataSource = dataSource;
+        this.importOptions = importOptions;
+  }
 }

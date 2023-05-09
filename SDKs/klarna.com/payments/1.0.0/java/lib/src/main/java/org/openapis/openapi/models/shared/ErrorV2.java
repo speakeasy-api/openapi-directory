@@ -15,6 +15,7 @@ public class ErrorV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorized_payment_method")
     public AuthorizedPaymentMethod authorizedPaymentMethod;
+
     public ErrorV2 withAuthorizedPaymentMethod(AuthorizedPaymentMethod authorizedPaymentMethod) {
         this.authorizedPaymentMethod = authorizedPaymentMethod;
         return this;
@@ -23,6 +24,7 @@ public class ErrorV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("correlation_id")
     public String correlationId;
+
     public ErrorV2 withCorrelationId(String correlationId) {
         this.correlationId = correlationId;
         return this;
@@ -31,6 +33,7 @@ public class ErrorV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public ErrorV2 withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -39,6 +42,7 @@ public class ErrorV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_messages")
     public String[] errorMessages;
+
     public ErrorV2 withErrorMessages(String[] errorMessages) {
         this.errorMessages = errorMessages;
         return this;
@@ -47,6 +51,7 @@ public class ErrorV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fraud_status")
     public String fraudStatus;
+
     public ErrorV2 withFraudStatus(String fraudStatus) {
         this.fraudStatus = fraudStatus;
         return this;
@@ -55,9 +60,11 @@ public class ErrorV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ErrorV2 withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ErrorV2(){}
 }

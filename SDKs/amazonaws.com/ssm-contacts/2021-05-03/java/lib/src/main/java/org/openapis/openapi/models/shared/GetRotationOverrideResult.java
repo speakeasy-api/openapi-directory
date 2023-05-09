@@ -22,6 +22,7 @@ public class GetRotationOverrideResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public GetRotationOverrideResult withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -32,6 +33,7 @@ public class GetRotationOverrideResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetRotationOverrideResult withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class GetRotationOverrideResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewContactIds")
     public String[] newContactIds;
+
     public GetRotationOverrideResult withNewContactIds(String[] newContactIds) {
         this.newContactIds = newContactIds;
         return this;
@@ -48,6 +51,7 @@ public class GetRotationOverrideResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationArn")
     public String rotationArn;
+
     public GetRotationOverrideResult withRotationArn(String rotationArn) {
         this.rotationArn = rotationArn;
         return this;
@@ -56,6 +60,7 @@ public class GetRotationOverrideResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RotationOverrideId")
     public String rotationOverrideId;
+
     public GetRotationOverrideResult withRotationOverrideId(String rotationOverrideId) {
         this.rotationOverrideId = rotationOverrideId;
         return this;
@@ -66,9 +71,11 @@ public class GetRotationOverrideResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetRotationOverrideResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetRotationOverrideResult(){}
 }

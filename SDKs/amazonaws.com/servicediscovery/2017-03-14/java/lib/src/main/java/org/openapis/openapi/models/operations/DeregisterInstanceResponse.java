@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterInstanceResponse {
     
     public String contentType;
+
     public DeregisterInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterInstanceResponse deregisterInstanceResponse;
+
     public DeregisterInstanceResponse withDeregisterInstanceResponse(org.openapis.openapi.models.shared.DeregisterInstanceResponse deregisterInstanceResponse) {
         this.deregisterInstanceResponse = deregisterInstanceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterInstanceResponse {
      */
     
     public Object duplicateRequest;
+
     public DeregisterInstanceResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterInstanceResponse {
      */
     
     public Object instanceNotFound;
+
     public DeregisterInstanceResponse withInstanceNotFound(Object instanceNotFound) {
         this.instanceNotFound = instanceNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterInstanceResponse {
      */
     
     public Object invalidInput;
+
     public DeregisterInstanceResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterInstanceResponse {
      */
     
     public Object resourceInUse;
+
     public DeregisterInstanceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -69,6 +76,7 @@ public class DeregisterInstanceResponse {
      */
     
     public Object serviceNotFound;
+
     public DeregisterInstanceResponse withServiceNotFound(Object serviceNotFound) {
         this.serviceNotFound = serviceNotFound;
         return this;
@@ -76,6 +84,7 @@ public class DeregisterInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeregisterInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeregisterInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

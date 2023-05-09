@@ -12,6 +12,7 @@ public class UpdateSiteAddressRequestBody {
      */
     @JsonProperty("Address")
     public UpdateSiteAddressRequestBodyAddress address;
+
     public UpdateSiteAddressRequestBody withAddress(UpdateSiteAddressRequestBodyAddress address) {
         this.address = address;
         return this;
@@ -22,9 +23,14 @@ public class UpdateSiteAddressRequestBody {
      */
     @JsonProperty("AddressType")
     public UpdateSiteAddressRequestBodyAddressTypeEnum addressType;
+
     public UpdateSiteAddressRequestBody withAddressType(UpdateSiteAddressRequestBodyAddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
     }
     
+    public UpdateSiteAddressRequestBody(@JsonProperty("Address") UpdateSiteAddressRequestBodyAddress address, @JsonProperty("AddressType") UpdateSiteAddressRequestBodyAddressTypeEnum addressType) {
+        this.address = address;
+        this.addressType = addressType;
+  }
 }

@@ -18,6 +18,7 @@ public class SearchOrganizationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public SearchOrganizationsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,6 +30,7 @@ public class SearchOrganizationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public SearchOrganizationsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -40,9 +42,11 @@ public class SearchOrganizationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public SearchOrganizationsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public SearchOrganizationsRequest(){}
 }

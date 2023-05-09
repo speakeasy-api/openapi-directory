@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SqlProjectsInstancesGetDiskShrinkConfigSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SqlProjectsInstancesGetDiskShrinkConfigSecurityOption1 option1;
+
     public SqlProjectsInstancesGetDiskShrinkConfigSecurity withOption1(SqlProjectsInstancesGetDiskShrinkConfigSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class SqlProjectsInstancesGetDiskShrinkConfigSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SqlProjectsInstancesGetDiskShrinkConfigSecurityOption2 option2;
+
     public SqlProjectsInstancesGetDiskShrinkConfigSecurity withOption2(SqlProjectsInstancesGetDiskShrinkConfigSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public SqlProjectsInstancesGetDiskShrinkConfigSecurity(){}
 }

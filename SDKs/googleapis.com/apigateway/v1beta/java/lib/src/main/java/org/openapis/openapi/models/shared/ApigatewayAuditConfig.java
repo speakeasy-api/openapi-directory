@@ -18,6 +18,7 @@ public class ApigatewayAuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditLogConfigs")
     public ApigatewayAuditLogConfig[] auditLogConfigs;
+
     public ApigatewayAuditConfig withAuditLogConfigs(ApigatewayAuditLogConfig[] auditLogConfigs) {
         this.auditLogConfigs = auditLogConfigs;
         return this;
@@ -29,9 +30,11 @@ public class ApigatewayAuditConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public ApigatewayAuditConfig withService(String service) {
         this.service = service;
         return this;
     }
     
+    public ApigatewayAuditConfig(){}
 }

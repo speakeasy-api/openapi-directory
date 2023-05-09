@@ -49,11 +49,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,11 +86,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,11 +123,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,11 +160,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +197,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +234,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,11 +271,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,11 +308,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,11 +345,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,11 +382,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +419,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -478,11 +456,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,11 +493,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,11 +530,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -595,11 +567,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -634,11 +604,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +641,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -712,11 +678,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -751,11 +715,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -790,11 +752,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -829,11 +789,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETTermStatsUsingGETResponse res = new org.openapis.openapi.models.operations.GETTermStatsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETTermStatsUsingGETResponse res = new org.openapis.openapi.models.operations.GETTermStatsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -868,11 +826,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -907,11 +863,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -946,11 +900,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETXdbsCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETXdbsCountUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETXdbsCountUsingGETResponse res = new org.openapis.openapi.models.operations.GETXdbsCountUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -985,11 +937,9 @@ public class Statistics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETXdbsDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETXdbsDiffUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETXdbsDiffUsingGETResponse res = new org.openapis.openapi.models.operations.GETXdbsDiffUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

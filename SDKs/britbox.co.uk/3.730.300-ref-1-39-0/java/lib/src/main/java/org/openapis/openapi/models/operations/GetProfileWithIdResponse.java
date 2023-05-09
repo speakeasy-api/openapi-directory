@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProfileWithIdResponse {
     
     public String contentType;
+
     public GetProfileWithIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProfileWithIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ProfileSummary profileSummary;
+
     public GetProfileWithIdResponse withProfileSummary(org.openapis.openapi.models.shared.ProfileSummary profileSummary) {
         this.profileSummary = profileSummary;
         return this;
@@ -29,6 +32,7 @@ public class GetProfileWithIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public GetProfileWithIdResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class GetProfileWithIdResponse {
     
     
     public Integer statusCode;
+
     public GetProfileWithIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetProfileWithIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProfileWithIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProfileWithIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

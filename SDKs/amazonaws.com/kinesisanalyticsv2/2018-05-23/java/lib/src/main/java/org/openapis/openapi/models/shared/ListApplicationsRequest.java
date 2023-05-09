@@ -12,6 +12,7 @@ public class ListApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListApplicationsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,9 +21,11 @@ public class ListApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListApplicationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListApplicationsRequest(){}
 }

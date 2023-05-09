@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticlePutImageJsonRequest {
@@ -12,6 +13,7 @@ public class ArticlePutImageJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel;
+
     public ArticlePutImageJsonRequest withBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel) {
         this.billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel;
         return this;
@@ -22,6 +24,7 @@ public class ArticlePutImageJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
     public Long imageId;
+
     public ArticlePutImageJsonRequest withImageId(Long imageId) {
         this.imageId = imageId;
         return this;
@@ -32,9 +35,15 @@ public class ArticlePutImageJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public Long productId;
+
     public ArticlePutImageJsonRequest withProductId(Long productId) {
         this.productId = productId;
         return this;
     }
     
+    public ArticlePutImageJsonRequest(@JsonProperty("Billbee.Interfaces.BillbeeAPI.Model.ArticleImageRelationApiModel") org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel, @JsonProperty("imageId") Long imageId, @JsonProperty("productId") Long productId) {
+        this.billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel;
+        this.imageId = imageId;
+        this.productId = productId;
+  }
 }

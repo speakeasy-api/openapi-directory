@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ConnectionDraining - Information about the &lt;code&gt;ConnectionDraining&lt;/code&gt; attribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConnectionDraining {
     
     public Boolean enabled;
+
     public ConnectionDraining withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,9 +20,13 @@ public class ConnectionDraining {
     
     
     public Long timeout;
+
     public ConnectionDraining withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public ConnectionDraining(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

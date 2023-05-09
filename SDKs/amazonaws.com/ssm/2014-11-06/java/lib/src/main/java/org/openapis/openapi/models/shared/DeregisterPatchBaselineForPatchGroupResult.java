@@ -15,6 +15,7 @@ public class DeregisterPatchBaselineForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public DeregisterPatchBaselineForPatchGroupResult withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -23,9 +24,11 @@ public class DeregisterPatchBaselineForPatchGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public DeregisterPatchBaselineForPatchGroupResult withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public DeregisterPatchBaselineForPatchGroupResult(){}
 }

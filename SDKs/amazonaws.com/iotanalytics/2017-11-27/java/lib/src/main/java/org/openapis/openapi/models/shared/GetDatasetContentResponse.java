@@ -20,6 +20,7 @@ public class GetDatasetContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public DatasetEntry[] entries;
+
     public GetDatasetContentResponse withEntries(DatasetEntry[] entries) {
         this.entries = entries;
         return this;
@@ -28,6 +29,7 @@ public class GetDatasetContentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DatasetContentStatus status;
+
     public GetDatasetContentResponse withStatus(DatasetContentStatus status) {
         this.status = status;
         return this;
@@ -38,9 +40,11 @@ public class GetDatasetContentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public GetDatasetContentResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetDatasetContentResponse(){}
 }

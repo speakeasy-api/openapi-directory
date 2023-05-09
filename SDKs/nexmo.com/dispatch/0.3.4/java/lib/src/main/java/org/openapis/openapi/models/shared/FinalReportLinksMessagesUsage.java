@@ -15,6 +15,7 @@ public class FinalReportLinksMessagesUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public FinalReportLinksMessagesUsageCurrencyEnum currency;
+
     public FinalReportLinksMessagesUsage withCurrency(FinalReportLinksMessagesUsageCurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -26,9 +27,11 @@ public class FinalReportLinksMessagesUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public FinalReportLinksMessagesUsage withPrice(String price) {
         this.price = price;
         return this;
     }
     
+    public FinalReportLinksMessagesUsage(){}
 }

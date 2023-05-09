@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateGatewayToServerInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public AssociateGatewayToServerInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
@@ -16,9 +17,14 @@ public class AssociateGatewayToServerInput {
     
     @JsonProperty("ServerArn")
     public String serverArn;
+
     public AssociateGatewayToServerInput withServerArn(String serverArn) {
         this.serverArn = serverArn;
         return this;
     }
     
+    public AssociateGatewayToServerInput(@JsonProperty("GatewayArn") String gatewayArn, @JsonProperty("ServerArn") String serverArn) {
+        this.gatewayArn = gatewayArn;
+        this.serverArn = serverArn;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRunGroupsResponse {
@@ -12,6 +13,7 @@ public class ListRunGroupsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRunGroupsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListRunGroupsResponse {
      */
     
     public Object conflictException;
+
     public ListRunGroupsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListRunGroupsResponse {
     
     
     public String contentType;
+
     public ListRunGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListRunGroupsResponse {
      */
     
     public Object internalServerException;
+
     public ListRunGroupsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListRunGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRunGroupsResponse listRunGroupsResponse;
+
     public ListRunGroupsResponse withListRunGroupsResponse(org.openapis.openapi.models.shared.ListRunGroupsResponse listRunGroupsResponse) {
         this.listRunGroupsResponse = listRunGroupsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListRunGroupsResponse {
      */
     
     public Object requestTimeoutException;
+
     public ListRunGroupsResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class ListRunGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRunGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class ListRunGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListRunGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListRunGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRunGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListRunGroupsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListRunGroupsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -103,6 +114,7 @@ public class ListRunGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListRunGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class ListRunGroupsResponse {
      */
     
     public Object validationException;
+
     public ListRunGroupsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRunGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

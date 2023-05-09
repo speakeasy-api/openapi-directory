@@ -15,6 +15,7 @@ public class UpdateLoggingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConfiguration")
     public UpdateLoggingConfigurationRequestBodyDestinationConfiguration destinationConfiguration;
+
     public UpdateLoggingConfigurationRequestBody withDestinationConfiguration(UpdateLoggingConfigurationRequestBodyDestinationConfiguration destinationConfiguration) {
         this.destinationConfiguration = destinationConfiguration;
         return this;
@@ -25,6 +26,7 @@ public class UpdateLoggingConfigurationRequestBody {
      */
     @JsonProperty("identifier")
     public String identifier;
+
     public UpdateLoggingConfigurationRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -36,9 +38,13 @@ public class UpdateLoggingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateLoggingConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateLoggingConfigurationRequestBody(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

@@ -18,9 +18,11 @@ public class CloudTaskListSubtasksResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public SubtaskInformation[] value;
+
     public CloudTaskListSubtasksResult withValue(SubtaskInformation[] value) {
         this.value = value;
         return this;
     }
     
+    public CloudTaskListSubtasksResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGraphqlApiResponse {
@@ -12,6 +13,7 @@ public class DeleteGraphqlApiResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteGraphqlApiResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteGraphqlApiResponse {
      */
     
     public Object badRequestException;
+
     public DeleteGraphqlApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteGraphqlApiResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteGraphqlApiResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGraphqlApiResponse {
     
     
     public String contentType;
+
     public DeleteGraphqlApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteGraphqlApiResponse {
      */
     
     public java.util.Map<String, Object> deleteGraphqlApiResponse;
+
     public DeleteGraphqlApiResponse withDeleteGraphqlApiResponse(java.util.Map<String, Object> deleteGraphqlApiResponse) {
         this.deleteGraphqlApiResponse = deleteGraphqlApiResponse;
         return this;
@@ -59,6 +65,7 @@ public class DeleteGraphqlApiResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteGraphqlApiResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteGraphqlApiResponse {
      */
     
     public Object notFoundException;
+
     public DeleteGraphqlApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteGraphqlApiResponse {
     
     
     public Integer statusCode;
+
     public DeleteGraphqlApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteGraphqlApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGraphqlApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DeleteGraphqlApiResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteGraphqlApiResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteGraphqlApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

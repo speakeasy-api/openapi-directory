@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRotationResponse {
@@ -12,6 +13,7 @@ public class GetRotationResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRotationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRotationResponse {
     
     
     public String contentType;
+
     public GetRotationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRotationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRotationResult getRotationResult;
+
     public GetRotationResponse withGetRotationResult(org.openapis.openapi.models.shared.GetRotationResult getRotationResult) {
         this.getRotationResult = getRotationResult;
         return this;
@@ -39,6 +43,7 @@ public class GetRotationResponse {
      */
     
     public Object internalServerException;
+
     public GetRotationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetRotationResponse {
     
     
     public Integer statusCode;
+
     public GetRotationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRotationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRotationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetRotationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRotationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetRotationResponse {
      */
     
     public Object throttlingException;
+
     public GetRotationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetRotationResponse {
      */
     
     public Object validationException;
+
     public GetRotationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRotationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

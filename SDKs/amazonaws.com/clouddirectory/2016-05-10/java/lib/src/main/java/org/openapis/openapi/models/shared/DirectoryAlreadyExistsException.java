@@ -15,9 +15,11 @@ public class DirectoryAlreadyExistsException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DirectoryAlreadyExistsException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DirectoryAlreadyExistsException(){}
 }

@@ -12,9 +12,13 @@ public class GetBackendAuthRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GetBackendAuthRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GetBackendAuthRequestBody(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

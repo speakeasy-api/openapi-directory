@@ -18,9 +18,11 @@ public class EcKeyType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureAlgorithm")
     public EcKeyTypeSignatureAlgorithmEnum signatureAlgorithm;
+
     public EcKeyType withSignatureAlgorithm(EcKeyTypeSignatureAlgorithmEnum signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
         return this;
     }
     
+    public EcKeyType(){}
 }

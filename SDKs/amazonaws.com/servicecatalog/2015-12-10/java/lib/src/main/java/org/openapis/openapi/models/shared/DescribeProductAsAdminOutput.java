@@ -15,6 +15,7 @@ public class DescribeProductAsAdminOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Budgets")
     public BudgetDetail[] budgets;
+
     public DescribeProductAsAdminOutput withBudgets(BudgetDetail[] budgets) {
         this.budgets = budgets;
         return this;
@@ -23,6 +24,7 @@ public class DescribeProductAsAdminOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductViewDetail")
     public ProductViewDetail productViewDetail;
+
     public DescribeProductAsAdminOutput withProductViewDetail(ProductViewDetail productViewDetail) {
         this.productViewDetail = productViewDetail;
         return this;
@@ -31,6 +33,7 @@ public class DescribeProductAsAdminOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactSummaries")
     public ProvisioningArtifactSummary[] provisioningArtifactSummaries;
+
     public DescribeProductAsAdminOutput withProvisioningArtifactSummaries(ProvisioningArtifactSummary[] provisioningArtifactSummaries) {
         this.provisioningArtifactSummaries = provisioningArtifactSummaries;
         return this;
@@ -39,6 +42,7 @@ public class DescribeProductAsAdminOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagOptions")
     public TagOptionDetail[] tagOptions;
+
     public DescribeProductAsAdminOutput withTagOptions(TagOptionDetail[] tagOptions) {
         this.tagOptions = tagOptions;
         return this;
@@ -47,9 +51,11 @@ public class DescribeProductAsAdminOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribeProductAsAdminOutput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeProductAsAdminOutput(){}
 }

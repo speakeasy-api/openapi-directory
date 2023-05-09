@@ -18,9 +18,11 @@ public class LoggingComponentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableComponents")
     public LoggingComponentConfigEnableComponentsEnum[] enableComponents;
+
     public LoggingComponentConfig withEnableComponents(LoggingComponentConfigEnableComponentsEnum[] enableComponents) {
         this.enableComponents = enableComponents;
         return this;
     }
     
+    public LoggingComponentConfig(){}
 }

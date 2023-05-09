@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ClusterUpdate {
     /**
+     * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("additionalPodRangesConfig")
+    public AdditionalPodRangesConfig additionalPodRangesConfig;
+
+    public ClusterUpdate withAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
+        this.additionalPodRangesConfig = additionalPodRangesConfig;
+        return this;
+    }
+    
+    /**
      * Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredAddonsConfig")
     public AddonsConfig desiredAddonsConfig;
+
     public ClusterUpdate withDesiredAddonsConfig(AddonsConfig desiredAddonsConfig) {
         this.desiredAddonsConfig = desiredAddonsConfig;
         return this;
@@ -29,6 +42,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredAuthenticatorGroupsConfig")
     public AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig;
+
     public ClusterUpdate withDesiredAuthenticatorGroupsConfig(AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig) {
         this.desiredAuthenticatorGroupsConfig = desiredAuthenticatorGroupsConfig;
         return this;
@@ -40,6 +54,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredBinaryAuthorization")
     public BinaryAuthorization desiredBinaryAuthorization;
+
     public ClusterUpdate withDesiredBinaryAuthorization(BinaryAuthorization desiredBinaryAuthorization) {
         this.desiredBinaryAuthorization = desiredBinaryAuthorization;
         return this;
@@ -51,6 +66,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredClusterAutoscaling")
     public ClusterAutoscaling desiredClusterAutoscaling;
+
     public ClusterUpdate withDesiredClusterAutoscaling(ClusterAutoscaling desiredClusterAutoscaling) {
         this.desiredClusterAutoscaling = desiredClusterAutoscaling;
         return this;
@@ -62,6 +78,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCostManagementConfig")
     public CostManagementConfig desiredCostManagementConfig;
+
     public ClusterUpdate withDesiredCostManagementConfig(CostManagementConfig desiredCostManagementConfig) {
         this.desiredCostManagementConfig = desiredCostManagementConfig;
         return this;
@@ -73,6 +90,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredDatabaseEncryption")
     public DatabaseEncryption desiredDatabaseEncryption;
+
     public ClusterUpdate withDesiredDatabaseEncryption(DatabaseEncryption desiredDatabaseEncryption) {
         this.desiredDatabaseEncryption = desiredDatabaseEncryption;
         return this;
@@ -84,6 +102,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredDatapathProvider")
     public ClusterUpdateDesiredDatapathProviderEnum desiredDatapathProvider;
+
     public ClusterUpdate withDesiredDatapathProvider(ClusterUpdateDesiredDatapathProviderEnum desiredDatapathProvider) {
         this.desiredDatapathProvider = desiredDatapathProvider;
         return this;
@@ -95,6 +114,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredDefaultSnatStatus")
     public DefaultSnatStatus desiredDefaultSnatStatus;
+
     public ClusterUpdate withDesiredDefaultSnatStatus(DefaultSnatStatus desiredDefaultSnatStatus) {
         this.desiredDefaultSnatStatus = desiredDefaultSnatStatus;
         return this;
@@ -106,6 +126,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredDnsConfig")
     public DNSConfig desiredDnsConfig;
+
     public ClusterUpdate withDesiredDnsConfig(DNSConfig desiredDnsConfig) {
         this.desiredDnsConfig = desiredDnsConfig;
         return this;
@@ -117,8 +138,21 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredEnablePrivateEndpoint")
     public Boolean desiredEnablePrivateEndpoint;
+
     public ClusterUpdate withDesiredEnablePrivateEndpoint(Boolean desiredEnablePrivateEndpoint) {
         this.desiredEnablePrivateEndpoint = desiredEnablePrivateEndpoint;
+        return this;
+    }
+    
+    /**
+     * Fleet is the fleet configuration for the cluster.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("desiredFleet")
+    public Fleet desiredFleet;
+
+    public ClusterUpdate withDesiredFleet(Fleet desiredFleet) {
+        this.desiredFleet = desiredFleet;
         return this;
     }
     
@@ -128,6 +162,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredGatewayApiConfig")
     public GatewayAPIConfig desiredGatewayApiConfig;
+
     public ClusterUpdate withDesiredGatewayApiConfig(GatewayAPIConfig desiredGatewayApiConfig) {
         this.desiredGatewayApiConfig = desiredGatewayApiConfig;
         return this;
@@ -139,6 +174,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredGcfsConfig")
     public GcfsConfig desiredGcfsConfig;
+
     public ClusterUpdate withDesiredGcfsConfig(GcfsConfig desiredGcfsConfig) {
         this.desiredGcfsConfig = desiredGcfsConfig;
         return this;
@@ -150,6 +186,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredIdentityServiceConfig")
     public IdentityServiceConfig desiredIdentityServiceConfig;
+
     public ClusterUpdate withDesiredIdentityServiceConfig(IdentityServiceConfig desiredIdentityServiceConfig) {
         this.desiredIdentityServiceConfig = desiredIdentityServiceConfig;
         return this;
@@ -161,6 +198,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredImageType")
     public String desiredImageType;
+
     public ClusterUpdate withDesiredImageType(String desiredImageType) {
         this.desiredImageType = desiredImageType;
         return this;
@@ -172,6 +210,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredIntraNodeVisibilityConfig")
     public IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig;
+
     public ClusterUpdate withDesiredIntraNodeVisibilityConfig(IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig) {
         this.desiredIntraNodeVisibilityConfig = desiredIntraNodeVisibilityConfig;
         return this;
@@ -183,6 +222,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredL4ilbSubsettingConfig")
     public ILBSubsettingConfig desiredL4ilbSubsettingConfig;
+
     public ClusterUpdate withDesiredL4ilbSubsettingConfig(ILBSubsettingConfig desiredL4ilbSubsettingConfig) {
         this.desiredL4ilbSubsettingConfig = desiredL4ilbSubsettingConfig;
         return this;
@@ -194,6 +234,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredLocations")
     public String[] desiredLocations;
+
     public ClusterUpdate withDesiredLocations(String[] desiredLocations) {
         this.desiredLocations = desiredLocations;
         return this;
@@ -205,6 +246,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredLoggingConfig")
     public LoggingConfig desiredLoggingConfig;
+
     public ClusterUpdate withDesiredLoggingConfig(LoggingConfig desiredLoggingConfig) {
         this.desiredLoggingConfig = desiredLoggingConfig;
         return this;
@@ -216,6 +258,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredLoggingService")
     public String desiredLoggingService;
+
     public ClusterUpdate withDesiredLoggingService(String desiredLoggingService) {
         this.desiredLoggingService = desiredLoggingService;
         return this;
@@ -227,6 +270,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredMasterAuthorizedNetworksConfig")
     public MasterAuthorizedNetworksConfig desiredMasterAuthorizedNetworksConfig;
+
     public ClusterUpdate withDesiredMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfig desiredMasterAuthorizedNetworksConfig) {
         this.desiredMasterAuthorizedNetworksConfig = desiredMasterAuthorizedNetworksConfig;
         return this;
@@ -238,6 +282,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredMasterVersion")
     public String desiredMasterVersion;
+
     public ClusterUpdate withDesiredMasterVersion(String desiredMasterVersion) {
         this.desiredMasterVersion = desiredMasterVersion;
         return this;
@@ -249,6 +294,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredMeshCertificates")
     public MeshCertificates desiredMeshCertificates;
+
     public ClusterUpdate withDesiredMeshCertificates(MeshCertificates desiredMeshCertificates) {
         this.desiredMeshCertificates = desiredMeshCertificates;
         return this;
@@ -260,6 +306,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredMonitoringConfig")
     public MonitoringConfig desiredMonitoringConfig;
+
     public ClusterUpdate withDesiredMonitoringConfig(MonitoringConfig desiredMonitoringConfig) {
         this.desiredMonitoringConfig = desiredMonitoringConfig;
         return this;
@@ -271,6 +318,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredMonitoringService")
     public String desiredMonitoringService;
+
     public ClusterUpdate withDesiredMonitoringService(String desiredMonitoringService) {
         this.desiredMonitoringService = desiredMonitoringService;
         return this;
@@ -282,6 +330,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredNodePoolAutoConfigNetworkTags")
     public NetworkTags desiredNodePoolAutoConfigNetworkTags;
+
     public ClusterUpdate withDesiredNodePoolAutoConfigNetworkTags(NetworkTags desiredNodePoolAutoConfigNetworkTags) {
         this.desiredNodePoolAutoConfigNetworkTags = desiredNodePoolAutoConfigNetworkTags;
         return this;
@@ -293,6 +342,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredNodePoolAutoscaling")
     public NodePoolAutoscaling desiredNodePoolAutoscaling;
+
     public ClusterUpdate withDesiredNodePoolAutoscaling(NodePoolAutoscaling desiredNodePoolAutoscaling) {
         this.desiredNodePoolAutoscaling = desiredNodePoolAutoscaling;
         return this;
@@ -304,6 +354,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredNodePoolId")
     public String desiredNodePoolId;
+
     public ClusterUpdate withDesiredNodePoolId(String desiredNodePoolId) {
         this.desiredNodePoolId = desiredNodePoolId;
         return this;
@@ -315,6 +366,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredNodePoolLoggingConfig")
     public NodePoolLoggingConfig desiredNodePoolLoggingConfig;
+
     public ClusterUpdate withDesiredNodePoolLoggingConfig(NodePoolLoggingConfig desiredNodePoolLoggingConfig) {
         this.desiredNodePoolLoggingConfig = desiredNodePoolLoggingConfig;
         return this;
@@ -326,6 +378,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredNodeVersion")
     public String desiredNodeVersion;
+
     public ClusterUpdate withDesiredNodeVersion(String desiredNodeVersion) {
         this.desiredNodeVersion = desiredNodeVersion;
         return this;
@@ -337,6 +390,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredNotificationConfig")
     public NotificationConfig desiredNotificationConfig;
+
     public ClusterUpdate withDesiredNotificationConfig(NotificationConfig desiredNotificationConfig) {
         this.desiredNotificationConfig = desiredNotificationConfig;
         return this;
@@ -348,6 +402,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredPrivateClusterConfig")
     public PrivateClusterConfig desiredPrivateClusterConfig;
+
     public ClusterUpdate withDesiredPrivateClusterConfig(PrivateClusterConfig desiredPrivateClusterConfig) {
         this.desiredPrivateClusterConfig = desiredPrivateClusterConfig;
         return this;
@@ -359,6 +414,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredPrivateIpv6GoogleAccess")
     public ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum desiredPrivateIpv6GoogleAccess;
+
     public ClusterUpdate withDesiredPrivateIpv6GoogleAccess(ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum desiredPrivateIpv6GoogleAccess) {
         this.desiredPrivateIpv6GoogleAccess = desiredPrivateIpv6GoogleAccess;
         return this;
@@ -370,6 +426,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredReleaseChannel")
     public ReleaseChannel desiredReleaseChannel;
+
     public ClusterUpdate withDesiredReleaseChannel(ReleaseChannel desiredReleaseChannel) {
         this.desiredReleaseChannel = desiredReleaseChannel;
         return this;
@@ -381,6 +438,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredResourceUsageExportConfig")
     public ResourceUsageExportConfig desiredResourceUsageExportConfig;
+
     public ClusterUpdate withDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
         this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
         return this;
@@ -392,6 +450,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredServiceExternalIpsConfig")
     public ServiceExternalIPsConfig desiredServiceExternalIpsConfig;
+
     public ClusterUpdate withDesiredServiceExternalIpsConfig(ServiceExternalIPsConfig desiredServiceExternalIpsConfig) {
         this.desiredServiceExternalIpsConfig = desiredServiceExternalIpsConfig;
         return this;
@@ -403,6 +462,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredShieldedNodes")
     public ShieldedNodes desiredShieldedNodes;
+
     public ClusterUpdate withDesiredShieldedNodes(ShieldedNodes desiredShieldedNodes) {
         this.desiredShieldedNodes = desiredShieldedNodes;
         return this;
@@ -414,6 +474,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredStackType")
     public ClusterUpdateDesiredStackTypeEnum desiredStackType;
+
     public ClusterUpdate withDesiredStackType(ClusterUpdateDesiredStackTypeEnum desiredStackType) {
         this.desiredStackType = desiredStackType;
         return this;
@@ -425,6 +486,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredVerticalPodAutoscaling")
     public VerticalPodAutoscaling desiredVerticalPodAutoscaling;
+
     public ClusterUpdate withDesiredVerticalPodAutoscaling(VerticalPodAutoscaling desiredVerticalPodAutoscaling) {
         this.desiredVerticalPodAutoscaling = desiredVerticalPodAutoscaling;
         return this;
@@ -436,6 +498,7 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredWorkloadIdentityConfig")
     public WorkloadIdentityConfig desiredWorkloadIdentityConfig;
+
     public ClusterUpdate withDesiredWorkloadIdentityConfig(WorkloadIdentityConfig desiredWorkloadIdentityConfig) {
         this.desiredWorkloadIdentityConfig = desiredWorkloadIdentityConfig;
         return this;
@@ -447,9 +510,23 @@ public class ClusterUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ClusterUpdate withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    /**
+     * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("removedAdditionalPodRangesConfig")
+    public AdditionalPodRangesConfig removedAdditionalPodRangesConfig;
+
+    public ClusterUpdate withRemovedAdditionalPodRangesConfig(AdditionalPodRangesConfig removedAdditionalPodRangesConfig) {
+        this.removedAdditionalPodRangesConfig = removedAdditionalPodRangesConfig;
+        return this;
+    }
+    
+    public ClusterUpdate(){}
 }

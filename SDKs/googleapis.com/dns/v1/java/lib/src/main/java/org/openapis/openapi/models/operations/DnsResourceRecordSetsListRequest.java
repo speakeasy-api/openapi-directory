@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DnsResourceRecordSetsListRequest {
@@ -12,6 +13,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DnsResourceRecordSetsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DnsResourceRecordSetsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DnsResourceRecordSetsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DnsResourceRecordSetsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DnsResourceRecordSetsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DnsResourceRecordSetsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=managedZone")
     public String managedZone;
+
     public DnsResourceRecordSetsListRequest withManagedZone(String managedZone) {
         this.managedZone = managedZone;
         return this;
@@ -82,6 +90,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DnsResourceRecordSetsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public DnsResourceRecordSetsListRequest withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DnsResourceRecordSetsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DnsResourceRecordSetsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DnsResourceRecordSetsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DnsResourceRecordSetsListRequest withProject(String project) {
         this.project = project;
         return this;
@@ -142,6 +156,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DnsResourceRecordSetsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public DnsResourceRecordSetsListRequest withType(String type) {
         this.type = type;
         return this;
@@ -162,6 +178,7 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DnsResourceRecordSetsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,14 @@ public class DnsResourceRecordSetsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DnsResourceRecordSetsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DnsResourceRecordSetsListRequest(@JsonProperty("managedZone") String managedZone, @JsonProperty("project") String project) {
+        this.managedZone = managedZone;
+        this.project = project;
+  }
 }

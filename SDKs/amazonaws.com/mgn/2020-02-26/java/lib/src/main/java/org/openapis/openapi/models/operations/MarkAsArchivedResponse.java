@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MarkAsArchivedResponse {
@@ -12,6 +13,7 @@ public class MarkAsArchivedResponse {
      */
     
     public Object conflictException;
+
     public MarkAsArchivedResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class MarkAsArchivedResponse {
     
     
     public String contentType;
+
     public MarkAsArchivedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class MarkAsArchivedResponse {
      */
     
     public Object resourceNotFoundException;
+
     public MarkAsArchivedResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class MarkAsArchivedResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceServer sourceServer;
+
     public MarkAsArchivedResponse withSourceServer(org.openapis.openapi.models.shared.SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
@@ -46,6 +51,7 @@ public class MarkAsArchivedResponse {
     
     
     public Integer statusCode;
+
     public MarkAsArchivedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class MarkAsArchivedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MarkAsArchivedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class MarkAsArchivedResponse {
      */
     
     public Object uninitializedAccountException;
+
     public MarkAsArchivedResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public MarkAsArchivedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class RestoreServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backup")
     public String backup;
+
     public RestoreServiceRequest withBackup(String backup) {
         this.backup = backup;
         return this;
@@ -29,6 +30,7 @@ public class RestoreServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public RestoreServiceRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -40,9 +42,11 @@ public class RestoreServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreType")
     public RestoreServiceRequestRestoreTypeEnum restoreType;
+
     public RestoreServiceRequest withRestoreType(RestoreServiceRequestRestoreTypeEnum restoreType) {
         this.restoreType = restoreType;
         return this;
     }
     
+    public RestoreServiceRequest(){}
 }

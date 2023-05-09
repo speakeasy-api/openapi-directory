@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1WebDetectionWebLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public GoogleCloudVisionV1p2beta1WebDetectionWebLabel withLabel(String label) {
         this.label = label;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudVisionV1p2beta1WebDetectionWebLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudVisionV1p2beta1WebDetectionWebLabel withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1WebDetectionWebLabel(){}
 }

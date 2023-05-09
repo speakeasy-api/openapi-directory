@@ -23,6 +23,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickwrap_body")
     public String clickwrapBody;
+
     public InboxRegistrationEntity withClickwrapBody(String clickwrapBody) {
         this.clickwrapBody = clickwrapBody;
         return this;
@@ -34,6 +35,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public InboxRegistrationEntity withCode(String code) {
         this.code = code;
         return this;
@@ -45,6 +47,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public String company;
+
     public InboxRegistrationEntity withCompany(String company) {
         this.company = company;
         return this;
@@ -58,6 +61,7 @@ public class InboxRegistrationEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public InboxRegistrationEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -69,6 +73,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public InboxRegistrationEntity withEmail(String email) {
         this.email = email;
         return this;
@@ -80,6 +85,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_field_data")
     public java.util.Map<String, Object> formFieldData;
+
     public InboxRegistrationEntity withFormFieldData(java.util.Map<String, Object> formFieldData) {
         this.formFieldData = formFieldData;
         return this;
@@ -91,6 +97,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_field_set_id")
     public Integer formFieldSetId;
+
     public InboxRegistrationEntity withFormFieldSetId(Integer formFieldSetId) {
         this.formFieldSetId = formFieldSetId;
         return this;
@@ -102,6 +109,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbox_id")
     public Integer inboxId;
+
     public InboxRegistrationEntity withInboxId(Integer inboxId) {
         this.inboxId = inboxId;
         return this;
@@ -113,6 +121,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbox_recipient_id")
     public Integer inboxRecipientId;
+
     public InboxRegistrationEntity withInboxRecipientId(Integer inboxRecipientId) {
         this.inboxRecipientId = inboxRecipientId;
         return this;
@@ -124,6 +133,7 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbox_title")
     public String inboxTitle;
+
     public InboxRegistrationEntity withInboxTitle(String inboxTitle) {
         this.inboxTitle = inboxTitle;
         return this;
@@ -135,9 +145,11 @@ public class InboxRegistrationEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InboxRegistrationEntity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InboxRegistrationEntity(){}
 }

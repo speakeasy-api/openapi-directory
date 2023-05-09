@@ -18,9 +18,11 @@ public class CertificateAuthorityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateAuthorityServiceConfig")
     public CertificateAuthorityServiceConfig certificateAuthorityServiceConfig;
+
     public CertificateAuthorityConfig withCertificateAuthorityServiceConfig(CertificateAuthorityServiceConfig certificateAuthorityServiceConfig) {
         this.certificateAuthorityServiceConfig = certificateAuthorityServiceConfig;
         return this;
     }
     
+    public CertificateAuthorityConfig(){}
 }

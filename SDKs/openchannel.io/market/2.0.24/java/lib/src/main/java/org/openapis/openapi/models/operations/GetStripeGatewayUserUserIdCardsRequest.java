@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStripeGatewayUserUserIdCardsRequest {
@@ -12,9 +13,13 @@ public class GetStripeGatewayUserUserIdCardsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public GetStripeGatewayUserUserIdCardsRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetStripeGatewayUserUserIdCardsRequest(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

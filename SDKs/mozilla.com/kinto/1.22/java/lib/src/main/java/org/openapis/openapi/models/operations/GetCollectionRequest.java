@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCollectionRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
     public String ifMatch;
+
     public GetCollectionRequest withIfMatch(String ifMatch) {
         this.ifMatch = ifMatch;
         return this;
@@ -16,6 +18,7 @@ public class GetCollectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetCollectionRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -23,6 +26,7 @@ public class GetCollectionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
     public String[] fields;
+
     public GetCollectionRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -30,6 +34,7 @@ public class GetCollectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
     public String bucketId;
+
     public GetCollectionRequest withBucketId(String bucketId) {
         this.bucketId = bucketId;
         return this;
@@ -37,9 +42,14 @@ public class GetCollectionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetCollectionRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetCollectionRequest(@JsonProperty("bucket_id") String bucketId, @JsonProperty("id") String id) {
+        this.bucketId = bucketId;
+        this.id = id;
+  }
 }

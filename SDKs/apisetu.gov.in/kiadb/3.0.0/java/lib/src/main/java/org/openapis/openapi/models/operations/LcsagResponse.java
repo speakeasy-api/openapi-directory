@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LcsagResponse {
     
     public String contentType;
+
     public LcsagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LcsagResponse {
     
     
     public Integer statusCode;
+
     public LcsagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LcsagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LcsagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LcsagResponse {
      */
     
     public Lcsag400ApplicationJSON lcsag400ApplicationJSONObject;
+
     public LcsagResponse withLcsag400ApplicationJSONObject(Lcsag400ApplicationJSON lcsag400ApplicationJSONObject) {
         this.lcsag400ApplicationJSONObject = lcsag400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class LcsagResponse {
      */
     
     public Lcsag401ApplicationJSON lcsag401ApplicationJSONObject;
+
     public LcsagResponse withLcsag401ApplicationJSONObject(Lcsag401ApplicationJSON lcsag401ApplicationJSONObject) {
         this.lcsag401ApplicationJSONObject = lcsag401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class LcsagResponse {
      */
     
     public Lcsag404ApplicationJSON lcsag404ApplicationJSONObject;
+
     public LcsagResponse withLcsag404ApplicationJSONObject(Lcsag404ApplicationJSON lcsag404ApplicationJSONObject) {
         this.lcsag404ApplicationJSONObject = lcsag404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class LcsagResponse {
      */
     
     public Lcsag500ApplicationJSON lcsag500ApplicationJSONObject;
+
     public LcsagResponse withLcsag500ApplicationJSONObject(Lcsag500ApplicationJSON lcsag500ApplicationJSONObject) {
         this.lcsag500ApplicationJSONObject = lcsag500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class LcsagResponse {
      */
     
     public Lcsag502ApplicationJSON lcsag502ApplicationJSONObject;
+
     public LcsagResponse withLcsag502ApplicationJSONObject(Lcsag502ApplicationJSON lcsag502ApplicationJSONObject) {
         this.lcsag502ApplicationJSONObject = lcsag502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class LcsagResponse {
      */
     
     public Lcsag503ApplicationJSON lcsag503ApplicationJSONObject;
+
     public LcsagResponse withLcsag503ApplicationJSONObject(Lcsag503ApplicationJSON lcsag503ApplicationJSONObject) {
         this.lcsag503ApplicationJSONObject = lcsag503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class LcsagResponse {
      */
     
     public Lcsag504ApplicationJSON lcsag504ApplicationJSONObject;
+
     public LcsagResponse withLcsag504ApplicationJSONObject(Lcsag504ApplicationJSON lcsag504ApplicationJSONObject) {
         this.lcsag504ApplicationJSONObject = lcsag504ApplicationJSONObject;
         return this;
     }
     
+    public LcsagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

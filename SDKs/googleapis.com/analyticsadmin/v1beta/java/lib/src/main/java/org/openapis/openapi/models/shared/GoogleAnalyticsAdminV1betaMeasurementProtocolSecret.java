@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaMeasurementProtocolSecret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1betaMeasurementProtocolSecret withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaMeasurementProtocolSecret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1betaMeasurementProtocolSecret withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1betaMeasurementProtocolSecret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretValue")
     public String secretValue;
+
     public GoogleAnalyticsAdminV1betaMeasurementProtocolSecret withSecretValue(String secretValue) {
         this.secretValue = secretValue;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaMeasurementProtocolSecret(){}
 }

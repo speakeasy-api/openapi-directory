@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListAttachedUserPoliciesResponse {
     
     public AttachedPolicy[] attachedPolicies;
+
     public ListAttachedUserPoliciesResponse withAttachedPolicies(AttachedPolicy[] attachedPolicies) {
         this.attachedPolicies = attachedPolicies;
         return this;
@@ -19,6 +20,7 @@ public class ListAttachedUserPoliciesResponse {
     
     
     public Boolean isTruncated;
+
     public ListAttachedUserPoliciesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,9 +28,11 @@ public class ListAttachedUserPoliciesResponse {
     
     
     public String marker;
+
     public ListAttachedUserPoliciesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListAttachedUserPoliciesResponse(){}
 }

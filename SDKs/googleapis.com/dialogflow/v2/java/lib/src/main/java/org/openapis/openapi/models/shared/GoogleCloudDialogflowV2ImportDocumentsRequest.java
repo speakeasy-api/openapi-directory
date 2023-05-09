@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ImportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentTemplate")
     public GoogleCloudDialogflowV2ImportDocumentTemplate documentTemplate;
+
     public GoogleCloudDialogflowV2ImportDocumentsRequest withDocumentTemplate(GoogleCloudDialogflowV2ImportDocumentTemplate documentTemplate) {
         this.documentTemplate = documentTemplate;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ImportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GoogleCloudDialogflowV2GcsSources gcsSource;
+
     public GoogleCloudDialogflowV2ImportDocumentsRequest withGcsSource(GoogleCloudDialogflowV2GcsSources gcsSource) {
         this.gcsSource = gcsSource;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2ImportDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importGcsCustomMetadata")
     public Boolean importGcsCustomMetadata;
+
     public GoogleCloudDialogflowV2ImportDocumentsRequest withImportGcsCustomMetadata(Boolean importGcsCustomMetadata) {
         this.importGcsCustomMetadata = importGcsCustomMetadata;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ImportDocumentsRequest(){}
 }

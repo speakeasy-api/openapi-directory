@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePresignedNotebookUrlRequest {
     @JsonProperty("SessionId")
     public String sessionId;
+
     public CreatePresignedNotebookUrlRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public CreatePresignedNotebookUrlRequest(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

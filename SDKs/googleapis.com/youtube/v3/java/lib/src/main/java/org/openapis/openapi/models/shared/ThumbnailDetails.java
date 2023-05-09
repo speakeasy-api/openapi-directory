@@ -18,6 +18,7 @@ public class ThumbnailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Thumbnail high;
+
     public ThumbnailDetails withHigh(Thumbnail high) {
         this.high = high;
         return this;
@@ -29,6 +30,7 @@ public class ThumbnailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxres")
     public Thumbnail maxres;
+
     public ThumbnailDetails withMaxres(Thumbnail maxres) {
         this.maxres = maxres;
         return this;
@@ -40,6 +42,7 @@ public class ThumbnailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public Thumbnail medium;
+
     public ThumbnailDetails withMedium(Thumbnail medium) {
         this.medium = medium;
         return this;
@@ -51,9 +54,11 @@ public class ThumbnailDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standard")
     public Thumbnail standard;
+
     public ThumbnailDetails withStandard(Thumbnail standard) {
         this.standard = standard;
         return this;
     }
     
+    public ThumbnailDetails(){}
 }

@@ -18,6 +18,7 @@ public class ConfigManagementHierarchyControllerDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public ConfigManagementHierarchyControllerDeploymentStateExtensionEnum extension;
+
     public ConfigManagementHierarchyControllerDeploymentState withExtension(ConfigManagementHierarchyControllerDeploymentStateExtensionEnum extension) {
         this.extension = extension;
         return this;
@@ -29,9 +30,11 @@ public class ConfigManagementHierarchyControllerDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hnc")
     public ConfigManagementHierarchyControllerDeploymentStateHncEnum hnc;
+
     public ConfigManagementHierarchyControllerDeploymentState withHnc(ConfigManagementHierarchyControllerDeploymentStateHncEnum hnc) {
         this.hnc = hnc;
         return this;
     }
     
+    public ConfigManagementHierarchyControllerDeploymentState(){}
 }

@@ -17,6 +17,7 @@ public class ExportTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public ExportTableToPointInTimeInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class ExportTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportFormat")
     public ExportFormatEnum exportFormat;
+
     public ExportTableToPointInTimeInput withExportFormat(ExportFormatEnum exportFormat) {
         this.exportFormat = exportFormat;
         return this;
@@ -35,6 +37,7 @@ public class ExportTableToPointInTimeInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExportTime")
     public OffsetDateTime exportTime;
+
     public ExportTableToPointInTimeInput withExportTime(OffsetDateTime exportTime) {
         this.exportTime = exportTime;
         return this;
@@ -42,6 +45,7 @@ public class ExportTableToPointInTimeInput {
     
     @JsonProperty("S3Bucket")
     public String s3Bucket;
+
     public ExportTableToPointInTimeInput withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -50,6 +54,7 @@ public class ExportTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketOwner")
     public String s3BucketOwner;
+
     public ExportTableToPointInTimeInput withS3BucketOwner(String s3BucketOwner) {
         this.s3BucketOwner = s3BucketOwner;
         return this;
@@ -58,6 +63,7 @@ public class ExportTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Prefix")
     public String s3Prefix;
+
     public ExportTableToPointInTimeInput withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -66,6 +72,7 @@ public class ExportTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3SseAlgorithm")
     public S3SseAlgorithmEnum s3SseAlgorithm;
+
     public ExportTableToPointInTimeInput withS3SseAlgorithm(S3SseAlgorithmEnum s3SseAlgorithm) {
         this.s3SseAlgorithm = s3SseAlgorithm;
         return this;
@@ -74,6 +81,7 @@ public class ExportTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3SseKmsKeyId")
     public String s3SseKmsKeyId;
+
     public ExportTableToPointInTimeInput withS3SseKmsKeyId(String s3SseKmsKeyId) {
         this.s3SseKmsKeyId = s3SseKmsKeyId;
         return this;
@@ -81,9 +89,14 @@ public class ExportTableToPointInTimeInput {
     
     @JsonProperty("TableArn")
     public String tableArn;
+
     public ExportTableToPointInTimeInput withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
     }
     
+    public ExportTableToPointInTimeInput(@JsonProperty("S3Bucket") String s3Bucket, @JsonProperty("TableArn") String tableArn) {
+        this.s3Bucket = s3Bucket;
+        this.tableArn = tableArn;
+  }
 }

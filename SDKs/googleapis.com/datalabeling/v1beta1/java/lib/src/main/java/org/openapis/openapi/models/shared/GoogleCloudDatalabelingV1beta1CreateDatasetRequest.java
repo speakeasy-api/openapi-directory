@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public GoogleCloudDatalabelingV1beta1Dataset dataset;
+
     public GoogleCloudDatalabelingV1beta1CreateDatasetRequest withDataset(GoogleCloudDatalabelingV1beta1Dataset dataset) {
         this.dataset = dataset;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1CreateDatasetRequest(){}
 }

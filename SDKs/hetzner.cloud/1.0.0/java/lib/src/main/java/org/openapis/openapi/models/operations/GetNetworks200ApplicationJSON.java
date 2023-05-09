@@ -15,6 +15,7 @@ public class GetNetworks200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetNetworks200ApplicationJSONMeta meta;
+
     public GetNetworks200ApplicationJSON withMeta(GetNetworks200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
@@ -22,9 +23,13 @@ public class GetNetworks200ApplicationJSON {
     
     @JsonProperty("networks")
     public GetNetworks200ApplicationJSONNetworks[] networks;
+
     public GetNetworks200ApplicationJSON withNetworks(GetNetworks200ApplicationJSONNetworks[] networks) {
         this.networks = networks;
         return this;
     }
     
+    public GetNetworks200ApplicationJSON(@JsonProperty("networks") GetNetworks200ApplicationJSONNetworks[] networks) {
+        this.networks = networks;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest {
@@ -12,9 +13,13 @@ public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_user_id")
     public String scimUserId;
+
     public EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest withScimUserId(String scimUserId) {
         this.scimUserId = scimUserId;
         return this;
     }
     
+    public EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest(@JsonProperty("scim_user_id") String scimUserId) {
+        this.scimUserId = scimUserId;
+  }
 }

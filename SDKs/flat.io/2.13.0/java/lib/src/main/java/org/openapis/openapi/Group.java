@@ -56,12 +56,10 @@ public class Group {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGroupDetailsResponse res = new org.openapis.openapi.models.operations.GetGroupDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetGroupDetailsResponse res = new org.openapis.openapi.models.operations.GetGroupDetailsResponse(contentType, httpRes.statusCode()) {{
             groupDetails = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,12 +110,10 @@ public class Group {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGroupScoresResponse res = new org.openapis.openapi.models.operations.GetGroupScoresResponse() {{
+        org.openapis.openapi.models.operations.GetGroupScoresResponse res = new org.openapis.openapi.models.operations.GetGroupScoresResponse(contentType, httpRes.statusCode()) {{
             scoreDetails = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,12 +162,10 @@ public class Group {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGroupUsersResponse res = new org.openapis.openapi.models.operations.ListGroupUsersResponse() {{
+        org.openapis.openapi.models.operations.ListGroupUsersResponse res = new org.openapis.openapi.models.operations.ListGroupUsersResponse(contentType, httpRes.statusCode()) {{
             userPublics = null;
             flatErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

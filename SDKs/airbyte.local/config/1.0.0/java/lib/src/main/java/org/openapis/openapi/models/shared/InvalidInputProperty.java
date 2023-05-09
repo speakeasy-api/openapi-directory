@@ -12,6 +12,7 @@ public class InvalidInputProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidValue")
     public String invalidValue;
+
     public InvalidInputProperty withInvalidValue(String invalidValue) {
         this.invalidValue = invalidValue;
         return this;
@@ -20,6 +21,7 @@ public class InvalidInputProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InvalidInputProperty withMessage(String message) {
         this.message = message;
         return this;
@@ -27,9 +29,13 @@ public class InvalidInputProperty {
     
     @JsonProperty("propertyPath")
     public String propertyPath;
+
     public InvalidInputProperty withPropertyPath(String propertyPath) {
         this.propertyPath = propertyPath;
         return this;
     }
     
+    public InvalidInputProperty(@JsonProperty("propertyPath") String propertyPath) {
+        this.propertyPath = propertyPath;
+  }
 }

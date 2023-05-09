@@ -20,6 +20,7 @@ public class FirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedStatefulRuleCapacity")
     public Long consumedStatefulRuleCapacity;
+
     public FirewallPolicyResponse withConsumedStatefulRuleCapacity(Long consumedStatefulRuleCapacity) {
         this.consumedStatefulRuleCapacity = consumedStatefulRuleCapacity;
         return this;
@@ -28,6 +29,7 @@ public class FirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedStatelessRuleCapacity")
     public Long consumedStatelessRuleCapacity;
+
     public FirewallPolicyResponse withConsumedStatelessRuleCapacity(Long consumedStatelessRuleCapacity) {
         this.consumedStatelessRuleCapacity = consumedStatelessRuleCapacity;
         return this;
@@ -36,6 +38,7 @@ public class FirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public FirewallPolicyResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class FirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public FirewallPolicyResponse withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -51,6 +55,7 @@ public class FirewallPolicyResponse {
     
     @JsonProperty("FirewallPolicyArn")
     public String firewallPolicyArn;
+
     public FirewallPolicyResponse withFirewallPolicyArn(String firewallPolicyArn) {
         this.firewallPolicyArn = firewallPolicyArn;
         return this;
@@ -58,6 +63,7 @@ public class FirewallPolicyResponse {
     
     @JsonProperty("FirewallPolicyId")
     public String firewallPolicyId;
+
     public FirewallPolicyResponse withFirewallPolicyId(String firewallPolicyId) {
         this.firewallPolicyId = firewallPolicyId;
         return this;
@@ -65,6 +71,7 @@ public class FirewallPolicyResponse {
     
     @JsonProperty("FirewallPolicyName")
     public String firewallPolicyName;
+
     public FirewallPolicyResponse withFirewallPolicyName(String firewallPolicyName) {
         this.firewallPolicyName = firewallPolicyName;
         return this;
@@ -73,6 +80,7 @@ public class FirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyStatus")
     public ResourceStatusEnum firewallPolicyStatus;
+
     public FirewallPolicyResponse withFirewallPolicyStatus(ResourceStatusEnum firewallPolicyStatus) {
         this.firewallPolicyStatus = firewallPolicyStatus;
         return this;
@@ -83,6 +91,7 @@ public class FirewallPolicyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public FirewallPolicyResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -91,6 +100,7 @@ public class FirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfAssociations")
     public Long numberOfAssociations;
+
     public FirewallPolicyResponse withNumberOfAssociations(Long numberOfAssociations) {
         this.numberOfAssociations = numberOfAssociations;
         return this;
@@ -99,9 +109,15 @@ public class FirewallPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public FirewallPolicyResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public FirewallPolicyResponse(@JsonProperty("FirewallPolicyArn") String firewallPolicyArn, @JsonProperty("FirewallPolicyId") String firewallPolicyId, @JsonProperty("FirewallPolicyName") String firewallPolicyName) {
+        this.firewallPolicyArn = firewallPolicyArn;
+        this.firewallPolicyId = firewallPolicyId;
+        this.firewallPolicyName = firewallPolicyName;
+  }
 }

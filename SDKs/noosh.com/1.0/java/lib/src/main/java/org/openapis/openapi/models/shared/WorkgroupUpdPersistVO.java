@@ -15,6 +15,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line1")
     public String addressLine1;
+
     public WorkgroupUpdPersistVO withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -23,6 +24,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line2")
     public String addressLine2;
+
     public WorkgroupUpdPersistVO withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -31,6 +33,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line3")
     public String addressLine3;
+
     public WorkgroupUpdPersistVO withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -39,6 +42,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public WorkgroupUpdPersistVO withCity(String city) {
         this.city = city;
         return this;
@@ -47,6 +51,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public WorkgroupUpdPersistVO withCountry(String country) {
         this.country = country;
         return this;
@@ -55,6 +60,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldPersistVO[] customFields;
+
     public WorkgroupUpdPersistVO withCustomFields(CustomFieldPersistVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -63,6 +69,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decimal_places")
     public Long decimalPlaces;
+
     public WorkgroupUpdPersistVO withDecimalPlaces(Long decimalPlaces) {
         this.decimalPlaces = decimalPlaces;
         return this;
@@ -71,6 +78,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public WorkgroupUpdPersistVO withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -79,6 +87,7 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public WorkgroupUpdPersistVO withState(String state) {
         this.state = state;
         return this;
@@ -87,9 +96,11 @@ public class WorkgroupUpdPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public WorkgroupUpdPersistVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public WorkgroupUpdPersistVO(){}
 }

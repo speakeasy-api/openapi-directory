@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListAccessKeysResponse - Contains the response to a successful &lt;a&gt;ListAccessKeys&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListAccessKeysResponse {
     
     public AccessKeyMetadata[] accessKeyMetadata;
+
     public ListAccessKeysResponse withAccessKeyMetadata(AccessKeyMetadata[] accessKeyMetadata) {
         this.accessKeyMetadata = accessKeyMetadata;
         return this;
@@ -19,6 +20,7 @@ public class ListAccessKeysResponse {
     
     
     public Boolean isTruncated;
+
     public ListAccessKeysResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,9 +28,13 @@ public class ListAccessKeysResponse {
     
     
     public String marker;
+
     public ListAccessKeysResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListAccessKeysResponse(@JsonProperty("AccessKeyMetadata") AccessKeyMetadata[] accessKeyMetadata) {
+        this.accessKeyMetadata = accessKeyMetadata;
+  }
 }

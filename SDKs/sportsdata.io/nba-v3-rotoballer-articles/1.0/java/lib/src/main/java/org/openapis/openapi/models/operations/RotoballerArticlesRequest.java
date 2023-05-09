@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotoballerArticlesRequest {
@@ -12,9 +13,13 @@ public class RotoballerArticlesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public RotoballerArticlesFormatEnum format;
+
     public RotoballerArticlesRequest withFormat(RotoballerArticlesFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public RotoballerArticlesRequest(@JsonProperty("format") RotoballerArticlesFormatEnum format) {
+        this.format = format;
+  }
 }

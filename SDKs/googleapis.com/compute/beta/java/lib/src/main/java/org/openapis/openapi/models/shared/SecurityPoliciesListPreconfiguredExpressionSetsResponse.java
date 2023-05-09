@@ -15,9 +15,11 @@ public class SecurityPoliciesListPreconfiguredExpressionSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preconfiguredExpressionSets")
     public SecurityPoliciesWafConfig preconfiguredExpressionSets;
+
     public SecurityPoliciesListPreconfiguredExpressionSetsResponse withPreconfiguredExpressionSets(SecurityPoliciesWafConfig preconfiguredExpressionSets) {
         this.preconfiguredExpressionSets = preconfiguredExpressionSets;
         return this;
     }
     
+    public SecurityPoliciesListPreconfiguredExpressionSetsResponse(){}
 }

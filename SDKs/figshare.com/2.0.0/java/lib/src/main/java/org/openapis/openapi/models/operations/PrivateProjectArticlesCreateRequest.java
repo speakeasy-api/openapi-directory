@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectArticlesCreateRequest {
@@ -12,6 +13,7 @@ public class PrivateProjectArticlesCreateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ArticleProjectCreate articleProjectCreate;
+
     public PrivateProjectArticlesCreateRequest withArticleProjectCreate(org.openapis.openapi.models.shared.ArticleProjectCreate articleProjectCreate) {
         this.articleProjectCreate = articleProjectCreate;
         return this;
@@ -22,6 +24,7 @@ public class PrivateProjectArticlesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PrivateProjectArticlesCreateRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class PrivateProjectArticlesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PrivateProjectArticlesCreateRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class PrivateProjectArticlesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PrivateProjectArticlesCreateRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +57,7 @@ public class PrivateProjectArticlesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PrivateProjectArticlesCreateRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -62,9 +68,14 @@ public class PrivateProjectArticlesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public Long projectId;
+
     public PrivateProjectArticlesCreateRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PrivateProjectArticlesCreateRequest(@JsonProperty("ArticleProjectCreate") org.openapis.openapi.models.shared.ArticleProjectCreate articleProjectCreate, @JsonProperty("project_id") Long projectId) {
+        this.articleProjectCreate = articleProjectCreate;
+        this.projectId = projectId;
+  }
 }

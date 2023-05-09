@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductRetrieve200ApplicationJSON2 {
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public ProductRetrieve200ApplicationJSON2 withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -16,6 +17,7 @@ public class ProductRetrieve200ApplicationJSON2 {
     
     @JsonProperty("mimeType")
     public String mimeType;
+
     public ProductRetrieve200ApplicationJSON2 withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -23,6 +25,7 @@ public class ProductRetrieve200ApplicationJSON2 {
     
     @JsonProperty("productOrderId")
     public String productOrderId;
+
     public ProductRetrieve200ApplicationJSON2 withProductOrderId(String productOrderId) {
         this.productOrderId = productOrderId;
         return this;
@@ -30,9 +33,16 @@ public class ProductRetrieve200ApplicationJSON2 {
     
     @JsonProperty("uri")
     public String uri;
+
     public ProductRetrieve200ApplicationJSON2 withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public ProductRetrieve200ApplicationJSON2(@JsonProperty("data") java.util.Map<String, Object> data, @JsonProperty("mimeType") String mimeType, @JsonProperty("productOrderId") String productOrderId, @JsonProperty("uri") String uri) {
+        this.data = data;
+        this.mimeType = mimeType;
+        this.productOrderId = productOrderId;
+        this.uri = uri;
+  }
 }

@@ -15,6 +15,7 @@ public class FeaturizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Featurizations")
     public Featurization[] featurizations;
+
     public FeaturizationConfig withFeaturizations(Featurization[] featurizations) {
         this.featurizations = featurizations;
         return this;
@@ -23,6 +24,7 @@ public class FeaturizationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastDimensions")
     public String[] forecastDimensions;
+
     public FeaturizationConfig withForecastDimensions(String[] forecastDimensions) {
         this.forecastDimensions = forecastDimensions;
         return this;
@@ -30,9 +32,13 @@ public class FeaturizationConfig {
     
     @JsonProperty("ForecastFrequency")
     public String forecastFrequency;
+
     public FeaturizationConfig withForecastFrequency(String forecastFrequency) {
         this.forecastFrequency = forecastFrequency;
         return this;
     }
     
+    public FeaturizationConfig(@JsonProperty("ForecastFrequency") String forecastFrequency) {
+        this.forecastFrequency = forecastFrequency;
+  }
 }

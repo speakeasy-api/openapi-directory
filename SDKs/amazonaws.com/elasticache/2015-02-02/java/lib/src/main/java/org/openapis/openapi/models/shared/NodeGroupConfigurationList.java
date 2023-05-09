@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NodeGroupConfigurationList {
     
     public String nodeGroupId;
+
     public NodeGroupConfigurationList withNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -19,6 +20,7 @@ public class NodeGroupConfigurationList {
     
     
     public String primaryAvailabilityZone;
+
     public NodeGroupConfigurationList withPrimaryAvailabilityZone(String primaryAvailabilityZone) {
         this.primaryAvailabilityZone = primaryAvailabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class NodeGroupConfigurationList {
     
     
     public String primaryOutpostArn;
+
     public NodeGroupConfigurationList withPrimaryOutpostArn(String primaryOutpostArn) {
         this.primaryOutpostArn = primaryOutpostArn;
         return this;
@@ -33,6 +36,7 @@ public class NodeGroupConfigurationList {
     
     
     public String[] replicaAvailabilityZones;
+
     public NodeGroupConfigurationList withReplicaAvailabilityZones(String[] replicaAvailabilityZones) {
         this.replicaAvailabilityZones = replicaAvailabilityZones;
         return this;
@@ -40,6 +44,7 @@ public class NodeGroupConfigurationList {
     
     
     public Long replicaCount;
+
     public NodeGroupConfigurationList withReplicaCount(Long replicaCount) {
         this.replicaCount = replicaCount;
         return this;
@@ -47,6 +52,7 @@ public class NodeGroupConfigurationList {
     
     
     public String[] replicaOutpostArns;
+
     public NodeGroupConfigurationList withReplicaOutpostArns(String[] replicaOutpostArns) {
         this.replicaOutpostArns = replicaOutpostArns;
         return this;
@@ -54,9 +60,11 @@ public class NodeGroupConfigurationList {
     
     
     public String slots;
+
     public NodeGroupConfigurationList withSlots(String slots) {
         this.slots = slots;
         return this;
     }
     
+    public NodeGroupConfigurationList(){}
 }

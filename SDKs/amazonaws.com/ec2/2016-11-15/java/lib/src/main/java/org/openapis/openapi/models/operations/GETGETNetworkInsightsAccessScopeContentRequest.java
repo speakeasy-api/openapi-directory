@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETNetworkInsightsAccessScopeContentRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETNetworkInsightsAccessScopeContentActionEnum action;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withAction(GETGETNetworkInsightsAccessScopeContentActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInsightsAccessScopeId")
     public String networkInsightsAccessScopeId;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
@@ -36,6 +40,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETNetworkInsightsAccessScopeContentVersionEnum version;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withVersion(GETGETNetworkInsightsAccessScopeContentVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETGETNetworkInsightsAccessScopeContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETNetworkInsightsAccessScopeContentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETNetworkInsightsAccessScopeContentRequest(@JsonProperty("Action") GETGETNetworkInsightsAccessScopeContentActionEnum action, @JsonProperty("NetworkInsightsAccessScopeId") String networkInsightsAccessScopeId, @JsonProperty("Version") GETGETNetworkInsightsAccessScopeContentVersionEnum version) {
+        this.action = action;
+        this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
+        this.version = version;
+  }
 }

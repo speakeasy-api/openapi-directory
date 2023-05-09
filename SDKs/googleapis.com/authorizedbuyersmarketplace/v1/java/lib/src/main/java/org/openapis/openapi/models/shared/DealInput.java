@@ -18,6 +18,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedGrossSpend")
     public Money estimatedGrossSpend;
+
     public DealInput withEstimatedGrossSpend(Money estimatedGrossSpend) {
         this.estimatedGrossSpend = estimatedGrossSpend;
         return this;
@@ -29,6 +30,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightEndTime")
     public String flightEndTime;
+
     public DealInput withFlightEndTime(String flightEndTime) {
         this.flightEndTime = flightEndTime;
         return this;
@@ -40,6 +42,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flightStartTime")
     public String flightStartTime;
+
     public DealInput withFlightStartTime(String flightStartTime) {
         this.flightStartTime = flightStartTime;
         return this;
@@ -51,6 +54,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DealInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredDealTerms")
     public PreferredDealTerms preferredDealTerms;
+
     public DealInput withPreferredDealTerms(PreferredDealTerms preferredDealTerms) {
         this.preferredDealTerms = preferredDealTerms;
         return this;
@@ -73,6 +78,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateAuctionTerms")
     public PrivateAuctionTermsInput privateAuctionTerms;
+
     public DealInput withPrivateAuctionTerms(PrivateAuctionTermsInput privateAuctionTerms) {
         this.privateAuctionTerms = privateAuctionTerms;
         return this;
@@ -84,6 +90,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("programmaticGuaranteedTerms")
     public ProgrammaticGuaranteedTerms programmaticGuaranteedTerms;
+
     public DealInput withProgrammaticGuaranteedTerms(ProgrammaticGuaranteedTerms programmaticGuaranteedTerms) {
         this.programmaticGuaranteedTerms = programmaticGuaranteedTerms;
         return this;
@@ -95,6 +102,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherProfile")
     public String publisherProfile;
+
     public DealInput withPublisherProfile(String publisherProfile) {
         this.publisherProfile = publisherProfile;
         return this;
@@ -106,6 +114,7 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerTimeZone")
     public TimeZone sellerTimeZone;
+
     public DealInput withSellerTimeZone(TimeZone sellerTimeZone) {
         this.sellerTimeZone = sellerTimeZone;
         return this;
@@ -117,9 +126,11 @@ public class DealInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targeting")
     public MarketplaceTargeting targeting;
+
     public DealInput withTargeting(MarketplaceTargeting targeting) {
         this.targeting = targeting;
         return this;
     }
     
+    public DealInput(){}
 }

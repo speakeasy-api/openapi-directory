@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EdgeDeploymentModelConfig {
     @JsonProperty("EdgePackagingJobName")
     public String edgePackagingJobName;
+
     public EdgeDeploymentModelConfig withEdgePackagingJobName(String edgePackagingJobName) {
         this.edgePackagingJobName = edgePackagingJobName;
         return this;
@@ -19,9 +20,14 @@ public class EdgeDeploymentModelConfig {
     
     @JsonProperty("ModelHandle")
     public String modelHandle;
+
     public EdgeDeploymentModelConfig withModelHandle(String modelHandle) {
         this.modelHandle = modelHandle;
         return this;
     }
     
+    public EdgeDeploymentModelConfig(@JsonProperty("EdgePackagingJobName") String edgePackagingJobName, @JsonProperty("ModelHandle") String modelHandle) {
+        this.edgePackagingJobName = edgePackagingJobName;
+        this.modelHandle = modelHandle;
+  }
 }

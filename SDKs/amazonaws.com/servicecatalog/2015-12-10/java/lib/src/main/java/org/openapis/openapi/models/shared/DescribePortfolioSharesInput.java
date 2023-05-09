@@ -12,6 +12,7 @@ public class DescribePortfolioSharesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public DescribePortfolioSharesInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -20,6 +21,7 @@ public class DescribePortfolioSharesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public DescribePortfolioSharesInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -27,6 +29,7 @@ public class DescribePortfolioSharesInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public DescribePortfolioSharesInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -34,9 +37,14 @@ public class DescribePortfolioSharesInput {
     
     @JsonProperty("Type")
     public DescribePortfolioShareTypeEnum type;
+
     public DescribePortfolioSharesInput withType(DescribePortfolioShareTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribePortfolioSharesInput(@JsonProperty("PortfolioId") String portfolioId, @JsonProperty("Type") DescribePortfolioShareTypeEnum type) {
+        this.portfolioId = portfolioId;
+        this.type = type;
+  }
 }

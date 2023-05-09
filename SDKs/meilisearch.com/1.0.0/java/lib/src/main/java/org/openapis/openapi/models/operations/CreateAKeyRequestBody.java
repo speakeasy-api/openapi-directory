@@ -12,6 +12,7 @@ public class CreateAKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public String[] actions;
+
     public CreateAKeyRequestBody withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -20,6 +21,7 @@ public class CreateAKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAKeyRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CreateAKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresAt")
     public Object expiresAt;
+
     public CreateAKeyRequestBody withExpiresAt(Object expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -36,6 +39,7 @@ public class CreateAKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexes")
     public String[] indexes;
+
     public CreateAKeyRequestBody withIndexes(String[] indexes) {
         this.indexes = indexes;
         return this;
@@ -44,9 +48,11 @@ public class CreateAKeyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateAKeyRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateAKeyRequestBody(){}
 }

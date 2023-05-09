@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KeyRevokeNosecretResponse {
     
     public byte[] body;
+
     public KeyRevokeNosecretResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class KeyRevokeNosecretResponse {
     
     
     public String contentType;
+
     public KeyRevokeNosecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class KeyRevokeNosecretResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public KeyRevokeNosecretResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class KeyRevokeNosecretResponse {
     
     
     public Integer statusCode;
+
     public KeyRevokeNosecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class KeyRevokeNosecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KeyRevokeNosecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class KeyRevokeNosecretResponse {
      */
     
     public KeyRevokeNosecret200ApplicationJSON keyRevokeNosecret200ApplicationJSONObject;
+
     public KeyRevokeNosecretResponse withKeyRevokeNosecret200ApplicationJSONObject(KeyRevokeNosecret200ApplicationJSON keyRevokeNosecret200ApplicationJSONObject) {
         this.keyRevokeNosecret200ApplicationJSONObject = keyRevokeNosecret200ApplicationJSONObject;
         return this;
     }
     
+    public KeyRevokeNosecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

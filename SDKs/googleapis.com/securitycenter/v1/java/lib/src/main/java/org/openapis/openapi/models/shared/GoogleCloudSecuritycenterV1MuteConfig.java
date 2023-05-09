@@ -18,6 +18,7 @@ public class GoogleCloudSecuritycenterV1MuteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudSecuritycenterV1MuteConfig withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudSecuritycenterV1MuteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudSecuritycenterV1MuteConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudSecuritycenterV1MuteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudSecuritycenterV1MuteConfig withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudSecuritycenterV1MuteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public GoogleCloudSecuritycenterV1MuteConfig withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudSecuritycenterV1MuteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mostRecentEditor")
     public String mostRecentEditor;
+
     public GoogleCloudSecuritycenterV1MuteConfig withMostRecentEditor(String mostRecentEditor) {
         this.mostRecentEditor = mostRecentEditor;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudSecuritycenterV1MuteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudSecuritycenterV1MuteConfig withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudSecuritycenterV1MuteConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudSecuritycenterV1MuteConfig withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudSecuritycenterV1MuteConfig(){}
 }

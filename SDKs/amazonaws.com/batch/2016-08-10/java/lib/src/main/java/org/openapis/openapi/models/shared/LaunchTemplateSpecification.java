@@ -15,6 +15,7 @@ public class LaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplateId")
     public String launchTemplateId;
+
     public LaunchTemplateSpecification withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -23,6 +24,7 @@ public class LaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchTemplateName")
     public String launchTemplateName;
+
     public LaunchTemplateSpecification withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -31,9 +33,11 @@ public class LaunchTemplateSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public LaunchTemplateSpecification withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public LaunchTemplateSpecification(){}
 }

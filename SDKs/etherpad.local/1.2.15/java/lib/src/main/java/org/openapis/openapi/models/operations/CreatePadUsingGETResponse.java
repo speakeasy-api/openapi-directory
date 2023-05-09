@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePadUsingGETResponse {
     
     public String contentType;
+
     public CreatePadUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreatePadUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreatePadUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreatePadUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePadUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreatePadUsingGETResponse {
      */
     
     public CreatePadUsingGET200ApplicationJSON createPadUsingGET200ApplicationJSONObject;
+
     public CreatePadUsingGETResponse withCreatePadUsingGET200ApplicationJSONObject(CreatePadUsingGET200ApplicationJSON createPadUsingGET200ApplicationJSONObject) {
         this.createPadUsingGET200ApplicationJSONObject = createPadUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreatePadUsingGETResponse {
      */
     
     public CreatePadUsingGET400ApplicationJSON createPadUsingGET400ApplicationJSONObject;
+
     public CreatePadUsingGETResponse withCreatePadUsingGET400ApplicationJSONObject(CreatePadUsingGET400ApplicationJSON createPadUsingGET400ApplicationJSONObject) {
         this.createPadUsingGET400ApplicationJSONObject = createPadUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreatePadUsingGETResponse {
      */
     
     public CreatePadUsingGET401ApplicationJSON createPadUsingGET401ApplicationJSONObject;
+
     public CreatePadUsingGETResponse withCreatePadUsingGET401ApplicationJSONObject(CreatePadUsingGET401ApplicationJSON createPadUsingGET401ApplicationJSONObject) {
         this.createPadUsingGET401ApplicationJSONObject = createPadUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreatePadUsingGETResponse {
      */
     
     public CreatePadUsingGET500ApplicationJSON createPadUsingGET500ApplicationJSONObject;
+
     public CreatePadUsingGETResponse withCreatePadUsingGET500ApplicationJSONObject(CreatePadUsingGET500ApplicationJSON createPadUsingGET500ApplicationJSONObject) {
         this.createPadUsingGET500ApplicationJSONObject = createPadUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreatePadUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

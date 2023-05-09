@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * RasterDataCollectionQueryInput - &lt;p/&gt;
+ * RasterDataCollectionQueryInput - The input structure for Raster Data Collection Query containing the Area of Interest, TimeRange Filters, and Property Filters.
  */
 public class RasterDataCollectionQueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaOfInterest")
     public AreaOfInterest areaOfInterest;
+
     public RasterDataCollectionQueryInput withAreaOfInterest(AreaOfInterest areaOfInterest) {
         this.areaOfInterest = areaOfInterest;
         return this;
@@ -23,6 +24,7 @@ public class RasterDataCollectionQueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropertyFilters")
     public PropertyFilters propertyFilters;
+
     public RasterDataCollectionQueryInput withPropertyFilters(PropertyFilters propertyFilters) {
         this.propertyFilters = propertyFilters;
         return this;
@@ -30,6 +32,7 @@ public class RasterDataCollectionQueryInput {
     
     @JsonProperty("RasterDataCollectionArn")
     public String rasterDataCollectionArn;
+
     public RasterDataCollectionQueryInput withRasterDataCollectionArn(String rasterDataCollectionArn) {
         this.rasterDataCollectionArn = rasterDataCollectionArn;
         return this;
@@ -37,9 +40,14 @@ public class RasterDataCollectionQueryInput {
     
     @JsonProperty("TimeRangeFilter")
     public TimeRangeFilterInput timeRangeFilter;
+
     public RasterDataCollectionQueryInput withTimeRangeFilter(TimeRangeFilterInput timeRangeFilter) {
         this.timeRangeFilter = timeRangeFilter;
         return this;
     }
     
+    public RasterDataCollectionQueryInput(@JsonProperty("RasterDataCollectionArn") String rasterDataCollectionArn, @JsonProperty("TimeRangeFilter") TimeRangeFilterInput timeRangeFilter) {
+        this.rasterDataCollectionArn = rasterDataCollectionArn;
+        this.timeRangeFilter = timeRangeFilter;
+  }
 }

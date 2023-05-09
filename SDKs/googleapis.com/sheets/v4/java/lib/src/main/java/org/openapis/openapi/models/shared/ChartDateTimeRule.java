@@ -18,9 +18,11 @@ public class ChartDateTimeRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ChartDateTimeRuleTypeEnum type;
+
     public ChartDateTimeRule withType(ChartDateTimeRuleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ChartDateTimeRule(){}
 }

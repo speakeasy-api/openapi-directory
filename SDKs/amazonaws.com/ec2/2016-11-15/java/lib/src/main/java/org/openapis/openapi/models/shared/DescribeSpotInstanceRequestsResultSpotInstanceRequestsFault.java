@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsFault {
     
     public String code;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsFault withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotInstanceRequestsResultSpotInstanceRequestsFault {
     
     
     public String message;
+
     public DescribeSpotInstanceRequestsResultSpotInstanceRequestsFault withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DescribeSpotInstanceRequestsResultSpotInstanceRequestsFault(){}
 }

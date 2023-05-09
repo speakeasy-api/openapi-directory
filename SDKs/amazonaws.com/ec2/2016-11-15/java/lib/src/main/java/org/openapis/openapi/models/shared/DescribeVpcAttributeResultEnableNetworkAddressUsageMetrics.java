@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcAttributeResultEnableNetworkAddressUsageMetrics {
     
     public Boolean value;
+
     public DescribeVpcAttributeResultEnableNetworkAddressUsageMetrics withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVpcAttributeResultEnableNetworkAddressUsageMetrics(){}
 }

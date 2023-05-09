@@ -15,6 +15,7 @@ public class IncompatibilityMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public IncompatibilityMessage withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class IncompatibilityMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DeviceAttributeEnum type;
+
     public IncompatibilityMessage withType(DeviceAttributeEnum type) {
         this.type = type;
         return this;
     }
     
+    public IncompatibilityMessage(){}
 }

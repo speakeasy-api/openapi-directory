@@ -15,9 +15,11 @@ public class CreateVPCEConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpceConfiguration")
     public VPCEConfiguration vpceConfiguration;
+
     public CreateVPCEConfigurationResult withVpceConfiguration(VPCEConfiguration vpceConfiguration) {
         this.vpceConfiguration = vpceConfiguration;
         return this;
     }
     
+    public CreateVPCEConfigurationResult(){}
 }

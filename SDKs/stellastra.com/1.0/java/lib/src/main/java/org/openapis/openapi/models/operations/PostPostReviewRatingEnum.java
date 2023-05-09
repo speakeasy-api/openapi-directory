@@ -10,16 +10,16 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * PostPostReviewRatingEnum - The user's star rating, must be a single integer from [1, 2, 3, 4, 5]
  */
 public enum PostPostReviewRatingEnum {
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5");
+    ONE(1L),
+    TWO(2L),
+    THREE(3L),
+    FOUR(4L),
+    FIVE(5L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private PostPostReviewRatingEnum(String value) {
+    private PostPostReviewRatingEnum(Long value) {
         this.value = value;
     }
 }

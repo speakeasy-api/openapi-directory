@@ -18,6 +18,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public JobConfig config;
+
     public JobTemplate withConfig(JobConfig config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public JobTemplate withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,9 +42,11 @@ public class JobTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobTemplate withName(String name) {
         this.name = name;
         return this;
     }
     
+    public JobTemplate(){}
 }

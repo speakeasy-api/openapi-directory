@@ -12,6 +12,7 @@ public class GetOpsItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemArn")
     public String opsItemArn;
+
     public GetOpsItemRequest withOpsItemArn(String opsItemArn) {
         this.opsItemArn = opsItemArn;
         return this;
@@ -19,9 +20,13 @@ public class GetOpsItemRequest {
     
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public GetOpsItemRequest withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
     }
     
+    public GetOpsItemRequest(@JsonProperty("OpsItemId") String opsItemId) {
+        this.opsItemId = opsItemId;
+  }
 }

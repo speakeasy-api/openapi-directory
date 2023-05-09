@@ -18,6 +18,7 @@ public class ListConnectivityTestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListConnectivityTestsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListConnectivityTestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public ConnectivityTest[] resources;
+
     public ListConnectivityTestsResponse withResources(ConnectivityTest[] resources) {
         this.resources = resources;
         return this;
@@ -40,9 +42,11 @@ public class ListConnectivityTestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListConnectivityTestsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListConnectivityTestsResponse(){}
 }

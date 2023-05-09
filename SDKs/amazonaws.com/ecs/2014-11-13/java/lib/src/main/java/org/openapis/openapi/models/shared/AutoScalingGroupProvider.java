@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoScalingGroupProvider {
     @JsonProperty("autoScalingGroupArn")
     public String autoScalingGroupArn;
+
     public AutoScalingGroupProvider withAutoScalingGroupArn(String autoScalingGroupArn) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         return this;
@@ -22,6 +23,7 @@ public class AutoScalingGroupProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedScaling")
     public ManagedScaling managedScaling;
+
     public AutoScalingGroupProvider withManagedScaling(ManagedScaling managedScaling) {
         this.managedScaling = managedScaling;
         return this;
@@ -30,9 +32,13 @@ public class AutoScalingGroupProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedTerminationProtection")
     public ManagedTerminationProtectionEnum managedTerminationProtection;
+
     public AutoScalingGroupProvider withManagedTerminationProtection(ManagedTerminationProtectionEnum managedTerminationProtection) {
         this.managedTerminationProtection = managedTerminationProtection;
         return this;
     }
     
+    public AutoScalingGroupProvider(@JsonProperty("autoScalingGroupArn") String autoScalingGroupArn) {
+        this.autoScalingGroupArn = autoScalingGroupArn;
+  }
 }

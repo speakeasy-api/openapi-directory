@@ -15,6 +15,7 @@ public class AppointmentSegment {
      */
     @JsonProperty("duration_minutes")
     public Long durationMinutes;
+
     public AppointmentSegment withDurationMinutes(Long durationMinutes) {
         this.durationMinutes = durationMinutes;
         return this;
@@ -25,6 +26,7 @@ public class AppointmentSegment {
      */
     @JsonProperty("service_variation_id")
     public String serviceVariationId;
+
     public AppointmentSegment withServiceVariationId(String serviceVariationId) {
         this.serviceVariationId = serviceVariationId;
         return this;
@@ -35,6 +37,7 @@ public class AppointmentSegment {
      */
     @JsonProperty("service_variation_version")
     public Long serviceVariationVersion;
+
     public AppointmentSegment withServiceVariationVersion(Long serviceVariationVersion) {
         this.serviceVariationVersion = serviceVariationVersion;
         return this;
@@ -45,9 +48,16 @@ public class AppointmentSegment {
      */
     @JsonProperty("team_member_id")
     public String teamMemberId;
+
     public AppointmentSegment withTeamMemberId(String teamMemberId) {
         this.teamMemberId = teamMemberId;
         return this;
     }
     
+    public AppointmentSegment(@JsonProperty("duration_minutes") Long durationMinutes, @JsonProperty("service_variation_id") String serviceVariationId, @JsonProperty("service_variation_version") Long serviceVariationVersion, @JsonProperty("team_member_id") String teamMemberId) {
+        this.durationMinutes = durationMinutes;
+        this.serviceVariationId = serviceVariationId;
+        this.serviceVariationVersion = serviceVariationVersion;
+        this.teamMemberId = teamMemberId;
+  }
 }

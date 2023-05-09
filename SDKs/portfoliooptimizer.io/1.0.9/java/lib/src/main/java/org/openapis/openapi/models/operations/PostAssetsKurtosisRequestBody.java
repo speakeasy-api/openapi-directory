@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsKurtosisRequestBody {
     @JsonProperty("assets")
     public PostAssetsKurtosisRequestBodyAssets[] assets;
+
     public PostAssetsKurtosisRequestBody withAssets(PostAssetsKurtosisRequestBodyAssets[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public PostAssetsKurtosisRequestBody(@JsonProperty("assets") PostAssetsKurtosisRequestBodyAssets[] assets) {
+        this.assets = assets;
+  }
 }

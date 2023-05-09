@@ -15,6 +15,7 @@ public class Standalone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public Standalone withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,9 +27,11 @@ public class Standalone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableStandalone")
     public Boolean enableStandalone;
+
     public Standalone withEnableStandalone(Boolean enableStandalone) {
         this.enableStandalone = enableStandalone;
         return this;
     }
     
+    public Standalone(){}
 }

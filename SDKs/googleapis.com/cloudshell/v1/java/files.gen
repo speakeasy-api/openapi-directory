@@ -62,4 +62,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/EnvironmentStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Environment.java
 lib/src/main/java/org/openapis/openapi/models/shared/RemovePublicKeyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartEnvironmentRequest.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/users/README.md
 USAGE.md

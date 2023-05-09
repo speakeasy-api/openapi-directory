@@ -15,6 +15,7 @@ public class VmwareTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VmwareCategory")
     public String vmwareCategory;
+
     public VmwareTag withVmwareCategory(String vmwareCategory) {
         this.vmwareCategory = vmwareCategory;
         return this;
@@ -23,6 +24,7 @@ public class VmwareTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VmwareTagDescription")
     public String vmwareTagDescription;
+
     public VmwareTag withVmwareTagDescription(String vmwareTagDescription) {
         this.vmwareTagDescription = vmwareTagDescription;
         return this;
@@ -31,9 +33,11 @@ public class VmwareTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VmwareTagName")
     public String vmwareTagName;
+
     public VmwareTag withVmwareTagName(String vmwareTagName) {
         this.vmwareTagName = vmwareTagName;
         return this;
     }
     
+    public VmwareTag(){}
 }

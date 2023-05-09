@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesBlockDeviceMappings {
     
     public String deviceName;
+
     public ReservationInstancesBlockDeviceMappings withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -19,9 +20,11 @@ public class ReservationInstancesBlockDeviceMappings {
     
     
     public ReservationInstancesBlockDeviceMappingsEbs ebs;
+
     public ReservationInstancesBlockDeviceMappings withEbs(ReservationInstancesBlockDeviceMappingsEbs ebs) {
         this.ebs = ebs;
         return this;
     }
     
+    public ReservationInstancesBlockDeviceMappings(){}
 }

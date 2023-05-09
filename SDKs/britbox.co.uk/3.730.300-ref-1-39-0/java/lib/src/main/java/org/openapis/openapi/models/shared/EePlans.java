@@ -15,9 +15,13 @@ public class EePlans {
      */
     @JsonProperty("plans")
     public EePlanListItem[] plans;
+
     public EePlans withPlans(EePlanListItem[] plans) {
         this.plans = plans;
         return this;
     }
     
+    public EePlans(@JsonProperty("plans") EePlanListItem[] plans) {
+        this.plans = plans;
+  }
 }

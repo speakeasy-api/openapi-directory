@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAssessmentTemplatesResponse {
     
     public String contentType;
+
     public DescribeAssessmentTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAssessmentTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAssessmentTemplatesResponse describeAssessmentTemplatesResponse;
+
     public DescribeAssessmentTemplatesResponse withDescribeAssessmentTemplatesResponse(org.openapis.openapi.models.shared.DescribeAssessmentTemplatesResponse describeAssessmentTemplatesResponse) {
         this.describeAssessmentTemplatesResponse = describeAssessmentTemplatesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAssessmentTemplatesResponse {
      */
     
     public Object internalException;
+
     public DescribeAssessmentTemplatesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAssessmentTemplatesResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeAssessmentTemplatesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAssessmentTemplatesResponse {
     
     
     public Integer statusCode;
+
     public DescribeAssessmentTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeAssessmentTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAssessmentTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAssessmentTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

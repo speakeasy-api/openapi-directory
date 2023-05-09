@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlExpression")
     public String sqlExpression;
+
     public GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation withSqlExpression(String sqlExpression) {
         this.sqlExpression = sqlExpression;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation(){}
 }

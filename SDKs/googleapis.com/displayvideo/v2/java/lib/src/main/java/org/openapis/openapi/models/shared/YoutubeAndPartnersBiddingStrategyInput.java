@@ -18,6 +18,7 @@ public class YoutubeAndPartnersBiddingStrategyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public YoutubeAndPartnersBiddingStrategyTypeEnum type;
+
     public YoutubeAndPartnersBiddingStrategyInput withType(YoutubeAndPartnersBiddingStrategyTypeEnum type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class YoutubeAndPartnersBiddingStrategyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public YoutubeAndPartnersBiddingStrategyInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public YoutubeAndPartnersBiddingStrategyInput(){}
 }

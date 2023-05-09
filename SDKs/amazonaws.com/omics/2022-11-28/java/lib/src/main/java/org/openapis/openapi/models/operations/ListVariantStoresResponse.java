@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListVariantStoresResponse {
@@ -12,6 +13,7 @@ public class ListVariantStoresResponse {
      */
     
     public Object accessDeniedException;
+
     public ListVariantStoresResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListVariantStoresResponse {
     
     
     public String contentType;
+
     public ListVariantStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListVariantStoresResponse {
      */
     
     public Object internalServerException;
+
     public ListVariantStoresResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListVariantStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListVariantStoresResponse listVariantStoresResponse;
+
     public ListVariantStoresResponse withListVariantStoresResponse(org.openapis.openapi.models.shared.ListVariantStoresResponse listVariantStoresResponse) {
         this.listVariantStoresResponse = listVariantStoresResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListVariantStoresResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListVariantStoresResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListVariantStoresResponse {
     
     
     public Integer statusCode;
+
     public ListVariantStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListVariantStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListVariantStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListVariantStoresResponse {
      */
     
     public Object throttlingException;
+
     public ListVariantStoresResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListVariantStoresResponse {
      */
     
     public Object validationException;
+
     public ListVariantStoresResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListVariantStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

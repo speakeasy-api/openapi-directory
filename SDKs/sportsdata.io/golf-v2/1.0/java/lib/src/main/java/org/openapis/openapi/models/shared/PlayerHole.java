@@ -12,6 +12,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Birdie")
     public Boolean birdie;
+
     public PlayerHole withBirdie(Boolean birdie) {
         this.birdie = birdie;
         return this;
@@ -20,6 +21,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bogey")
     public Boolean bogey;
+
     public PlayerHole withBogey(Boolean bogey) {
         this.bogey = bogey;
         return this;
@@ -28,6 +30,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleBogey")
     public Boolean doubleBogey;
+
     public PlayerHole withDoubleBogey(Boolean doubleBogey) {
         this.doubleBogey = doubleBogey;
         return this;
@@ -36,6 +39,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoubleEagle")
     public Boolean doubleEagle;
+
     public PlayerHole withDoubleEagle(Boolean doubleEagle) {
         this.doubleEagle = doubleEagle;
         return this;
@@ -44,6 +48,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Eagle")
     public Boolean eagle;
+
     public PlayerHole withEagle(Boolean eagle) {
         this.eagle = eagle;
         return this;
@@ -52,6 +57,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HoleInOne")
     public Boolean holeInOne;
+
     public PlayerHole withHoleInOne(Boolean holeInOne) {
         this.holeInOne = holeInOne;
         return this;
@@ -60,6 +66,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsPar")
     public Boolean isPar;
+
     public PlayerHole withIsPar(Boolean isPar) {
         this.isPar = isPar;
         return this;
@@ -68,6 +75,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerHole withNumber(Long number) {
         this.number = number;
         return this;
@@ -76,6 +84,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Par")
     public Long par;
+
     public PlayerHole withPar(Long par) {
         this.par = par;
         return this;
@@ -84,6 +93,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerRoundID")
     public Long playerRoundID;
+
     public PlayerHole withPlayerRoundID(Long playerRoundID) {
         this.playerRoundID = playerRoundID;
         return this;
@@ -92,6 +102,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Long score;
+
     public PlayerHole withScore(Long score) {
         this.score = score;
         return this;
@@ -100,6 +111,7 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ToPar")
     public Long toPar;
+
     public PlayerHole withToPar(Long toPar) {
         this.toPar = toPar;
         return this;
@@ -108,9 +120,11 @@ public class PlayerHole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorseThanDoubleBogey")
     public Boolean worseThanDoubleBogey;
+
     public PlayerHole withWorseThanDoubleBogey(Boolean worseThanDoubleBogey) {
         this.worseThanDoubleBogey = worseThanDoubleBogey;
         return this;
     }
     
+    public PlayerHole(){}
 }

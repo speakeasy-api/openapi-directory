@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllPaymentsResponse {
     
     public String contentType;
+
     public GetAllPaymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllPaymentsResponse {
     
     
     public Integer statusCode;
+
     public GetAllPaymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllPaymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllPaymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllPaymentsResponse {
      */
     
     public GetAllPayments200ApplicationJSON getAllPayments200ApplicationJSONObject;
+
     public GetAllPaymentsResponse withGetAllPayments200ApplicationJSONObject(GetAllPayments200ApplicationJSON getAllPayments200ApplicationJSONObject) {
         this.getAllPayments200ApplicationJSONObject = getAllPayments200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetAllPaymentsResponse {
      */
     
     public GetAllPayments400ApplicationJSON getAllPayments400ApplicationJSONObject;
+
     public GetAllPaymentsResponse withGetAllPayments400ApplicationJSONObject(GetAllPayments400ApplicationJSON getAllPayments400ApplicationJSONObject) {
         this.getAllPayments400ApplicationJSONObject = getAllPayments400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetAllPaymentsResponse {
      */
     
     public GetAllPayments401ApplicationJSON getAllPayments401ApplicationJSONObject;
+
     public GetAllPaymentsResponse withGetAllPayments401ApplicationJSONObject(GetAllPayments401ApplicationJSON getAllPayments401ApplicationJSONObject) {
         this.getAllPayments401ApplicationJSONObject = getAllPayments401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetAllPaymentsResponse {
      */
     
     public GetAllPayments403ApplicationJSON getAllPayments403ApplicationJSONObject;
+
     public GetAllPaymentsResponse withGetAllPayments403ApplicationJSONObject(GetAllPayments403ApplicationJSON getAllPayments403ApplicationJSONObject) {
         this.getAllPayments403ApplicationJSONObject = getAllPayments403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetAllPaymentsResponse {
      */
     
     public GetAllPayments404ApplicationJSON getAllPayments404ApplicationJSONObject;
+
     public GetAllPaymentsResponse withGetAllPayments404ApplicationJSONObject(GetAllPayments404ApplicationJSON getAllPayments404ApplicationJSONObject) {
         this.getAllPayments404ApplicationJSONObject = getAllPayments404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetAllPaymentsResponse {
      */
     
     public GetAllPayments429ApplicationJSON getAllPayments429ApplicationJSONObject;
+
     public GetAllPaymentsResponse withGetAllPayments429ApplicationJSONObject(GetAllPayments429ApplicationJSON getAllPayments429ApplicationJSONObject) {
         this.getAllPayments429ApplicationJSONObject = getAllPayments429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GetAllPaymentsResponse {
      */
     
     public GetAllPayments500ApplicationJSON getAllPayments500ApplicationJSONObject;
+
     public GetAllPaymentsResponse withGetAllPayments500ApplicationJSONObject(GetAllPayments500ApplicationJSON getAllPayments500ApplicationJSONObject) {
         this.getAllPayments500ApplicationJSONObject = getAllPayments500ApplicationJSONObject;
         return this;
     }
     
+    public GetAllPaymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

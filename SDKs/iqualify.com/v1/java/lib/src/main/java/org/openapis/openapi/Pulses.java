@@ -51,12 +51,10 @@ public class Pulses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesResponse(contentType, httpRes.statusCode()) {{
             getOfferingsOfferingIdAnalyticsPulses200ApplicationJSONStrings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Pulses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesResponse(contentType, httpRes.statusCode()) {{
             pulseResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

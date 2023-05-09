@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutPermissionResponse {
     @JsonProperty("policy")
     public String policy;
+
     public PutPermissionResponse withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -19,9 +20,14 @@ public class PutPermissionResponse {
     
     @JsonProperty("revisionId")
     public String revisionId;
+
     public PutPermissionResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public PutPermissionResponse(@JsonProperty("policy") String policy, @JsonProperty("revisionId") String revisionId) {
+        this.policy = policy;
+        this.revisionId = revisionId;
+  }
 }

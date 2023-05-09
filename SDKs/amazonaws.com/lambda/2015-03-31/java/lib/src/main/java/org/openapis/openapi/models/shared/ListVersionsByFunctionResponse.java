@@ -15,6 +15,7 @@ public class ListVersionsByFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListVersionsByFunctionResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListVersionsByFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Versions")
     public FunctionConfiguration[] versions;
+
     public ListVersionsByFunctionResponse withVersions(FunctionConfiguration[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListVersionsByFunctionResponse(){}
 }

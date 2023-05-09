@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePoolResponse {
@@ -12,6 +13,7 @@ public class UpdatePoolResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePoolResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePoolResponse {
      */
     
     public Object conflictException;
+
     public UpdatePoolResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePoolResponse {
     
     
     public String contentType;
+
     public UpdatePoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePoolResponse {
      */
     
     public Object internalServerException;
+
     public UpdatePoolResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePoolResponse {
     
     
     public Integer statusCode;
+
     public UpdatePoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePoolResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePoolResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePoolResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePoolResult updatePoolResult;
+
     public UpdatePoolResponse withUpdatePoolResult(org.openapis.openapi.models.shared.UpdatePoolResult updatePoolResult) {
         this.updatePoolResult = updatePoolResult;
         return this;
@@ -93,9 +103,14 @@ public class UpdatePoolResponse {
      */
     
     public Object validationException;
+
     public UpdatePoolResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

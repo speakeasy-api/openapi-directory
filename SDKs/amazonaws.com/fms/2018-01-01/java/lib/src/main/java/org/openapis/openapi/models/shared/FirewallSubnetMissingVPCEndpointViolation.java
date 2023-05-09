@@ -15,6 +15,7 @@ public class FirewallSubnetMissingVPCEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallSubnetId")
     public String firewallSubnetId;
+
     public FirewallSubnetMissingVPCEndpointViolation withFirewallSubnetId(String firewallSubnetId) {
         this.firewallSubnetId = firewallSubnetId;
         return this;
@@ -23,6 +24,7 @@ public class FirewallSubnetMissingVPCEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZone")
     public String subnetAvailabilityZone;
+
     public FirewallSubnetMissingVPCEndpointViolation withSubnetAvailabilityZone(String subnetAvailabilityZone) {
         this.subnetAvailabilityZone = subnetAvailabilityZone;
         return this;
@@ -31,6 +33,7 @@ public class FirewallSubnetMissingVPCEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetAvailabilityZoneId")
     public String subnetAvailabilityZoneId;
+
     public FirewallSubnetMissingVPCEndpointViolation withSubnetAvailabilityZoneId(String subnetAvailabilityZoneId) {
         this.subnetAvailabilityZoneId = subnetAvailabilityZoneId;
         return this;
@@ -39,9 +42,11 @@ public class FirewallSubnetMissingVPCEndpointViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public FirewallSubnetMissingVPCEndpointViolation withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public FirewallSubnetMissingVPCEndpointViolation(){}
 }

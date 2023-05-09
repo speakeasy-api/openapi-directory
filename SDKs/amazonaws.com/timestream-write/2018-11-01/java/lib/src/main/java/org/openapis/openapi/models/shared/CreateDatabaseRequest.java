@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDatabaseRequest {
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public CreateDatabaseRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -19,6 +20,7 @@ public class CreateDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateDatabaseRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -27,9 +29,13 @@ public class CreateDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDatabaseRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatabaseRequest(@JsonProperty("DatabaseName") String databaseName) {
+        this.databaseName = databaseName;
+  }
 }

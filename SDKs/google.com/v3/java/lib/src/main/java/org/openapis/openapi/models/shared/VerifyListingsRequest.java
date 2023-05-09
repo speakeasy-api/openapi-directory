@@ -18,9 +18,11 @@ public class VerifyListingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xmlListing")
     public String xmlListing;
+
     public VerifyListingsRequest withXmlListing(String xmlListing) {
         this.xmlListing = xmlListing;
         return this;
     }
     
+    public VerifyListingsRequest(){}
 }

@@ -18,6 +18,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect")
     public PartOfSpeechAspectEnum aspect;
+
     public PartOfSpeech withAspect(PartOfSpeechAspectEnum aspect) {
         this.aspect = aspect;
         return this;
@@ -29,6 +30,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("case")
     public PartOfSpeechCaseEnum case_;
+
     public PartOfSpeech withCase(PartOfSpeechCaseEnum case_) {
         this.case_ = case_;
         return this;
@@ -40,6 +42,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public PartOfSpeechFormEnum form;
+
     public PartOfSpeech withForm(PartOfSpeechFormEnum form) {
         this.form = form;
         return this;
@@ -51,6 +54,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public PartOfSpeechGenderEnum gender;
+
     public PartOfSpeech withGender(PartOfSpeechGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -62,6 +66,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mood")
     public PartOfSpeechMoodEnum mood;
+
     public PartOfSpeech withMood(PartOfSpeechMoodEnum mood) {
         this.mood = mood;
         return this;
@@ -73,6 +78,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public PartOfSpeechNumberEnum number;
+
     public PartOfSpeech withNumber(PartOfSpeechNumberEnum number) {
         this.number = number;
         return this;
@@ -84,6 +90,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("person")
     public PartOfSpeechPersonEnum person;
+
     public PartOfSpeech withPerson(PartOfSpeechPersonEnum person) {
         this.person = person;
         return this;
@@ -95,6 +102,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proper")
     public PartOfSpeechProperEnum proper;
+
     public PartOfSpeech withProper(PartOfSpeechProperEnum proper) {
         this.proper = proper;
         return this;
@@ -106,6 +114,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reciprocity")
     public PartOfSpeechReciprocityEnum reciprocity;
+
     public PartOfSpeech withReciprocity(PartOfSpeechReciprocityEnum reciprocity) {
         this.reciprocity = reciprocity;
         return this;
@@ -117,6 +126,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public PartOfSpeechTagEnum tag;
+
     public PartOfSpeech withTag(PartOfSpeechTagEnum tag) {
         this.tag = tag;
         return this;
@@ -128,6 +138,7 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tense")
     public PartOfSpeechTenseEnum tense;
+
     public PartOfSpeech withTense(PartOfSpeechTenseEnum tense) {
         this.tense = tense;
         return this;
@@ -139,9 +150,11 @@ public class PartOfSpeech {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voice")
     public PartOfSpeechVoiceEnum voice;
+
     public PartOfSpeech withVoice(PartOfSpeechVoiceEnum voice) {
         this.voice = voice;
         return this;
     }
     
+    public PartOfSpeech(){}
 }

@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsSecurity;
 import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsRequest;
 import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsResponse;
+import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.FileReference;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -31,12 +30,12 @@ public class Application {
                 .build();
 
             TestingApplicationDetailServiceGetApkDetailsRequest req = new TestingApplicationDetailServiceGetApkDetailsRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 fileReference = new FileReference() {{
                     gcsPath = "provident";
-                }};
+                }};;
                 accessToken = "distinctio";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "unde";
                 fields = "nulla";
                 key = "corrupti";
@@ -45,19 +44,21 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            TestingApplicationDetailServiceGetApkDetailsResponse res = sdk.applicationDetailService.testingApplicationDetailServiceGetApkDetails(req, new TestingApplicationDetailServiceGetApkDetailsSecurity() {{
+            TestingApplicationDetailServiceGetApkDetailsResponse res = sdk.applicationDetailService.testingApplicationDetailServiceGetApkDetails(req, new TestingApplicationDetailServiceGetApkDetailsSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.getApkDetailsResponse.isPresent()) {
+            if (res.getApkDetailsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,19 +66,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### applicationDetailService
+### [applicationDetailService](docs/applicationdetailservice/README.md)
 
-* `testingApplicationDetailServiceGetApkDetails` - Gets the details of an Android application APK.
+* [testingApplicationDetailServiceGetApkDetails](docs/applicationdetailservice/README.md#testingapplicationdetailservicegetapkdetails) - Gets the details of an Android application APK.
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `testingProjectsTestMatricesCancel` - Cancels unfinished test executions in a test matrix. This call returns immediately and cancellation proceeds asynchronously. If the matrix is already final, this operation will have no effect. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
-* `testingProjectsTestMatricesCreate` - Creates and runs a matrix of tests according to the given specifications. Unsupported environments will be returned in the state UNSUPPORTED. A test matrix is limited to use at most 2000 devices in parallel. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed or if the matrix tries to use too many simultaneous devices.
-* `testingProjectsTestMatricesGet` - Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+* [testingProjectsTestMatricesCancel](docs/projects/README.md#testingprojectstestmatricescancel) - Cancels unfinished test executions in a test matrix. This call returns immediately and cancellation proceeds asynchronously. If the matrix is already final, this operation will have no effect. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+* [testingProjectsTestMatricesCreate](docs/projects/README.md#testingprojectstestmatricescreate) - Creates and runs a matrix of tests according to the given specifications. Unsupported environments will be returned in the state UNSUPPORTED. A test matrix is limited to use at most 2000 devices in parallel. The returned matrix will not yet contain the executions that will be created for this matrix. That happens later on and will require a call to GetTestMatrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed or if the matrix tries to use too many simultaneous devices.
+* [testingProjectsTestMatricesGet](docs/projects/README.md#testingprojectstestmatricesget) - Checks the status of a test matrix and the executions once they are created. The test matrix will contain the list of test executions to run if and only if the resultStorage.toolResultsExecution fields have been populated. Note: Flaky test executions may still be added to the matrix at a later stage. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
 
-### testEnvironmentCatalog
+### [testEnvironmentCatalog](docs/testenvironmentcatalog/README.md)
 
-* `testingTestEnvironmentCatalogGet` - Gets the catalog of supported test environments. May return any of the following canonical error codes: - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type does not exist - INTERNAL - if an internal error occurred
+* [testingTestEnvironmentCatalogGet](docs/testenvironmentcatalog/README.md#testingtestenvironmentcatalogget) - Gets the catalog of supported test environments. May return any of the following canonical error codes: - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type does not exist - INTERNAL - if an internal error occurred
 <!-- End SDK Available Operations -->
 
 ### Maturity

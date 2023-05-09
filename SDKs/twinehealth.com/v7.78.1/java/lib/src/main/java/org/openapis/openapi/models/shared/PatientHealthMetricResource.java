@@ -12,6 +12,7 @@ public class PatientHealthMetricResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public PatientHealthMetricResourceAttributes attributes;
+
     public PatientHealthMetricResource withAttributes(PatientHealthMetricResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class PatientHealthMetricResource {
     
     @JsonProperty("id")
     public String id;
+
     public PatientHealthMetricResource withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class PatientHealthMetricResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public PatientHealthMetricResourceRelationships relationships;
+
     public PatientHealthMetricResource withRelationships(PatientHealthMetricResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +37,14 @@ public class PatientHealthMetricResource {
     
     @JsonProperty("type")
     public String type;
+
     public PatientHealthMetricResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PatientHealthMetricResource(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

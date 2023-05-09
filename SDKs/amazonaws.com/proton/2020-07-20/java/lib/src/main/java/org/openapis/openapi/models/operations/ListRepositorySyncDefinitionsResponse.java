@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRepositorySyncDefinitionsResponse {
@@ -12,6 +13,7 @@ public class ListRepositorySyncDefinitionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRepositorySyncDefinitionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRepositorySyncDefinitionsResponse {
     
     
     public String contentType;
+
     public ListRepositorySyncDefinitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRepositorySyncDefinitionsResponse {
      */
     
     public Object internalServerException;
+
     public ListRepositorySyncDefinitionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRepositorySyncDefinitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRepositorySyncDefinitionsOutput listRepositorySyncDefinitionsOutput;
+
     public ListRepositorySyncDefinitionsResponse withListRepositorySyncDefinitionsOutput(org.openapis.openapi.models.shared.ListRepositorySyncDefinitionsOutput listRepositorySyncDefinitionsOutput) {
         this.listRepositorySyncDefinitionsOutput = listRepositorySyncDefinitionsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListRepositorySyncDefinitionsResponse {
     
     
     public Integer statusCode;
+
     public ListRepositorySyncDefinitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRepositorySyncDefinitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRepositorySyncDefinitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListRepositorySyncDefinitionsResponse {
      */
     
     public Object throttlingException;
+
     public ListRepositorySyncDefinitionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListRepositorySyncDefinitionsResponse {
      */
     
     public Object validationException;
+
     public ListRepositorySyncDefinitionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRepositorySyncDefinitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSnapshotLimitsRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public GetSnapshotLimitsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     
+    public GetSnapshotLimitsRequest(@JsonProperty("DirectoryId") String directoryId) {
+        this.directoryId = directoryId;
+  }
 }

@@ -12,6 +12,7 @@ public class ListConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionState")
     public ConnectionStateEnum connectionState;
+
     public ListConnectionsRequest withConnectionState(ConnectionStateEnum connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -20,6 +21,7 @@ public class ListConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListConnectionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ListConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NamePrefix")
     public String namePrefix;
+
     public ListConnectionsRequest withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -36,9 +39,11 @@ public class ListConnectionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListConnectionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListConnectionsRequest(){}
 }

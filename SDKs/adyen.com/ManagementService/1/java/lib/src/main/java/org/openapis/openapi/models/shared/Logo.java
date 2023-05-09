@@ -18,9 +18,11 @@ public class Logo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public Logo withData(String data) {
         this.data = data;
         return this;
     }
     
+    public Logo(){}
 }

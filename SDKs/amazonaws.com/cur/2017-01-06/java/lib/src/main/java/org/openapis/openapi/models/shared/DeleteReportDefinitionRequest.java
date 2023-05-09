@@ -15,9 +15,11 @@ public class DeleteReportDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportName")
     public String reportName;
+
     public DeleteReportDefinitionRequest withReportName(String reportName) {
         this.reportName = reportName;
         return this;
     }
     
+    public DeleteReportDefinitionRequest(){}
 }

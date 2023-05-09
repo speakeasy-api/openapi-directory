@@ -12,6 +12,7 @@ public class DeleteSlackChannelConfigurationRequestBody {
      */
     @JsonProperty("channelId")
     public String channelId;
+
     public DeleteSlackChannelConfigurationRequestBody withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -22,9 +23,14 @@ public class DeleteSlackChannelConfigurationRequestBody {
      */
     @JsonProperty("teamId")
     public String teamId;
+
     public DeleteSlackChannelConfigurationRequestBody withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public DeleteSlackChannelConfigurationRequestBody(@JsonProperty("channelId") String channelId, @JsonProperty("teamId") String teamId) {
+        this.channelId = channelId;
+        this.teamId = teamId;
+  }
 }

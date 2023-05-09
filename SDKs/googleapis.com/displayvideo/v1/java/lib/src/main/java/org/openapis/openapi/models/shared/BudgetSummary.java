@@ -18,6 +18,7 @@ public class BudgetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalBudgetId")
     public String externalBudgetId;
+
     public BudgetSummary withExternalBudgetId(String externalBudgetId) {
         this.externalBudgetId = externalBudgetId;
         return this;
@@ -29,6 +30,7 @@ public class BudgetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preTaxAmountMicros")
     public String preTaxAmountMicros;
+
     public BudgetSummary withPreTaxAmountMicros(String preTaxAmountMicros) {
         this.preTaxAmountMicros = preTaxAmountMicros;
         return this;
@@ -40,6 +42,7 @@ public class BudgetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prismaCpeCode")
     public PrismaCpeCode prismaCpeCode;
+
     public BudgetSummary withPrismaCpeCode(PrismaCpeCode prismaCpeCode) {
         this.prismaCpeCode = prismaCpeCode;
         return this;
@@ -51,6 +54,7 @@ public class BudgetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAmountMicros")
     public String taxAmountMicros;
+
     public BudgetSummary withTaxAmountMicros(String taxAmountMicros) {
         this.taxAmountMicros = taxAmountMicros;
         return this;
@@ -62,9 +66,11 @@ public class BudgetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalAmountMicros")
     public String totalAmountMicros;
+
     public BudgetSummary withTotalAmountMicros(String totalAmountMicros) {
         this.totalAmountMicros = totalAmountMicros;
         return this;
     }
     
+    public BudgetSummary(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeSource {
     @JsonProperty("s3")
     public S3Location s3;
+
     public CodeSource withS3(S3Location s3) {
         this.s3 = s3;
         return this;
     }
     
+    public CodeSource(@JsonProperty("s3") S3Location s3) {
+        this.s3 = s3;
+  }
 }

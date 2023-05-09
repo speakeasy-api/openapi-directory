@@ -22,6 +22,7 @@ public class PredictorBacktestExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public PredictorBacktestExportJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +34,7 @@ public class PredictorBacktestExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public DataDestination destination;
+
     public PredictorBacktestExportJobSummary withDestination(DataDestination destination) {
         this.destination = destination;
         return this;
@@ -43,6 +45,7 @@ public class PredictorBacktestExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public PredictorBacktestExportJobSummary withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -51,6 +54,7 @@ public class PredictorBacktestExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PredictorBacktestExportJobSummary withMessage(String message) {
         this.message = message;
         return this;
@@ -59,6 +63,7 @@ public class PredictorBacktestExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorBacktestExportJobArn")
     public String predictorBacktestExportJobArn;
+
     public PredictorBacktestExportJobSummary withPredictorBacktestExportJobArn(String predictorBacktestExportJobArn) {
         this.predictorBacktestExportJobArn = predictorBacktestExportJobArn;
         return this;
@@ -67,6 +72,7 @@ public class PredictorBacktestExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorBacktestExportJobName")
     public String predictorBacktestExportJobName;
+
     public PredictorBacktestExportJobSummary withPredictorBacktestExportJobName(String predictorBacktestExportJobName) {
         this.predictorBacktestExportJobName = predictorBacktestExportJobName;
         return this;
@@ -75,9 +81,11 @@ public class PredictorBacktestExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public PredictorBacktestExportJobSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PredictorBacktestExportJobSummary(){}
 }

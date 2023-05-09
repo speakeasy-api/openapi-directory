@@ -12,6 +12,7 @@ public class UpdateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public UpdateLocationSmbRequest withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -20,6 +21,7 @@ public class UpdateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domain")
     public String domain;
+
     public UpdateLocationSmbRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -27,6 +29,7 @@ public class UpdateLocationSmbRequest {
     
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public UpdateLocationSmbRequest withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -38,6 +41,7 @@ public class UpdateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public SmbMountOptions mountOptions;
+
     public UpdateLocationSmbRequest withMountOptions(SmbMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -46,6 +50,7 @@ public class UpdateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public UpdateLocationSmbRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -54,6 +59,7 @@ public class UpdateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public UpdateLocationSmbRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -62,9 +68,13 @@ public class UpdateLocationSmbRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("User")
     public String user;
+
     public UpdateLocationSmbRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public UpdateLocationSmbRequest(@JsonProperty("LocationArn") String locationArn) {
+        this.locationArn = locationArn;
+  }
 }

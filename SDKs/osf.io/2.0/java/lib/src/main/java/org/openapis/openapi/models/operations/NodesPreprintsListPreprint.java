@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NodesPreprintsListPreprint {
     /**
@@ -12,6 +12,7 @@ public class NodesPreprintsListPreprint {
      */
     
     public NodesPreprintsListPreprintAttributes attributes;
+
     public NodesPreprintsListPreprint withAttributes(NodesPreprintsListPreprintAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesPreprintsListPreprint {
      */
     
     public String id;
+
     public NodesPreprintsListPreprint withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesPreprintsListPreprint {
      */
     
     public NodesPreprintsListPreprintLinks links;
+
     public NodesPreprintsListPreprint withLinks(NodesPreprintsListPreprintLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesPreprintsListPreprint {
      */
     
     public NodesPreprintsListPreprintRelationships relationships;
+
     public NodesPreprintsListPreprint withRelationships(NodesPreprintsListPreprintRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,14 @@ public class NodesPreprintsListPreprint {
      */
     
     public String type;
+
     public NodesPreprintsListPreprint withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesPreprintsListPreprint(@JsonProperty("relationships") NodesPreprintsListPreprintRelationships relationships, @JsonProperty("type") String type) {
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

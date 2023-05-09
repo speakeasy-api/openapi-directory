@@ -15,6 +15,7 @@ public class ProjectTimeCardVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public Long projectId;
+
     public ProjectTimeCardVO withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -23,9 +24,11 @@ public class ProjectTimeCardVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_name")
     public String projectName;
+
     public ProjectTimeCardVO withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     
+    public ProjectTimeCardVO(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePortalResponse {
@@ -12,6 +13,7 @@ public class UpdatePortalResponse {
      */
     
     public Object conflictingOperationException;
+
     public UpdatePortalResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePortalResponse {
     
     
     public String contentType;
+
     public UpdatePortalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePortalResponse {
      */
     
     public Object internalFailureException;
+
     public UpdatePortalResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePortalResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdatePortalResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePortalResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePortalResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdatePortalResponse {
     
     
     public Integer statusCode;
+
     public UpdatePortalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePortalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePortalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePortalResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePortalResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdatePortalResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePortalResponse updatePortalResponse;
+
     public UpdatePortalResponse withUpdatePortalResponse(org.openapis.openapi.models.shared.UpdatePortalResponse updatePortalResponse) {
         this.updatePortalResponse = updatePortalResponse;
         return this;
     }
     
+    public UpdatePortalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ReleasesGetReleaseUploadStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_details")
     public String errorDetails;
+
     public ReleasesGetReleaseUploadStatus200ApplicationJSON withErrorDetails(String errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -28,6 +29,7 @@ public class ReleasesGetReleaseUploadStatus200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ReleasesGetReleaseUploadStatus200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +41,7 @@ public class ReleasesGetReleaseUploadStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_distinct_id")
     public Double releaseDistinctId;
+
     public ReleasesGetReleaseUploadStatus200ApplicationJSON withReleaseDistinctId(Double releaseDistinctId) {
         this.releaseDistinctId = releaseDistinctId;
         return this;
@@ -50,6 +53,7 @@ public class ReleasesGetReleaseUploadStatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_url")
     public Object releaseUrl;
+
     public ReleasesGetReleaseUploadStatus200ApplicationJSON withReleaseUrl(Object releaseUrl) {
         this.releaseUrl = releaseUrl;
         return this;
@@ -60,9 +64,14 @@ public class ReleasesGetReleaseUploadStatus200ApplicationJSON {
      */
     @JsonProperty("upload_status")
     public ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum uploadStatus;
+
     public ReleasesGetReleaseUploadStatus200ApplicationJSON withUploadStatus(ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum uploadStatus) {
         this.uploadStatus = uploadStatus;
         return this;
     }
     
+    public ReleasesGetReleaseUploadStatus200ApplicationJSON(@JsonProperty("id") String id, @JsonProperty("upload_status") ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum uploadStatus) {
+        this.id = id;
+        this.uploadStatus = uploadStatus;
+  }
 }

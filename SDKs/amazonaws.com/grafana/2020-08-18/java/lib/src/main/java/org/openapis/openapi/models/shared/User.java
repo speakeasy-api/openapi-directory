@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class User {
     @JsonProperty("id")
     public String id;
+
     public User withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class User {
     
     @JsonProperty("type")
     public UserTypeEnum type;
+
     public User withType(UserTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public User(@JsonProperty("id") String id, @JsonProperty("type") UserTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

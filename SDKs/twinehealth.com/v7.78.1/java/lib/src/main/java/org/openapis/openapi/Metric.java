@@ -97,12 +97,10 @@ public class Metric {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePatientHealthMetricResponse res = new org.openapis.openapi.models.operations.CreatePatientHealthMetricResponse() {{
+        org.openapis.openapi.models.operations.CreatePatientHealthMetricResponse res = new org.openapis.openapi.models.operations.CreatePatientHealthMetricResponse(contentType, httpRes.statusCode()) {{
             createPatientHealthMetricResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,12 +142,10 @@ public class Metric {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientHealthMetricResponse res = new org.openapis.openapi.models.operations.FetchPatientHealthMetricResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientHealthMetricResponse res = new org.openapis.openapi.models.operations.FetchPatientHealthMetricResponse(contentType, httpRes.statusCode()) {{
             fetchPatientHealthMetricResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,12 +193,10 @@ public class Metric {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchPatientHealthMetricsResponse res = new org.openapis.openapi.models.operations.FetchPatientHealthMetricsResponse() {{
+        org.openapis.openapi.models.operations.FetchPatientHealthMetricsResponse res = new org.openapis.openapi.models.operations.FetchPatientHealthMetricsResponse(contentType, httpRes.statusCode()) {{
             fetchPatientHealthMetricResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

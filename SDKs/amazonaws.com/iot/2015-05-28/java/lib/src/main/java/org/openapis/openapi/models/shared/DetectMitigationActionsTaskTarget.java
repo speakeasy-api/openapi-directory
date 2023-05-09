@@ -15,6 +15,7 @@ public class DetectMitigationActionsTaskTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behaviorName")
     public String behaviorName;
+
     public DetectMitigationActionsTaskTarget withBehaviorName(String behaviorName) {
         this.behaviorName = behaviorName;
         return this;
@@ -23,6 +24,7 @@ public class DetectMitigationActionsTaskTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileName")
     public String securityProfileName;
+
     public DetectMitigationActionsTaskTarget withSecurityProfileName(String securityProfileName) {
         this.securityProfileName = securityProfileName;
         return this;
@@ -31,9 +33,11 @@ public class DetectMitigationActionsTaskTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationIds")
     public String[] violationIds;
+
     public DetectMitigationActionsTaskTarget withViolationIds(String[] violationIds) {
         this.violationIds = violationIds;
         return this;
     }
     
+    public DetectMitigationActionsTaskTarget(){}
 }

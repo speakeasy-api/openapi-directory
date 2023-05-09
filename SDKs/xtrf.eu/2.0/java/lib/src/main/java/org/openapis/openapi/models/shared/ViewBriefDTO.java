@@ -12,6 +12,7 @@ public class ViewBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access")
     public AccessDTO access;
+
     public ViewBriefDTO withAccess(AccessDTO access) {
         this.access = access;
         return this;
@@ -20,6 +21,7 @@ public class ViewBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current")
     public Boolean current;
+
     public ViewBriefDTO withCurrent(Boolean current) {
         this.current = current;
         return this;
@@ -28,6 +30,7 @@ public class ViewBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ViewBriefDTO withId(Long id) {
         this.id = id;
         return this;
@@ -36,6 +39,7 @@ public class ViewBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModification")
     public LastModificationDTO lastModification;
+
     public ViewBriefDTO withLastModification(LastModificationDTO lastModification) {
         this.lastModification = lastModification;
         return this;
@@ -44,6 +48,7 @@ public class ViewBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mine")
     public Boolean mine;
+
     public ViewBriefDTO withMine(Boolean mine) {
         this.mine = mine;
         return this;
@@ -52,6 +57,7 @@ public class ViewBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ViewBriefDTO withName(String name) {
         this.name = name;
         return this;
@@ -60,9 +66,11 @@ public class ViewBriefDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public ViewBriefDTO withOwner(String owner) {
         this.owner = owner;
         return this;
     }
     
+    public ViewBriefDTO(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse {
     
     public String contentType;
+
     public UserStatisticsAccumulatedValueV1StatisticsIndividualResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UserStatisticsAccumulatedValueV1StatisticsIndividualResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse {
     
     
     public Integer statusCode;
+
     public UserStatisticsAccumulatedValueV1StatisticsIndividualResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UserStatisticsAccumulatedValueV1StatisticsIndividualResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse {
      */
     
     public UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSON userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject;
+
     public UserStatisticsAccumulatedValueV1StatisticsIndividualResponse withUserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject(UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSON userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject) {
         this.userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject = userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject;
         return this;
     }
     
+    public UserStatisticsAccumulatedValueV1StatisticsIndividualResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

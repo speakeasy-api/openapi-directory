@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContentRequest {
@@ -12,6 +13,7 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PostContentRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PostContentRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostContentRequestBody requestBody;
+
     public PostContentRequest withRequestBody(PostContentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PostContentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PostContentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PostContentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PostContentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PostContentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PostContentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class PostContentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PostContentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -88,6 +99,7 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAlias")
     public String botAlias;
+
     public PostContentRequest withBotAlias(String botAlias) {
         this.botAlias = botAlias;
         return this;
@@ -98,6 +110,7 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botName")
     public String botName;
+
     public PostContentRequest withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -108,6 +121,7 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public PostContentRequest withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -118,6 +132,7 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-lex-active-contexts")
     public String xAmzLexActiveContexts;
+
     public PostContentRequest withXAmzLexActiveContexts(String xAmzLexActiveContexts) {
         this.xAmzLexActiveContexts = xAmzLexActiveContexts;
         return this;
@@ -128,6 +143,7 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-lex-request-attributes")
     public String xAmzLexRequestAttributes;
+
     public PostContentRequest withXAmzLexRequestAttributes(String xAmzLexRequestAttributes) {
         this.xAmzLexRequestAttributes = xAmzLexRequestAttributes;
         return this;
@@ -138,9 +154,17 @@ public class PostContentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-lex-session-attributes")
     public String xAmzLexSessionAttributes;
+
     public PostContentRequest withXAmzLexSessionAttributes(String xAmzLexSessionAttributes) {
         this.xAmzLexSessionAttributes = xAmzLexSessionAttributes;
         return this;
     }
     
+    public PostContentRequest(@JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") PostContentRequestBody requestBody, @JsonProperty("botAlias") String botAlias, @JsonProperty("botName") String botName, @JsonProperty("userId") String userId) {
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.botAlias = botAlias;
+        this.botName = botName;
+        this.userId = userId;
+  }
 }

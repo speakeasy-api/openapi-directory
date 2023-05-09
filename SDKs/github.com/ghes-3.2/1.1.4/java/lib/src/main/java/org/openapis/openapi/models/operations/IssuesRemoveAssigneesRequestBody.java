@@ -15,9 +15,11 @@ public class IssuesRemoveAssigneesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public String[] assignees;
+
     public IssuesRemoveAssigneesRequestBody withAssignees(String[] assignees) {
         this.assignees = assignees;
         return this;
     }
     
+    public IssuesRemoveAssigneesRequestBody(){}
 }

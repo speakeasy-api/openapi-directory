@@ -18,6 +18,7 @@ public class ListVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVersionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public Version[] versions;
+
     public ListVersionsResponse withVersions(Version[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ListVersionsResponse(){}
 }

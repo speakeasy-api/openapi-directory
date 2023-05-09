@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePullThroughCacheRulesResponse {
     
     public String contentType;
+
     public DescribePullThroughCacheRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePullThroughCacheRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePullThroughCacheRulesResponse describePullThroughCacheRulesResponse;
+
     public DescribePullThroughCacheRulesResponse withDescribePullThroughCacheRulesResponse(org.openapis.openapi.models.shared.DescribePullThroughCacheRulesResponse describePullThroughCacheRulesResponse) {
         this.describePullThroughCacheRulesResponse = describePullThroughCacheRulesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePullThroughCacheRulesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribePullThroughCacheRulesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePullThroughCacheRulesResponse {
      */
     
     public Object pullThroughCacheRuleNotFoundException;
+
     public DescribePullThroughCacheRulesResponse withPullThroughCacheRuleNotFoundException(Object pullThroughCacheRuleNotFoundException) {
         this.pullThroughCacheRuleNotFoundException = pullThroughCacheRuleNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePullThroughCacheRulesResponse {
      */
     
     public Object serverException;
+
     public DescribePullThroughCacheRulesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePullThroughCacheRulesResponse {
     
     
     public Integer statusCode;
+
     public DescribePullThroughCacheRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribePullThroughCacheRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePullThroughCacheRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribePullThroughCacheRulesResponse {
      */
     
     public Object validationException;
+
     public DescribePullThroughCacheRulesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribePullThroughCacheRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

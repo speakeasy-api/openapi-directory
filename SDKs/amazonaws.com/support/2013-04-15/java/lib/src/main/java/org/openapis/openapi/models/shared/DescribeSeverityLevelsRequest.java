@@ -12,9 +12,11 @@ public class DescribeSeverityLevelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public DescribeSeverityLevelsRequest withLanguage(String language) {
         this.language = language;
         return this;
     }
     
+    public DescribeSeverityLevelsRequest(){}
 }

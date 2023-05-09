@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class BotRecommendationSummary {
     @JsonProperty("botRecommendationId")
     public String botRecommendationId;
+
     public BotRecommendationSummary withBotRecommendationId(String botRecommendationId) {
         this.botRecommendationId = botRecommendationId;
         return this;
@@ -26,6 +27,7 @@ public class BotRecommendationSummary {
     
     @JsonProperty("botRecommendationStatus")
     public BotRecommendationStatusEnum botRecommendationStatus;
+
     public BotRecommendationSummary withBotRecommendationStatus(BotRecommendationStatusEnum botRecommendationStatus) {
         this.botRecommendationStatus = botRecommendationStatus;
         return this;
@@ -36,6 +38,7 @@ public class BotRecommendationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public BotRecommendationSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -46,9 +49,14 @@ public class BotRecommendationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public BotRecommendationSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
     }
     
+    public BotRecommendationSummary(@JsonProperty("botRecommendationId") String botRecommendationId, @JsonProperty("botRecommendationStatus") BotRecommendationStatusEnum botRecommendationStatus) {
+        this.botRecommendationId = botRecommendationId;
+        this.botRecommendationStatus = botRecommendationStatus;
+  }
 }

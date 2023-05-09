@@ -44,4 +44,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetJurisdictionResponse
 lib/src/main/java/org/openapis/openapi/models/operations/GetJurisdictiongeographyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetJurisdictiongeographyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetJurisdictiongeographyResponse.java
+docs/sdk/README.md
+docs/resources/README.md
 USAGE.md

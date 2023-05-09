@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaSetInventoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowMissing")
     public Boolean allowMissing;
+
     public GoogleCloudRetailV2alphaSetInventoryRequestInput withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaSetInventoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory")
     public GoogleCloudRetailV2alphaProductInput inventory;
+
     public GoogleCloudRetailV2alphaSetInventoryRequestInput withInventory(GoogleCloudRetailV2alphaProductInput inventory) {
         this.inventory = inventory;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaSetInventoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setMask")
     public String setMask;
+
     public GoogleCloudRetailV2alphaSetInventoryRequestInput withSetMask(String setMask) {
         this.setMask = setMask;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2alphaSetInventoryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setTime")
     public String setTime;
+
     public GoogleCloudRetailV2alphaSetInventoryRequestInput withSetTime(String setTime) {
         this.setTime = setTime;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaSetInventoryRequestInput(){}
 }

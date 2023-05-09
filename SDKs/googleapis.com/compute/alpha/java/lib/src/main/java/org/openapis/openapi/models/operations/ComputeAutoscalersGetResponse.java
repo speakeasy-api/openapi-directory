@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeAutoscalersGetResponse {
@@ -12,6 +13,7 @@ public class ComputeAutoscalersGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Autoscaler autoscaler;
+
     public ComputeAutoscalersGetResponse withAutoscaler(org.openapis.openapi.models.shared.Autoscaler autoscaler) {
         this.autoscaler = autoscaler;
         return this;
@@ -19,6 +21,7 @@ public class ComputeAutoscalersGetResponse {
     
     
     public String contentType;
+
     public ComputeAutoscalersGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ComputeAutoscalersGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeAutoscalersGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeAutoscalersGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeAutoscalersGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeAutoscalersGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

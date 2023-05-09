@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2ListLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxEntries")
     public Integer maxEntries;
+
     public GoogleAppsDriveLabelsV2ListLimits withMaxEntries(Integer maxEntries) {
         this.maxEntries = maxEntries;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2ListLimits(){}
 }

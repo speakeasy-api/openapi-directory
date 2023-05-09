@@ -15,9 +15,11 @@ public class SmbMountOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public SmbVersionEnum version;
+
     public SmbMountOptions withVersion(SmbVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public SmbMountOptions(){}
 }

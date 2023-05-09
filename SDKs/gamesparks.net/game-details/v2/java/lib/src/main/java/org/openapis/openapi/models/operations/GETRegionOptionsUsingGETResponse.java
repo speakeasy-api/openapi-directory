@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETRegionOptionsUsingGETResponse {
     
     public String contentType;
+
     public GETRegionOptionsUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETRegionOptionsUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.GameRegionOptionsDTO gameRegionOptionsDTO;
+
     public GETRegionOptionsUsingGETResponse withGameRegionOptionsDTO(org.openapis.openapi.models.shared.GameRegionOptionsDTO gameRegionOptionsDTO) {
         this.gameRegionOptionsDTO = gameRegionOptionsDTO;
         return this;
@@ -29,6 +32,7 @@ public class GETRegionOptionsUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETRegionOptionsUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class GETRegionOptionsUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETRegionOptionsUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETRegionOptionsUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETRegionOptionsUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETRegionOptionsUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

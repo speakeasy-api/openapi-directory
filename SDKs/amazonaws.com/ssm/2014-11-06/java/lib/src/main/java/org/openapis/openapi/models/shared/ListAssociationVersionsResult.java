@@ -15,6 +15,7 @@ public class ListAssociationVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersions")
     public AssociationVersionInfo[] associationVersions;
+
     public ListAssociationVersionsResult withAssociationVersions(AssociationVersionInfo[] associationVersions) {
         this.associationVersions = associationVersions;
         return this;
@@ -23,9 +24,11 @@ public class ListAssociationVersionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAssociationVersionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssociationVersionsResult(){}
 }

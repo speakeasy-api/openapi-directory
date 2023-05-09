@@ -15,9 +15,11 @@ public class PutSchemaFromJsonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public PutSchemaFromJsonResponse withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public PutSchemaFromJsonResponse(){}
 }

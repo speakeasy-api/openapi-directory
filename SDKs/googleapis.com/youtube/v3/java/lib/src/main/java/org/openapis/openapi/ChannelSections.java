@@ -59,10 +59,8 @@ public class ChannelSections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeChannelSectionsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeChannelSectionsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class ChannelSections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeChannelSectionsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeChannelSectionsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsInsertResponse(contentType, httpRes.statusCode()) {{
             channelSection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class ChannelSections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeChannelSectionsListResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeChannelSectionsListResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsListResponse(contentType, httpRes.statusCode()) {{
             channelSectionListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class ChannelSections {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeChannelSectionsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubeChannelSectionsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeChannelSectionsUpdateResponse(contentType, httpRes.statusCode()) {{
             channelSection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

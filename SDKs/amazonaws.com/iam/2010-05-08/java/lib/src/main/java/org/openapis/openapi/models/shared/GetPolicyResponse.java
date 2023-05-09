@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetPolicyResponse {
     
     public Policy policy;
+
     public GetPolicyResponse withPolicy(Policy policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetPolicyResponse(){}
 }

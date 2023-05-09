@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFoodIngredientSearchPhpResponse {
     
     public String contentType;
+
     public GetFoodIngredientSearchPhpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +22,7 @@ public class GetFoodIngredientSearchPhpResponse {
      */
     
     public org.openapis.openapi.models.shared.IngredientObject ingredientObject;
+
     public GetFoodIngredientSearchPhpResponse withIngredientObject(org.openapis.openapi.models.shared.IngredientObject ingredientObject) {
         this.ingredientObject = ingredientObject;
         return this;
@@ -27,6 +30,7 @@ public class GetFoodIngredientSearchPhpResponse {
     
     
     public Integer statusCode;
+
     public GetFoodIngredientSearchPhpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +38,14 @@ public class GetFoodIngredientSearchPhpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFoodIngredientSearchPhpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFoodIngredientSearchPhpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class InferenceOutputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public InferenceOutputConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class InferenceOutputConfiguration {
     
     @JsonProperty("S3OutputConfiguration")
     public InferenceS3OutputConfiguration s3OutputConfiguration;
+
     public InferenceOutputConfiguration withS3OutputConfiguration(InferenceS3OutputConfiguration s3OutputConfiguration) {
         this.s3OutputConfiguration = s3OutputConfiguration;
         return this;
     }
     
+    public InferenceOutputConfiguration(@JsonProperty("S3OutputConfiguration") InferenceS3OutputConfiguration s3OutputConfiguration) {
+        this.s3OutputConfiguration = s3OutputConfiguration;
+  }
 }

@@ -52,4 +52,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ArticleAndParentComment.jav
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SuggestCommentScoreResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SuggestCommentScoreRequest.java
+docs/sdk/README.md
+docs/comments/README.md
 USAGE.md

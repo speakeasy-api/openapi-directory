@@ -18,6 +18,7 @@ public class TelephonyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierName")
     public String carrierName;
+
     public TelephonyInfo withCarrierName(String carrierName) {
         this.carrierName = carrierName;
         return this;
@@ -29,9 +30,11 @@ public class TelephonyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public TelephonyInfo withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public TelephonyInfo(){}
 }

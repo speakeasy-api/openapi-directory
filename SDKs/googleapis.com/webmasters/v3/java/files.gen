@@ -80,4 +80,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/WmxSitemapContent.java
 lib/src/main/java/org/openapis/openapi/models/shared/SitemapsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WmxSite.java
 lib/src/main/java/org/openapis/openapi/models/shared/SitesListResponse.java
+docs/sdk/README.md
+docs/searchanalytics/README.md
+docs/sitemaps/README.md
+docs/sites/README.md
 USAGE.md

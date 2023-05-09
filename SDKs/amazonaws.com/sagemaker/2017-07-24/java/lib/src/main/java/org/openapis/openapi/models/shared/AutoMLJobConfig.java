@@ -15,6 +15,7 @@ public class AutoMLJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CandidateGenerationConfig")
     public AutoMLCandidateGenerationConfig candidateGenerationConfig;
+
     public AutoMLJobConfig withCandidateGenerationConfig(AutoMLCandidateGenerationConfig candidateGenerationConfig) {
         this.candidateGenerationConfig = candidateGenerationConfig;
         return this;
@@ -23,6 +24,7 @@ public class AutoMLJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionCriteria")
     public AutoMLJobCompletionCriteria completionCriteria;
+
     public AutoMLJobConfig withCompletionCriteria(AutoMLJobCompletionCriteria completionCriteria) {
         this.completionCriteria = completionCriteria;
         return this;
@@ -31,6 +33,7 @@ public class AutoMLJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSplitConfig")
     public AutoMLDataSplitConfig dataSplitConfig;
+
     public AutoMLJobConfig withDataSplitConfig(AutoMLDataSplitConfig dataSplitConfig) {
         this.dataSplitConfig = dataSplitConfig;
         return this;
@@ -39,6 +42,7 @@ public class AutoMLJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public AutoMLModeEnum mode;
+
     public AutoMLJobConfig withMode(AutoMLModeEnum mode) {
         this.mode = mode;
         return this;
@@ -47,9 +51,11 @@ public class AutoMLJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfig")
     public AutoMLSecurityConfig securityConfig;
+
     public AutoMLJobConfig withSecurityConfig(AutoMLSecurityConfig securityConfig) {
         this.securityConfig = securityConfig;
         return this;
     }
     
+    public AutoMLJobConfig(){}
 }

@@ -18,6 +18,7 @@ public class GridInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public ChoiceQuestionInput columns;
+
     public GridInput withColumns(ChoiceQuestionInput columns) {
         this.columns = columns;
         return this;
@@ -29,9 +30,11 @@ public class GridInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuffleQuestions")
     public Boolean shuffleQuestions;
+
     public GridInput withShuffleQuestions(Boolean shuffleQuestions) {
         this.shuffleQuestions = shuffleQuestions;
         return this;
     }
     
+    public GridInput(){}
 }

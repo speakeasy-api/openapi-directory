@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveHotelRequest {
@@ -12,6 +13,7 @@ public class RetrieveHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public RetrieveHotelRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -22,6 +24,7 @@ public class RetrieveHotelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hotelId")
     public String hotelId;
+
     public RetrieveHotelRequest withHotelId(String hotelId) {
         this.hotelId = hotelId;
         return this;
@@ -32,9 +35,13 @@ public class RetrieveHotelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public RetrieveHotelRequest withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public RetrieveHotelRequest(@JsonProperty("hotelId") String hotelId) {
+        this.hotelId = hotelId;
+  }
 }

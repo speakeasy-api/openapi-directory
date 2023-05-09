@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachments {
     
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum state;
+
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachments withState(CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttac
     
     
     public String vpcId;
+
     public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachments withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachments(){}
 }

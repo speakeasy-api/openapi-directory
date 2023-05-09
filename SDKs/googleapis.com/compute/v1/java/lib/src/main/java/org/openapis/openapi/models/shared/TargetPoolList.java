@@ -18,6 +18,7 @@ public class TargetPoolList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetPoolList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class TargetPoolList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public TargetPool[] items;
+
     public TargetPoolList withItems(TargetPool[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class TargetPoolList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetPoolList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class TargetPoolList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public TargetPoolList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class TargetPoolList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetPoolList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class TargetPoolList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public TargetPoolListWarning warning;
+
     public TargetPoolList withWarning(TargetPoolListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public TargetPoolList(){}
 }

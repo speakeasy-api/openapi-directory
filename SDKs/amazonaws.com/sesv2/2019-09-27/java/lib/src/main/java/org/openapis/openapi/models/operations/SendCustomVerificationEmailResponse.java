@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendCustomVerificationEmailResponse {
@@ -12,6 +13,7 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public Object badRequestException;
+
     public SendCustomVerificationEmailResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class SendCustomVerificationEmailResponse {
     
     
     public String contentType;
+
     public SendCustomVerificationEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public Object limitExceededException;
+
     public SendCustomVerificationEmailResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public Object mailFromDomainNotVerifiedException;
+
     public SendCustomVerificationEmailResponse withMailFromDomainNotVerifiedException(Object mailFromDomainNotVerifiedException) {
         this.mailFromDomainNotVerifiedException = mailFromDomainNotVerifiedException;
         return this;
@@ -49,6 +54,7 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public Object messageRejected;
+
     public SendCustomVerificationEmailResponse withMessageRejected(Object messageRejected) {
         this.messageRejected = messageRejected;
         return this;
@@ -59,6 +65,7 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public Object notFoundException;
+
     public SendCustomVerificationEmailResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public org.openapis.openapi.models.shared.SendCustomVerificationEmailResponse sendCustomVerificationEmailResponse;
+
     public SendCustomVerificationEmailResponse withSendCustomVerificationEmailResponse(org.openapis.openapi.models.shared.SendCustomVerificationEmailResponse sendCustomVerificationEmailResponse) {
         this.sendCustomVerificationEmailResponse = sendCustomVerificationEmailResponse;
         return this;
@@ -76,6 +84,7 @@ public class SendCustomVerificationEmailResponse {
     
     
     public Integer statusCode;
+
     public SendCustomVerificationEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SendCustomVerificationEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendCustomVerificationEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public Object sendingPausedException;
+
     public SendCustomVerificationEmailResponse withSendingPausedException(Object sendingPausedException) {
         this.sendingPausedException = sendingPausedException;
         return this;
@@ -103,9 +114,14 @@ public class SendCustomVerificationEmailResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SendCustomVerificationEmailResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SendCustomVerificationEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

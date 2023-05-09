@@ -59,10 +59,8 @@ public class Fulfillment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAddressByPostalCodeResponse res = new org.openapis.openapi.models.operations.GetAddressByPostalCodeResponse() {{
+        org.openapis.openapi.models.operations.GetAddressByPostalCodeResponse res = new org.openapis.openapi.models.operations.GetAddressByPostalCodeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,10 +107,8 @@ public class Fulfillment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPickupPpointsByLocationResponse res = new org.openapis.openapi.models.operations.ListPickupPpointsByLocationResponse() {{
+        org.openapis.openapi.models.operations.ListPickupPpointsByLocationResponse res = new org.openapis.openapi.models.operations.ListPickupPpointsByLocationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

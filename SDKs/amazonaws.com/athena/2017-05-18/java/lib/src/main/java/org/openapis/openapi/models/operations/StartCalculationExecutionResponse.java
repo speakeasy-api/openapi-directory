@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCalculationExecutionResponse {
     
     public String contentType;
+
     public StartCalculationExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartCalculationExecutionResponse {
      */
     
     public Object internalServerException;
+
     public StartCalculationExecutionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartCalculationExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public StartCalculationExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartCalculationExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartCalculationExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartCalculationExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartCalculationExecutionResponse startCalculationExecutionResponse;
+
     public StartCalculationExecutionResponse withStartCalculationExecutionResponse(org.openapis.openapi.models.shared.StartCalculationExecutionResponse startCalculationExecutionResponse) {
         this.startCalculationExecutionResponse = startCalculationExecutionResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartCalculationExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartCalculationExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartCalculationExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCalculationExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartCalculationExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegionOptStatusResponse {
@@ -12,6 +13,7 @@ public class GetRegionOptStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRegionOptStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRegionOptStatusResponse {
     
     
     public String contentType;
+
     public GetRegionOptStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRegionOptStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRegionOptStatusResponse getRegionOptStatusResponse;
+
     public GetRegionOptStatusResponse withGetRegionOptStatusResponse(org.openapis.openapi.models.shared.GetRegionOptStatusResponse getRegionOptStatusResponse) {
         this.getRegionOptStatusResponse = getRegionOptStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetRegionOptStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetRegionOptStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetRegionOptStatusResponse {
     
     
     public Integer statusCode;
+
     public GetRegionOptStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRegionOptStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegionOptStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetRegionOptStatusResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetRegionOptStatusResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class GetRegionOptStatusResponse {
      */
     
     public Object validationException;
+
     public GetRegionOptStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRegionOptStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrganisationsRequest {
@@ -12,6 +13,7 @@ public class PostOrganisationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public PostOrganisationsRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class PostOrganisationsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrganisationInput organisationInput;
+
     public PostOrganisationsRequest withOrganisationInput(org.openapis.openapi.models.shared.OrganisationInput organisationInput) {
         this.organisationInput = organisationInput;
         return this;
     }
     
+    public PostOrganisationsRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("organisationInput") org.openapis.openapi.models.shared.OrganisationInput organisationInput) {
+        this.apiKey = apiKey;
+        this.organisationInput = organisationInput;
+  }
 }

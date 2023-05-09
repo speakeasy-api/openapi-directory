@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupMemberLeaveResult {
     
     public GroupsV2GroupV2 group;
+
     public GroupsV2GroupMemberLeaveResult withGroup(GroupsV2GroupV2 group) {
         this.group = group;
         return this;
@@ -16,9 +17,11 @@ public class GroupsV2GroupMemberLeaveResult {
     
     
     public Boolean groupDeleted;
+
     public GroupsV2GroupMemberLeaveResult withGroupDeleted(Boolean groupDeleted) {
         this.groupDeleted = groupDeleted;
         return this;
     }
     
+    public GroupsV2GroupMemberLeaveResult(){}
 }

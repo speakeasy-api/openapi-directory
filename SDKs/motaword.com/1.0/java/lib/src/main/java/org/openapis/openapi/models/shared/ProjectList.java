@@ -15,6 +15,7 @@ public class ProjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public ProjectList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class ProjectList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public Project[] projects;
+
     public ProjectList withProjects(Project[] projects) {
         this.projects = projects;
         return this;
     }
     
+    public ProjectList(){}
 }

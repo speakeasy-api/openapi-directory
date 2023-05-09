@@ -18,6 +18,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public Page withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -28,6 +29,7 @@ public class Page {
      */
     @JsonProperty("entries")
     public PageEntry[] entries;
+
     public Page withEntries(PageEntry[] entries) {
         this.entries = entries;
         return this;
@@ -38,6 +40,7 @@ public class Page {
      */
     @JsonProperty("id")
     public String id;
+
     public Page withId(String id) {
         this.id = id;
         return this;
@@ -53,6 +56,7 @@ public class Page {
      */
     @JsonProperty("isStatic")
     public Boolean isStatic;
+
     public Page withIsStatic(Boolean isStatic) {
         this.isStatic = isStatic;
         return this;
@@ -68,6 +72,7 @@ public class Page {
      */
     @JsonProperty("isSystemPage")
     public Boolean isSystemPage;
+
     public Page withIsSystemPage(Boolean isSystemPage) {
         this.isSystemPage = isSystemPage;
         return this;
@@ -76,6 +81,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public ItemDetail item;
+
     public Page withItem(ItemDetail item) {
         this.item = item;
         return this;
@@ -87,6 +93,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Page withKey(String key) {
         this.key = key;
         return this;
@@ -98,6 +105,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public ItemList list;
+
     public Page withList(ItemList list) {
         this.list = list;
         return this;
@@ -109,6 +117,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public PageMetadata metadata;
+
     public Page withMetadata(PageMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -119,6 +128,7 @@ public class Page {
      */
     @JsonProperty("path")
     public String path;
+
     public Page withPath(String path) {
         this.path = path;
         return this;
@@ -129,6 +139,7 @@ public class Page {
      */
     @JsonProperty("template")
     public String template;
+
     public Page withTemplate(String template) {
         this.template = template;
         return this;
@@ -137,6 +148,7 @@ public class Page {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themes")
     public Theme[] themes;
+
     public Page withThemes(Theme[] themes) {
         this.themes = themes;
         return this;
@@ -147,9 +159,19 @@ public class Page {
      */
     @JsonProperty("title")
     public String title;
+
     public Page withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Page(@JsonProperty("entries") PageEntry[] entries, @JsonProperty("id") String id, @JsonProperty("isStatic") Boolean isStatic, @JsonProperty("isSystemPage") Boolean isSystemPage, @JsonProperty("path") String path, @JsonProperty("template") String template, @JsonProperty("title") String title) {
+        this.entries = entries;
+        this.id = id;
+        this.isStatic = isStatic;
+        this.isSystemPage = isSystemPage;
+        this.path = path;
+        this.template = template;
+        this.title = title;
+  }
 }

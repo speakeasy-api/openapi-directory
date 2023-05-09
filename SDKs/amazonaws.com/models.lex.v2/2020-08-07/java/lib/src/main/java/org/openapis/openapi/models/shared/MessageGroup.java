@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MessageGroup {
     @JsonProperty("message")
     public Message message;
+
     public MessageGroup withMessage(Message message) {
         this.message = message;
         return this;
@@ -22,9 +23,13 @@ public class MessageGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variations")
     public Message[] variations;
+
     public MessageGroup withVariations(Message[] variations) {
         this.variations = variations;
         return this;
     }
     
+    public MessageGroup(@JsonProperty("message") Message message) {
+        this.message = message;
+  }
 }

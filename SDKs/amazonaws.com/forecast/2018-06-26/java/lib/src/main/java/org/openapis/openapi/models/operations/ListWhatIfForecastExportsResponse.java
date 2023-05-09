@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWhatIfForecastExportsResponse {
     
     public String contentType;
+
     public ListWhatIfForecastExportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWhatIfForecastExportsResponse {
      */
     
     public Object invalidInputException;
+
     public ListWhatIfForecastExportsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListWhatIfForecastExportsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListWhatIfForecastExportsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListWhatIfForecastExportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWhatIfForecastExportsResponse listWhatIfForecastExportsResponse;
+
     public ListWhatIfForecastExportsResponse withListWhatIfForecastExportsResponse(org.openapis.openapi.models.shared.ListWhatIfForecastExportsResponse listWhatIfForecastExportsResponse) {
         this.listWhatIfForecastExportsResponse = listWhatIfForecastExportsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListWhatIfForecastExportsResponse {
     
     
     public Integer statusCode;
+
     public ListWhatIfForecastExportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListWhatIfForecastExportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWhatIfForecastExportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListWhatIfForecastExportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMappingValuesKeyRequest {
@@ -12,9 +13,13 @@ public class GetMappingValuesKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public GetMappingValuesKeyKeyEnum key;
+
     public GetMappingValuesKeyRequest withKey(GetMappingValuesKeyKeyEnum key) {
         this.key = key;
         return this;
     }
     
+    public GetMappingValuesKeyRequest(@JsonProperty("key") GetMappingValuesKeyKeyEnum key) {
+        this.key = key;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RefreshTrustedAdvisorCheckResponse {
     @JsonProperty("status")
     public TrustedAdvisorCheckRefreshStatus status;
+
     public RefreshTrustedAdvisorCheckResponse withStatus(TrustedAdvisorCheckRefreshStatus status) {
         this.status = status;
         return this;
     }
     
+    public RefreshTrustedAdvisorCheckResponse(@JsonProperty("status") TrustedAdvisorCheckRefreshStatus status) {
+        this.status = status;
+  }
 }

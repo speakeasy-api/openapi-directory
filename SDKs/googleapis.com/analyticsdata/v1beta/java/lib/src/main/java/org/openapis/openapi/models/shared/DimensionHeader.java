@@ -18,9 +18,11 @@ public class DimensionHeader {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DimensionHeader withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DimensionHeader(){}
 }

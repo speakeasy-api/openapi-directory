@@ -15,6 +15,7 @@ public class BatchUpdatePartitionFailureEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetail")
     public ErrorDetail errorDetail;
+
     public BatchUpdatePartitionFailureEntry withErrorDetail(ErrorDetail errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -23,9 +24,11 @@ public class BatchUpdatePartitionFailureEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionValueList")
     public String[] partitionValueList;
+
     public BatchUpdatePartitionFailureEntry withPartitionValueList(String[] partitionValueList) {
         this.partitionValueList = partitionValueList;
         return this;
     }
     
+    public BatchUpdatePartitionFailureEntry(){}
 }

@@ -15,6 +15,7 @@ public class ShrinkPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DecommissionTimeout")
     public Long decommissionTimeout;
+
     public ShrinkPolicy withDecommissionTimeout(Long decommissionTimeout) {
         this.decommissionTimeout = decommissionTimeout;
         return this;
@@ -23,9 +24,11 @@ public class ShrinkPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceResizePolicy")
     public InstanceResizePolicy instanceResizePolicy;
+
     public ShrinkPolicy withInstanceResizePolicy(InstanceResizePolicy instanceResizePolicy) {
         this.instanceResizePolicy = instanceResizePolicy;
         return this;
     }
     
+    public ShrinkPolicy(){}
 }

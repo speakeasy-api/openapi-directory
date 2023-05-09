@@ -15,6 +15,7 @@ public class PolicyAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public PolicyAttachment withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
@@ -23,6 +24,7 @@ public class PolicyAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public PolicyAttachment withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -31,9 +33,11 @@ public class PolicyAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public String policyType;
+
     public PolicyAttachment withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public PolicyAttachment(){}
 }

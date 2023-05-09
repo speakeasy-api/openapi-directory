@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainerServiceMetricDataResponse {
@@ -12,6 +13,7 @@ public class GetContainerServiceMetricDataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContainerServiceMetricDataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContainerServiceMetricDataResponse {
     
     
     public String contentType;
+
     public GetContainerServiceMetricDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContainerServiceMetricDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContainerServiceMetricDataResult getContainerServiceMetricDataResult;
+
     public GetContainerServiceMetricDataResponse withGetContainerServiceMetricDataResult(org.openapis.openapi.models.shared.GetContainerServiceMetricDataResult getContainerServiceMetricDataResult) {
         this.getContainerServiceMetricDataResult = getContainerServiceMetricDataResult;
         return this;
@@ -39,6 +43,7 @@ public class GetContainerServiceMetricDataResponse {
      */
     
     public Object invalidInputException;
+
     public GetContainerServiceMetricDataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetContainerServiceMetricDataResponse {
      */
     
     public Object notFoundException;
+
     public GetContainerServiceMetricDataResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetContainerServiceMetricDataResponse {
      */
     
     public Object serviceException;
+
     public GetContainerServiceMetricDataResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetContainerServiceMetricDataResponse {
     
     
     public Integer statusCode;
+
     public GetContainerServiceMetricDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetContainerServiceMetricDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainerServiceMetricDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetContainerServiceMetricDataResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetContainerServiceMetricDataResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetContainerServiceMetricDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

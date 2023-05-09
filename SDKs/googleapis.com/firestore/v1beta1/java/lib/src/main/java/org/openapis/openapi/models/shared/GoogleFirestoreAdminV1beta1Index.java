@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1beta1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionId")
     public String collectionId;
+
     public GoogleFirestoreAdminV1beta1Index withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirestoreAdminV1beta1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public GoogleFirestoreAdminV1beta1IndexField[] fields;
+
     public GoogleFirestoreAdminV1beta1Index withFields(GoogleFirestoreAdminV1beta1IndexField[] fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class GoogleFirestoreAdminV1beta1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirestoreAdminV1beta1Index withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleFirestoreAdminV1beta1Index {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleFirestoreAdminV1beta1IndexStateEnum state;
+
     public GoogleFirestoreAdminV1beta1Index withState(GoogleFirestoreAdminV1beta1IndexStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public GoogleFirestoreAdminV1beta1Index(){}
 }

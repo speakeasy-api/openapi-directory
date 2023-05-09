@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDashboardsResponse {
     @JsonProperty("dashboardSummaries")
     public DashboardSummary[] dashboardSummaries;
+
     public ListDashboardsResponse withDashboardSummaries(DashboardSummary[] dashboardSummaries) {
         this.dashboardSummaries = dashboardSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListDashboardsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDashboardsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDashboardsResponse(@JsonProperty("dashboardSummaries") DashboardSummary[] dashboardSummaries) {
+        this.dashboardSummaries = dashboardSummaries;
+  }
 }

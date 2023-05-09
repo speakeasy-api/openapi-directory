@@ -18,9 +18,11 @@ public class GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest(){}
 }

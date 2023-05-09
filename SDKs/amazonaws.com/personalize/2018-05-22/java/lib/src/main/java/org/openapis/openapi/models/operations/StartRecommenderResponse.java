@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartRecommenderResponse {
     
     public String contentType;
+
     public StartRecommenderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartRecommenderResponse {
      */
     
     public Object invalidInputException;
+
     public StartRecommenderResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class StartRecommenderResponse {
      */
     
     public Object resourceInUseException;
+
     public StartRecommenderResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class StartRecommenderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartRecommenderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartRecommenderResponse {
      */
     
     public org.openapis.openapi.models.shared.StartRecommenderResponse startRecommenderResponse;
+
     public StartRecommenderResponse withStartRecommenderResponse(org.openapis.openapi.models.shared.StartRecommenderResponse startRecommenderResponse) {
         this.startRecommenderResponse = startRecommenderResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartRecommenderResponse {
     
     
     public Integer statusCode;
+
     public StartRecommenderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class StartRecommenderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartRecommenderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartRecommenderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

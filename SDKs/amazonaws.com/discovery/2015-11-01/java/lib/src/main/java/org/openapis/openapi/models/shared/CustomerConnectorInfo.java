@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerConnectorInfo {
     @JsonProperty("activeConnectors")
     public Long activeConnectors;
+
     public CustomerConnectorInfo withActiveConnectors(Long activeConnectors) {
         this.activeConnectors = activeConnectors;
         return this;
@@ -19,6 +20,7 @@ public class CustomerConnectorInfo {
     
     @JsonProperty("blackListedConnectors")
     public Long blackListedConnectors;
+
     public CustomerConnectorInfo withBlackListedConnectors(Long blackListedConnectors) {
         this.blackListedConnectors = blackListedConnectors;
         return this;
@@ -26,6 +28,7 @@ public class CustomerConnectorInfo {
     
     @JsonProperty("healthyConnectors")
     public Long healthyConnectors;
+
     public CustomerConnectorInfo withHealthyConnectors(Long healthyConnectors) {
         this.healthyConnectors = healthyConnectors;
         return this;
@@ -33,6 +36,7 @@ public class CustomerConnectorInfo {
     
     @JsonProperty("shutdownConnectors")
     public Long shutdownConnectors;
+
     public CustomerConnectorInfo withShutdownConnectors(Long shutdownConnectors) {
         this.shutdownConnectors = shutdownConnectors;
         return this;
@@ -40,6 +44,7 @@ public class CustomerConnectorInfo {
     
     @JsonProperty("totalConnectors")
     public Long totalConnectors;
+
     public CustomerConnectorInfo withTotalConnectors(Long totalConnectors) {
         this.totalConnectors = totalConnectors;
         return this;
@@ -47,6 +52,7 @@ public class CustomerConnectorInfo {
     
     @JsonProperty("unhealthyConnectors")
     public Long unhealthyConnectors;
+
     public CustomerConnectorInfo withUnhealthyConnectors(Long unhealthyConnectors) {
         this.unhealthyConnectors = unhealthyConnectors;
         return this;
@@ -54,9 +60,19 @@ public class CustomerConnectorInfo {
     
     @JsonProperty("unknownConnectors")
     public Long unknownConnectors;
+
     public CustomerConnectorInfo withUnknownConnectors(Long unknownConnectors) {
         this.unknownConnectors = unknownConnectors;
         return this;
     }
     
+    public CustomerConnectorInfo(@JsonProperty("activeConnectors") Long activeConnectors, @JsonProperty("blackListedConnectors") Long blackListedConnectors, @JsonProperty("healthyConnectors") Long healthyConnectors, @JsonProperty("shutdownConnectors") Long shutdownConnectors, @JsonProperty("totalConnectors") Long totalConnectors, @JsonProperty("unhealthyConnectors") Long unhealthyConnectors, @JsonProperty("unknownConnectors") Long unknownConnectors) {
+        this.activeConnectors = activeConnectors;
+        this.blackListedConnectors = blackListedConnectors;
+        this.healthyConnectors = healthyConnectors;
+        this.shutdownConnectors = shutdownConnectors;
+        this.totalConnectors = totalConnectors;
+        this.unhealthyConnectors = unhealthyConnectors;
+        this.unknownConnectors = unknownConnectors;
+  }
 }

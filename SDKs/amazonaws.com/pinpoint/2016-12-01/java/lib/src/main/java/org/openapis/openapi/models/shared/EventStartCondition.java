@@ -18,6 +18,7 @@ public class EventStartCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventFilter")
     public EventFilter eventFilter;
+
     public EventStartCondition withEventFilter(EventFilter eventFilter) {
         this.eventFilter = eventFilter;
         return this;
@@ -26,9 +27,11 @@ public class EventStartCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentId")
     public String segmentId;
+
     public EventStartCondition withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public EventStartCondition(){}
 }

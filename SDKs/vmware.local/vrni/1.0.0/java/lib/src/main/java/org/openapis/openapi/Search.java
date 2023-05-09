@@ -61,12 +61,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchEntitiesResponse res = new org.openapis.openapi.models.operations.SearchEntitiesResponse() {{
+        org.openapis.openapi.models.operations.SearchEntitiesResponse res = new org.openapis.openapi.models.operations.SearchEntitiesResponse(contentType, httpRes.statusCode()) {{
             pagedListResponseWithTime = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

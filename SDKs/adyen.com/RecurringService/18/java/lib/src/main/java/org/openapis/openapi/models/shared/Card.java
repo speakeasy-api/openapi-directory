@@ -12,6 +12,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAddress")
     public Address billingAddress;
+
     public Card withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -28,6 +29,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvc")
     public String cvc;
+
     public Card withCvc(String cvc) {
         this.cvc = cvc;
         return this;
@@ -41,6 +43,7 @@ public class Card {
      */
     @JsonProperty("expiryMonth")
     public String expiryMonth;
+
     public Card withExpiryMonth(String expiryMonth) {
         this.expiryMonth = expiryMonth;
         return this;
@@ -52,6 +55,7 @@ public class Card {
      */
     @JsonProperty("expiryYear")
     public String expiryYear;
+
     public Card withExpiryYear(String expiryYear) {
         this.expiryYear = expiryYear;
         return this;
@@ -62,6 +66,7 @@ public class Card {
      */
     @JsonProperty("holderName")
     public String holderName;
+
     public Card withHolderName(String holderName) {
         this.holderName = holderName;
         return this;
@@ -73,6 +78,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issueNumber")
     public String issueNumber;
+
     public Card withIssueNumber(String issueNumber) {
         this.issueNumber = issueNumber;
         return this;
@@ -84,6 +90,7 @@ public class Card {
      */
     @JsonProperty("number")
     public String number;
+
     public Card withNumber(String number) {
         this.number = number;
         return this;
@@ -95,6 +102,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMonth")
     public String startMonth;
+
     public Card withStartMonth(String startMonth) {
         this.startMonth = startMonth;
         return this;
@@ -106,9 +114,16 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startYear")
     public String startYear;
+
     public Card withStartYear(String startYear) {
         this.startYear = startYear;
         return this;
     }
     
+    public Card(@JsonProperty("expiryMonth") String expiryMonth, @JsonProperty("expiryYear") String expiryYear, @JsonProperty("holderName") String holderName, @JsonProperty("number") String number) {
+        this.expiryMonth = expiryMonth;
+        this.expiryYear = expiryYear;
+        this.holderName = holderName;
+        this.number = number;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JobGetResponse {
@@ -12,6 +13,7 @@ public class JobGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchError batchError;
+
     public JobGetResponse withBatchError(org.openapis.openapi.models.shared.BatchError batchError) {
         this.batchError = batchError;
         return this;
@@ -19,6 +21,7 @@ public class JobGetResponse {
     
     
     public org.openapis.openapi.models.shared.CloudJob cloudJob;
+
     public JobGetResponse withCloudJob(org.openapis.openapi.models.shared.CloudJob cloudJob) {
         this.cloudJob = cloudJob;
         return this;
@@ -26,6 +29,7 @@ public class JobGetResponse {
     
     
     public String contentType;
+
     public JobGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class JobGetResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public JobGetResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class JobGetResponse {
     
     
     public Integer statusCode;
+
     public JobGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class JobGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JobGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JobGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

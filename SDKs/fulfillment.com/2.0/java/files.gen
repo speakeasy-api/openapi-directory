@@ -175,6 +175,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetTrackTrackingRespons
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackTrackingResponseTrackingNumberV2.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackTrackingResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetUsersMeSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUsersMeUserContactV2UserContactV2Merchant.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUsersMeUserContactV2UserContactV2.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUsersMeUserContactV2Merchant.java
@@ -210,4 +211,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/OnetrackGetResponses200Cont
 lib/src/main/java/org/openapis/openapi/models/shared/OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin.java
 lib/src/main/java/org/openapis/openapi/models/shared/OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry.java
+docs/sdk/README.md
+docs/accounting/README.md
+docs/auth/README.md
+docs/inventory/README.md
+docs/orders/README.md
+docs/partners/README.md
+docs/returns/README.md
+docs/tracking/README.md
+docs/users/README.md
 USAGE.md

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBuildBatchesForProjectResponse {
     
     public String contentType;
+
     public ListBuildBatchesForProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBuildBatchesForProjectResponse {
      */
     
     public Object invalidInputException;
+
     public ListBuildBatchesForProjectResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class ListBuildBatchesForProjectResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBuildBatchesForProjectOutput listBuildBatchesForProjectOutput;
+
     public ListBuildBatchesForProjectResponse withListBuildBatchesForProjectOutput(org.openapis.openapi.models.shared.ListBuildBatchesForProjectOutput listBuildBatchesForProjectOutput) {
         this.listBuildBatchesForProjectOutput = listBuildBatchesForProjectOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListBuildBatchesForProjectResponse {
     
     
     public Integer statusCode;
+
     public ListBuildBatchesForProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListBuildBatchesForProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBuildBatchesForProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListBuildBatchesForProjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListBuildBatchesForProjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListBuildBatchesForProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

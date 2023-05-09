@@ -39,4 +39,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DeliveredEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/shared/SecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/smsconversion/README.md
+docs/voiceconversion/README.md
 USAGE.md

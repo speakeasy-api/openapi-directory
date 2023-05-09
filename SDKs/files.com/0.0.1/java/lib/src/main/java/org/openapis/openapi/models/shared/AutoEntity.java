@@ -12,9 +12,11 @@ public class AutoEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamic")
     public java.util.Map<String, Object> dynamic;
+
     public AutoEntity withDynamic(java.util.Map<String, Object> dynamic) {
         this.dynamic = dynamic;
         return this;
     }
     
+    public AutoEntity(){}
 }

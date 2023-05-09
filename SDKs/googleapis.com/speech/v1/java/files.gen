@@ -70,13 +70,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/CustomClassInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/CustomClass.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClassItem.java
-lib/src/main/java/org/openapis/openapi/models/shared/CreateCustomClassRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreateCustomClassRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListCustomClassesResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/PhraseSetInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/PhraseSet.java
 lib/src/main/java/org/openapis/openapi/models/shared/Phrase.java
-lib/src/main/java/org/openapis/openapi/models/shared/CreatePhraseSetRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/CreatePhraseSetRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListPhraseSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LongRunningRecognizeRequestInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranscriptOutputConfig.java
@@ -89,7 +91,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/RecognitionMetadataOriginal
 lib/src/main/java/org/openapis/openapi/models/shared/RecognitionMetadataRecordingDeviceTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecognitionMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/SpeakerDiarizationConfigInput.java
-lib/src/main/java/org/openapis/openapi/models/shared/SpeechAdaptation.java
+lib/src/main/java/org/openapis/openapi/models/shared/SpeechAdaptationInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ABNFGrammar.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecognitionAudio.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecognizeResponse.java
@@ -98,4 +100,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/SpeechRecognitionResult.jav
 lib/src/main/java/org/openapis/openapi/models/shared/SpeechRecognitionAlternative.java
 lib/src/main/java/org/openapis/openapi/models/shared/WordInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecognizeRequestInput.java
+docs/sdk/README.md
+docs/operations/README.md
+docs/projects/README.md
+docs/speech/README.md
 USAGE.md

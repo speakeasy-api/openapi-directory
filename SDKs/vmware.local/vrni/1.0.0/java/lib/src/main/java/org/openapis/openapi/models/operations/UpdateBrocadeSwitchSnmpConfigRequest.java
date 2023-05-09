@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBrocadeSwitchSnmpConfigRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SNMPConfig snmpConfig;
+
     public UpdateBrocadeSwitchSnmpConfigRequest withSNMPConfig(org.openapis.openapi.models.shared.SNMPConfig snmpConfig) {
         this.snmpConfig = snmpConfig;
         return this;
@@ -19,9 +21,13 @@ public class UpdateBrocadeSwitchSnmpConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateBrocadeSwitchSnmpConfigRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateBrocadeSwitchSnmpConfigRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

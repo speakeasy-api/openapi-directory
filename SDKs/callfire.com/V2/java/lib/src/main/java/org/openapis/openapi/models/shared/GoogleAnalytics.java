@@ -18,6 +18,7 @@ public class GoogleAnalytics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public GoogleAnalytics withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalytics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public GoogleAnalytics withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalytics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAccountId")
     public String googleAccountId;
+
     public GoogleAnalytics withGoogleAccountId(String googleAccountId) {
         this.googleAccountId = googleAccountId;
         return this;
     }
     
+    public GoogleAnalytics(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidVerificationProof")
     public String androidVerificationProof;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo withAndroidVerificationProof(String androidVerificationProof) {
         this.androidVerificationProof = androidVerificationProof;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo withCode(String code) {
         this.code = code;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInfo")
     public String sessionInfo;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo withSessionInfo(String sessionInfo) {
         this.sessionInfo = sessionInfo;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo(){}
 }

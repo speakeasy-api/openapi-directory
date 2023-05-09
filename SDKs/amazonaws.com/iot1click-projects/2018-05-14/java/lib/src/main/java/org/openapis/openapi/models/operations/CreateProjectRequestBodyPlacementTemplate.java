@@ -15,6 +15,7 @@ public class CreateProjectRequestBodyPlacementTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAttributes")
     public java.util.Map<String, String> defaultAttributes;
+
     public CreateProjectRequestBodyPlacementTemplate withDefaultAttributes(java.util.Map<String, String> defaultAttributes) {
         this.defaultAttributes = defaultAttributes;
         return this;
@@ -23,9 +24,11 @@ public class CreateProjectRequestBodyPlacementTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceTemplates")
     public java.util.Map<String, org.openapis.openapi.models.shared.DeviceTemplate> deviceTemplates;
+
     public CreateProjectRequestBodyPlacementTemplate withDeviceTemplates(java.util.Map<String, org.openapis.openapi.models.shared.DeviceTemplate> deviceTemplates) {
         this.deviceTemplates = deviceTemplates;
         return this;
     }
     
+    public CreateProjectRequestBodyPlacementTemplate(){}
 }

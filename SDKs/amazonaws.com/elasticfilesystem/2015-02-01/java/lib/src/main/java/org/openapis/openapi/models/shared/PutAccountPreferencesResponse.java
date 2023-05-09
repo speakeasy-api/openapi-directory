@@ -18,9 +18,11 @@ public class PutAccountPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdPreference")
     public ResourceIdPreference resourceIdPreference;
+
     public PutAccountPreferencesResponse withResourceIdPreference(ResourceIdPreference resourceIdPreference) {
         this.resourceIdPreference = resourceIdPreference;
         return this;
     }
     
+    public PutAccountPreferencesResponse(){}
 }

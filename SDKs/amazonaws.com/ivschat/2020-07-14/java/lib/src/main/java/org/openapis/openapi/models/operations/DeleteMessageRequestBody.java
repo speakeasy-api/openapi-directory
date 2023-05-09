@@ -14,6 +14,7 @@ public class DeleteMessageRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public DeleteMessageRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class DeleteMessageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public DeleteMessageRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
@@ -35,9 +37,14 @@ public class DeleteMessageRequestBody {
      */
     @JsonProperty("roomIdentifier")
     public String roomIdentifier;
+
     public DeleteMessageRequestBody withRoomIdentifier(String roomIdentifier) {
         this.roomIdentifier = roomIdentifier;
         return this;
     }
     
+    public DeleteMessageRequestBody(@JsonProperty("id") String id, @JsonProperty("roomIdentifier") String roomIdentifier) {
+        this.id = id;
+        this.roomIdentifier = roomIdentifier;
+  }
 }

@@ -15,6 +15,7 @@ public class ExclusionPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public ExclusionPreview withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class ExclusionPreview {
     
     @JsonProperty("description")
     public String description;
+
     public ExclusionPreview withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class ExclusionPreview {
     
     @JsonProperty("recommendation")
     public String recommendation;
+
     public ExclusionPreview withRecommendation(String recommendation) {
         this.recommendation = recommendation;
         return this;
@@ -36,6 +39,7 @@ public class ExclusionPreview {
     
     @JsonProperty("scopes")
     public Scope[] scopes;
+
     public ExclusionPreview withScopes(Scope[] scopes) {
         this.scopes = scopes;
         return this;
@@ -43,9 +47,16 @@ public class ExclusionPreview {
     
     @JsonProperty("title")
     public String title;
+
     public ExclusionPreview withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ExclusionPreview(@JsonProperty("description") String description, @JsonProperty("recommendation") String recommendation, @JsonProperty("scopes") Scope[] scopes, @JsonProperty("title") String title) {
+        this.description = description;
+        this.recommendation = recommendation;
+        this.scopes = scopes;
+        this.title = title;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTagsResultTags {
     
     public String key;
+
     public DescribeTagsResultTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTagsResultTags {
     
     
     public String resourceId;
+
     public DescribeTagsResultTags withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTagsResultTags {
     
     
     public DescribeTagsResultTagsResourceTypeEnum resourceType;
+
     public DescribeTagsResultTags withResourceType(DescribeTagsResultTagsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -33,9 +36,11 @@ public class DescribeTagsResultTags {
     
     
     public String value;
+
     public DescribeTagsResultTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeTagsResultTags(){}
 }

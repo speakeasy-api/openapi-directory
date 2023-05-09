@@ -15,6 +15,7 @@ public class FourHundredAndOneUNAUTHORIZED {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FourHundredAndOneUNAUTHORIZEDCodeEnum code;
+
     public FourHundredAndOneUNAUTHORIZED withCode(FourHundredAndOneUNAUTHORIZEDCodeEnum code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class FourHundredAndOneUNAUTHORIZED {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public FourHundredAndOneUNAUTHORIZEDMessageEnum message;
+
     public FourHundredAndOneUNAUTHORIZED withMessage(FourHundredAndOneUNAUTHORIZEDMessageEnum message) {
         this.message = message;
         return this;
@@ -37,6 +39,7 @@ public class FourHundredAndOneUNAUTHORIZED {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public FourHundredAndOneUNAUTHORIZED withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -48,9 +51,11 @@ public class FourHundredAndOneUNAUTHORIZED {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public FourHundredAndOneUNAUTHORIZED withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public FourHundredAndOneUNAUTHORIZED(){}
 }

@@ -18,6 +18,7 @@ public class TestNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessages")
     public String[] errorMessages;
+
     public TestNotificationConfigurationResponse withErrorMessages(String[] errorMessages) {
         this.errorMessages = errorMessages;
         return this;
@@ -30,6 +31,7 @@ public class TestNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTypes")
     public TestNotificationConfigurationResponseEventTypesEnum[] eventTypes;
+
     public TestNotificationConfigurationResponse withEventTypes(TestNotificationConfigurationResponseEventTypesEnum[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -40,8 +42,9 @@ public class TestNotificationConfigurationResponse {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeMessages")
-    public ExchangeMessage[] exchangeMessages;
-    public TestNotificationConfigurationResponse withExchangeMessages(ExchangeMessage[] exchangeMessages) {
+    public ExchangeMessageWrapper[] exchangeMessages;
+
+    public TestNotificationConfigurationResponse withExchangeMessages(ExchangeMessageWrapper[] exchangeMessages) {
         this.exchangeMessages = exchangeMessages;
         return this;
     }
@@ -51,6 +54,7 @@ public class TestNotificationConfigurationResponse {
      */
     @JsonProperty("notificationId")
     public Long notificationId;
+
     public TestNotificationConfigurationResponse withNotificationId(Long notificationId) {
         this.notificationId = notificationId;
         return this;
@@ -62,6 +66,7 @@ public class TestNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("okMessages")
     public String[] okMessages;
+
     public TestNotificationConfigurationResponse withOkMessages(String[] okMessages) {
         this.okMessages = okMessages;
         return this;
@@ -73,6 +78,7 @@ public class TestNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public TestNotificationConfigurationResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -84,6 +90,7 @@ public class TestNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public TestNotificationConfigurationResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -97,9 +104,13 @@ public class TestNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedAsync")
     public Boolean submittedAsync;
+
     public TestNotificationConfigurationResponse withSubmittedAsync(Boolean submittedAsync) {
         this.submittedAsync = submittedAsync;
         return this;
     }
     
+    public TestNotificationConfigurationResponse(@JsonProperty("notificationId") Long notificationId) {
+        this.notificationId = notificationId;
+  }
 }

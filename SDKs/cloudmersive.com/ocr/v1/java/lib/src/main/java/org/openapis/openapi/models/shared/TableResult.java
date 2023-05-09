@@ -18,6 +18,7 @@ public class TableResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableDefinition")
     public FormTableDefinition tableDefinition;
+
     public TableResult withTableDefinition(FormTableDefinition tableDefinition) {
         this.tableDefinition = tableDefinition;
         return this;
@@ -29,9 +30,11 @@ public class TableResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableRowsResult")
     public TableRowResult[] tableRowsResult;
+
     public TableResult withTableRowsResult(TableRowResult[] tableRowsResult) {
         this.tableRowsResult = tableRowsResult;
         return this;
     }
     
+    public TableResult(){}
 }

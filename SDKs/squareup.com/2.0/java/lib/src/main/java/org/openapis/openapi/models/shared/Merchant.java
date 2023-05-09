@@ -18,6 +18,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_name")
     public String businessName;
+
     public Merchant withBusinessName(String businessName) {
         this.businessName = businessName;
         return this;
@@ -28,6 +29,7 @@ public class Merchant {
      */
     @JsonProperty("country")
     public String country;
+
     public Merchant withCountry(String country) {
         this.country = country;
         return this;
@@ -39,6 +41,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public Merchant withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -50,6 +53,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Merchant withId(String id) {
         this.id = id;
         return this;
@@ -61,6 +65,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_code")
     public String languageCode;
+
     public Merchant withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -72,6 +77,7 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("main_location_id")
     public String mainLocationId;
+
     public Merchant withMainLocationId(String mainLocationId) {
         this.mainLocationId = mainLocationId;
         return this;
@@ -83,9 +89,13 @@ public class Merchant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Merchant withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Merchant(@JsonProperty("country") String country) {
+        this.country = country;
+  }
 }

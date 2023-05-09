@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJourneyExecutionMetricsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetJourneyExecutionMetricsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetJourneyExecutionMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetJourneyExecutionMetricsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetJourneyExecutionMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetJourneyExecutionMetricsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetJourneyExecutionMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetJourneyExecutionMetricsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetJourneyExecutionMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetJourneyExecutionMetricsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetJourneyExecutionMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetJourneyExecutionMetricsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetJourneyExecutionMetricsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetJourneyExecutionMetricsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetJourneyExecutionMetricsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
     public String applicationId;
+
     public GetJourneyExecutionMetricsRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -71,16 +80,18 @@ public class GetJourneyExecutionMetricsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=journey-id")
     public String journeyId;
+
     public GetJourneyExecutionMetricsRequest withJourneyId(String journeyId) {
         this.journeyId = journeyId;
         return this;
     }
     
     /**
-     * The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     * The &lt;code/&gt; string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
     public String nextToken;
+
     public GetJourneyExecutionMetricsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -91,9 +102,14 @@ public class GetJourneyExecutionMetricsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
     public String pageSize;
+
     public GetJourneyExecutionMetricsRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetJourneyExecutionMetricsRequest(@JsonProperty("application-id") String applicationId, @JsonProperty("journey-id") String journeyId) {
+        this.applicationId = applicationId;
+        this.journeyId = journeyId;
+  }
 }

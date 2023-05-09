@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TemplateSummary {
     @JsonProperty("name")
     public String name;
+
     public TemplateSummary withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class TemplateSummary {
     
     @JsonProperty("status")
     public TemplateStatusEnum status;
+
     public TemplateSummary withStatus(TemplateStatusEnum status) {
         this.status = status;
         return this;
@@ -26,6 +28,7 @@ public class TemplateSummary {
     
     @JsonProperty("templateArn")
     public String templateArn;
+
     public TemplateSummary withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -33,9 +36,16 @@ public class TemplateSummary {
     
     @JsonProperty("templateId")
     public String templateId;
+
     public TemplateSummary withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public TemplateSummary(@JsonProperty("name") String name, @JsonProperty("status") TemplateStatusEnum status, @JsonProperty("templateArn") String templateArn, @JsonProperty("templateId") String templateId) {
+        this.name = name;
+        this.status = status;
+        this.templateArn = templateArn;
+        this.templateId = templateId;
+  }
 }

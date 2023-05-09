@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExtensionCtrlGetAccountExtensionByIDResponse {
     
     public String contentType;
+
     public ExtensionCtrlGetAccountExtensionByIDResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ExtensionCtrlGetAccountExtensionByIDResponse {
      */
     
     public org.openapis.openapi.models.shared.EndUserRouteHalResponse endUserRouteHalResponse;
+
     public ExtensionCtrlGetAccountExtensionByIDResponse withEndUserRouteHalResponse(org.openapis.openapi.models.shared.EndUserRouteHalResponse endUserRouteHalResponse) {
         this.endUserRouteHalResponse = endUserRouteHalResponse;
         return this;
@@ -29,6 +32,7 @@ public class ExtensionCtrlGetAccountExtensionByIDResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public ExtensionCtrlGetAccountExtensionByIDResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class ExtensionCtrlGetAccountExtensionByIDResponse {
     
     
     public Integer statusCode;
+
     public ExtensionCtrlGetAccountExtensionByIDResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ExtensionCtrlGetAccountExtensionByIDResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExtensionCtrlGetAccountExtensionByIDResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ExtensionCtrlGetAccountExtensionByIDResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

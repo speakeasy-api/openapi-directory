@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSubscriberRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public CreateSubscriberRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class CreateSubscriberRequest {
     
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public CreateSubscriberRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -26,6 +28,7 @@ public class CreateSubscriberRequest {
     
     @JsonProperty("Notification")
     public Notification notification;
+
     public CreateSubscriberRequest withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -33,9 +36,16 @@ public class CreateSubscriberRequest {
     
     @JsonProperty("Subscriber")
     public Subscriber subscriber;
+
     public CreateSubscriberRequest withSubscriber(Subscriber subscriber) {
         this.subscriber = subscriber;
         return this;
     }
     
+    public CreateSubscriberRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("BudgetName") String budgetName, @JsonProperty("Notification") Notification notification, @JsonProperty("Subscriber") Subscriber subscriber) {
+        this.accountId = accountId;
+        this.budgetName = budgetName;
+        this.notification = notification;
+        this.subscriber = subscriber;
+  }
 }

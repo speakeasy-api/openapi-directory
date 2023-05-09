@@ -15,6 +15,7 @@ public class DescribeFleetAdvisorLsaAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Analysis")
     public FleetAdvisorLsaAnalysisResponse[] analysis;
+
     public DescribeFleetAdvisorLsaAnalysisResponse withAnalysis(FleetAdvisorLsaAnalysisResponse[] analysis) {
         this.analysis = analysis;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFleetAdvisorLsaAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetAdvisorLsaAnalysisResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetAdvisorLsaAnalysisResponse(){}
 }

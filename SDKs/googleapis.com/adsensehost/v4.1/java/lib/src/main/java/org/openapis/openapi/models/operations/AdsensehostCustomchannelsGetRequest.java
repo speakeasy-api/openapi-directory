@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostCustomchannelsGetRequest {
@@ -12,6 +13,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
     public String adClientId;
+
     public AdsensehostCustomchannelsGetRequest withAdClientId(String adClientId) {
         this.adClientId = adClientId;
         return this;
@@ -22,6 +24,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AdsensehostCustomchannelsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customChannelId")
     public String customChannelId;
+
     public AdsensehostCustomchannelsGetRequest withCustomChannelId(String customChannelId) {
         this.customChannelId = customChannelId;
         return this;
@@ -42,6 +46,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AdsensehostCustomchannelsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AdsensehostCustomchannelsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AdsensehostCustomchannelsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AdsensehostCustomchannelsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AdsensehostCustomchannelsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +101,14 @@ public class AdsensehostCustomchannelsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AdsensehostCustomchannelsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AdsensehostCustomchannelsGetRequest(@JsonProperty("adClientId") String adClientId, @JsonProperty("customChannelId") String customChannelId) {
+        this.adClientId = adClientId;
+        this.customChannelId = customChannelId;
+  }
 }

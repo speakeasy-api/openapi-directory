@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainersFloatingIpsResponse {
     
     public String contentType;
+
     public GetContainersFloatingIpsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetContainersFloatingIpsResponse {
      */
     
     public org.openapis.openapi.models.shared.FloatingIP[] floatingIPS;
+
     public GetContainersFloatingIpsResponse withFloatingIPS(org.openapis.openapi.models.shared.FloatingIP[] floatingIPS) {
         this.floatingIPS = floatingIPS;
         return this;
@@ -26,6 +29,7 @@ public class GetContainersFloatingIpsResponse {
     
     
     public Integer statusCode;
+
     public GetContainersFloatingIpsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetContainersFloatingIpsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainersFloatingIpsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetContainersFloatingIpsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

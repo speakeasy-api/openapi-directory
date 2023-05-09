@@ -12,9 +12,11 @@ public class GetAppReplicationConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public GetAppReplicationConfigurationRequest withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public GetAppReplicationConfigurationRequest(){}
 }

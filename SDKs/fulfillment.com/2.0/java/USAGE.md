@@ -3,11 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetAccountingSecurity;
 import org.openapis.openapi.models.operations.GetAccountingHydrateEnum;
 import org.openapis.openapi.models.operations.GetAccountingRequest;
 import org.openapis.openapi.models.operations.GetAccountingResponse;
+import org.openapis.openapi.models.operations.GetAccountingSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,38 +14,36 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetAccountingRequest req = new GetAccountingRequest() {{
-                fromDate = "corrupti";
-                hydrate = new org.openapis.openapi.models.operations.GetAccountingHydrateEnum[]{{
-                    add("items"),
-                    add("items"),
-                    add("items"),
-                }};
-                limit = 715190;
+            GetAccountingRequest req = new GetAccountingRequest("corrupti",                 new org.openapis.openapi.models.operations.GetAccountingHydrateEnum[]{{
+                                add(GetAccountingHydrateEnum.ITEMS),
+                                add(GetAccountingHydrateEnum.ITEMS),
+                                add(GetAccountingHydrateEnum.ITEMS),
+                            }}, "distinctio") {{
+                limit = 844266L;
                 orderIds = new Long[]{{
-                    add(602763),
-                    add(857946),
-                    add(544883),
-                    add(847252),
+                    add(857946L),
+                    add(544883L),
+                    add(847252L),
                 }};
-                page = 423655;
-                toDate = "error";
+                page = 423655L;
                 warehouseIds = new Long[]{{
-                    add(384382),
-                    add(437587),
-                    add(297534),
+                    add(645894L),
+                    add(384382L),
+                    add(437587L),
                 }};
-            }}            
+            }};            
 
-            GetAccountingResponse res = sdk.accounting.getAccounting(req, new GetAccountingSecurity() {{
+            GetAccountingResponse res = sdk.accounting.getAccounting(req, new GetAccountingSecurity("magnam") {{
                 fdcAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.accountingArrayV2.isPresent()) {
+            if (res.accountingArrayV2 != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

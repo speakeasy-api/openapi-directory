@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseGithubSsl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cert")
     public String cert;
+
     public EnterpriseSettingsEnterpriseGithubSsl withCert(String cert) {
         this.cert = cert;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseGithubSsl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnterpriseSettingsEnterpriseGithubSsl withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,9 +30,11 @@ public class EnterpriseSettingsEnterpriseGithubSsl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public EnterpriseSettingsEnterpriseGithubSsl withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseGithubSsl(){}
 }

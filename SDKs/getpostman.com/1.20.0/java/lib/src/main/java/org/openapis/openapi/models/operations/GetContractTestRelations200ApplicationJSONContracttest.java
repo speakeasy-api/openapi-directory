@@ -12,6 +12,7 @@ public class GetContractTestRelations200ApplicationJSONContracttest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionId")
     public String collectionId;
+
     public GetContractTestRelations200ApplicationJSONContracttest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -20,6 +21,7 @@ public class GetContractTestRelations200ApplicationJSONContracttest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetContractTestRelations200ApplicationJSONContracttest withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class GetContractTestRelations200ApplicationJSONContracttest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetContractTestRelations200ApplicationJSONContracttest withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class GetContractTestRelations200ApplicationJSONContracttest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public GetContractTestRelations200ApplicationJSONContracttest withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetContractTestRelations200ApplicationJSONContracttest(){}
 }

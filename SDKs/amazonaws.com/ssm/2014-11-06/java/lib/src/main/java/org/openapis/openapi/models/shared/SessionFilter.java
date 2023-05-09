@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SessionFilter {
     @JsonProperty("key")
     public SessionFilterKeyEnum key;
+
     public SessionFilter withKey(SessionFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class SessionFilter {
     
     @JsonProperty("value")
     public String value;
+
     public SessionFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SessionFilter(@JsonProperty("key") SessionFilterKeyEnum key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

@@ -15,9 +15,11 @@ public class ControllersPackageDetailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ControllersPackageDetailItem data;
+
     public ControllersPackageDetailResponse withData(ControllersPackageDetailItem data) {
         this.data = data;
         return this;
     }
     
+    public ControllersPackageDetailResponse(){}
 }

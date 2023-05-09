@@ -12,6 +12,7 @@ public class GetCommentsForPullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterCommitId")
     public String afterCommitId;
+
     public GetCommentsForPullRequestInput withAfterCommitId(String afterCommitId) {
         this.afterCommitId = afterCommitId;
         return this;
@@ -20,6 +21,7 @@ public class GetCommentsForPullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeCommitId")
     public String beforeCommitId;
+
     public GetCommentsForPullRequestInput withBeforeCommitId(String beforeCommitId) {
         this.beforeCommitId = beforeCommitId;
         return this;
@@ -28,6 +30,7 @@ public class GetCommentsForPullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetCommentsForPullRequestInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetCommentsForPullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCommentsForPullRequestInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,6 +47,7 @@ public class GetCommentsForPullRequestInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public GetCommentsForPullRequestInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -51,9 +56,13 @@ public class GetCommentsForPullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetCommentsForPullRequestInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetCommentsForPullRequestInput(@JsonProperty("pullRequestId") String pullRequestId) {
+        this.pullRequestId = pullRequestId;
+  }
 }

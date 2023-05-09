@@ -15,6 +15,7 @@ public class InclusionProtectionFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProtectionNames")
     public String[] protectionNames;
+
     public InclusionProtectionFilters withProtectionNames(String[] protectionNames) {
         this.protectionNames = protectionNames;
         return this;
@@ -23,6 +24,7 @@ public class InclusionProtectionFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArns")
     public String[] resourceArns;
+
     public InclusionProtectionFilters withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
@@ -31,9 +33,11 @@ public class InclusionProtectionFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public ProtectedResourceTypeEnum[] resourceTypes;
+
     public InclusionProtectionFilters withResourceTypes(ProtectedResourceTypeEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public InclusionProtectionFilters(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Config {
     @JsonProperty("BucketAccessRoleArn")
     public String bucketAccessRoleArn;
+
     public S3Config withBucketAccessRoleArn(String bucketAccessRoleArn) {
         this.bucketAccessRoleArn = bucketAccessRoleArn;
         return this;
     }
     
+    public S3Config(@JsonProperty("BucketAccessRoleArn") String bucketAccessRoleArn) {
+        this.bucketAccessRoleArn = bucketAccessRoleArn;
+  }
 }

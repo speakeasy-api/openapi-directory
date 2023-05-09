@@ -18,6 +18,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customErrorResponsePolicy")
     public CustomErrorResponsePolicy customErrorResponsePolicy;
+
     public HttpRouteRule withCustomErrorResponsePolicy(CustomErrorResponsePolicy customErrorResponsePolicy) {
         this.customErrorResponsePolicy = customErrorResponsePolicy;
         return this;
@@ -29,6 +30,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HttpRouteRule withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerAction")
     public HttpHeaderAction headerAction;
+
     public HttpRouteRule withHeaderAction(HttpHeaderAction headerAction) {
         this.headerAction = headerAction;
         return this;
@@ -51,6 +54,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpFilterConfigs")
     public HttpFilterConfig[] httpFilterConfigs;
+
     public HttpRouteRule withHttpFilterConfigs(HttpFilterConfig[] httpFilterConfigs) {
         this.httpFilterConfigs = httpFilterConfigs;
         return this;
@@ -62,6 +66,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpFilterMetadata")
     public HttpFilterConfig[] httpFilterMetadata;
+
     public HttpRouteRule withHttpFilterMetadata(HttpFilterConfig[] httpFilterMetadata) {
         this.httpFilterMetadata = httpFilterMetadata;
         return this;
@@ -73,6 +78,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchRules")
     public HttpRouteRuleMatch[] matchRules;
+
     public HttpRouteRule withMatchRules(HttpRouteRuleMatch[] matchRules) {
         this.matchRules = matchRules;
         return this;
@@ -84,6 +90,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public HttpRouteRule withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -92,6 +99,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeAction")
     public HttpRouteAction routeAction;
+
     public HttpRouteRule withRouteAction(HttpRouteAction routeAction) {
         this.routeAction = routeAction;
         return this;
@@ -103,6 +111,7 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public HttpRouteRule withService(String service) {
         this.service = service;
         return this;
@@ -114,9 +123,11 @@ public class HttpRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRedirect")
     public HttpRedirectAction urlRedirect;
+
     public HttpRouteRule withUrlRedirect(HttpRedirectAction urlRedirect) {
         this.urlRedirect = urlRedirect;
         return this;
     }
     
+    public HttpRouteRule(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateTagOptionWithResourceResponse {
@@ -12,6 +13,7 @@ public class AssociateTagOptionWithResourceResponse {
      */
     
     public java.util.Map<String, Object> associateTagOptionWithResourceOutput;
+
     public AssociateTagOptionWithResourceResponse withAssociateTagOptionWithResourceOutput(java.util.Map<String, Object> associateTagOptionWithResourceOutput) {
         this.associateTagOptionWithResourceOutput = associateTagOptionWithResourceOutput;
         return this;
@@ -19,6 +21,7 @@ public class AssociateTagOptionWithResourceResponse {
     
     
     public String contentType;
+
     public AssociateTagOptionWithResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateTagOptionWithResourceResponse {
      */
     
     public Object duplicateResourceException;
+
     public AssociateTagOptionWithResourceResponse withDuplicateResourceException(Object duplicateResourceException) {
         this.duplicateResourceException = duplicateResourceException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateTagOptionWithResourceResponse {
      */
     
     public Object invalidParametersException;
+
     public AssociateTagOptionWithResourceResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateTagOptionWithResourceResponse {
      */
     
     public Object invalidStateException;
+
     public AssociateTagOptionWithResourceResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateTagOptionWithResourceResponse {
      */
     
     public Object limitExceededException;
+
     public AssociateTagOptionWithResourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateTagOptionWithResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateTagOptionWithResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateTagOptionWithResourceResponse {
     
     
     public Integer statusCode;
+
     public AssociateTagOptionWithResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AssociateTagOptionWithResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateTagOptionWithResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class AssociateTagOptionWithResourceResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public AssociateTagOptionWithResourceResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public AssociateTagOptionWithResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

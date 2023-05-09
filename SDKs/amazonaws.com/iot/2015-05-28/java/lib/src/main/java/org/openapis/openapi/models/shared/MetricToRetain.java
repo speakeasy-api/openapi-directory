@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricToRetain {
     @JsonProperty("metric")
     public String metric;
+
     public MetricToRetain withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -22,9 +23,13 @@ public class MetricToRetain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricDimension")
     public MetricDimension metricDimension;
+
     public MetricToRetain withMetricDimension(MetricDimension metricDimension) {
         this.metricDimension = metricDimension;
         return this;
     }
     
+    public MetricToRetain(@JsonProperty("metric") String metric) {
+        this.metric = metric;
+  }
 }

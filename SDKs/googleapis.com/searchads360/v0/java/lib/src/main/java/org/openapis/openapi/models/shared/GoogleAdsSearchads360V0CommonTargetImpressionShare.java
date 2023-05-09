@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonTargetImpressionShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpcBidCeilingMicros")
     public String cpcBidCeilingMicros;
+
     public GoogleAdsSearchads360V0CommonTargetImpressionShare withCpcBidCeilingMicros(String cpcBidCeilingMicros) {
         this.cpcBidCeilingMicros = cpcBidCeilingMicros;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0CommonTargetImpressionShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum location;
+
     public GoogleAdsSearchads360V0CommonTargetImpressionShare withLocation(GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0CommonTargetImpressionShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationFractionMicros")
     public String locationFractionMicros;
+
     public GoogleAdsSearchads360V0CommonTargetImpressionShare withLocationFractionMicros(String locationFractionMicros) {
         this.locationFractionMicros = locationFractionMicros;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonTargetImpressionShare(){}
 }

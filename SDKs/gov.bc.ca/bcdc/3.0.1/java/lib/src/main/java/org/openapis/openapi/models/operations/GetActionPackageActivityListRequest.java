@@ -12,6 +12,7 @@ public class GetActionPackageActivityListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetActionPackageActivityListRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class GetActionPackageActivityListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetActionPackageActivityListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,9 +34,11 @@ public class GetActionPackageActivityListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetActionPackageActivityListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetActionPackageActivityListRequest(){}
 }

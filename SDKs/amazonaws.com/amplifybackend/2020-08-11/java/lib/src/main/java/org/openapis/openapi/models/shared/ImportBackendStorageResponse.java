@@ -15,6 +15,7 @@ public class ImportBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public ImportBackendStorageResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class ImportBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendEnvironmentName")
     public String backendEnvironmentName;
+
     public ImportBackendStorageResponse withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -31,6 +33,7 @@ public class ImportBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public ImportBackendStorageResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -39,9 +42,11 @@ public class ImportBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ImportBackendStorageResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ImportBackendStorageResponse(){}
 }

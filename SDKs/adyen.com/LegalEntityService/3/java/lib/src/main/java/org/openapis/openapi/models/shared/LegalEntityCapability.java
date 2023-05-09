@@ -15,6 +15,7 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Boolean allowed;
+
     public LegalEntityCapability withAllowed(Boolean allowed) {
         this.allowed = allowed;
         return this;
@@ -28,6 +29,7 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedLevel")
     public LegalEntityCapabilityAllowedLevelEnum allowedLevel;
+
     public LegalEntityCapability withAllowedLevel(LegalEntityCapabilityAllowedLevelEnum allowedLevel) {
         this.allowedLevel = allowedLevel;
         return this;
@@ -36,6 +38,7 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedSettings")
     public CapabilitySettings allowedSettings;
+
     public LegalEntityCapability withAllowedSettings(CapabilitySettings allowedSettings) {
         this.allowedSettings = allowedSettings;
         return this;
@@ -47,6 +50,7 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested")
     public Boolean requested;
+
     public LegalEntityCapability withRequested(Boolean requested) {
         this.requested = requested;
         return this;
@@ -60,6 +64,7 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedLevel")
     public LegalEntityCapabilityRequestedLevelEnum requestedLevel;
+
     public LegalEntityCapability withRequestedLevel(LegalEntityCapabilityRequestedLevelEnum requestedLevel) {
         this.requestedLevel = requestedLevel;
         return this;
@@ -68,6 +73,7 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedSettings")
     public CapabilitySettings requestedSettings;
+
     public LegalEntityCapability withRequestedSettings(CapabilitySettings requestedSettings) {
         this.requestedSettings = requestedSettings;
         return this;
@@ -79,6 +85,7 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferInstruments")
     public SupportingEntityCapability[] transferInstruments;
+
     public LegalEntityCapability withTransferInstruments(SupportingEntityCapability[] transferInstruments) {
         this.transferInstruments = transferInstruments;
         return this;
@@ -101,9 +108,11 @@ public class LegalEntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStatus")
     public String verificationStatus;
+
     public LegalEntityCapability withVerificationStatus(String verificationStatus) {
         this.verificationStatus = verificationStatus;
         return this;
     }
     
+    public LegalEntityCapability(){}
 }

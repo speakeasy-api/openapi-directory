@@ -15,6 +15,7 @@ public class InternetHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Availability")
     public AvailabilityMeasurement availability;
+
     public InternetHealth withAvailability(AvailabilityMeasurement availability) {
         this.availability = availability;
         return this;
@@ -23,9 +24,11 @@ public class InternetHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Performance")
     public PerformanceMeasurement performance;
+
     public InternetHealth withPerformance(PerformanceMeasurement performance) {
         this.performance = performance;
         return this;
     }
     
+    public InternetHealth(){}
 }

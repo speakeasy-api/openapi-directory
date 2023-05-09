@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendBonusRequest {
     @JsonProperty("AssignmentId")
     public String assignmentId;
+
     public SendBonusRequest withAssignmentId(String assignmentId) {
         this.assignmentId = assignmentId;
         return this;
@@ -18,6 +19,7 @@ public class SendBonusRequest {
     
     @JsonProperty("BonusAmount")
     public String bonusAmount;
+
     public SendBonusRequest withBonusAmount(String bonusAmount) {
         this.bonusAmount = bonusAmount;
         return this;
@@ -25,6 +27,7 @@ public class SendBonusRequest {
     
     @JsonProperty("Reason")
     public String reason;
+
     public SendBonusRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -33,6 +36,7 @@ public class SendBonusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UniqueRequestToken")
     public String uniqueRequestToken;
+
     public SendBonusRequest withUniqueRequestToken(String uniqueRequestToken) {
         this.uniqueRequestToken = uniqueRequestToken;
         return this;
@@ -40,9 +44,16 @@ public class SendBonusRequest {
     
     @JsonProperty("WorkerId")
     public String workerId;
+
     public SendBonusRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public SendBonusRequest(@JsonProperty("AssignmentId") String assignmentId, @JsonProperty("BonusAmount") String bonusAmount, @JsonProperty("Reason") String reason, @JsonProperty("WorkerId") String workerId) {
+        this.assignmentId = assignmentId;
+        this.bonusAmount = bonusAmount;
+        this.reason = reason;
+        this.workerId = workerId;
+  }
 }

@@ -22,6 +22,7 @@ public class NotebookMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public NotebookMetadata withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class NotebookMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public NotebookMetadata withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -40,6 +42,7 @@ public class NotebookMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public NotebookMetadata withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class NotebookMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public NotebookMetadata withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
@@ -56,6 +60,7 @@ public class NotebookMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public NotebookTypeEnum type;
+
     public NotebookMetadata withType(NotebookTypeEnum type) {
         this.type = type;
         return this;
@@ -64,9 +69,11 @@ public class NotebookMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkGroup")
     public String workGroup;
+
     public NotebookMetadata withWorkGroup(String workGroup) {
         this.workGroup = workGroup;
         return this;
     }
     
+    public NotebookMetadata(){}
 }

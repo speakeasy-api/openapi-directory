@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookConfigRead {
     @JsonProperty("id")
     public String id;
+
     public WebhookConfigRead withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,13 @@ public class WebhookConfigRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebhookConfigRead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public WebhookConfigRead(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

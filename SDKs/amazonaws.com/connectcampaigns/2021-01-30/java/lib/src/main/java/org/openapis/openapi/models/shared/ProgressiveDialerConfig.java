@@ -15,9 +15,13 @@ public class ProgressiveDialerConfig {
      */
     @JsonProperty("bandwidthAllocation")
     public Double bandwidthAllocation;
+
     public ProgressiveDialerConfig withBandwidthAllocation(Double bandwidthAllocation) {
         this.bandwidthAllocation = bandwidthAllocation;
         return this;
     }
     
+    public ProgressiveDialerConfig(@JsonProperty("bandwidthAllocation") Double bandwidthAllocation) {
+        this.bandwidthAllocation = bandwidthAllocation;
+  }
 }

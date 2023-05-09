@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportApplicationUsageResponse {
@@ -12,6 +13,7 @@ public class ImportApplicationUsageResponse {
      */
     
     public Object accessDeniedException;
+
     public ImportApplicationUsageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ImportApplicationUsageResponse {
     
     
     public String contentType;
+
     public ImportApplicationUsageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ImportApplicationUsageResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportApplicationUsageResult importApplicationUsageResult;
+
     public ImportApplicationUsageResponse withImportApplicationUsageResult(org.openapis.openapi.models.shared.ImportApplicationUsageResult importApplicationUsageResult) {
         this.importApplicationUsageResult = importApplicationUsageResult;
         return this;
@@ -39,6 +43,7 @@ public class ImportApplicationUsageResponse {
      */
     
     public Object internalServerException;
+
     public ImportApplicationUsageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class ImportApplicationUsageResponse {
     
     
     public Integer statusCode;
+
     public ImportApplicationUsageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ImportApplicationUsageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportApplicationUsageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ImportApplicationUsageResponse {
      */
     
     public Object throttlingException;
+
     public ImportApplicationUsageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ImportApplicationUsageResponse {
      */
     
     public Object validationException;
+
     public ImportApplicationUsageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ImportApplicationUsageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

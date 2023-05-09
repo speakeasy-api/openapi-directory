@@ -12,6 +12,7 @@ public class CreateNetworkStaticRouteRequestBody {
      */
     @JsonProperty("gatewayIp")
     public String gatewayIp;
+
     public CreateNetworkStaticRouteRequestBody withGatewayIp(String gatewayIp) {
         this.gatewayIp = gatewayIp;
         return this;
@@ -22,6 +23,7 @@ public class CreateNetworkStaticRouteRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateNetworkStaticRouteRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class CreateNetworkStaticRouteRequestBody {
      */
     @JsonProperty("subnet")
     public String subnet;
+
     public CreateNetworkStaticRouteRequestBody withSubnet(String subnet) {
         this.subnet = subnet;
         return this;
     }
     
+    public CreateNetworkStaticRouteRequestBody(@JsonProperty("gatewayIp") String gatewayIp, @JsonProperty("name") String name, @JsonProperty("subnet") String subnet) {
+        this.gatewayIp = gatewayIp;
+        this.name = name;
+        this.subnet = subnet;
+  }
 }

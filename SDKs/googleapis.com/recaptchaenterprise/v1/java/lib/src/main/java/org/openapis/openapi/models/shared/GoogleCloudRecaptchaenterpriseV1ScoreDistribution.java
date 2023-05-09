@@ -18,9 +18,11 @@ public class GoogleCloudRecaptchaenterpriseV1ScoreDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoreBuckets")
     public java.util.Map<String, String> scoreBuckets;
+
     public GoogleCloudRecaptchaenterpriseV1ScoreDistribution withScoreBuckets(java.util.Map<String, String> scoreBuckets) {
         this.scoreBuckets = scoreBuckets;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1ScoreDistribution(){}
 }

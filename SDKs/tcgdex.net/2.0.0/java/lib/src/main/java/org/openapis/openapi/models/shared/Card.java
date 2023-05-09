@@ -15,6 +15,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abilities")
     public CardAbilities[] abilities;
+
     public Card withAbilities(CardAbilities[] abilities) {
         this.abilities = abilities;
         return this;
@@ -23,6 +24,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attacks")
     public CardAttacks[] attacks;
+
     public Card withAttacks(CardAttacks[] attacks) {
         this.attacks = attacks;
         return this;
@@ -30,6 +32,7 @@ public class Card {
     
     @JsonProperty("category")
     public String category;
+
     public Card withCategory(String category) {
         this.category = category;
         return this;
@@ -38,6 +41,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Card withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +50,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dexId")
     public Double[] dexId;
+
     public Card withDexId(Double[] dexId) {
         this.dexId = dexId;
         return this;
@@ -54,6 +59,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energyType")
     public String energyType;
+
     public Card withEnergyType(String energyType) {
         this.energyType = energyType;
         return this;
@@ -62,6 +68,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evolveFrom")
     public String evolveFrom;
+
     public Card withEvolveFrom(String evolveFrom) {
         this.evolveFrom = evolveFrom;
         return this;
@@ -70,6 +77,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hp")
     public Double hp;
+
     public Card withHp(Double hp) {
         this.hp = hp;
         return this;
@@ -77,6 +85,7 @@ public class Card {
     
     @JsonProperty("id")
     public String id;
+
     public Card withId(String id) {
         this.id = id;
         return this;
@@ -85,6 +94,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("illustrator")
     public String illustrator;
+
     public Card withIllustrator(String illustrator) {
         this.illustrator = illustrator;
         return this;
@@ -93,6 +103,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Card withImage(String image) {
         this.image = image;
         return this;
@@ -101,6 +112,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public CardItem item;
+
     public Card withItem(CardItem item) {
         this.item = item;
         return this;
@@ -108,6 +120,7 @@ public class Card {
     
     @JsonProperty("legal")
     public CardLegal legal;
+
     public Card withLegal(CardLegal legal) {
         this.legal = legal;
         return this;
@@ -116,6 +129,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public Double level;
+
     public Card withLevel(Double level) {
         this.level = level;
         return this;
@@ -123,6 +137,7 @@ public class Card {
     
     @JsonProperty("localId")
     public String localId;
+
     public Card withLocalId(String localId) {
         this.localId = localId;
         return this;
@@ -130,6 +145,7 @@ public class Card {
     
     @JsonProperty("name")
     public String name;
+
     public Card withName(String name) {
         this.name = name;
         return this;
@@ -137,6 +153,7 @@ public class Card {
     
     @JsonProperty("rarity")
     public String rarity;
+
     public Card withRarity(String rarity) {
         this.rarity = rarity;
         return this;
@@ -145,6 +162,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regulationMark")
     public String regulationMark;
+
     public Card withRegulationMark(String regulationMark) {
         this.regulationMark = regulationMark;
         return this;
@@ -153,6 +171,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resistances")
     public WeakRes[][] resistances;
+
     public Card withResistances(WeakRes[][] resistances) {
         this.resistances = resistances;
         return this;
@@ -161,6 +180,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retreat")
     public Double retreat;
+
     public Card withRetreat(Double retreat) {
         this.retreat = retreat;
         return this;
@@ -168,6 +188,7 @@ public class Card {
     
     @JsonProperty("set")
     public SetResume set;
+
     public Card withSet(SetResume set) {
         this.set = set;
         return this;
@@ -176,6 +197,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage")
     public String stage;
+
     public Card withStage(String stage) {
         this.stage = stage;
         return this;
@@ -184,6 +206,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffix")
     public String suffix;
+
     public Card withSuffix(String suffix) {
         this.suffix = suffix;
         return this;
@@ -192,6 +215,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainerType")
     public String trainerType;
+
     public Card withTrainerType(String trainerType) {
         this.trainerType = trainerType;
         return this;
@@ -200,6 +224,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public String[] types;
+
     public Card withTypes(String[] types) {
         this.types = types;
         return this;
@@ -208,6 +233,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
     public CardVariants variants;
+
     public Card withVariants(CardVariants variants) {
         this.variants = variants;
         return this;
@@ -216,9 +242,19 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weaknesses")
     public WeakRes[][] weaknesses;
+
     public Card withWeaknesses(WeakRes[][] weaknesses) {
         this.weaknesses = weaknesses;
         return this;
     }
     
+    public Card(@JsonProperty("category") String category, @JsonProperty("id") String id, @JsonProperty("legal") CardLegal legal, @JsonProperty("localId") String localId, @JsonProperty("name") String name, @JsonProperty("rarity") String rarity, @JsonProperty("set") SetResume set) {
+        this.category = category;
+        this.id = id;
+        this.legal = legal;
+        this.localId = localId;
+        this.name = name;
+        this.rarity = rarity;
+        this.set = set;
+  }
 }

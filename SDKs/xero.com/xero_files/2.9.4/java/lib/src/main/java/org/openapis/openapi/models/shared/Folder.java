@@ -18,6 +18,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Folder withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +30,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileCount")
     public Long fileCount;
+
     public Folder withFileCount(Long fileCount) {
         this.fileCount = fileCount;
         return this;
@@ -40,6 +42,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Folder withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsInbox")
     public Boolean isInbox;
+
     public Folder withIsInbox(Boolean isInbox) {
         this.isInbox = isInbox;
         return this;
@@ -62,9 +66,11 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Folder withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Folder(){}
 }

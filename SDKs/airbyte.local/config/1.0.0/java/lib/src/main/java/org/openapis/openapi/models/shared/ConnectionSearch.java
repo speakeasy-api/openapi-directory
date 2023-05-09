@@ -12,6 +12,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ConnectionSearch withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -20,6 +21,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public DestinationSearch destination;
+
     public ConnectionSearch withDestination(DestinationSearch destination) {
         this.destination = destination;
         return this;
@@ -28,6 +30,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public ConnectionSearch withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -36,6 +39,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectionSearch withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceDefinition")
     public NamespaceDefinitionTypeEnum namespaceDefinition;
+
     public ConnectionSearch withNamespaceDefinition(NamespaceDefinitionTypeEnum namespaceDefinition) {
         this.namespaceDefinition = namespaceDefinition;
         return this;
@@ -58,6 +63,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceFormat")
     public String namespaceFormat;
+
     public ConnectionSearch withNamespaceFormat(String namespaceFormat) {
         this.namespaceFormat = namespaceFormat;
         return this;
@@ -69,6 +75,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public ConnectionSearch withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -80,6 +87,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ConnectionSchedule schedule;
+
     public ConnectionSearch withSchedule(ConnectionSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -91,6 +99,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleData")
     public ConnectionScheduleData scheduleData;
+
     public ConnectionSearch withScheduleData(ConnectionScheduleData scheduleData) {
         this.scheduleData = scheduleData;
         return this;
@@ -102,6 +111,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleType")
     public ConnectionScheduleTypeEnum scheduleType;
+
     public ConnectionSearch withScheduleType(ConnectionScheduleTypeEnum scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -110,6 +120,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public SourceSearch source;
+
     public ConnectionSearch withSource(SourceSearch source) {
         this.source = source;
         return this;
@@ -118,6 +129,7 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceId")
     public String sourceId;
+
     public ConnectionSearch withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -129,9 +141,11 @@ public class ConnectionSearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public ConnectionSearch withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ConnectionSearch(){}
 }

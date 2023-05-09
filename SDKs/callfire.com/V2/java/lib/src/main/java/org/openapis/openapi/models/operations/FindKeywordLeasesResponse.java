@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindKeywordLeasesResponse {
     
     public String contentType;
+
     public FindKeywordLeasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindKeywordLeasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindKeywordLeasesResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FindKeywordLeasesResponse {
      */
     
     public org.openapis.openapi.models.shared.KeywordLeasePage keywordLeasePage;
+
     public FindKeywordLeasesResponse withKeywordLeasePage(org.openapis.openapi.models.shared.KeywordLeasePage keywordLeasePage) {
         this.keywordLeasePage = keywordLeasePage;
         return this;
@@ -36,6 +40,7 @@ public class FindKeywordLeasesResponse {
     
     
     public Integer statusCode;
+
     public FindKeywordLeasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FindKeywordLeasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindKeywordLeasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindKeywordLeasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

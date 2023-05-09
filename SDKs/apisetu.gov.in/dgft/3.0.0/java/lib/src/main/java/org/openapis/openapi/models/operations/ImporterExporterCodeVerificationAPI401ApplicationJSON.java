@@ -15,6 +15,7 @@ public class ImporterExporterCodeVerificationAPI401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum error;
+
     public ImporterExporterCodeVerificationAPI401ApplicationJSON withError(ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class ImporterExporterCodeVerificationAPI401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public ImporterExporterCodeVerificationAPI401ApplicationJSON withErrorDescription(ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public ImporterExporterCodeVerificationAPI401ApplicationJSON(){}
 }

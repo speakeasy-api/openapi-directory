@@ -15,6 +15,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acrossClusterAllocationMethod")
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyAcrossClusterAllocationMethodEnum acrossClusterAllocationMethod;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withAcrossClusterAllocationMethod(PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyAcrossClusterAllocationMethodEnum acrossClusterAllocationMethod) {
         this.acrossClusterAllocationMethod = acrossClusterAllocationMethod;
         return this;
@@ -25,6 +26,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -35,6 +37,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -46,6 +49,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteringMethod")
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyClusteringMethodEnum clusteringMethod;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withClusteringMethod(PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyClusteringMethodEnum clusteringMethod) {
         this.clusteringMethod = clusteringMethod;
         return this;
@@ -57,6 +61,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteringOrdering")
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyClusteringOrderingEnum clusteringOrdering;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withClusteringOrdering(PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyClusteringOrderingEnum clusteringOrdering) {
         this.clusteringOrdering = clusteringOrdering;
         return this;
@@ -68,6 +73,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public Long clusters;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withClusters(Long clusters) {
         this.clusters = clusters;
         return this;
@@ -76,6 +82,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withConstraints(PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -87,9 +94,14 @@ public class PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedReque
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withinClusterAllocationMethod")
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyWithinClusterAllocationMethodEnum withinClusterAllocationMethod;
+
     public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody withWithinClusterAllocationMethod(PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBodyWithinClusterAllocationMethodEnum withinClusterAllocationMethod) {
         this.withinClusterAllocationMethod = withinClusterAllocationMethod;
         return this;
     }
     
+    public PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

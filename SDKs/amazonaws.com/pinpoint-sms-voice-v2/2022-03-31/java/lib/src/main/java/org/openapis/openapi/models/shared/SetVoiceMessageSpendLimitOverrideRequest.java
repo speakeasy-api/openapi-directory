@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetVoiceMessageSpendLimitOverrideRequest {
     @JsonProperty("MonthlyLimit")
     public Long monthlyLimit;
+
     public SetVoiceMessageSpendLimitOverrideRequest withMonthlyLimit(Long monthlyLimit) {
         this.monthlyLimit = monthlyLimit;
         return this;
     }
     
+    public SetVoiceMessageSpendLimitOverrideRequest(@JsonProperty("MonthlyLimit") Long monthlyLimit) {
+        this.monthlyLimit = monthlyLimit;
+  }
 }

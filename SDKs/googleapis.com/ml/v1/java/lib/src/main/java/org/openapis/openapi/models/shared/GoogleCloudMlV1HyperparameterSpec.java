@@ -18,6 +18,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public GoogleCloudMlV1HyperparameterSpecAlgorithmEnum algorithm;
+
     public GoogleCloudMlV1HyperparameterSpec withAlgorithm(GoogleCloudMlV1HyperparameterSpecAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableTrialEarlyStopping")
     public Boolean enableTrialEarlyStopping;
+
     public GoogleCloudMlV1HyperparameterSpec withEnableTrialEarlyStopping(Boolean enableTrialEarlyStopping) {
         this.enableTrialEarlyStopping = enableTrialEarlyStopping;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal")
     public GoogleCloudMlV1HyperparameterSpecGoalEnum goal;
+
     public GoogleCloudMlV1HyperparameterSpec withGoal(GoogleCloudMlV1HyperparameterSpecGoalEnum goal) {
         this.goal = goal;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperparameterMetricTag")
     public String hyperparameterMetricTag;
+
     public GoogleCloudMlV1HyperparameterSpec withHyperparameterMetricTag(String hyperparameterMetricTag) {
         this.hyperparameterMetricTag = hyperparameterMetricTag;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFailedTrials")
     public Integer maxFailedTrials;
+
     public GoogleCloudMlV1HyperparameterSpec withMaxFailedTrials(Integer maxFailedTrials) {
         this.maxFailedTrials = maxFailedTrials;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxParallelTrials")
     public Integer maxParallelTrials;
+
     public GoogleCloudMlV1HyperparameterSpec withMaxParallelTrials(Integer maxParallelTrials) {
         this.maxParallelTrials = maxParallelTrials;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTrials")
     public Integer maxTrials;
+
     public GoogleCloudMlV1HyperparameterSpec withMaxTrials(Integer maxTrials) {
         this.maxTrials = maxTrials;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public GoogleCloudMlV1ParameterSpec[] params;
+
     public GoogleCloudMlV1HyperparameterSpec withParams(GoogleCloudMlV1ParameterSpec[] params) {
         this.params = params;
         return this;
@@ -106,9 +114,11 @@ public class GoogleCloudMlV1HyperparameterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resumePreviousJobId")
     public String resumePreviousJobId;
+
     public GoogleCloudMlV1HyperparameterSpec withResumePreviousJobId(String resumePreviousJobId) {
         this.resumePreviousJobId = resumePreviousJobId;
         return this;
     }
     
+    public GoogleCloudMlV1HyperparameterSpec(){}
 }

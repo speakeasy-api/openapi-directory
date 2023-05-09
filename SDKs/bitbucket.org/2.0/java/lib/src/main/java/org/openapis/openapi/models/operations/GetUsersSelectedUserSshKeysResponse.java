@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersSelectedUserSshKeysResponse {
     
     public String contentType;
+
     public GetUsersSelectedUserSshKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersSelectedUserSshKeysResponse {
     
     
     public Integer statusCode;
+
     public GetUsersSelectedUserSshKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersSelectedUserSshKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersSelectedUserSshKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetUsersSelectedUserSshKeysResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetUsersSelectedUserSshKeysResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetUsersSelectedUserSshKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedSshUserKeys paginatedSshUserKeys;
+
     public GetUsersSelectedUserSshKeysResponse withPaginatedSshUserKeys(org.openapis.openapi.models.shared.PaginatedSshUserKeys paginatedSshUserKeys) {
         this.paginatedSshUserKeys = paginatedSshUserKeys;
         return this;
     }
     
+    public GetUsersSelectedUserSshKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

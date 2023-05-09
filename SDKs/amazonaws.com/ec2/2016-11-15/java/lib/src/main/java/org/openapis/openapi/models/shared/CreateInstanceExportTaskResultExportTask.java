@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateInstanceExportTaskResultExportTask {
     
     public String description;
+
     public CreateInstanceExportTaskResultExportTask withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateInstanceExportTaskResultExportTask {
     
     
     public String exportTaskId;
+
     public CreateInstanceExportTaskResultExportTask withExportTaskId(String exportTaskId) {
         this.exportTaskId = exportTaskId;
         return this;
@@ -26,6 +28,7 @@ public class CreateInstanceExportTaskResultExportTask {
     
     
     public CreateInstanceExportTaskResultExportTaskExportToS3Task exportToS3Task;
+
     public CreateInstanceExportTaskResultExportTask withExportToS3Task(CreateInstanceExportTaskResultExportTaskExportToS3Task exportToS3Task) {
         this.exportToS3Task = exportToS3Task;
         return this;
@@ -33,6 +36,7 @@ public class CreateInstanceExportTaskResultExportTask {
     
     
     public CreateInstanceExportTaskResultExportTaskInstanceExportDetails instanceExportDetails;
+
     public CreateInstanceExportTaskResultExportTask withInstanceExportDetails(CreateInstanceExportTaskResultExportTaskInstanceExportDetails instanceExportDetails) {
         this.instanceExportDetails = instanceExportDetails;
         return this;
@@ -40,6 +44,7 @@ public class CreateInstanceExportTaskResultExportTask {
     
     
     public CreateInstanceExportTaskResultExportTaskStateEnum state;
+
     public CreateInstanceExportTaskResultExportTask withState(CreateInstanceExportTaskResultExportTaskStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class CreateInstanceExportTaskResultExportTask {
     
     
     public String statusMessage;
+
     public CreateInstanceExportTaskResultExportTask withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +60,11 @@ public class CreateInstanceExportTaskResultExportTask {
     
     
     public CreateInstanceExportTaskResultExportTaskTags[] tags;
+
     public CreateInstanceExportTaskResultExportTask withTags(CreateInstanceExportTaskResultExportTaskTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInstanceExportTaskResultExportTask(){}
 }

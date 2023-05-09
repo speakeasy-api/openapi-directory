@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayConnectPeerRequest {
     
     public TransitGatewayConnectRequestBgpOptions bgpOptions;
+
     public CreateTransitGatewayConnectPeerRequest withBgpOptions(TransitGatewayConnectRequestBgpOptions bgpOptions) {
         this.bgpOptions = bgpOptions;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayConnectPeerRequest {
     
     
     public Boolean dryRun;
+
     public CreateTransitGatewayConnectPeerRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayConnectPeerRequest {
     
     
     public String[] insideCidrBlocks;
+
     public CreateTransitGatewayConnectPeerRequest withInsideCidrBlocks(String[] insideCidrBlocks) {
         this.insideCidrBlocks = insideCidrBlocks;
         return this;
@@ -30,6 +33,7 @@ public class CreateTransitGatewayConnectPeerRequest {
     
     
     public String peerAddress;
+
     public CreateTransitGatewayConnectPeerRequest withPeerAddress(String peerAddress) {
         this.peerAddress = peerAddress;
         return this;
@@ -37,6 +41,7 @@ public class CreateTransitGatewayConnectPeerRequest {
     
     
     public CreateTransitGatewayConnectPeerRequestTagSpecifications[] tagSpecifications;
+
     public CreateTransitGatewayConnectPeerRequest withTagSpecifications(CreateTransitGatewayConnectPeerRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -44,6 +49,7 @@ public class CreateTransitGatewayConnectPeerRequest {
     
     
     public String transitGatewayAddress;
+
     public CreateTransitGatewayConnectPeerRequest withTransitGatewayAddress(String transitGatewayAddress) {
         this.transitGatewayAddress = transitGatewayAddress;
         return this;
@@ -51,9 +57,15 @@ public class CreateTransitGatewayConnectPeerRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public CreateTransitGatewayConnectPeerRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public CreateTransitGatewayConnectPeerRequest(@JsonProperty("InsideCidrBlocks") String[] insideCidrBlocks, @JsonProperty("PeerAddress") String peerAddress, @JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId) {
+        this.insideCidrBlocks = insideCidrBlocks;
+        this.peerAddress = peerAddress;
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+  }
 }

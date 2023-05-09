@@ -17,6 +17,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_account")
     public String clientAccount;
+
     public ProjectParentVO withClientAccount(String clientAccount) {
         this.clientAccount = clientAccount;
         return this;
@@ -25,6 +26,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_user")
     public String clientUser;
+
     public ProjectParentVO withClientUser(String clientUser) {
         this.clientUser = clientUser;
         return this;
@@ -33,6 +35,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_user_id")
     public Long clientUserId;
+
     public ProjectParentVO withClientUserId(Long clientUserId) {
         this.clientUserId = clientUserId;
         return this;
@@ -41,6 +44,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_workgroup_id")
     public Long clientWorkgroupId;
+
     public ProjectParentVO withClientWorkgroupId(Long clientWorkgroupId) {
         this.clientWorkgroupId = clientWorkgroupId;
         return this;
@@ -49,6 +53,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public ProjectParentVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -60,6 +65,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public PersonVO createdBy;
+
     public ProjectParentVO withCreatedBy(PersonVO createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -69,6 +75,7 @@ public class ProjectParentVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("project_create_date")
     public LocalDate projectCreateDate;
+
     public ProjectParentVO withProjectCreateDate(LocalDate projectCreateDate) {
         this.projectCreateDate = projectCreateDate;
         return this;
@@ -77,6 +84,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_description")
     public String projectDescription;
+
     public ProjectParentVO withProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
         return this;
@@ -85,6 +93,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public Long projectId;
+
     public ProjectParentVO withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -93,6 +102,7 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_name")
     public String projectName;
+
     public ProjectParentVO withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -101,9 +111,11 @@ public class ProjectParentVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_number")
     public String projectNumber;
+
     public ProjectParentVO withProjectNumber(String projectNumber) {
         this.projectNumber = projectNumber;
         return this;
     }
     
+    public ProjectParentVO(){}
 }

@@ -18,9 +18,11 @@ public class BatchCreateRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public CreateRowRequest[] requests;
+
     public BatchCreateRowsRequest withRequests(CreateRowRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchCreateRowsRequest(){}
 }

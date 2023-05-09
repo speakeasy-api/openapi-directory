@@ -18,6 +18,7 @@ public class EcoCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awarded")
     public Boolean awarded;
+
     public EcoCertification withAwarded(Boolean awarded) {
         this.awarded = awarded;
         return this;
@@ -29,6 +30,7 @@ public class EcoCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awardedException")
     public EcoCertificationAwardedExceptionEnum awardedException;
+
     public EcoCertification withAwardedException(EcoCertificationAwardedExceptionEnum awardedException) {
         this.awardedException = awardedException;
         return this;
@@ -40,9 +42,11 @@ public class EcoCertification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecoCertificate")
     public EcoCertificationEcoCertificateEnum ecoCertificate;
+
     public EcoCertification withEcoCertificate(EcoCertificationEcoCertificateEnum ecoCertificate) {
         this.ecoCertificate = ecoCertificate;
         return this;
     }
     
+    public EcoCertification(){}
 }

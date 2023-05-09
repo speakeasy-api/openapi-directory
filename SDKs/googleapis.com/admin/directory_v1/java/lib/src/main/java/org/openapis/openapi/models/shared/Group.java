@@ -18,6 +18,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminCreated")
     public Boolean adminCreated;
+
     public Group withAdminCreated(Boolean adminCreated) {
         this.adminCreated = adminCreated;
         return this;
@@ -29,6 +30,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public String[] aliases;
+
     public Group withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -40,6 +42,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Group withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directMembersCount")
     public String directMembersCount;
+
     public Group withDirectMembersCount(String directMembersCount) {
         this.directMembersCount = directMembersCount;
         return this;
@@ -62,6 +66,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Group withEmail(String email) {
         this.email = email;
         return this;
@@ -73,6 +78,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Group withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -84,6 +90,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Group withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +102,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Group withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -117,9 +126,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonEditableAliases")
     public String[] nonEditableAliases;
+
     public Group withNonEditableAliases(String[] nonEditableAliases) {
         this.nonEditableAliases = nonEditableAliases;
         return this;
     }
     
+    public Group(){}
 }

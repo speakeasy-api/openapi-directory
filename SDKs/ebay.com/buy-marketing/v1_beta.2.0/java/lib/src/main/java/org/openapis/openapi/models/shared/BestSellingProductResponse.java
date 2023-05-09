@@ -15,6 +15,7 @@ public class BestSellingProductResponse {
      */
     
     public MerchandisedProduct[] merchandisedProducts;
+
     public BestSellingProductResponse withMerchandisedProducts(MerchandisedProduct[] merchandisedProducts) {
         this.merchandisedProducts = merchandisedProducts;
         return this;
@@ -25,9 +26,11 @@ public class BestSellingProductResponse {
      */
     
     public Error[] warnings;
+
     public BestSellingProductResponse withWarnings(Error[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public BestSellingProductResponse(){}
 }

@@ -15,6 +15,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarId")
     public String calendarId;
+
     public CalendarBlockViewModel withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -23,6 +24,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedStatus")
     public Boolean deletedStatus;
+
     public CalendarBlockViewModel withDeletedStatus(Boolean deletedStatus) {
         this.deletedStatus = deletedStatus;
         return this;
@@ -31,6 +33,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedTime")
     public String deletedTime;
+
     public CalendarBlockViewModel withDeletedTime(String deletedTime) {
         this.deletedTime = deletedTime;
         return this;
@@ -39,6 +42,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public CalendarBlockViewModel withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -47,6 +51,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public CalendarBlockViewModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -55,6 +60,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CalendarBlockViewModel withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public CalendarBlockViewModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -71,6 +78,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public CalendarBlockViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -79,6 +87,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CalendarBlockViewModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -87,6 +96,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatViewModel repeat;
+
     public CalendarBlockViewModel withRepeat(RepeatViewModel repeat) {
         this.repeat = repeat;
         return this;
@@ -95,6 +105,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public CalendarBlockViewModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -103,6 +114,7 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public CalendarBlockViewModel withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -111,9 +123,11 @@ public class CalendarBlockViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public CalendarBlockViewModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public CalendarBlockViewModel(){}
 }

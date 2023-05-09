@@ -15,9 +15,11 @@ public class FindingAggregator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingAggregatorArn")
     public String findingAggregatorArn;
+
     public FindingAggregator withFindingAggregatorArn(String findingAggregatorArn) {
         this.findingAggregatorArn = findingAggregatorArn;
         return this;
     }
     
+    public FindingAggregator(){}
 }

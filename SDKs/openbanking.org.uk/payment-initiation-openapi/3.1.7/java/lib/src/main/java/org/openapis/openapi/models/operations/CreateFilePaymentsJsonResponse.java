@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFilePaymentsJsonResponse {
     
     public byte[] body;
+
     public CreateFilePaymentsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateFilePaymentsJsonResponse {
     
     
     public String contentType;
+
     public CreateFilePaymentsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateFilePaymentsJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateFilePaymentsJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateFilePaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateFilePaymentsJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateFilePaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteFileResponse3 obWriteFileResponse3;
+
     public CreateFilePaymentsJsonResponse withOBWriteFileResponse3(org.openapis.openapi.models.shared.OBWriteFileResponse3 obWriteFileResponse3) {
         this.obWriteFileResponse3 = obWriteFileResponse3;
         return this;
@@ -50,6 +56,7 @@ public class CreateFilePaymentsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateFilePaymentsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateFilePaymentsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFilePaymentsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateFilePaymentsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

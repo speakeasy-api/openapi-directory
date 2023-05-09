@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetHealthDescription {
     
     public String healthCheckPort;
+
     public TargetHealthDescription withHealthCheckPort(String healthCheckPort) {
         this.healthCheckPort = healthCheckPort;
         return this;
@@ -19,6 +20,7 @@ public class TargetHealthDescription {
     
     
     public TargetDescription target;
+
     public TargetHealthDescription withTarget(TargetDescription target) {
         this.target = target;
         return this;
@@ -26,9 +28,11 @@ public class TargetHealthDescription {
     
     
     public TargetHealth targetHealth;
+
     public TargetHealthDescription withTargetHealth(TargetHealth targetHealth) {
         this.targetHealth = targetHealth;
         return this;
     }
     
+    public TargetHealthDescription(){}
 }

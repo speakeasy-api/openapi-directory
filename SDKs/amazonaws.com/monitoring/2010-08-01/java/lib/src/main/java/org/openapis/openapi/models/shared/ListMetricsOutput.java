@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListMetricsOutput {
     
     public Metric[] metrics;
+
     public ListMetricsOutput withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -19,6 +20,7 @@ public class ListMetricsOutput {
     
     
     public String nextToken;
+
     public ListMetricsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,11 @@ public class ListMetricsOutput {
     
     
     public String[] owningAccounts;
+
     public ListMetricsOutput withOwningAccounts(String[] owningAccounts) {
         this.owningAccounts = owningAccounts;
         return this;
     }
     
+    public ListMetricsOutput(){}
 }

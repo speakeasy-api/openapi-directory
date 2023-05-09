@@ -15,6 +15,7 @@ public class ListBotRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListBotRecommendationsResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class ListBotRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botRecommendationSummaries")
     public BotRecommendationSummary[] botRecommendationSummaries;
+
     public ListBotRecommendationsResponse withBotRecommendationSummaries(BotRecommendationSummary[] botRecommendationSummaries) {
         this.botRecommendationSummaries = botRecommendationSummaries;
         return this;
@@ -31,6 +33,7 @@ public class ListBotRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListBotRecommendationsResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -39,6 +42,7 @@ public class ListBotRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListBotRecommendationsResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -47,9 +51,11 @@ public class ListBotRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBotRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBotRecommendationsResponse(){}
 }

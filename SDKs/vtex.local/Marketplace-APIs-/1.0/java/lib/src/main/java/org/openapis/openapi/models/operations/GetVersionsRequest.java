@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVersionsRequest {
@@ -12,6 +13,7 @@ public class GetVersionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetVersionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetVersionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetVersionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetVersionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetVersionsRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class GetVersionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public GetVersionsRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -52,9 +57,17 @@ public class GetVersionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerskuid")
     public String sellerskuid;
+
     public GetVersionsRequest withSellerskuid(String sellerskuid) {
         this.sellerskuid = sellerskuid;
         return this;
     }
     
+    public GetVersionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerskuid") String sellerskuid) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.sellerId = sellerId;
+        this.sellerskuid = sellerskuid;
+  }
 }

@@ -12,6 +12,7 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountInMicros")
     public Double amountInMicros;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo withAmountInMicros(Double amountInMicros) {
         this.amountInMicros = amountInMicros;
         return this;
@@ -20,6 +21,7 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -28,6 +30,7 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseNumber")
     public String releaseNumber;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo withReleaseNumber(String releaseNumber) {
         this.releaseNumber = releaseNumber;
         return this;
@@ -36,9 +39,11 @@ public class SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseTime")
     public String releaseTime;
+
     public SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo withReleaseTime(String releaseTime) {
         this.releaseTime = releaseTime;
         return this;
     }
     
+    public SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo(){}
 }

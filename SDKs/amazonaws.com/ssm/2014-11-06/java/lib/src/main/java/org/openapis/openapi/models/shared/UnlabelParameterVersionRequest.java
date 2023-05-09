@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnlabelParameterVersionRequest {
     @JsonProperty("Labels")
     public String[] labels;
+
     public UnlabelParameterVersionRequest withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -16,6 +17,7 @@ public class UnlabelParameterVersionRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UnlabelParameterVersionRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +25,15 @@ public class UnlabelParameterVersionRequest {
     
     @JsonProperty("ParameterVersion")
     public Long parameterVersion;
+
     public UnlabelParameterVersionRequest withParameterVersion(Long parameterVersion) {
         this.parameterVersion = parameterVersion;
         return this;
     }
     
+    public UnlabelParameterVersionRequest(@JsonProperty("Labels") String[] labels, @JsonProperty("Name") String name, @JsonProperty("ParameterVersion") Long parameterVersion) {
+        this.labels = labels;
+        this.name = name;
+        this.parameterVersion = parameterVersion;
+  }
 }

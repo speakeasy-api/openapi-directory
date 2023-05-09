@@ -12,6 +12,7 @@ public class CancelQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventDataStore")
     public String eventDataStore;
+
     public CancelQueryRequest withEventDataStore(String eventDataStore) {
         this.eventDataStore = eventDataStore;
         return this;
@@ -19,9 +20,13 @@ public class CancelQueryRequest {
     
     @JsonProperty("QueryId")
     public String queryId;
+
     public CancelQueryRequest withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
     }
     
+    public CancelQueryRequest(@JsonProperty("QueryId") String queryId) {
+        this.queryId = queryId;
+  }
 }

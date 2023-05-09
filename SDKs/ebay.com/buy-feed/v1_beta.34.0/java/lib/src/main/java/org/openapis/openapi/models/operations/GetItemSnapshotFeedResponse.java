@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItemSnapshotFeedResponse {
     
     public byte[] body;
+
     public GetItemSnapshotFeedResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetItemSnapshotFeedResponse {
     
     
     public String contentType;
+
     public GetItemSnapshotFeedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetItemSnapshotFeedResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetItemSnapshotFeedResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetItemSnapshotFeedResponse {
      */
     
     public org.openapis.openapi.models.shared.ItemSnapshotResponse itemSnapshotResponse;
+
     public GetItemSnapshotFeedResponse withItemSnapshotResponse(org.openapis.openapi.models.shared.ItemSnapshotResponse itemSnapshotResponse) {
         this.itemSnapshotResponse = itemSnapshotResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetItemSnapshotFeedResponse {
     
     
     public Integer statusCode;
+
     public GetItemSnapshotFeedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class GetItemSnapshotFeedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItemSnapshotFeedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetItemSnapshotFeedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QueryResponse {
     
     public String contentType;
+
     public QueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class QueryResponse {
      */
     
     public Object internalServerError;
+
     public QueryResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class QueryResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public QueryResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -39,6 +43,7 @@ public class QueryResponse {
      */
     
     public org.openapis.openapi.models.shared.QueryOutput queryOutput;
+
     public QueryResponse withQueryOutput(org.openapis.openapi.models.shared.QueryOutput queryOutput) {
         this.queryOutput = queryOutput;
         return this;
@@ -49,6 +54,7 @@ public class QueryResponse {
      */
     
     public Object requestLimitExceeded;
+
     public QueryResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class QueryResponse {
     
     
     public Integer statusCode;
+
     public QueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class QueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class QueryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public QueryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public QueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

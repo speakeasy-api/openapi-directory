@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLocationS3Request {
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationS3Request withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
     }
     
+    public DescribeLocationS3Request(@JsonProperty("LocationArn") String locationArn) {
+        this.locationArn = locationArn;
+  }
 }

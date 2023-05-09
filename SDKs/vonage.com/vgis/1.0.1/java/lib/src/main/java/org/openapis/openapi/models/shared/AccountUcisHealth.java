@@ -12,6 +12,7 @@ public class AccountUcisHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AccountUcisHealth withMessage(String message) {
         this.message = message;
         return this;
@@ -20,9 +21,11 @@ public class AccountUcisHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AccountUcisHealth withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AccountUcisHealth(){}
 }

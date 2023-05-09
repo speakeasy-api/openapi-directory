@@ -12,6 +12,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appVersion")
     public String appVersion;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -20,6 +21,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadURL")
     public String downloadURL;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withDownloadURL(String downloadURL) {
         this.downloadURL = downloadURL;
         return this;
@@ -35,6 +38,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     
     @JsonProperty("isAvailable")
     public Boolean isAvailable;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
@@ -43,6 +47,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisabled")
     public Boolean isDisabled;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -51,6 +56,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMandatory")
     public Boolean isMandatory;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -59,6 +65,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withLabel(String label) {
         this.label = label;
         return this;
@@ -67,6 +74,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageHash")
     public String packageHash;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withPackageHash(String packageHash) {
         this.packageHash = packageHash;
         return this;
@@ -75,6 +83,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageSize")
     public Double packageSize;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withPackageSize(Double packageSize) {
         this.packageSize = packageSize;
         return this;
@@ -83,6 +92,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -91,6 +101,7 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shouldRunBinaryVersion")
     public Boolean shouldRunBinaryVersion;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withShouldRunBinaryVersion(Boolean shouldRunBinaryVersion) {
         this.shouldRunBinaryVersion = shouldRunBinaryVersion;
         return this;
@@ -99,9 +110,13 @@ public class LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateAppVersion")
     public Boolean updateAppVersion;
+
     public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withUpdateAppVersion(Boolean updateAppVersion) {
         this.updateAppVersion = updateAppVersion;
         return this;
     }
     
+    public LegacyCodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo(@JsonProperty("isAvailable") Boolean isAvailable) {
+        this.isAvailable = isAvailable;
+  }
 }

@@ -18,9 +18,11 @@ public class AndroidDeviceList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDevices")
     public AndroidDevice[] androidDevices;
+
     public AndroidDeviceList withAndroidDevices(AndroidDevice[] androidDevices) {
         this.androidDevices = androidDevices;
         return this;
     }
     
+    public AndroidDeviceList(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDataSourceSyncJobResponse {
@@ -12,6 +13,7 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartDataSourceSyncJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public Object conflictException;
+
     public StartDataSourceSyncJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartDataSourceSyncJobResponse {
     
     
     public String contentType;
+
     public StartDataSourceSyncJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public Object internalServerException;
+
     public StartDataSourceSyncJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public Object resourceInUseException;
+
     public StartDataSourceSyncJobResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartDataSourceSyncJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDataSourceSyncJobResponse startDataSourceSyncJobResponse;
+
     public StartDataSourceSyncJobResponse withStartDataSourceSyncJobResponse(org.openapis.openapi.models.shared.StartDataSourceSyncJobResponse startDataSourceSyncJobResponse) {
         this.startDataSourceSyncJobResponse = startDataSourceSyncJobResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartDataSourceSyncJobResponse {
     
     
     public Integer statusCode;
+
     public StartDataSourceSyncJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartDataSourceSyncJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDataSourceSyncJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public Object throttlingException;
+
     public StartDataSourceSyncJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartDataSourceSyncJobResponse {
      */
     
     public Object validationException;
+
     public StartDataSourceSyncJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartDataSourceSyncJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

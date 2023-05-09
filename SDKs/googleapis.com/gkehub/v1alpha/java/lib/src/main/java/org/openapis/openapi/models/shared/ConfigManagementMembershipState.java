@@ -18,6 +18,7 @@ public class ConfigManagementMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binauthzState")
     public ConfigManagementBinauthzState binauthzState;
+
     public ConfigManagementMembershipState withBinauthzState(ConfigManagementBinauthzState binauthzState) {
         this.binauthzState = binauthzState;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public ConfigManagementMembershipState withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -40,6 +42,7 @@ public class ConfigManagementMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configSyncState")
     public ConfigManagementConfigSyncState configSyncState;
+
     public ConfigManagementMembershipState withConfigSyncState(ConfigManagementConfigSyncState configSyncState) {
         this.configSyncState = configSyncState;
         return this;
@@ -51,6 +54,7 @@ public class ConfigManagementMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hierarchyControllerState")
     public ConfigManagementHierarchyControllerState hierarchyControllerState;
+
     public ConfigManagementMembershipState withHierarchyControllerState(ConfigManagementHierarchyControllerState hierarchyControllerState) {
         this.hierarchyControllerState = hierarchyControllerState;
         return this;
@@ -62,6 +66,7 @@ public class ConfigManagementMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membershipSpec")
     public ConfigManagementMembershipSpec membershipSpec;
+
     public ConfigManagementMembershipState withMembershipSpec(ConfigManagementMembershipSpec membershipSpec) {
         this.membershipSpec = membershipSpec;
         return this;
@@ -73,6 +78,7 @@ public class ConfigManagementMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorState")
     public ConfigManagementOperatorState operatorState;
+
     public ConfigManagementMembershipState withOperatorState(ConfigManagementOperatorState operatorState) {
         this.operatorState = operatorState;
         return this;
@@ -84,9 +90,11 @@ public class ConfigManagementMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyControllerState")
     public ConfigManagementPolicyControllerState policyControllerState;
+
     public ConfigManagementMembershipState withPolicyControllerState(ConfigManagementPolicyControllerState policyControllerState) {
         this.policyControllerState = policyControllerState;
         return this;
     }
     
+    public ConfigManagementMembershipState(){}
 }

@@ -12,6 +12,7 @@ public class ListUserProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainIdEquals")
     public String domainIdEquals;
+
     public ListUserProfilesRequest withDomainIdEquals(String domainIdEquals) {
         this.domainIdEquals = domainIdEquals;
         return this;
@@ -20,6 +21,7 @@ public class ListUserProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListUserProfilesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListUserProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListUserProfilesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class ListUserProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public UserProfileSortKeyEnum sortBy;
+
     public ListUserProfilesRequest withSortBy(UserProfileSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -44,6 +48,7 @@ public class ListUserProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListUserProfilesRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -52,9 +57,11 @@ public class ListUserProfilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserProfileNameContains")
     public String userProfileNameContains;
+
     public ListUserProfilesRequest withUserProfileNameContains(String userProfileNameContains) {
         this.userProfileNameContains = userProfileNameContains;
         return this;
     }
     
+    public ListUserProfilesRequest(){}
 }

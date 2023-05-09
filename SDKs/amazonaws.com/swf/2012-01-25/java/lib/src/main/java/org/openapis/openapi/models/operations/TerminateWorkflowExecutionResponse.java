@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TerminateWorkflowExecutionResponse {
     
     public String contentType;
+
     public TerminateWorkflowExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TerminateWorkflowExecutionResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public TerminateWorkflowExecutionResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class TerminateWorkflowExecutionResponse {
     
     
     public Integer statusCode;
+
     public TerminateWorkflowExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class TerminateWorkflowExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TerminateWorkflowExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class TerminateWorkflowExecutionResponse {
      */
     
     public Object unknownResourceFault;
+
     public TerminateWorkflowExecutionResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public TerminateWorkflowExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

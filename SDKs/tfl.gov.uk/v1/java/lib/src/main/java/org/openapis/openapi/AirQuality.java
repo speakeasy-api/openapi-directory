@@ -49,14 +49,12 @@ public class AirQuality {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AirQualityGetResponse res = new org.openapis.openapi.models.operations.AirQualityGetResponse() {{
+        org.openapis.openapi.models.operations.AirQualityGetResponse res = new org.openapis.openapi.models.operations.AirQualityGetResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

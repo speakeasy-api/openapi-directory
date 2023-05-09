@@ -23,6 +23,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public PipelineExecution withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -33,6 +34,7 @@ public class PipelineExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public PipelineExecution withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -41,6 +43,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public PipelineExecution withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -52,6 +55,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public PipelineExecution withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -62,6 +66,7 @@ public class PipelineExecution {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public PipelineExecution withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -70,6 +75,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfiguration")
     public ParallelismConfiguration parallelismConfiguration;
+
     public PipelineExecution withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
         this.parallelismConfiguration = parallelismConfiguration;
         return this;
@@ -78,6 +84,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineArn")
     public String pipelineArn;
+
     public PipelineExecution withPipelineArn(String pipelineArn) {
         this.pipelineArn = pipelineArn;
         return this;
@@ -86,6 +93,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionArn")
     public String pipelineExecutionArn;
+
     public PipelineExecution withPipelineExecutionArn(String pipelineExecutionArn) {
         this.pipelineExecutionArn = pipelineExecutionArn;
         return this;
@@ -94,6 +102,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDescription")
     public String pipelineExecutionDescription;
+
     public PipelineExecution withPipelineExecutionDescription(String pipelineExecutionDescription) {
         this.pipelineExecutionDescription = pipelineExecutionDescription;
         return this;
@@ -102,6 +111,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionDisplayName")
     public String pipelineExecutionDisplayName;
+
     public PipelineExecution withPipelineExecutionDisplayName(String pipelineExecutionDisplayName) {
         this.pipelineExecutionDisplayName = pipelineExecutionDisplayName;
         return this;
@@ -110,6 +120,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExecutionStatus")
     public PipelineExecutionStatusEnum pipelineExecutionStatus;
+
     public PipelineExecution withPipelineExecutionStatus(PipelineExecutionStatusEnum pipelineExecutionStatus) {
         this.pipelineExecutionStatus = pipelineExecutionStatus;
         return this;
@@ -121,6 +132,7 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineExperimentConfig")
     public PipelineExperimentConfig pipelineExperimentConfig;
+
     public PipelineExecution withPipelineExperimentConfig(PipelineExperimentConfig pipelineExperimentConfig) {
         this.pipelineExperimentConfig = pipelineExperimentConfig;
         return this;
@@ -129,9 +141,11 @@ public class PipelineExecution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineParameters")
     public Parameter[] pipelineParameters;
+
     public PipelineExecution withPipelineParameters(Parameter[] pipelineParameters) {
         this.pipelineParameters = pipelineParameters;
         return this;
     }
     
+    public PipelineExecution(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchTypePointIcebridgeMccordsIrmcr3Response {
     
     public String contentType;
+
     public SearchTypePointIcebridgeMccordsIrmcr3Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchTypePointIcebridgeMccordsIrmcr3Response {
     
     
     public Integer statusCode;
+
     public SearchTypePointIcebridgeMccordsIrmcr3Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class SearchTypePointIcebridgeMccordsIrmcr3Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchTypePointIcebridgeMccordsIrmcr3Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchTypePointIcebridgeMccordsIrmcr3Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canaryDeployment")
     public CanaryDeployment canaryDeployment;
+
     public Canary withCanaryDeployment(CanaryDeployment canaryDeployment) {
         this.canaryDeployment = canaryDeployment;
         return this;
@@ -29,6 +30,7 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customCanaryDeployment")
     public CustomCanaryDeployment customCanaryDeployment;
+
     public Canary withCustomCanaryDeployment(CustomCanaryDeployment customCanaryDeployment) {
         this.customCanaryDeployment = customCanaryDeployment;
         return this;
@@ -40,9 +42,11 @@ public class Canary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeConfig")
     public RuntimeConfig runtimeConfig;
+
     public Canary withRuntimeConfig(RuntimeConfig runtimeConfig) {
         this.runtimeConfig = runtimeConfig;
         return this;
     }
     
+    public Canary(){}
 }

@@ -15,9 +15,11 @@ public class GetProjectStatusesForProject200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectStatusCompact[] data;
+
     public GetProjectStatusesForProject200ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectStatusCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetProjectStatusesForProject200ApplicationJSON(){}
 }

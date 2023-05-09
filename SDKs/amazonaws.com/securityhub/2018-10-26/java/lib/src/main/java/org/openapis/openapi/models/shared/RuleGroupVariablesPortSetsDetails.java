@@ -15,9 +15,11 @@ public class RuleGroupVariablesPortSetsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definition")
     public String[] definition;
+
     public RuleGroupVariablesPortSetsDetails withDefinition(String[] definition) {
         this.definition = definition;
         return this;
     }
     
+    public RuleGroupVariablesPortSetsDetails(){}
 }

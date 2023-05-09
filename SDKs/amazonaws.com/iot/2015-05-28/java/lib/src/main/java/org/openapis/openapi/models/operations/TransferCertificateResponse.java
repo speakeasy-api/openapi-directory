@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransferCertificateResponse {
@@ -12,6 +13,7 @@ public class TransferCertificateResponse {
      */
     
     public Object certificateStateException;
+
     public TransferCertificateResponse withCertificateStateException(Object certificateStateException) {
         this.certificateStateException = certificateStateException;
         return this;
@@ -19,6 +21,7 @@ public class TransferCertificateResponse {
     
     
     public String contentType;
+
     public TransferCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TransferCertificateResponse {
      */
     
     public Object internalFailureException;
+
     public TransferCertificateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class TransferCertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public TransferCertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class TransferCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TransferCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class TransferCertificateResponse {
     
     
     public Integer statusCode;
+
     public TransferCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class TransferCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransferCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class TransferCertificateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public TransferCertificateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class TransferCertificateResponse {
      */
     
     public Object throttlingException;
+
     public TransferCertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,6 +103,7 @@ public class TransferCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferCertificateResponse transferCertificateResponse;
+
     public TransferCertificateResponse withTransferCertificateResponse(org.openapis.openapi.models.shared.TransferCertificateResponse transferCertificateResponse) {
         this.transferCertificateResponse = transferCertificateResponse;
         return this;
@@ -103,6 +114,7 @@ public class TransferCertificateResponse {
      */
     
     public Object transferConflictException;
+
     public TransferCertificateResponse withTransferConflictException(Object transferConflictException) {
         this.transferConflictException = transferConflictException;
         return this;
@@ -113,9 +125,14 @@ public class TransferCertificateResponse {
      */
     
     public Object unauthorizedException;
+
     public TransferCertificateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public TransferCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

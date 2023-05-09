@@ -15,6 +15,7 @@ public class StyleGuide {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public StyleGuide withId(Long id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class StyleGuide {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public DocumentLinks links;
+
     public StyleGuide withLinks(DocumentLinks links) {
         this.links = links;
         return this;
@@ -31,6 +33,7 @@ public class StyleGuide {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StyleGuide withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class StyleGuide {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploaded_at")
     public Long uploadedAt;
+
     public StyleGuide withUploadedAt(Long uploadedAt) {
         this.uploadedAt = uploadedAt;
         return this;
     }
     
+    public StyleGuide(){}
 }

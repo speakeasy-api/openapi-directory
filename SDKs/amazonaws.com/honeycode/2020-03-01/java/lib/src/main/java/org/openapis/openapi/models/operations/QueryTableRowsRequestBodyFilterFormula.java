@@ -15,6 +15,7 @@ public class QueryTableRowsRequestBodyFilterFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextRowId")
     public String contextRowId;
+
     public QueryTableRowsRequestBodyFilterFormula withContextRowId(String contextRowId) {
         this.contextRowId = contextRowId;
         return this;
@@ -23,9 +24,11 @@ public class QueryTableRowsRequestBodyFilterFormula {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formula")
     public String formula;
+
     public QueryTableRowsRequestBodyFilterFormula withFormula(String formula) {
         this.formula = formula;
         return this;
     }
     
+    public QueryTableRowsRequestBodyFilterFormula(){}
 }

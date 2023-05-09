@@ -15,6 +15,7 @@ public class InstitutionsDetailInstitutionAttributes {
      */
     
     public String authUrl;
+
     public InstitutionsDetailInstitutionAttributes withAuthUrl(String authUrl) {
         this.authUrl = authUrl;
         return this;
@@ -25,6 +26,7 @@ public class InstitutionsDetailInstitutionAttributes {
      */
     
     public String description;
+
     public InstitutionsDetailInstitutionAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class InstitutionsDetailInstitutionAttributes {
      */
     
     public String logoPath;
+
     public InstitutionsDetailInstitutionAttributes withLogoPath(String logoPath) {
         this.logoPath = logoPath;
         return this;
@@ -45,9 +48,11 @@ public class InstitutionsDetailInstitutionAttributes {
      */
     
     public String name;
+
     public InstitutionsDetailInstitutionAttributes withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InstitutionsDetailInstitutionAttributes(){}
 }

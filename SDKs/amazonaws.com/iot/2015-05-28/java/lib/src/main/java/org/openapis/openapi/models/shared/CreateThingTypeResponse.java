@@ -15,6 +15,7 @@ public class CreateThingTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeArn")
     public String thingTypeArn;
+
     public CreateThingTypeResponse withThingTypeArn(String thingTypeArn) {
         this.thingTypeArn = thingTypeArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateThingTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeId")
     public String thingTypeId;
+
     public CreateThingTypeResponse withThingTypeId(String thingTypeId) {
         this.thingTypeId = thingTypeId;
         return this;
@@ -31,9 +33,11 @@ public class CreateThingTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeName")
     public String thingTypeName;
+
     public CreateThingTypeResponse withThingTypeName(String thingTypeName) {
         this.thingTypeName = thingTypeName;
         return this;
     }
     
+    public CreateThingTypeResponse(){}
 }

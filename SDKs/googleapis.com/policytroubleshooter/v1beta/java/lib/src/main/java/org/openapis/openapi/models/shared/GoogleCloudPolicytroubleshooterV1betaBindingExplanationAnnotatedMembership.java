@@ -18,6 +18,7 @@ public class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership")
     public GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipMembershipEnum membership;
+
     public GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership withMembership(GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipMembershipEnum membership) {
         this.membership = membership;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMem
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevance")
     public GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipRelevanceEnum relevance;
+
     public GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership withRelevance(GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipRelevanceEnum relevance) {
         this.relevance = relevance;
         return this;
     }
     
+    public GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership(){}
 }

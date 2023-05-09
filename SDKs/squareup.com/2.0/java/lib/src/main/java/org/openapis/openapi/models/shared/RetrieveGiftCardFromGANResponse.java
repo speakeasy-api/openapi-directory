@@ -19,6 +19,7 @@ public class RetrieveGiftCardFromGANResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveGiftCardFromGANResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -30,9 +31,11 @@ public class RetrieveGiftCardFromGANResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gift_card")
     public GiftCard giftCard;
+
     public RetrieveGiftCardFromGANResponse withGiftCard(GiftCard giftCard) {
         this.giftCard = giftCard;
         return this;
     }
     
+    public RetrieveGiftCardFromGANResponse(){}
 }

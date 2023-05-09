@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateAttributeForEnterpriseUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatchSchema patchSchema;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseUserRequest withPatchSchema(org.openapis.openapi.models.shared.PatchSchema patchSchema) {
         this.patchSchema = patchSchema;
         return this;
@@ -19,9 +21,14 @@ public class EnterpriseAdminUpdateAttributeForEnterpriseUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_user_id")
     public String scimUserId;
+
     public EnterpriseAdminUpdateAttributeForEnterpriseUserRequest withScimUserId(String scimUserId) {
         this.scimUserId = scimUserId;
         return this;
     }
     
+    public EnterpriseAdminUpdateAttributeForEnterpriseUserRequest(@JsonProperty("patch-schema") org.openapis.openapi.models.shared.PatchSchema patchSchema, @JsonProperty("scim_user_id") String scimUserId) {
+        this.patchSchema = patchSchema;
+        this.scimUserId = scimUserId;
+  }
 }

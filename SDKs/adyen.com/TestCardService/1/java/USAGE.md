@@ -3,15 +3,14 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostCreateTestCardRangesSecurity;
 import org.openapis.openapi.models.operations.PostCreateTestCardRangesResponse;
+import org.openapis.openapi.models.operations.PostCreateTestCardRangesSecurity;
+import org.openapis.openapi.models.shared.AvsAddress;
 import org.openapis.openapi.models.shared.CreateTestCardRangesRequest;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
+import org.openapis.openapi.models.shared.TestCardRange;
 import org.openapis.openapi.models.shared.TestCardRangeExpiryMonthEnum;
 import org.openapis.openapi.models.shared.TestCardRangeThreeDDirectoryServerResponseEnum;
-import org.openapis.openapi.models.shared.TestCardRange;
-import org.openapis.openapi.models.shared.AvsAddress;
-import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -19,67 +18,65 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.CreateTestCardRangesRequest req = new CreateTestCardRangesRequest() {{
-                accountCode = "corrupti";
-                accountTypeCode = "provident";
-                testCardRanges = new org.openapis.openapi.models.shared.TestCardRange[]{{
-                    add(new TestCardRange() {{
-                        address = new AvsAddress() {{
-                            streetAddress = "quibusdam";
-                            zip = "unde";
-                        }};
-                        cardHolderName = "nulla";
-                        cvc = "corrupti";
-                        expiryMonth = "OCTOBER";
-                        expiryYear = 423655;
-                        rangeEnd = "error";
-                        rangeStart = "deserunt";
-                        threeDDirectoryServerResponse = "U";
-                        threeDPassword = "iure";
-                        threeDUsername = "magnam";
-                    }}),
-                    add(new TestCardRange() {{
-                        address = new AvsAddress() {{
-                            streetAddress = "debitis";
-                            zip = "ipsa";
-                        }};
-                        cardHolderName = "delectus";
-                        cvc = "tempora";
-                        expiryMonth = "JANUARY";
-                        expiryYear = 477665;
-                        rangeEnd = "minus";
-                        rangeStart = "placeat";
-                        threeDDirectoryServerResponse = "U";
-                        threeDPassword = "iusto";
-                        threeDUsername = "excepturi";
-                    }}),
-                    add(new TestCardRange() {{
-                        address = new AvsAddress() {{
-                            streetAddress = "nisi";
-                            zip = "recusandae";
-                        }};
-                        cardHolderName = "temporibus";
-                        cvc = "ab";
-                        expiryMonth = "JANUARY";
-                        expiryYear = 87129;
-                        rangeEnd = "deserunt";
-                        rangeStart = "perferendis";
-                        threeDDirectoryServerResponse = "U";
-                        threeDPassword = "repellendus";
-                        threeDUsername = "sapiente";
-                    }}),
-                }};
-            }}            
+            org.openapis.openapi.models.shared.CreateTestCardRangesRequest req = new CreateTestCardRangesRequest("corrupti", "provident",                 new org.openapis.openapi.models.shared.TestCardRange[]{{
+                                add(new TestCardRange("ipsa", TestCardRangeExpiryMonthEnum.SEPTEMBER, 272656, "suscipit", "molestiae") {{
+                                    address = new AvsAddress("nulla") {{
+                                        streetAddress = "quibusdam";
+                                        zip = "unde";
+                                    }};
+                                    cardHolderName = "corrupti";
+                                    cvc = "illum";
+                                    expiryMonth = TestCardRangeExpiryMonthEnum.JULY;
+                                    expiryYear = 623564;
+                                    rangeEnd = "deserunt";
+                                    rangeStart = "suscipit";
+                                    threeDDirectoryServerResponse = TestCardRangeThreeDDirectoryServerResponseEnum.U;
+                                    threeDPassword = "magnam";
+                                    threeDUsername = "debitis";
+                                }}),
+                                add(new TestCardRange("perferendis", TestCardRangeExpiryMonthEnum.JANUARY, 832620, "sapiente", "quo") {{
+                                    address = new AvsAddress("voluptatum") {{
+                                        streetAddress = "minus";
+                                        zip = "placeat";
+                                    }};
+                                    cardHolderName = "iusto";
+                                    cvc = "excepturi";
+                                    expiryMonth = TestCardRangeExpiryMonthEnum.JANUARY;
+                                    expiryYear = 925597;
+                                    rangeEnd = "temporibus";
+                                    rangeStart = "ab";
+                                    threeDDirectoryServerResponse = TestCardRangeThreeDDirectoryServerResponseEnum.U;
+                                    threeDPassword = "veritatis";
+                                    threeDUsername = "deserunt";
+                                }}),
+                                add(new TestCardRange("nam", TestCardRangeExpiryMonthEnum.MARCH, 582020, "fugit", "deleniti") {{
+                                    address = new AvsAddress("at") {{
+                                        streetAddress = "odit";
+                                        zip = "at";
+                                    }};
+                                    cardHolderName = "maiores";
+                                    cvc = "molestiae";
+                                    expiryMonth = TestCardRangeExpiryMonthEnum.NOVEMBER;
+                                    expiryYear = 800911;
+                                    rangeEnd = "esse";
+                                    rangeStart = "totam";
+                                    threeDDirectoryServerResponse = TestCardRangeThreeDDirectoryServerResponseEnum.Y;
+                                    threeDPassword = "dolorum";
+                                    threeDUsername = "dicta";
+                                }}),
+                            }});            
 
             PostCreateTestCardRangesResponse res = sdk.general.postCreateTestCardRanges(req, new PostCreateTestCardRangesSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.createTestCardRangesResult.isPresent()) {
+            if (res.createTestCardRangesResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

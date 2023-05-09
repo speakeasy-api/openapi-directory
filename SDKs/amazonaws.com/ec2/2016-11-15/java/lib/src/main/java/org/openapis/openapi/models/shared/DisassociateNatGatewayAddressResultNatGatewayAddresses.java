@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     public String allocationId;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String associationId;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String failureMessage;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -33,6 +36,7 @@ public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public Boolean isPrimary;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withIsPrimary(Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
@@ -40,6 +44,7 @@ public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String networkInterfaceId;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -47,6 +52,7 @@ public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String privateIp;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withPrivateIp(String privateIp) {
         this.privateIp = privateIp;
         return this;
@@ -54,6 +60,7 @@ public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public String publicIp;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -61,9 +68,11 @@ public class DisassociateNatGatewayAddressResultNatGatewayAddresses {
     
     
     public DisassociateNatGatewayAddressResultNatGatewayAddressesStatusEnum status;
+
     public DisassociateNatGatewayAddressResultNatGatewayAddresses withStatus(DisassociateNatGatewayAddressResultNatGatewayAddressesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DisassociateNatGatewayAddressResultNatGatewayAddresses(){}
 }

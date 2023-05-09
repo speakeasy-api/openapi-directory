@@ -18,6 +18,7 @@ public class RecipientAccountReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceId")
     public String referenceId;
+
     public RecipientAccountReference withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -29,9 +30,11 @@ public class RecipientAccountReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceType")
     public String referenceType;
+
     public RecipientAccountReference withReferenceType(String referenceType) {
         this.referenceType = referenceType;
         return this;
     }
     
+    public RecipientAccountReference(){}
 }

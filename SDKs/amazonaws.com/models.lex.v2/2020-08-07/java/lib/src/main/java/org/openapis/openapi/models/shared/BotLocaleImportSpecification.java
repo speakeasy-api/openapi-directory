@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BotLocaleImportSpecification {
     @JsonProperty("botId")
     public String botId;
+
     public BotLocaleImportSpecification withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -21,6 +22,7 @@ public class BotLocaleImportSpecification {
     
     @JsonProperty("botVersion")
     public String botVersion;
+
     public BotLocaleImportSpecification withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -28,6 +30,7 @@ public class BotLocaleImportSpecification {
     
     @JsonProperty("localeId")
     public String localeId;
+
     public BotLocaleImportSpecification withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -36,6 +39,7 @@ public class BotLocaleImportSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluIntentConfidenceThreshold")
     public Double nluIntentConfidenceThreshold;
+
     public BotLocaleImportSpecification withNluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
         this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
         return this;
@@ -47,9 +51,15 @@ public class BotLocaleImportSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voiceSettings")
     public VoiceSettings voiceSettings;
+
     public BotLocaleImportSpecification withVoiceSettings(VoiceSettings voiceSettings) {
         this.voiceSettings = voiceSettings;
         return this;
     }
     
+    public BotLocaleImportSpecification(@JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion, @JsonProperty("localeId") String localeId) {
+        this.botId = botId;
+        this.botVersion = botVersion;
+        this.localeId = localeId;
+  }
 }

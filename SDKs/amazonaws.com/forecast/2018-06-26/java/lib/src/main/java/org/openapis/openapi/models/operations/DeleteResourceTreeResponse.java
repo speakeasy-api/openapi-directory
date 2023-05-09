@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourceTreeResponse {
     
     public String contentType;
+
     public DeleteResourceTreeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourceTreeResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteResourceTreeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResourceTreeResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteResourceTreeResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourceTreeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResourceTreeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteResourceTreeResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourceTreeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteResourceTreeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourceTreeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteResourceTreeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MaxAgeRule - A lifecycle rule that deletes application versions after the specified number of days.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MaxAgeRule {
     
     public Boolean deleteSourceFromS3;
+
     public MaxAgeRule withDeleteSourceFromS3(Boolean deleteSourceFromS3) {
         this.deleteSourceFromS3 = deleteSourceFromS3;
         return this;
@@ -19,6 +20,7 @@ public class MaxAgeRule {
     
     
     public Boolean enabled;
+
     public MaxAgeRule withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,9 +28,13 @@ public class MaxAgeRule {
     
     
     public Long maxAgeInDays;
+
     public MaxAgeRule withMaxAgeInDays(Long maxAgeInDays) {
         this.maxAgeInDays = maxAgeInDays;
         return this;
     }
     
+    public MaxAgeRule(@JsonProperty("Enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

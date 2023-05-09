@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RepertoireCreaResponse {
     
     public String contentType;
+
     public RepertoireCreaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RepertoireCreaResponse {
      */
     
     public org.openapis.openapi.models.shared.Erreur erreur;
+
     public RepertoireCreaResponse withErreur(org.openapis.openapi.models.shared.Erreur erreur) {
         this.erreur = erreur;
         return this;
@@ -29,6 +32,7 @@ public class RepertoireCreaResponse {
      */
     
     public org.openapis.openapi.models.shared.REPERTOIREcreatereponse repertoirEcreatereponse;
+
     public RepertoireCreaResponse withREPERTOIREcreatereponse(org.openapis.openapi.models.shared.REPERTOIREcreatereponse repertoirEcreatereponse) {
         this.repertoirEcreatereponse = repertoirEcreatereponse;
         return this;
@@ -36,6 +40,7 @@ public class RepertoireCreaResponse {
     
     
     public Integer statusCode;
+
     public RepertoireCreaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RepertoireCreaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RepertoireCreaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RepertoireCreaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

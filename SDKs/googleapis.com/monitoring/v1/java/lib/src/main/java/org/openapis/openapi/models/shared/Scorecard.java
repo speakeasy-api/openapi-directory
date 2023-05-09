@@ -18,6 +18,7 @@ public class Scorecard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gaugeView")
     public GaugeView gaugeView;
+
     public Scorecard withGaugeView(GaugeView gaugeView) {
         this.gaugeView = gaugeView;
         return this;
@@ -29,6 +30,7 @@ public class Scorecard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkChartView")
     public SparkChartView sparkChartView;
+
     public Scorecard withSparkChartView(SparkChartView sparkChartView) {
         this.sparkChartView = sparkChartView;
         return this;
@@ -40,6 +42,7 @@ public class Scorecard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholds")
     public Threshold[] thresholds;
+
     public Scorecard withThresholds(Threshold[] thresholds) {
         this.thresholds = thresholds;
         return this;
@@ -51,9 +54,11 @@ public class Scorecard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesQuery")
     public TimeSeriesQuery timeSeriesQuery;
+
     public Scorecard withTimeSeriesQuery(TimeSeriesQuery timeSeriesQuery) {
         this.timeSeriesQuery = timeSeriesQuery;
         return this;
     }
     
+    public Scorecard(){}
 }

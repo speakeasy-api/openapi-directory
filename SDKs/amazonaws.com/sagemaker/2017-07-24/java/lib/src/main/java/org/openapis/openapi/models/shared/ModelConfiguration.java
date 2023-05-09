@@ -15,6 +15,7 @@ public class ModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public ModelConfiguration withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
@@ -23,6 +24,7 @@ public class ModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentParameters")
     public EnvironmentParameter[] environmentParameters;
+
     public ModelConfiguration withEnvironmentParameters(EnvironmentParameter[] environmentParameters) {
         this.environmentParameters = environmentParameters;
         return this;
@@ -31,9 +33,11 @@ public class ModelConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InferenceSpecificationName")
     public String inferenceSpecificationName;
+
     public ModelConfiguration withInferenceSpecificationName(String inferenceSpecificationName) {
         this.inferenceSpecificationName = inferenceSpecificationName;
         return this;
     }
     
+    public ModelConfiguration(){}
 }

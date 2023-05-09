@@ -12,6 +12,7 @@ public class GetV2TeamTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2TeamTemplateAttachmentsJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -22,6 +23,7 @@ public class GetV2TeamTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2TeamTemplateAttachmentsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -32,6 +34,7 @@ public class GetV2TeamTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2TeamTemplateAttachmentsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -42,6 +45,7 @@ public class GetV2TeamTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2TeamTemplateAttachmentsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -52,6 +56,7 @@ public class GetV2TeamTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2TeamTemplateAttachmentsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -62,9 +67,11 @@ public class GetV2TeamTemplateAttachmentsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=team_template_id")
     public Long[] teamTemplateId;
+
     public GetV2TeamTemplateAttachmentsJsonRequest withTeamTemplateId(Long[] teamTemplateId) {
         this.teamTemplateId = teamTemplateId;
         return this;
     }
     
+    public GetV2TeamTemplateAttachmentsJsonRequest(){}
 }

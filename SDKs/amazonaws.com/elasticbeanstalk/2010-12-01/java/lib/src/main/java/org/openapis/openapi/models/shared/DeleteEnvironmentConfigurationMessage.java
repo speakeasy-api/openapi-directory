@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteEnvironmentConfigurationMessage - Request to delete a draft environment configuration.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteEnvironmentConfigurationMessage {
     
     public String applicationName;
+
     public DeleteEnvironmentConfigurationMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,14 @@ public class DeleteEnvironmentConfigurationMessage {
     
     
     public String environmentName;
+
     public DeleteEnvironmentConfigurationMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public DeleteEnvironmentConfigurationMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("EnvironmentName") String environmentName) {
+        this.applicationName = applicationName;
+        this.environmentName = environmentName;
+  }
 }

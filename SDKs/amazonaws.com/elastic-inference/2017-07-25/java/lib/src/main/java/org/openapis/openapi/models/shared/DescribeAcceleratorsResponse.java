@@ -15,6 +15,7 @@ public class DescribeAcceleratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorSet")
     public ElasticInferenceAccelerator[] acceleratorSet;
+
     public DescribeAcceleratorsResponse withAcceleratorSet(ElasticInferenceAccelerator[] acceleratorSet) {
         this.acceleratorSet = acceleratorSet;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAcceleratorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeAcceleratorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAcceleratorsResponse(){}
 }

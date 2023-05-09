@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFacetResponse {
@@ -12,6 +13,7 @@ public class CreateFacetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFacetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateFacetResponse {
     
     
     public String contentType;
+
     public CreateFacetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFacetResponse {
      */
     
     public java.util.Map<String, Object> createFacetResponse;
+
     public CreateFacetResponse withCreateFacetResponse(java.util.Map<String, Object> createFacetResponse) {
         this.createFacetResponse = createFacetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFacetResponse {
      */
     
     public Object facetAlreadyExistsException;
+
     public CreateFacetResponse withFacetAlreadyExistsException(Object facetAlreadyExistsException) {
         this.facetAlreadyExistsException = facetAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFacetResponse {
      */
     
     public Object facetValidationException;
+
     public CreateFacetResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFacetResponse {
      */
     
     public Object internalServiceException;
+
     public CreateFacetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateFacetResponse {
      */
     
     public Object invalidArnException;
+
     public CreateFacetResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class CreateFacetResponse {
      */
     
     public Object invalidRuleException;
+
     public CreateFacetResponse withInvalidRuleException(Object invalidRuleException) {
         this.invalidRuleException = invalidRuleException;
         return this;
@@ -89,6 +98,7 @@ public class CreateFacetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateFacetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateFacetResponse {
     
     
     public Integer statusCode;
+
     public CreateFacetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateFacetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFacetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateFacetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFacetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class CreateFacetResponse {
      */
     
     public Object retryableConflictException;
+
     public CreateFacetResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,9 +147,14 @@ public class CreateFacetResponse {
      */
     
     public Object validationException;
+
     public CreateFacetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFacetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

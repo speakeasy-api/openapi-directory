@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SelectAttributesActivity {
     @JsonProperty("attributes")
     public String[] attributes;
+
     public SelectAttributesActivity withAttributes(String[] attributes) {
         this.attributes = attributes;
         return this;
@@ -21,6 +22,7 @@ public class SelectAttributesActivity {
     
     @JsonProperty("name")
     public String name;
+
     public SelectAttributesActivity withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class SelectAttributesActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public SelectAttributesActivity withNext(String next) {
         this.next = next;
         return this;
     }
     
+    public SelectAttributesActivity(@JsonProperty("attributes") String[] attributes, @JsonProperty("name") String name) {
+        this.attributes = attributes;
+        this.name = name;
+  }
 }

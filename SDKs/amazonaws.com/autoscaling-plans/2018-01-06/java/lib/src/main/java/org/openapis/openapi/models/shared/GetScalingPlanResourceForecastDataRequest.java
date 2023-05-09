@@ -16,6 +16,7 @@ public class GetScalingPlanResourceForecastDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetScalingPlanResourceForecastDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class GetScalingPlanResourceForecastDataRequest {
     
     @JsonProperty("ForecastDataType")
     public ForecastDataTypeEnum forecastDataType;
+
     public GetScalingPlanResourceForecastDataRequest withForecastDataType(ForecastDataTypeEnum forecastDataType) {
         this.forecastDataType = forecastDataType;
         return this;
@@ -30,6 +32,7 @@ public class GetScalingPlanResourceForecastDataRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public GetScalingPlanResourceForecastDataRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -37,6 +40,7 @@ public class GetScalingPlanResourceForecastDataRequest {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public GetScalingPlanResourceForecastDataRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -44,6 +48,7 @@ public class GetScalingPlanResourceForecastDataRequest {
     
     @JsonProperty("ScalingPlanName")
     public String scalingPlanName;
+
     public GetScalingPlanResourceForecastDataRequest withScalingPlanName(String scalingPlanName) {
         this.scalingPlanName = scalingPlanName;
         return this;
@@ -51,6 +56,7 @@ public class GetScalingPlanResourceForecastDataRequest {
     
     @JsonProperty("ScalingPlanVersion")
     public Long scalingPlanVersion;
+
     public GetScalingPlanResourceForecastDataRequest withScalingPlanVersion(Long scalingPlanVersion) {
         this.scalingPlanVersion = scalingPlanVersion;
         return this;
@@ -58,6 +64,7 @@ public class GetScalingPlanResourceForecastDataRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public GetScalingPlanResourceForecastDataRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -67,9 +74,20 @@ public class GetScalingPlanResourceForecastDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetScalingPlanResourceForecastDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetScalingPlanResourceForecastDataRequest(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("ForecastDataType") ForecastDataTypeEnum forecastDataType, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ScalingPlanName") String scalingPlanName, @JsonProperty("ScalingPlanVersion") Long scalingPlanVersion, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.forecastDataType = forecastDataType;
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
+        this.scalingPlanName = scalingPlanName;
+        this.scalingPlanVersion = scalingPlanVersion;
+        this.serviceNamespace = serviceNamespace;
+        this.startTime = startTime;
+  }
 }

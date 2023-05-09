@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public ImageAttributeBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public Boolean encrypted;
+
     public ImageAttributeBlockDeviceMappingsEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public Long iops;
+
     public ImageAttributeBlockDeviceMappingsEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public String kmsKeyId;
+
     public ImageAttributeBlockDeviceMappingsEbs withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public String outpostArn;
+
     public ImageAttributeBlockDeviceMappingsEbs withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -47,6 +52,7 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public String snapshotId;
+
     public ImageAttributeBlockDeviceMappingsEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public Long throughput;
+
     public ImageAttributeBlockDeviceMappingsEbs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -61,6 +68,7 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public Long volumeSize;
+
     public ImageAttributeBlockDeviceMappingsEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -68,9 +76,11 @@ public class ImageAttributeBlockDeviceMappingsEbs {
     
     
     public ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum volumeType;
+
     public ImageAttributeBlockDeviceMappingsEbs withVolumeType(ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public ImageAttributeBlockDeviceMappingsEbs(){}
 }

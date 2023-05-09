@@ -15,9 +15,11 @@ public class SuggestionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public SuggestionTextWithHighlights text;
+
     public SuggestionValue withText(SuggestionTextWithHighlights text) {
         this.text = text;
         return this;
     }
     
+    public SuggestionValue(){}
 }

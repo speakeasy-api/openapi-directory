@@ -18,9 +18,11 @@ public class PrivateAuctionTermsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorPrice")
     public Price floorPrice;
+
     public PrivateAuctionTermsInput withFloorPrice(Price floorPrice) {
         this.floorPrice = floorPrice;
         return this;
     }
     
+    public PrivateAuctionTermsInput(){}
 }

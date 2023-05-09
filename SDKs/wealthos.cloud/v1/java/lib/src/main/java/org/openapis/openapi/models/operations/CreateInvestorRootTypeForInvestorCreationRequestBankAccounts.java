@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateInvestorRootTypeForInvestorCreationRequestBankAccounts {
     @JsonProperty("account_name")
     public String accountName;
+
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccounts withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -22,6 +23,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_status")
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum accountStatus;
+
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccounts withAccountStatus(CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -32,6 +34,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestBankAccounts {
      */
     @JsonProperty("bank_account_number")
     public String bankAccountNumber;
+
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccounts withBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
         return this;
@@ -40,6 +43,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("building_society_roll_number")
     public String buildingSocietyRollNumber;
+
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccounts withBuildingSocietyRollNumber(String buildingSocietyRollNumber) {
         this.buildingSocietyRollNumber = buildingSocietyRollNumber;
         return this;
@@ -50,6 +54,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestBankAccounts {
      */
     @JsonProperty("default_account")
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum defaultAccount;
+
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccounts withDefaultAccount(CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum defaultAccount) {
         this.defaultAccount = defaultAccount;
         return this;
@@ -58,9 +63,15 @@ public class CreateInvestorRootTypeForInvestorCreationRequestBankAccounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort_code")
     public String sortCode;
+
     public CreateInvestorRootTypeForInvestorCreationRequestBankAccounts withSortCode(String sortCode) {
         this.sortCode = sortCode;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationRequestBankAccounts(@JsonProperty("account_name") String accountName, @JsonProperty("bank_account_number") String bankAccountNumber, @JsonProperty("default_account") CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum defaultAccount) {
+        this.accountName = accountName;
+        this.bankAccountNumber = bankAccountNumber;
+        this.defaultAccount = defaultAccount;
+  }
 }

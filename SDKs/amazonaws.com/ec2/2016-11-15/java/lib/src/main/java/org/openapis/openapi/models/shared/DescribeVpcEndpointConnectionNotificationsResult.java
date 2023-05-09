@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointConnectionNotificationsResult {
     
     public DescribeVpcEndpointConnectionNotificationsResultConnectionNotificationSet[] connectionNotificationSet;
+
     public DescribeVpcEndpointConnectionNotificationsResult withConnectionNotificationSet(DescribeVpcEndpointConnectionNotificationsResultConnectionNotificationSet[] connectionNotificationSet) {
         this.connectionNotificationSet = connectionNotificationSet;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointConnectionNotificationsResult {
     
     
     public String nextToken;
+
     public DescribeVpcEndpointConnectionNotificationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeVpcEndpointConnectionNotificationsResult(){}
 }

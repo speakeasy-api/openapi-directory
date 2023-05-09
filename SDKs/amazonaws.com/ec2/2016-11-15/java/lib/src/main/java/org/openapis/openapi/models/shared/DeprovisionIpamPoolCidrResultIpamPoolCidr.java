@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeprovisionIpamPoolCidrResultIpamPoolCidr {
     
     public String cidr;
+
     public DeprovisionIpamPoolCidrResultIpamPoolCidr withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class DeprovisionIpamPoolCidrResultIpamPoolCidr {
     
     
     public DeprovisionIpamPoolCidrResultIpamPoolCidrFailureReason failureReason;
+
     public DeprovisionIpamPoolCidrResultIpamPoolCidr withFailureReason(DeprovisionIpamPoolCidrResultIpamPoolCidrFailureReason failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -26,6 +28,7 @@ public class DeprovisionIpamPoolCidrResultIpamPoolCidr {
     
     
     public String ipamPoolCidrId;
+
     public DeprovisionIpamPoolCidrResultIpamPoolCidr withIpamPoolCidrId(String ipamPoolCidrId) {
         this.ipamPoolCidrId = ipamPoolCidrId;
         return this;
@@ -33,6 +36,7 @@ public class DeprovisionIpamPoolCidrResultIpamPoolCidr {
     
     
     public Long netmaskLength;
+
     public DeprovisionIpamPoolCidrResultIpamPoolCidr withNetmaskLength(Long netmaskLength) {
         this.netmaskLength = netmaskLength;
         return this;
@@ -40,9 +44,11 @@ public class DeprovisionIpamPoolCidrResultIpamPoolCidr {
     
     
     public DeprovisionIpamPoolCidrResultIpamPoolCidrStateEnum state;
+
     public DeprovisionIpamPoolCidrResultIpamPoolCidr withState(DeprovisionIpamPoolCidrResultIpamPoolCidrStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DeprovisionIpamPoolCidrResultIpamPoolCidr(){}
 }

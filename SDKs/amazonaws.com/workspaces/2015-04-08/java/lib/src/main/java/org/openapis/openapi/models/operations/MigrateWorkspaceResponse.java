@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrateWorkspaceResponse {
@@ -12,6 +13,7 @@ public class MigrateWorkspaceResponse {
      */
     
     public Object accessDeniedException;
+
     public MigrateWorkspaceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class MigrateWorkspaceResponse {
     
     
     public String contentType;
+
     public MigrateWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class MigrateWorkspaceResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public MigrateWorkspaceResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class MigrateWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.MigrateWorkspaceResult migrateWorkspaceResult;
+
     public MigrateWorkspaceResponse withMigrateWorkspaceResult(org.openapis.openapi.models.shared.MigrateWorkspaceResult migrateWorkspaceResult) {
         this.migrateWorkspaceResult = migrateWorkspaceResult;
         return this;
@@ -49,6 +54,7 @@ public class MigrateWorkspaceResponse {
      */
     
     public Object operationInProgressException;
+
     public MigrateWorkspaceResponse withOperationInProgressException(Object operationInProgressException) {
         this.operationInProgressException = operationInProgressException;
         return this;
@@ -59,6 +65,7 @@ public class MigrateWorkspaceResponse {
      */
     
     public Object operationNotSupportedException;
+
     public MigrateWorkspaceResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -66,6 +73,7 @@ public class MigrateWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public MigrateWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class MigrateWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrateWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class MigrateWorkspaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public MigrateWorkspaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class MigrateWorkspaceResponse {
      */
     
     public Object resourceUnavailableException;
+
     public MigrateWorkspaceResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
     }
     
+    public MigrateWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

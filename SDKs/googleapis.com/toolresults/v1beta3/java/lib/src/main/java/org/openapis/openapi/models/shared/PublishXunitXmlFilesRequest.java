@@ -18,9 +18,11 @@ public class PublishXunitXmlFilesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xunitXmlFiles")
     public FileReference[] xunitXmlFiles;
+
     public PublishXunitXmlFilesRequest withXunitXmlFiles(FileReference[] xunitXmlFiles) {
         this.xunitXmlFiles = xunitXmlFiles;
         return this;
     }
     
+    public PublishXunitXmlFilesRequest(){}
 }

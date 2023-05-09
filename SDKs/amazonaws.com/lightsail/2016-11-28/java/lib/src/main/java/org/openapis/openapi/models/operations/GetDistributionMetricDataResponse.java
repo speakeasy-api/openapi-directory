@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistributionMetricDataResponse {
@@ -12,6 +13,7 @@ public class GetDistributionMetricDataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDistributionMetricDataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDistributionMetricDataResponse {
     
     
     public String contentType;
+
     public GetDistributionMetricDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDistributionMetricDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDistributionMetricDataResult getDistributionMetricDataResult;
+
     public GetDistributionMetricDataResponse withGetDistributionMetricDataResult(org.openapis.openapi.models.shared.GetDistributionMetricDataResult getDistributionMetricDataResult) {
         this.getDistributionMetricDataResult = getDistributionMetricDataResult;
         return this;
@@ -39,6 +43,7 @@ public class GetDistributionMetricDataResponse {
      */
     
     public Object invalidInputException;
+
     public GetDistributionMetricDataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetDistributionMetricDataResponse {
      */
     
     public Object notFoundException;
+
     public GetDistributionMetricDataResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetDistributionMetricDataResponse {
      */
     
     public Object operationFailureException;
+
     public GetDistributionMetricDataResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class GetDistributionMetricDataResponse {
      */
     
     public Object serviceException;
+
     public GetDistributionMetricDataResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetDistributionMetricDataResponse {
     
     
     public Integer statusCode;
+
     public GetDistributionMetricDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetDistributionMetricDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistributionMetricDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetDistributionMetricDataResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetDistributionMetricDataResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetDistributionMetricDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

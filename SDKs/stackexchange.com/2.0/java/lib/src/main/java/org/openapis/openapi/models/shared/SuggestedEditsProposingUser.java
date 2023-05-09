@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SuggestedEditsProposingUser {
     
     public Long acceptRate;
+
     public SuggestedEditsProposingUser withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class SuggestedEditsProposingUser {
     
     
     public SuggestedEditsProposingUserBadgeCounts badgeCounts;
+
     public SuggestedEditsProposingUser withBadgeCounts(SuggestedEditsProposingUserBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class SuggestedEditsProposingUser {
     
     
     public String displayName;
+
     public SuggestedEditsProposingUser withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class SuggestedEditsProposingUser {
     
     
     public String link;
+
     public SuggestedEditsProposingUser withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class SuggestedEditsProposingUser {
     
     
     public String profileImage;
+
     public SuggestedEditsProposingUser withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class SuggestedEditsProposingUser {
     
     
     public Long reputation;
+
     public SuggestedEditsProposingUser withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class SuggestedEditsProposingUser {
     
     
     public Long userId;
+
     public SuggestedEditsProposingUser withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class SuggestedEditsProposingUser {
     
     
     public String userType;
+
     public SuggestedEditsProposingUser withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public SuggestedEditsProposingUser(){}
 }

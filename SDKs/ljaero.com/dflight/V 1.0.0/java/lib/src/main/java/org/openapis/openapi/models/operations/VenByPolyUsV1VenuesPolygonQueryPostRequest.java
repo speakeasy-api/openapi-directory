@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VenByPolyUsV1VenuesPolygonQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VenuesByPolygon venuesByPolygon;
+
     public VenByPolyUsV1VenuesPolygonQueryPostRequest withVenuesByPolygon(org.openapis.openapi.models.shared.VenuesByPolygon venuesByPolygon) {
         this.venuesByPolygon = venuesByPolygon;
         return this;
@@ -16,9 +18,13 @@ public class VenByPolyUsV1VenuesPolygonQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public VenByPolyUsV1VenuesPolygonQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public VenByPolyUsV1VenuesPolygonQueryPostRequest(@JsonProperty("VenuesByPolygon") org.openapis.openapi.models.shared.VenuesByPolygon venuesByPolygon) {
+        this.venuesByPolygon = venuesByPolygon;
+  }
 }

@@ -15,6 +15,7 @@ public class FormStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizontalGap")
     public FormStyleConfig horizontalGap;
+
     public FormStyle withHorizontalGap(FormStyleConfig horizontalGap) {
         this.horizontalGap = horizontalGap;
         return this;
@@ -23,6 +24,7 @@ public class FormStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outerPadding")
     public FormStyleConfig outerPadding;
+
     public FormStyle withOuterPadding(FormStyleConfig outerPadding) {
         this.outerPadding = outerPadding;
         return this;
@@ -31,9 +33,11 @@ public class FormStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verticalGap")
     public FormStyleConfig verticalGap;
+
     public FormStyle withVerticalGap(FormStyleConfig verticalGap) {
         this.verticalGap = verticalGap;
         return this;
     }
     
+    public FormStyle(){}
 }

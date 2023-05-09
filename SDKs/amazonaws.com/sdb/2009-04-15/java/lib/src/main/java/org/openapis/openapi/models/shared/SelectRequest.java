@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SelectRequest {
     
     public Boolean consistentRead;
+
     public SelectRequest withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -16,6 +17,7 @@ public class SelectRequest {
     
     
     public String nextToken;
+
     public SelectRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +25,13 @@ public class SelectRequest {
     
     
     public String selectExpression;
+
     public SelectRequest withSelectExpression(String selectExpression) {
         this.selectExpression = selectExpression;
         return this;
     }
     
+    public SelectRequest(@JsonProperty("SelectExpression") String selectExpression) {
+        this.selectExpression = selectExpression;
+  }
 }

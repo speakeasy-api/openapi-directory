@@ -12,6 +12,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public Color withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -20,6 +21,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hex")
     public String hex;
+
     public Color withHex(String hex) {
         this.hex = hex;
         return this;
@@ -28,6 +30,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hsl")
     public ColorHsl hsl;
+
     public Color withHsl(ColorHsl hsl) {
         this.hsl = hsl;
         return this;
@@ -36,6 +39,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lab")
     public ColorLab lab;
+
     public Color withLab(ColorLab lab) {
         this.lab = lab;
         return this;
@@ -44,6 +48,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("luminance")
     public Double luminance;
+
     public Color withLuminance(Double luminance) {
         this.luminance = luminance;
         return this;
@@ -52,6 +57,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("luminanceWCAG")
     public Double luminanceWCAG;
+
     public Color withLuminanceWCAG(Double luminanceWCAG) {
         this.luminanceWCAG = luminanceWCAG;
         return this;
@@ -60,6 +66,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Color withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +75,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedHex")
     public String requestedHex;
+
     public Color withRequestedHex(String requestedHex) {
         this.requestedHex = requestedHex;
         return this;
@@ -76,6 +84,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rgb")
     public ColorRgb rgb;
+
     public Color withRgb(ColorRgb rgb) {
         this.rgb = rgb;
         return this;
@@ -84,6 +93,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("svg")
     public String svg;
+
     public Color withSvg(String svg) {
         this.svg = svg;
         return this;
@@ -92,6 +102,7 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("svgNamed")
     public String svgNamed;
+
     public Color withSvgNamed(String svgNamed) {
         this.svgNamed = svgNamed;
         return this;
@@ -100,9 +111,11 @@ public class Color {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swatchImg")
     public java.util.Map<String, Object> swatchImg;
+
     public Color withSwatchImg(java.util.Map<String, Object> swatchImg) {
         this.swatchImg = swatchImg;
         return this;
     }
     
+    public Color(){}
 }

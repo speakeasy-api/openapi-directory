@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1IdentityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupEdges")
     public GoogleCloudAssetV1Edge[] groupEdges;
+
     public GoogleCloudAssetV1IdentityList withGroupEdges(GoogleCloudAssetV1Edge[] groupEdges) {
         this.groupEdges = groupEdges;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1IdentityList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identities")
     public GoogleCloudAssetV1Identity[] identities;
+
     public GoogleCloudAssetV1IdentityList withIdentities(GoogleCloudAssetV1Identity[] identities) {
         this.identities = identities;
         return this;
     }
     
+    public GoogleCloudAssetV1IdentityList(){}
 }

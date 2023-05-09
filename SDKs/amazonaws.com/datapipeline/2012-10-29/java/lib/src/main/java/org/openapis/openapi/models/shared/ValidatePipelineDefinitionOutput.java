@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidatePipelineDefinitionOutput {
     @JsonProperty("errored")
     public Boolean errored;
+
     public ValidatePipelineDefinitionOutput withErrored(Boolean errored) {
         this.errored = errored;
         return this;
@@ -22,6 +23,7 @@ public class ValidatePipelineDefinitionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationErrors")
     public ValidationError[] validationErrors;
+
     public ValidatePipelineDefinitionOutput withValidationErrors(ValidationError[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
@@ -30,9 +32,13 @@ public class ValidatePipelineDefinitionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationWarnings")
     public ValidationWarning[] validationWarnings;
+
     public ValidatePipelineDefinitionOutput withValidationWarnings(ValidationWarning[] validationWarnings) {
         this.validationWarnings = validationWarnings;
         return this;
     }
     
+    public ValidatePipelineDefinitionOutput(@JsonProperty("errored") Boolean errored) {
+        this.errored = errored;
+  }
 }

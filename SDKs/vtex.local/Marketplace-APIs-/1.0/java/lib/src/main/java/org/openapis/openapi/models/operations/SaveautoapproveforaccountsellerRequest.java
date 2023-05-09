@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveautoapproveforaccountsellerRequest {
@@ -12,6 +13,7 @@ public class SaveautoapproveforaccountsellerRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SaveautoapproveforaccountsellerRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SaveautoapproveforaccountsellerRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SaveautoapproveforaccountsellerRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SaveautoapproveforaccountsellerRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SaveautoapproveforaccountsellerRequest saveautoapproveforaccountsellerRequest;
+
     public SaveautoapproveforaccountsellerRequest withSaveautoapproveforaccountsellerRequest(org.openapis.openapi.models.shared.SaveautoapproveforaccountsellerRequest saveautoapproveforaccountsellerRequest) {
         this.saveautoapproveforaccountsellerRequest = saveautoapproveforaccountsellerRequest;
         return this;
@@ -39,6 +43,7 @@ public class SaveautoapproveforaccountsellerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public SaveautoapproveforaccountsellerRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,9 +54,17 @@ public class SaveautoapproveforaccountsellerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public SaveautoapproveforaccountsellerRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
     
+    public SaveautoapproveforaccountsellerRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SaveautoapproveforaccountsellerRequest") org.openapis.openapi.models.shared.SaveautoapproveforaccountsellerRequest saveautoapproveforaccountsellerRequest, @JsonProperty("accountName") String accountName, @JsonProperty("sellerId") String sellerId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.saveautoapproveforaccountsellerRequest = saveautoapproveforaccountsellerRequest;
+        this.accountName = accountName;
+        this.sellerId = sellerId;
+  }
 }

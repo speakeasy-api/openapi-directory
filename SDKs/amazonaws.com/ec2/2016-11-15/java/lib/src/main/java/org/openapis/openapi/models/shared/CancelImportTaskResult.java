@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelImportTaskResult {
     
     public String importTaskId;
+
     public CancelImportTaskResult withImportTaskId(String importTaskId) {
         this.importTaskId = importTaskId;
         return this;
@@ -19,6 +20,7 @@ public class CancelImportTaskResult {
     
     
     public String previousState;
+
     public CancelImportTaskResult withPreviousState(String previousState) {
         this.previousState = previousState;
         return this;
@@ -26,9 +28,11 @@ public class CancelImportTaskResult {
     
     
     public String state;
+
     public CancelImportTaskResult withState(String state) {
         this.state = state;
         return this;
     }
     
+    public CancelImportTaskResult(){}
 }

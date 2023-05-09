@@ -18,6 +18,7 @@ public class ReservationAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ReservationAggregatedListWarningCodeEnum code;
+
     public ReservationAggregatedListWarning withCode(ReservationAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ReservationAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ReservationAggregatedListWarningData[] data;
+
     public ReservationAggregatedListWarning withData(ReservationAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ReservationAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ReservationAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReservationAggregatedListWarning(){}
 }

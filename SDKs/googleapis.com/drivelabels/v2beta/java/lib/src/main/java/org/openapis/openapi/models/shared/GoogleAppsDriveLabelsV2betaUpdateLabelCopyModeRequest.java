@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyMode")
     public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestCopyModeEnum copyMode;
+
     public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest withCopyMode(GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestCopyModeEnum copyMode) {
         this.copyMode = copyMode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestViewEnum view;
+
     public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest withView(GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest(){}
 }

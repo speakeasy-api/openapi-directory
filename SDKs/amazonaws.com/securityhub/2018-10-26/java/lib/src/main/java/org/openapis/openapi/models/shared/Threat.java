@@ -15,6 +15,7 @@ public class Threat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilePaths")
     public FilePaths[] filePaths;
+
     public Threat withFilePaths(FilePaths[] filePaths) {
         this.filePaths = filePaths;
         return this;
@@ -23,6 +24,7 @@ public class Threat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public Threat withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -31,6 +33,7 @@ public class Threat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Threat withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class Threat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public String severity;
+
     public Threat withSeverity(String severity) {
         this.severity = severity;
         return this;
     }
     
+    public Threat(){}
 }

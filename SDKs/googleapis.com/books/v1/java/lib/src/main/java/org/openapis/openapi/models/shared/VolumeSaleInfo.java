@@ -18,6 +18,7 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyLink")
     public String buyLink;
+
     public VolumeSaleInfo withBuyLink(String buyLink) {
         this.buyLink = buyLink;
         return this;
@@ -29,6 +30,7 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public VolumeSaleInfo withCountry(String country) {
         this.country = country;
         return this;
@@ -40,6 +42,7 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEbook")
     public Boolean isEbook;
+
     public VolumeSaleInfo withIsEbook(Boolean isEbook) {
         this.isEbook = isEbook;
         return this;
@@ -51,6 +54,7 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public VolumeSaleInfoListPrice listPrice;
+
     public VolumeSaleInfo withListPrice(VolumeSaleInfoListPrice listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -62,6 +66,7 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offers")
     public VolumeSaleInfoOffers[] offers;
+
     public VolumeSaleInfo withOffers(VolumeSaleInfoOffers[] offers) {
         this.offers = offers;
         return this;
@@ -73,6 +78,7 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onSaleDate")
     public String onSaleDate;
+
     public VolumeSaleInfo withOnSaleDate(String onSaleDate) {
         this.onSaleDate = onSaleDate;
         return this;
@@ -84,6 +90,7 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retailPrice")
     public VolumeSaleInfoRetailPrice retailPrice;
+
     public VolumeSaleInfo withRetailPrice(VolumeSaleInfoRetailPrice retailPrice) {
         this.retailPrice = retailPrice;
         return this;
@@ -95,9 +102,11 @@ public class VolumeSaleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saleability")
     public String saleability;
+
     public VolumeSaleInfo withSaleability(String saleability) {
         this.saleability = saleability;
         return this;
     }
     
+    public VolumeSaleInfo(){}
 }

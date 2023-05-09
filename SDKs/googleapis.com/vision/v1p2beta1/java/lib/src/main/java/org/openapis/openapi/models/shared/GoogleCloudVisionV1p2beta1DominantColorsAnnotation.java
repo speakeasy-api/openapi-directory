@@ -18,9 +18,11 @@ public class GoogleCloudVisionV1p2beta1DominantColorsAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colors")
     public GoogleCloudVisionV1p2beta1ColorInfo[] colors;
+
     public GoogleCloudVisionV1p2beta1DominantColorsAnnotation withColors(GoogleCloudVisionV1p2beta1ColorInfo[] colors) {
         this.colors = colors;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1DominantColorsAnnotation(){}
 }

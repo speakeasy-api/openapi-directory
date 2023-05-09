@@ -15,6 +15,7 @@ public class ListLegs200ApplicationJSON {
      */
     @JsonProperty("_embedded")
     public ListLegs200ApplicationJSONEmbedded embedded;
+
     public ListLegs200ApplicationJSON withEmbedded(ListLegs200ApplicationJSONEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -22,6 +23,7 @@ public class ListLegs200ApplicationJSON {
     
     @JsonProperty("_links")
     public ListLegs200ApplicationJSONLinks links;
+
     public ListLegs200ApplicationJSON withLinks(ListLegs200ApplicationJSONLinks links) {
         this.links = links;
         return this;
@@ -32,6 +34,7 @@ public class ListLegs200ApplicationJSON {
      */
     @JsonProperty("count")
     public Double count;
+
     public ListLegs200ApplicationJSON withCount(Double count) {
         this.count = count;
         return this;
@@ -42,6 +45,7 @@ public class ListLegs200ApplicationJSON {
      */
     @JsonProperty("page_size")
     public Double pageSize;
+
     public ListLegs200ApplicationJSON withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,9 +56,17 @@ public class ListLegs200ApplicationJSON {
      */
     @JsonProperty("record_index")
     public Double recordIndex;
+
     public ListLegs200ApplicationJSON withRecordIndex(Double recordIndex) {
         this.recordIndex = recordIndex;
         return this;
     }
     
+    public ListLegs200ApplicationJSON(@JsonProperty("_embedded") ListLegs200ApplicationJSONEmbedded embedded, @JsonProperty("_links") ListLegs200ApplicationJSONLinks links, @JsonProperty("count") Double count, @JsonProperty("page_size") Double pageSize, @JsonProperty("record_index") Double recordIndex) {
+        this.embedded = embedded;
+        this.links = links;
+        this.count = count;
+        this.pageSize = pageSize;
+        this.recordIndex = recordIndex;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductApiDeleteFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ProductDeleteApiModel productDeleteApiModel;
+
     public ProductApiDeleteFormRequest withProductDeleteApiModel(org.openapis.openapi.models.shared.ProductDeleteApiModel productDeleteApiModel) {
         this.productDeleteApiModel = productDeleteApiModel;
         return this;
@@ -16,6 +18,7 @@ public class ProductApiDeleteFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public ProductApiDeleteFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class ProductApiDeleteFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public ProductApiDeleteFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public ProductApiDeleteFormRequest(@JsonProperty("ProductDeleteApiModel") org.openapis.openapi.models.shared.ProductDeleteApiModel productDeleteApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.productDeleteApiModel = productDeleteApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

@@ -14,6 +14,7 @@ public class Webcast {
      */
     @JsonProperty("channel")
     public String channel;
+
     public Webcast withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class Webcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public Webcast withDate(String date) {
         this.date = date;
         return this;
@@ -36,6 +38,7 @@ public class Webcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public Webcast withFile(String file) {
         this.file = file;
         return this;
@@ -46,9 +49,14 @@ public class Webcast {
      */
     @JsonProperty("type")
     public WebcastTypeEnum type;
+
     public Webcast withType(WebcastTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Webcast(@JsonProperty("channel") String channel, @JsonProperty("type") WebcastTypeEnum type) {
+        this.channel = channel;
+        this.type = type;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateBackupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Backup")
     public Backup backup;
+
     public CreateBackupResponse withBackup(Backup backup) {
         this.backup = backup;
         return this;
     }
     
+    public CreateBackupResponse(){}
 }

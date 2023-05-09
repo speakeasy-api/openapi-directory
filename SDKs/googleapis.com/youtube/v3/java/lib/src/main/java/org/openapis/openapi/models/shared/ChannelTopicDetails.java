@@ -18,6 +18,7 @@ public class ChannelTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicCategories")
     public String[] topicCategories;
+
     public ChannelTopicDetails withTopicCategories(String[] topicCategories) {
         this.topicCategories = topicCategories;
         return this;
@@ -29,9 +30,11 @@ public class ChannelTopicDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicIds")
     public String[] topicIds;
+
     public ChannelTopicDetails withTopicIds(String[] topicIds) {
         this.topicIds = topicIds;
         return this;
     }
     
+    public ChannelTopicDetails(){}
 }

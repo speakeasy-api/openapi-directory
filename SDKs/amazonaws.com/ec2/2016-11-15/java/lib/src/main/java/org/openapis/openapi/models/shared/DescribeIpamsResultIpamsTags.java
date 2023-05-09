@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpamsResultIpamsTags {
     
     public String key;
+
     public DescribeIpamsResultIpamsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpamsResultIpamsTags {
     
     
     public String value;
+
     public DescribeIpamsResultIpamsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeIpamsResultIpamsTags(){}
 }

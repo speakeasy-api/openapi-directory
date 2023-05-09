@@ -15,6 +15,7 @@ public class ListEmailTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEmailTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListEmailTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplatesMetadata")
     public EmailTemplateMetadata[] templatesMetadata;
+
     public ListEmailTemplatesResponse withTemplatesMetadata(EmailTemplateMetadata[] templatesMetadata) {
         this.templatesMetadata = templatesMetadata;
         return this;
     }
     
+    public ListEmailTemplatesResponse(){}
 }

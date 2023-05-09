@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLogGroupResponse {
     
     public String contentType;
+
     public CreateLogGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLogGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateLogGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLogGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateLogGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLogGroupResponse {
      */
     
     public Object operationAbortedException;
+
     public CreateLogGroupResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -49,6 +54,7 @@ public class CreateLogGroupResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateLogGroupResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLogGroupResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateLogGroupResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class CreateLogGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateLogGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateLogGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLogGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLogGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

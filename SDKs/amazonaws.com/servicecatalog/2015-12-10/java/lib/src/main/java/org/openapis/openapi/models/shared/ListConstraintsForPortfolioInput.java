@@ -12,6 +12,7 @@ public class ListConstraintsForPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ListConstraintsForPortfolioInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class ListConstraintsForPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListConstraintsForPortfolioInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,6 +30,7 @@ public class ListConstraintsForPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageToken")
     public String pageToken;
+
     public ListConstraintsForPortfolioInput withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -35,6 +38,7 @@ public class ListConstraintsForPortfolioInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public ListConstraintsForPortfolioInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -43,9 +47,13 @@ public class ListConstraintsForPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public ListConstraintsForPortfolioInput withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public ListConstraintsForPortfolioInput(@JsonProperty("PortfolioId") String portfolioId) {
+        this.portfolioId = portfolioId;
+  }
 }

@@ -18,6 +18,7 @@ public class PoiAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityRadiusAmount")
     public Double proximityRadiusAmount;
+
     public PoiAssignedTargetingOptionDetailsInput withProximityRadiusAmount(Double proximityRadiusAmount) {
         this.proximityRadiusAmount = proximityRadiusAmount;
         return this;
@@ -29,6 +30,7 @@ public class PoiAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proximityRadiusUnit")
     public PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum proximityRadiusUnit;
+
     public PoiAssignedTargetingOptionDetailsInput withProximityRadiusUnit(PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum proximityRadiusUnit) {
         this.proximityRadiusUnit = proximityRadiusUnit;
         return this;
@@ -40,9 +42,11 @@ public class PoiAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public PoiAssignedTargetingOptionDetailsInput withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public PoiAssignedTargetingOptionDetailsInput(){}
 }

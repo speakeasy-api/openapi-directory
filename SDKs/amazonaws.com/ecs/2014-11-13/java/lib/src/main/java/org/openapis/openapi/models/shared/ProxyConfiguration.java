@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProxyConfiguration {
     @JsonProperty("containerName")
     public String containerName;
+
     public ProxyConfiguration withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
@@ -25,6 +26,7 @@ public class ProxyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public ProxyConfiguration withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -33,9 +35,13 @@ public class ProxyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ProxyConfigurationTypeEnum type;
+
     public ProxyConfiguration withType(ProxyConfigurationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ProxyConfiguration(@JsonProperty("containerName") String containerName) {
+        this.containerName = containerName;
+  }
 }

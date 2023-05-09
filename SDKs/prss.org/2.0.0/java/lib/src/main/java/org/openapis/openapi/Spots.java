@@ -57,11 +57,9 @@ public class Spots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiV2SpotsIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV2SpotsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiV2SpotsIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV2SpotsIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,12 +103,10 @@ public class Spots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2SpotsResponse res = new org.openapis.openapi.models.operations.GetApiV2SpotsResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2SpotsResponse res = new org.openapis.openapi.models.operations.GetApiV2SpotsResponse(contentType, httpRes.statusCode()) {{
             spots = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,12 +149,10 @@ public class Spots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2SpotsIdResponse res = new org.openapis.openapi.models.operations.GetApiV2SpotsIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2SpotsIdResponse res = new org.openapis.openapi.models.operations.GetApiV2SpotsIdResponse(contentType, httpRes.statusCode()) {{
             spot = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -203,12 +197,10 @@ public class Spots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV2SpotsResponse res = new org.openapis.openapi.models.operations.PostApiV2SpotsResponse() {{
+        org.openapis.openapi.models.operations.PostApiV2SpotsResponse res = new org.openapis.openapi.models.operations.PostApiV2SpotsResponse(contentType, httpRes.statusCode()) {{
             spot = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

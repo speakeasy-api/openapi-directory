@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDeviceFleetResponse {
     
     public String contentType;
+
     public DescribeDeviceFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDeviceFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDeviceFleetResponse describeDeviceFleetResponse;
+
     public DescribeDeviceFleetResponse withDescribeDeviceFleetResponse(org.openapis.openapi.models.shared.DescribeDeviceFleetResponse describeDeviceFleetResponse) {
         this.describeDeviceFleetResponse = describeDeviceFleetResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDeviceFleetResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeDeviceFleetResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeDeviceFleetResponse {
     
     
     public Integer statusCode;
+
     public DescribeDeviceFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeDeviceFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDeviceFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDeviceFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

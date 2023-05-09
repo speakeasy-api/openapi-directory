@@ -15,6 +15,7 @@ public class MetricsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudMetricEnabled")
     public Boolean cloudMetricEnabled;
+
     public MetricsConfiguration withCloudMetricEnabled(Boolean cloudMetricEnabled) {
         this.cloudMetricEnabled = cloudMetricEnabled;
         return this;
@@ -23,9 +24,11 @@ public class MetricsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricRuleRoleArn")
     public String metricRuleRoleArn;
+
     public MetricsConfiguration withMetricRuleRoleArn(String metricRuleRoleArn) {
         this.metricRuleRoleArn = metricRuleRoleArn;
         return this;
     }
     
+    public MetricsConfiguration(){}
 }

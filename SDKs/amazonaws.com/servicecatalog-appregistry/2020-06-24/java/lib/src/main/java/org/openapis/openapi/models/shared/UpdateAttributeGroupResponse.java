@@ -15,9 +15,11 @@ public class UpdateAttributeGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeGroup")
     public AttributeGroup attributeGroup;
+
     public UpdateAttributeGroupResponse withAttributeGroup(AttributeGroup attributeGroup) {
         this.attributeGroup = attributeGroup;
         return this;
     }
     
+    public UpdateAttributeGroupResponse(){}
 }

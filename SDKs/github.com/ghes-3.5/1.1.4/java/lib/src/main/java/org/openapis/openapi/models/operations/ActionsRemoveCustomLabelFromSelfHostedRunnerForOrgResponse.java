@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse {
     
     public String contentType;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse {
     
     
     public Integer statusCode;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse {
      */
     
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg200ApplicationJSON actionsRemoveCustomLabelFromSelfHostedRunnerForOrg200ApplicationJSONObject;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse withActionsRemoveCustomLabelFromSelfHostedRunnerForOrg200ApplicationJSONObject(ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg200ApplicationJSON actionsRemoveCustomLabelFromSelfHostedRunnerForOrg200ApplicationJSONObject) {
         this.actionsRemoveCustomLabelFromSelfHostedRunnerForOrg200ApplicationJSONObject = actionsRemoveCustomLabelFromSelfHostedRunnerForOrg200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -53,9 +59,14 @@ public class ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple;
+
     public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse withValidationErrorSimple(org.openapis.openapi.models.shared.ValidationErrorSimple validationErrorSimple) {
         this.validationErrorSimple = validationErrorSimple;
         return this;
     }
     
+    public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

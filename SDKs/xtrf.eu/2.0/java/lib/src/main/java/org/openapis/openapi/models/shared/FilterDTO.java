@@ -15,9 +15,11 @@ public class FilterDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Object>[] properties;
+
     public FilterDTO withProperties(java.util.Map<String, Object>[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public FilterDTO(){}
 }

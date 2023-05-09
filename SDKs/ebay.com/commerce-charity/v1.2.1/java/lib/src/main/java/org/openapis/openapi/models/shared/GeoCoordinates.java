@@ -18,6 +18,7 @@ public class GeoCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public GeoCoordinates withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class GeoCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public GeoCoordinates withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public GeoCoordinates(){}
 }

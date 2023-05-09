@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExecutionError {
     @JsonProperty("Message")
     public String message;
+
     public ExecutionError withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class ExecutionError {
     
     @JsonProperty("Type")
     public ExecutionErrorTypeEnum type;
+
     public ExecutionError withType(ExecutionErrorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExecutionError(@JsonProperty("Message") String message, @JsonProperty("Type") ExecutionErrorTypeEnum type) {
+        this.message = message;
+        this.type = type;
+  }
 }

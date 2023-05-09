@@ -18,9 +18,11 @@ public class ComplexBetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bets")
     public Bet[] bets;
+
     public ComplexBetRequestBody withBets(Bet[] bets) {
         this.bets = bets;
         return this;
     }
     
+    public ComplexBetRequestBody(){}
 }

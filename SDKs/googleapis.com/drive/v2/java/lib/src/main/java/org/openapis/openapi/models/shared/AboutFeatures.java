@@ -15,6 +15,7 @@ public class AboutFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureName")
     public String featureName;
+
     public AboutFeatures withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -26,9 +27,11 @@ public class AboutFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureRate")
     public Double featureRate;
+
     public AboutFeatures withFeatureRate(Double featureRate) {
         this.featureRate = featureRate;
         return this;
     }
     
+    public AboutFeatures(){}
 }

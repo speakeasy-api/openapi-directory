@@ -18,6 +18,7 @@ public class GoogleCloudRunV2VpcAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connector")
     public String connector;
+
     public GoogleCloudRunV2VpcAccess withConnector(String connector) {
         this.connector = connector;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2VpcAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egress")
     public GoogleCloudRunV2VpcAccessEgressEnum egress;
+
     public GoogleCloudRunV2VpcAccess withEgress(GoogleCloudRunV2VpcAccessEgressEnum egress) {
         this.egress = egress;
         return this;
     }
     
+    public GoogleCloudRunV2VpcAccess(){}
 }

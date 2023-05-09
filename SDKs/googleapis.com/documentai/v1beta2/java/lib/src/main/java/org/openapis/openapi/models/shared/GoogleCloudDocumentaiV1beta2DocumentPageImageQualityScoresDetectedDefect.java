@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedD
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedDefect withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedD
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedDefect withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedDefect(){}
 }

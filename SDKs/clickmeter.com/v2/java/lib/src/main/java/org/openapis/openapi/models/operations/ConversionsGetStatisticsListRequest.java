@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetStatisticsListRequest {
@@ -12,6 +13,7 @@ public class ConversionsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public ConversionsGetStatisticsListRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
@@ -22,6 +24,7 @@ public class ConversionsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public ConversionsGetStatisticsListRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -32,6 +35,7 @@ public class ConversionsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
     public ConversionsGetStatisticsListGroupByEnum groupBy;
+
     public ConversionsGetStatisticsListRequest withGroupBy(ConversionsGetStatisticsListGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -42,6 +46,7 @@ public class ConversionsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public ConversionsGetStatisticsListTimeFrameEnum timeFrame;
+
     public ConversionsGetStatisticsListRequest withTimeFrame(ConversionsGetStatisticsListTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -52,9 +57,14 @@ public class ConversionsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public ConversionsGetStatisticsListRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public ConversionsGetStatisticsListRequest(@JsonProperty("conversionId") Long conversionId, @JsonProperty("timeFrame") ConversionsGetStatisticsListTimeFrameEnum timeFrame) {
+        this.conversionId = conversionId;
+        this.timeFrame = timeFrame;
+  }
 }

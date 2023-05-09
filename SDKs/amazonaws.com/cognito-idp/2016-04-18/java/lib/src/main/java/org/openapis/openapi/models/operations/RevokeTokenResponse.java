@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RevokeTokenResponse {
     
     public String contentType;
+
     public RevokeTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RevokeTokenResponse {
      */
     
     public Object forbiddenException;
+
     public RevokeTokenResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class RevokeTokenResponse {
      */
     
     public Object internalErrorException;
+
     public RevokeTokenResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class RevokeTokenResponse {
      */
     
     public Object invalidParameterException;
+
     public RevokeTokenResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class RevokeTokenResponse {
      */
     
     public java.util.Map<String, Object> revokeTokenResponse;
+
     public RevokeTokenResponse withRevokeTokenResponse(java.util.Map<String, Object> revokeTokenResponse) {
         this.revokeTokenResponse = revokeTokenResponse;
         return this;
@@ -56,6 +62,7 @@ public class RevokeTokenResponse {
     
     
     public Integer statusCode;
+
     public RevokeTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RevokeTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RevokeTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RevokeTokenResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RevokeTokenResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,6 +92,7 @@ public class RevokeTokenResponse {
      */
     
     public Object unauthorizedException;
+
     public RevokeTokenResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,6 +103,7 @@ public class RevokeTokenResponse {
      */
     
     public Object unsupportedOperationException;
+
     public RevokeTokenResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -103,9 +114,14 @@ public class RevokeTokenResponse {
      */
     
     public Object unsupportedTokenTypeException;
+
     public RevokeTokenResponse withUnsupportedTokenTypeException(Object unsupportedTokenTypeException) {
         this.unsupportedTokenTypeException = unsupportedTokenTypeException;
         return this;
     }
     
+    public RevokeTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

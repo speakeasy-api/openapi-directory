@@ -15,6 +15,7 @@ public class HubContentDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DependencyCopyPath")
     public String dependencyCopyPath;
+
     public HubContentDependency withDependencyCopyPath(String dependencyCopyPath) {
         this.dependencyCopyPath = dependencyCopyPath;
         return this;
@@ -23,9 +24,11 @@ public class HubContentDependency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DependencyOriginPath")
     public String dependencyOriginPath;
+
     public HubContentDependency withDependencyOriginPath(String dependencyOriginPath) {
         this.dependencyOriginPath = dependencyOriginPath;
         return this;
     }
     
+    public HubContentDependency(){}
 }

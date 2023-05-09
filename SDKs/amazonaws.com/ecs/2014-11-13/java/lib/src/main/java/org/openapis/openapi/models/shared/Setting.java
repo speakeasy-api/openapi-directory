@@ -15,6 +15,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public SettingNameEnum name;
+
     public Setting withName(SettingNameEnum name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalArn")
     public String principalArn;
+
     public Setting withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -31,9 +33,11 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Setting withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Setting(){}
 }

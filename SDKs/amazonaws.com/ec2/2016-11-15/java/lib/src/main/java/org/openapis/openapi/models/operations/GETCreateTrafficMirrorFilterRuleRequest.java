@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateTrafficMirrorFilterRuleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateTrafficMirrorFilterRuleActionEnum action;
+
     public GETCreateTrafficMirrorFilterRuleRequest withAction(GETCreateTrafficMirrorFilterRuleActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETCreateTrafficMirrorFilterRuleRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
     public String description;
+
     public GETCreateTrafficMirrorFilterRuleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public GETCreateTrafficMirrorFilterRuleRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -49,6 +54,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPortRange")
     public GETCreateTrafficMirrorFilterRuleDestinationPortRange destinationPortRange;
+
     public GETCreateTrafficMirrorFilterRuleRequest withDestinationPortRange(GETCreateTrafficMirrorFilterRuleDestinationPortRange destinationPortRange) {
         this.destinationPortRange = destinationPortRange;
         return this;
@@ -59,6 +65,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCreateTrafficMirrorFilterRuleRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -69,6 +76,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Protocol")
     public Long protocol;
+
     public GETCreateTrafficMirrorFilterRuleRequest withProtocol(Long protocol) {
         this.protocol = protocol;
         return this;
@@ -79,6 +87,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleAction")
     public GETCreateTrafficMirrorFilterRuleRuleActionEnum ruleAction;
+
     public GETCreateTrafficMirrorFilterRuleRequest withRuleAction(GETCreateTrafficMirrorFilterRuleRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -89,6 +98,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNumber")
     public Long ruleNumber;
+
     public GETCreateTrafficMirrorFilterRuleRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
@@ -99,6 +109,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceCidrBlock")
     public String sourceCidrBlock;
+
     public GETCreateTrafficMirrorFilterRuleRequest withSourceCidrBlock(String sourceCidrBlock) {
         this.sourceCidrBlock = sourceCidrBlock;
         return this;
@@ -109,6 +120,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourcePortRange")
     public GETCreateTrafficMirrorFilterRuleSourcePortRange sourcePortRange;
+
     public GETCreateTrafficMirrorFilterRuleRequest withSourcePortRange(GETCreateTrafficMirrorFilterRuleSourcePortRange sourcePortRange) {
         this.sourcePortRange = sourcePortRange;
         return this;
@@ -119,6 +131,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficDirection")
     public GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum trafficDirection;
+
     public GETCreateTrafficMirrorFilterRuleRequest withTrafficDirection(GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum trafficDirection) {
         this.trafficDirection = trafficDirection;
         return this;
@@ -129,6 +142,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
+
     public GETCreateTrafficMirrorFilterRuleRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
@@ -136,6 +150,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateTrafficMirrorFilterRuleVersionEnum version;
+
     public GETCreateTrafficMirrorFilterRuleRequest withVersion(GETCreateTrafficMirrorFilterRuleVersionEnum version) {
         this.version = version;
         return this;
@@ -143,6 +158,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateTrafficMirrorFilterRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -150,6 +166,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateTrafficMirrorFilterRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -157,6 +174,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateTrafficMirrorFilterRuleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -164,6 +182,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateTrafficMirrorFilterRuleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -171,6 +190,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateTrafficMirrorFilterRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -178,6 +198,7 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateTrafficMirrorFilterRuleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -185,9 +206,20 @@ public class GETCreateTrafficMirrorFilterRuleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateTrafficMirrorFilterRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateTrafficMirrorFilterRuleRequest(@JsonProperty("Action") GETCreateTrafficMirrorFilterRuleActionEnum action, @JsonProperty("DestinationCidrBlock") String destinationCidrBlock, @JsonProperty("RuleAction") GETCreateTrafficMirrorFilterRuleRuleActionEnum ruleAction, @JsonProperty("RuleNumber") Long ruleNumber, @JsonProperty("SourceCidrBlock") String sourceCidrBlock, @JsonProperty("TrafficDirection") GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum trafficDirection, @JsonProperty("TrafficMirrorFilterId") String trafficMirrorFilterId, @JsonProperty("Version") GETCreateTrafficMirrorFilterRuleVersionEnum version) {
+        this.action = action;
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.ruleAction = ruleAction;
+        this.ruleNumber = ruleNumber;
+        this.sourceCidrBlock = sourceCidrBlock;
+        this.trafficDirection = trafficDirection;
+        this.trafficMirrorFilterId = trafficMirrorFilterId;
+        this.version = version;
+  }
 }

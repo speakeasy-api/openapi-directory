@@ -18,6 +18,7 @@ public class MergeCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeType")
     public MergeCellsRequestMergeTypeEnum mergeType;
+
     public MergeCellsRequest withMergeType(MergeCellsRequestMergeTypeEnum mergeType) {
         this.mergeType = mergeType;
         return this;
@@ -29,9 +30,11 @@ public class MergeCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public MergeCellsRequest withRange(GridRange range) {
         this.range = range;
         return this;
     }
     
+    public MergeCellsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTerminalsTerminalIdTerminalSettingsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+
     public PatchTerminalsTerminalIdTerminalSettingsRequest withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
         this.terminalSettings = terminalSettings;
         return this;
@@ -19,9 +21,13 @@ public class PatchTerminalsTerminalIdTerminalSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=terminalId")
     public String terminalId;
+
     public PatchTerminalsTerminalIdTerminalSettingsRequest withTerminalId(String terminalId) {
         this.terminalId = terminalId;
         return this;
     }
     
+    public PatchTerminalsTerminalIdTerminalSettingsRequest(@JsonProperty("terminalId") String terminalId) {
+        this.terminalId = terminalId;
+  }
 }

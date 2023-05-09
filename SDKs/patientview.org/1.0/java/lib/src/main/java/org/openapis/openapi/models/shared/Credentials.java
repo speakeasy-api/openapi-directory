@@ -15,6 +15,7 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public Credentials withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,6 +24,7 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public Credentials withPassword(String password) {
         this.password = password;
         return this;
@@ -31,9 +33,11 @@ public class Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public Credentials withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Credentials(){}
 }

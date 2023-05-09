@@ -12,6 +12,7 @@ public class ListPermissionSetProvisioningStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public OperationStatusFilter filter;
+
     public ListPermissionSetProvisioningStatusRequest withFilter(OperationStatusFilter filter) {
         this.filter = filter;
         return this;
@@ -19,6 +20,7 @@ public class ListPermissionSetProvisioningStatusRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ListPermissionSetProvisioningStatusRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -27,6 +29,7 @@ public class ListPermissionSetProvisioningStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPermissionSetProvisioningStatusRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,9 +38,13 @@ public class ListPermissionSetProvisioningStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPermissionSetProvisioningStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPermissionSetProvisioningStatusRequest(@JsonProperty("InstanceArn") String instanceArn) {
+        this.instanceArn = instanceArn;
+  }
 }

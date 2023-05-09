@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PagerDutyIncidentConfiguration {
     @JsonProperty("serviceId")
     public String serviceId;
+
     public PagerDutyIncidentConfiguration withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public PagerDutyIncidentConfiguration(@JsonProperty("serviceId") String serviceId) {
+        this.serviceId = serviceId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccountAuditConfigurationResponse {
     
     public String contentType;
+
     public DeleteAccountAuditConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAccountAuditConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteAccountAuditConfigurationResponse;
+
     public DeleteAccountAuditConfigurationResponse withDeleteAccountAuditConfigurationResponse(java.util.Map<String, Object> deleteAccountAuditConfigurationResponse) {
         this.deleteAccountAuditConfigurationResponse = deleteAccountAuditConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAccountAuditConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteAccountAuditConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAccountAuditConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteAccountAuditConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAccountAuditConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccountAuditConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteAccountAuditConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccountAuditConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteAccountAuditConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteAccountAuditConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteAccountAuditConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DeleteAccountAuditConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteAccountAuditConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

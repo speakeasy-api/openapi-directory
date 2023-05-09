@@ -12,6 +12,7 @@ public class NodesIdentifiersListIdentifier {
      */
     
     public NodesIdentifiersListIdentifierAttributes attributes;
+
     public NodesIdentifiersListIdentifier withAttributes(NodesIdentifiersListIdentifierAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class NodesIdentifiersListIdentifier {
      */
     
     public String id;
+
     public NodesIdentifiersListIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class NodesIdentifiersListIdentifier {
      */
     
     public NodesIdentifiersListIdentifierLinks links;
+
     public NodesIdentifiersListIdentifier withLinks(NodesIdentifiersListIdentifierLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class NodesIdentifiersListIdentifier {
      */
     
     public NodesIdentifiersListIdentifierRelationships relationships;
+
     public NodesIdentifiersListIdentifier withRelationships(NodesIdentifiersListIdentifierRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class NodesIdentifiersListIdentifier {
      */
     
     public String type;
+
     public NodesIdentifiersListIdentifier withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesIdentifiersListIdentifier(){}
 }

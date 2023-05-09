@@ -15,9 +15,11 @@ public class RegionUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RegionUpdateModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RegionUpdateModel(){}
 }

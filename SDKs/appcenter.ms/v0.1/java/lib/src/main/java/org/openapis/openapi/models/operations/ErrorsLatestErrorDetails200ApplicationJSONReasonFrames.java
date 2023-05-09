@@ -15,6 +15,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appCode")
     public Boolean appCode;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withAppCode(Boolean appCode) {
         this.appCode = appCode;
         return this;
@@ -26,6 +27,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classMethod")
     public Boolean classMethod;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withClassMethod(Boolean classMethod) {
         this.classMethod = classMethod;
         return this;
@@ -37,6 +39,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("className")
     public String className;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withClassName(String className) {
         this.className = className;
         return this;
@@ -48,6 +51,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeFormatted")
     public String codeFormatted;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withCodeFormatted(String codeFormatted) {
         this.codeFormatted = codeFormatted;
         return this;
@@ -59,6 +63,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeRaw")
     public String codeRaw;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withCodeRaw(String codeRaw) {
         this.codeRaw = codeRaw;
         return this;
@@ -70,6 +75,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionType")
     public String exceptionType;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withExceptionType(String exceptionType) {
         this.exceptionType = exceptionType;
         return this;
@@ -81,6 +87,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withFile(String file) {
         this.file = file;
         return this;
@@ -92,6 +99,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameworkName")
     public String frameworkName;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withFrameworkName(String frameworkName) {
         this.frameworkName = frameworkName;
         return this;
@@ -103,6 +111,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum language;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withLanguage(ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum language) {
         this.language = language;
         return this;
@@ -114,6 +123,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Long line;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withLine(Long line) {
         this.line = line;
         return this;
@@ -125,6 +135,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withMethod(String method) {
         this.method = method;
         return this;
@@ -136,6 +147,7 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodParams")
     public String methodParams;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withMethodParams(String methodParams) {
         this.methodParams = methodParams;
         return this;
@@ -147,9 +159,11 @@ public class ErrorsLatestErrorDetails200ApplicationJSONReasonFrames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osExceptionType")
     public String osExceptionType;
+
     public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames withOsExceptionType(String osExceptionType) {
         this.osExceptionType = osExceptionType;
         return this;
     }
     
+    public ErrorsLatestErrorDetails200ApplicationJSONReasonFrames(){}
 }

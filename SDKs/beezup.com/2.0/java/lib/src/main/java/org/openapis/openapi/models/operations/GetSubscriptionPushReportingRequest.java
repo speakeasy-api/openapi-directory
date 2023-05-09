@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionPushReportingRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSubscriptionPushReportingRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +18,7 @@ public class GetSubscriptionPushReportingRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetSubscriptionPushReportingRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -23,9 +26,13 @@ public class GetSubscriptionPushReportingRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public GetSubscriptionPushReportingRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetSubscriptionPushReportingRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

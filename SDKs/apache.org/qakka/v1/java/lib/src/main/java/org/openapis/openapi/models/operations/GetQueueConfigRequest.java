@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueueConfigRequest {
@@ -12,9 +13,13 @@ public class GetQueueConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
     public String queueName;
+
     public GetQueueConfigRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
     }
     
+    public GetQueueConfigRequest(@JsonProperty("queueName") String queueName) {
+        this.queueName = queueName;
+  }
 }

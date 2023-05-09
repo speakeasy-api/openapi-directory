@@ -18,6 +18,7 @@ public class LicenseLifecycleState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LicenseLifecycleState withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class LicenseLifecycleState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LicenseLifecycleState withId(String id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class LicenseLifecycleState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LicenseLifecycleState withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LicenseLifecycleState(){}
 }

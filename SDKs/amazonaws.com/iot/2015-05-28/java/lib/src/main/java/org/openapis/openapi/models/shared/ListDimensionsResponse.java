@@ -15,6 +15,7 @@ public class ListDimensionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionNames")
     public String[] dimensionNames;
+
     public ListDimensionsResponse withDimensionNames(String[] dimensionNames) {
         this.dimensionNames = dimensionNames;
         return this;
@@ -23,9 +24,11 @@ public class ListDimensionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDimensionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDimensionsResponse(){}
 }

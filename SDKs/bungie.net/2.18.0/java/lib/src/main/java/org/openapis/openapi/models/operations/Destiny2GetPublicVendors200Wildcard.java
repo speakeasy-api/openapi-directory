@@ -14,6 +14,7 @@ package org.openapis.openapi.models.operations;
 public class Destiny2GetPublicVendors200Wildcard {
     
     public String detailedErrorTrace;
+
     public Destiny2GetPublicVendors200Wildcard withDetailedErrorTrace(String detailedErrorTrace) {
         this.detailedErrorTrace = detailedErrorTrace;
         return this;
@@ -21,6 +22,7 @@ public class Destiny2GetPublicVendors200Wildcard {
     
     
     public Integer errorCode;
+
     public Destiny2GetPublicVendors200Wildcard withErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,6 +30,7 @@ public class Destiny2GetPublicVendors200Wildcard {
     
     
     public String errorStatus;
+
     public Destiny2GetPublicVendors200Wildcard withErrorStatus(String errorStatus) {
         this.errorStatus = errorStatus;
         return this;
@@ -35,6 +38,7 @@ public class Destiny2GetPublicVendors200Wildcard {
     
     
     public String message;
+
     public Destiny2GetPublicVendors200Wildcard withMessage(String message) {
         this.message = message;
         return this;
@@ -42,6 +46,7 @@ public class Destiny2GetPublicVendors200Wildcard {
     
     
     public java.util.Map<String, String> messageData;
+
     public Destiny2GetPublicVendors200Wildcard withMessageData(java.util.Map<String, String> messageData) {
         this.messageData = messageData;
         return this;
@@ -54,6 +59,7 @@ public class Destiny2GetPublicVendors200Wildcard {
      */
     
     public org.openapis.openapi.models.shared.DestinyResponsesDestinyPublicVendorsResponse response;
+
     public Destiny2GetPublicVendors200Wildcard withResponse(org.openapis.openapi.models.shared.DestinyResponsesDestinyPublicVendorsResponse response) {
         this.response = response;
         return this;
@@ -61,9 +67,11 @@ public class Destiny2GetPublicVendors200Wildcard {
     
     
     public Integer throttleSeconds;
+
     public Destiny2GetPublicVendors200Wildcard withThrottleSeconds(Integer throttleSeconds) {
         this.throttleSeconds = throttleSeconds;
         return this;
     }
     
+    public Destiny2GetPublicVendors200Wildcard(){}
 }

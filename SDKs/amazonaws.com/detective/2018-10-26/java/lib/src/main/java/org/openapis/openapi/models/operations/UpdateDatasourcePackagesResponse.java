@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatasourcePackagesResponse {
@@ -12,6 +13,7 @@ public class UpdateDatasourcePackagesResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDatasourcePackagesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDatasourcePackagesResponse {
     
     
     public String contentType;
+
     public UpdateDatasourcePackagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatasourcePackagesResponse {
      */
     
     public Object internalServerException;
+
     public UpdateDatasourcePackagesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatasourcePackagesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateDatasourcePackagesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDatasourcePackagesResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatasourcePackagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDatasourcePackagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatasourcePackagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDatasourcePackagesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDatasourcePackagesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDatasourcePackagesResponse {
      */
     
     public Object validationException;
+
     public UpdateDatasourcePackagesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateDatasourcePackagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

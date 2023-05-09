@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOTAUpdateRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteOTAUpdateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class DeleteOTAUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteOTAUpdateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class DeleteOTAUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteOTAUpdateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class DeleteOTAUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteOTAUpdateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class DeleteOTAUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteOTAUpdateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class DeleteOTAUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteOTAUpdateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class DeleteOTAUpdateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteOTAUpdateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class DeleteOTAUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleteStream")
     public Boolean deleteStream;
+
     public DeleteOTAUpdateRequest withDeleteStream(Boolean deleteStream) {
         this.deleteStream = deleteStream;
         return this;
@@ -71,6 +80,7 @@ public class DeleteOTAUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceDeleteAWSJob")
     public Boolean forceDeleteAWSJob;
+
     public DeleteOTAUpdateRequest withForceDeleteAWSJob(Boolean forceDeleteAWSJob) {
         this.forceDeleteAWSJob = forceDeleteAWSJob;
         return this;
@@ -81,9 +91,13 @@ public class DeleteOTAUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=otaUpdateId")
     public String otaUpdateId;
+
     public DeleteOTAUpdateRequest withOtaUpdateId(String otaUpdateId) {
         this.otaUpdateId = otaUpdateId;
         return this;
     }
     
+    public DeleteOTAUpdateRequest(@JsonProperty("otaUpdateId") String otaUpdateId) {
+        this.otaUpdateId = otaUpdateId;
+  }
 }

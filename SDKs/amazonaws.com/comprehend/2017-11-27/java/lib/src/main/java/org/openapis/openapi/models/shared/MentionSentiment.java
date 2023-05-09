@@ -15,6 +15,7 @@ public class MentionSentiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sentiment")
     public SentimentTypeEnum sentiment;
+
     public MentionSentiment withSentiment(SentimentTypeEnum sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -26,9 +27,11 @@ public class MentionSentiment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SentimentScore")
     public SentimentScore sentimentScore;
+
     public MentionSentiment withSentimentScore(SentimentScore sentimentScore) {
         this.sentimentScore = sentimentScore;
         return this;
     }
     
+    public MentionSentiment(){}
 }

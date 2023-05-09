@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAllGroupsUsingGETResponse {
     
     public String contentType;
+
     public ListAllGroupsUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListAllGroupsUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListAllGroupsUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListAllGroupsUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAllGroupsUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListAllGroupsUsingGETResponse {
      */
     
     public ListAllGroupsUsingGET200ApplicationJSON listAllGroupsUsingGET200ApplicationJSONObject;
+
     public ListAllGroupsUsingGETResponse withListAllGroupsUsingGET200ApplicationJSONObject(ListAllGroupsUsingGET200ApplicationJSON listAllGroupsUsingGET200ApplicationJSONObject) {
         this.listAllGroupsUsingGET200ApplicationJSONObject = listAllGroupsUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListAllGroupsUsingGETResponse {
      */
     
     public ListAllGroupsUsingGET400ApplicationJSON listAllGroupsUsingGET400ApplicationJSONObject;
+
     public ListAllGroupsUsingGETResponse withListAllGroupsUsingGET400ApplicationJSONObject(ListAllGroupsUsingGET400ApplicationJSON listAllGroupsUsingGET400ApplicationJSONObject) {
         this.listAllGroupsUsingGET400ApplicationJSONObject = listAllGroupsUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListAllGroupsUsingGETResponse {
      */
     
     public ListAllGroupsUsingGET401ApplicationJSON listAllGroupsUsingGET401ApplicationJSONObject;
+
     public ListAllGroupsUsingGETResponse withListAllGroupsUsingGET401ApplicationJSONObject(ListAllGroupsUsingGET401ApplicationJSON listAllGroupsUsingGET401ApplicationJSONObject) {
         this.listAllGroupsUsingGET401ApplicationJSONObject = listAllGroupsUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListAllGroupsUsingGETResponse {
      */
     
     public ListAllGroupsUsingGET500ApplicationJSON listAllGroupsUsingGET500ApplicationJSONObject;
+
     public ListAllGroupsUsingGETResponse withListAllGroupsUsingGET500ApplicationJSONObject(ListAllGroupsUsingGET500ApplicationJSON listAllGroupsUsingGET500ApplicationJSONObject) {
         this.listAllGroupsUsingGET500ApplicationJSONObject = listAllGroupsUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public ListAllGroupsUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

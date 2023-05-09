@@ -15,9 +15,11 @@ public class SmartCustomFieldDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public SmartCustomFieldDTO withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public SmartCustomFieldDTO(){}
 }

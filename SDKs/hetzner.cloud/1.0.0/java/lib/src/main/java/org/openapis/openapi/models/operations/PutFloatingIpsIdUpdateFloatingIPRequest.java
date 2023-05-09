@@ -15,6 +15,7 @@ public class PutFloatingIpsIdUpdateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PutFloatingIpsIdUpdateFloatingIPRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class PutFloatingIpsIdUpdateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PutFloatingIpsIdUpdateFloatingIPRequest withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -37,9 +39,11 @@ public class PutFloatingIpsIdUpdateFloatingIPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PutFloatingIpsIdUpdateFloatingIPRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PutFloatingIpsIdUpdateFloatingIPRequest(){}
 }

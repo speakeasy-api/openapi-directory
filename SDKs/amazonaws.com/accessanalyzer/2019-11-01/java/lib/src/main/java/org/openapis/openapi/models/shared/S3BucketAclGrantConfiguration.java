@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3BucketAclGrantConfiguration {
     @JsonProperty("grantee")
     public AclGrantee grantee;
+
     public S3BucketAclGrantConfiguration withGrantee(AclGrantee grantee) {
         this.grantee = grantee;
         return this;
@@ -19,9 +20,14 @@ public class S3BucketAclGrantConfiguration {
     
     @JsonProperty("permission")
     public AclPermissionEnum permission;
+
     public S3BucketAclGrantConfiguration withPermission(AclPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public S3BucketAclGrantConfiguration(@JsonProperty("grantee") AclGrantee grantee, @JsonProperty("permission") AclPermissionEnum permission) {
+        this.grantee = grantee;
+        this.permission = permission;
+  }
 }

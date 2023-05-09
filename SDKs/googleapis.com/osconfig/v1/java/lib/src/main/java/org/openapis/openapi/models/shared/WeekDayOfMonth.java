@@ -18,6 +18,7 @@ public class WeekDayOfMonth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public WeekDayOfMonthDayOfWeekEnum dayOfWeek;
+
     public WeekDayOfMonth withDayOfWeek(WeekDayOfMonthDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -29,6 +30,7 @@ public class WeekDayOfMonth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOffset")
     public Integer dayOffset;
+
     public WeekDayOfMonth withDayOffset(Integer dayOffset) {
         this.dayOffset = dayOffset;
         return this;
@@ -40,9 +42,11 @@ public class WeekDayOfMonth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weekOrdinal")
     public Integer weekOrdinal;
+
     public WeekDayOfMonth withWeekOrdinal(Integer weekOrdinal) {
         this.weekOrdinal = weekOrdinal;
         return this;
     }
     
+    public WeekDayOfMonth(){}
 }

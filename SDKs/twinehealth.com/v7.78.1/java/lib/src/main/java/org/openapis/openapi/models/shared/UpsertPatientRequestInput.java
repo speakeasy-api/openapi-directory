@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpsertPatientRequestInput {
     @JsonProperty("data")
     public PatientResourceInput data;
+
     public UpsertPatientRequestInput withData(PatientResourceInput data) {
         this.data = data;
         return this;
@@ -16,9 +17,14 @@ public class UpsertPatientRequestInput {
     
     @JsonProperty("meta")
     public UpsertPatientRequestMeta meta;
+
     public UpsertPatientRequestInput withMeta(UpsertPatientRequestMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public UpsertPatientRequestInput(@JsonProperty("data") PatientResourceInput data, @JsonProperty("meta") UpsertPatientRequestMeta meta) {
+        this.data = data;
+        this.meta = meta;
+  }
 }

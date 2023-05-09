@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class ForumPollResult {
     
     public Integer answerSlot;
+
     public ForumPollResult withAnswerSlot(Integer answerSlot) {
         this.answerSlot = answerSlot;
         return this;
@@ -16,6 +17,7 @@ public class ForumPollResult {
     
     
     public String answerText;
+
     public ForumPollResult withAnswerText(String answerText) {
         this.answerText = answerText;
         return this;
@@ -23,6 +25,7 @@ public class ForumPollResult {
     
     
     public OffsetDateTime lastVoteDate;
+
     public ForumPollResult withLastVoteDate(OffsetDateTime lastVoteDate) {
         this.lastVoteDate = lastVoteDate;
         return this;
@@ -30,6 +33,7 @@ public class ForumPollResult {
     
     
     public Boolean requestingUserVoted;
+
     public ForumPollResult withRequestingUserVoted(Boolean requestingUserVoted) {
         this.requestingUserVoted = requestingUserVoted;
         return this;
@@ -37,9 +41,11 @@ public class ForumPollResult {
     
     
     public Integer votes;
+
     public ForumPollResult withVotes(Integer votes) {
         this.votes = votes;
         return this;
     }
     
+    public ForumPollResult(){}
 }

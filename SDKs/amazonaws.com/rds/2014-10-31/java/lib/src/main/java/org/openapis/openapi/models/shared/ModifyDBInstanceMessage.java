@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyDBInstanceMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyDBInstanceMessage {
     
     public Long allocatedStorage;
+
     public ModifyDBInstanceMessage withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -19,6 +20,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean allowMajorVersionUpgrade;
+
     public ModifyDBInstanceMessage withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
         this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
         return this;
@@ -26,6 +28,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean applyImmediately;
+
     public ModifyDBInstanceMessage withApplyImmediately(Boolean applyImmediately) {
         this.applyImmediately = applyImmediately;
         return this;
@@ -33,6 +36,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public ModifyDBInstanceMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -40,6 +44,7 @@ public class ModifyDBInstanceMessage {
     
     
     public AutomationModeEnum automationMode;
+
     public ModifyDBInstanceMessage withAutomationMode(AutomationModeEnum automationMode) {
         this.automationMode = automationMode;
         return this;
@@ -47,6 +52,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String awsBackupRecoveryPointArn;
+
     public ModifyDBInstanceMessage withAwsBackupRecoveryPointArn(String awsBackupRecoveryPointArn) {
         this.awsBackupRecoveryPointArn = awsBackupRecoveryPointArn;
         return this;
@@ -54,6 +60,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long backupRetentionPeriod;
+
     public ModifyDBInstanceMessage withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -61,6 +68,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String caCertificateIdentifier;
+
     public ModifyDBInstanceMessage withCACertificateIdentifier(String caCertificateIdentifier) {
         this.caCertificateIdentifier = caCertificateIdentifier;
         return this;
@@ -68,6 +76,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean certificateRotationRestart;
+
     public ModifyDBInstanceMessage withCertificateRotationRestart(Boolean certificateRotationRestart) {
         this.certificateRotationRestart = certificateRotationRestart;
         return this;
@@ -75,6 +84,7 @@ public class ModifyDBInstanceMessage {
     
     
     public CloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration;
+
     public ModifyDBInstanceMessage withCloudwatchLogsExportConfiguration(CloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration) {
         this.cloudwatchLogsExportConfiguration = cloudwatchLogsExportConfiguration;
         return this;
@@ -82,6 +92,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public ModifyDBInstanceMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -89,6 +100,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbInstanceClass;
+
     public ModifyDBInstanceMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -96,6 +108,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbInstanceIdentifier;
+
     public ModifyDBInstanceMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -103,6 +116,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbParameterGroupName;
+
     public ModifyDBInstanceMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -110,6 +124,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long dbPortNumber;
+
     public ModifyDBInstanceMessage withDBPortNumber(Long dbPortNumber) {
         this.dbPortNumber = dbPortNumber;
         return this;
@@ -117,6 +132,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String[] dbSecurityGroups;
+
     public ModifyDBInstanceMessage withDBSecurityGroups(String[] dbSecurityGroups) {
         this.dbSecurityGroups = dbSecurityGroups;
         return this;
@@ -124,6 +140,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String dbSubnetGroupName;
+
     public ModifyDBInstanceMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -131,6 +148,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean deletionProtection;
+
     public ModifyDBInstanceMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -138,6 +156,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String domain;
+
     public ModifyDBInstanceMessage withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -145,6 +164,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String domainIAMRoleName;
+
     public ModifyDBInstanceMessage withDomainIAMRoleName(String domainIAMRoleName) {
         this.domainIAMRoleName = domainIAMRoleName;
         return this;
@@ -152,6 +172,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean enableCustomerOwnedIp;
+
     public ModifyDBInstanceMessage withEnableCustomerOwnedIp(Boolean enableCustomerOwnedIp) {
         this.enableCustomerOwnedIp = enableCustomerOwnedIp;
         return this;
@@ -159,6 +180,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public ModifyDBInstanceMessage withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -166,6 +188,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean enablePerformanceInsights;
+
     public ModifyDBInstanceMessage withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
         this.enablePerformanceInsights = enablePerformanceInsights;
         return this;
@@ -173,6 +196,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String engineVersion;
+
     public ModifyDBInstanceMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -180,6 +204,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long iops;
+
     public ModifyDBInstanceMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -187,6 +212,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String licenseModel;
+
     public ModifyDBInstanceMessage withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -194,6 +220,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean manageMasterUserPassword;
+
     public ModifyDBInstanceMessage withManageMasterUserPassword(Boolean manageMasterUserPassword) {
         this.manageMasterUserPassword = manageMasterUserPassword;
         return this;
@@ -201,6 +228,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String masterUserPassword;
+
     public ModifyDBInstanceMessage withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -208,6 +236,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String masterUserSecretKmsKeyId;
+
     public ModifyDBInstanceMessage withMasterUserSecretKmsKeyId(String masterUserSecretKmsKeyId) {
         this.masterUserSecretKmsKeyId = masterUserSecretKmsKeyId;
         return this;
@@ -215,6 +244,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long maxAllocatedStorage;
+
     public ModifyDBInstanceMessage withMaxAllocatedStorage(Long maxAllocatedStorage) {
         this.maxAllocatedStorage = maxAllocatedStorage;
         return this;
@@ -222,6 +252,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long monitoringInterval;
+
     public ModifyDBInstanceMessage withMonitoringInterval(Long monitoringInterval) {
         this.monitoringInterval = monitoringInterval;
         return this;
@@ -229,6 +260,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String monitoringRoleArn;
+
     public ModifyDBInstanceMessage withMonitoringRoleArn(String monitoringRoleArn) {
         this.monitoringRoleArn = monitoringRoleArn;
         return this;
@@ -236,6 +268,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean multiAZ;
+
     public ModifyDBInstanceMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -243,6 +276,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String networkType;
+
     public ModifyDBInstanceMessage withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -250,6 +284,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String newDBInstanceIdentifier;
+
     public ModifyDBInstanceMessage withNewDBInstanceIdentifier(String newDBInstanceIdentifier) {
         this.newDBInstanceIdentifier = newDBInstanceIdentifier;
         return this;
@@ -257,6 +292,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String optionGroupName;
+
     public ModifyDBInstanceMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -264,6 +300,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String performanceInsightsKMSKeyId;
+
     public ModifyDBInstanceMessage withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
         this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
         return this;
@@ -271,6 +308,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long performanceInsightsRetentionPeriod;
+
     public ModifyDBInstanceMessage withPerformanceInsightsRetentionPeriod(Long performanceInsightsRetentionPeriod) {
         this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
         return this;
@@ -278,6 +316,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String preferredBackupWindow;
+
     public ModifyDBInstanceMessage withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -285,6 +324,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public ModifyDBInstanceMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -292,6 +332,7 @@ public class ModifyDBInstanceMessage {
     
     
     public ProcessorFeatureList[] processorFeatures;
+
     public ModifyDBInstanceMessage withProcessorFeatures(ProcessorFeatureList[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -299,6 +340,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long promotionTier;
+
     public ModifyDBInstanceMessage withPromotionTier(Long promotionTier) {
         this.promotionTier = promotionTier;
         return this;
@@ -306,6 +348,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean publiclyAccessible;
+
     public ModifyDBInstanceMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -313,6 +356,7 @@ public class ModifyDBInstanceMessage {
     
     
     public ReplicaModeEnum replicaMode;
+
     public ModifyDBInstanceMessage withReplicaMode(ReplicaModeEnum replicaMode) {
         this.replicaMode = replicaMode;
         return this;
@@ -320,6 +364,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long resumeFullAutomationModeMinutes;
+
     public ModifyDBInstanceMessage withResumeFullAutomationModeMinutes(Long resumeFullAutomationModeMinutes) {
         this.resumeFullAutomationModeMinutes = resumeFullAutomationModeMinutes;
         return this;
@@ -327,6 +372,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean rotateMasterUserPassword;
+
     public ModifyDBInstanceMessage withRotateMasterUserPassword(Boolean rotateMasterUserPassword) {
         this.rotateMasterUserPassword = rotateMasterUserPassword;
         return this;
@@ -334,6 +380,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Long storageThroughput;
+
     public ModifyDBInstanceMessage withStorageThroughput(Long storageThroughput) {
         this.storageThroughput = storageThroughput;
         return this;
@@ -341,6 +388,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String storageType;
+
     public ModifyDBInstanceMessage withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -348,6 +396,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String tdeCredentialArn;
+
     public ModifyDBInstanceMessage withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -355,6 +404,7 @@ public class ModifyDBInstanceMessage {
     
     
     public String tdeCredentialPassword;
+
     public ModifyDBInstanceMessage withTdeCredentialPassword(String tdeCredentialPassword) {
         this.tdeCredentialPassword = tdeCredentialPassword;
         return this;
@@ -362,6 +412,7 @@ public class ModifyDBInstanceMessage {
     
     
     public Boolean useDefaultProcessorFeatures;
+
     public ModifyDBInstanceMessage withUseDefaultProcessorFeatures(Boolean useDefaultProcessorFeatures) {
         this.useDefaultProcessorFeatures = useDefaultProcessorFeatures;
         return this;
@@ -369,9 +420,13 @@ public class ModifyDBInstanceMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public ModifyDBInstanceMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public ModifyDBInstanceMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

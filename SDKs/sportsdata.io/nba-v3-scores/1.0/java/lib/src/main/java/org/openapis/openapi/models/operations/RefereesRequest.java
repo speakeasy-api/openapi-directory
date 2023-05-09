@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RefereesRequest {
@@ -12,9 +13,13 @@ public class RefereesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public RefereesFormatEnum format;
+
     public RefereesRequest withFormat(RefereesFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public RefereesRequest(@JsonProperty("format") RefereesFormatEnum format) {
+        this.format = format;
+  }
 }

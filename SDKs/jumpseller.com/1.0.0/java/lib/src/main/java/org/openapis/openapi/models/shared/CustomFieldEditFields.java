@@ -15,6 +15,7 @@ public class CustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CustomFieldEditFields withLabel(String label) {
         this.label = label;
         return this;
@@ -26,6 +27,7 @@ public class CustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CustomFieldEditFieldsTypeEnum type;
+
     public CustomFieldEditFields withType(CustomFieldEditFieldsTypeEnum type) {
         this.type = type;
         return this;
@@ -37,9 +39,11 @@ public class CustomFieldEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public CustomFieldEditFields withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CustomFieldEditFields(){}
 }

@@ -18,9 +18,11 @@ public class BroadcastTxResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txid")
     public String txid;
+
     public BroadcastTxResponse withTxid(String txid) {
         this.txid = txid;
         return this;
     }
     
+    public BroadcastTxResponse(){}
 }

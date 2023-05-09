@@ -15,9 +15,11 @@ public class AwsSsmPatchComplianceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Patch")
     public AwsSsmPatch patch;
+
     public AwsSsmPatchComplianceDetails withPatch(AwsSsmPatch patch) {
         this.patch = patch;
         return this;
     }
     
+    public AwsSsmPatchComplianceDetails(){}
 }

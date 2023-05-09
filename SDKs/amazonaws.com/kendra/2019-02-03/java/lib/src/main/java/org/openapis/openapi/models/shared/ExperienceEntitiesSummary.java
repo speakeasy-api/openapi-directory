@@ -15,6 +15,7 @@ public class ExperienceEntitiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayData")
     public EntityDisplayData displayData;
+
     public ExperienceEntitiesSummary withDisplayData(EntityDisplayData displayData) {
         this.displayData = displayData;
         return this;
@@ -23,6 +24,7 @@ public class ExperienceEntitiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public ExperienceEntitiesSummary withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -31,9 +33,11 @@ public class ExperienceEntitiesSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityType")
     public EntityTypeEnum entityType;
+
     public ExperienceEntitiesSummary withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
     }
     
+    public ExperienceEntitiesSummary(){}
 }

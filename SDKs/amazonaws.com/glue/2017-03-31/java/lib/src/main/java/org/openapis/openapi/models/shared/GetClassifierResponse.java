@@ -15,9 +15,11 @@ public class GetClassifierResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classifier")
     public Classifier classifier;
+
     public GetClassifierResponse withClassifier(Classifier classifier) {
         this.classifier = classifier;
         return this;
     }
     
+    public GetClassifierResponse(){}
 }

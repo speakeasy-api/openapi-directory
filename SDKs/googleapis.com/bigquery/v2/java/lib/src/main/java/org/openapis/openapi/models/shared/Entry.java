@@ -18,6 +18,7 @@ public class Entry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCount")
     public String itemCount;
+
     public Entry withItemCount(String itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -29,9 +30,11 @@ public class Entry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictedLabel")
     public String predictedLabel;
+
     public Entry withPredictedLabel(String predictedLabel) {
         this.predictedLabel = predictedLabel;
         return this;
     }
     
+    public Entry(){}
 }

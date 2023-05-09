@@ -12,6 +12,7 @@ public class RewardResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public RewardResourceAttributesInput attributes;
+
     public RewardResourceInput withAttributes(RewardResourceAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class RewardResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RewardResourceInput withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class RewardResourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public RewardResourceRelationshipsInput relationships;
+
     public RewardResourceInput withRelationships(RewardResourceRelationshipsInput relationships) {
         this.relationships = relationships;
         return this;
@@ -35,9 +38,13 @@ public class RewardResourceInput {
     
     @JsonProperty("type")
     public String type;
+
     public RewardResourceInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RewardResourceInput(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }
